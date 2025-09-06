@@ -1,5 +1,4 @@
 
-
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
 import "https://deno.land/x/xhr@0.1.0/mod.ts"
 const corsHeaders = {
@@ -9,10 +8,10 @@ interface Milestone {
   description: string;
   dueDate: string
   estimatedHours: number
-}
+
 serve(async (req) => {
   // Handle CORS preflight requests
-  if (req && req.method === 'OPTIONS') {
+  if (req && req.method = = 'OPTIONS') {
     return new Response(null, { headers: corsHeaders })
   }
   try {
@@ -62,7 +61,7 @@ serve(async (req) => {
     if (milestones && milestones.length > 0) {
       prompt += `
       The project will be divided into the following milestones: `
-      milestones.forEach((milestone: Milestone, index: number) => {
+      milestones.forEach(milestone: Milestone, index: number) => {
         prompt += `
         Milestone ${index + 1}: ${milestone && milestone.title}
         - Description: ${milestone && milestone.description}
@@ -91,19 +90,19 @@ import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';
 import "https://deno.land / x/xhr@0.1.0 / mod.ts",
 const cors_headers = {
   'Access - Control - Allow - Origin': '*Access - Control - Allow - Headers': 'authorization, x - client - info, apikey, content - type'}
-;
+
 interface Milestone {
   title: string;
   description: string;
   due_date: string,
   estimated_hours: number;
-}
+
 serve (async (req) => {
   // Handle CORS preflight requests;
   // Check condition
 if ( {) {
   $2
-}
+
     return new Response (null, { headers: cors_headers });
   }
   try {
@@ -112,7 +111,7 @@ if ( {) {
     // Check condition
 if ( {) {
   $2
-}
+
       throw new Error ('OPENAI_API_KEY is not set');
     }
     // Parse request body;
@@ -128,7 +127,7 @@ if ( {) {
       additional_clauses;
       milestones;
     } = await req.json ();
-;
+
     // Create the contract prompt for OpenAI;
     let prompt = `;
     Please generate a professional contractual agreement between ${client_name} (Client) and ${talent_name} (Talent) for the following project:;
@@ -147,7 +146,7 @@ if ( {) {
     // Check condition
 if ( {) {
   $2
-}
+
       prompt += `;
       Please also include the following additional clauses:;
       ${additional_clauses.includes ('nda') ? '- Confidentiality / Non - disclosure agreement' : ''}
@@ -160,10 +159,10 @@ if ( {) {
     // Check condition
 if ( {) {
   $2
-}
+
       prompt += `;
       The project will be divided into the following milestones: `,
-      milestones.for_each ((milestone: Milestone, index: number) => {
+      milestones.for_each (milestone: Milestone, index: number) => {
         prompt += `;
         Milestone ${index + 1}: ${milestone.title}
         - Description: ${milestone.description}
@@ -171,7 +170,7 @@ if ( {) {
         - Estimated Work: ${milestone.estimated_hours} hours;
         `;
       });
-;
+
       prompt += `;
       Please structure the contract to include these milestones in the payment schedule, with payments tied to the completion and approval of each milestone.;
       `;
@@ -179,7 +178,7 @@ if ( {) {
     prompt += `;
     Format the contract professionally with proper sections, numbering, and formatting. Use markdown formatting.;
     `;
-;
+
     // Call OpenAI API;
     const response = await fetch ('https://api.openai.com / v1 / chat / completions', {
       method: 'POST',
@@ -203,22 +202,22 @@ if ( {) {
     return new Response(JSON.stringify({
       success: true
       contract
-;
+
     const data = await response.json ();
-;
+
     // Check condition
 if ( {) {
   $2
-}
+
       throw new Error (data.error?.message || 'Failed to generate contract');
     }
     const contract = data.choices[0].message.content.trim ();
-;
+
     return new Response (JSON.stringify ({
       success: true,
       contract;
     }), {
-      headers: { ...cors_headers, 'Content - Type': 'application / json' }});
+      headers: { ...cors_headers, 'Content - Type': 'application / json' });
   } catch (error) {
     console && console.error('Error generating contract:', error);
     return new Response(
@@ -228,10 +227,10 @@ if ( {) {
       });
       {
         status: 500
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' }
     )
   }
-});
+);
 
     console.error ('Error generating contract:', error);
     return new Response (
@@ -241,8 +240,7 @@ if ( {) {
       });
       {
         status: 500,
-        headers: { ...cors_headers, 'Content - Type': 'application / json' }}
+        headers: { ...cors_headers, 'Content - Type': 'application / json' }
     );
   }
-});
-;
+);

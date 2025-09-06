@@ -35,18 +35,18 @@ export default function APIRateLimiterPage() {
     if (!endpoint.trim() || !rateLimit || !timeWindow) return,    
     setIsTesting(true),
     setTestResults([]),
-    
+
     const limit = parseInt(rateLimit),
     const results = [],
-    
+
     // Simulate API calls to test rate limiting,
 for (let i = 1, i <= limit + 5, i++) {
-      await new Promise(resolve => setTimeout(resolve, 100)),
-      
+      await new Promise(resolve => setTimeout(resolve, 100),
+
       const isAllowed = i <= limit,
       const status = isAllowed ? 'success' : 'ratelimited',
       const statusCode = isAllowed ? 200 : 429,
-      
+
       results.push({
         request: i,
         timestamp: new Date().toLocaleTimeString(),
@@ -57,11 +57,10 @@ for (let i = 1, i <= limit + 5, i++) {
           'X-RateLimit-Limit': limit,
           'X-RateLimit-Remaining': Math.max(0, limit - i),
           'X-RateLimit-Reset': new Date(Date.now() + 60000).toISOString()
-        }
-      }),      
+        }),      
       if (!isAllowed) break
     }
-    
+
     setTestResults(results),
     setIsTesting(false)
   },
@@ -75,10 +74,8 @@ for (let i = 1, i <= limit + 5, i++) {
       case 'ratelimited':
         return <AlertTriangle className="w-5 h-5 text-red-400" />,
       default:
-        return <AlertTriangle className="w-5 h-5 text-yellow-400" />    }
-  },
-        return <AlertTriangle className="w-5 h-5 text-yellow-400" />}
-  };
+        return <AlertTriangle className="w-5 h-5 text-yellow-400" />    },
+        return <AlertTriangle className="w-5 h-5 text-yellow-400" />};
 
   const getStatusColor = (status: string) => {switch (status) {
       case 'success':
@@ -87,8 +84,7 @@ for (let i = 1, i <= limit + 5, i++) {
         return 'text-red-400',
       default:
         return 'text-yellow-400'
-    }
-  },
+    },
   return (_<>
       <Head>
         <title>API Rate Limiter - Zion Tech Group</title>
@@ -152,17 +148,17 @@ type=&quot;text&quot;
                     Rate Limit
                   </label>
                   <div className=&quot;grid grid-cols-2 gap-3&quot;>
-                    {rateLimits.map((limit) => (
+                    {rateLimits.map(limit) => (
                       <button                        key={limit.value}
                         onClick={_() => setRateLimit(limit.value)}
                         className={_`p-3 rounded-lg border text-left transition-all ${
-                          rateLimit === limit.value
+                          rateLimit = = limit.value
                             ? 'border-green-500 bg-green-500/10 text-green-300'
                             : 'border-gray-600 hover:border-gray-500 text-gray-300 hover:text-white'}`}
                       >
                         <div className=&quot;font-medium&quot;>{limit.label}</div>
                         <div className=&quot;text-xs text-gray-400 mt-1&quot;>{limit.description}</div>                      </button>
-                    ))}
+                    )}
                   </div>
                 </div>
 
@@ -172,17 +168,17 @@ type=&quot;text&quot;
                     Time Window
                   </label>
                   <div className=&quot;grid grid-cols-2 gap-3&quot;>
-                    {timeWindows.map((window) => (
+                    {timeWindows.map(window) => (
                       <button                        key={window.value}
                         onClick={_() => setTimeWindow(window.value)}
                         className={_`p-3 rounded-lg border text-left transition-all ${
-                          timeWindow === window.value
+                          timeWindow = = window.value
                             ? 'border-green-500 bg-green-500/10 text-green-300'
                             : 'border-gray-600 hover:border-gray-500 text-gray-300 hover:text-white'}`}
                       >
                         <div className=&quot;font-medium&quot;>{window.label}</div>
                         <div className=&quot;text-xs text-gray-400 mt-1&quot;>{window.description}</div>                      </button>
-                    ))}
+                    )}
                   </div>
                 </div>
 
@@ -224,7 +220,7 @@ onClick={testRateLimiting}
                 </Button>;
               </div>;
             </Card>;
-;
+
             {/* Test Results */}
             <Card className=&quot;p-8 bg-gray-800 border border-gray-700&quot;>
               <div className=&quot;flex items-center justify-between mb-6&quot;>
@@ -244,10 +240,10 @@ onClick={() => setTestResults([])}
 
               {testResults.length > 0 ? (
                 <div className=&quot;space-y-3 max-h-96 overflow-y-auto&quot;>
-                  {testResults.map((result, index) => (                    <div,
+                  {testResults.map(result, index) => (                    <div,
 key={index}
                       className={_`p-4 rounded-lg border ${
-                        result.status === 'success' ? 'border-green-500/30 bg-green-500/10' : 'border-red-500/30 bg-red-500/10'}`}
+                        result.status = = 'success' ? 'border-green-500/30 bg-green-500/10' : 'border-red-500/30 bg-red-500/10'}`}
                     >
                       <div className=&quot;flex items-center justify-between mb-2&quot;>
                         <div className=&quot;flex items-center space-x-3&quot;>
@@ -257,12 +253,12 @@ key={index}
                           </span>
                         </div>
                         <span className=&quot;text-sm text-gray-400&quot;>{result.timestamp}</span>                      </div>
-                      
+
                       <div className=&quot;grid grid-cols-2 gap-4 text-sm&quot;>
                         <div>
                           <span className=&quot;text-gray-400&quot;>Status:</span>
                           <span className={`ml-2 font-medium ${getStatusColor(result.status)}`}>
-                            {result.statusCode} {result.status === 'success' ? 'OK' : 'Too Many Requests'}
+                            {result.statusCode} {result.status = = 'success' ? 'OK' : 'Too Many Requests'}
                           </span>
                         </div>
                         <div>
@@ -271,12 +267,12 @@ key={index}
                         </div>
                       </div>
 
-                      {result.status === 'ratelimited' && (
+                      {result.status = = 'ratelimited' && (
                         <div className=&quot;mt-3 p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300&quot;>
                           <strong>Rate Limited:</strong> Request exceeded the limit of {rateLimit} requests per {timeWindow}                        </div>
                       )}
                     </div>;
-                  ))}
+                  )}
                 </div>
               ) : (
                 <div className=&quot;bg-gray-900 p-6 rounded-lg border border-gray-700 text-center&quot;>
@@ -290,7 +286,7 @@ key={index}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Features */}
       <section className=&quot;py-20 bg-gray-800&quot;>
         <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
@@ -378,25 +374,25 @@ key={index}
               </h3>
               <div className="bg-gray-900 p-4 rounded-lg overflow-x-auto">
                 <pre className="text-sm text-gray-300">
-{`const axios = require('axios'),
+`const axios = require('axios'),
 const apiKey = '${apiKey || 'yourapi_key_here'}',
 const endpoint = '${endpoint || '/api/users'}',
-{_`const axios = require('axios');
+_`const axios = require('axios');
 
 const apiKey = '${apiKey || 'yourapi_key_here'}';
 const endpoint = '${endpoint || '/api/users'}';
 
-// Make API request with rate limiting,
+/ Make API request with rate limiting,
 const response = await axios.get(\`https://api.zion.tech\${endpoint}\`, {headers: {
     'Authorization': \`Bearer \${apiKey}\`,
     'X-RateLimit-Limit': '${rateLimit}X-RateLimit-Window': '${timeWindow}'  }
-}),
+),
 
-// // // console.log('Response:', response.data),
-// // // console.log('Rate Limit Info:', {  limit: response.headers['x-ratelimit-limit'],
+/ // // console.log('Response:', response.data),
+/ // // console.log('Rate Limit Info:', {  limit: response.headers['x-ratelimit-limit'],
   remaining: response.headers['x-ratelimit-remaining'],
   reset: response.headers['x-ratelimit-reset']
-}),`}
+),`}
                 </pre>
               </div>
               <Button,
@@ -405,7 +401,7 @@ onClick={() => copyToClipboard(`const axios = require('axios'),
 const apiKey = '${apiKey || 'yourapi_key_here'}',
 const endpoint = '${endpoint || '/api/users'}',
 
-`}
+}
                 </pre>
               </div>
               <Button,
@@ -414,22 +410,22 @@ onClick={_() => copyToClipboard(`const axios = require('axios');
 const apiKey = '${apiKey || 'yourapi_key_here'}';
 const endpoint = '${endpoint || '/api/users'}';
 
-// Make API request with rate limiting,
+/ Make API request with rate limiting,
 const response = await axios.get(\`https://api.zion.tech\${endpoint}\`, {headers: {
     'Authorization': \`Bearer \${apiKey}\`,
     'X-RateLimit-Limit': '${rateLimit}X-RateLimit-Window': '${timeWindow}'  }
-}),
+),
 
-// // // console.log('Response:', response.data),
-// // // console.log('Rate Limit Info:', {
+/ // // console.log('Response:', response.data),
+/ // // console.log('Rate Limit Info:', {
   limit: response.headers['x-ratelimit-limit'],
   remaining: response.headers['x-ratelimit-remaining'],
   reset: response.headers['x-ratelimit-reset']
-}),`)}
+),`)}
                 variant="outline"
                 size="sm"
                 className="mt-4 border-gray-600 text-gray-300 hover:bg-gray-700"
-`)}
+)}
                 variant="outline"
                 size="sm"
                 className="mt-4 border-gray-600 text-gray-300 hover:bg-gray-700"
@@ -446,20 +442,19 @@ const response = await axios.get(\`https://api.zion.tech\${endpoint}\`, {headers
               </h3>
               <div className=&quot;bg-gray-900 p-4 rounded-lg overflow-x-auto&quot;>
                 <pre className=&quot;text-sm text-gray-300&quot;>
-{`import requests,
+`import requests,
 apikey = '${apiKey || 'yourapi_key_here'}'
 endpoint = '${endpoint || '/api/users'}'
 
-# Make API request with rate limiting,
+ Make API request with rate limiting,
 headers = {
     'Authorization': f'Bearer {apikey}X-RateLimit-Limit': '${rateLimit}X-RateLimit-Window': '${timeWindow}'}
 
 response = requests.get(
     f'https://api.zion.tech{endpoint}',
     headers=headers
-)
 
-print('Response:', response.json())
+print('Response:', response.json()
 print('Rate Limit Info:', {_'limit': response.headers.get('x-ratelimit-limit'), _'remaining': response.headers.get('x-ratelimit-remaining'), _'reset': response.headers.get('x-ratelimit-reset')})`}
                 </pre>
               </div>
@@ -468,21 +463,19 @@ onClick={_() => copyToClipboard(`import requests,
 apikey = '${apiKey || 'yourapi_key_here'}'
 endpoint = '${endpoint || '/api/users'}'
 
-# Make API request with rate limiting,
+ Make API request with rate limiting,
 headers = {
     'Authorization': f'Bearer {apikey}X-RateLimit-Limit': '${rateLimit}X-RateLimit-Window': '${timeWindow}'}
 
 response = requests.get(
     f'https://api.zion.tech{endpoint}',
     headers=headers
-)
 
-print('Response:', response.json())
+print('Response:', response.json()
 print('Rate Limit Info:', {
     'limit': response.headers.get('x-ratelimit-limit'),
     'remaining': response.headers.get('x-ratelimit-remaining'),
-    'reset': response.headers.get('x-ratelimit-reset')
-})`)}
+    'reset': response.headers.get('x-ratelimit-reset')`)}
                 variant=&quot;outline&quot;
                 size=&quot;sm&quot;
                 className=&quot;mt-4 border-gray-600 text-gray-300 hover:bg-gray-700&quot;              >

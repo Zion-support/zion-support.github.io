@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React from 'react';
 import Layout from '../components/Layout';
 import Layout from '../components/Layout';
@@ -45,7 +45,6 @@ export default function TestPage() {;
       </div>;
     </Layout>;
   );
-}
 
 export default function TestPage() {;
   return (
@@ -57,16 +56,16 @@ export default function TestPage() {;
         <h1 className='text-4xl font-bold text-cyan-400'>Test Page Working</h1>
       </div>
     </>
-);
+;
       <div className="min-h-screen bg-black text-white flex items-center justify-center">
         <h1 className="text-4xl font-bold text-cyan-400">Test Page Working</h1>
       </div>
     </>
   )
-}
+
 import React from 'react';
 import Layout from '../components / Layout';
-;
+
 export default /**
  * TestPage - Function description
  */
@@ -77,7 +76,7 @@ function TestPage() {
         <h1 className="text - 4xl font - bold text - gray - 900">Test Page</h1>;
       </div>;
     </Layout>);
-}
+
 export default /**
  * TestPage - Function description
  */
@@ -95,4 +94,3 @@ function TestPage() {
         <h1 className="text - 4xl font - bold text - cyan - 400">Test Page Working</h1>;
       </div>;
     </>);
-}

@@ -41,7 +41,7 @@ export interface AdvancedAIAutomationService {
   customers: number;
   rating: number;
   reviews: number
-}
+
 export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
   // AI-Powered Code Generation & Review
   {  reviews: number
@@ -574,17 +574,16 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
   competitors: string[], marketSize: string,
   growthRate: string, variant: string,
   contactInfo: {
-      
+
     mobile: string, email: string,
     address: string,
     website: string
-  
+
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
-}
 
 export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
   // AI-Powered Code Generation & Review
@@ -912,5 +911,4 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     rating: 4.8,
     reviews: 38;
   }
-];
 ;

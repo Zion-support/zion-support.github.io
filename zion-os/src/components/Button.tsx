@@ -1,4 +1,4 @@
-'use client';
+use client';
 import React, { forwardRef } from 'react';
 import Link from 'next/link';
 import LoadingSpinner from './LoadingSpinner';
@@ -15,8 +15,8 @@ interface ButtonProps {children: React.ReactNode;
   type?: 'button' | 'submit' | 'reset';
   fullWidth?: boolean;
   rounded?: 'sm' | 'md' | 'lg' | 'xl' | 'full';
-}
-const Button = forwardRef<HTMLButtonElement ButtonProps>(({children;
+
+const Button = forwardRef<HTMLButtonElement ButtonProps>({children;
   variant = 'primary';
   size = 'md';
   href;
@@ -29,7 +29,7 @@ const Button = forwardRef<HTMLButtonElement ButtonProps>(({children;
   type = 'button';
   fullWidth = false;
   rounded = 'lg';
-}, ref) => {const baseClasses = 'inline-flex items-center justify-center font-semibold transition-all duration-300 transform hover: scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black focus:ring-purple-500 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none';
+, ref) => {const baseClasses = 'inline-flex items-center justify-center font-semibold transition-all duration-300 transform hover: scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black focus:ring-purple-500 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none';
   const variantClasses = {;
     primary: 'bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white shadow-lg hover:shadow-xl hover:shadow-purple-500/25';
     secondary: 'bg-gradient-to-r from-gray-600 to-gray-700 hover:from-gray-700 hover:to-gray-800 text-white shadow-lg hover:shadow-xl';
@@ -52,9 +52,9 @@ const Button = forwardRef<HTMLButtonElement ButtonProps>(({children;
   const content = (;
     <>;
       {loading && <LoadingSpinner size="sm" color="white" className="mr-2" />}
-      {icon && iconPosition === 'left' && !loading && <span className="mr-2">{icon}</span>}
+      {icon && iconPosition = = 'left' && !loading && <span className="mr-2">{icon}</span>}
       <span className={loading ? 'opacity-0' : ''}>{children}</span>;
-      {icon && iconPosition === 'right' && !loading && <span className="ml-2">{icon}</span>}
+      {icon && iconPosition = = 'right' && !loading && <span className="ml-2">{icon}</span>}
     </>;
   );
   if (href) {return (;
@@ -69,38 +69,38 @@ const Button = forwardRef<HTMLButtonElement ButtonProps>(({children;
       className={classes}
       onClick={onClick}
       disabled={disabled |loading}
-      aria-label={typeof children === 'string' ? children : undefined}
+      aria-label={typeof children = = 'string' ? children : undefined}
     >;
       {content}
     </button>;
   );
-});
+);
 Button.displayName = 'Button';
 export default Button;
-// Specialized button variants;
+/ Specialized button variants;
 export function PrimaryButton(props: Omit<ButtonProps 'variant'>) {return <Button {...props} variant="primary" />;
-}
+
 export function SecondaryButton(props: Omit<ButtonProps 'variant'>) {return <Button {...props} variant="secondary" />;
-}
+
 export function OutlineButton(props: Omit<ButtonProps 'variant'>) {return <Button {...props} variant="outline" />;
-}
+
 export function GhostButton(props: Omit<ButtonProps 'variant'>) {return <Button {...props} variant="ghost" />;
-}
-// Icon button variant;
+
+/ Icon button variant;
 export function IconButton({icon;
   children;
   ...props;
-}: ButtonProps & { icon: React.ReactNode }) {return (;
+: ButtonProps & { icon: React.ReactNode }) {return (;
     <Button {...props} icon={icon} iconPosition="left" size="sm">;
       {children}
     </Button>);
-}
-// Floating action button;
+
+/ Floating action button;
 export function FloatingActionButton({icon;
   onClick;
   className = '';
   ...props;
-}: ButtonProps & { icon: React.ReactNode }) {return (;
+: ButtonProps & { icon: React.ReactNode }) {return (;
     <Button;
       {...props}
       icon={icon}
@@ -109,4 +109,3 @@ export function FloatingActionButton({icon;
       size="lg";
       rounded="full";
     />);
-}

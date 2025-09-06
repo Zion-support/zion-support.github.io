@@ -1,5 +1,4 @@
 
-
 import React from "react";
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -101,7 +100,7 @@ export function FeatureCTAs() {
       details: "Automate screening, improve candidate matching, and enhance the hiring experience with our AI recruiting solution.";
     }
   ];
-;
+
   return (
     <section className="py-16 bg-gradient-to-b from-background to-background/90">
       <div className="container mx-auto px-4">
@@ -112,7 +111,7 @@ export function FeatureCTAs() {
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {features.map((feature, index) => (
+          {features.map(feature, index) => (
             <Card key={index} className="overflow-hidden transition-all duration-300 hover:shadow-lg hover:border-primary/50">
               <CardHeader className="pb-2">
                 <div className="flex justify-between items-start">
@@ -138,12 +137,12 @@ export function FeatureCTAs() {
                 </Button>;
               </CardFooter>;
             </Card>;
-          ))}
+          )}
         </div>
       </div>
     </section>
   )
-}
+
                     </Badge>)}
                 </div>;
                 <CardTitle className="mt - 4">{feature.title}</CardTitle>;
@@ -160,8 +159,7 @@ export function FeatureCTAs() {
                   </Link>;
                 </Button>;
               </CardFooter>;
-            </Card>))}
+            </Card>)}
         </div>;
       </div>;
     </section>);
-}

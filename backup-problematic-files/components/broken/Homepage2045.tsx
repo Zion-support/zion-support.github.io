@@ -5,20 +5,20 @@ import {
   ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket, 
   Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart,
   Phone, Mail, MapPin, Search, Grid, List, Atom, Target, Sparkles
-} from 'lucide-react',
+ from 'lucide-react',
 import Link from 'next/link',
-// Import our new innovative services
+/ Import our new innovative services
 import { innovative2040FuturisticServices } from '../data/innovative-2040-futuristic-services',
 import { innovative2040ITServices } from '../data/innovative-2040-it-services',
 import { revolutionary2043AdvancedServices } from '../data/revolutionary-2043-advanced-services',
 import { revolutionary2044FuturisticServices } from '../data/revolutionary-2044-futuristic-services',
-// Loading fallback component
+/ Loading fallback component
 const LoadingFallback = () => (
   <div className="min-h-screen flex items-center justify-center bg-gray-900">
     <motion.div
-      initial={{ opacity: 0, scale: 0.5 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.5 }}
+      initial={ opacity: 0, scale: 0.5 }
+      animate={ opacity: 1, scale: 1 }
+      transition={ duration: 0.5 }
       className="text-center"
     >
       <div className="relative">
@@ -29,16 +29,16 @@ const LoadingFallback = () => (
       <p className="text-sm text-gray-500">Preparing your futuristic digital transformation journey</p>
     </motion.div>
   </div>
-),
+,
 
 const Homepage2045: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true),
   const [isVisible, setIsVisible] = useState(false),
   const [activeSection, setActiveSection] = useState('hero'),
 
-  useEffect(() => {
+  useEffect() => {
     // Simulate content loading with better timing
-    const timer = setTimeout(() => {
+    const timer = setTimeout() => {
       setIsLoading(false),
       setIsVisible(true)
     }, 800),
@@ -47,29 +47,25 @@ const Homepage2045: React.FC = () => {
   }, []),
 
   // Intersection Observer for better performance
-  useEffect(() => {
-    if (typeof window !== 'undefined' && 'IntersectionObserver' in window) {
-      const observer = new (window as any).IntersectionObserver(
-        (entries: any[]) => {
-          entries.forEach((entry) => {
+  useEffect() => {
+    if (typeof window != 'undefined' && 'IntersectionObserver' in window) {
+      const observer = new (window as any).IntersectionObserver(entries: any[]) => {
+          entries.forEach(entry) => {
             if (entry.isIntersecting) {
               setActiveSection(entry.target.id)
-            }
-          });
+            });
         },;
         { threshold: 0.3, rootMargin: '-100px' }
       ),;
       const sections = document.querySelectorAll('section[id]'),;
-      sections.forEach((section) => observer.observe(section)),;
+      sections.forEach(section) => observer.observe(section),;
       return () => observer.disconnect();
-    }
-  }, []),
+    }, []),
 
   const fadeInUp = {
     initial: { opacity: 0, y: 60 },
     animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.6, ease: "easeOut" }
-  },
+    transition: { duration: 0.6, ease: "easeOut" },
 
   const staggerContainer = {
     animate: {
@@ -77,14 +73,12 @@ const Homepage2045: React.FC = () => {
         staggerChildren: 0.1,
         delayChildren: 0.2
       }
-    }
   },
 
   const backgroundVariants = {
     initial: { opacity: 0, scale: 0.8 },
     animate: { opacity: 1, scale: 1 },
-    transition: { duration: 1.2, ease: "easeOut" }
-  },
+    transition: { duration: 1.2, ease: "easeOut" },
 
   const getColorClasses = (index: number) => {
     const colors = [
@@ -113,35 +107,35 @@ const Homepage2045: React.FC = () => {
           <div className="absolute inset-0 pointer-events-none">
             <motion.div
               className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-lg"
-              animate={{
+              animate={
                 rotate: [0, 360],
                 scale: [1, 1.1, 1],
-                opacity: [0.3, 0.6, 0.3]}}
-              transition={{
+                opacity: [0.3, 0.6, 0.3]}
+              transition={
                 duration: 8,
                 repeat: Infinity,
                 ease: "easeInOut"
-              }}
+              }
             />
             <motion.div
               className="absolute top-40 right-32 w-24 h-24 border border-purple-400/20 rounded-full"
-              animate={{
+              animate={
                 rotate: [360, 0],
                 scale: [1, 1.2, 1],
-                opacity: [0.3, 0.7, 0.3]}}
-              transition={{
+                opacity: [0.3, 0.7, 0.3]}
+              transition={
                 duration: 6,
                 repeat: Infinity,
                 ease: "easeInOut"
-              }}
+              }
             />
             <motion.div
               className="absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45"
-              animate={{
+              animate={
                 rotate: [45, 405],
                 scale: [1, 1.15, 1],
-                opacity: [0.3, 0.5, 0.3]}}
-              transition={{
+                opacity: [0.3, 0.5, 0.3]}
+              transition={
                 duration: 10,
                 repeat: Infinity,
                 ease: "easeInOut"
@@ -149,21 +143,18 @@ const Homepage2045: React.FC = () => {
   const fadeInUp = {;
     initial: { opacity: 0, y: 60 },;
     animate: { opacity: 1, y: 0 },;
-    transition: { duration: 0.6, ease: "easeOut" }
-  },;
+    transition: { duration: 0.6, ease: "easeOut" },;
   const staggerContainer = {;
     animate: {;
       transition: {;
         staggerChildren: 0.1,;
         delayChildren: 0.2;
       }
-    }
   },;
   const backgroundVariants = {;
     initial: { opacity: 0, scale: 0.8 },;
     animate: { opacity: 1, scale: 1 },;
-    transition: { duration: 1.2, ease: "easeOut" }
-  },;
+    transition: { duration: 1.2, ease: "easeOut" },;
   const getColorClasses = (index: number) => {;
     const colors = [;
       'from-cyan-400 to-blue-500from-purple-400 to-pink-500from-emerald-400 to-teal-500from-orange-400 to-red-500from-indigo-400 to-purple-500from-yellow-400 to-orange-500';
@@ -180,7 +171,7 @@ const Homepage2045: React.FC = () => {
       </div>;
     );
   }
-;
+
   return (;
     <Layout>;
       <div className="min-h-screen bg-black text-white relative overflow-x-hidden">;
@@ -190,53 +181,53 @@ const Homepage2045: React.FC = () => {
           <div className="absolute inset-0 pointer-events-none">;
             <motion.div;
               className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-lg";
-              animate={{;
+              animate={;
                 rotate: [0, 360],;
                 scale: [1, 1.1, 1],;
-                opacity: [0.3, 0.6, 0.3]}}
-              transition={{;
+                opacity: [0.3, 0.6, 0.3]}
+              transition={;
                 duration: 8,;
                 repeat: Infinity,;
                 ease: "easeInOut";
-              }}
+              }
             />;
             <motion.div;
               className="absolute top-40 right-32 w-24 h-24 border border-purple-400/20 rounded-full";
-              animate={{;
+              animate={;
                 rotate: [360, 0],;
                 scale: [1, 1.2, 1],;
-                opacity: [0.3, 0.7, 0.3]}}
-              transition={{;
+                opacity: [0.3, 0.7, 0.3]}
+              transition={;
                 duration: 6,;
                 repeat: Infinity,;
                 ease: "easeInOut";
-              }}
+              }
             />;
             <motion.div;
               className="absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45";
-              animate={{;
+              animate={;
                 rotate: [45, 405],;
                 scale: [1, 1.15, 1],;
-                opacity: [0.3, 0.5, 0.3]}}
-              transition={{;
+                opacity: [0.3, 0.5, 0.3]}
+              transition={;
                 duration: 10,;
                 repeat: Infinity,;
                 ease: "easeInOut";
-              }}
+              }
             />;
           </div>;
           {/* Hero Content */}
           <div className="relative z-10 text-center max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="mb-8"
             >
               <motion.h1
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.8, delay: 0.2 }
                 className="text-5xl md:text-7xl font-bold mb-6"
               >
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
@@ -244,9 +235,9 @@ const Homepage2045: React.FC = () => {
                 </span>
               </motion.h1>
               <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.8, delay: 0.4 }
                 className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"
               >
                 Transform your business with Zion Tech Group's revolutionary AI services, quantum computing, and cutting-edge emerging technologies. Leading the future of technology innovation.
@@ -255,9 +246,9 @@ const Homepage2045: React.FC = () => {
 
             {/* CTA Buttons */}
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8, delay: 0.6 }
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             >
               <Link
@@ -276,9 +267,9 @@ const Homepage2045: React.FC = () => {
 
             {/* Stats */}
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8, delay: 0.8 }
               className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8"
             >
               <div className="text-center">
@@ -301,10 +292,10 @@ const Homepage2045: React.FC = () => {
         <section id="featured-services" className="py-20 relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -362,13 +353,13 @@ const Homepage2045: React.FC = () => {
                   color: "from-yellow-400 to-orange-500",
                   href: "/emerging-tech"
                 }
-              ].map((service, index) => (;
+              ].map(service, index) => (;
                 <motion.div;
                   key={service.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.6, delay: index * 0.1 }
+                  viewport={ once: true }
                   className="group"
                 >
                   <Link href={service.href}>
@@ -385,7 +376,7 @@ const Homepage2045: React.FC = () => {
                     </div>
                   </a>
                 </motion.div>
-              ))}
+              )}
             </div>;
           </div>;
         </section>;
@@ -393,10 +384,10 @@ const Homepage2045: React.FC = () => {
         <section id="latest-innovations" className="py-20 relative bg-gray-900/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -411,13 +402,13 @@ const Homepage2045: React.FC = () => {
 
             {/* Featured New Services */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {revolutionary2043AdvancedServices.slice(0, 4).map((service, index) => (
+              {revolutionary2043AdvancedServices.slice(0, 4).map(service, index) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, x: index % 2 = = 0 ? -30 : 30 }
+                  whileInView={ opacity: 1, x: 0 }
+                  transition={ duration: 0.6, delay: index * 0.1 }
+                  viewport={ once: true }
                   className="group"
                 >
                   <Link href={service.link}>
@@ -444,14 +435,14 @@ const Homepage2045: React.FC = () => {
                     </div>
                   </a>
                 </motion.div>
-              ))}
+              )}
             </div>;
             {/* View All Services CTA */}
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.6 }
+              viewport={ once: true }
               className="text-center mt-12"
             >
               <Link
@@ -469,10 +460,10 @@ const Homepage2045: React.FC = () => {
         <section id="contact-cta" className="py-20 relative">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >
               <h2 className="text-4xl md: text-5xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
@@ -502,7 +493,7 @@ const Homepage2045: React.FC = () => {
       </div>
     </Layout>
   )
-},
+,
 
 export default Homepage2045,
             >;
@@ -534,5 +525,5 @@ export default Homepage2045,
       </div>;
     </Layout>;
   );
-},;
+,;
 export default Homepage2045;

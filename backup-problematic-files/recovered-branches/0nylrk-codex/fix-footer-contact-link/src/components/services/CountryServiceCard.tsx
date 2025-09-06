@@ -4,13 +4,12 @@ import { Button } from "@/components/ui/button",;
 import { Badge } from "@/components/ui/badge",;
 import { Globe, Server, Clock, MapPin, Check } from "lucide-react",;
 import { CountryPricing } from "@/data/onsiteServicePricing",;
-;
+
 interface CountryServiceCardProps {;
   country:CountryPricing,;
   onSelect:(country:CountryPricing) => void,;
   isPopular?:boolean;
-}
-;
+
 export function CountryServiceCard({ country, onSelect, isPopular } CountryServiceCardProps) {;
   // Get region flag based on country name (for demo purposes);
   const getRegionEmoji = (countryName:string):string => {;
@@ -32,24 +31,19 @@ export function CountryServiceCard({ country, onSelect, isPopular } CountryServi
       // Default if no flag is found;
       "default":"";
     },;
-    ;
     return emojiMap[countryName] || emojiMap["default"],;
   },;
-  ;
   // Get response time estimate based on country;
   const getResponseTime = (countryName:string):string => {;
     const tier1 = ["United States", "United Kingdom", "Germany", "Japan", "Singapore", "Australia", "Canada", "France"],;
     const tier2 = ["China", "Brazil", "India", "South Korea", "South Africa", "Russia"],;
-    ;
-    if (tier1.includes(countryName)) {;
+    if (tier1.includes(countryName) {;
       return "4 hours",;
-    } else if (tier2.includes(countryName)) {;
+    } else if (tier2.includes(countryName) {;
       return "6 hours",;
     } else {;
       return "8-24 hours",;
-    }
-  },;
-  ;
+    },;
   return (;
     <Card className={`h-full transition-all duration-300 hover:shadow-lg ${;
       isPopular ;
@@ -71,7 +65,6 @@ export function CountryServiceCard({ country, onSelect, isPopular } CountryServi
         <p className="text-3xl font-bold text-zion-cyan mb-4">;
           ${country.pricePerIncident.toFixed(2)}
         </p>;
-        ;
         <div className="space-y-2 text-zion-slate-light">;
           <div className="flex items-start">;
             <Clock className="h-4 w-4 mr-2 text-zion-purple mt-1" />;
@@ -109,17 +102,15 @@ export function CountryServiceCard({ country, onSelect, isPopular } CountryServi
   country: CountryPricing;
 onSelect: (country: CountryPricing) => void;
 isPopular?: boolean 
-}export function CountryServiceCard ({
+export function CountryServiceCard ({
   country, onSelect, isPopular 
-}: CountryServiceCardProps) {
+: CountryServiceCardProps) {
   //Get region flag based on country name (for demo purposes) const getRegionEmoji = (countryName: string) : string => {
   return emojiMap[countryName] || emojiMap["default" ];
-};
-//Get response time estimate based on country return (<Card className= {
+/Get response time estimate based on country return (<Card className= {
   `h-full transition-all duration-300 hover:shadow-lg $ {
   isPopular </div> <div className="flex items-start" > <MapPin className="h-4 w-4 mr-2 text-zion-purple mt-1" /> <span>Service available in major cities</span> </div> <div className="flex items-start" > <Server className="h-4 w-4 mr-2 text-zion-purple mt-1" /> <span>Hardware & network support</span> </div> <div className="flex items-start" > <Check className="h-4 w-4 mr-2 text-zion-purple mt-1" /> <span>First hour included</span> </div> </div> </CardContent> <CardFooter> <Button onClick= {
   () => onSelect (country) 
-}className= {
+className= {
   `w-full $ {
   isPopular > Select Service </Button> </CardFooter> </Card>) 
-}

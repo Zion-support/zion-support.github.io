@@ -6,13 +6,13 @@ export class NavigationGenerator {;
   constructor() {;
     this.initializeNavigation();
   }
-;
+
   private async initializeNavigation() {;
     await this.discoverServices(),;
     await this.discoverPages(),;
     await this.generateCategories();
   }
-;
+
   // Auto-discover services from data and generate navigation;
   async discoverServices(): Promise<NavigationItem[]> {;
     // Comprehensive services list based on website analysis;
@@ -452,7 +452,7 @@ export class NavigationGenerator {;
     ],;
     return this.services;
   }
-;
+
   // Discover and generate pages;
   async discoverPages(): Promise<NavigationItem[]> {;
     this.pages = [;
@@ -591,21 +591,20 @@ export class NavigationGenerator {;
     ],;
     return this.pages;
   }
-;
+
   // Generate categories from services;
   async generateCategories(): Promise<NavigationCategory[]> {;
     const categoryMap = new Map<string NavigationItem[]>(),;
     // Group services by category;
     this.services.forEach(service => {;
       if (service.category) {;
-        if (!categoryMap.has(service.category)) {;
+        if (!categoryMap.has(service.category) {;
           categoryMap.set(service.category, []);
         }
         categoryMap.get(service.category)!.push(service);
-      }
-    }),;
+      }),;
     // Create category objects;
-    this.categories = Array.from(categoryMap.entries()).map(([name, services]) => ({;
+    this.categories = Array.from(categoryMap.entries().map([name, services]) => ({;
       id: name.toLowerCase().replace(/\s+/g, '-'),;
       name,;
       slug: name.toLowerCase().replace(/\s+/g, '-'),;
@@ -613,7 +612,7 @@ export class NavigationGenerator {;
       serviceCount: services.length,;
       services: services.map(s => s.id),;
       priority: this.getCategoryPriority(name);
-    })),;
+    }),;
     // Add additional categories for pages;
     this.categories.push(;
       {;
@@ -645,7 +644,7 @@ export class NavigationGenerator {;
     ),;
     return this.categories;
   }
-;
+
   // Get category icon;
   private getCategoryIcon(categoryName: string): string {;
     const iconMap: { [key: string]: string } = {;
@@ -653,7 +652,7 @@ export class NavigationGenerator {;
     },;
     return iconMap[categoryName] || '';
   }
-;
+
   // Get category priority;
   private getCategoryPriority(categoryName: string): number {;
     const priorityMap: { [key: string]: number } = {;
@@ -669,7 +668,7 @@ export class NavigationGenerator {;
     },;
     return priorityMap[categoryName] || 10;
   }
-;
+
   // Generate header navigation;
   generateHeaderNavigation(): NavigationItem[] {;
     return [;
@@ -717,7 +716,7 @@ export class NavigationGenerator {;
       }
     ];
   }
-;
+
   // Generate footer navigation;
   generateFooterNavigation(): NavigationItem[] {;
     return [;
@@ -765,7 +764,7 @@ export class NavigationGenerator {;
       }
     ];
   }
-;
+
   // Generate sidebar navigation based on context;
   generateSidebarNavigation(context: any): NavigationItem[] {;
     switch (context.pageType) {;
@@ -778,11 +777,10 @@ export class NavigationGenerator {;
       default:;
         return this.generateDefaultSidebar();
     }
-  }
-;
+
   private generateServiceSidebar(serviceId?: string): NavigationItem[] {;
     if (!serviceId) return this.generateDefaultSidebar(),;
-    const service = this.services.find(s => s.id === serviceId),;
+    const service = this.services.find(s => s.id = = serviceId),;
     if (!service) return this.generateDefaultSidebar(),;
     return [;
       {;
@@ -812,12 +810,12 @@ export class NavigationGenerator {;
       }
     ];
   }
-;
+
   private generateCategorySidebar(categoryId?: string): NavigationItem[] {;
     if (!categoryId) return this.generateDefaultSidebar(),;
-    const category = this.categories.find(c => c.id === categoryId),;
+    const category = this.categories.find(c => c.id = = categoryId),;
     if (!category) return this.generateDefaultSidebar(),;
-    const categoryServices = this.services.filter(s => s.category === category.name),;
+    const categoryServices = this.services.filter(s => s.category = = category.name),;
     return [;
       {;
         id: 'category-overview',;
@@ -831,10 +829,10 @@ export class NavigationGenerator {;
         href: service.href,;
         status: service.status,;
         priority: service.priority || 10;
-      }));
+      });
     ];
   }
-;
+
   private generateDashboardSidebar(): NavigationItem[] {;
     return [;
       {;
@@ -863,7 +861,7 @@ export class NavigationGenerator {;
       }
     ];
   }
-;
+
   private generateDefaultSidebar(): NavigationItem[] {;
     return [;
       {;
@@ -886,13 +884,13 @@ export class NavigationGenerator {;
       }
     ];
   }
-;
+
   // Auto-update navigation when new services are added;
   async updateNavigation(): Promise<void> {;
     await this.discoverServices(),;
     await this.generateCategories();
   }
-;
+
   // Get complete navigation configuration;
   async getNavigationConfig(): Promise<NavigationConfig> {;
     return {;
@@ -919,5 +917,3 @@ export class NavigationGenerator {;
         }
       ];
     }
-  }
-}

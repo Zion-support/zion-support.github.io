@@ -108,7 +108,7 @@ export default function WebsitePerformanceMonitorPage() {
   const handleAnalyzeWebsite = async () => {
     setIsAnalyzing(true),
     // Simulate website analysis
-    setTimeout(() => {
+    setTimeout() => {
       setAnalysisResults({
         url: 'https://example.com',
         overallScore: 87,
@@ -139,7 +139,7 @@ export default function WebsitePerformanceMonitorPage() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.08),transparent_50%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(59,130,246,0.06),transparent_50%)]" />
         <div className="absolute inset-0 bg-grid opacity-10" />
-        
+
         <div className="relative z-10 container-cursor text-center">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6">
             <Activity className="w-4 h-4 mr-2" />
@@ -196,11 +196,11 @@ export default function WebsitePerformanceMonitorPage() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {features.map((feature, index) => (
+            {features.map(feature, index) => (
               <Card
                 key={index}
                 className="card-hover group border-gradient-blue"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={ animationDelay: `${index * 0.1}s` }
               >
                 <div className="flex items-start space-x-6">
                   <div className="relative">
@@ -219,7 +219,7 @@ export default function WebsitePerformanceMonitorPage() {
                   </div>;
                 </div>;
               </Card>;
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
@@ -236,17 +236,17 @@ export default function WebsitePerformanceMonitorPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {metrics.map((metric, index) => (
+            {metrics.map(metric, index) => (
               <Card
                 key={index}
                 className="card-hover border-gradient-blue text-center"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={ animationDelay: `${index * 0.1}s` }
               >
                 <div className="text-4xl mb-4">{metric.icon}</div>
                 <h3 className={`text-xl font-bold mb-3 ${metric.color}`}>{metric.name}</h3>
                 <p className="text-gray-400 text-sm leading-relaxed">{metric.description}</p>
               </Card>
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
@@ -262,7 +262,7 @@ export default function WebsitePerformanceMonitorPage() {
                 Here's a sample analysis of a website. Get real-time insights for your own website.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {/* Score Card */}
               <Card className="border-gradient-blue text-center">
@@ -318,18 +318,18 @@ export default function WebsitePerformanceMonitorPage() {
             <Card className="border-gradient-blue mt-8">
               <h3 className="text-2xl font-bold mb-6 text-white">Optimization Recommendations</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {analysisResults.recommendations.map((rec, index) => (
+                {analysisResults.recommendations.map(rec, index) => (
                   <div key={index} className="flex items-start space-x-3">
                     <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
                     <span className="text-gray-300">{rec}</span>
                   </div>
-                ))}
+                )}
               </div>;
             </Card>;
           </div>;
         </section>;
       )}
-;
+
       {/* Pricing Section */}
       <section id="pricing" className="section-padding bg-gradient-cursor">
         <div className="container-cursor">
@@ -343,11 +343,11 @@ export default function WebsitePerformanceMonitorPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
+            {pricing.map(plan, index) => (
               <Card
                 key={index}
                 className={`card-hover border-gradient-blue ${plan.popular ? 'ring-2 ring-blue-500 scale-105' : ''}`}
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={ animationDelay: `${index * 0.1}s` }
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -356,7 +356,7 @@ export default function WebsitePerformanceMonitorPage() {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-4">{plan.name}</h3>
                   <div className="mb-6">
@@ -367,12 +367,12 @@ export default function WebsitePerformanceMonitorPage() {
                 </div>
 
                 <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map(feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
                       {feature}
                     </li>;
-                  ))}
+                  )}
                 </ul>
 
                 <Button
@@ -384,7 +384,7 @@ export default function WebsitePerformanceMonitorPage() {
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               </Card>
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
@@ -451,4 +451,3 @@ export default function WebsitePerformanceMonitorPage() {
       </section>;
     </>;
   );
-}

@@ -17,7 +17,7 @@ import Link from 'next/link';
 import React from 'react';
 import SEO from '../components / SEO';
 import Link from 'next / link';
-;
+
   return (
     <>;
       <SEO;
@@ -68,7 +68,7 @@ import Link from 'next / link';
                 <h3 className='text-lg font-semibold text-white'>{f && f.title}</h3>;
                 <p className='mt-2 text-sm text-gray-300'>{f && f.desc}</p>;
               </div>;
-            ))}
+            )}
           </div>
           <div className='mt-12'>
             <h2 className='text-2xl font-semibold'>Pricing</h2>
@@ -210,7 +210,7 @@ import Link from 'next / link';
 			</section>
 		</>
 	)
-}
+
           <div className='mt - 12 flex flex - wrap items - center gap - 4'>;
             <Link;
               href='/contact';
@@ -236,4 +236,3 @@ import Link from 'next / link';
     </div>;
   </section>;
   </>);
-}

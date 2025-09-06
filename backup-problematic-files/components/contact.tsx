@@ -7,11 +7,11 @@ import {
   Phone, Mail, MapPin, Globe, Clock, Users, 
   MessageSquare, Send, CheckCircle, Star, 
   Rocket, Brain, Atom, Shield, Zap
-} from 'lucide-react',
+ from 'lucide-react',
 import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029',
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029',
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029',
-// Import service data for showcase
+/ Import service data for showcase
 import { innovativeAIServices2029 } from '../data/2029-innovative-ai-services',
 import { quantumSpaceInnovations2029 } from '../data/2029-quantum-space-innovations',
 import { enterpriseITInnovations2029 } from '../data/2029-enterprise-it-innovations',
@@ -56,15 +56,15 @@ export default function ContactPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault(),
     setIsSubmitting(true),
-    
+
     // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000)),
-    
+    await new Promise(resolve => setTimeout(resolve, 2000),
+
     setIsSubmitting(false),
     setSubmitSuccess(true),
-    
+
     // Reset form after 3 seconds
-    setTimeout(() => {
+    setTimeout() => {
       setSubmitSuccess(false),
       setFormData({
         name: '',
@@ -104,9 +104,9 @@ export default function ContactPage() {
       <section className="relative z-10 pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
             className="mb-8"
           >
             <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">
@@ -126,11 +126,11 @@ import {;
   Phone, Mail, MapPin, Globe, Clock, Users,;
   MessageSquare, Send, CheckCircle, Star,;
   Rocket, Brain, Atom, Shield, Zap;
-} from 'lucide-react',;
+ from 'lucide-react',;
 import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029',;
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029',;
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029',;
-// Import service data for showcase;
+/ Import service data for showcase;
 import { innovativeAIServices2029 } from '../data/2029-innovative-ai-services',;
 import { quantumSpaceInnovations2029 } from '../data/2029-quantum-space-innovations',;
 import { enterpriseITInnovations2029 } from '../data/2029-enterprise-it-innovations',;
@@ -171,11 +171,11 @@ export default function ContactPage() {;
     e.preventDefault(),;
     setIsSubmitting(true),;
     // Simulate form submission;
-    await new Promise(resolve => setTimeout(resolve, 2000)),;
+    await new Promise(resolve => setTimeout(resolve, 2000),;
     setIsSubmitting(false),;
     setSubmitSuccess(true),;
     // Reset form after 3 seconds;
-    setTimeout(() => {;
+    setTimeout() => {;
       setSubmitSuccess(false),;
       setFormData({;
         name: '',;
@@ -212,9 +212,9 @@ export default function ContactPage() {;
       <section className="relative z-10 pt-20 pb-16 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto text-center">;
           <motion.div;
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
             className="mb-8";
           >;
             <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">;
@@ -227,17 +227,17 @@ export default function ContactPage() {;
           </motion.div>;
           {/* Stats Grid */}
           <motion.div;
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8, delay: 0.2 }
             className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-6xl mx-auto mb-12"
           >
-            {stats.map((stat, index) => (
+            {stats.map(stat, index) => (
               <motion.div
                 key={stat.label}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
+                initial={ opacity: 0, scale: 0.8 }
+                animate={ opacity: 1, scale: 1 }
+                transition={ duration: 0.5, delay: 0.4 + index * 0.1 }
                 className="text-center group"
               >
                 <div className="bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 hover:border-gray-600/70 transition-all duration-300 hover:scale-105">
@@ -254,7 +254,7 @@ export default function ContactPage() {;
                   </div>;
                 </div>;
               </motion.div>;
-            ))}
+            )}
           </motion.div>;
         </div>;
       </section>;
@@ -264,20 +264,20 @@ export default function ContactPage() {;
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <motion.div;
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, x: -30 }
+              whileInView={ opacity: 1, x: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >
               <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8">
                 <h2 className="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-6">
                   Get Free Consultation
                 </h2>
-                
+
                 {isSubmitted ? (
                   <motion.div
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
+                    initial={ opacity: 0, scale: 0.8 }
+                    animate={ opacity: 1, scale: 1 }
                     className="text-center py-12"
                   >
                     <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
@@ -306,9 +306,9 @@ export default function ContactPage() {;
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, y: 20 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
             className="max-w-4xl mx-auto"
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -331,10 +331,10 @@ export default function ContactPage() {;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
               {/* Phone Contact */}
               <motion.div;
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.6 }
+                viewport={ once: true }
                 className="group cursor-pointer"
               >
                 <div className="p-8 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 backdrop-blur-sm hover:transform hover:scale-105">
@@ -350,10 +350,10 @@ export default function ContactPage() {;
 
               {/* Email Contact */}
               <motion.div;
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.6, delay: 0.1 }
+                viewport={ once: true }
                 className="group cursor-pointer"
               >
                 <div className="p-8 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-purple-500/20 hover:border-purple-400/40 transition-all duration-300 backdrop-blur-sm hover:transform hover:scale-105">
@@ -381,10 +381,10 @@ export default function ContactPage() {;
               </motion.div>;
               {/* Address Contact */}
               <motion.div;
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.6, delay: 0.2 }
+                viewport={ once: true }
                 className="group cursor-pointer"
               >
                 <div className="p-8 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-pink-500/20 hover:border-pink-400/40 transition-all duration-300 backdrop-blur-sm hover:transform hover:scale-105">
@@ -401,10 +401,10 @@ export default function ContactPage() {;
 
             {/* Contact Form */}
             <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
               className="max-w-4xl mx-auto"
             >
               <div className="text-center mb-12">
@@ -419,8 +419,8 @@ export default function ContactPage() {;
               <div className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl rounded-3xl p-8 border border-cyan-500/20">
                 {submitSuccess ? (
                   <motion.div
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
+                    initial={ opacity: 0, scale: 0.9 }
+                    animate={ opacity: 1, scale: 1 }
                     className="text-center py-12"
                   >
                     <CheckCircle className="w-20 h-20 text-green-400 mx-auto mb-6" />
@@ -447,7 +447,7 @@ export default function ContactPage() {;
                           placeholder="Enter your full name"
                         />
                       </div>
-                      
+
                       <div>
                         <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
                           Email Address *
@@ -480,7 +480,7 @@ export default function ContactPage() {;
                           placeholder="Enter your company name"
                         />
                       </div>
-                      
+
                       <div>
                         <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
                           Phone Number
@@ -563,10 +563,10 @@ export default function ContactPage() {;
         <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">;
             <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
               className="text-center mb-12";
             >;
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">;
@@ -577,13 +577,13 @@ export default function ContactPage() {;
               </p>;
             </motion.div>;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-              {popularServices.map((service, index) => (;
+              {popularServices.map(service, index) => (;
                 <motion.div;
                   key={service.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, y: 20 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.6, delay: index * 0.1 }
+                  viewport={ once: true }
                   className="group cursor-pointer";
                 >;
                   <div className="p-6 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 backdrop-blur-sm hover:transform hover:scale-105">;
@@ -598,7 +598,7 @@ export default function ContactPage() {;
                         <span className="text-sm text-yellow-400 font-medium">Popular</span>;
                       </div>;
                     )}
-;
+
                     {/* Service Title and Tagline */}
                     <h3 className="text-xl font-semibold text-white mb-2">{service.name}</h3>;
                     <p className="text-sm text-cyan-400 mb-3">{service.tagline}</p>;
@@ -620,7 +620,7 @@ export default function ContactPage() {;
                     </div>;
                   </div>;
                 </motion.div>;
-              ))}
+              )}
             </div>;
           </div>;
         </section>;
@@ -628,10 +628,10 @@ export default function ContactPage() {;
         <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-4xl mx-auto text-center">;
             <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >;
               <h2 className="text-3xl sm: text-4xl lg:text-5xl font-bold text-white mb-6">;
                 Why Choose;
@@ -670,5 +670,3 @@ export default function ContactPage() {;
       <UltraFuturisticFooter2029 />;
     </UltraFuturisticBackground2029>;
   );
-}
-;

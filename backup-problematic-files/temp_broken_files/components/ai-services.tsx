@@ -45,7 +45,7 @@ const aiServices = [
     href: '/ai-ethics-governance-framework',
     features: ['Ethical GuidelinesGovernance FrameworkCompliance Monitoring']
   }
-],
+,
 export default function AIServices() {_return (_<QuantumHolographicMatrixBackground intensity={1.5}>
       <Head>
         <title>AI Services | Zion Tech Group</title>
@@ -61,23 +61,23 @@ export default function AIServices() {_return (_<QuantumHolographicMatrixBackgro
         </div>
 
         <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16&quot;>
-          {tracks.map((t) => (
+          {tracks.map(t) => (
             <div key={t.title} className=&quot;bg-black/30 border border-gray-700/50 rounded-2xl p-6&quot;>
               <div className=&quot;mb-4&quot;>{t.icon}</div>
               <h3 className=&quot;text-white font-semibold mb-2&quot;>{t.title}</h3>
               <p className=&quot;text-gray-400 text-sm&quot;>{t.desc}</p>            </div>
-          ))}
+          )}
         </div>
 
         <div className=&quot;max-w-6xl mx-auto mb-20&quot;>
           <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6&quot;>
-            {packages.map((p) => (
+            {packages.map(p) => (
               <div key={p.name} className=&quot;bg-black/30 border border-gray-700/50 rounded-2xl p-6&quot;>
                 <h3 className=&quot;text-2xl font-bold text-white mb-2&quot;>{p.name}</h3>
                 <div className=&quot;text-cyan-400 font-semibold mb-4&quot;>{p.price}</div>
                 <ul className=&quot;space-y-2 text-gray-300 text-sm&quot;>
-                  {p.items.map((i) => (
-                    <li key={i} className=&quot;flex items-start gap-2&quot;><Check className=&quot;w-4 h-4 mt-0.5 text-emerald-400&quot; /> <span>{i}</span></li>                  ))}
+                  {p.items.map(i) => (
+                    <li key={i} className=&quot;flex items-start gap-2&quot;><Check className=&quot;w-4 h-4 mt-0.5 text-emerald-400&quot; /> <span>{i}</span></li>                  )}
                 </ul>
               </div>
             </motion.div>
@@ -88,9 +88,9 @@ export default function AIServices() {_return (_<QuantumHolographicMatrixBackgro
         <section className=&quot;py-20 px-4 sm:px-6 lg:px-8&quot;>
           <div className=&quot;max-w-7xl mx-auto&quot;>
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8, delay: 0.2 }
               className=&quot;text-center mb-16&quot;            >
               <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-6&quot;>
                 Our AI Service Portfolio
@@ -101,12 +101,12 @@ export default function AIServices() {_return (_<QuantumHolographicMatrixBackgro
             </motion.div>
 
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
-              {aiServices.map((service, index) => (
+              {aiServices.map(service, index) => (
                 <motion.div
                   key={service.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={ opacity: 0, y: 20 }
+                  animate={ opacity: 1, y: 0 }
+                  transition={ duration: 0.6, delay: index * 0.1 }
                   className=&quot;bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-8 hover:border-cyan-500/50 transition-all duration-300 group&quot;
                 >
                   <div className=&quot;mb-6&quot;>
@@ -119,30 +119,30 @@ export default function AIServices() {_return (_<QuantumHolographicMatrixBackgro
                     {service.description}
                   </p>
                   <ul className=&quot;space-y-2 mb-6&quot;>
-                    {service.features.map((feature, featureIndex) => (
+                    {service.features.map(feature, featureIndex) => (
                       <li key={featureIndex} className=&quot;flex items-center text-gray-300&quot;>
                         <Star className=&quot;w-4 h-4 text-cyan-400 mr-2 flex-shrink-0&quot; />
                         {feature}                      </li>
-                    ))}
+                    )}
                   </ul>;
                   <motion.a;
                     href={service.href}
-                    whileHover={{ x: 5 }}
+                    whileHover={ x: 5 }
                     className=&quot;inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group-hover:text-cyan-300 transition-colors&quot;                  >
                     Learn More <ArrowRight className=&quot;w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform&quot; />
                   </motion.a>
                 </motion.div>
-              ))}
+              )}
             </div>;
           </div>;
         </section>;
-;
+
         {/* CTA Section */}
         <section className=&quot;py-20 px-4 sm:px-6 lg:px-8&quot;>
           <div className=&quot;max-w-4xl mx-auto text-center&quot;>            <motion.div
-              initial={_{ opacity: 0, _y: 20}}
-              animate={_{ opacity: 1, _y: 0}}
-              transition={_{ duration: 0.8, _delay: 0.4}}
+              initial={_{ opacity: 0, _y: 20}
+              animate={_{ opacity: 1, _y: 0}
+              transition={_{ duration: 0.8, _delay: 0.4}
             >
               <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-6&quot;>
                 Ready to Transform Your Business with AI?
@@ -152,16 +152,16 @@ export default function AIServices() {_return (_<QuantumHolographicMatrixBackgro
               </p>
               <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={ scale: 1.05 }
+                  whileTap={ scale: 0.95 }
                   className=&quot;bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-2xl transition-all duration-300&quot;                >
                   Schedule Consultation
                 </motion.button>
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover: bg-cyan-500 hover:text-white transition-all duration-300"                  whileHover={_{ scale: 1.05}}
-                  whileTap={_{ scale: 0.95}}
+                  whileHover={ scale: 1.05 }
+                  whileTap={ scale: 0.95 }
+                  className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover: bg-cyan-500 hover:text-white transition-all duration-300"                  whileHover={_{ scale: 1.05}
+                  whileTap={_{ scale: 0.95}
                   className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
                 >
                   View Case Studies
@@ -173,13 +173,10 @@ export default function AIServices() {_return (_<QuantumHolographicMatrixBackgro
       </div>
     </>
   )}
-}animate= {
-  {
+animate= {
   opacity: 1, y: 0 
-}
-}transition= {
-  {
+
+transition= {
   duration: 0.8, delay: 0.4 
-}
-}> <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Ready to Transform Your Business with AI? </h2> <p className="text-xl text-gray-400 mb-8" > Let's discuss how our AI solutions can accelerate your digital transformation and drive innovation. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <motion.button > Schedule Consultation </motion.button> <motion.button 
-}
+
+> <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Ready to Transform Your Business with AI? </h2> <p className="text-xl text-gray-400 mb-8" > Let's discuss how our AI solutions can accelerate your digital transformation and drive innovation. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <motion.button > Schedule Consultation </motion.button> <motion.button 

@@ -12,15 +12,14 @@ import { ChatInput } from './ChatInput',;
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar',;
 import { Button } from '@/components/ui/button',;
 import { X } from 'lucide-react';
-;
+
 export interface Message {;
   id:string,;
   role:'user' | 'assistant',;
   message:string,;
   timestamp:Date,;
   read?:boolean;
-}
-;
+
 export interface ChatAssistantProps {;
   isOpen:boolean,;
   onClose:() => void,;
@@ -36,8 +35,7 @@ export interface ChatAssistantProps {;
   contextHeader?:ReactNode,;
   /** Optional canned questions shown when the chat is empty */;
   starterQuestions?:string[],;
-}
-;
+
 export function ChatAssistant({;
   isOpen,;
   onClose,;
@@ -49,7 +47,7 @@ export function ChatAssistant({;
   starterQuestions = []} ChatAssistantProps) {;
   const auth = useContext(AuthContext),;
   const isGuest = !auth?.isAuthenticated,;
-;
+
   // Hooks called unconditionally at the top;
   const localStorageKey = `chatHistory-${recipient.id}`, // Key is always generated;
   const [storedGuestMessages, setStoredGuestMessages] = useLocalStorage<;
@@ -61,7 +59,7 @@ export function ChatAssistant({;
     []),;
   const [loggedInMessages, setLoggedInMessages] =;
     useState<Message[]>(initialMessages),;
-;
+
   const messagesEndRef = useRef<HTMLDivElement | null>(null),;
   const [pendingApiCallParams, setPendingApiCallParams] = useState<{;
     message:string,;
@@ -69,9 +67,9 @@ export function ChatAssistant({;
   } | null>(null),;
   const [showGuestModal, setShowGuestModal] = useState(false),;
   const [guestMessage, setGuestMessage] = useState<string | null>(null),;
-;
+
   // Effect for guest user messages;
-  useEffect(() => {;
+  useEffect() => {;
     if (isGuest) {;
       // Priority:initialMessages prop > localStorage > empty array;
       if (initialMessages && initialMessages.length > 0) {;
@@ -80,26 +78,24 @@ export function ChatAssistant({;
       } else {;
         setDisplayGuestMessages(storedGuestMessages),;
       }
-    }
   }, [;
     isGuest,;
     initialMessages,;
     storedGuestMessages,;
     setStoredGuestMessages,;
     recipient.id]),;
-;
+
   // Effect for logged-in user messages;
-  useEffect(() => {;
+  useEffect() => {;
     if (!isGuest) {;
       // Update state if initialMessages prop changes (e.g. new conversation loaded);
       setLoggedInMessages(initialMessages),;
-    }
-  }, [isGuest, initialMessages, recipient.id]),;
-;
+    }, [isGuest, initialMessages, recipient.id]),;
+
   // Determine currentMessages and setCurrentMessages based on isGuest;
   const currentMessages = isGuest ? displayGuestMessages :loggedInMessages,;
   const setCurrentMessages = (;
-    valueOrFn:Message[] | ((val:Message[]) => Message[])) => {;
+    valueOrFn:Message[] | (val:Message[]) => Message[]) => {;
     if (isGuest) {;
       const newMessages =;
         valueOrFn instanceof Function;
@@ -111,30 +107,28 @@ export function ChatAssistant({;
       const newMessages =;
         valueOrFn instanceof Function ? valueOrFn(loggedInMessages) :valueOrFn,;
       setLoggedInMessages(newMessages),;
-    }
-  },;
-;
+    },;
+
   const debouncedApiCallParams = useDebounce(pendingApiCallParams, 3000),;
-;
-  useEffect(() => {;
+
+  useEffect() => {;
     if (debouncedApiCallParams) {;
       onSendMessage(;
         debouncedApiCallParams.message,;
         debouncedApiCallParams.conversationId),;
-    }
-  }, [debouncedApiCallParams, onSendMessage]),;
-;
-  useEffect(() => {;
+    }, [debouncedApiCallParams, onSendMessage]),;
+
+  useEffect() => {;
     scrollToBottom(),;
   }, [currentMessages]), // currentMessages will correctly refer to either guest or logged-in state;
-;
+
   const scrollToBottom = () => {;
     messagesEndRef.current?.scrollIntoView({ behavior:'smooth' }),;
   },;
-;
+
   const handleSendMessage = async (messageContent:string) => {;
-    if (!messageContent.trim()) return,;
-;
+    if (!messageContent.trim() return,;
+
     if (!isGuest) {;
       // Logged-in user;
       const newMessage:Message = {;
@@ -142,49 +136,47 @@ export function ChatAssistant({;
         role:'user',;
         message:messageContent,;
         timestamp:new Date()},;
-      setCurrentMessages((prev:Message[]) => [...prev, newMessage]),;
+      setCurrentMessages(prev:Message[]) => [...prev, newMessage]),;
       setPendingApiCallParams({ message:messageContent, conversationId }),;
     } else {;
       // Guest user;
       setGuestMessage(messageContent),;
       setShowGuestModal(true),;
-    }
-  },;
-;
+    },;
+
   const handleModalSendConfirm = () => {;
     if (!guestMessage) return,;
-;
+
     const newMessage:Message = {;
       id:Date.now().toString(),;
       role:'user',;
       message:guestMessage,;
       timestamp:new Date()},;
-    setCurrentMessages((prev:Message[]) => [...prev, newMessage]), // This will now use the guest-aware setCurrentMessages;
+    setCurrentMessages(prev:Message[]) => [...prev, newMessage]), // This will now use the guest-aware setCurrentMessages;
     setPendingApiCallParams({ message:guestMessage, conversationId }),;
-;
+
     setShowGuestModal(false),;
     setGuestMessage(null),;
   },;
-;
+
   const handleModalCancel = () => {;
     setShowGuestModal(false),;
     setGuestMessage(null),;
   },;
-;
-  useEffect(() => {;
+
+  useEffect() => {;
     if (!isOpen) return,;
     const handleKeyDown = (e:KeyboardEvent) => {;
-      if (e.key === 'Escape') {;
+      if (e.key = = 'Escape') {;
         e.preventDefault(),;
         onClose();
-      }
-    },;
+      },;
     document.addEventListener('keydown', handleKeyDown),;
     return () => document.removeEventListener('keydown', handleKeyDown),;
   }, [isOpen, onClose]),;
-;
+
   if (!isOpen) return null,;
-;
+
   return (;
     <div;
       className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4";
@@ -221,25 +213,25 @@ export function ChatAssistant({;
             <X className="h-5 w-5" />;
           </Button>;
         </div>;
-;
+
         {/* Context Header (Optional) */}
         {contextHeader && (;
           <div className="border-b border-zion-purple/20 bg-zion-blue-dark/50 p-3">;
             {contextHeader}
           </div>;
         )}
-;
+
         {/* Messages */}
         <div;
           className="flex-1 overflow-y-auto p-4 space-y-4";
           aria-live="polite";
         >;
-          {currentMessages.length === 0 ? (;
+          {currentMessages.length = = 0 ? (;
             <div className="text-center text-zion-slate py-8 space-y-4">;
               <p>Start a conversation with {recipient.name}</p>;
               {starterQuestions.length > 0 && (;
                 <div className="flex flex-wrap justify-center gap-2">;
-                  {starterQuestions.map((q, idx) => (;
+                  {starterQuestions.map(q, idx) => (;
                     <Button;
                       key={idx}
                       variant="outline";
@@ -247,23 +239,23 @@ export function ChatAssistant({;
                       onClick={() => handleSendMessage(q)}
                     >;                      {q}
                     </Button>;
-                  ))}
+                  )}
                 </div>;
               )}
             </div>;
           ) :(;
-            currentMessages.map((msg) => (;
+            currentMessages.map(msg) => (;
               <ChatMessage key={msg.id} role={msg.role} message={msg.message} />;
-            ));          )}
+            );          )}
           <div ref={messagesEndRef} />;
         </div>;
-;
+
         {/* Input */}
         <div className="p-3 border-t border-zion-purple/20 bg-zion-blue-dark/30">;
           <ChatInput onSend={handleSendMessage} />;
         </div>;
       </div>;
-;
+
       {showGuestModal && guestMessage && (;
         <div;
           className="fixed inset-0 bg-black/60 z-[100] flex items-center justify-center p-4";
@@ -301,51 +293,49 @@ export function ChatAssistant({;
       )}
     </div>;
   ),; /** Optional canned questions shown when the chat is empty */ starterQuestions?: string[] ;
-}const [storedGuestMessages, setStoredGuestMessages] = useLocalStorage< Message[] > (isGuest ? localStorageKey : 'dummy-guest-key', //Use a dummy key if not guest to prevent LS write for logged-in users []);
+const [storedGuestMessages, setStoredGuestMessages] = useLocalStorage< Message[] > (isGuest ? localStorageKey : 'dummy-guest-key', //Use a dummy key if not guest to prevent LS write for logged-in users []);
 const [displayGuestMessages, setDisplayGuestMessages] = useState<Message[]> ([]);
 const [loggedInMessages, setLoggedInMessages] = useState<Message[]> (initialMessages);
-//Effect for guest user messages useEffect ( () => {;
+/Effect for guest user messages useEffect () => {;
   if (isGuest) {;
   //Priority: initialMessages prop > localStorage > empty array if (initialMessages && initialMessages.length > 0) {;
-  ;
-}
-}, [ isGuest;
+
+, [ isGuest;
 initialMessages;
 storedGuestMessages;
 setStoredGuestMessages;
 recipient.id]);
-//Effect for logged-in user messages useEffect ( () => {;
+/Effect for logged-in user messages useEffect () => {;
   if (!isGuest) {;
-  //Update state if initialMessages prop changes (e.g. new conversation loaded) useEffect ( () => {;
+  //Update state if initialMessages prop changes (e.g. new conversation loaded) useEffect () => {;
   if (debouncedApiCallParams) {;
   onSendMessage (if (!isGuest) {;
   //Logged-in user const newMessage: Message = {;
   setShowGuestModal (false);
 setGuestMessage (null) ;
-};
 if (!isOpen) return null;
 return (<div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="chat-assistant-title" >) ";
-}</div> </div> <Button > <X className="h-5 w-5" /> </Button> </div> {;
+</div> </div> <Button > <X className="h-5 w-5" /> </Button> </div> {;
   contextHeader ;
-}</div>) ;
-}{;
+</div>) ;
+{;
   /* Messages */ ";
-}<div className="flex-1 overflow-y-auto p-4 space-y-4" aria-live="polite" > > {;
+<div className="flex-1 overflow-y-auto p-4 space-y-4" aria-live="polite" >{;
   q ;
-}</Button>) ) ;
-}</div>) ;
-}</div>) : (currentMessages.map ( (msg) => (<ChatMessage key= {;
+</Button>) ;
+</div>) ;
+</div>) : (currentMessages.map (msg) => (<ChatMessage key= {;
   msg.id ;
-}role= {;
+role= {;
   msg.role ;
-}message= {;
+message= {;
   msg.message ;
-}/>) ) ) ;
-}<div ref= {;
+/>) ) ;
+<div ref= {;
   messagesEndRef ;
-}/> </div> </div> </div> {";
+/> </div> </div> </div> {";
   showGuestModal && guestMessage && (<div className="fixed inset-0 bg-black/60 z-[100] flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="confirm-message-title" > <div className="bg-zion-blue-darker p-6 rounded-lg shadow-xl w-full max-w-md" > <h3 id="confirm-message-title" className="text-lg font-semibold text-white mb-4" > Confirm Message </h3> <p className="text-zion-slate mb-6 whitespace-pre-wrap break-words" > {;
   guestMessage ";
-}</p> <div className="flex justify-end space-x-3" > <Button > Cancel </Button> <Button > Send </Button> </div> </div> </div>) ;
-}</div>) ;
-}'"
+</p> <div className="flex justify-end space-x-3" > <Button > Cancel </Button> <Button > Send </Button> </div> </div> </div>) ;
+</div>) ;
+'"

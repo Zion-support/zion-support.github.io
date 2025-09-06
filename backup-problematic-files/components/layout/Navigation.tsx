@@ -3,13 +3,13 @@ import { motion, AnimatePresence } from 'framer-motion',;
 import {;
   Menu, X, Home, Brain, Cpu, Rocket,;
   Phone, Mail, MapPin, Globe, ChevronDown;
-} from 'lucide-react',;
+ from 'lucide-react',;
 import Link from 'next/link',;
 const Navigation: React.FC = () => {;
   const [isOpen, setIsOpen] = useState(false),;
   const [isScrolled, setIsScrolled] = useState(false),;
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null),;
-  useEffect(() => {;
+  useEffect() => {;
     const handleScroll = () => {;
       setIsScrolled(window.scrollY > 50);
     },;
@@ -59,9 +59,9 @@ const Navigation: React.FC = () => {;
     <>;
       {/* Navigation Bar */}
       <motion.nav;
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.5 }}
+        initial={ y: -100 }
+        animate={ y: 0 }
+        transition={ duration: 0.5 }
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${;
           isScrolled;
             ? 'bg-gray-900/95 backdrop-blur-xl border-b border-cyan-500/20 shadow-2xl shadow-cyan-500/10';
@@ -72,7 +72,7 @@ const Navigation: React.FC = () => {;
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
             <motion.div;
-              whileHover={{ scale: 1.05 }}
+              whileHover={ scale: 1.05 }
               className="flex items-center space-x-2"
             >
               <Link href="/" className="flex items-center space-x-2 group">
@@ -88,7 +88,7 @@ const Navigation: React.FC = () => {;
 
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-8">
-              {navigationItems.map((item) => (
+              {navigationItems.map(item) => (
                 <div key={item.name} className="relative group">
                   {item.dropdown ? (
                     <div
@@ -98,19 +98,19 @@ const Navigation: React.FC = () => {;
                     >
                       <span className="font-medium">{item.name}</span>
                       <ChevronDown className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" />
-                      
+
                       {/* Dropdown Menu */}
                       <AnimatePresence>;
-                        {activeDropdown === item.name && (;
+                        {activeDropdown = = item.name && (;
                           <motion.div;
-                            initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                            animate={{ opacity: 1, y: 0, scale: 1 }}
-                            exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                            transition={{ duration: 0.2 }}
+                            initial={ opacity: 0, y: 10, scale: 0.95 }
+                            animate={ opacity: 1, y: 0, scale: 1 }
+                            exit={ opacity: 0, y: 10, scale: 0.95 }
+                            transition={ duration: 0.2 }
                             className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl rounded-2xl border border-cyan-500/20 shadow-2xl shadow-cyan-500/25 p-4"
                           >
                             <div className="grid grid-cols-1 gap-3">
-                              {item.dropdown.map((dropdownItem) => {
+                              {item.dropdown.map(dropdownItem) => {
                                 const Icon = dropdownItem.icon,
                                 return (
                                   <Link
@@ -134,7 +134,7 @@ const Navigation: React.FC = () => {;
                             className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl rounded-2xl border border-cyan-500/20 shadow-2xl shadow-cyan-500/25 p-4";
                           >;
                             <div className="grid grid-cols-1 gap-3">;
-                              {item.dropdown.map((dropdownItem) => {;
+                              {item.dropdown.map(dropdownItem) => {;
                                 const Icon = dropdownItem.icon,;
                                 return (;
                                   <Link;
@@ -171,14 +171,14 @@ const Navigation: React.FC = () => {;
                     </a>
                   )}
                 </div>;
-              ))}
+              )}
             </div>;
             {/* CTA Button */}
             <div className="hidden lg:block">
               <motion.a
                 href="/contact"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={ scale: 1.05 }
+                whileTap={ scale: 0.95 }
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white font-semibold py-2 px-6 rounded-full transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40"
               >
                 Get Started
@@ -188,7 +188,7 @@ const Navigation: React.FC = () => {;
             {/* Mobile Menu Button */}
             <div className="lg:hidden">
               <motion.button
-                whileTap={{ scale: 0.95 }}
+                whileTap={ scale: 0.95 }
                 onClick={() => setIsOpen(!isOpen)}
                 className="text-gray-300 hover:text-white transition-colors duration-300"
               >
@@ -203,10 +203,10 @@ const Navigation: React.FC = () => {;
       <AnimatePresence>;
         {isOpen && (;
           <motion.div;
-            initial={{ opacity: 0, x: '100%' }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: '100%' }}
-            transition={{ duration: 0.3 }}
+            initial={ opacity: 0, x: '100%' }
+            animate={ opacity: 1, x: 0 }
+            exit={ opacity: 0, x: '100%' }
+            transition={ duration: 0.3 }
             className="fixed inset-0 z-40 lg:hidden"
           >
             {/* Backdrop */}
@@ -216,17 +216,17 @@ const Navigation: React.FC = () => {;
             />;
             {/* Mobile Menu */}
             <motion.div;
-              initial={{ x: '100%' }}
-              animate={{ x: 0 }}
-              exit={{ x: '100%' }}
-              transition={{ duration: 0.3 }}
+              initial={ x: '100%' }
+              animate={ x: 0 }
+              exit={ x: '100%' }
+              transition={ duration: 0.3 }
               className="absolute right-0 top-0 h-full w-80 bg-gray-900/95 backdrop-blur-xl border-l border-cyan-500/20 shadow-2xl"
             >
               <div className="p-6">
                 {/* Close Button */}
                 <div className="flex justify-end mb-6">
                   <motion.button
-                    whileTap={{ scale: 0.95 }}
+                    whileTap={ scale: 0.95 }
                     onClick={() => setIsOpen(false)}
                     className="text-gray-300 hover:text-white transition-colors duration-300"
                   >
@@ -236,7 +236,7 @@ const Navigation: React.FC = () => {;
 
                 {/* Mobile Menu Items */}
                 <div className="space-y-4">
-                  {navigationItems.map((item) => (
+                  {navigationItems.map(item) => (
                     <div key={item.name}>
                       {item.dropdown ? (
                         <div className="space-y-2">
@@ -244,7 +244,7 @@ const Navigation: React.FC = () => {;
                             {item.name}
                           </div>
                           <div className="pl-4 space-y-2">
-                            {item.dropdown.map((dropdownItem) => {
+                            {item.dropdown.map(dropdownItem) => {
                               const Icon = dropdownItem.icon,
                               return (
                                 <Link
@@ -266,7 +266,7 @@ const Navigation: React.FC = () => {;
                 {/* Close Button */}
                 <div className="flex justify-end mb-6">;
                   <motion.button;
-                    whileTap={{ scale: 0.95 }}
+                    whileTap={ scale: 0.95 }
                     onClick={() => setIsOpen(false)}
                     className="text-gray-300 hover:text-white transition-colors duration-300";
                   >;
@@ -275,7 +275,7 @@ const Navigation: React.FC = () => {;
                 </div>;
                 {/* Mobile Menu Items */}
                 <div className="space-y-4">;
-                  {navigationItems.map((item) => (;
+                  {navigationItems.map(item) => (;
                     <div key={item.name}>;
                       {item.dropdown ? (;
                         <div className="space-y-2">;
@@ -283,7 +283,7 @@ const Navigation: React.FC = () => {;
                             {item.name}
                           </div>;
                           <div className="pl-4 space-y-2">;
-                            {item.dropdown.map((dropdownItem) => {;
+                            {item.dropdown.map(dropdownItem) => {;
                               const Icon = dropdownItem.icon,;
                               return (;
                                 <Link;
@@ -313,7 +313,7 @@ const Navigation: React.FC = () => {;
                         </a>
                       )}
                     </div>;
-                  ))}
+                  )}
                 </div>;
                 {/* Contact Information */}
                 <div className="mt-8 p-4 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-xl border border-cyan-500/20">
@@ -338,7 +338,7 @@ const Navigation: React.FC = () => {;
                 <div className="mt-6">
                   <motion.a
                     href="/contact"
-                    whileTap={{ scale: 0.95 }}
+                    whileTap={ scale: 0.95 }
                     onClick={() => setIsOpen(false)}
                     className="block w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white font-semibold py-3 px-6 rounded-xl text-center transition-all duration-300 shadow-lg shadow-cyan-500/25"
                   >
@@ -352,5 +352,5 @@ const Navigation: React.FC = () => {;
       </AnimatePresence>;
     </>;
   );
-},;
+,;
 export default Navigation;

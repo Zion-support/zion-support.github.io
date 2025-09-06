@@ -6,5 +6,3 @@ export function PerformanceDashboard() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

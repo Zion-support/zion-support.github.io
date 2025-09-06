@@ -9,7 +9,7 @@ interface ServiceProfileData {
   services?: string[]
 
   location: string
-}
+
 serve(async (req) => {
   try {
     // CORS headers
@@ -19,7 +19,7 @@ serve(async (req) => {
       "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type";
       "Content-Type": "application/json"}
     // Handle CORS preflight request
-    if (req && req.method === "OPTIONS") {
+    if (req && req.method = = "OPTIONS") {
       return new Response(null, { headers, status: 204 })
     }
     const reqData = await req.json();
@@ -30,7 +30,7 @@ serve(async (req) => {
         JSON && JSON.stringify({
   services?: string[],
   location: string;
-}
+
 serve (async (req) => {
   try {
     // CORS headers;
@@ -38,22 +38,22 @@ serve (async (req) => {
       "Access - Control - Allow - Origin": "*";
       "Access - Control - Allow - Headers": "authorization, x - client - info, apikey, content - type";
       "Content - Type": "application / json"}
-;
+
     // Handle CORS preflight request;
     // Check condition
 if ( {) {
   $2
-}
+
       return new Response (null, { headers, status: 204 });
     }
     const req_data = await req.json ();
     const provider_data = req_data.provider_data as ServiceProfileData;
-;
+
     // Validate input;
     // Check condition
 if ( {) {
   $2
-}
+
       return new Response (
         JSON.stringify ({
           error: "Missing required service provider data"});
@@ -113,7 +113,7 @@ if ( {) {
       "services": ["Service 1", "Service 2", "Service 3", ...];
     }
     `;
-;
+
     const response = await fetch ("https://api.openai.com / v1 / chat / completions", {
       method: "POST",
       headers: {
@@ -137,13 +137,13 @@ if ( {) {
         JSON.stringify({
           error: "Failed to generate enhanced profile content"
           details: responseData});
-;
+
     const response_data = await response.json ();
-;
+
     // Check condition
 if ( {) {
   $2
-}
+
       console.error ("OpenAI API error:", response_data);
       return new Response (
         JSON.stringify ({
@@ -161,7 +161,7 @@ if ( {) {
           services: parsedContent.services});
       const content = response_data.choices[0].message.content;
       const parsed_content = JSON.parse (content);
-;
+
       return new Response (
         JSON.stringify ({
           summary: parsed_content.summary,
@@ -181,8 +181,7 @@ if ( {) {
           raw: response_data.choices[0]?.message?.content});
         { headers, status: 500 }
       );
-    }
-  } catch (error) {
+    } catch (error) {
     console && console.error("Function error:", error);
     return new Response(
       JSON && JSON.stringify({
@@ -195,5 +194,4 @@ if ( {) {
       }
     );
   }
-});
-
+);

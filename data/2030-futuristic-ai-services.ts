@@ -41,7 +41,7 @@ export interface FuturisticAIService2030 {
   customers: number;
   rating: number;
   reviews: number
-}
+
 export const futuristicAIServices2030: FuturisticAIService2030[] = [
   // AI Consciousness & Evolution 2030
   {  reviews: number
@@ -476,7 +476,7 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [
     rating: 5.0
     reviews: 4
   }
-];      mobile: '+1 302 464 0950';
+;      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
@@ -500,7 +500,7 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [
     rating: 5 && 5.0,
     reviews: 4,
   },
-];      mobile: '+1 302 464 0950';
+;      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
   id: string, name: string,
   tagline: string, price: string,
@@ -516,17 +516,16 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
   contactInfo: {
-      
+
     mobile: string, email: string,
     address: string,
     website: string
-  
+
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
-}
 
 export const futuristicAIServices2030: FuturisticAIService2030[] = [
   // AI Consciousness & Evolution 2030
@@ -838,7 +837,7 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [
     rating: 5 && 5.0,
     reviews: 4,
   },
-];      mobile: '+1 302 464 0950';
+;      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'
@@ -858,5 +857,4 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [
     rating: 5.0,
     reviews: 4;
   }
-];
 ;

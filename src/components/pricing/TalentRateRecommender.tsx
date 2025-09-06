@@ -1,5 +1,4 @@
 
-
 interface TalentRateRecommenderProps {
   skills: string[]
   yearsExperience: number
@@ -13,7 +12,7 @@ import {
   PricingSuggestion
   TalentRateParams
   trackPricingSuggestion
-} from "@/services/pricingSuggestionService"
+ from "@/services/pricingSuggestionService"
 import { PricingSuggestionBox } from "./PricingSuggestionBox"
 import { useAuth } from "@/hooks/useAuth"
 import { Sparkles } from 'lucide-react'
@@ -24,7 +23,7 @@ interface TalentRateRecommenderProps {
   onSuggestionApplied: (value: number,) => void
 
   rateType: "hourly" | "fixed"
-}
+
 export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
 
   skills
@@ -36,7 +35,7 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
   const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null)
   const { user } = useAuth()
   const generateSuggestion = async () => {
-    if (skills.length === 0 |yearsExperience <= 0) {
+    if (skills.length = = 0 |yearsExperience <= 0) {
       return
     }
     setIsLoading(true)
@@ -52,11 +51,10 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
     } finally {
       setIsLoading (false);
     }
-  }
   const handleApplySuggestion = () => {
     if (suggestion) {
       // We'll use the middle of the range as the suggested rate
-      const suggestedRate = Math.round((suggestion.minRate + suggestion.maxRate) / 2)
+      const suggestedRate = Math.round(suggestion.minRate + suggestion.maxRate) / 2)
       onSuggestionApplied(suggestedRate)
       // Track this suggestion application
       if (user && user.id) {
@@ -81,7 +79,7 @@ import { ;
   PricingSuggestion,;
   TalentRateParams,;
   trackPricingSuggestion;
-} from "@/services/pricingSuggestionService",;
+ from "@/services/pricingSuggestionService",;
 import { PricingSuggestionBox } from "./PricingSuggestionBox";
 import { useAuth } from "@/hooks/useAuth";
 import { Sparkles } from 'lucide-react';
@@ -91,7 +89,6 @@ interface TalentRateRecommenderProps {;
   location?: string,;
   onSuggestionApplied: (value: number,) => void,;
   rateType: "hourly" | "fixed";
-}
 
 export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
   skills;
@@ -103,7 +100,7 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
   const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null);
   const { user } = useAuth();
   const generateSuggestion = async () => {;
-    if (skills && skills.length === 0 || yearsExperience <= 0) {;
+    if (skills && skills.length = = 0 || yearsExperience <= 0) {;
       return;
     }
 
@@ -120,13 +117,12 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
       logErrorToProduction('Error generating rate suggestion:', { data: error });
     } finally {;
       setIsLoading(false);
-    }
-  };
+    };
 
   const handleApplySuggestion = () => {;
     if (suggestion) {;
       // We'll use the middle of the range as the suggested rate;
-      const suggestedRate = Math && Math.round((suggestion && suggestion.minRate + suggestion && suggestion.maxRate) / 2);
+      const suggestedRate = Math && Math.round(suggestion && suggestion.minRate + suggestion && suggestion.maxRate) / 2);
       onSuggestionApplied(suggestedRate);
 
       // Track this suggestion application;
@@ -143,15 +139,15 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
     // Check condition
 if ( {) {
   $2
-}
+
       // We'll use the middle of the range as the suggested rate;
-      const suggested_rate = Math.round ((suggestion.min_rate + suggestion.max_rate) / 2);
+      const suggested_rate = Math.round (suggestion.min_rate + suggestion.max_rate) / 2);
       onSuggestionApplied (suggested_rate);
       // Track this suggestion application;
       // Check condition
 if ( {) {
   $2
-}
+
         trackPricingSuggestion ({
           user_id: user.id,
           suggestion_type: "talent",
@@ -161,7 +157,6 @@ if ( {) {
           accepted: true;
         });
       }
-    }
   }
   return (
     <div className="space-y-4">;
@@ -171,7 +166,7 @@ if ( {) {
             type="button"
             variant="outline"
             onClick = {generateSuggestion,}
-            disabled = {skills.length === 0 |yearsExperience <= 0,}
+            disabled = {skills.length = = 0 |yearsExperience <= 0,}
             className="w-full"
           >
             <Sparkles className="h-4 w-4 mr-2" /> Optimize Rate with AI
@@ -187,24 +182,22 @@ if ( {) {
       </div>
     </div>
   )
-}
+
 return (<div className="space-y-4" > <div> {"
   !suggestion && !isLoading ? (<Button type="button" variant="outline" onClick={
   generateSuggestion "
-}> <Sparkles className="h-4 w-4 mr-2" /> Optimize Rate with AI </Button>) : (<PricingSuggestionBox suggestion= {
+> <Sparkles className="h-4 w-4 mr-2" /> Optimize Rate with AI </Button>) : (<PricingSuggestionBox suggestion= {
   suggestion
-}isLoading= {
+isLoading= {
   isLoading
-}onApplySuggestion= {
+onApplySuggestion= {
   handleApplySuggestion
-}rateType= {
+rateType= {
   rateType
-}/>)
-}</div> </div>)
-}
-'"}
-}
+/>)
+</div> </div>)
 
+"}
 
     <div className="space - y-4">;
       <div>;
@@ -213,7 +206,7 @@ return (<div className="space-y-4" > <div> {"
             type="button";
             variant="outline";
             on_click = {generate_suggestion, }
-            disabled = {skills.length === 0 || years_experience <= 0, }
+            disabled = {skills.length = = 0 || years_experience <= 0, }
             className="w - full";
           >;
             <Sparkles className="h - 4 w - 4 mr - 2" /> Optimize Rate with AI;
@@ -226,20 +219,19 @@ return (<div className="space-y-4" > <div> {"
           />)}
       </div>;
     </div>);
-}
+
 return (<div className="space - y-4" > <div> {";
   !suggestion && !is_loading ? (<Button type="button" variant="outline" on_click={
   generate_suggestion ";
-}> <Sparkles className="h - 4 w - 4 mr - 2" /> Optimize Rate with AI </Button>) : (<PricingSuggestionBox suggestion= {
+> <Sparkles className="h - 4 w - 4 mr - 2" /> Optimize Rate with AI </Button>) : (<PricingSuggestionBox suggestion= {
   suggestion;
-}is_loading= {
+is_loading= {
   is_loading;
-}onApplySuggestion= {
+onApplySuggestion= {
   handleApplySuggestion;
-}rate_type= {
+rate_type= {
   rate_type;
-}/>);
-}</div> </div>);
-}
-'"},
-}
+/>);
+</div> </div>);
+
+"},

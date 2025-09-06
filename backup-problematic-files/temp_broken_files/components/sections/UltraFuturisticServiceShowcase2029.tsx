@@ -2,7 +2,7 @@ import React from 'react',;
 import Link from 'next/link',;
 import { motion } from 'framer-motion',;
 import { ArrowRight, Star, Zap, Shield, Brain } from 'lucide-react',;
-;
+
 interface Service {;
   id:string,;
   name:string,;
@@ -11,26 +11,24 @@ interface Service {;
   description:string,;
   features:string[],;
   link:string;
-}
-;
+
 interface UltraFuturisticServiceShowcase2029Props {;
   services:Service[],;
   title?:string,;
   subtitle?:string;
-}
 
 export default function UltraFuturisticServiceShowcase2029({ 
   services, 
   title = &quot;2029 Cutting-Edge Services&quot;, 
   subtitle = &quot;Experience the future of technology with our revolutionary solutions&quot; 
-}: UltraFuturisticServiceShowcase2029Props) {
+: UltraFuturisticServiceShowcase2029Props) {
   return (
     <section className=&quot;py-20 bg-gradient-to-br from-black via-gray-900 to-black&quot;>
       <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          initial={ opacity: 0, y: 20 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0.6 }
           className=&quot;text-center mb-16&quot;
         >
           <h2 className=&quot;text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6&quot;>
@@ -42,12 +40,12 @@ export default function UltraFuturisticServiceShowcase2029({
         </motion.div>
 
         <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
-          {services.slice(0, 6).map((service, index) => (
+          {services.slice(0, 6).map(service, index) => (
             <motion.div
               key={service.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.6, delay: index * 0.1 }
               className=&quot;group relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-400/40 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20&quot;            >
               <div className=&quot;flex items-center justify-between mb-4&quot;>
                 <div className=&quot;flex items-center space-x-2&quot;>
@@ -81,13 +79,13 @@ export default function UltraFuturisticServiceShowcase2029({
                 <ArrowRight className=&quot;w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform&quot; />
               </a>
             </motion.div>
-          ))}
+          )}
         </div>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
+          initial={ opacity: 0, y: 20 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0.6, delay: 0.6 }
           className=&quot;text-center mt-12&quot;        >
           <Link
             href="/services"

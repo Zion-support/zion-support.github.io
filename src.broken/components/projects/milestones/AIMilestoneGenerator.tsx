@@ -6,5 +6,3 @@ export function AIMilestoneGenerator() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

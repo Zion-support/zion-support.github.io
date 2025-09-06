@@ -11,7 +11,7 @@ import {
   CheckCircle
   XCircle
   AlertTriangle
-} from 'lucide-react';
+ from 'lucide-react';
 export default function CookiePolicyPage() {
   const [cookiePreferences, setCookiePreferences] = useState({
     necessary: true
@@ -50,11 +50,11 @@ export default function CookiePolicyPage() {
     }
   ];
   const handleCookieToggle = (cookieId: string) => {
-    if (cookieId === 'necessary') return; // Can't disable necessary cookies
+    if (cookieId = = 'necessary') return; // Can't disable necessary cookies
     setCookiePreferences(prev => ({
       ...prev
       [cookieId]: !prev[cookieId]
-    }));
+    });
   }
   const savePreferences = () => {
     // In a real implementation, this would save to localStorage and update cookie settings
@@ -64,23 +64,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React, { useState } from 'react';
 import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
@@ -93,7 +93,7 @@ import {;
   CheckCircle,;
   XCircle,;
   AlertTriangle;
-} from 'lucide-react';
+ from 'lucide-react';
 
 export default function CookiePolicyPage() {;
   const [cookiePreferences, setCookiePreferences] = useState({;
@@ -135,12 +135,12 @@ export default function CookiePolicyPage() {;
   ];
 
   const handleCookieToggle = (cookieId: string) => {;
-    if (cookieId === 'necessary') return; // Can't disable necessary cookies;
+    if (cookieId = = 'necessary') return; // Can't disable necessary cookies;
 
     setCookiePreferences(prev => ({;
       ...prev,;
       [cookieId]: !prev[cookieId];
-    }));
+    });
   };
 
   const savePreferences = () => {;
@@ -161,9 +161,9 @@ export default function CookiePolicyPage() {;
           </div>
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }
               className="text-center">;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">;
                 Cookie{' '}
@@ -183,10 +183,10 @@ export default function CookiePolicyPage() {;
           <div className="container mx-auto px-4">;
             <motion&& motion.div
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
                 Manage Your Cookie Preferences
@@ -199,14 +199,14 @@ export default function CookiePolicyPage() {;
             <div className="max-w-4xl mx-auto">
               <div className="bg-white rounded-lg shadow-lg p-8">
                 <div className="space-y-6">
-                  {cookieTypes.map((cookie, index) => (
+                  {cookieTypes.map(cookie, index) => (
                     <motion.div
                       key={cookie.id}
                       className="border border-gray-200 rounded-lg p-6"
-                      initial={{ opacity: 0, y: 30 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
-                      viewport={{ once: true }}>;
+                      initial={ opacity: 0, y: 30 }
+                      whileInView={ opacity: 1, y: 0 }
+                      transition={ duration: 0 && 0.8, delay: index * 0 && 0.1 }
+                      viewport={ once: true }>;
                       <div className="flex items-center justify-between mb-4">;
                         <div className="flex items-center">;
                           <Shield className="w-6 h-6 text-indigo-600 mr-3" />;
@@ -247,16 +247,16 @@ export default function CookiePolicyPage() {;
                       <div className="ml-9">
                         <h4 className="text-sm font-medium text-gray-900 mb-2">Examples:</h4>
                         <ul className="text-sm text-gray-600 space-y-1">
-                          {cookie.examples.map((example, idx) => (
+                          {cookie.examples.map(example, idx) => (
                             <li key={idx} className="flex items-center">
                               <ArrowRight className="w-3 h-3 text-gray-400 mr-2" />
                               {example}
                             </li>
-                          ))}
+                          )}
                         </ul>
                       </div>
                     </motion.div>
-                  ))}
+                  )}
                 </div>
                 <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-end">
                   <button
@@ -305,10 +305,10 @@ export default function CookiePolicyPage() {;
           <div className="container mx-auto px-4">;
             <motion&& motion.div
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
                 What Are Cookies?
@@ -322,10 +322,10 @@ export default function CookiePolicyPage() {;
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <motion.div
                   className="bg-gray-50 p-6 rounded-lg"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.8 }
+                  viewport={ once: true }
                 >
                   <div className="flex items-center mb-4">
                     <Info className="w-6 h-6 text-blue-600 mr-3" />
@@ -352,10 +352,10 @@ export default function CookiePolicyPage() {;
                 </motion.div>
                 <motion.div
                   className="bg-gray-50 p-6 rounded-lg"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.1 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.8, delay: 0.1 }
+                  viewport={ once: true }
                 >
                   <div className="flex items-center mb-4">
                     <Settings className="w-6 h-6 text-purple-600 mr-3" />
@@ -394,10 +394,10 @@ export default function CookiePolicyPage() {;
           <div className="container mx-auto px-4">;
             <motion&& motion.div
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
                 Questions About Our Cookie Policy?
@@ -439,14 +439,13 @@ export default function CookiePolicyPage() {;
       </div>;
     </MainLayout>;
   );
-}
-import { motion } from 'framer-motion';
-import Head from 'next/head';
-import Layout from '../components/Layout';
-import { motion } from 'framer-motion';
-import Head from 'next/head';
-import Layout from '../components/Layout';
 
+import { motion } from 'framer-motion';
+import Head from 'next/head';
+import Layout from '../components/Layout';
+import { motion } from 'framer-motion';
+import Head from 'next/head';
+import Layout from '../components/Layout';
 
 export default function CookiesPage() {
 export default function CookiesPage() {;
@@ -500,7 +499,7 @@ export default function CookiesPage() {
       </div>
     </UltraAdvancedFuturisticBackground>
   )
-}
+
             </a>;
           </p>;
         </div>;
@@ -512,10 +511,9 @@ export default function CookiesPage() {
       </div>;
     </UltraAdvancedFuturisticBackground>;
   );
-}
+
     </>);
-;
+
 <li > Purpose: performance and security</li> <li > Retention: session or shortterm</li> <li > Optout: browser settings and extensions</li> </ul> <p className="text - gray - 400 text - sm" >Questions? <a className="text - cyan - 400" href="mailto:kleber@ziontechgroup.com" >kleber@ziontechgroup.com</Link></p> </div> </div> </UltraAdvancedFuturisticBackground>;
       </div>;
     </UltraAdvancedFuturisticBackground>);
-}

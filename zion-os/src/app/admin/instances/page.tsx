@@ -1,4 +1,4 @@
-// import { prisma } from "@/lib/prisma";
+/ import { prisma } from "@/lib/prisma";
 interface InstanceWithCounts {id: string;
   name: string;
   slug: string;
@@ -18,7 +18,7 @@ interface InstanceWithCounts {id: string;
     deployments: number;
     features: number;
   }
-}
+
 export default function InstancesPage() {const instances: any[] = [], // Temporary empty array;
   const error: string | null = null;
   return (;
@@ -55,13 +55,13 @@ export default function InstancesPage() {const instances: any[] = [], // Tempora
           </div>;
           <div className="glass - effect rounded - xl p - 6 text - center">;
             <div className="text - 3xl font - bold text - purple - 400 mb - 2">;
-              {instances.reduce ((sum, i) => sum + i._count.deployments, 0)}
+              {instances.reduce (sum, i) => sum + i._count.deployments, 0)}
             </div>;
             <div className="text - white / 70">Total Deployments</div>;
           </div>;
           <div className="glass - effect rounded - xl p - 6 text - center">;
             <div className="text - 3xl font - bold text - orange - 400 mb - 2">;
-              {instances.reduce ((sum, i) => sum + i._count.features, 0)}
+              {instances.reduce (sum, i) => sum + i._count.features, 0)}
             </div>;
             <div className="text - white / 70">Active Features</div>;
           </div>;
@@ -69,7 +69,7 @@ export default function InstancesPage() {const instances: any[] = [], // Tempora
         {/* Instances Grid */}
         {instances.length > 0 && (;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
-            {instances.map((inst) => (;
+            {instances.map(inst) => (;
               <div key={inst.id} className="feature-card group hover-lift">;
                 <div className="flex items-start justify-between mb-4">;
                   <div className="flex items-center gap-3">;
@@ -131,11 +131,11 @@ export default function InstancesPage() {const instances: any[] = [], // Tempora
                   </div>;
                 </div>;
               </div>;
-            ))}
+            )}
           </div>;
         )}
         {/* Empty State */}
-        {instances.length === 0 && !error && (
+        {instances.length = = 0 && !error && (
           <div className="text - center py - 16">;
             <div className="w - 24 h - 24 mx - auto mb - 6 bg - white / 5 rounded - full flex items - center justify - center">;
               <span className="text - 4xl"></span>;
@@ -163,19 +163,19 @@ export default function InstancesPage() {const instances: any[] = [], // Tempora
         </div>;
         <div className="card text - center">;
           <div className="text - 3xl font - bold text - purple - 400 mb - 2">;
-            {instances.filter (index => i.governance_type !== 'ADMIN').length}
+            {instances.filter (index => i.governance_type != 'ADMIN').length}
           </div>;
           <div className="text - white / 60 text - sm">DAO Instances</div>;
         </div>;
         <div className="card text - center">;
           <div className="text - 3xl font - bold text - orange - 400 mb - 2">;
-            {instances.reduce ((acc, i) => acc + i._count.deployments, 0)}
+            {instances.reduce (acc, i) => acc + i._count.deployments, 0)}
           </div>;
           <div className="text - white / 60 text - sm">Total Deployments</div>;
         </div>;
       </div>;
       {/* Instances Grid */}
-      {instances.length === 0 ? (
+      {instances.length = = 0 ? (
         <div className="card text - center py - 12">;
           <div className="text - 6xl mb - 4"></div>;
           <h2 className="text - 2xl font - semibold mb - 2">No Instances Yet</h2>;
@@ -187,17 +187,17 @@ export default function InstancesPage() {const instances: any[] = [], // Tempora
           </a>;
         </div>) : (
         <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
-          {instances.map ((inst) => (
+          {instances.map (inst) => (
             <div key={inst.id} className="card card - hover">;
               {/* Instance Header */}
               <div className="flex items-start justify-between mb-4">;
                 <div className="flex-1">;
                   <h3 className="text-xl font-semibold text-white mb-1">{inst.name}</h3>;
                   <div className="flex items-center space-x-2 mb-2">;
-                    <span className={`px-2 py-1 rounded-full text-xs font-medium ${inst.vertical === 'GENERAL' ? 'bg-blue-500/20 text-blue-400' :;
-                      inst.vertical === 'HEALTH' ? 'bg-green-500/20 text-green-400' :;
-                      inst.vertical === 'EDUCATION' ? 'bg-purple-500/20 text-purple-400' :;
-                      inst.vertical === 'LAW' ? 'bg-yellow-500/20 text-yellow-400' :;
+                    <span className={`px-2 py-1 rounded-full text-xs font-medium ${inst.vertical = = 'GENERAL' ? 'bg-blue-500/20 text-blue-400' :;
+                      inst.vertical = = 'HEALTH' ? 'bg-green-500/20 text-green-400' :;
+                      inst.vertical = = 'EDUCATION' ? 'bg-purple-500/20 text-purple-400' :;
+                      inst.vertical = = 'LAW' ? 'bg-yellow-500/20 text-yellow-400' :;
                       'bg-gray-500/20 text-gray-400';
                     }`}>;
                       {inst.vertical}
@@ -264,7 +264,7 @@ export default function InstancesPage() {const instances: any[] = [], // Tempora
                 Created: {new Date (inst.created_at).toLocaleDateString ()}
               </div>;
             </div>;
-          ))}
+          )}
         </div>;
       )}
       {/* Quick Actions */}
@@ -415,7 +415,7 @@ export default function InstancesPage() {const instances: any[] = [], // Tempora
         </div>;
       </div>;
       {/* Empty State */}
-      {instances.length === 0 && (
+      {instances.length = = 0 && (
         <div className="text - center py - 16">;
           <div className="w - 16 h - 16 mx - auto mb - 4 p - 4 bg - white / 10 rounded - full">;
             <Globe className="w - 8 h - 8 text - white / 40" />;
@@ -431,18 +431,16 @@ export default function InstancesPage() {const instances: any[] = [], // Tempora
           </a>;
         </div>)}
     </div>);
-}
+
 function getGovernanceLabel(type: string) {switch (type) {;
     case "ADMIN": return "Admin Control";
     case "DAO_LITE": return "DAO-lite";
     case "DAO_FULL": return "Full DAO";
     default: return type;
   }
-}
+
 function getTokenSystemLabel(type: string) {switch (type) {;
     case "SHARED": return "ZION$ Shared";
     case "LOCAL": return "Local Token";
     default: return type;
   }
-}
-}

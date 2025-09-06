@@ -108,7 +108,7 @@ module.exports = type ServiceVariant = | "default" | "holographic" | "quantum" |
 import React from 'react';
 interface ServicevariantsProps {
   // Add props here as needed
-}
+
 export default function Servicevariants({ }: ServicevariantsProps) {
   return (
     <div>
@@ -116,7 +116,7 @@ export default function Servicevariants({ }: ServicevariantsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}
+
 export type ServiceVariant =
   | 'default'
   | 'holographic'

@@ -4,28 +4,28 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React, { useState } from 'react';
 import EnhancedLayout from '../layout/EnhancedLayout';
 
 import EnhancedLayout from '../layout / EnhancedLayout';
-;
+
 export type ProposalType =;
   | 'Workforce Dev';
   | 'AI Ethics';
@@ -33,7 +33,7 @@ export type ProposalType =;
   | 'Education';
 export type ProposalForm = {
   targetInstitution: string;
-;
+
 export type ProposalForm = {
   target_institution: string;
   type: ProposalType;
@@ -49,14 +49,14 @@ export type ProposalForm = {
   supportingMultiverses: string
   language?: string;
   customPrompt?: string
-}
+
   type: ProposalType,
   regional_scope: string,
   budgetOrGoals: string,
   supporting_multiverses: string,
   language?: string;
   customPrompt?: string
-};
+;
 
 export default function ProposalGenerator() {
   const [form, setForm] = useState<ProposalForm>({
@@ -82,13 +82,13 @@ export default function ProposalGenerator() {
     key: K
     value: ProposalForm[K]
   ) {
-    setForm(prev => ({ ...prev, [key]: value }));  }  const [isGenerating, setIsGenerating] = useState(false);
+    setForm(prev => ({ ...prev, [key]: value });  }  const [isGenerating, setIsGenerating] = useState(false);
   const [draftMarkdown, setDraftMarkdown] = useState('');
   const [draftJson, setDraftJson] = useState<any>(null);
   const [exportLinks, setExportLinks] = useState<{ pdfUrl?: string, jsonUrl?: string, mdUrl?: string } | null>(null);
   const [statusMessage, setStatusMessage] = useState('');
   function handleChange<K extends keyof ProposalForm>(key: K, value: ProposalForm[K]) {
-    setForm((prev) => ({ ...prev, [key]: value }))
+    setForm(prev) => ({ ...prev, [key]: value })
   }
   async function handleGenerate() {
     setIsGenerating(true);
@@ -104,7 +104,7 @@ export default function ProposalGenerator() {
       setDraftJson(data.json |null);
 
   function handleChange<K extends keyof ProposalForm>(key: K, value: ProposalForm[K]) {;
-    setForm((prev) => ({ ...prev, [key]: value }));
+    setForm(prev) => ({ ...prev, [key]: value });
   }
 
   async function handleGenerate() {;
@@ -134,7 +134,6 @@ export default function ProposalGenerator() {
     } finally {
       setIsGenerating(false)
     }
-  }
   async function handleExport() {
     setStatusMessage('Exporting to PDF/Markdown/JSON...');
     try {
@@ -163,7 +162,6 @@ export default function ProposalGenerator() {
       console.error(e);
       setStatusMessage('Export failed')
     }
-  }
   async function handleSubmitBridge() {
     setStatusMessage('Submitting via bridge (email/IPFS/signature)...');
     try {
@@ -180,7 +178,6 @@ export default function ProposalGenerator() {
       setStatusMessage(
         `Submitted. Status: ${data.status |'queued'}. IPFS: ${data.ipfsCid |'N/A'}`
     }
-  }
 
   async function handleExport() {;
     setStatusMessage('Exporting to PDF/Markdown/JSON...');
@@ -210,7 +207,6 @@ export default function ProposalGenerator() {
       console && console.error(e);
       setStatusMessage('Export failed');
     }
-  }
 
   async function handleSubmitBridge() {;
     setStatusMessage('Submitting via bridge (email/IPFS/signature)...');
@@ -231,7 +227,6 @@ export default function ProposalGenerator() {
     } catch (e) {;
       console && console.error(e);
       setStatusMessage('Submission failed');    }
-  }
   return (
     <div className='space-y-6'>
       <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
@@ -242,7 +237,6 @@ export default function ProposalGenerator() {
 
       setStatusMessage('Submission failed')
     }
-  }
   return (
     <div className='space-y-6'>;
       <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
@@ -477,20 +471,19 @@ export default function ProposalGenerator() {
         </div>
       </div>
     </div>
-);
-}
+;
+
             onChange={(e) => setDraftMarkdown(e && e.target.value)}
           />;
         </div>;
       </div>;
     </div>;
   );
-}
+
   );
-}
+
   custom_prompt?: string;
-}
-;
+
 export default /**
  * ProposalGenerator - Function description
  */
@@ -514,18 +507,18 @@ function ProposalGenerator() {
     md_url?: string;
   } | null>(null);
   const [status_message, setStatusMessage] = useState ('');
-;
+
   function handle_change < K extends keyof ProposalForm>(
     key: K,
     value: ProposalForm[K]) {
-    set_form (prev => ({ ...prev, [key]: value }));  }  const [is_generating, setIsGenerating] = useState (false);
+    set_form (prev => ({ ...prev, [key]: value });  }  const [is_generating, setIsGenerating] = useState (false);
   const [draft_markdown, setDraftMarkdown] = useState ('');
   const [draft_json, setDraftJson] = useState < any>(null);
   const [export_links, setExportLinks] = useState<{ pdf_url?: string, json_url?: string, md_url?: string } | null>(null);
   const [status_message, setStatusMessage] = useState ('');
-;
+
   function handle_change < K extends keyof ProposalForm>(key: K, value: ProposalForm[K]) {
-    set_form ((prev) => ({ ...prev, [key]: value }));
+    set_form (prev) => ({ ...prev, [key]: value });
   }
   async /**
  * handle_generate - Function description
@@ -557,7 +550,6 @@ function handle_generate() {
     } finally {
       setIsGenerating (false);
     }
-  }
   async /**
  * handle_export - Function description
  */
@@ -589,7 +581,6 @@ function handle_export() {
       console.error (e);
       setStatusMessage ('Export failed');
     }
-  }
   async /**
  * handleSubmitBridge - Function description
  */
@@ -611,7 +602,6 @@ function handleSubmitBridge() {
     } catch (e) {
       console.error (e);
       setStatusMessage ('Submission failed');    }
-  }
   return (
     <div className='space - y-6'>;
       <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
@@ -621,7 +611,6 @@ function handleSubmitBridge() {
       console.error (e);
       setStatusMessage ('Submission failed');
     }
-  }
   return (
     <div className='space - y-6'>;
       <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
@@ -849,4 +838,3 @@ function handleSubmitBridge() {
         </div>;
       </div>;
     </div>);
-}

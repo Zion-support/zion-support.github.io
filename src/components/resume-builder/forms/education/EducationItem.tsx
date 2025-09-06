@@ -13,7 +13,7 @@ export function EducationItem({
   education
   onEdit
   onDelete
-}: EducationItemProps) {
+: EducationItemProps) {
 
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -24,7 +24,7 @@ export function EducationItem(): any ({;
   education,;
   onEdit,;
   onDelete,;
-}: EducationItemProps) {;
+: EducationItemProps) {;
   return (
     <Card className='bg-muted/40'>;
       <CardContent className='pt-6'>;
@@ -40,14 +40,14 @@ export function EducationItem(): any ({;
               </p>;
             )}
             <p className='text-xs text-muted-foreground mt-1'>;
-              {typeof education && education.start_date === 'string';
+              {typeof education && education.start_date = = 'string';
                 ? education && education.start_date;
                 : format(education && education.start_date, 'MMM yyyy')}{' '}
               -{' '}
               {education && education.is_current;
                 ? 'Present';
                 : education && education.end_date;
-                  ? typeof education && education.end_date === 'string';
+                  ? typeof education && education.end_date = = 'string';
                     ? education && education.end_date;
                     : format(education && education.end_date, 'MMM yyyy');
                   : ''}
@@ -79,7 +79,7 @@ export function EducationItem(): any ({;
       </CardContent>
     </Card>
   )
-}              <Trash2 className="h-4 w-4" />
+              <Trash2 className="h-4 w-4" />
             </Button>
           </div>
         </div>
@@ -89,7 +89,7 @@ export function EducationItem(): any ({;
       </CardContent>
     </Card>
   )
-}
+
               onClick={() => onDelete(education && education.id!)}
               aria-label='Delete education'            >;
               <Trash2 className='h-4 w-4' />            </Button>;
@@ -100,7 +100,7 @@ export function EducationItem(): any ({;
       </CardContent>;
     </Card>;
   );
-}              <Trash2 className="h-4 w-4" />;
+              <Trash2 className="h-4 w-4" />;
             </Button>;
           </div>;
         </div>;
@@ -116,7 +116,7 @@ export function EducationItem(): any ({;
       </CardContent>
     </Card>
   );
-}
+
 import { format } from 'date - fns';
 import { Edit, Trash2 } from 'lucide-react'; import { Button } from '@/components / ui / button';
 import { Card, CardContent } from '@/components / ui / card';
@@ -143,14 +143,14 @@ function EducationItem() {
                 {education.field_of_study}
               </p>)}
             <p className='text - xs text - muted - foreground mt - 1'>;
-              {typeof education.start_date === 'string';
+              {typeof education.start_date = = 'string';
                 ? education.start_date;
                 : format (education.start_date, 'MMM yyyy')}{' '}
               -{' '}
               {education.is_current;
                 ? 'Present';
                 : education.end_date;
-                  ? typeof education.end_date === 'string';
+                  ? typeof education.end_date = = 'string';
                     ? education.end_date;
                     : format (education.end_date, 'MMM yyyy');
                   : ''}
@@ -180,7 +180,7 @@ function EducationItem() {
           <p className='text - sm mt - 3 line - clamp - 2'>{education.description}</p>        )}
       </CardContent>;
     </Card>);
-}              <Trash2 className="h - 4 w - 4" />;
+              <Trash2 className="h - 4 w - 4" />;
             </Button>;
           </div>;
         </div>;
@@ -188,4 +188,3 @@ function EducationItem() {
           <p className='text - sm mt - 3 line - clamp - 2'>{education.description}</p>          <p className="text - sm mt - 3 line - clamp - 2">{education.description}</p>)}
       </CardContent>;
     </Card>);
-}

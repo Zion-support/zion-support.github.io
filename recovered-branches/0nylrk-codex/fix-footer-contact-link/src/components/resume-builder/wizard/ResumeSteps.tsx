@@ -5,33 +5,30 @@ interface ResumeStepsProps {
   steps: StepProps[];
   activeTab: string;
   onChange: (value: string) => void
-}
+
 export const ResumeSteps = ({
   steps
   activeTab
   onChange
-}: ResumeStepsProps) => {
+: ResumeStepsProps) => {
   return (
     <TabsList className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 mb-8">;
-      {steps && steps.map((step) => (;
+      {steps && steps.map(step) => (;
         <TabsTrigger key={step && step.id} value={step && step.id}>;
           {step && step.label}
         </TabsTrigger>;
-      ))}
+      )}
     </TabsList>
   );
-}
 
   steps,
   active_tab,
   on_change,
-}: ResumeStepsProps) =>: any {
+: ResumeStepsProps) =>: any {
   return (
     <TabsList className="grid grid - cols - 2 md:grid - cols - 3 lg:grid - cols - 6 mb - 8">;
-      {steps.map ((step) => (
+      {steps.map (step) => (
         <TabsTrigger key={step.id} value={step.id}>;
           {step.label}
-        </TabsTrigger>))}
+        </TabsTrigger>)}
     </TabsList>);
-}
-;

@@ -5,14 +5,14 @@ import {
   ArrowRight, Zap, Brain, Atom, Rocket, Star,
   TrendingUp, Shield, Globe, Cpu, Sparkles,
   Play, CheckCircle, Award, Users, Clock, Phone, Mail
-} from 'lucide-react',
+ from 'lucide-react',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-},
+,
 
 const features = [
   {
@@ -35,14 +35,14 @@ const features = [
     title: 'Quantum Security',
     description: 'Unbreakable encryption with quantum key distribution'
   }
-],
+,
 
 const stats = [
   { number: '500+', label: 'Active Clients', icon: Users },
   { number: '99.9%', label: 'Uptime SLA', icon: Clock },
   { number: '24/7', label: 'Support', icon: Shield },
   { number: '2030', label: 'Future Ready', icon: Star }
-],
+,
 
 export default function UltraFuturisticHero2030() {
   return (
@@ -56,24 +56,24 @@ export default function UltraFuturisticHero2030() {
       <div className=&quot;relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center&quot;>
         {/* Main Heading */}
         <motion.div,
-initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+initial={ opacity: 0, y: 30 }
+          animate={ opacity: 1, y: 0 }
+          transition={ duration: 0.8 }
           className=&quot;mb-8&quot;
         >
           <motion.div,
-initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+initial={ opacity: 0, scale: 0.8 }
+            animate={ opacity: 1, scale: 1 }
+            transition={ duration: 0.8, delay: 0.2 }
             className=&quot;inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500/30 text-purple-300 text-sm font-medium mb-6&quot;          >
             <Sparkles className=&quot;w-4 h-4 mr-2&quot; />
             Welcome to 2030 - The Future is Now
           </motion.div>
 
           <motion.h1,
-initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8, delay: 0.4 }
             className=&quot;text-5xl md:text-7xl lg:text-8xl font-bold mb-6&quot;          >
             <span className=&quot;bg-gradient-to-r from-purple-400 via-cyan-400 to-emerald-400 bg-clip-text text-transparent&quot;>
               Zion Tech Group
@@ -81,9 +81,9 @@ initial={{ opacity: 0, y: 30 }}
           </motion.h1>
 
           <motion.p,
-initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8, delay: 0.6 }
             className=&quot;text-2xl md:text-3xl lg:text-4xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed&quot;
           >
             Pioneering the future with{' '}
@@ -93,9 +93,9 @@ initial={{ opacity: 0, y: 30 }}
           </motion.p>
 
           <motion.p,
-initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
+initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8, delay: 0.8 }
             className=&quot;text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto&quot;          >
             Transform your business with cutting-edge micro SAAS solutions, enterprise IT services, and revolutionary AI platforms that define the next decade of technological innovation.
           </motion.p>
@@ -103,9 +103,9 @@ initial={{ opacity: 0, y: 30 }}
 
         {_/* CTA Buttons */}
         <motion.div,
-initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.0 }}
+initial={ opacity: 0, y: 30 }
+          animate={ opacity: 1, y: 0 }
+          transition={ duration: 0.8, delay: 1.0 }
           className=&quot;flex flex-col sm:flex-row items-center justify-center gap-6 mb-16&quot;        >
           <Link,
 href=&quot;/contact&quot;
@@ -131,51 +131,51 @@ href=&quot;/services&quot;
 
         {_/* Features Grid */}
         <motion.div,
-initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.2 }}
+initial={ opacity: 0, y: 30 }
+          animate={ opacity: 1, y: 0 }
+          transition={ duration: 0.8, delay: 1.2 }
           className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16&quot;        >
-          {features.map((feature, index) => (
+          {features.map(feature, index) => (
             <motion.div,
 key={index}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.4 + index * 0.1 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8, delay: 1.4 + index * 0.1 }
               className=&quot;group p-6 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 border border-white/10 hover:border-purple-500/30 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:bg-white/10&quot;            >
               <div className=&quot;w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-xl flex items-center justify-center mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300&quot;>
                 <feature.icon className=&quot;w-6 h-6 text-white&quot; />
               </div>
               <h3 className=&quot;text-lg font-semibold text-white mb-2&quot;>{feature.title}</h3>
               <p className=&quot;text-gray-400 text-sm&quot;>{feature.description}</p>            </motion.div>
-          ))}
+          )}
         </motion.div>
 
         {_/* Stats Section */}
         <motion.div,
-initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.6 }}
+initial={ opacity: 0, y: 30 }
+          animate={ opacity: 1, y: 0 }
+          transition={ duration: 0.8, delay: 1.6 }
           className=&quot;grid grid-cols-2 md:grid-cols-4 gap-8 mb-16&quot;        >
           {stats.map(_(stat, index) => (
             <motion.div,
 key={index}
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 1.8 + index * 0.1 }}
+              initial={ opacity: 0, scale: 0.8 }
+              animate={ opacity: 1, scale: 1 }
+              transition={ duration: 0.8, delay: 1.8 + index * 0.1 }
               className=&quot;text-center group&quot;            >
               <div className=&quot;w-16 h-16 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300&quot;>
                 <stat.icon className=&quot;w-8 h-8 text-purple-400&quot; />
               </div>
               <div className=&quot;text-3xl md:text-4xl font-bold text-white mb-2&quot;>{stat.number}</div>
               <div className=&quot;text-gray-400 text-sm&quot;>{stat.label}</div>            </motion.div>
-          ))}
+          )}
         </motion.div>
 
         {_/* Contact Information */}
         <motion.div,
-initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 2.0 }}
+initial={ opacity: 0, y: 30 }
+          animate={ opacity: 1, y: 0 }
+          transition={ duration: 0.8, delay: 2.0 }
           className=&quot;bg-gradient-to-r from-purple-500/10 to-cyan-500/10 border border-purple-500/20 rounded-2xl p-8 backdrop-blur-sm&quot;
         >
           <h3 className=&quot;text-2xl font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h3>
@@ -205,9 +205,9 @@ initial={{ opacity: 0, y: 30 }}
 
         {_/* Trust Indicators */}
         <motion.div,
-initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 2.2 }}
+initial={ opacity: 0, y: 30 }
+          animate={ opacity: 1, y: 0 }
+          transition={ duration: 0.8, delay: 2.2 }
           className=&quot;mt-16 text-center&quot;        >
           <p className=&quot;text-gray-400 text-sm mb-4&quot;>Trusted by leading companies worldwide</p>
           <div className=&quot;flex items-center justify-center space-x-8 opacity-60&quot;>
@@ -231,36 +231,36 @@ initial={{ opacity: 0, y: 30 }}
       <div className=&quot;absolute inset-0 pointer-events-none&quot;>
         <motion.div,
 className=&quot;absolute top-20 right-20 w-2 h-2 bg-purple-400 rounded-full&quot;
-          animate={{
+          animate={
             scale: [1, 2, 1],
-            opacity: [0.5, 1, 0.5]}}
-          transition={{
+            opacity: [0.5, 1, 0.5]}
+          transition={
             duration: 3,
             repeat: Infinity,
             ease: &quot;easeInOut&quot
-          }}
+          }
         />
         <motion.div,
 className=&quot;absolute bottom-32 left-32 w-3 h-3 bg-cyan-400 rounded-full&quot;
-          animate={{
+          animate={
             scale: [1, 1.5, 1],
-            opacity: [0.3, 0.8, 0.3]}}
-          transition={{
+            opacity: [0.3, 0.8, 0.3]}
+          transition={
             duration: 4,
             repeat: Infinity,
             ease: &quot;easeInOut&quot
-          }}
+          }
         />
         <motion.div,
 className=&quot;absolute top-1/2 right-1/4 w-1 h-1 bg-emerald-400 rounded-full&quot;
-          animate={{
+          animate={
             scale: [1, 3, 1],
-            opacity: [0.2, 0.6, 0.2]}}
-          transition={{
+            opacity: [0.2, 0.6, 0.2]}
+          transition={
             duration: 5,
             repeat: Infinity,
             ease: &quot;easeInOut&quot
-          }}        />
+          }        />
       </div>
     </section>
   )}

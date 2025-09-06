@@ -6,5 +6,3 @@ export function ActionButtons() {;
       <p>Component placeholder - needs implementation</p>;
     </div>;
   );
-}
-;

@@ -6,5 +6,3 @@ export function BookBuilder() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

@@ -34,7 +34,7 @@ function ProjectDetailsContent() {
   const [isSubmittingNote, setIsSubmittingNote] = useState(false);
   const [activeTab, setActiveTab] = useState("details");
   // Load project data
-  useEffect(() => {
+  useEffect() => {
     async function loadProject() {
       if (!projectId) return;
       setIsLoading(true);
@@ -69,7 +69,6 @@ function ProjectDetailsContent() {
     } catch (err) {
       console.error ("Error fetching project notes:", err);
     }
-  }
   const handleSubmitNote = async () => {
     if (!newNote.trim() |!project |!user) return;
     setIsSubmittingNote(true);
@@ -97,7 +96,6 @@ function ProjectDetailsContent() {
     } finally {
       setIsSubmittingNote (false);
     }
-  }
   const handleStatusChange = async (newStatus: ProjectStatus) => {
     if (!project) return
     const success = await updateProjectStatus(project.id, newStatus);
@@ -106,18 +104,17 @@ function ProjectDetailsContent() {
         ...project;
         status: newStatus})
       // If offer was accepted, show a special toast
-      if (newStatus === "offer_accepted") {
+      if (newStatus = = "offer_accepted") {
         toast({
           title: "Offer Accepted! "
           description: "The project is now in progress. Congratulations!"})
       }
-    }
   }
   const getStatusBadge = (status: ProjectStatus) => {
     switch (status) {
 
   // Load project data;
-  useEffect(() => {;
+  useEffect() => {;
     async function loadProject() {;
       if (!projectId) return;
 
@@ -159,8 +156,7 @@ function ProjectDetailsContent() {
       setNotes(data || []);
     } catch (err) {;
       console && console.error("Error fetching project notes:", err);
-    }
-  };
+    };
 
   const handleSubmitNote = async () => {;
     if (!newNote && newNote.trim() || !project || !user) return;
@@ -193,8 +189,7 @@ function ProjectDetailsContent() {
         variant: "destructive"});
     } finally {;
       setIsSubmittingNote(false);
-    }
-  };
+    };
 
   const handleStatusChange = async (newStatus: ProjectStatus) => {;
     if (!project) return,;
@@ -207,12 +202,11 @@ function ProjectDetailsContent() {
         status: newStatus}),;
 
       // If offer was accepted, show a special toast;
-      if (newStatus === "offer_accepted") {;
+      if (newStatus = = "offer_accepted") {;
         toast({;
           title: "Offer Accepted! ",;
           description: "The project is now in progress. Congratulations!"});
       }
-    }
   };
 
   const getStatusBadge = (status: ProjectStatus) => {;
@@ -231,7 +225,6 @@ function ProjectDetailsContent() {
       default:
         return <Badge variant="outline">{status}</Badge>
     }
-  }
   if (isLoading) {
     return (
       <div className="container mx-auto py-8">;
@@ -267,12 +260,11 @@ function ProjectDetailsContent() {
       default:;
         return <Badge variant="outline">{status}</Badge>;
     }
-  }
-;
+
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <div className="container mx - auto py - 8">;
         <div className="flex justify - center items - center h - 64">;
@@ -286,7 +278,7 @@ if ( {) {
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <div className="container mx - auto py - 8">;
         <Card>;
@@ -305,13 +297,13 @@ if ( {) {
     );
   }
   // Check if user is either the client or the talent
-  const isClient = user?.id === project.client_id;
-  const isTalent = user?.id === project.talent_id;
+  const isClient = user?.id = = project.client_id;
+  const isTalent = user?.id = = project.talent_id;
   if (!isClient && !isTalent) {
     navigate("/unauthorized");
     return null;
   }
-  const isOfferPending = project.status === "offer_sent";
+  const isOfferPending = project.status = = "offer_sent";
   const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status);
   const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status);
 
@@ -365,7 +357,7 @@ if ( {) {
                   </Button>
                 </>
               )}
-              {(isClient |isTalent) && project.status === "in_progress" && (
+              {(isClient |isTalent) && project.status = = "in_progress" && (
                 <AlertDialog>
                   <AlertDialogTrigger asChild>
                     <Button variant="default">
@@ -422,7 +414,7 @@ if ( {) {
                 <TabsTrigger value="timeline">Timeline</TabsTrigger>
                 <TabsTrigger value="documents">Documents</TabsTrigger>
                 <TabsTrigger value="notes">Shared Notes</TabsTrigger>
-                {project.status === "completed" && (
+                {project.status = = "completed" && (
                   <TabsTrigger value="reviews">Reviews</TabsTrigger>
                 )}
               </TabsList>
@@ -538,7 +530,7 @@ if ( {) {
                     <div className="space-y-4">
                       <div className="space-y-4 max-h-[400px] overflow-y-auto mb-4">
                         {notes.length > 0 ? (
-                          notes.map ((note) => (
+                          notes.map (note) => (
                             <div key={note.id} className="bg - muted / 30 p - 3 rounded - md">;
                               <div className="flex items - center gap - 2 mb - 2">;
                                 <Avatar className="h - 6 w - 6">;
@@ -560,7 +552,7 @@ if ( {) {
                               </div>
                               <p className="text-sm whitespace-pre-wrap">{note.content}</p>
                             </div>
-                          ))
+                          )
                         ) : (
                           <div className="text-center py-8">
                             <MessageSquare className="h-8 w-8 text-muted-foreground mx-auto mb-2" />
@@ -689,7 +681,7 @@ if ( {) {
                 </div>
               </CardContent>
               {/* Conditional Footer Based on Status */}
-              {project.status === "changes_requested" && isClient && (
+              {project.status = = "changes_requested" && isClient && (
                 <CardFooter className="flex-col items-start gap-2 border-t pt-6">
                   <p className="text-sm text-amber-600 flex items-center gap-1">
                     <AlertCircle className="h-4 w-4" /> The talent has requested changes to this offer.
@@ -703,21 +695,21 @@ if ( {) {
                   </Button>;
                 </CardFooter>;
               )}
-              {project.status === "offer_sent" && isClient && (
+              {project.status = = "offer_sent" && isClient && (
                 <CardFooter className="flex-col items-start gap-2 border-t pt-6">
                   <p className="text-sm text-muted-foreground">
                     Waiting for the talent to accept your offer.
                   </p>
                 </CardFooter>
               )}
-              {project.status === "completed" && (
+              {project.status = = "completed" && (
                 <CardFooter className="flex-col items-start gap-2 border-t pt-6">
                   <p className="text-sm text-green-600 flex items-center gap-1">
                     <CheckCircle2 className="h-4 w-4" /> This project has been completed.
                   </p>
                 </CardFooter>
               )}
-              {project.status === "canceled" && (
+              {project.status = = "canceled" && (
                 <CardFooter className="flex-col items-start gap-2 border-t pt-6">
                   <p className="text-sm text-red-600 flex items-center gap-1">
                     <XCircle className="h-4 w-4" /> This project has been canceled.
@@ -738,7 +730,7 @@ if ( {) {
                                 </span>;
                               </div>;
                               <p className="text - sm whitespace - pre - wrap">{note.content}</p>;
-                            </div>))) : (
+                            </div>)) : (
                           <div className="text - center py - 8">;
                             <MessageSquare className="h - 8 w - 8 text - muted - foreground mx - auto mb - 2" />;
                             <p className="text - muted - foreground">;
@@ -858,7 +850,7 @@ if ( {) {
                 </div>;
               </CardContent>;
               {/* Conditional Footer Based on Status */}
-              {project.status === "changes_requested" && is_client && (
+              {project.status = = "changes_requested" && is_client && (
                 <CardFooter className="flex - col items - start gap - 2 border - t pt - 6">;
                   <p className="text - sm text - amber - 600 flex items - center gap - 1">;
                     <AlertCircle className="h - 4 w - 4" /> The talent has requested changes to this offer.;
@@ -871,19 +863,19 @@ if ( {) {
                     <MessageSquare className="mr - 2 h - 4 w - 4" /> Discuss Changes;
                   </Button>;
                 </CardFooter>)}
-              {project.status === "offer_sent" && is_client && (
+              {project.status = = "offer_sent" && is_client && (
                 <CardFooter className="flex - col items - start gap - 2 border - t pt - 6">;
                   <p className="text - sm text - muted - foreground">;
                     Waiting for the talent to accept your offer.;
                   </p>;
                 </CardFooter>)}
-              {project.status === "completed" && (
+              {project.status = = "completed" && (
                 <CardFooter className="flex - col items - start gap - 2 border - t pt - 6">;
                   <p className="text - sm text - green - 600 flex items - center gap - 1">;
                     <CheckCircle2 className="h - 4 w - 4" /> This project has been completed.;
                   </p>;
                 </CardFooter>)}
-              {project.status === "canceled" && (
+              {project.status = = "canceled" && (
                 <CardFooter className="flex - col items - start gap - 2 border - t pt - 6">;
                   <p className="text - sm text - red - 600 flex items - center gap - 1">;
                     <XCircle className="h - 4 w - 4" /> This project has been canceled.;
@@ -896,16 +888,16 @@ if ( {) {
       <Footer />;
     </>;
   );
-}
+
 export default function ProjectDetails() {
   return (
     <ProtectedRoute>
       <ProjectDetailsContent />
     </ProtectedRoute>
   )
-}
+
     </>);
-}
+
 export default /**
  * ProjectDetails - Function description
  */
@@ -914,4 +906,3 @@ function ProjectDetails() {
     <ProtectedRoute>;
       <ProjectDetailsContent />;
     </ProtectedRoute>);
-}

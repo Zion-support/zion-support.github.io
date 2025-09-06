@@ -41,7 +41,7 @@ export interface Innovative2026Service {
   customers: number;
   rating: number;
   reviews: number
-}
+
 export const innovative2026Services: Innovative2026Service[] = [
   // AI Consciousness & Neural Interface Services
   {  reviews: number
@@ -623,7 +623,7 @@ export const innovative2026Services: Innovative2026Service[] = [
     rating: 4.8
     reviews: 234
   }
-];      mobile: '+1 302 464 0950';
+;      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
@@ -647,7 +647,7 @@ export const innovative2026Services: Innovative2026Service[] = [
     rating: 4 && 4.8,
     reviews: 234,
   },
-];      mobile: '+1 302 464 0950';
+;      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
   id: string, name: string,
   tagline: string, price: string,
@@ -663,17 +663,16 @@ export const innovative2026Services: Innovative2026Service[] = [
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
   contactInfo: {
-      
+
     mobile: string, email: string,
     address: string,
     website: string
-  
+
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
-}
 
 export const innovative2026Services: Innovative2026Service[] = [
   // AI Consciousness & Neural Interface Services
@@ -1075,7 +1074,7 @@ export const innovative2026Services: Innovative2026Service[] = [
     rating: 4 && 4.8,
     reviews: 234,
   },
-];      mobile: '+1 302 464 0950';
+;      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'
@@ -1095,5 +1094,4 @@ export const innovative2026Services: Innovative2026Service[] = [
     rating: 4.8,
     reviews: 234;
   }
-];
 ;

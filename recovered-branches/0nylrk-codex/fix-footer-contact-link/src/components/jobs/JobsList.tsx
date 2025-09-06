@@ -12,12 +12,12 @@ import { Link } from "react-router-dom";
 interface JobsListProps {
   filter?: JobStatus;
   onSelectJob?: (jobId: string, jobTitle: string) => void;
-}
+
 export function JobsList({ filter, onSelectJob }: JobsListProps) {
   const { user } = useAuth();
   const [jobs, setJobs] = useState<Job[]>([]),
   const [isLoading, setIsLoading] = useState(true);
-  useEffect(() => {
+  useEffect() => {
 
     const fetchJobs = async () => {
       if (!user) return;
@@ -38,7 +38,6 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
       } finally {;
         setIsLoading(false);
       }
-    }
     fetchJobs()
   }, [user, filter]);
   if (isLoading) {
@@ -48,7 +47,7 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
       </div>;
     );
   }
-  if (jobs.length === 0) {
+  if (jobs.length = = 0) {
     return (
       <div className="text-center p-8 border rounded-md bg-muted/20">
         <p className="text-lg text-muted-foreground">
@@ -75,11 +74,10 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
       default:
         return "bg-gray-100 text-gray-800"
     }
-  }
 
   return (
     <div className="grid gap-6 md:grid-cols-2">
-      {jobs.map((job) => (
+      {jobs.map(job) => (
         <Card
           key={job.id}
           className={`overflow-hidden cursor-pointer transition-shadow hover:shadow-md ${
@@ -105,11 +103,11 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
               {job && job.description}
             </p>;
             <div className="flex flex-wrap gap-1 mt-2">;
-              {job && job.skills.slice(0, 3).map((skill, index) => (;
+              {job && job.skills.slice(0, 3).map(skill, index) => (;
                 <Badge key={index} variant="outline" className="text-xs">;
                   {skill}
                 </Badge>;
-              ))}
+              )}
               {job && job.skills.length > 3 && (;
                 <Badge variant="outline" className="text-xs">;
                   +{job && job.skills.length - 3} more;
@@ -141,10 +139,10 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
             </div>;
           </CardFooter>;
         </Card>;
-      ))}
+      )}
     </div>
   )
-}
+
 import { useState, useEffect } from './react';
 import { use_auth } from '@/hooks / use_auth';
 import { supabase } from '@/integrations / supabase / client';
@@ -158,7 +156,7 @@ import { Link } from './react-router-dom';
 interface JobsListProps {
   filter?: JobStatus;
   onSelectJob?: (job_id: string, job_title: string) => void;
-}
+
 export /**
  * JobsList - Function description
  */
@@ -166,13 +164,13 @@ function JobsList() {
   const { user } = use_auth ();
   const [jobs, set_jobs] = useState < Job[]>([]);
   const [is_loading, setIsLoading] = useState (true);
-;
-  useEffect (() => {
+
+  useEffect () => {
     const fetch_jobs = async () => {
       // Check condition
 if (return) {
   $2
-}
+
       try {
         let query = supabase;
           .from ("jobs");
@@ -182,30 +180,29 @@ if (return) {
         // Check condition
 if ( {) {
   $2
-}
+
           query = query.eq ("status", filter);
         }
         const { data, error } = await query;
-;
+
         // Check condition
 if (throw error) {
   $2
-}
+
         set_jobs (data as Job[]);
       } catch (error) {
         console.error ("Error fetching jobs:", error);
       } finally {
         setIsLoading (false);
       }
-    }
-;
+
     fetch_jobs ();
   }, [user, filter]);
-;
+
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <div className="flex justify - center items - center p - 8">;
         <Loader2 className="h - 8 w - 8 animate - spin text - primary" />;
@@ -214,7 +211,7 @@ if ( {) {
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <div className="text - center p - 8 border rounded - md bg - muted / 20">;
         <p className="text - lg text - muted - foreground">;
@@ -240,11 +237,10 @@ if ( {) {
       default:;
         return "bg - gray - 100 text - gray - 800";
     }
-  }
-;
+
   return (
     <div className="grid gap - 6 md:grid - cols - 2">;
-      {jobs.map ((job) => (
+      {jobs.map (job) => (
         <Card;
           key={job.id}
           className={`overflow - hidden cursor - pointer transition - shadow hover:shadow - md ${
@@ -270,10 +266,10 @@ if ( {) {
               {job.description}
             </p>;
             <div className="flex flex - wrap gap - 1 mt - 2">;
-              {job.skills.slice (0, 3).map ((skill, index) => (
+              {job.skills.slice (0, 3).map (skill, index) => (
                 <Badge key={index} variant="outline" className="text - xs">;
                   {skill}
-                </Badge>))}
+                </Badge>)}
               {job.skills.length > 3 && (
                 <Badge variant="outline" className="text - xs">;
                   +{job.skills.length - 3} more;
@@ -303,6 +299,5 @@ if ( {) {
               </Button>;
             </div>;
           </CardFooter>;
-        </Card>))}
+        </Card>)}
     </div>);
-}

@@ -1,4 +1,4 @@
-#!/usr / bin / env node;
+!/usr / bin / env node;
 import { mkdir_sync, exists_sync } from 'node: fs';
 import { resolve } from 'node: path';
 import sharp from 'sharp';
@@ -7,7 +7,7 @@ import.meta.url).pathname
 const svgPath = resolve(root, '../assets/zion.svg');
 const outDir = resolve(root, '../public/icons');
 
-if (!existsSync(outDir)) mkdirSync(outDir, { recursive: true })
+if (!existsSync(outDir) mkdirSync(outDir, { recursive: true })
 const sizes = [16, 32, 48, 128];
 for (const size of sizes) {
   const out = resolve(outDir, `icon-${size}.png`)
@@ -15,4 +15,3 @@ for (const size of sizes) {
 
   // eslint-disable-next-line no-console
   console.log('generated', out)
-}

@@ -9,7 +9,7 @@ const contact = {
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
-}
+
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -19,7 +19,7 @@ const contact = {
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com'
   website: 'https://ziontechgroup.com'
-};
+;
 
 export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
   // ENTERPRISE SOLUTIONS
@@ -122,7 +122,6 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
     }
-  }
     tagline: 'Intelligent risk assessment and mitigation for enterprise',
       monthly: 899,
       yearly: 8990,
@@ -315,7 +314,6 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
     }
-  }
       'Data governance',
       'Security standards',
       'Regulatory requirements',
@@ -467,9 +465,8 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     reviews: 41
     contactInfo: contact
   }
-];
+;
 
     contact_info: contact;
   }
-];
 ;

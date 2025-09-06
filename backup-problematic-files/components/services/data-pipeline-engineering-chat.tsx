@@ -8,7 +8,7 @@ const DataPipelineEngineeringChat: NextPage = () => {
         <title>DataPipelineEngineeringChat - Zion Tech Solutions</title>
         <meta name="description" content="DataPipelineEngineeringChat service" />
       </Head>
-      
+
       <main>
         <h1>DataPipelineEngineeringChat</h1>
         <p>Service details coming soon...</p>
@@ -16,6 +16,6 @@ const DataPipelineEngineeringChat: NextPage = () => {
       </main>
     </div>
   )
-},
+,
 
 export default DataPipelineEngineeringChat,

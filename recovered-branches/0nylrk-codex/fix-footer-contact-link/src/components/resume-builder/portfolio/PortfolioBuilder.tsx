@@ -14,7 +14,7 @@ export function PortfolioBuilder() {
   const [editingProject, setEditingProject] = useState<PortfolioProject | null>(
     null
   );
-  useEffect(() => {
+  useEffect() => {
     fetchProjects();
   }, [fetchProjects]);
   const handleAddSuccess = () => {
@@ -30,7 +30,6 @@ export function PortfolioBuilder() {
     if (success) {
       fetchProjects();
     }
-  }
   if (isLoading) {
     return (
       <div className="flex justify-center items-center h-64">
@@ -70,7 +69,7 @@ export function PortfolioBuilder() {
                 setShowAddProject(false);
                 setEditingProject(null);
 
-              }}
+              }
             />;
           </CardContent>;
         </Card>;
@@ -78,14 +77,14 @@ export function PortfolioBuilder() {
       {/* Projects List */}
       {projects && projects.length > 0 ? (;
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
-          {projects && projects.map((project) => (;
+          {projects && projects.map(project) => (;
             <ProjectCard
               key={project && project.id}
               project={project}
               onEdit={() => setEditingProject(project)}
               onDelete={handleDeleteProject}
             />;
-          ))}
+          )}
         </div>
       ) : (
         !showAddProject && (
@@ -111,11 +110,10 @@ export function PortfolioBuilder() {
               </div>
             </CardContent>
           </Card>
-        )
-      )}
+        )}
     </div>
   );
-}
+
                 >;
                   Add Your First Project;
                 </Button>;
@@ -126,7 +124,6 @@ export function PortfolioBuilder() {
       )}
     </div>;
   );
-}
-          </Card>))}
+
+          </Card>)}
     </div>);
-}

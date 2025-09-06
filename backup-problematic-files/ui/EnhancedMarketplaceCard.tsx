@@ -9,7 +9,6 @@ interface MarketplaceCardProps {
   image: string;
   onAddToCart?: () => void;
   onFavorite?: () => void;
-}
 
 const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
   title,
@@ -19,7 +18,7 @@ const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
   image,
   onAddToCart,
   onFavorite,
-}) => {
+) => {
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
       <div className="relative">
@@ -54,7 +53,6 @@ const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
       </div>
     </div>
   );
-};
 
 export default EnhancedMarketplaceCard;
 export type MarketplaceCardProps = {
@@ -62,7 +60,7 @@ export type MarketplaceCardProps = {
   subtitle?: string,
   description?: string,
   footer?: React.ReactNode
-},
+,
 
 export default function EnhancedMarketplaceCard({ title, subtitle, description, footer }: MarketplaceCardProps) {
   return (
@@ -77,7 +75,7 @@ export default function EnhancedMarketplaceCard({ title, subtitle, description, 
       </div>
     </EnhancedCard>
   )
-}
+
           <div className="h-12 w-12 rounded bg-gray-200" />)},;
         <h3 className="text-lg font-semibold text-gray-900">{title}</h3>,;
       </div>,;
@@ -91,7 +89,6 @@ export type MarketplaceCardProps = {;
   subtitle?: string,;
   description?: string;
   footer?: React.ReactNode;
-};
 export default function EnhancedMarketplaceCard({ title, subtitle, description, footer }: MarketplaceCardProps) {;
   return (;
     <EnhancedCard className="p-5">;
@@ -105,5 +102,3 @@ export default function EnhancedMarketplaceCard({ title, subtitle, description, 
       </div>;
     </EnhancedCard>;
   );
-}
-;

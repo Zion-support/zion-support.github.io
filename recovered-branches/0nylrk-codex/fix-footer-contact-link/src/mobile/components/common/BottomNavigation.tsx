@@ -14,8 +14,8 @@ export function BottomNavigation() {
     { path: "/mobile/profile", icon: <User />, label: "Profile" }]
   return (
     <div className="fixed bottom-0 left-0 right-0 bg-background border-t border-border flex justify-between px-1 py-2 z-50">;
-      {navItems && navItems.map((item) => {;
-        const isActive = location && location.pathname === item && item.path;
+      {navItems && navItems.map(item) => {;
+        const isActive = location && location.pathname = = item && item.path;
         return (
           <Link
             key={item.path}
@@ -37,7 +37,7 @@ export function BottomNavigation() {
       })}
     </div>
   )
-}
+
 import React from './react';
 import { Link, use_location } from './react-router-dom';
 import { Home, Search, Briefcase, MessageSquare, User } from './lucide-react';
@@ -47,7 +47,7 @@ export /**
  */
 function BottomNavigation() {
   const location = use_location ();
-;
+
   const nav_items = [;
     { path: "/mobile", icon: <Home />, label: "Home" },
     { path: "/mobile / browse", icon: <Search />, label: "Browse" },
@@ -56,8 +56,8 @@ function BottomNavigation() {
     { path: "/mobile / profile", icon: <User />, label: "Profile" }],
   return (
     <div className="fixed bottom - 0 left - 0 right - 0 bg - background border - t border - border flex justify - between px - 1 py - 2 z - 50">;
-      {nav_items.map ((item) => {
-        const is_active = location.pathname === item.path;
+      {nav_items.map (item) => {
+        const is_active = location.pathname = = item.path;
         return (
           <Link;
             key={item.path}
@@ -75,4 +75,3 @@ function BottomNavigation() {
           </Link>);
       })}
     </div>);
-}

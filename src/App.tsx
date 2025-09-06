@@ -6,14 +6,14 @@ import Sidebar from './components/Sidebar';
 import { PerformanceMonitor } from './components/PerformanceMonitor';
 import ErrorBoundary from './components/ErrorBoundary';
 
-// Lazy load pages
-const Home = lazy(() => import('./pages/Home'));
-const About = lazy(() => import('./pages/About'));
-const Services = lazy(() => import('./pages/Services'));
-const Pricing = lazy(() => import('./pages/Pricing'));
-const Contact = lazy(() => import('./pages/Contact'));
+/ Lazy load pages
+const Home = lazy() => import('./pages/Home');
+const About = lazy() => import('./pages/About');
+const Services = lazy() => import('./pages/Services');
+const Pricing = lazy() => import('./pages/Pricing');
+const Contact = lazy() => import('./pages/Contact');
 
-// Loading Component
+/ Loading Component
 const LoadingSpinner = () => (
   <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
     <div className="text-center">
@@ -21,7 +21,7 @@ const LoadingSpinner = () => (
       <p className="text-cyan-400 text-lg font-medium">Loading Zion Tech Group...</p>
     </div>
   </div>
-);
+;
 
 const App = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -32,7 +32,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Sidebar from './components/layout/Sidebar';
 import ErrorBoundary from './components/ErrorBoundary';
-// Import pages
+/ Import pages
 import HomePage from './pages/Home';
 import AboutPage from './pages/About';
 import ContactPage from './pages/Contact';
@@ -45,7 +45,7 @@ export default function App() {
         <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
           <Header />
           <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
-          
+
           <main className="pt-20">
             <Suspense fallback={<LoadingSpinner />}>
               <Routes>
@@ -57,15 +57,12 @@ export default function App() {
               </Routes>
             </Suspense>
           </main>
-          
+
           <Footer />
           <PerformanceMonitor />
         </div>
       </Router>
     </ErrorBoundary>
   );
-}
-};
 
 export default App;
-}

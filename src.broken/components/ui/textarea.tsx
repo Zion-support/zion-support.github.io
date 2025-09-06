@@ -6,5 +6,3 @@ export function textarea() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

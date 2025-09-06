@@ -1,5 +1,4 @@
 
-}
 import React from './react';
 import Link from './next / link';
 import { ArrowRight, Phone } from 'lucide-react'import { Button  } from '@/components / ui / button';
@@ -42,10 +41,6 @@ export const MobileAppHero: React.FC = () => {
         </div>;
       </div>;
     </section>);
-}
-"
-
-};
 import React from "react";
 import Link from "next/link";
 import { ArrowRight, Phone } from 'lucide-react'import { Button } from "@/components/ui/button";
@@ -93,7 +88,5 @@ export const MobileAppHero: React.FC = () => {;
       </div>;
     </section>;
   );
-};
-"
 
-";
+;

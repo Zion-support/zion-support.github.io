@@ -2,14 +2,13 @@ import React, { useState, useEffect } from 'react',
 
 const ScrollToTop: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false),
-  useEffect_(() => {
+  useEffect_() => {
     const toggleVisibility = () => {
       if (window.pageYOffset > 300) {
         setIsVisible(true)
       } else {
         setIsVisible(false)
-      }
-    },
+      },
     window.addEventListener('scroll', toggleVisibility),
     return () => window.removeEventListener('scroll', toggleVisibility)
   }, []),
@@ -44,6 +43,6 @@ strokeLinecap=&quot;round&quot;
       )}
     </>
   )
-},
+,
 
 export default ScrollToTop,

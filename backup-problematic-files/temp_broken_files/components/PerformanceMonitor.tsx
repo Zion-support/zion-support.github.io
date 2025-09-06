@@ -5,7 +5,7 @@ interface PerformanceData {
   domContentLoaded: number,
   firstPaint: number,
   firstContentfulPaint: number
-}
+
 import React, { useEffect } from 'react';
 
 interface PerformanceData {
@@ -15,25 +15,23 @@ interface PerformanceData {
   largestContentfulPaint?: number;
   firstInputDelay?: number;
   cumulativeLayoutShift?: number;
-}
 
 interface PerformanceMonitorProps {
   onPerformanceData?: (data: PerformanceData) => void;
-}
 
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData }) => {
-  useEffect(() => {
+  useEffect() => {
     const measurePerformance = () => {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       const paintEntries = performance.getEntriesByType('paint');
-      
+
       const performanceData: PerformanceData = {
         loadTime: navigation.loadEventEnd - navigation.loadEventStart,
         domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
       };
 
       // Get paint metrics
-      const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
+      const fcp = paintEntries.find(entry => entry.name = = 'first-contentful-paint');
       if (fcp) {
         performanceData.firstContentfulPaint = fcp.startTime;
       }
@@ -54,7 +52,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
       // Get CLS
       const clsEntries = performance.getEntriesByType('layout-shift');
       if (clsEntries.length > 0) {
-        performanceData.cumulativeLayoutShift = clsEntries.reduce((sum, entry) => {
+        performanceData.cumulativeLayoutShift = clsEntries.reduce(sum, entry) => {
           const layoutShiftEntry = entry as LayoutShift;
           return sum + (layoutShiftEntry.value || 0);
         }, 0);
@@ -64,7 +62,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
     };
 
     // Measure performance after page load
-    if (document.readyState === 'complete') {
+    if (document.readyState = = 'complete') {
       measurePerformance();
     } else {
       window.addEventListener('load', measurePerformance);
@@ -76,6 +74,5 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
   }, [onPerformanceData]);
 
   return null;
-};
 
 export default PerformanceMonitor;

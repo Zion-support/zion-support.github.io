@@ -6,5 +6,3 @@ export function FraudTabContent() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

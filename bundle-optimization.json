@@ -1,4 +1,4 @@
-{
+
   "optimization": {
     "splitChunks": {
       "chunks": "all",
@@ -8,7 +8,4 @@
           "name": "vendors",
           "chunks": "all"
         }
-      }
     }
-  }
-}

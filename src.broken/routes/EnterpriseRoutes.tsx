@@ -6,5 +6,3 @@ export function EnterpriseRoutes() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

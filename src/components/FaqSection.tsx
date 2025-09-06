@@ -4,7 +4,7 @@ import { GradientHeading } from './GradientHeading'
   AccordionContent
   AccordionItem
   AccordionTrigger
-} from '@/components/ui/accordion'
+ from '@/components/ui/accordion'
 
 import { FileText } from 'lucide-react'
 const faqs = [
@@ -48,14 +48,14 @@ const faqs = [
     answer:
       'Reach us via the chat widget, email support@ziontechgroup.com or call +1 302 464 0950 anytime.'
   }
-]
+
 export function FaqSection() {
 import { GradientHeading } from './GradientHeading';
   Accordion,;
   AccordionContent,;
   AccordionItem,;
   AccordionTrigger,;
-} from '@/components/ui/accordion';
+ from '@/components/ui/accordion';
 import { FileText } from 'lucide-react';
 const faqs = [;
   {;
@@ -98,7 +98,6 @@ const faqs = [;
     answer:;
       'Reach us via the chat widget, email support@ziontechgroup && ziontechgroup.com or call +1 302 464 0950 anytime.',;
   },;
-];
 
 export function FaqSection() {;
   return (
@@ -112,7 +111,7 @@ import { GradientHeading } from './GradientHeading';
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from '@/components / ui / accordion';
+ from '@/components / ui / accordion';
 import { FileText } from 'lucide-react';
 const faqs = [;
   {
@@ -155,7 +154,7 @@ const faqs = [;
     answer:;
       'Reach us via the chat widget, email support@ziontechgroup.com or call +1 302 464 0950 anytime.',
   },
-];
+;
 export /**
  * FaqSection - Function description
  */
@@ -177,7 +176,7 @@ function FaqSection() {
             <h3 className='text-xl font-bold text-white'>Common Questions</h3>
           </div>
           <Accordion type='single' collapsible className='w-full'>
-            {faqs.map((faq, index) => (
+            {faqs.map(faq, index) => (
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
@@ -193,7 +192,7 @@ function FaqSection() {
             <h3 className='text - xl font - bold text - white'>Common Questions</h3>;
           </div>;
           <Accordion type='single' collapsible className='w - full'>;
-            {faqs.map ((faq, index) => (
+            {faqs.map (faq, index) => (
               <AccordionItem;
                 key={index}
                 value={`item-${index}`}
@@ -259,7 +258,7 @@ export function FaqSection() {;
             <h3 className="text-xl font-bold text-white">Common Questions</h3>
           </div>
           <Accordion type="single" collapsible className="w-full">
-            {faqs.map((faq, index) => (
+            {faqs.map(faq, index) => (
               <AccordionItem key={index} value={`item-${index}`} className="border-zion-purple/10">
                 <AccordionTrigger className="text-white hover:text-zion-cyan">
                   {faq.question}
@@ -268,19 +267,16 @@ export function FaqSection() {;
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
-            ))}
+            )}
           </Accordion>
         </div>
       </div>
     </section>
-  )
-}
   );
-}
+
                 </AccordionContent>;
-              </AccordionItem>))}
+              </AccordionItem>)}
           </Accordion>;
         </div>;
       </div>;
     </section>);
-}

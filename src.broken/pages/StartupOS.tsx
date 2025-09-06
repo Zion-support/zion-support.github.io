@@ -6,5 +6,3 @@ export function StartupOS() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

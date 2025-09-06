@@ -6,5 +6,3 @@ export function MultiverseLaunchesSection() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

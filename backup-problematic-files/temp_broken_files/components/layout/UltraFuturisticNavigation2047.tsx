@@ -10,8 +10,8 @@ import { ;
   Star, Award, Clock, CheckCircle, Zap as ZapIcon, Phone as PhoneIcon,;
   Search, User, Bell, Cog, LogOut, Home, Info, FileText, Users as UsersIcon,;
   Bot, MessageCircle, Linkedin, Twitter, Github, Youtube, MapPin;
-} from 'lucide-react',;
-;
+ from 'lucide-react',;
+
 interface NavigationItem {;
   name:string,;
   href:string,;
@@ -23,7 +23,6 @@ interface NavigationItem {;
   featured?:boolean,;
   category?:string,;
   color?:string;
-}
 
 const navigationItems: NavigationItem[] = [
   {
@@ -226,21 +225,21 @@ const navigationItems: NavigationItem[] = [
         color: 'from-red-500 to-pink-500'
       }    ]
   }
-],
+,
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-},
+,
 
 const socialLinks = [
   { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-400' },
   { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-sky-400' },
   { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github, color: 'hover:text-gray-400' },
   { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-500' }
-],
+,
 
 const UltraFuturisticNavigation2047 = () => {
   const [isOpen, setIsOpen] = useState(false),
@@ -250,14 +249,13 @@ const UltraFuturisticNavigation2047 = () => {
   const closeMenu = () => setIsOpen(false),
 
   const handleDropdownToggle = (name: string) => {
-    setActiveDropdown(activeDropdown === name ? null : name)
+    setActiveDropdown(activeDropdown = = name ? null : name)
   },
-  useEffect_(() => {const handleResize = () => {
+  useEffect_() => {const handleResize = () => {
       if (window.innerWidth >= 1024) {
         setIsOpen(false),
         setActiveDropdown(null)
-      }
-    },
+      },
     window.addEventListener('resize', handleResize),
     return () => window.removeEventListener('resize', handleResize)
   }, []),
@@ -279,7 +277,7 @@ const UltraFuturisticNavigation2047 = () => {
 
           {/* Desktop Navigation */}
           <div className=&quot;hidden lg:flex lg:items-center lg:space-x-8&quot;>
-            {navigationItems.map((item) => (
+            {navigationItems.map(item) => (
               <div key={item.name} className=&quot;relative group&quot;>
                 <button,
 onClick={() => handleDropdownToggle(item.name)}
@@ -291,16 +289,16 @@ onClick={() => handleDropdownToggle(item.name)}
                 </button>
 
                 <AnimatePresence>
-                  {activeDropdown === item.name && (
+                  {activeDropdown = = item.name && (
                     <motion.div,
-initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 10 }}
-                      transition={{ duration: 0.2 }}
+initial={ opacity: 0, y: 10 }
+                      animate={ opacity: 1, y: 0 }
+                      exit={ opacity: 0, y: 10 }
+                      transition={ duration: 0.2 }
                       className=&quot;absolute top-full left-0 w-80 bg-slate-800/95 backdrop-blur-md border border-slate-700/50 rounded-xl shadow-2xl p-6 z-50&quot;
                     >
                       <div className=&quot;space-y-4&quot;>
-                        {item.children?.map((child) => (
+                        {item.children?.map(child) => (
                           <Link,
 key={child.name}
                             href={child.href}
@@ -319,15 +317,15 @@ key={child.name}
                               </div>
                               <p className=&quot;text-sm text-gray-400 mt-1&quot;>{child.description}</p>                            </div>
                           </a>
-                        ))}
+                        )}
                       </div>;
                     </motion.div>;
                   )}
                 </AnimatePresence>;
               </div>;
-            ))}
+            )}
           </div>;
-;
+
           {/* Contact Info & CTA */}
           <div className=&quot;hidden lg:flex lg:items-center lg:space-x-4&quot;>
             <div className=&quot;flex items-center space-x-4 text-sm text-gray-400&quot;>
@@ -364,14 +362,14 @@ onClick={toggleMenu}
       <AnimatePresence>
         {isOpen && (
           <motion.div,
-initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
+initial={ opacity: 0, height: 0 }
+            animate={ opacity: 1, height: 'auto' }
+            exit={ opacity: 0, height: 0 }
+            transition={ duration: 0.3 }
             className=&quot;lg:hidden bg-slate-800/95 backdrop-blur-md border-t border-slate-700/50&quot;
           >
             <div className=&quot;px-2 pt-2 pb-3 space-y-1&quot;>
-              {navigationItems.map((item) => (
+              {navigationItems.map(item) => (
                 <div key={item.name}>
                   <button,
 onClick={() => handleDropdownToggle(item.name)}
@@ -380,18 +378,18 @@ onClick={() => handleDropdownToggle(item.name)}
                     <div className=&quot;flex items-center space-x-2&quot;>
                       {item.icon}
                       <span>{item.name}</span>                    </div>
-                    <ChevronDown className={_`w-4 h-4 transition-transform duration-200 ${activeDropdown === item.name ? 'rotate-180' : ''}`} />
+                    <ChevronDown className={_`w-4 h-4 transition-transform duration-200 ${activeDropdown = = item.name ? 'rotate-180' : ''}`} />
                   </button>
-                  
+
                   <AnimatePresence>
-                    {activeDropdown === item.name && (
+                    {activeDropdown = = item.name && (
                       <motion.div,
-initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: 'auto' }}
-                        exit={{ opacity: 0, height: 0 }}
-                        transition={{ duration: 0.2 }}
+initial={ opacity: 0, height: 0 }
+                        animate={ opacity: 1, height: 'auto' }
+                        exit={ opacity: 0, height: 0 }
+                        transition={ duration: 0.2 }
                         className=&quot;ml-4 mt-2 space-y-1&quot;                      >
-                        {item.children?.map((child) => (
+                        {item.children?.map(child) => (
                           <Link,
 key={child.name}
                             href={child.href}
@@ -399,12 +397,12 @@ key={child.name}
                             onClick={closeMenu}
                           >;
                             {child.name}
-                          </a>                        ))}
+                          </a>                        )}
                       </motion.div>
                     )}
                   </AnimatePresence>;
                 </div>;
-              ))}
+              )}
               ;
               {/* Mobile Contact Info */}
               <div className=&quot;pt-4 pb-3 border-t border-slate-700/50&quot;>
@@ -425,7 +423,7 @@ key={child.name}
                     <MapPin className=&quot;w-4 h-4&quot; />
                     <span>{contactInfo.address}</span>                  </div>
                 </div>
-                
+
                 <div className=&quot;px-3 pt-2&quot;>
                   <Link,
 href=&quot;/contact&quot;
@@ -442,6 +440,6 @@ href=&quot;/contact&quot;
       </AnimatePresence>
     </nav>
   )
-},
+,
 
 export default UltraFuturisticNavigation2047,

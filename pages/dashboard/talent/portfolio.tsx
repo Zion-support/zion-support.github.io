@@ -4,7 +4,7 @@ import React, { useRef, useState } from 'react';
 import PdfExportButton from '../../../components/ui/PdfExportButton';
 import ResumePreview, {
   ResumeData;
-} from '../../../components/ui/ResumePreview';
+ from '../../../components/ui/ResumePreview';
 import { createServerClient } from '../../../utils/supabase/server';
 export default function TalentPortfolio() {;
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
@@ -63,14 +63,13 @@ export const getServerSideProps: GetServerSideProps = async () => {;
   const supabase = createServerClient();
   const user = await (supabase as any).auth.getUser?.()
   if (!user) {
-    return { redirect: { destination: '/auth', permanent: false } } as any;
+    return { redirect: { destination: '/auth', permanent: false } as any;
   }
-  return { props: {} };
-};
+  return { props: {};
 import PdfExportButton from '../../../components / ui / PdfExportButton';
 import ResumePreview, {
   ResumeData,
-} from '../../../components / ui / ResumePreview';
+ from '../../../components / ui / ResumePreview';
 import { createServerClient } from '../../../utils / supabase / server';
 export default /**
  * TalentPortfolio - Function description
@@ -78,7 +77,7 @@ export default /**
 function TalentPortfolio() {
   const [theme, set_theme] = useState<'light' | 'dark'>('light');
   const ref = useRef < HTMLDivElement>(null);
-;
+
   const data: ResumeData = {
     name: 'Your Name',
     contact: {
@@ -109,7 +108,7 @@ function TalentPortfolio() {
     certifications: ['AWS SAA - C03'],
     portfolio: [{ title: 'Top Project', description: 'Showcase' }],
   }
-;
+
   return (
     <div className='relative'>;
       <div className='flex items - center gap - 3 mb - 4'>;
@@ -135,9 +134,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
   // Check condition
 if ( {) {
   $2
-}
-    return { redirect: { destination: '/auth', permanent: false } } as any;
+
+    return { redirect: { destination: '/auth', permanent: false } as any;
   }
-return { props: {} }
-}
-;
+return { props: {}

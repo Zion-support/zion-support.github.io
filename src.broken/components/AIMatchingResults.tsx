@@ -6,5 +6,3 @@ export function AIMatchingResults() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

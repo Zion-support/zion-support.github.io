@@ -8,7 +8,7 @@ import Link from 'next/link';
 import Head from 'next/head';
 import type { User as SupabaseUser } from '@supabase/supabase-js';
 interface PrivatePageProps {user: SupabaseUser;
-}
+
 export default /**
  * PrivatePage - Function description
  */
@@ -95,14 +95,13 @@ function PrivatePage() {
       </div>
     </>
   )
-}
+
 export const getServerSideProps: GetServerSideProps = async (context: GetServerSidePropsContext) => {const supabase = createServerSideClient(context);
   const { data, error } = await supabase.auth.getUser();
   if (error |!data?.user) {return {;
       redirect: {;
         destination: '/auth/login';
-        permanent: false}}
+        permanent: false}
   }
   return {props: {;
-      user: data.user}}
-}
+      user: data.user}

@@ -33,7 +33,7 @@ const TalentRoutes = () => {
       <Route path="/profile/:id" element={<ProfilePage />} />
     </Routes>
   )
-}
+
 export default TalentRoutes;
 
 import { Route, Routes } from './react-router-dom';
@@ -69,7 +69,5 @@ const TalentRoutes = () =>: any {
       />;
       <Route path="/profile/:id" element={<ProfilePage />} />;
     </Routes>);
-}
-;
+
 export default TalentRoutes;
-;

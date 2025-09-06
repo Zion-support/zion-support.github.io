@@ -1,5 +1,4 @@
 
-
 import React, { useState } from "react";
 import {useNavigate} from "react-router-dom";
 import {Button} from "@/components/ui/button";
@@ -11,14 +10,13 @@ export function MobileOnboarding() {
   const [currentStep, setCurrentStep] = useState<OnboardingStep>("language");
   const navigate = useNavigate();
   const goToNextStep = () => {
-    if (currentStep === "language") {
+    if (currentStep = = "language") {
       setCurrentStep("role")
-    } else if (currentStep === "role") {
+    } else if (currentStep = = "role") {
       setCurrentStep("signup")
     } else {
       navigate("/mobile")
     }
-  }
   const handleRoleSelect = () => {
     setCurrentStep("signup")
   }
@@ -26,7 +24,7 @@ export function MobileOnboarding() {
   return (
     <div className="min-h-screen flex flex-col">
       <div className="flex-1 py-8">
-        {currentStep === "language" && (
+        {currentStep = = "language" && (
           <div className="space-y-6">
             <div className="text-center mb-8">
               <h1 className="text-3xl font-bold mb-2">Welcome to Zion</h1>
@@ -40,7 +38,7 @@ export function MobileOnboarding() {
             </div>
           </div>
         )}
-        {currentStep === "role" && (
+        {currentStep = = "role" && (
           <div className="space-y-6">
             <div className="text-center mb-8">
               <h1 className="text-3xl font-bold mb-2">Tell us about you</h1>
@@ -54,7 +52,7 @@ export function MobileOnboarding() {
             </div>
           </div>
         )}
-        {currentStep === "signup" && (
+        {currentStep = = "signup" && (
           <div className="space-y-6">
             <div className="text-center mb-6">
               <h1 className="text-3xl font-bold mb-2">Almost there!</h1>
@@ -66,7 +64,7 @@ export function MobileOnboarding() {
       </div>
     </div>
   )
-}
+
 import React, { useState } from './react';
 import { use_navigate } from './react-router-dom';
 import { Button } from '@/components / ui / button';
@@ -74,38 +72,37 @@ import { LanguageThemeSelector } from '../components / onboarding / LanguageThem
 import { RolePicker } from '../components / onboarding / RolePicker';
 import { SignUpForm } from '../components / onboarding / SignUpForm';
 type OnboardingStep = "language" | "role" | "signup";
-;
+
 export /**
  * MobileOnboarding - Function description
  */
 function MobileOnboarding() {
   const [current_step, setCurrentStep] = useState < OnboardingStep>("language");
   const navigate = use_navigate ();
-;
+
   const goToNextStep = () =>: any {
     // Check condition
 if ( {) {
   $2
-}
+
       setCurrentStep ("role");
     } else // Check condition
 if ( {) {
   $2
-}
+
       setCurrentStep ("signup");
     } else {
       navigate ("/mobile");
     }
-  }
-;
+
   const handleRoleSelect = () =>: any {
     setCurrentStep ("signup");
   }
-;
+
   return (
     <div className="min - h-screen flex flex - col">;
       <div className="flex - 1 py - 8">;
-        {current_step === "language" && (
+        {current_step = = "language" && (
           <div className="space - y-6">;
             <div className="text - center mb - 8">;
               <h1 className="text - 3xl font - bold mb - 2">Welcome to Zion</h1>;
@@ -118,7 +115,7 @@ if ( {) {
               </Button>;
             </div>;
           </div>)}
-        {current_step === "role" && (
+        {current_step = = "role" && (
           <div className="space - y-6">;
             <div className="text - center mb - 8">;
               <h1 className="text - 3xl font - bold mb - 2">Tell us about you</h1>;
@@ -131,7 +128,7 @@ if ( {) {
               </Button>;
             </div>;
           </div>)}
-        {current_step === "signup" && (
+        {current_step = = "signup" && (
           <div className="space - y-6">;
             <div className="text - center mb - 6">;
               <h1 className="text - 3xl font - bold mb - 2">Almost there!</h1>;
@@ -141,4 +138,3 @@ if ( {) {
           </div>)}
       </div>;
     </div>);
-}

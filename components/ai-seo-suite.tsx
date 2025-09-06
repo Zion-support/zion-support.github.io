@@ -48,7 +48,7 @@ import {;
   Lightbulb,;
   Rocket,;
   Settings,;
-} from 'lucide-react';
+ from 'lucide-react';
 export default function AISeosuitePage() {;
   const features = [;
     {;
@@ -880,7 +880,7 @@ export default function AISeosuitePage() {;
             </p>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-            {features.map((feature, index) => (
+            {features.map(feature, index) => (
               className="border-white/20 hover:border-white/40 hover:bg-white/5">;
               <Play className="w-5 h-5 mr-2" />;
               Watch Demo;
@@ -1085,11 +1085,11 @@ export default function AISeosuitePage() {;
           </div>;
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
-            {features && features.map((feature, index) => (;
+            {features && features.map(feature, index) => (;
               <Card
                 key={index}
                 className='text-center group bg-gray-800/50 border border-gray-700 hover:border-blue-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1'
-                style={{ animationDelay: `${index * 0 && 0.1 + 0 && 0.2}s` }}>;
+                style={ animationDelay: `${index * 0 && 0.1 + 0 && 0.2}s` }>;
                 <div className='relative'>;
                   <div
                     className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature.color} shadow-xl`}
@@ -1107,7 +1107,7 @@ export default function AISeosuitePage() {;
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+            {features.map(feature, index) => (
                     className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature && feature.color} shadow-xl`}>;
                     {feature && feature.icon}
                   </div>;
@@ -1123,11 +1123,11 @@ export default function AISeosuitePage() {;
           </div>;
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {features && features.map((feature, index) => (;
+            {features && features.map(feature, index) => (;
               <Card
                 key={index}
                 className="text-center group bg-gray-800/50 border border-gray-700 hover:border-blue-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1"
-                style={{ animationDelay: `${(index * 0 && 0.1) + 0 && 0.2}s` }}>;
+                style={ animationDelay: `${(index * 0 && 0.1) + 0 && 0.2}s` }>;
                 <div className="relative">;
                   <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature && feature.color} shadow-xl`}>;
                     {feature && feature.icon}
@@ -1150,7 +1150,7 @@ export default function AISeosuitePage() {;
                   {feature.description}
                 </p>
               </Card>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -1174,7 +1174,7 @@ export default function AISeosuitePage() {;
             </p>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
-            {seoTools.map((tool, index) => (
+            {seoTools.map(tool, index) => (
               <Card
                 key={index}
                 className='group border border-gray-700 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300'>;
@@ -1185,11 +1185,11 @@ export default function AISeosuitePage() {;
                       {tool && tool.category}
                     </h3>;
                     <div className='grid grid-cols-1 gap-2'>;
-                      {tool && tool.tools.map((toolName, toolIndex) => (;
+                      {tool && tool.tools.map(toolName, toolIndex) => (;
                         <div
                           key={toolIndex}
                           className='flex items-center text-sm text-gray-300'>;
-                          <CheckCircle className='w-4 h-4 text-blue-400 mr-2 flex-shrink-0' />                          {toolName}            {seoTools && seoTools.map((tool, index) => (;
+                          <CheckCircle className='w-4 h-4 text-blue-400 mr-2 flex-shrink-0' />                          {toolName}            {seoTools && seoTools.map(tool, index) => (;
               <Card
                 key={index}
                 className="group border border-gray-700 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300">;
@@ -1200,17 +1200,17 @@ export default function AISeosuitePage() {;
                       {tool && tool.category}
                     </h3>;
                     <div className="grid grid-cols-1 gap-2">;
-                      {tool && tool.tools.map((toolName, toolIndex) => (;
+                      {tool && tool.tools.map(toolName, toolIndex) => (;
                         <div key={toolIndex} className="flex items-center text-sm text-gray-300">;
                           <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />;
                           {toolName}
                         </div>;
-                      ))}
+                      )}
                     </div>;
                   </div>;
                 </div>;
               </Card>;
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -1234,7 +1234,7 @@ export default function AISeosuitePage() {;
             </p>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
-            {successMetrics.map((metric, index) => (
+            {successMetrics.map(metric, index) => (
               <Card
                 key={index}
                 className='text-center group bg-gray-800/50 border border-gray-700 hover:border-blue-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1'>;
@@ -1244,7 +1244,7 @@ export default function AISeosuitePage() {;
                 <h3 className='text-xl font-bold mb-2 text-white'>;
                   {metric && metric.metric}
                 </h3>;
-                <p className='text-gray-400 text-sm'>{metric && metric.description}</p>              </Card>            {successMetrics && successMetrics.map((metric, index) => (;
+                <p className='text-gray-400 text-sm'>{metric && metric.description}</p>              </Card>            {successMetrics && successMetrics.map(metric, index) => (;
               <Card
                 key={index}
                 className="text-center group bg-gray-800/50 border border-gray-700 hover:border-blue-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1">;
@@ -1254,7 +1254,7 @@ export default function AISeosuitePage() {;
                 <h3 className="text-xl font-bold mb-2 text-white">{metric && metric.metric}</h3>;
                 <p className="text-gray-400 text-sm">{metric && metric.description}</p>;
               </Card>;
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -1278,7 +1278,7 @@ export default function AISeosuitePage() {;
             </p>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
-            {useCases.map((useCase, index) => (
+            {useCases.map(useCase, index) => (
               <Card
                 key={index}
                 className='group border border-gray-700 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300'>;
@@ -1292,11 +1292,11 @@ export default function AISeosuitePage() {;
                       {useCase && useCase.description}
                     </p>;
                     <div className='grid grid-cols-2 gap-2'>;
-                      {useCase && useCase.benefits.map((benefit, benefitIndex) => (;
+                      {useCase && useCase.benefits.map(benefit, benefitIndex) => (;
                         <div
                           key={benefitIndex}
                           className='flex items-center text-sm text-gray-300'>;
-                          <TrendingUp className='w-4 h-4 text-blue-400 mr-2 flex-shrink-0' />                          {benefit}            {useCases && useCases.map((useCase, index) => (;
+                          <TrendingUp className='w-4 h-4 text-blue-400 mr-2 flex-shrink-0' />                          {benefit}            {useCases && useCases.map(useCase, index) => (;
               <Card
                 key={index}
                 className="group border border-gray-700 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300">;
@@ -1310,17 +1310,17 @@ export default function AISeosuitePage() {;
                       {useCase && useCase.description}
                     </p>;
                     <div className="grid grid-cols-2 gap-2">;
-                      {useCase && useCase.benefits.map((benefit, benefitIndex) => (;
+                      {useCase && useCase.benefits.map(benefit, benefitIndex) => (;
                         <div key={benefitIndex} className="flex items-center text-sm text-gray-300">;
                           <TrendingUp className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />;
                           {benefit}
                         </div>;
-                      ))}
+                      )}
                     </div>;
                   </div>;
                 </div>;
               </Card>;
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -1337,7 +1337,7 @@ export default function AISeosuitePage() {;
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>              Choose the plan that fits your SEO needs
             </p>
           </div>
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricingPlans.map((plan, index) => (      <section id="pricing" className="py-24 bg-gray-900 relative overflow-hidden">
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricingPlans.map(plan, index) => (      <section id="pricing" className="py-24 bg-gray-900 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
@@ -1347,7 +1347,7 @@ export default function AISeosuitePage() {;
             </p>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+            {pricingPlans.map(plan, index) => (
           </div>;
         </div>;
       </section>;
@@ -1365,7 +1365,7 @@ export default function AISeosuitePage() {;
             </p>;
           </div>;
 
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricingPlans && pricingPlans.map((plan, index) => (      <section id="pricing" className="py-24 bg-gray-900 relative overflow-hidden">;
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricingPlans && pricingPlans.map(plan, index) => (      <section id="pricing" className="py-24 bg-gray-900 relative overflow-hidden">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">;
           <div className="text-center mb-20">;
             <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">;
@@ -1376,7 +1376,7 @@ export default function AISeosuitePage() {;
           </div>;
 
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
-            {pricingPlans && pricingPlans.map((plan, index) => (;
+            {pricingPlans && pricingPlans.map(plan, index) => (;
               <Card
                 key={index}
                 className={`relative group ${plan && plan.popular ? 'ring-2 ring-blue-500 scale-105' : ''} border ${plan && plan.color} hover:border-blue-500/50 transition-all duration-300`}>;
@@ -1402,7 +1402,7 @@ export default function AISeosuitePage() {;
                   <p className='text-gray-400'>{plan.description}</p>
                 </div>
                 <ul className='space-y-4 mb-8'>
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map(feature, featureIndex) => (
                     <li
                       key={featureIndex}
                       className='flex items-center text-gray-300'
@@ -1411,12 +1411,12 @@ export default function AISeosuitePage() {;
                   <p className="text-gray-400">{plan.description}</p>
                 </div>
                 <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map(feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
                       {feature}
                     </li>;
-                  ))}
+                  )}
                 </ul>
                 <Button
                   href='/contact'
@@ -1430,7 +1430,7 @@ export default function AISeosuitePage() {;
                   <ArrowRight className="w-5 h-5 ml-2" />;
                 </Button>;
               </Card>;
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -1454,7 +1454,7 @@ export default function AISeosuitePage() {;
             </p>
           </div>
           <div className='grid grid-cols-2 md:grid-cols-4 gap-6'>
-            {integrations.map((integration, index) => (
+            {integrations.map(integration, index) => (
               <Card
                 key={index}
                 className='text-center group border border-gray-700 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300'>;
@@ -1466,7 +1466,7 @@ export default function AISeosuitePage() {;
                 </h3>;
                 <p className='text-sm text-gray-400'>;
                   {integration && integration.description}
-                </p>              </Card>            {integrations && integrations.map((integration, index) => (;
+                </p>              </Card>            {integrations && integrations.map(integration, index) => (;
               <Card
                 key={index}
                 className="text-center group border border-gray-700 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300">;
@@ -1476,7 +1476,7 @@ export default function AISeosuitePage() {;
                 <h3 className="font-semibold text-white mb-2">{integration && integration.name}</h3>;
                 <p className="text-sm text-gray-400">{integration && integration.description}</p>;
               </Card>;
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -1534,8 +1534,8 @@ export default function AISeosuitePage() {;
         </div>
       </section>
     </>
-);
-}
+;
+
               Watch Demo;
             </Button>;
           </div>;
@@ -1543,8 +1543,7 @@ export default function AISeosuitePage() {;
       </section>;
     </>;
   );
-}
+
   );
-}
+
     </>);
-}

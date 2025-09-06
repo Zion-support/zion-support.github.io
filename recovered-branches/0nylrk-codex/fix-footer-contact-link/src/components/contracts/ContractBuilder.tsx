@@ -17,14 +17,14 @@ interface ContractBuilderProps {
   clientName: string
 
   onContractGenerated?: (contractContent: string) => void
-}
+
 export function ContractBuilder({
   isOpen;
   onClose;
   talent;
   clientName;
   onContractGenerated;
-}: ContractBuilderProps) {;
+: ContractBuilderProps) {;
   const [activeTab, setActiveTab] = useState<string>("form");
   const [generatedContract, setGeneratedContract] = useState<string | null>(null);
   const [formValues, setFormValues] = useState<ContractFormValues | undefined>(
@@ -42,7 +42,6 @@ export function ContractBuilder({
     if (onContractGenerated) {
       onContractGenerated(contract)
     }
-  }
   if (showSmartContractBuilder) {
     return (
       <SmartContractBuilder
@@ -67,7 +66,7 @@ interface ContractBuilderProps {
   talent: TalentProfile,
   client_name: string,
   onContractGenerated?: (contract_content: string) => void;
-}
+
 export /**
  * ContractBuilder - Function description
  */
@@ -78,33 +77,32 @@ function ContractBuilder() {
     undefined);
   const [templateManagerOpen, setTemplateManagerOpen] = useState (false);
   const [showSmartContractBuilder, setShowSmartContractBuilder] = useState (false);
-;
+
   const handleLoadTemplate = (template_data: ContractFormValues) =>: any {
     setFormValues (template_data);
   }
-;
+
   const handleContractGenerated = (contract: string) =>: any {
     setGeneratedContract (contract);
     setActiveTab ("preview"),
     // Check condition
 if ( {) {
   $2
-}
+
       onContractGenerated (contract);
     }
-  }
-;
+
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <SmartContractBuilder;
         is_open={is_open}
         on_close={() => {
           setShowSmartContractBuilder (false);
           on_close ();
-        }}
+        }
         talent={talent}
         client_name={client_name}
         onContractGenerated={onContractGenerated}
@@ -139,8 +137,7 @@ if ( {) {
               </Button>
             </div>
           </div>
-          <TabsContent value="form" className="pt-4">
-              >;
+          <TabsContent value="form" className="pt-4">;
                 Smart Contract Builder;
               </Button>;
             </div>;
@@ -177,7 +174,7 @@ if ( {) {
       </DialogContent>
     </Dialog>
   )
-}
+
             />;
           </TabsContent>;
           <TabsContent value="preview" className="pt - 4">;
@@ -198,4 +195,3 @@ if ( {) {
         />;
       </DialogContent>;
     </Dialog>);
-}

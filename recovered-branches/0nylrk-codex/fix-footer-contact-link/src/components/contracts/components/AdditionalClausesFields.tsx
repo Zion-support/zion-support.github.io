@@ -7,16 +7,16 @@ import {
   FormLabel
   FormControl
   FormDescription
-} from "@/components/ui/form";
+ from "@/components/ui/form";
 
 import { Checkbox } from "@/components/ui/checkbox";
 import { ContractFormValues } from "./ContractForm";
 interface AdditionalClausesFieldsProps {;
   form: UseFormReturn<ContractFormValues>;
-}
+
 export function AdditionalClausesFields({
   form
-}: AdditionalClausesFieldsProps) {
+: AdditionalClausesFieldsProps) {
   return (
     <FormField
 
@@ -33,12 +33,12 @@ import {
   FormLabel,
   FormControl,
   FormDescription,
-} from '@/components / ui / form';
+ from '@/components / ui / form';
 import { Checkbox  } from '@/components / ui / checkbox';
 import { ContractFormValues  } from './ContractForm';
 interface AdditionalClausesFieldsProps {
   form: UseFormReturn < ContractFormValues>;
-}
+
 export /**
  * AdditionalClausesFields - Function description
  */
@@ -69,7 +69,7 @@ function AdditionalClausesFields() {
                         return checked
                           ? field.onChange([...currentValues, "nda"])
                           : field.onChange(
-                              currentValues.filter((value) => value !== "nda")
+                              currentValues.filter(value) => value != "nda")
           <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
             <FormField;
               control={form.control}
@@ -84,9 +84,9 @@ function AdditionalClausesFields() {
                         return checked;
                           ? field.on_change ([...current_values, "nda"]);
                           : field.on_change (
-                              current_values.filter ((value) => value !== "nda"),
+                              current_values.filter (value) => value != "nda"),
                             );
-                      }}
+                      }
                     />;
                   </FormControl>;
                   <div className="space-y-1 leading-none">;
@@ -111,7 +111,7 @@ function AdditionalClausesFields() {
                         return checked
                           ? field.onChange([...currentValues, "ip"])
                           : field.onChange(
-                              currentValues.filter((value) => value !== "ip")
+                              currentValues.filter(value) => value != "ip")
                 </FormItem>)}
             />;
             <FormField;
@@ -127,9 +127,9 @@ function AdditionalClausesFields() {
                         return checked;
                           ? field.on_change ([...current_values, "ip"]);
                           : field.on_change (
-                              current_values.filter ((value) => value !== "ip"),
+                              current_values.filter (value) => value != "ip"),
                             );
-                      }}
+                      }
                     />;
                   </FormControl>;
                   <div className="space-y-1 leading-none">;
@@ -154,8 +154,7 @@ function AdditionalClausesFields() {
                         return checked
                           ? field.onChange([...currentValues, "termination"])
                           : field.onChange(
-                              currentValues.filter(
-                                (value) => value !== "termination"
+                              currentValues.filter(value) => value != "termination"
                               )
                 </FormItem>)}
             />;
@@ -172,11 +171,10 @@ function AdditionalClausesFields() {
                         return checked;
                           ? field.on_change ([...current_values, "termination"]);
                           : field.on_change (
-                              current_values.filter (
-                                (value) => value !== "termination",
+                              current_values.filter (value) => value != "termination",
                               ),
                             );
-                      }}
+                      }
                     />;
                   </FormControl>;
                   <div className="space-y-1 leading-none">;
@@ -202,8 +200,7 @@ function AdditionalClausesFields() {
                         return checked
                           ? field.onChange([...currentValues, "revisions"])
                           : field.onChange(
-                              currentValues.filter(
-                                (value) => value !== "revisions"
+                              currentValues.filter(value) => value != "revisions"
                               )
                 </FormItem>)}
             />;
@@ -220,11 +217,10 @@ function AdditionalClausesFields() {
                         return checked;
                           ? field.on_change ([...current_values, "revisions"]);
                           : field.on_change (
-                              current_values.filter (
-                                (value) => value !== "revisions",
+                              current_values.filter (value) => value != "revisions",
                               ),
                             );
-                      }}
+                      }
                     />;
                   </FormControl>;
                   <div className="space-y-1 leading-none">;
@@ -241,4 +237,3 @@ function AdditionalClausesFields() {
       )}
     />;
   );
-}

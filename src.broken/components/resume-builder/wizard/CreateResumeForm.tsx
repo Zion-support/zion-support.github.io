@@ -6,5 +6,3 @@ export function CreateResumeForm() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

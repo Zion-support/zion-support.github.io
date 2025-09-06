@@ -1,4 +1,4 @@
-{
+
   "timestamp": "2025-09-06T01:31:58.752Z",
   "duration": 31336,
   "fixedFiles": [
@@ -16,4 +16,3 @@
     "Build failed"
   ],
   "success": false
-}

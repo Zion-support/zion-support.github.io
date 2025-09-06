@@ -58,7 +58,7 @@ export /**
  */
 function use_resume() {
   const [resume, set_resume] = useState < Resume | null>(null);
-;
+
   const fetchResumeOperations = useFetchResume ();
   const resume_actions = useResumeActions ();
   const work_operations = useWorkExperience ();
@@ -66,7 +66,7 @@ function use_resume() {
   const skills_operations = use_skills ();
   const cert_operations = use_certifications ();
   const resumeListOperations = useResumeList ();
-;
+
   // Determine overall loading state;
   const is_loading =;
     fetchResumeOperations.is_loading ||;
@@ -76,7 +76,7 @@ function use_resume() {
     skills_operations.is_loading ||;
     cert_operations.is_loading ||;
     resumeListOperations.is_loading;
-;
+
   // Determine overall error state (use first non - null error);
   const error =;
     fetchResumeOperations.error ||;
@@ -86,19 +86,19 @@ function use_resume() {
     skills_operations.is_loading ||;
     cert_operations.error ||;
     resumeListOperations.error;
-;
+
   // Override the fetch resume function to update local state;
   const fetch_resume = async (resume_id?: string) => {
     const result = await fetchResumeOperations.fetch_resume (resume_id);
     // Check condition
 if ( {) {
   $2
-}
+
       set_resume (result);
     }
     return result;
   }
-;
+
   return {
     // State;
     is_loading;
@@ -126,36 +126,36 @@ if ( {) {
     updateCertification: certOperations.updateCertification
     deleteCertification: certOperations.deleteCertification
   }
-}
-// Export all hooks
-;
+
+/ Export all hooks
+
     // Basic resume operations;
     fetch_resume;
     create_resume: resume_actions.create_resume;
     updateBasicInfo: resume_actions.updateBasicInfo;
     setActiveResume: resume_actions.setActiveResume;
-;
+
     // Work experience operations;
     addWorkExperience: work_operations.addWorkExperience;
     updateWorkExperience: work_operations.updateWorkExperience;
     deleteWorkExperience: work_operations.deleteWorkExperience;
-;
+
     // Education operations;
     add_education: education_operations.add_education;
     update_education: education_operations.update_education;
     delete_education: education_operations.delete_education;
-;
+
     // Skills operations;
     add_skill: skills_operations.add_skill;
     delete_skill: skills_operations.delete_skill;
-;
+
     // Certifications operations;
     add_certification: cert_operations.add_certification;
     update_certification: cert_operations.update_certification,
     delete_certification: cert_operations.delete_certification;
   }
-}
-// Export all hooks;
+
+/ Export all hooks;
 export * from './useFetchResume';
 export * from './useResumeActions';
 export * from './useWorkExperience';
@@ -164,4 +164,3 @@ export * from './use_skills';
 export * from './use_certifications';
 export * from './useResumeList';
 export * from './useResumeUtils';
-

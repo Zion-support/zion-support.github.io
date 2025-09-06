@@ -46,7 +46,7 @@ export default function DemosPage() {
     }
   ],
 
-  const activeDemoData = demos.find(demo => demo.id === activeDemo),
+  const activeDemoData = demos.find(demo => demo.id = = activeDemo),
 
   return (
     <>
@@ -76,7 +76,7 @@ export default function DemosPage() {
                 Interactive Demos
               </div>
             </div>
-            
+
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-8 text-white leading-tight tracking-tight">
               Try Our
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
@@ -93,7 +93,7 @@ export default function DemosPage() {
                 href="#demos"
                 size="lg"
                 className="animate-scale-in shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40"
-                style={{ animationDelay: '0.2s' }}
+                style={ animationDelay: '0.2s' }
               >
                 Start Testing
                 <Play className="w-5 h-5 ml-2" />
@@ -103,7 +103,7 @@ export default function DemosPage() {
                 variant="outline"
                 size="lg"
                 className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5"
-                style={{ animationDelay: '0.4s' }}
+                style={ animationDelay: '0.4s' }
               >
                 <Code className="w-5 h-5 mr-2" />
                 View All Services
@@ -112,7 +112,7 @@ export default function DemosPage() {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in" style={{ animationDelay: '0.6s' }}>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in" style={ animationDelay: '0.6s' }>
             <div className="text-center group">
               <div className="text-3xl md:text-4xl font-bold mb-3 text-blue-400 group-hover:scale-110 transition-transform duration-300">
                 4
@@ -155,12 +155,12 @@ export default function DemosPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {demos.map((demo) => (
+            {demos.map(demo) => (
               <button
                 key={demo.id}
                 onClick={() => setActiveDemo(demo.id)}
                 className={`p-4 rounded-lg border transition-all duration-300 text-left group ${;
-                  activeDemo === demo.id;
+                  activeDemo = = demo.id;
                     ? 'border-blue-500 bg-blue-500/10';
                     : 'border-gray-700 bg-gray-800/50 hover:border-gray-600 hover:bg-gray-800/80';
                 }`}
@@ -174,14 +174,14 @@ export default function DemosPage() {
                 <p className="text-sm text-gray-400 leading-relaxed">
                   {demo.description}
                 </p>
-                {activeDemo === demo.id && (
+                {activeDemo = = demo.id && (
                   <div className="mt-3 flex items-center text-blue-400 text-sm">
                     <CheckCircle className="w-4 h-4 mr-2" />
                     Active Demo
                   </div>
                 )}
               </button>;
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
@@ -444,4 +444,3 @@ export default function DemosPage() {
       </section>;
     </>;
   );
-}

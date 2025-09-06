@@ -6,4 +6,3 @@ export export export default function ResetPassword.test()      {;
       <p>Component placeholder - needs implementation</p>;
     </div>;
   );
-}

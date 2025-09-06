@@ -1,4 +1,4 @@
-"use client";
+use client";
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 export function Navigation() {const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -260,4 +260,3 @@ export function Navigation() {const [isMobileMenuOpen, setIsMobileMenuOpen] = us
         </div>;
       </div>;
     </nav>);
-}

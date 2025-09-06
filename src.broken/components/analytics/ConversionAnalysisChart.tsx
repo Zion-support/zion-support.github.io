@@ -6,5 +6,3 @@ export function ConversionAnalysisChart() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

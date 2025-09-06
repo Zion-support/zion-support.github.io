@@ -1,4 +1,4 @@
-'use client',
+use client',
 
 import React from 'react',
 import Link from 'next/link',
@@ -12,7 +12,7 @@ import {
   BarChart3,
   ArrowRight,
   Zap
-} from 'lucide-react',
+ from 'lucide-react',
 const ServicesSection: React.FC = () => {const services = [
     {
       icon: Brain,
@@ -66,13 +66,11 @@ const ServicesSection: React.FC = () => {const services = [
   const containerVariants = {hidden: { opacity: 0},
     visible: {opacity: 1, transition: {
         staggerChildren: 0.1}
-    }
   },
 
   const cardVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 }
-  },
+    visible: { opacity: 1, y: 0 },
 
   return (
     <section className=&quot;py-20 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden&quot;>
@@ -85,29 +83,29 @@ const ServicesSection: React.FC = () => {const services = [
       <div className=&quot;relative container mx-auto px-4&quot;>
         {/* Section Header */}
         <motion.div,
-initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+initial={ opacity: 0, y: 30 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0.8 }
+          viewport={ once: true }
           className=&quot;text-center mb-16&quot;
         >
           <motion.div,
-initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
+initial={ opacity: 0, scale: 0.8 }
+            whileInView={ opacity: 1, scale: 1 }
+            transition={ duration: 0.6, delay: 0.2 }
+            viewport={ once: true }
             className=&quot;inline-flex items-center space-x-2 bg-blue-600/20 border border-blue-500/30 rounded-full px-6 py-3 mb-6&quot;          >
             <Zap className=&quot;w-5 h-5 text-blue-400&quot; />
             <span className=&quot;text-blue-400 font-medium&quot;>Our Services</span>
           </motion.div>
-          
+
           <h2 className=&quot;text-4xl md:text-6xl font-bold text-white mb-6&quot;>
             Comprehensive Technology
             <span className=&quot;block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent&quot;>
               Solutions
             </span>
           </h2>
-          
+
           <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed&quot;>
             We deliver cutting-edge technology solutions that drive innovation, efficiency, and growth,
 for businesses across all industries.
@@ -119,18 +117,17 @@ for businesses across all industries.
 variants={containerVariants}
           initial=&quot;hidden&quot;
           whileInView=&quot;visible&quot;
-          viewport={{ once: true }}
+          viewport={ once: true }
           className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16&quot;        >
           {services.map(_(service, index) => (_<motion.div,
 key={service.title}
               variants={cardVariants}
-              whileHover={{ y: -10 }}
+              whileHover={ y: -10 }
               className=&quot;group relative&quot;
             >
               <div className=&quot;relative h-full bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-8 hover:border-gray-700 transition-all duration-300 overflow-hidden&quot;>
                 {/* Background Gradient */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`} />;
-                ;
                 {/* Icon */}
                 <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <service.icon className=&quot;w-8 h-8 text-white&quot; />
@@ -140,18 +137,18 @@ key={service.title}
                 <h3 className=&quot;text-2xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors duration-300&quot;>
                   {service.title}
                 </h3>
-                
+
                 <p className=&quot;text-gray-300 mb-6 leading-relaxed&quot;>
                   {service.description}
                 </p>;
-;
+
                 {/* Features */}
                 <ul className=&quot;space-y-2 mb-8&quot;>
-                  {service.features.map((feature) => (
+                  {service.features.map(feature) => (
                     <li key={feature} className=&quot;flex items-center space-x-3 text-gray-400&quot;>
                       <div className=&quot;w-2 h-2 bg-blue-400 rounded-full&quot; />
                       <span className=&quot;text-sm&quot;>{feature}</span>                    </li>
-                  ))}
+                  )}
                 </ul>
 
                 {_/* CTA */}
@@ -165,15 +162,15 @@ href={service.href}
                 {/* Hover Effect */}
                 <div className=&quot;absolute inset-0 border-2 border-transparent rounded-2xl group-hover:border-blue-500/30 transition-colors duration-300&quot; />              </div>
             </motion.div>
-          ))}
+          )}
         </motion.div>
 
         {_/* Bottom CTA */}
         <motion.div,
-initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          viewport={{ once: true }}
+initial={ opacity: 0, y: 30 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0.8, delay: 0.4 }
+          viewport={ once: true }
           className=&quot;text-center&quot;        >
           <div className=&quot;bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-2xl p-8 max-w-2xl mx-auto&quot;>
             <h3 className=&quot;text-2xl font-bold text-white mb-4&quot;>
@@ -193,6 +190,6 @@ href="/contact"
       </div>
     </section>
   )
-},
+,
 
 export default ServicesSection,

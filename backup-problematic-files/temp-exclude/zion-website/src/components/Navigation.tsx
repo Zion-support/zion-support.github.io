@@ -1,9 +1,9 @@
-'use client';
-;
+use client';
+
 import { useState } from 'react';
 import { Dialog } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-;
+
 const navigation = [;
   { name:'Home', href:'/' },;
   { name:'About', href:'/about' },;
@@ -11,10 +11,10 @@ const navigation = [;
   { name:'Solutions', href:'/solutions' },;
   { name:'Research', href:'/research' },;
   { name:'Contact', href:'/contact' }];
-;
+
 export default function Navigation() {;
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-;
+
   return (;
     <header className="fixed inset-x-0 top-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10">;
       <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">;
@@ -37,7 +37,7 @@ export default function Navigation() {;
           </button>;
         </div>;
         <div className="hidden lg:flex lg:gap-x-12">;
-          {navigation.map((item) => (;
+          {navigation.map(item) => (;
             <a;
               key={item.name}
               href={item.href}
@@ -45,7 +45,7 @@ export default function Navigation() {;
             >;
               {item.name}
             </a>;
-          ))}
+          )}
         </div>;
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">;
           <a;
@@ -78,7 +78,7 @@ export default function Navigation() {;
           <div className="mt-6 flow-root">;
             <div className="-my-6 divide-y divide-gray-700">;
               <div className="space-y-2 py-6">;
-                {navigation.map((item) => (;
+                {navigation.map(item) => (;
                   <a;
                     key={item.name}
                     href={item.href}
@@ -87,7 +87,7 @@ export default function Navigation() {;
                   >;
                     {item.name}
                   </a>;
-                ))}
+                )}
               </div>;
               <div className="py-6">;
                 <a;

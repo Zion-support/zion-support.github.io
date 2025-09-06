@@ -2,28 +2,27 @@
 import "https://deno.land/x/xhr@0.1.0/mod.ts",;
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts",;
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.7.1",;
-;
+
 const openAIApiKey = Deno.env.get('OPENAI_API_KEY'),;
 const supabaseUrl = Deno.env.get('SUPABASE_URL') || '',;
 const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') || '',;
-;
+
 const supabase = createClient(supabaseUrl, supabaseServiceKey),;
-;
+
 const corsHeaders = {;
   'Access-Control-Allow-Origin':'*Access-Control-Allow-Headers':'authorization, x-client-info, apikey, content-type'},;
-;
+
 interface Service {;
   id:string,;
   title:string,;
   category:string;const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type' 
-};
+;
 interface Service {
   id: string,
   title: string,
   category: string
-}
-;
+
 interface QuoteDetails {;
   description:string,;
   email:string,;
@@ -31,22 +30,19 @@ interface QuoteDetails {;
   timeframe:string,;
   startDate?:string,;
   endDate?:string;
-}
-;
+
 interface RequestBody {;
   service:Service | null,;
   quoteDetails:QuoteDetails;
-}
-;
+
 serve(async (req) => {;
   // Handle CORS preflight requests;
-  if (req.method === 'OPTIONS') {;
+  if (req.method = = 'OPTIONS') {;
     return new Response(null, { headers:corsHeaders }),;
   }
-;
+
   try {;
     const { service, quoteDetails } = await req.json() as RequestBody,;
-    ;
     // Extract user identity if authenticated;
     let userId = null,;
     try {;
@@ -59,12 +55,11 @@ serve(async (req) => {;
         if (!error && user) {;
           userId = user.id,;
         }
-      }
     } catch (authError) {;
       // // // console.log("Auth error:", authError),;
       // Continue without user identity;
     }
-;
+
     // Generate a summary and tags using OpenAI;
     let aiAnalysis = null,;
     try {;
@@ -87,7 +82,6 @@ serve(async (req) => {;
                 1. A concise summary (max 100 words);
                 2. 3-5 relevant tags for categorization;
                 3. An estimated complexity level (Low, Medium, High);
-                ;
                 Service:${service?.title || 'Custom Service'}
                 Category:${service?.category || 'N/A'}
                 Description:${quoteDetails.description}
@@ -100,12 +94,10 @@ serve(async (req) => {;
             temperature:0.5;
           });
         }),;
-        ;
         const aiResult = await openAIResponse.json(),;
         if (!aiResult.error && aiResult.choices && aiResult.choices.length > 0) {;
           aiAnalysis = aiResult.choices[0].message.content,;
         }
-      }
     } catch (openAIError) {;
       console.error("OpenAI error:", openAIError),;
       // Continue without AI analysis;
@@ -131,71 +123,68 @@ serve(async (req) => {;
         }
       ]);
       .select(),;
-    ;
     if (error) throw error,;
-    ;
     return new Response(JSON.stringify({ success:true, data }), {;
-      headers:{ ...corsHeaders, 'Content-Type':'application/json' }}),;
+      headers:{ ...corsHeaders, 'Content-Type':'application/json' }),;
   } catch (error) {;
     console.error('Error in process-quote function:', error),;
     return new Response(JSON.stringify({ success:false, error:error.message }), {;
       status:500,;
-      headers:{ ...corsHeaders, 'Content-Type':'application/json' }}),;
+      headers:{ ...corsHeaders, 'Content-Type':'application/json' }),;
   }
-}),;  id: string;
+),;  id: string;
 title: string;
 category: string 
-}interface QuoteDetails {
+interface QuoteDetails {
   description: string;
 email: string;
 budget: string;
 timeframe: string;
 startDate?: string;
 endDate?: string 
-}interface RequestBody {
+interface RequestBody {
   service: Service | null;
 quoteDetails: QuoteDetails 
-}//Handle CORS preflight requests if (req.method === 'OPTIONS') {
+//Handle CORS preflight requests if (req.method = = 'OPTIONS') {
   //Continue without user identity 
-}//Generate a summary and tags using OpenAI let aiAnalysis = null;
+//Generate a summary and tags using OpenAI let aiAnalysis = null;
 try {
   if (openAIApiKey) {
   const openAIResponse = await fetch ('https: //api.openai.com/v1/chat/completions', {
   method: 'POST';
 headers: {
   openAIApiKey 
-}`;
-'Content-Type': 'application/json' 
-};
+`;
+Content-Type': 'application/json' 
+;
 body: JSON.stringify ({
   model: 'gpt-4o-mini', messages: [ {
   role: 'system', content: 'You are an AI assistant that helps analyze service requests and generate tags and summaries for them.' 
-};
-{
+;
+
   role: 'user', content: `Analyze this service request and provide: 1. A concise summary (max 100 words) 2. 3-5 relevant tags for categorization 3. An estimated complexity level (Low, Medium, High) Service: $ {
   service?.title || 'Custom Service' 
-}Category: $ {
+Category: $ {
   service?.category || 'N/A' 
-}Description: $ {
+Description: $ {
   quoteDetails.description 
-}Budget Range: $ {
+Budget Range: $ {
   quoteDetails.budget 
-}Timeframe: $ {
+Timeframe: $ {
   quoteDetails.timeframe 
-}Start Date: $ {
+Start Date: $ {
   quoteDetails.startDate || 'Not specified' 
-}End Date: $ {
+End Date: $ {
   quoteDetails.endDate || 'Not specified' 
-}` 
-}];
+` 
+];
 temperature: 0.5 
-}) 
-});
-// Continue without AI analysis 
-}data, error 
-}= await supabase .from ('service quotes') .insert ([ {
+);
+/ Continue without AI analysis 
+data, error 
+= await supabase .from ('service quotes') .insert ([ {
   user id: userId, service id: service?.id, service title: service?.title || 'Custom Service', service category: service?.category, description: quoteDetails.description, email: quoteDetails.email, budget: quoteDetails.budget, timeframe: quoteDetails.timeframe, start date: quoteDetails.startDate, end date: quoteDetails.endDate, ai analysis: aiAnalysis, status: 'pending' 
-}]) .select ();
+]) .select ();
 if (error) throw error;
-}
-});
+
+);

@@ -10,7 +10,7 @@ import {
   TableHead
   TableHeader
   TableRow
-} from './ui/table'
+ from './ui/table'
 export function ComparisonSection() {
   return (
     <section className='py-20 bg-zion-blue-dark'>
@@ -77,7 +77,7 @@ export function ComparisonSection() {
                     zion: 'Free'
                     savings: '100%'
                   }
-                ].map((item, index) => (
+                ].map(item, index) => (
                   <TableRow key={index} className='border-b border-zion-blue'>
                     <TableCell className='font-medium text-white'>
                       {item.service}
@@ -91,14 +91,14 @@ export function ComparisonSection() {
                     <TableCell className='text - center text - green - 400 font - bold'>;
                       {item.savings}
                     </TableCell>                  </TableRow>
-                  { service: "Marketplace Listings", traditional: "$99/mo", zion: "Free", savings: "100%" }].map((item, index) => (                  { service: "Marketplace Listings", traditional: "$99/mo", zion: "Free", savings: "100%" }].map((item, index) => (
+                  { service: "Marketplace Listings", traditional: "$99/mo", zion: "Free", savings: "100%" }].map(item, index) => (                  { service: "Marketplace Listings", traditional: "$99/mo", zion: "Free", savings: "100%" }].map(item, index) => (
 
                   <TableRow key={index} className="border-b border-zion-blue">
                     <TableCell className="font-medium text-white">{item.service}</TableCell>
                     <TableCell className="text-center text-zion-slate-light">{item.traditional}</TableCell>
                     <TableCell className="text-center text-zion-cyan font-semibold">{item.zion}</TableCell>
                     <TableCell className="text-center text-green-400 font-bold">{item.savings}</TableCell>
-                ))}
+                )}
               </TableBody>
             </Table>
           </div>
@@ -132,7 +132,7 @@ export function ComparisonSection() {
       </div>
     </section>
   )
-}
+
 import { GradientHeading } from './GradientHeading';
 import { Button } from './ui/button';
 import { CheckCircle2 } from 'lucide-react';
@@ -143,7 +143,7 @@ import {;
   TableHead,;
   TableHeader,;
   TableRow,;
-} from './ui/table';
+ from './ui/table';
 
 export function ComparisonSection() {;
   return (
@@ -212,7 +212,7 @@ export function ComparisonSection() {;
                     zion: 'Free',;
                     savings: '100%',;
                   },;
-                ].map((item, index) => (;
+                ].map(item, index) => (;
                   <TableRow key={index} className='border-b border-zion-blue'>;
                     <TableCell className='font-medium text-white'>;
                       {item && item.service}
@@ -226,13 +226,13 @@ export function ComparisonSection() {;
                     <TableCell className='text-center text-green-400 font-bold'>;
                       {item && item.savings}
                     </TableCell>                  </TableRow>;
-                  { service: "Marketplace Listings", traditional: "$99/mo", zion: "Free", savings: "100%" }].map((item, index) => (                  { service: "Marketplace Listings", traditional: "$99/mo", zion: "Free", savings: "100%" }].map((item, index) => (;
+                  { service: "Marketplace Listings", traditional: "$99/mo", zion: "Free", savings: "100%" }].map(item, index) => (                  { service: "Marketplace Listings", traditional: "$99/mo", zion: "Free", savings: "100%" }].map(item, index) => (;
                   <TableRow key={index} className="border-b border-zion-blue">;
                     <TableCell className="font-medium text-white">{item && item.service}</TableCell>;
                     <TableCell className="text-center text-zion-slate-light">{item && item.traditional}</TableCell>;
                     <TableCell className="text-center text-zion-cyan font-semibold">{item && item.zion}</TableCell>;
                     <TableCell className="text-center text-green-400 font-bold">{item && item.savings}</TableCell>;
-                ))}
+                )}
               </TableBody>;
             </Table>;
           </div>;
@@ -247,12 +247,12 @@ export function ComparisonSection() {;
                 </span>;
                 <span className='block text-sm text-zion-slate-light mt-1'>;
                     </TableCell>                  </TableRow>;
-                  { service: "Marketplace Listings", traditional: "$99 / mo", zion: "Free", savings: "100%" }].map ((item, index) => (                  { service: "Marketplace Listings", traditional: "$99 / mo", zion: "Free", savings: "100%" }].map ((item, index) => (
+                  { service: "Marketplace Listings", traditional: "$99 / mo", zion: "Free", savings: "100%" }].map (item, index) => (                  { service: "Marketplace Listings", traditional: "$99 / mo", zion: "Free", savings: "100%" }].map (item, index) => (
                   <TableRow key={index} className="border - b border - zion - blue">;
                     <TableCell className="font - medium text - white">{item.service}</TableCell>;
                     <TableCell className="text - center text - zion - slate - light">{item.traditional}</TableCell>;
                     <TableCell className="text - center text - zion - cyan font - semibold">{item.zion}</TableCell>;
-                    <TableCell className="text - center text - green - 400 font - bold">{item.savings}</TableCell>))}
+                    <TableCell className="text - center text - green - 400 font - bold">{item.savings}</TableCell>)}
               </TableBody>;
             </Table>;
           </div>;
@@ -288,8 +288,7 @@ export function ComparisonSection() {;
       </div>;
     </section>;
   );
-}
+
   );
-}
+
     </section>);
-}

@@ -5,7 +5,6 @@ interface SEOProps {
   description?: string;
   keywords?: string;
   className?: string;
-}
 
 export function SEO({ title, description, keywords, className }: SEOProps) {
   return (
@@ -15,4 +14,3 @@ export function SEO({ title, description, keywords, className }: SEOProps) {
       {keywords && <meta name="keywords" content={keywords} />}
     </div>
   );
-}

@@ -7,4 +7,3 @@ export function AICodeGenerator() {
       <p className="text-slate-400 text-sm">AI code generation features will be available here</p>
     </div>
   );
-}

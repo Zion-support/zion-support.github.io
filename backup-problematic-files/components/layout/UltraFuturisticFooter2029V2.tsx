@@ -12,13 +12,13 @@ import {;
   Smartphone, BarChart3, Palette, Camera, Video,;
   Music, Gamepad2, Heart, Leaf, Sun, Moon, Wind,;
   Droplets, Mountain, Globe2, Bot, Crown, Infinity;
-} from 'lucide-react',;
+ from 'lucide-react',;
 const contactInfo = {;
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup.com',;
   address: '364 E Main St STE 1008 Middletown DE 19709',;
   website: 'https://ziontechgroup.com';
-},;
+,;
 const serviceCategories = [;
   {;
     title: 'AI & Consciousness',;
@@ -64,7 +64,7 @@ const serviceCategories = [;
       { name: 'Smart Financial Management', href: '/services/smart-financial-management-platform' }
     ];
   }
-],;
+,;
 const mainNavigation = [;
   { name: 'Home', href: '/', icon: Home },;
   { name: 'Services', href: '/services', icon: Briefcase },;
@@ -76,7 +76,7 @@ const mainNavigation = [;
   { name: 'Innovations', href: '/innovations', icon: Sparkles },;
   { name: 'About', href: '/about', icon: Users },;
   { name: 'Contact', href: '/contact', icon: MessageCircle }
-],;
+,;
 const quickLinks = [;
   { name: 'About Us', href: '/about', icon: Users },;
   { name: 'Case Studies', href: '/case-studies', icon: BookOpen },;
@@ -84,7 +84,7 @@ const quickLinks = [;
   { name: 'News', href: '/news', icon: TrendingUp },;
   { name: 'Careers', href: '/careers', icon: GraduationCap },;
   { name: 'Support', href: '/support', icon: MessageCircle }
-],;
+,;
 const resources = [;
   { name: 'Documentation', href: '/docs', icon: BookOpen },;
   { name: 'API Reference', href: '/api', icon: Code },;
@@ -94,7 +94,7 @@ const resources = [;
   { name: 'News', href: '/news', icon: TrendingUp },;
   { name: 'Events', href: '/events', icon: Calendar },;
   { name: 'Webinars', href: '/webinars', icon: Video }
-],;
+,;
 const company = [;
   { name: 'About Us', href: '/about', icon: Users },;
   { name: 'Our Team', href: '/team', icon: Users },;
@@ -104,7 +104,7 @@ const company = [;
   { name: 'Press', href: '/press', icon: BookOpen },;
   { name: 'Legal', href: '/legal', icon: Shield },;
   { name: 'Privacy', href: '/privacy', icon: ShieldCheck }
-],;
+,;
 const socialLinks = [;
   { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-500' },;
   { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-blue-400' },;
@@ -112,7 +112,7 @@ const socialLinks = [;
   { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram, color: 'hover:text-pink-500' },;
   { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-500' },;
   { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github, color: 'hover:text-gray-400' }
-],;
+,;
 const footerSections = [;
   {;
     title: 'Services',;
@@ -158,7 +158,7 @@ const footerSections = [;
       { name: 'Research', href: '/research' }
     ];
   }
-],
+,
 
 export default function UltraFuturisticFooter2029V2() {
   return (
@@ -169,10 +169,10 @@ export default function UltraFuturisticFooter2029V2() {
           {/* Company Info */}
           <div className="lg:col-span-2 xl:col-span-1">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.6 }
+              viewport={ once: true }
             >
               <Link href="/" className="flex items-center space-x-3 mb-6 group">
                 <div className="relative">
@@ -188,12 +188,12 @@ export default function UltraFuturisticFooter2029V2() {
                   <p className="text-sm text-gray-400">Future Technology Solutions</p>
                 </div>
               </a>
-              
+
               <p className="text-gray-300 mb-6 leading-relaxed">
                 Leading the future with cutting-edge AI, quantum computing, space technology, and innovative micro SAAS solutions. 
                 Transforming businesses through next-generation technology.
               </p>
-              
+
               {/* Contact Info */}
               <div className="space-y-3">
                 <div className="flex items-center space-x-3 text-gray-300">
@@ -217,20 +217,20 @@ export default function UltraFuturisticFooter2029V2() {
           </div>
 
           {/* Service Categories */}
-          {footerSections.map((section, index) => (;
+          {footerSections.map(section, index) => (;
             <motion.div;
               key={section.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.6, delay: index * 0.1 }
+              viewport={ once: true }
             >
               <h4 className="text-lg font-semibold text-white mb-6 flex items-center">
                 <div className="w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full mr-3" />
                 {section.title}
               </h4>
               <ul className="space-y-3">
-                {section.links.map((link) => (
+                {section.links.map(link) => (
                   <li key={link.name}>
                     <Link
                       href={link.href}
@@ -240,30 +240,30 @@ export default function UltraFuturisticFooter2029V2() {
                       {link.name}
                     </a>
                   </li>
-                ))}
+                )}
               </ul>;
             </motion.div>;
-          ))}
+          )}
         </div>;
         {/* Service Showcase */}
         <motion.div;
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          viewport={{ once: true }}
+          initial={ opacity: 0, y: 20 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0.6, delay: 0.3 }
+          viewport={ once: true }
           className="mt-16 pt-12 border-t border-gray-800"
         >
           <h3 className="text-2xl font-bold text-white text-center mb-8">
             Featured 2029 Services
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {serviceCategories.map((category, index) => (
+            {serviceCategories.map(category, index) => (
               <motion.div
                 key={category.title}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, scale: 0.9 }
+                whileInView={ opacity: 1, scale: 1 }
+                transition={ duration: 0.5, delay: index * 0.1 }
+                viewport={ once: true }
                 className="group"
               >
                 <div className={`p-4 rounded-xl bg-gradient-to-br ${category.color} bg-opacity-10 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300`}>
@@ -274,7 +274,7 @@ export default function UltraFuturisticFooter2029V2() {
                     <h4 className="font-semibold text-white text-sm">{category.title}</h4>
                   </div>
                   <ul className="space-y-2">
-                    {category.services.slice(0, 3).map((service) => (
+                    {category.services.slice(0, 3).map(service) => (
                       <li key={service.name}>
                         <Link
                           href={service.href}
@@ -283,11 +283,11 @@ export default function UltraFuturisticFooter2029V2() {
                           {service.name}
                         </a>
                       </li>
-                    ))}
+                    )}
                   </ul>;
                 </div>;
               </motion.div>;
-            ))}
+            )}
           </div>;
         </motion.div>;
       </div>;
@@ -297,10 +297,10 @@ export default function UltraFuturisticFooter2029V2() {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             {/* Copyright */}
             <motion.div;
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, x: -20 }
+              whileInView={ opacity: 1, x: 0 }
+              transition={ duration: 0.6 }
+              viewport={ once: true }
               className="text-gray-400 text-sm"
             >
                2025 Zion Tech Group. All rights reserved. | 
@@ -310,13 +310,13 @@ export default function UltraFuturisticFooter2029V2() {
 
             {/* Social Links */}
             <motion.div;
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, x: 20 }
+              whileInView={ opacity: 1, x: 0 }
+              transition={ duration: 0.6 }
+              viewport={ once: true }
               className="flex items-center space-x-4"
             >
-              {socialLinks.map((social) => (
+              {socialLinks.map(social) => (
                 <Link
                   key={social.name}
                   href={social.href}
@@ -326,17 +326,17 @@ export default function UltraFuturisticFooter2029V2() {
                 >
                   <social.icon className="w-4 h-4" />
                 </a>
-              ))}
+              )}
             </motion.div>;
           </div>;
         </div>;
       </div>;
       {/* Newsletter Signup */}
       <motion.div;
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.4 }}
-        viewport={{ once: true }}
+        initial={ opacity: 0, y: 20 }
+        whileInView={ opacity: 1, y: 0 }
+        transition={ duration: 0.6, delay: 0.4 }
+        viewport={ once: true }
         className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border-t border-cyan-500/20"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -387,4 +387,3 @@ export default function UltraFuturisticFooter2029V2() {
       </motion.div>;
     </footer>;
   );
-}

@@ -6,5 +6,3 @@ export function skeleton() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

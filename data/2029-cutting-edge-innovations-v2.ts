@@ -2,7 +2,7 @@ import { ServiceVariant } from '../types/service-variants';
 
 import { ServiceVariant  } from "../types/service-variants";
 import { ServiceVariant } from '../types / service - variants';
-;
+
 import { ServiceVariant   } from '../types / service - variants';
 export interface CuttingEdge2029Service {
 
@@ -46,7 +46,7 @@ export interface CuttingEdge2029Service {
   customers: number;
   rating: number;
   reviews: number
-}
+
 export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [
   // AI Consciousness & Evolution Services
   {  reviews: number
@@ -572,7 +572,7 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [
     rating: 4.9
     reviews: 6
   }
-];      mobile: '+1 302 464 0950';
+;      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
@@ -596,7 +596,7 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [
     rating: 4 && 4.9,
     reviews: 6,
   },
-];      mobile: '+1 302 464 0950';
+;      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
 export interface CuttingEdgeInnovation2029V2 {
   id: string, name: string,
@@ -613,17 +613,16 @@ export interface CuttingEdgeInnovation2029V2 {
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
   contactInfo: {
-      
+
     mobile: string, email: string,
     address: string,
     website: string
-  
+
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
-}
 
 export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [
   // AI Consciousness & Evolution Services
@@ -996,7 +995,7 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [
     rating: 4 && 4.9,
     reviews: 6,
   },
-];      mobile: '+1 302 464 0950';
+;      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'
@@ -1016,5 +1015,4 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [
     rating: 4.9,
     reviews: 6;
   }
-];
 ;

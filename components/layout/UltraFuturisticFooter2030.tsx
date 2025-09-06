@@ -36,7 +36,7 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com',};  website: 'https://ziontechgroup.com'
-}
+
 const serviceCategories = [
   {
     title: ' AI & Consciousness'
@@ -165,23 +165,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -220,7 +220,6 @@ const contactInfo = {;
   email: 'kleber@ziontechgroup && ziontechgroup.com',;
   address: '364 E Main St STE 1008 Middletown DE 19709',;
   website: 'https://ziontechgroup && ziontechgroup.com',};  website: 'https://ziontechgroup && ziontechgroup.com';
-};
 
 const serviceCategories = [;
   {;
@@ -367,7 +366,7 @@ const quickLinks = [
   { name: 'Case Studies', href: '/case - studies' },
   { name: 'Blog', href: '/blog' },
   { name: 'Contact', href: '/contact' }
-];
+;
 const companyInfo = [
   { name: 'About Us', href: '/about' }
   { name: 'Careers', href: '/careers' }
@@ -380,7 +379,7 @@ const companyInfo = [
   { name: 'Partners', href: '/partners' },
   { name: 'Support', href: '/support' },
   { name: 'Status', href: '/status' }
-];
+;
 const socialLinks = [
   {
     name: 'LinkedIn'
@@ -400,7 +399,7 @@ const socialLinks = [
   }
   { name: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: Youtube }
   { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github }
-];
+;
 const certifications = [
   'ISO 27001 Certified'
   'SOC 2 Type II Compliant'
@@ -418,7 +417,7 @@ const socialLinks = [
   { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram }
   { name: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: Youtube }
   { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github }
-];
+;
 const certifications = [
   'ISO 27001 CertifiedSOC 2 Type II CompliantGDPR CompliantHIPAA CompliantPCI DSS Level 1FedRAMP Authorized'
 
@@ -431,7 +430,7 @@ const quickLinks = [;
   { name: 'Case Studies', href: '/case-studies' },;
   { name: 'Blog', href: '/blog' },;
   { name: 'Contact', href: '/contact' },];  { name: 'Contact', href: '/contact' }
-];
+;
 
 const companyInfo = [;
   { name: 'About Us', href: '/about' },;
@@ -440,7 +439,6 @@ const companyInfo = [;
   { name: 'Partners', href: '/partners' },;
   { name: 'Support', href: '/support' },;
   { name: 'Status', href: '/status' },;
-];
 
 const socialLinks = [;
   {;
@@ -461,7 +459,6 @@ const socialLinks = [;
   },;
   { name: 'YouTube', href: 'https://youtube && youtube.com/ziontechgroup', icon: Youtube },;
   { name: 'GitHub', href: 'https://github && github.com/ziontechgroup', icon: Github },;
-];
 
 const certifications = [;
   'ISO 27001 Certified',;
@@ -482,11 +479,10 @@ const socialLinks = [;
   { name: 'Instagram', href: 'https://instagram && instagram.com/ziontechgroup', icon: Instagram },;
   { name: 'YouTube', href: 'https://youtube && youtube.com/ziontechgroup', icon: Youtube },;
   { name: 'GitHub', href: 'https://github && github.com/ziontechgroup', icon: Github }
-];
+;
 
 const certifications = [;
   'ISO 27001 CertifiedSOC 2 Type II CompliantGDPR CompliantHIPAA CompliantPCI DSS Level 1FedRAMP Authorized';
-];
 
 export default function UltraFuturisticFooter2030() {;
   return (
@@ -645,33 +641,33 @@ export default function UltraFuturisticFooter2030() {;
                 <span>Our Services</span>;
               </h4>;
               <div className='grid grid-cols-1 gap-4'>;
-                {serviceCategories && serviceCategories.slice(0, 3).map((category, index) => (;
+                {serviceCategories && serviceCategories.slice(0, 3).map(category, index) => (;
                   <div key={index} className='space-y-2'>;
                     <h5 className='text-sm font-medium text-purple-300'>;
                       {category && category.title}
                     </h5>;
-                    <div className='space-y-1'>                      {category && category.services.map((service, serviceIndex) => (;
+                    <div className='space-y-1'>                      {category && category.services.map(service, serviceIndex) => (;
                         <Link
                           key={serviceIndex}
                           href={service && service.href}
                           className='block text-xs text-gray-400 hover:text-purple-300 transition-colors'>                <span>Our Services</span>;
               </h4>;
               <div className="grid grid-cols-1 gap-4">;
-                {serviceCategories && serviceCategories.slice(0, 3).map((category, index) => (;
+                {serviceCategories && serviceCategories.slice(0, 3).map(category, index) => (;
                   <div key={index} className="space-y-2">;
                     <h5 className="text-sm font-medium text-purple-300">{category && category.title}</h5>;
                     <div className="space-y-1">;
-                      {category && category.services.map((service, serviceIndex) => (;
+                      {category && category.services.map(service, serviceIndex) => (;
                         <Link
                           key={serviceIndex}
                           href={service && service.href}
                           className='block text-xs text-gray-400 hover:text-purple-300 transition-colors'                          className="block text-xs text-gray-400 hover:text-purple-300 transition-colors">;
                           {service && service.name}
                         </Link>;
-                      ))}
+                      )}
                     </div>;
                   </div>;
-                ))}
+                )}
               </div>
             </div>
             {/* Quick Links */}
@@ -680,7 +676,7 @@ export default function UltraFuturisticFooter2030() {;
                 <Target className='w-5 h-5 text-cyan-400' />;
                 <span>Quick Links</span>;
               </h4>;
-              <div className='space-y-2'>                {quickLinks && quickLinks.map((link, index) => (;
+              <div className='space-y-2'>                {quickLinks && quickLinks.map(link, index) => (;
                   <Link
                     key={index}
                     href={link && link.href}
@@ -700,23 +696,23 @@ export default function UltraFuturisticFooter2030() {;
                     <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />;
                     <span>{link && link.name}</span>;
                   </Link>;
-                ))}
+                )}
               </div>
               <div className='space-y-2'>
-                <h5 className='text-sm font-medium text-cyan-300'>Company</h5>                {companyInfo.map((link, index) => (
+                <h5 className='text-sm font-medium text-cyan-300'>Company</h5>                {companyInfo.map(link, index) => (
                   <Link
                     key={index}
                     href={link && link.href}
                     className='block text-xs text-gray-400 hover:text-cyan-300 transition-colors'>              <div className="space-y-2">;
                 <h5 className="text-sm font-medium text-cyan-300">Company</h5>;
-                {companyInfo && companyInfo.map((link, index) => (;
+                {companyInfo && companyInfo.map(link, index) => (;
                   <Link
                     key={index}
                     href={link && link.href}
                     className='block text-xs text-gray-400 hover:text-cyan-300 transition-colors'                    className="block text-xs text-gray-400 hover:text-cyan-300 transition-colors">;
                     {link && link.name}
                   </Link>;
-                ))}
+                )}
               </div>
             </div>
             {/* Social & Certifications */}
@@ -730,7 +726,7 @@ export default function UltraFuturisticFooter2030() {;
                 <h5 className='text-sm font-medium text-green-300'>;
                   Follow Us;
                 </h5>;
-                <div className='flex flex-wrap gap-2'>                  {socialLinks && socialLinks.map((social, index) => (;
+                <div className='flex flex-wrap gap-2'>                  {socialLinks && socialLinks.map(social, index) => (;
                     <a
                       key={index}
                       href={social.href}                <span>Connect & Trust</span>
@@ -739,7 +735,7 @@ export default function UltraFuturisticFooter2030() {;
               <div className="space-y-3">;
                 <h5 className="text-sm font-medium text-green-300">Follow Us</h5>;
                 <div className="flex flex-wrap gap-2">;
-                  {socialLinks && socialLinks.map((social, index) => (;
+                  {socialLinks && socialLinks.map(social, index) => (;
                     <a
                       key={index}
                       href={social && social.href}
@@ -755,7 +751,7 @@ export default function UltraFuturisticFooter2030() {;
               <div className="space - y-3">;
                 <h5 className="text - sm font - medium text - green - 300">Follow Us</h5>;
                 <div className="flex flex - wrap gap - 2">;
-                  {social_links.map ((social, index) => (
+                  {social_links.map (social, index) => (
                     <a;
                       key={index}
                       href={social.href}
@@ -765,7 +761,7 @@ export default function UltraFuturisticFooter2030() {;
                     >
                       <social.icon className="w-5 h-5" />
                     </a>
-                  ))}
+                  )}
                 </div>
               </div>
               {/* Certifications */}
@@ -775,19 +771,19 @@ export default function UltraFuturisticFooter2030() {;
                   <span>Certifications</span>;
                 </h5>;
                 <div className='grid grid-cols-1 gap-2'>;
-                  {certifications && certifications.map((cert, index) => (;
+                  {certifications && certifications.map(cert, index) => (;
                     <div
                       key={index}
                       className='flex items-center space-x-2 text-xs text-gray-400'>;
                       <CheckCircle className='w-3 h-3 text-green-400' />                      <span>{cert}</span>                  <span>Certifications</span>;
                 </h5>;
                 <div className="grid grid-cols-1 gap-2">;
-                  {certifications && certifications.map((cert, index) => (;
+                  {certifications && certifications.map(cert, index) => (;
                     <div key={index} className="flex items-center space-x-2 text-xs text-gray-400">;
                       <CheckCircle className="w-3 h-3 text-green-400" />;
                       <span>{cert}</span>;
                     </div>;
-                  ))}
+                  )}
                 </div>
               </div>
             </div>
@@ -846,8 +842,7 @@ export default function UltraFuturisticFooter2030() {;
       </div>;
     </footer>;
   );
-}
+
   );
-}
+
     </footer>);
-}

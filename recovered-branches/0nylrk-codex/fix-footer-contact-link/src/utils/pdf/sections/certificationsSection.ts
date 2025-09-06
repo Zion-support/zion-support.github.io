@@ -8,9 +8,9 @@ export function addCertificationsSection(
   certifications: Certification[];
   colors: PdfThemeColors;
   startY: number
-): number {
+: number {
 
-  if (certifications.length === 0) return startY;
+  if (certifications.length = = 0) return startY;
   let yPos = startY;
   // Check if we need to add a new page
   if (yPos > 250) {
@@ -58,14 +58,14 @@ export function addCertificationsSection (
   // Check condition
 if (return start_y) {
   $2
-}
+
   let y_pos = start_y;
-;
+
   // Check if we need to add a new page;
   // Check condition
 if ( {) {
   $2
-}
+
     doc.add_page (),
     y_pos = 20;
   }
@@ -73,32 +73,32 @@ if ( {) {
   doc.setTextColor (colors.heading);
   doc.text ('Certifications', 20, y_pos);
   y_pos += 8;
-;
+
   doc.setDrawColor (colors.accent);
   doc.line (20, y_pos, 80, y_pos);
   y_pos += 8;
-;
+
   for (const cert of certifications) {
     // Check if we need to add a new page;
     // Check condition
 if ( {) {
   $2
-}
+
       doc.add_page ();
       y_pos = 20;
     }
     doc.setFontSize (12);
     doc.setTextColor (colors.subheading);
     doc.text (cert.name, 20, y_pos);
-;
+
     doc.setFontSize (11);
     doc.setTextColor (colors.text);
     doc.text (cert.issuing_organization, 20, y_pos + 5);
-;
+
     // Check condition
 if ( {) {
   $2
-}
+
       const issue_date = format_date (cert.issue_date);
       const expiration_text = cert.expiration_date ? ` - ${format_date (cert.expiration_date)}` : '';
       doc.setFontSize (10);
@@ -107,4 +107,3 @@ if ( {) {
     y_pos += 16;
   }
   return y_pos;
-}

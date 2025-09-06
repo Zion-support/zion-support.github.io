@@ -6,23 +6,22 @@ import { useWallet as useAppWallet } from "../../../context/WalletContext.tsx", 
 import { Wallet } from 'lucide-react';
 import { toast } from "sonner",;
 import {logErrorToProduction} from '@/utils/productionLogger',;
-;
+
 export function Web3Login() {;
-;
+
   const { loginWithWeb3 } = useAuth(),;
   const { isWalletSystemAvailable } = useAppWallet(),;
   const [isLoading, setIsLoading] = useState(false),;
-;
+
   const handleWeb3Login = async () => {;
     if (!isWalletSystemAvailable) {;
       toast("Web3 login unavailable", {;
         description:"The Web3 login system is currently not available. Please ensure your Reown Project ID is configured."}),;
       return,;
     }
-;
+
     try {;
       setIsLoading(true),;
-      ;
       // Check if Ethereum provider (e.g., MetaMask) is available;
       const ethereum = (window as any).ethereum,;
       if (!ethereum) {;
@@ -32,21 +31,19 @@ export function Web3Login() {;
       }
       ;
       await loginWithWeb3(), // This is from useAuth, assumed to be a separate flow;
-      ;
     } catch (error:any) {;
       toast("Login failed", {;
         description:error.message || "Failed to connect wallet. Please try again."}),;
       logErrorToProduction('Web3 login error:', { data:error }),;
     } finally {;
       setIsLoading(false),;
-    }
-  },;
-;
+    },;
+
   const buttonDisabled = isLoading || !isWalletSystemAvailable,;
   const buttonTitle = !isWalletSystemAvailable;
     ? "Web3 login is currently unavailable. Please ensure your Reown Project ID is configured.";
     :"",;
-;
+
   let buttonContent,;
   if (!isWalletSystemAvailable) {;
     buttonContent = (;
@@ -72,7 +69,7 @@ export function Web3Login() {;
       </>;
     ),;
   }
-;
+
   return (;
     <Button;
       type="button";
@@ -87,29 +84,27 @@ export function Web3Login() {;
   ),; export function Web3Login () {;
   const {;
   loginWithWeb3 ;
-}= useAuth ();
+= useAuth ();
 const {;
   isWalletSystemAvailable ;
-}= useAppWallet ();
+= useAppWallet ();
 const [isLoading, setIsLoading] = useState (false);
 const handleWeb3Login = async () => {;
   if (!isWalletSystemAvailable) {;
   return;
-}return;
-}await loginWithWeb3 (), //This is from useAuth, assumed to be a separate flow ;
-}finally {;
+return;
+await loginWithWeb3 (), //This is from useAuth, assumed to be a separate flow ;
+finally {;
   setIsLoading (false) ;
-}
-};
 const buttonDisabled = isLoading || !isWalletSystemAvailable;
 const buttonTitle = !isWalletSystemAvailable ? "Web3 login is currently unavailable. Please ensure your Reown Project ID is configured." : "";";
->Sign in with Web3</span> </> return (<Button type=" button"variant=" outline"className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan" onClick={;
+Sign in with Web3</span> </> return (<Button type=" button"variant=" outline"className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan" onClick={;
   handleWeb3Login ;
-}disabled= {;
+disabled= {;
   buttonDisabled ;
-}title= {;
+title= {;
   buttonTitle || undefined ;
-}//Ensure title is not an empty string if not needed > {;
+//Ensure title is not an empty string if not needed > {;
   buttonContent ;
-}</Button>) ;
-}"
+</Button>) ;
+"

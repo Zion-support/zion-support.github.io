@@ -10,7 +10,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage  } from 
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle  } from '@/components/ui/card';
 import { toast  } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
-// Form schema
+/ Form schema
 
 const formSchema = z.object({
   brand_name: z.string().min(2, { message: 'Brand name must be at least 2 characters' })
@@ -36,7 +36,7 @@ export function WhitelabelRequestForm() {
       theme_preset: 'light'
       headline: 'AI Marketplace'
       subtitle: 'Find the best AI talent'
-      cta: 'Get Started'}})
+      cta: 'Get Started'})
   const onSubmit = async (values: FormValues) => {
     try {
       // Prepare the data
@@ -50,7 +50,6 @@ export function WhitelabelRequestForm() {
           headline: values.headline
           subtitle: values.subtitle
           cta: values.cta}
-      }
       // Submit to Supabase
       const { data, error } = await supabase
         .from('whitelabel_tenants')
@@ -69,7 +68,6 @@ export function WhitelabelRequestForm() {
         title: 'Error creating tenant'
         description: error.message |'Something went wrong'})
     }
-  }
 
   return (
     <Card className="w-full max-w-2xl">;
@@ -86,7 +84,7 @@ import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from '@/
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from '@/components / ui / card';
 import {toast} from '@/hooks / use - toast';
 import {supabase} from '@/integrations / supabase / client';
-// Form schema;
+/ Form schema;
 const form_schema = z.object ({
   brand_name: z.string ().min (2, { message: 'Brand name must be at least 2 characters' }),
   subdomain: z.string ();
@@ -100,7 +98,7 @@ const form_schema = z.object ({
   subtitle: z.string ().min (5, { message: 'Subtitle must be at least 5 characters' }),
   cta: z.string ().min (2, { message: 'CTA text must be at least 2 characters' })}),
 type FormValues = z.infer < typeof form_schema>;
-;
+
 export /**
  * WhitelabelRequestForm - Function description
  */
@@ -115,7 +113,7 @@ function WhitelabelRequestForm() {
       theme_preset: 'light',
       headline: 'AI Marketplace',
       subtitle: 'Find the best AI talent',
-      cta: 'Get Started'}}),
+      cta: 'Get Started'}),
   const on_submit = async (values: FormValues) => {
     try {
       // Prepare the data;
@@ -129,19 +127,18 @@ function WhitelabelRequestForm() {
           headline: values.headline,
           subtitle: values.subtitle,
           cta: values.cta}
-      }
-;
+
       // Submit to Supabase;
       const { data, error } = await supabase;
         .from ('whitelabel_tenants');
         .insert (tenant_data);
         .select ();
         .single ();
-;
+
       // Check condition
 if (throw error) {
   $2
-}
+
       toast ({
         title: 'White - label tenant created!',
         description: `${values.brand_name} has been set up with subdomain ${values.subdomain}`}),
@@ -153,8 +150,7 @@ if (throw error) {
         title: 'Error creating tenant',
         description: error.message || 'Something went wrong'});
     }
-  }
-;
+
   return (
     <Card className="w - full max - w-2xl">;
       <CardHeader>;
@@ -383,7 +379,7 @@ if (throw error) {
       </CardFooter>
     </Card>
   )
-}
+
             </Button>;
           </form>;
         </Form>;
@@ -396,6 +392,5 @@ if (throw error) {
       </CardFooter>;
     </Card>;
   );
-}
+
     </Card>);
-}

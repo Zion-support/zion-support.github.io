@@ -6,11 +6,11 @@ import { motion } from 'framer-motion';
 import {
   Brain, Atom, Target, ArrowRight, CheckCircle, Star
   Phone, Mail, MapPin
-} from 'lucide-react'
+ from 'lucide-react'
 import { 
   Brain, Atom, Target, ArrowRight, CheckCircle, Star, 
   Phone, Mail, MapPin
-} from 'lucide-react';
+ from 'lucide-react';
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
 import { aiAutonomousEcosystemServices2029 } from '../data/2029-ai-autonomous-ecosystem';
@@ -21,7 +21,7 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
-}
+
 export default function InnovativeServicesShowcase2029() {
   const allServices = [
     ...aiAutonomousEcosystemServices2029
@@ -77,16 +77,16 @@ export default function InnovativeServicesShowcase2029() {
         <section className="py-32 bg-gradient-to-br from-black via-purple-900/20 to-black">
           <div className="container mx-auto px-4 text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
         {/* Hero Section */}
         <section className="py - 32 bg - gradient - to - br from - black via - purple - 900 / 20 to - black">;
           <div className="container mx - auto px - 4 text - center">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, coordinate_y: 30 }
+              animate={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
             >
               <h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-8">
                 2029 Innovative Services
@@ -113,17 +113,17 @@ export default function InnovativeServicesShowcase2029() {
         <section id="services" className="py-20 bg-gradient-to-b from-black to-gray-900">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
         {/* Services Overview */}
         <section id="services" className="py - 20 bg - gradient - to - b from - black to - gray - 900">;
           <div className="container mx - auto px - 4">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }} className="text-center mb-16">
+              initial={ opacity: 0, coordinate_y: 30 }
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true } className="text-center mb-16">
               <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6">
                 Revolutionary Service Categories
               </h2>
@@ -133,9 +133,9 @@ export default function InnovativeServicesShowcase2029() {
               </p>
             </motion.div>
             <div className="grid md:grid-cols-3 gap-8 mb-20">
-              {serviceCategories.map((category, index) => (
+              {serviceCategories.map(category, index) => (
                 <motion.div
-              viewport={{ once: true }} className="text - center mb - 16">;
+              viewport={ once: true } className="text - center mb - 16">;
               <h2 className="text - 5xl md:text - 6xl font - bold bg - gradient - to - r from - purple - 400 to - blue - 400 bg - clip - text text - transparent mb - 6">;
                 Revolutionary Service Categories;
               </h2>;
@@ -145,13 +145,13 @@ export default function InnovativeServicesShowcase2029() {
               </p>;
             </motion.div>;
             <div className="grid md:grid - cols - 3 gap - 8 mb - 20">;
-              {service_categories.map ((category, index) => (
+              {service_categories.map (category, index) => (
                 <motion.div;
                   key={category.title}
-                  initial={{ opacity: 0, coordinate_y: 30 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.2 }}
-                  viewport={{ once: true }} className="relative group">
+                  initial={ opacity: 0, coordinate_y: 30 }
+                  whileInView={ opacity: 1, coordinate_y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.2 }
+                  viewport={ once: true } className="relative group">
                   <div className={`absolute inset-0 bg-gradient-to-br ${category.color} opacity-20 rounded-2xl blur-xl group-hover:opacity-30 transition-opacity duration-500`}></div>
                   <div className="relative bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 hover:border-gray-500 transition-all duration-500">
                     <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br ${category.color} rounded-2xl mb-6`}>
@@ -163,11 +163,11 @@ export default function InnovativeServicesShowcase2029() {
                       and accelerate your success in the digital age.
                     </p>
                     <div className="text-sm text-gray-400">
-                      Starting from ${Math.min(...category.services.map(s => parseInt(s.price.replace(/[^0-9]/g, ''))))}/month
+                      Starting from ${Math.min(...category.services.map(s => parseInt(s.price.replace(/[^0-9]/g, ''))}/month
                     </div>
                   </div>
                 </motion.div>
-              ))}
+              )}
             </div>
           </div>
         </section>
@@ -176,17 +176,17 @@ export default function InnovativeServicesShowcase2029() {
         <section className="py-20 bg-black">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
         {/* Featured Services */}
         <section className="py - 20 bg - black">;
           <div className="container mx - auto px - 4">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }} className="text-center mb-16">
+              initial={ opacity: 0, coordinate_y: 30 }
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true } className="text-center mb-16">
               <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6">
                 Featured Services
               </h2>
@@ -196,9 +196,9 @@ export default function InnovativeServicesShowcase2029() {
               </p>
             </motion.div>
             <div className="grid lg:grid-cols-2 gap-8">
-              {allServices.slice(0, 4).map((service, index) => (
+              {allServices.slice(0, 4).map(service, index) => (
                 <motion.div
-              viewport={{ once: true }} className="text - center mb - 16">;
+              viewport={ once: true } className="text - center mb - 16">;
               <h2 className="text - 5xl md:text - 6xl font - bold bg - gradient - to - r from - purple - 400 to - blue - 400 bg - clip - text text - transparent mb - 6">;
                 Featured Services;
               </h2>;
@@ -208,13 +208,13 @@ export default function InnovativeServicesShowcase2029() {
               </p>;
             </motion.div>;
             <div className="grid lg:grid - cols - 2 gap - 8">;
-              {all_services.slice (0, 4).map ((service, index) => (
+              {all_services.slice (0, 4).map (service, index) => (
                 <motion.div;
                   key={service.id}
-                  initial={{ opacity: 0, coordinate_y: 30 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }} className="bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 hover:border-gray-500 transition-all duration-500">
+                  initial={ opacity: 0, coordinate_y: 30 }
+                  whileInView={ opacity: 1, coordinate_y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }
+                  viewport={ once: true } className="bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 hover:border-gray-500 transition-all duration-500">
                   <h3 className="text-2xl font-bold text-white mb-4">{service.name}</h3>
                   <p className="text-gray-300 mb-6">{service.description}</p>
                   <div className="grid grid-cols-2 gap-4 mb-6">
@@ -228,12 +228,12 @@ export default function InnovativeServicesShowcase2029() {
                     </div>
                   </div>
                   <div className="flex flex-wrap gap-2 mb-6">
-                    {service.category.slice(0, 3).map((cat, catIndex) => (
+                    {service.category.slice(0, 3).map(cat, catIndex) => (
                       <span
                         key={catIndex} className="px-3 py-1 bg-gray-800 text-gray-300 text-sm rounded-full border border-gray-600">
                         {cat}
                       </span>
-                    ))}
+                    )}
                   </div>
 
                   <div className="flex gap-4">
@@ -248,13 +248,13 @@ export default function InnovativeServicesShowcase2029() {
                     </Link>
                   </div>
                 </motion.div>
-              ))}
+              )}
             </div>
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }} className="text-center mt-16">
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true } className="text-center mt-16">
               <Link
                 href="/services" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-full hover:from-purple-700 hover:to-blue-700 transition-all duration-300 text-lg">
                 View All Services
@@ -268,18 +268,18 @@ export default function InnovativeServicesShowcase2029() {
         <section className="py-20 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20">
           <div className="container mx-auto px-4 text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
         {/* Contact CTA */}
         <section className="py - 20 bg - gradient - to - br from - purple - 900 / 20 via - black to - blue - 900 / 20">;
           <div className="container mx - auto px - 4 text - center">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, coordinate_y: 30 }
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >
               <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6">
                 Ready to Transform Your Business?
@@ -321,7 +321,7 @@ export default function InnovativeServicesShowcase2029() {
       </div>
     </>
   )
-}
+
             >;
               <h2 className="text - 5xl md:text - 6xl font - bold bg - gradient - to - r from - purple - 400 to - blue - 400 bg - clip - text text - transparent mb - 6">;
                 Ready to Transform Your Business?;
@@ -361,4 +361,3 @@ export default function InnovativeServicesShowcase2029() {
         <UltraFuturisticFooter2029 />;
       </div>;
     </>);
-}

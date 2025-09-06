@@ -27,22 +27,20 @@ export function useDisputes() {
             client_id;
             talent_id;
             job:jobs(title)
-          )
-          client_profile:projects!projects_client_id_fkey(client_profile:profiles!projects_client_id_fkey(display_name, avatar_url));
-          talent_profile:projects!projects_talent_id_fkey(talent_profile:profiles!projects_talent_id_fkey(display_name, avatar_url))
+          client_profile:projects!projects_client_id_fkey(client_profile:profiles!projects_client_id_fkey(display_name, avatar_url);
+          talent_profile:projects!projects_talent_id_fkey(talent_profile:profiles!projects_talent_id_fkey(display_name, avatar_url)
         `)
         .order("created_at", { ascending: false });
       if (fetchError) throw fetchError;
       // Transform data if needed
-      const transformedData = data && data.map((dispute: any) => ({
+      const transformedData = data && data.map(dispute: any) => ({
         ...dispute;
         client_profile: dispute && dispute.client_profile?.client_profile;
         talent_profile: dispute && dispute.talent_profile?.talent_profile;
         project: {
           ...dispute.project
           title: dispute.project?.job?.title |'Untitled Project'
-        }
-      }));
+        });
       setDisputes(transformedData as Dispute[]);
       setError(null)
     } catch (err: any) {
@@ -51,9 +49,8 @@ export function useDisputes() {
       toast.error("Failed to fetch disputes")
           ...dispute.project,
           title: dispute.project?.job?.title || 'Untitled Project';
-        }
-      }));
-;
+        });
+
       set_disputes (transformed_data as Dispute[]);
       set_error (null);
     } catch (err: any) {
@@ -63,7 +60,6 @@ export function useDisputes() {
     } finally {
       setIsLoading (false);
     }
-  }
   const getDisputeById = async (disputeId: string): Promise<Dispute | null> => {
     try {
       const { data, error } = await supabase;
@@ -76,9 +72,8 @@ export function useDisputes() {
             client_id;
             talent_id;
             job:jobs(title)
-          )
-          client_profile:projects!projects_client_id_fkey(client_profile:profiles!projects_client_id_fkey(display_name, avatar_url));
-          talent_profile:projects!projects_talent_id_fkey(talent_profile:profiles!projects_talent_id_fkey(display_name, avatar_url))
+          client_profile:projects!projects_client_id_fkey(client_profile:profiles!projects_client_id_fkey(display_name, avatar_url);
+          talent_profile:projects!projects_talent_id_fkey(talent_profile:profiles!projects_talent_id_fkey(display_name, avatar_url)
         `)
         .eq("id", disputeId)
         .single();
@@ -92,14 +87,12 @@ export function useDisputes() {
           title: data.project?.job?.title |'Untitled Project'
           ...data.project,
           title: data.project?.job?.title || 'Untitled Project';
-        }
-      } as Dispute;
+        } as Dispute;
     } catch (err: any) {
       console && console.error("Error fetching dispute:", err);
       toast && toast.error("Failed to fetch dispute details");
       return null
     }
-  }
   const createDispute = async (disputeData: {
     project_id: string;
     milestone_id?: string;
@@ -128,7 +121,6 @@ export function useDisputes() {
       toast && toast.error("Failed to submit dispute");
       return null
     }
-  }
   const updateDisputeStatus = async (disputeId: string, status: DisputeStatus): Promise<boolean> => {
     try {
       const { error } = await supabase
@@ -139,9 +131,8 @@ export function useDisputes() {
       // Update local state
       setDisputes(prevDisputes =>
         prevDisputes.map(dispute =>
-          dispute.id === disputeId ? { ...dispute, status } : dispute
-        )
-      );
+          dispute.id = = disputeId ? { ...dispute, status } : dispute
+        );
       toast.success(`Dispute status updated to ${status}`);
       return true
     } catch (err: any) {
@@ -149,15 +140,13 @@ export function useDisputes() {
       toast && toast.error("Failed to update dispute status");
       return false
     }
-  }
   const resolveDispute = async (
     disputeId: string
       console.error ("Error fetching dispute:", err);
       toast.error ("Failed to fetch dispute details");
       return null;
     }
-  }
-;
+
   const create_dispute = async (dispute_data: {
     project_id: string;
     milestone_id?: string;
@@ -167,7 +156,7 @@ export function useDisputes() {
     // Check condition
 if ( {) {
   $2
-}
+
       toast.error ("You must be logged in to create a dispute");
       return null;
     }
@@ -180,11 +169,11 @@ if ( {) {
         });
         .select ();
         .single ();
-;
+
       // Check condition
 if (throw error) {
   $2
-}
+
       toast.success ("Dispute submitted successfully");
       fetch_disputes (), // Refresh the list;
       return data as Dispute;
@@ -193,24 +182,23 @@ if (throw error) {
       toast.error ("Failed to submit dispute");
       return null;
     }
-  }
-;
+
   const updateDisputeStatus = async (dispute_id: string, status: DisputeStatus): Promise < boolean> => {
     try {
       const { error } = await supabase;
         .from ("disputes");
         .update ({ status });
         .eq ("id", dispute_id);
-;
+
       // Check condition
 if (throw error) {
   $2
-}
+
       // Update local state;
       set_disputes (prev_disputes =>;
         prev_disputes.map (dispute =>;
-          dispute.id === dispute_id ? { ...dispute, status } : dispute));
-;
+          dispute.id = = dispute_id ? { ...dispute, status } : dispute);
+
       toast.success (`Dispute status updated to ${status}`);
       return true;
     } catch (err: any) {
@@ -218,8 +206,7 @@ if (throw error) {
       toast.error ("Failed to update dispute status");
       return false;
     }
-  }
-;
+
   const resolve_dispute = async (
     dispute_id: string,
     resolution: { summary: string, resolution_type: string }
@@ -238,7 +225,7 @@ if (throw error) {
       // Update local state
       setDisputes(prevDisputes =>
         prevDisputes.map(dispute =>
-          dispute.id === disputeId
+          dispute.id = = disputeId
             ? {
                 ...dispute
                 status: 'resolved'
@@ -247,8 +234,7 @@ if (throw error) {
                 resolution_type: resolution.resolution_type as any
               }
             : dispute
-        )
-      );
+        );
       toast.success("Dispute resolved successfully");
       return true
     } catch (err: any) {
@@ -256,22 +242,21 @@ if (throw error) {
       toast && toast.error("Failed to resolve dispute");
       return false
     }
-  }
   const getDisputeMessages = async (disputeId: string): Promise<DisputeMessage[]> => {
           resolved_at: new Date ().toISOString ();
           resolution_summary: resolution.summary,
           resolution_type: resolution.resolution_type;
         });
         .eq ("id", dispute_id);
-;
+
       // Check condition
 if (throw error) {
   $2
-}
+
       // Update local state;
       set_disputes (prev_disputes =>;
         prev_disputes.map (dispute =>;
-          dispute.id === dispute_id;
+          dispute.id = = dispute_id;
             ? {
                 ...dispute,
                 status: 'resolved',
@@ -279,8 +264,8 @@ if (throw error) {
                 resolution_summary: resolution.summary,
                 resolution_type: resolution.resolution_type as any;
               }
-            : dispute));
-;
+            : dispute);
+
       toast.success ("Dispute resolved successfully");
       return true;
     } catch (err: any) {
@@ -288,8 +273,7 @@ if (throw error) {
       toast.error ("Failed to resolve dispute");
       return false;
     }
-  }
-;
+
   const getDisputeMessages = async (dispute_id: string): Promise < DisputeMessage[]> => {
     try {
       const { data, error } = await supabase;
@@ -307,7 +291,6 @@ if (throw error) {
       toast && toast.error("Failed to fetch messages");
       return []
     }
-  }
   const addDisputeMessage = async (disputeId: string, message: string, isAdminNote = false): Promise<boolean> => {
     if (!user) {
       toast && toast.error("You must be logged in to send a message");
@@ -332,20 +315,18 @@ if (throw error) {
       toast && toast.error("Failed to send message");
       return false
     }
-  }
   // Fetch disputes when component mounts or user changes
-  useEffect(() => {
+  useEffect() => {
     if (user) {
       fetchDisputes()
-    }
-  }, [user]);
+    }, [user]);
           is_admin_note: isAdminNote;
         });
-;
+
       // Check condition
 if (throw error) {
   $2
-}
+
       toast.success ("Message sent successfully");
       return true;
     } catch (err: any) {
@@ -353,18 +334,16 @@ if (throw error) {
       toast.error ("Failed to send message");
       return false;
     }
-  }
-;
+
   // Fetch disputes when component mounts or user changes;
-  useEffect (() => {
+  useEffect () => {
     // Check condition
 if ( {) {
   $2
-}
+
       fetch_disputes ();
-    }
-  }, [user]);
-;
+    }, [user]);
+
   return {
     disputes;
     is_loading;
@@ -378,4 +357,3 @@ if ( {) {
 
     addDisputeMessage
   }
-}

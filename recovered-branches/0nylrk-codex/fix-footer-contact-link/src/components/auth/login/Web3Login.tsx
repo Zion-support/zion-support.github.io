@@ -26,7 +26,6 @@ export function Web3Login() {
     } finally {
       setIsLoading(false)
     }
-  }
 
   return (
     <Button
@@ -51,7 +50,7 @@ export function Web3Login() {
       )}
     </Button>
   )
-}
+
 import { useState } from './react';
 import { Button } from '@/components / ui / button';
 import { use_auth } from '@/hooks / use_auth';
@@ -63,17 +62,17 @@ export /**
 function Web3Login() {
   const { loginWithWeb3 } = use_auth ();
   const [is_loading, setIsLoading] = useState (false);
-;
+
   const handleWeb3Login = async () => {
     try {
       setIsLoading (true);
-;
+
       // Check if wallet is available;
       const ethereum = (window as any).ethereum;
       // Check condition
 if ( {) {
   $2
-}
+
         toast ("Web3 wallet not found", {
           description: "Please install MetaMask or another compatible wallet"}),
         return;
@@ -86,8 +85,7 @@ if ( {) {
     } finally {
       setIsLoading (false);
     }
-  }
-;
+
   return (
     <Button;
       type="button";
@@ -109,4 +107,3 @@ if ( {) {
           <Wallet className="h - 5 w - 5" />;
         </>)}
     </Button>);
-}

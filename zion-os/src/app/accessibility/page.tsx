@@ -298,4 +298,3 @@ function AccessibilityPage() {
         </div>;
       </section>;
     </div>);
-}

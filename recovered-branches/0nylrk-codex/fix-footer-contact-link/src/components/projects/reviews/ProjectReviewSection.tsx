@@ -8,7 +8,7 @@ import {
   CardDescription
   CardHeader
   CardTitle
-} from "@/components/ui/card";
+ from "@/components/ui/card";
 import { ReviewsList } from "@/components/reviews/ReviewsList";
 import { LeaveReviewModal } from "@/components/reviews/LeaveReviewModal";
 import { useReviews } from "@/hooks/useReviews";
@@ -17,7 +17,7 @@ import { Project } from "@/types/projects";
 import { useAuth } from "@/hooks/useAuth";
 interface ProjectReviewSectionProps {
   project: Project;
-}
+
 export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
   const { user } = useAuth();
 
@@ -25,9 +25,9 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
     project.id
   );
   const [isReviewModalOpen, setIsReviewModalOpen] = useState(false);
-  const isCompleted = project.status === "completed";
-  const isClient = user?.id === project.client_id;
-  const isTalent = user?.id === project.talent_id;
+  const isCompleted = project.status = = "completed";
+  const isClient = user?.id = = project.client_id;
+  const isTalent = user?.id = = project.talent_id;
   const clientProfile = project.client_profile;
   const talentProfile = project.talent_profile;
   // Determine who the current user needs to review
@@ -71,11 +71,11 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
                     </h3>;
                     <p className="text - sm text - muted - foreground mb - 3">;
                       Your review is{" "}
-                      {user_review.status === "approved";
+                      {user_review.status = = "approved";
                         ? "published";
                         : "pending approval"}
                     </p>
-                    {userReview.status === "pending" && (
+                    {userReview.status = = "pending" && (
                       <Button
                         variant="outline"
                         onClick={() => setIsReviewModalOpen(true)}
@@ -117,9 +117,9 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
       )}
     </Card>
   );
-}
+
                     </p>;
-                    {user_review.status === "pending" && (
+                    {user_review.status = = "pending" && (
                       <Button;
                         variant="outline";
                         on_click={() => setIsReviewModalOpen (true)}
@@ -154,4 +154,3 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
           on_close={() => setIsReviewModalOpen (false)}
         />)}
     </Card>);
-}

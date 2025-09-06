@@ -23,9 +23,9 @@ export default function AISalesIntelligencePlatform() {
 			canonical="https: //ziontechgroup.com/ai-sales-intelligence-platform"
 		/>
 	)
-}
+
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',
-;
+
 export default /**
  * AISalesIntelligencePlatform - Function description
  */
@@ -50,4 +50,3 @@ return (
     industries={["B2B SaaS", "Professional Services", "Manufacturing"]}
     canonical="https: //ziontechgroup.com / ai - sales - intelligence - platform";
   />);
-}

@@ -13,7 +13,7 @@ export function MobileFilterBar({
   setSearchTerm
   setIsMobileFilterOpen
 
-}: MobileFilterBarProps) {
+: MobileFilterBarProps) {
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Search, Sliders } from 'lucide-react';
@@ -26,7 +26,7 @@ export function MobileFilterBar(): any ({;
   searchTerm,;
   setSearchTerm,;
   setIsMobileFilterOpen,;
-}: MobileFilterBarProps) {;
+: MobileFilterBarProps) {;
   return (
     <div className='lg:hidden mb-4 sticky top-0 z-20 bg-zion-blue pt-2 pb-4'>;
       <Button
@@ -54,7 +54,7 @@ export function MobileFilterBar(): any ({;
       </div>
     </div>
   )
-}
+
 import React from 'react';
 import { Button } from '@/components / ui / button';
 import { Search, Sliders } from 'lucide-react';
@@ -93,4 +93,3 @@ function MobileFilterBar() {
         </p>;
       </div>;
     </div>);
-}

@@ -2,12 +2,11 @@ import React, { useEffect, useRef } from 'react',
 import { motion } from 'framer-motion',
 interface UltraFuturisticBackground2028Props {
   children: React.ReactNode
-}
 
 export default function UltraFuturisticBackground2028({ children }: UltraFuturisticBackground2028Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null),
 
-  useEffect(() => {
+  useEffect() => {
     const canvas = canvasRef.current,
     if (!canvas) return,
 
@@ -45,7 +44,7 @@ export default function UltraFuturisticBackground2028({ children }: UltraFuturis
       ctx.clearRect(0, 0, canvas.width, canvas.height),
 
       // Update and draw particles
-      particles.forEach((particle) => {
+      particles.forEach(particle) => {
         particle.x += particle.vx,
         particle.y += particle.vy,
         // Wrap around edges
@@ -62,7 +61,7 @@ export default function UltraFuturisticBackground2028({ children }: UltraFuturis
         ctx.fill(),
 
         // Draw connections
-        particles.forEach((otherParticle) => {
+        particles.forEach(otherParticle) => {
           const dx = particle.x - otherParticle.x,
           const dy = particle.y - otherParticle.y,
           const distance = Math.sqrt(dx * dx + dy * dy),
@@ -75,8 +74,7 @@ export default function UltraFuturisticBackground2028({ children }: UltraFuturis
             ctx.globalAlpha = (100 - distance) / 100 * 0.1,
             ctx.lineWidth = 1,
             ctx.stroke()
-          }
-        })
+          })
       }),
       requestAnimationFrame(animate)
     },
@@ -92,8 +90,7 @@ export default function UltraFuturisticBackground2028({ children }: UltraFuturis
 
     return () => {
       window.removeEventListener('resize', handleResize)
-    }
-  }, []),
+    }, []),
 
   return (
     <div className=&quot;relative min-h-screen bg-black overflow-hidden&quot;>
@@ -101,176 +98,176 @@ export default function UltraFuturisticBackground2028({ children }: UltraFuturis
       <canvas;
         ref={canvasRef}
         className=&quot;absolute inset-0 w-full h-full pointer-events-none&quot;
-        style={{ zIndex: 0 }}
+        style={ zIndex: 0 }
       />
 
       {/* Gradient Overlays */}
-      <div className=&quot;absolute inset-0 bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-cyan-900/20&quot; style={{ zIndex: 1 }} />
-      <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(147,51,234,0.15),transparent_50%)]&quot; style={{ zIndex: 1 }} />
-      <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,rgba(59,130,246,0.15),transparent_50%)]&quot; style={{ zIndex: 1 }} />
-      <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(6,182,212,0.1),transparent_50%)]&quot; style={{ zIndex: 1 }} />
+      <div className=&quot;absolute inset-0 bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-cyan-900/20&quot; style={ zIndex: 1 } />
+      <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(147,51,234,0.15),transparent_50%)]&quot; style={ zIndex: 1 } />
+      <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,rgba(59,130,246,0.15),transparent_50%)]&quot; style={ zIndex: 1 } />
+      <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(6,182,212,0.1),transparent_50%)]&quot; style={ zIndex: 1 } />
 
       {/* Floating Geometric Shapes */}
-      <div className=&quot;absolute inset-0 pointer-events-none&quot; style={{ zIndex: 2 }}>
+      <div className=&quot;absolute inset-0 pointer-events-none&quot; style={ zIndex: 2 }>
         {/* Animated Hexagons */}
         <motion.div
           className=&quot;absolute top-20 left-20 w-32 h-32 border border-purple-500/30 rotate-45&quot;
-          animate={{
+          animate={
             rotate: [45, 405],
             scale: [1, 1.1, 1],
             opacity: [0.3, 0.6, 0.3]
-          }}
-          transition={{
+          }
+          transition={
             duration: 8,
             repeat: Infinity,
             ease: &quot;easeInOut&quot;
-          }}
+          }
         />
-        
+
         <motion.div
           className=&quot;absolute top-40 right-32 w-24 h-24 border border-blue-500/30 rotate-45&quot;
-          animate={{
+          animate={
             rotate: [45, -315],
             scale: [1, 1.2, 1],
             opacity: [0.2, 0.5, 0.2]
-          }}
-          transition={{
+          }
+          transition={
             duration: 10,
             repeat: Infinity,
             ease: &quot;easeInOut&quot;
-          }}
+          }
         />
 
         <motion.div
           className=&quot;absolute bottom-32 left-1/4 w-40 h-40 border border-cyan-500/30 rotate-45&quot;
-          animate={{
+          animate={
             rotate: [45, 405],
             scale: [1, 1.15, 1],
             opacity: [0.25, 0.55, 0.25]
-          }}
-          transition={{
+          }
+          transition={
             duration: 12,
             repeat: Infinity,
             ease: &quot;easeInOut&quot;
-          }}        />
+          }        />
 
         {_/* Floating Circles */}
         <motion.div
           className=&quot;absolute top-1/3 left-1/3 w-16 h-16 border border-purple-400/40 rounded-full&quot;
-          animate={{
+          animate={
             y: [0, -20, 0],
             opacity: [0.3, 0.6, 0.3]
-          }}
-          transition={{
+          }
+          transition={
             duration: 6,
             repeat: Infinity,
             ease: &quot;easeInOut&quot;
-          }}
+          }
         />
 
         <motion.div
           className=&quot;absolute top-2/3 right-1/4 w-20 h-20 border border-blue-400/40 rounded-full&quot;
-          animate={{
+          animate={
             y: [0, 25, 0],
             opacity: [0.2, 0.5, 0.2]
-          }}
-          transition={{
+          }
+          transition={
             duration: 7,
             repeat: Infinity,
             ease: &quot;easeInOut&quot;
-          }}
+          }
         />
 
         <motion.div
           className=&quot;absolute bottom-1/3 right-1/3 w-12 h-12 border border-cyan-400/40 rounded-full&quot;
-          animate={{
+          animate={
             y: [0, -15, 0],
             opacity: [0.25, 0.55, 0.25]
-          }}
-          transition={{
+          }
+          transition={
             duration: 5,
             repeat: Infinity,
             ease: &quot;easeInOut&quot;
-          }}
+          }
         />;
       </div>;
-;
+
       {/* Energy Waves */}
-      <div className=&quot;absolute inset-0 pointer-events-none&quot; style={{ zIndex: 3 }}>
+      <div className=&quot;absolute inset-0 pointer-events-none&quot; style={ zIndex: 3 }>
         <motion.div
           className=&quot;absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-purple-500 to-transparent&quot;
-          animate={{
+          animate={
             y: [0, 1000],
             opacity: [0, 1, 0]
-          }}
-          transition={{
+          }
+          transition={
             duration: 4,
             repeat: Infinity,
             ease: &quot;linear&quot;
-          }}
+          }
         />
-        
+
         <motion.div
           className=&quot;absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-blue-500 to-transparent&quot;
-          animate={{
+          animate={
             y: [0, 1000],
             opacity: [0, 1, 0]
-          }}
-          transition={{
+          }
+          transition={
             duration: 6,
             repeat: Infinity,
             ease: &quot;linear&quot;,
             delay: 2
-          }}
+          }
         />
 
         <motion.div
           className=&quot;absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-500 to-transparent&quot;
-          animate={{
+          animate={
             y: [0, 1000],
             opacity: [0, 1, 0]
-          }}
-          transition={{
+          }
+          transition={
             duration: 8,
             repeat: Infinity,
             ease: &quot;linear&quot;,
             delay: 4
-          }}
+          }
         />;
       </div>;
-;
+
       {/* Quantum Particles */}
-      <div className=&quot;absolute inset-0 pointer-events-none&quot; style={{ zIndex: 4 }}>
-        {[...Array(20)].map((_, i) => (
+      <div className=&quot;absolute inset-0 pointer-events-none&quot; style={ zIndex: 4 }>
+        {[...Array(20)].map(_, i) => (
           <motion.div
             key={i}
             className=&quot;absolute w-2 h-2 bg-purple-400 rounded-full&quot;
-            style={{
+            style={
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`
-            }}
-            animate={{;
+            }
+            animate={;
               scale:[0, 1, 0],;
               opacity:[0, 1, 0];
-            }}
-            transition={{
+            }
+            transition={
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
               delay: Math.random() * 3,
-              ease: &quot;easeInOut&quot;            }}
+              ease: &quot;easeInOut&quot;            }
             animate={_{
-              scale: [0, _1, _0], _opacity: [0, _1, _0]}}
+              scale: [0, _1, _0], _opacity: [0, _1, _0]}
             transition={_{
-              duration: 3 + Math.random() * 2, _repeat: Infinity, _delay: Math.random() * 3, _ease: "easeInOut"}}
+              duration: 3 + Math.random() * 2, _repeat: Infinity, _delay: Math.random() * 3, _ease: "easeInOut"}
           />
-        ))}
+        )}
       </div>;
-;
+
       {/* Content */}
-      <div className=&quot;relative&quot; style={{ zIndex: 10 }}>
+      <div className=&quot;relative&quot; style={ zIndex: 10 }>
         {children}
       </div>;
-;
+
       {/* Bottom Glow */}
-      <div className=&quot;absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-purple-900/20 to-transparent pointer-events-none&quot; style={{ zIndex: 5 }} />    </div>
+      <div className=&quot;absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-purple-900/20 to-transparent pointer-events-none&quot; style={ zIndex: 5 } />    </div>
   )}

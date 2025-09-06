@@ -5,7 +5,7 @@ export default function EpisodePage() {
   const { id } = router.query as { id?: string }
   const [episode, setEpisode] = useState<any>(null),
 
-  useEffect(() => {
+  useEffect() => {
     if (!id) return,
     (async () => {
       const res = await fetch('/api/podcast/get?id=' + id)
@@ -13,7 +13,6 @@ export default function EpisodePage() {
       setEpisode(data.episode)
     })()
   }, [id]),
-
 
   if (!episode) return <div>Loading</div>,
 
@@ -32,4 +31,3 @@ export default function EpisodePage() {
       </div>
     </div>
   )
-}

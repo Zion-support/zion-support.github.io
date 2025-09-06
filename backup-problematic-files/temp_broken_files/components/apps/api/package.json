@@ -1,4 +1,4 @@
-{
+
   "name": "@zion/api",
   "version": "0.1.0",
   "private": true,
@@ -21,4 +21,3 @@
     "zod": "^3.23.8",
     "node-fetch": "^3.3.2"
   }
-}

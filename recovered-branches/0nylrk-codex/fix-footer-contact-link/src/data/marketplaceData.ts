@@ -1,12 +1,12 @@
 import { ProductListing } from '@/types/listings';
 import { SearchSuggestion, FilterOptions } from '@/types/search';
-// Mock marketplace listings with more realistic data
+/ Mock marketplace listings with more realistic data
 export const MARKETPLACE_LISTINGS: ProductListing[] = [
   {
 
 import { ProductListing } from "@/types/listings";
 import { SearchSuggestion, FilterOptions } from "@/types/search";
-// Mock marketplace listings with more realistic data
+/ Mock marketplace listings with more realistic data
 export const MARKETPLACE_LISTINGS: ProductListing[] = [
   {
     id: 'ai-model-1',
@@ -417,8 +417,8 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     location: "North America",
     availability: "2-4 Weeks"
   }
-];
-// Generate search suggestions based on existing listings
+;
+/ Generate search suggestions based on existing listings
 export const generateSearchSuggestions = (): SearchSuggestion[] => {
   const suggestions = [
     'AI models',
@@ -462,93 +462,89 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
   return suggestions.map(text => ({
     text
     type: 'product', // Use a valid type from the updated SearchSuggestion interface
-  }));};  ];
-  
+  });};  ];
+
   // Convert strings to SearchSuggestion objects
   return suggestions && suggestions.map(text => ({
     text;
     type: 'product' // Use a valid type from the updated SearchSuggestion interface
-  }))
-}
-// Generate filter options for sidebar
+  })
+
+/ Generate filter options for sidebar
 export const generateFilterOptions = (): FilterOptions => {
   // Extract unique categories, locations, and availability options from listings
   const productTypes = [
-    ...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category))
+    ...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category)
   ].sort();
   const locations = [
     ...new Set(
       MARKETPLACE_LISTINGS.map(listing => listing.location).filter(Boolean)
-    )
   ].sort();
   const availability = [
     ...new Set(
       MARKETPLACE_LISTINGS.map(listing => listing.availability).filter(Boolean)
-    )
   ].sort();
     productTypes: productTypes.map(type => ({
       label: type
       value: type
-    }))
+    })
     locations: locations.map(location => ({
       label: location
       value: location
-    }))
+    })
     availabilityOptions: availability.map(item => ({
       label: item
       value: item
-    }))
+    })
     ratingOptions: [1, 2, 3, 4, 5], // Add rating options
   }
-}
+
 export const MAX_PRICE = Math.max(
   ...MARKETPLACE_LISTINGS.map(listing => listing.price |0)
-);
+;
 export const MIN_PRICE = Math.min(
   ...MARKETPLACE_LISTINGS.map(listing => listing.price |0)
-);
+;
   return {
   productTypes: productTypes.map (type => ({
   label: type, value: type
-}) );
+);
 locations: locations.map (location => ({
   label: location, value: location
-}) );
+);
 availabilityOptions: availability.map (item => ({
   label: item, value: item
-}) );
+);
 ratingOptions: [1, 2, 3, 4, 5] // Add rating options
-};export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price |0));
-export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price |0));
+;export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price |0);
+export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price |0);
 
-};
-
-// Generate filter options for sidebar
+/ Generate filter options for sidebar
 export const generateFilterOptions = (): FilterOptions => {
   // Extract unique categories, locations, and availability options from listings
-  const productTypes = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category))].sort();
-  const locations = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.location).filter(Boolean))].sort();
-  const availability = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.availability).filter(Boolean))].sort();
-  
+  const productTypes = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category)].sort();
+  const locations = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.location).filter(Boolean)].sort();
+  const availability = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.availability).filter(Boolean)].sort();
+
   return {
     productTypes: productTypes.map(type => ({
       label: type,
       value: type
-    }));
+    });
     locations: locations.map(location => ({
       label: location,
       value: location
-    }));
+    });
     availabilityOptions: availability.map(item => ({
       label: item,
       value: item
-    }));
+    });
     ratingOptions: [1, 2, 3, 4, 5] // Add rating options
   }
-};
+;
 
-export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
-export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
+export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0);
+export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0);
     id: 'equipment - 2',
     title: 'Enterprise GPU Server Rack',
     description:;
@@ -580,9 +576,9 @@ export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing
     location: "North America",
     availability: "2 - 4 Weeks";
   }
-];
 ;
-// Generate search suggestions based on existing listings;
+
+/ Generate search suggestions based on existing listings;
 export const generateSearchSuggestions = (): SearchSuggestion[] => {
   const suggestions = [;
     'AI models',
@@ -604,66 +600,63 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
     'Edge computing',
     'High performance storage',
   ];
-;
+
   // Convert strings to SearchSuggestion objects;
   return suggestions.map (text => ({
     text,
     type: 'product', // Use a valid type from the updated SearchSuggestion interface;
-  }));}  ];
-;
+  });}  ];
+
   // Convert strings to SearchSuggestion objects;
   return suggestions.map (text => ({
     text;
     type: 'product' // Use a valid type from the updated SearchSuggestion interface;
-  }));
-}
-;
-// Generate filter options for sidebar;
+  });
+
+/ Generate filter options for sidebar;
 export const generateFilterOptions = (): FilterOptions => {
   // Extract unique categories, locations, and availability options from listings;
   const product_types = [;
-    ...new Set (MARKETPLACE_LISTINGS.map (listing => listing.category)),
+    ...new Set (MARKETPLACE_LISTINGS.map (listing => listing.category),
   ].sort ();
   const locations = [;
     ...new Set (
-      MARKETPLACE_LISTINGS.map (listing => listing.location).filter (Boolean)),
+      MARKETPLACE_LISTINGS.map (listing => listing.location).filter (Boolean),
   ].sort ();
   const availability = [;
     ...new Set (
-      MARKETPLACE_LISTINGS.map (listing => listing.availability).filter (Boolean)),
+      MARKETPLACE_LISTINGS.map (listing => listing.availability).filter (Boolean),
   ].sort ();
-;
+
     product_types: product_types.map (type => ({
       label: type,
       value: type,
-    })),
+    }),
     locations: locations.map (location => ({
       label: location,
       value: location,
-    })),
+    }),
     availability_options: availability.map (item => ({
       label: item,
       value: item,
-    })),
+    }),
     rating_options: [1, 2, 3, 4, 5], // Add rating options;
   }
-}
-;
+
 export const MAX_PRICE = Math.max (
-  ...MARKETPLACE_LISTINGS.map (listing => listing.price || 0));
+  ...MARKETPLACE_LISTINGS.map (listing => listing.price || 0);
 export const MIN_PRICE = Math.min (
-  ...MARKETPLACE_LISTINGS.map (listing => listing.price || 0));
+  ...MARKETPLACE_LISTINGS.map (listing => listing.price || 0);
   return {
   product_types: product_types.map (type => ({
   label: type, value: type;
-}) );
+);
 locations: locations.map (location => ({
   label: location, value: location;
-}) );
+);
 availability_options: availability.map (item => ({
   label: item, value: item;
-}) );
+);
 rating_options: [1, 2, 3, 4, 5] // Add rating options;
-}export const MAX_PRICE = Math.max (...MARKETPLACE_LISTINGS.map (listing => listing.price || 0));
-export const MIN_PRICE = Math.min (...MARKETPLACE_LISTINGS.map (listing => listing.price || 0));
-;
+export const MAX_PRICE = Math.max (...MARKETPLACE_LISTINGS.map (listing => listing.price || 0);
+export const MIN_PRICE = Math.min (...MARKETPLACE_LISTINGS.map (listing => listing.price || 0);

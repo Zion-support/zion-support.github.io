@@ -1,12 +1,10 @@
-// Cache.test utility
+/ Cache.test utility
 export const Cache.test = () => {
   // Implementation here
   return null;
-};
 
 interface Cache.testProps {
   // Add props here as needed
-}
 
 export default function Cache.test({ }: Cache.testProps) {
   return (
@@ -15,7 +13,3 @@ export default function Cache.test({ }: Cache.testProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}
-}
-}
-}

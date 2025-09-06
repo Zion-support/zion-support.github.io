@@ -14,7 +14,7 @@ interface MilestoneSuggestionsProps {
   projectType: string
 
   onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void
-}
+
 export function MilestoneSuggestions({
   projectName;
   scopeSummary;
@@ -22,7 +22,7 @@ export function MilestoneSuggestions({
   endDate;
   projectType;
   onMilestonesGenerated;
-}: MilestoneSuggestionsProps) {;
+: MilestoneSuggestionsProps) {;
   const { generateMilestones, generatedMilestones, isGenerating } = useMilestoneGenerator();
   const [showSuggestions, setShowSuggestions] = useState(false);
 
@@ -39,7 +39,6 @@ export function MilestoneSuggestions({
       if (onMilestonesGenerated) {;
         onMilestonesGenerated(milestones);
       }
-    }
   }
   const formatDate = (dateString: string) => {
     try {
@@ -47,7 +46,6 @@ export function MilestoneSuggestions({
     } catch (error) {
       return dateString
     }
-  }
 
   return (
     <div className="space-y-4">;
@@ -81,7 +79,7 @@ export function MilestoneSuggestions({
           </CardHeader>
           <CardContent>
             <div className="space-y-3">
-              {generatedMilestones.map((milestone, index) => (
+              {generatedMilestones.map(milestone, index) => (
                 <div key={index} className="p-3 border rounded-lg bg-muted/10">
                   <div className="flex items-center justify-between mb-1">
                     <div className="font-medium flex items-center">
@@ -99,7 +97,7 @@ export function MilestoneSuggestions({
                     <span>Estimated: {milestone.estimatedHours} hours</span>
                   </div>
                 </div>
-              ))}
+              )}
               <div className="flex items-center justify-center mt-4 text-sm text-muted-foreground">
                 <Check className="h-4 w-4 mr-1 text-green-500" />
                 These milestones will be added to your contract
@@ -110,7 +108,7 @@ export function MilestoneSuggestions({
       )}
     </div>
   )
-}
+
                 These milestones will be added to your contract;
               </div>;
             </div>;
@@ -119,7 +117,6 @@ export function MilestoneSuggestions({
       )}
     </div>;
   );
-}
+
         </Card>)}
     </div>);
-}

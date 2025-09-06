@@ -5,7 +5,7 @@ export default function CoachWidget() {
   const [reply, setReply] = useState<string | null>(null),
   const [loading, setLoading] = useState(false),
   async function ask() {
-    if (!input.trim()) return,
+    if (!input.trim() return,
     setLoading(true),
     try {
       const resp = await fetch('/api/learn/coach', {
@@ -18,7 +18,6 @@ export default function CoachWidget() {
     } finally {
       setLoading(false)
     }
-  }
 
   return (
     <div className=&quot;border rounded p-3&quot;>

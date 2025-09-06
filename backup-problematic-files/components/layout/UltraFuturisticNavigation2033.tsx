@@ -6,13 +6,13 @@ import {;
   Cpu, Target, Microscope, Shield, Zap, Sparkles,;
   Menu, X, Search, ChevronDown, Home, Briefcase,;
   DollarSign, BookOpen, Users, MessageCircle;
-} from 'lucide-react',;
+ from 'lucide-react',;
 const contactInfo = {;
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup.com',;
   address: '364 E Main St STE 1008 Middletown DE 19709',;
   website: 'https://ziontechgroup.com';
-},;
+,;
 const serviceCategories = [;
   {;
     title: ' Revolutionary AI',;
@@ -59,7 +59,7 @@ const serviceCategories = [;
       { name: 'Virtual Event Holograms', href: '/virtual-event-hologram-platform', description: 'Holographic events', price: '$2,499/month' }
     ];
   }
-],;
+,;
 const quickLinks = [;
   { name: 'Services Overview', href: '/enhanced-services-overview', icon: Globe, color: 'from-cyan-500 to-blue-600' },;
   { name: 'AI Services', href: '/ai-services', icon: Brain, color: 'from-violet-500 to-purple-600' },;
@@ -67,7 +67,7 @@ const quickLinks = [;
   { name: 'Space Tech', href: '/space-technology', icon: Rocket, color: 'from-teal-500 to-emerald-600' },;
   { name: 'Enterprise IT', href: '/enterprise-it', icon: Cpu, color: 'from-blue-500 to-cyan-600' },;
   { name: 'Micro SAAS', href: '/enhanced-micro-saas-showcase', icon: Target, color: 'from-green-500 to-yellow-600' }
-],;
+,;
 export default function UltraFuturisticNavigation2033() {;
   const [isOpen, setIsOpen] = useState(false),;
   const [activeCategory, setActiveCategory] = useState<string | null>(null),;
@@ -75,9 +75,9 @@ export default function UltraFuturisticNavigation2033() {;
   const toggleMenu = () => setIsOpen(!isOpen),;
   const closeMenu = () => setIsOpen(false),;
   // Close menu on escape key;
-  useEffect(() => {;
+  useEffect() => {;
     const handleEscape = (e: KeyboardEvent) => {;
-      if (e.key === 'Escape') closeMenu();
+      if (e.key = = 'Escape') closeMenu();
     },;
     document.addEventListener('keydown', handleEscape);
     return () => document.removeEventListener('keydown', handleEscape);
@@ -119,8 +119,8 @@ export default function UltraFuturisticNavigation2033() {;
             {/* Logo */}
             <motion.div 
               className="flex items-center space-x-3"
-              whileHover={{ scale: 1.05 }}
-              transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              whileHover={ scale: 1.05 }
+              transition={ type: "spring", stiffness: 400, damping: 10 }
             >
               <Link href="/" className="flex items-center space-x-3">
                 <div className="relative">
@@ -155,18 +155,18 @@ export default function UltraFuturisticNavigation2033() {;
 
                 {/* Mega Menu */}
                 <AnimatePresence>;
-                  {activeCategory === 'services' && (;
+                  {activeCategory = = 'services' && (;
                     <motion.div;
-                      initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                      animate={{ opacity: 1, y: 0, scale: 1 }}
-                      exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                      transition={{ duration: 0.2 }}
+                      initial={ opacity: 0, y: 10, scale: 0.95 }
+                      animate={ opacity: 1, y: 0, scale: 1 }
+                      exit={ opacity: 0, y: 10, scale: 0.95 }
+                      transition={ duration: 0.2 }
                       onMouseEnter={() => setActiveCategory('services')}
                       onMouseLeave={() => setActiveCategory(null)}
                       className="absolute top-full left-0 w-screen max-w-6xl bg-gray-900/95 backdrop-blur-xl border border-purple-500/20 rounded-2xl shadow-2xl p-8 -ml-4"
                     >
                       <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-                        {serviceCategories.map((category) => (
+                        {serviceCategories.map(category) => (
                           <div key={category.title} className="space-y-4">
                             <div className="flex items-center space-x-3">
                               <div className={`w-10 h-10 rounded-lg bg-gradient-to-r ${category.color} flex items-center justify-center`}>
@@ -175,7 +175,7 @@ export default function UltraFuturisticNavigation2033() {;
                               <h3 className="text-lg font-semibold text-white">{category.title}</h3>
                             </div>
                             <div className="space-y-3">
-                              {category.services.map((service) => (
+                              {category.services.map(service) => (
                                 <Link
                                   key={service.name}
                                   href={service.href}
@@ -193,17 +193,17 @@ export default function UltraFuturisticNavigation2033() {;
                                     <p className="text-sm text-gray-400">{service.description}</p>
                                   </div>
                                 </a>
-                              ))}
+                              )}
                             </div>;
                           </div>;
-                        ))}
+                        )}
                       </div>;
                     </motion.div>;
                   )}
                 </AnimatePresence>;
               </div>;
               {/* Quick Links */}
-              {quickLinks.map((link) => (;
+              {quickLinks.map(link) => (;
                 <Link;
                   key={link.name}
                   href={link.href}
@@ -211,12 +211,12 @@ export default function UltraFuturisticNavigation2033() {;
                 >
                   {link.name}
                 </a>
-              ))}
-;
+              )}
+
               {/* Contact Button */}
               <motion.div;
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={ scale: 1.05 }
+                whileTap={ scale: 0.95 }
               >
                 <Link
                   href="/contact"
@@ -243,21 +243,21 @@ export default function UltraFuturisticNavigation2033() {;
         <AnimatePresence>;
           {isOpen && (;
             <motion.div;
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3 }}
+              initial={ opacity: 0, height: 0 }
+              animate={ opacity: 1, height: 'auto' }
+              exit={ opacity: 0, height: 0 }
+              transition={ duration: 0.3 }
               className="lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-purple-500/20"
             >
               <div className="px-4 py-6 space-y-6">
                 {/* Mobile Services */}
                 <div className="space-y-4">
                   <h3 className="text-lg font-semibold text-white">Services</h3>
-                  {serviceCategories.map((category) => (
+                  {serviceCategories.map(category) => (
                     <div key={category.title} className="ml-4 space-y-2">
                       <h4 className="font-medium text-purple-300">{category.title}</h4>
                       <div className="ml-4 space-y-1">
-                        {category.services.map((service) => (
+                        {category.services.map(service) => (
                           <Link
                             key={service.name}
                             href={service.href}
@@ -266,16 +266,16 @@ export default function UltraFuturisticNavigation2033() {;
                           >
                             {service.name}
                           </a>
-                        ))}
+                        )}
                       </div>;
                     </div>;
-                  ))}
+                  )}
                 </div>;
                 {/* Mobile Quick Links */}
                 <div className="space-y-4">
                   <h3 className="text-lg font-semibold text-white">Quick Links</h3>
                   <div className="grid grid-cols-2 gap-2">
-                    {quickLinks.map((link) => (
+                    {quickLinks.map(link) => (
                       <Link
                         key={link.name}
                         href={link.href}
@@ -284,7 +284,7 @@ export default function UltraFuturisticNavigation2033() {;
                       >
                         {link.name}
                       </a>
-                    ))}
+                    )}
                   </div>;
                 </div>;
                 {/* Mobile Contact Button */}
@@ -304,5 +304,3 @@ export default function UltraFuturisticNavigation2033() {;
       </nav>;
     </>;
   );
-}
-;

@@ -6,5 +6,3 @@ export function ConversationDetailView() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

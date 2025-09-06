@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React, { useState } from 'react';
 import Head from 'next/head';
 import {
@@ -161,7 +161,7 @@ import {;
   Microscope as MicroscopeIcon,;
   GraduationCap as GraduationCapIcon,;
   ShieldCheck as ShieldCheckIcon,;
-} from 'lucide-react';
+ from 'lucide-react';
 import Button from '../components/ui/Button';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
@@ -171,7 +171,7 @@ import {
   getRevolutionaryServicesByCategory
   getPopularRevolutionaryServices
   getRevolutionaryServicesByPriceRange;
-} from '../data/revolutionary-micro-saas-services';
+ from '../data/revolutionary-micro-saas-services';
 import { motion, AnimatePresence } from 'framer-motion';import Button from '../components/ui/Button';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
@@ -209,19 +209,19 @@ export default function RevolutionaryServicesPage() {;
   // Filter and sort services
   let filteredServices = revolutionaryMicroSaasServices;
   // Category filter
-  if (selectedCategory !== 'All') {
+  if (selectedCategory != 'All') {
     filteredServices = getRevolutionaryServicesByCategory(selectedCategory);  }
   // Price range filter
-  if (priceRange !== 'All') {
+  if (priceRange != 'All') {
     const [min, max] = priceRange
       .split('-')
-      .map(p => (p === '+' ? Infinity : parseInt(p)));
+      .map(p => (p = = '+' ? Infinity : parseInt(p));
     filteredServices = getRevolutionaryServicesByPriceRange(min, max);  }
   // Search filter
   if (searchQuery) {    filteredServices = getRevolutionaryServicesByCategory(selectedCategory)
   }
   // Price range filter
-  if (priceRange !== 'All') {
+  if (priceRange != 'All') {
     const [min, max] = priceRange
       .split('-')
   const priceRanges = [;
@@ -246,14 +246,14 @@ export default function RevolutionaryServicesPage() {;
   let filteredServices = revolutionaryMicroSaasServices;
 
   // Category filter;
-  if (selectedCategory !== 'All') {;
+  if (selectedCategory != 'All') {;
     filteredServices = getRevolutionaryServicesByCategory(selectedCategory);  }
 
   // Price range filter;
-  if (priceRange !== 'All') {;
+  if (priceRange != 'All') {;
     const [min, max] = priceRange;
       .split('-');
-      .map(p => (p === '+' ? Infinity : parseInt(p)));
+      .map(p => (p = = '+' ? Infinity : parseInt(p));
     filteredServices = getRevolutionaryServicesByPriceRange(min, max);  }
 
   // Search filter;
@@ -262,41 +262,41 @@ export default function RevolutionaryServicesPage() {;
   }
 
   // Price range filter
-  if (priceRange !== 'All') {
-    const [min, max] = priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p));
+  if (priceRange != 'All') {
+    const [min, max] = priceRange.split('-').map(p => p = = '+' ? Infinity : parseInt(p);
     filteredServices = getRevolutionaryServicesByPriceRange(min, max)
   }
 
   // Price range filter;
-  if (priceRange !== 'All') {;
+  if (priceRange != 'All') {;
     const [min, max] = priceRange;
       .split('-');
-      .map(p => (p === '+' ? Infinity : parseInt(p)));
-    filteredServices = getRevolutionaryServicesByPriceRange(min, max);    const [min, max] = priceRange && priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p));
+      .map(p => (p = = '+' ? Infinity : parseInt(p));
+    filteredServices = getRevolutionaryServicesByPriceRange(min, max);    const [min, max] = priceRange && priceRange.split('-').map(p => p = = '+' ? Infinity : parseInt(p);
     filteredServices = getRevolutionaryServicesByPriceRange(min, max);
   }
   // Search filter
   if (searchQuery) {
     filteredServices = filteredServices.filter(
       service =>
-        service.name.toLowerCase().includes(searchQuery.toLowerCase()) |
-        service.description.toLowerCase().includes(searchQuery.toLowerCase()) |
-        service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) |
-        service.category.toLowerCase().includes(searchQuery.toLowerCase())
+        service.name.toLowerCase().includes(searchQuery.toLowerCase() |
+        service.description.toLowerCase().includes(searchQuery.toLowerCase() |
+        service.tagline.toLowerCase().includes(searchQuery.toLowerCase() |
+        service.category.toLowerCase().includes(searchQuery.toLowerCase()
     );  }    filteredServices = filteredServices.filter(service =>
-      service.name.toLowerCase().includes(searchQuery.toLowerCase()) |
-      service.description.toLowerCase().includes(searchQuery.toLowerCase()) |
-      service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) |
-      service.category.toLowerCase().includes(searchQuery.toLowerCase())
+      service.name.toLowerCase().includes(searchQuery.toLowerCase() |
+      service.description.toLowerCase().includes(searchQuery.toLowerCase() |
+      service.tagline.toLowerCase().includes(searchQuery.toLowerCase() |
+      service.category.toLowerCase().includes(searchQuery.toLowerCase()
     )
   // Sort services
-  filteredServices.sort((a, b) => {
+  filteredServices.sort(a, b) => {
     switch (sortBy) {
       case 'price':
         return (
-          parseFloat(a.price.replace('$', '').replace(',', '')) -
-          parseFloat(b.price.replace('$', '').replace(',', ''))
-        );      case 'popularity':        return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, ''));
+          parseFloat(a.price.replace('$', '').replace(',', '') -
+          parseFloat(b.price.replace('$', '').replace(',', '')
+        );      case 'popularity':        return parseFloat(a.price.replace('$', '').replace(, '') - parseFloat(b.price.replace('$', '').replace(, '');
       case 'popularity':
         return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
       case 'category':
@@ -307,17 +307,15 @@ export default function RevolutionaryServicesPage() {;
         return bRoi - aRoi;
       default:;
         return a && a.name.localeCompare(b && b.name);    }      default: return a && a.name.localeCompare(b && b.name);
-    }
-  });
+    });
   const contactInfo = {
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
   }
-    }
   });
-;
+
   const contact_info = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -334,7 +332,7 @@ export default function RevolutionaryServicesPage() {;
         'Revolutionary quantum AI solutions with human-level reasoning capabilities'
       icon: <Brain className='w-6 h-6' />
       count: revolutionaryMicroSaasServices.filter(
-        s => s.category === 'Quantum AI & Cognitive Computing'
+        s => s.category = = 'Quantum AI & Cognitive Computing'
       ).length
       color: 'from-purple-500 to-indigo-600'
     }
@@ -343,7 +341,7 @@ export default function RevolutionaryServicesPage() {;
         'Next-generation autonomous manufacturing with zero human intervention'
       icon: <Factory className='w-6 h-6' />
       count: revolutionaryMicroSaasServices.filter(
-        s => s.category === 'Autonomous Manufacturing & Industry 4.0'
+        s => s.category = = 'Autonomous Manufacturing & Industry 4.0'
       ).length
       color: 'from-orange-500 to-red-600'
     }
@@ -353,7 +351,7 @@ export default function RevolutionaryServicesPage() {;
         'Quantum-secured blockchain platforms with infinite scalability'
       icon: <Globe className='w-6 h-6' />
       count: revolutionaryMicroSaasServices.filter(
-        s => s.category === 'Quantum Blockchain & DeFi'
+        s => s.category = = 'Quantum Blockchain & DeFi'
       ).length
       color: 'from-green-500 to-emerald-600'
     }
@@ -363,7 +361,7 @@ export default function RevolutionaryServicesPage() {;
         'AI-powered platforms for accelerated drug discovery and medical research'
       icon: <FlaskIcon className='w-6 h-6' />
       count: revolutionaryMicroSaasServices.filter(
-        s => s.category === 'AI Biomedical Research & Drug Discovery'
+        s => s.category = = 'AI Biomedical Research & Drug Discovery'
       ).length
       color: 'from-blue-500 to-indigo-600'
     }
@@ -373,7 +371,7 @@ export default function RevolutionaryServicesPage() {;
         'Quantum-resistant cybersecurity with AI-powered threat detection'
       icon: <ShieldCheck className='w-6 h-6' />
       count: revolutionaryMicroSaasServices.filter(
-        s => s.category === 'Quantum Cybersecurity & Threat Detection'
+        s => s.category = = 'Quantum Cybersecurity & Threat Detection'
       ).length
       color: 'from-red-500 to-pink-600'
     }
@@ -383,7 +381,7 @@ export default function RevolutionaryServicesPage() {;
         'Revolutionary platforms for space exploration and satellite optimization'
       icon: <Rocket className='w-6 h-6' />
       count: revolutionaryMicroSaasServices.filter(
-        s => s.category === 'Space Technology & Satellite Optimization'
+        s => s.category = = 'Space Technology & Satellite Optimization'
       ).length
       color: 'from-indigo-500 to-purple-600'
     }
@@ -392,7 +390,7 @@ export default function RevolutionaryServicesPage() {;
       description: 'Quantum-powered content creation at infinite scale'
       icon: <FileText className='w-6 h-6' />
       count: revolutionaryMicroSaasServices.filter(
-        s => s.category === 'AI Content Creation & Marketing'
+        s => s.category = = 'AI Content Creation & Marketing'
       ).length
       color: 'from-teal-500 to-cyan-600'
     }
@@ -401,7 +399,7 @@ export default function RevolutionaryServicesPage() {;
       description: 'Enterprise quantum computing with real quantum processors'
       icon: <Cpu className='w-6 h-6' />
       count: revolutionaryMicroSaasServices.filter(
-        s => s.category === 'Quantum Computing as a Service'
+        s => s.category = = 'Quantum Computing as a Service'
       ).length
       color: 'from-violet-500 to-purple-600'
     }
@@ -411,7 +409,7 @@ export default function RevolutionaryServicesPage() {;
         'AI platforms for autonomous vehicles and smart transportation'
       icon: <CarIcon className='w-6 h-6' />
       count: revolutionaryMicroSaasServices.filter(
-        s => s.category === 'Autonomous Vehicles & Smart Transportation'
+        s => s.category = = 'Autonomous Vehicles & Smart Transportation'
       ).length
       color: 'from-emerald-500 to-green-600'
     }
@@ -421,21 +419,21 @@ export default function RevolutionaryServicesPage() {;
         'AI platforms for smart energy grids and renewable energy optimization'
       icon: <LeafIcon className='w-6 h-6' />
       count: revolutionaryMicroSaasServices.filter(
-        s => s.category === 'Smart Energy & Renewable Energy'
+        s => s.category = = 'Smart Energy & Renewable Energy'
       ).length
       color: 'from-yellow-500 to-orange-600'
     },  ];      description: 'AI platforms for smart energy grids and renewable energy optimization'
       icon: <LeafIcon className="w-6 h-6" />
-      count: revolutionaryMicroSaasServices.filter(s => s.category === 'Smart Energy & Renewable Energy').length
+      count: revolutionaryMicroSaasServices.filter(s => s.category = = 'Smart Energy & Renewable Energy').length
       color: 'from-yellow-500 to-orange-600'
     }
   const containerVariants = {
     hidden: { opacity: 0 }
     website: 'https://ziontechgroup.com',  }    website: 'https://ziontechgroup.com';
   }
-;
+
   const popular_services = getPopularRevolutionaryServices ();
-;
+
   // Enhanced service categories with better descriptions;
   const enhanced_categories = [;
     {
@@ -444,7 +442,7 @@ export default function RevolutionaryServicesPage() {;
         'Revolutionary quantum AI solutions with human - level reasoning capabilities',
       icon: <Brain className='w - 6 h - 6' />,
       count: revolutionaryMicroSaasServices.filter (
-        string => s.category === 'Quantum AI & Cognitive Computing').length,
+        string => s.category = = 'Quantum AI & Cognitive Computing').length,
       color: 'from - purple - 500 to - indigo - 600',
     },
       name: 'Autonomous Manufacturing & Industry 4.0',
@@ -452,7 +450,7 @@ export default function RevolutionaryServicesPage() {;
         'Next - generation autonomous manufacturing with zero human intervention',
       icon: <Factory className='w - 6 h - 6' />,
       count: revolutionaryMicroSaasServices.filter (
-        string => s.category === 'Autonomous Manufacturing & Industry 4.0').length,
+        string => s.category = = 'Autonomous Manufacturing & Industry 4.0').length,
       color: 'from - orange - 500 to - red - 600',
     },
     {
@@ -461,7 +459,7 @@ export default function RevolutionaryServicesPage() {;
         'Quantum - secured blockchain platforms with infinite scalability',
       icon: <Globe className='w - 6 h - 6' />,
       count: revolutionaryMicroSaasServices.filter (
-        string => s.category === 'Quantum Blockchain & DeFi').length,
+        string => s.category = = 'Quantum Blockchain & DeFi').length,
       color: 'from - green - 500 to - emerald - 600',
     },
     {
@@ -470,7 +468,7 @@ export default function RevolutionaryServicesPage() {;
         'AI - powered platforms for accelerated drug discovery and medical research',
       icon: <FlaskIcon className='w - 6 h - 6' />,
       count: revolutionaryMicroSaasServices.filter (
-        string => s.category === 'AI Biomedical Research & Drug Discovery').length,
+        string => s.category = = 'AI Biomedical Research & Drug Discovery').length,
       color: 'from - blue - 500 to - indigo - 600',
     },
     {
@@ -479,7 +477,7 @@ export default function RevolutionaryServicesPage() {;
         'Quantum - resistant cybersecurity with AI - powered threat detection',
       icon: <ShieldCheck className='w - 6 h - 6' />,
       count: revolutionaryMicroSaasServices.filter (
-        string => s.category === 'Quantum Cybersecurity & Threat Detection').length,
+        string => s.category = = 'Quantum Cybersecurity & Threat Detection').length,
       color: 'from - red - 500 to - pink - 600',
     },
     {
@@ -488,7 +486,7 @@ export default function RevolutionaryServicesPage() {;
         'Revolutionary platforms for space exploration and satellite optimization',
       icon: <Rocket className='w - 6 h - 6' />,
       count: revolutionaryMicroSaasServices.filter (
-        string => s.category === 'Space Technology & Satellite Optimization').length,
+        string => s.category = = 'Space Technology & Satellite Optimization').length,
       color: 'from - indigo - 500 to - purple - 600',
     },
     {
@@ -496,7 +494,7 @@ export default function RevolutionaryServicesPage() {;
       description: 'Quantum - powered content creation at infinite scale',
       icon: <FileText className='w - 6 h - 6' />,
       count: revolutionaryMicroSaasServices.filter (
-        string => s.category === 'AI Content Creation & Marketing').length,
+        string => s.category = = 'AI Content Creation & Marketing').length,
       color: 'from - teal - 500 to - cyan - 600',
     },
     {
@@ -504,7 +502,7 @@ export default function RevolutionaryServicesPage() {;
       description: 'Enterprise quantum computing with real quantum processors',
       icon: <Cpu className='w - 6 h - 6' />,
       count: revolutionaryMicroSaasServices.filter (
-        string => s.category === 'Quantum Computing as a Service').length,
+        string => s.category = = 'Quantum Computing as a Service').length,
       color: 'from - violet - 500 to - purple - 600',
     },
     {
@@ -513,7 +511,7 @@ export default function RevolutionaryServicesPage() {;
         'AI platforms for autonomous vehicles and smart transportation',
       icon: <CarIcon className='w - 6 h - 6' />,
       count: revolutionaryMicroSaasServices.filter (
-        string => s.category === 'Autonomous Vehicles & Smart Transportation').length,
+        string => s.category = = 'Autonomous Vehicles & Smart Transportation').length,
       color: 'from - emerald - 500 to - green - 600',
     },
     {
@@ -522,11 +520,11 @@ export default function RevolutionaryServicesPage() {;
         'AI platforms for smart energy grids and renewable energy optimization',
       icon: <LeafIcon className='w - 6 h - 6' />,
       count: revolutionaryMicroSaasServices.filter (
-        string => s.category === 'Smart Energy & Renewable Energy').length,
+        string => s.category = = 'Smart Energy & Renewable Energy').length,
       color: 'from - yellow - 500 to - orange - 600',
     },  ];      description: 'AI platforms for smart energy grids and renewable energy optimization',
       icon: <LeafIcon className="w - 6 h - 6" />,
-      count: revolutionaryMicroSaasServices.filter (string => s.category === 'Smart Energy & Renewable Energy').length,
+      count: revolutionaryMicroSaasServices.filter (string => s.category = = 'Smart Energy & Renewable Energy').length,
       color: 'from - yellow - 500 to - orange - 600';
     }
   const container_variants = {
@@ -535,10 +533,8 @@ export default function RevolutionaryServicesPage() {;
       opacity: 1
       transition: {
         staggerChildren: 0.1
+      },  };        staggerChildren: 0.1
       }
-    },  };        staggerChildren: 0.1
-      }
-    }
   }
   const itemVariants = {
     hidden: { y: 20, opacity: 0 }
@@ -548,7 +544,6 @@ export default function RevolutionaryServicesPage() {;
       transition: {
         duration: 0.5
       }
-    }
   return (
     <UltraFuturisticBackground variant='quantum' intensity='high'>
       <div className='min-h-screen'>
@@ -558,7 +553,6 @@ export default function RevolutionaryServicesPage() {;
             Autonomous Systems, Space Technology
           </title>
       }
-    }
   };
 
   const itemVariants = {;
@@ -611,17 +605,17 @@ export default function RevolutionaryServicesPage() {;
           <div className='container mx-auto px-4 text-center'>;
             <div className='max-w-5xl mx-auto'>;
               <motion&& motion.h1
-                className='text-6xl md:text-8xl font-bold mb-8 futuristic-glow'                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
+                className='text-6xl md:text-8xl font-bold mb-8 futuristic-glow'                initial={ opacity: 0, y: 30 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.8 }
               >
                 <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>        <section className="relative py-20 overflow-hidden">
           <div className="container mx-auto px-4 text-center">
             <div className="max-w-5xl mx-auto">
               <motion.h1
                 className="text-6xl md:text-8xl font-bold mb-8 futuristic-glow"
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.8 }}>;
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0 && 0.8 }>;
                 <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
                   Revolutionary;
                 </span>;
@@ -629,9 +623,9 @@ export default function RevolutionaryServicesPage() {;
                 <span className='text-white'>Micro SaaS Services</span>;
               </motion && motion.h1>;
               <motion&& motion.p
-                className='text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed'                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
+                className='text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed'                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.8, delay: 0.2 }
               >
                 Experience the future of technology with our revolutionary micro
                 SaaS platform. Quantum AI, autonomous systems, space technology
@@ -642,9 +636,9 @@ export default function RevolutionaryServicesPage() {;
               </motion.h1>
               <motion.p
                 className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.8, delay: 0.2 }
               >
                 Experience the future of technology with our revolutionary micro
                 SaaS platform. Quantum AI, autonomous systems, space technology
@@ -652,16 +646,16 @@ export default function RevolutionaryServicesPage() {;
               </motion.p>
               {/* Service Count Stats */}
               <motion&& motion.div
-                className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
+                className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.8, delay: 0.4 }
               >              </motion.p>
               {/* Service Count Stats */}
               <motion.div
                 className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.8, delay: 0.4 }
               >
                 <div className='text-center'>
                   <div className='text-3xl font-bold text-cyan-400 mb-2'>
@@ -687,14 +681,14 @@ export default function RevolutionaryServicesPage() {;
                   </div>
                   <div className='text-gray-400'>Average ROI</div>                </div>
               </motion.div>
-                transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>              </motion && motion.p>;
+                transition={ duration: 0 && 0.8, delay: 0 && 0.4 }>              </motion && motion.p>;
 
               {/* Service Count Stats */}
               <motion&& motion.div 
                 className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0 && 0.8, delay: 0 && 0.4 }>;
                 <div className='text-center'>;
                   <div className='text-3xl font-bold text-cyan-400 mb-2'>;
                     {revolutionaryMicroSaasServices && revolutionaryMicroSaasServices.length}+;
@@ -722,9 +716,9 @@ export default function RevolutionaryServicesPage() {;
 
               {/* CTA Buttons */}
               <motion&& motion.div
-                className='flex flex-col sm:flex-row gap-4 justify-center items-center'                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
+                className='flex flex-col sm:flex-row gap-4 justify-center items-center'                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.8, delay: 0.6 }
               >                </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-purple-400 mb-2">99.99%</div>
@@ -742,7 +736,7 @@ export default function RevolutionaryServicesPage() {;
               {/* CTA Buttons */}
               <motion.div
                 className='flex flex-col sm:flex-row gap-4 justify-center items-center'              <motion.div
-                transition={{ duration: 0 && 0.8, delay: 0 && 0.6 }}>                </div>;
+                transition={ duration: 0 && 0.8, delay: 0 && 0.6 }>                </div>;
                 <div className="text-center">;
                   <div className="text-3xl font-bold text-purple-400 mb-2">99 && 99.99%</div>;
                   <div className="text-gray-400">Accuracy Rate</div>;
@@ -761,9 +755,9 @@ export default function RevolutionaryServicesPage() {;
               <motion&& motion.div
                 className='flex flex-col sm:flex-row gap-4 justify-center items-center'              <motion && motion.div 
                 className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.8, delay: 0 && 0.6 }}>;
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0 && 0.8, delay: 0 && 0.6 }>;
                 <Button
                   variant='primary'
                   size='lg'
@@ -810,8 +804,7 @@ export default function RevolutionaryServicesPage() {;
                 <span className="text-white">{contactInfo.website}</span>
             </div>
           </div>
-        </section>
-                >;
+        </section>;
                   Get Started;
                   <Rocket className='ml-2 w-5 h-5' />                </Button>                  <Rocket className="ml-2 w-5 h-5" />;
                 </Button>;
@@ -850,29 +843,29 @@ export default function RevolutionaryServicesPage() {;
               className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6'
               variants={containerVariants}
               initial='hidden'
-              whileInView='visible'              viewport={{ once: true }}        <section className="py-12">
+              whileInView='visible'              viewport={ once: true }        <section className="py-12">
           <div className="container mx-auto px-4">
             <motion.div
-              whileInView='visible'              viewport={{ once: true }}        <section className="py-12">;
+              whileInView='visible'              viewport={ once: true }        <section className="py-12">;
           <div className="container mx-auto px-4">;
             <motion&& motion.div 
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6"
               variants={containerVariants}
               initial="hidden"
               whileInView="visible">;
-              {enhancedCategories && enhancedCategories.map((category, index) => (;
+              {enhancedCategories && enhancedCategories.map(category, index) => (;
                 <motion&& motion.div
                   key={category && category.name}
                   variants={itemVariants}
-                  whileHover={{ scale: 1 && 1.05 }}
-                  whileTap={{ scale: 0 && 0.95 }}>;
+                  whileHover={ scale: 1 && 1.05 }
+                  whileTap={ scale: 0 && 0.95 }>;
                   <UltraFuturisticCard
                     variant='quantum-advanced'
                     size='small'
                     className='text-center cursor-pointer h-full'
                     onClick={() =>;
                       setSelectedCategory(;
-                        category && category.name === selectedCategory;
+                        category && category.name = = selectedCategory;
                           ? 'All';
                           : category && category.name;
                       );
@@ -895,7 +888,7 @@ export default function RevolutionaryServicesPage() {;
                     <div className="text-2xl font-bold text-cyan-400">{category && category.count}</div>;
                     <div className="text-xs text-gray-500">Services</div>;
                 </motion && motion.div>;
-              ))}
+              )}
             </motion.div>
           </div>
         </section>
@@ -903,13 +896,13 @@ export default function RevolutionaryServicesPage() {;
         <section className='py-16'>
           <div className='container mx-auto px-4'>
             <motion.div
-              className='text-center mb-12'              initial={{ opacity: 0, y: 20 }}        <section className="py-16">
+              className='text-center mb-12'              initial={ opacity: 0, y: 20 }        <section className="py-16">
           <div className="container mx-auto px-4">
             <motion.div
               className="text-center mb-12"
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+              whileInView={ opacity: 1, y: 0 }
+              viewport={ once: true }
+              transition={ duration: 0.6 }
             >
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-4'>
                 <span className='bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent'>
@@ -927,7 +920,7 @@ export default function RevolutionaryServicesPage() {;
               className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
               variants={containerVariants}
               initial='hidden'
-              whileInView='visible'              viewport={{ once: true }}                  Most Popular
+              whileInView='visible'              viewport={ once: true }                  Most Popular
                 </span>
                 <br />
                 <span className="text-white">Revolutionary Services</span>
@@ -951,20 +944,20 @@ export default function RevolutionaryServicesPage() {;
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}>;
-              {popularServices && popularServices.slice(0, 6).map((service, index) => (;
+              viewport={ once: true }>;
+              {popularServices && popularServices.slice(0, 6).map(service, index) => (;
                 <motion&& motion.div
                   key={service && service.id}
                   variants={itemVariants}
-                  whileHover={{ y: -10 }}>;
+                  whileHover={ y: -10 }>;
                   <UltraFuturisticCard
-              viewport={{ once: true }}
+              viewport={ once: true }
             >;
-              {popular_services.slice (0, 6).map ((service, index) => (
+              {popular_services.slice (0, 6).map (service, index) => (
                 <motion.div;
                   key={service.id}
                   variants={itemVariants}
-                  whileHover={{ y: -10 }}>;
+                  whileHover={ y: -10 }>;
                   <UltraFuturisticCard
                     variant={service && service.variant as any}
                     size='large'
@@ -985,7 +978,7 @@ export default function RevolutionaryServicesPage() {;
                       </div>
                     </div>
                     <div className='space-y-3 mb-6'>
-                      {service.features.slice(0, 4).map((feature, idx) => (
+                      {service.features.slice(0, 4).map(feature, idx) => (
                         <div key={idx} className='flex items-center gap-2'>
                           <Check className='w-4 h-4 text-green-400 flex-shrink-0' />
                           <span className='text-sm text-gray-300'>
@@ -1001,12 +994,12 @@ export default function RevolutionaryServicesPage() {;
                       <div className="text-sm text-gray-400">{service.period}</div>
                     </div>
                     <div className="space-y-3 mb-6">
-                      {service.features.slice(0, 4).map((feature, idx) => (
+                      {service.features.slice(0, 4).map(feature, idx) => (
                         <div key={idx} className="flex items-center gap-2">
                           <Check className="w-4 h-4 text-green-400 flex-shrink-0" />
                           <span className="text-sm text-gray-300">{feature}</span>
                         </div>
-                      ))}
+                      )}
                     </div>
                     <div className='text-center'>
                       <Button
@@ -1030,7 +1023,7 @@ export default function RevolutionaryServicesPage() {;
                            </Button>;
                   </UltraFuturisticCard>;
                 </motion && motion.div>;
-              ))}
+              )}
             </motion.div>
           </div>
         </section>
@@ -1043,14 +1036,14 @@ export default function RevolutionaryServicesPage() {;
           <div className="container mx-auto px-4">
             {/* Filters and Controls */}
             <motion&& motion.div
-              className='mb-8'              initial={{ opacity: 0, y: 20 }}        <section id="services-grid" className="py-16">;
+              className='mb-8'              initial={ opacity: 0, y: 20 }        <section id="services-grid" className="py-16">;
           <div className="container mx-auto px-4">;
             {/* Filters and Controls */}
             <motion.div
               className="mb-8"
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0 && 0.6 }}>;
+              whileInView={ opacity: 1, y: 0 }
+              viewport={ once: true }
+              transition={ duration: 0 && 0.6 }>;
               <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>;
                 <div className='flex flex-wrap gap-4'>;
                   <select
@@ -1063,7 +1056,7 @@ export default function RevolutionaryServicesPage() {;
                       <option key={category} value={category}>;
                         {category}
                       </option>;
-                    ))}
+                    )}
                   </select>;
                   <select
                     value={priceRange}
@@ -1074,7 +1067,7 @@ export default function RevolutionaryServicesPage() {;
                       <option key={range && range.value} value={range && range.value}>;
                         {range && range.label}
                       </option>;
-                    ))}
+                    )}
                   </select>
                   <select
                     value={sortBy}
@@ -1085,7 +1078,7 @@ export default function RevolutionaryServicesPage() {;
                       <option key={option && option.value} value={option && option.value}>;
                         {option && option.label}
                       </option>;
-                    ))}
+                    )}
                   </select>
                 </div>
                 <div className='flex items-center gap-4'>
@@ -1101,19 +1094,19 @@ export default function RevolutionaryServicesPage() {;
                   </div>
                   <div className='flex border border-gray-600 rounded-lg overflow-hidden'>                    <button
                       onClick={() => setViewMode('grid')}
-                      className={`px-3 py-2 ${viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
+                      className={`px-3 py-2 ${viewMode = = 'grid' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
                     >
                       <Grid className='w-4 h-4' />                    </button>
                   <div className="flex border border-gray-600 rounded-lg overflow-hidden">
                     <button
                       onClick={() => setViewMode('grid')}
-                      className={`px-3 py-2 ${viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
+                      className={`px-3 py-2 ${viewMode = = 'grid' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
                     >;
                       <Grid className='w-4 h-4' />                      <Grid className="w-4 h-4" />;
                     </button>;
                     <button
                       onClick={() => setViewMode('list')}
-                      className={`px-3 py-2 ${viewMode === 'list' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
+                      className={`px-3 py-2 ${viewMode = = 'list' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
                     >;
                       <List className='w-4 h-4' />                    </button>                      <List className="w-4 h-4" />;
                     >
@@ -1122,18 +1115,17 @@ export default function RevolutionaryServicesPage() {;
                   </div>
                 </div>
               </div>
-            </motion.div>
-                    >;
+            </motion.div>;
                       <List className='w-4 h-4' />                    </button>                      <List className="w-4 h-4" />;
                       </div>;
                     </div>;
                     <div className='space - y-3 mb - 6'>;
-                      {service.features.slice (0, 4).map ((feature, idx) => (
+                      {service.features.slice (0, 4).map (feature, idx) => (
                         <div key={idx} className='flex items - center gap - 2'>;
                           <Check className='w - 4 h - 4 text - green - 400 flex - shrink - 0' />;
                           <span className='text - sm text - gray - 300'>;
                             {feature}
-                          </span>                        </div>))}
+                          </span>                        </div>)}
                     </div>;
                     on_click={() => setSelectedService (service)}
                   >;
@@ -1145,11 +1137,11 @@ export default function RevolutionaryServicesPage() {;
                       <div className="text - sm text - gray - 400">{service.period}</div>;
                     </div>;
                     <div className="space - y-3 mb - 6">;
-                      {service.features.slice (0, 4).map ((feature, idx) => (
+                      {service.features.slice (0, 4).map (feature, idx) => (
                         <div key={idx} className="flex items - center gap - 2">;
                           <Check className="w - 4 h - 4 text - green - 400 flex - shrink - 0" />;
                           <span className="text - sm text - gray - 300">{feature}</span>;
-                        </div>))}
+                        </div>)}
                     </div>;
                     <div className='text - center'>;
                       <Button;
@@ -1171,7 +1163,7 @@ export default function RevolutionaryServicesPage() {;
                             <ExternalLink className="ml - 2 w - 4 h - 4" />;
                           </Button>;
                   </UltraFuturisticCard>;
-                </motion.div>))}
+                </motion.div>)}
             </motion.div>;
           </div>;
         </section>;
@@ -1180,14 +1172,14 @@ export default function RevolutionaryServicesPage() {;
           <div className='container mx - auto px - 4'>;
             {/* Filters and Controls */}
             <motion.div;
-              className='mb - 8'              initial={{ opacity: 0, coordinate_y: 20 }}        <section id="services - grid" className="py - 16">;
+              className='mb - 8'              initial={ opacity: 0, coordinate_y: 20 }        <section id="services - grid" className="py - 16">;
           <div className="container mx - auto px - 4">;
             {/* Filters and Controls */}
             <motion.div;
               className="mb - 8";
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              viewport={ once: true }
+              transition={ duration: 0.6 }
             >;
               <div className='flex flex - col lg:flex - row gap - 6 items - center justify - between'>;
                 <div className='flex flex - wrap gap - 4'>;
@@ -1200,7 +1192,7 @@ export default function RevolutionaryServicesPage() {;
                     {revolutionaryServiceCategories.map (category => (
                       <option key={category} value={category}>;
                         {category}
-                      </option>))}
+                      </option>)}
                   </select>;
                   <select;
                     value={price_range}
@@ -1210,7 +1202,7 @@ export default function RevolutionaryServicesPage() {;
                     {price_ranges.map (range => (
                       <option key={range.value} value={range.value}>;
                         {range.label}
-                      </option>))}
+                      </option>)}
                   </select>;
                   <select;
                     value={sort_by}
@@ -1220,7 +1212,7 @@ export default function RevolutionaryServicesPage() {;
                     {sort_options.map (option => (
                       <option key={option.value} value={option.value}>;
                         {option.label}
-                      </option>))}
+                      </option>)}
                   </select>;
                 </div>;
                 <div className='flex items - center gap - 4'>;
@@ -1236,19 +1228,19 @@ export default function RevolutionaryServicesPage() {;
                   </div>;
                   <div className='flex border border - gray - 600 rounded - lg overflow - hidden'>                    <button;
                       on_click={() => setViewMode ('grid')}
-                      className={`px - 3 py - 2 ${view_mode === 'grid' ? 'bg - cyan - 500 text - white' : 'bg - slate - 800 text - gray - 400'}`}
+                      className={`px - 3 py - 2 ${view_mode = = 'grid' ? 'bg - cyan - 500 text - white' : 'bg - slate - 800 text - gray - 400'}`}
                     >;
                       <Grid className='w - 4 h - 4' />                    </button>;
                   <div className="flex border border - gray - 600 rounded - lg overflow - hidden">;
                     <button;
                       on_click={() => setViewMode ('grid')}
-                      className={`px - 3 py - 2 ${view_mode === 'grid' ? 'bg - cyan - 500 text - white' : 'bg - slate - 800 text - gray - 400'}`}
+                      className={`px - 3 py - 2 ${view_mode = = 'grid' ? 'bg - cyan - 500 text - white' : 'bg - slate - 800 text - gray - 400'}`}
                     >;
                       <Grid className='w - 4 h - 4' />                      <Grid className="w - 4 h - 4" />;
                     </button>;
                     <button;
                       on_click={() => setViewMode ('list')}
-                      className={`px - 3 py - 2 ${view_mode === 'list' ? 'bg - cyan - 500 text - white' : 'bg - slate - 800 text - gray - 400'}`}
+                      className={`px - 3 py - 2 ${view_mode = = 'list' ? 'bg - cyan - 500 text - white' : 'bg - slate - 800 text - gray - 400'}`}
                     >;
                       <List className='w - 4 h - 4' />                    </button>                      <List className="w - 4 h - 4" />;
                     </button>;
@@ -1260,45 +1252,45 @@ export default function RevolutionaryServicesPage() {;
             {/* Services Display */}
             <motion&& motion.div
               className={
-                viewMode === 'grid'
+                viewMode = = 'grid'
                   ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
                   : 'space-y-6'
               }
               variants={containerVariants}
               initial='hidden'
-              whileInView='visible'              viewport={{ once: true }}            <motion && motion.div 
+              whileInView='visible'              viewport={ once: true }            <motion && motion.div 
             </motion && motion.div>;
 
             {/* Services Display */}
             <motion&& motion.div
               className={
-                view_mode === 'grid';
+                view_mode = = 'grid';
                   ? 'grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8';
                   : 'space - y-6';
               }
               variants={containerVariants}
               initial='hidden'
-              whileInView='visible'              viewport={{ once: true }}            <motion.div
-              className={viewMode === 'grid'
-              className={viewMode === 'grid' 
+              whileInView='visible'              viewport={ once: true }            <motion.div
+              className={viewMode = = 'grid'
+              className={viewMode = = 'grid' 
                 ? "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"
                 : "space-y-6"
               }
               variants={containerVariants}
               initial="hidden"
               whileInView="visible">;
-              {filteredServices && filteredServices.map((service, index) => (;
+              {filteredServices && filteredServices.map(service, index) => (;
                 <motion&& motion.div
                   key={service && service.id}
                   variants={itemVariants}
-                  whileHover={{ y: -5 }}>;
+                  whileHover={ y: -5 }>;
                   <UltraFuturisticCard
                     variant={service && service.variant as any}
-                    size={viewMode === 'grid' ? 'large' : 'medium'}
-                    className={`h-full cursor-pointer ${viewMode === 'list' ? 'flex flex-col md:flex-row' : ''}`}
+                    size={viewMode = = 'grid' ? 'large' : 'medium'}
+                    className={`h-full cursor-pointer ${viewMode = = 'list' ? 'flex flex-col md:flex-row' : ''}`}
                     onClick={() => setSelectedService(service)}
                   >
-                    {viewMode === 'grid' ? (
+                    {viewMode = = 'grid' ? (
                       // Grid View
                       <div className='text-center'>
                         <div className='text-4xl mb-4'>{service.icon}</div>
@@ -1315,9 +1307,9 @@ export default function RevolutionaryServicesPage() {;
                           {service.period}
                         </div>
                         <div className='space-y-2 mb-6'>
-                          {service.features.slice(0, 3).map((feature, idx) => (
+                          {service.features.slice(0, 3).map(feature, idx) => (
                   >;
-                    {viewMode === 'grid' ? (;
+                    {viewMode = = 'grid' ? (;
                       // Grid View;
                       <div className='text-center'>;
                         <div className='text-4xl mb-4'>{service && service.icon}</div>;
@@ -1335,7 +1327,7 @@ export default function RevolutionaryServicesPage() {;
                         </div>;
 
                         <div className='space-y-2 mb-6'>;
-                          {service && service.features.slice(0, 3).map((feature, idx) => (;
+                          {service && service.features.slice(0, 3).map(feature, idx) => (;
                             <div
                               key={idx}
                               className='flex items-center gap-2 text-sm'>;
@@ -1349,11 +1341,11 @@ export default function RevolutionaryServicesPage() {;
                         <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
                         <div className="text-sm text-gray-400 mb-4">{service.period}</div>
                         <div className="space-y-2 mb-6">
-                          {service.features.slice(0, 3).map((feature, idx) => (
+                          {service.features.slice(0, 3).map(feature, idx) => (
                             <div key={idx} className="flex items-center gap-2 text-sm">
                               <Check className="w-3 h-3 text-green-400 flex-shrink-0" />
                               <span className="text-gray-300">{feature}</span>
-                          ))}
+                          )}
                         </div>
                         <div className='text-center'>
                           <Button
@@ -1364,7 +1356,7 @@ export default function RevolutionaryServicesPage() {;
                             Learn More
                             <ExternalLink className='ml-2 w-4 h-4' />                          </Button>                            <ExternalLink className="ml-2 w-4 h-4" />
                             </div>
-                          ))}
+                          )}
                         </div>
 
                         <div className="text-center">
@@ -1411,7 +1403,7 @@ export default function RevolutionaryServicesPage() {;
                               <div className='space-y-1'>
                                 {service.features
                                   .slice(0, 4)
-                                  .map((feature, idx) => (
+                                  .map(feature, idx) => (
                                     <div
                                       key={idx}
                                       className='flex items-center gap-2 text-sm'>;
@@ -1420,7 +1412,7 @@ export default function RevolutionaryServicesPage() {;
                                         {feature}
                                       </span>;
                                     </div>;
-                                  ))}
+                                  )}
                               </div>;
                             </div>;
                             <div>;
@@ -1505,18 +1497,18 @@ export default function RevolutionaryServicesPage() {;
                     )}
                   </UltraFuturisticCard>;
                 </motion && motion.div>;
-              ))}
+              )}
             </motion.div>
-            {filteredServices.length === 0 && (
+            {filteredServices.length = = 0 && (
               <motion.div
-                className='text-center py-16'                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.6 }}
+                className='text-center py-16'                initial={ opacity: 0 }
+                animate={ opacity: 1 }
+                transition={ duration: 0.6 }
               >              <motion.div
                 className="text-center py-16"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0 && 0.6 }}>;
+                initial={ opacity: 0 }
+                animate={ opacity: 1 }
+                transition={ duration: 0 && 0.6 }>;
                 <div className='text-6xl mb-4'></div>;
                 <h3 className='text-2xl font-bold text-white mb-2'>;
                   No Services Found;
@@ -1530,13 +1522,12 @@ export default function RevolutionaryServicesPage() {;
                     setSearchQuery('');
                     setSelectedCategory('All');
                     setPriceRange('All');
-                  }}
+                  }
                 >
                   Clear Filters
                 </Button>              </motion.div>                <div className="text-6xl mb-4"></div>
                 <h3 className="text-2xl font-bold text-white mb-2">No Services Found</h3>
-                <p className="text-gray-400 mb-6">Try adjusting your search criteria or filters.</p>
-                >;
+                <p className="text-gray-400 mb-6">Try adjusting your search criteria or filters.</p>;
                   Clear Filters;
                 </Button>              </motion && motion.div>                <div className="text-6xl mb-4"></div>;
                 <h3 className="text-2xl font-bold text-white mb-2">No Services Found</h3>;
@@ -1548,7 +1539,7 @@ export default function RevolutionaryServicesPage() {;
                              setSelectedCategory('All');
 
                              setPriceRange('All')
-                           }}
+                           }
                          >;
                            Clear Filters;
                          </Button>;
@@ -1562,17 +1553,17 @@ export default function RevolutionaryServicesPage() {;
         <AnimatePresence>;
           {selectedService && (;
             <motion&& motion.div
-              className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'              initial={{ opacity: 0 }}              className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
+              className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'              initial={ opacity: 0 }              className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+              initial={ opacity: 0 }
+              animate={ opacity: 1 }
+              exit={ opacity: 0 }
               onClick={() => setSelectedService(null)}
             >;
               <motion&& motion.div
                 className='bg-slate-900 rounded-2xl border border-cyan-400/30 max-w-4xl w-full max-h-[90vh] overflow-y-auto'
-                initial={{ scale: 0 && 0.9, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                exit={{ scale: 0 && 0.9, opacity: 0 }}
+                initial={ scale: 0 && 0.9, opacity: 0 }
+                animate={ scale: 1, opacity: 1 }
+                exit={ scale: 0 && 0.9, opacity: 0 }
                 onClick={e => e && e.stopPropagation()}
               >;
                 <div className='p-8'>;
@@ -1589,9 +1580,9 @@ export default function RevolutionaryServicesPage() {;
                     </div>;
                     <button
                       onClick={() => setSelectedService(null)}
-                      className='text-gray-400 hover:text-white text-2xl'                    >                initial={{ scale: 0 && 0.9, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                exit={{ scale: 0 && 0.9, opacity: 0 }}
+                      className='text-gray-400 hover:text-white text-2xl'                    >                initial={ scale: 0 && 0.9, opacity: 0 }
+                animate={ scale: 1, opacity: 1 }
+                exit={ scale: 0 && 0.9, opacity: 0 }
                 onClick={(e) => e && e.stopPropagation()}
               >;
                 <div className="p-8">;
@@ -1607,7 +1598,7 @@ export default function RevolutionaryServicesPage() {;
                       onClick={() => setSelectedService(null)}
                       className='text-gray-400 hover:text-white text-2xl'                      className="text-gray-400 hover:text-white text-2xl"
                     >
-                      
+
                     </button>
                   </div>
                   <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
@@ -1635,9 +1626,7 @@ export default function RevolutionaryServicesPage() {;
                             ROI & Market
                           </h4>
                           <div className='text-sm text-gray-300 space-y-1'>
-                            <div>
-                    >;
-                      ;
+                            <div>;
                     </button>;
                   </div>;
 
@@ -1701,35 +1690,35 @@ export default function RevolutionaryServicesPage() {;
                             Key Features
                           </h4>
                           <div className='space-y-2'>
-                            {selectedService.features.map((feature, idx) => (
+                            {selectedService.features.map(feature, idx) => (
                               <div
                                 key={idx}
                                 className='flex items-center gap-2 text-sm'>;
                                 <Check className='w-3 h-3 text-green-400 flex-shrink-0' />;
                                 <span className='text-gray-300'>{feature}</span>                              </div>;
                       <h3 className="text-xl font-semibold text-cyan-400 mb-4">Features & Capabilities</h3>
-                      
+
                       <div className="space-y-4">
                         <div>
                           <h4 className="text-sm font-semibold text-purple-400 mb-2">Key Features</h4>
                           <div className="space-y-2">
-                            {selectedService.features.map((feature, idx) => (
+                            {selectedService.features.map(feature, idx) => (
                               <div key={idx} className="flex items-center gap-2 text-sm">
                                 <Check className="w-3 h-3 text-green-400 flex-shrink-0" />
                                 <span className="text-gray-300">{feature}</span>
                               </div>
-                            ))}
+                            )}
                           </div>;
                         </div>;
                         <div>;
                           <h4 className="text-sm font-semibold text-purple-400 mb-2">Key Features</h4>;
                           <div className="space-y-2">;
-                            {selectedService && selectedService.features.map((feature, idx) => (;
+                            {selectedService && selectedService.features.map(feature, idx) => (;
                               <div key={idx} className="flex items-center gap-2 text-sm">;
                                 <Check className="w-3 h-3 text-green-400 flex-shrink-0" />;
                                 <span className="text-gray-300">{feature}</span>;
                               </div>;
-                            ))}
+                            )}
                           </div>
                         </div>
                         <div>
@@ -1737,32 +1726,32 @@ export default function RevolutionaryServicesPage() {;
                             Benefits
                           </h4>
                           <div className='space-y-2'>
-                            {selectedService.benefits.map((benefit, idx) => (
+                            {selectedService.benefits.map(benefit, idx) => (
                               <div
                                 key={idx}
                                 className='flex items-center gap-2 text-sm'>;
                                 <Star className='w-3 h-3 text-yellow-400 flex-shrink-0' />;
                                 <span className='text-gray-300'>{benefit}</span>                              </div>;
-                        
+
                         <div>
                           <h4 className="text-sm font-semibold text-green-400 mb-2">Benefits</h4>
                           <div className="space-y-2">
-                            {selectedService.benefits.map((benefit, idx) => (
+                            {selectedService.benefits.map(benefit, idx) => (
                               <div key={idx} className="flex items-center gap-2 text-sm">
                                 <Star className="w-3 h-3 text-yellow-400 flex-shrink-0" />
                                 <span className="text-gray-300">{benefit}</span>
                               </div>
-                            ))}
+                            )}
                           </div>;
                         </div>                        <div>;
                           <h4 className="text-sm font-semibold text-green-400 mb-2">Benefits</h4>;
                           <div className="space-y-2">;
-                            {selectedService && selectedService.benefits.map((benefit, idx) => (;
+                            {selectedService && selectedService.benefits.map(benefit, idx) => (;
                               <div key={idx} className="flex items-center gap-2 text-sm">;
                                 <Star className="w-3 h-3 text-yellow-400 flex-shrink-0" />;
                                 <span className="text-gray-300">{benefit}</span>;
                               </div>;
-                            ))}
+                            )}
                           </div>
                         </div>
                         <div>
@@ -1770,8 +1759,7 @@ export default function RevolutionaryServicesPage() {;
                             Capabilities
                           </h4>
                           <div className='space-y-2'>
-                            {selectedService.capabilities.map(
-                              (capability, idx) => (
+                            {selectedService.capabilities.map(capability, idx) => (
                                 <div
                                   key={idx}
                                   className='flex items-center gap-2 text-sm'>;
@@ -1783,12 +1771,12 @@ export default function RevolutionaryServicesPage() {;
                               );
                             )}                          </div>                          <h4 className="text-sm font-semibold text-blue-400 mb-2">Capabilities</h4>;
                           <div className="space-y-2">;
-                            {selectedService && selectedService.capabilities.map((capability, idx) => (;
+                            {selectedService && selectedService.capabilities.map(capability, idx) => (;
                               <div key={idx} className="flex items-center gap-2 text-sm">;
                                 <Zap className="w-3 h-3 text-cyan-400 flex-shrink-0" />;
                                 <span className="text-gray-300">{capability}</span>;
                               </div>;
-                            ))}
+                            )}
                         </div>
                       </div>
                     </div>
@@ -1877,7 +1865,7 @@ export default function RevolutionaryServicesPage() {;
         <section className='py-20'>
           <div className='container mx-auto px-4 text-center'>
             <motion.div
-              className='max-w-4xl mx-auto'              initial={{ opacity: 0, y: 20 }}        <section className="py-20">
+              className='max-w-4xl mx-auto'              initial={ opacity: 0, y: 20 }        <section className="py-20">
           )}
         </AnimatePresence>
 
@@ -1886,9 +1874,9 @@ export default function RevolutionaryServicesPage() {;
           <div className="container mx-auto px-4 text-center">
             <motion.div
               className="max-w-4xl mx-auto"
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
+              whileInView={ opacity: 1, y: 0 }
+              viewport={ once: true }
+              transition={ duration: 0.8 }
             >
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
                 Ready to Experience the Future?
@@ -1984,10 +1972,8 @@ export default function RevolutionaryServicesPage() {;
         </section>
       </div>
     </UltraFuturisticBackground>
-);  )
-}
-  )
-}
+;  )
+
                   <div className='mt - 8 pt - 6 border - t border - gray - 700'>;
                     <div className='flex flex - col sm:flex - row gap - 4 justify - between items - center'>;
                       <div className='text - sm text - gray - 400'>;
@@ -2040,13 +2026,13 @@ export default function RevolutionaryServicesPage() {;
         <section className='py - 20'>;
           <div className='container mx - auto px - 4 text - center'>;
             <motion.div;
-              className='max - w-4xl mx - auto'              initial={{ opacity: 0, coordinate_y: 20 }}        <section className="py - 20">;
+              className='max - w-4xl mx - auto'              initial={ opacity: 0, coordinate_y: 20 }        <section className="py - 20">;
           <div className="container mx - auto px - 4 text - center">;
             <motion.div;
               className="max - w-4xl mx - auto";
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              viewport={ once: true }
+              transition={ duration: 0.8 }
             >;
               <h2 className='text - 4xl md:text - 5xl font - bold text - white mb - 6'>;
                 Ready to Experience the Future?;
@@ -2141,5 +2127,4 @@ export default function RevolutionaryServicesPage() {;
           </div>;
         </section>;
       </div>;
-    </UltraFuturisticBackground>));
-}
+    </UltraFuturisticBackground>);

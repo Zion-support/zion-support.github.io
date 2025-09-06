@@ -3,11 +3,10 @@ import { FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/comp
 import { Input } from '@/components/ui/input',;
 import { UseFormReturn } from 'react-hook-form',;
 import { CertificationFormValues } from './types',;
-;
+
 interface CertificationFormFieldsProps {;
   form:UseFormReturn<CertificationFormValues>;
-}
-;
+
 export function CertificationFormFields({ form } CertificationFormFieldsProps) {;
   return (;
     <>;
@@ -24,7 +23,7 @@ export function CertificationFormFields({ form } CertificationFormFieldsProps) {
               <FormMessage />;
             </FormItem>;          )}
         />;
-;
+
         <FormField;
           control={form.control}
           name="issuing_organization";
@@ -39,7 +38,7 @@ export function CertificationFormFields({ form } CertificationFormFieldsProps) {
           )}
         />;
       </div>;
-;
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
         <FormField;
           control={form.control}
@@ -57,7 +56,7 @@ export function CertificationFormFields({ form } CertificationFormFieldsProps) {
               <FormMessage />;
             </FormItem>;          )}
         />;
-;
+
         <FormField;
           control={form.control}
           name="expiration_date";
@@ -76,7 +75,7 @@ export function CertificationFormFields({ form } CertificationFormFieldsProps) {
           )}
         />;
       </div>;
-;
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
         <FormField;
           control={form.control}
@@ -90,7 +89,7 @@ export function CertificationFormFields({ form } CertificationFormFieldsProps) {
               <FormMessage />;
             </FormItem>;          )}
         />;
-;
+
         <FormField;
           control={form.control}
           name="credential_url";
@@ -108,10 +107,9 @@ export function CertificationFormFields({ form } CertificationFormFieldsProps) {
     </>;
   ),;}
  </FormControl> <FormMessage /> </FormItem>) 
-}/> <FormField </FormControl> <FormMessage /> </FormItem>) 
-}/> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormItem> <FormLabel>Issue Date</FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) 
-}/> <FormField <FormItem> <FormLabel>Expiration Date (Optional) </FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) 
-}/> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField </FormControl> <FormMessage /> </FormItem>) 
-}/> <FormField <FormItem> <FormLabel>Credential window.URL (Optional) </FormLabel> <FormControl> </FormControl> <FormMessage /> </FormItem>) 
-}/> </div> </>) 
-}
+/> <FormField </FormControl> <FormMessage /> </FormItem>) 
+/> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormItem> <FormLabel>Issue Date</FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) 
+/> <FormField <FormItem> <FormLabel>Expiration Date (Optional) </FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) 
+/> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField </FormControl> <FormMessage /> </FormItem>) 
+/> <FormField <FormItem> <FormLabel>Credential window.URL (Optional) </FormLabel> <FormControl></FormControl> <FormMessage /> </FormItem>) 
+/> </div> </>) 

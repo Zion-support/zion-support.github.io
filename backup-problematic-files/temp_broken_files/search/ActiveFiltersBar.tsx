@@ -2,7 +2,7 @@ import React from 'react',;
 import { X } from 'lucide-react';
 import { Button } from '@/components/ui/button',;
 import { Badge } from '@/components/ui/badge',;
-;
+
 interface SearchFilters {;
   types:string[],;
   category:string,;
@@ -10,22 +10,21 @@ interface SearchFilters {;
   maxPrice:number,;
   minRating:number,;
   sort:string;}
-;
+
 interface ActiveFiltersBarProps {;
   filters:SearchFilters,;
   onFiltersChange:(filters:SearchFilters) => void,;
   onClearAll:() => void,;
   className?:string;
-}
-;
+
 export const ActiveFiltersBar:React.FC<ActiveFiltersBarProps> = ({;
   filters,;
   onFiltersChange,;
   onClearAll,;
   className = '';
-}) => {;
+) => {;
   const activeFilters:Array<{ key:string, label:string, value:string }> = [],;
-;
+
   // Add type filters;
   filters.types.forEach(type => {;
     const labels:Record<string string> = {;
@@ -41,7 +40,7 @@ export const ActiveFiltersBar:React.FC<ActiveFiltersBarProps> = ({;
       value:labels[type] || type;
     }),;
   }),;
-;
+
   // Add category filter;
   if (filters.category) {;
     activeFilters.push({;
@@ -50,7 +49,7 @@ export const ActiveFiltersBar:React.FC<ActiveFiltersBarProps> = ({;
       value:filters.category;
     }),;
   }
-;
+
   // Add price filter;
   if (filters.minPrice > 0 || filters.maxPrice < 10000) {;
     activeFilters.push({;
@@ -59,7 +58,7 @@ export const ActiveFiltersBar:React.FC<ActiveFiltersBarProps> = ({;
       value:`$${filters.minPrice} - $${filters.maxPrice}`;
     }),;
   }
-;
+
   // Add rating filter;
   if (filters.minRating > 0) {;
     activeFilters.push({;
@@ -68,9 +67,9 @@ export const ActiveFiltersBar:React.FC<ActiveFiltersBarProps> = ({;
       value:`${filters.minRating}+ stars`;
     }),;
   }
-;
+
   // Add sort filter (only if not default);
-  if (filters.sort !== 'relevance') {;
+  if (filters.sort != 'relevance') {;
     const sortLabels:Record<string string> = {;
       price_asc:'Price:Low to High',;
       price_desc:'Price:High to Low',;
@@ -82,31 +81,29 @@ export const ActiveFiltersBar:React.FC<ActiveFiltersBarProps> = ({;
       value:sortLabels[filters.sort] || filters.sort;
     }),;
   }
-;
+
   const removeFilter = (filterKey:string) => {;
-    if (filterKey.startsWith('type-')) {;
+    if (filterKey.startsWith('type-') {;
       const typeToRemove = filterKey.replace('type-', ''),;
-      const newTypes = filters.types.filter(t => t !== typeToRemove),;
+      const newTypes = filters.types.filter(t => t != typeToRemove),;
       onFiltersChange({ ...filters, types:newTypes }),;
-    } else if (filterKey === 'category') {;
+    } else if (filterKey = = 'category') {;
       onFiltersChange({ ...filters, category:'' }),;
-    } else if (filterKey === 'price') {;
+    } else if (filterKey = = 'price') {;
       onFiltersChange({ ...filters, minPrice:0, maxPrice:10000 }),;
-    } else if (filterKey === 'rating') {;
+    } else if (filterKey = = 'rating') {;
       onFiltersChange({ ...filters, minRating:0 }),;
-    } else if (filterKey === 'sort') {;
+    } else if (filterKey = = 'sort') {;
       onFiltersChange({ ...filters, sort:'relevance' }),;
-    }
-  },;
-;
-  if (activeFilters.length === 0) {;
+    },;
+
+  if (activeFilters.length = = 0) {;
     return null,;
   }
-;
+
   return (;
     <div className={`flex items-center gap-2 flex-wrap ${className}`}>;
       <span className="text-sm font-medium text-muted-foreground">Active filters:</span>;
-      ;
       {activeFilters.map(filter => (;
         <Badge ;
           key={filter.key} ;
@@ -126,8 +123,8 @@ export const ActiveFiltersBar:React.FC<ActiveFiltersBarProps> = ({;
             <X className="h-3 w-3" />;
           </Button>;
         </Badge>;
-      ))}
-;
+      )}
+
       <Button;
         variant="ghost";
         size="sm";
@@ -138,19 +135,16 @@ export const ActiveFiltersBar:React.FC<ActiveFiltersBarProps> = ({;
       </Button>;
     </div>;
   ),;
-},;
-;
+,;
+
 export default ActiveFiltersBar,; label: 'Type';
 value: labels[type] || type ;
-}) ;
-});
-//Add category filter ;
-}
-};
-{;
+) ;
+);
+/Add category filter ;
+;
   activeFilters.map (filter => (<Badge key= {;
   filter.key ;
-}variant="secondary" className="flex items-center gap-1 pl-2 pr-1" > > <X className="h-3 w-3" /> </Button> </Badge>) ) ;
-}<Button > Clear all </Button> </div>) ;
-};
+variant="secondary" className="flex items-center gap-1 pl-2 pr-1" ><X className="h-3 w-3" /> </Button> </Badge>) ;
+<Button > Clear all </Button> </div>) ;
 export default ActiveFiltersBar;"'"

@@ -18,24 +18,22 @@ interface CartItem {;
   name: string,;
   price: number,;
   quantity: number;
-}
-;
+
 interface CheckoutForm {;
   name: string,;
   email: string,;
   address: string,;
   city: string,;
   country: string;
-}
-;
+
 export default function CheckoutV2() {;
   const navigate = useNavigate(),;
   const [searchParams] = useSearchParams(),;
   const [items, setItems] = useState<CartItem[]>([]),;
   const form = useForm<CheckoutForm>({;
-    defaultValues: { name: '', email: '', address: '', city: '', country: '' }}),;
+    defaultValues: { name: '', email: '', address: '', city: '', country: '' }),;
   const { track } = useFeatureFlags(),;
-  useEffect(() => {;
+  useEffect() => {;
     const sku = searchParams.get('sku'),;
     if (sku) {;
       setItems([{ id: sku, name: sku, price: 25, quantity: 1 }]),;
@@ -48,9 +46,8 @@ export default function CheckoutV2() {;
       } catch {;
         setItems([]);
       }
-    }
   }, [searchParams]),;
-  const subtotal = items.reduce((sum, i) => sum + i.price * i.quantity, 0),;
+  const subtotal = items.reduce(sum, i) => sum + i.price * i.quantity, 0),;
   const onSubmit = async (data: CheckoutForm) => {;
     try {;
       const res = await fetch('/api/create-payment-intent', {;
@@ -64,16 +61,14 @@ export default function CheckoutV2() {;
         const payment = await stripe.confirmCardPayment(result.clientSecret, {;
           payment_method: {;
             card: { token: 'tok_visa' },;
-            billing_details: { name: data.name, email: data.email }}}),;
+            billing_details: { name: data.name, email: data.email }}),;
         if (payment.error) throw payment.error,;
         safeStorage.removeItem('cart'),;
         navigate(`/orders/${result.id}`);
         track('new-checkout-v2: conversion');
-      }
-    } catch (err) {;
+      } catch (err) {;
       console.error('Payment failed', err);
-    }
-  },
+    },
 
   return (
     <div className="container max-w-2xl py-10 border-2 border-dashed rounded-md">
@@ -140,5 +135,3 @@ export default function CheckoutV2() {;
       </div>
     </div>
   )
-}
-;

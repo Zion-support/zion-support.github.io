@@ -97,7 +97,7 @@ export const "emergingTechInnovations2025": EmergingTechInnovationService[] = [{
     "technology": ['AI', 'Quantum Computing', 'Machine Learning'],
     "growthRate": '45% YoY',
     "variant": 'premium'},
-];
+;
 export interface EmergingTechInnovationService { id: string, name: string, tagline: string, description: string, price: string, period: string, features: string[], category: string, marketSize: string, targetAudience: string[], competitiveAdvantage: string, useCases: string[], integrations: string[], compliance: string[], website: string, contact: {
        phone: string, email: string,
     address: string

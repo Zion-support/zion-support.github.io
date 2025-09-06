@@ -6,5 +6,3 @@ export function ChangelogManager() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

@@ -7,7 +7,7 @@ const DataScienceChat: NextPage = () => {
         <title>DataScienceChat - Zion Tech Solutions</title>
         <meta name=&quot;description&quot; content=&quot;DataScienceChat blog post&quot; />
       </Head>
-      
+
       <main>
         <h1>DataScienceChat</h1>
         <p>Blog content coming soon...</p>
@@ -15,5 +15,5 @@ const DataScienceChat: NextPage = () => {
       </main>
     </div>
   )
-},
+,
 export default DataScienceChat,

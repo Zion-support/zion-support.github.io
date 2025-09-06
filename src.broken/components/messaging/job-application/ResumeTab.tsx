@@ -6,5 +6,3 @@ export function ResumeTab() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

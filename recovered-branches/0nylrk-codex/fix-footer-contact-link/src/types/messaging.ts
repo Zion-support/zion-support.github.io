@@ -1,4 +1,4 @@
-// Define the shape of a message;
+/ Define the shape of a message;
 export interface Message {
   id: string;
   sender_id: string;
@@ -12,8 +12,8 @@ export interface Message {
   attachment_url?: string
 
   attachment_name?: string
-}
-// Define the shape of a conversation
+
+/ Define the shape of a conversation
 export interface Conversation {
   id: string;
   user_id: string;
@@ -36,14 +36,14 @@ export interface Conversation {
   context_id?: string
 
   context_data?: ConversationContextData
-}
-// Context data for creating a conversation
+
+/ Context data for creating a conversation
 export interface ConversationContextData {
   title?: string;
   description?: string;
   image_url?: string;
-}
-// Define the shape of the messaging context
+
+/ Define the shape of the messaging context
 export interface MessagingContextType {
   messages: Message[];
   conversations: Conversation[];
@@ -71,4 +71,3 @@ export interface MessagingContextType {
   fetchConversations: () => Promise<void>
 
   loadMessages: (conversationId: string) => Promise<void>
-}

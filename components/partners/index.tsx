@@ -26,8 +26,7 @@ export default function Partners() {
         name: form.name
         entityType: form.entityType
         useCaseType: form.useCaseType
-        pointOfContact: { name: form.pocName, email: form.pocEmail }
-      })
+        pointOfContact: { name: form.pocName, email: form.pocEmail })
     });    const res = await fetch("/api/partners/register", {
       method: "POST"
       headers: { "Content-Type": "application/json" }
@@ -35,31 +34,30 @@ export default function Partners() {
         name: form.name
         entityType: form.entityType
         useCaseType: form.useCaseType
-        pointOfContact: { name: form.pocName, email: form.pocEmail }
-      })
+        pointOfContact: { name: form.pocName, email: form.pocEmail })
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React from 'react';
 import { useState } from 'react';
 import Head from 'next/head';
@@ -202,7 +200,7 @@ export default function Partners() {;
         name: form.name,
         entity_type: form.entity_type,
         useCaseType: form.useCaseType,
-        pointOfContact: { name: form.pocName, email: form.pocEmail }})}),
+        pointOfContact: { name: form.pocName, email: form.pocEmail })}),
     const data = await res.json();
     setLoading(false);
     setResult(data)
@@ -296,10 +294,10 @@ export default function Partners() {;
         )}
       </div>
     </div>
-);
-}
+;
+
   );
-}
+
     <div className="min - h-screen bg - gray - 50 text - gray - 900">;
       <Head>;
         <title > Zion Partners</title>;
@@ -398,4 +396,3 @@ export default function Partners() {;
             <a href={result.dashboard_url} className="inline - block mt - 4 bg - black text - white px - 4 py - 2 rounded">Go to Dashboard</a>)}
       </div>;
     </div>);
-}

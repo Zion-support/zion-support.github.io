@@ -5,17 +5,16 @@ import { toast } from "@/hooks/use-toast",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
 import { EmptyMatchesCard } from "./EmptyMatchesCard",;
 import { JobMatchCard } from "./JobMatchCard",;
-;
+
 interface SuggestedTalentsProps {;
   jobId:string,;
   jobTitle?:string;
-}
-;
+
 export function SuggestedTalents({ jobId, jobTitle } SuggestedTalentsProps) {;
   const [talents, setTalents] = useState([]),;
   const [isLoading, setIsLoading] = useState(true),;
   const [isProcessing, setIsProcessing] = useState(false),;
-;
+
   const fetchSuggestedTalents = async () => {;
     setIsLoading(true),;
     try {;
@@ -40,7 +39,7 @@ export function SuggestedTalents({ jobId, jobTitle } SuggestedTalentsProps) {;
           );
         `);
         .eq("job_id", jobId),;
-;
+
       if (error) throw error,;
       setTalents(data || []),;
     } catch (error) {;
@@ -51,9 +50,8 @@ export function SuggestedTalents({ jobId, jobTitle } SuggestedTalentsProps) {;
         variant:"destructive"}),;
     } finally {;
       setIsLoading(false),;
-    }
-  },;
-;
+    },;
+
   const handleViewProfile = (talentId:string) => {;
     // Implement logic to view talent profile;
     // // // console.log("View talent profile:", talentId),;
@@ -61,7 +59,7 @@ export function SuggestedTalents({ jobId, jobTitle } SuggestedTalentsProps) {;
       title:"View Profile",;
       description:`Navigating to talent profile:${talentId}`}),;
   },;
-;
+
   const handleInvite = (talentId:string) => {;
     // Implement logic to invite talent;
     // // // console.log("Invite talent:", talentId),;
@@ -69,20 +67,19 @@ export function SuggestedTalents({ jobId, jobTitle } SuggestedTalentsProps) {;
       title:"Invite Talent",;
       description:`Inviting talent:${talentId}`}),;
   },;
-;
+
   const handleRefresh = () => {;
     setIsProcessing(true),;
-    fetchSuggestedTalents().finally(() => {;
+    fetchSuggestedTalents().finally() => {;
       setIsProcessing(false),;
     }),;
   },;
-;
-  useEffect(() => {;
+
+  useEffect() => {;
     if (jobId) {;
       fetchSuggestedTalents(),;
-    }
-  }, [jobId]),;
-;
+    }, [jobId]),;
+
   // Transform data to match JobMatchCard component props;
   const transformedTalents = talents.map(talent => {;
     return {;
@@ -96,21 +93,20 @@ export function SuggestedTalents({ jobId, jobTitle } SuggestedTalentsProps) {;
       matchPercent:talent.match_score || 85,;
       skills:talent.talent_profile?.skills || []},;
   }),;
-;
+
   return (;
     <Card className="border-zion-blue-light bg-zion-blue">;
       <CardHeader>;
         <CardTitle>{jobTitle ? `Talents for ${jobTitle}` :'Suggested Talents'}</CardTitle>;
       </CardHeader>;
-      ;
       <CardContent className="pt-6">;
         {isLoading ? (;
           <div>Loading suggested talents...</div>;
-        ) :talents.length === 0 ? (;
+        ) :talents.length = = 0 ? (;
           <EmptyMatchesCard onRefresh={handleRefresh} isProcessing={isProcessing} />;
         ) :(;
           <div className="space-y-4">;
-            {transformedTalents.map((talent) => (;
+            {transformedTalents.map(talent) => (;
               <JobMatchCard;
                 key={talent.id}                matchId={talent.id}
                 talentId={talent.id}
@@ -125,7 +121,7 @@ export function SuggestedTalents({ jobId, jobTitle } SuggestedTalentsProps) {;
                 onApply={() => handleViewProfile(talent.id)}
                 onViewDetails={() => handleViewProfile(talent.id)}
                 onInvite={() => handleInvite(talent.id)}
-              />;            ))}
+              />;            )}
           </div>;
         )}
       </CardContent>;
@@ -133,9 +129,9 @@ export function SuggestedTalents({ jobId, jobTitle } SuggestedTalentsProps) {;
   ),; interface SuggestedTalentsProps {
   jobId: string;
 jobTitle?: string 
-}export function SuggestedTalents ({
+export function SuggestedTalents ({
   jobId, jobTitle 
-}: SuggestedTalentsProps) {
+: SuggestedTalentsProps) {
   const [talents, setTalents] = useState ([]);
 const [isLoading, setIsLoading] = useState (true);
 const [isProcessing, setIsProcessing] = useState (false);
@@ -144,7 +140,7 @@ const fetchSuggestedTalents = async () => {
 try {
   const {
   data, error 
-}= await supabase .from ("suggested talents") talent profile: talent id (id;
+= await supabase .from ("suggested talents") talent profile: talent id (id;
 user id;
 full name;
 professional title;
@@ -157,45 +153,44 @@ skills;
 location;
 category;
 company name) `) 
-}finally {
+finally {
   setIsLoading (false) 
-}
-};
+
+;
 const handleViewProfile = (talentId: string) => {
   //Implement logic to view talent profile 
-};
+;
   jobTitle ? `Talents for $ {
   jobTitle 
-}` : 'Suggested Talents' 
-}</CardTitle> </CardHeader> key= {
+` : 'Suggested Talents' 
+</CardTitle> </CardHeader> key= {
   talent.id 
-}matchId= {
+matchId= {
   talent.id 
-}talentId= {
+talentId= {
   talent.id 
-}name= {
+name= {
   talent.name 
-}title= {
+title= {
   talent.title 
-}company= {
+company= {
   talent.company 
-}avatar= {
+avatar= {
   talent.avatar 
-}location= {
+location= {
   talent.location 
-}category= {
+category= {
   talent.category 
-}matchPercent= {
+matchPercent= {
   talent.matchPercent 
-}skills= {
+skills= {
   talent.skills 
-}onApply= {
+onApply= {
   () => handleViewProfile (talent.id) 
-}onViewDetails= {
+onViewDetails= {
   () => handleViewProfile (talent.id) 
-}onInvite= {
+onInvite= {
   () => handleInvite (talent.id) 
-}/>) ) 
-}</div>) 
-}</CardContent> </Card>) 
-}
+/>) 
+</div>) 
+</CardContent> </Card>) 

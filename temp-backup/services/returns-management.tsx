@@ -3,11 +3,11 @@ import Head from \'next/head\'; import Link from \'next/link\'; export default f
 import React from 'react';
 interface ReturnsmanagementProps {
   // Add props here as needed
-}
+
 export default function Returnsmanagement({ }: ReturnsmanagementProps) {
 interface ReturnsmanagementProps {;
   // Add props here as needed;
-}
+
 export default function Returnsmanagement(): any ({ }: ReturnsmanagementProps) {;
   return (
     <div>;
@@ -15,7 +15,3 @@ export default function Returnsmanagement(): any ({ }: ReturnsmanagementProps) {
       <p>This component is currently under development.</p>;
     </div>;
   );
-}
-}
-
-

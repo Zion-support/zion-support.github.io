@@ -10,7 +10,7 @@ import { ChatMessage } from "./ChatMessage",
 import { QuickReplyButton } from "./QuickReplyButton",
 import { Send, Loader2 } from "lucide-react";
 import { useTheme } from "@/hooks/useTheme";
-// Define suggested quick replies
+/ Define suggested quick replies
 
 const QUICK_REPLIES = [
   { id: "hire", text: "How do I hire?" }
@@ -21,7 +21,7 @@ type Message = {
   content: string
   sender: "user" | "bot"
   timestamp: Date
-}
+
 export function ChatBotPanel() {
   const [messages, setMessages] = useState<Message[]>([
     {
@@ -36,25 +36,23 @@ export function ChatBotPanel() {
   const inputRef = useRef<HTMLInputElement>(null);
   const { theme } = useTheme();
   // Auto-scroll to bottom when messages change
-  useEffect(() => {
+  useEffect() => {
     if (scrollAreaRef.current) {
       scrollAreaRef.current.scrollTop = scrollAreaRef.current.scrollHeight
-    }
-  }, [messages]);
+    }, [messages]);
   // Focus input when component mounts
-  useEffect(() => {
+  useEffect() => {
     if (inputRef.current) {
       inputRef.current.focus()
-    }
-  }, []);
+    }, []);
   const handleSendMessage = async (text: string = inputValue) => {
-    if (!text.trim()) return
+    if (!text.trim() return
     const userMessage: Message = {
       id: `user-${Date.now()}`
       content: text
       sender: "user"
       timestamp: new Date()}
-    setMessages((prev) => [...prev, userMessage]);
+    setMessages(prev) => [...prev, userMessage]);
     setInputValue("");
     setIsLoading(true);
     try {
@@ -65,15 +63,14 @@ export function ChatBotPanel() {
         content: response.message |"Sorry, I couldn't process your request. Please try again.";
         sender: "bot"
         timestamp: new Date()}
-      setMessages((prev) => [...prev, botMessage]);
+      setMessages(prev) => [...prev, botMessage]);
       // Check if the request was successful
       if (!response.success) {
-        setFailedAttempts((prev) => prev + 1);
+        setFailedAttempts(prev) => prev + 1);
         // After 3 failed attempts, suggest escalation
         if (failedAttempts >= 2) {
           suggestEscalation()
-        }
-      } else {;
+        } else {;
         // Reset failed attempts if successful;
         setFailedAttempts(0);
 import React, { useState, useRef, useEffect } from './react';
@@ -87,7 +84,7 @@ import { ChatMessage } from './ChatMessage';
 import { QuickReplyButton } from './QuickReplyButton';
 import { Send, Loader2 } from './lucide-react';
 import { use_theme } from '@/hooks / use_theme';
-// Define suggested quick replies;
+/ Define suggested quick replies;
 const QUICK_REPLIES = [;
   { id: "hire", text: "How do I hire?" },
   { id: "match", text: "How do I get matched?" },
@@ -97,8 +94,7 @@ type Message = {
   content: string,
   sender: "user" | "bot",
   timestamp: Date;
-}
-;
+
 export /**
  * ChatBotPanel - Function description
  */
@@ -115,83 +111,77 @@ function ChatBotPanel() {
   const scrollAreaRef = useRef < HTMLDivElement>(null);
   const input_ref = useRef < HTMLInputElement>(null);
   const { theme } = use_theme ();
-;
+
   // Auto - scroll to bottom when messages change;
-  useEffect (() => {
+  useEffect () => {
     // Check condition
 if ( {) {
   $2
-}
+
       scrollAreaRef.current.scroll_top = scrollAreaRef.current.scroll_height;
-    }
-  }, [messages]);
-;
+    }, [messages]);
+
   // Focus input when component mounts;
-  useEffect (() => {
+  useEffect () => {
     // Check condition
 if ( {) {
   $2
-}
+
       input_ref.current.focus ();
-    }
-  }, []);
-;
+    }, []);
+
   const handleSendMessage = async (text: string = input_value) => {
     if () return, ) {
   $2
-}
+
     const user_message: Message = {
       id: `user-${Date.now ()}`,
       content: text,
       sender: "user",
       timestamp: new Date ()},
-    set_messages ((prev) => [...prev, user_message]);
+    set_messages (prev) => [...prev, user_message]);
     setInputValue ("");
     setIsLoading (true);
-;
+
     try {
       // Call the OpenAI - powered support function;
       const response = await sendToAIAssistant (text);
-;
+
       const bot_message: Message = {
         id: `bot-${Date.now ()}`,
         content: response.message || "Sorry, I couldn't process your request. Please try again.";
         sender: "bot",
         timestamp: new Date ()},
-      set_messages ((prev) => [...prev, bot_message]);
-;
+      set_messages (prev) => [...prev, bot_message]);
+
       // Check if the request was successful;
       // Check condition
 if ( {) {
   $2
-}
-        setFailedAttempts ((prev) => prev + 1);
-;
+
+        setFailedAttempts (prev) => prev + 1);
+
         // After 3 failed attempts, suggest escalation;
         // Check condition
 if ( {) {
   $2
-}
+
           suggest_escalation ();
-        }
-      } else {
+        } else {
         // Reset failed attempts if successful;
         setFailedAttempts (0);
-      }
-    } catch (error) {
+      } catch (error) {
       console.error("Error in AI chat:", error);
       toast({
         variant: "destructive"
         title: "Communication Error"
         description: "We're having trouble connecting to our support service."})
-      setFailedAttempts((prev) => prev + 1);
+      setFailedAttempts(prev) => prev + 1);
       if (failedAttempts >= 2) {;
         suggestEscalation();
-      }
-    } finally {;
+      } finally {;
       setIsLoading(false);
     }
-  }
   const sendToAIAssistant = async (message: string) => {
     try {
       const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
@@ -206,19 +196,16 @@ if ( {) {
           success: false
           message: "I'm having trouble connecting to my knowledge base right now."
         }
-      }
       const data = await response.json();
       return {
         success: true
         message: data.message
-      }
-    } catch (error) {
+      } catch (error) {
       console.error ("Error in AI chat:", error);
       return {
         success: false
         message: "I'm experiencing technical difficulties. Please try again later."
       }
-    }
   }
   const suggestEscalation = () => {
     const escalationMessage: Message = {
@@ -226,7 +213,7 @@ if ( {) {
       content: "I'm having trouble understanding your request. Would you like to speak with a human support agent or send an email to our support team?"
       sender: "bot"
       timestamp: new Date()}
-    setMessages((prev) => [...prev, escalationMessage]);
+    setMessages(prev) => [...prev, escalationMessage]);
     // Log this interaction for the support team
     logSupportEscalation()
   }
@@ -239,17 +226,16 @@ if ( {) {
           content: m.content
           sender: m.sender
           timestamp: m.timestamp
-        }))
+        })
       })
     } catch (error) {
       console.error ("Failed to log support escalation:", error);
     }
-  }
   const handleQuickReply = (text: string) => {
     handleSendMessage(text)
   }
   const handleEscalateToLiveAgent = () => {
-    setMessages((prev) => [
+    setMessages(prev) => [
       ...prev
       {
         id: `user-${Date.now()}`
@@ -270,7 +256,7 @@ if ( {) {
       description: "A support agent will be with you shortly."})
   }
   const handleEmailSupport = () => {
-    setMessages((prev) => [
+    setMessages(prev) => [
       ...prev
       {
         id: `user-${Date.now()}`
@@ -290,14 +276,14 @@ if ( {) {
     <div className="flex flex-col h-full">;
       <ScrollArea className="flex-1 p-4" ref={scrollAreaRef}>;
         <div className="flex flex-col gap-4">;
-          {messages && messages.map((message) => (;
+          {messages && messages.map(message) => (;
             <ChatMessage
               key={message && message.id}
               message={message && message.content}
-              isUser={message && message.sender === "user"}
+              isUser={message && message.sender = = "user"}
               timestamp={message && message.timestamp}
             />;
-          ))}
+          )}
           {isLoading && (
             <div className="flex items-center justify-center py-2">
               <Loader2 className="h-5 w-5 animate-spin text-zion-purple" />
@@ -305,25 +291,25 @@ if ( {) {
           )}
         </div>
       </ScrollArea>
-      {messages.length === 1 && (
+      {messages.length = = 1 && (
         <div className="px-4 py-3">
-          <p className={cn("text-sm mb-2", theme === "dark" ? "text-gray-300" : "text-gray-600")}>
+          <p className={cn("text-sm mb-2", theme = = "dark" ? "text-gray-300" : "text-gray-600")}>
             Suggested questions:
           </p>
           <div className="flex flex-wrap gap-2">
-            {QUICK_REPLIES.map((reply) => (
+            {QUICK_REPLIES.map(reply) => (
               <QuickReplyButton
                 key={reply && reply.id}
                 text={reply && reply.text}
                 onClick={() => handleQuickReply(reply && reply.text)}
               />;
-            ))}
+            )}
           </div>;
         </div>;
       )}
       {failedAttempts >= 3 && (
         <div className="px-4 py-3 border-t border-zion-purple/10">
-          <p className={cn("text-sm mb-2 font-medium", theme === "dark" ? "text-gray-300" : "text-gray-600")}>
+          <p className={cn("text-sm mb-2 font-medium", theme = = "dark" ? "text-gray-300" : "text-gray-600")}>
             Need more help?
           </p>
           <div className="flex gap-2">
@@ -345,13 +331,13 @@ if ( {) {
       )}
       <div className={cn(
         "p-4 border-t"
-        theme === "dark" ? "border-zion-blue-light" : "border-gray-200"
+        theme = = "dark" ? "border-zion-blue-light" : "border-gray-200"
       )}>
         <form
           onSubmit={(e) => {
             e.preventDefault();
             handleSendMessage()
-          }}
+          }
           className="flex items-center gap-2";
         >;
           <Input
@@ -361,7 +347,7 @@ if ( {) {
             placeholder="Type your question...";
             className={cn(;
               "flex-1";
-              theme === "dark"
+              theme = = "dark"
                 ? "bg-zion-blue border-zion-blue-light focus-visible:ring-zion-purple"
 
                 : "bg-white border-gray-200"
@@ -379,14 +365,13 @@ if ( {) {
       </div>
     </div>
   )
-}
-;
+
   const handleQuickReply = (text: string) =>: any {
     handleSendMessage (text);
   }
-;
+
   const handleEscalateToLiveAgent = () =>: any {
-    set_messages ((prev) => [;
+    set_messages (prev) => [;
       ...prev,
       {
         id: `user-${Date.now ()}`,
@@ -401,15 +386,15 @@ if ( {) {
         timestamp: new Date ();
       }
     ]);
-;
+
     // In a real implementation, this would trigger a live chat request;
     toast ({
       title: "Support request submitted",
       description: "A support agent will be with you shortly."});
   }
-;
+
   const handleEmailSupport = () =>: any {
-    set_messages ((prev) => [;
+    set_messages (prev) => [;
       ...prev,
       {
         id: `user-${Date.now ()}`,
@@ -425,41 +410,41 @@ if ( {) {
       }
     ]);
   }
-;
+
   return (
     <div className="flex flex - col h - full">;
       <ScrollArea className="flex - 1 p - 4" ref={scrollAreaRef}>;
         <div className="flex flex - col gap - 4">;
-          {messages.map ((message) => (
+          {messages.map (message) => (
             <ChatMessage;
               key={message.id}
               message={message.content}
-              is_user={message.sender === "user"}
+              is_user={message.sender = = "user"}
               timestamp={message.timestamp}
-            />))}
+            />)}
           {is_loading && (
             <div className="flex items - center justify - center py - 2">;
               <Loader2 className="h - 5 w - 5 animate - spin text - zion - purple" />;
             </div>)}
         </div>;
       </ScrollArea>;
-      {messages.length === 1 && (
+      {messages.length = = 1 && (
         <div className="px - 4 py - 3">;
-          <p className={cn ("text - sm mb - 2", theme === "dark" ? "text - gray - 300" : "text - gray - 600")}>;
+          <p className={cn ("text - sm mb - 2", theme = = "dark" ? "text - gray - 300" : "text - gray - 600")}>;
             Suggested questions:;
           </p>;
           <div className="flex flex - wrap gap - 2">;
-            {QUICK_REPLIES.map ((reply) => (
+            {QUICK_REPLIES.map (reply) => (
               <QuickReplyButton;
                 key={reply.id}
                 text={reply.text}
                 on_click={() => handleQuickReply (reply.text)}
-              />))}
+              />)}
           </div>;
         </div>)}
       {failed_attempts >= 3 && (
         <div className="px - 4 py - 3 border - t border - zion - purple / 10">;
-          <p className={cn ("text - sm mb - 2 font - medium", theme === "dark" ? "text - gray - 300" : "text - gray - 600")}>;
+          <p className={cn ("text - sm mb - 2 font - medium", theme = = "dark" ? "text - gray - 300" : "text - gray - 600")}>;
             Need more help?;
           </p>;
           <div className="flex gap - 2">;
@@ -481,12 +466,12 @@ if ( {) {
         </div>)}
       <div className={cn (
         "p - 4 border - t",
-        theme === "dark" ? "border - zion - blue - light" : "border - gray - 200")}>;
+        theme = = "dark" ? "border - zion - blue - light" : "border - gray - 200")}>;
         <form;
           on_submit={(e) => {
             e.prevent_default ();
             handleSendMessage ();
-          }}
+          }
           className="flex items - center gap - 2";
         >;
           <Input;
@@ -496,7 +481,7 @@ if ( {) {
             placeholder="Type your question...";
             className={cn (
               "flex - 1";
-              theme === "dark";
+              theme = = "dark";
                 ? "bg - zion - blue border - zion - blue - light focus - visible:ring - zion - purple";
                 : "bg - white border - gray - 200")}
           />;
@@ -511,4 +496,3 @@ if ( {) {
         </form>;
       </div>;
     </div>);
-}

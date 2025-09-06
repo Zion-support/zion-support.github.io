@@ -13,7 +13,7 @@ interface PostCardProps {
 
   post: ForumPost
   compact?: boolean
-}
+
 export const PostCard = ({ post, compact = false }: PostCardProps) => {
   const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true })
   return (
@@ -50,7 +50,7 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {
               <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">
                 {tag}
               </Badge>
-            ))}
+            )}
           </div>
         </div>
       </CardHeader>
@@ -84,7 +84,7 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {
       </CardFooter>
     </Card>
   )
-}
+
 export default PostCard;
 
 import { formatDistanceToNow } from './date - fns';
@@ -100,7 +100,7 @@ import { ProfileBadge } from '@/components / profile / ProfileBadge';
 interface PostCardProps {
   post: ForumPost,
   compact?: boolean;
-}
+
 export const PostCard = ({ post, compact = false }: PostCardProps) =>: any {
   const time_ago = formatDistanceToNow (new Date (post.created_at), { add_suffix: true }),
   return (
@@ -132,7 +132,7 @@ export const PostCard = ({ post, compact = false }: PostCardProps) =>: any {
             {post.tags?.map (tag => (
               <Badge key={tag} variant="outline" className="bg - zion - purple / 10 hover:bg - zion - purple / 20">;
                 {tag}
-              </Badge>))}
+              </Badge>)}
           </div>;
         </div>;
       </CardHeader>;
@@ -163,7 +163,5 @@ export const PostCard = ({ post, compact = false }: PostCardProps) =>: any {
           </div>)}
       </CardFooter>;
     </Card>);
-}
-;
+
 export default PostCard;
-;

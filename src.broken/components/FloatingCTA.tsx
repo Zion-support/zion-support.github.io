@@ -6,5 +6,3 @@ export function FloatingCTA() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

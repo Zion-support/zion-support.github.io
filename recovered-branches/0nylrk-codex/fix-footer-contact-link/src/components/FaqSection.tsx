@@ -1,5 +1,4 @@
 
-
 import {GradientHeading} from "./GradientHeading";
 import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from "@/components/ui/accordion";
 import {FileText} from "lucide-react";
@@ -39,7 +38,7 @@ export function FaqSection() {;
             <h3 className="text-xl font-bold text-white">Common Questions</h3>
           </div>
           <Accordion type="single" collapsible className="w-full">
-            {faqs.map((faq, index) => (
+            {faqs.map(faq, index) => (
               <AccordionItem key={index} value={`item-${index}`} className="border-zion-purple/10">
                 <AccordionTrigger className="text-white hover:text-zion-cyan">
                   {faq.question}
@@ -48,17 +47,16 @@ export function FaqSection() {;
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
-            ))}
+            )}
           </Accordion>
         </div>
       </div>
     </section>
   )
-}
+
                 </AccordionContent>;
-              </AccordionItem>))}
+              </AccordionItem>)}
           </Accordion>;
         </div>;
       </div>;
     </section>);
-}

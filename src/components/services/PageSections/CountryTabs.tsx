@@ -10,7 +10,7 @@ import {
   PaginationButton
   PaginationNext
   PaginationPrevious
-} from '@/components/ui/pagination'
+ from '@/components/ui/pagination'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { CountryServiceCard } from '@/components/services/CountryServiceCard'
 import { CountryPricing } from '@/data/onsiteServicePricing'
@@ -25,7 +25,7 @@ import {;
   PaginationButton,;
   PaginationNext,;
   PaginationPrevious,;
-} from '@/components/ui/pagination';
+ from '@/components/ui/pagination';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { CountryServiceCard } from '@/components/services/CountryServiceCard';
 import { CountryPricing } from '@/data/onsiteServicePricing';
@@ -45,15 +45,14 @@ export function CountryTabs({
   onQuote
   searchQuery
   setSearchQuery
-}: CountryTabsProps) {
+: CountryTabsProps) {
   const [currentPage, setCurrentPage] = useState(1)
   const countriesPerPage = 50
-  useEffect(() => {
+  useEffect() => {
     setCurrentPage(1)
   }, [searchQuery])
   const totalPages = Math.ceil(filteredCountries.length / countriesPerPage)
-  const paginatedCountries = filteredCountries.slice(
-    (currentPage - 1) * countriesPerPage
+  const paginatedCountries = filteredCountries.slice(currentPage - 1) * countriesPerPage
     currentPage * countriesPerPage
   )
   return (
@@ -80,7 +79,7 @@ export function CountryTabs({
         </div>
         <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
           {filteredCountries
-            .filter(country => popularCountries.includes(country.country))
+            .filter(country => popularCountries.includes(country.country)
             .map(country => (              <CountryServiceCard
                 key = {country && country.country,}
                 country = {country,}
@@ -88,7 +87,7 @@ export function CountryTabs({
                 onQuote = {onQuote,}
                 isPopular = {true,}
               />;
-            ))}
+            )}
         </div>
       </TabsContent>
       <TabsContent value='all' className='mt-0'>
@@ -111,7 +110,7 @@ export function CountryTabs({
               onQuote = {onQuote,}
               isPopular = {popularCountries && popularCountries.includes(country && country.country),}
             />;
-          ))}
+          )}
         </div>
         {totalPages > 1 && (
           <div className='mt-8'>
@@ -122,9 +121,9 @@ export function CountryTabs({
                     href={`?page=${currentPage - 1}`}
                     onClick={e => {
                       e.preventDefault()
-                      setCurrentPage(Math.max(1, currentPage - 1))
+                      setCurrentPage(Math.max(1, currentPage - 1)
 
-                    }}
+                    }
                   />
                 </PaginationItem>
               </PaginationContent>
@@ -134,10 +133,8 @@ export function CountryTabs({
       </TabsContent>
     </Tabs>
   )
+
   )
-}
-  )
-}
 
 import { useState, useEffect } from 'react';
 import { Search } from 'lucide-react';
@@ -150,7 +147,7 @@ import {
   PaginationButton,
   PaginationNext,
   PaginationPrevious,
-} from '@/components / ui / pagination';
+ from '@/components / ui / pagination';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
 import { CountryServiceCard } from '@/components / services / CountryServiceCard';
 import { CountryPricing } from '@/data / onsiteServicePricing';
@@ -167,12 +164,11 @@ export /**
 function CountryTabs() {
   const [current_page, setCurrentPage] = useState (1);
   const countriesPerPage = 50;
-  useEffect (() => {
+  useEffect () => {
     setCurrentPage (1);
   }, [search_query]);
   const total_pages = Math.ceil (filtered_countries.length / countriesPerPage);
-  const paginated_countries = filtered_countries.slice (
-    (current_page - 1) * countriesPerPage,
+  const paginated_countries = filtered_countries.slice (current_page - 1) * countriesPerPage,
     current_page * countriesPerPage);
   return (
     <Tabs default_value='featured' className='w - full'>;
@@ -198,14 +194,14 @@ function CountryTabs() {
         </div>;
         <div className='grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 3 gap - 6'>;
           {filtered_countries;
-            .filter (country => popular_countries.includes (country.country));
+            .filter (country => popular_countries.includes (country.country);
             .map (country => (              <CountryServiceCard;
                 key = {country.country, }
                 country = {country, }
                 on_select = {handleCountrySelect, }
                 on_quote = {on_quote, }
                 is_popular = {true, }
-              />))}
+              />)}
         </div>;
       </TabsContent>;
       <TabsContent value='all' className='mt - 0'>;
@@ -227,7 +223,7 @@ function CountryTabs() {
               on_select = {handleCountrySelect, }
               on_quote = {on_quote, }
               is_popular = {popular_countries.includes (country.country), }
-            />))}
+            />)}
         </div>;
         {total_pages > 1 && (
           <div className='mt - 8'>;
@@ -238,8 +234,8 @@ function CountryTabs() {
                     href={`?page=${current_page - 1}`}
                     on_click={e => {
                       e.prevent_default ();
-                      setCurrentPage (Math.max (1, current_page - 1));
-                    }}
+                      setCurrentPage (Math.max (1, current_page - 1);
+                    }
                   />;
                 </PaginationItem>;
                 {Array.from ({ length: total_pages }, (_, i) => i + 1).map (
@@ -247,25 +243,24 @@ function CountryTabs() {
                     <PaginationItem key={page}>;
                       <PaginationButton;
                         page={page}
-                        is_active={page === current_page}
+                        is_active={page = = current_page}
                         on_click={e => {
                           e.prevent_default ();
-                          setCurrentPage (page) }}
+                          setCurrentPage (page) }
                       />;
-                    </PaginationItem>))}
+                    </PaginationItem>)}
                 <PaginationItem>;
                   <PaginationNext;
                     href={`?page=${current_page + 1}`}
                     on_click={e => {
                       e.prevent_default ();
-                      setCurrentPage (Math.min (total_pages, current_page + 1)) }}
+                      setCurrentPage (Math.min (total_pages, current_page + 1) }
                   />;
                 </PaginationItem>;
               </PaginationContent>;
             </Pagination>;
           </div>)}
       </TabsContent>;
-    </Tabs>));
-}
+    </Tabs>);
+
   );
-}

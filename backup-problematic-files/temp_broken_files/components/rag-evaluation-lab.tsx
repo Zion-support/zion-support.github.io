@@ -18,11 +18,11 @@ export default function RAGEvaluationLabPage() {
 							{ title: 'CI/CD Quality Gates', desc: 'Fail builds on regressions, compare models and versions.' },
 							{ title: 'Offline & Canary', desc: 'Pre-release offline runs and live traffic canaries with alerts.' },
 							{ title: 'Dashboards & Reports', desc: 'Team dashboards, API access, and exportable reports.' }
-						].map((f) => (
+						].map(f) => (
 							<div key={f.title} className=&quot;rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur&quot;>
 								<h3 className=&quot;text-lg font-semibold text-white&quot;>{f.title}</h3>
 								<p className=&quot;mt-2 text-sm text-gray-300&quot;>{f.desc}</p>							</div>
-						))}
+						)}
 					</div>
 
 					<div className=&quot;mt-12&quot;>
@@ -55,4 +55,3 @@ export default function RAGEvaluationLabPage() {
 			</section>
 		</>
 	)
-}

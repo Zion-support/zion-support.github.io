@@ -9,7 +9,7 @@ import {
   CardDescription
   CardHeader
   CardTitle
-} from '@/components/ui/card'
+ from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
   ArrowRight
   Briefcase
@@ -18,7 +18,7 @@ import { Button } from '@/components/ui/button'
   Users
   Shield
   Globe
-} from 'lucide-react'
+ from 'lucide-react'
 import { useAuth } from '@/hooks/useAuth'
 import Link from 'next/link'
 
@@ -28,23 +28,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React from 'react';
 import { Header } from '@/components/Header';
 import { SEO } from '@/components/SEO';
@@ -55,7 +55,7 @@ import {;
   CardDescription,;
   CardHeader,;
   CardTitle,;
-} from '@/components/ui/card';
+ from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import {;
   ArrowRight,;
@@ -65,7 +65,7 @@ import {;
   Users,;
   Shield,;
   Globe,;
-} from 'lucide-react';
+ from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 import Link from 'next/link';
 export default function ZionHireAI() {;
@@ -90,7 +90,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from '@/components / ui / card';
+ from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
   ArrowRight,
   Briefcase,
@@ -99,7 +99,7 @@ import { Button } from '@/components / ui / button';
   Users,
   Shield,
   Globe,
-} from 'lucide-react';
+ from 'lucide-react';
 import { use_auth } from '@/hooks / use_auth';
 import Link from 'next / link';
 export default /**
@@ -122,10 +122,9 @@ function ZionHireAI() {
           style={
             primary_color;
               ? {
-                  backgroundImage: `linear-gradient(to bottom right, ${primaryColor}, rgba(25, 33, 52, 1))`
+                  backgroundImage: `linear-gradient(to bottom right, ${primaryColor}, rgba(25, 33, 52, 1)`
                 }
-              : {}
-          }>;
+              : {}>;
           <div className='container mx-auto px-4 md:px-6'>;
             <div className='grid gap-6 md:grid-cols-2 items-center'>;
               <div className='space-y-4'>;
@@ -500,7 +499,7 @@ function ZionHireAI() {
       </main>
     </>
   )
-}
+
                 Schedule a Demo;
               </Link>;
             </Button>;
@@ -509,8 +508,7 @@ function ZionHireAI() {
       </main>;
     </>;
   );
-}
+
   );
-}
+
     </>);
-}

@@ -8,14 +8,12 @@ interface Benefit {
   icon: React.ComponentType<any>;
   title: string;
   description: string;
-}
 
 interface Pricing {
   name: string;
   price: string;
   description: string;
   features: string[];
-}
 
 interface ServiceLandingTemplateProps {
   title: string;
@@ -26,7 +24,6 @@ interface ServiceLandingTemplateProps {
   pricing: Pricing[];
   ctaText: string;
   ctaLink: string;
-}
 
 export function ServiceLandingTemplate({
   title,
@@ -37,14 +34,14 @@ export function ServiceLandingTemplate({
   pricing,
   ctaText,
   ctaLink
-}: ServiceLandingTemplateProps) {
+: ServiceLandingTemplateProps) {
   return (
     <>
       <SEO 
         title={title}
         description={description}
       />
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -54,7 +51,7 @@ export function ServiceLandingTemplate({
               subtitle={subtitle}
               className="text-center mb-16"
             />
-            
+
             <div className="text-center mb-16">
               <p className="text-xl text-gray-300 max-w-4xl mx-auto">
                 {description}
@@ -80,9 +77,9 @@ export function ServiceLandingTemplate({
               subtitle="Discover the benefits that set us apart"
               className="text-center mb-16"
             />
-            
+
             <div className="grid md:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
+              {benefits.map(benefit, index) => (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <benefit.icon className="w-8 h-8 text-white" />
@@ -94,7 +91,7 @@ export function ServiceLandingTemplate({
                     {benefit.description}
                   </p>
                 </div>
-              ))}
+              )}
             </div>
           </div>
         </section>
@@ -107,15 +104,15 @@ export function ServiceLandingTemplate({
               subtitle="Everything you need to succeed"
               className="text-center mb-16"
             />
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <div className="space-y-4">
-                {features.map((feature, index) => (
+                {features.map(feature, index) => (
                   <div key={index} className="flex items-start">
                     <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                     <span className="text-gray-300">{feature}</span>
                   </div>
-                ))}
+                )}
               </div>
               <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8">
                 <h3 className="text-2xl font-bold text-white mb-4">
@@ -144,23 +141,23 @@ export function ServiceLandingTemplate({
               subtitle="Choose the perfect plan for your needs"
               className="text-center mb-16"
             />
-            
+
             <div className="grid md:grid-cols-3 gap-8">
-              {pricing.map((plan, index) => (
+              {pricing.map(plan, index) => (
                 <div key={index} className="bg-slate-800 rounded-2xl p-8 text-center">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="text-4xl font-bold text-purple-400 mb-2">{plan.price}</div>
                   <p className="text-gray-300 mb-6">{plan.description}</p>
-                  
+
                   <ul className="space-y-3 mb-8">
-                    {plan.features.map((feature, featureIndex) => (
+                    {plan.features.map(feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center">
                         <div className="w-2 h-2 bg-purple-400 rounded-full mr-3"></div>
                         <span className="text-gray-300">{feature}</span>
                       </li>
-                    ))}
+                    )}
                   </ul>
-                  
+
                   <Link
                     href={ctaLink}
                     className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 block"
@@ -168,7 +165,7 @@ export function ServiceLandingTemplate({
                     Get Started
                   </Link>
                 </div>
-              ))}
+              )}
             </div>
           </div>
         </section>
@@ -177,4 +174,3 @@ export function ServiceLandingTemplate({
       </div>
     </>
   );
-}

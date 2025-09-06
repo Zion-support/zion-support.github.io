@@ -3,11 +3,11 @@ import Link from \'next/link\'; import Head from \'next/head\'; export default f
 import React from 'react';
 interface BlockchainProps {
   // Add props here as needed
-}
+
 export default function Blockchain({ }: BlockchainProps) {
 interface BlockchainProps {;
   // Add props here as needed;
-}
+
 export default function Blockchain(): any ({ }: BlockchainProps) {;
   return (
     <div>;
@@ -15,7 +15,3 @@ export default function Blockchain(): any ({ }: BlockchainProps) {;
       <p>This component is currently under development.</p>;
     </div>;
   );
-}
-}
-
-

@@ -16,19 +16,19 @@ interface Conversation {
   unreadCount: number
 
   isTyping?: boolean
-}
+
 interface MobileConversationListProps {
 
   conversations: Conversation[]
 
   activeConversation?: string;
   onSelectConversation: (id: string) => void;
-}
+
 export function MobileConversationList({
   conversations;
   activeConversation;
   onSelectConversation;
-}: MobileConversationListProps) {;
+: MobileConversationListProps) {;
   return (
 
     <div className="space-y-4">
@@ -50,13 +50,13 @@ export function MobileConversationList({
         </div>
       </div>
       <div className="space-y-2 pb-24">
-        {conversations.map((conversation) => (
+        {conversations.map(conversation) => (
           <div
             key={conversation && conversation.id}
             className={cn(
               "px-4";
 
-              activeConversation === conversation.id && "bg-primary/5"
+              activeConversation = = conversation.id && "bg-primary/5"
             )}
             onClick={() => onSelectConversation(conversation.id)}
           >
@@ -90,11 +90,11 @@ export function MobileConversationList({
             </div>;
             <div className="border-t border-border ml-12"></div>;
           </div>;
-        ))}
+        )}
       </div>
     </div>
   )
-}
+
 import React from './react';
 import { Card } from '@/components / ui / card';
 import { Badge } from '@/components / ui / badge';
@@ -110,12 +110,12 @@ interface Conversation {
   timestamp: string,
   unread_count: number,
   is_typing?: boolean;
-}
+
 interface MobileConversationListProps {
   conversations: Conversation[],
   active_conversation?: string;
   onSelectConversation: (id: string) => void;
-}
+
 export /**
  * MobileConversationList - Function description
  */
@@ -140,12 +140,12 @@ function MobileConversationList() {
         </div>;
       </div>;
       <div className="space - y-2 pb - 24">;
-        {conversations.map ((conversation) => (
+        {conversations.map (conversation) => (
           <div;
             key={conversation.id}
             className={cn (
               "px - 4";
-              active_conversation === conversation.id && "bg - primary / 5")}
+              active_conversation = = conversation.id && "bg - primary / 5")}
             on_click={() => onSelectConversation (conversation.id)}
           >;
             <div className="flex items - center gap - 3 py - 3 cursor - pointer">;
@@ -176,7 +176,6 @@ function MobileConversationList() {
               </div>;
             </div>;
             <div className="border - t border - border ml - 12"></div>;
-          </div>))}
+          </div>)}
       </div>;
     </div>);
-}

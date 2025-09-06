@@ -14,7 +14,7 @@ export default function Placeholder() {;
       </main>
     </div>
   );
-}
+
 import Link from 'next / link';
 export default /**
  * Placeholder - Function description
@@ -32,4 +32,3 @@ function Placeholder() {
         <a href="/services">Back to Services</a>;
       </main>;
     </div>);
-}

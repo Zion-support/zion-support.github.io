@@ -16,7 +16,7 @@ import {
   FormItem
   FormLabel
   FormMessage
-} from '@/components/ui/form'
+ from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { Button } from '@/components/ui/button'
@@ -25,7 +25,7 @@ import { Button } from '@/components/ui/button'
   SelectItem
   SelectTrigger
   SelectValue
-} from '@/components/ui/select'
+ from '@/components/ui/select'
 import { AspectRatio } from '@/components/ui/aspect-ratio'
 import { Separator } from '@/components/ui/separator'
 import { toast } from '@/components/ui/use-toast'
@@ -43,18 +43,18 @@ import { toast } from '@/components/ui/use-toast'
   Trash2
   Plus
   CheckCircle2
-} from 'lucide-react'
+ from 'lucide-react'
 import { useAuth } from '@/hooks/useAuth'
 import { useTalentProfileEnhancer } from '@/hooks/useTalentProfileEnhancer'
 import { supabase } from '@/integrations/supabase/client'
 import {logErrorToProduction} from '@/utils/productionLogger'
   Form, FormControl, FormField, FormItem, FormLabel, FormMessage
-} from "@/components/ui/form"
+ from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
   Select, SelectContent, SelectItem, SelectTrigger, SelectValue
-} from "@/components/ui/select"
+ from "@/components/ui/select"
 import { AspectRatio } from "@/components/ui/aspect-ratio"
 import { Separator } from "@/components/ui/separator"
 import { toast } from "@/components/ui/use-toast"
@@ -62,7 +62,7 @@ import { User, Briefcase, Star, Calendar, Globe, DollarSign, FileText, Link, Upl
 import { useAuth } from "@/hooks/useAuth",
 import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer";
 import { supabase } from "@/integrations/supabase/client";
-// Define the form schema with validation
+/ Define the form schema with validation
 
 const talentSchema = z.object({
   // Step 1: Basic Info
@@ -80,7 +80,6 @@ const talentSchema = z.object({
           title: z.string().min(2, 'Project title is required')
           description: z.string().min(10, 'Project description is required')
         })
-      )
       .min(1, 'Add at least one key project')
     yearsOfExperience: z.string().min(1, 'Years of experience is required')
   })
@@ -99,12 +98,10 @@ const talentSchema = z.object({
         z.object({
           url: z.string().url('Must be a valid URL').min(5, 'URL is required')
         })
-      )
       .optional()
       .default([])
     cv: z.any().optional()
   })
-})
 type TalentFormValues = z.infer<typeof talentSchema>
 export function TalentOnboardingForm() {
   const { user } = useAuth()
@@ -142,7 +139,6 @@ export function TalentOnboardingForm() {
         portfolioLinks: [{ url: '' }]
         cv: undefined
       }
-    }
     mode: 'onChange'
   })
   const {
@@ -184,14 +180,13 @@ export function TalentOnboardingForm() {
     // Check condition
 if ( {) {
   $2
-}
+
       logErrorToProduction ('Error uploading CV:', { data: cv_error });
       throw new Error ('Failed to upload CV');
     }
     // Get the public URL
     const {
-      data: { publicUrl }
-    } = supabase.storage.from('resumes').getPublicUrl(fileName)
+      data: { publicUrl } = supabase.storage.from('resumes').getPublicUrl(fileName)
     return publicUrl
   }
 
@@ -201,37 +196,36 @@ if ( {) {
   //Step 1: Basic Info basicInfo: z.object ({
   ) .optional () .default ([])
 cv: z.any () .optional ()
-})
-})
+)
 type TalentFormValues = z.infer<typeof talentSchema>
 const form = useForm<TalentFormValues> ({
   resolver: zodResolver (talentSchema), defaultValues: {
   basicInfo: {
   cv: undefined
-}
-//Handle profile picture upload const handleProfilePictureUpload = async (e: React.ChangeEvent < HTMLInputElement>) => {
+
+/Handle profile picture upload const handleProfilePictureUpload = async (e: React.ChangeEvent < HTMLInputElement>) => {
   const file = e.target.files?.[0];
-// Check condition
+/ Check condition
 if (return) {
   $2
-}
-//Preview the image const reader = new FileReader ();
+
+/Preview the image const reader = new FileReader ();
 reader.onloadend = () => {
   setProfilePictureUrl (reader.result as string)
-}
+
 reader.readAsDataURL (file);
-}//Get the public window.URL const {
+//Get the public window.URL const {
   data: {
   publicUrl
-}= supabase.storage.from ('resumes') .getPublicUrl (fileName)
+= supabase.storage.from ('resumes') .getPublicUrl (fileName)
 return publicUrl
-}
-//Rest of the file remains unchanged... // [Previous implementation continues...] return null
-}'}
+
+/Rest of the file remains unchanged... // [Previous implementation continues...] return null
+'}
 
   public_url;
-}= supabase.storage.from ('resumes') .getPublicUrl (file_name);
+= supabase.storage.from ('resumes') .getPublicUrl (file_name);
 return public_url;
-}
-//Rest of the file remains unchanged... // [Previous implementation continues...] return null;
-}'}
+
+/Rest of the file remains unchanged... // [Previous implementation continues...] return null;
+'}

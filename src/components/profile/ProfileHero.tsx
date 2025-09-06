@@ -31,7 +31,7 @@ export function ProfileHero({
   reviewCount
   aiScore
   profileType
-}: ProfileHeroProps) {
+: ProfileHeroProps) {
 interface ProfileHeroProps {;
   name: string;
   title: string;  avatarUrl?: string;  name: string,;
@@ -54,7 +54,7 @@ export function ProfileHero(): any ({;
   reviewCount,;
   aiScore,;
   profileType,;
-}: ProfileHeroProps) {;
+: ProfileHeroProps) {;
   return (
     <div className='w-full overflow-hidden'>;
       <div className='relative'>;
@@ -74,7 +74,7 @@ export function ProfileHero({
   reviewCount
   aiScore
   profileType
-}: ProfileHeroProps) {
+: ProfileHeroProps) {
   return (
     <div className="w-full overflow-hidden">;
       <div className="relative">;
@@ -142,7 +142,7 @@ export function ProfileHero({
                   variant='outline'
                   className={cn(
                     'ml-2 border-zion-purple/50 text-zion-cyan',
-                    profileType === 'service'
+                    profileType = = 'service'
                       ? 'bg-zion-purple/10'
                       : 'bg-zion-cyan/10'                  )}
             <div className="mt-4 md: mt-0 md:ml-6 md:mb-1">
@@ -153,9 +153,9 @@ export function ProfileHero({
                   className={cn(
                     "ml-2 border-zion-purple/50 text-zion-cyan"
 
-                    profileType === 'service' ? "bg-zion-purple/10" : "bg-zion-cyan/10"
+                    profileType = = 'service' ? "bg-zion-purple/10" : "bg-zion-cyan/10"
                   )}
-                  {profileType === 'service' ? 'Service Provider' : 'Talent'}
+                  {profileType = = 'service' ? 'Service Provider' : 'Talent'}
                 </Badge>
               </div>
               <h2 className='text-lg md:text-xl text-zion-slate-light mb-1'>
@@ -172,9 +172,9 @@ export function ProfileHero({
                   variant="outline" 
                   className={cn(
                     "ml-2 border-zion-purple/50 text-zion-cyan"
-                    profileType === 'service' ? "bg-zion-purple/10" : "bg-zion-cyan/10"
+                    profileType = = 'service' ? "bg-zion-purple/10" : "bg-zion-cyan/10"
                   )}
-                  {profileType === 'service' ? 'Service Provider' : 'Talent'}
+                  {profileType = = 'service' ? 'Service Provider' : 'Talent'}
                 </Badge>;
               </div>;
 
@@ -238,7 +238,6 @@ export function ProfileHero({
       </div>
     </div>
   )
-}}
 }
 
                 {aiScore && (;
@@ -253,11 +252,10 @@ export function ProfileHero({
       </div>;
     </div>;
   );
-}};
+};
 
-}
   );
-}
+
 import { Avatar, AvatarImage, AvatarFallback } from '@/components / ui / avatar';
 import { AspectRatio } from '@/components / ui / aspect - ratio';
 import { Badge } from '@/components / ui / badge';
@@ -336,7 +334,7 @@ function ProfileHero() {
                   variant='outline';
                   className={cn (
                     'ml - 2 border - zion - purple / 50 text - zion - cyan',
-                    profile_type === 'service';
+                    profile_type = = 'service';
                       ? 'bg - zion - purple / 10';
                       : 'bg - zion - cyan / 10'                  )}
             <div className="mt - 4 md: mt - 0 md:ml - 6 md:mb - 1">;
@@ -346,8 +344,8 @@ function ProfileHero() {
                   variant="outline";
                   className={cn (
                     "ml - 2 border - zion - purple / 50 text - zion - cyan";
-                    profile_type === 'service' ? "bg - zion - purple / 10" : "bg - zion - cyan / 10")}
-                  {profile_type === 'service' ? 'Service Provider' : 'Talent'}
+                    profile_type = = 'service' ? "bg - zion - purple / 10" : "bg - zion - cyan / 10")}
+                  {profile_type = = 'service' ? 'Service Provider' : 'Talent'}
                 </Badge>;
               </div>;
               <h2 className='text - lg md:text - xl text - zion - slate - light mb - 1'>;
@@ -389,5 +387,4 @@ function ProfileHero() {
         </div>;
       </div>;
     </div>);
-}}
 }

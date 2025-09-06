@@ -1,4 +1,4 @@
-{
+
   "buildTime": -1,
   "bundleSize": 128814190,
   "memoryUsage": 4.591163635253906,
@@ -7,4 +7,3 @@
   "recommendations": [
     "Consider code splitting - bundle size is large"
   ]
-}

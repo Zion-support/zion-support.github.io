@@ -6,5 +6,3 @@ export function SummitHero() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

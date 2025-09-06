@@ -16,17 +16,17 @@ export interface ExportOptions {
 
   maxProjects?: number
   fontFamily?: FontFamily
-}
+
 const defaultOptions: ExportOptions = {
   theme: 'light';
   includePortfolio: true;
   maxProjects: 2
   fontFamily: 'default'
-}
+
 export async function exportResumeToPDF(
   resume: Resume
   options: Partial<ExportOptions> = {}
-): Promise<Blob> {
+: Promise<Blob> {
   const mergedOptions: ExportOptions = { ...defaultOptions, ...options }
   const { theme, includePortfolio, maxProjects, fontFamily } = mergedOptions;
   // Create new PDF document (A4)
@@ -56,7 +56,7 @@ export async function exportResumeToPDF(
     currentY = addPortfolioSection(doc, resume && resume.portfolio_projects, colors, currentY, maxProjects)
   }
   return doc.output('blob')
-}
+
 import {Resume} from '@/types / resume';
 import {jsPDF} from 'jspdf';
 import 'jspdf - autotable';
@@ -73,53 +73,51 @@ export interface ExportOptions {
   include_portfolio?: boolean;
   max_projects?: number,
   font_family?: FontFamily;
-}
+
 const default_options: ExportOptions = {
   theme: 'light';
   include_portfolio: true;
   max_projects: 2,
   font_family: 'default';
-}
-;
+
 export async function exportResumeToPDF (
   resume: Resume,
   options: Partial < ExportOptions> = {}
-): Promise < Blob> {
+: Promise < Blob> {
   const merged_options: ExportOptions = { ...default_options, ...options }
   const { theme, include_portfolio, max_projects, font_family } = merged_options;
-;
+
   // Create new PDF document (A4);
   const doc = new jsPDF ({
     orientation: 'portrait';
     unit: 'mm',
     format: 'a4';
   });
-;
+
   // Load custom fonts if specified;
   await loadCustomFonts (doc, font_family);
-;
+
   // Set up colors based on theme;
   const colors = getPdfThemeColors (theme);
-;
+
   // Set background color;
   doc.setFillColor (colors.background);
   doc.rect (0, 0, 210, 297, 'F'), // Fill entire page;
   // Set text color based on theme;
   doc.setTextColor (colors.text);
-;
+
   // Add each section of the resume;
   let current_y = addBasicInfoSection (doc, resume.basic_info, colors);
   current_y = addSkillsSection (doc, resume.skills, colors, current_y);
   current_y = addWorkExperienceSection (doc, resume.work_experience, colors, current_y);
   current_y = addEducationSection (doc, resume.education, colors, current_y);
   current_y = addCertificationsSection (doc, resume.certifications, colors, current_y);
-;
+
   // Add portfolio projects if needed;
   // Check condition
 if ( {) {
   $2
-}
+
     current_y = addPortfolioSection (doc, resume.portfolio_projects, colors, current_y, max_projects);
   }
   return doc.output ('blob');
-}

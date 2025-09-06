@@ -17,7 +17,7 @@ export default function BlogPage() {
 			</section>
 		</Layout>
 	)
-}
+
 import React, { useState } from 'react',
 import Head from 'next / head',
 import Layout from '../components / layout / Layout',
@@ -36,4 +36,3 @@ return (
     <p className="text - gray - 300">Insights, guides, and announcements. New content coming soon.</p>;
   </section>;
   </Layout>);
-}

@@ -18,7 +18,7 @@ interface AIMilestoneGeneratorProps {
   onAddMilestones: (milestones: GeneratedMilestone[]) => void
 
   onAddMilestone: (milestone: GeneratedMilestone) => void
-}
+
 export function AIMilestoneGenerator({
   scope;
   startDate;
@@ -26,10 +26,10 @@ export function AIMilestoneGenerator({
   projectType;
   onAddMilestones;
   onAddMilestone;
-}: AIMilestoneGeneratorProps) {;
+: AIMilestoneGeneratorProps) {;
   const { generateMilestones, generatedMilestones, isGenerating, clearGeneratedMilestones } = useMilestoneGenerator();
 
-  const [selectedMilestones, setSelectedMilestones] = useState<Record<string, boolean>>({});
+  const [selectedMilestones, setSelectedMilestones] = useState<Record<string, boolean>({});
   const handleGenerateMilestones = async () => {
     if (!scope |!startDate |!projectType) {
       return
@@ -43,13 +43,13 @@ export function AIMilestoneGenerator({
     await generateMilestones(input);
     // Initially select all milestones
     const initialSelection = {}
-    generatedMilestones.forEach((_, index) => {
+    generatedMilestones.forEach(_, index) => {
       initialSelection[index] = true
     });
     setSelectedMilestones(initialSelection)
   }
   const handleAddToProject = () => {
-    const selectedMilestonesList = generatedMilestones.filter((_, index) =>
+    const selectedMilestonesList = generatedMilestones.filter(_, index) =>
       selectedMilestones[index]
     );
     onAddMilestones(selectedMilestonesList);
@@ -60,7 +60,7 @@ export function AIMilestoneGenerator({
     setSelectedMilestones(prev => ({
       ...prev
       [index]: !prev[index]
-    }))
+    })
   }
   const handleAddSingleMilestone = (milestone: GeneratedMilestone) => {
     onAddMilestone(milestone)
@@ -71,7 +71,6 @@ export function AIMilestoneGenerator({
     } catch (error) {
       return dateString
     }
-  }
   return (
     <div className="space-y-4">;
       <div className="flex items-center justify-between">;
@@ -112,7 +111,7 @@ export function AIMilestoneGenerator({
               </Button>
             </div>
             <Accordion type="multiple" className="w-full">
-              {generatedMilestones.map((milestone, index) => (
+              {generatedMilestones.map(milestone, index) => (
                 <AccordionItem value={`item-${index}`} key={index} className="border p-2 rounded-md mb-2">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center flex-1">
@@ -142,19 +141,19 @@ interface AIMilestoneGeneratorProps {
   project_type: string,
   onAddMilestones: (milestones: GeneratedMilestone[]) => void,
   onAddMilestone: (milestone: GeneratedMilestone) => void;
-}
+
 export /**
  * AIMilestoneGenerator - Function description
  */
 function AIMilestoneGenerator() {
   const { generate_milestones, generated_milestones, is_generating, clearGeneratedMilestones } = useMilestoneGenerator ();
-  const [selected_milestones, setSelectedMilestones] = useState < Record < string, boolean>>({});
-;
+  const [selected_milestones, setSelectedMilestones] = useState < Record < string, boolean>({});
+
   const handleGenerateMilestones = async () => {
     // Check condition
 if ( {) {
   $2
-}
+
       return;
     }
     const input: MilestoneInput = {
@@ -163,44 +162,43 @@ if ( {) {
       end_date,
       project_type;
     }
-;
+
     await generate_milestones (input);
     // Initially select all milestones;
     const initial_selection = {}
-    generated_milestones.for_each ((_, index) => {
+    generated_milestones.for_each (_, index) => {
       initial_selection[index] = true;
     });
     setSelectedMilestones (initial_selection);
   }
-;
+
   const handleAddToProject = () =>: any {
-    const selectedMilestonesList = generated_milestones.filter ((_, index) =>;
+    const selectedMilestonesList = generated_milestones.filter (_, index) =>;
       selected_milestones[index]);
-;
+
     onAddMilestones (selectedMilestonesList);
     clearGeneratedMilestones ();
     setSelectedMilestones ({});
   }
-;
+
   const toggleMilestoneSelection = (index: number) =>: any {
     setSelectedMilestones (prev => ({
       ...prev,
       [index]: !prev[index];
-    }));
+    });
   }
-;
+
   const handleAddSingleMilestone = (milestone: GeneratedMilestone) =>: any {
     onAddMilestone (milestone);
   }
-;
+
   const format_date = (date_string: string) =>: any {
     try {
       return format (parseISO (date_string), 'MMM dd, yyyy');
     } catch (error) {
       return date_string;
     }
-  }
-;
+
   return (
     <div className="space - y-4">;
       <div className="flex items - center justify - between">;
@@ -239,7 +237,7 @@ if ( {) {
               </Button>;
             </div>;
             <Accordion type="multiple" className="w - full">;
-              {generated_milestones.map ((milestone, index) => (
+              {generated_milestones.map (milestone, index) => (
                 <AccordionItem value={`item-${index}`} key={index} className="border p - 2 rounded - md mb - 2">;
                   <div className="flex items - center justify - between">;
                     <div className="flex items - center flex - 1">;
@@ -267,7 +265,7 @@ if ( {) {
                         e.stopPropagation();
 
                         handleAddSingleMilestone(milestone)
-                      }}
+                      }
                       className="mr-2";
                     >;
                       <Plus className="h-4 w-4" />;
@@ -286,21 +284,21 @@ if ( {) {
                     </div>;
                   </AccordionContent>;
                 </AccordionItem>;
-              ))}
+              )}
             </Accordion>;
           </CardContent>;
         </Card>;
       )}
     </div>
   )
-}
+
                     <Button;
                       variant="ghost";
                       size="sm";
                       on_click={(e) => {
                         e.stop_propagation ();
                         handleAddSingleMilestone (milestone);
-                      }}
+                      }
                       className="mr - 2";
                     >;
                       <Plus className="h - 4 w - 4" />;
@@ -318,9 +316,8 @@ if ( {) {
                       </div>;
                     </div>;
                   </AccordionContent>;
-                </AccordionItem>))}
+                </AccordionItem>)}
             </Accordion>;
           </CardContent>;
         </Card>)}
     </div>);
-}

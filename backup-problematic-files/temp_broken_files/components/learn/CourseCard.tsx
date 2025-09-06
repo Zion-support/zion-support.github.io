@@ -8,7 +8,7 @@ export type Course = {
   category: string,
   certificationBadge: string,
   description?: string
-},
+,
 
 export default function CourseCard({ course }: { course: Course }) {
   return (

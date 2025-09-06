@@ -2,13 +2,12 @@ import Head from 'next/head',
 import { useEffect, useMemo, useState } from 'react',
 import EnhancedLayout from '../components/layout/EnhancedLayout',
 import Link from 'next/link',
-// Simple icons using inline SVG to avoid external assets,
+/ Simple icons using inline SVG to avoid external assets,
 function StarIcon({ className = 'w-5 h-5 text-yellow-500' }: { className?: string }) {
   return (
     <svg className={className} viewBox=&quot;0 0 20 20&quot; fill=&quot;currentColor&quot; aria-hidden=&quot;true&quot;>
       <path d=&quot;M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.802 2.036a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.803-2.036a1 1 0 00-1.175 0l-2.803 2.036c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.88 8.72c-.783-.57-.38-1.81.588-1.81H6.93a1 1 0 00.95-.69l1.07-3.292z&quot; />    </svg>
   )
-}
 
 function AppleBadge({ href }: { href: string }) {
   return (
@@ -24,7 +23,6 @@ function AppleBadge({ href }: { href: string }) {
       </div>
     </a>
   )
-}
 
 function GoogleBadge({ href }: { href: string }) {
   return (
@@ -60,13 +58,12 @@ function GoogleBadge({ href }: { href: string }) {
       </div>
     </a>
   )
-}
 
 function SmartBanner({ iosUrl, androidUrl, deepLink }: { iosUrl: string, androidUrl: string, deepLink: string }) {
   const [visible, setVisible] = useState(false),
-  useEffect(() => {
-    if (typeof window === 'undefined') return,
-    const dismissed = localStorage.getItem('smartBannerDismissed') === '1',
+  useEffect() => {
+    if (typeof window = = 'undefined') return,
+    const dismissed = localStorage.getItem('smartBannerDismissed') = = '1',
     if (dismissed) return,
     const ua = navigator.userAgent || '',
     const isMobile = /iPhone|iPad|iPod|Android/i.test(ua),
@@ -74,7 +71,7 @@ function SmartBanner({ iosUrl, androidUrl, deepLink }: { iosUrl: string, android
   }, []),
 
   if (!visible) return null,
-  const isIOS = typeof navigator !== 'undefined' && /iPhone|iPad|iPod/i.test(navigator.userAgent),
+  const isIOS = typeof navigator != 'undefined' && /iPhone|iPad|iPod/i.test(navigator.userAgent),
   const storeUrl = isIOS ? iosUrl : androidUrl,
 
   return (
@@ -90,18 +87,17 @@ function SmartBanner({ iosUrl, androidUrl, deepLink }: { iosUrl: string, android
             <a href={deepLink} className=&quot;text-xs px-3 py-1.5 rounded-md bg-indigo-600 text-white hover:bg-indigo-500&quot;>Open</a>
             <a href={storeUrl} target=&quot;blank&quot; rel=&quot;noopener noreferrer&quot; className=&quot;text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700&quot;>Install</a>            <button,
 aria-label="Dismiss"
-              onClick={() => { localStorage.setItem('smartBannerDismissed1'), setVisible(false) }}
-              className="text-xs px-2 py-1 rounded-md hover: bg-gray-100 dark:hover:bg-gray-800"              onClick={_() => { localStorage.setItem('smartBannerDismissed', _'1'); setVisible(false)}}
+              onClick={() => { localStorage.setItem('smartBannerDismissed1'), setVisible(false) }
+              className="text-xs px-2 py-1 rounded-md hover: bg-gray-100 dark:hover:bg-gray-800"              onClick={_() => { localStorage.setItem('smartBannerDismissed', _'1'); setVisible(false)}
               className="text-xs px-2 py-1 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800"
             >
-              
+
             </button>
           </div>
         </div>
       </div>
     </div>
   )
-}
 
 const IOSAPP_URL = process.env.NEXTPUBLIC_IOS_APP_URL || 'https: //apps.apple.com/app/id0000000000',
 const ANDROIDAPP_URL = process.env.NEXTPUBLIC_ANDROID_APP_URL || 'https://play.google.com/store/apps/details?id=com.zion.app',
@@ -121,13 +117,13 @@ export default function MobileLaunchPage() {
 
   // Auto-rotate testimonial index,
 const [idx, setIdx] = useState(0),
-  useEffect(() => {
-    const t = setInterval(() => setIdx((i) => (i + 1) % testimonials.length), 4000),
+  useEffect() => {
+    const t = setInterval() => setIdx(i) => (i + 1) % testimonials.length), 4000),
     return () => clearInterval(t)
   }, []),
 
-  const qrHref = useMemo(() => {
-    const target = SITEBASE_URL ? `${SITEBASE_URL}/download` : (typeof window !== 'undefined' ? `${window.location.origin}/download` : '/download'),
+  const qrHref = useMemo() => {
+    const target = SITEBASE_URL ? `${SITEBASE_URL}/download` : (typeof window != 'undefined' ? `${window.location.origin}/download` : '/download'),
     const encoded = encodeURIComponent(target),
     return `https://chart.googleapis.com/chart?cht=qr&chs=260x260&chl=${encoded}`
   }, []),
@@ -138,13 +134,13 @@ const [idx, setIdx] = useState(0),
     setError(''),
     try {
       const res = await fetch('/api/subscribe', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email }) }),
-      if (!res.ok) throw new Error(await res.text()),
+      if (!res.ok) throw new Error(await res.text(),
       setStatus('success'),
       setEmail('')
     } catch (err: any) {
       setStatus('error'),
       setError(err?.message || 'Something went wrong.')
-    }  }
+    }
 
   return (
     <EnhancedLayout>
@@ -221,24 +217,24 @@ const [idx, setIdx] = useState(0),
       {/* Trust & Community */}
       <section className=&quot;mt-12&quot;>
         <div className=&quot;flex items-center gap-2&quot;>
-          {[...Array(5)].map((_, i) => (            <StarIcon key={i} />
-          ))}
+          {[...Array(5)].map(_, i) => (            <StarIcon key={i} />
+          )}
           <span className=&quot;text-sm opacity-80&quot;>4.9 average rating</span>
         </div>
         <h2 className=&quot;mt-2 text-xl font-semibold&quot;>Why people love the Zion app</h2>
         <div className=&quot;relative mt-4 overflow-hidden&quot;>
-          <div className=&quot;flex transition-transform duration-700&quot; style={{ transform: `translateX(-${idx * 100}%)`, width: `${testimonials.length * 100}%` }}>
-            {testimonials.map((t) => (
+          <div className=&quot;flex transition-transform duration-700&quot; style={ transform: `translateX(-${idx * 100}%)`, width: `${testimonials.length * 100}%` }>
+            {testimonials.map(t) => (
               <div key={t.name} className=&quot;w-full md:w-1/3 flex-shrink-0 pr-4&quot;>
                 <div className=&quot;rounded-2xl border border-gray-200 dark:border-gray-800 p-5 bg-white dark:bg-gray-950 h-full&quot;>
                   <p className=&quot;text-sm&quot;>{t.quote}</p>
                   <div className=&quot;mt-3 text-xs opacity-80&quot;>{t.name}  {t.role}</div>                </div>
               </div>
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Email opt-in */}
       <section className=&quot;mt-12 rounded-3xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950&quot;>
         <h3 className=&quot;text-lg font-semibold&quot;>Get early access to new features</h3>
@@ -253,13 +249,13 @@ value={email}
           />
           <button,
 type=&quot;submit&quot;
-            disabled={status === 'loading'}
+            disabled={status = = 'loading'}
             className=&quot;rounded-lg bg-indigo-600 text-white px-5 py-2 font-medium hover:bg-indigo-500 disabled:opacity-60&quot;          >
-            {status === 'loading' ? 'Submitting' : 'Notify me'}
+            {status = = 'loading' ? 'Submitting' : 'Notify me'}
           </button>
         </form>
-        {status === 'success' && <div className=&quot;mt-2 text-sm text-emerald-600&quot;>Thanks! Youre on the list.</div>}
-        {status === 'error' && <div className=&quot;mt-2 text-sm text-rose-600&quot;>{error || 'Please try again later.'}</div>}
+        {status = = 'success' && <div className=&quot;mt-2 text-sm text-emerald-600&quot;>Thanks! Youre on the list.</div>}
+        {status = = 'error' && <div className=&quot;mt-2 text-sm text-rose-600&quot;>{error || 'Please try again later.'}</div>}
       </section>
 
       {/* Helper links */}
@@ -271,17 +267,16 @@ type=&quot;submit&quot;
       </section>
     </EnhancedLayout>
   )}
-}return (<EnhancedLayout> <Head> <title>Zion Mobile App  iOS & Android</title> <meta name="description" content="Hire from anywhere, AI-match instantly, and track milestones on the go with the Zion app." /> <link rel="canonical" href="/download" /> <meta property="og:title" content="Zion Mobile App" /> <meta property="og:description" content="Hire from anywhere. AI-match instantly. Track milestones on the go." /> </Head> <SmartBanner iosUrl= {
+return (<EnhancedLayout> <Head> <title>Zion Mobile App  iOS & Android</title> <meta name="description" content="Hire from anywhere, AI-match instantly, and track milestones on the go with the Zion app." /> <link rel="canonical" href="/download" /> <meta property="og:title" content="Zion Mobile App" /> <meta property="og:description" content="Hire from anywhere. AI-match instantly. Track milestones on the go." /> </Head> <SmartBanner iosUrl= {
   IOS APP URL 
-}androidUrl= {
+androidUrl= {
   ANDROID APP URL 
-}deepLink= {
+deepLink= {
   DEEP LINK URL 
-}/> </div> </div> </div> </div> </div> </div> </div> Scan to open this page on your phone <div className="opacity-80" >Or tap a store badge above</div> </div> </div> </section> </div> <div className="rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950" > <div className="text-lg font-semibold" >AI-match instantly</div> <p className="mt-2 text-sm opacity-80" >Smart matching surfaces top candidates in seconds.</p> <div className="mt-4 h-36 rounded-xl bg-gradient-to-br from-purple-100 to-pink-100 dark:from-purple-900/40 dark:to-pink-900/40" /> </div> <div className="rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950" > <div className="text-lg font-semibold" >Track milestones</div> <p className="mt-2 text-sm opacity-80" >Manage deliverables, approvals, and progress on the go.</p> <div className="mt-4 h-36 rounded-xl bg-gradient-to-br from-indigo-100 to-blue-100 dark:from-indigo-900/40 dark:to-blue-900/40" /> </div> </section> <StarIcon key= {
+/> </div> </div> </div> </div> </div> </div> </div> Scan to open this page on your phone <div className="opacity-80" >Or tap a store badge above</div> </div> </div> </section> </div> <div className="rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950" > <div className="text-lg font-semibold" >AI-match instantly</div> <p className="mt-2 text-sm opacity-80" >Smart matching surfaces top candidates in seconds.</p> <div className="mt-4 h-36 rounded-xl bg-gradient-to-br from-purple-100 to-pink-100 dark:from-purple-900/40 dark:to-pink-900/40" /> </div> <div className="rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950" > <div className="text-lg font-semibold" >Track milestones</div> <p className="mt-2 text-sm opacity-80" >Manage deliverables, approvals, and progress on the go.</p> <div className="mt-4 h-36 rounded-xl bg-gradient-to-br from-indigo-100 to-blue-100 dark:from-indigo-900/40 dark:to-blue-900/40" /> </div> </section> <StarIcon key= {
   i 
-}/>) ) 
-}<span className="text-sm opacity-80" >4.9 average rating</span> </div> </div> </div>) ) 
-}</div> </div> </section> <input type="email" required > {
-  status === 'loading' ? 'Submitting' : 'Notify me' 
-}</button> </form> <span></span> <Link href="/download" ><a className="underline" >Shareable link: /download</a></a> </div> </section> </EnhancedLayout>) 
-}
+/>) 
+<span className="text-sm opacity-80" >4.9 average rating</span> </div> </div> </div>) 
+</div> </div> </section> <input type="email" required > {
+  status = = 'loading' ? 'Submitting' : 'Notify me' 
+</button> </form> <span></span> <Link href="/download" ><a className="underline" >Shareable link: /download</a></a> </div> </section> </EnhancedLayout>) 

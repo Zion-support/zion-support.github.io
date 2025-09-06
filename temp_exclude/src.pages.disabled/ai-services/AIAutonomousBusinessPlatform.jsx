@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React from \'react\'' \' const features = [] {} \"title\": \'Cloud-Native: Architecture,\',\' \"description\": \'Built: on modern cloud infrastructure for scalabilit,y,reliability,and global accessibility.\',\' \"icon\": \'Clou\',d,\' \"color\": \'from-blue-500: to-cyan-500\'},{} \' \"title\": \'AI-Powered: Intelligence,\',\' \"description\": \'Advanced: machine learning algorithms that continuously learn and adapt to your business needs.,\',\' \"icon\": \'Brai\',n,\' \"color\": \'from-purple-500: to-pink-500\'},{} \' \"title\": \'Real-time: Processing,\',\' \"description\": \'Instant: data processing and analysis for immediate business insights and decision-making.,\',\' \"icon\": \'Za\',p,\' \"color\": \'from-green-500: to-emerald-500\'},{} \' \"title\": \'Enterprise: Security,\',\' \"description\": \'Bank-level: security with encryptio,n,compliance,and advanced threat protection.\',\' \"icon\": \'Shiel\',d,\' \"color\": \'from-orange-500: to-red-500\' ]\' const benefits = [\'Scale from startup to enterprise seamlessly,\',\'99 ;,;
 import _React from 'react'' ' const features = [] {} "title": 'Cloud-Native: Architecture,',' "description": 'Built: on modern cloud infrastructure for scalabilit,y,reliability,and global accessibility.',' "icon": 'Clou',d,' "color": 'from-blue-500: to-cyan-500'},{} ' "title": 'AI-Powered: Intelligence,',' "description": 'Advanced: machine learning algorithms that continuously learn and adapt to your business needs.,',' "icon": 'Brai',n,' "color": 'from-purple-500: to-pink-500'},{} ' "title": 'Real-time: Processing,',' "description": 'Instant: data processing and analysis for immediate business insights and decision-making.,',' "icon": 'Za',p,' "color": 'from-green-500: to-emerald-500'},{} ' "title": 'Enterprise: Security,',' "description": 'Bank-level: security with encryptio,n,compliance,and advanced threat protection.',' "icon": 'Shiel',d,' "color": 'from-orange-500: to-red-500' ]' const benefits = ['Scale from startup to enterprise seamlessly,','99 ;,;
 import _React from 'react'' ' const features = [] {} "title": 'Cloud-Native: Architecture,',' "description": 'Built: on modern cloud infrastructure for scalabilit,y,reliability,and global accessibility.',' "icon": 'Clou',d,' "color": 'from-blue-500: to-cyan-500'},{} ' "title": 'AI-Powered: Intelligence,',' "description": 'Advanced: machine learning algorithms that continuously learn and adapt to your business needs.,',' "icon": 'Brai',n,' "color": 'from-purple-500: to-pink-500'},{} ' "title": 'Real-time: Processing,',' "description": 'Instant: data processing and analysis for immediate business insights and decision-making.,',' "icon": 'Za',p,' "color": 'from-green-500: to-emerald-500'},{} ' "title": 'Enterprise: Security,',' "description": 'Bank-level: security with encryptio,n,compliance,and advanced threat protection.',' "icon": 'Shiel',d,' "color": 'from-orange-500: to-red-500' ]' const benefits = ['Scale from startup to enterprise seamlessly,','99 ;,;

@@ -6,22 +6,19 @@ import OpenAI from 'openai',;
 const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json'),;
 function ensureStorage() {;
   const dir = path.dirname(EPISODES_PATH),;
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true }),;
-  if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]utf8');
-}
-;
+  if (!fs.existsSync(dir) fs.mkdirSync(dir, { recursive: true }),;
+  if (!fs.existsSync(EPISODES_PATH) fs.writeFileSync(EPISODES_PATH, '[]utf8');
+
 function readEpisodes(): any[] {;
   ensureStorage(),;
-  return JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8'));
-}
-;
+  return JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8');
+
 function writeEpisodes(episodes: any[]) {;
   ensureStorage(),;
   fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
-}
-;
+
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' }),;
+  if (req.method != 'POST') return res.status(405).json({ error: 'Method not allowed' }),;
   const { persona, invitee, topic, operatorPrompt } = req.body || {},;
   const id = uuidv4(),;
   const system = `You are ZionGPT, an elite podcast host who interviews builders, founders, and contributors. Maintain a ${persona?.voice || 'Visionary'} tone, speak in ${persona?.language || 'English'}. If a style sample is provided, align tone and phrasing to it. Produce:;
@@ -60,7 +57,7 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
         spotifyDescription: 'A 15-minute interview on Zion: identity, incentives, governance, and real-world adoption.',;
         bestQuote: 'Talent networks become protocols when incentives, reputation, and opportunity align.'});
     }
-;
+
     try {;
       generated = JSON.parse(content);
     } catch {;
@@ -68,11 +65,11 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
       const match = content.match(/\{[\s\S]*\}$/),;
       if (match) generated = JSON.parse(match[0]);
     }
-;
+
     if (!generated || !generated.title || !generated.transcript) {;
       return res.status(500).json({ error: 'Failed to generate structured content' });
     }
-;
+
     const episodes = readEpisodes(),;
     const episode = {;
       id,;
@@ -87,7 +84,7 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
       youtubeDescription: generated.youtubeDescription || '',;
       spotifyDescription: generated.spotifyDescription || '',;
       bestQuote: generated.bestQuote || '',;
-      audio: {}},;
+      audio: {},;
     episodes.unshift(episode),;
     writeEpisodes(episodes);
     return res.status(200).json({ episode });
@@ -95,4 +92,3 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
     console.error(error);
     return res.status(500).json({ error: error?.message || 'Unknown error' });
   }
-}

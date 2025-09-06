@@ -16,7 +16,7 @@ export default function EntertainmentMediaSolutions() {
       </div>
     </>
   )
-}
+
 import React from 'react',
 import Head from 'next / head',
 export default /**
@@ -37,4 +37,3 @@ function EntertainmentMediaSolutions() {
         </section>;
       </div>;
     </>);
-}

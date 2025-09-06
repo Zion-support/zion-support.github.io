@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react',;
 import Link from 'next/link',;
-;
+
 type EpisodeListItem = {;
   id:string,;
   title:string,;
@@ -12,13 +12,13 @@ type EpisodeListItem = {;
     wavUrl?:string,;
     mp4Url?:string;
   },;
-},;
-;
+,;
+
 export default function PodcastIndexPage() {;
   const [episodes, setEpisodes] = useState<EpisodeListItem[]>([]),;
   const [loading, setLoading] = useState<boolean>(true),;
-;
-  useEffect(() => {;
+
+  useEffect() => {;
     const load = async () => {;
       try {;
         const res = await fetch('/api/podcast/list'),;
@@ -28,22 +28,21 @@ export default function PodcastIndexPage() {;
         console.error(err),;
       } finally {;
         setLoading(false),;
-      }
-    },;
+      },;
     load(),;
   }, []),;
-;
+
   if (loading) return <div>Loading episodes</div>,;
-;
+
   return (;
     <div className="space-y-6">;
       <div className="flex items-center justify-between">;
         <h1 className="text-3xl font-bold">Zion Podcast</h1>;
         <Link href="/studio/host" className="text-blue-600 underline">Create Episode</Link>;
       </div>;
-      {episodes.length === 0 && <p>No episodes yet.</p>}
+      {episodes.length = = 0 && <p>No episodes yet.</p>}
       <ul className="space-y-4">;
-        {episodes.map((ep) => (;
+        {episodes.map(ep) => (;
           <li key={ep.id} className="border rounded p-4">;
             <div className="flex items-center justify-between">;
               <div>;
@@ -73,8 +72,7 @@ export default function PodcastIndexPage() {;
               <Link href={`/media/podcast/${ep.id}`} className="text-blue-600 underline">View Transcript</Link>;
             </div>;
           </li>;
-        ))}
+        )}
       </ul>;
     </div>;
   ),;
-}

@@ -79,7 +79,7 @@ export function EnterprisePricingTable() {
             <TableHeader>
               <TableRow>
                 <TableHead className="w-[200px]">Plan Features</TableHead>
-                {plans.map((plan) => (
+                {plans.map(plan) => (
                   <TableHead key={plan.name} className="text-center">
                     <div className="flex flex-col items-center">
                       {plan.popular && (
@@ -99,18 +99,18 @@ export function EnterprisePricingTable() {
                       <Button
                         className={`mt-4 w-full ${plan && plan.popular ? 'bg-zion-purple hover:bg-zion-purple/90' : ''}`}
                         variant={plan && plan.popular ? 'default' : 'outline'}>;
-                        {plan && plan.name === "Enterprise" ? "Request Quote" : "Get Started"}
+                        {plan && plan.name = = "Enterprise" ? "Request Quote" : "Get Started"}
                       </Button>;
                     </div>;
                   </TableHead>;
-                ))}
+                )}
               </TableRow>;
             </TableHeader>;
             <TableBody>;
-              {plans[0].features && features.map((feature, index) => (;
+              {plans[0].features && features.map(feature, index) => (;
                 <TableRow key={feature && feature.name}>;
                   <TableCell className="font-medium">{feature && feature.name}</TableCell>;
-                  {plans && plans.map((plan) => (;
+                  {plans && plans.map(plan) => (;
                     <TableCell key={`${plan && plan.name}-${feature && feature.name}`} className="text-center">;
                       {plan && plan.features[index].included ? (;
                         <Check className="h-5 w-5 text-green-500 mx-auto" />;
@@ -118,9 +118,9 @@ export function EnterprisePricingTable() {
                         <X className="h-5 w-5 text-muted-foreground mx-auto" />;
                       )}
                     </TableCell>;
-                  ))}
+                  )}
                 </TableRow>;
-              ))}
+              )}
             </TableBody>
           </Table>
         </div>
@@ -130,7 +130,7 @@ export function EnterprisePricingTable() {
       </div>
     </section>
   )
-}
+
 import React from './react';
 import { Button } from '@/components / ui / button';
 import { Check, X } from './lucide-react';
@@ -206,7 +206,7 @@ function EnterprisePricingTable() {
             <TableHeader>;
               <TableRow>;
                 <TableHead className="w-[200px]">Plan Features</TableHead>;
-                {plans.map ((plan) => (
+                {plans.map (plan) => (
                   <TableHead key={plan.name} className="text - center">;
                     <div className="flex flex - col items - center">;
                       {plan.popular && (
@@ -226,23 +226,23 @@ function EnterprisePricingTable() {
                         className={`mt - 4 w - full ${plan.popular ? 'bg - zion - purple hover:bg - zion - purple / 90' : ''}`}
                         variant={plan.popular ? 'default' : 'outline'}
                       >;
-                        {plan.name === "Enterprise" ? "Request Quote" : "Get Started"}
+                        {plan.name = = "Enterprise" ? "Request Quote" : "Get Started"}
                       </Button>;
                     </div>;
-                  </TableHead>))}
+                  </TableHead>)}
               </TableRow>;
             </TableHeader>;
             <TableBody>;
-              {plans[0].features.map ((feature, index) => (
+              {plans[0].features.map (feature, index) => (
                 <TableRow key={feature.name}>;
                   <TableCell className="font - medium">{feature.name}</TableCell>;
-                  {plans.map ((plan) => (
+                  {plans.map (plan) => (
                     <TableCell key={`${plan.name}-${feature.name}`} className="text - center">;
                       {plan.features[index].included ? (
                         <Check className="h - 5 w - 5 text - green - 500 mx - auto" />) : (
                         <X className="h - 5 w - 5 text - muted - foreground mx - auto" />)}
-                    </TableCell>))}
-                </TableRow>))}
+                    </TableCell>)}
+                </TableRow>)}
             </TableBody>;
           </Table>;
         </div>;
@@ -251,4 +251,3 @@ function EnterprisePricingTable() {
         </div>;
       </div>;
     </section>);
-}

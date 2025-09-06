@@ -14,14 +14,14 @@ export type Real2036InnovativeService = {
   competitiveAdvantage?: string;
   integration?: string[];
   useCases?: string[];};  useCases?: string[]
-};
+;
 
 export const real2036InnovativeServices: Real2036InnovativeService[] = [
   // AI-Powered Business Intelligence
   {
     id: 'ai-business-intelligence-platform-pro',
   useCases?: string[];};  useCases?: string[]
-}
+
 export const real2036InnovativeServices: Real2036InnovativeService[] = [
   // AI-Powered Business Intelligence
   {
@@ -839,7 +839,7 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [
       'Risk management'
     ]
   }
-];      'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentReal-time trackingPerformance analyticsCustom workflows'
+;      'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentReal-time trackingPerformance analyticsCustom workflows'
     rating: 4.7;
     marketSize: '$28.4B'
     targetAudience: 'Manufacturing companies, Retail businesses, Logistics providers';
@@ -847,10 +847,10 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [
     integration: ['ERP systemsWMS platformsTMS solutionsIoT devicesCloud services']
     useCases: ['Demand planningInventory managementLogistics optimizationRisk management']
   }
-];
+;
 
   useCases?: string[]
-};
+;
 
 export const real2036InnovativeServices: Real2036InnovativeService[] = [
   // AI-Powered Business Intelligence
@@ -1129,7 +1129,7 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [
     integration: ['ERP systemsWMS platformsTMS solutionsIoT devicesCloud services'],
     useCases: ['Demand planningInventory managementLogistics optimizationRisk management']
   }
-];
+;
     link: 'https://ziontechgroup.com / services / ai - supply - chain - optimization - platform',
     launch_date: '2036 - 03 - 30',
     rating: 4.7,
@@ -1152,7 +1152,7 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [
       'Risk management',
     ],
   },
-];      'Demand forecasting_inventory optimization_route optimization_supplier management_risk assessment_real - time tracking_performance analytics_custom workflows';
+;      'Demand forecasting_inventory optimization_route optimization_supplier management_risk assessment_real - time tracking_performance analytics_custom workflows';
     ];
     link: 'https://ziontechgroup.com / services / ai - supply - chain - optimization - platform';
     launch_date: '2036 - 03 - 30';
@@ -1163,5 +1163,4 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [
     integration: ['ERP systemsWMS platformsTMS solutionsIoT devices_cloud services'],
     use_cases: ['Demand planning_inventory management_logistics optimization_risk management'];
   }
-];
 ;

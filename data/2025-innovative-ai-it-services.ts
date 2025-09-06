@@ -901,9 +901,9 @@ export const innovativeAIServices2025: InnovativeAIService[] = [
     rating: 4 && 4.9,
     reviews: 189,
   },
-];      'Medical imaging analysisDisease diagnosisTreatment planningPatient monitoringDrug discoveryClinical research'
+;      'Medical imaging analysisDisease diagnosisTreatment planningPatient monitoringDrug discoveryClinical research'
 
-];      'Medical imaging analysis_disease diagnosis_treatment planning_patient monitoring_drug discovery_clinical research';
+;      'Medical imaging analysis_disease diagnosis_treatment planning_patient monitoring_drug discovery_clinical research';
     ];
     benefits: [
       'First-mover advantage in AI consciousnessEthical AI development complianceBreakthrough research capabilitiesPatent-pending consciousness frameworksIndustry-leading consciousness metrics'
@@ -1337,5 +1337,4 @@ export const innovativeAIServices2025: InnovativeAIService[] = [
     rating: 4.9,
     reviews: 189;
   }
-];
 ;

@@ -1,10 +1,10 @@
 import React, { useState } from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
-;
+
 export default function FAQPage() {;
   const [openCategory, setOpenCategory] = useState('general'),;
-;
+
   const faqData = {;
     general:[;
       {;
@@ -103,7 +103,7 @@ export default function FAQPage() {;
       }
     ];
   },;
-;
+
   const categories = [;
     { id:'general', name:'General Questions', icon:'' },;
     { id:'technology', name:'Technology & AI', icon:'' },;
@@ -112,7 +112,7 @@ export default function FAQPage() {;
     { id:'healthcare', name:'Healthcare Solutions', icon:'' },;
     { id:'pricing', name:'Pricing & Business', icon:'' }
   ],;
-;
+
   return (;
     <>;
       <Head>;
@@ -122,7 +122,6 @@ export default function FAQPage() {;
         <meta property="og:description" content="Find answers to common questions about Zion Tech Group's AI automation solutions." />;
         <meta name="twitter:card" content="summary_large_image" />;
       </Head>;
-      ;
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">;
         <main className="container mx-auto px-6 py-12">;
           <div className="max-w-6xl mx-auto">;
@@ -131,7 +130,6 @@ export default function FAQPage() {;
                  Back to Home;
               </Link>;
             </nav>;
-            ;
             <header className="text-center mb-16">;
               <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">;
                 Frequently Asked Questions;
@@ -141,16 +139,15 @@ export default function FAQPage() {;
                 implementation process, and services.;
               </p>;
             </header>;
-            ;
             {/* Category Navigation */}
             <div className="mb-12">;
               <div className="flex flex-wrap gap-4 justify-center">;
-                {categories.map((category) => (;
+                {categories.map(category) => (;
                   <button;
                     key={category.id}
                     onClick={() => setOpenCategory(category.id)}
                     className={`flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${;
-                      openCategory === category.id;
+                      openCategory = = category.id;
                         ? 'bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white';
                         :'bg-white/10 text-white/80 hover:bg-white/20 hover:text-white';
                     }`}
@@ -158,13 +155,12 @@ export default function FAQPage() {;
                     <span className="text-lg">{category.icon}</span>;
                     {category.name}
                   </button>;
-                ))}
+                )}
               </div>;
             </div>;
-            ;
             {/* FAQ Content */}
             <div className="space-y-6">;
-              {faqData[openCategory as keyof typeof faqData]?.map((item, index) => (;
+              {faqData[openCategory as keyof typeof faqData]?.map(item, index) => (;
                 <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">;
                   <h3 className="text-xl font-bold mb-4 text-cyan-400">;
                     {item.question}
@@ -173,9 +169,8 @@ export default function FAQPage() {;
                     {item.answer}
                   </p>;
                 </div>;
-              ))}
+              )}
             </div>;
-            ;
             {/* Contact Section */}
             <section className="mt-20 text-center">;
               <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20">;
@@ -200,7 +195,6 @@ export default function FAQPage() {;
                 </div>;
               </div>;
             </section>;
-            ;
             {/* Related Pages */}
             <section className="mt-16">;
               <h2 className="text-2xl font-bold mb-8 text-center text-white">Explore More</h2>;
@@ -212,7 +206,6 @@ export default function FAQPage() {;
                   <h3 className="text-lg font-semibold text-cyan-400 mb-2">Our Services</h3>;
                   <p className="text-white/80 text-sm">Discover our comprehensive AI automation solutions</p>;
                 </Link>;
-                ;
                 <Link href="/blog" className="bg-white/10 rounded-xl p-6 border border-white/20 hover:border-fuchsia-400/30 transition-all duration-300 text-center group">;
                   <div className="w-16 h-16 bg-gradient-to-br from-fuchsia-400 to-purple-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">;
                     <span className="text-2xl"></span>;
@@ -220,7 +213,6 @@ export default function FAQPage() {;
                   <h3 className="text-lg font-semibold text-fuchsia-400 mb-2">Blog & Insights</h3>;
                   <p className="text-white/80 text-sm">Read our latest thoughts on AI and automation</p>;
                 </Link>;
-                ;
                 <Link href="/case-studies" className="bg-white/10 rounded-xl p-6 border border-white/20 hover:border-green-400/30 transition-all duration-300 text-center group">;
                   <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-teal-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">;
                     <span className="text-2xl"></span>;
@@ -242,4 +234,3 @@ import Head from 'next/head',;
       <Head><title>faq - Zion App</title><meta name="description" content="faq page" /></Head><div className="container mx-auto px-4 py-8"><h1 className="text-3xl font-bold mb-6">faq</h1><p className="text-lg mb-4">This page is under construction.</p><div className="mt-4"><a href="/" className="text-blue-600 hover:underline">,;
              Back to Home</a></div></div></>,;
   );
-}

@@ -11,7 +11,7 @@ import {
   Settings
   MessageSquare
   Smartphone
-} from 'lucide-react'
+ from 'lucide-react'
 
 interface QuickAccessProps {;
   className?: string;
@@ -72,7 +72,7 @@ export function QuickAccess({ className, style }: QuickAccessProps) {
           </p>
         </div>
         <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-6xl mx-auto'>
-          {quickLinks.map((link, index) => (
+          {quickLinks.map(link, index) => (
             <Link
               key={index}
               href={link.link}
@@ -97,16 +97,14 @@ export default function Page() {"
     { name: "Business", count: 14, color: "from-indigo-500 to-purple-500" };      scale: 1
       transition: {
         duration: 0.5, ";
-        ease: "ease_out"}}}
+        ease: "ease_out"}}
   const hover_variants = {
   hover: {
       y: -8,      scale: 1.02
       transition: {
         duration: 0.3, "  ease: "ease_out";
-}}}
 }
-}
-}
+
   return (    <section className="py - 20 bg - gradient - to - br from - zion - slate via - zion - slate - dark to - black relative overflow - hidden">;
       {/* Background Elements */}";
       <div className="absolute inset - 0 opacity - 30">";
@@ -114,72 +112,65 @@ export default function Page() {"
         <div className="absolute bottom - 20 right - 20 w - 80 h - 80 bg - zion - purple / 10 rounded - full blur - 3xl"></div>";
         <div className="absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 w - 96 h - 96 bg - zion - blue / 10 rounded - full blur - 3xl"></div>;
       </div>;
-";
       <div className="container - responsive relative z - 10">;
         {/* Header */}
         <motion.div;
-          initial = {
-  { opacity: 0
+          initial = { opacity: 0
   y: 30
-}}
-          whileInView = {
-  { opacity: 1
+}
+          whileInView = { opacity: 1
   y: 0
-}}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}";
+}
+          transition={ duration: 0.8 }
+          viewport={ once: true }";
           className="text - center mb - 16">;
           <motion.div;
-            initial={{ scale: 0 }}
-            whileInView={{ scale: 1 }}
-            transition = {
-  { duration: 0.6
+            initial={ scale: 0 }
+            whileInView={ scale: 1 }
+            transition = { duration: 0.6
   delay: 0.2
-}}
-            viewport={{ once: true }}";
+}
+            viewport={ once: true }";
             className="inline - flex items - center gap - 2 px - 4 py - 2 bg - zion - cyan / 10 border border - zion - cyan / 20 rounded - full text - zion - cyan mb - 6">;
             Quick Access to Our Services;
           </motion.h2>;
           <motion.p;
-            initial = {
-  { opacity: 0
+            initial = { opacity: 0
   y: 20
-}}
-            whileInView = {
-  { opacity: 1
+}
+            whileInView = { opacity: 1
   y: 0
-}}
-            transition = {
-  { duration: 0.6
+}
+            transition = { duration: 0.6
   delay: 0.2
-}}"
+}"
             className="text-lg text-gray-300 max-w-2xl mx-auto">
             Find the perfect solution for your business needs with our organized service categories
           </motion.p>
         </div>
         {/* Quick Links Grid */}"
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {quickLinks.map((link, index <motion.div
+          {quickLinks.map(link, index <motion.div
               key={link.title}
               variants={hover_variants}";
               while_hover="hover";
               onHoverStart={(: unknown setHoveredCategory (link.title)}
               onHoverEnd={: unknown setHoveredCategory (null)}
-              on_click={: unknown setSelectedCategory (selected_category === link.title ? null : link.title)}
+              on_click={: unknown setSelectedCategory (selected_category = = link.title ? null : link.title)}
               className={`group cursor - pointer ${link.bg_color} ${link.border_color} border rounded - 2xl p - 6 backdrop - blur - sm transition - all duration - 300 hover:shadow - 2xl hover:shadow - zion - cyan / 25`}
             >;
               {/* Icon and Header */}";
               <div className="flex items - start justify - between mb - 4">;
                 <motion.div`;
                   className={`p - 3 rounded - xl bg - gradient - to - r ${link.color} bg - opacity - 20`}
-                  while_hover={{ rotate: 360 }}
-                  transition={{ duration: 0.6 }}
+                  while_hover={ rotate: 360 }
+                  transition={ duration: 0.6 }
                 >";
                   <link.icon className="w - 6 h - 6 text - white" />;
                 </motion.div>;
                 <motion.div;
-                  animate={{ rotate: hovered_category === link.title ? 90 : 0 }}
-                  transition={{ duration: 0.3 }}
+                  animate={ rotate: hovered_category = = link.title ? 90 : 0 }
+                  transition={ duration: 0.3 }
                 >";
                   <ChevronRight className="w - 5 h - 5 text - gray - 400 group - hover:text - zion - cyan transition - colors"  />                </motion.div>;
               </div>;
@@ -198,23 +189,20 @@ export default function Page() {"
                   {link.features.slice (0, 2).map (feature: unknown, idx: unknown (
                     <motion.div;
                       key={feature}
-                      initial = {
-  { opacity: 0
+                      initial = { opacity: 0
   x: -10
-}}
-                      whileInView = {
-  { opacity: 1
+}
+                      whileInView = { opacity: 1
   x: 0
-}}
-                      transition = {
-  { duration: 0.4
+}
+                      transition = { duration: 0.4
   delay: 0.1 + idx * 0.1
-}}
-                      viewport={{ once: true }}";
+}
+                      viewport={ once: true }";
                       className="flex items - center gap - 2 text - xs text - gray - 400">";
                       <div className="w - 1.5 h - 1.5 bg - zion - cyan rounded - full"></div>";
                       <span className="truncate">{feature}</span>;
-                    </motion.div>))}
+                    </motion.div>)}
                 </div>;
               </div>;
               {/* Stats */}";
@@ -223,30 +211,27 @@ export default function Page() {"
                   {Object.entries (link.stats).slice (0, 2).map ([key: unknown, value]: unknown, idx: unknown (
                     <motion.div;
                       key={key}
-                      initial = {
-  { opacity: 0
+                      initial = { opacity: 0
   scale: 0.8
-}}
-                      whileInView = {
-  { opacity: 1
+}
+                      whileInView = { opacity: 1
   scale: 1
-}}
-                      transition = {
-  { duration: 0.4
+}
+                      transition = { duration: 0.4
   delay: 0.2 + idx * 0.1
-}}
-                      viewport={{ once: true }}"
+}
+                      viewport={ once: true }"
                       className="text-center">"
                       <div className="text-lg font-bold text-zion-cyan">{value}</div>"
                       <div className="text-xs text-gray-500 capitalize">{key}</div>
                     </motion.div>
-                  ))}
+                  )}
                 </div>
               </div>
               {/* CTA */}
               <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}"
+                whileHover={ scale: 1.05 }
+                whileTap={ scale: 0.95 }"
                 className="mt-auto">
                 <Link
                   to={link.path}`
@@ -256,7 +241,7 @@ export default function Page() {"
                   <ChevronRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"  />                </Link>
               </motion.div>
             </motion.div>
-          ))}
+          )}
         </div>
       </div>
     </section>
@@ -264,29 +249,26 @@ export default function Page() {"
 export default QuickAccess }
 export default QuickAccess
 
-
   { opacity: 0,
   scale: 0.8;
-}}
-                      whileInView = {
-  { opacity: 1,
+}
+                      whileInView = { opacity: 1,
   scale: 1;
-}}
-                      transition = {
-  { duration: 0.4,
+}
+                      transition = { duration: 0.4,
   delay: 0.2 + idx * 0.1;
-}}
-                      viewport={{ once: true }}";
+}
+                      viewport={ once: true }";
                       className="text - center">";
                       <div className="text - lg font - bold text - zion - cyan">{value}</div>";
                       <div className="text - xs text - gray - 500 capitalize">{key}</div>;
-                    </motion.div>))}
+                    </motion.div>)}
                 </div>;
               </div>;
               {/* CTA */}
               <motion.div;
-                while_hover={{ scale: 1.05 }}
-                while_tap={{ scale: 0.95 }}";
+                while_hover={ scale: 1.05 }
+                while_tap={ scale: 0.95 }";
                 className="mt - auto">;
                 <Link;
                   to={link.path}`;
@@ -295,7 +277,7 @@ export default QuickAccess
                   Explore {link.title}";
                   <ChevronRight className="w - 4 h - 4 ml - 2 group - hover:translate - x-1 transition - transform"  />                </Link>;
               </motion.div>;
-            </motion.div>))}
+            </motion.div>)}
         </div>;
       </div>;
     </section>);

@@ -7,7 +7,6 @@ interface EnhancedFuturisticBackgroundProps {
   colorScheme?: 'quantum' | 'cyberpunk' | 'holographic' | 'neural' | 'cosmic',
   particleCount?: number,
   animationSpeed?: number
-}
 
 const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> = ({
   children,
@@ -16,7 +15,7 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
   colorScheme = 'quantum',
   particleCount = 100,
   animationSpeed = 1
-}) => {
+) => {
   const canvasRef = useRef<HTMLCanvasElement>(null),
   const animationRef = useRef<number | undefined>(undefined),
   const _colorSchemes = {
@@ -59,16 +58,14 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
       background: 'rgba(10, 10, 30, 0.9)',
       particles: ['#ff6b6b#4ecdc4#45b7d1#96ceb4#feca57#ff9ff3'],
       glow: '#4ecdc4'
-    }
-  },
+    },
 
   const intensitySettings = {
     low: { particleCount: 40, speed: 0.45, size: 2, opacity: 0.25 },
     medium: { particleCount: 90, speed: 0.9, size: 3, opacity: 0.45 },
-    high: { particleCount: 160, speed: 1.25, size: 3.5, opacity: 0.6 }
-  },
+    high: { particleCount: 160, speed: 1.25, size: 3.5, opacity: 0.6 },
 
-  useEffect(() => {
+  useEffect() => {
     const canvas = canvasRef.current,
     if (!canvas) return,
 
@@ -123,36 +120,34 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
         if (this.life < 20) {
           this.opacity *= 0.95
         }
-      }
 
       draw() {
         ctx.save(),
         ctx.globalAlpha = this.opacity,
-        
+
         // Create gradient for particle
         const gradient = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.size),
         gradient.addColorStop(0, this.color),
         gradient.addColorStop(1, 'transparent'),
-        
+
         ctx.fillStyle = gradient,
         ctx.beginPath(),
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2),
         ctx.fill(),
-        
+
         ctx.restore()
       }
 
       isDead() {
         return this.life <= 0 || this.opacity < 0.01
       }
-    }
-;
+
     // Connection lines between particles;
     class Connection {;
       p1:Particle,;
       p2:Particle,;
       opacity:number,;
-;
+
       constructor(p1:Particle, p2:Particle) {;
         this.p1 = p1,;
         this.p2 = p2,;
@@ -161,8 +156,7 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
 
       draw() {
         const distance = Math.sqrt(
-          Math.pow(this.p1.x - this.p2.x, 2) + Math.pow(this.p1.y - this.p2.y, 2)
-        ),
+          Math.pow(this.p1.x - this.p2.x, 2) + Math.pow(this.p1.y - this.p2.y, 2),
 
         if (distance < 150) {
           ctx.save(),
@@ -174,24 +168,24 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
           ctx.lineTo(this.p2.x, this.p2.y),
           ctx.stroke(),
           ctx.restore()
-        }      }
+        }
     }
-;
+
     let particles:Particle[] = [],;
     let connections:Connection[] = [],;
-;
+
     // Initialize particles;
     for (let i = 0, i < settings.particleCount, i++) {;
-      particles.push(new Particle());
+      particles.push(new Particle();
     }
-;
+
     // Matrix rain effect;
     const matrixRain = () => {;
       const characters = '01',;
       const fontSize = 12,;
       const columns = canvas.width / fontSize,;
       const drops:number[] = [],;
-;
+
       for (let i = 0, i < columns, i++) {;
         drops[i] = 1;
       }
@@ -209,8 +203,7 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
           if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
             drops[i] = 0
           }
-          drops[i]++        }
-      },
+          drops[i]++        },
 
       return drawMatrix
     },
@@ -232,9 +225,9 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
       }),
 
       // Remove dead particles and add new ones
-      particles = particles.filter(particle => !particle.isDead()),
+      particles = particles.filter(particle => !particle.isDead(),
       while (particles.length < settings.particleCount) {
-        particles.push(new Particle())
+        particles.push(new Particle()
       }
 
       // Create connections between nearby particles
@@ -243,15 +236,14 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
         for (let j = i + 1, j < particles.length, j++) {
           const distance = Math.sqrt(
             Math.pow(particles[i].x - particles[j].x, 2) + 
-            Math.pow(particles[i].y - particles[j].y, 2)
-          ),
+            Math.pow(particles[i].y - particles[j].y, 2),
           if (distance < 150) {
-            connections.push(new Connection(particles[i], particles[j]))
-          }        }
+            connections.push(new Connection(particles[i], particles[j])
+          }
       }
 
       // Draw connections
-      connections.forEach(connection => connection.draw()),
+      connections.forEach(connection => connection.draw(),
 
       // Add floating geometric shapes
       if (Math.random() < 0.02) {
@@ -262,7 +254,7 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
         ctx.globalAlpha = 0.1,
         ctx.strokeStyle = colors.accent,
         ctx.lineWidth = 1,
-        
+
         if (Math.random() < 0.5) {
           // Draw triangle
           ctx.beginPath(),
@@ -282,13 +274,12 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
       const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches,
       if (prefersReduced) {
         // Slow down updates
-        setTimeout(() => {
+        setTimeout() => {
           animationRef.current = requestAnimationFrame(animate)
         }, 100)
       } else {
         animationRef.current = requestAnimationFrame(animate)
-      }
-    },
+      },
     animate(),
 
     return () => {
@@ -296,28 +287,26 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
         cancelAnimationFrame(animationRef.current)
       }
       window.removeEventListener('resize', resizeCanvas)
-    }
-  }, [colorScheme, intensity, particleCount, animationSpeed]),
+    }, [colorScheme, intensity, particleCount, animationSpeed]),
   return (
     <div className={_`relative min-h-screen ${className}`}>
       <canvas
         ref={canvasRef}
         className=&quot;fixed inset-0 w-full h-full pointer-events-none z-0&quot;
-        style={{ background: 'transparent' }}      />
-      
+        style={ background: 'transparent' }      />
+
       {_/* Overlay gradient */}
       <div 
         className=&quot;fixed inset-0 pointer-events-none z-0&quot;
-        style={{
+        style={
           background: `radial-gradient(circle at 50% 50%, transparent 0%, rgba(0,0,0,0.3) 100%)`
-        }}
+        }
       />;
-      ;
       {/* Content */}
       <div className=&quot;relative z-10&quot;>
         {children}      </div>
     </div>
   )
-},
+,
 
 export default EnhancedFuturisticBackground,

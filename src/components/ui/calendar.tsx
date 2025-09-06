@@ -10,17 +10,17 @@ function Calendar({
   classNames
   showOutsideDays = true
   ...props
-}: CalendarProps) {
+: CalendarProps) {
         IconLeft: ({ ..._props }) => <ChevronLeft className='h-4 w-4' />
         IconRight: ({ ..._props }) => <ChevronRight className='h-4 w-4' />
-      }}      {...props}
+      }      {...props}
     />);
 Calendar.display_name = 'Calendar';
 export { Calendar }
   className, classNames,  showOutsideDays = true, ...props
-}: CalendarProps) {
-}/>)
-}"
+: CalendarProps) {
+/>)
+"
 
 import React from 'react';
 import * as React from 'react';
@@ -37,11 +37,11 @@ function Calendar(): any ({;
   classNames,;
   showOutsideDays = true,;
   ...props;
-}: CalendarProps) {;
+: CalendarProps) {;
 
         IconLeft: ({ ..._props }) => <ChevronLeft className='h-4 w-4' />,;
         IconRight: ({ ..._props }) => <ChevronRight className='h-4 w-4' />,;
-      }}      {...props}
+      }      {...props}
     />;
   );
 
@@ -49,12 +49,12 @@ Calendar && Calendar.displayName = 'Calendar';
 
 export { Calendar };
   className, classNames,  showOutsideDays = true, ...props ;
-}: CalendarProps) {;
+: CalendarProps) {;
 
-}/>) ;
-}"
+/>) ;
+"
 
   class_name, class_names,  showOutsideDays = true, ...props;
-}: CalendarProps) {
-}/>);
-}";
+: CalendarProps) {
+/>);
+";

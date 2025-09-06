@@ -6,5 +6,3 @@ export function SlideEditor() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

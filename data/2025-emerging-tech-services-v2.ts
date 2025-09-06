@@ -494,9 +494,9 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     market_size: '$35B autonomous vehicle market',
     growth_rate: '75% annually',
   },
-];      'Autonomous drivingFleet managementSafety systemsTraffic optimizationTransportation logisticsResearch and development'
+;      'Autonomous drivingFleet managementSafety systemsTraffic optimizationTransportation logisticsResearch and development'
 
-];      'Autonomous driving_fleet management_safety systems_traffic optimization_transportation logistics_research and development';
+;      'Autonomous driving_fleet management_safety systems_traffic optimization_transportation logistics_research and development';
     ];
     benefits: [
       'Access to rare earth elementsReduce Earth resource dependencyEnable space colonizationCreate new economic opportunitiesAdvance space technology'
@@ -722,5 +722,4 @@ export const emergingTechServicesV2: EmergingTechService[] = [
 
     growthRate: '75% annually'
   }
-];
 ;

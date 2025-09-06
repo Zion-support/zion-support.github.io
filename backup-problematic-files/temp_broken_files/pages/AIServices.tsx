@@ -9,7 +9,7 @@ import {
   FileText,
   Cog,
   Shield
-} from 'lucide-react';
+ from 'lucide-react';
 
 const aiServices = [
   {
@@ -72,14 +72,14 @@ const aiServices = [
     setupTime: "2-6 weeks",
     targetUsers: "Operations, HR, Finance, Customer Service"
   }
-];
+;
 
 const stats = [
   { number: "24/7", label: "AI Monitoring" },
   { number: "48hrs", label: "Average Response Time" },
   { number: "99.9%", label: "Uptime Guarantee" },
   { number: "500+", label: "AI Models Deployed" }
-];
+;
 
 export default function AIServices() {
   return (
@@ -92,9 +92,9 @@ export default function AIServices() {
         <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
           <div className="container mx-auto px-6 text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
             >
               <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
                 AI Services
@@ -104,15 +104,15 @@ export default function AIServices() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={ scale: 1.05 }
+                  whileTap={ scale: 0.95 }
                   className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
                   Get Started
                 </motion.button>
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={ scale: 1.05 }
+                  whileTap={ scale: 0.95 }
                   className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold transition-colors"
                 >
                   View Portfolio
@@ -126,9 +126,9 @@ export default function AIServices() {
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-6">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">Our AI Services</h2>
@@ -138,15 +138,15 @@ export default function AIServices() {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {aiServices.map((service, index) => {
+              {aiServices.map(service, index) => {
                 const IconComponent = service.icon;
                 return (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    whileHover={{ y: -5 }}
+                    initial={ opacity: 0, y: 30 }
+                    whileInView={ opacity: 1, y: 0 }
+                    transition={ duration: 0.5, delay: index * 0.1 }
+                    whileHover={ y: -5 }
                     className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow"
                   >
                     <div className="flex items-center mb-4">
@@ -157,18 +157,18 @@ export default function AIServices() {
                     </div>
                     <p className="text-gray-600 mb-4">{service.description}</p>
                     <ul className="space-y-2 mb-6">
-                      {service.features.map((feature, featureIndex) => (
+                      {service.features.map(feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-sm text-gray-600">
                           <CheckCircle size={16} className="text-green-500 mr-2" />
                           {feature}
                         </li>
-                      ))}
+                      )}
                     </ul>
                     <div className="flex justify-between items-center">
                       <span className="text-lg font-semibold text-gray-900">{service.pricing}</span>
                       <motion.button
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
+                        whileHover={ scale: 1.05 }
+                        whileTap={ scale: 0.95 }
                         className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors"
                       >
                         Learn More
@@ -185,9 +185,9 @@ export default function AIServices() {
         <section className="py-20 bg-white">
           <div className="container mx-auto px-6">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">AI Excellence in Numbers</h2>
@@ -197,12 +197,12 @@ export default function AIServices() {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (
+              {stats.map(stat, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.5, delay: index * 0.1 }
                   className="text-center"
                 >
                   <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">
@@ -210,7 +210,7 @@ export default function AIServices() {
                   </div>
                   <div className="text-lg text-gray-600">{stat.label}</div>
                 </motion.div>
-              ))}
+              )}
             </div>
           </div>
         </section>
@@ -219,9 +219,9 @@ export default function AIServices() {
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
           <div className="container mx-auto px-6 text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Harness AI Power?
@@ -231,15 +231,15 @@ export default function AIServices() {
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={ scale: 1.05 }
+                  whileTap={ scale: 0.95 }
                   className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg text-lg font-semibold transition-colors"
                 >
                   Start AI Project
                 </motion.button>
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={ scale: 1.05 }
+                  whileTap={ scale: 0.95 }
                   className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold transition-colors"
                 >
                   Schedule Demo
@@ -251,4 +251,3 @@ export default function AIServices() {
       </div>
     </Layout>
   );
-}

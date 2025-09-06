@@ -9,11 +9,10 @@ async function loadRequests(): Promise<any[]> {
     return JSON.parse(raw)
   } catch {
     return []
-  }}
-}catch (err) {
+  }
+catch (err) {
   return {
   summary: description.slice (0, 280), type: 'unknown' 
-}
 
 async function summarizeWithOpenAI(description: string) {
   try {
@@ -28,20 +27,17 @@ async function summarizeWithOpenAI(description: string) {
       temperature: 0.3}),
     const content = response.choices[0]?.message?.content || '',
     const typeMatch = content.match(/type\s*:\s*(.+)$/im),
-    return { summary: content.trim(), type: typeMatch ? typeMatch[1].trim() : 'unknown' }
-  } catch (err) {
+    return { summary: content.trim(), type: typeMatch ? typeMatch[1].trim() : 'unknown' } catch (err) {
     return { summary: description.slice(0, 280), type: 'unknown' }
-  }
-}
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' }),
+  if (req.method != 'POST') return res.status(405).json({ error: 'Method not allowed' }),
 
   const { name, email, budget, timeline, description, talentSlug } = req.body || {},
   if (!name || !email || !description) return res.status(400).json({ error: 'Missing required fields' }),
 
   const normalizedBudget = String(budget ?? '').replace(/[^0-9.\-]/g, ''),
-  const ai = await summarizeWithOpenAI(String(description)),
+  const ai = await summarizeWithOpenAI(String(description),
 
   const requests = await loadRequests(),
   const now = new Date().toISOString(),
@@ -74,11 +70,9 @@ const _REQUESTS_PATH = path.join(process.cwd(), 'data', 'requests.json');
 async function loadRequests(): Promise<any[]> {_try {
     const _raw = fs.readFileSync(REQUESTS_PATH, _'utf-8');
     return JSON.parse(raw);} catch {_return [];}
-}
 
 async function saveRequests(_requests: unknown[]) {_fs.mkdirSync(path.dirname(REQUESTS_PATH), _{ recursive: true});
-  fs.writeFileSync(REQUESTS_PATH, JSON.stringify(requests, null, 2));
-}
+  fs.writeFileSync(REQUESTS_PATH, JSON.stringify(requests, null, 2);
 
 async function summarizeWithOpenAI(_description: string) {_try {
     if (!process.env.OPENAI_API_KEY) return { summary: description.slice(0, _280), _type: 'unknown'};
@@ -94,15 +88,14 @@ async function summarizeWithOpenAI(_description: string) {_try {
     return {_summary: content.trim(), _type: typeMatch ? typeMatch[1].trim() : 'unknown'};
   } catch (err) {_return { summary: description.slice(0, _280), _type: 'unknown'};
   }
-}
 
-export default async function handler(_req: NextApiRequest, _res: NextApiResponse) {_if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed'});
+export default async function handler(_req: NextApiRequest, _res: NextApiResponse) {_if (req.method != 'POST') return res.status(405).json({ error: 'Method not allowed'});
 
   const {_name, _email, _budget, _timeline, _description, _talentSlug} = req.body || {};
   if (!name || !email || !description) return res.status(400).json({_error: 'Missing required fields'});
 
   const _normalizedBudget = String(budget ?? '').replace(/[^0-9.\-]/g, '');
-  const _ai = await summarizeWithOpenAI(String(description));
+  const _ai = await summarizeWithOpenAI(String(description);
 
   const _requests = await loadRequests();
   const _now = new Date().toISOString();

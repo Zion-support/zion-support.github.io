@@ -14,7 +14,7 @@ import {useAuth} from "@/hooks/useAuth";
 import {supabase} from "@/integrations/supabase/client";
 const partnerFormSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." })
-  website: z.string().url({ message: "Please enter a valid URL." }).optional().or(z.literal(""))
+  website: z.string().url({ message: "Please enter a valid URL." }).optional().or(z.literal("")
   twitter: z.string().optional()
   instagram: z.string().optional()
   youtube: z.string().optional()
@@ -39,7 +39,7 @@ export function PartnerRegistrationForm() {
       niche: ""
       audience_size: ""
       payout_method: "paypal"
-      bio: ""}})
+      bio: ""})
   const checkExistingPartner = async () => {
     const { data: existingPartner } = await supabase
       .from('partner_profiles')
@@ -103,8 +103,7 @@ export function PartnerRegistrationForm() {
         .single();
       if (!existingCode) {
         await supabase.rpc('generate_referral_code', { user_id: user.id })
-      }
-    } catch (error: any) {
+      } catch (error: any) {
       console.error('Error submitting partner application:', error);
       toast({
         title: "Submission failed"
@@ -114,7 +113,6 @@ export function PartnerRegistrationForm() {
     } finally {
       setIsSubmitting(false)
     }
-  }
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light">;
       <CardHeader>;
@@ -143,11 +141,11 @@ export function PartnerRegistrationForm() {
           }
         ]);
         .select ();
-;
+
       // Check condition
 if (throw error) {
   $2
-}
+
       toast ({
         title: "Application submitted!",
         description: "Your partner application has been submitted for review.",
@@ -158,14 +156,13 @@ if (throw error) {
         .select ('code');
         .eq ('user_id', user.id);
         .single ();
-;
+
       // Check condition
 if ( {) {
   $2
-}
+
         await supabase.rpc ('generate_referral_code', { user_id: user.id });
-      }
-    } catch (error: any) {
+      } catch (error: any) {
       console.error ('Error submitting partner application:', error);
       toast ({
         title: "Submission failed",
@@ -174,7 +171,6 @@ if ( {) {
     } finally {
       setIsSubmitting (false);
     }
-  }
   return (
     <Card className="bg - zion - blue - dark border - zion - blue - light">;
       <CardHeader>;
@@ -469,4 +465,3 @@ if ( {) {
       </CardContent>;
     </Card>;
   );
-}

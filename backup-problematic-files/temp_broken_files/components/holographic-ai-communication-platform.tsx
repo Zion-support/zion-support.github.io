@@ -31,9 +31,9 @@ export default function HolographicAICommunicationPage() {
             <div className=&quot;lg:col-span-2 bg-black/30 rounded-2xl border border-fuchsia-500/30 p-6&quot;>
               <h2 className=&quot;text-2xl font-semibold mb-4&quot;>What you get</h2>
               <ul className=&quot;grid grid-cols-1 md:grid-cols-2 gap-3&quot;>
-                {features.map((feat) => (
+                {features.map(feat) => (
                   <li key={feat} className=&quot;flex items-start space-x-3 text-slate-200&quot;><Check className=&quot;w-5 h-5 text-fuchsia-400 mt-0.5&quot; /><span>{feat}</span></li>
-                ))}
+                )}
               </ul>
             </div>
             <div className=&quot;bg-black/30 rounded-2xl border border-fuchsia-500/30 p-6 h-fit&quot;>
@@ -50,5 +50,3 @@ export default function HolographicAICommunicationPage() {
       </div>
     </UltraAdvancedFuturisticBackground>
   )
-}
-;

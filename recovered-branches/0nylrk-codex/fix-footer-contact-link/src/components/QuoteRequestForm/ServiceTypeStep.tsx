@@ -7,8 +7,8 @@ import { ListingScoreCard } from "@/components/ListingScoreCard";
 interface ServiceTypeStepProps {
   formData: QuoteFormData;
   updateFormData: (data: Partial<QuoteFormData>) => void
-}
-// Sample data - would come from an API in a real application
+
+/ Sample data - would come from an API in a real application
 const SAMPLE_LISTINGS: ListingItem[] = [
 
   {
@@ -53,11 +53,11 @@ const SAMPLE_LISTINGS: ListingItem[] = [
     image:
       "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&auto=format"
   }
-];
+;
 export function ServiceTypeStep({
   formData
   updateFormData
-}: ServiceTypeStepProps) {
+: ServiceTypeStepProps) {
   const [searchQuery, setSearchQuery] = useState("");
   const handleTypeSelect = (type: ServiceType) => {
     updateFormData({ serviceType: type });
@@ -69,20 +69,20 @@ export function ServiceTypeStep({
       serviceType: item.category.toLowerCase() as ServiceType
     });
   }
-  const filteredListings = SAMPLE_LISTINGS.filter((item) => {
+  const filteredListings = SAMPLE_LISTINGS.filter(item) => {
     // Filter by category only when a service type has been selected
-    if (formData.serviceType !== "") {
+    if (formData.serviceType != "") {
       const categoryMatch =
-        item.category.toLowerCase() === formData.serviceType.toLowerCase();
+        item.category.toLowerCase() = = formData.serviceType.toLowerCase();
       if (!categoryMatch) return false;
     }
-    if (searchQuery.trim() === "") return true;
+    if (searchQuery.trim() = = "") return true;
     return (
-      item.title.toLowerCase().includes(searchQuery.toLowerCase()) |
-      item.category.toLowerCase().includes(searchQuery.toLowerCase())
+      item.title.toLowerCase().includes(searchQuery.toLowerCase() |
+      item.category.toLowerCase().includes(searchQuery.toLowerCase()
     );
   });
-;
+
   return (
     <div className="space - y-6">;
       <div>;
@@ -92,7 +92,7 @@ export function ServiceTypeStep({
         <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 4">;
           <Card;
             className={`p - 4 cursor - pointer border - 2 transition - colors ${
-              form_data.service_type === "service";
+              form_data.service_type = = "service";
                 ? "bg - zion - purple / 20 border - zion - purple";
                 : "bg - zion - blue - light / 20 border - zion - blue - light hover:border - zion - purple / 50";
             }`}
@@ -105,7 +105,7 @@ export function ServiceTypeStep({
           </Card>
           <Card
             className={`p-4 cursor-pointer border-2 transition-colors ${
-              formData.serviceType === "talent"
+              formData.serviceType = = "talent"
                 ? "bg-zion-purple/20 border-zion-purple"
                 : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"
             }`}
@@ -118,7 +118,7 @@ export function ServiceTypeStep({
           </Card>
           <Card
             className={`p-4 cursor-pointer border-2 transition-colors ${
-              formData.serviceType === "equipment"
+              formData.serviceType = = "equipment"
                 ? "bg-zion-purple/20 border-zion-purple"
                 : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"
             }`}
@@ -147,12 +147,12 @@ export function ServiceTypeStep({
           </div>
           <div className="grid grid-cols-1 gap-4 mt-4">
             {filteredListings.length > 0 ? (
-              filteredListings.map((item) => (
+              filteredListings.map(item) => (
                 <div
                   key={item.id}
                   onClick={() => handleItemSelect(item)}
                   className={`cursor-pointer transition-all ${
-                    formData.specificItem?.id === item.id
+                    formData.specificItem?.id = = item.id
                       ? "ring-2 ring-zion-purple rounded-lg"
                       : ""
                   }`}
@@ -167,7 +167,7 @@ export function ServiceTypeStep({
                     description="Sample listing description"
                   />;
                 </div>;
-              ));
+              );
             ) : (;
               <div className="text-center py-8 text-zion-slate-light">;
                 No items found. Please try a different search.;
@@ -187,7 +187,7 @@ export function ServiceTypeStep({
           </Card>;
           <Card;
             className={`p - 4 cursor - pointer border - 2 transition - colors ${
-              form_data.service_type === "talent";
+              form_data.service_type = = "talent";
                 ? "bg - zion - purple / 20 border - zion - purple";
                 : "bg - zion - blue - light / 20 border - zion - blue - light hover:border - zion - purple / 50";
             }`}
@@ -200,7 +200,7 @@ export function ServiceTypeStep({
           </Card>;
           <Card;
             className={`p - 4 cursor - pointer border - 2 transition - colors ${
-              form_data.service_type === "equipment";
+              form_data.service_type = = "equipment";
                 ? "bg - zion - purple / 20 border - zion - purple";
                 : "bg - zion - blue - light / 20 border - zion - blue - light hover:border - zion - purple / 50";
             }`}
@@ -229,12 +229,12 @@ export function ServiceTypeStep({
           </div>;
           <div className="grid grid - cols - 1 gap - 4 mt - 4">;
             {filtered_listings.length > 0 ? (
-              filtered_listings.map ((item) => (
+              filtered_listings.map (item) => (
                 <div;
                   key={item.id}
                   on_click={() => handleItemSelect (item)}
                   className={`cursor - pointer transition - all ${
-                    form_data.specific_item?.id === item.id;
+                    form_data.specific_item?.id = = item.id;
                       ? "ring - 2 ring - zion - purple rounded - lg";
                       : "";
                   }`}
@@ -248,11 +248,10 @@ export function ServiceTypeStep({
                     image={item.image}
                     description="Sample listing description";
                   />;
-                </div>))) : (
+                </div>)) : (
               <div className="text - center py - 8 text - zion - slate - light">;
                 No items found. Please try a different search.;
               </div>)}
           </div>;
         </div>)}
     </div>);
-}

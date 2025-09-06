@@ -1,4 +1,4 @@
-{
+
   "general": {
     "app_name": "Mercado de IA Zion",
     "loading": "Carregando...",
@@ -13,7 +13,7 @@
     "error": "Erro",
     "open_main_menu": "Abrir menu principal",
     "toggle_mobile_menu": "Alternar menu mvel",
-    "greeting_user": "Ol, {{name}}!",
+    "greeting_user": "Ol, {name}!",
     "status_page": "Pgina de status",
     "check_status_page": "Voc pode tentar atualizar a pgina ou visitar nossa"
   },
@@ -63,7 +63,7 @@
     "session_check_timed_out_message": "No foi possvel verificar sua sesso rapidamente. Tente fazer login ou atualize a pgina.",
     "email_verification_required": "Verificao de e-mail necessria",
     "email_needs_verification": "Seu e-mail precisa ser verificado antes de entrar.",
-    "verification_email_sent": " E-mail de verificao enviado para {{email}}",
+    "verification_email_sent": " E-mail de verificao enviado para {email}",
     "resend_email": "Reenviar e-mail",
     "check_status": "Verificar status",
     "redirecting": "Redirecionando para o status de verificao em 3 segundos...",
@@ -135,8 +135,8 @@
     "fr": "Franais",
     "pt": "Portugus",
     "ar": "",
-    "language_changed": "Idioma alterado para {{language}}",
-    "switch_to_detected": "Mudar para {{language}}?"
+    "language_changed": "Idioma alterado para {language}",
+    "switch_to_detected": "Mudar para {language}?"
   },
   "features": {
     "ai_talent_matching": "Correspondncia de Talentos IA",
@@ -264,4 +264,3 @@
     "sending": "Enviando...",
     "submit": "Receba sua Proposta Comercial Grtis"
   }
-}

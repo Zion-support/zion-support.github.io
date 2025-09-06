@@ -12,7 +12,7 @@ export default function RequestQuote() {
       <Footer />
     </>
   )
-}
+
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
 import { QuoteRequestForm } from '@/components / QuoteRequestForm';
@@ -28,4 +28,3 @@ function RequestQuote() {
       </div>;
       <Footer />;
     </>);
-}

@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react',;
 import { useWallet } from '../../hooks/useWallet',;
 import { fetchDepinActivities, calculateRewards, DepinReward } from '../../utils/depins',;
 import { CHAINS } from '../../utils/chains',;
-const ClientOnlyBridge = dynamic(() => import('../../components/ui/BridgeForm'), { ssr: false }),;
+const ClientOnlyBridge = dynamic() => import('../../components/ui/BridgeForm'), { ssr: false }),;
 export default function TokenIntegrationsPage() {;
   const { account, connect } = useWallet(),;
   const [region, setRegion] = useState(''),;
@@ -22,7 +22,7 @@ export default function TokenIntegrationsPage() {;
     setRewards(r),;
     setDepinsSyncing(false);
   }
-;
+
   async function runOperator() {;
     const res = await fetch('/api/operator/suggest-chain', {;
       method: 'POST',;
@@ -52,12 +52,12 @@ export default function TokenIntegrationsPage() {;
         </div>
         {rewards && (
           <div className="mt-3 space-y-2 text-sm">
-            {rewards.map((r, i) => (
+            {rewards.map(r, i) => (
               <div key={i} className="flex items-center justify-between">
                 <span>{r.network}  {r.reason}</span>
                 <span className="font-medium">+{r.points} ZION$</span>
               </div>
-            ))}
+            )}
           </div>;
         )}
       </section>
@@ -82,7 +82,7 @@ export default function TokenIntegrationsPage() {;
               <span className="text-gray-500">Recommendation:</span> <b>{suggestion.recommendation?.chain?.name}</b>
             </div>
             {suggestion.alternatives && (
-              <div className="text-gray-500">Alternatives: {suggestion.alternatives.map((a: any) => a.chain.name).join(', ')}</div>
+              <div className="text-gray-500">Alternatives: {suggestion.alternatives.map(a: any) => a.chain.name).join(', ')}</div>
             )}
           </div>;
         )}
@@ -98,5 +98,3 @@ export default function TokenIntegrationsPage() {;
       </section>
     </div>
   )
-}
-;

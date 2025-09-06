@@ -4,22 +4,21 @@ import { useState, useEffect } from 'react';
 import { ContactInfo } from '../types';
 import ErrorBoundary from '../components/ErrorBoundary';
 import LoadingSpinner from '../components/LoadingSpinner';
-;
+
 export default function Services() {;
   const [isLoaded, setIsLoaded] = useState(false);
-  ;
-  useEffect(() => {;
-    const timer = setTimeout(() => setIsLoaded(true), 100);
+  useEffect() => {;
+    const timer = setTimeout() => setIsLoaded(true), 100);
     return () => clearTimeout(timer);
   }, []);
-;
+
   const contact:ContactInfo = {;
     phone:'+1 302 464 0950',;
     email:'kleber@ziontechgroup.com',;
     address:'364 E Main St STE 1008 Middletown DE 19709',;
     site:'https://ziontechgroup.com';
   };
-;
+
   const serviceCategories = [;
     {;
       title:'Micro SaaS Products',;
@@ -73,7 +72,7 @@ export default function Services() {;
       href:'/it-services';
     }
   ];
-;
+
   const getColorClasses = (color:string) => {;
     const colors = {;
       blue:{;
@@ -96,11 +95,10 @@ export default function Services() {;
         text:'text-green-400',;
         border:'border-green-500/40',;
         ring:'focus:ring-green-500';
-      }
-    };
+      };
     return colors[color as keyof typeof colors] || colors.blue;
   };
-;
+
   return (;
     <>;
       <Head>;
@@ -111,7 +109,6 @@ export default function Services() {;
         <meta name="robots" content="index, follow" />;
         <link rel="canonical" href={`${contact.site}/services`} />;
       </Head>;
-      ;
       <ErrorBoundary level="page">;
         <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">;
           {/* Hero Section */}
@@ -131,18 +128,18 @@ export default function Services() {;
               </p>;
             </div>;
           </section>;
-;
+
           {/* Service Categories */}
           <section className="py-16 px-4" role="main">;
             <div className="max-w-7xl mx-auto">;
               <div className="grid lg:grid-cols-3 gap-8">;
-                {serviceCategories.map((category, index) => {;
+                {serviceCategories.map(category, index) => {;
                   const colors = getColorClasses(category.color);
                   return (;
                     <div ;
                       key={category.title}
                       className={`p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-${category.color}-500/40 transition-all duration-300 hover:scale-105 ${isLoaded ? 'opacity-100 translate-y-0' :'opacity-0 translate-y-8'}`}
-                      style={{ transitionDelay:`${index * 200}ms` }}
+                      style={ transitionDelay:`${index * 200}ms` }
                     >;
                       <div className="flex items-center justify-between mb-6">;
                         <h3 className={`text-2xl font-bold ${colors.text}`}>;
@@ -152,20 +149,17 @@ export default function Services() {;
                           {category.count}
                         </span>;
                       </div>;
-                      ;
                       <p className="text-slate-300 mb-6">;
                         {category.description}
                       </p>;
-                      ;
                       <ul className="text-slate-400 space-y-2 mb-8">;
-                        {category.services.map((service, serviceIndex) => (;
+                        {category.services.map(service, serviceIndex) => (;
                           <li key={serviceIndex} className="flex items-center">;
                             <span className="w-2 h-2 bg-blue-400 rounded-full mr-3 flex-shrink-0"></span>;
                             {service}
                           </li>;
-                        ))}
+                        )}
                       </ul>;
-                      ;
                       <Link ;
                         href={category.href}
                         className={`inline-flex items-center px-6 py-3 ${colors.bg} ${colors.hover} rounded-lg font-semibold transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 ${colors.ring} focus:ring-offset-2 focus:ring-offset-slate-900`}
@@ -197,12 +191,12 @@ export default function Services() {;
           <section className=&quot;py-16 px-4&quot; role=&quot;main&quot;>
             <div className=&quot;max-w-7xl mx-auto&quot;>
               <div className=&quot;grid lg:grid-cols-3 gap-8&quot;>
-                {serviceCategories.map((category, index) => {
+                {serviceCategories.map(category, index) => {
                   const colors = getColorClasses(category.color),
                   return (
                     <div                       key={category.title}
                       className={_`p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-${category.color}-500/40 transition-all duration-300 hover:scale-105 ${_isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-                      style={_{ transitionDelay: `${index * 200}ms` }}
+                      style={_{ transitionDelay: `${index * 200}ms` }
                     >
                       <div className=&quot;flex items-center justify-between mb-6&quot;>
                         <h3 className={`text-2xl font-bold ${colors.text}`}>
@@ -211,19 +205,19 @@ export default function Services() {;
                           {_category.count}
                         </span>
                       </div>
-                      
+
                       <p className=&quot;text-slate-300 mb-6&quot;>
                         {category.description}
                       </p>
-                      
+
                       <ul className=&quot;text-slate-400 space-y-2 mb-8&quot;>
-                        {category.services.map((service, serviceIndex) => (
+                        {category.services.map(service, serviceIndex) => (
                           <li key={serviceIndex} className=&quot;flex items-center&quot;>
                             <span className=&quot;w-2 h-2 bg-blue-400 rounded-full mr-3 flex-shrink-0&quot;></span>
                             {service}                          </li>
-                        ))}
+                        )}
                       </ul>
-                      
+
                       <Link 
                         href={_category.href}
                         className={_`inline-flex items-center px-6 py-3 ${colors.bg} ${_colors.hover} rounded-lg font-semibold transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 ${_colors.ring} focus:ring-offset-2 focus:ring-offset-slate-900`}
@@ -238,14 +232,13 @@ export default function Services() {;
               </div>;
             </div>;
           </section>;
-;
+
           {/* Why Choose Us */}
           <section className="py-16 px-4 bg-slate-900/40">;
             <div className="max-w-6xl mx-auto">;
               <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">;
                 Why Choose Zion Tech Group?;
               </h2>;
-              ;
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
                 <div className="text-center">;
                   <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">;
@@ -256,7 +249,6 @@ export default function Services() {;
                   <h3 className="text-xl font-bold mb-2">Lightning Fast</h3>;
                   <p className="text-slate-400">Rapid deployment and implementation of solutions</p>;
                 </div>;
-                ;
                 <div className="text-center">;
                   <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">;
                     <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
@@ -266,7 +258,6 @@ export default function Services() {;
                   <h3 className="text-xl font-bold mb-2">Enterprise Grade</h3>;
                   <p className="text-slate-400">Scalable solutions for businesses of all sizes</p>;
                 </div>;
-                ;
                 <div className="text-center">;
                   <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">;
                     <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
@@ -276,7 +267,6 @@ export default function Services() {;
                   <h3 className="text-xl font-bold mb-2">Secure & Reliable</h3>;
                   <p className="text-slate-400">Bank-level security and 99.9% uptime guarantee</p>;
                 </div>;
-                ;
                 <div className="text-center">;
                   <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">;
                     <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
@@ -289,7 +279,7 @@ export default function Services() {;
               </div>;
             </div>;
           </section>;
-;
+
           {/* CTA Section */}
           <section className="py-16 px-4">;
             <div className="max-w-4xl mx-auto text-center">;
@@ -300,7 +290,6 @@ export default function Services() {;
                 Contact our experts today to discuss your project requirements and discover ;
                 how our innovative solutions can transform your business.;
               </p>;
-              ;
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">;
                 <Link ;
                   href="/contact" ;
@@ -330,12 +319,12 @@ export default function Services() {;
             </motion.div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index) => (
+              {benefits.map(benefit, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={ opacity: 0, y: 20 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.6, delay: index * 0.1 }
                   className="text-center p-6"
                 >
                   Get a Quote
@@ -367,9 +356,9 @@ export default function Services() {;
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
           <div className="container mx-auto px-4 text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
             >
               </h2>
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
@@ -411,4 +400,3 @@ export default function Services() {;
       <Footer />
     </>
   );
-}

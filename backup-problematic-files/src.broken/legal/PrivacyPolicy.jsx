@@ -5,4 +5,3 @@ export export export default function PrivacyPolicy()   {
       <p>Component placeholder - needs implementation</p>
     </div>
   )
-}

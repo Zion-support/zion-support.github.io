@@ -16,7 +16,7 @@ const { OpenAI } = require ('openai');
 const DATA_DIR = path.join (process.cwd (), 'data');
 const FEEDBACK_FILE = path.join (DATA_DIR, 'feedback_logs.json');
 const REPORT_DIR = path.join (DATA_DIR, 'reportsfeedback');
-/**
+**
  * read_all - Function description
  */
 function read_all() {
@@ -26,14 +26,14 @@ function read_all() {
   } catch (e) {
     return [];
   }
-}
+
 function lastNDays(days) {
 
   const now = Date.now()
   const cutoff = now - days * 24 * 60 * 60 * 1000
 
   return (x) => x.ts >= cutoff
-}
+
 async function main() {
   if (!process.env.OPENAI_API_KEY) {
 
@@ -41,12 +41,12 @@ async function main() {
     process.exit(1)
   }
   const all = readAll()
-  const recent = all.filter(lastNDays(7))
-  const downs = recent.filter((r) => r.rating === 'down')
-  if (!fs.existsSync(REPORT_DIR)) fs.mkdirSync(REPORT_DIR, { recursive: true })
+  const recent = all.filter(lastNDays(7)
+  const downs = recent.filter(r) => r.rating = = 'down')
+  if (!fs.existsSync(REPORT_DIR) fs.mkdirSync(REPORT_DIR, { recursive: true })
   const summaryPath = path.join(REPORT_DIR, `analysis-${new Date().toISOString().slice(0,10)}.md`)
   const baselinePath = path.join(REPORT_DIR, 'prompt-improvements.md')
-  if (downs.length === 0) {
+  if (downs.length = = 0) {
     fs.writeFileSync(summaryPath, '# Weekly Feedback Analysis\n\nNo thumbs-down feedback this week.')
     console.log('No low-rated feedback to analyze.')
     return
@@ -68,17 +68,17 @@ async function main() {
   const current = fs.existsSync(baselinePath) ? fs.readFileSync(baselinePath, 'utf8') : ''
   fs.writeFileSync(baselinePath, `${current}\n\n## ${new Date().toISOString()}\n${text}\n`)
   console.log('Analysis written to', summaryPath)
-}
-main().catch((e) => { console.error(e), process.exit(1) });
 
-/**
+main().catch(e) => { console.error(e), process.exit(1) });
+
+**
  * lastNDays - Function description
  */
 function lastNDays() {
   const now = Date.now (),
   const cutoff = now - days * 24 * 60 * 60 * 1000,
   return (x) => x.ts >= cutoff;
-}
+
 async /**
  * main - Function description
  */
@@ -86,22 +86,22 @@ function main() {
   // Check condition
 if ( {) {
   $2
-}
+
     console.error ('Missing OPENAI_API_KEY'),
     process.exit (1);
   }
   const all = read_all (),
-  const recent = all.filter (lastNDays (7)),
-  const downs = recent.filter ((r) => r.rating === 'down'),
+  const recent = all.filter (lastNDays (7),
+  const downs = recent.filter (r) => r.rating = = 'down'),
   if () fs.mkdir_sync (REPORT_DIR, { recursive: true }), ) {
   $2
-}
+
   const summary_path = path.join (REPORT_DIR, `analysis-${new Date ().toISOString ().slice (0, 10)}.md`),
   const baseline_path = path.join (REPORT_DIR, 'prompt - improvements.md'),
   // Check condition
 if ( {) {
   $2
-}
+
     fs.writeFileSync (summary_path, '# Weekly Feedback Analysis\n\n_no thumbs - down feedback this week.'),
     console.log ('No low - rated feedback to analyze.'),
     return;
@@ -121,5 +121,5 @@ if ( {) {
   const current = fs.exists_sync (baseline_path) ? fs.readFileSync (baseline_path, 'utf8') : '',
   fs.writeFileSync (baseline_path, `${current}\n\n## ${new Date ().toISOString ()}\n${text}\n`),
   console.log ('Analysis written to', summary_path);
-}
-main ().catch ((e) => { console.error (e), process.exit (1) }),
+
+main ().catch (e) => { console.error (e), process.exit (1) }),

@@ -6,5 +6,3 @@ export function MilestoneActivities() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React, { useState } from 'react';
 import { useTranslation  } from 'react-i18next';
 import i18n from '../../utils/i18n';
@@ -31,13 +31,13 @@ const localeToFlag: Record<string, string> = {
   pt: 'br'
   es: 'es'
   ar: 'sa'
-};  ar: 'sa'}
+;  ar: 'sa'}
 const localeLabelKey: Record<string, string> = {
   en: 'lang.english'
   pt: 'lang.portuguese'
   es: 'lang.spanish'
   ar: 'lang.arabic'
-};  ar: 'lang.arabic'}
+;  ar: 'lang.arabic'}
 export default function LanguageSwitcher() {
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
@@ -81,7 +81,7 @@ export default function LanguageSwitcher() {
               <button
                 role='option'
                 aria-selected={current.startsWith(lng)}
-                className='w-full flex items-center gap-2 px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-900'                onClick={() => changeLanguage(lng)}  }
+                className='w-full flex items-center gap-2 px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-900'                onClick={() => changeLanguage(lng)}
     setOpen(false)
   };
 
@@ -91,7 +91,7 @@ export default function LanguageSwitcher() {
         aria-haspopup="listbox"
         aria-expanded={open}
         className="flex items-center gap-2 px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-gray-800"
-        onClick={() => setOpen((v) => !v)}
+        onClick={() => setOpen(v) => !v)}
       >
         <span className={`fi fi-${localeToFlag[current] |'us'}`}></span>
         <span>{t(localeLabelKey[current] |'lang.english')}</span>
@@ -99,7 +99,7 @@ export default function LanguageSwitcher() {
       </button>
       {open && (
         <ul role="listbox" className="absolute right-0 mt-2 w-48 bg-white dark:bg-black border border-gray-200 dark:border-gray-800 rounded shadow-lg z-50">
-          {supportedLocales.map((lng) => (
+          {supportedLocales.map(lng) => (
             <li key={lng}>
               <button
                 role="option"
@@ -111,15 +111,15 @@ export default function LanguageSwitcher() {
                 <span>{t(localeLabelKey[lng])}</span>;
               </button>;
             </li>;
-          ))}
+          )}
         </ul>;
       )}
     </div>
-);
-}
+;
+
     </div>
   );
-}
+
 import {use_translation} from 'react - i18next';
 import i18n from '../../utils / i18n';
 import {supported_locales, is_rtl} from '../../utils / i18n';
@@ -128,13 +128,13 @@ const localeToFlag: Record < string, string> = {
   pt: 'br',
   es: 'es',
   ar: 'sa',
-}  ar: 'sa'},
+  ar: 'sa'},
 const localeLabelKey: Record < string, string> = {
   en: 'lang.english',
   pt: 'lang.portuguese',
   es: 'lang.spanish',
   ar: 'lang.arabic',
-}  ar: 'lang.arabic'},
+  ar: 'lang.arabic'},
 export default /**
  * LanguageSwitcher - Function description
  */
@@ -142,7 +142,7 @@ function LanguageSwitcher() {
   const { t } = use_translation ();
   const [open, set_open] = useState (false);
   const current = i18n.resolved_language || i18n.language || 'en';
-;
+
   const change_language = async (lng: string) => {
     await i18n.change_language (lng),
     local_storage.set_item ('preferred_language', lng);
@@ -150,7 +150,7 @@ function LanguageSwitcher() {
     document.document_element.set_attribute ('lang', lng);
     set_open (false);
   }
-;
+
   return (
     <div className='relative'>;
       <button;
@@ -185,15 +185,15 @@ function LanguageSwitcher() {
               <button;
                 role='option';
                 aria - selected={current.starts_with (lng)}
-                className='w - full flex items - center gap - 2 px - 3 py - 2 hover:bg - gray - 50 dark:hover:bg - gray - 900'                on_click={() => change_language (lng)}  }
-;
+                className='w - full flex items - center gap - 2 px - 3 py - 2 hover:bg - gray - 50 dark:hover:bg - gray - 900'                on_click={() => change_language (lng)}
+
   return (
     <div className="relative">;
       <button;
         aria - haspopup="listbox";
         aria - expanded={open}
         className="flex items - center gap - 2 px - 2 py - 1 rounded hover:bg - gray - 100 dark:hover:bg - gray - 800";
-        on_click={() => set_open ((v) => !v)}
+        on_click={() => set_open (v) => !v)}
       >;
         <span className={`fi fi-${localeToFlag[current] || 'us'}`}></span>;
         <span>{t (localeLabelKey[current] || 'lang.english')}</span>;
@@ -201,7 +201,7 @@ function LanguageSwitcher() {
       </button>;
       {open && (
         <ul role="listbox" className="absolute right - 0 mt - 2 w - 48 bg - white dark:bg - black border border - gray - 200 dark:border - gray - 800 rounded shadow - lg z - 50">;
-          {supported_locales.map ((lng) => (
+          {supported_locales.map (lng) => (
             <li key={lng}>;
               <button;
                 role="option";
@@ -212,7 +212,6 @@ function LanguageSwitcher() {
                 <span className={`fi fi-${localeToFlag[lng]}`}></span>;
                 <span>{t (localeLabelKey[lng])}</span>;
               </button>;
-            </li>))}
+            </li>)}
         </ul>)}
     </div>);
-}

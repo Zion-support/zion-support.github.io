@@ -4,14 +4,14 @@ interface UseIntersectionObserverProps {
   root?: Element | null;
   root_margin?: string;
   freezeOnceVisible?: boolean;
-}
+
 export function useIntersectionObserver({
 
   threshold = 0;
   root = null;
   rootMargin = '0%';
   freezeOnceVisible = false
-}: UseIntersectionObserverProps = {}) {
+: UseIntersectionObserverProps = {}) {
   const [entry, setEntry] = useState<IntersectionObserverEntry>();
   const [node, setNode] = useState<Element | null>(null);
   const observer = useRef<IntersectionObserver | null>(null);
@@ -19,7 +19,7 @@ export function useIntersectionObserver({
   const updateEntry = ([entry]: IntersectionObserverEntry[]): void => {
     setEntry(entry)
   }
-  useEffect(() => {
+  useEffect() => {
     const hasIOSupport = !!window.IntersectionObserver;
     if (!hasIOSupport |frozen |!node) return;
     const observerParams = { threshold, root, rootMargin }
@@ -28,10 +28,9 @@ export function useIntersectionObserver({
     currentObserver && currentObserver.observe(node);
     return () => {
       currentObserver && currentObserver.disconnect()
-    }
-  }, [node, threshold, root, rootMargin, frozen]);
+    }, [node, threshold, root, rootMargin, frozen]);
   const prevNode = useRef<Element | null>(null);
-  useEffect(() => {
+  useEffect() => {
     if (prevNode && prevNode.current) {
       observer && observer.current?.unobserve(prevNode && prevNode.current)
     }
@@ -53,35 +52,33 @@ function useIntersectionObserver() {
   const update_entry = ([entry]: IntersectionObserverEntry[]): void => {
     set_entry (entry);
   }
-  useEffect (() => {
+  useEffect () => {
     const hasIOSupport = !!window.IntersectionObserver;
     // Check condition
 if (return) {
   $2
-}
+
     const observer_params = { threshold, root, root_margin }
     const current_observer = new IntersectionObserver (update_entry, observer_params);
     observer.current = current_observer;
     current_observer.observe (node);
     return () => {
       current_observer.disconnect ();
-    }
-  }, [node, threshold, root, root_margin, frozen]);
+    }, [node, threshold, root, root_margin, frozen]);
   const prev_node = useRef < Element | null>(null);
-  useEffect (() => {
+  useEffect () => {
     // Check condition
 if ( {) {
   $2
-}
+
       observer.current?.unobserve (prev_node.current);
     }
     // Check condition
 if ( {) {
   $2
-}
+
       observer.current?.observe (node);
     }
     prev_node.current = node;
   }, [node]);
   return [set_node, entry] as const;
-}

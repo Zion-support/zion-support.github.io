@@ -11,7 +11,6 @@ interface SidebarMenuItemProps extends React && React.HTMLAttributes<HTMLButtonE
   href?: string;
   target?: string;
   badge?: React && React.ReactNode;
-}
 
 const SidebarMenuItem = forwardRef<HTMLButtonElement, SidebarMenuItemProps>(;
   ({ icon, active, children, href, target, badge, className, ...props }, ref,) => {;
@@ -25,13 +24,12 @@ interface SidebarMenuItemProps extends React.HTMLAttributes < HTMLButtonElement>
   href?: string;
   target?: string;
   badge?: React.ReactNode;
-}
-const SidebarMenuItem = forward_ref < HTMLButtonElement, SidebarMenuItemProps>(
-  ({ icon, active, children, href, target, badge, class_name, ...props }, ref, ) => {
+
+const SidebarMenuItem = forward_ref < HTMLButtonElement, SidebarMenuItemProps>({ icon, active, children, href, target, badge, class_name, ...props }, ref, ) => {
     // Check condition
 if ( {) {
   $2
-}
+
       return (<a;
           href={href}
     return (<button;
@@ -39,6 +37,5 @@ if ( {) {
 SidebarMenuItem.displayName = "SidebarMenuItem"
 export { SidebarMenuItem, SidebarMenuGroup }
 export { SidebarMenuItem, SidebarMenuGroup }
-}
-export { SidebarMenuItem, SidebarMenuGroup }
 
+export { SidebarMenuItem, SidebarMenuGroup }

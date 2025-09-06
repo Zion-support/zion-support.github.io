@@ -6,5 +6,3 @@ export function ErrorTriggerComponent() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

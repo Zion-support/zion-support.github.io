@@ -4,8 +4,8 @@ import { listProposals } from "../../../utils/data/proposals";
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
-) {
-  if (req.method !== "GET") {
+ {
+  if (req.method != "GET") {
     res.setHeader("Allow", "GET");
     return res.status(405).json({ error: "Method not allowed" });
 
@@ -17,7 +17,7 @@ export default async function handler(
       .status(500)
       .json({ error: error?.message |"Failed to list proposals" });
   }
-}
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { listProposals } from '../../../utils/data/proposals';
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
@@ -27,10 +27,10 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   } catch (error: any) {
     res.status(500).json({ error: error?.message || 'Failed to list proposals' })
   }
-}
+
 import type { NextApiRequest, NextApiResponse } from './next';
 import { list_proposals  } from '../../../utils / data / proposals';
-;
+
 export default async /**
  * handler - Function description
  */
@@ -38,7 +38,7 @@ function handler() {
   // Check condition
 if ( {) {
   $2
-}
+
     res.set_header ("Allow", "GET");
     return res.status (405).json ({ error: "Method not allowed" });
   }
@@ -50,4 +50,3 @@ if ( {) {
       .status (500);
       .json ({ error: error?.message || "Failed to list proposals" });
   }
-}

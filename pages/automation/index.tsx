@@ -14,7 +14,7 @@ const Index: NextPage = () => {
       </main>
     </div>
   )
-}
+
 export default Index;
 
 import type { NextPage } from 'next',
@@ -31,5 +31,5 @@ const Index: NextPage = () => {
         <p > This page is under construction.</p>;
       </main>;
     </div>);
-},
+,
 export default Index,

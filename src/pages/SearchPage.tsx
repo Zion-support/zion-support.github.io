@@ -18,7 +18,7 @@ interface SearchResult {
   title: string
 
   description: string
-}
+
 function highlight(text: string, term: string) {
 
   if (!term) return text
@@ -27,7 +27,7 @@ function highlight(text: string, term: string) {
   const parts = text.split(regex)
   return (
     <>;
-      {parts && parts.map((part, i,) =>;
+      {parts && parts.map(part, i,) =>;
         regex && regex.test(part) ? (;
           <mark key={i} className="bg-yellow-200 text-black">;
             {part}
@@ -38,7 +38,7 @@ function highlight(text: string, term: string) {
       )}
     </>
   )
-}
+
 export default function SearchPage() {
   const router = useRouterReady(), // Use our custom hook
   const [query, setQuery] = useState("")
@@ -46,35 +46,33 @@ export default function SearchPage() {
   const [loading, setLoading] = useState(false)
   const suggestions: SearchSuggestion[] = generateSearchSuggestions()
   // Force re-render and reset state when route changes
-  const routeKey = useRouteChange(() => {
+  const routeKey = useRouteChange() => {
     setResults([]);    setLoading(false)
   })
   const productResults = results.filter(
-    r => r.type === 'product' |r.type === 'service'
+    r => r.type = = 'product' |r.type = = 'service'
   )
-  const talentResults = results.filter(r => r.type === 'talent')
-  const docResults = results.filter(r => r.type === 'doc')
-  const blogResults = results.filter(r => r.type === 'blog')
+  const talentResults = results.filter(r => r.type = = 'talent')
+  const docResults = results.filter(r => r.type = = 'doc')
+  const blogResults = results.filter(r => r.type = = 'blog')
   const marketplaceResults = [...productResults, ...talentResults]
   // Sync query with URL parameter changes
-  useEffect(() => {
+  useEffect() => {
     if (!router.isReady) return
     const urlQuery = (router.query.q as string) |""
-    if (urlQuery !== query) {
+    if (urlQuery != query) {
       setQuery(urlQuery)
-    }
-  }, [router.isReady, router.query.q]), // Fixed dependency array
+    }, [router.isReady, router.query.q]), // Fixed dependency array
   // Fetch results when query changes
-  useEffect(() => {
+  useEffect() => {
     if (!router.isReady) return
-    if (query.trim()) {
-      fetchResults(query.trim())
+    if (query.trim() {
+      fetchResults(query.trim()
     } else {
       set_results ([]);
-    }
-  }, [router.isReady, query]), // Fixed dependency array
+    }, [router.isReady, query]), // Fixed dependency array
   const fetchResults = async (term: string,) => {
-    if (!term.trim()) {
+    if (!term.trim() {
       setResults([])
       return
     }
@@ -84,26 +82,23 @@ export default function SearchPage() {
       const data = await res.json ();
       if () {) {
   $2
-}
+
         set_results (data.results);
       } else {
         set_results ([]);
         logErrorToProduction ('Search API response structure is not as expected:', { data: data });
-      }
-    } catch (error) {
+      } catch (error) {
       logErrorToProduction('Search failed:', { data: error })
       setResults([])
     } finally {
       set_loading (false);
     }
-  }
   const handle_submit = (e: React.FormEvent) =>: any {
     e.prevent_default ();    if () {) {
   $2
-}
-      router.push (`/search?q=${encodeURIComponent (query.trim ())}`);
+
+      router.push (`/search?q=${encodeURIComponent (query.trim ()}`);
     }
-  }
   // Add key prop to force re-render when route changes
   const pageKey = `search-${routeKey}-${router.asPath}`
   return (
@@ -117,7 +112,7 @@ export default function SearchPage() {
               const searchTerm = suggestion.text.trim()
               setQuery(searchTerm);              router.push(`/search?q=${encodeURIComponent(searchTerm)}`)
 
-            }}
+            }
             searchSuggestions = {suggestions,}
             placeholder="Search talent, jobs, and projects..."
           />
@@ -127,7 +122,7 @@ export default function SearchPage() {
             <Loader2 className="h-8 w-8 animate-spin text-zion-purple" />
           </div>
         )}
-        {!loading && marketplaceResults && marketplaceResults.length === 0 && blogResults && blogResults.length > 0 && (;
+        {!loading && marketplaceResults && marketplaceResults.length = = 0 && blogResults && blogResults.length > 0 && (;
           <div>;
             <p className="text-zion-slate-light mb-2">No marketplace results found. Related blog posts:</p>;
             <div className="space-y-4">;
@@ -136,11 +131,11 @@ export default function SearchPage() {
                   <h3 className="text-lg font-bold text-white">{highlight(r && r.title, query)}</h3>;
                   <p className="text-zion-slate-light">{highlight(r && r.description, query)}</p>;
                 </div>;
-              ))}
+              )}
             </div>;
           </div>;
         )}
-        {!loading && marketplaceResults && marketplaceResults.length === 0 && blogResults && blogResults.length === 0 && query && (;
+        {!loading && marketplaceResults && marketplaceResults.length = = 0 && blogResults && blogResults.length = = 0 && query && (;
           <p className="text-zion-slate-light">No results found for "{query}".</p>;
         )}
         {!loading && marketplaceResults.length > 0 && (
@@ -161,8 +156,8 @@ export default function SearchPage() {
             </TabsList>
             <TabsContent value="products" className="space-y-4">
               {results
-                .filter((r,) => r.type === "product" |r.type === "service")
-                .map((r,) => (
+                .filter(r,) => r.type = = "product" |r.type = = "service")
+                .map(r,) => (
                   <div
                     key={`${r && r.type}-${r && r.id}`}
                     className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4">;
@@ -173,12 +168,12 @@ export default function SearchPage() {
                       {highlight(r && r.description, query)}
                     </p>;
                   </div>;
-                ))}
+                )}
             </TabsContent>;
             <TabsContent value="talent" className="space-y-4">;
               {results;
-                .filter((r,) => r && r.type === "talent");
-                .map((r,) => (;
+                .filter(r,) => r && r.type = = "talent");
+                .map(r,) => (;
                   <div
                     key={`talent-${r && r.id}`}
                     className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4">;
@@ -189,12 +184,12 @@ export default function SearchPage() {
                       {highlight(r && r.description, query)}
                     </p>;
                   </div>;
-                ))}
+                )}
             </TabsContent>;
             <TabsContent value="docs" className="space-y-4">;
               {results;
-                .filter((r,) => r && r.type === "doc");
-                .map((r,) => (;
+                .filter(r,) => r && r.type = = "doc");
+                .map(r,) => (;
                   <div
                     key={`doc-${r && r.id}`}
                     className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4">;
@@ -205,12 +200,12 @@ export default function SearchPage() {
                       {highlight(r && r.description, query)}
                     </p>;
                   </div>;
-                ))}
+                )}
             </TabsContent>;
             <TabsContent value="blog" className="space-y-4">;
               {results;
-                .filter((r,) => r && r.type === "blog");
-                .map((r,) => (;
+                .filter(r,) => r && r.type = = "blog");
+                .map(r,) => (;
                   <div
                     key={`blog-${r && r.id}`}
                     className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4">;
@@ -221,7 +216,7 @@ export default function SearchPage() {
                       {highlight(r && r.description, query)}
                     </p>;
                   </div>;
-                ))}
+                )}
             </TabsContent>;
           </Tabs>;
         )}
@@ -229,67 +224,67 @@ export default function SearchPage() {
     </div>
   )
   setQuery (urlQuery)
-}, [router.isReady, router.query.q]), //Fixed dependency array //Fetch results when query changes useEffect ( () => {
+, [router.isReady, router.query.q]), //Fixed dependency array //Fetch results when query changes useEffect () => {
   if (!router.isReady) return
-if (query.trim () ) {
-  fetchResults (query.trim () )
-}else {
+if (query.trim () {
+  fetchResults (query.trim ()
+else {
   setResults ([])
-}, [router.isReady, query]), //Fixed dependency array const fetchResults = async (term: string) => {
-  if (!term.trim () ) {
+, [router.isReady, query]), //Fixed dependency array const fetchResults = async (term: string) => {
+  if (!term.trim () {
   setResults ([])
 return
-}setLoading (true)
+setLoading (true)
 try {
   const res = await fetch (`/api/search?query=$ {
   encodeURIComponent (term)
-}`)
+`)
 const data = await res.json ()
-if (data && data.results && Array.isArray (data.results) ) {
+if (data && data.results && Array.isArray (data.results) {
   setResults (data.results)
-}else {
+else {
   set_results ([]);';
 logErrorToProduction ('Search API response structure is not as expected:', {
   data: data
-})
-}catch (error) {'
+)
+catch (error) {'
   logErrorToProduction ('Search failed:', {
   data: error
-})
+)
 setResults ([])
-}finally {
+finally {
   setLoading (false)
-}
+
 const handle_submit = (e: React.FormEvent) =>: any {
   e.prevent_default ();
 router.push (`/search?q=$ {
-  encodeURIComponent (query.trim () )
-}`)
-}
-//Add key prop to force re-render when route changes </div>)
-}{
-  !loading && marketplaceResults.length === 0 && blogResults.length > 0 && (<div> <p className="text-zion-slate-light mb-2" >No marketplace results found. Related blog posts:</p> <div className="space-y-4" > {
-  blogResults.map (r => (</div>) )
-}</div> </div>)
-}</p> </div>) )
-}</TabsContent> <div key= {
+  encodeURIComponent (query.trim ()
+`)
+
+/Add key prop to force re-render when route changes </div>)
+{
+  !loading && marketplaceResults.length = = 0 && blogResults.length > 0 && (<div> <p className="text-zion-slate-light mb-2" >No marketplace results found. Related blog posts:</p> <div className="space-y-4" > {
+  blogResults.map (r => (</div>)
+</div> </div>)
+</p> </div>)
+</TabsContent> <div key= {
   `talent-$ {
   r.id
-}` "
-}className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4" > </p> </div>) )
-}</TabsContent> <div key= {
+` "
+className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4" > </p> </div>)
+</TabsContent> <div key= {
   `doc-$ {
   r.id
-}` "
-}className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4" > </p> </div>) )
-}</TabsContent> <div key= {
+` "
+className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4" > </p> </div>)
+</TabsContent> <div key= {
   `blog-$ {
   r.id
-}` "
-}className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4" > </p> </div>) )
-}</TabsContent> </Tabs>)
-}</main> </div>)
-}'"  )
+` "
+className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4" > </p> </div>)
+</TabsContent> </Tabs>)
+</main> </div>)
+'"  )
               {/* Sort Options */}
               <div  className="mb - 6">;
                 <label className="block text - sm font - medium text - gray - 700 mb - 2">Sort By</label>;
@@ -308,23 +303,23 @@ router.push (`/search?q=$ {
                     on_click={ () => toggle_filter (filter.id) }
                     className={`w - full flex items - center justify - between p - 3 rounded - lg transition - colors ${selected_filters.has (filter.id) ? 'bg - blue - 50 border border - blue - 200';
                         : 'hover:bg - gray - 50';
-}`}
+`}
                   >;
                     <div  className="flex items - center space - x - 3">;
                       <filter.icon className="h - 5 w - 5 text - gray -600" />;
                       <span className="text - sm font - medium text - gray -700">{filter.name}</span>;
                     </div>;
                     <span className="text - sm text - gray -500">{filter.count}</span>;
-                  </button>) ) }
+                  </button>) }
               </div>;
             </div>;
           </div>;
         </motion.div>;
         {/* Search Results */}
         <motion.div;
-          initial={{ opacity: 0, coordinate_y: 20 }}
-          animate={{ opacity: 1, coordinate_y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          initial={ opacity: 0, coordinate_y: 20 }
+          animate={ opacity: 1, coordinate_y: 0 }
+          transition={ duration: 0.6, delay: 0.4 }
           className="max - w - 6xl mx -auto">;
           {/* Results Count */}
           <div  className="mb-6">
@@ -360,7 +355,7 @@ router.push (`/search?q=$ {
             </div>
     </>
   )
-}
+
                   <li> Industry Expertise</li>;
                   <li> Proven Results</li>;
                   <li> Scalable Solutions</li>;
@@ -377,7 +372,6 @@ router.push (`/search?q=$ {
             </div>;
     </>;
   );
-}
 
             <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
               <Link href="/pricing/" className="bg - blue - 600 text - white px - 6 py - 3 rounded - lg hover:bg - blue - 700 transition - colors">;
@@ -388,4 +382,3 @@ router.push (`/search?q=$ {
               </Link>;
             </div>;
     </>);
-}

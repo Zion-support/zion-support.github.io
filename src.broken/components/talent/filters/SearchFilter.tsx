@@ -6,5 +6,3 @@ export function SearchFilter() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

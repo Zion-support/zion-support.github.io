@@ -6,5 +6,3 @@ export function PageViewsChart() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

@@ -10,17 +10,16 @@ import { Badge } from "@/components/ui/badge",
 import { Label } from "@/components/ui/label";
 interface BrowseFiltersProps {
   type: "jobs" | "talents";
-}
+
 export function BrowseFilters({ type }: BrowseFiltersProps) {
   const [activeFilters, setActiveFilters] = useState<string[]>([]);
 
   const addFilter = (filter: string) => {
-    if (!activeFilters.includes(filter)) {
+    if (!activeFilters.includes(filter) {
       setActiveFilters([...activeFilters, filter])
     }
-  }
   const removeFilter = (filter: string) => {
-    setActiveFilters(activeFilters.filter(f => f !== filter))
+    setActiveFilters(activeFilters.filter(f => f != filter)
   }
 
   return (
@@ -36,10 +35,10 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
             </SheetTrigger>
             <SheetContent side="bottom" className="h-[85vh] rounded-t-xl">
               <SheetHeader>
-                <SheetTitle>Filter {type === "jobs" ? "Jobs" : "Talents"}</SheetTitle>
+                <SheetTitle>Filter {type = = "jobs" ? "Jobs" : "Talents"}</SheetTitle>
               </SheetHeader>
               <div className="py-6 space-y-6">
-                {type === "jobs" ? (
+                {type = = "jobs" ? (
                   <>
                     <div className="space-y-2">
                       <Label>Job Type</Label>
@@ -139,7 +138,7 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
               <SelectItem value="salary">Highest Pay</SelectItem>
             </SelectContent>
           </Select>
-          {activeFilters.map((filter) => (
+          {activeFilters.map(filter) => (
             <Badge
               key={filter}
                   <Select>;
@@ -200,7 +199,7 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
             </SelectContent>;
           </Select>;
 
-          {activeFilters && activeFilters.map((filter) => (;
+          {activeFilters && activeFilters.map(filter) => (;
             <Badge
               key={filter} 
               variant="secondary"
@@ -211,13 +210,13 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
                 onClick={() => removeFilter(filter)}
               />
             </Badge>
-          ))}
+          )}
         </div>
       </div>
     </div>
   )
-}
-          {active_filters.map ((filter) => (
+
+          {active_filters.map (filter) => (
             <Badge;
               key={filter}
               variant="secondary";
@@ -228,8 +227,7 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
                 className="h - 3 w - 3 cursor - pointer";
                 on_click={() => remove_filter (filter)}
               />;
-            </Badge>))}
+            </Badge>)}
         </div>;
       </div>;
     </div>);
-}

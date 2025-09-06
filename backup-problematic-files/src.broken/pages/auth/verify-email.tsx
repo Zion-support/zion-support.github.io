@@ -1,5 +1,4 @@
 import React from 'react';
-,;
 export export export default function verify-email()      {,;
   return (;
     <div>;

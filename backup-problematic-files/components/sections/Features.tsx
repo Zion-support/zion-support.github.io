@@ -8,14 +8,12 @@ interface Feature {;
   color: string,;
   gradient: string,;
   delay?: number;
-}
-;
+
 interface FeaturesProps {;
   title: string,;
   subtitle: string,;
   features: Feature[],;
   columns?: 2 | 3 | 4;
-}
 
 const Features: React.FC<FeaturesProps> = ({
   title,
@@ -46,11 +44,11 @@ const Features: React.FC<FeaturesProps> = ({
         </div>;
         {/* Features Grid */}
         <div className={`grid grid-cols-1 gap-8 ${gridCols[columns]}`}>;
-          {features.map((feature, index) => (;
+          {features.map(feature, index) => (;
             <Card;
               key={index}
               className="text-center group bg-gray-900/50 border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1"
-              style={{ animationDelay: `${(index * 0.1) + 0.2}s` }}
+              style={ animationDelay: `${(index * 0.1) + 0.2}s` }
             >
               <div className="relative">
                 <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature.color} shadow-xl`}>
@@ -65,10 +63,10 @@ const Features: React.FC<FeaturesProps> = ({
                 {feature.description}
               </p>;
             </Card>;
-          ))}
+          )}
         </div>;
       </div>;
     </section>;
   );
-},;
+,;
 export default Features;

@@ -6,5 +6,3 @@ export function SortFilter() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

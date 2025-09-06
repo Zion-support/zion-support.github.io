@@ -7,6 +7,5 @@ const StatisticsSection.js = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default StatisticsSection.js;

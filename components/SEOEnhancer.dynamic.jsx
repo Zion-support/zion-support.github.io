@@ -5,5 +5,5 @@ const SEOEnhancer.dynamic = () => {
       <h1>SEOEnhancer.dynamic</h1>
     </div>
   );
-}
+
 export default SEOEnhancer.dynamic;

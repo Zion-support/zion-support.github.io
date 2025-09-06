@@ -1,5 +1,4 @@
 
-
 import {useState} from "react";
 import {zodResolver} from "@hookform/resolvers/zod";
 import {useForm} from "react-hook-form";
@@ -17,14 +16,14 @@ type ProfileFormValues = z.infer<typeof profileSchema>;
 interface ProfileSetupProps {
   onComplete: (data: ProfileFormValues) => void
   userType: string
-}
+
 export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
   const form = useForm<ProfileFormValues>({
     resolver: zodResolver(profileSchema)
     defaultValues: {
       displayName: ""
       bio: ""
-      headline: ""}})
+      headline: ""})
   const getTypeLabel = () => {
     switch (userType) {
       case "serviceProvider": return "Service Provider";
@@ -37,18 +36,18 @@ import { Button } from '@/components / ui / button';
 import { Input } from '@/components / ui / input';
 import { Textarea } from '@/components / ui / textarea';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components / ui / form';
-;
+
 const profile_schema = z.object ({
   display_name: z.string ().min (2, "Name must be at least 2 characters");
   bio: z.string ().min (10, "Bio must be at least 10 characters").max (500, "Bio must be less than 500 characters");
   headline: z.string ().min (5, "Headline must be at least 5 characters").max (100, "Headline must be less than 100 characters")});
-;
+
 type ProfileFormValues = z.infer < typeof profile_schema>;
-;
+
 interface ProfileSetupProps {
   on_complete: (data: ProfileFormValues) => void,
   user_type: string;
-}
+
 export /**
  * ProfileSetup - Function description
  */
@@ -58,7 +57,7 @@ function ProfileSetup() {
     default_values: {
       display_name: "",
       bio: "",
-      headline: ""}}),
+      headline: ""}),
   const getTypeLabel = () =>: any {
     switch (user_type) {
       case "service_provider": return "Service Provider";
@@ -69,7 +68,6 @@ function ProfileSetup() {
       default:;
         return "User";
     }
-  }
 
   return (
     <div className="space-y-6">
@@ -111,10 +109,10 @@ function ProfileSetup() {
                   <div className="relative">;
                     <Input
                       placeholder={`e && e.g., ${
-                        userType === "serviceProvider" ? "Professional Videographer with 5+ years experience" :
-                        userType === "talent" ? "Senior Motion Designer specialized in 3D Animation" :
+                        userType = = "serviceProvider" ? "Professional Videographer with 5+ years experience" :
+                        userType = = "talent" ? "Senior Motion Designer specialized in 3D Animation" :
                         "Creative Director at XYZ Studios"
-;
+
   return (
     <div className="space - y-6">;
       <div className="text - center mb - 6">;
@@ -154,8 +152,8 @@ function ProfileSetup() {
                   <div className="relative">;
                     <Input;
                       placeholder={`e.g., ${
-                        user_type === "service_provider" ? "Professional Videographer with 5+ years experience" :;
-                        user_type === "talent" ? "Senior Motion Designer specialized in 3D Animation" :;
+                        user_type = = "service_provider" ? "Professional Videographer with 5+ years experience" :;
+                        user_type = = "talent" ? "Senior Motion Designer specialized in 3D Animation" :;
                         "Creative Director at XYZ Studios";
                       }`}
                       className="bg - zion - blue pl - 10 text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion - purple";
@@ -191,8 +189,8 @@ function ProfileSetup() {
                 <FormControl>;
                   <Textarea;
                     placeholder={`Tell us about your ${
-                      user_type === "service_provider" ? "services and expertise" :;
-                      user_type === "talent" ? "skills and experience" :;
+                      user_type = = "service_provider" ? "services and expertise" :;
+                      user_type = = "talent" ? "skills and experience" :;
                       "business and needs";
                     }`}
                     className="bg - zion - blue text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion - purple min - h-[120px]";
@@ -213,13 +211,12 @@ function ProfileSetup() {
       </Form>
     </div>
   )
-}
+
             Complete Profile;
           </Button>;
         </form>;
       </Form>;
     </div>;
   );
-}
+
     </div>);
-}

@@ -7,7 +7,7 @@ interface FormData {
   phone: string,
   service: string,
   message: string
-},
+,
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
     name: '',
@@ -24,7 +24,7 @@ const ContactForm: React.FC = () => {
     setFormData(prev => ({
       ...prev
       [name]: value
-    }))
+    })
   },
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault(),
@@ -32,7 +32,7 @@ const ContactForm: React.FC = () => {
     setSubmitStatus('idle'),
     try {
       // Simulate form submission
-      await new Promise(resolve => setTimeout(resolve, 2000)),
+      await new Promise(resolve => setTimeout(resolve, 2000),
       setSubmitStatus('success'),
       setFormData({
         name: '',
@@ -47,8 +47,7 @@ const ContactForm: React.FC = () => {
     } finally {
       setIsSubmitting(false)
     }
-  }
-},
+,
 export default ContactForm,
 import React, { useState } from 'react',;
 import LoadingSpinner from './LoadingSpinner',;
@@ -59,7 +58,7 @@ interface FormData {;
   phone: string,;
   service: string,;
   message: string;
-},;
+,;
 const ContactForm: React.FC = () => {;
   const [formData, setFormData] = useState<FormData>({;
     name: '',;
@@ -76,7 +75,7 @@ const ContactForm: React.FC = () => {;
     setFormData(prev => ({;
       ...prev,;
       [name]: value;
-    }));
+    });
   },;
   const handleSubmit = async (e: React.FormEvent) => {;
     e.preventDefault(),;
@@ -84,7 +83,7 @@ const ContactForm: React.FC = () => {;
     setSubmitStatus('idle'),;
     try {;
       // Simulate form submission;
-      await new Promise(resolve => setTimeout(resolve, 2000)),;
+      await new Promise(resolve => setTimeout(resolve, 2000),;
       setSubmitStatus('success'),;
       setFormData({;
         name: '',;
@@ -99,6 +98,5 @@ const ContactForm: React.FC = () => {;
     } finally {;
       setIsSubmitting(false);
     }
-  }
-},;
+,;
 export default ContactForm;

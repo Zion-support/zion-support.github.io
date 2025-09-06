@@ -2,7 +2,6 @@ import React from 'react';
 
 interface NotificationSystemProps {
   className?: string;
-}
 
 const NotificationSystem: React.FC<NotificationSystemProps> = ({ className }) => {
   return (
@@ -11,6 +10,5 @@ const NotificationSystem: React.FC<NotificationSystemProps> = ({ className }) =>
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default NotificationSystem;

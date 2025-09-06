@@ -1,4 +1,4 @@
-{
+
   "total": 11,
   "restored": 0,
   "failed": 11,
@@ -59,4 +59,3 @@
       "reason": "No valid backup found"
     }
   ]
-}

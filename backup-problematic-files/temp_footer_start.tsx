@@ -2,7 +2,6 @@ import React from 'react';
 
 interface Temp_footer_startProps {
   className?: string;
-}
 
 const Temp_footer_start: React.FC<Temp_footer_startProps> = ({ className }) => {
   return (
@@ -11,6 +10,5 @@ const Temp_footer_start: React.FC<Temp_footer_startProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default Temp_footer_start;

@@ -5,7 +5,7 @@ export default function FiveHundred() {;
     </div>;
   );export default function FiveHundred() {;
   return <div className="min-h-screen flex items-center justify-center">Something went wrong.</div>;
-}
+
 export default /**
  * FiveHundred - Function description
  */
@@ -18,4 +18,3 @@ function FiveHundred() {
  */
 function FiveHundred() {
   return <div className="min - h-screen flex items - center justify - center">Something went wrong.</div>;
-}

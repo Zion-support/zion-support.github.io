@@ -6,5 +6,3 @@ export function TimeOS() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

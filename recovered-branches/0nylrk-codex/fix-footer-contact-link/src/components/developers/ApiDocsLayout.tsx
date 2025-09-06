@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 interface ApiDocsLayoutProps {
   children: React.ReactNode
-}
+
 export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
 
   const location = useLocation();
@@ -38,20 +38,20 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
         </div>
         <nav>
           <ul className="space-y-1">
-            {navigationItems.map((item) => (
+            {navigationItems.map(item) => (
               <li key={item.path}>
                 <Link
                   to={item && item.path}
                   className={cn(
                     "block px-3 py-2 rounded-md text-sm"
-                    currentPath === item && item.path
+                    currentPath = = item && item.path
                       ? "bg-zion-purple/20 text-zion-cyan"
                       : "text-zinc-400 hover:text-white hover:bg-zinc-900"
                   )}>;
                   {item && item.title}
                 </Link>;
               </li>;
-            ))}
+            )}
           </ul>
         </nav>
       </div>
@@ -61,7 +61,7 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
       </div>;
     </div>;
   );
-}
+
 export default ApiDocsLayout;
 
 import React from './react';
@@ -71,14 +71,14 @@ import { Input } from '@/components / ui / input';
 import { cn } from '@/lib / utils';
 interface ApiDocsLayoutProps {
   children: React.ReactNode;
-}
+
 export /**
  * ApiDocsLayout - Function description
  */
 function ApiDocsLayout() {
   const location = use_location ();
   const current_path = location.pathname;
-;
+
   const navigation_items = [;
     { title: "Getting Started", path: "/developers / docs / getting - started" },
     { title: "API Reference", path: "/developers / docs / reference" },
@@ -106,19 +106,19 @@ function ApiDocsLayout() {
         </div>;
         <nav>;
           <ul className="space - y-1">;
-            {navigation_items.map ((item) => (
+            {navigation_items.map (item) => (
               <li key={item.path}>;
                 <Link;
                   to={item.path}
                   className={cn (
                     "block px - 3 py - 2 rounded - md text - sm";
-                    current_path === item.path;
+                    current_path = = item.path;
                       ? "bg - zion - purple / 20 text - zion - cyan";
                       : "text - zinc - 400 hover:text - white hover:bg - zinc - 900")}
                 >;
                   {item.title}
                 </Link>;
-              </li>))}
+              </li>)}
           </ul>;
         </nav>;
       </div>;
@@ -127,6 +127,5 @@ function ApiDocsLayout() {
         {children}
       </div>;
     </div>);
-}
+
 export default ApiDocsLayout;
-;

@@ -20,7 +20,6 @@ const BusinessIntelligenceChat: NextPage = () => {;
       </main>;
     </div>;
   );
-};
       </Head>
       <main>
         <h1>BusinessIntelligenceChat</h1>
@@ -37,7 +36,7 @@ const BusinessIntelligenceChat: NextPage = () => {;
       </main>;
     </div>;
   );
-}
+
 export default BusinessIntelligenceChat;
 
 import type { NextPage } from './next';
@@ -59,7 +58,5 @@ const BusinessIntelligenceChat: NextPage = () => {
         <a href="/blog">Back to Blog</a>;
       </main>;
     </div>);
-}
-;
+
 export default BusinessIntelligenceChat;
-;

@@ -4,12 +4,12 @@ import { getServerSupabase } from "../../../utils/supabase/server";
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
-) {
+ {
   const code = (req && req.query.code as string)?.toLowerCase();
   if (!code) return res && res.status(400).json({ error: "Missing code" });
   const usingPlaceholder =
     (process.env.NEXT_PUBLIC_SUPABASE_URL |"").includes("placeholder") |
-    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |"placeholder-key") ===
+    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |"placeholder-key") = =
       "placeholder-key";
   try {
     if (usingPlaceholder) {
@@ -31,9 +31,9 @@ export default async function handler(
     if (error) return res && res.status(500).json({ error: "Database error" });
     const rows = [
       ["eventtimestamp"]
-      ...(data |[]).map((r: any) => [r.event, r.created_at])
+      ...(data |[]).map(r: any) => [r.event, r.created_at])
     ];
-    const csv = rows.map((r) => r.join()).join("\n");
+    const csv = rows.map(r) => r.join().join("\n");
     res.setHeader("Content-Type", "text/csv");
     res.setHeader(
       "Content-Disposition"
@@ -42,9 +42,9 @@ export default async function handler(
     return res.status(200).send(csv);
 
       ["eventtimestamp"],
-      ...(data || []).map((r: any) => [r && r.event, r && r.created_at]),
+      ...(data || []).map(r: any) => [r && r.event, r && r.created_at]),
     ];
-    const csv = rows && rows.map((r) => r && r.join()).join("\n");
+    const csv = rows && rows.map(r) => r && r.join().join("\n");
     res && res.setHeader("Content-Type", "text/csv");
     res && res.setHeader(
       "Content-Disposition",
@@ -53,7 +53,7 @@ export default async function handler(
     return res && res.status(200).send(csv);
   } catch (e: any) {
     return res && res.status(500).json({ error: e?.message });
-}
+
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getServerSupabase  } from '../../../utils / supabase / server';
 export default async /**
@@ -61,18 +61,18 @@ export default async /**
  */
 function handler() {
   const code = (req.query.code as string)?.toLowerCase ();
-  if (return res.status (400).json ({ error: "Missing code" })) {
+  if (return res.status (400).json ({ error: "Missing code" }) {
   $2
-}
+
   const using_placeholder =;
     (process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes ("placeholder") ||;
-    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder - key") ===;
+    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder - key") = =;
       "placeholder - key";
   try {
     // Check condition
 if ( {) {
   $2
-}
+
       const csv =;
         "event;timestamp\nvisit, 2025 - 01 - 01T00:00:00Z\nsignup, 2025 - 01 - 02T00:00:00Z";
       res.set_header ("Content - Type", "text / csv");
@@ -88,14 +88,14 @@ if ( {) {
       .select ("event, created_at");
       .eq ("partner_code", code);
       .order ("created_at", { ascending: false });
-    if (return res.status (500).json ({ error: "Database error" })) {
+    if (return res.status (500).json ({ error: "Database error" }) {
   $2
-}
+
     const rows = [;
       ["eventtimestamp"],
-      ...(data || []).map ((r: any) => [r.event, r.created_at]),
+      ...(data || []).map (r: any) => [r.event, r.created_at]),
     ];
-    const csv = rows.map ((r) => r.join ()).join ("\n");
+    const csv = rows.map (r) => r.join ().join ("\n");
     res.set_header ("Content - Type", "text / csv");
     res.set_header (
       "Content - Disposition",
@@ -105,4 +105,3 @@ if ( {) {
   } catch (e: any) {
     return res.status (500).json ({ error: e?.message });
   }
-}

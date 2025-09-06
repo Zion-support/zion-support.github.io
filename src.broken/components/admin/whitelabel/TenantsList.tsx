@@ -6,5 +6,3 @@ export function TenantsList() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

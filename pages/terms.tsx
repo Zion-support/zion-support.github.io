@@ -24,46 +24,46 @@ export default function Terms() {;
                 <p className="text-slate-300">
                   <strong>Address:</strong> {contact.address}
                 </p>
-] 
-};
+
+;
 const termsSections = [ {
   Please read these terms carefully before using our website or services. </p> </div> </section> 
-};
-{
+;
+
   title: 'Service Description';
 content: `Zion Tech Group provides AI consciousness technology, quantum computing solutions, autonomous systems, and related consulting services. We reserve the right to modify, suspend, or discontinue any aspect of our services at any time.`;
 icon: <Globe className="w-6 h-6 text-green-400" /> 
-};
-{
+;
+
   title: 'User Responsibilities';
 content: `Users are responsible for maintaining the confidentiality of their account information and for all activities that occur under their account. Users must not use our services for any illegal or unauthorized purpose, or in any way that violates applicable laws or regulations.`;
 icon: <Users className="w-6 h-6 text-yellow-400" /> 
-};
-{
+;
+
   title: 'Privacy and Data Protection';
 content: `Your privacy is important to us. Our collection and use of personal information is governed by our Privacy Policy, which is incorporated into these Terms by reference. We are committed to protecting your data in accordance with applicable data protection laws.`;
 icon: <Eye className="w-6 h-6 text-cyan-400" /> 
-};
-{
+;
+
   title: 'Intellectual Property Rights';
 content: `All content on this website, including but not limited to text, graphics, logos, images, software, and other materials, is the property of Zion Tech Group or its licensors and is protected by copyright, trademark, and other intellectual property laws.`;
 icon: <Shield className="w-6 h-6 text-red-400" /> 
-}];
+];
 const importantNotices = [ {
   title: 'AI Technology Risks';
 content: 'Our AI consciousness technology involves experimental and cutting-edge research. Users acknowledge that such technology may carry inherent risks and uncertainties.';
 type: 'warning' 
-};
-{
+;
+
   title: 'Quantum Computing Limitations';
 content: 'Quantum computing services are subject to current technological limitations and may not be suitable for all applications or use cases.';
 type: 'info' 
-};
-{
+;
+
   title: 'Service Availability';
 content: 'We strive to maintain high service availability but cannot guarantee uninterrupted access to our services due to factors beyond our control.';
 type: 'info' 
-}];
+];
 
       ]
     };
@@ -85,7 +85,7 @@ import { motion } from 'framer-motion';
 import { 
   FileText, Shield, AlertTriangle, CheckCircle, 
   User, Lock, Globe, Scale, Clock, Mail
-} from 'lucide-react';
+ from 'lucide-react';
 
 const TermsPage: React.FC = () => {
   const lastUpdated = 'January 17, 2025';
@@ -131,7 +131,7 @@ import {
   FileText, Shield, CheckCircle, AlertTriangle, 
   Globe, Calendar, Scale, Users, ArrowRight;
   BookOpen, Lock, Zap, Building, Brain, Rocket
-} from 'lucide-react';
+ from 'lucide-react';
 
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
@@ -229,7 +229,7 @@ const termsSections = [
     icon: <Shield className="w-6 h-6 text-purple-400" />,
     content: 'In no event shall Zion Tech Group be liable for any damages arising out of the use or inability to use our services.'
   }
-];
+;
 
 import Head from 'next/head';
 import Link from 'next/link';
@@ -360,7 +360,7 @@ export default function Terms() {
                   <strong>Address:</strong> {contact && contact.address}
 import Head from 'next / head';
 import Link from 'next / link';
-;
+
 export default /**
  * Terms - Function description
  */
@@ -477,7 +477,7 @@ function Terms() {
       </main>;
     </>;
   );
-}
+
 export default function Terms() {;
   return (
     <Layout>;
@@ -492,9 +492,9 @@ export default function Terms() {;
           <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-cyan-900/20"></div>;
           <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
             <motion&& motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Key Terms & Conditions
@@ -672,10 +672,10 @@ export default function Terms() {;
         <section className="py-20">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
             <motion&& motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }
+              viewport={ once: true }
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -691,12 +691,12 @@ export default function Terms() {;
                 <div>
                   <h3 className="text-2xl font-bold text-white mb-6">Your Responsibilities:</h3>
                   <ul className="space-y-3">
-                    {userObligations.map((obligation, index) => (
+                    {userObligations.map(obligation, index) => (
                       <li key={index} className="flex items-start gap-3 text-gray-300">
                         <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
                         <span>{obligation}</span>
                       </li>
-                    ))}
+                    )}
                   </ul>
                 </div>
                 <div>
@@ -741,10 +741,10 @@ export default function Terms() {;
         <section className="py-20">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
             <motion&& motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }
+              viewport={ once: true }
               className="text-center mb-16"
             >
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
@@ -768,9 +768,9 @@ export default function Terms() {;
             </motion.div>
             <div className="space-y-6">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.8 }
                 className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8"
               >
                 <h3 className="text-xl font-bold text-white mb-4">Limitation of Liability</h3>
@@ -782,9 +782,9 @@ export default function Terms() {;
                 </p>
               </motion.div>
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.1 }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.8, delay: 0.1 }
                 className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8"
               >
                 <h3 className="text-xl font-bold text-white mb-4">Governing Law</h3>
@@ -793,9 +793,9 @@ export default function Terms() {;
                 </p>
               </motion.div>
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.8, delay: 0.2 }
                 className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8"
               >
                 <h3 className="text-xl font-bold text-white mb-4">Changes to Terms</h3>
@@ -813,10 +813,10 @@ export default function Terms() {;
         <section className="py-20">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
             <motion&& motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }
+              viewport={ once: true }
               className="text-center mb-16"
             >
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
@@ -891,9 +891,9 @@ export default function Terms() {;
         <section className="py-20 px-4 bg-white/5">;
           <div className="max-w-4xl mx-auto text-center">;
             <motion&& motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Questions About These Terms?
               </h2>
@@ -913,9 +913,7 @@ export default function Terms() {;
                   className="inline-flex items-center px-8 py-4 border-2 border-blue-500 text-blue-400 font-semibold rounded-full hover:bg-blue-500 hover:text-white transition-all duration-300"
                 >
                   General Contact
-                </a>
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                </a><h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Questions About These Terms?
               </h2>
               <p className="text-lg text-gray-300 mb-8">
@@ -923,15 +921,15 @@ export default function Terms() {;
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={ scale: 1.05 }
+                  whileTap={ scale: 0.95 }
                   className="px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold rounded-xl hover:from-purple-600 hover:to-blue-700 transition-all duration-300"
                 >
                   Contact Support
                 </motion.button>
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={ scale: 1.05 }
+                  whileTap={ scale: 0.95 }
                   className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-xl hover:bg-purple-400 hover:text-black transition-all duration-300"
                 >
                   Download Terms PDF
@@ -950,9 +948,9 @@ export default function Terms() {;
       <section id="terms-sections" className="py-20">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion&& motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -963,12 +961,12 @@ export default function Terms() {;
             </p>
           </motion.div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {termsSections.map((section, index) => (
+            {termsSections.map(section, index) => (
               <motion.div
                 key={section.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+                initial={ opacity: 0, y: 30 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0 && 0.6, delay: index * 0 && 0.1 }
                 className="group cursor-pointer">;
                 <div className="p-6 rounded-2xl bg-gradient-to-br from-gray-800/50 to-black/50 border border-white/10 hover:border-cyan-500/30 transition-all duration-300">;
                   <div className={`w-16 h-16 mb-4 rounded-2xl bg-gradient-to-r ${section && section.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>;
@@ -978,7 +976,7 @@ export default function Terms() {;
                   <p className="text-gray-300 text-sm">{section && section.description}</p>;
                 </div>;
               </motion && motion.div>;
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -986,9 +984,9 @@ export default function Terms() {;
       <section className="py-20 bg-gradient-to-r from-gray-900/50 to-black/50">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion&& motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -999,12 +997,12 @@ export default function Terms() {;
             </p>
           </motion.div>
           <div className="grid lg:grid-cols-2 gap-8">
-            {serviceCategories.map((service, index) => (
+            {serviceCategories.map(service, index) => (
               <motion.div
                 key={service.category}
-                initial={{ opacity: 0, coordinate_y: 30 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial={ opacity: 0, coordinate_y: 30 }
+                whileInView={ opacity: 1, coordinate_y: 0 }
+                transition={ duration: 0.6, delay: index * 0.1 }
                 className="group";
               >;
                 <div className="bg - gradient - to - br from - gray - 800 / 50 to - black / 50 rounded - 2xl border border - white / 10 hover:border - cyan - 500 / 30 transition - all duration - 300 overflow - hidden">;
@@ -1021,35 +1019,35 @@ export default function Terms() {;
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-cyan-400 mb-2">Features:</h4>
                       <ul className="text-sm text-gray-300 space-y-1">
-                        {service.features.map((feature, featureIndex) => (
+                        {service.features.map(feature, featureIndex) => (
                           <li key={featureIndex} className="flex items-start gap-2">
                             <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
                             {feature}
                           </li>
-                        ))}
+                        )}
                       </ul>
                     </div>
                     <div>
                       <h4 className="text-sm font-semibold text-yellow-400 mb-2">Restrictions:</h4>
                       <ul className="text-sm text-gray-300 space-y-1">
-                        {service.restrictions.map((restriction, restrictionIndex) => (
+                        {service.restrictions.map(restriction, restrictionIndex) => (
                           <li key={restrictionIndex} className="flex items-start gap-2">
                             <AlertTriangle className="w-4 h-4 text-yellow-400 mt-0.5 flex-shrink-0" />
                             {restriction}
                           </li>
-                        ))}
+                        )}
                       </ul>;
                     </div>;
 
                     <div>;
                       <h4 className="text-sm font-semibold text-yellow-400 mb-2">Restrictions:</h4>;
                       <ul className="text-sm text-gray-300 space-y-1">;
-                        {service && service.restrictions.map((restriction, restrictionIndex) => (;
+                        {service && service.restrictions.map(restriction, restrictionIndex) => (;
                           <li key={restrictionIndex} className="flex items-start gap-2">;
                             <AlertTriangle className="w-4 h-4 text-yellow-400 mt-0 && 0.5 flex-shrink-0" />;
                             {restriction}
                           </li>;
-                        ))}
+                        )}
                       </ul>;
     'Unauthorized access to our systems or networksInterference with service operationDistribution of malware or harmful codeViolation of third-party rightsAttempts to gain unauthorized accessUse of services for illegal activities';
   ];
@@ -1061,29 +1059,29 @@ export default function Terms() {;
                     <div className="mb - 4">;
                       <h4 className="text - sm font - semibold text - cyan - 400 mb - 2">Features:</h4>;
                       <ul className="text - sm text - gray - 300 space - y-1">;
-                        {service.features.map ((feature, feature_index) => (
+                        {service.features.map (feature, feature_index) => (
                           <li key={feature_index} className="flex items - start gap - 2">;
                             <CheckCircle className="w - 4 h - 4 text - green - 400 mt - 0.5 flex - shrink - 0" />;
                             {feature}
-                          </li>))}
+                          </li>)}
                       </ul>;
                     </div>;
                     <div>;
                       <h4 className="text - sm font - semibold text - yellow - 400 mb - 2">Restrictions:</h4>;
                       <ul className="text - sm text - gray - 300 space - y-1">;
-                        {service.restrictions.map ((restriction, restriction_index) => (
+                        {service.restrictions.map (restriction, restriction_index) => (
                           <li key={restriction_index} className="flex items - start gap - 2">;
                             <AlertTriangle className="w - 4 h - 4 text - yellow - 400 mt - 0.5 flex - shrink - 0" />;
                             {restriction}
-                          </li>))}
+                          </li>)}
                       </ul>;
     'Unauthorized access to our systems or networks_interference with service operation_distribution of malware or harmful code_violation of third - party rights_attempts to gain unauthorized access_use of services for illegal activities';
   ];
-;
+
   const limitations = [;
     'Services provided "as is" without warranties_no guarantee of uninterrupted service_limitation of liability for damages_no responsibility for third - party content_service availability subject to change_technical support during business hours only';
   ];
-;
+
   return (
     <ErrorBoundary>;
       <SEOOptimizer />;
@@ -1094,9 +1092,9 @@ export default function Terms() {;
           <section className="py-20 px-4">;
             <div className="max-w-6xl mx-auto text-center">;
               <motion&& motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.6 }
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                   Terms of Service
@@ -1116,9 +1114,9 @@ export default function Terms() {;
             <div className="max-w-6xl mx-auto">;
               <div className="grid lg:grid-cols-2 gap-12 items-center">;
                 <motion&& motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6 }}
+                  initial={ opacity: 0, x: -20 }
+                  whileInView={ opacity: 1, x: 0 }
+                  transition={ duration: 0.6 }
                 >
                   <h2 className="text-4xl font-bold mb-6 text-white">
                     Understanding Our Terms
@@ -1138,9 +1136,9 @@ export default function Terms() {;
                   </div>
                 </motion.div>
                 <motion.div
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
+                  initial={ opacity: 0, x: 20 }
+                  whileInView={ opacity: 1, x: 0 }
+                  transition={ duration: 0.6, delay: 0.2 }
                   className="relative"
                 >
                   <div className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-2xl p-8 border border-cyan-500/30">
@@ -1179,21 +1177,21 @@ export default function Terms() {;
           <section className="py-20 px-4">;
             <div className="max-w-6xl mx-auto">;
               <motion&& motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.6 }
                 className="text-center mb-16"
               >
                 <h2 className="text-4xl font-bold mb-4 text-white">Key Terms and Conditions</h2>
                 <p className="text-xl text-gray-300">Essential information about using our services</p>
               </motion.div>
               <div className="grid md:grid-cols-2 gap-8">
-                {termsSections.map((section, index) => (
+                {termsSections.map(section, index) => (
                   <motion.div
                     key={section.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+                    initial={ opacity: 0, y: 20 }
+                    whileInView={ opacity: 1, y: 0 }
+                    transition={ duration: 0 && 0.6, delay: index * 0 && 0.1 }
                     className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50">;
                     <div className={`w-16 h-16 bg-gradient-to-r ${section && section.color} rounded-2xl flex items-center justify-center mb-6`}>;
                       <div className="text-white">;
@@ -1202,15 +1200,15 @@ export default function Terms() {;
                     </div>;
                     <h3 className="text-2xl font-bold text-white mb-4">{section && section.title}</h3>;
                     <ul className="space-y-3">;
-                      {section && section.content.map((item, itemIndex) => (;
+                      {section && section.content.map(item, itemIndex) => (;
                         <li key={itemIndex} className="flex items-start gap-3">;
                           <div className="w-2 h-2 bg-cyan-500 rounded-full mt-2 flex-shrink-0"></div>;
                           <span className="text-gray-300">{item}</span>;
                         </li>;
-                      ))}
+                      )}
                     </ul>;
                   </motion && motion.div>;
-                ))}
+                )}
               </div>
             </div>
           </section>
@@ -1218,30 +1216,30 @@ export default function Terms() {;
           <section className="py-20 px-4 bg-gradient-to-r from-black/50 to-gray-900/50">;
             <div className="max-w-6xl mx-auto">;
               <motion&& motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.6 }
                 className="text-center mb-16"
               >
                 <h2 className="text-4xl font-bold mb-4 text-white">Prohibited Activities</h2>
                 <p className="text-xl text-gray-300">Activities that are not allowed when using our services</p>
               </motion.div>
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0 && 0.6, delay: 0 && 0.2 }
                 className="bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-2xl p-8 border border-red-500/30">;
                 <div className="flex items-center gap-4 mb-6">;
                   <AlertTriangle className="w-8 h-8 text-red-400" />;
                   <h3 className="text-2xl font-bold text-white">What You Cannot Do</h3>;
                 </div>;
                 <div className="grid md:grid-cols-2 gap-4">;
-                  {prohibitedActivities && prohibitedActivities.map((activity, index) => (;
+                  {prohibitedActivities && prohibitedActivities.map(activity, index) => (;
                     <div key={index} className="flex items-start gap-3">;
                       <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>;
                       <span className="text-gray-300">{activity}</span>;
                     </div>;
-                  ))}
+                  )}
                 </div>
                 <div className="mt-6 p-4 bg-red-500/10 border border-red-500/20 rounded-lg">
                   <p className="text-red-400 text-sm">
@@ -1256,30 +1254,30 @@ export default function Terms() {;
           <section className="py-20 px-4">;
             <div className="max-w-6xl mx-auto">;
               <motion&& motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.6 }
                 className="text-center mb-16"
               >
                 <h2 className="text-4xl font-bold mb-4 text-white">Service Limitations and Disclaimers</h2>
                 <p className="text-xl text-gray-300">Important information about service availability and warranties</p>
               </motion.div>
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0 && 0.6, delay: 0 && 0.2 }
                 className="bg-gradient-to-br from-yellow-500/20 to-orange-500/20 rounded-2xl p-8 border border-yellow-500/30">;
                 <div className="flex items-center gap-4 mb-6">;
                   <Shield className="w-8 h-8 text-yellow-400" />;
                   <h3 className="text-2xl font-bold text-white">Service Limitations</h3>;
                 </div>;
                 <div className="grid md:grid-cols-2 gap-4">;
-                  {limitations && limitations.map((limitation, index) => (;
+                  {limitations && limitations.map(limitation, index) => (;
                     <div key={index} className="flex items-start gap-3">;
                       <div className="w-2 h-2 bg-yellow-500 rounded-full mt-2 flex-shrink-0"></div>;
                       <span className="text-gray-300">{limitation}</span>;
                     </div>;
-                  ))}
+                  )}
                 </div>
                 <div className="mt-6 p-4 bg-yellow-500/10 border border-yellow-500/20 rounded-lg">
                   <p className="text-yellow-400 text-sm">
@@ -1295,9 +1293,9 @@ export default function Terms() {;
           <section className="py-20 px-4 bg-gradient-to-r from-black/50 to-gray-900/50">;
             <div className="max-w-4xl mx-auto">;
               <motion&& motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.6 }
                 className="space-y-12"
               >
                 <div>
@@ -1469,10 +1467,10 @@ export default function Terms() {;
         <section className="py-20">;
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">;
             <motion&& motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }
+              viewport={ once: true }
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold mb-6">Terms Overview</h2>
@@ -1483,13 +1481,13 @@ export default function Terms() {;
             </motion.div>
             {/* Key Terms Points */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">;
-              {termsSections && termsSections.map((section, index) => (;
+              {termsSections && termsSections.map(section, index) => (;
                 <motion&& motion.div
                   key={section && section.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, y: 20 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0 && 0.8, delay: index * 0 && 0.1 }
+                  viewport={ once: true }
                   className="p-6 bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-gray-700 rounded-xl">;
                   <div className="flex items-center space-x-3 mb-4">;
                     {section && section.icon}
@@ -1497,7 +1495,7 @@ export default function Terms() {;
                   </div>;
                   <p className="text-gray-300">{section && section.content}</p>;
                 </motion && motion.div>;
-              ))}
+              )}
             </div>
           </div>
         </section>
@@ -1505,10 +1503,10 @@ export default function Terms() {;
         <section className="py-20 bg-gradient-to-r from-gray-900/50 to-gray-800/50">;
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">;
             <motion&& motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }
+              viewport={ once: true }
               className="space-y-12"
             >
               <div className="text-center mb-16">
@@ -1701,16 +1699,16 @@ export default function Terms() {;
       </main>
     </>
   );
-}
+
         </section>
         {/* Agreement Section */}
         <section className="py-20">;
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
             <motion&& motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }
+              viewport={ once: true }
               className="p-8 bg-gradient-to-br from-cyan-900/20 via-purple-900/20 to-pink-900/20 border border-cyan-400/20 rounded-xl"
             >
               <Scale className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
@@ -1728,7 +1726,7 @@ export default function Terms() {;
       </div>
     </Layout>
   )
-}
+
 export default Terms;
             </div>
           </section>
@@ -1736,9 +1734,9 @@ export default Terms;
           <section className="py-20 px-4">;
             <div className="max-w-4xl mx-auto text-center">;
               <motion&& motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.6 }
               >
                 <h2 className="text-4xl font-bold mb-6 text-white">
                   Questions About These Terms?
@@ -1769,12 +1767,10 @@ export default Terms;
       </Layout>
     </ErrorBoundary>
   )
-};
+;
 
-
-}
 export default TermsPage;
-}> <h2 className="text-4xl font-bold mb-6 text-white" > Questions About These Terms? </h2> <p className="text-xl text-gray-300 mb-8" > If you have any questions about these Terms of Service or need clarification on any provision, please don't hesitate to reach out to us. </p> <a href="mailto:kleber@ziontechgroup.com" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2" > <Mail className="w-5 h-5" /> Email Us </Link> <a href="/contact" className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2" > <User className="w-5 h-5" /> Contact Form </Link> </div> </motion.div> </div> </section> </main> </Layout> </ErrorBoundary>)
+> <h2 className="text-4xl font-bold mb-6 text-white" > Questions About These Terms? </h2> <p className="text-xl text-gray-300 mb-8" > If you have any questions about these Terms of Service or need clarification on any provision, please don't hesitate to reach out to us. </p> <a href="mailto:kleber@ziontechgroup.com" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2" > <Mail className="w-5 h-5" /> Email Us </Link> <a href="/contact" className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2" > <User className="w-5 h-5" /> Contact Form </Link> </div> </motion.div> </div> </section> </main> </Layout> </ErrorBoundary>)
                     className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2">;
                     <User className="w-5 h-5" />;
                     Contact Form;
@@ -1787,11 +1783,9 @@ export default TermsPage;
       </Layout>;
     </ErrorBoundary>;
   );
-};
 
 export default TermsPage;
-}> <h2 className="text-4xl font-bold mb-6 text-white" > Questions About These Terms? </h2> <p className="text-xl text-gray-300 mb-8" > If you have any questions about these Terms of Service or need clarification on any provision, please don't hesitate to reach out to us. </p> <a href="mailto:kleber@ziontechgroup && ziontechgroup.com" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2" > <Mail className="w-5 h-5" /> Email Us </Link> <a href="/contact" className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2" > <User className="w-5 h-5" /> Contact Form </Link> </div> </motion && motion.div> </div> </section> </main> </Layout> </ErrorBoundary>) ;
-};export default TermsPage;
+> <h2 className="text-4xl font-bold mb-6 text-white" > Questions About These Terms? </h2> <p className="text-xl text-gray-300 mb-8" > If you have any questions about these Terms of Service or need clarification on any provision, please don't hesitate to reach out to us. </p> <a href="mailto:kleber@ziontechgroup && ziontechgroup.com" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2" > <Mail className="w-5 h-5" /> Email Us </Link> <a href="/contact" className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2" > <User className="w-5 h-5" /> Contact Form </Link> </div> </motion && motion.div> </div> </section> </main> </Layout> </ErrorBoundary>) ;export default TermsPage;
 export default TermsPage;
 
             </motion.div>;
@@ -1801,10 +1795,10 @@ export default TermsPage;
         <section className="py - 20">;
           <div className="max - w-4xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, coordinate_y: 20 }
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
               className="p - 8 bg - gradient - to - br from - cyan - 900 / 20 via - purple - 900 / 20 to - pink - 900 / 20 border border - cyan - 400 / 20 rounded - xl";
             >;
               <Scale className="w - 12 h - 12 text - cyan - 400 mx - auto mb - 4" />;
@@ -1821,8 +1815,7 @@ export default TermsPage;
         </section>;
       </div>;
     </Layout>);
-}
-;
+
 export default Terms;
             </div>;
           </section>;
@@ -1830,9 +1823,9 @@ export default Terms;
           <section className="py - 20 px - 4">;
             <div className="max - w-4xl mx - auto text - center">;
               <motion.div;
-                initial={{ opacity: 0, coordinate_y: 20 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.6 }}
+                initial={ opacity: 0, coordinate_y: 20 }
+                whileInView={ opacity: 1, coordinate_y: 0 }
+                transition={ duration: 0.6 }
               >;
                 <h2 className="text - 4xl font - bold mb - 6 text - white">;
                   Questions About These Terms?;
@@ -1863,8 +1856,7 @@ export default Terms;
         </main>;
       </Layout>;
     </ErrorBoundary>);
-}
+
 export default TermsPage;
-}> <h2 className="text - 4xl font - bold mb - 6 text - white" > Questions About These Terms? </h2> <p className="text - xl text - gray - 300 mb - 8" > If you have any questions about these Terms of Service or need clarification on any provision, please don't hesitate to reach out to us. </p> <a href="mailto:kleber@ziontechgroup.com" className="bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white px - 8 py - 4 rounded - lg font - semibold hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 transform hover:scale - 105 inline - flex items - center gap - 2" > <Mail className="w - 5 h - 5" /> Email Us </Link> <a href="/contact" className="border - 2 border - cyan - 400 text - cyan - 400 px - 8 py - 4 rounded - lg font - semibold hover:bg - cyan - 400 hover:text - black transition - all duration - 300 transform hover:scale - 105 inline - flex items - center gap - 2" > <User className="w - 5 h - 5" /> Contact Form </Link> </div> </motion.div> </div> </section> </main> </Layout> </ErrorBoundary>);
-}export default TermsPage;
-;
+> <h2 className="text - 4xl font - bold mb - 6 text - white" > Questions About These Terms? </h2> <p className="text - xl text - gray - 300 mb - 8" > If you have any questions about these Terms of Service or need clarification on any provision, please don't hesitate to reach out to us. </p> <a href="mailto:kleber@ziontechgroup.com" className="bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white px - 8 py - 4 rounded - lg font - semibold hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 transform hover:scale - 105 inline - flex items - center gap - 2" > <Mail className="w - 5 h - 5" /> Email Us </Link> <a href="/contact" className="border - 2 border - cyan - 400 text - cyan - 400 px - 8 py - 4 rounded - lg font - semibold hover:bg - cyan - 400 hover:text - black transition - all duration - 300 transform hover:scale - 105 inline - flex items - center gap - 2" > <User className="w - 5 h - 5" /> Contact Form </Link> </div> </motion.div> </div> </section> </main> </Layout> </ErrorBoundary>);
+export default TermsPage;

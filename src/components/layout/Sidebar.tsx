@@ -7,7 +7,7 @@ import {
   DollarSign,
   Phone,
   Menu
-} from 'lucide-react';
+ from 'lucide-react';
 
 const Sidebar = () => {
   const navigation = [
@@ -27,7 +27,7 @@ const Sidebar = () => {
           <span className="text-lg font-semibold text-gray-900">Zion Tech</span>
         </div>
         <nav className="space-y-2">
-          {navigation.map((item) => (
+          {navigation.map(item) => (
             <Link
               key={item.name}
               to={item.href}
@@ -36,12 +36,12 @@ const Sidebar = () => {
               <item.icon className="w-5 h-5" />
               <span className="font-medium">{item.name}</span>
             </Link>
-          ))}
+          )}
         </nav>
       </div>
     </aside>
   )
-}
+
 export default Sidebar
 
 class ErrorBoundary extends React.Component {
@@ -49,23 +49,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -104,11 +104,10 @@ const Sidebar: React.FC = () => {;
       </div>;
     </div>;
   );
-};
 
 export default Sidebar;
   };
-,
+
   const navigationSections = [,
     {,
       id: 'services',
@@ -150,30 +149,30 @@ export default Sidebar;
       ],
     };
   ],
-,
+
   const quickLinks = [,
     { name: 'Get Quote', href: '/contact', icon: Phone, highlight: true },
     { name: 'Schedule Call', href: '/contact', icon: Clock },
     { name: 'View Portfolio', href: '/case-studies', icon: Award },
     { name: 'Download Brochure', href: '/resources', icon: ArrowRight };
   ],
-,
+
   const contactInfo = {,
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008, Middletown DE 19709',
   };
-,
+
   const handleLinkClick = (href: string) => {,
     if (onClose) onClose(),
     router.push(href),
   };
-,
+
   return (,
     <motion.aside,
       initial={false};
-      animate={{ x: isOpen ? 0 : -320 }};
-      transition={{ duration: 0.3, ease: 'easeInOut' }};
+      animate={ x: isOpen ? 0 : -320 };
+      transition={ duration: 0.3, ease: 'easeInOut' };
       className={`fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-40 overflow-y-auto ${className}`};
     >,
       <div className="p-6">,
@@ -190,7 +189,6 @@ export default Sidebar;
               onClick={onClose};
               className="p-2 rounded-lg text-gray-500 hover: bg-gray-100 transition-colors",
             >,
-              ,
             </button>,
           )};
         </div>,
@@ -198,7 +196,7 @@ export default Sidebar;
         <div className="mb-8">,
           <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">Quick Actions</h3>,
           <div className="space-y-2">,
-            {quickLinks.map((link) => {,
+            {quickLinks.map(link) => {,
               const IconComponent = link.icon,
               return (,
                 <button,
@@ -219,10 +217,10 @@ export default Sidebar;
         </div>,
         {/* Navigation Sections */};
         <div className="space-y-6">,
-          {navigationSections.map((section) => {,
+          {navigationSections.map(section) => {,
             const isExpanded = expandedSections.includes(section.id),
             const IconComponent = section.icon,
-,
+
             return (,
               <div key={section.id}>,
                 <button,
@@ -241,12 +239,12 @@ export default Sidebar;
                 </button>,
                 {isExpanded && (,
                   <motion.div,
-                    initial={{ opacity: 0, height: 0 }};
-                    animate={{ opacity: 1, height: 'auto' }};
-                    exit={{ opacity: 0, height: 0 }};
+                    initial={ opacity: 0, height: 0 };
+                    animate={ opacity: 1, height: 'auto' };
+                    exit={ opacity: 0, height: 0 };
                     className="mt-2 space-y-1",
                   >,
-                    {section.items.map((item) => {,
+                    {section.items.map(item) => {,
                       const ItemIconComponent = item.icon,
                       return (,
                         <button,
@@ -310,7 +308,6 @@ export default Sidebar;
       </div>,
     </motion.aside>,
   ),
-};
+;
   );
-};
 export default Sidebar;

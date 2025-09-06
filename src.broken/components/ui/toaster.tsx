@@ -6,5 +6,3 @@ export function toaster() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

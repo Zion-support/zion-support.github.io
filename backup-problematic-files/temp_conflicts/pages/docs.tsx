@@ -3,7 +3,7 @@ import Head from 'next/head',;
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',;
 import Card from '../components/ui/Card',;
 import Link from 'next/link',;
-;
+
 export default function DocsPage() {;
 	return (;
 		<UltraFuturisticBackground variant="quantum" intensity="medium">;
@@ -35,4 +35,3 @@ export default function DocsPage() {;
 			</div>;
 		</UltraFuturisticBackground>;
 	);
-}

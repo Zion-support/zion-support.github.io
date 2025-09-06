@@ -6,5 +6,3 @@ export function Featured() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

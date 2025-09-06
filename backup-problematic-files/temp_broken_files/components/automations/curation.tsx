@@ -6,12 +6,12 @@ import path from "path",type Experiment = {
   metric?: string,
   effort?: number,
   impact?: number
-},
+,
 
 type Props = {
   updatedAt: string | null,
   items: Experiment[]
-},
+,
 
 export default function CurationPage({ updatedAt, items }: Props) {
   return (
@@ -36,7 +36,7 @@ export default function CurationPage(_{_updatedAt, _items}: Props) {_return (
       )}
 
       <div className=&quot;mt-6 space-y-4&quot;>
-        {items.map((exp, idx) => (
+        {items.map(exp, idx) => (
           <div key={idx} className=&quot;rounded-xl border border-gray-200 bg-white p-5 shadow-sm&quot;>
             <div className=&quot;text-base font-semibold text-gray-900&quot;>{exp.title}</div>
             {(exp.hypothesis || exp.metric) && (
@@ -52,7 +52,7 @@ export default function CurationPage(_{_updatedAt, _items}: Props) {_return (
                 {exp.impact ? `Impact: ${exp.impact}/5` : null}              </div>
             )}
           </div>;
-        ))}
+        )}
         {!items.length && (
           <div className=&quot;rounded-xl border border-gray-200 bg-white p-6 text-center text-gray-600&quot;>            Nothing to show yet.
           </div>
@@ -60,7 +60,6 @@ export default function CurationPage(_{_updatedAt, _items}: Props) {_return (
       </div>
     </main>
   )
-}
 
 export async function getStaticProps() {
   try {
@@ -70,8 +69,7 @@ export async function getStaticProps() {
       props: {
         updatedAt: parsed.updatedAt || null,
         items: parsed.items || []},
-      revalidate: 300}
-  } catch {
+      revalidate: 300} catch {
     return {
       props: {
         updatedAt: null,
@@ -89,4 +87,4 @@ export async function getStaticProps() {_try {
       props: {
         updatedAt: null, _items: []},
       revalidate: 300};
-  }}
+  }

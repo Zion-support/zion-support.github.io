@@ -20,7 +20,7 @@ import {
   CardFooter
   CardHeader
   CardTitle
-} from '@/components/ui/card'
+ from '@/components/ui/card'
 
 import { Sparkles } from 'lucide-react'
 import { Progress } from "@/components/ui/progress";
@@ -196,7 +196,7 @@ export function UsageStats() {
       </div>
     </div>
   )
-}"}
+"}
           Configure usage limits for your team to manage your subscription;
           resources.;
         </p>;
@@ -361,9 +361,9 @@ export function UsageStats() {
     </div>;
   );
 
-}"}
+"}
 
         <Button > Contact Us</Button>;
       </div>;
     </div>);
-}"}
+"}

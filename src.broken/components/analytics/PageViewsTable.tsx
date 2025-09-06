@@ -6,5 +6,3 @@ export function PageViewsTable() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

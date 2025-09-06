@@ -6,28 +6,26 @@ import { ;
   DropdownMenuItem, ;
   DropdownMenuSeparator,;
   DropdownMenuTrigger ;
-} from '@/components/ui/dropdown-menu',;
+ from '@/components/ui/dropdown-menu',;
 import { Button } from '@/components/ui/button',;
 import { Input } from '@/components/ui/input',;
 import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog',;
 import { Save, ChevronDown, Plus, Loader2 } from 'lucide-react',;
 import { Resume } from '@/types/resume',;
 import { useResume } from '@/hooks/useResume',;
-;
+
 interface ResumeVersionSelectorProps {;
   currentResume:Resume,;
   onResumeChange:(resumeId:string) => void;
-}
-;
+
 export function ResumeVersionSelector({ currentResume, onResumeChange } ResumeVersionSelectorProps) {;
   const { createResume, fetchResume } = useResume(),;
   const [saveDialogOpen, setSaveDialogOpen] = useState(false),;
   const [newResumeTitle, setNewResumeTitle] = useState(''),;
   const [existingResumes, setExistingResumes] = useState<Resume[]>([]),;
   const [isLoading, setIsLoading] = useState(false),;
-  ;
   const handleCreateNewVersion = async () => {;
-    if (newResumeTitle.trim()) {;
+    if (newResumeTitle.trim() {;
       setIsLoading(true),;
       const resumeId = await createResume({ title:newResumeTitle.trim() }),;
       if (resumeId) {;
@@ -37,9 +35,8 @@ export function ResumeVersionSelector({ currentResume, onResumeChange } ResumeVe
         setNewResumeTitle(''),;
       }
       setIsLoading(false),;
-    }
-  },;
-;
+    },;
+
   return (;
     <div className="flex items-center gap-2">;
       <span className="text-sm text-muted-foreground">Resume:</span>;
@@ -51,14 +48,14 @@ export function ResumeVersionSelector({ currentResume, onResumeChange } ResumeVe
           </Button>;
         </DropdownMenuTrigger>;
         <DropdownMenuContent align="end">;
-          {existingResumes.map((resume) => (;
+          {existingResumes.map(resume) => (;
             <DropdownMenuItem ;
               key={resume.id}
               onClick={() => onResumeChange(resume.id!)}
               className="cursor-pointer";
             >;
               {resume.basic_info.title}
-            </DropdownMenuItem>;          ))}
+            </DropdownMenuItem>;          )}
           <DropdownMenuSeparator />;
           <DropdownMenuItem ;
             onClick={() => setSaveDialogOpen(true)}
@@ -69,7 +66,6 @@ export function ResumeVersionSelector({ currentResume, onResumeChange } ResumeVe
           </DropdownMenuItem>;
         </DropdownMenuContent>;
       </DropdownMenu>;
-      ;
       <Dialog open={saveDialogOpen} onOpenChange={setSaveDialogOpen}>;
         <DialogContent className="sm:max-w-md">;
           <DialogHeader>;
@@ -102,11 +98,8 @@ export function ResumeVersionSelector({ currentResume, onResumeChange } ResumeVe
         </DialogContent>;
       </Dialog>;
     </div>;
-  ),; 
-}
-};
-> {
+  ),;
+ {
   resume.basic info.title 
-}</DropdownMenuItem>) ) 
-}<DropdownMenuSeparator /> <DropdownMenuItem > <Plus className="h-4 w-4 mr-2" /> Save as new version </DropdownMenuItem> </DropdownMenuContent> </DropdownMenu> <DialogHeader> <DialogTitle>Save as new resume version</DialogTitle> </DialogHeader> <div className="py-4" > <Input /> </div> <DialogFooter> <Button > Cancel </Button> <Button Save </Button> </DialogFooter> </DialogContent> </Dialog> </div>) 
-}
+</DropdownMenuItem>) 
+<DropdownMenuSeparator /> <DropdownMenuItem > <Plus className="h-4 w-4 mr-2" /> Save as new version </DropdownMenuItem> </DropdownMenuContent> </DropdownMenu> <DialogHeader> <DialogTitle>Save as new resume version</DialogTitle> </DialogHeader> <div className="py-4" > <Input /> </div> <DialogFooter> <Button > Cancel </Button> <Button Save </Button> </DialogFooter> </DialogContent> </Dialog> </div>) 

@@ -20,7 +20,6 @@ const NetworkEngineeringChat: NextPage = () => {;
       </main>;
     </div>;
   );
-};
       </Head>
       <main>
         <h1>NetworkEngineeringChat</h1>
@@ -37,7 +36,7 @@ const NetworkEngineeringChat: NextPage = () => {;
       </main>;
     </div>;
   );
-}
+
 export default NetworkEngineeringChat;
 
 import type { NextPage } from './next';
@@ -59,7 +58,5 @@ const NetworkEngineeringChat: NextPage = () => {
         <a href="/blog">Back to Blog</a>;
       </main>;
     </div>);
-}
-;
+
 export default NetworkEngineeringChat;
-;

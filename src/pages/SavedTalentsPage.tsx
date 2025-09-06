@@ -31,19 +31,18 @@ export default function SavedTalentsPage() {
   const [isLoading, setIsLoading] = useState(true)
   const router = useRouter()
   // Using router.asPath instead of useLocation
-  useEffect((,) => {
+  useEffect(,) => {
     if (!user) {
       router.push(`/auth/login?returnTo=${encodeURIComponent(router.asPath)}`)
-    }
-  }, [user, router]);
-  useEffect ((, ) => {
+    }, [user, router]);
+  useEffect (, ) => {
     const fetchSavedTalents = async () => {
       setIsLoading (true);
       try {
         // Check condition
 if ( {) {
   $2
-}
+
           log_warn ('User not authenticated.');
           return;
         }
@@ -74,11 +73,9 @@ if ( {) {
         }
         if (data) {
           // Extract talent profiles and convert to TalentProfile type
-          const talentProfiles = data.map(
-            (item: any) => item.talent_profile as unknown as TalentProfile
+          const talentProfiles = data.map(item: any) => item.talent_profile as unknown as TalentProfile
           )
-          setSavedTalents(talentProfiles) }
-      } catch (error) {
+          setSavedTalents(talentProfiles) } catch (error) {
         logErrorToProduction(
           error instanceof Error ? error.message : String(error)
           error instanceof Error ? error : undefined
@@ -92,7 +89,6 @@ if ( {) {
       } finally {
         setIsLoading (false);
       }
-    }
     fetchSavedTalents ();
   }, [user]);
   const handleViewProfile = (talent_id: string) =>: any {
@@ -123,8 +119,7 @@ if ( {) {
           throw error
         }
         setSavedTalents(prevTalents =>
-          prevTalents.filter(talent => talent.id !== talentId)
-        )
+          prevTalents.filter(talent => talent.id != talentId)
         toast({
           title: 'Talent Removed'
           description: 'Talent removed from saved list.'
@@ -137,7 +132,7 @@ if ( {) {
         // Check condition
 if ( {) {
   $2
-}
+
           throw error;
         }
         // Fetch the updated talent profile and add it to the list
@@ -172,7 +167,6 @@ if ( {) {
             description: 'Talent saved to your list.'
           })
         }
-      }
     } catch (error) {
       logErrorToProduction(
         error instanceof Error ? error.message : String(error)
@@ -193,7 +187,7 @@ if ( {) {
         // Check condition
 if ( {) {
   $2
-}
+
           logErrorToProduction (
             talent_error instanceof Error;
               ? talent_error.message;
@@ -212,7 +206,7 @@ if ( {) {
         // Check condition
 if ( {) {
   $2
-}
+
           setSavedTalents (prev_talents => [;
             ...prev_talents,
             talent_data as unknown as TalentProfile,
@@ -222,7 +216,6 @@ if ( {) {
             description: 'Talent saved to your list.',
           });
         }
-      }
     } catch (error) {
       logErrorToProduction (
         error instanceof Error ? error.message : String (error),
@@ -235,7 +228,6 @@ if ( {) {
         variant: 'destructive',
       });
     }
-  }
 
   return (
     <>;
@@ -250,12 +242,12 @@ if ( {) {
         </p>
         {isLoading ? (
           <div className='text-center py-8'>Loading saved talents...</div>
-        ) : savedTalents.length === 0 ? (
+        ) : savedTalents.length = = 0 ? (
           <div className='py-8'>
             <EmptyState
               icon={<Heart className='h-8 w-8' />}
               title='No Saved Talents'              description="You haven't saved any talents yet.";
-              action={{ text: 'Browse Talent', href: '/talent' }}
+              action={ text: 'Browse Talent', href: '/talent' }
               className='border-none bg-transparent text-center';
             />;
           </div>;
@@ -268,16 +260,16 @@ if ( {) {
                 onRequestHire = {handleRequestHire,}
                 isAuthenticated = {!!user,}
               />;
-            ))}
+            )}
           </div>;
         )}
       </div>
     </>
   )
-}, [user, router])
-}const {
+, [user, router])
+const {
   data, error
-}= await supabase .from ("saved talents") user id
+= await supabase .from ("saved talents") user id
 full name
 professional title
 profile picture url
@@ -289,67 +281,67 @@ skills
 location
 availability
 is verified) `)
-}finally {
+finally {
   setIsLoading (false)
-}
-}, [user]);
-}
+
+, [user]);
+
   try {
   // Check condition
 if ( {) {
   $2
-}
-}//Remove from saved talents const {
+
+//Remove from saved talents const {
   error ';
-}= await supabase .from ('saved talents') .delete () .eq ('user id', user.id) .eq ('talent id', talent_id);
-}else {
+= await supabase .from ('saved talents') .delete () .eq ('user id', user.id) .eq ('talent id', talent_id);
+else {
   //Add to saved talents const {
   error ';
-}= await supabase .from ('saved talents') .insert ([ {
+= await supabase .from ('saved talents') .insert ([ {
   user id: user.id, talent id: talentId
-}])
+])
 if (error) {
   throw error
-}data: talentData, error: talentError '
-}= await supabase .from ('talent profiles') .select ('*') .eq ('id', talentId) .single ()
+data: talentData, error: talentError '
+= await supabase .from ('talent profiles') .select ('*') .eq ('id', talentId) .single ()
 return
-}catch (error) {
+catch (error) {
   logErrorToProduction (error instanceof Error ? error.message : String (error),  error instanceof Error ? error : undefined, {'
   message: 'Error toggling saved talent'
-})
+)
 toast ({
-};'"
-return (<> <SEO title="Saved Talents | Zion AI Marketplace" description="View and manage your saved talents in the Zion AI Marketplace" /> <div className="container mx-auto px-4 py-8" > <h1 className="text-3xl font-bold mb-4" >Saved Talents</h1> <p className="text-muted-foreground" > Here are the talents you've saved for future reference. </p>) : savedTalents.length === 0 ? (<div className="py-8" > <EmptyState <TalentCard key= {
+;'"
+return (<> <SEO title="Saved Talents | Zion AI Marketplace" description="View and manage your saved talents in the Zion AI Marketplace" /> <div className="container mx-auto px-4 py-8" > <h1 className="text-3xl font-bold mb-4" >Saved Talents</h1> <p className="text-muted-foreground" > Here are the talents you've saved for future reference. </p>) : savedTalents.length = = 0 ? (<div className="py-8" > <EmptyState <TalentCard key= {
   talent.id
-}talent= {
+talent= {
   talent
-}onViewProfile= {
+onViewProfile= {
   handleViewProfile
-}onRequestHire= {
+onRequestHire= {
   handleRequestHire
-}isAuthenticated= {
+isAuthenticated= {
   !!user
-}/>) )
-}</div>)
-}</div> </>)
-}'"}
-}talent= {
+/>)
+</div>)
+</div> </>)
+'"}
+talent= {
   talent;
-}onViewProfile= {
+onViewProfile= {
   handleViewProfile;
-}onRequestHire= {
+onRequestHire= {
   handleRequestHire 
-}isAuthenticated= {
+isAuthenticated= {
   !!user 
-}/>) ) ;
-}</div>) ;
-}</div> </>) ;
-}'"}
+/>) ;
+</div>) ;
+</div> </>) ;
+'"}
 
   handleRequestHire;
-}is_authenticated= {
+is_authenticated= {
   !!user;
-}/>) );
-}</div>);
-}</div> </>);
-}'"}
+/>);
+</div>);
+</div> </>);
+'"}

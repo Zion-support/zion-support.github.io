@@ -2,7 +2,6 @@ import React from 'react';
 
 interface CookiesProps {
   className?: string;
-}
 
 const Cookies: React.FC<CookiesProps> = ({ className }) => {
   return (
@@ -11,6 +10,5 @@ const Cookies: React.FC<CookiesProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default Cookies;

@@ -7,6 +7,5 @@ const AIAutonomousAPISecurity = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default AIAutonomousAPISecurity;

@@ -102,7 +102,7 @@ export default function AboutPage() {
               { "title": 'Integrity', "desc": 'We operate with honesty and transparency.' },
               { "title": 'Innovation', "desc": 'We embrace modern technologies to solve problems.' },
               { "title": 'Collaboration', "desc": 'We partner closely with clients for success.' }
-            ].map((v) => (
+            ].map(v) => (
               <div key={v.title} className="bg-white rounded-lg p-8 shadow text-center">
                 <h3 className="text-xl font-semibold mb-3">{v.title}</h3>
                 <p className="text-gray-600">{v.desc}</p>
@@ -157,7 +157,7 @@ export default function AboutPage() {
       <section className=\"py-20 bg-gray-50\">
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
           <div className=\"grid grid-cols-2 md:grid-cols-4 gap-8\">
-            {stats.map((stat) => (
+            {stats.map(stat) => (
               <div key={stat.label} className=\"text-center\">
                 <div className=\"text-4xl font-bold text-blue-600 mb-2\">{stat.number}</div>
                 <div className=\"text-gray-600\">{stat.label}</div>
@@ -165,7 +165,7 @@ export default function AboutPage() {
                 <div className="text-4xl font-bold text-blue-600 mb-2">{stat.number}</div>
                 <div className="text-gray-600">{stat.label}</div>
               </div>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -199,7 +199,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {values.map((value) => (
+            {values.map(value) => (
               <div key={value.title} className=\"text-center\">
                 <div className=\"bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4\">
                   <value.icon className=\"h-8 w-8\" />
@@ -211,7 +211,7 @@ export default function AboutPage() {
                   {value.description}
                 </p>
               </div>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -229,7 +229,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8\">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {team.map((member) => (
+            {team.map(member) => (
               <div key={member.name} className=\"bg-white rounded-lg shadow-lg overflow-hidden\">
                 <div className=\"h-48 bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center\">
                   <Users className=\"h-16 w-16 text-blue-600\" />
@@ -244,7 +244,7 @@ export default function AboutPage() {
                   </p>
                 </div>
               </div>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -305,7 +305,7 @@ export default function AboutPage() {
       </section>
     </MainLayout>
   );
-}
+
     <>
       <Helmet>
         <title>About Us - Zion Tech Group | Leading Technology Solutions Provider</title>
@@ -355,12 +355,12 @@ export default function AboutPage() {
               </div>
               <div className=\"bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl p-8 border border-cyan-500/30\">
                 <div className=\"grid grid-cols-2 gap-6\">
-                  {stats.map((stat, index) => (
+                  {stats.map(stat, index) => (
                     <div key={index} className=\"text-center\">
                       <div className=\"text-3xl font-bold text-cyan-400 mb-2\">{stat.number}</div>
                       <div className=\"text-gray-300\">{stat.label}</div>
                     </div>
-                  ))}
+                  )}
                 </div>
               </div>
             </div>
@@ -376,7 +376,7 @@ export default function AboutPage() {
               </p>
             </div>
             <div className=\"grid grid-cols-1 \"md\": grid-cols-2 lg:grid-cols-4 gap-8\">
-              {values.map((value, index) => (
+              {values.map(value, index) => (
                 <div key={index} className=\"bg-slate-800/50 rounded-xl p-6 border border-slate-700 \"hover\": border-cyan-500/50 transition-all duration-300\">
                   <div className=\"w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mb-4\">
                     <value.icon className=\"w-6 h-6 text-white\" />
@@ -384,7 +384,7 @@ export default function AboutPage() {
                   <h3 className=\"text-xl font-semibold text-white mb-3\">{value.title}</h3>
                   <p className=\"text-gray-300\">{value.description}</p>
                 </div>
-              ))}
+              )}
             </div>
           </div>
         </section>
@@ -448,7 +448,3 @@ export default function AboutPage() {
       </div>
     </>
   );
-}
-}
-}
-}

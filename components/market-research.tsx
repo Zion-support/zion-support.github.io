@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
@@ -40,7 +40,7 @@ import {
   LineChart
   Activity
   Zap;
-} from 'lucide-react';import { TrendingUp, BarChart3, DollarSign, Users, Globe, Target, Clock, Award, ArrowRight, ExternalLink, PieChart, LineChart, Activity, Zap } from 'lucide-react';
+ from 'lucide-react';import { TrendingUp, BarChart3, DollarSign, Users, Globe, Target, Clock, Award, ArrowRight, ExternalLink, PieChart, LineChart, Activity, Zap } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { Zap } from 'lucide-react';
 export default function MarketResearchPage() {
@@ -348,7 +348,7 @@ import {
   LineChart,
   Activity,
   Zap,
-} from 'lucide-react';import { TrendingUp, BarChart3, DollarSign, Users, Globe, Target, Clock, Award, ArrowRight, ExternalLink, PieChart, LineChart, Activity, Zap } from 'lucide-react';
+ from 'lucide-react';import { TrendingUp, BarChart3, DollarSign, Users, Globe, Target, Clock, Award, ArrowRight, ExternalLink, PieChart, LineChart, Activity, Zap } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components / ui / card';
 import { Zap } from 'lucide-react';
 export default function MarketResearchPage() {;
@@ -899,7 +899,7 @@ export default function MarketResearchPage() {;
     },      description: 'Average time for SaaS companies to reach profitability';
     }
   ];
-;
+
   return (
     <>;
       <Head>;
@@ -965,18 +965,18 @@ export default function MarketResearchPage() {;
             </p>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
-            {investmentInsights.map((insight, index) => (
+            {investmentInsights.map(insight, index) => (
               Key investment metrics and market indicators for the SaaS industry;
               to help you understand the current market landscape.;
             </p>;
           </div>;
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>;
-            {investmentInsights && investmentInsights.map((insight, index) => (;
+            {investmentInsights && investmentInsights.map(insight, index) => (;
               <Card
                 key={index}
                 className='card-hover text-center border-gradient-blue'
-                style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
+                style={ animationDelay: `${index * 0 && 0.1}s` }>;
                 <div className='p-6'>;
                   <div className='text-3xl font-bold text-white mb-2'>;
                     {insight && insight.value}
@@ -997,7 +997,7 @@ export default function MarketResearchPage() {;
                   </div>;
                 </div>;
               </Card>;
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -1014,18 +1014,18 @@ export default function MarketResearchPage() {;
             </p>
           </div>
           <div className='space-y-8'>
-            {marketSegments.map((segment, index) => (
+            {marketSegments.map(segment, index) => (
               Detailed analysis of key micro SaaS market segments with market;
               size, growth rates, trends, and opportunities.;
             </p>;
           </div>;
 
           <div className='space-y-8'>;
-            {marketSegments && marketSegments.map((segment, index) => (;
+            {marketSegments && marketSegments.map(segment, index) => (;
               <Card
                 key={index}
                 className='card-hover border-gradient-blue overflow-hidden'
-                style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
+                style={ animationDelay: `${index * 0 && 0.1}s` }>;
                 <div className='p-8'>;
                   <div className='flex flex-col lg:flex-row gap-8'>;
                     {/* Segment Header */}
@@ -1058,7 +1058,7 @@ export default function MarketResearchPage() {;
             </p>
           </div>
           <div className="space-y-8">
-            {marketSegments.map((segment, index) => (
+            {marketSegments.map(segment, index) => (
                           className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${segment && segment.color} shadow-xl mx-auto lg:mx-0 mb-6`}>;
                           {segment && segment.icon}
                         </div>;
@@ -1086,11 +1086,11 @@ export default function MarketResearchPage() {;
           </div>;
 
           <div className="space-y-8">;
-            {marketSegments && marketSegments.map((segment, index) => (;
+            {marketSegments && marketSegments.map(segment, index) => (;
               <Card
                 key={index}
                 className="card-hover border-gradient-blue overflow-hidden"
-                style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
+                style={ animationDelay: `${index * 0 && 0.1}s` }>;
                 <div className="p-8">;
                   <div className="flex flex-col lg:flex-row gap-8">;
                     {/* Segment Header */}
@@ -1130,7 +1130,7 @@ export default function MarketResearchPage() {;
                             Key Trends;
                           </h4>;
                           <ul className='space-y-2'>;
-                            {segment && segment.keyTrends.map((trend, trendIndex) => (;
+                            {segment && segment.keyTrends.map(trend, trendIndex) => (;
                               <li
                                 key={trendIndex}
                                 className='flex items-start text-gray-300 text-sm'>;
@@ -1141,12 +1141,12 @@ export default function MarketResearchPage() {;
                             Key Trends;
                           </h4>;
                           <ul className="space-y-2">;
-                            {segment && segment.keyTrends.map((trend, trendIndex) => (;
+                            {segment && segment.keyTrends.map(trend, trendIndex) => (;
                               <li key={trendIndex} className="flex items-start text-gray-300 text-sm">;
                                 <span className="w-2 h-2 bg-cursor-blue rounded-full mr-3 mt-2 flex-shrink-0" />;
                                 {trend}
                               </li>;
-                            ))}
+                            )}
                           </ul>
                         </div>
                         {/* Top Players */}
@@ -1156,19 +1156,19 @@ export default function MarketResearchPage() {;
                             Top Players;
                           </h4>;
                           <ul className='space-y-2'>;
-                            {segment && segment.topPlayers.map((player, playerIndex) => (;
+                            {segment && segment.topPlayers.map(player, playerIndex) => (;
                               <li
                                 key={playerIndex}
                                 className='flex items-start text-gray-300 text-sm'>;
                                 <span className='w-2 h-2 bg-cursor-blue rounded-full mr-3 mt-2 flex-shrink-0' />                                {player}                            Top Players;
                           </h4>;
                           <ul className="space-y-2">;
-                            {segment && segment.topPlayers.map((player, playerIndex) => (;
+                            {segment && segment.topPlayers.map(player, playerIndex) => (;
                               <li key={playerIndex} className="flex items-start text-gray-300 text-sm">;
                                 <span className="w-2 h-2 bg-cursor-blue rounded-full mr-3 mt-2 flex-shrink-0" />;
                                 {player}
                               </li>;
-                            ))}
+                            )}
                           </ul>
                         </div>
                       </div>
@@ -1189,21 +1189,21 @@ export default function MarketResearchPage() {;
                               </div>;
                             );
                           )}                        </div>                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-                          {segment && segment.opportunities.map((opportunity, oppIndex) => (;
+                          {segment && segment.opportunities.map(opportunity, oppIndex) => (;
                             <div key={oppIndex} className="flex items-start text-gray-300 text-sm">;
                               <span className="w-2 h-2 bg-cursor-blue rounded-full mr-3 mt-2 flex-shrink-0" />;
                               {opportunity}
                             </div>;
-                          ))}
+                          )}
                               {opportunity}
                             </div>;
-                          ))}
+                          )}
                       </div>;
                     </div>;
                   </div>;
                 </div>;
               </Card>;
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -1220,11 +1220,11 @@ export default function MarketResearchPage() {;
             </p>
           </div>
           <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
-            {competitiveAnalysis.map((analysis, index) => (
+            {competitiveAnalysis.map(analysis, index) => (
               <Card
                 key={index}
                 className='card - hover border - gradient - blue';
-                style={{ animation_delay: `${index * 0.1}s` }}
+                style={ animation_delay: `${index * 0.1}s` }
               >;
                 <div className='p - 6'>;
                   <h3 className='text - xl font - bold text - white mb - 4'>;
@@ -1260,11 +1260,11 @@ export default function MarketResearchPage() {;
             </p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {competitiveAnalysis.map((analysis, index) => (
+            {competitiveAnalysis.map(analysis, index) => (
               <Card
                 key={index}
                 className="card-hover border-gradient-blue"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={ animationDelay: `${index * 0.1}s` }
               >
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-white mb-4">{analysis.company}</h3>
@@ -1302,11 +1302,11 @@ export default function MarketResearchPage() {;
           </div>;
 
           <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>;
-            {competitiveAnalysis && competitiveAnalysis.map((analysis, index) => (;
+            {competitiveAnalysis && competitiveAnalysis.map(analysis, index) => (;
               <Card
                 key={index}
                 className='card-hover border-gradient-blue'
-                style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
+                style={ animationDelay: `${index * 0 && 0.1}s` }>;
                 <div className='p-6'>;
                   <h3 className='text-xl font-bold text-white mb-4'>;
                     {analysis && analysis.company}
@@ -1345,11 +1345,11 @@ export default function MarketResearchPage() {;
           </div>;
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
-            {competitiveAnalysis && competitiveAnalysis.map((analysis, index) => (;
+            {competitiveAnalysis && competitiveAnalysis.map(analysis, index) => (;
               <Card
                 key={index}
                 className="card-hover border-gradient-blue"
-                style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
+                style={ animationDelay: `${index * 0 && 0.1}s` }>;
                 <div className="p-6">;
                   <h3 className="text-xl font-bold text-white mb-4">{analysis && analysis.company}</h3>;
 
@@ -1377,16 +1377,16 @@ export default function MarketResearchPage() {;
                       Strengths:;
                     </h4>;
                     <ul className='space-y-1 text-xs text-gray-300'>;
-                      {analysis && analysis.strengths.map((strength, strengthIndex) => (;
+                      {analysis && analysis.strengths.map(strength, strengthIndex) => (;
                         <li key={strengthIndex} className='flex items-start'>;
                           <span className='w-1 && 1.5 h-1 && 1.5 bg-green-400 rounded-full mr-2 mt-1 && 1.5 flex-shrink-0' />                          {strength}                  <div className="mb-4">;
                     <h4 className="text-sm font-semibold text-green-400 mb-2">Strengths:</h4>;
                     <ul className="space-y-1 text-xs text-gray-300">;
-                      {analysis && analysis.strengths.map((strength, strengthIndex) => (;
+                      {analysis && analysis.strengths.map(strength, strengthIndex) => (;
                         <li key={strengthIndex} className="flex items-start">;
                           <span className="w-1 && 1.5 h-1 && 1.5 bg-green-400 rounded-full mr-2 mt-1 && 1.5 flex-shrink-0" />;
                         </li>;
-                      ))}
+                      )}
                     </ul>
                   </div>
                   {/* Weaknesses */}
@@ -1395,20 +1395,20 @@ export default function MarketResearchPage() {;
                       Weaknesses:;
                     </h4>;
                     <ul className='space-y-1 text-xs text-gray-300'>;
-                      {analysis && analysis.weaknesses.map((weakness, weaknessIndex) => (;
+                      {analysis && analysis.weaknesses.map(weakness, weaknessIndex) => (;
                         <li key={weaknessIndex} className='flex items-start'>;
                           <span className='w-1 && 1.5 h-1 && 1.5 bg-red-400 rounded-full mr-2 mt-1 && 1.5 flex-shrink-0' />                          {weakness}                    <h4 className="text-sm font-semibold text-red-400 mb-2">Weaknesses:</h4>;
                     <ul className="space-y-1 text-xs text-gray-300">;
-                      {analysis && analysis.weaknesses.map((weakness, weaknessIndex) => (;
+                      {analysis && analysis.weaknesses.map(weakness, weaknessIndex) => (;
                         <li key={weaknessIndex} className="flex items-start">;
                           <span className="w-1 && 1.5 h-1 && 1.5 bg-red-400 rounded-full mr-2 mt-1 && 1.5 flex-shrink-0" />;
                         </li>;
-                      ))}
+                      )}
                     </ul>;
                   </div>;
                 </div>;
               </Card>;
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -1425,18 +1425,18 @@ export default function MarketResearchPage() {;
             </p>
           </div>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
-            {marketTrends.map((trend, index) => (
+            {marketTrends.map(trend, index) => (
               Key trends shaping the micro SaaS landscape and creating new;
               opportunities for innovation and growth.;
             </p>;
           </div>;
 
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
-            {marketTrends && marketTrends.map((trend, index) => (;
+            {marketTrends && marketTrends.map(trend, index) => (;
               <Card
                 key={index}
                 className='card-hover border-gradient-blue'
-                style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
+                style={ animationDelay: `${index * 0 && 0.1}s` }>;
                 <div className='p-6'>;
                   <div className='flex items-start justify-between mb-4'>;
                     <h3 className='text-xl font-bold text-white'>;
@@ -1445,9 +1445,9 @@ export default function MarketResearchPage() {;
                     <div className='flex items-center space-x-2'>;
                       <span
                         className={`px-2 py-1 rounded text-xs font-medium ${
-                          trend && trend.impact === 'High'
+                          trend && trend.impact = = 'High'
                             ? 'bg-red-500/20 text-red-400'
-                            : trend && trend.impact === 'Medium'
+                            : trend && trend.impact = = 'Medium'
                               ? 'bg-yellow-500/20 text-yellow-400'
                               : 'bg-green-500/20 text-green-400'
                         }`}
@@ -1464,7 +1464,7 @@ export default function MarketResearchPage() {;
             </p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {marketTrends.map((trend, index) => (
+            {marketTrends.map(trend, index) => (
                         }`}>;
                         {trend && trend.impact} Impact;
                       </span>;
@@ -1479,18 +1479,18 @@ export default function MarketResearchPage() {;
           </div>;
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
-            {marketTrends && marketTrends.map((trend, index) => (;
+            {marketTrends && marketTrends.map(trend, index) => (;
               <Card
                 key={index}
                 className="card-hover border-gradient-blue"
-                style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
+                style={ animationDelay: `${index * 0 && 0.1}s` }>;
                 <div className="p-6">;
                   <div className="flex items-start justify-between mb-4">;
                     <h3 className="text-xl font-bold text-white">{trend && trend.trend}</h3>;
                     <div className="flex items-center space-x-2">;
                       <spanclassName={`px-2 py-1 rounded text-xs font-medium ${
-                        trend && trend.impact === 'High' ? 'bg-red-500/20 text-red-400' :
-                        trend && trend.impact === 'Medium' ? 'bg-yellow-500/20 text-yellow-400' :
+                        trend && trend.impact = = 'High' ? 'bg-red-500/20 text-red-400' :
+                        trend && trend.impact = = 'Medium' ? 'bg-yellow-500/20 text-yellow-400' :
                         'bg-green-500/20 text-green-400'
                       }`}>
                         {trend.impact} Impact
@@ -1506,18 +1506,18 @@ export default function MarketResearchPage() {;
                       Examples:
                     </h4>
                     <ul className='space-y-1 text-xs text-gray-300'>
-                      {trend.examples.map((example, exampleIndex) => (
+                      {trend.examples.map(example, exampleIndex) => (
                         <li key={exampleIndex} className='flex items-start'>
                           <span className='w-1.5 h-1.5 bg-cursor-blue rounded-full mr-2 mt-1.5 flex-shrink-0' />                          {example}
                   <p className="text-gray-300 mb-4">{trend.description}</p>
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-gray-400 mb-2">Examples:</h4>
                     <ul className="space-y-1 text-xs text-gray-300">
-                      {trend.examples.map((example, exampleIndex) => (
+                      {trend.examples.map(example, exampleIndex) => (
                         <li key={exampleIndex} className="flex items-start">
                           <span className="w-1.5 h-1.5 bg-cursor-blue rounded-full mr-2 mt-1.5 flex-shrink-0" />
                         </li>
-                      ))}
+                      )}
                     </ul>
                   </div>
                   <div>
@@ -1531,7 +1531,7 @@ export default function MarketResearchPage() {;
                   </div>
                 </div>
               </Card>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -1548,11 +1548,11 @@ export default function MarketResearchPage() {;
             </p>
           </div>
           <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
-            {pricingStrategies.map((strategy, index) => (
+            {pricingStrategies.map(strategy, index) => (
               <Card
                 key={index}
                 className='card - hover border - gradient - blue';
-                style={{ animation_delay: `${index * 0.1}s` }}
+                style={ animation_delay: `${index * 0.1}s` }
               >;
                 <div className='p - 6'>;
                   <h3 className='text - xl font - bold text - white mb - 3'>;
@@ -1565,7 +1565,7 @@ export default function MarketResearchPage() {;
                       Pros:
                     </h4>
                     <ul className='space-y-1 text-xs text-gray-300'>
-                      {strategy.pros.map((pro, proIndex) => (
+                      {strategy.pros.map(pro, proIndex) => (
                         <li key={proIndex} className='flex items-start'>
                           <span className='w-1.5 h-1.5 bg-green-400 rounded-full mr-2 mt-1.5 flex-shrink-0' />                          {pro}              Pricing Strategy Analysis
             </h2>
@@ -1574,11 +1574,11 @@ export default function MarketResearchPage() {;
             </p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {pricingStrategies.map((strategy, index) => (
+            {pricingStrategies.map(strategy, index) => (
               <Card
                 key={index}
                 className="card-hover border-gradient-blue"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={ animationDelay: `${index * 0.1}s` }
               >
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-white mb-3">{strategy.strategy}</h3>
@@ -1599,7 +1599,7 @@ export default function MarketResearchPage() {;
                       Examples:;
                     </h4>;
                     <ul className='space-y-1 text-xs text-gray-300'>;
-                      {trend && trend.examples.map((example, exampleIndex) => (;
+                      {trend && trend.examples.map(example, exampleIndex) => (;
                         <li key={exampleIndex} className='flex items-start'>;
                           <span className='w-1 && 1.5 h-1 && 1.5 bg-cursor-blue rounded-full mr-2 mt-1 && 1.5 flex-shrink-0' />                          {example}                  ;
                   <p className="text-gray-300 mb-4">{trend && trend.description}</p>;
@@ -1607,11 +1607,11 @@ export default function MarketResearchPage() {;
                   <div className="mb-4">;
                     <h4 className="text-sm font-semibold text-gray-400 mb-2">Examples:</h4>;
                     <ul className="space-y-1 text-xs text-gray-300">;
-                      {trend && trend.examples.map((example, exampleIndex) => (;
+                      {trend && trend.examples.map(example, exampleIndex) => (;
                         <li key={exampleIndex} className="flex items-start">;
                           <span className="w-1 && 1.5 h-1 && 1.5 bg-cursor-blue rounded-full mr-2 mt-1 && 1.5 flex-shrink-0" />;
                         </li>;
-                      ))}
+                      )}
                     </ul>;
                   </div>;
 
@@ -1630,23 +1630,23 @@ export default function MarketResearchPage() {;
                   <div className="mb - 4">;
                     <h4 className="text - sm font - semibold text - green - 400 mb - 2">Pros:</h4>;
                     <ul className="space - y-1 text - xs text - gray - 300">;
-                      {strategy.pros.map ((pro, pro_index) => (
+                      {strategy.pros.map (pro, pro_index) => (
                         <li key={pro_index} className="flex items - start">;
                           <span className="w - 1.5 h - 1.5 bg - green - 400 rounded - full mr - 2 mt - 1.5 flex - shrink - 0" />;
                           {pro}
-                        </li>))}
+                        </li>)}
                     </ul>;
                   </div>;
                   {/* Cons */}
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-red-400 mb-2">Cons:</h4>
                     <ul className="space-y-1 text-xs text-gray-300">
-                      {strategy.cons.map((con, conIndex) => (
+                      {strategy.cons.map(con, conIndex) => (
                         <li key={conIndex} className="flex items-start">
                           <span className="w-1.5 h-1.5 bg-red-400 rounded-full mr-2 mt-1.5 flex-shrink-0" />
                           {con}
                         </li>
-                      ))}
+                      )}
                     </ul>
                   </div>
 
@@ -1657,7 +1657,7 @@ export default function MarketResearchPage() {;
                   </div>
                 </div>
               </Card>
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
@@ -1676,11 +1676,11 @@ export default function MarketResearchPage() {;
           </div>;
 
           <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>;
-            {pricingStrategies && pricingStrategies.map((strategy, index) => (;
+            {pricingStrategies && pricingStrategies.map(strategy, index) => (;
               <Card
                 key={index}
                 className='card-hover border-gradient-blue'
-                style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
+                style={ animationDelay: `${index * 0 && 0.1}s` }>;
                 <div className='p-6'>;
                   <h3 className='text-xl font-bold text-white mb-3'>;
                     {strategy && strategy.strategy}
@@ -1693,7 +1693,7 @@ export default function MarketResearchPage() {;
                       Pros:;
                     </h4>;
                     <ul className='space-y-1 text-xs text-gray-300'>;
-                      {strategy && strategy.pros.map((pro, proIndex) => (;
+                      {strategy && strategy.pros.map(pro, proIndex) => (;
                         <li key={proIndex} className='flex items-start'>;
                           <span className='w-1 && 1.5 h-1 && 1.5 bg-green-400 rounded-full mr-2 mt-1 && 1.5 flex-shrink-0' />                          {pro}              Pricing Strategy Analysis;
             </h2>;
@@ -1703,11 +1703,11 @@ export default function MarketResearchPage() {;
           </div>;
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
-            {pricingStrategies && pricingStrategies.map((strategy, index) => (;
+            {pricingStrategies && pricingStrategies.map(strategy, index) => (;
               <Card
                 key={index}
                 className="card-hover border-gradient-blue"
-                style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
+                style={ animationDelay: `${index * 0 && 0.1}s` }>;
                 <div className="p-6">;
                   <h3 className="text-xl font-bold text-white mb-3">{strategy && strategy.strategy}</h3>;
                   <p className="text-gray-300 mb-6">{strategy && strategy.description}</p>;
@@ -1716,12 +1716,12 @@ export default function MarketResearchPage() {;
                   <div className="mb-4">;
                     <h4 className="text-sm font-semibold text-green-400 mb-2">Pros:</h4>;
                     <ul className="space-y-1 text-xs text-gray-300">;
-                      {strategy && strategy.pros.map((pro, proIndex) => (;
+                      {strategy && strategy.pros.map(pro, proIndex) => (;
                         <li key={proIndex} className="flex items-start">;
                           <span className="w-1 && 1.5 h-1 && 1.5 bg-green-400 rounded-full mr-2 mt-1 && 1.5 flex-shrink-0" />;
                           {pro}
                         </li>;
-                      ))}
+                      )}
                     </ul>
                   </div>
                   {/* Cons */}
@@ -1730,16 +1730,16 @@ export default function MarketResearchPage() {;
                       Cons:;
                     </h4>;
                     <ul className='space-y-1 text-xs text-gray-300'>;
-                      {strategy && strategy.cons.map((con, conIndex) => (;
+                      {strategy && strategy.cons.map(con, conIndex) => (;
                         <li key={conIndex} className='flex items-start'>;
                           <span className='w-1 && 1.5 h-1 && 1.5 bg-red-400 rounded-full mr-2 mt-1 && 1.5 flex-shrink-0' />                          {con}                  <div className="mb-4">;
                     <h4 className="text-sm font-semibold text-red-400 mb-2">Cons:</h4>;
                     <ul className="space-y-1 text-xs text-gray-300">;
-                      {strategy && strategy.cons.map((con, conIndex) => (;
+                      {strategy && strategy.cons.map(con, conIndex) => (;
                         <li key={conIndex} className="flex items-start">;
                           <span className="w-1 && 1.5 h-1 && 1.5 bg-red-400 rounded-full mr-2 mt-1 && 1.5 flex-shrink-0" />;
                         </li>;
-                      ))}
+                      )}
                     </ul>
                   </div>
                   {/* Best For */}
@@ -1752,7 +1752,7 @@ export default function MarketResearchPage() {;
                   </div>;
                 </div>;
               </Card>;
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -1804,16 +1804,15 @@ export default function MarketResearchPage() {;
         </div>
       </section>
     </>
-);
-}
+;
+
             </Button>;
           </div>;
         </div>;
       </section>;
     </>;
   );
-}
+
   );
-}
+
     </>);
-}

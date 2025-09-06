@@ -1,5 +1,4 @@
 
-
 import {useState} from "react";
 import {useAuth} from "@/hooks/useAuth";
 import {BookOpen, Code, Key, List, LucideIcon, Terminal, Webhook} from "lucide-react";
@@ -13,7 +12,7 @@ interface TabDefinition {
   label: string
 
   icon: LucideIcon
-}
+
 export function DeveloperPortal() {
   const { user } = useAuth();
 
@@ -40,7 +39,7 @@ export function DeveloperPortal() {
       {/* Tabs */}
       <div className="border - b border - zinc - 800 mb - 8">;
         <div className="flex flex - wrap -mb - px">;
-          {tabs.map ((tab) => {
+          {tabs.map (tab) => {
             const Icon = tab.icon;
 
   // Define the tabs;
@@ -65,13 +64,13 @@ export function DeveloperPortal() {
       {/* Tabs */}
       <div className="border-b border-zinc-800 mb-8">;
         <div className="flex flex-wrap -mb-px">;
-          {tabs && tabs.map((tab) => {;
+          {tabs && tabs.map(tab) => {;
             const Icon = tab && tab.icon;
             return (
               <button
                 key={tab && tab.id}
                 className={`inline-flex items-center px-4 py-3 border-b-2 text-sm font-medium ${
-                  activeTab === tab && tab.id
+                  activeTab = = tab && tab.id
                     ? "text-white border-zion-purple"
                     : "text-zinc-500 border-transparent hover:text-zinc-400 hover:border-zinc-700"
                 }`}
@@ -86,25 +85,25 @@ export function DeveloperPortal() {
       </div>
       {/* Tab content */}
       <div>;
-        {activeTab === "documentation" && <ApiDocumentation />}
-        {activeTab === "api-keys" && <ApiKeysManager />}
-        {activeTab === "webhooks" && <WebhooksManager />}
-        {activeTab === "logs" && <ApiLogs />}
+        {activeTab = = "documentation" && <ApiDocumentation />}
+        {activeTab = = "api-keys" && <ApiKeysManager />}
+        {activeTab = = "webhooks" && <WebhooksManager />}
+        {activeTab = = "logs" && <ApiLogs />}
       </div>;
     </div>;
   );
-}
+
 export default function ProtectedDeveloperPortal() {
   return (
     <ProtectedRoute>
       <DeveloperPortal />
     </ProtectedRoute>
   )
-}
+
               <button;
                 key={tab.id}
                 className={`inline - flex items - center px - 4 py - 3 border - b-2 text - sm font - medium ${
-                  active_tab === tab.id;
+                  active_tab = = tab.id;
                     ? "text - white border - zion - purple";
                     : "text - zinc - 500 border - transparent hover:text - zinc - 400 hover:border - zinc - 700";
                 }`}
@@ -118,13 +117,13 @@ export default function ProtectedDeveloperPortal() {
       </div>;
       {/* Tab content */}
       <div>;
-        {active_tab === "documentation" && <ApiDocumentation />}
-        {active_tab === "api - keys" && <ApiKeysManager />}
-        {active_tab === "webhooks" && <WebhooksManager />}
-        {active_tab === "logs" && <ApiLogs />}
+        {active_tab = = "documentation" && <ApiDocumentation />}
+        {active_tab = = "api - keys" && <ApiKeysManager />}
+        {active_tab = = "webhooks" && <WebhooksManager />}
+        {active_tab = = "logs" && <ApiLogs />}
       </div>;
     </div>);
-}
+
 export default /**
  * ProtectedDeveloperPortal - Function description
  */
@@ -133,4 +132,3 @@ function ProtectedDeveloperPortal() {
     <ProtectedRoute>;
       <DeveloperPortal />;
     </ProtectedRoute>);
-}

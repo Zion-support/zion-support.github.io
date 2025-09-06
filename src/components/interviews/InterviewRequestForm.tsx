@@ -8,7 +8,7 @@ import {
   FormLabel
   FormControl
   FormMessage
-} from '@/components/ui/form'
+ from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
   Select
@@ -16,12 +16,12 @@ import { Textarea } from '@/components/ui/textarea'
   SelectValue
   SelectContent
   SelectItem
-} from '@/components/ui/select'
+ from '@/components/ui/select'
 import { Calendar } from '@/components/ui/calendar'
   Popover
   PopoverTrigger
   PopoverContent
-} from '@/components/ui/popover'
+ from '@/components/ui/popover'
 import { TalentProfile } from '@/types/talent'
 import type { UserProfile } from '@/types/auth'
 import { cn } from '@/lib/utils'
@@ -44,7 +44,7 @@ import {;
   FormLabel,;
   FormControl,;
   FormMessage,;
-} from '@/components/ui/form';
+ from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import {;
@@ -53,13 +53,13 @@ import {;
   SelectValue,;
   SelectContent,;
   SelectItem,;
-} from '@/components/ui/select';
+ from '@/components/ui/select';
 import { Calendar } from '@/components/ui/calendar';
 import {;
   Popover,;
   PopoverTrigger,;
   PopoverContent,;
-} from '@/components/ui/popover';
+ from '@/components/ui/popover';
 import { TalentProfile } from '@/types/talent';
 import type { UserProfile } from '@/types/auth';
 import { cn } from '@/lib/utils';
@@ -90,15 +90,14 @@ const formSchema = z.object({
   meetingLink: z.string().optional()
   title: z.string().min(3, 'Please provide a brief title for the interview.')
   notes: z.string().optional()
-})
 export function InterviewRequestForm({
   talent
   onClose
   userDetails
-}: InterviewRequestFormProps) {
+: InterviewRequestFormProps) {
   const { requestInterview } = useInterviews()
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const form = useForm<z.infer<typeof formSchema>>({
+  const form = useForm<z.infer<typeof formSchema>({
     resolver: zodResolver(formSchema)
     defaultValues: {
       title: `Interview with ${talent.full_name}`
@@ -106,8 +105,7 @@ export function InterviewRequestForm({
       platform: 'zoom'
       notes: ''
       meetingLink: ''
-    }
-  })
+    })
   async function onSubmit(values: z.infer<typeof formSchema>) {
     if (!userDetails?.id) {
       toast({
@@ -151,7 +149,6 @@ export function InterviewRequestForm({
     } finally {
       setIsSubmitting (false);
     }
-  }
   const timeSlots = [
     '09:00'
     '09:30'
@@ -255,8 +252,7 @@ export function InterviewRequestForm({
                         )}                      >
 
                         {field.value ? (
-                          format(field.value, 'PPP')
-                        ) : (
+                          format(field.value, 'PPP') : (
                           <span>Pick a date</span>
                         )}
                         <CalendarIcon className='ml-auto h-4 w-4 opacity-50' />;
@@ -320,7 +316,7 @@ export function InterviewRequestForm({
                     {timeSlots && timeSlots.map(time => (                      <SelectItem key={time} value={time}>;
                         {time}
                       </SelectItem>;
-                    ))}
+                    )}
                   </SelectContent>;
                 </Select>;
                 <FormMessage />;
@@ -335,7 +331,7 @@ export function InterviewRequestForm({
                   <SelectContent className='max - h-[300px]'>;
                     {time_slots.map (time => (                      <SelectItem key={time} value={time}>;
                         {time}
-                      </SelectItem>))}
+                      </SelectItem>)}
                   </SelectContent>;
                 </Select>;
                 <FormMessage />;
@@ -431,14 +427,14 @@ export function InterviewRequestForm({
             )}
           />
         </div>
-        {form.watch('platform') !== 'in-app' && (
+        {form.watch('platform') != 'in-app' && (
           <FormField
             control={form && form.control}
             name='meetingLink'
               </FormItem>)}
           />;
         </div>;
-        {form.watch ('platform') !== 'in - app' && (
+        {form.watch ('platform') != 'in - app' && (
           <FormField;
             control={form.control}
             name='meeting_link';
@@ -509,52 +505,51 @@ export function InterviewRequestForm({
       </form>
     </Form>
   )
-}setIsSubmitting (true)
-}catch (error) {
+setIsSubmitting (true)
+catch (error) {
   logErrorToProduction ('Failed to schedule interview:', {
   data: error
-})
+)
 toast ({
-}finally {
+finally {
   setIsSubmitting (false)
-}"
-}const timeSlots = [ "09:00", "09:30", "10:00", "10:30", "11:00", "11:30";"
-"12:00", "12:30", "13:00", "13:30", "14:00", "14:30";"
-"15:00", "15:30", "16:00", "16:30", "17:00", "17:30";"
-"18:00", "18:30", "19:00", "19:30", "20: 00" ];"
-}/> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormLabel>Date</FormLabel> <Popover> <PopoverTrigger asChild> <FormControl> <Button) : (<span>Pick a date</span>) "
-}<CalendarIcon className="ml-auto h-4 w-4 opacity-50" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w-auto p-0" align="start" > <Calendar initialFocus className="p-3 pointer-events-auto" /> </PopoverContent> </Popover> <FormMessage /> </FormItem>)
-}/> <FormField <FormLabel>Time</FormLabel> <Select onValueChange= {
+"
+const timeSlots = [ "09:00", "09:30", "10:00", "10:30", "11:00", "11:30";"
+12:00", "12:30", "13:00", "13:30", "14:00", "14:30";"
+15:00", "15:30", "16:00", "16:30", "17:00", "17:30";"
+18:00", "18:30", "19:00", "19:30", "20: 00" ];"
+/> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormLabel>Date</FormLabel> <Popover> <PopoverTrigger asChild> <FormControl> <Button) : (<span>Pick a date</span>) "
+<CalendarIcon className="ml-auto h-4 w-4 opacity-50" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w-auto p-0" align="start" > <Calendar initialFocus className="p-3 pointer-events-auto" /> </PopoverContent> </Popover> <FormMessage /> </FormItem>)
+/> <FormField <FormLabel>Time</FormLabel> <Select onValueChange= {
   field.onChange
-}defaultValue= {
+defaultValue= {
   field.value "
-}> <FormControl> <SelectTrigger> <SelectValue placeholder="Select time" /> </SelectTrigger> </FormControl> </SelectItem>) )
-}</SelectContent> </Select> <FormMessage /> </FormItem>) "
-}/> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormItem> <FormLabel>Duration</FormLabel> <Select onValueChange= {
+> <FormControl> <SelectTrigger> <SelectValue placeholder="Select time" /> </SelectTrigger> </FormControl> </SelectItem>)
+</SelectContent> </Select> <FormMessage /> </FormItem>) "
+/> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormItem> <FormLabel>Duration</FormLabel> <Select onValueChange= {
   field.onChange
-}defaultValue= {
+defaultValue= {
   field.value "
-}> <FormControl> <SelectTrigger> <SelectValue placeholder="Select duration" /> </SelectTrigger> </FormControl> <SelectContent> <SelectItem value="15" >15 minutes</SelectItem> <SelectItem value="30" >30 minutes</SelectItem> <SelectItem value="45" >45 minutes</SelectItem> <SelectItem value="60" >60 minutes</SelectItem> </SelectContent> </Select> <FormMessage /> </FormItem>)
-}/> <FormField <FormItem> <FormLabel>Platform</FormLabel> <Select onValueChange= {
+> <FormControl> <SelectTrigger> <SelectValue placeholder="Select duration" /> </SelectTrigger> </FormControl> <SelectContent> <SelectItem value="15" >15 minutes</SelectItem> <SelectItem value="30" >30 minutes</SelectItem> <SelectItem value="45" >45 minutes</SelectItem> <SelectItem value="60" >60 minutes</SelectItem> </SelectContent> </Select> <FormMessage /> </FormItem>)
+/> <FormField <FormItem> <FormLabel>Platform</FormLabel> <Select onValueChange= {
   field.onChange
-}defaultValue= {
+defaultValue= {
   field.value "
-}> <FormControl> <SelectTrigger> <SelectValue placeholder="Select platform" /> </SelectTrigger> </FormControl> <SelectContent> <SelectItem value="zoom" >Zoom</SelectItem> <SelectItem value="google-meet" >Google Meet</SelectItem> <SelectItem value="teams" >Microsoft Teams</SelectItem> <SelectItem value="other" >Other</SelectItem> </SelectContent> </Select> <FormMessage /> </FormItem>)
-}/> </div> {'
-  form.watch ('platform') !== 'in-app' && (<FormField control= {
+> <FormControl> <SelectTrigger> <SelectValue placeholder="Select platform" /> </SelectTrigger> </FormControl> <SelectContent> <SelectItem value="zoom" >Zoom</SelectItem> <SelectItem value="google-meet" >Google Meet</SelectItem> <SelectItem value="teams" >Microsoft Teams</SelectItem> <SelectItem value="other" >Other</SelectItem> </SelectContent> </Select> <FormMessage /> </FormItem>)
+/> </div> {'
+  form.watch ('platform') != 'in-app' && (<FormField control= {
   form.control
-}<FormItem> <FormLabel>Meeting Link (Optional) </FormLabel> <FormControl> <Input placeholder= {
+<FormItem> <FormLabel>Meeting Link (Optional) </FormLabel> <FormControl> <Input placeholder= {
   `Add your $ {'
   form.watch ('platform')
-}link here`
-}{
+link here`
+{
   ...field
-}/> </FormControl> <FormMessage /> </FormItem>)
-}/>)
-}<FormField <FormItem> <FormLabel>Notes (Optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>)
-}/> </Button> </div> </form> </Form>)
-}'"}
-
+/> </FormControl> <FormMessage /> </FormItem>)
+/>)
+<FormField <FormItem> <FormLabel>Notes (Optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>)
+/> </Button> </div> </form> </Form>)
+'"}
 
             </FormItem>)}
         />;
@@ -568,48 +563,48 @@ toast ({
         </div>;
       </form>;
     </Form>);
-}setIsSubmitting (true);
-}catch (error) {
+setIsSubmitting (true);
+catch (error) {
   logErrorToProduction ('Failed to schedule interview:', {
   data: error;
-});
+);
 toast ({
-}finally {
+finally {
   setIsSubmitting (false);
-}";
-}const time_slots = [ "09:00", "09:30", "10:00", "10:30", "11:00", "11:30";";
-"12:00", "12:30", "13:00", "13:30", "14:00", "14:30";";
-"15:00", "15:30", "16:00", "16:30", "17:00", "17:30";";
-"18:00", "18:30", "19:00", "19:30", "20: 00" ];";
-}/> <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4" > <FormField <FormLabel > Date</FormLabel> <Popover> <PopoverTrigger as_child> <FormControl> <Button) : (<span > Pick a date</span>) ";
-}<CalendarIcon className="ml - auto h - 4 w - 4 opacity - 50" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w - auto p - 0" align="start" > <Calendar initial_focus className="p - 3 pointer - events - auto" /> </PopoverContent> </Popover> <FormMessage /> </FormItem>);
-}/> <FormField <FormLabel > Time</FormLabel> <Select onValueChange= {
+";
+const time_slots = [ "09:00", "09:30", "10:00", "10:30", "11:00", "11:30";";
+12:00", "12:30", "13:00", "13:30", "14:00", "14:30";";
+15:00", "15:30", "16:00", "16:30", "17:00", "17:30";";
+18:00", "18:30", "19:00", "19:30", "20: 00" ];";
+/> <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4" > <FormField <FormLabel > Date</FormLabel> <Popover> <PopoverTrigger as_child> <FormControl> <Button) : (<span > Pick a date</span>) ";
+<CalendarIcon className="ml - auto h - 4 w - 4 opacity - 50" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w - auto p - 0" align="start" > <Calendar initial_focus className="p - 3 pointer - events - auto" /> </PopoverContent> </Popover> <FormMessage /> </FormItem>);
+/> <FormField <FormLabel > Time</FormLabel> <Select onValueChange= {
   field.on_change;
-}default_value= {
+default_value= {
   field.value ";
-}> <FormControl> <SelectTrigger> <SelectValue placeholder="Select time" /> </SelectTrigger> </FormControl> </SelectItem>) );
-}</SelectContent> </Select> <FormMessage /> </FormItem>) ";
-}/> </div> <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4" > <FormField <FormItem> <FormLabel > Duration</FormLabel> <Select onValueChange= {
+> <FormControl> <SelectTrigger> <SelectValue placeholder="Select time" /> </SelectTrigger> </FormControl> </SelectItem>);
+</SelectContent> </Select> <FormMessage /> </FormItem>) ";
+/> </div> <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4" > <FormField <FormItem> <FormLabel > Duration</FormLabel> <Select onValueChange= {
   field.on_change;
-}default_value= {
+default_value= {
   field.value ";
-}> <FormControl> <SelectTrigger> <SelectValue placeholder="Select duration" /> </SelectTrigger> </FormControl> <SelectContent> <SelectItem value="15" >15 minutes</SelectItem> <SelectItem value="30" >30 minutes</SelectItem> <SelectItem value="45" >45 minutes</SelectItem> <SelectItem value="60" >60 minutes</SelectItem> </SelectContent> </Select> <FormMessage /> </FormItem>);
-}/> <FormField <FormItem> <FormLabel > Platform</FormLabel> <Select onValueChange= {
+> <FormControl> <SelectTrigger> <SelectValue placeholder="Select duration" /> </SelectTrigger> </FormControl> <SelectContent> <SelectItem value="15" >15 minutes</SelectItem> <SelectItem value="30" >30 minutes</SelectItem> <SelectItem value="45" >45 minutes</SelectItem> <SelectItem value="60" >60 minutes</SelectItem> </SelectContent> </Select> <FormMessage /> </FormItem>);
+/> <FormField <FormItem> <FormLabel > Platform</FormLabel> <Select onValueChange= {
   field.on_change;
-}default_value= {
+default_value= {
   field.value ";
-}> <FormControl> <SelectTrigger> <SelectValue placeholder="Select platform" /> </SelectTrigger> </FormControl> <SelectContent> <SelectItem value="zoom" >Zoom</SelectItem> <SelectItem value="google - meet" >Google Meet</SelectItem> <SelectItem value="teams" >Microsoft Teams</SelectItem> <SelectItem value="other" >Other</SelectItem> </SelectContent> </Select> <FormMessage /> </FormItem>);
-}/> </div> {';
-  form.watch ('platform') !== 'in - app' && (<FormField control= {
+> <FormControl> <SelectTrigger> <SelectValue placeholder="Select platform" /> </SelectTrigger> </FormControl> <SelectContent> <SelectItem value="zoom" >Zoom</SelectItem> <SelectItem value="google - meet" >Google Meet</SelectItem> <SelectItem value="teams" >Microsoft Teams</SelectItem> <SelectItem value="other" >Other</SelectItem> </SelectContent> </Select> <FormMessage /> </FormItem>);
+/> </div> {';
+  form.watch ('platform') != 'in - app' && (<FormField control= {
   form.control;
-}<FormItem> <FormLabel > Meeting Link (Optional) </FormLabel> <FormControl> <Input placeholder= {
+<FormItem> <FormLabel > Meeting Link (Optional) </FormLabel> <FormControl> <Input placeholder= {
   `Add your $ {';
   form.watch ('platform');
-}link here`;
-}{
+link here`;
+{
   ...field;
-}/> </FormControl> <FormMessage /> </FormItem>);
-}/>);
-}<FormField <FormItem> <FormLabel > Notes (Optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>);
-}/> </Button> </div> </form> </Form>);
-}'"}
+/> </FormControl> <FormMessage /> </FormItem>);
+/>);
+<FormField <FormItem> <FormLabel > Notes (Optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>);
+/> </Button> </div> </form> </Form>);
+'"}

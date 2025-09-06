@@ -3,7 +3,7 @@ import SEO from '../components/SEO';
 
 const ext = (url: string) => (
 	<a className="text-cyan-400 underline" href={`/out?u=${encodeURIComponent(url)}`} target="_blank" rel="nofollow noopener noreferrer">{url.replace('https://', '')}</a>
-)
+
 export default function ServicesAdvertisingPage() {
 	return (
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -146,29 +146,29 @@ export default function ServicesAdvertisingPage() {
                 { name: 'Browser Performance Monitor', price: '$149/mo', href: '/services/browser-performance-monitor', points: ['RUM + SyntheticCore Web VitalsAlerts'] }
                 { name: 'Cloud Cost Optimizer', price: '$399/mo', href: '/services/cloud-cost-optimizer', points: ['AnomaliesRightsizingBudgets'] }
                 { name: 'API Observability Starter', price: '$149/mo', href: '/services/api-observability-starter', points: ['TracesSLOsDeps map'] }
-              ].map((o) => (
+              ].map(o) => (
                 <a key={o.name} href={o.href} className="block p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40">
                   <div className="text-sm text-gray-400 mb-1">From</div>
                   <div className="text-2xl font-bold text-white">{o.price}</div>
                   <div className="text-gray-200 mt-2 mb-3">{o.name}</div>
                   <ul className="text-sm text-gray-300 space-y-1 list-disc list-inside">
-                    {o.points.map((p) => (<li key={p}>{p}</li>))}
+                    {o.points.map(p) => (<li key={p}>{p}</li>)}
                   </ul>
                 </a>
-              ))}
+              )}
             </div>
           </section>
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Why Zion Tech Group</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {benefits.map((b) => (
+              {benefits.map(b) => (
                 <div key={b} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
                   <div className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-emerald-400 mt-1" />
                     <p className="text-gray-200">{b}</p>
                   </div>
                 </div>
-              ))}
+              )}
             </div>
           </section>
 				<section className="space-y-6">
@@ -269,7 +269,7 @@ export default function ServicesAdvertisingPage() {
                 { name: 'Freelancer Portfolio Builder', price: '$9/mo', href: '/freelancer-portfolio-builder', refs: [{ n: 'Webflow', u: 'https://webflow.com/pricing' }] }
                 { name: 'Micro CRM for Local Business', price: '$19/mo', href: '/micro-crm-local-business', refs: [{ n: 'Zoho Bigin', u: 'https://www.zoho.com/bigin/pricing/' }] }
                 { name: 'AI SEO Content Optimizer', price: '$59/mo', href: '/ai-seo-content-optimizer', refs: [{ n: 'Surfer SEO', u: 'https://surferseo.com/pricing/' }] }
-              ].map((o) => (
+              ].map(o) => (
                 <div key={o.name} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
                   <a href={o.href} className="block group">
                     <div className="text-sm text-gray-400 mb-1">From</div>
@@ -279,14 +279,14 @@ export default function ServicesAdvertisingPage() {
                     </div>
                   </a>
                   <div className="mt-3 text-sm text-gray-400 flex flex-wrap gap-3">
-                    {o.refs.map((r) => (
+                    {o.refs.map(r) => (
                       <a key={r.n} href={r.u} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-gray-300 hover:text-white">
                         <ExternalLink className="w-4 h-4" /> {r.n}
                       </a>
-                    ))}
+                    )}
                   </div>
                 </div>
-              ))}
+              )}
             </div>
           </section>
           <section>
@@ -323,19 +323,19 @@ export default function ServicesAdvertisingPage() {
                   { name: 'SendGrid', href: 'https://sendgrid.com/pricing/' }
                   { name: 'Postmark', href: 'https://postmarkapp.com/pricing' }
                 ]}
-              ].map((group) => (
+              ].map(group) => (
                 <div key={group.title} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
                   <div className="flex items-center justify-between mb-2">
                     <h3 className="text-xl font-semibold text-white">{group.title}</h3>
                     <span className="text-sm text-gray-300">{group.range}</span>
                   </div>
                   <ul className="text-slate-300 space-y-1">
-                    {group.links.map((l) => (
+                    {group.links.map(l) => (
                       <li key={l.href}><a className="text-cyan-400 underline" href={l.href} target="_blank" rel="noopener noreferrer">{l.name}</a></li>
-                    ))}
+                    )}
                   </ul>
                 </div>
-              ))}
+              )}
             </div>
             <div className="text-center mt-6">
               <Button href="/market-pricing" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">More Market References</Button>
@@ -344,11 +344,11 @@ export default function ServicesAdvertisingPage() {
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Explore by Category</h2>
             <div className="flex flex-wrap items-center justify-center gap-3">
-              {anchors.map((a) => (
+              {anchors.map(a) => (
                 <a key={a.title} href={a.href} className="px-4 py-2 rounded-full bg-gradient-to-r from-cyan-600/20 to-purple-600/20 border border-cyan-500/30 text-gray-200">
                   {a.title}
                 </a>
-              ))}
+              )}
             </div>
           </section>
           <section>
@@ -379,20 +379,20 @@ export default function ServicesAdvertisingPage() {
                 { name: 'PDF Render API', price: '$49/mo', href: '/pdf-render-api' }
 
                 { name: 'Database Performance Monitor', price: '$299/mo', href: '/database-performance-monitor' }
-              ].map((o) => (
+              ].map(o) => (
                 <a key={o.name} href={o.href} className="block p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40">
                   <div className="text-sm text-gray-400 mb-1">From</div>
                   <div className="text-2xl font-bold text-white">{o.price}</div>
                   <div className="text-gray-200 mt-2">{o.name}</div>
                 </a>
-              ))}
+              )}
             </div>
           </section>
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
   )
-}
+
 import React from 'react',
 import SEO from '../components / SEO',
 const ext = (url: string) =>: any (
@@ -542,27 +542,27 @@ return (
                 { name: 'Browser Performance Monitor', price: '$149 / mo', href: '/services / browser - performance - monitor', points: ['RUM + SyntheticCore Web VitalsAlerts'] },
                 { name: 'Cloud Cost Optimizer', price: '$399 / mo', href: '/services / cloud - cost - optimizer', points: ['AnomaliesRightsizingBudgets'] },
                 { name: 'API Observability Starter', price: '$149 / mo', href: '/services / api - observability - starter', points: ['TracesSLOsDeps map'] }
-              ].map ((o) => (
+              ].map (o) => (
                 <a key={o.name} href={o.href} className="block p - 6 rounded - 2xl bg - black / 40 border border - gray - 700 / 60 hover:border - cyan - 500 / 40">;
                   <div className="text - sm text - gray - 400 mb - 1">From</div>;
                   <div className="text - 2xl font - bold text - white">{o.price}</div>;
                   <div className="text - gray - 200 mt - 2 mb - 3">{o.name}</div>;
                   <ul className="text - sm text - gray - 300 space - y-1 list - disc list - inside">;
-                    {o.points.map ((p) => (<li key={p}>{p}</li>))}
+                    {o.points.map (p) => (<li key={p}>{p}</li>)}
                   </ul>;
-                </a>))}
+                </a>)}
             </div>;
           </section>;
           <section>;
             <h2 className="text - 3xl md:text - 4xl font - bold text - white mb - 6 text - center">Why Zion Tech Group</h2>;
             <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6">;
-              {benefits.map ((b) => (
+              {benefits.map (b) => (
                 <div key={b} className="p - 6 rounded - 2xl bg - black / 40 border border - gray - 700 / 60">;
                   <div className="flex items - start gap - 3">;
                     <CheckCircle className="w - 5 h - 5 text - emerald - 400 mt - 1" />;
                     <p className="text - gray - 200">{b}</p>;
                   </div>;
-                </div>))}
+                </div>)}
             </div>;
           </section>;
     <section className="space - y-6">;
@@ -663,7 +663,7 @@ return (
                 { name: 'Freelancer Portfolio Builder', price: '$9 / mo', href: '/freelancer - portfolio - builder', refs: [{ number: 'Webflow', u: 'https://webflow.com / pricing' }] },
                 { name: 'Micro CRM for Local Business', price: '$19 / mo', href: '/micro - crm - local - business', refs: [{ number: 'Zoho Bigin', u: 'https://www.zoho.com / bigin / pricing/' }] },
                 { name: 'AI SEO Content Optimizer', price: '$59 / mo', href: '/ai - seo - content - optimizer', refs: [{ number: 'Surfer SEO', u: 'https://surferseo.com / pricing/' }] }
-              ].map ((o) => (
+              ].map (o) => (
                 <div key={o.name} className="p - 6 rounded - 2xl bg - black / 40 border border - gray - 700 / 60">;
                   <a href={o.href} className="block group">;
                     <div className="text - sm text - gray - 400 mb - 1">From</div>;
@@ -673,12 +673,12 @@ return (
                     </div>;
                   </a>;
                   <div className="mt - 3 text - sm text - gray - 400 flex flex - wrap gap - 3">;
-                    {o.refs.map ((r) => (
+                    {o.refs.map (r) => (
                       <a key={r.n} href={r.u} target="_blank" rel="noopener noreferrer" className="inline - flex items - center gap - 1 text - gray - 300 hover:text - white">;
                         <ExternalLink className="w - 4 h - 4" /> {r.n}
-                      </a>))}
+                      </a>)}
                   </div>;
-                </div>))}
+                </div>)}
             </div>;
           </section>;
           <section>;
@@ -715,17 +715,17 @@ return (
                   { name: 'SendGrid', href: 'https://sendgrid.com / pricing/' },
                   { name: 'Postmark', href: 'https://postmarkapp.com / pricing' }
                 ]}
-              ].map ((group) => (
+              ].map (group) => (
                 <div key={group.title} className="p - 6 rounded - 2xl bg - black / 40 border border - gray - 700 / 60">;
                   <div className="flex items - center justify - between mb - 2">;
                     <h3 className="text - xl font - semibold text - white">{group.title}</h3>;
                     <span className="text - sm text - gray - 300">{group.range}</span>;
                   </div>;
                   <ul className="text - slate - 300 space - y-1">;
-                    {group.links.map ((l) => (
-                      <li key={l.href}><a className="text - cyan - 400 underline" href={l.href} target="_blank" rel="noopener noreferrer">{l.name}</a></li>))}
+                    {group.links.map (l) => (
+                      <li key={l.href}><a className="text - cyan - 400 underline" href={l.href} target="_blank" rel="noopener noreferrer">{l.name}</a></li>)}
                   </ul>;
-                </div>))}
+                </div>)}
             </div>;
             <div className="text - center mt - 6">;
               <Button href="/market - pricing" className="px - 8 py - 4 bg - gradient - to - r from - cyan - 600 to - blue - 700 text - white">More Market References</Button>;
@@ -734,10 +734,10 @@ return (
           <section>;
             <h2 className="text - 3xl md:text - 4xl font - bold text - white mb - 6 text - center">Explore by Category</h2>;
             <div className="flex flex - wrap items - center justify - center gap - 3">;
-              {anchors.map ((a) => (
+              {anchors.map (a) => (
                 <a key={a.title} href={a.href} className="px - 4 py - 2 rounded - full bg - gradient - to - r from - cyan - 600 / 20 to - purple - 600 / 20 border border - cyan - 500 / 30 text - gray - 200">;
                   {a.title}
-                </a>))}
+                </a>)}
             </div>;
           </section>;
           <section>;
@@ -767,15 +767,14 @@ return (
                 { name: 'Uptime & SLO Monitor', price: '$99 / mo', href: '/uptime - slo - monitor' },
                 { name: 'PDF Render API', price: '$49 / mo', href: '/pdf - render - api' },
                 { name: 'Database Performance Monitor', price: '$299 / mo', href: '/database - performance - monitor' }
-              ].map ((o) => (
+              ].map (o) => (
                 <a key={o.name} href={o.href} className="block p - 6 rounded - 2xl bg - black / 40 border border - gray - 700 / 60 hover:border - cyan - 500 / 40">;
                   <div className="text - sm text - gray - 400 mb - 1">From</div>;
                   <div className="text - 2xl font - bold text - white">{o.price}</div>;
                   <div className="text - gray - 200 mt - 2">{o.name}</div>;
-                </a>))}
+                </a>)}
             </div>;
           </section>;
         </div>;
       </div>;
     </UltraAdvancedFuturisticBackground>);
-}

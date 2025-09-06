@@ -7,7 +7,7 @@ export type AIAssistantProps = {
   systemPrompt?: string,
   onAccept: (markdown: string) => void,
   authorizationToken?: string
-},
+,
 
 export default function AIAssistant({
   buttonLabel = 'Generate with AI',
@@ -23,7 +23,7 @@ export default function AIAssistant({
   const [isEditing, setIsEditing] = useState(false),
   const [error, setError] = useState<string | null>(null),
 
-  useEffect(() => {
+  useEffect() => {
     setPrompt(defaultPrompt)
   }, [defaultPrompt]),
 
@@ -43,31 +43,29 @@ export default function AIAssistant({
       if (!res.ok) {
         throw new Error(data?.error || 'Failed to generate')
       }
-      setOutput(String(data.text || '')),
+      setOutput(String(data.text || ''),
       setIsEditing(false)
     } catch (e: any) {
       setError(e.message || 'Request failed')
     } finally {
       setLoading(false)
-    }
-  }, [authorizationToken, prompt, systemPrompt]),
+    }, [authorizationToken, prompt, systemPrompt]),
 
   const onCopy = useCallback(async () => {
     try {
       await navigator.clipboard.writeText(output)
-    } catch {}
-  }, [output]),
+    } catch {}, [output]),
 
-  const onOpen = useCallback(() => {
+  const onOpen = useCallback() => {
     setIsOpen(true),
     setOutput(''),
     setIsEditing(false),
     setError(null)
   }, []),
 
-  const onClose = useCallback(() => setIsOpen(false), []),
+  const onClose = useCallback() => setIsOpen(false), []),
 
-  const canAccept = useMemo(() => (output && output.trim().length > 0), [output]),
+  const canAccept = useMemo() => (output && output.trim().length > 0), [output]),
   return (_<>
       <button,
 type=&quot;button&quot;
@@ -102,9 +100,9 @@ value={prompt}
                 <button onClick={callOperator} disabled={loading} className=&quot;rounded-md border px-3 py-1.5 text-sm&quot;>
                   {loading ? '' : 'Regenerate'}
                 </button>
-                <button onClick={() => setIsEditing((v) => !v)} className="rounded-md border px-3 py-1.5 text-sm">{isEditing ? 'Preview' : 'Edit'}</button>
+                <button onClick={() => setIsEditing(v) => !v)} className="rounded-md border px-3 py-1.5 text-sm">{isEditing ? 'Preview' : 'Edit'}</button>
                 <button onClick={onCopy} disabled={!output} className="rounded-md border px-3 py-1.5 text-sm disabled: opacity-60">Copy</button>                <button,
-onClick={() => { onAccept(output), onClose() }}
+onClick={() => { onAccept(output), onClose() }
                   disabled={!canAccept}
                   className=&quot;ml-auto rounded-md bg-green-600 text-white px-3 py-1.5 text-sm disabled:opacity-60&quot;
                   value={prompt}
@@ -124,7 +122,7 @@ onClick={() => { onAccept(output), onClose() }}
                 <button onClick={_() => setIsEditing(_(v) => !v)} className="rounded-md border px-3 py-1.5 text-sm">{isEditing ? 'Preview' : 'Edit'}</button>
                 <button onClick={onCopy} disabled={_!output} className="rounded-md border px-3 py-1.5 text-sm disabled:opacity-60">Copy</button>
                 <button,
-onClick={_() => { onAccept(output); onClose()}}
+onClick={_() => { onAccept(output); onClose()}
                   disabled={_!canAccept}
                   className="ml-auto rounded-md bg-green-600 text-white px-3 py-1.5 text-sm disabled:opacity-60"
                 >

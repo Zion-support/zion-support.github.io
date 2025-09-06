@@ -6,5 +6,3 @@ export function dynamicImports() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

@@ -9,11 +9,11 @@ import { ;
   Home,;
   Briefcase,;
   Phone;
-} from 'lucide-react',;
+ from 'lucide-react',;
 import Layout from '../components/layout/Layout',;
 import SEO from '../components/SEO',;
 import Link from 'next/link',;
-;
+
 export default function ThankYouPage() {;
   const nextSteps = [;
     {;
@@ -35,7 +35,7 @@ export default function ThankYouPage() {;
       color:'from-green-500 to-emerald-500';
     }
   ],;
-;
+
 	return (;
 		<>;
 			<SEO title="Thank You" description="Thank you for your message" url="/thank-you" />;
@@ -51,4 +51,3 @@ export default function ThankYouPage() {;
 			</section>;
 		</>;
 	);
-}

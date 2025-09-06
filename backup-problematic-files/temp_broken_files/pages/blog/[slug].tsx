@@ -10,9 +10,9 @@ import type { BlogPost } from '@/types/blog',;
 import type { GetStaticPaths, GetStaticProps } from 'next',;
 import fs from 'fs',;
 import path from 'path',;
-;
+
 function parseMarkdown(filePath:string):BlogPost | null {;
-  if (!fs.existsSync(filePath)) {;
+  if (!fs.existsSync(filePath) {;
     return null;
   }
   const raw = fs.readFileSync(filePath, 'utf8'),;
@@ -22,23 +22,21 @@ function parseMarkdown(filePath:string):BlogPost | null {;
   const content = match[2].trim(),;
   const slug = path.basename(filePath).replace(/\.md$/, ''),;
   return { ...meta, id:slug, slug, content } as BlogPost,;
-}
-;
+
 interface BlogPostPageProps {;
   /**;
    * Preloaded blog post for static generation. Can be null if not found.;
    */;
   initialPost:BlogPost | null;
-}
-;
+
 const BlogPostPage:React.FC<BlogPostPageProps> = ({ initialPost }) => {;
   const router = useRouter(),;
   const { slug } = router.query,;
   const [post, setPost] = React.useState<BlogPost | null>(initialPost),;
   const [error, setError] = React.useState<string | null>(null),;
-;
-  React.useEffect(() => {;
-    if (initialPost && initialPost.slug === slug) {;
+
+  React.useEffect() => {;
+    if (initialPost && initialPost.slug = = slug) {;
       setPost(initialPost),;
       setError(null), // Clear any previous error;
     } else if (slug) {;
@@ -47,7 +45,7 @@ const BlogPostPage:React.FC<BlogPostPageProps> = ({ initialPost }) => {;
       // For now, we will rely on getStaticProps to provide the correct post or a 404.;
       // If initialPost is null and getStaticProps didn't return notFound, that's an inconsistent state.;
       // The previous logic tried a fallback here, but we aim to make getStaticProps authoritative.;
-      const directFallback = BLOG_POSTS.find((p) => p.slug === slug) || null,;
+      const directFallback = BLOG_POSTS.find(p) => p.slug = = slug) || null,;
       if (directFallback) {;
         setPost(directFallback),;
         setError(null),;
@@ -57,9 +55,8 @@ const BlogPostPage:React.FC<BlogPostPageProps> = ({ initialPost }) => {;
         // However, to maintain some robustness for dynamic client-side slug changes not triggering a new getStaticProps:setPost(null),;
         setError('Article not found');
       }
-    }
   }, [slug, initialPost]),;
-;
+
   if (error) {;
     return <div>{error}</div>,;
   }
@@ -90,7 +87,7 @@ const BlogPostPage:React.FC<BlogPostPageProps> = ({ initialPost }) => {;
             onError={(e) => {;
               const target = e.currentTarget as HTMLImageElement,;
               target.src = '/images/blog-placeholder.svg',;
-            }}
+            }
           />;
           <div>;
             <p className="m-0 font-medium">{post.author.name}</p>;
@@ -110,7 +107,7 @@ const BlogPostPage:React.FC<BlogPostPageProps> = ({ initialPost }) => {;
               onError={(e) => {;
                 const target = e.currentTarget as HTMLImageElement,;
                 target.src = '/images/blog-placeholder.svg',;
-              }}
+              }
             />;
           </div>;
         )}
@@ -121,26 +118,26 @@ const BlogPostPage:React.FC<BlogPostPageProps> = ({ initialPost }) => {;
       </main>;
     </>;
   ),;
-},;
-;
+,;
+
 export default BlogPostPage,;
-;
+
 export const getStaticPaths:GetStaticPaths = async () => {;
   const dir = path.join(process.cwd(), 'contentblog'),;
-  const files = fs.readdirSync(dir).filter((f) => f.endsWith('.md')),;
-  const paths = files.map((f) => ({;
-    params:{ slug:f.replace(/\.md$/, '') }})),;
+  const files = fs.readdirSync(dir).filter(f) => f.endsWith('.md'),;
+  const paths = files.map(f) => ({;
+    params:{ slug:f.replace(/\.md$/, '') }),;
   // Use `blocking` so new posts added after build can be generated on demand;
   return { paths, fallback:'blocking' },;
-},;
-;
+,;
+
 export const getStaticProps:GetStaticProps<BlogPostPageProps> = async ({;
   params} {;
   params?:{ slug?:string },;
-}) => {;
+) => {;
   const slug = params?.slug as string,;
   // Validate slug to prevent malformed paths;
-  if (!/^[a-z0-9-]+$/.test(slug)) {;
+  if (!/^[a-z0-9-]+$/.test(slug) {;
     return { notFound:true },;
   }
   const filePath = path.join(process.cwd(), 'contentblog', `${slug}.md`),;
@@ -149,23 +146,23 @@ export const getStaticProps:GetStaticProps<BlogPostPageProps> = async ({;
     return { notFound:true },;
   }
   return { props:{ initialPost:post }, revalidate:60 },;
-},; 
-}interface BlogPostPageProps {
+,; 
+interface BlogPostPageProps {
   /** * Preloaded blog post for static generation. Can be null if not found. */ 
-}
-}, [slug, initialPost]);
-{
+
+, [slug, initialPost]);
+
   post.author.title 
-}</p>) 
-}</div> </div> /> </div>) 
-}<ReactMarkdown> {
+</p>) 
+</div> </div> /> </div>) 
+<ReactMarkdown> {
   body 
-}</ReactMarkdown> <AuthorBio author= {
+</ReactMarkdown> <AuthorBio author= {
   post.author 
-}/> <SocialShareButtons title= {
+/> <SocialShareButtons title= {
   post.title 
-}/> <CommentsSection slug= {
+/> <CommentsSection slug= {
   post.slug 
-}/> </main> </>) 
-};
+/> </main> </>) 
+;
 export default BlogPostPage;

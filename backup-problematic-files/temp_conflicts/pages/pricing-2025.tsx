@@ -4,10 +4,10 @@ import { motion } from 'framer-motion',;
 import { ;
   Brain, Shield, Rocket, Cpu, Database, Globe, ;
   CheckCircle, Star, TrendingUp, Zap, Users;
-} from 'lucide-react',;
+ from 'lucide-react',;
 import EnhancedNavigation from '../components/EnhancedNavigation',;
 import EnhancedFooter from '../components/EnhancedFooter',;
-;
+
 export default function PricingPage() {;
   const plans = [;
     {;
@@ -63,7 +63,7 @@ export default function PricingPage() {;
       color:"from-green-500 to-emerald-500";
     }
   ],;
-;
+
   const addOns = [;
     {;
       name:"AI Research Assistant",;
@@ -98,7 +98,7 @@ export default function PricingPage() {;
       icon:Cpu;
     }
   ],;
-;
+
   const faqs = [;
     {;
       question:"What's included in the base pricing?",;
@@ -125,7 +125,7 @@ export default function PricingPage() {;
       answer:"Yes! We offer a 20% discount for annual billing on all plans. This is applied automatically when you choose annual billing.";
     }
   ],;
-;
+
   return (;
     <>;
       <Head>;
@@ -137,16 +137,16 @@ export default function PricingPage() {;
         <meta property="og:type" content="website" />;
         <meta property="og:url" content="https://ziontechgroup.com/pricing-2025" />;
       </Head>;
-;
+
       <EnhancedNavigation />;
-;
+
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
         <div className="max-w-7xl mx-auto px-6">;
           <motion.div;
-            initial={{ opacity:0, y:20 }}
-            animate={{ opacity:1, y:0 }}
-            transition={{ duration:0.6 }}
+            initial={ opacity:0, y:20 }
+            animate={ opacity:1, y:0 }
+            transition={ duration:0.6 }
             className="text-center";
           >;
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">;
@@ -176,14 +176,14 @@ export default function PricingPage() {;
           </motion.div>;
         </div>;
       </section>;
-;
+
       {/* Pricing Plans */}
       <section id="plans" className="py-20 bg-white">;
         <div className="max-w-7xl mx-auto px-6">;
           <motion.div;
-            initial={{ opacity:0, y:20 }}
-            whileInView={{ opacity:1, y:0 }}
-            transition={{ duration:0.6 }}
+            initial={ opacity:0, y:20 }
+            whileInView={ opacity:1, y:0 }
+            transition={ duration:0.6 }
             className="text-center mb-16";
           >;
             <h2 className="text-4xl font-bold text-slate-900 mb-6">Choose Your Plan</h2>;
@@ -191,14 +191,14 @@ export default function PricingPage() {;
               Start with what you need and scale as you grow. All plans include our core AI and technology features.;
             </p>;
           </motion.div>;
-;
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
-            {plans.map((plan, index) => (;
+            {plans.map(plan, index) => (;
               <motion.div;
                 key={plan.name}
-                initial={{ opacity:0, y:20 }}
-                whileInView={{ opacity:1, y:0 }}
-                transition={{ duration:0.6, delay:index * 0.1 }}
+                initial={ opacity:0, y:20 }
+                whileInView={ opacity:1, y:0 }
+                transition={ duration:0.6, delay:index * 0.1 }
                 className={`relative bg-slate-50 rounded-2xl p-8 ${;
                   plan.popular ? 'ring-2 ring-blue-500 transform scale-105' :'';
                 }`}
@@ -217,16 +217,16 @@ export default function PricingPage() {;
                   </div>;
                   <p className="text-slate-600">{plan.description}</p>;
                 </div>;
-;
+
                 <ul className="space-y-4 mb-8">;
-                  {plan.features.map((feature) => (;
+                  {plan.features.map(feature) => (;
                     <li key={feature} className="flex items-center space-x-3">;
                       <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />;
                       <span className="text-slate-700">{feature}</span>;
                     </li>;
-                  ))}
+                  )}
                 </ul>;
-;
+
                 <a;
                   href="/contact";
                   className="block w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white text-center py-3 rounded-xl font-medium transition-all duration-200 transform hover:scale-105";
@@ -234,18 +234,18 @@ export default function PricingPage() {;
                   Get Started;
                 </a>;
               </motion.div>;
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Add-ons */}
       <section className="py-20 bg-slate-50">;
         <div className="max-w-7xl mx-auto px-6">;
           <motion.div;
-            initial={{ opacity:0, y:20 }}
-            whileInView={{ opacity:1, y:0 }}
-            transition={{ duration:0.6 }}
+            initial={ opacity:0, y:20 }
+            whileInView={ opacity:1, y:0 }
+            transition={ duration:0.6 }
             className="text-center mb-16";
           >;
             <h2 className="text-4xl font-bold text-slate-900 mb-6">Add-On Services</h2>;
@@ -253,36 +253,33 @@ export default function PricingPage() {;
               Enhance your solution with specialized services. Add these to any plan for comprehensive coverage.;
             </p>;
           </motion.div>;
-;
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-            {addOns.map((addon, index) => (;
+            {addOns.map(addon, index) => (;
               <motion.div;
                 key={addon.name}
-                initial={{ opacity:0, y:20 }}
-                whileInView={{ opacity:1, y:0 }}
-                transition={{ duration:0.6, delay:index * 0.1 }}
+                initial={ opacity:0, y:20 }
+                whileInView={ opacity:1, y:0 }
+                transition={ duration:0.6, delay:index * 0.1 }
                 className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2";
               >;
                 <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center mb-6">;
                   <addon.icon className="w-8 h-8 text-white" />;
                 </div>;
-                ;
                 <h3 className="text-xl font-bold text-slate-900 mb-2">{addon.name}</h3>;
                 <div className="text-2xl font-bold text-slate-900 mb-2">;
                   {addon.price}
                   <span className="text-lg text-slate-600">{addon.period}</span>;
                 </div>;
                 <p className="text-slate-600 mb-4">{addon.description}</p>;
-                ;
                 <ul className="space-y-2 mb-6">;
-                  {addon.features.map((feature) => (;
+                  {addon.features.map(feature) => (;
                     <li key={feature} className="text-sm text-slate-600 flex items-center space-x-2">;
                       <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />;
                       <span>{feature}</span>;
                     </li>;
-                  ))}
+                  )}
                 </ul>;
-                ;
                 <a;
                   href="/contact";
                   className="block w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white text-center py-3 rounded-xl font-medium transition-all duration-200 transform hover:scale-105";
@@ -290,18 +287,18 @@ export default function PricingPage() {;
                   Add Service;
                 </a>;
               </motion.div>;
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Value Proposition */}
       <section className="py-20 bg-white">;
         <div className="max-w-7xl mx-auto px-6">;
           <motion.div;
-            initial={{ opacity:0, y:20 }}
-            whileInView={{ opacity:1, y:0 }}
-            transition={{ duration:0.6 }}
+            initial={ opacity:0, y:20 }
+            whileInView={ opacity:1, y:0 }
+            transition={ duration:0.6 }
             className="text-center mb-16";
           >;
             <h2 className="text-4xl font-bold text-slate-900 mb-6">Why Choose Zion Tech Group?</h2>;
@@ -309,12 +306,12 @@ export default function PricingPage() {;
               We're not just another technology company. Here's what makes us different and worth your investment.;
             </p>;
           </motion.div>;
-;
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
             <motion.div;
-              initial={{ opacity:0, y:20 }}
-              whileInView={{ opacity:1, y:0 }}
-              transition={{ duration:0.6 }}
+              initial={ opacity:0, y:20 }
+              whileInView={ opacity:1, y:0 }
+              transition={ duration:0.6 }
               className="text-center";
             >;
               <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center mx-auto mb-4">;
@@ -323,11 +320,11 @@ export default function PricingPage() {;
               <h3 className="text-xl font-bold text-slate-900 mb-3">Expert Team</h3>;
               <p className="text-slate-600">World-class engineers and researchers with decades of combined experience.</p>;
             </motion.div>;
-;
+
             <motion.div;
-              initial={{ opacity:0, y:20 }}
-              whileInView={{ opacity:1, y:0 }}
-              transition={{ duration:0.6, delay:0.1 }}
+              initial={ opacity:0, y:20 }
+              whileInView={ opacity:1, y:0 }
+              transition={ duration:0.6, delay:0.1 }
               className="text-center";
             >;
               <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center mx-auto mb-4">;
@@ -336,11 +333,11 @@ export default function PricingPage() {;
               <h3 className="text-xl font-bold text-slate-900 mb-3">Proven Results</h3>;
               <p className="text-slate-600">Track record of successful implementations across diverse industries.</p>;
             </motion.div>;
-;
+
             <motion.div;
-              initial={{ opacity:0, y:20 }}
-              whileInView={{ opacity:1, y:0 }}
-              transition={{ duration:0.6, delay:0.2 }}
+              initial={ opacity:0, y:20 }
+              whileInView={ opacity:1, y:0 }
+              transition={ duration:0.6, delay:0.2 }
               className="text-center";
             >;
               <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center mx-auto mb-4">;
@@ -349,11 +346,11 @@ export default function PricingPage() {;
               <h3 className="text-xl font-bold text-slate-900 mb-3">Enterprise Security</h3>;
               <p className="text-slate-600">Bank-level security with SOC 2 compliance and quantum-resistant encryption.</p>;
             </motion.div>;
-;
+
             <motion.div;
-              initial={{ opacity:0, y:20 }}
-              whileInView={{ opacity:1, y:0 }}
-              transition={{ duration:0.6, delay:0.3 }}
+              initial={ opacity:0, y:20 }
+              whileInView={ opacity:1, y:0 }
+              transition={ duration:0.6, delay:0.3 }
               className="text-center";
             >;
               <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-orange-500 to-red-500 flex items-center justify-center mx-auto mb-4">;
@@ -365,14 +362,14 @@ export default function PricingPage() {;
           </div>;
         </div>;
       </section>;
-;
+
       {/* FAQ */}
       <section className="py-20 bg-slate-900">;
         <div className="max-w-4xl mx-auto px-6">;
           <motion.div;
-            initial={{ opacity:0, y:20 }}
-            whileInView={{ opacity:1, y:0 }}
-            transition={{ duration:0.6 }}
+            initial={ opacity:0, y:20 }
+            whileInView={ opacity:1, y:0 }
+            transition={ duration:0.6 }
             className="text-center mb-16";
           >;
             <h2 className="text-4xl font-bold text-white mb-6">Frequently Asked Questions</h2>;
@@ -380,31 +377,31 @@ export default function PricingPage() {;
               Get answers to common questions about our pricing and services.;
             </p>;
           </motion.div>;
-;
+
           <div className="space-y-6">;
-            {faqs.map((faq, index) => (;
+            {faqs.map(faq, index) => (;
               <motion.div;
                 key={faq.question}
-                initial={{ opacity:0, y:20 }}
-                whileInView={{ opacity:1, y:0 }}
-                transition={{ duration:0.6, delay:index * 0.1 }}
+                initial={ opacity:0, y:20 }
+                whileInView={ opacity:1, y:0 }
+                transition={ duration:0.6, delay:index * 0.1 }
                 className="bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-8";
               >;
                 <h3 className="text-xl font-bold text-white mb-4">{faq.question}</h3>;
                 <p className="text-white/70 leading-relaxed">{faq.answer}</p>;
               </motion.div>;
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* CTA */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-cyan-600">;
         <div className="max-w-4xl mx-auto px-6 text-center">;
           <motion.div;
-            initial={{ opacity:0, y:20 }}
-            whileInView={{ opacity:1, y:0 }}
-            transition={{ duration:0.6 }}
+            initial={ opacity:0, y:20 }
+            whileInView={ opacity:1, y:0 }
+            transition={ duration:0.6 }
           >;
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>;
             <p className="text-xl text-blue-100 mb-8">;
@@ -427,8 +424,7 @@ export default function PricingPage() {;
           </motion.div>;
         </div>;
       </section>;
-;
+
       <EnhancedFooter />;
     </>;
   );
-}

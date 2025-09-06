@@ -65,7 +65,7 @@ const Jobs: NextPage = () => {
       </main>
     </div>
   )
-}
+
 export default Jobs;
 
         valid_through={job.valid_through}
@@ -77,5 +77,5 @@ export default Jobs;
         <p>{job.description}</p>;
       </main>;
     </div>);
-},
+,
 export default Jobs,

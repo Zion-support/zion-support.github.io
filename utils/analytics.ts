@@ -5,7 +5,7 @@ export type TrackEventPayload = {
   userType?: UserType;
   properties?: Record<string, any>;
   at?: string;
-}
+
 export async function trackEvent(payload: TrackEventPayload) {
   try {
     await fetch('/api/analytics/events/track', {
@@ -17,4 +17,3 @@ export async function trackEvent(payload: TrackEventPayload) {
   } catch (e) {
     // swallow
   }
-}

@@ -186,7 +186,7 @@ export default function BusinessToolsPage() {_const _businessTools = [
         }      ]
     }
   ],;
-;
+
   const businessInsights = [;
     {;
       title:'Remote Work Tools',;
@@ -278,22 +278,22 @@ export default function BusinessToolsPage() {_const _businessTools = [
           </div>
 
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6&quot;>
-            {businessInsights.map((insight, index) => (
+            {businessInsights.map(insight, index) => (
               <Card
                 key={index}
                 className=&quot;card-hover border-gradient-blue text-center&quot;
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={ animationDelay: `${index * 0.1}s` }
               >
                 <h3 className=&quot;text-xl font-bold text-white mb-3&quot;>{insight.title}</h3>
                 <p className=&quot;text-gray-400 text-sm mb-4 leading-relaxed&quot;>{insight.description}</p>
                 <div className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${insight.color} bg-gray-800/50`}>
                   {insight.trend}                </div>
               </Card>
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Business Tools */}
       <section className=&quot;section-padding bg-gradient-cursor&quot;>
         <div className=&quot;container-cursor&quot;>
@@ -306,7 +306,7 @@ export default function BusinessToolsPage() {_const _businessTools = [
             </p>
           </div>
 
-          {businessTools.map((category, categoryIndex) => (
+          {businessTools.map(category, categoryIndex) => (
             <div key={categoryIndex} className=&quot;mb-20&quot;>
               <div className=&quot;text-center mb-12&quot;>
                 <h3 className=&quot;text-3xl font-bold text-white mb-4&quot;>{category.category}</h3>
@@ -314,10 +314,10 @@ export default function BusinessToolsPage() {_const _businessTools = [
               </div>
 
               <div className=&quot;grid grid-cols-1 lg:grid-cols-3 gap-8&quot;>
-                {category.tools.map((tool, toolIndex) => (                  <Card
+                {category.tools.map(tool, toolIndex) => (                  <Card
                     key={toolIndex}
                     className={_`card-hover border-gradient-blue group ${tool.popular ? 'ring-2 ring-cursor-blue/50' : ''}`}
-                    style={_{ animationDelay: `${(categoryIndex * 0.2) + (toolIndex * 0.1)}s` }}
+                    style={_{ animationDelay: `${(categoryIndex * 0.2) + (toolIndex * 0.1)}s` }
                   >
                     {tool.popular && (
                       <div className=&quot;absolute -top-3 left-1/2 transform -translate-x-1/2&quot;>
@@ -340,14 +340,14 @@ export default function BusinessToolsPage() {_const _businessTools = [
                         <span className=&quot;text-2xl font-bold text-cursor-blue&quot;>{tool.pricing}</span>
                       </div>
                       <ul className=&quot;space-y-2&quot;>
-                        {tool.features.map((feature, featureIndex) => (
+                        {tool.features.map(feature, featureIndex) => (
                           <li key={featureIndex} className=&quot;flex items-center text-gray-300 text-sm&quot;>
                             <Check className=&quot;w-4 h-4 text-cursor-blue mr-3 flex-shrink-0&quot; />
                             {feature}                          </li>
-                        ))}
+                        )}
                       </ul>;
                     </div>;
-;
+
                     <Button;
                       href={tool.website}
                       variant=&quot;primary&quot;
@@ -358,13 +358,13 @@ export default function BusinessToolsPage() {_const _businessTools = [
                       <ExternalLink className=&quot;w-4 h-4 ml-2&quot; />
                     </Button>
                   </Card>
-                ))}
+                )}
               </div>;
             </div>;
-          ))}
+          )}
         </div>;
       </section>;
-;
+
       {/* Productivity Tips */}
       <section className=&quot;section-padding bg-gradient-cursor-accent&quot;>
         <div className=&quot;container-cursor&quot;>
@@ -377,22 +377,22 @@ export default function BusinessToolsPage() {_const _businessTools = [
           </div>
 
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6&quot;>
-            {productivityTips.map((tip, index) => (
+            {productivityTips.map(tip, index) => (
               <Card
                 key={index}
                 className=&quot;card-hover border-gradient-blue text-center&quot;
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={ animationDelay: `${index * 0.1}s` }
               >
                 <div className=&quot;flex justify-center mb-4&quot;>
                   {tip.icon}
                 </div>
                 <h3 className=&quot;text-xl font-bold text-white mb-3&quot;>{tip.title}</h3>
                 <p className=&quot;text-gray-400 text-sm leading-relaxed&quot;>{tip.description}</p>              </Card>
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* CTA Section */}
       <section className=&quot;section-padding bg-gradient-to-r from-cursor-blue to-purple-600 relative overflow-hidden&quot;>
         <div className=&quot;absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10&quot; />

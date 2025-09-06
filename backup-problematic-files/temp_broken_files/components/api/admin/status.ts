@@ -15,10 +15,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const statusPath = path.join(dataDir, 'agents-status.json'),
   const insightsPath = path.join(dataDir, 'insights.json'),
   const _status = fs.existsSync(statusPath)
-    ? JSON.parse(fs.readFileSync(statusPath, 'utf8'))
+    ? JSON.parse(fs.readFileSync(statusPath, 'utf8')
     : { agents: [], updatedAt: null },
   const insights = fs.existsSync(insightsPath)
-    ? JSON.parse(fs.readFileSync(insightsPath, 'utf8'))
+    ? JSON.parse(fs.readFileSync(insightsPath, 'utf8')
     : { items: [], updatedAt: null },
 
   res.status(200).json({ status, insights })}

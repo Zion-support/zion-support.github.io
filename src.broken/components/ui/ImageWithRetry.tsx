@@ -6,5 +6,3 @@ export function ImageWithRetry() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

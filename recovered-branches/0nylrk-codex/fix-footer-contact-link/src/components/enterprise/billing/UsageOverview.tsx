@@ -27,7 +27,6 @@ export function UsageOverview() {
       total: 10
       percentage: 24
     }
-  }
 
   return (
     <Card>
@@ -94,7 +93,7 @@ export function UsageOverview() {
       </CardContent>
     </Card>
   )
-}
+
               Historical usage data will be available after your first full billing cycle.;
             </div>;
           </TabsContent>;
@@ -102,6 +101,5 @@ export function UsageOverview() {
       </CardContent>;
     </Card>;
   );
-}
+
     </Card>);
-}

@@ -6,5 +6,3 @@ export function EnterpriseHero() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

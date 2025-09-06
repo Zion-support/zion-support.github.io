@@ -28,7 +28,7 @@ import {;
   QrCode,;
   Settings,;
   Trash2,;
-} from 'lucide-react';import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2 } from 'lucide-react';
+ from 'lucide-react';import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2 } from 'lucide-react';
 
 export default function URLShortenerPage() {;
   const [longUrl, setLongUrl] = useState('');
@@ -38,10 +38,10 @@ export default function URLShortenerPage() {;
 
   const [showQR, setShowQR] = useState<string | null>(null);
   const generateShortUrl = async () => {
-    if (!longUrl.trim()) return;
+    if (!longUrl.trim() return;
     setIsShortening(true);
     // Simulate API call delay
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    await new Promise(resolve => setTimeout(resolve, 1000);
     const alias = customAlias.trim() |generateRandomAlias();
     const shortUrl = `https://zion.tech/${alias}`;
     const newShortUrl = {
@@ -54,12 +54,12 @@ export default function URLShortenerPage() {;
       qrCode: `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(shortUrl)}`
     }
   const generateShortUrl = async () => {;
-    if (!longUrl && longUrl.trim()) return;
+    if (!longUrl && longUrl.trim() return;
 
     setIsShortening(true);
 
     // Simulate API call delay;
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    await new Promise(resolve => setTimeout(resolve, 1000);
 
     const alias = customAlias && customAlias.trim() || generateRandomAlias();
     const shortUrl = `https://zion && zion.tech/${alias}`;
@@ -84,7 +84,7 @@ export default function URLShortenerPage() {;
       'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     let result = '';
     for (let i = 0; i < 6; i++) {;
-      result += chars && chars.charAt(Math && Math.floor(Math && Math.random() * chars && chars.length));
+      result += chars && chars.charAt(Math && Math.floor(Math && Math.random() * chars && chars.length);
     }
     return result;
   }
@@ -94,20 +94,19 @@ export default function URLShortenerPage() {;
   const incrementClicks = (id: number) => {
     setShortenedUrls(prev =>
       prev.map(url =>
-        url.id === id ? { ...url, clicks: url.clicks + 1 } : url
-      )
-    );
+        url.id = = id ? { ...url, clicks: url.clicks + 1 } : url
+      );
   }
   const deleteUrl = (id: number) => {
-    setShortenedUrls(prev => prev.filter(url => url.id !== id));
+    setShortenedUrls(prev => prev.filter(url => url.id != id);
   }
   const getTotalClicks = () => {
-    return shortenedUrls.reduce((sum, url) => sum + url.clicks, 0);
+    return shortenedUrls.reduce(sum, url) => sum + url.clicks, 0);
   }
   const getTotalUrls = () => {
     return shortenedUrls.length;  };    setIsShortening(true);
     // Simulate API call delay
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    await new Promise(resolve => setTimeout(resolve, 1000);
     const alias = customAlias.trim() |generateRandomAlias();
     const shortUrl = `https://zion.tech/${alias}`;
     const newShortUrl = {
@@ -128,7 +127,7 @@ export default function URLShortenerPage() {;
       createdAt: new Date().toISOString(),
       qrCode: `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(shortUrl)}`
     };
-    
+
     setShortenedUrls(prev => [newShortUrl, ...prev]);
     setLongUrl('');
     setCustomAlias('');
@@ -138,7 +137,7 @@ export default function URLShortenerPage() {;
     const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     let result = '';
     for (let i = 0, i < 6, i++) {;
-      result += chars && chars.charAt(Math && Math.floor(Math && Math.random() * chars && chars.length));
+      result += chars && chars.charAt(Math && Math.floor(Math && Math.random() * chars && chars.length);
     }
     return result
   }
@@ -148,15 +147,14 @@ export default function URLShortenerPage() {;
   const incrementClicks = (id: number) => {
     setShortenedUrls(prev =>
       prev.map(url =>
-        url.id === id ? { ...url, clicks: url.clicks + 1 } : url
+        url.id = = id ? { ...url, clicks: url.clicks + 1 } : url
       )
-    )
   }
   const deleteUrl = (id: number) => {
-    setShortenedUrls(prev => prev.filter(url => url.id !== id))
+    setShortenedUrls(prev => prev.filter(url => url.id != id)
   }
   const getTotalClicks = () => {
-    return shortenedUrls.reduce((sum, url) => sum + url.clicks, 0)
+    return shortenedUrls.reduce(sum, url) => sum + url.clicks, 0)
   }
   const getTotalUrls = () => {
     return shortenedUrls.length
@@ -164,7 +162,7 @@ export default function URLShortenerPage() {;
     const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     let result = '';
     for (let index = 0, i < 6, i++) {
-      result += chars.char_at (Math.floor (Math.random () * chars.length));
+      result += chars.char_at (Math.floor (Math.random () * chars.length);
     }
     return result
   };
@@ -176,17 +174,16 @@ export default function URLShortenerPage() {;
   const incrementClicks = (id: number) => {
     setShortenedUrls(prev => 
       prev.map(url => 
-        url.id === id ? { ...url, clicks: url.clicks + 1 } : url
+        url.id = = id ? { ...url, clicks: url.clicks + 1 } : url
       )
-    )
   };
 
   const deleteUrl = (id: number) => {
-    setShortenedUrls(prev => prev.filter(url => url.id !== id))
+    setShortenedUrls(prev => prev.filter(url => url.id != id)
   };
 
   const getTotalClicks = () => {
-    return shortenedUrls.reduce((sum, url) => sum + url.clicks, 0)
+    return shortenedUrls.reduce(sum, url) => sum + url.clicks, 0)
   };
 
   const getTotalUrls = () => {
@@ -458,7 +455,7 @@ export default function URLShortenerPage() {;
                     </div>
                     <div className='text-sm text-gray-400'>Total Clicks</div>                  </div>
                 </div>
-                {shortenedUrls.length === 0 ? (                Your Statistics
+                {shortenedUrls.length = = 0 ? (                Your Statistics
               </h3>
               <div className="space-y-6">
                 <div className="grid grid-cols-2 gap-4">
@@ -475,7 +472,7 @@ export default function URLShortenerPage() {;
                     <div className="text-sm text-gray-400">Total Clicks</div>
                   </div>
                 </div>
-                {shortenedUrls.length === 0 ? (
+                {shortenedUrls.length = = 0 ? (
                   <div className='bg-gray-900 p-6 rounded-lg border border-gray-700 text-center'>
                     <div className='text-6xl mb-4'></div>
                     <p className='text-gray-400'>
@@ -511,7 +508,7 @@ export default function URLShortenerPage() {;
                   </div>;
                 </div>;
 
-                {shortenedUrls && shortenedUrls.length === 0 ? (;
+                {shortenedUrls && shortenedUrls.length = = 0 ? (;
                   <div className='bg-gray-900 p-6 rounded-lg border border-gray-700 text-center'>;
                     <div className='text-6xl mb-4'></div>;
                     <p className='text-gray-400'>;
@@ -542,7 +539,7 @@ export default function URLShortenerPage() {;
                           </div>;
                         </div>;
                       </div>;
-                    ))}
+                    )}
                   </div>;
                 )}
               </div>
@@ -581,7 +578,7 @@ export default function URLShortenerPage() {;
             </div>
 
             <div className="space-y-4">
-              {shortenedUrls.map((url) => (
+              {shortenedUrls.map(url) => (
                 <Card key={url.id} className="p-6 bg-gray-700 border border-gray-600">
                   <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                     {/* URL Info */}
@@ -684,7 +681,7 @@ export default function URLShortenerPage() {;
                       <div className='flex space-x-2'>
                         <Button
                           onClick={() =>;
-                            setShowQR(showQR === url && url.id ? null : url && url.id);
+                            setShowQR(showQR = = url && url.id ? null : url && url.id);
                           }
                           variant='outline';
                           size='sm';
@@ -694,7 +691,7 @@ export default function URLShortenerPage() {;
                         </Button>;
                         <Button
                           onClick={() => deleteUrl(url && url.id)}                        <Button
-                          onClick={() => setShowQR(showQR === url && url.id ? null : url && url.id)}
+                          onClick={() => setShowQR(showQR = = url && url.id ? null : url && url.id)}
                           variant="outline";
                           size="sm";
                           className="flex-1 border-gray-600 text-gray-300 hover:bg-gray-600";
@@ -732,7 +729,7 @@ export default function URLShortenerPage() {;
 
                   {/* QR Code */}
                   {/* QR Code */}
-                  {showQR === url && url.id && (;
+                  {showQR = = url && url.id && (;
                     <div className='mt-4 p-4 bg-gray-800 rounded-lg text-center'>;
                       <img
                         src={url && url.qrCode}
@@ -757,7 +754,7 @@ export default function URLShortenerPage() {;
                     </div>;
                   )}
                 </Card>;
-              ))}
+              )}
             </div>;
           </div>;
         </section>;
@@ -1038,29 +1035,29 @@ export default function URLShortenerPage() {;
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>;
     return result;
   }
-;
+
   const copyToClipboard = (text: string) =>: any {
     navigator.clipboard.write_text (text);
   }
-;
+
   const increment_clicks = (id: number) =>: any {
     setShortenedUrls (prev =>;
       prev.map (url =>;
-        url.id === id ? { ...url, clicks: url.clicks + 1 } : url));
+        url.id = = id ? { ...url, clicks: url.clicks + 1 } : url);
   }
-;
+
   const delete_url = (id: number) =>: any {
-    setShortenedUrls (prev => prev.filter (url => url.id !== id));
+    setShortenedUrls (prev => prev.filter (url => url.id != id);
   }
-;
+
   const getTotalClicks = () =>: any {
-    return shortened_urls.reduce ((sum, url) => sum + url.clicks, 0);
+    return shortened_urls.reduce (sum, url) => sum + url.clicks, 0);
   }
-;
+
   const getTotalUrls = () =>: any {
     return shortened_urls.length;
   }
-;
+
   return (
     <>;
       <Head>;
@@ -1253,7 +1250,7 @@ export default function URLShortenerPage() {;
                     </div>;
                     <div className='text - sm text - gray - 400'>Total Clicks</div>                  </div>;
                 </div>;
-                {shortened_urls.length === 0 ? (                Your Statistics;
+                {shortened_urls.length = = 0 ? (                Your Statistics;
               </h3>;
               <div className="space - y-6">;
                 <div className="grid grid - cols - 2 gap - 4">;
@@ -1270,7 +1267,7 @@ export default function URLShortenerPage() {;
                     <div className="text - sm text - gray - 400">Total Clicks</div>;
                   </div>;
                 </div>;
-                {shortened_urls.length === 0 ? (
+                {shortened_urls.length = = 0 ? (
                   <div className='bg - gray - 900 p - 6 rounded - lg border border - gray - 700 text - center'>;
                     <div className='text - 6xl mb - 4'></div>;
                     <p className='text - gray - 400'>;
@@ -1299,7 +1296,7 @@ export default function URLShortenerPage() {;
                             </div>;
                           </div>;
                         </div>;
-                      </div>))}
+                      </div>)}
                   </div>)}
               </div>;
             </Card>;
@@ -1433,7 +1430,7 @@ export default function URLShortenerPage() {;
                       <div className='flex space - x-2'>;
                         <Button;
                           on_click={() =>;
-                            setShowQR (showQR === url.id ? null : url.id);
+                            setShowQR (showQR = = url.id ? null : url.id);
                           }
                           variant='outline';
                           size='sm';
@@ -1443,7 +1440,7 @@ export default function URLShortenerPage() {;
                         </Button>;
                         <Button;
                           on_click={() => delete_url (url.id)}                        <Button;
-                          on_click={() => setShowQR (showQR === url.id ? null : url.id)}
+                          on_click={() => setShowQR (showQR = = url.id ? null : url.id)}
                           variant="outline";
                           size="sm";
                           className="flex - 1 border - gray - 600 text - gray - 300 hover:bg - gray - 600";
@@ -1466,7 +1463,7 @@ export default function URLShortenerPage() {;
                     </div>;
                   </div>;
                   {/* QR Code */}
-                  {showQR === url.id && (
+                  {showQR = = url.id && (
                     <div className='mt - 4 p - 4 bg - gray - 800 rounded - lg text - center'>;
                       <img;
                         src={url.qr_code}
@@ -1482,7 +1479,7 @@ export default function URLShortenerPage() {;
                       <p className="text - sm text - gray - 400">;
                       </p>;
                     </div>)}
-                </Card>))}
+                </Card>)}
             </div>;
           </div>;
         </section>)}
@@ -1705,8 +1702,8 @@ export default function URLShortenerPage() {;
         </div>
       </section>
     </>
-);
-}
+;
+
               className='border-white text-white hover:bg-white hover:text-orange-600'>              href="/pricing";
               variant="outline";
               size="lg";
@@ -1718,8 +1715,7 @@ export default function URLShortenerPage() {;
       </section>;
     </>;
   );
-}
+
   );
-}
+
     </>);
-}

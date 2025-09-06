@@ -10,7 +10,6 @@ export default function Revolutionary2026ServicesPage() {
       <Head>
         <title>Revolutionary 2026 Services - Zion Tech Group</title>
 
-
 export default function Revolutionary2026ServicesPage() {;
   return (
     <>;
@@ -127,7 +126,7 @@ function Revolutionary2026ServicesPage() {
         {/* Structured Data */}
         <script;
           type='application / ld + json';
-          dangerouslySetInnerHTML={{
+          dangerouslySetInnerHTML={
             __html: JSON.stringify({
               '@context': 'https://schema.org'
               '@type': 'Organization'
@@ -151,7 +150,7 @@ function Revolutionary2026ServicesPage() {
                 email: 'kleber@ziontechgroup.com'
               }
               sameAs: ['https://github.com/Zion-Holdings']
-            }),          }}
+            }),          }
         />
       </Head>
       <main className='min-h-screen bg-gray-900'>
@@ -222,7 +221,7 @@ function Revolutionary2026ServicesPage() {
 
                   color: 'from-indigo-500 to-purple-500'
                 }
-              ].map((feature, index) => (
+              ].map(feature, index) => (
                 <div key={index} className='group'>
                   <div className='bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 hover:border-purple-500/50 transition-all duration-500 hover:transform hover:scale-105'>
                     <div
@@ -260,7 +259,7 @@ function Revolutionary2026ServicesPage() {
                     className='border border-purple-500/50 text-purple-400 hover:bg-purple-500/10 font-semibold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2'
                   >
                     <Mail className='w-5 h-5' />                    Email Us
-              ))}
+              )}
             </div>
 
             {/* Call to Action */}
@@ -306,6 +305,5 @@ function Revolutionary2026ServicesPage() {
     </>;
   );
   )
-}
+
     </>);
-;

@@ -7,6 +7,5 @@ const InteractivePortfolio = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default InteractivePortfolio;

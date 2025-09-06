@@ -3,7 +3,7 @@ interface LabelProps {
   children: React.ReactNode;
   class_name?: string;
   html_for?: string;
-}
+
 const Label: React.FC<LabelProps> = ({ children, className = "", htmlFor }) => {
   return (
     <label
@@ -12,7 +12,7 @@ const Label: React.FC<LabelProps> = ({ children, className = "", htmlFor }) => {
       {children}
     </label>;
   );
-}
+
 export { Label }
 const Label: React.FC < LabelProps> = ({ children, class_name = "", html_for }) => {
   return (
@@ -22,7 +22,5 @@ const Label: React.FC < LabelProps> = ({ children, class_name = "", html_for }) 
     >;
       {children}
     </label>);
-}
-;
+
 export { Label }
-;

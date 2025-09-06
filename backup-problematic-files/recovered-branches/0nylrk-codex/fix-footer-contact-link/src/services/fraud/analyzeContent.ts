@@ -1,21 +1,19 @@
 
-// Content analysis functionality;
+/ Content analysis functionality;
 import { suspiciousPhrases } from './constants',;
 import { AnalysisResult } from './types',;
-;
-/**;
+
+**;
  * Analyzes text content for suspicious patterns;
  */;
 export const analyzeContent = (content:string):AnalysisResult => {;
   const contentLower = content.toLowerCase(),;
   const reasons:string[] = [],;
-  ;
   // Check for suspicious phrases;
   for (const phrase of suspiciousPhrases) {;
-    if (contentLower.includes(phrase.toLowerCase())) {;
+    if (contentLower.includes(phrase.toLowerCase()) {;
       reasons.push(`Contains suspicious phrase:"${phrase}"`),;
     }
-  }
   ;
   // Check for links (simplified check);
   const hasExternalLinks = /(https?:\/\/|www\.)[^\s]+/g.test(contentLower),;
@@ -23,7 +21,7 @@ export const analyzeContent = (content:string):AnalysisResult => {;
     contentLower.includes('payment') || ;
     contentLower.includes('money') || ;
     contentLower.includes('deal');
-  )) {;
+  ) {;
     reasons.push('Contains external payment links'),;
   }
   ;
@@ -34,7 +32,7 @@ export const analyzeContent = (content:string):AnalysisResult => {;
   }
   ;
   // Check for poor grammar with repetitive punctuation;
-  if (/[!?]{3}/.test(content)) {;
+  if (/[!?]{3}/.test(content) {;
     reasons.push('Suspicious punctuation pattern'),;
   }
   ;
@@ -42,8 +40,7 @@ export const analyzeContent = (content:string):AnalysisResult => {;
     isSuspicious:reasons.length > 0,;
     reasons;
   },;
-},; // Content analysis functionality // Check for suspicious phrases for (const phrase of suspiciousPhrases) {
-  if (contentLower.includes (phrase.toLowerCase () ) ) {
-  
-}
-}// Check for links (simplified check) if (hasExternalLinks && (contentLower.includes ('payment') || contentLower.includes ('money') || contentLower.includes ('deal') 
+,; // Content analysis functionality // Check for suspicious phrases for (const phrase of suspiciousPhrases) {
+  if (contentLower.includes (phrase.toLowerCase () ) {
+
+// Check for links (simplified check) if (hasExternalLinks && (contentLower.includes ('payment') || contentLower.includes ('money') || contentLower.includes ('deal') 

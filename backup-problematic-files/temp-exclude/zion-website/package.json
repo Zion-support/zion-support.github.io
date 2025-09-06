@@ -1,4 +1,4 @@
-{
+
   "name": "zion-website",
   "version": "1.0.0",
   "private": true,
@@ -36,4 +36,3 @@
     "tailwindcss": "^3.4.7",
     "typescript": "5.4.5"
   }
-}

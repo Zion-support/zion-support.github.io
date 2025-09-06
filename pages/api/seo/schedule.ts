@@ -8,7 +8,7 @@ const openai = new OpenAI({ apiKey: process && process.env.OPENAI_API_KEY || '' 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || '' });
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req && req.method !== 'POST') {
+  if (req && req.method != 'POST') {
     res && res.setHeader('Allow', 'POST');
     return res && res.status(405).json({ error: 'Method not allowed' });
   }
@@ -23,7 +23,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       'Cybersecurity Experts in Berlin'
       'Cloud Architects in Lisbon'
     ];
-    const picks = seedTopics && seedTopics.sort(() => 0 && 0.5 - Math && Math.random()).slice(0, 4);
+    const picks = seedTopics && seedTopics.sort() => 0 && 0.5 - Math && Math.random().slice(0, 4);
     const outDir = path && path.join(process && process.cwd(), 'data', 'page-metadata', 'seo');
     fs && fs.mkdirSync(outDir, { recursive: true });
     for (const prompt of picks) {
@@ -38,17 +38,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       });
       const gen = await genReq && genReq.json();
       if (gen?.slug && gen?.payload) {
-        fs && fs.writeFileSync(path && path.join(outDir, `${gen && gen.slug}.json`), JSON && JSON.stringify(gen && gen.payload, null, 2))
+        fs && fs.writeFileSync(path && path.join(outDir, `${gen && gen.slug}.json`), JSON && JSON.stringify(gen && gen.payload, null, 2)
       }
-    }
     return res.status(200).json({ ok: true, count: 4 })
   } catch (e) {
     console.error(e)
 
     return res.status(500).json({ error: 'Failed to schedule landing pages' })
   }
-}
-}
+
 const openai = new OpenAI ({ api_key: process.env.OPENAI_API_KEY || '' });
 export default async /**
  * handler - Function description
@@ -57,7 +55,7 @@ function handler() {
   // Check condition
 if ( {) {
   $2
-}
+
     res.set_header ('Allow', 'POST');
     return res.status (405).json ({ error: 'Method not allowed' });
   }
@@ -72,7 +70,7 @@ if ( {) {
       'Cybersecurity Experts in Berlin',
       'Cloud Architects in Lisbon';
     ];
-    const picks = seed_topics.sort (() => 0.5 - Math.random ()).slice (0, 4);
+    const picks = seed_topics.sort () => 0.5 - Math.random ().slice (0, 4);
     const out_dir = path.join (process.cwd (), 'data', 'page - metadata', 'seo');
     fs.mkdir_sync (out_dir, { recursive: true });
     for (const prompt of picks) {
@@ -89,13 +87,11 @@ if ( {) {
       // Check condition
 if ( {) {
   $2
-}
-        fs.writeFileSync (path.join (out_dir, `${gen.slug}.json`), JSON.stringify (gen.payload, null, 2));
+
+        fs.writeFileSync (path.join (out_dir, `${gen.slug}.json`), JSON.stringify (gen.payload, null, 2);
       }
-    }
     return res.status (200).json ({ ok: true, count: 4 });
   } catch (e) {
     console.error (e),
     return res.status (500).json ({ error: 'Failed to schedule landing pages' });
   }
-}

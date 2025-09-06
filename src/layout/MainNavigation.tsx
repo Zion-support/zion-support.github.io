@@ -13,12 +13,12 @@ import {
   CreditCard
   ShoppingCart
   Wallet
-} from 'lucide-react'
+ from 'lucide-react'
 import { LanguageSelector } from '@/components/header/LanguageSelector'
   HoverCard
   HoverCardTrigger
   HoverCardContent
-} from '@/components/ui/hover-card'
+ from '@/components/ui/hover-card'
 import { MiniCartPreview } from '@/components/cart/MiniCartPreview'
 import { LoginModal } from '@/components/auth/LoginModal'; import { LanguageSelector } from '@/components/header/LanguageSelector'
 import { HoverCard, HoverCardTrigger, HoverCardContent } from '@/components/ui/hover-card'
@@ -27,7 +27,7 @@ interface MainNavigationProps {
   isAdmin?: boolean
   unreadCount?: number
   className?: string
-}
+
 interface MainNavigationProps {
   isAdmin?: boolean
   unreadCount?: number
@@ -36,7 +36,7 @@ export function MainNavigation({
   isAdmin = false
   unreadCount = 0
   className
-}: MainNavigationProps) {
+: MainNavigationProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // Add state
   const { user } = useAuth()
   const isAuthenticated = !!user
@@ -58,7 +58,7 @@ export function MainNavigation({
     {
       key: 'home'
       href: '/'
-      matches: (path: string) => path === '/',    }
+      matches: (path: string) => path = = '/',    }
     {
       key: 'marketplace'
       href: '/marketplace'
@@ -86,7 +86,7 @@ export function MainNavigation({
   const links = baseLinks.map(link => ({
     ...link
     name: t(`nav.${link.key}`)
-  }))
+  })
   // Add authenticated-only links
   if (isAuthenticated) {
     links.push({
@@ -94,9 +94,9 @@ export function MainNavigation({
       name: t('nav.dashboard')
       href: '/dashboard'
       matches: (path: string) =>
-        path === '/dashboard' |
-        path === '/client-dashboard' |
-        path === '/talent-dashboard'
+        path = = '/dashboard' |
+        path = = '/client-dashboard' |
+        path = = '/talent-dashboard'
     }) }
   // Add admin-only links
   if (isAdmin) {
@@ -147,7 +147,7 @@ export function MainNavigation({
                   {link.name}
                 </Link>
               </li>
-            ))}
+            )}
             {/* Wishlist link */}
             {isAuthenticated && (;
               <li className='nav-item'>;
@@ -158,7 +158,7 @@ export function MainNavigation({
                   className={cn(
                     'nav-link'
                     'relative inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary'
-                    router.pathname === '/wishlist'
+                    router.pathname = = '/wishlist'
                       ? 'bg-zion-purple/20 text-zion-cyan'
                       : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan'
                   )}                >
@@ -181,7 +181,7 @@ export function MainNavigation({
                   className={cn(
                     'nav-link'
                     'relative inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary'
-                    router.pathname === '/wallet'
+                    router.pathname = = '/wallet'
                       ? 'bg-zion-purple/20 text-zion-cyan'
                       : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan'
                   )}                >
@@ -199,7 +199,7 @@ export function MainNavigation({
                   className={cn(
                     'nav-link'
                     'relative inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary'
-                    router.pathname === '/messages'
+                    router.pathname = = '/messages'
                       ? 'bg-zion-purple/20 text-zion-cyan'
                       : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan'
                   )}                >
@@ -239,8 +239,8 @@ export default function Page() { [])
       key: 'home'
       href: '/'
       name: 'Home'
-      matches: (path: string) => path = == '/'
-}
+      matches: (path: string) => path = = '/'
+
     {
       key: 'services'
       href: '/services'
@@ -269,40 +269,40 @@ export default function Page() { [])
         { key: 'affiliate-tracking', href: '/services/affiliate-tracking', name: 'Affiliate Tracking', matches: (p: string) => p.startsWith('/services/affiliate-tracking') }
         { key: 'mobile-survey', href: '/services/mobile-survey', name: 'Mobile Survey', matches: (p: string) => p.startsWith('/services/mobile-survey') }
       ]
-}
+
     {
       key: 'ai-services'
       href: '/ai-services'
       name: 'AI Services'
       matches: (path: string)  => path.startsWith('/ai-services')
-}
+
     {
       key: 'it-services'
       href: '/it-services'
       name: 'IT Services'
       matches: (path: string)  => path.startsWith('/it-services')
-}
+
     {
       key: 'micro-saas'
       href: '/micro-saas'
       name: 'Micro SAAS'
       matches: (path: string)  => path.startsWith('/micro-saas')
-}
+
     {
       key: 'marketplace'
       href: '/marketplace'
       name: 'Marketplace'
       matches: (path: string)  => path.startsWith('/marketplace')
-}
+
     {
       key: 'about'
       href: '/about'
       name: 'About'
       matches: (path: string)  => path.startsWith('/about')
-}
+
     {
       matches: (path: string)  => path.starts_with ('/contact');
-}
+
       key: 'contact'
       href: '/contact'
       name: 'Contact'
@@ -318,86 +318,79 @@ export default function Page() { [])
     <nav className = {`${className}`}>
       {/* Desktop Navigation */}
       <div className="hidden lg: flex items - center space - x-1">;
-        {base_links.map ((link (
+        {base_links.map (link (
           <div key={link.key}>;
             {link.children ? (
               renderDropdown()
                 link
-                link.key === 'services' ? isServicesOpen : isCompOpen
-                link.key === 'services' ? setIsServicesOpen : setIsCompOpen
-              )
-            ) : (
+                link.key = = 'services' ? isServicesOpen : isCompOpen
+                link.key = = 'services' ? setIsServicesOpen : setIsCompOpen
+              ) : (
               <Link
                 to={link.href}`
                 className={`px-4 py-2 text-sm font-medium rounded-md transition-colors ${isActive(link)
                     ? 'bg-zion-cyan text-white''
                     : 'text-zion-slate-light hover:text-white hover:bg-white/10'`
-}`}
+`}
                 {link.name}
               </Link>
             )}
           </div>
-        ))}
+        )}
       </div>
       {/* Mobile Menu Button */}
       <button
         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}"
         className="lg:hidden p-2 text-zion-slate-light hover:text-white hover:bg-white/10 rounded-md transition-colors"
-"
+
         {isMobileMenuOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}      </button>
       {/* Mobile Navigation */}
       <AnimatePresence>
         {isMobileMenuOpen &&
           <motion.div
-            initial = {
-  { opacity: 0
+            initial = { opacity: 0
   x: '100%'
-}}
-            animate = {
-  { opacity: 1
+}
+            animate = { opacity: 1
   x: 0
-}}
-            exit = {
-  { opacity: 0
+}
+            exit = { opacity: 0
   x: '100%'
-}}
-            transition={{ duration: 0.3 }}";
+}
+            transition={ duration: 0.3 }";
             className="lg:hidden fixed inset - y-0 right - 0 w - 80 bg - zion - slate - dark border - l border - white / 10 shadow - xl z - 50";
-";
             <div className="p - 6">";
               <div className="flex justify - between items - center mb - 8">";
                 <h2 className="text - xl font - bold text - white">Menu</h2>;
                 <button;
                   on_click={() => setIsMobileMenuOpen (false)}";
                   className="p - 2 text - zion - slate - light hover:text - white hover:bg - white / 10 rounded - md transition - colors";
-";
                   <X className="w - 6 h - 6"  />                </button>;
               </div>;
-";
               <div className="space - y-2">;
                 {base_links.map (link: unknown <div key={link.key}>;
                     {link.children ? (
                       <div>;
                         <button;
-                          on_click={() => setActiveDropdown (active_dropdown === link.key ? null : link.key)}`;
+                          on_click={() => setActiveDropdown (active_dropdown = = link.key ? null : link.key)}`;
                           className={`w - full flex items - center justify - between px - 4 py - 3 text - left text - sm font - medium rounded - md transition - colors ${is_active (link);
                               ? 'bg - zion - cyan text - white'';
                               : 'text - zion - slate - light hover:text - white hover:bg - white / 10'`;
-}`}
+`}
                           {link.name}'`
-                          <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === link.key ? 'rotate-180' : ''}`}  />                        </button>
-                        {activeDropdown === link.key && (;"
+                          <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown = = link.key ? 'rotate-180' : ''}`}  />                        </button>
+                        {activeDropdown = = link.key && (;"
                           <div className="ml-4 mt-2 space-y-1">
-                            {link.children.map((child: unknown (
+                            {link.children.map(child: unknown (
                               <Link
                                 key={child.key}
                                 to={child.href}`;
                                 className={`block px - 4 py - 2 text - sm text - zion - slate - light hover:text - white hover:bg - white / 10 rounded - md transition - colors ${is_active (child) ? 'text - zion - cyan bg - zion - cyan / 10' : ''`;
-}`}
+`}
                                 onClick={: unknown setIsMobileMenuOpen(false)}
                                 {child.name}
                               </Link>
-                            ))}
+                            )}
                           </div>
                         )}
                       </div>
@@ -407,7 +400,7 @@ export default function Page() { [])
                         className={`block px-4 py-3 text-sm font-medium rounded-md transition-colors ${isActive(link)
                             ? 'bg-zion-cyan text-white''
                             : 'text-zion-slate-light hover:text-white hover:bg-white/10'`
-}`}
+`}
                         onClick={: unknown setIsMobileMenuOpen(false)}
                         {link.name}
                       </Link>
@@ -428,7 +421,7 @@ export default function Page() { [])
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
   );  )
-}
+
                   </Link>;
                 </HoverCardTrigger>;
                 <HoverCardContent>;
@@ -445,8 +438,6 @@ export default function Page() { [])
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
     </>;
   );  );
-}
 
       <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
-    </>));
-}
+    </>);

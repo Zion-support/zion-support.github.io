@@ -1,5 +1,5 @@
 import React from 'react',;
-;
+
 export default function AdminAutomationStatusPage() {;
   return (;
     <div className="container mx-auto px-4 py-10">;
@@ -7,4 +7,3 @@ export default function AdminAutomationStatusPage() {;
       <p className="mt-2 text-gray-600 dark:text-gray-300">Dashboard coming soon.</p>;
     </div>;
   );
-}

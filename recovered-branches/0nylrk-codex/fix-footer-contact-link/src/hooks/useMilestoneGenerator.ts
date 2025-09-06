@@ -17,7 +17,7 @@ export interface MilestoneInput {
   start_date: string;
   end_date: string | null,
   project_type: string;
-}
+
 export interface GeneratedMilestone {
   title: string;
   description: string;
@@ -26,7 +26,7 @@ export interface GeneratedMilestone {
   estimatedHours: number
 
   isAiGenerated: boolean
-}
+
 export function useMilestoneGenerator() {
   const [isGenerating, setIsGenerating] = useState(false);
 
@@ -39,10 +39,10 @@ export function useMilestoneGenerator() {
       });
       if (error) throw error;
       // Mark each milestone as AI generated
-      const milestonesWithFlag = data.milestones.map((milestone: any) => ({
+      const milestonesWithFlag = data.milestones.map(milestone: any) => ({
         ...milestone
         ...milestone,
-        isAiGenerated: true}));
+        isAiGenerated: true});
       setGeneratedMilestones(milestonesWithFlag);
       return milestonesWithFlag
     } catch (error) {
@@ -52,7 +52,6 @@ export function useMilestoneGenerator() {
     } finally {
       setIsGenerating (false);
     }
-  }
   const clearGeneratedMilestones = () => {
     setGeneratedMilestones([])
   }
@@ -61,14 +60,12 @@ export function useMilestoneGenerator() {
     generatedMilestones;
     isGenerating;
 
-;
   const clearGeneratedMilestones = () =>: any {
     setGeneratedMilestones ([]);
   }
-;
+
   return {
     generate_milestones;
     generated_milestones;
     is_generating;
     clearGeneratedMilestones}
-}

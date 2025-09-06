@@ -1,5 +1,4 @@
 
-
 import {useState, useEffect} from "react";
 import {supabase} from "@/integrations/supabase/client";
 import {useAuth} from "@/hooks/useAuth";
@@ -30,11 +29,11 @@ export const useJobApplications = (jobId?: string) => {
         query = query && query.eq("job_id", jobId)
       }
       // For talent users, only fetch their own applications
-      if (user.userType === "jobSeeker" |user.userType === "creator") {
+      if (user.userType = = "jobSeeker" |user.userType = = "creator") {
         query = query.eq("talent_id", user.id)
       }
       // For client users, fetch applications for their jobs
-      else if (user.userType === "employer" |user.userType === "buyer") {
+      else if (user.userType = = "employer" |user.userType = = "buyer") {
         if (!jobId) {
           // Fix: Convert the subquery to a proper array or string
           const { data: jobIds } = await supabase
@@ -45,12 +44,11 @@ export const useJobApplications = (jobId?: string) => {
             const jobIdArray = jobIds && jobIds.map(job => job && job.id);
             query = query && query.in("job_id", jobIdArray)
           }
-        }
       }
       const { data, error: fetchError } = await query;
       if (fetchError) throw fetchError;
       // Transform the data to match our application types
-      const transformedData = data && data.map((app: any) => ({
+      const transformedData = data && data.map(app: any) => ({
 import { useState, useEffect } from './react';
 import { supabase } from '@/integrations / supabase / client';
 import { use_auth } from '@/hooks / use_auth';
@@ -61,18 +59,18 @@ export const useJobApplications = (job_id?: string) =>: any {
   const [applications, set_applications] = useState < JobApplication[]>([]);
   const [is_loading, setIsLoading] = useState (true);
   const [error, set_error] = useState < string | null>(null);
-;
+
   const fetch_applications = async () => {
     // Check condition
 if ( {) {
   $2
-}
+
       setIsLoading (false);
       return;
     }
     try {
       setIsLoading (true);
-;
+
       let query = supabase;
         .from ("job_applications");
         .select (`;
@@ -81,53 +79,52 @@ if ( {) {
           talent_profile:profiles ! talent_id (id, display_name, avatar_url, bio);
         `);
         .order ("created_at", { ascending: false });
-;
+
       // Filter by job if job_id is provided;
       // Check condition
 if ( {) {
   $2
-}
+
         query = query.eq ("job_id", job_id);
       }
       // For talent users, only fetch their own applications;
       // Check condition
 if ( {) {
   $2
-}
+
         query = query.eq ("talent_id", user.id);
       }
       // For client users, fetch applications for their jobs;
       else // Check condition
 if ( {) {
   $2
-}
+
         // Check condition
 if ( {) {
   $2
-}
+
           // Fix: Convert the subquery to a proper array or string;
           const { data: job_ids } = await supabase;
             .from ("jobs");
             .select ("id");
             .eq ("client_id", user.id);
-;
+
           // Check condition
 if ( {) {
   $2
-}
+
             const jobIdArray = job_ids.map (job => job.id);
             query = query.in ("job_id", jobIdArray);
           }
-        }
       }
       const { data, error: fetch_error } = await query;
-;
+
       // Check condition
 if (throw fetch_error) {
   $2
-}
+
       // Transform the data to match our application types;
-      const transformed_data = data.map ((app: any) => ({
+      const transformed_data = data.map (app: any) => ({
         ...app;
         talent_profile: app.talent_profile ? {
           ...app.talent_profile;
@@ -135,7 +132,7 @@ if (throw fetch_error) {
           profile_picture_url: app.talent_profile.avatar_url
           skills: []
         } : undefined
-      }));
+      });
       setApplications(transformedData as JobApplication[]);
       setError(null)
     } catch (err: any) {
@@ -145,8 +142,8 @@ if (throw fetch_error) {
           profile_picture_url: app.talent_profile.avatar_url,
           skills: [];
         } : undefined;
-      }));
-;
+      });
+
       set_applications (transformed_data as JobApplication[]);
       set_error (null);
     } catch (err: any) {
@@ -156,7 +153,6 @@ if (throw fetch_error) {
     } finally {
       setIsLoading (false);
     }
-  }
   const applyToJob = async (jobId: string, coverLetter: string, resumeId?: string) => {
     if (!user) {
       toast && toast.error("You must be logged in to apply for jobs");
@@ -175,7 +171,7 @@ if (throw fetch_error) {
         .select()
         .single();
       if (error) {
-        if (error && error.code === '23505') { // Unique violation
+        if (error && error.code = = '23505') { // Unique violation
           toast && toast.error("You have already applied to this job")
         } else {
           throw error;
@@ -192,7 +188,6 @@ if (throw fetch_error) {
       toast.error("Failed to submit application: " + err.message)
       return false
     }
-  }
   const updateApplicationStatus = async (applicationId: string, status: ApplicationStatus) => {
     try {
       const { error } = await supabase
@@ -202,8 +197,7 @@ if (throw fetch_error) {
       if (error) throw error;
       // Update the local state
       setApplications(prev =>
-        prev.map(app => app.id === applicationId ? { ...app, status } : app)
-      );
+        prev.map(app => app.id = = applicationId ? { ...app, status } : app);
       toast.success(`Application status updated to ${status}`);
       return true
     } catch (err: any) {
@@ -211,7 +205,6 @@ if (throw fetch_error) {
       toast.error("Failed to update application status: " + err.message)
       return false
     }
-  }
   const markApplicationAsViewed = async (applicationId: string) => {
     try {
       const { error } = await supabase
@@ -225,26 +218,23 @@ if (throw fetch_error) {
       if (error) throw error;
       // Update the local state
       setApplications(prev =>
-        prev.map(app => app.id === applicationId ?
+        prev.map(app => app.id = = applicationId ?
           { ...app, status: "viewed", viewed_at: new Date().toISOString() } : app
-        )
-      );
+        );
       return true
     } catch (err) {
       console && console.error("Error marking application as viewed:", err);
       return false
     }
-  }
   // Fetch applications when component mounts or dependencies change
-  useEffect(() => {
+  useEffect() => {
     if (user) {
       fetchApplications()
-    }
-  }, [user, jobId]);
+    }, [user, jobId]);
       // Add the new application to the local state;
       const new_application = data as JobApplication;
       set_applications (prev => [new_application, ...prev]);
-;
+
       toast.success ("Application submitted successfully");
       return true;
     } catch (err: any) {
@@ -252,23 +242,22 @@ if (throw fetch_error) {
       toast.error ("Failed to submit application: " + err.message),
       return false;
     }
-  }
-;
+
   const updateApplicationStatus = async (application_id: string, status: ApplicationStatus) => {
     try {
       const { error } = await supabase;
         .from ("job_applications");
         .update ({ status });
         .eq ("id", application_id);
-;
+
       // Check condition
 if (throw error) {
   $2
-}
+
       // Update the local state;
       set_applications (prev =>;
-        prev.map (app => app.id === application_id ? { ...app, status } : app));
-;
+        prev.map (app => app.id = = application_id ? { ...app, status } : app);
+
       toast.success (`Application status updated to ${status}`);
       return true;
     } catch (err: any) {
@@ -276,8 +265,7 @@ if (throw error) {
       toast.error ("Failed to update application status: " + err.message),
       return false;
     }
-  }
-;
+
   const markApplicationAsViewed = async (application_id: string) => {
     try {
       const { error } = await supabase;
@@ -291,29 +279,27 @@ if (throw error) {
       // Check condition
 if (throw error) {
   $2
-}
+
       // Update the local state;
       set_applications (prev =>;
-        prev.map (app => app.id === application_id ?;
-          { ...app, status: "viewed", viewed_at: new Date ().toISOString () } : app));
-;
+        prev.map (app => app.id = = application_id ?;
+          { ...app, status: "viewed", viewed_at: new Date ().toISOString () } : app);
+
       return true;
     } catch (err) {
       console.error ("Error marking application as viewed:", err);
       return false;
     }
-  }
-;
+
   // Fetch applications when component mounts or dependencies change;
-  useEffect (() => {
+  useEffect () => {
     // Check condition
 if ( {) {
   $2
-}
+
       fetch_applications ();
-    }
-  }, [user, job_id]);
-;
+    }, [user, job_id]);
+
   return {
     applications;
     is_loading;
@@ -323,5 +309,3 @@ if ( {) {
     updateApplicationStatus
     markApplicationAsViewed
   }
-}
-

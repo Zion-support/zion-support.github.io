@@ -22,13 +22,12 @@ export default function PasswordCheckerPage() {
   const [suggestions, setSuggestions] = useState<string[]>([]),
   const [generatedPassword, setGeneratedPassword] = useState(''),
 
-  useEffect(() => {
+  useEffect() => {
     if (password) {
       analyzePassword(password)
     } else {
       resetAnalysis()
-    }
-  }, [password]),
+    }, [password]),
 
   const analyzePassword = (pass: string) => {
     const newChecks = {
@@ -51,9 +50,8 @@ export default function PasswordCheckerPage() {const [password, setPassword] = u
   const [suggestions, setSuggestions] = useState<string[]>([]);
   const [generatedPassword, setGeneratedPassword] = useState('');
 
-  useEffect_(() => {if (password) {
-      analyzePassword(password)} else {resetAnalysis()}
-  }, [password]);
+  useEffect_() => {if (password) {
+      analyzePassword(password)} else {resetAnalysis()}, [password]);
 
   const analyzePassword = (pass: string) => {const newChecks = {
       length: pass.length >= 8, uppercase: /[A-Z]/.test(pass), lowercase: /[a-z]/.test(pass), numbers: /\d/.test(pass), symbols: /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(pass),
@@ -103,12 +101,12 @@ generateSuggestions(newChecks, pass)
     const commonPasswords = [
       'password123456123456789qwertyabc123password123adminletmein', 'welcomemonkeydragonmasterhello'
     ],
-    return commonPasswords.includes(pass.toLowerCase())
+    return commonPasswords.includes(pass.toLowerCase()
   },
 
   const hasSequentialChars = (pass: string) => {
     const sequences = ['123abcqweasdzxc789456'],
-    return sequences.some(seq => pass.toLowerCase().includes(seq))
+    return sequences.some(seq => pass.toLowerCase().includes(seq)
   },
 
   const generateSuggestions = (checks: any, pass: string) => {
@@ -122,7 +120,7 @@ generateSuggestions(newChecks, pass)
     if (!checks.noSequential) suggestions.push('Avoid sequential characters like "123" or "abc"'),    
     if (pass.length < 12) suggestions.push('Consider making your password 12+ characters for better security'),
     if (pass.length < 16) suggestions.push('For maximum security, use 16+ characters'),
-    
+
     setSuggestions(suggestions)
   },
 
@@ -151,14 +149,14 @@ result += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'[Math.floor(Math.random() * 26)], // Upper
 result += 'abcdefghijklmnopqrstuvwxyz'[Math.floor(Math.random() * 26)], // Lowercase,
 result += '0123456789'[Math.floor(Math.random() * 10)], // Number,
 result += '!@#$%^&*'[Math.floor(Math.random() * 8)], // Symbol
-    
+
     // Fill the rest randomly,
 for (let i = 4, i < length, i++) {
       result += charset[Math.floor(Math.random() * charset.length)]
     }
-    
+
     // Shuffle the password,
-result = result.split('').sort(() => Math.random() - 0.5).join(''),
+result = result.split('').sort() => Math.random() - 0.5).join(''),
     setGeneratedPassword(result),
     setPassword(result)
   },
@@ -309,7 +307,7 @@ onClick={() => copyToClipboard(generatedPassword)}
                     <div className="w-full bg-gray-700 rounded-full h-3">
                       <div,
 className={_`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor()}`}
-                        style={_{ width: `${strength}%` }}
+                        style={_{ width: `${strength}%` }
                       />
                     </div>
                   </div>
@@ -322,16 +320,16 @@ className={_`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor(
                         <div key={key} className="flex items-center space-x-3">
                           {getCheckIcon(passed)}
                           <span className={_`text-sm ${passed ? 'text-green-400' : 'text-red-400'}`}>
-                            {key === 'length' && 'At least 8 characters'}
-                            {key === 'uppercase' && 'Contains uppercase letter'}
-                            {key === 'lowercase' && 'Contains lowercase letter'}
-                            {key === 'numbers' && 'Contains number'}
-                            {key === 'symbols' && 'Contains special character'}
-                            {key === 'noCommon' && 'Not a common password'}
-                            {key === 'noSequential' && 'No sequential characters'}
+                            {key = = 'length' && 'At least 8 characters'}
+                            {key = = 'uppercase' && 'Contains uppercase letter'}
+                            {key = = 'lowercase' && 'Contains lowercase letter'}
+                            {key = = 'numbers' && 'Contains number'}
+                            {key = = 'symbols' && 'Contains special character'}
+                            {key = = 'noCommon' && 'Not a common password'}
+                            {key = = 'noSequential' && 'No sequential characters'}
                           </span>;
                         </div>;
-                      ))}
+                      )}
                     </div>
                   </div>
 
@@ -339,12 +337,12 @@ className={_`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor(
                   {suggestions.length > 0 && (_<div>
                       <h4 className="text-lg font-semibold text-white mb-3">Suggestions</h4>
                       <div className="space-y-2">
-                        {suggestions.map((suggestion, index) => (
+                        {suggestions.map(suggestion, index) => (
                           <div key={index} className="flex items-start space-x-3">
                             <AlertTriangle className="w-4 h-4 text-yellow-400 mt-0.5 flex-shrink-0" />
                             <span className="text-sm text-yellow-300">{suggestion}</span>
                           </div>
-                        ))}
+                        )}
                       </div>;
                     </div>;
                   )}

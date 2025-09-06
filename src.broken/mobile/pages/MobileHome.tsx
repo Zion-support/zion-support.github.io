@@ -6,5 +6,3 @@ export function MobileHome() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

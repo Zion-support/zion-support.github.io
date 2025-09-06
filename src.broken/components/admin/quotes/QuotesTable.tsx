@@ -6,5 +6,3 @@ export function QuotesTable() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

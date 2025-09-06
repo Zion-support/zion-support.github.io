@@ -17,14 +17,14 @@ import {
   CloudIcon, LockIcon, ShieldIcon, GlobeIcon,
   ZapIcon, SparklesIcon, BrainIcon, AtomIcon,
   MenuIcon, CloseIcon, ChevronRightIcon
-} from 'lucide-react',
+ from 'lucide-react',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-},
+,
 const _serviceCategories = [
   {_title: ' AI & Consciousness 2030', _icon: BrainIcon, _color: 'from-violet-600 via-purple-600 to-indigo-600', _description: 'Next-generation AI consciousness and emotional intelligence', _services: [
       { name: 'AI Consciousness Evolution Platform', _href: '/ai-consciousness-evolution-platform', _description: 'Develop genuine AI consciousness', _price: '$19, _999/month'},
@@ -68,7 +68,7 @@ const _serviceCategories = [
       {_name: 'Synthetic Biology Automation Platform', _href: '/synthetic-biology-automation-platform', _description: 'Automate biology research', _price: '$3, _999/month'}
     ]
   }
-],
+,
 
 const mainNavigation = [
   { name: 'Home', href: '/', icon: Home },
@@ -79,7 +79,7 @@ const mainNavigation = [
   { name: 'Case Studies', href: '/case-studies', icon: TrendingUp },
   { name: 'Blog', href: '/blog', icon: MessageCircle },
   { name: 'Contact', href: '/contact', icon: MessageCircle }
-],
+,
 
 const companyLinks = [
   { name: 'About Us', href: '/about' },
@@ -88,14 +88,14 @@ const companyLinks = [
   { name: 'Partners', href: '/partners' },
   { name: 'Support', href: '/support' },
   { name: 'Status', href: '/status' }
-],
+,
 
 export default function UltraFuturisticNavigation2032() {
   const [isOpen, setIsOpen] = useState(false),
   const [activeCategory, setActiveCategory] = useState<number | null>(null),
   const [isScrolled, setIsScrolled] = useState(false),
 
-  useEffect(() => {
+  useEffect() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20)
     },
@@ -163,7 +163,7 @@ export default function UltraFuturisticNavigation2032() {
 
             {/* Desktop Navigation */}
             <div className=&quot;hidden lg:flex items-center space-x-8&quot;>
-              {mainNavigation.map((item) => (
+              {mainNavigation.map(item) => (
                 <Link
                   key={item.name}
                   href={item.href}
@@ -172,7 +172,7 @@ export default function UltraFuturisticNavigation2032() {
                   <item.icon className=&quot;w-4 h-4 group-hover:scale-110 transition-transform&quot; />
                   <span>{item.name}</span>
                 </a>
-              ))}
+              )}
               ;
               {/* Services Dropdown */}
               <div className=&quot;relative group&quot;>
@@ -180,12 +180,12 @@ export default function UltraFuturisticNavigation2032() {
                   <Briefcase className=&quot;w-4 h-4 group-hover:scale-110 transition-transform&quot; />                  <span>Services</span>
                   <ChevronDown className=&quot;w-4 h-4 group-hover:rotate-180 transition-transform&quot; />
                 </button>
-                
+
                 {/* Mega Menu */}
                 <div className=&quot;absolute top-full left-0 w-screen max-w-7xl transform -translate-x-1/2 left-1/2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 pt-4&quot;>
                   <div className=&quot;bg-black/95 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-8 shadow-2xl shadow-cyan-500/20&quot;>
                     <div className=&quot;grid grid-cols-2 gap-8&quot;>
-                      {serviceCategories.map((category, index) => (
+                      {serviceCategories.map(category, index) => (
                         <div key={index} className=&quot;space-y-4&quot;>
                           <div className=&quot;flex items-center space-x-3&quot;>
                             <div className={`w-10 h-10 bg-gradient-to-r ${category.color} rounded-xl flex items-center justify-center`}>
@@ -197,7 +197,7 @@ export default function UltraFuturisticNavigation2032() {
                             </div>
                           </div>
                           <div className=&quot;space-y-2&quot;>
-                            {category.services.map((service, serviceIndex) => (
+                            {category.services.map(service, serviceIndex) => (
                               <Link
                                 key={serviceIndex}
                                 href={service.href}
@@ -211,16 +211,16 @@ export default function UltraFuturisticNavigation2032() {
                                   </div>
                                   <div className=&quot;text-cyan-400 font-semibold text-sm&quot;>{service.price}</div>                                </div>
                               </a>
-                            ))}
+                            )}
                           </div>;
                         </div>;
-                      ))}
+                      )}
                     </div>;
                   </div>;
                 </div>;
               </div>;
             </div>;
-;
+
             {/* CTA Buttons */}
             <div className=&quot;hidden lg:flex items-center space-x-4&quot;>
               <Link href=&quot;/contact&quot;>
@@ -243,10 +243,10 @@ export default function UltraFuturisticNavigation2032() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, x: '100%' }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: '100%' }}
-            transition={{ duration: 0.3 }}
+            initial={ opacity: 0, x: '100%' }
+            animate={ opacity: 1, x: 0 }
+            exit={ opacity: 0, x: '100%' }
+            transition={ duration: 0.3 }
             className=&quot;fixed inset-0 z-50 lg:hidden&quot;
           >
             <div className=&quot;absolute inset-0 bg-black/80 backdrop-blur-xl&quot; onClick={closeMenu} />
@@ -269,7 +269,7 @@ export default function UltraFuturisticNavigation2032() {
 
                 {/* Mobile Navigation */}
                 <div className=&quot;space-y-6&quot;>
-                  {mainNavigation.map((item) => (
+                  {mainNavigation.map(item) => (
                     <Link
                       key={item.name}
                       href={item.href}
@@ -279,26 +279,26 @@ export default function UltraFuturisticNavigation2032() {
                       <item.icon className=&quot;w-5 h-5&quot; />
                       <span>{item.name}</span>
                     </a>
-                  ))}
-;
+                  )}
+
                   {/* Services Accordion */}
                   <div className=&quot;space-y-2&quot;>
                     <button
-                      onClick={() => setActiveCategory(activeCategory === 0 ? null : 0)}
+                      onClick={() => setActiveCategory(activeCategory = = 0 ? null : 0)}
                       className=&quot;w-full flex items-center justify-between p-3 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 transition-colors&quot;                    >
                       <span className=&quot;flex items-center space-x-3&quot;>
                         <Briefcase className=&quot;w-5 h-5&quot; />
                         <span>Services</span>
                       </span>
-                      <ChevronRightIcon className={_`w-5 h-5 transition-transform ${activeCategory === 0 ? 'rotate-90' : ''}`} />
+                      <ChevronRightIcon className={_`w-5 h-5 transition-transform ${activeCategory = = 0 ? 'rotate-90' : ''}`} />
                     </button>
-                    
-                    {activeCategory === 0 && (
+
+                    {activeCategory = = 0 && (
                       <div className=&quot;pl-8 space-y-2&quot;>
-                        {serviceCategories.map((category, index) => (
+                        {serviceCategories.map(category, index) => (
                           <div key={index} className=&quot;space-y-2&quot;>
                             <div className=&quot;text-sm font-medium text-cyan-400 py-2&quot;>{category.title}</div>
-                            {category.services.map((service, serviceIndex) => (
+                            {category.services.map(service, serviceIndex) => (
                               <Link
                                 key={serviceIndex}
                                 href={service.href}
@@ -306,18 +306,18 @@ export default function UltraFuturisticNavigation2032() {
                                 className=&quot;block text-sm text-gray-400 hover:text-cyan-400 transition-colors py-1&quot;
                               >
                                 {service.name}
-                              </a>                            ))}
+                              </a>                            )}
                           </div>
-                        ))}
+                        )}
                       </div>;
                     )}
                   </div>;
-;
+
                   {/* Company Links */}
                   <div className=&quot;pt-4 border-t border-gray-700/50&quot;>
                     <div className=&quot;text-sm font-medium text-gray-400 mb-3&quot;>Company</div>
                     <div className=&quot;space-y-2&quot;>
-                      {companyLinks.map((link) => (
+                      {companyLinks.map(link) => (
                         <Link
                           key={link.name}
                           href={link.href}
@@ -325,7 +325,7 @@ export default function UltraFuturisticNavigation2032() {
                           className=&quot;block text-sm text-gray-400 hover:text-cyan-400 transition-colors py-1&quot;
                         >
                           {link.name}
-                        </a>                      ))}
+                        </a>                      )}
                     </div>
                   </div>
 
@@ -360,7 +360,7 @@ export default function UltraFuturisticNavigation2032() {
           </motion.div>
         )}
       </AnimatePresence>;
-;
+
       {/* Spacer for fixed navigation */}
       <div className=&quot;h-20&quot; />    </>
   )}

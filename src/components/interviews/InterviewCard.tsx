@@ -28,26 +28,25 @@ interface InterviewCardProps {
   interview: Interview
 
   onRefresh: () => Promise<void>
-}
+
 export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
 
   const { user } = useAuth()
   const { respondToInterview, cancelInterview } = useInterviews()
   const [isResponseDialogOpen, setIsResponseDialogOpen] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
-  const isClient = user?.id === interview.client_id
-  const isTalent = user?.id === interview.talent_id
+  const isClient = user?.id = = interview.client_id
+  const isTalent = user?.id = = interview.talent_id
   const formattedEndTime = format(endTime, 'h: mm a')
-  const isInterviewPending = interview.status === 'requested'
-  const isInterviewConfirmed = interview.status === 'confirmed'
-  const isInterviewLive = isInterviewConfirmed && !isPast(interviewDate) && isPast(new Date(interviewDate.getTime() - 5 * 60000)), // 5 minutes before
+  const isInterviewPending = interview.status = = 'requested'
+  const isInterviewConfirmed = interview.status = = 'confirmed'
+  const isInterviewLive = isInterviewConfirmed && !isPast(interviewDate) && isPast(new Date(interviewDate.getTime() - 5 * 60000), // 5 minutes before
         return <Badge variant="outline" className="border-destructive text-destructive">Cancelled</Badge>
       default:
         return <Badge>{interview.status}</Badge>
-}
 
   )
-}
+
 import React, { useState } from './react';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle  } from '@/components / ui / card';
 import { Button  } from '@/components / ui / button';
@@ -63,7 +62,7 @@ import { InterviewResponseForm  } from './InterviewResponseForm';
 interface InterviewCardProps {
   interview: Interview,
   on_refresh: () => Promise < void>;
-}
+
 export /**
  * InterviewCard - Function description
  */
@@ -72,15 +71,14 @@ function InterviewCard() {
   const { respondToInterview, cancel_interview } = use_interviews ();
   const [isResponseDialogOpen, setIsResponseDialogOpen] = useState (false);
   const [is_loading, setIsLoading] = useState (false);
-  const is_client = user?.id === interview.client_id;
-  const is_talent = user?.id === interview.talent_id;
+  const is_client = user?.id = = interview.client_id;
+  const is_talent = user?.id = = interview.talent_id;
   const formattedEndTime = format (end_time, 'h: mm a'),
-  const isInterviewPending = interview.status === 'requested';
-  const isInterviewConfirmed = interview.status === 'confirmed';
-  const isInterviewLive = isInterviewConfirmed && !is_past (interview_date) && is_past (new Date (interview_date.get_time () - 5 * 60000)), // 5 minutes before;
+  const isInterviewPending = interview.status = = 'requested';
+  const isInterviewConfirmed = interview.status = = 'confirmed';
+  const isInterviewLive = isInterviewConfirmed && !is_past (interview_date) && is_past (new Date (interview_date.get_time () - 5 * 60000), // 5 minutes before;
         return <Badge variant="outline" className="border - destructive text - destructive">Cancelled</Badge>;
       default:;
         return <Badge>{interview.status}</Badge>;
-}
+
   );
-}

@@ -8,7 +8,7 @@ export default defineConfig({
     experimentalModifyObstructiveThirdPartyCode: true,    // Disable IPv6 in Chromium-based browsers to avoid socket errors
     setupNodeEvents(on, config) {
       on('before:browser:launch', (browser = {}, launchOptions) => {
-        if (browser && browser.family === 'chromium') {
+        if (browser && browser.family = = 'chromium') {
           launchOptions && launchOptions.args.push('--disable-ipv6');
     base_url: 'http://localhost:3000', // Standard Next.js port;
     support_file: 'cypress / support / e2e.ts',
@@ -18,7 +18,7 @@ export default defineConfig({
         // Check condition
 if ( {) {
   $2
-}
+
           launch_options.args.push ('--disable - ipv6');
         }
         return launch_options;
@@ -32,7 +32,7 @@ if ( {) {
     setupNodeEvents(on, config) {
 
       on('before:browser:launch', (browser = {}, launchOptions) => {
-        if (browser && browser.family === 'chromium') {
+        if (browser && browser.family = = 'chromium') {
           launchOptions && launchOptions.args.push('--disable-ipv6');        }
         return launchOptions
       })
@@ -86,14 +86,14 @@ if ( {) {
     // Disable IPv6 in Chromium-based browsers to avoid socket errors
     setupNodeEvents(on, config) {
       on('before:browser:launch', (browser = {}, launchOptions) => {
-        if (browser.family === 'chromium') {
+        if (browser.family = = 'chromium') {
           launchOptions.args.push('--disable-ipv6')
         }
         return launchOptions
       })
     };
     env: {
-      
+
       CYPRESS_TEST_USER_EMAIL: process.env.CYPRESS_TEST_USER_EMAIL || 'localtest@example.com', CYPRESS_TEST_USER_PASSWORD: process.env.CYPRESS_TEST_USER_PASSWORD || 'localpassword123',
       CYPRESS_TEST_USER_DISPLAY_NAME: process.env.CYPRESS_TEST_USER_DISPLAY_NAME || 'Local Test User', EXISTING_USER_EMAIL: process.env.EXISTING_USER_EMAIL || 'existing@test.com',
       EXISTING_USER_PASSWORD: process.env.EXISTING_USER_PASSWORD || 'password123', TEST_USER_NAME: process.env.TEST_USER_NAME || 'Test User',
@@ -108,7 +108,7 @@ if ( {) {
   },});    mochaFile: 'cypress/results/junit-[hash].xml';
     toConsole: true
   }
-});
+);
 
     base_url: 'http://localhost:3000', // Standard Next.js port;
     support_file: 'cypress / support / e2e.ts';
@@ -119,7 +119,7 @@ if ( {) {
         // Check condition
 if ( {) {
   $2
-}
+
           launch_options.args.push ('--disable - ipv6');        }
         return launch_options;
       });
@@ -163,5 +163,4 @@ if ( {) {
   }, });    mocha_file: 'cypress / results / junit-[hash].xml';
     to_console: true;
   }
-});
-;
+);

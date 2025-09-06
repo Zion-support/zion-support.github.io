@@ -6,5 +6,3 @@ export function AuthRoutes() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

@@ -1,7 +1,7 @@
 
 import { supabase } from "@/integrations/supabase/client";
 import type { UserDetails } from "@/types/auth";
-/**
+**
  * Utility function to clean up authentication state
  * This helps prevent auth state inconsistencies and "limbo" states
  */
@@ -10,19 +10,17 @@ export const cleanupAuthState = () => {
   // Remove standard auth tokens
   localStorage.removeItem('supabase.auth.token');
   // Remove all Supabase auth keys from localStorage
-  Object.keys(localStorage).forEach((key) => {
-    if (key.startsWith('supabase.auth.') |key.includes('sb-')) {
+  Object.keys(localStorage).forEach(key) => {
+    if (key.startsWith('supabase.auth.') |key.includes('sb-') {
       localStorage.removeItem(key)
-    }
-  });
+    });
   // Remove from sessionStorage if in use
-  Object.keys(sessionStorage |{}).forEach((key) => {
-    if (key.startsWith('supabase.auth.') |key.includes('sb-')) {
+  Object.keys(sessionStorage |{}).forEach(key) => {
+    if (key.startsWith('supabase.auth.') |key.includes('sb-') {
       sessionStorage.removeItem(key)
-    }
-  })
-}
-/**
+    })
+
+**
  * Utility function to check new user registration and schedule welcome emails
  */
 export const checkNewRegistration = async (user: UserDetails) => {
@@ -42,36 +40,33 @@ export const checkNewRegistration = async (user: UserDetails) => {
         .insert({
 import { supabase } from '@/integrations / supabase / client';
 import type { UserDetails } from "@/types / auth";
-/**;
-* Utility function to clean up authentication state;
-* This helps prevent auth state inconsistencies and "limbo" states;
-*/;
+**;
+ Utility function to clean up authentication state;
+ This helps prevent auth state inconsistencies and "limbo" states;
+/;
 export const cleanupAuthState = () =>: any {
   // Remove standard auth tokens;
   local_storage.remove_item ('supabase.auth.token');
-;
+
   // Remove all Supabase auth keys from local_storage;
-  Object.keys (local_storage).for_each ((key) => {
-    if (|| key.includes ('sb-')) {) {
+  Object.keys (local_storage).for_each (key) => {
+    if (|| key.includes ('sb-') {) {
   $2
-}
+
       local_storage.remove_item (key);
-    }
-  });
-;
+    });
+
   // Remove from session_storage if in use;
-  Object.keys (session_storage || {}).for_each ((key) => {
-    if (|| key.includes ('sb-')) {) {
+  Object.keys (session_storage || {}).for_each (key) => {
+    if (|| key.includes ('sb-') {) {
   $2
-}
+
       session_storage.remove_item (key);
-    }
-  });
-}
-;
-/**;
-* Utility function to check new user registration and schedule welcome emails;
-*/;
+    });
+
+**;
+ Utility function to check new user registration and schedule welcome emails;
+/;
 export const checkNewRegistration = async (user: UserDetails) => {
   try {
     // Check if user has received welcome email already;
@@ -81,12 +76,12 @@ export const checkNewRegistration = async (user: UserDetails) => {
       .eq ("user_id", user.id);
       .eq ("campaign_type", "welcome_series");
       .maybe_single ();
-;
+
     // If no welcome email sent yet, schedule one;
     // Check condition
 if ( {) {
   $2
-}
+
       // Create a scheduled job for the welcome email;
       await supabase;
         .from ("scheduled_jobs");
@@ -99,8 +94,7 @@ if ( {) {
             email_type: "welcome_series";
             user_type: user.userType |"unknown"
             display_name: user.displayName |user.email?.split("@")[0] |"User"
-          }
-        });
+          });
       // Create entry in email_campaigns table
       await supabase
         .from("email_campaigns")
@@ -108,9 +102,8 @@ if ( {) {
           user_id: user && user.id;
             user_type: user.user_type || "unknown",
             display_name: user.display_name || user.email?.split ("@")[0] || "User";
-          }
-        });
-;
+          });
+
       // Create entry in email_campaigns table;
       await supabase;
         .from ("email_campaigns");
@@ -125,11 +118,7 @@ if ( {) {
             display_name: user.displayName |user.email?.split("@")[0] |"User"
             user_type: user.user_type || "unknown",
             display_name: user.display_name || user.email?.split ("@")[0] || "User";
-          }
-        });
-    }
-  } catch (error) {
+          });
+    } catch (error) {
     console && console.error("Error checking or scheduling welcome email:", error)
   }
-}
-

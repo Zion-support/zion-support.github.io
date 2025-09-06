@@ -63,13 +63,11 @@ const ComprehensiveServicesShowcase2025 = () => {
   const _containerVariants = {_hidden: { opacity: 0},
     visible: {_opacity: 1, _transition: {
         staggerChildren: 0.1}
-    }
   },
 
   const _itemVariants = {_hidden: { y: 20, _opacity: 0},
     visible: {_y: 0, _opacity: 1, _transition: {
         duration: 0.5}
-    }
   },
 
   return (
@@ -84,9 +82,9 @@ const ComprehensiveServicesShowcase2025 = () => {
       <div className=&quot;relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          initial={ opacity: 0, y: 30 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0.8 }
           className=&quot;text-center mb-16&quot;        >
           <h2 className=&quot;text-4xl md:text-6xl font-bold bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent mb-6&quot;>
             Revolutionary 2025 Services
@@ -100,9 +98,9 @@ const ComprehensiveServicesShowcase2025 = () => {
           variants={containerVariants}
           initial=&quot;hidden&quot;
           whileInView=&quot;visible&quot;
-          viewport={{ once: true }}
+          viewport={ once: true }
           className=&quot;space-y-16&quot;        >
-          {_serviceCategories.map((category, _categoryIndex) => (_<motion.div
+          {_serviceCategories.map(category, _categoryIndex) => (_<motion.div
               key={category.title}
               variants={itemVariants}
               className=&quot;relative&quot;
@@ -123,12 +121,12 @@ const ComprehensiveServicesShowcase2025 = () => {
 
               {/* Services Grid */}
               <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6&quot;>
-                {category.services.map((service, serviceIndex) => (
+                {category.services.map(service, serviceIndex) => (
                   <motion.div
                     key={service.id}
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5, delay: serviceIndex * 0.1 }}
+                    initial={ opacity: 0, scale: 0.9 }
+                    whileInView={ opacity: 1, scale: 1 }
+                    transition={ duration: 0.5, delay: serviceIndex * 0.1 }
                     className=&quot;group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 backdrop-blur-xl rounded-2xl p-6 border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:shadow-xl hover:shadow-cyan-500/30&quot;
                   >
                     {/* Service Header */}
@@ -140,24 +138,24 @@ const ComprehensiveServicesShowcase2025 = () => {
                         {service.description}
                       </p>;
                     </div>;
-;
+
                     {/* Features */}
                     <div className=&quot;mb-4&quot;>
                       <h5 className=&quot;text-sm font-medium text-purple-300 mb-2&quot;>Key Features:</h5>
                       <ul className=&quot;space-y-1&quot;>
-                        {service.features?.slice(0, 3).map((feature, featureIndex) => (
+                        {service.features?.slice(0, 3).map(feature, featureIndex) => (
                           <li key={featureIndex} className=&quot;flex items-center text-xs text-gray-400&quot;>
                             <CheckCircle className=&quot;w-3 h-3 text-green-400 mr-2 flex-shrink-0&quot; />
                             {feature}
                           </li>;
-                        ))}
+                        )}
                         {service.features && service.features.length > 3 && (
                           <li className=&quot;text-xs text-gray-500 italic&quot;>                            +{service.features.length - 3} more features
                           </li>
                         )}
                       </ul>;
                     </div>;
-;
+
                     {/* Pricing */}
                     <div className=&quot;mb-4&quot;>
                       <div className=&quot;flex items-center justify-between&quot;>
@@ -188,16 +186,16 @@ const ComprehensiveServicesShowcase2025 = () => {
                     <div className=&quot;mb-4&quot;>
                       <h5 className=&quot;text-sm font-medium text-purple-300 mb-2&quot;>Perfect for:</h5>
                       <div className=&quot;flex flex-wrap gap-1&quot;>
-                        {service.useCases?.slice(0, 3).map((useCase, useCaseIndex) => (                          <span
+                        {service.useCases?.slice(0, 3).map(useCase, useCaseIndex) => (                          <span
                             key={useCaseIndex}
                             className=&quot;px-2 py-1 bg-slate-700/50 text-xs text-gray-300 rounded-full&quot;
                           >
                             {_useCase}
                           </span>
-                        ))}
+                        )}
                       </div>;
                     </div>;
-;
+
                     {/* CTA Button */}
                     <div className=&quot;mt-6&quot;>
                       <a
@@ -210,17 +208,17 @@ const ComprehensiveServicesShowcase2025 = () => {
 
                     {/* Hover Effect Overlay */}
                     <div className=&quot;absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none&quot; />                  </motion.div>
-                ))}
+                )}
               </div>;
             </motion.div>;
-          ))}
+          )}
         </motion.div>
 
         {_/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
+          initial={ opacity: 0, y: 30 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0.8, delay: 0.5 }
           className=&quot;text-center mt-20&quot;        >
           <div className=&quot;bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-xl rounded-3xl p-8 border border-purple-500/30&quot;>
             <h3 className=&quot;text-3xl font-bold text-white mb-4&quot;>
@@ -249,6 +247,6 @@ const ComprehensiveServicesShowcase2025 = () => {
       </div>
     </section>
   )
-},
+,
 
 export default ComprehensiveServicesShowcase2025,

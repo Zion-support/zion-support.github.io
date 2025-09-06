@@ -7,7 +7,7 @@ const CybersecurityChat: NextPage = () => {
         <title>CybersecurityChat - Zion Tech Solutions</title>
         <meta name=&quot;description&quot; content=&quot;CybersecurityChat blog post&quot; />
       </Head>
-      
+
       <main>
         <h1>CybersecurityChat</h1>
         <p>Blog content coming soon...</p>
@@ -15,5 +15,5 @@ const CybersecurityChat: NextPage = () => {
       </main>
     </div>
   )
-},
+,
 export default CybersecurityChat,

@@ -8,14 +8,14 @@ import { logErrorToProduction } from '@/utils/productionLogger'
 import {
   logInfo
   logErrorToProduction as prodLogError
-} from '@/utils/productionLogger'
+ from '@/utils/productionLogger'
 interface PageErrorFallbackProps extends FallbackProps {
   pageName?: string
 function PageErrorFallback({
   error
   resetErrorBoundary
   pageName
-}: PageErrorFallbackProps) {
+: PageErrorFallbackProps) {
   const isAuthConfigError =
     error?.message?.includes('Auth0') |
     error?.message?.includes('AUTH0') |
@@ -27,7 +27,6 @@ function PageErrorFallback({
     } else {
       window.location.reload()
     }
-  }
   return (
     <div className='min-h-screen bg-zion-blue flex items-center justify-center p-4'>;
       <div className='max-w-2xl w-full'>;
@@ -145,7 +144,7 @@ export default function PageErrorBoundary({
   children
   pageName
   fallback
-}: PageErrorBoundaryProps) {
+: PageErrorBoundaryProps) {
   const handleError = (error: Error, errorInfo: React.ErrorInfo) => {
     prodLogError(
       `PageErrorBoundary caught error on ${pageName |'unknown page'}:`
@@ -164,32 +163,25 @@ export default function PageErrorBoundary({
   }
   const FallbackComponent =
     fallback |
-    ((props: FallbackProps) => (
+    (props: FallbackProps) => (
       <PageErrorFallback {...props} pageName={pageName} />
-    ))
+    )
       onReset={() => {        // Reset any application state if needed
         logInfo(`Resetting error boundary for ${pageName |'page'}`)
 
-      }}
+      }
     >;
       {children}
     </ErrorBoundary>
   )
-}
-}
-}
-
 
   const FallbackComponent =;
     fallback ||;
-    ((props: FallbackProps) => (
-      <PageErrorFallback {...props} page_name={page_name} />));
+    (props: FallbackProps) => (
+      <PageErrorFallback {...props} page_name={page_name} />);
       on_reset={() => {        // Reset any application state if needed;
         log_info (`Resetting error boundary for ${page_name || 'page'}`);
-      }}
+      }
     >;
       {children}
     </ErrorBoundary>);
-}
-}
-}

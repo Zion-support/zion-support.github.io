@@ -1,5 +1,5 @@
 
-/**;
+**;
  * Theme configuration for PDF export;
  */;
 export interface PdfThemeColors {;
@@ -8,10 +8,9 @@ export interface PdfThemeColors {;
   heading:string,;
   subheading:string,;
   accent:string;
-}
-;
+
 export function getPdfThemeColors(theme:'light' | 'dark'):PdfThemeColors {;
-  return theme === 'light' ;
+  return theme = = 'light' ;
     ? { ;
         background:'#ffffff',;
         text:'#000000',;
@@ -25,7 +24,5 @@ export function getPdfThemeColors(theme:'light' | 'dark'):PdfThemeColors {;
         subheading:'#cccccc',;
         accent:'#9b87f5';
       },;
-} /** * Theme configuration for PDF export */ export function getPdfThemeColors (theme: 'light' | 'dark') : PdfThemeColors {
-  return theme === 'light' ? {
-  
-}
+ /** * Theme configuration for PDF export */ export function getPdfThemeColors (theme: 'light' | 'dark') : PdfThemeColors {
+  return theme = = 'light' ? {

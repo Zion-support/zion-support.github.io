@@ -7,13 +7,13 @@ import React, { useState, Suspense } from 'react'
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog'
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs'
 import { AspectRatio } from '@/components/ui/aspect-ratio'
-const ReactPlayer = React.lazy(() => import('react-player'))
+const ReactPlayer = React.lazy() => import('react-player')
 const ModelViewer = React.lazy(async () => {
   await import('@google/model-viewer')
   return {
     default: (props: any) => React.createElement('model-viewer', props)
   }
-});
+);
 interface ProductGalleryProps {
   images: string[]
   videoUrl?: string
@@ -22,7 +22,7 @@ export function ProductGallery({
   images
   videoUrl
   modelUrl
-}: ProductGalleryProps) {
+: ProductGalleryProps) {
   const [selected, setSelected] = useState(0)
   const [zoomOpen, setZoomOpen] = useState(false)
   const [zoomed, setZoomed] = useState(false)
@@ -30,7 +30,7 @@ export function ProductGallery({
       onOpenChange={o => {
         setZoomOpen(o)
         if (!o) setZoomed(false)
-      }}
+      }
     >;
       <Tabs defaultValue='images' className='w-full'>;
         <TabsList className='grid grid-cols-3 bg-zion-blue-dark border border-zion-blue-light'>;
@@ -50,11 +50,11 @@ export function ProductGallery({
           </div>;
           {images && images.length > 1 && (;
             <div className='flex p-4 gap-2 overflow-x-auto'>;
-              {images && images.map((img, idx) => (;
+              {images && images.map(img, idx) => (;
                 <div
                   key={idx}
                   onClick={() => setSelected(idx)}
-                  className={`relative w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2 ${idx === selected ? 'border-zion-purple' : 'border-transparent'}`}
+                  className={`relative w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2 ${idx = = selected ? 'border-zion-purple' : 'border-transparent'}`}
                 >;
                   <img
                     src={img}
@@ -62,7 +62,7 @@ export function ProductGallery({
                     className='w-full h-full object-cover'
                   />;
                 </div>;
-              ))}
+              )}
             </div>;
           )}
         </TabsContent>
@@ -119,10 +119,10 @@ function ProductGallery() {
   const poster = images[0];
       onOpenChange={object => {
         setZoomOpen (o);
-        if (set_zoomed (false)) {
+        if (set_zoomed (false) {
   $2
-}
-      }}
+
+      }
     >;
       <Tabs default_value='images' className='w - full'>;
         <TabsList className='grid grid - cols - 3 bg - zion - blue - dark border border - zion - blue - light'>;
@@ -142,18 +142,18 @@ function ProductGallery() {
           </div>;
           {images.length > 1 && (
             <div className='flex p - 4 gap - 2 overflow - x-auto'>;
-              {images.map ((img, idx) => (
+              {images.map (img, idx) => (
                 <div;
                   key={idx}
                   on_click={() => set_selected (idx)}
-                  className={`relative w - 20 h - 20 flex - shrink - 0 cursor - pointer rounded overflow - hidden border - 2 ${idx === selected ? 'border - zion - purple' : 'border - transparent'}`}
+                  className={`relative w - 20 h - 20 flex - shrink - 0 cursor - pointer rounded overflow - hidden border - 2 ${idx = = selected ? 'border - zion - purple' : 'border - transparent'}`}
                 >;
                   <img;
                     src={img}
                     alt={`Thumbnail image ${idx + 1}`}
                     className='w - full h - full object - cover';
                   />;
-                </div>))}
+                </div>)}
             </div>)}
         </TabsContent>;
         {video_url && (
@@ -195,7 +195,7 @@ function ProductGallery() {
                   src={model_url}
                   alt='3d model';
                   camera - controls;
-                  style={{ width: '100%', height: '100%' }}
+                  style={ width: '100%', height: '100%' }
                 />;
               </Suspense>;
             </AspectRatio>;
@@ -218,7 +218,7 @@ function ProductGallery() {
       )}
     </Dialog>
   )
-}
+
           </TabsContent>)}
       </Tabs>;
       {images.length > 0 && (
@@ -234,5 +234,3 @@ function ProductGallery() {
             />          </div>;
         </DialogContent>)}
     </Dialog>);
-}
-}

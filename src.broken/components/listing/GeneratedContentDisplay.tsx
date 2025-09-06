@@ -6,5 +6,3 @@ export function GeneratedContentDisplay() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

@@ -1,5 +1,5 @@
-{
-  "greeting": "Hola, {{name}}!",
+
+  "greeting": "Hola, {name}!",
   "nav": {
     "home": "Inicio",
     "marketplace": "Mercado",
@@ -22,4 +22,3 @@
   },
   "login": "Iniciar sesin",
   "signup": "Registrarse"
-}

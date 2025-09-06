@@ -12,13 +12,13 @@ export default function JSONFormatterPage() {;
   const [compactMode, setCompactMode] = useState(false),;
   const [showLineNumbers, setShowLineNumbers] = useState(true),;
   const formatJSON = () => {;
-    if (!inputJson.trim()) {;
+    if (!inputJson.trim() {;
       setFormattedJson(''),;
       setIsValid(true),;
       setErrorMessage(''),;
       return;
     }
-;
+
     try {;
       const parsed = JSON.parse(inputJson),;
       const formatted = compactMode;
@@ -31,10 +31,9 @@ export default function JSONFormatterPage() {;
       setIsValid(false),;
       setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON'),;
       setFormattedJson('');
-    }
-  },;
+    },;
   const minifyJSON = () => {;
-    if (!inputJson.trim()) return,;
+    if (!inputJson.trim() return,;
     try {;
       const parsed = JSON.parse(inputJson),;
       const minified = JSON.stringify(parsed),;
@@ -44,15 +43,14 @@ export default function JSONFormatterPage() {;
     } catch (error) {;
       setIsValid(false),;
       setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON');
-    }
-  },;
+    },;
   const validateJSON = () => {;
-    if (!inputJson.trim()) {;
+    if (!inputJson.trim() {;
       setIsValid(true),;
       setErrorMessage(''),;
       return;
     }
-;
+
     try {;
       JSON.parse(inputJson),;
       setIsValid(true),;
@@ -60,8 +58,7 @@ export default function JSONFormatterPage() {;
     } catch (error) {;
       setIsValid(false),;
       setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON');
-    }
-  },
+    },
 
   const clearAll = () => {
     setInputJson(''),
@@ -111,8 +108,8 @@ export default function JSONFormatterPage() {;
       "active": true,
       "lastLogin": "2024-01-15T10:30:00Z"
     },
-    
-    setInputJson(JSON.stringify(sample, null, 2)),
+
+    setInputJson(JSON.stringify(sample, null, 2),
     setFormattedJson(''),
     setIsValid(true),
     setErrorMessage('')
@@ -120,7 +117,7 @@ export default function JSONFormatterPage() {;
 
   const getLineNumbers = (text: string) => {
     const lines = text.split('\n'),
-    return lines.map((_, index) => index + 1).join('\n')
+    return lines.map(_, index) => index + 1).join('\n')
   },
 
   return (
@@ -171,7 +168,7 @@ export default function JSONFormatterPage() {;
                   <label className="text-sm text-gray-300">Indent:</label>
                   <select
                     value={indentSize}
-                    onChange={(e) => setIndentSize(Number(e.target.value))}
+                    onChange={(e) => setIndentSize(Number(e.target.value)}
                     className="px-3 py-2 bg-gray-700 border border-gray-600 rounded text-white text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
                   >
                     <option value={2}>2 spaces</option>
@@ -179,7 +176,7 @@ export default function JSONFormatterPage() {;
                     <option value={8}>8 spaces</option>
                   </select>
                 </div>
-                
+
                 <div className="flex items-center space-x-2">
                   <input
                     type="checkbox"
@@ -190,7 +187,7 @@ export default function JSONFormatterPage() {;
                   />
                   <label htmlFor="compactMode" className="text-sm text-gray-300">Compact mode</label>
                 </div>
-                
+
                 <div className="flex items-center space-x-2">
                   <input
                     type="checkbox"
@@ -292,14 +289,14 @@ export default function JSONFormatterPage() {;
       "active": true,;
       "lastLogin": "2024-01-15T10:30:00Z";
     },;
-    setInputJson(JSON.stringify(sample, null, 2)),;
+    setInputJson(JSON.stringify(sample, null, 2),;
     setFormattedJson(''),;
     setIsValid(true),;
     setErrorMessage('');
   },;
   const getLineNumbers = (text: string) => {;
     const lines = text.split('\n');
-    return lines.map((_, index) => index + 1).join('\n');
+    return lines.map(_, index) => index + 1).join('\n');
   };
   return (;
     <>;
@@ -346,7 +343,7 @@ export default function JSONFormatterPage() {;
                   <label className="text-sm text-gray-300">Indent:</label>;
                   <select;
                     value={indentSize}
-                    onChange={(e) => setIndentSize(Number(e.target.value))}
+                    onChange={(e) => setIndentSize(Number(e.target.value)}
                     className="px-3 py-2 bg-gray-700 border border-gray-600 rounded text-white text-sm focus:outline-none focus:ring-2 focus:ring-teal-500";
                   >;
                     <option value={2}>2 spaces</option>;
@@ -844,4 +841,3 @@ export default function JSONFormatterPage() {;
       </section>;
     </>;
   );
-}

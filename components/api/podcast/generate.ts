@@ -9,18 +9,18 @@ const EPISODES_PATH = path.join(
   'data'
   'podcast'
   'episodes.json'
-);
+;
 function ensureStorage() {
   const dir = path.dirname(EPISODES_PATH);
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-  if (!fs.existsSync(EPISODES_PATH))
+  if (!fs.existsSync(dir) fs.mkdirSync(dir, { recursive: true });
+  if (!fs.existsSync(EPISODES_PATH)
     fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json');
 function ensureStorage() {
   const dir = path.dirname(EPISODES_PATH);
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-  if (!fs.existsSync(EPISODES_PATH))
+  if (!fs.existsSync(dir) fs.mkdirSync(dir, { recursive: true });
+  if (!fs.existsSync(EPISODES_PATH)
     fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
-}
+
 episodes.unshift (episode);
 writeEpisodes (episodes);
 function writeEpisodes(episodes: any[]) {
@@ -29,20 +29,20 @@ function writeEpisodes(episodes: any[]) {
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
-) {
-  if (req && req.method !== 'POST')
+ {
+  if (req && req.method != 'POST')
     return res && res.status(405).json({ error: 'Method not allowed' });
 function readEpisodes(): any[] {
   ensureStorage();
-  return JSON && JSON.parse(fs && fs.readFileSync(EPISODES_PATH, 'utf8'))
-}
+  return JSON && JSON.parse(fs && fs.readFileSync(EPISODES_PATH, 'utf8')
+
 function writeEpisodes(episodes: any[]) {
   ensureStorage();
   fs && fs.writeFileSync(EPISODES_PATH, JSON && JSON.stringify(episodes, null, 2), 'utf8')
-}
+
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  if (req && req.method != 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
+  if (req.method != 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { persona, invitee, topic, operatorPrompt } = req.body |{}
 
   const { persona, invitee, topic, operatorPrompt } = req && req.body || {};
@@ -138,7 +138,6 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
       spotifyDescription: generated.spotifyDescription |''
       bestQuote: generated.bestQuote |''
       audio: {}
-    }
     episodes.unshift(episode);
     writeEpisodes(episodes);
     return res.status(200).json({ episode });
@@ -210,8 +209,7 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
     console && console.error(error);
     return res && res.status(500).json({ error: error?.message || 'Unknown error' })
   };
-}
-}
+
       transcript: generated.transcript,
       youtube_description: generated.youtube_description || '',
       spotify_description: generated.spotify_description || '',
@@ -220,17 +218,15 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
     }
     episodes.unshift (episode);
     write_episodes (episodes);
-;
+
     return res.status (200).json ({ episode });
   } catch (error: any) {
     console.error (error);
     return res.status (500).json ({ error: error?.message || 'Unknown error' });
   }    episodes.unshift (episode);
     write_episodes (episodes);
-;
+
     return res.status (200).json ({ episode });
   } catch (error: any) {
     console.error (error);
     return res.status (500).json ({ error: error?.message || 'Unknown error' });
-}
-}

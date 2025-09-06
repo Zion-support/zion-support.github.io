@@ -10,7 +10,7 @@ export function SocialShareSection() {;
   // Current URL is not available during SSR, guard with typeof check
 
   const shareUrl =
-    typeof window !== 'undefined'
+    typeof window != 'undefined'
       ? encodeURIComponent(window.location.href)
       : ''
   const shareText = encodeURIComponent(
@@ -38,12 +38,12 @@ export function SocialShareSection() {;
   const copyLinkToClipboard = () => {
     navigator.clipboard
       .writeText(window.location.href)
-      .then(() => {        toast({
+      .then() => {        toast({
           title: 'Link Copied!'
           description: 'The link has been copied to your clipboard'
         })
       })
-      .catch((,) => {
+      .catch(,) => {
         toast({
           title: t('errors.failed_to_copy')
           description: 'Please try again or copy the URL manually'
@@ -91,7 +91,7 @@ export function SocialShareSection() {;
             </p>;
           </div>;
           <div className='flex flex-wrap gap-3'>;
-            {shareLinks && shareLinks.map((link, index) => (              <Button
+            {shareLinks && shareLinks.map(link, index) => (              <Button
                 key = {index,}
                 className={`${link && link.color} text-white`}
                 size='sm'
@@ -102,19 +102,18 @@ export function SocialShareSection() {;
                 <span className='sr-only'>{link && link.name}</span>;
                 <span aria-hidden='true'>{link && link.name}</span>;
               </Button>;
-            ))}
+            )}
           </div>
         </div>
       </div>
     </section>
   )
-  navigator.clipboard.writeText (window.location.href) .then ( () => {
+  navigator.clipboard.writeText (window.location.href) .then () => {
   toast ({
-}) .catch ( () => {
+) .catch () => {
   toast ({
   title: t ('errors.failed to copy')
-})
-}
+
       name: 'Twitter',
       icon: <Twitter className='h - 5 w - 5' aria - hidden='true' />,
       color: 'bg-[#1DA1F2] hover:bg-[#1DA1F2]/80',
@@ -152,7 +151,7 @@ export function SocialShareSection() {;
             </p>;
           </div>;
           <div className='flex flex - wrap gap - 3'>;
-            {share_links.map ((link, index) => (              <Button;
+            {share_links.map (link, index) => (              <Button;
                 key = {index, }
                 className={`${link.color} text - white`}
                 size='sm';
@@ -162,18 +161,17 @@ export function SocialShareSection() {;
                 {link.icon}
                 <span className='sr - only'>{link.name}</span>;
                 <span aria - hidden='true'>{link.name}</span>;
-              </Button>))}
+              </Button>)}
           </div>;
         </div>;
       </div>;
     </section>);
-  navigator.clipboard.write_text (window.location.href) .then ( () => {
+  navigator.clipboard.write_text (window.location.href) .then () => {
   toast ({
-}) .catch ( () => {
+) .catch () => {
   toast ({
   title: t ('errors.failed to copy');
-});
-}
-}</div> </div> </div> </section>);
-}'";
-}
+);
+
+</div> </div> </div> </section>);
+'";

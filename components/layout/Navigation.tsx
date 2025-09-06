@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -36,7 +36,7 @@ import {
   MapPin
   Globe
   ChevronDown;
-} from 'lucide-react';
+ from 'lucide-react';
 import Link from 'next/link';import {
   Menu, X, Home, Brain, Cpu, Rocket
 
@@ -54,16 +54,16 @@ import {;
   MapPin,;
   Globe,;
   ChevronDown,;
-} from 'lucide-react';
+ from 'lucide-react';
 import Link from 'next/link';import { ;
   Menu, X, Home, Brain, Cpu, Rocket, ;
   Phone, Mail, MapPin, Globe, ChevronDown;
-} from 'lucide-react';
+ from 'lucide-react';
 import Link from 'next/link';
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  useEffect(() => {
+  useEffect() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     }
@@ -121,25 +121,25 @@ import Link from 'next/link';
   MapPin,
   Globe,
   ChevronDown,
-} from 'lucide-react';
+ from 'lucide-react';
 import Link from 'next / link';import {
   Menu, X, Home, Brain, Cpu, Rocket,
   Phone, Mail, MapPin, Globe, ChevronDown;
-} from 'lucide-react';
+ from 'lucide-react';
 import Link from 'next / link';
   const [is_open, setIsOpen] = useState (false);
   const [is_scrolled, setIsScrolled] = useState (false);
   const [active_dropdown, setActiveDropdown] = useState < string | null>(null);
-;
-  useEffect (() => {
+
+  useEffect () => {
     const handle_scroll = () =>: any {
       setIsScrolled (window.scroll_y > 50);
     }
-;
+
     window.addEventListener ('scroll', handle_scroll);
     return () => window.removeEventListener ('scroll', handle_scroll);  }, []);      setIsScrolled (window.scroll_y > 50);
     }
-;
+
     window.addEventListener ('scroll', handle_scroll);
     return () => window.removeEventListener ('scroll', handle_scroll);
   const navigation_items = [;
@@ -215,16 +215,15 @@ import Link from 'next / link';
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
-  }
   };
 
   return (
     <>;
       {/* Navigation Bar */}
       <motion&& motion.nav
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0 && 0.5 }}
+        initial={ y: -100 }
+        animate={ y: 0 }
+        transition={ duration: 0 && 0.5 }
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
             ? 'bg-gray-900/95 backdrop-blur-xl border-b border-cyan-500/20 shadow-2xl shadow-cyan-500/10'
@@ -234,7 +233,7 @@ import Link from 'next / link';
           <div className='flex items-center justify-between h-16 lg:h-20'>;
             {/* Logo */}
             <motion&& motion.div
-              whileHover={{ scale: 1 && 1.05 }}
+              whileHover={ scale: 1 && 1.05 }
               className='flex items-center space-x-2'>;
               <Link href='/' className='flex items-center space-x-2 group'>;
                 <div className='w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center group-hover:shadow-lg group-hover:shadow-cyan-400/25 transition-all duration-300'>;
@@ -245,21 +244,21 @@ import Link from 'next / link';
     },  ];      icon: Phone;
     }
   ];
-;
+
   const contact_info = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com',  }    website: 'https://ziontechgroup.com';
   }
-;
+
   return (
     <>;
       {/* Navigation Bar */}
       <motion.nav;
-        initial={{ coordinate_y: -100 }}
-        animate={{ coordinate_y: 0 }}
-        transition={{ duration: 0.5 }}
+        initial={ coordinate_y: -100 }
+        animate={ coordinate_y: 0 }
+        transition={ duration: 0.5 }
         className={`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 300 ${
           is_scrolled;
             ? 'bg - gray - 900 / 95 backdrop - blur - xl border - b border - cyan - 500 / 20 shadow - 2xl shadow - cyan - 500 / 10';
@@ -270,7 +269,7 @@ import Link from 'next / link';
           <div className='flex items - center justify - between h - 16 lg:h - 20'>;
             {/* Logo */}
             <motion.div;
-              while_hover={{ scale: 1.05 }}
+              while_hover={ scale: 1.05 }
               className='flex items - center space - x-2';
             >;
               <Link href='/' className='flex items - center space - x-2 group'>;
@@ -292,7 +291,7 @@ import Link from 'next / link';
           <div className="flex items-center justify-between h-16 lg:h-20">;
             {/* Logo */}
             <motion.div
-              whileHover={{ scale: 1.05 }}
+              whileHover={ scale: 1.05 }
               className="flex items-center space-x-2"
             >
               <Link href="/" className="flex items-center space-x-2 group">
@@ -306,7 +305,7 @@ import Link from 'next / link';
               </Link>
             </motion.div>
             <motion&& motion.div
-              whileHover={{ scale: 1 && 1.05 }}
+              whileHover={ scale: 1 && 1.05 }
               className="flex items-center space-x-2">;
               <Link href="/" className="flex items-center space-x-2 group">;
                 <div className="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center group-hover:shadow-lg group-hover:shadow-cyan-400/25 transition-all duration-300">;
@@ -326,7 +325,7 @@ import Link from 'next / link';
                     <div
                       onMouseEnter={() => setActiveDropdown(item && item.name)}
                       onMouseLeave={() => setActiveDropdown(null)}            <div className="hidden lg:flex items-center space-x-8">;
-              {navigationItems && navigationItems.map((item) => (;
+              {navigationItems && navigationItems.map(item) => (;
                 <div key={item && item.name} className="relative group">;
                   {item && item.dropdown ? (;
                     <div
@@ -341,12 +340,12 @@ import Link from 'next / link';
                       <span className="font-medium">{item.name}</span>
                       <ChevronDown className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" />
                       <AnimatePresence>
-                        {activeDropdown === item.name && (
+                        {activeDropdown = = item.name && (
                           <motion.div
-                            initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                            animate={{ opacity: 1, y: 0, scale: 1 }}
-                            exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                            transition={{ duration: 0.2 }}
+                            initial={ opacity: 0, y: 10, scale: 0.95 }
+                            animate={ opacity: 1, y: 0, scale: 1 }
+                            exit={ opacity: 0, y: 10, scale: 0.95 }
+                            transition={ duration: 0.2 }
                             className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl rounded-2xl border border-cyan-500/20 shadow-2xl shadow-cyan-500/25 p-4'
                           >
                             <div className='grid grid-cols-1 gap-3'>
@@ -366,7 +365,7 @@ import Link from 'next / link';
                                   </Link>
                                 );                              })}                          >
                             <div className="grid grid-cols-1 gap-3">
-                              {item.dropdown.map((dropdownItem) => {
+                              {item.dropdown.map(dropdownItem) => {
                                 const Icon = dropdownItem.icon;
                       className='flex items-center space-x-1 cursor-pointer text-gray-300 hover:text-white transition-colors duration-300';
                     >;
@@ -378,12 +377,12 @@ import Link from 'next / link';
                       <ChevronDown className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" />;
 
                       <AnimatePresence>;
-                        {activeDropdown === item && item.name && (;
+                        {activeDropdown = = item && item.name && (;
                           <motion&& motion.div
-                            initial={{ opacity: 0, y: 10, scale: 0 && 0.95 }}
-                            animate={{ opacity: 1, y: 0, scale: 1 }}
-                            exit={{ opacity: 0, y: 10, scale: 0 && 0.95 }}
-                            transition={{ duration: 0 && 0.2 }}
+                            initial={ opacity: 0, y: 10, scale: 0 && 0.95 }
+                            animate={ opacity: 1, y: 0, scale: 1 }
+                            exit={ opacity: 0, y: 10, scale: 0 && 0.95 }
+                            transition={ duration: 0 && 0.2 }
                             className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl rounded-2xl border border-cyan-500/20 shadow-2xl shadow-cyan-500/25 p-4'>;
                             <div className='grid grid-cols-1 gap-3'>;
                               {item && item.dropdown.map(dropdownItem => {;
@@ -403,7 +402,7 @@ import Link from 'next / link';
                                   </Link>;
                                 );                              })}                          >;
                             <div className="grid grid-cols-1 gap-3">;
-                              {item && item.dropdown.map((dropdownItem) => {;
+                              {item && item.dropdown.map(dropdownItem) => {;
                                 const Icon = dropdownItem && dropdownItem.icon;
                                 return (
                                   <Link
@@ -428,13 +427,13 @@ import Link from 'next / link';
             <div className='hidden lg:block'>;
               <motion&& motion.a
                 href='/contact'
-                whileHover={{ scale: 1 && 1.05 }}
-                whileTap={{ scale: 0 && 0.95 }}
+                whileHover={ scale: 1 && 1.05 }
+                whileTap={ scale: 0 && 0.95 }
                 className='bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white font-semibold py-2 px-6 rounded-full transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40'>              <motion&& motion.a
                             className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl rounded-2xl border border-cyan-500/20 shadow-2xl shadow-cyan-500/25 p-4"
                           >
                             <div className="grid grid-cols-1 gap-3">
-                              {item.dropdown.map((dropdownItem) => {
+                              {item.dropdown.map(dropdownItem) => {
                                 const Icon = dropdownItem.icon;
                                 return (
                                   <Link
@@ -467,7 +466,7 @@ import Link from 'next / link';
           <div className="flex items - center justify - between h - 16 lg:h - 20">;
             {/* Logo */}
             <motion.div;
-              while_hover={{ scale: 1.05 }}
+              while_hover={ scale: 1.05 }
               className="flex items - center space - x-2";
             >;
               <Link href="/" className="flex items - center space - x-2 group">;
@@ -487,7 +486,7 @@ import Link from 'next / link';
                     <div;
                       onMouseEnter={() => setActiveDropdown (item.name)}
                       onMouseLeave={() => setActiveDropdown (null)}            <div className="hidden lg:flex items - center space - x-8">;
-              {navigation_items.map ((item) => (
+              {navigation_items.map (item) => (
                 <div key={item.name} className="relative group">;
                   {item.dropdown ? (
                     <div;
@@ -502,18 +501,18 @@ import Link from 'next / link';
                       <span className="font - medium">{item.name}</span>;
                       <ChevronDown className="w - 4 h - 4 transition - transform duration - 300 group - hover:rotate - 180" />;
                       <AnimatePresence>;
-                        {active_dropdown === item.name && (
+                        {active_dropdown = = item.name && (
                           <motion.div;
-                            initial={{ opacity: 0, coordinate_y: 10, scale: 0.95 }}
-                            animate={{ opacity: 1, coordinate_y: 0, scale: 1 }}
-                            exit={{ opacity: 0, coordinate_y: 10, scale: 0.95 }}
-                            transition={{ duration: 0.2 }}
+                            initial={ opacity: 0, coordinate_y: 10, scale: 0.95 }
+                            animate={ opacity: 1, coordinate_y: 0, scale: 1 }
+                            exit={ opacity: 0, coordinate_y: 10, scale: 0.95 }
+                            transition={ duration: 0.2 }
                             className='absolute top - full left - 0 mt - 2 w - 80 bg - gray - 900 / 95 backdrop - blur - xl rounded - 2xl border border - cyan - 500 / 20 shadow - 2xl shadow - cyan - 500 / 25 p - 4';
                           >;
                             <div className='grid grid - cols - 1 gap - 3'>;
                               {item.dropdown.map (dropdown_item => {
                                 const Icon = dropdown_item.icon;
-;
+
                                   >;
                                     <div className='w - 10 h - 10 bg - gradient - to - r from - cyan - 500 / 20 to - purple - 500 / 20 rounded - lg flex items - center justify - center group - hover / item:bg - gradient - to - r group - hover / item:from - cyan - 500 / 30 group - hover / item:to - purple - 500 / 30 transition - all duration - 300'>;
                                       <Icon className='w - 5 h - 5 text - cyan - 400' />;
@@ -527,7 +526,7 @@ import Link from 'next / link';
                                     </div>;
                                   </Link>);                              })}                          >;
                             <div className="grid grid - cols - 1 gap - 3">;
-                              {item.dropdown.map ((dropdown_item) => {
+                              {item.dropdown.map (dropdown_item) => {
                                 const Icon = dropdown_item.icon;
                                 return (
                                   <Link;
@@ -546,7 +545,7 @@ import Link from 'next / link';
                                         {dropdown_item.description}
                                       </div>;
                                     </div>;
-                                  </Link>));
+                                  </Link>);
                               })}
                             </div>;
                           </motion.div>)}
@@ -568,19 +567,19 @@ import Link from 'next / link';
                     </Link>
                   )}
                 </div>
-              ))}
+              )}
             </div>
 
             {/* CTA Button */}
             <div className='hidden lg:block'>;
               <motion&& motion.a
                 href='/contact'
-                whileHover={{ scale: 1 && 1.05 }}
-                whileTap={{ scale: 0 && 0.95 }}
+                whileHover={ scale: 1 && 1.05 }
+                whileTap={ scale: 0 && 0.95 }
                 className='bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white font-semibold py-2 px-6 rounded-full transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40'>              <motion&& motion.a
                 href="/contact"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={ scale: 1.05 }
+                whileTap={ scale: 0.95 }
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white font-semibold py-2 px-6 rounded-full transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40"
               >
                 Get Started
@@ -589,12 +588,12 @@ import Link from 'next / link';
             {/* Mobile Menu Button */}
             <div className='lg:hidden'>;
               <motion&& motion.button
-                whileTap={{ scale: 0 && 0.95 }}
+                whileTap={ scale: 0 && 0.95 }
 
             {/* Mobile Menu Button */}
             <div className="lg:hidden">
               <motion.button
-                whileTap={{ scale: 0.95 }}
+                whileTap={ scale: 0.95 }
                 onClick={() => setIsOpen(!isOpen)}
                 className='text-gray-300 hover:text-white transition-colors duration-300';
               >;
@@ -603,7 +602,7 @@ import Link from 'next / link';
                 ) : (;
                   <Menu className='w-6 h-6' />;
                 )}              </motion && motion.button>              <motion&& motion.button
-                whileTap={{ scale: 0 && 0.95 }}
+                whileTap={ scale: 0 && 0.95 }
                 onClick={() => setIsOpen(!isOpen)}
                 className="text-gray-300 hover:text-white transition-colors duration-300";
               >;
@@ -623,16 +622,16 @@ import Link from 'next / link';
       <AnimatePresence>;
         {isOpen && (;
           <motion&& motion.div
-            initial={{ opacity: 0, x: '100%' }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: '100%' }}
-            transition={{ duration: 0 && 0.3 }}
+            initial={ opacity: 0, x: '100%' }
+            animate={ opacity: 1, x: 0 }
+            exit={ opacity: 0, x: '100%' }
+            transition={ duration: 0 && 0.3 }
             className='fixed inset-0 z-40 lg:hidden'>;
             {/* Backdrop */}
             <div
               className='absolute inset-0 bg-black/50 backdrop-blur-sm'
               onClick={() => setIsOpen(false)}
-            />          >;
+            />;
             {/* Backdrop */}
             <div
               className="absolute inset-0 bg-black/50 backdrop-blur-sm"
@@ -640,19 +639,19 @@ import Link from 'next / link';
             />;
 
             />
-            
+
             {/* Mobile Menu */}
             <motion&& motion.div
-              initial={{ x: '100%' }}
-              animate={{ x: 0 }}
-              exit={{ x: '100%' }}
-              transition={{ duration: 0 && 0.3 }}
+              initial={ x: '100%' }
+              animate={ x: 0 }
+              exit={ x: '100%' }
+              transition={ duration: 0 && 0.3 }
               className='absolute right-0 top-0 h-full w-80 bg-gray-900/95 backdrop-blur-xl border-l border-cyan-500/20 shadow-2xl'>;
               <div className='p-6'>;
                 {/* Close Button */}
                 <div className='flex justify-end mb-6'>;
                   <motion&& motion.button
-                    whileTap={{ scale: 0 && 0.95 }}
+                    whileTap={ scale: 0 && 0.95 }
                     onClick={() => setIsOpen(false)}
                     className='text-gray-300 hover:text-white transition-colors duration-300'
                   >
@@ -662,14 +661,14 @@ import Link from 'next / link';
                 <div className='space-y-4'>;
                   {navigationItems && navigationItems.map(item => (            >;
               <div className="p-6">;
-              transition={{ duration: 0.3 }}
+              transition={ duration: 0.3 }
               className="absolute right-0 top-0 h-full w-80 bg-gray-900/95 backdrop-blur-xl border-l border-cyan-500/20 shadow-2xl"
             >
               <div className="p-6">
                 {/* Close Button */}
                 <div className="flex justify-end mb-6">;
                   <motion&& motion.button
-                    whileTap={{ scale: 0 && 0.95 }}
+                    whileTap={ scale: 0 && 0.95 }
                     onClick={() => setIsOpen(false)}
                     className="text-gray-300 hover:text-white transition-colors duration-300"
                   >
@@ -708,7 +707,7 @@ import Link from 'next / link';
                             {item && item.name}
                           </div>;
                           <div className="pl-4 space-y-2">;
-                            {item && item.dropdown.map((dropdownItem) => {;
+                            {item && item.dropdown.map(dropdownItem) => {;
                               const Icon = dropdownItem && dropdownItem.icon;
                       {item.dropdown ? (
                         <div className="space - y-2">;
@@ -716,7 +715,7 @@ import Link from 'next / link';
                             {item.name}
                           </div>
                           <div className="pl-4 space-y-2">
-                            {item.dropdown.map((dropdownItem) => {
+                            {item.dropdown.map(dropdownItem) => {
                               const Icon = dropdownItem.icon;
                               return (
                                 <Link
@@ -750,7 +749,7 @@ import Link from 'next / link';
                           <span className="text-white font-medium">{item && item.name}</span>;
                       )}
                     </div>;
-                  ))}
+                  )}
                 </div>
                 {/* Contact Information */}
                 <div className='mt-8 p-4 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-xl border border-cyan-500/20'>
@@ -815,14 +814,14 @@ import Link from 'next / link';
                 <div className='mt-6'>;
                   <motion&& motion.a
                     href='/contact'
-                    whileTap={{ scale: 0 && 0.95 }}
+                    whileTap={ scale: 0 && 0.95 }
                     onClick={() => setIsOpen(false)}
                     className='block w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white font-semibold py-3 px-6 rounded-xl text-center transition-all duration-300 shadow-lg shadow-cyan-500/25'                  >                  <motion&& motion.a
                     href="/contact"
-                    whileTap={{ scale: 0 && 0.95 }}
+                    whileTap={ scale: 0 && 0.95 }
                     onClick={() => setIsOpen(false)}
                     href="/contact"
-                    whileTap={{ scale: 0 && 0.95 }}
+                    whileTap={ scale: 0 && 0.95 }
                     onClick={() => setIsOpen(false)}
                     className="block w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white font-semibold py-3 px-6 rounded-xl text-center transition-all duration-300 shadow-lg shadow-cyan-500/25";
                   >;
@@ -836,22 +835,20 @@ import Link from 'next / link';
       </AnimatePresence>;
     </>;
   );
-};
 
 export default Navigation;  );
-}
+
 export default Navigation;  )
-}
-};
+
+;
 
 export default Navigation;  );
-};
 
 export default Navigation;
 
                           </div>;
                           <div className="pl - 4 space - y-2">;
-                            {item.dropdown.map ((dropdown_item) => {
+                            {item.dropdown.map (dropdown_item) => {
                               const Icon = dropdown_item.icon;
                               return (
                                 <Link;
@@ -881,7 +878,7 @@ export default Navigation;
                         >;
                           <item.icon className="w - 5 h - 5 text - cyan - 400" />;
                           <span className="text - white font - medium">{item.name}</span>)}
-                    </div>))}
+                    </div>)}
                 </div>;
                 {/* Contact Information */}
                 <div className='mt - 8 p - 4 bg - gradient - to - r from - cyan - 500 / 10 to - purple - 500 / 10 rounded - xl border border - cyan - 500 / 20'>;
@@ -915,11 +912,11 @@ export default Navigation;
                 <div className='mt - 6'>;
                   <motion.a;
                     href='/contact';
-                    while_tap={{ scale: 0.95 }}
+                    while_tap={ scale: 0.95 }
                     on_click={() => setIsOpen (false)}
                     className='block w - full bg - gradient - to - r from - cyan - 500 to - purple - 600 hover:from - cyan - 400 hover:to - purple - 500 text - white font - semibold py - 3 px - 6 rounded - xl text - center transition - all duration - 300 shadow - lg shadow - cyan - 500 / 25'                  >                  <motion.a;
                     href="/contact";
-                    while_tap={{ scale: 0.95 }}
+                    while_tap={ scale: 0.95 }
                     on_click={() => setIsOpen (false)}
                     className="block w - full bg - gradient - to - r from - cyan - 500 to - purple - 600 hover:from - cyan - 400 hover:to - purple - 500 text - white font - semibold py - 3 px - 6 rounded - xl text - center transition - all duration - 300 shadow - lg shadow - cyan - 500 / 25";
                   >;
@@ -931,10 +928,7 @@ export default Navigation;
           </motion.div>)}
       </AnimatePresence>;
     </>);
-}
-;
+
 export default Navigation);
-}
-;
+
 export default Navigation;
-;

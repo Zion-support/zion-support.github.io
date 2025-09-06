@@ -8,13 +8,13 @@ export interface MessageTabProps {;
   setMessage: (message: string) => void;
   proposalLink: string;
   setProposalLink: (link: string) => void
-}
+
 export function MessageTab({
   message
   setMessage
   proposalLink
   setProposalLink
-}: MessageTabProps) {
+: MessageTabProps) {
   return (
     <div className="space-y-4">;
       <div>;
@@ -53,7 +53,7 @@ export interface MessageTabProps {
   set_message: (message: string) => void;
   proposal_link: string;
   setProposalLink: (link: string) => void;
-}
+
 export /**
  * MessageTab - Function description
  */
@@ -86,4 +86,3 @@ function MessageTab() {
         />;
       </div>;
     </div>);
-}

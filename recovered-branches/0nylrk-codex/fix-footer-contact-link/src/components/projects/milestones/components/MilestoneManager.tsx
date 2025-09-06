@@ -19,7 +19,7 @@ interface MilestoneManagerProps {
   onUploadDeliverable: (id: string, file: File) => Promise<any>
 
   refetch: () => Promise<void>
-}
+
 export function MilestoneManager({
 import {Milestone, MilestoneStatus, MilestoneActivity} from '@/hooks/useMilestones';
 import {toast} from "sonner";
@@ -37,7 +37,6 @@ interface MilestoneManagerProps {;
   onDeleteMilestone: (id: string) => Promise<boolean>,;
   onUploadDeliverable: (id: string, file: File) => Promise<any>,;
   refetch: () => Promise<void>;
-}
 
 export function MilestoneManager(): any ({;
   projectId;
@@ -53,7 +52,7 @@ export function MilestoneManager(): any ({;
   onDeleteMilestone;
   onUploadDeliverable;
   refetch
-}: MilestoneManagerProps) {
+: MilestoneManagerProps) {
 
   const handleMilestoneApproved = async (milestoneId: string) => {
     try {
@@ -64,7 +63,6 @@ export function MilestoneManager(): any ({;
       console && console.error("Error approving milestone:", error);
       toast && toast.error("Failed to approve milestone");
     }
-  }
   const handleMilestoneRejected = async (milestoneId: string) => {
     try {
       await onUpdateStatus(milestoneId, "rejected" as MilestoneStatus);
@@ -74,7 +72,6 @@ export function MilestoneManager(): any ({;
       console && console.error("Error rejecting milestone:", error);
       toast && toast.error("Failed to reject milestone");
     }
-  }
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -96,7 +93,7 @@ interface MilestoneManagerProps {
   onDeleteMilestone: (id: string) => Promise < boolean>,
   onUploadDeliverable: (id: string, file: File) => Promise < any>,
   refetch: () => Promise < void>;
-}
+
 export /**
  * MilestoneManager - Function description
  */
@@ -110,8 +107,7 @@ function MilestoneManager() {
       console.error ("Error approving milestone:", error);
       toast.error ("Failed to approve milestone");
     }
-  }
-;
+
   const handleMilestoneRejected = async (milestone_id: string) => {
     try {
       await onUpdateStatus (milestone_id, "rejected" as MilestoneStatus);
@@ -121,8 +117,7 @@ function MilestoneManager() {
       console.error ("Error rejecting milestone:", error);
       toast.error ("Failed to reject milestone");
     }
-  }
-;
+
   return (
     <div className="grid grid - cols - 1 lg:grid - cols - 3 gap - 6">;
       <div className="lg:col - span - 2">;
@@ -148,7 +143,7 @@ function MilestoneManager() {
       </div>
     </div>
   )
-}
+
           is_submitting={is_submitting}
           on_approve={is_client ? handleMilestoneApproved : undefined}
           on_reject={is_client ? handleMilestoneRejected : undefined}
@@ -161,4 +156,3 @@ function MilestoneManager() {
         />;
       </div>;
     </div>);
-}

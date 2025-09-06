@@ -6,5 +6,3 @@ export function RouteChangeHandler() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

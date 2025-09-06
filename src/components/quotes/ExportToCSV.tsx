@@ -9,7 +9,7 @@ interface ExportToCSVProps {;
 export const ExportToCSV = ({;
   quotes,;
   filename = 'quote-requests',;
-}: ExportToCSVProps) => {  const handleExport = () => {;
+: ExportToCSVProps) => {  const handleExport = () => {;
     // Define CSV Headers;
     const headers = [;
       'ID',;
@@ -50,8 +50,8 @@ export const ExportToCSV = ({;
         row;
           .map(cell =>;
             // Escape commas and quotes in cell values;
-            typeof cell === 'string' &&;
-            (cell && cell.includes(',') || cell && cell.includes('"'));
+            typeof cell = = 'string' &&;
+            (cell && cell.includes(',') || cell && cell.includes('"');
               ? `"${cell && cell.replace(/"/g, '""')}"`;
               : cell;
           );
@@ -80,7 +80,7 @@ interface ExportToCSVProps {
 export const ExportToCSV = ({
   quotes
   filename = 'quote-requests'
-}: ExportToCSVProps) => {  const handleExport = () => {
+: ExportToCSVProps) => {  const handleExport = () => {
     // Define CSV Headers
     const headers = [
       'ID'
@@ -119,13 +119,12 @@ export const ExportToCSV = ({
         row
           .map(cell =>
             // Escape commas and quotes in cell values
-            typeof cell === 'string' &&
-            (cell.includes(',') |cell.includes('"'))
+            typeof cell = = 'string' &&
+            (cell.includes(',') |cell.includes('"')
               ? `"${cell.replace(/"/g, '""')}"`
               : cell
           )
           .join(',')
-      )
     ].join('\n')
     // Create download link
     const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' })
@@ -142,7 +141,7 @@ import type { QuoteRequest } from "@/types/quotes"
 interface ExportToCSVProps {
   quotes: QuoteRequest[]
   filename?: string
-}
+
 export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSVProps) => {
   const handleExport = () => {
     // Define CSV Headers
@@ -174,11 +173,10 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
       ...rows.map(row =>
         row.map(cell =>
           // Escape commas and quotes in cell values
-          typeof cell === 'string' && (cell.includes() |cell.includes('"'))
+          typeof cell = = 'string' && (cell.includes() |cell.includes('"')
             ? `"${cell.replace(/"/g, '""')}"`
             : cell
         ).join()
-      )
     ].join('\n')
     // Create download link
     const blob = new Blob([csvContent], { type: 'text/csv,charset=utf-8,' })
@@ -189,7 +187,7 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
     document.body.appendChild(link)
     // Download file and clean up
     link.click()
-    setTimeout(() => {
+    setTimeout() => {
       document.body.removeChild(link)
       URL.revokeObjectURL(url)
     }, 100)
@@ -202,7 +200,7 @@ interface ExportToCSVProps {
 export const ExportToCSV = ({
   quotes,
   filename = 'quote - requests',
-}: ExportToCSVProps) =>: any {  const handle_export = () =>: any {
+: ExportToCSVProps) =>: any {  const handle_export = () =>: any {
     // Define CSV Headers;
     const headers = [;
       'ID',
@@ -241,11 +239,11 @@ export const ExportToCSV = ({
         row;
           .map (cell =>;
             // Escape commas and quotes in cell values;
-            typeof cell === 'string' &&;
-            (cell.includes (', ') || cell.includes ('"'));
+            typeof cell = = 'string' &&;
+            (cell.includes (', ') || cell.includes ('"');
               ? `"${cell.replace (/"/g, '""')}"`;
               : cell);
-          .join (', ')),
+          .join (', '),
     ].join ('\n');
     // Create download link;
     const blob = new Blob ([csv_content], { type: 'text / csv;charset = utf - 8;' });
@@ -261,7 +259,7 @@ import type { QuoteRequest } from "@/types / quotes";
 interface ExportToCSVProps {
   quotes: QuoteRequest[],
   filename?: string;
-}
+
 export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToCSVProps) =>: any {
   const handle_export = () =>: any {
     // Define CSV Headers;
@@ -293,9 +291,9 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToC
       ...rows.map (row =>;
         row.map (cell =>;
           // Escape commas and quotes in cell values;
-          typeof cell === 'string' && (cell.includes () || cell.includes ('"'));
+          typeof cell = = 'string' && (cell.includes () || cell.includes ('"');
             ? `"${cell.replace (/"/g, '""')}"`;
-            : cell).join ());
+            : cell).join ();
     ].join ('\n');
     // Create download link;
     const blob = new Blob ([csv_content], { type: 'text / csv, charset = utf - 8, ' });
@@ -306,7 +304,7 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToC
     document.body.append_child (link);
     // Download file and clean up;
     link.click ();
-    set_timeout (() => {
+    set_timeout () => {
       document.body.remove_child (link);
       URL.revokeObjectURL (url);
     }, 100);
@@ -315,53 +313,47 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToC
       <Download size={16} />;
       Export CSV;
     </Button>);
-}
-'";
-  } }
+
+";
+  }
   return (
     <Button
       variant="outline"
       onClick = {handleExport,}
       className="flex items-center gap-2"
-      disabled={quotes.length === 0}
+      disabled={quotes.length = = 0}
     >
       <Download size={16} />
       Export CSV
     </Button>
   )
-}
-'"}
-  )
-}
 
+"}
+  )
 
   return (
     <Button
       variant="outline" 
       onClick = {handleExport,}
       className="flex items-center gap-2"
-      disabled={quotes && quotes.length === 0}>;
+      disabled={quotes && quotes.length = = 0}>;
       <Download size={16} />;
       Export CSV;
     </Button>;
   );
-};
-'"},;
+"},;
 
   );
-};
   );
-};
     <Button;
       variant="outline";
       on_click = {handle_export, }
       className="flex items - center gap - 2";
-      disabled={quotes.length === 0}
+      disabled={quotes.length = = 0}
     >;
       <Download size={16} />;
       Export CSV;
     </Button>);
-}
-'"},
+
+"},
   );
-}

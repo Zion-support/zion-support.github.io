@@ -6,5 +6,3 @@ export function TalentProfileSkeleton() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

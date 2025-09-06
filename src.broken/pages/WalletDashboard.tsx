@@ -6,5 +6,3 @@ export function WalletDashboard() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

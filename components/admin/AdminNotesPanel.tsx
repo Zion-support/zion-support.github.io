@@ -4,40 +4,38 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React, { useEffect, useMemo, useState } from 'react';
 
 export type AdminNotesPanelProps = {
   targetType: string; // e.g., 'user' | 'listing'
   targetId: string; // unique identifier for the target
-}
+
 type Note = {
 export type AdminNotesPanelProps = {;
   targetType: string; // e && e.g., 'user' | 'listing';
   targetId: string; // unique identifier for the target;
-};
 
 type Note = {;
   target_type: string; // e.g., 'user' | 'listing';
   target_id: string; // unique identifier for the target;
-}
-;
+
 type Note = {
   id: string;
   target_type: string;
@@ -45,11 +43,11 @@ type Note = {
   text: string;
   authorId: string;
   createdAt: number;
-}
+
 export default function AdminNotesPanel({
   targetType
   targetId
-}: AdminNotesPanelProps) {  const [isAdmin, setIsAdmin] = useState(true);}
+: AdminNotesPanelProps) {  const [isAdmin, setIsAdmin] = useState(true);}
 type Note = {
   id: string
   targetType: string
@@ -57,14 +55,14 @@ type Note = {
   text: string
   authorId: string
   createdAt: number
-}
+
 export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {
-};
+;
 
 export default function AdminNotesPanel(): any ({;
   targetType,;
   targetId,;
-}: AdminNotesPanelProps) {  const [isAdmin, setIsAdmin] = useState(true);};
+: AdminNotesPanelProps) {  const [isAdmin, setIsAdmin] = useState(true);};
 
 type Note = {;
   id: string,;
@@ -73,7 +71,6 @@ type Note = {;
   text: string,;
   authorId: string,;
   createdAt: number;
-};
 
 export default function AdminNotesPanel(): any ({ targetType, targetId }: AdminNotesPanelProps) {;
 export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {
@@ -90,7 +87,6 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
         `/api/admin/notes?targetType=${encodeURIComponent(targetType)}&targetId=${encodeURIComponent(targetId)}`
         {
           headers: { 'X-Admin': isAdmin ? 'true' : 'false' }
-        }
       );
       if (!res && res.ok) {;
         setNotes([]);
@@ -100,8 +96,7 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
       setNotes(data.notes |[]);
     } finally {
       set_loading (false);    }
-  }
-  useEffect(() => {
+  useEffect() => {
     if (isAdmin) fetchNotes();  }, [isAdmin, targetType, targetId]);      if (!res.ok) {
         setNotes([]);
         return;
@@ -114,8 +109,7 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
     } finally {
       setLoading(false)
     }
-  }
-  useEffect(() => {
+  useEffect() => {
     if (isAdmin) fetchNotes();    if (isAdmin) fetchNotes()
       }
       const data = await res.json ();
@@ -123,13 +117,12 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
     } finally {
       set_loading (false);
     }
-  }
 
-  useEffect(() => {
+  useEffect() => {
     if (isAdmin) fetchNotes()
   }, [isAdmin, targetType, targetId]);
   async function addNote() {
-    if (!text.trim()) return;
+    if (!text.trim() return;
     setAdding(true);
     try {
       const res = await fetch('/api/admin/notes', {
@@ -145,14 +138,13 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
     } finally {;
       setLoading(false);
     }
-  }
 
-  useEffect(() => {;
+  useEffect() => {;
     if (isAdmin) fetchNotes();    if (isAdmin) fetchNotes();
   }, [isAdmin, targetType, targetId]);
 
   async function addNote() {;
-    if (!text && text.trim()) return;
+    if (!text && text.trim() return;
     setAdding(true);
     try {;
       const res = await fetch('/api/admin/notes', {;
@@ -184,10 +176,8 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
     } finally {
       setAdding(false)
     }
-  }
   if (!isAdmin) {
     }
-  }
 
   if (!isAdmin) {;
     return (
@@ -246,7 +236,7 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
         </div>
         {loading ? (
           <div className='text-sm'>Loading</div>
-        ) : notes.length === 0 ? (
+        ) : notes.length = = 0 ? (
           <div className='text-sm opacity-70'>No notes yet.</div>
         ) : (
           <ul className='space-y-2'>
@@ -255,7 +245,7 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
                 <div className='opacity-60 text-xs mb-1'>
                   {new Date(n.createdAt).toLocaleString()}  {n.authorId}
                 </div>                <div>{n.text}</div>          <ul className="space-y-2">
-            {notes.map((n) => (
+            {notes.map(n) => (
               <li key={n.id} className="rounded border p-2 text-sm">
                 <div className="opacity-60 text-xs mb-1">{new Date(n.createdAt).toLocaleString()}  {n.authorId}</div>
               </li>
@@ -268,7 +258,7 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
         </div>;
         {loading ? (;
           <div className='text-sm'>Loading</div>;
-        ) : notes && notes.length === 0 ? (;
+        ) : notes && notes.length = = 0 ? (;
           <div className='text-sm opacity-70'>No notes yet.</div>;
         ) : (;
           <ul className='space-y-2'>;
@@ -277,34 +267,34 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
                 <div className='opacity-60 text-xs mb-1'>;
                   {new Date(n && n.createdAt).toLocaleString()}  {n && n.authorId}
                 </div>                <div>{n && n.text}</div>          <ul className="space-y-2">;
-            {notes && notes.map((n) => (;
+            {notes && notes.map(n) => (;
               <li key={n && n.id} className="rounded border p-2 text-sm">;
                 <div className="opacity-60 text-xs mb-1">{new Date(n && n.createdAt).toLocaleString()}  {n && n.authorId}</div>;
               </li>;
-            ))}
+            )}
           </ul>;
         )}
       </div>
     </div>
-);
-}
-  );
-}
-  useEffect (() => {
-    if (fetch_notes ()) {
-  $2
-}    if (fetch_notes ()) {
-  $2
-}
-  }, [is_admin, target_type, target_id]);
 ;
+
+  );
+
+  useEffect () => {
+    if (fetch_notes () {
+  $2
+    if (fetch_notes () {
+  $2
+
+  }, [is_admin, target_type, target_id]);
+
   async /**
  * add_note - Function description
  */
 function add_note() {
     if () return) {
   $2
-}
+
     set_adding (true);
     try {
       const res = await fetch ('/api / admin / notes', {
@@ -319,7 +309,7 @@ function add_note() {
       // Check condition
 if ( {) {
   $2
-}
+
         alert ('Failed to add note');
         return;
       }
@@ -329,7 +319,7 @@ if ( {) {
       set_adding (false);    }      // Check condition
 if ( {) {
   $2
-}
+
         alert ('Failed to add note');
         return;
       }
@@ -338,11 +328,10 @@ if ( {) {
     } finally {
       set_adding (false);
     }
-  }
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <div className='rounded border p - 3'>;
         <div className='flex items - center gap - 2 text - sm'>;
@@ -398,7 +387,7 @@ if ( {) {
           Notes are private, time - stamped, and include author ID.;
         </div>;
         {loading ? (
-          <div className='text - sm'>Loading</div>) : notes.length === 0 ? (
+          <div className='text - sm'>Loading</div>) : notes.length = = 0 ? (
           <div className='text - sm opacity - 70'>No notes yet.</div>) : (
           <ul className='space - y-2'>;
             {notes.map (number => (
@@ -406,11 +395,10 @@ if ( {) {
                 <div className='opacity - 60 text - xs mb - 1'>;
                   {new Date (n.created_at).toLocaleString ()}  {n.author_id}
                 </div>                <div>{n.text}</div>          <ul className="space - y-2">;
-            {notes.map ((n) => (
+            {notes.map (n) => (
               <li key={n.id} className="rounded border p - 2 text - sm">;
                 <div className="opacity - 60 text - xs mb - 1">{new Date (n.created_at).toLocaleString ()}  {n.author_id}</div>;
-              </li>))}
+              </li>)}
           </ul>)}
       </div>;
     </div>);
-}

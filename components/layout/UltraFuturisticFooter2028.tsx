@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React from 'react';
 import Link from 'next/link';
 
@@ -74,7 +74,7 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com',};  website: 'https://ziontechgroup.com'
-}
+
 const serviceCategories = [
   {
     title: ' 2028 Futuristic Innovations'
@@ -227,14 +227,14 @@ import {
   GraduationCap, Scale, Building, Factory, Camera;
   Video, Music, Gamepad2, Sun, Moon, Wind, Droplets;
   Code
-} from 'lucide-react';
+ from 'lucide-react';
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+;
 
 const serviceCategories = [
   {
@@ -306,8 +306,7 @@ const contact_info = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com', }  website: 'https://ziontechgroup.com';
-}
-;
+
 const service_categories = [;
   {
     title: ' 2028 Futuristic Innovations',
@@ -410,14 +409,13 @@ const service_categories = [;
       { name: 'AI Legal Research Platform', href: '/ai - legal - research - platform' }
     ];
   }
-];
+;
 
 const contactInfo = {;
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup && ziontechgroup.com',;
   address: '364 E Main St STE 1008 Middletown DE 19709',;
   website: 'https://ziontechgroup && ziontechgroup.com',};  website: 'https://ziontechgroup && ziontechgroup.com';
-};
 
 const serviceCategories = [;
   {;
@@ -521,7 +519,7 @@ const serviceCategories = [;
       { name: 'AI Legal Research Platform', href: '/ai-legal-research-platform' }
     ];
   }
-];
+;
 const companyLinks = [
   { name: 'About Us', href: '/about', icon: Users }
   { name: 'Case Studies', href: '/case-studies', icon: Briefcase }
@@ -535,7 +533,7 @@ const companyLinks = [
   { name: 'Careers', href: '/careers', icon: TrendingUp },
   { name: 'Contact', href: '/contact', icon: MessageCircle },
   { name: 'Support', href: '/support', icon: ShieldCheck }
-];
+;
 const resourceLinks = [
   { name: 'Documentation', href: '/docs', icon: BookOpen }
   { name: 'API Reference', href: '/api', icon: Cpu }
@@ -548,7 +546,7 @@ const resourceLinks = [
   { name: 'Mobile Apps', href: '/mobile', icon: Globe },
   { name: 'Cloud Services', href: '/cloud', icon: Cloud },
   { name: 'Security Center', href: '/security', icon: Shield }
-];
+;
 const socialLinks = [
   {
     name: 'LinkedIn'
@@ -570,7 +568,7 @@ const socialLinks = [
   { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: MessageCircle }
   { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Video }
   { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Code }
-];
+;
 
 export default function UltraFuturisticFooter2028() {;
   return (
@@ -691,7 +689,7 @@ export default function UltraFuturisticFooter2028() {;
                   className="w-10 h-10 bg-purple-900/30 hover:bg-purple-900/50 border border-purple-500/30 rounded-lg flex items-center justify-center text-purple-300 hover:text-white transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/40">;
                   <social && social.icon className="w-5 h-5" />;
                 </a>;
-              ))}
+              )}
             </div>
           </div>
           {/* Service Categories */}
@@ -713,11 +711,11 @@ export default function UltraFuturisticFooter2028() {;
                           className='text-sm text-purple-200 hover:text-white transition-colors hover:underline'>               Our Services;
             </h3>;
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
-              {serviceCategories && serviceCategories.map((category) => (;
+              {serviceCategories && serviceCategories.map(category) => (;
                 <div key={category && category.title} className="space-y-3">;
                   <h4 className="font-medium text-purple-300">{category && category.title}</h4>;
                   <ul className="space-y-2">;
-                    {category && category.services.map((service) => (;
+                    {category && category.services.map(service) => (;
                       <li key={service && service.name}>;
                         <Link
                           href={service && service.href}
@@ -731,10 +729,10 @@ export default function UltraFuturisticFooter2028() {;
                           {service.name}
                         </Link>
                       </li>
-                    ))}
+                    )}
                   </ul>;
                 </div>;
-              ))}
+              )}
             </div>
           </div>
           {/* Quick Links */}
@@ -758,7 +756,7 @@ export default function UltraFuturisticFooter2028() {;
             <div className="mb-6">;
               <h4 className="font-medium text-purple-300 mb-3">Company</h4>;
               <ul className="space-y-2">;
-                {companyLinks && companyLinks.map((link) => (;
+                {companyLinks && companyLinks.map(link) => (;
                   <li key={link && link.name}>;
                     <Link
                       href={link && link.href}
@@ -771,7 +769,7 @@ export default function UltraFuturisticFooter2028() {;
             <div className="mb - 6">;
               <h4 className="font - medium text - purple - 300 mb - 3">Company</h4>;
               <ul className="space - y-2">;
-                {company_links.map ((link) => (
+                {company_links.map (link) => (
                   <li key={link.name}>;
                     <Link;
                       href={link.href}
@@ -780,14 +778,14 @@ export default function UltraFuturisticFooter2028() {;
                       <link.icon className="w - 4 h - 4" />;
                       <span>{link.name}</span>;
                     </Link>;
-                  </li>))}
+                  </li>)}
               </ul>;
             </div>;
             {/* Resource Links */}
             <div className="mb-6">
               <h4 className="font-medium text-purple-300 mb-3">Resources</h4>
               <ul className="space-y-2">
-                {resourceLinks.map((link) => (
+                {resourceLinks.map(link) => (
                   <li key={link.name}>
                     <Link
                       href={link.href}
@@ -797,7 +795,7 @@ export default function UltraFuturisticFooter2028() {;
                       <span>{link.name}</span>
                     </Link>
                   </li>
-                ))}
+                )}
               </ul>
             </div>
             {/* Resource Links */}
@@ -817,7 +815,7 @@ export default function UltraFuturisticFooter2028() {;
                       <span>{link && link.name}</span>;
                     </Link>;
                   </li>;
-                ))}
+                )}
               </ul>
             </div>
             {/* Newsletter Signup */}
@@ -867,7 +865,7 @@ export default function UltraFuturisticFooter2028() {;
                       <link.icon className="w - 4 h - 4" />;
                       <span>{link.name}</span>;
                     </Link>;
-                  </li>))}
+                  </li>)}
               </ul>;
             </div>;
             {/* Newsletter Signup */}
@@ -1050,8 +1048,8 @@ export default function UltraFuturisticFooter2028() {;
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-full blur-2xl"></div>
       </div>
     </footer>
-);
-}
+;
+
           className='w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center text-white shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 transform hover:shadow-lg hover:shadow-cyan-400/40 group'>;
           <MessageCircle className='w-8 h-8 group-hover:rotate-12 transition-transform duration-300' />        </Link>;
       </div>;
@@ -1077,7 +1075,7 @@ export default function UltraFuturisticFooter2028() {;
       </div>;
     </footer>;
   );
-}
+
       {/* Floating Action Button */}
       <div className='fixed bottom - 6 right - 6 z - 50'>;
         <Link;
@@ -1105,4 +1103,3 @@ export default function UltraFuturisticFooter2028() {;
         <div className="absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 w - 64 h - 64 bg - gradient - to - r from - purple - 500 / 10 to - blue - 500 / 10 rounded - full blur - 2xl"></div>;
       </div>;
     </footer>);
-}

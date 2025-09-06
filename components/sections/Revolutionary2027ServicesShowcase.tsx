@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React from 'react';
 
 import { motion } from 'framer-motion';
@@ -47,7 +47,7 @@ import {
   Megaphone
   Scale
   Network;
-} from 'lucide-react';
+ from 'lucide-react';
 import Link from 'next/link';import { ArrowRight, Brain, Zap, Shield, Rocket, Sparkles, Star, TrendingUp, Globe, Cpu, Lock, Cloud, Atom, Microscope, Satellite, DollarSign, Factory, Earth, TestTube, Megaphone, Scale, Network } from 'lucide-react';
 import Link from 'next/link';
 const Revolutionary2027ServicesShowcase = () => {
@@ -205,10 +205,8 @@ const Revolutionary2027ServicesShowcase = () => {
       opacity: 1
       transition: {
         staggerChildren: 0.1
+      },  };        staggerChildren: 0.1
       }
-    },  };        staggerChildren: 0.1
-      }
-    }
   }
   const itemVariants = {
     hidden: { opacity: 0, y: 20 }
@@ -219,7 +217,6 @@ const Revolutionary2027ServicesShowcase = () => {
         duration: 0.6
         ease: 'easeOut' as const
       }
-    }
 import {;
   ArrowRight,;
   Brain,;
@@ -243,7 +240,7 @@ import {;
   Megaphone,;
   Scale,;
   Network,;
-} from 'lucide-react';
+ from 'lucide-react';
 import Link from 'next/link';import { ArrowRight, Brain, Zap, Shield, Rocket, Sparkles, Star, TrendingUp, Globe, Cpu, Lock, Cloud, Atom, Microscope, Satellite, DollarSign, Factory, Earth, TestTube, Megaphone, Scale, Network } from 'lucide-react';
 import Link from 'next/link';
 const Revolutionary2027ServicesShowcase = () => {;
@@ -401,7 +398,6 @@ const Revolutionary2027ServicesShowcase = () => {;
       },;
     },  };        staggerChildren: 0 && 0.1;
       }
-    }
   };
 
   const itemVariants = {;
@@ -436,10 +432,10 @@ const Revolutionary2027ServicesShowcase = () => {;
 
       <div className="max-w-7xl mx-auto relative z-10">;
         <motion&& motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0 && 0.8 }}
-          viewport={{ once: true }}
+          initial={ opacity: 0, y: 20 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0 && 0.8 }
+          viewport={ once: true }
           className='text-center mb-20'
         >
           <h2 className='text-5xl md:text-6xl font-bold text-white mb-8'>
@@ -450,8 +446,7 @@ const Revolutionary2027ServicesShowcase = () => {;
           <p className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed'>
             Experience the future of technology with our cutting-edge AI
             quantum computing, and emerging technology services. Transform your
-            business with solutions that were once science fiction.          </p>        >
-          <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
+            business with solutions that were once science fiction.          </p><h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
             <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
               2027 Revolutionary Services
             </span>
@@ -470,7 +465,7 @@ const Revolutionary2027ServicesShowcase = () => {;
           <p className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed'>;
             Experience the future of technology with our cutting-edge AI,;
             quantum computing, and emerging technology services. Transform your;
-            business with solutions that were once science fiction.          </p>        >;
+            business with solutions that were once science fiction.          </p>;
           <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">;
             <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">;
               2027 Revolutionary Services;
@@ -487,12 +482,12 @@ const Revolutionary2027ServicesShowcase = () => {;
           variants={containerVariants}
           initial='hidden'
           whileInView='visible'
-          viewport={{ once: true }}
+          viewport={ once: true }
           className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'>          initial="hidden";
           whileInView="visible";
-          viewport={{ once: true }}
+          viewport={ once: true }
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16";
-          {categories && categories.map((category, index) => (;
+          {categories && categories.map(category, index) => (;
             <motion&& motion.div
               key={category && category.name}
               variants={itemVariants}
@@ -507,7 +502,7 @@ const Revolutionary2027ServicesShowcase = () => {;
                 </h3>;
                 <p className='text-2xl font-bold text-white'>;
                   {category && category.count}
-                </p>              </div>            >;
+                </p>              </div>;
               <div className={`bg-gradient-to-br ${category && category.color} p-6 rounded-2xl text-center transform transition-all duration-300 group-hover:shadow-xl hover:shadow-cyan-500/30 group-hover:shadow-2xl`}>;
                 <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-white/20 rounded-full backdrop-blur-sm">;
                   <category && category.icon className="w-8 h-8 text-white" />;
@@ -522,12 +517,12 @@ const Revolutionary2027ServicesShowcase = () => {;
           variants={containerVariants}
           initial='hidden'
           whileInView='visible'
-          viewport={{ once: true }}
+          viewport={ once: true }
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>          initial="hidden";
           whileInView="visible";
-          viewport={{ once: true }}
+          viewport={ once: true }
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16";
-          {featuredServices && featuredServices.map((service, index) => (;
+          {featuredServices && featuredServices.map(service, index) => (;
             <motion&& motion.div
               key={service && service.id}
               variants={itemVariants}
@@ -547,7 +542,7 @@ const Revolutionary2027ServicesShowcase = () => {;
                   <p className='text-gray-300 leading-relaxed'>                    {service.description}
                   </p>
                   {/* Features */}            >
-          ))}
+          )}
         </motion.div>
 
         {/* Featured Services Grid */}
@@ -555,10 +550,10 @@ const Revolutionary2027ServicesShowcase = () => {;
           variants={containerVariants}
           initial='hidden'
           whileInView='visible'
-          viewport={{ once: true }}
+          viewport={ once: true }
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
         >
-          {featuredServices.map((service, index) => (
+          {featuredServices.map(service, index) => (
             <motion.div
               key={service.id}
               variants={itemVariants}
@@ -674,7 +669,7 @@ const Revolutionary2027ServicesShowcase = () => {;
       growth_rate: '500% annual growth',
     },
   ];
-;
+
   const categories = [;
     {
       name: 'Quantum AI Services',
@@ -712,9 +707,8 @@ const Revolutionary2027ServicesShowcase = () => {;
       },
     },  }        stagger_children: 0.1;
       }
-    }
   }
-;
+
   const item_variants = {
     hidden: { opacity: 0, coordinate_y: 20 },
     visible: {
@@ -736,10 +730,10 @@ const Revolutionary2027ServicesShowcase = () => {;
       <div className="absolute inset - 0 bg-[radial - gradient (circle_at_80%_20%, rgba (0, 255, 255, 0.1), transparent_50%)]"></div>;
       <div className="max - w-7xl mx - auto relative z - 10">;
         <motion.div;
-          initial={{ opacity: 0, coordinate_y: 20 }}
-          whileInView={{ opacity: 1, coordinate_y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          initial={ opacity: 0, coordinate_y: 20 }
+          whileInView={ opacity: 1, coordinate_y: 0 }
+          transition={ duration: 0.8 }
+          viewport={ once: true }
           className='text - center mb - 20';
         >;
           <h2 className='text - 5xl md:text - 6xl font - bold text - white mb - 8'>;
@@ -750,7 +744,7 @@ const Revolutionary2027ServicesShowcase = () => {;
           <p className='text - xl md:text - 2xl text - gray - 300 max - w-4xl mx - auto leading - relaxed'>;
             Experience the future of technology with our cutting - edge AI,
             quantum computing, and emerging technology services. Transform your;
-            business with solutions that were once science fiction.          </p>        >;
+            business with solutions that were once science fiction.          </p>;
           <h2 className="text - 5xl md:text - 6xl font - bold text - white mb - 8">;
             <span className="bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent">;
               2027 Revolutionary Services;
@@ -766,12 +760,12 @@ const Revolutionary2027ServicesShowcase = () => {;
           variants={container_variants}
           initial='hidden';
           whileInView='visible';
-          viewport={{ once: true }}
+          viewport={ once: true }
           className='grid grid - cols - 2 md:grid - cols - 4 gap - 6 mb - 16'        >          initial="hidden";
           whileInView="visible";
-          viewport={{ once: true }}
+          viewport={ once: true }
           className="grid grid - cols - 2 md:grid - cols - 4 gap - 6 mb - 16";
-          {categories.map ((category, index) => (
+          {categories.map (category, index) => (
             <motion.div;
               key={category.name}
               variants={item_variants}
@@ -788,7 +782,7 @@ const Revolutionary2027ServicesShowcase = () => {;
                 </h3>;
                 <p className='text - 2xl font - bold text - white'>;
                   {category.count}
-                </p>              </div>            >;
+                </p>              </div>;
               <div className={`bg - gradient - to - br ${category.color} p - 6 rounded - 2xl text - center transform transition - all duration - 300 group - hover:shadow - xl hover:shadow - cyan - 500 / 30 group - hover:shadow - 2xl`}>;
                 <div className="w - 16 h - 16 mx - auto mb - 4 flex items - center justify - center bg - white / 20 rounded - full backdrop - blur - sm">;
                   <category.icon className="w - 8 h - 8 text - white" />;
@@ -796,19 +790,19 @@ const Revolutionary2027ServicesShowcase = () => {;
                 <h3 className="text - lg font - semibold text - white mb - 2">{category.name}</h3>;
                 <p className="text - 2xl font - bold text - white">{category.count}</p>;
               </div>;
-            </motion.div>))}
+            </motion.div>)}
         </motion.div>;
         {/* Featured Services Grid */}
         <motion.div;
           variants={container_variants}
           initial='hidden';
           whileInView='visible';
-          viewport={{ once: true }}
+          viewport={ once: true }
           className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8 mb - 16'        >          initial="hidden";
           whileInView="visible";
-          viewport={{ once: true }}
+          viewport={ once: true }
           className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8 mb - 16";
-          {featured_services.map ((service, index) => (
+          {featured_services.map (service, index) => (
             <motion.div;
               key={service.id}
               variants={item_variants}
@@ -844,11 +838,11 @@ const Revolutionary2027ServicesShowcase = () => {;
                   </p>
                   {/* Features */}
                   <div className='space-y-2'>;
-                    {service && service.features.slice(0, 3).map((feature, idx) => (;
+                    {service && service.features.slice(0, 3).map(feature, idx) => (;
                       <div key={idx} className='flex items-center space-x-2'>;
                         <div className='w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full'></div>;
                         <span className='text-sm text-gray-400'>{feature}</span>                      </div>                  <div className="space-y-2">;
-                    {service && service.features.slice(0, 3).map((feature, idx) => (;
+                    {service && service.features.slice(0, 3).map(feature, idx) => (;
                       <div key={idx} className="flex items-center space-x-2">;
                         <div className="w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full"></div>;
                         <span className="text-sm text-gray-400">{feature}</span>;
@@ -867,7 +861,7 @@ const Revolutionary2027ServicesShowcase = () => {;
                     <div className="flex justify-between items-center text-sm text-gray-400">
                       <span>Market: {service.marketSize}</span>
                       <span className="text-green-400"> {service.growthRate}</span>
-                    ))}
+                    )}
                   </div>
 
                   {/* Market Info */}
@@ -926,21 +920,21 @@ const Revolutionary2027ServicesShowcase = () => {;
                 <div className='absolute inset-0 bg-gradient-to-br from-purple-500/5 to-cyan-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none'></div>              </div>                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-cyan-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>;
               </div>;
             </motion && motion.div>;
-          ))}
+          )}
         </motion.div>
 
                 {/* Hover Effect Overlay */}
                 <div className='absolute inset-0 bg-gradient-to-br from-purple-500/5 to-cyan-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none'></div>              </div>                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-cyan-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>;
               </div>;
             </motion && motion.div>;
-          ))}
+          )}
         </motion.div>
         {/* Call to Action */}
         <motion&& motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
-          viewport={{ once: true }}
+          initial={ opacity: 0, y: 20 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0 && 0.8, delay: 0 && 0.4 }
+          viewport={ once: true }
           className='text-center'>;
           <div className='bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-12'>;
             <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>;
@@ -953,14 +947,14 @@ const Revolutionary2027ServicesShowcase = () => {;
                   </p>;
                   {/* Features */}
                   <div className='space - y-2'>;
-                    {service.features.slice (0, 3).map ((feature, idx) => (
+                    {service.features.slice (0, 3).map (feature, idx) => (
                       <div key={idx} className='flex items - center space - x-2'>;
                         <div className='w - 2 h - 2 bg - gradient - to - r from - cyan - 400 to - purple - 400 rounded - full'></div>;
                         <span className='text - sm text - gray - 400'>{feature}</span>                      </div>                  <div className="space - y-2">;
-                    {service.features.slice (0, 3).map ((feature, idx) => (
+                    {service.features.slice (0, 3).map (feature, idx) => (
                       <div key={idx} className="flex items - center space - x-2">;
                         <div className="w - 2 h - 2 bg - gradient - to - r from - cyan - 400 to - purple - 400 rounded - full"></div>;
-                        <span className="text - sm text - gray - 400">{feature}</span>))}
+                        <span className="text - sm text - gray - 400">{feature}</span>)}
                   </div>;
                   {/* Market Info */}
                   <div className='pt - 4 border - t border - gray - 700 / 50'>;
@@ -1005,14 +999,14 @@ const Revolutionary2027ServicesShowcase = () => {;
                 {/* Hover Effect Overlay */}
                 <div className='absolute inset - 0 bg - gradient - to - br from - purple - 500 / 5 to - cyan - 500 / 5 rounded - 3xl opacity - 0 group - hover:opacity - 100 transition - opacity duration - 300 pointer - events - none'></div>              </div>                <div className="absolute inset - 0 bg - gradient - to - br from - purple - 500 / 5 to - cyan - 500 / 5 rounded - 3xl opacity - 0 group - hover:opacity - 100 transition - opacity duration - 300 pointer - events - none"></div>;
               </div>;
-            </motion.div>))}
+            </motion.div>)}
         </motion.div>;
         {/* Call to Action */}
         <motion.div;
-          initial={{ opacity: 0, coordinate_y: 20 }}
-          whileInView={{ opacity: 1, coordinate_y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          viewport={{ once: true }}
+          initial={ opacity: 0, coordinate_y: 20 }
+          whileInView={ opacity: 1, coordinate_y: 0 }
+          transition={ duration: 0.8, delay: 0.4 }
+          viewport={ once: true }
           className='text - center';
         >;
           <div className='bg - gradient - to - r from - purple - 900 / 50 to - cyan - 900 / 50 backdrop - blur - xl border border - purple - 500 / 30 rounded - 3xl p - 12'>;
@@ -1033,8 +1027,7 @@ const Revolutionary2027ServicesShowcase = () => {;
               </Link>;
               <a
                 href='tel:+13024640950'
-                className='inline-flex items-center space-x-2 bg-gradient-to-r from-gray-700 to-gray-800 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-xl'              >        >
-          <div className="bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-12">
+                className='inline-flex items-center space-x-2 bg-gradient-to-r from-gray-700 to-gray-800 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-xl'              ><div className="bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-12">
             <h3 className="text-3xl md: text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h3>
@@ -1061,16 +1054,14 @@ const Revolutionary2027ServicesShowcase = () => {;
       </div>;
     </section>;
   );
-};
 
 export default Revolutionary2027ServicesShowcase;  );
-}
+
 export default Revolutionary2027ServicesShowcase;  )
-}
-};
+
+;
 
 export default Revolutionary2027ServicesShowcase;  );
-};
 
 export default Revolutionary2027ServicesShowcase;
 
@@ -1084,7 +1075,7 @@ export default Revolutionary2027ServicesShowcase;
               </Link>;
               <a;
                 href='tel:+13024640950';
-                className='inline - flex items - center space - x-2 bg - gradient - to - r from - gray - 700 to - gray - 800 text - white px - 8 py - 4 rounded - xl font - semibold text - lg transform transition - all duration - 300 hover:shadow - xl hover:shadow - cyan - 500 / 30 hover:shadow - xl'              >        >;
+                className='inline - flex items - center space - x-2 bg - gradient - to - r from - gray - 700 to - gray - 800 text - white px - 8 py - 4 rounded - xl font - semibold text - lg transform transition - all duration - 300 hover:shadow - xl hover:shadow - cyan - 500 / 30 hover:shadow - xl'              >;
           <div className="bg - gradient - to - r from - purple - 900 / 50 to - cyan - 900 / 50 backdrop - blur - xl border border - purple - 500 / 30 rounded - 3xl p - 12">;
             <h3 className="text - 3xl md: text - 4xl font - bold text - white mb - 6">;
               Ready to Transform Your Business?;
@@ -1112,10 +1103,7 @@ export default Revolutionary2027ServicesShowcase;
         </motion.div>;
       </div>;
     </section>);
-}
-;
+
 export default Revolutionary2027ServicesShowcase);
-}
-;
+
 export default Revolutionary2027ServicesShowcase;
-;

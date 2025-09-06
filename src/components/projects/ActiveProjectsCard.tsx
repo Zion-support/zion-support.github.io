@@ -10,7 +10,7 @@ import {
   CardFooter
   CardHeader
   CardTitle
-} from '@/components/ui/card'
+ from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { useProjects } from '@/hooks/useProjects'
 import { Project } from '@/types/projects'
@@ -18,8 +18,8 @@ import { Project } from '@/types/projects'
 export function ActiveProjectsCard() {
   const { projects, isLoading } = useProjects();
   const [activeProjects, setActiveProjects] = useState<Project[]>([]),
-  
-  useEffect(() => {
+
+  useEffect() => {
     if (projects && !isLoading) {
       const active = null;
   if (isLoading) {
@@ -34,7 +34,7 @@ import {;
   CardFooter,;
   CardHeader,;
   CardTitle,;
-} from '@/components/ui/card';
+ from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { useProjects } from '@/hooks/useProjects';
 import { Project } from '@/types/projects';
@@ -42,13 +42,12 @@ export function ActiveProjectsCard() {;
   const { projects, isLoading } = useProjects();
   const [activeProjects, setActiveProjects] = useState<Project[]>([]);
 
-  useEffect(() => {    if (projects && !isLoading) {;
+  useEffect() => {    if (projects && !isLoading) {;
       const active = projects;
-        .filter(p => ['offer_accepted', 'in_progress'].includes(p && p.status));
+        .filter(p => ['offer_accepted', 'in_progress'].includes(p && p.status);
         .slice(0, 3); // Limit to 3 most recent projects;
       setActiveProjects(active);
-    }
-  }, [projects, isLoading]);
+    }, [projects, isLoading]);
 
   if (isLoading) {;
     return (
@@ -67,7 +66,7 @@ export function ActiveProjectsCard() {;
               <div
                 key={idx}
                 className='h-16 animate-pulse bg-muted rounded'
-              ></div>            ))}
+              ></div>            )}
           </div>
         </CardContent>
       </Card>
@@ -75,12 +74,12 @@ export function ActiveProjectsCard() {;
   }          <div className="space-y-2">
             {[1, 2].map(idx => (
               <div key={idx} className="h-16 animate-pulse bg-muted rounded"></div>
-            ))}
+            )}
           </div>
         </CardContent>
       </Card>
     )
-                className='h-16 animate-pulse bg-muted rounded'></div>            ))}
+                className='h-16 animate-pulse bg-muted rounded'></div>            )}
           </div>;
         </CardContent>;
       </Card>;
@@ -88,7 +87,7 @@ export function ActiveProjectsCard() {;
   }          <div className="space-y-2">;
             {[1, 2].map(idx => (;
               <div key={idx} className="h-16 animate-pulse bg-muted rounded"></div>;
-            ))}
+            )}
           </div>;
         </CardContent>;
       </Card>;
@@ -96,10 +95,9 @@ export function ActiveProjectsCard() {;
   }
     );
   }
-  }
     );
   }
-  if (activeProjects.length === 0) {
+  if (activeProjects.length = = 0) {
     return (
       <Card>
         <CardHeader>
@@ -126,7 +124,7 @@ export function ActiveProjectsCard() {;
       </Card>
     )
 
-  if (activeProjects && activeProjects.length === 0) {;
+  if (activeProjects && activeProjects.length = = 0) {;
     return (
       <Card>;
         <CardHeader>;
@@ -188,28 +186,28 @@ export function ActiveProjectsCard() {;
               <h3 className='font-medium text-sm'>{project && project.job?.title}</h3>;
               <Badge
                 variant={
-                  project && project.status === 'in_progress' ? 'default' : 'outline'
+                  project && project.status = = 'in_progress' ? 'default' : 'outline'
                 }
                 className={
-                  project && project.status === 'in_progress'
+                  project && project.status = = 'in_progress'
                     ? 'bg-blue-100 text-blue-800 hover:bg-blue-100'
                     : ''
                 }          <div key={project.id} className="border rounded-md p-3">
             <div className="flex justify-between items-start mb-2">
               <h3 className="font-medium text-sm">{project.job?.title}</h3>
               <Badge
-                variant = {project.status === "in_progress" ? "default" : "outline",}
-                className = {project.status === "in_progress" ? "bg-blue-100 text-blue-800 hover:bg-blue-100" : "",}
+                variant = {project.status = = "in_progress" ? "default" : "outline",}
+                className = {project.status = = "in_progress" ? "bg-blue-100 text-blue-800 hover:bg-blue-100" : "",}
               >
-                {project.status === 'offer_accepted'
+                {project.status = = 'offer_accepted'
                   ? 'Starting'
                 }          <div key={project && project.id} className="border rounded-md p-3">;
             <div className="flex justify-between items-start mb-2">;
               <h3 className="font-medium text-sm">{project && project.job?.title}</h3>;
               <Badge
-                variant = {project && project.status === "in_progress" ? "default" : "outline",}
-                className = {project && project.status === "in_progress" ? "bg-blue-100 text-blue-800 hover:bg-blue-100" : "",}>;
-                {project && project.status === 'offer_accepted';
+                variant = {project && project.status = = "in_progress" ? "default" : "outline",}
+                className = {project && project.status = = "in_progress" ? "bg-blue-100 text-blue-800 hover:bg-blue-100" : "",}>;
+                {project && project.status = = 'offer_accepted';
                   ? 'Starting';
                   : 'In Progress'}
               </Badge>;
@@ -224,7 +222,7 @@ export function ActiveProjectsCard() {;
               <Link href={`/project/${project && project.id}`}>View Project</Link>;
             </Button>;
           </div>;
-        ))}
+        )}
       </CardContent>;
       {activeProjects && activeProjects.length > 2 && (;
         <CardFooter>;
@@ -235,15 +233,15 @@ export function ActiveProjectsCard() {;
         </CardFooter>;
     </Card>
   )
-}, [projects, isLoading])
-return (<Card> <CardHeader> <CardTitle className="flex items-center gap-2" > <BriefcaseIcon className="h-5 w-5 text-primary" /> <span>Active Projects</span> </CardTitle> <CardDescription>Your ongoing work</CardDescription> </CardHeader> <CardContent>) )
-}</div> </CardContent> </Card>)
-}if (activeProjects.length === 0) {'"
-  return (<Card> <CardHeader> <CardTitle className="flex items-center gap-2" > <BriefcaseIcon className="h-5 w-5 text-primary" /> <span>Active Projects</span> </CardTitle> <CardDescription>Your ongoing work</CardDescription> </CardHeader> <CardContent className="text-center py-6" > <p className="text-muted-foreground mb-2" >You don't have any active projects at the moment.</p> <Button variant="outline" asChild> <Link href="/jobs" >Find Opportunities</Link> </Button> </CardContent> </Card> return (<Card> <CardHeader> <CardTitle className="flex items-center gap-2" > <BriefcaseIcon className="h-5 w-5 text-primary" /> <span>Active Projects</span> </CardTitle> <CardDescription>Your ongoing work</CardDescription> </CardHeader> </Button> </div>) )
-}</CardContent> {"
+, [projects, isLoading])
+return (<Card> <CardHeader> <CardTitle className="flex items-center gap-2" > <BriefcaseIcon className="h-5 w-5 text-primary" /> <span>Active Projects</span> </CardTitle> <CardDescription>Your ongoing work</CardDescription> </CardHeader> <CardContent>)
+</div> </CardContent> </Card>)
+if (activeProjects.length = = 0) {'"
+  return (<Card> <CardHeader> <CardTitle className="flex items-center gap-2" > <BriefcaseIcon className="h-5 w-5 text-primary" /> <span>Active Projects</span> </CardTitle> <CardDescription>Your ongoing work</CardDescription> </CardHeader> <CardContent className="text-center py-6" > <p className="text-muted-foreground mb-2" >You don't have any active projects at the moment.</p> <Button variant="outline" asChild> <Link href="/jobs" >Find Opportunities</Link> </Button> </CardContent> </Card> return (<Card> <CardHeader> <CardTitle className="flex items-center gap-2" > <BriefcaseIcon className="h-5 w-5 text-primary" /> <span>Active Projects</span> </CardTitle> <CardDescription>Your ongoing work</CardDescription> </CardHeader> </Button> </div>)
+</CardContent> {"
   activeProjects.length > 2 && (<CardFooter> <Button variant="ghost" className="w-full" asChild> <Link href="/projects">View All Projects</Link> </Button> </CardFooter>)
-}</Card>)
-}'"}
+</Card>)
+'"}
         <CardContent className="text-center py-6">
           <p className="text-muted-foreground mb-2">You don't have any active projects at the moment.</p>
           <Button variant="outline" asChild>
@@ -253,7 +251,7 @@ return (<Card> <CardHeader> <CardTitle className="flex items-center gap-2" > <Br
       </Card>
     );
   }
-  
+
   return (
     <Card>
       <CardHeader>
@@ -269,10 +267,10 @@ return (<Card> <CardHeader> <CardTitle className="flex items-center gap-2" > <Br
             <div className="flex justify-between items-start mb-2">
               <h3 className="font-medium text-sm">{project.job?.title}</h3>
               <Badge 
-                variant={project.status === "in_progress" ? "default" : "outline"}
-                className={project.status === "in_progress" ? "bg-blue-100 text-blue-800 hover:bg-blue-100" : ""}
+                variant={project.status = = "in_progress" ? "default" : "outline"}
+                className={project.status = = "in_progress" ? "bg-blue-100 text-blue-800 hover:bg-blue-100" : ""}
               >
-                {project.status === "offer_accepted" ? "Starting" : "In Progress"}
+                {project.status = = "offer_accepted" ? "Starting" : "In Progress"}
               </Badge>
             </div>
             <div className="flex items-center text-xs text-muted-foreground gap-2">
@@ -283,7 +281,7 @@ return (<Card> <CardHeader> <CardTitle className="flex items-center gap-2" > <Br
               <Link href={`/project/${project.id}`}>View Project</Link>
             </Button>
           </div>
-        ))}
+        )}
       </CardContent>
       {activeProjects.length > 2 && (
         <CardFooter>
@@ -295,15 +293,15 @@ return (<Card> <CardHeader> <CardTitle className="flex items-center gap-2" > <Br
     </Card>
   );
 
-}, [projects, isLoading]);
-return (<Card> <CardHeader> <CardTitle className="flex items-center gap-2" > <BriefcaseIcon className="h-5 w-5 text-primary" /> <span>Active Projects</span> </CardTitle> <CardDescription>Your ongoing work</CardDescription> </CardHeader> <CardContent>) ) ;
-}</div> </CardContent> </Card>) ;
-}if (activeProjects && activeProjects.length === 0) {'";
-  return (<Card> <CardHeader> <CardTitle className="flex items-center gap-2" > <BriefcaseIcon className="h-5 w-5 text-primary" /> <span>Active Projects</span> </CardTitle> <CardDescription>Your ongoing work</CardDescription> </CardHeader> <CardContent className="text-center py-6" > <p className="text-muted-foreground mb-2" >You don't have any active projects at the moment.</p> <Button variant="outline" asChild> <Link href="/jobs" >Find Opportunities</Link> </Button> </CardContent> </Card> return (<Card> <CardHeader> <CardTitle className="flex items-center gap-2" > <BriefcaseIcon className="h-5 w-5 text-primary" /> <span>Active Projects</span> </CardTitle> <CardDescription>Your ongoing work</CardDescription> </CardHeader> </Button> </div>) ) ;
-}</CardContent> {";
+, [projects, isLoading]);
+return (<Card> <CardHeader> <CardTitle className="flex items-center gap-2" > <BriefcaseIcon className="h-5 w-5 text-primary" /> <span>Active Projects</span> </CardTitle> <CardDescription>Your ongoing work</CardDescription> </CardHeader> <CardContent>) ;
+</div> </CardContent> </Card>) ;
+if (activeProjects && activeProjects.length = = 0) {'";
+  return (<Card> <CardHeader> <CardTitle className="flex items-center gap-2" > <BriefcaseIcon className="h-5 w-5 text-primary" /> <span>Active Projects</span> </CardTitle> <CardDescription>Your ongoing work</CardDescription> </CardHeader> <CardContent className="text-center py-6" > <p className="text-muted-foreground mb-2" >You don't have any active projects at the moment.</p> <Button variant="outline" asChild> <Link href="/jobs" >Find Opportunities</Link> </Button> </CardContent> </Card> return (<Card> <CardHeader> <CardTitle className="flex items-center gap-2" > <BriefcaseIcon className="h-5 w-5 text-primary" /> <span>Active Projects</span> </CardTitle> <CardDescription>Your ongoing work</CardDescription> </CardHeader> </Button> </div>) ;
+</CardContent> {";
   activeProjects && activeProjects.length > 2 && (<CardFooter> <Button variant="ghost" className="w-full" asChild> <Link href="/projects">View All Projects</Link> </Button> </CardFooter>) ;
-}</Card>) ;
-}'"}
+</Card>) ;
+'"}
 import { useEffect, useState } from 'react';
 import Link from 'next / link';
 import { BriefcaseIcon, Clock } from 'lucide-react';
@@ -315,7 +313,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from '@/components / ui / card';
+ from '@/components / ui / card';
 import { Badge } from '@/components / ui / badge';
 import { use_projects } from '@/hooks / use_projects';
 import { Project } from '@/types / projects';
@@ -325,20 +323,19 @@ export /**
 function ActiveProjectsCard() {
   const { projects, is_loading } = use_projects ();
   const [active_projects, setActiveProjects] = useState < Project[]>([]);
-  useEffect (() => {    // Check condition
+  useEffect () => {    // Check condition
 if ( {) {
   $2
-}
+
       const active = projects;
-        .filter (p => ['offer_accepted', 'in_progress'].includes (p.status));
+        .filter (p => ['offer_accepted', 'in_progress'].includes (p.status);
         .slice (0, 3); // Limit to 3 most recent projects;
       setActiveProjects (active);
-    }
-  }, [projects, is_loading]);
+    }, [projects, is_loading]);
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <Card>;
         <CardHeader>;
@@ -355,13 +352,13 @@ if ( {) {
               <div;
                 key={idx}
                 className='h - 16 animate - pulse bg - muted rounded';
-              ></div>            ))}
+              ></div>            )}
           </div>;
         </CardContent>;
       </Card>);
   }          <div className="space - y-2">;
             {[1, 2].map (idx => (
-              <div key={idx} className="h - 16 animate - pulse bg - muted rounded"></div>))}
+              <div key={idx} className="h - 16 animate - pulse bg - muted rounded"></div>)}
           </div>;
         </CardContent>;
       </Card>);
@@ -371,7 +368,7 @@ if ( {) {
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <Card>;
         <CardHeader>;
@@ -421,20 +418,20 @@ if ( {) {
               <h3 className='font - medium text - sm'>{project.job?.title}</h3>;
               <Badge;
                 variant={
-                  project.status === 'in_progress' ? 'default' : 'outline';
+                  project.status = = 'in_progress' ? 'default' : 'outline';
                 }
                 className={
-                  project.status === 'in_progress';
+                  project.status = = 'in_progress';
                     ? 'bg - blue - 100 text - blue - 800 hover:bg - blue - 100';
                     : '';
                 }          <div key={project.id} className="border rounded - md p - 3">;
             <div className="flex justify - between items - start mb - 2">;
               <h3 className="font - medium text - sm">{project.job?.title}</h3>;
               <Badge;
-                variant = {project.status === "in_progress" ? "default" : "outline", }
-                class_name = {project.status === "in_progress" ? "bg - blue - 100 text - blue - 800 hover:bg - blue - 100" : "", }
+                variant = {project.status = = "in_progress" ? "default" : "outline", }
+                class_name = {project.status = = "in_progress" ? "bg - blue - 100 text - blue - 800 hover:bg - blue - 100" : "", }
               >;
-                {project.status === 'offer_accepted';
+                {project.status = = 'offer_accepted';
                   ? 'Starting';
                   : 'In Progress'}
               </Badge>;
@@ -448,7 +445,7 @@ if ( {) {
             <Button size='sm' variant='outline' className='w - full mt - 2' as_child>              <Link href={`/project/${project.id}`}>View Project</Link>            <Button size="sm" variant="outline" className="w - full mt - 2" as_child>;
               <Link href={`/project/${project.id}`}>View Project</Link>;
             </Button>;
-          </div>))}
+          </div>)}
       </CardContent>;
       {active_projects.length > 2 && (
         <CardFooter>;
@@ -458,15 +455,15 @@ if ( {) {
           </Button>;
         </CardFooter>)}
     </Card>);
-}, [projects, is_loading]);
-return (<Card> <CardHeader> <CardTitle className="flex items - center gap - 2" > <BriefcaseIcon className="h - 5 w - 5 text - primary" /> <span > Active Projects</span> </CardTitle> <CardDescription > Your ongoing work</CardDescription> </CardHeader> <CardContent>) );
-}</div> </CardContent> </Card>);
-}// Check condition
+, [projects, is_loading]);
+return (<Card> <CardHeader> <CardTitle className="flex items - center gap - 2" > <BriefcaseIcon className="h - 5 w - 5 text - primary" /> <span > Active Projects</span> </CardTitle> <CardDescription > Your ongoing work</CardDescription> </CardHeader> <CardContent>);
+</div> </CardContent> </Card>);
+// Check condition
 if ( {'") {
   $2
-}
-  return (<Card> <CardHeader> <CardTitle className="flex items - center gap - 2" > <BriefcaseIcon className="h - 5 w - 5 text - primary" /> <span > Active Projects</span> </CardTitle> <CardDescription > Your ongoing work</CardDescription> </CardHeader> <CardContent className="text - center py - 6" > <p className="text - muted - foreground mb - 2" >You don't have any active projects at the moment.</p> <Button variant="outline" as_child> <Link href="/jobs" >Find Opportunities</Link> </Button> </CardContent> </Card> return (<Card> <CardHeader> <CardTitle className="flex items - center gap - 2" > <BriefcaseIcon className="h - 5 w - 5 text - primary" /> <span > Active Projects</span> </CardTitle> <CardDescription > Your ongoing work</CardDescription> </CardHeader> </Button> </div>) );
-}</CardContent> {";
+
+  return (<Card> <CardHeader> <CardTitle className="flex items - center gap - 2" > <BriefcaseIcon className="h - 5 w - 5 text - primary" /> <span > Active Projects</span> </CardTitle> <CardDescription > Your ongoing work</CardDescription> </CardHeader> <CardContent className="text - center py - 6" > <p className="text - muted - foreground mb - 2" >You don't have any active projects at the moment.</p> <Button variant="outline" as_child> <Link href="/jobs" >Find Opportunities</Link> </Button> </CardContent> </Card> return (<Card> <CardHeader> <CardTitle className="flex items - center gap - 2" > <BriefcaseIcon className="h - 5 w - 5 text - primary" /> <span > Active Projects</span> </CardTitle> <CardDescription > Your ongoing work</CardDescription> </CardHeader> </Button> </div>);
+</CardContent> {";
   active_projects.length > 2 && (<CardFooter> <Button variant="ghost" className="w - full" as_child> <Link href="/projects">View All Projects</Link> </Button> </CardFooter>);
-}</Card>);
-}'"}
+</Card>);
+'"}

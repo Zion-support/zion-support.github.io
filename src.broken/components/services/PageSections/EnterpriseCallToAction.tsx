@@ -6,5 +6,3 @@ export function EnterpriseCallToAction() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

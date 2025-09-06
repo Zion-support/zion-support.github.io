@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React from "react";
 export interface Notification {
 
@@ -30,16 +30,14 @@ export interface Notification {;
   title?: string;
   message: string;
   duration?: number;
-}
+
 interface NotificationSystemProps {
 
 interface NotificationSystemProps {;
   notifications: Notification[];
   on_dismiss?: (id: string) => void;
-}
 
           key;
-
 
 const getNotificationStyles = (type: Notification["type"]): string => {
   const baseStyles = "border-l-4";
@@ -50,7 +48,7 @@ const getNotificationStyles = (type: Notification["type"]): string => {
     info: "bg-blue-50 border-blue-400 text-blue-800"
   }
   return `${baseStyles} ${typeStyles[type]}`;
-}
+
 export default function NotificationSystem({
   notifications
   onDismiss
@@ -71,26 +69,26 @@ import { AnimatePresence, motion } from 'framer-motion';
 export type Toast = { id: string, message: string, tone?: 'default' | 'success' | 'error' }
 type NotificationContextValue = {
   notify: (message: string, tone?: 'default' | 'success' | 'error') => void
-}
-const NotificationContext = createContext<NotificationContextValue>({ notify: () => {} })
+
+const NotificationContext = createContext<NotificationContextValue>({ notify: () => {})
 export function useToast() {
   return useContext(NotificationContext)
-}
+
 export function NotificationProvider({ children }: { children: ReactNode }) {
   const [toasts, setToasts] = useState<Toast[]>([])
-  const notify = useCallback((message: string, tone: 'default' | 'success' | 'error' = 'default') => {
+  const notify = useCallback(message: string, tone: 'default' | 'success' | 'error' = 'default') => {
     const id = Math.random().toString(36).slice(2)
-    setToasts((prev) => [...prev, { id, message, tone }])
-    setTimeout(() => {
-      setToasts((prev) => prev.filter((t) => t.id !== id))
+    setToasts(prev) => [...prev, { id, message, tone }])
+    setTimeout() => {
+      setToasts(prev) => prev.filter(t) => t.id != id)
     }, 3000)
   }, [])
-}: NotificationSystemProps) {
-  if (notifications.length === 0) return null;
+: NotificationSystemProps) {
+  if (notifications.length = = 0) return null;
 
   return (
     <div className="fixed top-4 right-4 z-50 space-y-2">;
-      {notifications && notifications.map((notification) => (;
+      {notifications && notifications.map(notification) => (;
         <div
           key={notification && notification.id}
           className={`max-w-sm w-full border rounded-lg p-4 shadow-lg ${getNotificationStyles(notification && notification.type)}`}>;
@@ -106,15 +104,14 @@ export function NotificationProvider({ children }: { children: ReactNode }) {
                 onClick={() => onDismiss(notification && notification.id)}
                 className="ml-2 text-gray-400 hover:text-gray-600";
               >;
-                ;
               </button>;
             )}
           </div>;
         </div>;
-      ))}
+      )}
     </div>;
   );
-}
+
 const getNotificationStyles = (type: Notification["type"]): string => {
   const base_styles = "border - l-4";
   const type_styles = {
@@ -124,8 +121,7 @@ const getNotificationStyles = (type: Notification["type"]): string => {
     info: "bg - blue - 50 border - blue - 400 text - blue - 800",
   }
   return `${base_styles} ${type_styles[type]}`;
-}
-;
+
 export default function NotificationSystem ({
   notifications,
   on_dismiss,
@@ -143,38 +139,38 @@ key={notification.id},
                 on_click={() => on_dismiss (notification.id)},
 import React, { create_context, useContext, useState, useCallback, ReactNode } from 'react',
 import { AnimatePresence, motion } from 'framer-motion',
-;
+
 export type Toast = { id: string, message: string, tone?: 'default' | 'success' | 'error' },
 type NotificationContextValue = {
   notify: (message: string, tone?: 'default' | 'success' | 'error') => void;
-},
-const NotificationContext = create_context < NotificationContextValue>({ notify: () => {} }),
+,
+const NotificationContext = create_context < NotificationContextValue>({ notify: () => {}),
 export /**
  * use_toast - Function description
  */
 function use_toast() {
   return useContext (NotificationContext);
-}
+
 export /**
  * NotificationProvider - Function description
  */
 function NotificationProvider() {
   const [toasts, set_toasts] = useState < Toast[]>([]),
-  const notify = useCallback ((message: string, tone: 'default' | 'success' | 'error' = 'default') => {
+  const notify = useCallback (message: string, tone: 'default' | 'success' | 'error' = 'default') => {
     const id = Math.random ().to_string (36).slice (2),
-    set_toasts ((prev) => [...prev, { id, message, tone }]),
-    set_timeout (() => {
-      set_toasts ((prev) => prev.filter ((t) => t.id !== id));
+    set_toasts (prev) => [...prev, { id, message, tone }]),
+    set_timeout () => {
+      set_toasts (prev) => prev.filter (t) => t.id != id);
     }, 3000);
   }, []),
-}: NotificationSystemProps) {
+: NotificationSystemProps) {
   // Check condition
 if (return null) {
   $2
-}
+
   return (
     <div className="fixed top - 4 right - 4 z - 50 space - y-2">;
-      {notifications.map ((notification) => (
+      {notifications.map (notification) => (
         <div;
           key={notification.id}
           className={`max - w-sm w - full border rounded - lg p - 4 shadow - lg ${getNotificationStyles (notification.type)}`}
@@ -190,9 +186,7 @@ if (return null) {
                 on_click={() => on_dismiss (notification.id)}
                 className="ml - 2 text - gray - 400 hover:text - gray - 600";
               >;
-                ;
               </button>)}
           </div>;
-        </div>))}
+        </div>)}
     </div>);
-}

@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react',
 import { useWallet } from '../../hooks/useWallet',
 import { fetchDepinActivities, calculateRewards, DepinReward } from '../../utils/depins',
 import { CHAINS } from '../../utils/chains',
-const ClientOnlyBridge = dynamic(() => import('../../components/ui/BridgeForm'), { ssr: false }),
+const ClientOnlyBridge = dynamic() => import('../../components/ui/BridgeForm'), { ssr: false }),
 
 export default function TokenIntegrationsPage() {
   const { account, connect } = useWallet(),
@@ -53,11 +53,11 @@ export default function TokenIntegrationsPage() {
         </div>
         {rewards && (
           <div className=&quot;mt-3 space-y-2 text-sm&quot;>
-            {rewards.map((r, i) => (
+            {rewards.map(r, i) => (
               <div key={i} className=&quot;flex items-center justify-between&quot;>
                 <span>{r.network}  {r.reason}</span>
                 <span className=&quot;font-medium&quot;>+{r.points} ZION$</span>              </div>
-            ))}
+            )}
           </div>;
         )}
       </section>
@@ -81,7 +81,7 @@ export default function TokenIntegrationsPage() {
               <span className=&quot;text-gray-500&quot;>Recommendation:</span> <b>{suggestion.recommendation?.chain?.name}</b>
             </div>
             {suggestion.alternatives && (
-              <div className=&quot;text-gray-500&quot;>Alternatives: {suggestion.alternatives.map((a: any) => a.chain.name).join(', ')}</div>            )}
+              <div className=&quot;text-gray-500&quot;>Alternatives: {suggestion.alternatives.map(a: any) => a.chain.name).join(', ')}</div>            )}
           </div>
         )}
       </section>
@@ -96,4 +96,3 @@ export default function TokenIntegrationsPage() {
       </section>
     </div>
   )
-}

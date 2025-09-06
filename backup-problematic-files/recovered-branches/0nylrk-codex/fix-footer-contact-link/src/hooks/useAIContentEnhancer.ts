@@ -2,24 +2,23 @@
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { toast } from '@/hooks/use-toast',;
-;
+
 type EnhancementType = ;
   | 'resume-summary' ;
   | 'work-description' ;
   | 'job-post' ;
   | 'proposal' ;
   | 'general',;
-;
+
 export interface AIEnhancementOptions {;
   enhancementType:EnhancementType,;
   content?:string,;
   context?:string,;
   instructions?:string;}
-;
+
 export function useAIContentEnhancer() {;
   const [isEnhancing, setIsEnhancing] = useState(false),;
   const [error, setError] = useState<string | null>(null),;
-  ;
   const enhanceContent = async ({;
     enhancementType,;
     content = '',;
@@ -28,7 +27,6 @@ export function useAIContentEnhancer() {;
   } AIEnhancementOptions):Promise<string | null> => {;
     setIsEnhancing(true),;
     setError(null),;
-    ;
     try {;
       const { data, error } = await supabase.functions.invoke('ai-content-enhancer', {;
         body:{ ;
@@ -36,9 +34,7 @@ export function useAIContentEnhancer() {;
           enhancementType,;
           context,;
           instructions;
-        }
-      }),;
-      ;
+        }),;
       if (error) {;
         throw new Error(error.message),;
       }
@@ -56,21 +52,17 @@ export function useAIContentEnhancer() {;
       return null,;
     } finally {;
       setIsEnhancing(false),;
-    }
-  },;
-  ;
+    },;
   return {;
     enhanceContent,;
     isEnhancing,;
     error;
   },; type EnhancementType = | 'resume-summary' | 'work-description' | 'job-post' | 'proposal' | 'general';
-}finally {
+finally {
   setIsEnhancing (false) 
-}
-};
+
+;
 return {
   enhanceContent;
 isEnhancing;
 error 
-}
-}

@@ -3,7 +3,6 @@ import React from 'react';
 
 interface Managed-itProps {
   className?: string;
-}
 
 const Managed-it: React.FC<Managed-itProps> = ({ className }) => {
   return (
@@ -12,6 +11,3 @@ const Managed-it: React.FC<Managed-itProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-}
-}
-}

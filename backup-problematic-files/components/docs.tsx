@@ -70,9 +70,9 @@ export default function DocsPage() {
     }
   ],;
   const filteredDocs = documentationItems.filter(doc => {;
-    const matchesSearch = doc.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         doc.description.toLowerCase().includes(searchTerm.toLowerCase()),;
-    const matchesCategory = selectedCategory === 'all' || doc.category === selectedCategory,;
+    const matchesSearch = doc.title.toLowerCase().includes(searchTerm.toLowerCase() ||;
+                         doc.description.toLowerCase().includes(searchTerm.toLowerCase(),;
+    const matchesCategory = selectedCategory = = 'all' || doc.category = = selectedCategory,;
     return matchesSearch && matchesCategory;
   }),;
   const getDifficultyColor = (difficulty: string) => {;
@@ -81,8 +81,7 @@ export default function DocsPage() {
       case 'Intermediate': return 'bg-yellow-500/20 text-yellow-400',;
       case 'Advanced': return 'bg-red-500/20 text-red-400',;
       default: return 'bg-gray-500/20 text-gray-400';
-    }
-  },
+    },
 
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
@@ -108,26 +107,26 @@ export default function DocsPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {sections.map((s) => (
+            {sections.map(s) => (
               <Card key={s.title} className="p-6 bg-black/40 border border-gray-700/50">
                 <h2 className="text-xl font-semibold mb-4 text-white">{s.title}</h2>
                 <ul className="space-y-2">
-                  {s.links.map((l) => (
+                  {s.links.map(l) => (
                     <li key={l.name}>
                       <a href={l.href} className="text-cyan-400 hover:underline">{l.name}</a>
                     </li>
-                  ))}
+                  )}
                 </ul>;
               </Card>;
-            ))}
+            )}
           </div>
 
           <Card className="p-6 bg-black/40 border border-gray-700/50">
             <h2 className="text-xl font-semibold mb-4 text-white">External References</h2>
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-slate-300">
-              {external.map((e) => (
+              {external.map(e) => (
                 <li key={e.name}><a href={e.url} target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">{e.name}</a></li>
-              ))}
+              )}
             </ul>
           </Card>
 
@@ -144,5 +143,3 @@ export default function DocsPage() {
       </div>
     </UltraAdvancedFuturisticBackground>
   )
-}
-;

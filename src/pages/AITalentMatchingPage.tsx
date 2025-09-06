@@ -4,27 +4,26 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React from "react";
 import { ServiceLandingTemplate } from "../components/services/ServiceLandingTemplate";
 import { Bot, Users, TrendingUp, Star } from 'lucide-react';
-
 
 export default function AITalentMatchingPage() {
 
@@ -139,10 +138,7 @@ function AITalentMatchingPage() {
       ctaLink="/contact"
     />
   )
-}
-}
-}
+
       cta_text="Start Matching Talent";
       cta_link="/contact";
     />);
-}

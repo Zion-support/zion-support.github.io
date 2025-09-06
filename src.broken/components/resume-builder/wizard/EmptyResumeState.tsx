@@ -6,5 +6,3 @@ export function EmptyResumeState() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

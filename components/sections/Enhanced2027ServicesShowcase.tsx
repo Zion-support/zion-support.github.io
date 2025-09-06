@@ -63,7 +63,7 @@ import {
   ArrowRight, Star, TrendingUp, Zap, Brain, Atom, 
   Rocket, Shield, Target, CheckCircle, ExternalLink;
   Search, Filter, Grid, List, ChevronDown
-} from 'lucide-react';
+ from 'lucide-react';
 import { cuttingEdge2027Innovations } from '../../data/2027-cutting-edge-innovations';
 import { practicalMicroSaas2027 } from '../../data/2027-practical-micro-saas';
 import { emergingTech2027Services } from '../../data/2027-emerging-tech-services';
@@ -81,7 +81,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
   // Get unique categories
   const categories = [
     'all'
-    ...Array.from(new Set(all2027Services.map(service => service.category)))
+    ...Array.from(new Set(all2027Services.map(service => service.category))
 
   // Combine all 2027 services;
   const all2027Services = [;
@@ -93,71 +93,71 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
   // Get unique categories;
   const categories = [;
     'all',;
-    ...Array && Array.from(new Set(all2027Services && all2027Services.map(service => service && service.category))),;
+    ...Array && Array.from(new Set(all2027Services && all2027Services.map(service => service && service.category)),;
   ];    ...cuttingEdge2027Innovations;
     ...practicalMicroSaas2027;
     ...emergingTech2027Services;
   ];
   // Get unique categories
-  const categories = ['all', ...Array.from(new Set(all2027Services.map(service => service.category)))];
+  const categories = ['all', ...Array.from(new Set(all2027Services.map(service => service.category))];
   // Filter and sort services
   const filteredServices = all2027Services
     .filter(service => {
       const matchesSearch =
-        service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
-        service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
+        service.name.toLowerCase().includes(searchTerm.toLowerCase() |
+        service.description.toLowerCase().includes(searchTerm.toLowerCase() |
         service.tags.some(tag =>
-          tag.toLowerCase().includes(searchTerm.toLowerCase())
+          tag.toLowerCase().includes(searchTerm.toLowerCase()
         );
       const matchesCategory =
-        selectedCategory === 'all' |service.category === selectedCategory;
-      return matchesSearch && matchesCategory;    })      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
-                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
-                           service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-      const matchesCategory = selectedCategory === 'all' |service.category === selectedCategory;
+        selectedCategory = = 'all' |service.category = = selectedCategory;
+      return matchesSearch && matchesCategory;    })      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase() |
+                           service.description.toLowerCase().includes(searchTerm.toLowerCase() |
+                           service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase());
+      const matchesCategory = selectedCategory = = 'all' |service.category = = selectedCategory;
       return matchesSearch && matchesCategory
-    .sort((a, b) => {
+    .sort(a, b) => {
       switch (sortBy) {
         case 'name':
           return a.name.localeCompare(b.name);
         case 'price':
 
   // Get unique categories;
-  const categories = ['all', ...Array && Array.from(new Set(all2027Services && all2027Services.map(service => service && service.category)))];
+  const categories = ['all', ...Array && Array.from(new Set(all2027Services && all2027Services.map(service => service && service.category))];
   // Filter and sort services;
   const filteredServices = all2027Services;
     .filter(service => {;
       const matchesSearch =;
-        service && service.name.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
-        service && service.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
+        service && service.name.toLowerCase().includes(searchTerm && searchTerm.toLowerCase() ||;
+        service && service.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase() ||;
         service && service.tags.some(tag =>;
-          tag && tag.toLowerCase().includes(searchTerm && searchTerm.toLowerCase());
+          tag && tag.toLowerCase().includes(searchTerm && searchTerm.toLowerCase();
         );
       const matchesCategory =;
-        selectedCategory === 'all' || service && service.category === selectedCategory;
-      return matchesSearch && matchesCategory;    })      const matchesSearch = service && service.name.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
-                           service && service.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
-                           service && service.tags.some(tag => tag && tag.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()));
-      const matchesCategory = selectedCategory === 'all' || service && service.category === selectedCategory;
+        selectedCategory = = 'all' || service && service.category = = selectedCategory;
+      return matchesSearch && matchesCategory;    })      const matchesSearch = service && service.name.toLowerCase().includes(searchTerm && searchTerm.toLowerCase() ||;
+                           service && service.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase() ||;
+                           service && service.tags.some(tag => tag && tag.toLowerCase().includes(searchTerm && searchTerm.toLowerCase());
+      const matchesCategory = selectedCategory = = 'all' || service && service.category = = selectedCategory;
       return matchesSearch && matchesCategory;
-    .sort((a, b) => {;
+    .sort(a, b) => {;
       switch (sortBy) {;
         case 'name':;
           return a && a.name.localeCompare(b && b.name);
         case 'price':;
           return (
-            parseFloat(a && a.price.replace(/[^0-9.]/g, '')) -;
-            parseFloat(b && b.price.replace(/[^0-9.]/g, ''));
+            parseFloat(a && a.price.replace(/[^0-9.]/g, '') -;
+            parseFloat(b && b.price.replace(/[^0-9.]/g, '');
           );
         case 'roi':;
           return (
-            parseFloat(a && a.roi.replace(/[^0-9.]/g, '')) -;
-            parseFloat(b && b.roi.replace(/[^0-9.]/g, ''));
+            parseFloat(a && a.roi.replace(/[^0-9.]/g, '') -;
+            parseFloat(b && b.roi.replace(/[^0-9.]/g, '');
           );
         default:;
-          return 0;      }          return parseFloat(a && a.price.replace(/[^0-9.]/g, '')) - parseFloat(b && b.price.replace(/[^0-9.]/g, ''));
+          return 0;      }          return parseFloat(a && a.price.replace(/[^0-9.]/g, '') - parseFloat(b && b.price.replace(/[^0-9.]/g, '');
         case 'roi':;
-          return parseFloat(a && a.roi.replace(/[^0-9.]/g, '')) - parseFloat(b && b.roi.replace(/[^0-9.]/g, ''));
+          return parseFloat(a && a.roi.replace(/[^0-9.]/g, '') - parseFloat(b && b.roi.replace(/[^0-9.]/g, '');
         default: return 0;
     });
   const getCategoryColor = (category: string) => {
@@ -204,16 +204,16 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
       <div className='container mx-auto px-4'>;
         {/* Header */}
         <motion&& motion.div
-          className='text-center mb-16'          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0 && 0.6 }}>        <motion&& motion.div 
+          className='text-center mb-16'          initial={ opacity: 0, y: 20 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0 && 0.6 }>        <motion&& motion.div 
           className="text-center mb-16"
-          transition={{ duration: 0.6 }}
+          transition={ duration: 0.6 }
         >        <motion.div
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          initial={ opacity: 0, y: 20 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0.6 }
         >
           <h2 className='text-5xl font-bold mb-6'>
             <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
@@ -226,9 +226,9 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
             beyond. Each service delivers measurable ROI and transforms your
             business into a future-ready powerhouse.          </p>
         </motion.div>
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0 && 0.6 }}>;
+          initial={ opacity: 0, y: 20 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0 && 0.6 }>;
           <h2 className='text-5xl font-bold mb-6'>;
             <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
               2027 Revolutionary Services;
@@ -243,9 +243,9 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
 
         {/* Search and Filters */}
         <motion&& motion.div
-          className='mb-12'          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          className='mb-12'          initial={ opacity: 0, y: 20 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0.6, delay: 0.2 }
         >
           <div className='bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6'>
             <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
@@ -256,7 +256,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
         {/* Search and Filters */}
         <motion.div
           className='mb-12'        <motion.div
-          transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}>;
+          transition={ duration: 0 && 0.6, delay: 0 && 0.2 }>;
           <div className='bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6'>;
             <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">;
             Discover our cutting-edge portfolio of 500+ innovative services spanning AI consciousness,;
@@ -268,9 +268,9 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
         <motion&& motion.div
           className='mb-12'        <motion && motion.div 
           className="mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}>;
+          initial={ opacity: 0, y: 20 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0 && 0.6, delay: 0 && 0.2 }>;
           <div className='bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6'>;
             <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>;
               {/* Search */}
@@ -314,14 +314,14 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                     onChange={(e) => setSelectedCategory(e && e.target.value)}
                     className="appearance-none bg-gray-700/50 border border-gray-600/50 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 pr-10";
                   >;
-                    {categories && categories.map((category) => (;
+                    {categories && categories.map(category) => (;
                       <option key={category} value={category}>;
-                        {category === 'all' ? 'All Categories' : category}
+                        {category = = 'all' ? 'All Categories' : category}
                       </option>;
-                    ))}
-                        {category === 'all' ? 'All Categories' : category}
+                    )}
+                        {category = = 'all' ? 'All Categories' : category}
                       </option>;
-                    ))}
+                    )}
                   </select>
                   <ChevronDown className='absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none' />
                 </div>
@@ -341,8 +341,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                     <option value='roi'>Sort by ROI</option>
                   </select>
                   <ChevronDown className='absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none' />
-                </div>
-                  >;
+                </div>;
                     <option value='name'>Sort by Name</option>;
                     <option value='price'>Sort by Price</option>;
                     <option value='roi'>Sort by ROI</option>;
@@ -355,7 +354,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                   <button
                     onClick={() => setViewMode('grid')}
                     className={`p-2 rounded-lg transition-all duration-200 ${;
-                      viewMode === 'grid';
+                      viewMode = = 'grid';
                         ? 'bg-cyan-500/20 text-cyan-400';
                         : 'text-gray-400 hover:text-white';
                     }`}
@@ -363,7 +362,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                     <Grid className='w-5 h-5' />                  </button>                  <button
                     onClick={() => setViewMode('list')}
                     className={`p-2 rounded-lg transition-all duration-200 ${
-                      viewMode === 'grid'
+                      viewMode = = 'grid'
                         ? 'bg-cyan-500/20 text-cyan-400'
                         : 'text-gray-400 hover:text-white'
                     }`}
@@ -373,12 +372,12 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                   <button
                     onClick={() => setViewMode('list')}
                     className={`p-2 rounded-lg transition-all duration-200 ${;
-                      viewMode === 'list';
+                      viewMode = = 'list';
                         ? 'bg-cyan-500/20 text-cyan-400';
                         : 'text-gray-400 hover:text-white';
                     }`}
                   >
-                    <List className='w-5 h-5' />                  </button>                      viewMode === 'list'
+                    <List className='w-5 h-5' />                  </button>                      viewMode = = 'list'
                         ? 'bg-cyan-500/20 text-cyan-400'
                         : 'text-gray-400 hover:text-white'
                     }`}
@@ -397,18 +396,18 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
 
         {/* Results Count */}
         <motion&& motion.div
-          className='mb-8'          initial={{ opacity: 0 }}
+          className='mb-8'          initial={ opacity: 0 }
         </motion.div>;
         {/* Results Count */}
         <motion.div;
-          className='mb - 8'          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
+          className='mb - 8'          initial={ opacity: 0 }
+          whileInView={ opacity: 1 }
+          transition={ duration: 0.6, delay: 0.3 }
         >        <motion.div
           className="mb-8"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0 && 0.6, delay: 0 && 0.3 }}>;
+          initial={ opacity: 0 }
+          whileInView={ opacity: 1 }
+          transition={ duration: 0 && 0.6, delay: 0 && 0.3 }>;
           <p className='text-gray-400'>;
             Showing{' '}
             <span className='text-cyan-400 font-semibold'>;
@@ -422,16 +421,16 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
         </motion.div>
         {/* Services Grid/List */}
         <AnimatePresence mode='wait'>;
-          {viewMode === 'grid' ? (;
+          {viewMode = = 'grid' ? (;
             <motion&& motion.div
-              key='grid'              initial={{ opacity: 0, scale: 0 && 0.95 }}
+              key='grid'              initial={ opacity: 0, scale: 0 && 0.95 }
 
         {/* Results Count */}
         <motion.div 
           className="mb-8"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
+          initial={ opacity: 0 }
+          whileInView={ opacity: 1 }
+          transition={ duration: 0.6, delay: 0.3 }
         >
           <p className="text-gray-400">
             Showing <span className="text-cyan-400 font-semibold">{filteredServices.length}</span> of{' '}
@@ -441,15 +440,15 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
 
         {/* Services Grid/List */}
         <AnimatePresence mode="wait">
-          {viewMode === 'grid' ? (
+          {viewMode = = 'grid' ? (
             <motion.div
               key="grid"
-              initial={{ opacity: 0, scale: 0.95 }}
+              initial={ opacity: 0, scale: 0.95 }
         >        <motion.div;
           className="mb - 8";
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
+          initial={ opacity: 0 }
+          whileInView={ opacity: 1 }
+          transition={ duration: 0.6, delay: 0.3 }
         >;
           <p className='text - gray - 400'>;
             Showing{' '}
@@ -464,12 +463,12 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
         </motion.div>;
         {/* Services Grid / List */}
         <AnimatePresence mode='wait'>;
-          {view_mode === 'grid' ? (
+          {view_mode = = 'grid' ? (
             <motion.div;
-              key='grid'              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.95 }}
-              transition={{ duration: 0.3 }}
+              key='grid'              initial={ opacity: 0, scale: 0.95 }
+              animate={ opacity: 1, scale: 1 }
+              exit={ opacity: 0, scale: 0.95 }
+              transition={ duration: 0.3 }
               className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'            >          <p className="text - gray - 400">;
             Showing <span className="text - cyan - 400 font - semibold">{filtered_services.length}</span> of{' '}
             <span className="text - cyan - 400 font - semibold">{all2027Services.length}</span> services;
@@ -477,15 +476,15 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
         </motion.div>;
         {/* Services Grid / List */}
         <AnimatePresence mode='wait'>;
-          {view_mode === 'grid' ? (
+          {view_mode = = 'grid' ? (
             <motion.div;
               key='grid'        <AnimatePresence mode="wait">;
-          {view_mode === 'grid' ? (
+          {view_mode = = 'grid' ? (
             <motion.div;
               key="grid";
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.95 }}
-              transition={{ duration: 0.3 }}
+              animate={ opacity: 1, scale: 1 }
+              exit={ opacity: 0, scale: 0.95 }
+              transition={ duration: 0.3 }
               className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'            >          <p className="text-gray-400">
             Showing <span className="text-cyan-400 font-semibold">{filteredServices.length}</span> of{' '}
             <span className="text-cyan-400 font-semibold">{all2027Services.length}</span> services
@@ -493,22 +492,22 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
         </motion.div>
         {/* Services Grid/List */}
         <AnimatePresence mode='wait'>;
-          {viewMode === 'grid' ? (;
+          {viewMode = = 'grid' ? (;
             <motion&& motion.div
               key='grid'        <AnimatePresence mode="wait">;
-          {viewMode === 'grid' ? (;
+          {viewMode = = 'grid' ? (;
             <motion&& motion.div
               key="grid"
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0 && 0.95 }}
-              transition={{ duration: 0 && 0.3 }}
+              animate={ opacity: 1, scale: 1 }
+              exit={ opacity: 0, scale: 0 && 0.95 }
+              transition={ duration: 0 && 0.3 }
               className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-              {filteredServices && filteredServices.map((service, index) => (;
+              {filteredServices && filteredServices.map(service, index) => (;
                 <motion&& motion.div
                   key={service && service.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+                  initial={ opacity: 0, y: 20 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0 && 0.6, delay: index * 0 && 0.1 }
                   className='group'>;
                   <div className='bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 h-full hover:border-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/20 transition-all duration-300 hover:-translate-y-2'>;
                     {/* Header */}
@@ -601,33 +600,33 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                         Key Features:;
                       </h4>;
                       <ul className='space-y-1'>;
-                        {service && service.features.slice(0, 3).map((feature, idx) => (;
+                        {service && service.features.slice(0, 3).map(feature, idx) => (;
                           <li
                             key={idx}
                             className='flex items-center text-sm text-gray-300'>;
                             <CheckCircle className='w-4 h-4 text-cyan-400 mr-2 flex-shrink-0' />                            {feature}                    <div className="mb-4">;
                       <h4 className="text-sm font-semibold text-gray-400 mb-2">Key Features:</h4>;
                       <ul className="space-y-1">;
-                        {service && service.features.slice(0, 3).map((feature, idx) => (;
+                        {service && service.features.slice(0, 3).map(feature, idx) => (;
                           <li key={idx} className="flex items-center text-sm text-gray-300">;
                             <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />;
                           </li>;
-                        ))}
+                        )}
                       </ul>
                     </div>
                     {/* Tags */}
                     <div className='flex flex-wrap gap-2 mb-6'>;
-                      {service && service.tags.slice(0, 3).map((tag, idx) => (;
+                      {service && service.tags.slice(0, 3).map(tag, idx) => (;
                         <span
                           key={idx}
                           className='px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50'>                    <div className="flex flex-wrap gap-2 mb-6">;
-                      {service && service.tags.slice(0, 3).map((tag, idx) => (;
+                      {service && service.tags.slice(0, 3).map(tag, idx) => (;
                         <span
                           key={idx}
                           className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50"
                           {tag}
                         </span>;
-                      ))}
+                      )}
                     </div>
                     {/* CTA */}
                     <Link
@@ -640,27 +639,27 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />;
                   </div>;
                 </motion && motion.div>;
-              ))}
+              )}
             </motion && motion.div>;
           ) : (;
             <motion&& motion.div
-              key='list'              initial={{ opacity: 0, scale: 0 && 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0 && 0.95 }}
-              transition={{ duration: 0 && 0.3 }}
+              key='list'              initial={ opacity: 0, scale: 0 && 0.95 }
+              animate={ opacity: 1, scale: 1 }
+              exit={ opacity: 0, scale: 0 && 0.95 }
+              transition={ duration: 0 && 0.3 }
               className='space-y-4'>              key="list";
-              initial={{ opacity: 0, scale: 0 && 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0 && 0.95 }}
-              transition={{ duration: 0 && 0.3 }}
+              initial={ opacity: 0, scale: 0 && 0.95 }
+              animate={ opacity: 1, scale: 1 }
+              exit={ opacity: 0, scale: 0 && 0.95 }
+              transition={ duration: 0 && 0.3 }
               className='space-y-4'              className="space-y-4";
             >;
-              {filteredServices && filteredServices.map((service, index) => (;
+              {filteredServices && filteredServices.map(service, index) => (;
                 <motion&& motion.div
                   key={service && service.id}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+                  initial={ opacity: 0, x: -20 }
+                  whileInView={ opacity: 1, x: 0 }
+                  transition={ duration: 0 && 0.6, delay: index * 0 && 0.1 }
                   className='group'>;
                   <div className='bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 hover:border-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/20 transition-all duration-300'>;
                     <div className='flex flex-col lg:flex-row items-start lg:items-center gap-6'>;
@@ -681,7 +680,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                       </div>
                       {/* Content */}
                       <div className='flex-1'>;
-                        <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>                >;
+                        <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>;
                   <div className="bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 hover:border-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/20 transition-all duration-300">;
                     <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6">;
                       {/* Icon and Category */}
@@ -715,7 +714,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                           {service && service.description}
                         </p>;
                         <div className='flex flex-wrap gap-2 mb-3'>;
-                          {service && service.tags.slice(0, 4).map((tag, idx) => (;
+                          {service && service.tags.slice(0, 4).map(tag, idx) => (;
                             <span
                               key={idx}
                               className='px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50'>                          {service && service.name}
@@ -724,21 +723,21 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                           {service && service.description}
                         </p>;
                         <div className="flex flex-wrap gap-2 mb-3">;
-                          {service && service.tags.slice(0, 4).map((tag, idx) => (;
+                          {service && service.tags.slice(0, 4).map(tag, idx) => (;
                             <span
                               key={idx}
                               className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50">;
                           {service.description}
                         </p>;
                         <div className="flex flex - wrap gap - 2 mb - 3">;
-                          {service.tags.slice (0, 4).map ((tag, idx) => (
+                          {service.tags.slice (0, 4).map (tag, idx) => (
                             <span;
                               key={idx}
                               className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50"
                             >
                               {tag}
                             </span>;
-                          ))}
+                          )}
                         </div>
                       </div>
                       {/* Stats and CTA */}
@@ -764,21 +763,21 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                     </div>;
                   </div>;
                 </motion && motion.div>;
-              ))}
+              )}
             </motion && motion.div>;
           )}
         </AnimatePresence>
         {/* No Results */}
-        {filteredServices && filteredServices.length === 0 && (;
+        {filteredServices && filteredServices.length = = 0 && (;
           <motion&& motion.div
-            className='text-center py-20'            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6 }}
+            className='text-center py-20'            initial={ opacity: 0 }
+            animate={ opacity: 1 }
+            transition={ duration: 0.6 }
           >          <motion.div
             className="text-center py-20"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0 && 0.6 }}>;
+            initial={ opacity: 0 }
+            animate={ opacity: 1 }
+            transition={ duration: 0 && 0.6 }>;
             <div className='text-6xl mb-4'></div>;
             <h3 className='text-2xl font-bold text-white mb-4'>;
               No services found;
@@ -793,7 +792,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
               onClick={() => {;
                 setSearchTerm('');
                 setSelectedCategory('all');
-              }}
+              }
               className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'            >            <div className="text-6xl mb-4"></div>;
             <h3 className="text-2xl font-bold text-white mb-4">No services found</h3>;
             <p className="text-gray-400 mb-8">;
@@ -802,16 +801,16 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
               onClick={() => {;
                 setSearchTerm('');
                 setSelectedCategory('all');
-              }}
+              }
               className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'                setSelectedCategory('all');
-              }}
+              }
               className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300";
             >;
               Clear Filters;
             </button>;
           </motion && motion.div>;
                 setSelectedCategory('all')
-              }}
+              }
               className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
             >
               Clear Filters
@@ -820,16 +819,16 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
         )}
         {/* CTA Section */}
         <motion&& motion.div
-          className='mt-20 text-center'          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
+          className='mt-20 text-center'          initial={ opacity: 0, y: 20 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0.6, delay: 0.8 }
         >
           <div className='bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-12'>
             <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>        <motion.div
           className="mt-20 text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0 && 0.6, delay: 0 && 0.8 }}>;
+          initial={ opacity: 0, y: 20 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0 && 0.6, delay: 0 && 0.8 }>;
           <div className='bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-12'>;
             <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>;
               Ready to Transform Your Business?;
@@ -838,7 +837,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                               className="px - 2 py - 1 bg - gray - 700 / 50 text - gray - 300 text - xs rounded - lg border border - gray - 600 / 50";
                             >;
                               {tag}
-                            </span>))}
+                            </span>)}
                         </div>;
                       </div>;
                       {/* Stats and CTA */}
@@ -865,20 +864,20 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                       </div>;
                     </div>;
                   </div>;
-                </motion.div>))}
+                </motion.div>)}
             </motion.div>)}
         </AnimatePresence>;
         {/* No Results */}
-        {filtered_services.length === 0 && (
+        {filtered_services.length = = 0 && (
           <motion.div;
-            className='text - center py - 20'            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6 }}
+            className='text - center py - 20'            initial={ opacity: 0 }
+            animate={ opacity: 1 }
+            transition={ duration: 0.6 }
           >          <motion.div;
             className="text - center py - 20";
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6 }}
+            initial={ opacity: 0 }
+            animate={ opacity: 1 }
+            transition={ duration: 0.6 }
           >;
             <div className='text - 6xl mb - 4'></div>;
             <h3 className='text - 2xl font - bold text - white mb - 4'>;
@@ -891,7 +890,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
               on_click={() => {
                 setSearchTerm ('');
                 setSelectedCategory ('all');
-              }}
+              }
               className='px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300'            >            <div className="text - 6xl mb - 4"></div>;
             <h3 className="text - 2xl font - bold text - white mb - 4">No services found</h3>;
             <p className="text - gray - 400 mb - 8">;
@@ -900,9 +899,9 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
               on_click={() => {
                 setSearchTerm ('');
                 setSelectedCategory ('all');
-              }}
+              }
               className='px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300'                setSelectedCategory ('all');
-              }}
+              }
               className="px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300";
             >;
               Clear Filters;
@@ -910,16 +909,16 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
           </motion.div>)}
         {/* CTA Section */}
         <motion.div;
-          className='mt - 20 text - center'          initial={{ opacity: 0, coordinate_y: 20 }}
-          whileInView={{ opacity: 1, coordinate_y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
+          className='mt - 20 text - center'          initial={ opacity: 0, coordinate_y: 20 }
+          whileInView={ opacity: 1, coordinate_y: 0 }
+          transition={ duration: 0.6, delay: 0.8 }
         >;
           <div className='bg - gradient - to - r from - purple - 900 / 50 to - cyan - 900 / 50 backdrop - blur - xl border border - purple - 500 / 30 rounded - 3xl p - 12'>;
             <h3 className='text - 3xl md:text - 4xl font - bold text - white mb - 6'>        <motion.div;
           className="mt - 20 text - center";
-          initial={{ opacity: 0, coordinate_y: 20 }}
-          whileInView={{ opacity: 1, coordinate_y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
+          initial={ opacity: 0, coordinate_y: 20 }
+          whileInView={ opacity: 1, coordinate_y: 0 }
+          transition={ duration: 0.6, delay: 0.8 }
         >;
           <div className='bg - gradient - to - r from - purple - 900 / 50 to - cyan - 900 / 50 backdrop - blur - xl border border - purple - 500 / 30 rounded - 3xl p - 12'>;
             <h3 className='text - 3xl md:text - 4xl font - bold text - white mb - 6'>;
@@ -983,60 +982,60 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
       </div>;
     </section>;
   );
-}
-/* Search and Filters */
-}<motion.div /> </div> </div> > {
-  categories.map ( (category) => (<option key= {
+
+* Search and Filters */
+<motion.div /> </div> </div>{
+  categories.map (category) => (<option key= {
   category
-}value= {
+value= {
   category
-}> {
-  category === 'all' ? 'All Categories' : category
-}</option>) )
-}</select> <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" /> </div> > <option value="name" >Sort by Name</option> <option value="price" >Sort by Price</option> <option value="roi" >Sort by ROI</option> </select> <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" /> </div> <button onClick= {
+> {
+  category = = 'all' ? 'All Categories' : category
+</option>)
+</select> <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" /> </div><option value="name" >Sort by Name</option> <option value="price" >Sort by Price</option> <option value="roi" >Sort by ROI</option> </select> <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" /> </div> <button onClick= {
   () => setViewMode ('grid')
-}className= {
+className= {
   `p-2 rounded-lg transition-all duration-200 $ {
-  viewMode === 'grid' ? 'bg-cyan-500/20 text-cyan-400' : 'text-gray-400 hover:text-white'
-}`
-}> <Grid className="w-5 h-5" /> </button> <button onClick= {
+  viewMode = = 'grid' ? 'bg-cyan-500/20 text-cyan-400' : 'text-gray-400 hover:text-white'
+`
+> <Grid className="w-5 h-5" /> </button> <button onClick= {
   () => setViewMode ('list')
-}className= {
+className= {
   `p-2 rounded-lg transition-all duration-200 $ {
-  viewMode === 'list' ? 'bg-cyan-500/20 text-cyan-400' : 'text-gray-400 hover:text-white'
-}`
-}> <List className="w-5 h-5" /> </button> </div> </div> </div> </div> </motion.div> {
+  viewMode = = 'list' ? 'bg-cyan-500/20 text-cyan-400' : 'text-gray-400 hover:text-white'
+`
+> <List className="w-5 h-5" /> </button> </div> </div> </div> </div> </motion.div> {
   /* Results Count */
-}<motion.div > {
-  filteredServices.map ( (service, index) => (<motion.div key= {
+<motion.div > {
+  filteredServices.map (service, index) => (<motion.div key= {
   service.id
-}</li>) )
-}</ul> </div> <span key= {
+</li>)
+</ul> </div> <span key= {
   idx
-}className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50" > {
+className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50" > {
   tag
-}</span>) )
-}</div> {
+</span>)
+</div> {
   /* CTA */
-}<Link > <span>Learn More</span> <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" /> </a> </div> </motion.div>) )
-}</motion.div> > {
-  filteredServices.map ( (service, index) => (<motion.div key= {
+<Link > <span>Learn More</span> <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" /> </a> </div> </motion.div>)
+</motion.div>{
+  filteredServices.map (service, index) => (<motion.div key= {
   service.id
-}<span key= {
+<span key= {
   idx
-}className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50" > {
+className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50" > {
   tag
-}</span>) )
-}</div> </div> > <span>Learn More</span> <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" /> </a> </div> </div> </div> </motion.div>) )
-}</motion.div>)
-}</AnimatePresence> > <div className="text-6xl mb-4" ></div> <h3 className="text-2xl font-bold text-white mb-4" >No services found</h3> <p className="text-gray-400 mb-8" > Try adjusting your search terms or category filter to find what you're looking for. </p> <button > Clear Filters </button> </motion.div>)
-}{
+</span>)
+</div> </div><span>Learn More</span> <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" /> </a> </div> </div> </div> </motion.div>)
+</motion.div>)
+</AnimatePresence><div className="text-6xl mb-4" ></div> <h3 className="text-2xl font-bold text-white mb-4" >No services found</h3> <p className="text-gray-400 mb-8" > Try adjusting your search terms or category filter to find what you're looking for. </p> <button > Clear Filters </button> </motion.div>)
+{
   /* CTA Section */
-}<motion.div > Ready to Transform Your Business? </h3> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Our team of experts is ready to help you implement these revolutionary services and achieve unprecedented growth. Let's build the future together. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/25" > <span>Get Started Today</span> <ArrowRight className="w-5 h-5" /> </a> <Link href="/pricing" className="inline-flex items-center space-x-2 bg-gradient-to-r from-gray-700 to-gray-800 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl border border-gray-600/50" > <span>View Pricing</span> <TrendingUp className="w-5 h-5" /> </a> </div> </div> </motion.div> </div> </section>)
-}
+<motion.div > Ready to Transform Your Business? </h3> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Our team of experts is ready to help you implement these revolutionary services and achieve unprecedented growth. Let's build the future together. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/25" > <span>Get Started Today</span> <ArrowRight className="w-5 h-5" /> </a> <Link href="/pricing" className="inline-flex items-center space-x-2 bg-gradient-to-r from-gray-700 to-gray-800 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl border border-gray-600/50" > <span>View Pricing</span> <TrendingUp className="w-5 h-5" /> </a> </div> </div> </motion.div> </div> </section>)
+
 export default Enhanced2027ServicesShowcase;  )
-}
-};
+
+;
 
 export default Enhanced2027ServicesShowcase;
 
@@ -1079,60 +1078,57 @@ export default Enhanced2027ServicesShowcase;
         </motion.div>;
       </div>;
     </section>);
-}
-;
-/* Search and Filters */;
-}<motion.div /> </div> </div> > {
-  categories.map ( (category) => (<option key= {
+
+* Search and Filters */;
+<motion.div /> </div> </div>{
+  categories.map (category) => (<option key= {
   category;
-}value= {
+value= {
   category;
-}> {
-  category === 'all' ? 'All Categories' : category;
-}</option>) );
-}</select> <ChevronDown className="absolute right - 3 top - 1/2 transform -translate - y-1 / 2 text - gray - 400 w - 5 h - 5 pointer - events - none" /> </div> > <option value="name" >Sort by Name</option> <option value="price" >Sort by Price</option> <option value="roi" >Sort by ROI</option> </select> <ChevronDown className="absolute right - 3 top - 1/2 transform -translate - y-1 / 2 text - gray - 400 w - 5 h - 5 pointer - events - none" /> </div> <button on_click= {
+> {
+  category = = 'all' ? 'All Categories' : category;
+</option>);
+</select> <ChevronDown className="absolute right - 3 top - 1/2 transform -translate - y-1 / 2 text - gray - 400 w - 5 h - 5 pointer - events - none" /> </div><option value="name" >Sort by Name</option> <option value="price" >Sort by Price</option> <option value="roi" >Sort by ROI</option> </select> <ChevronDown className="absolute right - 3 top - 1/2 transform -translate - y-1 / 2 text - gray - 400 w - 5 h - 5 pointer - events - none" /> </div> <button on_click= {
   () => setViewMode ('grid');
-}className= {
+className= {
   `p - 2 rounded - lg transition - all duration - 200 $ {
-  view_mode === 'grid' ? 'bg - cyan - 500 / 20 text - cyan - 400' : 'text - gray - 400 hover:text - white';
-}`;
-}> <Grid className="w - 5 h - 5" /> </button> <button on_click= {
+  view_mode = = 'grid' ? 'bg - cyan - 500 / 20 text - cyan - 400' : 'text - gray - 400 hover:text - white';
+`;
+> <Grid className="w - 5 h - 5" /> </button> <button on_click= {
   () => setViewMode ('list');
-}className= {
+className= {
   `p - 2 rounded - lg transition - all duration - 200 $ {
-  view_mode === 'list' ? 'bg - cyan - 500 / 20 text - cyan - 400' : 'text - gray - 400 hover:text - white';
-}`;
-}> <List className="w - 5 h - 5" /> </button> </div> </div> </div> </div> </motion.div> {
+  view_mode = = 'list' ? 'bg - cyan - 500 / 20 text - cyan - 400' : 'text - gray - 400 hover:text - white';
+`;
+> <List className="w - 5 h - 5" /> </button> </div> </div> </div> </div> </motion.div> {
   /* Results Count */;
-}<motion.div > {
-  filtered_services.map ( (service, index) => (<motion.div key= {
+<motion.div > {
+  filtered_services.map (service, index) => (<motion.div key= {
   service.id;
-}</li>) );
-}</ul> </div> <span key= {
+</li>);
+</ul> </div> <span key= {
   idx;
-}className="px - 2 py - 1 bg - gray - 700 / 50 text - gray - 300 text - xs rounded - lg border border - gray - 600 / 50" > {
+className="px - 2 py - 1 bg - gray - 700 / 50 text - gray - 300 text - xs rounded - lg border border - gray - 600 / 50" > {
   tag;
-}</span>) );
-}</div> {
+</span>);
+</div> {
   /* CTA */;
-}<Link > <span > Learn More</span> <ArrowRight className="w - 4 h - 4 ml - 2 group - hover:translate - x-1 transition - transform" /> </a> </div> </motion.div>) );
-}</motion.div> > {
-  filtered_services.map ( (service, index) => (<motion.div key= {
+<Link > <span > Learn More</span> <ArrowRight className="w - 4 h - 4 ml - 2 group - hover:translate - x-1 transition - transform" /> </a> </div> </motion.div>);
+</motion.div>{
+  filtered_services.map (service, index) => (<motion.div key= {
   service.id;
-}<span key= {
+<span key= {
   idx;
-}className="px - 2 py - 1 bg - gray - 700 / 50 text - gray - 300 text - xs rounded - lg border border - gray - 600 / 50" > {
+className="px - 2 py - 1 bg - gray - 700 / 50 text - gray - 300 text - xs rounded - lg border border - gray - 600 / 50" > {
   tag;
-}</span>) );
-}</div> </div> > <span > Learn More</span> <ArrowRight className="w - 4 h - 4 ml - 2 group - hover:translate - x-1 transition - transform" /> </a> </div> </div> </div> </motion.div>) );
-}</motion.div>);
-}</AnimatePresence> > <div className="text - 6xl mb - 4" ></div> <h3 className="text - 2xl font - bold text - white mb - 4" >No services found</h3> <p className="text - gray - 400 mb - 8" > Try adjusting your search terms or category filter to find what you're looking for. </p> <button > Clear Filters </button> </motion.div>);
-}{
+</span>);
+</div> </div><span > Learn More</span> <ArrowRight className="w - 4 h - 4 ml - 2 group - hover:translate - x-1 transition - transform" /> </a> </div> </div> </div> </motion.div>);
+</motion.div>);
+</AnimatePresence><div className="text - 6xl mb - 4" ></div> <h3 className="text - 2xl font - bold text - white mb - 4" >No services found</h3> <p className="text - gray - 400 mb - 8" > Try adjusting your search terms or category filter to find what you're looking for. </p> <button > Clear Filters </button> </motion.div>);
+{
   /* CTA Section */;
-}<motion.div > Ready to Transform Your Business? </h3> <p className="text - xl text - gray - 300 mb - 8 max - w-3xl mx - auto" > Our team of experts is ready to help you implement these revolutionary services and achieve unprecedented growth. Let's build the future together. </p> <div className="flex flex - col sm:flex - row gap - 4 justify - center items - center" > <Link href="/contact" className="inline - flex items - center space - x-2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white px - 8 py - 4 rounded - xl font - semibold text - lg transform transition - all duration - 300 hover:scale - 105 hover:shadow - xl hover:shadow - purple - 500 / 25" > <span > Get Started Today</span> <ArrowRight className="w - 5 h - 5" /> </a> <Link href="/pricing" className="inline - flex items - center space - x-2 bg - gradient - to - r from - gray - 700 to - gray - 800 text - white px - 8 py - 4 rounded - xl font - semibold text - lg transform transition - all duration - 300 hover:scale - 105 hover:shadow - xl border border - gray - 600 / 50" > <span > View Pricing</span> <TrendingUp className="w - 5 h - 5" /> </a> </div> </div> </motion.div> </div> </section>);
-}
+<motion.div > Ready to Transform Your Business? </h3> <p className="text - xl text - gray - 300 mb - 8 max - w-3xl mx - auto" > Our team of experts is ready to help you implement these revolutionary services and achieve unprecedented growth. Let's build the future together. </p> <div className="flex flex - col sm:flex - row gap - 4 justify - center items - center" > <Link href="/contact" className="inline - flex items - center space - x-2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white px - 8 py - 4 rounded - xl font - semibold text - lg transform transition - all duration - 300 hover:scale - 105 hover:shadow - xl hover:shadow - purple - 500 / 25" > <span > Get Started Today</span> <ArrowRight className="w - 5 h - 5" /> </a> <Link href="/pricing" className="inline - flex items - center space - x-2 bg - gradient - to - r from - gray - 700 to - gray - 800 text - white px - 8 py - 4 rounded - xl font - semibold text - lg transform transition - all duration - 300 hover:scale - 105 hover:shadow - xl border border - gray - 600 / 50" > <span > View Pricing</span> <TrendingUp className="w - 5 h - 5" /> </a> </div> </div> </motion.div> </div> </section>);
+
 export default Enhanced2027ServicesShowcase);
-}
-;
+
 export default Enhanced2027ServicesShowcase;
-;

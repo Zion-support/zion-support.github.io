@@ -17,7 +17,6 @@ const DatabaseDesignChat: NextPage = () => {;
       </main>;
     </div>;
   );
-};
       </Head>
       <main>
         <h1>DatabaseDesignChat</h1>
@@ -34,7 +33,7 @@ const DatabaseDesignChat: NextPage = () => {;
       </main>;
     </div>;
   );
-}
+
 export default DatabaseDesignChat;
 
 import type { NextPage } from './next';
@@ -53,7 +52,5 @@ const DatabaseDesignChat: NextPage = () => {
         <a href="/services">Back to Services</a>;
       </main>;
     </div>);
-}
-;
+
 export default DatabaseDesignChat;
-;

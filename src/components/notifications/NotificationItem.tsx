@@ -15,10 +15,10 @@ import { Notification, NotificationType } from '@/context/notifications'
   onDismiss: (id: string) => Promise<void>
   onMarkAsRead
   onDismiss
-}) => {
+) => {
       className={cn(
                   onMarkAsRead(notification.id); import React from 'react'
-// Use the centralized icon wrapper to avoid missing icons
+/ Use the centralized icon wrapper to avoid missing icons
 import { Check, Trash2, ChevronRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
@@ -51,12 +51,12 @@ export const getTypeIcon = (type: NotificationType,) => {
     default:
       return <span className="text-gray-500"></span>
   }
-}
+
 interface NotificationItemProps {
   notification: Notification
   onMarkAsRead: (id: string,) => Promise<void>
   onDismiss: (id: string,) => Promise<void>
-}
+
 export const NotificationItem: React.FC<NotificationItemProps> = ({
   notification
   onMarkAsRead
@@ -81,10 +81,10 @@ import { Notification, NotificationType } from '@/context/notifications';
   onDismiss: (id: string) => Promise<void>;
   onMarkAsRead,;
   onDismiss;
-}) => {;
+) => {;
       className={cn(;
                   onMarkAsRead(notification && notification.id);import React from 'react';
-// Use the centralized icon wrapper to avoid missing icons;
+/ Use the centralized icon wrapper to avoid missing icons;
 import { Check, Trash2, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -120,13 +120,12 @@ export const getTypeIcon = (type: NotificationType,) => {;
     default:;
       return <span className="text-gray-500"></span>;
   }
-},;
+,;
 
 interface NotificationItemProps {;
   notification: Notification,;
   onMarkAsRead: (id: string,) => Promise<void>,;
   onDismiss: (id: string,) => Promise<void>;
-}
 
 export const NotificationItem: React.FC<NotificationItemProps> = ({;
   notification,;
@@ -142,7 +141,6 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
     if (notification && notification.action_url) {;
       router && router.push(notification && notification.action_url), // Changed to router && router.push;
     }
-  }
   return (<div
       className = {cn(
         'p-3 border-b border-zion-blue-light relative group'
@@ -194,7 +192,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
                 onClick={(e,) => {
                   e.stopPropagation()
                   onMarkAsRead(notification.id)
-                }}
+                }
                 aria-label="Mark as read"
               >
                 <Check className="h-3.5 w-3.5 text-green-400" />
@@ -215,7 +213,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
                 onClick={(e,) => {
                   e.stopPropagation()
                   onDismiss(notification.id)
-                }}
+                }
                 aria-label="Dismiss notification"
               >
                 <Trash2 className="h-3.5 w-3.5 text-red-400" />
@@ -229,7 +227,6 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
       </div>
     </div>
   )
-}
 
             </TooltipContent>;
           </Tooltip>;
@@ -237,9 +234,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
       </div>;
     </div>;
   );
-},;
-
+,;
 
     </div>);
-},
-;
+,

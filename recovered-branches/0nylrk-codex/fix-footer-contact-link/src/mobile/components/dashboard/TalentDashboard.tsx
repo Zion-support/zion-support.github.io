@@ -140,7 +140,7 @@ export function TalentDashboard() {
       </section>
     </div>
   )
-}
+
                 <Button size="sm">Apply Now</Button>;
                 <Button size="sm" variant="outline">View Details</Button>;
               </div>;
@@ -248,6 +248,5 @@ export function TalentDashboard() {
       </section>;
     </div>;
   );
-}
+
     </div>);
-}

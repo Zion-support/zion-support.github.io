@@ -21,4 +21,3 @@ export default function FeaturesPage() {_return (
       </div>
     </EnhancedLayout>
   )
-}

@@ -24,7 +24,7 @@ import {;
   Star,;
   GitPullRequest,;
   Cpu,;
-} from 'lucide-react';
+ from 'lucide-react';
 export default function DevOpsAutomationPage() {;
   const features = [;
     {;
@@ -240,7 +240,7 @@ export default function DevOpsAutomationPage() {
       cons: ['Requires maintenance_no managed service'];
     }
   ];
-;
+
   const testimonials = [;
     {
       name: 'Michael Chen'
@@ -310,7 +310,7 @@ export default function DevOpsAutomationPage() {
       rating: 5;
     }
   ];
-;
+
   const automation_examples = [;
     {
       title: 'Automated Testing'
@@ -714,7 +714,7 @@ export default function DevOpsAutomationPage() {;
               </p>;
             </div>;
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>;
-              {features && features.map((feature, index) => (;
+              {features && features.map(feature, index) => (;
                 <Card
                   key={index}
                   className='text-center group hover:scale-105 transition-transform duration-300'>;
@@ -732,7 +732,7 @@ export default function DevOpsAutomationPage() {;
               </p>;
             </div>;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-              {features && features.map((feature, index) => (;
+              {features && features.map(feature, index) => (;
                 <Card
                   key={index}
                   className="text-center group hover:scale-105 transition-transform duration-300">;
@@ -751,7 +751,7 @@ export default function DevOpsAutomationPage() {;
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-400">{feature.description}</p>
                 </Card>
-              ))}
+              )}
             </div>
           </div>
         </section>
@@ -767,7 +767,7 @@ export default function DevOpsAutomationPage() {;
               </p>;
             </div>;
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>;
-              {automationExamples && automationExamples.map((example, index) => (;
+              {automationExamples && automationExamples.map(example, index) => (;
                 <Card
                   key={index}
                   className='text-center group hover:scale-105 transition-transform duration-300'>;
@@ -785,7 +785,7 @@ export default function DevOpsAutomationPage() {;
               </p>;
             </div>;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-              {automationExamples && automationExamples.map((example, index) => (;
+              {automationExamples && automationExamples.map(example, index) => (;
                 <Card
                   key={index}
                   className="text-center group hover:scale-105 transition-transform duration-300">;
@@ -804,7 +804,7 @@ export default function DevOpsAutomationPage() {;
                   <h3 className="text-xl font-semibold text-white mb-4">{example.title}</h3>
                   <p className="text-gray-400">{example.description}</p>
                 </Card>
-              ))}
+              )}
             </div>
           </div>
         </section>
@@ -820,14 +820,14 @@ export default function DevOpsAutomationPage() {;
                 14-day free trial.;
               </p>;
             </div>;
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>              {pricingPlans && pricingPlans.map((plan, index) => (                Simple, Transparent Pricing;
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>              {pricingPlans && pricingPlans.map(plan, index) => (                Simple, Transparent Pricing;
               </h2>;
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">;
                 Choose the plan that fits your DevOps needs. All plans include a 14-day free trial.;
               </p>;
             </div>;
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
-              {pricingPlans && pricingPlans.map((plan, index) => (;
+              {pricingPlans && pricingPlans.map(plan, index) => (;
                 <Card
                   key={index}
                   className={`relative p-8 ${plan && plan.color} transition-all duration-300 hover:scale-105 ${
@@ -856,14 +856,14 @@ export default function DevOpsAutomationPage() {;
                     </div>;
                     <p className='text-gray-300 mb-8'>{plan && plan.description}</p>;
                     <ul className='text-left space-y-3 mb-8'>;
-                      {plan && plan.features.map((feature, featureIndex) => (;
+                      {plan && plan.features.map(feature, featureIndex) => (;
                         <li
                           key={featureIndex}
                           className='flex items-center text-gray-300'>;
                           <Check className='w-5 h-5 text-blue-400 mr-3 flex-shrink-0' />                          {feature}                    </div>;
                     <p className="text-gray-300 mb-8">{plan && plan.description}</p>;
                     <ul className="text-left space-y-3 mb-8">;
-                      {plan && plan.features.map((feature, featureIndex) => (;
+                      {plan && plan.features.map(feature, featureIndex) => (;
                         <li key={featureIndex} className="flex items-center text-gray-300">;
                           <Check className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />;
                   key={index}
@@ -886,15 +886,15 @@ export default function DevOpsAutomationPage() {;
                     </div>
                     <p className="text-gray-300 mb-8">{plan.description}</p>
                     <ul className="text-left space-y-3 mb-8">
-                      {plan.features.map((feature, featureIndex) => (
+                      {plan.features.map(feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-gray-300">
                           <Check className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
                           {feature}
                         </li>;
-                      ))}
+                      )}
                     </ul>;
                     <Button
-                      href={plan && plan.name === 'Enterprise' ? '/contact' : '#signup'}
+                      href={plan && plan.name = = 'Enterprise' ? '/contact' : '#signup'}
                       variant={plan && plan.popular ? 'primary' : 'outline'}
                       size='lg'
                       className={`w-full ${
@@ -926,7 +926,7 @@ export default function DevOpsAutomationPage() {;
                     </div>;
                     <p className='text - gray - 300 mb - 8'>{plan.description}</p>;
                     <ul className='text - left space - y-3 mb - 8'>;
-                      {plan.features.map ((feature, feature_index) => (
+                      {plan.features.map (feature, feature_index) => (
                         <li;
                           key={feature_index}
                           className='flex items - center text - gray - 300';
@@ -934,14 +934,14 @@ export default function DevOpsAutomationPage() {;
                           <Check className='w - 5 h - 5 text - blue - 400 mr - 3 flex - shrink - 0' />                          {feature}                    </div>;
                     <p className="text - gray - 300 mb - 8">{plan.description}</p>;
                     <ul className="text - left space - y-3 mb - 8">;
-                      {plan.features.map ((feature, feature_index) => (
+                      {plan.features.map (feature, feature_index) => (
                         <li key={feature_index} className="flex items - center text - gray - 300">;
                           <Check className="w - 5 h - 5 text - blue - 400 mr - 3 flex - shrink - 0" />;
                           {feature}
-                        </li>))}
+                        </li>)}
                     </ul>;
                     <Button;
-                      href={plan.name === 'Enterprise' ? '/contact' : '#signup'}
+                      href={plan.name = = 'Enterprise' ? '/contact' : '#signup'}
                       variant={plan.popular ? 'primary' : 'outline'}
                       size='lg';
                       className={`w - full ${
@@ -956,7 +956,7 @@ export default function DevOpsAutomationPage() {;
                     </Button>
                   </div>
                 </Card>
-              ))}
+              )}
             </div>
           </div>
         </section>
@@ -971,25 +971,25 @@ export default function DevOpsAutomationPage() {;
               </p>;
             </div>;
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>;
-              {marketComparison && marketComparison.map((competitor, index) => (;
+              {marketComparison && marketComparison.map(competitor, index) => (;
                 <Card key={index} className='p-6'>;
                   <div className='text-center mb-6'>;
                     <h3 className='text-xl font-bold text-white mb-2'>;
                       {competitor && competitor.competitor}
                     </h3>;
-                    <div className='flex items-center justify-center mb-2'>                      {[...Array(5)].map((_, i) => (                <Card key={index} className="p-6">;
+                    <div className='flex items-center justify-center mb-2'>                      {[...Array(5)].map(_, i) => (                <Card key={index} className="p-6">;
                   <div className="text-center mb-6">;
                     <h3 className="text-xl font-bold text-white mb-2">{competitor && competitor.competitor}</h3>;
                     <div className="flex items-center justify-center mb-2">;
                         <Star
                           key={i}
                           className={`w-5 h-5 ${
-                            i < Math && Math.floor(parseFloat(competitor && competitor.rating))
+                            i < Math && Math.floor(parseFloat(competitor && competitor.rating)
                               ? 'text-yellow-400 fill-current'
                               : 'text-gray-400'
                           }`}
                         />;
-                      ))}
+                      )}
                     </div>;
                     <p className='text-sm text-gray-400'>{competitor && competitor.rating}</p>;
                   </div>;
@@ -1007,7 +1007,7 @@ export default function DevOpsAutomationPage() {;
                         Pros:;
                       </p>;
                       <ul className='text-sm text-gray-300 space-y-1'>;
-                        {competitor && competitor.pros.map((pro, proIndex) => (;
+                        {competitor && competitor.pros.map(pro, proIndex) => (;
                           <li key={proIndex} className='flex items-center'>;
                             <Check className='w-4 h-4 text-green-400 mr-2 flex-shrink-0' />                            {pro}                  </div>;
                   <div className="mb-4">;
@@ -1018,15 +1018,15 @@ export default function DevOpsAutomationPage() {;
                     <div>;
                       <p className="text-sm font-medium text-green-400 mb-1">Pros:</p>;
                       <ul className="text-sm text-gray-300 space-y-1">;
-                        {competitor && competitor.pros.map((pro, proIndex) => (;
+                        {competitor && competitor.pros.map(pro, proIndex) => (;
                           <li key={proIndex} className="flex items-center">;
                             <Check className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />;
                             {pro}
                           </li>;
-                        ))}
+                        )}
                             {pro}
                           </li>;
-                        ))}
+                        )}
                       </ul>;
                     </div>;
                     <div>;
@@ -1034,22 +1034,21 @@ export default function DevOpsAutomationPage() {;
                         Cons:;
                       </p>;
                       <ul className='text-sm text-gray-300 space-y-1'>;
-                        {competitor && competitor.cons.map((con, conIndex) => (;
+                        {competitor && competitor.cons.map(con, conIndex) => (;
                           <li key={conIndex} className='flex items-center'>;
                             <span className='w-4 h-4 text-red-400 mr-2 flex-shrink-0'>;
-                              ;
                             </span>                            {con}                      <p className="text-sm font-medium text-red-400 mb-1">Cons:</p>;
                       <ul className="text-sm text-gray-300 space-y-1">;
-                        {competitor && competitor.cons.map((con, conIndex) => (;
+                        {competitor && competitor.cons.map(con, conIndex) => (;
                           <li key={conIndex} className="flex items-center">;
                             <span className="w-4 h-4 text-red-400 mr-2 flex-shrink-0"></span>;
                           </li>;
-                        ))}
+                        )}
                       </ul>;
                     </div>;
                   </div>;
                 </Card>;
-              ))}
+              )}
             </div>
           </div>
         </section>
@@ -1062,15 +1061,15 @@ export default function DevOpsAutomationPage() {;
               </h2>;
             </div>;
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>;
-              {testimonials && testimonials.map((testimonial, index) => (;
+              {testimonials && testimonials.map(testimonial, index) => (;
                 <Card key={index} className='p-6'>;
                   <div className='flex items-center mb-4'>;
-                    {[...Array(testimonial && testimonial.rating)].map((_, i) => (;
+                    {[...Array(testimonial && testimonial.rating)].map(_, i) => (;
                       <Star
                         key={i}
                         className='w-5 h-5 text-yellow-400 fill-current'
                       />;
-                    ))}
+                    )}
                   </div>;
                   <p className='text-gray-300 mb-6 italic'>;
                     "{testimonial && testimonial.content}";
@@ -1086,12 +1085,12 @@ export default function DevOpsAutomationPage() {;
               </h2>;
             </div>;
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
-              {testimonials && testimonials.map((testimonial, index) => (;
+              {testimonials && testimonials.map(testimonial, index) => (;
                 <Card key={index} className="p-6">;
                   <div className="flex items-center mb-4">;
-                    {[...Array(testimonial && testimonial.rating)].map((_, i) => (;
+                    {[...Array(testimonial && testimonial.rating)].map(_, i) => (;
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />;
-                    ))}
+                    )}
                   </div>;
                   <p className="text-gray-300 mb-6 italic">"{testimonial && testimonial.content}"</p>;
                   <div>;
@@ -1100,7 +1099,7 @@ export default function DevOpsAutomationPage() {;
                     <p className="text-sm text-blue-400">{testimonial && testimonial.company}</p>;
                   </div>;
                 </Card>;
-              ))}
+              )}
             </div>
           </div>
         </section>
@@ -1142,7 +1141,7 @@ export default function DevOpsAutomationPage() {;
                 Contact Sales
                     </Button>;
                   </div>;
-                </Card>))}
+                </Card>)}
             </div>;
           </div>;
         </section>;
@@ -1157,24 +1156,24 @@ export default function DevOpsAutomationPage() {;
               </p>;
             </div>;
             <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 8'>;
-              {market_comparison.map ((competitor, index) => (
+              {market_comparison.map (competitor, index) => (
                 <Card key={index} className='p - 6'>;
                   <div className='text - center mb - 6'>;
                     <h3 className='text - xl font - bold text - white mb - 2'>;
                       {competitor.competitor}
                     </h3>;
-                    <div className='flex items - center justify - center mb - 2'>                      {[...Array (5)].map ((_, i) => (                <Card key={index} className="p - 6">;
+                    <div className='flex items - center justify - center mb - 2'>                      {[...Array (5)].map (_, i) => (                <Card key={index} className="p - 6">;
                   <div className="text - center mb - 6">;
                     <h3 className="text - xl font - bold text - white mb - 2">{competitor.competitor}</h3>;
                     <div className="flex items - center justify - center mb - 2">;
                         <Star;
                           key={i}
                           className={`w - 5 h - 5 ${
-                            i < Math.floor (parse_float (competitor.rating));
+                            i < Math.floor (parse_float (competitor.rating);
                               ? 'text - yellow - 400 fill - current';
                               : 'text - gray - 400';
                           }`}
-                        />))}
+                        />)}
                     </div>;
                     <p className='text - sm text - gray - 400'>{competitor.rating}</p>;
                   </div>;
@@ -1192,7 +1191,7 @@ export default function DevOpsAutomationPage() {;
                         Pros:;
                       </p>;
                       <ul className='text - sm text - gray - 300 space - y-1'>;
-                        {competitor.pros.map ((pro, pro_index) => (
+                        {competitor.pros.map (pro, pro_index) => (
                           <li key={pro_index} className='flex items - center'>;
                             <Check className='w - 4 h - 4 text - green - 400 mr - 2 flex - shrink - 0' />                            {pro}                  </div>;
                   <div className="mb - 4">;
@@ -1203,11 +1202,11 @@ export default function DevOpsAutomationPage() {;
                     <div>;
                       <p className="text - sm font - medium text - green - 400 mb - 1">Pros:</p>;
                       <ul className="text - sm text - gray - 300 space - y-1">;
-                        {competitor.pros.map ((pro, pro_index) => (
+                        {competitor.pros.map (pro, pro_index) => (
                           <li key={pro_index} className="flex items - center">;
                             <Check className="w - 4 h - 4 text - green - 400 mr - 2 flex - shrink - 0" />;
                             {pro}
-                          </li>))}
+                          </li>)}
                       </ul>;
                     </div>;
                     <div>;
@@ -1215,20 +1214,19 @@ export default function DevOpsAutomationPage() {;
                         Cons:;
                       </p>;
                       <ul className='text - sm text - gray - 300 space - y-1'>;
-                        {competitor.cons.map ((con, con_index) => (
+                        {competitor.cons.map (con, con_index) => (
                           <li key={con_index} className='flex items - center'>;
                             <span className='w - 4 h - 4 text - red - 400 mr - 2 flex - shrink - 0'>;
-                              ;
                             </span>                            {con}                      <p className="text - sm font - medium text - red - 400 mb - 1">Cons:</p>;
                       <ul className="text - sm text - gray - 300 space - y-1">;
-                        {competitor.cons.map ((con, con_index) => (
+                        {competitor.cons.map (con, con_index) => (
                           <li key={con_index} className="flex items - center">;
                             <span className="w - 4 h - 4 text - red - 400 mr - 2 flex - shrink - 0"></span>;
-                          </li>))}
+                          </li>)}
                       </ul>;
                     </div>;
                   </div>;
-                </Card>))}
+                </Card>)}
             </div>;
           </div>;
         </section>;
@@ -1241,14 +1239,14 @@ export default function DevOpsAutomationPage() {;
               </h2>;
             </div>;
             <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 8'>;
-              {testimonials.map ((testimonial, index) => (
+              {testimonials.map (testimonial, index) => (
                 <Card key={index} className='p - 6'>;
                   <div className='flex items - center mb - 4'>;
-                    {[...Array (testimonial.rating)].map ((_, i) => (
+                    {[...Array (testimonial.rating)].map (_, i) => (
                       <Star;
                         key={i}
                         className='w - 5 h - 5 text - yellow - 400 fill - current';
-                      />))}
+                      />)}
                   </div>;
                   <p className='text - gray - 300 mb - 6 italic'>;
                     "{testimonial.content}";
@@ -1264,11 +1262,11 @@ export default function DevOpsAutomationPage() {;
               </h2>;
             </div>;
             <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">;
-              {testimonials.map ((testimonial, index) => (
+              {testimonials.map (testimonial, index) => (
                 <Card key={index} className="p - 6">;
                   <div className="flex items - center mb - 4">;
-                    {[...Array (testimonial.rating)].map ((_, i) => (
-                      <Star key={i} className="w - 5 h - 5 text - yellow - 400 fill - current" />))}
+                    {[...Array (testimonial.rating)].map (_, i) => (
+                      <Star key={i} className="w - 5 h - 5 text - yellow - 400 fill - current" />)}
                   </div>;
                   <p className="text - gray - 300 mb - 6 italic">"{testimonial.content}"</p>;
                   <div>;
@@ -1276,7 +1274,7 @@ export default function DevOpsAutomationPage() {;
                     <p className="text - sm text - gray - 400">{testimonial.role}</p>;
                     <p className="text - sm text - blue - 400">{testimonial.company}</p>;
                   </div>;
-                </Card>))}
+                </Card>)}
             </div>;
           </div>;
         </section>;
@@ -1323,6 +1321,5 @@ export default function DevOpsAutomationPage() {;
       </div>;
     </>;
   );
-}
+
     </>);
-}

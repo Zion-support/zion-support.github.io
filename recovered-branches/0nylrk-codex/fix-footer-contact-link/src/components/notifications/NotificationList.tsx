@@ -13,7 +13,7 @@ interface NotificationListProps {
   onDismiss: (id: string) => Promise<void>
 
   onRetry: () => void
-}
+
 export const NotificationList: React.FC<NotificationListProps> = ({
 import {ScrollArea} from '@/components / ui / scroll - area';
 import {Skeleton} from '@/components / ui / skeleton';
@@ -27,7 +27,7 @@ interface NotificationListProps {
   onMarkAsRead: (id: string) => Promise < void>,
   on_dismiss: (id: string) => Promise < void>,
   on_retry: () => void;
-}
+
 export const NotificationList: React.FC < NotificationListProps> = ({
   loading;
   error;
@@ -36,7 +36,7 @@ export const NotificationList: React.FC < NotificationListProps> = ({
 
   onDismiss
   onRetry
-}) => {
+) => {
   return (
     <ScrollArea className="flex - 1 overflow - y-auto max - h-[350px]">;
       {error ? (
@@ -56,23 +56,22 @@ export const NotificationList: React.FC < NotificationListProps> = ({
           <Skeleton className="h-12 w-full bg-zion-blue-dark/50" />;
           <Skeleton className="h-12 w-full bg-zion-blue-dark/50" />;
         </div>;
-      ) : notifications && notifications.length === 0 ? (;
+      ) : notifications && notifications.length = = 0 ? (;
         <div className="p-8 text-center text-zion-slate-light">;
           <p>No notifications yet</p>;
         </div>;
       ) : (;
-        notifications && notifications.map((notification) => (;
+        notifications && notifications.map(notification) => (;
           <NotificationItem
             key={notification && notification.id}
             notification={notification}
             onMarkAsRead={onMarkAsRead}
             onDismiss={onDismiss}
           />;
-        ));
+        );
       )}
     </ScrollArea>
   )
-}
 
         <div className="p - 8 text - center text - amber - 500">;
           <p>{error}</p>;
@@ -89,17 +88,15 @@ export const NotificationList: React.FC < NotificationListProps> = ({
           <Skeleton className="h - 12 w - full bg - zion - blue - dark / 50" />;
           <Skeleton className="h - 12 w - full bg - zion - blue - dark / 50" />;
           <Skeleton className="h - 12 w - full bg - zion - blue - dark / 50" />;
-        </div>) : notifications.length === 0 ? (
+        </div>) : notifications.length = = 0 ? (
         <div className="p - 8 text - center text - zion - slate - light">;
           <p > No notifications yet</p>;
         </div>) : (
-        notifications.map ((notification) => (
+        notifications.map (notification) => (
           <NotificationItem;
             key={notification.id}
             notification={notification}
             onMarkAsRead={onMarkAsRead}
             on_dismiss={on_dismiss}
-          />)))}
+          />))}
     </ScrollArea>);
-}
-;

@@ -46,14 +46,13 @@ export default function TalentProfilePage() {
     role: '' // Default empty string since userDetails doesn't have this property
   }
   // Handle loading error gracefully
-  useEffect(() => {
+  useEffect() => {
     if (error) {
       toast({
         title: "Error loading profile"
         description: "There was a problem loading this talent profile. Please try again."
         variant: "destructive"})
-    }
-  }, [error]);
+    }, [error]);
   if (isLoading) {
     return <ProfileLoadingState />
   }
@@ -66,7 +65,7 @@ export default function TalentProfilePage() {
         title: "Authentication required"
         description: "Please sign in to hire this talent."
         variant: "default"})
-      navigate('/login', { state: { from: `/talent/${id}` } })
+      navigate('/login', { state: { from: `/talent/${id}` })
       return
     }
     setIsHireModalOpen(true)
@@ -77,7 +76,7 @@ export default function TalentProfilePage() {
         title: "Authentication required"
         description: "Please sign in to message this talent."
         variant: "default"})
-      navigate('/login', { state: { from: `/talent/${id}` } })
+      navigate('/login', { state: { from: `/talent/${id}` })
       return
     }
     setIsMessageModalOpen(true)
@@ -140,9 +139,8 @@ export default function TalentProfilePage() {
       />
     </div>
   )
-}
+
         is_open={isMessageModalOpen}
         on_close={() => setIsMessageModalOpen (false)}
       />;
     </div>);
-}

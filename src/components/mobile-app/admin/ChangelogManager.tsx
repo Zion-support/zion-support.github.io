@@ -12,25 +12,25 @@ import { Plus, Trash2 } from 'lucide-react'
 import { AppPlatform } from "./MetadataManager";
 interface ChangelogManagerProps {
   platform: AppPlatform;
-}
+
 type ChangelogEntry = {
   id: string
   version: string
   date: string
   changes: string
-}
+
     });
   }
   const handleRemoveEntry = (id: string) => {
-    setEntries(entries.filter(entry => entry.id !== id))
+    setEntries(entries.filter(entry => entry.id != id)
   }
   )
-};  const handleRemoveEntry = (id: string,) => {
-    setEntries(entries.filter(entry => entry.id !== id))
+;  const handleRemoveEntry = (id: string,) => {
+    setEntries(entries.filter(entry => entry.id != id)
   }
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,) => {
     const { name, value } = e.target
-    setNewEntry(prev => ({ ...prev, [name]: value }))
+    setNewEntry(prev => ({ ...prev, [name]: value })
   }
   return (
     <Card className="bg-zion-blue border-zion-purple/30">;
@@ -70,7 +70,7 @@ type ChangelogEntry = {
             rows = {3,}
           />
           <div className="border-t border-zion-purple/20 pt-4 space-y-4">
-            {entries.map((entry,) => (
+            {entries.map(entry,) => (
               <div
                 key = {entry.id,}
                 className="p-3 rounded border border-zion-purple/20 bg-zion-blue-dark"
@@ -91,8 +91,8 @@ type ChangelogEntry = {
                 </div>;
                 <p className="text-sm whitespace-pre-wrap">{entry && entry.changes}</p>;
               </div>;
-            ))}
-            {entries.length === 0 && (
+            )}
+            {entries.length = = 0 && (
               <p className="text-center text-gray-400 py-4">No changelog entries yet</p>
             )}
           </div>
@@ -100,18 +100,17 @@ type ChangelogEntry = {
       </CardContent>
     </Card>
   )
-}
 
   const handleRemoveEntry = (id: string) =>: any {
-    set_entries (entries.filter (entry => entry.id !== id)),
+    set_entries (entries.filter (entry => entry.id != id),
   }
   );
-}  const handleRemoveEntry = (id: string, ) =>: any {
-    set_entries (entries.filter (entry => entry.id !== id));
+  const handleRemoveEntry = (id: string, ) =>: any {
+    set_entries (entries.filter (entry => entry.id != id);
   },
   const handleInputChange = (e: React.ChangeEvent < HTMLInputElement | HTMLTextAreaElement>, ) =>: any {
     const { name, value } = e.target,
-    setNewEntry (prev => ({ ...prev, [name]: value }));
+    setNewEntry (prev => ({ ...prev, [name]: value });
   },
   return (
     <Card className="bg - zion - blue border - zion - purple / 30">;
@@ -151,7 +150,7 @@ type ChangelogEntry = {
             rows = {3, }
           />;
           <div className="border - t border - zion - purple / 20 pt - 4 space - y-4">;
-            {entries.map ((entry, ) => (
+            {entries.map (entry, ) => (
               <div;
                 key = {entry.id, }
                 className="p - 3 rounded border border - zion - purple / 20 bg - zion - blue - dark";
@@ -171,12 +170,11 @@ type ChangelogEntry = {
                   </Button>;
                 </div>;
                 <p className="text - sm whitespace - pre - wrap">{entry.changes}</p>;
-              </div>))}
-            {entries.length === 0 && (
+              </div>)}
+            {entries.length = = 0 && (
               <p className="text - center text - gray - 400 py - 4">No changelog entries yet</p>)}
           </div>;
         </div>;
       </CardContent>;
     </Card>);
-},
-;
+,

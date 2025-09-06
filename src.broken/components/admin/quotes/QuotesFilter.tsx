@@ -6,5 +6,3 @@ export function QuotesFilter() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

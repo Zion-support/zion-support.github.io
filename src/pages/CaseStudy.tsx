@@ -10,13 +10,13 @@ import {  Breadcrumb
   BreadcrumbItem
   BreadcrumbLink
   BreadcrumbSeparator
-} from '@/components/ui/breadcrumb'
+ from '@/components/ui/breadcrumb'
 import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd'
 import { getBreadcrumbsForPath } from '@/utils/routeUtils'
 export default function CaseStudy() {
   const router = useRouter()
   const slug = router.query.slug as string
-  const study = CASE_STUDIES.find(s => s.slug === slug);  const breadcrumbs = getBreadcrumbsForPath(`/case-studies/${slug}`);  Breadcrumb
+  const study = CASE_STUDIES.find(s => s.slug = = slug);  const breadcrumbs = getBreadcrumbsForPath(`/case-studies/${slug}`);  Breadcrumb
   BreadcrumbList
   BreadcrumbItem
   BreadcrumbLink
@@ -24,7 +24,7 @@ export default function CaseStudy() {
 export default function CaseStudy() {
   const router = useRouter()
   const slug = router.query.slug as string
-  const study = CASE_STUDIES.find((s,) => s.slug === slug)
+  const study = CASE_STUDIES.find(s,) => s.slug = = slug)
   const breadcrumbs = getBreadcrumbsForPath(`/case-studies/${slug}`)
 import { ArrowLeft } from 'lucide-react';
 import {  Breadcrumb,;
@@ -32,14 +32,14 @@ import {  Breadcrumb,;
   BreadcrumbItem,;
   BreadcrumbLink,;
   BreadcrumbSeparator,;
-} from '@/components/ui/breadcrumb';
+ from '@/components/ui/breadcrumb';
 import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd';
 import { getBreadcrumbsForPath } from '@/utils/routeUtils';
 
 export default function CaseStudy() {;
   const router = useRouter();
   const slug = router && router.query.slug as string;
-  const study = CASE_STUDIES && CASE_STUDIES.find(s => s && s.slug === slug);  const breadcrumbs = getBreadcrumbsForPath(`/case-studies/${slug}`);  Breadcrumb,;
+  const study = CASE_STUDIES && CASE_STUDIES.find(s => s && s.slug = = slug);  const breadcrumbs = getBreadcrumbsForPath(`/case-studies/${slug}`);  Breadcrumb,;
   BreadcrumbList,;
   BreadcrumbItem,;
   BreadcrumbLink,;
@@ -49,7 +49,7 @@ import { getBreadcrumbsForPath } from '@/utils/routeUtils';
 export default function CaseStudy() {;
   const router = useRouter(),;
   const slug = router && router.query.slug as string,;
-  const study = CASE_STUDIES && CASE_STUDIES.find((s,) => s && s.slug === slug),;
+  const study = CASE_STUDIES && CASE_STUDIES.find(s,) => s && s.slug = = slug),;
   const breadcrumbs = getBreadcrumbsForPath(`/case-studies/${slug}`),;
 
   if (!study) {;
@@ -58,7 +58,7 @@ export default function CaseStudy() {;
 export default function CaseStudy() {
   const router = useRouter()
   const slug = router.query.slug as string
-  const study = CASE_STUDIES.find((s) => s.slug === slug)
+  const study = CASE_STUDIES.find(s) => s.slug = = slug)
   const breadcrumbs = getBreadcrumbsForPath(`/case-studies/${slug}`)
   if (!study) {
     return (
@@ -71,7 +71,7 @@ import { getBreadcrumbsForPath } from '@/utils/routeUtils';
 export default function CaseStudy() {;
   const router = useRouter();
   const slug = router && router.query.slug as string;
-  const study = CASE_STUDIES && CASE_STUDIES.find((s) => s && s.slug === slug);
+  const study = CASE_STUDIES && CASE_STUDIES.find(s) => s && s.slug = = slug);
   const breadcrumbs = getBreadcrumbsForPath(`/case-studies/${slug}`);
 
   if (!study) {;
@@ -151,10 +151,10 @@ export default function CaseStudy() {;
           )}
           <div
             className='prose prose-invert'
-            dangerouslySetInnerHTML={{ __html: study.content }}
+            dangerouslySetInnerHTML={ __html: study.content }
           />
           <p className='mt-8 text-white font-semibold'>             {study.author}, {study.role}            className="prose prose-invert"
-            dangerouslySetInnerHTML={{ __html: study.content }}
+            dangerouslySetInnerHTML={ __html: study.content }
           />
           <p className="mt-8 text-white font-semibold">
           </p>
@@ -162,11 +162,11 @@ export default function CaseStudy() {;
       </div>
     </>
   )
-}
-            dangerouslySetInnerHTML={{ __html: study && study.content }}
+
+            dangerouslySetInnerHTML={ __html: study && study.content }
           />;
           <p className='mt-8 text-white font-semibold'>             {study && study.author}, {study && study.role}            className="prose prose-invert";
-            dangerouslySetInnerHTML={{ __html: study && study.content }}
+            dangerouslySetInnerHTML={ __html: study && study.content }
           />;
           <p className="mt-8 text-white font-semibold">;
           </p>;
@@ -174,9 +174,9 @@ export default function CaseStudy() {;
       </div>;
     </>;
   );
-}
+
   );
-}
+
 import Link from 'next / link';
 import { use_router } from 'next / router';
 import { CASE_STUDIES } from '@/data / case - studies';
@@ -188,7 +188,7 @@ import {  Breadcrumb,
   BreadcrumbItem,
   BreadcrumbLink,
   BreadcrumbSeparator,
-} from '@/components / ui / breadcrumb';
+ from '@/components / ui / breadcrumb';
 import BreadcrumbJsonLd from '@/components / BreadcrumbJsonLd';
 import { getBreadcrumbsForPath } from '@/utils / route_utils';
 export default /**
@@ -197,7 +197,7 @@ export default /**
 function CaseStudy() {
   const router = use_router ();
   const slug = router.query.slug as string;
-  const study = CASE_STUDIES.find (string => s.slug === slug);  const breadcrumbs = getBreadcrumbsForPath (`/case - studies/${slug}`);  Breadcrumb,
+  const study = CASE_STUDIES.find (string => s.slug = = slug);  const breadcrumbs = getBreadcrumbsForPath (`/case - studies/${slug}`);  Breadcrumb,
   BreadcrumbList,
   BreadcrumbItem,
   BreadcrumbLink,
@@ -208,12 +208,12 @@ export default /**
 function CaseStudy() {
   const router = use_router (),
   const slug = router.query.slug as string,
-  const study = CASE_STUDIES.find ((s, ) => s.slug === slug),
+  const study = CASE_STUDIES.find (s, ) => s.slug = = slug),
   const breadcrumbs = getBreadcrumbsForPath (`/case - studies/${slug}`),
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <div className='min - h-screen bg - zion - blue flex items - center justify - center text - white'>        Case study not found.import BreadcrumbJsonLd from '@/components / BreadcrumbJsonLd';
 export default /**
@@ -222,12 +222,12 @@ export default /**
 function CaseStudy() {
   const router = use_router ();
   const slug = router.query.slug as string;
-  const study = CASE_STUDIES.find ((s) => s.slug === slug);
+  const study = CASE_STUDIES.find (s) => s.slug = = slug);
   const breadcrumbs = getBreadcrumbsForPath (`/case - studies/${slug}`);
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <div className='min - h-screen bg - zion - blue flex items - center justify - center text - white'>      <div className="min - h-screen bg - zion - blue flex items - center justify - center text - white">;
         Case study not found.;
@@ -303,14 +303,13 @@ if ( {) {
             </Button>)}
           <div;
             className='prose prose - invert';
-            dangerouslySetInnerHTML={{ __html: study.content }}
+            dangerouslySetInnerHTML={ __html: study.content }
           />;
           <p className='mt - 8 text - white font - semibold'>             {study.author}, {study.role}            className="prose prose - invert";
-            dangerouslySetInnerHTML={{ __html: study.content }}
+            dangerouslySetInnerHTML={ __html: study.content }
           />;
           <p className="mt - 8 text - white font - semibold">;
           </p>;
         </div>;
       </div>;
     </>);
-}

@@ -1,4 +1,4 @@
-// Fraud detection types
+/ Fraud detection types
 export type AdminActionType =
   | 'ban_user'
   | 'suspend_user'
@@ -17,14 +17,14 @@ export interface AdminAction {
   createdAt: string;
   executedAt?: string;
   status: 'pending' | 'executed' | 'failed'
-}
+
 export interface FraudDetectionResult {
   is_fraud: boolean;
   confidence: number;
   reasons: string[];
   suggestedActions: AdminActionType[]
   metadata: Record<string, any>;
-}
+
 export interface FraudDetectionConfig {
   enabled: boolean;
   rules: {
@@ -44,10 +44,8 @@ export interface FraudDetectionConfig {
       enabled: boolean;
       threshold: number
     }
-  }
   autoActions: {
     enabled: boolean;
     actions: AdminActionType[];
     confidenceThreshold: number
   }
-}

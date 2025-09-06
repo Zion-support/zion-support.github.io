@@ -1,7 +1,7 @@
       {children}
     </ThemeProvider>
   )
-},
+,
 
   isFallback: false,
   isLocale: false,
@@ -9,5 +9,4 @@
   defaultLocale: 'en',
   domainLocales: [],
   isPreview: false
-}),
-
+),

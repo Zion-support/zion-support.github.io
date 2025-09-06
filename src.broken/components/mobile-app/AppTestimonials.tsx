@@ -6,5 +6,3 @@ export function AppTestimonials() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

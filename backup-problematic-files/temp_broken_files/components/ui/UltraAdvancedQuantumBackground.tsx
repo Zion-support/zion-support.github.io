@@ -3,15 +3,14 @@ import { motion } from 'framer-motion',
 interface UltraAdvancedQuantumBackgroundProps {
   children: React.ReactNode,
   className?: string
-}
 
 const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundProps> = ({ 
   children,
   className = '' 
-}) => {
+) => {
   const canvasRef = useRef<HTMLCanvasElement>(null),
 
-  useEffect(() => {
+  useEffect() => {
     const canvas = canvasRef.current,
     if (!canvas) return,
 
@@ -58,7 +57,6 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
           this.x = Math.random() * canvas.width,
           this.y = Math.random() * canvas.height
         }
-      }
 
       draw() {
         if (!ctx) return,
@@ -70,7 +68,6 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
         ctx.fill(),
         ctx.restore()
       }
-    }
 
     class QuantumField {
       x: number,
@@ -95,7 +92,7 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
       draw() {
         if (!ctx) return,
         ctx.save(),
-        ctx.globalAlpha = this.intensity * (0.5 + 0.5 * Math.sin(this.phase)),
+        ctx.globalAlpha = this.intensity * (0.5 + 0.5 * Math.sin(this.phase),
         ctx.strokeStyle = this.color,
         ctx.lineWidth = 2,
         ctx.beginPath(),
@@ -103,7 +100,6 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
         ctx.stroke(),
         ctx.restore()
       }
-    }
 
     class NeuralNetwork {
       nodes: { x: number, y: number, connections: number[] }[],
@@ -112,18 +108,18 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
       constructor() {
         this.nodes = [],
         this.connections = [],
-        
+
         // Create neural network structure
         const layers = [5, 8, 6, 4],
         let nodeIndex = 0,
-        
-        layers.forEach((layerSize, layerIndex) => {
+
+        layers.forEach(layerSize, layerIndex) => {
           for (let i = 0, i < layerSize, i++) {
-            const x = (layerIndex / (layers.length - 1)) * canvas.width,
-            const y = (i / (layerSize - 1)) * canvas.height,
-            
+            const x = (layerIndex / (layers.length - 1) * canvas.width,
+            const y = (i / (layerSize - 1) * canvas.height,
+
             this.nodes.push({ x, y, connections: [] }),
-            
+
             // Connect to previous layer
             if (layerIndex > 0) {
               const prevLayerStart = nodeIndex - layers[layerIndex - 1],
@@ -133,15 +129,13 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
                   to: nodeIndex,
                   weight: Math.random()
                 })              }
-            }
             nodeIndex++
-          }
-        })
+          })
       }
 
       update() {
         // Animate neural network
-        this.nodes.forEach((node, index) => {
+        this.nodes.forEach(node, index) => {
           node.x += (Math.random() - 0.5) * 0.5,
           node.y += (Math.random() - 0.5) * 0.5
         })
@@ -150,7 +144,7 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
       draw() {
         if (!ctx) return,
         ctx.save(),
-        
+
         // Draw connections
         ctx.strokeStyle = 'rgba(100, 200, 255, 0.3)',
         ctx.lineWidth = 1,
@@ -172,17 +166,16 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
         }),
         ctx.restore()
       }
-    }
 
     // Initialize
     for (let i = 0, i < 100, i++) {
-      particles.push(new Particle())
+      particles.push(new Particle()
     }
 
     for (let i = 0, i < 8, i++) {
-      quantumFields.push(new QuantumField())
+      quantumFields.push(new QuantumField()
     }
-    neuralNetworks.push(new NeuralNetwork()),
+    neuralNetworks.push(new NeuralNetwork(),
 
     const animate = () => {
       ctx.fillStyle = 'rgba(0, 0, 0, 0.1)',
@@ -214,13 +207,13 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
         if (i + 1 < particles.length) {
           const p1 = particles[i],
           const p2 = particles[i + 1],
-          const distance = Math.sqrt((p1.x - p2.x) ** 2 + (p1.y - p2.y) ** 2),
+          const distance = Math.sqrt(p1.x - p2.x) ** 2 + (p1.y - p2.y) ** 2),
           if (distance < 100) {
             ctx.beginPath(),
             ctx.moveTo(p1.x, p1.y),
             ctx.lineTo(p2.x, p2.y),
             ctx.stroke()
-          }        }
+          }
       }
       ctx.restore(),
 
@@ -238,8 +231,7 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
     return () => {
       window.removeEventListener('resize', handleResize),
       cancelAnimationFrame(animationFrameId)
-    }
-  }, []),
+    }, []),
 
   return (
     <div className={`relative min-h-screen overflow-hidden ${className}`}>
@@ -258,78 +250,78 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
       {_/* Floating Quantum Elements */}
       <motion.div
         className=&quot;absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full opacity-20 blur-xl&quot;
-        animate={{
+        animate={
           scale: [1, 1.2, 1],
-          opacity: [0.2, 0.4, 0.2]}}
-        transition={{
+          opacity: [0.2, 0.4, 0.2]}
+        transition={
           duration: 4,
           repeat: Infinity,
           ease: &quot;easeInOut&quot;
-        }}
+        }
       />
-      
+
       <motion.div
         className=&quot;absolute top-40 right-32 w-24 h-24 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full opacity-20 blur-xl&quot;
-        animate={{
+        animate={
           scale: [1, 1.3, 1],
-          opacity: [0.2, 0.5, 0.2]}}
-        transition={{
+          opacity: [0.2, 0.5, 0.2]}
+        transition={
           duration: 5,
           repeat: Infinity,
           ease: &quot;easeInOut&quot;,
           delay: 1
-        }}
+        }
       />
 
       <motion.div
         className=&quot;absolute bottom-32 left-1/3 w-28 h-28 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full opacity-20 blur-xl&quot;
-        animate={{
+        animate={
           scale: [1, 1.4, 1],
-          opacity: [0.2, 0.6, 0.2]}}
-        transition={{
+          opacity: [0.2, 0.6, 0.2]}
+        transition={
           duration: 6,
           repeat: Infinity,
           ease: &quot;easeInOut&quot;,
           delay: 2
-        }}      />
+        }      />
 
       {_/* Quantum Canvas */}
       <canvas
         ref={canvasRef}
         className=&quot;absolute inset-0 w-full h-full opacity-60&quot;
-        style={{ zIndex: 1 }}
+        style={ zIndex: 1 }
       />
 
       {/* Content Layer */}
       <div className=&quot;relative z-10&quot;>
         {children}
       </div>;
-;
+
       {/* Quantum Energy Waves */}
       <div className=&quot;absolute bottom-0 left-0 right-0 h-32 overflow-hidden&quot;>
         <motion.div
           className=&quot;absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cyan-500/20 to-transparent&quot;
-          animate={{
-            x: [0, -100, 0]}}
-          transition={{
+          animate={
+            x: [0, -100, 0]}
+          transition={
             duration: 8,
             repeat: Infinity,
             ease: &quot;linear&quot;
-          }}
+          }
         />
         <motion.div
           className=&quot;absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-purple-500/20 to-transparent&quot;
-          animate={{
-            x: [0, 100, 0]}}
-          transition={{
+          animate={
+            x: [0, 100, 0]}
+          transition={
             duration: 10,
             repeat: Infinity,
             ease: &quot;linear&quot;,
             delay: 2
-          }}        />
+          }        />
       </div>
     </div>
   )
-},
+,
 
 export default UltraAdvancedQuantumBackground,

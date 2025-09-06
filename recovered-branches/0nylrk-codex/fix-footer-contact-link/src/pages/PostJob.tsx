@@ -44,7 +44,7 @@ export default function PostJob() {
       {isMobile && <div className="h-16"></div>}
     </>
   )
-}
+
             <CardDescription>;
               Fill out the form below to post your job and find the perfect talent.;
             </CardDescription>;
@@ -59,7 +59,6 @@ export default function PostJob() {
       {isMobile && <div className="h-16"></div>}
     </>;
   );
-}
+
       {is_mobile && <div className="h - 16"></div>}
     </>);
-}

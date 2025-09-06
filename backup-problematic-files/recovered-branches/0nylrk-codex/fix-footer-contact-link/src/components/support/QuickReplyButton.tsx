@@ -2,12 +2,11 @@
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { cn } from "@/lib/utils",;
-;
+
 interface QuickReplyButtonProps {;
   text:string,;
   onClick:() => void;
-}
-;
+
 export function QuickReplyButton({ text, onClick } QuickReplyButtonProps) {;
   return (;
     <Button;
@@ -25,13 +24,12 @@ export function QuickReplyButton({ text, onClick } QuickReplyButtonProps) {;
  interface QuickReplyButtonProps {
   text: string;
 onClick: () => void 
-}text, onClick 
-}: QuickReplyButtonProps) {
+text, onClick 
+: QuickReplyButtonProps) {
   return (<Button variant="outline" size="sm" className= {
   cn () 
-}onClick= {
+onClick= {
   onClick 
-}> {
+> {
   text 
-}</Button>) 
-}
+</Button>) 

@@ -7,7 +7,7 @@ const CloudArchitectureChat: NextPage = () => {
         <title>CloudArchitectureChat - Zion Tech Solutions</title>
         <meta name=&quot;description&quot; content=&quot;CloudArchitectureChat blog post&quot; />
       </Head>
-      
+
       <main>
         <h1>CloudArchitectureChat</h1>
         <p>Blog content coming soon...</p>
@@ -15,5 +15,5 @@ const CloudArchitectureChat: NextPage = () => {
       </main>
     </div>
   )
-},
+,
 export default CloudArchitectureChat,

@@ -6,5 +6,3 @@ export function UserTypeSelection() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

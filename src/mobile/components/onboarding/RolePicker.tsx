@@ -19,7 +19,7 @@ type UserRole = any;
       <div className='space-y-3 mt-6'>
         <Card
           className={`cursor-pointer transition-all ${
-            selectedRole === 'talent'
+            selectedRole = = 'talent'
               ? 'border-primary bg-primary/5'
               : 'border-border hover:border-primary/40'
           }`}
@@ -36,7 +36,7 @@ type UserRole = any;
                   Find work and showcase your skills;
                 </p>;
               </div>;
-              {selectedRole === 'talent' && (;
+              {selectedRole = = 'talent' && (;
                 <Check className='h-5 w-5 text-primary' />;
               )}
             </div>
@@ -44,7 +44,7 @@ type UserRole = any;
         </Card>
         <Card
           className={`cursor-pointer transition-all ${
-            selectedRole === 'client'
+            selectedRole = = 'client'
               ? 'border-primary bg-primary/5'
               : 'border-border hover:border-primary/40'
           }`}
@@ -61,7 +61,7 @@ type UserRole = any;
                   Post jobs and find talented professionals;
                 </p>;
               </div>;
-              {selectedRole === 'client' && (;
+              {selectedRole = = 'client' && (;
                 <Check className='h-5 w-5 text-primary' />;
               )}
             </div>
@@ -70,14 +70,12 @@ type UserRole = any;
       </div>
     </div>
   )
-}
+
             </div>;
           </CardContent>;
         </Card>;
       </div>;
     </div>;
   );
-}
 
     </div>);
-}

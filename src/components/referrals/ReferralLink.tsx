@@ -8,7 +8,7 @@ import {
   CardFooter
   CardHeader
   CardTitle
-} from '@/components/ui/card'
+ from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 
 import { Copy, Facebook, Link, Share, Twitter } from 'lucide-react'
@@ -20,12 +20,12 @@ export function ReferralLink({
   referralLink
   onCopy
   onShare
-}: ReferralLinkProps) {
+: ReferralLinkProps) {
   const [copied, setCopied] = useState(false)
   const handleCopy = () => {
     onCopy()
     setCopied(true)
-    setTimeout(() => setCopied(false), 2000)
+    setTimeout() => setCopied(false), 2000)
   }
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
@@ -36,7 +36,7 @@ import {;
   CardFooter,;
   CardHeader,;
   CardTitle,;
-} from '@/components/ui/card';
+ from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Copy, Facebook, Link, Share, Twitter } from 'lucide-react';
 interface ReferralLinkProps {;
@@ -48,13 +48,13 @@ export function ReferralLink(): any ({;
   referralLink,;
   onCopy,;
   onShare,;
-}: ReferralLinkProps) {;
+: ReferralLinkProps) {;
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {;
     onCopy();
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    setTimeout() => setCopied(false), 2000);
   };
   return (
     <Card className='mt-6'>;
@@ -92,7 +92,7 @@ export function ReferralLink(): any ({;
   const handleCopy = () => {
     onCopy()
     setCopied(true)
-    setTimeout(() => setCopied(false), 2000)
+    setTimeout() => setCopied(false), 2000)
         <div className='flex flex - col space - y-3'>;
           <div className='flex space - x-2'>;
             <Input;
@@ -116,7 +116,7 @@ export function ReferralLink(): any ({;
   const handle_copy = () =>: any {
     on_copy ();
     set_copied (true);
-    set_timeout (() => set_copied (false), 2000);
+    set_timeout () => set_copied (false), 2000);
   }
           {copied && (;
             <p className='text-sm text-green-600 dark:text-green-500'>              Copied to clipboard!;
@@ -125,7 +125,7 @@ export function ReferralLink(): any ({;
   const handleCopy = () => {;
     onCopy();
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    setTimeout() => setCopied(false), 2000);
   };
 
   return (
@@ -220,7 +220,7 @@ export function ReferralLink(): any ({;
       </CardFooter>
     </Card>
   )
-}
+
               LinkedIn;
             </Button>;
           </div>;
@@ -228,8 +228,7 @@ export function ReferralLink(): any ({;
       </CardFooter>;
     </Card>;
   );
-}
+
   );
-}
+
     </Card>);
-}

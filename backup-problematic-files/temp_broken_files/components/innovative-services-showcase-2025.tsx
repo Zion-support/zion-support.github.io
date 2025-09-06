@@ -7,15 +7,15 @@ import {
   Phone, Mail, MapPin, TrendingUp, Users, Award,
   Zap, Globe, Cpu, Database, Lock, Cloud,
   Stethoscope, GraduationCap, Leaf, Truck
-} from 'lucide-react',
+ from 'lucide-react',
 import Layout from '../components/layout/Layout',
-// Import all the new 2025 innovative service data,
+/ Import all the new 2025 innovative service data,
 import { innovativeFinancialServices2025 } from '../data/2025-innovative-financial-services',
 import { innovativeHealthcareServices2025 } from '../data/2025-innovative-healthcare-services',
 import { innovativeEducationServices2025 } from '../data/2025-innovative-education-services',
 import { innovativeSustainabilityServices2025 } from '../data/2025-innovative-sustainability-services',
 import { innovativeLogisticsServices2025 } from '../data/2025-innovative-logistics-services',
-// Import existing services for comprehensive coverage,
+/ Import existing services for comprehensive coverage,
 import { realMicroSaasServices2025 } from '../data/2025-real-micro-saas-services',
 import { innovativeAIServices2025 } from '../data/2025-innovative-ai-services',
 import { innovativeITServices2025 } from '../data/2025-innovative-it-services',
@@ -25,7 +25,7 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-},
+,
 
 const serviceCategories = [
   {
@@ -118,7 +118,7 @@ const serviceCategories = [
     gradient: 'from-teal-500/20 to-green-500/20',
     badge: 'Popular'
   }
-],
+,
 
 export default function InnovativeServicesShowcase2025() {
   const [searchTerm, setSearchTerm] = useState(''),
@@ -126,12 +126,11 @@ export default function InnovativeServicesShowcase2025() {
   const [sortBy, setSortBy] = useState('name'),
   const filteredServices = serviceCategories.flatMap(category => 
     category.services.filter(service =>
-      (selectedCategory === 'all' || category.id === selectedCategory) &&
-      (searchTerm === '' || 
-        service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.category.toLowerCase().includes(searchTerm.toLowerCase()))
-    )
+      (selectedCategory = = 'all' || category.id = = selectedCategory) &&
+      (searchTerm = = '' || 
+        service.name.toLowerCase().includes(searchTerm.toLowerCase() ||
+        service.description.toLowerCase().includes(searchTerm.toLowerCase() ||
+        service.category.toLowerCase().includes(searchTerm.toLowerCase())
   ),
 
   const sortedServices = [...filteredServices].sort(_(a, b) => {
@@ -143,8 +142,7 @@ export default function InnovativeServicesShowcase2025() {
       case 'category':
         return a.category.localeCompare(b.category),
       default: return 0
-    }
-  }),
+    }),
   return (_<Layout>
       <Head>
         <title>Innovative Services Showcase 2025 | Zion Tech Group</title>
@@ -158,7 +156,7 @@ export default function InnovativeServicesShowcase2025() {
       {/* Hero Section */}
       <section className=&quot;relative min-h-screen flex items-center justify-center overflow-hidden&quot;>
         <div className=&quot;absolute inset-0 bg-gradient-to-br from-black via-slate-900 to-black&quot;></div>
-        
+
         {/* Background Elements */}
         <div className=&quot;absolute inset-0 overflow-hidden pointer-events-none&quot;>
           <div className=&quot;absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse&quot;></div>
@@ -167,9 +165,9 @@ export default function InnovativeServicesShowcase2025() {
 
         <div className=&quot;relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto&quot;>
           <motion.div,
-initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
             className=&quot;mb-8&quot;          >
             <div className=&quot;inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 text-cyan-400 text-sm font-medium mb-6&quot;>
               <Star className=&quot;w-4 h-4 mr-2&quot; />
@@ -188,14 +186,14 @@ initial={{ opacity: 0, y: 30 }}
 
           {_/* Stats */}
           <motion.div,
-initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8, delay: 0.2 }
             className=&quot;grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto&quot;
           >
             <div className=&quot;text-center&quot;>
               <div className=&quot;text-3xl md:text-4xl font-bold text-cyan-400 mb-2&quot;>
-                {serviceCategories.reduce((total, category) => total + category.services.length, 0)}+              </div>
+                {serviceCategories.reduce(total, category) => total + category.services.length, 0)}+              </div>
               <div className=&quot;text-gray-400&quot;>Services</div>
             </div>
             <div className=&quot;text-center&quot;>
@@ -246,7 +244,7 @@ value={selectedCategory}
                   {serviceCategories.map(category => (
                     <option key={category.id} value={category.id}>
                       {category.title}                    </option>
-                  ))}
+                  )}
                 </select>
               </div>
 
@@ -270,13 +268,13 @@ value={sortBy}
       <section className=&quot;py-20 bg-slate-900&quot;>
         <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
-            {sortedServices.map((service, index) => (
+            {sortedServices.map(service, index) => (
               <motion.div,
 key={service.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, y: 30 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.8, delay: index * 0.1 }
+                viewport={ once: true }
                 className=&quot;group bg-gradient-to-br from-slate-800/50 to-slate-700/50 border border-slate-600/30 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105&quot;
               >
                 {/* Service Header */}
@@ -298,24 +296,24 @@ key={service.id}
                     {service.description}
                   </p>;
                 </div>;
-;
+
                 {/* Features */}
                 <div className=&quot;mb-6&quot;>
                   <h4 className=&quot;text-sm font-semibold text-gray-400 mb-3 uppercase tracking-wide&quot;>Key Features</h4>
                   <ul className=&quot;space-y-2&quot;>
-                    {service.features.slice(0, 3).map((feature, featureIndex) => (
+                    {service.features.slice(0, 3).map(feature, featureIndex) => (
                       <li key={featureIndex} className=&quot;flex items-center text-sm text-gray-300&quot;>
                         <CheckCircle className=&quot;w-4 h-4 text-cyan-400 mr-2 flex-shrink-0&quot; />
                         {feature}
                       </li>;
-                    ))}
+                    )}
                     {service.features.length > 3 && (
                       <li className=&quot;text-sm text-cyan-400&quot;>                        +{service.features.length - 3} more features
                       </li>
                     )}
                   </ul>;
                 </div>;
-;
+
                 {/* Market Info */}
                 <div className=&quot;mb-6 grid grid-cols-2 gap-4 text-sm&quot;>
                   <div>
@@ -342,13 +340,13 @@ href={`mailto:${service.contact.email}`}
                   </a>
                 </div>
               </motion.div>
-            ))}
+            )}
           </div>
 
-          {sortedServices.length === 0 && (
+          {sortedServices.length = = 0 && (
             <motion.div,
-initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
+initial={ opacity: 0 }
+              animate={ opacity: 1 }
               className=&quot;text-center py-20&quot;            >
               <div className=&quot;text-gray-400 text-xl mb-4&quot;>No services found</div>
               <div className=&quot;text-gray-500&quot;>Try adjusting your search or filter criteria</div>
@@ -356,15 +354,15 @@ initial={{ opacity: 0 }}
           )}
         </div>;
       </section>;
-;
+
       {/* Contact Section */}
       <section className=&quot;py-20 bg-gradient-to-b from-slate-900 to-black&quot;>
         <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
           <motion.div,
-initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
             className=&quot;text-center mb-16&quot;          >
             <h2 className=&quot;text-3xl md:text-5xl font-bold text-white mb-6&quot;>
               Ready to Transform Your Business?
@@ -376,10 +374,10 @@ initial={{ opacity: 0, y: 30 }}
 
           <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8&quot;>
             <motion.div,
-initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              viewport={{ once: true }}
+initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8, delay: 0.1 }
+              viewport={ once: true }
               className=&quot;text-center&quot;            >
               <div className=&quot;w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4&quot;>
                 <Phone className=&quot;w-8 h-8 text-white&quot; />
@@ -389,10 +387,10 @@ initial={{ opacity: 0, y: 30 }}
             </motion.div>
 
             <motion.div,
-initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
+initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8, delay: 0.2 }
+              viewport={ once: true }
               className=&quot;text-center&quot;            >
               <div className=&quot;w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4&quot;>
                 <Mail className=&quot;w-8 h-8 text-white&quot; />
@@ -402,10 +400,10 @@ initial={{ opacity: 0, y: 30 }}
             </motion.div>
 
             <motion.div,
-initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              viewport={{ once: true }}
+initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8, delay: 0.3 }
+              viewport={ once: true }
               className=&quot;text-center&quot;            >
               <div className=&quot;w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4&quot;>
                 <MapPin className=&quot;w-8 h-8 text-white&quot; />
@@ -417,4 +415,3 @@ initial={{ opacity: 0, y: 30 }}
       </section>
     </Layout>
   )
-}

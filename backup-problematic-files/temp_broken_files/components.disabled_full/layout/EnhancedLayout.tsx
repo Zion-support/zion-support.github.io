@@ -2,7 +2,6 @@ import React from 'react';
 
 interface EnhancedLayoutProps {
   className?: string;
-}
 
 const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({ className }) => {
   return (
@@ -11,6 +10,5 @@ const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default EnhancedLayout;

@@ -1,9 +1,9 @@
  marketAdvantage: 'First platform to combine content creation, optimization, and distribution in one AI-powered solution' 
-};
+;
 
 marketAdvantage: 'First platform to combine content creation, optimization, and distribution in one AI-powered solution'
-}
-//Healthcare AI Services {
+
+/Healthcare AI Services {
   id: 'ai - healthcare - diagnostics - platform';
 name: 'AI Healthcare Diagnostics Platform';
 tagline: 'Advanced AI-powered medical diagnostics with 99 && 99.7% accuracy';
@@ -11,10 +11,10 @@ price: '$599';
 period: '/month';
 description: 'Revolutionary AI platform that provides accurate medical diagnostics, treatment recommendations, and patient monitoring with FDA compliance.';
 features: [ 'AI - powered medical image analysis (X - ray, MRI, CT) Symptom analysis and preliminary diagnosis';
-'Treatment recommendation engine_patient monitoring and follow - up scheduling';
-'Integration with major EHR systemsHIPAA - compliant data security';
-'Real - time diagnostic accuracy tracking_multi - specialty coverage (cardiology, radiology, oncology) ';
-'Automated report generation_telemedicine integration capabilities' ];
+Treatment recommendation engine_patient monitoring and follow - up scheduling';
+Integration with major EHR systemsHIPAA - compliant data security';
+Real - time diagnostic accuracy tracking_multi - specialty coverage (cardiology, radiology, oncology) ';
+Automated report generation_telemedicine integration capabilities' ];
 popular: true;
 icon: '';
 color: 'from-green-600 to-emerald-600';
@@ -44,8 +44,8 @@ reviews: 89;
 benefits: ['Improved diagnostic accuracyReduced misdiagnosis', 'Faster diagnosisCost savings'];
 capabilities: ['Multi-modality imagingReal-time analysis', 'Clinical decision supportRegulatory compliance'];
 marketAdvantage: 'Highest accuracy rate in the market with comprehensive multi-specialty coverage'
-}
-//Fintech AI Services {
+
+/Fintech AI Services {
   id: 'ai - fintech - intelligence - platform';
 name: 'AI Fintech Intelligence Platform';
 tagline: 'Revolutionary AI - powered financial analysis, trading, and risk management';
@@ -53,10 +53,10 @@ price: '$799';
 period: '/month';
 description: 'Advanced AI platform that provides real - time financial analysis, automated trading strategies, and comprehensive risk management for financial institutions.';
 features: [ 'Real - time market analysis and prediction_automated trading strategy execution';
-'Risk assessment and management_portfolio optimization algorithms';
-'Fraud detection and prevention_regulatory compliance monitoring';
-'Multi - asset class coverage_advanced financial modeling';
-'Real - time alerts and notifications_integration with major exchanges' ];
+Risk assessment and management_portfolio optimization algorithms';
+Fraud detection and prevention_regulatory compliance monitoring';
+Multi - asset class coverage_advanced financial modeling';
+Real - time alerts and notifications_integration with major exchanges' ];
 popular: true;
 icon: '';
 color: 'from-yellow-600 to-orange-600';
@@ -86,8 +86,8 @@ reviews: 67;
 benefits: ['Improved trading performanceRisk reduction', 'Automated operationsReal-time insights'];
 capabilities: ['Multi-asset tradingAdvanced analytics', 'Risk managementRegulatory compliance'];
 marketAdvantage: 'First platform to combine AI-powered trading, risk management, and compliance in one solution'
-}
-//Cybersecurity AI Services {
+
+/Cybersecurity AI Services {
   id: 'ai - cybersecurity - threat - hunting';
 name: 'AI Cybersecurity Threat Hunting';
 tagline: 'Advanced AI - powered threat detection and response with zero false positives';
@@ -95,10 +95,10 @@ price: '$449';
 period: '/month';
 description: 'Revolutionary AI platform that proactively hunts for cyber threats, provides real - time detection, and automates incident response.';
 features: [ 'AI - powered threat hunting and detection_zero false positive guarantee';
-'Real - time incident response automation_advanced malware analysis';
-'Network behavior analysis_endpoint detection and response';
-'Threat intelligence integration_compliance reporting automation';
-'Multi - cloud security coverage24 / 7 security monitoring' ];
+Real - time incident response automation_advanced malware analysis';
+Network behavior analysis_endpoint detection and response';
+Threat intelligence integration_compliance reporting automation';
+Multi - cloud security coverage24 / 7 security monitoring' ];
 popular: true;
 icon: '';
 color: 'from-red-600 to-pink-600';
@@ -128,8 +128,8 @@ reviews: 156;
 benefits: ['Zero false positivesAutomated response', '24/7 monitoringCost reduction'];
 capabilities: ['Advanced threat huntingReal-time detection', 'Automated responseCompliance reporting'];
 marketAdvantage: 'Only platform with zero false positive guarantee and automated incident response'
-}
-//IoT & Smart City Services {
+
+/IoT & Smart City Services {
   id: 'iot - smart - city - platform';
 name: 'IoT Smart City Platform';
 tagline: 'Comprehensive IoT platform for smart city infrastructure and management';
@@ -137,10 +137,10 @@ price: '$899';
 period: '/month';
 description: 'Advanced IoT platform that manages smart city infrastructure, provides real - time monitoring, and optimizes urban operations.';
 features: [ 'Smart traffic management and optimization_energy consumption monitoring and optimization';
-'Waste management automation_environmental monitoring and alerts';
-'Smart parking solutions_public safety monitoring';
-'Infrastructure health monitoring_citizen engagement platform';
-'Data analytics and insights_multi - city management capabilities' ];
+Waste management automation_environmental monitoring and alerts';
+Smart parking solutions_public safety monitoring';
+Infrastructure health monitoring_citizen engagement platform';
+Data analytics and insights_multi - city management capabilities' ];
 popular: true;
 icon: '';
 color: 'from-indigo-600 to-purple-600';
@@ -170,8 +170,8 @@ reviews: 34;
 benefits: ['Operational efficiencyCost reduction', 'Improved citizen servicesEnvironmental sustainability'];
 capabilities: ['Comprehensive monitoringReal-time optimization', 'Data analyticsCitizen engagement'];
 marketAdvantage: 'Most comprehensive smart city platform with integrated citizen engagement features'
-}
-//Blockchain & DeFi Services {
+
+/Blockchain & DeFi Services {
   id: 'blockchain - defi - intelligence';
 name: 'Blockchain & DeFi Intelligence Platform';
 tagline: 'Advanced AI - powered blockchain analysis and DeFi optimization';
@@ -179,10 +179,10 @@ price: '$399';
 period: '/month';
 description: 'Revolutionary platform that provides AI - powered blockchain analysis, DeFi strategy optimization, and comprehensive crypto intelligence.';
 features: [ 'AI - powered blockchain transaction analysisDeFi strategy optimization and automation';
-'Smart contract security auditing_crypto portfolio management';
-'Real - time market intelligence_risk assessment and management';
-'Multi - chain support (Ethereum, Solana, Polygon) NFT analysis and valuation';
-'Yield farming optimization_regulatory compliance monitoring' ];
+Smart contract security auditing_crypto portfolio management';
+Real - time market intelligence_risk assessment and management';
+Multi - chain support (Ethereum, Solana, Polygon) NFT analysis and valuation';
+Yield farming optimization_regulatory compliance monitoring' ];
 popular: true;
 icon: '';
 color: 'from-emerald-600 to-teal-600';
@@ -212,8 +212,8 @@ reviews: 123;
 benefits: ['Improved DeFi strategiesRisk reduction', 'Real-time insightsCost savings'];
 capabilities: ['Multi-chain analysisAI-powered insights', 'DeFi optimizationRisk management'];
 marketAdvantage: 'First platform to combine AI-powered blockchain analysis with DeFi optimization'
-}
-//Quantum Computing Services {
+
+/Quantum Computing Services {
   id: 'quantum - computing - as - a-service';
 name: 'Quantum Computing as a Service';
 tagline: 'Access to quantum computing power with AI - powered optimization';
@@ -221,10 +221,10 @@ price: '$1, 299';
 period: '/month';
 description: 'Revolutionary platform that provides access to quantum computing resources with AI - powered optimization and problem - solving capabilities.';
 features: [ 'Access to 1000+ qubit quantum computersAI - powered quantum algorithm optimization';
-'Real - time quantum simulation_multi - quantum processor support';
-'Quantum machine learning capabilities_advanced quantum cryptography';
-'Problem - specific quantum solutions_real - time performance monitoring';
-'API access for custom applications_expert quantum computing support' ];
+Real - time quantum simulation_multi - quantum processor support';
+Quantum machine learning capabilities_advanced quantum cryptography';
+Problem - specific quantum solutions_real - time performance monitoring';
+API access for custom applications_expert quantum computing support' ];
 popular: true;
 icon: '';
 color: 'from-purple-600 to-violet-600';
@@ -254,8 +254,8 @@ reviews: 45;
 benefits: ['Quantum computing accessAI optimization', 'Real-time simulationExpert support'];
 capabilities: ['Multi-processor supportAI-powered algorithms', 'Real-time monitoringCustom solutions'];
 marketAdvantage: 'First platform to combine quantum computing access with AI-powered optimization'
-}
-//Space Technology Services {
+
+/Space Technology Services {
   id: 'space - resource - intelligence';
 name: 'Space Resource Intelligence Platform';
 tagline: 'AI - powered space resource discovery and optimization platform';
@@ -263,10 +263,10 @@ price: '$699';
 period: '/month';
 description: 'Revolutionary platform that uses AI to discover, analyze, and optimize space resources for commercial and scientific applications.';
 features: [ 'AI - powered asteroid resource identification_satellite mission optimization';
-'Space debris tracking and avoidance_orbital optimization algorithms';
-'Space weather monitoring and alerts_resource extraction planning';
-'Multi - satellite constellation management_real - time space data analytics';
-'Space traffic management_commercial space mission support' ];
+Space debris tracking and avoidance_orbital optimization algorithms';
+Space weather monitoring and alerts_resource extraction planning';
+Multi - satellite constellation management_real - time space data analytics';
+Space traffic management_commercial space mission support' ];
 popular: true;
 icon: '';
 color: 'from-slate-600 to-gray-600';
@@ -296,8 +296,8 @@ reviews: 23;
 benefits: ['Resource discoveryMission optimization', 'Cost reductionRisk mitigation'];
 capabilities: ['AI-powered analysisReal-time monitoring', 'Mission planningData analytics'];
 marketAdvantage: 'First platform to combine AI-powered resource discovery with mission optimization'
-}
-//Autonomous Systems Services {
+
+/Autonomous Systems Services {
   id: 'autonomous - systems - orchestration';
 name: 'Autonomous Systems Orchestration';
 tagline: 'AI - powered orchestration of autonomous vehicles and systems';
@@ -305,10 +305,10 @@ price: '$549';
 period: '/month';
 description: 'Revolutionary platform that orchestrates autonomous vehicles, drones, and robotic systems with AI - powered intelligence and safety protocols.';
 features: [ 'Multi - vehicle autonomous coordinationAI - powered route optimization';
-'Real - time safety monitoring_fleet management and optimization';
-'Predictive maintenance alerts_weather and traffic integration';
-'Emergency response coordination_regulatory compliance monitoring';
-'Real - time performance analytics_custom autonomous system integration' ];
+Real - time safety monitoring_fleet management and optimization';
+Predictive maintenance alerts_weather and traffic integration';
+Emergency response coordination_regulatory compliance monitoring';
+Real - time performance analytics_custom autonomous system integration' ];
 popular: true;
 icon: '';
 color: 'from-cyan-600 to-blue-600';
@@ -338,9 +338,8 @@ reviews: 67;
 benefits: ['Operational efficiencySafety improvements', 'Cost reductionScalability'];
 capabilities: ['Multi-system coordinationAI optimization', 'Safety monitoringPerformance analytics'];
 marketAdvantage: 'First platform to provide comprehensive orchestration of multiple autonomous systems'
-}];
+];
 benefits: ['Operational efficiency_safety improvements', 'Cost reduction_scalability'];
 capabilities: ['Multi - system coordinationAI optimization', 'Safety monitoring_performance analytics'];
 market_advantage: 'First platform to provide comprehensive orchestration of multiple autonomous systems';
-}];
-;
+];

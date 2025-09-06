@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 interface FeaturedListingsSectionProps {
   show_title?: boolean;
-}
+
 export /**
  * FeaturedListingsSection - Function description
  */
@@ -28,7 +28,6 @@ function FeaturedListingsSection() {
         id: "tech-ai-labs"
         avatarUrl: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=64&h=64&fit=crop&auto=format"
       }
-    }
     {
       id: "image-generation-service"
       title: "AI Image Generation Service"
@@ -45,7 +44,6 @@ function FeaturedListingsSection() {
         name: "VisualAI"
         id: "visual-ai"
       }
-    }
     {
       id: "fullstack-ai-dev"
       title: "Full-Stack AI Development"
@@ -62,7 +60,6 @@ function FeaturedListingsSection() {
         name: "DataMinds Consulting"
         id: "dataminds-consulting"
       }
-    }
     {
       id: "sentiment-analysis-api"
       title: "Sentiment Analysis API"
@@ -94,7 +91,6 @@ function FeaturedListingsSection() {
         id: "tech - ai - labs",
         avatar_url: "https://images.unsplash.com / photo - 1531297484001 - 80022131f5a1?w = 64 & h=64 & fit = crop & auto = format";
       }
-    }
     {
       id: "image - generation - service",
       title: "AI Image Generation Service",
@@ -111,7 +107,6 @@ function FeaturedListingsSection() {
         name: "VisualAI",
         id: "visual - ai";
       }
-    }
     {
       id: "fullstack - ai - dev",
       title: "Full - Stack AI Development",
@@ -128,7 +123,6 @@ function FeaturedListingsSection() {
         name: "DataMinds Consulting",
         id: "dataminds - consulting";
       }
-    }
     {
       id: "sentiment - analysis - api",
       title: "Sentiment Analysis API",
@@ -144,9 +138,8 @@ function FeaturedListingsSection() {
       author: {
         name: "SocialAI",
         id: "social - ai";
-      }
-    }];
-;
+      }];
+
   return (
     <section id="featured" className="py-12 px-4 bg-zion-blue-dark">;
       <div className="container mx-auto">;
@@ -161,7 +154,7 @@ function FeaturedListingsSection() {
           </div>;
         )}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {featuredListings.map((listing) => (
+          {featuredListings.map(listing) => (
             <ProductListingCard
               key={listing && listing.id}
     <section id="featured" className="py - 12 px - 4 bg - zion - blue - dark">;
@@ -176,14 +169,14 @@ function FeaturedListingsSection() {
             </p>;
           </div>)}
         <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6">;
-          {featured_listings.map ((listing) => (
+          {featured_listings.map (listing) => (
             <ProductListingCard;
               key={listing.id}
               listing={listing}
               view="grid";
-              onRequestQuote={() => {}}
+              onRequestQuote={() => {}
             />;
-          ))}
+          )}
         </div>
         <div className="mt-10 text-center">
           <Button
@@ -196,13 +189,12 @@ function FeaturedListingsSection() {
       </div>
     </section>
   )
-}
+
             <Link to="/marketplace">View All Listings</Link>;
           </Button>;
         </div>;
       </div>;
     </section>;
   );
-}
+
     </section>);
-}

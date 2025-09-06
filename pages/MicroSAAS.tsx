@@ -22,4 +22,3 @@ export default function MicroSAAS() {
       </div>
     </Layout>
   );
-}

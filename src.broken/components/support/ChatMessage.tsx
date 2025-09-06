@@ -6,5 +6,3 @@ export function ChatMessage() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

@@ -28,8 +28,6 @@ interface JobMatchProps {
   location, ;
   category, ;
   matchPercent, ;
-}
-
 
   talentId
   name
@@ -40,8 +38,6 @@ interface JobMatchProps {
   category
   matchPercent
 
-}
-}
   talent_id,
   name,
   title,
@@ -50,5 +46,3 @@ interface JobMatchProps {
   location,
   category,
   match_percent,
-}
-}

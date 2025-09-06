@@ -6,7 +6,7 @@ import {
   CardFooter
   CardHeader
   CardTitle
-} from '@/components/ui/card'
+ from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { format } from 'date-fns'
@@ -39,7 +39,7 @@ interface MilestoneCardProps {
   dueDate?: string
   onApprove?: (id: string,) => Promise<void>
   onReject?: (id: string,) => Promise<void>
-}
+
 export function MilestoneCard({
   id
   projectId
@@ -51,7 +51,7 @@ export function MilestoneCard({
   onApprove
 
   onReject
-}: MilestoneCardProps) {
+: MilestoneCardProps) {
   const { isUnderDispute, disputeStatus } = useDisputeCheck(projectId, id);
   function getStatusBadgeColor() {
     switch (status) {
@@ -63,7 +63,7 @@ import {;
   CardFooter,;
   CardHeader,;
   CardTitle,;
-} from '@/components/ui/card';
+ from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { format } from 'date-fns';
@@ -100,7 +100,6 @@ interface MilestoneCardProps {;
   dueDate?: string,;
   onApprove?: (id: string,) => Promise<void>,;
   onReject?: (id: string,) => Promise<void>;
-}
 
 export function MilestoneCard(): any ({;
   id,;
@@ -112,7 +111,7 @@ export function MilestoneCard(): any ({;
   dueDate,;
   onApprove,;
   onReject,;
-}: MilestoneCardProps) {;
+: MilestoneCardProps) {;
   const { isUnderDispute, disputeStatus } = useDisputeCheck(projectId, id);
 
   function getStatusBadgeColor() {;
@@ -121,9 +120,8 @@ export function MilestoneCard(): any ({;
   function getStatusBadgeColor() {;
     switch (status) {;
       case 'completed':;
-}: MilestoneCardProps) { const { isUnderDispute, disputeStatus  } = useDisputeCheck(projectId, id),
+: MilestoneCardProps) { const { isUnderDispute, disputeStatus  } = useDisputeCheck(projectId, id),
 
-  
   function getStatusBadgeColor() {
     switch (status) {
       case 'completed':
@@ -144,7 +142,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from '@/components / ui / card';
+ from '@/components / ui / card';
 import { Badge } from '@/components / ui / badge';
 import { Button } from '@/components / ui / button';
 import { format } from 'date - fns';
@@ -175,7 +173,7 @@ interface MilestoneCardProps {
   due_date?: string,
   on_approve?: (id: string, ) => Promise < void>,
   on_reject?: (id: string, ) => Promise < void>;
-}
+
 export /**
  * MilestoneCard - Function description
  */
@@ -197,7 +195,6 @@ function getStatusBadgeColor() {
       default:;
         return 'bg - gray - 500';
     }
-  }
   return (
     <Card>;
       <CardHeader className='pb-2'>;
@@ -245,7 +242,7 @@ function getStatusBadgeColor() {
       </CardContent>
       <CardFooter className='pt-2 flex justify-between'>
         <div>
-          {status !== 'completed' && status !== 'rejected' && (
+          {status != 'completed' && status != 'rejected' && (
             <RaiseDisputeButton
               projectId={projectId}
               milestoneId={id}
@@ -255,11 +252,11 @@ function getStatusBadgeColor() {
               milestoneId = {id,}
         </div>
         <div className='flex gap-2'>
-          {status === 'pending' && onReject && !isUnderDispute && (
+          {status = = 'pending' && onReject && !isUnderDispute && (
             <Button variant='outline' size='sm' onClick={() => onReject(id)}>
               <X className='h-4 w-4 mr-1' /> Reject            </Button>
           )}
-          {status === 'pending' && onApprove && !isUnderDispute && (
+          {status = = 'pending' && onApprove && !isUnderDispute && (
             <Button variant='default' size='sm' onClick={() => onApprove(id)}>
               <Check className='h-4 w-4 mr-1' /> Approve            </Button>
           )}
@@ -270,20 +267,20 @@ function getStatusBadgeColor() {
             />
           )}
         </div>
-        
+
         <div className="flex gap-2">
-          {status === 'pending' && onReject && !isUnderDispute && (
+          {status = = 'pending' && onReject && !isUnderDispute && (
             <Button variant="outline" size="sm" onClick={() => onReject(id)}>
               <X className="h-4 w-4 mr-1" /> Reject
             </Button>
           )}
-          
-          {status === 'pending' && onApprove && !isUnderDispute && (
+
+          {status = = 'pending' && onApprove && !isUnderDispute && (
             <Button variant="default" size="sm" onClick={() => onApprove(id)}>
               <Check className="h-4 w-4 mr-1" /> Approve
             </Button>
           )}
-          
+
           {isUnderDispute && (
             <Button variant="outline" size="sm" disabled>
               Actions frozen due to dispute
@@ -292,10 +289,8 @@ function getStatusBadgeColor() {
         </div>
       </CardFooter>
     </Card>
-  )
-}
   );
-}
+
       <CardHeader className='pb - 2'>;
         <div className='flex justify - between items - start'>;
           <div>;
@@ -338,7 +333,7 @@ function getStatusBadgeColor() {
       </CardContent>;
       <CardFooter className='pt - 2 flex justify - between'>;
         <div>;
-          {status !== 'completed' && status !== 'rejected' && (
+          {status != 'completed' && status != 'rejected' && (
             <RaiseDisputeButton;
               project_id={project_id}
               milestone_id={id}
@@ -351,10 +346,10 @@ function getStatusBadgeColor() {
             />)}
         </div>;
         <div className='flex gap - 2'>;
-          {status === 'pending' && on_reject && !isUnderDispute && (
+          {status = = 'pending' && on_reject && !isUnderDispute && (
             <Button variant='outline' size='sm' on_click={() => on_reject (id)}>;
               <X className='h - 4 w - 4 mr - 1' /> Reject            </Button>)}
-          {status === 'pending' && on_approve && !isUnderDispute && (
+          {status = = 'pending' && on_approve && !isUnderDispute && (
             <Button variant='default' size='sm' on_click={() => on_approve (id)}>;
               <Check className='h - 4 w - 4 mr - 1' /> Approve            </Button>)}
           {isUnderDispute && (
@@ -364,4 +359,3 @@ function getStatusBadgeColor() {
         </div>;
       </CardFooter>;
     </Card>);
-}

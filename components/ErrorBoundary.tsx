@@ -1,4 +1,4 @@
-'use client';
+use client';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 interface Props {
 
@@ -10,7 +10,7 @@ interface Props {;
 interface Props {;
   children: ReactNode;
   fallback?: ReactNode;
-}
+
 interface State {
   hasError: boolean;
   error?: Error;
@@ -18,12 +18,11 @@ interface State {
 interface State {
   hasError: boolean,
   error?: Error;
-}
+
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = { hasError: false }
-  }
   static getDerivedStateFromError(error: Error): State {
     // Update state so the next render will show the fallback UI
     // Update state so the next render will show the fallback UI
@@ -37,32 +36,29 @@ class ErrorBoundary extends Component<Props, State> {;
     // Update state so the next render will show the fallback UI;
     return { hasError: true, error };
     return { hasError: true, error }
-  }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);    this.setState({
     // Log the error to console or error reporting service
     console.error('ErrorBoundary caught an error:', error, errorInfo);
-    
+
     this.setState({
   on_error?: (error: Error, error_info: ErrorInfo) => void;import { AlertTriangle, RefreshCw } from 'lucide-react';
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
-}
+
 interface State {
   has_error: boolean;
   error?: Error;
   error_info?: ErrorInfo;
-}
+
 class ErrorBoundary extends Component < Props, State> {
   constructor (props: Props) {
     super (props);
     this.state = { has_error: false }
-  }
   static getDerivedStateFromError (error: Error): State {
     // Update state so the next render will show the fallback UI;
     return { has_error: true, error }
-  }
   componentDidCatch (error: Error, error_info: ErrorInfo) {
     console.error ('Error caught by boundary:', error, error_info);    this.set_state ({
       error,
@@ -70,14 +66,14 @@ class ErrorBoundary extends Component < Props, State> {
     });
 
     // Log error to external service (e.g., Sentry)
-    if (typeof window !== 'undefined' && (window as any).Sentry) {
+    if (typeof window != 'undefined' && (window as any).Sentry) {
       (window as any).Sentry.captureException(error, { extra: errorInfo });    }
     // Call custom error handler if provided
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
     }
-// Log to external service in production
-    if (process.env.NODE_ENV === 'production') {
+/ Log to external service in production
+    if (process.env.NODE_ENV = = 'production') {
       // Here you would typically send to an error reporting service
       console.error('Production error:', error, errorInfo);
 
@@ -88,7 +84,7 @@ class ErrorBoundary extends Component < Props, State> {
     });
 
     // Log error to external service (e && e.g., Sentry);
-    if (typeof window !== 'undefined' && (window as any).Sentry) {;
+    if (typeof window != 'undefined' && (window as any).Sentry) {;
       (window as any).Sentry && Sentry.captureException(error, { extra: errorInfo });    }
 
     // Call custom error handler if provided;
@@ -97,18 +93,17 @@ class ErrorBoundary extends Component < Props, State> {
     }
 
     // Log to external service in production;
-    if (process && process.env.NODE_ENV === 'production') {;
+    if (process && process.env.NODE_ENV = = 'production') {;
       // Here you would typically send to an error reporting service;
       console && console.error('Production error:', error, errorInfo);
     }
     // You can also log the error to an error reporting service here
     // Example: logErrorToService(error, errorInfo);
     // Log error for debugging in development
-    if (process.env.NODE_ENV === 'development') {
+    if (process.env.NODE_ENV = = 'development') {
       // eslint-disable-next-line no-console
       console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
-  }
   handleReload = () => {
     window.location.reload();
   }
@@ -131,7 +126,7 @@ class ErrorBoundary extends Component < Props, State> {
             <p className="text-gray-600 text-center mb-6">
               We're sorry, but something unexpected happened. Please try refreshing the page.
             </p>
-            {process.env.NODE_ENV === 'development' && this.state.error && (
+            {process.env.NODE_ENV = = 'development' && this.state.error && (
               <details className="text-left bg-white/5 rounded-xl p-6 mb-8 border border-white/10">
                 <summary className="text-white/80 font-medium cursor-pointer mb-4">
                   Error Details (Development)
@@ -180,7 +175,7 @@ class ErrorBoundary extends Component < Props, State> {
               We're sorry, but something unexpected happened. Please try refreshing the page.;
             </p>;
 
-            {process && process.env.NODE_ENV === 'development' && this && this.state.error && (;
+            {process && process.env.NODE_ENV = = 'development' && this && this.state.error && (;
               <details className="text-left bg-white/5 rounded-xl p-6 mb-8 border border-white/10">;
                 <summary className="text-white/80 font-medium cursor-pointer mb-4">;
                   Error Details (Development);
@@ -217,7 +212,7 @@ class ErrorBoundary extends Component < Props, State> {
                 Try Again
               </button>
             </div>
-            {process.env.NODE_ENV === 'development' && this.state.error && (
+            {process.env.NODE_ENV = = 'development' && this.state.error && (
               <details className="mt-4 p-4 bg-gray-100 rounded-md">
                 <summary className="cursor-pointer font-medium text-gray-700">
                   Error Details (Development)
@@ -233,7 +228,7 @@ class ErrorBoundary extends Component < Props, State> {
                 Try Again;
               </button>;
             </div>;
-            {process && process.env.NODE_ENV === 'development' && this && this.state.error && (;
+            {process && process.env.NODE_ENV = = 'development' && this && this.state.error && (;
               <details className="mt-4 p-4 bg-gray-100 rounded-md">;
                 <summary className="cursor-pointer font-medium text-gray-700">;
                   Error Details (Development);
@@ -253,39 +248,39 @@ class ErrorBoundary extends Component < Props, State> {
     if (this.state.hasError) {
       // You can render any custom fallback UI
       return this.props.fallback |(
-        <div style={{
+        <div style={
           padding: '20px'
           textAlign: 'center'
           border: '1px solid #ff6b6b'
           borderRadius: '8px'
           backgroundColor: '#ffe0e0'
           margin: '20px'
-        }}>
+        }>
           <h2>Something went wrong.</h2>
           <p>We're sorry, but something unexpected happened.</p>
           <button
             onClick={() => window.location.reload()}
-            style={{
+            style={
               padding: '10px 20px'
               backgroundColor: '#ff6b6b'
               color: 'white'
               border: 'none'
               borderRadius: '4px'
               cursor: 'pointer'
-            }}
+            }
           >;
             Reload Page;
           </button>;
-          {process.env.NODE_ENV === 'development' && this.state.error && (
-            <details style={{ marginTop: '20px', textAlign: 'left' }}>
+          {process.env.NODE_ENV = = 'development' && this.state.error && (
+            <details style={ marginTop: '20px', textAlign: 'left' }>
               <summary>Error Details (Development)</summary>
-              <pre style={{
+              <pre style={
                 backgroundColor: '#f5f5f5'
                 padding: '10px'
                 borderRadius: '4px'
                 overflow: 'auto'
                 fontSize: '12px'
-              }}>;
+              }>;
                 {this && this.state.error && error.toString()}
                 {this && this.state.errorInfo?.componentStack}
               </pre>;
@@ -296,36 +291,36 @@ class ErrorBoundary extends Component < Props, State> {
     }
     return this.props.children;
   }
-}
+
 class ErrorBoundary extends Component<Props, State> {constructor(props: Props) {;
     super(props);
     this.state = { hasError: false }
-}
+
   static getDerivedStateFromError(error: Error): State {return { hasError: true, error }
-}
+
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {console.error('ErrorBoundary caught an error:', error, errorInfo);
     this.setState({ error, errorInfo });
-}
+
   handleRetry = () => {this.setState({ hasError: false, error: undefined, errorInfo: undefined });
-}
+
   render() {if (this.state.hasError) {;
       if (this.props.fallback) {;
         return this.props.fallback;
-}
+
       return (;
         <div className="min-h-screen bg-gray-900 flex items-center justify-center px-4">;
           <div className="max-w-md w-full bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 text-center">;
             <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">;
               <AlertTriangle className="w-8 h-8 text-red-400" />;
-            <details style={{ margin_top: '20px', text_align: 'left' }}>;
+            <details style={ margin_top: '20px', text_align: 'left' }>;
               <summary > Error Details (Development)</summary>;
-              <pre style={{
+              <pre style={
                 background_color: '#f5f5f5',
                 padding: '10px',
                 border_radius: '4px',
                 overflow: 'auto',
                 font_size: '12px';
-              }}>;
+              }>;
                 {this.state.error.to_string ()}
                 {this.state.error_info?.component_stack}
               </pre>;
@@ -334,33 +329,33 @@ class ErrorBoundary extends Component<Props, State> {constructor(props: Props) {
     }
     return this.props.children;
   }
-}
+
 class ErrorBoundary extends Component < Props, State> {
   constructor (props: Props) {
     super (props);
     this.state = { has_error: false }
-}
+
   static getDerivedStateFromError (error: Error): State {
     return { has_error: true, error }
-}
+
   componentDidCatch (error: Error, error_info: ErrorInfo) {
     console.error ('ErrorBoundary caught an error:', error, error_info);
     this.set_state ({ error, error_info });
-}
+
   handle_retry = () => {
     this.set_state ({ has_error: false, error: undefined, error_info: undefined });
-}
+
   render () {
     // Check condition
 if ( {) {
   $2
-}
+
       // Check condition
 if ( {) {
   $2
-}
+
         return this.props.fallback;
-}
+
       return (
         <div className="min - h-screen bg - gray - 900 flex items - center justify - center px - 4">;
           <div className="max - w-md w - full bg - white / 5 backdrop - blur - sm border border - white / 10 rounded - 2xl p - 8 text - center">;
@@ -373,7 +368,7 @@ if ( {) {
             <p className="text - gray - 300 mb - 6">;
               We're sorry, but something unexpected happened. Please try refreshing the page or contact support if the problem persists.;
             </p>;
-            {process.env.NODE_ENV === 'development' && this.state.error && (;
+            {process.env.NODE_ENV = = 'development' && this.state.error && (;
               <details className="text-left mb-6">;
                 <summary className="text-gray-400 cursor-pointer mb-2">;
                   Error Details (Development);
@@ -394,8 +389,8 @@ if ( {) {
               <button
                 onClick={() => window && window.location.reload()}
                 className="bg-transparent border border-white/20 text-white hover:bg-white/10 px-6 py-3 rounded-lg font-semibold transition-colors duration-200">;
-;
-            {process.env.NODE_ENV === 'development' && this.state.error && (
+
+            {process.env.NODE_ENV = = 'development' && this.state.error && (
               <details className="text - left mb - 6">;
                 <summary className="text - gray - 400 cursor - pointer mb - 2">;
                   Error Details (Development);
@@ -420,9 +415,8 @@ if ( {) {
             </div>;
           </div>;
         </div>);
-}
+
     return this.props.children;
     return this.props.children;
-}
-}
+
 export default ErrorBoundary;

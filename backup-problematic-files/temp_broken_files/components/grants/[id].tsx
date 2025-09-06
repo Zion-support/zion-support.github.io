@@ -9,20 +9,19 @@ export default function GrantDetailPage() {
   const [loading, setLoading] = useState(true),
   const [updateContent, setUpdateContent] = useState(''),
 
-  useEffect(() => {
+  useEffect() => {
     if (!id) return,
     setLoading(true),
-    fetch(`/api/grants/${id}`).then((r) => r.json()).then((d) => setItem(d.record)).finally(() => setLoading(false))
+    fetch(`/api/grants/${id}`).then(r) => r.json().then(d) => setItem(d.record).finally() => setLoading(false)
   }, [id]),
 
   const addUpdate = async () => {
-    if (!id || !updateContent.trim()) return,
+    if (!id || !updateContent.trim() return,
     const resp = await fetch(`/api/grants/${id}/updates`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ content: updateContent }) }),
     if (resp.ok) {
       const u = await resp.json(),
-      setItem((prev) => prev ? { ...prev, updates: [...(prev.updates || []), u.update] } : prev),
-      setUpdateContent('')    }
-  },
+      setItem(prev) => prev ? { ...prev, updates: [...(prev.updates || []), u.update] } : prev),
+      setUpdateContent('')    },
 
   if (loading) return <EnhancedLayout><div>Loading...</div></EnhancedLayout>,
   if (!item) return <EnhancedLayout><div>Not found</div></EnhancedLayout>,
@@ -32,11 +31,11 @@ export default function GrantDetailPage() {
       <div className=&quot;flex items-center justify-between mb-4&quot;>
         <div>
           <h1 className=&quot;text-2xl font-semibold&quot;>{item.projectName}</h1>
-          <div className=&quot;text-sm text-gray-600 dark:text-gray-400&quot;>{item.sector || 'General'}  {item.region || 'Global'}  {item.program === 'incubator' ? 'Incubator' : 'Grant'}</div>
+          <div className=&quot;text-sm text-gray-600 dark:text-gray-400&quot;>{item.sector || 'General'}  {item.region || 'Global'}  {item.program = = 'incubator' ? 'Incubator' : 'Grant'}</div>
         </div>
         <div className=&quot;flex gap-2 items-center&quot;>
-          {item.program === 'incubator' && <span className=&quot;px-2 py-1 text-xs rounded bg-purple-100 text-purple-700&quot;>Incubated by Zion</span>}
-          {item.status === 'Approved' && <span className=&quot;px-2 py-1 text-xs rounded bg-emerald-100 text-emerald-700&quot;>Grant Winner</span>}
+          {item.program = = 'incubator' && <span className=&quot;px-2 py-1 text-xs rounded bg-purple-100 text-purple-700&quot;>Incubated by Zion</span>}
+          {item.status = = 'Approved' && <span className=&quot;px-2 py-1 text-xs rounded bg-emerald-100 text-emerald-700&quot;>Grant Winner</span>}
           <span className=&quot;px-2 py-1 text-xs rounded bg-gray-100 dark:bg-gray-800&quot;>{item.status}</span>
         </div>
       </div>
@@ -52,7 +51,7 @@ export default function GrantDetailPage() {
               <div className=&quot;mt-2&quot;>
                 <div className=&quot;text-sm font-medium&quot;>Supporting Links</div>
                 <ul className=&quot;list-disc list-inside text-sm&quot;>
-                  {item.supportingLinks.map((l, i) => <li key={i}><a className=&quot;text-blue-600&quot; href={l} target=&quot;_blank&quot; rel=&quot;noreferrer&quot;>{l}</a></li>)}                </ul>
+                  {item.supportingLinks.map(l, i) => <li key={i}><a className=&quot;text-blue-600&quot; href={l} target=&quot;_blank&quot; rel=&quot;noreferrer&quot;>{l}</a></li>)}                </ul>
               </div>
             )}
           </section>
@@ -60,13 +59,13 @@ export default function GrantDetailPage() {
           <section className=&quot;border rounded p-4 bg-white/70 dark:bg-black/40&quot;>
             <h2 className=&quot;font-medium mb-2&quot;>Updates</h2>
             <div className=&quot;space-y-3&quot;>
-              {(item.updates || []).slice().reverse().map((u) => (
+              {(item.updates || []).slice().reverse().map(u) => (
                 <div key={u.id} className=&quot;text-sm&quot;>
                   <div className=&quot;text-xs text-gray-500&quot;>{new Date(u.createdAt).toLocaleString()}</div>
                   <div className=&quot;whitespace-pre-wrap&quot;>{u.content}</div>
                 </div>
-              ))}
-              {(!item.updates || item.updates.length === 0) && <div className=&quot;text-sm text-gray-600&quot;>No updates yet.</div>}
+              )}
+              {(!item.updates || item.updates.length = = 0) && <div className=&quot;text-sm text-gray-600&quot;>No updates yet.</div>}
               <div className=&quot;pt-2&quot;>
                 <textarea className=&quot;w-full border rounded p-2&quot; rows={3} placeholder=&quot;Post an update or progress note&quot; value={updateContent} onChange={(e) => setUpdateContent(e.target.value)} />
                 <button onClick={addUpdate} className=&quot;mt-2 px-3 py-2 bg-gray-900 text-white rounded&quot;>Add Update</button>              </div>
@@ -78,7 +77,7 @@ export default function GrantDetailPage() {
           <section className=&quot;border rounded p-4 bg-white/70 dark:bg-black/40&quot;>
             <h3 className=&quot;font-medium mb-2&quot;>Milestones</h3>
             <ul className=&quot;space-y-2&quot;>
-              {(item.milestones || []).map((m) => (
+              {(item.milestones || []).map(m) => (
                 <li key={m.id} className=&quot;text-sm flex items-start gap-2&quot;>
                   <span className={`mt-1 inline-block h-3 w-3 rounded-full ${m.completed ? 'bg-emerald-500' : 'bg-gray-400'}`} />
                   <div>
@@ -88,8 +87,8 @@ export default function GrantDetailPage() {
                     {m.dueDate && <div className=&quot;text-xs text-gray-600&quot;>Due: {new Date(m.dueDate).toLocaleDateString()}</div>}
                   </div>
                 </li>
-              ))}
-              {(!item.milestones || item.milestones.length === 0) && <div className=&quot;text-sm text-gray-600&quot;>Milestones will appear here.</div>}
+              )}
+              {(!item.milestones || item.milestones.length = = 0) && <div className=&quot;text-sm text-gray-600&quot;>Milestones will appear here.</div>}
             </ul>
             <div className=&quot;mt-3 text-sm&quot;>Funds Released: {item.fundsReleased || 0}</div>
           </section>

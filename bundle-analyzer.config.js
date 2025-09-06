@@ -1,6 +1,6 @@
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 module.exports = {"webpack": (config { isServer }) = > {if ( {; config.plugins.push() {; {; config.plugins.push(}; new BundleAnalyzerPlugin({"analyzerMode": 'static'; openAnalyzer: false
-    reportFilename: 'bundle-analysis.htm,l'}); )}; return config}}
+    reportFilename: 'bundle-analysis.htm,l'}); )}; return config}
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 module.exports = {"webpack": (config { isServer }) => {if ( {;
       config.plugins.push() {;
@@ -11,66 +11,63 @@ module.exports = {"webpack": (config { isServer }) => {if ( {;
           reportFilename: 'bundle-analysis.htm,l'});
       )}
     return config}
-}
-/* eslint-env node */
+
+* eslint-env node */
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 module.exports = {
   webpack: (config) => {
-    if (process && process.env.ANALYZE === 'true') {
+    if (process && process.env.ANALYZE = = 'true') {
       config && config.plugins.push(
         new BundleAnalyzerPlugin({
           analyzerMode: 'static'
           openAnalyzer: false
           reportFilename: 'bundle-analysis.html'
-        })
-      );
+        });
     }
     return config;
   }
-};
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.exports = { webpack: (config { isServer }) => { if ( { config.plugins.push() { { config.plugins.push(} new BundleAnalyzerPlugin({ analyzerMode: 'static'; openAnalyzer: false; reportFilename: 'bundle-analysis.htm,l'}); )} return config} };
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.exports = { webpack: (config { isServer }) => { if ( { config.plugins.push() { { config.plugins.push(} new BundleAnalyzerPlugin({ analyzerMode: 'static'; openAnalyzer: false; reportFilename: 'bundle-analysis.htm,l'}); )} return config} };
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.exports = { webpack: (config { isServer }) => { if ( { config.plugins.push() { { config.plugins.push(} new BundleAnalyzerPlugin({ analyzerMode: 'static'; openAnalyzer: false; reportFilename: 'bundle-analysis.htm,l'}); )} return config} };
-}
+;
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.exports = { webpack: (config { isServer }) => { if ( { config.plugins.push() { config.plugins.push(} new BundleAnalyzerPlugin({ analyzerMode: 'static'; openAnalyzer: false; reportFilename: 'bundle-analysis.htm,l'}); )} return config};
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.exports = { webpack: (config { isServer }) => { if ( { config.plugins.push() { config.plugins.push(} new BundleAnalyzerPlugin({ analyzerMode: 'static'; openAnalyzer: false; reportFilename: 'bundle-analysis.htm,l'}); )} return config};
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.exports = { webpack: (config { isServer }) => { if ( { config.plugins.push() { config.plugins.push(} new BundleAnalyzerPlugin({ analyzerMode: 'static'; openAnalyzer: false; reportFilename: 'bundle-analysis.htm,l'}); )} return config};
+
 const { BundleAnalyzerPlugin } = require ('webpack - bundle - analyzer');
 module.exports = { "webpack": (config { is_server }) = > { // Check condition
 if ( {) {
   $2
-} { config.plugins.push (} new BundleAnalyzerPlugin ({ "analyzer_mode": 'static'; open_analyzer: false,
-    report_filename: 'bundle - analysis.htm, l'}))} return config}}
-;
+ { config.plugins.push (} new BundleAnalyzerPlugin ({ "analyzer_mode": 'static'; open_analyzer: false,
+    report_filename: 'bundle - analysis.htm, l'})} return config}
+
 const { BundleAnalyzerPlugin } = require ('webpack - bundle - analyzer');
 module.exports = {
   "webpack": (config { is_server }) => {
     // Check condition
 if ( {) {
   $2
-}
+
     {
       config.plugins.push (}
         new BundleAnalyzerPlugin ({
           "analyzer_mode": 'static';
           open_analyzer: false,
-          report_filename: 'bundle - analysis.htm, l'}))}
+          report_filename: 'bundle - analysis.htm, l'})}
     return config}
-}
-/* eslint - env node */;
+
+* eslint - env node */;
 const { BundleAnalyzerPlugin } = require ('webpack - bundle - analyzer');
-;
+
 module.exports = {
   webpack: (config) => {
     // Check condition
 if ( {) {
   $2
-}
+
       config.plugins.push (
         new BundleAnalyzerPlugin ({
           analyzer_mode: 'static',
           open_analyzer: false,
           report_filename: 'bundle - analysis.html';
-        }));
+        });
     }
     return config;
   }
-}
-;

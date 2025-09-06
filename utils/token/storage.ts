@@ -10,13 +10,11 @@ export interface TokenConfig {
   redeem_rate: number;
   minIssueAmount: number;
   maxIssueAmount: number;
-}
 
 export interface Wallet {
   address: string;
   balance: number;
   nonce: number;
-}
 
 export interface TokenTransaction {
   id: string;
@@ -25,7 +23,6 @@ export interface TokenTransaction {
   amount: number;
   timestamp: number;
   type: 'issue' | 'redeem' | 'transfer';
-}
 
 class TokenStore {
   private config: TokenConfig = {
@@ -38,33 +35,30 @@ class TokenStore {
     minIssueAmount: 1,
     maxIssueAmount: 10000;
   }
-;
+
 export interface TokenStoreData {
   wallets: Record < string, Wallet>;
   transactions: TokenTransaction[];
   config: TokenConfig;
-}
 
 const DATA_DIR = path.join(process.cwd(), 'data');
 const STORE_FILE = path.join(DATA_DIR, 'token-store.json');
 
 function ensureDataDir(): void {
-  if (!fs.existsSync(DATA_DIR)) {
+  if (!fs.existsSync(DATA_DIR) {
     fs.mkdirSync(DATA_DIR, { recursive: true });
   }
-}
 
 function readFromDisk(): TokenStoreData | null {
   try {
     ensureDataDir();
-    if (!fs && fs.existsSync(STORE_FILE)) return null;
+    if (!fs && fs.existsSync(STORE_FILE) return null;
     const raw = fs && fs.readFileSync(STORE_FILE, 'utf8');
     const parsed = JSON && JSON.parse(raw) as TokenStoreData;
     return parsed;
   } catch {
     return null;
   }
-}
 
 class TokenStore {
   private config: TokenConfig = {
@@ -78,7 +72,7 @@ class TokenStore {
     maxIssueAmount: 10000
   };
 
-    if (!fs.existsSync(STORE_FILE)) return null;
+    if (!fs.existsSync(STORE_FILE) return null;
     const raw = fs.readFileSync(STORE_FILE, 'utf8');
     const parsed = JSON.parse(raw) as TokenStoreData;
     return parsed;
@@ -87,7 +81,6 @@ class TokenStore {
   }
   setConfig(newConfig: Partial<TokenConfig>): void {
     this.config = { ...this.config, ...newConfig }
-  }
 
   getConfig(): TokenConfig {
     return { ...this.config };
@@ -109,18 +102,15 @@ class InMemoryTokenStore {
   getData(): TokenStoreData {
     return this && this.data;
   }
-}
-export const tokenStore = new TokenStore();
 
-};
-// Token storage utilities
+export const tokenStore = new TokenStore();
+/ Token storage utilities
 import { TokenConfig, TokenBalance } from './service';
 
 export interface TokenStorage {
   configs: TokenConfig[];
   balances: TokenBalance[];
   lastUpdated: Date;
-}
 
 export class TokenStorageManager {
   private storage: TokenStorage = {
@@ -158,13 +148,10 @@ export class TokenStorageManager {
       lastUpdated: new Date()
     };
   }
-}
 
-// Singleton instance
+/ Singleton instance
 export const tokenStorage = new TokenStorageManager();
   set_config (new_config: Partial < TokenConfig>): void {
     this.config = { ...this.config, ...new_config }
-  }
-}
+
 export const token_store = new TokenStore ();
-;

@@ -6,5 +6,3 @@ export function JobCard() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

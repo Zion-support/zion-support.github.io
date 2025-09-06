@@ -15,7 +15,7 @@ import {
   CheckCircle,
   TrendingUp,
   Shield
-} from 'lucide-react',
+ from 'lucide-react',
 export default function AiToolsPage() {_const _aiTools = [
     {
       icon: <Brain className=&quot;w-8 h-8 text-white&quot; />,
@@ -114,7 +114,7 @@ export default function AiToolsPage() {_const _aiTools = [
       category: 'Content Creation'
     }
   ],;
-;
+
   const aiMarketStats = [;
     {;
       title:'AI Market Size',;
@@ -141,7 +141,7 @@ export default function AiToolsPage() {_const _aiTools = [
       description:'Average productivity improvement';
     }
   ],;
-;
+
   const aiCategories = [;
     {;
       name:'Conversational AI',;
@@ -216,11 +216,11 @@ export default function AiToolsPage() {_const _aiTools = [
           </div>
 
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16&quot;>
-            {aiMarketStats.map((stat, index) => (
+            {aiMarketStats.map(stat, index) => (
               <Card
                 key={index}
                 className=&quot;card-hover border-gradient-blue text-center&quot;
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={ animationDelay: `${index * 0.1}s` }
               >
                 <div className=&quot;p-6&quot;>
                   <h3 className=&quot;text-lg font-semibold text-white mb-3&quot;>{stat.title}</h3>
@@ -228,11 +228,11 @@ export default function AiToolsPage() {_const _aiTools = [
                   <div className=&quot;text-sm text-green-400 mb-3&quot;>{stat.growth}</div>
                   <p className=&quot;text-sm text-gray-400&quot;>{stat.description}</p>                </div>
               </Card>
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* AI Tools Grid */}
       <section className=&quot;section-padding bg-gradient-cursor&quot;>
         <div className=&quot;container-cursor&quot;>
@@ -245,11 +245,11 @@ export default function AiToolsPage() {_const _aiTools = [
           </div>
 
           <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-8&quot;>
-            {aiTools.map((tool, index) => (              <Card
+            {aiTools.map(tool, index) => (              <Card
                 key={index}
                 className={_`card-hover group border-gradient-blue relative ${
                   tool.popular ? 'ring-2 ring-cursor-blue ring-opacity-50' : ''}`}
-                style={_{ animationDelay: `${index * 0.1}s` }}
+                style={_{ animationDelay: `${index * 0.1}s` }
               >
                 {tool.popular && (
                   <div className=&quot;absolute -top-3 left-1/2 transform -translate-x-1/2&quot;>
@@ -265,7 +265,7 @@ export default function AiToolsPage() {_const _aiTools = [
                       {tool.icon}                    </div>
                     <div className={_`absolute -inset-2 bg-gradient-to-r from-transparent via-${tool.gradient} to-transparent rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm`} />
                   </div>
-                  
+
                   <div className=&quot;flex-1&quot;>
                     <div className=&quot;flex items-center justify-between mb-2&quot;>
                       <h3 className={`text-2xl font-bold ${tool.textColor}`}>
@@ -275,11 +275,11 @@ export default function AiToolsPage() {_const _aiTools = [
                         {tool.category}
                       </span>
                     </div>
-                    
+
                     <p className=&quot;text-gray-400 leading-relaxed mb-6&quot;>
                       {tool.description}
                     </p>
-                    
+
                     <div className=&quot;mb-6&quot;>
                       <div className=&quot;flex items-center justify-between mb-3&quot;>
                         <span className=&quot;text-sm text-gray-500&quot;>Service Price:</span>
@@ -292,11 +292,11 @@ export default function AiToolsPage() {_const _aiTools = [
                     </div>
 
                     <ul className=&quot;space-y-2 mb-6&quot;>
-                      {tool.features.map((feature, featureIndex) => (
+                      {tool.features.map(feature, featureIndex) => (
                         <li key={featureIndex} className=&quot;flex items-center text-gray-300&quot;>
                           <CheckCircle className=&quot;w-4 h-4 text-green-400 mr-3 flex-shrink-0&quot; />
                           {feature}                        </li>
-                      ))}
+                      )}
                     </ul>
 
                     <div className=&quot;flex items-center justify-between&quot;>
@@ -315,11 +315,11 @@ export default function AiToolsPage() {_const _aiTools = [
                   </div>
                 </div>
               </Card>
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* AI Categories Overview */}
       <section className=&quot;section-padding bg-gradient-cursor-accent&quot;>
         <div className=&quot;container-cursor&quot;>
@@ -332,11 +332,11 @@ export default function AiToolsPage() {_const _aiTools = [
           </div>
 
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6&quot;>
-            {aiCategories.map((category, index) => (
+            {aiCategories.map(category, index) => (
               <Card
                 key={index}
                 className=&quot;card-hover border-gradient-blue&quot;
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={ animationDelay: `${index * 0.1}s` }
               >
                 <div className=&quot;p-6&quot;>
                   <h3 className=&quot;text-xl font-semibold text-white mb-3&quot;>{category.name}</h3>
@@ -346,11 +346,11 @@ export default function AiToolsPage() {_const _aiTools = [
                     <span className=&quot;text-cursor-blue font-semibold&quot;>{category.avgPrice}</span>                  </div>
                 </div>
               </Card>
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* AI Implementation Guide */}
       <section className=&quot;section-padding bg-gradient-cursor&quot;>
         <div className=&quot;container-cursor&quot;>

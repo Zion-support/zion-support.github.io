@@ -7,6 +7,5 @@ const [id] = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default [id];

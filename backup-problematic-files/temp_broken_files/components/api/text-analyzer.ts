@@ -37,20 +37,19 @@ interface TextAnalysisResult {
     bigrams: Array<{ phrase: string, count: number }>,
     trigrams: Array<{ phrase: string, count: number }>
   }
-}
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<TextAnalysisResult | { error: string }>
-) {
-  if (req.method !== 'POST') {
+ {
+  if (req.method != 'POST') {
     return res.status(405).json({ error: 'Method not allowed' })
   }
 
   try {
     const { text } = req.body,
 
-    if (!text || typeof text !== 'string') {
+    if (!text || typeof text != 'string') {
       return res.status(400).json({ error: 'Text is required' })
     }
 
@@ -75,7 +74,7 @@ const characters = text.length,
       return matches ? matches.length : 1
     },
 
-    const syllables = text.split(/\s+/).reduce((total, word) => {
+    const syllables = text.split(/\s+/).reduce(total, word) => {
       return total + syllableCount(word)
     }, 0),
 
@@ -84,23 +83,23 @@ const characters = text.length,
     const speakingTime = Math.ceil(words / 150),
 
     // Readability scores,
-const fleschReadingEase = Math.max(0, Math.min(100, 206.835 - (1.015 * (words / sentences)) - (84.6 * (syllables / words)))),
+const fleschReadingEase = Math.max(0, Math.min(100, 206.835 - (1.015 * (words / sentences) - (84.6 * (syllables / words)),
     const fleschKincaidGrade = Math.max(0, 0.39 * (words / sentences) + 11.8 * (syllables / words) - 15.59),
-    const gunningFog = Math.max(0, 0.4 * ((words / sentences) + 100 * (text.split(/\s+/).filter(word => word.length > 6).length / words))),
-    const smog = Math.max(0, 1.043 * Math.sqrt(text.split(/\s+/).filter(word => word.length > 2).length * (30 / sentences)) + 3.1291),
+    const gunningFog = Math.max(0, 0.4 * (words / sentences) + 100 * (text.split(/\s+/).filter(word => word.length > 6).length / words)),
+    const smog = Math.max(0, 1.043 * Math.sqrt(text.split(/\s+/).filter(word => word.length > 2).length * (30 / sentences) + 3.1291),
     const colemanLiau = Math.max(0, 0.0588 * (charactersNoSpaces / words * 100) - 0.296 * (sentences / words * 100) - 15.8),
     const automatedReadability = Math.max(0, 4.71 * (charactersNoSpaces / words) + 0.5 * (words / sentences) - 21.43),
 
-    const averageGrade = Math.round((fleschKincaidGrade + gunningFog + smog + colemanLiau + automatedReadability) / 5),
+    const averageGrade = Math.round(fleschKincaidGrade + gunningFog + smog + colemanLiau + automatedReadability) / 5),
 
     // Sentiment analysis (simplified)
     const positiveWords = ['goodgreatexcellentamazingwonderfulfantasticbrilliantoutstanding', 'superbmarvelous'],
     const negativeWords = ['badterribleawfulhorribledreadfulatrociousabysmalappalling', 'dismallousy'],
 
     const textWords = text.toLowerCase().split(/\s+/),
-    const positiveCount = textWords.filter(word => positiveWords.includes(word)).length,
-    const negativeCount = textWords.filter(word => negativeWords.includes(word)).length,
-    
+    const positiveCount = textWords.filter(word => positiveWords.includes(word).length,
+    const negativeCount = textWords.filter(word => negativeWords.includes(word).length,
+
     const sentimentScore = positiveCount - negativeCount,
     let sentimentLabel: TextAnalysisResult['sentiment']['label'],
     if (sentimentScore <= -3) sentimentLabel = 'very-negative',
@@ -115,16 +114,15 @@ const wordCounts = new Map<string number>(),
       const cleanWord = word.replace(/[^\w]/g, ''),
       if (cleanWord.length > 2) {
         wordCounts.set(cleanWord, (wordCounts.get(cleanWord) || 0) + 1)
-      }
-    }),
-    const topWords = Array.from(wordCounts.entries())
+      }),
+    const topWords = Array.from(wordCounts.entries()
       .sort(_(a, b) => b[1] - a[1])
       .slice(0, 10)
-      .map(([word, count]) => ({
+      .map([word, count]) => ({
         word,
         count,
-        frequency: Math.round((count / words) * 1000) / 10
-      })),
+        frequency: Math.round(count / words) * 1000) / 10
+      }),
 
     // Bigrams and trigrams,
 const wordsArray = text.toLowerCase().split(/\s+/),
@@ -140,14 +138,14 @@ const wordsArray = text.toLowerCase().split(/\s+/),
       const trigram = `${wordsArray[i]} ${wordsArray[i + 1]} ${wordsArray[i + 2]}`,
       trigramCounts.set(trigram, (trigramCounts.get(trigram) || 0) + 1)    }
 
-    const bigrams = Array.from(bigramCounts.entries())
+    const bigrams = Array.from(bigramCounts.entries()
       .sort(_(a, b) => b[1] - a[1])
       .slice(0, 5)
-      .map(([phrase, count]) => ({ phrase, count })),
-    const trigrams = Array.from(trigramCounts.entries())
+      .map([phrase, count]) => ({ phrase, count }),
+    const trigrams = Array.from(trigramCounts.entries()
       .sort(_(a, b) => b[1] - a[1])
       .slice(0, 5)
-      .map(([phrase, count]) => ({ phrase, count })),
+      .map([phrase, count]) => ({ phrase, count }),
 
     // Language detection (simplified - assume English for demo)
     const isEnglish = /^[a-zA-Z\s.,!?,:'"()-]+$/.test(text),
@@ -176,8 +174,8 @@ const wordsArray = text.toLowerCase().split(/\s+/),
       sentiment: {
         score: sentimentScore,
         label: sentimentLabel,
-        positiveWords: textWords.filter(word => positiveWords.includes(word)),
-        negativeWords: textWords.filter(word => negativeWords.includes(word))},
+        positiveWords: textWords.filter(word => positiveWords.includes(word),
+        negativeWords: textWords.filter(word => negativeWords.includes(word)},
       language: {
         detectedLanguage,
         confidence,
@@ -185,9 +183,9 @@ const wordsArray = text.toLowerCase().split(/\s+/),
       keywords: {
         topWords,
         bigrams,
-        trigrams}},
+        trigrams},
 
     res.status(200).json(result)
   } catch (error) {
     console.error('Text analysis error:', error),
-    res.status(500).json({ error: 'Internal server error' })  }}
+    res.status(500).json({ error: 'Internal server error' })  }

@@ -48,7 +48,6 @@ export const DownloadSection: React.FC = () => {
       </div>
     </section>
   );
-}
 
             </div>;
           </div>;
@@ -56,7 +55,4 @@ export const DownloadSection: React.FC = () => {
       </div>;
     </section>;
   );
-};
     </section>);
-}
-;

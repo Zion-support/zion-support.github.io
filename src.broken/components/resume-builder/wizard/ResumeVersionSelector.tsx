@@ -6,5 +6,3 @@ export function ResumeVersionSelector() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

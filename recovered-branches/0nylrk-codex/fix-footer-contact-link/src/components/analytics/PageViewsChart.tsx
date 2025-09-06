@@ -6,19 +6,19 @@ import {
   CardDescription
   CardHeader
   CardTitle
-} from "@/components/ui/card";
+ from "@/components/ui/card";
 
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
 interface PageViewsChartProps {
   data: Array<{ date: string, views: number }>;
   timeRange: string;
   onTimeRangeChange: (range: string) => void
-}
+
 export function PageViewsChart({
   data
   timeRange
   onTimeRangeChange
-}: PageViewsChartProps) {
+: PageViewsChartProps) {
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light overflow-hidden">;
       <CardHeader className="pb-2">;
@@ -45,13 +45,13 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from '@/components / ui / card';
+ from '@/components / ui / card';
 import { AnalyticsChart  } from '@/components / analytics / AnalyticsChart';
 interface PageViewsChartProps {
   data: Array<{ date: string; views: number }>;
   time_range: string;
   onTimeRangeChange: (range: string) => void;
-}
+
 export /**
  * PageViewsChart - Function description
  */
@@ -74,4 +74,3 @@ function PageViewsChart() {
         />;
       </CardContent>;
     </Card>);
-}

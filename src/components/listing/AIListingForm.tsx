@@ -39,7 +39,7 @@ export function AIListingForm({
   onSubmit
   isLoading
   initialValues = {}
-}: AIListingFormProps) {
+: AIListingFormProps) {
   const { toast } = useToast()
   const [title, setTitle] = useState(initialValues.title |'')
   const [category, setCategory] = useState(initialValues.category |'')
@@ -100,7 +100,7 @@ export function AIListingForm(): any ({;
   onSubmit,;
   isLoading,;
   initialValues = {},;
-}: AIListingFormProps) {;
+: AIListingFormProps) {;
   const { toast } = useToast();
   const [title, setTitle] = useState(initialValues && initialValues.title || '');
   const [category, setCategory] = useState(initialValues && initialValues.category || '');
@@ -357,15 +357,15 @@ export function AIListingForm(): any ({;
       </Button>
     </div>
   )
-}: AIListingFormProps) {
+: AIListingFormProps) {
   if (!title |!category) {
   toast ({
   return
-}/> </div> <div className="space-y-2" > <label htmlFor="category" className="text-sm font-medium text-zion-slate-light" >Category</label> <Input /> </div> <div className="space-y-2" > <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light" >Key Features (Optional) </label> <Textarea /> </div> <div className="space-y-2" > <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light" >Target Audience (Optional) </label> <Input > {"
+/> </div> <div className="space-y-2" > <label htmlFor="category" className="text-sm font-medium text-zion-slate-light" >Category</label> <Input /> </div> <div className="space-y-2" > <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light" >Key Features (Optional) </label> <Textarea /> </div> <div className="space-y-2" > <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light" >Target Audience (Optional) </label> <Input > {"
   isLoading ? (<>Generating Optimized Content...</>) : (<> <Sparkles className="h-4 w-4 mr-2" /> Generate Optimized Content </>)
-}</Button> </div>)
-}'"
-}
+</Button> </div>)
+'"
+
         />;
       </div>;
       <Button
@@ -384,16 +384,15 @@ export function AIListingForm(): any ({;
     </div>;
   );
 
-}: AIListingFormProps) {;
+: AIListingFormProps) {;
   if (!title || !category) {;
   toast ({;
   return;
-}/> </div> <div className="space-y-2" > <label htmlFor="category" className="text-sm font-medium text-zion-slate-light" >Category</label> <Input /> </div> <div className="space-y-2" > <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light" >Key Features (Optional) </label> <Textarea /> </div> <div className="space-y-2" > <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light" >Target Audience (Optional) </label> <Input > {";
+/> </div> <div className="space-y-2" > <label htmlFor="category" className="text-sm font-medium text-zion-slate-light" >Category</label> <Input /> </div> <div className="space-y-2" > <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light" >Key Features (Optional) </label> <Textarea /> </div> <div className="space-y-2" > <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light" >Target Audience (Optional) </label> <Input > {";
   isLoading ? (<>Generating Optimized Content...</>) : (<> <Sparkles className="h-4 w-4 mr-2" /> Generate Optimized Content </>) ;
-}</Button> </div>) ;
-}'";
-}
-}
+</Button> </div>) ;
+'";
+
           on_change={(e) => set_category (e.target.value)}
           placeholder="e.g. AI Tool, Digital Product, Service";
           className="bg - zion - blue border border - zion - blue - light text - white";
@@ -435,15 +434,14 @@ export function AIListingForm(): any ({;
           </>)}
       </Button>;
     </div>);
-}: AIListingFormProps) {
+: AIListingFormProps) {
   // Check condition
 if ( {) {
   $2
-}
+
   toast ({
   return;
-}/> </div> <div className="space - y-2" > <label html_for="category" className="text - sm font - medium text - zion - slate - light" >Category</label> <Input /> </div> <div className="space - y-2" > <label html_for="key_features" className="text - sm font - medium text - zion - slate - light" >Key Features (Optional) </label> <Textarea /> </div> <div className="space - y-2" > <label html_for="target_audience" className="text - sm font - medium text - zion - slate - light" >Target Audience (Optional) </label> <Input > {";
+/> </div> <div className="space - y-2" > <label html_for="category" className="text - sm font - medium text - zion - slate - light" >Category</label> <Input /> </div> <div className="space - y-2" > <label html_for="key_features" className="text - sm font - medium text - zion - slate - light" >Key Features (Optional) </label> <Textarea /> </div> <div className="space - y-2" > <label html_for="target_audience" className="text - sm font - medium text - zion - slate - light" >Target Audience (Optional) </label> <Input > {";
   is_loading ? (<>Generating Optimized Content...</>) : (<> <Sparkles className="h - 4 w - 4 mr - 2" /> Generate Optimized Content </>);
-}</Button> </div>);
-}'";
-}
+</Button> </div>);
+'";

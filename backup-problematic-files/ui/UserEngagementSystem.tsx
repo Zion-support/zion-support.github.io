@@ -4,7 +4,7 @@ export type EmptyStateProps = {
   title: string,
   message: string,
   action?: React.ReactNode
-},
+,
 
 export default function EmptyState({ emoji = '', title, message, action }: EmptyStateProps) {
   return (
@@ -17,4 +17,3 @@ export default function EmptyState({ emoji = '', title, message, action }: Empty
       {action && <div className="mt-3">{action}</div>}
     </div>
   )
-}

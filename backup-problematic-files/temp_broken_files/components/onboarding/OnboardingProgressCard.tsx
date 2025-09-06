@@ -1,32 +1,31 @@
 import React from 'react',;
 import Link from 'next/link',;
 import { CheckCircle2, Circle, PartyPopper } from 'lucide-react',;
-;
+
 export type OnboardingStep = {;
   id:string,;
   label:string,;
   completed:boolean,;
   ctaLabel?:string,;
   ctaHref?:string;
-},;
-;
+,;
+
 export type OnboardingProgressCardProps = {;
   title:string,;
   steps:OnboardingStep[],;
   highlightColorClass?:string;
-},;
-;
+,;
+
 function computePercentage(steps:OnboardingStep[]):number {;
-  if (!steps || steps.length === 0) return 0,;
-  const completedCount = steps.filter((s) => s.completed).length,;
-  return Math.round((completedCount / steps.length) * 100);
-}
+  if (!steps || steps.length = = 0) return 0,;
+  const completedCount = steps.filter(s) => s.completed).length,;
+  return Math.round(completedCount / steps.length) * 100);
 
 export default function OnboardingProgressCard({ title, steps, highlightColorClass = 'from-neon-green to-neon-blue' }: OnboardingProgressCardProps) {
   const percentage = computePercentage(steps),
-  const allDone = percentage === 100,
+  const allDone = percentage = = 100,
 
-  const firstIncomplete = steps.find((s) => !s.completed && s.ctaHref && s.ctaLabel),
+  const firstIncomplete = steps.find(s) => !s.completed && s.ctaHref && s.ctaLabel),
 
   return (
     <div className=&quot;rounded-xl border border-gray-200 dark:border-gray-800 bg-white/70 dark:bg-black/40 p-5 shadow-sm&quot;>
@@ -39,7 +38,7 @@ export default function OnboardingProgressCard({ title, steps, highlightColorCla
       <div className=&quot;mt-3 h-2 w-full rounded-full bg-gray-200 dark:bg-gray-800 overflow-hidden&quot;>        <div
           className={_`h-2 rounded-full bg-gradient-to-r ${highlightColorClass}`
           }
-          style={_{ width: `${percentage}%` }}
+          style={_{ width: `${percentage}%` }
         />
       </div>
 
@@ -51,7 +50,7 @@ export default function OnboardingProgressCard({ title, steps, highlightColorCla
 
       {/* Checklist */}
       <ul className=&quot;mt-4 space-y-2&quot;>
-        {steps.map((step) => (
+        {steps.map(step) => (
           <li key={step.id} className=&quot;flex items-center justify-between&quot;>
             <div className=&quot;flex items-center gap-2&quot;>
               {step.completed ? (
@@ -67,9 +66,9 @@ export default function OnboardingProgressCard({ title, steps, highlightColorCla
               </a>
             ) : null}
           </li>
-        ))}
+        )}
       </ul>;
-;
+
       {/* Primary CTA for next step */}
       {!allDone && firstIncomplete ? (
         <div className=&quot;mt-5&quot;>

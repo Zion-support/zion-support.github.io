@@ -18,41 +18,34 @@ async function ensureBaseFiles() {
   } catch {
     await writeFile(MODERATION_FILE, JSON.stringify({ flags: [] }, null, 2), 'utf8')
   }
-}
 
 export async function readAllFlags(): Promise<FlaggedContent[]> {
   await ensureBaseFiles(),
   const raw = await readFile(MODERATION_FILE, 'utf8'),
   const data = JSON.parse(raw) as { flags: FlaggedContent[] }
   return data.flags || []
-}
 
 export async function writeAllFlags(flags: FlaggedContent[]): Promise<void> {
   await ensureBaseFiles(),
   await writeFile(MODERATION_FILE, JSON.stringify({ flags }, null, 2), 'utf8')
-}
 
 export function generateFlagId(): string {
   return `FLG-${crypto.randomBytes(4).toString('hex').toUpperCase()}`
-}
 
 export function generateAiScores(seed?: string): AiScores {
-  const buf = crypto.createHash('sha256').update(seed || String(Date.now())).digest()
-  const v = (i: number) => Number((buf[i] / 255).toFixed(2))
+  const buf = crypto.createHash('sha256').update(seed || String(Date.now()).digest()
+  const v = (i: number) => Number(buf[i] / 255).toFixed(2)
   return { toxicity: v(0), nsfw: v(1), scam: v(2) }
-}
 
 export async function getFlagById(id: string): Promise<FlaggedContent | undefined> {
   const all = await readAllFlags()
-  return all.find(f => f.id === id)
-}
+  return all.find(f => f.id = = id)
 
 export async function upsertFlag(flag: FlaggedContent): Promise<void> {
   const all = await readAllFlags()
-  const idx = all.findIndex(f => f.id === flag.id)
+  const idx = all.findIndex(f => f.id = = flag.id)
   if (idx >= 0) all[idx] = flag, else all.push(flag),
   await writeAllFlags(all)
-}
 
 export async function createFlag(init: Omit<FlaggedContent, 'id' | 'createdAt' | 'updatedAt' | 'aiScores' | 'status'> & { status?: ModerationStatus, aiScores?: AiScores }): Promise<FlaggedContent> {
   const now = new Date().toISOString()
@@ -67,7 +60,6 @@ export async function createFlag(init: Omit<FlaggedContent, 'id' | 'createdAt' |
   all.push(flag),
   await writeAllFlags(all),
   return flag
-}
 
 export async function updateFlagStatus(id: string, status: ModerationStatus, adminNotes?: string): Promise<FlaggedContent | undefined> {
   const flag = await getFlagById(id)
@@ -77,4 +69,3 @@ export async function updateFlagStatus(id: string, status: ModerationStatus, adm
   flag.updatedAt = new Date().toISOString(),
   await upsertFlag(flag),
   return flag
-}

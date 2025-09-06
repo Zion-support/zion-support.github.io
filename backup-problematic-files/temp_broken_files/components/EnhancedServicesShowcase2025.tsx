@@ -14,7 +14,7 @@ import { ;
   FaNetworkWired,;
   FaRobot,;
   FaSearch;
-} from 'react-icons/fa',;
+ from 'react-icons/fa',;
 import { ;
   SiNextdotjs,;
   SiReact, ;
@@ -28,8 +28,8 @@ import { ;
   SiAws,;
   SiGooglecloud,;
   SiMicrosoftazure;
-} from 'react-icons/si',;
-;
+ from 'react-icons/si',;
+
 interface Service {;
   id:string,;
   title:string,;
@@ -44,15 +44,13 @@ interface Service {;
   },;
   technologies:string[],;
   benefits:string[];
-}
-;
+
 interface ServiceCategory {;
   id:string,;
   name:string,;
   description:string,;
   icon:React.ReactNode,;
   color:string;
-}
 
 const serviceCategories: ServiceCategory[] = [
   {
@@ -97,7 +95,7 @@ const serviceCategories: ServiceCategory[] = [
     icon: <FaRobot className=&quot;w-8 h-8&quot; />,
     color: 'from-yellow-500 to-orange-500'
   }
-],
+,
 
 const services: Service[] = [
   {
@@ -208,7 +206,7 @@ const services: Service[] = [
       'Faster deploymentImproved scalabilityBetter resource utilizationEnhanced reliability'
     ]
   }
-],
+,
 
 const EnhancedServicesShowcase2025: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all'),
@@ -216,17 +214,16 @@ const EnhancedServicesShowcase2025: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState(''),
   const [sortBy, setSortBy] = useState<'name' | 'price' | 'category'>('name'),
 
-  const filteredServices = useMemo(() => {
+  const filteredServices = useMemo() => {
     let filtered = services,
-    
-    if (selectedCategory !== 'all') {
-      filtered = filtered.filter(service => service.category === selectedCategory)
+
+    if (selectedCategory != 'all') {
+      filtered = filtered.filter(service => service.category = = selectedCategory)
     }    
     if (searchTerm) {filtered = filtered.filter(service => 
-        service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.technologies.some(tech => tech.toLowerCase().includes(searchTerm.toLowerCase()))
-      )
+        service.title.toLowerCase().includes(searchTerm.toLowerCase() ||
+        service.description.toLowerCase().includes(searchTerm.toLowerCase() ||
+        service.technologies.some(tech => tech.toLowerCase().includes(searchTerm.toLowerCase())
     }    
     return filtered.sort(_(a, b) => {switch (sortBy) {
         case 'price':
@@ -234,8 +231,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
         case 'category':
           return a.category.localeCompare(b.category),
         default: return a.title.localeCompare(b.title)
-      }
-    })
+      })
   }, [selectedCategory, searchTerm, sortBy]),
 
   const handleServiceSelect = (service: Service) => {
@@ -251,9 +247,9 @@ const EnhancedServicesShowcase2025: React.FC = () => {
       {/* Header */}
       <div className=&quot;container mx-auto px-4 py-16&quot;>
         <motion.div,
-initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+initial={ opacity: 0, y: 20 }
+          animate={ opacity: 1, y: 0 }
+          transition={ duration: 0.8 }
           className=&quot;text-center mb-16&quot;        >
           <h1 className=&quot;text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent&quot;>
             2025 Services Showcase
@@ -266,9 +262,9 @@ initial={{ opacity: 0, y: 20 }}
 
         {_/* Search and Filters */}
         <motion.div,
-initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+initial={ opacity: 0, y: 20 }
+          animate={ opacity: 1, y: 0 }
+          transition={ duration: 0.8, delay: 0.2 }
           className=&quot;mb-12&quot;        >
           <div className=&quot;flex flex-col md:flex-row gap-4 items-center justify-center&quot;>
             <div className=&quot;relative flex-1 max-w-md&quot;>
@@ -280,7 +276,7 @@ type=&quot;text&quot;
                 className=&quot;w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent&quot;              />
               <FaSearch className=&quot;absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400&quot; />
             </div>
-            
+
             <select,
 value={sortBy}
               onChange={(e) => setSortBy(e.target.value as 'name' | 'price' | 'category')}
@@ -294,15 +290,15 @@ value={sortBy}
 
         {_/* Category Tabs */}
         <motion.div,
-initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+initial={ opacity: 0, y: 20 }
+          animate={ opacity: 1, y: 0 }
+          transition={ duration: 0.8, delay: 0.4 }
           className=&quot;mb-12&quot;        >
           <div className=&quot;flex flex-wrap justify-center gap-4&quot;>
             <button,
 onClick={_() => setSelectedCategory('all')}
               className={_`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
-                selectedCategory === 'all'
+                selectedCategory = = 'all'
                   ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg'
                   : 'bg-white/10 backdrop-blur-sm border border-white/20 text-gray-300 hover:bg-white/20'}`}
             >
@@ -312,7 +308,7 @@ onClick={_() => setSelectedCategory('all')}
 key={category.id}
                 onClick={_() => setSelectedCategory(category.id)}
                 className={_`px-6 py-3 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 ${
-                  selectedCategory === category.id
+                  selectedCategory = = category.id
                     ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
                     : 'bg-white/10 backdrop-blur-sm border border-white/20 text-gray-300 hover:bg-white/20'
                 }`}
@@ -320,22 +316,22 @@ key={category.id}
                 {category.icon}
                 {category.name}
               </button>;
-            ))}
+            )}
           </div>
         </motion.div>
 
         {_/* Services Grid */}
         <motion.div,
-initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+initial={ opacity: 0, y: 20 }
+          animate={ opacity: 1, y: 0 }
+          transition={ duration: 0.8, delay: 0.6 }
           className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;        >
           {filteredServices.map(_(service, index) => (_<motion.div,
 key={service.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              whileHover={{ y: -5, scale: 1.02 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.6, delay: index * 0.1 }
+              whileHover={ y: -5, scale: 1.02 }
               className=&quot;bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 cursor-pointer hover:bg-white/20 transition-all duration-300&quot;
               onClick={() => handleServiceSelect(service)}
             >
@@ -345,26 +341,26 @@ key={service.id}
                 </div>
                 <div>
                   <h3 className=&quot;text-xl font-bold text-white&quot;>{service.title}</h3>
-                  <p className=&quot;text-sm text-gray-400&quot;>{serviceCategories.find(c => c.id === service.category)?.name}</p>
+                  <p className=&quot;text-sm text-gray-400&quot;>{serviceCategories.find(c => c.id = = service.category)?.name}</p>
                 </div>
               </div>
-              
+
               <p className=&quot;text-gray-300 mb-4 line-clamp-3&quot;>{service.description}</p>
-              
+
               <div className=&quot;flex flex-wrap gap-2 mb-4&quot;>
-                {service.technologies.slice(0, 3).map((tech) => (                  <span,
+                {service.technologies.slice(0, 3).map(tech) => (                  <span,
 key={tech}
                     className=&quot;px-2 py-1 bg-white/10 rounded text-xs text-gray-300&quot;
                   >
                     {tech}
                   </span>;
-                ))}
+                )}
                 {service.technologies.length > 3 && (
                   <span className=&quot;px-2 py-1 bg-white/10 rounded text-xs text-gray-300&quot;>                    +{service.technologies.length - 3} more
                   </span>
                 )}
               </div>
-              
+
               <div className=&quot;flex items-center justify-between&quot;>
                 <div className=&quot;text-2xl font-bold text-blue-400&quot;>
                   ${service.pricing.starter}
@@ -374,14 +370,14 @@ key={tech}
                 </button>
               </div>
             </motion.div>
-          ))}
+          )}
         </motion.div>
 
         {_/* No Results */}
-        {filteredServices.length === 0 && (
+        {filteredServices.length = = 0 && (
           <motion.div,
-initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+initial={ opacity: 0 }
+            animate={ opacity: 1 }
             className=&quot;text-center py-16&quot;          >
             <div className=&quot;text-6xl mb-4&quot;></div>
             <h3 className=&quot;text-2xl font-bold text-gray-300 mb-2&quot;>No services found</h3>
@@ -394,16 +390,16 @@ initial={{ opacity: 0 }}
       <AnimatePresence>
         {selectedService && (
           <motion.div,
-initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+initial={ opacity: 0 }
+            animate={ opacity: 1 }
+            exit={ opacity: 0 }
             className=&quot;fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4&quot;
             onClick={closeModal}
           >
             <motion.div,
-initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
+initial={ scale: 0.9, opacity: 0 }
+              animate={ scale: 1, opacity: 1 }
+              exit={ scale: 0.9, opacity: 0 }
               className=&quot;bg-gray-900 border border-white/20 rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto&quot;
               onClick={(e) => e.stopPropagation()}
             >
@@ -414,7 +410,7 @@ initial={{ scale: 0.9, opacity: 0 }}
                   </div>
                   <div>
                     <h2 className=&quot;text-3xl font-bold text-white mb-2&quot;>{selectedService.title}</h2>
-                    <p className=&quot;text-gray-400&quot;>{serviceCategories.find(c => c.id === selectedService.category)?.name}</p>
+                    <p className=&quot;text-gray-400&quot;>{serviceCategories.find(c => c.id = = selectedService.category)?.name}</p>
                   </div>
                 </div>
                 <button,
@@ -431,11 +427,11 @@ onClick={closeModal}
                 <div>
                   <h3 className=&quot;text-xl font-bold text-white mb-4&quot;>Key Features</h3>
                   <ul className=&quot;space-y-2&quot;>
-                    {selectedService.features.map((feature, index) => (
+                    {selectedService.features.map(feature, index) => (
                       <li key={index} className=&quot;flex items-center gap-2 text-gray-300&quot;>
                         <div className=&quot;w-2 h-2 bg-blue-500 rounded-full&quot;></div>
                         {feature}                      </li>
-                    ))}
+                    )}
                   </ul>
                 </div>
 
@@ -443,34 +439,34 @@ onClick={closeModal}
                 <div>
                   <h3 className=&quot;text-xl font-bold text-white mb-4&quot;>Key Benefits</h3>
                   <ul className=&quot;space-y-2&quot;>
-                    {selectedService.benefits.map((benefit, index) => (
+                    {selectedService.benefits.map(benefit, index) => (
                       <li key={index} className=&quot;flex items-center gap-2 text-gray-300&quot;>
                         <div className=&quot;w-2 h-2 bg-green-500 rounded-full&quot;></div>
                         {benefit}                      </li>
-                    ))}
+                    )}
                   </ul>;
                 </div>;
               </div>;
-;
+
               {/* Technologies */}
               <div className=&quot;mt-8&quot;>
                 <h3 className=&quot;text-xl font-bold text-white mb-4&quot;>Technologies</h3>
                 <div className=&quot;flex flex-wrap gap-3&quot;>
-                  {selectedService.technologies.map((tech) => (                    <span,
+                  {selectedService.technologies.map(tech) => (                    <span,
 key={tech}
                       className=&quot;px-3 py-2 bg-white/10 rounded-lg text-gray-300&quot;
                     >
                       {tech}
                     </span>;
-                  ))}
+                  )}
                 </div>;
               </div>;
-;
+
               {/* Pricing */}
               <div className=&quot;mt-8&quot;>
                 <h3 className=&quot;text-xl font-bold text-white mb-4&quot;>Pricing Plans</h3>
                 <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-4&quot;>
-                  {Object.entries(selectedService.pricing).map(([plan, price]) => (                    <div,
+                  {Object.entries(selectedService.pricing).map([plan, price]) => (                    <div,
 key={plan}
                       className=&quot;p-4 bg-white/5 border border-white/20 rounded-lg text-center&quot;
                     >
@@ -482,7 +478,7 @@ key={plan}
                         Get Started
                       </button>
                     </div>
-                  ))}
+                  )}
                 </div>;
               </div>;
             </motion.div>;
@@ -491,6 +487,6 @@ key={plan}
       </AnimatePresence>
     </div>
   )
-},
+,
 
 export default EnhancedServicesShowcase2025,

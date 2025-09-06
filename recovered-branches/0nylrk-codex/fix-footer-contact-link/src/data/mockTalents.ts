@@ -1,7 +1,7 @@
 import { ProfileData } from '@/types/profile';
 
 import { ProfileData } from "@/types/profile";
-// Mock talent profiles for development and testing
+/ Mock talent profiles for development and testing
 export const MOCK_TALENTS: ProfileData[] = [
   {
 
@@ -312,7 +312,6 @@ export const MOCK_TALENTS: ProfileData[] = [
     }
     hourlyRate: 145
     contactEmail: 'priya.sharma@example.com'
-  }
   },
   {
     id: 'talent-4'
@@ -530,94 +529,83 @@ contactEmail: 'david.martinez@example.com'
     hourlyRate: 125,
     contactEmail: 'david && david.martinez@example && example.com',
   },
-];
-}
+;
+
 hourlyRate: 150;
 contactEmail: "alexandra.chen@example.com"
-}
-}];
+
+];
 availability: {
   status: "limited";
 message: "Limited availability for short-term consulting projects and infrastructure assessments.";
 availableHours: [ {
   day: "Monday", hours: "1:00 PM - 5:00 PM"
-}
-{
+
   day: "Wednesday", hours: "1:00 PM - 5:00 PM"
-}
-{
+
   day: "Friday", hours: "1:00 PM - 5:00 PM"
-}
+
 hourlyRate: 135;
 contactEmail: "michael.reynolds@example.com"
-}
+
 hourlyRate: 145;
 contactEmail: "priya.sharma@example.com"
-}
-]
-}
+
 hourlyRate: 165;
 contactEmail: "james.wilson@example.com"
-}
+
 current: true
-}
+
 hourly_rate: 150;
 contact_email: "alexandra.chen@example.com";
-}
-}];
+
+];
 availability: {
   status: "limited";
 message: "Limited availability for short - term consulting projects and infrastructure assessments.";
 available_hours: [ {
   day: "Monday", hours: "1:00 PM - 5:00 PM";
-}
-{
+
   day: "Wednesday", hours: "1:00 PM - 5:00 PM";
-}
-{
+
   day: "Friday", hours: "1:00 PM - 5:00 PM";
-}
+
 hourly_rate: 135;
 contact_email: "michael.reynolds@example.com";
-}
+
 hourly_rate: 145;
 contact_email: "priya.sharma@example.com";
-}
-];
-}
+
 hourly_rate: 165;
 contact_email: "james.wilson@example.com";
-}
+
 current: true;
-}
-{
+
   id: "e2";
 role: "Full - Stack Developer";
 company: "WebInnovate";
 description: "Developed full-stack web applications using React, Node && Node.js, and MongoDB. Collaborated closely with designers and product managers to deliver features on schedule.";
 startDate: "Jun 2018";
 endDate: "Apr 2021"
-}];
+];
 availability: {
   status: "limited";
 message: "Available for part-time projects only (up to 20 hours per week) .";
 availableHours: [ {
   day: "Tuesday", hours: "10:00 AM - 6:00 PM"
-}
-{
+
   day: "Thursday", hours: "10:00 AM - 6:00 PM"
-}
-{
+
   day: "Saturday", hours: "12:00 PM - 4:00 PM"
-}
+
 hourlyRate: 125;
 contactEmail: "david.martinez@example.com"
-}];
+];
 
-}];
+];
 
 import { ProfileData } from "@/types/profile";
-// Mock talent profiles for development and testing
+/ Mock talent profiles for development and testing
 export const MOCK_TALENTS: ProfileData[] = [
   {
     id: "talent-1", name: "Alexandra Chen",
@@ -810,12 +798,12 @@ export const MOCK_TALENTS: ProfileData[] = [
       }
     ];
     availability: {
-      
+
       status: "unavailable",
       nextAvailable: "June 15, 2025";
       message: "Currently committed to a long-term project until mid-June 2025.",
       availableHours: []
-    
+
     },
     hourlyRate: 145,
     contactEmail: "priya.sharma@example.com"
@@ -952,24 +940,21 @@ export const MOCK_TALENTS: ProfileData[] = [
     hourlyRate: 125,
     contactEmail: "david.martinez@example.com"
   }
-];
+;
 description: "Developed full - stack web applications using React, Node.js, and MongoDB. Collaborated closely with designers and product managers to deliver features on schedule.";
 start_date: "Jun 2018";
 end_date: "Apr 2021";
-}];
+];
 availability: {
   status: "limited";
 message: "Available for part - time projects only (up to 20 hours per week) .";
 available_hours: [ {
   day: "Tuesday", hours: "10:00 AM - 6:00 PM";
-}
-{
+
   day: "Thursday", hours: "10:00 AM - 6:00 PM";
-}
-{
+
   day: "Saturday", hours: "12:00 PM - 4:00 PM";
-}
+
 hourly_rate: 125;
 contact_email: "david.martinez@example.com";
-}];
-;
+];

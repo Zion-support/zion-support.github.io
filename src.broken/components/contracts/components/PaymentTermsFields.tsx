@@ -6,5 +6,3 @@ export function PaymentTermsFields() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

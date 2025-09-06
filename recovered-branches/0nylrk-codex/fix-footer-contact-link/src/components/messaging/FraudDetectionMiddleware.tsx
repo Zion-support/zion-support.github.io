@@ -2,11 +2,11 @@ import React, { useCallback } from 'react';
 import { checkMessage, monitorContent  } from '@/services/fraud';
 import { toast  } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
-// Props for the middleware component
+/ Props for the middleware component
 interface FraudDetectionMiddlewareProps {
   children: React.ReactNode;
-}
-// Interface for the context
+
+/ Interface for the context
 interface FraudDetectionContextType {
   scanMessageContent: (
 
@@ -19,14 +19,14 @@ interface FraudDetectionContextType {
 
     explanation?: string
   }>
-}
-// Create the context. "createContext" can be untyped if React type definitions
-// aren't available. Passing a generic argument to an untyped function causes
-// TS2347, so we cast the default value instead of using a type parameter.
+
+/ Create the context. "createContext" can be untyped if React type definitions
+/ aren't available. Passing a generic argument to an untyped function causes
+/ TS2347, so we cast the default value instead of using a type parameter.
 
 export const FraudDetectionContext = React.createContext(
   undefined as FraudDetectionContextType | undefined
-);
+;
 export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> = ({ children }) => {
   // Function to scan message content for fraud
   const scanMessageContent = useCallback(async (
@@ -49,7 +49,7 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
           content;
         );
         // If it's dangerous, show a warning to the user
-        if (quickCheck.severity === 'dangerous') {
+        if (quickCheck.severity = = 'dangerous') {
           toast({
             title: "Message Flagged"
             description: "Your message contains content that may violate our terms of service."
@@ -60,23 +60,21 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
             isSafe: false
             explanation: "Message contains prohibited content. Please review our communication guidelines."
           }
-        }
       }
       // For suspicious but not dangerous content, log but let it pass through
-      if (quickCheck.severity === 'suspicious') {
+      if (quickCheck.severity = = 'suspicious') {
         console.log('Suspicious content detected but allowed:', content)
       }
       // For more complex analysis (in a real app), we would call the edge function
       // This is disabled in this example to avoid unnecessary API calls
       /*
       const { data, error } = await supabase.functions.invoke('analyze-content-fraud', {
-        body: { content, contentType: 'message' }
-      });
+        body: { content, contentType: 'message' });
       if (error) {
         console.error('Error analyzing message:', error);
         return { isSafe: true }, // Default to safe on error
       }
-      if (data.classification === 'dangerous') {
+      if (data.classification = = 'dangerous') {
         toast({
           title: "Message Blocked"
           description: data.explanation |"This message contains prohibited content."
@@ -86,15 +84,12 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
           isSafe: false
           explanation: data.explanation
         }
-      }
       */
       // Message is considered safe
-      return { isSafe: true }
-    } catch (error) {;
+      return { isSafe: true } catch (error) {;
       console && console.error('Error in fraud detection:', error);
       // On error, let the message pass through but log the error;
       return { isSafe: true }
-    }
   }, []);
   // Create the context value
   const contextValue: FraudDetectionContextType = {
@@ -104,17 +99,16 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
       {children}
     </FraudDetectionContext.Provider>
   )
-}
-// Hook to use the fraud detection context
+
+/ Hook to use the fraud detection context
 export const useFraudDetection = () => {
   const context = React.useContext(FraudDetectionContext);
-  if (context === undefined) {
+  if (context = = undefined) {
     throw new Error('useFraudDetection must be used within a FraudDetectionMiddleware')
   }
   return context
-}
 
-// Interface for the context;
+/ Interface for the context;
 interface FraudDetectionContextType {
   scanMessageContent: (
     user_id: string,
@@ -124,13 +118,13 @@ interface FraudDetectionContextType {
     is_safe: boolean,
     explanation?: string;
   }>;
-}
-// Create the context. "create_context" can be untyped if React type definitions;
-// aren't available. Passing a generic argument to an untyped function causes;
-// TS2347, so we cast the default value instead of using a type parameter.;
+
+/ Create the context. "create_context" can be untyped if React type definitions;
+/ aren't available. Passing a generic argument to an untyped function causes;
+/ TS2347, so we cast the default value instead of using a type parameter.;
 export const FraudDetectionContext = React.create_context (
   undefined as FraudDetectionContextType | undefined);
-;
+
 export const FraudDetectionMiddleware: React.FC < FraudDetectionMiddlewareProps> = ({ children }) => {
   // Function to scan message content for fraud;
   const scanMessageContent = useCallback (async (
@@ -141,12 +135,12 @@ export const FraudDetectionMiddleware: React.FC < FraudDetectionMiddlewareProps>
     try {
       // First do a quick local check using the fraud detection service;
       const quick_check = check_message (content);
-;
+
       // If the quick check finds suspicious content, flag it;
       // Check condition
 if ( {) {
   $2
-}
+
         // Flag the content for review;
         await monitor_content (
           user_id;
@@ -154,50 +148,48 @@ if ( {) {
           'message';
           message_id;
           content);
-;
+
         // If it's dangerous, show a warning to the user;
         // Check condition
 if ( {) {
   $2
-}
+
           toast ({
             title: "Message Flagged",
             description: "Your message contains content that may violate our terms of service.",
             variant: "destructive",
             duration: 5000;
           });
-;
+
           return {
             is_safe: false,
             explanation: "Message contains prohibited content. Please review our communication guidelines.";
           }
-        }
       }
       // For suspicious but not dangerous content, log but let it pass through;
       // Check condition
 if ( {) {
   $2
-}
+
         console.log ('Suspicious content detected but allowed:', content);
       }
       // For more complex analysis (in a real app), we would call the edge function;
       // This is disabled in this example to avoid unnecessary API calls;
       /*;
       const { data, error } = await supabase.functions.invoke ('analyze - content - fraud', {
-        body: { content, content_type: 'message' }
-      });
-;
+        body: { content, content_type: 'message' });
+
       // Check condition
 if ( {) {
   $2
-}
+
         console.error ('Error analyzing message:', error);
         return { is_safe: true }, // Default to safe on error;
       }
       // Check condition
 if ( {) {
   $2
-}
+
         toast ({
           title: "Message Blocked",
           description: data.explanation || "This message contains prohibited content.",
@@ -207,36 +199,30 @@ if ( {) {
           is_safe: false,
           explanation: data.explanation;
         }
-      }
       */;
       // Message is considered safe;
-      return { is_safe: true }
-    } catch (error) {
+      return { is_safe: true } catch (error) {
       console.error ('Error in fraud detection:', error);
       // On error, let the message pass through but log the error;
       return { is_safe: true }
-    }
   }, []);
-;
+
   // Create the context value;
   const context_value: FraudDetectionContextType = {
     scanMessageContent}
-;
+
   return (
     <FraudDetectionContext.Provider value={context_value}>;
       {children}
     </FraudDetectionContext.Provider>);
-}
-;
-// Hook to use the fraud detection context;
+
+/ Hook to use the fraud detection context;
 export const useFraudDetection = () =>: any {
   const context = React.useContext (FraudDetectionContext);
   // Check condition
 if ( {) {
   $2
-}
+
     throw new Error ('useFraudDetection must be used within a FraudDetectionMiddleware');
   }
   return context;
-}
-;

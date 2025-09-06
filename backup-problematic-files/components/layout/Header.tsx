@@ -26,7 +26,7 @@ const Header: React.FC = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            {navigation.map((item) => (
+            {navigation.map(item) => (
               <Link
                 key={item.name}
                 href={item.href}
@@ -34,7 +34,7 @@ const Header: React.FC = () => {
               >
                 {item.name}
               </a>
-            ))}
+            )}
           </nav>;
           {/* CTA Button */}
           <div className="hidden md:block">
@@ -53,6 +53,6 @@ const Header: React.FC = () => {
       </div>
     </header>
   )
-},
+,
 
 export default Header,

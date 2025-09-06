@@ -7,60 +7,59 @@ import { ;
   ChevronRight, ExternalLink, TrendingUp, BarChart3, Cloud, Network,;
   Search, Filter, Grid, List, Star as StarIcon, Eye, Heart, Share2,;
   DollarSign, Calendar, Users as UsersIcon, Zap as ZapIcon;
-} from 'lucide-react',;
+ from 'lucide-react',;
 import EnhancedNavigation from '../components/EnhancedNavigation',;
 import EnhancedFooter from '../components/EnhancedFooter',;
 import { advancedInnovativeServices } from '../data/2025-advanced-innovative-services-expansion',;
 import { emergingTechInnovations } from '../data/2025-emerging-tech-innovations',;
-;
+
 export default function AdvancedServicesShowcase2025() {;
   const [searchTerm, setSearchTerm] = useState(''),;
   const [selectedCategory, setSelectedCategory] = useState('all'),;
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),;
   const [sortBy, setSortBy] = useState<'popularity' | 'price' | 'rating' | 'newest'>('popularity'),;
   const [priceRange, setPriceRange] = useState<[number, number]>([0, 10000]),;
-;
+
   // Combine all services;
   const allServices = [...advancedInnovativeServices, ...emergingTechInnovations],;
-;
+
   const categories = [;
     { id:'all', name:'All Services', count:allServices.length, icon:'' },;
-    { id:'AI & Machine Learning', name:'AI & ML', count:allServices.filter(s => s.category.includes('AI') || s.category.includes('Machine Learning')).length, icon:'' },;
-    { id:'Quantum Computing & AI', name:'Quantum AI', count:allServices.filter(s => s.category.includes('Quantum')).length, icon:'' },;
-    { id:'Cybersecurity', name:'Security', count:allServices.filter(s => s.category.includes('Cybersecurity') || s.category.includes('Security')).length, icon:'' },;
-    { id:'Edge Computing & IoT', name:'Edge & IoT', count:allServices.filter(s => s.category.includes('Edge') || s.category.includes('IoT')).length, icon:'' },;
-    { id:'Space Technology & Innovation', name:'Space Tech', count:allServices.filter(s => s.category.includes('Space')).length, icon:'' },;
-    { id:'Neural Technology & BCI', name:'Neural & BCI', count:allServices.filter(s => s.category.includes('Neural') || s.category.includes('BCI')).length, icon:'' },;
-    { id:'Healthcare AI', name:'Healthcare', count:allServices.filter(s => s.category.includes('Healthcare')).length, icon:'' },;
-    { id:'Climate & Sustainability', name:'Climate', count:allServices.filter(s => s.category.includes('Climate') || s.category.includes('Sustainability')).length, icon:'' },;
-    { id:'Blockchain & DeFi', name:'Blockchain', count:allServices.filter(s => s.category.includes('Blockchain') || s.category.includes('DeFi')).length, icon:'' },;
-    { id:'Metaverse & VR/AR', name:'Metaverse', count:allServices.filter(s => s.category.includes('Metaverse') || s.category.includes('VR/AR')).length, icon:'' }
+    { id:'AI & Machine Learning', name:'AI & ML', count:allServices.filter(s => s.category.includes('AI') || s.category.includes('Machine Learning').length, icon:'' },;
+    { id:'Quantum Computing & AI', name:'Quantum AI', count:allServices.filter(s => s.category.includes('Quantum').length, icon:'' },;
+    { id:'Cybersecurity', name:'Security', count:allServices.filter(s => s.category.includes('Cybersecurity') || s.category.includes('Security').length, icon:'' },;
+    { id:'Edge Computing & IoT', name:'Edge & IoT', count:allServices.filter(s => s.category.includes('Edge') || s.category.includes('IoT').length, icon:'' },;
+    { id:'Space Technology & Innovation', name:'Space Tech', count:allServices.filter(s => s.category.includes('Space').length, icon:'' },;
+    { id:'Neural Technology & BCI', name:'Neural & BCI', count:allServices.filter(s => s.category.includes('Neural') || s.category.includes('BCI').length, icon:'' },;
+    { id:'Healthcare AI', name:'Healthcare', count:allServices.filter(s => s.category.includes('Healthcare').length, icon:'' },;
+    { id:'Climate & Sustainability', name:'Climate', count:allServices.filter(s => s.category.includes('Climate') || s.category.includes('Sustainability').length, icon:'' },;
+    { id:'Blockchain & DeFi', name:'Blockchain', count:allServices.filter(s => s.category.includes('Blockchain') || s.category.includes('DeFi').length, icon:'' },;
+    { id:'Metaverse & VR/AR', name:'Metaverse', count:allServices.filter(s => s.category.includes('Metaverse') || s.category.includes('VR/AR').length, icon:'' }
   ],;
-;
+
   const filteredServices = allServices;
     .filter(service => {;
-      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                           service.tagline.toLowerCase().includes(searchTerm.toLowerCase()),;
-      const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory),;
-      const price = parseFloat(service.price.replace('$', '').replace(, '')),;
+      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase() ||;
+                           service.description.toLowerCase().includes(searchTerm.toLowerCase() ||;
+                           service.tagline.toLowerCase().includes(searchTerm.toLowerCase(),;
+      const matchesCategory = selectedCategory = = 'all' || service.category.includes(selectedCategory),;
+      const price = parseFloat(service.price.replace('$', '').replace(, ''),;
       const matchesPrice = price >= priceRange[0] && price <= priceRange[1],;
       return matchesSearch && matchesCategory && matchesPrice,;
     });
-    .sort((a, b) => {;
+    .sort(a, b) => {;
       switch (sortBy) {;
         case 'popularity':;
           return (b.popular ? 1 :0) - (a.popular ? 1 :0),;
         case 'price':;
-          return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, '')),;
+          return parseFloat(a.price.replace('$', '').replace(, '') - parseFloat(b.price.replace('$', '').replace(, ''),;
         case 'rating':;
           return b.rating - a.rating,;
         case 'newest':;
           return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime(),;
         default:return 0;
-      }
-    }),;
-;
+      }),;
+
   const containerVariants = {;
     hidden:{ opacity:0 },;
     visible:{;
@@ -68,9 +67,8 @@ export default function AdvancedServicesShowcase2025() {;
       transition:{;
         staggerChildren:0.1;
       }
-    }
   },;
-;
+
   const itemVariants = {;
     hidden:{ opacity:0, y:20 },;
     visible:{;
@@ -79,14 +77,13 @@ export default function AdvancedServicesShowcase2025() {;
       transition:{;
         duration:0.5;
       }
-    }
   },;
-;
+
   const getCategoryIcon = (category:string) => {;
-    const categoryData = categories.find(cat => cat.id === category),;
+    const categoryData = categories.find(cat => cat.id = = category),;
     return categoryData?.icon || '';
   },;
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">;
       <Head>;
@@ -97,16 +94,16 @@ export default function AdvancedServicesShowcase2025() {;
         <meta name="keywords" content="advanced micro SAAS, AI services, quantum computing, cybersecurity, edge computing, space technology, neural interfaces, Zion Tech Group" />;
         <link rel="canonical" href="https://ziontechgroup.com/2025-advanced-services-showcase" />;
       </Head>;
-;
+
       <EnhancedNavigation />;
-;
+
       {/* Hero Section */}
       <section className="relative py-20 px-6">;
         <div className="max-w-7xl mx-auto text-center">;
           <motion.div;
-            initial={{ opacity:0, y:30 }}
-            animate={{ opacity:1, y:0 }}
-            transition={{ duration:0.8 }}
+            initial={ opacity:0, y:30 }
+            animate={ opacity:1, y:0 }
+            transition={ duration:0.8 }
           >;
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent">;
               2025 Advanced Services Showcase;
@@ -115,7 +112,6 @@ export default function AdvancedServicesShowcase2025() {;
               Discover our comprehensive collection of cutting-edge micro SAAS services, advanced AI solutions, ;
               quantum technologies, and revolutionary IT services that are transforming industries worldwide.;
             </p>;
-            ;
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">;
               <div className="text-center">;
@@ -138,14 +134,14 @@ export default function AdvancedServicesShowcase2025() {;
           </motion.div>;
         </div>;
       </section>;
-;
+
       {/* Search and Filters */}
       <section className="px-6 pb-12">;
         <div className="max-w-7xl mx-auto">;
           <motion.div;
-            initial={{ opacity:0, y:20 }}
-            animate={{ opacity:1, y:0 }}
-            transition={{ duration:0.6 }}
+            initial={ opacity:0, y:20 }
+            animate={ opacity:1, y:0 }
+            transition={ duration:0.6 }
             className="bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10";
           >;
             {/* Search Bar */}
@@ -161,7 +157,7 @@ export default function AdvancedServicesShowcase2025() {;
                 />;
               </div>;
             </div>;
-;
+
             {/* Filters Row */}
             <div className="flex flex-col lg:flex-row gap-6">;
               {/* Category Filter */}
@@ -172,13 +168,13 @@ export default function AdvancedServicesShowcase2025() {;
                   onChange={(e) => setSelectedCategory(e.target.value)}
                   className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-400 focus:bg-white/15 transition-all duration-300";
                 >;
-                  {categories.map((category) => (;
+                  {categories.map(category) => (;
                     <option key={category.id} value={category.id}>;
                       {category.name} ({category.count});
-                    </option>;                  ))}
+                    </option>;                  )}
                 </select>;
               </div>;
-;
+
               {/* Sort By */}
               <div className="flex-1">;
                 <label className="block text-sm font-medium text-white/70 mb-3">Sort By</label>;
@@ -193,7 +189,7 @@ export default function AdvancedServicesShowcase2025() {;
                   <option value="newest">Newest</option>;
                 </select>;
               </div>;
-;
+
               {/* Price Range */}
               <div className="flex-1">;
                 <label className="block text-sm font-medium text-white/70 mb-3">Price Range</label>;
@@ -214,14 +210,14 @@ export default function AdvancedServicesShowcase2025() {;
                   />;
                 </div>;
               </div>;
-;
+
               {/* View Mode Toggle */}
               <div className="flex items-end">;
                 <div className="flex bg-white/10 rounded-xl p-1">;
                   <button;
                     onClick={() => setViewMode('grid')}
                     className={`p-2 rounded-lg transition-all duration-300 ${;
-                      viewMode === 'grid' ? 'bg-cyan-500 text-white' :'text-white/70 hover:text-white';
+                      viewMode = = 'grid' ? 'bg-cyan-500 text-white' :'text-white/70 hover:text-white';
                     }`}
                   >;
                     <Grid className="w-5 h-5" />;
@@ -229,7 +225,7 @@ export default function AdvancedServicesShowcase2025() {;
                   <button;
                     onClick={() => setViewMode('list')}
                     className={`p-2 rounded-lg transition-all duration-300 ${;
-                      viewMode === 'list' ? 'bg-cyan-500 text-white' :'text-white/70 hover:text-white';
+                      viewMode = = 'list' ? 'bg-cyan-500 text-white' :'text-white/70 hover:text-white';
                     }`}
                   >;
                     <List className="w-5 h-5" />;
@@ -240,38 +236,38 @@ export default function AdvancedServicesShowcase2025() {;
           </motion.div>;
         </div>;
       </section>;
-;
+
       {/* Services Grid/List */}
       <section className="px-6 pb-20">;
         <div className="max-w-7xl mx-auto">;
           {/* Results Count */}
           <motion.div;
-            initial={{ opacity:0 }}
-            animate={{ opacity:1 }}
-            transition={{ duration:0.5 }}
+            initial={ opacity:0 }
+            animate={ opacity:1 }
+            transition={ duration:0.5 }
             className="mb-8";
           >;
             <p className="text-white/70">;
               Showing {filteredServices.length} of {allServices.length} services;
             </p>;
           </motion.div>;
-;
+
           {/* Services Display */}
           <motion.div;
             variants={containerVariants}
             initial="hidden";
             animate="visible";
-            className={viewMode === 'grid' ;
+            className={viewMode = = 'grid' ;
               ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8";
               :"space-y-6";
             }
           >;
             <AnimatePresence mode="wait">;
-              {filteredServices.map((service, index) => (;
+              {filteredServices.map(service, index) => (;
                 <motion.div;
                   key={service.id}
                   variants={itemVariants}
-                  className={viewMode === 'grid' ;
+                  className={viewMode = = 'grid' ;
                     ? "group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl";
                     :"group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 hover:shadow-2xl";                  }
                 >;
@@ -292,10 +288,10 @@ export default function AdvancedServicesShowcase2025() {;
                           Popular;
                         </span>;                      )}
                     </div>;
-;
+
                     {/* Description */}
                     <p className="text-white/80 mb-4 leading-relaxed">{service.description}</p>;
-;
+
                     {/* Price and Details */}
                     <div className="flex items-center justify-between mb-4">;
                       <div className="flex items-center gap-4">;
@@ -315,24 +311,24 @@ export default function AdvancedServicesShowcase2025() {;
                         <span className="text-white/60">({service.reviews})</span>;
                       </div>;
                     </div>;
-;
+
                     {/* Features */}
                     <div className="mb-6">;
                       <h4 className="text-white font-semibold mb-3">Key Features:</h4>;
                       <div className="grid grid-cols-1 gap-2">;
-                        {service.features.slice(0, 3).map((feature, idx) => (;
+                        {service.features.slice(0, 3).map(feature, idx) => (;
                           <div key={idx} className="flex items-center gap-2">;
                             <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />;
                             <span className="text-white/80 text-sm">{feature}</span>;
                           </div>;
-                        ))}
+                        )}
                         {service.features.length > 3 && (;
                           <div className="text-white/60 text-sm">;
                             +{service.features.length - 3} more features;
                           </div>;                        )}
                       </div>;
                     </div>;
-;
+
                     {/* Category and Technology */}
                     <div className="flex items-center justify-between mb-6">;
                       <div className="flex items-center gap-2">;
@@ -345,21 +341,21 @@ export default function AdvancedServicesShowcase2025() {;
                         {service.technology.length > 2 && '...'}
                       </div>;
                     </div>;
-;
+
                     {/* ROI and Benefits */}
                     <div className="mb-6">;
                       <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-xl p-4 border border-cyan-500/20">;
                         <h4 className="text-cyan-400 font-semibold mb-2">ROI & Benefits</h4>;
                         <p className="text-white/80 text-sm mb-3">{service.roi}</p>;
                         <div className="flex flex-wrap gap-2">;
-                          {service.benefits.slice(0, 2).map((benefit, idx) => (;
+                          {service.benefits.slice(0, 2).map(benefit, idx) => (;
                             <span key={idx} className="text-xs bg-cyan-500/20 text-cyan-300 px-2 py-1 rounded-full">;                              {benefit}
                             </span>;
-                          ))}
+                          )}
                         </div>;
                       </div>;
                     </div>;
-;
+
                     {/* Action Buttons */}
                     <div className="flex gap-3">;
                       <a;
@@ -380,15 +376,15 @@ export default function AdvancedServicesShowcase2025() {;
                       </a>;
                     </div>;
                   </div>;
-                </motion.div>;              ))}
+                </motion.div>;              )}
             </AnimatePresence>;
           </motion.div>;
-;
+
           {/* No Results */}
-          {filteredServices.length === 0 && (;
+          {filteredServices.length = = 0 && (;
             <motion.div;
-              initial={{ opacity:0 }}
-              animate={{ opacity:1 }}
+              initial={ opacity:0 }
+              animate={ opacity:1 }
               className="text-center py-20";
             >;
               <div className="text-6xl mb-4"></div>;
@@ -399,7 +395,7 @@ export default function AdvancedServicesShowcase2025() {;
                   setSearchTerm(''),;
                   setSelectedCategory('all'),;
                   setPriceRange([0, 10000]),;
-                }}
+                }
                 className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300";
               >;
                 Clear Filters;
@@ -407,15 +403,15 @@ export default function AdvancedServicesShowcase2025() {;
             </motion.div>;          )}
         </div>;
       </section>;
-;
+
       {/* CTA Section */}
       <section className="px-6 py-20">;
         <div className="max-w-4xl mx-auto text-center">;
           <motion.div;
-            initial={{ opacity:0, y:30 }}
-            whileInView={{ opacity:1, y:0 }}
-            transition={{ duration:0.8 }}
-            viewport={{ once:true }}
+            initial={ opacity:0, y:30 }
+            whileInView={ opacity:1, y:0 }
+            transition={ duration:0.8 }
+            viewport={ once:true }
           >;
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-cyan-100 bg-clip-text text-transparent">;
               Ready to Transform Your Business?;
@@ -441,7 +437,7 @@ export default function AdvancedServicesShowcase2025() {;
           </motion.div>;
         </div>;
       </section>;
-;
+
       <EnhancedFooter />;
     </div>;
   );}

@@ -7,8 +7,8 @@ import { ;
   RocketLaunchIcon,;
   AcademicCapIcon,;
   GlobeAltIcon;
-} from '@heroicons/react/24/outline';
-;
+ from '@heroicons/react/24/outline';
+
 const professionalServices = [;
   {;
     name:'AI Strategy & Consulting',;
@@ -64,7 +64,7 @@ const professionalServices = [;
       'Security AuditsRisk Mitigation';
     ],;
     duration:'2-6 weeks'}];
-;
+
 const serviceProcess = [;
   {;
     step:'01',;
@@ -91,7 +91,7 @@ const serviceProcess = [;
     title:'Ongoing Support',;
     description:'Continuous monitoring, optimization, and support to ensure lasting success.',;
     icon:ShieldCheckIcon}];
-;
+
 const reasonsToChoose = [;
   {;
     name:'Expert Team',;
@@ -109,7 +109,7 @@ const reasonsToChoose = [;
     name:'Global Support',;
     description:'24/7 support and maintenance services across multiple time zones.',;
     icon:GlobeAltIcon}];
-;
+
 export default function ServicesPage() {;
   return (;
     <div className="bg-black">;
@@ -130,7 +130,7 @@ export default function ServicesPage() {;
           </div>;
         </div>;
       </div>;
-;
+
       {/* Professional Services */}
       <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8">;
         <div className="mx-auto max-w-2xl lg:text-center">;
@@ -145,7 +145,7 @@ export default function ServicesPage() {;
         </div>;
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">;
           <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-2">;
-            {professionalServices.map((service) => (;
+            {professionalServices.map(service) => (;
               <div key={service.name} className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover:scale-105">;
                 <div className="flex items-center gap-x-3 mb-4">;
                   <service.icon className="h-8 w-8 text-blue-400" />;
@@ -153,12 +153,12 @@ export default function ServicesPage() {;
                 </div>;
                 <p className="text-gray-300 mb-6">{service.description}</p>;
                 <div className="space-y-3 mb-6">;
-                  {service.features.map((feature) => (;
+                  {service.features.map(feature) => (;
                     <div key={feature} className="flex items-center gap-2">;
                       <div className="h-2 w-2 bg-blue-400 rounded-full"></div>;
                       <span className="text-sm text-gray-300">{feature}</span>;
                     </div>;
-                  ))}
+                  )}
                 </div>;
                 <div className="flex items-center justify-between">;
                   <span className="text-sm text-blue-400 font-medium">Duration:{service.duration}</span>;
@@ -170,11 +170,11 @@ export default function ServicesPage() {;
                   </a>;
                 </div>;
               </div>;
-            ))}
+            )}
           </div>;
         </div>;
       </div>;
-;
+
       {/* Service Process */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">;
         <div className="mx-auto max-w-2xl lg:text-center">;
@@ -189,7 +189,7 @@ export default function ServicesPage() {;
         </div>;
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">;
           <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-5">;
-            {serviceProcess.map((step, index) => (;
+            {serviceProcess.map(step, index) => (;
               <div key={step.step} className="relative">;
                 {index < serviceProcess.length - 1 && (;
                   <div className="hidden lg:block absolute top-8 left-8 w-full h-0.5 bg-gray-700"></div>;
@@ -203,11 +203,11 @@ export default function ServicesPage() {;
                   <p className="text-sm text-gray-300">{step.description}</p>;
                 </div>;
               </div>;
-            ))}
+            )}
           </div>;
         </div>;
       </div>;
-;
+
       {/* Why Choose Us */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">;
         <div className="mx-auto max-w-2xl lg:text-center">;
@@ -221,7 +221,7 @@ export default function ServicesPage() {;
         </div>;
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">;
           <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">;
-            {reasonsToChoose.map((reason) => (;
+            {reasonsToChoose.map(reason) => (;
               <div key={reason.name} className="flex flex-col group">;
                 <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">;
                   <reason.icon className="h-5 w-5 flex-none text-blue-400" aria-hidden="true" />;
@@ -231,11 +231,11 @@ export default function ServicesPage() {;
                   <p className="flex-auto">{reason.description}</p>;
                 </dd>;
               </div>;
-            ))}
+            )}
           </dl>;
         </div>;
       </div>;
-;
+
       {/* CTA section */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">;
         <div className="mx-auto max-w-2xl text-center">;

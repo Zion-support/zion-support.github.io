@@ -6,5 +6,3 @@ export function calendar() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

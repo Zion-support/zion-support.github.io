@@ -1,7 +1,7 @@
 import { format } from 'date-fns',;
 import { apiClient } from './apiClient',;
-;
-/**;
+
+**;
  * Formats a date for display in the referral system;
  * @param date Date or string to format;
  * @returns Formatted date string;
@@ -9,7 +9,7 @@ import { apiClient } from './apiClient',;
 export function formatDate(date:Date | string | undefined):string {;
   if (!date) return '-',;
   try {;
-    const d = typeof date === 'string' ? new Date(date) :date,;
+    const d = typeof date = = 'string' ? new Date(date) :date,;
     return new Intl.DateTimeFormat('en-US', {;
       month:'short',;
       day:'numeric',;
@@ -18,38 +18,33 @@ export function formatDate(date:Date | string | undefined):string {;
     logErrorToProduction('Error formatting date:', { data: e }),;
     return '-',;
   }
-}
-;
-/**;
+
+**;
  * Stores referral code in localStorage when detected in URL;
  */;
 export function checkUrlForReferralCode():string | null {;
-  if (typeof window === 'undefined') return null,;
-  ;
+  if (typeof window = = 'undefined') return null,;
   const url = new URL(window.location.href),;
   const refCode = url.searchParams.get('ref'),;
-  ;
   if (refCode) {;
     safeStorage.setItem('referral_code', refCode),;
     // Remove it from URL to keep it clean;
     url.searchParams.delete('ref'),;
-    window.history.replaceState({}, document.title, url.toString()),;
+    window.history.replaceState({}, document.title, url.toString(),;
     return refCode,;
   }
   ;
   return safeStorage.getItem('referral_code'),;
-}
-;
-/**;
+
+**;
  * Track referral when a user signs up;
  */;
 import api from '@/lib/api',;
-;
+
 export async function trackReferral(userId:string, email:string) {;
   try {;
     const refCode = safeStorage.getItem('referral_code'),;
     if (!refCode) return false,;
-    ;
     // Call API to record the referral;
     const response = await apiClient('/api/track-referral', {;
       method:'POST',;
@@ -61,22 +56,20 @@ export async function trackReferral(userId:string, email:string) {;
         email,;
         ipAddress:'', // This will be captured by the server;
       })}),;
-;
+
     if (response.status >= 200 && response.status < 300) {;
       // Clear the stored referral code;
       safeStorage.removeItem('referral_code'),;
       return true,;
-    }
-  } catch (error) {;
+    } catch (error) {;
     logErrorToProduction('Error tracking referral:', { data:error }),;
   }
   return false,; /** * Formats a date for display in the referral system * @param date Date or string to format * @returns Formatted date string */ 
-}
-}/** * Stores referral code in localStorage when detected in window.URL */ 
-}return safeStorage.getItem ('referral code') 
-}/** * Track referral when a user signs up */ // Call API to record the referral const response = await apiClient ('/api/track-referral', {
+
+/** * Stores referral code in localStorage when detected in window.URL */ 
+return safeStorage.getItem ('referral code') 
+/** * Track referral when a user signs up */ // Call API to record the referral const response = await apiClient ('/api/track-referral', {
   method: 'POST', headers: {
   'Content-Type': 'application/json' 
-};
-}return false 
-}
+;
+return false 

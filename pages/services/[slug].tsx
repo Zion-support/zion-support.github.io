@@ -19,7 +19,7 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
-}
+
 function getAllServices(): Service[] {
   return enhancedRealMicroSaasServices.concat(
     extraServices as Service[]
@@ -36,7 +36,7 @@ function extractServiceSlugFromLink(link: string): string | null {
   try {
     const url = new URL(link);
     const path = url && url.pathname.replace(/^\/+|\/+$/g, '');
-    if (path && path.startsWith('services/')) {;
+    if (path && path.startsWith('services/') {;
       return path && path.substring('services/'.length);
 import Head from 'next / head';
 import UltraFuturisticBackground from '../../components / ui / UltraFuturisticBackground';
@@ -48,36 +48,35 @@ import {extra_services} from '../../data / extra - services';
 import {additionalEnhancedServices} from '../../data / additional - real - services';
 import {newRealServices} from '../../data / new - real - services';
 import {marketReadyServices} from '../../data / market - ready - services';
-;
+
 type Service = (typeof enhancedRealMicroSaasServices)[number];
-;
+
 const contact_info = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',
-}
-;
+
 function getAllServices (): Service[] {
   return enhancedRealMicroSaasServices.concat (
     extra_services as Service[],
     additionalEnhancedServices as Service[],
     newRealServices as Service[],
     marketReadyServices as Service[]);
-;
+
 function to_slug (value: string): string {
   return value;
     .toLowerCase ();
     .replace (/[^a - z0 - 9]+/g, '-');
     .replace (/(^-|-$)/g, '');
-;
+
 function extractServiceSlugFromLink (link: string): string | null {
   try {
     const url = new URL (link);
     const path = url.pathname.replace (/^\/+|\/+$/g, '');
     if () {) {
   $2
-}
+
       return path.substring ('services/'.length);
     }
     return null;
@@ -88,35 +87,33 @@ export async function getStaticPaths() {
   const services = getAllServices();
   const slugs = new Set<string>();
     // Fall back to normalized id or name to provide a stable URL under /services/*
-    if (s.id) slugs.add(toSlug(s.id));
-    else if (s.name) slugs.add(toSlug(s.name));
+    if (s.id) slugs.add(toSlug(s.id);
+    else if (s.name) slugs.add(toSlug(s.name);
   }
   return {
-    paths: Array.from(slugs).map(slug => ({ params: { slug } }))
+    paths: Array.from(slugs).map(slug => ({ params: { slug })
     fallback: false
   }
-export async function getStaticProps({ params }: { params: { slug: string } }) {
+export async function getStaticProps({ params }: { params: { slug: string }) {
   const services = getAllServices();
   const incomingSlug = (params?.slug |'').replace(/^\/+|\/+$/g, '');
   let service: Service | undefined = services.find(s => {
     if (!s.link) return false;
     const fromLink = extractServiceSlugFromLink(s.link);
-    return fromLink === incomingSlug;
+    return fromLink = = incomingSlug;
   });
   if (!service) {
     service = services.find(
       s =>
-        toSlug(s.id |'') === incomingSlug |
-        toSlug(s.name |'') === incomingSlug
+        toSlug(s.id |'') = = incomingSlug |
+        toSlug(s.name |'') = = incomingSlug
     );
   }
 
   if (!service) {
     return { notFound: true }
-  }
   return {
     props: { service }
-  }
 export default function ServiceDetailPage({ service }: { service: Service }) {
   return (
     <UltraFuturisticBackground variant='quantum' intensity='high'>;
@@ -152,12 +149,12 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
                 Key Features
               </h3>
               <ul className='space-y-2 text-gray-300'>
-                {(service.features |[]).slice(0, 12).map((f: string) => (
+                {(service.features |[]).slice(0, 12).map(f: string) => (
                   <li key={f} className='flex items-start gap-2'>
                     <Check className='w-4 h-4 mt-0.5 text-emerald-400' />
                     <span>{f}</span>
                   </li>
-                ))}
+                )}
               </ul>
             </Card>
           </div>
@@ -248,7 +245,7 @@ const contactInfo = {
 	email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',
 	website: 'https://ziontechgroup.com'
-};
+;
 
 function getAllServices(): Service[] {
 	return enhancedRealMicroSaasServices
@@ -258,24 +255,21 @@ function getAllServices(): Service[] {
 			newRealServices as Service[];
 			marketReadyServices as Service[]
 		)
-}
 
 function toSlug(value: string): string {
 	return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
-}
 
 function extractServiceSlugFromLink(link: string): string | null {
 	try {
 		const url = new URL(link);
 		const path = url.pathname.replace(/^\/+|\/+$/g, '');
-		if (path.startsWith('services/')) {
+		if (path.startsWith('services/') {
 			return path.substring('services/'.length)
 		}
 		return null
 	} catch {
 		return null
 	}
-}
 
 export async function getStaticPaths() {
 	const services = getAllServices();
@@ -289,38 +283,34 @@ export async function getStaticPaths() {
 			continue
 		}
 		// Fall back to normalized id or name to provide a stable URL under /services/*
-		if (s.id) slugs.add(toSlug(s.id));
-		else if (s.name) slugs.add(toSlug(s.name))
+		if (s.id) slugs.add(toSlug(s.id);
+		else if (s.name) slugs.add(toSlug(s.name)
 	}
 
 	return {
-		paths: Array.from(slugs).map((slug) => ({ params: { slug } })),
+		paths: Array.from(slugs).map(slug) => ({ params: { slug }),
 		fallback: false
 	}
-}
 
-export async function getStaticProps({ params }: { params: { slug: string } }) {
+export async function getStaticProps({ params }: { params: { slug: string }) {
 	const services = getAllServices();
 	const incomingSlug = (params?.slug || '').replace(/^\/+|\/+$/g, '');
 
-	let service: Service | undefined = services.find((s) => {
+	let service: Service | undefined = services.find(s) => {
 		if (!s.link) return false;
 		const fromLink = extractServiceSlugFromLink(s.link);
-		return fromLink === incomingSlug
+		return fromLink = = incomingSlug
 	});
 
 	if (!service) {
-		service = services.find((s) => toSlug(s.id || '') === incomingSlug || toSlug(s.name || '') === incomingSlug)
+		service = services.find(s) => toSlug(s.id || '') = = incomingSlug || toSlug(s.name || '') = = incomingSlug)
 	}
 
 	if (!service) {
 		return { notFound: true }
-	}
 
 	return {
 		props: { service }
-	}
-}
 
 export default function ServiceDetailPage({ service }: { service: Service }) {
 	return (
@@ -349,12 +339,12 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 						<Card className="p-6 bg-black/40 border border-gray-700/50">
 							<h3 className="text-white text-lg font-semibold mb-4">Key Features</h3>
 							<ul className="space-y-2 text-gray-300">
-								{(service.features || []).slice(0, 12).map((f: string) => (
+								{(service.features || []).slice(0, 12).map(f: string) => (
 									<li key={f} className="flex items-start gap-2">
 										<Check className="w-4 h-4 mt-0.5 text-emerald-400" />
 										<span>{f}</span>
 									</li>
-								))}
+								)}
 							</ul>
 						</Card>
 					</div>
@@ -383,6 +373,5 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 			</div>
 		</UltraFuturisticBackground>
 	)
-}
+
     </UltraFuturisticBackground>);
-;

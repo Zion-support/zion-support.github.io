@@ -1,4 +1,4 @@
-// SEO Meta Tags Configuration;
+/ SEO Meta Tags Configuration;
 export const defaultSEO = {
   title: 'Zion Tech Group - AI-Powered Business Solutions'
   description: 'Transform your business with our comprehensive suite of AI-powered solutions, cloud platforms, cybersecurity, and micro SaaS services.'
@@ -44,6 +44,5 @@ export const defaultSEO = {
       content: '#1e40af'
     }
   ]
-}
-export default defaultSEO
 
+export default defaultSEO

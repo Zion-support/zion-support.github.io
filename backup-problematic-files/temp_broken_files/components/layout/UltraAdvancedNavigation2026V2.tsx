@@ -8,7 +8,7 @@ export default function UltraAdvancedNavigation2026V2() {
   const [isScrolled, setIsScrolled] = useState(false),
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
 
-  useEffect(() => {
+  useEffect() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20)
     },
@@ -66,13 +66,13 @@ export default function UltraAdvancedNavigation2026V2() {
       icon: <Mail className=&quot;w-4 h-4&quot; />
     }
   ],;
-;
+
   const contactInfo = {;
     mobile:'+1 302 464 0950',;
     email:'kleber@ziontechgroup.com',;
     address:'364 E Main St STE 1008 Middletown DE 19709';
   },;
-;
+
   return (;
     <>;
       {/* Top Contact Bar */}
@@ -124,7 +124,7 @@ export default function UltraAdvancedNavigation2026V2() {
 
             {/* Desktop Navigation */}
             <div className=&quot;hidden lg:flex items-center space-x-8&quot;>
-              {navigationItems.map((item) => (
+              {navigationItems.map(item) => (
                 <div key={item.name} className=&quot;relative group&quot;>
                   {item.dropdown ? (
                     <button
@@ -146,13 +146,13 @@ export default function UltraAdvancedNavigation2026V2() {
                     </a>                  )}
 
                   {_/* Dropdown Menu */}
-                  {_item.dropdown && activeDropdown === item.name && (_<div
+                  {_item.dropdown && activeDropdown = = item.name && (_<div
                       onMouseEnter={() => setActiveDropdown(item.name)}
                       onMouseLeave={() => setActiveDropdown(null)}
                       className=&quot;absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl p-4&quot;
                     >
                       <div className=&quot;grid grid-cols-1 gap-2&quot;>
-                        {item.dropdown.map((dropdownItem) => (
+                        {item.dropdown.map(dropdownItem) => (
                           <Link
                             key={dropdownItem.name}
                             href={dropdownItem.href}
@@ -164,14 +164,14 @@ export default function UltraAdvancedNavigation2026V2() {
                             <span className=&quot;text-gray-300 group-hover:text-white transition-colors&quot;>
                               {dropdownItem.name}                            </span>
                           </a>
-                        ))}
+                        )}
                       </div>;
                     </div>;
                   )}
                 </div>;
-              ))}
+              )}
             </div>;
-;
+
             {/* CTA Button */}
             <div className=&quot;hidden lg:flex items-center space-x-4&quot;>
               <Link href=&quot;/contact&quot;>
@@ -194,10 +194,10 @@ export default function UltraAdvancedNavigation2026V2() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, x: '100%' }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: '100%' }}
-            transition={{ duration: 0.3 }}
+            initial={ opacity: 0, x: '100%' }
+            animate={ opacity: 1, x: 0 }
+            exit={ opacity: 0, x: '100%' }
+            transition={ duration: 0.3 }
             className=&quot;fixed top-0 right-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-white/10 z-50 lg:hidden&quot;          >
             <div className=&quot;p-6&quot;>
               <div className=&quot;flex items-center justify-between mb-8&quot;>
@@ -210,22 +210,22 @@ export default function UltraAdvancedNavigation2026V2() {
               </div>
 
               <div className=&quot;space-y-6&quot;>
-                {navigationItems.map((item) => (
+                {navigationItems.map(item) => (
                   <div key={item.name}>
                     {item.dropdown ? (                      <div>
                             <button
-                              onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)}
+                              onClick={() => setActiveDropdown(activeDropdown = = item.name ? null : item.name)}
                               className=&quot;flex items-center justify-between w-full text-left text-gray-300 hover:text-white transition-colors duration-200 py-3&quot;
                             >
                               <div className=&quot;flex items-center space-x-3&quot;>
                                 {item.icon}
                                 <span>{item.name}</span>                              </div>
                               <ChevronDown className={_`w-4 h-4 transition-transform duration-200 ${
-                                activeDropdown === item.name ? 'rotate-180' : ''}`} />
+                                activeDropdown = = item.name ? 'rotate-180' : ''}`} />
                             </button>
-                            {activeDropdown === item.name && (
+                            {activeDropdown = = item.name && (
                               <div className=&quot;ml-6 mt-2 space-y-2&quot;>
-                                {item.dropdown.map((dropdownItem) => (
+                                {item.dropdown.map(dropdownItem) => (
                                   <Link
                                     key={dropdownItem.name}
                                     href={dropdownItem.href}
@@ -234,7 +234,7 @@ export default function UltraAdvancedNavigation2026V2() {
                                   >
                                     {dropdownItem.icon}
                                     <span>{dropdownItem.name}</span>
-                                  </a>                                ))}
+                                  </a>                                )}
                               </div>
                             )}
                           </div>;
@@ -248,7 +248,7 @@ export default function UltraAdvancedNavigation2026V2() {
                         <span>{item.name}</span>
                       </a>                    )}
                   </div>
-                ))}
+                )}
 
                 <div className=&quot;pt-6 border-t border-white/10&quot;>
                   <Link href=&quot;/contact&quot; onClick={() => setIsOpen(false)}>
@@ -276,19 +276,19 @@ export default function UltraAdvancedNavigation2026V2() {
           </motion.div>
         )}
       </AnimatePresence>;
-;
+
       {/* Overlay */}
       {isOpen && (
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.3 }}
+          initial={ opacity: 0 }
+          animate={ opacity: 1 }
+          exit={ opacity: 0 }
+          transition={ duration: 0.3 }
           className=&quot;fixed inset-0 bg-black/50 z-40 lg:hidden&quot;
           onClick={() => setIsOpen(false)}
         />;
       )}
-;
+
       {/* Spacer for fixed navigation */}
       <div className=&quot;h-32&quot;></div>    </>
   )}

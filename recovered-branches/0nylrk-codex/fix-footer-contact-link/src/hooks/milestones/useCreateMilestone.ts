@@ -1,5 +1,4 @@
 
-
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {use_auth} from '@/hooks / use_auth';
@@ -35,15 +34,15 @@ export const useCreateMilestone = (project_id?: string) =>: any {
   const { user } = use_auth ();
   const [is_submitting, setIsSubmitting] = useState (false);
   const { recordMilestoneActivity } = useRecordActivity ();
-;
+
   const create_milestone = async (milestone_data: Omit < Milestone, 'id' | 'created_at' | 'updated_at' | 'created_by'>) => {
     // Check condition
 if (return null) {
   $2
-}
+
     try {
       setIsSubmitting (true);
-;
+
       const { data, error } = await supabase;
         .from ('project_milestones');
         .insert ({
@@ -52,16 +51,16 @@ if (return null) {
           created_by: user.id});
         .select ();
         .single ();
-;
+
       // Check condition
 if (throw error) {
   $2
-}
+
       // Create activity record;
       await recordMilestoneActivity (data.id, 'created', null, 'pending_milestone created');
-;
+
       toast.success ("Milestone created successfully");
-;
+
       return data;
     } catch (err: any) {
       console.error ("Error creating milestone:", err);
@@ -70,10 +69,7 @@ if (throw error) {
     } finally {
       setIsSubmitting (false);
     }
-  }
   return {
     createMilestone;
     isSubmitting
   }
-}
-

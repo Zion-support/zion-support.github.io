@@ -268,7 +268,7 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com',};  website: 'https://ziontechgroup.com'
-}
+
 const serviceCategories = [
   {
     title: ' AI & Consciousness 2030'
@@ -301,7 +301,7 @@ const serviceCategories = [
         price: '$12,999/month'
       }
     ]
-  },  {      { name: 'AI Consciousness Evolution Platform', href: '/ai-consciousness-evolution-platform', description: 'Develop genuine AI consciousness', price: '$19,999/month' }
+  },  { name: 'AI Consciousness Evolution Platform', href: '/ai-consciousness-evolution-platform', description: 'Develop genuine AI consciousness', price: '$19,999/month' }
       { name: 'AI Emotional Intelligence Platform', href: '/ai-emotional-intelligence-platform', description: 'Real-time emotion analysis and response', price: '$3,999/month' }
       { name: 'AI Creativity Orchestrator', href: '/ai-creativity-orchestrator', description: 'Multi-model creativity fusion', price: '$5,999/month' }
       { name: 'AI Autonomous Business Manager', href: '/ai-autonomous-business-manager', description: 'Fully autonomous business operations', price: '$12,999/month' }
@@ -337,7 +337,7 @@ const serviceCategories = [
         price: '$699/month'
       }
     ]
-  },  {      { name: 'Quantum Internet Security Gateway', href: '/quantum-internet-security-gateway', description: 'Unbreakable quantum encryption', price: '$15,999/month' }
+  },  { name: 'Quantum Internet Security Gateway', href: '/quantum-internet-security-gateway', description: 'Unbreakable quantum encryption', price: '$15,999/month' }
       { name: 'Biotech DNA Computing Platform', href: '/biotech-dna-computing-platform', description: 'DNA-based computation', price: '$25,999/month' }
       { name: 'Neuromorphic Computing Platform', href: '/neuromorphic-computing-platform', description: 'Brain-inspired computing', price: '$899/month' }
       { name: 'Photonic Computing Infrastructure', href: '/photonic-computing-infrastructure', description: 'Light-speed computing', price: '$699/month' }
@@ -373,7 +373,7 @@ const serviceCategories = [
         price: '$7,999/month'
       }
     ]
-  },  {      { name: 'Space Mining Automation Platform', href: '/space-mining-automation-platform', description: 'Automated asteroid mining', price: '$45,999/month' }
+  },  { name: 'Space Mining Automation Platform', href: '/space-mining-automation-platform', description: 'Automated asteroid mining', price: '$45,999/month' }
       { name: 'Metaverse Development Platform', href: '/metaverse-development-platform', description: 'Build immersive virtual worlds', price: '$499/month' }
       { name: 'Virtual Event Hologram Platform', href: '/virtual-event-hologram-platform', description: 'Immersive holographic events', price: '$799/month' }
       { name: 'AI Predictive Health Analytics', href: '/ai-predictive-health-analytics', description: 'Predictive health outcomes', price: '$7,999/month' }
@@ -409,7 +409,7 @@ const serviceCategories = [
         price: '$699/month'
       }
     ]
-  },  {      { name: 'Autonomous DevOps Platform', href: '/autonomous-devops-platform', description: 'Fully autonomous DevOps', price: '$799/month' }
+  },  { name: 'Autonomous DevOps Platform', href: '/autonomous-devops-platform', description: 'Fully autonomous DevOps', price: '$799/month' }
       { name: 'Zero Trust Network Architecture', href: '/zero-trust-network-architecture', description: 'Never trust, always verify', price: '$599/month' }
       { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration', description: 'Distributed edge computing', price: '$449/month' }
       { name: 'AI-Powered IT Operations Center', href: '/ai-it-operations-center', description: 'Intelligent IT operations', price: '$699/month' }
@@ -445,7 +445,7 @@ const serviceCategories = [
         price: '$149/month'
       }
     ]
-  },  {      { name: 'AI Business Intelligence Suite', href: '/ai-business-intelligence-suite', description: 'Intelligent business insights', price: '$299/month' }
+  },  { name: 'AI Business Intelligence Suite', href: '/ai-business-intelligence-suite', description: 'Intelligent business insights', price: '$299/month' }
       { name: 'AI Customer Success Automation', href: '/ai-customer-success-automation', description: 'Automate customer success', price: '$199/month' }
       { name: 'Blockchain Supply Chain Transparency', href: '/blockchain-supply-chain-transparency', description: 'End-to-end traceability', price: '$399/month' }
       { name: 'AI Meeting Transcriber Pro', href: '/ai-meeting-transcriber-pro', description: 'Professional transcription', price: '$149/month' }
@@ -519,7 +519,7 @@ const serviceCategories = [
         price: '$699/month',;
       },;
     ],;
-  },  {      { name: 'Quantum Internet Security Gateway', href: '/quantum-internet-security-gateway', description: 'Unbreakable quantum encryption', price: '$15,999/month' };
+  },  { name: 'Quantum Internet Security Gateway', href: '/quantum-internet-security-gateway', description: 'Unbreakable quantum encryption', price: '$15,999/month' };
     title: ' Quantum & Emerging Tech 2030',
     icon: AtomIcon,
     color: 'from - indigo - 600 via - blue - 600 to - cyan - 600',
@@ -561,7 +561,7 @@ const serviceCategories = [
         price: '$7,999/month',;
       },;
     ],;
-  },  {      { name: 'Space Mining Automation Platform', href: '/space-mining-automation-platform', description: 'Automated asteroid mining', price: '$45,999/month' };
+  },  { name: 'Space Mining Automation Platform', href: '/space-mining-automation-platform', description: 'Automated asteroid mining', price: '$45,999/month' };
       { name: 'Metaverse Development Platform', href: '/metaverse-development-platform', description: 'Build immersive virtual worlds', price: '$499/month' },;
       { name: 'Virtual Event Hologram Platform', href: '/virtual-event-hologram-platform', description: 'Immersive holographic events', price: '$799/month' },;
       { name: 'AI Predictive Health Analytics', href: '/ai-predictive-health-analytics', description: 'Predictive health outcomes', price: '$7,999/month' }
@@ -608,7 +608,7 @@ const serviceCategories = [
         price: '$699/month',;
       },;
     ],;
-  },  {      { name: 'Autonomous DevOps Platform', href: '/autonomous-devops-platform', description: 'Fully autonomous DevOps', price: '$799/month' },;
+  },  { name: 'Autonomous DevOps Platform', href: '/autonomous-devops-platform', description: 'Fully autonomous DevOps', price: '$799/month' },;
       { name: 'Zero Trust Network Architecture', href: '/zero-trust-network-architecture', description: 'Never trust, always verify', price: '$599/month' },;
       { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration', description: 'Distributed edge computing', price: '$449/month' },;
       { name: 'AI-Powered IT Operations Center', href: '/ai-it-operations-center', description: 'Intelligent IT operations', price: '$699/month' }
@@ -655,7 +655,7 @@ const serviceCategories = [
         price: '$149/month',;
       },;
     ],;
-  },  {      { name: 'AI Business Intelligence Suite', href: '/ai-business-intelligence-suite', description: 'Intelligent business insights', price: '$299/month' },;
+  },  { name: 'AI Business Intelligence Suite', href: '/ai-business-intelligence-suite', description: 'Intelligent business insights', price: '$299/month' },;
       { name: 'AI Customer Success Automation', href: '/ai-customer-success-automation', description: 'Automate customer success', price: '$199/month' },;
       { name: 'Blockchain Supply Chain Transparency', href: '/blockchain-supply-chain-transparency', description: 'End-to-end traceability', price: '$399/month' },;
       { name: 'AI Meeting Transcriber Pro', href: '/ai-meeting-transcriber-pro', description: 'Professional transcription', price: '$149/month' }
@@ -731,7 +731,7 @@ const mainNavigation = [
   { name: 'Case Studies', href: '/case - studies', icon: TrendingUp },
   { name: 'Blog', href: '/blog', icon: MessageCircle },
   { name: 'Contact', href: '/contact', icon: MessageCircle }
-];
+;
 const companyLinks = [
   { name: 'About Us', href: '/about' }
   { name: 'Careers', href: '/careers' }
@@ -745,12 +745,12 @@ const companyLinks = [
   { name: 'Partners', href: '/partners' },
   { name: 'Support', href: '/support' },
   { name: 'Status', href: '/status' }
-];
+;
 export default function UltraFuturisticNavigation2032() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<number | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
-  useEffect(() => {
+  useEffect() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     }
@@ -769,7 +769,7 @@ const mainNavigation = [;
   { name: 'Case Studies', href: '/case-studies', icon: TrendingUp },;
   { name: 'Blog', href: '/blog', icon: MessageCircle },;
   { name: 'Contact', href: '/contact', icon: MessageCircle },];  { name: 'Contact', href: '/contact', icon: MessageCircle }
-];
+;
 
 const companyLinks = [;
   { name: 'About Us', href: '/about' },;
@@ -778,14 +778,14 @@ const companyLinks = [;
   { name: 'Partners', href: '/partners' },;
   { name: 'Support', href: '/support' },;
   { name: 'Status', href: '/status' },];  { name: 'Status', href: '/status' }
-];
+;
 
 export default function UltraFuturisticNavigation2032() {;
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<number | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  useEffect(() => {;
+  useEffect() => {;
     const handleScroll = () => {;
       setIsScrolled(window && window.scrollY > 20);
     };
@@ -885,8 +885,8 @@ export default function UltraFuturisticNavigation2032() {;
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">;
                   <path d="M20 && M20.447 20 && 20.452h-3 && 3.554v-5 && 5.569c0-1 && 1.328-.027-3 && 3.047-1 && 1.852-3 && 3.047-1 && 1.853 0-2 && 2.136 1 && 1.445-2 && 2.136 2 && 2.939v5.677H9 && 677H9.351V9h3.414v1 && 414v1.561h.046c && 046c.477-.9 1 && 1.637-1 && 1.85 3 && 3.37-1 && 1.85 3 && 3.601 0 4 && 4.267 2 && 2.37 4 && 4.267 5 && 5.455v6.286zM5 && 286zM5.337 7 && 7.433c-1 && 1.144 0-2 && 2.063-.926-2 && 2.063-2 && 2.065 0-1 && 1.138.92-2 && 2.063 2 && 2.063-2 && 2.063 1 && 1.14 0 2 && 2.064.925 2 && 2.064 2 && 2.063 0 1 && 1.139-.925 2 && 2.065-2 && 2.064 2 && 2.065zm1.782 13 && 13.019H3.555V9h3 && 555V9h3.564v11.452zM22 && 452zM22.225 0H1 && 0H1.771C.792 0 0 .774 0 1 && 1.729v20.542C0 23 && 23.227.792 24 1 && 1.771 24h20 && 24h20.451C23.2 24 24 23 && 23.227 24 22 && 22.271V1.729C24 .774 23 && 23.2 0 22 && 22.222 0h && 0h.003z"/>;
   { name: 'Status', href: '/status' }, ];  { name: 'Status', href: '/status' }
-];
 ;
+
 export default /**
  * UltraFuturisticNavigation2032 - Function description
  */
@@ -894,8 +894,8 @@ function UltraFuturisticNavigation2032() {
   const [is_open, setIsOpen] = useState (false);
   const [active_category, setActiveCategory] = useState < number | null>(null);
   const [is_scrolled, setIsScrolled] = useState (false);
-;
-  useEffect (() => {
+
+  useEffect () => {
     const handle_scroll = () =>: any {
       setIsScrolled (window.scroll_y > 20);
     }
@@ -906,7 +906,7 @@ function UltraFuturisticNavigation2032() {
     return () => window.removeEventListener ('scroll', handle_scroll);
   const toggle_menu = () =>: any setIsOpen (!is_open);
   const close_menu = () =>: any setIsOpen (false);
-;
+
   return (
     <>;
       {/* Top Contact Bar */}
@@ -1063,7 +1063,7 @@ function UltraFuturisticNavigation2032() {
                   <item && item.icon className='w-4 h-4 group-hover:scale-110 transition-transform' />;
                   <span>{item && item.name}</span>;
                 </Link>;
-              ))}
+              )}
               {/* Services Dropdown */}
               <div className='relative group'>
                 <button className='text-gray-300 hover:text-cyan-400 transition-colors duration-200 flex items-center space-x-2 group'>
@@ -1075,7 +1075,7 @@ function UltraFuturisticNavigation2032() {
                 <div className='absolute top-full left-0 w-screen max-w-7xl transform -translate-x-1/2 left-1/2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 pt-4'>;
                   <div className='bg-black/95 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-8 shadow-2xl shadow-cyan-500/20'>;
                     <div className='grid grid-cols-2 gap-8'>;
-                      {serviceCategories && serviceCategories.map((category, index) => (;
+                      {serviceCategories && serviceCategories.map(category, index) => (;
                         <div key={index} className='space-y-4'>;
                           <div className='flex items-center space-x-3'>;
                             <div
@@ -1091,7 +1091,7 @@ function UltraFuturisticNavigation2032() {
                               </p>;
                             </div>;
                           </div>;
-                          <div className='space-y-2'>                            {category && category.services.map((service, serviceIndex) => (;
+                          <div className='space-y-2'>                            {category && category.services.map(service, serviceIndex) => (;
                               <Link
                                 key={serviceIndex}
                                 href={service && service.href}
@@ -1103,7 +1103,7 @@ function UltraFuturisticNavigation2032() {
                   <span>{item && item.name}</span>;
                 </Link>;
             <div className="hidden lg:flex items-center space-x-8">
-              {mainNavigation.map((item) => (
+              {mainNavigation.map(item) => (
                 <Link
                   key={item.name}
                   href={item.href}
@@ -1112,7 +1112,7 @@ function UltraFuturisticNavigation2032() {
                   <item.icon className="w-4 h-4 group-hover:scale-110 transition-transform" />
                   <span>{item.name}</span>
                 </Link>
-              ))}
+              )}
               {/* Services Dropdown */}
               <div className="relative group">
                 <button className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 flex items-center space-x-2 group">
@@ -1124,7 +1124,7 @@ function UltraFuturisticNavigation2032() {
                 <div className="absolute top-full left-0 w-screen max-w-7xl transform -translate-x-1/2 left-1/2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 pt-4">;
                   <div className="bg-black/95 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-8 shadow-2xl shadow-cyan-500/20">;
                     <div className="grid grid-cols-2 gap-8">;
-                      {serviceCategories && serviceCategories.map((category, index) => (;
+                      {serviceCategories && serviceCategories.map(category, index) => (;
                         <div key={index} className="space-y-4">;
                           <div className="flex items-center space-x-3">;
                             <div className={`w-10 h-10 bg-gradient-to-r ${category && category.color} rounded-xl flex items-center justify-center`}>;
@@ -1136,7 +1136,7 @@ function UltraFuturisticNavigation2032() {
                             </div>;
                           </div>;
                           <div className="space-y-2">;
-                            {category && category.services.map((service, serviceIndex) => (;
+                            {category && category.services.map(service, serviceIndex) => (;
                               <Link
                                 key={serviceIndex}
                                 href={service && service.href}
@@ -1154,10 +1154,10 @@ function UltraFuturisticNavigation2032() {
                                   </div>                                </div>                                  <div className="text-cyan-400 font-semibold text-sm">{service && service.price}</div>;
                                 </div>;
                               </Link>;
-                            ))}
+                            )}
                           </div>;
                         </div>;
-                      ))}
+                      )}
                     </div>
                   </div>
                 </div>
@@ -1232,7 +1232,7 @@ function UltraFuturisticNavigation2032() {
                 >;
                   <item.icon className='w - 4 h - 4 group - hover:scale - 110 transition - transform' />;
                   <span>{item.name}</span>;
-                </Link>))}
+                </Link>)}
               {/* Services Dropdown */}
               <div className='relative group'>;
                 <button className='text - gray - 300 hover:text - cyan - 400 transition - colors duration - 200 flex items - center space - x-2 group'>;
@@ -1244,7 +1244,7 @@ function UltraFuturisticNavigation2032() {
                 <div className='absolute top - full left - 0 w - screen max - w-7xl transform -translate - x-1 / 2 left - 1/2 opacity - 0 invisible group - hover:opacity - 100 group - hover:visible transition - all duration - 300 pt - 4'>;
                   <div className='bg - black / 95 backdrop - blur - xl border border - cyan - 500 / 20 rounded - 2xl p - 8 shadow - 2xl shadow - cyan - 500 / 20'>;
                     <div className='grid grid - cols - 2 gap - 8'>;
-                      {service_categories.map ((category, index) => (
+                      {service_categories.map (category, index) => (
                         <div key={index} className='space - y-4'>;
                           <div className='flex items - center space - x-3'>;
                             <div;
@@ -1261,7 +1261,7 @@ function UltraFuturisticNavigation2032() {
                               </p>;
                             </div>;
                           </div>;
-                          <div className='space - y-2'>                            {category.services.map ((service, service_index) => (
+                          <div className='space - y-2'>                            {category.services.map (service, service_index) => (
                               <Link;
                                 key={service_index}
                                 href={service.href}
@@ -1272,7 +1272,7 @@ function UltraFuturisticNavigation2032() {
                 >;
                   <item.icon className="w - 4 h - 4 group - hover:scale - 110 transition - transform" />;
                   <span>{item.name}</span>;
-                </Link>))}
+                </Link>)}
               {/* Services Dropdown */}
               <div className="relative group">;
                 <button className="text - gray - 300 hover:text - cyan - 400 transition - colors duration - 200 flex items - center space - x-2 group">;
@@ -1284,7 +1284,7 @@ function UltraFuturisticNavigation2032() {
                 <div className="absolute top - full left - 0 w - screen max - w-7xl transform -translate - x-1 / 2 left - 1/2 opacity - 0 invisible group - hover:opacity - 100 group - hover:visible transition - all duration - 300 pt - 4">;
                   <div className="bg - black / 95 backdrop - blur - xl border border - cyan - 500 / 20 rounded - 2xl p - 8 shadow - 2xl shadow - cyan - 500 / 20">;
                     <div className="grid grid - cols - 2 gap - 8">;
-                      {service_categories.map ((category, index) => (
+                      {service_categories.map (category, index) => (
                         <div key={index} className="space - y-4">;
                           <div className="flex items - center space - x-3">;
                             <div className={`w - 10 h - 10 bg - gradient - to - r ${category.color} rounded - xl flex items - center justify - center`}>;
@@ -1296,7 +1296,7 @@ function UltraFuturisticNavigation2032() {
                             </div>;
                           </div>;
                           <div className="space - y-2">;
-                            {category.services.map ((service, service_index) => (
+                            {category.services.map (service, service_index) => (
                               <Link;
                                 key={service_index}
                                 href={service.href}
@@ -1314,9 +1314,9 @@ function UltraFuturisticNavigation2032() {
                                     {service.price}
                                   </div>                                </div>                                  <div className="text - cyan - 400 font - semibold text - sm">{service.price}</div>;
                                 </div>;
-                              </Link>))}
+                              </Link>)}
                           </div>;
-                        </div>))}
+                        </div>)}
                     </div>;
                   </div>;
                 </div>;
@@ -1367,10 +1367,10 @@ function UltraFuturisticNavigation2032() {
       <AnimatePresence>;
         {isOpen && (;
           <motion&& motion.div
-            initial={{ opacity: 0, x: '100%' }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: '100%' }}
-            transition={{ duration: 0 && 0.3 }}
+            initial={ opacity: 0, x: '100%' }
+            animate={ opacity: 1, x: 0 }
+            exit={ opacity: 0, x: '100%' }
+            transition={ duration: 0 && 0.3 }
             className='fixed inset-0 z-50 lg:hidden'>;
             <div
               className='absolute inset-0 bg-black/80 backdrop-blur-xl'
@@ -1387,7 +1387,7 @@ function UltraFuturisticNavigation2032() {
                       <div className='text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent'>                        Zion Tech Group;
                       </div>;
                     </div>;
-                  </div>          >;
+                  </div>;
             <div className="absolute inset-0 bg-black/80 backdrop-blur-xl" onClick={closeMenu} />;
             <div className="absolute right-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-cyan-500/20 overflow-y-auto">;
               <div className="p-6">;
@@ -1402,10 +1402,10 @@ function UltraFuturisticNavigation2032() {
       <AnimatePresence>;
         {is_open && (
           <motion.div;
-            initial={{ opacity: 0, coordinate_x: '100%' }}
-            animate={{ opacity: 1, coordinate_x: 0 }}
-            exit={{ opacity: 0, coordinate_x: '100%' }}
-            transition={{ duration: 0.3 }}
+            initial={ opacity: 0, coordinate_x: '100%' }
+            animate={ opacity: 1, coordinate_x: 0 }
+            exit={ opacity: 0, coordinate_x: '100%' }
+            transition={ duration: 0.3 }
             className='fixed inset - 0 z - 50 lg:hidden';
           >;
             <div;
@@ -1423,7 +1423,7 @@ function UltraFuturisticNavigation2032() {
                       <div className='text - xl font - bold bg - gradient - to - r from - cyan - 400 to - purple - 500 bg - clip - text text - transparent'>                        Zion Tech Group;
                       </div>;
                     </div>;
-                  </div>          >;
+                  </div>;
             <div className="absolute inset - 0 bg - black / 80 backdrop - blur - xl" on_click={close_menu} />;
             <div className="absolute right - 0 top - 0 h - full w - 80 bg - black / 95 backdrop - blur - xl border - l border - cyan - 500 / 20 overflow - y-auto">;
               <div className="p - 6">;
@@ -1462,7 +1462,7 @@ function UltraFuturisticNavigation2032() {
                 {/* Mobile Navigation */}
                 <div className='space-y-6'>;
                   {mainNavigation && mainNavigation.map(item => (                <div className="space-y-6">;
-                  {mainNavigation && mainNavigation.map((item) => (;
+                  {mainNavigation && mainNavigation.map(item) => (;
                     <Link
                       key={item && item.name}
                       href={item && item.href}
@@ -1473,13 +1473,13 @@ function UltraFuturisticNavigation2032() {
                       <item && item.icon className="w-5 h-5" />;
                       <span>{item && item.name}</span>;
                     </Link>;
-                  ))}
+                  )}
 
                   {/* Services Accordion */}
                   <div className='space-y-2'>;
                     <button
                       onClick={() =>;
-                        setActiveCategory(activeCategory === 0 ? null : 0);
+                        setActiveCategory(activeCategory = = 0 ? null : 0);
                       }
                       className='w-full flex items-center justify-between p-3 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 transition-colors';
                     >;
@@ -1488,57 +1488,57 @@ function UltraFuturisticNavigation2032() {
                         <span>Services</span>;
                       </span>;
                       <ChevronRightIcon
-                        className={`w-5 h-5 transition-transform ${activeCategory === 0 ? 'rotate-90' : ''}`}
+                        className={`w-5 h-5 transition-transform ${activeCategory = = 0 ? 'rotate-90' : ''}`}
                       />
                     </button>
-                    {activeCategory === 0 && (
+                    {activeCategory = = 0 && (
                       <div className='pl-8 space-y-2'>
-                        {serviceCategories.map((category, index) => (
+                        {serviceCategories.map(category, index) => (
                           <div key={index} className='space-y-2'>
                             <div className='text-sm font-medium text-cyan-400 py-2'>
                               {category.title}
-                            </div>                            {category.services.map((service, serviceIndex) => (                    <button
-                      onClick={() => setActiveCategory(activeCategory === 0 ? null : 0)}
+                            </div>                            {category.services.map(service, serviceIndex) => (                    <button
+                      onClick={() => setActiveCategory(activeCategory = = 0 ? null : 0)}
                       className="w-full flex items-center justify-between p-3 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 transition-colors"
                     >
                       <span className="flex items-center space-x-3">
                         <Briefcase className="w-5 h-5" />
                         <span>Services</span>
                       </span>
-                      <ChevronRightIcon className={`w-5 h-5 transition-transform ${activeCategory === 0 ? 'rotate-90' : ''}`} />
+                      <ChevronRightIcon className={`w-5 h-5 transition-transform ${activeCategory = = 0 ? 'rotate-90' : ''}`} />
                     </button>
-                    {activeCategory === 0 && (
+                    {activeCategory = = 0 && (
                       <div className="pl-8 space-y-2">
-                        {serviceCategories.map((category, index) => (
+                        {serviceCategories.map(category, index) => (
                           <div key={index} className="space-y-2">
                             <div className="text-sm font-medium text-cyan-400 py-2">{category.title}</div>
-                            {category.services.map((service, serviceIndex) => (
+                            {category.services.map(service, serviceIndex) => (
                       />;
                     </button>;
 
-                    {activeCategory === 0 && (;
+                    {activeCategory = = 0 && (;
                       <div className='pl-8 space-y-2'>;
-                        {serviceCategories && serviceCategories.map((category, index) => (;
+                        {serviceCategories && serviceCategories.map(category, index) => (;
                           <div key={index} className='space-y-2'>;
                             <div className='text-sm font-medium text-cyan-400 py-2'>;
                               {category && category.title}
-                            </div>                            {category && category.services.map((service, serviceIndex) => (                    <button
-                      onClick={() => setActiveCategory(activeCategory === 0 ? null : 0)}
+                            </div>                            {category && category.services.map(service, serviceIndex) => (                    <button
+                      onClick={() => setActiveCategory(activeCategory = = 0 ? null : 0)}
                       className="w-full flex items-center justify-between p-3 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 transition-colors";
                     >;
                       <span className="flex items-center space-x-3">;
                         <Briefcase className="w-5 h-5" />;
                         <span>Services</span>;
                       </span>;
-                      <ChevronRightIcon className={`w-5 h-5 transition-transform ${activeCategory === 0 ? 'rotate-90' : ''}`} />;
+                      <ChevronRightIcon className={`w-5 h-5 transition-transform ${activeCategory = = 0 ? 'rotate-90' : ''}`} />;
                     </button>;
 
-                    {activeCategory === 0 && (;
+                    {activeCategory = = 0 && (;
                       <div className="pl-8 space-y-2">;
-                        {serviceCategories && serviceCategories.map((category, index) => (;
+                        {serviceCategories && serviceCategories.map(category, index) => (;
                           <div key={index} className="space-y-2">;
                             <div className="text-sm font-medium text-cyan-400 py-2">{category && category.title}</div>;
-                            {category && category.services.map((service, serviceIndex) => (;
+                            {category && category.services.map(service, serviceIndex) => (;
                               <Link
                                 key={serviceIndex}
                                 href={service && service.href}
@@ -1547,9 +1547,9 @@ function UltraFuturisticNavigation2032() {
                               >;
                                 {service && service.name}
                               </Link>;
-                            ))}
+                            )}
                           </div>;
-                        ))}
+                        )}
                       </div>;
                     )}
                   </div>
@@ -1566,7 +1566,7 @@ function UltraFuturisticNavigation2032() {
                           className='block text-sm text-gray-400 hover:text-cyan-400 transition-colors py-1'>                  <div className="pt-4 border-t border-gray-700/50">;
                     <div className="text-sm font-medium text-gray-400 mb-3">Company</div>;
                     <div className="space-y-2">;
-                      {companyLinks && companyLinks.map((link) => (;
+                      {companyLinks && companyLinks.map(link) => (;
                           key={link && link.name}
                           href={link && link.href}
                           onClick={closeMenu}
@@ -1574,7 +1574,7 @@ function UltraFuturisticNavigation2032() {
                         >;
                           {link && link.name}
                         </Link>;
-                      ))}
+                      )}
                     </div>
                   </div>
                   {/* Contact Info */}
@@ -1623,7 +1623,7 @@ function UltraFuturisticNavigation2032() {
       {/* Spacer for fixed navigation */}
       <div className='h-20' />
     </>
-);      <div className="h-20" />
+;      <div className="h-20" />
         )}
       </AnimatePresence>
 
@@ -1638,7 +1638,7 @@ function UltraFuturisticNavigation2032() {
   );      <div className="h-20" />;
     </>;
   );
-}
+
                   <button;
                     on_click={close_menu}
                     className='p - 2 rounded - lg text - gray - 300 hover:text - cyan - 400 hover:bg - gray - 800 / 50';
@@ -1660,7 +1660,7 @@ function UltraFuturisticNavigation2032() {
                 {/* Mobile Navigation */}
                 <div className='space - y-6'>;
                   {main_navigation.map (item => (                <div className="space - y-6">;
-                  {main_navigation.map ((item) => (
+                  {main_navigation.map (item) => (
                     <Link;
                       key={item.name}
                       href={item.href}
@@ -1671,12 +1671,12 @@ function UltraFuturisticNavigation2032() {
                     >;
                       <item.icon className="w - 5 h - 5" />;
                       <span>{item.name}</span>;
-                    </Link>))}
+                    </Link>)}
                   {/* Services Accordion */}
                   <div className='space - y-2'>;
                     <button;
                       on_click={() =>;
-                        setActiveCategory (active_category === 0 ? null : 0);
+                        setActiveCategory (active_category = = 0 ? null : 0);
                       }
                       className='w - full flex items - center justify - between p - 3 rounded - lg text - gray - 300 hover:text - cyan - 400 hover:bg - gray - 800 / 50 transition - colors';
                     >;
@@ -1685,31 +1685,31 @@ function UltraFuturisticNavigation2032() {
                         <span > Services</span>;
                       </span>;
                       <ChevronRightIcon;
-                        className={`w - 5 h - 5 transition - transform ${active_category === 0 ? 'rotate - 90' : ''}`}
+                        className={`w - 5 h - 5 transition - transform ${active_category = = 0 ? 'rotate - 90' : ''}`}
                       />;
                     </button>;
-                    {active_category === 0 && (
+                    {active_category = = 0 && (
                       <div className='pl - 8 space - y-2'>;
-                        {service_categories.map ((category, index) => (
+                        {service_categories.map (category, index) => (
                           <div key={index} className='space - y-2'>;
                             <div className='text - sm font - medium text - cyan - 400 py - 2'>;
                               {category.title}
-                            </div>                            {category.services.map ((service, service_index) => (                    <button;
-                      on_click={() => setActiveCategory (active_category === 0 ? null : 0)}
+                            </div>                            {category.services.map (service, service_index) => (                    <button;
+                      on_click={() => setActiveCategory (active_category = = 0 ? null : 0)}
                       className="w - full flex items - center justify - between p - 3 rounded - lg text - gray - 300 hover:text - cyan - 400 hover:bg - gray - 800 / 50 transition - colors";
                     >;
                       <span className="flex items - center space - x-3">;
                         <Briefcase className="w - 5 h - 5" />;
                         <span > Services</span>;
                       </span>;
-                      <ChevronRightIcon className={`w - 5 h - 5 transition - transform ${active_category === 0 ? 'rotate - 90' : ''}`} />;
+                      <ChevronRightIcon className={`w - 5 h - 5 transition - transform ${active_category = = 0 ? 'rotate - 90' : ''}`} />;
                     </button>;
-                    {active_category === 0 && (
+                    {active_category = = 0 && (
                       <div className="pl - 8 space - y-2">;
-                        {service_categories.map ((category, index) => (
+                        {service_categories.map (category, index) => (
                           <div key={index} className="space - y-2">;
                             <div className="text - sm font - medium text - cyan - 400 py - 2">{category.title}</div>;
-                            {category.services.map ((service, service_index) => (
+                            {category.services.map (service, service_index) => (
                               <Link;
                                 key={service_index}
                                 href={service.href}
@@ -1717,8 +1717,8 @@ function UltraFuturisticNavigation2032() {
                                 className='block text - sm text - gray - 400 hover:text - cyan - 400 transition - colors py - 1'                              >                                className="block text - sm text - gray - 400 hover:text - cyan - 400 transition - colors py - 1";
                               >;
                                 {service.name}
-                              </Link>))}
-                          </div>))}
+                              </Link>)}
+                          </div>)}
                       </div>)}
                   </div>;
                   {/* Company Links */}
@@ -1734,14 +1734,14 @@ function UltraFuturisticNavigation2032() {
                           className='block text - sm text - gray - 400 hover:text - cyan - 400 transition - colors py - 1'                        >                  <div className="pt - 4 border - t border - gray - 700 / 50">;
                     <div className="text - sm font - medium text - gray - 400 mb - 3">Company</div>;
                     <div className="space - y-2">;
-                      {company_links.map ((link) => (
+                      {company_links.map (link) => (
                           key={link.name}
                           href={link.href}
                           on_click={close_menu}
                           className='block text - sm text - gray - 400 hover:text - cyan - 400 transition - colors py - 1'                          className="block text - sm text - gray - 400 hover:text - cyan - 400 transition - colors py - 1";
                         >;
                           {link.name}
-                        </Link>))}
+                        </Link>)}
                     </div>;
                   </div>;
                   {/* Contact Info */}
@@ -1791,4 +1791,3 @@ function UltraFuturisticNavigation2032() {
       <div className='h - 20' />;
     </>);      <div className="h - 20" />;
     </>);
-}

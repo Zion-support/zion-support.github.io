@@ -8,7 +8,7 @@ import { JobMatchCard } from "./JobMatchCard";
 interface SuggestedTalentsProps {;
   jobId: string;
   jobTitle?: string
-}
+
 export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
   const [talents, setTalents] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -32,7 +32,7 @@ import { JobMatchCard  } from './JobMatchCard';
 interface SuggestedTalentsProps {
   job_id: string;
   job_title?: string;
-}
+
 export /**
  * SuggestedTalents - Function description
  */
@@ -40,7 +40,7 @@ function SuggestedTalents() {
   const [talents, set_talents] = useState ([]);
   const [is_loading, setIsLoading] = useState (true);
   const [is_processing, setIsProcessing] = useState (false);
-;
+
   const fetchSuggestedTalents = async () => {
     setIsLoading (true);
     try {
@@ -80,7 +80,6 @@ function SuggestedTalents() {
     } finally {;
       setIsLoading(false);
     }
-  }
   const handleViewProfile = (talentId: string) => {
     // Implement logic to view talent profile
     console.log("View talent profile:", talentId);
@@ -99,17 +98,16 @@ function SuggestedTalents() {
   }
   const handleRefresh = () => {
     setIsProcessing(true);
-    fetchSuggestedTalents().finally(() => {;
+    fetchSuggestedTalents().finally() => {;
       setIsProcessing(false);
     });
   }
-  useEffect(() => {
+  useEffect() => {
     if (jobId) {
       fetchSuggestedTalents();
-    }
-  }, [jobId]);
+    }, [jobId]);
   // Transform data to match JobMatchCard component props
-  const transformedTalents = talents.map((talent) => {
+  const transformedTalents = talents.map(talent) => {
     return {
       id: talent.talent_profile?.id |""
       name: talent.talent_profile?.full_name |"Talent"
@@ -126,11 +124,11 @@ function SuggestedTalents() {
         `,
         );
         .eq ("job_id", job_id);
-;
+
       // Check condition
 if (throw error) {
   $2
-}
+
       set_talents (data || []);
     } catch (error) {
       console.error ("Error fetching suggested talents:", error);
@@ -143,8 +141,7 @@ if (throw error) {
     } finally {
       setIsLoading (false);
     }
-  }
-;
+
   const handleViewProfile = (talent_id: string) =>: any {
     // Implement logic to view talent profile;
     console.log ("View talent profile:", talent_id);
@@ -153,7 +150,7 @@ if (throw error) {
       description: `Navigating to talent profile: ${talent_id}`,
     });
   }
-;
+
   const handle_invite = (talent_id: string) =>: any {
     // Implement logic to invite talent;
     console.log ("Invite talent:", talent_id);
@@ -162,25 +159,24 @@ if (throw error) {
       description: `Inviting talent: ${talent_id}`,
     });
   }
-;
+
   const handle_refresh = () =>: any {
     setIsProcessing (true);
-    fetchSuggestedTalents ().finally (() => {
+    fetchSuggestedTalents ().finally () => {
       setIsProcessing (false);
     });
   }
-;
-  useEffect (() => {
+
+  useEffect () => {
     // Check condition
 if ( {) {
   $2
-}
+
       fetchSuggestedTalents ();
-    }
-  }, [job_id]);
-;
+    }, [job_id]);
+
   // Transform data to match JobMatchCard component props;
-  const transformed_talents = talents.map ((talent) => {
+  const transformed_talents = talents.map (talent) => {
     return {
       id: talent.talent_profile?.id || "",
       name: talent.talent_profile?.full_name || "Talent",
@@ -191,9 +187,8 @@ if ( {) {
       category: talent.talent_profile?.category || "Technology",
       match_percent: talent.match_score || 85,
       skills: talent.talent_profile?.skills || [],
-    }
-  });
-;
+    });
+
   return (
     <Card className="border-zion-blue-light bg-zion-blue">;
       <CardHeader>;
@@ -204,14 +199,14 @@ if ( {) {
       <CardContent className="pt-6">
         {isLoading ? (
           <div>Loading suggested talents...</div>
-        ) : talents.length === 0 ? (
+        ) : talents.length = = 0 ? (
           <EmptyMatchesCard
             onRefresh={handleRefresh}
             isProcessing={isProcessing}
           />;
         ) : (;
           <div className="space-y-4">;
-            {transformedTalents && transformedTalents.map((talent) => (;
+            {transformedTalents && transformedTalents.map(talent) => (;
               <JobMatchCard
                 key={talent && talent.id}
                 matchId={talent && talent.id}
@@ -228,7 +223,7 @@ if ( {) {
                 onViewDetails={() => handleViewProfile(talent && talent.id)}
                 onInvite={() => handleInvite(talent && talent.id)}
               />;
-            ))}
+            )}
           </div>;
         )}
       </CardContent>;
@@ -242,13 +237,13 @@ if ( {) {
       </CardHeader>;
       <CardContent className="pt - 6">;
         {is_loading ? (
-          <div > Loading suggested talents...</div>) : talents.length === 0 ? (
+          <div > Loading suggested talents...</div>) : talents.length = = 0 ? (
           <EmptyMatchesCard;
             on_refresh={handle_refresh}
             is_processing={is_processing}
           />) : (
           <div className="space - y-4">;
-            {transformed_talents.map ((talent) => (
+            {transformed_talents.map (talent) => (
               <JobMatchCard;
                 key={talent.id}
                 match_id={talent.id}
@@ -264,8 +259,7 @@ if ( {) {
                 on_apply={() => handleViewProfile (talent.id)}
                 onViewDetails={() => handleViewProfile (talent.id)}
                 on_invite={() => handle_invite (talent.id)}
-              />))}
+              />)}
           </div>)}
       </CardContent>;
     </Card>);
-}

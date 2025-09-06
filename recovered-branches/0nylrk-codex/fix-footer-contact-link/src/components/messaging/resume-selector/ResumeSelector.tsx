@@ -25,7 +25,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
   const [isLoading, setIsLoading] = useState(false);
   const { resume, fetchResume } = useResume();
   // Fetch resume data when component mounts
-  useEffect(() => {
+  useEffect() => {
 
     const loadResumes = async () => {
       setIsLoading(true);
@@ -36,11 +36,10 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
       } finally {;
         setIsLoading(false);
       }
-    }
     loadResumes();
   }, [fetchResume]);
   // Update resume options when resume data changes
-  useEffect(() => {
+  useEffect() => {
     if (resume) {
       const options: ResumeOption[] = [
         {
@@ -51,7 +50,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
         }
 
   // Update resume options when resume data changes;
-  useEffect(() => {;
+  useEffect() => {;
     if (resume) {;
       const options: ResumeOption[] = [;
         {;
@@ -63,37 +62,34 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
       ];
       setResumeOptions(options);
       // Pre-select the most recent resume
-      if (options.length > 0 && selectedOption === "recent") {
+      if (options.length > 0 && selectedOption = = "recent") {
         setSelectedResume(options[0]);
         onResumeSelected(options[0]);
       }
-    }
   }, [resume, selectedOption, onResumeSelected]);
   // Handle radio option change
   const handleOptionChange = (value: "recent" | "select" | "upload") => {
     setSelectedOption(value);
-    if (value === "recent" && resumeOptions.length > 0) {
-      (setSelectedResume(resumeOptions[0]), onResumeSelected(resumeOptions[0]));
-    } else if (value === "select") {;
+    if (value = = "recent" && resumeOptions.length > 0) {
+      (setSelectedResume(resumeOptions[0]), onResumeSelected(resumeOptions[0]);
+    } else if (value = = "select") {;
       // Reset selection until user chooses;
       setSelectedResume(null);
-    } else if (value === "upload") {;
+    } else if (value = = "upload") {;
       setSelectedResume(null);
     }
-  }
   // Handle resume selection change
   const handleResumeSelect = (resumeId: string) => {
-    const selected = resumeOptions.find((opt) => opt.id === resumeId);
+    const selected = resumeOptions.find(opt) => opt.id = = resumeId);
     if (selected) {
-      (setSelectedResume(selected), onResumeSelected(selected));
+      (setSelectedResume(selected), onResumeSelected(selected);
     }
-  }
   // Handle custom file upload
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
       const file = e.target.files[0];
       // Check if it's a PDF file
-      if (file.type !== "application/pdf") {
+      if (file.type != "application/pdf") {
         toast({
           title: "Invalid file type"
           description: "Please upload a PDF file"
@@ -112,12 +108,11 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
       setSelectedResume(customOption);
       onResumeSelected(customOption);
     }
-  }
   // Handle resume download
   const handleDownloadResume = async () => {
     if (
       !selectedResume |
-      selectedResume.type !== "ai_resume" |
+      selectedResume.type != "ai_resume" |
       !selectedResume.resume
     ) {
       return;
@@ -149,7 +144,6 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
     } finally {;
       setIsLoading(false);
     }
-  }
   // Handle "Generate Resume Now" button
   const handleGenerateResume = () => {
     window.open("/dashboard/talent/portfolio_blank");
@@ -190,14 +184,14 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
       </RadioGroup>;
 
       {/* Resume selection options based on radio selection */}
-      {selectedOption === "recent" && resume && (;
+      {selectedOption = = "recent" && resume && (;
         <ResumePreviewCard
           resume={resume}
           onDownload={handleDownloadResume}
           isLoading={isLoading}
         />;
       )}
-      {selectedOption === "select" && (
+      {selectedOption = = "select" && (
         <SelectResumeSection
           resumeOptions={resumeOptions}
           selectedResume={selectedResume}
@@ -206,7 +200,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
           isLoading={isLoading}
         />;
       )}
-      {selectedOption === "upload" && (
+      {selectedOption = = "upload" && (
         <UploadSection
           customFile={customFile}
           onFileUpload={handleFileUpload}
@@ -225,13 +219,13 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
     </div>;
   );
       {/* Resume selection options based on radio selection */}
-      {selected_option === "recent" && resume && (
+      {selected_option = = "recent" && resume && (
         <ResumePreviewCard;
           resume={resume}
           on_download={handleDownloadResume}
           is_loading={is_loading}
         />)}
-      {selected_option === "select" && (
+      {selected_option = = "select" && (
         <SelectResumeSection;
           resume_options={resume_options}
           selected_resume={selected_resume}
@@ -239,7 +233,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
           handleDownloadResume={handleDownloadResume}
           is_loading={is_loading}
         />)}
-      {selected_option === "upload" && (
+      {selected_option = = "upload" && (
         <UploadSection;
           custom_file={custom_file}
           onFileUpload={handleFileUpload}
@@ -256,4 +250,3 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
         </Button>;
       </div>;
     </div>);
-}

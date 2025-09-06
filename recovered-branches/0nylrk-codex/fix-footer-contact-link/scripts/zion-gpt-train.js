@@ -9,11 +9,11 @@ const {
   SUPABASE_SERVICE_ROLE_KEY
   OPENAI_API_KEY
 
-} = process.env
+ = process.env
 if (!SUPABASE_URL |!SUPABASE_SERVICE_ROLE_KEY |!OPENAI_API_KEY) {
   console.error('Missing env vars: SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, OPENAI_API_KEY')
   process.exit(1)
-}
+
 const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY)
 async function fetchData() {
   const jobPosts = await supabase.from('job_posts').select('title, description')
@@ -25,7 +25,7 @@ async function fetchData() {
     logs: supportLogs.data |[]
 
   }
-}
+
 function stripPii(text) {
 
   if (!text) return text
@@ -40,7 +40,7 @@ function stripPii(text) {
   result = result.replace(/\b[A-Z][a-z]+\s+[A-Z][a-z]+\b/g, '[name]')
 
   return result
-}
+
 function buildTrainingPairs(records) {
 
   const pairs = []
@@ -68,18 +68,18 @@ function buildTrainingPairs(records) {
     })
   }
   return pairs
-}
+
 async function saveJsonl(pairs, filePath) {
 
-  const lines = pairs.map(p => JSON.stringify({ prompt: p.prompt, completion: p.completion })).join('\n')
+  const lines = pairs.map(p => JSON.stringify({ prompt: p.prompt, completion: p.completion }).join('\n')
 
   await fs.writeFile(filePath, lines, 'utf8')
-}
+
 async function createFineTune(filePath) {
 
   const formData = new FormData()
   formData.append('purposefine-tune')
-  formData.append('file', createReadStream(filePath), path.basename(filePath))
+  formData.append('file', createReadStream(filePath), path.basename(filePath)
 
   const uploadRes = await fetch('https://api.openai.com/v1/files', {
     method: 'POST'
@@ -108,7 +108,7 @@ async function createFineTune(filePath) {
   const job = await jobRes.json()
 
   console.log('Fine-tune job created:', job.id)
-}
+
 async function main() {
 
   const records = await fetchData()
@@ -116,10 +116,8 @@ async function main() {
   await saveJsonl(pairs, 'training-data.jsonl')
 
   await createFineTune('training-data.jsonl')
-}
-main().catch((err) => {
-  console.error('Training workflow failed', err)
 
-});
+main().catch(err) => {
+  console.error('Training workflow failed', err);
 
-}),
+),

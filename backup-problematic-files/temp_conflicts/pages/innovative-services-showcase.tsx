@@ -6,14 +6,14 @@ import { ;
   Wifi, Package, Bot, Lock, Car, Building2,;
   DollarSign, Monitor, Users, FileText, Search, Phone,;
   Star, CheckCircle, ArrowRight, ExternalLink;
-} from 'lucide-react',;
+ from 'lucide-react',;
 import { innovativeMicroSaasServices } from '../data/innovative-micro-saas-services',;
 import { emergingTechServices } from '../data/emerging-tech-services',;
 import UltraFuturisticMatrixBackground from '../components/ui/UltraFuturisticMatrixBackground',;
-;
+
 export default function InnovativeServicesShowcase() {;
   const allServices = [...innovativeMicroSaasServices, ...emergingTechServices],;
-;
+
   const categories = [;
     { name:'Quantum AI & Neuroscience', icon:Brain, color:'from-purple-600 to-pink-600' },;
     { name:'Space Technology', icon:Rocket, color:'from-blue-600 to-indigo-600' },;
@@ -32,14 +32,14 @@ export default function InnovativeServicesShowcase() {;
     { name:'AI Research & Analytics', icon:Search, color:'from-green-600 to-blue-600' },;
     { name:'AI Communication', icon:Phone, color:'from-blue-600 to-green-600' }
   ],;
-;
+
   const contactInfo = {;
     mobile:'+1 302 464 0950',;
     email:'kleber@ziontechgroup.com',;
     address:'364 E Main St STE 1008 Middletown DE 19709',;
     website:'https://ziontechgroup.com';
   },;
-;
+
   return (;
     <div className="min-h-screen bg-black text-white relative overflow-hidden">;
       {/* Enhanced Background Effects */}
@@ -48,7 +48,6 @@ export default function InnovativeServicesShowcase() {;
       <div className="neural-network-pattern"></div>;
       <div className="cyberpunk-grid"></div>;
       <div className="quantum-field-effect"></div>;
-      ;
       <Head>;
         <title>Innovative Services Showcase - Zion Tech Group | Revolutionary AI & Quantum Solutions</title>;
         <meta name="description" content="Explore our most innovative and revolutionary AI, quantum computing, and emerging technology services. First-to-market solutions with breakthrough capabilities." />;
@@ -61,7 +60,7 @@ export default function InnovativeServicesShowcase() {;
         <meta property="og:url" content="https://ziontechgroup.com/innovative-services-showcase" />;
         <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />;
       </Head>;
-;
+
       {/* Enhanced Header */}
       <header className="relative z-10 bg-black/80 backdrop-blur-xl border-b border-purple-500/20">;
         <div className="container mx-auto px-4 py-8">;
@@ -89,16 +88,16 @@ export default function InnovativeServicesShowcase() {;
           </div>;
         </div>;
       </header>;
-;
+
       <UltraFuturisticMatrixBackground>;
         <div className="min-h-screen relative z-10">;
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto text-center">;
             <motion.div;
-              initial={{ opacity:0, y:20 }}
-              animate={{ opacity:1, y:0 }}
-              transition={{ duration:0.8 }}
+              initial={ opacity:0, y:20 }
+              animate={ opacity:1, y:0 }
+              transition={ duration:0.8 }
             >;
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">;
                 Revolutionary Micro SAAS Services;
@@ -106,7 +105,6 @@ export default function InnovativeServicesShowcase() {;
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">;
                 Experience the future of business with our cutting-edge micro SAAS solutions powered by quantum AI, autonomous systems, and breakthrough technology.;
               </p>;
-              ;
               {/* Stats Grid */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">;
                 <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-6 border border-purple-500/30">;
@@ -126,7 +124,7 @@ export default function InnovativeServicesShowcase() {;
                   <div className="text-gray-300">AI Support</div>;
                 </div>;
               </div>;
-;
+
               {/* Contact Information */}
               <div className="bg-gradient-to-r from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-600/30 max-w-2xl mx-auto">;
                 <h3 className="text-2xl font-bold text-white mb-6">Contact Zion Tech Group</h3>;
@@ -148,14 +146,14 @@ export default function InnovativeServicesShowcase() {;
             </motion.div>;
           </div>;
         </section>;
-;
+
         {/* Categories Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">;
             <motion.div;
-              initial={{ opacity:0, y:20 }}
-              animate={{ opacity:1, y:0 }}
-              transition={{ duration:0.8, delay:0.2 }}
+              initial={ opacity:0, y:20 }
+              animate={ opacity:1, y:0 }
+              transition={ duration:0.8, delay:0.2 }
               className="text-center mb-16";
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
@@ -165,16 +163,16 @@ export default function InnovativeServicesShowcase() {;
                 Explore our comprehensive range of innovative services across cutting-edge technology domains;
               </p>;
             </motion.div>;
-;
+
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">;
-              {categories.map((category, index) => {;
+              {categories.map(category, index) => {;
                 const Icon = category.icon,;
                 return (;
                   <motion.div;
                     key={category.name}
-                    initial={{ opacity:0, scale:0.8 }}
-                    animate={{ opacity:1, scale:1 }}
-                    transition={{ duration:0.5, delay:index * 0.1 }}
+                    initial={ opacity:0, scale:0.8 }
+                    animate={ opacity:1, scale:1 }
+                    transition={ duration:0.5, delay:index * 0.1 }
                     className="group cursor-pointer";
                   >;
                     <div className={`bg-gradient-to-br ${category.color} p-6 rounded-xl text-center transition-all duration-300 group-hover:scale-105 group-hover:shadow-2xl`}>;
@@ -189,14 +187,14 @@ export default function InnovativeServicesShowcase() {;
             </div>;
           </div>;
         </section>;
-;
+
         {/* Featured Services Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">;
             <motion.div;
-              initial={{ opacity:0, y:20 }}
-              animate={{ opacity:1, y:0 }}
-              transition={{ duration:0.8, delay:0.4 }}
+              initial={ opacity:0, y:20 }
+              animate={ opacity:1, y:0 }
+              transition={ duration:0.8, delay:0.4 }
               className="text-center mb-16";
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
@@ -206,14 +204,14 @@ export default function InnovativeServicesShowcase() {;
                 Discover our most innovative and game-changing micro SAAS solutions;
               </p>;
             </motion.div>;
-;
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-              {allServices.filter(service => service.popular).slice(0, 9).map((service, index) => (;
+              {allServices.filter(service => service.popular).slice(0, 9).map(service, index) => (;
                 <motion.div;
                   key={service.id}
-                  initial={{ opacity:0, y:20 }}
-                  animate={{ opacity:1, y:0 }}
-                  transition={{ duration:0.6, delay:index * 0.1 }}
+                  initial={ opacity:0, y:20 }
+                  animate={ opacity:1, y:0 }
+                  transition={ duration:0.6, delay:index * 0.1 }
                   className="group";
                 >;
                   <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm rounded-2xl p-8 border border-gray-600/30 hover:border-purple-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/20">;
@@ -225,15 +223,14 @@ export default function InnovativeServicesShowcase() {;
                         </span>;
                       )}
                     </div>;
-;
+
                     <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">;
                       {service.name}
                     </h3>;
-                    ;
                     <p className="text-gray-300 text-sm mb-4 line-clamp-3">;
                       {service.description}
                     </p>;
-;
+
                     <div className="flex items-center justify-between mb-4">;
                       <div className="text-2xl font-bold text-purple-400">;
                         {service.price}
@@ -245,16 +242,16 @@ export default function InnovativeServicesShowcase() {;
                         <span className="text-xs text-gray-500">({service.reviews})</span>;
                       </div>;
                     </div>;
-;
+
                     <div className="space-y-2 mb-6">;
-                      {service.features.slice(0, 3).map((feature, idx) => (;
+                      {service.features.slice(0, 3).map(feature, idx) => (;
                         <div key={idx} className="flex items-center space-x-2">;
                           <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />;
                           <span className="text-xs text-gray-300">{feature}</span>;
                         </div>;
-                      ))}
+                      )}
                     </div>;
-;
+
                     <div className="space-y-3 mb-6">;
                       <div className="text-xs">;
                         <span className="text-gray-400">Market Size:</span>;
@@ -269,7 +266,7 @@ export default function InnovativeServicesShowcase() {;
                         <span className="text-purple-400 ml-2">{service.roi}</span>;
                       </div>;
                     </div>;
-;
+
                     <div className="flex space-x-3">;
                       <a;
                         href={service.link}
@@ -284,18 +281,18 @@ export default function InnovativeServicesShowcase() {;
                     </div>;
                   </div>;
                 </motion.div>;
-              ))}
+              )}
             </div>;
           </div>;
         </section>;
-;
+
         {/* Market Analysis Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">;
             <motion.div;
-              initial={{ opacity:0, y:20 }}
-              animate={{ opacity:1, y:0 }}
-              transition={{ duration:0.8, delay:0.6 }}
+              initial={ opacity:0, y:20 }
+              animate={ opacity:1, y:0 }
+              transition={ duration:0.8, delay:0.6 }
               className="text-center mb-16";
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
@@ -305,7 +302,7 @@ export default function InnovativeServicesShowcase() {;
                 Understand why our services outperform competitors and deliver exceptional ROI;
               </p>;
             </motion.div>;
-;
+
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
               <div className="bg-gradient-to-br from-blue-900/50 to-indigo-900/50 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/30">;
                 <h3 className="text-2xl font-bold text-white mb-6">Competitive Advantages</h3>;
@@ -333,7 +330,7 @@ export default function InnovativeServicesShowcase() {;
                   </div>;
                 </div>;
               </div>;
-;
+
               <div className="bg-gradient-to-br from-green-900/50 to-emerald-900/50 backdrop-blur-sm rounded-2xl p-8 border border-green-500/30">;
                 <h3 className="text-2xl font-bold text-white mb-6">Market Opportunities</h3>;
                 <div className="space-y-4">;
@@ -363,14 +360,14 @@ export default function InnovativeServicesShowcase() {;
             </div>;
           </div>;
         </section>;
-;
+
         {/* Contact CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-4xl mx-auto text-center">;
             <motion.div;
-              initial={{ opacity:0, y:20 }}
-              animate={{ opacity:1, y:0 }}
-              transition={{ duration:0.8, delay:0.8 }}
+              initial={ opacity:0, y:20 }
+              animate={ opacity:1, y:0 }
+              transition={ duration:0.8, delay:0.8 }
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
                 Ready to Transform Your Business?;
@@ -378,7 +375,6 @@ export default function InnovativeServicesShowcase() {;
               <p className="text-xl text-gray-300 mb-8">;
                 Join the future of business with our revolutionary micro SAAS services. Get started with a free trial today.;
               </p>;
-              ;
               <div className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/30">;
                 <h3 className="text-2xl font-bold text-white mb-6">Contact Zion Tech Group</h3>;
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">;
@@ -398,7 +394,6 @@ export default function InnovativeServicesShowcase() {;
                     <div className="text-gray-300 text-sm">{contactInfo.address}</div>;
                   </div>;
                 </div>;
-                ;
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">;
                   <a;
                     href="https://ziontechgroup.com";
@@ -423,4 +418,3 @@ export default function InnovativeServicesShowcase() {;
       </UltraFuturisticMatrixBackground>;
     </div>;
   );
-}

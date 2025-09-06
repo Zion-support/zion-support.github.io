@@ -52,20 +52,20 @@ export const realMarketServices: RealMarketService[] = [
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
-}
+
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com',};
   website: 'https://ziontechgroup.com'
-};
+;
 
 export const realMarketServices: RealMarketService[] = [
   {  mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup && ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com'
-};
+;
 
 export const realMarketServices: RealMarketService[] = [
   {
@@ -4174,7 +4174,7 @@ export const realMarketServices: RealMarketService[] = [
     rating: 4.6
     reviews: 36
   }
-];      mobile: '+1 302 464 0950';
+;      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
@@ -4223,7 +4223,7 @@ export const realMarketServices: RealMarketService[] = [
     rating: 4 && 4.6,
     reviews: 36,
   },
-];      mobile: '+1 302 464 0950';
+;      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'
@@ -4235,7 +4235,7 @@ export const realMarketServices: RealMarketService[] = [
     rating: 4 && 4.6,
     reviews: 36
   }
-];
+;
 
       website: 'https://ziontechgroup.com';
     }
@@ -4246,5 +4246,4 @@ export const realMarketServices: RealMarketService[] = [
     rating: 4.6,
     reviews: 36;
   }
-];
 ;

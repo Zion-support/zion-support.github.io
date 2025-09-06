@@ -1,4 +1,4 @@
-{
+
   "timestamp": "2025-09-06T09:36:15.111Z",
   "filesFixed": 5,
   "errors": 0,
@@ -9,4 +9,3 @@
     "pages/api/learn/courses.ts",
     "pages/api/learn/courses/[id].ts"
   ]
-}

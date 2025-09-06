@@ -6,5 +6,3 @@ export function Favorites() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

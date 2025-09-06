@@ -6,5 +6,3 @@ export function ErrorState() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

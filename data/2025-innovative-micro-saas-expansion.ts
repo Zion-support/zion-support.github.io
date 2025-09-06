@@ -1,8 +1,7 @@
 import { ServiceVariant } from '../types/service-variants';
 
-
 import { ServiceVariant } from '../types / service - variants';
-;
+
   id: string;
   name: string;
   tagline: string;
@@ -563,11 +562,11 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
     marketSize: '$2.8B market', growthRate: '19.8% annual growth',
     variant: 'ai-autonomous',
     contactInfo: {
-      
+
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    
+
     },
     realImplementation: true,
     implementationDetails: 'Enterprise-grade document processing platform with AI-powered intelligence, automated workflows, and comprehensive compliance features. Includes mobile access and extensive API capabilities.',
@@ -601,11 +600,11 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
     marketSize: '$3.1B market', growthRate: '16.9% annual growth',
     variant: 'ai-autonomous',
     contactInfo: {
-      
+
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    
+
     },
     realImplementation: true,
     implementationDetails: 'Comprehensive inventory management solution with AI-powered forecasting, real-time tracking, and automated workflows. Includes mobile apps and extensive integration capabilities.',
@@ -639,11 +638,11 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
     marketSize: '$2.3B market', growthRate: '18.2% annual growth',
     variant: 'ai-autonomous',
     contactInfo: {
-      
+
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    
+
     },
     realImplementation: true,
     implementationDetails: 'Full-featured HR recruitment platform with AI-powered automation, comprehensive candidate management, and advanced analytics. Includes mobile apps and extensive integration capabilities.',
@@ -693,5 +692,4 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
     rating: 4.9,
     reviews: 267;
   }
-];
 ;

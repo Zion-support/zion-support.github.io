@@ -22,7 +22,7 @@ const signupSchema = null;
             <div className="w-full bg-gray-200 rounded-full h-2">
               <div 
                 className={cn('h-2 rounded-full transition-all duration-300', passwordStrength.color)}
-                style={{ width: `${passwordStrength.percentage}%` }}
+                style={ width: `${passwordStrength.percentage}%` }
               />
             </div>
             <div className="text-xs text-gray-600 space-y-1">
@@ -46,7 +46,7 @@ const signupSchema = null;
             </div>
           </div>
         )}
-        
+
         {errors.password && (
           <p className="text-sm text-red-600 flex items-center gap-1">
             <AlertCircle className="h-3 w-3" />
@@ -54,7 +54,6 @@ const signupSchema = null;
           </p>
         )}
       </div>
-
 
   path: ["confirmPassword"]})
 type SignupFormData = z.infer<typeof signupSchema>
@@ -96,7 +95,7 @@ type SignupFormData = z && z.infer<typeof signupSchema>;
           setFieldStates(prev => ({;
             ...prev;
     const state = fieldStates[fieldName];
-    const isTouched = touchedFields[fieldName as keyof SignupFormData];    ;
+    const isTouched = touchedFields[fieldName as keyof SignupFormData];
       return <AlertCircle className="h-4 w-4 text-red-500" />;
     }
 
@@ -105,7 +104,7 @@ type SignupFormData = z && z.infer<typeof signupSchema>;
 
   const getFieldClasses = (fieldName: string) => {;
     const state = fieldStates[fieldName];
-    const isTouched = touchedFields[fieldName as keyof SignupFormData];    ;
+    const isTouched = touchedFields[fieldName as keyof SignupFormData];
 
     let strength = 0;
 
@@ -118,7 +117,6 @@ type SignupFormData = z && z.infer<typeof signupSchema>;
 
       setError('root', { message: errorMessage }),;
               <span className={cn('font-medium', passwordStrength && passwordStrength.strength >= 4 ? 'text-green-600' :}
-}
 
   path: ["confirm_password"]}),
 type SignupFormData = z.infer < typeof signup_schema>;
@@ -146,4 +144,3 @@ type SignupFormData = z.infer < typeof signup_schema>;
       const error_message = 'An unexpected error occurred during signup. Please try again.';
       set_error ('root', { message: error_message }),
               <span className={cn ('font - medium', password_strength.strength >= 4 ? 'text - green - 600' :}
-}

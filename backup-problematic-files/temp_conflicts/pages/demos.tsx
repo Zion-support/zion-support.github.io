@@ -7,10 +7,10 @@ import PasswordStrengthDemo from '../components/demos/PasswordStrengthDemo',;
 import UrlShortenerDemo from '../components/demos/UrlShortenerDemo',;
 import TextAnalyzerDemo from '../components/demos/TextAnalyzerDemo',;
 import { Mail, Lock, Link, FileText, CheckCircle, Zap, BarChart3, Code, Play } from 'lucide-react',;
-;
+
 export default function DemosPage() {;
   const [activeDemo, setActiveDemo] = useState<string>('email-validator'),;
-;
+
   const demos = [;
     {;
       id:'email-validator',;
@@ -45,9 +45,9 @@ export default function DemosPage() {;
       component:<TextAnalyzerDemo />;
     }
   ],;
-;
-  const activeDemoData = demos.find(demo => demo.id === activeDemo),;
-;
+
+  const activeDemoData = demos.find(demo => demo.id = = activeDemo),;
+
   return (;
     <>;
       <Head>;
@@ -57,7 +57,7 @@ export default function DemosPage() {;
         <meta property="og:description" content="Test our micro SaaS services with interactive demos." />;
         <meta name="twitter:card" content="summary_large_image" />;
       </Head>;
-;
+
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">;
         <div className="absolute inset-0">;
@@ -65,9 +65,9 @@ export default function DemosPage() {;
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(34,197,94,0.08),transparent_50%)]" />;
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(168,85,247,0.06),transparent_50%)]" />;
         </div>;
-;
+
         <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20" />;
-;
+
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
           <div className="mb-20 animate-fade-in">;
             <div className="mb-8">;
@@ -76,7 +76,6 @@ export default function DemosPage() {;
                 Interactive Demos;
               </div>;
             </div>;
-            ;
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-8 text-white leading-tight tracking-tight">;
               Try Our;
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">;
@@ -87,13 +86,13 @@ export default function DemosPage() {;
               Experience our professional-grade micro SaaS services firsthand with interactive demos. ;
               Test, explore, and see the power of our APIs in action.;
             </p>;
-;
+
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20">;
               <Button;
                 href="#demos";
                 size="lg";
                 className="animate-scale-in shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40";
-                style={{ animationDelay:'0.2s' }}
+                style={ animationDelay:'0.2s' }
               >;
                 Start Testing;
                 <Play className="w-5 h-5 ml-2" />;
@@ -103,16 +102,16 @@ export default function DemosPage() {;
                 variant="outline";
                 size="lg";
                 className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5";
-                style={{ animationDelay:'0.4s' }}
+                style={ animationDelay:'0.4s' }
               >;
                 <Code className="w-5 h-5 mr-2" />;
                 View All Services;
               </Button>;
             </div>;
           </div>;
-;
+
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in" style={{ animationDelay:'0.6s' }}>;
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in" style={ animationDelay:'0.6s' }>;
             <div className="text-center group">;
               <div className="text-3xl md:text-4xl font-bold mb-3 text-blue-400 group-hover:scale-110 transition-transform duration-300">;
                 4;
@@ -140,7 +139,7 @@ export default function DemosPage() {;
           </div>;
         </div>;
       </section>;
-;
+
       {/* Demo Navigation */}
       <section id="demos" className="py-16 bg-gray-900 relative overflow-hidden">;
         <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.05)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20" />;
@@ -153,14 +152,14 @@ export default function DemosPage() {;
               Each demo showcases a different micro SaaS service with full functionality;
             </p>;
           </div>;
-;
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">;
-            {demos.map((demo) => (;
+            {demos.map(demo) => (;
               <button;
                 key={demo.id}
                 onClick={() => setActiveDemo(demo.id)}
                 className={`p-4 rounded-lg border transition-all duration-300 text-left group ${;
-                  activeDemo === demo.id;
+                  activeDemo = = demo.id;
                     ? 'border-blue-500 bg-blue-500/10';
                     :'border-gray-700 bg-gray-800/50 hover:border-gray-600 hover:bg-gray-800/80';
                 }`}
@@ -174,18 +173,18 @@ export default function DemosPage() {;
                 <p className="text-sm text-gray-400 leading-relaxed">;
                   {demo.description}
                 </p>;
-                {activeDemo === demo.id && (;
+                {activeDemo = = demo.id && (;
                   <div className="mt-3 flex items-center text-blue-400 text-sm">;
                     <CheckCircle className="w-4 h-4 mr-2" />;
                     Active Demo;
                   </div>;
                 )}
               </button>;
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Active Demo */}
       <section className="py-16 bg-black relative overflow-hidden">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">;
@@ -201,13 +200,13 @@ export default function DemosPage() {;
               {activeDemoData?.description}
             </p>;
           </div>;
-;
+
           <div className="animate-fade-in">;
             {activeDemoData?.component}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Features */}
       <section className="py-24 bg-gray-900 relative overflow-hidden">;
         <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.05)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20" />;
@@ -220,7 +219,7 @@ export default function DemosPage() {;
               Experience the quality and reliability of our services before integrating them into your applications;
             </p>;
           </div>;
-;
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             <Card className="text-center group bg-gray-800/50 border border-gray-700 hover:border-blue-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1">;
               <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-blue-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">;
@@ -233,7 +232,7 @@ export default function DemosPage() {;
                 Test actual API endpoints with real data processing and response times;
               </p>;
             </Card>;
-;
+
             <Card className="text-center group bg-gray-800/50 border border-gray-700 hover:border-green-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1">;
               <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-green-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">;
                 <CheckCircle className="w-8 h-8 text-green-400" />;
@@ -245,7 +244,7 @@ export default function DemosPage() {;
                 Experience complete service capabilities, not just mock responses;
               </p>;
             </Card>;
-;
+
             <Card className="text-center group bg-gray-800/50 border border-gray-700 hover:border-purple-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1">;
               <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-purple-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">;
                 <Code className="w-8 h-8 text-purple-400" />;
@@ -257,7 +256,7 @@ export default function DemosPage() {;
                 See exact request/response formats for easy integration;
               </p>;
             </Card>;
-;
+
             <Card className="text-center group bg-gray-800/50 border border-gray-700 hover:border-orange-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1">;
               <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-orange-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">;
                 <BarChart3 className="w-8 h-8 text-orange-400" />;
@@ -269,7 +268,7 @@ export default function DemosPage() {;
                 Get comprehensive analysis and insights from each service;
               </p>;
             </Card>;
-;
+
             <Card className="text-center group bg-gray-800/50 border border-gray-700 hover:border-cyan-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1">;
               <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-cyan-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">;
                 <Play className="w-8 h-8 text-cyan-400" />;
@@ -281,7 +280,7 @@ export default function DemosPage() {;
                 No signup required - start testing immediately;
               </p>;
             </Card>;
-;
+
             <Card className="text-center group bg-gray-800/50 border border-gray-700 hover:border-pink-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1">;
               <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-pink-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">;
                 <CheckCircle className="w-8 h-8 text-pink-400" />;
@@ -296,7 +295,7 @@ export default function DemosPage() {;
           </div>;
         </div>;
       </section>;
-;
+
       {/* CTA Section */}
       <section className="py-24 bg-gradient-to-r from-blue-600 to-blue-700 relative overflow-hidden">;
         <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10" />;
@@ -331,4 +330,3 @@ export default function DemosPage() {;
       </section>;
     </>;
   );
-}

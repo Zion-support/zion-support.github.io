@@ -88,7 +88,6 @@ const InnovationPage: React.FC = () => {
       case 'development': return 'text - orange - 400';
       default: return 'text - gray - 400';
     }
-  }
   const getImpactColor = (impact: string) => {
     switch (impact) {
       case 'critical': return 'bg - red - 500 / 20 text - red - 400';
@@ -97,7 +96,6 @@ const InnovationPage: React.FC = () => {
       case 'low': return 'bg - blue - 500 / 20 text - blue - 400';
       default: return 'bg - gray - 500 / 20 text - gray - 400';
     }
-  }
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white">
       <Head>
@@ -140,11 +138,11 @@ const InnovationPage: React.FC = () => {
         <div className="mb - 8">;
           <h2 className="text - 2xl font - bold mb - 6 text - white">Innovation Areas</h2>;
           <div className="grid grid - cols - 1 lg:grid - cols - 3 gap - 6">;
-            {innovation_areas.map ((area, area_index) => (
+            {innovation_areas.map (area, area_index) => (
               <div key={area_index} className="bg - white / 10 rounded - xl p - 6 border border - white / 20">;
                 <h3 className="text - xl font - semibold mb - 4 text - purple - 400">{area.category}</h3>;
                 <div className="space - y-4">;
-                  {area.innovations.map ((innovation, innovation_index) => (
+                  {area.innovations.map (innovation, innovation_index) => (
                     <div key={innovation_index} className="border - l-2 border - purple - 400 / 30 pl - 4">;
                       <div className="flex justify - between items - start mb - 2">;
                         <span className="text - white font - medium">{innovation.name}</span>;
@@ -159,17 +157,17 @@ const InnovationPage: React.FC = () => {
                         </span>
                       </div>
                     </div>
-                  ))}
+                  )}
                 </div>
               </div>
-            ))}
+            )}
           </div>
         </div>
         {/* Recent Innovations */}
         <div className="mb - 8">;
           <h2 className="text - 2xl font - bold mb - 6 text - white">Recent Innovations</h2>;
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
-            {recent_innovations.map ((innovation) => (
+            {recent_innovations.map (innovation) => (
               <div key={innovation.id} className="bg - white / 10 rounded - xl p - 6 border border - white / 20 hover:border - purple - 400 / 30 transition - all duration - 300">;
                 <div className="flex justify - between items - start mb - 4">;
                   <h3 className="text - lg font - semibold text - white">{innovation.title}</h3>;
@@ -185,14 +183,14 @@ const InnovationPage: React.FC = () => {
                   </span>
                 </div>
               </div>
-            ))}
+            )}
           </div>
         </div>
         {/* Upcoming Innovations */}
         <div className="mb - 8">;
           <h2 className="text - 2xl font - bold mb - 6 text - white">Upcoming Innovations</h2>;
           <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6">;
-            {upcoming_innovations.map ((innovation, index) => (
+            {upcoming_innovations.map (innovation, index) => (
               <div key={index} className="bg - white / 10 rounded - xl p - 6 border border - white / 20">;
                 <h3 className="text - lg font - semibold text - white mb - 2">{innovation.name}</h3>;
                 <p className="text - gray - 300 text - sm mb - 4">{innovation.description}</p>;
@@ -203,7 +201,7 @@ const InnovationPage: React.FC = () => {
                   </span>
                 </div>
               </div>
-            ))}
+            )}
           </div>
         </div>
         {/* Innovation Metrics */}
@@ -262,5 +260,5 @@ const InnovationPage: React.FC = () => {
       </div>
     </div>
   );
-}
+
 export default InnovationPage;

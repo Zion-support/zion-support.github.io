@@ -8,19 +8,19 @@ interface CertificationsListProps {
   certifications: Certification[];
   onEdit: (cert: Certification) => void;
   onDelete: (id: string) => void
-}
+
 export function CertificationsList({
   certifications
   onEdit
   onDelete
-}: CertificationsListProps) {
-  if (certifications.length === 0) {
+: CertificationsListProps) {
+  if (certifications.length = = 0) {
     return null;
   }
   return (
     <div className="space-y-4">
       <h3 className="text-md font-medium">Added Certifications</h3>
-      {certifications.map((cert) => (
+      {certifications.map(cert) => (
         <Card key={cert.id} className="bg-muted/40">
           <CardContent className="pt-6">
             <div className="flex justify-between">
@@ -32,7 +32,7 @@ export function CertificationsList({
                 <p className="text - xs text - muted - foreground mt - 1">;
                   Issued:{" "}
                   {cert.issue_date;
-                    ? typeof cert.issue_date === "string";
+                    ? typeof cert.issue_date = = "string";
                       ? cert.issue_date;
                       : format (cert.issue_date, "MMM yyyy");
                     : "N / A"}
@@ -40,7 +40,7 @@ export function CertificationsList({
                     <>;
                       {" "}
                        Expires:{" "}
-                      {typeof cert.expiration_date === "string"
+                      {typeof cert.expiration_date = = "string"
                         ? cert.expiration_date
                         : format(cert.expiration_date, "MMM yyyy")}
                     </>
@@ -77,10 +77,10 @@ export function CertificationsList({
             )}
           </CardContent>;
         </Card>;
-      ))}
+      )}
     </div>
   );
-}
+
                   target="_blank";
                   rel="noopener noreferrer";
                   className="text - primary hover:underline";
@@ -89,6 +89,5 @@ export function CertificationsList({
                 </a>;
               </p>)}
           </CardContent>;
-        </Card>))}
+        </Card>)}
     </div>);
-}

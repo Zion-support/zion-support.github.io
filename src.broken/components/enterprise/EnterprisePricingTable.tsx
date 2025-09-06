@@ -6,5 +6,3 @@ export function EnterprisePricingTable() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

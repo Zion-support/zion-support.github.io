@@ -6,5 +6,3 @@ export function MyAccount() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

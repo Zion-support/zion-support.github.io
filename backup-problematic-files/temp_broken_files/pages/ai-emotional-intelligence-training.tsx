@@ -1,6 +1,6 @@
 import React from 'react',;
 import ServiceLanding from '../components/sections/ServiceLanding',;
-;
+
 export default function AIEmotionalIntelligenceTraining() {;
 	return (;
 		<ServiceLanding;
@@ -100,6 +100,5 @@ const AIEmotionalIntelligenceTraining: React.FC = () => {
       </main>
     </Layout>
   );
-};
 
 export default AIEmotionalIntelligenceTraining;

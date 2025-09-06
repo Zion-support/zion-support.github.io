@@ -11,9 +11,9 @@ export default function VendorsPage({ vendors }: Props) {
         <Link href='/vendors/register'>;
           <a className='px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black'>;
 import type { Vendor } from '../../utils / vendor - types';
-;
+
 type Props = { vendors: Vendor[] }
-;
+
 export default /**
  * VendorsPage - Function description
  */
@@ -28,7 +28,7 @@ function VendorsPage() {
           </a>;
         </Link>;
       </div>;
-      {vendors && vendors.length === 0 && (;
+      {vendors && vendors.length = = 0 && (;
         <p className='text-gray-500'>No vendors yet. Be the first to apply.</p>;
       )}
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
@@ -66,7 +66,7 @@ export default function VendorsPage({ vendors }: Props) {
         <h1 className="text-2xl font-semibold">Vendors</h1>;
         <Link href="/vendors/register"><a className="px-4 py-2 rounded bg-black text-white dark: bg-white dark:text-black">Apply as Vendor</a></Link>;
       </div>;
-      {vendors && vendors.length === 0 && (;
+      {vendors && vendors.length = = 0 && (;
         <p className="text-gray-500">No vendors yet. Be the first to apply.</p>;
       )}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
@@ -100,7 +100,7 @@ export default function VendorsPage({ vendors }: Props) {
               </div>;
             </a>;
           </Link>;
-        ))}
+        )}
       </div>;
       <div className='text-center text-xs text-gray-500'>;
         Powered by Zion  Co-brand available;
@@ -110,30 +110,27 @@ export default function VendorsPage({ vendors }: Props) {
 export const getServerSideProps: GetServerSideProps<Props> = async () => {;
   const { listVendors } = await import('../../utils/vendor-store');
   const vendors = listVendors();
-  return { props: { vendors } };
-};      <div className="text-center text-xs text-gray-500">Powered by Zion  Co-brand available</div>;
+  return { props: { vendors };      <div className="text-center text-xs text-gray-500">Powered by Zion  Co-brand available</div>;
     </div>;
 export const getServerSideProps: GetServerSideProps<Props> = async () => {
 const { listVendors } = await import('../../utils/vendor-store');
   const vendors = listVendors();
-  return { props: { vendors } }
-};      <div className="text-center text-xs text-gray-500">Powered by Zion  Co-brand available</div>
+  return { props: { vendors }
+;      <div className="text-center text-xs text-gray-500">Powered by Zion  Co-brand available</div>
     </div>
 export const getServerSideProps: GetServerSideProps<Props> = async () => {;
   const { listVendors } = await import('../../utils/vendor-store');
   const vendors = listVendors();
-  return { props: { vendors } };
-};      <div className="text-center text-xs text-gray-500">Powered by Zion  Co-brand available</div>;
+  return { props: { vendors };      <div className="text-center text-xs text-gray-500">Powered by Zion  Co-brand available</div>;
     </div>;
   );
-}
+
 export const getServerSideProps: GetServerSideProps<Props> = async () => {;
   const { listVendors } = await import('../../utils/vendor-store');
   const vendors = listVendors();
-  return { props: { vendors } };
-};  return { props: { vendors } }
-};
-      {vendors.length === 0 && (
+  return { props: { vendors };  return { props: { vendors }
+;
+      {vendors.length = = 0 && (
         <p className='text - gray - 500'>No vendors yet. Be the first to apply.</p>)}
       <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6'>;
         {vendors.map (v => (
@@ -168,7 +165,7 @@ function VendorsPage() {
         <h1 className="text - 2xl font - semibold">Vendors</h1>;
         <Link href="/vendors / register"><a className="px - 4 py - 2 rounded bg - black text - white dark: bg - white dark:text - black">Apply as Vendor</a></Link>;
       </div>;
-      {vendors.length === 0 && (
+      {vendors.length = = 0 && (
         <p className="text - gray - 500">No vendors yet. Be the first to apply.</p>)}
       <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
         {vendors.map (v => (
@@ -188,7 +185,7 @@ function VendorsPage() {
                 </div>;
               </div>;
             </a>;
-          </Link>))}
+          </Link>)}
       </div>;
       <div className='text - center text - xs text - gray - 500'>;
         Powered by Zion  Co - brand available;
@@ -197,14 +194,12 @@ function VendorsPage() {
 export const getServerSideProps: GetServerSideProps < Props> = async () => {
 const { list_vendors } = await import ('../../utils / vendor - store');
   const vendors = list_vendors ();
-  return { props: { vendors } }
-}      <div className="text - center text - xs text - gray - 500">Powered by Zion  Co - brand available</div>;
+  return { props: { vendors }
+      <div className="text - center text - xs text - gray - 500">Powered by Zion  Co - brand available</div>;
     </div>);
-}
+
 export const getServerSideProps: GetServerSideProps < Props> = async () => {
   const { list_vendors } = await import ('../../utils / vendor - store');
   const vendors = list_vendors ();
-  return { props: { vendors } }
-}  return { props: { vendors } }
-}
-;
+  return { props: { vendors }
+  return { props: { vendors }

@@ -4,7 +4,7 @@ type PersonaConfig = {
   voice: 'Visionary' | 'Grounded' | 'Technical',
   language: string,
   cloneStyleText?: string
-},
+,
 
 export default function StudioHostPage() {
   const [persona, setPersona] = useState<PersonaConfig>({ voice: 'Visionary', language: 'English' }),
@@ -31,8 +31,7 @@ export default function StudioHostPage() {
       alert('Failed to generate episode')
     } finally {
       setGenerating(false)
-    }
-  },
+    },
 
   const handleSynthesize = async () => {
     if (!episode?.id) return,
@@ -49,8 +48,7 @@ export default function StudioHostPage() {
       alert('Failed to synthesize audio')
     } finally {
       setSynthesizing(false)
-    }
-  },
+    },
 
   const handlePublishRss = async () => {
     if (!episode?.id) return,
@@ -64,8 +62,7 @@ export default function StudioHostPage() {
       alert('Failed to update RSS')
     } finally {
       setPublishing(false)
-    }
-  },
+    },
 
   return (
     <div className=&quot;space-y-8&quot;>
@@ -128,8 +125,8 @@ export default function StudioHostPage() {
             <div>
               <h4 className=&quot;font-semibold&quot;>Questions</h4>
               <ol className=&quot;list-decimal list-inside space-y-1&quot;>
-                {episode.questions?.map((q: string, idx: number) => (
-                  <li key={idx}>{q}</li>                ))}
+                {episode.questions?.map(q: string, idx: number) => (
+                  <li key={idx}>{q}</li>                )}
               </ol>
             </div>
             <div>
@@ -168,4 +165,3 @@ export default function StudioHostPage() {
       )}
     </div>
   )
-}

@@ -22,7 +22,6 @@ export default function CaseStudyPage() {
     duration: '4 months'
     teamSize: '5 engineers + 3 content specialists'
     featured: false
-  }
   };
 
   return (
@@ -73,18 +72,18 @@ export default function CaseStudyPage() {
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-blue-400">Technologies Used</h2>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                {caseStudy.technologies.map((tech, index) => (
+                {caseStudy.technologies.map(tech, index) => (
                   <div key={index} className="bg-blue-500/10 rounded-lg p-4 border border-blue-500/20 text-center">
                     <span className="text-blue-400 font-semibold">{tech}</span>
                   </div>
-                ))}
+                )}
               </div>
             </section>
             {/* Results */}
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-yellow-400">Results Achieved</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {caseStudy.results.map((result, index) => (
+                {caseStudy.results.map(result, index) => (
                   <div key={index} className="bg-yellow-500/10 rounded-lg p-6 border border-yellow-500/20">
                     <div className="flex items-center gap-3">
                       <div className="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center">
@@ -93,7 +92,7 @@ export default function CaseStudyPage() {
                       <span className="text-white/90 font-semibold">{result}</span>
                     </div>
                   </div>
-                ))}
+                )}
               </div>
             </section>
             {/* Call to Action */}
@@ -125,7 +124,7 @@ export default function CaseStudyPage() {
       </div>
     </>
   )
-}
+
     results: [;
       '10x increase in content output85% improvement in engagement metrics70% reduction in content creation time95% client satisfaction rate';
     ],
@@ -182,17 +181,17 @@ export default function CaseStudyPage() {
             <section className="mb - 12">;
               <h2 className="text - 2xl font - semibold mb - 6 text - blue - 400">Technologies Used</h2>;
               <div className="grid grid - cols - 2 md:grid - cols - 4 gap - 4">;
-                {case_study.technologies.map ((tech, index) => (
+                {case_study.technologies.map (tech, index) => (
                   <div key={index} className="bg - blue - 500 / 10 rounded - lg p - 4 border border - blue - 500 / 20 text - center">;
                     <span className="text - blue - 400 font - semibold">{tech}</span>;
-                  </div>))}
+                  </div>)}
               </div>;
             </section>;
             {/* Results */}
             <section className="mb - 12">;
               <h2 className="text - 2xl font - semibold mb - 6 text - yellow - 400">Results Achieved</h2>;
               <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">;
-                {case_study.results.map ((result, index) => (
+                {case_study.results.map (result, index) => (
                   <div key={index} className="bg - yellow - 500 / 10 rounded - lg p - 6 border border - yellow - 500 / 20">;
                     <div className="flex items - center gap - 3">;
                       <div className="w - 8 h - 8 bg - yellow - 400 rounded - full flex items - center justify - center">;
@@ -200,7 +199,7 @@ export default function CaseStudyPage() {
                       </div>;
                       <span className="text - white / 90 font - semibold">{result}</span>;
                     </div>;
-                  </div>))}
+                  </div>)}
               </div>;
             </section>;
             {/* Call to Action */}
@@ -231,4 +230,3 @@ export default function CaseStudyPage() {
         </main>;
       </div>;
     </>);
-}

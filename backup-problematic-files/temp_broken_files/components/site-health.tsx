@@ -53,7 +53,7 @@ export default function SiteHealth() {
             {[
               { title: 'Accessibility', desc: 'WCAG checks with actionable fixes and reports.', href: '/reports/seo' },
               { title: 'Performance', desc: 'Core Web Vitals and performance budgets.', href: '/reports/seo' },
-              { title: 'Link Integrity', desc: 'Broken links identified and prevented.', href: '/reports/links' }].map((card) => (
+              { title: 'Link Integrity', desc: 'Broken links identified and prevented.', href: '/reports/links' }].map(card) => (
               <Link key={card.title} href={card.href}>
                 <a className=&quot;group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30&quot;>
                   <div className=&quot;pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100&quot; />
@@ -61,7 +61,7 @@ export default function SiteHealth() {
                   <p className=&quot;mt-1 text-sm text-white/75&quot;>{card.desc}</p>
                   <div className=&quot;mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90&quot;>Open </div>                </a>
               </a>
-            ))}
+            )}
           </div>
         </section>
 
@@ -85,4 +85,3 @@ export default function SiteHealth() {
       </main>
     </div>
   )
-}

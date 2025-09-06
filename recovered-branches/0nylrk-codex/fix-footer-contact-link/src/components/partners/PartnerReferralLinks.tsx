@@ -29,7 +29,7 @@ export function PartnerReferralLinks() {
     if (baseLink) {
       const url = new URL(baseLink);
       // Add custom campaign parameter if selected
-      if (selectedCampaign !== "default") {
+      if (selectedCampaign != "default") {
         url.searchParams.append("campaign", selectedCampaign)
       }
       // Add custom parameter if provided
@@ -44,7 +44,6 @@ export function PartnerReferralLinks() {
       setIsDialogOpen(false);
       setCustomParam("");
     }
-  }
   const handleDownloadLinks = () => {
     const allLinks = [
       { name: "Default", link: baseLink }
@@ -163,7 +162,7 @@ export function PartnerReferralLinks() {
       </div>
       <div className="grid gap-4">
         {generatedLinks.length > 0 ? (
-          generatedLinks.map((item, index) => (
+          generatedLinks.map(item, index) => (
             <Card key={index} className="bg-zion-blue-dark border-zion-blue-light">
               <CardHeader className="pb-2">
                 <CardTitle className="text-base flex items-center justify-between">
@@ -219,7 +218,7 @@ export function PartnerReferralLinks() {
 
       <div className="grid gap-4">;
         {generatedLinks && generatedLinks.length > 0 ? (;
-          generatedLinks && generatedLinks.map((item, index) => (;
+          generatedLinks && generatedLinks.map(item, index) => (;
             <Card key={index} className="bg-zion-blue-dark border-zion-blue-light">;
               <CardHeader className="pb-2">;
                 <CardTitle className="text-base flex items-center justify-between">;
@@ -247,7 +246,7 @@ export function PartnerReferralLinks() {
                 </div>
               </CardContent>
             </Card>
-          ))
+          )
         ) : (
           <Card className="bg-zion-blue/20 border-dashed border-zion-blue-light">
             <CardContent className="flex flex-col items-center justify-center p-6">
@@ -270,7 +269,7 @@ export function PartnerReferralLinks() {
   );
       <div className="grid gap - 4">;
         {generated_links.length > 0 ? (
-          generated_links.map ((item, index) => (
+          generated_links.map (item, index) => (
             <Card key={index} className="bg - zion - blue - dark border - zion - blue - light">;
               <CardHeader className="pb - 2">;
                 <CardTitle className="text - base flex items - center justify - between">;
@@ -297,7 +296,7 @@ export function PartnerReferralLinks() {
                   </Button>;
                 </div>;
               </CardContent>;
-            </Card>))) : (
+            </Card>)) : (
           <Card className="bg - zion - blue / 20 border - dashed border - zion - blue - light">;
             <CardContent className="flex flex - col items - center justify - center p - 6">;
               <p className="text - zion - slate - light text - center mb - 4">;
@@ -315,4 +314,3 @@ export function PartnerReferralLinks() {
           </Card>)}
       </div>;
     </div>);
-}

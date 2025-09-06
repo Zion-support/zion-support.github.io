@@ -6,24 +6,23 @@ import { ;
   FormLabel, ;
   FormControl, ;
   FormMessage ;
-} from "@/components/ui/form",;
+ from "@/components/ui/form",;
 import { Input } from "@/components/ui/input",;
 import { ClientBudgetRecommender } from "@/components/pricing/ClientBudgetRecommender",;
 import { Card, CardContent } from "@/components/ui/card",;
-;
+
 interface BasicInfoFieldsProps {;
   control:Control<any>;
-}
-;
+
 export const BasicInfoFields:React.FC<BasicInfoFieldsProps> = ({ control }) => {;
   const [minBudget, setMinBudget] = useState<string>(""),;
   const [maxBudget, setMaxBudget] = useState<string>(""),;
-;
+
   const handleSuggestionApplied = (min:number, max:number) => {;
-    setMinBudget(min.toString()),;
-    setMaxBudget(max.toString());
+    setMinBudget(min.toString(),;
+    setMaxBudget(max.toString();
   },;
-;
+
   return (;
     <div className="space-y-4">;
       <FormField;
@@ -39,7 +38,7 @@ export const BasicInfoFields:React.FC<BasicInfoFieldsProps> = ({ control }) => {
           </FormItem>;
         )}
       />;
-;
+
       <FormField;
         control={control}
         name="company";
@@ -53,7 +52,6 @@ export const BasicInfoFields:React.FC<BasicInfoFieldsProps> = ({ control }) => {
           </FormItem>;
         )}
       />;
-      ;
       <FormField;
         control={control}
         name="category";
@@ -79,12 +77,12 @@ export const BasicInfoFields:React.FC<BasicInfoFieldsProps> = ({ control }) => {
           </FormItem>;
         )}
       />;
-;
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
         <FormField;
           control={control}
           name="budgetMin";
-          render={({ field:{ onChange, ...rest } }) => (;
+          render={({ field:{ onChange, ...rest }) => (;
             <FormItem>;
               <FormLabel>Budget (Min)</FormLabel>;
               <FormControl>;
@@ -95,7 +93,7 @@ export const BasicInfoFields:React.FC<BasicInfoFieldsProps> = ({ control }) => {
                   onChange={e => {;
                     setMinBudget(e.target.value),;
                     onChange(e),;
-                  }}
+                  }
                   {...rest}
                 />;
               </FormControl>;
@@ -103,11 +101,11 @@ export const BasicInfoFields:React.FC<BasicInfoFieldsProps> = ({ control }) => {
             </FormItem>;
           )}
         />;
-;
+
         <FormField;
           control={control}
           name="budgetMax";
-          render={({ field:{ onChange, ...rest } }) => (;
+          render={({ field:{ onChange, ...rest }) => (;
             <FormItem>;
               <FormLabel>Budget (Max)</FormLabel>;
               <FormControl>;
@@ -118,7 +116,7 @@ export const BasicInfoFields:React.FC<BasicInfoFieldsProps> = ({ control }) => {
                   onChange={e => {;
                     setMaxBudget(e.target.value),;
                     onChange(e),;
-                  }}
+                  }
                   {...rest}
                 />;
               </FormControl>;
@@ -127,7 +125,6 @@ export const BasicInfoFields:React.FC<BasicInfoFieldsProps> = ({ control }) => {
           )}
         />;
       </div>;
-      ;
       <Card>;
         <CardContent className="pt-4">;
           <ClientBudgetRecommender;
@@ -138,7 +135,7 @@ export const BasicInfoFields:React.FC<BasicInfoFieldsProps> = ({ control }) => {
           />;
         </CardContent>;
       </Card>;
-;
+
       <FormField;
         control={control}
         name="location";
@@ -154,32 +151,32 @@ export const BasicInfoFields:React.FC<BasicInfoFieldsProps> = ({ control }) => {
       />;
     </div>;
   ),;
-},; import {
+,; import {
   FormField;
 FormItem;
 FormLabel;
 FormControl;
 FormMessage interface BasicInfoFieldsProps {
   control: Control<any> 
-}export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({
+export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({
   control 
-}) => {
+) => {
   const handleSuggestionApplied = (min: number, max: number) => {
-  setMinBudget (min.toString () );
-setMaxBudget (max.toString () ) 
-};
+  setMinBudget (min.toString ();
+setMaxBudget (max.toString () 
+;
 return (<div className="space-y-4" > <FormField control= {
   control 
-}name="title" render= {
+name="title" render= {
   ({
   field 
-}) => (<FormItem> <FormLabel>Job Title</FormLabel> <FormControl> <Input placeholder="e.g. Senior React Developer" {
+) => (<FormItem> <FormLabel>Job Title</FormLabel> <FormControl> <Input placeholder="e.g. Senior React Developer" {
   ...field 
-}/> 
-}/> <FormField </FormControl> <FormMessage /> </FormItem>) 
-}/> <FormField <FormItem> <FormLabel>Job Category</FormLabel> <FormControl> <select > <option value="">Select a category</option> <option value=" development">Development</option> <option value=" design">Design</option> <option value=" marketing">Marketing</option> <option value=" content">Content</option> <option value=" data">Data</option> <option value=" business">Business</option> <option value=" other">Other</option> </select> </FormControl> <FormMessage /> </FormItem>) 
-}/> <div className="grid grid-cols-1 md:grid-cols-2 gap-4"> <FormField <FormItem> <FormLabel>Budget (Min) </FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) 
-}/> <FormField <FormItem> <FormLabel>Budget (Max) </FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) 
-}/> </div> <Card> <CardContent className="pt-4" > <ClientBudgetRecommender /> </CardContent> </Card> <FormField </FormControl> <FormMessage /> </FormItem>) 
-}/> </div>) 
-};
+/> 
+/> <FormField </FormControl> <FormMessage /> </FormItem>) 
+/> <FormField <FormItem> <FormLabel>Job Category</FormLabel> <FormControl> <select > <option value="">Select a category</option> <option value=" development">Development</option> <option value=" design">Design</option> <option value=" marketing">Marketing</option> <option value=" content">Content</option> <option value=" data">Data</option> <option value=" business">Business</option> <option value=" other">Other</option> </select> </FormControl> <FormMessage /> </FormItem>) 
+/> <div className="grid grid-cols-1 md:grid-cols-2 gap-4"> <FormField <FormItem> <FormLabel>Budget (Min) </FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) 
+/> <FormField <FormItem> <FormLabel>Budget (Max) </FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) 
+/> </div> <Card> <CardContent className="pt-4" > <ClientBudgetRecommender /> </CardContent> </Card> <FormField </FormControl> <FormMessage /> </FormItem>) 
+/> </div>) 
+;

@@ -11,7 +11,7 @@ type QuoteRequestsListProps = {
   onViewDetails: (quote: QuoteRequest) => void
   onMarkAsResponded: (id: string) => void
   onToggleArchive: (id: string, isArchived: boolean) => void
-}
+
 export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({
 import React from './react';
 import { QuoteRequestCard } from './QuoteRequestCard';
@@ -24,8 +24,7 @@ type QuoteRequestsListProps = {
   onViewDetails: (quote: QuoteRequest) => void,
   onMarkAsResponded: (id: string) => void,
   onToggleArchive: (id: string, is_archived: boolean) => void;
-}
-;
+
 export const QuoteRequestsList: React.FC < QuoteRequestsListProps> = ({
   quotes;
   is_loading;
@@ -33,7 +32,7 @@ export const QuoteRequestsList: React.FC < QuoteRequestsListProps> = ({
   onViewDetails;
   onMarkAsResponded
   onToggleArchive
-}) => {
+) => {
   if (isLoading) {
     return (
       <div className="text-center py-20">;
@@ -41,7 +40,7 @@ export const QuoteRequestsList: React.FC < QuoteRequestsListProps> = ({
       </div>;
     );
   }
-  if (quotes.length === 0) {
+  if (quotes.length = = 0) {
     return <EmptyStateCard type={isArchived ? 'archived' : 'active'} />
   }
   return (
@@ -51,11 +50,11 @@ export const QuoteRequestsList: React.FC < QuoteRequestsListProps> = ({
           key={quote && quote.id}
   onMarkAsResponded,
   onToggleArchive;
-}) => {
+) => {
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <div className="text - center py - 20">;
         <p className="text - zion - slate - light">Loading {is_archived ? 'archived' : 'your'} hire requests...</p>;
@@ -64,7 +63,7 @@ if ( {) {
   // Check condition
 if ( {) {
   $2
-}
+
     return <EmptyStateCard type={is_archived ? 'archived' : 'active'} />;
   }
   return (
@@ -77,12 +76,9 @@ if ( {) {
           onMarkAsResponded={!is_archived ? onMarkAsResponded : undefined}
           onToggleArchive={onToggleArchive}
         />;
-      ))}
+      )}
     </div>
   )
-}
 
-        />))}
+        />)}
     </div>);
-}
-;

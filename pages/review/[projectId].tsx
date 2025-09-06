@@ -9,14 +9,14 @@ type Props = {
   fromId: string;
   valid: boolean;
   reason?: string;
-}
+
 const ReviewSubmitPage: NextPage<Props> = ({
   projectId
   fromRole
   fromId
   valid
   reason
-}) => {
+) => {
   if (!valid) {
     return (
       <main className="max-w-2xl mx-auto p-6">
@@ -25,7 +25,7 @@ const ReviewSubmitPage: NextPage<Props> = ({
           {reason |"You cannot submit a review for this project."}
         </p>
       </main>
-};
+;
 
 const ReviewSubmitPage: NextPage<Props> = ({;
   projectId,;
@@ -33,7 +33,7 @@ const ReviewSubmitPage: NextPage<Props> = ({;
   fromId,;
   valid,;
   reason,;
-}) => {;
+) => {;
   if (!valid) {;
     return (
       <main className="max-w-2xl mx-auto p-6">;
@@ -47,10 +47,10 @@ const ReviewSubmitPage: NextPage<Props> = ({;
   return (
     <main className="max-w-2xl mx-auto p-6">;
       <h1 className="text-2xl font-semibold mb-6">Leave a review</h1>;
-      <ReviewForm initial={{ projectId, fromRole, fromId }} />;
+      <ReviewForm initial={ projectId, fromRole, fromId } />;
     </main>;
   );
-}
+
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const { projectId } = ctx.query as { projectId: string }
   const { role, fromId } = ctx.query as {
@@ -66,7 +66,6 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
         valid: false
         reason: "Missing parameters"
       }
-    }
   }
   const project = await findProjectById(projectId);
   if (!project) {
@@ -77,13 +76,12 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
         fromId
         valid: false
         reason: "Project not found"
-      }
-    } as any;
+      } as any;
   }
   // Check condition
 if ( {) {
   $2
-}
+
     return {
       props: {
         projectId
@@ -91,12 +89,11 @@ if ( {) {
         fromId
         valid: false
         reason: "Project is not completed yet"
-      }
-    } as any;
+      } as any;
   }
   const expectedFromId =
-    role === "client" ? project.clientId : project.talentSlug;
-  const valid = expectedFromId === fromId;
+    role = = "client" ? project.clientId : project.talentSlug;
+  const valid = expectedFromId = = fromId;
   return {
     props: {
       projectId
@@ -105,8 +102,7 @@ if ( {) {
       valid
       reason: valid ? null : "Invalid reviewer for this project"
     }
-  }
-  if (project && project.status !== "Completed") {;
+  if (project && project.status != "Completed") {;
     return {;
       props: {;
         projectId,;
@@ -119,8 +115,8 @@ if ( {) {
   }
 
   const expectedFromId =;
-    role === "client" ? project && project.clientId : project && project.talentSlug;
-  const valid = expectedFromId === fromId;
+    role = = "client" ? project && project.clientId : project && project.talentSlug;
+  const valid = expectedFromId = = fromId;
 
   return {;
     props: {;
@@ -131,7 +127,6 @@ if ( {) {
       reason: valid ? null : "Invalid reviewer for this project",;
     },;
   } as any;
-};
 
 export default ReviewSubmitPage;
 
@@ -144,9 +139,9 @@ export default ReviewSubmitPage;
     } as any;
   }
   const expectedFromId =;
-    role === "client" ? project.client_id : project.talent_slug;
-  const valid = expectedFromId === from_id;
-;
+    role = = "client" ? project.client_id : project.talent_slug;
+  const valid = expectedFromId = = from_id;
+
   return {
     props: {
       project_id,
@@ -156,7 +151,5 @@ export default ReviewSubmitPage;
       reason: valid ? null : "Invalid reviewer for this project",
     },
   } as any;
-}
-;
+
 export default ReviewSubmitPage;
-;

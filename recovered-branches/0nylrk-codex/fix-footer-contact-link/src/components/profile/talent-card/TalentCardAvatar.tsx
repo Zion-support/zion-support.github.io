@@ -4,17 +4,17 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 interface TalentCardAvatarProps {
   profilePicture?: string;
   fullName: string;
-}
+
 export function TalentCardAvatar({
   profilePicture
   fullName
-}: TalentCardAvatarProps) {
+: TalentCardAvatarProps) {
   // Get initials for avatar fallback
 
   const getInitials = (name: string) => {
     return name
       .split(" ")
-      .map((part) => part[0])
+      .map(part) => part[0])
       .join("")
       .toUpperCase();
   }
@@ -27,13 +27,13 @@ export function TalentCardAvatar({
       </AvatarFallback>
     </Avatar>
   );
-}
+
 import React from './react';
 import { Avatar, AvatarImage, AvatarFallback  } from '@/components / ui / avatar';
 interface TalentCardAvatarProps {
   profile_picture?: string;
   full_name: string;
-}
+
 export /**
  * TalentCardAvatar - Function description
  */
@@ -42,11 +42,11 @@ function TalentCardAvatar() {
   const get_initials = (name: string) =>: any {
     return name;
       .split (" ");
-      .map ((part) => part[0]);
+      .map (part) => part[0]);
       .join ("");
       .toUpperCase ();
   }
-;
+
   return (
     <Avatar className="w - 14 h - 14 border - 2 border - zion - blue - light">;
       <AvatarImage src={profile_picture || undefined} alt={full_name} />;
@@ -54,4 +54,3 @@ function TalentCardAvatar() {
         {get_initials (full_name)}
       </AvatarFallback>;
     </Avatar>);
-}

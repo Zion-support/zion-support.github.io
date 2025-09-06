@@ -6,5 +6,3 @@ export function CheckoutSuccess() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

@@ -623,10 +623,10 @@ export const advancedITInfrastructureExpansion2025V2 = [
       'Performance monitoring'
     ]
   }
-];      'Identity verificationAccess controlThreat detectionPerformance monitoring'
+;      'Identity verificationAccess controlThreat detectionPerformance monitoring'
     ]
   }
-];
+;
 
 export const advancedITInfrastructureExpansion2025V2 = [;
   {
@@ -1252,9 +1252,8 @@ export const advancedITInfrastructureExpansion2025V2 = [;
       'Performance monitoring',
     ],
   },
-];      'Identity verificationAccess controlThreat detectionPerformance monitoring'
+;      'Identity verificationAccess controlThreat detectionPerformance monitoring'
     ]
 
   }
-];
 ;

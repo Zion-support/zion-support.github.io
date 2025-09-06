@@ -17,7 +17,7 @@ interface ReviewsModerationTableProps {
   isLoading: boolean
 
   onRefresh: () => void
-}
+
 export function ReviewsModerationTable({
   reviews;
   isLoading;
@@ -39,7 +39,6 @@ export function ReviewsModerationTable({
         .eq("id", reviewId);
       if (error) throw error;
       return { reviewId, status }
-    }
     onSuccess: (data) => {
       toast({
 
@@ -55,7 +54,7 @@ export function ReviewsModerationTable({
         title: "Error"
         description: `Failed to update review: ${error.message}`
         variant: "destructive"})
-    }});
+    });
   const getStatusColor = (status: ReviewStatus) => {
     switch (status) {
       case "approved": return "bg-green-100 text-green-800 hover:bg-green-200";
@@ -64,11 +63,10 @@ export function ReviewsModerationTable({
       default:
         return "bg-yellow-100 text-yellow-800 hover:bg-yellow-200"
     }
-  }
   const getInitials = (name: string) => {
     return name
       .split(" ")
-      .map((n) => n[0])
+      .map(n) => n[0])
       .join("")
       .toUpperCase()
   }
@@ -82,7 +80,7 @@ export function ReviewsModerationTable({
       </div>;
     );
   }
-  if (reviews.length === 0) {
+  if (reviews.length = = 0) {
     return (
       <div className="py-10 text-center">;
         <h3 className="text-lg font-medium mb-2">No reviews to moderate</h3>;
@@ -105,12 +103,12 @@ export function ReviewsModerationTable({
   const renderStars = (rating: number) => {
     return (
       <div className="flex">;
-        {[1, 2, 3, 4, 5].map((star) => (;
+        {[1, 2, 3, 4, 5].map(star) => (;
           <Star
             key={star}
             className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
           />;
-        ))}
+        )}
       </div>
     )
   }
@@ -122,7 +120,7 @@ import { format } from './date - fns';
 import { toast } from '@/hooks / use - toast';
 import { supabase } from '@/integrations / supabase / client';
 import { Review, ReviewStatus } from '@/types / reviews';
-;
+
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from '@/components / ui / dialog';
@@ -133,14 +131,14 @@ interface ReviewsModerationTableProps {
   reviews: Review[],
   is_loading: boolean,
   on_refresh: () => void;
-}
+
 export /**
  * ReviewsModerationTable - Function description
  */
 function ReviewsModerationTable() {
   const [selected_review, setSelectedReview] = useState < Review | null>(null);
   const [viewDetailsOpen, setViewDetailsOpen] = useState (false);
-;
+
   const { mutate: updateReviewStatus, is_pending } = use_mutation ({
     mutation_fn: async ({
       review_id,
@@ -152,13 +150,12 @@ function ReviewsModerationTable() {
         .from ("reviews");
         .update ({ status });
         .eq ("id", review_id);
-;
+
       // Check condition
 if (throw error) {
   $2
-}
+
       return { review_id, status }
-    }
     on_success: (data) => {
       toast ({
         title: "Review updated",
@@ -171,8 +168,8 @@ if (throw error) {
         title: "Error",
         description: `Failed to update review: ${error.message}`,
         variant: "destructive"});
-    }});
-;
+    });
+
   const getStatusColor = (status: ReviewStatus) =>: any {
     switch (status) {
       case "approved": return "bg - green - 100 text - green - 800 hover:bg - green - 200";
@@ -181,20 +178,19 @@ if (throw error) {
       default:;
         return "bg - yellow - 100 text - yellow - 800 hover:bg - yellow - 200";
     }
-  }
-;
+
   const get_initials = (name: string) =>: any {
     return name;
       .split (" ");
-      .map ((n) => n[0]);
+      .map (n) => n[0]);
       .join ("");
       .toUpperCase ();
   }
-;
+
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <div className="space - y-4">;
         <div className="h - 12 w - full bg - muted rounded animate - pulse" />;
@@ -206,7 +202,7 @@ if ( {) {
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <div className="py - 10 text - center">;
         <h3 className="text - lg font - medium mb - 2">No reviews to moderate</h3>;
@@ -218,27 +214,27 @@ if ( {) {
   const handle_approve = (review_id: string) =>: any {
     updateReviewStatus ({ review_id, status: "approved" });
   }
-;
+
   const handle_reject = (review_id: string) =>: any {
     updateReviewStatus ({ review_id, status: "rejected" });
   }
-;
+
   const handleViewDetails = (review: Review) =>: any {
     setSelectedReview (review),
     setViewDetailsOpen (true);
   }
-;
+
   const render_stars = (rating: number) =>: any {
     return (
       <div className="flex">;
-        {[1, 2, 3, 4, 5].map ((star) => (
+        {[1, 2, 3, 4, 5].map (star) => (
           <Star;
             key={star}
             className={`h - 4 w - 4 ${star <= rating ? "fill - yellow - 400 text - yellow - 400" : "text - gray - 300"}`}
-          />))}
+          />)}
       </div>);
   }
-;
+
   return (
     <>;
       <Table>;
@@ -253,7 +249,7 @@ if ( {) {
           </TableRow>;
         </TableHeader>;
         <TableBody>;
-          {reviews && reviews.map((review) => (;
+          {reviews && reviews.map(review) => (;
             <TableRow key={review && review.id}>;
               <TableCell>;
                 <div className="flex items-center gap-2">;
@@ -302,7 +298,7 @@ if ( {) {
               </TableCell>;
               <TableCell className="text-right">;
                 <div className="flex justify-end gap-2">;
-                  {review && review.status === "pending" && (;
+                  {review && review.status = = "pending" && (;
                     <>;
                       <Button
                         size="sm"
@@ -337,12 +333,12 @@ if ( {) {
                       <DropdownMenuItem onClick={() => handleViewDetails(review)}>;
                         View details;
                       </DropdownMenuItem>;
-                      {review && review.status === "approved" && (;
+                      {review && review.status = = "approved" && (;
                         <DropdownMenuItem onClick={() => updateReviewStatus({ reviewId: review && review.id, status: "rejected" })}>;
                           Mark as rejected;
                         </DropdownMenuItem>;
                       )}
-                      {review && review.status === "rejected" && (;
+                      {review && review.status = = "rejected" && (;
                         <DropdownMenuItem onClick={() => updateReviewStatus({ reviewId: review && review.id, status: "approved" })}>;
                           Mark as approved;
                         </DropdownMenuItem>;
@@ -356,7 +352,7 @@ if ( {) {
           </TableRow>;
         </TableHeader>;
         <TableBody>;
-          {reviews.map ((review) => (
+          {reviews.map (review) => (
             <TableRow key={review.id}>;
               <TableCell>;
                 <div className="flex items - center gap - 2">;
@@ -400,7 +396,7 @@ if ( {) {
               </TableCell>;
               <TableCell className="text - right">;
                 <div className="flex justify - end gap - 2">;
-                  {review.status === "pending" && (
+                  {review.status = = "pending" && (
                     <>;
                       <Button;
                         size="sm";
@@ -435,11 +431,11 @@ if ( {) {
                       <DropdownMenuItem on_click={() => handleViewDetails (review)}>;
                         View details;
                       </DropdownMenuItem>;
-                      {review.status === "approved" && (
+                      {review.status = = "approved" && (
                         <DropdownMenuItem on_click={() => updateReviewStatus ({ review_id: review.id, status: "rejected" })}>;
                           Mark as rejected;
                         </DropdownMenuItem>)}
-                      {review.status === "rejected" && (
+                      {review.status = = "rejected" && (
                         <DropdownMenuItem on_click={() => updateReviewStatus ({ review_id: review.id, status: "approved" })}>;
                           Mark as approved;
                         </DropdownMenuItem>)}
@@ -448,7 +444,7 @@ if ( {) {
                 </div>;
               </TableCell>;
             </TableRow>;
-          ))}
+          )}
         </TableBody>
       </Table>
       {selectedReview && (
@@ -512,7 +508,7 @@ if ( {) {
                       Timeliness: {selectedReview && selectedReview.timeliness_rating}/5;
                     </Badge>;
                   )}
-                  {selectedReview && selectedReview.would_work_again !== undefined && (;
+                  {selectedReview && selectedReview.would_work_again != undefined && (;
                     <Badge
                       variant={selectedReview && selectedReview.would_work_again ? "default" : "secondary"}
                       className={selectedReview && selectedReview.would_work_again ? "bg-green-100 text-green-800" : "bg-gray-100 text-gray-800"}>;
@@ -531,7 +527,7 @@ if ( {) {
               )}
             </div>
             <DialogFooter>
-              {selectedReview.status === "pending" && (
+              {selectedReview.status = = "pending" && (
                 <>
                   <Button
                     variant="destructive"
@@ -548,7 +544,7 @@ if ( {) {
                   </Button>;
                 </>;
               )}
-              {selectedReview && selectedReview.status === "approved" && (;
+              {selectedReview && selectedReview.status = = "approved" && (;
                 <Button
                   variant="destructive"
                   onClick={() => updateReviewStatus({ reviewId: selectedReview && selectedReview.id, status: "rejected" })}
@@ -557,7 +553,7 @@ if ( {) {
                   Mark as Rejected;
                 </Button>;
               )}
-              {selectedReview && selectedReview.status === "rejected" && (;
+              {selectedReview && selectedReview.status = = "rejected" && (;
                 <Button
                   onClick={() => updateReviewStatus({ reviewId: selectedReview && selectedReview.id, status: "approved" })}
                   disabled={isPending}
@@ -571,7 +567,7 @@ if ( {) {
       )}
     </>;
   );
-            </TableRow>))}
+            </TableRow>)}
         </TableBody>;
       </Table>;
       {selected_review && (
@@ -630,7 +626,7 @@ if ( {) {
                     <Badge variant="outline">;
                       Timeliness: {selected_review.timeliness_rating}/5;
                     </Badge>)}
-                  {selected_review.would_work_again !== undefined && (
+                  {selected_review.would_work_again != undefined && (
                     <Badge;
                       variant={selected_review.would_work_again ? "default" : "secondary"}
                       className={selected_review.would_work_again ? "bg - green - 100 text - green - 800" : "bg - gray - 100 text - gray - 800"}
@@ -648,7 +644,7 @@ if ( {) {
                 </div>)}
             </div>;
             <DialogFooter>;
-              {selected_review.status === "pending" && (
+              {selected_review.status = = "pending" && (
                 <>;
                   <Button;
                     variant="destructive";
@@ -664,7 +660,7 @@ if ( {) {
                     Approve;
                   </Button>;
                 </>)}
-              {selected_review.status === "approved" && (
+              {selected_review.status = = "approved" && (
                 <Button;
                   variant="destructive";
                   on_click={() => updateReviewStatus ({ review_id: selected_review.id, status: "rejected" })}
@@ -672,7 +668,7 @@ if ( {) {
                 >;
                   Mark as Rejected;
                 </Button>)}
-              {selected_review.status === "rejected" && (
+              {selected_review.status = = "rejected" && (
                 <Button;
                   on_click={() => updateReviewStatus ({ review_id: selected_review.id, status: "approved" })}
                   disabled={is_pending}
@@ -683,4 +679,3 @@ if ( {) {
           </DialogContent>;
         </Dialog>)}
     </>);
-}

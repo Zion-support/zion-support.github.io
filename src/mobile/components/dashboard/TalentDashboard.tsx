@@ -5,7 +5,7 @@ import {;
   CardHeader,;
   CardTitle,;
   CardDescription,;
-} from '@/components/ui/card';
+ from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import {;
@@ -15,7 +15,7 @@ import {;
   Clock,;
   Zap,;
   BookOpen,;
-} from 'lucide-react';
+ from 'lucide-react';
 import Link from 'next/link';
 
 import React from 'react'
@@ -25,7 +25,7 @@ import {
   CardHeader
   CardTitle
   CardDescription
-} from '@/components/ui/card'
+ from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
   ChevronRight
@@ -34,7 +34,7 @@ import { Badge } from '@/components/ui/badge'
   Clock
   Zap
   BookOpen
-} from 'lucide-react'
+ from 'lucide-react'
 import Link from 'next/link'
 import React from "react"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
@@ -234,7 +234,7 @@ import {
   CardHeader,
   CardTitle,
   CardDescription,
-} from '@/components / ui / card';
+ from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
 import { Badge } from '@/components / ui / badge';
   ChevronRight,
@@ -243,7 +243,7 @@ import { Badge } from '@/components / ui / badge';
   Clock,
   Zap,
   BookOpen,
-} from 'lucide-react';
+ from 'lucide-react';
 import Link from 'next / link';
 import React from './react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription  } from '@/components / ui / card';
@@ -497,7 +497,7 @@ function TalentDashboard() {
       </section>
     </div>
   )
-}
+
             aria-label="Set Availability">;
             <Clock className="h-5 w-5 mb-1" aria-hidden="true" />;
             <span>Availability</span>;
@@ -650,8 +650,7 @@ function TalentDashboard() {
       </section>;
     </div>;
   );
-}
+
   );
-}
+
     </div>);
-}

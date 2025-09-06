@@ -6,5 +6,3 @@ export function ServiceProcessSteps() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

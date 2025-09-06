@@ -6,5 +6,3 @@ export function useAdvancedOnboardingStatus() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

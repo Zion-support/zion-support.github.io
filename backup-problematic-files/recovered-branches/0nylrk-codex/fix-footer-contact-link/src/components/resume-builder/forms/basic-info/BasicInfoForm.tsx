@@ -9,7 +9,7 @@ import { RateOptimizationSection } from "../RateOptimizationSection",;
 import { basicInfoSchema, BasicInfoFormData } from "./schema",;
 import { PersonalInfoFields } from "./PersonalInfoFields",;
 import { ContactFields } from "./ContactFields",;
-;
+
 export interface BasicInfoFormProps {;
   resumeId?:string,;
   initialData?:Partial<BasicInfoFormData>,;
@@ -17,8 +17,7 @@ export interface BasicInfoFormProps {;
   skills?:string[],;
   yearsExperience?:number,;
   onComplete?:() => void;
-}
-;
+
 export function BasicInfoForm({;
   resumeId,;
   initialData = {},;
@@ -26,7 +25,7 @@ export function BasicInfoForm({;
   skills = [],;
   yearsExperience = 0,;
   onComplete;
-} BasicInfoFormProps) {;
+ BasicInfoFormProps) {;
   const form = useForm<BasicInfoFormData>({;
     resolver:zodResolver(basicInfoSchema),;
     defaultValues:{;
@@ -39,32 +38,29 @@ export function BasicInfoForm({;
       linkedin:"",;
       github:"",;
       hourlyRate:0,;
-      ...initialData}}),;
-;
-  useEffect(() => {;
+      ...initialData}),;
+
+  useEffect() => {;
     if (initialData) {;
-      Object.entries(initialData).forEach(([key, value]) => {;
-        if (value !== undefined) {;
+      Object.entries(initialData).forEach([key, value]) => {;
+        if (value != undefined) {;
           form.setValue(key as keyof BasicInfoFormData, value as any),;
-        }
-      }),;
-    }
-  }, [initialData, form]),;
-;
+        }),;
+    }, [initialData, form]),;
+
   const handleSubmit = (data:BasicInfoFormData) => {;
     onSave(data),;
     if (onComplete) {;
       onComplete();
-    }
-  },;
-;
+    },;
+
   return (;
     <Form {...form}>;
       <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">;
         <Card className="p-6 space-y-6">;
           <PersonalInfoFields control={form.control} />;
           <ContactFields control={form.control} />;
-;
+
           <div className="pt-4 border-t border-gray-200">;
             <h3 className="text-lg font-medium mb-4">Rate Information</h3>;
             <RateOptimizationSection;
@@ -77,7 +73,7 @@ export function BasicInfoForm({;
             />;
           </div>;
         </Card>;
-;
+
         <div className="flex justify-end">;
           <Button type="submit">Save Basic Information</Button>;
         </div>;
@@ -90,16 +86,16 @@ onSave: (data: BasicInfoFormData) => void;
 skills?: string[];
 yearsExperience?: number;
 onComplete?: () => void 
-}export function BasicInfoForm ({
+export function BasicInfoForm ({
   resumeId;
 initialData = {
-  
-};
+
+;
 onSave;
 skills = [];
 yearsExperience = 0;
 onComplete 
-}: BasicInfoFormProps) {
+: BasicInfoFormProps) {
   const form = useForm<BasicInfoFormData> ({
   resolver: zodResolver (basicInfoSchema);
 defaultValues: {
@@ -112,14 +108,12 @@ website: "";
 linkedin: "";
 github: "";
 hourlyRate: 0;
-...initialData 
-}
-});
+..initialData 
+
+);
 if (initialData) {
-  Object.entries (initialData) .forEach ( ([key, value]) => {
-  if (value !== undefined) {
-  
-}
-}, [initialData, form]);
+  Object.entries (initialData) .forEach ([key, value]) => {
+  if (value != undefined) {
+
+, [initialData, form]);
 <div className=" pt-4 border-t border-gray-200"> <h3 className=" text-lg font-medium mb-4">Rate Information</h3> <RateOptimizationSection /> </div> </Card> <div className=" flex justify-end"> <Button type=" submit" >Save Basic Information</Button> </div> </form> </Form>) 
-}

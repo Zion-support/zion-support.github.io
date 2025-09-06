@@ -8,13 +8,13 @@ import {;
   FileText, Calendar, CreditCard, BarChart3, Settings,;
   Rocket, Star, TrendingUp, Users, Target, Award,;
   Phone, Mail, MapPin, ExternalLink, Building;
-} from 'lucide-react',;
+ from 'lucide-react',;
 const contactInfo = {;
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup.com',;
   address: '364 E Main St STE 1008 Middletown DE 19709',;
   website: 'https://ziontechgroup.com';
-},;
+,;
 const serviceCategories = [;
   {;
     title: ' 2028 Cutting-Edge Innovations',;
@@ -88,7 +88,7 @@ const serviceCategories = [;
       { name: 'Digital Reality Interface', href: '/digital-reality-interface-2028', description: 'Next-gen reality interface', price: '$4,999/month' }
     ];
   }
-],;
+,;
 const companyLinks = [;
   { name: ' Home', href: '/', icon: Home },;
   { name: ' 2028 Services', href: '/ultimate-2028-services-showcase', icon: Rocket },;
@@ -100,7 +100,7 @@ const companyLinks = [;
   { name: ' Solutions', href: '/solutions', icon: Layers },;
   { name: ' Careers', href: '/careers', icon: Users },;
   { name: ' Contact', href: '/contact', icon: MessageCircle }
-],;
+,;
 const technologyLinks = [;
   { name: ' AI Services', href: '/ai-services', icon: Brain },;
   { name: ' Quantum Services', href: '/quantum-services', icon: Atom },;
@@ -108,18 +108,18 @@ const technologyLinks = [;
   { name: ' Cybersecurity', href: '/cybersecurity', icon: Lock },;
   { name: ' Analytics', href: '/analytics', icon: Database },;
   { name: ' Automation', href: '/automation', icon: Cpu }
-],
+,
 
 export default function UltraFuturisticNavigation2027() {
   const [isOpen, setIsOpen] = useState(false),
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
   const [isClient, setIsClient] = useState(false),
 
-  useEffect(() => {
+  useEffect() => {
     setIsClient(true)
   }, []),
 
-  useEffect(() => {
+  useEffect() => {
     if (!isClient) return,
 
     const handleScroll = () => {
@@ -413,15 +413,15 @@ export default function UltraFuturisticNavigation2027() {
     }`}>
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5 animate-pulse" />
-      
+
       <div className="relative container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3 group relative z-10">
             <motion.div 
               className="w-12 h-12 bg-gradient-to-br from-cyan-500 via-purple-500 to-pink-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg shadow-cyan-500/30"
-              whileHover={{ rotate: 5, scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={ rotate: 5, scale: 1.1 }
+              whileTap={ scale: 0.95 }
             >
               <Zap className="w-7 h-7 text-white" />
             </motion.div>
@@ -437,7 +437,7 @@ export default function UltraFuturisticNavigation2027() {
 
           {/* Desktop Navigation */}
           <nav className="hidden xl:flex items-center space-x-1">
-            {navigation.map((item) => (
+            {navigation.map(item) => (
               <div key={item.name} className="relative group">
                 <motion.button
                   className="flex items-center space-x-2 px-4 py-3 text-gray-300 hover:text-white transition-all duration-300 rounded-xl hover:bg-gray-800/50 hover:shadow-lg hover:shadow-cyan-500/20"
@@ -468,8 +468,8 @@ export default function UltraFuturisticNavigation2027() {
           <Link href="/" className="flex items-center space-x-3 group relative z-10">;
             <motion.div;
               className="w-12 h-12 bg-gradient-to-br from-cyan-500 via-purple-500 to-pink-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg shadow-cyan-500/30";
-              whileHover={{ rotate: 5, scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={ rotate: 5, scale: 1.1 }
+              whileTap={ scale: 0.95 }
             >;
               <Zap className="w-7 h-7 text-white" />;
             </motion.div>;
@@ -484,14 +484,14 @@ export default function UltraFuturisticNavigation2027() {
           </Link>;
           {/* Desktop Navigation */}
           <nav className="hidden xl:flex items-center space-x-1">;
-            {navigation.map((item) => (;
+            {navigation.map(item) => (;
               <div key={item.name} className="relative group">;
                 <motion.button;
                   className="flex items-center space-x-2 px-4 py-3 text-gray-300 hover:text-white transition-all duration-300 rounded-xl hover:bg-gray-800/50 hover:shadow-lg hover:shadow-cyan-500/20";
                   onMouseEnter={() => setActiveDropdown(item.name)}
                   onMouseLeave={() => setActiveDropdown(null)}
-                  whileHover={{ y: -2 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={ y: -2 }
+                  whileTap={ scale: 0.95 }
                 >;
                   <div className={`p-2 rounded-lg bg-gradient-to-br ${item.color} shadow-lg`}>;
                     {item.icon}
@@ -502,12 +502,12 @@ export default function UltraFuturisticNavigation2027() {
 
                 {/* Dropdown Menu */}
                 <AnimatePresence>;
-                  {activeDropdown === item.name && (;
+                  {activeDropdown = = item.name && (;
                     <motion.div;
-                      initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                      animate={{ opacity: 1, y: 0, scale: 1 }}
-                      exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                      transition={{ duration: 0.2 }}
+                      initial={ opacity: 0, y: 10, scale: 0.95 }
+                      animate={ opacity: 1, y: 0, scale: 1 }
+                      exit={ opacity: 0, y: 10, scale: 0.95 }
+                      transition={ duration: 0.2 }
                       className="absolute top-full left-0 mt-2 w-96 bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl shadow-cyan-500/20 overflow-hidden"
                     >
                       <div className="p-4">
@@ -520,9 +520,9 @@ export default function UltraFuturisticNavigation2027() {
                             <p className="text-sm text-gray-400">{item.description}</p>
                           </div>
                         </div>
-                        
+
                         <div className="space-y-2">
-                          {item.children.map((child) => (
+                          {item.children.map(child) => (
                             <Link
                               key={child.name}
                               href={child.href}
@@ -540,14 +540,14 @@ export default function UltraFuturisticNavigation2027() {
                                 <ChevronRight className="w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors" />
                               </div>
                             </a>
-                          ))}
+                          )}
                         </div>;
                       </div>;
                     </motion.div>;
                   )}
                 </AnimatePresence>;
               </div>;
-            ))}
+            )}
           </nav>;
           {/* Right Side */}
           <div className="flex items-center space-x-4">
@@ -571,8 +571,8 @@ export default function UltraFuturisticNavigation2027() {
 
             {/* CTA Button */}
             <motion.div;
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={ scale: 1.05 }
+              whileTap={ scale: 0.95 }
             >
               <Link
                 href="/contact"
@@ -598,10 +598,10 @@ export default function UltraFuturisticNavigation2027() {
       <AnimatePresence>;
         {isMenuOpen && (;
           <motion.div;
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
+            initial={ opacity: 0, height: 0 }
+            animate={ opacity: 1, height: 'auto' }
+            exit={ opacity: 0, height: 0 }
+            transition={ duration: 0.3 }
             className="xl:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50"
           >
             <div className="container mx-auto px-4 py-6">
@@ -610,7 +610,7 @@ export default function UltraFuturisticNavigation2027() {
                 <div>
                   <h3 className="text-lg font-semibold text-white mb-4">Services</h3>
                   <div className="space-y-3">
-                    {navigation.map((item) => (
+                    {navigation.map(item) => (
                       <div key={item.name}>
                         <Link
                           href={item.href}
@@ -625,7 +625,7 @@ export default function UltraFuturisticNavigation2027() {
                           </div>
                         </a>
                       </div>
-                    ))}
+                    )}
                   </div>;
                 </div>;
                 {/* Quick Links & Contact */}
@@ -633,7 +633,7 @@ export default function UltraFuturisticNavigation2027() {
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-4">Quick Links</h3>
                     <div className="space-y-2">
-                      {quickLinks.map((link) => (
+                      {quickLinks.map(link) => (
                         <Link
                           key={link.name}
                           href={link.href}
@@ -642,7 +642,7 @@ export default function UltraFuturisticNavigation2027() {
                           {link.icon}
                           <span className="text-white">{link.name}</span>
                         </a>
-                      ))}
+                      )}
                     </div>
                   </div>
 
@@ -688,5 +688,4 @@ export default function UltraFuturisticNavigation2027() {
       </AnimatePresence>;
     </header>;
   );
-};
 export default UltraFuturisticNavigation2027;

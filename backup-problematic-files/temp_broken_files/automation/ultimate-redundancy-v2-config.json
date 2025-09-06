@@ -1,4 +1,4 @@
-{
+
   "version": "2.0.0",
   "system": "Ultimate Redundancy Master V2",
   "enabled": true,
@@ -36,12 +36,10 @@
       "priority": "high",
       "autoRestart": true,
       "healthCheck": true
-    }
-  },
+    },
   "monitoring": {
     "enabled": true,
     "logLevel": "info",
     "metrics": true,
     "alerts": true
   }
-}

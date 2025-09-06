@@ -9,32 +9,28 @@ export interface TokenStoreData {
   wallets: Record<string, Wallet>,
   transactions: TokenTransaction[],
   config: TokenConfig
-}
 
 function ensureDataDir(): void {
   try {
-    if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true })
+    if (!fs.existsSync(DATA_DIR) fs.mkdirSync(DATA_DIR, { recursive: true })
   } catch {}
-}
 
 function readFromDisk(): TokenStoreData | null {
   try {
     ensureDataDir(),
-    if (!fs.existsSync(STORE_FILE)) return null,
+    if (!fs.existsSync(STORE_FILE) return null,
     const raw = fs.readFileSync(STORE_FILE, "utf8"),
     const parsed = JSON.parse(raw) as TokenStoreData
     return parsed
   } catch {
     return null
   }
-}
 
 function writeToDisk(data: TokenStoreData): void {
   try {
     ensureDataDir(),
     fs.writeFileSync(STORE_FILE, JSON.stringify(data, null, 2), "utf8")
   } catch {}
-}
 
 class InMemoryTokenStore {
   private data: TokenStoreData,
@@ -46,7 +42,6 @@ class InMemoryTokenStore {
         wallets: {},
         transactions: [],
         config: DEFAULT_TOKEN_CONFIG}
-  }
 
   getData(): TokenStoreData {
     return this.data
@@ -55,7 +50,6 @@ class InMemoryTokenStore {
   save(): void {
     writeToDisk(this.data)
   }
-}
 
 const store = new InMemoryTokenStore()
 
@@ -88,4 +82,4 @@ export const tokenStore = {
   getTransactions(userId?: string): TokenTransaction[] {
     const txs = store.getData().transactions
     if (!userId) return txs,
-    return txs.filter((t) => t.userId === userId)
+    return txs.filter(t) => t.userId = = userId)

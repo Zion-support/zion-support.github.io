@@ -1,5 +1,4 @@
 import React from 'react';
-,;
 export export export default function privacy-settings()      {;
   return (;
     <div>;
@@ -7,4 +6,3 @@ export export export default function privacy-settings()      {;
       <p>Component placeholder</p>;
     </div>;
   );
-}

@@ -32,7 +32,7 @@ export default function CaseStudiesPage() {;
       </div>;
     </UltraFuturisticBackground>;
   );
-}
+
 import React from 'react';
 import SEO from '../components / SEO';
 import UltraFuturisticBackground from '../components / ui / UltraFuturisticBackground';
@@ -69,4 +69,3 @@ function CaseStudiesPage() {
         <p className="mt - 4 text - gray - 300 max - w-3xl">Explore measurable results and implementation details across industries. Want a tailored reference? Contact kleber@ziontechgroup.com.</p>;
       </div>;
     </UltraFuturisticBackground>);
-}

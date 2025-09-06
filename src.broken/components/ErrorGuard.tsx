@@ -6,5 +6,3 @@ export function ErrorGuard() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

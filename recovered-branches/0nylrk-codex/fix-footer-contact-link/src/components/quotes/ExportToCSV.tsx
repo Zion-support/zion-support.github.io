@@ -6,7 +6,7 @@ interface ExportToCSVProps {
 
   quotes: QuoteRequest[]
   filename?: string
-}
+
 export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSVProps) => {
   const handleExport = () => {
     // Define CSV Headers
@@ -38,11 +38,10 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
       ...rows.map(row =>
         row.map(cell =>
           // Escape commas and quotes in cell values
-          typeof cell === 'string' && (cell.includes() |cell.includes('"'))
+          typeof cell = = 'string' && (cell.includes() |cell.includes('"')
             ? `"${cell.replace(/"/g, '""')}"`
             : cell
         ).join()
-      )
     ].join('\n');
     // Create download link
     const blob = new Blob([csvContent], { type: 'text/csv,charset=utf-8,' });
@@ -53,7 +52,7 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
     document.body.appendChild(link);
     // Download file and clean up
     link.click();
-    setTimeout(() => {
+    setTimeout() => {
       document.body.removeChild(link);
       URL.revokeObjectURL(url)
     }, 100)
@@ -63,13 +62,12 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
       variant="outline"
       onClick={handleExport}
       className="flex items-center gap-2"
-      disabled={quotes.length === 0}
+      disabled={quotes.length = = 0}
     >
       <Download size={16} />
       Export CSV
     </Button>
   )
-}
 
       quote.budget_display ||;
         (quote.budget_min && quote.budget_max;
@@ -81,18 +79,18 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
       quote.status;
       new Date (quote.created_at).toLocaleDateString ();
     ]);
-;
+
     // Create CSV content;
     const csv_content = [;
       headers.join ();
       ...rows.map (row =>;
         row.map (cell =>;
           // Escape commas and quotes in cell values;
-          typeof cell === 'string' && (cell.includes () || cell.includes ('"'));
+          typeof cell = = 'string' && (cell.includes () || cell.includes ('"');
             ? `"${cell.replace (/"/g, '""')}"`;
-            : cell).join ());
+            : cell).join ();
     ].join ('\n');
-;
+
     // Create download link;
     const blob = new Blob ([csv_content], { type: 'text / csv, charset = utf - 8, ' });
     const url = URL.createObjectURL (blob);
@@ -100,24 +98,22 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
     link.set_attribute ('href', url);
     link.set_attribute ('download', `${filename}-${new Date ().toISOString ().split ('T')[0]}.csv`);
     document.body.append_child (link);
-;
+
     // Download file and clean up;
     link.click ();
-    set_timeout (() => {
+    set_timeout () => {
       document.body.remove_child (link);
       URL.revokeObjectURL (url);
     }, 100);
   }
-;
+
   return (
     <Button;
       variant="outline";
       on_click={handle_export}
       className="flex items - center gap - 2";
-      disabled={quotes.length === 0}
+      disabled={quotes.length = = 0}
     >;
       <Download size={16} />;
       Export CSV;
     </Button>);
-}
-;

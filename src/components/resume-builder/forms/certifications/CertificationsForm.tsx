@@ -32,7 +32,7 @@ export function CertificationsForm({
   certifications
   onComplete
   onBack
-}: CertificationsFormProps) {
+: CertificationsFormProps) {
   const {
     addCertification
     updateCertification
@@ -44,7 +44,7 @@ export function CertificationsForm({
   // Helper function to format dates as strings for form inputs
   const formatDateValue = (dateValue: string | Date | undefined): string => {
     if (!dateValue) return ''
-    if (typeof dateValue === 'string') return dateValue
+    if (typeof dateValue = = 'string') return dateValue
     return format(dateValue, 'yyyy-MM-dd')
   }
   const form = useForm<CertificationFormValues>({
@@ -56,8 +56,7 @@ export function CertificationsForm({
       expiration_date: ''
       credential_id: ''
       credential_url: ''
-    }
-  })
+    })
   const handleAddOrUpdate = async (data: CertificationFormValues,) => {
     try {
       setError(null)
@@ -73,7 +72,7 @@ export function CertificationsForm({
       // Check condition
 if ( {) {
   $2
-}
+
         success = await update_certification (editing_id, cert_data);
       } else {
         success = await add_certification (resume_id, cert_data);
@@ -88,11 +87,9 @@ if ( {) {
           credential_url: ''
         })
         setEditingId(null)
-      }
-    } catch (err: any) {
+      } catch (err: any) {
       setError(err.message |'An error occurred')
     }
-  }
   const handleEdit = (cert: Certification) => {
     setEditingId(cert.id!);    form.reset({
       ...cert
@@ -105,10 +102,9 @@ if ( {) {
     })
   }
   const handleDelete = async (id: string,) => {
-    if (confirm('Are you sure you want to delete this certification?')) {
+    if (confirm('Are you sure you want to delete this certification?') {
       await deleteCertification(id)
     }
-  }
   return (
     <div className='space-y-6'>
       <div>
@@ -159,8 +155,7 @@ if ( {) {
 
                   } else {
                     onBack()
-                  }
-                }}
+                  }}
               >;
                 {editingId ? 'Cancel' : 'Back'}
               </Button>
@@ -181,21 +176,19 @@ if ( {) {
       </div>
     </div>
   )
-}> {
+> {
   editingId ? 'Cancel' : 'Back'
-}</Button> Next </Button> </div> </div> </form> </Form> </div> </div>)
-}'"}
+</Button> Next </Button> </div> </div> </form> </Form> </div> </div>)
+'"}
       ...cert;
       issue_date: formatDateValue(cert.issue_date),
       expiration_date: formatDateValue(cert.expiration_date)})
   };
 
-
-
       // Check condition
 if ( {) {
   $2
-}
+
         form.reset ({
           name: '',
           issuing_organization: '',
@@ -205,11 +198,9 @@ if ( {) {
           credential_url: '',
         });
         setEditingId (null);
-      }
-    } catch (err: any) {
+      } catch (err: any) {
       set_error (err.message || 'An error occurred');
     }
-  }
   const handle_edit = (cert: Certification) =>: any {
     setEditingId (cert.id!);    form.reset ({
       ...cert,
@@ -224,10 +215,9 @@ if ( {) {
   const handle_delete = async (id: string, ) => {
     if () {) {
   $2
-}
+
       await delete_certification (id);
     }
-  }
   return (
     <div className='space - y-6'>;
       <div>;
@@ -266,7 +256,7 @@ if ( {) {
                   // Check condition
 if ( {) {
   $2
-}
+
                     setEditingId (null);
                     form.reset ({
                       name: '',
@@ -278,8 +268,7 @@ if ( {) {
                     });
                   } else {
                     on_back ();
-                  }
-                }}
+                  }}
               >;
                 {editing_id ? 'Cancel' : 'Back'}
               </Button>;
@@ -298,7 +287,7 @@ if ( {) {
         </Form>;
       </div>;
     </div>);
-}> {
+> {
   editing_id ? 'Cancel' : 'Back';
-}</Button> Next </Button> </div> </div> </form> </Form> </div> </div>);
-}'"}
+</Button> Next </Button> </div> </div> </form> </Form> </div> </div>);
+'"}

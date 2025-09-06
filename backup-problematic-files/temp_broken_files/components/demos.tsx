@@ -45,7 +45,7 @@ export default function DemosPage() {
     }
   ],
 
-  const activeDemoData = demos.find(demo => demo.id === activeDemo),
+  const activeDemoData = demos.find(demo => demo.id = = activeDemo),
   return (
     <>
       <Head>
@@ -73,7 +73,7 @@ export default function DemosPage() {
                 Interactive Demos
               </div>
             </div>
-            
+
             <h1 className=&quot;text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-8 text-white leading-tight tracking-tight&quot;>
               Try Our
               <span className=&quot;block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400&quot;>
@@ -90,7 +90,7 @@ export default function DemosPage() {
 href=&quot;#demos&quot;
                 size=&quot;lg&quot;
                 className=&quot;animate-scale-in shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40&quot;
-                style={{ animationDelay: '0.2s' }}              >
+                style={ animationDelay: '0.2s' }              >
                 Start Testing
                 <Play className=&quot;w-5 h-5 ml-2&quot; />
               </Button>
@@ -99,7 +99,7 @@ href=&quot;/micro-saas&quot;
                 variant=&quot;outline&quot;
                 size=&quot;lg&quot;
                 className=&quot;animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5&quot;
-                style={{ animationDelay: '0.4s' }}              >
+                style={ animationDelay: '0.4s' }              >
                 <Code className=&quot;w-5 h-5 mr-2&quot; />
                 View All Services
               </Button>
@@ -107,7 +107,7 @@ href=&quot;/micro-saas&quot;
           </div>
 
           {/* Stats */}
-          <div className=&quot;grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in&quot; style={{ animationDelay: '0.6s' }}>
+          <div className=&quot;grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in&quot; style={ animationDelay: '0.6s' }>
             <div className=&quot;text-center group&quot;>
               <div className=&quot;text-3xl md:text-4xl font-bold mb-3 text-blue-400 group-hover:scale-110 transition-transform duration-300&quot;>                4
               </div>
@@ -148,11 +148,11 @@ href=&quot;/micro-saas&quot;
           </div>
 
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4&quot;>
-            {demos.map((demo) => (
+            {demos.map(demo) => (
               <button                key={demo.id}
                 onClick={_() => setActiveDemo(demo.id)}
                 className={_`p-4 rounded-lg border transition-all duration-300 text-left group ${
-                  activeDemo === demo.id
+                  activeDemo = = demo.id
                     ? 'border-blue-500 bg-blue-500/10'
                     : 'border-gray-700 bg-gray-800/50 hover:border-gray-600 hover:bg-gray-800/80'}`}
               >
@@ -165,17 +165,17 @@ href=&quot;/micro-saas&quot;
                 <p className=&quot;text-sm text-gray-400 leading-relaxed&quot;>
                   {demo.description}
                 </p>
-                {activeDemo === demo.id && (
+                {activeDemo = = demo.id && (
                   <div className=&quot;mt-3 flex items-center text-blue-400 text-sm&quot;>
                     <CheckCircle className=&quot;w-4 h-4 mr-2&quot; />                    Active Demo
                   </div>
                 )}
               </button>;
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Active Demo */}
       <section className=&quot;py-16 bg-black relative overflow-hidden&quot;>
         <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10&quot;>

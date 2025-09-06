@@ -5,7 +5,7 @@ import { zodResolver } from "@hookform/resolvers/zod",;
 import { z } from "zod",;
 import { useHireRequest } from "@/hooks/useHireRequest",;
 import { TalentProfile } from "@/types/talent",;
-;
+
 interface UseHireRequestFormProps {;
   talent:TalentProfile,;
   onClose:() => void,;
@@ -15,7 +15,7 @@ interface UseHireRequestFormProps {;
     email?:string,;
     id?:string;
   },;}
-;
+
 export interface FormValues {;
   requesterName:string,;
   requesterEmail:string,;
@@ -23,12 +23,11 @@ export interface FormValues {;
   timeline:string,;
   budgetMin:number,;
   budgetMax:number;
-}
-;
+
 export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetails } UseHireRequestFormProps) {;
   const [isSubmitting, setIsSubmitting] = useState(false),;
   const { submitHireRequest } = useHireRequest(),;
-;
+
   // Define the form schema with validation rules;
   const formSchema = z.object({;
     requesterName:z.string().min(2, "Name is required"),;
@@ -41,7 +40,7 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
     message:"Maximum budget must be greater than or equal to minimum budget",;
     path:["budgetMax"];
   }),;
-;
+
   // Initialize the form;
   const form = useForm<FormValues>({;
     resolver:zodResolver(formSchema),;
@@ -52,9 +51,8 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
       timeline:"",;
       budgetMin:talent.hourly_rate || 25,;
       budgetMax:talent.hourly_rate ? talent.hourly_rate * 1.5 :50;
-    }
-  }),;
-;
+    }),;
+
   // Handle form submission;
   const onSubmit = async (values:FormValues) => {;
     setIsSubmitting(true),;
@@ -74,20 +72,17 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
           timeline:values.timeline,;
           budgetMin:values.budgetMin,;
           budgetMax:values.budgetMax;
-        }
-      },;
-;
+        },;
+
       const result = await submitHireRequest(requestData),;
       if (result.success) {;
         onClose(),;
-      }
-    } catch (error) {;
+      } catch (error) {;
       console.error("Error submitting hire request:", error),;
     } finally {;
       setIsSubmitting(false),;
-    }
-  },;
-;
+    },;
+
   return {;
     form,;
     isSubmitting,;
@@ -100,29 +95,28 @@ userDetails?: {
   name?: string;
 email?: string;
 id?: string 
-}
-}export interface FormValues {
+
+export interface FormValues {
   requesterName: string;
 requesterEmail: string;
 projectOverview: string;
 timeline: string;
 budgetMin: number;
 budgetMax: number 
-}export function useHireRequestForm ({
+export function useHireRequestForm ({
   talent, onClose, initialJobTitle, userDetails 
-}: UseHireRequestFormProps) {
+: UseHireRequestFormProps) {
   const [isSubmitting, setIsSubmitting] = useState (false);
 const {
   submitHireRequest 
-}= useHireRequest ();
-//Define the form schema with validation rules const formSchema = z.object ({
+= useHireRequest ();
+/Define the form schema with validation rules const formSchema = z.object ({
   requesterName: z.string () .min (2, "Name is required");
 requesterEmail: z.string () .email ("Valid email is required");
 projectOverview: z.string () .min (10, "Please provide more details about your project");
 timeline: z.string () .min (5, "Please specify your timeline");
 budgetMin: z.number () .min (1, "Budget minimum is required");
-budgetMax: z.number () .min (1, "Budget maximum is required") 
-}) .refine (data => data.budgetMax >= data.budgetMin, {
+budgetMax: z.number () .min (1, "Budget maximum is required") .refine (data => data.budgetMax >= data.budgetMin, {
   //Initialize the form const form = useForm<FormValues> ({
   resolver: zodResolver (formSchema);
 defaultValues: {
@@ -130,22 +124,20 @@ defaultValues: {
 requesterEmail: userDetails?.email || "";
 projectOverview: initialJobTitle ? `Job: $ {
   initialJobTitle 
-}` : "";
+` : "";
 timeline: "";
 budgetMax: talent.hourly rate ? talent.hourly rate * 1.5 : 50 
-}
-});
-// Handle form submission try {
+
+);
+/ Handle form submission try {
   const requestData = {
   talent: {
-  
-}finally {
+
+finally {
   setIsSubmitting (false) 
-}
-};
+
+;
 return {
   form;
 isSubmitting;
 onSubmit 
-}
-}

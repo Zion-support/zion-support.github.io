@@ -7,6 +7,5 @@ const ClientSuccessStoriesSection.js = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default ClientSuccessStoriesSection.js;

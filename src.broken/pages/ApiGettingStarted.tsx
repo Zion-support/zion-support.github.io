@@ -6,5 +6,3 @@ export function ApiGettingStarted() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

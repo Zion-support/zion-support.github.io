@@ -11,7 +11,7 @@ import { ApplicationProgress } from "./ApplicationProgress";
 import { toast } from "sonner";
 interface ApplicationCardProps {
   application: JobApplication
-}
+
 export function ApplicationCard({ application }: ApplicationCardProps) {
   const [expanded, setExpanded] = useState(false);
 
@@ -47,7 +47,6 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
       default:
         return null
     }
-  }
 
   return (
     <Card className="overflow-hidden">
@@ -130,7 +129,7 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
       </CardFooter>
     </Card>
   )
-}
+
               </Link>;
             </Button>;
           </div>;
@@ -148,7 +147,7 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
       </CardFooter>;
     </Card>;
   );
-}
+
         <Button;
           variant="secondary";
           size="sm";
@@ -161,4 +160,3 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
         </Button>;
       </CardFooter>;
     </Card>);
-}

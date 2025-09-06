@@ -6,5 +6,3 @@ export function TrustedBySection() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

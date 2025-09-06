@@ -17,7 +17,7 @@ import {
   FileText,
   Cpu,
   Lock
-} from 'lucide-react';
+ from 'lucide-react';
 
 const itServices = [
   {
@@ -181,7 +181,7 @@ const itServices = [
       }
     ]
   }
-];
+;
 
 const microSaaS = [
   {
@@ -261,7 +261,7 @@ const microSaaS = [
     pricing: "$79/month per user",
     icon: Wifi
   }
-];
+;
 
 const processSteps = [
   {
@@ -289,14 +289,14 @@ const processSteps = [
     title: "Optimization",
     description: "Ongoing optimization and updates to keep your IT infrastructure current."
   }
-];
+;
 
 const stats = [
   { number: "99.9%", label: "Uptime Guarantee" },
   { number: "15min", label: "Response Time" },
   { number: "500+", label: "IT Projects Completed" },
   { number: "24/7", label: "Support Available" }
-];
+;
 
 export default function ITServices() {
   return (
@@ -310,9 +310,9 @@ export default function ITServices() {
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
           >
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               IT Services & Solutions
@@ -344,10 +344,10 @@ export default function ITServices() {
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
           >
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               IT Service Categories
@@ -357,14 +357,14 @@ export default function ITServices() {
             </p>
           </motion.div>
 
-          {itServices.map((category, categoryIndex) => (
+          {itServices.map(category, categoryIndex) => (
             <motion.div
               key={categoryIndex}
               className="mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: categoryIndex * 0.2 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8, delay: categoryIndex * 0.2 }
+              viewport={ once: true }
             >
               <div className="flex items-center mb-8">
                 <div className={`w-16 h-16 bg-gradient-to-r ${category.color} rounded-lg flex items-center justify-center mr-4`}>
@@ -376,11 +376,11 @@ export default function ITServices() {
               </div>
 
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                {category.services.map((service, serviceIndex) => (
+                {category.services.map(service, serviceIndex) => (
                   <motion.div
                     key={serviceIndex}
                     className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-all duration-300 group"
-                    whileHover={{ y: -5 }}
+                    whileHover={ y: -5 }
                   >
                     <h4 className="text-xl font-bold text-gray-900 mb-3">
                       {service.name}
@@ -388,14 +388,14 @@ export default function ITServices() {
                     <p className="text-gray-600 mb-4">
                       {service.description}
                     </p>
-                    
+
                     <ul className="space-y-2 mb-6">
-                      {service.features.map((feature, featureIndex) => (
+                      {service.features.map(feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-sm text-gray-700">
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                           {feature}
                         </li>
-                      ))}
+                      )}
                     </ul>
 
                     <div className="flex justify-between items-center">
@@ -415,10 +415,10 @@ export default function ITServices() {
                       </Link>
                     </div>
                   </motion.div>
-                ))}
+                )}
               </div>
             </motion.div>
-          ))}
+          )}
         </div>
       </section>
 
@@ -427,10 +427,10 @@ export default function ITServices() {
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
           >
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               IT Management Micro SaaS Solutions
@@ -441,15 +441,15 @@ export default function ITServices() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {microSaaS.map((solution, index) => (
+            {microSaaS.map(solution, index) => (
               <motion.div
                 key={index}
                 className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-all duration-300 group"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -5 }}
+                initial={ opacity: 0, y: 30 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.8, delay: index * 0.1 }
+                viewport={ once: true }
+                whileHover={ y: -5 }
               >
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
@@ -459,18 +459,18 @@ export default function ITServices() {
                     {solution.name}
                   </h3>
                 </div>
-                
+
                 <p className="text-gray-600 mb-4">
                   {solution.description}
                 </p>
 
                 <ul className="space-y-2 mb-6">
-                  {solution.features.map((feature, featureIndex) => (
+                  {solution.features.map(feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-sm text-gray-700">
                       <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                       {feature}
                     </li>
-                  ))}
+                  )}
                 </ul>
 
                 <div className="flex justify-between items-center">
@@ -485,7 +485,7 @@ export default function ITServices() {
                   </Link>
                 </div>
               </motion.div>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -495,10 +495,10 @@ export default function ITServices() {
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
           >
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               Our IT Service Process
@@ -509,14 +509,14 @@ export default function ITServices() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
-            {processSteps.map((step, index) => (
+            {processSteps.map(step, index) => (
               <motion.div
                 key={index}
                 className="text-center relative"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, y: 30 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.8, delay: index * 0.1 }
+                viewport={ once: true }
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
                   {step.step}
@@ -531,7 +531,7 @@ export default function ITServices() {
                   <div className="hidden md:block absolute top-8 left-full w-full h-0.5 bg-gray-300 transform translate-x-4"></div>
                 )}
               </motion.div>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -540,14 +540,14 @@ export default function ITServices() {
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
+            {stats.map(stat, index) => (
               <motion.div
                 key={index}
                 className="text-center"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, y: 30 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.8, delay: index * 0.1 }
+                viewport={ once: true }
               >
                 <div className="text-3xl md:text-4xl font-bold mb-2">
                   {stat.number}
@@ -556,7 +556,7 @@ export default function ITServices() {
                   {stat.label}
                 </div>
               </motion.div>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -565,10 +565,10 @@ export default function ITServices() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
               Ready to Transform Your IT Infrastructure?
@@ -600,4 +600,3 @@ export default function ITServices() {
       </section>
     </Layout>
   );
-}

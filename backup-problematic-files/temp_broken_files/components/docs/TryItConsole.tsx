@@ -4,7 +4,6 @@ interface TryItProps {
   method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',
   path: string, // full URL or relative,
 requiresAuth: boolean
-}
 
 export default function TryItConsole({ method, path, requiresAuth }: TryItProps) {
   const [baseUrl, setBaseUrl] = useState('https: //api.zion.os'),
@@ -13,8 +12,8 @@ export default function TryItConsole({ method, path, requiresAuth }: TryItProps)
   const [response, setResponse] = useState<string>(''),
   const [loading, setLoading] = useState(false),
 
-  const url = useMemo(() => {
-    if (path.startsWith('http')) return path,
+  const url = useMemo() => {
+    if (path.startsWith('http') return path,
     return baseUrl.replace(/\/$/, '') + path
   }, [baseUrl, path]),
 
@@ -27,15 +26,14 @@ export default function TryItConsole({ method, path, requiresAuth }: TryItProps)
       const res = await fetch(url, {
         method,
         headers,
-        body: method === 'GET' || method === 'DELETE' ? undefined : body || undefined}),
+        body: method = = 'GET' || method = = 'DELETE' ? undefined : body || undefined}),
       const text = await res.text(),
       setResponse(text)
     } catch (e: any) {
-      setResponse(String(e?.message || e))
+      setResponse(String(e?.message || e)
     } finally {
       setLoading(false)
     }
-  }
 
   return (
     <div className=&quot;space-y-2&quot;>
@@ -52,7 +50,7 @@ export default function TryItConsole({ method, path, requiresAuth }: TryItProps)
           <label className=&quot;block text-sm mb-1&quot;>Method</label>
           <input className=&quot;w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary&quot; value={method} readOnly />        </div>
       </div>
-      {_(method === 'POST' || method === 'PUT' || method === 'PATCH') && (
+      {_(method = = 'POST' || method = = 'PUT' || method = = 'PATCH') && (
         <div>
           <label className=&quot;block text-sm mb-1&quot;>Request Body (JSON)</label>
           <textarea className=&quot;w-full h-32 px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary font-mono text-sm&quot; value={body} onChange={(e) => setBody(e.target.value)} placeholder=&quot;{ }&quot; />

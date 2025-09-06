@@ -6,5 +6,3 @@ export function ExpoHero() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

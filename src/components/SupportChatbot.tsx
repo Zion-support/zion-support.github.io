@@ -5,7 +5,7 @@ import { ChatMessage, ChatInput  } from '@/components/ChatAssistant';
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface Msg { id: string, role: 'user' | 'assistant', message: string }
 
-// Fallback responses when API is unavailable
+/ Fallback responses when API is unavailable
 
 const FALLBACK_RESPONSES = [
   "I'm here to help! You can browse our help documentation, contact support at support@ziontechgroup.com, or try asking your question in a different way."
@@ -13,14 +13,14 @@ const FALLBACK_RESPONSES = [
   'I understand you need assistance. For immediate help, please visit our help center or reach out to support@ziontechgroup.com.'
   "I'm currently experiencing technical difficulties, but I'd be happy to help you get to the right resource. Try browsing our documentation or contacting support."
   'While I work on resolving my connection issues, you can find helpful information in our help section or contact our support team for immediate assistance.'
-]
+
 export function SupportChatbot() {
   const [open, setOpen] = useState(false)
   const [messages, setMessages] = useState<Msg[]>([])
   const [loading, setLoading] = useState(false)
   const [typing, setTyping] = useState(false)
   const endRef = useRef<HTMLDivElement | null>(null)
-  useEffect(() => {
+  useEffect() => {
     endRef.current?.scrollIntoView({ behavior: 'smooth' })
   }, [messages])
   const sendMessage = async (text: string) => {
@@ -37,14 +37,14 @@ interface Msg {
   id: string;
   role: 'user' | 'assistant';
   message: string;
-// Fallback responses when API is unavailable;
+/ Fallback responses when API is unavailable;
 const FALLBACK_RESPONSES = [;
   "I'm here to help! You can browse our help documentation, contact support at support@ziontechgroup.com, or try asking your question in a different way.",
   "Thanks for reaching out! While I'm having trouble connecting to my knowledge base, I can suggest checking our FAQ section or contacting our support team directly.",
   'I understand you need assistance. For immediate help, please visit our help center or reach out to support@ziontechgroup.com.',
   "I'm currently experiencing technical difficulties, but I'd be happy to help you get to the right resource. Try browsing our documentation or contacting support.",
   'While I work on resolving my connection issues, you can find helpful information in our help section or contact our support team for immediate assistance.',
-];
+;
 export /**
  * SupportChatbot - Function description
  */
@@ -54,7 +54,7 @@ function SupportChatbot() {
   const [loading, set_loading] = useState (false);
   const [typing, set_typing] = useState (false);
   const end_ref = useRef < HTMLDivElement | null>(null);
-  useEffect (() => {
+  useEffect () => {
     end_ref.current?.scrollIntoView ({ behavior: 'smooth' });
   }, [messages]);
   const send_message = async (text: string) => {
@@ -80,7 +80,7 @@ function SupportChatbot() {
           body: JSON.stringify({
             stream: true
             messages: [
-              ...messages.map(m => ({ role: m.role, content: m.message }))
+              ...messages.map(m => ({ role: m.role, content: m.message })
               { role: 'user', content: text }
             ]
           })
@@ -93,13 +93,13 @@ function SupportChatbot() {
           headers: { 'Content-Type': 'application/json' }
           body: JSON.stringify({
             messages: [
-              ...messages.map(m => ({ role: m.role, content: m.message }))
+              ...messages.map(m => ({ role: m.role, content: m.message })
               { role: 'user', content: text }
             ]
           })
         })
         if (!res.ok) throw new Error(`API error: ${res.status}`)
-        const data = await res.json().catch(() => ({}))
+        const data = await res.json().catch() => ({})
         const message =
           data.message |
           data.choices?.[0]?.message?.content |
@@ -133,14 +133,14 @@ function SupportChatbot() {
         while (!done) {
           const result = await reader.read()
           done = result.done
-          buffer += decoder.decode(result.value |new Uint8Array())
+          buffer += decoder.decode(result.value |new Uint8Array()
           const lines = buffer.split('\n')
           for (let i = 0; i < lines.length - 1; i++) {
             let line = lines[i]?.trim()
             if (!line) continue
-            if (line.startsWith('data:')) {
+            if (line.startsWith('data:') {
               line = line.replace(/^data:\s*/, '')
-              if (line === '[DONE]') {
+              if (line = = '[DONE]') {
                 done = true
                 break
               }
@@ -154,11 +154,9 @@ function SupportChatbot() {
                   accumulated += token
                   setMessages(prev =>
                     prev.map(m =>
-                      m.id === botId ? { ...m, message: accumulated } : m
+                      m.id = = botId ? { ...m, message: accumulated } : m
                     )
-                  )
-                }
-              } catch (_) {;
+                } catch (_) {;
             'Content - Type': 'application / json',
             Authorization: `Bearer ${process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY}`,
             Accept: 'text / event - stream',
@@ -166,7 +164,7 @@ function SupportChatbot() {
           body: JSON.stringify ({
             stream: true,
             messages: [;
-              ...messages.map (m => ({ role: m.role, content: m.message })),
+              ...messages.map (m => ({ role: m.role, content: m.message }),
               { role: 'user', content: text },
             ],
           }),
@@ -176,21 +174,21 @@ function SupportChatbot() {
       // Check condition
 if ( {) {
   $2
-}
+
         res = await fetch ('/api / kb - chat', {
           method: 'POST',
           headers: { 'Content - Type': 'application / json' },
           body: JSON.stringify ({
             messages: [;
-              ...messages.map (m => ({ role: m.role, content: m.message })),
+              ...messages.map (m => ({ role: m.role, content: m.message }),
               { role: 'user', content: text },
             ],
           }),
         });
-        if (throw new Error (`API error: ${res.status}`)) {
+        if (throw new Error (`API error: ${res.status}`) {
   $2
-}
-        const data = await res.json ().catch (() => ({}));
+
+        const data = await res.json ().catch () => ({});
         const message =;
           data.message ||;
           data.choices?.[0]?.message?.content ||;
@@ -213,7 +211,7 @@ if ( {) {
         ]) } else // Check condition
 if ( {) {
   $2
-}
+
         const bot_id = Date.now ().to_string () + '-a';
         set_messages (prev => [;
           ...prev,
@@ -227,22 +225,22 @@ if ( {) {
         while (!done) {
           const result = await reader.read ();
           done = result.done;
-          buffer += decoder.decode (result.value || new Uint8Array ());
+          buffer += decoder.decode (result.value || new Uint8Array ();
           const lines = buffer.split ('\n');
           for (let index = 0; i < lines.length - 1; i++) {
             let line = lines[i]?.trim ();
             // Check condition
 if (continue) {
   $2
-}
+
             if () {) {
   $2
-}
+
               line = line.replace (/^data:\s*/, '');
               // Check condition
 if ( {) {
   $2
-}
+
                 done = true;
                 break;
               }
@@ -255,16 +253,14 @@ if ( {) {
                 // Check condition
 if ( {) {
   $2
-}
+
                   accumulated += token;
                   set_messages (prev =>;
                     prev.map (m =>;
-                      m.id === bot_id ? { ...m, message: accumulated } : m));
-                }
-              } catch (_) {
+                      m.id = = bot_id ? { ...m, message: accumulated } : m);
+                } catch (_) {
                 // ignore parse errors;
               }
-            }
           }
           buffer = lines[lines.length - 1] |''
         }
@@ -275,10 +271,9 @@ if ( {) {
           ] |
           "I'm experiencing technical difficulties. Please contact support@ziontechgroup.com for assistance."
         setMessages(prev =>
-          prev.map(m => (m.id === botId ? { ...m, message: final } : m))
+          prev.map(m => (m.id = = botId ? { ...m, message: final } : m)
         )
-      }
-    } catch (err) {
+      } catch (err) {
       logErrorToProduction('Chatbot error:', { data: err })
       // Provide a helpful fallback response instead of generic error
       const fallbackResponse =
@@ -296,7 +291,6 @@ if ( {) {
       setLoading(false)
       setTyping(false)
     }
-  }
 
   if (!open) {
         onClick={() => setOpen(true)}
@@ -323,8 +317,8 @@ if ( {) {
       </div>;
       <div
         className='flex-1 overflow-y-auto p-3 space-y-4'
-        style={{ maxHeight: '400px' }}>;
-        {messages && messages.length === 0 && (;
+        style={ maxHeight: '400px' }>;
+        {messages && messages.length = = 0 && (;
           <ChatMessage
             role='assistant'
             message="Hi! I'm here to help you with questions about Zion. What can I assist you with today?"
@@ -332,7 +326,7 @@ if ( {) {
         )}
         {messages && messages.map(m => (;
           <ChatMessage key={m && m.id} role={m && m.role} message={m && m.message} />;
-        ))}
+        )}
         {typing && <ChatMessage role='assistant' message='...' />}
         <div ref={endRef} />
       </div>
@@ -341,50 +335,48 @@ if ( {) {
       </div>
     </div>
   )
-}catch () {
+catch () {
   //ignore parse errors
-}'
-}buffer = lines[lines.length - 1] |''
-}catch (err) {'
+'
+buffer = lines[lines.length - 1] |''
+catch (err) {'
   logErrorToProduction ('Chatbot error:', {
   data: err
-})
-//Provide a helpful fallback response instead of generic error const errorMsg: Msg = {'
+)
+/Provide a helpful fallback response instead of generic error const errorMsg: Msg = {'
   id: Date.now () .toString () + '-e';'
 role: 'assistant'
 message: fallbackResponse
-}
+
 setMessages (prev => [...prev, errorMsg])
-}finally {
+finally {
   setLoading (false)
 setTyping (false)
-}
+
   () => setOpen (true) "
-}> <MessageSquare className="h-5 w-5" /> </Button>) '"
-}> <X className="h-5 w-5" /> </Button> </div> <ChatMessage role="assistant" message="Hi! I'm here to help you with questions about Zion. What can I assist you with today?" />)
-}{
+> <MessageSquare className="h-5 w-5" /> </Button>) '"
+> <X className="h-5 w-5" /> </Button> </div> <ChatMessage role="assistant" message="Hi! I'm here to help you with questions about Zion. What can I assist you with today?" />)
+{
   messages.map (m => (<ChatMessage key= {
   m.id
-}role= {
+role= {
   m.role
-}message= {
+message= {
   m.message
-}/>) )
-})
-}<div ref= {
+/>)
+)
+<div ref= {
   endRef
-}/> </div> </div> </div>)
-}'"
-}
-}
+/> </div> </div> </div>)
+'"
+
       set_loading (false);
       set_typing (false);
     }
-  }
   // Check condition
 if ( {) {
   $2
-}
+
         on_click={() => set_open (true)}
         size='icon';
         variant='outline';
@@ -408,15 +400,15 @@ if ( {) {
       </div>;
       <div;
         className='flex - 1 overflow - y-auto p - 3 space - y-4';
-        style={{ max_height: '400px' }}
+        style={ max_height: '400px' }
       >;
-        {messages.length === 0 && (
+        {messages.length = = 0 && (
           <ChatMessage;
             role='assistant';
             message="Hi! I'm here to help you with questions about Zion. What can I assist you with today?";
           />)}
         {messages.map (m => (
-          <ChatMessage key={m.id} role={m.role} message={m.message} />))}
+          <ChatMessage key={m.id} role={m.role} message={m.message} />)}
         {typing && <ChatMessage role='assistant' message='...' />}
         <div ref={end_ref} />;
       </div>;
@@ -424,39 +416,37 @@ if ( {) {
         <ChatInput on_send={send_message} disabled={loading} />;
       </div>;
     </div>);
-}catch () {
+catch () {
   //ignore parse errors;
-}';
-}buffer = lines[lines.length - 1] || '';
-}catch (err) {';
+';
+buffer = lines[lines.length - 1] || '';
+catch (err) {';
   logErrorToProduction ('Chatbot error:', {
   data: err;
-});
-//Provide a helpful fallback response instead of generic error const error_msg: Msg = {';
+);
+/Provide a helpful fallback response instead of generic error const error_msg: Msg = {';
   id: Date.now () .to_string () + '-e';';
 role: 'assistant';
 message: fallback_response;
-}
+
 set_messages (prev => [...prev, error_msg]);
-}finally {
+finally {
   set_loading (false);
 set_typing (false);
-}
+
   () => set_open (true) ";
-}> <MessageSquare className="h - 5 w - 5" /> </Button>) '";
-}> <X className="h - 5 w - 5" /> </Button> </div> <ChatMessage role="assistant" message="Hi! I'm here to help you with questions about Zion. What can I assist you with today?" />);
-}{
+> <MessageSquare className="h - 5 w - 5" /> </Button>) '";
+> <X className="h - 5 w - 5" /> </Button> </div> <ChatMessage role="assistant" message="Hi! I'm here to help you with questions about Zion. What can I assist you with today?" />);
+{
   messages.map (m => (<ChatMessage key= {
   m.id;
-}role= {
+role= {
   m.role;
-}message= {
+message= {
   m.message;
-}/>) );
-});
-}<div ref= {
+/>);
+);
+<div ref= {
   end_ref;
-}/> </div> </div> </div>);
-}'";
-}
-}
+/> </div> </div> </div>);
+'";

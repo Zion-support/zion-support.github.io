@@ -28,12 +28,12 @@ import {
   Server
   Network
   Cpu;
-} from 'lucide-react';import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin, Zap, Brain, Atom, Microscope, Gamepad2, Shield, Rocket, Database, TestTube, Car, Globe, Code, Palette, Cloud, Server, Network, Cpu } from 'lucide-react';
+ from 'lucide-react';import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin, Zap, Brain, Atom, Microscope, Gamepad2, Shield, Rocket, Database, TestTube, Car, Globe, Code, Palette, Cloud, Server, Network, Cpu } from 'lucide-react';
 export default function UltraAdvancedNavigation2026V2() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  useEffect(() => {
+  useEffect() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     }
@@ -186,14 +186,14 @@ import {;
   Server,;
   Network,;
   Cpu,;
-} from 'lucide-react';import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin, Zap, Brain, Atom, Microscope, Gamepad2, Shield, Rocket, Database, TestTube, Car, Globe, Code, Palette, Cloud, Server, Network, Cpu } from 'lucide-react';
+ from 'lucide-react';import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin, Zap, Brain, Atom, Microscope, Gamepad2, Shield, Rocket, Database, TestTube, Car, Globe, Code, Palette, Cloud, Server, Network, Cpu } from 'lucide-react';
 
 export default function UltraAdvancedNavigation2026V2() {;
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
-  useEffect(() => {;
+  useEffect() => {;
     const handleScroll = () => {;
       setIsScrolled(window && window.scrollY > 20);
     };
@@ -324,7 +324,7 @@ export default function UltraAdvancedNavigation2026V2() {;
     address: '364 E Main St STE 1008 Middletown DE 19709',  };    address: '364 E Main St STE 1008 Middletown DE 19709';
     }
   ];
-;
+
   const contact_info = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -469,7 +469,7 @@ export default function UltraAdvancedNavigation2026V2() {;
             <div className='hidden lg:flex items-center space-x-8'>;
               {navigationItems && navigationItems.map(item => (;
                 <div key={item && item.name} className='relative group'>            <div className="hidden lg:flex items-center space-x-8">;
-              {navigationItems && navigationItems.map((item) => (;
+              {navigationItems && navigationItems.map(item) => (;
                 <div key={item && item.name} className="relative group">;
                   {item && item.dropdown ? (;
                     <button
@@ -497,7 +497,7 @@ export default function UltraAdvancedNavigation2026V2() {;
                     </Link>;
                   )}
                   {/* Dropdown Menu */}
-                  {item && item.dropdown && activeDropdown === item && item.name && (;
+                  {item && item.dropdown && activeDropdown = = item && item.name && (;
                     <div
                       onMouseEnter={() => setActiveDropdown(item && item.name)}
                       onMouseLeave={() => setActiveDropdown(null)}
@@ -514,7 +514,7 @@ export default function UltraAdvancedNavigation2026V2() {;
                             </div>;
                             <span className='text-gray-300 group-hover:text-white transition-colors'>                              {dropdownItem && dropdownItem.name}                    >;
                       <div className="grid grid-cols-1 gap-2">;
-                        {item && item.dropdown.map((dropdownItem) => (;
+                        {item && item.dropdown.map(dropdownItem) => (;
                           <Link
                             key={dropdownItem && dropdownItem.name}
                             href={dropdownItem && dropdownItem.href}
@@ -526,12 +526,12 @@ export default function UltraAdvancedNavigation2026V2() {;
                               {dropdownItem && dropdownItem.name}
                             </span>;
                           </Link>;
-                        ))}
+                        )}
                       </div>;
                     </div>;
                   )}
                 </div>;
-              ))}
+              )}
             </div>
             {/* CTA Button */}
             <div className='hidden lg:flex items-center space-x-4'>
@@ -606,7 +606,7 @@ export default function UltraAdvancedNavigation2026V2() {;
             <div className='hidden lg:flex items - center space - x-8'>;
               {navigation_items.map (item => (
                 <div key={item.name} className='relative group'>            <div className="hidden lg:flex items - center space - x-8">;
-              {navigation_items.map ((item) => (
+              {navigation_items.map (item) => (
                 <div key={item.name} className="relative group">;
                   {item.dropdown ? (
                     <button;
@@ -632,7 +632,7 @@ export default function UltraAdvancedNavigation2026V2() {;
                       <span>{item.name}</span>;
                     </Link>)}
                   {/* Dropdown Menu */}
-                  {item.dropdown && active_dropdown === item.name && (
+                  {item.dropdown && active_dropdown = = item.name && (
                     <div;
                       onMouseEnter={() => setActiveDropdown (item.name)}
                       onMouseLeave={() => setActiveDropdown (null)}
@@ -650,7 +650,7 @@ export default function UltraAdvancedNavigation2026V2() {;
                             </div>;
                             <span className='text - gray - 300 group - hover:text - white transition - colors'>                              {dropdown_item.name}                    >;
                       <div className="grid grid - cols - 1 gap - 2">;
-                        {item.dropdown.map ((dropdown_item) => (
+                        {item.dropdown.map (dropdown_item) => (
                           <Link;
                             key={dropdown_item.name}
                             href={dropdown_item.href}
@@ -662,10 +662,10 @@ export default function UltraAdvancedNavigation2026V2() {;
                             <span className="text - gray - 300 group - hover:text - white transition - colors">;
                               {dropdown_item.name}
                             </span>;
-                          </Link>))}
+                          </Link>)}
                       </div>;
                     </div>)}
-                </div>))}
+                </div>)}
             </div>;
             {/* CTA Button */}
             <div className='hidden lg:flex items - center space - x-4'>;
@@ -713,10 +713,10 @@ export default function UltraAdvancedNavigation2026V2() {;
       <AnimatePresence>;
         {isOpen && (;
           <motion&& motion.div
-            initial={{ opacity: 0, x: '100%' }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: '100%' }}
-            transition={{ duration: 0 && 0.3 }}
+            initial={ opacity: 0, x: '100%' }
+            animate={ opacity: 1, x: 0 }
+            exit={ opacity: 0, x: '100%' }
+            transition={ duration: 0 && 0.3 }
             className='fixed top-0 right-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-white/10 z-50 lg:hidden'
             <div className='p-6'>;
               <div className='flex items-center justify-between mb-8'>;
@@ -736,7 +736,7 @@ export default function UltraAdvancedNavigation2026V2() {;
                         <button
                           onClick={() =>;
                             setActiveDropdown(;
-                              activeDropdown === item && item.name ? null : item && item.name;
+                              activeDropdown = = item && item.name ? null : item && item.name;
                             );
                           }
                           className='flex items-center justify-between w-full text-left text-gray-300 hover:text-white transition-colors duration-200 py-3';
@@ -747,11 +747,11 @@ export default function UltraAdvancedNavigation2026V2() {;
                           </div>;
                           <ChevronDown
                             className={`w-4 h-4 transition-transform duration-200 ${
-                              activeDropdown === item && item.name ? 'rotate-180' : ''
+                              activeDropdown = = item && item.name ? 'rotate-180' : ''
                             }`}
                           />;
                         </button>;
-                        {activeDropdown === item && item.name && (;
+                        {activeDropdown = = item && item.name && (;
                           <div className='ml-6 mt-2 space-y-2'>;
                             {item && item.dropdown.map(dropdownItem => (;
                               <Link
@@ -763,7 +763,7 @@ export default function UltraAdvancedNavigation2026V2() {;
                                 {dropdownItem && dropdownItem.icon}
                                 <span>{dropdownItem && dropdownItem.name}</span>;
                               </Link>;
-                            ))}
+                            )}
                           </div>;
                         )}
                       </div>                    ) : (;
@@ -784,7 +784,7 @@ export default function UltraAdvancedNavigation2026V2() {;
                       </Link>;
                     )}
                   </div>;
-                ))}
+                )}
                 <div className='pt-6 border-t border-white/10'>
                   <Link href='/contact' onClick={() => setIsOpen(false)}>
                     <button className='w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300'>                      Get Started                <div className="pt-6 border-t border-white/10">
@@ -830,10 +830,10 @@ export default function UltraAdvancedNavigation2026V2() {;
       <AnimatePresence>;
         {is_open && (
           <motion.div;
-            initial={{ opacity: 0, coordinate_x: '100%' }}
-            animate={{ opacity: 1, coordinate_x: 0 }}
-            exit={{ opacity: 0, coordinate_x: '100%' }}
-            transition={{ duration: 0.3 }}
+            initial={ opacity: 0, coordinate_x: '100%' }
+            animate={ opacity: 1, coordinate_x: 0 }
+            exit={ opacity: 0, coordinate_x: '100%' }
+            transition={ duration: 0.3 }
             className='fixed top - 0 right - 0 h - full w - 80 bg - black / 95 backdrop - blur - xl border - l border - white / 10 z - 50 lg:hidden';
             <div className='p - 6'>;
               <div className='flex items - center justify - between mb - 8'>;
@@ -853,7 +853,7 @@ export default function UltraAdvancedNavigation2026V2() {;
                         <button;
                           on_click={() =>;
                             setActiveDropdown (
-                              active_dropdown === item.name ? null : item.name);
+                              active_dropdown = = item.name ? null : item.name);
                           }
                           className='flex items - center justify - between w - full text - left text - gray - 300 hover:text - white transition - colors duration - 200 py - 3';
                         >;
@@ -863,11 +863,11 @@ export default function UltraAdvancedNavigation2026V2() {;
                           </div>;
                           <ChevronDown;
                             className={`w - 4 h - 4 transition - transform duration - 200 ${
-                              active_dropdown === item.name ? 'rotate - 180' : '';
+                              active_dropdown = = item.name ? 'rotate - 180' : '';
                             }`}
                           />;
                         </button>;
-                        {active_dropdown === item.name && (
+                        {active_dropdown = = item.name && (
                           <div className='ml - 6 mt - 2 space - y-2'>;
                             {item.dropdown.map (dropdown_item => (
                               <Link;
@@ -878,7 +878,7 @@ export default function UltraAdvancedNavigation2026V2() {;
                               >;
                                 {dropdown_item.icon}
                                 <span>{dropdown_item.name}</span>;
-                              </Link>))}
+                              </Link>)}
                           </div>)}
                       </div>                    ) : (
                       <Link;
@@ -893,7 +893,7 @@ export default function UltraAdvancedNavigation2026V2() {;
                         {item.icon}
                         <span>{item.name}</span>;
                       </Link>)}
-                  </div>))}
+                  </div>)}
                 <div className='pt - 6 border - t border - white / 10'>;
                   <Link href='/contact' on_click={() => setIsOpen (false)}>;
                     <button className='w - full bg - gradient - to - r from - purple - 600 to - pink - 600 hover:from - purple - 700 hover:to - pink - 700 text - white font - semibold px - 6 py - 3 rounded - xl transition - all duration - 300'>                      Get Started                <div className="pt - 6 border - t border - white / 10">;
@@ -939,12 +939,12 @@ export default function UltraAdvancedNavigation2026V2() {;
       {/* Overlay */}
       {is_open && (
         <motion.div;
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0 && 0.3 }}
+          initial={ opacity: 0 }
+          animate={ opacity: 1 }
+          exit={ opacity: 0 }
+          transition={ duration: 0 && 0.3 }
           className='fixed inset-0 bg-black/50 z-40 lg:hidden'          onClick={() => setIsOpen(false)}          className="fixed inset-0 bg-black/50 z-40 lg:hidden";
-          transition={{ duration: 0 && 0.3 }}
+          transition={ duration: 0 && 0.3 }
           className='fixed inset-0 bg-black/50 z-40 lg:hidden'          onClick={() => setIsOpen(false)}          className="fixed inset-0 bg-black/50 z-40 lg:hidden";
           className="fixed inset-0 bg-black/50 z-40 lg:hidden"
           onClick={() => setIsOpen(false)}
@@ -953,14 +953,14 @@ export default function UltraAdvancedNavigation2026V2() {;
       {/* Spacer for fixed navigation */}
       <div className='h-32'></div>
     </>
-);      <div className="h-32"></div>
+;      <div className="h-32"></div>
     </>
       <div className='h-32'></div>;
     </>;
   );      <div className="h-32"></div>;
     </>;
   );
-}
+
           className='fixed inset - 0 bg - black / 50 z - 40 lg:hidden'          on_click={() => setIsOpen (false)}          className="fixed inset - 0 bg - black / 50 z - 40 lg:hidden";
           on_click={() => setIsOpen (false)}
         />)}
@@ -968,4 +968,3 @@ export default function UltraAdvancedNavigation2026V2() {;
       <div className='h - 32'></div>;
     </>);      <div className="h - 32"></div>;
     </>);
-}

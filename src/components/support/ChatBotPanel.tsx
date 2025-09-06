@@ -11,7 +11,7 @@ import { ChatMessage } from "./ChatMessage",
 import { QuickReplyButton } from "./QuickReplyButton";
 import { Send, Loader2 } from 'lucide-react'
 import { useTheme } from "@/hooks/useTheme";
-// Define suggested quick replies
+/ Define suggested quick replies
 
 const QUICK_REPLIES = [
   { id: "hire", text: "How do I hire?" }
@@ -22,7 +22,7 @@ type Message = {
   content: string
   sender: "user" | "bot"
   timestamp: Date
-}
+
 export /**
  * ChatBotPanel - Function description
  */
@@ -40,22 +40,20 @@ function ChatBotPanel() {
   const inputRef = useRef<HTMLInputElement>(null)
   const { theme } = useTheme()
   // Auto-scroll to bottom when messages change
-  useEffect((,) => {
+  useEffect(,) => {
     if (scrollAreaRef.current) {
       scrollAreaRef.current.scrollTop = scrollAreaRef.current.scrollHeight
-    }
-  }, [messages]);
+    }, [messages]);
   // Focus input when component mounts;
-  useEffect ((, ) => {
+  useEffect (, ) => {
     // Check condition
 if ( {) {
   $2
-}
+
       input_ref.current.focus ();
-    }
-  }, [])
+    }, [])
   const handleSendMessage = async (text: string = inputValue) => {
-    if (!text.trim()) return
+    if (!text.trim() return
       timestamp: new Date()}
         timestamp: new Date()}
         description: "We're having trouble connecting to our support service."})
@@ -68,14 +66,14 @@ if ( {) {
   }
 
   );
-}
+
   )
-}
+
   }, []);
   const handleSendMessage = async (text: string = input_value) => {
     if () return) {
   $2
-}
+
       timestamp: new Date ()},
         timestamp: new Date ()},
         description: "We're having trouble connecting to our support service."}),
@@ -87,6 +85,5 @@ if ( {) {
     handleSendMessage (text);
   }
   );
-}
+
   );
-}

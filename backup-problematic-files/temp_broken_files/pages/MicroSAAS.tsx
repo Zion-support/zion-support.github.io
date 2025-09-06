@@ -3,7 +3,6 @@ import Layout from '../components/Layout';
 
 interface MicroSAASProps {
   className?: string;
-}
 
 const MicroSAAS: React.FC<MicroSAASProps> = ({ className }) => {
   return (
@@ -12,6 +11,5 @@ const MicroSAAS: React.FC<MicroSAASProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default MicroSAAS;

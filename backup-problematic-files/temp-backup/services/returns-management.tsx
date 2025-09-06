@@ -3,7 +3,6 @@ import React from 'react';
 
 interface Returns-managementProps {
   className?: string;
-}
 
 const Returns-management: React.FC<Returns-managementProps> = ({ className }) => {
   return (
@@ -12,6 +11,3 @@ const Returns-management: React.FC<Returns-managementProps> = ({ className }) =>
       <p>This component is under development.</p>
     </div>
   );
-}
-}
-}

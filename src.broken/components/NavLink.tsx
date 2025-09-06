@@ -6,5 +6,3 @@ export function NavLink() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

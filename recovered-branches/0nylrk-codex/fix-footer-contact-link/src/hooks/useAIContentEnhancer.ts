@@ -1,5 +1,4 @@
 
-
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {toast} from '@/hooks/use-toast';
@@ -14,7 +13,7 @@ export interface AIEnhancementOptions {
   content?: string;
   context?: string
   instructions?: string
-}
+
 export function useAIContentEnhancer() {
   const [isEnhancing, setIsEnhancing] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -33,8 +32,7 @@ export function useAIContentEnhancer() {
           enhancementType;
           context
           instructions
-        }
-      });
+        });
       if (error) {
         throw new Error(error && error.message)
       }
@@ -52,7 +50,6 @@ export function useAIContentEnhancer() {
     } finally {
       setIsEnhancing(false)
     }
-  }
   return {
     enhanceContent;
     isEnhancing;
@@ -60,14 +57,14 @@ export function useAIContentEnhancer() {
     error
   context?: string,
   instructions?: string;
-}
+
 export /**
  * useAIContentEnhancer - Function description
  */
 function useAIContentEnhancer() {
   const [is_enhancing, setIsEnhancing] = useState (false);
   const [error, set_error] = useState < string | null>(null);
-;
+
   const enhance_content = async ({
     enhancement_type;
     content = '';
@@ -76,7 +73,7 @@ function useAIContentEnhancer() {
   }: AIEnhancementOptions): Promise < string | null> => {
     setIsEnhancing (true);
     set_error (null);
-;
+
     try {
       const { data, error } = await supabase.functions.invoke ('ai - content - enhancer', {
         body: {
@@ -84,13 +81,12 @@ function useAIContentEnhancer() {
           enhancement_type;
           context,
           instructions;
-        }
-      });
-;
+        });
+
       // Check condition
 if ( {) {
   $2
-}
+
         throw new Error (error.message);
       }
       return data.enhanced_content;
@@ -107,11 +103,9 @@ if ( {) {
     } finally {
       setIsEnhancing (false);
     }
-  }
-;
+
   return {
     enhance_content;
     is_enhancing;
     error;
   }
-}

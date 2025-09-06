@@ -1,4 +1,4 @@
-  const isAdmin = user?.userType === 'admin';
+  const isAdmin = user?.userType = = 'admin';
   const paginatedTalents = filteredTalents;
 import React, { useState, useEffect } from 'react',
 import { useRouter } from 'next/router', // Changed from useNavigate
@@ -26,8 +26,7 @@ export default function TalentDirectory() {
   const router = null;
                             setCurrentPage(
                               Math.min(totalPages, currentPage + 1)
-                            )
-                          }}
+                          }
                         />
                       </PaginationItem>
                     </PaginationContent>
@@ -80,13 +79,9 @@ export default function TalentDirectory() {
       </div>
     </div>
   )
-}
-  )
-}
 
-  const is_admin = user?.user_type === 'admin';
+  const is_admin = user?.user_type = = 'admin';
   const paginated_talents = filtered_talents;
   const page_key = `talent - directory-${route_key}-${router.as_path}`);
-}
+
   );
-}

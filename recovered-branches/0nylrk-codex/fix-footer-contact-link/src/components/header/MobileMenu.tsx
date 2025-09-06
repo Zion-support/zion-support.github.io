@@ -8,7 +8,6 @@ import { Button } from "@/components/ui/button";
 export interface MobileMenuProps {
   unreadCount?: number;
   onClose: () => void;
-}
 
 export function MobileMenu(): any ({ unreadCount = 0, onClose }: MobileMenuProps) {;
   const location = useLocation();
@@ -19,7 +18,7 @@ export function MobileMenu(): any ({ unreadCount = 0, onClose }: MobileMenuProps
       name: "Home"
       href: "/"
       icon: Home
-      matches: (path: string) => path === "/"
+      matches: (path: string) => path = = "/"
     }
     {
       name: "Browse"
@@ -58,8 +57,7 @@ export function MobileMenu(): any ({ unreadCount = 0, onClose }: MobileMenuProps
   ];
   // Filter items based on auth status
   const visibleItems = navItems.filter(item =>
-    !item.authRequired |(item.authRequired && isAuthenticated)
-  );
+    !item.authRequired |(item.authRequired && isAuthenticated);
   return (
     <div className="py-6">
       <div className="flex justify-between items-center px-6 mb-6">
@@ -91,11 +89,11 @@ export function MobileMenu(): any ({ unreadCount = 0, onClose }: MobileMenuProps
             </div>;
             {item && item.name}
           </Link>;
-        ))}
+        )}
       </nav>
     </div>
   )
-}
+
 import { Link } from './react-router-dom';
 import { use_location } from './react-router-dom';
 import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } from './lucide-react';
@@ -105,7 +103,7 @@ import { Button } from '@/components / ui / button';
 export interface MobileMenuProps {
   unread_count?: number;
   on_close: () => void;
-}
+
 export /**
  * MobileMenu - Function description
  */
@@ -113,13 +111,13 @@ function MobileMenu() {
   const location = use_location ();
   const { user } = use_auth ();
   const is_authenticated = !!user;
-;
+
   const nav_items = [;
     {
       name: "Home",
       href: "/",
       icon: Home,
-      matches: (path: string) => path === "/";
+      matches: (path: string) => path = = "/";
     }
     {
       name: "Browse",
@@ -156,11 +154,11 @@ function MobileMenu() {
       auth_required: true;
     }
   ];
-;
+
   // Filter items based on auth status;
   const visible_items = nav_items.filter (item =>;
-    !item.auth_required || (item.auth_required && is_authenticated));
-;
+    !item.auth_required || (item.auth_required && is_authenticated);
+
   return (
     <div className="py - 6">;
       <div className="flex justify - between items - center px - 6 mb - 6">;
@@ -189,7 +187,6 @@ function MobileMenu() {
                 </span>)}
             </div>;
             {item.name}
-          </Link>))}
+          </Link>)}
       </nav>;
     </div>);
-}

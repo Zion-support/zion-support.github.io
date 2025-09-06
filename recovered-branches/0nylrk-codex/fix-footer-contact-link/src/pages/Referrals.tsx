@@ -53,15 +53,14 @@ function ReferralsPage() {
     getReferralLink;
     copyReferralLink;
     shareOnSocialMedia} = useReferrals();
-  useEffect(() => {
+  useEffect() => {
     if (!isAuthenticated) {
       toast({
         title: "Authentication required"
         description: "Please login to access the referral program"
         variant: "destructive"})
       navigate("/login")
-    }
-  }, [isAuthenticated, navigate]);
+    }, [isAuthenticated, navigate]);
   const referralLink = getReferralLink();
 
   return (
@@ -112,13 +111,12 @@ function ReferralsPage() {
       </div>
     </div>
   )
-}
+
           <ReferralGuide />;
           <ReferralLeaderboard />;
         </div>;
       </div>;
     </div>;
   );
-}
+
     </div>);
-}

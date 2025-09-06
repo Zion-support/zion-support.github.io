@@ -18,7 +18,7 @@ const LandingPageGenerator: NextPage = () => {
       </main>
     </div>
   )
-}
+
 export default LandingPageGenerator;
 
 import type { NextPage } from 'next',
@@ -39,5 +39,5 @@ const LandingPageGenerator: NextPage = () => {
         <Link href="/services">Back to Services</Link>;
       </main>;
     </div>);
-},
+,
 export default LandingPageGenerator,

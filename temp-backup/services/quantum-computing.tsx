@@ -3,11 +3,11 @@ import Link from \'next/link\'; import Head from \'next/head\'; export default f
 import React from 'react';
 interface QuantumcomputingProps {
   // Add props here as needed
-}
+
 export default function Quantumcomputing({ }: QuantumcomputingProps) {
 interface QuantumcomputingProps {;
   // Add props here as needed;
-}
+
 export default function Quantumcomputing(): any ({ }: QuantumcomputingProps) {;
   return (
     <div>;
@@ -15,7 +15,3 @@ export default function Quantumcomputing(): any ({ }: QuantumcomputingProps) {;
       <p>This component is currently under development.</p>;
     </div>;
   );
-}
-}
-
-

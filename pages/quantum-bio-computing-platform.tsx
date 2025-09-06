@@ -56,7 +56,7 @@ export default function QuantumBioComputingPlatformPage() {
 			</div>
 		</UltraFuturisticBackground>
 	)
-}
+
 import React from 'react';
 import Head from 'next / head';
 import UltraFuturisticBackground from '../components / ui / UltraFuturisticBackground';
@@ -95,4 +95,3 @@ function QuantumBioComputingPlatformPage() {
         </ul>;
       </div>;
     </UltraFuturisticBackground>);
-;

@@ -9,4 +9,3 @@ export default function AutoUpdatePage7() {
       <p className=&quot;mt-2 text-gray-600 dark:text-gray-300&quot;>Generated content.</p>
     </div>
   )
-}

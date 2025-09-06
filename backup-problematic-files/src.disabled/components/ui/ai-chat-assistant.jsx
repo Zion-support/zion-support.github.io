@@ -7,6 +7,5 @@ const Ai-chat-assistant = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default Ai-chat-assistant;

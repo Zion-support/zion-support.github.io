@@ -6,5 +6,3 @@ export function AuthContext() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

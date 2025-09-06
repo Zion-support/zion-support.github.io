@@ -5,8 +5,7 @@ export type WorkExperience = {;
   startDate?: string;
   endDate?: string;
   description: string;
-}
-;
+
 export type Education = {;
   id: string;
   school: string;
@@ -15,15 +14,13 @@ export type Education = {;
   startDate?: string;
   endDate?: string;
   description?: string;
-}
-;
+
 export type Certification = {;
   id: string;
   name: string;
   issuer?: string;
   date?: string;
-}
-;
+
 export type PortfolioProject = {;
   id: string;
   title: string;
@@ -33,7 +30,6 @@ export type PortfolioProject = {;
   assetUrl?: string;
   liveDemoUrl?: string;
   githubUrl?: string;
-}
 
 export type ResumeDocument = {
   id: string
@@ -49,9 +45,7 @@ export type ResumeDocument = {
   publicSlug?: string
   updatedAt: string
   createdAt: string
-}
-;
+
 export type AiImprovePayload = {;
   field: 'summary' | 'work' | 'education' | 'certifications' | 'projects';
   context: any;
-}

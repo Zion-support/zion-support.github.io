@@ -3,26 +3,22 @@ import Head from 'next/head',;
 import Card from '../components/ui/Card',;
 import Button from '../components/ui/Button',;
 import { Mail, CheckCircle, XCircle, AlertTriangle, ArrowRight, Copy, RefreshCw, Shield, Zap, BarChart3 } from 'lucide-react',;
-;
+
 export default function EmailValidatorPage() {;
   const [emails, setEmails] = useState(''),;
   const [validationResults, setValidationResults] = useState<any[]>([]),;
   const [isValidating, setIsValidating] = useState(false),;
   const [bulkMode, setBulkMode] = useState(false),;
-;
+
   const validateEmails = async () => {;
-    if (!emails.trim()) return,;
-    ;
+    if (!emails.trim() return,;
     setIsValidating(true),;
     setValidationResults([]),;
-    ;
-    const emailList = emails.split('\n').filter(email => email.trim()),;
+    const emailList = emails.split('\n').filter(email => email.trim(),;
     const results = [],;
-    ;
     // Simulate email validation with realistic results;
     for (let i = 0, i < emailList.length, i++) {;
-      await new Promise(resolve => setTimeout(resolve, 200)),;
-      ;
+      await new Promise(resolve => setTimeout(resolve, 200),;
       const email = emailList[i].trim(),;
       const result = validateSingleEmail(email),;
       results.push(result),;
@@ -31,17 +27,15 @@ export default function EmailValidatorPage() {;
     setValidationResults(results),;
     setIsValidating(false),;
   },;
-;
+
   const validateSingleEmail = (email:string) => {;
     // Basic email regex;
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,;
-    ;
     // Check for common disposable email domains;
     const disposableDomains = [;
       'tempmail.orgguerrillamail.com', 'mailinator.com10minutemail.com',;
       'throwaway.emailtemp-mail.org', 'sharklasers.comgetairmail.com';
     ],;
-    ;
     // Check for common typos;
     const commonTypos = {;
       'gmail.com':['gmial.comgamil.com', 'gmai.com'],;
@@ -49,18 +43,15 @@ export default function EmailValidatorPage() {;
       'hotmail.com':['hotmai.comhotmial.com', 'hotmeil.com'],;
       'outlook.com':['outlok.comoutloook.com', 'outlok.com'];
     },;
-    ;
     const domain = email.split('@')[1],;
     const isDisposable = disposableDomains.includes(domain),;
-    const hasTypo = Object.entries(commonTypos).some(([correct, typos]) => ;
+    const hasTypo = Object.entries(commonTypos).some([correct, typos]) => ;
       typos.includes(domain);
     ),;
-    ;
     let status = 'valid',;
     let score = 100,;
     let issues = [],;
-    ;
-    if (!emailRegex.test(email)) {;
+    if (!emailRegex.test(email) {;
       status = 'invalid',;
       score = 0,;
       issues.push('Invalid email format'),;
@@ -98,7 +89,7 @@ export default function EmailValidatorPage() {;
       timestamp:new Date().toLocaleTimeString();
     },;
   },;
-;
+
   const getStatusIcon = (status:string) => {;
     switch (status) {;
       case 'valid':;
@@ -111,9 +102,8 @@ export default function EmailValidatorPage() {;
         return <XCircle className="w-5 h-5 text-red-400" />,;
       default:;
         return <AlertTriangle className="w-5 h-5 text-gray-400" />;
-    }
-  },;
-;
+    },;
+
   const getStatusColor = (status:string) => {;
     switch (status) {;
       case 'valid':;
@@ -126,43 +116,40 @@ export default function EmailValidatorPage() {;
         return 'text-red-400',;
       default:;
         return 'text-gray-400';
-    }
-  },;
-;
+    },;
+
   const getScoreColor = (score:number) => {;
     if (score >= 80) return 'text-green-400',;
     if (score >= 60) return 'text-yellow-400',;
     if (score >= 40) return 'text-orange-400',;
     return 'text-red-400';
   },;
-;
+
   const copyResults = () => {;
     const resultsText = validationResults.map(result => ;
       `${result.email} - ${result.status.toUpperCase()} (Score:${result.score})`;
     ).join('\n'),;
     navigator.clipboard.writeText(resultsText),;
   },;
-;
+
   const clearResults = () => {;
     setValidationResults([]),;
     setEmails(''),;
   },;
-;
+
   const getStats = () => {;
-    if (validationResults.length === 0) return null,;
-    ;
+    if (validationResults.length = = 0) return null,;
     const total = validationResults.length,;
-    const valid = validationResults.filter(r => r.status === 'valid').length,;
-    const invalid = validationResults.filter(r => r.status === 'invalid').length,;
-    const suspicious = validationResults.filter(r => r.status === 'suspicious').length,;
-    const disposable = validationResults.filter(r => r.status === 'disposable').length,;
-    const avgScore = validationResults.reduce((sum, r) => sum + r.score, 0) / total,;
-    ;
+    const valid = validationResults.filter(r => r.status = = 'valid').length,;
+    const invalid = validationResults.filter(r => r.status = = 'invalid').length,;
+    const suspicious = validationResults.filter(r => r.status = = 'suspicious').length,;
+    const disposable = validationResults.filter(r => r.status = = 'disposable').length,;
+    const avgScore = validationResults.reduce(sum, r) => sum + r.score, 0) / total,;
     return { total, valid, invalid, suspicious, disposable, avgScore },;
   },;
-;
+
   const stats = getStats(),;
-;
+
   return (;
     <>;
       <Head>;
@@ -171,7 +158,7 @@ export default function EmailValidatorPage() {;
         <meta property="og:title" content="Email Validator - Zion Tech Group" />;
         <meta property="og:description" content="Advanced email validation service to ensure deliverability and prevent typos." />;
       </Head>;
-;
+
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
@@ -190,7 +177,7 @@ export default function EmailValidatorPage() {;
           </p>;
         </div>;
       </section>;
-;
+
       {/* Email Validation Tool */}
       <section className="py-20 bg-gray-900">;
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">;
@@ -202,7 +189,7 @@ export default function EmailValidatorPage() {;
               Our advanced validation engine checks multiple factors to ensure email quality and deliverability.;
             </p>;
           </div>;
-;
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
             {/* Input Form */}
             <Card className="p-8 bg-gray-800 border border-gray-700">;
@@ -221,7 +208,7 @@ export default function EmailValidatorPage() {;
                   />;
                 </div>;
               </div>;
-;
+
               <div className="space-y-6">;
                 {bulkMode ? (;
                   <div>;
@@ -250,7 +237,7 @@ export default function EmailValidatorPage() {;
                     />;
                   </div>;
                 )}
-;
+
                 <div className="flex space-x-3">;
                   <Button;
                     onClick={validateEmails}
@@ -269,7 +256,6 @@ export default function EmailValidatorPage() {;
                       </>;
                     )}
                   </Button>;
-                  ;
                   {validationResults.length > 0 && (;
                     <Button;
                       onClick={clearResults}
@@ -280,7 +266,7 @@ export default function EmailValidatorPage() {;
                     </Button>;
                   )}
                 </div>;
-;
+
                 <div className="text-sm text-gray-400">;
                   <p> Validates email format and syntax</p>;
                   <p> Checks for disposable email domains</p>;
@@ -289,7 +275,7 @@ export default function EmailValidatorPage() {;
                 </div>;
               </div>;
             </Card>;
-;
+
             {/* Validation Results */}
             <Card className="p-8 bg-gray-800 border border-gray-700">;
               <div className="flex items-center justify-between mb-6">;
@@ -309,7 +295,7 @@ export default function EmailValidatorPage() {;
                   </Button>;
                 )}
               </div>;
-;
+
               {stats && (;
                 <div className="mb-6 p-4 bg-gray-900 rounded-lg border border-gray-700">;
                   <div className="grid grid-cols-2 gap-4 text-sm">;
@@ -334,16 +320,16 @@ export default function EmailValidatorPage() {;
                   </div>;
                 </div>;
               )}
-;
+
               {validationResults.length > 0 ? (;
                 <div className="space-y-3 max-h-96 overflow-y-auto">;
-                  {validationResults.map((result, index) => (;
+                  {validationResults.map(result, index) => (;
                     <div;
                       key={index}
                       className={`p-4 rounded-lg border ${;
-                        result.status === 'valid' ? 'border-green-500/30 bg-green-500/10' :;
-                        result.status === 'suspicious' ? 'border-yellow-500/30 bg-yellow-500/10' :;
-                        result.status === 'disposable' ? 'border-orange-500/30 bg-orange-500/10' :;
+                        result.status = = 'valid' ? 'border-green-500/30 bg-green-500/10' :;
+                        result.status = = 'suspicious' ? 'border-yellow-500/30 bg-yellow-500/10' :;
+                        result.status = = 'disposable' ? 'border-orange-500/30 bg-orange-500/10' :;
                         'border-red-500/30 bg-red-500/10';
                       }`}
                     >;
@@ -358,39 +344,38 @@ export default function EmailValidatorPage() {;
                           Score:{result.score}
                         </span>;
                       </div>;
-                      ;
                       <div className="text-sm text-gray-300 mb-2">;
                         <span className="text-gray-400">Domain:</span>;
                         <span className="ml-2">{result.domain}</span>;
                       </div>;
-;
+
                       {result.issues.length > 0 && (;
                         <div className="text-sm">;
                           <span className="text-gray-400">Issues:</span>;
                           <ul className="mt-1 space-y-1">;
-                            {result.issues.map((issue:string, issueIndex:number) => (;
+                            {result.issues.map(issue:string, issueIndex:number) => (;
                               <li key={issueIndex} className="text-red-300 flex items-center">;
                                 <XCircle className="w-3 h-3 mr-2 flex-shrink-0" />;
                                 {issue}
                               </li>;
-                            ))}
+                            )}
                           </ul>;
                         </div>;
                       )}
-;
+
                       {result.isDisposable && (;
                         <div className="mt-2 p-2 bg-orange-500/20 border border-orange-500/30 rounded text-sm text-orange-300">;
                            Disposable email domain detected;
                         </div>;
                       )}
-;
+
                       {result.hasTypo && (;
                         <div className="mt-2 p-2 bg-yellow-500/20 border border-yellow-500/30 rounded text-sm text-yellow-300">;
                            Possible typo detected in domain;
                         </div>;
                       )}
                     </div>;
-                  ))}
+                  )}
                 </div>;
               ) :(;
                 <div className="bg-gray-900 p-6 rounded-lg border border-gray-700 text-center">;
@@ -404,7 +389,7 @@ export default function EmailValidatorPage() {;
           </div>;
         </div>;
       </section>;
-;
+
       {/* Features */}
       <section className="py-20 bg-gray-800">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
@@ -416,7 +401,7 @@ export default function EmailValidatorPage() {;
               Comprehensive email validation with real-time checking and intelligent analysis.;
             </p>;
           </div>;
-;
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             <Card className="text-center p-8 bg-gray-700 border border-gray-600">;
               <div className="text-4xl mb-4"></div>;
@@ -425,7 +410,7 @@ export default function EmailValidatorPage() {;
                 Checks email format, length, and RFC compliance standards for maximum accuracy.;
               </p>;
             </Card>;
-;
+
             <Card className="text-center p-8 bg-gray-700 border border-gray-600">;
               <div className="text-4xl mb-4"></div>;
               <h3 className="text-xl font-bold text-white mb-4">Disposable Detection</h3>;
@@ -433,7 +418,7 @@ export default function EmailValidatorPage() {;
                 Identifies temporary and disposable email addresses to prevent fraud and abuse.;
               </p>;
             </Card>;
-;
+
             <Card className="text-center p-8 bg-gray-700 border border-gray-600">;
               <div className="text-4xl mb-4"></div>;
               <h3 className="text-xl font-bold text-white mb-4">Typo Detection</h3>;
@@ -441,7 +426,7 @@ export default function EmailValidatorPage() {;
                 Smart algorithms detect common typos in popular email domains like Gmail and Yahoo.;
               </p>;
             </Card>;
-;
+
             <Card className="text-center p-8 bg-gray-700 border border-gray-600">;
               <div className="text-4xl mb-4"></div>;
               <h3 className="text-xl font-bold text-white mb-4">Deliverability Score</h3>;
@@ -449,7 +434,7 @@ export default function EmailValidatorPage() {;
                 Get a comprehensive score indicating the likelihood of successful email delivery.;
               </p>;
             </Card>;
-;
+
             <Card className="text-center p-8 bg-gray-700 border border-gray-600">;
               <div className="text-4xl mb-4"></div>;
               <h3 className="text-xl font-bold text-white mb-4">Bulk Validation</h3>;
@@ -457,7 +442,7 @@ export default function EmailValidatorPage() {;
                 Validate thousands of email addresses simultaneously with our high-performance engine.;
               </p>;
             </Card>;
-;
+
             <Card className="text-center p-8 bg-gray-700 border border-gray-600">;
               <div className="text-4xl mb-4"></div>;
               <h3 className="text-xl font-bold text-white mb-4">Global Coverage</h3>;
@@ -468,7 +453,7 @@ export default function EmailValidatorPage() {;
           </div>;
         </div>;
       </section>;
-;
+
       {/* Use Cases */}
       <section className="py-20 bg-gray-900">;
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">;
@@ -480,7 +465,7 @@ export default function EmailValidatorPage() {;
               From user registration to email marketing, our validation service ensures quality and deliverability.;
             </p>;
           </div>;
-;
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
             <Card className="p-8 bg-gray-800 border border-gray-700">;
               <div className="text-4xl mb-4"></div>;
@@ -494,7 +479,7 @@ export default function EmailValidatorPage() {;
                 <li> Reduce support tickets</li>;
               </ul>;
             </Card>;
-;
+
             <Card className="p-8 bg-gray-800 border border-gray-700">;
               <div className="text-4xl mb-4"></div>;
               <h3 className="text-2xl font-bold text-white mb-4">Email Marketing</h3>;
@@ -507,7 +492,7 @@ export default function EmailValidatorPage() {;
                 <li> Reduced bounce rates</li>;
               </ul>;
             </Card>;
-;
+
             <Card className="p-8 bg-gray-800 border border-gray-700">;
               <div className="text-4xl mb-4"></div>;
               <h3 className="text-2xl font-bold text-white mb-4">E-commerce</h3>;
@@ -520,7 +505,7 @@ export default function EmailValidatorPage() {;
                 <li> Better customer support</li>;
               </ul>;
             </Card>;
-;
+
             <Card className="p-8 bg-gray-800 border border-gray-700">;
               <div className="text-4xl mb-4"></div>;
               <h3 className="text-2xl font-bold text-white mb-4">Business Applications</h3>;
@@ -536,7 +521,7 @@ export default function EmailValidatorPage() {;
           </div>;
         </div>;
       </section>;
-;
+
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-600">;
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
@@ -568,4 +553,3 @@ export default function EmailValidatorPage() {;
       </section>;
     </>;
   );
-}

@@ -21,7 +21,7 @@ export function AIEnhancementButton({
   onEnhanced
   buttonText = 'Enhance with AI'
   className
-}: AIEnhancementButtonProps) {
+: AIEnhancementButtonProps) {
   const { enhanceContent, isEnhancing } = useResumeEnhancer()
   const [error, setError] = useState<string | null>(null)
   const handleEnhance = async () => {
@@ -61,7 +61,7 @@ function AIEnhancementButton() {
     // Check condition
 if (.length < 10) {) {
   $2
-}
+
       set_error ('Please enter at least some basic content before enhancing');
       return;
     }
@@ -73,11 +73,9 @@ if (.length < 10) {) {
     // Check condition
 if ( {) {
   $2
-}
+
       on_enhanced (enhanced_content);
     }
-  }
-
 
   return (
     <Button
@@ -105,7 +103,7 @@ if ( {) {
       <span className="text-xs">{buttonText}</span>
     </Button>
   )
-}
+
     <Button;
       type="button";
       variant="ghost";
@@ -126,4 +124,3 @@ if ( {) {
         <Sparkles className="h - 3 w - 3" />)}
       <span className="text - xs">{button_text}</span>;
     </Button>);
-}

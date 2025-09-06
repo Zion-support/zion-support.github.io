@@ -57,7 +57,6 @@ export const innovativeMicroSaasSolutions2025 = [
           'White-label solution'
         ]
       }
-    }
     category: 'Customer Experience'
     tags: [
       'AI'
@@ -161,7 +160,6 @@ export const innovativeMicroSaasSolutions2025 = [
           'White-label solution'
         ]
       }
-    }
     category: 'Supply Chain'
     tags: [
       'Inventory Management'
@@ -265,7 +263,6 @@ export const innovativeMicroSaasSolutions2025 = [
           'White-label solution'
         ]
       }
-    }
     category: 'Financial Management'
     tags: [
       'Expense Management'
@@ -365,7 +362,6 @@ export const innovativeMicroSaasSolutions2025 = [
           'White-label solution'
         ]
       }
-    }
     category: 'Marketing & Social Media'
     tags: [
       'Social Media'
@@ -473,7 +469,6 @@ export const innovativeMicroSaasSolutions2025 = [
           'White-label solution'
         ]
       }
-    }
     category: 'Marketing & Email'
     tags: [
       'Email Marketing'
@@ -520,7 +515,7 @@ export const innovativeMicroSaasSolutions2025 = [
     ]
     compliance: ['CAN-SPAM', 'GDPR', 'CCPA', 'Email marketing regulations']
   }
-];      'Email campaign automationCustomer segmentation and personalizationConversion rate optimizationSubscriber engagement improvementMarketing ROI optimization'
+;      'Email campaign automationCustomer segmentation and personalizationConversion rate optimizationSubscriber engagement improvementMarketing ROI optimization'
     id: 'ai-powered-customer-feedback-analyzer', name: 'AI-Powered Customer Feedback Analyzer',
     description: 'Intelligent platform that automatically analyzes customer feedback from multiple channels, providing actionable insights and sentiment analysis to improve customer experience.',
     features: [
@@ -547,11 +542,9 @@ export const innovativeMicroSaasSolutions2025 = [
     ],
     compliance: ['CAN - SPAM', 'GDPR', 'CCPA', 'Email marketing regulations'],
   },
-];      'Email campaign automationCustomer segmentation and personalizationConversion rate optimizationSubscriber engagement improvementMarketing ROI optimization'
+;      'Email campaign automationCustomer segmentation and personalizationConversion rate optimizationSubscriber engagement improvementMarketing ROI optimization'
     ];
     integrations: ['CRM systems_e - commerce platforms_analytics tools_social media platforms_marketing tools'];
     compliance: ['CAN - SPAMGDPRCCPAEmail marketing regulations'];
   }
-];
-
 ;

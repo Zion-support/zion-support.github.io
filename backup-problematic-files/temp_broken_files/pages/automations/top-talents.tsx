@@ -2,17 +2,17 @@ import type { NextPage, GetServerSideProps } from 'next',;
 import fs from 'fs',;
 import path from 'path',;
 import Link from 'next/link',;
-;
+
 type TalentItem = { talentSlug:string, talentName:string, averageRating:number, totalReviews:number },;
-;
+
 type Props = { items:TalentItem[] },;
-;
+
 const TopTalentsPage:NextPage<Props> = ({ items }) => {;
   return (;
     <main className="space-y-6">;
       <h1 className="text-2xl font-semibold">Top Talents  Auto Generated</h1>;
       <div className="grid gap-3">;
-        {items.map((t) => (;
+        {items.map(t) => (;
           <Link key={t.talentSlug} href={`/talent/${t.talentSlug}`}>;
             <div className="enhanced-card hover:shadow-lg cursor-pointer flex items-center justify-between">;
               <div>;
@@ -22,13 +22,13 @@ const TopTalentsPage:NextPage<Props> = ({ items }) => {;
               <span className="pill">Auto</span>;
             </div>;
           </Link>;
-        ))}
+        )}
         {!items.length && <div className="enhanced-card">No data yet.</div>}
       </div>;
     </main>;
   ),;
-},;
-;
+,;
+
 export const getServerSideProps:GetServerSideProps = async () => {;
   const p = path.join(process.cwd(), 'publicautomations', 'top-talents.json'),;
   let items:TalentItem[] = [],;
@@ -37,10 +37,10 @@ export const getServerSideProps:GetServerSideProps = async () => {;
     const data = JSON.parse(raw),;
     items = data.items || [],;
   } catch {}
-  return { props:{ items } },;
-},;
-;export default TopTalentsPage,
- </div> <span className="pill" >Auto</span> </div> </Link>) ) 
-}</div> </main>) 
-};
+  return { props:{ items },;
+,;
+export default TopTalentsPage,
+ </div> <span className="pill" >Auto</span> </div> </Link>) 
+</div> </main>) 
+;
 export default TopTalentsPage;

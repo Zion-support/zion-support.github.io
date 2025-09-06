@@ -6,5 +6,3 @@ export function ErrorBanner() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

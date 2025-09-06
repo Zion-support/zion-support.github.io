@@ -6,5 +6,3 @@ export function DisputeStatusBadge() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

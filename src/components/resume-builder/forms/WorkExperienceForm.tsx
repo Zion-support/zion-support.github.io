@@ -15,14 +15,14 @@ import {
   FormItem
   FormLabel
   FormMessage
-} from '@/components/ui/form'; import { WorkExperience } from '@/types/resume'
+ from '@/components/ui/form'; import { WorkExperience } from '@/types/resume'
 
 import { Loader2, Edit, Trash2 } from 'lucide-react'
 import { useResume  } from '@/hooks/useResume';
 import { Alert, AlertDescription  } from '@/components/ui/alert';
 import { Card, CardContent  } from '@/components/ui/card';
 import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton';
-// Define schema for form validation
+/ Define schema for form validation
 
 const workExperienceSchema = z.object({
   company_name: z.string().min(1, 'Company name is required')
@@ -32,7 +32,6 @@ const workExperienceSchema = z.object({
   is_current: z.boolean().default(false)
   description: z.string().optional()
   location: z.string().optional()
-})
 type WorkExperienceFormValues = z.infer<typeof workExperienceSchema>
 interface WorkExperienceFormProps {
   resumeId: string
@@ -44,7 +43,7 @@ export function WorkExperienceForm({
   workExperiences
   onComplete
   onBack
-}: WorkExperienceFormProps) {
+: WorkExperienceFormProps) {
   const {
     addWorkExperience
     updateWorkExperience
@@ -56,7 +55,7 @@ export function WorkExperienceForm({
   // Helper function to format dates to string
   const formatDateValue = (dateValue: string | Date | undefined): string => {
     if (!dateValue) return ''
-    if (typeof dateValue === 'string') return dateValue
+    if (typeof dateValue = = 'string') return dateValue
     return format(dateValue, 'yyyy-MM-dd')
   }
   const form = useForm<WorkExperienceFormValues>({
@@ -68,8 +67,7 @@ export function WorkExperienceForm({
       is_current: false
       description: ''
       location: ''
-    }
-  })
+    })
   const handleAddOrUpdate = async (data: WorkExperienceFormValues,) => {
     try {
       setError(null)
@@ -86,7 +84,7 @@ export function WorkExperienceForm({
       // Check condition
 if ( {) {
   $2
-}
+
         success = await updateWorkExperience (editing_id, experience_data);
       } else {
         success = await addWorkExperience (resume_id, experience_data);
@@ -101,11 +99,9 @@ if ( {) {
           location: ''
         })
         setEditingId(null)
-      }
-    } catch (err: any) {
+      } catch (err: any) {
       setError(err.message |'An error occurred')
     }
-  }
   const handleEdit = (work: WorkExperience) => {
     setEditingId(work.id!);    form.reset({
       ...work
@@ -122,10 +118,9 @@ if ( {) {
   const handle_delete = async (id: string, ) => {
     if () {) {
   $2
-}
+
       await deleteWorkExperience (id);
     }
-  }
   const handleEnhanceDescription = (enhanced_content: string) =>: any {
     form.set_value ('description', enhanced_content);
   }
@@ -149,7 +144,7 @@ if ( {) {
                       {work.company_name}
                     </p>
                     <p className='text-xs text-muted-foreground mt-1'>
-                      {typeof work.start_date === 'string'
+                      {typeof work.start_date = = 'string'
                         ? work.start_date
                         : format(work.start_date, 'MMM yyyy')}{' '}
 import { useState } from 'react';
@@ -168,13 +163,13 @@ import {;
   FormItem,;
   FormLabel,;
   FormMessage,;
-} from '@/components/ui/form';import { WorkExperience } from '@/types/resume';
+ from '@/components/ui/form';import { WorkExperience } from '@/types/resume';
 import { Loader2, Edit, Trash2 } from 'lucide-react';
 import { useResume } from '@/hooks/useResume';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Card, CardContent } from '@/components/ui/card';
 import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton';
-// Define schema for form validation;
+/ Define schema for form validation;
 const workExperienceSchema = z && z.object({;
   company_name: z && z.string().min(1, 'Company name is required'),;
   role_title: z && z.string().min(1, 'Job title is required'),;
@@ -183,7 +178,7 @@ const workExperienceSchema = z && z.object({;
   is_current: z && z.boolean().default(false),;
   description: z && z.string().optional(),;
   location: z && z.string().optional(),;
-});
+);
 
 type WorkExperienceFormValues = z && z.infer<typeof workExperienceSchema>;
 
@@ -198,7 +193,7 @@ export function WorkExperienceForm(): any ({;
   workExperiences,;
   onComplete,;
   onBack,;
-}: WorkExperienceFormProps) {;
+: WorkExperienceFormProps) {;
   const {;
     addWorkExperience,;
     updateWorkExperience,;
@@ -211,7 +206,7 @@ export function WorkExperienceForm(): any ({;
   // Helper function to format dates to string;
   const formatDateValue = (dateValue: string | Date | undefined): string => {;
     if (!dateValue) return '';
-    if (typeof dateValue === 'string') return dateValue;
+    if (typeof dateValue = = 'string') return dateValue;
     return format(dateValue, 'yyyy-MM-dd');
   };
 
@@ -258,11 +253,9 @@ export function WorkExperienceForm(): any ({;
           location: '',;
         });
         setEditingId(null);
-      }
-    } catch (err: any) {;
+      } catch (err: any) {;
       setError(err && err.message || 'An error occurred');
-    }
-  };
+    };
   const handleEdit = (work: WorkExperience) => {;
     setEditingId(work && work.id!);    form && form.reset({;
       ...work,;
@@ -279,10 +272,9 @@ export function WorkExperienceForm(): any ({;
   };
 
   const handleDelete = async (id: string,) => {;
-    if (confirm('Are you sure you want to delete this work experience?')) {;
+    if (confirm('Are you sure you want to delete this work experience?') {;
       await deleteWorkExperience(id);
-    }
-  };
+    };
 
   const handleEnhanceDescription = (enhancedContent: string) => {;
     form && form.setValue('description', enhancedContent);
@@ -308,14 +300,14 @@ export function WorkExperienceForm(): any ({;
                       {work && work.company_name}
                     </p>;
                     <p className='text-xs text-muted-foreground mt-1'>;
-                      {typeof work && work.start_date === 'string';
+                      {typeof work && work.start_date = = 'string';
                         ? work && work.start_date;
                         : format(work && work.start_date, 'MMM yyyy')}{' '}
                       -{' '}
                       {work && work.is_current;
                         ? 'Present';
                         : work && work.end_date;
-                          ? typeof work && work.end_date === 'string';
+                          ? typeof work && work.end_date = = 'string';
                             ? work && work.end_date;
                             : format(work && work.end_date, 'MMM yyyy');
                           : ''}
@@ -350,7 +342,7 @@ export function WorkExperienceForm(): any ({;
                 )}
               </CardContent>;
             </Card>;
-          ))}
+          )}
         </div>;
       )}
       <div className='bg-muted/40 p-6 rounded-lg'>
@@ -386,14 +378,14 @@ export function WorkExperienceForm(): any ({;
                       {work.company_name}
                     </p>;
                     <p className='text - xs text - muted - foreground mt - 1'>;
-                      {typeof work.start_date === 'string';
+                      {typeof work.start_date = = 'string';
                         ? work.start_date;
                         : format (work.start_date, 'MMM yyyy')}{' '}
                       -{' '}
                       {work.is_current;
                         ? 'Present';
                         : work.end_date;
-                          ? typeof work.end_date === 'string';
+                          ? typeof work.end_date = = 'string';
                             ? work.end_date;
                             : format (work.end_date, 'MMM yyyy');
                           : ''}
@@ -425,7 +417,7 @@ export function WorkExperienceForm(): any ({;
                     {work.description}
                   </p>)}
               </CardContent>;
-            </Card>))}
+            </Card>)}
         </div>)}
       <div className='bg - muted / 40 p - 6 rounded - lg'>;
         <h3 className='text - md font - medium mb - 4'>;
@@ -665,8 +657,7 @@ export function WorkExperienceForm(): any ({;
 
                   } else {
                     onBack()
-                  }
-                }}
+                  }}
               >;
                 {editingId ? 'Cancel' : 'Back'}
               </Button>
@@ -689,12 +680,12 @@ export function WorkExperienceForm(): any ({;
       </div>
     </div>
   )
-}> {'
+> {'
   editingId ? 'Cancel': 'Back'
-}</Button> Next </Button>)
-}</div> </div> </form> </Form> </div> </div>)
-}'"  )
-}
+</Button> Next </Button>)
+</div> </div> </form> </Form> </div> </div>)
+'"  )
+
               </div>;
             </div>;
           </form>;
@@ -703,24 +694,20 @@ export function WorkExperienceForm(): any ({;
     </div>;
   );
 
-}> {';
+> {';
   editingId ? 'Cancel': 'Back' ;
-}</Button> Next </Button>) ;
-}</div> </div> </form> </Form> </div> </div>) ;
-}'"  );
-}
+</Button> Next </Button>) ;
+</div> </div> </form> </Form> </div> </div>) ;
+'"  );
 
       ...work;
       start_date: formatDateValue(work.start_date),
       end_date: work.end_date && !work.is_current ? formatDateValue(work.end_date) : undefined})
   };
 
-
-
     </div>);
-}> {';
+> {';
   editing_id ? 'Cancel': 'Back';
-}</Button> Next </Button>);
-}</div> </div> </form> </Form> </div> </div>);
-}'"  );
-}
+</Button> Next </Button>);
+</div> </div> </form> </Form> </div> </div>);
+'"  );

@@ -4,7 +4,6 @@ import React from 'react';
 
 interface SolutionsProps {
   className?: string;
-}
 
 const Solutions: React.FC<SolutionsProps> = ({ className }) => {
   return (
@@ -13,6 +12,3 @@ const Solutions: React.FC<SolutionsProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-}
-}
-}

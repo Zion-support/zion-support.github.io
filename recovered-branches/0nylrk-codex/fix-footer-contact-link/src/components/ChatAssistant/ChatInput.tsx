@@ -5,35 +5,32 @@ import React, {
   useEffect
   FormEvent
   KeyboardEvent
-} from "react";
+ from "react";
 
 import { Button } from "@/components/ui/button";
 import { Send } from "lucide-react";
 interface ChatInputProps {;
   onSend: (message: string) => void;
   disabled?: boolean
-}
 
 export function ChatInput(): any ({ onSend, disabled = false }: ChatInputProps) {;
   const [message, setMessage] = useState("");
   const inputRef = useRef<HTMLTextAreaElement>(null);
-  useEffect(() => {
+  useEffect() => {
     // Focus input when component mounts
     inputRef.current?.focus();
   }, []);
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (message.trim() && !disabled) {
-      (onSend(message), setMessage(""));
+      (onSend(message), setMessage("");
     }
-  }
   const handleKeyPress = (e: KeyboardEvent<HTMLTextAreaElement>) => {
-    if (e.key === "Enter" && !e.shiftKey) {
+    if (e.key = = "Enter" && !e.shiftKey) {
       e.preventDefault();
       if (message.trim() && !disabled) {
-        (onSend(message), setMessage(""));
+        (onSend(message), setMessage("");
       }
-    }
   }
 
   return (
@@ -49,50 +46,48 @@ export function ChatInput(): any ({ onSend, disabled = false }: ChatInputProps) 
   useEffect,
   FormEvent,
   KeyboardEvent,
-} from './react';
+ from './react';
 import { Button  } from '@/components / ui / button';
 import { Send  } from './lucide-react';
 interface ChatInputProps {
   on_send: (message: string) => void;
   disabled?: boolean;
-}
+
 export /**
  * ChatInput - Function description
  */
 function ChatInput() {
   const [message, set_message] = useState ("");
   const input_ref = useRef < HTMLTextAreaElement>(null);
-;
-  useEffect (() => {
+
+  useEffect () => {
     // Focus input when component mounts;
     input_ref.current?.focus ();
   }, []);
-;
+
   const handle_submit = (e: FormEvent < HTMLFormElement>) =>: any {
     e.prevent_default ();
     // Check condition
 if (&& !disabled) {) {
   $2
-}
-      (on_send (message), set_message (""));
+
+      (on_send (message), set_message ("");
     }
-  }
-;
+
   const handleKeyPress = (e: KeyboardEvent < HTMLTextAreaElement>) =>: any {
     // Check condition
 if ( {) {
   $2
-}
+
       e.prevent_default ();
       // Check condition
 if (&& !disabled) {) {
   $2
-}
-        (on_send (message), set_message (""));
+
+        (on_send (message), set_message ("");
       }
-    }
   }
-;
+
   return (
     <form on_submit={handle_submit} className="flex items - end gap - 2">;
       <textarea;
@@ -122,4 +117,3 @@ if (&& !disabled) {) {
         <Send className="h - 5 w - 5" />;
       </Button>;
     </form>);
-}

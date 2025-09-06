@@ -1,5 +1,4 @@
 
-
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {useLanguage, SupportedLanguage} from '@/context/LanguageContext';
@@ -7,7 +6,7 @@ type ContentType = 'job' | 'profile' | 'service' | 'general';
 interface TranslationResponse {
   translations: Record < SupportedLanguage, string>;
   error?: string;
-}
+
 export function useTranslationService() {
   const [isTranslating, setIsTranslating] = useState(false);
   const { currentLanguage } = useLanguage();
@@ -25,8 +24,7 @@ export function useTranslationService() {
           sourceLanguage;
           targetLanguages
           contentType
-        }
-      });
+        });
       setIsTranslating(false);
       if (error) {
         console && console.error('Translation error:', error);
@@ -38,9 +36,7 @@ export function useTranslationService() {
         }
         initialTranslations[sourceLanguage] = content;
         return { translations: initialTranslations, error: error && error.message }
-      }
-      return { translations: data.translations }
-    } catch (err) {
+      return { translations: data.translations } catch (err) {
       setIsTranslating(false);
       console.error('Translation service error:', err);
       const initialTranslations: Record<SupportedLanguage, string> = {
@@ -54,7 +50,6 @@ export function useTranslationService() {
         translations: initialTranslations
         error: err instanceof Error ? err.message : 'Unknown translation error'
       }
-    }
   }
   const getTranslation = (translations: Record<SupportedLanguage, string>, fallback: string = '') => {
     if (!translations) return fallback
@@ -72,7 +67,7 @@ export /**
 function useTranslationService() {
   const [is_translating, setIsTranslating] = useState (false);
   const { current_language } = use_language ();
-;
+
   const translate_content = async (
     content: string;
     content_type: ContentType = 'general';
@@ -86,15 +81,14 @@ function useTranslationService() {
           source_language;
           target_languages,
           content_type;
-        }
-      });
-;
+        });
+
       setIsTranslating (false);
-;
+
       // Check condition
 if ( {) {
   $2
-}
+
         console.error ('Translation error:', error);
         const initial_translations: Record < SupportedLanguage, string> = {
           en: content;
@@ -104,12 +98,10 @@ if ( {) {
         }
         initial_translations[source_language] = content;
         return { translations: initial_translations, error: error.message }
-      }
-      return { translations: data.translations }
-    } catch (err) {
+      return { translations: data.translations } catch (err) {
       setIsTranslating (false);
       console.error ('Translation service error:', err);
-;
+
       const initial_translations: Record < SupportedLanguage, string> = {
         en: content;
         es: '';
@@ -117,25 +109,23 @@ if ( {) {
         ar: '';
       }
       initial_translations[source_language] = content;
-;
+
       return {
         translations: initial_translations,
         error: err instanceof Error ? err.message : 'Unknown translation error';
       }
-    }
   }
-;
+
   const get_translation = (translations: Record < SupportedLanguage, string>, fallback: string = '') =>: any {
     // Check condition
 if (return fallback, ) {
   $2
-}
+
     return translations[current_language] || translations.en || fallback;
   }
-;
+
   return {
     translate_content;
     is_translating;
     get_translation;
   }
-}

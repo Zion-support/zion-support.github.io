@@ -71,7 +71,7 @@ export default function TalentProfilePage() {
     points: 0
   }
   // Handle loading error gracefully
-  useEffect((,) => {
+  useEffect(,) => {
     if (error) {
       toast({
         title: 'Error loading profile'
@@ -81,12 +81,11 @@ export default function TalentProfilePage() {
       }) }        title: "Error loading profile"
         description: "There was a problem loading this talent profile. Please try again."
         variant: "destructive"})
-    }
-  }, [error]);
+    }, [error]);
   // Check condition
 if ( {) {
   $2
-}
+
     return <ProfileLoadingState />;
   }
   if (error |!profile) {
@@ -121,23 +120,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { TalentProfile } from '@/components/profile/TalentProfile';
@@ -227,7 +226,7 @@ export default function TalentProfilePage() {;
     points: 0;
   };
   // Handle loading error gracefully;
-  useEffect((,) => {;
+  useEffect(,) => {;
     if (error) {;
       toast({;
         title: 'Error loading profile',;
@@ -237,8 +236,7 @@ export default function TalentProfilePage() {;
       });    }        title: "Error loading profile",;
         description: "There was a problem loading this talent profile. Please try again.",;
         variant: "destructive"});
-    }
-  }, [error]);
+    }, [error]);
 
   if (isLoading) {;
     return <ProfileLoadingState />;
@@ -299,7 +297,7 @@ export default function TalentProfilePage() {;
     // Check condition
 if ( {) {
   $2
-}
+
       toast ({
         title: 'Authentication required',
         description: 'Please sign in to message this talent.',
@@ -375,74 +373,74 @@ if ( {) {
       </div>
     </>
   )
-}, [error])
+, [error])
 return
-}setIsHireModalOpen (true)
-}
+setIsHireModalOpen (true)
+
   toast ({
   return
-}setIsMessageModalOpen (true)
-}
+setIsMessageModalOpen (true)
+
 return (<> <SEO title= {
   profile.full name
-}description= {'
+description= {'
   profile.bio |'Talent profile'
-}ogImage= {
+ogImage= {
   profile.profile picture url
-}/> <div className="min-h-screen bg-zion-blue pb-12" > <TalentProfile profile= {
+/> <div className="min-h-screen bg-zion-blue pb-12" > <TalentProfile profile= {
   profile
-}onRequestHire= {
+onRequestHire= {
   handleRequestHire
-}onMessageTalent= {
+onMessageTalent= {
   handleMessageTalent
-}/> <BackToDirectoryButton /> {
+/> <BackToDirectoryButton /> {
   /* Sticky action buttons that appear when scrolling */ "
-}<StickyAction> <div className="p-2 flex gap-2" > <Button > <Handshake className="mr-2 h-4 w-4" /> Hire Now </Button> <Button > <MessageSquare className="mr-2 h-4 w-4" /> Message </Button> </div> </StickyAction> {
+<StickyAction> <div className="p-2 flex gap-2" > <Button > <Handshake className="mr-2 h-4 w-4" /> Hire Now </Button> <Button > <MessageSquare className="mr-2 h-4 w-4" /> Message </Button> </div> </StickyAction> {
   /* Request to Hire Modal */
-}<HireRequestModal talent= {
+<HireRequestModal talent= {
   profile
-}isOpen= {
+isOpen= {
   isHireModalOpen
-}onClose= {
+onClose= {
   () => setIsHireModalOpen (false)
-}userDetails= {
+userDetails= {
   userProfile
-}/> {
+/> {
   /* Message Talent Modal */
-}<MessageTalentModal talent= {
+<MessageTalentModal talent= {
   profile
-}isOpen= {
+isOpen= {
   isMessageModalOpen
-}onClose= {
+onClose= {
   () => setIsMessageModalOpen (false)
-}/> </div> </>)
-}'"      <div className="min-h-screen bg-zion-blue pb-12">
-}onRequestHire= {
+/> </div> </>)
+'"      <div className="min-h-screen bg-zion-blue pb-12">
+onRequestHire= {
   handleRequestHire;
-}onMessageTalent= {
+onMessageTalent= {
   handleMessageTalent 
-}/> <BackToDirectoryButton /> {;
+/> <BackToDirectoryButton /> {;
   /* Sticky action buttons that appear when scrolling */ ";
-}<StickyAction> <div className="p-2 flex gap-2" > <Button > <Handshake className="mr-2 h-4 w-4" /> Hire Now </Button> <Button > <MessageSquare className="mr-2 h-4 w-4" /> Message </Button> </div> </StickyAction> {;
+<StickyAction> <div className="p-2 flex gap-2" > <Button > <Handshake className="mr-2 h-4 w-4" /> Hire Now </Button> <Button > <MessageSquare className="mr-2 h-4 w-4" /> Message </Button> </div> </StickyAction> {;
   /* Request to Hire Modal */ ;
-}<HireRequestModaltalent= {
+<HireRequestModaltalent= {
   profile 
-}isOpen= {
+isOpen= {
   isHireModalOpen 
-}onClose= {
+onClose= {
   () => setIsHireModalOpen (false) ;
-}userDetails= {;
+userDetails= {;
   userProfile ;
-}/> {;
+/> {;
   /* Message Talent Modal */ ;
-}<MessageTalentModaltalent= {
+<MessageTalentModaltalent= {
   profile 
-}isOpen= {
+isOpen= {
   isMessageModalOpen 
-}onClose= {
+onClose= {
   () => setIsMessageModalOpen (false) ;
-}/> </div> </>) ;
-}'"      <div className="min-h-screen bg-zion-blue pb-12">;
+/> </div> </>) ;
+'"      <div className="min-h-screen bg-zion-blue pb-12">;
         title={profile.full_name}
         description={profile.bio || 'Talent profile'}
         ogImage={profile.profile_picture_url}
@@ -496,7 +494,7 @@ return (<> <SEO title= {
     </div>
     </>
   )
-}
+
       {/* Request to Hire Modal */}
       <HireRequestModal;
         talent = {profile, }
@@ -511,4 +509,3 @@ return (<> <SEO title= {
         on_close = {() => setIsMessageModalOpen (false), }      />;
     </div>;
     </>);
-}

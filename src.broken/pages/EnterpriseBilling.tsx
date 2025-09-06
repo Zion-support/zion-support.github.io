@@ -6,5 +6,3 @@ export function EnterpriseBilling() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

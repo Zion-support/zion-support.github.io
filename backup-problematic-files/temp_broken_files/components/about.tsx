@@ -60,11 +60,11 @@ export default function AboutPage() {
 					</div>
 
 					<div className=&quot;grid grid-cols-1 md:grid-cols-4 gap-6 mb-16&quot;>
-						{pillars.map((p) => (
+						{pillars.map(p) => (
 							<Card key={p.title} className=&quot;bg-gradient-to-br from-gray-900/70 to-black/80 border border-gray-700/40 p-6&quot;>
 								<div className=&quot;flex items-center gap-3 mb-3 text-white&quot;>{p.icon}<span className=&quot;font-semibold&quot;>{p.title}</span></div>
 								<p className=&quot;text-gray-300 text-sm&quot;>{p.desc}</p>							</Card>
-						))}
+						)}
 					</div>
 
 					<Card className=&quot;bg-gradient-to-br from-gray-900/80 to-black/90 border border-gray-700/50 backdrop-blur-xl p-8&quot;>
@@ -91,7 +91,6 @@ export default function AboutPage() {
 			</section>
 		</UltraFuturisticBackground>
 	)
-}
 
 import React from 'react',
 import Head from 'next/head',
@@ -208,8 +207,8 @@ export default function AboutPage() {
             </p>
           </div>
           <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8&quot;>
-            {values.map((value, index) => (
-              <Card key={index} className=&quot;card-hover text-center group border-gradient-blue&quot; style={{ animationDelay: `${index * 0.1}s` }}>
+            {values.map(value, index) => (
+              <Card key={index} className=&quot;card-hover text-center group border-gradient-blue&quot; style={ animationDelay: `${index * 0.1}s` }>
                 <div className=&quot;relative&quot;>
                   <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center text-2xl bg-gradient-to-br ${value.gradient} shadow-lg group-hover:scale-110 transition-transform duration-300`}>
                     {value.icon}
@@ -217,7 +216,7 @@ export default function AboutPage() {
                 </div>
                 <h3 className={`text-2xl font-bold mb-4 ${value.color}`}>{value.title}</h3>
                 <p className=&quot;text-gray-400 leading-relaxed&quot;>{value.description}</p>              </Card>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -231,8 +230,8 @@ export default function AboutPage() {
             </p>
           </div>
           <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-12&quot;>
-            {services.map((service, index) => (
-              <Card key={index} className=&quot;card-hover group border-gradient-blue&quot; style={{ animationDelay: `${index * 0.1}s` }}>
+            {services.map(service, index) => (
+              <Card key={index} className=&quot;card-hover group border-gradient-blue&quot; style={ animationDelay: `${index * 0.1}s` }>
                 <div className=&quot;flex items-start space-x-6&quot;>
                   <div className=&quot;relative&quot;>
                     <div className={`w-16 h-16 rounded-2xl flex items-center justify-center text-2xl bg-gradient-to-br ${service.gradient} shadow-lg group-hover:scale-110 transition-transform duration-300`}>
@@ -244,7 +243,7 @@ export default function AboutPage() {
                     <p className=&quot;text-gray-400 leading-relaxed&quot;>{service.description}</p>                  </div>
                 </div>
               </Card>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -252,11 +251,11 @@ export default function AboutPage() {
       <section className=&quot;section-padding bg-gradient-cursor&quot;>
         <div className=&quot;container-cursor&quot;>
           <div className=&quot;grid grid-cols-2 md:grid-cols-4 gap-8&quot;>
-            {achievements.map((achievement, index) => (
+            {achievements.map(achievement, index) => (
               <div key={index} className=&quot;text-center group&quot;>
                 <div className={`text-4xl md:text-5xl font-bold mb-3 ${achievement.color} group-hover:scale-110 transition-transform duration-300`}>{achievement.number}</div>
                 <div className=&quot;text-gray-400 text-sm md:text-base font-medium&quot;>{achievement.label}</div>              </div>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -289,14 +288,14 @@ export default function AboutPage() {
                 <p className=&quot;text-blue-400 font-semibold text-lg&quot;>{contactInfo.mobile}</p>
                 <p className=&quot;text-gray-400 text-sm mt-2&quot;>Available 24/7 for urgent inquiries</p>
               </Card>
-              
+
               <Card className=&quot;text-center p-8 bg-gradient-to-br from-green-500/20 to-green-600/20 border border-green-500/30&quot;>
                 <div className=&quot;text-4xl mb-4&quot;></div>
                 <h3 className=&quot;text-2xl font-bold text-white mb-2&quot;>Email Us</h3>
                 <p className=&quot;text-green-400 font-semibold text-lg&quot;>{contactInfo.email}</p>
                 <p className=&quot;text-gray-400 text-sm mt-2&quot;>Response within 2 hours guaranteed</p>
               </Card>
-              
+
               <Card className=&quot;text-center p-8 bg-gradient-to-br from-purple-500/20 to-purple-600/20 border border-purple-500/30&quot;>
                 <div className=&quot;text-4xl mb-4&quot;></div>
                 <h3 className=&quot;text-2xl font-bold text-white mb-2&quot;>Visit Us</h3>
@@ -317,11 +316,10 @@ export default function AboutPage() {
       </section>
     </>
   )
-}}</div> </a> </div> </div> <div className="mt-6 flex justify-center" > <Button href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white" >Contact Us</Button> </div> </Card> </div> </section> </UltraFuturisticBackground>) 
-}return ({
+}</div> </a> </div> </div> <div className="mt-6 flex justify-center" > <Button href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white" >Contact Us</Button> </div> </Card> </div> </section> </UltraFuturisticBackground>) 
+return ({
   /* Mission & Vision */ 
-}<> <Head> <title>About Zion Tech Group | Autonomous Innovation Hub</title> <meta name="description" content="Learn about Zion Tech Group's mission to revolutionize technology through autonomous innovation and AI-powered solutions." /> <meta property="og:title" content="About Zion Tech Group" /> <meta property="og:description" content="Learn about Zion Tech Group's mission and vision." /> <meta name="twitter:card" content="summary large image" /> <link rel="canonical" href="https://ziontechgroup.com/about" /> </Head> <section className="relative section-padding bg-gradient-cursor overflow-hidden" > <div className="absolute inset-0 bg-[radial-gradient (circle at 30% 20%, rgba (0, 122, 204, 0.08), transparent 50%) ]" /> <div className="absolute inset-0 bg-[radial-gradient (circle at 70% 80%, rgba (0, 122, 204, 0.06), transparent 50%) ]" /> <div className="absolute inset-0 bg-grid opacity-10" /> <div className="relative z-10 container-cursor text-center" > <div className="inline-flex items-center px-4 py-2 rounded-full bg-cursor-blue/10 border border-cursor-blue/20 text-cursor-blue text-sm font-medium mb-6" > <span className="w-2 h-2 bg-cursor-blue rounded-full mr-2 animate-pulse" /> About Our Company </div> <h1 className="text-responsive-xl font-black mb-8 gradient-text text-shadow-lg" > About Zion Tech Group </h1> <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed" > Pioneering the future of autonomous technology and AI-driven innovation </p> </div> </section> <section className="section-padding bg-gradient-cursor-accent" > <div className="container-cursor" > <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20" > <Card className="card-hover group border-gradient-blue hover:border-cyan-400/40 hover:shadow-2xl hover:shadow-cyan-400/20" > <h2 className="text-3xl font-bold mb-6 text-cyan-400" >Our Mission</h2> <p className="text-lg text-gray-300 mb-4 leading-relaxed" > To create a world where technology operates autonomously, continuously improving and innovating without human intervention. </p> <p className="text-gray-400 leading-relaxed" > We believe in the power of AI to solve complex problems, automate routine tasks, and unlock new possibilities for humanity. </p> </Card> <Card className="card-hover group border-gradient-purple hover:border-fuchsia-400/40 hover:shadow-2xl hover:shadow-fuchsia-400/20" > <h2 className="text-3xl font-bold mb-6 text-fuchsia-400" >Our Vision</h2> <p className="text-lg text-gray-300 mb-4 leading-relaxed" > To be the leading force in autonomous technology, creating systems that think, learn, and evolve independently. </p> <p className="text-gray-400 leading-relaxed" > We envision a future where AI and automation work seamlessly together to enhance human capabilities and drive progress. </p> </Card> </div> </div> </section> <section className="section-padding bg-gradient-cursor" > <div className="container-cursor" > <div className="text-center mb-20" > <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow" >Our Core Values</h2> <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed" > The principles that guide our innovation and shape our future </p> </div> </Card>) ) 
-}</div> </div> </section> <section className="section-padding bg-gradient-cursor-blue" > <div className="container-cursor" > <div className="text-center mb-20" > <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow" >What We Do</h2> <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed" > Comprehensive solutions that drive innovation and transformation </p> </div> </div> </div> </Card>) ) 
-}</div> </div> </section> </div>) ) 
-}</div> </div> </section> Let's work together to build the next generation of autonomous technology and shape the future of innovation. </p> <div className="flex flex-col sm:flex-row gap-6 justify-center" > <Button href="/contact" size="lg" className="bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl hover-glow" >Get in Touch</Button> <Button href="/services" variant="outline" size="lg" className="border-white text-white hover:bg:white hover:text-cursor-blue shadow-2xl" >Explore Services</Button> </div> </div> Get in touch with our experts today for a free consultation and discover how our 500+ revolutionary micro SaaS services can drive unprecedented growth </p> </div> </div> <p className="text-gray-400 text-lg" > Start your 21-day free trial today and experience the future of technology </p> </div> </div> </section> </section> </>) 
-}
+<> <Head> <title>About Zion Tech Group | Autonomous Innovation Hub</title> <meta name="description" content="Learn about Zion Tech Group's mission to revolutionize technology through autonomous innovation and AI-powered solutions." /> <meta property="og:title" content="About Zion Tech Group" /> <meta property="og:description" content="Learn about Zion Tech Group's mission and vision." /> <meta name="twitter:card" content="summary large image" /> <link rel="canonical" href="https://ziontechgroup.com/about" /> </Head> <section className="relative section-padding bg-gradient-cursor overflow-hidden" > <div className="absolute inset-0 bg-[radial-gradient (circle at 30% 20%, rgba (0, 122, 204, 0.08), transparent 50%) ]" /> <div className="absolute inset-0 bg-[radial-gradient (circle at 70% 80%, rgba (0, 122, 204, 0.06), transparent 50%) ]" /> <div className="absolute inset-0 bg-grid opacity-10" /> <div className="relative z-10 container-cursor text-center" > <div className="inline-flex items-center px-4 py-2 rounded-full bg-cursor-blue/10 border border-cursor-blue/20 text-cursor-blue text-sm font-medium mb-6" > <span className="w-2 h-2 bg-cursor-blue rounded-full mr-2 animate-pulse" /> About Our Company </div> <h1 className="text-responsive-xl font-black mb-8 gradient-text text-shadow-lg" > About Zion Tech Group </h1> <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed" > Pioneering the future of autonomous technology and AI-driven innovation </p> </div> </section> <section className="section-padding bg-gradient-cursor-accent" > <div className="container-cursor" > <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20" > <Card className="card-hover group border-gradient-blue hover:border-cyan-400/40 hover:shadow-2xl hover:shadow-cyan-400/20" > <h2 className="text-3xl font-bold mb-6 text-cyan-400" >Our Mission</h2> <p className="text-lg text-gray-300 mb-4 leading-relaxed" > To create a world where technology operates autonomously, continuously improving and innovating without human intervention. </p> <p className="text-gray-400 leading-relaxed" > We believe in the power of AI to solve complex problems, automate routine tasks, and unlock new possibilities for humanity. </p> </Card> <Card className="card-hover group border-gradient-purple hover:border-fuchsia-400/40 hover:shadow-2xl hover:shadow-fuchsia-400/20" > <h2 className="text-3xl font-bold mb-6 text-fuchsia-400" >Our Vision</h2> <p className="text-lg text-gray-300 mb-4 leading-relaxed" > To be the leading force in autonomous technology, creating systems that think, learn, and evolve independently. </p> <p className="text-gray-400 leading-relaxed" > We envision a future where AI and automation work seamlessly together to enhance human capabilities and drive progress. </p> </Card> </div> </div> </section> <section className="section-padding bg-gradient-cursor" > <div className="container-cursor" > <div className="text-center mb-20" > <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow" >Our Core Values</h2> <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed" > The principles that guide our innovation and shape our future </p> </div> </Card>) 
+</div> </div> </section> <section className="section-padding bg-gradient-cursor-blue" > <div className="container-cursor" > <div className="text-center mb-20" > <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow" >What We Do</h2> <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed" > Comprehensive solutions that drive innovation and transformation </p> </div> </div> </div> </Card>) 
+</div> </div> </section> </div>) 
+</div> </div> </section> Let's work together to build the next generation of autonomous technology and shape the future of innovation. </p> <div className="flex flex-col sm:flex-row gap-6 justify-center" > <Button href="/contact" size="lg" className="bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl hover-glow" >Get in Touch</Button> <Button href="/services" variant="outline" size="lg" className="border-white text-white hover:bg:white hover:text-cursor-blue shadow-2xl" >Explore Services</Button> </div> </div> Get in touch with our experts today for a free consultation and discover how our 500+ revolutionary micro SaaS services can drive unprecedented growth </p> </div> </div> <p className="text-gray-400 text-lg" > Start your 21-day free trial today and experience the future of technology </p> </div> </div> </section> </section> </>) 

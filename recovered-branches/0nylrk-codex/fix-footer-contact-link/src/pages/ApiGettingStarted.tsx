@@ -12,7 +12,7 @@ const response = await axios.get ('https://api.zionai.com / v1 / jobs', {
   headers: {
     Authorization: \`Bearer \${API_KEY}\`;
   }
-});
+);
 console.log(response.data),`;
   return (
     <ApiDocsLayout>
@@ -71,12 +71,11 @@ console.log(response.data),`;
       </div>
     </ApiDocsLayout>
   )
-}
+
 export default ApiGettingStarted;
 
-;
 console.log (response.data), `;
-;
+
   return (
     <ApiDocsLayout>;
       <div className="max - w-3xl prose prose - invert">;
@@ -133,6 +132,5 @@ console.log (response.data), `;
         </div>;
       </div>;
     </ApiDocsLayout>);
-}
+
 export default ApiGettingStarted;
-;

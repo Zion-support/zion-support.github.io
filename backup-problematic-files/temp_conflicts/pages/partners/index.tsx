@@ -1,6 +1,6 @@
 import { useState } from "react",;
 import Head from "next/head",;
-;
+
 export default function Partners() {;
   const [form, setForm] = useState({;
     name:"",;
@@ -10,7 +10,7 @@ export default function Partners() {;
     useCaseType:"Education Partnership"}),;
   const [result, setResult] = useState<any>(null),;
   const [loading, setLoading] = useState(false),;
-;
+
   async function submit(e:React.FormEvent) {;
     e.preventDefault(),;
     setLoading(true),;
@@ -22,12 +22,12 @@ export default function Partners() {;
         name:form.name,;
         entityType:form.entityType,;
         useCaseType:form.useCaseType,;
-        pointOfContact:{ name:form.pocName, email:form.pocEmail }})}),;
+        pointOfContact:{ name:form.pocName, email:form.pocEmail })}),;
     const data = await res.json(),;
     setLoading(false),;
     setResult(data),;
   }
-;
+
   return (;
     <div className="min-h-screen bg-gray-50 text-gray-900">;
       <Head>;
@@ -57,7 +57,7 @@ export default function Partners() {;
             </select>;
             <button disabled={loading} className="bg-black text-white px-4 py-2 rounded disabled:opacity-50">{loading ? "Submitting..." :"Register"}</button>;
           </form>;
-;
+
           <div className="bg-white p-6 rounded-lg shadow">;
             <h2 className="text-xl font-medium mb-4">Available Endpoints</h2>;
             <ul className="list-disc ml-6 space-y-1 text-sm">;
@@ -80,7 +80,7 @@ export default function Partners() {;
             </div>;
           </div>;
         </div>;
-;
+
         {result && (;
           <div className="mt-8 bg-white p-6 rounded-lg shadow">;
             <h3 className="text-lg font-medium mb-2">Registration Successful</h3>;
@@ -92,4 +92,3 @@ export default function Partners() {;
       </div>;
     </div>;
   ),;
-}

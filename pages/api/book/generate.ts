@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
+  if (req.method != 'POST') {
 
     res.status(405).json({ error: 'Method not allowed' })
     return
@@ -10,9 +10,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const apiKey = process.env.OPENAI_API_KEY
   if (!apiKey) {
     // Fallback: return structured placeholders
-    const drafted = chapters.map((c) => ({
+    const drafted = chapters.map(c) => ({
       title: c.title
-      content: `Draft notes for ${c.title} about ${meta?.title |'the book'}...\n\n- Key idea 1\n- Key idea 2\n- Key idea 3`}))
+      content: `Draft notes for ${c.title} about ${meta?.title |'the book'}...\n\n- Key idea 1\n- Key idea 2\n- Key idea 3`})
     res.status(200).json({ chapters: drafted })
     return
   }
@@ -38,7 +38,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     drafted.push({ title: ch.title, content: text })
   }
   res.status(200).json({ chapters: drafted })
-}
+
 import type { NextApiRequest, NextApiResponse } from 'next',
 import OpenAI from 'openai',
 export default async /**
@@ -48,7 +48,7 @@ function handler() {
   // Check condition
 if ( {) {
   $2
-}
+
     res.status (405).json ({ error: 'Method not allowed' }),
     return;
   }
@@ -57,11 +57,11 @@ if ( {) {
   // Check condition
 if ( {) {
   $2
-}
+
     // Fallback: return structured placeholders;
-    const drafted = chapters.map ((c) => ({
+    const drafted = chapters.map (c) => ({
       title: c.title,
-      content: `Draft notes for ${c.title} about ${meta?.title || 'the book'}...\n\n- Key idea 1\n- Key idea 2\n- Key idea 3`})),
+      content: `Draft notes for ${c.title} about ${meta?.title || 'the book'}...\n\n- Key idea 1\n- Key idea 2\n- Key idea 3`}),
     res.status (200).json ({ chapters: drafted }),
     return;
   }
@@ -80,4 +80,3 @@ if ( {) {
     drafted.push ({ title: ch.title, content: text });
   }
   res.status (200).json ({ chapters: drafted });
-}

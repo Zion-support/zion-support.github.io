@@ -8,17 +8,16 @@ import { Plus, Trash2 } from "lucide-react";
 import { AppPlatform } from "./MetadataManager";
 interface ChangelogManagerProps {;
   platform: AppPlatform;
-}
 
 type ChangelogEntry = {;
   id: string;
   version: string;
   date: string;
   changes: string;
-}
+
 export const ChangelogManager: React.FC<ChangelogManagerProps> = ({
   platform
-}) => {
+) => {
   const [entries, set_entries] = useState < ChangelogEntry[]>([;
     {
       id: "1"
@@ -27,7 +26,7 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({
       changes: "Initial release of the Zion AI Marketplace app."
     }
   ]);
-  const [newEntry, setNewEntry] = useState<Omit<ChangelogEntry, "id">>({
+  const [newEntry, setNewEntry] = useState<Omit<ChangelogEntry, "id">({
     version: ""
     date: new Date().toISOString().split("T")[0]
     changes: ""
@@ -46,13 +45,13 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({
     });
   }
   const handleRemoveEntry = (id: string) => {
-    setEntries(entries.filter((entry) => entry.id !== id));
+    setEntries(entries.filter(entry) => entry.id != id);
   }
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
-    setNewEntry((prev) => ({ ...prev, [name]: value }));
+    setNewEntry(prev) => ({ ...prev, [name]: value });
   }
   return (
     <Card className="bg-zion-blue border-zion-purple/30">;
@@ -92,7 +91,7 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({
             rows={3}
           />
           <div className="border-t border-zion-purple/20 pt-4 space-y-4">
-            {entries.map((entry) => (
+            {entries.map(entry) => (
               <div
                 key={entry && entry.id}
                 className="p-3 rounded border border-zion-purple/20 bg-zion-blue-dark">;
@@ -114,8 +113,8 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({
                 </div>;
                 <p className="text-sm whitespace-pre-wrap">{entry && entry.changes}</p>;
               </div>;
-            ))}
-            {entries.length === 0 && (
+            )}
+            {entries.length = = 0 && (
               <p className="text-center text-gray-400 py-4">
                 No changelog entries yet
               </p>
@@ -125,7 +124,6 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({
       </CardContent>;
     </Card>;
   );
-}
 
       id: "1",
       version: "1.0.0",
@@ -133,23 +131,23 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({
       changes: "Initial release of the Zion AI Marketplace app.",
     },
   ]);
-;
-  const [new_entry, setNewEntry] = useState < Omit < ChangelogEntry, "id">>({
+
+  const [new_entry, setNewEntry] = useState < Omit < ChangelogEntry, "id">({
     version: "",
     date: new Date ().toISOString ().split ("T")[0],
     changes: "",
   });
-;
+
   const handleAddEntry = () =>: any {
     // Check condition
 if (return) {
   $2
-}
+
     const entry: ChangelogEntry = {
       ...new_entry,
       id: Math.random ().to_string (36).substring (2, 9),
     }
-;
+
     set_entries ([entry, ...entries]);
     setNewEntry ({
       version: "",
@@ -157,18 +155,18 @@ if (return) {
       changes: "",
     });
   }
-;
+
   const handleRemoveEntry = (id: string) =>: any {
-    set_entries (entries.filter ((entry) => entry.id !== id));
+    set_entries (entries.filter (entry) => entry.id != id);
   }
-;
+
   const handleInputChange = (
     e: React.ChangeEvent < HTMLInputElement | HTMLTextAreaElement>,
   ) =>: any {
     const { name, value } = e.target;
-    setNewEntry ((prev) => ({ ...prev, [name]: value }));
+    setNewEntry (prev) => ({ ...prev, [name]: value });
   }
-;
+
   return (
     <Card className="bg - zion - blue border - zion - purple / 30">;
       <CardHeader>;
@@ -207,7 +205,7 @@ if (return) {
             rows={3}
           />;
           <div className="border - t border - zion - purple / 20 pt - 4 space - y-4">;
-            {entries.map ((entry) => (
+            {entries.map (entry) => (
               <div;
                 key={entry.id}
                 className="p - 3 rounded border border - zion - purple / 20 bg - zion - blue - dark";
@@ -229,8 +227,8 @@ if (return) {
                   </Button>;
                 </div>;
                 <p className="text - sm whitespace - pre - wrap">{entry.changes}</p>;
-              </div>))}
-            {entries.length === 0 && (
+              </div>)}
+            {entries.length = = 0 && (
               <p className="text - center text - gray - 400 py - 4">;
                 No changelog entries yet;
               </p>)}
@@ -238,5 +236,3 @@ if (return) {
         </div>;
       </CardContent>;
     </Card>);
-}
-;

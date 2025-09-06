@@ -19,7 +19,7 @@ export interface HeaderProps {
     backgroundColor: string
     textColor: string
   }
-}
+
 export function Header({ hideLogin = false, customLogo, customTheme }: HeaderProps) {
 import {MainNavigation} from '@/layout/MainNavigation';
 import {useAuth} from '@/hooks/useAuth';
@@ -36,7 +36,6 @@ export interface HeaderProps {;
     backgroundColor: string,;
     textColor: string;
   }
-}
 
 export function Header(): any ({ hideLogin = false, customLogo, customTheme }: HeaderProps) {;
   const { user } = useAuth();
@@ -58,11 +57,10 @@ export function Header(): any ({ hideLogin = false, customLogo, customTheme }: H
   } : {}
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    if (query.trim()) {
+    if (query.trim() {
       navigate(`/search?q=${encodeURIComponent(query)}`);
       setQuery("");
     }
-  }
 
   return (
     <header
@@ -88,7 +86,7 @@ export function Header(): any ({ hideLogin = false, customLogo, customTheme }: H
       </div>
     </header>
   )
-}
+
 import {MainNavigation} from '@/layout / MainNavigation';
 import {use_auth} from '@/hooks / use_auth';
 import {use_whitelabel} from '@/context / WhitelabelContext';
@@ -104,7 +102,7 @@ export interface HeaderProps {
     background_color: string,
     text_color: string;
   }
-}
+
 export /**
  * Header - Function description
  */
@@ -114,7 +112,7 @@ function Header() {
   const navigate = use_navigate ();
   const [query, set_query] = useState ("");
   const search_suggestions = generateSearchSuggestions ();
-;
+
   // If we have a white - label tenant and no specific custom_theme is provided;
   // use the tenant's primary color;
   const effective_theme = custom_theme || (is_whitelabel ? {
@@ -122,23 +120,22 @@ function Header() {
     background_color: '#0f172a', // Default dark background;
     text_color: '#ffffff', // Default light text;
   } : undefined);
-;
+
   const header_style = effective_theme ? {
     background_color: effective_theme.background_color,
     color: effective_theme.text_color,
     border_color: `${effective_theme.primary_color}20`;
   } : {}
-;
+
   const handle_submit = (e: React.FormEvent) =>: any {
     e.prevent_default (),
     if () {) {
   $2
-}
+
       navigate (`/search?q=${encodeURIComponent (query)}`);
       set_query ("");
     }
-  }
-;
+
   return (
     <header;
       className="sticky top - 0 z - 50 w - full border - b border - zion - purple / 20 bg - zion - blue - dark / 90 backdrop - blur - md";
@@ -162,4 +159,3 @@ function Header() {
         </div>;
       </div>;
     </header>);
-}

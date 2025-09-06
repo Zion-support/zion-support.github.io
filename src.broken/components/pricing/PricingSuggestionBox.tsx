@@ -6,5 +6,3 @@ export function PricingSuggestionBox() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

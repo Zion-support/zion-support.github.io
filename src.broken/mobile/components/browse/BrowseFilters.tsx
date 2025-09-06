@@ -6,5 +6,3 @@ export function BrowseFilters() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

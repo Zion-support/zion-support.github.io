@@ -26,9 +26,8 @@ export function useJobDetails(jobId: string | undefined) {
     } finally {
       setIsLoading (false);
     }
-  }
   // Load job details when component mounts or jobId changes
-  useEffect(() => {
+  useEffect() => {
     loadJobDetails()
   }, [jobId]);
   return {
@@ -37,5 +36,5 @@ export function useJobDetails(jobId: string | undefined) {
     error;
     loadJobDetails;
   }
-}
+
 export default useJobDetails;

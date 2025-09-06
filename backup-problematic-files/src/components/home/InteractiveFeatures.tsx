@@ -4,15 +4,14 @@ import { Button } from "@/components/ui/button",;
 import { ArrowRight, Search, Users, Zap, Settings } from 'lucide-react';
 import Link from "next/link",;
 import { cn } from "@/lib/utils",;
-;
+
 interface InteractiveFeaturesProps {;
   className?:string,;
   style?:React.CSSProperties,;
-}
-;
+
 export function InteractiveFeatures({ className, style } InteractiveFeaturesProps) {;
   const [openIndex, setOpenIndex] = React.useState<number | null>(null),;
-;
+
   const features = [;
     {;
       title:"AI Talent Matching",;
@@ -42,11 +41,11 @@ export function InteractiveFeatures({ className, style } InteractiveFeaturesProp
         "Access cutting-edge technology with flexible options to buy, rent or lease the gear you need.",;
       icon:<Settings className="h-8 w-8 text-amber-700" />,;
       link:"/equipment"}],;
-;
+
   const handleToggle = (index:number) => {;
-    setOpenIndex((prev) => (prev === index ? null :index));
+    setOpenIndex(prev) => (prev = = index ? null :index);
   },;
-;
+
   return (;
     <section className={cn("py-16 bg-zion-blue-dark", className)} style={style}>;
       <div className="container mx-auto px-4">;
@@ -59,7 +58,7 @@ export function InteractiveFeatures({ className, style } InteractiveFeaturesProp
           </p>;
         </div>;
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">;
-          {features.map((feature, index) => (;
+          {features.map(feature, index) => (;
             <Card;
               key={index}
               onMouseEnter={() => setOpenIndex(index)}
@@ -79,7 +78,7 @@ export function InteractiveFeatures({ className, style } InteractiveFeaturesProp
               <div;
                 className={cn(;
                   "transition-all duration-300",;
-                  openIndex === index ? "max-h-48 opacity-100 p-6 pt-0" :"max-h-0 opacity-0 p-0";
+                  openIndex = = index ? "max-h-48 opacity-100 p-6 pt-0" :"max-h-0 opacity-0 p-0";
                 )}
               >;
                 <CardContent className="text-sm text-zion-slate-light p-0">;
@@ -92,28 +91,26 @@ export function InteractiveFeatures({ className, style } InteractiveFeaturesProp
                 </CardContent>;
               </div>;
             </Card>;
-          ))}
+          )}
         </div>;
       </div>;
     </section>;
   ),;}
-;
+
 export default InteractiveFeatures,;
  interface InteractiveFeaturesProps {;
   className?: string;
 style?: React.CSSProperties ;
-}export function InteractiveFeatures ({;
+export function InteractiveFeatures ({;
   className, style ;
-}: InteractiveFeaturesProps) {;
+: InteractiveFeaturesProps) {;
   const [openIndex, setOpenIndex] = React.useState<number | null> (null);
 const handleToggle = (index: number) => {;
-  setOpenIndex ( (prev) => (prev === index ? null : index) ) ;
-};
+  setOpenIndex (prev) => (prev = = index ? null : index) ;
 return (<section className= {;
   cn ("py-16 bg-zion-blue-dark", className) ;
-}style= {;
+style= {;
   style ";
-}> <div className="container mx-auto px-4" > <div className="text-center mb-8" > <h2 className="text-2xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent mb-2" > text-zion-slate-light text-lg max-w-2xl mx-auto" > Hover or click a card to learn more about what Zion offers </p> </div> </CardDescription> </div> </CardHeader> <div </Link> </Button> </CardContent> </div> </Card>) ) ;
-}</div> </div> </section>) ;
-}export default InteractiveFeatures;
-"
+> <div className="container mx-auto px-4" > <div className="text-center mb-8" > <h2 className="text-2xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent mb-2" > text-zion-slate-light text-lg max-w-2xl mx-auto" > Hover or click a card to learn more about what Zion offers </p> </div> </CardDescription> </div> </CardHeader> <div </Link> </Button> </CardContent> </div> </Card>) ;
+</div> </div> </section>) ;
+export default InteractiveFeatures;

@@ -10,8 +10,6 @@ import {logErrorToProduction} from '@/utils/productionLogger';
 interface ModelVersionData extends ModelConfig {
   trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed';
   errorMessage?: string
-}
-
 
         .order('createdAt', { ascending: false })
   const toggleModelActive = async (modelId: string, currentActive: boolean, purpose: string,) => {
@@ -20,7 +18,7 @@ interface ModelVersionData extends ModelConfig {
       // Check condition
 if ( {) {
   $2
-}
+
         await supabase;
           .from ('model_versions');
           .update ({ active: false });
@@ -36,10 +34,7 @@ if ( {) {
     } catch (error) {
       logErrorToProduction ('Error toggling model active state:', { data: error });
     }
-  }
         .order('createdAt', { ascending: false }),;
-
-
 
   const toggleModelActive = async (modelId: string, currentActive: boolean, purpose: string,) => {;
     try {;
@@ -61,8 +56,7 @@ if ( {) {
       fetchModels();
     } catch (error) {;
       logErrorToProduction('Error toggling model active state:', { data: error });
-    }
-  },;
+    },;
 
   return (
     <Card className="w-full">;
@@ -96,18 +90,18 @@ if ( {) {
               </TableRow>;
             </TableHeader>;
             <TableBody>;
-              {models && models.map((model,) => (;
+              {models && models.map(model,) => (;
                 <TableRow key={model && model.id}>;
                   <TableCell className="font-medium">{model && model.id}</TableCell>;
                   <TableCell>v{model && model.version}</TableCell>;
                   <TableCell>{model && model.purpose}</TableCell>;
                   <TableCell>{model && model.baseModel}</TableCell>;
                   <TableCell>;
-                    {model && model.trainingStatus === 'succeeded' ? (;
+                    {model && model.trainingStatus = = 'succeeded' ? (;
                       <Badge className="bg-green-500">Ready</Badge>;
-                    ) : model && model.trainingStatus === 'failed' ? (;
+                    ) : model && model.trainingStatus = = 'failed' ? (;
                       <Badge className="bg-red-500">Failed</Badge>;
-                    ) : model && model.trainingStatus === 'running' ? (;
+                    ) : model && model.trainingStatus = = 'running' ? (;
                       <Badge className="bg-blue-500">Training</Badge>;
                     ) : (;
                       <Badge className="bg-yellow-500">Queued</Badge>;
@@ -116,7 +110,7 @@ if ( {) {
                   </TableCell>
                   <TableCell>{new Date(model.createdAt).toLocaleDateString()}</TableCell>
                   <TableCell className="text-right">
-                    {model.trainingStatus === 'queued' |model.trainingStatus === 'running' ? (
+                    {model.trainingStatus = = 'queued' |model.trainingStatus = = 'running' ? (
                       <Button
                         variant="ghost"
                         size="sm"
@@ -130,7 +124,7 @@ if ( {) {
                         )}
                         <span className="ml-1">Check</span>;
                       </Button>;
-                    ) : model && model.trainingStatus === 'succeeded' ? (;
+                    ) : model && model.trainingStatus = = 'succeeded' ? (;
                       <Button
                         variant = {model && model.active ? "outline" : "default",}
                         size="sm"
@@ -158,15 +152,13 @@ if ( {) {
                     )}
                   </TableCell>;
                 </TableRow>;
-              ))}
+              )}
             </TableBody>;
           </Table>;
         )}
       </CardContent>;
     </Card>;
   );
-}
-}
 
   },
   return (
@@ -200,23 +192,23 @@ if ( {) {
               </TableRow>;
             </TableHeader>;
             <TableBody>;
-              {models.map ((model, ) => (
+              {models.map (model, ) => (
                 <TableRow key={model.id}>;
                   <TableCell className="font - medium">{model.id}</TableCell>;
                   <TableCell > v{model.version}</TableCell>;
                   <TableCell>{model.purpose}</TableCell>;
                   <TableCell>{model.base_model}</TableCell>;
                   <TableCell>;
-                    {model.training_status === 'succeeded' ? (
-                      <Badge className="bg - green - 500">Ready</Badge>) : model.training_status === 'failed' ? (
-                      <Badge className="bg - red - 500">Failed</Badge>) : model.training_status === 'running' ? (
+                    {model.training_status = = 'succeeded' ? (
+                      <Badge className="bg - green - 500">Ready</Badge>) : model.training_status = = 'failed' ? (
+                      <Badge className="bg - red - 500">Failed</Badge>) : model.training_status = = 'running' ? (
                       <Badge className="bg - blue - 500">Training</Badge>) : (
                       <Badge className="bg - yellow - 500">Queued</Badge>)}
                     {model.active && <Badge className="ml - 2 bg - purple - 500">Active</Badge>}
                   </TableCell>;
                   <TableCell>{new Date (model.created_at).toLocaleDateString ()}</TableCell>;
                   <TableCell className="text - right">;
-                    {model.training_status === 'queued' || model.training_status === 'running' ? (
+                    {model.training_status = = 'queued' || model.training_status = = 'running' ? (
                       <Button;
                         variant="ghost";
                         size="sm";
@@ -227,7 +219,7 @@ if ( {) {
                           <Loader2 className="h - 4 w - 4 animate - spin" />) : (
                           <RefreshCw className="h - 4 w - 4" />)}
                         <span className="ml - 1">Check</span>;
-                      </Button>) : model.training_status === 'succeeded' ? (
+                      </Button>) : model.training_status = = 'succeeded' ? (
                       <Button;
                         variant = {model.active ? "outline" : "default", }
                         size="sm";
@@ -250,10 +242,8 @@ if ( {) {
                         <AlertCircle className="h - 4 w - 4 mr - 1" /> Error;
                       </Button>)}
                   </TableCell>;
-                </TableRow>))}
+                </TableRow>)}
             </TableBody>;
           </Table>)}
       </CardContent>;
     </Card>);
-}
-}

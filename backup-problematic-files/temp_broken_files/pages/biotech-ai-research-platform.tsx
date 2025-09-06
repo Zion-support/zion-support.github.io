@@ -1,7 +1,7 @@
 import React from 'react',;
 import Head from 'next/head',;
 import Layout from '../components/layout/Layout',;
-;
+
 export default function BiotechAIResearchPlatformPage() {;
   return (;
     <Layout>;
@@ -34,5 +34,5 @@ export default function BiotechAIResearchPlatformPage() {;
       </div>;
     </Layout>;
   );
-}
-; </Head> <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8" > <div className="max-w-6xl mx-auto space-y-8" > <div className="text-center" > <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-green-400 via-emerald-400 to-teal-400 bg-clip-text text-transparent" >Biotech AI Research Platform</h1> <p className="mt-4 text-slate-300" >Accelerate discovery with intelligent automation across analysis and experimentation.</p> </div> </div> </div> </div> </div> </div> </Layout> 
+
+ </Head> <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8" > <div className="max-w-6xl mx-auto space-y-8" > <div className="text-center" > <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-green-400 via-emerald-400 to-teal-400 bg-clip-text text-transparent" >Biotech AI Research Platform</h1> <p className="mt-4 text-slate-300" >Accelerate discovery with intelligent automation across analysis and experimentation.</p> </div> </div> </div> </div> </div> </div> </Layout> 

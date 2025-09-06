@@ -6,5 +6,3 @@ export function WhitelabelRequestForm() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

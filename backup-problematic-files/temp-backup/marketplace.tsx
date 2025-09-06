@@ -3,7 +3,6 @@ import React from 'react';
 
 interface MarketplaceProps {
   className?: string;
-}
 
 const Marketplace: React.FC<MarketplaceProps> = ({ className }) => {
   return (
@@ -12,6 +11,3 @@ const Marketplace: React.FC<MarketplaceProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-}
-}
-}

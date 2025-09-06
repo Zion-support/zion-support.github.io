@@ -9,8 +9,8 @@ export function addPortfolioSection(
   startY: number;
 
   maxProjects: number = 2
-): number {
-  if (projects.length === 0) return startY;
+: number {
+  if (projects.length = = 0) return startY;
   let yPos = startY;
   // Check if we need to add a new page
   if (yPos > 250) {
@@ -61,7 +61,6 @@ export function addPortfolioSection(
         doc.text(`Demo: ${project.demo_url}`, 20, yPos);
         yPos += 4
       }
-    }
     yPos += 10, // Add space between projects
   }
   // If there are more projects than we're displaying
@@ -85,14 +84,14 @@ export function addPortfolioSection (
   // Check condition
 if (return start_y) {
   $2
-}
+
   let y_pos = start_y;
-;
+
   // Check if we need to add a new page;
   // Check condition
 if ( {) {
   $2
-}
+
     doc.add_page (),
     y_pos = 20;
   }
@@ -100,20 +99,20 @@ if ( {) {
   doc.setTextColor (colors.heading);
   doc.text ('Portfolio Projects', 20, y_pos);
   y_pos += 8;
-;
+
   doc.setDrawColor (colors.accent);
   doc.line (20, y_pos, 100, y_pos);
   y_pos += 8;
-;
+
   // Limit the number of projects shown based on max_projects parameter;
   const display_projects = projects.slice (0, max_projects);
-;
+
   for (const project of display_projects) {
     // Check if we need to add a new page;
     // Check condition
 if ( {) {
   $2
-}
+
       doc.add_page ();
       y_pos = 20;
     }
@@ -121,11 +120,11 @@ if ( {) {
     doc.setTextColor (colors.subheading);
     doc.text (project.title, 20, y_pos);
     y_pos += 6;
-;
+
     // Check condition
 if ( {) {
   $2
-}
+
       doc.setFontSize (10);
       doc.setTextColor (colors.text);
       doc.text (`Technologies: ${project.technologies.join ()}`, 20, y_pos);
@@ -134,7 +133,7 @@ if ( {) {
     // Check condition
 if ( {) {
   $2
-}
+
       doc.setFontSize (10);
       const description_lines = doc.splitTextToSize (project.description, 170);
       doc.text (description_lines, 20, y_pos);
@@ -144,37 +143,35 @@ if ( {) {
     // Check condition
 if ( {) {
   $2
-}
+
       y_pos += 5;
       doc.setFontSize (9);
       doc.setTextColor (colors.accent);
-;
+
       // Check condition
 if ( {) {
   $2
-}
+
         doc.text (`GitHub: ${project.github_url}`, 20, y_pos);
         y_pos += 4;
       }
       // Check condition
 if ( {) {
   $2
-}
+
         doc.text (`Demo: ${project.demo_url}`, 20, y_pos);
         y_pos += 4;
       }
-    }
     y_pos += 10, // Add space between projects;
   }
   // If there are more projects than we're displaying;
   // Check condition
 if ( {) {
   $2
-}
+
     doc.setFontSize (10);
     doc.setTextColor (colors.text);
     doc.text (`+ ${projects.length - max_projects} more projects not shown`, 20, y_pos);
     y_pos += 6;
   }
   return y_pos + 5;
-}

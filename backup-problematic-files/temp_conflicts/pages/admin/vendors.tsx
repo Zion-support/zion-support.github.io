@@ -1,17 +1,17 @@
 import { useEffect, useState } from 'react',;
 import type { Vendor } from '../../utils/vendor-types',;
-;
+
 export default function AdminVendorsPage() {;
   const [vendors, setVendors] = useState<Vendor[]>([]),;
-;
+
   async function load() {;
     const res = await fetch('/api/vendors'),;
     const data = await res.json(),;
     setVendors(data.vendors || []),;
   }
-;
-  useEffect(() => { load(), }, []),;
-;
+
+  useEffect() => { load(), }, []),;
+
   async function call(action:string, vendorId:string, value?:any) {;
     await fetch('/api/admin/vendors', {;
       method:'POST',;
@@ -19,7 +19,7 @@ export default function AdminVendorsPage() {;
       body:JSON.stringify({ action, vendorId, value })}),;
     load(),;
   }
-;
+
   return (;
     <div className="space-y-6">;
       <h1 className="text-2xl font-semibold">Admin  Vendors</h1>;
@@ -40,14 +40,13 @@ export default function AdminVendorsPage() {;
               <button onClick={() => call(v.suspended ? 'unsuspend' :'suspend', v.id)} className="px-3 py-1 rounded border">{v.suspended ? 'Unsuspend' :'Suspend'}</button>;
               <div className="flex items-center gap-1">;
                 <span>Commission %</span>;
-                <input type="number" defaultValue={v.commissionSplitPct || 10} onBlur={e => call('commission', v.id, Number(e.target.value))} className="w-20 border rounded px-2 py-1 bg-transparent" />;
+                <input type="number" defaultValue={v.commissionSplitPct || 10} onBlur={e => call('commission', v.id, Number(e.target.value)} className="w-20 border rounded px-2 py-1 bg-transparent" />;
               </div>;
             </div>;
             <div className="text-xs text-gray-500">Revenue:$0 (placeholder)</div>;
           </div>;
-        ))}
+        )}
       </div>;
       <div className="text-center text-xs text-gray-500">Powered by Zion</div>;
     </div>;
   ),;
-}

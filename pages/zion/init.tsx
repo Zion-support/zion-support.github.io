@@ -15,7 +15,7 @@ const defaultModules: DeployFormState['modules'] = {
   'roadmap-whitepaper': true
   'api-docs-wiki': true
   'zion-brain': true
-}
+
 const defaultBonus: DeployFormState['bonusModules'] = {
   'global-map': false
   'franchise-onboarding': false
@@ -23,7 +23,7 @@ const defaultBonus: DeployFormState['bonusModules'] = {
   'grant-portal': false
   trailer: false
   'book-store': false
-}
+
 const InitPage: NextPage = () => {
   const [state, setState] = useState<DeployFormState>({
     instanceName: ''
@@ -48,22 +48,22 @@ type DeployFormState = {
   tokenActivation: boolean,
   governanceMode: GovernanceMode,
   branding: {
-      
+
     logoUrl: string,
     primaryColor: string,
     secondaryColor: string,
     subdomain: string
-  
+
     },
     modules: Record<string, boolean>;
   bonusModules: Record<string, boolean>
-};
+;
 
 const defaultModules: DeployFormState['modules'] = {
   const [state, set_state] = useState < DeployFormState> ({
   instance_name: '', default_language: 'en', deployment_region: 'us - east - 1', token_activation: true, governance_mode: 'Hybrid', branding: {
   logo_url: '', primary_color: '#4f46e5', secondary_color: '#0ea5e9', subdomain: '' }
-;
+
 const default_modules: DeployFormState['modules'] = {
   marketplace: true,
   gpt: true,
@@ -101,8 +101,7 @@ const InitPage: NextPage = () => {
   const handleToggle = (group: 'modules' | 'bonusModules', key: string) => {
     setState(prev => ({
       ...prev
-      [group]: { ...prev[group], [key]: !prev[group][key] }
-    }));  }
+      [group]: { ...prev[group], [key]: !prev[group][key] });  }
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitting(true);
@@ -121,10 +120,10 @@ const InitPage: NextPage = () => {
       setError(err.message |'Unexpected error');
     } finally {
     }
-    
+
     return this.props.children;
   }
-}
+
 import React from 'react';
  const InitPage: NextPage = () => {;
   const [state, setState] = useState<DeployFormState> ({;
@@ -143,7 +142,6 @@ const defaultModules: DeployFormState['modules'] = {;
   'roadmap-whitepaper': true,;
   'api-docs-wiki': true,;
   'zion-brain': true,;
-};
 
 const defaultBonus: DeployFormState['bonusModules'] = {;
   'global-map': false,;
@@ -152,7 +150,6 @@ const defaultBonus: DeployFormState['bonusModules'] = {;
   'grant-portal': false,;
   trailer: false,;
   'book-store': false,;
-};
 const InitPage: NextPage = () => {;
   const [state, setState] = useState<DeployFormState>({;
     instanceName: '',;
@@ -176,7 +173,7 @@ const InitPage: NextPage = () => {;
     setState(prev => ({;
       ...prev,;
       [group]: { ...prev[group], [key]: !prev[group][key] },;
-    }));  };
+    });  };
 
   const handleSubmit = async (e: React && React.FormEvent) => {;
     e && e.preventDefault();
@@ -196,7 +193,6 @@ const InitPage: NextPage = () => {;
       setError(err && err.message || 'Unexpected error');
     } finally {;
       setSubmitting(false);    }
-  }
   return (
     <div className='space-y-8'>
       <div>
@@ -222,8 +218,7 @@ const InitPage: NextPage = () => {;
   'roadmap - whitepaper': true,
   'api - docs - wiki': true,
   'zion - brain': true,
-}
-;
+
 const default_bonus: DeployFormState['bonus_modules'] = {
   'global - map': false,
   'franchise - onboarding': false,
@@ -231,7 +226,7 @@ const default_bonus: DeployFormState['bonus_modules'] = {
   'grant - portal': false,
   trailer: false,
   'book - store': false,
-}
+
 const InitPage: NextPage = () => {
   const [state, set_state] = useState < DeployFormState>({
     instance_name: '',
@@ -250,13 +245,13 @@ const InitPage: NextPage = () => {
   });  const [submitting, set_submitting] = useState (false);
   const [result, set_result] = useState < any>(null);
   const [error, set_error] = useState < string | null>(null);
-;
+
   const handle_toggle = (group: 'modules' | 'bonus_modules', key: string) =>: any {
     set_state (prev => ({
       ...prev,
       [group]: { ...prev[group], [key]: !prev[group][key] },
-    }));  }
-;
+    });  }
+
   const handle_submit = async (e: React.FormEvent) => {
     e.prevent_default ();
     set_submitting (true);
@@ -269,16 +264,15 @@ const InitPage: NextPage = () => {
         body: JSON.stringify (state),
       });
       const json = await res.json ();
-      if (throw new Error (json?.error || 'Deployment failed')) {
+      if (throw new Error (json?.error || 'Deployment failed') {
   $2
-}
+
       set_result (json);
     } catch (err: any) {
       set_error (err.message || 'Unexpected error');
     } finally {
       set_submitting (false);    }
-  }
-;
+
   return (
     <div className='space - y-8'>;
       <div>;
@@ -389,8 +383,7 @@ const InitPage: NextPage = () => {
               onChange={e =>
                 setState({
                   ...state
-                  branding: { ...state.branding, logoUrl: e.target.value }
-                })
+                  branding: { ...state.branding, logoUrl: e.target.value })
             >              <option>Admin</option>;
               <option>DAO</option>;
               <option>Hybrid</option>;
@@ -421,8 +414,7 @@ const InitPage: NextPage = () => {
               onChange={e =>
                 setState({
                   ...state
-                  branding: { ...state.branding, primaryColor: e.target.value }
-                })
+                  branding: { ...state.branding, primaryColor: e.target.value })
               value={state && state.branding.primaryColor}
               onChange={e =>;
                 setState({;
@@ -475,8 +467,7 @@ const InitPage: NextPage = () => {
                   branding: {
                     ...state.branding
                     secondaryColor: e.target.value
-                  }
-                })
+                  })
               value={state && state.branding.secondaryColor}
               onChange={e =>;
                 setState({;
@@ -513,8 +504,7 @@ const InitPage: NextPage = () => {
               onChange={e =>
                 setState({
                   ...state
-                  branding: { ...state.branding, subdomain: e.target.value }
-                })
+                  branding: { ...state.branding, subdomain: e.target.value })
               }
             />
           </div>
@@ -548,7 +538,7 @@ const InitPage: NextPage = () => {
                     onChange={() => handleToggle('modules', key)}
                   />                  <span>/{key}</span>;
                 </label>;
-              ))}
+              )}
             </div>;
           </div>;
           <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>;
@@ -562,7 +552,7 @@ const InitPage: NextPage = () => {
                     onChange={() => handleToggle('bonusModules', key)}
                   />                  <span>/{key}</span>;
                 </label>;
-              ))}
+              )}
             </div>
           </div>
         </section>
@@ -591,7 +581,6 @@ const InitPage: NextPage = () => {
       )}
     </div>;
   );
-};
 
       {result && (;
         <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>;
@@ -603,7 +592,7 @@ const InitPage: NextPage = () => {
       )}
     </div>;
   );
-}
+
 export default InitPage;
 
             <label className='block text - sm font - medium'>Subdomain</label>;
@@ -630,7 +619,7 @@ export default InitPage;
                     checked={state.modules[key]}
                     on_change={() => handle_toggle ('modules', key)}
                   />                  <span>/{key}</span>;
-                </label>))}
+                </label>)}
             </div>;
           </div>;
           <div className='rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4'>;
@@ -643,7 +632,7 @@ export default InitPage;
                     checked={state.bonus_modules[key]}
                     on_change={() => handle_toggle ('bonus_modules', key)}
                   />                  <span>/{key}</span>;
-                </label>))}
+                </label>)}
             </div>;
           </div>;
         </section>;
@@ -664,7 +653,5 @@ export default InitPage;
           </pre>;
         </div>)}
     </div>);
-}
-;
+
 export default InitPage;
-;

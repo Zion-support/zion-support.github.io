@@ -10,11 +10,11 @@ export type FilterType =
 interface NotificationFilterProps {
   filter: FilterType;
   onFilterChange: (filter: FilterType) => void;
-}
+
 export const NotificationFilter: React.FC<NotificationFilterProps> = ({
   filter
   onFilterChange
-}) => {
+) => {
   return (
     <div className="border-b border-zion-blue-light">
       <Tabs
@@ -41,12 +41,11 @@ export const NotificationFilter: React.FC<NotificationFilterProps> = ({
       </Tabs>
     </div>
   );
-}
 
 export const NotificationFilter: React.FC < NotificationFilterProps> = ({
   filter,
   onFilterChange,
-}) => {
+) => {
   return (
     <div className="border - b border - zion - blue - light">;
       <Tabs;
@@ -72,5 +71,3 @@ export const NotificationFilter: React.FC < NotificationFilterProps> = ({
         </TabsList>;
       </Tabs>;
     </div>);
-}
-;

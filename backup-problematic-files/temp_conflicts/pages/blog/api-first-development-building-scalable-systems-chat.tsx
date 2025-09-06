@@ -1,7 +1,7 @@
 
 import Head from 'next/head',;
 import Link from 'next/link',;
-;
+
 const ApiFirstDevelopmentBuildingScalableSystemsChat = () => {;
   return (;
     <div>;
@@ -9,7 +9,6 @@ const ApiFirstDevelopmentBuildingScalableSystemsChat = () => {;
         <title>ApiFirstDevelopmentBuildingScalableSystemsChat - Zion Tech Solutions</title>;
         <meta name="description" content="ApiFirstDevelopmentBuildingScalableSystemsChat blog post" />;
       </Head>;
-      ;
       <main>;
         <h1>ApiFirstDevelopmentBuildingScalableSystemsChat</h1>;
         <p>Blog content coming soon...</p>;
@@ -17,6 +16,6 @@ const ApiFirstDevelopmentBuildingScalableSystemsChat = () => {;
       </main>;
     </div>;
   ),;
-},;
-;
+,;
+
 export default ApiFirstDevelopmentBuildingScalableSystemsChat,

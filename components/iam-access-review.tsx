@@ -7,15 +7,14 @@ import { extraServices } from '../data/extra-services';
 export default function IAMAccessReviewPage() {
 
   const service = extraServices.find(s =>
-    s.link.endsWith('/iam-access-review')
-  );  if (!service) return null;export default function IAMAccessReviewPage() {
-  const service = extraServices.find(s => s.link.endsWith('/iam-access-review'));
+    s.link.endsWith('/iam-access-review');  if (!service) return null;export default function IAMAccessReviewPage() {
+  const service = extraServices.find(s => s.link.endsWith('/iam-access-review');
 
 export default function IAMAccessReviewPage() {;
   const service = extraServices && extraServices.find(s =>;
     s && s.link.endsWith('/iam-access-review');
   );  if (!service) return null;export default function IAMAccessReviewPage() {;
-  const service = extraServices && extraServices.find(s => s && s.link.endsWith('/iam-access-review'));
+  const service = extraServices && extraServices.find(s => s && s.link.endsWith('/iam-access-review');
   if (!service) return null;
 
   return (
@@ -43,14 +42,14 @@ export default function IAMAccessReviewPage() {;
               <h2 className='text-2xl font-semibold mb-4'>Capabilities</h2>;
               <p className='text-slate-300 mb-6'>{service && service.description}</p>;
               <ul className='grid grid-cols-1 md:grid-cols-2 gap-3'>;
-                {service && service.features.slice(0, 12).map((feat, i) => (;
+                {service && service.features.slice(0, 12).map(feat, i) => (;
                   <li
                     key={i}
                     className='flex items-start space-x-3 text-slate-200'>;
                     <Check className='w-5 h-5 text-cyan-400 mt-0 && 0.5' />;
                     <span>{feat}</span>;
                   </li>;
-                ))}
+                )}
               </ul>;
             </div>;
             <div className='bg-black/30 rounded-2xl border border-cyan-500/30 p-6 h-fit'>;
@@ -105,18 +104,18 @@ export default /**
  */
 function IAMAccessReviewPage() {
   const service = extra_services.find (string =>;
-    s.link.ends_with ('/iam - access - review'));  // Check condition
+    s.link.ends_with ('/iam - access - review');  // Check condition
 if (return null) {
   $2
-}export default /**
+export default /**
  * IAMAccessReviewPage - Function description
  */
 function IAMAccessReviewPage() {
-  const service = extra_services.find (string => s.link.ends_with ('/iam - access - review'));
+  const service = extra_services.find (string => s.link.ends_with ('/iam - access - review');
   // Check condition
 if (return null) {
   $2
-}
+
   return (
     <UltraAdvancedFuturisticBackground>;
       <Head>;
@@ -142,14 +141,14 @@ if (return null) {
               <h2 className='text - 2xl font - semibold mb - 4'>Capabilities</h2>;
               <p className='text - slate - 300 mb - 6'>{service.description}</p>;
               <ul className='grid grid - cols - 1 md:grid - cols - 2 gap - 3'>;
-                {service.features.slice (0, 12).map ((feat, i) => (
+                {service.features.slice (0, 12).map (feat, i) => (
                   <li;
                     key={i}
                     className='flex items - start space - x-3 text - slate - 200';
                   >;
                     <Check className='w - 5 h - 5 text - cyan - 400 mt - 0.5' />;
                     <span>{feat}</span>;
-                  </li>))}
+                  </li>)}
               </ul>;
             </div>;
             <div className='bg - black / 30 rounded - 2xl border border - cyan - 500 / 30 p - 6 h - fit'>;
@@ -201,9 +200,9 @@ if (return null) {
       </div>;
     </UltraAdvancedFuturisticBackground>;
   );
-}
+
 export default function IAMAccessReviewPage() {
-  const service = extraServices.find(s => s.link.endsWith('/iam-access-review'));
+  const service = extraServices.find(s => s.link.endsWith('/iam-access-review');
   if (!service) return null;
 
   return (
@@ -224,9 +223,9 @@ export default function IAMAccessReviewPage() {
               <h2 className="text-2xl font-semibold mb-4">Capabilities</h2>
               <p className="text-slate-300 mb-6">{service.description}</p>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                {service.features.slice(0, 12).map((feat, i) => (
+                {service.features.slice(0, 12).map(feat, i) => (
                   <li key={i} className="flex items-start space-x-3 text-slate-200"><Check className="w-5 h-5 text-cyan-400 mt-0.5" /><span>{feat}</span></li>
-                ))}
+                )}
               </ul>
             </div>
             <div className="bg-black/30 rounded-2xl border border-cyan-500/30 p-6 h-fit">
@@ -248,8 +247,5 @@ export default function IAMAccessReviewPage() {
       </div>
     </UltraAdvancedFuturisticBackground>
   );
-}
 
     </UltraAdvancedFuturisticBackground>);
-}
-;

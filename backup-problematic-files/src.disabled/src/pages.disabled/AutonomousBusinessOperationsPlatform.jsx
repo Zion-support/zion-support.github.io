@@ -7,6 +7,5 @@ const AutonomousBusinessOperationsPlatform = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default AutonomousBusinessOperationsPlatform;

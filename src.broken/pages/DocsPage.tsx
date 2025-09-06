@@ -6,5 +6,3 @@ export function DocsPage() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

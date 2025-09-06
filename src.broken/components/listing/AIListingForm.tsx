@@ -6,5 +6,3 @@ export function AIListingForm() {;
       <p>Component placeholder - needs implementation</p>;
     </div>;
   );
-}
-;

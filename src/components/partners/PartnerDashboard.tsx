@@ -6,14 +6,14 @@ import {
   CardFooter
   CardHeader
   CardTitle
-} from '@/components/ui/card'
+ from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
   BarChart
   DollarSign
   LineChart
   TrendingUp
   Users
-} from 'lucide-react'
+ from 'lucide-react'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 
@@ -37,7 +37,7 @@ import {;
   CardFooter,;
   CardHeader,;
   CardTitle,;
-} from '@/components/ui/card';
+ from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import {;
   BarChart,;
@@ -45,7 +45,7 @@ import {;
   LineChart,;
   TrendingUp,;
   Users,;
-} from 'lucide-react';
+ from 'lucide-react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { BarChart, DollarSign, LineChart, TrendingUp, Users } from 'lucide-react';
@@ -196,7 +196,7 @@ export function PartnerDashboard() {;
       </Card>
     </div>
   )
-}
+
           </div>;
           <Button variant='outline' size='sm'>;
             View All;
@@ -216,8 +216,7 @@ export function PartnerDashboard() {;
       </Card>;
     </div>;
   );
-}
+
   );
-}
+
     </div>);
-}

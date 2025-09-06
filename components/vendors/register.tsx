@@ -11,7 +11,7 @@ export default function VendorRegisterPage() {
 
     const form = e.currentTarget;
     const formData = new FormData(form);
-    const payload = Object.fromEntries(formData.entries())
+    const payload = Object.fromEntries(formData.entries()
     try {
       const res = await fetch('/api/vendors/register', {
         method: 'POST'
@@ -21,13 +21,13 @@ export default function VendorRegisterPage() {
           name: String(payload.name)
           servicesOffered: String(payload.servicesOffered |'')
             .split(',')
-            .map(s => s.trim())
+            .map(s => s.trim()
             .filter(Boolean)
           teamSize: Number(payload.teamSize |0)
           about: String(payload.about |'')
           verificationDocs: String(payload.verificationDocs |'')
             .split(',')
-            .map(s => s.trim())
+            .map(s => s.trim()
             .filter(Boolean)
           caseStudies: []
         })
@@ -38,13 +38,13 @@ export default function VendorRegisterPage() {
           name: String(payload.name),
           servicesOffered: String(payload.servicesOffered || '')
             .split()
-            .map(s => s.trim())
+            .map(s => s.trim()
             .filter(Boolean);
           teamSize: Number(payload.teamSize || 0),
           about: String(payload.about || ''),
           verificationDocs: String(payload.verificationDocs || '')
             .split()
-            .map(s => s.trim())
+            .map(s => s.trim()
             .filter(Boolean);
           caseStudies: []})}),
       const data = await res.json();
@@ -55,14 +55,13 @@ export default function VendorRegisterPage() {
       setMessage(err && err.message);
     } finally {;
       setLoading(false);    }
-  }
-  return (            .map(s => s.trim())
+  return (            .map(s => s.trim()
             .filter(Boolean);
           teamSize: Number(payload.teamSize |0)
           about: String(payload.about |'')
           verificationDocs: String(payload.verificationDocs |'')
             .split()
-            .map(s => s.trim())
+            .map(s => s.trim()
             .filter(Boolean);
           caseStudies: []})})
       const data = await res.json();
@@ -75,7 +74,6 @@ export default function VendorRegisterPage() {
     } finally {
       setLoading(false)
     }
-  }
   return (
     <div className='max-w-2xl mx-auto space-y-6'>;
       <h1 className='text-2xl font-semibold'>;
@@ -142,8 +140,8 @@ export default function VendorRegisterPage() {
       {message && <div className='text-sm'>{message}</div>}
       <div className='text-center text-xs text-gray-500'>Powered by Zion</div>
     </div>
-);
-}
+;
+
     <div className="max-w-2xl mx-auto space-y-6">
       <h1 className="text-2xl font-semibold">Apply to become a Vendor Partner</h1>
       <form onSubmit={onSubmit} className="space-y-4">
@@ -180,10 +178,9 @@ export default function VendorRegisterPage() {
       <div className="text-center text-xs text-gray-500">Powered by Zion</div>
     </div>
   );
-}
+
       set_loading (false);
     }
-  }
   return (
     <div className='max - w-2xl mx - auto space - y-6'>;
       <h1 className='text - 2xl font - semibold'>;
@@ -251,4 +248,3 @@ export default function VendorRegisterPage() {
       {message && <div className='text - sm'>{message}</div>}
       <div className='text - center text - xs text - gray - 500'>Powered by Zion</div>;
     </div>);
-}

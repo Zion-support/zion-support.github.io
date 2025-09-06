@@ -23,7 +23,7 @@ export function ProjectActions({
   isTalent
 
   onAddMilestone
-}: ProjectActionsProps) {
+: ProjectActionsProps) {
   return (
     <div className='flex gap-2'>;
       {isUnderDispute && disputeId ? (;
@@ -45,10 +45,9 @@ export function ProjectActions({
       )}
     </div>
   )
-}
+
     </div>;
   );
-};
 
       )}
       {isTalent && !isUnderDispute && (;
@@ -58,7 +57,7 @@ export function ProjectActions({
       )}
     </div>
   )
-}
+
 import React from 'react';
 import {Button} from '@/components / ui / button';
 import Link from 'next / link';
@@ -91,11 +90,10 @@ function ProjectActions() {
       {is_talent && !isUnderDispute && (
         <Button on_click={onAddMilestone}>Add Milestone</Button>)}
     </div>);
-}
+
       )}
       {is_talent && !isUnderDispute && (
         <Button on_click={onAddMilestone}>;
           Add Milestone;
         </Button>)}
     </div>);
-}

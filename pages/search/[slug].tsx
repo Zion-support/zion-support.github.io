@@ -80,15 +80,15 @@ type SearchResult =;
   | TalentSearchResult;
   | BlogSearchResult;
   | CategorySearchResult;
-// Type guard functions
+/ Type guard functions
 const hasPrice = (result: SearchResult): result is ProductSearchResult =>
-  result.type === 'product' |result.type === 'equipment';
+  result.type = = 'product' |result.type = = 'equipment';
 const hasRating = (
   result: SearchResult
-): result is ProductSearchResult | TalentSearchResult =>
-  result.type === 'product' |
-  result.type === 'equipment' |
-  result.type === 'talent';
+: result is ProductSearchResult | TalentSearchResult =>
+  result.type = = 'product' |
+  result.type = = 'equipment' |
+  result.type = = 'talent';
 interface SearchResultsPageProps {
   initialResults: SearchResult[];
   query: string;
@@ -105,14 +105,14 @@ function offlineSearch(
   page = 1
   limit = 12
   filters: OfflineFilters = {}
-): { results: SearchResult[]; totalCount: number } {  const term = query && query.toLowerCase().trim();
+: { results: SearchResult[]; totalCount: number } {  const term = query && query.toLowerCase().trim();
   const match = (text?: string) => text?.toLowerCase().includes(term);
   const productResults = MARKETPLACE_LISTINGS.filter(
     p =>
       match(p.title) |
       match(p.description) |
       match(p.category) |
-      p.tags?.some(t => match(t))
+      p.tags?.some(t => match(t)
   ).map(p => ({    id: p.id
     title: p.title
     description: p.description |''
@@ -127,13 +127,13 @@ function offlineSearch(
     tags: p.tags
     category: p.category
     date: p.createdAt
-  }));
+  });
   const talentResults = TALENT_PROFILES.filter(
     t =>
       match(t.full_name) |
       match(t.professional_title) |
       match(t.bio) |
-      t.skills?.some(s => match(s))
+      t.skills?.some(s => match(s)
   ).map(t => ({    id: t.id
     title: t.full_name
     description: t.professional_title |''
@@ -145,13 +145,13 @@ function offlineSearch(
     tags: t.skills
     category: t.location
     date: undefined
-  }));
+  });
   const blogResults = BLOG_POSTS.filter(
     b =>
       match(b.title) |
       match(b.excerpt) |
       match(b.content) |
-      b.tags?.some(t => match(t))
+      b.tags?.some(t => match(t)
   ).map(b => ({    id: b.slug
     title: b.title
     description: b.excerpt
@@ -161,22 +161,21 @@ function offlineSearch(
     tags: b.tags
     category: 'Blog'
     date: b.publishedDate
-  }));
+  });
   query: string,
   page = 1;
   limit = 12;
   filters: OfflineFilters = {}
-): { results: SearchResult[], totalCount: number } {
+: { results: SearchResult[], totalCount: number } {
   const term = query.toLowerCase().trim();
   const match = (text?: string) => text?.toLowerCase().includes(term);
 
-  const productResults = MARKETPLACE_LISTINGS.filter(
-    (p) =>
+  const productResults = MARKETPLACE_LISTINGS.filter(p) =>
       match(p.title) ||
       match(p.description) ||
       match(p.category) ||
-      p.tags?.some((t) => match(t));
-  ).map((p) => ({
+      p.tags?.some(t) => match(t);
+  ).map(p) => ({
     id: p.id,
     title: p.title,
     description: p.description || '',
@@ -190,14 +189,13 @@ function offlineSearch(
       : undefined;
     tags: p.tags,
     category: p.category,
-    date: p.createdAt})),
-  const talentResults = TALENT_PROFILES.filter(
-    (t) =>
+    date: p.createdAt}),
+  const talentResults = TALENT_PROFILES.filter(t) =>
       match(t.full_name) ||
       match(t.professional_title) ||
       match(t.bio) ||
-      t.skills?.some((s) => match(s));
-  ).map((t) => ({
+      t.skills?.some(s) => match(s);
+  ).map(t) => ({
     id: t.id,
     title: t.full_name,
     description: t.professional_title || '',
@@ -208,14 +206,13 @@ function offlineSearch(
     author: { name: t.full_name, avatar: t.profile_picture_url },
     tags: t.skills,
     category: t.location,
-    date: undefined})),
-  const blogResults = BLOG_POSTS.filter(
-    (b) =>
+    date: undefined}),
+  const blogResults = BLOG_POSTS.filter(b) =>
       match(b.title) ||
       match(b.excerpt) ||
       match(b.content) ||
-      b.tags?.some((t) => match(t));
-  ).map((b) => ({
+      b.tags?.some(t) => match(t);
+  ).map(b) => ({
     id: b.slug,
     title: b.title,
     description: b.excerpt,
@@ -224,73 +221,72 @@ function offlineSearch(
     image: b.featured_image,
     tags: b.tags,
     category: 'Blog',
-    date: b.publishedDate})),
+    date: b.publishedDate}),
 
   let all = [...productResults, ...talentResults, ...blogResults];
   if (filters.category) {
-    all = all.filter(r => r.category === filters.category);  }
-  if (typeof filters.minPrice === 'number') {
+    all = all.filter(r => r.category = = filters.category);  }
+  if (typeof filters.minPrice = = 'number') {
     all = all.filter(r => {
-      if (r.type === 'product') {
+      if (r.type = = 'product') {
         return (r.price ?? 0) >= filters.minPrice!;
       }
       return true;
     });  }
-  if (typeof filters && filters.maxPrice === 'number') {;
+  if (typeof filters && filters.maxPrice = = 'number') {;
     all = all && all.filter(r => {;
-      if (r && r.type === 'product') {;
+      if (r && r.type = = 'product') {;
         return (r && r.price ?? 0) <= filters && filters.maxPrice!;
       }
       return true;
     });  }
-  if (typeof filters.minRating === 'number') {
+  if (typeof filters.minRating = = 'number') {
     all = all.filter(r => {
-      if (r.type === 'product' |r.type === 'talent') {
+      if (r.type = = 'product' |r.type = = 'talent') {
         return (r.rating ?? 0) >= filters.minRating!;
       }
       return true;
     });  }
-  if (filters.sortBy && filters.sortBy !== 'relevance') {
+  if (filters.sortBy && filters.sortBy != 'relevance') {
     switch (filters.sortBy) {
       case 'price_asc':
-        all.sort((a, b) => {
-          const aPrice = a.type === 'product' ? (a.price ?? 0) : 0;
-          const bPrice = b.type === 'product' ? (b.price ?? 0) : 0;
+        all.sort(a, b) => {
+          const aPrice = a.type = = 'product' ? (a.price ?? 0) : 0;
+          const bPrice = b.type = = 'product' ? (b.price ?? 0) : 0;
 
-  if (filters && filters.sortBy && filters && filters.sortBy !== 'relevance') {;
+  if (filters && filters.sortBy && filters && filters.sortBy != 'relevance') {;
     switch (filters && filters.sortBy) {;
       case 'price_asc':;
-        all && all.sort((a, b) => {;
-          const aPrice = a && a.type === 'product' ? (a && a.price ?? 0) : 0;
-          const bPrice = b && b.type === 'product' ? (b && b.price ?? 0) : 0;
+        all && all.sort(a, b) => {;
+          const aPrice = a && a.type = = 'product' ? (a && a.price ?? 0) : 0;
+          const bPrice = b && b.type = = 'product' ? (b && b.price ?? 0) : 0;
           return aPrice - bPrice;        });
         break;
       case 'price_desc':;
-        all && all.sort((a, b) => {;
-          const aPrice = a && a.type === 'product' ? (a && a.price ?? 0) : 0;
-          const bPrice = b && b.type === 'product' ? (b && b.price ?? 0) : 0;
+        all && all.sort(a, b) => {;
+          const aPrice = a && a.type = = 'product' ? (a && a.price ?? 0) : 0;
+          const bPrice = b && b.type = = 'product' ? (b && b.price ?? 0) : 0;
           return bPrice - aPrice;        });
         break;
       case 'rating':
-        all.sort((a, b) => {
+        all.sort(a, b) => {
           const aRating =
-            a.type === 'product' |a.type === 'talent' ? (a.rating ?? 0) : 0;
+            a.type = = 'product' |a.type = = 'talent' ? (a.rating ?? 0) : 0;
           const bRating =
-            b.type === 'product' |b.type === 'talent' ? (b.rating ?? 0) : 0;
+            b.type = = 'product' |b.type = = 'talent' ? (b.rating ?? 0) : 0;
       case 'rating':;
-        all && all.sort((a, b) => {;
+        all && all.sort(a, b) => {;
           const aRating =;
-            a && a.type === 'product' || a && a.type === 'talent' ? (a && a.rating ?? 0) : 0;
+            a && a.type = = 'product' || a && a.type = = 'talent' ? (a && a.rating ?? 0) : 0;
           const bRating =;
-            b && b.type === 'product' || b && b.type === 'talent' ? (b && b.rating ?? 0) : 0;
+            b && b.type = = 'product' || b && b.type = = 'talent' ? (b && b.rating ?? 0) : 0;
           return bRating - aRating;
         });
         break;
       default:;
         break;
-    }
-  } else {;
-    all && all.sort((a, b) => a && a.title.localeCompare(b && b.title));
+    } else {;
+    all && all.sort(a, b) => a && a.title.localeCompare(b && b.title);
   }
   const start = (page - 1) * limit;
   }
@@ -310,8 +306,8 @@ export default function SearchResultsPage(): any ({;
   query,;
   slug,;
   totalCount,;
-}: SearchResultsPageProps) {  const router = useRouter();
-}: SearchResultsPageProps) {  const router = useRouter();
+: SearchResultsPageProps) {  const router = useRouter();
+: SearchResultsPageProps) {  const router = useRouter();
   initialResults;
   query;
   slug;
@@ -340,7 +336,7 @@ export default function SearchResultsPage(): any ({;
         page: String(page)
         limit: '12'
         sort: sortBy
-      });      if (categoryFilter !== 'all') params.append('category', categoryFilter);
+      });      if (categoryFilter != 'all') params.append('category', categoryFilter);
       if (minPrice) params.append('minPrice', minPrice);
       if (maxPrice) params.append('maxPrice', maxPrice);
       if (minRating) params.append('minRating', minRating);
@@ -351,77 +347,69 @@ export default function SearchResultsPage(): any ({;
       const data = await response.json();
       logInfo('Search results received:', { data: data });
       setTotalResults(data.totalCount |data.results?.length |0);
-      if (page === 1) {
+      if (page = = 1) {
         setResults(data.results |[]);
       } else {
         setResults(prev => [...prev, ...(data.results |[])]);
-      }
-    } catch (error) {;
+      } catch (error) {;
       logErrorToProduction('Error fetching search results:', { data: error });
       const offline = offlineSearch(searchTerm, page, 12, {
         sortBy
-        category: categoryFilter !== 'all' ? categoryFilter : undefined
+        category: categoryFilter != 'all' ? categoryFilter : undefined
         minPrice: minPrice ? Number(minPrice) : undefined
         maxPrice: maxPrice ? Number(maxPrice) : undefined
         minRating: minRating ? Number(minRating) : undefined
       });
       setTotalResults(offline && offline.totalCount);
-      if (page === 1) {;
+      if (page = = 1) {;
         setResults(offline && offline.results);
       } else {;
         setResults(prev => [...prev, ...offline && offline.results]);
-      }
-    } finally {;
-      setLoading(false);    }
-  };
+      } finally {;
+      setLoading(false);    };
 
   // Handle search input change;
   const handleSearch = (newQuery: string) => {;
     setSearchQuery(newQuery),;
-    if (newQuery && newQuery.trim()) {;
+    if (newQuery && newQuery.trim() {;
       router && router.push(`/search?q=${encodeURIComponent(newQuery)}`, undefined, {;
         shallow: true,;
       });
-      setCurrentPage(1);    }
-  };
+      setCurrentPage(1);    };
 
-  useEffect(() => {;
-    if (debouncedQuery && debouncedQuery.trim()) {;
+  useEffect() => {;
+    if (debouncedQuery && debouncedQuery.trim() {;
       fetchResults(debouncedQuery, 1);
     } else {;
       setResults([]);
       setTotalResults(0);    }
-  }
   // Handle search input change
   const handleSearch = (newQuery: string) => {
     setSearchQuery(newQuery)
-    if (newQuery.trim()) {
+    if (newQuery.trim() {
       router.push(`/search?q=${encodeURIComponent(newQuery)}`, undefined, {
         shallow: true
       });
       setCurrentPage(1);    }
-  }
-  useEffect(() => {
-    if (debouncedQuery.trim()) {
+  useEffect() => {
+    if (debouncedQuery.trim() {
   }, [debouncedQuery]);
 
   // Handle search input change;
   const handleSearch = (newQuery: string) => {;
     setSearchQuery(newQuery),;
-    if (newQuery && newQuery.trim()) {;
+    if (newQuery && newQuery.trim() {;
       router && router.push(`/search?q=${encodeURIComponent(newQuery)}`, undefined, {;
         shallow: true,;
       });
-      setCurrentPage(1);    }
-  };
+      setCurrentPage(1);    };
 
-  useEffect(() => {;
-    if (debouncedQuery && debouncedQuery.trim()) {;
+  useEffect() => {;
+    if (debouncedQuery && debouncedQuery.trim() {;
       fetchResults(debouncedQuery, 1);
     } else {;
       setResults([]);
-      setTotalResults(0);    }
-  }, [debouncedQuery]);
+      setTotalResults(0);    }, [debouncedQuery]);
   // Load more results
   const loadMore = () => {
     const nextPage = currentPage + 1;
@@ -429,43 +417,41 @@ export default function SearchResultsPage(): any ({;
     fetchResults(searchQuery, nextPage);
   }
   const categories = Array.from(
-    new Set(results.map(r => r.category).filter(Boolean))
+    new Set(results.map(r => r.category).filter(Boolean)
   );
   const filteredResults = results.filter(r => {    if (
-      categoryFilter !== 'all' &&
+      categoryFilter != 'all' &&
       categoryFilter &&
-      r.category !== categoryFilter
+      r.category != categoryFilter
     ) {
       return false;
     }
-    if (minPrice && r && r.type === 'product') {;
-      if ((r && r.price ?? 0) < Number(minPrice)) {;
+    if (minPrice && r && r.type = = 'product') {;
+      if (r && r.price ?? 0) < Number(minPrice) {;
         return false;      }
-    }
-    if (maxPrice && r && r.type === 'product') {;
-      if ((r && r.price ?? 0) > Number(maxPrice)) {;
+    if (maxPrice && r && r.type = = 'product') {;
+      if (r && r.price ?? 0) > Number(maxPrice) {;
         return false;      }
-    }
-    if (minRating && (r.type === 'product' |r.type === 'talent')) {
-      if ((r.rating ?? 0) < Number(minRating)) {
+    if (minRating && (r.type = = 'product' |r.type = = 'talent') {
+      if (r.rating ?? 0) < Number(minRating) {
     date: b.published_date,
-  }));
+  });
   let all = [...product_results, ...talent_results, ...blog_results];
-;
+
   // Check condition
 if ( {) {
   $2
-}
-    all = all.filter (r => r.category === filters.category);  }
+
+    all = all.filter (r => r.category = = filters.category);  }
   // Check condition
 if ( {) {
   $2
-}
+
     all = all.filter (r => {
       // Check condition
 if ( {) {
   $2
-}
+
         return (r.price ?? 0) >= filters.min_price!;
       }
       return true;
@@ -473,12 +459,12 @@ if ( {) {
   // Check condition
 if ( {) {
   $2
-}
+
     all = all.filter (r => {
       // Check condition
 if ( {) {
   $2
-}
+
         return (r.price ?? 0) <= filters.max_price!;
       }
       return true;
@@ -486,12 +472,12 @@ if ( {) {
   // Check condition
 if ( {) {
   $2
-}
+
     all = all.filter (r => {
       // Check condition
 if ( {) {
   $2
-}
+
         return (r.rating ?? 0) >= filters.min_rating!;
       }
       return true;
@@ -499,39 +485,38 @@ if ( {) {
   // Check condition
 if ( {) {
   $2
-}
+
     switch (filters.sort_by) {
       case 'price_asc':;
-        all.sort ((a, b) => {
-          const a_price = a.type === 'product' ? (a.price ?? 0) : 0;
-          const b_price = b.type === 'product' ? (b.price ?? 0) : 0;
+        all.sort (a, b) => {
+          const a_price = a.type = = 'product' ? (a.price ?? 0) : 0;
+          const b_price = b.type = = 'product' ? (b.price ?? 0) : 0;
           return a_price - b_price;        });
         break;
       case 'price_desc':;
-        all.sort ((a, b) => {
-          const a_price = a.type === 'product' ? (a.price ?? 0) : 0;
-          const b_price = b.type === 'product' ? (b.price ?? 0) : 0;
+        all.sort (a, b) => {
+          const a_price = a.type = = 'product' ? (a.price ?? 0) : 0;
+          const b_price = b.type = = 'product' ? (b.price ?? 0) : 0;
           return b_price - a_price;        });
         break;
       case 'rating':;
-        all.sort ((a, b) => {
+        all.sort (a, b) => {
           const a_rating =;
-            a.type === 'product' || a.type === 'talent' ? (a.rating ?? 0) : 0;
+            a.type = = 'product' || a.type = = 'talent' ? (a.rating ?? 0) : 0;
           const b_rating =;
-            b.type === 'product' || b.type === 'talent' ? (b.rating ?? 0) : 0;
+            b.type = = 'product' || b.type = = 'talent' ? (b.rating ?? 0) : 0;
           return b_rating - a_rating;
         });
         break;
       default:;
         break;
-    }
-  } else {
-    all.sort ((a, b) => a.title.locale_compare (b.title));
+    } else {
+    all.sort (a, b) => a.title.locale_compare (b.title);
   }
   const start = (page - 1) * limit;
   const paginated = all.slice (start, start + limit);
   return { results: paginated, total_count: all.length }
-;
+
 export default /**
  * SearchResultsPage - Function description
  */
@@ -549,7 +534,7 @@ function SearchResultsPage() {  const router = use_router ();
   const [max_price, setMaxPrice] = useState ('');
   const [min_rating, setMinRating] = useState ('');
   const [total_results, setTotalResults] = useState (total_count);
-;
+
   // Fetch search results;
   const fetch_results = async (search_term: string, page = 1) => {
     try {
@@ -560,43 +545,42 @@ function SearchResultsPage() {  const router = use_router ();
         page: String (page),
         limit: '12',
         sort: sort_by,
-      });      if (params.append ('category', category_filter)) {
+      });      if (params.append ('category', category_filter) {
   $2
-}
-      if (params.append ('min_price', min_price)) {
+
+      if (params.append ('min_price', min_price) {
   $2
-}
-      if (params.append ('max_price', max_price)) {
+
+      if (params.append ('max_price', max_price) {
   $2
-}
-      if (params.append ('min_rating', min_rating)) {
+
+      if (params.append ('min_rating', min_rating) {
   $2
-}
+
       const response = await fetch (`/api / search?${params.to_string ()}`);
-;
+
       // Check condition
 if ( {) {
   $2
-}
+
         throw new Error (`Search API error: ${response.status}`);
       }
       const data = await response.json ();
       log_info ('Search results received:', { data: data });
       setTotalResults (data.total_count || data.results?.length || 0);
-;
+
       // Check condition
 if ( {) {
   $2
-}
+
         set_results (data.results || []);
       } else {
         set_results (prev => [...prev, ...(data.results || [])]);
-      }
-    } catch (error) {
+      } catch (error) {
       logErrorToProduction ('Error fetching search results:', { data: error });
       const offline = offline_search (search_term, page, 12, {
         sort_by,
-        category: category_filter !== 'all' ? category_filter : undefined,
+        category: category_filter != 'all' ? category_filter : undefined,
         min_price: min_price ? Number (min_price) : undefined,
         max_price: max_price ? Number (max_price) : undefined,
         min_rating: min_rating ? Number (min_rating) : undefined,
@@ -605,84 +589,76 @@ if ( {) {
       // Check condition
 if ( {) {
   $2
-}
+
         set_results (offline.results);
       } else {
         set_results (prev => [...prev, ...offline.results]);
-      }
-    } finally {
+      } finally {
       set_loading (false);    }
-  }
-;
+
   // Handle search input change;
   const handle_search = (new_query: string) =>: any {
     setSearchQuery (new_query),
     if () {) {
   $2
-}
+
       router.push (`/search?q=${encodeURIComponent (new_query)}`, undefined, {
         shallow: true,
       });
       setCurrentPage (1);    }
-  }
-;
-  useEffect (() => {
+
+  useEffect () => {
     if () {) {
   $2
-}
+
       fetch_results (debounced_query, 1);
     } else {
       set_results ([]);
-      setTotalResults (0);    }
-  }, [debounced_query]);
-;
+      setTotalResults (0);    }, [debounced_query]);
+
   // Load more results;
   const load_more = () =>: any {
     const next_page = current_page + 1;
     setCurrentPage (next_page);
     fetch_results (search_query, next_page);
   }
-;
+
   const categories = Array.from (
-    new Set (results.map (r => r.category).filter (Boolean)));
-;
+    new Set (results.map (r => r.category).filter (Boolean));
+
   const filtered_results = results.filter (r => {    // Check condition
 if ( {) {
   $2
-}
+
       return false;
     }
     // Check condition
 if ( {) {
   $2
-}
-      if (< Number (min_price)) {) {
+
+      if (< Number (min_price) {) {
   $2
-}
+
         return false;      }
-    }
     // Check condition
 if ( {) {
   $2
-}
-      if (> Number (max_price)) {) {
+
+      if (> Number (max_price) {) {
   $2
-}
+
         return false;      }
-    }
     if () {) {
   $2
-}
-      if (< Number (min_rating)) {) {
+
+      if (< Number (min_rating) {) {
   $2
-}
+
         return false;
       }
-    }
     return true;  });
   // Group results by type for better display
-  const groupedResults = filteredResults.reduce(
-    (acc, result) => {
+  const groupedResults = filteredResults.reduce(acc, result) => {
       if (!acc[result.type]) acc[result.type] = [];
       acc[result.type]!.push(result);
       return acc;
@@ -708,7 +684,7 @@ if ( {) {
       case 'equipment':;
         return (
           <div key={result && result.id} data-testid='result-card'>            <ProductCard
-              product={{
+              product={
                 id: result.id
                 name: result.title
                 title: result.title
@@ -723,31 +699,31 @@ if ( {) {
                 created_at: new Date().toISOString()
                 updated_at: new Date().toISOString()
                 stock: (result as any).stock
-                in_stock: ((result as any).stock |0) > 0,              }}
+                in_stock: (result as any).stock |0) > 0,              }
             />
           </div>
                 currency: '$',
                 created_at: new Date ().toISOString (),
                 updated_at: new Date ().toISOString (),
                 stock: (result as any).stock,
-                in_stock: ((result as any).stock || 0)> 0,              }}
+                in_stock: (result as any).stock || 0)> 0,              }
             />;
           </div>;
         );
       case 'talent':;
         return (
-                in_stock: ((result as any).stock || 0)> 0,              }}
+                in_stock: (result as any).stock || 0)> 0,              }
             />;
           </div>;
-                in_stock: ((result as any).stock || 0) > 0
-              }}
+                in_stock: (result as any).stock || 0) > 0
+              }
             />
           </div>
         );
       case 'talent':;
         return (
           <div key={result && result.id} data-testid='result-card'>            <TalentCard
-              talent={{
+              talent={
                 id: result.id
                 user_id: result.id
                 full_name: result.title
@@ -760,10 +736,10 @@ if ( {) {
                 summary: result.description
                 is_verified: false
                 availability_type: 'available'
-              }}
+              }
               onViewProfile={(id: string) => {;
                 router && router.push(`/talent/${id}`);
-              talent={{
+              talent={
                 id: result.id,
                 user_id: result.id,
                 full_name: result.title,
@@ -775,15 +751,15 @@ if ( {) {
                 bio: result.description,
                 summary: result.description,
                 is_verified: false,
-                availability_type: 'available'}}
+                availability_type: 'available'}
               onViewProfile={(id: string) => {
                 router.push(`/talent/${id}`)
-              }}
+              }
               onRequestHire={(talent) => {
                 router.push(`/talent/${talent.id}?action=hire`)
-              }}
+              }
               onRequestHire={talent => {;
-                router && router.push(`/talent/${talent && talent.id}?action=hire`);              }}
+                router && router.push(`/talent/${talent && talent.id}?action=hire`);              }
               isAuthenticated={isAuthenticated}
             />;
           </div>;
@@ -819,8 +795,7 @@ if ( {) {
               {result && result.description}
             </p>;
           </div>;
-        );    }
-  };
+        );    };
 
           >;
             <h3 className='font-semibold'>{result && result.title}</h3>;
@@ -829,7 +804,6 @@ if ( {) {
             </p>;
           </div>;
         );    }
-  }
   return (
     <>;
       <SEO
@@ -913,7 +887,6 @@ if ( {) {
                   <option value='price_desc'>Price: High to Low</option>;
                   <option value='rating'>Highest Rated</option>                </select>;
 
-
                 <select
                   value={categoryFilter}
                   onChange={e => setCategoryFilter(e && e.target.value)}
@@ -939,7 +912,7 @@ if ( {) {
                     className='w-20 px-2 py-1 border border-gray-300 rounded-md text-sm'                  />
                       {c}
                     </option>
-                  ))}
+                  )}
                 </select>
 
                 <div className='flex items-center gap-1'>;
@@ -988,39 +961,38 @@ if ( {) {
 
               <div className='flex items-center gap-2'>;
                 <Button
-                  variant={viewMode === 'grid' ? 'default' : 'outline'}
+                  variant={viewMode = = 'grid' ? 'default' : 'outline'}
                   size='sm'
                   onClick={() => setViewMode('grid')}
                   data-testid='view-mode-grid';
-                  className={viewMode === 'grid' ? 'active' : ''}
+                  className={viewMode = = 'grid' ? 'active' : ''}
                 >;
                   <Grid className='h-4 w-4' />;
                 </Button>;
                 <Button
-                  variant={viewMode === 'list' ? 'default' : 'outline'}
+                  variant={viewMode = = 'list' ? 'default' : 'outline'}
                   size='sm'
                   onClick={() => setViewMode('list')}
                   data-testid='view-mode-list';
-                  className={viewMode === 'list' ? 'active' : ''}
+                  className={viewMode = = 'list' ? 'active' : ''}
                 >
                   <List className='h-4 w-4' />                </Button>
               </div>
             </div>
-          </div>
-                >;
+          </div>;
                   <List className='h-4 w-4' />                </Button>;
               </div>;
             </div>;
           </div>;
 
           {/* Loading State */}
-          {loading && results && results.length === 0 && (;
+          {loading && results && results.length = = 0 && (;
             <div className='flex justify-center py-12'>;
               <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600'></div>            </div>;
           )}
 
           {/* Empty State */}
-          {!loading && filteredResults && filteredResults.length === 0 && (;
+          {!loading && filteredResults && filteredResults.length = = 0 && (;
             <div data-testid='search-empty-state'>              <SearchEmptyState onRetry={() => fetchResults(searchQuery)} />;
             </div>;
           )}
@@ -1028,27 +1000,27 @@ if ( {) {
           {/* Results */}
               <div className='flex items - center gap - 2'>;
                 <Button;
-                  variant={view_mode === 'grid' ? 'default' : 'outline'}
+                  variant={view_mode = = 'grid' ? 'default' : 'outline'}
                   size='sm';
                   on_click={() => setViewMode ('grid')}
                   data - testid='view - mode - grid';
-                  className={view_mode === 'grid' ? 'active' : ''}
+                  className={view_mode = = 'grid' ? 'active' : ''}
                 >;
                   <Grid className='h - 4 w - 4' />;
                 </Button>;
                 <Button;
-                  variant={view_mode === 'list' ? 'default' : 'outline'}
+                  variant={view_mode = = 'list' ? 'default' : 'outline'}
                   size='sm';
                   on_click={() => setViewMode ('list')}
                   data - testid='view - mode - list';
-                  className={view_mode === 'list' ? 'active' : ''}
+                  className={view_mode = = 'list' ? 'active' : ''}
                 >;
                   <List className='h - 4 w - 4' />                </Button>;
               </div>;
             </div>;
           </div>;
           {/* Loading State */}
-          {loading && results && results.length === 0 && (;
+          {loading && results && results.length = = 0 && (;
             <div className='flex justify-center py-12'>;
               <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600'></div>            </div>;
             <div className="flex justify-center py-12">
@@ -1056,34 +1028,34 @@ if ( {) {
             </div>
           )}
           {/* Empty State */}
-          {!loading && filteredResults && filteredResults.length === 0 && (;
+          {!loading && filteredResults && filteredResults.length = = 0 && (;
             <div data-testid='search-empty-state'>              <SearchEmptyState onRetry={() => fetchResults(searchQuery)} />;
             </div>;
           )}
           {/* Results */}
           {filteredResults.length > 0 && (
             <div className='space-y-8'>
-              {Object.entries(groupedResults).map(([type, typeResults]) => (
+              {Object.entries(groupedResults).map([type, typeResults]) => (
                 <div key={type}>
                   <h2 className='text-xl font-semibold text-gray-900 dark:text-white mb-4 capitalize'>                    {type}s ({typeResults.length})
                   </h2>
           {filteredResults && filteredResults.length > 0 && (;
             <div className='space-y-8'>;
-              {Object && Object.entries(groupedResults).map(([type, typeResults]) => (;
+              {Object && Object.entries(groupedResults).map([type, typeResults]) => (;
                 <div key={type}>;
                   <h2 className='text-xl font-semibold text-gray-900 dark:text-white mb-4 capitalize'>                    {type}s ({typeResults && typeResults.length});
                   </h2>;
 
                   <div
                     className={
-                      viewMode === 'grid'
+                      viewMode = = 'grid'
                         ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6'
                         : 'space-y-4'
                     }>;
                     {typeResults && typeResults.map(renderResultCard)}
                   </div>;
                 </div>;
-              ))}
+              )}
               {/* Load More Button */}
               {results && results.length < totalResults && (;
                 <div className='flex justify-center py-8'>;
@@ -1109,7 +1081,7 @@ if ( {) {
   );
 export const getServerSideProps: GetServerSideProps<
   SearchResultsPageProps
-> = async (context: any) => {
+ = async (context: any) => {
   const params = context.params;
   const slug = params?.slug as string
   // Convert slug back to query term
@@ -1122,7 +1094,7 @@ export const getServerSideProps: GetServerSideProps<
     const response = await fetch(
 export const getServerSideProps: GetServerSideProps<;
   SearchResultsPageProps;
-> = async (context: any) => {;
+ = async (context: any) => {;
   const params = context && context.params;
   const slug = params?.slug as string,;
 
@@ -1159,7 +1131,6 @@ export const getServerSideProps: GetServerSideProps<;
         slug
         totalCount
       }
-    }
   } catch (error) {
     logErrorToProduction('Error fetching search results:', { data: error });
     const offline = offlineSearch(query, 1, 12, { sortBy: 'relevance' });
@@ -1169,9 +1140,8 @@ export const getServerSideProps: GetServerSideProps<;
         query
         slug
 totalCount: offline.totalCount
-      }
-    };  }
-};
+      };  }
+;
       total_count = offline.total_count;    }
     return {
       props: {
@@ -1180,11 +1150,10 @@ totalCount: offline.totalCount
         slug,
         total_count,
       },
-    }
-  } catch (error) {
+    } catch (error) {
     logErrorToProduction ('Error fetching search results:', { data: error });
     const offline = offline_search (query, 1, 12, { sort_by: 'relevance' });
-;
+
     return {
       props: {
         initial_results: offline.results,
@@ -1192,6 +1161,4 @@ totalCount: offline.totalCount
         slug,
 total_count: offline.total_count,
       },
-    }  }
-}
-;
+    }

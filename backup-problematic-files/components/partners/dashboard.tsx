@@ -6,7 +6,7 @@ export default function PartnerDashboard() {
   const [usage, setUsage] = useState<any>(null),
   const [loading, setLoading] = useState(false),
 
-  useEffect(() => {
+  useEffect() => {
     const saved = localStorage.getItem("zion_partner_token"),
     if (saved) setToken(saved)
   }, []),
@@ -21,12 +21,11 @@ export default function PartnerDashboard() {
       localStorage.setItem("zion_partner_token", data.token),
       setToken(data.token)
     }
-  }
 
   async function fetchUsage() {
     setLoading(true),
     const res = await fetch("/api/partners/usage", {
-      headers: token ? { Authorization: `Bearer ${token}` } : {}}),
+      headers: token ? { Authorization: `Bearer ${token}` } : {}),
     const data = await res.json(),
     setUsage(data.summary || null),
     setLoading(false)
@@ -35,12 +34,11 @@ export default function PartnerDashboard() {
   async function regenerateKey() {
     const res = await fetch("/api/partners/key", {
       method: "POST",
-      headers: token ? { Authorization: `Bearer ${token}` } : {}}),
+      headers: token ? { Authorization: `Bearer ${token}` } : {}),
     const data = await res.json(),
     if (data.apiKey) {
       alert(`New API Key: ${data.apiKey}`)
     }
-  }
 
   return (
     <div className="min-h-screen bg-gray-50 text-gray-900">
@@ -77,7 +75,7 @@ export default function PartnerDashboard() {
                 <div className="mt-3">
                   <p className="font-medium">By Endpoint</p>
                   <ul className="list-disc ml-6">
-                    {Object.entries(usage.byEndpoint || {}).map(([k, v]) => (
+                    {Object.entries(usage.byEndpoint || {}).map([k, v]) => (
                       <li key={k}>{k}: {v as any}</li>
 import { useEffect, useState } from "react",;
 import Head from "next/head",;
@@ -86,7 +84,7 @@ export default function PartnerDashboard() {;
   const [token, setToken] = useState<string | null>(null),;
   const [usage, setUsage] = useState<any>(null),;
   const [loading, setLoading] = useState(false),;
-  useEffect(() => {;
+  useEffect() => {;
     const saved = localStorage.getItem("zion_partner_token"),;
     if (saved) setToken(saved);
   }, []),;
@@ -100,27 +98,25 @@ export default function PartnerDashboard() {;
       localStorage.setItem("zion_partner_token", data.token),;
       setToken(data.token);
     }
-  }
-;
+
   async function fetchUsage() {;
     setLoading(true),;
     const res = await fetch("/api/partners/usage", {;
-      headers: token ? { Authorization: `Bearer ${token}` } : {}}),;
+      headers: token ? { Authorization: `Bearer ${token}` } : {}),;
     const data = await res.json(),;
     setUsage(data.summary || null),;
     setLoading(false);
   }
-;
+
   async function regenerateKey() {;
     const res = await fetch("/api/partners/key", {;
       method: "POST",;
-      headers: token ? { Authorization: `Bearer ${token}` } : {}});
+      headers: token ? { Authorization: `Bearer ${token}` } : {});
     const data = await res.json();
     if (data.apiKey) {;
       alert(`New API Key: ${data.apiKey}`);
     }
-  }
-;
+
   return (;
     <div className="min-h-screen bg-gray-50 text-gray-900">;
       <Head>;
@@ -138,7 +134,7 @@ export default function PartnerDashboard() {;
             </div>;
           </div>;
         )}
-;
+
         <div className="grid md:grid-cols-3 gap-6">;
           <div className="bg-white p-6 rounded-lg shadow">;
             <h3 className="font-medium mb-2">API Keys</h3>;
@@ -154,9 +150,9 @@ export default function PartnerDashboard() {;
                 <div className="mt-3">;
                   <p className="font-medium">By Endpoint</p>;
                   <ul className="list-disc ml-6">;
-                    {Object.entries(usage.byEndpoint || {}).map(([k, v]) => (;
+                    {Object.entries(usage.byEndpoint || {}).map([k, v]) => (;
                       <li key={k}>{k}: {v as any}</li>;
-                    ))}
+                    )}
                   </ul>;
                 </div>;
               </div>;
@@ -173,4 +169,3 @@ export default function PartnerDashboard() {;
       </div>;
     </div>;
   );
-}

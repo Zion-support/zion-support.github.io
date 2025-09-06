@@ -1,4 +1,4 @@
-{
+
   "timestamp": "2025-09-06T09:49:38.864Z",
   "filesFixed": 5,
   "errors": 0,
@@ -9,4 +9,3 @@
     "pages/api/proposals/translate.ts",
     "pages/api/referrals/track.ts"
   ]
-}

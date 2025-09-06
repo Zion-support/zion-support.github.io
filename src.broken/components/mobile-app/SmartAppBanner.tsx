@@ -6,5 +6,3 @@ export function SmartAppBanner() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

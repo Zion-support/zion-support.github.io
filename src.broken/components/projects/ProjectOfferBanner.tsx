@@ -6,5 +6,3 @@ export function ProjectOfferBanner() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

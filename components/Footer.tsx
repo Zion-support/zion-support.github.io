@@ -9,7 +9,7 @@ import {
   Linkedin
   Instagram
   ArrowRight
-} from "lucide-react";
+ from "lucide-react";
 import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram, ArrowRight } from 'lucide-react';
 
 export default function Footer() {
@@ -112,7 +112,7 @@ export default function Footer() {;
               Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, 
               quantum computing, blockchain, IoT, and digital transformation services.
             </p>
-            
+
               Leading technology solutions provider specializing in AI
               cybersecurity, cloud infrastructure, quantum computing
               blockchain, IoT, and digital transformation services.
@@ -141,7 +141,7 @@ export default function Footer() {;
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
-              {footerLinks.services.map((link) => (
+              {footerLinks.services.map(link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
@@ -150,10 +150,10 @@ export default function Footer() {;
                     {link.name}
                   </Link>
                 </li>
-              ))}
+              )}
             </ul>
           </div>
-              ))}
+              )}
             </ul>
           </div>
             <div className="space-y-3">;
@@ -180,7 +180,7 @@ export default function Footer() {;
           <div>;
             <h3 className="text-lg font-semibold mb-4">Services</h3>;
             <ul className="space-y-2">;
-              {footerLinks && footerLinks.services.map((link) => (;
+              {footerLinks && footerLinks.services.map(link) => (;
                 <li key={link && link.name}>;
                   <Link
                     href={link && link.href}
@@ -188,7 +188,7 @@ export default function Footer() {;
                     {link && link.name}
                   </Link>;
                 </li>;
-              ))}
+              )}
             </ul>;
           </div>;
 
@@ -196,7 +196,7 @@ export default function Footer() {;
           <div>;
             <h3 className="text-lg font-semibold mb-4">Solutions</h3>;
             <ul className="space-y-2">;
-              {footerLinks && footerLinks.solutions.map((link) => (;
+              {footerLinks && footerLinks.solutions.map(link) => (;
                 <li key={link && link.name}>;
                   <Link
                     href={link.href}
@@ -205,7 +205,7 @@ export default function Footer() {;
                     {link.name}
                   </Link>
                 </li>
-              ))}
+              )}
             </ul>
           </div>
                     href={link && link.href}
@@ -213,7 +213,7 @@ export default function Footer() {;
                     {link && link.name}
                   </Link>;
                 </li>;
-              ))}
+              )}
             </ul>;
           </div>;
 
@@ -221,7 +221,7 @@ export default function Footer() {;
           <div>;
             <h3 className="text-lg font-semibold mb-4">Company</h3>;
             <ul className="space-y-2 mb-6">;
-              {footerLinks && footerLinks.company.map((link) => (;
+              {footerLinks && footerLinks.company.map(link) => (;
                 <li key={link && link.name}>;
                   <Link
                     href={link.href}
@@ -230,25 +230,24 @@ export default function Footer() {;
                     {link.name}
                   </Link>
                 </li>
-              ))}
+              )}
             </ul>
 
-            
             <h3 className="text-lg font-semibold mb-4">Resources</h3>
             <ul className="space-y-2">
-              {footerLinks.resources.map((link) => (
+              {footerLinks.resources.map(link) => (
                 <li key={link.name}>
                     href={link && link.href}
                     className="text-gray-300 hover:text-white transition-colors">;
                     {link && link.name}
                   </Link>;
                 </li>;
-              ))}
+              )}
             </ul>;
 
             <h3 className="text-lg font-semibold mb-4">Resources</h3>;
             <ul className="space-y-2">;
-              {footerLinks && footerLinks.resources.map((link) => (;
+              {footerLinks && footerLinks.resources.map(link) => (;
                 <li key={link && link.name}>;
                   <Link
                     href={link && link.href}
@@ -256,7 +255,7 @@ export default function Footer() {;
                     {link && link.name}
                   </Link>;
                 </li>;
-              ))}
+              )}
             </ul>
           </div>
         </div>
@@ -447,8 +446,5 @@ export default function Footer() {;
       </div>;
     </footer>;
   );
-}
-}
-}
+
     </footer>);
-}

@@ -3,7 +3,7 @@ import Head from 'next/head',
 import { motion } from 'framer-motion',
 import { 
   Check, Zap, Shield, Brain, Atom, Target, Rocket, Star, TrendingUp, Award, Users, ArrowRight, ExternalLink, Phone, Mail, MapPin
-} from 'lucide-react',
+ from 'lucide-react',
 import Layout from '../components/layout/Layout',
 import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services',
 import { cuttingEdgeQuantumServices2025 } from '../data/2025-cutting-edge-quantum-services',
@@ -14,95 +14,89 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-},
+,
 
 const pricingTiers = [  {
   opacity: 0, y: 30 
-}
-}whileInView= {
-  {
+
+whileInView= {
   opacity: 1, y: 0 
-}
-}transition= {
-  {
+
+transition= {
   duration: 0.8, delay: index * 0.1 
-}
-}viewport= {
-  {
+
+viewport= {
   once: true 
-}
-}className= {
+
+className= {
   `relative group $ {
   tier.popular ? 'scale-105' : '' 
-}` 
-}> Most Popular </span> </div>) 
-}</li>) ) 
-}</ul> <a href= {
+` 
+> Most Popular </span> </div>) 
+</li>) 
+</ul> <a href= {
   tier.ctaLink 
-}className= {
+className= {
   `w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 $ {
   tier.popular ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700 shadow-lg hover:shadow-cyan-500/25': 'border-2 border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10' 
-}` 
-}> </a> </div> </motion.div>) ) 
-}</div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent" > Service </span> {
+` 
+> </a> </div> </motion.div>) 
+</div> </div> </section><h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent" > Service </span> {
   ' ' 
-}Categories </h2> <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed" > Explore our comprehensive range of cutting-edge services across multiple technology domains. Each category offers specialized solutions for different business needs. </p> </motion.div> <button onClick= {
+Categories </h2> <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed" > Explore our comprehensive range of cutting-edge services across multiple technology domains. Each category offers specialized solutions for different business needs. </p> </motion.div> <button onClick= {
   () => setSelectedCategory ('all') 
-}className= {
+className= {
   `px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 $ {
-  selectedCategory === 'all'? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white': 'bg-black/50 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/10' 
-}` 
-}> All Categories ({
+  selectedCategory = = 'all'? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white': 'bg-black/50 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/10' 
+` 
+> All Categories ({
   allServices.length 
-}) </button> {
-  serviceCategories.map ( (category) => (<button key= {
+) </button> {
+  serviceCategories.map (category) => (<button key= {
   category.name 
-}onClick= {
+onClick= {
   () => setSelectedCategory (category.name) 
-}className= {
+className= {
   `px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 $ {
-  selectedCategory === category.name ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white': 'bg-black/50 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/10' 
-}` 
-}> {
+  selectedCategory = = category.name ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white': 'bg-black/50 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/10' 
+` 
+> {
   category.name 
-}({
+({
   category.services.length 
-}) </button>) ) 
-}</div> {
+) </button>) 
+</div> {
   /* Services Grid */ 
-}<motion.div > {
-  filteredServices.map ( (service, index) => (<motion.div key= {
+<motion.div > {
+  filteredServices.map (service, index) => (<motion.div key= {
   service.id 
-}</p> </div> <div className="ml-4" > <div className="w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 flex items-center justify-center" > <Star className="w-6 h-6 text-cyan-400" /> </div> </div> </div> <span key= {
+</p> </div> <div className="ml-4" > <div className="w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 flex items-center justify-center" > <Star className="w-6 h-6 text-cyan-400" /> </div> </div> </div> <span key= {
   tagIndex 
-}className="px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20" > {
+className="px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20" > {
   tag 
-}</span>) ) 
-}</div> > Learn More <ExternalLink className="ml-1 w-4 h-4" /> </a> <a href="/contact" className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-sm font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105" > Get Started <ArrowRight className="ml-2 w-4 h-4" /> </a> </div> </div> </motion.div>) ) 
-}</motion.div> </div> </section> <motion.div initial= {
-  {
+</span>) 
+</div>Learn More <ExternalLink className="ml-1 w-4 h-4" /> </a> <a href="/contact" className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-sm font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105" > Get Started <ArrowRight className="ml-2 w-4 h-4" /> </a> </div> </div> </motion.div>) 
+</motion.div> </div> </section> <motion.div initial= {
   opacity: 0, y: 30 
-}
-}whileInView= {
-  {
+
+whileInView= {
   opacity: 1, y: 0 
-}
-}transition= {
-  {
+
+transition= {
     name: 'Micro SAAS Solutions',
     icon: <Rocket className=&quot;w-8 h-8&quot; />,
     color: 'from-teal-500 to-emerald-500',
     services: cuttingEdgeMicroSaasServices2025.slice(0, 6),
     description: 'Innovative business solutions for modern enterprises'
   }
-],
+,
 
 const stats = [
   { number: '25+', label: 'Cutting-Edge Services', icon: Star, color: 'text-cyan-400' },
   { number: '$500B+', label: 'Market Coverage', icon: TrendingUp, color: 'text-purple-400' },
   { number: '99.9%', label: 'Success Rate', icon: Award, color: 'text-green-400' },
   { number: '24/7', label: 'Expert Support', icon: Users, color: 'text-pink-400' }
-],
+,
 
 export default function CuttingEdgePricing2025() {
   const [selectedCategory, setSelectedCategory] = useState('all'),
@@ -113,21 +107,19 @@ export default function CuttingEdgePricing2025() {
     ...cuttingEdgeEnterpriseITServices2025,
     ...cuttingEdgeMicroSaasServices2025
   ],
-  const filteredServices = selectedCategory === 'all' 
+  const filteredServices = selectedCategory = = 'all' 
     ? allServices 
-    : allServices.filter(service => service.category === selectedCategory),
+    : allServices.filter(service => service.category = = selectedCategory),
 
   const containerVariants = {
     hidden: { opacity: 0},
     visible: {opacity: 1, transition: {
         staggerChildren: 0.1}
-    }
   },
 
   const itemVariants = {hidden: { y: 20, opacity: 0},
     visible: {y: 0, opacity: 1, transition: {
         duration: 0.5}
-    }
   },
 
   return (_<>
@@ -145,27 +137,27 @@ export default function CuttingEdgePricing2025() {
           <div className=&quot;absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black&quot;></div>
           <div className=&quot;relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32&quot;>
             <motion.div,
-initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className=&quot;text-center&quot;
             >
               <motion.h1,
 className=&quot;text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6&quot;
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 1, delay: 0.2 }}              >
+                initial={ opacity: 0, scale: 0.9 }
+                animate={ opacity: 1, scale: 1 }
+                transition={ duration: 1, delay: 0.2 }              >
                 Cutting-Edge
                 <span className=&quot;block text-2xl md:text-3xl lg:text-4xl mt-4 text-white/90&quot;>
                   Pricing 2025
                 </span>
               </motion.h1>
-              
+
               <motion.p,
 className=&quot;text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed&quot;
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}              >
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.8, delay: 0.4 }              >
                 Experience revolutionary technology at competitive prices. Our cutting-edge services are designed to give you,
 a competitive advantage while maintaining affordability and value.
               </motion.p>
@@ -173,11 +165,11 @@ a competitive advantage while maintaining affordability and value.
               {_/* Hero Stats */}
               <motion.div,
 className=&quot;grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12&quot;
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.8, delay: 0.6 }
               >
-                {stats.map((stat, index) => (
+                {stats.map(stat, index) => (
                   <div key={index} className=&quot;text-center&quot;>
                     <div className=&quot;flex justify-center mb-2&quot;>
                       <div className=&quot;p-3 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30&quot;>
@@ -186,20 +178,20 @@ className=&quot;grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12&qu
                     </div>
                     <div className=&quot;text-2xl md:text-3xl font-bold text-white mb-1&quot;>{stat.number}</div>
                     <div className=&quot;text-sm text-white/70&quot;>{stat.label}</div>                  </div>
-                ))}
+                )}
               </motion.div>;
             </motion.div>;
           </div>;
         </section>;
-;
+
         {/* Pricing Tiers Section */}
         <section className=&quot;py-20 bg-gradient-to-b from-black via-purple-900/10 to-black&quot;>
           <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
             <motion.div,
-initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
               className=&quot;text-center mb-16&quot;            >
               <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-6&quot;>
                 <span className=&quot;bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent&quot;>
@@ -214,12 +206,12 @@ and world-class support to ensure your success.
             </motion.div>
 
             <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto&quot;>
-              {pricingTiers.map((tier, index) => (                <motion.div,
+              {pricingTiers.map(tier, index) => (                <motion.div,
 key={index}
-                  initial={_{ opacity: 0, y: 30}}
-                  whileInView={_{ opacity: 1, y: 0}}
-                  transition={_{ duration: 0.8, delay: index * 0.1}}
-                  viewport={_{ once: true}}
+                  initial={_{ opacity: 0, y: 30}
+                  whileInView={_{ opacity: 1, y: 0}
+                  transition={_{ duration: 0.8, delay: index * 0.1}
+                  viewport={_{ once: true}
                   className={_`relative group ${
                     tier.popular ? 'scale-105' : ''}`}
                 >
@@ -229,7 +221,7 @@ key={index}
                       </span>
                     </div>
                   )}
-                  
+
                   <div className={`relative p-8 rounded-2xl border border-cyan-500/20 bg-gradient-to-br from-black/80 via-purple-900/10 to-black/80 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 ${
                     tier.popular ? 'border-cyan-500/50 shadow-cyan-500/20' : ''
                   }`}>
@@ -246,11 +238,11 @@ key={index}
                     </div>
 
                     <ul className=&quot;space-y-4 mb-8&quot;>
-                      {tier.features.map((feature, featureIndex) => (
+                      {tier.features.map(feature, featureIndex) => (
                         <li key={featureIndex} className=&quot;flex items-start&quot;>
                           <Check className=&quot;w-5 h-5 text-cyan-400 mt-0.5 mr-3 flex-shrink-0&quot; />
                           <span className=&quot;text-white/80&quot;>{feature}</span>                        </li>
-                      ))}
+                      )}
                     </ul>
 
                     <a,
@@ -264,19 +256,19 @@ href={tier.ctaLink}
                       <ArrowRight className=&quot;ml-2 w-4 h-4&quot; />                    </a>
                   </div>
                 </motion.div>
-              ))}
+              )}
             </div>;
           </div>;
         </section>;
-;
+
         {/* Service Categories Section */}
         <section className=&quot;py-20 bg-gradient-to-b from-black via-purple-900/10 to-black&quot;>
           <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
             <motion.div,
-initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
               className=&quot;text-center mb-16&quot;            >
               <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-6&quot;>
                 <span className=&quot;bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent&quot;>
@@ -294,7 +286,7 @@ initial={{ opacity: 0, y: 30 }}
             <div className=&quot;flex flex-wrap justify-center gap-4 mb-12&quot;>              <button,
 onClick={_() => setSelectedCategory('all')}
                 className={_`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
-                  selectedCategory === 'all'
+                  selectedCategory = = 'all'
                     ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white'
                     : 'bg-black/50 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/10'}`}
               >
@@ -304,13 +296,13 @@ onClick={_() => setSelectedCategory('all')}
 key={category.name}
                   onClick={_() => setSelectedCategory(category.name)}
                   className={_`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
-                    selectedCategory === category.name
+                    selectedCategory = = category.name
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white'
                       : 'bg-black/50 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/10'}`}
                 >
                   {category.name} ({category.services.length})
                 </button>
-              ))}
+              )}
             </div>
 
             {_/* Services Grid */}
@@ -318,7 +310,7 @@ key={category.name}
 variants={containerVariants}
               initial=&quot;hidden&quot;
               whileInView=&quot;visible&quot;
-              viewport={{ once: true }}
+              viewport={ once: true }
               className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;            >
               {filteredServices.map(_(service, index) => (
                 <motion.div,
@@ -344,15 +336,15 @@ key={service.id}
 
                     {/* Tags */}
                     <div className=&quot;flex flex-wrap gap-2 mb-4&quot;>
-                      {service.tags.slice(0, 3).map((tag, tagIndex) => (                        <span,
+                      {service.tags.slice(0, 3).map(tag, tagIndex) => (                        <span,
 key={tagIndex}
                           className=&quot;px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20&quot;
                         >
                           {tag}
                         </span>;
-                      ))}
+                      )}
                     </div>;
-;
+
                     {/* Market Info */}
                     <div className=&quot;flex items-center justify-between text-sm text-white/60 mb-4&quot;>
                       <span>Market: {service.marketSize}</span>
@@ -390,18 +382,18 @@ href=&quot;/contact&quot;
 
                   {/* Hover Effect Overlay */}
                   <div className=&quot;absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none&quot; />                </motion.div>
-              ))}
+              )}
             </motion.div>;
           </div>;
         </section>;
-;
+
         {/* Contact CTA Section */}
         <section className=&quot;py-20 bg-gradient-to-br from-black via-purple-900/20 to-black&quot;>
           <div className=&quot;max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8&quot;>            <motion.div,
-initial={_{ opacity: 0, y: 30}}
-              whileInView={_{ opacity: 1, y: 0}}
-              transition={_{ duration: 0.8}}
-              viewport={_{ once: true}}
+initial={_{ opacity: 0, y: 30}
+              whileInView={_{ opacity: 1, y: 0}
+              transition={_{ duration: 0.8}
+              viewport={_{ once: true}
             >
               <h2 className=&quot;text-3xl md:text-4xl font-bold text-white mb-6&quot;>
                 Ready to Get Started?
@@ -410,7 +402,7 @@ initial={_{ opacity: 0, y: 30}}
                 Our team of experts is ready to help you choose the perfect plan and get you started with our,
 cutting-edge technology solutions. Contact us today for a personalized consultation.
               </p>
-              
+
               <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center mb-8&quot;>
                 <a,
 href=&quot;/contact&quot;

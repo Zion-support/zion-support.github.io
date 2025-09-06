@@ -1,6 +1,6 @@
 import React from 'react',;
 import Head from 'next/head',;
-;
+
 export default function ForbiddenPage() {;
   return (;
     <>;
@@ -19,4 +19,3 @@ export default function ForbiddenPage() {;
       </div>;
     </>;
   );
-}

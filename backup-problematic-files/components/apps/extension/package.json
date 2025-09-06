@@ -1,4 +1,4 @@
-{
+
   "name": "@zion/extension",
   "version": "0.1.0",
   "private": true,
@@ -8,4 +8,3 @@
   "devDependencies": {
     "sharp": "^0.33.4"
   }
-}

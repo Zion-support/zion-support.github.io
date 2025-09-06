@@ -45,7 +45,7 @@ const AuthRoutes = () => {
       />
     </Routes>
   )
-}
+
 export default AuthRoutes;
 
 import { Fragment } from './react';
@@ -92,7 +92,5 @@ const AuthRoutes = () =>: any {
         }
       />;
     </Routes>);
-}
-;
+
 export default AuthRoutes;
-;

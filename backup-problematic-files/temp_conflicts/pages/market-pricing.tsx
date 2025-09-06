@@ -2,11 +2,11 @@ import React from 'react',;
 import Head from 'next/head',;
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',;
 import Card from '../components/ui/Card',;
-;
+
 const ext = (url:string, label?:string) => (;
 	<a className="text-cyan-300 hover:text-cyan-200 underline" href={url} target="_blank" rel="noopener noreferrer">{label || url.replace('https://','')}</a>;
-),;
-;
+,;
+
 export default function MarketPricingPage() {;
 	return (;
 		<UltraFuturisticBackground variant="quantum" intensity="high">;
@@ -18,7 +18,7 @@ export default function MarketPricingPage() {;
 			<div className="container mx-auto px-4 py-16 text-white">;
 				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">Market Pricing</h1>;
 				<p className="text-gray-300 max-w-3xl mb-10">Benchmarks to guide budgeting and ROI. Prices are indicative, see vendor pages for current rates.</p>;
-;
+
 				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
 					<Card className="p-6 bg-black/40 border border-gray-800">;
 						<h2 className="text-xl font-semibold mb-2">AI Model APIs</h2>;
@@ -28,7 +28,7 @@ export default function MarketPricingPage() {;
 							<li>OpenRouter:{ext('https://openrouter.ai/modelsopenrouter.ai/models')}</li>;
 						</ul>;
 					</Card>;
-;
+
 					<Card className="p-6 bg-black/40 border border-gray-800">;
 						<h2 className="text-xl font-semibold mb-2">Vector Databases</h2>;
 						<ul className="text-sm text-gray-300 space-y-2 list-disc list-inside">;
@@ -37,7 +37,7 @@ export default function MarketPricingPage() {;
 							<li>Elastic:{ext('https://www.elastic.co/pricing')}</li>;
 						</ul>;
 					</Card>;
-;
+
             <div className="bg-black/30 rounded-2xl border border-purple-500/30 p-6">;
               <h2 className="text-2xl font-semibold mb-2">Security & Compliance</h2>;
               <ul className="list-disc list-inside text-slate-300 space-y-1">;
@@ -48,7 +48,7 @@ export default function MarketPricingPage() {;
               </ul>;
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets:$200$5,000/month based on scale and compliance scope.</div>;
             </div>;
-;
+
 					<Card className="p-6 bg-black/40 border border-gray-800">;
 						<h2 className="text-xl font-semibold mb-2">Identity & SSO/SCIM</h2>;
 						<ul className="text-sm text-gray-300 space-y-2 list-disc list-inside">;
@@ -57,7 +57,7 @@ export default function MarketPricingPage() {;
 							<li>Okta:{ext('https://www.okta.com/pricing/')}</li>;
 						</ul>;
 					</Card>;
-;
+
 					<Card className="p-6 bg-black/40 border border-gray-800">;
 						<h2 className="text-xl font-semibold mb-2">Status & Synthetic Monitoring</h2>;
 						<ul className="text-sm text-gray-300 space-y-2 list-disc list-inside">;
@@ -65,7 +65,7 @@ export default function MarketPricingPage() {;
 							<li>Checkly:{ext('https://www.checklyhq.com/pricing/')}</li>;
 						</ul>;
 					</Card>;
-;
+
 					<Card className="p-6 bg-black/40 border border-gray-800">;
 						<h2 className="text-xl font-semibold mb-2">Edge/Platform</h2>;
 						<ul className="text-sm text-gray-300 space-y-2 list-disc list-inside">;
@@ -74,7 +74,7 @@ export default function MarketPricingPage() {;
 							<li>Fastly:{ext('https://www.fastly.com/pricing')}</li>;
 						</ul>;
 					</Card>;
-;
+
 					<Card className="p-6 bg-black/40 border border-gray-800">;
 						<h2 className="text-xl font-semibold mb-2">Privacy Analytics</h2>;
 						<ul className="text-sm text-gray-300 space-y-2 list-disc list-inside">;
@@ -83,7 +83,7 @@ export default function MarketPricingPage() {;
 						</ul>;
 					</Card>;
 				</div>;
-;
+
             <div className="bg-black/30 rounded-2xl border border-cyan-500/30 p-6">;
               <h2 className="text-2xl font-semibold mb-2">Email Deliverability & Warmup</h2>;
               <ul className="list-disc list-inside text-slate-300 space-y-1">;
@@ -95,7 +95,7 @@ export default function MarketPricingPage() {;
               </ul>;
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets:$50$300/month for warmup and monitoring, ESP fees separate.</div>;
             </div>;
-;
+
             <div className="bg-black/30 rounded-2xl border border-purple-500/30 p-6">;
               <h2 className="text-2xl font-semibold mb-2">Product Analytics & Personalization</h2>;
               <ul className="list-disc list-inside text-slate-300 space-y-1">;
@@ -105,7 +105,7 @@ export default function MarketPricingPage() {;
               </ul>;
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets:$100$1,500/month depending on MAUs and features.</div>;
             </div>;
-;
+
             <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6">;
               <h2 className="text-2xl font-semibold mb-2">Vector Search & Retrieval</h2>;
               <ul className="list-disc list-inside text-slate-300 space-y-1">;
@@ -115,7 +115,7 @@ export default function MarketPricingPage() {;
               </ul>;
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets:$50$1,000/month depending on index size and QPS.</div>;
             </div>;
-;
+
             <div className="bg-black/30 rounded-2xl border border-amber-500/30 p-6">;
               <h2 className="text-2xl font-semibold mb-2">API Security & Edge</h2>;
               <ul className="list-disc list-inside text-slate-300 space-y-1">;
@@ -125,7 +125,7 @@ export default function MarketPricingPage() {;
               </ul>;
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets:$100$2,000/month based on traffic and protections.</div>;
             </div>;
-;
+
             <div className="bg-black/30 rounded-2xl border border-slate-500/30 p-6">;
               <h2 className="text-2xl font-semibold mb-2">Privacy, PII & DSAR</h2>;
               <ul className="list-disc list-inside text-slate-300 space-y-1">;
@@ -135,7 +135,7 @@ export default function MarketPricingPage() {;
               </ul>;
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets:$100$2,000/month by data volume and systems.</div>;
             </div>;
-;
+
             <div className="bg-black/30 rounded-2xl border border-indigo-500/30 p-6">;
               <h2 className="text-2xl font-semibold mb-2">Identity & SSO/SCIM</h2>;
               <ul className="list-disc list-inside text-slate-300 space-y-1">;
@@ -145,7 +145,7 @@ export default function MarketPricingPage() {;
               </ul>;
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets:$100$1,500/month depending on MAUs and features.</div>;
             </div>;
-;
+
             <div className="bg-black/30 rounded-2xl border border-pink-500/30 p-6">;
               <h2 className="text-2xl font-semibold mb-2">Feature Flags & Experimentation</h2>;
               <ul className="list-disc list-inside text-slate-300 space-y-1">;
@@ -155,7 +155,7 @@ export default function MarketPricingPage() {;
               </ul>;
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets:$50$800/month based on flags, MAUs, and environments.</div>;
             </div>;
-;
+
             <div className="bg-black/30 rounded-2xl border border-rose-500/30 p-6">;
               <h2 className="text-2xl font-semibold mb-2">Synthetic Data & Privacy</h2>;
               <ul className="list-disc list-inside text-slate-300 space-y-1">;
@@ -166,7 +166,7 @@ export default function MarketPricingPage() {;
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets:$100$1,500/month depending on data volume and controls.</div>;
             </div>;
           </div>;
-;
+
           <div className="space-y-6">;
             <div className="bg-black/30 rounded-2xl border border-sky-500/30 p-6">;
               <h2 className="text-2xl font-semibold mb-2">Monitoring & Incident Response</h2>;
@@ -177,7 +177,7 @@ export default function MarketPricingPage() {;
               </ul>;
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets:$50$1,000/month depending on host count and alerting.</div>;
             </div>;
-;
+
             <div className="bg-black/30 rounded-2xl border border-rose-500/30 p-6">;
               <h2 className="text-2xl font-semibold mb-2">Feature Flags & Progressive Delivery</h2>;
               <ul className="list-disc list-inside text-slate-300 space-y-1">;
@@ -187,7 +187,7 @@ export default function MarketPricingPage() {;
               </ul>;
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets:$50$800/month by environments and MAUs.</div>;
             </div>;
-;
+
             <div className="bg-black/30 rounded-2xl border border-teal-500/30 p-6">;
               <h2 className="text-2xl font-semibold mb-2">CI/CD & Platforms</h2>;
               <ul className="list-disc list-inside text-slate-300 space-y-1">;
@@ -197,7 +197,7 @@ export default function MarketPricingPage() {;
               </ul>;
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets:$0$500/month for moderate pipelines and environments.</div>;
             </div>;
-;
+
             <div className="bg-black/30 rounded-2xl border border-blue-500/30 p-6">;
               <h2 className="text-2xl font-semibold mb-2">Feature Flags & Experimentation</h2>;
               <ul className="list-disc list-inside text-slate-300 space-y-1">;
@@ -207,7 +207,7 @@ export default function MarketPricingPage() {;
               </ul>;
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets:$50$1,500/month depending on MAUs and flags.</div>;
             </div>;
-;
+
             <div className="bg-black/30 rounded-2xl border border-green-500/30 p-6">;
               <h2 className="text-2xl font-semibold mb-2">A/B Testing & CRO</h2>;
               <ul className="list-disc list-inside text-slate-300 space-y-1">;
@@ -218,7 +218,7 @@ export default function MarketPricingPage() {;
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets:$100$5,000/month based on volume and SLAs.</div>;
             </div>;
           </div>;
-;
+
           {/* Additional easy-to-verify market references */}
           <div className="space-y-6">;
             <div className="bg-black/30 rounded-2xl border border-sky-500/30 p-6">;
@@ -230,7 +230,7 @@ export default function MarketPricingPage() {;
               </ul>;
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets:$0$100/month depending on responses and branding.</div>;
             </div>;
-;
+
             <div className="bg-black/30 rounded-2xl border border-purple-500/30 p-6">;
               <h2 className="text-2xl font-semibold mb-2">Helpdesk & Chat</h2>;
               <ul className="list-disc list-inside text-slate-300 space-y-1">;
@@ -240,7 +240,7 @@ export default function MarketPricingPage() {;
               </ul>;
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets:$20$500/month by seats and channels.</div>;
             </div>;
-;
+
             <div className="bg-black/30 rounded-2xl border border-amber-500/30 p-6">;
               <h2 className="text-2xl font-semibold mb-2">SEO & Content</h2>;
               <ul className="list-disc list-inside text-slate-300 space-y-1">;
@@ -250,7 +250,7 @@ export default function MarketPricingPage() {;
               </ul>;
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets:$100$500/month depending on seats and projects.</div>;
             </div>;
-;
+
             <div className="bg-black/30 rounded-2xl border border-rose-500/30 p-6">;
               <h2 className="text-2xl font-semibold mb-2">Ecommerce Reviews & UGC</h2>;
               <ul className="list-disc list-inside text-slate-300 space-y-1">;
@@ -260,7 +260,7 @@ export default function MarketPricingPage() {;
               </ul>;
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets:$9$199/month based on features and order volume.</div>;
             </div>;
-;
+
             <div className="bg-black/30 rounded-2xl border border-cyan-500/30 p-6">;
               <h2 className="text-2xl font-semibold mb-2">Scheduling & Appointments</h2>;
               <ul className="list-disc list-inside text-slate-300 space-y-1">;
@@ -270,7 +270,7 @@ export default function MarketPricingPage() {;
               </ul>;
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets:$10$200/month depending on calendars and reminders.</div>;
             </div>;
-;
+
             <div className="bg-black/30 rounded-2xl border border-violet-500/30 p-6">;
               <h2 className="text-2xl font-semibold mb-2">Learning Management (LMS)</h2>;
               <ul className="list-disc list-inside text-slate-300 space-y-1">;
@@ -280,7 +280,7 @@ export default function MarketPricingPage() {;
               </ul>;
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets:$60$600/month depending on seats and content.</div>;
             </div>;
-;
+
             <div className="bg-black/30 rounded-2xl border border-indigo-500/30 p-6">;
               <h2 className="text-2xl font-semibold mb-2">Developer Productivity</h2>;
               <ul className="list-disc list-inside text-slate-300 space-y-1">;
@@ -291,7 +291,7 @@ export default function MarketPricingPage() {;
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets:$0$300/month per team depending on usage.</div>;
             </div>;
           </div>;
-;
+
           {/* New categories with verified links */}
           <div className="space-y-6">;
             <div className="bg-black/30 rounded-2xl border border-indigo-500/30 p-6">;
@@ -303,7 +303,7 @@ export default function MarketPricingPage() {;
               </ul>;
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets:$49$500/month by affiliates and orders.</div>;
             </div>;
-;
+
             <div className="bg-black/30 rounded-2xl border border-rose-500/30 p-6">;
               <h2 className="text-2xl font-semibold mb-2">Returns & PostPurchase</h2>;
               <ul className="list-disc list-inside text-slate-300 space-y-1">;
@@ -313,7 +313,7 @@ export default function MarketPricingPage() {;
               </ul>;
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets:$29$299/month by orders and features.</div>;
             </div>;
-;
+
             <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6">;
               <h2 className="text-2xl font-semibold mb-2">Helpdesk & ITSM</h2>;
               <ul className="list-disc list-inside text-slate-300 space-y-1">;
@@ -324,7 +324,7 @@ export default function MarketPricingPage() {;
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets:$19$1,000/month based on agents and SLAs.</div>;
             </div>;
           </div>;
-;
+
           <div className="space-y-6">;
             <div className="bg-black/30 rounded-2xl border border-sky-500/30 p-6">;
               <h2 className="text-2xl font-semibold mb-2">CDP & Reverse ETL</h2>;
@@ -336,7 +336,7 @@ export default function MarketPricingPage() {;
               </ul>;
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets:$100$1,500/month depending on sources, destinations, and MAUs.</div>;
             </div>;
-;
+
             <div className="bg-black/30 rounded-2xl border border-rose-500/30 p-6">;
               <h2 className="text-2xl font-semibold mb-2">Returns & Logistics</h2>;
               <ul className="list-disc list-inside text-slate-300 space-y-1">;
@@ -346,7 +346,7 @@ export default function MarketPricingPage() {;
               </ul>;
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets:$50$400/month plus label costs.</div>;
             </div>;
-;
+
             <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6">;
               <h2 className="text-2xl font-semibold mb-2">Feature Flags & Experiments</h2>;
               <ul className="list-disc list-inside text-slate-300 space-y-1">;
@@ -357,7 +357,7 @@ export default function MarketPricingPage() {;
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets:$50$800/month depending on flags and MAUs.</div>;
             </div>;
           </div>;
-;
+
           <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6">;
             <h2 className="text-2xl font-semibold mb-2">Synthetic Monitoring & Browser Automation</h2>;
             <ul className="list-disc list-inside text-slate-300 space-y-1">;
@@ -367,7 +367,7 @@ export default function MarketPricingPage() {;
             </ul>;
             <div className="text-sm text-slate-400 mt-3">Typical SMB budgets:$20$500/month depending on checks, regions, and concurrency.</div>;
           </div>;
-;
+
           <div className="bg-black/30 rounded-2xl border border-violet-500/30 p-6">;
             <h2 className="text-2xl font-semibold mb-2">Email Deliverability & Monitoring</h2>;
             <ul className="list-disc list-inside text-slate-300 space-y-1">;
@@ -377,7 +377,7 @@ export default function MarketPricingPage() {;
             </ul>;
             <div className="text-sm text-slate-400 mt-3">Typical SMB budgets:$15$300/month plus ESP fees depending on volumes.</div>;
           </div>;
-;
+
           <div className="bg-black/30 rounded-2xl border border-teal-500/30 p-6">;
             <h2 className="text-2xl font-semibold mb-2">Secrets Management & Rotation</h2>;
             <ul className="list-disc list-inside text-slate-300 space-y-1">;
@@ -387,7 +387,7 @@ export default function MarketPricingPage() {;
             </ul>;
             <div className="text-sm text-slate-400 mt-3">Typical SMB budgets:$0$1,000/month depending on key volume and audit needs.</div>;
           </div>;
-;
+
           <div className="bg-black/30 rounded-2xl border border-rose-500/30 p-6">;
             <h2 className="text-2xl font-semibold mb-2">PDF Generation & Processing</h2>;
             <ul className="list-disc list-inside text-slate-300 space-y-1">;
@@ -397,7 +397,7 @@ export default function MarketPricingPage() {;
             </ul>;
             <div className="text-sm text-slate-400 mt-3">Typical SMB budgets:$15$200/month depending on pages and concurrency.</div>;
           </div>;
-;
+
           <div className="text-center text-slate-400 mt-10">;
             Need help benchmarking? <a href="/contact" className="text-cyan-400 underline">Contact us</a>  we align to transparent, vendor-verifiable pricing.;
           </div>;
@@ -405,4 +405,3 @@ export default function MarketPricingPage() {;
       </div>;
     </UltraAdvancedFuturisticBackground>;
   ),;
-}

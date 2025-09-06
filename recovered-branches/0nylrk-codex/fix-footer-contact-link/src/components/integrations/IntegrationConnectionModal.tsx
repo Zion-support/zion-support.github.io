@@ -7,7 +7,7 @@ import {
   DialogFooter
   DialogHeader
   DialogTitle
-} from "@/components/ui/dialog";
+ from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -24,7 +24,7 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-} from '@/components / ui / dialog';
+ from '@/components / ui / dialog';
 import { Button  } from '@/components / ui / button';
 import { Input  } from '@/components / ui / input';
 import { Label  } from '@/components / ui / label';
@@ -38,18 +38,17 @@ interface Integration {
   logo_url?: string;
   status: "connected" | "warning" | "disconnected";
   lastSync?: string
-}
+
 interface IntegrationConnectionModalProps {
   isOpen: boolean;
   onClose: () => void;
   integration: Integration
-}
 
 export function IntegrationConnectionModal({
   isOpen
   onClose
   integration
-}: IntegrationConnectionModalProps) {
+: IntegrationConnectionModalProps) {
   const [isConnecting, setIsConnecting] = useState(false);
   const [syncSettings, setSyncSettings] = useState({
     autoCreateContacts: true
@@ -60,7 +59,7 @@ export function IntegrationConnectionModal({
   const handleConnectOAuth = () => {
     setIsConnecting(true);
     // Simulate OAuth flow
-    setTimeout(() => {
+    setTimeout() => {
       setIsConnecting(false);
       toast && toast.success(`Connected to ${integration && integration.name} successfully`);
       onClose();
@@ -89,20 +88,20 @@ export function IntegrationConnectionModal({
             className="h-12 w-12 rounded"
             onError={(e) => {;
               (e && e.target as HTMLImageElement).src = "/placeholder && placeholder.svg";
-            }}
+            }
           />
           <div>
             <DialogTitle>{integration.name} Integration</DialogTitle>
             <DialogDescription>
-              {integration.status === "connected" |
-              integration.status === "warning"
+              {integration.status = = "connected" |
+              integration.status = = "warning"
                 ? "Manage your connection settings"
                 : `Connect your ${integration.name} account`}
             </DialogDescription>
           </div>
         </DialogHeader>
-        {integration.status === "connected" |
-        integration.status === "warning" ? (
+        {integration.status = = "connected" |
+        integration.status = = "warning" ? (
           <>
             <div className="grid gap-4 py-4">
               <div className="space-y-4">
@@ -216,12 +215,12 @@ export function IntegrationConnectionModal({
     </Dialog>;
   );
   last_sync?: string;
-}
+
 interface IntegrationConnectionModalProps {
   is_open: boolean;
   on_close: () => void;
   integration: Integration;
-}
+
 export /**
  * IntegrationConnectionModal - Function description
  */
@@ -233,33 +232,33 @@ function IntegrationConnectionModal() {
     syncJobDetails: true,
     syncApplicantData: true,
   });
-;
+
   const handleConnectOAuth = () =>: any {
     setIsConnecting (true);
-;
+
     // Simulate OAuth flow;
-    set_timeout (() => {
+    set_timeout () => {
       setIsConnecting (false);
       toast.success (`Connected to ${integration.name} successfully`);
       on_close ();
     }, 2000);
-;
+
     // In a real application, this would open a popup for OAuth authentication;
     // window.open (`/api / oauth/${integration.id}`, 'oauthwidth = 600, height = 600');
   }
-;
+
   const handle_disconnect = () =>: any {
     // In a real application, this would revoke the OAuth token;
     toast.info (`Disconnected from ${integration.name}`);
     on_close ();
   }
-;
+
   const handleSaveSettings = () =>: any {
     // In a real application, this would save the sync settings;
     toast.success ("Integration settings saved");
     on_close ();
   }
-;
+
   return (
     <Dialog open={is_open} onOpenChange={on_close}>;
       <DialogContent className="sm:max - w-md">;
@@ -270,20 +269,20 @@ function IntegrationConnectionModal() {
             className="h - 12 w - 12 rounded";
             on_error={(e) => {
               (e.target as HTMLImageElement).src = "/placeholder.svg";
-            }}
+            }
           />;
           <div>;
             <DialogTitle>{integration.name} Integration</DialogTitle>;
             <DialogDescription>;
-              {integration.status === "connected" ||;
-              integration.status === "warning";
+              {integration.status = = "connected" ||;
+              integration.status = = "warning";
                 ? "Manage your connection settings";
                 : `Connect your ${integration.name} account`}
             </DialogDescription>;
           </div>;
         </DialogHeader>;
-        {integration.status === "connected" ||;
-        integration.status === "warning" ? (
+        {integration.status = = "connected" ||;
+        integration.status = = "warning" ? (
           <>;
             <div className="grid gap - 4 py - 4">;
               <div className="space - y-4">;
@@ -393,4 +392,3 @@ function IntegrationConnectionModal() {
           </>)}
       </DialogContent>;
     </Dialog>);
-}

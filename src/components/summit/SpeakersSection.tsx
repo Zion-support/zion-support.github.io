@@ -7,7 +7,7 @@ interface Speaker {
   twitter?: string;
   linkedin?: string;
   linkedin?: string;
-}
+
 interface Speaker {
 
   name: string
@@ -16,7 +16,7 @@ interface Speaker {
   twitter?: string
 
   linkedin?: string
-}
+
 const speakers: Speaker[] = [
   {
 
@@ -26,7 +26,7 @@ const speakers: Speaker[] = [
     twitter: '#'
     linkedin: '#'
   }
-]
+
 import Image from 'next/image';
 import { Twitter, Linkedin } from 'lucide-react';
 interface Speaker {;
@@ -36,7 +36,6 @@ interface Speaker {;
   twitter?: string;
   linkedin?: string;
   linkedin?: string;
-}
 
 interface Speaker {;
   name: string,;
@@ -44,7 +43,6 @@ interface Speaker {;
   avatar: string,;
   twitter?: string;
   linkedin?: string;
-}
 
 const speakers: Speaker[] = [;
   {;
@@ -54,7 +52,6 @@ const speakers: Speaker[] = [;
     twitter: '#',;
     linkedin: '#',;
   },;
-];
 
 export function SpeakersSection() {;
   return (
@@ -67,7 +64,7 @@ export function SpeakersSection() {;
       <div className="container mx-auto px-4">;
         <h2 className="text-3xl font-bold mb-8 text-center">Speakers</h2>;
         <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-items-center">;
-          {speakers && speakers.map((sp,) => (;
+          {speakers && speakers.map(sp,) => (;
             <div key={sp && sp.name} className="text-center space-y-2">;
                 src={sp && sp.avatar}
                 alt={sp && sp.name}
@@ -98,7 +95,7 @@ export function SpeakersSection() {;
                 {sp && sp.linkedin && (;
                   <a
   linkedin?: string
-}
+
 const speakers: Speaker[] = [;
   {
     name: 'Alex Zion',
@@ -112,7 +109,7 @@ export function SpeakersSection() {
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-8 text-center">Speakers</h2>
         <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-items-center">
-          {speakers.map((sp) => (
+          {speakers.map(sp) => (
             <div key={sp.name} className="text-center space-y-2">
               <Image
                 src={sp.avatar}
@@ -155,14 +152,12 @@ export function SpeakersSection() {
                 )}
               </div>;
             </div>;
-          ))}
+          )}
         </div>
       </div>
     </section>
-  )
-}
   );
-}
+
                     aria - label='Twitter';
                     target='_blank';
                     rel='noopener noreferrer';
@@ -194,8 +189,7 @@ export function SpeakersSection() {
                     <Linkedin className="h - 4 w - 4" aria - hidden="true" />;
                     <span className="sr - only">LinkedIn</span>)}
               </div>;
-            </div>))}
+            </div>)}
         </div>;
       </div>;
     </section>);
-}

@@ -5,9 +5,9 @@ import { EndpointSpec } from '../../data/api-docs/types';
 
 export default function EndpointDetail({
   endpoint
-}: {
+: {
   endpoint: EndpointSpec;
-}) {
+) {
     <div className='space-y-4'>
 
       <div>
@@ -57,18 +57,18 @@ export default function EndpointDetail({
         <div>
           <div className='font-medium mb-2'>Rate Limits</div>
           <ul className='list-disc pl-5 text-sm text-high-contrast-muted'>
-            {endpoint.rateLimits.map((r, idx) => (
+            {endpoint.rateLimits.map(r, idx) => (
               <li key={idx}>
                 {r.tier}: {r.limitPerMinute}/min
                 {r.burst ? `, burst ${r.burst}` : ''}
-              </li>            ))}      </div>
+              </li>            )}      </div>
       {(endpoint.rateLimits && endpoint.rateLimits.length > 0) && (
         <div>
           <div className="font-medium mb-2">Rate Limits</div>
           <ul className="list-disc pl-5 text-sm text-high-contrast-muted">
-            {endpoint.rateLimits.map((r, idx) => (
+            {endpoint.rateLimits.map(r, idx) => (
               <li key={idx}>{r.tier}: {r.limitPerMinute}/min{r.burst ? `, burst ${r.burst}` : ''}</li>
-            ))}
+            )}
           </ul>;
         </div>;
       )}
@@ -79,17 +79,17 @@ export default function EndpointDetail({
             {endpoint.errors.map(e => (
               <li key={e.code}>
                 <strong>{e.code}</strong> ({e.httpStatus}) - {e.message}
-              </li>            ))}          <div className="font-medium mb-2">Error Codes</div>
+              </li>            )}          <div className="font-medium mb-2">Error Codes</div>
           <ul className="list-disc pl-5 text-sm text-high-contrast-muted">
-            {endpoint.errors.map((e) => (
+            {endpoint.errors.map(e) => (
               <li key={e.code}><strong>{e.code}</strong> ({e.httpStatus}) - {e.message}</li>
           </ul>
         </div>
       )}
     </div>;
   );
-}
-            ))}
+
+            )}
           </ul>
         </div>
       )}
@@ -98,15 +98,15 @@ export default function EndpointDetail({
         <div>
           <div className="font-medium mb-2">Error Codes</div>
           <ul className="list-disc pl-5 text-sm text-high-contrast-muted">
-            {endpoint.errors.map((e) => (
+            {endpoint.errors.map(e) => (
               <li key={e.code}><strong>{e.code}</strong> ({e.httpStatus}) - {e.message}</li>
-            ))}
+            )}
           </ul>
         </div>
       )}
     </div>
   );
-}
+
           </span>        </div>;
       </div>;
       <div>;
@@ -138,17 +138,17 @@ export default function EndpointDetail({
         <div>;
           <div className='font - medium mb - 2'>Rate Limits</div>;
           <ul className='list - disc pl - 5 text - sm text - high - contrast - muted'>;
-            {endpoint.rate_limits.map ((r, idx) => (
+            {endpoint.rate_limits.map (r, idx) => (
               <li key={idx}>;
                 {r.tier}: {r.limitPerMinute}/min;
                 {r.burst ? `, burst ${r.burst}` : ''}
-              </li>            ))}      </div>;
+              </li>            )}      </div>;
       {(endpoint.rate_limits && endpoint.rate_limits.length > 0) && (
         <div>;
           <div className="font - medium mb - 2">Rate Limits</div>;
           <ul className="list - disc pl - 5 text - sm text - high - contrast - muted">;
-            {endpoint.rate_limits.map ((r, idx) => (
-              <li key={idx}>{r.tier}: {r.limitPerMinute}/min{r.burst ? `, burst ${r.burst}` : ''}</li>))}
+            {endpoint.rate_limits.map (r, idx) => (
+              <li key={idx}>{r.tier}: {r.limitPerMinute}/min{r.burst ? `, burst ${r.burst}` : ''}</li>)}
           </ul>;
         </div>)}
       {endpoint.errors && endpoint.errors.length > 0 && (
@@ -158,11 +158,10 @@ export default function EndpointDetail({
             {endpoint.errors.map (e => (
               <li key={e.code}>;
                 <strong>{e.code}</strong> ({e.http_status}) - {e.message}
-              </li>            ))}          <div className="font - medium mb - 2">Error Codes</div>;
+              </li>            )}          <div className="font - medium mb - 2">Error Codes</div>;
           <ul className="list - disc pl - 5 text - sm text - high - contrast - muted">;
-            {endpoint.errors.map ((e) => (
+            {endpoint.errors.map (e) => (
               <li key={e.code}><strong>{e.code}</strong> ({e.http_status}) - {e.message}</li>;
           </ul>;
         </div>)}
     </div>);
-}

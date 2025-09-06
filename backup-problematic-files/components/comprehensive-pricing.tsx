@@ -33,34 +33,34 @@ export default function ComprehensivePricingPage() {;
   // Filter and sort services;
   let filteredServices = allServices,;
   // Category filter;
-  if (selectedCategory !== 'All') {;
-    filteredServices = filteredServices.filter(service => service.category === selectedCategory);
+  if (selectedCategory != 'All') {;
+    filteredServices = filteredServices.filter(service => service.category = = selectedCategory);
   }
-;
+
   // Price range filter;
-  if (priceRange !== 'All') {;
-    const [min, max] = priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p)),;
+  if (priceRange != 'All') {;
+    const [min, max] = priceRange.split('-').map(p => p = = '+' ? Infinity : parseInt(p),;
     filteredServices = filteredServices.filter(service => {;
-      const price = parseFloat(service.price.replace('$', '').replace(, '')),;
-      return price >= min && (max === Infinity || price <= max);
+      const price = parseFloat(service.price.replace('$', '').replace(, ''),;
+      return price >= min && (max = = Infinity || price <= max);
     });
   }
-;
+
   // Search filter;
   if (searchQuery) {;
     filteredServices = filteredServices.filter(service =>;
-      service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-      service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-      service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-      service.category.toLowerCase().includes(searchQuery.toLowerCase());
+      service.name.toLowerCase().includes(searchQuery.toLowerCase() ||;
+      service.description.toLowerCase().includes(searchQuery.toLowerCase() ||;
+      service.tagline.toLowerCase().includes(searchQuery.toLowerCase() ||;
+      service.category.toLowerCase().includes(searchQuery.toLowerCase();
     );
   }
-;
+
   // Sort services;
-  filteredServices.sort((a, b) => {;
+  filteredServices.sort(a, b) => {;
     switch (sortBy) {;
       case 'price':;
-        return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, '')),;
+        return parseFloat(a.price.replace('$', '').replace(, '') - parseFloat(b.price.replace('$', '').replace(, ''),;
       case 'popularity':;
         return (b.popular ? 1 : 0) - (a.popular ? 1 : 0),;
       case 'category':;
@@ -70,8 +70,7 @@ export default function ComprehensivePricingPage() {;
         const bRoi = parseFloat(b.roi.match(/\d+/)?.[0] || '0'),;
         return bRoi - aRoi,;
       default: return a.name.localeCompare(b.name);
-    }
-  }),
+    }),
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
@@ -154,7 +153,6 @@ export default function ComprehensivePricingPage() {;
       transition: {;
         staggerChildren: 0.1;
       }
-    }
   },;
   const itemVariants = {;
     hidden: { y: 20, opacity: 0 },;
@@ -164,7 +162,6 @@ export default function ComprehensivePricingPage() {;
       transition: {;
         duration: 0.5;
       }
-    }
   },
 
   return (
@@ -188,9 +185,9 @@ export default function ComprehensivePricingPage() {;
             <div className="max-w-5xl mx-auto">
               <motion.h1 
                 className="text-6xl md:text-8xl font-bold mb-8 futuristic-glow"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
+                initial={ opacity: 0, y: 30 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.8 }
               >
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                   Comprehensive
@@ -200,9 +197,9 @@ export default function ComprehensivePricingPage() {;
               </motion.h1>
               <motion.p 
                 className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.8, delay: 0.2 }
               >;
                 Transparent pricing for all our revolutionary micro SaaS services.;
                 Choose the perfect plan for your business with guaranteed ROI and enterprise-grade reliability.;
@@ -210,24 +207,24 @@ export default function ComprehensivePricingPage() {;
               {/* Market Stats */}
               <motion.div 
                 className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.8, delay: 0.4 }
               >
-                {marketStats.map((stat, index) => (
+                {marketStats.map(stat, index) => (
                   <div key={index} className="text-center">
                     <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.metric}</div>
                     <div className="text-gray-400 text-sm">{stat.label}</div>
                     <div className="text-gray-500 text-xs">{stat.description}</div>
                   </div>
-                ))}
+                )}
               </motion.div>;
               {/* CTA Buttons */}
               <motion.div 
                 className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.8, delay: 0.6 }
               >
                 <Button 
                   variant="primary" 
@@ -275,10 +272,10 @@ export default function ComprehensivePricingPage() {;
           <div className="container mx-auto px-4">
             <motion.div 
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              viewport={ once: true }
+              transition={ duration: 0.6 }
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
                 <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
@@ -297,13 +294,13 @@ export default function ComprehensivePricingPage() {;
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
+              viewport={ once: true }
             >;
-              {pricingTiers.map((tier, index) => (;
+              {pricingTiers.map(tier, index) => (;
                 <motion.div;
                   key={tier.name}
                   variants={itemVariants}
-                  whileHover={{ y: -10 }}
+                  whileHover={ y: -10 }
                 >;
                   <UltraFuturisticCard;
                     variant={tier.popular ? 'holographic-advanced' : 'quantum-advanced'}
@@ -317,7 +314,7 @@ export default function ComprehensivePricingPage() {;
                         </div>
                       </div>
                     )}
-                    
+
                     <div className="text-center mb-8">
                       <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-br ${tier.color} mb-6`}>
                         {tier.icon}
@@ -327,14 +324,14 @@ export default function ComprehensivePricingPage() {;
                       <div className="text-4xl font-bold text-cyan-400 mb-2">{tier.price}</div>
                       <div className="text-sm text-gray-400">{tier.period}</div>
                     </div>
-                    
+
                     <div className="space-y-3 mb-8">
-                      {tier.features.map((feature, idx) => (
+                      {tier.features.map(feature, idx) => (
                         <div key={idx} className="flex items-center gap-2">
                           <Check className="w-4 h-4 text-green-400 flex-shrink-0" />
                           <span className="text-sm text-gray-300">{feature}</span>
                         </div>
-                      ))}
+                      )}
                     </div>
 
                     <div className="text-center">
@@ -360,7 +357,7 @@ export default function ComprehensivePricingPage() {;
                         </div>;
                       </div>;
                     )}
-;
+
                     <div className="text-center mb-8">;
                       <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-br ${tier.color} mb-6`}>;
                         {tier.icon}
@@ -371,12 +368,12 @@ export default function ComprehensivePricingPage() {;
                       <div className="text-sm text-gray-400">{tier.period}</div>;
                     </div>;
                     <div className="space-y-3 mb-8">;
-                      {tier.features.map((feature, idx) => (;
+                      {tier.features.map(feature, idx) => (;
                         <div key={idx} className="flex items-center gap-2">;
                           <Check className="w-4 h-4 text-green-400 flex-shrink-0" />;
                           <span className="text-sm text-gray-300">{feature}</span>;
                         </div>;
-                      ))}
+                      )}
                     </div>;
                     <div className="text-center">;
                                              <Button;
@@ -391,7 +388,7 @@ export default function ComprehensivePricingPage() {;
                     </div>;
                   </UltraFuturisticCard>;
                 </motion.div>;
-              ))}
+              )}
             </motion.div>;
           </div>;
         </section>;
@@ -401,10 +398,10 @@ export default function ComprehensivePricingPage() {;
             {/* Filters and Controls */}
             <motion.div 
               className="mb-8"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              viewport={ once: true }
+              transition={ duration: 0.6 }
             >
               <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
                 <div className="flex flex-wrap gap-4">
@@ -416,7 +413,7 @@ export default function ComprehensivePricingPage() {;
                     <option value="All">All Categories</option>
                     {revolutionaryServiceCategories.map(category => (
                       <option key={category} value={category}>{category}</option>
-                    ))}
+                    )}
                   </select>;
                   <select;
                     value={priceRange}
@@ -425,7 +422,7 @@ export default function ComprehensivePricingPage() {;
                   >
                     {priceRanges.map(range => (
                       <option key={range.value} value={range.value}>{range.label}</option>
-                    ))}
+                    )}
                   </select>;
                   <select;
                     value={sortBy}
@@ -434,10 +431,10 @@ export default function ComprehensivePricingPage() {;
                   >
                     {sortOptions.map(option => (
                       <option key={option.value} value={option.value}>{option.label}</option>
-                    ))}
+                    )}
                   </select>
                 </div>
-                
+
                 <div className="flex items-center gap-4">
                   <div className="relative">
                     <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
@@ -449,17 +446,17 @@ export default function ComprehensivePricingPage() {;
                       className="pl-10 pr-4 py-2 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 w-64"
                     />
                   </div>
-                  
+
                   <div className="flex border border-gray-600 rounded-lg overflow-hidden">
                     <button
                       onClick={() => setViewMode('grid')}
-                      className={`px-3 py-2 ${viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
+                      className={`px-3 py-2 ${viewMode = = 'grid' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
                     >
                       <Grid className="w-4 h-4" />
                     </button>
                     <button
                       onClick={() => setViewMode('list')}
-                      className={`px-3 py-2 ${viewMode === 'list' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
+                      className={`px-3 py-2 ${viewMode = = 'list' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
                     >
                       <List className="w-4 h-4" />
                     </button>
@@ -470,27 +467,27 @@ export default function ComprehensivePricingPage() {;
 
             {/* Services Display */}
             <motion.div 
-              className={viewMode === 'grid' 
+              className={viewMode = = 'grid' 
                 ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
                 : "space-y-6"
               }
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
+              viewport={ once: true }
             >;
-              {filteredServices.map((service, index) => (;
+              {filteredServices.map(service, index) => (;
                 <motion.div;
                   key={service.id}
                   variants={itemVariants}
-                  whileHover={{ y: -5 }}
+                  whileHover={ y: -5 }
                 >;
                   <UltraFuturisticCard;
                     variant={service.variant as any || 'quantum-advanced'}
-                    size={viewMode === 'grid' ? 'large' : 'medium'}
-                    className={`h-full cursor-pointer ${viewMode === 'list' ? 'flex flex-col md:flex-row' : ''}`}
+                    size={viewMode = = 'grid' ? 'large' : 'medium'}
+                    className={`h-full cursor-pointer ${viewMode = = 'list' ? 'flex flex-col md:flex-row' : ''}`}
                   >
-                    {viewMode === 'grid' ? (
+                    {viewMode = = 'grid' ? (
                       // Grid View
                       <div className="text-center">
                         <div className="text-4xl mb-4">{service.icon}</div>
@@ -498,14 +495,14 @@ export default function ComprehensivePricingPage() {;
                         <p className="text-gray-300 mb-4 text-sm">{service.tagline}</p>
                         <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
                         <div className="text-sm text-gray-400 mb-4">{service.period}</div>
-                        
+
                         <div className="space-y-2 mb-6">
-                          {service.features.slice(0, 3).map((feature, idx) => (
+                          {service.features.slice(0, 3).map(feature, idx) => (
                             <div key={idx} className="flex items-center gap-2 text-sm">
                               <Check className="w-3 h-3 text-green-400 flex-shrink-0" />
                               <span className="text-gray-300">{feature}</span>
                             </div>
-                          ))}
+                          )}
                         </div>
 
                         <div className="text-center space-y-2">
@@ -544,17 +541,17 @@ export default function ComprehensivePricingPage() {;
                               <div className="text-sm text-gray-400">{service.period}</div>
                             </div>
                           </div>
-                          
+
                           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                             <div>
                               <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features</h4>
                               <div className="space-y-1">
-                                {service.features.slice(0, 4).map((feature, idx) => (
+                                {service.features.slice(0, 4).map(feature, idx) => (
                                   <div key={idx} className="flex items-center gap-2 text-sm">
                                     <Check className="w-3 h-3 text-green-400 flex-shrink-0" />
                                     <span className="text-gray-300">{feature}</span>
                                   </div>
-                                ))}
+                                )}
                               </div>
                             </div>
                             <div>
@@ -566,7 +563,7 @@ export default function ComprehensivePricingPage() {;
                               </div>
                             </div>
                           </div>
-                          
+
                           <div className="flex gap-2">
                                                          <Button 
                                variant="primary" 
@@ -586,9 +583,8 @@ export default function ComprehensivePricingPage() {;
                              </Button>
                           </div>
                         </div>
-                      </div>
-                  >;
-                    {viewMode === 'grid' ? (;
+                      </div>;
+                    {viewMode = = 'grid' ? (;
                       // Grid View;
                       <div className="text-center">;
                         <div className="text-4xl mb-4">{service.icon}</div>;
@@ -597,12 +593,12 @@ export default function ComprehensivePricingPage() {;
                         <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>;
                         <div className="text-sm text-gray-400 mb-4">{service.period}</div>;
                         <div className="space-y-2 mb-6">;
-                          {service.features.slice(0, 3).map((feature, idx) => (;
+                          {service.features.slice(0, 3).map(feature, idx) => (;
                             <div key={idx} className="flex items-center gap-2 text-sm">;
                               <Check className="w-3 h-3 text-green-400 flex-shrink-0" />;
                               <span className="text-gray-300">{feature}</span>;
                             </div>;
-                          ))}
+                          )}
                         </div>;
                         <div className="text-center space-y-2">;
                                                      <Button;
@@ -644,12 +640,12 @@ export default function ComprehensivePricingPage() {;
                             <div>;
                               <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features</h4>;
                               <div className="space-y-1">;
-                                {service.features.slice(0, 4).map((feature, idx) => (;
+                                {service.features.slice(0, 4).map(feature, idx) => (;
                                   <div key={idx} className="flex items-center gap-2 text-sm">;
                                     <Check className="w-3 h-3 text-green-400 flex-shrink-0" />;
                                     <span className="text-gray-300">{feature}</span>;
                                   </div>;
-                                ))}
+                                )}
                               </div>;
                             </div>;
                             <div>;
@@ -684,15 +680,15 @@ export default function ComprehensivePricingPage() {;
                     )}
                   </UltraFuturisticCard>;
                 </motion.div>;
-              ))}
+              )}
             </motion.div>
 
-            {filteredServices.length === 0 && (
+            {filteredServices.length = = 0 && (
               <motion.div 
                 className="text-center py-16"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.6 }}
+                initial={ opacity: 0 }
+                animate={ opacity: 1 }
+                transition={ duration: 0.6 }
               >
                 <div className="text-6xl mb-4"></div>
                 <h3 className="text-2xl font-bold text-white mb-2">No Services Found</h3>
@@ -703,7 +699,7 @@ export default function ComprehensivePricingPage() {;
                      setSearchQuery(''),
                      setSelectedCategory('All'),
                      setPriceRange('All')
-                   }}
+                   }
                  >;
                    Clear Filters;
                  </Button>;
@@ -716,10 +712,10 @@ export default function ComprehensivePricingPage() {;
           <div className="container mx-auto px-4 text-center">
             <motion.div 
               className="max-w-4xl mx-auto"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              viewport={ once: true }
+              transition={ duration: 0.8 }
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Get Started?
@@ -727,7 +723,7 @@ export default function ComprehensivePricingPage() {;
               <p className="text-xl text-gray-300 mb-8">
                 Contact our sales team to discuss pricing, custom plans, and implementation options.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
                 <Button 
                   variant="primary" 
@@ -818,4 +814,3 @@ export default function ComprehensivePricingPage() {;
       </div>;
     </UltraFuturisticBackground>;
   );
-}

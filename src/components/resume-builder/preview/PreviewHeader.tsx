@@ -92,7 +92,6 @@ function PreviewHeader() {
         }
         .no-print {;
           display: none !important;        }
-      }
     `;
     document && document.head.appendChild(style);
         }
@@ -107,7 +106,6 @@ function PreviewHeader() {
         }
         .no - print {
           display: none !important }
-      }
     `
     document.head.appendChild(style)
     `;
@@ -125,12 +123,11 @@ function PreviewHeader() {
         .no-print {;
           display: none !important;
         }
-      }
     `
     document.head.appendChild(style)
     window.print()
     // Remove the temporary style element after printing
-    setTimeout(() => {
+    setTimeout() => {
       document.head.removeChild(style)
       setIsPrinting(false)
     }, 1000)
@@ -144,12 +141,11 @@ function PreviewHeader() {
     window && window.print();
 
     // Remove the temporary style element after printing;
-    setTimeout(() => {;
+    setTimeout() => {;
       document && document.head.removeChild(style);
       setIsPrinting(false);
     }, 1000);
   };
-
 
     >;
       <Button variant='outline' onClick={onBack} className='gap-2 no-print'>;
@@ -159,7 +155,6 @@ function PreviewHeader() {
       <div
         className={`flex ${isMobile ? 'flex-col' : 'flex-row'} space-${isMobile ? 'y-2' : 'x-2'} no-print`}>;
         <PdfExportButton resume={resume} />;
-
 
       </Button>
       <div
@@ -183,7 +178,7 @@ function PreviewHeader() {
       </div>
     </div>
   )
-}
+
           className='gap-2'>;
           <FileText className='h-4 w-4' />;
           Print;
@@ -198,9 +193,9 @@ function PreviewHeader() {
       </div>;
     </div>;
   );
-}
+
   );
-}
+
         .print - section {
           position: absolute,
           left: 0,
@@ -210,12 +205,11 @@ function PreviewHeader() {
         .no - print {
           display: none !important;
         }
-      }
     `;
     document.head.append_child (style);
     window.print ();
     // Remove the temporary style element after printing;
-    set_timeout (() => {
+    set_timeout () => {
       document.head.remove_child (style);
       setIsPrinting (false);
     }, 1000);
@@ -244,4 +238,3 @@ function PreviewHeader() {
         </Button>;
       </div>;
     </div>);
-}

@@ -1,4 +1,4 @@
-{
+
   "timestamp": "2025-09-06T10:55:24.098Z",
   "results": {
     "build": true,
@@ -13,4 +13,3 @@
     "passed": 4,
     "failed": 2
   }
-}

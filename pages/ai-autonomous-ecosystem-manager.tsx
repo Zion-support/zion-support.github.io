@@ -24,7 +24,7 @@ export default function AIAutonomousEcosystemManager() {
 			canonical="https: //ziontechgroup.com/ai-autonomous-ecosystem-manager"
 		/>
 	)
-}
+
 import React from 'react',
 import ServiceLanding from '../components / sections / ServiceLanding',
 export default /**
@@ -51,4 +51,3 @@ return (
     industries={["Platform Teams", "R & D", "Operations", "Security"]}
     canonical="https: //ziontechgroup.com / ai - autonomous - ecosystem - manager";
   />);
-}

@@ -34,7 +34,7 @@ export default function LanguageSwitcher() {
         aria-haspopup=&quot;listbox&quot;
         aria-expanded={open}
         className=&quot;flex items-center gap-2 px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-gray-800&quot;
-        onClick={() => setOpen((v) => !v)}
+        onClick={() => setOpen(v) => !v)}
       >
         <span className={`fi fi-${localeToFlag[current] || 'us'}`}></span>
         <span>{t(localeLabelKey[current] || 'lang.english')}</span>
@@ -42,7 +42,7 @@ export default function LanguageSwitcher() {
       </button>
       {open && (
         <ul role=&quot;listbox&quot; className=&quot;absolute right-0 mt-2 w-48 bg-white dark:bg-black border border-gray-200 dark:border-gray-800 rounded shadow-lg z-50&quot;>
-          {supportedLocales.map((lng) => (
+          {supportedLocales.map(lng) => (
             <li key={lng}>
               <button
                 role=&quot;option&quot;
@@ -53,7 +53,7 @@ export default function LanguageSwitcher() {
                 <span>{_t(localeLabelKey[lng])}</span>
               </button>
             </li>
-          ))}
+          )}
         </ul>;
       )}
     </div>

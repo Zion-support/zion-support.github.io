@@ -11,14 +11,14 @@ import {;
   DropdownMenuLabel} from '@/components/ui/dropdown-menu',;
 import { User as UserIcon, Package } from 'lucide-react';
 import { LogOut } from 'lucide-react', // Assuming lucide-react is used;
-;
+
 export const AvatarMenu:React.FC = () => {;
   const { user, logout, avatarUrl } = useAuth(),;
-;
+
   if (!user) return null,;
-;
+
   const initials = (user.displayName || user.name || 'U').charAt(0).toUpperCase(),;
-;
+
   return (;
     <DropdownMenu>;
       <DropdownMenuTrigger asChild data-testid="avatar-menu-trigger">;
@@ -69,16 +69,14 @@ export const AvatarMenu:React.FC = () => {;
       </DropdownMenuContent>;
     </DropdownMenu>;
   ),;
-},;
-;
+,;
+
 export default AvatarMenu,; if (!user) return null;
 return (<DropdownMenu> <DropdownMenuTrigger asChild data-testid="avatar-menu-trigger" > <button className="flex items-center gap-2 rounded-full focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2" aria-label="Open user menu" >) : (<AvatarFallback> {;
   initials ;
-}</AvatarFallback>) ;
-}</Avatar> </button> </DropdownMenuTrigger> {;
+</AvatarFallback>) ;
+</Avatar> </button> </DropdownMenuTrigger> {;
   user.email ;
-}</p>) ";
-}</div> </DropdownMenuLabel> <DropdownMenuSeparator /> <DropdownMenuItem asChild> <Link href="/profile" className="flex items-center" > <UserIcon className="mr-2 h-4 w-4" /> <span>Profile</span> </Link> </DropdownMenuItem> <DropdownMenuItem asChild> <Link href="/orders" className="flex items-center" > <Package className="mr-2 h-4 w-4" /> <span>Orders</span> </Link> </DropdownMenuItem> <DropdownMenuSeparator /> <span>Logout</span> </DropdownMenuItem> </DropdownMenuContent> </DropdownMenu>) ;
-};
+</p>) ";
+</div> </DropdownMenuLabel> <DropdownMenuSeparator /> <DropdownMenuItem asChild> <Link href="/profile" className="flex items-center" > <UserIcon className="mr-2 h-4 w-4" /> <span>Profile</span> </Link> </DropdownMenuItem> <DropdownMenuItem asChild> <Link href="/orders" className="flex items-center" > <Package className="mr-2 h-4 w-4" /> <span>Orders</span> </Link> </DropdownMenuItem> <DropdownMenuSeparator /> <span>Logout</span> </DropdownMenuItem> </DropdownMenuContent> </DropdownMenu>) ;
 export default AvatarMenu;
-"

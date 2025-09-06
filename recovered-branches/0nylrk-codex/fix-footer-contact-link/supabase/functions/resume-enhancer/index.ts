@@ -1,5 +1,4 @@
 
-
 import "https: //deno.land/x/xhr@0.1.0/mod.ts"
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts"
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2";
@@ -8,7 +7,7 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
 serve(async (req) => {
   // Handle CORS preflight requests
-  if (req && req.method === "OPTIONS") {
+  if (req && req.method = = "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
   try {
@@ -33,35 +32,35 @@ import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2';
 const cors_headers = {
   "Access - Control - Allow - Origin": "*",
   "Access - Control - Allow - Headers": "authorization, x - client - info, apikey, content - type"}
-;
+
 serve (async (req) => {
   // Handle CORS preflight requests;
   // Check condition
 if ( {) {
   $2
-}
+
     return new Response (null, { headers: cors_headers });
   }
   try {
     const { content, enhancement_type, context } = await req.json ();
     const openAiKey = Deno.env.get ("OPENAI_API_KEY");
-;
+
     // Check condition
 if ( {) {
   $2
-}
+
       throw new Error ("OPENAI_API_KEY is not defined");
     }
     // Check condition
 if ( {) {
   $2
-}
+
       throw new Error ("Content is required");
     }
     // Determine the system prompt based on enhancement type;
     let system_prompt = "";
     let user_prompt = "";
-;
+
     switch (enhancement_type) {
       case "summary":;
         system_prompt = "You are an expert resume writer who helps professionals create compelling personal summaries. Create a concise, professional summary that highlights strengths and career goals.";
@@ -120,22 +119,22 @@ if ( {) {
             role: "user",
             content: user_prompt}];
         temperature: 0.7})});
-;
+
     // Check condition
 if ( {) {
   $2
-}
+
       const error_data = await response.json ();
       throw new Error (`OpenAI API error: ${JSON.stringify (error_data)}`);
     }
     const data = await response.json ();
     const enhanced_content = data.choices[0].message.content;
-;
+
     return new Response (
       JSON.stringify ({
         enhanced_content});
       {
-        headers: { ...cors_headers, "Content - Type": "application / json" }}
+        headers: { ...cors_headers, "Content - Type": "application / json" }
     );
   } catch (error) {
     console && console.error("Error in resume-enhancer function:", error);
@@ -144,8 +143,7 @@ if ( {) {
         error: error && error.message});
       {
         status: 500
-        headers: { ...corsHeaders, "Content-Type": "application/json" }}
+        headers: { ...corsHeaders, "Content-Type": "application/json" }
     )
   }
-});
-
+);

@@ -2,7 +2,6 @@ import React from 'react';
 
 interface KnowledgeBaseProps {
   className?: string;
-}
 
 const KnowledgeBase: React.FC<KnowledgeBaseProps> = ({ className }) => {
   return (
@@ -11,6 +10,5 @@ const KnowledgeBase: React.FC<KnowledgeBaseProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default KnowledgeBase;

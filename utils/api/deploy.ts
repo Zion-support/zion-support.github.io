@@ -6,16 +6,16 @@ function toSlug(name: string): string {return name;
     .replace(/[^a-z0-9]+/g, "-");
     .replace(/(^-|-$)+/g, "");
     .slice(0, 64);
-}
-function ensureDir(dirPath: string) {if (!fs.existsSync(dirPath)) {;
+
+function ensureDir(dirPath: string) {if (!fs.existsSync(dirPath) {;
     fs.mkdirSync(dirPath, { recursive: true });
   }
-}
-function writeTextFile(filePath: string, content: string) {ensureDir(path.dirname(filePath));
+
+function writeTextFile(filePath: string, content: string) {ensureDir(path.dirname(filePath);
   fs.writeFileSync(filePath, content, "utf8");
-}
+
 function nowIso(): string {return new Date().toISOString();
-}
+
 export async function performDeploy(input: DeployInput): Promise<DeployResult> {const version = "Zion OS v1.0";
   const logs: DeployLogEntry[] = [];
   const assets: GeneratedAsset[] = [];
@@ -28,8 +28,8 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
   const tokenDir = path.join(process.cwd(), "data", "token");
   ensureDir(baseDir);
   const configPath = path.join(baseDir, "config.json");
-  writeTextFile(configPath, JSON.stringify({ ...input, instanceSlug, version, createdAt: nowIso() }, null, 2));
-  logs.push({ timestamp: nowIso(), level: "info", action: "save_config", details: { configPath } });
+  writeTextFile(configPath, JSON.stringify({ ...input, instanceSlug, version, createdAt: nowIso() }, null, 2);
+  logs.push({ timestamp: nowIso(), level: "info", action: "save_config", details: { configPath });
   assets.push({ kind: "config", path: configPath, description: "Deployment config" });
   // 1. Initialize ZionGPT;
   if (input.modules.gpt) {ensureDir(gptDir);
@@ -150,17 +150,17 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
   assets.push({ kind: "config", path: pagesActivationPath, description: "Public pages activation record" });
   // Optional modules markers;
   const optionalModules = Object.entries(input.modules);
-    .filter(([key, val]) => val && ["globalMap", "franchiseOnboarding", "referralAmbassadors", "grantPortal", "trailer", "bookStore"].includes(key));
-    .map(([key]) => key);
+    .filter([key, val]) => val && ["globalMap", "franchiseOnboarding", "referralAmbassadors", "grantPortal", "trailer", "bookStore"].includes(key);
+    .map([key]) => key);
   if (optionalModules.length > 0) {const optionalPath = path.join(baseDir, "optional-modules.json");
-    writeTextFile(optionalPath, JSON.stringify({ enabled: optionalModules }, null, 2));
+    writeTextFile(optionalPath, JSON.stringify({ enabled: optionalModules }, null, 2);
     assets.push({ kind: "config", path: optionalPath, description: "Enabled optional modules" });
   }
   const summary = `Initialized ${input.instanceName} (${instanceSlug}) with modules: ${Object.entries(input.modules);
-    .filter(([ v]) => v);
-    .map(([k]) => k);
+    .filter([ v]) => v);
+    .map([k]) => k);
     .join(", ")}.`;
-  logs.push({ timestamp: nowIso(), level: "info", action: "deploy_complete", details: { instanceSlug } });
+  logs.push({ timestamp: nowIso(), level: "info", action: "deploy_complete", details: { instanceSlug });
   return {success: true;
     instanceSlug;
     configPath;
@@ -168,4 +168,3 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
     logs;
     summary;
     version}
-}

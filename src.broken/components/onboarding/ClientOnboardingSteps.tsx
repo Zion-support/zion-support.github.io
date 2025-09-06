@@ -6,5 +6,3 @@ export function ClientOnboardingSteps() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

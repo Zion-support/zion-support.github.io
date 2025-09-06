@@ -7,17 +7,15 @@ import { useAuth } from "@/hooks/useAuth",;
 import { Navigate } from "react-router-dom",;
 import { SEO } from "@/components/SEO",;
 import { ProtectedRoute } from "@/components/ProtectedRoute",;
-;
+
 export default function EnterpriseAdmin() {;
   const { user } = useAuth(),;
-  ;
   // Check if user has enterprise admin role;
-  const isEnterpriseAdmin = user?.role === "enterprise_admin",;
-  ;
+  const isEnterpriseAdmin = user?.role = = "enterprise_admin",;
   if (!isEnterpriseAdmin) {;
     return <Navigate to="/unauthorized" />,;
   }
-;
+
   return (;
     <ProtectedRoute>;
       <SEO ;
@@ -34,7 +32,6 @@ export default function EnterpriseAdmin() {;
  export default function EnterpriseAdmin () {
   const {
   user 
-}= useAuth ();
-//Check if user has enterprise admin role 
-}Enterprise Admin - Zion AI Marketplace"description=" Manage your team's access, roles, and usage on the Zion AI Marketplace."/> <Header /> <main className=" min-h-screen bg-background" > <AdminDashboard /> </main> <Footer /> </ProtectedRoute>) 
-}
+= useAuth ();
+/Check if user has enterprise admin role 
+Enterprise Admin - Zion AI Marketplace"description=" Manage your team's access, roles, and usage on the Zion AI Marketplace."/> <Header /> <main className=" min-h-screen bg-background" > <AdminDashboard /> </main> <Footer /> </ProtectedRoute>) 

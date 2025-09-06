@@ -6,5 +6,3 @@ export function Web3Login() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

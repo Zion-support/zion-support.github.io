@@ -5,5 +5,5 @@ const Navigation.dynamic = () => {
       <h1>Navigation.dynamic</h1>
     </div>
   );
-}
+
 export default Navigation.dynamic;

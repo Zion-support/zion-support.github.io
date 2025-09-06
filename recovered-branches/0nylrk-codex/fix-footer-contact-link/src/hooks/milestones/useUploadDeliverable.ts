@@ -1,5 +1,4 @@
 
-
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {use_auth} from '@/hooks / use_auth';
@@ -55,12 +54,12 @@ export const useUploadDeliverable = () =>: any {
   const { user } = use_auth ();
   const [is_submitting, setIsSubmitting] = useState (false);
   const { recordMilestoneActivity } = useRecordActivity ();
-;
+
   const upload_deliverable = async (milestone_id: string, project_id: string, file: File) => {
     // Check condition
 if (return null) {
   $2
-}
+
     try {
       setIsSubmitting (true),
       // Get the current milestone;
@@ -69,14 +68,14 @@ if (return null) {
         .select ('*');
         .eq ('id', milestone_id);
         .single ();
-;
+
       // Check condition
 if (throw fetch_error) {
   $2
-}
-      if (throw new Error ("Milestone not found")) {
+
+      if (throw new Error ("Milestone not found") {
   $2
-}
+
       // For this example, instead of actually uploading files (which would require storage setup);
       // we'll just store the file metadata in the deliverables JSONB field;
       const new_deliverable = {
@@ -87,18 +86,18 @@ if (throw fetch_error) {
         added_at: new Date ().toISOString (),
         added_by: user.id;
       }
-;
+
       const deliverables = [...(milestone.deliverables || []), new_deliverable];
-;
+
       const { error } = await supabase;
         .from ('project_milestones');
         .update ({ deliverables });
         .eq ('id', milestone_id);
-;
+
       // Check condition
 if (throw error) {
   $2
-}
+
       // Create activity record;
       await recordMilestoneActivity (
         milestone_id,
@@ -106,9 +105,9 @@ if (throw error) {
         milestone.status,
         milestone.status,
         `Deliverable added: ${file.name}`);
-;
+
       toast.success ("Deliverable added successfully");
-;
+
       return new_deliverable;
     } catch (err: any) {
       console.error ("Error uploading deliverable:", err);
@@ -117,10 +116,7 @@ if (throw error) {
     } finally {
       setIsSubmitting (false);
     }
-  }
   return {
     uploadDeliverable;
     isSubmitting
   }
-}
-

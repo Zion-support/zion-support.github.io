@@ -34,7 +34,7 @@ export default function CloudServicesPage() {
       icon: Zap,
       features: ["Cost Analysis", "Performance Tuning", "Resource Management"]"
     }
-;  ];
+  ];
   return (;
     <Layout );
       title="Cloud Solutions - Zion Tech Group"";
@@ -45,7 +45,6 @@ export default function CloudServicesPage() {
 
 interface CloudProps {
   className?: string;
-}
 
 export default function CloudServicesPage() {
   return (
@@ -58,9 +57,9 @@ export default function CloudServicesPage() {
         <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">"
           <div className="container mx-auto px-4">";
             <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="text-center""
             >;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">";
@@ -89,16 +88,16 @@ export default function CloudServicesPage() {
         <section className="py-20">"
           <div className="container mx-auto px-4">";
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
-              {cloudServices.map((service, index) => {}
+              {cloudServices.map(service, index) => {}
                 const IconComponent = service.icon;
                 return (;
                   <motion.div);
                     key={index}
                     className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300""
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    viewport={{ once: true }}
+                    initial={ opacity: 0, y: 30 }
+                    whileInView={ opacity: 1, y: 0 }
+                    transition={ duration: 0.8, delay: index * 0.1 }
+                    viewport={ once: true }
                   >,
                     <div className="text-blue-600 mb-4">";
                       <IconComponent className="w-10 h-10" />";
@@ -110,12 +109,12 @@ export default function CloudServicesPage() {
                       {service.description}
                     </p>,
                     <ul className="space-y-2">";
-                      {service.features.map((feature, featureIndex) => (,
+                      {service.features.map(feature, featureIndex) => (,
                         <li key={featureIndex} className="flex items-center text-sm text-gray-600">"
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2" />";
                           {feature}
                         </li>,
-                      ))}
+                      )}
                     </ul>,
                   </motion.div>;
                 );
@@ -131,12 +130,12 @@ export default function CloudServicesPage() {
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {cloudServices.map((service, index) => (
+              {cloudServices.map(service, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial={ opacity: 0, y: 20 }
+                  animate={ opacity: 1, y: 0 }
+                  transition={ duration: 0.5, delay: index * 0.1 }
                   className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6"
                 >
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
@@ -145,12 +144,12 @@ export default function CloudServicesPage() {
                   <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
                   <p className="text-gray-600 mb-4">{service.description}</p>
                   <div className="space-y-2 mb-4">
-                    {service.features.map((feature, featureIndex) => (
+                    {service.features.map(feature, featureIndex) => (
                       <div key={featureIndex} className="flex items-center text-sm text-gray-600">
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
                         {feature}
                       </div>
-                    ))}
+                    )}
                   </div>
                   <div className="text-lg font-semibold text-blue-600 mb-4">{service.pricing}</div>
                   <Link
@@ -161,7 +160,7 @@ export default function CloudServicesPage() {
                     <ArrowRight className="ml-2 w-4 h-4" />
                   </Link>
                 </motion.div>
-              ))}
+              )}
             </div>
           </div>
         </section>
@@ -178,7 +177,7 @@ export default function CloudServicesPage() {
             <motion.a;
               href="/contact"";
               className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"";
-              whileHover={{ scale: 1.05 }}
+              whileHover={ scale: 1.05 }
             >,
               Get Started Today;
               <ArrowRight className="w-5 h-5 ml-2" />";
@@ -188,6 +187,5 @@ export default function CloudServicesPage() {
       </div>;
     </Layout>;
   );
-};
 
 export default Cloud;

@@ -4,7 +4,6 @@ import React from 'react';
 
 interface Supply-chainProps {
   className?: string;
-}
 
 const Supply-chain: React.FC<Supply-chainProps> = ({ className }) => {
   return (
@@ -13,6 +12,3 @@ const Supply-chain: React.FC<Supply-chainProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-}
-}
-}

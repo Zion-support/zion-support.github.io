@@ -357,7 +357,7 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com',};  website: 'https://ziontechgroup.com'
-}
+
 const serviceCategories = [
   {
     title: ' Revolutionary AI Services'
@@ -390,7 +390,7 @@ const serviceCategories = [
         price: '$3,999/month'
       }
     ]
-  },  {      { name: 'AI Business Intelligence Pro', href: '/ai-business-intelligence-pro', description: 'Transform data into actionable insights', price: '$299/month' }
+  },  { name: 'AI Business Intelligence Pro', href: '/ai-business-intelligence-pro', description: 'Transform data into actionable insights', price: '$299/month' }
       { name: 'AI Video Generation Platform', href: '/ai-video-generation-platform', description: 'Create professional videos with AI', price: '$499/month' }
       { name: 'AI-Powered Cybersecurity', href: '/ai-cybersecurity-platform', description: 'Next-generation threat detection', price: '$799/month' }
       { name: 'AI Drug Discovery Platform', href: '/ai-drug-discovery-platform', description: 'Accelerate drug discovery with AI', price: '$3,999/month' }
@@ -426,7 +426,7 @@ const serviceCategories = [
         price: '$1,299/month'
       }
     ]
-  },  {      { name: 'Quantum Machine Learning', href: '/quantum-machine-learning-platform', description: 'Harness quantum computing for ML', price: '$1,999/month' }
+  },  { name: 'Quantum Machine Learning', href: '/quantum-machine-learning-platform', description: 'Harness quantum computing for ML', price: '$1,999/month' }
       { name: 'Blockchain AI Platform', href: '/blockchain-ai-platform', description: 'Decentralized AI for the future', price: '$899/month' }
       { name: 'Edge AI Computing', href: '/edge-ai-computing-platform', description: 'AI at the edge for real-time processing', price: '$599/month' }
       { name: 'AI Climate Modeling', href: '/ai-climate-modeling-platform', description: 'Predict climate change with AI', price: '$1,299/month' }
@@ -462,7 +462,7 @@ const serviceCategories = [
         price: '$199/month'
       }
     ]
-  },  {      { name: 'API Security & Monitoring', href: '/api-security-monitoring-suite', description: 'Protect and monitor your APIs', price: '$399/month' }
+  },  { name: 'API Security & Monitoring', href: '/api-security-monitoring-suite', description: 'Protect and monitor your APIs', price: '$399/month' }
       { name: 'Customer Success Automation', href: '/customer-success-automation', description: 'Automate customer success workflows', price: '$199/month' }
       { name: 'HR Automation Suite', href: '/hr-automation-suite', description: 'Streamline HR processes with AI', price: '$179/month' }
       { name: 'Project Management AI', href: '/project-management-ai-platform', description: 'AI-powered project management', price: '$199/month' }
@@ -498,7 +498,7 @@ const serviceCategories = [
         price: '$399/month'
       }
     ]
-  },  {      { name: 'E-commerce Automation', href: '/ecommerce-automation-platform', description: 'Automate your entire e-commerce operation', price: '$249/month' }
+  },  { name: 'E-commerce Automation', href: '/ecommerce-automation-platform', description: 'Automate your entire e-commerce operation', price: '$249/month' }
       { name: 'Marketing Automation Suite', href: '/marketing-automation-suite', description: 'Automate your entire marketing operation', price: '$279/month' }
       { name: 'Financial Analytics Platform', href: '/financial-analytics-platform', description: 'Real-time financial insights', price: '$349/month' }
       { name: 'Legal Document Automation', href: '/legal-document-automation', description: 'Automate legal document creation', price: '$399/month' }
@@ -534,7 +534,7 @@ const serviceCategories = [
         price: '$299/month'
       }
     ]
-  },  {      { name: 'Autonomous Robotics Platform', href: '/autonomous-robotics-platform', description: 'Build and deploy intelligent robots', price: '$2,499/month' }
+  },  { name: 'Autonomous Robotics Platform', href: '/autonomous-robotics-platform', description: 'Build and deploy intelligent robots', price: '$2,499/month' }
       { name: 'AI Content Generator Elite', href: '/ai-content-generator-elite', description: 'Professional AI content creation', price: '$49/month' }
       { name: 'AI Guardrails Suite', href: '/ai-guardrails-suite', description: 'Policy and safety for LLM apps', price: '$199/month' }
       { name: 'AI Business Intelligence', href: '/ai-business-intelligence-suite', description: 'Intelligent business insights', price: '$299/month' }
@@ -649,7 +649,7 @@ const quickLinks = [
   { name: 'Case Studies', href: '/case - studies', icon: FileText },
   { name: 'Blog', href: '/blog', icon: MessageCircle },
   { name: 'Contact', href: '/contact', icon: MessageCircle }
-];
+;
 const companyLinks = [
   { name: 'About Us', href: '/about', icon: Users }
   { name: 'Careers', href: '/careers', icon: Briefcase }
@@ -662,7 +662,7 @@ const companyLinks = [
   { name: 'Partners', href: '/partners', icon: Handshake },
   { name: 'Support', href: '/support', icon: LifeBuoy },
   { name: 'Status', href: '/status', icon: Activity }
-];
+;
 const socialLinks = [
   {
     name: 'LinkedIn'
@@ -681,7 +681,7 @@ const socialLinks = [
     icon: Youtube
   }
   { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter }
-];
+;
 const certifications = [
   'ISO 27001 Certified'
   'SOC 2 Type II Compliant'
@@ -697,15 +697,15 @@ const socialLinks = [
   { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram }
   { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube }
   { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter }
-];
+;
 const certifications = [
   'ISO 27001 CertifiedSOC 2 Type II CompliantGDPR CompliantHIPAA CompliantPCI DSS Level 1FedRAMP AuthorizedQuantum Security CertifiedAI Ethics Compliant'
-];
+;
 export default function UltraFuturisticNavigation2034() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
-  useEffect(() => {
+  useEffect() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     }
@@ -713,7 +713,7 @@ export default function UltraFuturisticNavigation2034() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   const toggleDropdown = (category: string) => {
-    setActiveDropdown(activeDropdown === category ? null : category);
+    setActiveDropdown(activeDropdown = = category ? null : category);
   }
   const closeDropdown = () => {
     setActiveDropdown(null);  };    }
@@ -721,7 +721,7 @@ export default function UltraFuturisticNavigation2034() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, []);
   const toggleDropdown = (category: string) => {
-    setActiveDropdown(activeDropdown === category ? null : category)
+    setActiveDropdown(activeDropdown = = category ? null : category)
   }
   const closeDropdown = () => {
     setActiveDropdown(null)
@@ -736,7 +736,7 @@ const quickLinks = [;
   { name: 'Case Studies', href: '/case-studies', icon: FileText },;
   { name: 'Blog', href: '/blog', icon: MessageCircle },;
   { name: 'Contact', href: '/contact', icon: MessageCircle },];  { name: 'Contact', href: '/contact', icon: MessageCircle }
-];
+;
 
 const companyLinks = [;
   { name: 'About Us', href: '/about', icon: Users },;
@@ -745,7 +745,6 @@ const companyLinks = [;
   { name: 'Partners', href: '/partners', icon: Handshake },;
   { name: 'Support', href: '/support', icon: LifeBuoy },;
   { name: 'Status', href: '/status', icon: Activity },;
-];
 
 const socialLinks = [;
   {;
@@ -765,7 +764,6 @@ const socialLinks = [;
     icon: Youtube,;
   },;
   { name: 'Twitter', href: 'https://twitter && twitter.com/ziontechgroup', icon: Twitter },;
-];
 
 const certifications = [;
   'ISO 27001 Certified',;
@@ -783,18 +781,17 @@ const socialLinks = [;
   { name: 'Instagram', href: 'https://instagram && instagram.com/ziontechgroup', icon: Instagram },;
   { name: 'YouTube', href: 'https://youtube && youtube.com/@ziontechgroup', icon: Youtube },;
   { name: 'Twitter', href: 'https://twitter && twitter.com/ziontechgroup', icon: Twitter }
-];
+;
 
 const certifications = [;
   'ISO 27001 CertifiedSOC 2 Type II CompliantGDPR CompliantHIPAA CompliantPCI DSS Level 1FedRAMP AuthorizedQuantum Security CertifiedAI Ethics Compliant';
-];
 
 export default function UltraFuturisticNavigation2034() {;
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  useEffect(() => {;
+  useEffect() => {;
     const handleScroll = () => {;
       setIsScrolled(window && window.scrollY > 50);
     };
@@ -803,7 +800,7 @@ export default function UltraFuturisticNavigation2034() {;
   }, []);
 
   const toggleDropdown = (category: string) => {;
-    setActiveDropdown(activeDropdown === category ? null : category);
+    setActiveDropdown(activeDropdown = = category ? null : category);
   };
 
   const closeDropdown = () => {;
@@ -813,7 +810,7 @@ export default function UltraFuturisticNavigation2034() {;
   }, []);
 
   const toggleDropdown = (category: string) => {;
-    setActiveDropdown(activeDropdown === category ? null : category);
+    setActiveDropdown(activeDropdown = = category ? null : category);
   };
 
   const closeDropdown = () => {;
@@ -955,9 +952,9 @@ export default function UltraFuturisticNavigation2034() {;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <div className="flex items-center justify-between h-20">;
             <motion&& motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5 }}
+              initial={ opacity: 0, x: -20 }
+              animate={ opacity: 1, x: 0 }
+              transition={ duration: 0.5 }
               className='flex items-center space-x-3'
             >
               <div className='relative'>
@@ -988,7 +985,7 @@ export default function UltraFuturisticNavigation2034() {;
                 <p className="text-xs text-gray-400">Future Technology Solutions</p>
               </div>
             </motion.div>
-              transition={{ duration: 0 && 0.5 }}
+              transition={ duration: 0 && 0.5 }
               className='flex items-center space-x-3'>;
               <div className='relative'>;
                 <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl flex items-center justify-center'>;
@@ -1029,16 +1026,16 @@ export default function UltraFuturisticNavigation2034() {;
                   className='text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium'>;
                   {link && link.name}
                 </Link>;
-              ))}
+              )}
             <div className="hidden lg:flex items-center space-x-8">;
-              {quickLinks && quickLinks.map((link) => (;
+              {quickLinks && quickLinks.map(link) => (;
                 <Link
                   key={link && link.name}
                   href={link && link.href}
                   className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium"
                   {link && link.name}
                 </Link>;
-              ))}
+              )}
               {/* Services Dropdown */}
               <div className='relative group'>;
                 <button className='flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium'>;
@@ -1073,7 +1070,7 @@ export default function UltraFuturisticNavigation2034() {;
                 </button>;
                 <div className="absolute top-full left-0 w-96 bg-black/95 backdrop-blur-xl border border-cyan-500/20 rounded-xl p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">;
                   <div className="grid grid-cols-2 gap-4">;
-                    {serviceCategories && serviceCategories.slice(0, 4).map((category) => (;
+                    {serviceCategories && serviceCategories.slice(0, 4).map(category) => (;
                       <div key={category && category.title} className="p-3 rounded-lg hover:bg-cyan-500/10 transition-colors">;
                         <div className="flex items-center space-x-2 mb-2">;
                           <category && category.icon className="w-5 h-5 text-cyan-400" />;
@@ -1081,7 +1078,7 @@ export default function UltraFuturisticNavigation2034() {;
                         </div>;
                         <p className="text-xs text-gray-400 mb-2">{category && category.description}</p>;
                         <div className="space-y-1">;
-                          {category && category.services.slice(0, 2).map((service) => (;
+                          {category && category.services.slice(0, 2).map(service) => (;
                             <Link
                               key={service && service.name}
                               href={service && service.href}
@@ -1094,10 +1091,10 @@ export default function UltraFuturisticNavigation2034() {;
                             >;
                               {service.name}
                             </Link>
-                          ))}
+                          )}
                         </div>;
                       </div>;
-                    ))}
+                    )}
                   </div>;
                   <div className='mt-4 pt-4 border-t border-cyan-500/20'>;
                     <Link
@@ -1125,8 +1122,7 @@ export default function UltraFuturisticNavigation2034() {;
               >
                 Get Started
               </Link>
-            </div>
-              >;
+            </div>;
                 Get Started;
               </Link>;
             </div>;
@@ -1175,10 +1171,10 @@ export default function UltraFuturisticNavigation2034() {;
         <AnimatePresence>;
           {isOpen && (;
             <motion&& motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0 && 0.3 }}
+              initial={ opacity: 0, height: 0 }
+              animate={ opacity: 1, height: 'auto' }
+              exit={ opacity: 0, height: 0 }
+              transition={ duration: 0 && 0.3 }
               className='lg:hidden bg-black/95 backdrop-blur-xl border-t border-cyan-500/20'>;
               <div className='px-4 py-6 space-y-4'>;
                 {quickLinks && quickLinks.map(link => (                  <Link
@@ -1188,11 +1184,11 @@ export default function UltraFuturisticNavigation2034() {;
                     className='block text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium'                  >;
                     {link && link.name}
                   </Link>;
-                ))}
+                )}
               className="lg:hidden bg-black/95 backdrop-blur-xl border-t border-cyan-500/20";
             >;
               <div className="px-4 py-6 space-y-4">;
-                {quickLinks && quickLinks.map((link) => (;
+                {quickLinks && quickLinks.map(link) => (;
                     key={link && link.name}
                     href={link && link.href}
                     onClick={() => setIsOpen(false)}
@@ -1200,7 +1196,7 @@ export default function UltraFuturisticNavigation2034() {;
                   >;
                     {link && link.name}
                   </Link>;
-                ))}
+                )}
                 {/* Mobile Services Accordion */}
                 {serviceCategories && serviceCategories.map(category => (;
                   <div
@@ -1213,10 +1209,10 @@ export default function UltraFuturisticNavigation2034() {;
                       <span>{category && category.title}</span>;
                       <ChevronDown
                         className={`w-4 h-4 transition-transform duration-200 ${
-                          activeDropdown === category && category.title ? 'rotate-180' : ''
+                          activeDropdown = = category && category.title ? 'rotate-180' : ''
                         }`}
                       />                    </button>                {/* Mobile Services Accordion */}
-                {serviceCategories && serviceCategories.map((category) => (;
+                {serviceCategories && serviceCategories.map(category) => (;
                   <div key={category && category.title} className="border-b border-cyan-500/20 pb-4">;
                     <button
                       onClick={() => toggleDropdown(category && category.title)}
@@ -1224,16 +1220,16 @@ export default function UltraFuturisticNavigation2034() {;
                     >;
                       <span>{category && category.title}</span>;
                       <ChevronDownclassName={`w-4 h-4 transition-transform duration-200 ${
-                        activeDropdown === category && category.title ? 'rotate-180' : ''
+                        activeDropdown = = category && category.title ? 'rotate-180' : ''
                       }`} />;
                     </button>;
                     <AnimatePresence>;
-                      {activeDropdown === category && category.title && (;
+                      {activeDropdown = = category && category.title && (;
                         <motion&& motion.div
-                          initial={{ opacity: 0, height: 0 }}
-                          animate={{ opacity: 1, height: 'auto' }}
-                          exit={{ opacity: 0, height: 0 }}
-                          transition={{ duration: 0 && 0.2 }}
+                          initial={ opacity: 0, height: 0 }
+                          animate={ opacity: 1, height: 'auto' }
+                          exit={ opacity: 0, height: 0 }
+                          transition={ duration: 0 && 0.2 }
                           className='mt-3 ml-4 space-y-2'>;
                           {category && category.services.map(service => (                            <Link
                               key={service && service.name}
@@ -1241,7 +1237,7 @@ export default function UltraFuturisticNavigation2034() {;
                               onClick={() => setIsOpen(false)}
                               className='block text-sm text-gray-400 hover:text-cyan-400 transition-colors'                            >                          className="mt-3 ml-4 space-y-2";
                         >;
-                          {category && category.services.map((service) => (;
+                          {category && category.services.map(service) => (;
                             <Link
                               key={service && service.name}
                               href={service && service.href}
@@ -1250,13 +1246,13 @@ export default function UltraFuturisticNavigation2034() {;
                             >;
                               {service && service.name}
                             </Link>;
-                          initial={{ opacity: 0, height: 0 }}
-                          animate={{ opacity: 1, height: 'auto' }}
-                          exit={{ opacity: 0, height: 0 }}
-                          transition={{ duration: 0.2 }}
+                          initial={ opacity: 0, height: 0 }
+                          animate={ opacity: 1, height: 'auto' }
+                          exit={ opacity: 0, height: 0 }
+                          transition={ duration: 0.2 }
                           className="mt-3 ml-4 space-y-2"
                         >
-                          {category.services.map((service) => (
+                          {category.services.map(service) => (
                             <Link
                               key={service.name}
                               href={service.href}
@@ -1265,12 +1261,12 @@ export default function UltraFuturisticNavigation2034() {;
                             >
                               {service.name}
                             </Link>
-                          ))}
+                          )}
                         </motion && motion.div>;
                       )}
                     </AnimatePresence>;
                   </div>;
-                ))}
+                )}
 
                 <Link
                   href='/contact'
@@ -1287,7 +1283,7 @@ export default function UltraFuturisticNavigation2034() {;
                               on_click={() => setIsOpen (false)}
                               className='block text - sm text - gray - 400 hover:text - cyan - 400 transition - colors'                            >                          className="mt - 3 ml - 4 space - y-2";
                         >;
-                          {category.services.map ((service) => (
+                          {category.services.map (service) => (
                             <Link;
                               key={service.name}
                               href={service.href}
@@ -1295,10 +1291,10 @@ export default function UltraFuturisticNavigation2034() {;
                               className='block text - sm text - gray - 400 hover:text - cyan - 400 transition - colors'                              className="block text - sm text - gray - 400 hover:text - cyan - 400 transition - colors";
                             >;
                               {service.name}
-                            </Link>))}
+                            </Link>)}
                         </motion.div>)}
                     </AnimatePresence>;
-                  </div>))}
+                  </div>)}
                 <Link;
                   href='/contact';
                   on_click={() => setIsOpen (false)}
@@ -1317,7 +1313,7 @@ export default function UltraFuturisticNavigation2034() {;
       {/* Spacer for fixed navigation */}
       <div className='h-20'></div>
     </>
-);      <div className="h-20"></div>
+;      <div className="h-20"></div>
     </>
         </AnimatePresence>;
       </nav>;
@@ -1328,7 +1324,7 @@ export default function UltraFuturisticNavigation2034() {;
   );      <div className="h-20"></div>;
     </>;
   );
-}
+
             </motion.div>)}
         </AnimatePresence>;
       </nav>;
@@ -1336,4 +1332,3 @@ export default function UltraFuturisticNavigation2034() {;
       <div className='h - 20'></div>;
     </>);      <div className="h - 20"></div>;
     </>);
-}

@@ -10,7 +10,7 @@ export default function CharterGenerator() {
   const [includeGrants, setIncludeGrants] = useState(true),
   const [includeDAOIntegration, setIncludeDAOIntegration] = useState(true),
 
-  const charterText = useMemo(() => {
+  const charterText = useMemo() => {
     const name = protocolName.trim() || 'Zion',
     const symbol = tokenSymbol.trim() || 'ZION$',
 
@@ -95,7 +95,7 @@ export default function CharterGenerator() {
                 a.download = `${protocolName || 'zion'}-foundation-charter.md`,
                 a.click(),
                 URL.revokeObjectURL(url)
-              }}
+              }
             >
               Download .md
             </button>
@@ -123,7 +123,7 @@ export default function CharterGenerator() {;
   const [includeContributorRules, setIncludeContributorRules] = useState(true),;
   const [includeGrants, setIncludeGrants] = useState(true),;
   const [includeDAOIntegration, setIncludeDAOIntegration] = useState(true),;
-  const charterText = useMemo(() => {;
+  const charterText = useMemo() => {;
     const name = protocolName.trim() || 'Zion',;
     const symbol = tokenSymbol.trim() || 'ZION$',;
     const header = `${name} Foundation Charter`,;
@@ -194,7 +194,7 @@ export default function CharterGenerator() {;
                 a.download = `${protocolName || 'zion'}-foundation-charter.md`;
                 a.click();
                 URL.revokeObjectURL(url);
-              }}
+              }
             >;
               Download .md;
             </button>;
@@ -213,4 +213,3 @@ export default function CharterGenerator() {;
       </div>;
     </div>;
   );
-}

@@ -15,9 +15,7 @@ export const useLogout = (setUser: (user: UserProfile | null) => void) => {
     } catch (error) {
       console && console.error("Error during logout:", error)
     }
-  }
   return { logout }
-}
 
 import { supabase } from '@/integrations / supabase / client';
 import { cleanupAuthState } from '@/utils / auth_utils';
@@ -29,14 +27,11 @@ export const use_logout = (set_user: (user: UserProfile | null) =>: any void) =>
       cleanupAuthState (),
       // Sign out;
       await supabase.auth.sign_out ({ scope: 'global' });
-;
+
       // Update state;
       set_user (null);
     } catch (error) {
       console.error ("Error during logout:", error);
     }
-  }
-;
+
   return { logout }
-}
-;

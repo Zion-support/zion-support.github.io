@@ -35,7 +35,6 @@ export function useCertifications() {
     } finally {
       setIsLoading(false)
     }
-  }
   const updateCertification = async (certId: string, cert: Certification): Promise<boolean> => {
     if (!user) {
       setError('You must be logged in to update certifications')
@@ -62,7 +61,6 @@ export function useCertifications() {
     } finally {
       setIsLoading(false)
     }
-  }
   const deleteCertification = async (certId: string): Promise<boolean> => {
     if (!user) {
       setError('You must be logged in to delete certifications')
@@ -82,7 +80,6 @@ export function useCertifications() {
     } finally {
       setIsLoading(false)
     }
-  }
   return {
     isLoading;
     error;
@@ -102,18 +99,18 @@ function use_certifications() {
   const { user } = use_auth ();
   const [is_loading, setIsLoading] = useState (false);
   const [error, set_error] = useState < string | null>(null);
-;
+
   const add_certification = async (resume_id: string, cert: Certification): Promise < boolean> => {
     // Check condition
 if ( {) {
   $2
-}
+
       set_error ('You must be logged in to add certifications'),
       return false;
     }
     setIsLoading (true);
     set_error (null);
-;
+
     try {
       const { error } = await supabase;
         .from ('certifications');
@@ -126,30 +123,29 @@ if ( {) {
           credential_id: cert.credential_id,
           credential_url: cert.credential_url;
         });
-;
+
       // Check condition
 if (throw error) {
   $2
-}
+
       return showSuccessToast ("Certification added", "Your certification has been added to your resume");
     } catch (e: any) {
       return handleResumeError (e, 'Could not add certification');
     } finally {
       setIsLoading (false);
     }
-  }
-;
+
   const update_certification = async (cert_id: string, cert: Certification): Promise < boolean> => {
     // Check condition
 if ( {) {
   $2
-}
+
       set_error ('You must be logged in to update certifications'),
       return false;
     }
     setIsLoading (true);
     set_error (null);
-;
+
     try {
       const { error } = await supabase;
         .from ('certifications');
@@ -162,48 +158,46 @@ if ( {) {
           credential_url: cert.credential_url;
         });
         .eq ('id', cert_id);
-;
+
       // Check condition
 if (throw error) {
   $2
-}
+
       return showSuccessToast ("Certification updated", "Your certification has been updated");
     } catch (e: any) {
       return handleResumeError (e, 'Could not update certification');
     } finally {
       setIsLoading (false);
     }
-  }
-;
+
   const delete_certification = async (cert_id: string): Promise < boolean> => {
     // Check condition
 if ( {) {
   $2
-}
+
       set_error ('You must be logged in to delete certifications'),
       return false;
     }
     setIsLoading (true);
     set_error (null);
-;
+
     try {
       const { error } = await supabase;
         .from ('certifications');
         .delete ();
         .eq ('id', cert_id);
-;
+
       // Check condition
 if (throw error) {
   $2
-}
+
       return showSuccessToast ("Certification deleted", "Your certification has been removed from your resume");
     } catch (e: any) {
       return handleResumeError (e, 'Could not delete certification');
     } finally {
       setIsLoading (false);
     }
-  }
-;
+
   return {
     is_loading;
     error;
@@ -211,4 +205,3 @@ if (throw error) {
     update_certification;
     delete_certification;
   }
-}

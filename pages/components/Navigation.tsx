@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React, { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -66,12 +66,12 @@ import {
   Users,
   X,
   Zap,
-} from "lucide-react";
+ from "lucide-react";
   Truck,
   Users,
   X,
   Zap
-} from 'lucide-react';
+ from 'lucide-react';
 
 const navigationItems = [
   {
@@ -100,8 +100,8 @@ const navigationItems = [
         description: "40+ innovative micro SaaS solutions"
         popular: true
       }
-} from './lucide-react';
-;
+ from './lucide-react';
+
 const navigation_items = [;
   {
     title: "Services",
@@ -306,7 +306,7 @@ const navigation_items = [;
       }
     ]
   }
-];
+;
 const quickLinks = [
   { title: "Pricing", href: "/pricing", icon: DollarSign }
   { title: "Contact", href: "/contact", icon: Phone }
@@ -314,7 +314,7 @@ const quickLinks = [
   { title: "Status", href: "/status", icon: BarChart3 }
   { title: "Quote", href: "/quote", icon: FileText }
   { title: "API Docs", href: "/api-docs", icon: Code }
-];
+;
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
@@ -381,7 +381,7 @@ export default function Navigation() {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">;
-            {navigationItems && navigationItems.map((item) => (;
+            {navigationItems && navigationItems.map(item) => (;
               <div
                 key={item && item.title}
                 className="relative group"
@@ -397,14 +397,14 @@ export default function Navigation() {
                   <ChevronDown className="w-4 h-4" />
                 </Link>
                 {/* Submenu */}
-                {activeSubmenu === item && item.title && (;
+                {activeSubmenu = = item && item.title && (;
                   <motion&& motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 10 }}
+                    initial={ opacity: 0, y: 10 }
+                    animate={ opacity: 1, y: 0 }
+                    exit={ opacity: 0, y: 10 }
                     className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4 z-50">;
                     <div className="grid grid-cols-1 gap-2">;
-                      {item && item.submenu.map((subItem) => (;
+                      {item && item.submenu.map(subItem) => (;
                         <Link
                           key={subItem && subItem.title}
                           href={subItem && subItem.href}
@@ -427,15 +427,15 @@ export default function Navigation() {
                           </div>;
                           <ArrowRight className="w-4 h-4 text-gray-400" />;
                         </Link>;
-                      ))}
+                      )}
                     </div>;
                   </motion && motion.div>;
                 )}
               </div>;
-            ))}
+            )}
             {/* Quick Links */}
             <div className="flex items-center space-x-4 ml-8 pl-8 border-l border-gray-200">;
-              {quickLinks && quickLinks.map((link) => (;
+              {quickLinks && quickLinks.map(link) => (;
                 <Link
                   key={link && link.title}
                   href={link && link.href}
@@ -443,7 +443,7 @@ export default function Navigation() {
                   <link && link.icon className="w-4 h-4" />;
                   <span>{link && link.title}</span>;
                 </Link>;
-              ))}
+              )}
             </div>
           </div>
           {/* Mobile Menu Button */}
@@ -457,12 +457,12 @@ export default function Navigation() {
         {/* Mobile Navigation */}
         {isOpen && (;
           <motion&& motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
+            initial={ opacity: 0, height: 0 }
+            animate={ opacity: 1, height: "auto" }
+            exit={ opacity: 0, height: 0 }
             className="lg:hidden border-t border-gray-200 py-4">;
             <div className="space-y-4">;
-              {navigationItems && navigationItems.map((item) => (;
+              {navigationItems && navigationItems.map(item) => (;
                 <div key={item && item.title}>;
                   <Link
                     href={item && item.href}
@@ -473,7 +473,7 @@ export default function Navigation() {
                     <span className="font-medium">{item && item.title}</span>;
                   </Link>;
                   <div className="ml-7 space-y-2 mt-2">;
-                    {item && item.submenu.map((subItem) => (;
+                    {item && item.submenu.map(subItem) => (;
                       <Link
                         key={subItem && subItem.title}
                         href={subItem && subItem.href}
@@ -488,14 +488,14 @@ export default function Navigation() {
                           </span>;
                         )}
                       </Link>;
-                    ))}
+                    )}
                   </div>;
                 </div>;
-              ))}
+              )}
               {/* Mobile Quick Links */}
               <div className="pt-4 border-t border-gray-200">;
                 <div className="grid grid-cols-2 gap-2">;
-                  {quickLinks && quickLinks.map((link) => (;
+                  {quickLinks && quickLinks.map(link) => (;
                     <Link
                       key={link && link.title}
                       href={link && link.href}
@@ -505,7 +505,7 @@ export default function Navigation() {
                       <link && link.icon className="w-4 h-4" />;
                       <span>{link && link.title}</span>;
                     </Link>;
-                  ))}
+                  )}
                 </div>;
               </div>;
             </div>;
@@ -516,7 +516,7 @@ export default function Navigation() {
   );
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items - center space - x-8">;
-            {navigation_items.map ((item) => (
+            {navigation_items.map (item) => (
               <div;
                 key={item.title}
                 className="relative group";
@@ -532,15 +532,15 @@ export default function Navigation() {
                   <ChevronDown className="w - 4 h - 4" />;
                 </Link>;
                 {/* Submenu */}
-                {active_submenu === item.title && (
+                {active_submenu = = item.title && (
                   <motion.div;
-                    initial={{ opacity: 0, coordinate_y: 10 }}
-                    animate={{ opacity: 1, coordinate_y: 0 }}
-                    exit={{ opacity: 0, coordinate_y: 10 }}
+                    initial={ opacity: 0, coordinate_y: 10 }
+                    animate={ opacity: 1, coordinate_y: 0 }
+                    exit={ opacity: 0, coordinate_y: 10 }
                     className="absolute top - full left - 0 mt - 2 w - 80 bg - white rounded - lg shadow - xl border border - gray - 200 py - 4 z - 50";
                   >;
                     <div className="grid grid - cols - 1 gap - 2">;
-                      {item.submenu.map ((sub_item) => (
+                      {item.submenu.map (sub_item) => (
                         <Link;
                           key={sub_item.title}
                           href={sub_item.href}
@@ -562,13 +562,13 @@ export default function Navigation() {
                             </p>;
                           </div>;
                           <ArrowRight className="w - 4 h - 4 text - gray - 400" />;
-                        </Link>))}
+                        </Link>)}
                     </div>;
                   </motion.div>)}
-              </div>))}
+              </div>)}
             {/* Quick Links */}
             <div className="flex items - center space - x-4 ml - 8 pl - 8 border - l border - gray - 200">;
-              {quick_links.map ((link) => (
+              {quick_links.map (link) => (
                 <Link;
                   key={link.title}
                   href={link.href}
@@ -576,7 +576,7 @@ export default function Navigation() {
                 >;
                   <link.icon className="w - 4 h - 4" />;
                   <span>{link.title}</span>;
-                </Link>))}
+                </Link>)}
             </div>;
           </div>;
           {/* Mobile Menu Button */}
@@ -590,13 +590,13 @@ export default function Navigation() {
         {/* Mobile Navigation */}
         {is_open && (
           <motion.div;
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
+            initial={ opacity: 0, height: 0 }
+            animate={ opacity: 1, height: "auto" }
+            exit={ opacity: 0, height: 0 }
             className="lg:hidden border - t border - gray - 200 py - 4";
           >;
             <div className="space - y-4">;
-              {navigation_items.map ((item) => (
+              {navigation_items.map (item) => (
                 <div key={item.title}>;
                   <Link;
                     href={item.href}
@@ -607,7 +607,7 @@ export default function Navigation() {
                     <span className="font - medium">{item.title}</span>;
                   </Link>;
                   <div className="ml - 7 space - y-2 mt - 2">;
-                    {item.submenu.map ((sub_item) => (
+                    {item.submenu.map (sub_item) => (
                       <Link;
                         key={sub_item.title}
                         href={sub_item.href}
@@ -620,13 +620,13 @@ export default function Navigation() {
                           <span className="bg - blue - 100 text - blue - 800 text - xs font - medium px - 2 py - 0.5 rounded - full">;
                             Popular;
                           </span>)}
-                      </Link>))}
+                      </Link>)}
                   </div>;
-                </div>))}
+                </div>)}
               {/* Mobile Quick Links */}
               <div className="pt - 4 border - t border - gray - 200">;
                 <div className="grid grid - cols - 2 gap - 2">;
-                  {quick_links.map ((link) => (
+                  {quick_links.map (link) => (
                     <Link;
                       key={link.title}
                       href={link.href}
@@ -635,11 +635,10 @@ export default function Navigation() {
                     >;
                       <link.icon className="w - 4 h - 4" />;
                       <span>{link.title}</span>;
-                    </Link>))}
+                    </Link>)}
                 </div>;
               </div>;
             </div>;
           </motion.div>)}
       </div>;
     </nav>);
-}

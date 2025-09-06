@@ -5,7 +5,7 @@ import {
   DialogContent
   DialogHeader
   DialogTitle
-} from "@/components/ui/dialog";
+ from "@/components/ui/dialog";
 import { HireRequestForm } from "./HireRequestForm";
 
 import { TalentProfile } from "@/types/talent";
@@ -15,14 +15,13 @@ interface HireRequestModalProps {
   isOpen: boolean;
   onClose: () => void;
   userDetails?: UserProfile
-}
 
 export function HireRequestModal({
   talent
   isOpen
   onClose
   userDetails
-}: HireRequestModalProps) {
+: HireRequestModalProps) {
   const handleClose = () => {
     onClose();
   }
@@ -44,7 +43,7 @@ export function HireRequestModal({
       </DialogContent>
     </Dialog>
   );
-}
+
           </DialogTitle>;
         </DialogHeader>;
         <HireRequestForm;
@@ -54,4 +53,3 @@ export function HireRequestModal({
         />;
       </DialogContent>;
     </Dialog>);
-}

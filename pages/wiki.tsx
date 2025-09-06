@@ -19,58 +19,57 @@ function CopyButton({ text, label }: { text: string, label: string }) {
       onClick={async () => {
         await navigator.clipboard.writeText(text)
         setCopied(true)
-        setTimeout(() => setCopied(false), 1500)
-      }}
+        setTimeout() => setCopied(false), 1500)
+      }
       className="px-3 py-1 rounded border text-xs hover:bg-gray-50 dark:hover:bg-gray-900"
     >
       {copied ? 'Copied' : label}
     </button>
   )
-}
 
 export default function WikiPage() {
-  const wiki = useMemo(() => generateZionWiki(), []);
-  const md = useMemo(() => buildMarkdownFromWiki(wiki), [wiki]);
-  const wikitext = useMemo(() => buildWikitextFromWiki(wiki), [wiki]);
+  const wiki = useMemo() => generateZionWiki(), []);
+  const md = useMemo() => buildMarkdownFromWiki(wiki), [wiki]);
+  const wikitext = useMemo() => buildWikitextFromWiki(wiki), [wiki]);
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-[260px,1fr] gap-8">
       <aside className="sticky top-20 self-start hidden lg:block">
         <div className="text-sm font-semibold mb-2">Table of contents</div>
         <ul className="space-y-1 text-sm">
-          {wiki.sections.map((s) => (
+          {wiki.sections.map(s) => (
             <li key={s.id}>
               <a href={`#${slugify(s.title)}`} className="opacity-80 hover:opacity-100">
-      }}
+      }
       className="px - 3 py - 1 rounded border text - xs hover:bg - gray - 50 dark:hover:bg - gray - 900";
     >;
       {copied ? 'Copied' : label}
     </button>);
-}
+
 export default function WikiPage() {
-  const wiki = useMemo(() => generateZionWiki(), [])
-  const md = useMemo(() => buildMarkdownFromWiki(wiki), [wiki])
-  const wikitext = useMemo(() => buildWikitextFromWiki(wiki), [wiki])
+  const wiki = useMemo() => generateZionWiki(), [])
+  const md = useMemo() => buildMarkdownFromWiki(wiki), [wiki])
+  const wikitext = useMemo() => buildWikitextFromWiki(wiki), [wiki])
 
 export default /**
  * WikiPage - Function description
  */
 function WikiPage() {
-  const wiki = useMemo (() => generateZionWiki (), []),
-  const md = useMemo (() => buildMarkdownFromWiki (wiki), [wiki]),
-  const wikitext = useMemo (() => buildWikitextFromWiki (wiki), [wiki]),
+  const wiki = useMemo () => generateZionWiki (), []),
+  const md = useMemo () => buildMarkdownFromWiki (wiki), [wiki]),
+  const wikitext = useMemo () => buildWikitextFromWiki (wiki), [wiki]),
   return (
     <div className="grid grid - cols - 1 lg:grid - cols-[260px, 1fr] gap - 8">;
       <aside className="sticky top - 20 self - start hidden lg:block">;
         <div className="text - sm font - semibold mb - 2">Table of contents</div>;
         <ul className="space - y-1 text - sm">;
-          {wiki.sections.map ((s) => (
+          {wiki.sections.map (s) => (
             <li key={s.id}>;
               <a href={`#${slugify (s.title)}`} className="opacity - 80 hover:opacity - 100">;
                 {s.title}
               </a>
             </li>
-          ))}
+          )}
           <li>
             <a href="#references" className="opacity-80 hover:opacity-100">References</a>
           </li>
@@ -89,20 +88,20 @@ function WikiPage() {
         </div>
         <p>{wiki.intro}</p>
 
-        {wiki.sections.map((s) => (
+        {wiki.sections.map(s) => (
           <section key={s.id} id={slugify(s.title)}>
             <h2>{s.title}</h2>
-            {s.paragraphs.map((p, i) => (
+            {s.paragraphs.map(p, i) => (
               <p key={i}>{p}</p>
-            ))}
+            )}
           </section>
-        ))}
+        )}
 
         <h2 id="references">References</h2>
         <ol>
-          {wiki.references.map((r, i) => (
+          {wiki.references.map(r, i) => (
             <li key={i}>{r}</li>
-          ))}
+          )}
         </ol>
 
         <div className="not-prose mt-10 p-4 border rounded bg-white/60 dark:bg-black/20">
@@ -114,7 +113,7 @@ function WikiPage() {
             </div>
           </div>
           <pre className="overflow-auto text-xs whitespace-pre-wrap">
-{md}
+md}
           </pre>
         </div>
         <div className="not-prose mt-6 p-4 border rounded bg-white/60 dark:bg-black/20">
@@ -124,9 +123,9 @@ function WikiPage() {
       </article>
     </div>
   )
-}
+
               </a>;
-            </li>))}
+            </li>)}
           <li>;
             <a href="#references" className="opacity - 80 hover:opacity - 100">References</a>;
           </li>;
@@ -143,16 +142,16 @@ function WikiPage() {
           </div>;
         </div>;
         <p>{wiki.intro}</p>;
-        {wiki.sections.map ((s) => (
+        {wiki.sections.map (s) => (
           <section key={s.id} id={slugify (s.title)}>;
             <h2>{s.title}</h2>;
-            {s.paragraphs.map ((p, i) => (
-              <p key={i}>{p}</p>))}
-          </section>))}
+            {s.paragraphs.map (p, i) => (
+              <p key={i}>{p}</p>)}
+          </section>)}
         <h2 id="references">References</h2>;
         <ol>;
-          {wiki.references.map ((r, i) => (
-            <li key={i}>{r}</li>))}
+          {wiki.references.map (r, i) => (
+            <li key={i}>{r}</li>)}
         </ol>;
         <div className="not - prose mt - 10 p - 4 border rounded bg - white / 60 dark:bg - black / 20">;
           <div className="flex items - center justify - between mb - 2">;
@@ -163,7 +162,7 @@ function WikiPage() {
             </div>;
           </div>;
           <pre className="overflow - auto text - xs whitespace - pre - wrap">;
-{md}
+md}
           </pre>;
         </div>;
         <div className="not - prose mt - 6 p - 4 border rounded bg - white / 60 dark:bg - black / 20">;
@@ -172,4 +171,3 @@ function WikiPage() {
         </div>;
       </article>;
     </div>);
-}

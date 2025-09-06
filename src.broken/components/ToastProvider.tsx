@@ -6,5 +6,3 @@ export function ToastProvider() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

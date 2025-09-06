@@ -7,6 +7,5 @@ const LinkHealthMonitor = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default LinkHealthMonitor;

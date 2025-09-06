@@ -6,5 +6,3 @@ export function AllCategoriesPage() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

@@ -1,5 +1,4 @@
 
-
 import {Button} from "@/components/ui/button";
 import {Loader2} from "lucide-react";
 import {NavigationButtonsProps} from "./types";
@@ -25,7 +24,6 @@ export const NavigationButtons = ({;
       )}
     </div>
   )
-}
 
 import { Button } from '@/components / ui / button';
 import { Loader2 } from './lucide-react';
@@ -49,5 +47,3 @@ export const NavigationButtons = ({
           {next_label}
         </Button>)}
     </div>);
-}
-;

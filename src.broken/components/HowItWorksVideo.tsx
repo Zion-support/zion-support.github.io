@@ -6,5 +6,3 @@ export function HowItWorksVideo() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

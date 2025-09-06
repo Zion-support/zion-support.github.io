@@ -1,4 +1,4 @@
-// Supabase utilities;
+/ Supabase utilities;
 export const supabase = {
   // Add supabase functionality here;
   auth: {
@@ -18,7 +18,7 @@ export const supabase = {
       })
     })
   })
-}
+
     sign_in: (email: string, password: string) => null,
     sign_out: () => null,
     get_user: () => null;
@@ -35,4 +35,3 @@ export const supabase = {
       });
     });
   });
-}

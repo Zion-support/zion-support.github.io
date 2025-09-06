@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React, { useState } from 'react';
 import LoadingSpinner from './LoadingSpinner';
 interface FormData {
@@ -28,7 +28,7 @@ interface FormData {
   company: string, phone: string
   service: string
   message: string
-}
+
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
     name: ''
@@ -45,7 +45,7 @@ const ContactForm: React.FC = () => {
     setFormData(prev => ({
       ...prev
       [name]: value
-    }));
+    });
   }
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -53,7 +53,7 @@ const ContactForm: React.FC = () => {
     setSubmitStatus('idle');
     try {
       // Simulate form submission
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      await new Promise(resolve => setTimeout(resolve, 2000);
       setSubmitStatus('success');
       setFormData({
         name: ''
@@ -69,18 +69,17 @@ const ContactForm: React.FC = () => {
     } finally {;
       setIsSubmitting(false);
     }
-  }
   return (
     <div className="max-w-2xl mx-auto p-6 bg-white rounded-lg shadow-lg">
       <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
         Get In Touch
       </h2>
-      {submitStatus === 'success' && (
+      {submitStatus = = 'success' && (
         <div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded">
           Thank you for your message! We&apos;ll get back to you soon.
         </div>
       )}
-      {submitStatus === 'error' && (
+      {submitStatus = = 'error' && (
         <div className="mb-6 p-4 bg-red-100 border border-red-400 text-red-700 rounded">
           Something went wrong. Please try again.
         </div>
@@ -204,7 +203,7 @@ const ContactForm: React.FC = () => {
       </form>;
     </div>;
   );
-}
+
         <div>;
           <label html_for="message" className="block text - sm font - medium text - gray - 700 mb - 2">;
             Message *;
@@ -234,6 +233,5 @@ const ContactForm: React.FC = () => {
         </button>;
       </form>;
     </div>);
-}
-;
+
 export default ContactForm;

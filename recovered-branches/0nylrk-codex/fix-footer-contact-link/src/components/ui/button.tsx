@@ -21,19 +21,18 @@ const buttonVariants = cva(
         default: "h-10 px-4 py-2"
         sm: "h-9 rounded-md px-3"
         lg: "h-11 rounded-md px-8"
-        icon: "h-10 w-10"}}
+        icon: "h-10 w-10"}
     defaultVariants: {
       variant: "default"
-      size: "default"}}
-)
+      size: "default"}
+
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>;
 
     VariantProps<typeof buttonVariants> {
   asChild?: boolean
-}
-const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, asChild = false, ...props }, ref) => {
+
+const Button = React.forwardRef<HTMLButtonElement, ButtonProps>({ className, variant, size, asChild = false, ...props }, ref) => {
     const Comp = asChild ? Slot : "button"
 import * as React from './react';
 import { Slot } from '@radix - ui / react - slot';
@@ -56,32 +55,31 @@ const button_variants = cva (
         default: "h - 10 px - 4 py - 2",
         sm: "h - 9 rounded - md px - 3",
         lg: "h - 11 rounded - md px - 8",
-        icon: "h - 10 w - 10"}},
+        icon: "h - 10 w - 10"},
     default_variants: {
       variant: "default",
-      size: "default"}}
-);
+      size: "default"}
+;
 export interface ButtonProps;
   extends React.ButtonHTMLAttributes < HTMLButtonElement>;
     VariantProps < typeof button_variants> {
   as_child?: boolean;
-}
-const Button = React.forward_ref < HTMLButtonElement, ButtonProps>(
-  ({ class_name, variant, size, as_child = false, ...props }, ref) => {
+
+const Button = React.forward_ref < HTMLButtonElement, ButtonProps>({ class_name, variant, size, as_child = false, ...props }, ref) => {
     const Comp = as_child ? Slot : "button";
     return (
       <Comp;
-        className={cn (button_variants ({ variant, size, class_name }))}
+        className={cn (button_variants ({ variant, size, class_name })}
         ref={ref}
         {...props}
       />;
     );
   }
-)
+
 Button.displayName = "Button"
 export { Button, buttonVariants }
       />);
   }
-);
+;
 Button.display_name = "Button";
 export { Button, button_variants }

@@ -9,14 +9,14 @@ interface AddSkillFormProps {
 
   resumeId: string
   onAddSkill: (skill: Skill) => Promise<boolean>
-}
+
 export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {
   const [skillName, setSkillName] = useState('');
   const [skillCategory, setSkillCategory] = useState('');
   const [proficiency, setProficiency] = useState<number>(3);
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!skillName.trim()) return
+    if (!skillName.trim() return
     const newSkill: Skill = {
       name: skillName.trim()
       category: skillCategory |'Other'
@@ -30,7 +30,6 @@ import {AIEnhancementButton} from '@/components/resume-builder/forms/AIEnhanceme
 interface AddSkillFormProps {;
   resumeId: string,;
   onAddSkill: (skill: Skill) => Promise<boolean>;
-}
 
 export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
   const [skillName, setSkillName] = useState('');
@@ -40,7 +39,7 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
   const handleSubmit = async (e: React && React.FormEvent) => {;
     e && e.preventDefault();
 
-    if (!skillName && skillName.trim()) return,;
+    if (!skillName && skillName.trim() return,;
 
     const newSkill: Skill = {;
       name: skillName && skillName.trim(),;
@@ -52,7 +51,6 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
       setSkillName('');
       setProficiency(3);
     }
-  }
   const handleEnhanceSkill = (enhancedCategory: string) => {
     setSkillCategory(enhancedCategory)
   }
@@ -127,7 +125,7 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
               min={1}
               max={5}
               value={proficiency}
-              onChange={(e) => setProficiency(Number(e.target.value))}
+              onChange={(e) => setProficiency(Number(e.target.value)}
               className="w-20"
             />
             <Button type="submit">Add</Button>
@@ -136,7 +134,6 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
       </div>
     </form>
   )
-}
 
             />;
             <Button type="submit">Add</Button>;
@@ -145,7 +142,4 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
       </div>;
     </form>;
   );
-};
     </form>);
-}
-;

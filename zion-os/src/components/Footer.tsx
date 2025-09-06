@@ -169,7 +169,7 @@ function Footer() {
               Leading provider of AI - powered technology solutions, autonomous systems, and quantum computing innovations.;
             </p>;
             <div className="flex space - x-4">;
-              {social_links.map ((social) => (
+              {social_links.map (social) => (
                 <a;
                   key={social.name}
                   href={social.href}
@@ -181,15 +181,15 @@ function Footer() {
                   <div className="group - hover:scale - 110 transition - transform duration - 200">;
                     {social.icon}
                   </div>;
-                </a>))}
+                </a>)}
             </div>;
           </div>;
           {/* Footer Sections */}
-          {footer_sections.map ((section) => (
+          {footer_sections.map (section) => (
             <div key={section.title}>;
               <h3 className="text - white font - semibold mb - 4 text - lg">{section.title}</h3>;
               <ul className="space - y-3">;
-                {section.links.map ((link) => (
+                {section.links.map (link) => (
                   <li key={link.name}>;
                     <Link;
                       href={link.href}
@@ -200,9 +200,9 @@ function Footer() {
                         {link.name}
                       </span>;
                     </Link>;
-                  </li>))}
+                  </li>)}
               </ul>;
-            </div>))}
+            </div>)}
         </div>;
         {/* Newsletter Signup */}
         <div className="border - t border - white / 10 pt - 8 mb - 8">;
@@ -251,4 +251,3 @@ function Footer() {
         </div>;
       </div>;
     </footer>);
-}

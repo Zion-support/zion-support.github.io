@@ -3,7 +3,6 @@ import React from 'react';
 
 interface Computer-visionProps {
   className?: string;
-}
 
 const Computer-vision: React.FC<Computer-visionProps> = ({ className }) => {
   return (
@@ -12,6 +11,3 @@ const Computer-vision: React.FC<Computer-visionProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-}
-}
-}

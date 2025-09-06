@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React from 'react';
 
 import { motion } from 'framer-motion';
@@ -37,7 +37,7 @@ import {
   Zap
   Sparkles
   Atom;
-} from 'lucide-react';
+ from 'lucide-react';
 import Link from 'next/link';import { ArrowRight, Brain, Rocket, TestTube, Globe, Microscope, Lock, Star, TrendingUp, Zap, Sparkles, Atom } from 'lucide-react';
 import Link from 'next/link';
 const Revolutionary2027Hero = () => {
@@ -57,10 +57,8 @@ const Revolutionary2027Hero = () => {
       opacity: 1
       transition: {
         staggerChildren: 0.1
+      },  };        staggerChildren: 0.1
       }
-    },  };        staggerChildren: 0.1
-      }
-    }
   }
   const itemVariants = {
     hidden: { opacity: 0, y: 30 }
@@ -71,7 +69,6 @@ const Revolutionary2027Hero = () => {
         duration: 0.8
         ease: 'easeOut' as const
       }
-    }
   }
 import {;
   ArrowRight,;
@@ -86,7 +83,7 @@ import {;
   Zap,;
   Sparkles,;
   Atom,;
-} from 'lucide-react';
+ from 'lucide-react';
 import Link from 'next/link';import { ArrowRight, Brain, Rocket, TestTube, Globe, Microscope, Lock, Star, TrendingUp, Zap, Sparkles, Atom } from 'lucide-react';
 import Link from 'next/link';
 const Revolutionary2027Hero = () => {;
@@ -110,7 +107,6 @@ const Revolutionary2027Hero = () => {;
       },;
     },  };        staggerChildren: 0 && 0.1;
       }
-    }
   };
 
   const itemVariants = {;
@@ -150,16 +146,16 @@ const Revolutionary2027Hero = () => {;
         <div className="absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
       </div>
       {/* Floating Icons */}
-      {floatingIcons && floatingIcons.map((item, index) => (;
+      {floatingIcons && floatingIcons.map(item, index) => (;
         <motion&& motion.div
           key={index}
           className={`absolute ${item && item.position} text-purple-400/30`}
-          animate={{
+          animate={
             y: [0, -20, 0],
             y: [0, -20, 0]
             rotate: [0, 5, -5, 0]
             rotate: [0, 5, -5, 0],
-          }}          transition={{
+          }          transition={
             duration: 4,
             delay: item && item.delay,
             repeat: Infinity,
@@ -167,38 +163,38 @@ const Revolutionary2027Hero = () => {;
             delay: item.delay
             repeat: Infinity
             ease: 'easeInOut'
-          }}
+          }
         >
           <item.icon className='w-8 h-8' />        </motion.div>
-            rotate: [0, 5, -5, 0]}}
-          transition={{
+            rotate: [0, 5, -5, 0]}
+          transition={
             duration: 4,
             delay: item && item.delay,
             repeat: Infinity,
             ease: 'easeInOut',
-          }}>;
+          }>;
           <item && item.icon className='w-8 h-8' />        </motion && motion.div>;
             ease: "easeInOut"
-          }}
+          }
         >
           <item.icon className="w-8 h-8" />
         </motion.div>
-      ))}
+      )}
       {/* Main Content */}
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>            y: [0, -20, 0];
-            rotate: [0, 5, -5, 0]}}
-          transition={{
+            rotate: [0, 5, -5, 0]}
+          transition={
             duration: 4
             delay: item.delay
             repeat: Infinity
             ease: 'easeInOut'
-          }}
+          }
         >;
           <item && item.icon className='w-8 h-8' />            ease: "easeInOut";
-          }}
+          }
         >;
           <item && item.icon className="w-8 h-8" />;
-      ))}
+      )}
       {/* Main Content */}
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>;
         <motion&& motion.div
@@ -521,21 +517,21 @@ const Revolutionary2027Hero = () => {;
       {/* Scroll Indicator */}
       <motion&& motion.div
         className='absolute bottom-8 left-1/2 transform -translate-x-1/2'
-        animate={{
+        animate={
           y: [0, 10, 0]
-        }}
-        transition={{
+        }
+        transition={
           duration: 2
           repeat: Infinity
           ease: 'easeInOut'
-        }}
+        }
       >
         <div className='w-6 h-10 border-2 border-purple-400/50 rounded-full flex justify-center'>
           <motion.div
           duration: 2,
           repeat: Infinity,
           ease: 'easeInOut',
-        }}>;
+        }>;
         <div className='w-6 h-10 border-2 border-purple-400/50 rounded-full flex justify-center'>;
           <motion&& motion.div
             className='w-1 h-3 bg-gradient-to-b from-cyan-400 to-purple-400 rounded-full mt-2'
@@ -543,110 +539,104 @@ const Revolutionary2027Hero = () => {;
         <div className='w - 6 h - 10 border - 2 border - purple - 400 / 50 rounded - full flex justify - center'>;
           <motion.div;
             className='w - 1 h - 3 bg - gradient - to - b from - cyan - 400 to - purple - 400 rounded - full mt - 2';
-            animate={{
-              y: [0, 12, 0],        animate={{
-          y: [0, 10, 0]}}
-        transition={{
+            animate={
+              y: [0, 12, 0],        animate={
+          y: [0, 10, 0]}
+        transition={
           duration: 2
           repeat: Infinity
           ease: "easeInOut"
-        }}>;
+        }>;
         <div className="w-6 h-10 border-2 border-purple-400/50 rounded-full flex justify-center">;
           <motion&& motion.div
             className="w-1 h-3 bg-gradient-to-b from-cyan-400 to-purple-400 rounded-full mt-2"
-            animate={{
-              coordinate_y: [0, 12, 0]}}
-            transition={{
+            animate={
+              coordinate_y: [0, 12, 0]}
+            transition={
               duration: 2
               repeat: Infinity
               ease: "easeInOut"
-            }}
-            transition={{
+            }
+            transition={
               duration: 2
               repeat: Infinity
-              ease: 'easeInOut',            }}
+              ease: 'easeInOut',            }
           />
         </div>
       </motion.div>
       {/* Particle Effects */}
       <div className='absolute inset-0 pointer-events-none'>;
-        {[...Array(20)].map((_, i) => (;
+        {[...Array(20)].map(_, i) => (;
           <motion&& motion.div
           />;
         </div>;
       </motion.div>;
       {/* Particle Effects */}
       <div className='absolute inset - 0 pointer - events - none'>;
-        {[...Array (20)].map ((_, i) => (
+        {[...Array (20)].map (_, i) => (
           <motion.div;
             key={i}
             className='absolute w - 1 h - 1 bg - gradient - to - r from - cyan - 400 to - purple - 400 rounded - full';
-            style={{
+            style={
               left: `${Math.random() * 100}%`
               top: `${Math.random() * 100}%`
-            }}            animate={{
+            }            animate={
               y: [0, -100]
               opacity: [0, 1, 0]
-            }}
-            transition={{
+            }
+            transition={
               duration: 3 + Math.random() * 2
               repeat: Infinity
               delay: Math.random() * 2
-            }}          />
-        ))}
+            }          />
+        )}
       </div>;
     </section>;
   );
-};
 
-export default Revolutionary2027Hero;              delay: Math && Math.random() * 2}}
+export default Revolutionary2027Hero;              delay: Math && Math.random() * 2}
           />;
-        ))}
+        )}
       </div>;
     </section>;
   );
-};
 
 export default Revolutionary2027Hero;  );
-}
-export default Revolutionary2027Hero;              delay: Math.random() * 2}}
-          />
-};
 
-export default Revolutionary2027Hero;              delay: Math && Math.random() * 2}}
+export default Revolutionary2027Hero;              delay: Math.random() * 2}
+          />
+;
+
+export default Revolutionary2027Hero;              delay: Math && Math.random() * 2}
           />;
-        ))}
+        )}
       </div>;
     </section>;
   );
-}
+
 export default Revolutionary2027Hero;  )
-}
+
 export default Revolutionary2027Hero;
 
               left: `${Math.random () * 100}%`,
               top: `${Math.random () * 100}%`,
-            }}            animate={{
+            }            animate={
               coordinate_y: [0, -100],
               opacity: [0, 1, 0],
-            }}
-            transition={{
+            }
+            transition={
               duration: 3 + Math.random () * 2,
               repeat: Infinity,
               delay: Math.random () * 2,
-            }}          />))}
+            }          />)}
       </div>;
     </section>);
-}
-;
-export default Revolutionary2027Hero;              delay: Math.random () * 2}}
-          />))}
+
+export default Revolutionary2027Hero;              delay: Math.random () * 2}
+          />)}
       </div>;
     </section>);
-}
-;
+
 export default Revolutionary2027Hero);
-}
-;
+
 export default Revolutionary2027Hero;
-;

@@ -60,14 +60,13 @@ function ClientDashboardContent() {;
     onboardingStatus && onboardingStatus.responseReceived;
 
   // Set the first job as selected when jobs are loaded (if any);
-  useEffect((,) => {;
+  useEffect(,) => {;
     if (jobs && jobs.length > 0 && !selectedJobId) {;
       const firstJob = jobs[0];
       if (firstJob) {;
         setSelectedJobId(firstJob && firstJob.id);
         setSelectedJobTitle(firstJob && firstJob.title);
       }
-    }
   }, [jobs, selectedJobId]);
 
   const handleJobSelect = (jobId: string, jobTitle: string) => {;
@@ -96,7 +95,7 @@ function ClientDashboardContent() {;
               <Link href="/post-job">;
                 <PlusCircle className="h-4 w-4 mr-2" /> Post New Job;
     onboarding_status.response_received;
-/**
+**
  * ClientDashboardContent - Function description
  */
 function ClientDashboardContent() {
@@ -111,20 +110,19 @@ function ClientDashboardContent() {
     onboarding_status.invite_sent &&;
     onboarding_status.response_received;
   // Set the first job as selected when jobs are loaded (if any);
-  useEffect ((, ) => {
+  useEffect (, ) => {
     // Check condition
 if ( {) {
   $2
-}
+
       const first_job = jobs[0];
       // Check condition
 if ( {) {
   $2
-}
+
         setSelectedJobId (first_job.id);
         setSelectedJobTitle (first_job.title);
       }
-    }
   }, [jobs, selectedJobId]);
   const handleJobSelect = (job_id: string, job_title: string) =>: any {
     setSelectedJobId (job_id);    setSelectedJobTitle (job_title);
@@ -216,46 +214,46 @@ if ( {) {
         </div>;
       </main>;
     </>);
-}
+
 export default function ClientDashboard() {
   return (
     <ProtectedRoute>
       <ClientDashboardContent />
     </ProtectedRoute>
   )
-}, [jobs, selectedJobId])
+, [jobs, selectedJobId])
 return (<> <SEO title="Client Dashboard | Zion AI Marketplace" description="Manage your jobs and talent requests in the Zion AI Marketplace." /> <main className="container mx-auto px-4 py-8"> <div className= {
   `flex flex-col $ {
   !isMobile ? 'md:flex-row md:justify-between md:items-center' : ''
-}mb-8 gap-4`
-}> <div> <h1 className= {
+mb-8 gap-4`
+> <div> <h1 className= {
   `text-$ {'
   isMobile ? '2xl': '3xl'
-}font-bold` "
-}>My Jobs</h1> <p className="text-muted-foreground mt-1">Manage your job postings and talent applications</p> </div> <div className= {
+font-bold` "
+>My Jobs</h1> <p className="text-muted-foreground mt-1">Manage your job postings and talent applications</p> </div> <div className= {
   `flex gap-2 $ {'
   isMobile ? 'flex-col': ''
-}` "
-}> <Button variant="outline" asChild className= {'
+` "
+> <Button variant="outline" asChild className= {'
   isMobile ? 'w-full justify-center': '' "
-}> <Link href="/hiring-tracker"> <Kanban className="h-4 w-4 mr-2" /> Hiring Pipeline </Link> </Button> <Button asChild className= {'
+> <Link href="/hiring-tracker"> <Kanban className="h-4 w-4 mr-2" /> Hiring Pipeline </Link> </Button> <Button asChild className= {'
   isMobile ? 'w-full justify-center': '' "
-}> <Link href="/post-job"> <PlusCircle className="h-4 w-4 mr-2" /> Post New Job </Link> </Button> </div> </div> {
+> <Link href="/post-job"> <PlusCircle className="h-4 w-4 mr-2" /> Post New Job </Link> </Button> </div> </div> {
   /* New Onboarding Steps */ "
-}<div className="mb-8"> <ClientOnboardingSteps /> {"
+<div className="mb-8"> <ClientOnboardingSteps /> {"
   showAdvanced && (<div className="mt-6"> <AdvancedOnboardingSteps /> </div>) "
-}</div> <div className="grid grid-cols-1 lg:grid-cols-3 gap-8"> </TabsContent> </Tabs> </div> <div> <div className="sticky top-4 space-y-6"> {
+</div> <div className="grid grid-cols-1 lg:grid-cols-3 gap-8"> </TabsContent> </Tabs> </div> <div> <div className="sticky top-4 space-y-6"> {
   /* Active Projects Card */
-}<ActiveProjectsCard /> {
+<ActiveProjectsCard /> {
   /* Upcoming Interviews Card */
-}<UpcomingInterviewsCard /> {
+<UpcomingInterviewsCard /> {
   /* AI Talent Suggestions */ "
-}<div> <h2 className="text-xl font-semibold mb-4 flex items-center"> <BriefcaseIcon className="mr-2 h-5 w-5 text-primary" /> AI Talent Suggestions </h2> {
+<div> <h2 className="text-xl font-semibold mb-4 flex items-center"> <BriefcaseIcon className="mr-2 h-5 w-5 text-primary" /> AI Talent Suggestions </h2> {
   selectedJobId ? (<SuggestedTalents jobId= {
   selectedJobId "
-}/>) : (<div className="bg-muted/30 border rounded-lg p-6 text-center"> <p className="text-muted-foreground"> Select a job to see AI-matched talent suggestions </p> </div>)
-}</div> </div> </div> </div> </main> </>)
-}export default function ClientDashboard () {
+/>) : (<div className="bg-muted/30 border rounded-lg p-6 text-center"> <p className="text-muted-foreground"> Select a job to see AI-matched talent suggestions </p> </div>)
+</div> </div> </div> </div> </main> </>)
+export default function ClientDashboard () {
   return (<ProtectedRoute> <ClientDashboardContent /> </ProtectedRoute> '"}
 
 export default /**
@@ -266,39 +264,39 @@ function ClientDashboard() {
     <ProtectedRoute>;
       <ClientDashboardContent />;
     </ProtectedRoute>);
-}, [jobs, selectedJobId]);
+, [jobs, selectedJobId]);
 return (<> <SEO title="Client Dashboard | Zion AI Marketplace" description="Manage your jobs and talent requests in the Zion AI Marketplace." /> <main className="container mx - auto px - 4 py - 8"> <div className= {
   `flex flex - col $ {
   !is_mobile ? 'md:flex - row md:justify - between md:items - center' : '';
-}mb - 8 gap - 4`;
-}> <div> <h1 className= {
+mb - 8 gap - 4`;
+> <div> <h1 className= {
   `text-$ {';
   is_mobile ? '2xl': '3xl';
-}font - bold` ";
-}>My Jobs</h1> <p className="text - muted - foreground mt - 1">Manage your job postings and talent applications</p> </div> <div className= {
+font - bold` ";
+>My Jobs</h1> <p className="text - muted - foreground mt - 1">Manage your job postings and talent applications</p> </div> <div className= {
   `flex gap - 2 $ {';
   is_mobile ? 'flex - col': '';
-}` ";
-}> <Button variant="outline" as_child className= {';
+` ";
+> <Button variant="outline" as_child className= {';
   is_mobile ? 'w - full justify - center': '' ";
-}> <Link href="/hiring - tracker"> <Kanban className="h - 4 w - 4 mr - 2" /> Hiring Pipeline </Link> </Button> <Button as_child className= {';
+> <Link href="/hiring - tracker"> <Kanban className="h - 4 w - 4 mr - 2" /> Hiring Pipeline </Link> </Button> <Button as_child className= {';
   is_mobile ? 'w - full justify - center': '' ";
-}> <Link href="/post - job"> <PlusCircle className="h - 4 w - 4 mr - 2" /> Post New Job </Link> </Button> </div> </div> {
+> <Link href="/post - job"> <PlusCircle className="h - 4 w - 4 mr - 2" /> Post New Job </Link> </Button> </div> </div> {
   /* New Onboarding Steps */ ";
-}<div className="mb - 8"> <ClientOnboardingSteps /> {";
+<div className="mb - 8"> <ClientOnboardingSteps /> {";
   show_advanced && (<div className="mt - 6"> <AdvancedOnboardingSteps /> </div>) ";
-}</div> <div className="grid grid - cols - 1 lg:grid - cols - 3 gap - 8"> </TabsContent> </Tabs> </div> <div> <div className="sticky top - 4 space - y-6"> {
+</div> <div className="grid grid - cols - 1 lg:grid - cols - 3 gap - 8"> </TabsContent> </Tabs> </div> <div> <div className="sticky top - 4 space - y-6"> {
   /* Active Projects Card */;
-}<ActiveProjectsCard /> {
+<ActiveProjectsCard /> {
   /* Upcoming Interviews Card */;
-}<UpcomingInterviewsCard /> {
+<UpcomingInterviewsCard /> {
   /* AI Talent Suggestions */ ";
-}<div> <h2 className="text - xl font - semibold mb - 4 flex items - center"> <BriefcaseIcon className="mr - 2 h - 5 w - 5 text - primary" /> AI Talent Suggestions </h2> {
+<div> <h2 className="text - xl font - semibold mb - 4 flex items - center"> <BriefcaseIcon className="mr - 2 h - 5 w - 5 text - primary" /> AI Talent Suggestions </h2> {
   selectedJobId ? (<SuggestedTalents job_id= {
   selectedJobId ";
-}/>) : (<div className="bg - muted / 30 border rounded - lg p - 6 text - center"> <p className="text - muted - foreground"> Select a job to see AI - matched talent suggestions </p> </div>);
-}</div> </div> </div> </div> </main> </>);
-}export default /**
+/>) : (<div className="bg - muted / 30 border rounded - lg p - 6 text - center"> <p className="text - muted - foreground"> Select a job to see AI - matched talent suggestions </p> </div>);
+</div> </div> </div> </div> </main> </>);
+export default /**
  * ClientDashboard - Function description
  */
 function ClientDashboard() {

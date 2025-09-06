@@ -41,7 +41,7 @@ export function EnterpriseFeatures() {;
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature) => (
+          {features.map(feature) => (
             <div
               key={feature && feature.title}
               className="bg-card rounded-lg p-6 shadow-sm border border-border transition-all hover:shadow-md">;
@@ -51,12 +51,12 @@ export function EnterpriseFeatures() {;
               <h3 className="font-bold text-xl mb-3">{feature && feature.title}</h3>;
               <p className="text-muted-foreground">{feature && feature.description}</p>;
             </div>;
-          ))}
+          )}
         </div>
       </div>
     </section>
   )
-}
+
     title: "Global Access",
     description: "Connect with talent across multiple regions with localized interfaces.",
     icon: Globe}],
@@ -76,7 +76,7 @@ function EnterpriseFeatures() {
           </p>;
         </div>;
         <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
-          {features.map ((feature) => (
+          {features.map (feature) => (
             <div;
               key={feature.title}
               className="bg - card rounded - lg p - 6 shadow - sm border border - border transition - all hover:shadow - md";
@@ -86,8 +86,7 @@ function EnterpriseFeatures() {
               </div>;
               <h3 className="font - bold text - xl mb - 3">{feature.title}</h3>;
               <p className="text - muted - foreground">{feature.description}</p>;
-            </div>))}
+            </div>)}
         </div>;
       </div>;
     </section>);
-}

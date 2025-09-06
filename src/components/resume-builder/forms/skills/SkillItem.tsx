@@ -40,8 +40,7 @@ export const SkillItem = ({ skill, category, onDelete }: SkillItemProps,) => {;
       </Button>
     </Badge>
   )
-}
-"
+
 import {Badge} from '@/components/ui/badge'
 import {Button} from '@/components/ui/button'
 import {Trash2} from 'lucide-react'
@@ -67,9 +66,7 @@ export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
       </Button>
     </Badge>
   )
-} }
-}
-
+ }
 
 import { Badge } from '@/components / ui / badge';
 import { Button } from '@/components / ui / button';
@@ -96,8 +93,6 @@ export const SkillItem = ({ skill, category, on_delete }: SkillItemProps, ) =>: 
         <Trash2 className="h - 3 w - 3" />;
       </Button>;
     </Badge>);
-}
-";
 import {Badge} from '@/components / ui / badge';
 import {Button} from '@/components / ui / button';
 import {Trash2} from 'lucide-react';
@@ -122,5 +117,4 @@ export const SkillItem = ({ skill, category, on_delete }: SkillItemProps) =>: an
         <Trash2 className="h - 3 w - 3" />;
       </Button>;
     </Badge>);
-} },
-}
+ },

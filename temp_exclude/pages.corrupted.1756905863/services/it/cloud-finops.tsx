@@ -4,32 +4,32 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 export default function CloudFinOps() {; return ( <Article title=\"Cloud FinOps\" subtitle=\"Cost visibility,unit economics,and automated savings for AWS/Azure/GCP\" price=\"from $4k/mo\" bullets={[
-     \'Tagging strategy and cost allocation by team and customer\', \'Automated rightsizing and commitment planning (SP/RI/CCA)\', \'Unit economics dashboard by feature and environment\',,
+     \'Tagging strategy and cost allocation by team and customer\', \'Automated rightsizing and commitment planning (SP/RI/CCA)\', \'Unit economics dashboard by feature and environment\',
     \'FinOps runbooks and CFO-ready monthly reporting\'
-  ]} /> );} ; function Article(): any ({ title,subtitle,price,bullets }: { \"title\": \'string; subtitle: string, price: string, bullets: string[]\' }) {; return ( <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}></div> <p><strong>{subtitle}</strong>></div> <p><strong>\"Pricing\": </strong> {price}></div> <ul> {bullets && bullets.map((b) => (; <li key={b}>{b}></div> ))} ></div> <ContactFooter /> ></div> );} ; function ContactFooter() {; return ( <p> \"Mobile\": +1 302 464 0950  Email: <a href=\"mailto:kleber@ziontechgroup && ziontechgroup.com\">kleber@ziontechgroup && ziontechgroup.com</a>  Site: <a href=\"https: ></div> );
+  ]} /> );} ; function Article(): any ({ title,subtitle,price,bullets }: { \"title\": \'string; subtitle: string, price: string, bullets: string[]\' }) {; return ( <main style={ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }> <h1 style={ \"marginTop\": \'0\' }>{title}></div> <p><strong>{subtitle}</strong></div> <p><strong>\"Pricing\": </strong> {price}></div> <ul> {bullets && bullets.map(b) => (; <li key={b}>{b}></div> )} ></div> <ContactFooter /></div> );} ; function ContactFooter() {; return ( <p> \"Mobile\": +1 302 464 0950  Email: <a href=\"mailto:kleber@ziontechgroup && ziontechgroup.com\">kleber@ziontechgroup && ziontechgroup.com</a>  Site: <a href=\"https: ></div> );
   } ;
 import React from 'react';
 interface CloudfinopsProps {;
   // Add props here as needed;
-}
+
 export default function Cloudfinops(): any ({ }: CloudfinopsProps) {;
   return (
     <div>;
@@ -37,5 +37,3 @@ export default function Cloudfinops(): any ({ }: CloudfinopsProps) {;
       <p>This component is currently under development.</p>;
     </div>;
   );
-}
-}

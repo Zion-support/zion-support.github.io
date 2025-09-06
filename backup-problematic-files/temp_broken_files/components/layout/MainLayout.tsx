@@ -14,7 +14,6 @@ interface MainLayoutProps {
   type?: string;
   image?: string;
   url?: string;
-}
 
 const MainLayout: React.FC<MainLayoutProps> = ({
   children,
@@ -27,7 +26,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
   type = 'website',
   image,
   url,
-}) => {
+) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
 
   return (
@@ -41,21 +40,21 @@ const MainLayout: React.FC<MainLayoutProps> = ({
         {canonical && <link rel="canonical" href={canonical} />}
         {noindex && <meta name="robots" content="noindex" />}
         {nofollow && <meta name="robots" content="nofollow" />}
-        
+
         {/* Open Graph */}
         <meta property="og:type" content={type} />
         <meta property="og:title" content={title || 'Zion Tech Group'} />
         <meta property="og:description" content={description || 'Leading technology solutions provider'} />
         {image && <meta property="og:image" content={image} />}
         {url && <meta property="og:url" content={url} />}
-        
+
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title || 'Zion Tech Group'} />
         <meta name="twitter:description" content={description || 'Leading technology solutions provider'} />
         {image && <meta name="twitter:image" content={image} />}
       </Head>
-      
+
       <div className="min-h-screen bg-gray-50">
         <Header />
         <main>
@@ -65,6 +64,5 @@ const MainLayout: React.FC<MainLayoutProps> = ({
       </div>
     </>
   );
-};
 
 export default MainLayout;

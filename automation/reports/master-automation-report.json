@@ -1,4 +1,4 @@
-{
+
   "timestamp": "2025-09-06T08:35:27.585Z",
   "summary": {
     "totalTasks": 7,
@@ -47,7 +47,7 @@
       "status": "failed",
       "duration": 0,
       "critical": false,
-      "error": "Command failed: node automation/performance-optimizer.js\nfile:///workspace/automation/performance-optimizer.js:1\n}};\n^\n\nSyntaxError: Unexpected token '}'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n\nNode.js v22.16.0\n"
+      "error": "Command failed: node automation/performance-optimizer.js\nfile:///workspace/automation/performance-optimizer.js:1\n};\n^\n\nSyntaxError: Unexpected token '}'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n\nNode.js v22.16.0\n"
     },
     {
       "task": "Security Scan",
@@ -64,4 +64,3 @@
     "Optimize performance based on analysis results",
     "Implement security recommendations"
   ]
-}

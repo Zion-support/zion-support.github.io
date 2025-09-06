@@ -1,5 +1,5 @@
       }
-}
+
 import React, { useState, useEffect } from 'react',
 import { Header } from "@/components/Header",
 import { Button } from "@/components/ui/button",
@@ -39,7 +39,7 @@ export default function ContentGenerator() {
       <div className="min-h-screen bg-zion-blue py-12">
         <div className="container mx-auto px-4">
           <h1 className="text-3xl font-bold text-white mb-8">Content Generator</h1>
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div className="lg:col-span-1">
               <Card className="bg-zion-blue-dark border border-zion-blue-light">
@@ -70,9 +70,9 @@ export default function ContentGenerator() {
                     <Input
                       id="topic"
                       placeholder={
-                        contentType === 'blog' ? "e.g., Benefits of AI in Marketing" :
-                        contentType === 'serviceDescription' ? "e.g., AI-Powered Chatbot Solutions" :
-                        contentType === 'faq' ? "e.g., How does AI improve customer service?" :
+                        contentType = = 'blog' ? "e.g., Benefits of AI in Marketing" :
+                        contentType = = 'serviceDescription' ? "e.g., AI-Powered Chatbot Solutions" :
+                        contentType = = 'faq' ? "e.g., How does AI improve customer service?" :
                         "e.g., May Platform Updates" // Newsletter or default
                       }
                       className="bg-zion-blue border border-zion-blue-light text-white"
@@ -91,7 +91,7 @@ export default function ContentGenerator() {
                       onChange={(e) => setKeywords(e.target.value)}
                     />
                   </div>
-                  
+
                   <div className="space-y-2">
                     <Label htmlFor="customPrompt" className="text-white">Detailed Instructions / Custom Prompt (Optional)</Label>
                     <Textarea
@@ -102,8 +102,8 @@ export default function ContentGenerator() {
                       onChange={(e) => setCustomPrompt(e.target.value)}
                     />
                   </div>
-                  
-                  {contentType === 'blog' && (
+
+                  {contentType = = 'blog' && (
                     <>
                       <div className="flex items-center justify-between">
                         <Label htmlFor="autoPublish" className="text-white">Auto-Publish</Label>
@@ -113,7 +113,7 @@ export default function ContentGenerator() {
                           onCheckedChange={setAutoPublish}
                         />
                       </div>
-                      
+
                       <div className="flex items-center justify-between">
                         <Label htmlFor="includeImage" className="text-white">Generate Image Prompt</Label>
                         <Switch
@@ -124,8 +124,8 @@ export default function ContentGenerator() {
                       </div>
                     </>
                   )}
-                  
-                  {contentType === 'newsletter' && (
+
+                  {contentType = = 'newsletter' && (
                     <div className="space-y-2">
                       <Label htmlFor="testEmail" className="text-white">Test Email</Label>
                       <Input
@@ -157,7 +157,7 @@ export default function ContentGenerator() {
                 </CardFooter>
               </Card>
             </div>
-            
+
             <div className="lg:col-span-2">
               <Card className="bg-zion-blue-dark border border-zion-blue-light h-full">
                 <CardHeader>
@@ -180,7 +180,7 @@ export default function ContentGenerator() {
                         {previewContent.generatedContent}
                       </pre>
                       {/* Specific handling for newsletter test send can be re-added if needed */}
-                      {contentType === 'newsletter' && previewContent.subject && ( // Assuming generatedContent might be the body for newsletter
+                      {contentType = = 'newsletter' && previewContent.subject && ( // Assuming generatedContent might be the body for newsletter
                         <div className="mt-4 flex justify-end">
                           <Button
                             onClick={sendTestNewsletter} // sendTestNewsletter would need to be adapted if previewContent structure changed significantly
@@ -227,6 +227,3 @@ export default function ContentGenerator() {
       </div>
     </>
   )
-}
-}
-}

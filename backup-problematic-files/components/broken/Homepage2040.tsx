@@ -9,19 +9,19 @@ import {;
   Car, Search, TestTube, Globe as PlanetIcon, Lock, Palette,;
   FileText, BarChart3, Heart, Truck, ShieldCheck,;
   Sparkles, Infinity as InfinityIcon, Zap as Lightning;
-} from 'lucide-react',;
-// Import new service data;
+ from 'lucide-react',;
+/ Import new service data;
 import { innovativeMicroSaasServices2025V2 } from '../data/2025-innovative-micro-saas-expansion-v2',;
 import { emergingTechServices2025V2 } from '../data/2025-emerging-tech-services-v2',;
-// Lazy load heavy components for better performance;
-const LazyServiceCard = lazy(() => import('./ui/UltraFuturisticServiceCard2026')),;
+/ Lazy load heavy components for better performance;
+const LazyServiceCard = lazy() => import('./ui/UltraFuturisticServiceCard2026'),;
 const Homepage2040: React.FC = () => {;
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0),;
   const [isVisible, setIsVisible] = useState(false),;
-  useEffect(() => {;
+  useEffect() => {;
     setIsVisible(true),;
-    const interval = setInterval(() => {;
-      setCurrentServiceIndex((prev) => (prev + 1) % innovativeMicroSaasServices2025V2.length);
+    const interval = setInterval() => {;
+      setCurrentServiceIndex(prev) => (prev + 1) % innovativeMicroSaasServices2025V2.length);
     }, 5000),;
     return () => clearInterval(interval);
   }, []),;
@@ -34,7 +34,6 @@ const Homepage2040: React.FC = () => {;
         staggerChildren: 0.1,;
         delayChildren: 0.2;
       }
-    }
   },
 
   const itemVariants = {
@@ -46,7 +45,6 @@ const Homepage2040: React.FC = () => {;
         duration: 0.6,
         ease: "easeOut" as const
       }
-    }
   },
 
   const floatingVariants = {
@@ -57,7 +55,6 @@ const Homepage2040: React.FC = () => {;
         repeat: -1,
         ease: "easeInOut" as const
       }
-    }
   },
 
   const statsData = [
@@ -103,25 +100,25 @@ const Homepage2040: React.FC = () => {;
     {
       name: "AI & Machine Learning",
       icon: Brain,
-      count: allServices.filter(s => s.category.includes('AI')).length,
+      count: allServices.filter(s => s.category.includes('AI').length,
       color: "from-pink-500 to-rose-600"
     },
     {
       name: "Quantum Technology",
       icon: Atom,
-      count: allServices.filter(s => s.category.includes('Quantum')).length,
+      count: allServices.filter(s => s.category.includes('Quantum').length,
       color: "from-blue-500 to-cyan-600"
     },
     {
       name: "Emerging Tech",
       icon: Rocket,
-      count: allServices.filter(s => s.category.includes('Emerging') || s.category.includes('Space')).length,
+      count: allServices.filter(s => s.category.includes('Emerging') || s.category.includes('Space').length,
       color: "from-purple-500 to-indigo-600"
     },
     {
       name: "Cybersecurity",
       icon: Shield,
-      count: allServices.filter(s => s.category.includes('Security') || s.category.includes('Cyber')).length,
+      count: allServices.filter(s => s.category.includes('Security') || s.category.includes('Cyber').length,
       color: "from-green-500 to-emerald-600"
     }
   ],;
@@ -145,40 +142,40 @@ const Homepage2040: React.FC = () => {;
             <motion.div 
               variants={floatingVariants}
               animate="float"
-              style={{ animationDelay: '1s' }}
+              style={ animationDelay: '1s' }
               className="absolute top-40 right-32 w-24 h-24 border border-purple-400/20 rounded-full"
             ></motion.div>
             <motion.div 
               variants={floatingVariants}
               animate="float"
-              style={{ animationDelay: '2s' }}
+              style={ animationDelay: '2s' }
               className="absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45"
             ></motion.div>
-            
+
             {/* Quantum particle effects */}
             <div className="absolute inset-0">
-              {[...Array(20)].map((_, i) => (
+              {[...Array(20)].map(_, i) => (
                 <motion.div
                   key={i}
                   className="absolute w-1 h-1 bg-cyan-400/30 rounded-full"
-                  style={{
+                  style={
                     left: `${Math.random() * 100}%`,
                     top: `${Math.random() * 100}%`,
                     animationDelay: `${Math.random() * 3}s`
-                  }}
-                  animate={{;
+                  }
+                  animate={;
                     scale: [0, 1, 0],;
-                    opacity: [0, 1, 0]}}
-                  transition={{;
+                    opacity: [0, 1, 0]}
+                  transition={;
                     duration: 3,;
                     repeat: Infinity,;
                     delay: Math.random() * 3;
-                  }}
+                  }
                 />;
-              ))}
+              )}
             </div>
           </div>
-          
+
           <div className="text-center max-w-6xl mx-auto relative z-10">
             <motion.div
               variants={containerVariants}
@@ -197,7 +194,7 @@ const Homepage2040: React.FC = () => {;
                 <span>Innovation Leader 2040</span>
                 <Sparkles className="w-5 h-5 animate-pulse" aria-hidden="true" />
               </motion.div>
-              
+
               <motion.h1 
                 variants={itemVariants}
                 id="hero-heading"
@@ -205,14 +202,14 @@ const Homepage2040: React.FC = () => {;
               >
                 Zion Tech Group
               </motion.h1>
-              
+
               <motion.p 
                 variants={itemVariants}
                 className="text-2xl md:text-3xl text-gray-300 mb-10 max-w-4xl mx-auto leading-relaxed"
               >
                 Pioneering the future of technology with revolutionary AI, quantum computing, and autonomous solutions that transform businesses worldwide
               </motion.p>
-              
+
               {/* Enhanced CTA Section */}
               <motion.div;
                 variants={itemVariants}
@@ -237,7 +234,7 @@ const Homepage2040: React.FC = () => {;
                   </button>
                 </a>
               </motion.div>
-              
+
               {/* Enhanced Trust Indicators */}
               <motion.div;
                 variants={itemVariants}
@@ -274,10 +271,10 @@ const Homepage2040: React.FC = () => {;
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
+              viewport={ once: true }
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
             >
-              {statsData.map((stat, index) => (
+              {statsData.map(stat, index) => (
                 <motion.div
                   key={stat.label}
                   variants={itemVariants}
@@ -292,7 +289,7 @@ const Homepage2040: React.FC = () => {;
                   <div className="text-xl font-semibold text-white mb-2">{stat.label}</div>
                   <div className="text-gray-400">{stat.description}</div>
                 </motion.div>
-              ))}
+              )}
             </motion.div>;
           </div>;
         </section>;
@@ -303,7 +300,7 @@ const Homepage2040: React.FC = () => {;
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
+              viewport={ once: true }
               className="text-center mb-16"
             >
               <motion.h2 
@@ -324,10 +321,10 @@ const Homepage2040: React.FC = () => {;
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
+              viewport={ once: true }
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
             >
-              {serviceCategories.map((category, index) => (
+              {serviceCategories.map(category, index) => (
                 <motion.div
                   key={category.name}
                   variants={itemVariants}
@@ -343,7 +340,7 @@ const Homepage2040: React.FC = () => {;
                     <div className="text-gray-400">Innovative Services</div>
                   </div>
                 </motion.div>
-              ))}
+              )}
             </motion.div>;
           </div>;
         </section>;
@@ -354,7 +351,7 @@ const Homepage2040: React.FC = () => {;
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
+              viewport={ once: true }
               className="text-center mb-16"
             >
               <motion.h2 
@@ -375,10 +372,10 @@ const Homepage2040: React.FC = () => {;
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
+              viewport={ once: true }
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             >
-              {featuredServices.map((service, index) => (
+              {featuredServices.map(service, index) => (
                 <motion.div
                   key={service.id}
                   variants={itemVariants}
@@ -392,10 +389,10 @@ const Homepage2040: React.FC = () => {;
                       </div>
                     )}
                   </div>
-                  
+
                   <h3 className="text-2xl font-bold text-white mb-3">{service.name}</h3>
                   <p className="text-gray-400 mb-4">{service.tagline}</p>
-                  
+
                   <div className="flex items-center justify-between mb-6">
                     <div className="text-3xl font-bold text-cyan-400">
                       ${service.price.monthly}
@@ -405,9 +402,9 @@ const Homepage2040: React.FC = () => {;
                       {service.rating}  ({service.reviews})
                     </div>
                   </div>
-                  
+
                   <div className="space-y-3 mb-6">
-                    {service.features.slice(0, 3).map((feature, idx) => (
+                    {service.features.slice(0, 3).map(feature, idx) => (
                       <div key={idx} className="flex items-center gap-3 text-gray-300">
                         <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
                         <span className="text-sm">{feature}</span>
@@ -428,14 +425,14 @@ const Homepage2040: React.FC = () => {;
                         <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                       </a>
                     </motion.div>
-                  ))}
+                  )}
                 </motion.div>;
                 {/* View All Services Button */}
                 <motion.div;
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.8, delay: 0.4 }}
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  viewport={ once: true }
+                  transition={ duration: 0.8, delay: 0.4 }
                   className="text-center mt-12"
                 >
                   <Link 
@@ -446,7 +443,7 @@ const Homepage2040: React.FC = () => {;
                     <ArrowRight className="w-6 h-6 ml-3" />
                   </a>
                 </motion.div>
-              ))}
+              )}
             </motion.div>;
           </div>;
         </section>;
@@ -457,7 +454,7 @@ const Homepage2040: React.FC = () => {;
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
+              viewport={ once: true }
               className="space-y-8"
             >
               <motion.h2 
@@ -472,7 +469,7 @@ const Homepage2040: React.FC = () => {;
               >
                 Join thousands of companies already leveraging our revolutionary technology solutions
               </motion.p>
-              
+
               <motion.div 
                 variants={itemVariants}
                 className="flex flex-col sm:flex-row gap-6 justify-center"
@@ -488,7 +485,7 @@ const Homepage2040: React.FC = () => {;
                   </button>
                 </a>
               </motion.div>
-              
+
               <motion.div
                 variants={itemVariants}
                 className="flex items-center justify-center gap-8 text-sm text-gray-400"
@@ -512,6 +509,6 @@ const Homepage2040: React.FC = () => {;
       </main>
     </Layout>
   )
-},
+,
 
 export default Homepage2040,

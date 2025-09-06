@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils",;
 import { Badge } from "@/components/ui/badge",;
 import Link from "next/link",;
 import Image from "next/image",;
-;
+
 interface ListingCardProps {;
   id?:string,;
   title:string,;
@@ -14,8 +14,7 @@ interface ListingCardProps {;
   author?:{ name:string, id?:string, avatarUrl?:string, email?:string },;
   className?:string,;
   profileType?:'service' | 'talent',;
-}
-;
+
 export function ListingCard({ ;
   id,;
   title, ;
@@ -26,11 +25,11 @@ export function ListingCard({ ;
   author, ;
   className,;
   profileType = 'service';
-} ListingCardProps) {;
+ ListingCardProps) {;
   // Generate a profile ID based on the listing data;
   // In a real app, this would be a proper ID from the database;
-  const profileId = id || (profileType === 'service' ? 'service-provider-1' :'talent-1'),;
-;
+  const profileId = id || (profileType = = 'service' ? 'service-provider-1' :'talent-1'),;
+
   return (;
     <Link;
       href={`/profile/${profileId}`}
@@ -58,13 +57,12 @@ export function ListingCard({ ;
         </div>;
         <h3 className="text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors">{title}</h3>;
         <p className="text-zion-slate mb-4 flex-grow">{description}</p>;
-        ;
         {tags && tags.length > 0 && (;
           <div className="flex flex-wrap gap-2 mb-4">;
-            {tags.map((tag, i) => (;
+            {tags.map(tag, i) => (;
               <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">;
                 {tag}
-              </Badge>;            ))}
+              </Badge>;            )}
           </div>;
         )}
         ;
@@ -90,10 +88,9 @@ category: string;
 tags?: string[];
 author?: {;
   name: string, id?: string,  avatarUrl?: string, email?: string ;
-};
 className?: string;
 profileType?: 'service' | 'talent' ;
-}export function ListingCard ({;
+export function ListingCard ({;
   id;
 title;
 description;
@@ -103,14 +100,14 @@ tags;
 author;
 className;';
 profileType = 'service' ;
-}: ListingCardProps) {';
-  //Generate a profile ID based on the listing data //In a real app, this would be a proper ID from the database const profileId = id || (profileType === 'service' ? 'service-provider-1' : 'talent-1');
-`/profile/$ {;
+: ListingCardProps) {';
+  //Generate a profile ID based on the listing data //In a real app, this would be a proper ID from the database const profileId = id || (profileType = = 'service' ? 'service-provider-1' : 'talent-1');
+/profile/$ {;
   profileId ;
-}` ;
-}</Badge>) ) ;
-}</div>) ;
-}) : (<div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2" />) ;
-}</div>) ;
-}</div> </Link>) ;
-}'"
+` ;
+</Badge>) ;
+</div>) ;
+) : (<div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2" />) ;
+</div>) ;
+</div> </Link>) ;
+'"

@@ -8,7 +8,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (!apiKey) {;
       return res.status(200).json({ summary: baseSummary, provider: 'local' });
     }
-;
+
     const { OpenAI } = await import('openai'),;
     const client = new OpenAI({ apiKey }),;
     const prompt = `Summarize todays top 3 Zion Expo highlights, including multiverse launches, DAO decisions, and global talent trends. Context: ${JSON.stringify(top)}`,;
@@ -18,4 +18,3 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (e: any) {;
     return res.status(500).json({ error: e.message || 'Failed to generate highlights' });
   }
-}

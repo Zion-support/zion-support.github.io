@@ -8,13 +8,13 @@ import {;
   GraduationCap, Scale, Building, Factory, Camera,;
   Video, Music, Gamepad2, Sun, Moon, Wind, Droplets,;
   Code;
-} from 'lucide-react',;
+ from 'lucide-react',;
 const contactInfo = {;
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup.com',;
   address: '364 E Main St STE 1008 Middletown DE 19709',;
   website: 'https://ziontechgroup.com';
-},;
+,;
 const serviceCategories = [;
   {;
     title: ' 2028 Futuristic Innovations',;
@@ -52,7 +52,7 @@ const serviceCategories = [;
       { name: 'AI Legal Research Platform', href: '/ai-legal-research-platform' }
     ];
   }
-],;
+,;
 const companyLinks = [;
   { name: 'About Us', href: '/about', icon: Users },;
   { name: 'Case Studies', href: '/case-studies', icon: Briefcase },;
@@ -60,7 +60,7 @@ const companyLinks = [;
   { name: 'Careers', href: '/careers', icon: TrendingUp },;
   { name: 'Contact', href: '/contact', icon: MessageCircle },;
   { name: 'Support', href: '/support', icon: ShieldCheck }
-],;
+,;
 const resourceLinks = [;
   { name: 'Documentation', href: '/docs', icon: BookOpen },;
   { name: 'API Reference', href: '/api', icon: Cpu },;
@@ -68,13 +68,13 @@ const resourceLinks = [;
   { name: 'Mobile Apps', href: '/mobile', icon: Globe },;
   { name: 'Cloud Services', href: '/cloud', icon: Cloud },;
   { name: 'Security Center', href: '/security', icon: Shield }
-],;
+,;
 const socialLinks = [;
   { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Users },;
   { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: MessageCircle },;
   { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Video },;
   { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Code }
-],
+,
 
 export default function UltraFuturisticFooter2028() {
   return (
@@ -98,7 +98,7 @@ export default function UltraFuturisticFooter2028() {
                 <p className="text-sm text-purple-300">2028 Future Technology</p>
               </div>
             </div>
-            
+
             <p className="text-purple-200 mb-6 leading-relaxed">
               Leading the future with cutting-edge AI, quantum computing, and innovative technology solutions. 
               Transforming businesses through intelligent automation and next-generation infrastructure.
@@ -127,7 +127,7 @@ export default function UltraFuturisticFooter2028() {
             </div>;
             {/* Social Links */}
             <div className="flex space-x-4 mt-6">
-              {socialLinks.map((social) => (
+              {socialLinks.map(social) => (
                 <a
                   key={social.name}
                   href={social.href}
@@ -137,7 +137,7 @@ export default function UltraFuturisticFooter2028() {
                 >
                   <social.icon className="w-5 h-5" />
                 </a>
-              ))}
+              )}
             </div>;
           </div>;
           {/* Service Categories */}
@@ -146,11 +146,11 @@ export default function UltraFuturisticFooter2028() {
                Our Services
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {serviceCategories.map((category) => (
+              {serviceCategories.map(category) => (
                 <div key={category.title} className="space-y-3">
                   <h4 className="font-medium text-purple-300">{category.title}</h4>
                   <ul className="space-y-2">
-                    {category.services.map((service) => (
+                    {category.services.map(service) => (
                       <li key={service.name}>
                         <Link
                           href={service.href}
@@ -159,10 +159,10 @@ export default function UltraFuturisticFooter2028() {
                           {service.name}
                         </a>
                       </li>
-                    ))}
+                    )}
                   </ul>;
                 </div>;
-              ))}
+              )}
             </div>;
           </div>;
           {/* Quick Links */}
@@ -170,12 +170,12 @@ export default function UltraFuturisticFooter2028() {
             <h3 className="text-lg font-semibold text-white mb-6 border-b border-purple-500/30 pb-2">
               Quick Links
             </h3>
-            
+
             {/* Company Links */}
             <div className="mb-6">
               <h4 className="font-medium text-purple-300 mb-3">Company</h4>
               <ul className="space-y-2">
-                {companyLinks.map((link) => (
+                {companyLinks.map(link) => (
                   <li key={link.name}>
                     <Link
                       href={link.href}
@@ -185,14 +185,14 @@ export default function UltraFuturisticFooter2028() {
                       <span>{link.name}</span>
                     </a>
                   </li>
-                ))}
+                )}
               </ul>;
             </div>;
             {/* Resource Links */}
             <div className="mb-6">
               <h4 className="font-medium text-purple-300 mb-3">Resources</h4>
               <ul className="space-y-2">
-                {resourceLinks.map((link) => (
+                {resourceLinks.map(link) => (
                   <li key={link.name}>
                     <Link
                       href={link.href}
@@ -202,7 +202,7 @@ export default function UltraFuturisticFooter2028() {
                       <span>{link.name}</span>
                     </a>
                   </li>
-                ))}
+                )}
               </ul>;
             </div>;
             {/* Newsletter Signup */}
@@ -272,4 +272,3 @@ export default function UltraFuturisticFooter2028() {
       </div>
     </footer>
   )
-}

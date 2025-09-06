@@ -36,27 +36,27 @@ export default function RevolutionaryServicesPage() {
 let filteredServices = revolutionaryMicroSaasServices,
 
   // Category filter,
-if (selectedCategory !== 'All') {
+if (selectedCategory != 'All') {
     filteredServices = getRevolutionaryServicesByCategory(selectedCategory)
   }
 
   // Price range filter,
-if (priceRange !== 'All') {
-    const [min, max] = priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p)),
+if (priceRange != 'All') {
+    const [min, max] = priceRange.split('-').map(p => p = = '+' ? Infinity : parseInt(p),
     filteredServices = getRevolutionaryServicesByPriceRange(min, max)
   }
   // Search filter,
 if (searchQuery) {filteredServices = filteredServices.filter(service =>
-      service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      service.category.toLowerCase().includes(searchQuery.toLowerCase())
+      service.name.toLowerCase().includes(searchQuery.toLowerCase() ||
+      service.description.toLowerCase().includes(searchQuery.toLowerCase() ||
+      service.tagline.toLowerCase().includes(searchQuery.toLowerCase() ||
+      service.category.toLowerCase().includes(searchQuery.toLowerCase()
     )
   }
   // Sort services,
 filteredServices.sort(_(a, b) => {switch (sortBy) {
       case 'price':
-        return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, '')),      case 'popularity':
+        return parseFloat(a.price.replace('$', '').replace(, '') - parseFloat(b.price.replace('$', '').replace(, ''),      case 'popularity':
         return (b.popular ? 1 : 0) - (a.popular ? 1 : 0),
       case 'category':
         return a.category.localeCompare(b.category),
@@ -65,8 +65,7 @@ filteredServices.sort(_(a, b) => {switch (sortBy) {
         const bRoi = parseFloat(b.roi.match(/\d+/)?.[0] || '0'),
         return bRoi - aRoi,
       default: return a.name.localeCompare(b.name)
-    }
-  }),
+    }),
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
@@ -83,83 +82,81 @@ const enhancedCategories = [
       name: 'Quantum AI & Cognitive Computing',
       description: 'Revolutionary quantum AI solutions with human-level reasoning capabilities',
       icon: <Brain className=&quot;w-6 h-6&quot; />,
-      count: revolutionaryMicroSaasServices.filter(s => s.category === 'Quantum AI & Cognitive Computing').length,
+      count: revolutionaryMicroSaasServices.filter(s => s.category = = 'Quantum AI & Cognitive Computing').length,
       color: 'from-purple-500 to-indigo-600'
     },
     {
       name: 'Autonomous Manufacturing & Industry 4.0',
       description: 'Next-generation autonomous manufacturing with zero human intervention',
       icon: <Factory className=&quot;w-6 h-6&quot; />,
-      count: revolutionaryMicroSaasServices.filter(s => s.category === 'Autonomous Manufacturing & Industry 4.0').length,
+      count: revolutionaryMicroSaasServices.filter(s => s.category = = 'Autonomous Manufacturing & Industry 4.0').length,
       color: 'from-orange-500 to-red-600'
     },
     {
       name: 'Quantum Blockchain & DeFi',
       description: 'Quantum-secured blockchain platforms with infinite scalability',
       icon: <Globe className=&quot;w-6 h-6&quot; />,
-      count: revolutionaryMicroSaasServices.filter(s => s.category === 'Quantum Blockchain & DeFi').length,
+      count: revolutionaryMicroSaasServices.filter(s => s.category = = 'Quantum Blockchain & DeFi').length,
       color: 'from-green-500 to-emerald-600'
     },
     {
       name: 'AI Biomedical Research & Drug Discovery',
       description: 'AI-powered platforms for accelerated drug discovery and medical research',
       icon: <FlaskIcon className=&quot;w-6 h-6&quot; />,
-      count: revolutionaryMicroSaasServices.filter(s => s.category === 'AI Biomedical Research & Drug Discovery').length,
+      count: revolutionaryMicroSaasServices.filter(s => s.category = = 'AI Biomedical Research & Drug Discovery').length,
       color: 'from-blue-500 to-indigo-600'
     },
     {
       name: 'Quantum Cybersecurity & Threat Detection',
       description: 'Quantum-resistant cybersecurity with AI-powered threat detection',
       icon: <ShieldCheck className=&quot;w-6 h-6&quot; />,
-      count: revolutionaryMicroSaasServices.filter(s => s.category === 'Quantum Cybersecurity & Threat Detection').length,
+      count: revolutionaryMicroSaasServices.filter(s => s.category = = 'Quantum Cybersecurity & Threat Detection').length,
       color: 'from-red-500 to-pink-600'
     },
     {
       name: 'Space Technology & Satellite Optimization',
       description: 'Revolutionary platforms for space exploration and satellite optimization',
       icon: <Rocket className=&quot;w-6 h-6&quot; />,
-      count: revolutionaryMicroSaasServices.filter(s => s.category === 'Space Technology & Satellite Optimization').length,
+      count: revolutionaryMicroSaasServices.filter(s => s.category = = 'Space Technology & Satellite Optimization').length,
       color: 'from-indigo-500 to-purple-600'
     },
     {
       name: 'AI Content Creation & Marketing',
       description: 'Quantum-powered content creation at infinite scale',
       icon: <FileText className=&quot;w-6 h-6&quot; />,
-      count: revolutionaryMicroSaasServices.filter(s => s.category === 'AI Content Creation & Marketing').length,
+      count: revolutionaryMicroSaasServices.filter(s => s.category = = 'AI Content Creation & Marketing').length,
       color: 'from-teal-500 to-cyan-600'
     },
     {
       name: 'Quantum Computing as a Service',
       description: 'Enterprise quantum computing with real quantum processors',
       icon: <Cpu className=&quot;w-6 h-6&quot; />,
-      count: revolutionaryMicroSaasServices.filter(s => s.category === 'Quantum Computing as a Service').length,
+      count: revolutionaryMicroSaasServices.filter(s => s.category = = 'Quantum Computing as a Service').length,
       color: 'from-violet-500 to-purple-600'
     },
     {
       name: 'Autonomous Vehicles & Smart Transportation',
       description: 'AI platforms for autonomous vehicles and smart transportation',
       icon: <CarIcon className=&quot;w-6 h-6&quot; />,
-      count: revolutionaryMicroSaasServices.filter(s => s.category === 'Autonomous Vehicles & Smart Transportation').length,
+      count: revolutionaryMicroSaasServices.filter(s => s.category = = 'Autonomous Vehicles & Smart Transportation').length,
       color: 'from-emerald-500 to-green-600'
     },
     {
       name: 'Smart Energy & Renewable Energy',
       description: 'AI platforms for smart energy grids and renewable energy optimization',
       icon: <LeafIcon className=&quot;w-6 h-6&quot; />,
-      count: revolutionaryMicroSaasServices.filter(s => s.category === 'Smart Energy & Renewable Energy').length,
+      count: revolutionaryMicroSaasServices.filter(s => s.category = = 'Smart Energy & Renewable Energy').length,
       color: 'from-yellow-500 to-orange-600'
     }
   ],
   const containerVariants = {hidden: { opacity: 0},
     visible: {opacity: 1, transition: {
         staggerChildren: 0.1}
-    }
   },
 
   const itemVariants = {hidden: { y: 20, opacity: 0},
     visible: {y: 0, opacity: 1, transition: {
         duration: 0.5}
-    }
   },
 
   return (
@@ -183,9 +180,9 @@ const enhancedCategories = [
             <div className=&quot;max-w-5xl mx-auto&quot;>
               <motion.h1,
 className=&quot;text-6xl md:text-8xl font-bold mb-8 futuristic-glow&quot;
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}              >
+                initial={ opacity: 0, y: 30 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.8 }              >
                 <span className=&quot;bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent&quot;>
                   Revolutionary
                 </span>
@@ -194,19 +191,19 @@ className=&quot;text-6xl md:text-8xl font-bold mb-8 futuristic-glow&quot;
               </motion.h1>
               <motion.p,
 className=&quot;text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed&quot;
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}              >
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.8, delay: 0.2 }              >
                 Experience the future of technology with our revolutionary micro SaaS platform. 
                 Quantum AI, autonomous systems, space technology, and cutting-edge solutions that redefine what's possible.
               </motion.p>
-              
+
               {_/* Service Count Stats */}
               <motion.div,
 className=&quot;grid grid-cols-2 md:grid-cols-4 gap-6 mb-16&quot;
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.8, delay: 0.4 }
               >
                 <div className=&quot;text-center&quot;>
                   <div className=&quot;text-3xl font-bold text-cyan-400 mb-2&quot;>{revolutionaryMicroSaasServices.length}+</div>
@@ -228,9 +225,9 @@ className=&quot;grid grid-cols-2 md:grid-cols-4 gap-6 mb-16&quot;
               {_/* CTA Buttons */}
               <motion.div,
 className=&quot;flex flex-col sm:flex-row gap-4 justify-center items-center&quot;
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.8, delay: 0.6 }
               >
                 <Button,
 variant=&quot;primary&quot; 
@@ -279,18 +276,18 @@ className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 ga
               variants={containerVariants}
               initial=&quot;hidden&quot;
               whileInView=&quot;visible&quot;
-              viewport={{ once: true }}            >
+              viewport={ once: true }            >
               {enhancedCategories.map(_(category, index) => (_<motion.div,
 key={category.name}
                   variants={itemVariants}
-                  whileHover={_{ scale: 1.05}}
-                  whileTap={_{ scale: 0.95}}
+                  whileHover={_{ scale: 1.05}
+                  whileTap={_{ scale: 0.95}
                 >
                   <UltraFuturisticCard,
 variant=&quot;quantum-advanced&quot;
                     size=&quot;small&quot;
                     className=&quot;text-center cursor-pointer h-full&quot;
-                    onClick={() => setSelectedCategory(category.name === selectedCategory ? 'All' : category.name)}                  >
+                    onClick={() => setSelectedCategory(category.name = = selectedCategory ? 'All' : category.name)}                  >
                     <div className={_`w-12 h-12 mx-auto mb-4 rounded-full bg-gradient-to-br ${category.color} flex items-center justify-center text-white`}>
                       {category.icon}
                     </div>
@@ -299,20 +296,20 @@ variant=&quot;quantum-advanced&quot;
                     <div className=&quot;text-2xl font-bold text-cyan-400&quot;>{category.count}</div>
                     <div className=&quot;text-xs text-gray-500&quot;>Services</div>                  </UltraFuturisticCard>
                 </motion.div>
-              ))}
+              )}
             </motion.div>;
           </div>;
         </section>;
-;
+
         {/* Popular Services Showcase */}
         <section className=&quot;py-16&quot;>
           <div className=&quot;container mx-auto px-4&quot;>
             <motion.div,
 className=&quot;text-center mb-12&quot;
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}            >
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              viewport={ once: true }
+              transition={ duration: 0.6 }            >
               <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-4&quot;>
                 <span className=&quot;bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent&quot;>
                   Most Popular
@@ -330,11 +327,11 @@ className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;
               variants={containerVariants}
               initial=&quot;hidden&quot;
               whileInView=&quot;visible&quot;
-              viewport={{ once: true }}            >
+              viewport={ once: true }            >
               {popularServices.slice(0, 6).map(_(service, index) => (_<motion.div,
 key={service.id}
                   variants={itemVariants}
-                  whileHover={_{ y: -10}}
+                  whileHover={_{ y: -10}
                 >
                   <UltraFuturisticCard,
 variant={service.variant as any}
@@ -349,13 +346,13 @@ variant={service.variant as any}
                       <div className=&quot;text-3xl font-bold text-cyan-400 mb-2&quot;>{service.price}</div>
                       <div className=&quot;text-sm text-gray-400&quot;>{service.period}</div>
                     </div>
-                    
+
                     <div className=&quot;space-y-3 mb-6&quot;>
-                      {service.features.slice(0, 4).map((feature, idx) => (
+                      {service.features.slice(0, 4).map(feature, idx) => (
                         <div key={idx} className=&quot;flex items-center gap-2&quot;>
                           <Check className=&quot;w-4 h-4 text-green-400 flex-shrink-0&quot; />
                           <span className=&quot;text-sm text-gray-300&quot;>{feature}</span>                        </div>
-                      ))}
+                      )}
                     </div>
 
                     <div className=&quot;text-center&quot;>
@@ -370,21 +367,21 @@ variant=&quot;primary&quot;
                     </div>
                   </UltraFuturisticCard>
                 </motion.div>
-              ))}
+              )}
             </motion.div>;
           </div>;
         </section>;
-;
+
         {/* Services Grid */}
         <section id=&quot;services-grid&quot; className=&quot;py-16&quot;>
           <div className=&quot;container mx-auto px-4&quot;>
             {/* Filters and Controls */}
             <motion.div,
 className=&quot;mb-8&quot;
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}            >
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              viewport={ once: true }
+              transition={ duration: 0.6 }            >
               <div className=&quot;flex flex-col lg:flex-row gap-6 items-center justify-between&quot;>
                 <div className=&quot;flex flex-wrap gap-4&quot;>
                   <select,
@@ -394,28 +391,28 @@ value={selectedCategory}
                   >
                     <option value=&quot;All&quot;>All Categories</option>
                     {revolutionaryServiceCategories.map(category => (
-                      <option key={category} value={category}>{category}</option>                    ))}
+                      <option key={category} value={category}>{category}</option>                    )}
                   </select>
-                  
+
                   <select,
 value={priceRange}
                     onChange={(e) => setPriceRange(e.target.value)}
                     className=&quot;px-4 py-2 bg-slate-800 border border-purple-400/30 rounded-lg text-white focus:outline-none focus:border-purple-400&quot;                  >
                     {priceRanges.map(range => (
                       <option key={range.value} value={range.value}>{range.label}</option>
-                    ))}
+                    )}
                   </select>
-                  
+
                   <select,
 value={sortBy}
                     onChange={(e) => setSortBy(e.target.value)}
                     className=&quot;px-4 py-2 bg-slate-800 border border-green-400/30 rounded-lg text-white focus:outline-none focus:border-green-400&quot;                  >
                     {sortOptions.map(option => (
                       <option key={option.value} value={option.value}>{option.label}</option>
-                    ))}
+                    )}
                   </select>
                 </div>
-                
+
                 <div className=&quot;flex items-center gap-4&quot;>
                   <div className=&quot;relative&quot;>
                     <Search className=&quot;absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400&quot; />
@@ -426,17 +423,17 @@ type=&quot;text&quot;
                       onChange={(e) => setSearchQuery(e.target.value)}
                       className=&quot;pl-10 pr-4 py-2 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 w-64&quot;                    />
                   </div>
-                  
+
                   <div className=&quot;flex border border-gray-600 rounded-lg overflow-hidden&quot;>
                     <button,
 onClick={_() => setViewMode('grid')}
-                      className={_`px-3 py-2 ${viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
+                      className={_`px-3 py-2 ${viewMode = = 'grid' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
                     >
                       <Grid className=&quot;w-4 h-4&quot; />
                     </button>
                     <button,
 onClick={_() => setViewMode('list')}
-                      className={_`px-3 py-2 ${viewMode === 'list' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
+                      className={_`px-3 py-2 ${viewMode = = 'list' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
                     >
                       <List className=&quot;w-4 h-4&quot; />
                     </button>
@@ -447,26 +444,26 @@ onClick={_() => setViewMode('list')}
 
             {_/* Services Display */}
             <motion.div,
-className={viewMode === 'grid' 
+className={viewMode = = 'grid' 
                 ? &quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;
                 : &quot;space-y-6&quot
               }
               variants={containerVariants}
               initial=&quot;hidden&quot;
               whileInView=&quot;visible&quot;
-              viewport={{ once: true }}            >
+              viewport={ once: true }            >
               {filteredServices.map(_(service, index) => (_<motion.div,
 key={service.id}
                   variants={itemVariants}
-                  whileHover={_{ y: -5}}
+                  whileHover={_{ y: -5}
                 >
                   <UltraFuturisticCard,
 variant={service.variant as any}
-                    size={viewMode === 'grid' ? 'large' : 'medium'}
-                    className={_`h-full cursor-pointer ${viewMode === 'list' ? 'flex flex-col md:flex-row' : ''}`}
+                    size={viewMode = = 'grid' ? 'large' : 'medium'}
+                    className={_`h-full cursor-pointer ${viewMode = = 'list' ? 'flex flex-col md:flex-row' : ''}`}
                     onClick={_() => setSelectedService(service)}
                   >
-                    {viewMode === 'grid' ? (
+                    {viewMode = = 'grid' ? (
                       // Grid View
                       <div className=&quot;text-center&quot;>
                         <div className=&quot;text-4xl mb-4&quot;>{service.icon}</div>
@@ -474,13 +471,13 @@ variant={service.variant as any}
                         <p className=&quot;text-gray-300 mb-4 text-sm&quot;>{service.tagline}</p>
                         <div className=&quot;text-2xl font-bold text-cyan-400 mb-2&quot;>{service.price}</div>
                         <div className=&quot;text-sm text-gray-400 mb-4&quot;>{service.period}</div>
-                        
+
                         <div className=&quot;space-y-2 mb-6&quot;>
-                          {service.features.slice(0, 3).map((feature, idx) => (
+                          {service.features.slice(0, 3).map(feature, idx) => (
                             <div key={idx} className=&quot;flex items-center gap-2 text-sm&quot;>
                               <Check className=&quot;w-3 h-3 text-green-400 flex-shrink-0&quot; />
                               <span className=&quot;text-gray-300&quot;>{feature}</span>                            </div>
-                          ))}
+                          )}
                         </div>
 
                         <div className=&quot;text-center&quot;>
@@ -508,16 +505,16 @@ variant=&quot;primary&quot;
                               <div className=&quot;text-2xl font-bold text-cyan-400&quot;>{service.price}</div>
                               <div className=&quot;text-sm text-gray-400&quot;>{service.period}</div>                            </div>
                           </div>
-                          
+
                           <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-4 mb-4&quot;>
                             <div>
                               <h4 className=&quot;text-sm font-semibold text-cyan-400 mb-2&quot;>Key Features</h4>
                               <div className=&quot;space-y-1&quot;>
-                                {service.features.slice(0, 4).map((feature, idx) => (
+                                {service.features.slice(0, 4).map(feature, idx) => (
                                   <div key={idx} className=&quot;flex items-center gap-2 text-sm&quot;>
                                     <Check className=&quot;w-3 h-3 text-green-400 flex-shrink-0&quot; />
                                     <span className=&quot;text-gray-300&quot;>{feature}</span>                                  </div>
-                                ))}
+                                )}
                               </div>
                             </div>
                             <div>
@@ -528,7 +525,7 @@ variant=&quot;primary&quot;
                                 <div><span className=&quot;text-gray-400&quot;>Growth:</span> {service.growthRate}</div>                              </div>
                             </div>
                           </div>
-                          
+
                           <div className=&quot;flex gap-2&quot;>
                                                          <Button,
 variant=&quot;primary&quot; 
@@ -550,15 +547,15 @@ variant=&quot;futuristic&quot;
                     )}
                   </UltraFuturisticCard>;
                 </motion.div>;
-              ))}
+              )}
             </motion.div>
 
-            {filteredServices.length === 0 && (
+            {filteredServices.length = = 0 && (
               <motion.div,
 className=&quot;text-center py-16&quot;
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.6 }}              >
+                initial={ opacity: 0 }
+                animate={ opacity: 1 }
+                transition={ duration: 0.6 }              >
                 <div className=&quot;text-6xl mb-4&quot;></div>
                 <h3 className=&quot;text-2xl font-bold text-white mb-2&quot;>No Services Found</h3>
                 <p className=&quot;text-gray-400 mb-6&quot;>Try adjusting your search criteria or filters.</p>
@@ -568,7 +565,7 @@ variant=&quot;primary&quot;
                              setSearchQuery(''),
                              setSelectedCategory('All'),
                              setPriceRange('All')
-                           }}                         >
+                           }                         >
                            Clear Filters
                          </Button>
               </motion.div>
@@ -581,16 +578,16 @@ variant=&quot;primary&quot;
           {selectedService && (
             <motion.div,
 className=&quot;fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4&quot;
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
+              initial={ opacity: 0 }
+              animate={ opacity: 1 }
+              exit={ opacity: 0 }
               onClick={() => setSelectedService(null)}
             >
               <motion.div,
 className=&quot;bg-slate-900 rounded-2xl border border-cyan-400/30 max-w-4xl w-full max-h-[90vh] overflow-y-auto&quot;
-                initial={{ scale: 0.9, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                exit={{ scale: 0.9, opacity: 0 }}
+                initial={ scale: 0.9, opacity: 0 }
+                animate={ scale: 1, opacity: 1 }
+                exit={ scale: 0.9, opacity: 0 }
                 onClick={(e) => e.stopPropagation()}
               >
                 <div className=&quot;p-8&quot;>
@@ -605,7 +602,7 @@ className=&quot;bg-slate-900 rounded-2xl border border-cyan-400/30 max-w-4xl w-f
                     <button,
 onClick={() => setSelectedService(null)}
                       className=&quot;text-gray-400 hover:text-white text-2xl&quot;                    >
-                      
+
                     </button>
                   </div>
 
@@ -619,7 +616,7 @@ onClick={() => setSelectedService(null)}
                           <div className=&quot;text-2xl font-bold text-white&quot;>{selectedService.price}{selectedService.period}</div>
                           <div className=&quot;text-sm text-gray-400&quot;>{selectedService.marketPrice}</div>
                         </div>
-                        
+
                         <div>
                           <h4 className=&quot;text-sm font-semibold text-green-400 mb-2&quot;>ROI & Market</h4>
                           <div className=&quot;text-sm text-gray-300 space-y-1&quot;>
@@ -632,38 +629,38 @@ onClick={() => setSelectedService(null)}
 
                     <div>
                       <h3 className=&quot;text-xl font-semibold text-cyan-400 mb-4&quot;>Features & Capabilities</h3>
-                      
+
                       <div className=&quot;space-y-4&quot;>
                         <div>
                           <h4 className=&quot;text-sm font-semibold text-purple-400 mb-2&quot;>Key Features</h4>
                           <div className=&quot;space-y-2&quot;>
-                            {selectedService.features.map((feature, idx) => (
+                            {selectedService.features.map(feature, idx) => (
                               <div key={idx} className=&quot;flex items-center gap-2 text-sm&quot;>
                                 <Check className=&quot;w-3 h-3 text-green-400 flex-shrink-0&quot; />
                                 <span className=&quot;text-gray-300&quot;>{feature}</span>                              </div>
-                            ))}
+                            )}
                           </div>
                         </div>
-                        
+
                         <div>
                           <h4 className=&quot;text-sm font-semibold text-green-400 mb-2&quot;>Benefits</h4>
                           <div className=&quot;space-y-2&quot;>
-                            {selectedService.benefits.map((benefit, idx) => (
+                            {selectedService.benefits.map(benefit, idx) => (
                               <div key={idx} className=&quot;flex items-center gap-2 text-sm&quot;>
                                 <Star className=&quot;w-3 h-3 text-yellow-400 flex-shrink-0&quot; />
                                 <span className=&quot;text-gray-300&quot;>{benefit}</span>                              </div>
-                            ))}
+                            )}
                           </div>
                         </div>
-                        
+
                         <div>
                           <h4 className=&quot;text-sm font-semibold text-blue-400 mb-2&quot;>Capabilities</h4>
                           <div className=&quot;space-y-2&quot;>
-                            {selectedService.capabilities.map((capability, idx) => (
+                            {selectedService.capabilities.map(capability, idx) => (
                               <div key={idx} className=&quot;flex items-center gap-2 text-sm&quot;>
                                 <Zap className=&quot;w-3 h-3 text-cyan-400 flex-shrink-0&quot; />
                                 <span className=&quot;text-gray-300&quot;>{capability}</span>                              </div>
-                            ))}
+                            )}
                           </div>
                         </div>
                       </div>
@@ -675,7 +672,7 @@ onClick={() => setSelectedService(null)}
                       <div className=&quot;text-sm text-gray-400&quot;>
                         <div>Setup Time: {selectedService.setupTime}</div>
                         <div>Trial: {selectedService.trialDays} days</div>                      </div>
-                      
+
                       <div className=&quot;flex gap-4&quot;>
                                                  <Button,
 variant=&quot;primary&quot;
@@ -698,23 +695,23 @@ variant="futuristic"
             </motion.div>
           )}
         </AnimatePresence>;
-;
+
         {/* Contact Section */}
         <section className=&quot;py-20&quot;>
           <div className=&quot;container mx-auto px-4 text-center&quot;>
             <motion.div,
 className=&quot;max-w-4xl mx-auto&quot;
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}            >
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              viewport={ once: true }
+              transition={ duration: 0.8 }            >
               <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-6&quot;>
                 Ready to Experience the Future?
               </h2>
               <p className=&quot;text-xl text-gray-300 mb-8&quot;>
                 Join thousands of companies already transforming their business with our revolutionary micro SaaS services.
               </p>
-              
+
               <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center items-center mb-8&quot;>
                                  <Button,
 variant="primary" 

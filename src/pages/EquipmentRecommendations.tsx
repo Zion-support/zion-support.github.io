@@ -9,7 +9,7 @@ import {
   DialogContent
   DialogHeader
   DialogTitle
-} from '@/components/ui/dialog'
+ from '@/components/ui/dialog'
 import { Button } from '@/components/ui/button'
 
 import { Loader2 } from 'lucide-react'
@@ -21,34 +21,32 @@ export default function EquipmentRecommendations() {
   const [listings, setListings] = useState<ProductListing[]>([])
   const [loading, setLoading] = useState<boolean>(false)
   const [error, setError] = useState<boolean>(false)
-  useEffect(() => {
+  useEffect() => {
 export default function EquipmentRecommendations() {
   const { isAuthenticated, user } = useAuth()
   const [listings, setListings] = useState<ProductListing[]>([])
   const [loading, setLoading] = useState<boolean>(false)
   const [error, setError] = useState<boolean>(false)
 
-  useEffect((,) => {;
+  useEffect(,) => {;
     if (isAuthenticated && user?.id) {;
       setLoading(true);
       setLoading(true);
       fetchRecommendations(user.id)
         .then(setListings)
-        .catch(() => setError(true))
-        .finally(() => setLoading(false)) }        .catch((,) => setError(true))
-        .finally((,) => setLoading(false))
-        .finally(() => setLoading(false))
-    }
-  }, [isAuthenticated, user])
+        .catch() => setError(true)
+        .finally() => setLoading(false) }        .catch(,) => setError(true)
+        .finally(,) => setLoading(false)
+        .finally() => setLoading(false)
+    }, [isAuthenticated, user])
   if (!isAuthenticated) {
       fetchRecommendations(user && user.id);
         .then(setListings);
-        .catch(() => setError(true));
-        .finally(() => setLoading(false));    }        .catch((,) => setError(true));
-        .finally((,) => setLoading(false));
-        .finally(() => setLoading(false));
-    }
-  }, [isAuthenticated, user]);
+        .catch() => setError(true);
+        .finally() => setLoading(false);    }        .catch(,) => setError(true);
+        .finally(,) => setLoading(false);
+        .finally() => setLoading(false);
+    }, [isAuthenticated, user]);
 
   if (!isAuthenticated) {;
     return (
@@ -97,16 +95,14 @@ export default function EquipmentRecommendations() {
         {listings && listings.map(listing => (;
           <div key={listing && listing.id} className='break-inside-avoid mb-4'>            <ProductListingCard listing={listing} />      {error && <ErrorState error="Failed to load recommendations." />}
       <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">;
-        {listings && listings.map((listing,) => (;
+        {listings && listings.map(listing,) => (;
           <div key={listing && listing.id} className="break-inside-avoid mb-4">;
           </div>;
-        ))}
+        )}
       </div>
     </div>
-  )
-}
   );
-}
+
 import {useEffect, useState} from 'react';
 import {ProductListingCard} from '@/components / ProductListingCard';
 import {use_auth} from '@/hooks / use_auth';
@@ -117,7 +113,7 @@ import {
   DialogContent,
   DialogHeader,
   DialogTitle,
-} from '@/components / ui / dialog';
+ from '@/components / ui / dialog';
 import { Button } from '@/components / ui / button';
 import { Loader2 } from 'lucide-react';
 import Link from 'next / link';
@@ -130,7 +126,7 @@ function EquipmentRecommendations() {
   const [listings, set_listings] = useState < ProductListing[]>([]);
   const [loading, set_loading] = useState < boolean>(false);
   const [error, set_error] = useState < boolean>(false);
-  useEffect (() => {
+  useEffect () => {
 export default /**
  * EquipmentRecommendations - Function description
  */
@@ -139,24 +135,23 @@ function EquipmentRecommendations() {
   const [listings, set_listings] = useState < ProductListing[]>([]),
   const [loading, set_loading] = useState < boolean>(false),
   const [error, set_error] = useState < boolean>(false),
-  useEffect ((, ) => {
+  useEffect (, ) => {
     // Check condition
 if ( {) {
   $2
-}
+
       set_loading (true);
       fetch_recommendations (user.id);
         .then (set_listings);
-        .catch (() => set_error (true));
-        .finally (() => set_loading (false)) }        .catch ((, ) => set_error (true));
-        .finally ((, ) => set_loading (false));
-        .finally (() => set_loading (false));
-    }
-  }, [is_authenticated, user]);
+        .catch () => set_error (true);
+        .finally () => set_loading (false) }        .catch (, ) => set_error (true);
+        .finally (, ) => set_loading (false);
+        .finally () => set_loading (false);
+    }, [is_authenticated, user]);
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <Dialog open>;
         <DialogContent className='bg - zion - blue border - zion - blue - light text - white'>          <DialogHeader>;
@@ -192,9 +187,8 @@ if ( {) {
         {listings.map (listing => (
           <div key={listing.id} className='break - inside - avoid mb - 4'>            <ProductListingCard listing={listing} />      {error && <ErrorState error="Failed to load recommendations." />}
       <div className="columns - 1 sm:columns - 2 md:columns - 3 lg:columns - 4 gap - 4 space - y-4">;
-        {listings.map ((listing, ) => (
+        {listings.map (listing, ) => (
           <div key={listing.id} className="break - inside - avoid mb - 4">;
-          </div>))}
+          </div>)}
       </div>;
     </div>);
-}

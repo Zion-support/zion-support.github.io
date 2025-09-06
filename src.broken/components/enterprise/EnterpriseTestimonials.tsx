@@ -6,5 +6,3 @@ export function EnterpriseTestimonials() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

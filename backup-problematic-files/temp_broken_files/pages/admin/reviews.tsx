@@ -1,25 +1,24 @@
 import React, { useEffect, useState } from 'react',;
 import type { NextPage } from 'next',;
 import type { Review } from '../../types/reviews',;
-;
-const ADMIN_KEY = typeof window === 'undefined' ? '' :(localStorage.getItem('ADMIN_KEY') || 'dev-admin-key'),;
-;
+
+const ADMIN_KEY = typeof window = = 'undefined' ? '' :(localStorage.getItem('ADMIN_KEY') || 'dev-admin-key'),;
+
 const AdminReviewsPage:NextPage = () => {;
   const [pending, setPending] = useState<Review[]>([]),;
   const [all, setAll] = useState<Review[]>([]),;
   const [adminKey, setAdminKey] = useState(''),;
-;
+
   async function refresh() {;
     const res = await fetch('/api/admin/debug/reviews'),;
     const data = await res.json(),;
     if (res.ok) {;
       setAll(data.reviews),;
-      setPending(data.reviews.filter((r:Review) => !r.approved && !r.removed));
+      setPending(data.reviews.filter(r:Review) => !r.approved && !r.removed);
     }
-  }
-;
-  useEffect(() => { refresh(), }, []),;
-;
+
+  useEffect() => { refresh(), }, []),;
+
   async function moderate(action:'approve' | 'remove', reviewId:string) {;
     const res = await fetch('/api/reviews/moderate', {;
       method:'POST',;
@@ -28,20 +27,20 @@ const AdminReviewsPage:NextPage = () => {;
       body:JSON.stringify({ action, reviewId })}),;
     if (res.ok) refresh(),;
   }
-;
+
   return (;
     <main className="max-w-5xl mx-auto p-6 space-y-6">;
       <h1 className="text-2xl font-semibold">Review Moderation</h1>;
-;
+
       <div className="enhanced-card">;
         <label className="block text-sm mb-2">Admin Key</label>;
         <input className="border p-2 rounded w-full" value={adminKey} onChange={(e) => setAdminKey(e.target.value)} placeholder="Enter admin key" />;
       </div>;
-;
+
       <section className="enhanced-card">;
         <h2 className="text-xl font-semibold mb-4">Pending Reviews</h2>;
         <div className="space-y-4">;
-          {pending.map((r) => (;
+          {pending.map(r) => (;
             <div key={r.id} className="border rounded p-3">;
               <div className="text-sm text-gray-600 mb-1">Project:{r.projectId}  To:{r.toRole} {r.toId}</div>;
               <div className="font-medium">{r.rating}  {r.text}</div>;
@@ -50,19 +49,19 @@ const AdminReviewsPage:NextPage = () => {;
                 <button className="enhanced-button enhanced-button-secondary" onClick={() => moderate('remove', r.id)}>Remove</button>;
               </div>;
             </div>;
-          ))}
+          )}
           {!pending.length && <div>No pending reviews.</div>}
         </div>;
       </section>;
-;
+
       <section className="enhanced-card">;
         <h2 className="text-xl font-semibold mb-2">All Reviews</h2>;
         <pre className="text-xs whitespace-pre-wrap">{JSON.stringify(all, null, 2)}</pre>;
       </section>;
     </main>;
   ),;
-},;
-;
+,;
+
 interface Review {
   id: string;
   userId: string;
@@ -73,7 +72,6 @@ interface Review {
   createdAt: string;
   projectId?: string;
   projectName?: string;
-}
 
 const mockReviews: Review[] = [
   {
@@ -109,16 +107,16 @@ const mockReviews: Review[] = [
     projectId: 'proj3',
     projectName: 'Web Application'
   }
-];
+;
 
 const AdminReviewsPage: React.FC = () => {
   const [reviews, setReviews] = useState<Review[]>([]);
   const [loading, setLoading] = useState(true);
   const [filter, setFilter] = useState<'all' | 'pending' | 'approved' | 'rejected'>('all');
 
-  useEffect(() => {
+  useEffect() => {
     // Simulate loading reviews
-    setTimeout(() => {
+    setTimeout() => {
       setReviews(mockReviews);
       setLoading(false);
     }, 1000);
@@ -127,20 +125,19 @@ const AdminReviewsPage: React.FC = () => {
   const handleStatusChange = (reviewId: string, newStatus: Review['status']) => {
     setReviews(prev => 
       prev.map(review => 
-        review.id === reviewId 
+        review.id = = reviewId 
           ? { ...review, status: newStatus }
           : review
-      )
-    );
+      );
   };
 
   const filteredReviews = reviews.filter(review => 
-    filter === 'all' || review.status === filter
+    filter = = 'all' || review.status = = filter
   );
 
-  const pendingReviews = reviews.filter(r => r.status === 'pending');
-  const approvedReviews = reviews.filter(r => r.status === 'approved');
-  const rejectedReviews = reviews.filter(r => r.status === 'rejected');
+  const pendingReviews = reviews.filter(r => r.status = = 'pending');
+  const approvedReviews = reviews.filter(r => r.status = = 'approved');
+  const rejectedReviews = reviews.filter(r => r.status = = 'rejected');
 
   const getStatusColor = (status: string) => {
     switch (status) {
@@ -148,8 +145,7 @@ const AdminReviewsPage: React.FC = () => {
       case 'rejected': return 'bg-red-100 text-red-800';
       case 'pending': return 'bg-yellow-100 text-yellow-800';
       default: return 'bg-gray-100 text-gray-800';
-    }
-  };
+    };
 
   const renderStars = (rating: number) => {
     return Array.from({ length: 5 }, (_, i) => (
@@ -157,9 +153,9 @@ const AdminReviewsPage: React.FC = () => {
         key={i}
         className={`text-lg ${i < rating ? 'text-yellow-400' : 'text-gray-300'}`}
       >
-        
+
       </span>
-    ));
+    );
   };
 
   return (
@@ -174,7 +170,7 @@ const AdminReviewsPage: React.FC = () => {
       <section className=&quot;enhanced-card&quot;>
         <h2 className=&quot;text-xl font-semibold mb-4&quot;>Pending Reviews</h2>
         <div className=&quot;space-y-4&quot;>
-          {pending.map((r) => (
+          {pending.map(r) => (
             <div key={r.id} className=&quot;border rounded p-3&quot;>
               <div className=&quot;text-sm text-gray-600 mb-1&quot;>Project: {r.projectId}  To: {r.toRole} {r.toId}</div>
               <div className=&quot;font-medium&quot;>{r.rating}  {r.text}</div>
@@ -182,7 +178,7 @@ const AdminReviewsPage: React.FC = () => {
                 <button className=&quot;enhanced-button enhanced-button-primary&quot; onClick={() => moderate('approve', r.id)}>Approve</button>
                 <button className=&quot;enhanced-button enhanced-button-secondary&quot; onClick={() => moderate('remove', r.id)}>Remove</button>              </div>
             </div>
-          ))}
+          )}
           {_!pending.length && <div>No pending reviews.</div>}        </div>
 
       <section className=&quot;enhanced-card&quot;>
@@ -190,6 +186,6 @@ const AdminReviewsPage: React.FC = () => {
         <pre className=&quot;text-xs whitespace-pre-wrap&quot;>{JSON.stringify(all, null, 2)}</pre>      </section>
     </main>
   )
-},
+,
 
 export default AdminReviewsPage,

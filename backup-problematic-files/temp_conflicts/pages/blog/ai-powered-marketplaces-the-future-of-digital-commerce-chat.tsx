@@ -1,7 +1,7 @@
 
 import Head from 'next/head',;
 import Link from 'next/link',;
-;
+
 const AiPoweredMarketplacesTheFutureOfDigitalCommerceChat = () => {;
   return (;
     <div>;
@@ -9,7 +9,6 @@ const AiPoweredMarketplacesTheFutureOfDigitalCommerceChat = () => {;
         <title>AiPoweredMarketplacesTheFutureOfDigitalCommerceChat - Zion Tech Solutions</title>;
         <meta name="description" content="AiPoweredMarketplacesTheFutureOfDigitalCommerceChat blog post" />;
       </Head>;
-      ;
       <main>;
         <h1>AiPoweredMarketplacesTheFutureOfDigitalCommerceChat</h1>;
         <p>Blog content coming soon...</p>;
@@ -17,6 +16,6 @@ const AiPoweredMarketplacesTheFutureOfDigitalCommerceChat = () => {;
       </main>;
     </div>;
   ),;
-},;
-;
+,;
+
 export default AiPoweredMarketplacesTheFutureOfDigitalCommerceChat,

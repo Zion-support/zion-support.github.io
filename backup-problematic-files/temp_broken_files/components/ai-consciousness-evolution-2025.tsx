@@ -7,44 +7,42 @@ import {
   CheckCircle, Clock, Award, Target, Globe, Sparkles,
   Cpu, Lock, Cloud, BarChart3, Eye, Heart, Lightbulb,
   ArrowRight, Phone, Mail, MapPin, Globe as GlobeIcon
-} from 'lucide-react',
+ from 'lucide-react',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-},
+,
 
 const features = [
   'Emotional intelligence training modulesConsciousness expansion exercisesSelf-awareness development toolsEmpathy and compassion trainingMindfulness and meditation guidanceCognitive enhancement techniquesSocial intelligence developmentCreative consciousness exploration',
   'Spiritual growth pathwaysPersonal transformation tracking'
-],
+,
 
 const useCases = [
   'Personal development and growthProfessional leadership trainingTherapeutic and healing practicesEducational enhancementCorporate wellness programsMental health supportSpiritual developmentCreative arts enhancement',
   'Relationship improvementStress management and resilience'
-],
+,
 
 const technology = [
   'Advanced AI algorithmsMachine learning modelsNatural language processingEmotional recognition systemsBiometric feedback integrationVirtual reality experiencesAugmented reality overlaysBrain-computer interfaces',
   'Quantum computing integrationBlockchain security'
-],
+,
 
 const integrations = [
   'Wearable devicesMobile applicationsWeb platformsSmart home systemsHealthcare platformsEducational systemsCorporate wellness platformsSocial media networks',
   'Fitness trackersMeditation apps'
-],
+,
 
 const testimonials = [  {
   opacity: 0, y: 30 
-}
-}animate= {
-  {
+
+animate= {
   opacity: 1, y: 0 
-}
-}transition= {
-  {
+
+transition= {
     name: 'Dr. Emily Watson',
     role: 'Research Director',
     company: 'Consciousness Research Institute',
@@ -52,7 +50,7 @@ const testimonials = [  {
     rating: 5,
     avatar: ''
   }
-],
+,
 export default function AIConsciousnessEvolution2025() {_return (
     <Layout>
       <Head>
@@ -68,38 +66,38 @@ export default function AIConsciousnessEvolution2025() {_return (
           <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(168,85,247,0.15),transparent_50%)]&quot;></div>
           <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_70%_70%,rgba(236,72,153,0.15),transparent_50%)]&quot;></div>
         </div>
-        
+
         {/* Floating Elements */}
         <div className=&quot;absolute inset-0 overflow-hidden&quot;>
-          {[...Array(15)].map((_, i) => (
+          {[...Array(15)].map(_, i) => (
             <motion.div
               key={i}
               className=&quot;absolute w-2 h-2 bg-purple-400 rounded-full opacity-30&quot;
-              animate={{
+              animate={
                 x: [0, 100, 0],
                 y: [0, -100, 0],
-                opacity: [0.3, 0.8, 0.3]}}
-              transition={{
+                opacity: [0.3, 0.8, 0.3]}
+              transition={
                 duration: 8 + i * 2,
                 repeat: Infinity,
-                delay: i * 0.3}}
-              style={{                left: `${Math.random() * 100}%`,
-                top: `${_Math.random() * 100}%`}}
+                delay: i * 0.3}
+              style={                left: `${Math.random() * 100}%`,
+                top: `${_Math.random() * 100}%`}
             />
-          ))}
+          )}
         </div>
 
         <div className=&quot;relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto&quot;>
           <motion.div
-            initial={_{ opacity: 0, _y: 30}}
-            animate={_{ opacity: 1, _y: 0}}
-            transition={_{ duration: 0.8}}
+            initial={_{ opacity: 0, _y: 30}
+            animate={_{ opacity: 1, _y: 0}
+            transition={_{ duration: 0.8}
           >
             {_/* Badge */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              initial={ opacity: 0, scale: 0.8 }
+              animate={ opacity: 1, scale: 1 }
+              transition={ duration: 0.6, delay: 0.2 }
               className=&quot;inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-full text-purple-300 text-sm font-medium mb-6&quot;            >
               <Sparkles className=&quot;w-4 h-4 mr-2&quot; />
               Revolutionary AI Technology
@@ -112,7 +110,7 @@ export default function AIConsciousnessEvolution2025() {_return (
               <br />
               <span className=&quot;text-white&quot;>Evolution Platform</span>
             </h1>
-            
+
             <p className=&quot;text-xl sm:text-2xl text-purple-200 mb-8 max-w-4xl mx-auto leading-relaxed&quot;>
               Experience the future of personal development with our revolutionary AI-powered consciousness evolution platform. 
               Enhance your emotional intelligence, expand self-awareness, and unlock your full potential.
@@ -125,12 +123,12 @@ export default function AIConsciousnessEvolution2025() {_return (
                 { label: 'Active Users', value: '12.5K+', icon: <Users className=&quot;w-8 h-8&quot; /> },
                 { label: 'Improvement', value: '300%', icon: <TrendingUp className=&quot;w-8 h-8&quot; /> },
                 { label: 'Satisfaction', value: '4.9/5', icon: <Star className=&quot;w-8 h-8&quot; /> }
-              ].map((stat, index) => (
+              ].map(stat, index) => (
                 <motion.div
                   key={stat.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.4 + index * 0.1 }}
+                  initial={ opacity: 0, y: 20 }
+                  animate={ opacity: 1, y: 0 }
+                  transition={ duration: 0.8, delay: 0.4 + index * 0.1 }
                   className=&quot;text-center&quot;
                 >
                   <div className=&quot;inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full mb-3 text-purple-400&quot;>
@@ -138,22 +136,22 @@ export default function AIConsciousnessEvolution2025() {_return (
                   </div>
                   <div className=&quot;text-3xl font-bold text-white mb-1&quot;>{stat.value}</div>
                   <div className=&quot;text-sm text-purple-300&quot;>{stat.label}</div>                </motion.div>
-              ))}
+              )}
             </div>;
-;
+
             {/* CTA Buttons */}
             <div className=&quot;flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6&quot;>
               <motion.button
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 0.6 }}
+                initial={ opacity: 0, scale: 0.9 }
+                animate={ opacity: 1, scale: 1 }
+                transition={ duration: 0.6, delay: 0.6 }
                 className=&quot;bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200 hover:shadow-2xl hover:shadow-purple-500/25 hover:scale-105&quot;              >
                 Start Free Trial
               </motion.button>
               <motion.button
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 0.8 }}
+                initial={ opacity: 0, scale: 0.9 }
+                animate={ opacity: 1, scale: 1 }
+                transition={ duration: 0.6, delay: 0.8 }
                 className=&quot;border-2 border-purple-500/50 text-purple-300 hover:text-white hover:bg-gradient-to-r hover:from-purple-500/20 hover:to-pink-500/20 font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200&quot;              >
                 Watch Demo
               </motion.button>
@@ -166,10 +164,10 @@ export default function AIConsciousnessEvolution2025() {_return (
       <section className=&quot;py-20 bg-black&quot;>
         <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
             className=&quot;text-center mb-16&quot;          >
             <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>
               Revolutionary Features for
@@ -182,13 +180,13 @@ export default function AIConsciousnessEvolution2025() {_return (
           </motion.div>
 
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
-            {features.map((feature, index) => (
+            {features.map(feature, index) => (
               <motion.div
                 key={feature}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.6, delay: index * 0.1 }
+                viewport={ once: true }
                 className=&quot;group bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border border-purple-500/20 rounded-2xl p-6 hover:border-purple-400/40 hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-300&quot;              >
                 <div className=&quot;w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300&quot;>
                   <Brain className=&quot;w-8 h-8 text-purple-400&quot; />
@@ -199,19 +197,19 @@ export default function AIConsciousnessEvolution2025() {_return (
                   Advanced AI algorithms guide you through personalized consciousness development exercises.
                 </p>
               </motion.div>
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* How It Works Section */}
       <section className=&quot;py-20 bg-gradient-to-b from-black to-purple-900/20&quot;>
         <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
             className=&quot;text-center mb-16&quot;          >
             <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>
               How AI Consciousness Evolution
@@ -243,13 +241,13 @@ export default function AIConsciousnessEvolution2025() {_return (
                 description: 'Real-time feedback and adaptation ensure continuous growth and development.',
                 icon: <TrendingUp className=&quot;w-12 h-12&quot; />
               }
-            ].map((step, index) => (;
+            ].map(step, index) => (;
               <motion.div;
                 key={step.step}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, y: 30 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.6, delay: index * 0.2 }
+                viewport={ once: true }
                 className=&quot;text-center&quot;
               >
                 <div className=&quot;relative mb-8&quot;>
@@ -262,19 +260,19 @@ export default function AIConsciousnessEvolution2025() {_return (
                 </div>
                 <h3 className=&quot;text-2xl font-bold text-white mb-4&quot;>{step.title}</h3>
                 <p className=&quot;text-gray-300 leading-relaxed&quot;>{step.description}</p>              </motion.div>
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Use Cases Section */}
       <section className=&quot;py-20 bg-black&quot;>
         <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
             className=&quot;text-center mb-16&quot;          >
             <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>
               Transform Your Life with
@@ -287,13 +285,13 @@ export default function AIConsciousnessEvolution2025() {_return (
           </motion.div>
 
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
-            {useCases.map((useCase, index) => (
+            {useCases.map(useCase, index) => (
               <motion.div
                 key={useCase}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.6, delay: index * 0.1 }
+                viewport={ once: true }
                 className=&quot;group bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border border-purple-500/20 rounded-2xl p-6 hover:border-purple-400/40 hover:shadow-xl hover:shadow-purple-500/20 transition-all duration-300&quot;              >
                 <div className=&quot;w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300&quot;>
                   <Lightbulb className=&quot;w-8 h-8 text-purple-400&quot; />
@@ -304,19 +302,19 @@ export default function AIConsciousnessEvolution2025() {_return (
                   Leverage AI-powered consciousness development for enhanced personal and professional growth.
                 </p>
               </motion.div>
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Technology Section */}
       <section className=&quot;py-20 bg-gradient-to-b from-black to-purple-900/20&quot;>
         <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
             className=&quot;text-center mb-16&quot;          >
             <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>
               Cutting-Edge
@@ -329,31 +327,31 @@ export default function AIConsciousnessEvolution2025() {_return (
           </motion.div>
 
           <div className=&quot;grid grid-cols-2 md:grid-cols-5 gap-6&quot;>
-            {technology.map((tech, index) => (
+            {technology.map(tech, index) => (
               <motion.div
                 key={tech}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, scale: 0.8 }
+                whileInView={ opacity: 1, scale: 1 }
+                transition={ duration: 0.6, delay: index * 0.1 }
+                viewport={ once: true }
                 className=&quot;text-center group&quot;              >
                 <div className=&quot;w-20 h-20 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300&quot;>
                   <Cpu className=&quot;w-10 h-10 text-purple-400&quot; />
                 </div>
                 <p className=&quot;text-sm text-gray-300 font-medium&quot;>{tech}</p>              </motion.div>
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Testimonials Section */}
       <section className=&quot;py-20 bg-black&quot;>
         <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
             className=&quot;text-center mb-16&quot;          >
             <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>
               What Our Users
@@ -365,13 +363,13 @@ export default function AIConsciousnessEvolution2025() {_return (
           </motion.div>
 
           <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8&quot;>
-            {testimonials.map((testimonial, index) => (
+            {testimonials.map(testimonial, index) => (
               <motion.div
                 key={testimonial.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, y: 30 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.6, delay: index * 0.2 }
+                viewport={ once: true }
                 className=&quot;bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border border-purple-500/20 rounded-2xl p-6&quot;
               >
                 <div className=&quot;flex items-center mb-4&quot;>
@@ -383,24 +381,24 @@ export default function AIConsciousnessEvolution2025() {_return (
                   </div>
                 </div>
                 <div className=&quot;flex items-center mb-4&quot;>
-                  {[...Array(testimonial.rating)].map((_, i) => (
+                  {[...Array(testimonial.rating)].map(_, i) => (
                     <Star key={i} className=&quot;w-5 h-5 text-yellow-400 fill-current&quot; />
-                  ))}
+                  )}
                 </div>
                 <p className=&quot;text-gray-300 italic&quot;>&quot;{testimonial.content}&quot;</p>              </motion.div>
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Pricing Section */}
       <section className=&quot;py-20 bg-gradient-to-b from-black to-purple-900/20&quot;>
         <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
             className=&quot;text-center mb-16&quot;          >
             <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>
               Choose Your
@@ -443,12 +441,12 @@ export default function AIConsciousnessEvolution2025() {_return (
                 ],
                 popular: false
               }
-            ].map((plan, index) => (              <motion.div
+            ].map(plan, index) => (              <motion.div
                 key={_plan.name}
-                initial={_{ opacity: 0, _y: 30}}
-                whileInView={_{ opacity: 1, _y: 0}}
-                transition={_{ duration: 0.6, _delay: index * 0.2}}
-                viewport={_{ once: true}}
+                initial={_{ opacity: 0, _y: 30}
+                whileInView={_{ opacity: 1, _y: 0}
+                transition={_{ duration: 0.6, _delay: index * 0.2}
+                viewport={_{ once: true}
                 className={_`relative bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border rounded-2xl p-8 ${
                   plan.popular 
                     ? 'border-purple-500/50 shadow-2xl shadow-purple-500/20' 
@@ -460,7 +458,7 @@ export default function AIConsciousnessEvolution2025() {_return (
                     </span>
                   </div>
                 )}
-                
+
                 <div className=&quot;text-center mb-8&quot;>
                   <h3 className=&quot;text-2xl font-bold text-white mb-2&quot;>{plan.name}</h3>
                   <div className=&quot;mb-4&quot;>
@@ -471,11 +469,11 @@ export default function AIConsciousnessEvolution2025() {_return (
                 </div>
 
                 <ul className=&quot;space-y-3 mb-8&quot;>
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map(feature, featureIndex) => (
                     <li key={featureIndex} className=&quot;flex items-center text-gray-300&quot;>
                       <CheckCircle className=&quot;w-5 h-5 text-purple-400 mr-3 flex-shrink-0&quot; />
                       {feature}                    </li>
-                  ))}
+                  )}
                 </ul>
 
                 <button className={_`w-full py-3 px-6 rounded-xl font-bold transition-all duration-200 ${
@@ -485,18 +483,18 @@ export default function AIConsciousnessEvolution2025() {_return (
                   Get Started
                 </button>
               </motion.div>
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* CTA Section */}
       <section className=&quot;py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border-t border-purple-500/20&quot;>
         <div className=&quot;max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center&quot;>          <motion.div
-            initial={_{ opacity: 0, _y: 30}}
-            whileInView={_{ opacity: 1, _y: 0}}
-            transition={_{ duration: 0.8}}
-            viewport={_{ once: true}}
+            initial={_{ opacity: 0, _y: 30}
+            whileInView={_{ opacity: 1, _y: 0}
+            transition={_{ duration: 0.8}
+            viewport={_{ once: true}
           >
             <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>
               Ready to Evolve Your
@@ -506,7 +504,7 @@ export default function AIConsciousnessEvolution2025() {_return (
               Join thousands of users who have already transformed their lives with our revolutionary AI platform. 
               Start your consciousness evolution journey today.
             </p>
-            
+
             <div className=&quot;flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6&quot;>
               <button className=&quot;bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200 hover:shadow-2xl hover:shadow-purple-500/25 hover:scale-105&quot;>
                 Start Free Trial
@@ -522,13 +520,13 @@ export default function AIConsciousnessEvolution2025() {_return (
                 { icon: <Phone className=&quot;w-6 h-6&quot; />, label: 'Call Us', value: contactInfo.mobile },
                 { icon: <Mail className=&quot;w-6 h-6&quot; />, label: 'Email Us', value: contactInfo.email },
                 { icon: <MapPin className=&quot;w-6 h-6&quot; />, label: 'Visit Us', value: contactInfo.address }
-              ].map((contact, index) => (
+              ].map(contact, index) => (
                 <motion.div
                   key={contact.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, y: 20 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.6, delay: 0.4 + index * 0.1 }
+                  viewport={ once: true }
                   className=&quot;text-center&quot;
                 >
                   <div className=&quot;inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full mb-3 text-purple-400&quot;>
@@ -536,7 +534,7 @@ export default function AIConsciousnessEvolution2025() {_return (
                   </div>
                   <div className=&quot;text-sm text-purple-300 mb-1&quot;>{contact.label}</div>
                   <div className=&quot;text-white font-medium&quot;>{contact.value}</div>                </motion.div>
-              ))}
+              )}
             </div>
           </motion.div>
         </div>

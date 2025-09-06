@@ -6,5 +6,3 @@ export function RequestsPanel() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

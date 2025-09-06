@@ -6,5 +6,3 @@ export function ServiceProviderRegistrationForm() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

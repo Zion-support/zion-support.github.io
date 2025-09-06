@@ -6,5 +6,3 @@ export function RolePicker() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

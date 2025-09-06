@@ -1,7 +1,7 @@
 import React from 'react',;
 import { useRouter } from 'next/router',;
 import { useCurrentUser } from '../../hooks/useCurrentUser',;
-;
+
 export default function ComposePage() {;
   const router = useRouter(),;
   const { type, recipientId, recipientName, jobId, jobTitle, talentId, talentName } = router.query as Record<string string>,;
@@ -10,18 +10,18 @@ export default function ComposePage() {;
   const [linkUrl, setLinkUrl] = React.useState(''),;
   const [file, setFile] = React.useState<File | null>(null),;
   const [sending, setSending] = React.useState(false),;
-;
-  React.useEffect(() => {;
+
+  React.useEffect() => {;
     if (!loading && !user) router.replace('/auth'),;
   }, [loading, user, router]),;
-;
+
   if (!user) return null,;
-;
-  const headerTitle = type === 'invite' ? `Invite ${recipientName || talentName || 'Talent'}` :type === 'apply' ? `Apply to ${jobTitle || 'Job'}` :'New Message',;
-  const context = type === 'invite';
-    ? { type:'invite', jobId, jobTitle, talentId, talentName } type === 'apply';
+
+  const headerTitle = type = = 'invite' ? `Invite ${recipientName || talentName || 'Talent'}` :type = = 'apply' ? `Apply to ${jobTitle || 'Job'}` :'New Message',;
+  const context = type = = 'invite';
+    ? { type:'invite', jobId, jobTitle, talentId, talentName } type = = 'apply';
     ? { type:'application', jobId, jobTitle } { type:'general' },;
-;
+
   const onSend = async () => {;
     if (!recipientId && !talentId) return alert('Missing recipient'),;
     if (!message.trim() && !file && !linkUrl) return,;
@@ -47,7 +47,7 @@ export default function ComposePage() {;
     setSending(false),;
     if (data?.conversation?.id) router.replace(`/messages/${data.conversation.id}`),;
   },;
-;
+
   return (;
     <div className="min-h-screen bg-gray-50">;
       <div className="max-w-2xl mx-auto p-4">;
@@ -55,8 +55,8 @@ export default function ComposePage() {;
           <div className="p-4 border-b">;
             <h1 className="text-xl font-semibold">{headerTitle}</h1>;
             <p className="text-sm text-gray-500">;
-              {type === 'invite' && jobTitle ? `Hi ${talentName || recipientName || ''}, Id like to invite you to discuss a project:${jobTitle}` :null}
-              {type === 'apply' && jobTitle ? `Applying to:${jobTitle}` :null}
+              {type = = 'invite' && jobTitle ? `Hi ${talentName || recipientName || ''}, Id like to invite you to discuss a project:${jobTitle}` :null}
+              {type = = 'apply' && jobTitle ? `Applying to:${jobTitle}` :null}
             </p>;
           </div>;
           <div className="p-4 space-y-3">;
@@ -65,7 +65,7 @@ export default function ComposePage() {;
               onChange={(e) => setMessage(e.target.value)}
               rows={6}
               className="w-full border rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-indigo-500";
-              placeholder={type === 'invite' && jobTitle ? `Hi ${talentName || recipientName || ''}, Id like to invite you to discuss a project:${jobTitle}` :'Write your message...'}
+              placeholder={type = = 'invite' && jobTitle ? `Hi ${talentName || recipientName || ''}, Id like to invite you to discuss a project:${jobTitle}` :'Write your message...'}
             />;
             <input type="url" value={linkUrl} onChange={(e) => setLinkUrl(e.target.value)} placeholder="Optional proposal or portfolio link" className="border rounded-lg p-2 w-full" />;
             <input type="file" onChange={(e) => setFile(e.target.files?.[0] || null)} className="text-sm" />;
@@ -78,4 +78,3 @@ export default function ComposePage() {;
     </div>;
   ),; if (!user) return null;
 </p> </div> <div className="p-4 space-y-3" > <textarea </div> </div> </div> </div>) 
-}

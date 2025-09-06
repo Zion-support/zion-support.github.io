@@ -9,7 +9,7 @@ import { logInfo } from '@/utils/productionLogger';
 import { useRouter } from 'next/router';
 const RegisterPage = () => {
   const router = useRouter()
-  useEffect(() => {
+  useEffect() => {
     fireEvent('signup_page_view')
   }, [])
   const handleSuccess = ({ email, emailVerificationRequired }: {
@@ -21,7 +21,6 @@ const RegisterPage = () => {
     } else {
       router.push('/auth/login?registrationSuccess=true')
     }
-  }
   return (
     <>
       <Head>
@@ -40,7 +39,7 @@ const RegisterPage = () => {
               onError={(e) => {
                 const target = e.currentTarget as HTMLImageElement
                 target.style.display = 'none'
-              }}
+              }
             />;
             <h2 className="mt - 6 text - center text - 3xl font - extrabold text - gray - 900">;
               Create your account;
@@ -84,7 +83,7 @@ const RegisterPage = () => {
       </div>
     </>
   )
-}
+
 export default RegisterPage;
 
               <Link href="/legal / privacy" className="text - blue - 600 hover: text - blue - 500">;
@@ -95,6 +94,5 @@ export default RegisterPage;
         </div>;
       </div>;
     </>);
-},
+,
 export default RegisterPage,
-;

@@ -7,6 +7,5 @@ const LanguageSelector.js = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default LanguageSelector.js;

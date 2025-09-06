@@ -1,6 +1,6 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-;
+
 export function ReferralGuide() {;
   const steps = [;
     {;
@@ -15,7 +15,7 @@ export function ReferralGuide() {;
     {;
       title:"You earn rewards",;
       description:"Rewards are issued based on the type of user who completes onboarding"}],;
-;
+
   return (;
     <Card>;
       <CardHeader>;
@@ -24,7 +24,7 @@ export function ReferralGuide() {;
       </CardHeader>;
       <CardContent>;
         <div className="space-y-4">;
-          {steps.map((step, index) => (;
+          {steps.map(step, index) => (;
             <div key={index} className="flex gap-4">;
               <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground">;
                 {index + 1}
@@ -34,12 +34,11 @@ export function ReferralGuide() {;
                 <p className="text-sm text-muted-foreground">{step.description}</p>;
               </div>;
             </div>;
-          ))}
+          )}
         </div>;
       </CardContent>;
     </Card>;
   ),;}
  const steps = [ {
-  
-}</div> </CardContent> </Card>) 
-}
+
+</div> </CardContent> </Card>) 

@@ -120,7 +120,7 @@ export function MobileHeader(): any ({;
   className
   onNotificationsClick
   onSettingsClick
-}: MobileHeaderProps) {
+: MobileHeaderProps) {
   const router = useRouter()
     >
       <div className='flex items-center justify-between h-14 px-4'>
@@ -167,14 +167,14 @@ export function MobileHeader(): any ({;
       </div>
     </header>
   );  )
-}
+
         </div>;
       </div>;
     </header>;
   );  );
-}
+
   )
-}
+
 import React from 'react';
 import { use_router } from 'next / router';
 import { ChevronLeft, Bell, Settings } from 'lucide-react';
@@ -235,7 +235,7 @@ function MobileHeader() {
   class_name,
   onNotificationsClick,
   onSettingsClick,
-}: MobileHeaderProps) {
+: MobileHeaderProps) {
   const router = use_router ();
     >;
       <div className='flex items - center justify - between h - 14 px - 4'>;
@@ -270,5 +270,4 @@ function MobileHeader() {
               <span className="sr - only">Settings</span>)}
         </div>;
       </div>;
-    </header>));
-}
+    </header>);

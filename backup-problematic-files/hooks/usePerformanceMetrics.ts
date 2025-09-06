@@ -5,8 +5,8 @@ import { PerformanceMetrics } from '../types';
 export function usePerformanceMetrics() {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isSupported, setIsSupported] = useState(false);
-  useEffect(() => {
-    if (typeof window === 'undefined' || !('performance' in window)) {
+  useEffect() => {
+    if (typeof window = = 'undefined' || !('performance' in window) {
       return;
     }
     setIsSupported(true);
@@ -16,14 +16,14 @@ export function usePerformanceMetrics() {
       )[0] as PerformanceNavigationTiming;
       const paintEntries = performance.getEntriesByType('paint');
       const fcp = paintEntries.find(
-        entry => entry.name === 'first-contentful-paint'
+        entry => entry.name = = 'first-contentful-paint'
       );
       const lcp = performance.getEntriesByType(
         'largest-contentful-paint'
       )[0] as PerformanceNavigationTiming;
       const cls = performance
         .getEntriesByType('layout-shift')
-        .reduce((acc, entry) => {
+        .reduce(acc, entry) => {
           return acc + (entry as any).value;
         }, 0);
       const fid = performance.getEntriesByType(
@@ -32,8 +32,8 @@ export function usePerformanceMetrics() {
 export function usePerformanceMetrics() {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isSupported, setIsSupported] = useState(false);
-  useEffect(() => {
-    if (typeof window === "undefined" |!("performance" in window)) {
+  useEffect() => {
+    if (typeof window = = "undefined" |!("performance" in window) {
       return;
     }
     setIsSupported(true);
@@ -42,15 +42,14 @@ export function usePerformanceMetrics() {
         window.performance.getEntriesByType("navigation");
       const navigation = navigationEntries[0] as PerformanceNavigationTiming;
       const paintEntries = window.performance.getEntriesByType("paint");
-      const fcp = paintEntries.find(
-        (entry) => entry.name === "first-contentful-paint"
+      const fcp = paintEntries.find(entry) => entry.name = = "first-contentful-paint"
       );
       const lcpEntries = window.performance.getEntriesByType(
         "largest-contentful-paint"
       );
       const lcp = lcpEntries[0] as PerformanceEntry;
       const clsEntries = window.performance.getEntriesByType("layout-shift");
-      const cls = clsEntries.reduce((acc, entry) => {
+      const cls = clsEntries.reduce(acc, entry) => {
         return acc + (entry as PerformanceEntry & { value: number }).value;
       }, 0);
       const fidEntries = window.performance.getEntriesByType("first-input");
@@ -67,14 +66,14 @@ export function usePerformanceMetrics() {
     return () => clearTimeout(timer);
   }, []);
   return { metrics, isSupported };
-}
+
 import { useEffect, useState } from 'react',;
 import { PerformanceMetrics } from '../types',;
 export function usePerformanceMetrics() {;
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null),;
   const [isSupported, setIsSupported] = useState(false),;
-  useEffect(() => {;
-    if (typeof window === 'undefined' || !('performance' in window)) {;
+  useEffect() => {;
+    if (typeof window = = 'undefined' || !('performance' in window) {;
       return;
     }
     // Wait for all performance entries to be available
@@ -82,5 +81,3 @@ export function usePerformanceMetrics() {;
     return () => clearTimeout(timer);
   }, []);
   return { metrics, isSupported }
-}
-}

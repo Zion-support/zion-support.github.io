@@ -24,7 +24,7 @@ export default function AIAutonomousBusinessOperations() {
 			canonical="https: //ziontechgroup.com/ai-autonomous-business-operations"
 		/>
 	)
-}
+
 import React from 'react',
 import ServiceLanding from '../components / sections / ServiceLanding',
 export default /**
@@ -51,4 +51,3 @@ return (
     industries={["SaaS", "Healthcare", "Finance", "Retail"]}
     canonical="https: //ziontechgroup.com / ai - autonomous - business - operations";
   />);
-}

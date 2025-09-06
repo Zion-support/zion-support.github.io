@@ -11,8 +11,8 @@ import {
   Zap, Atom, Database, Cloud, Lock, Code
   Phone, Mail, MapPin, ExternalLink, ChevronDown
   Award, Target, Zap as ZapIcon, Globe as GlobeIcon
-} from 'lucide-react'
-// Import the new revolutionary services
+ from 'lucide-react'
+/ Import the new revolutionary services
 import { revolutionary2025Services } from '../data/revolutionary-2025-innovative-services';
 import { revolutionary2025ITServices } from '../data/revolutionary-2025-it-infrastructure';
 const allServices = [...revolutionary2025Services, ...revolutionary2025ITServices]
@@ -21,7 +21,7 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
-}
+
 const serviceCategories = [
   {
     id: 'ai-consciousness'
@@ -29,7 +29,7 @@ const serviceCategories = [
     description: 'Revolutionary AI consciousness and emotional intelligence platforms'
     icon: Brain
     color: 'from-violet-500 to-purple-500'
-    services: allServices.filter(s => s.category.includes('AI Consciousness') |s.category.includes('Healthcare AI'))
+    services: allServices.filter(s => s.category.includes('AI Consciousness') |s.category.includes('Healthcare AI')
     gradient: 'from-violet-500/20 to-indigo-500/20'
   }
   {
@@ -38,7 +38,7 @@ const serviceCategories = [
     description: 'Quantum computing, DNA computing, and beyond'
     icon: Atom
     color: 'from-blue-500 to-cyan-500'
-    services: allServices.filter(s => s.category.includes('Quantum') |s.category.includes('DNA Computing'))
+    services: allServices.filter(s => s.category.includes('Quantum') |s.category.includes('DNA Computing')
     gradient: 'from-blue-500/20 to-cyan-500/20'
   }
   {
@@ -47,7 +47,7 @@ const serviceCategories = [
     description: 'Space mission management and satellite operations'
     icon: Rocket
     color: 'from-indigo-500 to-blue-500'
-    services: allServices.filter(s => s.category.includes('Space Technology'))
+    services: allServices.filter(s => s.category.includes('Space Technology')
     gradient: 'from-indigo-500/20 to-blue-500/20'
   }
   {
@@ -56,7 +56,7 @@ const serviceCategories = [
     description: 'Quantum encryption and AI threat detection'
     icon: Shield
     color: 'from-red-500 to-pink-500'
-    services: allServices.filter(s => s.category.includes('Cybersecurity'))
+    services: allServices.filter(s => s.category.includes('Cybersecurity')
     gradient: 'from-red-500/20 to-pink-500/20'
   }
   {
@@ -65,7 +65,7 @@ const serviceCategories = [
     description: 'Quantum-enhanced cloud computing and infrastructure'
     icon: Cloud
     color: 'from-cyan-500 to-blue-500'
-    services: allServices.filter(s => s.category.includes('Cloud') |s.category.includes('Infrastructure'))
+    services: allServices.filter(s => s.category.includes('Cloud') |s.category.includes('Infrastructure')
     gradient: 'from-cyan-500/20 to-blue-500/20'
   }
   {
@@ -74,7 +74,7 @@ const serviceCategories = [
     description: 'AI-powered trading and quantum risk management'
     icon: DollarSign
     color: 'from-green-500 to-emerald-500'
-    services: allServices.filter(s => s.category.includes('Financial Technology'))
+    services: allServices.filter(s => s.category.includes('Financial Technology')
     gradient: 'from-green-500/20 to-emerald-500/20'
   }
   {
@@ -83,7 +83,7 @@ const serviceCategories = [
     description: 'Zero downtime manufacturing and predictive maintenance'
     icon: Building2
     color: 'from-gray-500 to-slate-500'
-    services: allServices.filter(s => s.category.includes('Industrial IoT'))
+    services: allServices.filter(s => s.category.includes('Industrial IoT')
     gradient: 'from-gray-500/20 to-slate-500/20'
   }
   {
@@ -92,7 +92,7 @@ const serviceCategories = [
     description: 'AI-powered personalized learning and 10x faster knowledge acquisition'
     icon: Users
     color: 'from-blue-500 to-cyan-500'
-    services: allServices.filter(s => s.category.includes('Education Technology'))
+    services: allServices.filter(s => s.category.includes('Education Technology')
     gradient: 'from-blue-500/20 to-cyan-500/20'
   }
   {
@@ -101,7 +101,7 @@ const serviceCategories = [
     description: 'AI-powered environmental solutions for carbon neutrality'
     icon: Globe
     color: 'from-green-500 to-emerald-500'
-    services: allServices.filter(s => s.category.includes('Sustainability'))
+    services: allServices.filter(s => s.category.includes('Sustainability')
     gradient: 'from-green-500/20 to-emerald-500/20'
   }
   {
@@ -110,36 +110,35 @@ const serviceCategories = [
     description: '99.9% delivery accuracy and zero waste supply chain'
     icon: Package
     color: 'from-orange-500 to-red-500'
-    services: allServices.filter(s => s.category.includes('Logistics'))
+    services: allServices.filter(s => s.category.includes('Logistics')
     gradient: 'from-orange-500/20 to-red-500/20'
   }
-]
+
 export default function Revolutionary2025ServicesShowcase() {
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('all')
   const [sortBy, setSortBy] = useState('popularity')
   const [viewMode, setViewMode] = useState('grid')
   const filteredServices = allServices.filter(service => {
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
-                         service.category.toLowerCase().includes(searchTerm.toLowerCase())
-    const matchesCategory = selectedCategory === 'all' |
-                           service.category.toLowerCase().includes(selectedCategory.toLowerCase())
+    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase() |
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase() |
+                         service.category.toLowerCase().includes(searchTerm.toLowerCase()
+    const matchesCategory = selectedCategory = = 'all' |
+                           service.category.toLowerCase().includes(selectedCategory.toLowerCase()
     return matchesSearch && matchesCategory
   })
-  const sortedServices = [...filteredServices].sort((a, b) => {
+  const sortedServices = [...filteredServices].sort(a, b) => {
     switch (sortBy) {
       case 'price-low':
-        return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''))
+        return parseFloat(a.price.replace(/[^0-9.]/g, '') - parseFloat(b.price.replace(/[^0-9.]/g, '')
       case 'price-high':
-        return parseFloat(b.price.replace(/[^0-9.]/g, '')) - parseFloat(a.price.replace(/[^0-9.]/g, ''))
+        return parseFloat(b.price.replace(/[^0-9.]/g, '') - parseFloat(a.price.replace(/[^0-9.]/g, '')
       case 'rating':
         return b.rating - a.rating
       case 'customers':
         return b.customers - a.customers
       default: return b.popular ? 1 : -1
-    }
-  })
+    })
   return (
     <>
       <Head>
@@ -155,9 +154,9 @@ export default function Revolutionary2025ServicesShowcase() {
           <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30" />
           <div className="container mx-auto relative z-10">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="text-center max-w-4xl mx-auto"
             >
               <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
@@ -195,8 +194,8 @@ import {
   Zap, Atom, Database, Cloud, Lock, Code,
   Phone, Mail, MapPin, ExternalLink, ChevronDown,
   Award, Target, Zap as ZapIcon, Globe as GlobeIcon;
-} from 'lucide-react',
-// Import the new revolutionary services;
+ from 'lucide-react',
+/ Import the new revolutionary services;
 import { revolutionary2025Services } from '../data / revolutionary - 2025 - innovative - services',
 import { revolutionary2025ITServices } from '../data / revolutionary - 2025 - it - infrastructure',
 const all_services = [...revolutionary2025Services, ...revolutionary2025ITServices],
@@ -205,7 +204,7 @@ const contact_info = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com';
-},
+,
 const service_categories = [;
   {
     id: 'ai - consciousness',
@@ -213,7 +212,7 @@ const service_categories = [;
     description: 'Revolutionary AI consciousness and emotional intelligence platforms',
     icon: Brain,
     color: 'from - violet - 500 to - purple - 500',
-    services: all_services.filter (string => s.category.includes ('AI Consciousness') || s.category.includes ('Healthcare AI')),
+    services: all_services.filter (string => s.category.includes ('AI Consciousness') || s.category.includes ('Healthcare AI'),
     gradient: 'from - violet - 500 / 20 to - indigo - 500 / 20';
   },
   {
@@ -222,7 +221,7 @@ const service_categories = [;
     description: 'Quantum computing, DNA computing, and beyond',
     icon: Atom,
     color: 'from - blue - 500 to - cyan - 500',
-    services: all_services.filter (string => s.category.includes ('Quantum') || s.category.includes ('DNA Computing')),
+    services: all_services.filter (string => s.category.includes ('Quantum') || s.category.includes ('DNA Computing'),
     gradient: 'from - blue - 500 / 20 to - cyan - 500 / 20';
   },
   {
@@ -231,7 +230,7 @@ const service_categories = [;
     description: 'Space mission management and satellite operations',
     icon: Rocket,
     color: 'from - indigo - 500 to - blue - 500',
-    services: all_services.filter (string => s.category.includes ('Space Technology')),
+    services: all_services.filter (string => s.category.includes ('Space Technology'),
     gradient: 'from - indigo - 500 / 20 to - blue - 500 / 20';
   },
   {
@@ -240,7 +239,7 @@ const service_categories = [;
     description: 'Quantum encryption and AI threat detection',
     icon: Shield,
     color: 'from - red - 500 to - pink - 500',
-    services: all_services.filter (string => s.category.includes ('Cybersecurity')),
+    services: all_services.filter (string => s.category.includes ('Cybersecurity'),
     gradient: 'from - red - 500 / 20 to - pink - 500 / 20';
   },
   {
@@ -249,7 +248,7 @@ const service_categories = [;
     description: 'Quantum - enhanced cloud computing and infrastructure',
     icon: Cloud,
     color: 'from - cyan - 500 to - blue - 500',
-    services: all_services.filter (string => s.category.includes ('Cloud') || s.category.includes ('Infrastructure')),
+    services: all_services.filter (string => s.category.includes ('Cloud') || s.category.includes ('Infrastructure'),
     gradient: 'from - cyan - 500 / 20 to - blue - 500 / 20';
   },
   {
@@ -258,7 +257,7 @@ const service_categories = [;
     description: 'AI - powered trading and quantum risk management',
     icon: DollarSign,
     color: 'from - green - 500 to - emerald - 500',
-    services: all_services.filter (string => s.category.includes ('Financial Technology')),
+    services: all_services.filter (string => s.category.includes ('Financial Technology'),
     gradient: 'from - green - 500 / 20 to - emerald - 500 / 20';
   },
   {
@@ -267,7 +266,7 @@ const service_categories = [;
     description: 'Zero downtime manufacturing and predictive maintenance',
     icon: Building2,
     color: 'from - gray - 500 to - slate - 500',
-    services: all_services.filter (string => s.category.includes ('Industrial IoT')),
+    services: all_services.filter (string => s.category.includes ('Industrial IoT'),
     gradient: 'from - gray - 500 / 20 to - slate - 500 / 20';
   },
   {
@@ -276,7 +275,7 @@ const service_categories = [;
     description: 'AI - powered personalized learning and 10x faster knowledge acquisition',
     icon: Users,
     color: 'from - blue - 500 to - cyan - 500',
-    services: all_services.filter (string => s.category.includes ('Education Technology')),
+    services: all_services.filter (string => s.category.includes ('Education Technology'),
     gradient: 'from - blue - 500 / 20 to - cyan - 500 / 20';
   },
   {
@@ -285,7 +284,7 @@ const service_categories = [;
     description: 'AI - powered environmental solutions for carbon neutrality',
     icon: Globe,
     color: 'from - green - 500 to - emerald - 500',
-    services: all_services.filter (string => s.category.includes ('Sustainability')),
+    services: all_services.filter (string => s.category.includes ('Sustainability'),
     gradient: 'from - green - 500 / 20 to - emerald - 500 / 20';
   },
   {
@@ -294,10 +293,10 @@ const service_categories = [;
     description: '99.9% delivery accuracy and zero waste supply chain',
     icon: Package,
     color: 'from - orange - 500 to - red - 500',
-    services: all_services.filter (string => s.category.includes ('Logistics')),
+    services: all_services.filter (string => s.category.includes ('Logistics'),
     gradient: 'from - orange - 500 / 20 to - red - 500 / 20';
   }
-],
+,
 export default /**
  * Revolutionary2025ServicesShowcase - Function description
  */
@@ -307,26 +306,25 @@ function Revolutionary2025ServicesShowcase() {
   const [sort_by, setSortBy] = useState ('popularity'),
   const [view_mode, setViewMode] = useState ('grid'),
   const filtered_services = all_services.filter (service => {
-    const matches_search = service.name.toLowerCase ().includes (search_term.toLowerCase ()) ||;
-                        service.description.toLowerCase ().includes (search_term.toLowerCase ()) ||;
-                        service.category.toLowerCase ().includes (search_term.toLowerCase ()),
-    const matches_category = selected_category === 'all' ||;
-                          service.category.toLowerCase ().includes (selected_category.toLowerCase ()),
+    const matches_search = service.name.toLowerCase ().includes (search_term.toLowerCase () ||;
+                        service.description.toLowerCase ().includes (search_term.toLowerCase () ||;
+                        service.category.toLowerCase ().includes (search_term.toLowerCase (),
+    const matches_category = selected_category = = 'all' ||;
+                          service.category.toLowerCase ().includes (selected_category.toLowerCase (),
     return matches_search && matches_category;
   }),
-  const sorted_services = [...filtered_services].sort ((a, b) => {
+  const sorted_services = [...filtered_services].sort (a, b) => {
     switch (sort_by) {
       case 'price - low':;
-        return parse_float (a.price.replace (/[^0 - 9.]/g, '')) - parse_float (b.price.replace (/[^0 - 9.]/g, '')),
+        return parse_float (a.price.replace (/[^0 - 9.]/g, '') - parse_float (b.price.replace (/[^0 - 9.]/g, ''),
       case 'price - high':;
-        return parse_float (b.price.replace (/[^0 - 9.]/g, '')) - parse_float (a.price.replace (/[^0 - 9.]/g, '')),
+        return parse_float (b.price.replace (/[^0 - 9.]/g, '') - parse_float (a.price.replace (/[^0 - 9.]/g, ''),
       case 'rating':;
         return b.rating - a.rating,
       case 'customers':;
         return b.customers - a.customers,
       default: return b.popular ? 1 : -1;
-    }
-  }),
+    }),
   return (
     <>;
       <Head>;
@@ -342,9 +340,9 @@ function Revolutionary2025ServicesShowcase() {
           <div className="absolute inset - 0 bg-[url ('data:image / svg + xml, %3Csvg width="60" height="60" view_box="0 0 60 60" xmlns="http://www.w3.org / 2000 / svg"%3E%3Cg fill="none" fill - rule="evenodd"%3E%3Cg fill="%239C92AC" fill - opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C / g%3E%3C / g%3E%3C / svg%3E')] opacity - 30" />;
           <div className="container mx - auto relative z - 10">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, coordinate_y: 30 }
+              animate={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
               className="text - center max - w-4xl mx - auto";
             >;
               <h1 className="text - 5xl md:text - 7xl font - bold mb - 6 bg - gradient - to - r from - purple - 400 via - blue - 400 to - cyan - 400 bg - clip - text text - transparent">;
@@ -399,7 +397,7 @@ function Revolutionary2025ServicesShowcase() {
                       <option key={category.id} value={category.id}>
                         {category.title.split(' ').slice(1).join(' ')}
                       </option>
-                    ))}
+                    )}
                   </select>
                   <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4 pointer-events-none" />
                 </div>
@@ -422,7 +420,7 @@ function Revolutionary2025ServicesShowcase() {
                 <div className="flex bg-gray-800/50 border border-gray-700 rounded-lg p-1">
                   <button
                     onClick={() => setViewMode('grid')}
-                    className={`p-2 rounded ${viewMode === 'grid' ? 'bg-purple-500 text-white' : 'text-gray-400 hover:text-white'}`}
+                    className={`p-2 rounded ${viewMode = = 'grid' ? 'bg-purple-500 text-white' : 'text-gray-400 hover:text-white'}`}
                   >
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
@@ -430,7 +428,7 @@ function Revolutionary2025ServicesShowcase() {
                   </button>
                   <button
                     onClick={() => setViewMode('list')}
-                    className={`p-2 rounded ${viewMode === 'list' ? 'bg-purple-500 text-white' : 'text-gray-400 hover:text-white'}`}
+                    className={`p-2 rounded ${viewMode = = 'list' ? 'bg-purple-500 text-white' : 'text-gray-400 hover:text-white'}`}
                   >
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd" />
@@ -448,28 +446,28 @@ function Revolutionary2025ServicesShowcase() {
             <div className="mb-8">
               <p className="text-gray-400">
                 Showing <span className="text-white font-semibold">{filteredServices.length}</span> revolutionary services
-                {selectedCategory !== 'all' && (
-                  <> in <span className="text-white font-semibold">{serviceCategories.find(c => c.id === selectedCategory)?.title.split(' ').slice(1).join(' ')}</span></>
+                {selectedCategory != 'all' && (
+                  <> in <span className="text-white font-semibold">{serviceCategories.find(c => c.id = = selectedCategory)?.title.split(' ').slice(1).join(' ')}</span></>
                 )}
               </p>
             </div>
             {/* Services Grid */}
             <AnimatePresence mode="wait">;
-              {view_mode === 'grid' ? (
+              {view_mode = = 'grid' ? (
                 <motion.div;
                   key="grid";
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.3 }}
+                  initial={ opacity: 0 }
+                  animate={ opacity: 1 }
+                  exit={ opacity: 0 }
+                  transition={ duration: 0.3 }
                   className="grid grid - cols - 1 lg:grid - cols - 2 xl:grid - cols - 3 gap - 8";
                 >;
-                  {sorted_services.map ((service, index) => (
+                  {sorted_services.map (service, index) => (
                     <motion.div;
                       key={service.id}
-                      initial={{ opacity: 0, coordinate_y: 20 }}
-                      animate={{ opacity: 1, coordinate_y: 0 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      initial={ opacity: 0, coordinate_y: 20 }
+                      animate={ opacity: 1, coordinate_y: 0 }
+                      transition={ duration: 0.5, delay: index * 0.1 }
                       className="group relative";
                     >;
                       <div className="relative bg - gradient - to - br from - gray - 900 / 80 to - black / 90 border border - gray - 700 / 50 rounded - 2xl p - 6 h - full backdrop - blur - xl hover:border - purple - 500 / 50 transition - all duration - 300 hover:transform hover:scale - 105">;
@@ -498,12 +496,12 @@ function Revolutionary2025ServicesShowcase() {
                         <div className="space - y-2 mb - 6">;
                           <h4 className="text - sm font - semibold text - purple - 400">Key Features</h4>;
                           <ul className="space - y-1">;
-                            {service.features.slice (0, 4).map ((feature, feature_index) => (
+                            {service.features.slice (0, 4).map (feature, feature_index) => (
                               <li key={feature_index} className="flex items - center text - xs text - gray - 300">;
                                 <CheckCircle className="w - 3 h - 3 text - green - 400 mr - 2 flex - shrink - 0" />;
                                 {feature}
                               </li>
-                            ))}
+                            )}
                           </ul>
                         </div>
                         {/* Market Data */}
@@ -547,22 +545,22 @@ function Revolutionary2025ServicesShowcase() {
                           </div>;
                         </div>;
                       </div>;
-                    </motion.div>))}
+                    </motion.div>)}
                 </motion.div>) : (
                 <motion.div;
                   key="list";
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.3 }}
+                  initial={ opacity: 0 }
+                  animate={ opacity: 1 }
+                  exit={ opacity: 0 }
+                  transition={ duration: 0.3 }
                   className="space - y-6";
                 >;
-                  {sorted_services.map ((service, index) => (
+                  {sorted_services.map (service, index) => (
                     <motion.div;
                       key={service.id}
-                      initial={{ opacity: 0, coordinate_x: -20 }}
-                      animate={{ opacity: 1, coordinate_x: 0 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      initial={ opacity: 0, coordinate_x: -20 }
+                      animate={ opacity: 1, coordinate_x: 0 }
+                      transition={ duration: 0.5, delay: index * 0.1 }
                       className="bg - gradient - to - r from - gray - 900 / 80 to - black / 90 border border - gray - 700 / 50 rounded - xl p - 6 backdrop - blur - xl hover:border - purple - 500 / 50 transition - all duration - 300";
                     >;
                       <div className="flex flex - col lg:flex - row gap - 6">;
@@ -587,21 +585,21 @@ function Revolutionary2025ServicesShowcase() {
                             <div>
                               <h4 className="text-sm font-semibold text-purple-400 mb-2">Key Features</h4>
                               <ul className="space-y-1">
-                                {service.features.slice(0, 4).map((feature, featureIndex) => (
+                                {service.features.slice(0, 4).map(feature, featureIndex) => (
                                   <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                                     <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                                     {feature}
-                                  </li>))}
+                                  </li>)}
                               </ul>;
                             </div>;
                             <div>;
                               <h4 className="text - sm font - semibold text - blue - 400 mb - 2">Technology Stack</h4>;
                               <div className="flex flex - wrap gap - 2">;
-                                {service.technology.slice (0, 6).map ((tech, tech_index) => (
+                                {service.technology.slice (0, 6).map (tech, tech_index) => (
                                   <span key={tech_index} className="bg - gray - 800 / 50 text - gray - 300 text - xs px - 2 py - 1 rounded">;
                                     {tech}
                                   </span>
-                                ))}
+                                )}
                               </div>
                             </div>
                           </div>
@@ -664,12 +662,12 @@ function Revolutionary2025ServicesShowcase() {
                         </div>
                       </div>
                     </motion.div>
-                  ))}
+                  )}
                 </motion.div>
               )}
             </AnimatePresence>
             {/* No Results */}
-            {filteredServices.length === 0 && (
+            {filteredServices.length = = 0 && (
               <div className="text-center py-16">
                 <div className="text-6xl mb-4"></div>
                 <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
@@ -679,7 +677,7 @@ function Revolutionary2025ServicesShowcase() {
                     setSearchTerm('')
 
                     setSelectedCategory('all')
-                  }}
+                  }
                   className="bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
                 >
                   Clear Filters
@@ -692,10 +690,10 @@ function Revolutionary2025ServicesShowcase() {
         <section className="py - 20 px - 4 bg - gradient - to - r from - purple - 900 / 20 via - blue - 900 / 20 to - cyan - 900 / 20">;
           <div className="container mx - auto text - center">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, coordinate_y: 30 }
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Transform Your Business?
@@ -747,7 +745,7 @@ function Revolutionary2025ServicesShowcase() {
       </div>
     </>
   )
-}
+
             >;
               <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">;
                 Ready to Transform Your Business?;
@@ -798,4 +796,3 @@ function Revolutionary2025ServicesShowcase() {
         </section>;
       </div>;
     </>);
-}

@@ -1,12 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { Web3Storage, File } from 'web3.storage',;
-;
+
 const TOKEN = process.env.WEB3_STORAGE_TOKEN || '',;
-;
-export const config = { api:{ bodyParser:{ sizeLimit:'2mb' } } },;
-;
+
+export const config = { api:{ bodyParser:{ sizeLimit:'2mb' } },;
+
 export default async function handler(req:NextApiRequest, res:NextApiResponse) {;
-  if (req.method !== 'POST') return res.status(405).end(),;
+  if (req.method != 'POST') return res.status(405).end(),;
   if (!TOKEN) return res.status(400).json({ error:'Missing WEB3_STORAGE_TOKEN' }),;
   try {;
     const data = req.body,;
@@ -19,10 +19,9 @@ export default async function handler(req:NextApiRequest, res:NextApiResponse) {
   }import { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
+  if (req.method != 'POST') {
     res.setHeader('Allow', ['POST']);
     return res.status(405).end('Method Not Allowed');
   }
-  
+
   res.status(200).json({ message: 'Backup uploaded' });
-}

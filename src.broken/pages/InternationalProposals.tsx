@@ -6,5 +6,3 @@ export function InternationalProposals() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

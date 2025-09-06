@@ -6,5 +6,3 @@ export function CommunityPage() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

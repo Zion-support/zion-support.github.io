@@ -3,8 +3,8 @@ import React from "react",;
 import { MobileHeader } from "../components/common/MobileHeader",;
 import { BottomNavigation } from "../components/common/BottomNavigation",;
 import { MobileProjectView } from "../components/projects/MobileProjectView",;
-;
-// Mock data;
+
+/ Mock data;
 const projectData = {;
   id:"project-123",;
   title:"Website Redesign",;
@@ -18,8 +18,8 @@ const projectData = {;
   totalAmount:"$12,000",;
   progress:60,;
   description:"Redesign of the company website with a focus on improving user experience and conversion rates. Includes new homepage, about page, and product listing pages.";
-},;
-;
+,;
+
 const milestonesData = [;
   {;
     id:"milestone-1",;
@@ -45,8 +45,8 @@ const milestonesData = [;
     paymentStatus:"pending" as const,;
     amount:"$5,000";
   }
-],;
-;
+,;
+
 export function MobileProjects() {;
   return (;
     <div className="min-h-screen">;
@@ -54,20 +54,17 @@ export function MobileProjects() {;
         title="Project Details";
         showBack;
       />;
-      ;
       <main className="py-4">;
         <MobileProjectView ;
           project={projectData} ;
           milestones={milestonesData}
         />;
       </main>;
-      ;
       <BottomNavigation />;
     </div>;
   ),;}
  <MobileHeader title="Project Details" showBack /> <main className="py-4"> <MobileProjectView project= {
   projectData 
-}milestones= {
+milestones= {
   milestonesData 
-}/> </main> <BottomNavigation /> </div>) 
-}
+/> </main> <BottomNavigation /> </div>) 

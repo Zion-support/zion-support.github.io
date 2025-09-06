@@ -2,16 +2,16 @@ import React, { useState, useEffect, Suspense } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 import { 
   innovativeRealMicroSaasServices2025 
-} from '../data/2025-innovative-real-micro-saas-services',
+ from '../data/2025-innovative-real-micro-saas-services',
 import { 
   innovativeAIServicesEnhanced2025 
-} from '../data/2025-innovative-ai-services-enhanced',
+ from '../data/2025-innovative-ai-services-enhanced',
 import { 
   innovativeITServicesEnhanced2025 
-} from '../data/2025-innovative-it-services-enhanced',
+ from '../data/2025-innovative-it-services-enhanced',
 import { 
   emergingTechServicesEnhanced2025 
-} from '../data/2025-emerging-tech-services-enhanced',
+ from '../data/2025-emerging-tech-services-enhanced',
 import { advancedAIAutomationServices } from '../data/2026-advanced-ai-automation-services',
 import { quantumCybersecurityServices } from '../data/2026-quantum-cybersecurity-services',
 import { innovativeMicroSaasServices2026 } from '../data/2026-innovative-micro-saas-expansion',
@@ -24,7 +24,7 @@ import {
   ArrowRight, Star, Brain, Atom, Shield, Zap,
   Users, Globe, TrendingUp, Rocket, Cpu, Lock,
   BarChart3, Cloud
-} from 'lucide-react',
+ from 'lucide-react',
 interface Homepage2025Props {showInternalNav?: boolean}
 
 const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) => {
@@ -33,10 +33,10 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
   const [isVisible, setIsVisible] = useState(false),
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false),
 
-  useEffect(() => {
+  useEffect() => {
     setIsVisible(true),
-    const interval = setInterval(() => {
-      setCurrentServiceIndex((prev) => (prev + 1) % innovativeRealMicroSaasServices2025.length)
+    const interval = setInterval() => {
+      setCurrentServiceIndex(prev) => (prev + 1) % innovativeRealMicroSaasServices2025.length)
     }, 5000),
     return () => clearInterval(interval)
   }, []),
@@ -46,8 +46,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' }),
       setActiveSection(sectionId),
-      setIsMobileMenuOpen(false)    }
-  },
+      setIsMobileMenuOpen(false)    },
 
   const allServices = [
     ...innovativeRealMicroSaasServices2025,
@@ -100,12 +99,10 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
   const itemVariants = {
     initial: { opacity: 0, y: 20 },
     animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.6 }
-  },
+    transition: { duration: 0.6 },
   const staggerContainer = {initial: {},
     animate: {transition: {
         staggerChildren: 0.1}
-    }
   },
 
   return (
@@ -116,33 +113,33 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
               <div className=&quot;flex justify-between items-center h-16&quot;>
                 <motion.div,
-initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
+initial={ opacity: 0, x: -20 }
+                  animate={ opacity: 1, x: 0 }
                   className=&quot;flex items-center space-x-2&quot;                >
                   <div className=&quot;w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg&quot;></div>
                   <span className=&quot;text-white font-bold text-xl&quot;>ZionTech Group</span>
                 </motion.div>
-                
+
                 {/* Desktop Navigation */}
                 <div className=&quot;hidden lg:flex space-x-8&quot;>
-                  {navigationSections.map((section) => (
+                  {navigationSections.map(section) => (
                     <button                      key={section.id}
                       onClick={_() => scrollToSection(section.id)}
                       className={_`flex items-center space-x-2 text-sm font-medium transition-all duration-300 ${
-                        activeSection === section.id
+                        activeSection = = section.id
                           ? 'text-cyan-400 border-b-2 border-cyan-400'
                           : 'text-gray-300 hover:text-cyan-400'}`}
                     >
                       <span>{section.icon}</span>
                       <span>{section.label}</span>
                     </button>
-                  ))}
+                  )}
                 </div>
 
                 {_/* Contact Info */}
                 <motion.div,
-initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
+initial={ opacity: 0, x: 20 }
+                  animate={ opacity: 1, x: 0 }
                   className=&quot;hidden md:flex items-center space-x-4&quot;                >
                   <a,
 href=&quot;tel:+13024640950&quot;
@@ -172,24 +169,24 @@ className=&quot;lg:hidden text-white p-2&quot;
               <AnimatePresence>
                 {isMobileMenuOpen && (
                   <motion.div,
-initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: 'auto' }}
-                    exit={{ opacity: 0, height: 0 }}
+initial={ opacity: 0, height: 0 }
+                    animate={ opacity: 1, height: 'auto' }
+                    exit={ opacity: 0, height: 0 }
                     className=&quot;lg:hidden border-t border-white/10&quot;
                   >
                     <div className=&quot;py-4 space-y-2&quot;>
-                      {navigationSections.map((section) => (
+                      {navigationSections.map(section) => (
                         <button                          key={section.id}
                           onClick={_() => scrollToSection(section.id)}
                           className={_`flex items-center space-x-3 w-full text-left px-4 py-2 rounded-lg transition-all duration-300 ${
-                            activeSection === section.id
+                            activeSection = = section.id
                               ? 'bg-cyan-400/20 text-cyan-400'
                               : 'text-gray-300 hover:bg-white/10'}`}
                         >
                           <span>{section.icon}</span>
                           <span>{section.label}</span>
                         </button>
-                      ))}
+                      )}
                       <div className=&quot;pt-4 border-t border-white/10&quot;>
                         <a,
 href=&quot;tel:+13024640950&quot;
@@ -214,37 +211,37 @@ href=&quot;mailto:kleber@ziontechgroup.com&quot;
           </nav>;
         </>;
       )}
-;
+
       {/* Hero Section */}
       <section id=&quot;hero&quot; className=&quot;relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16&quot;>
         <div className=&quot;text-center z-10 max-w-6xl mx-auto&quot;>
           <motion.div,
-initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
             className=&quot;text-center max-w-6xl mx-auto relative z-10&quot;
           >
             <motion.div,
-animate={{ y: [0, 10, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
+animate={ y: [0, 10, 0] }
+              transition={ duration: 2, repeat: Infinity }
               className=&quot;w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center&quot;
             >
               <motion.div,
-initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+initial={ opacity: 0, scale: 0.8 }
+                animate={ opacity: 1, scale: 1 }
+                transition={ duration: 0.6, delay: 0.2 }
                 className=&quot;inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-lg font-medium backdrop-blur-sm&quot;              >
                 <Star className=&quot;w-5 h-5&quot; />
                 <span>Innovation Leader 2025-2026</span>
               </motion.div>
-              
+
               <h1 className=&quot;text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent&quot;>
                 Zion Tech Group
               </h1>
               <p className=&quot;text-2xl md:text-3xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed&quot;>
                 Pioneering the future of technology with innovative solutions that drive business transformation
               </p>
-              
+
               {_/* Enhanced CTA Section */}
               <motion.div,
 variants={itemVariants}
@@ -268,12 +265,12 @@ variants={itemVariants}
                   </button>
                 </a>
               </motion.div>
-              
+
               {_/* Trust Indicators */}
               <motion.div,
-initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
+initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.8, delay: 0.4 }
                 className=&quot;flex items-center justify-center space-x-6 text-sm text-gray-400&quot;              >
                 <div className=&quot;flex items-center space-x-2&quot;>
                   <Shield className=&quot;w-4 h-4 text-green-400&quot; />
@@ -297,10 +294,10 @@ initial={{ opacity: 0, y: 20 }}
       <section className=&quot;py-20 px-4 relative&quot;>
         <div className=&quot;max-w-7xl mx-auto&quot;>
           <motion.div,
-initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
             className=&quot;text-center mb-20&quot;          >
             <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-6&quot;>
               Comprehensive Technology Solutions
@@ -311,15 +308,15 @@ initial={{ opacity: 0, y: 30 }}
           </motion.div>
 
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6&quot;>
-            {features.map((feature, index) => (
+            {features.map(feature, index) => (
               <motion.div,
 key={index}
                 className=&quot;group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 p-8&quot;
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -10, scale: 1.02 }}              >
+                initial={ opacity: 0, y: 40 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.6, delay: index * 0.1 }
+                viewport={ once: true }
+                whileHover={ y: -10, scale: 1.02 }              >
                 <div className=&quot;absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300&quot; />
                 <div className=&quot;relative&quot;>
                   <div className=&quot;w-14 h-14 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 p-3 mb-6&quot;>
@@ -328,20 +325,20 @@ key={index}
                   <h3 className=&quot;text-xl font-semibold text-white mb-4&quot;>{feature.title}</h3>
                   <p className=&quot;text-gray-300 leading-relaxed&quot;>{feature.description}</p>                </div>
               </motion.div>
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Enhanced Services Preview */}
       <section className=&quot;py-20 px-4&quot;>
         <div className=&quot;max-w-6xl mx-auto&quot;>
           <motion.div,
 className=&quot;text-center mb-16&quot;
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}          >
+            initial={ opacity: 0, y: 40 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.6 }
+            viewport={ once: true }          >
             <h2 className=&quot;text-3xl md:text-4xl font-bold text-white mb-4&quot;>
               Our Revolutionary 2026 Services
             </h2>
@@ -358,14 +355,14 @@ className=&quot;text-center mb-16&quot;
               { title: &quot;Data Engineering&quot;, description: &quot;Streamline data pipelines and analytics with AI&quot;, icon: BarChart3, gradient: &quot;from-emerald-500 to-teal-500&quot;, link: &quot;/comprehensive-services-showcase-2026&quot },
               { title: &quot;Quantum Computing&quot;, description: &quot;Access quantum computing power through the cloud&quot;, icon: Atom, gradient: &quot;from-indigo-500 to-purple-500&quot;, link: &quot;/comprehensive-services-showcase-2026&quot },
               { title: &quot;Blockchain Intelligence&quot;, description: &quot;Intelligent blockchain analytics and DeFi optimization&quot;, icon: Lock, gradient: &quot;from-yellow-500 to-orange-500&quot;, link: &quot;/comprehensive-services-showcase-2026&quot }
-            ].map((service, index) => (
+            ].map(service, index) => (
               <motion.div,
 key={index}
                 className=&quot;group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 cursor-pointer&quot;
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{ y: -10, scale: 1.02 }}
+                initial={ opacity: 0, y: 40 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.6, delay: index * 0.1 }
+                whileHover={ y: -10, scale: 1.02 }
                 onClick={() => window.location.href = service.link}
               >
                 <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-300`} />
@@ -380,16 +377,16 @@ key={index}
                     <ArrowRight className=&quot;w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform&quot; />                  </a>
                 </div>
               </motion.div>
-            ))}
+            )}
           </div>
 
           {_/* Call to Action for Services Showcase */}
           <motion.div,
 className=&quot;text-center mt-16&quot;
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            viewport={{ once: true }}          >
+            initial={ opacity: 0, y: 40 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.6, delay: 0.3 }
+            viewport={ once: true }          >
             <a,
 href=&quot;/comprehensive-services-showcase-2026&quot;
               className=&quot;inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-purple-500/25&quot;
@@ -407,10 +404,10 @@ href=&quot;/comprehensive-services-showcase-2026&quot;
         <div className=&quot;max-w-6xl mx-auto&quot;>
           <motion.div,
 className=&quot;text-center mb-16&quot;
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}          >
+            initial={ opacity: 0, y: 40 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.6 }
+            viewport={ once: true }          >
             <h2 className=&quot;text-3xl md:text-4xl font-bold text-white mb-4&quot;>
               Ready to Transform Your Business?
             </h2>
@@ -445,10 +442,10 @@ className=&quot;text-center mb-16&quot;
 
           <motion.div,
 className=&quot;text-center&quot;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}          >
+            initial={ opacity: 0, y: 20 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.6, delay: 0.2 }
+            viewport={ once: true }          >
             <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>
               <a,
 href=&quot;mailto:kleber@ziontechgroup.com&quot;
@@ -492,6 +489,6 @@ href=&quot;tel:+13024640950&quot;
       </footer>
     </UltraFuturisticBackground2026>
   )
-},
+,
 
 export default Homepage2025,

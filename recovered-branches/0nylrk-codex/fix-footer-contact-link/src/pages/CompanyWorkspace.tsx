@@ -47,13 +47,13 @@ export default function CompanyWorkspace() {
         customLogo={isWhitelabel ? tenant?.logo_url : company.logoUrl}
         customTheme={effectiveTheme}
       />
-      <main className="min-h-screen" style={{ backgroundColor: effectiveTheme?.backgroundColor |'var(--background)' }}>
+      <main className="min-h-screen" style={ backgroundColor: effectiveTheme?.backgroundColor |'var(--background)' }>
         <CompanyDashboard company={company} />
       </main>
       <Footer />
     </ProtectedRoute>
   )
-}
+
 import React from './react';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -72,11 +72,11 @@ function CompanyWorkspace() {
   const { user } = use_auth ();
   const { company, is_loading, error } = useCompanyWorkspace (company_slug);
   const { is_whitelabel, tenant, brand_name } = use_whitelabel ();
-;
+
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <div className="flex items - center justify - center min - h-screen">;
         <div className="animate - spin rounded - full h - 12 w - 12 border - t-2 border - b-2 border - zion - cyan"></div>;
@@ -85,7 +85,7 @@ if ( {) {
   // Check condition
 if ( {) {
   $2
-}
+
     return <Navigate to="/not - found" />;
   }
   // In white - label mode, use the tenant's theme instead of the company's theme;
@@ -94,13 +94,13 @@ if ( {) {
     background_color: company.theme?.background_color || 'var (--background)',
     text_color: company.theme?.text_color || 'var (--foreground)';
   } : company.theme;
-;
+
   // Check if user has access to this company workspace;
   const has_access = true, // For demo purposes, always grant access;
   // Check condition
 if ( {) {
   $2
-}
+
     return <Navigate to="/unauthorized" />;
   }
   return (
@@ -113,9 +113,8 @@ if ( {) {
         custom_logo={is_whitelabel ? tenant?.logo_url : company.logo_url}
         custom_theme={effective_theme}
       />;
-      <main className="min - h-screen" style={{ background_color: effective_theme?.background_color || 'var (--background)' }}>;
+      <main className="min - h-screen" style={ background_color: effective_theme?.background_color || 'var (--background)' }>;
         <CompanyDashboard company={company} />;
       </main>;
       <Footer />;
     </ProtectedRoute>);
-}

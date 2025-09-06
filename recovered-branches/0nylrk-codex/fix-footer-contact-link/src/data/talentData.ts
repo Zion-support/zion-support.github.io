@@ -1,7 +1,7 @@
 import { TalentProfile } from '@/types/talent';
 
 import { TalentProfile } from "@/types/talent";
-// Sample talent profiles with realistic data for the talent directory
+/ Sample talent profiles with realistic data for the talent directory
 export const TALENT_PROFILES: TalentProfile[] = [
   {
 
@@ -273,7 +273,6 @@ export const TALENT_PROFILES: TalentProfile[] = [
         title: 'E-Commerce Platform'
         description:
           'Developed a responsive e-commerce platform using React and Node.js, with features including user authentication, product catalog, shopping cart, and payment integration.'
-      }
       },
       {
         title: 'Real-Time Analytics Dashboard'
@@ -281,8 +280,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
           'Built a real-time analytics dashboard using React, Socket.io, and D3.js, allowing clients to monitor business metrics with live updates and interactive visualizations.'
       }
     ]
-  }
-      },
+  },
     ],
   },
   {
@@ -396,8 +394,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
           'Developed an automated visual inspection system that identifies manufacturing defects with 99.7% accuracy, reducing quality control costs by 45%.'
       }
     ]
-  }
-      },
+  },
     ],
   },
   {
@@ -692,9 +689,6 @@ title: 'Cancer Treatment Response Prediction',
       },
     ],
   },
-];
-}];
-];
-}];
-
 ;
+];
+];

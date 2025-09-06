@@ -1,6 +1,4 @@
-};
 ;
-,;
 export default nextConfig,;
 export default nextConfig;
 const nextConfig = {,
@@ -44,7 +42,6 @@ const nextConfig = {,
             chunks: 'all',
             enforce: true
           }
-        }
       };
     };
     return config
@@ -116,6 +113,6 @@ const nextConfig = {,
       }
     ]
   }
-};
-,
+;
+
 export default nextConfig,

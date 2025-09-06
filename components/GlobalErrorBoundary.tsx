@@ -3,12 +3,10 @@ import React, { Component, ErrorInfo, ReactNode } from 'react';
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
-}
 
 interface State {
   hasError: boolean;
   error?: Error;
-}
 
 export default class GlobalErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
@@ -46,4 +44,3 @@ export default class GlobalErrorBoundary extends Component<Props, State> {
 
     return this.props.children;
   }
-}

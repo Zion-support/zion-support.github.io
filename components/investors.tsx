@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React from 'react';
 import Head from 'next/head';
 export default function InvestorsPage() {
@@ -85,7 +85,7 @@ export default function InvestorsPage() {;
 			</div>
 		</div>
 	)
-}
+
 import Head from 'next / head';
 export default /**
  * InvestorsPage - Function description
@@ -148,4 +148,3 @@ function InvestorsPage() {
     <div className="pt - 4 text - slate - 300">Contact IR: <a className="text - cyan - 400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></div>;
   </div>;
   </div>),
-}

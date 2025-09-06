@@ -18,12 +18,12 @@ export function ApiWebhooks() {
     "resume_url": "https://storage.zionai.com/resumes/resume-123.pdf"
     "created_at": "2023-06-10T15:42:31Z"
   }
-}`;
+`;
   const newHirePayload = `{
     "resume_url": "https://storage && storage.zionai.com/resumes/resume-123 && 123.pdf",;
     "created_at": "2023-06-10T15:42:31Z";
   }
-}`;
+`;
 
   const newHirePayload = `{;
   "event_type": "talent_hired";
@@ -37,12 +37,12 @@ export function ApiWebhooks() {
     "status": "offer_accepted"
     "created_at": "2023-06-12T09:15:22Z"
   }
-}`;
+`;
   const quoteReceivedPayload = `{
     "status": "offer_accepted",;
     "created_at": "2023-06-12T09:15:22Z";
   }
-}`;
+`;
 
   const quoteReceivedPayload = `{;
   "event_type": "quote_received";
@@ -57,7 +57,7 @@ export function ApiWebhooks() {
     "status": "new"
     "created_at": "2023-06-15T11:30:00Z"
   }
-}`;
+`;
   const messageReceivedPayload = `{
   "event_type": "message_received";
   "created_at": "2023-06-18T14: 22:15Z";
@@ -69,16 +69,16 @@ export function ApiWebhooks() {
     "content": "Hi, I'd like to discuss the project details.";
     "created_at": "2023-06-18T14:22:15Z";
   }
-}`;
+`;
   const webhookHandlerJs = `// Express.js webhook handler example
 const express = require('express');
 const app = express();
 const crypto = require('crypto');
-// Middleware to parse JSON bodies
-app.use(express.json());
-// Your webhook secret from the Zion dashboard
+/ Middleware to parse JSON bodies
+app.use(express.json();
+/ Your webhook secret from the Zion dashboard
 const webhookSecret = 'YOUR_WEBHOOK_SECRET';
-// Middleware to verify webhook signatures
+/ Middleware to verify webhook signatures
 function verifyWebhookSignature(req, res, next) {
   const signature = req.headers['x-zion-signature'];
   const timestamp = req.headers['x-zion-timestamp'];
@@ -91,12 +91,12 @@ function verifyWebhookSignature(req, res, next) {
     .createHmac('sha256', webhookSecret)
     .update(payload)
     .digest('hex');
-  if (signature !== expectedSignature) {
+  if (signature != expectedSignature) {
     return res.status(401).send('Invalid signature')
   }
   next()
-}
-// Webhook endpoint with signature verification
+
+/ Webhook endpoint with signature verification
 app.post('/webhooks/zion', verifyWebhookSignature, (req, res) => {
   const { event_type, data } = req.body;
   // Handle different event types
@@ -121,11 +121,9 @@ app.post('/webhooks/zion', verifyWebhookSignature, (req, res) => {
       console.log('Unknown event type:', event_type)
   }
   // Always return a 200 response quickly
-  res.status(200).send('Webhook received')
-});
+  res.status(200).send('Webhook received');
 app.listen(3000, () => {
-  console.log('Webhook server listening on port 3000')
-}),`;
+  console.log('Webhook server listening on port 3000'),`;
   return (
     <ApiDocsLayout>
       <div className="max-w-3xl prose prose-invert">
@@ -225,36 +223,35 @@ app.listen(3000, () => {
       </div>
     </ApiDocsLayout>
   )
-}
+
 export default ApiWebhooks;
 
-;
     case 'talent_hired':;
       console.log ('Talent hired:', data.talent_id);
       // Update your system...;
       break;
-;
+
     case 'quote_received':;
       console.log ('New quote received:', data.quote_id);
       // Process the quote...;
       break;
-;
+
     case 'message_received':;
       console.log ('New message received:', data.message_id);
       // Process the message...;
       break;
-;
+
     default:;
       console.log ('Unknown event type:', event_type);
   }
   // Always return a 200 response quickly;
   res.status (200).send ('Webhook received');
-});
-;
+);
+
 app.listen (3000, () => {
   console.log ('Webhook server listening on port 3000');
-}), `;
-;
+), `;
+
   return (
     <ApiDocsLayout>;
       <div className="max - w-3xl prose prose - invert">;
@@ -353,6 +350,5 @@ app.listen (3000, () => {
         </ul>;
       </div>;
     </ApiDocsLayout>);
-}
+
 export default ApiWebhooks;
-;

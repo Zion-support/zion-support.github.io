@@ -6,5 +6,3 @@ export function EnhancedSearchInput() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

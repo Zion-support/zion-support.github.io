@@ -27,26 +27,25 @@ export type ResumeData = {
     link?: string,
     technologies?: string[]
   }>
-},
+,
 
 export type ResumePreviewProps = {
   data: ResumeData,
   theme?: 'light' | 'dark',
   maxPortfolioItems?: number
-},
+,
 
 const SectionTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => (
   <h2 className=&quot;text-lg font-semibold tracking-wide text-gray-800 dark:text-gray-100 border-b border-gray-200 dark:border-gray-700 pb-1&quot;>
     {children}  </h2>
-),
+,
 
-export const ResumePreview = forwardRef<HTMLDivElement ResumePreviewProps>(
-  ({ data, theme = 'light', maxPortfolioItems = 3 }, ref) => {
-    const portfolioItems = (data.portfolio || []).slice(0, Math.max(0, maxPortfolioItems)),
+export const ResumePreview = forwardRef<HTMLDivElement ResumePreviewProps>({ data, theme = 'light', maxPortfolioItems = 3 }, ref) => {
+    const portfolioItems = (data.portfolio || []).slice(0, Math.max(0, maxPortfolioItems),
     return (
       <div
         ref={ref}
-        className={_`resume-a4 ${theme === 'dark' ? 'dark' : ''} bg-white dark:bg-black text-gray-900 dark:text-gray-100`}
+        className={_`resume-a4 ${theme = = 'dark' ? 'dark' : ''} bg-white dark:bg-black text-gray-900 dark:text-gray-100`}
       >
         <div className=&quot;p-8&quot;>
           {/* Header */}
@@ -72,38 +71,38 @@ export const ResumePreview = forwardRef<HTMLDivElement ResumePreviewProps>(
               )}
             </div>;
           </header>;
-;
+
           {/* Summary */}
           {data.summary && (
             <section className=&quot;mb-5&quot;>              <SectionTitle>Professional Summary</SectionTitle>
               <p className=&quot;mt-2 text-sm leading-relaxed text-gray-800 dark:text-gray-200&quot;>{data.summary}</p>
             </section>
           )}
-;
+
           {/* Skills & Technologies */}
           {(data.skills?.length || data.technologies?.length) && (
             <section className=&quot;mb-5&quot;>
               <SectionTitle>Skills & Technologies</SectionTitle>
               <div className=&quot;mt-2 text-sm flex flex-wrap gap-2&quot;>
-                {data.skills?.map((s, idx) => (
+                {data.skills?.map(s, idx) => (
                   <span key={`skill-${idx}`} className=&quot;px-2 py-0.5 rounded border border-gray-200 dark:border-gray-700&quot;>
                     {s}
                   </span>;
-                ))}
-                {data.technologies?.map((t, idx) => (
+                )}
+                {data.technologies?.map(t, idx) => (
                   <span key={`tech-${idx}`} className=&quot;px-2 py-0.5 rounded border border-gray-200 dark:border-gray-700&quot;>
                     {t}                  </span>
-                ))}
+                )}
               </div>;
             </section>;
           )}
-;
+
           {/* Experience */}
           {data.experience?.length ? (
             <section className=&quot;mb-5&quot;>
               <SectionTitle>Work Experience</SectionTitle>
               <div className=&quot;mt-2 space-y-3&quot;>
-                {data.experience.map((role, idx) => (
+                {data.experience.map(role, idx) => (
                   <div key={`exp-${idx}`}>
                     <div className=&quot;flex items-baseline justify-between&quot;>
                       <h3 className=&quot;font-medium text-gray-900 dark:text-white&quot;>
@@ -121,22 +120,22 @@ export const ResumePreview = forwardRef<HTMLDivElement ResumePreviewProps>(
                     </div>
                     {role.bullets?.length ? (
                       <ul className=&quot;mt-1 list-disc list-inside text-sm text-gray-800 dark:text-gray-200 space-y-1&quot;>
-                        {role.bullets.map((b, bIdx) => (
-                          <li key={`exp-${idx}-b-${bIdx}`}>{b}</li>                        ))}
+                        {role.bullets.map(b, bIdx) => (
+                          <li key={`exp-${idx}-b-${bIdx}`}>{b}</li>                        )}
                       </ul>
                     ) : null}
                   </div>
-                ))}
+                )}
               </div>;
             </section>;
           ) :null}
-;
+
           {/* Education */}
           {data.education?.length ? (
             <section className=&quot;mb-5&quot;>
               <SectionTitle>Education</SectionTitle>
               <div className=&quot;mt-2 space-y-2&quot;>
-                {data.education.map((ed, idx) => (
+                {data.education.map(ed, idx) => (
                   <div key={`edu-${idx}`} className=&quot;text-sm&quot;>
                     <div className=&quot;font-medium text-gray-900 dark:text-white&quot;>{ed.institution}</div>
                     <div className=&quot;text-gray-700 dark:text-gray-300&quot;>
@@ -144,18 +143,18 @@ export const ResumePreview = forwardRef<HTMLDivElement ResumePreviewProps>(
                         .join('  ')}
                     </div>;
                   </div>;
-                ))}
+                )}
               </div>;
             </section>;
           ) :null}
-;
+
           {/* Certifications */}
           {data.certifications?.length ? (
             <section className=&quot;mb-5&quot;>
               <SectionTitle>Certifications</SectionTitle>
               <ul className=&quot;mt-2 list-disc list-inside text-sm text-gray-800 dark:text-gray-200 space-y-1&quot;>
-                {data.certifications.map((c, idx) => (
-                  <li key={`cert-${idx}`}>{c}</li>                ))}
+                {data.certifications.map(c, idx) => (
+                  <li key={`cert-${idx}`}>{c}</li>                )}
               </ul>
             </section>
           ) : null}
@@ -165,7 +164,7 @@ export const ResumePreview = forwardRef<HTMLDivElement ResumePreviewProps>(
             <section className=&quot;mb-5&quot;>
               <SectionTitle>Portfolio</SectionTitle>
               <div className=&quot;mt-2 space-y-2&quot;>
-                {portfolioItems.map((p, idx) => (
+                {portfolioItems.map(p, idx) => (
                   <div key={`proj-${idx}`} className=&quot;text-sm&quot;>
                     <div className=&quot;font-medium text-gray-900 dark:text-white&quot;>
                       {p.title}
@@ -179,14 +178,14 @@ export const ResumePreview = forwardRef<HTMLDivElement ResumePreviewProps>(
                     )}
                     {p.technologies?.length ? (
                       <div className=&quot;mt-1 text-xs flex flex-wrap gap-2&quot;>
-                        {p.technologies.map((t, tIdx) => (
+                        {p.technologies.map(t, tIdx) => (
                           <span key={`proj-${idx}-t-${tIdx}`} className=&quot;px-2 py-0.5 rounded border border-gray-200 dark:border-gray-700&quot;>
                             {t}                          </span>
-                        ))}
+                        )}
                       </div>;
                     ) :null}
                   </div>;
-                ))}
+                )}
               </div>
             </section>
           ) : null}
@@ -194,8 +193,8 @@ export const ResumePreview = forwardRef<HTMLDivElement ResumePreviewProps>(
       </div>
     )
   }
-),;
-;
+,;
+
 ResumePreview.displayName = 'ResumePreview',;
-;
+
 export default ResumePreview,

@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React, { useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
@@ -46,11 +46,11 @@ import {
   Globe,
   BarChart3,
   Search,
-} from "lucide-react";
+ from "lucide-react";
 import SearchModal from "./SearchModal";
   BarChart3,
   Search
-} from 'lucide-react';
+ from 'lucide-react';
 import SearchModal from './SearchModal';
 
 export default function Navigation() {
@@ -305,15 +305,15 @@ export default function Navigation() {;
                 <AnimatePresence>;
                   {isServicesOpen && (;
                     <motion&& motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 10 }}
+                      initial={ opacity: 0, y: 10 }
+                      animate={ opacity: 1, y: 0 }
+                      exit={ opacity: 0, y: 10 }
                       className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-xl border border-gray-200 py-4"
                       onMouseEnter={() => setIsServicesOpen(true)}
                       onMouseLeave={() => setIsServicesOpen(false)}
                     >;
                       <div className="grid grid-cols-2 gap-4 px-6">;
-                        {services && services.map((service, index) => {;
+                        {services && services.map(service, index) => {;
                           const IconComponent = service && service.icon;
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items - center space - x-8">;
@@ -336,15 +336,15 @@ export default function Navigation() {;
                 <AnimatePresence>;
                   {isServicesOpen && (
                     <motion.div;
-                      initial={{ opacity: 0, coordinate_y: 10 }}
-                      animate={{ opacity: 1, coordinate_y: 0 }}
-                      exit={{ opacity: 0, coordinate_y: 10 }}
+                      initial={ opacity: 0, coordinate_y: 10 }
+                      animate={ opacity: 1, coordinate_y: 0 }
+                      exit={ opacity: 0, coordinate_y: 10 }
                       className="absolute top - full left - 0 mt - 2 w - 96 bg - white rounded - lg shadow - xl border border - gray - 200 py - 4";
                       onMouseEnter={() => setIsServicesOpen (true)}
                       onMouseLeave={() => setIsServicesOpen (false)}
                     >;
                       <div className="grid grid - cols - 2 gap - 4 px - 6">;
-                        {services.map ((service, index) => {
+                        {services.map (service, index) => {
                           const IconComponent = service.icon;
                           return (
                             <Link;
@@ -389,15 +389,15 @@ export default function Navigation() {;
                 <AnimatePresence>;
                   {isSolutionsOpen && (;
                     <motion&& motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 10 }}
+                      initial={ opacity: 0, y: 10 }
+                      animate={ opacity: 1, y: 0 }
+                      exit={ opacity: 0, y: 10 }
                       className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-xl border border-gray-200 py-4"
                       onMouseEnter={() => setIsSolutionsOpen(true)}
                       onMouseLeave={() => setIsSolutionsOpen(false)}
                     >;
                       <div className="grid grid-cols-2 gap-4 px-6">;
-                        {solutions && solutions.map((solution, index) => {;
+                        {solutions && solutions.map(solution, index) => {;
                           const IconComponent = solution && solution.icon;
                               href={service.href}
                               className="p - 3 rounded - lg hover:bg - blue - 50 transition - colors group";
@@ -439,15 +439,15 @@ export default function Navigation() {;
                 <AnimatePresence>;
                   {isSolutionsOpen && (
                     <motion.div;
-                      initial={{ opacity: 0, coordinate_y: 10 }}
-                      animate={{ opacity: 1, coordinate_y: 0 }}
-                      exit={{ opacity: 0, coordinate_y: 10 }}
+                      initial={ opacity: 0, coordinate_y: 10 }
+                      animate={ opacity: 1, coordinate_y: 0 }
+                      exit={ opacity: 0, coordinate_y: 10 }
                       className="absolute top - full left - 0 mt - 2 w - 96 bg - white rounded - lg shadow - xl border border - gray - 200 py - 4";
                       onMouseEnter={() => setIsSolutionsOpen (true)}
                       onMouseLeave={() => setIsSolutionsOpen (false)}
                     >;
                       <div className="grid grid - cols - 2 gap - 4 px - 6">;
-                        {solutions.map ((solution, index) => {
+                        {solutions.map (solution, index) => {
                           const IconComponent = solution.icon;
                           return (
                             <Link;
@@ -492,15 +492,15 @@ export default function Navigation() {;
                 <AnimatePresence>;
                   {isIndustriesOpen && (;
                     <motion&& motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 10 }}
+                      initial={ opacity: 0, y: 10 }
+                      animate={ opacity: 1, y: 0 }
+                      exit={ opacity: 0, y: 10 }
                       className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4"
                       onMouseEnter={() => setIsIndustriesOpen(true)}
                       onMouseLeave={() => setIsIndustriesOpen(false)}
                     >;
                       <div className="px-6">;
-                        {industries && industries.map((industry, index) => (;
+                        {industries && industries.map(industry, index) => (;
                           <Link
                             key={index}
                             href={industry && industry.href}
@@ -512,7 +512,7 @@ export default function Navigation() {;
                               {industry && industry.description}
                             </div>;
                           </Link>;
-                        ))}
+                        )}
                       </div>;
                     </motion && motion.div>;
                   )}
@@ -531,15 +531,15 @@ export default function Navigation() {;
                 <AnimatePresence>;
                   {isResourcesOpen && (;
                     <motion&& motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 10 }}
+                      initial={ opacity: 0, y: 10 }
+                      animate={ opacity: 1, y: 0 }
+                      exit={ opacity: 0, y: 10 }
                       className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4"
                       onMouseEnter={() => setIsResourcesOpen(true)}
                       onMouseLeave={() => setIsResourcesOpen(false)}
                     >;
                       <div className="px-6">;
-                        {resources && resources.map((resource, index) => (;
+                        {resources && resources.map(resource, index) => (;
                           <Link
                             key={index}
                             href={resource && resource.href}
@@ -551,7 +551,7 @@ export default function Navigation() {;
                               {resource && resource.description}
                             </div>;
                           </Link>;
-                        ))}
+                        )}
                       </div>;
                     </motion && motion.div>;
                   )}
@@ -622,9 +622,9 @@ export default function Navigation() {;
           <AnimatePresence>;
             {isMenuOpen && (;
               <motion&& motion.div
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: "auto" }}
-                exit={{ opacity: 0, height: 0 }}
+                initial={ opacity: 0, height: 0 }
+                animate={ opacity: 1, height: "auto" }
+                exit={ opacity: 0, height: 0 }
                 className="lg:hidden border-t border-gray-200">;
                 <div className="py-4 space-y-2">;
                   <Link
@@ -640,7 +640,7 @@ export default function Navigation() {;
                       Services;
                     </div>;
                     <div className="space-y-1 ml-4">;
-                      {services && services.map((service, index) => (;
+                      {services && services.map(service, index) => (;
                         <Link
                           key={index}
                           href={service && service.href}
@@ -649,7 +649,7 @@ export default function Navigation() {;
                         >;
                           {service && service.name}
                         </Link>;
-                      ))}
+                      )}
                     </div>
                   </div>
                   {/* Mobile Solutions */}
@@ -658,7 +658,7 @@ export default function Navigation() {;
                       Solutions;
                     </div>;
                     <div className="space-y-1 ml-4">;
-                      {solutions && solutions.map((solution, index) => (;
+                      {solutions && solutions.map(solution, index) => (;
                         <Link
                           key={index}
                           href={solution && solution.href}
@@ -667,7 +667,7 @@ export default function Navigation() {;
                         >;
                           {solution && solution.name}
                         </Link>;
-                      ))}
+                      )}
                     </div>
                   </div>
                   {/* Mobile Industries */}
@@ -676,7 +676,7 @@ export default function Navigation() {;
                       Industries;
                     </div>;
                     <div className="space-y-1 ml-4">;
-                      {industries && industries.map((industry, index) => (;
+                      {industries && industries.map(industry, index) => (;
                         <Link
                           key={index}
                           href={industry && industry.href}
@@ -685,7 +685,7 @@ export default function Navigation() {;
                         >;
                           {industry && industry.name}
                         </Link>;
-                      ))}
+                      )}
                     </div>
                   </div>
                   {/* Mobile Resources */}
@@ -694,7 +694,7 @@ export default function Navigation() {;
                       Resources;
                     </div>;
                     <div className="space-y-1 ml-4">;
-                      {resources && resources.map((resource, index) => (;
+                      {resources && resources.map(resource, index) => (;
                         <Link
                           key={index}
                           href={resource && resource.href}
@@ -703,7 +703,7 @@ export default function Navigation() {;
                         >;
                           {resource && resource.name}
                         </Link>;
-                      ))}
+                      )}
                     </div>
                   </div>
                   <Link
@@ -765,15 +765,15 @@ export default function Navigation() {;
                 <AnimatePresence>;
                   {isIndustriesOpen && (
                     <motion.div;
-                      initial={{ opacity: 0, coordinate_y: 10 }}
-                      animate={{ opacity: 1, coordinate_y: 0 }}
-                      exit={{ opacity: 0, coordinate_y: 10 }}
+                      initial={ opacity: 0, coordinate_y: 10 }
+                      animate={ opacity: 1, coordinate_y: 0 }
+                      exit={ opacity: 0, coordinate_y: 10 }
                       className="absolute top - full left - 0 mt - 2 w - 80 bg - white rounded - lg shadow - xl border border - gray - 200 py - 4";
                       onMouseEnter={() => setIsIndustriesOpen (true)}
                       onMouseLeave={() => setIsIndustriesOpen (false)}
                     >;
                       <div className="px - 6">;
-                        {industries.map ((industry, index) => (
+                        {industries.map (industry, index) => (
                           <Link;
                             key={index}
                             href={industry.href}
@@ -785,7 +785,7 @@ export default function Navigation() {;
                             <div className="text - sm text - gray - 500">;
                               {industry.description}
                             </div>;
-                          </Link>))}
+                          </Link>)}
                       </div>;
                     </motion.div>)}
                 </AnimatePresence>;
@@ -803,15 +803,15 @@ export default function Navigation() {;
                 <AnimatePresence>;
                   {isResourcesOpen && (
                     <motion.div;
-                      initial={{ opacity: 0, coordinate_y: 10 }}
-                      animate={{ opacity: 1, coordinate_y: 0 }}
-                      exit={{ opacity: 0, coordinate_y: 10 }}
+                      initial={ opacity: 0, coordinate_y: 10 }
+                      animate={ opacity: 1, coordinate_y: 0 }
+                      exit={ opacity: 0, coordinate_y: 10 }
                       className="absolute top - full left - 0 mt - 2 w - 80 bg - white rounded - lg shadow - xl border border - gray - 200 py - 4";
                       onMouseEnter={() => setIsResourcesOpen (true)}
                       onMouseLeave={() => setIsResourcesOpen (false)}
                     >;
                       <div className="px - 6">;
-                        {resources.map ((resource, index) => (
+                        {resources.map (resource, index) => (
                           <Link;
                             key={index}
                             href={resource.href}
@@ -823,7 +823,7 @@ export default function Navigation() {;
                             <div className="text - sm text - gray - 500">;
                               {resource.description}
                             </div>;
-                          </Link>))}
+                          </Link>)}
                       </div>;
                     </motion.div>)}
                 </AnimatePresence>;
@@ -871,9 +871,9 @@ export default function Navigation() {;
           <AnimatePresence>;
             {isMenuOpen && (
               <motion.div;
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: "auto" }}
-                exit={{ opacity: 0, height: 0 }}
+                initial={ opacity: 0, height: 0 }
+                animate={ opacity: 1, height: "auto" }
+                exit={ opacity: 0, height: 0 }
                 className="lg:hidden border - t border - gray - 200";
               >;
                 <div className="py - 4 space - y-2">;
@@ -890,7 +890,7 @@ export default function Navigation() {;
                       Services;
                     </div>;
                     <div className="space - y-1 ml - 4">;
-                      {services.map ((service, index) => (
+                      {services.map (service, index) => (
                         <Link;
                           key={index}
                           href={service.href}
@@ -898,7 +898,7 @@ export default function Navigation() {;
                           on_click={() => setIsMenuOpen (false)}
                         >;
                           {service.name}
-                        </Link>))}
+                        </Link>)}
                     </div>;
                   </div>;
                   {/* Mobile Solutions */}
@@ -907,7 +907,7 @@ export default function Navigation() {;
                       Solutions;
                     </div>;
                     <div className="space - y-1 ml - 4">;
-                      {solutions.map ((solution, index) => (
+                      {solutions.map (solution, index) => (
                         <Link;
                           key={index}
                           href={solution.href}
@@ -915,7 +915,7 @@ export default function Navigation() {;
                           on_click={() => setIsMenuOpen (false)}
                         >;
                           {solution.name}
-                        </Link>))}
+                        </Link>)}
                     </div>;
                   </div>;
                   {/* Mobile Industries */}
@@ -924,7 +924,7 @@ export default function Navigation() {;
                       Industries;
                     </div>;
                     <div className="space - y-1 ml - 4">;
-                      {industries.map ((industry, index) => (
+                      {industries.map (industry, index) => (
                         <Link;
                           key={index}
                           href={industry.href}
@@ -932,7 +932,7 @@ export default function Navigation() {;
                           on_click={() => setIsMenuOpen (false)}
                         >;
                           {industry.name}
-                        </Link>))}
+                        </Link>)}
                     </div>;
                   </div>;
                   {/* Mobile Resources */}
@@ -941,7 +941,7 @@ export default function Navigation() {;
                       Resources;
                     </div>;
                     <div className="space - y-1 ml - 4">;
-                      {resources.map ((resource, index) => (
+                      {resources.map (resource, index) => (
                         <Link;
                           key={index}
                           href={resource.href}
@@ -949,7 +949,7 @@ export default function Navigation() {;
                           on_click={() => setIsMenuOpen (false)}
                         >;
                           {resource.name}
-                        </Link>))}
+                        </Link>)}
                     </div>;
                   </div>;
                   <Link;
@@ -998,4 +998,3 @@ export default function Navigation() {;
         on_close={() => setIsSearchOpen (false)}
       />;
     </>);
-}

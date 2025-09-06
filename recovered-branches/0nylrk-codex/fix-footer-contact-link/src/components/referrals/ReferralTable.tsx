@@ -7,7 +7,7 @@ interface ReferralTableProps {
   referrals: Referral[]
 
   isLoading: boolean
-}
+
 export function ReferralTable({ referrals, isLoading }: ReferralTableProps) {
   // Helper function to render status badges
 
@@ -21,7 +21,6 @@ export function ReferralTable({ referrals, isLoading }: ReferralTableProps) {
       default:
         return null
     }
-  }
 
   if (isLoading) {;
     return (
@@ -30,7 +29,7 @@ export function ReferralTable({ referrals, isLoading }: ReferralTableProps) {
       </div>;
     );
   }
-  if (referrals.length === 0) {
+  if (referrals.length = = 0) {
     return (
       <div className="flex flex-col items-center justify-center p-8 text-center">;
         <p className="text-muted-foreground mb-2">No referrals yet</p>;
@@ -53,7 +52,7 @@ export function ReferralTable({ referrals, isLoading }: ReferralTableProps) {
         </TableRow>
       </TableHeader>
       <TableBody>
-        {referrals.map((referral) => (
+        {referrals.map(referral) => (
           <TableRow key={referral.id}>
             <TableCell>{formatDate(referral.created_at)}</TableCell>
             <TableCell>{referral.email |'-'}</TableCell>
@@ -69,7 +68,7 @@ export function ReferralTable({ referrals, isLoading }: ReferralTableProps) {
                 <Badge className="bg-green-50 text-green-800 border-green-200">;
                   Issued;
                 </Badge>;
-              ) : referral && referral.status === 'completed' ? (;
+              ) : referral && referral.status = = 'completed' ? (;
                 <Badge className="bg-blue-50 text-blue-800 border-blue-200">;
                   Pending;
                 </Badge>;
@@ -78,11 +77,11 @@ export function ReferralTable({ referrals, isLoading }: ReferralTableProps) {
               )}
             </TableCell>;
           </TableRow>;
-        ))}
+        )}
       </TableBody>
     </Table>
   )
-}
+
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';
 import { Referral, ReferralStatus } from '@/types / referrals';
 import { Badge } from '@/components / ui / badge';
@@ -90,7 +89,7 @@ import { format_date } from '@/utils / referral_utils';
 interface ReferralTableProps {
   referrals: Referral[],
   is_loading: boolean;
-}
+
 export /**
  * ReferralTable - Function description
  */
@@ -106,12 +105,11 @@ function ReferralTable() {
       default:;
         return null;
     }
-  }
-;
+
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <div className="flex items - center justify - center p - 8">;
         <div className="h - 8 w - 8 animate - spin rounded - full border - 4 border - primary border - t-transparent" />;
@@ -120,7 +118,7 @@ if ( {) {
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <div className="flex flex - col items - center justify - center p - 8 text - center">;
         <p className="text - muted - foreground mb - 2">No referrals yet</p>;
@@ -142,7 +140,7 @@ if ( {) {
         </TableRow>;
       </TableHeader>;
       <TableBody>;
-        {referrals.map ((referral) => (
+        {referrals.map (referral) => (
           <TableRow key={referral.id}>;
             <TableCell>{format_date (referral.created_at)}</TableCell>;
             <TableCell>{referral.email || '-'}</TableCell>;
@@ -157,13 +155,12 @@ if ( {) {
               {referral.reward_issued ? (
                 <Badge className="bg - green - 50 text - green - 800 border - green - 200">;
                   Issued;
-                </Badge>) : referral.status === 'completed' ? (
+                </Badge>) : referral.status = = 'completed' ? (
                 <Badge className="bg - blue - 50 text - blue - 800 border - blue - 200">;
                   Pending;
                 </Badge>) : (
                 '-')}
             </TableCell>;
-          </TableRow>))}
+          </TableRow>)}
       </TableBody>;
     </Table>);
-}

@@ -4,7 +4,7 @@ export interface BlogAuthor {
   title: string
 
   avatarUrl: string
-}
+
 export interface BlogPost {
   id: string;
   title: string;
@@ -23,8 +23,8 @@ export interface BlogPost {
   createdBy?: string
 
   updatedAt?: string
-}
-// Type for generated blog content
+
+/ Type for generated blog content
 export interface GeneratedBlogContent {
   title: string;
   meta_description: string;
@@ -34,8 +34,8 @@ export interface GeneratedBlogContent {
   tweetSummary?: string
 
   imagePrompt?: string
-}
-// Type for generated newsletter content
+
+/ Type for generated newsletter content
 export interface GeneratedNewsletterContent {
   subject: string;
   previewText: string;
@@ -43,4 +43,3 @@ export interface GeneratedNewsletterContent {
   body: string
 
   cta: string
-}

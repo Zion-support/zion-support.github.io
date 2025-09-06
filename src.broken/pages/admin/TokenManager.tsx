@@ -6,5 +6,3 @@ export function TokenManager() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

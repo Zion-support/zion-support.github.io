@@ -23,7 +23,7 @@ export interface PartnerProfile {
   updated_at: string
 
   commission_rate?: number
-}
+
 export interface PartnerSettings {
   id: string;
   commission_rate: number;
@@ -31,7 +31,7 @@ export interface PartnerSettings {
   fraud_threshold: number
 
   is_payouts_enabled: boolean
-}
+
 export interface PartnerReferralLink {
   id: string;
   name: string;
@@ -43,7 +43,7 @@ export interface PartnerReferralLink {
   conversions: number
 
   created_at: string
-}
+
 export interface PartnerPayout {
   id: string;
   partner_id: string;
@@ -54,4 +54,3 @@ export interface PartnerPayout {
   created_at: string
 
   completed_at?: string
-}

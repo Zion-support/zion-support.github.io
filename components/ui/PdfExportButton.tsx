@@ -1,22 +1,21 @@
 
 html2pdf () .set (opt) .from (element) .save ()
-}
+
 export default function PdfExportButton({
   targetRef
   fileName = 'resume.pdf'
-}: PdfExportButtonProps) {  const onClick = async () => {import React from 'react';
+: PdfExportButtonProps) {  const onClick = async () => {import React from 'react';
 export type PdfExportButtonProps = {
   targetRef: React.RefObject<HTMLDivElement>
   fileName?: string;
   theme?: 'light' | 'dark'
-}
+
 export default function PdfExportButton({ targetRef, fileName = 'resume.pdf' }: PdfExportButtonProps) {
     if (!targetRef.current) return;
     const element = targetRef.current;
-    const html2pdf = (await import('html2pdf.js')).default;
+    const html2pdf = (await import('html2pdf.js').default;
 html2pdf () .set (opt) .from (element) .save ();
-}
-;
+
 export default /**
  * PdfExportButton - Function description
  */
@@ -25,8 +24,7 @@ export type PdfExportButtonProps = {
   target_ref: React.RefObject < HTMLDivElement>,
   file_name?: string;
   theme?: 'light' | 'dark';
-}
-;
+
 export default /**
  * PdfExportButton - Function description
  */
@@ -34,11 +32,11 @@ function PdfExportButton() {
     // Check condition
 if (return) {
   $2
-}
+
     const element = target_ref.current;
-;
-    const html2pdf = (await import ('html2pdf.js')).default;
-;
+
+    const html2pdf = (await import ('html2pdf.js').default;
+
     const opt = {
       margin: [10, 10, 10, 10]
       image: { type: 'jpeg', quality: 0.98 }
@@ -50,41 +48,39 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
  html2pdf () .set (opt) .from (element) .save () ;
-};
 
 export default function PdfExportButton(): any ({;
   targetRef,;
   fileName = 'resume && resume.pdf',;
-}: PdfExportButtonProps) {  const onClick = async () => {import React from 'react';
+: PdfExportButtonProps) {  const onClick = async () => {import React from 'react';
 export type PdfExportButtonProps = {;
   targetRef: React && React.RefObject<HTMLDivElement>,;
   fileName?: string;
   theme?: 'light' | 'dark';
-};
 
 export default function PdfExportButton(): any ({ targetRef, fileName = 'resume && resume.pdf' }: PdfExportButtonProps) {;
     if (!targetRef && targetRef.current) return;
     const element = targetRef && targetRef.current;
 
-    const html2pdf = (await import('html2pdf && html2pdf.js')).default;
+    const html2pdf = (await import('html2pdf && html2pdf.js').default;
 
     const opt = {;
       margin: [10, 10, 10, 10],;
@@ -98,32 +94,30 @@ export default function PdfExportButton(): any ({ targetRef, fileName = 'resume 
       Download as PDF
     </button>
   );
-}  return (
+  return (
     <button
       onClick={onClick}
       className="no-print fixed right-4 top-20 z-50 inline-flex items-center gap-2 rounded-md bg-blue-600 text-white px-4 py-2 shadow hover: bg-blue-700 focus:outline-none"
       aria-label="Download as PDF"
       Download as PDF
     </button>
-);
-}
+;
+
     >
       Download as PDF
     </button>
   );
-}
-;
+
     html2pdf ().set (opt).from (element).save ();
   }
-;
+
       >;
       Download as PDF;
     </button>);
-}  return (
+  return (
     <button;
       on_click={on_click}
       className="no - print fixed right - 4 top - 20 z - 50 inline - flex items - center gap - 2 rounded - md bg - blue - 600 text - white px - 4 py - 2 shadow hover: bg - blue - 700 focus:outline - none";
       aria - label="Download as PDF";
       Download as PDF;
     </button>);
-}

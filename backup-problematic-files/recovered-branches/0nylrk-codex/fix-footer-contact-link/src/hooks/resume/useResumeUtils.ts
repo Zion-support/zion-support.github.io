@@ -1,14 +1,14 @@
 
 import { format } from 'date-fns',;
 import { toast } from '@/hooks/use-toast',;
-;
-// Utility function to format dates for DB operations;
+
+/ Utility function to format dates for DB operations;
 export const formatDateForDB = (date:Date | string | undefined) => {;
   if (!date) return undefined,;
-  return typeof date === 'string' ? date :format(date, 'yyyy-MM-dd'),;
-},;
-;
-// Error handling with toast;
+  return typeof date = = 'string' ? date :format(date, 'yyyy-MM-dd'),;
+,;
+
+/ Error handling with toast;
 export const handleResumeError = (e:any, errorMessage:string) => {;
   console.error(`Error:${errorMessage}`, e),;
   toast({;
@@ -17,16 +17,15 @@ export const handleResumeError = (e:any, errorMessage:string) => {;
     variant:"destructive";
   }),;
   return false,;
-},;
-;
-// Success notification;
+,;
+
+/ Success notification;
 export const showSuccessToast = (title:string, description:string) => {;
   toast({;
     title,;
     description;
   }),;
   return true,;
-},; variant: "destructive" 
-});
+,; variant: "destructive" 
+);
 return false;
-};

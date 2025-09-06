@@ -1,12 +1,12 @@
 import fs from 'fs',;
 import path from 'path',;
 import type { GetStaticProps } from 'next',;
-;
+
 type Broken = { url:string, page:string, status:number },;
 interface Report { generatedAt:string, pagesScanned:number, brokenLinks:Broken[], pagesWithOgIssues:number, ogIssues:{ page:string, missing:string[] }[] }
-;
+
 type Props = { report:Report | null },;
-;
+
 export const getStaticProps:GetStaticProps<Props> = async () => {;
   try {;
     const file = path.join(process.cwd(), 'publicautomation', 'site-validator.json'),;
@@ -16,8 +16,8 @@ export const getStaticProps:GetStaticProps<Props> = async () => {;
   } catch {;
     return { props:{ report:null }, revalidate:21600 },;
   }
-},;
-;
+,;
+
 export default function SiteValidator({ report } Props) {;
   if (!report) return <div>No validation report yet.</div>,;
   return (;
@@ -35,9 +35,9 @@ export default function SiteValidator({ report } Props) {;
         <section>;
           <h2 className="font-semibold mb-2">Broken Links</h2>;
           <ul className="text-sm space-y-1 max-h-96 overflow-auto border rounded p-3 border-gray-200 dark:border-gray-800">;
-            {report.brokenLinks.slice(0, 500).map((b, i) => (;
+            {report.brokenLinks.slice(0, 500).map(b, i) => (;
               <li key={i} className="flex justify-between gap-4"><span className="truncate">{b.page}  {b.url}</span><span className="text-gray-500">{b.status}</span></li>;
-            ))}
+            )}
           </ul>;
         </section>;
       )}
@@ -45,12 +45,11 @@ export default function SiteValidator({ report } Props) {;
         <section>;
           <h2 className="font-semibold mb-2">Pages Missing OG Tags</h2>;
           <ul className="text-sm space-y-1 max-h-96 overflow-auto border rounded p-3 border-gray-200 dark:border-gray-800">;
-            {report.ogIssues.map((o, i) => (;
+            {report.ogIssues.map(o, i) => (;
               <li key={i} className="flex justify-between gap-4"><span className="truncate">{o.page}</span><span className="text-gray-500 truncate">{o.missing.join(', ')}</span></li>;
-            ))}
+            )}
           </ul>;
         </section>;
       )}
     </div>;
   ),;
-}

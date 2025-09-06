@@ -6,5 +6,3 @@ export function ListingDetail() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

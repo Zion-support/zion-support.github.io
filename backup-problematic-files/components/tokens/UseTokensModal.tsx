@@ -10,13 +10,13 @@ export default function UseTokensModal({;
   onClose: () => void,;
   serviceId?: string,;
   defaultType?: RedemptionType;
-}) {;
+) {;
   const [account, setAccount] = useState<string | null>(null),;
   const [type, setType] = useState<RedemptionType>(defaultType ?? 'boost_profile'),;
   const [tokens, setTokens] = useState<number>(100),;
   const [isSubmitting, setIsSubmitting] = useState(false),;
   const usdValue = (tokens * 0.01).toFixed(2),;
-  useEffect(() => {;
+  useEffect() => {;
     (async () => {;
       const accs = await getAccounts(),;
       if (accs && accs.length > 0) setAccount(accs[0]);
@@ -26,7 +26,7 @@ export default function UseTokensModal({;
     const accs = await connectMetaMask(),;
     if (accs && accs.length > 0) setAccount(accs[0]);
   }
-;
+
   async function redeem() {;
     setIsSubmitting(true),;
     try {;
@@ -37,11 +37,9 @@ export default function UseTokensModal({;
       const data = await res.json();
       if (data?.ok) {;
         onClose();
-      }
-    } finally {;
+      } finally {;
       setIsSubmitting(false);
     }
-  }
 
   if (!isOpen) return null,
 
@@ -68,7 +66,7 @@ export default function UseTokensModal({;
 
           <div className="text-sm">
             <div className="mb-1">Amount (ZION)</div>
-            <input type="number" min={1} value={tokens} onChange={(e) => setTokens(parseInt(e.target.value || '0', 10))} className="w-full rounded border border-gray-300 dark:border-gray-700 bg-transparent px-2 py-2" />
+            <input type="number" min={1} value={tokens} onChange={(e) => setTokens(parseInt(e.target.value || '0', 10)} className="w-full rounded border border-gray-300 dark:border-gray-700 bg-transparent px-2 py-2" />
             <div className="opacity-70 mt-1">Approx. ${usdValue} USD</div>
           </div>
 
@@ -89,7 +87,7 @@ export default function UseTokensModal({;
       </div>
     </div>
   )
-;
+
   if (!isOpen) return null;
   return (;
     <div className="fixed inset-0 z-[60] flex items-end sm:items-center justify-center">;
@@ -111,7 +109,7 @@ export default function UseTokensModal({;
           </div>;
           <div className="text-sm">;
             <div className="mb-1">Amount (ZION)</div>;
-            <input type="number" min={1} value={tokens} onChange={(e) => setTokens(parseInt(e.target.value || '0', 10))} className="w-full rounded border border-gray-300 dark:border-gray-700 bg-transparent px-2 py-2" />;
+            <input type="number" min={1} value={tokens} onChange={(e) => setTokens(parseInt(e.target.value || '0', 10)} className="w-full rounded border border-gray-300 dark:border-gray-700 bg-transparent px-2 py-2" />;
             <div className="opacity-70 mt-1">Approx. ${usdValue} USD</div>;
           </div>;
           <div className="text-sm">;
@@ -130,4 +128,3 @@ export default function UseTokensModal({;
       </div>;
     </div>;
   );
-}

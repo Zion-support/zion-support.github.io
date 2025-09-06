@@ -8,7 +8,7 @@ import {;
   RefreshCw,;
   BarChart3,;
   Gauge;
-} from 'lucide-react',;
+ from 'lucide-react',;
 interface PerformanceMetrics {;
   fcp: number,;
   lcp: number,;
@@ -27,8 +27,7 @@ interface PerformanceMetrics {;
     downlink: number,;
     rtt: number;
   }
-}
-;
+
 interface PerformanceRecommendation {;
   id: string,;
   title: string,;
@@ -37,15 +36,14 @@ interface PerformanceRecommendation {;
   impact: string,;
   solution: string,;
   category: 'performance' | 'accessibility' | 'seo' | 'user-experience';
-}
-;
+
 const EnhancedPerformanceMonitor: React.FC = () => {;
   const [isVisible, setIsVisible] = useState(false),;
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null),;
   const [recommendations, setRecommendations] = useState<PerformanceRecommendation[]>([]),;
   const [isMonitoring, setIsMonitoring] = useState(false),;
   const [lastUpdate, setLastUpdate] = useState<Date | null>(null),;
-  const generateRecommendations = useCallback((metrics: PerformanceMetrics): PerformanceRecommendation[] => {;
+  const generateRecommendations = useCallback(metrics: PerformanceMetrics): PerformanceRecommendation[] => {;
     const recs: PerformanceRecommendation[] = [],;
     // FCP recommendations;
     if (metrics.fcp > 2000) {;
@@ -59,7 +57,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {;
         category: 'performance';
       });
     }
-;
+
     // LCP recommendations;
     if (metrics.lcp > 2500) {;
       recs.push({;
@@ -72,7 +70,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {;
         category: 'performance';
       });
     }
-;
+
     // CLS recommendations;
     if (metrics.cls > 0.1) {;
       recs.push({;
@@ -85,7 +83,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {;
         category: 'user-experience';
       });
     }
-;
+
     // Memory usage recommendations;
     if (metrics.memoryUsage && metrics.memoryUsage.usedJSHeapSize > 50 * 1024 * 1024) {;
       recs.push({;
@@ -98,9 +96,9 @@ const EnhancedPerformanceMonitor: React.FC = () => {;
         category: 'performance';
       });
     }
-;
+
     // Network recommendations;
-    if (metrics.networkInfo && metrics.networkInfo.effectiveType === 'slow-2g') {;
+    if (metrics.networkInfo && metrics.networkInfo.effectiveType = = 'slow-2g') {;
       recs.push({;
         id: 'network-optimization',;
         title: 'Network Performance Optimization',;
@@ -111,38 +109,37 @@ const EnhancedPerformanceMonitor: React.FC = () => {;
         category: 'performance';
       });
     }
-;
+
     return recs;
   }, []),;
   const measurePerformance = useCallback(async () => {;
     try {;
       setIsMonitoring(true),;
       // Wait for page to be fully loaded;
-      if (document.readyState !== 'complete') {;
+      if (document.readyState != 'complete') {;
         await new Promise(resolve => {;
           window.addEventListener('load', resolve, { once: true });
         });
       }
-;
+
       // Wait a bit more for any async operations;
-      await new Promise(resolve => setTimeout(resolve, 1000)),;
+      await new Promise(resolve => setTimeout(resolve, 1000),;
       const navigation = window.window.window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,;
       const paint = window.window.window.performance.getEntriesByType('paint'),;
-      const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,;
-      const lcp = await new Promise<number>((resolve) => {;
+      const fcp = paint.find(entry => entry.name = = 'first-contentful-paint')?.startTime || 0,;
+      const lcp = await new Promise<number>(resolve) => {;
         if ('PerformanceObserver' in window) {;
-          const observer = new PerformanceObserver((list) => {;
+          const observer = new PerformanceObserver(list) => {;
             const entries = list.getEntries(),;
             const lastEntry = entries[entries.length - 1],;
             resolve(lastEntry.startTime);
           }),;
           observer.observe({ entryTypes: ['largest-contentful-paint'] }),;
           // Fallback timeout;
-          setTimeout(() => resolve(0), 5000);
+          setTimeout() => resolve(0), 5000);
         } else {;
           resolve(0);
-        }
-      }),;
+        }),;
       const metrics: PerformanceMetrics = {;
         fcp,;
         lcp,;
@@ -155,23 +152,22 @@ const EnhancedPerformanceMonitor: React.FC = () => {;
         networkInfo: 'connection' in navigator ? (navigator as any).connection : undefined;
       },;
       setMetrics(metrics),;
-      setRecommendations(generateRecommendations(metrics)),;
-      setLastUpdate(new Date());
+      setRecommendations(generateRecommendations(metrics),;
+      setLastUpdate(new Date();
     } catch {;
       // Performance measurement failed;
     } finally {;
       setIsMonitoring(false);
-    }
-  }, [generateRecommendations]),
+    }, [generateRecommendations]),
 
   const getPerformanceScore = (metrics: PerformanceMetrics): number => {
     let score = 100,
-    
+
     if (metrics.fcp > 2000) score -= 20,
     if (metrics.lcp > 2500) score -= 25,
     if (metrics.cls > 0.1) score -= 15,
     if (metrics.ttfb > 600) score -= 20,
-    
+
     return Math.max(0, score)
   },
 
@@ -201,12 +197,12 @@ const EnhancedPerformanceMonitor: React.FC = () => {;
       </div>
     )
   }
-;
+
   return (;
     <motion.div;
       className={`bg-gray-900 rounded-lg border border-gray-700 overflow-hidden ${className}`}
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
+      initial={ opacity: 0, y: 20 }
+      animate={ opacity: 1, y: 0 }
     >;
       {/* Header */}
       <div className="p-4 bg-gray-800/50 border-b border-gray-700">
@@ -295,7 +291,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {;
                   </div>
                 </div>
               )}
-;
+
               {/* Memory Usage */}
               {metrics?.memoryUsage && (
                 <div className="bg-gray-800 rounded-lg p-4 border border-gray-700">
@@ -316,15 +312,15 @@ const EnhancedPerformanceMonitor: React.FC = () => {;
                     <div className="w-full bg-gray-700 rounded-full h-2">
                       <div 
                         className="bg-gradient-to-r from-cyan-500 to-blue-500 h-2 rounded-full transition-all duration-300"
-                        style={{ 
+                        style={ 
                           width: `${(metrics.memoryUsage.usedJSHeapSize / metrics.memoryUsage.totalJSHeapSize) * 100}%` 
-                        }}
+                        }
                       />;
                     </div>;
                   </div>;
                 </div>;
               )}
-;
+
               {/* Network Info */}
               {metrics?.networkInfo && (
                 <div className="bg-gray-800 rounded-lg p-4 border border-gray-700">
@@ -351,19 +347,19 @@ const EnhancedPerformanceMonitor: React.FC = () => {;
                   </div>
                 </div>
               )}
-;
+
               {/* Recommendations */}
               {recommendations.length > 0 && (
                 <div className="bg-gray-800 rounded-lg p-4 border border-gray-700">
                   <h3 className="text-lg font-semibold text-white mb-3">Recommendations</h3>
                   <div className="space-y-3">
-                    {recommendations.map((rec) => (
+                    {recommendations.map(rec) => (
                       <div key={rec.id} className="border-l-4 border-cyan-500 pl-3">
                         <div className="flex items-start justify-between">
                           <h4 className="font-medium text-white text-sm">{rec.title}</h4>
                           <span className={`text-xs px-2 py-1 rounded ${
-                            rec.priority === 'high' ? 'bg-red-500/20 text-red-400' :
-                            rec.priority === 'medium' ? 'bg-yellow-500/20 text-yellow-400' :
+                            rec.priority = = 'high' ? 'bg-red-500/20 text-red-400' :
+                            rec.priority = = 'medium' ? 'bg-yellow-500/20 text-yellow-400' :
                             'bg-green-500/20 text-green-400'
                           }`}>
                             {rec.priority}
@@ -372,11 +368,11 @@ const EnhancedPerformanceMonitor: React.FC = () => {;
                         <p className="text-gray-400 text-xs mt-1">{rec.description}</p>
                         <p className="text-cyan-400 text-xs mt-1">{rec.solution}</p>
                       </div>
-                    ))}
+                    )}
                   </div>;
                 </div>;
               )}
-;
+
               {/* Action Buttons */}
               <div className="flex space-x-3">
                 <button
@@ -398,5 +394,5 @@ const EnhancedPerformanceMonitor: React.FC = () => {;
       </AnimatePresence>;
     </>;
   );
-},;
+,;
 export default EnhancedPerformanceMonitor;

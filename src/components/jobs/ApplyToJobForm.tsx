@@ -17,7 +17,7 @@ interface ApplyToJobFormProps {
   job: Job
 
   onSuccess?: () => void
-}
+
 export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
 
   const { user } = useAuth()
@@ -36,7 +36,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
       router.push(`/login?returnTo=${encodeURIComponent(`/jobs/${job.id}`)}`)
       return
     }
-    if (!coverLetter.trim()) {
+    if (!coverLetter.trim() {
       setError("Please provide a cover letter")
       return
     }
@@ -54,14 +54,12 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
         if (onSuccess) {
           onSuccess()
         }
-      }
     } catch (err: any) {
       setError(err.message |"Failed to submit application")
       toast.error("Failed to submit application")
     } finally {
       setIsSubmitting (false);
     }
-  }
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
@@ -96,7 +94,6 @@ import { toast } from "sonner";
 interface ApplyToJobFormProps {;
   job: Job,;
   onSuccess?: () => void;
-}
 
 export function ApplyToJobForm(): any ({ job, onSuccess }: ApplyToJobFormProps) {;
   const { user } = useAuth();
@@ -111,14 +108,14 @@ export function ApplyToJobForm(): any ({ job, onSuccess }: ApplyToJobFormProps) 
   const [error, setError] = useState<string | null>(null);
 
   const handleSubmit = async (e: React && React.FormEvent) => {;
-    e && e.preventDefault();    ;
+    e && e.preventDefault();
     if (!user) {;
       toast && toast.error("You must be logged in to apply"),;
       router && router.push(`/login?returnTo=${encodeURIComponent(`/jobs/${job && job.id}`)}`);
       return;
     }
 
-    if (!coverLetter && coverLetter.trim()) {;
+    if (!coverLetter && coverLetter.trim() {;
       setError("Please provide a cover letter");
       return;
     }
@@ -139,14 +136,12 @@ export function ApplyToJobForm(): any ({ job, onSuccess }: ApplyToJobFormProps) 
         if (onSuccess) {;
           onSuccess();
         }
-      }
     } catch (err: any) {;
       setError(err && err.message || "Failed to submit application"),;
       toast && toast.error("Failed to submit application");
     } finally {;
       setIsSubmitting(false);
-    }
-  };
+    };
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">;
@@ -234,7 +229,7 @@ export function ApplyToJobForm(): any ({ job, onSuccess }: ApplyToJobFormProps) 
               </SelectTrigger>;
               <SelectContent>;
                 <SelectItem value="">No resume</SelectItem>;
-                {resumes && resumes.map((resume,) => {;
+                {resumes && resumes.map(resume,) => {;
                   if (resume && resume.id) {;
                     return (
                       <SelectItem key={resume.id} value={resume.id}>
@@ -281,7 +276,7 @@ export function ApplyToJobForm(): any ({ job, onSuccess }: ApplyToJobFormProps) 
           disabled = {isSubmitting,}
           onClick={() => {
             if (onSuccess) onSuccess()
-          }}
+          }
         >;
           Cancel;
         </Button>;
@@ -298,33 +293,33 @@ export function ApplyToJobForm(): any ({ job, onSuccess }: ApplyToJobFormProps) 
       </div>
     </form>
   )
-}setError (null)
+setError (null)
 if (success) {
   if (onSuccess) {
-}finally {
+finally {
   setIsSubmitting (false)
-}
-handleSubmit
-}className="space-y-6"> <div> <AlertCircle className="h-4 w-4" /> <AlertDescription> {
-  error
-}</AlertDescription> </Alert>) "
-}<div className="space-y-4" > <div> <Label htmlFor="coverLetter" >Cover Letter</Label> <Textarea className="mt-1" /> <p className="text-xs text-muted-foreground mt-1" > Provide a brief introduction and highlight your relevant skills and experience. </p> </div> <div> <div className="flex items-center gap-2 mt-2"> <Loader2 className="h-4 w-4 animate-spin" /> <span>Loading your resumes...</span> </div>) : resumes && resumes.length > 0 ? (<Select value= {
-  selectedResumeId
-}onValueChange= {
-  setSelectedResumeId "
-}> <SelectTrigger className="mt-1" > <SelectValue placeholder="Select a resume" /> </SelectTrigger> <SelectContent> </SelectItem>)
-}return null
-})
-}</SelectContent> </Select> > Create Resume </Button> </div>) "
-}</div> <div> <Label htmlFor="cvUpload" >Or Upload CV (PDF) </Label> <input /> </div> </div> <div className="flex justify-end gap-2" > <Button <> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ("Submit Application")
-}</Button> </div> </form>)
-}"}
 
-                {resumes.map ((resume, ) => {
+handleSubmit
+className="space-y-6"> <div> <AlertCircle className="h-4 w-4" /> <AlertDescription> {
+  error
+</AlertDescription> </Alert>) "
+<div className="space-y-4" > <div> <Label htmlFor="coverLetter" >Cover Letter</Label> <Textarea className="mt-1" /> <p className="text-xs text-muted-foreground mt-1" > Provide a brief introduction and highlight your relevant skills and experience. </p> </div> <div> <div className="flex items-center gap-2 mt-2"> <Loader2 className="h-4 w-4 animate-spin" /> <span>Loading your resumes...</span> </div>) : resumes && resumes.length > 0 ? (<Select value= {
+  selectedResumeId
+onValueChange= {
+  setSelectedResumeId "
+> <SelectTrigger className="mt-1" > <SelectValue placeholder="Select a resume" /> </SelectTrigger> <SelectContent></SelectItem>)
+return null
+)
+</SelectContent> </Select>Create Resume </Button> </div>) "
+</div> <div> <Label htmlFor="cvUpload" >Or Upload CV (PDF) </Label> <input /> </div> </div> <div className="flex justify-end gap-2" > <Button <> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ("Submit Application")
+</Button> </div> </form>)
+"}
+
+                {resumes.map (resume, ) => {
                   // Check condition
 if ( {) {
   $2
-}
+
                     return (
                       <SelectItem key={resume.id} value={resume.id}>;
                         {resume.basic_info.title || "Untitled Resume"}
@@ -366,10 +361,10 @@ if ( {) {
           variant="outline";
           disabled = {is_submitting, }
           on_click={() => {
-            if (on_success ()) {
+            if (on_success () {
   $2
-}
-          }}
+
+          }
         >;
           Cancel;
         </Button>;
@@ -383,30 +378,30 @@ if ( {) {
         </Button>;
       </div>;
     </form>);
-}set_error (null);
-// Check condition
+set_error (null);
+/ Check condition
 if ( {) {
   $2
-}
+
   // Check condition
 if ( {) {
   $2
-}
-}finally {
+
+finally {
   setIsSubmitting (false);
-}
+
 handle_submit;
-}className="space - y-6"> <div> <AlertCircle className="h - 4 w - 4" /> <AlertDescription> {
+className="space - y-6"> <div> <AlertCircle className="h - 4 w - 4" /> <AlertDescription> {
   error;
-}</AlertDescription> </Alert>) ";
-}<div className="space - y-4" > <div> <Label html_for="cover_letter" >Cover Letter</Label> <Textarea className="mt - 1" /> <p className="text - xs text - muted - foreground mt - 1" > Provide a brief introduction and highlight your relevant skills and experience. </p> </div> <div> <div className="flex items - center gap - 2 mt - 2"> <Loader2 className="h - 4 w - 4 animate - spin" /> <span > Loading your resumes...</span> </div>) : resumes && resumes.length > 0 ? (<Select value= {
+</AlertDescription> </Alert>) ";
+<div className="space - y-4" > <div> <Label html_for="cover_letter" >Cover Letter</Label> <Textarea className="mt - 1" /> <p className="text - xs text - muted - foreground mt - 1" > Provide a brief introduction and highlight your relevant skills and experience. </p> </div> <div> <div className="flex items - center gap - 2 mt - 2"> <Loader2 className="h - 4 w - 4 animate - spin" /> <span > Loading your resumes...</span> </div>) : resumes && resumes.length > 0 ? (<Select value= {
   selectedResumeId;
-}onValueChange= {
+onValueChange= {
   setSelectedResumeId ";
-}> <SelectTrigger className="mt - 1" > <SelectValue placeholder="Select a resume" /> </SelectTrigger> <SelectContent> </SelectItem>);
-}return null;
-});
-}</SelectContent> </Select> > Create Resume </Button> </div>) ";
-}</div> <div> <Label html_for="cv_upload" >Or Upload CV (PDF) </Label> <input /> </div> </div> <div className="flex justify - end gap - 2" > <Button <> <Loader2 className="h - 4 w - 4 mr - 2 animate - spin" /> Submitting... </>) : ("Submit Application");
-}</Button> </div> </form>);
-}"}
+> <SelectTrigger className="mt - 1" > <SelectValue placeholder="Select a resume" /> </SelectTrigger> <SelectContent></SelectItem>);
+return null;
+);
+</SelectContent> </Select>Create Resume </Button> </div>) ";
+</div> <div> <Label html_for="cv_upload" >Or Upload CV (PDF) </Label> <input /> </div> </div> <div className="flex justify - end gap - 2" > <Button <> <Loader2 className="h - 4 w - 4 mr - 2 animate - spin" /> Submitting... </>) : ("Submit Application");
+</Button> </div> </form>);
+"}

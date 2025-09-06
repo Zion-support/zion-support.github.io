@@ -33,8 +33,8 @@ export default function AIGuardrailsPage() {
 							<div className=&quot;p-6&quot;>
 								<h2 className=&quot;text-2xl font-semibold text-white mb-4&quot;>Capabilities</h2>
 								<ul className=&quot;grid grid-cols-1 md:grid-cols-2 gap-3&quot;>
-									{features.map((f) => (
-										<li key={f} className=&quot;flex items-start gap-2 text-gray-200&quot;><Check className=&quot;w-5 h-5 text-emerald-400 mt-0.5&quot; /> <span>{f}</span></li>									))}
+									{features.map(f) => (
+										<li key={f} className=&quot;flex items-start gap-2 text-gray-200&quot;><Check className=&quot;w-5 h-5 text-emerald-400 mt-0.5&quot; /> <span>{f}</span></li>									)}
 								</ul>
 							</div>
 						</Card>

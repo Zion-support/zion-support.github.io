@@ -38,7 +38,6 @@ export const revolutionary2026MicroSaasServices: Revolutionary2026MicroSaasServi
         email: 'kleber@ziontechgroup.com'
         address: '364 E Main St STE 1008 Middletown DE 19709'
       }
-    }
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -72,6 +71,4 @@ export const revolutionary2026MicroSaasServices: Revolutionary2026MicroSaasServi
     contact_info: {
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",      address: "364 E Main St STE 1008 Middletown DE 19709";
     }
-  }
-];
 ;

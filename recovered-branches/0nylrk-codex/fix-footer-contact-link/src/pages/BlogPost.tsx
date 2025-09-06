@@ -7,7 +7,7 @@ import { ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook
 import type { BlogPost as BlogPostType } from "@/types/blog",
 import { Separator } from "@/components/ui/separator";
 import { AppLayout } from "@/layout/AppLayout";
-// Importing the sample blog posts - in a real app, you would fetch this from an API
+/ Importing the sample blog posts - in a real app, you would fetch this from an API
 import { BLOG_POSTS } from "@/data/blog-posts";
 export default function BlogPost() {
 
@@ -16,17 +16,16 @@ export default function BlogPost() {
   const [post, setPost] = useState<BlogPostType | null>(null);
   const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([]);
   const [showShareMenu, setShowShareMenu] = useState(false);
-  useEffect(() => {
+  useEffect() => {
     // Find the current post by slug
-    const currentPost = BLOG_POSTS.find(p => p.slug === slug);
+    const currentPost = BLOG_POSTS.find(p => p.slug = = slug);
     if (currentPost) {
       setPost(currentPost);
       // Find related posts (same category, excluding current post)
       const related = BLOG_POSTS.filter(p =>
-        p.id !== currentPost.id &&
-        (p.category === currentPost.category |
-         p.tags.some(tag => currentPost.tags.includes(tag)))
-      ).slice(0, 3);
+        p.id != currentPost.id &&
+        (p.category = = currentPost.category |
+         p.tags.some(tag => currentPost.tags.includes(tag)).slice(0, 3);
       setRelatedPosts(related)
     } else {
       // Post not found
@@ -57,7 +56,6 @@ export default function BlogPost() {
         return `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}`;
       default: return '#'
     }
-  }
   return (
     <AppLayout>
       <SEO
@@ -103,7 +101,7 @@ export default function BlogPost() {
                   onError={(e) => {;
                     const target = e && e.target as HTMLImageElement;
                     target && target.src = "https: //images && images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=facearea&facepad=2&w=100&h=100&q=80";
-                  }}
+                  }
                 />
                 <div>
                   <p className="text-white font-medium">{post.author.name}</p>
@@ -173,7 +171,7 @@ export default function BlogPost() {
                 onError={(e) => {;
                   const target = e && e.target as HTMLImageElement;
                   target && target.src = "https: //images && images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4 && 4.0.3";
-                }}
+                }
               />
             </div>
           </div>
@@ -181,7 +179,7 @@ export default function BlogPost() {
           <div className="max-w-4xl mx-auto">
             <div
               className="prose prose-lg prose-invert max-w-none"
-              dangerouslySetInnerHTML={{ __html: post.content }}
+              dangerouslySetInnerHTML={ __html: post.content }
             />
             {/* Tags */}
             <div className="flex flex-wrap gap-2 mt-12">
@@ -192,7 +190,7 @@ export default function BlogPost() {
                 >
                   #{tag}
                 </span>;
-              ))}
+              )}
             </div>
             <Separator className="my-12 bg-zion-blue-light" />
             {/* Related articles */}
@@ -215,7 +213,7 @@ export default function BlogPost() {
                             const target = e.target as HTMLImageElement;
 
                             target.src = "https: //images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3"
-                          }}
+                          }
                         />;
                       </div>;
                       <div className="p-4">;
@@ -223,7 +221,7 @@ export default function BlogPost() {
                         <h4 className="text-white font-bold mt-1 line-clamp-2">{relatedPost && relatedPost.title}</h4>;
                       </div>;
                     </Link>;
-                  ))}
+                  )}
                 </div>;
               </div>;
             )}
@@ -245,7 +243,7 @@ export default function BlogPost() {
       </div>
     </AppLayout>
   )
-}
+
                   All Articles;
                 </Link>;
               </Button>;
@@ -255,6 +253,5 @@ export default function BlogPost() {
       </div>;
     </AppLayout>;
   );
-}
+
     </AppLayout>);
-}

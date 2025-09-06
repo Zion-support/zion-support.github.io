@@ -19,7 +19,7 @@ import {
   BarChart3,
   Calendar,
   Target
-} from 'lucide-react',
+ from 'lucide-react',
 export default function MicroSaasServicesPage() {_const _microSaasServices = [
     {
       id: 'ai-content-generator',
@@ -37,7 +37,7 @@ export default function MicroSaasServicesPage() {_const _microSaasServices = [
       pricing: {
         starter: { price: 29, features: ['100 generations/monthBasic templatesSEO analysisEmail support'] },
         professional: { price: 99, features: ['500 generations/monthPremium templatesAdvanced SEOPriority supportAPI access'] },
-        enterprise: { price: 299, features: ['Unlimited generationsCustom templatesWhite-label optionsSLA guarantee'] }      },
+        enterprise: { price: 299, features: ['Unlimited generationsCustom templatesWhite-label optionsSLA guarantee'] },
       marketPrice: '$29-299/month',
       competitors: ['Jasper AICopy.aiWritesonic'],
       website: 'https://ai-content.ziontech.ai',
@@ -59,7 +59,7 @@ export default function MicroSaasServicesPage() {_const _microSaasServices = [
       pricing: {
         starter: { price: 19, features: ['5 URLs5-min monitoringBasic metricsEmail alerts7-day retention'] },
         professional: { price: 49, features: ['25 URLs1-min monitoringAdvanced metricsMultiple alerts30-day retentionAPI access'] },
-        enterprise: { price: 149, features: ['Unlimited URLsReal-time monitoringAll metricsCustom dashboards1-year retentionSLA guarantee'] }      },
+        enterprise: { price: 149, features: ['Unlimited URLsReal-time monitoringAll metricsCustom dashboards1-year retentionSLA guarantee'] },
       marketPrice: '$19-149/month',
       competitors: ['PingdomGTmetrixWebPageTest'],
       website: 'https://window.window.window.performance.ziontech.ai',
@@ -81,7 +81,7 @@ export default function MicroSaasServicesPage() {_const _microSaasServices = [
       pricing: {
         starter: { price: 39, features: ['100 keywordsBasic analysisMonthly reportsEmail support7-day retention'] },
         professional: { price: 89, features: ['500 keywordsAdvanced analysisWeekly reportsPriority support30-day retentionAPI access'] },
-        enterprise: { price: 199, features: ['Unlimited keywordsFull SEO suiteDaily reportsDedicated support1-year retentionWhite-label options'] }      },
+        enterprise: { price: 199, features: ['Unlimited keywordsFull SEO suiteDaily reportsDedicated support1-year retentionWhite-label options'] },
       marketPrice: '$39-199/month',
       competitors: ['AhrefsSEMrushMoz'],
       website: 'https://seo.ziontech.ai',
@@ -103,7 +103,7 @@ export default function MicroSaasServicesPage() {_const _microSaasServices = [
       pricing: {
         starter: { price: 25, features: ['10 rate limit rulesBasic limitingAPI key managementEmail notifications7-day retention'] },
         professional: { price: 79, features: ['50 rate limit rulesAdvanced limitingUnlimited API keysReal-time monitoring30-day retentionAPI access'] },
-        enterprise: { price: 199, features: ['Unlimited rulesEnterprise securityAdvanced featuresCustom integrations1-year retentionSLA guarantee'] }      },
+        enterprise: { price: 199, features: ['Unlimited rulesEnterprise securityAdvanced featuresCustom integrations1-year retentionSLA guarantee'] },
       marketPrice: '$25-199/month',
       competitors: ['KongTykAWS API Gateway'],
       website: 'https://rate-limiter.ziontech.ai',
@@ -125,7 +125,7 @@ export default function MicroSaasServicesPage() {_const _microSaasServices = [
       pricing: {
         starter: { price: 29, features: ['1,000 subscribersBasic templatesSimple automationBasic analyticsEmail support'] },
         professional: { price: 79, features: ['10,000 subscribersAdvanced templatesAdvanced automationAdvanced analyticsPriority supportAPI access'] },
-        enterprise: { price: 199, features: ['Unlimited subscribersCustom templatesComplex workflowsEnterprise analyticsDedicated supportWhite-label options'] }      },
+        enterprise: { price: 199, features: ['Unlimited subscribersCustom templatesComplex workflowsEnterprise analyticsDedicated supportWhite-label options'] },
       marketPrice: '$29-199/month',
       competitors: ['MailchimpConvertKitActiveCampaign'],
       website: 'https://email.ziontech.ai',
@@ -147,14 +147,14 @@ export default function MicroSaasServicesPage() {_const _microSaasServices = [
       pricing: {
         starter: { price: 19, features: ['3 social accountsBasic schedulingSimple calendarBasic analyticsEmail support'] },
         professional: { price: 49, features: ['10 social accountsAdvanced schedulingContent calendarAdvanced analyticsPriority supportAPI access'] },
-        enterprise: { price: 129, features: ['Unlimited accountsEnterprise schedulingAdvanced calendarEnterprise analyticsDedicated supportWhite-label options'] }      },
+        enterprise: { price: 129, features: ['Unlimited accountsEnterprise schedulingAdvanced calendarEnterprise analyticsDedicated supportWhite-label options'] },
       marketPrice: '$19-129/month',
       competitors: ['BufferHootsuiteLater'],
       website: 'https://social.ziontech.ai',
       demo: 'https://demo.social.ziontech.ai'
     }
   ],;
-;
+
   const marketInsights = [;
     {;
       title:'AI Content Generation',;
@@ -236,11 +236,11 @@ export default function MicroSaasServicesPage() {_const _microSaasServices = [
           </div>
 
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
-            {marketInsights.map((insight, index) => (
+            {marketInsights.map(insight, index) => (
               <Card
                 key={index}
                 className=&quot;card-hover border-gradient-blue text-center&quot;
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={ animationDelay: `${index * 0.1}s` }
               >
                 <div className=&quot;p-6&quot;>
                   <h3 className=&quot;text-xl font-bold text-white mb-4&quot;>{insight.title}</h3>
@@ -250,11 +250,11 @@ export default function MicroSaasServicesPage() {_const _microSaasServices = [
                   </div>
                   <p className=&quot;text-gray-400 text-sm&quot;>{insight.description}</p>                </div>
               </Card>
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Services Grid */}
       <section className=&quot;section-padding bg-gradient-cursor&quot;>
         <div className=&quot;container-cursor&quot;>
@@ -267,7 +267,7 @@ export default function MicroSaasServicesPage() {_const _microSaasServices = [
           </div>
 
           <div className=&quot;space-y-16&quot;>
-            {microSaasServices.map((service, index) => (
+            {microSaasServices.map(service, index) => (
               <div key={service.id} className=&quot;bg-gray-900/50 rounded-2xl p-8 border border-gray-800&quot;>
                 <div className=&quot;grid grid-cols-1 lg:grid-cols-3 gap-8&quot;>
                   {/* Service Info */}
@@ -288,11 +288,11 @@ export default function MicroSaasServicesPage() {_const _microSaasServices = [
                           Key Features
                         </h4>
                         <ul className=&quot;space-y-2&quot;>
-                          {service.features.map((feature, featureIndex) => (
+                          {service.features.map(feature, featureIndex) => (
                             <li key={featureIndex} className=&quot;flex items-center text-gray-300 text-sm&quot;>
                               <Check className=&quot;w-4 h-4 mr-2 text-green-400 flex-shrink-0&quot; />
                               {feature}                            </li>
-                          ))}
+                          )}
                         </ul>
                       </div>
 
@@ -302,11 +302,11 @@ export default function MicroSaasServicesPage() {_const _microSaasServices = [
                           Use Cases
                         </h4>
                         <ul className=&quot;space-y-2&quot;>
-                          {service.useCases.map((useCase, useCaseIndex) => (
+                          {service.useCases.map(useCase, useCaseIndex) => (
                             <li key={useCaseIndex} className=&quot;flex items-center text-gray-300 text-sm&quot;>
                               <Check className=&quot;w-4 h-4 mr-2 text-green-400 flex-shrink-0&quot; />
                               {useCase}                            </li>
-                          ))}
+                          )}
                         </ul>
                       </div>
                     </div>
@@ -334,7 +334,7 @@ export default function MicroSaasServicesPage() {_const _microSaasServices = [
                       <h4 className=&quot;text-lg font-semibold text-white mb-4 flex items-center&quot;>
                         <BarChart3 className=&quot;w-5 h-5 mr-2 text-cursor-blue&quot; />                        Pricing & Market
                       </h4>
-                      
+
                       <div className=&quot;space-y-4&quot;>
                         <div>
                           <p className=&quot;text-sm text-gray-400 mb-1&quot;>Market Price Range</p>
@@ -344,21 +344,21 @@ export default function MicroSaasServicesPage() {_const _microSaasServices = [
                         <div>
                           <p className=&quot;text-sm text-gray-400 mb-1&quot;>Our Pricing</p>
                           <div className=&quot;space-y-2&quot;>
-                            {Object.entries(service.pricing).map(([tier, details]) => (
+                            {Object.entries(service.pricing).map([tier, details]) => (
                               <div key={tier} className=&quot;flex justify-between items-center&quot;>
                                 <span className=&quot;text-sm text-gray-300 capitalize&quot;>{tier}</span>
                                 <span className=&quot;text-sm font-semibold text-white&quot;>${details.price}/mo</span>                              </div>
-                            ))}
+                            )}
                           </div>
                         </div>
 
                         <div>
                           <p className=&quot;text-sm text-gray-400 mb-1&quot;>Key Competitors</p>
                           <div className=&quot;flex flex-wrap gap-2&quot;>
-                            {service.competitors.map((competitor, compIndex) => (
+                            {service.competitors.map(competitor, compIndex) => (
                               <span key={compIndex} className=&quot;px-2 py-1 bg-gray-700 rounded text-xs text-gray-300&quot;>
                                 {competitor}                              </span>
-                            ))}
+                            )}
                           </div>;
                         </div>;
                       </div>;
@@ -366,11 +366,11 @@ export default function MicroSaasServicesPage() {_const _microSaasServices = [
                   </div>;
                 </div>;
               </div>;
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Why Choose Our Services */}
       <section className=&quot;section-padding bg-gradient-cursor-accent&quot;>
         <div className=&quot;container-cursor&quot;>

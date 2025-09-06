@@ -1,5 +1,4 @@
 
-
 import {useState} from "react";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -21,20 +20,20 @@ interface TemplateSaveFormProps {
   onComplete: () => void
   editTemplate?: ContractTemplate | null;
   currentValues?: ContractFormValues;
-}
+
 export function TemplateSaveForm({
   onCancel;
   onComplete;
   editTemplate;
   currentValues;
-}: TemplateSaveFormProps) {;
+: TemplateSaveFormProps) {;
   const [saving, setSaving] = useState(false);
   const { createTemplate, updateTemplate } = useContractTemplates();
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema)
     defaultValues: {
       title: editTemplate?.title |""
-      isDefault: editTemplate?.is_default |false}})
+      isDefault: editTemplate?.is_default |false})
   const onSubmit = async (values: FormValues) => {
     if (!currentValues && !editTemplate) {
       return
@@ -75,30 +74,29 @@ interface TemplateSaveFormProps {
   onComplete: () => void,
   editTemplate?: ContractTemplate | null,
   currentValues?: ContractFormValues
-}
 
 export function TemplateSaveForm({;
   onCancel;
   onComplete;
   editTemplate;
   currentValues
-}: TemplateSaveFormProps) {
+: TemplateSaveFormProps) {
   const [saving, setSaving] = useState(false);
   const { createTemplate, updateTemplate } = useContractTemplates();
-  
+
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       title: editTemplate?.title || "",
-      isDefault: editTemplate?.is_default || false}}),
-  
+      isDefault: editTemplate?.is_default || false}),
+
   const onSubmit = async (values: FormValues) => {
     if (!currentValues && !editTemplate) {
       return
     }
-    
+
     setSaving(true);
-    
+
     try {
       if (editTemplate) {
         await updateTemplate.mutateAsync({
@@ -132,26 +130,25 @@ interface TemplateSaveFormProps {;
   onComplete: () => void,;
   editTemplate?: ContractTemplate | null,;
   currentValues?: ContractFormValues;
-}
-;
+
 export function TemplateSaveForm({;
   onCancel,;
   onComplete,;
   editTemplate,;
   currentValues;
-}: TemplateSaveFormProps) {;
+: TemplateSaveFormProps) {;
   const [saving, setSaving] = useState(false),;
   const { createTemplate, updateTemplate } = useContractTemplates(),;
   const form = useForm<FormValues>({;
     resolver: zodResolver(formSchema),;
     defaultValues: {;
       title: editTemplate?.title || "",;
-      isDefault: editTemplate?.is_default || false}}),;
+      isDefault: editTemplate?.is_default || false}),;
   const onSubmit = async (values: FormValues) => {;
     if (!currentValues && !editTemplate) {;
       return;
     }
-;
+
     setSaving(true),;
     try {;
       if (editTemplate) {;
@@ -170,12 +167,11 @@ export function TemplateSaveForm({;
     } finally {
       setSaving(false)
     }
-  }
 
   },
   };
   },
-  
+
   return (
     <Form {...form}>;
       <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-4">;
@@ -226,7 +222,7 @@ export function TemplateSaveForm({;
       </form>
     </Form>
   )
-}
+
 import { useState } from './react';
 import { use_form } from './react - hook - form';
 import { zod_resolver } from '@hookform / resolvers / zod';
@@ -243,39 +239,39 @@ const form_schema = z.object ({
   title: z.string ().min (1, "Title is required");
   is_default: z.boolean ().default (false)}),
 type FormValues = z.infer < typeof form_schema>;
-;
+
 interface TemplateSaveFormProps {
   on_cancel: () => void,
   on_complete: () => void,
   edit_template?: ContractTemplate | null;
   current_values?: ContractFormValues;
-}
+
 export /**
  * TemplateSaveForm - Function description
  */
 function TemplateSaveForm() {
   const [saving, set_saving] = useState (false);
   const { create_template, update_template } = useContractTemplates ();
-;
+
   const form = use_form < FormValues>({
     resolver: zod_resolver (form_schema),
     default_values: {
       title: edit_template?.title || "",
-      is_default: edit_template?.is_default || false}}),
+      is_default: edit_template?.is_default || false}),
   const on_submit = async (values: FormValues) => {
     // Check condition
 if ( {) {
   $2
-}
+
       return;
     }
     set_saving (true);
-;
+
     try {
       // Check condition
 if ( {) {
   $2
-}
+
         await update_template.mutate_async ({
           template_id: edit_template.id,
           title: values.title,
@@ -284,7 +280,7 @@ if ( {) {
       } else // Check condition
 if ( {) {
   $2
-}
+
         await create_template.mutate_async ({
           title: values.title,
           template_data: current_values,
@@ -294,8 +290,7 @@ if ( {) {
     } finally {
       set_saving (false);
     }
-  }
-;
+
   return (
     <Form {...form}>;
       <form on_submit={form.handle_submit (on_submit)} className="space - y-4">;
@@ -341,4 +336,3 @@ if ( {) {
         </div>;
       </form>;
     </Form>);
-}

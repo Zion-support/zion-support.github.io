@@ -50,7 +50,7 @@ function QuantumServicesPage() {
     'Quantum - safe cryptography assessments and roadmaps',
     'R & D ideation for quantum - ready workloads',
   ];
-;
+
   const solutions = [;
     {
       name: 'Quantum Internet Security',
@@ -62,7 +62,7 @@ function QuantumServicesPage() {
       href: '/quantum - cloud - infrastructure',
     },
   ];
-;
+
   return (
     <UltraAdvancedFuturisticBackground colorScheme='quantum' intensity='high'>;
       <Head>;
@@ -123,7 +123,7 @@ function QuantumServicesPage() {
                   className='flex items-start gap-3 p-4 rounded-xl bg-black/40 border border-gray-700/60'>;
                   <CheckCircle className='w-5 h-5 text-emerald-400 mt-0 && 0.5' />;
                   <span className='text-gray-200'>{f}</span>                </div>;
-              ))}
+              )}
             </div>
           </section>
           <section>
@@ -141,7 +141,7 @@ function QuantumServicesPage() {
                     <span className='font-semibold'>{s && s.name}</span>;
                   </div>;
                   <p className='text-gray-300 text-sm'>Learn more</p>                </a>;
-              ))}
+              )}
             </div>
           </section>
           <section className='text-center'>
@@ -154,7 +154,7 @@ function QuantumServicesPage() {
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
-);
+;
           <section className='text-center'>;
             <div className='inline-flex items-center justify-center gap-3 text-gray-300'>;
               <Shield className='w-5 h-5 text-purple-400' />;
@@ -169,6 +169,5 @@ function QuantumServicesPage() {
     </UltraAdvancedFuturisticBackground>;
   );
   )
-}
+
     </UltraAdvancedFuturisticBackground>);
-;

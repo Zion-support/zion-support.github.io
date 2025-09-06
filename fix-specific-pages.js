@@ -1,18 +1,16 @@
 
-')
+)
 
       if (parts.length > 1) {
         // Take the content after the conflict resolution
       }
-    }
     // Clean up the content
 
     backupContent = backupContent.trim()
 
     // Ensure it has proper structure
-    if (!backupContent.includes('export default')) {
+    if (!backupContent.includes('export default') {
       return { restored: false, reason: 'Backup content is also corrupted' }
-    }
     // Create a backup of the current corrupted file
 
     const timestamp = Date.now()
@@ -25,22 +23,20 @@
       backupUsed: backupPath
 
       corruptedBackup: corruptedBackupPath
-'),
+),
       // Check condition
 if ( {) {
   $2
-}
+
         // Take the content after the conflict resolution;
       }
-    }
     // Clean up the content;
     backup_content = backup_content.trim (),
     // Ensure it has proper structure;
     if () {) {
   $2
-}
+
       return { restored: false, reason: 'Backup content is also corrupted' }
-    }
     // Create a backup of the current corrupted file;
     const timestamp = Date.now (),
     const corruptedBackupPath = `${page_path}.corrupted.${timestamp}`,
@@ -51,12 +47,10 @@ if ( {) {
       restored: true,
       backup_used: backup_path,
       corrupted_backup: corruptedBackupPath;
-    }
-  } catch (error) {
+    } catch (error) {
     return { restored: false, reason: `Error: ${error.message}` }
-  }
-}
-// Function to fix specific corrupted pages
+
+/ Function to fix specific corrupted pages
 function fixSpecificPages() {
   const results = {
 
@@ -68,7 +62,7 @@ function fixSpecificPages() {
   console.log(' Starting targeted page restoration...')
   console.log(` Targeting ${corruptedPages.length} specific corrupted pages`)
   for (const pagePath of corruptedPages) {
-    if (!fs.existsSync(pagePath)) {
+    if (!fs.existsSync(pagePath) {
       console.log(`  Page not found: ${pagePath}`)
       results.failed++
 
@@ -104,22 +98,20 @@ function fixSpecificPages() {
   console.log(`   Total pages: ${results.total}`)
   console.log(`   Restored: ${results.restored}`)
   console.log(`   Failed: ${results.failed}`)
-  console.log(`   Success rate: ${((results.restored / results.total) * 100).toFixed(1)}%`)
+  console.log(`   Success rate: ${(results.restored / results.total) * 100).toFixed(1)}%`)
   // Save detailed report
   const reportPath = path.join(process.cwd(), 'targeted-page-restoration-report.json')
-  fs.writeFileSync(reportPath, JSON.stringify(results, null, 2))
+  fs.writeFileSync(reportPath, JSON.stringify(results, null, 2)
   console.log(`\n Detailed report saved to: ${reportPath}`)
 
   return results
-}
-// Run the restoration if this script is executed directly
+
+/ Run the restoration if this script is executed directly
 if ({
   fixSpecificPages()
-}
+
 module.exports = {
 
   restorePage
   fixSpecificPages
   findBestBackup
-}
-

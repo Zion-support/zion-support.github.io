@@ -6,5 +6,3 @@ export function MobileMessages() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

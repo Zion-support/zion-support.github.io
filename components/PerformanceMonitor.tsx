@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React, { useEffect } from 'react';
 import {Star} from 'lucide-react';
 interface PerformanceData {
@@ -35,11 +35,11 @@ interface PerformanceData {
     total: number
     limit: number
   } | null;
-}
+
 interface PerformanceMonitorProps {
   onPerformanceData?: (data: PerformanceData) => void
-}
-// Extend the Window interface to include performance
+
+/ Extend the Window interface to include performance
 declare global {
   interface Window {
     performance: Performance
@@ -50,7 +50,6 @@ declare global {
       usedJSHeapSize: number, totalJSHeapSize: number
       jsHeapSizeLimit: number
     }
-  }
   interface PerformanceEntry {
     name: string, startTime: number
     duration: number
@@ -60,16 +59,16 @@ declare global {
     loadEventStart: number, loadEventEnd: number
     fetchStart: number
   }
-// Define Performance types if not available
+/ Define Performance types if not available
 interface PerformanceEntry {
   name: string
   entryType: string
   startTime: number
   duration: number
-}
+
 interface Performance {
   getEntriesByType(type: string): PerformanceEntry[]
-}
+
 interface PerformanceNavigationTiming extends PerformanceEntry {
   loadEventEnd: number
   loadEventStart: number
@@ -79,12 +78,12 @@ interface PerformanceNavigationTiming extends PerformanceEntry {
   responseStart: number
   requestStart: number
   navigationStart: number
-}
-// Define Performance types if not available
+
+/ Define Performance types if not available
 interface Performance {
   getEntriesByType (type: string): PerformanceEntry[];
   now (): number;
-}
+
 interface PerformanceEntry {
 
 interface PerformanceData {;
@@ -99,13 +98,11 @@ interface PerformanceData {;
     total: number,;
     limit: number,;
   } | null;
-}
 
 interface PerformanceMonitorProps {;
   onPerformanceData?: (data: PerformanceData) => void,;
-}
 
-// Extend the Window interface to include performance;
+/ Extend the Window interface to include performance;
 declare global {;
   interface Window {;
 
@@ -131,17 +128,15 @@ declare global {;
     fetchStart: number,;
   }
 
-// Define Performance types if not available;
+/ Define Performance types if not available;
 interface PerformanceEntry {;
   name: string,;
   entryType: string,;
   startTime: number,;
   duration: number,;
-}
 
 interface Performance {;
   getEntriesByType(type: string): PerformanceEntry[],;
-}
 
 interface PerformanceNavigationTiming extends PerformanceEntry {;
   loadEventEnd: number,;
@@ -152,20 +147,18 @@ interface PerformanceNavigationTiming extends PerformanceEntry {;
   responseStart: number,;
   requestStart: number,;
   navigationStart: number,;
-}
 
-// Define Performance types if not available;
+/ Define Performance types if not available;
 interface Performance {;
   getEntriesByType(type: string): PerformanceEntry[];
   now(): number;
-}
 
 interface PerformanceEntry {;
   name: string;
   entry_type: string;
   start_time: number;
   duration: number;
-}
+
 interface PerformanceNavigationTiming extends PerformanceEntry {
   readonly connectEnd: number;
   readonly connectStart: number;
@@ -195,11 +188,11 @@ interface PerformanceNavigationTiming extends PerformanceEntry {
   readonly type: string;
   readonly unloadEventEnd: number;
   readonly unloadEventStart: number;
-}
+
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData }) => {
-  useEffect(() => {
-// Only run on client side
-    if (typeof window === 'undefined' |typeof window.performance === 'undefined') return;
+  useEffect() => {
+/ Only run on client side
+    if (typeof window = = 'undefined' |typeof window.performance = = 'undefined') return;
     const measurePerformance = () => {
 
       const navigationEntries = window.performance.getEntriesByType('navigation');
@@ -211,45 +204,43 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
         loadComplete: navigation.loadEventEnd - navigation.loadEventStart
         totalLoadTime: navigation.loadEventEnd - navigation.fetchStart
         // Paint timing
-        firstPaint: paintEntries.find(entry => entry.name === 'first-paint')?.startTime |0
-        firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime |0
+        firstPaint: paintEntries.find(entry => entry.name = = 'first-paint')?.startTime |0
+        firstContentfulPaint: paintEntries.find(entry => entry.name = = 'first-contentful-paint')?.startTime |0
         // Resource timing
         resourceCount: window.performance.getEntriesByType('resource').length
-// Memory usage (if available)
+/ Memory usage (if available)
 
-        memory: (window.performance as Performance & { memory?: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory ? {
-          used: (window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory.usedJSHeapSize
-          total: (window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory.totalJSHeapSize
-          limit: (window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory.jsHeapSizeLimit
+        memory: (window.performance as Performance & { memory?: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number }).memory ? {
+          used: (window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number }).memory.usedJSHeapSize
+          total: (window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number }).memory.totalJSHeapSize
+          limit: (window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number }).memory.jsHeapSizeLimit
       }
       if (onPerformanceData) {
         onPerformanceData(performanceData);
       }
       // Log performance data in development
-      if (process.env.NODE_ENV === 'development') {
+      if (process.env.NODE_ENV = = 'development') {
         // eslint-disable-next-line no-console
         console.log('Performance Metrics:', performanceData);
       }
-    }
     // Measure performance after page load
-    if (document.readyState === 'complete') {
+    if (document.readyState = = 'complete') {
       measurePerformance();
     } else {;
       window && window.addEventListener('load', measurePerformance);
     }
     return () => {
       window.removeEventListener('load', measurePerformance);
-    }
-  }, [onPerformanceData]);
+    }, [onPerformanceData]);
   return null;
-}
+
 const PerformanceMonitor: React.FC < PerformanceMonitorProps> = ({ onPerformanceData }) => {
-  useEffect (() => {
-// Only run on client side;
+  useEffect () => {
+/ Only run on client side;
     // Check condition
 if (return) {
   $2
-}
+
     const measure_performance = () =>: any {
       const navigation_entries = window.performance.getEntriesByType ('navigation');
       const navigation = navigation_entries[0] as PerformanceNavigationTiming;
@@ -260,49 +251,46 @@ if (return) {
         load_complete: navigation.loadEventEnd - navigation.loadEventStart,
         totalLoadTime: navigation.loadEventEnd - navigation.fetch_start,
         // Paint timing;
-        first_paint: paint_entries.find (entry => entry.name === 'first - paint')?.start_time || 0,
-        firstContentfulPaint: paint_entries.find (entry => entry.name === 'first - contentful - paint')?.start_time || 0,
+        first_paint: paint_entries.find (entry => entry.name = = 'first - paint')?.start_time || 0,
+        firstContentfulPaint: paint_entries.find (entry => entry.name = = 'first - contentful - paint')?.start_time || 0,
         // Resource timing;
         resource_count: window.performance.getEntriesByType ('resource').length,
-// Memory usage (if available);
-        memory: (window.performance as Performance & { memory?: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory ? {
-          used: (window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory.usedJSHeapSize,
-          total: (window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory.totalJSHeapSize,
-          limit: (window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory.jsHeapSizeLimit;
+/ Memory usage (if available);
+        memory: (window.performance as Performance & { memory?: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number }).memory ? {
+          used: (window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number }).memory.usedJSHeapSize,
+          total: (window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number }).memory.totalJSHeapSize,
+          limit: (window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number }).memory.jsHeapSizeLimit;
       },
       // Check condition
 if ( {) {
   $2
-}
+
         onPerformanceData (performance_data);
       }
       // Log performance data in development;
       // Check condition
 if ( {) {
   $2
-}
+
         // eslint - disable - next - line no - console;
         console.log ('Performance Metrics:', performance_data);
       }
-    }
-;
+
     // Measure performance after page load;
     // Check condition
 if ( {) {
   $2
-}
+
       measure_performance ();
     } else {
       window.addEventListener ('load', measure_performance);
     }
     return () => {
       window.removeEventListener ('load', measure_performance);
-    }
-  }, [onPerformanceData]);
-;
+    }, [onPerformanceData]);
+
   return null;
-}
-;
+
 export default PerformanceMonitor;
 import React, { useEffect, useState } from 'react;
 interface PerformanceMetrics {fcp?: number;
@@ -310,47 +298,45 @@ interface PerformanceMetrics {fcp?: number;
   fid?: number;
   cls?: number;
   ttfb?: number;
-}
+
 const PerformanceMonitor: React.FC = () => {const [metrics, setMetrics] = useState<PerformanceMetrics>({});
   const [isVisible, setIsVisible] = useState(false);
-  useEffect(() => {;
-if (typeof window === 'undefined') return;
+  useEffect() => {;
+if (typeof window = = 'undefined') return;
     // Only show in development or for admin users;
-    const isDev = process && process.env.NODE_ENV === 'development;
-    const isAdmin = localStorage && localStorage.getItem('admin_mode') === 'true;
+    const isDev = process && process.env.NODE_ENV = = 'development;
+    const isAdmin = localStorage && localStorage.getItem('admin_mode') = = 'true;
     '    if (!isDev && !isAdmin) return;
-    const observer = new PerformanceObserver((list) => {const entries = list.getEntries();
-      entries.forEach((entry) => {;
+    const observer = new PerformanceObserver(list) => {const entries = list.getEntries();
+      entries.forEach(entry) => {;
         switch (entry.entryType) {;
-case 'paint': if (entry.name === 'first-contentful-paint') {'              setMetrics(prev => ({ ...prev, fcp: entry.startTime }));'            }
+case 'paint': if (entry.name = = 'first-contentful-paint') {'              setMetrics(prev => ({ ...prev, fcp: entry.startTime });'            }
             break;
-          case 'largest-contentful-paint': setMetrics(prev => ({ ...prev, lcp: entry.startTime }));'            break;'          case 'first-input': setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));'            break;'          case 'layout-shift': if (!(entry as any).hadRecentInput) {'              setMetrics(prev => ({ '                ...prev, cls: (prev.cls |0) + (entry as any).value ;
-}));
-}
+          case 'largest-contentful-paint': setMetrics(prev => ({ ...prev, lcp: entry.startTime });'            break;'          case 'first-input': setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime });'            break;'          case 'layout-shift': if (!(entry as any).hadRecentInput) {'              setMetrics(prev => ({ '                ...prev, cls: (prev.cls |0) + (entry as any).value ;
+);
+
             break;
-          case 'navigation': setMetrics(prev => ({ ...prev, ttfb: entry && entry.responseStart - entry && entry.requestStart }));'            break;'        }});
-});
+          case 'navigation': setMetrics(prev => ({ ...prev, ttfb: entry && entry.responseStart - entry && entry.requestStart });'            break;'        });
+);
     // Observe different types of performance entries;
     try {observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift', 'navigation'] });
-'    } catch (e) {'      // Fallback for browsers that don&apos;t support all entry types;
+    } catch (e) {'      // Fallback for browsers that don&apos;t support all entry types;
       observer && observer.observe({ entryTypes: ['paint', 'largest-contentful-paint'] });
-'    }';
+    }';
     // Show metrics after 3 seconds;
-    const timer = setTimeout(() => {setIsVisible(true);
-}, 3000);
+    const timer = setTimeout() => {setIsVisible(true);
+, 3000);
     return () => {observer.disconnect();
       clearTimeout(timer);
-}
-}, []);
+
+, []);
   if (!isVisible) return null;
   const getScoreColor = (value: number, thresholds: { good: number; poor: number }) => {if (value <= thresholds.good) return 'text-green-600;
     if (value <= thresholds.poor) return 'text-yellow-600;
-    return 'text-red-600;
-};';
+    return 'text-red-600;';
   const getScoreText = (value: number, thresholds: { good: number; poor: number }) => {if (value <= thresholds.good) return 'Good;
     if (value <= thresholds.poor) return 'Needs Improvement;
-    return 'Poor;
-};';
+    return 'Poor;';
   return (
     <div className="fixed bottom-4 left-4 bg-white shadow-lg rounded-lg p-4 border z-50 max-w-xs>      <h3 className="text-sm font-semibold mb-3 text-gray-900">Performance Metrics</h3>"      "      <div className="space-y-2 text-xs>        {metrics && metrics.fcp && ("          <div className="flex justify-between>            <span className="text-gray-600">FCP: </span>"            <span className={getScoreColor(metrics && metrics.fcp, { good: 1800, poor: 3000 })}>"              {Math && Math.round(metrics && metrics.fcp)}ms ({getScoreText(metrics && metrics.fcp, { good: 1800, poor: 3000 })})</span>;
           </div>;
@@ -374,75 +360,75 @@ case 'paint': if (entry.name === 'first-contentful-paint') {'              setMe
 const PerformanceMonitor: React.FC = () => {
   const [metrics, set_metrics] = useState < PerformanceMetrics>({});
   const [is_visible, setIsVisible] = useState (false);
-  useEffect (() => {
-// Check condition
+  useEffect () => {
+/ Check condition
 if (return) {
   $2
-}
+
     // Only show in development or for admin users;
-    const is_dev = process.env.NODE_ENV === 'development;
-    const is_admin = local_storage.get_item ('admin_mode') === 'true;
+    const is_dev = process.env.NODE_ENV = = 'development;
+    const is_admin = local_storage.get_item ('admin_mode') = = 'true;
     '    // Check condition
 if (return) {
   $2
-}
-    const observer = new PerformanceObserver ((list) => {const entries = list.get_entries ();
-;
-      entries.for_each ((entry) => {
+
+    const observer = new PerformanceObserver (list) => {const entries = list.get_entries ();
+
+      entries.for_each (entry) => {
         switch (entry.entry_type) {
-case 'paint': if ( {'              set_metrics (prev => ({ ...prev, fcp: entry.start_time }))) {
+case 'paint': if ( {'              set_metrics (prev => ({ ...prev, fcp: entry.start_time })) {
   $2
-}'            }
+'            }
             break;
-          case 'largest - contentful - paint': set_metrics (prev => ({ ...prev, lcp: entry.start_time }));'            break;'          case 'first - input': set_metrics (prev => ({ ...prev, fid: entry.processing_start - entry.start_time }));'            break;'          case 'layout - shift': // Check condition
+          case 'largest - contentful - paint': set_metrics (prev => ({ ...prev, lcp: entry.start_time });'            break;'          case 'first - input': set_metrics (prev => ({ ...prev, fid: entry.processing_start - entry.start_time });'            break;'          case 'layout - shift': // Check condition
 if (.hadRecentInput) {'              set_metrics (prev => ({ '                ...prev, cls: (prev.cls || 0) + (entry as any).value ) {
   $2
-}
-}));
-}
+
+);
+
             break;
-          case 'navigation': set_metrics (prev => ({ ...prev, ttfb: entry.response_start - entry.request_start }));'            break;'        }});
-});
+          case 'navigation': set_metrics (prev => ({ ...prev, ttfb: entry.response_start - entry.request_start });'            break;'        });
+);
     // Observe different types of performance entries;
     try {
 observer.observe ({ entry_types: ['paint', 'largest - contentful - paint', 'first - input', 'layout - shift', 'navigation'] });
-'    } catch (e) {'      // Fallback for browsers that don & apos;t support all entry types;
+    } catch (e) {'      // Fallback for browsers that don & apos;t support all entry types;
       observer.observe ({ entry_types: ['paint', 'largest - contentful - paint'] });
-'    }';
+    }';
     // Show metrics after 3 seconds;
-    const timer = set_timeout (() => {setIsVisible (true);
-}, 3000);
+    const timer = set_timeout () => {setIsVisible (true);
+, 3000);
     return () => {
       observer.disconnect ();
       clear_timeout (timer);
-}
-}, []);
+
+, []);
   // Check condition
 if (return null) {
   $2
-}
+
   const getScoreColor = (value: number, thresholds: { good: number; poor: number }) =>: any {
-// Check condition
+/ Check condition
 if (return 'text - green - 600) {
   $2
-}
+
     // Check condition
 if (return 'text - yellow - 600) {
   $2
-}
+
     return 'text - red - 600;
-}';
+';
   const getScoreText = (value: number, thresholds: { good: number; poor: number }) =>: any {
     // Check condition
 if (return 'Good) {
   $2
-}
+
     // Check condition
 if (return 'Needs Improvement) {
   $2
-}
+
     return 'Poor;
-}';
+';
   return (
     <div className="fixed bottom - 4 left - 4 bg - white shadow - lg rounded - lg p - 4 border z - 50 max - w-xs>      <h3 className="text - sm font - semibold mb - 3 text - gray - 900">Performance Metrics</h3>"      "      <div className="space - y-2 text - xs>        {metrics.fcp && ("          <div className="flex justify - between>            <span className="text - gray - 600">FCP: </span>"            <span className={getScoreColor (metrics.fcp, { good: 1800, poor: 3000 })}>"              {Math.round (metrics.fcp)}ms ({getScoreText (metrics.fcp, { good: 1800, poor: 3000 })})</span>;
           </div>)}
@@ -464,5 +450,5 @@ if (return 'Needs Improvement) {
       </div>;
     </div>;
   );
-}
+
 export default PerformanceMonitor;

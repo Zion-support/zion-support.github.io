@@ -4,14 +4,14 @@ export interface SearchSuggestion {
   type: 'product' | 'category' | 'tag' | 'skill' | 'person' | 'recent'
 
   iconUrl?: string
-}
+
 export interface SearchHighlight {
   before: string;
 
   match: string
 
   after: string
-}
+
 export interface FilterOptions {
   productTypes: {
 
@@ -28,4 +28,3 @@ export interface FilterOptions {
     value: string
   }[];
   ratingOptions: number[]
-}

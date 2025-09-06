@@ -200,7 +200,7 @@ export default function AutomationInsightsPage() {;
       complexity: 'Beginner'
     }
   ];
-;
+
   const success_metrics = [;
     {
       metric: '227',
@@ -259,7 +259,7 @@ export default function AutomationInsightsPage() {;
     },  ];      description: 'Content created autonomously';
     }
   ];
-;
+
   return (
     <>;
       <Head>;
@@ -314,7 +314,7 @@ export default function AutomationInsightsPage() {;
                 Our Automation Success;
               </h2>;
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>;
-                {successMetrics && successMetrics.map((item, index) => (;
+                {successMetrics && successMetrics.map(item, index) => (;
                   <div key={index} className='text-center'>;
                     <div className='text-4xl font-bold text-fuchsia-400 mb-2'>;
                       {item && item.metric}
@@ -328,7 +328,7 @@ export default function AutomationInsightsPage() {;
                     <div className="text-4xl font-bold text-fuchsia-400 mb-2">{item && item.metric}</div>;
                     <div className="text-lg font-semibold text-white mb-1">{item && item.label}</div>;
                     <div className="text-sm text-white/70">{item && item.description}</div>;
-                ))}
+                )}
               </div>
             </div>
             {/* Automation Trends */}
@@ -337,7 +337,7 @@ export default function AutomationInsightsPage() {;
                 Latest Automation Trends;
               </h2>;
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
-                {automationTrends && automationTrends.map((trend, index) => (;
+                {automationTrends && automationTrends.map(trend, index) => (;
                   <div
                     key={index}
                     className='bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300'>;
@@ -357,7 +357,7 @@ export default function AutomationInsightsPage() {;
                       href={`/blog/${trend.id}`}
                       className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'
                     >
-                      Read More <span className='ml-1'></span>                    </Link>                {automationTrends.map((trend, index) => (
+                      Read More <span className='ml-1'></span>                    </Link>                {automationTrends.map(trend, index) => (
                   <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300">
                     <div className="flex items-center justify-between mb-4">
                       <span className="px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full">{trend.category}</span>
@@ -372,12 +372,12 @@ export default function AutomationInsightsPage() {;
                       Read More <span className="ml-1"></span>
                     </Link>
                   </div>
-                ))}
+                )}
               </div>
             </div>
                       href={`/blog/${trend && trend.id}`}
                       className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'>;
-                      Read More <span className='ml-1'></span>                    </Link>                {automationTrends && automationTrends.map((trend, index) => (;
+                      Read More <span className='ml-1'></span>                    </Link>                {automationTrends && automationTrends.map(trend, index) => (;
                   <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300">;
                     <div className="flex items-center justify-between mb-4">;
                       <span className="px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full">{trend && trend.category}</span>;
@@ -391,7 +391,7 @@ export default function AutomationInsightsPage() {;
                       Read More <span className="ml-1"></span>;
                     </Link>;
                   </div>;
-                ))}
+                )}
               </div>;
             </div>;
 
@@ -401,7 +401,7 @@ export default function AutomationInsightsPage() {;
                 Our Automation Tools;
               </h2>;
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>;
-                {automationTools && automationTools.map((tool, index) => (;
+                {automationTools && automationTools.map(tool, index) => (;
                   <div
                     key={index}
                     className='bg-white/10 backdrop-blur-xl rounded-2xl p-6 text-center'>;
@@ -424,7 +424,7 @@ export default function AutomationInsightsPage() {;
                       <span className="px-3 py-1 bg-blue-400/20 text-blue-400 text-sm rounded-full">{tool && tool.type}</span>;
                       <span className="px-3 py-1 bg-purple-400/20 text-purple-400 text-sm rounded-full">{tool && tool.complexity}</span>;
                   </div>;
-                ))}
+                )}
               </div>
             </div>
             {/* Call to Action */}
@@ -457,8 +457,7 @@ export default function AutomationInsightsPage() {;
                 <Link
                   href="/case-studies"
                   className="px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200">;
-);
-}
+
                   View Case Studies;
                 </Link>;
               </div>;
@@ -468,8 +467,7 @@ export default function AutomationInsightsPage() {;
       </div>;
     </>;
   );
-}
+
   );
-}
+
     </>);
-}

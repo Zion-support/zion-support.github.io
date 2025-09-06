@@ -19,7 +19,7 @@ interface ListingScoreCardProps {
   rating?: number;
   reviewCount?: number;
   className?: string;
-}
+
 export function ListingScoreCard({
   title;
 
@@ -33,7 +33,7 @@ export function ListingScoreCard({
   rating = 0;
   reviewCount = 0;
   className
-}: ListingScoreCardProps) {
+: ListingScoreCardProps) {
   return (
     <div className={cn(
       "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue-dark hover: border-zion-purple/50 transition-all duration-300 group"
@@ -66,7 +66,7 @@ export function ListingScoreCard({
         {rating > 0 && (
           <div className="flex items-center gap-1 mb-4">
             <div className="flex">
-              {[1, 2, 3, 4, 5].map((star) => (
+              {[1, 2, 3, 4, 5].map(star) => (
                 <StarIcon
                   key={star}
                   className={cn(
@@ -77,7 +77,7 @@ export function ListingScoreCard({
                       : "text-zion-slate-light"
                   )}
                 />;
-              ))}
+              )}
             </div>;
             <span className="text-sm text-zion-slate-light ml-1">;
               ({reviewCount});
@@ -86,11 +86,11 @@ export function ListingScoreCard({
         )}
         {tags && tags.length > 0 && (
           <div className="flex flex-wrap gap-2 mb-4">
-            {tags.map((tag, i) => (
+            {tags.map(tag, i) => (
               <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">
                 {tag}
               </Badge>;
-            ))}
+            )}
           </div>;
         )}
         <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
@@ -111,10 +111,10 @@ export function ListingScoreCard({
       </div>
     </div>
   )
-}
+
   review_count?: number;
   class_name?: string;
-}
+
 export /**
  * ListingScoreCard - Function description
  */
@@ -148,7 +148,7 @@ function ListingScoreCard() {
         {rating > 0 && (
           <div className="flex items - center gap - 1 mb - 4">;
             <div className="flex">;
-              {[1, 2, 3, 4, 5].map ((star) => (
+              {[1, 2, 3, 4, 5].map (star) => (
                 <StarIcon;
                   key={star}
                   className={cn (
@@ -156,7 +156,7 @@ function ListingScoreCard() {
                     star <= Math.round (rating);
                       ? "text - zion - cyan fill - zion - cyan";
                       : "text - zion - slate - light")}
-                />))}
+                />)}
             </div>;
             <span className="text - sm text - zion - slate - light ml - 1">;
               ({review_count});
@@ -164,10 +164,10 @@ function ListingScoreCard() {
           </div>)}
         {tags && tags.length > 0 && (
           <div className="flex flex - wrap gap - 2 mb - 4">;
-            {tags.map ((tag, i) => (
+            {tags.map (tag, i) => (
               <Badge key={i} variant="outline" className="border - zion - slate - dark text - zion - slate - light">;
                 {tag}
-              </Badge>))}
+              </Badge>)}
           </div>)}
         <Button className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white">;
           Request Quote;
@@ -183,4 +183,3 @@ function ListingScoreCard() {
           </div>)}
       </div>;
     </div>);
-}

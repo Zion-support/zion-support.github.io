@@ -35,15 +35,14 @@ interface LogEntry {;
     timing?:number,;
     fps?:number,;
   },;}
-;
+
 interface LogsPageProps {;
   logs:LogEntry[],;
   errorCount:number,;
   warningCount:number,;
   totalCount:number,;
   lastUpdated:string;
-}
-;
+
 const LogLevelIcon = ({ level } { level:LogEntry['level'] }) => {;
   switch (level) {;
     case 'debug':;
@@ -58,8 +57,8 @@ const LogLevelIcon = ({ level } { level:LogEntry['level'] }) => {;
       return <XCircle className="h-4 w-4 text-red-700" />,;
     default:return <Info className="h-4 w-4 text-gray-500" />;
   }
-},;
-;
+,;
+
 const LogLevelBadge = ({ level } { level:LogEntry['level'] }) => {;
   const colors = {;
     debug:'bg-blue-100 text-blue-800',;
@@ -67,14 +66,14 @@ const LogLevelBadge = ({ level } { level:LogEntry['level'] }) => {;
     warn:'bg-yellow-100 text-yellow-800',;
     error:'bg-red-100 text-red-800',;
     critical:'bg-red-200 text-red-900'},;
-;
+
   return (;
     <Badge className={colors[level]}>;
       {level.toUpperCase()}
     </Badge>;
   ),;
-},;
-;
+,;
+
 export default function LogsPage({ logs:initialLogs, errorCount, warningCount, totalCount, lastUpdated } LogsPageProps) {;
   const [logs, setLogs] = useState<LogEntry[]>(initialLogs),;
   const [filteredLogs, setFilteredLogs] = useState<LogEntry[]>(initialLogs),;
@@ -83,40 +82,40 @@ export default function LogsPage({ logs:initialLogs, errorCount, warningCount, t
   const [categoryFilter, setCategoryFilter] = useState<string>('all'),;
   const [sourceFilter, setSourceFilter] = useState<string>('all'),;
   const [isLoading, setIsLoading] = useState(false),;
-;
-  const categories = Array.from(new Set(logs.map(log => log.category))).filter(Boolean),;
-  const sources = Array.from(new Set(logs.map(log => log.source))).filter(Boolean),;
-;
-  useEffect(() => {;
+
+  const categories = Array.from(new Set(logs.map(log => log.category)).filter(Boolean),;
+  const sources = Array.from(new Set(logs.map(log => log.source)).filter(Boolean),;
+
+  useEffect() => {;
     let filtered = logs,;
-;
+
     // Search filter;
     if (searchTerm) {;
       filtered = filtered.filter(log =>;
-        log.message.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-        log.category.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-        (log.component && log.component.toLowerCase().includes(searchTerm.toLowerCase()));
+        log.message.toLowerCase().includes(searchTerm.toLowerCase() ||;
+        log.category.toLowerCase().includes(searchTerm.toLowerCase() ||;
+        (log.component && log.component.toLowerCase().includes(searchTerm.toLowerCase());
       ),;
     }
-;
+
     // Level filter;
-    if (levelFilter !== 'all') {;
-      filtered = filtered.filter(log => log.level === levelFilter),;
+    if (levelFilter != 'all') {;
+      filtered = filtered.filter(log => log.level = = levelFilter),;
     }
-;
+
     // Category filter;
-    if (categoryFilter !== 'all') {;
-      filtered = filtered.filter(log => log.category === categoryFilter),;
+    if (categoryFilter != 'all') {;
+      filtered = filtered.filter(log => log.category = = categoryFilter),;
     }
-;
+
     // Source filter;
-    if (sourceFilter !== 'all') {;
-      filtered = filtered.filter(log => log.source === sourceFilter),;
+    if (sourceFilter != 'all') {;
+      filtered = filtered.filter(log => log.source = = sourceFilter),;
     }
-;
+
     setFilteredLogs(filtered),;
   }, [logs, searchTerm, levelFilter, categoryFilter, sourceFilter]),;
-;
+
   const refreshLogs = async () => {;
     setIsLoading(true),;
     try {;
@@ -124,33 +123,28 @@ export default function LogsPage({ logs:initialLogs, errorCount, warningCount, t
       if (response.ok) {;
         const data = await response.json(),;
         setLogs(data.logs),;
-      }
-    } catch (error) {;
+      } catch (error) {;
       logErrorToProduction('Failed to refresh logs:', error),;
     } finally {;
       setIsLoading(false),;
-    }
-  },;
-;
+    },;
+
   const exportLogs = () => {;
     const dataStr = JSON.stringify(filteredLogs, null, 2),;
     const dataUri = 'data:application/json,charset=utf-8,'+ encodeURIComponent(dataStr),;
-    ;
     const exportFileDefaultName = `logs-${new Date().toISOString().slice(0, 10)}.json`,;
-    ;
     const linkElement = document.createElement('a'),;
     linkElement.setAttribute('href', dataUri),;
     linkElement.setAttribute('download', exportFileDefaultName),;
     linkElement.click(),;
   },;
-;
+
   const formatTimestamp = (timestamp:string) => {;
     return new Date(timestamp).toLocaleString();
   },;
-;
+
   const formatPerformance = (performance?:LogEntry['performance']) => {;
     if (!performance) return null,;
-    ;
     const parts = [],;
     if (window.window.window.performance.memory) {;
       parts.push(`Memory:${(window.window.window.performance.memory / 1024 / 1024).toFixed(1)}MB`),;
@@ -164,7 +158,7 @@ export default function LogsPage({ logs:initialLogs, errorCount, warningCount, t
     ;
     return parts.length > 0 ? parts.join() :null,;
   },;
-;
+
   return (;
     <div className="container mx-auto p-6 space-y-6">;
       <div className="flex items-center justify-between">;
@@ -180,7 +174,7 @@ export default function LogsPage({ logs:initialLogs, errorCount, warningCount, t
           </Button>;
         </div>;
       </div>;
-;
+
       {/* Summary Cards */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">;
         <Card>;
@@ -193,7 +187,7 @@ export default function LogsPage({ logs:initialLogs, errorCount, warningCount, t
             <p className="text-xs text-muted-foreground">All log entries</p>;
           </CardContent>;
         </Card>;
-;
+
         <Card>;
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">;
             <CardTitle className="text-sm font-medium">Errors</CardTitle>;
@@ -204,7 +198,7 @@ export default function LogsPage({ logs:initialLogs, errorCount, warningCount, t
             <p className="text-xs text-muted-foreground">Critical & error logs</p>;
           </CardContent>;
         </Card>;
-;
+
         <Card>;
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">;
             <CardTitle className="text-sm font-medium">Warnings</CardTitle>;
@@ -215,7 +209,7 @@ export default function LogsPage({ logs:initialLogs, errorCount, warningCount, t
             <p className="text-xs text-muted-foreground">Warning logs</p>;
           </CardContent>;
         </Card>;
-;
+
         <Card>;
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">;
             <CardTitle className="text-sm font-medium">Last Updated</CardTitle>;
@@ -227,7 +221,7 @@ export default function LogsPage({ logs:initialLogs, errorCount, warningCount, t
           </CardContent>;
         </Card>;
       </div>;
-;
+
       {/* Filters */}
       <Card>;
         <CardHeader>;
@@ -244,7 +238,6 @@ export default function LogsPage({ logs:initialLogs, errorCount, warningCount, t
                 onChange={(e) => setSearchTerm(e.target.value)}
               />;
             </div>;
-            ;
             <Select value={levelFilter} onValueChange={setLevelFilter}>;
               <SelectTrigger>;
                 <SelectValue placeholder="All levels" />;
@@ -258,7 +251,7 @@ export default function LogsPage({ logs:initialLogs, errorCount, warningCount, t
                 <SelectItem value="critical">Critical</SelectItem>;
               </SelectContent>;
             </Select>;
-;
+
             <Select value={categoryFilter} onValueChange={setCategoryFilter}>;
               <SelectTrigger>;
                 <SelectValue placeholder="All categories" />;
@@ -267,10 +260,10 @@ export default function LogsPage({ logs:initialLogs, errorCount, warningCount, t
                 <SelectItem value="all">All Categories</SelectItem>;
                 {categories.map(category => (;
                   <SelectItem key={category} value={category}>{category}</SelectItem>;
-                ))}
+                )}
               </SelectContent>;
             </Select>;
-;
+
             <Select value={sourceFilter} onValueChange={setSourceFilter}>;
               <SelectTrigger>;
                 <SelectValue placeholder="All sources" />;
@@ -279,13 +272,13 @@ export default function LogsPage({ logs:initialLogs, errorCount, warningCount, t
                 <SelectItem value="all">All Sources</SelectItem>;
                 {sources.map(source => (;
                   <SelectItem key={source} value={source}>{source}</SelectItem>;
-                ))}
+                )}
               </SelectContent>;
             </Select>;
           </div>;
         </CardContent>;
       </Card>;
-;
+
       {/* Logs Table */}
       <Card>;
         <CardHeader>;
@@ -294,7 +287,7 @@ export default function LogsPage({ logs:initialLogs, errorCount, warningCount, t
         <CardContent>;
           <div className="space-y-4">;
             {filteredLogs.length > 0 ? (;
-              filteredLogs.map((log) => (;
+              filteredLogs.map(log) => (;
                 <div key={log.id} className="border rounded-lg p-4 space-y-2">;
                   <div className="flex items-center justify-between">;
                     <div className="flex items-center space-x-2">;
@@ -310,9 +303,7 @@ export default function LogsPage({ logs:initialLogs, errorCount, warningCount, t
                       {formatTimestamp(log.timestamp)}
                     </span>;
                   </div>;
-                  ;
                   <div className="text-sm font-medium">{log.message}</div>;
-                  ;
                   {log.context && Object.keys(log.context).length > 0 && (;
                     <details className="text-xs">;
                       <summary className="cursor-pointer text-muted-foreground hover:text-foreground">;
@@ -338,17 +329,16 @@ export default function LogsPage({ logs:initialLogs, errorCount, warningCount, t
                             <pre className="mt-1 text-xs overflow-x-auto">{log.error.stack}</pre>;
                           </details>;    if (searchTerm) {
       filtered = filtered.filter(log => 
-        log.message.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        log.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        (log.component && log.component.toLowerCase().includes(searchTerm.toLowerCase()))
-      )    }
+        log.message.toLowerCase().includes(searchTerm.toLowerCase() ||
+        log.category.toLowerCase().includes(searchTerm.toLowerCase() ||
+        (log.component && log.component.toLowerCase().includes(searchTerm.toLowerCase())    }
 
-    if (levelFilter !== 'all') {
-      filtered = filtered.filter(log => log.level === levelFilter);
+    if (levelFilter != 'all') {
+      filtered = filtered.filter(log => log.level = = levelFilter);
     }
 
-    if (categoryFilter !== 'all') {
-      filtered = filtered.filter(log => log.category === categoryFilter);
+    if (categoryFilter != 'all') {
+      filtered = filtered.filter(log => log.category = = categoryFilter);
     }
 
     setFilteredLogs(filtered);
@@ -373,20 +363,18 @@ export default function LogsPage({ logs:initialLogs, errorCount, warningCount, t
       if (response.ok) {
         const data = await response.json(),
         setLogs(data.logs)
-      }
-    } catch (error) {
+      } catch (error) {
       logErrorToProduction('Failed to refresh logs:', error)
     } finally {
       setIsLoading(false)
-    }
-  },
+    },
 
   const exportLogs = () => {
     const dataStr = JSON.stringify(filteredLogs, null, 2),
     const dataUri = 'data: application/json,charset=utf-8,'+ encodeURIComponent(dataStr),
-    
+
     const exportFileDefaultName = `logs-${new Date().toISOString().slice(0, 10)}.json`,
-    
+
     const linkElement = document.createElement('a'),
     linkElement.setAttribute('href', dataUri),
     linkElement.setAttribute('download', exportFileDefaultName),
@@ -399,7 +387,7 @@ export default function LogsPage({ logs:initialLogs, errorCount, warningCount, t
 
   const formatPerformance = (performance?: LogEntry['performance']) => {
     if (!performance) return null,
-    
+
     const parts = [],
     if (window.window.window.performance.memory) {
       parts.push(`Memory: ${(window.window.window.performance.memory / 1024 / 1024).toFixed(1)}MB`)
@@ -409,7 +397,7 @@ export default function LogsPage({ logs:initialLogs, errorCount, warningCount, t
     }
     if (window.window.window.performance.fps) {
       parts.push(`FPS: ${window.window.window.performance.fps}`)    }
-    
+
     return parts.length > 0 ? parts.join() : null
   },
 
@@ -483,7 +471,7 @@ export default function LogsPage({ logs:initialLogs, errorCount, warningCount, t
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}              />
             </div>
-            
+
             <Select value={_levelFilter} onValueChange={_setLevelFilter}>
               <SelectTrigger>
                 <SelectValue placeholder=&quot;All levels&quot; />
@@ -505,7 +493,7 @@ export default function LogsPage({ logs:initialLogs, errorCount, warningCount, t
               <SelectContent>
                 <SelectItem value=&quot;all&quot;>All Categories</SelectItem>
                 {categories.map(category => (
-                  <SelectItem key={category} value={category}>{category}</SelectItem>                ))}
+                  <SelectItem key={category} value={category}>{category}</SelectItem>                )}
               </SelectContent>
             </Select>
 
@@ -516,7 +504,7 @@ export default function LogsPage({ logs:initialLogs, errorCount, warningCount, t
               <SelectContent>
                 <SelectItem value=&quot;all&quot;>All Sources</SelectItem>
                 {sources.map(source => (
-                  <SelectItem key={source} value={source}>{source}</SelectItem>                ))}
+                  <SelectItem key={source} value={source}>{source}</SelectItem>                )}
               </SelectContent>
             </Select>          </div>
         </div>
@@ -529,7 +517,7 @@ export default function LogsPage({ logs:initialLogs, errorCount, warningCount, t
         <CardContent>
           <div className=&quot;space-y-4&quot;>
             {filteredLogs.length > 0 ? (
-              filteredLogs.map((log) => (
+              filteredLogs.map(log) => (
                 <div key={log.id} className=&quot;border rounded-lg p-4 space-y-2&quot;>
                   <div className=&quot;flex items-center justify-between&quot;>
                     <div className=&quot;flex items-center space-x-2&quot;>
@@ -545,9 +533,9 @@ export default function LogsPage({ logs:initialLogs, errorCount, warningCount, t
                       {formatTimestamp(log.timestamp)}
                     </span>
                   </div>
-                  
+
                   <div className=&quot;text-sm font-medium&quot;>{log.message}</div>
-                  
+
                   {log.context && Object.keys(log.context).length > 0 && (
                     <details className=&quot;text-xs&quot;>
                       <summary className=&quot;cursor-pointer text-muted-foreground hover:text-foreground&quot;>
@@ -557,7 +545,7 @@ export default function LogsPage({ logs:initialLogs, errorCount, warningCount, t
                         {JSON.stringify(log.context, null, 2)}                      </pre>
                     </details>
                   )}
-                  
+
                   {log.error && (
                     <details className=&quot;text-xs&quot;>
                       <summary className=&quot;cursor-pointer text-red-600 hover:text-red-800&quot;>                        View Error Details
@@ -583,14 +571,13 @@ export default function LogsPage({ logs:initialLogs, errorCount, warningCount, t
                       <div>{formatPerformance(log.performance)}</div>;
                     )}
                   </div>;
-                  ;
                   {log.url && (;
                     <div className="text-xs text-muted-foreground truncate">;
                       URL:{log.url}
                     </div>;
                   )}
                 </div>;
-              ));
+              );
             ) :(;
               <div className="text-center text-muted-foreground py-8">;
                 No logs found matching the current filters.;
@@ -601,24 +588,23 @@ export default function LogsPage({ logs:initialLogs, errorCount, warningCount, t
       </Card>;
     </div>;
   ),;
-}
-;
+
 export const getServerSideProps:GetServerSideProps = async () => {;
   try {;
     const logsDir = path.join(process.cwd(), 'logs'),;
     const logs:LogEntry[] = [],;
-;
+
     // Read all log files;
-    if (fs.existsSync(logsDir)) {;
+    if (fs.existsSync(logsDir) {;
       const files = fs.readdirSync(logsDir),;
-      const logFiles = files.filter(file => file.endsWith('.log')),;
-;
+      const logFiles = files.filter(file => file.endsWith('.log'),;
+
       for (const file of logFiles) {;
         try {;
           const filePath = path.join(logsDir, file),;
           const content = fs.readFileSync(filePath, 'utf-8'),;
-          const lines = content.split('\n').filter(line => line.trim()),;
-;
+          const lines = content.split('\n').filter(line => line.trim(),;
+
           for (const line of lines) {;
             try {;
               const logEntry = JSON.parse(line),;
@@ -626,28 +612,26 @@ export const getServerSideProps:GetServerSideProps = async () => {;
             } catch (parseError) {;
               // Skip malformed log entries;
             }
-          }
         } catch (fileError) {;
           // Skip problematic files;
         }
-      }
     }
-;
+
     // Sort logs by timestamp (newest first);
-    logs.sort((a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime()),;
-;
+    logs.sort(a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime(),;
+
     // Calculate statistics;
-    const errorCount = logs.filter(log => log.level === 'error' || log.level === 'critical').length,;
-    const warningCount = logs.filter(log => log.level === 'warn').length,;
+    const errorCount = logs.filter(log => log.level = = 'error' || log.level = = 'critical').length,;
+    const warningCount = logs.filter(log => log.level = = 'warn').length,;
     const totalCount = logs.length,;
-;
+
     return {;
       props:{;
         logs:logs.slice(0, 1000), // Limit to most recent 1000 logs;
         errorCount,;
         warningCount,;
         totalCount,;
-        lastUpdated:new Date().toISOString()}},;
+        lastUpdated:new Date().toISOString()},;
   } catch (error) {;
             logErrorToProduction('Error reading logs:', error),;
     return {;
@@ -656,16 +640,16 @@ export const getServerSideProps:GetServerSideProps = async () => {;
         errorCount:0,;
         warningCount:0,;
         totalCount:0,;
-        lastUpdated:new Date().toISOString()}},;
+        lastUpdated:new Date().toISOString()},;
   }                    </div>
                   </div>
-                  
+
                   {log.url && (
                     <div className=&quot;text-xs text-muted-foreground truncate&quot;>
                       URL: {log.url}                    </div>
                   )}
                 </div>
-              ))
+              )
             ) : (
               <div className=&quot;text-center text-muted-foreground py-8&quot;>
                 No logs found matching the current filters.              </div>
@@ -675,7 +659,6 @@ export const getServerSideProps:GetServerSideProps = async () => {;
       </main>
     </>
   );
-};
 
 export const getServerSideProps: GetServerSideProps = async () => {
   try {
@@ -683,15 +666,15 @@ export const getServerSideProps: GetServerSideProps = async () => {
     const logs: LogEntry[] = [],
 
     // Read all log files
-    if (fs.existsSync(logsDir)) {
+    if (fs.existsSync(logsDir) {
       const files = fs.readdirSync(logsDir),
-      const logFiles = files.filter(file => file.endsWith('.log')),
+      const logFiles = files.filter(file => file.endsWith('.log'),
 
       for (const file of logFiles) {
         try {
           const filePath = path.join(logsDir, file),
           const content = fs.readFileSync(filePath, 'utf-8'),
-          const lines = content.split('\n').filter(line => line.trim()),
+          const lines = content.split('\n').filter(line => line.trim(),
 
           for (const line of lines) {
             try {
@@ -699,21 +682,20 @@ export const getServerSideProps: GetServerSideProps = async () => {
               logs.push(logEntry)
             } catch (parseError) {
               // Skip malformed log entries
-            }          }
+            }
         } catch (fileError) {_// Skip problematic files}
-      }
     }
 
     // Sort logs by timestamp (newest first)
-    logs.sort((a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime()),
+    logs.sort(a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime(),
 
     // Calculate statistics
-    const errorCount = logs.filter(log => log.level === 'error' || log.level === 'critical').length,
-    const warningCount = logs.filter(log => log.level === 'warn').length,
+    const errorCount = logs.filter(log => log.level = = 'error' || log.level = = 'critical').length,
+    const warningCount = logs.filter(log => log.level = = 'warn').length,
     const totalCount = logs.length,
     return {_props: {
         logs: logs.slice(0, _1000), _// Limit to most recent 1000 logs
-        errorCount, _warningCount, _totalCount, _lastUpdated: new Date().toISOString()}};
+        errorCount, _warningCount, _totalCount, _lastUpdated: new Date().toISOString()};
   } catch (error) {_logErrorToProduction('Error reading logs:', _error);
     return {
       props: {
@@ -721,7 +703,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
         errorCount,
         warningCount,
         totalCount,
-        lastUpdated: new Date().toISOString()}}
+        lastUpdated: new Date().toISOString()}
   } catch (error) {
             logErrorToProduction('Error reading logs:', error),
     return {
@@ -730,5 +712,5 @@ export const getServerSideProps: GetServerSideProps = async () => {
         errorCount: 0,
         warningCount: 0,
         totalCount: 0,
-        lastUpdated: new Date().toISOString()}}  }
-}, 
+        lastUpdated: new Date().toISOString()}  }
+, 

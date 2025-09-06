@@ -6,7 +6,7 @@ import { Alert, AlertDescription } from '@/components/ui/alert'
 export const OfflineIndicator = () => {
   const [isOnline, setIsOnline] = useState(true)
   const [showOfflineAlert, setShowOfflineAlert] = useState(false)
-  useEffect((,) => {
+  useEffect(,) => {
     const updateOnlineStatus = () => {
       const online = navigator.onLine
       setIsOnline(online)
@@ -14,15 +14,15 @@ export const OfflineIndicator = () => {
         setShowOfflineAlert(true)
       } else if (showOfflineAlert) {
         // Show brief "back online" message then hide
-        setTimeout(() => setShowOfflineAlert(false), 3000) }        setTimeout((,) => setShowOfflineAlert(false), 3000)
-        setTimeout(() => setShowOfflineAlert(false), 3000)
+        setTimeout() => setShowOfflineAlert(false), 3000) }        setTimeout(,) => setShowOfflineAlert(false), 3000)
+        setTimeout() => setShowOfflineAlert(false), 3000)
       }
 import { Alert, AlertDescription } from '@/components/ui/alert';
 export const OfflineIndicator = () => {;
   const [isOnline, setIsOnline] = useState(true);
   const [showOfflineAlert, setShowOfflineAlert] = useState(false);
 
-  useEffect((,) => {;
+  useEffect(,) => {;
     const updateOnlineStatus = () => {;
       const online = navigator && navigator.onLine;
       setIsOnline(online);
@@ -31,10 +31,9 @@ export const OfflineIndicator = () => {;
         setShowOfflineAlert(true);
       } else if (showOfflineAlert) {;
         // Show brief "back online" message then hide;
-        setTimeout(() => setShowOfflineAlert(false), 3000);      }        setTimeout((,) => setShowOfflineAlert(false), 3000);
-        setTimeout(() => setShowOfflineAlert(false), 3000);
-      }
-    };
+        setTimeout() => setShowOfflineAlert(false), 3000);      }        setTimeout(,) => setShowOfflineAlert(false), 3000);
+        setTimeout() => setShowOfflineAlert(false), 3000);
+      };
 
     // Set initial status;
     updateOnlineStatus();
@@ -56,13 +55,12 @@ export const OfflineIndicator = () => {;
     return () => {
       window.removeEventListener ('online', updateOnlineStatus);
       window.removeEventListener ('offline', updateOnlineStatus);
-    } }, [showOfflineAlert]);      window.removeEventListener ('offline', updateOnlineStatus);
-    }
-  }, [showOfflineAlert]);
+    }, [showOfflineAlert]);      window.removeEventListener ('offline', updateOnlineStatus);
+    }, [showOfflineAlert]);
   // Check condition
 if (return null) {
   $2
-}
+
   return (
     <div className='fixed top-4 right-4 z-50 max-w-sm pointer-events-none'>;
       <Alert variant={isOnline ? 'default' : 'destructive'}>;
@@ -83,14 +81,12 @@ if (return null) {
       </Alert>
     </div>
   )
-} }
+ }
 
         </div>;
       </Alert>;
     </div>;
-  );
-};};
-};
+  );};
     <div className='fixed top - 4 right - 4 z - 50 max - w-sm pointer - events - none'>;
       <Alert variant={is_online ? 'default' : 'destructive'}>;
         <div className='flex items - center gap - 2'>;
@@ -105,4 +101,4 @@ if (return null) {
         </div>;
       </Alert>;
     </div>);
-} }
+ }

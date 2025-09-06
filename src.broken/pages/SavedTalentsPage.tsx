@@ -6,5 +6,3 @@ export function SavedTalentsPage() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

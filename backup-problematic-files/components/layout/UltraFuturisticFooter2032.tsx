@@ -10,13 +10,13 @@ import {;
   TrendingUp, Target as TargetIcon, Users as UsersIcon,;
   Briefcase as BriefcaseIcon, BookOpen as BookOpenIcon,;
   MessageCircle as MessageCircleIcon, Star as StarIcon;
-} from 'lucide-react',;
+ from 'lucide-react',;
 const contactInfo = {;
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup.com',;
   address: '364 E Main St STE 1008 Middletown DE 19709',;
   website: 'https://ziontechgroup.com';
-},;
+,;
 const mainNavigationRoutes = [;
   { name: 'Home', href: '/', icon: Home, description: 'Welcome to Zion Tech Group' },;
   { name: 'Services', href: '/services', icon: Briefcase, description: 'Our comprehensive service portfolio' },;
@@ -26,7 +26,7 @@ const mainNavigationRoutes = [;
   { name: 'Case Studies', href: '/case-studies', icon: Users, description: 'Success stories and implementations' },;
   { name: 'Blog', href: '/blog', icon: MessageCircle, description: 'Latest insights and updates' },;
   { name: 'Contact', href: '/contact', icon: MessageCircle, description: 'Get in touch with our team' }
-],;
+,;
 const serviceCategories = [;
   {;
     title: ' 2032 Revolutionary AI Services',;
@@ -82,7 +82,7 @@ const serviceCategories = [;
       { name: 'Swarm Robotics', href: '/swarm-robotics-orchestration' }
     ];
   }
-],;
+,;
 const quickLinks = [;
   { name: '2032 Services', href: '/2032-futuristic-services-showcase', icon: Star, description: 'Revolutionary 2032 services' },;
   { name: 'Enhanced Pricing', href: '/enhanced-market-pricing-2032', icon: DollarSign, description: 'Comprehensive pricing analysis' },;
@@ -92,7 +92,7 @@ const quickLinks = [;
   { name: 'Ultimate 2026', href: '/ultimate-2026-services-showcase', icon: Target, description: 'Ultimate service portfolio' },;
   { name: 'News & Updates', href: '/news', icon: MessageCircle, description: 'Latest company news' },;
   { name: 'Support', href: '/support', icon: Users, description: 'Technical support and help' }
-],;
+,;
 const companyInfo = [;
   { name: 'About Us', href: '/about' },;
   { name: 'Careers', href: '/careers' },;
@@ -100,7 +100,7 @@ const companyInfo = [;
   { name: 'Partners', href: '/partners' },;
   { name: 'Support', href: '/support' },;
   { name: 'Status', href: '/status' }
-],;
+,;
 const socialLinks = [;
   { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },;
   { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },;
@@ -108,7 +108,7 @@ const socialLinks = [;
   { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },;
   { name: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: Youtube },;
   { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github }
-],;
+,;
 const footerVariants = {;
   hidden: { opacity: 0, y: 50 },;
   visible: {;
@@ -118,12 +118,11 @@ const footerVariants = {;
       duration: 0.8,;
       staggerChildren: 0.1;
     }
-  }
-},;
+,;
 const itemVariants = {;
   hidden: { opacity: 0, y: 20 },;
   visible: { opacity: 1, y: 0 }
-},
+,
 
 export default function UltraFuturisticFooter2032() {
   return (
@@ -140,7 +139,7 @@ export default function UltraFuturisticFooter2032() {
           variants={footerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={ once: true }
           className="space-y-16"
         >
           {/* Main Footer Content */}
@@ -158,7 +157,7 @@ export default function UltraFuturisticFooter2032() {
                   <p className="text-sm text-cyan-300 font-medium">2032 Future Technology</p>
                 </div>
               </div>
-              
+
               <p className="text-slate-300 mb-6 leading-relaxed">
                 Leading the future of technology with revolutionary AI, quantum computing, space technology, and autonomous systems. 
                 Empowering businesses with cutting-edge solutions for tomorrow's challenges.
@@ -196,11 +195,11 @@ export default function UltraFuturisticFooter2032() {
                 Our Revolutionary Services
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {serviceCategories.map((category, index) => (
+                {serviceCategories.map(category, index) => (
                   <div key={index} className="space-y-4">
                     <h4 className="text-lg font-medium text-white">{category.title}</h4>
                     <ul className="space-y-2">
-                      {category.services.map((service, serviceIndex) => (
+                      {category.services.map(service, serviceIndex) => (
                         <li key={serviceIndex}>
                           <Link
                             href={service.href}
@@ -209,10 +208,10 @@ export default function UltraFuturisticFooter2032() {
                             {service.name}
                           </a>
                         </li>
-                      ))}
+                      )}
                     </ul>;
                   </div>;
-                ))}
+                )}
               </div>;
             </motion.div>;
             {/* Quick Links & Company Info */}
@@ -220,12 +219,12 @@ export default function UltraFuturisticFooter2032() {
               <h3 className="text-xl font-semibold text-white mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                 Quick Access
               </h3>
-              
+
               {/* Quick Links */}
               <div className="mb-8">
                 <h4 className="text-lg font-medium text-white mb-4">Quick Links</h4>
                 <ul className="space-y-2">
-                  {quickLinks.map((link, index) => (
+                  {quickLinks.map(link, index) => (
                     <li key={index}>
                       <Link
                         href={link.href}
@@ -235,14 +234,14 @@ export default function UltraFuturisticFooter2032() {
                         <span>{link.name}</span>
                       </a>
                     </li>
-                  ))}
+                  )}
                 </ul>;
               </div>;
               {/* Company Info */}
               <div className="mb-8">
                 <h4 className="text-lg font-medium text-white mb-4">Company</h4>
                 <ul className="space-y-2">
-                  {companyInfo.map((item, index) => (
+                  {companyInfo.map(item, index) => (
                     <li key={index}>
                       <Link
                         href={item.href}
@@ -251,14 +250,14 @@ export default function UltraFuturisticFooter2032() {
                         {item.name}
                       </a>
                     </li>
-                  ))}
+                  )}
                 </ul>;
               </div>;
               {/* Social Links */}
               <div>
                 <h4 className="text-lg font-medium text-white mb-4">Follow Us</h4>
                 <div className="flex space-x-4">
-                  {socialLinks.map((social, index) => (
+                  {socialLinks.map(social, index) => (
                     <a
                       key={index}
                       href={social.href}
@@ -268,7 +267,7 @@ export default function UltraFuturisticFooter2032() {
                     >
                       <social.icon className="w-5 h-5" />
                     </a>
-                  ))}
+                  )}
                 </div>;
               </div>;
             </motion.div>;
@@ -304,7 +303,7 @@ export default function UltraFuturisticFooter2032() {
                 <span className="text-cyan-400">|</span>
                 <span>Leading the Future of Technology</span>
               </div>
-              
+
               <div className="flex items-center space-x-6 text-sm">
                 <Link href="/privacy" className="text-slate-400 hover:text-cyan-300 transition-colors">
                   Privacy Policy
@@ -324,8 +323,8 @@ export default function UltraFuturisticFooter2032() {
       {/* Floating Action Button */}
       <div className="fixed bottom-8 right-8 z-50">
         <motion.button
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
+          whileHover={ scale: 1.1 }
+          whileTap={ scale: 0.9 }
           className="w-14 h-14 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full shadow-2xl shadow-cyan-500/30 hover:shadow-cyan-500/50 transition-all duration-300 flex items-center justify-center text-white"
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         >
@@ -334,4 +333,3 @@ export default function UltraFuturisticFooter2032() {
       </div>
     </footer>
   )
-}

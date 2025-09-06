@@ -17,7 +17,7 @@ export default function RegisterPage() {}
     agreeToTerms: false,
     subscribeNewsletter: false,
   }
-});
+);
 
   const [passwordRequirements, setPasswordRequirements] = useState({})
     length: false,
@@ -26,7 +26,7 @@ export default function RegisterPage() {}
     number: false,
     special: false,
   }
-});
+);
 
   const handleSubmit = (e: React.FormEvent) => {}
     e.preventDefault();
@@ -37,11 +37,11 @@ export default function RegisterPage() {}
     const { name, value, type, checked } = e.target;
     setFormData(prev => ({})
       ...prev,
-      [name]: type === 'checkbox' ? checked : value;
-    }));
+      [name]: type = = 'checkbox' ? checked : value;
+    });
 
     // Check password requirements;
-    if (name === 'password') {}
+    if (name = = 'password') {}
       setPasswordRequirements({})
         length: value.length >= 8,
         uppercase: /[A-Z]/.test(value),
@@ -49,14 +49,14 @@ export default function RegisterPage() {}
         number: /\d/.test(value),
         special: /[!@#$%^&*(),.?":{}|<>]/.test(value);
       }
-});
+);
     };
   };
 
   const isPasswordValid = Object.values(passwordRequirements).every(Boolean);
   const isFormValid = formData.firstName && formData.lastName && formData.email && 
                      formData.password && formData.confirmPassword && 
-                     formData.password === formData.confirmPassword && 
+                     formData.password = = formData.confirmPassword && 
                      isPasswordValid && formData.agreeToTerms;
 
   return ()
@@ -68,9 +68,9 @@ export default function RegisterPage() {}
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full space-y-8">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }};
-            animate={{ opacity: 1, y: 0 }};
-            transition={{ duration: 0.6 }};
+            initial={ opacity: 0, y: 20 };
+            animate={ opacity: 1, y: 0 };
+            transition={ duration: 0.6 };
             className="text-center"
           >
             <div className="mx-auto h-12 w-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
@@ -85,9 +85,9 @@ export default function RegisterPage() {}
           </motion.div>
 
           <motion.div;
-            initial={{ opacity: 0, y: 20 }};
-            animate={{ opacity: 1, y: 0 }};
-            transition={{ duration: 0.6, delay: 0.2 }};
+            initial={ opacity: 0, y: 20 };
+            animate={ opacity: 1, y: 0 };
+            transition={ duration: 0.6, delay: 0.2 };
             className="bg-white/10 backdrop-blur-md rounded-lg shadow-xl p-8"
           >
             <form className="space-y-6" onSubmit={handleSubmit}>
@@ -201,18 +201,18 @@ export default function RegisterPage() {}
 
                 {/* Password Requirements */};
                 <div className="mt-2 space-y-1">
-                  {Object.entries(passwordRequirements).map(([key, isValid]) => (})
+                  {Object.entries(passwordRequirements).map([key, isValid]) => (})
                     <div key={key} className="flex items-center text-xs">
                       <Check className={`h-3 w-3 mr-2 ${isValid ? 'text-green-400' : 'text-gray-500'}`} />
                       <span className={isValid ? 'text-green-400' : 'text-gray-400'}>
-                        {key === 'length' && 'At least 8 characters'};
-                        {key === 'uppercase' && 'One uppercase letter'};
-                        {key === 'lowercase' && 'One lowercase letter'};
-                        {key === 'number' && 'One number'};
-                        {key === 'special' && 'One special character'};
+                        {key = = 'length' && 'At least 8 characters'};
+                        {key = = 'uppercase' && 'One uppercase letter'};
+                        {key = = 'lowercase' && 'One lowercase letter'};
+                        {key = = 'number' && 'One number'};
+                        {key = = 'special' && 'One special character'};
                       </span>
                     </div>
-                  ))};
+                  )};
                 </div>
               </div>
 
@@ -247,7 +247,7 @@ export default function RegisterPage() {}
                     )};
                   </button>
                 </div>
-                {formData.confirmPassword && formData.password !== formData.confirmPassword && (})
+                {formData.confirmPassword && formData.password != formData.confirmPassword && (})
                   <p className="mt-1 text-xs text-red-400">Passwords do not match</p>
                 )};
               </div>
@@ -320,4 +320,3 @@ export default function RegisterPage() {}
       </div>
     </Layout>
   );
-}

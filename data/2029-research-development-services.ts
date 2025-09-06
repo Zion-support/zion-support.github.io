@@ -151,7 +151,6 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
         website: 'https://ziontechgroup.com'
         address: '364 E Main St STE 1008 Middletown DE 19709'
       }
-    }
     {
       id: 'quantum-research-platform'
       name: 'Quantum Research Platform'
@@ -290,7 +289,6 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
         website: 'https://ziontechgroup.com'
         address: '364 E Main St STE 1008 Middletown DE 19709'
       }
-    }
     {
       id: 'ai-research-assistant'
       name: 'AI Research Assistant'
@@ -413,7 +411,6 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
         website: 'https://ziontechgroup.com'
         address: '364 E Main St STE 1008 Middletown DE 19709'
       }
-    }
     {
       id: 'biotech-research-suite'
       name: 'Biotech Research Suite'
@@ -484,7 +481,6 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
         website: 'https://ziontechgroup.com'
         address: '364 E Main St STE 1008 Middletown DE 19709'
       }
-    }
         'Pharmaceutical research',
         'Genetic research',
         'Clinical trials',
@@ -581,7 +577,6 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup && ziontechgroup.com',
       website: 'https://ziontechgroup && ziontechgroup.com',      address: '364 E Main St STE 1008 Middletown DE 19709'
     }
-  }
   {
 
     id: 'quantum-research-platform', name: 'Quantum Research Platform'
@@ -593,7 +588,6 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',      address: '364 E Main St STE 1008 Middletown DE 19709';
     }
-  }
   {
     id: 'quantum - research - platform', name: 'Quantum Research Platform',
     description: 'Advanced quantum research platform that provides quantum computing resources, quantum algorithms, and research tools for quantum science and technology development.',
@@ -652,7 +646,6 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup && ziontechgroup.com',
       website: 'https://ziontechgroup && ziontechgroup.com',      address: '364 E Main St STE 1008 Middletown DE 19709'
     }
-  }
   {
 
     id: 'ai-research-assistant', name: 'AI Research Assistant'
@@ -664,7 +657,6 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',      address: '364 E Main St STE 1008 Middletown DE 19709';
     }
-  }
   {
     id: 'ai - research - assistant', name: 'AI Research Assistant',
     description: 'Intelligent AI research assistant that helps researchers with literature review, data analysis, hypothesis generation, and research planning across all scientific domains.',
@@ -723,7 +715,6 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup && ziontechgroup.com',
       website: 'https://ziontechgroup && ziontechgroup.com',      address: '364 E Main St STE 1008 Middletown DE 19709'
     }
-  }
   {
 
     id: 'biotech-research-suite', name: 'Biotech Research Suite'
@@ -735,7 +726,6 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',      address: '364 E Main St STE 1008 Middletown DE 19709';
     }
-  }
   {
     id: 'biotech - research - suite', name: 'Biotech Research Suite',
     description: 'Comprehensive biotech research platform that provides tools for genetic research, drug discovery, clinical trials, and biotechnology development with AI - powered insights.',
@@ -796,6 +786,4 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',      address: '364 E Main St STE 1008 Middletown DE 19709';
     }
-  }
-];
 ;

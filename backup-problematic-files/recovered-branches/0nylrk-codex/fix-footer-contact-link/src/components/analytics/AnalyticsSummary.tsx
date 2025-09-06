@@ -4,7 +4,7 @@ import { useQuery } from "@tanstack/react-query",;
 import { supabase } from "@/integrations/supabase/client",;
 import { Skeleton } from "@/components/ui/skeleton",;
 import { formatDistanceToNow } from "date-fns",;
-;
+
 export function AnalyticsSummary() {;
   const { data:stats, isLoading } = useQuery({;
     queryKey:['analytics-summary'],;
@@ -15,29 +15,23 @@ export function AnalyticsSummary() {;
         .select('count');
         .eq('event_typepage_view');
         .single(),;
-;
-      if (pageViewsError && pageViewsError.code !== 'PGRST116') throw pageViewsError,;
-      ;
+
+      if (pageViewsError && pageViewsError.code != 'PGRST116') throw pageViewsError,;
       // Get unique visitors (by counting distinct user IDs);
       const { data:uniqueVisitorsData, error:uniqueVisitorsError } = await supabase;
         .from('analytics_events');
         .select('user_id');
         .eq('event_typepage_view');
         .is('user_idnot.null'),;
-        ;
       if (uniqueVisitorsError) throw uniqueVisitorsError,;
-      ;
       const uniqueUserIds = new Set(uniqueVisitorsData?.map(item => item.user_id) || []),;
-      ;
       // Get conversion count;
       const { data:conversionsData, error:conversionsError } = await supabase;
         .from('analytics_events');
         .select('count');
         .eq('event_typeconversion');
         .single(),;
-        ;
-      if (conversionsError && conversionsError.code !== 'PGRST116') throw conversionsError,;
-      ;
+      if (conversionsError && conversionsError.code != 'PGRST116') throw conversionsError,;
       // Get most recent event to calculate "last updated";
       const { data:lastEventData, error:lastEventError } = await supabase;
         .from('analytics_events');
@@ -45,9 +39,7 @@ export function AnalyticsSummary() {;
         .order('created_at', { ascending:false });
         .limit(1);
         .single(),;
-        ;
-      if (lastEventError && lastEventError.code !== 'PGRST116') throw lastEventError,;
-        ;
+      if (lastEventError && lastEventError.code != 'PGRST116') throw lastEventError,;
       return {;
         totalPageViews:pageViewsData?.count || 0,;
         uniqueVisitors:uniqueUserIds.size || 0,;
@@ -56,12 +48,11 @@ export function AnalyticsSummary() {;
     },;
     refetchInterval:300000, // Refetch every 5 minutes;
   }),;
-  ;
   // Calculate conversion rate;
   const conversionRate = stats && stats.totalPageViews > 0 ;
-    ? ((stats.conversions / stats.totalPageViews) * 100).toFixed(2);
+    ? (stats.conversions / stats.totalPageViews) * 100).toFixed(2);
     :'0.00',;
-;
+
   return (;
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">;
       <StatCard ;
@@ -100,13 +91,12 @@ export function AnalyticsSummary() {;
       />;
     </div>;
   ),;}
-;
+
 interface StatCardProps {;
   title:string,;
   value:React.ReactNode,;
   icon:React.ReactNode;
-}
-;
+
 function StatCard({ title, value, icon } StatCardProps) {;
   return (;
     <Card className="bg-zion-blue-dark border-zion-blue-light">;
@@ -130,31 +120,29 @@ function StatCard({ title, value, icon } StatCardProps) {;
  export function AnalyticsSummary () {
   const {
   data: stats, isLoading 
-}= useQuery ({
+= useQuery ({
   queryKey: ['analytics-summary'];
 queryFn: async () => {
   data: pageViewsData, error: pageViewsError 
-}= await supabase .from ('analytics events') .select ('count') .eq ('event typepage view') .single ();
-if (pageViewsError && pageViewsError.code !== 'PGRST116') throw pageViewsError;
-//Get unique visitors (by counting distinct user IDs) const {
+= await supabase .from ('analytics events') .select ('count') .eq ('event typepage view') .single ();
+if (pageViewsError && pageViewsError.code != 'PGRST116') throw pageViewsError;
+/Get unique visitors (by counting distinct user IDs) const {
   data: uniqueVisitorsData, error: uniqueVisitorsError 
-}= await supabase .from ('analytics events') .select ('user id') .eq ('event typepage view') .is ('user idnot.null');
+= await supabase .from ('analytics events') .select ('user id') .eq ('event typepage view') .is ('user idnot.null');
 if (uniqueVisitorsError) throw uniqueVisitorsError;
-//Get conversion count const {
+/Get conversion count const {
   data: conversionsData, error: conversionsError 
-}= await supabase .from ('analytics events') .select ('count') .eq ('event typeconversion') .single ();
-if (conversionsError && conversionsError.code !== 'PGRST116') throw conversionsError;
-.from ('analytics events') .select ('created at') .order ('created at', {
+= await supabase .from ('analytics events') .select ('count') .eq ('event typeconversion') .single ();
+if (conversionsError && conversionsError.code != 'PGRST116') throw conversionsError;
+from ('analytics events') .select ('created at') .order ('created at', {
   ascending: false 
-}) .limit (1) .single ();
-if (lastEventError && lastEventError.code !== 'PGRST116') throw lastEventError;
-};
+) .limit (1) .single ();
+if (lastEventError && lastEventError.code != 'PGRST116') throw lastEventError;
 refetchInterval: 300000, //Refetch every 5 minutes 
-});
-//Calculate conversion rate const conversionRate = stats && stats.totalPageViews > 0 ? ( (stats.conversions / stats.totalPageViews) * 100) .toFixed (2) : '0.00';
+);
+/Calculate conversion rate const conversionRate = stats && stats.totalPageViews > 0 ? (stats.conversions / stats.totalPageViews) * 100) .toFixed (2) : '0.00';
 return (<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8" > <StatCard) : stats?.lastUpdated ? (formatDistanceToNow (stats.lastUpdated, {
   addSuffix: true 
-}) ) : 'Never' 
-}/> </div>) 
-}</h4> </div> </div> </CardContent> </Card>) 
-}
+) : 'Never' 
+/> </div>) 
+</h4> </div> </div> </CardContent> </Card>) 

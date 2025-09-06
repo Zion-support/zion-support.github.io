@@ -3,8 +3,8 @@ import React, { createContext, useState, useContext, useEffect, ReactNode } from
 import { useLocation } from 'react-router-dom',;
 import { useAuth } from '@/hooks/useAuth',;
 import { supabase } from '@/integrations/supabase/client',;
-;
-// Analytics event types;
+
+/ Analytics event types;
 export type AnalyticsEventType = ;
   | 'page_view';
   | 'button_click';
@@ -19,8 +19,8 @@ export type AnalyticsEventType = ;
   | 'payment_completed';
   | 'signup';
   | 'login',;
-;
-// Interface for analytics events;
+
+/ Interface for analytics events;
 export interface AnalyticsEvent {;
   type:AnalyticsEventType,;
   path?:string,;
@@ -29,7 +29,7 @@ export interface AnalyticsEvent {;
   timestamp:number,;
   userId?:string | null,;
   metadata?:Record<string any>;}
-;
+
 export interface AnalyticsContextType {;
   trackEvent:(type:AnalyticsEventType, metadata?:Record<string any>) => void,;
   trackConversion:(conversionType:string, value?:number, metadata?:Record<string any>) => void,;
@@ -37,26 +37,25 @@ export interface AnalyticsContextType {;
   lastEvent:AnalyticsEvent | null,;
   events:AnalyticsEvent[],;
   clearEvents:() => void;
-}
-;
+
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(;
   undefined;
-),;
-;
+,;
+
 export function AnalyticsProvider({ children } { children:ReactNode }) {;
   const [pageViews, setPageViews] = useState(0),;
   const [events, setEvents] = useState<AnalyticsEvent[]>([]),;
   const [lastEvent, setLastEvent] = useState<AnalyticsEvent | null>(null),;
   const location = useLocation(),;
   const { user } = useAuth(),;
-;
+
   // Track page views when location changes;
-  useEffect(() => {;
+  useEffect() => {;
     trackEvent('page_view', { path:location.pathname }),;
-    setPageViews((prev) => prev + 1),;
+    setPageViews(prev) => prev + 1),;
     // eslint-disable-next-line react-hooks/exhaustive-deps;
   }, [location.pathname]),;
-;
+
   // Function to track general analytics events;
   const trackEvent = async (type:AnalyticsEventType, metadata:Record<string any> = {}) => {;
     const event:AnalyticsEvent = {;
@@ -66,10 +65,8 @@ export function AnalyticsProvider({ children } { children:ReactNode }) {;
       userId:user?.id,;
       metadata;
     },;
-    ;
-    setEvents((prevEvents) => [...prevEvents, event]),;
+    setEvents(prevEvents) => [...prevEvents, event]),;
     setLastEvent(event),;
-    ;
     try {;
       // Store event in Supabase for persistent analytics;
       await supabase.from('analytics_events').insert([{;
@@ -78,13 +75,11 @@ export function AnalyticsProvider({ children } { children:ReactNode }) {;
         user_id:user?.id,;
         metadata:metadata;
       }]),;
-      ;
       // // // console.log(`Analytics event tracked:${type}`, metadata),;
     } catch (error) {;
       console.error('Error logging analytics event:', error),;
-    }
-  },;
-;
+    },;
+
   // Function to track conversion events;
   const trackConversion = (conversionType:string, value?:number, metadata:Record<string any> = {}) => {;
     trackEvent('conversion', { ;
@@ -93,29 +88,27 @@ export function AnalyticsProvider({ children } { children:ReactNode }) {;
       ...metadata ;
     }),;
   },;
-  ;
   // Clear events (for development or testing);
   const clearEvents = () => {;
     setEvents([]),;
     setLastEvent(null),;
   },;
-;
+
   return (;
     <AnalyticsContext.Provider;
-      value={{;
+      value={;
         trackEvent,;
         trackConversion,;
         pageViews,;
         lastEvent,;
         events,;
         clearEvents;
-      }}
+      }
     >;
       {children}
     </AnalyticsContext.Provider>;
   ),;
-}
-;
+
 export const useAnalytics = ():AnalyticsContextType => {;
   const context = useContext(AnalyticsContext),;
   if (!context) {;
@@ -124,35 +117,35 @@ export const useAnalytics = ():AnalyticsContextType => {;
   // Cast is used here because the context default is undefined until provided;
   // by `AnalyticsProvider`. The runtime check above ensures it's defined.;
   return context as AnalyticsContextType,;
-},; //Analytics event types export type AnalyticsEventType = | 'page view' | 'button click' | 'form submit' | 'form error' | 'search' | 'filter' | 'conversion' | 'listing view' | 'listing contact' | 'payment initiated' | 'payment completed' | 'signup' | 'login';
-//Interface for analytics events const AnalyticsContext = createContext<AnalyticsContextType | undefined> (undefined);
-//eslint-disable-next-line react-hooks/exhaustive-deps 
-}, [location.pathname]);
-//Function to track general analytics events try {
+,; //Analytics event types export type AnalyticsEventType = | 'page view' | 'button click' | 'form submit' | 'form error' | 'search' | 'filter' | 'conversion' | 'listing view' | 'listing contact' | 'payment initiated' | 'payment completed' | 'signup' | 'login';
+/Interface for analytics events const AnalyticsContext = createContext<AnalyticsContextType | undefined> (undefined);
+/eslint-disable-next-line react-hooks/exhaustive-deps 
+, [location.pathname]);
+/Function to track general analytics events try {
   //Store event in Supabase for persistent analytics await supabase.from ('analytics events') .insert ([ {
-  
-}catch (error) {
+
+catch (error) {
   console.error ('Error logging analytics event:', error) 
-}
-};
-//Function to track conversion events const trackConversion = (conversionType: string, value?: number, metadata: Record<string any> = {
-  
-}) => {
+
+;
+/Function to track conversion events const trackConversion = (conversionType: string, value?: number, metadata: Record<string any> = {
+
+) => {
   trackEvent ('conversion', {
   conversionType;
 value;
-...metadata 
-}) 
-};
-//Clear events (for development or testing) const clearEvents = () => {
+..metadata 
+) 
+;
+/Clear events (for development or testing) const clearEvents = () => {
   setEvents ([]);
 setLastEvent (null) 
-};
-{
+;
+
   trackEvent, trackConversion, pageViews, lastEvent, events, clearEvents 
-}
-}> {
+
+> {
   children 
-}</AnalyticsContext.Provider>) 
-}//Cast is used here because the context default is undefined until provided // by `AnalyticsProvider`. The runtime check above ensures it's defined. return context as AnalyticsContextType 
-};
+</AnalyticsContext.Provider>) 
+//Cast is used here because the context default is undefined until provided // by `AnalyticsProvider`. The runtime check above ensures it's defined. return context as AnalyticsContextType 
+;

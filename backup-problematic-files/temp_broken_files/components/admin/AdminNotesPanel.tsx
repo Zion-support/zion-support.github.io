@@ -3,7 +3,7 @@ import React, { useEffect, useMemo, useState } from 'react',
 export type AdminNotesPanelProps = {
   targetType: string, // e.g., 'user' | 'listing'
   targetId: string,   // unique identifier for the target
-},
+,
 
 type Note = {
   id: string,
@@ -12,7 +12,7 @@ type Note = {
   text: string,
   authorId: string,
   createdAt: number
-},
+,
 
 export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {
   const [isAdmin, setIsAdmin] = useState(true),
@@ -26,7 +26,7 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
     try {
       setLoading(true),
       const res = await fetch(`/api/admin/notes?targetType=${encodeURIComponent(targetType)}&targetId=${encodeURIComponent(targetId)}`, {
-        headers: { 'X-Admin': isAdmin ? 'true' : 'false' }}),
+        headers: { 'X-Admin': isAdmin ? 'true' : 'false' }),
       if (!res.ok) {
         setNotes([]),
         return
@@ -36,14 +36,13 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
     } finally {
       setLoading(false)
     }
-  }
 
-  useEffect(() => {
+  useEffect() => {
     if (isAdmin) fetchNotes()
   }, [isAdmin, targetType, targetId]),
 
   async function addNote() {
-    if (!text.trim()) return,
+    if (!text.trim() return,
     setAdding(true),
     try {
       const res = await fetch('/api/admin/notes', {
@@ -59,7 +58,6 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
     } finally {
       setAdding(false)
     }
-  }
 
   if (!isAdmin) {
     return (
@@ -94,15 +92,15 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
         <div className=&quot;text-sm opacity-70 mb-2&quot;>Notes are private, time-stamped, and include author ID.</div>
         {loading ? (
           <div className=&quot;text-sm&quot;>Loading</div>
-        ) : notes.length === 0 ? (
+        ) : notes.length = = 0 ? (
           <div className=&quot;text-sm opacity-70&quot;>No notes yet.</div>
         ) : (
           <ul className=&quot;space-y-2&quot;>
-            {notes.map((n) => (
+            {notes.map(n) => (
               <li key={n.id} className=&quot;rounded border p-2 text-sm&quot;>
                 <div className=&quot;opacity-60 text-xs mb-1&quot;>{new Date(n.createdAt).toLocaleString()}  {n.authorId}</div>
                 <div>{n.text}</div>              </li>
-            ))}
+            )}
           </ul>;
         )}
       </div>

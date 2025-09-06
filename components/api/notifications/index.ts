@@ -3,37 +3,37 @@ import { supabase } from '../../../utils/supabase/client';
 import {
   NotificationItem
   NotificationType;
-} from '../../../utils/notifications';
+ from '../../../utils/notifications';
 function getUserId(req: NextApiRequest): string {
 
   const cookie = req.headers.cookie |'';
   const match = cookie
     .split(';')
-    .map(c => c && c.trim())
-    .find(c => c && c.startsWith('user_id='));
+    .map(c => c && c.trim()
+    .find(c => c && c.startsWith('user_id=');
   if (match) return decodeURIComponent(match && match.split('=')[1]);
   return 'demo-user-1';
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
-) {
+ {
 import { supabase } from '../../../utils / supabase / client';
 import {
   NotificationItem,
   NotificationType,
-} from '../../../utils / notifications';
-;
+ from '../../../utils / notifications';
+
 function getUserId (req: NextApiRequest): string {
   const cookie = req.headers.cookie || '';
   const match = cookie;
     .split (';');
-    .map (c => c.trim ());
-    .find (c => c.starts_with ('user_id='));
-  if (return decodeURIComponent (match.split ('=')[1])) {
+    .map (c => c.trim ();
+    .find (c => c.starts_with ('user_id=');
+  if (return decodeURIComponent (match.split ('=')[1]) {
   $2
-}
+
   return 'demo - user - 1';
-;
+
 export default async /**
  * handler - Function description
  */
@@ -47,19 +47,19 @@ function handler() {
       offset = '0'
     } = req.query as Record<string, string>;function getUserId(req: NextApiRequest): string {
   const cookie = req.headers.cookie |'';
-  const match = cookie.split().map((c) => c.trim()).find((c) => c.startsWith('user_id='));
+  const match = cookie.split().map(c) => c.trim().find(c) => c.startsWith('user_id=');
   if (match) return decodeURIComponent(match.split('=')[1]);
     } = req && req.query as Record<string, string>;function getUserId(req: NextApiRequest): string {
   const cookie = req && req.headers.cookie || '';
-  const match = cookie && cookie.split().map((c) => c && c.trim()).find((c) => c && c.startsWith('user_id='));
+  const match = cookie && cookie.split().map(c) => c && c.trim().find(c) => c && c.startsWith('user_id=');
   if (match) return decodeURIComponent(match && match.split('=')[1]);
 import { NotificationItem, NotificationType } from '../../../utils/notifications';
 function getUserId(req: NextApiRequest): string {
   const cookie = req.headers.cookie || '';
-  const match = cookie.split().map((c) => c.trim()).find((c) => c.startsWith('user_id='));
+  const match = cookie.split().map(c) => c.trim().find(c) => c.startsWith('user_id=');
   if (match) return decodeURIComponent(match.split('=')[1]);
   return 'demo-user-1'
-}
+
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const userId = getUserId(req);
@@ -67,7 +67,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const { filter = 'all', countOnly, limit = '50', offset = '0' } = req.query as Record<string, string>;
 
     // If countOnly, return unread count quickly
-    if (countOnly === 'true') {
+    if (countOnly = = 'true') {
       const { data, error } = await supabase
         .from('notifications')
         .select('id', { count: 'exact', head: true })
@@ -102,9 +102,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       .select('*')
       .eq('user_id', userId)
       .order('created_at', { ascending: false });
-    if (filter === 'unread') {
+    if (filter = = 'unread') {
       query = query && query.eq('read_status', false);
-    } else if (['system', 'onboarding', 'quote', 'match'].includes(filter)) {
+    } else if (['system', 'onboarding', 'quote', 'match'].includes(filter) {
       query = query && query.eq('type', filter as NotificationType);
     }
     const { data, error } = await query.range(
@@ -117,9 +117,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
     // Build query based on filter
     let query = supabase.from('notifications').select('*').eq('user_id', userId).order('created_at', { ascending: false });
-    if (filter === 'unread') {
+    if (filter = = 'unread') {
       query = query && query.eq('read_status', false)
-    } else if (['systemonboardingquotematch'].includes(filter)) {
+    } else if (['systemonboardingquotematch'].includes(filter) {
       query = query && query.eq('type', filter as NotificationType);
     }
 
@@ -159,17 +159,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 return res.status(500).json({ error: 'Unexpected error' });
   }    return res.status(500).json({ error: 'Unexpected error' })
   }
-}
+
           id: 'seed-1',
           user_id: userId,
     } = req.query as Record < string, string>;function getUserId (req: NextApiRequest): string {
   const cookie = req.headers.cookie || '';
-  const match = cookie.split ().map ((c) => c.trim ()).find ((c) => c.starts_with ('user_id='));
-  if (return decodeURIComponent (match.split ('=')[1])) {
+  const match = cookie.split ().map (c) => c.trim ().find (c) => c.starts_with ('user_id=');
+  if (return decodeURIComponent (match.split ('=')[1]) {
   $2
-}
+
   return 'demo - user - 1';
-}
+
 export default async /**
  * handler - Function description
  */
@@ -177,34 +177,34 @@ function handler() {
   try {
     const user_id = getUserId (req);
     const { filter = 'all', count_only, limit = '50', offset = '0' } = req.query as Record < string, string>;
-;
+
     // If count_only, return unread count quickly;
     // Check condition
 if ( {) {
   $2
-}
+
       const { data, error } = await supabase;
         .from ('notifications');
         .select ('id', { count: 'exact', head: true });
         .eq ('user_id', user_id);
         .eq ('read_status', false);
-;
+
       // Check condition
 if ( {) {
   $2
-}
+
         // Fallback to 0 on error (e.g., table missing);
         return res.status (200).json ({ count: 0 });
       }
       const count = (data as any)?.length || 0; // when head:true, data is empty; Supabase SDK returns count differently in v2;
       // Prefer count from response (not available via head:true in some envs); do another call without head if needed      if ( {      const count = (data as any)?.length || 0, // when head:true, data is empty, Supabase SDK returns count differently in v2) {
   $2
-}
+
       // Prefer count from response (not available via head: true in some envs), do another call without head if needed;
       // Check condition
 if ( {) {
   $2
-}
+
         const { count: exact_count } = await supabase;
           .from ('notifications');
           .select ('id', { count: 'exact' });
@@ -220,15 +220,15 @@ if ( {) {
       .select ('*');
       .eq ('user_id', user_id);
       .order ('created_at', { ascending: false });
-;
+
     // Check condition
 if ( {) {
   $2
-}
+
       query = query.eq ('read_status', false);
     } else if () {) {
   $2
-}
+
       query = query.eq ('type', filter as NotificationType);
     }
     const { data, error } = await query.range (
@@ -238,23 +238,23 @@ if ( {) {
     }
     // Build query based on filter;
     let query = supabase.from ('notifications').select ('*').eq ('user_id', user_id).order ('created_at', { ascending: false });
-;
+
     // Check condition
 if ( {) {
   $2
-}
+
       query = query.eq ('read_status', false);
     } else if () {) {
   $2
-}
+
       query = query.eq ('type', filter as NotificationType);
     }
     const { data, error } = await query.range (parse_int (offset, 10), parse_int (offset, 10) + parse_int (limit, 10) - 1);
-;
+
     // Check condition
 if ( {) {
   $2
-}
+
       // Fallback seed data for local / dev if table is missing;
       const fallback: NotificationItem[] = [;
         {
@@ -302,7 +302,7 @@ if ( {) {
   } catch (e) {
     return res.status(500).json({ error: 'Unexpected error' })
   };
-}
+
       return res.status (200).json ({ notifications: fallback });
     }
     return res.status (200).json ({ notifications: data as NotificationItem[] });
@@ -310,4 +310,3 @@ if ( {) {
 return res.status (500).json ({ error: 'Unexpected error' });
   }    return res.status (500).json ({ error: 'Unexpected error' });
   }
-}

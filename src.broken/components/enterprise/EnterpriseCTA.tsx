@@ -6,5 +6,3 @@ export function EnterpriseCTA() {;
       <p>Component placeholder - needs implementation</p>;
     </div>;
   );
-}
-;

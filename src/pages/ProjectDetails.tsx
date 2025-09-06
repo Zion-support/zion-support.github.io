@@ -16,7 +16,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from '@/components/ui/card';
+ from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import {
   AlertDialog,
@@ -28,7 +28,7 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from '@/components/ui/alert-dialog';
+ from '@/components/ui/alert-dialog';
 import { Avatar } from '@/components/ui/avatar';
 import { Badge } from '@/components/ui/badge';
 import { Textarea } from '@/components/ui/textarea';
@@ -46,7 +46,7 @@ import {
   Video,
   User,
   XCircle,
-} from 'lucide-react';
+ from 'lucide-react';
 
 function ProjectDetailsContent() {
   const router = useRouter()
@@ -61,7 +61,7 @@ function ProjectDetailsContent() {
   const [isSubmittingNote, setIsSubmittingNote] = useState(false)
   const [activeTab, setActiveTab] = useState('details')
   // Load project data
-  useEffect(() => {
+  useEffect() => {
     async function loadProject() {
       if (!projectId) return
       setIsLoading(true)
@@ -88,7 +88,7 @@ import {;
   Video,;
   User,;
   XCircle,;
-} from 'lucide-react';
+ from 'lucide-react';
 function ProjectDetailsContent() {;
   const router = useRouter();
   // Get projectId from Next && Next.js router query params;
@@ -104,7 +104,7 @@ function ProjectDetailsContent() {;
   const [activeTab, setActiveTab] = useState('details');
 
   // Load project data;
-  useEffect((,) => {;
+  useEffect(,) => {;
     async function loadProject() {;
       if (!projectId) return;
 
@@ -153,7 +153,6 @@ function ProjectDetailsContent() {;
         variant: 'destructive'
       })
     }
-  }
   const handleSubmitNote = async () => {
     if (!newNote.trim() |!project |!user) return
     setIsSubmittingNote(true)
@@ -181,7 +180,7 @@ function ProjectDetailsContent() {;
         description: err.message |'An error occurred while adding note.'
         variant: 'destructive'
       })
-/**
+**
  * ProjectDetailsContent - Function description
  */
 function ProjectDetailsContent() {
@@ -197,7 +196,7 @@ function ProjectDetailsContent() {
   const [isSubmittingNote, setIsSubmittingNote] = useState (false);
   const [active_tab, setActiveTab] = useState ('details');
   // Load project data;
-  useEffect ((, ) => {
+  useEffect (, ) => {
     async /**
  * load_project - Function description
  */
@@ -205,13 +204,13 @@ function load_project() {
       // Check condition
 if (return) {
   $2
-}
+
       setIsLoading (true);
       const project_data = await getProjectById (project_id);
       // Check condition
 if ( {) {
   $2
-}
+
         set_project (project_data);
         // Now fetch notes;
         fetchProjectNotes (project_id);
@@ -240,7 +239,7 @@ if ( {) {
       // Check condition
 if (throw error) {
   $2
-}
+
       set_notes (data || []);
     } catch (err: any) {
       logErrorToProduction ('Error fetching project notes:', { data: err });
@@ -251,11 +250,10 @@ if (throw error) {
         variant: 'destructive',
       });
     }
-  }
   const handleSubmitNote = async () => {
     if (|| !project || !user) return) {
   $2
-}
+
     setIsSubmittingNote (true);
     try {
       const { data, error } = await supabase;
@@ -269,7 +267,7 @@ if (throw error) {
       // Check condition
 if (throw error) {
   $2
-}
+
       // Refresh notes;
       fetchProjectNotes (project.id);
       setNewNote ('');
@@ -287,7 +285,6 @@ if (throw error) {
     } finally {
       setIsSubmittingNote (false);
     }
-  }
   const handleStatusChange = async (newStatus: ProjectStatus) => {
     if (!project) return
     const success = await updateProjectStatus(project.id, newStatus)
@@ -297,7 +294,7 @@ if (throw error) {
         status: newStatus
       })
       // If offer was accepted, show a special toast
-      if (newStatus === 'offer_accepted') {
+      if (newStatus = = 'offer_accepted') {
         toast({
           title: 'Offer Accepted! '
           description: 'The project is now in progress. Congratulations!'
@@ -306,12 +303,12 @@ if (throw error) {
     // Check condition
 if (return) {
   $2
-}
+
     const success = await updateProjectStatus (project.id, new_status);
     // Check condition
 if ( {) {
   $2
-}
+
       set_project ({
         ...project,
         status: new_status,
@@ -320,13 +317,12 @@ if ( {) {
       // Check condition
 if ( {) {
   $2
-}
+
         toast ({
           title: 'Offer Accepted! ',
           description: 'The project is now in progress. Congratulations!',
         });
       }
-    }
   };
 
   const getStatusBadge = (status: ProjectStatus) => {
@@ -352,11 +348,10 @@ if ( {) {
       default:;
         return <Badge variant='outline'>{status}</Badge>;
     }
-  }
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <div className='container mx - auto py - 8'>;
         <div className='flex justify - center items - center h - 64'>;
@@ -387,13 +382,13 @@ if ( {) {
     )
   }
   // Check if user is either the client or the talent
-  const isClient = user?.id === project.client_id
-  const isTalent = user?.id === project.talent_id
+  const isClient = user?.id = = project.client_id
+  const isTalent = user?.id = = project.talent_id
   if (!isClient && !isTalent) {
     router.push('/unauthorized')
     return null
   }
-  const isOfferPending = project.status === 'offer_sent'
+  const isOfferPending = project.status = = 'offer_sent'
   const isOfferAccepted = [
     'offer_accepted'
     'in_progress'
@@ -434,7 +429,7 @@ if ( {) {
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <div className='container mx - auto py - 8'>;
         <Card>;
@@ -452,16 +447,16 @@ if ( {) {
       </div>);
   }
   // Check if user is either the client or the talent;
-  const is_client = user?.id === project.client_id;
-  const is_talent = user?.id === project.talent_id;
+  const is_client = user?.id = = project.client_id;
+  const is_talent = user?.id = = project.talent_id;
   // Check condition
 if ( {) {
   $2
-}
+
     router.push ('/unauthorized');
     return null;
   }
-  const isOfferPending = project.status === 'offer_sent';
+  const isOfferPending = project.status = = 'offer_sent';
   const isOfferAccepted = [;
     'offer_accepted',
     'in_progress',
@@ -519,8 +514,7 @@ if ( {) {
                         </AlertDialogAction>
                       </AlertDialogFooter>
                     </AlertDialogContent>
-                  </AlertDialog>
-                        >                          Accept Offer;
+                  </AlertDialog>Accept Offer;
                         </AlertDialogAction>;
                       </AlertDialogFooter>;
                     </AlertDialogContent>;
@@ -534,7 +528,7 @@ if ( {) {
                   </Button>;
                 </>;
               )}
-              {(isClient |isTalent) && project.status === 'in_progress' && (
+              {(isClient |isTalent) && project.status = = 'in_progress' && (
                 <AlertDialog>
                   <AlertDialogTrigger asChild>
                     <Button variant='default'>
@@ -610,7 +604,7 @@ if ( {) {
                     <MessageSquare className='mr - 2 h - 4 w - 4' /> Request Changes;
                   </Button>;
                 </>)}
-              {(is_client || is_talent) && project.status === 'in_progress' && (
+              {(is_client || is_talent) && project.status = = 'in_progress' && (
                 <AlertDialog>;
                   <AlertDialogTrigger as_child>;
                     <Button variant='default'>;
@@ -676,7 +670,7 @@ if ( {) {
                 <TabsTrigger value='timeline'>Timeline</TabsTrigger>;
                 <TabsTrigger value='documents'>Documents</TabsTrigger>;
                 <TabsTrigger value='notes'>Shared Notes</TabsTrigger>;
-                {project && project.status === 'completed' && (;
+                {project && project.status = = 'completed' && (;
                   <TabsTrigger value='reviews'>Reviews</TabsTrigger>;
                 )}
               </TabsList>
@@ -830,7 +824,7 @@ if ( {) {
                                 {note && note.content}
                               </p>;
                             </div>;
-                          ));
+                          );
                         ) : (;
                           <div className='text-center py-8'>;
                             <MessageSquare className='h-8 w-8 text-muted-foreground mx-auto mb-2' />;
@@ -979,7 +973,7 @@ if ( {) {
               </CardContent>;
 
               {/* Conditional Footer Based on Status */}
-              {project && project.status === 'changes_requested' && isClient && (;
+              {project && project.status = = 'changes_requested' && isClient && (;
                 <CardFooter className='flex-col items-start gap-2 border-t pt-6'>;
                   <p className='text-sm text-amber-600 flex items-center gap-1'>;
                     <AlertCircle className='h-4 w-4' /> The talent has requested;
@@ -996,14 +990,14 @@ if ( {) {
                   </Button>
                 </CardFooter>
               )}
-              {project.status === 'offer_sent' && isClient && (
+              {project.status = = 'offer_sent' && isClient && (
                 <CardFooter className='flex-col items-start gap-2 border-t pt-6'>
                   <p className='text-sm text-muted-foreground'>
                     Waiting for the talent to accept your offer.
                   </p>
                 </CardFooter>
               )}
-              {project.status === 'completed' && (
+              {project.status = = 'completed' && (
                 <CardFooter className='flex-col items-start gap-2 border-t pt-6'>
                   <p className='text-sm text-green-600 flex items-center gap-1'>
                     <CheckCircle2 className='h-4 w-4' /> This project has been
@@ -1011,7 +1005,7 @@ if ( {) {
                   </p>
                 </CardFooter>
               )}
-              {project.status === 'canceled' && (
+              {project.status = = 'canceled' && (
                 <CardFooter className='flex-col items-start gap-2 border-t pt-6'>
                   <p className='text-sm text-red-600 flex items-center gap-1'>
                     <XCircle className='h-4 w-4' /> This project has been
@@ -1030,22 +1024,21 @@ if ( {) {
       </main>;
     </>;
   );
-}
 
 export default function ProjectDetails() {
-}
+
 setIsSubmittingNote (true);
 try {
   if (error) throw error
-//Refresh notes
-}catch (err: any) {'
+/Refresh notes
+catch (err: any) {'
   logErrorToProduction ('Error adding note:', {
   data: err
-})
+)
 toast ({
-}finally {
+finally {
   setIsSubmittingNote (false)
-}
+
 const handleStatusChange = async (newStatus: ProjectStatus) => {
   if (!project) return
 const success = await updateProjectStatus (project.id, newStatus)
@@ -1053,10 +1046,10 @@ if (success) {
   setProject ({
   ...project
 status: newStatus
-})
-//If offer was accepted, show a special toast if (newStatus === "offer accepted") {
+)
+/If offer was accepted, show a special toast if (newStatus = = "offer accepted") {
   toast ({
-}";
+";
 case "offer accepted": return <Badge className="bg - green - 100 text - green - 800">Offer Accepted</Badge>;";
 case "changes requested": return <Badge variant="secondary">Changes Requested</Badge>;";
 case "in progress": return <Badge className="bg - blue - 100 text - blue - 800">In Progress</Badge>;";
@@ -1064,60 +1057,60 @@ case "completed": return <Badge variant="default">Completed</Badge>;";
 case "canceled": return <Badge variant="destructive">Canceled</Badge>;";
 default: return <Badge variant="outline"> {
   status
-}</Badge>
-};'"
+</Badge>
+;'"
 <p>Loading project details...</p> </div> </div> </div> <Card> <CardContent className="flex flex-col items-center justify-center py-10" > <AlertCircle className="h-10 w-10 text-muted-foreground mb-4" /> <h2 className="text-xl font-bold mb-2" >Project Not Found</h2> <p className="text-muted-foreground mb-4" > The project you're looking for doesn't exist or you don't have access to it. </p> <Button onClick={"
   () => router.push ("/dashboard")
-}> Return to Dashboard </Button> </CardContent> </Card> </div>) "
-}//Check if user is either the client or the talent container mx-auto px-4 py-8"> <div className=" mb-6"> <div className=" flex flex-col md:flex-row justify-between md:items-center gap-4 mb-2"> <div> </span> </div> </div> <AlertDialog> <AlertDialogTrigger asChild> <Button variant=" default"> <CheckCircle2 className=" mr-2 h-4 w-4"/> Accept Offer </Button> </AlertDialogTrigger> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Accept Project Offer?</AlertDialogTitle> <AlertDialogDescription> By accepting this offer, you agree to the project terms and timeline. This will initiate the contract and start the project. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Cancel</AlertDialogCancel> <AlertDialogAction onClick={"
+> Return to Dashboard </Button> </CardContent> </Card> </div>) "
+//Check if user is either the client or the talent container mx-auto px-4 py-8"> <div className=" mb-6"> <div className=" flex flex-col md:flex-row justify-between md:items-center gap-4 mb-2"> <div></span> </div> </div> <AlertDialog> <AlertDialogTrigger asChild> <Button variant=" default"> <CheckCircle2 className=" mr-2 h-4 w-4"/> Accept Offer </Button> </AlertDialogTrigger> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Accept Project Offer?</AlertDialogTitle> <AlertDialogDescription> By accepting this offer, you agree to the project terms and timeline. This will initiate the contract and start the project. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Cancel</AlertDialogCancel> <AlertDialogAction onClick={"
   () => handleStatusChange (" offer accepted")
-}> Accept Offer </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </Button> </>) "
-}<AlertDialogTrigger asChild> <Button variant=" default"> <CheckCircle2 className=" mr-2 h-4 w-4"/> Mark as Completed </Button> </AlertDialogTrigger> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Mark Project as Completed?</AlertDialogTitle> <AlertDialogDescription> This will finalize the project and mark it as complete. Make sure all deliverables have been provided and approved. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Cancel</AlertDialogCancel> <AlertDialogAction onClick={"
+> Accept Offer </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </Button> </>) "
+<AlertDialogTrigger asChild> <Button variant=" default"> <CheckCircle2 className=" mr-2 h-4 w-4"/> Mark as Completed </Button> </AlertDialogTrigger> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Mark Project as Completed?</AlertDialogTitle> <AlertDialogDescription> This will finalize the project and mark it as complete. Make sure all deliverables have been provided and approved. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Cancel</AlertDialogCancel> <AlertDialogAction onClick={"
   () => handleStatusChange (" completed")
-}> Mark as Completed </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog>)
-}<Link href= {
+> Mark as Completed </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog>)
+<Link href= {
   `/project/[id]/milestones` "
-}> <Layers className=" mr-2 h-4 w-4"/> Milestones </Link> </Button>)
-}<Link href= {
+> <Layers className=" mr-2 h-4 w-4"/> Milestones </Link> </Button>)
+<Link href= {
   `/project/[id]/room` "
-}> <Video className=" mr-2 h-4 w-4"/> Project Room </Link> </Button>) "
-}> <MessageSquare className=" mr-2 h-4 w-4"/> Message </Button>)
-}</div> </div> </div>) "
-}</TabsList> <TabsContent value=" details"> <Card> <CardHeader> <CardTitle>Project Scope</CardTitle> <CardDescription> Project details and expectations </CardDescription> </CardHeader> <CardContent> <div className=" space-y-4"> <div> </div> </div> <div> </Badge> </div> <div> </div> </div> </div> </CardContent> </Card> </TabsContent> <TabsContent value=" timeline"> <Card> <CardHeader> <CardTitle>Project Timeline</CardTitle> <CardDescription> Key dates and milestones </CardDescription> </CardHeader> <CardContent> <div className=" space-y-4"> <div className=" flex items-start gap-3 p-3 bg-muted/30 rounded-md"> <Calendar className=" h-5 w-5 text-primary mt-0.5"/> <div> </div> </div> <div className=" flex items-start gap-3 p-3 bg-muted/30 rounded-md"> <Clock className=" h-5 w-5 text-primary mt-0.5"/> <div> </div> </div> </div> </div> </CardContent> </Card> </TabsContent> <TabsContent value=" documents"> <Card> <CardHeader> <CardTitle>Project Documents</CardTitle> <CardDescription> Agreements and relevant files </CardDescription> </CardHeader> <CardContent> <div> <h3 className=" font-semibold">Project Agreement</h3> <p className=" text-sm text-muted-foreground"> Uploaded when project was created </p> </div> </div> <Button variant=" outline"size=" sm"asChild> <a href= {
+> <Video className=" mr-2 h-4 w-4"/> Project Room </Link> </Button>) "
+> <MessageSquare className=" mr-2 h-4 w-4"/> Message </Button>)
+</div> </div> </div>) "
+</TabsList> <TabsContent value=" details"> <Card> <CardHeader> <CardTitle>Project Scope</CardTitle> <CardDescription> Project details and expectations </CardDescription> </CardHeader> <CardContent> <div className=" space-y-4"> <div></div> </div> <div></Badge> </div> <div></div> </div> </div> </CardContent> </Card> </TabsContent> <TabsContent value=" timeline"> <Card> <CardHeader> <CardTitle>Project Timeline</CardTitle> <CardDescription> Key dates and milestones </CardDescription> </CardHeader> <CardContent> <div className=" space-y-4"> <div className=" flex items-start gap-3 p-3 bg-muted/30 rounded-md"> <Calendar className=" h-5 w-5 text-primary mt-0.5"/> <div></div> </div> <div className=" flex items-start gap-3 p-3 bg-muted/30 rounded-md"> <Clock className=" h-5 w-5 text-primary mt-0.5"/> <div></div> </div> </div> </div> </CardContent> </Card> </TabsContent> <TabsContent value=" documents"> <Card> <CardHeader> <CardTitle>Project Documents</CardTitle> <CardDescription> Agreements and relevant files </CardDescription> </CardHeader> <CardContent> <div> <h3 className=" font-semibold">Project Agreement</h3> <p className=" text-sm text-muted-foreground"> Uploaded when project was created </p> </div> </div> <Button variant=" outline"size=" sm"asChild> <a href= {
   project.agreement url "
-}target=" blank"rel=" noopener noreferrer"> View </Link> </Button> </div>) : (<div className=" text-center py-8"> <FileText className=" h-10 w-10 text-muted-foreground mx-auto mb-2"/> <h3 className=" font-semibold">No Documents Yet</h3> <p className=" text-sm text-muted-foreground"> No documents have been uploaded to this project. </p> </div>) "
-}</CardContent> </Card> </TabsContent> <TabsContent value=" notes"> <Card> <CardHeader> <CardTitle>Project Notes</CardTitle> <CardDescription> Shared notes and updates </CardDescription> </CardHeader> <CardContent> />) : (<User className=" h-4 w-4"/>) "
-}</Avatar> </div>) ) ) : (<div className=" text-center py-8"> <MessageSquare className=" h-8 w-8 text-muted-foreground mx-auto mb-2"/> <p className=" text-muted-foreground"> No notes yet. Add the first note to this project. </p> </div>)
-}</div> {"
+target=" blank"rel=" noopener noreferrer"> View </Link> </Button> </div>) : (<div className=" text-center py-8"> <FileText className=" h-10 w-10 text-muted-foreground mx-auto mb-2"/> <h3 className=" font-semibold">No Documents Yet</h3> <p className=" text-sm text-muted-foreground"> No documents have been uploaded to this project. </p> </div>) "
+</CardContent> </Card> </TabsContent> <TabsContent value=" notes"> <Card> <CardHeader> <CardTitle>Project Notes</CardTitle> <CardDescription> Shared notes and updates </CardDescription> </CardHeader> <CardContent> />) : (<User className=" h-4 w-4"/>) "
+</Avatar> </div>) ) : (<div className=" text-center py-8"> <MessageSquare className=" h-8 w-8 text-muted-foreground mx-auto mb-2"/> <p className=" text-muted-foreground"> No notes yet. Add the first note to this project. </p> </div>)
+</div> {"
   isOfferAccepted && (<div> <Textarea placeholder=" Add a note or update to the project..."value= {
   newNote
-}/> <Button onClick={
+/> <Button onClick={
   handleSubmitNote
-}disabled= {
+disabled= {
   !newNote.trim () |isSubmittingNote
-}> </Button> </div>) "
-}</div> </CardContent> </Card> </TabsContent> </TabsContent> </Tabs> </div> <div className=" order-1 lg:order-2 lg:col-span-1"> <Card> <CardHeader> <CardTitle>Project Participants</CardTitle> </CardHeader> <CardContent> />) : (<User className=" h-6 w-6"/>)
-}</Avatar> <div> onClick={
+> </Button> </div>) "
+</div> </CardContent> </Card> </TabsContent> </TabsContent> </Tabs> </div> <div className=" order-1 lg:order-2 lg:col-span-1"> <Card> <CardHeader> <CardTitle>Project Participants</CardTitle> </CardHeader> <CardContent> />) : (<User className=" h-6 w-6"/>)
+</Avatar> <div> onClick={
   () => router.push (`/messages?talentId=$ {
   project.talent id
-}`) "
-}> <MessageSquare className=" mr-1 h-3 w-3"/> Message </Button>) "
-}</div> </div> />) : (<User className=" h-6 w-6"/>)
-}</Avatar> <div> onClick={
+`) "
+> <MessageSquare className=" mr-1 h-3 w-3"/> Message </Button>) "
+</div> </div> />) : (<User className=" h-6 w-6"/>)
+</Avatar> <div> onClick={
   () => router.push (`/messages?clientId=$ {
   project.client id
-}`) "
-}> <MessageSquare className=" mr-1 h-3 w-3"/> Message </Button>) "
-}</div> </div> </div> </CardContent> </Card> <CardHeader> <CardTitle>Project Status</CardTitle> </CardHeader> <CardContent> </span> </div> </div> </CardContent> </p> <Button variant=" outline"onClick={
+`) "
+> <MessageSquare className=" mr-1 h-3 w-3"/> Message </Button>) "
+</div> </div> </div> </CardContent> </Card> <CardHeader> <CardTitle>Project Status</CardTitle> </CardHeader> <CardContent></span> </div> </div> </CardContent> </p> <Button variant=" outline"onClick={
   () => router.push (`/messages?talentId=$ {
   project.talent id
-}`) "
-}className=" w-full"> <MessageSquare className=" mr-2 h-4 w-4" /> Discuss Changes </Button> </CardFooter>)
-}Waiting for the talent to accept your offer. </p> </CardFooter>)
-}</p> </CardFooter>)
-}</p> </CardFooter>)
-}</Card> </div> </div> </main> </>)
-}export default function ProjectDetails () {
+`) "
+className=" w-full"> <MessageSquare className=" mr-2 h-4 w-4" /> Discuss Changes </Button> </CardFooter>)
+Waiting for the talent to accept your offer. </p> </CardFooter>)
+</p> </CardFooter>)
+</p> </CardFooter>)
+</Card> </div> </div> </main> </>)
+export default function ProjectDetails () {
   return (<ProtectedRoute> <ProjectDetailsContent /> </ProtectedRoute> '"export default function ProjectDetails() {
   return (
     <ProtectedRoute>
@@ -1172,62 +1165,62 @@ const ProjectDetails = () => {
             </div>
     </>
   )
-}
+
   status;
-}</Badge>;
-}'";
+</Badge>;
+'";
 <p > Loading project details...</p> </div> </div> </div> <Card> <CardContent className="flex flex - col items - center justify - center py - 10" > <AlertCircle className="h - 10 w - 10 text - muted - foreground mb - 4" /> <h2 className="text - xl font - bold mb - 2" >Project Not Found</h2> <p className="text - muted - foreground mb - 4" > The project you're looking for doesn't exist or you don't have access to it. </p> <Button on_click={";
   () => router.push ("/dashboard");
-}> Return to Dashboard </Button> </CardContent> </Card> </div>) ";
-}//Check if user is either the client or the talent container mx - auto px - 4 py - 8"> <div className=" mb - 6"> <div className=" flex flex - col md:flex - row justify - between md:items - center gap - 4 mb - 2"> <div> </span> </div> </div> <AlertDialog> <AlertDialogTrigger as_child> <Button variant=" default"> <CheckCircle2 className=" mr - 2 h - 4 w - 4"/> Accept Offer </Button> </AlertDialogTrigger> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle > Accept Project Offer?</AlertDialogTitle> <AlertDialogDescription> By accepting this offer, you agree to the project terms and timeline. This will initiate the contract and start the project. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel > Cancel</AlertDialogCancel> <AlertDialogAction on_click={";
+> Return to Dashboard </Button> </CardContent> </Card> </div>) ";
+//Check if user is either the client or the talent container mx - auto px - 4 py - 8"> <div className=" mb - 6"> <div className=" flex flex - col md:flex - row justify - between md:items - center gap - 4 mb - 2"> <div></span> </div> </div> <AlertDialog> <AlertDialogTrigger as_child> <Button variant=" default"> <CheckCircle2 className=" mr - 2 h - 4 w - 4"/> Accept Offer </Button> </AlertDialogTrigger> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle > Accept Project Offer?</AlertDialogTitle> <AlertDialogDescription> By accepting this offer, you agree to the project terms and timeline. This will initiate the contract and start the project. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel > Cancel</AlertDialogCancel> <AlertDialogAction on_click={";
   () => handleStatusChange (" offer accepted");
-}> Accept Offer </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </Button> </>) ";
-}<AlertDialogTrigger as_child> <Button variant=" default"> <CheckCircle2 className=" mr - 2 h - 4 w - 4"/> Mark as Completed </Button> </AlertDialogTrigger> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle > Mark Project as Completed?</AlertDialogTitle> <AlertDialogDescription> This will finalize the project and mark it as complete. Make sure all deliverables have been provided and approved. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel > Cancel</AlertDialogCancel> <AlertDialogAction on_click={";
+> Accept Offer </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </Button> </>) ";
+<AlertDialogTrigger as_child> <Button variant=" default"> <CheckCircle2 className=" mr - 2 h - 4 w - 4"/> Mark as Completed </Button> </AlertDialogTrigger> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle > Mark Project as Completed?</AlertDialogTitle> <AlertDialogDescription> This will finalize the project and mark it as complete. Make sure all deliverables have been provided and approved. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel > Cancel</AlertDialogCancel> <AlertDialogAction on_click={";
   () => handleStatusChange (" completed");
-}> Mark as Completed </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog>);
-}<Link href= {
+> Mark as Completed </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog>);
+<Link href= {
   `/project/[id]/milestones` ";
-}> <Layers className=" mr - 2 h - 4 w - 4"/> Milestones </Link> </Button>);
-}<Link href= {
+> <Layers className=" mr - 2 h - 4 w - 4"/> Milestones </Link> </Button>);
+<Link href= {
   `/project/[id]/room` ";
-}> <Video className=" mr - 2 h - 4 w - 4"/> Project Room </Link> </Button>) ";
-}> <MessageSquare className=" mr - 2 h - 4 w - 4"/> Message </Button>);
-}</div> </div> </div>) ";
-}</TabsList> <TabsContent value=" details"> <Card> <CardHeader> <CardTitle > Project Scope</CardTitle> <CardDescription> Project details and expectations </CardDescription> </CardHeader> <CardContent> <div className=" space - y-4"> <div> </div> </div> <div> </Badge> </div> <div> </div> </div> </div> </CardContent> </Card> </TabsContent> <TabsContent value=" timeline"> <Card> <CardHeader> <CardTitle > Project Timeline</CardTitle> <CardDescription> Key dates and milestones </CardDescription> </CardHeader> <CardContent> <div className=" space - y-4"> <div className=" flex items - start gap - 3 p - 3 bg - muted / 30 rounded - md"> <Calendar className=" h - 5 w - 5 text - primary mt - 0.5"/> <div> </div> </div> <div className=" flex items - start gap - 3 p - 3 bg - muted / 30 rounded - md"> <Clock className=" h - 5 w - 5 text - primary mt - 0.5"/> <div> </div> </div> </div> </div> </CardContent> </Card> </TabsContent> <TabsContent value=" documents"> <Card> <CardHeader> <CardTitle > Project Documents</CardTitle> <CardDescription> Agreements and relevant files </CardDescription> </CardHeader> <CardContent> <div> <h3 className=" font - semibold">Project Agreement</h3> <p className=" text - sm text - muted - foreground"> Uploaded when project was created </p> </div> </div> <Button variant=" outline"size=" sm"as_child> <a href= {
+> <Video className=" mr - 2 h - 4 w - 4"/> Project Room </Link> </Button>) ";
+> <MessageSquare className=" mr - 2 h - 4 w - 4"/> Message </Button>);
+</div> </div> </div>) ";
+</TabsList> <TabsContent value=" details"> <Card> <CardHeader> <CardTitle > Project Scope</CardTitle> <CardDescription> Project details and expectations </CardDescription> </CardHeader> <CardContent> <div className=" space - y-4"> <div></div> </div> <div></Badge> </div> <div></div> </div> </div> </CardContent> </Card> </TabsContent> <TabsContent value=" timeline"> <Card> <CardHeader> <CardTitle > Project Timeline</CardTitle> <CardDescription> Key dates and milestones </CardDescription> </CardHeader> <CardContent> <div className=" space - y-4"> <div className=" flex items - start gap - 3 p - 3 bg - muted / 30 rounded - md"> <Calendar className=" h - 5 w - 5 text - primary mt - 0.5"/> <div></div> </div> <div className=" flex items - start gap - 3 p - 3 bg - muted / 30 rounded - md"> <Clock className=" h - 5 w - 5 text - primary mt - 0.5"/> <div></div> </div> </div> </div> </CardContent> </Card> </TabsContent> <TabsContent value=" documents"> <Card> <CardHeader> <CardTitle > Project Documents</CardTitle> <CardDescription> Agreements and relevant files </CardDescription> </CardHeader> <CardContent> <div> <h3 className=" font - semibold">Project Agreement</h3> <p className=" text - sm text - muted - foreground"> Uploaded when project was created </p> </div> </div> <Button variant=" outline"size=" sm"as_child> <a href= {
   project.agreement url ";
-}target=" blank"rel=" noopener noreferrer"> View </Link> </Button> </div>) : (<div className=" text - center py - 8"> <FileText className=" h - 10 w - 10 text - muted - foreground mx - auto mb - 2"/> <h3 className=" font - semibold">No Documents Yet</h3> <p className=" text - sm text - muted - foreground"> No documents have been uploaded to this project. </p> </div>) ";
-}</CardContent> </Card> </TabsContent> <TabsContent value=" notes"> <Card> <CardHeader> <CardTitle > Project Notes</CardTitle> <CardDescription> Shared notes and updates </CardDescription> </CardHeader> <CardContent> />) : (<User className=" h - 4 w - 4"/>) ";
-}</Avatar> </div>) ) ) : (<div className=" text - center py - 8"> <MessageSquare className=" h - 8 w - 8 text - muted - foreground mx - auto mb - 2"/> <p className=" text - muted - foreground"> No notes yet. Add the first note to this project. </p> </div>);
-}</div> {";
+target=" blank"rel=" noopener noreferrer"> View </Link> </Button> </div>) : (<div className=" text - center py - 8"> <FileText className=" h - 10 w - 10 text - muted - foreground mx - auto mb - 2"/> <h3 className=" font - semibold">No Documents Yet</h3> <p className=" text - sm text - muted - foreground"> No documents have been uploaded to this project. </p> </div>) ";
+</CardContent> </Card> </TabsContent> <TabsContent value=" notes"> <Card> <CardHeader> <CardTitle > Project Notes</CardTitle> <CardDescription> Shared notes and updates </CardDescription> </CardHeader> <CardContent> />) : (<User className=" h - 4 w - 4"/>) ";
+</Avatar> </div>) ) : (<div className=" text - center py - 8"> <MessageSquare className=" h - 8 w - 8 text - muted - foreground mx - auto mb - 2"/> <p className=" text - muted - foreground"> No notes yet. Add the first note to this project. </p> </div>);
+</div> {";
   isOfferAccepted && (<div> <Textarea placeholder=" Add a note or update to the project..."value= {
   new_note;
-}/> <Button on_click={
+/> <Button on_click={
   handleSubmitNote;
-}disabled= {
+disabled= {
   !new_note.trim () || isSubmittingNote;
-}> </Button> </div>) ";
-}</div> </CardContent> </Card> </TabsContent> </TabsContent> </Tabs> </div> <div className=" order - 1 lg:order - 2 lg:col - span - 1"> <Card> <CardHeader> <CardTitle > Project Participants</CardTitle> </CardHeader> <CardContent> />) : (<User className=" h - 6 w - 6"/>);
-}</Avatar> <div> on_click={
+> </Button> </div>) ";
+</div> </CardContent> </Card> </TabsContent> </TabsContent> </Tabs> </div> <div className=" order - 1 lg:order - 2 lg:col - span - 1"> <Card> <CardHeader> <CardTitle > Project Participants</CardTitle> </CardHeader> <CardContent> />) : (<User className=" h - 6 w - 6"/>);
+</Avatar> <div> on_click={
   () => router.push (`/messages?talent_id=$ {
   project.talent id;
-}`) ";
-}> <MessageSquare className=" mr - 1 h - 3 w - 3"/> Message </Button>) ";
-}</div> </div> />) : (<User className=" h - 6 w - 6"/>);
-}</Avatar> <div> on_click={
+`) ";
+> <MessageSquare className=" mr - 1 h - 3 w - 3"/> Message </Button>) ";
+</div> </div> />) : (<User className=" h - 6 w - 6"/>);
+</Avatar> <div> on_click={
   () => router.push (`/messages?client_id=$ {
   project.client id;
-}`) ";
-}> <MessageSquare className=" mr - 1 h - 3 w - 3"/> Message </Button>) ";
-}</div> </div> </div> </CardContent> </Card> <CardHeader> <CardTitle > Project Status</CardTitle> </CardHeader> <CardContent> </span> </div> </div> </CardContent> </p> <Button variant=" outline"on_click={
+`) ";
+> <MessageSquare className=" mr - 1 h - 3 w - 3"/> Message </Button>) ";
+</div> </div> </div> </CardContent> </Card> <CardHeader> <CardTitle > Project Status</CardTitle> </CardHeader> <CardContent></span> </div> </div> </CardContent> </p> <Button variant=" outline"on_click={
   () => router.push (`/messages?talent_id=$ {
   project.talent id;
-}`) ";
-}className=" w - full"> <MessageSquare className=" mr - 2 h - 4 w - 4" /> Discuss Changes </Button> </CardFooter>);
-}Waiting for the talent to accept your offer. </p> </CardFooter>);
-}</p> </CardFooter>);
-}</p> </CardFooter>);
-}</Card> </div> </div> </main> </>);
-}export default /**
+`) ";
+className=" w - full"> <MessageSquare className=" mr - 2 h - 4 w - 4" /> Discuss Changes </Button> </CardFooter>);
+Waiting for the talent to accept your offer. </p> </CardFooter>);
+</p> </CardFooter>);
+</p> </CardFooter>);
+</Card> </div> </div> </main> </>);
+export default /**
  * ProjectDetails - Function description
  */
 function ProjectDetails() {
@@ -1286,4 +1279,3 @@ const ProjectDetails = () =>: any {
               </Link>;
             </div>;
     </>);
-}

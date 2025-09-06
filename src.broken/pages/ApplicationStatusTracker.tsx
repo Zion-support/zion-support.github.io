@@ -6,5 +6,3 @@ export function ApplicationStatusTracker() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

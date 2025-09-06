@@ -32,7 +32,7 @@ export default function CaseStudyResourcePage() {
         <p>The company needed to modernize their manufacturing operations while maintaining high quality standards 
         and reducing operational costs. They required a solution that could adapt to changing production demands;
         minimize human intervention, and provide real-time insights into their operations.</p>
-        
+
         <h2>Solution</h2>
         <p>We implemented a comprehensive AI automation system that included: </p>
         <ul>
@@ -328,10 +328,10 @@ function CaseStudyResourcePage() {
       `
     }
   ]
-  const caseStudy = caseStudies.find(study => study.id === id)
+  const caseStudy = caseStudies.find(study => study.id = = id)
   ];
 
-  const caseStudy = caseStudies.find(study => study.id === id);
+  const caseStudy = caseStudies.find(study => study.id = = id);
 
   if (!caseStudy) {
     return (
@@ -391,7 +391,7 @@ function CaseStudyResourcePage() {
             <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 mb-12">
               <div
                 className="prose prose-invert max-w-none"
-                dangerouslySetInnerHTML={{ __html: caseStudy.fullContent }}
+                dangerouslySetInnerHTML={ __html: caseStudy.fullContent }
               />
             </div>
             <div className="text-center">
@@ -407,7 +407,7 @@ function CaseStudyResourcePage() {
       </div>
     </>
   )
-}
+
       description: 'Building self - healing, auto - scaling cloud infrastructure.',
       full_content: `;
         <h2 > Executive Summary</h2>;
@@ -460,11 +460,11 @@ function CaseStudyResourcePage() {
       `;
     }
   ],
-  const case_study = case_studies.find (study => study.id === id),
+  const case_study = case_studies.find (study => study.id = = id),
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <>;
         <Head>;
@@ -521,7 +521,7 @@ if ( {) {
             <div className="bg - white / 10 backdrop - blur - xl rounded - 2xl p - 8 border border - white / 20 mb - 12">;
               <div;
                 className="prose prose - invert max - w-none";
-                dangerouslySetInnerHTML={{ __html: case_study.full_content }}
+                dangerouslySetInnerHTML={ __html: case_study.full_content }
               />;
             </div>;
             <div className="text - center">;
@@ -536,4 +536,3 @@ if ( {) {
         </main>;
       </div>;
     </>);
-}

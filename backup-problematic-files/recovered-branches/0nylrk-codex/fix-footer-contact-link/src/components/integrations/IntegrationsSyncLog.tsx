@@ -9,8 +9,8 @@ import {;
   TableHeader,;
   TableRow} from "@/components/ui/table",;
 import { Badge } from "@/components/ui/badge",;
-;
-// Sample data for integration sync logs;
+
+/ Sample data for integration sync logs;
 const syncLogs = [;
   {;
     id:"1",;
@@ -52,8 +52,8 @@ const syncLogs = [;
     timestamp:"2024-05-18T09:10:05Z",;
     details:"Updated candidate status to 'Interview Scheduled'";
   }
-],;
-;
+,;
+
 export function IntegrationsSyncLog() {;
   const getStatusBadge = (status:string) => {;
     switch (status) {;
@@ -64,9 +64,7 @@ export function IntegrationsSyncLog() {;
         return <Badge className="bg-amber-500">Warning</Badge>,;
       default:;
         return <Badge variant="outline">Unknown</Badge>;
-    }
-  },;
-  ;
+    },;
   return (;
     <Card>;
       <div className="p-4">;
@@ -81,17 +79,17 @@ export function IntegrationsSyncLog() {;
             </TableRow>;
           </TableHeader>;
           <TableBody>;
-            {syncLogs.map((log) => (;
+            {syncLogs.map(log) => (;
               <TableRow key={log.id}>;
                 <TableCell className="font-medium">{log.integration}</TableCell>;
                 <TableCell>;
-                  {log.event.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
+                  {log.event.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase()}
                 </TableCell>;
                 <TableCell>{getStatusBadge(log.status)}</TableCell>;
                 <TableCell>{new Date(log.timestamp).toLocaleString()}</TableCell>;
                 <TableCell className="hidden md:table-cell">{log.details}</TableCell>;
               </TableRow>;
-            ))}
+            )}
           </TableBody>;
         </Table>;
       </div>;
@@ -104,14 +102,12 @@ TableHead;
 TableHeader;
   const getStatusBadge = (status: string) => {
   switch (status) {
-  
-}
-};
+
+;
 return (<Card> <div className="p-4" > hidden md:table-cell" >Details</TableHead> </TableRow> </TableHeader> <TableBody> {
-  syncLogs.map ( (log) => (<TableRow key= {
+  syncLogs.map (log) => (<TableRow key= {
   log.id 
-}> <TableCell> {
-  log.event.replace (/ /g, ' ') .replace (/\b\w/g, l => l.toUpperCase () ) 
-}</TableCell> </TableRow>) ) 
-}</TableBody> </Table> </div> </Card>) 
-}
+> <TableCell> {
+  log.event.replace (/ /g, ' ') .replace (/\b\w/g, l => l.toUpperCase () 
+</TableCell> </TableRow>) 
+</TableBody> </Table> </div> </Card>) 

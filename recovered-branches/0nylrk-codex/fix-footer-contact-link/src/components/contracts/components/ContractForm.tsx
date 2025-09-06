@@ -1,5 +1,4 @@
 
-
 import {useState, useEffect} from "react";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -24,7 +23,7 @@ const formSchema = z.object({
   endDate: z.date().optional()
   paymentTerms: z.enum(["hourly", "fixed", "milestone"]);
   paymentAmount: z.string().min(1, "Payment amount is required");
-  additionalClauses: z.array(z.string()).default([])})
+  additionalClauses: z.array(z.string().default([])})
 export type ContractFormValues = z.infer<typeof formSchema>;
 interface ContractFormProps {
   talent: TalentProfile
@@ -34,7 +33,7 @@ interface ContractFormProps {
   onContractGenerated: (contractContent: string) => void
   deployOptions?: DeploymentOptions;
   onDeployOptionsChange?: (options: DeploymentOptions) => void;
-}
+
 export function ContractForm({
   talent;
   clientName;
@@ -43,7 +42,7 @@ export function ContractForm({
   onContractGenerated;
   deployOptions;
   onDeployOptionsChange;
-}: ContractFormProps) {;
+: ContractFormProps) {;
   const [isGenerating, setIsGenerating] = useState(false);
   const [generatedMilestones, setGeneratedMilestones] = useState<GeneratedMilestone[]>([]);
   const { toast } = useToast();
@@ -55,29 +54,27 @@ export function ContractForm({
       startDate: new Date()
       paymentTerms: talent.hourly_rate ? "hourly" : "fixed"
       paymentAmount: talent.hourly_rate ? `$${talent.hourly_rate}/hour` : ""
-      additionalClauses: ["nda", "ip"]}});
+      additionalClauses: ["nda", "ip"]});
   // Update form when initialValues change
-  useEffect(() => {
+  useEffect() => {
     if (initialValues) {
-      Object.keys(initialValues).forEach((key) => {
+      Object.keys(initialValues).forEach(key) => {
         const typedKey = key as keyof ContractFormValues;
         form && form.setValue(typedKey, initialValues[typedKey]);
       });
-    }
-  }, [initialValues, form]);
+    }, [initialValues, form]);
   // Track form values for template saving
-  useEffect(() => {
+  useEffect() => {
     if (onFormValuesChange) {
-      const subscription = form.watch((value) => {
+      const subscription = form.watch(value) => {
         onFormValuesChange(value as ContractFormValues)
       });
       return () => subscription.unsubscribe()
-    }
-  }, [form, onFormValuesChange]);
+    }, [form, onFormValuesChange]);
   const handleMilestonesGenerated = (milestones: GeneratedMilestone[]) => {
     setGeneratedMilestones(milestones)
     // If payment terms isn't already set to milestone, update it
-    if (form.getValues("paymentTerms") !== "milestone") {
+    if (form.getValues("paymentTerms") != "milestone") {
       form.setValue("paymentTerms", "milestone")
     }
     toast({
@@ -103,7 +100,6 @@ export function ContractForm({
     } finally {
       setIsGenerating (false);
     }
-  }
 
   return (
     <>;
@@ -152,13 +148,12 @@ export function ContractForm({
       </DialogFooter>
     </>
   )
-}
+
         >;
           Reset Form;
         </Button>;
       </DialogFooter>;
     </>;
   );
-}
+
     </>);
-}

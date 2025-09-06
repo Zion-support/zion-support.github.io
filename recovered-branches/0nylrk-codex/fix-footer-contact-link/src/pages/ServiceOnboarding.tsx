@@ -29,7 +29,7 @@ export default function ServiceOnboarding() {
       <Footer />
     </>
   )
-}
+
               Showcase your services to potential clients. Create a professional profile;
               to get discovered on the Zion Marketplace.;
             </p>;
@@ -41,6 +41,5 @@ export default function ServiceOnboarding() {
       <Footer />;
     </>;
   );
-}
+
     </>);
-}

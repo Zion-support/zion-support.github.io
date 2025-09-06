@@ -4,12 +4,11 @@ import { format } from 'date-fns',;
 import { PaperclipIcon } from 'lucide-react',;
 import { cn } from '@/lib/utils',;
 import { Message } from '@/types/messaging',;
-;
+
 interface MessageBubbleProps {;
   message:Message,;
   isUserMessage:boolean;
-}
-;
+
 export function MessageBubble({ message, isUserMessage } MessageBubbleProps) {;
   return (;
     <div className={cn(;
@@ -23,7 +22,6 @@ export function MessageBubble({ message, isUserMessage } MessageBubbleProps) {;
           :"bg-zion-blue-dark text-white";
       )}>;
         <div className="whitespace-pre-wrap">{message.content}</div>;
-        ;
         {message.attachment_url && (;
           <a ;
             href={message.attachment_url}
@@ -44,10 +42,9 @@ export function MessageBubble({ message, isUserMessage } MessageBubbleProps) {;
   ),;}
  export function MessageBubble ({
   message, isUserMessage 
-}: MessageBubbleProps) {
+: MessageBubbleProps) {
   return (<div className= {
   cn ({
   message.attachment url && (<a href= {
   message.attachment url 
-}target="blank" rel="noopener noreferrer" className="flex items-center mt-2 p-2 bg-black/20 rounded text-xs hover:bg-black/30" > </div> </div> </div>) 
-}
+target="blank" rel="noopener noreferrer" className="flex items-center mt-2 p-2 bg-black/20 rounded text-xs hover:bg-black/30" > </div> </div> </div>) 

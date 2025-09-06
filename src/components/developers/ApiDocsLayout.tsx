@@ -9,10 +9,10 @@ import { cn } from "@/lib/utils";
 import {;
  getDocsSearchPath;
  docsSearchSuggestions
-} from "@/data/docsSearchData"
+ from "@/data/docsSearchData"
 interface ApiDocsLayoutProps {
   children: React.ReactNode;
-}
+
 export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
 
   const router = useRouter()
@@ -29,14 +29,12 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
       router.push(path)
       setSearchValue("")
     }
-  }
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     const path = getDocsSearchPath(searchValue);    if (path) {
       router.push(path)
       setSearchValue("")
     }
-  }
   return (
     <div className="flex min-h-screen bg-zinc-950">;
      {/* Sidebar */}
@@ -60,19 +58,19 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
        </form>
       </div>
       <nav role="navigation" aria-label="Main" className="flex flex-col space-y-1">
-       {navigationItems.map((item,) => (
+       {navigationItems.map(item,) => (
         <Link
          key={item && item.path}
          href={item && item.path}
          className={cn(
           "block px-3 py-2 rounded-md text-sm"
-          currentPath === item.path
+          currentPath = = item.path
            ? "bg-zion-purple/20 text-zion-cyan"
            : "text-zinc-400 hover: text-white hover:bg-zinc-900"
          )}>;
          {item && item.title}
         </Link>;
-       ))}
+       )}
       </nav>
      </div>
      {/* Main content */}
@@ -81,20 +79,19 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
      </div>
     </div>
   )
-}
-}
-/* Sidebar */ "
-}<div className="hidden md:block w-64 border-r border-zinc-800 p-6 sticky top-0 h-screen overflow-y-auto"> <Link href="/developers/docs"className="flex items-center mb-8"> <div className="bg-gradient-to-r from-zion-purple to-zion-cyan rounded-md w-8 h-8 mr-3 flex items-center justify-center"> <span className="text-white font-bold">Z</span> </div> <span className="font-bold text-white">API Docs</span> </Link> <div className="mb-6"> /> </form> </div>)
-}> {
+
+* Sidebar */ "
+<div className="hidden md:block w-64 border-r border-zinc-800 p-6 sticky top-0 h-screen overflow-y-auto"> <Link href="/developers/docs"className="flex items-center mb-8"> <div className="bg-gradient-to-r from-zion-purple to-zion-cyan rounded-md w-8 h-8 mr-3 flex items-center justify-center"> <span className="text-white font-bold">Z</span> </div> <span className="font-bold text-white">API Docs</span> </Link> <div className="mb-6"> /> </form> </div>)
+> {
   item.title
-}</Link>) )
-}</nav> </div> {
+</Link>)
+</nav> </div> {
   /* Main content */ "
-}<div className="flex-grow max-w-5xl mx-auto px-4 py-8 md:px-8 md:py-12"> {
+<div className="flex-grow max-w-5xl mx-auto px-4 py-8 md:px-8 md:py-12"> {
   children
-}</div> </div>)
-}export default ApiDocsLayout
-"export default ApiDocsLayout
+</div> </div>)
+export default ApiDocsLayout
+export default ApiDocsLayout
 
 export /**
  * ApiDocsLayout - Function description
@@ -113,21 +110,19 @@ function ApiDocsLayout() {
     const path = getDocsSearchPath (suggestion.text);    // Check condition
 if ( {) {
   $2
-}
+
       router.push (path);
       setSearchValue ("");
     }
-  }
   const handle_submit = (e: React.FormEvent) =>: any {
     e.prevent_default ();
     const path = getDocsSearchPath (search_value);    // Check condition
 if ( {) {
   $2
-}
+
       router.push (path);
       setSearchValue ("");
     }
-  }
   return (
     <div className="flex min - h-screen bg - zinc - 950">;
     {/* Sidebar */}
@@ -151,17 +146,17 @@ if ( {) {
       </form>;
       </div>;
       <nav role="navigation" aria - label="Main" className="flex flex - col space - y-1">;
-      {navigation_items.map ((item, ) => (
+      {navigation_items.map (item, ) => (
         <Link;
         key={item.path}
           href={item.path}
           className={cn (
           "block px - 3 py - 2 rounded - md text - sm";
-          current_path === item.path;
+          current_path = = item.path;
           ? "bg - zion - purple / 20 text - zion - cyan";
           : "text - zinc - 400 hover: text - white hover:bg - zinc - 900")}        >;
         {item.title}
-        </Link>))}
+        </Link>)}
       </nav>;
     </div>;
     {/* Main content */}
@@ -169,17 +164,16 @@ if ( {) {
       {children}
       </div>;
     </div>);
-}
-}
-/* Sidebar */ ";
-}<div className="hidden md:block w - 64 border - r border - zinc - 800 p - 6 sticky top - 0 h - screen overflow - y-auto"> <Link href="/developers / docs"className="flex items - center mb - 8"> <div className="bg - gradient - to - r from - zion - purple to - zion - cyan rounded - md w - 8 h - 8 mr - 3 flex items - center justify - center"> <span className="text - white font - bold">Z</span> </div> <span className="font - bold text - white">API Docs</span> </Link> <div className="mb - 6"> /> </form> </div>);
-}> {
+
+* Sidebar */ ";
+<div className="hidden md:block w - 64 border - r border - zinc - 800 p - 6 sticky top - 0 h - screen overflow - y-auto"> <Link href="/developers / docs"className="flex items - center mb - 8"> <div className="bg - gradient - to - r from - zion - purple to - zion - cyan rounded - md w - 8 h - 8 mr - 3 flex items - center justify - center"> <span className="text - white font - bold">Z</span> </div> <span className="font - bold text - white">API Docs</span> </Link> <div className="mb - 6"> /> </form> </div>);
+> {
   item.title;
-}</Link>) );
-}</nav> </div> {
+</Link>);
+</nav> </div> {
   /* Main content */ ";
-}<div className="flex - grow max - w-5xl mx - auto px - 4 py - 8 md:px - 8 md:py - 12"> {
+<div className="flex - grow max - w-5xl mx - auto px - 4 py - 8 md:px - 8 md:py - 12"> {
   children;
-}</div> </div>);
-}export default ApiDocsLayout;
-"export default ApiDocsLayout;
+</div> </div>);
+export default ApiDocsLayout;
+export default ApiDocsLayout;

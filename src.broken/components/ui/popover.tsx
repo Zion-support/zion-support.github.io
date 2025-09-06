@@ -6,5 +6,3 @@ export function popover() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

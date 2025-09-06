@@ -6,5 +6,3 @@ export function AdvancedSEO() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

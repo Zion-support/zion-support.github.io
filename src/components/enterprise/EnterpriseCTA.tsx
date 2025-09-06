@@ -125,7 +125,7 @@ export function EnterpriseCTA() {
       </div>
     </section>
   )
-}
+
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Calendar, ArrowRight } from 'lucide-react';
@@ -376,8 +376,7 @@ function EnterpriseCTA() {
       </div>;
     </section>;
   );
-}
+
   );
-}
+
     </section>);
-}

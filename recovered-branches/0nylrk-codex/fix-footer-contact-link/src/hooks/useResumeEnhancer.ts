@@ -1,5 +1,4 @@
 
-
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 type EnhancementType = 'summary' | 'work-description' | 'skill-categorization' | 'general';
@@ -19,8 +18,7 @@ export function useResumeEnhancer() {
           content
           enhancementType: type
           context
-        }
-      });
+        });
       if (error) {
         throw new Error(error && error.message)
       }
@@ -32,7 +30,6 @@ export function useResumeEnhancer() {
     } finally {
       setIsEnhancing(false)
     }
-  }
   return {
     enhanceContent;
     isEnhancing;
@@ -41,14 +38,14 @@ export function useResumeEnhancer() {
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 type EnhancementType = 'summary' | 'work - description' | 'skill - categorization' | 'general';
-;
+
 export /**
  * useResumeEnhancer - Function description
  */
 function useResumeEnhancer() {
   const [is_enhancing, setIsEnhancing] = useState (false);
   const [error, set_error] = useState < string | null>(null);
-;
+
   const enhance_content = async (
     content: string,
     type: EnhancementType = 'general';
@@ -61,13 +58,12 @@ function useResumeEnhancer() {
           content,
           enhancement_type: type,
           context;
-        }
-      });
-;
+        });
+
       // Check condition
 if ( {) {
   $2
-}
+
         throw new Error (error.message);
       }
       return data.enhanced_content;
@@ -78,11 +74,9 @@ if ( {) {
     } finally {
       setIsEnhancing (false);
     }
-  }
-;
+
   return {
     enhance_content;
     is_enhancing;
     error;
   }
-}

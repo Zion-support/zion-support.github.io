@@ -12,7 +12,7 @@ const ErrorRoutes = () => {
       <Route path="*" element={<NotFound />} />
     </Routes>
   )
-}
+
 export default ErrorRoutes;
 
 import { Fragment } from './react';
@@ -26,7 +26,5 @@ const ErrorRoutes = () =>: any {
       <Route path="/unauthorized" element={<Unauthorized />} />;
       <Route path="*" element={<NotFound />} />;
     </Routes>);
-}
-;
+
 export default ErrorRoutes;
-;

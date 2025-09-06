@@ -48,23 +48,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React from 'react';
 import { ServiceLandingTemplate } from '@/components/services/ServiceLandingTemplate';
 import { Phone, ShieldCheck, Clock } from 'lucide-react';
@@ -131,7 +131,7 @@ export default function ITSupportPage() {;
       ctaLink="/request-quote"
     />
   )
-}
+
       name: 'Carlos Diaz',
       role: 'IT Lead',
       text: 'Professional and responsive. Their technicians feel like an extension of our own team.',
@@ -153,4 +153,3 @@ export default function ITSupportPage() {;
       cta_text="Get IT Support";
       cta_link="/request - quote";
     />);
-}

@@ -2,7 +2,6 @@ import React from 'react';
 
 interface CartPersistence.testProps {
   className?: string;
-}
 
 const CartPersistence.test: React.FC<CartPersistence.testProps> = ({ className }) => {
   return (
@@ -11,6 +10,5 @@ const CartPersistence.test: React.FC<CartPersistence.testProps> = ({ className }
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default CartPersistence.test;

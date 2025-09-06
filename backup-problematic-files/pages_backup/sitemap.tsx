@@ -2,7 +2,6 @@ import React from 'react';
 
 interface SitemapProps {
   className?: string;
-}
 
 const Sitemap: React.FC<SitemapProps> = ({ className }) => {
   return (
@@ -11,6 +10,5 @@ const Sitemap: React.FC<SitemapProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default Sitemap;

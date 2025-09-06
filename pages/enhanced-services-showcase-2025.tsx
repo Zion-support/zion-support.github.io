@@ -62,10 +62,10 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
     { id: 'rating', name: 'Rating' }
     { id: 'customers', name: 'Customer Count' },  ];
   // Filter and sort services
-  const filteredServices = React.useMemo(() => {
+  const filteredServices = React.useMemo() => {
     const parsePriceToNumber = (price: string | number): number => {
-      if (typeof price === 'number') return price
-      if (typeof price === 'string') {
+      if (typeof price = = 'number') return price
+      if (typeof price = = 'string') {
         const match = price.replace(/[^0-9.]/g, '');
         const parsed = parseFloat(match |'0');
         return isNaN(parsed) ? 0 : parsed;
@@ -74,39 +74,38 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
     }
     let filtered = allServices.filter(service => {
       const matchesSearch =
-        service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
-        service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
-        service.category.toLowerCase().includes(searchTerm.toLowerCase());
+        service.name.toLowerCase().includes(searchTerm.toLowerCase() |
+        service.description.toLowerCase().includes(searchTerm.toLowerCase() |
+        service.category.toLowerCase().includes(searchTerm.toLowerCase();
       const matchesCategory =
-        selectedCategory === 'all' |
-        (selectedCategory === 'ai' && service.category.includes('AI')) |
-        (selectedCategory === 'quantum' &&
-          service.category.includes('Quantum')) |
-        (selectedCategory === 'blockchain' &&
-          service.category.includes('Blockchain')) |
-        (selectedCategory === 'iot' && service.category.includes('IoT')) |
-        (selectedCategory === 'space' && service.category.includes('Space')) |
-        (selectedCategory === 'security' &&
+        selectedCategory = = 'all' |
+        (selectedCategory = = 'ai' && service.category.includes('AI') |
+        (selectedCategory = = 'quantum' &&
+          service.category.includes('Quantum') |
+        (selectedCategory = = 'blockchain' &&
+          service.category.includes('Blockchain') |
+        (selectedCategory = = 'iot' && service.category.includes('IoT') |
+        (selectedCategory = = 'space' && service.category.includes('Space') |
+        (selectedCategory = = 'security' &&
           (service.category.includes('Security') |
-            service.category.includes('Cybersecurity')));
+            service.category.includes('Cybersecurity'));
       const matchesPrice =
-        selectedPriceRange === 'all' |
-        (selectedPriceRange === 'low' &&
+        selectedPriceRange = = 'all' |
+        (selectedPriceRange = = 'low' &&
           parsePriceToNumber(service.price) < 2000) |
-        (selectedPriceRange === 'medium' &&
+        (selectedPriceRange = = 'medium' &&
           parsePriceToNumber(service.price) >= 2000 &&
           parsePriceToNumber(service.price) < 8000) |
-        (selectedPriceRange === 'high' &&
+        (selectedPriceRange = = 'high' &&
           parsePriceToNumber(service.price) >= 8000 &&
           parsePriceToNumber(service.price) < 20000) |
-        (selectedPriceRange === 'premium' &&
+        (selectedPriceRange = = 'premium' &&
           parsePriceToNumber(service.price) >= 20000);
       return matchesSearch && matchesCategory && matchesPrice;    });
     // Sort services
     switch (sortBy) {
       case 'price-low':
-        filtered.sort(
-          (a, b) => parsePriceToNumber(a.price) - parsePriceToNumber(b.price)
+        filtered.sort(a, b) => parsePriceToNumber(a.price) - parsePriceToNumber(b.price)
 import {;
   Search,;
   Star,;
@@ -171,10 +170,10 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
     { id: 'customers', name: 'Customer Count' },  ];
 
   // Filter and sort services;
-  const filteredServices = React && React.useMemo(() => {;
+  const filteredServices = React && React.useMemo() => {;
     const parsePriceToNumber = (price: string | number): number => {;
-      if (typeof price === 'number') return price,;
-      if (typeof price === 'string') {;
+      if (typeof price = = 'number') return price,;
+      if (typeof price = = 'string') {;
         const match = price && price.replace(/[^0-9.]/g, '');
         const parsed = parseFloat(match || '0');
         return isNaN(parsed) ? 0 : parsed;
@@ -184,34 +183,34 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
 
     let filtered = allServices && allServices.filter(service => {;
       const matchesSearch =;
-        service && service.name.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
-        service && service.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
-        service && service.category.toLowerCase().includes(searchTerm && searchTerm.toLowerCase());
+        service && service.name.toLowerCase().includes(searchTerm && searchTerm.toLowerCase() ||;
+        service && service.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase() ||;
+        service && service.category.toLowerCase().includes(searchTerm && searchTerm.toLowerCase();
 
       const matchesCategory =;
-        selectedCategory === 'all' ||;
-        (selectedCategory === 'ai' && service && service.category.includes('AI')) ||;
-        (selectedCategory === 'quantum' &&;
-          service && service.category.includes('Quantum')) ||;
-        (selectedCategory === 'blockchain' &&;
-          service && service.category.includes('Blockchain')) ||;
-        (selectedCategory === 'iot' && service && service.category.includes('IoT')) ||;
-        (selectedCategory === 'space' && service && service.category.includes('Space')) ||;
-        (selectedCategory === 'security' &&;
+        selectedCategory = = 'all' ||;
+        (selectedCategory = = 'ai' && service && service.category.includes('AI') ||;
+        (selectedCategory = = 'quantum' &&;
+          service && service.category.includes('Quantum') ||;
+        (selectedCategory = = 'blockchain' &&;
+          service && service.category.includes('Blockchain') ||;
+        (selectedCategory = = 'iot' && service && service.category.includes('IoT') ||;
+        (selectedCategory = = 'space' && service && service.category.includes('Space') ||;
+        (selectedCategory = = 'security' &&;
           (service && service.category.includes('Security') ||;
-            service && service.category.includes('Cybersecurity')));
+            service && service.category.includes('Cybersecurity'));
 
       const matchesPrice =;
-        selectedPriceRange === 'all' ||;
-        (selectedPriceRange === 'low' &&;
+        selectedPriceRange = = 'all' ||;
+        (selectedPriceRange = = 'low' &&;
           parsePriceToNumber(service && service.price) < 2000) ||;
-        (selectedPriceRange === 'medium' &&;
+        (selectedPriceRange = = 'medium' &&;
           parsePriceToNumber(service && service.price) >= 2000 &&;
           parsePriceToNumber(service && service.price) < 8000) ||;
-        (selectedPriceRange === 'high' &&;
+        (selectedPriceRange = = 'high' &&;
           parsePriceToNumber(service && service.price) >= 8000 &&;
           parsePriceToNumber(service && service.price) < 20000) ||;
-        (selectedPriceRange === 'premium' &&;
+        (selectedPriceRange = = 'premium' &&;
           parsePriceToNumber(service && service.price) >= 20000);
 
       return matchesSearch && matchesCategory && matchesPrice;    });
@@ -228,13 +227,13 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
           (a, b) => parsePriceToNumber(b && b.price) - parsePriceToNumber(a && a.price);
         );        break;
       case 'rating':;
-        filtered && filtered.sort((a, b) => b && b.rating - a && a.rating);
+        filtered && filtered.sort(a, b) => b && b.rating - a && a.rating);
         break;
       case 'customers':;
-        filtered && filtered.sort((a, b) => b && b.customers - a && a.customers);
+        filtered && filtered.sort(a, b) => b && b.customers - a && a.customers);
         break;
       default:;
-        filtered && filtered.sort((a, b) => a && a.name.localeCompare(b && b.name));
+        filtered && filtered.sort(a, b) => a && a.name.localeCompare(b && b.name);
     }
     return filtered;  }, [searchTerm, selectedCategory, selectedPriceRange, sortBy, allServices]);
   const containerVariants = {
@@ -262,7 +261,7 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
 import { innovative2025Services } from '../data / innovative - 2025 - services';
 import { emergingTech2025Services } from '../data / emerging - tech - 2025 - services';
 import EnhancedFuturisticBackground from '../components / ui / EnhancedFuturisticBackground';
-;
+
   const categories = [;
     { id: 'all', name: 'All Services', icon: '', count: all_services.length },
     { id: 'ai', name: 'AI & Machine Learning', icon: '', count: ai_count },
@@ -286,101 +285,98 @@ import EnhancedFuturisticBackground from '../components / ui / EnhancedFuturisti
       icon: '',
       count: cybersecurity_count,
     },  ];
-;
+
   const price_ranges = [;
     { id: 'all', name: 'All Prices', range: 'All' },
     { id: 'low', name: 'Under $2K / month', range: 'Under $2K' },
     { id: 'medium', name: '$2K - $8K / month', range: '$2K - $8K' },
     { id: 'high', name: '$8K - $20K / month', range: '$8K - $20K' },
     { id: 'premium', name: '$20K+/month', range: '$20K+' },  ];
-;
+
   const sort_options = [;
     { id: 'name', name: 'Name A - Z' },
     { id: 'price - low', name: 'Price Low to High' },
     { id: 'price - high', name: 'Price High to Low' },
     { id: 'rating', name: 'Rating' },
     { id: 'customers', name: 'Customer Count' },  ];
-;
+
   // Filter and sort services;
-  const filtered_services = React.useMemo (() => {
+  const filtered_services = React.useMemo () => {
     const parsePriceToNumber = (price: string | number): number => {
       // Check condition
 if (return price, ) {
   $2
-}
+
       // Check condition
 if ( {) {
   $2
-}
+
         const match = price.replace (/[^0 - 9.]/g, '');
         const parsed = parse_float (match || '0');
         return isNaN (parsed) ? 0 : parsed;
       }
       return 0;
     }
-;
+
     let filtered = all_services.filter (service => {
       const matches_search =;
-        service.name.toLowerCase ().includes (search_term.toLowerCase ()) ||;
-        service.description.toLowerCase ().includes (search_term.toLowerCase ()) ||;
-        service.category.toLowerCase ().includes (search_term.toLowerCase ());
-;
+        service.name.toLowerCase ().includes (search_term.toLowerCase () ||;
+        service.description.toLowerCase ().includes (search_term.toLowerCase () ||;
+        service.category.toLowerCase ().includes (search_term.toLowerCase ();
+
       const matches_category =;
-        selected_category === 'all' ||;
-        (selected_category === 'ai' && service.category.includes ('AI')) ||;
-        (selected_category === 'quantum' &&;
-          service.category.includes ('Quantum')) ||;
-        (selected_category === 'blockchain' &&;
-          service.category.includes ('Blockchain')) ||;
-        (selected_category === 'iot' && service.category.includes ('IoT')) ||;
-        (selected_category === 'space' && service.category.includes ('Space')) ||;
-        (selected_category === 'security' &&;
+        selected_category = = 'all' ||;
+        (selected_category = = 'ai' && service.category.includes ('AI') ||;
+        (selected_category = = 'quantum' &&;
+          service.category.includes ('Quantum') ||;
+        (selected_category = = 'blockchain' &&;
+          service.category.includes ('Blockchain') ||;
+        (selected_category = = 'iot' && service.category.includes ('IoT') ||;
+        (selected_category = = 'space' && service.category.includes ('Space') ||;
+        (selected_category = = 'security' &&;
           (service.category.includes ('Security') ||;
-            service.category.includes ('Cybersecurity')));
-;
+            service.category.includes ('Cybersecurity'));
+
       const matches_price =;
-        selectedPriceRange === 'all' ||;
-        (selectedPriceRange === 'low' &&;
+        selectedPriceRange = = 'all' ||;
+        (selectedPriceRange = = 'low' &&;
           parsePriceToNumber (service.price) < 2000) ||;
-        (selectedPriceRange === 'medium' &&;
+        (selectedPriceRange = = 'medium' &&;
           parsePriceToNumber (service.price) >= 2000 &&;
           parsePriceToNumber (service.price) < 8000) ||;
-        (selectedPriceRange === 'high' &&;
+        (selectedPriceRange = = 'high' &&;
           parsePriceToNumber (service.price) >= 8000 &&;
           parsePriceToNumber (service.price) < 20000) ||;
-        (selectedPriceRange === 'premium' &&;
+        (selectedPriceRange = = 'premium' &&;
           parsePriceToNumber (service.price) >= 20000);
-;
+
       return matches_search && matches_category && matches_price;    });
-;
+
     // Sort services;
     switch (sort_by) {
       case 'price - low':;
-        filtered.sort (
-          (a, b) => parsePriceToNumber (a.price) - parsePriceToNumber (b.price));
+        filtered.sort (a, b) => parsePriceToNumber (a.price) - parsePriceToNumber (b.price);
         break;
       case 'price - high':;
-        filtered.sort (
-          (a, b) => parsePriceToNumber (b.price) - parsePriceToNumber (a.price));        break;
+        filtered.sort (a, b) => parsePriceToNumber (b.price) - parsePriceToNumber (a.price);        break;
       case 'rating':;
-        filtered.sort ((a, b) => b.rating - a.rating);
+        filtered.sort (a, b) => b.rating - a.rating);
         break;
       case 'customers':;
-        filtered.sort ((a, b) => b.customers - a.customers);
+        filtered.sort (a, b) => b.customers - a.customers);
         break;
       default:;
-        filtered.sort ((a, b) => a.name.locale_compare (b.name));
+        filtered.sort (a, b) => a.name.locale_compare (b.name);
     }
     return filtered;  }, [search_term, selected_category, selectedPriceRange, sort_by, all_services]);
-;
+
   const container_variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1
       transition: {
         staggerChildren: 0.1
-      }
-    },  }
+      },  }
   const itemVariants = {
     hidden: { opacity: 0, y: 20 }
     visible: {
@@ -389,7 +385,6 @@ if ( {) {
       transition: {
         duration: 0.5
       }
-    }
   }
 
     >
@@ -419,7 +414,6 @@ if ( {) {
       },;
     },;
   };
-
 
     >;
       <div className='min-h-screen'>;
@@ -459,8 +453,8 @@ if ( {) {
         {/* Hero Section */}
         <section className='relative z-10 pt-20 pb-16 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-7xl mx-auto text-center'>            <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
             href='https://ziontechgroup.com/enhanced-services-showcase-2025'
           />
         </Head>
@@ -468,9 +462,9 @@ if ( {) {
         {/* Hero Section */}
         <section className='relative z-10 pt-20 pb-16 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-7xl mx-auto text-center'>            <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
             >
               <div className='flex items-center justify-center mb-6'>
                 <Sparkles className='w-12 h-12 text-cyan-400 mr-4' />
@@ -487,7 +481,7 @@ if ( {) {
                 Discover our cutting-edge solutions that are transforming
                 industries and driving the future of technology
               </p>
-              transition={{ duration: 0 && 0.8 }}>;
+              transition={ duration: 0 && 0.8 }>;
               <div className='flex items-center justify-center mb-6'>;
                 <Sparkles className='w-12 h-12 text-cyan-400 mr-4' />;
                 <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent'>;
@@ -569,7 +563,7 @@ if ( {) {
                   {categories && categories.map(category => (                    <option key={category && category.id} value={category && category.id}>;
                       {category && category.name} ({category && category.count});
                     </option>;
-                  ))}
+                  )}
                 </select>
           <meta;
             name='description';
@@ -601,9 +595,9 @@ if ( {) {
         {/* Hero Section */}
         <section className='relative z - 10 pt - 20 pb - 16 px - 4 sm:px - 6 lg:px - 8'>;
           <div className='max - w-7xl mx - auto text - center'>            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, coordinate_y: 30 }
+              animate={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
             >;
               <div className='flex items - center justify - center mb - 6'>;
                 <Sparkles className='w - 12 h - 12 text - cyan - 400 mr - 4' />;
@@ -672,7 +666,7 @@ if ( {) {
                 >;
                   {categories.map (category => (                    <option key={category.id} value={category.id}>;
                       {category.name} ({category.count});
-                    </option>))}
+                    </option>)}
                 </select>;
                 {/* Price Range Filter */}
                 <select;
@@ -683,7 +677,7 @@ if ( {) {
                   {priceRanges && priceRanges.map(range => (                    <option key={range && range.id} value={range && range.id}>;
                       {range && range.name}
                     </option>;
-                  ))}
+                  )}
                 </select>
                 {/* Sort Options */}
                 <select
@@ -694,7 +688,7 @@ if ( {) {
                   {sortOptions && sortOptions.map(option => (                    <option key={option && option.id} value={option && option.id}>;
                       {option && option.name}
                     </option>;
-                  ))}
+                  )}
                 </select>
               </div>
             </div>
@@ -784,13 +778,13 @@ if ( {) {
                         Key Features:;
                       </div>;
                       <ul className='space-y-1'>;
-                        {service && service.features.slice(0, 3).map((feature, index) => (;
+                        {service && service.features.slice(0, 3).map(feature, index) => (;
                           <li
                             key={index}
                             className='flex items-center text-sm text-gray-300'>;
                             <CheckCircle className='w-4 h-4 text-green-400 mr-2 flex-shrink-0' />;
                             <span className='line-clamp-1'>{feature}</span>                          </li>;
-                        ))}
+                        )}
                       </ul>
                     </div>
                     {/* Market Position */}
@@ -865,14 +859,14 @@ if ( {) {
                       </div>;
                     </div>;
                   </motion && motion.div>;
-                ))}
+                )}
               </AnimatePresence>
             </motion.div>
             {/* No Results Message */}
-            {filteredServices && filteredServices.length === 0 && (;
+            {filteredServices && filteredServices.length = = 0 && (;
               <motion&& motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+                initial={ opacity: 0 }
+                animate={ opacity: 1 }
                 className='text-center py-16'>;
                 <div className='text-6xl mb-4'></div>;
                 <h3 className='text-2xl font-semibold text-white mb-2'>;
@@ -882,10 +876,10 @@ if ( {) {
                   Try adjusting your search criteria or filters;
                 </p>              </motion && motion.div>;
             {/* No Results Message */}
-            {filtered_services.length === 0 && (
+            {filtered_services.length = = 0 && (
               <motion.div;
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }} className="text-center py-16">
+                initial={ opacity: 0 }
+                animate={ opacity: 1 } className="text-center py-16">
                 <div className="text-6xl mb-4"></div>
                 <h3 className="text-2xl font-semibold text-white mb-2">No services found</h3>
                 <p className="text-gray-400">Try adjusting your search criteria or filters</p>
@@ -901,9 +895,9 @@ if ( {) {
         <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
             >
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
                 Ready to Transform Your Business?
@@ -936,7 +930,7 @@ if ( {) {
                     364 E Main St STE 1008 Middletown DE 19709
                   </span>                </div>
               </div>
-              transition={{ duration: 0 && 0.8 }}>;
+              transition={ duration: 0 && 0.8 }>;
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
                 Ready to Transform Your Business?;
               </h2>;
@@ -990,7 +984,7 @@ if ( {) {
         </section>
       </div>
     </EnhancedFuturisticBackground>
-);
+;
                   className='inline-flex items-center justify-center font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden group rounded-xl transform hover:scale-105 active:scale-95 px-6 py-3 text-lg bg-gradient-to-r from-gray-700 via-gray-600 to-gray-700 hover:from-gray-600 hover:via-gray-500 hover:to-gray-600 text-white shadow-lg hover:shadow-xl border border-gray-500/20 no-underline'>;
                   <span className='relative'>View Pricing</span>;
                   <DollarSign className='ml-2 w-6 h-6' />                </a>;
@@ -1002,8 +996,8 @@ if ( {) {
     </EnhancedFuturisticBackground>;
   );
   )
-}
-                animate={{ opacity: 1 }}
+
+                animate={ opacity: 1 }
                 className='text - center py - 16';
               >;
                 <div className='text - 6xl mb - 4'></div>;
@@ -1018,9 +1012,9 @@ if ( {) {
         {/* Call to Action */}
         <section className='relative z - 10 py - 20 px - 4 sm:px - 6 lg:px - 8'>;
           <div className='max - w-4xl mx - auto text - center'>            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, coordinate_y: 30 }
+              animate={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
             >;
               <h2 className='text - 4xl md:text - 5xl font - bold text - white mb - 6'>;
                 Ready to Transform Your Business?;
@@ -1074,4 +1068,3 @@ if ( {) {
         </section>;
       </div>;
     </EnhancedFuturisticBackground>);
-;

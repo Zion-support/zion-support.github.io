@@ -12,7 +12,7 @@ import { PaymentButton } from "@/components/transactions/PaymentButton",;
 import { AppLayout } from "@/layout/AppLayout",;
 import { ProfileContact } from "@/components/profile/ProfileContact",;
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",;
-;
+
 export default function ListingDetail() {;
   // useParams may be untyped in this environment, so avoid passing a;
   // type argument and cast the result instead to prevent TS2347 errors.;
@@ -20,10 +20,10 @@ export default function ListingDetail() {;
   const [selectedImageIndex, setSelectedImageIndex] = useState(0),;
   const [isLoading, setIsLoading] = useState(false),;
   const [isContactDialogOpen, setIsContactDialogOpen] = useState(false),;
-;
+
   // Find the listing from our shared data source - now also checking equipment listings;
-  const listing = MARKETPLACE_LISTINGS.find(item => item.id === id),;
-;
+  const listing = MARKETPLACE_LISTINGS.find(item => item.id = = id),;
+
   if (!listing) {;
     return (;
       <AppLayout>;
@@ -41,11 +41,11 @@ export default function ListingDetail() {;
       </AppLayout>;
     ),;
   }
-;
+
   const handleContact = () => {;
     setIsContactDialogOpen(true),;
   },;
-;
+
   return (;
     <AppLayout>;
       <div className="min-h-screen bg-zion-blue py-12 px-4">;
@@ -63,7 +63,7 @@ export default function ListingDetail() {;
                       onError={(e) => {;
                         const target = e.target as HTMLImageElement,;
                         target.src = "/placeholder.svg",;
-                      }}
+                      }
                     />;
                   ) :(;
                     <div className="w-full h-full flex items-center justify-center bg-zion-blue-light/20">;
@@ -71,16 +71,15 @@ export default function ListingDetail() {;
                     </div>;
                   )}
                 </div>;
-                ;
                 {listing.images && listing.images.length > 1 && (;
                   <div className="flex p-4 gap-2 overflow-x-auto">;
-                    {listing.images.map((image, index) => (;
+                    {listing.images.map(image, index) => (;
                       <div ;
                         key={index}
                         onClick={() => setSelectedImageIndex(index)}
                         className={cn(;
                           "w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2",;
-                          index === selectedImageIndex ? "border-zion-purple" :"border-transparent";
+                          index = = selectedImageIndex ? "border-zion-purple" :"border-transparent";
                         )}
                       >;
                         <img ;
@@ -90,18 +89,17 @@ export default function ListingDetail() {;
                           onError={(e) => {;
                             const target = e.target as HTMLImageElement,;
                             target.src = "/placeholder.svg",;
-                          }}
+                          }
                         />;
-                      </div>;                    ))}
+                      </div>;                    )}
                   </div>;
                 )}
               </div>;
-;
+
               {/* Description Section */}
               <div className="mt-8 bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light">;
                 <h2 className="text-2xl font-bold text-white mb-4">Description</h2>;
                 <p className="text-zion-slate-light whitespace-pre-line">{listing.description}</p>;
-                ;
                 {/* Features */}
                 <div className="mt-8">;
                   <h3 className="text-xl font-bold text-white mb-4">Key Features</h3>;
@@ -126,20 +124,18 @@ export default function ListingDetail() {;
                     </div>;
                   </div>;
                 </div>;
-                ;
                 {/* Tags */}
                 <div className="mt-8">;
                   <h3 className="text-xl font-bold text-white mb-4">Tags</h3>;
                   <div className="flex flex-wrap gap-2">;
-                    {listing.tags.map((tag, i) => (;
+                    {listing.tags.map(tag, i) => (;
                       <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light py-1 px-3">;
                         {tag}
-                      </Badge>;                    ))}
+                      </Badge>;                    )}
                   </div>;
                 </div>;
               </div>;
             </div>;
-            ;
             {/* Right Column - Details */}
             <div className="lg:col-span-1">;
               <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light sticky top-6">;
@@ -153,13 +149,11 @@ export default function ListingDetail() {;
                     </Badge>;
                   )}
                 </div>;
-                ;
                 <h1 className="text-2xl font-bold text-white mb-4">{listing.title}</h1>;
-                ;
                 {listing.rating && (;
                   <div className="flex items-center gap-2 mb-6">;
                     <div className="flex items-center">;
-                      {[...Array(5)].map((_, i) => (;
+                      {[...Array(5)].map(_, i) => (;
                         <Star;
                           key={i}
                           className={cn(;
@@ -167,7 +161,7 @@ export default function ListingDetail() {;
                             i < Math.floor(listing.rating!) ? "text-zion-cyan fill-zion-cyan" :"text-zion-slate-light";
                           )}
                         />;
-                      ))}
+                      )}
                     </div>;
                     <span className="text-sm text-zion-slate-light">;
                       {listing.rating.toFixed(1)} ({listing.reviewCount} reviews);
@@ -176,7 +170,7 @@ export default function ListingDetail() {;
                 ;
                 {/* Price */}
                 <div className="mb-6">;
-                  {listing.price !== null ? (;
+                  {listing.price != null ? (;
                     <div className="text-3xl font-bold text-white">;
                       {listing.currency}{listing.price.toLocaleString()}
                     </div>;
@@ -185,10 +179,9 @@ export default function ListingDetail() {;
                       Custom Pricing;
                     </div>;                  )}
                 </div>;
-                ;
                 {/* Action Buttons */}
                 <div className="space-y-3 mb-8">;
-                  {listing.price !== null ? (;
+                  {listing.price != null ? (;
                     <PaymentButton;
                       amount={listing.price}
                       serviceId={listing.id}
@@ -200,7 +193,7 @@ export default function ListingDetail() {;
                           title:"Payment Processing",;
                           description:"Redirecting to secure checkout...";
                         }),;
-                      }}
+                      }
                     />;
                   ) :(;
                     <Button ;
@@ -222,7 +215,6 @@ export default function ListingDetail() {;
                     Contact Publisher;
                   </Button>;
                 </div>;
-                ;
                 {/* Publisher Info */}
                 <div className="border-t border-zion-blue-light pt-6">;
                   <h3 className="text-lg font-bold text-white mb-3">Publisher</h3>;
@@ -235,7 +227,7 @@ export default function ListingDetail() {;
                         onError={(e) => {;
                           const target = e.target as HTMLImageElement,;
                           target.src = "https://ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name);
-                        }}
+                        }
                       />;
                     ) :(;
                       <div className="h-12 w-12 rounded-full bg-zion-purple/20 flex items-center justify-center">;
@@ -247,7 +239,6 @@ export default function ListingDetail() {;
                     </div>;
                   </div>;
                 </div>;
-                ;
                 {/* Additional Info */}
                 <div className="border-t border-zion-blue-light mt-6 pt-6">;
                   <div className="flex justify-between mb-2">;
@@ -264,7 +255,7 @@ export default function ListingDetail() {;
           </div>;
         </div>;
       </div>;
-;
+
       {/* Contact Dialog */}
       <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}>;
         <DialogContent className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md">;
@@ -281,27 +272,25 @@ export default function ListingDetail() {;
     </AppLayout>;
   ),; //useParams may be untyped in this environment, so avoid passing a //type argument and cast the result instead to prevent TS2347 errors. if (!listing) {
   return (<AppLayout> <div className="min-h-screen bg-zion-blue py-12 px-4" > <div className="container mx-auto" > <div className="text-center py-20" > <h1 className="text-3xl font-bold text-white mb-4" >Listing Not Found</h1> <p className="text-zion-slate-light mb-8" >The listing you're looking for doesn't exist or has been removed.</p> <Button asChild className="bg-gradient-to-r from-zion-purple to-zion-purple-dark" > <a href="/marketplace" >Back to Marketplace</Link> </Button> </div> </div> </div> </AppLayout> 
-}
-}w-full h-full flex items-center justify-center bg-zion-blue-light/20"> <span className=" text-zion-slate-light">No image available</span> </div>) 
-}</div> 
-}
-}
-}</div>) 
-}</div> </div> <div> <h4 className=" font-medium text-white">Advanced AI</h4> <p className=" text-sm text-zion-slate-light">State-of-the-art machine learning techniques</p> </div> </div> <div className=" flex items-start gap-3"> <div className=" p-2 rounded-full bg-zion-cyan/20"> <Shield className=" h-5 w-5 text-zion-cyan"/> </div> <div> <h4 className=" font-medium text-white">Enterprise Security</h4> <p className=" text-sm text-zion-slate-light">Built-in data protection and encryption</p> </div> </div> </div> </div> </Badge>) ) 
-}</div> </div> </div> </div> Featured </Badge>) 
-}</div>) 
-}/>) ) 
-}</div> </span> </div>) 
-}</div>) : (<div className=" text-2xl font-bold text-white"> Custom Pricing </div>) 
-}</div> 
-}
-}/>) : (<Button </Button>) 
-}<Button > <MessageSquare className=" h-4 w-4 mr-2"/> Contact Publisher </Button> </div> 
-}
-}/>) : (<div className=" h-12 w-12 rounded-full bg-zion-purple/20 flex items-center justify-center"> <span className=" text-lg font-medium text-zion-purple"> {
+
+w-full h-full flex items-center justify-center bg-zion-blue-light/20"> <span className=" text-zion-slate-light">No image available</span> </div>) 
+</div> 
+
+</div>) 
+</div> </div> <div> <h4 className=" font-medium text-white">Advanced AI</h4> <p className=" text-sm text-zion-slate-light">State-of-the-art machine learning techniques</p> </div> </div> <div className=" flex items-start gap-3"> <div className=" p-2 rounded-full bg-zion-cyan/20"> <Shield className=" h-5 w-5 text-zion-cyan"/> </div> <div> <h4 className=" font-medium text-white">Enterprise Security</h4> <p className=" text-sm text-zion-slate-light">Built-in data protection and encryption</p> </div> </div> </div> </div> </Badge>) 
+</div> </div> </div> </div> Featured </Badge>) 
+</div>) 
+/>) 
+</div> </span> </div>) 
+</div>) : (<div className=" text-2xl font-bold text-white"> Custom Pricing </div>) 
+</div> 
+
+/>) : (<Button </Button>) 
+<Button > <MessageSquare className=" h-4 w-4 mr-2"/> Contact Publisher </Button> </div> 
+
+/>) : (<div className=" h-12 w-12 rounded-full bg-zion-purple/20 flex items-center justify-center"> <span className=" text-lg font-medium text-zion-purple"> {
   listing.author.name.charAt (0) 
-}</span> </div>) 
-}<div> <p className=" font-medium text-white"> {
+</span> </div>) 
+<div> <p className=" font-medium text-white"> {
   listing.author.name 
-}</p> <p className=" text-xs text-zion-slate-light">Member since 2022</p> text-xl font-bold text-white" >Contact Publisher</DialogTitle> </DialogHeader> <ProfileContact /> </DialogContent> </Dialog> </AppLayout>) 
-}
+</p> <p className=" text-xs text-zion-slate-light">Member since 2022</p> text-xl font-bold text-white" >Contact Publisher</DialogTitle> </DialogHeader> <ProfileContact /> </DialogContent> </Dialog> </AppLayout>) 

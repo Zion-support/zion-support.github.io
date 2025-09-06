@@ -6,5 +6,3 @@ export function WorkExperienceForm() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

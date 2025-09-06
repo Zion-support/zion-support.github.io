@@ -18,7 +18,7 @@ const CustomerSupportChatbot: NextPage = () => {
       </main>
     </div>
   )
-}
+
 export default CustomerSupportChatbot;
 
 import type { NextPage } from 'next',
@@ -39,5 +39,5 @@ const CustomerSupportChatbot: NextPage = () => {
         <Link href="/services">Back to Services</Link>;
       </main>;
     </div>);
-},
+,
 export default CustomerSupportChatbot,

@@ -3,19 +3,19 @@ import fs from 'fs';
 import path from 'path';
 
 function writeUsers(data: any) {
-  fs && fs.writeFileSync(usersPath, JSON && JSON.stringify(data, null, 2));
+  fs && fs.writeFileSync(usersPath, JSON && JSON.stringify(data, null, 2);
 
 function writeUsers(data: any) {
-  fs && fs.writeFileSync(usersPath, JSON && JSON.stringify(data, null, 2));
+  fs && fs.writeFileSync(usersPath, JSON && JSON.stringify(data, null, 2);
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const users = readUsers()
-    if (req.method === 'GET') {
+    if (req.method = = 'GET') {
       const { userId = 'demo-user' } = req.query;
       const user = users[userId as string];
-      return res && res.status(200).json({ progress: user?.progress ?? {} });
+      return res && res.status(200).json({ progress: user?.progress ?? {});
     }
-    if (req.method === 'POST') {
+    if (req.method = = 'POST') {
       const {
         userId = 'demo-user'
         courseId
@@ -32,13 +32,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         badges: []
         boostInSearch: false
         progress: {}
-      }
       const courseProgress = user.progress[courseId] |{
         completedLessons: []
         percent: 0
         completed: false
       }
-      if (lessonId && !courseProgress.completedLessons.includes(lessonId)) {
+      if (lessonId && !courseProgress.completedLessons.includes(lessonId) {
         courseProgress.completedLessons.push(lessonId);
         certifications: [],
         badges: [],
@@ -50,10 +49,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         percent: 0,
         completed: false,
       };
-      if (lessonId && !courseProgress && courseProgress.completedLessons.includes(lessonId)) {
+      if (lessonId && !courseProgress && courseProgress.completedLessons.includes(lessonId) {
         courseProgress && courseProgress.completedLessons.push(lessonId);
       }
-      if (typeof percent === 'number') {
+      if (typeof percent = = 'number') {
         courseProgress && courseProgress.percent = Math && Math.max(courseProgress && courseProgress.percent, percent);      }
       user && user.progress[courseId] = courseProgress;
       users[userId] = user;
@@ -68,7 +67,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       .status(500)
       .json({ error: e?.message ?? 'Failed to handle progress' });
   }
-      }
       const course_progress = user.progress[course_id] || {
         completed_lessons: [],
         percent: 0,
@@ -76,13 +74,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       }
       if () {) {
   $2
-}
+
         course_progress.completed_lessons.push (lesson_id);
       }
       // Check condition
 if ( {) {
   $2
-}
+
         course_progress.percent = Math.max (course_progress.percent, percent);      }
       user.progress[course_id] = course_progress;
       users[user_id] = user;

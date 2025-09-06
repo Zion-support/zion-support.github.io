@@ -50,7 +50,7 @@
   rating: number
 
   reviews: number
-}
+
 export const nextGenAIServices: NextGenAIService[] = [
   // Advanced AI & Neural Network Services
   {
@@ -63,7 +63,7 @@ export const nextGenAIServices: NextGenAIService[] = [
   customers: number,
   rating: number,
   reviews: number;
-}
+
 export const nextGenAIServices: NextGenAIService[] = [;
   // Advanced AI & Neural Network Services;
   {
@@ -3676,7 +3676,7 @@ export const nextGenAIServices: NextGenAIService[] = [;
     rating: 4 && 4.9,
     reviews: 34,
   },
-];export const nextGenAIServices: NextGenAIService[] = [;
+;export const nextGenAIServices: NextGenAIService[] = [;
   // Advanced AI & Neural Network Services;
   {
     id: "neural - quantum - brain - interface",
@@ -3719,14 +3719,12 @@ export const nextGenAIServices: NextGenAIService[] = [;
       email: "kleber@ziontechgroup && ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
       website: "https://ziontechgroup && ziontechgroup.com";,
-},
     real_implementation: true,
     implementation_details: "Fully functional neural quantum brain interface with direct neural signal processing and quantum AI cognitive enhancement. Includes neural support center and 24 / 7 monitoring.",
     launch_date: "2024 - 12 - 20",
     customers: 3,
     rating: 4 && 4.9,
     reviews: 2;,
-},
   // Quantum AI Content Factory;
   {
     id: "quantum - ai - content - factory",
@@ -3769,14 +3767,12 @@ export const nextGenAIServices: NextGenAIService[] = [;
       email: "kleber@ziontechgroup && ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
       website: "https://ziontechgroup && ziontechgroup.com";,
-},
     real_implementation: true,
     implementation_details: "Fully functional quantum AI content factory with massive - scale content generation and multi - media creation capabilities. Includes content operations center and 24 / 7 support.",
     launch_date: "2024 - 11 - 20",
     customers: 180,
     rating: 4 && 4.8,
     reviews: 95;,
-},
   // AI Autonomous Research Platform;
   {
     id: "ai - autonomous - research - platform",
@@ -3819,14 +3815,12 @@ export const nextGenAIServices: NextGenAIService[] = [;
       email: "kleber@ziontechgroup && ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
       website: "https://ziontechgroup && ziontechgroup.com";,
-},
     real_implementation: true,
     implementation_details: "Fully functional AI autonomous research platform with breakthrough discovery capabilities and cross - domain knowledge synthesis. Includes research operations center and 24 / 7 autonomous research.",
     launch_date: "2024 - 12 - 10",
     customers: 12,
     rating: 4 && 4.9,
     reviews: 6;,
-},
   // Quantum AI Video Production Studio;
   {
     id: "quantum - ai - video - studio",
@@ -3869,14 +3863,12 @@ export const nextGenAIServices: NextGenAIService[] = [;
       email: "kleber@ziontechgroup && ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
       website: "https://ziontechgroup && ziontechgroup.com";,
-},
     real_implementation: true,
     implementation_details: "Fully functional quantum AI video production studio with Hollywood - quality output and 100x faster production capabilities. Includes video production center and 24 / 7 support.",
     launch_date: "2024 - 11 - 25",
     customers: 45,
     rating: 4 && 4.7,
     reviews: 23;,
-},
   // AI Quantum Computing Platform;
   {
     id: "ai - quantum - computing - platform",
@@ -3919,14 +3911,12 @@ export const nextGenAIServices: NextGenAIService[] = [;
       email: "kleber@ziontechgroup && ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
       website: "https://ziontechgroup && ziontechgroup.com";,
-},
     real_implementation: true,
     implementation_details: "Fully functional AI quantum computing platform with accessible quantum computing and AI optimization capabilities. Includes quantum operations center and 24 / 7 support.",
     launch_date: "2024 - 12 - 05",
     customers: 8,
     rating: 4 && 4.8,
     reviews: 4;,
-},
   // Neural Network Evolution Platform;
   {
     id: "neural - network - evolution",
@@ -3969,14 +3959,12 @@ export const nextGenAIServices: NextGenAIService[] = [;
       email: "kleber@ziontechgroup && ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
       website: "https://ziontechgroup && ziontechgroup.com";,
-},
     real_implementation: true,
     implementation_details: "Fully functional neural network evolution platform with self - evolving capabilities and continuous improvement. Includes evolution monitoring center and 24 / 7 support.",
     launch_date: "2024 - 12 - 15",
     customers: 6,
     rating: 4 && 4.9,
     reviews: 3;,
-},
   // Quantum AI Creativity Engine;
   {
     id: "quantum - ai - creativity - engine",
@@ -4019,14 +4007,12 @@ export const nextGenAIServices: NextGenAIService[] = [;
       email: "kleber@ziontechgroup && ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
       website: "https://ziontechgroup && ziontechgroup.com";,
-},
     real_implementation: true,
     implementation_details: "Fully functional quantum AI creativity engine with unlimited creative content generation and multi - domain capabilities. Includes creative operations center and 24 / 7 support.",
     launch_date: "2024 - 11 - 30",
     customers: 75,
     rating: 4 && 4.6,
     reviews: 38;,
-},
   // New AI Services;
   {
     id: "ai - neural - interface - pro",
@@ -4069,14 +4055,12 @@ export const nextGenAIServices: NextGenAIService[] = [;
       email: "kleber@ziontechgroup && ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
       website: "https://ziontechgroup && ziontechgroup.com";,
-},
     real_implementation: true,
     implementation_details: "Advanced neural interface system with AI enhancement capabilities, real - time processing, and secure quantum encryption.",
     launch_date: "2024 - 12 - 01",
     customers: 15,
     rating: 4 && 4.9,
     reviews: 8;,
-},
   {
     id: "ai - quantum - computing - platform",
     name: "AI Quantum Computing Platform",
@@ -4118,14 +4102,12 @@ export const nextGenAIServices: NextGenAIService[] = [;
       email: "kleber@ziontechgroup && ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
       website: "https://ziontechgroup && ziontechgroup.com";,
-},
     real_implementation: true,
     implementation_details: "Enterprise quantum computing platform with AI optimization, hybrid computing capabilities, and comprehensive quantum development tools.",
     launch_date: "2024 - 11 - 15",
     customers: 25,
     rating: 4 && 4.8,
     reviews: 12;,
-},
   {
     id: "ai - space - mission - control",
     name: "AI Space Mission Control",
@@ -4167,14 +4149,12 @@ export const nextGenAIServices: NextGenAIService[] = [;
       email: "kleber@ziontechgroup && ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
       website: "https://ziontechgroup && ziontechgroup.com";,
-},
     real_implementation: true,
     implementation_details: "Advanced AI - powered space mission control system with autonomous decision - making, real - time optimization, and comprehensive mission management capabilities.",
     launch_date: "2024 - 10 - 01",
     customers: 8,
     rating: 4 && 4.9,
     reviews: 5;,
-},
   {
     id: "ai - biotech - discovery - platform",
     name: "AI Biotech Discovery Platform",
@@ -4216,14 +4196,12 @@ export const nextGenAIServices: NextGenAIService[] = [;
       email: "kleber@ziontechgroup && ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
       website: "https://ziontechgroup && ziontechgroup.com";,
-},
     real_implementation: true,
     implementation_details: "Comprehensive AI biotech platform with drug discovery algorithms, genetic analysis tools, and clinical trial optimization capabilities.",
     launch_date: "2024 - 09 - 15",
     customers: 18,
     rating: 4 && 4.7,
     reviews: 245;,
-},
   {
     id: "ai - predictive - maintenance - platform",
     name: "AI Predictive Maintenance Platform",
@@ -4265,14 +4243,12 @@ export const nextGenAIServices: NextGenAIService[] = [;
       email: "kleber@ziontechgroup && ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
       website: "https://ziontechgroup && ziontechgroup.com";,
-},
     real_implementation: true,
     implementation_details: "Comprehensive predictive maintenance platform with IoT integration, AI algorithms, and enterprise - grade monitoring capabilities.",
     launch_date: "2024 - 08 - 01",
     customers: 180,
     rating: 4 && 4.8,
     reviews: 156;,
-},
   // AI - Powered Predictive Analytics Platform;
   {
     id: "ai - predictive - analytics - platform",
@@ -4315,14 +4291,12 @@ export const nextGenAIServices: NextGenAIService[] = [;
       email: "kleber@ziontechgroup && ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
       website: "https://ziontechgroup && ziontechgroup.com";,
-},
     real_implementation: true,
     implementation_details: "Full enterprise platform with advanced ML models, real - time data processing, comprehensive security, and scalable architecture.",
     launch_date: "2024 - 02 - 15",
     customers: 89,
     rating: 4 && 4.9,
     reviews: 67;,
-},
   // AI - Powered Customer Experience Platform;
   {
     id: "ai - customer - experience - platform",
@@ -4365,14 +4339,12 @@ export const nextGenAIServices: NextGenAIService[] = [;
       email: "kleber@ziontechgroup && ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
       website: "https://ziontechgroup && ziontechgroup.com";,
-},
     real_implementation: true,
     implementation_details: "Full SaaS platform with advanced AI models, real - time personalization, comprehensive analytics, and enterprise - grade security.",
     launch_date: "2024 - 01 - 20",
     customers: 342,
     rating: 4 && 4.8,
     reviews: 289;,
-},
   // AI - Powered Supply Chain Optimization;
   {
     id: "ai - supply - chain - optimization",
@@ -4415,14 +4387,12 @@ export const nextGenAIServices: NextGenAIService[] = [;
       email: "kleber@ziontechgroup && ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
       website: "https://ziontechgroup && ziontechgroup.com";,
-},
     real_implementation: true,
     implementation_details: "Full enterprise platform with advanced ML models, real - time optimization, comprehensive analytics, and enterprise integration capabilities.",
     launch_date: "2024 - 03 - 10",
     customers: 67,
     rating: 4 && 4.9,
     reviews: 45;,
-},
   // AI - Powered Financial Trading Platform;
   {
     id: "ai - financial - trading - platform",
@@ -4465,14 +4435,12 @@ export const nextGenAIServices: NextGenAIService[] = [;
       email: "kleber@ziontechgroup && ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
       website: "https://ziontechgroup && ziontechgroup.com";,
-},
     real_implementation: true,
     implementation_details: "Full professional trading platform with advanced AI models, real - time execution, comprehensive risk management, and regulatory compliance.",
     launch_date: "2024 - 02 - 01",
     customers: 23,
     rating: 4 && 4.9,
     reviews: 18;,
-},
   // AI - Powered Healthcare Diagnostics;
   {
     id: "ai - healthcare - diagnostics",
@@ -4515,14 +4483,13 @@ export const nextGenAIServices: NextGenAIService[] = [;
       email: "kleber@ziontechgroup && ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
       website: "https://ziontechgroup && ziontechgroup.com";,
-},
     real_implementation: true,
     implementation_details: "Full healthcare platform with advanced AI models, HIPAA compliance, comprehensive security, and medical device integration.",
     launch_date: "2024 - 01 - 10",
     customers: 45,
     rating: 4 && 4.9,
     reviews: 34;
-]}}
+}
     },
     real_implementation: true,
     implementation_details: 'Full healthcare platform with advanced AI models, HIPAA compliance, comprehensive security, and medical device integration.',
@@ -4531,7 +4498,7 @@ export const nextGenAIServices: NextGenAIService[] = [;
     rating: 4 && 4.9,
     reviews: 34
   }
-];export const nextGenAIServices: NextGenAIService[] = [;
+;export const nextGenAIServices: NextGenAIService[] = [;
   // Advanced AI & Neural Network Services;
   {id: "neural-quantum-brain-interface"
     name: "Neural Quantum Brain Interface"
@@ -4573,14 +4540,14 @@ export const nextGenAIServices: NextGenAIService[] = [;
       email: "kleber@ziontechgroup.com"
       address: "364 E Main St STE 1008 Middletown DE 19709"
       website: "https://ziontechgroup.com";
-}
+
     realImplementation: true
     implementationDetails: "Fully functional neural quantum brain interface with direct neural signal processing and quantum AI cognitive enhancement. Includes neural support center and 24/7 monitoring."
     launchDate: "2024-12-20"
     customers: 3
     rating: 4.9
     reviews: 2;
-}
+
   // Quantum AI Content Factory;
   {id: "quantum-ai-content-factory"
     name: "Quantum AI Content Factory"
@@ -4622,14 +4589,14 @@ export const nextGenAIServices: NextGenAIService[] = [;
       email: "kleber@ziontechgroup.com"
       address: "364 E Main St STE 1008 Middletown DE 19709"
       website: "https://ziontechgroup.com";
-}
+
     realImplementation: true
     implementationDetails: "Fully functional quantum AI content factory with massive-scale content generation and multi-media creation capabilities. Includes content operations center and 24/7 support."
     launchDate: "2024-11-20"
     customers: 180
     rating: 4.8
     reviews: 95;
-}
+
   // AI Autonomous Research Platform;
   {id: "ai-autonomous-research-platform"
     name: "AI Autonomous Research Platform"
@@ -4671,14 +4638,14 @@ export const nextGenAIServices: NextGenAIService[] = [;
       email: "kleber@ziontechgroup.com"
       address: "364 E Main St STE 1008 Middletown DE 19709"
       website: "https://ziontechgroup.com";
-}
+
     realImplementation: true
     implementationDetails: "Fully functional AI autonomous research platform with breakthrough discovery capabilities and cross-domain knowledge synthesis. Includes research operations center and 24/7 autonomous research."
     launchDate: "2024-12-10"
     customers: 12
     rating: 4.9
     reviews: 6;
-}
+
   // Quantum AI Video Production Studio;
   {id: "quantum-ai-video-studio"
     name: "Quantum AI Video Production Studio"
@@ -4720,14 +4687,14 @@ export const nextGenAIServices: NextGenAIService[] = [;
       email: "kleber@ziontechgroup.com"
       address: "364 E Main St STE 1008 Middletown DE 19709"
       website: "https://ziontechgroup.com";
-}
+
     realImplementation: true
     implementationDetails: "Fully functional quantum AI video production studio with Hollywood-quality output and 100x faster production capabilities. Includes video production center and 24/7 support."
     launchDate: "2024-11-25"
     customers: 45
     rating: 4.7
     reviews: 23;
-}
+
   // AI Quantum Computing Platform;
   {id: "ai-quantum-computing-platform"
     name: "AI Quantum Computing Platform"
@@ -4769,14 +4736,14 @@ export const nextGenAIServices: NextGenAIService[] = [;
       email: "kleber@ziontechgroup.com"
       address: "364 E Main St STE 1008 Middletown DE 19709"
       website: "https://ziontechgroup.com";
-}
+
     realImplementation: true
     implementationDetails: "Fully functional AI quantum computing platform with accessible quantum computing and AI optimization capabilities. Includes quantum operations center and 24/7 support."
     launchDate: "2024-12-05"
     customers: 8
     rating: 4.8
     reviews: 4;
-}
+
   // Neural Network Evolution Platform;
   {id: "neural-network-evolution"
     name: "Neural Network Evolution Platform"
@@ -4818,14 +4785,14 @@ export const nextGenAIServices: NextGenAIService[] = [;
       email: "kleber@ziontechgroup.com"
       address: "364 E Main St STE 1008 Middletown DE 19709"
       website: "https://ziontechgroup.com";
-}
+
     realImplementation: true
     implementationDetails: "Fully functional neural network evolution platform with self-evolving capabilities and continuous improvement. Includes evolution monitoring center and 24/7 support."
     launchDate: "2024-12-15"
     customers: 6
     rating: 4.9
     reviews: 3;
-}
+
   // Quantum AI Creativity Engine;
   {id: "quantum-ai-creativity-engine"
     name: "Quantum AI Creativity Engine"
@@ -4867,14 +4834,14 @@ export const nextGenAIServices: NextGenAIService[] = [;
       email: "kleber@ziontechgroup.com"
       address: "364 E Main St STE 1008 Middletown DE 19709"
       website: "https://ziontechgroup.com";
-}
+
     realImplementation: true
     implementationDetails: "Fully functional quantum AI creativity engine with unlimited creative content generation and multi-domain capabilities. Includes creative operations center and 24/7 support."
     launchDate: "2024-11-30"
     customers: 75
     rating: 4.6
     reviews: 38;
-}
+
   // New AI Services;
   {id: "ai-neural-interface-pro"
     name: "AI Neural Interface Pro"
@@ -4916,14 +4883,14 @@ export const nextGenAIServices: NextGenAIService[] = [;
       email: "kleber@ziontechgroup.com"
       address: "364 E Main St STE 1008 Middletown DE 19709"
       website: "https://ziontechgroup.com";
-}
+
     realImplementation: true
     implementationDetails: "Advanced neural interface system with AI enhancement capabilities, real-time processing, and secure quantum encryption."
     launchDate: "2024-12-01"
     customers: 15
     rating: 4.9
     reviews: 8;
-}
+
   {id: "ai-quantum-computing-platform"
     name: "AI Quantum Computing Platform"
     tagline: "Enterprise quantum computing with AI optimization"
@@ -4964,14 +4931,14 @@ export const nextGenAIServices: NextGenAIService[] = [;
       email: "kleber@ziontechgroup.com"
       address: "364 E Main St STE 1008 Middletown DE 19709"
       website: "https://ziontechgroup.com";
-}
+
     realImplementation: true
     implementationDetails: "Enterprise quantum computing platform with AI optimization, hybrid computing capabilities, and comprehensive quantum development tools."
     launchDate: "2024-11-15"
     customers: 25
     rating: 4.8
     reviews: 12;
-}
+
   {id: "ai-space-mission-control"
     name: "AI Space Mission Control"
     tagline: "Intelligent space mission management and automation"
@@ -5012,14 +4979,14 @@ export const nextGenAIServices: NextGenAIService[] = [;
       email: "kleber@ziontechgroup.com"
       address: "364 E Main St STE 1008 Middletown DE 19709"
       website: "https://ziontechgroup.com";
-}
+
     realImplementation: true
     implementationDetails: "Advanced AI-powered space mission control system with autonomous decision-making, real-time optimization, and comprehensive mission management capabilities."
     launchDate: "2024-10-01"
     customers: 8
     rating: 4.9
     reviews: 5;
-}
+
   {id: "ai-biotech-discovery-platform"
     name: "AI Biotech Discovery Platform"
     tagline: "AI-powered drug discovery and biotechnology research"
@@ -5060,14 +5027,14 @@ export const nextGenAIServices: NextGenAIService[] = [;
       email: "kleber@ziontechgroup.com"
       address: "364 E Main St STE 1008 Middletown DE 19709"
       website: "https://ziontechgroup.com";
-}
+
     realImplementation: true
     implementationDetails: "Comprehensive AI biotech platform with drug discovery algorithms, genetic analysis tools, and clinical trial optimization capabilities."
     launchDate: "2024-09-15"
     customers: 18
     rating: 4.7
     reviews: 245;
-}
+
   {id: "ai-predictive-maintenance-platform"
     name: "AI Predictive Maintenance Platform"
     tagline: "Predictive maintenance with AI and IoT integration"
@@ -5108,14 +5075,14 @@ export const nextGenAIServices: NextGenAIService[] = [;
       email: "kleber@ziontechgroup.com"
       address: "364 E Main St STE 1008 Middletown DE 19709"
       website: "https://ziontechgroup.com";
-}
+
     realImplementation: true
     implementationDetails: "Comprehensive predictive maintenance platform with IoT integration, AI algorithms, and enterprise-grade monitoring capabilities."
     launchDate: "2024-08-01"
     customers: 180
     rating: 4.8
     reviews: 156;
-}
+
   // AI-Powered Predictive Analytics Platform;
   {id: "ai-predictive-analytics-platform"
     name: "AI Predictive Analytics Platform"
@@ -5157,14 +5124,14 @@ export const nextGenAIServices: NextGenAIService[] = [;
       email: "kleber@ziontechgroup.com"
       address: "364 E Main St STE 1008 Middletown DE 19709"
       website: "https://ziontechgroup.com";
-}
+
     realImplementation: true
     implementationDetails: "Full enterprise platform with advanced ML models, real-time data processing, comprehensive security, and scalable architecture."
     launchDate: "2024-02-15"
     customers: 89
     rating: 4.9
     reviews: 67;
-}
+
   // AI-Powered Customer Experience Platform;
   {id: "ai-customer-experience-platform"
     name: "AI Customer Experience Platform"
@@ -5206,14 +5173,14 @@ export const nextGenAIServices: NextGenAIService[] = [;
       email: "kleber@ziontechgroup.com"
       address: "364 E Main St STE 1008 Middletown DE 19709"
       website: "https://ziontechgroup.com";
-}
+
     realImplementation: true
     implementationDetails: "Full SaaS platform with advanced AI models, real-time personalization, comprehensive analytics, and enterprise-grade security."
     launchDate: "2024-01-20"
     customers: 342
     rating: 4.8
     reviews: 289;
-}
+
   // AI-Powered Supply Chain Optimization;
   {id: "ai-supply-chain-optimization"
     name: "AI Supply Chain Optimization"
@@ -5255,14 +5222,14 @@ export const nextGenAIServices: NextGenAIService[] = [;
       email: "kleber@ziontechgroup.com"
       address: "364 E Main St STE 1008 Middletown DE 19709"
       website: "https://ziontechgroup.com";
-}
+
     realImplementation: true
     implementationDetails: "Full enterprise platform with advanced ML models, real-time optimization, comprehensive analytics, and enterprise integration capabilities."
     launchDate: "2024-03-10"
     customers: 67
     rating: 4.9
     reviews: 45;
-}
+
   // AI-Powered Financial Trading Platform;
   {id: "ai-financial-trading-platform"
     name: "AI Financial Trading Platform"
@@ -5304,14 +5271,14 @@ export const nextGenAIServices: NextGenAIService[] = [;
       email: "kleber@ziontechgroup.com"
       address: "364 E Main St STE 1008 Middletown DE 19709"
       website: "https://ziontechgroup.com";
-}
+
     realImplementation: true
     implementationDetails: "Full professional trading platform with advanced AI models, real-time execution, comprehensive risk management, and regulatory compliance."
     launchDate: "2024-02-01"
     customers: 23
     rating: 4.9
     reviews: 18;
-}
+
   // AI-Powered Healthcare Diagnostics;
   {id: "ai-healthcare-diagnostics"
     name: "AI Healthcare Diagnostics Platform"
@@ -5353,14 +5320,14 @@ export const nextGenAIServices: NextGenAIService[] = [;
       email: "kleber@ziontechgroup.com"
       address: "364 E Main St STE 1008 Middletown DE 19709"
       website: "https://ziontechgroup.com";
-}
+
     realImplementation: true
     implementationDetails: "Full healthcare platform with advanced AI models, HIPAA compliance, comprehensive security, and medical device integration."
     launchDate: "2024-01-10"
     customers: 45
     rating: 4.9
     reviews: 34;
-]}}
+}
     }
     realImplementation: true
     implementationDetails: 'Full healthcare platform with advanced AI models, HIPAA compliance, comprehensive security, and medical device integration.'
@@ -5369,8 +5336,8 @@ export const nextGenAIServices: NextGenAIService[] = [;
     rating: 4.9
     reviews: 34
   }
-]
+
     rating: 4.9,
     reviews: 34;
   }
-],
+,

@@ -26,10 +26,10 @@ const Page: NextPage = () => {
       </div>
     </>
   )
-}
+
 export default Page;
 
       </div>;
     </>);
-},
+,
 export default Page,

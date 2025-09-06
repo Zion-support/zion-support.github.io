@@ -1,4 +1,4 @@
-};import React from 'react';
+;import React from 'react';
 import { ScrollArea } from '@/components/ui/scroll-area';
 
 import React from 'react';
@@ -18,7 +18,7 @@ interface NotificationListProps {
   onDismiss: (id: string,) => Promise<void>
 
   onRetry: () => void
-}
+
 export const NotificationList: React.FC<NotificationListProps> = ({
 
   loading
@@ -27,7 +27,7 @@ export const NotificationList: React.FC<NotificationListProps> = ({
   onMarkAsRead
   onDismiss
   onRetry
-},) => {
+,) => {
   return (
     <ScrollArea className="flex - 1 overflow - y-auto max - h-[350px]">;
       {error ? (
@@ -47,32 +47,29 @@ export const NotificationList: React.FC<NotificationListProps> = ({
           <Skeleton className="h-12 w-full bg-zion-blue-dark/50" />;
           <Skeleton className="h-12 w-full bg-zion-blue-dark/50" />;
         </div>;
-      ) : notifications && notifications.length === 0 ? (;
+      ) : notifications && notifications.length = = 0 ? (;
         <div className="p-8">;
           <EmptyState
             icon = {<Bell className="h-8 w-8" />,}
             title="No Notifications";
             description="You're all caught up.";
-            action={{ text: 'Refresh', onClick: onRetry }}
+            action={ text: 'Refresh', onClick: onRetry }
             className="border-none bg-transparent";
           />;
         </div>;
       ) : (;
-        notifications && notifications.map((notification,) => (;
+        notifications && notifications.map(notification,) => (;
           <NotificationItem
             key = {notification && notification.id,}
             notification = {notification,}
             onMarkAsRead = {onMarkAsRead,}
             onDismiss = {onDismiss,}
           />;
-        ));
+        );
       )}
     </ScrollArea>
   )
-}
-"
 
-"
         <div className="p - 8 text - center text - amber - 500">;
           <p>{error}</p>;
           <Button;
@@ -88,23 +85,21 @@ export const NotificationList: React.FC<NotificationListProps> = ({
           <Skeleton className="h - 12 w - full bg - zion - blue - dark / 50" />;
           <Skeleton className="h - 12 w - full bg - zion - blue - dark / 50" />;
           <Skeleton className="h - 12 w - full bg - zion - blue - dark / 50" />;
-        </div>) : notifications.length === 0 ? (
+        </div>) : notifications.length = = 0 ? (
         <div className="p - 8">;
           <EmptyState;
             icon = {<Bell className="h - 8 w - 8" />, }
             title="No Notifications";
             description="You're all caught up.";
-            action={{ text: 'Refresh', on_click: on_retry }}
+            action={ text: 'Refresh', on_click: on_retry }
             className="border - none bg - transparent";
           />;
         </div>) : (
-        notifications.map ((notification, ) => (
+        notifications.map (notification, ) => (
           <NotificationItem;
             key = {notification.id, }
             notification = {notification, }
             onMarkAsRead = {onMarkAsRead, }
             on_dismiss = {on_dismiss, }
-          />)))}
+          />))}
     </ScrollArea>);
-}
-";

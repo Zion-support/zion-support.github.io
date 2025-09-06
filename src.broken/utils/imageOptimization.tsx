@@ -6,5 +6,3 @@ export function imageOptimization() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

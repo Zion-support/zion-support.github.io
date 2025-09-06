@@ -7,6 +7,5 @@ const SEOOptimizer.js = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default SEOOptimizer.js;

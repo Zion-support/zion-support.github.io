@@ -5,9 +5,9 @@ import type { TalentProfile } from '@/utils/types/talent',;
 import { v4 as uuid } from 'uuid',;
 import { translateText, detectLanguageSimple } from '@/utils/api/translate',;
 const hasSupabase = !!process.env.NEXT_PUBLIC_SUPABASE_URL && !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY,;
-const SUPPORTED_LANGS = (process.env.SUPPORTED_LANGS || 'en,es,de,fr,pt,ja,zh').split().map((x) => x.trim()),;
+const SUPPORTED_LANGS = (process.env.SUPPORTED_LANGS || 'en,es,de,fr,pt,ja,zh').split().map(x) => x.trim(),;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
-  if (req.method === 'GET') {;
+  if (req.method = = 'GET') {;
     try {;
       if (hasSupabase) {;
         const { data, error } = await supabaseClient.from('talent_profiles').select('*').order('created_at', { ascending: false }),;
@@ -18,9 +18,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     } catch (e: any) {;
       return res.status(500).json({ error: e.message });
     }
-  }
-;
-  if (req.method === 'POST') {;
+
+  if (req.method = = 'POST') {;
     try {;
       const payload = req.body as Partial<TalentProfile>,;
       const slug = (payload.name || 'talent').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') + '-' + uuid().slice(0, 6),;
@@ -39,10 +38,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         location: payload.location || 'Remote',;
         availability: (payload.availability as any) || 'Open'} as TalentProfile,;
       // Auto-translate;
-      const originalLang = payload.originalLanguage || detectLanguageSimple([item.title, item.summary, item.bio || ''].join('\n')),;
+      const originalLang = payload.originalLanguage || detectLanguageSimple([item.title, item.summary, item.bio || ''].join('\n'),;
       const translations: TalentProfile['translations'] = {},;
       for (const lang of SUPPORTED_LANGS) {;
-        if (!lang || lang === originalLang) continue,;
+        if (!lang || lang = = originalLang) continue,;
         translations.title = translations.title || {},;
         translations.summary = translations.summary || {},;
         translations.bio = translations.bio || {},;
@@ -53,7 +52,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           translations.category = translations.category || {},;
           translations.category[lang] = await translateText(item.category, lang, originalLang);
         }
-      }
       item.originalLanguage = originalLang,;
       item.translations = translations,;
       if (hasSupabase) {;
@@ -85,13 +83,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         if (error) throw error;
         return res.status(201).json({ slug: item.slug });
       }
-;
+
       // Fallback: return the slug as if saved;
       return res.status(201).json({ slug: item.slug });
     } catch (e: any) {;
       return res.status(500).json({ error: e.message });
     }
-  }
-;
+
   return res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
-}

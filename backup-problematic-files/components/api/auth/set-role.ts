@@ -7,14 +7,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     const expires = new Date(Date.now() + days * 864e5).toUTCString(),;
     cookies.push(`${k}=${encodeURIComponent(v)}, Path=/, SameSite=Lax, Expires=${expires}`);
   },;
-  if (role === 'admin' || role === 'talent' || role === 'guest') {;
+  if (role = = 'admin' || role = = 'talent' || role = = 'guest') {;
     set('role', role);
   }
   if (talent) {;
     set('talentSlug', talent);
   }
-  set('userId', role === 'guest' ? '' : 'test-user'),;
+  set('userId', role = = 'guest' ? '' : 'test-user'),;
   headers['Set-Cookie'] = cookies.join();
   res.writeHead(302, { ...headers, Location: '/' });
   res.end();
-}

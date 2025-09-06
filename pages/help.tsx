@@ -15,7 +15,7 @@ import {
   ExternalLink
   ChevronDown
   Cloud
-} from "lucide-react";
+ from "lucide-react";
 const helpArticles = [
   {
     id: "overview"
@@ -60,8 +60,8 @@ import {
   ExternalLink,
   ChevronDown,
   Cloud,
-} from './lucide-react';
-;
+ from './lucide-react';
+
 const help_articles = [;
   {
     id: "overview",
@@ -132,7 +132,7 @@ const help_articles = [;
       }
     ]
   }
-];
+;
 const helpCategories = [
   {
     title: "Getting Started",
@@ -141,13 +141,13 @@ const helpCategories = [
     color: "blue",
     articles: help_articles,
   },
-];
+;
 export default function HelpPage() {
   const [searchTerm, setSearchTerm] = useState("");
     color: 'blue',
     articles: helpArticles
   }
-];
+;
 
 export default function HelpPage() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -166,7 +166,7 @@ import {;
   ExternalLink,;
   ChevronDown,;
   Cloud,;
-} from "lucide-react";
+ from "lucide-react";
 
 const helpArticles = [;
   {;
@@ -224,7 +224,6 @@ const helpArticles = [;
       },;
     ],;
   },;
-];
 
 const helpCategories = [;
   {;
@@ -234,36 +233,34 @@ const helpCategories = [;
     color: "blue",;
     articles: helpArticles,;
   },;
-];
 
 export default function HelpPage() {;
   const [searchTerm, setSearchTerm] = useState("");
   const [expandedCategory, setExpandedCategory] = useState<number | null>(null);
 
   const toggleCategory = (index: number) => {;
-    setExpandedCategory(expandedCategory === index ? null : index);
+    setExpandedCategory(expandedCategory = = index ? null : index);
   };
 
   const filteredCategories = helpCategories
-    .map((category) => ({
+    .map(category) => ({
       ...category
-      articles: category.articles.filter(
-        (article) =>
-          article.title.toLowerCase().includes(searchTerm.toLowerCase()) |
-          article.description.toLowerCase().includes(searchTerm.toLowerCase())
+      articles: category.articles.filter(article) =>
+          article.title.toLowerCase().includes(searchTerm.toLowerCase() |
+          article.description.toLowerCase().includes(searchTerm.toLowerCase()
       )
-    }))
-    .filter((category) => category.articles.length > 0);
+    })
+    .filter(category) => category.articles.length > 0);
   const filteredCategories = helpCategories;
-    .map((category) => ({;
+    .map(category) => ({;
       ...category,;
       articles: category && category.articles.filter(;
         (article) =>;
-          article && article.title.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
-          article && article.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()),;
+          article && article.title.toLowerCase().includes(searchTerm && searchTerm.toLowerCase() ||;
+          article && article.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase(),;
       ),;
-    }));
-    .filter((category) => category && category.articles.length > 0);
+    });
+    .filter(category) => category && category.articles.length > 0);
 
   return (
     <>;
@@ -283,9 +280,9 @@ export default function HelpPage() {;
         <section className="relative py-20 px-4">;
           <div className="max-w-7xl mx-auto">;
             <motion&& motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.6 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.6 }
               className="text-center max-w-4xl mx-auto">;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">;
                 Help <span className="text-blue-600">Center</span>;
@@ -310,29 +307,28 @@ export default function HelpPage() {;
       </div>;
     </>;
   );
-;
+
 export default /**
  * HelpPage - Function description
  */
 function HelpPage() {
   const [search_term, setSearchTerm] = useState ("");
   const [expanded_category, setExpandedCategory] = useState < number | null>(null);
-;
+
   const toggle_category = (index: number) =>: any {
-    setExpandedCategory (expanded_category === index ? null : index);
+    setExpandedCategory (expanded_category = = index ? null : index);
   }
-;
+
   const filtered_categories = help_categories;
-    .map ((category) => ({
+    .map (category) => ({
       ...category,
-      articles: category.articles.filter (
-        (article) =>;
-          article.title.toLowerCase ().includes (search_term.toLowerCase ()) ||;
-          article.description.toLowerCase ().includes (search_term.toLowerCase ()),
+      articles: category.articles.filter (article) =>;
+          article.title.toLowerCase ().includes (search_term.toLowerCase () ||;
+          article.description.toLowerCase ().includes (search_term.toLowerCase (),
       ),
-    }));
-    .filter ((category) => category.articles.length > 0);
-;
+    });
+    .filter (category) => category.articles.length > 0);
+
   return (
     <>;
       <Head>;
@@ -351,9 +347,9 @@ function HelpPage() {
         <section className="relative py - 20 px - 4">;
           <div className="max - w-7xl mx - auto">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.6 }}
+              initial={ opacity: 0, coordinate_y: 20 }
+              animate={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.6 }
               className="text - center max - w-4xl mx - auto";
             >;
               <h1 className="text - 4xl md:text - 6xl font - bold mb - 6">;
@@ -378,4 +374,3 @@ function HelpPage() {
         </section>;
       </div>;
     </>);
-}

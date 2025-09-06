@@ -5,8 +5,8 @@ import {;
   Search, Grid, List, Star, CheckCircle, ArrowRight, Check,;
   Brain, Atom, Shield, Building, Globe,;
   Users, TrendingUp, Award, Phone, Mail, MapPin;
-} from 'lucide-react',;
-// Import our new service data;
+ from 'lucide-react',;
+/ Import our new service data;
 import { advancedEnterpriseServices2025 } from '../data/2025-advanced-enterprise-services-expansion',;
 import { innovativeMicroSaasExpansion2025 } from '../data/2025-innovative-micro-saas-expansion',;
 import { cuttingEdgeITInfrastructureServices } from '../data/2025-cutting-edge-it-infrastructure',;
@@ -15,12 +15,12 @@ const contactInfo = {;
   email: 'kleber@ziontechgroup.com',;
   address: '364 E Main St STE 1008 Middletown DE 19709',;
   website: 'https://ziontechgroup.com';
-},;
+,;
 const allServices = [;
   ...advancedEnterpriseServices2025,;
       ...innovativeMicroSaasExpansion2025,;
   ...cuttingEdgeITInfrastructureServices;
-],;
+,;
 const categories = [;
   {;
     id: 'all',;
@@ -64,59 +64,59 @@ const categories = [;
     color: 'from-violet-500 to-indigo-500',;
     description: 'Quantum computing solutions';
   }
-],;
+,;
 const getServiceCategory = (service: any) => {;
   if (service.category) return service.category,;
   return 'Other';
-},;
+,;
 const getServicePricing = (service: any) => {;
   if (service.price) return `${service.price}${service.period}`,;
   if (service.pricing?.starter) return service.pricing.starter,;
   if (service.pricing?.monthly) return `$${service.pricing.monthly}/month`,;
   return 'Contact for pricing';
-},;
+,;
 const getServiceFeatures = (service: any) => {;
   if (service.features) return service.features,;
   if (service.keyFeatures) return service.keyFeatures,;
   return [];
-},;
+,;
 export default function AdvancedServicesShowcase() {;
   const [selectedCategory, setSelectedCategory] = useState('all'),;
   const [searchTerm, setSearchTerm] = useState(''),;
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),;
   const [filteredServices, setFilteredServices] = useState(allServices),;
-  useEffect(() => {;
+  useEffect() => {;
     let filtered = allServices,;
     // Filter by category;
-    if (selectedCategory !== 'all') {;
+    if (selectedCategory != 'all') {;
       filtered = filtered.filter(service => {;
         const category = getServiceCategory(service).toLowerCase(),;
-        if (selectedCategory === 'enterprise') return category.includes('enterprise') || category.includes('legal') || category.includes('financial'),;
-        if (selectedCategory === 'micro-saas') return category.includes('marketing') || category.includes('social') || category.includes('customer') || category.includes('project'),;
-        if (selectedCategory === 'infrastructure') return category.includes('infrastructure') || category.includes('network') || category.includes('data center') || category.includes('edge'),;
-        if (selectedCategory === 'ai-ml') return category.includes('ai') || category.includes('machine learning') || category.includes('nlp') || category.includes('ml'),;
-        if (selectedCategory === 'quantum') return category.includes('quantum') || category.includes('quantum-resistant'),;
+        if (selectedCategory = = 'enterprise') return category.includes('enterprise') || category.includes('legal') || category.includes('financial'),;
+        if (selectedCategory = = 'micro-saas') return category.includes('marketing') || category.includes('social') || category.includes('customer') || category.includes('project'),;
+        if (selectedCategory = = 'infrastructure') return category.includes('infrastructure') || category.includes('network') || category.includes('data center') || category.includes('edge'),;
+        if (selectedCategory = = 'ai-ml') return category.includes('ai') || category.includes('machine learning') || category.includes('nlp') || category.includes('ml'),;
+        if (selectedCategory = = 'quantum') return category.includes('quantum') || category.includes('quantum-resistant'),;
         return false;
       });
     }
-;
+
     // Filter by search term;
     if (searchTerm) {;
       filtered = filtered.filter(service =>;
-        service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-        service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-        service.tagline.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-        getServiceCategory(service).toLowerCase().includes(searchTerm.toLowerCase());
+        service.name.toLowerCase().includes(searchTerm.toLowerCase() ||;
+        service.description.toLowerCase().includes(searchTerm.toLowerCase() ||;
+        service.tagline.toLowerCase().includes(searchTerm.toLowerCase() ||;
+        getServiceCategory(service).toLowerCase().includes(searchTerm.toLowerCase();
       );
     }
-;
+
     setFilteredServices(filtered);
   }, [selectedCategory, searchTerm]),;
   const ServiceCard = ({ service }: { service: any }) => (;
     <motion.div;
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
+      initial={ opacity: 0, y: 20 }
+      animate={ opacity: 1, y: 0 }
+      transition={ duration: 0.5 }
       className={`relative bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700 ${;
         service.popular ? 'ring-2 ring-blue-500' : '';
       }`}
@@ -127,7 +127,7 @@ export default function AdvancedServicesShowcase() {;
           Popular;
         </div>;
       )}
-;
+
       <div className={`h-32 bg-gradient-to-br ${service.color} flex items-center justify-center`}>;
         <span className="text-4xl">{service.icon}</span>;
       </div>;
@@ -171,12 +171,12 @@ export default function AdvancedServicesShowcase() {;
         <div className="mb-6">;
           <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Key Features:</h4>;
           <div className="space-y-1">;
-            {getServiceFeatures(service).slice(0, 3).map((feature: string, index: number) => (;
+            {getServiceFeatures(service).slice(0, 3).map(feature: string, index: number) => (;
               <div key={index} className="flex items-center gap-2">;
                 <Check className="w-3 h-3 text-green-500" />;
                 <span className="text-sm text-gray-600 dark:text-gray-400">{feature}</span>;
               </div>;
-            ))}
+            )}
             {getServiceFeatures(service).length > 3 && (;
               <span className="text-sm text-gray-500 dark:text-gray-400">;
                 +{getServiceFeatures(service).length - 3} more features;
@@ -216,9 +216,9 @@ export default function AdvancedServicesShowcase() {;
   );
   const ServiceList = ({ service }: { service: any }) => (;
     <motion.div;
-      initial={{ opacity: 0, x: -20 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.5 }}
+      initial={ opacity: 0, x: -20 }
+      animate={ opacity: 1, x: 0 }
+      transition={ duration: 0.5 }
       className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700 ${;
         service.popular ? 'ring-2 ring-blue-500' : '';
       }`}
@@ -276,12 +276,12 @@ export default function AdvancedServicesShowcase() {;
               <div>;
                 <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Key Features:</h4>;
                 <div className="space-y-1">;
-                  {getServiceFeatures(service).slice(0, 4).map((feature: string, index: number) => (;
+                  {getServiceFeatures(service).slice(0, 4).map(feature: string, index: number) => (;
                     <div key={index} className="flex items-center gap-2">;
                       <Check className="w-3 h-3 text-green-500" />;
                       <span className="text-sm text-gray-600 dark:text-gray-400">{feature}</span>;
                     </div>;
-                  ))}
+                  )}
                 </div>;
               </div>;
               <div>;
@@ -328,26 +328,26 @@ export default function AdvancedServicesShowcase() {;
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">;
           <div className="text-center">;
             <motion.h1;
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="text-4xl md:text-6xl font-bold text-white mb-6";
             >;
               2025 Advanced Services Showcase;
             </motion.h1>;
             <motion.p;
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8, delay: 0.2 }
               className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto";
             >;
               Discover our comprehensive portfolio of real, innovative, and market-ready solutions.;
               From AI-powered enterprise services to cutting-edge quantum computing platforms.;
             </motion.p>;
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8, delay: 0.4 }
               className="flex flex-col sm:flex-row gap-4 justify-center items-center";
             >;
               <div className="flex items-center gap-2 text-white">;
@@ -426,7 +426,7 @@ export default function AdvancedServicesShowcase() {;
                 <button;
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded-lg transition-all duration-300 ${;
-                    viewMode === 'grid';
+                    viewMode = = 'grid';
                       ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400';
                       : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600';
                   }`}
@@ -436,7 +436,7 @@ export default function AdvancedServicesShowcase() {;
                 <button;
                   onClick={() => setViewMode('list')}
                   className={`p-2 rounded-lg transition-all duration-300 ${;
-                    viewMode === 'list';
+                    viewMode = = 'list';
                       ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400';
                       : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600';
                   }`}
@@ -449,12 +449,12 @@ export default function AdvancedServicesShowcase() {;
           {/* Category Filters */}
           <div className="mt-6">;
             <div className="flex flex-wrap gap-3">;
-              {categories.map((category) => (;
+              {categories.map(category) => (;
                 <button;
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
                   className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 ${;
-                    selectedCategory === category.id;
+                    selectedCategory = = category.id;
                       ? 'bg-gradient-to-r text-white shadow-lg';
                       : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700';
                   } ${category.color}`}
@@ -462,7 +462,7 @@ export default function AdvancedServicesShowcase() {;
                   {category.icon}
                   {category.name}
                 </button>;
-              ))}
+              )}
             </div>;
           </div>;
         </div>;
@@ -475,7 +475,7 @@ export default function AdvancedServicesShowcase() {;
                   {filteredServices.length} Services Found;
                 </h2>;
                 <p className="text-gray-600 dark:text-gray-400">;
-                  {selectedCategory !== 'all' && `Filtered by: ${categories.find(c => c.id === selectedCategory)?.name}`}
+                  {selectedCategory != 'all' && `Filtered by: ${categories.find(c => c.id = = selectedCategory)?.name}`}
                   {searchTerm && `  Search: "${searchTerm}"`}
                 </p>;
               </div>;
@@ -494,7 +494,7 @@ export default function AdvancedServicesShowcase() {;
         </div>;
         {/* Services Grid/List */}
         <div className="space-y-6">;
-          {filteredServices.length === 0 ? (;
+          {filteredServices.length = = 0 ? (;
             <div className="text-center py-12">;
               <div className="text-gray-400 dark:text-gray-500 text-6xl mb-4"></div>;
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">;
@@ -506,17 +506,17 @@ export default function AdvancedServicesShowcase() {;
             </div>;
           ) : (;
             <AnimatePresence>;
-              {viewMode === 'grid' ? (;
+              {viewMode = = 'grid' ? (;
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-                          {filteredServices.map((service) => (;
+                          {filteredServices.map(service) => (;
           <ServiceCard key={service.id} service={service} />;
-        ))}
+        )}
                 </div>;
               ) : (;
                 <div className="space-y-6">;
-                  {filteredServices.map((service) => (;
+                  {filteredServices.map(service) => (;
                     <ServiceList key={service.id} service={service} />;
-                  ))}
+                  )}
                 </div>;
               )}
             </AnimatePresence>;
@@ -553,4 +553,3 @@ export default function AdvancedServicesShowcase() {;
       </div>;
     </div>;
   );
-}

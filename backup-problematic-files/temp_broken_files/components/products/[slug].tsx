@@ -8,7 +8,7 @@ const EquipmentDetail: NextPage = () => {
   const router = useRouter(),
   const { slug } = router.query as { slug?: string },
   const items = equipment as any[],
-  const item = items.find((e) => e.slug === slug),
+  const item = items.find(e) => e.slug = = slug),
   if (!item) {_return (
       <EnhancedLayout>
         <Head>
@@ -50,6 +50,6 @@ const EquipmentDetail: NextPage = () => {
       </div>
     </EnhancedLayout>
   )
-},
+,
 
 export default EquipmentDetail,

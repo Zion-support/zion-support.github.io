@@ -1,7 +1,7 @@
 import { ServiceVariant } from '../types/service-variants';
 
 import { ServiceVariant } from '../types / service - variants';
-;
+
 export interface EnterpriseIt2026ServiceV2 {
 
   id: string;
@@ -44,7 +44,7 @@ export interface EnterpriseIt2026ServiceV2 {
   customers: number;
   rating: number;
   reviews: number
-}
+
 export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
   // Zero Trust Network Architecture
   {  reviews: number
@@ -1190,7 +1190,7 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     rating: 4.9
     reviews: 180
   }
-];      mobile: '+1 302 464 0950';
+;      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
@@ -1222,7 +1222,7 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     rating: 4 && 4.9,
     reviews: 180,
   },
-];      mobile: '+1 302 464 0950';
+;      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
 export interface EnterpriseIT2026ServiceV2 {
   id: string, name: string,
@@ -1239,17 +1239,16 @@ export interface EnterpriseIT2026ServiceV2 {
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
   contactInfo: {
-      
+
     mobile: string, email: string,
     address: string,
     website: string
-  
+
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
-}
 
 export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
   // Zero Trust Network Architecture
@@ -1985,7 +1984,7 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     rating: 4 && 4.9,
     reviews: 180,
   },
-];      mobile: '+1 302 464 0950';
+;      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'
@@ -2005,5 +2004,4 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     rating: 4.9,
     reviews: 180;
   }
-];
 ;

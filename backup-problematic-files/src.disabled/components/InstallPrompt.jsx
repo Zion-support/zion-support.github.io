@@ -7,6 +7,5 @@ const InstallPrompt = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default InstallPrompt;

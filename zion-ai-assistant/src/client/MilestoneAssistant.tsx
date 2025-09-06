@@ -5,13 +5,13 @@ export interface MilestoneAssistantProps {scopeOfWork: string;
   endDateIso: string;
   projectType: ProjectType;
   onAccept?: (milestones: SuggestedMilestoneItem[], autoAdd: boolean) => void;
-}
+
 export function MilestoneAssistant(props: MilestoneAssistantProps) {const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [autoAdd, setAutoAdd] = useState(true);
   const [items, setItems] = useState<SuggestedMilestoneItem[]>([]);
   const [expandedIdx, setExpandedIdx] = useState<number | null>(0);
-  const isDisabled = useMemo(() => {;
+  const isDisabled = useMemo() => {;
     return !props.scopeOfWork |!props.startDateIso |!props.endDateIso |!props.projectType;
   }, [props.scopeOfWork, props.startDateIso, props.endDateIso, props.projectType]);
   async function generate() {setLoading(true);
@@ -36,49 +36,48 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {const [loadi
     } catch (e: any) {setError(e?.message |"Unexpected error");
     } finally {setLoading(false);
     }
+  function updateItem(idx: number, patch: Partial<SuggestedMilestoneItem>) {setItems(prev) => prev.map(m, i) => (i = = idx ? { ...m, ...patch } : m));
   }
-  function updateItem(idx: number, patch: Partial<SuggestedMilestoneItem>) {setItems((prev) => prev.map((m, i) => (i === idx ? { ...m, ...patch } : m)));
-  }
-  function removeItem(idx: number) {setItems((prev) => prev.filter((_, i) => i !== idx));
+  function removeItem(idx: number) {setItems(prev) => prev.filter(_, i) => i != idx);
   }
   function accept() {props.onAccept?.(items, autoAdd);
   }
   return (;
     <div className="milestone-assistant">;
-      <div className="assistant-header" style={{ display: "flex", gap: 12, alignItems: "center" }}>;
+      <div className="assistant-header" style={ display: "flex", gap: 12, alignItems: "center" }>;
         <button onClick={generate} disabled={loading |isDisabled}>;
           {loading ? "Generating..." : " Generate AI Milestones"}
         </button>;
-        <label style={{ display: "flex", gap: 6, align_items: "center" }}>;
+        <label style={ display: "flex", gap: 6, align_items: "center" }>;
           <input type="checkbox" checked={auto_add} on_change={(e) => setAutoAdd (e.target.checked)} />;
           Auto - add to Milestone Tracker;
         </label>;
       </div>;
-      {error && <div style={{ color: "#b00", marginTop: 8 }}>{error}</div>}
-      <div style={{ marginTop: 12 }}>;
-        {items.length === 0 && !loading && (;
-          <div style={{ color: "#666" }}>No suggestions yet. Click "Generate" above.</div>;
+      {error && <div style={ color: "#b00", marginTop: 8 }>{error}</div>}
+      <div style={ marginTop: 12 }>;
+        {items.length = = 0 && !loading && (;
+          <div style={ color: "#666" }>No suggestions yet. Click "Generate" above.</div>;
         )}
-        {items.map((item, idx) => (;
-          <div key={idx} className="milestone-item" style={{ border: "1px solid #ddd", borderRadius: 8, marginBottom: 8 }}>;
+        {items.map(item, idx) => (;
+          <div key={idx} className="milestone-item" style={ border: "1px solid #ddd", borderRadius: 8, marginBottom: 8 }>;
             <div;
               className="milestone - summary";
-              style={{ padding: 12, cursor: "pointer", display: "flex", justify_content: "space - between", align_items: "center" }}
-              on_click={() => setExpandedIdx (expanded_idx === idx ? null : idx)}
+              style={ padding: 12, cursor: "pointer", display: "flex", justify_content: "space - between", align_items: "center" }
+              on_click={() => setExpandedIdx (expanded_idx = = idx ? null : idx)}
             >;
-              <div style={{ display: "flex", gap: 8, alignItems: "center" }}>;
-                <span style={{ fontWeight: 600 }}>{item.title |`Milestone ${idx + 1}`}</span>;
-                <span style={{ background: "#eef7ff", color: "#1677ff", padding: "2px 6px", borderRadius: 4, fontSize: 12 }}>;
+              <div style={ display: "flex", gap: 8, alignItems: "center" }>;
+                <span style={ fontWeight: 600 }>{item.title |`Milestone ${idx + 1}`}</span>;
+                <span style={ background: "#eef7ff", color: "#1677ff", padding: "2px 6px", borderRadius: 4, fontSize: 12 }>;
                   AI Suggested;
                 </span>;
               </div>;
-              <div style={{ font_size: 12, color: "#555" }}>;
+              <div style={ font_size: 12, color: "#555" }>;
                 Due: {new Date (item.suggestedDueDateIso).toLocaleDateString ()}  ~{item.estimatedEffortHours}h;
               </div>;
             </div>;
-            {expanded_idx === idx && (
-              <div className="milestone - details" style={{ padding: 12, display: "grid", gap: 8 }}>;
-                <div style={{ display: "grid", gap: 6 }}>;
+            {expanded_idx = = idx && (
+              <div className="milestone - details" style={ padding: 12, display: "grid", gap: 8 }>;
+                <div style={ display: "grid", gap: 6 }>;
                   <label > Title</label>;
                   <input;
                     value={item.title}
@@ -86,7 +85,7 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {const [loadi
                     placeholder="Title";
                   />;
                 </div>;
-                <div style={{ display: "grid", gap: 6 }}>;
+                <div style={ display: "grid", gap: 6 }>;
                   <label > Description</label>;
                   <textarea;
                     value={item.description}
@@ -95,7 +94,7 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {const [loadi
                     placeholder="Description";
                   />;
                 </div>;
-                <div style={{ display: "grid", gap: 6 }}>;
+                <div style={ display: "grid", gap: 6 }>;
                   <label > Suggested due date</label>;
                   <input;
                     type="date";
@@ -103,22 +102,22 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {const [loadi
                     on_change={(e) => update_item (idx, { suggestedDueDateIso: new Date (e.target.value).toISOString () })}
                   />;
                 </div>;
-                <div style={{ display: "grid", gap: 6 }}>;
+                <div style={ display: "grid", gap: 6 }>;
                   <label > Estimated effort (hours)</label>;
                   <input;
                     type="number";
                     min={1}
                     value={item.estimatedEffortHours}
-                    onChange={(e) => updateItem(idx, { estimatedEffortHours: Math.max(1, parseInt(e.target.value |"0", 10)) })}
+                    onChange={(e) => updateItem(idx, { estimatedEffortHours: Math.max(1, parseInt(e.target.value |"0", 10) })}
                   />;
                 </div>;
-                <div style={{ display: "flex", justify_content: "space - between", margin_top: 8 }}>;
-                  <button on_click={() => remove_item (idx)} style={{ color: "#b00" }}>Remove</button>;
+                <div style={ display: "flex", justify_content: "space - between", margin_top: 8 }>;
+                  <button on_click={() => remove_item (idx)} style={ color: "#b00" }>Remove</button>;
                   <button on_click={accept}>Accept</button>;
                 </div>;
               </div>)}
-          </div>))}
+          </div>)}
       </div>;
     </div>);
-}
+
 export default MilestoneAssistant;

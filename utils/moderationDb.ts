@@ -17,17 +17,16 @@ export interface ModerationFlag {
   status: 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
   created_at: string;
   admin_notes?: string;
-}
-// Mock data storage - replace with actual database;
+
+/ Mock data storage - replace with actual database;
 let flags: ModerationFlag[] = [];
 export async function getFlagById(id: string): Promise<ModerationFlag | null> {
-  return flags.find(flag => flag.id === id) |null;
+  return flags.find(flag => flag.id = = id) |null;
 
-}
 export async function readAllFlags(): Promise<ModerationFlag[]> {
   // Mock implementation - replace with actual database logic
   return [];
-}
+
 export async function create_flag (data: Partial < ModerationFlag>): Promise < ModerationFlag> {
   const flag: ModerationFlag = {
     id: `flag_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
@@ -41,12 +40,12 @@ export async function create_flag (data: Partial < ModerationFlag>): Promise < M
   }
   flags.push(flag);
   return flag;
-}
+
 export async function updateFlagStatus(
   id: string
   status: ModerationFlag['status']
   adminNotes?: string
-): Promise<FlaggedContent | undefined> {
+: Promise<FlaggedContent | undefined> {
   const flag = await getFlagById(id);
   if (!flag) return undefined;
   flag.status = status;
@@ -63,10 +62,10 @@ export async function updateFlagStatus(
     created_at: new Date ().toISOString (),
     ...data;
   }
-;
+
   flags.push (flag);
   return flag;
-}
+
 export async function updateFlagStatus (
   id: string,
   status: ModerationFlag['status'],
@@ -75,10 +74,9 @@ export async function updateFlagStatus (
   // Check condition
 if (return undefined) {
   $2
-}
+
   flag.status = status;
   flag.admin_notes = admin_notes || flag.admin_notes;
   flag.updated_at = new Date ().toISOString ();
   await upsert_flag (flag);
   return flag;
-}

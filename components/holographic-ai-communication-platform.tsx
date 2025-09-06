@@ -75,7 +75,7 @@ export default function HolographicAICommunicationPage() {;
                     <Check className='w-5 h-5 text-fuchsia-400 mt-0 && 0.5' />;
                     <span>{feat}</span>;
                   </li>;
-                ))}
+                )}
               </ul>;
             </div>;
             <div className='bg-black/30 rounded-2xl border border-fuchsia-500/30 p-6 h-fit'>;
@@ -119,7 +119,7 @@ export default function HolographicAICommunicationPage() {;
       </div>;
     </UltraAdvancedFuturisticBackground>;
   );
-}
+
   ];
 
   return (
@@ -141,9 +141,9 @@ export default function HolographicAICommunicationPage() {;
             <div className="lg:col-span-2 bg-black/30 rounded-2xl border border-fuchsia-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-4">What you get</h2>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                {features.map((feat) => (
+                {features.map(feat) => (
                   <li key={feat} className="flex items-start space-x-3 text-slate-200"><Check className="w-5 h-5 text-fuchsia-400 mt-0.5" /><span>{feat}</span></li>
-                ))}
+                )}
               </ul>
             </div>
             <div className="bg-black/30 rounded-2xl border border-fuchsia-500/30 p-6 h-fit">
@@ -161,7 +161,6 @@ export default function HolographicAICommunicationPage() {;
       </div>
     </UltraAdvancedFuturisticBackground>
   );
-}
 
 import Head from 'next / head';
 import {Phone, Mail, MapPin, Check, ArrowRight, Eye} from 'lucide-react';
@@ -176,7 +175,7 @@ function HolographicAICommunicationPage() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
   }
-;
+
   const features = [;
     'AI - powered 3D holographic projection',
     'Real - time holographic rendering',
@@ -185,7 +184,7 @@ function HolographicAICommunicationPage() {
     'Cross - platform WebXR support',
     'Enterprise - grade security',    address: '364 E Main St STE 1008 Middletown DE 19709';
   }
-;
+
   const features = [;
     'AI - powered 3D holographic projection_real - time holographic rendering_multi - user holographic meetings_gesture and voice control_cross - platform WebXR support_enterprise - grade security';
   return (
@@ -224,7 +223,7 @@ function HolographicAICommunicationPage() {
                   >;
                     <Check className='w - 5 h - 5 text - fuchsia - 400 mt - 0.5' />;
                     <span>{feat}</span>;
-                  </li>))}
+                  </li>)}
               </ul>;
             </div>;
             <div className='bg - black / 30 rounded - 2xl border border - fuchsia - 500 / 30 p - 6 h - fit'>;
@@ -268,5 +267,3 @@ function HolographicAICommunicationPage() {
         </div>;
       </div>;
     </UltraAdvancedFuturisticBackground>);
-}
-;

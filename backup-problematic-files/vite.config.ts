@@ -1,7 +1,7 @@
 import { defineConfig, splitVendorChunkPlugin } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'node:path';
-;
+
 export default defineConfig({;
   plugins:[;
     react({;
@@ -60,12 +60,11 @@ export default defineConfig({;
         chunkFileNames:'js/[name]-[hash].js',;
         entryFileNames:'js/[name]-[hash].js',;
         assetFileNames:(assetInfo) => {;
-          if (/\.(css)$/.test(assetInfo.name || '')) return 'css/[name]-[hash].[ext]';
-          if (/\.(png|jpe?g|gif|svg|webp|ico)$/.test(assetInfo.name || '')) return 'images/[name]-[hash].[ext]';
-          if (/\.(woff2?|eot|ttf|otf)$/.test(assetInfo.name || '')) return 'fonts/[name]-[hash].[ext]';
+          if (/\.(css)$/.test(assetInfo.name || '') return 'css/[name]-[hash].[ext]';
+          if (/\.(png|jpe?g|gif|svg|webp|ico)$/.test(assetInfo.name || '') return 'images/[name]-[hash].[ext]';
+          if (/\.(woff2?|eot|ttf|otf)$/.test(assetInfo.name || '') return 'fonts/[name]-[hash].[ext]';
           return 'assets/[name]-[hash].[ext]';
         }
-      }
     },;
     terserOptions:{;
       compress:{;
@@ -85,7 +84,6 @@ export default defineConfig({;
         properties:{;
           regex:/^_/,;
         }
-      }
     },;
     chunkSizeWarningLimit:1000,;
     reportCompressedSize:false,;
@@ -123,8 +121,7 @@ export default defineConfig({;
     exclude:['@radix-ui/react-icons'],;
     esbuildOptions:{;
       target:'esnext',;
-    }
-  },;
+    },;
   css:{;
     devSourcemap:false,;
   },;
@@ -141,22 +138,21 @@ export default defineConfig({;
     },;
     fs:{;
       allow:['..'],;
-    }
-  },;
+    },;
   preview:{;
     port:4173,;
     host:true,;
     open:true,;
   },;
   define:{;
-    __DEV__:JSON.stringify(process.env.NODE_ENV === 'development'),;
-    __PROD__:JSON.stringify(process.env.NODE_ENV === 'production'),;
+    __DEV__:JSON.stringify(process.env.NODE_ENV = = 'development'),;
+    __PROD__:JSON.stringify(process.env.NODE_ENV = = 'production'),;
     'process.env.NODE_ENV':JSON.stringify(process.env.NODE_ENV),;
   },;
   envPrefix:['VITE_', 'ZION_'],;
   experimental:{;
     renderBuiltUrl(filename, { hostType }) {;
-      if (hostType === 'js') {;
+      if (hostType = = 'js') {;
         return { js:`__ASSET__${filename}__` };
       } else {;
         return { relative:true };      fastRefresh: true,
@@ -176,11 +172,11 @@ export default defineConfig({;
             'clsx', _'tailwind-merge', _'class-variance-authority', _], _'icons-vendor': ['lucide-react'], _'state-vendor': ['@reduxjs/toolkit', _'react-redux'], _'router-vendor': ['react-router-dom'], },
         chunkFileNames: 'js/[name]-[hash].js',
         entryFileNames: 'js/[name]-[hash].js',
-        assetFileNames: assetInfo => {_if (/\.(css)$/.test(assetInfo.name || ''))
+        assetFileNames: assetInfo => {_if (/\.(css)$/.test(assetInfo.name || '')
             return 'css/[name]-[hash].[ext]';
-          if (/\.(png|jpe?g|gif|svg|webp|ico)$/.test(assetInfo.name || ''))
+          if (/\.(png|jpe?g|gif|svg|webp|ico)$/.test(assetInfo.name || '')
             return 'images/[name]-[hash].[ext]';
-          if (/\.(woff2?|eot|ttf|otf)$/.test(assetInfo.name || ''))
+          if (/\.(woff2?|eot|ttf|otf)$/.test(assetInfo.name || '')
             return 'fonts/[name]-[hash].[ext]';
           return 'assets/[name]-[hash].[ext]';},
       },    },
@@ -206,7 +202,6 @@ export default defineConfig({;
         properties: {
           regex: /^_/,
         },      },        }
-      }
     },
     chunkSizeWarningLimit: 1000,
     reportCompressedSize: false,
@@ -266,8 +261,8 @@ export default defineConfig({;
     open: true
   },
   define: {
-    __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
-    __PROD__: JSON.stringify(process.env.NODE_ENV === 'production'),
+    __DEV__: JSON.stringify(process.env.NODE_ENV = = 'development'),
+    __PROD__: JSON.stringify(process.env.NODE_ENV = = 'production'),
     'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
   optimizeDeps: {_include: [
       'react', _'react-dom', _'react-router-dom', _'framer-motion', _'lucide-react', _'@radix-ui/react-accordion', _'@radix-ui/react-alert-dialog', _'@radix-ui/react-avatar', _'@radix-ui/react-checkbox', _'@radix-ui/react-collapsible', _'@radix-ui/react-dialog', _'@radix-ui/react-dropdown-menu', _'@radix-ui/react-label', _'@radix-ui/react-popover', _'@radix-ui/react-progress', _'@radix-ui/react-radio-group', _'@radix-ui/react-scroll-area', _'@radix-ui/react-select', _'@radix-ui/react-separator', _'@radix-ui/react-slider', _'@radix-ui/react-slot', _'@radix-ui/react-switch', _'@radix-ui/react-tabs', _'@radix-ui/react-toast', _'@radix-ui/react-tooltip', _], _exclude: ['@radix-ui/react-icons'], _esbuildOptions: {
@@ -280,11 +275,10 @@ export default defineConfig({;
     fs: {_allow: ['..'], },
   },
   preview: {_port: 4173, _host: true, _open: true, },
-  define: {__DEV__: JSON.stringify(process.env.NODE_ENV === 'development'), __PROD__: JSON.stringify(process.env.NODE_ENV === 'production'), _'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV), },
+  define: {__DEV__: JSON.stringify(process.env.NODE_ENV = = 'development'), __PROD__: JSON.stringify(process.env.NODE_ENV = = 'production'), _'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV), },
   envPrefix: ['VITE_', 'ZION_'],
-  experimental: {_renderBuiltUrl(filename, _{ hostType}) {_if (hostType === 'js') {
+  experimental: {_renderBuiltUrl(filename, _{ hostType}) {_if (hostType = = 'js') {
         return { js: `__ASSET__${filename}__` };
       } else {_return { relative: true};
     }
-  }
-});
+);

@@ -5,43 +5,33 @@ import { useAuth } from '@/hooks/useAuth',;
 import { toast } from 'sonner',;
 import { Milestone, MilestoneStatus } from './types',;
 import { useRecordActivity } from './useRecordActivity',;
-;
+
 export const useUpdateMilestone = () => {;
   const { user } = useAuth(),;
   const [isSubmitting, setIsSubmitting] = useState(false),;
   const { recordMilestoneActivity } = useRecordActivity(),;
-  ;
   const updateMilestoneStatus = async (milestoneId:string, newStatus:MilestoneStatus, comment?:string) => {;
     if (!user) return false,;
-    ;
     try {;
       setIsSubmitting(true),;
-      ;
       // Get the current status;
       const { data:milestoneData, error:fetchError } = await supabase;
         .from('project_milestones');
         .select('status');
         .eq('id', milestoneId);
         .single(),;
-      ;
       if (fetchError) throw fetchError,;
       if (!milestoneData) throw new Error("Milestone not found"),;
-      ;
       const previousStatus = milestoneData.status,;
-      ;
       // Update the milestone status;
       const { error } = await supabase;
         .from('project_milestones');
         .update({ status:newStatus });
         .eq('id', milestoneId),;
-      ;
       if (error) throw error,;
-      ;
       // Create activity record;
       await recordMilestoneActivity(milestoneId, 'status_changed', previousStatus, newStatus, comment),;
-      ;
       toast.success(`Milestone status changed to ${newStatus}`),;
-      ;
       return true,;
     } catch (err:any) {;
       console.error("Error updating milestone status:", err),;
@@ -49,27 +39,19 @@ export const useUpdateMilestone = () => {;
       return false;
     } finally {;
       setIsSubmitting(false),;
-    }
-  },;
-  ;
+    },;
   const updateMilestone = async (milestoneId:string, data:Partial<Milestone>) => {;
     if (!user) return false,;
-    ;
     try {;
       setIsSubmitting(true),;
-      ;
       const { error } = await supabase;
         .from('project_milestones');
         .update(data);
         .eq('id', milestoneId),;
-      ;
       if (error) throw error,;
-      ;
       // Create activity record;
       await recordMilestoneActivity(milestoneId, 'updated', null, 'updatedMilestone details updated'),;
-      ;
       toast.success("Milestone updated successfully"),;
-      ;
       return true,;
     } catch (err:any) {;
       console.error("Error updating milestone:", err),;
@@ -77,42 +59,40 @@ export const useUpdateMilestone = () => {;
       return false;
     } finally {;
       setIsSubmitting(false),;
-    }
-  },;
-  ;
+    },;
   return {;
     updateMilestoneStatus,;
     updateMilestone,;
     isSubmitting;
   },;
-},; try {
+,; try {
   setIsSubmitting (true);
-//Get the current status const {
+/Get the current status const {
   data: milestoneData, error: fetchError 
-}= await supabase .from ('project milestones') .select ('status') .eq ('id', milestoneId) .single ();
-//Update the milestone status const {
+= await supabase .from ('project milestones') .select ('status') .eq ('id', milestoneId) .single ();
+/Update the milestone status const {
   error 
-}= await supabase .from ('project milestones') if (error) throw error;
-//Create activity record await recordMilestoneActivity (milestoneId, 'status changed', previousStatus, newStatus, comment);
-}finally {
+= await supabase .from ('project milestones') if (error) throw error;
+/Create activity record await recordMilestoneActivity (milestoneId, 'status changed', previousStatus, newStatus, comment);
+finally {
   setIsSubmitting (false) 
-}
-};
+
+;
 const updateMilestone = async (milestoneId: string, data: Partial<Milestone>) => {
   if (!user) return false;
 setIsSubmitting (true);
 const {
   error 
-}= await supabase .from ('project milestones') .update (data) .eq ('id', milestoneId);
+= await supabase .from ('project milestones') .update (data) .eq ('id', milestoneId);
 if (error) throw error;
-// Create activity record await recordMilestoneActivity (milestoneId, 'updated', null, 'updatedMilestone details updated');
-}finally {
+/ Create activity record await recordMilestoneActivity (milestoneId, 'updated', null, 'updatedMilestone details updated');
+finally {
   setIsSubmitting (false) 
-}
-};
+
+;
 return {
   updateMilestoneStatus;
 updateMilestone;
 isSubmitting 
-}
-};
+
+;

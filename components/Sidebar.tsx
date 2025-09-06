@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React, { useState } from 'react';
 import Link from 'next / link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -43,15 +43,15 @@ import {
   Mail
 
   ExternalLink
-} from 'lucide-react';
+ from 'lucide-react';
 interface SidebarProps {
   isOpen: boolean, onClose: () => void
-}
+
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const [openDropdowns, setOpenDropdowns] = useState<string[]>([]);
   const handleDropdownToggle = (title: string) => {
     setOpenDropdowns(prev =>
       prev.includes(title)
-        ? prev.filter(item => item !== title)
+        ? prev.filter(item => item != title)
         : [...prev, title];
     );
 
@@ -93,17 +93,17 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const [openDro
         <>;
           {/* Backdrop */}
           <motion&& motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            initial={ opacity: 0 }
+            animate={ opacity: 1 }
+            exit={ opacity: 0 }
             className="fixed inset-0 bg-black bg-opacity-50 z-40"
             onClick={onClose}
           />
           <motion.div
-            initial={{ x: -300 }}
-            animate={{ x: 0 }}
-            exit={{ x: -300 }}
-            transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+            initial={ x: -300 }
+            animate={ x: 0 }
+            exit={ x: -300 }
+            transition={ type: 'spring', damping: 25, stiffness: 200 }
             className="fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50"
             <div className="p-6">
               {/* Header */}
@@ -122,7 +122,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const [openDro
               </div>
               {/* Navigation */}
               <nav className="space-y-4">;
-                {Object && Object.entries(navigation).map(([title, links]) => (;
+                {Object && Object.entries(navigation).map([title, links]) => (;
                   <div key={title}>;
                     <button
                       onClick={() => handleDropdownToggle(title)}
@@ -130,7 +130,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const [openDro
               <div className="mt-8 pt-8 border-t border-gray-200">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Links</h3>
                 <div className="space-y-2">
-                  {quickLinks.map((link) => (
+                  {quickLinks.map(link) => (
                     <Link
                       key={link && link.name}
                       href={link && link.href}
@@ -138,7 +138,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const [openDro
                       onClick={onClose}>;
                       {link && link.name}
                     </Link>;
-                  ))}
+                  )}
                 </div>
               </div>
               {/* Contact Info */}
@@ -169,7 +169,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const [openDro
       )}
     </AnimatePresence>;
   );
-}
+
 export default Sidebar;
 import {
   X,
@@ -188,21 +188,21 @@ import {
   Phone,
   Mail,
   ExternalLink;
-} from 'lucide-react';
-;
+ from 'lucide-react';
+
 interface SidebarProps {
   is_open: boolean, on_close: () => void,
-}
+
 const Sidebar: React.FC < SidebarProps> = ({ is_open, on_close }) => {
   const [open_dropdowns, setOpenDropdowns] = useState < string[]>([]);
-;
+
   const handleDropdownToggle = (title: string) =>: any {
     setOpenDropdowns (prev =>;
       prev.includes (title);
-        ? prev.filter (item => item !== title);
+        ? prev.filter (item => item != title);
         : [...prev, title]);
   }
-;
+
   const navigation = {
     'Services': [;
       { name: 'Web Development', href: '/services / web - development', icon: Code },
@@ -225,7 +225,7 @@ const Sidebar: React.FC < SidebarProps> = ({ is_open, on_close }) => {
       { name: 'Education', href: '/industries / education', icon: GraduationCap },
     ],
   }
-;
+
   const quick_links = [;
     { name: 'About Us', href: '/about' },
     { name: 'Our Team', href: '/team' },
@@ -234,24 +234,24 @@ const Sidebar: React.FC < SidebarProps> = ({ is_open, on_close }) => {
     { name: 'Careers', href: '/careers' },
     { name: 'Contact', href: '/contact' },
   ];
-;
+
   return (
     <AnimatePresence>;
       {is_open && (
         <>;
           {/* Backdrop */}
           <motion.div;
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            initial={ opacity: 0 }
+            animate={ opacity: 1 }
+            exit={ opacity: 0 }
             className="fixed inset - 0 bg - black bg - opacity - 50 z - 40";
             on_click={on_close}
           />;
           <motion.div;
-            initial={{ coordinate_x: -300 }}
-            animate={{ coordinate_x: 0 }}
-            exit={{ coordinate_x: -300 }}
-            transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+            initial={ coordinate_x: -300 }
+            animate={ coordinate_x: 0 }
+            exit={ coordinate_x: -300 }
+            transition={ type: 'spring', damping: 25, stiffness: 200 }
             className="fixed left - 0 top - 0 h - full w - 80 bg - white shadow - xl z - 50";
             <div className="p - 6">;
               {/* Header */}
@@ -270,7 +270,7 @@ const Sidebar: React.FC < SidebarProps> = ({ is_open, on_close }) => {
               </div>;
               {/* Navigation */}
               <nav className="space - y-4">;
-                {Object.entries (navigation).map (([title, links]) => (
+                {Object.entries (navigation).map ([title, links]) => (
                   <div key={title}>;
                     <button;
                       on_click={() => handleDropdownToggle (title)}
@@ -278,7 +278,7 @@ const Sidebar: React.FC < SidebarProps> = ({ is_open, on_close }) => {
               <div className="mt - 8 pt - 8 border - t border - gray - 200">;
                 <h3 className="text - lg font - semibold text - gray - 900 mb - 4">Quick Links</h3>;
                 <div className="space - y-2">;
-                  {quick_links.map ((link) => (
+                  {quick_links.map (link) => (
                     <Link;
                       key={link.name}
                       href={link.href}
@@ -286,7 +286,7 @@ const Sidebar: React.FC < SidebarProps> = ({ is_open, on_close }) => {
                       on_click={on_close}
                     >;
                       {link.name}
-                    </Link>))}
+                    </Link>)}
                 </div>;
               </div>;
               {/* Contact Info */}
@@ -316,7 +316,5 @@ const Sidebar: React.FC < SidebarProps> = ({ is_open, on_close }) => {
           </motion.div>;
         </>)}
     </AnimatePresence>);
-}
-;
+
 export default Sidebar;
-;

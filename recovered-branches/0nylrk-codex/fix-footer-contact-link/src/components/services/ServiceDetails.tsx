@@ -3,14 +3,14 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Server, Clock, MapPin } from "lucide-react";
 interface ServiceDetailsProps {
   country: string;
-}
-// Component to show service details for the selected country
+
+/ Component to show service details for the selected country
 export function ServiceDetails({ country }: ServiceDetailsProps) {
   // Get datacenters for regions (simplified - in production this would come from a real database)
 
   const getDatacenters = (country: string): string[] => {
     const dataCenters: Record<string, string[]> = {
-// Component to show service details for the selected country;
+/ Component to show service details for the selected country;
 export /**
  * ServiceDetails - Function description
  */
@@ -55,10 +55,10 @@ function ServiceDetails() {
       // Default for other countries;
       "default": ["Major metropolitan areas"];
     }
-;
+
     return data_centers[country] || data_centers["default"];
   }
-;
+
   // Get region - specific image;
   const getRegionalImage = (country: string): string => {
     // In a real app, you'd have specific images for each region;
@@ -72,10 +72,10 @@ function ServiceDetails() {
       // Default placeholder;
       "default": "https://source.unsplash.com / featured / 900x700/?datacenter";
     }
-;
+
     return regions[country] || regions["default"];
   }
-;
+
   // Get region - specific instructions;
   const getRegionalInstructions = (country: string): string => {
     // In a real implementation, this would be much more detailed and specific;
@@ -122,14 +122,14 @@ function ServiceDetails() {
               Service Locations
             </h4>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
-              {datacenters.map((dc, idx) => (
+              {datacenters.map(dc, idx) => (
                 <div
                   key={idx}
                   className="bg-zion-blue p-2 rounded border border-zion-blue-light text-center text-zion-slate-light"
                 >
                   {dc}
                 </div>;
-              ))}
+              )}
             </div>
           </div>
           <div>
@@ -160,7 +160,7 @@ function ServiceDetails() {
       </CardFooter>
     </Card>
   )
-}
+
             </ul>;
           </div>;
         </div>;
@@ -172,11 +172,10 @@ function ServiceDetails() {
       </CardFooter>;
     </Card>;
   );
-}
+
       <CardFooter className="border - t border - zion - blue - light pt - 4">;
         <p className="text - sm text - zion - slate - light">;
           For custom enterprise needs or multi - site services in {country}, please contact our enterprise team for tailored pricing.;
         </p>;
       </CardFooter>;
     </Card>);
-}

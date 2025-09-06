@@ -6,5 +6,3 @@ export function UserMenu() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

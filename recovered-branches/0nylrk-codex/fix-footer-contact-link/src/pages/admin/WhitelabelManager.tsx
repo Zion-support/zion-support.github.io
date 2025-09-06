@@ -13,7 +13,7 @@ export default function WhitelabelManager() {
   const [activeTab, setActiveTab] = useState("tenants");
   // Check if user has admin role
 
-  const isAdmin = user?.role === "admin";
+  const isAdmin = user?.role = = "admin";
   if (!isAdmin) {
     return <Navigate to="/unauthorized" />
   }
@@ -96,7 +96,7 @@ export default function WhitelabelManager() {
       <Footer />
     </>
   )
-}
+
               <TabsTrigger value="tenants">Tenants</TabsTrigger>;
               <TabsTrigger value="create">Create New</TabsTrigger>;
               <TabsTrigger value="docs">Documentation</TabsTrigger>;
@@ -163,6 +163,5 @@ export default function WhitelabelManager() {
       <Footer />;
     </>;
   );
-}
+
     </>);
-}

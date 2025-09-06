@@ -1,5 +1,4 @@
 
-
 import {GradientHeading} from "./GradientHeading";
 import {Link} from "react-router-dom";
 import {Briefcase, HardDrive, Lightbulb, Users} from "lucide-react";
@@ -33,11 +32,11 @@ const specialServices = [
     title: "IT Onsite Services"
     link: "/it-onsite-services"
   }
-];
+;
 
 interface CategoriesSectionProps {;
   showTitle?: boolean;
-}
+
 export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
   return (
     <section className="py-20 bg-zion-blue">;
@@ -51,7 +50,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
           </div>;
         )}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {categories.map((category) => (
+          {categories.map(category) => (
             <Link
               key={category.title}
               to={category.link}
@@ -67,12 +66,12 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
                 <p className="text-zion-slate-light">{category.description}</p>
               </div>
             </Link>
-          ))}
+          )}
         </div>
         <div className="mt-8">
           <h3 className="text-center text-xl font-bold text-white mb-6">Featured Services</h3>
           <div className="flex flex-wrap justify-center gap-4">
-            {specialServices.map((service) => (
+            {specialServices.map(service) => (
               <Link
                 key={service.title}
                 to={service.link}
@@ -80,7 +79,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
               >;
                 {service.title}
               </Link>
-            ))}
+            )}
           </div>
         </div>
         <div className="mt-12 flex justify-center">
@@ -94,13 +93,12 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
       </div>
     </section>
   )
-}
+
             View All Categories ;
           </Link>;
         </div>;
       </div>;
     </section>;
   );
-}
+
     </section>);
-}

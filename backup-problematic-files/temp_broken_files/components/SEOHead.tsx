@@ -12,7 +12,6 @@ interface SEOHeadProps {
   structuredData?: object;
   noindex?: boolean;
   nofollow?: boolean;
-}
 
 const SEOHead: React.FC<SEOHeadProps> = ({  title = 'Zion Tech Group - Technology Solutions',
   description = 'Leading provider of AI services, IT solutions, and micro SaaS development. Transform your business with cutting-edge technology solutions.',
@@ -24,9 +23,9 @@ const SEOHead: React.FC<SEOHeadProps> = ({  title = 'Zion Tech Group - Technolog
   structuredData,
   noindex = false,
   nofollow = false,
-}) => {
+) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  const currentUrl = canonicalUrl || (typeof window !== 'undefined' ? window.location.href : '');
+  const currentUrl = canonicalUrl || (typeof window != 'undefined' ? window.location.href : '');
   const imageUrl = ogImage.startsWith('http') ? ogImage : `https://zion.app${ogImage}`;
 
   const defaultStructuredData = {
@@ -60,7 +59,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({  title = 'Zion Tech Group - Technolog
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <link rel="canonical" href={currentUrl} />
-      
+
       {/* Open Graph */}
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
@@ -68,31 +67,30 @@ const SEOHead: React.FC<SEOHeadProps> = ({  title = 'Zion Tech Group - Technolog
       <meta property="og:url" content={currentUrl} />
       <meta property="og:type" content={ogType} />
       <meta property="og:site_name" content="Zion Tech Group" />
-      
+
       {/* Twitter */}
       <meta name="twitter:card" content={twitterCard} />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={imageUrl} />
-      
+
       {/* Robots */}
       <meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} />
-      
+
       {/* Additional SEO */}
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="theme-color" content="#2563eb" />
       <meta name="author" content="Zion Tech Group" />
       <meta name="language" content="en" />
-      
+
       {/* Structured Data */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
+        dangerouslySetInnerHTML={
           __html: JSON.stringify(finalStructuredData),
-        }}
+        }
       />
     </Head>
   );
-};
 
 export default SEOHead;

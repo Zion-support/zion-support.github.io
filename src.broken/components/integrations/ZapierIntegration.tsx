@@ -6,5 +6,3 @@ export function ZapierIntegration() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

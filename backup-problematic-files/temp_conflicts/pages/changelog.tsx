@@ -1,11 +1,11 @@
 import fs from 'fs',;
 import path from 'path',;
-;
+
 type Props = {;
   content:string | null,;
   generatedAt:string | null;
-},;
-;
+,;
+
 export default function ChangelogPage({ content, generatedAt } Props) {;
   return (;
     <main className="mx-auto max-w-4xl px-4 py-12">;
@@ -15,7 +15,7 @@ export default function ChangelogPage({ content, generatedAt } Props) {;
       )}
       {content ? (;
         <pre className="mt-6 whitespace-pre-wrap rounded-xl border border-gray-200 bg-white p-6 text-sm text-gray-800 shadow-sm">;
-{content}
+content}
         </pre>;
       ) :(;
         <div className="mt-6 rounded-xl border border-gray-200 bg-white p-6 text-gray-600">;
@@ -24,8 +24,7 @@ export default function ChangelogPage({ content, generatedAt } Props) {;
       )}
     </main>;
   ),;
-}
-;
+
 export async function getStaticProps() {;
   try {;
     const file = path.join(process.cwd(), 'CHANGELOG.md'),;
@@ -34,4 +33,3 @@ export async function getStaticProps() {;
   } catch {;
     return { props:{ content:null, generatedAt:null }, revalidate:300 },;
   }
-}

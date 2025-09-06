@@ -7,7 +7,7 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-},
+,
 
 export default function NeoFuturisticFooter() {
   return (
@@ -19,7 +19,7 @@ export default function NeoFuturisticFooter() {
       <div className=&quot;relative container mx-auto px-4 py-12 text-slate-200&quot;>
         <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-10&quot;>
           <div>
-            <motion.h3 initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className=&quot;text-xl font-semibold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-3&quot;>              Zion Tech Group
+            <motion.h3 initial={ opacity: 0, y: 8 } animate={ opacity: 1, y: 0 } transition={ duration: 0.5 } className=&quot;text-xl font-semibold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-3&quot;>              Zion Tech Group
             </motion.h3>
             <p className=&quot;text-slate-400 text-sm leading-relaxed&quot;>
               Productized AI, IT and micro SaaS solutions with transparent pricing and fast onboarding. Built for outcomes, delivered with reliability.
@@ -54,5 +54,3 @@ export default function NeoFuturisticFooter() {
       </div>
     </footer>
   )
-}
-;

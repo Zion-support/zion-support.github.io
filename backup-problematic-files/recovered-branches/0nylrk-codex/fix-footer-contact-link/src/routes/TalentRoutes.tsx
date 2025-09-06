@@ -6,7 +6,7 @@ import TalentProfilePage from "../pages/TalentProfilePage",;
 import SavedTalentsPage from "../pages/SavedTalentsPage",;
 import CreateTalentProfile from "../pages/CreateTalentProfile",;
 import ProfilePage from "../pages/ProfilePage",;
-;
+
 const TalentRoutes = () => {;
   return (;
     <Routes>;
@@ -33,20 +33,20 @@ const TalentRoutes = () => {;
       <Route path="/profile/:id" element={<ProfilePage />} />;
     </Routes>;
   ),;
-},;
-;export default TalentRoutes,
+,;
+export default TalentRoutes,
  const TalentRoutes = () => {
   return (<Routes> {
   /* Talent Routes */ 
-}<Route path="/talent" element= {
+<Route path="/talent" element= {
   <TalentDirectory /> 
-}/> <Route path="/talents" element= {
+/> <Route path="/talents" element= {
   <TalentsPage /> 
-}/> <Route path="/talent/:id" element= {
+/> <Route path="/talent/:id" element= {
   <TalentProfilePage /> 
-}/> <Route path="/saved-talents" element= {
+/> <Route path="/saved-talents" element= {
   <ProtectedRoute> 
-}/> <Route <CreateTalentProfile /> </ProtectedRoute> 
-}/> </Routes>) 
-};
+/> <Route <CreateTalentProfile /> </ProtectedRoute> 
+/> </Routes>) 
+;
 export default TalentRoutes;

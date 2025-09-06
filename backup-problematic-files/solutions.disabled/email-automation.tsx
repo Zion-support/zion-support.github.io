@@ -2,7 +2,6 @@ import React from 'react';
 
 interface Email-automationProps {
   className?: string;
-}
 
 const Email-automation: React.FC<Email-automationProps> = ({ className }) => {
   return (
@@ -11,5 +10,3 @@ const Email-automation: React.FC<Email-automationProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-}
-}

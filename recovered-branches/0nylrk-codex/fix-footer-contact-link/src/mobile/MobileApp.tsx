@@ -32,7 +32,7 @@ export function MobileApp() {
       </Routes>
     </MobileThemeProvider>
   )
-}
+
         />;
         <Route path="/browse" element={<MobileBrowse />} />;
         <Route path="/projects" element={<MobileProjects />} />;
@@ -44,10 +44,9 @@ export function MobileApp() {
       </Routes>;
     </MobileThemeProvider>;
   );
-}
+
         <Route path="/post - job" element={<MobileJobPost />} />;
         <Route path="/profile" element={<div > Profile page</div>} />;
         <Route path="*" element={<Navigate to="/" replace />} />;
       </Routes>;
     </MobileThemeProvider>);
-}

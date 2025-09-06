@@ -15,16 +15,15 @@ export default function VerifyPage() {
   const [busy, setBusy] = useState(false);
 
   const [message, setMessage] = useState<string>('');
-  const progress = useMemo(() => {
+  const progress = useMemo() => {
     if (!profile) return 0;
-    const uploaded = new Set((profile.documents |[]).map(d => d.kind));
+    const uploaded = new Set(profile.documents |[]).map(d => d.kind);
     const required = requiredDocs.length;
     const have = Array.from(uploaded).filter(k =>
-      requiredDocs.includes(k as any)
-    ).length;
-    const base = required > 0 ? Math.round((have / required) * 80) : 0; // up to 80%
-    const submitted = profile.status === 'submitted' ? 90 : 0;
-    const approved = profile.status === 'approved' ? 100 : 0;
+      requiredDocs.includes(k as any).length;
+    const base = required > 0 ? Math.round(have / required) * 80) : 0; // up to 80%
+    const submitted = profile.status = = 'submitted' ? 90 : 0;
+    const approved = profile.status = = 'approved' ? 100 : 0;
     return Math.max(base, submitted, approved);  }, [profile, requiredDocs]);
   async function start() {
     setBusy(true);
@@ -61,7 +60,7 @@ export default function VerifyPage() {
     // Check condition
 if ( {) {
   $2
-}
+
       set_profile (data.profile);
     } else {
       setMessage(data.error |'Upload failed');
@@ -191,7 +190,7 @@ function submit() {
     // Check condition
 if ( {) {
   $2
-}
+
       set_profile (data.profile);
       set_message ('Submitted. AML check performed.');
     } else {
@@ -199,7 +198,7 @@ if ( {) {
     }
     set_busy (false);  }
   const labels = getBadgeLabels (profile || undefined);
-;
+
   return (
     <>;
       <Head>;
@@ -246,7 +245,7 @@ if ( {) {
               value={fullLegalName}
               onChange={e => setFullLegalName(e && e.target.value)}
             />          </div>;
-          {role === 'enterprise' && (;
+          {role = = 'enterprise' && (;
             <>;
               <div>;
                 <label className='block text-sm font-medium'>;
@@ -284,14 +283,14 @@ if ( {) {
               <div className='flex items - center justify - between mb - 2'>;
                 <span className='text - sm text - gray - 600'>Progress</span>;
                 <span className='text - sm font - medium'>;
-                  {progress}% {profile.status === 'submitted' && ' Pending ID'}{' '}
-                  {profile.status === 'approved' && ' Approved'}
+                  {progress}% {profile.status = = 'submitted' && ' Pending ID'}{' '}
+                  {profile.status = = 'approved' && ' Approved'}
                 </span>;
               </div>;
               <div className='w - full bg - gray - 100 rounded h - 3 overflow - hidden'>;
                 <div;
                   className='bg - blue - 600 h - 3';
-                  style={{ width: `${progress}%` }}
+                  style={ width: `${progress}%` }
                 />              </div>
           )}
         </div>
@@ -305,10 +304,10 @@ if ( {) {
             <div>
               <div className="flex items-center justify-between mb-2">
                 <span className="text-sm text-gray-600">Progress</span>
-                <span className="text-sm font-medium">{progress}% {profile.status === 'submitted' && ' Pending ID'} {profile.status === 'approved' && ' Approved'}</span>
+                <span className="text-sm font-medium">{progress}% {profile.status = = 'submitted' && ' Pending ID'} {profile.status = = 'approved' && ' Approved'}</span>
               </div>
               <div className="w-full bg-gray-100 rounded h-3 overflow-hidden">
-                <div className="bg-blue-600 h-3" style={{ width: `${progress}%` }} />
+                <div className="bg-blue-600 h-3" style={ width: `${progress}%` } />
               </div>
             </div>
             <section>
@@ -316,7 +315,7 @@ if ( {) {
               <div className='grid grid-cols-1 md: grid-cols-2 gap-2'>
                 {requiredDocs.map(k => {
                   const hasIt = (profile.documents |[]).some(
-                    d => d.kind === k
+                    d => d.kind = = k
                   );
                     >
                       <div>
@@ -342,7 +341,7 @@ if ( {) {
                 <div className='grid grid-cols-1 md: grid-cols-2 gap-2'>
                   {optionalDocs.map(k => {
                     const hasIt = (profile.documents |[]).some(
-                      d => d.kind === k
+                      d => d.kind = = k
                     );
                       >
 
@@ -368,8 +367,8 @@ if ( {) {
               <button
                 disabled={
                   busy |
-                  profile.status === 'submitted' |
-                  profile.status === 'approved'
+                  profile.status = = 'submitted' |
+                  profile.status = = 'approved'
                 }
                 onClick={submit}
                 className='rounded bg-green-600 text-white px-4 py-2 disabled:opacity-50'
@@ -381,11 +380,11 @@ if ( {) {
         )}
       </main>
     </>
-);
+;
                 <h2 className="font-semibold mb-2">Optional documents</h2>
                 <div className="grid grid-cols-1 md: grid-cols-2 gap-2">
-                  {optionalDocs.map((k) => {
-                    const hasIt = (profile.documents || []).some((d) => d.kind === k);
+                  {optionalDocs.map(k) => {
+                    const hasIt = (profile.documents || []).some(d) => d.kind = = k);
                     return (
                       <div key={k} className="flex items-center justify-between border rounded p-3">
                         <div>
@@ -401,7 +400,7 @@ if ( {) {
             )}
 
             <div>
-              <button disabled={busy || profile.status === 'submitted' || profile.status === 'approved'} onClick={submit} className="rounded bg-green-600 text-white px-4 py-2 disabled:opacity-50">Submit for review</button>
+              <button disabled={busy || profile.status = = 'submitted' || profile.status = = 'approved'} onClick={submit} className="rounded bg-green-600 text-white px-4 py-2 disabled:opacity-50">Submit for review</button>
             </div>
 
             {message && <div className="text-sm text-blue-700">{message}</div>}
@@ -410,7 +409,7 @@ if ( {) {
       </main>
     </>
   )
-}
+
                 />              </div>;
             </div>;
             <section>;
@@ -418,8 +417,8 @@ if ( {) {
               <div className='grid grid - cols - 1 md: grid - cols - 2 gap - 2'>;
                 {required_docs.map (key => {
                   const has_it = (profile.documents || []).some (
-                    d => d.kind === k);
-;
+                    d => d.kind = = k);
+
                     >;
                       <div>;
                         <div className='text - sm font - medium'>{k}</div>;
@@ -443,8 +442,8 @@ if ( {) {
                 <div className='grid grid - cols - 1 md: grid - cols - 2 gap - 2'>;
                   {optional_docs.map (key => {
                     const has_it = (profile.documents || []).some (
-                      d => d.kind === k);
-;
+                      d => d.kind = = k);
+
                       >;
                         <div>;
                           <div className='text - sm font - medium'>{k}</div>;
@@ -466,8 +465,8 @@ if ( {) {
               <button;
                 disabled={
                   busy ||;
-                  profile.status === 'submitted' ||;
-                  profile.status === 'approved';
+                  profile.status = = 'submitted' ||;
+                  profile.status = = 'approved';
                 }
                 on_click={submit}
                 className='rounded bg - green - 600 text - white px - 4 py - 2 disabled:opacity - 50';
@@ -478,4 +477,3 @@ if ( {) {
             {message && <div className='text - sm text - blue - 700'>{message}</div>}          </div>)}
       </main>;
     </>);
-;

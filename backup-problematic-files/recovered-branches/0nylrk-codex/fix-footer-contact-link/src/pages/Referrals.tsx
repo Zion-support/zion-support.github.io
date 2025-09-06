@@ -14,7 +14,7 @@ import { Button } from '@/components/ui/button',;
 import { toast } from '@/hooks/use-toast',;
 import { Share, Users } from 'lucide-react',;
 import { useNavigate } from 'react-router-dom',;
-;
+
 export default function ReferralsPage() {;
   const navigate = useNavigate(),;
   const { isAuthenticated } = useAuth(),;
@@ -27,19 +27,18 @@ export default function ReferralsPage() {;
     getReferralLink,;
     copyReferralLink,;
     shareOnSocialMedia} = useReferrals(),;
-;
-  useEffect(() => {;
+
+  useEffect() => {;
     if (!isAuthenticated) {;
       toast({;
         title:"Authentication required",;
         description:"Please login to access the referral program",;
         variant:"destructive"}),;
       navigate("/login"),;
-    }
-  }, [isAuthenticated, navigate]),;
-;
+    }, [isAuthenticated, navigate]),;
+
   const referralLink = getReferralLink(),;
-;
+
   return (;
     <div className="container max-w-7xl py-10">;
       <div className="mb-8 flex flex-col md:flex-row justify-between md:items-center gap-4">;
@@ -54,9 +53,8 @@ export default function ReferralsPage() {;
           Share Referral Link;
         </Button>;
       </div>;
-;
+
       <ReferralStats stats={stats} isLoading={isLoading} />;
-      ;
       <div className="grid gap-6 mt-6 lg:grid-cols-3">;
         <div className="lg:col-span-2 space-y-6">;
           <ReferralLink ;
@@ -64,7 +62,6 @@ export default function ReferralsPage() {;
             onCopy={copyReferralLink} ;
             onShare={shareOnSocialMedia}
           />;
-          ;
           <Tabs defaultValue="referrals" className="w-full">;
             <TabsList className="w-full grid grid-cols-2">;
               <TabsTrigger value="referrals" className="flex items-center gap-2">;
@@ -84,7 +81,7 @@ export default function ReferralsPage() {;
             </TabsContent>;
           </Tabs>;
         </div>;
-;
+
         <div className="space-y-6">;
           <ReferralGuide />;
           <ReferralLeaderboard />;
@@ -95,7 +92,7 @@ export default function ReferralsPage() {;
   const navigate = useNavigate ();
 const {
   isAuthenticated 
-}= useAuth ();
+= useAuth ();
 const {
   isLoading;
 referralCode;
@@ -105,21 +102,19 @@ stats;
 getReferralLink;
 copyReferralLink;
 shareOnSocialMedia 
-}= useReferrals ();
+= useReferrals ();
 if (!isAuthenticated) {
   toast ({
-  
-}
-}, [isAuthenticated, navigate]);
+
+, [isAuthenticated, navigate]);
 return (<div className="container max-w-7xl py-10" > <div className="mb-8 flex flex-col md:flex-row justify-between md:items-center gap-4" > <div> <h1 className="text-3xl font-bold tracking-tight" >Referral Program</h1> <p className="text-muted-foreground mt-1" > Invite others to Zion AI Marketplace and earn rewards </p> </div> Share Referral Link </Button> </div> <ReferralStats stats= {
   stats 
-}isLoading= {
+isLoading= {
   isLoading 
-}/> <div className="grid gap-6 mt-6 lg:grid-cols-3" > <div className="lg:col-span-2 space-y-6" > <ReferralLink referralLink= {
+/> <div className="grid gap-6 mt-6 lg:grid-cols-3" > <div className="lg:col-span-2 space-y-6" > <ReferralLink referralLink= {
   referralLink 
-}onCopy= {
+onCopy= {
   copyReferralLink 
-}onShare= {
+onShare= {
   shareOnSocialMedia 
-}/> <Tabs defaultValue="referrals" className="w-full" > <TabsList className="w-full grid grid-cols-2" > <TabsTrigger value="referrals" className="flex items-center gap-2" > <Users className="h-4 w-4" /> Your Referrals </TabsTrigger> <TabsTrigger value="rewards" className="flex items-center gap-2" > <Share className="h-4 w-4" /> Rewards </TabsTrigger> </TabsList> </TabsContent> </Tabs> </div> <div className="space-y-6" > <ReferralGuide /> <ReferralLeaderboard /> </div> </div> </div>) 
-}
+/> <Tabs defaultValue="referrals" className="w-full" > <TabsList className="w-full grid grid-cols-2" > <TabsTrigger value="referrals" className="flex items-center gap-2" > <Users className="h-4 w-4" /> Your Referrals </TabsTrigger> <TabsTrigger value="rewards" className="flex items-center gap-2" > <Share className="h-4 w-4" /> Rewards </TabsTrigger> </TabsList> </TabsContent> </Tabs> </div> <div className="space-y-6" > <ReferralGuide /> <ReferralLeaderboard /> </div> </div> </div>) 

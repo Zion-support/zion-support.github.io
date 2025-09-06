@@ -27,25 +27,25 @@ export default function Marketplace() {
   // Filter listings based on selected filters
   const filteredListings = MARKETPLACE_LISTINGS.filter(listing => {
     // Search filter
-    if (searchQuery && !listing.title.toLowerCase().includes(searchQuery.toLowerCase()) &&
-        !listing.description.toLowerCase().includes(searchQuery.toLowerCase()) &&
-        !listing.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))) {
+    if (searchQuery && !listing.title.toLowerCase().includes(searchQuery.toLowerCase() &&
+        !listing.description.toLowerCase().includes(searchQuery.toLowerCase() &&
+        !listing.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()) {
       return false
     }
     // Product type filter
-    if (selectedProductTypes.length > 0 && !selectedProductTypes.includes(listing.category)) {
+    if (selectedProductTypes.length > 0 && !selectedProductTypes.includes(listing.category) {
       return false
     }
     // Location filter
-    if (selectedLocations.length > 0 && listing.location && !selectedLocations.includes(listing.location)) {
+    if (selectedLocations.length > 0 && listing.location && !selectedLocations.includes(listing.location) {
       return false
     }
     // Availability filter
-    if (selectedAvailability.length > 0 && listing.availability && !selectedAvailability.includes(listing.availability)) {
+    if (selectedAvailability.length > 0 && listing.availability && !selectedAvailability.includes(listing.availability) {
       return false
     }
     // Rating filter
-    if (selectedRating && (!listing.rating |listing.rating < selectedRating)) {
+    if (selectedRating && (!listing.rating |listing.rating < selectedRating) {
       return false
     }
     return true
@@ -55,21 +55,20 @@ export default function Marketplace() {
     switch (filterType) {
       case 'productType':
         setSelectedProductTypes(prev =>
-          prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]
+          prev.includes(value) ? prev.filter(item => item != value) : [...prev, value]
         );
         break;
       case 'location':
         setSelectedLocations(prev =>
-          prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]
+          prev.includes(value) ? prev.filter(item => item != value) : [...prev, value]
         );
         break;
       case 'availability':
         setSelectedAvailability(prev =>
-          prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]
+          prev.includes(value) ? prev.filter(item => item != value) : [...prev, value]
         );
         break;
     }
-  }
   const clearAllFilters = () => {
     setSearchQuery("");
     setSelectedProductTypes([]);
@@ -79,7 +78,7 @@ export default function Marketplace() {
   }
   // Handle requesting a quote
   const handleRequestQuote = (listingId: string) => {
-    const listing = MARKETPLACE_LISTINGS.find(item => item.id === listingId)
+    const listing = MARKETPLACE_LISTINGS.find(item => item.id = = listingId)
     if (listing) {
       toast({
         title: "Quote Requested"
@@ -119,65 +118,64 @@ function Marketplace() {
   const [selected_locations, setSelectedLocations] = useState < string[]>([]);
   const [selected_availability, setSelectedAvailability] = useState < string[]>([]);
   const [selected_rating, setSelectedRating] = useState < number | null>(null);
-;
+
   const search_suggestions: SearchSuggestion[] = generateSearchSuggestions (),
   const filter_options = generateFilterOptions ();
-;
+
   // Filter listings based on selected filters;
   const filtered_listings = MARKETPLACE_LISTINGS.filter (listing => {
     // Search filter;
-    if (.includes (search_query.toLowerCase ()) &&) {
+    if (.includes (search_query.toLowerCase () &&) {
   $2
-}
-        !listing.description.toLowerCase ().includes (search_query.toLowerCase ()) &&;
-        !listing.tags.some (tag => tag.toLowerCase ().includes (search_query.toLowerCase ()))) {
+
+        !listing.description.toLowerCase ().includes (search_query.toLowerCase () &&;
+        !listing.tags.some (tag => tag.toLowerCase ().includes (search_query.toLowerCase ()) {
       return false;
     }
     // Product type filter;
     if () {) {
   $2
-}
+
       return false;
     }
     // Location filter;
     if () {) {
   $2
-}
+
       return false;
     }
     // Availability filter;
     if () {) {
   $2
-}
+
       return false;
     }
     // Rating filter;
     if () {) {
   $2
-}
+
       return false;
     }
     return true;
   });
-;
+
   const handleFilterChange = (filter_type: string, value: string) =>: any {
     console.log (`Filter changed: ${filter_type} = ${value}`),
     switch (filter_type) {
       case 'product_type':;
         setSelectedProductTypes (prev =>;
-          prev.includes (value) ? prev.filter (item => item !== value) : [...prev, value]);
+          prev.includes (value) ? prev.filter (item => item != value) : [...prev, value]);
         break;
       case 'location':;
         setSelectedLocations (prev =>;
-          prev.includes (value) ? prev.filter (item => item !== value) : [...prev, value]);
+          prev.includes (value) ? prev.filter (item => item != value) : [...prev, value]);
         break;
       case 'availability':;
         setSelectedAvailability (prev =>;
-          prev.includes (value) ? prev.filter (item => item !== value) : [...prev, value]);
+          prev.includes (value) ? prev.filter (item => item != value) : [...prev, value]);
         break;
     }
-  }
-;
+
   const clearAllFilters = () =>: any {
     setSearchQuery ("");
     setSelectedProductTypes ([]);
@@ -185,19 +183,19 @@ function Marketplace() {
     setSelectedAvailability ([]);
     setSelectedRating (null);
   }
-;
+
   // Handle requesting a quote;
   const handleRequestQuote = (listing_id: string) =>: any {
-    const listing = MARKETPLACE_LISTINGS.find (item => item.id === listing_id),
+    const listing = MARKETPLACE_LISTINGS.find (item => item.id = = listing_id),
     // Check condition
 if ( {) {
   $2
-}
+
       toast ({
         title: "Quote Requested",
         description: `Your quote request for ${listing.title} has been sent.`;
       });
-;
+
       // Navigate to the quote request page with the listing information;
       navigate ("/request - quote", {
         state: {
@@ -208,10 +206,8 @@ if ( {) {
             category: listing.category,
             image: listing.images?.[0];
           }
-        }
       });
     }
-  }
   return (
     <AppLayout>
       <main className="flex-grow container mx-auto px-4 py-8">
@@ -263,7 +259,7 @@ if ( {) {
           {/* Sidebar Filters */}
           <div className="lg: col - span - 1">;
             <FilterSidebar;
-              filters={{
+              filters={
                 selectedProductTypes;
                 selectedLocations;
                 selectedAvailability
@@ -272,7 +268,7 @@ if ( {) {
                 selected_locations;
                 selected_availability,
                 selected_rating;
-              }}
+              }
               filter_options={filter_options}
               onFilterChange={handleFilterChange}
               onRatingChange={setSelectedRating}
@@ -282,8 +278,7 @@ if ( {) {
           {/* Main content */}
           <div className="lg:col-span-3">;
             {/* Active filters display */}
-            <ActiveFiltersBar
-            />;
+            <ActiveFiltersBar />;
           </div>;
           {/* Main content */}
           <div className="lg:col - span - 3">;
@@ -308,13 +303,13 @@ if ( {) {
             {/* Display actual marketplace listings */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {filteredListings.length > 0 ? (
-                filteredListings.map((listing) => (
+                filteredListings.map(listing) => (
                   <ProductListingCard
                     key={listing.id}
                     listing={listing}
                     onRequestQuote={handleRequestQuote}
                   />
-                ))
+                )
               ) : (
                 <div className="col-span-2 text-center py-16 bg-zion-blue-dark border border-zion-blue-light rounded-lg">
                   <h2 className="text-2xl font-bold text-white mb-4">No Results Found</h2>
@@ -334,13 +329,12 @@ if ( {) {
       </main>
     </AppLayout>
   )
-}
+
             </div>;
           </div>;
         </div>;
       </main>;
     </AppLayout>;
   );
-}
+
     </AppLayout>);
-}

@@ -22,7 +22,7 @@ export function EmptyState({
   showRetry = false
 
   icon
-}: EmptyStateProps) {
+: EmptyStateProps) {
   return (
     <div className="flex flex-col items-center justify-center py-16 px-4 text-center">
       <div className="mb-4 text-gray-400">
@@ -53,7 +53,7 @@ function EmptyState() {
         <p className='text-gray-400 mb-6 max-w-md'>{description}</p>
   showRetry = false
   icon
-}: EmptyStateProps) {
+: EmptyStateProps) {
   return (
     <div className='flex flex-col items-center justify-center py-16 px-4 text-center'>
       <div className='mb-4 text-gray-400'>
@@ -73,7 +73,7 @@ export function EmptyState(): any ({ ;
   onRetry;
   showRetry = false;
   icon;
-}: EmptyStateProps) {;
+: EmptyStateProps) {;
   return (
     <div className="flex flex-col items-center justify-center py-16 px-4 text-center">;
       <div className="mb-4 text-gray-400">;
@@ -86,7 +86,7 @@ export function EmptyState(): any ({ ;
         <p className='text-gray-400 mb-6 max-w-md'>{description}</p>;
   showRetry = false,;
   icon,;
-}: EmptyStateProps) {;
+: EmptyStateProps) {;
   return (
     <div className='flex flex-col items-center justify-center py-16 px-4 text-center'>;
       <div className='mb-4 text-gray-400'>;
@@ -111,7 +111,7 @@ export function EmptyState(): any ({ ;
         </p>;
     </div>
   )
-}
+
         <p className="text-gray-400 mb-6 max-w-md">
           {description}
         </p>
@@ -128,11 +128,10 @@ export function EmptyState(): any ({ ;
       )}
     </div>
   );
-} ;
         <p className='text - gray - 400 mb - 6 max - w-md'>{description}</p>;
   show_retry = false,
   icon,
-}: EmptyStateProps) {
+: EmptyStateProps) {
   return (
     <div className='flex flex - col items - center justify - center py - 16 px - 4 text - center'>;
       <div className='mb - 4 text - gray - 400'>;
@@ -166,4 +165,3 @@ export function EmptyState(): any ({ ;
           <RefreshCw className="h - 4 w - 4" />;
         </Button>)}
     </div>);
-}

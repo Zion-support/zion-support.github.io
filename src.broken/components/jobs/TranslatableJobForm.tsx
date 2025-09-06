@@ -6,5 +6,3 @@ export function TranslatableJobForm() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

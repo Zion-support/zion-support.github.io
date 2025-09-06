@@ -5,7 +5,7 @@ import {
   ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, 
   Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server,
   ChevronRight, ExternalLink, TrendingUp, BarChart3, Cloud, Network
-} from 'lucide-react',
+ from 'lucide-react',
 import EnhancedNavigation from '../components/EnhancedNavigation',
 import EnhancedFooter from '../components/EnhancedFooter',
 import EnhancedContactForm from '../components/EnhancedContactForm',
@@ -15,14 +15,14 @@ export default function HomePage() {
   const [currentFeature, setCurrentFeature] = useState(0),
   const [isVisible, setIsVisible] = useState(false),
 
-  useEffect(() => {
+  useEffect() => {
     setIsVisible(true),
-    
+
     // Auto-rotate features
-    const interval = setInterval(() => {
-      setCurrentFeature((prev) => (prev + 1) % 6)
+    const interval = setInterval() => {
+      setCurrentFeature(prev) => (prev + 1) % 6)
     }, 5000),
-    
+
     return () => clearInterval(interval)
   }, []),
 
@@ -135,9 +135,9 @@ export default function HomePage() {
 
         <div className="relative z-10 text-center max-w-6xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }
+            transition={ duration: 0.8 }
             className="mb-8"
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
@@ -149,9 +149,9 @@ export default function HomePage() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }
+            transition={ duration: 0.8, delay: 0.2 }
             className="mb-12"
           >
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
@@ -179,18 +179,18 @@ export default function HomePage() {
         {/* Floating Elements */}
         <div className="absolute inset-0 pointer-events-none">
           <motion.div
-            animate={{ y: [0, -20, 0] }}
-            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+            animate={ y: [0, -20, 0] }
+            transition={ duration: 6, repeat: Infinity, ease: "easeInOut" }
             className="absolute top-20 left-20 w-2 h-2 bg-cyan-400 rounded-full opacity-60"
           />
           <motion.div
-            animate={{ y: [0, 20, 0] }}
-            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+            animate={ y: [0, 20, 0] }
+            transition={ duration: 8, repeat: Infinity, ease: "easeInOut" }
             className="absolute top-40 right-20 w-3 h-3 bg-purple-400 rounded-full opacity-60"
           />
           <motion.div
-            animate={{ y: [0, -15, 0] }}
-            transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+            animate={ y: [0, -15, 0] }
+            transition={ duration: 7, repeat: Infinity, ease: "easeInOut" }
             className="absolute bottom-40 left-1/4 w-2 h-2 bg-blue-400 rounded-full opacity-60"
           />
         </div>
@@ -207,7 +207,7 @@ import {;
   ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star,;
   Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server,;
   ChevronRight, ExternalLink, TrendingUp, BarChart3, Cloud, Network;
-} from 'lucide-react',;
+ from 'lucide-react',;
 import EnhancedNavigation from '../components/EnhancedNavigation',;
 import EnhancedFooter from '../components/EnhancedFooter',;
 import EnhancedContactForm from '../components/EnhancedContactForm',;
@@ -216,11 +216,11 @@ import EnhancedTestimonialsSection from '../components/EnhancedTestimonialsSecti
 export default function HomePage() {;
   const [currentFeature, setCurrentFeature] = useState(0),;
   const [isVisible, setIsVisible] = useState(false),;
-  useEffect(() => {;
+  useEffect() => {;
     setIsVisible(true),;
     // Auto-rotate features;
-    const interval = setInterval(() => {;
-      setCurrentFeature((prev) => (prev + 1) % 6);
+    const interval = setInterval() => {;
+      setCurrentFeature(prev) => (prev + 1) % 6);
     }, 5000),;
     return () => clearInterval(interval);
   }, []),;
@@ -327,9 +327,9 @@ export default function HomePage() {;
         </div>;
         <div className="relative z-10 text-center max-w-6xl mx-auto">;
           <motion.div;
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }
+            transition={ duration: 0.8 }
             className="mb-8";
           >;
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">;
@@ -340,9 +340,9 @@ export default function HomePage() {;
             </p>;
           </motion.div>;
           <motion.div;
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }
+            transition={ duration: 0.8, delay: 0.2 }
             className="mb-12";
           >;
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">;
@@ -369,18 +369,18 @@ export default function HomePage() {;
         {/* Floating Elements */}
         <div className="absolute inset-0 pointer-events-none">;
           <motion.div;
-            animate={{ y: [0, -20, 0] }}
-            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+            animate={ y: [0, -20, 0] }
+            transition={ duration: 6, repeat: Infinity, ease: "easeInOut" }
             className="absolute top-20 left-20 w-2 h-2 bg-cyan-400 rounded-full opacity-60";
           />;
           <motion.div;
-            animate={{ y: [0, 20, 0] }}
-            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+            animate={ y: [0, 20, 0] }
+            transition={ duration: 8, repeat: Infinity, ease: "easeInOut" }
             className="absolute top-40 right-20 w-3 h-3 bg-purple-400 rounded-full opacity-60";
           />;
           <motion.div;
-            animate={{ y: [0, -15, 0] }}
-            transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+            animate={ y: [0, -15, 0] }
+            transition={ duration: 7, repeat: Infinity, ease: "easeInOut" }
             className="absolute bottom-40 left-1/4 w-2 h-2 bg-blue-400 rounded-full opacity-60";
           />;
         </div>;
@@ -389,10 +389,10 @@ export default function HomePage() {;
       <section className="py-20 px-6">;
         <div className="max-w-7xl mx-auto">;
           <motion.div;
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
@@ -404,13 +404,13 @@ export default function HomePage() {;
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
+            {services.map(service, index) => (
               <motion.div
                 key={service.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, y: 30 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.6, delay: index * 0.1 }
+                viewport={ once: true }
                 className="group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
@@ -426,7 +426,7 @@ export default function HomePage() {;
                   </div>
                 </div>
               </motion.div>
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
@@ -434,13 +434,13 @@ export default function HomePage() {;
       <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
+            {stats.map(stat, index) => (
               <motion.div
                 key={stat.label}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, scale: 0.8 }
+                whileInView={ opacity: 1, scale: 1 }
+                transition={ duration: 0.6, delay: index * 0.1 }
+                viewport={ once: true }
                 className="text-center"
               >
                 <div className="w-16 h-16 rounded-full bg-gradient-to-br from-cyan-500 to-blue-500 p-4 mx-auto mb-4 flex items-center justify-center">
@@ -449,7 +449,7 @@ export default function HomePage() {;
                 <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-white/70">{stat.label}</div>
               </motion.div>
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
@@ -464,10 +464,10 @@ export default function HomePage() {;
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
@@ -511,10 +511,10 @@ export default function HomePage() {;
       <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
             className="text-center mb-16"
           >
             <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
@@ -547,5 +547,3 @@ export default function HomePage() {;
       <EnhancedFooter />;
     </div>;
   );
-}
-;

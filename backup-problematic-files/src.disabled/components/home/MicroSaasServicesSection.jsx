@@ -7,6 +7,5 @@ const MicroSaasServicesSection = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default MicroSaasServicesSection;

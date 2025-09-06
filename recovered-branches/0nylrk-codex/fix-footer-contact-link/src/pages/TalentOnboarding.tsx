@@ -29,7 +29,7 @@ export default function TalentOnboarding() {
       <Footer />
     </>
   )
-}
+
               Showcase your skills to top clients and employers. Create a professional profile;
               to get discovered for AI and tech projects on the Zion Marketplace.;
             </p>;
@@ -41,6 +41,5 @@ export default function TalentOnboarding() {
       <Footer />;
     </>;
   );
-}
+
     </>);
-}

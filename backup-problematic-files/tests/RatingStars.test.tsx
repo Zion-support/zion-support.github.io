@@ -4,7 +4,6 @@ import React from 'react';
 
 interface RatingStars.testProps {
   className?: string;
-}
 
 const RatingStars.test: React.FC<RatingStars.testProps> = ({ className }) => {
   return (
@@ -13,6 +12,3 @@ const RatingStars.test: React.FC<RatingStars.testProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-}
-}
-}

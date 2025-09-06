@@ -13,23 +13,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React, { useEffect, useState } from 'react';
 import Tree, { TreeNode } from '../../components/ui/Tree';
 
@@ -49,7 +49,7 @@ export default function DevTreePage() {;
         headers: token ? { 'x-admin-token': token } : undefined
       });
       if (!resp.ok) {
-        const j = await resp.json().catch(() => ({}));
+        const j = await resp.json().catch() => ({});
         throw new Error(j.error |`HTTP ${resp.status}`);
       }
       const data: ApiResponse = await resp.json ();
@@ -57,8 +57,7 @@ export default function DevTreePage() {;
       set_git (data.status);
     } catch (e: any) {
       setError(e.message |'Failed to load');    }
-  }
-  useEffect(() => {
+  useEffect() => {
     const stored = localStorage.getItem('ADMIN_TOKEN') |'';
     setAdminToken(stored);
     fetchTree(stored);
@@ -77,13 +76,12 @@ export default function DevTreePage() {;
         body: JSON.stringify({ path: p })
       });
       if (!resp.ok) {
-        const j = await resp.json().catch(() => ({}));
+        const j = await resp.json().catch() => ({});
         throw new Error(j.error |`HTTP ${resp.status}`);
       }
       await fetchTree(adminToken);
     } catch (e: any) {
       setError(e.message |'Deploy failed');    }
-  }
   };
 
   return (
@@ -123,7 +121,7 @@ export default function DevTreePage() {;
         <div>Loading...</div>
       )}
     </div>
-);
+;
             onClick={handleSaveToken}>            Save Token;
           </button>;
         </div>;
@@ -140,20 +138,19 @@ export default function DevTreePage() {;
     </div>;
   );
   )
-}
+
       set_error (e.message || 'Failed to load');    }
-  }
-;
-  useEffect (() => {
+
+  useEffect () => {
     const stored = local_storage.get_item ('ADMIN_TOKEN') || '';
     setAdminToken (stored);
     fetch_tree (stored);
   }, []);
-;
+
   const handleSaveToken = () =>: any {
     local_storage.set_item ('ADMIN_TOKEN', admin_token);
     fetch_tree (admin_token);  }
-;
+
   const on_deploy = async (p: string) => {
     try {
       const resp = await fetch ('/api / dev / source - map', {
@@ -167,15 +164,14 @@ export default function DevTreePage() {;
       // Check condition
 if ( {) {
   $2
-}
-        const inner_index = await resp.json ().catch (() => ({}));
+
+        const inner_index = await resp.json ().catch () => ({});
         throw new Error (j.error || `HTTP ${resp.status}`);
       }
       await fetch_tree (admin_token);
     } catch (e: any) {
       set_error (e.message || 'Deploy failed');    }
-  }
-;
+
   return (
     <div className='p - 6 max - w-5xl mx - auto'>;
       <div className='flex items - center gap - 4 mb - 4'>;
@@ -207,4 +203,3 @@ if ( {) {
         </div>) : (
         <div > Loading...</div>)}
     </div>);
-;

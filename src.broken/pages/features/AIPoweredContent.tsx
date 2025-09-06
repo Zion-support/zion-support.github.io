@@ -6,5 +6,3 @@ export function AIPoweredContent() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

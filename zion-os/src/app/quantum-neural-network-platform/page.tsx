@@ -323,4 +323,3 @@ function QuantumNeuralNetworkPlatformPage() {
         </section>;
       </div>;
     </div>);
-}

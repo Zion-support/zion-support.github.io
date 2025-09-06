@@ -6,5 +6,3 @@ export function DashboardRoutes() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

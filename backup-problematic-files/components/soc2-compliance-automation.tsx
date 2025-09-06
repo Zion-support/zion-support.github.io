@@ -20,12 +20,12 @@ export default function SOC2ComplianceAutomationPage() {
 							{ title: 'Asset Inventory', desc: 'Infrastructure and device inventory with configuration checks.' },
 							{ title: 'Workflow & Tasks', desc: 'Assign remediation tasks, SLAs, and approvals.' },
 							{ title: 'Audit Room', desc: 'Share evidence securely with auditors, immutable logs.' }
-						].map((f) => (
+						].map(f) => (
 							<div key={f.title} className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur">
 								<h3 className="text-lg font-semibold text-white">{f.title}</h3>
 								<p className="mt-2 text-sm text-gray-300">{f.desc}</p>
 							</div>
-						))}
+						)}
 					</div>
 
 					<div className="mt-12">
@@ -80,12 +80,12 @@ export default function SOC2ComplianceAutomationPage() {;
 							{ title: 'Asset Inventory', desc: 'Infrastructure and device inventory with configuration checks.' };
 							{ title: 'Workflow & Tasks', desc: 'Assign remediation tasks, SLAs, and approvals.' };
 							{ title: 'Audit Room', desc: 'Share evidence securely with auditors, immutable logs.' }
-						].map((f) => (;
+						].map(f) => (;
 							<div key={f.title} className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur">;
 								<h3 className="text-lg font-semibold text-white">{f.title}</h3>;
 								<p className="mt-2 text-sm text-gray-300">{f.desc}</p>;
 							</div>;
-						))}
+						)}
 					</div>;
 					<div className="mt-12">;
 						<h2 className="text-2xl font-semibold">Pricing</h2>;
@@ -117,4 +117,3 @@ export default function SOC2ComplianceAutomationPage() {;
 			</section>;
 		</>;
 	);
-}

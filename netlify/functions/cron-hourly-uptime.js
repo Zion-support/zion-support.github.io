@@ -30,7 +30,6 @@ exports && exports.handler = async function () {
           error: String(e.message |e)
         });
       }
-    }
     const log = { timestamp: Date.now(), results }
     const owner = process.env.GITHUB_OWNER;
     const repo = process.env.GITHUB_REPO;
@@ -64,15 +63,12 @@ exports && exports.handler = async function () {
           token
         });
       }
-    }
     return {
       statusCode: 200
       body: JSON.stringify({ ok: true, count: results.length })
-    }
-  } catch (e) {
+    } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
-  }
-};  try {
+;  try {
     const baseUrl = process.env.URL |process.env.DEPLOY_URL |''
 exports.handler = async function() {
   try {
@@ -94,7 +90,6 @@ exports.handler = async function() {
         const ms = Date.now() - t0
         results.push({ path: ep, status: 0, ms, error: String(e.message |e) })
       }
-    }
 
     const log = { timestamp: Date.now(), results }
     const owner = process.env.GITHUB_OWNER
@@ -116,16 +111,11 @@ exports.handler = async function() {
 
         await upsertFile({ owner, repo, path: existingPath, content, message: 'chore(automation): init uptime log', token })
       }
-    }
-    return { statusCode: 200, body: JSON.stringify({ ok: true, count: results.length }) }
-  } catch (e) {
+    return { statusCode: 200, body: JSON.stringify({ ok: true, count: results.length }) } catch (e) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
-  }
-
-}
 
 const { upsert_file } = require ('./_lib / github');
-;
+
 exports.handler = async function () {
   try {
     const base_url = process.env.URL || process.env.DEPLOY_URL || '';
@@ -137,7 +127,7 @@ exports.handler = async function () {
       '/api / learn / courses',
       '/api / dao / metrics',
     ];
-;
+
     const results = [];
     ${ep}`;
       const t0 = Date.now ();
@@ -154,17 +144,16 @@ exports.handler = async function () {
           error: String (e.message || e),
         });
       }
-    }
     const log = { timestamp: Date.now (), results }
-;
+
     const owner = process.env.GITHUB_OWNER;
     const repo = process.env.GITHUB_REPO;
     const token = process.env.GITHUB_TOKEN;
-;
+
     // Check condition
 if ( {) {
   $2
-}
+
       const existing_path = 'data / ops / uptime - log.json';
       // Fetch existing file, append, and trim to last 500 entries;
       try {
@@ -193,15 +182,12 @@ if ( {) {
           token,
         });
       }
-    }
     return {
       status_code: 200,
       body: JSON.stringify ({ ok: true, count: results.length }),
-    }
-  } catch (e) {
+    } catch (e) {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
-  }
-}  try {
+  try {
     const base_url = process.env.URL || process.env.DEPLOY_URL || '',
     const endpoints = [;
       '//learn / dao / certifications / api / learn / courses / api / dao / metrics';
@@ -218,7 +204,6 @@ if ( {) {
         const ms = Date.now () - t0,
         results.push ({ path: ep, status: 0, ms, error: String (e.message || e) });
       }
-    }
     const log = { timestamp: Date.now (), results },
     const owner = process.env.GITHUB_OWNER,
     const repo = process.env.GITHUB_REPO,
@@ -226,7 +211,7 @@ if ( {) {
     // Check condition
 if ( {) {
   $2
-}
+
       const existing_path = 'data / ops / uptime - log.json',
       // Fetch existing file, append, and trim to last 500 entries;
       try {
@@ -241,9 +226,6 @@ if ( {) {
         const content = JSON.stringify ([log], null, 2),
         await upsert_file ({ owner, repo, path: existing_path, content, message: 'chore (automation): init uptime log', token });
       }
-    }
-    return { status_code: 200, body: JSON.stringify ({ ok: true, count: results.length }) }
-  } catch (e) {
+    return { status_code: 200, body: JSON.stringify ({ ok: true, count: results.length }) } catch (e) {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
-  }
-},
+,

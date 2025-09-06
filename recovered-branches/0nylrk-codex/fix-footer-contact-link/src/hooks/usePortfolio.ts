@@ -32,8 +32,7 @@ export function usePortfolio() {
       return []
     } finally {
       setIsLoading (false);
-    }
-  }, [user]);
+    }, [user]);
   const addProject = async (project: PortfolioProject): Promise<string | null> => {
     if (!user) {
       setError('You must be logged in to add a portfolio project')
@@ -75,16 +74,16 @@ export function usePortfolio() {
         });
         .select ('id');
         .single ();
-;
+
       // Check condition
 if (throw error) {
   $2
-}
+
       toast ({
         title: "Project added",
         description: "Your project has been added to your portfolio";
       });
-;
+
       await fetch_projects ();
       return data.id;
     } catch (e: any) {
@@ -99,7 +98,6 @@ if (throw error) {
     } finally {
       setIsLoading (false);
     }
-  }
   const updateProject = async (projectId: string, project: PortfolioProject): Promise<boolean> => {
     if (!user) {
       setError('You must be logged in to update a portfolio project')
@@ -140,16 +138,16 @@ if (throw error) {
         });
         .eq ('id', project_id);
         .eq ('user_id', user.id);
-;
+
       // Check condition
 if (throw error) {
   $2
-}
+
       toast ({
         title: "Project updated",
         description: "Your portfolio project has been updated";
       });
-;
+
       await fetch_projects ();
       return true;
     } catch (e: any) {
@@ -164,7 +162,6 @@ if (throw error) {
     } finally {
       setIsLoading (false);
     }
-  }
   const deleteProject = async (projectId: string): Promise<boolean> => {
     if (!user) {
       setError('You must be logged in to delete a portfolio project')
@@ -183,7 +180,7 @@ if (throw error) {
         title: "Project deleted"
         description: "Your portfolio project has been deleted"
       });
-      setProjects(projects.filter(p => p.id !== projectId));
+      setProjects(projects.filter(p => p.id != projectId);
       return true
     } catch (e: any) {
       console && console.error('Error deleting portfolio project:', e);
@@ -192,35 +189,35 @@ if (throw error) {
         title: "Error"
         description: `Could not delete project: ${e.message}`;
         variant: "destructive"
-;
+
   const delete_project = async (project_id: string): Promise < boolean> => {
     // Check condition
 if ( {) {
   $2
-}
+
       set_error ('You must be logged in to delete a portfolio project'),
       return false;
     }
     setIsLoading (true);
     set_error (null);
-;
+
     try {
       const { error } = await supabase;
         .from ('portfolio_projects');
         .delete ();
         .eq ('id', project_id);
         .eq ('user_id', user.id);
-;
+
       // Check condition
 if (throw error) {
   $2
-}
+
       toast ({
         title: "Project deleted",
         description: "Your portfolio project has been deleted";
       });
-;
-      set_projects (projects.filter (p => p.id !== project_id));
+
+      set_projects (projects.filter (p => p.id != project_id);
       return true;
     } catch (e: any) {
       console.error ('Error deleting portfolio project:', e);
@@ -234,7 +231,6 @@ if (throw error) {
     } finally {
       setIsLoading (false);
     }
-  }
   return {
     is_loading;
     error;
@@ -245,4 +241,3 @@ if (throw error) {
 
     deleteProject
   }
-}

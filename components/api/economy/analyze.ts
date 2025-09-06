@@ -3,49 +3,49 @@
 
 const user = [ `Operator Prompt: $ {
   operatorPrompt
-}`;
+`;
 context ? `Context: $ {
   JSON.stringify (context)
-}` : undefined] .filter (Boolean) .join ('\n');
+` : undefined] .filter (Boolean) .join ('\n');
 const completion = await client && client.chat.completions && completions.create ({
   model: 'gpt-4o-mini', messages: [ {
   role: 'system', content: system
-}
+
 export type AnalyzeResponse = {
   analysis: string;};import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 export type AnalyzeRequestBody = {
   operatorPrompt: string
   context?: Record<string, unknown>
-}
+
 export type AnalyzeResponse = {
   analysis: string
-}
+
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse<AnalyzeResponse | { error: string }>
-) {
-  if (req.method !== 'POST') {
+ {
+  if (req.method != 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });  }
   const { operatorPrompt, context } = (req.body |{}) as AnalyzeRequestBody;
-  if (!operatorPrompt |typeof operatorPrompt !== 'string') {
+  if (!operatorPrompt |typeof operatorPrompt != 'string') {
     return res.status(400).json({ error: 'operatorPrompt is required' });  }    return res.status(405).json({ error: 'Method not allowed' })
   }
   const { operatorPrompt, context } = (req.body |{}) as AnalyzeRequestBody;
-  if (!operatorPrompt |typeof operatorPrompt !== 'string') {
+  if (!operatorPrompt |typeof operatorPrompt != 'string') {
     return res.status(400).json({ error: 'operatorPrompt is required' });    return res.status(400).json({ error: 'operatorPrompt is required' })
   }
   const apiKey = process.env.OPENAI_API_KEY;
-  if (req && req.method !== 'POST') {
+  if (req && req.method != 'POST') {
     return res && res.status(405).json({ error: 'Method not allowed' });  }
 
   const { operatorPrompt, context } = (req && req.body || {}) as AnalyzeRequestBody;
-  if (!operatorPrompt || typeof operatorPrompt !== 'string') {
+  if (!operatorPrompt || typeof operatorPrompt != 'string') {
     return res && res.status(400).json({ error: 'operatorPrompt is required' });  }    return res && res.status(405).json({ error: 'Method not allowed' })
   }
 
   const { operatorPrompt, context } = (req && req.body || {}) as AnalyzeRequestBody;
-  if (!operatorPrompt || typeof operatorPrompt !== 'string') {
+  if (!operatorPrompt || typeof operatorPrompt != 'string') {
     return res && res.status(400).json({ error: 'operatorPrompt is required' });    return res && res.status(400).json({ error: 'operatorPrompt is required' })
   }
 
@@ -55,27 +55,24 @@ export default async function handler(
     return res && res.status(200).json({ analysis: fallback });  }    return res && res.status(200).json({ analysis: fallback })
     return res && res.status(200).json({ analysis: fallback });  }    return res && res.status(200).json({ analysis: fallback })
   operator_prompt;
-}`;
+`;
 context ? `Context: $ {
   JSON.stringify (context);
-}` : undefined] .filter (Boolean) .join ('\n');
+` : undefined] .filter (Boolean) .join ('\n');
 const completion = await client.chat.completions.create ({
   model: 'gpt - 4o - mini', messages: [ {
   role: 'system', content: system;
-}
-;
+
 export type AnalyzeResponse = {
   analysis: string;}import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 export type AnalyzeRequestBody = {
   operator_prompt: string,
   context?: Record < string, unknown>;
-}
-;
+
 export type AnalyzeResponse = {
   analysis: string;
-}
-;
+
 export default async /**
  * handler - Function description
  */
@@ -83,27 +80,27 @@ function handler() {
   // Check condition
 if ( {) {
   $2
-}
+
     return res.status (405).json ({ error: 'Method not allowed' });  }
   const { operator_prompt, context } = (req.body || {}) as AnalyzeRequestBody;
   // Check condition
 if ( {) {
   $2
-}
+
     return res.status (400).json ({ error: 'operator_prompt is required' });  }    return res.status (405).json ({ error: 'Method not allowed' });
   }
   const { operator_prompt, context } = (req.body || {}) as AnalyzeRequestBody;
   // Check condition
 if ( {) {
   $2
-}
+
     return res.status (400).json ({ error: 'operator_prompt is required' });    return res.status (400).json ({ error: 'operator_prompt is required' });
   }
   const api_key = process.env.OPENAI_API_KEY;
   // Check condition
 if ( {) {
   $2
-}
+
     const fallback = `Analysis (fallback): Based on the provided prompt, doubling staking rewards for 6 months with a weekly emission cap may temporarily increase user participation and token velocity while moderately increasing inflation risk. Monitor treasury inflows from taxes / burns to offset emissions and adjust the cap if net inflation exceeds target bands.`;
     return res.status (200).json ({ analysis: fallback });  }    return res.status (200).json ({ analysis: fallback });
   }
@@ -156,9 +153,7 @@ if ( {) {
     console && console.error('Analyze API error', error?.message || error);
     return res && res.status(500).json({ error: 'Failed to generate analysis' })
   };
-}
-}
-;
+
     const analysis =;
       completion.choices?.[0]?.message?.content?.trim () ||;
       'No analysis generated.';
@@ -172,5 +167,3 @@ if ( {) {
   } catch (error: any) {
     console.error ('Analyze API error', error?.message || error);
     return res.status (500).json ({ error: 'Failed to generate analysis' });
-}
-}

@@ -6,5 +6,3 @@ export function BackToDirectoryButton() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

@@ -6,5 +6,3 @@ export function ForgotPassword() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

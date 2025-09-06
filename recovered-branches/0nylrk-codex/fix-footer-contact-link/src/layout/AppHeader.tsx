@@ -78,7 +78,7 @@ export function AppHeader() {;
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
     </>
   )
-}
+
     <>;
       <header className="sticky top - 0 z - 50 w - full border - b border - zion - purple / 20 bg - zion - blue - dark / 90 backdrop - blur - md">;
         <div className="container flex h - 16 items - center px - 4 sm:px - 6">;
@@ -121,4 +121,3 @@ export function AppHeader() {;
       {/* Mobile Bottom Navigation */}
       {is_mobile && <MobileBottomNav unread_count={unread_count} />}
     </>);
-}

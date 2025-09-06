@@ -1,7 +1,7 @@
 import React from 'react',;
 import SEO from '../components/SEO',;
 import { Check, ExternalLink } from 'lucide-react',;
-;
+
 export default function BrowserAutomationCloudPage() {;
 	return (;
 		<>;
@@ -45,5 +45,5 @@ export default function BrowserAutomationCloudPage() {;
 			</main>;
 		</>;
 	);
-} export default function BrowserAutomationCloudPage () {
+ export default function BrowserAutomationCloudPage () {
   return (<> <Head> <title>Browser Automation Cloud | Zion Tech Group</title> </div> </div> </div> </section> </main> </> 

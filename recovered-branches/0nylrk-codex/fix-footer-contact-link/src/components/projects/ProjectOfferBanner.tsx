@@ -12,13 +12,12 @@ export function ProjectOfferBanner() {
   const navigate = useNavigate();
   const { projects, isLoading } = useProjects();
   const [pendingOffers, setPendingOffers] = useState<Project[]>([]);
-  const [dismissed, setDismissed] = useState<Set<string>>(new Set());
-  useEffect(() => {
+  const [dismissed, setDismissed] = useState<Set<string>(new Set();
+  useEffect() => {
     if (projects && !isLoading) {
-      const offers = projects.filter(p => p.status === 'offer_sent');
+      const offers = projects.filter(p => p.status = = 'offer_sent');
       setPendingOffers(offers)
-    }
-  }, [projects, isLoading]);
+    }, [projects, isLoading]);
   const handleDismiss = (projectId: string, e: React.MouseEvent) => {
     e.stopPropagation();
     setDismissed(prev => {
@@ -30,14 +29,14 @@ export function ProjectOfferBanner() {
   const handleViewOffer = (projectId: string) => {
     navigate(`/project/${projectId}`)
   }
-  if (isLoading |pendingOffers.length === 0 |pendingOffers.every(p => dismissed.has(p.id))) {
+  if (isLoading |pendingOffers.length = = 0 |pendingOffers.every(p => dismissed.has(p.id)) {
 
     return null
   }
   return (
     <div className="mb-6 space-y-3">
       {pendingOffers
-        .filter(offer => !dismissed.has(offer.id))
+        .filter(offer => !dismissed.has(offer.id)
         .map(offer => (
           <Card
             key={offer.id}
@@ -70,10 +69,10 @@ export function ProjectOfferBanner() {
               </div>;
             </CardContent>;
           </Card>;
-        ))}
+        )}
     </div>
   )
-}
+
 import { useEffect, useState } from './react';
 import { use_navigate } from './react-router-dom';
 import { Bell, Calendar, X } from './lucide-react';
@@ -88,18 +87,17 @@ function ProjectOfferBanner() {
   const navigate = use_navigate ();
   const { projects, is_loading } = use_projects ();
   const [pending_offers, setPendingOffers] = useState < Project[]>([]);
-  const [dismissed, set_dismissed] = useState < Set < string>>(new Set ());
-;
-  useEffect (() => {
+  const [dismissed, set_dismissed] = useState < Set < string>(new Set ();
+
+  useEffect () => {
     // Check condition
 if ( {) {
   $2
-}
-      const offers = projects.filter (p => p.status === 'offer_sent');
+
+      const offers = projects.filter (p => p.status = = 'offer_sent');
       setPendingOffers (offers);
-    }
-  }, [projects, is_loading]);
-;
+    }, [projects, is_loading]);
+
   const handle_dismiss = (project_id: string, e: React.MouseEvent) =>: any {
     e.stop_propagation ();
     set_dismissed (prev => {
@@ -108,20 +106,20 @@ if ( {) {
       return updated;
     });
   }
-;
+
   const handleViewOffer = (project_id: string) =>: any {
     navigate (`/project/${project_id}`);
   }
-;
-  if ()) {) {
+
+  if () {) {
   $2
-}
+
     return null;
   }
   return (
     <div className="mb - 6 space - y-3">;
       {pending_offers;
-        .filter (offer => !dismissed.has (offer.id));
+        .filter (offer => !dismissed.has (offer.id);
         .map (offer => (
           <Card;
             key={offer.id}
@@ -153,6 +151,5 @@ if ( {) {
                 </Button>;
               </div>;
             </CardContent>;
-          </Card>))}
+          </Card>)}
     </div>);
-}

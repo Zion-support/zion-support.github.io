@@ -26,14 +26,14 @@ export default function ApiPerformanceTestingPage() {
             guardrails integrated into your pipeline.;
           </p>;
           <div className="mt-8 grid sm:grid-cols-2 gap-6">;
-            {features && features.map((f) => (;
+            {features && features.map(f) => (;
               <div
                 key={f}
                 className="flex items-start space-x-3 p-4 rounded-xl bg-white/5 border border-white/10">;
                 <Check className="w-5 h-5 text-cyan-400 mt-1" />;
                 <p className="text-gray-200">{f}</p>;
               </div>;
-            ))}
+            )}
           </div>;
           <div className="mt-8 flex flex-wrap items-center gap-4">;
             <a
@@ -73,7 +73,7 @@ function ApiPerformanceTestingPage() {
     "CI checks and PR annotations",
     "Synthetic traffic for staging",
   ];
-;
+
   return (
     <>;
       <SEO;
@@ -90,14 +90,14 @@ function ApiPerformanceTestingPage() {
             guardrails integrated into your pipeline.;
           </p>;
           <div className="mt - 8 grid sm:grid - cols - 2 gap - 6">;
-            {features.map ((f) => (
+            {features.map (f) => (
               <div;
                 key={f}
                 className="flex items - start space - x-3 p - 4 rounded - xl bg - white / 5 border border - white / 10";
               >;
                 <Check className="w - 5 h - 5 text - cyan - 400 mt - 1" />;
                 <p className="text - gray - 200">{f}</p>;
-              </div>))}
+              </div>)}
           </div>;
           <div className="mt - 8 flex flex - wrap items - center gap - 4">;
             <a;
@@ -149,14 +149,14 @@ function ApiPerformanceTestingPage() {
             guardrails integrated into your pipeline.;
           </p>;
           <div className="mt-8 grid sm:grid-cols-2 gap-6">;
-            {features && features.map((f) => (;
+            {features && features.map(f) => (;
               <div
                 key={f}
                 className="flex items-start space-x-3 p-4 rounded-xl bg-white/5 border border-white/10">;
                 <Check className="w-5 h-5 text-cyan-400 mt-1" />;
                 <p className="text-gray-200">{f}</p>;
               </div>;
-            ))}
+            )}
           </div>;
           <div className="mt-8 flex flex-wrap items-center gap-4">;
             <a
@@ -188,6 +188,5 @@ function ApiPerformanceTestingPage() {
       </main>;
     </>;
   );
-}
+
     </>);
-}

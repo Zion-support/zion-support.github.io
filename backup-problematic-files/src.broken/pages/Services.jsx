@@ -7,6 +7,5 @@ const Services = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default Services;

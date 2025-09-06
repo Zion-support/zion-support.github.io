@@ -13,30 +13,29 @@ import {;
   FormControl,;
   FormMessage} from '@/components/ui/form',;
 import { useFeatureFlags } from '@/context/FeatureFlagContext',;
-;
+
 interface CartItem {;
   id:string,;
   name:string,;
   price:number,;
   quantity:number;}
-;
+
 interface CheckoutForm {;
   name:string,;
   email:string,;
   address:string,;
   city:string,;
   country:string;
-}
-;
+
 export default function CheckoutV2() {;
   const navigate = useNavigate(),;
   const [searchParams] = useSearchParams(),;
   const [items, setItems] = useState<CartItem[]>([]),;
   const form = useForm<CheckoutForm>({;
-    defaultValues:{ name:'', email:'', address:'', city:'', country:'' }}),;
+    defaultValues:{ name:'', email:'', address:'', city:'', country:'' }),;
   const { track } = useFeatureFlags(),;
-;
-  useEffect(() => {;
+
+  useEffect() => {;
     const sku = searchParams.get('sku'),;
     if (sku) {;
       setItems([{ id:sku, name:sku, price:25, quantity:1 }]),;
@@ -49,11 +48,10 @@ export default function CheckoutV2() {;
       } catch {;
         setItems([]),;
       }
-    }
   }, [searchParams]),;
-;
-  const subtotal = items.reduce((sum, i) => sum + i.price * i.quantity, 0),;
-;
+
+  const subtotal = items.reduce(sum, i) => sum + i.price * i.quantity, 0),;
+
   const onSubmit = async (data:CheckoutForm) => {;
     try {;
       const res = await fetch('/api/create-payment-intent', {;
@@ -67,17 +65,15 @@ export default function CheckoutV2() {;
         const payment = await stripe.confirmCardPayment(result.clientSecret, {;
           payment_method:{;
             card:{ token:'tok_visa' },;
-            billing_details:{ name:data.name, email:data.email }}}),;
+            billing_details:{ name:data.name, email:data.email }}),;
         if (payment.error) throw payment.error,;
         safeStorage.removeItem('cart'),;
         navigate(`/orders/${result.id}`),;
         track('new-checkout-v2:conversion');
-      }
-    } catch (err) {;
+      } catch (err) {;
       console.error('Payment failed', err),;
-    }
-  },;
-;
+    },;
+
   return (;
     <div className="container max-w-2xl py-10 border-2 border-dashed rounded-md">;
       <h1 className="text-3xl font-bold mb-6">Checkout v2</h1>;
@@ -143,22 +139,21 @@ export default function CheckoutV2() {;
       </div>;
     </div>;
   ),; 
-}
-}, [searchParams]);
+
+, [searchParams]);
 <FormItem> <FormLabel>Name</FormLabel> <FormControl> <Input {
   ...field 
-}/> </FormControl> <FormMessage /> </FormItem>) 
-}/> </FormControl> <FormMessage /> </FormItem>) 
-}/> <FormItem> <FormLabel>Address</FormLabel> <FormControl> <Input {
+/> </FormControl> <FormMessage /> </FormItem>) 
+/> </FormControl> <FormMessage /> </FormItem>) 
+/> <FormItem> <FormLabel>Address</FormLabel> <FormControl> <Input {
   ...field 
-}/> </FormControl> <FormMessage /> </FormItem>) 
-}/> <FormItem> <FormLabel>City</FormLabel> <FormControl> <Input {
+/> </FormControl> <FormMessage /> </FormItem>) 
+/> <FormItem> <FormLabel>City</FormLabel> <FormControl> <Input {
   ...field 
-}/> </FormControl> <FormMessage /> </FormItem>) 
-}/> <FormItem> <FormLabel>Country</FormLabel> <FormControl> <Input {
+/> </FormControl> <FormMessage /> </FormItem>) 
+/> <FormItem> <FormLabel>Country</FormLabel> <FormControl> <Input {
   ...field 
-}/> </FormControl> <FormMessage /> </FormItem>) 
-}/> <div className="border-t pt-4" > <div className="flex justify-between font-semibold mb-4" > <span>Subtotal</span> <span>$ {
+/> </FormControl> <FormMessage /> </FormItem>) 
+/> <div className="border-t pt-4" > <div className="flex justify-between font-semibold mb-4" > <span>Subtotal</span> <span>$ {
   subtotal.toFixed (2) 
-}</span> </div> <Button className="w-full" type="submit" > Pay with Stripe (test) </Button> </div> </form> </Form> </div> </div>) 
-}
+</span> </div> <Button className="w-full" type="submit" > Pay with Stripe (test) </Button> </div> </form> </Form> </div> </div>) 

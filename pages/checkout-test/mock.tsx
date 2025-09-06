@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React from 'react';
 import { useRouter  } from 'next/router';
 import Link from 'next/link';
@@ -97,7 +97,7 @@ export default function MockCheckoutPage() {;
         </div>
       </div>
     </div>
-);
+;
           <h1 className='text-3xl font-bold text-white mb-4'>;
             Mock Checkout Complete!;
           </h1>;
@@ -160,6 +160,5 @@ export default function MockCheckoutPage() {;
     </div>;
   );
   )
-} 
+
     </div>);
-;

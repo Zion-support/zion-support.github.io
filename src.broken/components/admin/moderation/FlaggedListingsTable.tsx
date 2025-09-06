@@ -6,5 +6,3 @@ export function FlaggedListingsTable() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

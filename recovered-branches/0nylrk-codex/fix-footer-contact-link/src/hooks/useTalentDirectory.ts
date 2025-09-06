@@ -25,13 +25,13 @@ export function useTalentDirectory() {
     saved_talents,
     handleToggleSave;
   } = useAuthStatus ();
-;
+
   // Fetch talent data;
   const {
     talents,
     is_loading;
   } = useTalentData ();
-;
+
   // Apply filters and sorting;
   const {
     filtered_talents;
@@ -99,4 +99,3 @@ export function useTalentDirectory() {
     toggleSection;
     handleToggleSave
   }
-}

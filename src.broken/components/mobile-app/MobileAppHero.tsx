@@ -6,5 +6,3 @@ export function MobileAppHero() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

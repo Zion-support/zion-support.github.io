@@ -1,5 +1,5 @@
 
-// Define the types for our sitemap structure;
+/ Define the types for our sitemap structure;
 export type SitemapItem = {;
   path:string,;
   label:string,;
@@ -10,12 +10,12 @@ export type SitemapItem = {;
   requiredAuth?:boolean,;
   requiredRoles?:Array<'creator' | 'jobSeeker' | 'employer' | 'buyer' | 'admin'>,;
   children?:SitemapItem[];
-},;
-;
-// Current date for lastmod;
+,;
+
+/ Current date for lastmod;
 const currentDate = '2025-05-15',;
-;
-// Public Pages - Accessible to all users;
+
+/ Public Pages - Accessible to all users;
 export const publicPages:SitemapItem[] = [;
   {;
     path:'/',;
@@ -101,8 +101,8 @@ export const publicPages:SitemapItem[] = [;
     priority:0.5,;
     changeFreq:'monthly',;
     lastmod:currentDate}],;
-;
-// Authentication Pages;
+
+/ Authentication Pages;
 export const authPages:SitemapItem[] = [;
   {;
     path:'/login',;
@@ -142,8 +142,8 @@ export const authPages:SitemapItem[] = [;
     priority:0.5,;
     changeFreq:'monthly',;
     lastmod:currentDate}],;
-;
-// Talent/Creator Routes - Requires authentication and appropriate role;
+
+/ Talent/Creator Routes - Requires authentication and appropriate role;
 export const talentRoutes:SitemapItem[] = [;
   {;
     path:'/talent-dashboard',;
@@ -181,8 +181,8 @@ export const talentRoutes:SitemapItem[] = [;
     priority:0.7,;
     changeFreq:'monthly',;
     lastmod:currentDate}],;
-;
-// Client/Employer Routes - Requires authentication and appropriate role;
+
+/ Client/Employer Routes - Requires authentication and appropriate role;
 export const clientRoutes:SitemapItem[] = [;
   {;
     path:'/client-dashboard',;
@@ -211,8 +211,8 @@ export const clientRoutes:SitemapItem[] = [;
     priority:0.7,;
     changeFreq:'daily',;
     lastmod:currentDate}],;
-;
-// Shared Routes - Authenticated Users;
+
+/ Shared Routes - Authenticated Users;
 export const sharedRoutes:SitemapItem[] = [;
   {;
     path:'/messages',;
@@ -246,8 +246,8 @@ export const sharedRoutes:SitemapItem[] = [;
     priority:0.7,;
     changeFreq:'daily',;
     lastmod:currentDate}],;
-;
-// Admin Routes;
+
+/ Admin Routes;
 export const adminRoutes:SitemapItem[] = [;
   {;
     path:'/analytics',;
@@ -276,8 +276,8 @@ export const adminRoutes:SitemapItem[] = [;
     priority:0.8,;
     changeFreq:'daily',;
     lastmod:currentDate}],;
-;
-// Dynamic Path Patterns;
+
+/ Dynamic Path Patterns;
 export const dynamicPaths = {;
   talentProfile:'/talent/:id',;
   projectDetails:'/project/:projectId',;
@@ -286,8 +286,8 @@ export const dynamicPaths = {;
   jobDetails:'/job/:id',;
   categoryDetails:'/categories/:slug',;
   disputeDetails:'/dashboard/disputes/:disputeId'},;
-;
-// The complete sitemap;
+
+/ The complete sitemap;
 export const completeSitemap:SitemapItem[] = [;
   ...publicPages,;
   ...authPages,;
@@ -295,51 +295,48 @@ export const completeSitemap:SitemapItem[] = [;
   ...clientRoutes,;
   ...sharedRoutes,;
   ...adminRoutes],;
-;
-// Helper function to get appropriate routes based on user role;
+
+/ Helper function to get appropriate routes based on user role;
 export const getAccessibleRoutes = (;
   isAuthenticated:boolean, ;
   userType?:'creator' | 'jobSeeker' | 'employer' | 'buyer' | 'admin' | null;
-) => {;
+ => {;
   // Public routes accessible to everyone;
   let accessibleRoutes = [...publicPages, ...authPages],;
-  ;
   // Add authenticated-only routes;
   if (isAuthenticated) {;
     accessibleRoutes = [...accessibleRoutes, ...sharedRoutes],;
-    ;
     // Add role-specific routes;
-    if (userType === 'creator' || userType === 'jobSeeker') {;
+    if (userType = = 'creator' || userType = = 'jobSeeker') {;
       accessibleRoutes = [...accessibleRoutes, ...talentRoutes],;
     }
     ;
-    if (userType === 'employer' || userType === 'buyer') {;
+    if (userType = = 'employer' || userType = = 'buyer') {;
       accessibleRoutes = [...accessibleRoutes, ...clientRoutes],;
     }
     ;
-    if (userType === 'admin') {;
+    if (userType = = 'admin') {;
       accessibleRoutes = [...accessibleRoutes, ...talentRoutes, ...clientRoutes, ...adminRoutes],;
     }
-  }
   ;
   return accessibleRoutes,;
-},; // Define the types for our sitemap structure // Authentication Pages export const authPages: SitemapItem[] = [ {
+,; // Define the types for our sitemap structure // Authentication Pages export const authPages: SitemapItem[] = [ {
   path: '/login', label: 'Login', description: 'Sign in to your account', priority: 0.6, changeFreq: 'monthly', lastmod: currentDate 
-};
-{
+;
+
   path: '/signup', label: 'Sign Up', description: 'Create a new account', priority: 0.6, changeFreq: 'monthly', lastmod: currentDate, children: [ {
   path: '/signup/talent', label: 'Talent Registration', description: 'Sign up as a talent or creator', priority: 0.6, changeFreq: 'monthly', lastmod: currentDate 
-};
-{
+;
+
   path: '/signup/client', label: 'Client Registration', description: 'Sign up as an employer or buyer', priority: 0.6, changeFreq: 'monthly', lastmod: currentDate 
-}] 
-};
-// The complete sitemap export const completeSitemap: SitemapItem[] = [ ...publicPages;
-...authPages;
-...talentRoutes;
-...clientRoutes;
-...sharedRoutes;
-...adminRoutes];
-// Helper function to get appropriate routes based on user role 
-}return accessibleRoutes 
-};
+] 
+;
+/ The complete sitemap export const completeSitemap: SitemapItem[] = [ ...publicPages;
+..authPages;
+..talentRoutes;
+..clientRoutes;
+..sharedRoutes;
+..adminRoutes];
+/ Helper function to get appropriate routes based on user role 
+return accessibleRoutes 
+;

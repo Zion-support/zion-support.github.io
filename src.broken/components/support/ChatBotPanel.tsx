@@ -6,5 +6,3 @@ export function ChatBotPanel() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

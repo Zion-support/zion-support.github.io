@@ -6,9 +6,9 @@ import { findPartnerByApiKey, signJwt } from '../../../utils/api/partnerAuth';
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
-) {
+ {
   try {
-  if (req && req.method !== 'POST') {
+  if (req && req.method != 'POST') {
     res && res.setHeader('Allow', 'POST');
     return res && res.status(405).json({ error: 'Method Not Allowed' });
   }
@@ -25,7 +25,7 @@ export default async function handler(
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
-  if (req && req.method !== "POST") {
+  if (req && req.method != "POST") {
     res && res.setHeader("Allow", "POST");
     return res && res.status(405).json({ error: "Method Not Allowed" })
   }
@@ -39,7 +39,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res && res.status(401).json({ error: "Invalid API key" });
     return res && res.status(401).json({ error: "Invalid API key" });
 import { findPartnerByApiKey, sign_jwt } from '../../../utils / api / partner_auth';
-;
+
 export default async /**
  * handler - Function description
  */
@@ -47,7 +47,7 @@ function handler() {
   // Check condition
 if ( {) {
   $2
-}
+
     res.set_header ('Allow', 'POST');
     return res.status (405).json ({ error: 'Method Not Allowed' });
   }
@@ -55,14 +55,14 @@ if ( {) {
   // Check condition
 if ( {) {
   $2
-}
+
     return res.status (400).json ({ error: 'api_key required' });
   }
   const match = await findPartnerByApiKey (api_key);
   // Check condition
 if ( {) {
   $2
-}
+
     return res.status (401).json ({ error: 'Invalid API key' });  }
   const { partner, api_key: key } = match;
   const token = sign_jwt (
@@ -83,38 +83,37 @@ if ( {) {
       entityType: partner && partner.entityType,
       useCaseType: partner && partner.useCaseType,
     } as any,
-    typeof ttlSeconds === 'number'
-      ? Math && Math.max(300, Math && Math.min(86400, ttlSeconds))
+    typeof ttlSeconds = = 'number'
+      ? Math && Math.max(300, Math && Math.min(86400, ttlSeconds)
       : 3600
   );
   return res
     .status(200)
-    .json({ token, partner: { id: partner.id, name: partner.name } });      sub: partner.id;
+    .json({ token, partner: { id: partner.id, name: partner.name });      sub: partner.id;
       apiKeyId: key.id;
       name: partner.name;
       entityType: partner.entityType
       useCaseType: partner.useCaseType} as any;
-    typeof ttlSeconds === "number" ? Math.max(300, Math.min(86400, ttlSeconds)) : 3600
+    typeof ttlSeconds = = "number" ? Math.max(300, Math.min(86400, ttlSeconds) : 3600
   );
 
-  return res.status(200).json({ token, partner: { id: partner.id, name: partner.name } })
-}
+  return res.status(200).json({ token, partner: { id: partner.id, name: partner.name })
+
       sub: partner.id,
       apiKeyId: key.id,
       name: partner.name,
       entity_type: partner.entity_type,
       useCaseType: partner.useCaseType,
     } as any,
-    typeof ttl_seconds === 'number';
-      ? Math.max (300, Math.min (86400, ttl_seconds));
+    typeof ttl_seconds = = 'number';
+      ? Math.max (300, Math.min (86400, ttl_seconds);
       : 3600);
   return res;
     .status (200);
-    .json ({ token, partner: { id: partner.id, name: partner.name } });      sub: partner.id;
+    .json ({ token, partner: { id: partner.id, name: partner.name });      sub: partner.id;
       apiKeyId: key.id;
       name: partner.name;
       entity_type: partner.entity_type,
       useCaseType: partner.useCaseType} as any;
-    typeof ttl_seconds === "number" ? Math.max (300, Math.min (86400, ttl_seconds)) : 3600);
-  return res.status (200).json ({ token, partner: { id: partner.id, name: partner.name } });
-}
+    typeof ttl_seconds = = "number" ? Math.max (300, Math.min (86400, ttl_seconds) : 3600);
+  return res.status (200).json ({ token, partner: { id: partner.id, name: partner.name });

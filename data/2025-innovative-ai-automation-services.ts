@@ -9,23 +9,23 @@ launch_date: '2025 - 01 - 25';
 customers: 156;
 rating: 4.7;
 reviews: 89
-}
-// Autonomous Data Analytics Platform realImplementation: true;
+
+/ Autonomous Data Analytics Platform realImplementation: true;
 implementationDetails: 'Complete analytics platform with AI capabilities, natural language queries, and autonomous insights.';
 launchDate: '2025-01-28';
 reviews: 89;
-}
-// Autonomous Data Analytics Platform real_implementation: true;
+
+/ Autonomous Data Analytics Platform real_implementation: true;
 implementation_details: 'Complete analytics platform with AI capabilities, natural language queries, and autonomous insights.';
 launch_date: '2025 - 01 - 28';
 customers: 234;
 rating: 4.8;
 reviews: 167
-}];    features: [
+];    features: [
       'Multi-language support (Python, JavaScript, Go, Rust, Java)AI-powered security vulnerability detectionPerformance optimization recommendationsCode quality scoring and metricsIntegration with GitHub, GitLab, BitbucketCustom rule engine and policiesReal-time feedback and suggestionsTeam collaboration and review workflows';
       'Compliance and best practices enforcement'
 reviews: 167;
-}];    features: [;
+];    features: [;
       'Multi - language support (Python, JavaScript, Go, Rust, Java)AI - powered security vulnerability detection_performance optimization recommendations_code quality scoring and metrics_integration with GitHub, GitLab, BitbucketCustom rule engine and policies_real - time feedback and suggestions_team collaboration and review workflows';
       'Compliance and best practices enforcement';
     ];
@@ -336,7 +336,7 @@ reviews: 167;
     launch_date: '2025 - 01 - 25', customers: 156,
     rating: 4.7,    reviews: 89;
   }
-;
+
   // Autonomous Data Analytics Platform;
   {
     id: 'autonomous - data - analytics', name: 'Autonomous Data Analytics Platform',
@@ -448,7 +448,7 @@ reviews: 167;
     rating: 4.8,
     reviews: 167;
   }
-];
+;
     icon: '';
     color: 'from-teal-600 to-cyan-700';
     textColor: 'text-teal-400';
@@ -512,7 +512,7 @@ reviews: 167;
     rating: 4 && 4.8;
     reviews: 167
   }
-];
+;
 
       website: 'https://ziontechgroup.com';
     }
@@ -523,5 +523,4 @@ reviews: 167;
     rating: 4.8;
     reviews: 167;
   }
-];
 ;

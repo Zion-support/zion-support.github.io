@@ -2,16 +2,14 @@
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { HELP_CATEGORIES } from "./help-content",;
-;
+
 interface HelpArticleListProps {;
   categoryId:string,;
   onArticleSelect:(articleId:string) => void,;
   searchQuery:string;
-}
-;
+
 export function HelpArticleList({ categoryId, onArticleSelect, searchQuery } HelpArticleListProps) {;
-  const category = HELP_CATEGORIES.find(cat => cat.id === categoryId),;
-  ;
+  const category = HELP_CATEGORIES.find(cat => cat.id = = categoryId),;
   if (!category) {;
     return <div>Category not found</div>,;
   }
@@ -20,19 +18,17 @@ export function HelpArticleList({ categoryId, onArticleSelect, searchQuery } Hel
   const filteredArticles = searchQuery;
     ? category.articles.filter(;
         article =>;
-          article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-          article.content.toLowerCase().includes(searchQuery.toLowerCase());
+          article.title.toLowerCase().includes(searchQuery.toLowerCase() ||;
+          article.content.toLowerCase().includes(searchQuery.toLowerCase();
       );
     :category.articles,;
-  ;
   return (;
     <div>;
       <div className="mb-6">;
         <h2 className="text-2xl font-bold mb-2">{category.name}</h2>;
         <p className="text-zion-slate-light">{category.description}</p>;
       </div>;
-      ;
-      {filteredArticles.length === 0 ? (;
+      {filteredArticles.length = = 0 ? (;
         <div className="text-center py-8">;
           <h3 className="text-lg font-medium mb-2">No articles found</h3>;
           <p className="text-zion-slate-light">;
@@ -58,13 +54,12 @@ export function HelpArticleList({ categoryId, onArticleSelect, searchQuery } Hel
                   {article.content.substring(0, 120)}...;
                 </p>;
               </CardContent>;
-            </Card>;          ))}
+            </Card>;          )}
         </div>;
       )}
     </div>;
   ),;
-}
-;
+
 function formatDate(date:string):string {;
   return new Date(date).toLocaleDateString("en-US", {;
     year:"numeric",;
@@ -74,14 +69,12 @@ function formatDate(date:string):string {;
   categoryId: string;
 onArticleSelect: (articleId: string) => void;
 searchQuery: string 
-}export function HelpArticleList ({
+export function HelpArticleList ({
   categoryId, onArticleSelect, searchQuery 
-}: HelpArticleListProps) {
-  const category = HELP CATEGORIES.find (cat => cat.id === categoryId);
+: HelpArticleListProps) {
+  const category = HELP CATEGORIES.find (cat => cat.id = = categoryId);
 if (!category) {
   return <div>Category not found</div> 
-}return (<div> </p> </CardContent> </Card>) ) 
-}</div>) 
-}</div>) 
-}
-}
+return (<div></p> </CardContent> </Card>) 
+</div>) 
+</div>) 

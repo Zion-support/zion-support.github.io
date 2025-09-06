@@ -4,12 +4,12 @@ import { ;
   Rocket, CheckCircle, ArrowRight, Brain, Atom, ;
   Shield, Zap, Users, Clock, Target, Star,;
   FileText, Video, Code, Globe, Building;
-} from 'lucide-react',;
-;
+ from 'lucide-react',;
+
 export default function GetStarted() {;
   const [selectedPath, setSelectedPath] = useState<string>(''),;
   const [currentStep, setCurrentStep] = useState(1),;
-;
+
   const onboardingSteps = [;
     {;
       step:1,;
@@ -36,7 +36,7 @@ export default function GetStarted() {;
       icon:<Rocket className="w-8 h-8 text-green-400" />;
     }
   ],;
-;
+
   const technologyPaths = [;
     {;
       id:'ai-consciousness',;
@@ -91,7 +91,7 @@ export default function GetStarted() {;
       complexity:'Intermediate';
     }
   ],;
-;
+
   const quickStartOptions = [;
     {;
       title:'Free Consultation',;
@@ -126,24 +126,22 @@ export default function GetStarted() {;
       color:'from-orange-500 to-red-600';
     }
   ],;
-;
+
   const handlePathSelection = (pathId:string) => {;
     setSelectedPath(pathId),;
     setCurrentStep(2);
   },;
-;
+
   const handleNextStep = () => {;
     if (currentStep < 4) {;
       setCurrentStep(currentStep + 1),;
-    }
-  },;
-;
+    },;
+
   const handlePreviousStep = () => {;
     if (currentStep > 1) {;
       setCurrentStep(currentStep - 1),;
-    }
-  },;
-;
+    },;
+
   return (;
     <div className="min-h-screen bg-black text-white">;
       {/* Hero Section */}
@@ -151,9 +149,9 @@ export default function GetStarted() {;
         <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/20 via-purple-900/20 to-pink-900/20" />;
         <div className="relative z-10 container mx-auto px-4">;
           <motion.div;
-            initial={{ opacity:0, y:20 }}
-            animate={{ opacity:1, y:0 }}
-            transition={{ duration:0.8 }}
+            initial={ opacity:0, y:20 }
+            animate={ opacity:1, y:0 }
+            transition={ duration:0.8 }
             className="text-center max-w-4xl mx-auto";
           >;
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">;
@@ -180,14 +178,14 @@ export default function GetStarted() {;
           </motion.div>;
         </div>;
       </section>;
-;
+
       {/* Onboarding Steps */}
       <section className="py-20">;
         <div className="container mx-auto px-4">;
           <motion.div;
-            initial={{ opacity:0, y:20 }}
-            whileInView={{ opacity:1, y:0 }}
-            transition={{ duration:0.8 }}
+            initial={ opacity:0, y:20 }
+            whileInView={ opacity:1, y:0 }
+            transition={ duration:0.8 }
             className="text-center mb-16";
           >;
             <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">;
@@ -195,16 +193,15 @@ export default function GetStarted() {;
             </h2>;
             <p className="text-xl text-gray-400">From initial consultation to full implementation</p>;
           </motion.div>;
-          ;
           <div className="grid md:grid-cols-4 gap-8">;
-            {onboardingSteps.map((step, index) => (;
+            {onboardingSteps.map(step, index) => (;
               <motion.div;
                 key={step.step}
-                initial={{ opacity:0, y:20 }}
-                whileInView={{ opacity:1, y:0 }}
-                transition={{ duration:0.8, delay:index * 0.1 }}
+                initial={ opacity:0, y:20 }
+                whileInView={ opacity:1, y:0 }
+                transition={ duration:0.8, delay:index * 0.1 }
                 className={`text-center p-6 rounded-2xl border transition-all duration-300 ${;
-                  currentStep === step.step;
+                  currentStep = = step.step;
                     ? 'bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border-cyan-500/50';
                     :'bg-gradient-to-br from-gray-900/30 to-black/30 border-gray-800/50';
                 }`}
@@ -215,19 +212,19 @@ export default function GetStarted() {;
                 <div className="flex justify-center mb-4">{step.icon}</div>;
                 <h3 className="text-xl font-bold text-white mb-3">{step.title}</h3>;
                 <p className="text-gray-300 leading-relaxed">{step.description}</p>;
-              </motion.div>;            ))}
+              </motion.div>;            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Technology Paths */}
-      {currentStep === 1 && (;
+      {currentStep = = 1 && (;
         <section className="py-20 bg-gradient-to-r from-gray-900/50 to-black">;
           <div className="container mx-auto px-4">;
             <motion.div;
-              initial={{ opacity:0, y:20 }}
-              whileInView={{ opacity:1, y:0 }}
-              transition={{ duration:0.8 }}
+              initial={ opacity:0, y:20 }
+              whileInView={ opacity:1, y:0 }
+              transition={ duration:0.8 }
               className="text-center mb-16";
             >;
               <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">;
@@ -235,14 +232,13 @@ export default function GetStarted() {;
               </h2>;
               <p className="text-xl text-gray-400">Select the area that best aligns with your business goals</p>;
             </motion.div>;
-            ;
             <div className="grid lg:grid-cols-2 gap-8">;
-              {technologyPaths.map((path, index) => (;
+              {technologyPaths.map(path, index) => (;
                 <motion.div;
                   key={path.id}
-                  initial={{ opacity:0, y:20 }}
-                  whileInView={{ opacity:1, y:0 }}
-                  transition={{ duration:0.8, delay:index * 0.1 }}
+                  initial={ opacity:0, y:20 }
+                  whileInView={ opacity:1, y:0 }
+                  transition={ duration:0.8, delay:index * 0.1 }
                   className="group cursor-pointer";
                   onClick={() => handlePathSelection(path.id)}
                 >;
@@ -256,35 +252,32 @@ export default function GetStarted() {;
                         <p className="text-gray-300 leading-relaxed">{path.description}</p>;
                       </div>;
                     </div>;
-                    ;
                     <div className="grid md:grid-cols-2 gap-6 mb-6">;
                       <div>;
                         <h4 className="text-sm font-semibold text-gray-400 uppercase tracking-wide mb-3">Key Features</h4>;
                         <ul className="space-y-2">;
-                          {path.features.map((feature) => (;
+                          {path.features.map(feature) => (;
                             <li key={feature} className="flex items-center gap-2 text-gray-300">;
                               <CheckCircle className="w-4 h-4 text-cyan-400" />;
                               <span className="text-sm">{feature}</span>;
                             </li>;
-                          ))}
+                          )}
                         </ul>;
                       </div>;
-                      ;
                       <div>;
                         <h4 className="text-sm font-semibold text-gray-400 uppercase tracking-wide mb-3">Use Cases</h4>;
                         <div className="flex flex-wrap gap-2">;
-                          {path.useCases.map((useCase) => (;
+                          {path.useCases.map(useCase) => (;
                             <span;
                               key={useCase}
                               className="px-3 py-1 bg-gray-800/50 text-gray-300 rounded-full text-sm";
                             >;
                               {useCase}
                             </span>;
-                          ))}
+                          )}
                         </div>;
                       </div>;
                     </div>;
-                    ;
                     <div className="flex items-center justify-between pt-6 border-t border-gray-800/50">;
                       <div className="flex gap-4 text-sm text-gray-400">;
                         <span className="flex items-center gap-1">;
@@ -302,20 +295,20 @@ export default function GetStarted() {;
                       </div>;
                     </div>;
                   </div>;
-                </motion.div>;              ))}
+                </motion.div>;              )}
             </div>;
           </div>;
         </section>;
       )}
-;
+
       {/* Requirements Definition */}
-      {currentStep === 2 && (;
+      {currentStep = = 2 && (;
         <section className="py-20 bg-gradient-to-r from-gray-900/50 to-black">;
           <div className="container mx-auto px-4">;
             <motion.div;
-              initial={{ opacity:0, y:20 }}
-              whileInView={{ opacity:1, y:0 }}
-              transition={{ duration:0.8 }}
+              initial={ opacity:0, y:20 }
+              whileInView={ opacity:1, y:0 }
+              transition={ duration:0.8 }
               className="text-center mb-16";
             >;
               <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">;
@@ -323,18 +316,16 @@ export default function GetStarted() {;
               </h2>;
               <p className="text-xl text-gray-400">Help us understand your project goals and constraints</p>;
             </motion.div>;
-            ;
             <div className="max-w-4xl mx-auto">;
               <div className="bg-gradient-to-br from-gray-900/30 to-black/30 rounded-2xl p-8 border border-gray-800/50">;
                 <div className="text-center mb-8">;
                   <h3 className="text-2xl font-bold text-white mb-4">;
-                    Selected Path:{technologyPaths.find(p => p.id === selectedPath)?.name}
+                    Selected Path:{technologyPaths.find(p => p.id = = selectedPath)?.name}
                   </h3>;
                   <p className="text-gray-300">;
                     Now let's gather more details about your specific needs;
                   </p>;
                 </div>;
-                ;
                 <div className="space-y-6">;
                   <div className="grid md:grid-cols-2 gap-6">;
                     <div>;
@@ -346,7 +337,6 @@ export default function GetStarted() {;
                         <option>6+ months</option>;
                       </select>;
                     </div>;
-                    ;
                     <div>;
                       <label className="block text-sm font-medium text-gray-300 mb-2">Budget Range</label>;
                       <select className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300">;
@@ -357,7 +347,6 @@ export default function GetStarted() {;
                       </select>;
                     </div>;
                   </div>;
-                  ;
                   <div>;
                     <label className="block text-sm font-medium text-gray-300 mb-2">Project Description</label>;
                     <textarea;
@@ -366,7 +355,6 @@ export default function GetStarted() {;
                       placeholder="Describe your project goals, challenges, and specific requirements...";
                     />;
                   </div>;
-                  ;
                   <div className="flex justify-between pt-6">;
                     <button;
                       onClick={handlePreviousStep}
@@ -386,14 +374,14 @@ export default function GetStarted() {;
             </div>;
           </div>;
         </section>;      )}
-;
+
       {/* Quick Start Options */}
       <section className="py-20">;
         <div className="container mx-auto px-4">;
           <motion.div;
-            initial={{ opacity:0, y:20 }}
-            whileInView={{ opacity:1, y:0 }}
-            transition={{ duration:0.8 }}
+            initial={ opacity:0, y:20 }
+            whileInView={ opacity:1, y:0 }
+            transition={ duration:0.8 }
             className="text-center mb-16";
           >;
             <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">;
@@ -401,47 +389,43 @@ export default function GetStarted() {;
             </h2>;
             <p className="text-xl text-gray-400">Get started immediately with these quick options</p>;
           </motion.div>;
-          ;
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
-            {quickStartOptions.map((option, index) => (;
+            {quickStartOptions.map(option, index) => (;
               <motion.div;
                 key={option.title}
-                initial={{ opacity:0, y:20 }}
-                whileInView={{ opacity:1, y:0 }}
-                transition={{ duration:0.8, delay:index * 0.1 }}
+                initial={ opacity:0, y:20 }
+                whileInView={ opacity:1, y:0 }
+                transition={ duration:0.8, delay:index * 0.1 }
                 className="group cursor-pointer";
               >;
                 <div className="p-6 bg-gradient-to-br from-gray-900/50 to-black/50 rounded-2xl border border-gray-800/50 hover:border-cyan-500/30 transition-all duration-300">;
                   <div className="flex justify-center mb-4 group-hover:scale-110 transition-transform duration-300">;
                     {option.icon}
                   </div>;
-                  ;
                   <h3 className="text-xl font-bold text-white mb-3 text-center">{option.title}</h3>;
                   <p className="text-gray-300 mb-4 text-center leading-relaxed">{option.description}</p>;
-                  ;
                   <div className="text-center mb-4">;
                     <span className="inline-flex items-center gap-1 px-3 py-1 bg-gray-800/50 text-gray-300 rounded-full text-sm">;
                       <Clock className="w-4 h-4" />;
                       {option.duration}
                     </span>;
                   </div>;
-                  ;
                   <button className={`w-full py-3 px-4 bg-gradient-to-r ${option.color} text-white rounded-xl font-semibold hover:shadow-2xl transition-all duration-300`}>;
                     {option.action}
                   </button>;
                 </div>;
-              </motion.div>;            ))}
+              </motion.div>;            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Contact CTA */}
       <section className="py-20 bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20">;
         <div className="container mx-auto px-4 text-center">;
           <motion.div;
-            initial={{ opacity:0, y:20 }}
-            whileInView={{ opacity:1, y:0 }}
-            transition={{ duration:0.8 }}
+            initial={ opacity:0, y:20 }
+            whileInView={ opacity:1, y:0 }
+            transition={ duration:0.8 }
           >;
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">;
               Ready to Begin Your Journey?;
@@ -470,52 +454,45 @@ export default function GetStarted() {;
       </section>;
     </div>;
   ); const onboardingSteps = [ {
-  > <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6" > Get Started Today </h1> </p> <div className="flex flex-wrap justify-center gap-6" > <div className="flex items-center gap-2 text-cyan-400" > <Rocket className="w-6 h-6" /> <span>Quick Start</span> </div> <div className="flex items-center gap-2 text-purple-400" > <Users className="w-6 h-6" /> <span>Expert Guidance</span> </div> <div className="flex items-center gap-2 text-green-400" > <CheckCircle className="w-6 h-6" /> <span>Proven Results</span> </div> </div> </motion.div> </div> </section> > <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Simple 4-Step Process </h2> <p className="text-xl text-gray-400" >From initial consultation to full implementation</p> </motion.div> <motion.div key= {
+  > <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6" > Get Started Today </h1> </p> <div className="flex flex-wrap justify-center gap-6" > <div className="flex items-center gap-2 text-cyan-400" > <Rocket className="w-6 h-6" /> <span>Quick Start</span> </div> <div className="flex items-center gap-2 text-purple-400" > <Users className="w-6 h-6" /> <span>Expert Guidance</span> </div> <div className="flex items-center gap-2 text-green-400" > <CheckCircle className="w-6 h-6" /> <span>Proven Results</span> </div> </div> </motion.div> </div> </section><h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Simple 4-Step Process </h2> <p className="text-xl text-gray-400" >From initial consultation to full implementation</p> </motion.div> <motion.div key= {
   step.step 
-}initial= {
-  {
+initial= {
   opacity: 0, y: 20 
-}
-}whileInView= {
-  {
+
+whileInView= {
   opacity: 1, y: 0 
-}
-}transition= {
-  {
+
+transition= {
   duration: 0.8, delay: index * 0.1 
-}
-}className= {
+
+className= {
   `text-center p-6 rounded-2xl border transition-all duration-300 $ {
-  currentStep === step.step ? 'bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border-cyan-500/50' : 'bg-gradient-to-br from-gray-900/30 to-black/30 border-gray-800/50' 
-}` 
-}> </motion.div>) ) 
-}</div> </div> </section> > <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Choose Your Technology Path </h2> <p className="text-xl text-gray-400" >Select the area that best aligns with your business goals</p> </motion.div> </div> </div> <div className="grid md:grid-cols-2 gap-6 mb-6" > <div> </li>) ) 
-}</ul> </div> <div> <span key= {
+  currentStep = = step.step ? 'bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border-cyan-500/50' : 'bg-gradient-to-br from-gray-900/30 to-black/30 border-gray-800/50' 
+` 
+> </motion.div>) 
+</div> </div> </section><h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Choose Your Technology Path </h2> <p className="text-xl text-gray-400" >Select the area that best aligns with your business goals</p> </motion.div> </div> </div> <div className="grid md:grid-cols-2 gap-6 mb-6" > <div></li>) 
+</ul> </div> <div> <span key= {
   useCase 
-}className="px-3 py-1 bg-gray-800/50 text-gray-300 rounded-full text-sm" > {
+className="px-3 py-1 bg-gray-800/50 text-gray-300 rounded-full text-sm" > {
   useCase 
-}</span>) ) 
-}</div> </div> </div> </span> </div> <div className="flex items-center gap-2 text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300" > <span className="font-medium" >Select Path</span> <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" /> </div> </div> </div> </motion.div>) ) 
-}</div> </div> </section>) 
-}> <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Define Your Requirements </h2> <p className="text-xl text-gray-400" >Help us understand your project goals and constraints</p> </motion.div> </h3> <p className="text-gray-300" > Now let's gather more details about your specific needs </p> </div> <div className="space-y-6" > <div className="grid md:grid-cols-2 gap-6" > <div> <label className="block text-sm font-medium text-gray-300 mb-2" >Project Timeline</label> <select className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300" > <option>Immediate (1-2 weeks) </option> <option>1-3 months</option> <option>3-6 months</option> <option>6+ months</option> </select> </div> <div> <label className="block text-sm font-medium text-gray-300 mb-2" >Budget Range</label> <select className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300" > <option>Under $50K</option> <option>$50K - $100K</option> <option>$100K - $500K</option> <option>$500K+</option> </select> </div> </div> <div> <label className="block text-sm font-medium text-gray-300 mb-2" >Project Description</label> <textarea /> </div> <div className="flex justify-between pt-6" > <button > Previous </button> <button > Next Step </button> </div> </div> </div> </div> </div> </section>) 
-}> <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Quick Start Options </h2> <p className="text-xl text-gray-400" >Get started immediately with these quick options</p> </motion.div> </span> </div> <button className= {
+</span>) 
+</div> </div> </div> </span> </div> <div className="flex items-center gap-2 text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300" > <span className="font-medium" >Select Path</span> <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" /> </div> </div> </div> </motion.div>) 
+</div> </div> </section>) 
+> <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Define Your Requirements </h2> <p className="text-xl text-gray-400" >Help us understand your project goals and constraints</p> </motion.div> </h3> <p className="text-gray-300" > Now let's gather more details about your specific needs </p> </div> <div className="space-y-6" > <div className="grid md:grid-cols-2 gap-6" > <div> <label className="block text-sm font-medium text-gray-300 mb-2" >Project Timeline</label> <select className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300" > <option>Immediate (1-2 weeks) </option> <option>1-3 months</option> <option>3-6 months</option> <option>6+ months</option> </select> </div> <div> <label className="block text-sm font-medium text-gray-300 mb-2" >Budget Range</label> <select className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300" > <option>Under $50K</option> <option>$50K - $100K</option> <option>$100K - $500K</option> <option>$500K+</option> </select> </div> </div> <div> <label className="block text-sm font-medium text-gray-300 mb-2" >Project Description</label> <textarea /> </div> <div className="flex justify-between pt-6" > <button > Previous </button> <button > Next Step </button> </div> </div> </div> </div> </div> </section>) 
+> <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Quick Start Options </h2> <p className="text-xl text-gray-400" >Get started immediately with these quick options</p> </motion.div> </span> </div> <button className= {
   `w-full py-3 px-4 bg-gradient-to-r $ {
   option.color 
-}text-white rounded-xl font-semibold hover:shadow-2xl transition-all duration-300` 
-}> {
+text-white rounded-xl font-semibold hover:shadow-2xl transition-all duration-300` 
+> {
   option.action 
-}</button> </div> </motion.div>) ) 
-}</div> </div> </section> <motion.div initial= {
-  {
+</button> </div> </motion.div>) 
+</div> </div> </section> <motion.div initial= {
   opacity: 0, y: 20 
-}
-}whileInView= {
-  {
+
+whileInView= {
   opacity: 1, y: 0 
-}
-}transition= {
-  {
+
+transition= {
   duration: 0.8 
-}
-}> <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Ready to Begin Your Journey? </h2> <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto" > Our team of experts is ready to help you navigate the future of technology. Let's discuss your project and create a roadmap to success. </p> <a href="/contact" className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-2xl font-semibold hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300" > Contact Our Team <ArrowRight className="w-5 h-5" /> </Link> <a href="/quote" className="inline-flex items-center gap-2 border border-cyan-500/30 text-cyan-400 px-8 py-4 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300" > Get a Quote </Link> </div> </motion.div> </div> </section> </div>) 
-}
+
+> <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Ready to Begin Your Journey? </h2> <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto" > Our team of experts is ready to help you navigate the future of technology. Let's discuss your project and create a roadmap to success. </p> <a href="/contact" className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-2xl font-semibold hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300" > Contact Our Team <ArrowRight className="w-5 h-5" /> </Link> <a href="/quote" className="inline-flex items-center gap-2 border border-cyan-500/30 text-cyan-400 px-8 py-4 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300" > Get a Quote </Link> </div> </motion.div> </div> </section> </div>) 

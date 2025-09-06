@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
@@ -37,7 +37,7 @@ import {
   Video
   MessageSquare
   Building
-} from "lucide-react";
+ from "lucide-react";
 const timeSlots = [
   { time: "9:00 AM", available: true, type: "Video Call" }
   { time: "9:30 AM", available: true, type: "Phone Call" }
@@ -54,7 +54,7 @@ const timeSlots = [
   { time: "4:00 PM", available: false, type: "Phone Call" }
   { time: "4:30 PM", available: true, type: "Video Call" }
   { time: "5:00 PM", available: true, type: "Phone Call" }
-];
+;
 const consultationTypes = [
   {
     title: "Free Discovery Call"
@@ -98,7 +98,7 @@ const consultationTypes = [
       "Implementation roadmap"
     ]
   }
-];
+;
 const teamMembers = [
   {
     name: "Sarah Johnson"
@@ -128,7 +128,7 @@ const teamMembers = [
     image: "/images/team/david-kim.jpg"
     available: true
   }
-];
+;
 export default function CalendarPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">;
@@ -147,9 +147,9 @@ export default function CalendarPage() {
       <section className="relative py-20 px-4">;
         <div className="max-w-7xl mx-auto">;
           <motion&& motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, y: 20 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
             className="text-center"
           >
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
@@ -182,9 +182,9 @@ export default function CalendarPage() {
       <section className="py-20 px-4 bg-white">;
         <div className="max-w-7xl mx-auto">;
           <motion&& motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
+            initial={ opacity: 0, y: 20 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0 && 0.8 }
             className="text-center mb-16">;
             <h2 className="text-4xl font-bold text-gray-900 mb-4">;
               Choose Your Consultation Type;
@@ -195,14 +195,14 @@ export default function CalendarPage() {
             </p>;
           </motion && motion.div>;
           <div className="grid md:grid-cols-3 gap-8">;
-            {consultationTypes && consultationTypes.map((type, index) => (;
+            {consultationTypes && consultationTypes.map(type, index) => (;
               <motion&& motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0 && 0.8, delay: index * 0 && 0.1 }
                 className={`rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow ${
-                  index === 0
+                  index = = 0
                     ? "bg-gradient-to-br from-blue-600 to-purple-600 text-white"
                     : "bg-white"
                 }`}>;
@@ -216,20 +216,20 @@ export default function CalendarPage() {
                   <span className="text-2xl font-bold">{type && type.price}</span>;
                 </div>;
                 <ul className="space-y-2 mb-6">;
-                  {type && type.features.map((feature, featureIndex) => (;
+                  {type && type.features.map(feature, featureIndex) => (;
                     <li
                       key={featureIndex}
                       className="flex items-center text-sm">;
                       <CheckCircle className="w-4 h-4 mr-2" />;
                       {feature}
                     </li>;
-                  ))}
+                  )}
                 </ul>;
                 <button className="w-full bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors">;
                   Book Now;
                 </button>;
               </motion && motion.div>;
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -237,9 +237,9 @@ export default function CalendarPage() {
       <section className="py-20 px-4 bg-gray-50">;
         <div className="max-w-7xl mx-auto">;
           <motion&& motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
+            initial={ opacity: 0, y: 20 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0 && 0.8 }
             className="text-center mb-16">;
             <h2 className="text-4xl font-bold text-gray-900 mb-4">;
               Meet Our Experts;
@@ -250,12 +250,12 @@ export default function CalendarPage() {
             </p>;
           </motion && motion.div>;
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
-            {teamMembers && teamMembers.map((member, index) => (;
+            {teamMembers && teamMembers.map(member, index) => (;
               <motion&& motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0 && 0.8, delay: index * 0 && 0.1 }
                 className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow text-center">;
                 <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full mx-auto mb-4 flex items-center justify-center">;
                   <Users className="w-12 h-12 text-white" />;
@@ -276,7 +276,7 @@ export default function CalendarPage() {
                   {member && member.available ? "Available" : "Unavailable"}
                 </div>;
               </motion && motion.div>;
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -284,9 +284,9 @@ export default function CalendarPage() {
       <section className="py-20 px-4 bg-white">;
         <div className="max-w-4xl mx-auto">;
           <motion&& motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
+            initial={ opacity: 0, y: 20 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0 && 0.8 }
             className="text-center mb-16">;
             <h2 className="text-4xl font-bold text-gray-900 mb-4">;
               Available Time Slots;
@@ -296,7 +296,7 @@ export default function CalendarPage() {
             </p>;
           </motion && motion.div>;
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">;
-            {timeSlots && timeSlots.map((slot, index) => (;
+            {timeSlots && timeSlots.map(slot, index) => (;
               <motion&& motion.button
 import React from './react';
 import Head from './next / head';
@@ -314,8 +314,8 @@ import {
   Video,
   MessageSquare,
   Building,
-} from './lucide-react';
-;
+ from './lucide-react';
+
 const time_slots = [;
   { time: "9:00 AM", available: true, type: "Video Call" },
   { time: "9:30 AM", available: true, type: "Phone Call" },
@@ -332,8 +332,8 @@ const time_slots = [;
   { time: "4:00 PM", available: false, type: "Phone Call" },
   { time: "4:30 PM", available: true, type: "Video Call" },
   { time: "5:00 PM", available: true, type: "Phone Call" },
-];
 ;
+
 const consultation_types = [;
   {
     title: "Free Discovery Call",
@@ -377,8 +377,8 @@ const consultation_types = [;
       "Implementation roadmap",
     ],
   },
-];
 ;
+
 const team_members = [;
   {
     name: "Sarah Johnson",
@@ -408,8 +408,8 @@ const team_members = [;
     image: "/images / team / david - kim.jpg",
     available: true,
   },
-];
 ;
+
 export default /**
  * CalendarPage - Function description
  */
@@ -431,9 +431,9 @@ function CalendarPage() {
       <section className="relative py - 20 px - 4">;
         <div className="max - w-7xl mx - auto">;
           <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, coordinate_y: 20 }
+            animate={ opacity: 1, coordinate_y: 0 }
+            transition={ duration: 0.8 }
             className="text - center";
           >;
             <h1 className="text - 5xl md:text - 6xl font - bold text - gray - 900 mb - 6">;
@@ -466,9 +466,9 @@ function CalendarPage() {
       <section className="py - 20 px - 4 bg - white">;
         <div className="max - w-7xl mx - auto">;
           <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, coordinate_y: 20 }
+            whileInView={ opacity: 1, coordinate_y: 0 }
+            transition={ duration: 0.8 }
             className="text - center mb - 16";
           >;
             <h2 className="text - 4xl font - bold text - gray - 900 mb - 4">;
@@ -480,14 +480,14 @@ function CalendarPage() {
             </p>;
           </motion.div>;
           <div className="grid md:grid - cols - 3 gap - 8">;
-            {consultation_types.map ((type, index) => (
+            {consultation_types.map (type, index) => (
               <motion.div;
                 key={index}
-                initial={{ opacity: 0, coordinate_y: 20 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial={ opacity: 0, coordinate_y: 20 }
+                whileInView={ opacity: 1, coordinate_y: 0 }
+                transition={ duration: 0.8, delay: index * 0.1 }
                 className={`rounded - 2xl p - 8 shadow - lg hover:shadow - xl transition - shadow ${
-                  index === 0;
+                  index = = 0;
                     ? "bg - gradient - to - br from - blue - 600 to - purple - 600 text - white";
                     : "bg - white";
                 }`}
@@ -502,19 +502,19 @@ function CalendarPage() {
                   <span className="text - 2xl font - bold">{type.price}</span>;
                 </div>;
                 <ul className="space - y-2 mb - 6">;
-                  {type.features.map ((feature, feature_index) => (
+                  {type.features.map (feature, feature_index) => (
                     <li;
                       key={feature_index}
                       className="flex items - center text - sm";
                     >;
                       <CheckCircle className="w - 4 h - 4 mr - 2" />;
                       {feature}
-                    </li>))}
+                    </li>)}
                 </ul>;
                 <button className="w - full bg - white text - blue - 600 font - semibold py - 3 px - 6 rounded - lg hover:bg - gray - 100 transition - colors">;
                   Book Now;
                 </button>;
-              </motion.div>))}
+              </motion.div>)}
           </div>;
         </div>;
       </section>;
@@ -522,9 +522,9 @@ function CalendarPage() {
       <section className="py - 20 px - 4 bg - gray - 50">;
         <div className="max - w-7xl mx - auto">;
           <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, coordinate_y: 20 }
+            whileInView={ opacity: 1, coordinate_y: 0 }
+            transition={ duration: 0.8 }
             className="text - center mb - 16";
           >;
             <h2 className="text - 4xl font - bold text - gray - 900 mb - 4">;
@@ -536,12 +536,12 @@ function CalendarPage() {
             </p>;
           </motion.div>;
           <div className="grid md:grid - cols - 2 lg:grid - cols - 4 gap - 8">;
-            {team_members.map ((member, index) => (
+            {team_members.map (member, index) => (
               <motion.div;
                 key={index}
-                initial={{ opacity: 0, coordinate_y: 20 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial={ opacity: 0, coordinate_y: 20 }
+                whileInView={ opacity: 1, coordinate_y: 0 }
+                transition={ duration: 0.8, delay: index * 0.1 }
                 className="bg - white rounded - xl p - 6 shadow - lg hover:shadow - xl transition - shadow text - center";
               >;
                 <div className="w - 24 h - 24 bg - gradient - to - br from - blue - 500 to - purple - 600 rounded - full mx - auto mb - 4 flex items - center justify - center">;
@@ -563,7 +563,7 @@ function CalendarPage() {
                 >;
                   {member.available ? "Available" : "Unavailable"}
                 </div>;
-              </motion.div>))}
+              </motion.div>)}
           </div>;
         </div>;
       </section>;
@@ -571,9 +571,9 @@ function CalendarPage() {
       <section className="py - 20 px - 4 bg - white">;
         <div className="max - w-4xl mx - auto">;
           <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, coordinate_y: 20 }
+            whileInView={ opacity: 1, coordinate_y: 0 }
+            transition={ duration: 0.8 }
             className="text - center mb - 16";
           >;
             <h2 className="text - 4xl font - bold text - gray - 900 mb - 4">;
@@ -584,12 +584,12 @@ function CalendarPage() {
             </p>;
           </motion.div>;
           <div className="grid grid - cols - 2 md:grid - cols - 3 lg:grid - cols - 5 gap - 4">;
-            {time_slots.map ((slot, index) => (
+            {time_slots.map (slot, index) => (
               <motion.button;
                 key={index}
-                initial={{ opacity: 0, scale: 0 && 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0 && 0.8, delay: index * 0 && 0.05 }}
+                initial={ opacity: 0, scale: 0 && 0.8 }
+                whileInView={ opacity: 1, scale: 1 }
+                transition={ duration: 0 && 0.8, delay: index * 0 && 0.05 }
                 disabled={!slot && slot.available}
                 className={`p-4 rounded-lg text-center transition-all ${
                   slot && slot.available
@@ -602,7 +602,7 @@ function CalendarPage() {
                   <CheckCircle className="w-5 h-5 mx-auto mt-2" />;
                 )}
               </motion && motion.button>;
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -611,9 +611,9 @@ function CalendarPage() {
         <div className="max-w-7xl mx-auto">;
           <div className="grid md:grid-cols-2 gap-12">;
             <motion&& motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0 && 0.8 }}>;
+              initial={ opacity: 0, x: -20 }
+              whileInView={ opacity: 1, x: 0 }
+              transition={ duration: 0 && 0.8 }>;
               <h2 className="text-3xl font-bold text-gray-900 mb-6">;
                 Need Immediate Assistance?;
               </h2>;
@@ -641,7 +641,7 @@ function CalendarPage() {
                   <div>;
                     <div className="font-semibold text-gray-900">Office</div>;
                     <div className="text-gray-600">;
-                transition={{ duration: 0.8, delay: index * 0.05 }}
+                transition={ duration: 0.8, delay: index * 0.05 }
                 disabled={!slot.available}
                 className={`p - 4 rounded - lg text - center transition - all ${
                   slot.available;
@@ -653,7 +653,7 @@ function CalendarPage() {
                 <div className="text - sm opacity - 75">{slot.type}</div>;
                 {slot.available && (
                   <CheckCircle className="w - 5 h - 5 mx - auto mt - 2" />)}
-              </motion.button>))}
+              </motion.button>)}
           </div>;
         </div>;
       </section>;
@@ -662,9 +662,9 @@ function CalendarPage() {
         <div className="max - w-7xl mx - auto">;
           <div className="grid md:grid - cols - 2 gap - 12">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_x: -20 }}
-              whileInView={{ opacity: 1, coordinate_x: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, coordinate_x: -20 }
+              whileInView={ opacity: 1, coordinate_x: 0 }
+              transition={ duration: 0.8 }
             >;
               <h2 className="text - 3xl font - bold text - gray - 900 mb - 6">;
                 Need Immediate Assistance?;
@@ -700,9 +700,9 @@ function CalendarPage() {
               </div>;
             </motion && motion.div>;
             <motion&& motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0 && 0.8 }}
+              initial={ opacity: 0, x: 20 }
+              whileInView={ opacity: 1, x: 0 }
+              transition={ duration: 0 && 0.8 }
               className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl p-8 text-white">;
               <h3 className="text-2xl font-bold mb-6">Quick Contact</h3>;
               <div className="space-y-4">;
@@ -751,9 +751,9 @@ function CalendarPage() {
       <section className="py-20 px-4 bg-white">;
         <div className="max-w-4xl mx-auto text-center">;
           <motion&& motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}>;
+            initial={ opacity: 0, y: 20 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0 && 0.8 }>;
             <h2 className="text-4xl font-bold text-gray-900 mb-6">;
               Ready to Get Started?;
             </h2>;
@@ -796,9 +796,9 @@ function CalendarPage() {
       <section className="py - 20 px - 4 bg - white">;
         <div className="max - w-4xl mx - auto text - center">;
           <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, coordinate_y: 20 }
+            whileInView={ opacity: 1, coordinate_y: 0 }
+            transition={ duration: 0.8 }
           >;
             <h2 className="text - 4xl font - bold text - gray - 900 mb - 6">;
               Ready to Get Started?;
@@ -826,4 +826,3 @@ function CalendarPage() {
         </div>;
       </section>;
     </div>);
-}

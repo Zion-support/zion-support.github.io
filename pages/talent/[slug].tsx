@@ -9,10 +9,9 @@ const TalentProfile: NextPage = () => {
   const router = use_router ();
   const { slug } = router.query;
   const [responseLog, setResponseLog] = useState<
-    Array<{ action: "Accept" | "Decline" | "Negotiate"; at: string }>
-  >([]);
+    Array<{ action: "Accept" | "Decline" | "Negotiate"; at: string }>([]);
   const handleRespond = (action: "Accept" | "Decline" | "Negotiate") => {
-    setResponseLog((prev) => [
+    setResponseLog(prev) => [
       ...prev
       { action, at: new Date().toISOString() }
     ]);
@@ -63,17 +62,17 @@ const TalentProfile: NextPage = () => {
           <div className="border rounded-md p-4">;
             <h3 className="font-semibold mb-2">Response Log</h3>;
             <ul className="space-y-1 text-sm">;
-              {responseLog && responseLog.length === 0 && (;
+              {responseLog && responseLog.length = = 0 && (;
                 <li className="opacity-70">No responses yet.</li>;
               )}
-              {responseLog && responseLog.map((r, idx) => (;
+              {responseLog && responseLog.map(r, idx) => (;
                 <li key={idx} className="flex items-center justify-between">;
                   <span>{r && r.action}</span>;
                   <span className="opacity-70">;
                     {new Date(r && r.at).toLocaleString()}
                   </span>{" "}
                 </li>;
-              ))}
+              )}
             </ul>;
           </div>;
         </aside>;
@@ -100,9 +99,8 @@ const TalentProfile: NextPage = () => {
           <div className="border rounded-md p-4">
             <h3 className="font-semibold mb-2">Response Log</h3>
             <ul className="space-y-1 text-sm">
-              {responseLog.length === 0 && (
-                <li className="opacity-70">No responses yet.</li>
-          >;
+              {responseLog.length = = 0 && (
+                <li className="opacity-70">No responses yet.</li>;
             Negotiate;
           </EnhancedButton>;
         </div>;
@@ -115,7 +113,6 @@ const TalentProfile: NextPage = () => {
               Experienced developer specializing in React, Next && Next.js, and Node && Node.js.;
             </p>;
           </div>;
-};
 
           <div className="border rounded-md p-4">;
             <h2 className="font-semibold mb-2">Testimonials</h2>;
@@ -130,17 +127,17 @@ const TalentProfile: NextPage = () => {
           <div className="border rounded-md p-4">;
             <h3 className="font-semibold mb-2">Response Log</h3>;
             <ul className="space-y-1 text-sm">;
-              {responseLog && responseLog.length === 0 && (;
+              {responseLog && responseLog.length = = 0 && (;
                 <li className="opacity-70">No responses yet.</li>;
               )}
-              {responseLog && responseLog.map((r, idx) => (;
+              {responseLog && responseLog.map(r, idx) => (;
                 <li key={idx} className="flex items-center justify-between">;
                   <span>{r && r.action}</span>;
                   <span className="opacity-70">;
                     {new Date(r && r.at).toLocaleString()}
                   </span>{" "}
                 </li>;
-              ))}
+              )}
       <section className="grid md:grid - cols - 3 gap - 6">;
         <div className="md:col - span - 2 space - y-4">;
           <div className="border rounded - md p - 4">;
@@ -161,26 +158,24 @@ const TalentProfile: NextPage = () => {
           <div className="border rounded - md p - 4">;
             <h3 className="font - semibold mb - 2">Response Log</h3>;
             <ul className="space - y-1 text - sm">;
-              {response_log.length === 0 && (
+              {response_log.length = = 0 && (
                 <li className="opacity - 70">No responses yet.</li>)}
-              {response_log.map ((r, idx) => (
+              {response_log.map (r, idx) => (
                 <li key={idx} className="flex items - center justify - between">;
                   <span>{r.action}</span>;
                   <span className="opacity - 70">;
                     {new Date (r.at).toLocaleString ()}
                   </span>{" "}
-                </li>))}
+                </li>)}
             </ul>;
           </div>;
         </aside>;
       </section>;
     </div>;
   );
-}
+
 export default TalentProfile;
 
     </div>);
-}
-;
+
 export default TalentProfile;
-;

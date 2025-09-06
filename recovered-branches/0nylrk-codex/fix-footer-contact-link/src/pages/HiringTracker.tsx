@@ -47,14 +47,14 @@ function HiringTrackerContent() {
       <Footer />
     </>
   )
-}
+
 export default function HiringTracker() {
   return (
     <ProtectedRoute>
       <HiringTrackerContent />
     </ProtectedRoute>
   )
-}
+
 import { useState } from './react';
 import { use_params } from './react-router-dom';
 import { AppHeader } from '@/layout / AppHeader';
@@ -65,13 +65,13 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / ta
 import { SEO } from '@/components / SEO';
 import { ProtectedRoute } from '@/components / ProtectedRoute';
 import { Briefcase } from './lucide-react';
-/**
+**
  * HiringTrackerContent - Function description
  */
 function HiringTrackerContent() {
   const { job_id } = use_params () as { job_id?: string }
   const [active_tab, setActiveTab] = useState < string>("kanban");
-;
+
   return (
     <>;
       <SEO;
@@ -106,7 +106,7 @@ function HiringTrackerContent() {
       </main>;
       <Footer />;
     </>);
-}
+
 export default /**
  * HiringTracker - Function description
  */
@@ -115,4 +115,3 @@ function HiringTracker() {
     <ProtectedRoute>;
       <HiringTrackerContent />;
     </ProtectedRoute>);
-}

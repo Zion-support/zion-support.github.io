@@ -1,6 +1,6 @@
 
-<tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) )
-}</tbody> </table> </div> </div>) import fs from 'fs';
+<tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody></tr>)
+</tbody> </table> </div> </div>) import fs from 'fs';
 import fs from 'fs';
 import path from 'path';
 type RouteInfo = { path: string, lastModified: string }
@@ -14,11 +14,11 @@ export async function getServerSideProps() {
     generatedAt = json.generatedAt |''
 
   } catch {}
-  return { props: { routes, generatedAt } }
-}
+  return { props: { routes, generatedAt }
+
 export default function SiteMapIntelPage({ routes, generatedAt }: { routes: RouteInfo[], generatedAt: string }) {
- <tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) ) ;
-}</tbody> </table> </div> </div>) import fs from 'fs';
+ <tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody></tr>) ;
+</tbody> </table> </div> </div>) import fs from 'fs';
 import path from 'path';
 type RouteInfo = { path: string, lastModified: string },;
 export async function getServerSideProps() {;
@@ -42,8 +42,7 @@ function getServerSideProps() {
     routes = json.routes || [];
     generated_at = json.generated_at || '';
   } catch {}
-  return { props: { routes, generated_at } }
-}
+  return { props: { routes, generated_at }
 
 export default function SiteMapIntelPage(): any ({ routes, generatedAt }: { routes: RouteInfo[], generatedAt: string }) {;
   return (
@@ -64,13 +63,13 @@ export default function SiteMapIntelPage(): any ({ routes, generatedAt }: { rout
                 <td className="p-2">{r && r.path}</td>;
                 <td className="p-2">{new Date(r && r.lastModified).toLocaleString()}</td>;
               </tr>;
-            ))}
+            )}
           </tbody>
         </table>
       </div>
     </div>
-);
-}
+;
+
 export default /**
  * SiteMapIntelPage - Function description
  */
@@ -92,9 +91,8 @@ function SiteMapIntelPage() {
               <tr key={r.path} className="border - t">;
                 <td className="p - 2">{r.path}</td>;
                 <td className="p - 2">{new Date (r.last_modified).toLocaleString ()}</td>;
-              </tr>))}
+              </tr>)}
           </tbody>;
         </table>;
       </div>;
     </div>);
-}

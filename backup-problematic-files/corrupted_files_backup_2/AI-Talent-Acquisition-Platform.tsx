@@ -2,7 +2,6 @@ import React from 'react';
 
 interface AI-Talent-Acquisition-PlatformProps {
   className?: string;
-}
 
 const AI-Talent-Acquisition-Platform: React.FC<AI-Talent-Acquisition-PlatformProps> = ({ className }) => {
   return (
@@ -11,6 +10,5 @@ const AI-Talent-Acquisition-Platform: React.FC<AI-Talent-Acquisition-PlatformPro
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default AI-Talent-Acquisition-Platform;

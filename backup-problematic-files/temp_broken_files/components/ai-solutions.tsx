@@ -92,7 +92,7 @@ export default function AISolutionsPage() {
         <meta property=&quot;og:title&quot; content=&quot;AI Solutions | Zion Tech Group&quot; />
         <meta property=&quot;og:description&quot; content=&quot;Advanced AI solutions for machine learning, natural language processing, computer vision, and autonomous systems.&quot; />
         <meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; />      </Head>
-      
+
       <div className=&quot;min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white&quot;>
         <main className=&quot;container mx-auto px-6 py-12&quot;>
           <section className=&quot;text-center mb-16&quot;>
@@ -109,7 +109,7 @@ export default function AISolutionsPage() {
             <div className=&quot;mb-16&quot;>
               <h2 className=&quot;text-3xl font-bold mb-8 text-center text-cyan-400&quot;>Our AI Solutions</h2>
               <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6&quot;>
-                {aiSolutions.map((solution, index) => (
+                {aiSolutions.map(solution, index) => (
                   <div key={index} className=&quot;bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300&quot;>
                     <div className=&quot;text-4xl mb-4&quot;>{solution.icon}</div>
                     <div className=&quot;flex items-center gap-2 mb-3&quot;>
@@ -119,11 +119,11 @@ export default function AISolutionsPage() {
                     <h3 className=&quot;text-xl font-bold mb-3 text-white&quot;>{solution.title}</h3>
                     <p className=&quot;text-white/70 mb-4&quot;>{solution.description}</p>
                     <ul className=&quot;space-y-1 mb-4&quot;>
-                      {solution.features.map((feature, featureIndex) => (
+                      {solution.features.map(feature, featureIndex) => (
                         <li key={featureIndex} className=&quot;text-sm text-white/60 flex items-center&quot;>
                           <span className=&quot;text-cyan-400 mr-2&quot;></span>
                           {feature}                        </li>
-                      ))}
+                      )}
                     </ul>;
                     <Link ;
                       href={`/services#${solution.id}`}
@@ -131,45 +131,45 @@ export default function AISolutionsPage() {
                       Learn More <span className=&quot;ml-1&quot;></span>
                     </a>
                   </div>
-                ))}
+                )}
               </div>;
             </div>;
-;
+
             {/* Industry Use Cases */}
             <div className=&quot;mb-16&quot;>
               <h2 className=&quot;text-3xl font-bold mb-8 text-center text-fuchsia-400&quot;>Industry Applications</h2>
               <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6&quot;>
-                {useCases.map((useCase, index) => (
+                {useCases.map(useCase, index) => (
                   <div key={index} className=&quot;bg-white/10 backdrop-blur-xl rounded-2xl p-6 text-center&quot;>
                     <div className=&quot;text-4xl mb-4&quot;>{useCase.icon}</div>
                     <h3 className=&quot;text-xl font-bold mb-4 text-white&quot;>{useCase.industry}</h3>
                     <ul className=&quot;space-y-2&quot;>
-                      {useCase.solutions.map((solution, solutionIndex) => (
+                      {useCase.solutions.map(solution, solutionIndex) => (
                         <li key={solutionIndex} className=&quot;text-sm text-white/70&quot;>
                           {solution}                        </li>
-                      ))}
+                      )}
                     </ul>;
                   </div>;
-                ))}
+                )}
               </div>;
             </div>;
-;
+
             {/* Technologies */}
             <div className=&quot;mb-16&quot;>
               <h2 className=&quot;text-3xl font-bold mb-8 text-center text-green-400&quot;>Technologies We Use</h2>
               <div className=&quot;bg-white/10 backdrop-blur-xl rounded-2xl p-8&quot;>
                 <div className=&quot;flex flex-wrap justify-center gap-4&quot;>
-                  {technologies.map((tech, index) => (                    <span 
+                  {technologies.map(tech, index) => (                    <span 
                       key={index}
                       className=&quot;px-4 py-2 bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 text-white rounded-lg border border-white/20&quot;
                     >
                       {_tech}
                     </span>
-                  ))}
+                  )}
                 </div>;
               </div>;
             </div>;
-;
+
             {/* Success Stories */}
             <div className=&quot;mb-16&quot;>
               <h2 className=&quot;text-3xl font-bold mb-8 text-center text-blue-400&quot;>AI Success Stories</h2>

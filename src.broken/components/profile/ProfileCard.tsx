@@ -2,7 +2,6 @@ import { Card, CardHeader, CardContent, CardTitle } from "@/components/ui/card",
 import { TalentProfile } from "@/types/talent",
 interface ProfileCardProps {
   profile: TalentProfile
-}
 
 export function ProfileCard({ profile }: ProfileCardProps) {
   return (
@@ -26,8 +25,7 @@ import { Card, CardHeader, CardContent, CardTitle } from "@/components/ui/card",
 import { TalentProfile } from "@/types/talent";
 interface ProfileCardProps {;
   profile: TalentProfile;
-}
-;
+
 export function ProfileCard({ profile }: ProfileCardProps) {;
   return (;
     <Card className="bg-zion-blue-dark border-zion-blue-light text-white mb-6">;
@@ -46,11 +44,9 @@ export function ProfileCard({ profile }: ProfileCardProps) {;
           <ul className="list-disc ml-5 mt-2 space-y-1">;
             {profile.skills.map(skill => (;
               <li key={skill}>{skill}</li>;
-            ))}
+            )}
           </ul>;
         )}
       </CardContent>;
     </Card>;
   );
-}
-;

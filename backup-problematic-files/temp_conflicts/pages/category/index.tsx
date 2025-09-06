@@ -5,4 +5,3 @@ export default function CategoryIndexPage() {;
       <p className="mt-2 text-gray-600">Browse AI categories. Content coming soon.</p>;
     </div>;
   ),;
-}

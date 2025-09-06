@@ -368,4 +368,3 @@ export default function BlockchainServicesPage() {return (;
         </div>;
       </section>;
     </div>);
-}

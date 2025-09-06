@@ -12,15 +12,15 @@ export default function LanguageSwitchPrompt() {
   const { t } = useTranslation(),
   const [suggested, setSuggested] = useState<string | null>(null),
 
-  useEffect(() => {
+  useEffect() => {
     const key = 'langPromptShown',
     const preferred = localStorage.getItem('preferredLanguage'),
     if (preferred) return, // user has chosen
-    if (localStorage.getItem(key)) return, // already prompted
+    if (localStorage.getItem(key) return, // already prompted
 
     const detected = i18n.language || i18n.resolvedLanguage || navigator.language || 'en',
     const normalized = detected.split('-')[0],
-    const suggestion = supportedLocales.includes(normalized as any) && normalized !== 'en' ? normalized : null,
+    const suggestion = supportedLocales.includes(normalized as any) && normalized != 'en' ? normalized : null,
     if (suggestion) setSuggested(suggestion)
   }, []),
   if (!suggested) return null,

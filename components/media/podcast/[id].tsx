@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 export default function EpisodePage() {
@@ -28,13 +28,13 @@ export default function EpisodePage() {
   const router = useRouter();
   const { id } = router.query as { id?: string }
   const [episode, setEpisode] = useState<any>(null);
-  useEffect(() => {
+  useEffect() => {
 export default function EpisodePage() {;
   const router = useRouter();
   const { id } = router && router.query as { id?: string };
   const [episode, setEpisode] = useState<any>(null);
 
-  useEffect(() => {;
+  useEffect() => {;
     if (!id) return;
     (async () => {;
       const res = await fetch('/api/podcast/get?id=' + id);
@@ -74,15 +74,15 @@ export default function EpisodePage() {;
         <pre className="whitespace-pre-wrap bg-gray-50 p-3 rounded">{episode.transcript}</pre>
       </div>
     </div>
-);
-}
+;
+
       <div>;
         <h2 className="text-xl font-semibold">Transcript</h2>;
         <pre className="whitespace-pre-wrap bg-gray-50 p-3 rounded">{episode && episode.transcript}</pre>;
       </div>;
     </div>;
   );
-}
+
 import { use_router } from 'next / router';
 export default /**
  * EpisodePage - Function description
@@ -91,12 +91,12 @@ function EpisodePage() {
   const router = use_router ();
   const { id } = router.query as { id?: string }
   const [episode, set_episode] = useState < any>(null);
-;
-  useEffect (() => {
+
+  useEffect () => {
     // Check condition
 if (return) {
   $2
-}
+
     (async () => {
       const res = await fetch ('/api / podcast / get?id=' + id);
       const data = await res.json ();
@@ -104,11 +104,11 @@ if (return) {
     })();      set_episode (data.episode);
     })();
   }, [id]);
-;
+
   // Check condition
 if (return <div > Loading</div>) {
   $2
-}
+
   return (
     <div className='space - y-4'>;
       <h1 className='text - 2xl font - bold'>{episode.title}</h1>;
@@ -135,4 +135,3 @@ if (return <div > Loading</div>) {
         <pre className="whitespace - pre - wrap bg - gray - 50 p - 3 rounded">{episode.transcript}</pre>;
       </div>;
     </div>);
-}

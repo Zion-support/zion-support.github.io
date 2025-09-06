@@ -9,19 +9,18 @@ import { Link } from "react-router-dom",;
 import { StatusBadge } from "./StatusBadge",;
 import { ApplicationProgress } from "./ApplicationProgress",;
 import { toast } from "sonner",;
-;
+
 interface ApplicationCardProps {;
   application:JobApplication;
-}
-;
+
 export function ApplicationCard({ application } ApplicationCardProps) {;
   const [expanded, setExpanded] = useState(false),;
-;
+
   const handleDownloadResume = () => {;
     // This would typically download the resume file;
     toast.info("Resume download functionality will be implemented soon"),;
   },;
-;
+
   const renderActionButtons = () => {;
     switch (application.status) {;
       case "shortlisted":return (;
@@ -49,9 +48,8 @@ export function ApplicationCard({ application } ApplicationCardProps) {;
         ),;
       default:;
         return null;
-    }
-  },;
-;
+    },;
+
   return (;
     <Card className="overflow-hidden">;
       <CardHeader className="pb-3">;
@@ -65,10 +63,8 @@ export function ApplicationCard({ application } ApplicationCardProps) {;
           <StatusBadge status={application.status} />;
         </div>;
       </CardHeader>;
-      ;
       <CardContent className="pb-3">;
         <ApplicationProgress status={application.status} className="my-4" />;
-        ;
         {expanded && (;
           <div className="mt-4 space-y-3">;
             {application.cover_letter && (;
@@ -105,7 +101,6 @@ export function ApplicationCard({ application } ApplicationCardProps) {;
           </div>;
         )}
       </CardContent>;
-      ;
       <CardFooter className="flex flex-col gap-3 pt-0">;
         <div className="flex justify-between items-center w-full">;
           <Button variant="ghost" size="sm" onClick={() => setExpanded(!expanded)}>;
@@ -124,7 +119,6 @@ export function ApplicationCard({ application } ApplicationCardProps) {;
             </Button>;
           </div>;
         </div>;
-        ;
         <Button ;
           variant="secondary" ;
           size="sm";
@@ -140,22 +134,21 @@ export function ApplicationCard({ application } ApplicationCardProps) {;
   ),;}
  interface ApplicationCardProps {
   application: JobApplication 
-}export function ApplicationCard ({
+export function ApplicationCard ({
   application 
-}: ApplicationCardProps) {
+: ApplicationCardProps) {
   const [expanded, setExpanded] = useState (false);
-//This would typically download the resume file return (<Button variant="default" size="sm" > <Calendar className="h-4 w-4 mr-1" /> Prepare for Interview </Button>);
-case "interview" : default: return (<Card className="overflow-hidden" > <CardHeader className="pb-3" > <div className="flex justify-between items-start" > <div> </div> </div> <StatusBadge status= {
+/This would typically download the resume file return (<Button variant="default" size="sm" > <Calendar className="h-4 w-4 mr-1" /> Prepare for Interview </Button>);
+case "interview" : default: return (<Card className="overflow-hidden" > <CardHeader className="pb-3" > <div className="flex justify-between items-start" > <div></div> </div> <StatusBadge status= {
   application.status 
-}/> </div> </CardHeader> {
+/> </div> </CardHeader> {
   application.cover letter && (<div> <h4 className="text-sm font-medium mb-1" >Your Cover Letter</h4> <p className="text-sm text-muted-foreground" > {
   application.cover letter 
-}</p> </div>) 
-}</Button> </div> </div>) 
-}{
+</p> </div>) 
+</Button> </div> </div>) 
+{
   application.match score && (<div> <h4 className="text-sm font-medium mb-1" >Match Score</h4> <div className="flex items-center" > <div className="h-6 w-6 rounded-full bg-blue-100 text-blue-800 flex items-center justify-center text-xs font-medium" > {
   application.match score 
-}% </div> <span className="ml-2 text-xs text-muted-foreground" >Relevance to job requirements</span> </div> </div>) 
-}</div>) 
-}</CardContent> <Button variant="outline" size="sm" asChild > </Link> </Button> </div> </div> <Button variant="secondary" size="sm" className="w-full" asChild > </Link> </Button> </CardFooter> </Card>) 
-}
+% </div> <span className="ml-2 text-xs text-muted-foreground" >Relevance to job requirements</span> </div> </div>) 
+</div>) 
+</CardContent> <Button variant="outline" size="sm" asChild > </Link> </Button> </div> </div> <Button variant="secondary" size="sm" className="w-full" asChild > </Link> </Button> </CardFooter> </Card>) 

@@ -4,7 +4,6 @@ import React from 'react';
 
 interface Hr-platformProps {
   className?: string;
-}
 
 const Hr-platform: React.FC<Hr-platformProps> = ({ className }) => {
   return (
@@ -13,6 +12,3 @@ const Hr-platform: React.FC<Hr-platformProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-}
-}
-}

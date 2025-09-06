@@ -3,11 +3,11 @@ import Link from \'next/link\'; import Head from \'next/head\'; export default f
 import React from 'react';
 interface ClouddevopsProps {
   // Add props here as needed
-}
+
 export default function Clouddevops({ }: ClouddevopsProps) {
 interface ClouddevopsProps {;
   // Add props here as needed;
-}
+
 export default function Clouddevops(): any ({ }: ClouddevopsProps) {;
   return (
     <div>;
@@ -15,7 +15,3 @@ export default function Clouddevops(): any ({ }: ClouddevopsProps) {;
       <p>This component is currently under development.</p>;
     </div>;
   );
-}
-}
-
-

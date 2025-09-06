@@ -11,42 +11,38 @@ import { Button } from "@/components/ui/button",;
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",;
 import { Input } from "@/components/ui/input",;
 import { Switch } from "@/components/ui/switch",;
-;
+
 const formSchema = z.object({;
   title:z.string().min(1, "Title is required"),;
   isDefault:z.boolean().default(false)}),;
-;
+
 type FormValues = z.infer<typeof formSchema>,;
-;
+
 interface TemplateSaveFormProps {;
   onCancel:() => void,;
   onComplete:() => void,;
   editTemplate?:ContractTemplate | null,;
   currentValues?:ContractFormValues;
-}
-;
+
 export function TemplateSaveForm({;
   onCancel,;
   onComplete,;
   editTemplate,;
   currentValues;
-} TemplateSaveFormProps) {;
+ TemplateSaveFormProps) {;
   const [saving, setSaving] = useState(false),;
   const { createTemplate, updateTemplate } = useContractTemplates(),;
-  ;
   const form = useForm<FormValues>({;
     resolver:zodResolver(formSchema),;
     defaultValues:{;
       title:editTemplate?.title || "",;
-      isDefault:editTemplate?.is_default || false}}),;
-  ;
+      isDefault:editTemplate?.is_default || false}),;
   const onSubmit = async (values:FormValues) => {;
     if (!currentValues && !editTemplate) {;
       return;
     }
     ;
     setSaving(true),;
-    ;
     try {;
       if (editTemplate) {;
         await updateTemplate.mutateAsync({;
@@ -64,9 +60,7 @@ export function TemplateSaveForm({;
       onComplete(),;
     } finally {;
       setSaving(false),;
-    }
-  },;
-  ;
+    },;
   return (;
     <Form {...form}>;
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">;
@@ -82,7 +76,6 @@ export function TemplateSaveForm({;
               <FormMessage />;
             </FormItem>;          )}
         />;
-        ;
         <FormField;
           control={form.control}
           name="isDefault";
@@ -99,7 +92,6 @@ export function TemplateSaveForm({;
             </FormItem>;
           )}
         />;
-        ;
         <div className="flex gap-2 justify-end">;
           <Button type="button" variant="outline" onClick={onCancel}>;
             Cancel;
@@ -120,20 +112,18 @@ export function TemplateSaveForm({;
   ),;}
  const formSchema = z.object ({
   title: z.string () .min (1, "Title is required");
-isDefault: z.boolean () .default (false) 
-});
+isDefault: z.boolean () .default (false);
 setSaving (true);
 try {
   if (editTemplate) {
   await updateTemplate.mutateAsync ({
   </FormControl> <FormMessage /> </FormItem>) 
-}/> <FormField <FormItem className="flex items-center justify-between"> <FormLabel className="cursor-pointer">Set as default template</FormLabel> <FormControl> <Switch checked= {
+/> <FormField <FormItem className="flex items-center justify-between"> <FormLabel className="cursor-pointer">Set as default template</FormLabel> <FormControl> <Switch checked= {
   field.value 
-}onCheckedChange= {
+onCheckedChange= {
   field.onChange 
-}/> </FormControl> <FormMessage /> </FormItem>) 
-}/> <> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : (`$ {
+/> </FormControl> <FormMessage /> </FormItem>) 
+/> <> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : (`$ {
   editTemplate ? "Update" : "Save" 
-}Template`) 
-}</Button> </div> </form> </Form>) 
-}
+Template`) 
+</Button> </div> </form> </Form>) 

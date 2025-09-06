@@ -8,13 +8,13 @@ import {
   CheckCircle, ArrowRight, Phone, Mail, MapPin, Globe, Cpu, Target
   Search, Filter, Grid, List, ChevronDown, ChevronUp, ExternalLink
   Play, Pause, Eye, Heart, Share2, Download, BookOpen, Code, Palette
-} from 'lucide-react'
+ from 'lucide-react'
 import { 
   Star, TrendingUp, Users, Award, Zap, Brain, Atom, Shield, Rocket, 
   CheckCircle, ArrowRight, Phone, Mail, MapPin, Globe, Cpu, Target;
   Search, Filter, Grid, List, ChevronDown, ChevronUp, ExternalLink;
   Play, Pause, Eye, Heart, Share2, Download, BookOpen, Code, Palette
-} from 'lucide-react';
+ from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import { innovativeRealMicroSaasServices2025 } from '../data/2025-innovative-real-micro-saas-services';
 import { emergingTechServicesEnhanced2025 } from '../data/2025-emerging-tech-services-enhanced';
@@ -23,13 +23,13 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
-}
+
 const stats = [
   { number: '50+', label: 'Innovative Services', icon: Star, color: 'text-cyan-400' }
   { number: '1000+', label: 'Companies Served', icon: Users, color: 'text-purple-400' }
   { number: '99.9%', label: 'Uptime', icon: Award, color: 'text-green-400' }
   { number: '24/7', label: 'Support', icon: Zap, color: 'text-pink-400' }
-]
+
 const categories = [
   { name: 'All Services', value: 'all', icon: Globe, color: 'from-blue-500 to-cyan-600' }
   { name: 'AI & Consciousness', value: 'ai', icon: Brain, color: 'from-purple-500 to-pink-600' }
@@ -39,8 +39,8 @@ const categories = [
   { name: 'Creativity & Design', value: 'creativity', icon: Palette, color: 'from-pink-500 to-rose-600' }
   { name: 'Healthcare & Biotech', value: 'healthcare', icon: Heart, color: 'from-teal-500 to-cyan-600' }
   { name: 'Finance & Trading', value: 'finance', icon: TrendingUp, color: 'from-yellow-500 to-orange-600' }
-]
-];
+
+;
 
 export default function InnovativeMicroSaasShowcase() {
   const [selectedCategory, setSelectedCategory] = useState('all')
@@ -54,12 +54,12 @@ export default function InnovativeMicroSaasShowcase() {
   ]
   // Filter services based on category and search
   const filteredServices = allServices.filter(service => {
-    const matchesCategory = selectedCategory === 'all' |
+    const matchesCategory = selectedCategory = = 'all' |
       service.category.toLowerCase().includes(selectedCategory) |
       service.name.toLowerCase().includes(selectedCategory)
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
-      service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
-      service.tagline.toLowerCase().includes(searchTerm.toLowerCase())
+    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase() |
+      service.description.toLowerCase().includes(searchTerm.toLowerCase() |
+      service.tagline.toLowerCase().includes(searchTerm.toLowerCase()
     return matchesCategory && matchesSearch
   })
     ...innovativeRealMicroSaasServices2025;
@@ -68,40 +68,39 @@ export default function InnovativeMicroSaasShowcase() {
 
   // Filter services based on category and search
   const filteredServices = allServices.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || 
+    const matchesCategory = selectedCategory = = 'all' || 
       service.category.toLowerCase().includes(selectedCategory) ||
       service.name.toLowerCase().includes(selectedCategory);
-    
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
+
+    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase() ||
+      service.description.toLowerCase().includes(searchTerm.toLowerCase() ||
+      service.tagline.toLowerCase().includes(searchTerm.toLowerCase();
 
     return matchesCategory && matchesSearch
   });
 
   // Sort services
-  const sortedServices = [...filteredServices].sort((a, b) => {
+  const sortedServices = [...filteredServices].sort(a, b) => {
     switch (sortBy) {
       case 'popularity':
         return (b.popular ? 1 : 0) - (a.popular ? 1 : 0)
       case 'price-low':
-        return parseFloat(a.price.replace('$', '')) - parseFloat(b.price.replace('$', ''))
+        return parseFloat(a.price.replace('$', '') - parseFloat(b.price.replace('$', '')
       case 'price-high':
-        return parseFloat(b.price.replace('$', '')) - parseFloat(a.price.replace('$', ''))
+        return parseFloat(b.price.replace('$', '') - parseFloat(a.price.replace('$', '')
       case 'rating':
         return b.rating - a.rating
       case 'newest':
         return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime()
-        return parseFloat(a.price.replace('$', '')) - parseFloat(b.price.replace('$', ''));
+        return parseFloat(a.price.replace('$', '') - parseFloat(b.price.replace('$', '');
       case 'price-high':
-        return parseFloat(b.price.replace('$', '')) - parseFloat(a.price.replace('$', ''));
+        return parseFloat(b.price.replace('$', '') - parseFloat(a.price.replace('$', '');
       case 'rating':
         return b.rating - a.rating;
       case 'newest':
         return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime();
       default: return 0
-    }
-  })
+    })
 
   return (
     <Layout>
@@ -117,9 +116,9 @@ export default function InnovativeMicroSaasShowcase() {
         <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black"></div>
         <div className="relative z-10 container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, y: 20 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
           >
             <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
               Innovative Micro SAAS Services
@@ -128,16 +127,16 @@ export default function InnovativeMicroSaasShowcase() {
               Discover our comprehensive portfolio of cutting-edge micro SAAS solutions, AI platforms, quantum computing services, and emerging technology innovations designed to transform your business.
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-12">
-              {stats.map((stat, index) => (
+              {stats.map(stat, index) => (
                 <motion.div
       {/* Hero Section */}
       <section className="relative py - 20 lg:py - 32 overflow - hidden">;
         <div className="absolute inset - 0 bg - gradient - to - br from - black via - purple - 900 / 20 to - black"></div>;
         <div className="relative z - 10 container mx - auto px - 4 text - center">;
           <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, coordinate_y: 20 }
+            animate={ opacity: 1, coordinate_y: 0 }
+            transition={ duration: 0.8 }
           >;
             <h1 className="text - 4xl lg:text - 6xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent mb - 6">;
               Innovative Micro SAAS Services;
@@ -146,19 +145,19 @@ export default function InnovativeMicroSaasShowcase() {
               Discover our comprehensive portfolio of cutting - edge micro SAAS solutions, AI platforms, quantum computing services, and emerging technology innovations designed to transform your business.;
             </p>;
             <div className="flex flex - wrap justify - center gap - 4 mb - 12">;
-              {stats.map ((stat, index) => (
+              {stats.map (stat, index) => (
                 <motion.div;
                   key={stat.label}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial={ opacity: 0, scale: 0.8 }
+                  animate={ opacity: 1, scale: 1 }
+                  transition={ duration: 0.5, delay: index * 0.1 }
                   className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20"
                 >
                   <stat.icon className={`w-5 h-5 ${stat.color}`} />
                   <span className="text-white font-semibold">{stat.number}</span>
                   <span className="text-gray-300 text-sm">{stat.label}</span>
                 </motion.div>
-              ))}
+              )}
             </div>
           </motion.div>
         </div>
@@ -202,12 +201,12 @@ export default function InnovativeMicroSaasShowcase() {
             </div>
             {/* Category Filter */}
             <div className="flex flex-wrap gap-2">
-              {categories.map((category) => (
+              {categories.map(category) => (
                 <button
                   key={category.value}
                   on_click={() => setSelectedCategory (category.value)}
                   className={`flex items - center space - x-2 px - 4 py - 2 rounded - lg border transition - all duration - 300 ${
-                    selected_category === category.value;
+                    selected_category = = category.value;
                       ? `bg - gradient - to - r ${category.color} border - transparent text - white`;
                       : 'bg - white / 10 border - white / 20 text - gray - 300 hover:bg - white / 20';
                   }`}
@@ -215,20 +214,20 @@ export default function InnovativeMicroSaasShowcase() {
                   <category.icon className="w-4 h-4" />
                   <span className="text-sm font-medium">{category.name}</span>
                 </button>
-              ))}
+              )}
             </div>
             {/* View Mode and Sort */}
             <div className="flex items-center space-x-4">
               <div className="flex bg-white/10 rounded-lg p-1">
                 <button
                   onClick={() => setViewMode('grid')}
-                  className={`p-2 rounded ${viewMode === 'grid' ? 'bg-purple-600 text-white' : 'text-gray-400 hover:text-white'}`}
+                  className={`p-2 rounded ${viewMode = = 'grid' ? 'bg-purple-600 text-white' : 'text-gray-400 hover:text-white'}`}
                 >
                   <Grid className="w-5 h-5" />
                 </button>
                 <button
                   onClick={() => setViewMode('list')}
-                  className={`p-2 rounded ${viewMode === 'list' ? 'bg-purple-600 text-white' : 'text-gray-400 hover:text-white'}`}
+                  className={`p-2 rounded ${viewMode = = 'list' ? 'bg-purple-600 text-white' : 'text-gray-400 hover:text-white'}`}
                 >
                   <List className="w-5 h-5" />
                 </button>
@@ -253,26 +252,26 @@ export default function InnovativeMicroSaasShowcase() {
         <div className="container mx-auto px-4">
           <div className="mb-8">
             <h2 className="text-3xl font-bold text-white mb-2">
-              {selectedCategory === 'all' ? 'All Services' : `${categories.find(c => c.value === selectedCategory)?.name}`}
+              {selectedCategory = = 'all' ? 'All Services' : `${categories.find(c => c.value = = selectedCategory)?.name}`}
             </h2>
             <p className="text-gray-400">
               {filteredServices.length} services found
             </p>
           </div>
-          {viewMode === 'grid' ? (
+          {viewMode = = 'grid' ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {sortedServices.map((service, index) => (
+              {sortedServices.map(service, index) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial={ opacity: 0, y: 20 }
+                  animate={ opacity: 1, y: 0 }
+                  transition={ duration: 0.5, delay: index * 0.1 }
                   className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 hover:border-purple-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/20"
                 >
                   key={service.id}
-                  initial={{ opacity: 0, coordinate_y: 20 }}
-                  animate={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial={ opacity: 0, coordinate_y: 20 }
+                  animate={ opacity: 1, coordinate_y: 0 }
+                  transition={ duration: 0.5, delay: index * 0.1 }
                   className="group relative bg - white / 5 backdrop - blur - sm border border - white / 10 rounded - xl p - 6 hover:bg - white / 10 hover:border - purple - 500 / 50 transition - all duration - 300 hover:shadow - 2xl hover:shadow - purple - 500 / 20";
                 >;
                   {/* Popular Badge */}
@@ -318,12 +317,12 @@ export default function InnovativeMicroSaasShowcase() {
                   <div className="mb-4">
                     <div className="text-sm text-gray-400 mb-2">Key Features:</div>
                     <div className="space-y-1">
-                      {service.features.slice(0, 3).map((feature, idx) => (
+                      {service.features.slice(0, 3).map(feature, idx) => (
                         <div key={idx} className="flex items-center space-x-2 text-xs text-gray-300">
                           <CheckCircle className="w-3 h-3 text-green-400" />
                           <span>{feature}</span>
                         </div>
-                      ))}
+                      )}
                     </div>
                   </div>
                   {/* Category and Setup */}
@@ -361,16 +360,16 @@ export default function InnovativeMicroSaasShowcase() {
                     </div>
                   </div>
                 </motion.div>
-              ))}
+              )}
             </div>
           ) : (
             <div className="space-y-4">
-              {sortedServices.map((service, index) => (
+              {sortedServices.map(service, index) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, coordinate_x: -20 }}
-                  animate={{ opacity: 1, coordinate_x: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial={ opacity: 0, coordinate_x: -20 }
+                  animate={ opacity: 1, coordinate_x: 0 }
+                  transition={ duration: 0.5, delay: index * 0.1 }
                   className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 hover:border-purple-500/50 transition-all duration-300"
                 >
                   <div className="flex items-start space-x-6">
@@ -423,7 +422,7 @@ export default function InnovativeMicroSaasShowcase() {
                     </div>
                   </div>
                 </motion.div>
-              ))}
+              )}
             </div>
           )}
         </div>
@@ -433,18 +432,18 @@ export default function InnovativeMicroSaasShowcase() {
       <section className="py-20 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-red-900/20">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 20 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
       {/* CTA Section */}
       <section className="py - 20 bg - gradient - to - r from - purple - 900 / 20 via - pink - 900 / 20 to - red - 900 / 20">;
         <div className="container mx - auto px - 4 text - center">;
           <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, coordinate_y: 20 }
+            whileInView={ opacity: 1, coordinate_y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
@@ -471,7 +470,7 @@ export default function InnovativeMicroSaasShowcase() {
       </section>
     </Layout>
   )
-}
+
           >;
             <h2 className="text - 4xl font - bold text - white mb - 6">;
               Ready to Transform Your Business?;
@@ -497,4 +496,3 @@ export default function InnovativeMicroSaasShowcase() {
         </div>;
       </section>;
     </Layout>);
-}

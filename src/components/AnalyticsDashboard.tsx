@@ -7,4 +7,3 @@ export function AnalyticsDashboard() {
       <p className="text-slate-400 text-sm">Analytics data will be displayed here</p>
     </div>
   );
-}

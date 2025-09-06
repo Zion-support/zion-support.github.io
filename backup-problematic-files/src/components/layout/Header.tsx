@@ -6,4 +6,3 @@ export default function LayoutHeader() {
       <h1>Layout Header</h1>
     </header>
   );
-}

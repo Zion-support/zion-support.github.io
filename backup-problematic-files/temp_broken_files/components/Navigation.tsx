@@ -19,7 +19,7 @@ import {
   Zap,
   Globe,
   BarChart3
-} from 'lucide-react;
+ from 'lucide-react;
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -135,15 +135,15 @@ export default function Navigation() {
                 <AnimatePresence>
                   {isServicesOpen && (
                     <motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 10 }}
+                      initial={ opacity: 0, y: 10 }
+                      animate={ opacity: 1, y: 0 }
+                      exit={ opacity: 0, y: 10 }
                       className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-xl border border-gray-200 py-4
                       onMouseEnter={() => setIsServicesOpen(true)}
                       onMouseLeave={() => setIsServicesOpen(false)}
                     >
                       <div className="grid grid-cols-2 gap-4 px-6">
-                        {services.map((service, index) => {
+                        {services.map(service, index) => {
                           const IconComponent = service.icon,
   return (
                             <Link
@@ -190,15 +190,15 @@ export default function Navigation() {
                 <AnimatePresence>
                   {isSolutionsOpen && (
                     <motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 10 }}
+                      initial={ opacity: 0, y: 10 }
+                      animate={ opacity: 1, y: 0 }
+                      exit={ opacity: 0, y: 10 }
                       className=absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-xl border border-gray-200 py-4"
                       onMouseEnter={() => setIsSolutionsOpen(true)}
                       onMouseLeave={() => setIsSolutionsOpen(false)}
                     >
                       <div className="grid grid-cols-2 gap-4 px-6>
-                        {solutions.map((solution, index) => {
+                        {solutions.map(solution, index) => {
                           const IconComponent = solution.icon,
   return (
                             <Link
@@ -245,15 +245,15 @@ export default function Navigation() {
                 <AnimatePresence>
                   {isIndustriesOpen && (
                     <motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 10 }}
+                      initial={ opacity: 0, y: 10 }
+                      animate={ opacity: 1, y: 0 }
+                      exit={ opacity: 0, y: 10 }
                       className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4"
                       onMouseEnter={() => setIsIndustriesOpen(true)}
                       onMouseLeave={() => setIsIndustriesOpen(false)}
                     >
                       <div className=px-6">
-                        {industries.map((industry, index) => (
+                        {industries.map(industry, index) => (
                           <Link
                             key={index}
                             href={industry.href}
@@ -266,7 +266,7 @@ export default function Navigation() {
                               {industry.description}
                             </div>
                           </Link>
-                        ))}
+                        )}
                       </div>
                     </motion.div>
                   )}
@@ -285,15 +285,15 @@ export default function Navigation() {
                 <AnimatePresence>
                   {isResourcesOpen && (
                     <motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 10 }}
+                      initial={ opacity: 0, y: 10 }
+                      animate={ opacity: 1, y: 0 }
+                      exit={ opacity: 0, y: 10 }
                       className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4
                       onMouseEnter={() => setIsResourcesOpen(true)}
                       onMouseLeave={() => setIsResourcesOpen(false)}
                     >
                       <div className="px-6">
-                        {resources.map((resource, index) => (
+                        {resources.map(resource, index) => (
                           <Link
                             key={index}
                             href={resource.href}
@@ -306,7 +306,7 @@ export default function Navigation() {
                               {resource.description}
                             </div>
                           </Link>
-                        ))}
+                        )}
                       </div>
                     </motion.div>
                   )}
@@ -343,9 +343,9 @@ export default function Navigation() {
           <AnimatePresence>
             {isMenuOpen && (
               <motion.div
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: 'auto' }}
-                exit={{ opacity: 0, height: 0 }}
+                initial={ opacity: 0, height: 0 }
+                animate={ opacity: 1, height: 'auto' }
+                exit={ opacity: 0, height: 0 }
                 className="lg:hidden border-t border-gray-200
               >
                 <div className="py-4 space-y-2">
@@ -360,7 +360,7 @@ export default function Navigation() {
                   <div className="px-4 py-2">
                     <div className=font-medium text-gray-900 mb-2">Services</div>
                     <div className="space-y-1 ml-4>
-                      {services.map((service, index) => (
+                      {services.map(service, index) => (
                         <Link
                           key={index}
                           href={service.href}
@@ -369,14 +369,14 @@ export default function Navigation() {
                         >
                           {service.name}
                         </Link>
-                      ))}
+                      )}
                     </div>
                   </div>
                   {/* Mobile Solutions */}
                   <div className=px-4 py-2">
                     <div className="font-medium text-gray-900 mb-2>Solutions</div>
                     <div className="space-y-1 ml-4">
-                      {solutions.map((solution, index) => (
+                      {solutions.map(solution, index) => (
                         <Link
                           key={index}
                           href={solution.href}
@@ -385,14 +385,14 @@ export default function Navigation() {
                         >
                           {solution.name}
                         </Link>
-                      ))}
+                      )}
                     </div>
                   </div>
                   {/* Mobile Industries */}
                   <div className="px-4 py-2>
                     <div className="font-medium text-gray-900 mb-2">Industries</div>
                     <div className=space-y-1 ml-4">
-                      {industries.map((industry, index) => (
+                      {industries.map(industry, index) => (
                         <Link
                           key={index}
                           href={industry.href}
@@ -401,14 +401,14 @@ export default function Navigation() {
                         >
                           {industry.name}
                         </Link>
-                      ))}
+                      )}
                     </div>
                   </div>
                   {/* Mobile Resources */}
                   <div className="px-4 py-2">
                     <div className=font-medium text-gray-900 mb-2">Resources</div>
                     <div className="space-y-1 ml-4>
-                      {resources.map((resource, index) => (
+                      {resources.map(resource, index) => (
                         <Link
                           key={index}
                           href={resource.href}
@@ -417,7 +417,7 @@ export default function Navigation() {
                         >
                           {resource.name}
                         </Link>
-                      ))}
+                      )}
                     </div>
                   </div>
                   <Link
@@ -451,4 +451,3 @@ export default function Navigation() {
       </nav>
     </>
   );
-}

@@ -1,9 +1,9 @@
 import React, { useEffect, useMemo, useState } from 'react',;
 import DatePicker from 'react-datepicker',;
 import { useRouter } from 'next/router',;
-;
+
 type PaymentType = 'hourly' | 'fixed',;
-;
+
 export default function ContractBuilderPage() {;
   const router = useRouter(),;
   const [talentName, setTalentName] = useState(''),;
@@ -22,37 +22,37 @@ export default function ContractBuilderPage() {;
   const [ipTransfer, setIpTransfer] = useState(true),;
   const [governingLaw, setGoverningLaw] = useState('Delaware, USA'),;
   const [revisionRounds, setRevisionRounds] = useState<number>(2),;
-;
+
   const [loading, setLoading] = useState(false),;
   const [error, setError] = useState<string | null>(null),;
   const [contract, setContract] = useState<string>(''),;
-;
-  useEffect(() => {;
+
+  useEffect() => {;
     if (!router.isReady) return,;
     const { talent, project } = router.query as { talent?:string, project?:string },;
-    if (talent && !talentName) setTalentName(decodeURIComponent(talent)),;
-    if (project && !projectName) setProjectName(decodeURIComponent(project)),;
+    if (talent && !talentName) setTalentName(decodeURIComponent(talent),;
+    if (project && !projectName) setProjectName(decodeURIComponent(project),;
   }, [router.isReady, router.query, talentName, projectName]),;
-;
-  const canSubmit = useMemo(() => {;
+
+  const canSubmit = useMemo() => {;
     return (;
       talentName.trim().length > 0 &&;
       projectName.trim().length > 0 &&;
       scopeSummary.trim().length > 0 &&;
       !!startDate &&;
       !!endDate &&;
-      (paymentType === 'hourly' ? hourlyRate > 0 :fixedAmount > 0);
+      (paymentType = = 'hourly' ? hourlyRate > 0 :fixedAmount > 0);
     ),;
   }, [talentName, projectName, scopeSummary, startDate, endDate, paymentType, hourlyRate, fixedAmount]),;
-;
+
   async function submitForm(event:React.FormEvent) {;
     event.preventDefault(),;
     if (!canSubmit) return,;
-;
+
     setLoading(true),;
     setError(null),;
     setContract(''),;
-;
+
     try {;
       const body = {;
         talentName,;
@@ -61,12 +61,12 @@ export default function ContractBuilderPage() {;
         startDate:startDate?.toISOString().slice(0, 10),;
         endDate:endDate?.toISOString().slice(0, 10),;
         payment:;
-          paymentType === 'hourly';
+          paymentType = = 'hourly';
             ? {;
                 type:'hourly',;
                 currency,;
                 hourlyRate,;
-                weeklyHourCap:typeof weeklyHourCap === 'number' ? weeklyHourCap :undefined,;
+                weeklyHourCap:typeof weeklyHourCap = = 'number' ? weeklyHourCap :undefined,;
                 paymentSchedule} {;
                 type:'fixed',;
                 currency,;
@@ -78,32 +78,31 @@ export default function ContractBuilderPage() {;
           ipTransfer},;
         governingLaw,;
         revisionRounds},;
-;
+
       const res = await fetch('/api/ai-contract', {;
         method:'POST',;
         headers:{;
           'Content-Type':'application/json'},;
         body:JSON.stringify(body)}),;
-;
+
       if (!res.ok) {;
-        const data = await res.json().catch(() => ({})),;
+        const data = await res.json().catch() => ({}),;
         throw new Error(data?.error || `Request failed:${res.status}`),;
       }
-;
-      const data = (await res.json()) as { contract:string },;
+
+      const data = (await res.json() as { contract:string },;
       setContract(data.contract),;
     } catch (e:any) {;
       setError(e?.message || 'Failed to generate contract');
     } finally {;
       setLoading(false),;
     }
-  }
-;
+
   function copyToClipboard() {;
     if (!contract) return,;
     void navigator.clipboard.writeText(contract),;
   }
-;
+
   function downloadAsTxt() {;
     if (!contract) return,;
     const blob = new Blob([contract], { type:'text/plain,charset=utf-8' }),;
@@ -114,11 +113,11 @@ export default function ContractBuilderPage() {;
     a.click(),;
     URL.revokeObjectURL(url),;
   }
-;
+
   return (;
     <div className="max-w-5xl mx-auto">;
       <h1 className="text-3xl font-bold mb-6">Contract Builder</h1>;
-;
+
       <form onSubmit={submitForm} className="grid grid-cols-1 md:grid-cols-2 gap-6 bg-gray-50 dark:bg-neutral-900 p-6 rounded-lg border border-gray-200 dark:border-neutral-800">;
         <div className="col-span-1 md:col-span-2">;
           <label className="block text-sm font-medium mb-1">Talent name</label>;
@@ -144,27 +143,27 @@ export default function ContractBuilderPage() {;
           <label className="block text-sm font-medium mb-1">End date</label>;
           <DatePicker className="w-full input input-bordered" selected={endDate} onChange={(d) => setEndDate(d)} dateFormat="MMMM d, yyyy" />;
         </div>;
-;
+
         <div className="md:col-span-2">;
           <label className="block text-sm font-medium mb-2">Payment terms</label>;
           <div className="flex items-center gap-4 mb-4">;
             <label className="inline-flex items-center gap-2">;
-              <input type="radio" name="pay" checked={paymentType === 'hourly'} onChange={() => setPaymentType('hourly')} /> Hourly;
+              <input type="radio" name="pay" checked={paymentType = = 'hourly'} onChange={() => setPaymentType('hourly')} /> Hourly;
             </label>;
             <label className="inline-flex items-center gap-2">;
-              <input type="radio" name="pay" checked={paymentType === 'fixed'} onChange={() => setPaymentType('fixed')} /> Fixed;
+              <input type="radio" name="pay" checked={paymentType = = 'fixed'} onChange={() => setPaymentType('fixed')} /> Fixed;
             </label>;
           </div>;
-;
-          {paymentType === 'hourly' ? (;
+
+          {paymentType = = 'hourly' ? (;
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">;
               <div>;
                 <label className="block text-sm font-medium mb-1">Hourly rate</label>;
-                <input type="number" className="w-full input input-bordered" value={hourlyRate} onChange={(e) => setHourlyRate(Number(e.target.value))} />;
+                <input type="number" className="w-full input input-bordered" value={hourlyRate} onChange={(e) => setHourlyRate(Number(e.target.value)} />;
               </div>;
               <div>;
                 <label className="block text-sm font-medium mb-1">Weekly hour cap (optional)</label>;
-                <input type="number" className="w-full input input-bordered" value={weeklyHourCap} onChange={(e) => setWeeklyHourCap(e.target.value === '' ? '' :Number(e.target.value))} />;
+                <input type="number" className="w-full input input-bordered" value={weeklyHourCap} onChange={(e) => setWeeklyHourCap(e.target.value = = '' ? '' :Number(e.target.value)} />;
               </div>;
               <div>;
                 <label className="block text-sm font-medium mb-1">Payment schedule</label>;
@@ -175,7 +174,7 @@ export default function ContractBuilderPage() {;
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">;
               <div>;
                 <label className="block text-sm font-medium mb-1">Total amount</label>;
-                <input type="number" className="w-full input input-bordered" value={fixedAmount} onChange={(e) => setFixedAmount(Number(e.target.value))} />;
+                <input type="number" className="w-full input input-bordered" value={fixedAmount} onChange={(e) => setFixedAmount(Number(e.target.value)} />;
               </div>;
               <div className="md:col-span-2">;
                 <label className="block text-sm font-medium mb-1">Milestone summary (optional)</label>;
@@ -188,7 +187,7 @@ export default function ContractBuilderPage() {;
             </div>;
           )}
         </div>;
-;
+
         <div>;
           <label className="block text-sm font-medium mb-2">Optional clauses</label>;
           <div className="space-y-2">;
@@ -200,16 +199,16 @@ export default function ContractBuilderPage() {;
             </label>;
           </div>;
         </div>;
-;
+
         <div>;
           <label className="block text-sm font-medium mb-1">Governing law</label>;
           <input className="w-full input input-bordered" value={governingLaw} onChange={(e) => setGoverningLaw(e.target.value)} />;
         </div>;
         <div>;
           <label className="block text-sm font-medium mb-1">Included revision rounds</label>;
-          <input type="number" className="w-full input input-bordered" value={revisionRounds} onChange={(e) => setRevisionRounds(Number(e.target.value))} />;
+          <input type="number" className="w-full input input-bordered" value={revisionRounds} onChange={(e) => setRevisionRounds(Number(e.target.value)} />;
         </div>;
-;
+
         <div className="md:col-span-2 flex items-center gap-3">;
           <button type="submit" className="btn btn-primary" disabled={!canSubmit || loading}>;
             {loading ? 'Generating' :'Generate contract'}
@@ -217,7 +216,7 @@ export default function ContractBuilderPage() {;
           {error && <span className="text-red-600 text-sm">{error}</span>}
         </div>;
       </form>;
-;
+
       {contract && (;
         <div className="mt-8">;
           <div className="flex items-center justify-between mb-3">;
@@ -233,30 +232,28 @@ export default function ContractBuilderPage() {;
         </div>;
       )}
     </div>;
-  ),; const canSubmit = useMemo ( () => {
-  return (talentName.trim () .length > 0 && projectName.trim () .length > 0 && scopeSummary.trim () .length > 0 && !!startDate && !!endDate && (paymentType === 'hourly' ? hourlyRate > 0 : fixedAmount > 0) setLoading (true);
+  ),; const canSubmit = useMemo () => {
+  return (talentName.trim () .length > 0 && projectName.trim () .length > 0 && scopeSummary.trim () .length > 0 && !!startDate && !!endDate && (paymentType = = 'hourly' ? hourlyRate > 0 : fixedAmount > 0) setLoading (true);
 setError (null);
 setContract ('');
 try {
   const body = {
-  talentName, projectName, scopeSummary, startDate: startDate?.toISOString () .slice (0, 10), endDate: endDate?.toISOString () .slice (0, 10), payment: paymentType === 'hourly' ? {
-  type: 'hourly', currency, hourlyRate, weeklyHourCap: typeof weeklyHourCap === 'number' ? weeklyHourCap : undefined, paymentSchedule 
-}: {
+  talentName, projectName, scopeSummary, startDate: startDate?.toISOString () .slice (0, 10), endDate: endDate?.toISOString () .slice (0, 10), payment: paymentType = = 'hourly' ? {
+  type: 'hourly', currency, hourlyRate, weeklyHourCap: typeof weeklyHourCap = = 'number' ? weeklyHourCap : undefined, paymentSchedule 
+: {
   type: 'fixed', currency, totalAmount: fixedAmount, milestoneSummary: milestoneSummary || undefined, paymentSchedule 
-};
+;
 clauses: {
   nda, ipTransfer 
-};
+;
 governingLaw;
 revisionRounds 
-};
+;
 const res = await fetch ('/api/ai-contract', {
   method: 'POST', headers: {
   'Content-Type': 'application/json' 
-};
-body: JSON.stringify (body) 
-});
+;
+body: JSON.stringify (body);
 </div> </div>) 
-}</div> <div> </label> </div> </div> <div> </article> </div>) 
-}</div>) 
-}
+</div> <div></label> </div> </div> <div></article> </div>) 
+</div>) 

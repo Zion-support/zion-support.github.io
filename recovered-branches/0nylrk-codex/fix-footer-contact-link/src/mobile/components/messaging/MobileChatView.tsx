@@ -30,7 +30,7 @@ interface Message {
   sender?: string;
   avatar?: string;
   status?: 'sent' | 'delivered' | 'read';
-}
+
 interface MobileChatViewProps {
   contact: {
 
@@ -43,23 +43,21 @@ interface MobileChatViewProps {
   onBack: () => void
 
   onSendMessage: (content: string) => void
-}
+
 export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {
   const [newMessage, setNewMessage] = useState("");
 
   const navigate = useNavigate();
   const handleSend = () => {
-    if (newMessage.trim() !== "") {
+    if (newMessage.trim() != "") {
       onSendMessage(newMessage);
       setNewMessage("");
     }
-  }
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === 'Enter' && !e.shiftKey) {
+    if (e.key = = 'Enter' && !e.shiftKey) {
       e.preventDefault()
       handleSend()
     }
-  }
   const startVideoCall = () => {
     const roomId = `mobile-${contact.id}`;
     toast.success("Starting video call", {
@@ -109,7 +107,7 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
         </div>
       </header>
       <div className="flex-1 overflow-y-auto p-4 space-y-4">
-        {messages.map((message) => (
+        {messages.map(message) => (
           <div
             key={message.id}
             className={cn(
@@ -134,13 +132,13 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
                 {message.timestamp}
                 {message.is_me && message.status && (
                   <span className="ml - 1">;
-                    {message.status === 'read' ? '' : ''}
+                    {message.status = = 'read' ? '' : ''}
                   </span>
                 )}
               </div>;
             </div>;
           </div>;
-        ))}
+        )}
       </div>
       <div className="sticky bottom-0 bg-background border-t border-border p-2">
         <div className="flex items-center gap-2">
@@ -166,11 +164,11 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
       </div>
     </div>
   )
-}
+
                   </span>)}
               </div>;
             </div>;
-          </div>))}
+          </div>)}
       </div>;
       <div className="sticky bottom - 0 bg - background border - t border - border p - 2">;
         <div className="flex items - center gap - 2">;
@@ -195,4 +193,3 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
         </div>;
       </div>;
     </div>);
-}

@@ -5,5 +5,5 @@ const MainSidebar.dynamic = () => {
       <h1>MainSidebar.dynamic</h1>
     </div>
   );
-}
+
 export default MainSidebar.dynamic;

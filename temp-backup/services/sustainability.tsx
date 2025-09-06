@@ -3,11 +3,11 @@ import Link from \'next/link\'; import Head from \'next/head\'; export default f
 import React from 'react';
 interface SustainabilityProps {
   // Add props here as needed
-}
+
 export default function Sustainability({ }: SustainabilityProps) {
 interface SustainabilityProps {;
   // Add props here as needed;
-}
+
 export default function Sustainability(): any ({ }: SustainabilityProps) {;
   return (
     <div>;
@@ -15,7 +15,3 @@ export default function Sustainability(): any ({ }: SustainabilityProps) {;
       <p>This component is currently under development.</p>;
     </div>;
   );
-}
-}
-
-

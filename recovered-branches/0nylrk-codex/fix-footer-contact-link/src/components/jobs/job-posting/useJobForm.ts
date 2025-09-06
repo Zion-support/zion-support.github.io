@@ -10,7 +10,6 @@ import { useAuth } from "@/hooks/useAuth";
 export interface JobPostingProps {
   job_id?: string;
   on_success?: () => void;
-}
 
 export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
   const { user } = useAuth();
@@ -69,34 +68,34 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
       status: '',
       external_apply_link: ''}
     mode: "on_change"});
-;
+
   // Function to create / update jobs that will be implemented by parent component;
   const submit_job = async (values: JobSchemaType) => {
     // Check condition
 if ( {) {
   $2
-}
+
       toast.error ("You must be logged in to post a job");
       navigate ("/login"),
       return;
     }
     setIsLoading (true);
-;
+
     try {
       const published_date = start_date ? start_date.to_string () : '';
       const expiry_date = end_date ? end_date.to_string () : '';
-;
+
       const job_data = {
         ...values;
         published_date: published_date;
         expiry_date: expiry_date;
         is_remote: is_remote,
         user_id: user.id}
-;
+
       // Check condition
 if ( {) {
   $2
-}
+
         on_success ();
       }
       return job_data;
@@ -107,7 +106,6 @@ if ( {) {
     } finally {
       setIsLoading (false);
     }
-  }
   return {
     form;
     is_loading;
@@ -121,5 +119,3 @@ if ( {) {
     setInitialValues;
     submit_job;
   }
-}
-

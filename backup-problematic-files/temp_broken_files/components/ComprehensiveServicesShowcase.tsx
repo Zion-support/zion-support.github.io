@@ -4,7 +4,7 @@ import {
   Star, Clock, Users, TrendingUp, CheckCircle, ExternalLink,
   ChevronRight, Shield, Zap, Globe, Rocket, Brain, Atom,
   Search, Filter, Grid, List, ArrowRight, Award, Target
-} from 'lucide-react',
+ from 'lucide-react',
 import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion',
 import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025',
 export default function ComprehensiveServicesShowcase() {
@@ -19,47 +19,46 @@ const allServices = [...comprehensiveMicroSaasServices, ...specializedEmergingTe
 
   const categories = [
     { id: 'all', name: 'All Services', icon: '', count: allServices.length },
-    { id: 'AI & Machine Learning', name: 'AI & ML', icon: '', count: allServices.filter(s => s.category === 'AI & Machine Learning').length },
-    { id: 'Healthcare AI', name: 'Healthcare', icon: '', count: allServices.filter(s => s.category === 'Healthcare AI').length },
-    { id: 'Fintech AI', name: 'Fintech', icon: '', count: allServices.filter(s => s.category === 'Fintech AI').length },
-    { id: 'Cybersecurity', name: 'Security', icon: '', count: allServices.filter(s => s.category === 'Cybersecurity').length },
-    { id: 'IoT & Smart Cities', name: 'Smart Cities', icon: '', count: allServices.filter(s => s.category === 'IoT & Smart Cities').length },
-    { id: 'Blockchain & DeFi', name: 'Blockchain', icon: '', count: allServices.filter(s => s.category === 'Blockchain & DeFi').length },
-    { id: 'Quantum Computing', name: 'Quantum', icon: '', count: allServices.filter(s => s.category === 'Quantum Computing').length },
-    { id: 'Space Technology', name: 'Space Tech', icon: '', count: allServices.filter(s => s.category === 'Space Technology').length },
-    { id: 'Autonomous Systems', name: 'Autonomous', icon: '', count: allServices.filter(s => s.category === 'Autonomous Systems').length },
-    { id: 'AR/VR & Metaverse', name: 'AR/VR', icon: '', count: allServices.filter(s => s.category === 'AR/VR & Metaverse').length },
-    { id: '5G/6G Networks', name: '5G/6G', icon: '', count: allServices.filter(s => s.category === '5G/6G Networks').length },
-    { id: 'Biotechnology AI', name: 'Biotech', icon: '', count: allServices.filter(s => s.category === 'Biotechnology AI').length },
-    { id: 'Renewable Energy', name: 'Energy', icon: '', count: allServices.filter(s => s.category === 'Renewable Energy').length },
-    { id: 'Edge Computing', name: 'Edge', icon: '', count: allServices.filter(s => s.category === 'Edge Computing').length },
-    { id: 'Quantum Internet', name: 'Q-Internet', icon: '', count: allServices.filter(s => s.category === 'Quantum Internet').length },
-    { id: 'Neuromorphic Computing', name: 'Neuro', icon: '', count: allServices.filter(s => s.category === 'Neuromorphic Computing').length }
+    { id: 'AI & Machine Learning', name: 'AI & ML', icon: '', count: allServices.filter(s => s.category = = 'AI & Machine Learning').length },
+    { id: 'Healthcare AI', name: 'Healthcare', icon: '', count: allServices.filter(s => s.category = = 'Healthcare AI').length },
+    { id: 'Fintech AI', name: 'Fintech', icon: '', count: allServices.filter(s => s.category = = 'Fintech AI').length },
+    { id: 'Cybersecurity', name: 'Security', icon: '', count: allServices.filter(s => s.category = = 'Cybersecurity').length },
+    { id: 'IoT & Smart Cities', name: 'Smart Cities', icon: '', count: allServices.filter(s => s.category = = 'IoT & Smart Cities').length },
+    { id: 'Blockchain & DeFi', name: 'Blockchain', icon: '', count: allServices.filter(s => s.category = = 'Blockchain & DeFi').length },
+    { id: 'Quantum Computing', name: 'Quantum', icon: '', count: allServices.filter(s => s.category = = 'Quantum Computing').length },
+    { id: 'Space Technology', name: 'Space Tech', icon: '', count: allServices.filter(s => s.category = = 'Space Technology').length },
+    { id: 'Autonomous Systems', name: 'Autonomous', icon: '', count: allServices.filter(s => s.category = = 'Autonomous Systems').length },
+    { id: 'AR/VR & Metaverse', name: 'AR/VR', icon: '', count: allServices.filter(s => s.category = = 'AR/VR & Metaverse').length },
+    { id: '5G/6G Networks', name: '5G/6G', icon: '', count: allServices.filter(s => s.category = = '5G/6G Networks').length },
+    { id: 'Biotechnology AI', name: 'Biotech', icon: '', count: allServices.filter(s => s.category = = 'Biotechnology AI').length },
+    { id: 'Renewable Energy', name: 'Energy', icon: '', count: allServices.filter(s => s.category = = 'Renewable Energy').length },
+    { id: 'Edge Computing', name: 'Edge', icon: '', count: allServices.filter(s => s.category = = 'Edge Computing').length },
+    { id: 'Quantum Internet', name: 'Q-Internet', icon: '', count: allServices.filter(s => s.category = = 'Quantum Internet').length },
+    { id: 'Neuromorphic Computing', name: 'Neuro', icon: '', count: allServices.filter(s => s.category = = 'Neuromorphic Computing').length }
   ],
 
   // Filter and sort services,
 const filteredServices = allServices
     .filter(service => {
-      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
-      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.tagline.toLowerCase().includes(searchTerm.toLowerCase()),
+      const matchesCategory = selectedCategory = = 'all' || service.category = = selectedCategory,
+      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase() ||
+                           service.description.toLowerCase().includes(searchTerm.toLowerCase() ||
+                           service.tagline.toLowerCase().includes(searchTerm.toLowerCase(),
       return matchesCategory && matchesSearch
     })
-    .sort((a, b) => {
+    .sort(a, b) => {
       switch (sortBy) {        case 'popularity':
           return b.popular ? 1 : -1,
         case 'price':
-          return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, '')),        case 'rating':
+          return parseFloat(a.price.replace('$', '').replace(, '') - parseFloat(b.price.replace('$', '').replace(, ''),        case 'rating':
           return b.rating - a.rating,
         case 'newest':
           return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime(),
         default: return 0
-      }
-    }),
+      }),
 
   const getCategoryIcon = (category: string) => {
-    const categoryData = categories.find(cat => cat.id === category),
+    const categoryData = categories.find(cat => cat.id = = category),
     return categoryData?.icon || ''
   },
 
@@ -72,10 +71,10 @@ const filteredServices = allServices
       <div className=&quot;max-w-7xl mx-auto&quot;>
         {/* Header */}
         <motion.div,
-initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+initial={ opacity: 0, y: 30 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0.8 }
+          viewport={ once: true }
           className=&quot;text-center mb-16&quot;        >
           <h2 className=&quot;text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent&quot;>
             Revolutionary Micro SAAS Services 2025
@@ -120,10 +119,10 @@ initial={{ opacity: 0, y: 30 }}
 
         {_/* Search and Filters */}
         <motion.div,
-initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+initial={ opacity: 0, y: 20 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0.6 }
+          viewport={ once: true }
           className=&quot;mb-12&quot;
         >
           <div className=&quot;flex flex-col lg:flex-row gap-6 items-center justify-between&quot;>
@@ -155,14 +154,14 @@ value={sortBy}
                 <button,
 onClick={_() => setViewMode('grid')}
                   className={_`p-2 rounded-lg transition-all ${
-                    viewMode === 'grid' ? 'bg-blue-600 text-white' : 'text-white/60 hover:text-white'}`}
+                    viewMode = = 'grid' ? 'bg-blue-600 text-white' : 'text-white/60 hover:text-white'}`}
                 >
                   <Grid className=&quot;w-5 h-5&quot; />
                 </button>
                 <button,
 onClick={_() => setViewMode('list')}
                   className={_`p-2 rounded-lg transition-all ${
-                    viewMode === 'list' ? 'bg-blue-600 text-white' : 'text-white/60 hover:text-white'}`}
+                    viewMode = = 'list' ? 'bg-blue-600 text-white' : 'text-white/60 hover:text-white'}`}
                 >
                   <List className=&quot;w-5 h-5&quot; />
                 </button>
@@ -173,38 +172,38 @@ onClick={_() => setViewMode('list')}
 
         {_/* Category Filter */}
         <motion.div,
-initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+initial={ opacity: 0, y: 20 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0.6 }
+          viewport={ once: true }
           className=&quot;mb-12&quot;
         >
           <div className=&quot;flex flex-wrap justify-center gap-3&quot;>
-            {categories.map((category) => (
+            {categories.map(category) => (
               <button                key={category.id}
                 onClick={_() => setSelectedCategory(category.id)}
                 className={_`px-6 py-3 rounded-full font-medium transition-all duration-300 flex items-center gap-2 ${
-                  selectedCategory === category.id
+                  selectedCategory = = category.id
                     ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-lg'
                     : 'bg-white/10 text-white/70 hover:bg-white/20 hover:text-white'}`}
               >
                 <span>{category.icon}</span>
                 {category.name}
                 <span className=&quot;text-xs bg-white/20 px-2 py-1 rounded-full&quot;>{category.count}</span>              </button>
-            ))}
+            )}
           </div>;
         </motion.div>;
-;
+
         {/* Services Display */}
-        {viewMode === 'grid' ? (
+        {viewMode = = 'grid' ? (
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>            <AnimatePresence>
-              {filteredServices.map((service, index) => (
+              {filteredServices.map(service, index) => (
                 <motion.div,
 key={service.id}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -30 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={ opacity: 0, y: 30 }
+                  animate={ opacity: 1, y: 0 }
+                  exit={ opacity: 0, y: -30 }
+                  transition={ duration: 0.6, delay: index * 0.1 }
                   className=&quot;group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl&quot;
                 >
                   {/* Popular Badge */}
@@ -213,7 +212,7 @@ key={service.id}
                       <Star className=&quot;w-3 h-3&quot; />                      Popular
                     </div>
                   )}
-;
+
                   {/* Service Content */}
                   <div className=&quot;p-6&quot;>
                     <div className=&quot;flex items-start justify-between mb-4&quot;>
@@ -229,13 +228,13 @@ key={service.id}
 
                     {/* Features */}
                     <div className=&quot;space-y-2 mb-6&quot;>
-                      {service.features.slice(0, 3).map((feature, idx) => (
+                      {service.features.slice(0, 3).map(feature, idx) => (
                         <div key={idx} className=&quot;flex items-center gap-2 text-sm text-white/60&quot;>
                           <CheckCircle className=&quot;w-4 h-4 text-green-400&quot; />
                           {feature}                        </div>
-                      ))}
+                      )}
                     </div>;
-;
+
                     {/* Stats */}
                     <div className=&quot;grid grid-cols-3 gap-4 mb-6 text-center&quot;>
                       <div>
@@ -262,18 +261,18 @@ href={service.link}
                     </a>
                   </div>
                 </motion.div>
-              ))}
+              )}
             </AnimatePresence>
           </div>
         ) : (
           <div className=&quot;space-y-6&quot;>            <AnimatePresence>
-              {filteredServices.map((service, index) => (
+              {filteredServices.map(service, index) => (
                 <motion.div,
 key={service.id}
-                  initial={{ opacity: 0, x: -30 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: 30 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={ opacity: 0, x: -30 }
+                  animate={ opacity: 1, x: 0 }
+                  exit={ opacity: 0, x: 30 }
+                  transition={ duration: 0.6, delay: index * 0.1 }
                   className=&quot;group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 p-6&quot;
                 >
                   <div className=&quot;flex flex-col lg:flex-row gap-6&quot;>
@@ -285,7 +284,7 @@ key={service.id}
                         </div>
                       )}
                     </div>;
-;
+
                     {/* Center - Service Details */}
                     <div className=&quot;flex-1&quot;>
                       <div className=&quot;flex items-start justify-between mb-4&quot;>
@@ -302,13 +301,13 @@ key={service.id}
 
                       {/* Features Grid */}
                       <div className=&quot;grid grid-cols-2 gap-2 mb-4&quot;>
-                        {service.features.slice(0, 6).map((feature, idx) => (
+                        {service.features.slice(0, 6).map(feature, idx) => (
                           <div key={idx} className=&quot;flex items-center gap-2 text-sm text-white/60&quot;>
                             <CheckCircle className=&quot;w-4 h-4 text-green-400 flex-shrink-0&quot; />
                             <span className=&quot;truncate&quot;>{feature}</span>                          </div>
-                        ))}
+                        )}
                       </div>;
-;
+
                       {/* Stats Row */}
                       <div className=&quot;flex items-center gap-6 text-sm text-white/60&quot;>
                         <div className=&quot;flex items-center gap-2&quot;>
@@ -345,16 +344,16 @@ href={service.link}
                     </div>
                   </div>
                 </motion.div>
-              ))}
+              )}
             </AnimatePresence>;
           </div>;
         )}
 
         {_/* No Results */}
-        {filteredServices.length === 0 && (
+        {filteredServices.length = = 0 && (
           <motion.div,
-initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+initial={ opacity: 0 }
+            animate={ opacity: 1 }
             className=&quot;text-center py-20&quot;          >
             <div className=&quot;text-6xl mb-4&quot;></div>
             <h3 className=&quot;text-2xl font-bold text-white mb-2&quot;>No services found</h3>
@@ -364,10 +363,10 @@ initial={{ opacity: 0 }}
 
         {_/* Contact CTA */}
         <motion.div,
-initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+initial={ opacity: 0, y: 30 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0.8 }
+          viewport={ once: true }
           className=&quot;mt-20 text-center&quot;        >
           <div className=&quot;bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-12 border border-blue-500/30&quot;>
             <h3 className=&quot;text-3xl font-bold text-white mb-4&quot;>

@@ -1,8 +1,8 @@
 const fs = require('fs');
-;
+
 console.log(' Fixing site loading issues...');
-;
-// Fix Next.js configuration;
+
+/ Fix Next.js configuration;
 const nextConfig = `/** @type {import('next').NextConfig} */;
 const nextConfig = {;
   reactStrictMode:true,;
@@ -15,25 +15,23 @@ const nextConfig = {;
   output:'standalone',;
   trailingSlash:false,;
   distDir:'.next',;
-};
-;
+
 module.exports = nextConfig;`;
-;
+
 fs.writeFileSync('next.config.js', nextConfig);
 console.log(' Next.js configuration fixed');
-;
-// Remove empty files that might cause issues;
+
+/ Remove empty files that might cause issues;
 const emptyFiles = [;
   'components/BundleAnalyzer.js',;
   'components/PerformanceMonitor.js',;
   'components/SEO.js';
-];
-;
+
 emptyFiles.forEach(file => {;
-  if (fs.existsSync(file) && fs.statSync(file).size === 0) {;
+  if (fs.existsSync(file) && fs.statSync(file).size = = 0) {;
     fs.unlinkSync(file);
     console.log(` Removed empty file:${file}`);
   }
-});
-;
+);
+
 console.log(' Site fixes completed!');

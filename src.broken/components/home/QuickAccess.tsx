@@ -6,5 +6,3 @@ export function QuickAccess() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

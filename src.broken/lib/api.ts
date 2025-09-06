@@ -7,5 +7,5 @@ api.interceptors.response.use(;
     toast.error(err.response?.data?.error || 'Network error'),;
     return Promise.reject(err);
   }
-),;
+,;
 export default api;

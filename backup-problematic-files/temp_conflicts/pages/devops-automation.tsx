@@ -3,7 +3,7 @@ import Head from 'next/head',;
 import Card from '../components/ui/Card',;
 import Button from '../components/ui/Button',;
 import { GitBranch, Zap, Shield, BarChart3, Check, Star, GitPullRequest, Cpu } from 'lucide-react',;
-;
+
 export default function DevOpsAutomationPage() {;
   const features = [;
     {;
@@ -31,7 +31,7 @@ export default function DevOpsAutomationPage() {;
       color:'bg-gradient-to-br from-orange-500 to-red-600';
     }
   ],;
-;
+
   const pricingPlans = [;
     {;
       name:'Starter',;
@@ -78,7 +78,7 @@ export default function DevOpsAutomationPage() {;
       color:'border-gray-600 hover:border-blue-500';
     }
   ],;
-;
+
   const marketComparison = [;
     {;
       competitor:'GitHub Actions',;
@@ -105,7 +105,7 @@ export default function DevOpsAutomationPage() {;
       cons:['Requires maintenanceNo managed service'];
     }
   ],;
-;
+
   const testimonials = [;
     {;
       name:'Michael Chen',;
@@ -129,7 +129,7 @@ export default function DevOpsAutomationPage() {;
       rating:5;
     }
   ],;
-;
+
   const automationExamples = [;
     {;
       title:'Automated Testing',;
@@ -156,7 +156,7 @@ export default function DevOpsAutomationPage() {;
       color:'from-purple-500 to-indigo-600';
     }
   ],;
-;
+
   return (;
     <>;
       <Head>;
@@ -166,7 +166,7 @@ export default function DevOpsAutomationPage() {;
         <meta property="og:description" content="Professional DevOps automation starting at $39/month. CI/CD pipelines, infrastructure as code, and security automation." />;
         <meta name="twitter:card" content="summary_large_image" />;
       </Head>;
-;
+
       <div className="min-h-screen bg-black">;
         {/* Hero Section */}
         <section className="pt-32 pb-20 bg-gradient-to-br from-blue-900/20 to-cyan-900/20">;
@@ -204,7 +204,7 @@ export default function DevOpsAutomationPage() {;
             </div>;
           </div>;
         </section>;
-;
+
         {/* Features Section */}
         <section className="py-24 bg-gray-900">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
@@ -217,7 +217,7 @@ export default function DevOpsAutomationPage() {;
               </p>;
             </div>;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-              {features.map((feature, index) => (;
+              {features.map(feature, index) => (;
                 <Card;
                   key={index}
                   className="text-center group hover:scale-105 transition-transform duration-300";
@@ -228,11 +228,11 @@ export default function DevOpsAutomationPage() {;
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>;
                   <p className="text-gray-400">{feature.description}</p>;
                 </Card>;
-              ))}
+              )}
             </div>;
           </div>;
         </section>;
-;
+
         {/* Automation Examples Section */}
         <section className="py-24 bg-gray-800">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
@@ -245,7 +245,7 @@ export default function DevOpsAutomationPage() {;
               </p>;
             </div>;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-              {automationExamples.map((example, index) => (;
+              {automationExamples.map(example, index) => (;
                 <Card;
                   key={index}
                   className="text-center group hover:scale-105 transition-transform duration-300";
@@ -256,11 +256,11 @@ export default function DevOpsAutomationPage() {;
                   <h3 className="text-xl font-semibold text-white mb-4">{example.title}</h3>;
                   <p className="text-gray-400">{example.description}</p>;
                 </Card>;
-              ))}
+              )}
             </div>;
           </div>;
         </section>;
-;
+
         {/* Pricing Section */}
         <section id="pricing" className="py-24 bg-gray-900">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
@@ -273,7 +273,7 @@ export default function DevOpsAutomationPage() {;
               </p>;
             </div>;
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
-              {pricingPlans.map((plan, index) => (;
+              {pricingPlans.map(plan, index) => (;
                 <Card;
                   key={index}
                   className={`relative p-8 ${plan.color} transition-all duration-300 hover:scale-105 ${;
@@ -295,15 +295,15 @@ export default function DevOpsAutomationPage() {;
                     </div>;
                     <p className="text-gray-300 mb-8">{plan.description}</p>;
                     <ul className="text-left space-y-3 mb-8">;
-                      {plan.features.map((feature, featureIndex) => (;
+                      {plan.features.map(feature, featureIndex) => (;
                         <li key={featureIndex} className="flex items-center text-gray-300">;
                           <Check className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />;
                           {feature}
                         </li>;
-                      ))}
+                      )}
                     </ul>;
                     <Button;
-                      href={plan.name === 'Enterprise' ? '/contact' :'#signup'}
+                      href={plan.name = = 'Enterprise' ? '/contact' :'#signup'}
                       variant={plan.popular ? 'primary' :'outline'}
                       size="lg";
                       className={`w-full ${;
@@ -316,11 +316,11 @@ export default function DevOpsAutomationPage() {;
                     </Button>;
                   </div>;
                 </Card>;
-              ))}
+              )}
             </div>;
           </div>;
         </section>;
-;
+
         {/* Market Comparison Section */}
         <section className="py-24 bg-gray-800">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
@@ -333,21 +333,21 @@ export default function DevOpsAutomationPage() {;
               </p>;
             </div>;
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
-              {marketComparison.map((competitor, index) => (;
+              {marketComparison.map(competitor, index) => (;
                 <Card key={index} className="p-6">;
                   <div className="text-center mb-6">;
                     <h3 className="text-xl font-bold text-white mb-2">{competitor.competitor}</h3>;
                     <div className="flex items-center justify-center mb-2">;
-                      {[...Array(5)].map((_, i) => (;
+                      {[...Array(5)].map(_, i) => (;
                         <Star;
                           key={i}
                           className={`w-5 h-5 ${;
-                            i < Math.floor(parseFloat(competitor.rating));
+                            i < Math.floor(parseFloat(competitor.rating);
                               ? 'text-yellow-400 fill-current';
                               :'text-gray-400';
                           }`}
                         />;
-                      ))}
+                      )}
                     </div>;
                     <p className="text-sm text-gray-400">{competitor.rating}</p>;
                   </div>;
@@ -359,32 +359,32 @@ export default function DevOpsAutomationPage() {;
                     <div>;
                       <p className="text-sm font-medium text-green-400 mb-1">Pros:</p>;
                       <ul className="text-sm text-gray-300 space-y-1">;
-                        {competitor.pros.map((pro, proIndex) => (;
+                        {competitor.pros.map(pro, proIndex) => (;
                           <li key={proIndex} className="flex items-center">;
                             <Check className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />;
                             {pro}
                           </li>;
-                        ))}
+                        )}
                       </ul>;
                     </div>;
                     <div>;
                       <p className="text-sm font-medium text-red-400 mb-1">Cons:</p>;
                       <ul className="text-sm text-gray-300 space-y-1">;
-                        {competitor.cons.map((con, conIndex) => (;
+                        {competitor.cons.map(con, conIndex) => (;
                           <li key={conIndex} className="flex items-center">;
                             <span className="w-4 h-4 text-red-400 mr-2 flex-shrink-0"></span>;
                             {con}
                           </li>;
-                        ))}
+                        )}
                       </ul>;
                     </div>;
                   </div>;
                 </Card>;
-              ))}
+              )}
             </div>;
           </div>;
         </section>;
-;
+
         {/* Testimonials Section */}
         <section className="py-24 bg-gray-900">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
@@ -394,12 +394,12 @@ export default function DevOpsAutomationPage() {;
               </h2>;
             </div>;
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
-              {testimonials.map((testimonial, index) => (;
+              {testimonials.map(testimonial, index) => (;
                 <Card key={index} className="p-6">;
                   <div className="flex items-center mb-4">;
-                    {[...Array(testimonial.rating)].map((_, i) => (;
+                    {[...Array(testimonial.rating)].map(_, i) => (;
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />;
-                    ))}
+                    )}
                   </div>;
                   <p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>;
                   <div>;
@@ -408,11 +408,11 @@ export default function DevOpsAutomationPage() {;
                     <p className="text-sm text-blue-400">{testimonial.company}</p>;
                   </div>;
                 </Card>;
-              ))}
+              )}
             </div>;
           </div>;
         </section>;
-;
+
         {/* CTA Section */}
         <section className="py-24 bg-gradient-to-r from-blue-600 to-cyan-600">;
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
@@ -445,4 +445,3 @@ export default function DevOpsAutomationPage() {;
       </div>;
     </>;
   );
-}

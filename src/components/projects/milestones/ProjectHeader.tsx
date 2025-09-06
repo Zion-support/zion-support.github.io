@@ -34,15 +34,10 @@ export function ProjectHeader(): any ({ title }: ProjectHeaderProps) {;
       </div>
     </div>
   )
-}
-
-}
-
-}
 
 export function ProjectHeader({ title }: ProjectHeaderProps) {
   const router = useRouter(), // Changed from useNavigate to useRouter
-  
+
   return (
     <div className="flex flex-col md:flex-row justify-between items-start md:items-center py-4 border-b">
       <div className="flex items-center">
@@ -59,7 +54,7 @@ export function ProjectHeader({ title }: ProjectHeaderProps) {
       </div>
     </div>
   ),
-}
+
 import React from 'react';
 import { use_router } from 'next / router';
 import { Button } from '@/components / ui / button';
@@ -87,4 +82,3 @@ function ProjectHeader() {
         </h1>;
       </div>;
     </div>);
-}

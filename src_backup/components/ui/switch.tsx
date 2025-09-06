@@ -26,19 +26,19 @@ export function ServicesPage() {
 
   const filteredServices = ALL_SERVICES.filter(service => {
     const matchesCategory =
-      selectedCategory === 'all' |service.category === selectedCategory;
+      selectedCategory = = 'all' |service.category = = selectedCategory;
     const matchesSearch =
-      service.title.toLowerCase().includes(searchTerm.toLowerCase()) |
-      service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
+      service.title.toLowerCase().includes(searchTerm.toLowerCase() |
+      service.description.toLowerCase().includes(searchTerm.toLowerCase() |
       service.tags.some(tag =>
-        tag.toLowerCase().includes(searchTerm.toLowerCase())
+        tag.toLowerCase().includes(searchTerm.toLowerCase()
       );
     return matchesCategory && matchesSearch;  });
   const getServicesByCategory = (categoryId: string) => {
-    switch (categoryId) {    const matchesCategory = selectedCategory === 'all' |service.category === selectedCategory;
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) |
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
-                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+    switch (categoryId) {    const matchesCategory = selectedCategory = = 'all' |service.category = = selectedCategory;
+    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase() |
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase() |
+                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch
   const getServicesByCategory = (categoryId: string) => {
     switch (categoryId) {
@@ -68,20 +68,20 @@ export function ServicesPage() {;
 
   const filteredServices = ALL_SERVICES && ALL_SERVICES.filter(service => {;
     const matchesCategory =;
-      selectedCategory === 'all' || service && service.category === selectedCategory;
+      selectedCategory = = 'all' || service && service.category = = selectedCategory;
     const matchesSearch =;
-      service && service.title.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
-      service && service.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
+      service && service.title.toLowerCase().includes(searchTerm && searchTerm.toLowerCase() ||;
+      service && service.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase() ||;
       service && service.tags.some(tag =>;
-        tag && tag.toLowerCase().includes(searchTerm && searchTerm.toLowerCase());
+        tag && tag.toLowerCase().includes(searchTerm && searchTerm.toLowerCase();
       );
     return matchesCategory && matchesSearch;  });
 
   const getServicesByCategory = (categoryId: string) => {;
-    switch (categoryId) {    const matchesCategory = selectedCategory === 'all' || service && service.category === selectedCategory;
-    const matchesSearch = service && service.title.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
-                         service && service.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
-                         service && service.tags.some(tag => tag && tag.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()));
+    switch (categoryId) {    const matchesCategory = selectedCategory = = 'all' || service && service.category = = selectedCategory;
+    const matchesSearch = service && service.title.toLowerCase().includes(searchTerm && searchTerm.toLowerCase() ||;
+                         service && service.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase() ||;
+                         service && service.tags.some(tag => tag && tag.toLowerCase().includes(searchTerm && searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;
 
   const getServicesByCategory = (categoryId: string) => {;
@@ -101,14 +101,13 @@ export function ServicesPage() {;
       default:;
         return ALL_SERVICES;
     }
-  }
   const selectedServices =
-    selectedCategory === 'all'
+    selectedCategory = = 'all'
       ? filteredServices
   };
 
   const selectedServices =;
-    selectedCategory === 'all';
+    selectedCategory = = 'all';
       ? filteredServices;
       : getServicesByCategory(selectedCategory);
   return (
@@ -134,8 +133,7 @@ export function ServicesPage() {;
               <a
                 href='mailto:kleber@ziontechgroup.com'
                 className='bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors'              >    }
-  }
-  const selectedServices = selectedCategory === 'all' ? filteredServices : getServicesByCategory(selectedCategory);
+  const selectedServices = selectedCategory = = 'all' ? filteredServices : getServicesByCategory(selectedCategory);
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">;
       {/* Hero Section */}
@@ -292,38 +290,38 @@ export function ServicesPage() {;
               />;
             </div>;
             <div className="flex gap-2">;
-              {SERVICE_CATEGORIES && SERVICE_CATEGORIES.map((category) => (;
+              {SERVICE_CATEGORIES && SERVICE_CATEGORIES.map(category) => (;
                 <button
                   key={category && category.id}
                   onClick={() => setSelectedCategory(category && category.id)}
                   className={`px-4 py-2 rounded-lg font-medium transition-colors ${;
-                    selectedCategory === category && category.id;
+                    selectedCategory = = category && category.id;
                       ? 'bg-blue-600 text-white';
                       : 'bg-gray-100 text-gray-700 hover:bg-gray-200';
                   }`}
                 >;
                   {category && category.icon} {category && category.name}
                 </button>;
-              ))}
+              )}
             </div>
           </div>
         </div>
         {/* Services Grid */}
         <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8'>;
           {selectedServices && selectedServices.map(service => (            <ServiceCard key={service && service.id} service={service} />        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">;
-          {selectedServices && selectedServices.map((service) => (;
+          {selectedServices && selectedServices.map(service) => (;
             <ServiceCard key={service && service.id} service={service} />;
         </div>
-        {selectedServices.length === 0 && (
+        {selectedServices.length = = 0 && (
           <div className='text-center py-12'>
             <h3 className='text-xl text-gray-600 mb-4'>No services found</h3>
             <p className='text-gray-500'>
               Try adjusting your search or filter criteria
             </p>          </div>          <div className="text-center py-12">
-          ))}
+          )}
         </div>
 
-        {selectedServices.length === 0 && (
+        {selectedServices.length = = 0 && (
           <div className="text-center py-12">
             <h3 className="text-xl text-gray-600 mb-4">No services found</h3>
             <p className="text-gray-500">Try adjusting your search or filter criteria</p>
@@ -415,7 +413,7 @@ export function ServicesPage() {;
       </div>
         </div>;
 
-        {selectedServices && selectedServices.length === 0 && (;
+        {selectedServices && selectedServices.length = = 0 && (;
           <div className='text-center py-12'>;
             <h3 className='text-xl text-gray-600 mb-4'>No services found</h3>;
             <p className='text-gray-500'>;
@@ -537,28 +535,28 @@ export function ServicesPage() {;
               />;
             </div>;
             <div className="flex gap - 2">;
-              {SERVICE_CATEGORIES.map ((category) => (
+              {SERVICE_CATEGORIES.map (category) => (
                 <button;
                   key={category.id}
                   on_click={() => setSelectedCategory (category.id)}
                   className={`px - 4 py - 2 rounded - lg font - medium transition - colors ${
-                    selected_category === category.id;
+                    selected_category = = category.id;
                       ? 'bg - blue - 600 text - white';
                       : 'bg - gray - 100 text - gray - 700 hover:bg - gray - 200';
                   }`}
                 >;
                   {category.icon} {category.name}
-                </button>))}
+                </button>)}
             </div>;
           </div>;
         </div>;
         {/* Services Grid */}
         <div className='grid grid - cols - 1 lg:grid - cols - 2 xl:grid - cols - 3 gap - 8'>;
           {selected_services.map (service => (            <ServiceCard key={service.id} service={service} />        <div className="grid grid - cols - 1 lg:grid - cols - 2 xl:grid - cols - 3 gap - 8">;
-          {selected_services.map ((service) => (
-            <ServiceCard key={service.id} service={service} />))}
+          {selected_services.map (service) => (
+            <ServiceCard key={service.id} service={service} />)}
         </div>;
-        {selected_services.length === 0 && (
+        {selected_services.length = = 0 && (
           <div className='text - center py - 12'>;
             <h3 className='text - xl text - gray - 600 mb - 4'>No services found</h3>;
             <p className='text - gray - 500'>;
@@ -715,7 +713,7 @@ export function ServicesPage() {;
   );
 interface ServiceCardProps {
   service: ServiceSolution;  )
-}
+
 interface ServiceCardProps {
   service: ServiceSolution
               href="tel: +13024640950"
@@ -740,11 +738,10 @@ interface ServiceCardProps {
 
 interface ServiceCardProps {;
   service: ServiceSolution;  );
-}
 
 interface ServiceCardProps {;
   service: ServiceSolution;
-}
+
 function ServiceCard(): any ({ service }: ServiceCardProps) {;
   const [showDetails, setShowDetails] = useState(false);
   const getPopularPlan = () => {
@@ -828,7 +825,7 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
             <span className='text-blue-600 font-semibold text-sm'>              {service.provider.name.charAt(0)}
             </span>
           </div>
-          <div>          </div>
+          <div></div>
         </div>
         <p className="text-gray-600 mb-4 line-clamp-3">{service.description}</p>
       </div>;
@@ -869,7 +866,7 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
             <span className='text - blue - 600 font - semibold text - sm'>              {service.provider.name.char_at (0)}
             </span>;
           </div>;
-          <div>          </div>;
+          <div></div>;
         </div>;
 
         <p className="text-gray-600 mb-4 line-clamp-3">{service && service.description}</p>;
@@ -931,16 +928,16 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
         <div className='mb-4'>;
           <h4 className='font-semibold text-gray-900 mb-2'>Key Features:</h4>;
           <div className='flex flex-wrap gap-2'>;
-            {service && service.features.slice(0, 3).map((feature, index) => (;
+            {service && service.features.slice(0, 3).map(feature, index) => (;
               <span
                 key={index}
-                className='bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs'              >            {service.features.slice(0, 3).map((feature, index) => (
+                className='bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs'              >            {service.features.slice(0, 3).map(feature, index) => (
               <span
                 key={index}
                 className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">;
                 {feature}
               </span>;
-            ))}
+            )}
             {service && service.features.length > 3 && (;
               <span className='text-gray-500 text-xs'>                +{service && service.features.length - 3} more              <span className="text-gray-500 text-xs">;
                 +{service && service.features.length - 3} more;
@@ -949,7 +946,7 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
                 className="bg - blue - 100 text - blue - 800 px - 2 py - 1 rounded text - xs";
               >;
                 {feature}
-              </span>))}
+              </span>)}
             {service.features.length > 3 && (
               <span className="text-gray-500 text-xs">
                 +{service.features.length - 3} more
@@ -1005,30 +1002,30 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
               {/* Benefits */}
               <div>;
                 <h4 className='font-semibold text-gray-900 mb-2'>Benefits:</h4>;
-                <ul className='list-disc list-inside text-sm text-gray-600 space-y-1'>                  {service && service.benefits.slice(0, 3).map((benefit, index) => (          <div className="mt-6 pt-6 border-t border-gray-200">;
+                <ul className='list-disc list-inside text-sm text-gray-600 space-y-1'>                  {service && service.benefits.slice(0, 3).map(benefit, index) => (          <div className="mt-6 pt-6 border-t border-gray-200">;
             <div className="space-y-4">;
               {/* Benefits */}
               <div>;
                 <h4 className="font-semibold text-gray-900 mb-2">Benefits:</h4>;
                 <ul className="list-disc list-inside text-sm text-gray-600 space-y-1">;
                     <li key={index}>{benefit}</li>;
-                  ))}
+                  )}
                 </ul>
               </div>
               {/* Use Cases */}
               <div>;
                 <h4 className='font-semibold text-gray-900 mb-2'>Use Cases:</h4>;
                 <div className='flex flex-wrap gap-2'>;
-                  {service && service.useCases.slice(0, 3).map((useCase, index) => (;
+                  {service && service.useCases.slice(0, 3).map(useCase, index) => (;
                     <span
                       key={index}
-                      className='bg-green-100 text-green-800 px-2 py-1 rounded text-xs'                    >                  {service.useCases.slice(0, 3).map((useCase, index) => (
+                      className='bg-green-100 text-green-800 px-2 py-1 rounded text-xs'                    >                  {service.useCases.slice(0, 3).map(useCase, index) => (
                     <span
                       key={index}
                       className="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">;
                       {useCase}
                     </span>;
-                  ))}
+                  )}
                 </div>
               </div>
               {/* Technologies */}
@@ -1037,16 +1034,16 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
                   Technologies:;
                 </h4>;
                 <div className='flex flex-wrap gap-2'>;
-                  {service && service.technologies.slice(0, 4).map((tech, index) => (;
+                  {service && service.technologies.slice(0, 4).map(tech, index) => (;
                     <span
                       key={index}
-                      className='bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs'                    >                  {service.technologies.slice(0, 4).map((tech, index) => (
+                      className='bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs'                    >                  {service.technologies.slice(0, 4).map(tech, index) => (
                     <span
                       key={index}
                       className="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs">;
                       {tech}
                     </span>;
-                  ))}
+                  )}
                 </div>
               </div>
               {/* Deployment & Support */}
@@ -1097,7 +1094,7 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
                   Pricing Plans:;
                 </h4>;
                 <div className='space-y-2'>;
-                  {Object && Object.entries(service && service.pricing).map(([plan, details]) => (;
+                  {Object && Object.entries(service && service.pricing).map([plan, details]) => (;
                     <div
                       key={plan}
                       className='flex justify-between items-center text-sm'>;
@@ -1109,7 +1106,7 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
                       <span className="text-gray-600">;
                         {details && details.currency}{details && details.price}/{details && details.period}
                     </div>;
-                  ))}
+                  )}
                 </div>
               </div>
               {/* Contact CTA */}
@@ -1145,14 +1142,14 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
         )}
       </div>
     </div>
-);  )
-}
+;  )
+
       </div>;
     </div>;
   );  );
-}
+
   )
-}
+
         {/* Detailed Information */}
         {show_details && (
           <div className='mt - 6 pt - 6 border - t border - gray - 200'>;
@@ -1160,29 +1157,29 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
               {/* Benefits */}
               <div>;
                 <h4 className='font - semibold text - gray - 900 mb - 2'>Benefits:</h4>;
-                <ul className='list - disc list - inside text - sm text - gray - 600 space - y-1'>                  {service.benefits.slice (0, 3).map ((benefit, index) => (          <div className="mt - 6 pt - 6 border - t border - gray - 200">;
+                <ul className='list - disc list - inside text - sm text - gray - 600 space - y-1'>                  {service.benefits.slice (0, 3).map (benefit, index) => (          <div className="mt - 6 pt - 6 border - t border - gray - 200">;
             <div className="space - y-4">;
               {/* Benefits */}
               <div>;
                 <h4 className="font - semibold text - gray - 900 mb - 2">Benefits:</h4>;
                 <ul className="list - disc list - inside text - sm text - gray - 600 space - y-1">;
-                    <li key={index}>{benefit}</li>))}
+                    <li key={index}>{benefit}</li>)}
                 </ul>;
               </div>;
               {/* Use Cases */}
               <div>;
                 <h4 className='font - semibold text - gray - 900 mb - 2'>Use Cases:</h4>;
                 <div className='flex flex - wrap gap - 2'>;
-                  {service.use_cases.slice (0, 3).map ((use_case, index) => (
+                  {service.use_cases.slice (0, 3).map (use_case, index) => (
                     <span;
                       key={index}
-                      className='bg - green - 100 text - green - 800 px - 2 py - 1 rounded text - xs'                    >                  {service.use_cases.slice (0, 3).map ((use_case, index) => (
+                      className='bg - green - 100 text - green - 800 px - 2 py - 1 rounded text - xs'                    >                  {service.use_cases.slice (0, 3).map (use_case, index) => (
                     <span;
                       key={index}
                       className="bg - green - 100 text - green - 800 px - 2 py - 1 rounded text - xs";
                     >;
                       {use_case}
-                    </span>))}
+                    </span>)}
                 </div>;
               </div>;
               {/* Technologies */}
@@ -1191,16 +1188,16 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
                   Technologies:;
                 </h4>;
                 <div className='flex flex - wrap gap - 2'>;
-                  {service.technologies.slice (0, 4).map ((tech, index) => (
+                  {service.technologies.slice (0, 4).map (tech, index) => (
                     <span;
                       key={index}
-                      className='bg - purple - 100 text - purple - 800 px - 2 py - 1 rounded text - xs'                    >                  {service.technologies.slice (0, 4).map ((tech, index) => (
+                      className='bg - purple - 100 text - purple - 800 px - 2 py - 1 rounded text - xs'                    >                  {service.technologies.slice (0, 4).map (tech, index) => (
                     <span;
                       key={index}
                       className="bg - purple - 100 text - purple - 800 px - 2 py - 1 rounded text - xs";
                     >;
                       {tech}
-                    </span>))}
+                    </span>)}
                 </div>;
               </div>;
               {/* Deployment & Support */}
@@ -1228,7 +1225,7 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
                   Pricing Plans:;
                 </h4>;
                 <div className='space - y-2'>;
-                  {Object.entries (service.pricing).map (([plan, details]) => (
+                  {Object.entries (service.pricing).map ([plan, details]) => (
                     <div;
                       key={plan}
                       className='flex justify - between items - center text - sm';
@@ -1240,7 +1237,7 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
                       <span className="capitalize font - medium">{plan}</span>;
                       <span className="text - gray - 600">;
                         {details.currency}{details.price}/{details.period}
-                    </div>))}
+                    </div>)}
                 </div>;
               </div>;
               {/* Contact CTA */}
@@ -1271,5 +1268,4 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
             </div>;
           </div>)}
       </div>;
-    </div>));
-}
+    </div>);

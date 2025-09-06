@@ -11,13 +11,13 @@ import {;
   Palette, Camera, Video, Music, Gamepad2, Heart,;
   Leaf, Sun, Moon, Wind, Droplets, Mountain,;
   Code, Wrench, Smartphone, BarChart3;
-} from 'lucide-react',;
+ from 'lucide-react',;
 const contactInfo = {;
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup.com',;
   address: '364 E Main St STE 1008 Middletown DE 19709',;
   website: 'https://ziontechgroup.com';
-},;
+,;
 const serviceCategories = [;
   {;
     title: ' 2028 Futuristic Innovations',;
@@ -139,7 +139,7 @@ const serviceCategories = [;
       { name: 'Sustainable Supply Chain', href: '/sustainable-supply-chain', description: 'Green supply chain solutions', price: '$3,999/month' }
     ];
   }
-],;
+,;
 const companyLinks = [;
   { name: ' Home', href: '/', icon: Home },;
   { name: ' 2028 Services', href: '/2028-services-showcase', icon: Rocket },;
@@ -150,7 +150,7 @@ const companyLinks = [;
   { name: ' About Us', href: '/about', icon: Users },;
   { name: ' Contact', href: '/contact', icon: MessageCircle },;
   { name: ' Support', href: '/support', icon: ShieldCheck }
-],;
+,;
 const resourceLinks = [;
   { name: ' Documentation', href: '/docs', icon: BookOpen },;
   { name: ' Video Tutorials', href: '/tutorials', icon: Video },;
@@ -160,7 +160,7 @@ const resourceLinks = [;
   { name: ' Cloud Services', href: '/cloud', icon: Cloud },;
   { name: ' Security Center', href: '/security', icon: Shield },;
   { name: ' Analytics', href: '/analytics', icon: BarChart3 }
-],
+,
 
 export default function UltraFuturisticNavigation2028() {
   const [isOpen, setIsOpen] = useState(false),
@@ -180,10 +180,9 @@ export default function UltraFuturisticNavigation2028() {
 
   const filteredServices = serviceCategories.flatMap(category =>
     category.services.filter(service =>
-      service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      service.description.toLowerCase().includes(searchQuery.toLowerCase())
-    )
-  ),
+      service.name.toLowerCase().includes(searchQuery.toLowerCase() ||
+      service.description.toLowerCase().includes(searchQuery.toLowerCase()
+    ),
 
   return (
     <nav className="relative z-50 bg-black/90 backdrop-blur-xl border-b border-purple-500/30">
@@ -243,12 +242,12 @@ export default function UltraFuturisticNavigation2028() {
                 <span>Services</span>
                 <ChevronDown className="w-4 h-4" />
               </button>
-              
+
               {/* Mega Menu */}
               <div className="absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-purple-500/30 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                 <div className="p-6">
                   <div className="grid grid-cols-3 gap-6">
-                    {serviceCategories.slice(0, 6).map((category) => (
+                    {serviceCategories.slice(0, 6).map(category) => (
                       <div key={category.title} className="space-y-3">
                         <div className="flex items-center space-x-3">
                           <category.icon className={`w-6 h-6 bg-gradient-to-r ${category.color} bg-clip-text text-transparent`} />
@@ -256,7 +255,7 @@ export default function UltraFuturisticNavigation2028() {
                         </div>
                         <p className="text-sm text-purple-300">{category.description}</p>
                         <div className="space-y-2">
-                          {category.services.slice(0, 2).map((service) => (
+                          {category.services.slice(0, 2).map(service) => (
                             <Link
                               key={service.name}
                               href={service.href}
@@ -272,10 +271,10 @@ export default function UltraFuturisticNavigation2028() {
                                 <span className="text-xs text-purple-400 font-medium">{service.price}</span>
                               </div>
                             </a>
-                          ))}
+                          )}
                         </div>;
                       </div>;
-                    ))}
+                    )}
                   </div>
                   <div className="mt-6 pt-6 border-t border-purple-500/20">
                     <div className="flex items-center justify-between">
@@ -293,7 +292,7 @@ export default function UltraFuturisticNavigation2028() {
             </div>
 
             {/* Company Links */}
-            {companyLinks.slice(1, 5).map((link) => (;
+            {companyLinks.slice(1, 5).map(link) => (;
               <Link;
                 key={link.name}
                 href={link.href}
@@ -302,7 +301,7 @@ export default function UltraFuturisticNavigation2028() {
                 <link.icon className="w-4 h-4" />
                 <span>{link.name.replace(/^[]/g, '').trim()}</span>
               </a>
-            ))}
+            )}
           </div>;
           {/* Search and Actions */}
           <div className="hidden lg:flex items-center space-x-4">
@@ -343,9 +342,9 @@ export default function UltraFuturisticNavigation2028() {
       <AnimatePresence>;
         {isOpen && (;
           <motion.div;
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
+            initial={ opacity: 0, height: 0 }
+            animate={ opacity: 1, height: 'auto' }
+            exit={ opacity: 0, height: 0 }
             className="lg:hidden bg-black/95 backdrop-blur-xl border-t border-purple-500/30"
           >
             <div className="px-4 py-6 space-y-6">
@@ -366,14 +365,14 @@ export default function UltraFuturisticNavigation2028() {
                 <h3 className="text-lg font-semibold text-white border-b border-purple-500/30 pb-2">
                   Services
                 </h3>
-                {serviceCategories.map((category) => (
+                {serviceCategories.map(category) => (
                   <div key={category.title} className="space-y-2">
                     <div className="flex items-center space-x-3 text-purple-200">
                       <category.icon className="w-5 h-5" />
                       <span className="font-medium">{category.title}</span>
                     </div>
                     <div className="ml-8 space-y-2">
-                      {category.services.map((service) => (
+                      {category.services.map(service) => (
                         <Link
                           key={service.name}
                           href={service.href}
@@ -384,10 +383,10 @@ export default function UltraFuturisticNavigation2028() {
                           <p className="text-xs text-purple-300">{service.description}</p>
                           <span className="text-xs text-purple-400 font-medium">{service.price}</span>
                         </a>
-                      ))}
+                      )}
                     </div>;
                   </div>;
-                ))}
+                )}
               </div>;
               {/* Mobile Company Links */}
               <div className="space-y-4">
@@ -395,7 +394,7 @@ export default function UltraFuturisticNavigation2028() {
                   Company
                 </h3>
                 <div className="grid grid-cols-2 gap-4">
-                  {companyLinks.map((link) => (
+                  {companyLinks.map(link) => (
                     <Link
                       key={link.name}
                       href={link.href}
@@ -405,7 +404,7 @@ export default function UltraFuturisticNavigation2028() {
                       <link.icon className="w-5 h-5 text-purple-400" />
                       <span className="text-purple-200">{link.name.replace(/^[]/g, '').trim()}</span>
                     </a>
-                  ))}
+                  )}
                 </div>;
               </div>;
               {/* Mobile CTA */}
@@ -427,7 +426,7 @@ export default function UltraFuturisticNavigation2028() {
         <div className="absolute top-full left-0 right-0 bg-black/95 backdrop-blur-xl border border-purple-500/30 rounded-2xl shadow-2xl z-50">
           <div className="p-4">
             <div className="space-y-2">
-              {filteredServices.slice(0, 8).map((service) => (
+              {filteredServices.slice(0, 8).map(service) => (
                 <Link
                   key={service.name}
                   href={service.href}
@@ -441,11 +440,10 @@ export default function UltraFuturisticNavigation2028() {
                     <span className="text-xs text-purple-400 font-medium">{service.price}</span>
                   </div>
                 </a>
-              ))}
+              )}
             </div>;
           </div>;
         </div>;
       )}
     </nav>;
   );
-}

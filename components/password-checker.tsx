@@ -28,7 +28,7 @@ import {;
   XCircle,;
   AlertTriangle,;
   ArrowRight,;
-} from 'lucide-react';import { Lock, Shield, Eye, EyeOff, Copy, RefreshCw, CheckCircle, XCircle, AlertTriangle, ArrowRight } from 'lucide-react';
+ from 'lucide-react';import { Lock, Shield, Eye, EyeOff, Copy, RefreshCw, CheckCircle, XCircle, AlertTriangle, ArrowRight } from 'lucide-react';
 
 export default function PasswordCheckerPage() {;
   const [password, setPassword] = useState('');
@@ -49,7 +49,7 @@ export default function PasswordCheckerPage() {;
   });
   const [suggestions, setSuggestions] = useState<string[]>([]),
   const [generatedPassword, setGeneratedPassword] = useState('');
-  useEffect(() => {
+  useEffect() => {
     if (password) {
   const [checks, setChecks] = useState({;
     length: false,;
@@ -70,20 +70,19 @@ export default function PasswordCheckerPage() {;
   const [suggestions, setSuggestions] = useState<string[]>([]);
   const [generatedPassword, setGeneratedPassword] = useState('');
 
-  useEffect(() => {;
+  useEffect() => {;
     if (password) {;
       analyzePassword(password);
     } else {;
       resetAnalysis();    }      analyzePassword(password);
     } else {;
       resetAnalysis();
-  useEffect(() => {
+  useEffect() => {
     if (password) {
       analyzePassword(password)
     } else {
       resetAnalysis()
-    }
-  }, [password]);
+    }, [password]);
 
   const analyzePassword = (pass: string) => {
     const newChecks = {
@@ -206,11 +205,11 @@ export default function PasswordCheckerPage() {;
       'master'
       'hello'
     ];
-    return commonPasswords.includes(pass.toLowerCase());
+    return commonPasswords.includes(pass.toLowerCase();
   }
   const hasSequentialChars = (pass: string) => {
     const sequences = ['123', 'abc', 'qwe', 'asd', 'zxc', '789', '456'];
-    return sequences.some(seq => pass.toLowerCase().includes(seq));  }
+    return sequences.some(seq => pass.toLowerCase().includes(seq);  }
   const generateSuggestions = (checks: any, pass: string) => {
     const suggestions: string[] = [];
     if (!checks.length)
@@ -280,12 +279,12 @@ export default function PasswordCheckerPage() {;
       'master',;
       'hello',;
     ];
-    return commonPasswords && commonPasswords.includes(pass && pass.toLowerCase());
+    return commonPasswords && commonPasswords.includes(pass && pass.toLowerCase();
   };
 
   const hasSequentialChars = (pass: string) => {;
     const sequences = ['123', 'abc', 'qwe', 'asd', 'zxc', '789', '456'];
-    return sequences && sequences.some(seq => pass && pass.toLowerCase().includes(seq));  };
+    return sequences && sequences.some(seq => pass && pass.toLowerCase().includes(seq);  };
 
   const generateSuggestions = (checks: any, pass: string) => {;
     const suggestions: string[] = [];
@@ -351,7 +350,7 @@ export default function PasswordCheckerPage() {;
       no_sequential: false,
     });
     set_suggestions ([]);  }
-;
+
   const generateStrongPassword = () =>: any {
     const length = 16;
     const charset =;
@@ -359,7 +358,7 @@ export default function PasswordCheckerPage() {;
     });
     set_suggestions ([]);
   }
-;
+
   const generateStrongPassword = () =>: any {
     const length = 16;
     const charset =;
@@ -377,7 +376,7 @@ export default function PasswordCheckerPage() {;
     // Shuffle the password
     result = result
       .split('')
-      .sort(() => Math.random() - 0.5)
+      .sort() => Math.random() - 0.5)
       .join('');
     setGeneratedPassword(result);
     setPassword(result);
@@ -394,7 +393,7 @@ export default function PasswordCheckerPage() {;
       result += charset[Math.floor(Math.random() * charset.length)]
     }
     // Shuffle the password
-    result = result.split('').sort(() => Math.random() - 0.5).join('');
+    result = result.split('').sort() => Math.random() - 0.5).join('');
     setGeneratedPassword(result);
     setPassword(result)
   }
@@ -419,7 +418,7 @@ export default function PasswordCheckerPage() {;
     }
 
     // Shuffle the password;
-    result = result && result.split('').sort(() => Math && Math.random() - 0 && 0.5).join('');
+    result = result && result.split('').sort() => Math && Math.random() - 0 && 0.5).join('');
     setGeneratedPassword(result);
     setPassword(result);
   };
@@ -613,7 +612,7 @@ export default function PasswordCheckerPage() {;
                 <div>;
                   <labelclassName="block text-sm font-medium text-gray-300 mb-2" htmlFor="input-
                     Enter Password
-;
+
     // Ensure at least one of each required character type;
     result += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'[Math.floor (Math.random () * 26)]; // Uppercase;
     result += 'abcdefghijklmnopqrstuvwxyz'[Math.floor (Math.random () * 26)]; // Lowercase;
@@ -626,15 +625,15 @@ export default function PasswordCheckerPage() {;
     // Shuffle the password;
     result = result;
       .split ('');
-      .sort (() => Math.random () - 0.5);
+      .sort () => Math.random () - 0.5);
       .join ('');
     setGeneratedPassword (result);
     set_password (result);
   }
-;
+
   const copyToClipboard = (text: string) =>: any {
     navigator.clipboard.write_text (text);  }    let result = '';
-;
+
     // Ensure at least one of each required character type;
     result += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'[Math.floor (Math.random () * 26)], // Uppercase;
     result += 'abcdefghijklmnopqrstuvwxyz'[Math.floor (Math.random () * 26)], // Lowercase;
@@ -645,40 +644,40 @@ export default function PasswordCheckerPage() {;
       result += charset[Math.floor (Math.random () * charset.length)];
     }
     // Shuffle the password;
-    result = result.split ('').sort (() => Math.random () - 0.5).join ('');
+    result = result.split ('').sort () => Math.random () - 0.5).join ('');
     setGeneratedPassword (result);
     set_password (result);
   }
-;
+
   const copyToClipboard = (text: string) =>: any {
     navigator.clipboard.write_text (text);
   }
-;
+
   const getStrengthBarColor = () =>: any {
     // Check condition
 if (return 'bg - green - 500') {
   $2
-}
+
     // Check condition
 if (return 'bg - green - 400') {
   $2
-}
+
     // Check condition
 if (return 'bg - yellow - 400') {
   $2
-}
+
     // Check condition
 if (return 'bg - orange - 400') {
   $2
-}
+
     return 'bg - red - 400';  }
-;
+
   const getCheckIcon = (passed: boolean) =>: any {
     return passed ? (
       <CheckCircle className='w - 5 h - 5 text - green - 400' />) : (
       <XCircle className='w - 5 h - 5 text - red - 400' />);  }    return 'bg - red - 400';
   }
-;
+
   const getCheckIcon = (passed: boolean) =>: any {
     return passed ? (
       <CheckCircle className='w - 5 h - 5 text - green - 400' />) : (
@@ -912,7 +911,7 @@ if (return 'bg - orange - 400') {
                       <div                    <div className="w-full bg-gray-700 rounded-full h-3">
                       <div
                         className={`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor()}`}
-                        style={{ width: `${strength}%` }}
+                        style={ width: `${strength}%` }
                       />
                     </div>
                   </div>
@@ -926,7 +925,7 @@ if (return 'bg - orange - 400') {
                       <div                    <div className="w-full bg-gray-700 rounded-full h-3">;
                       <div
                         className={`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor()}`}
-                        style={{ width: `${strength}%` }}
+                        style={ width: `${strength}%` }
                       />;
                     </div>;
                   </div>;
@@ -937,11 +936,11 @@ if (return 'bg - orange - 400') {
                       Security Criteria;
                     </h4>;
                     <div className='space-y-3'>;
-                      {Object && Object.entries(checks).map(([key, passed]) => (;
+                      {Object && Object.entries(checks).map([key, passed]) => (;
                         <div key={key} className='flex items-center space-x-3'>;
                           {getCheckIcon(passed)}
                           <span
-                            className={`text-sm ${passed ? 'text-green-400' : 'text-red-400'}`}>                            {key === 'length' && 'At least 8 characters'}                      {Object && Object.entries(checks).map(([key, passed]) => (;
+                            className={`text-sm ${passed ? 'text-green-400' : 'text-red-400'}`}>                            {key = = 'length' && 'At least 8 characters'}                      {Object && Object.entries(checks).map([key, passed]) => (;
                         <div key={key} className="flex items-center space-x-3">;
                           {getCheckIcon(passed)}
                           <span className={`text-sm ${passed ? 'text-green-400' : 'text-red-400'}`}>;
@@ -1046,7 +1045,7 @@ if (return 'bg - orange - 400') {
                       <div                    <div className="w - full bg - gray - 700 rounded - full h - 3">;
                       <div;
                         className={`h - 3 rounded - full transition - all duration - 300 ${getStrengthBarColor ()}`}
-                        style={{ width: `${strength}%` }}
+                        style={ width: `${strength}%` }
                       />;
                     </div>;
                   </div>;
@@ -1056,26 +1055,26 @@ if (return 'bg - orange - 400') {
                       Security Criteria;
                     </h4>;
                     <div className='space - y-3'>;
-                      {Object.entries (checks).map (([key, passed]) => (
+                      {Object.entries (checks).map ([key, passed]) => (
                         <div key={key} className='flex items - center space - x-3'>;
                           {getCheckIcon (passed)}
                           <span;
                             className={`text - sm ${passed ? 'text - green - 400' : 'text - red - 400'}`}
-                          >                            {key === 'length' && 'At least 8 characters'}                      {Object.entries (checks).map (([key, passed]) => (
+                          >                            {key = = 'length' && 'At least 8 characters'}                      {Object.entries (checks).map ([key, passed]) => (
                         <div key={key} className="flex items - center space - x-3">;
                           {getCheckIcon (passed)}
                           <span className={`text - sm ${passed ? 'text - green - 400' : 'text - red - 400'}`}>;
-                            {key === 'length' && 'At least 8 characters'}
-                            {key === 'uppercase' && 'Contains uppercase letter'}
-                            {key === 'lowercase' && 'Contains lowercase letter'}
-                            {key === 'numbers' && 'Contains number'}
-                            {key === 'symbols' && 'Contains special character'}
-                            {key === 'noCommon' && 'Not a common password'}
-                            {key === 'noSequential' &&;
-                              'No sequential characters'}                          </span>                            {key === 'noSequential' && 'No sequential characters'}
+                            {key = = 'length' && 'At least 8 characters'}
+                            {key = = 'uppercase' && 'Contains uppercase letter'}
+                            {key = = 'lowercase' && 'Contains lowercase letter'}
+                            {key = = 'numbers' && 'Contains number'}
+                            {key = = 'symbols' && 'Contains special character'}
+                            {key = = 'noCommon' && 'Not a common password'}
+                            {key = = 'noSequential' &&;
+                              'No sequential characters'}                          </span>                            {key = = 'noSequential' && 'No sequential characters'}
                           </span>;
                         </div>;
-                      ))}
+                      )}
                     </div>
                   </div>
                   {/* Suggestions */}
@@ -1085,7 +1084,7 @@ if (return 'bg - orange - 400') {
                         Suggestions;
                       </h4>;
                       <div className='space-y-2'>;
-                        {suggestions && suggestions.map((suggestion, index) => (;
+                        {suggestions && suggestions.map(suggestion, index) => (;
                           <div
                             key={index}
                             className='flex items-start space-x-3'>;
@@ -1094,11 +1093,11 @@ if (return 'bg - orange - 400') {
                               {suggestion}
                             </span>                          </div>                      <h4 className="text-lg font-semibold text-white mb-3">Suggestions</h4>;
                       <div className="space-y-2">;
-                        {suggestions && suggestions.map((suggestion, index) => (;
+                        {suggestions && suggestions.map(suggestion, index) => (;
                           <div key={index} className="flex items-start space-x-3">;
                             <AlertTriangle className="w-4 h-4 text-yellow-400 mt-0 && 0.5 flex-shrink-0" />;
                             <span className="text-sm text-yellow-300">{suggestion}</span>;
-                        ))}
+                        )}
                       </div>;
                     </div>;
                   )}
@@ -1376,11 +1375,11 @@ if (return 'bg - orange - 400') {
               Password Security Best Practices;
             </h2>;
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>;
-                            {key === 'no_common' && 'Not a common password'}
-                            {key === 'no_sequential' &&;
-                              'No sequential characters'}                          </span>                            {key === 'no_sequential' && 'No sequential characters'}
+                            {key = = 'no_common' && 'Not a common password'}
+                            {key = = 'no_sequential' &&;
+                              'No sequential characters'}                          </span>                            {key = = 'no_sequential' && 'No sequential characters'}
                           </span>;
-                        </div>))}
+                        </div>)}
                     </div>;
                   </div>;
                   {/* Suggestions */}
@@ -1390,7 +1389,7 @@ if (return 'bg - orange - 400') {
                         Suggestions;
                       </h4>;
                       <div className='space - y-2'>;
-                        {suggestions.map ((suggestion, index) => (
+                        {suggestions.map (suggestion, index) => (
                           <div;
                             key={index}
                             className='flex items - start space - x-3';
@@ -1400,10 +1399,10 @@ if (return 'bg - orange - 400') {
                               {suggestion}
                             </span>                          </div>                      <h4 className="text - lg font - semibold text - white mb - 3">Suggestions</h4>;
                       <div className="space - y-2">;
-                        {suggestions.map ((suggestion, index) => (
+                        {suggestions.map (suggestion, index) => (
                           <div key={index} className="flex items - start space - x-3">;
                             <AlertTriangle className="w - 4 h - 4 text - yellow - 400 mt - 0.5 flex - shrink - 0" />;
-                            <span className="text - sm text - yellow - 300">{suggestion}</span>))}
+                            <span className="text - sm text - yellow - 300">{suggestion}</span>)}
                       </div>;
                     </div>)}
                 </div>) : (
@@ -1614,8 +1613,8 @@ if (return 'bg - orange - 400') {
         </div>
       </section>
     </>
-);
-}
+;
+
               className='border-white text-white hover:bg-white hover:text-indigo-600'>              href="/pricing";
               variant="outline";
               size="lg";
@@ -1627,8 +1626,7 @@ if (return 'bg - orange - 400') {
       </section>;
     </>;
   );
-}
+
   );
-}
+
     </>);
-}

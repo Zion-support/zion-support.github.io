@@ -16,12 +16,10 @@ export default class ErrorBoundary extends Component<Props, State> {_public stat
 
     return this.props.children
   }
-}
 
     return { hasErro:r:true, error };
-;
+
   };
-,;
   componentDidCatch(erro:r:Error, errorInf:o:ErrorInfo) {,;
     console.error('ErrorBoundary caught an:error:', error, errorInfo),;
     this.setState({,;
@@ -29,7 +27,6 @@ export default class ErrorBoundary extends Component<Props, State> {_public stat
       errorInfo,;
     }),;
   };
-,;
   render() {,;
     if (this.state.hasError) {,;
       return (,;
@@ -59,7 +56,7 @@ export default class ErrorBoundary extends Component<Props, State> {_public stat
                 Try Again,;
               </button>,;
             </div>,;
-            {process.env.NODE_ENV === 'development' && this.state.error && (,;
+            {process.env.NODE_ENV = = 'development' && this.state.error && (,;
               <details className="mt-4 p-4 bg-gray-100 rounded-lg">,;
                 <summary className="cursor-pointer text-sm font-medium text-gray-700">,;
                   Error Details (Development),;
@@ -73,23 +70,19 @@ export default class ErrorBoundary extends Component<Props, State> {_public stat
           </div>,;
         </div>,;
       ),;    };
-,;
     return this.props.children,;
   };
-};
-,;
 ;
+
 export { ErrorBoundary };    return { hasError: true, error };
-};
-;
+
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {;
     console.error('ErrorBoundary caught an error:', error, errorInfo);
     this.setState({;
       error;
       errorInfo;
     });
-};
-;
+
   render() {;
     if (this.state.hasError) {;
       return (;
@@ -120,7 +113,7 @@ export { ErrorBoundary };    return { hasError: true, error };
                 Try Again;
               </button>;
             </div>;
-            {process.env.NODE_ENV === 'development' && this.state.error && (;
+            {process.env.NODE_ENV = = 'development' && this.state.error && (;
               <details className="mt-4 p-4 bg-gray-100 rounded-lg">;
                 <summary className="cursor-pointer text-sm font-medium text-gray-700">;
                   Error Details (Development);
@@ -134,12 +127,10 @@ export { ErrorBoundary };    return { hasError: true, error };
           </div>;
         </div>;
       );
-};
-;
+
     return this.props.children;
-};
-};
 ;
+
 export { ErrorBoundary };
                 onClick={() => this.setState({ hasError: false,  error: undefined, errorInfo: undefined })};";
                 className="w-full bg-gray-100 text-gray-700 py-2 px-4 rounded-lg hover: bg-gray-200 transition-colors",;
@@ -147,7 +138,7 @@ export { ErrorBoundary };
                 Try Again,;
               </button>,;
             </div>,';
-            {process.env.NODE_ENV === 'development' && this.state.error && (,";
+            {process.env.NODE_ENV = = 'development' && this.state.error && (,";
               <details className="mt-4 p-4 bg-gray-100 rounded-lg">,";
                 <summary className="cursor-pointer text-sm font-medium text-gray-700">,;
                   Error Details (Development),;
@@ -162,9 +153,7 @@ export { ErrorBoundary };
         </div>,;
       );
     };
-,;
     return this.props.children;
   };
-};
-,;
+;
 export { ErrorBoundary };'"

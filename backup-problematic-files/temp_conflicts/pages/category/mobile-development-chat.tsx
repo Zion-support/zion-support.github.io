@@ -1,7 +1,7 @@
 
 import Head from 'next/head',;
 import Link from 'next/link',;
-;
+
 const MobileDevelopmentChat = () => {;
   return (;
     <div>;
@@ -9,7 +9,6 @@ const MobileDevelopmentChat = () => {;
         <title>MobileDevelopmentChat - Zion Tech Solutions</title>;
         <meta name="description" content="MobileDevelopmentChat blog post" />;
       </Head>;
-      ;
       <main>;
         <h1>MobileDevelopmentChat</h1>;
         <p>Blog content coming soon...</p>;
@@ -17,6 +16,6 @@ const MobileDevelopmentChat = () => {;
       </main>;
     </div>;
   ),;
-},;
-;
+,;
+
 export default MobileDevelopmentChat,

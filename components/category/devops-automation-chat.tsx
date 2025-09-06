@@ -20,7 +20,6 @@ const DevopsAutomationChat: NextPage = () => {;
       </main>;
     </div>;
   );
-};
       </Head>
       <main>
         <h1>DevopsAutomationChat</h1>
@@ -37,7 +36,7 @@ const DevopsAutomationChat: NextPage = () => {;
       </main>;
     </div>;
   );
-}
+
 export default DevopsAutomationChat;
 
 import type { NextPage } from './next';
@@ -59,7 +58,5 @@ const DevopsAutomationChat: NextPage = () => {
         <a href="/blog">Back to Blog</a>;
       </main>;
     </div>);
-}
-;
+
 export default DevopsAutomationChat;
-;

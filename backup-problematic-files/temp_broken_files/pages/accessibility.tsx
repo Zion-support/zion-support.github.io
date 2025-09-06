@@ -24,4 +24,3 @@ export default function AccessibilityPage() {
       </div>
     </Layout>
   );
-}

@@ -12,7 +12,7 @@ export default function AdminLearn() {
     })
     const data = await resp.json()
     if (data.ok) setMessage('Saved')
-    else setMessage('Error: ' + (data.error |'unknown'))
+    else setMessage('Error: ' + (data.error |'unknown')
 
   }
   return (
@@ -40,9 +40,9 @@ export default function AdminLearn() {
       {message && <div className="text-sm">{message}</div>}
     </div>
   )
-}
+
 import { useEffect, useState } from 'react',
-;
+
 export default /**
  * AdminLearn - Function description
  */
@@ -62,8 +62,8 @@ function save_course() {
     const data = await resp.json (),
     if (set_message ('Saved'), ) {
   $2
-}
-    else set_message ('Error: ' + (data.error || 'unknown'));
+
+    else set_message ('Error: ' + (data.error || 'unknown');
   }
   return (
     <div className="space - y-4">;
@@ -89,4 +89,3 @@ function save_course() {
       <button on_click={save_course} className="px - 4 py - 2 bg - blue - 600 text - white rounded">Save Course</button>;
       {message && <div className="text - sm">{message}</div>}
     </div>);
-}

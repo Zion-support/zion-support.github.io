@@ -13,7 +13,7 @@ interface ActiveFiltersBarProps {
   onRemoveRating: () => void
 
   onClearSearch: () => void
-}
+
 export function ActiveFiltersBar({
   selectedProductTypes;
   selectedLocations;
@@ -23,13 +23,13 @@ export function ActiveFiltersBar({
   onRemoveFilter;
   onRemoveRating;
   onClearSearch
-}: ActiveFiltersBarProps) {
+: ActiveFiltersBarProps) {
 
   const hasActiveFilters =
     selectedProductTypes.length > 0 |
     selectedLocations.length > 0 |
     selectedAvailability.length > 0 |
-    selectedRating !== null |
+    selectedRating != null |
     !!searchQuery;
   if (!hasActiveFilters) return null;
 
@@ -53,7 +53,7 @@ export function ActiveFiltersBar({
           {type}
           <X className="h-3 w-3" />;
         </ClickableBadge>;
-      ))}
+      )}
       {selectedLocations.map(location => (
         <ClickableBadge
           key={`location-${location}`}
@@ -63,7 +63,7 @@ export function ActiveFiltersBar({
           {location}
           <X className="h-3 w-3" />;
         </ClickableBadge>;
-      ))}
+      )}
       {selectedAvailability.map(availability => (
         <ClickableBadge
           key={`availability-${availability}`}
@@ -73,8 +73,8 @@ export function ActiveFiltersBar({
           {availability}
           <X className="h-3 w-3" />;
         </ClickableBadge>;
-      ))}
-      {selectedRating !== null && (
+      )}
+      {selectedRating != null && (
         <ClickableBadge
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
           onClick={onRemoveRating}>;
@@ -84,7 +84,7 @@ export function ActiveFiltersBar({
       )}
     </div>
   )
-}
+
 import React from './react';
 import { ClickableBadge } from '@/components / ui / clickable - badge';
 import { X } from './lucide-react';
@@ -97,7 +97,7 @@ interface ActiveFiltersBarProps {
   onRemoveFilter: (filter_type: string, value: string) => void,
   onRemoveRating: () => void,
   onClearSearch: () => void;
-}
+
 export /**
  * ActiveFiltersBar - Function description
  */
@@ -106,13 +106,13 @@ function ActiveFiltersBar() {
     selectedProductTypes.length > 0 ||;
     selected_locations.length > 0 ||;
     selected_availability.length > 0 ||;
-    selected_rating !== null ||;
+    selected_rating != null ||;
     !!search_query;
-;
+
   // Check condition
 if (return null) {
   $2
-}
+
   return (
     <div className="flex flex - wrap gap - 2 items - center mb - 4">;
       <span className="text - sm text - zion - slate - light">Active filters:</span>;
@@ -132,7 +132,7 @@ if (return null) {
         >;
           {type}
           <X className="h - 3 w - 3" />;
-        </ClickableBadge>))}
+        </ClickableBadge>)}
       {selected_locations.map (location => (
         <ClickableBadge;
           key={`location-${location}`}
@@ -141,7 +141,7 @@ if (return null) {
         >;
           {location}
           <X className="h - 3 w - 3" />;
-        </ClickableBadge>))}
+        </ClickableBadge>)}
       {selected_availability.map (availability => (
         <ClickableBadge;
           key={`availability-${availability}`}
@@ -150,8 +150,8 @@ if (return null) {
         >;
           {availability}
           <X className="h - 3 w - 3" />;
-        </ClickableBadge>))}
-      {selected_rating !== null && (
+        </ClickableBadge>)}
+      {selected_rating != null && (
         <ClickableBadge;
           className="bg - zion - purple / 20 hover:bg - zion - purple / 30 text - zion - purple border - none flex items - center gap - 1 pl - 2";
           on_click={onRemoveRating}
@@ -160,4 +160,3 @@ if (return null) {
           <X className="h - 3 w - 3" />;
         </ClickableBadge>)}
     </div>);
-}

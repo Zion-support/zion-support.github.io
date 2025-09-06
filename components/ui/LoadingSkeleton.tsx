@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React from 'react';
 import { motion } from 'framer-motion';
 interface SkeletonProps {;
@@ -34,38 +34,37 @@ const Skeleton: React.FC<SkeletonProps> = ({
   height = 'h-4'
   width = 'w-full'
   rounded = 'rounded'
-}) => {
+) => {
   return (
 interface SkeletonProps {
   class_name?: string;
   height?: string;
   width?: string;
   rounded?: string
-}
 
 const Skeleton: React.FC<SkeletonProps> = ({ 
   className = '';
   height = 'h-4', 
   width = 'w-full', 
   rounded = 'rounded' 
-}) => {
+) => {
   return (
     <motion&& motion.div
       className={`bg-white/10 animate-pulse ${height} ${width} ${rounded} ${className}`}
     <motion.div;
       className={`bg - white / 10 animate - pulse ${height} ${width} ${rounded} ${class_name}`}
-      animate={{
-        opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3]}}
-      transition={{
+      animate={
+        opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3]}
+      transition={
         duration: 1.5
         repeat: Infinity
-        ease: "easeInOut"}}
+        ease: "easeInOut"}
     />
   )
-}
+
 interface ServiceCardSkeletonProps {
   class_name?: string;
-}
+
 export const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({ className = '' }) => {
   return (
     <div className={`p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl ${className}`}>
@@ -81,10 +80,10 @@ export const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({ classN
       <Skeleton className="h-4 w-4/6" />
     </div>
   )
-}
+
 interface HeroSkeletonProps {
   class_name?: string;
-}
+
 export const HeroSkeleton: React.FC<HeroSkeletonProps> = ({ className = '' }) => {
   return (
     <div className={`min-h-screen flex items-center justify-center px-6 py-20 ${className}`}>
@@ -99,16 +98,16 @@ export const HeroSkeleton: React.FC<HeroSkeletonProps> = ({ className = '' }) =>
       </div>
     </div>
   )
-}
+
 interface StatsSkeletonProps {
   class_name?: string;
-}
+
 export const StatsSkeleton: React.FC<StatsSkeletonProps> = ({ className = '' }) => {
   return (
     <div className={`py-20 px-6 ${className}`}>
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          {[...Array(4)].map((_, index) => (
+          {[...Array(4)].map(_, index) => (
             <div key={index} className='text-center'>
               <Skeleton className='w-16 h-16 rounded-full mx-auto mb-4' />
               <Skeleton className='h-10 w-20 mx-auto mb-2' />
@@ -116,19 +115,18 @@ export const StatsSkeleton: React.FC<StatsSkeletonProps> = ({ className = '' }) 
               <Skeleton className="w-16 h-16 rounded-full mx-auto mb-4" />
               <Skeleton className="h-10 w-20 mx-auto mb-2" />
               <Skeleton className="h-5 w-24 mx-auto" />
-          ))}
+          )}
         </div>
       </div>
     </div>
   );
-}
+
 export default Skeleton;  )
-}
-};
+
+;
 
 interface HeroSkeletonProps {;
   className?: string;
-}
 
 export const HeroSkeleton: React.FC<HeroSkeletonProps> = ({ className = '' }) => {;
   return (
@@ -144,18 +142,16 @@ export const HeroSkeleton: React.FC<HeroSkeletonProps> = ({ className = '' }) =>
       </div>;
     </div>;
   );
-};
 
 interface StatsSkeletonProps {;
   className?: string;
-}
 
 export const StatsSkeleton: React.FC<StatsSkeletonProps> = ({ className = '' }) => {;
   return (
     <div className={`py-20 px-6 ${className}`}>;
       <div className="max-w-7xl mx-auto">;
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">;
-          {[...Array(4)].map((_, index) => (;
+          {[...Array(4)].map(_, index) => (;
             <div key={index} className='text-center'>;
               <Skeleton className='w-16 h-16 rounded-full mx-auto mb-4' />;
               <Skeleton className='h-10 w-20 mx-auto mb-2' />;
@@ -163,15 +159,13 @@ export const StatsSkeleton: React.FC<StatsSkeletonProps> = ({ className = '' }) 
               <Skeleton className="w-16 h-16 rounded-full mx-auto mb-4" />;
               <Skeleton className="h-10 w-20 mx-auto mb-2" />;
               <Skeleton className="h-5 w-24 mx-auto" />;
-          ))}
+          )}
         </div>;
       </div>;
     </div>;
   );
-};
 
 export default Skeleton;  );
-};
 
 export default Skeleton;
 
@@ -180,21 +174,18 @@ export const StatsSkeleton: React.FC < StatsSkeletonProps> = ({ class_name = '' 
     <div className={`py - 20 px - 6 ${class_name}`}>;
       <div className="max - w-7xl mx - auto">;
         <div className="grid grid - cols - 2 md:grid - cols - 4 gap - 8">;
-          {[...Array (4)].map ((_, index) => (
+          {[...Array (4)].map (_, index) => (
             <div key={index} className='text - center'>;
               <Skeleton className='w - 16 h - 16 rounded - full mx - auto mb - 4' />;
               <Skeleton className='h - 10 w - 20 mx - auto mb - 2' />;
               <Skeleton className='h - 5 w - 24 mx - auto' />            <div key={index} className="text - center">;
               <Skeleton className="w - 16 h - 16 rounded - full mx - auto mb - 4" />;
               <Skeleton className="h - 10 w - 20 mx - auto mb - 2" />;
-              <Skeleton className="h - 5 w - 24 mx - auto" />))}
+              <Skeleton className="h - 5 w - 24 mx - auto" />)}
         </div>;
       </div>;
     </div>);
-}
-;
+
 export default Skeleton);
-}
-;
+
 export default Skeleton;
-;

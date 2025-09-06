@@ -6,8 +6,7 @@ import { Badge } from '@/components/ui/badge';
 
 interface NotificationProps {
   type: 'message' | 'order' | 'default';
-}
-}
+
 return <Badge className="bg - blue - 500">Message</Badge>;
       return <Badge className="bg - orange - 500">Order</Badge>;    default:;
       return <Badge variant="outline">Notification</Badge>;
@@ -19,8 +18,3 @@ interface Notification {
   timestamp: Date;
   read: boolean;
   action_url?: string;
-}
-
-
-
-}

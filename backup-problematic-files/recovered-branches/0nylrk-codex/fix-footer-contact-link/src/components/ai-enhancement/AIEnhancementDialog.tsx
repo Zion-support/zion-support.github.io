@@ -7,7 +7,7 @@ import {;
   DialogTitle} from '@/components/ui/dialog',;
 import { AIEnhancementPanel } from './AIEnhancementPanel',;
 import { AIEnhancementOptions } from '@/hooks/useAIContentEnhancer',;
-;
+
 interface AIEnhancementDialogProps {;
   title:string,;
   isOpen:boolean,;
@@ -15,8 +15,7 @@ interface AIEnhancementDialogProps {;
   onApply:(content:string) => void,;
   defaultOptions:AIEnhancementOptions,;
   initialContent?:string;
-}
-;
+
 export function AIEnhancementDialog({;
   title,;
   isOpen,;
@@ -24,12 +23,12 @@ export function AIEnhancementDialog({;
   onApply,;
   defaultOptions,;
   initialContent;
-} AIEnhancementDialogProps) {;
+ AIEnhancementDialogProps) {;
   const handleApply = (content:string) => {;
     onApply(content),;
     onClose();
   },;
-;
+
   return (;
     <Dialog open={isOpen} onOpenChange={() => onClose()}>;
       <DialogContent className="max-w-3xl">;
@@ -47,13 +46,12 @@ export function AIEnhancementDialog({;
   ),;}
  <DialogHeader> <DialogTitle> {
   title 
-}</DialogTitle> </DialogHeader> <AIEnhancementPanel title= {
+</DialogTitle> </DialogHeader> <AIEnhancementPanel title= {
   title 
-}defaultOptions= {
+defaultOptions= {
   defaultOptions 
-}onApply= {
+onApply= {
   handleApply 
-}initialContent= {
+initialContent= {
   initialContent 
-}/> </DialogContent> </Dialog>) 
-}
+/> </DialogContent> </Dialog>) 

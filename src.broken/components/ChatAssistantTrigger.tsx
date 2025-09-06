@@ -6,5 +6,3 @@ export function ChatAssistantTrigger() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

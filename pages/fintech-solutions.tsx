@@ -24,7 +24,7 @@ export default function FintechSolutions() {
 			canonical="https: //ziontechgroup.com/fintech-solutions"
 		/>
 	)
-}
+
 import React from 'react',
 import ServiceLanding from '../components / sections / ServiceLanding',
 export default /**
@@ -51,4 +51,3 @@ return (
     industries={["Fintech", "Banking", "Lending", "Payments"]}
     canonical="https: //ziontechgroup.com / fintech - solutions";
   />);
-}

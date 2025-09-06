@@ -1,4 +1,4 @@
-{
+
   "count": 100,
   "results": [
     {
@@ -13,8 +13,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11423,
       "title": "Resolve conflicts and merge to main",
@@ -27,8 +26,7 @@
         "merged": false,
         "reason": "http_error",
         "detail": "{\"message\":\"Pull Request is still a draft\",\"documentation_url\":\"https://docs.github.com/rest/pulls/pulls#merge-a-pull-request\",\"status\":\"405\"}"
-      }
-    },
+      },
     {
       "number": 11422,
       "title": "Fix syntax, push, and merge to main",
@@ -41,8 +39,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11421,
       "title": "Build nextjs app with syntax error",
@@ -55,8 +52,7 @@
         "merged": false,
         "reason": "http_error",
         "detail": "{\"message\":\"Pull Request is still a draft\",\"documentation_url\":\"https://docs.github.com/rest/pulls/pulls#merge-a-pull-request\",\"status\":\"405\"}"
-      }
-    },
+      },
     {
       "number": 11420,
       "title": "Fix syntax, push, and merge to main",
@@ -73,7 +69,6 @@
           "merged": true,
           "message": "Pull Request successfully merged"
         }
-      }
     },
     {
       "number": 11419,
@@ -87,8 +82,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11418,
       "title": "Add new services and advertise them",
@@ -101,8 +95,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11417,
       "title": "Fix console errors and warnings",
@@ -115,8 +108,7 @@
         "merged": false,
         "reason": "http_error",
         "detail": "{\"message\":\"Pull Request is still a draft\",\"documentation_url\":\"https://docs.github.com/rest/pulls/pulls#merge-a-pull-request\",\"status\":\"405\"}"
-      }
-    },
+      },
     {
       "number": 11415,
       "title": "Resolve conflicts and merge to main",
@@ -129,8 +121,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11414,
       "title": "Fix syntax, push, and merge to main",
@@ -143,8 +134,7 @@
         "merged": false,
         "reason": "http_error",
         "detail": "{\"message\":\"Pull Request is still a draft\",\"documentation_url\":\"https://docs.github.com/rest/pulls/pulls#merge-a-pull-request\",\"status\":\"405\"}"
-      }
-    },
+      },
     {
       "number": 11413,
       "title": "Fix syntax, push, and merge to main",
@@ -157,8 +147,7 @@
         "merged": false,
         "reason": "http_error",
         "detail": "{\"message\":\"Pull Request is still a draft\",\"documentation_url\":\"https://docs.github.com/rest/pulls/pulls#merge-a-pull-request\",\"status\":\"405\"}"
-      }
-    },
+      },
     {
       "number": 11412,
       "title": "Enhance ziontechgroup website with new services and improvements",
@@ -171,8 +160,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11411,
       "title": "Analyze, improve, and deploy application",
@@ -185,8 +173,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11410,
       "title": "Fix syntax, push, and merge to main",
@@ -199,8 +186,7 @@
         "merged": false,
         "reason": "http_error",
         "detail": "{\"message\":\"Pull Request is still a draft\",\"documentation_url\":\"https://docs.github.com/rest/pulls/pulls#merge-a-pull-request\",\"status\":\"405\"}"
-      }
-    },
+      },
     {
       "number": 11408,
       "title": "Enhance ziontechgroup website with new services and improvements",
@@ -213,8 +199,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11407,
       "title": "Website audit, content update, and deployment",
@@ -227,8 +212,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11406,
       "title": "Automate, test, fix, improve, and merge code",
@@ -241,8 +225,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11405,
       "title": "Analyze, improve, and deploy application",
@@ -255,8 +238,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11404,
       "title": "Migrate CI to PM2 and clean up GitHub actions",
@@ -269,8 +251,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11403,
       "title": "Automate, test, fix, improve, and merge code",
@@ -283,8 +264,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11402,
       "title": "Fix syntax, push, and merge to main",
@@ -297,8 +277,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11401,
       "title": "Migrate CI to PM2 and clean up GitHub actions",
@@ -311,8 +290,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11400,
       "title": "Fix errors and automate with pm2",
@@ -325,8 +303,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11399,
       "title": "Website audit, content update, and deployment",
@@ -339,8 +316,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11398,
       "title": "Migrate CI to PM2 and clean up GitHub actions",
@@ -353,8 +329,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11397,
       "title": "Migrate CI to PM2 and clean up GitHub actions",
@@ -367,8 +342,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11396,
       "title": "Test and fix pm2 automations, merge to main",
@@ -381,8 +355,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11395,
       "title": "Fix errors and automate with pm2",
@@ -395,8 +368,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11393,
       "title": "Enhance ziontechgroup website with new services and improvements",
@@ -409,8 +381,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11391,
       "title": "Analyze, improve, and deploy application",
@@ -423,8 +394,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11390,
       "title": "Enhance pm2 automations for development and deployment",
@@ -437,8 +407,7 @@
         "merged": false,
         "reason": "http_error",
         "detail": "{\"message\":\"Pull Request is still a draft\",\"documentation_url\":\"https://docs.github.com/rest/pulls/pulls#merge-a-pull-request\",\"status\":\"405\"}"
-      }
-    },
+      },
     {
       "number": 11389,
       "title": "Website audit, content update, and deployment",
@@ -451,8 +420,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11388,
       "title": "Automate, test, fix, improve, and merge code",
@@ -465,8 +433,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11387,
       "title": "Fix errors and automate with pm2",
@@ -479,8 +446,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11385,
       "title": "Analyze, improve, and deploy application",
@@ -493,8 +459,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11384,
       "title": "Website audit, content update, and deployment",
@@ -507,8 +472,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11383,
       "title": "Resolve conflicts and merge to main",
@@ -521,8 +485,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11382,
       "title": "Fix lint, push, and merge to main",
@@ -535,8 +498,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11381,
       "title": "Fix syntax, push, and merge to main",
@@ -549,8 +511,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11380,
       "title": "Website audit, content update, and deployment",
@@ -563,8 +524,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11379,
       "title": "Enhance ziontechgroup website with new services and improvements",
@@ -577,8 +537,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11377,
       "title": "Resolve conflicts and merge to main",
@@ -591,8 +550,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11376,
       "title": "Fix lint, push, and merge to main",
@@ -605,8 +563,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11375,
       "title": "Fix lint, push, and merge to main",
@@ -619,8 +576,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11373,
       "title": "Fix syntax, push, and merge to main",
@@ -633,8 +589,7 @@
         "merged": false,
         "reason": "http_error",
         "detail": "{\"message\":\"Pull Request is still a draft\",\"documentation_url\":\"https://docs.github.com/rest/pulls/pulls#merge-a-pull-request\",\"status\":\"405\"}"
-      }
-    },
+      },
     {
       "number": 11372,
       "title": "Fix lint, push, and merge to main",
@@ -647,8 +602,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11371,
       "title": "Automate, test, fix, improve, and merge code",
@@ -661,8 +615,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11370,
       "title": "Website audit, content update, and deployment",
@@ -675,8 +628,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11369,
       "title": "Add new services and advertise them",
@@ -689,8 +641,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11368,
       "title": "Add new services and advertise them",
@@ -703,8 +654,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11367,
       "title": "Analyze, improve, and deploy application",
@@ -717,8 +667,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11365,
       "title": "Automate, test, fix, improve, and merge code",
@@ -731,8 +680,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11364,
       "title": "Fix syntax, push, and merge to main",
@@ -745,8 +693,7 @@
         "merged": false,
         "reason": "http_error",
         "detail": "{\"message\":\"Pull Request is still a draft\",\"documentation_url\":\"https://docs.github.com/rest/pulls/pulls#merge-a-pull-request\",\"status\":\"405\"}"
-      }
-    },
+      },
     {
       "number": 11363,
       "title": "Add new services and advertise them",
@@ -759,8 +706,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11362,
       "title": "Website audit, content update, and deployment",
@@ -773,8 +719,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11361,
       "title": "Fix syntax, push, and merge to main",
@@ -791,7 +736,6 @@
           "merged": true,
           "message": "Pull Request successfully merged"
         }
-      }
     },
     {
       "number": 11360,
@@ -805,8 +749,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11357,
       "title": "Website audit, content update, and deployment",
@@ -819,8 +762,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11356,
       "title": "Add new services and advertise them",
@@ -833,8 +775,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11353,
       "title": "Analyze, improve, and deploy application",
@@ -847,8 +788,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11352,
       "title": "Website audit, content update, and deployment",
@@ -861,8 +801,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11351,
       "title": "Website audit, content update, and deployment",
@@ -875,8 +814,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11350,
       "title": "Fix syntax, push, and merge to main",
@@ -889,8 +827,7 @@
         "merged": false,
         "reason": "http_error",
         "detail": "{\"message\":\"Pull Request is still a draft\",\"documentation_url\":\"https://docs.github.com/rest/pulls/pulls#merge-a-pull-request\",\"status\":\"405\"}"
-      }
-    },
+      },
     {
       "number": 11349,
       "title": "Enhance ziontechgroup website with new services and improvements",
@@ -903,8 +840,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11348,
       "title": "Fix syntax, push, and merge to main",
@@ -917,8 +853,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11347,
       "title": "Analyze and fix web page errors and warnings",
@@ -931,8 +866,7 @@
         "merged": false,
         "reason": "http_error",
         "detail": "{\"message\":\"Pull Request is still a draft\",\"documentation_url\":\"https://docs.github.com/rest/pulls/pulls#merge-a-pull-request\",\"status\":\"405\"}"
-      }
-    },
+      },
     {
       "number": 11346,
       "title": "Enhance ziontechgroup website with new services and improvements",
@@ -945,8 +879,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11345,
       "title": "Automate, test, fix, improve, and merge code",
@@ -959,8 +892,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11344,
       "title": "Add new services and advertise them",
@@ -973,8 +905,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11343,
       "title": "Add new services and advertise them",
@@ -987,8 +918,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11342,
       "title": "Fix syntax, push, and merge to main",
@@ -1001,8 +931,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11341,
       "title": "Fix syntax, push, and merge to main",
@@ -1015,8 +944,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11340,
       "title": "Fix syntax, push, and merge to main",
@@ -1029,8 +957,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11339,
       "title": "Website audit, content update, and deployment",
@@ -1043,8 +970,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11338,
       "title": "Automate, test, fix, improve, and merge code",
@@ -1057,8 +983,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11337,
       "title": "Analyze, improve, and deploy application",
@@ -1071,8 +996,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11336,
       "title": "Add new services and advertise them",
@@ -1085,8 +1009,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11335,
       "title": "Add new services and advertise them",
@@ -1099,8 +1022,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11334,
       "title": "Enhance ziontechgroup website with new services and improvements",
@@ -1113,8 +1035,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11332,
       "title": "Automate, test, fix, improve, and merge code",
@@ -1127,8 +1048,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11331,
       "title": "Fix syntax, push, and merge to main",
@@ -1141,8 +1061,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11330,
       "title": "Automate, test, fix, improve, and merge code",
@@ -1155,8 +1074,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11329,
       "title": "Build nextjs project with missing types",
@@ -1169,8 +1087,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11328,
       "title": "Analyze, improve, and deploy application",
@@ -1183,8 +1100,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11327,
       "title": "Fix syntax, push, and merge to main",
@@ -1197,8 +1113,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11326,
       "title": "Enhance ziontechgroup website with new services and improvements",
@@ -1211,8 +1126,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11324,
       "title": "Analyze, improve, and deploy application",
@@ -1225,8 +1139,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11323,
       "title": "Add new services and advertise them",
@@ -1239,8 +1152,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11322,
       "title": "Fix syntax, push, and merge to main",
@@ -1253,8 +1165,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11321,
       "title": "Automate, test, fix, improve, and merge code",
@@ -1267,8 +1178,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11320,
       "title": "Add new services and advertise them",
@@ -1281,8 +1191,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11319,
       "title": "Resolve conflicts and merge to main",
@@ -1295,8 +1204,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11318,
       "title": "Enhance ziontechgroup website with new services and improvements",
@@ -1309,8 +1217,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11316,
       "title": "Website audit, content update, and deployment",
@@ -1323,8 +1230,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11314,
       "title": "Fix syntax, push, and merge to main",
@@ -1337,8 +1243,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11313,
       "title": "Analyze, improve, and deploy application",
@@ -1351,8 +1256,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11311,
       "title": "Fix lint, push, and merge to main",
@@ -1365,8 +1269,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11310,
       "title": "Website audit, content update, and deployment",
@@ -1379,8 +1282,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11309,
       "title": "Fix lint, push, and merge to main",
@@ -1393,8 +1295,7 @@
         "merged": false,
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
-      }
-    },
+      },
     {
       "number": 11308,
       "title": "Website audit, content update, and deployment",
@@ -1408,6 +1309,4 @@
         "reason": "not_mergeable",
         "mergeable_state": "dirty"
       }
-    }
   ]
-}

@@ -10,7 +10,7 @@ interface MilestoneCreatorProps {
   projectStartDate?: string;
   projectEndDate?: string | null;
   projectType?: string;
-}
+
 export function MilestoneCreator({
   onSubmit;
   isSubmitting;
@@ -19,7 +19,7 @@ export function MilestoneCreator({
   projectStartDate;
   projectEndDate;
   projectType;
-}: MilestoneCreatorProps) {;
+: MilestoneCreatorProps) {;
   return (
     <AddMilestoneForm
       onSubmit={onSubmit}
@@ -31,7 +31,7 @@ export function MilestoneCreator({
       projectType={projectType}
     />
   )
-}
+
   on_submit: (data: any) => Promise < void>,
   is_submitting: boolean,
   on_cancel: () => void,
@@ -39,7 +39,7 @@ export function MilestoneCreator({
   projectStartDate?: string;
   projectEndDate?: string | null;
   project_type?: string;
-}
+
 export /**
  * MilestoneCreator - Function description
  */
@@ -54,4 +54,3 @@ function MilestoneCreator() {
       projectEndDate={projectEndDate}
       project_type={project_type}
     />);
-}

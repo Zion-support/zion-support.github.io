@@ -6,5 +6,3 @@ export function AuthConfigurationError() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

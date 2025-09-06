@@ -11,15 +11,14 @@ export async function getServerSideProps() {;
     outdated = json.outdated || [];
     generatedAt = json.generatedAt || '';
   } catch {}
-  return { props: { outdated, generatedAt } }
-}
+  return { props: { outdated, generatedAt }
 
 export default function DepRadarPage({ outdated, generatedAt }: { outdated: Outdated[], generatedAt: string }) {
   return (
     <div className="space-y-6">
       <h1 className="text-2xl font-semibold">AI Automation: Dependency Radar</h1>
       <div className="text-xs text-gray-500">Last updated: {generatedAt ? new Date(generatedAt).toLocaleString() : ''}</div>
-      {outdated.length === 0 ? (
+      {outdated.length = = 0 ? (
         <div className="text-sm text-gray-600">All dependencies up to date.</div>
       ) : (
         <div className="overflow-auto border rounded">
@@ -40,11 +39,10 @@ export default function DepRadarPage({ outdated, generatedAt }: { outdated: Outd
                   <td className="p-2">{o.latest}</td>
                   <td className="p-2">{o.type}</td>
                 </tr>
-              ))}
+              )}
             </tbody>;
           </table>;
         </div>;
       )}
     </div>;
   );
-}

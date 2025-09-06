@@ -19,11 +19,11 @@ export default function SOC2ComplianceAutomationPage() {
 							{ title: 'Asset Inventory', desc: 'Infrastructure and device inventory with configuration checks.' },
 							{ title: 'Workflow & Tasks', desc: 'Assign remediation tasks, SLAs, and approvals.' },
 							{ title: 'Audit Room', desc: 'Share evidence securely with auditors, immutable logs.' }
-						].map((f) => (
+						].map(f) => (
 							<div key={f.title} className=&quot;rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur&quot;>
 								<h3 className=&quot;text-lg font-semibold text-white&quot;>{f.title}</h3>
 								<p className=&quot;mt-2 text-sm text-gray-300&quot;>{f.desc}</p>							</div>
-						))}
+						)}
 					</div>
 
 					<div className=&quot;mt-12&quot;>

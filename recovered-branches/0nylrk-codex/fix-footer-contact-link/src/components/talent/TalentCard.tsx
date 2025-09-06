@@ -14,7 +14,7 @@ export interface TalentCardProps {
   onToggleSave: (id: string, isSaved: boolean) => void
 
   isAuthenticated: boolean
-}
+
 export function TalentCard({
   talent;
   onViewProfile;
@@ -22,7 +22,7 @@ export function TalentCard({
   isSaved;
   onToggleSave;
   isAuthenticated
-}: TalentCardProps) {
+: TalentCardProps) {
 
   const navigate = useNavigate();
   const handleViewProfile = () => {
@@ -32,21 +32,18 @@ export function TalentCard({
     if (onViewProfile) {
       onViewProfile(talent.id)
     }
-  }
   const handleRequestHire = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation()
     if (onRequestHire) {
       onRequestHire(talent)
     }
-  }
   const handleToggleSave = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation()
     if (onToggleSave) {
       onToggleSave(talent.id, !isSaved)
     }
-  }
   // Extract skills - limit to 5 for display
   const skills = talent.skills?.slice(0, 5) |[];
   return (
@@ -110,13 +107,13 @@ export function TalentCard({
         {skills.length > 0 && (
           <div className="mt-4">
             <div className="flex flex-wrap gap-2">
-              {skills.map((skill, index) => (
+              {skills.map(skill, index) => (
                 <span
                   key={index}
                   className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light">;
                   {skill}
                 </span>;
-              ))}
+              )}
               {(talent.skills?.length |0) > 5 && (
                 <span className="px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan">
                   +{(talent.skills?.length |0) - 5} more
@@ -154,7 +151,7 @@ export function TalentCard({
                 e.stopPropagation();
 
                 handleViewProfile()
-              }}
+              }
               className="text-zion-cyan hover: text-white hover:bg-zion-blue-light"
             >
               View <ArrowRight className="ml-1 h-4 w-4" />
@@ -164,13 +161,12 @@ export function TalentCard({
       </div>
     </Card>
   )
-}
+
             </Button>;
           </div>;
         </div>;
       </div>;
     </Card>;
   );
-}
+
     </Card>);
-}

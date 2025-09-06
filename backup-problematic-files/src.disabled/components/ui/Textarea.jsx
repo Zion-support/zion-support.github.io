@@ -7,6 +7,5 @@ const Textarea = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default Textarea;

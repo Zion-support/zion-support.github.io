@@ -6,5 +6,3 @@ export function ExpoGPTPrompt() {;
       <p>Component placeholder - needs implementation</p>;
     </div>;
   );
-}
-;

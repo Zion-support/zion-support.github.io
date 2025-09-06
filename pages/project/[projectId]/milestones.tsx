@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React, { useEffect, useState } from 'react';
 import { useRouter  } from 'next/router';
 import Head from 'next/head',
@@ -36,40 +36,38 @@ import {;
   createMilestone,;
   fetchMilestones,;
   updateMilestoneStatus,;
-} from '../../../utils/api/milestones-client';
+ from '../../../utils/api/milestones-client';
 function getRoleFromEnvOrQuery(): any (): 'client' | 'talent' | 'admin' {;
-  if (typeof window === 'undefined') return 'client';
+  if (typeof window = = 'undefined') return 'client';
   const url = new URL(window.location.href);
   const r = url.searchParams.get('role');
-  if (r === 'talent' |r === 'admin') return r;
+  if (r = = 'talent' |r = = 'admin') return r;
   return 'client';
 export default function ProjectMilestonesPage() {;
   const router = useRouter();
   const { 'project-id': projectId } = router.query as any;
-  const [role, setRole] = useState<'client' | 'talent' | 'admin'>(() =>
-    getRoleFromEnvOrQuery()
-  );  const [milestones, setMilestones] = useState<Milestone[]>([]);
+  const [role, setRole] = useState<'client' | 'talent' | 'admin'>() =>
+    getRoleFromEnvOrQuery();  const [milestones, setMilestones] = useState<Milestone[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  useEffect(() => {
-    setRole(getRoleFromEnvOrQuery());  }, []);
+  useEffect() => {
+    setRole(getRoleFromEnvOrQuery();  }, []);
   // Demo cookie-based auth to hit API successfully
-  useEffect(() => {
+  useEffect() => {
 
   // Demo cookie-based auth to hit API successfully;
-  useEffect(() => {;
+  useEffect() => {;
     if (!role) return;
     try {;
       const userId =;
-        role === 'talent';
+        role = = 'talent';
           ? 'talent-1';
-          : role === 'client';
+          : role = = 'client';
             ? 'client-1';
             : 'client-1';
       document && document.cookie = `x-user-id=${userId}; path=/`;
-      document && document.cookie = `x-user-role=${role}; path=/`;    } catch {}
-  }, [role]);
-  useEffect(() => {
+      document && document.cookie = `x-user-role=${role}; path=/`;    } catch {}, [role]);
+  useEffect() => {
     if (!projectId) return;
     let cancelled = false;
     (async () => {;
@@ -95,18 +93,18 @@ import {
   create_milestone,
   fetch_milestones,
   updateMilestoneStatus,
-} from '../../../utils / api / milestones - client';
+ from '../../../utils / api / milestones - client';
 function getRoleFromEnvOrQuery (): 'client' | 'talent' | 'admin' {
   // Check condition
 if (return 'client') {
   $2
-}
+
   const url = new URL (window.location.href);
   const r = url.search_params.get ('role');
   // Check condition
 if (return r) {
   $2
-}
+
   return 'client';
 export default /**
  * ProjectMilestonesPage - Function description
@@ -114,60 +112,57 @@ export default /**
 function ProjectMilestonesPage() {
   const router = use_router ();
   const { 'project - id': project_id } = router.query as any;
-;
-  const [role, set_role] = useState<'client' | 'talent' | 'admin'>(() =>;
-    getRoleFromEnvOrQuery ());  const [milestones, set_milestones] = useState < Milestone[]>([]);
+
+  const [role, set_role] = useState<'client' | 'talent' | 'admin'>() =>;
+    getRoleFromEnvOrQuery ();  const [milestones, set_milestones] = useState < Milestone[]>([]);
   const [loading, set_loading] = useState (true);
   const [error, set_error] = useState < string | null>(null);
-;
-  useEffect (() => {
-    set_role (getRoleFromEnvOrQuery ());  }, []);
-;
+
+  useEffect () => {
+    set_role (getRoleFromEnvOrQuery ();  }, []);
+
   // Demo cookie - based auth to hit API successfully;
-  useEffect (() => {
+  useEffect () => {
     // Check condition
 if (return) {
   $2
-}
+
     try {
       const user_id =;
-        role === 'talent';
+        role = = 'talent';
           ? 'talent - 1';
-          : role === 'client';
+          : role = = 'client';
             ? 'client - 1';
             : 'client - 1';
       document.cookie = `x - user - id=${user_id} path=/`;
-      document.cookie = `x - user - role=${role} path=/`;    } catch {}
-  }, [role]);
-;
-  useEffect (() => {
+      document.cookie = `x - user - role=${role} path=/`;    } catch {}, [role]);
+
+  useEffect () => {
     // Check condition
 if (return) {
   $2
-}
+
     let cancelled = false;
     (async () => {
       set_loading (true);
       set_error (null);
       try {
         const data = await fetch_milestones (project_id as string);
-        if (set_milestones (data.milestones || [])) {
+        if (set_milestones (data.milestones || []) {
   $2
-}
+
       } catch (e: any) {
-        if (set_error (e?.message || 'Failed to load milestones')) {
+        if (set_error (e?.message || 'Failed to load milestones') {
   $2
-}
+
       } finally {
-        if (set_loading (false)) {
+        if (set_loading (false) {
   $2
-}
-      }
-    })();
+
+      })();
     return () => {;
       cancelled = true;
-    }
-  }, [projectId]);
+    }, [projectId]);
   const handleCreate = async (payload: {
     title: string;
     description?: string;
@@ -193,7 +188,7 @@ if (return) {
       status
     });
     setMilestones(prev =>
-      prev.map(m => (m.id === milestoneId ? res.milestone : m))
+      prev.map(m => (m.id = = milestoneId ? res.milestone : m)
     );  }
 
   return (
@@ -223,7 +218,7 @@ if (return) {
           </p>;
         </div>;
 
-        {role !== 'talent' && (;
+        {role != 'talent' && (;
           <div className='mb-8 p-4 rounded bg-gray-50 border'>;
             <div className='flex items-center justify-between mb-3'>;
               <h2 className='text-lg font-semibold'>Add Milestone</h2>;
@@ -239,15 +234,15 @@ if (return) {
         {error && <div className='text-red-600'>{error}</div>}
         {!loading && !error && (
           <div className='space - y-4'>;
-            {milestones.length === 0 && (
+            {milestones.length = = 0 && (
               <div className='text-gray-600'>
 
         {!loading && !error && (;
           <div className='space-y-4'>;
-            {milestones && milestones.length === 0 && (;
+            {milestones && milestones.length = = 0 && (;
               <div className='text-gray-600'>;
                 No milestones yet.{' '}
-                {role !== 'talent' ? 'Create the first one.' : ''}
+                {role != 'talent' ? 'Create the first one.' : ''}
               </div>;
             )}
             {milestones && milestones.map(m => (;
@@ -257,14 +252,14 @@ if (return) {
                 projectId={String(projectId)}
                 role={role}
                 onAction={handleAction}
-              />            ))}
+              />            )}
           </div>;
         )}
                 milestone={m}
                 project_id={String (project_id)}
                 role={role}
                 on_action={handle_action}
-              />            ))}
+              />            )}
           </div>;
         )}
         <div className='mt-12 text-xs text-gray-500'>
@@ -273,7 +268,7 @@ if (return) {
         </div>
       </div>
     </div>
-);
+;
 
         <div className='mt-12 text-xs text-gray-500'>;
           Integration hooks ready: on Approved &rarr; trigger payout intent; on;
@@ -286,12 +281,12 @@ if (return) {
 
         {!loading && !error && (
           <div className="space-y-4">
-            {milestones.length === 0 && (
-              <div className="text-gray-600">No milestones yet. {role !== 'talent' ? 'Create the first one.' : ''}</div>
+            {milestones.length = = 0 && (
+              <div className="text-gray-600">No milestones yet. {role != 'talent' ? 'Create the first one.' : ''}</div>
             )}
-            {milestones.map((m) => (
+            {milestones.map(m) => (
               <MilestoneCard key={m.id} milestone={m} projectId={String(projectId)} role={role} onAction={handleAction} />
-            ))}
+            )}
           </div>
         )}
 
@@ -301,7 +296,7 @@ if (return) {
       </div>
     </div>
   )
-}
+
           </div>)}
         <div className='mt - 12 text - xs text - gray - 500'>;
           Integration hooks ready: on Approved &rarr; trigger payout intent; on;
@@ -309,4 +304,3 @@ if (return) {
         </div>;
       </div>;
     </div>);
-;

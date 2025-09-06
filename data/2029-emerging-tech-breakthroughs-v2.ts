@@ -1,8 +1,7 @@
 import { ServiceVariant } from '../types/service-variants';
 
-
 import { ServiceVariant } from '../types / service - variants';
-;
+
   id: string;
   name: string;
   tagline: string;
@@ -643,11 +642,11 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     marketSize: '$8B market', growthRate: '600% annual growth',
     variant: 'quantum-futuristic',
     contactInfo: {
-      
+
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    
+
     },
     realImplementation: true,
     implementationDetails: 'Production quantum internet gateway with enterprise deployment, network integration, and ongoing support. Includes quantum network training and certification.',
@@ -681,11 +680,11 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     marketSize: '$18B market', growthRate: '500% annual growth',
     variant: 'biotech-futuristic',
     contactInfo: {
-      
+
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    
+
     },
     realImplementation: true,
     implementationDetails: 'Production synthetic biology platform with lab integration, regulatory compliance, and ongoing support. Includes biological engineering training and certification.',
@@ -719,11 +718,11 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     marketSize: '$12B market', growthRate: '700% annual growth',
     variant: 'quantum-energy-revolutionary',
     contactInfo: {
-      
+
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    
+
     },
     realImplementation: true,
     implementationDetails: 'Production fusion energy platform with reactor integration, safety certification, and ongoing support. Includes fusion physics training and certification.',
@@ -756,11 +755,11 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     marketSize: '$20B market', growthRate: '1000% annual growth',
     variant: 'space-futuristic',
     contactInfo: {
-      
+
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    
+
     },
     realImplementation: true,
     implementationDetails: 'Production space mining platform with space system integration, regulatory compliance, and ongoing support. Includes space operations training and certification.',
@@ -810,5 +809,4 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     rating: 5.0,
     reviews: 2;
   }
-];
 ;

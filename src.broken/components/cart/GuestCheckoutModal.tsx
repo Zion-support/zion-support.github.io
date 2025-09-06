@@ -6,5 +6,3 @@ export function GuestCheckoutModal() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

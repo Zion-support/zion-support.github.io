@@ -10,10 +10,10 @@ import { SORT_OPTIONS } from "@/data/sortOptions",;
 import { X } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
 import { TalentProfile } from "@/types/talent",;
-;
+
 export default function TalentDirectory() {;
   const navigate = useNavigate(),;
-;
+
   // Use our custom hook to manage state;
   const {;
     filteredTalents,;
@@ -44,17 +44,14 @@ export default function TalentDirectory() {;
     clearFilters,;
     toggleSection,;
     handleToggleSave} = useTalentDirectory(),;
-  ;
   const handleRequestHire = (talent:TalentProfile) => {;
     setSelectedTalent(talent),;
     setIsHireModalOpen(true);
   },;
-  ;
   const viewProfile = (id:string) => {;
     // Navigate to the talent profile page;
     navigate(`/talent/${id}`),;
   },;
-  ;
   return (;
     <AppLayout>;
       <div className="container mx-auto px-4 py-8">;
@@ -65,7 +62,6 @@ export default function TalentDirectory() {;
               Connect with expert AI developers, data scientists, ML engineers, and tech professionals for your projects.;
             </p>;
           </div>;
-          ;
           {/* Main content */}
           <div className="flex flex-col lg:flex-row gap-6">;
             {/* Sidebar - Desktop */}
@@ -90,7 +86,6 @@ export default function TalentDirectory() {;
                 clearFilters={clearFilters}
               />;
             </div>;
-            ;
             {/* Mobile filter button */}
             <div className="lg:hidden mb-4">;
               <Button;
@@ -101,7 +96,6 @@ export default function TalentDirectory() {;
                 Filter & Sort;
               </Button>;
             </div>;
-            ;
             {/* Results */}
             <TalentResults;
               filteredTalents={filteredTalents}
@@ -111,7 +105,7 @@ export default function TalentDirectory() {;
               savedTalents={savedTalents}
               handleToggleSave={handleToggleSave}
               isAuthenticated={isAuthenticated}
-              activeFiltersProps={{;
+              activeFiltersProps={;
                 selectedSkills,;
                 toggleSkill,;
                 selectedAvailability,;
@@ -122,9 +116,8 @@ export default function TalentDirectory() {;
                 setPriceRange,;
                 experienceRange,;
                 setExperienceRange,;
-                clearFilters}}
+                clearFilters}
             />;
-            ;
             {/* Mobile filter sidebar */}
             {isMobileFilterOpen && (;
               <div className="fixed inset-0 bg-black bg-opacity-50 z-50 lg:hidden flex">;
@@ -170,7 +163,7 @@ export default function TalentDirectory() {;
     </AppLayout>;
   ),; export default function TalentDirectory () {
   const navigate = useNavigate ();
-//Use our custom hook to manage state const {
+/Use our custom hook to manage state const {
   filteredTalents;
 isLoading;
 searchTerm;
@@ -199,111 +192,109 @@ toggleRegion;
 clearFilters;
 toggleSection;
 handleToggleSave 
-}= useTalentDirectory ();
+= useTalentDirectory ();
 const handleRequestHire = (talent: TalentProfile) => {
   setSelectedTalent (talent);
 setIsHireModalOpen (true) 
-};
+;
 const viewProfile = (id: string) => {
   //Navigate to the talent profile page navigate (`/talent/$ {
   id 
-}`) 
-};
+`) 
+;
 return (<AppLayout> <div className="container mx-auto px-4 py-8" > <div className="flex flex-col space-y-8" > <div> <h1 className="text-3xl font-bold text-white mb-2" >AI & Tech Talent Directory</h1> <p className="text-zion-slate-light" > Connect with expert AI developers, data scientists, ML engineers, and tech professionals for your projects. </p> </div> {
   /* Main content */ 
-}<div className="flex flex-col lg:flex-row gap-6" > {
+<div className="flex flex-col lg:flex-row gap-6" > {
   /* Sidebar - Desktop */ 
-}<div className="w-full lg:w-64 shrink-0 hidden lg:block" > searchTerm 
-}setSearchTerm= {
+<div className="w-full lg:w-64 shrink-0 hidden lg:block" > searchTerm 
+setSearchTerm= {
   setSearchTerm 
-}selectedSkills= {
+selectedSkills= {
   selectedSkills 
-}toggleSkill= {
+toggleSkill= {
   toggleSkill 
-}selectedAvailability= {
+selectedAvailability= {
   selectedAvailability 
-}toggleAvailability= {
+toggleAvailability= {
   toggleAvailability 
-}selectedRegions= {
+selectedRegions= {
   selectedRegions 
-}toggleRegion= {
+toggleRegion= {
   toggleRegion 
-}priceRange= {
+priceRange= {
   priceRange 
-}setPriceRange= {
+setPriceRange= {
   setPriceRange 
-}experienceRange= {
+experienceRange= {
   experienceRange 
-}setExperienceRange= {
+setExperienceRange= {
   setExperienceRange 
-}expandedSections= {
+expandedSections= {
   expandedSections 
-}toggleSection= {
+toggleSection= {
   toggleSection 
-}sortOption= {
+sortOption= {
   sortOption 
-}setSortOption= {
+setSortOption= {
   setSortOption 
-}clearFilters= {
+clearFilters= {
   clearFilters 
-}/> </div> > Filter & Sort </Button> </div> {
+/> </div>Filter & Sort </Button> </div> {
   /* Results */ 
-}<TalentResults filteredTalents= {
+<TalentResults filteredTalents= {
   filteredTalents 
-}isLoading= {
+isLoading= {
   isLoading 
-}viewProfile= {
+viewProfile= {
   viewProfile 
-}handleRequestHire= {
+handleRequestHire= {
   handleRequestHire 
-}savedTalents= {
+savedTalents= {
   savedTalents 
-}handleToggleSave= {
+handleToggleSave= {
   handleToggleSave 
-}isAuthenticated= {
+isAuthenticated= {
   isAuthenticated 
-}activeFiltersProps= {
-  {
+activeFiltersProps= {
   selectedSkills, toggleSkill, selectedAvailability, toggleAvailability, selectedRegions, toggleRegion, priceRange, setPriceRange, experienceRange, setExperienceRange, clearFilters 
-}
-}/> <Button variant="ghost" size="sm" onClick= {
+
+/> <Button variant="ghost" size="sm" onClick= {
   () => setIsMobileFilterOpen (false) 
-}className="text-zion-slate-light h-8 w-8 p-0" > <X className="h-4 w-4" /> <span className="sr-only" >Close</span> </Button> </div> <FilterSidebar searchTerm= {
+className="text-zion-slate-light h-8 w-8 p-0" > <X className="h-4 w-4" /> <span className="sr-only" >Close</span> </Button> </div> <FilterSidebar searchTerm= {
   searchTerm 
-}setSearchTerm= {
+setSearchTerm= {
   setSearchTerm 
-}selectedSkills= {
+selectedSkills= {
   selectedSkills 
-}toggleSkill= {
+toggleSkill= {
   toggleSkill 
-}selectedAvailability= {
+selectedAvailability= {
   selectedAvailability 
-}toggleAvailability= {
+toggleAvailability= {
   toggleAvailability 
-}selectedRegions= {
+selectedRegions= {
   selectedRegions 
-}toggleRegion= {
+toggleRegion= {
   toggleRegion 
-}priceRange= {
+priceRange= {
   priceRange 
-}setPriceRange= {
+setPriceRange= {
   setPriceRange 
-}experienceRange= {
+experienceRange= {
   experienceRange 
-}setExperienceRange= {
+setExperienceRange= {
   setExperienceRange 
-}expandedSections= {
+expandedSections= {
   expandedSections 
-}toggleSection= {
+toggleSection= {
   toggleSection 
-}sortOption= {
+sortOption= {
   sortOption 
-}setSortOption= {
+setSortOption= {
   setSortOption 
-}clearFilters= {
+clearFilters= {
   clearFilters 
-}isMobileFilterOpen= {
+isMobileFilterOpen= {
   isMobileFilterOpen 
-}/> </div> </div>) 
-}</div> </div> </div> </AppLayout>) 
-}
+/> </div> </div>) 
+</div> </div> </div> </AppLayout>) 

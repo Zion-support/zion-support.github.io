@@ -6,5 +6,3 @@ export function NewsletterForm() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

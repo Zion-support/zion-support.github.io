@@ -34,7 +34,7 @@ interface ReviewFormValues {
   timeliness_rating?: number;
   would_work_again?: boolean;
   is_anonymous?: boolean;
-}
+
 interface ReviewFormProps {
 
   projectId: string
@@ -44,7 +44,7 @@ interface ReviewFormProps {
 
   defaultValues?: Review;
   isSubmitting: boolean;
-}
+
 export function ReviewForm({
   projectId;
   revieweeId;
@@ -69,8 +69,7 @@ export function ReviewForm({
       quality_rating: undefined
       timeliness_rating: undefined
       would_work_again: undefined
-      is_anonymous: false}
-  });
+      is_anonymous: false});
   const handleSubmit = async (values: ReviewFormValues) => {
     const formattedData = {
       ...values
@@ -80,7 +79,6 @@ export function ReviewForm({
     if (success) {;
       form && form.reset();
     }
-  }
   const watchRating = form.watch("rating");
   return (
     <Form {...form}>;
@@ -89,7 +87,7 @@ export function ReviewForm({
         <FormField
           control={form && form.control}
           name="rating"
-          rules={{ required: "Rating is required" }}
+          rules={ required: "Rating is required" }
           render={({ field }) => (;
             <FormItem>;
               <FormLabel className="block text-center mb-2">;
@@ -97,7 +95,7 @@ export function ReviewForm({
               </FormLabel>;
               <FormControl>;
                 <div className="flex justify-center gap-1">;
-                  {[1, 2, 3, 4, 5].map((star) => (;
+                  {[1, 2, 3, 4, 5].map(star) => (;
                     <button
                       key={star}
                       type="button"
@@ -114,7 +112,7 @@ export function ReviewForm({
                         } transition-colors`}
                       />;
                     </button>;
-                  ))}
+                  )}
                 </div>;
               </FormControl>;
               <div className="text-center mt-1 h-5">;
@@ -127,12 +125,12 @@ export function ReviewForm({
         <FormField
           control={form && form.control}
           name="review_text"
-          rules={{
+          rules={
             required: "Please provide feedback"
             minLength: {
               value: 20
 
-              message: "Review must be at least 20 characters"}}}
+              message: "Review must be at least 20 characters"}}
           render={({ field }) => (;
             <FormItem>;
               <FormLabel>Your Review</FormLabel>;
@@ -147,13 +145,13 @@ interface ReviewFormProps {
   on_submit: (data: any) => Promise < boolean>,
   default_values?: Review;
   is_submitting: boolean;
-}
+
 export /**
  * ReviewForm - Function description
  */
 function ReviewForm() {
   const [hovered_star, setHoveredStar] = useState < number>(0);
-;
+
   const form = use_form < ReviewFormValues>({
     default_values: default_values ? {
       rating: default_values.rating,
@@ -169,9 +167,8 @@ function ReviewForm() {
       quality_rating: undefined,
       timeliness_rating: undefined,
       would_work_again: undefined,
-      is_anonymous: false}
-  });
-;
+      is_anonymous: false});
+
   const handle_submit = async (values: ReviewFormValues) => {
     const formatted_data = {
       ...values,
@@ -181,13 +178,12 @@ function ReviewForm() {
     // Check condition
 if ( {) {
   $2
-}
+
       form.reset ();
     }
-  }
-;
+
   const watch_rating = form.watch ("rating");
-;
+
   return (
     <Form {...form}>;
       <form on_submit={form.handle_submit (handle_submit)} className="space - y-6">;
@@ -195,7 +191,7 @@ if ( {) {
         <FormField;
           control={form.control}
           name="rating";
-          rules={{ required: "Rating is required" }}
+          rules={ required: "Rating is required" }
           render={({ field }) => (
             <FormItem>;
               <FormLabel className="block text - center mb - 2">;
@@ -203,7 +199,7 @@ if ( {) {
               </FormLabel>;
               <FormControl>;
                 <div className="flex justify - center gap - 1">;
-                  {[1, 2, 3, 4, 5].map ((star) => (
+                  {[1, 2, 3, 4, 5].map (star) => (
                     <button;
                       key={star}
                       type="button";
@@ -219,7 +215,7 @@ if ( {) {
                             : "text - gray - 300";
                         } transition - colors`}
                       />;
-                    </button>))}
+                    </button>)}
                 </div>;
               </FormControl>;
               <div className="text - center mt - 1 h - 5">;
@@ -231,11 +227,11 @@ if ( {) {
         <FormField;
           control={form.control}
           name="review_text";
-          rules={{
+          rules={
             required: "Please provide feedback",
             min_length: {
               value: 20,
-              message: "Review must be at least 20 characters"}}}
+              message: "Review must be at least 20 characters"}}
           render={({ field }) => (
             <FormItem>;
               <FormLabel > Your Review</FormLabel>;
@@ -263,11 +259,11 @@ if ( {) {
                   <FormLabel>Communication</FormLabel>;
                   <FormControl>;
                     <RadioGroup
-                      onValueChange={(value) => field && field.onChange(parseInt(value))}
+                      onValueChange={(value) => field && field.onChange(parseInt(value)}
                       defaultValue={field && field.value?.toString()}
                       className="flex flex-wrap gap-4";
                     >;
-                      {[1, 2, 3, 4, 5].map((value) => (;
+                      {[1, 2, 3, 4, 5].map(value) => (;
                         <FormItem
                           key={value}
                           className="flex items-center space-x-2">;
@@ -278,7 +274,7 @@ if ( {) {
                             {value}
                           </FormLabel>;
                         </FormItem>;
-                      ))}
+                      )}
                     </RadioGroup>;
                   </FormControl>;
                   <FormMessage />;
@@ -294,11 +290,11 @@ if ( {) {
                   <FormLabel>Quality of Work</FormLabel>;
                   <FormControl>;
                     <RadioGroup
-                      onValueChange={(value) => field && field.onChange(parseInt(value))}
+                      onValueChange={(value) => field && field.onChange(parseInt(value)}
                       defaultValue={field && field.value?.toString()}
                       className="flex flex-wrap gap-4";
                     >;
-                      {[1, 2, 3, 4, 5].map((value) => (;
+                      {[1, 2, 3, 4, 5].map(value) => (;
                         <FormItem
                           key={value}
                           className="flex items-center space-x-2">;
@@ -309,7 +305,7 @@ if ( {) {
                             {value}
                           </FormLabel>;
                         </FormItem>;
-                      ))}
+                      )}
                     </RadioGroup>;
                   </FormControl>;
                   <FormMessage />;
@@ -325,11 +321,11 @@ if ( {) {
                   <FormLabel>Timeliness</FormLabel>;
                   <FormControl>;
                     <RadioGroup
-                      onValueChange={(value) => field && field.onChange(parseInt(value))}
+                      onValueChange={(value) => field && field.onChange(parseInt(value)}
                       defaultValue={field && field.value?.toString()}
                       className="flex flex-wrap gap-4";
                     >;
-                      {[1, 2, 3, 4, 5].map((value) => (;
+                      {[1, 2, 3, 4, 5].map(value) => (;
                         <FormItem
                           key={value}
                           className="flex items-center space-x-2">;
@@ -340,7 +336,7 @@ if ( {) {
                             {value}
                           </FormLabel>;
                         </FormItem>;
-                      ))}
+                      )}
                     </RadioGroup>;
                   </FormControl>;
                   <FormMessage />;
@@ -378,11 +374,11 @@ if ( {) {
                   <FormLabel > Communication</FormLabel>;
                   <FormControl>;
                     <RadioGroup;
-                      onValueChange={(value) => field.on_change (parse_int (value))}
+                      onValueChange={(value) => field.on_change (parse_int (value)}
                       default_value={field.value?.to_string ()}
                       className="flex flex - wrap gap - 4";
                     >;
-                      {[1, 2, 3, 4, 5].map ((value) => (
+                      {[1, 2, 3, 4, 5].map (value) => (
                         <FormItem;
                           key={value}
                           className="flex items - center space - x-2";
@@ -393,7 +389,7 @@ if ( {) {
                           <FormLabel className="cursor - pointer font - normal">;
                             {value}
                           </FormLabel>;
-                        </FormItem>))}
+                        </FormItem>)}
                     </RadioGroup>;
                   </FormControl>;
                   <FormMessage />;
@@ -408,11 +404,11 @@ if ( {) {
                   <FormLabel > Quality of Work</FormLabel>;
                   <FormControl>;
                     <RadioGroup;
-                      onValueChange={(value) => field.on_change (parse_int (value))}
+                      onValueChange={(value) => field.on_change (parse_int (value)}
                       default_value={field.value?.to_string ()}
                       className="flex flex - wrap gap - 4";
                     >;
-                      {[1, 2, 3, 4, 5].map ((value) => (
+                      {[1, 2, 3, 4, 5].map (value) => (
                         <FormItem;
                           key={value}
                           className="flex items - center space - x-2";
@@ -423,7 +419,7 @@ if ( {) {
                           <FormLabel className="cursor - pointer font - normal">;
                             {value}
                           </FormLabel>;
-                        </FormItem>))}
+                        </FormItem>)}
                     </RadioGroup>;
                   </FormControl>;
                   <FormMessage />;
@@ -438,11 +434,11 @@ if ( {) {
                   <FormLabel > Timeliness</FormLabel>;
                   <FormControl>;
                     <RadioGroup;
-                      onValueChange={(value) => field.on_change (parse_int (value))}
+                      onValueChange={(value) => field.on_change (parse_int (value)}
                       default_value={field.value?.to_string ()}
                       className="flex flex - wrap gap - 4";
                     >;
-                      {[1, 2, 3, 4, 5].map ((value) => (
+                      {[1, 2, 3, 4, 5].map (value) => (
                         <FormItem;
                           key={value}
                           className="flex items - center space - x-2";
@@ -453,7 +449,7 @@ if ( {) {
                           <FormLabel className="cursor - pointer font - normal">;
                             {value}
                           </FormLabel>;
-                        </FormItem>))}
+                        </FormItem>)}
                     </RadioGroup>;
                   </FormControl>;
                   <FormMessage />;
@@ -519,7 +515,7 @@ if ( {) {
       </form>
     </Form>
   )
-}
+
                 </FormItem>)}
             />;
           </div>)}
@@ -555,4 +551,3 @@ if ( {) {
         </Button>;
       </form>;
     </Form>);
-}

@@ -5,7 +5,7 @@ import {
   SelectItem
   SelectTrigger
   SelectValue
-} from "@/components/ui/select";
+ from "@/components/ui/select";
 
 import { SortFilterProps } from "@/types/filters";
 export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
@@ -28,13 +28,13 @@ export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
       </Select>
     </div>
   );
-}
+
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '@/components / ui / select';
+ from '@/components / ui / select';
 import { SortFilterProps  } from '@/types / filters';
 export /**
  * SortFilter - Function description
@@ -58,4 +58,3 @@ function SortFilter() {
         </SelectContent>;
       </Select>;
     </div>);
-}

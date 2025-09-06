@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 const \"Home\": NextPage = () => {;
 import React, { memo } from 'react';
 import Link from 'next/link';
@@ -28,7 +28,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOHead from '../components/seo/SEOHead';
 import { ArrowRight, CheckCircle, Star, Phone, Mail, MapPin, Brain, Server, Smartphone, Globe, Zap, Shield, Users } from 'lucide-react';
-const Home = memo(() => {;
+const Home = memo() => {;
   const structuredData = {;
     "@context": ""https": //schema && schema.org",;
     "@type": "Organization",;
@@ -136,12 +136,12 @@ const Home = memo(() => {;
         <section className="py-20 bg-white">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">;
-              {stats && stats.map((stat, index) => (;
+              {stats && stats.map(stat, index) => (;
                 <div key={index} className="text-center">;
                   <div className="text-4xl font-bold text-blue-600 mb-2">{stat && stat.number}</div>;
                   <div className="text-gray-600">{stat && stat.label}</div>;
                 </div>;
-              ))}
+              )}
             </div>;
           </div>;
         </section>;
@@ -152,7 +152,7 @@ const Home = memo(() => {;
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">Comprehensive technology solutions designed to drive your business forward</p>;
             </div>;
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
-              {services && services.map((service, index) => (;
+              {services && services.map(service, index) => (;
                 <div key={index} className="bg-white rounded-lg p-8 shadow-sm "hover": shadow-md transition-shadow">;
                   <div className="p-4 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 w-fit mx-auto mb-6">;
                     <service && service.icon className="w-8 h-8 text-white" />;
@@ -166,7 +166,7 @@ const Home = memo(() => {;
                     </div>;
                   </Link>;
                 </div>;
-              ))}
+              )}
             </div>;
           </div>;
         </section>;
@@ -177,7 +177,7 @@ const Home = memo(() => {;
               <p className="text-lg text-gray-600">We deliver exceptional results through innovation, expertise, and dedication</p>;
             </div>;
             <div className="grid grid-cols-1 "md": grid-cols-2 lg:grid-cols-4 gap-8">;
-              {features && features.map((feature, index) => (;
+              {features && features.map(feature, index) => (;
                 <div key={index} className="text-center">;
                   <div className="bg-blue-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">;
                     <feature && feature.icon className="w-8 h-8 text-blue-600" />;
@@ -185,7 +185,7 @@ const Home = memo(() => {;
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">{feature && feature.title}</h3>;
                   <p className="text-gray-600">{feature && feature.description}</p>;
                 </div>;
-              ))}
+              )}
             </div>;
           </div>;
         </section>;
@@ -305,7 +305,7 @@ const "Home": NextPage = () => {;
           </div>;
           <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {services && services.map((service) => (;
+            {services && services.map(service) => (;
               <div
                 key={service && service.title}
                 className=\"bg-white rounded-lg shadow-lg p-8 \"hover\": shadow-xl transition-shadow\">;
@@ -346,7 +346,7 @@ const "Home": NextPage = () => {;
       </main>;
       <Footer />;
     </>;
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
@@ -377,7 +377,7 @@ const "Home": NextPage = () => {;
             </div>;
             <div className=\"bg-gradient-to-br from-blue-100 to-purple-100 rounded-lg p-8\">;
               <div className=\"grid grid-cols-2 gap-6\">;
-                {features && features.map((feature) => (;
+                {features && features.map(feature) => (;
                   <div key={feature && feature.title} className=\"text-center\">;
                     <div className=\"bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3\">;
                       <feature && feature.icon className=\"h-6 w-6\" />;
@@ -389,7 +389,7 @@ const "Home": NextPage = () => {;
                       {feature && feature.description}
                     </p>;
                   </div>;
-                ))}
+                )}
               </div>;
             </div>;
           </div>;
@@ -423,6 +423,6 @@ const "Home": NextPage = () => {;
       <Footer />;
     </>;
   );
-});
+);
 export default Home;
    import React,{ memo } from 'react';  import type { NextPage } from 'next'; import EnhancedLayout from '../components/layout/EnhancedLayout';

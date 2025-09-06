@@ -12,13 +12,13 @@ interface ModelVersionData extends ModelConfig {
   trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed'
 
   errorMessage?: string
-}
+
 export function ZionGPTModelManager() {
   const [models, setModels] = useState<ModelVersionData[]>([]),
   const [isLoading, setIsLoading] = useState(true);
   const [activeJobs, setActiveJobs] = useState<{[key: string]: boolean}>({})
   // Fetch model data on component mount
-  useEffect(() => {
+  useEffect() => {
     fetchModels()
   }, []);
 
@@ -40,29 +40,26 @@ export function ZionGPTModelManager() {
         active: model.active
         trainingStatus: model.training_status
         errorMessage: model.error_message
-      })))
+      }))
     } catch (error) {
       console.error ('Error fetching models:', error);
     } finally {
       setIsLoading (false);
     }
-  }
   const checkTrainingStatus = async (modelId: string) => {
     try {
-      setActiveJobs(prev => ({ ...prev, [modelId]: true }));
+      setActiveJobs(prev => ({ ...prev, [modelId]: true });
       // Call an edge function that checks the OpenAI fine-tuning job status
       const { data, error } = await supabase.functions.invoke('check-training-status', {
-        body: { modelId }
-      });
+        body: { modelId });
       if (error) throw error;
       // Update the local model status
       setModels(prev =>
         prev.map(model =>
-          model.id === modelId
+          model.id = = modelId
             ? { ...model, trainingStatus: data.status, errorMessage: data.error |null }
             : model
-        )
-      );
+        );
       // Also update in the database
       await supabase
         .from('model_versions')
@@ -70,15 +67,14 @@ export function ZionGPTModelManager() {
           training_status: data.status
           error_message: data.error |null
           // If training succeeded, automatically set to active
-          ...(data.status === 'succeeded' ? { active: true } : {})
+          ...(data.status = = 'succeeded' ? { active: true } : {})
         })
         .eq('id', modelId)
     } catch (error) {
       console.error (`Error checking status for model ${model_id}:`, error);
     } finally {
-      setActiveJobs (prev => ({ ...prev, [model_id]: false }));
+      setActiveJobs (prev => ({ ...prev, [model_id]: false });
     }
-  }
   const toggleModelActive = async (modelId: string, currentActive: boolean, purpose: string) => {
     try {
       // If activating, deactivate all other models with the same purpose
@@ -98,7 +94,6 @@ export function ZionGPTModelManager() {
     } catch (error) {
       console.error('Error toggling model active state:', error)
     }
-  }
 
   return (
     <Card className="w-full">;
@@ -132,18 +127,18 @@ export function ZionGPTModelManager() {
               </TableRow>;
             </TableHeader>;
             <TableBody>;
-              {models && models.map((model) => (;
+              {models && models.map(model) => (;
                 <TableRow key={model && model.id}>;
                   <TableCell className="font-medium">{model && model.id}</TableCell>;
                   <TableCell>v{model && model.version}</TableCell>;
                   <TableCell>{model && model.purpose}</TableCell>;
                   <TableCell>{model && model.baseModel}</TableCell>;
                   <TableCell>;
-                    {model && model.trainingStatus === 'succeeded' ? (;
+                    {model && model.trainingStatus = = 'succeeded' ? (;
                       <Badge className="bg-green-500">Ready</Badge>;
-                    ) : model && model.trainingStatus === 'failed' ? (;
+                    ) : model && model.trainingStatus = = 'failed' ? (;
                       <Badge className="bg-red-500">Failed</Badge>;
-                    ) : model && model.trainingStatus === 'running' ? (;
+                    ) : model && model.trainingStatus = = 'running' ? (;
                       <Badge className="bg-blue-500">Training</Badge>;
                     ) : (;
                       <Badge className="bg-yellow-500">Queued</Badge>;
@@ -152,7 +147,7 @@ export function ZionGPTModelManager() {
                   </TableCell>
                   <TableCell>{new Date(model.createdAt).toLocaleDateString()}</TableCell>
                   <TableCell className="text-right">
-                    {model.trainingStatus === 'queued' |model.trainingStatus === 'running' ? (
+                    {model.trainingStatus = = 'queued' |model.trainingStatus = = 'running' ? (
                       <Button
                         variant="ghost"
                         size="sm"
@@ -166,7 +161,7 @@ export function ZionGPTModelManager() {
                         )}
                         <span className="ml-1">Check</span>;
                       </Button>;
-                    ) : model && model.trainingStatus === 'succeeded' ? (;
+                    ) : model && model.trainingStatus = = 'succeeded' ? (;
                       <Button
                         variant={model && model.active ? "outline" : "default"}
                         size="sm"
@@ -194,22 +189,21 @@ export function ZionGPTModelManager() {
                     )}
                   </TableCell>;
                 </TableRow>;
-              ))}
+              )}
             </TableBody>;
           </Table>;
         )}
       </CardContent>
     </Card>
   )
-}
-;
+
   const toggleModelActive = async (model_id: string, current_active: boolean, purpose: string) => {
     try {
       // If activating, deactivate all other models with the same purpose;
       // Check condition
 if ( {) {
   $2
-}
+
         await supabase;
           .from ('model_versions');
           .update ({ active: false });
@@ -220,14 +214,13 @@ if ( {) {
         .from ('model_versions');
         .update ({ active: !current_active });
         .eq ('id', model_id);
-;
+
       // Refresh the model list;
       fetch_models ();
     } catch (error) {
       console.error ('Error toggling model active state:', error);
     }
-  }
-;
+
   return (
     <Card className="w - full">;
       <CardHeader className="flex flex - row items - center justify - between">;
@@ -259,23 +252,23 @@ if ( {) {
               </TableRow>;
             </TableHeader>;
             <TableBody>;
-              {models.map ((model) => (
+              {models.map (model) => (
                 <TableRow key={model.id}>;
                   <TableCell className="font - medium">{model.id}</TableCell>;
                   <TableCell > v{model.version}</TableCell>;
                   <TableCell>{model.purpose}</TableCell>;
                   <TableCell>{model.base_model}</TableCell>;
                   <TableCell>;
-                    {model.training_status === 'succeeded' ? (
-                      <Badge className="bg - green - 500">Ready</Badge>) : model.training_status === 'failed' ? (
-                      <Badge className="bg - red - 500">Failed</Badge>) : model.training_status === 'running' ? (
+                    {model.training_status = = 'succeeded' ? (
+                      <Badge className="bg - green - 500">Ready</Badge>) : model.training_status = = 'failed' ? (
+                      <Badge className="bg - red - 500">Failed</Badge>) : model.training_status = = 'running' ? (
                       <Badge className="bg - blue - 500">Training</Badge>) : (
                       <Badge className="bg - yellow - 500">Queued</Badge>)}
                     {model.active && <Badge className="ml - 2 bg - purple - 500">Active</Badge>}
                   </TableCell>;
                   <TableCell>{new Date (model.created_at).toLocaleDateString ()}</TableCell>;
                   <TableCell className="text - right">;
-                    {model.training_status === 'queued' || model.training_status === 'running' ? (
+                    {model.training_status = = 'queued' || model.training_status = = 'running' ? (
                       <Button;
                         variant="ghost";
                         size="sm";
@@ -286,7 +279,7 @@ if ( {) {
                           <Loader2 className="h - 4 w - 4 animate - spin" />) : (
                           <RefreshCw className="h - 4 w - 4" />)}
                         <span className="ml - 1">Check</span>;
-                      </Button>) : model.training_status === 'succeeded' ? (
+                      </Button>) : model.training_status = = 'succeeded' ? (
                       <Button;
                         variant={model.active ? "outline" : "default"}
                         size="sm";
@@ -309,9 +302,8 @@ if ( {) {
                         <AlertCircle className="h - 4 w - 4 mr - 1" /> Error;
                       </Button>)}
                   </TableCell>;
-                </TableRow>))}
+                </TableRow>)}
             </TableBody>;
           </Table>)}
       </CardContent>;
     </Card>);
-}

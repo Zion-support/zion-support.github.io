@@ -46,7 +46,7 @@ export default function ITServices() {;
             <p className="text-gray-600">;
 import React from './react';
 import Layout from "../components / Layout";
-;
+
 export default /**
  * ITServices - Function description
  */
@@ -75,7 +75,5 @@ function ITServices() {
       </div>;
     </Layout>;
   );
-}
-}
+
     </Layout>);
-}

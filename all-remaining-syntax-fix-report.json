@@ -1,4 +1,4 @@
-{
+
   "timestamp": "2025-09-06T09:21:50.615Z",
   "fixedFiles": [
     "pages/api/docs/graphql.ts",
@@ -10,4 +10,3 @@
   "errors": [],
   "totalFixed": 5,
   "totalErrors": 0
-}

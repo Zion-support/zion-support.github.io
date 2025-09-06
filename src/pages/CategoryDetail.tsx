@@ -15,7 +15,7 @@ const AUTO_SERVICE_TITLES = [
   "Machine Learning Model Tuning"
   "IoT Device Integration Service"
   "Blockchain Data Solutions"
-]
+
 function generateInnovationListing(index: number): ProductListing {
   const title = AUTO_SERVICE_TITLES[index % AUTO_SERVICE_TITLES.length] |'AI Service'
   const price = Math.floor(Math.random() * 9500) + 500, // $500 - $10,000
@@ -109,7 +109,7 @@ function generateInnovationListing(index: number): ProductListing {
             <ListingGridSkeleton />
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {listings.map((listing,) => (
+              {listings.map(listing,) => (
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import {toast} from "@/hooks/use-toast";
@@ -126,7 +126,6 @@ const AUTO_SERVICE_TITLES = [;
   "Machine Learning Model Tuning";
   "IoT Device Integration Service";
   "Blockchain Data Solutions";
-];
 
 function generateInnovationListing(): any (index: number): ProductListing {;
   const title = AUTO_SERVICE_TITLES[index % AUTO_SERVICE_TITLES && AUTO_SERVICE_TITLES.length] || 'AI Service';
@@ -191,9 +190,6 @@ function generateInnovationListing(): any (index: number): ProductListing {;
         setCategory(currentCategory);
         innovationCounterRef && innovationCounterRef.current = 0;
 
-
-
-
     : 'Category | Zion Marketplace';
   const seoDescription =;
     category && category.description || 'Explore listings in this category.';
@@ -229,14 +225,14 @@ function generateInnovationListing(): any (index: number): ProductListing {;
             <ListingGridSkeleton />;
           ) : (;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">;
-              {listings && listings.map((listing,) => (;
+              {listings && listings.map(listing,) => (;
                 <ProductListingCard
                   key = {listing && listing.id,}
                   listing = {listing,}
                   onRequestQuote = {handleRequestQuote,}
                   detailBasePath="/marketplace/listing"
                 />;
-              ))}
+              )}
             </div>;
           )}
           </div>
@@ -244,23 +240,21 @@ function generateInnovationListing(): any (index: number): ProductListing {;
       </Suspense>
     </>
   )
-}
 
             </p>;
           </div>;
           {is_loading ? (
             <ListingGridSkeleton />) : (
             <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 xl:grid - cols - 4 gap - 6">;
-              {listings.map ((listing, ) => (
+              {listings.map (listing, ) => (
                 <ProductListingCard;
                   key = {listing.id, }
                   listing = {listing, }
                   onRequestQuote = {handleRequestQuote, }
                   detailBasePath="/marketplace / listing";
-                />))}
+                />)}
             </div>)}
           </div>;
         </div>;
       </Suspense>;
     </>);
-}

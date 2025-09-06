@@ -282,7 +282,7 @@ export default function TechnologyInsightsPage() {;
                 Latest Technology Trends;
               </h2>;
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
-                {technologyTrends && technologyTrends.map((trend, index) => (;
+                {technologyTrends && technologyTrends.map(trend, index) => (;
                   <div
                     key={index}
                     className='bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300'>;
@@ -318,7 +318,7 @@ export default function TechnologyInsightsPage() {;
             <div className="mb-16">
               <h2 className="text-3xl font-bold mb-8 text-center text-cyan-400">Latest Technology Trends</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {technologyTrends.map((trend, index) => (
+                {technologyTrends.map(trend, index) => (
                   <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300">
                     <div className="flex items-center justify-between mb-4">
                       <span className="px-3 py-1 bg-fuchsia-400/20 text-fuchsia-400 text-sm rounded-full">{trend.category}</span>
@@ -333,7 +333,7 @@ export default function TechnologyInsightsPage() {;
                       Read More <span className="ml-1"></span>
                     </Link>
                   </div>
-                ))}
+                )}
               </div>
             </div>
                       href={`/blog/${trend && trend.id}`}
@@ -356,7 +356,7 @@ export default function TechnologyInsightsPage() {;
             <div className="mb-16">;
               <h2 className="text-3xl font-bold mb-8 text-center text-cyan-400">Latest Technology Trends</h2>;
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
-                {technologyTrends && technologyTrends.map((trend, index) => (;
+                {technologyTrends && technologyTrends.map(trend, index) => (;
                   <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300">;
                     <div className="flex items-center justify-between mb-4">;
                       <span className="px-3 py-1 bg-fuchsia-400/20 text-fuchsia-400 text-sm rounded-full">{trend && trend.category}</span>;
@@ -370,7 +370,7 @@ export default function TechnologyInsightsPage() {;
                       Read More <span className="ml-1"></span>;
                     </Link>;
                   </div>;
-                ))}
+                )}
               </div>;
             </div>;
 
@@ -380,7 +380,7 @@ export default function TechnologyInsightsPage() {;
                 Research Focus Areas;
               </h2>;
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>;
-                {researchAreas && researchAreas.map((area, index) => (;
+                {researchAreas && researchAreas.map(area, index) => (;
                   <div
                     key={index}
                     className='bg-white/10 backdrop-blur-xl rounded-2xl p-6'>;
@@ -390,25 +390,25 @@ export default function TechnologyInsightsPage() {;
                     </h3>;
                     <p className='text-white/70 mb-4'>{area && area.description}</p>;
                     <ul className='space-y-2'>;
-                      {area && area.focus.map((focus, focusIndex) => (;
+                      {area && area.focus.map(focus, focusIndex) => (;
                         <li
                           key={focusIndex}
                           className='text-sm text-white/60 flex items-center'>;
-                          <span className='text-cyan-400 mr-2'></span>                          {focus}                {researchAreas && researchAreas.map((area, index) => (;
+                          <span className='text-cyan-400 mr-2'></span>                          {focus}                {researchAreas && researchAreas.map(area, index) => (;
                   <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6">;
                     <div className="text-4xl mb-4">{area && area.icon}</div>;
                     <h3 className="text-xl font-bold mb-3 text-white">{area && area.title}</h3>;
                     <p className="text-white/70 mb-4">{area && area.description}</p>;
                     <ul className="space-y-2">;
-                      {area && area.focus.map((focus, focusIndex) => (;
+                      {area && area.focus.map(focus, focusIndex) => (;
                         <li key={focusIndex} className="text-sm text-white/60 flex items-center">;
                           <span className="text-cyan-400 mr-2"></span>;
                           {focus}
                         </li>;
-                      ))}
+                      )}
                     </ul>;
                   </div>;
-                ))}
+                )}
               </div>
             </div>
             {/* Whitepapers */}
@@ -417,7 +417,7 @@ export default function TechnologyInsightsPage() {;
                 Research Whitepapers;
               </h2>;
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>;
-                {whitepapers && whitepapers.map((paper, index) => (;
+                {whitepapers && whitepapers.map(paper, index) => (;
                   <div
                     key={index}
                     className='bg-white/10 backdrop-blur-xl rounded-2xl p-6'>;
@@ -437,7 +437,7 @@ export default function TechnologyInsightsPage() {;
                       href={paper.downloadUrl}
                       className='inline-flex items-center text-fuchsia-400 hover:text-fuchsia-300 transition-colors'
                     >
-                      Download PDF <span className='ml-1'></span>                    </Link>                {whitepapers.map((paper, index) => (
+                      Download PDF <span className='ml-1'></span>                    </Link>                {whitepapers.map(paper, index) => (
                   <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6">
                     <div className="flex items-center justify-between mb-3">
                       <span className="px-3 py-1 bg-blue-400/20 text-blue-400 text-sm rounded-full">{paper.category}</span>
@@ -452,7 +452,7 @@ export default function TechnologyInsightsPage() {;
                       Download PDF <span className="ml-1"></span>
                     </Link>
                   </div>
-                ))}
+                )}
               </div>
             </div>
             {/* Innovation Lab */}
@@ -497,7 +497,7 @@ export default function TechnologyInsightsPage() {;
             </div>
                       href={paper && paper.downloadUrl}
                       className='inline-flex items-center text-fuchsia-400 hover:text-fuchsia-300 transition-colors'>;
-                      Download PDF <span className='ml-1'></span>                    </Link>                {whitepapers && whitepapers.map((paper, index) => (;
+                      Download PDF <span className='ml-1'></span>                    </Link>                {whitepapers && whitepapers.map(paper, index) => (;
                   <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6">;
                     <div className="flex items-center justify-between mb-3">;
                       <span className="px-3 py-1 bg-blue-400/20 text-blue-400 text-sm rounded-full">{paper && paper.category}</span>;
@@ -511,7 +511,7 @@ export default function TechnologyInsightsPage() {;
                       Download PDF <span className="ml-1"></span>;
                     </Link>;
                   </div>;
-                ))}
+                )}
               </div>;
             </div>;
 
@@ -546,7 +546,7 @@ export default function TechnologyInsightsPage() {;
                 Latest Technology Trends;
               </h2>;
               <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6'>;
-                {technology_trends.map ((trend, index) => (
+                {technology_trends.map (trend, index) => (
                   <div;
                     key={index}
                     className='bg - white / 10 backdrop - blur - xl rounded - 2xl p - 6 hover:bg - white / 15 transition - all duration - 300';
@@ -583,7 +583,7 @@ export default function TechnologyInsightsPage() {;
             <div className="mb - 16">;
               <h2 className="text - 3xl font - bold mb - 8 text - center text - cyan - 400">Latest Technology Trends</h2>;
               <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
-                {technology_trends.map ((trend, index) => (
+                {technology_trends.map (trend, index) => (
                   <div key={index} className="bg - white / 10 backdrop - blur - xl rounded - 2xl p - 6 hover:bg - white / 15 transition - all duration - 300">;
                     <div className="flex items - center justify - between mb - 4">;
                       <span className="px - 3 py - 1 bg - fuchsia - 400 / 20 text - fuchsia - 400 text - sm rounded - full">{trend.category}</span>;
@@ -597,7 +597,7 @@ export default function TechnologyInsightsPage() {;
                     >;
                       Read More <span className="ml - 1"></span>;
                     </Link>;
-                  </div>))}
+                  </div>)}
               </div>;
             </div>;
             {/* Research Areas */}
@@ -606,7 +606,7 @@ export default function TechnologyInsightsPage() {;
                 Research Focus Areas;
               </h2>;
               <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6'>;
-                {research_areas.map ((area, index) => (
+                {research_areas.map (area, index) => (
                   <div;
                     key={index}
                     className='bg - white / 10 backdrop - blur - xl rounded - 2xl p - 6';
@@ -617,24 +617,24 @@ export default function TechnologyInsightsPage() {;
                     </h3>;
                     <p className='text - white / 70 mb - 4'>{area.description}</p>;
                     <ul className='space - y-2'>;
-                      {area.focus.map ((focus, focus_index) => (
+                      {area.focus.map (focus, focus_index) => (
                         <li;
                           key={focus_index}
                           className='text - sm text - white / 60 flex items - center';
                         >;
-                          <span className='text - cyan - 400 mr - 2'></span>                          {focus}                {research_areas.map ((area, index) => (
+                          <span className='text - cyan - 400 mr - 2'></span>                          {focus}                {research_areas.map (area, index) => (
                   <div key={index} className="bg - white / 10 backdrop - blur - xl rounded - 2xl p - 6">;
                     <div className="text - 4xl mb - 4">{area.icon}</div>;
                     <h3 className="text - xl font - bold mb - 3 text - white">{area.title}</h3>;
                     <p className="text - white / 70 mb - 4">{area.description}</p>;
                     <ul className="space - y-2">;
-                      {area.focus.map ((focus, focus_index) => (
+                      {area.focus.map (focus, focus_index) => (
                         <li key={focus_index} className="text - sm text - white / 60 flex items - center">;
                           <span className="text - cyan - 400 mr - 2"></span>;
                           {focus}
-                        </li>))}
+                        </li>)}
                     </ul>;
-                  </div>))}
+                  </div>)}
               </div>;
             </div>;
             {/* Whitepapers */}
@@ -643,7 +643,7 @@ export default function TechnologyInsightsPage() {;
                 Research Whitepapers;
               </h2>;
               <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6'>;
-                {whitepapers.map ((paper, index) => (
+                {whitepapers.map (paper, index) => (
                   <div;
                     key={index}
                     className='bg - white / 10 backdrop - blur - xl rounded - 2xl p - 6';
@@ -664,7 +664,7 @@ export default function TechnologyInsightsPage() {;
                       href={paper.download_url}
                       className='inline - flex items - center text - fuchsia - 400 hover:text - fuchsia - 300 transition - colors';
                     >;
-                      Download PDF <span className='ml - 1'></span>                    </Link>                {whitepapers.map ((paper, index) => (
+                      Download PDF <span className='ml - 1'></span>                    </Link>                {whitepapers.map (paper, index) => (
                   <div key={index} className="bg - white / 10 backdrop - blur - xl rounded - 2xl p - 6">;
                     <div className="flex items - center justify - between mb - 3">;
                       <span className="px - 3 py - 1 bg - blue - 400 / 20 text - blue - 400 text - sm rounded - full">{paper.category}</span>;
@@ -678,7 +678,7 @@ export default function TechnologyInsightsPage() {;
                     >;
                       Download PDF <span className="ml - 1"></span>;
                     </Link>;
-                  </div>))}
+                  </div>)}
               </div>;
             </div>;
             {/* Innovation Lab */}
@@ -751,8 +751,7 @@ export default function TechnologyInsightsPage() {;
                 <Link
                   href="/blog"
                   className="px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200">;
-);
-}
+
                   Read Our Blog;
                 </Link>;
               </div>;
@@ -762,8 +761,7 @@ export default function TechnologyInsightsPage() {;
       </div>;
     </>;
   );
-}
+
   );
-}
+
     </>);
-}

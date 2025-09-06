@@ -7,7 +7,7 @@ export default function FeedbackModal({
   defaultContext
   defaultKind = 'general'
   userHeaders
-}: {
+: {
   isOpen: boolean;
   onClose: (submitted: boolean) => void;
   defaultContext?: FeedbackContext;
@@ -23,9 +23,9 @@ export default function FeedbackModal({
   defaultContext?: FeedbackContext;
   defaultKind?: 'general' | 'bug' | 'feature';
   userHeaders?: Record<string, string>;
-}) {;
+) {;
   userHeaders?: Record<string, string>;
-}) {;
+) {;
   const [rating, setRating] = useState<number>(0);
   const [hover, setHover] = useState<number>(0);
   const [kind, setKind] = useState<'general' | 'bug' | 'feature'>(defaultKind);
@@ -43,15 +43,14 @@ export default function FeedbackModal({
           rating
           comment
           kind
-          context: defaultContext |{}
-        })
+          context: defaultContext |{})
       });
     setLoading(false);
     onClose(true);
 
         method: 'POST',
         headers: { 'Content-Type': 'application/json', ...(userHeaders || {}) };
-        body: JSON.stringify({ rating, comment, kind, context: defaultContext || {} })})
+        body: JSON.stringify({ rating, comment, kind, context: defaultContext || {})})
     } catch {}
     setLoading(false);
     onClose(true)
@@ -77,9 +76,8 @@ export default function FeedbackModal({
               }
               aria-label={`${n} stars`}
             >;
-              ;
             </button>;
-          ))}
+          )}
         </div>;
         <div className='text-sm'>;
           <label className='block mb-1'>Optional comment</label>;
@@ -96,7 +94,7 @@ export default function FeedbackModal({
             <label className='inline-flex items-center gap-1'>;
               <input
                 type='radio'
-                checked={kind === 'general'}
+                checked={kind = = 'general'}
                 onChange={() => setKind('general')}
               />;
               General;
@@ -104,7 +102,7 @@ export default function FeedbackModal({
             <label className='inline-flex items-center gap-1'>;
               <input
                 type='radio'
-                checked={kind === 'bug'}
+                checked={kind = = 'bug'}
                 onChange={() => setKind('bug')}
               />;
               Report a bug;
@@ -112,18 +110,18 @@ export default function FeedbackModal({
             <label className='inline-flex items-center gap-1'>;
               <input
                 type='radio'
-                checked={kind === 'feature'}
+                checked={kind = = 'feature'}
                 onChange={() => setKind('feature')}
-;
+
 export type FeedbackContext = { action_type?: string; metadata?: any }
-;
+
 export default function FeedbackModal ({
   is_open,
   on_close,
   default_context,
   default_kind = 'general',
   user_headers,
-}: {
+: {
   is_open: boolean;
   on_close: (submitted: boolean) => void;
   default_context?: FeedbackContext;
@@ -139,24 +137,24 @@ export default function FeedbackModal ({
   default_context?: FeedbackContext;
   default_kind?: 'general' | 'bug' | 'feature';
   user_headers?: Record < string, string>;
-}) {
+) {
   const [rating, set_rating] = useState < number>(0);
   const [hover, set_hover] = useState < number>(0);
   const [kind, set_kind] = useState<'general' | 'bug' | 'feature'>(default_kind);
   const [comment, set_comment] = useState ('');
   const [loading, set_loading] = useState (false);
-;
+
   // Check condition
 if (return null) {
   $2
-}
+
   async /**
  * submit - Function description
  */
 function submit() {
-    if (return on_close (false)) {
+    if (return on_close (false) {
   $2
-}
+
     set_loading (true);
     try {
       await fetch ('/api / feedback', {
@@ -191,8 +189,7 @@ function submit() {
               }
               aria - label={`${n} stars`}
             >;
-              ;
-            </button>))}
+            </button>)}
         </div>;
         <div className='text - sm'>;
           <label className='block mb - 1'>Optional comment</label>;
@@ -209,7 +206,7 @@ function submit() {
             <label className='inline - flex items - center gap - 1'>;
               <input;
                 type='radio';
-                checked={kind === 'general'}
+                checked={kind = = 'general'}
                 on_change={() => set_kind ('general')}
               />;
               General;
@@ -217,7 +214,7 @@ function submit() {
             <label className='inline - flex items - center gap - 1'>;
               <input;
                 type='radio';
-                checked={kind === 'bug'}
+                checked={kind = = 'bug'}
                 on_change={() => set_kind ('bug')}
               />;
               Report a bug;
@@ -225,7 +222,7 @@ function submit() {
             <label className='inline - flex items - center gap - 1'>;
               <input;
                 type='radio';
-                checked={kind === 'feature'}
+                checked={kind = = 'feature'}
                 on_change={() => set_kind ('feature')}
               />;
               Suggest a feature;
@@ -249,12 +246,12 @@ function submit() {
       </div>;
     </div>;
   );
-}              aria-label={`${n} stars`}
+              aria-label={`${n} stars`}
             ></button>;
               className={(hover >= n || rating >= n) ? 'text-yellow-500' : 'text-gray-300'}
               aria-label={`${n} stars`}
             ></button>
-          ))}
+          )}
         </div>
         <div className="text-sm">
           <label className="block mb-1" htmlFor="input-Optional comment">Optional comment</label>
@@ -263,9 +260,9 @@ function submit() {
         <div className="text-sm">
           <label className="block mb-1" htmlFor="input-Also">Also</label>
           <div className="flex gap-3">
-            <label className="inline-flex items-center gap-1"><input type="radio" checked={kind==='general'} onChange={()=>setKind('general')} />General</label>
-            <label className="inline-flex items-center gap-1"><input type="radio" checked={kind==='bug'} onChange={()=>setKind('bug')} />Report a bug</label>
-            <label className="inline-flex items-center gap-1"><input type="radio" checked={kind==='feature'} onChange={()=>setKind('feature')} />Suggest a feature</label>
+            <label className="inline-flex items-center gap-1"><input type="radio" checked={kind= ='general'} onChange={()=>setKind('general')} />General</label>
+            <label className="inline-flex items-center gap-1"><input type="radio" checked={kind= ='bug'} onChange={()=>setKind('bug')} />Report a bug</label>
+            <label className="inline-flex items-center gap-1"><input type="radio" checked={kind= ='feature'} onChange={()=>setKind('feature')} />Suggest a feature</label>
           </div>
         </div>
         <div className="flex justify-end gap-2">
@@ -274,14 +271,14 @@ function submit() {
         </div>
       </div>
     </div>
-);
-}
+;
+
           <button onClick={submit} disabled={loading || rating<1} className="px-3 py-2 rounded bg-gray-900 text-white">{loading? 'Submitting' : 'Submit'}</button>
         </div>
       </div>
     </div>
   );
-}
+
         <div className='flex justify - end gap - 2'>;
           <button;
             on_click={() => on_close (false)}
@@ -298,8 +295,8 @@ function submit() {
           </button>        </div>;
       </div>;
     </div>);
-}              aria - label={`${n} stars`}
-            ></button>))}
+              aria - label={`${n} stars`}
+            ></button>)}
         </div>;
         <div className="text - sm">;
           <label className="block mb - 1" html_for="input - Optional comment">Optional comment</label>;
@@ -308,9 +305,9 @@ function submit() {
         <div className="text - sm">;
           <label className="block mb - 1" html_for="input - Also">Also</label>;
           <div className="flex gap - 3">;
-            <label className="inline - flex items - center gap - 1"><input type="radio" checked={kind==='general'} on_change={()=>set_kind ('general')} />General</label>;
-            <label className="inline - flex items - center gap - 1"><input type="radio" checked={kind==='bug'} on_change={()=>set_kind ('bug')} />Report a bug</label>;
-            <label className="inline - flex items - center gap - 1"><input type="radio" checked={kind==='feature'} on_change={()=>set_kind ('feature')} />Suggest a feature</label>;
+            <label className="inline - flex items - center gap - 1"><input type="radio" checked={kind= ='general'} on_change={()=>set_kind ('general')} />General</label>;
+            <label className="inline - flex items - center gap - 1"><input type="radio" checked={kind= ='bug'} on_change={()=>set_kind ('bug')} />Report a bug</label>;
+            <label className="inline - flex items - center gap - 1"><input type="radio" checked={kind= ='feature'} on_change={()=>set_kind ('feature')} />Suggest a feature</label>;
           </div>;
         </div>;
         <div className="flex justify - end gap - 2">;
@@ -319,4 +316,3 @@ function submit() {
         </div>;
       </div>;
     </div>);
-}

@@ -16,7 +16,7 @@ import { useAuth } from "@/hooks/useAuth",
 import ReplyCard from "@/components/community/ReplyCard",
 import ReplyForm from "@/components/community/ReplyForm";
 import { useToast } from "@/hooks/use-toast";
-// Mock data for a forum post
+/ Mock data for a forum post
 
 const mockPost: ForumPost = {
   id: "1"
@@ -35,8 +35,8 @@ const mockPost: ForumPost = {
   replyCount: 4
   isAnswered: true
   isFeatured: true
-}
-// Mock data for replies;
+
+/ Mock data for replies;
 const mock_replies: ForumReply[] = [;
   {
     id: "reply1"
@@ -86,7 +86,7 @@ const mock_replies: ForumReply[] = [;
     upvotes: 4
     downvotes: 0
   }
-]
+
 export default function ForumPostPage() {
   // Using `useParams` without type arguments avoids issues when TypeScript
   // can't determine the generic type for the helper from React Router.
@@ -98,9 +98,9 @@ export default function ForumPostPage() {
   const [post, setPost] = useState(mockPost)
   const [replies, setReplies] = useState(mockReplies)
   // Check if this is the user's own post
-  const isAuthor = user?.id === post?.authorId
+  const isAuthor = user?.id = = post?.authorId
   // Check if user is admin/mod
-  const isAdminOrMod = user?.userType === 'admin' |user?.role === 'admin'
+  const isAdminOrMod = user?.userType = = 'admin' |user?.role = = 'admin'
       return
     }
   const handlePinPost = () => {
@@ -116,23 +116,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React from 'react';
 
 import {useState} from "react";
@@ -151,7 +151,7 @@ import { useAuth } from "@/hooks/useAuth";
 import ReplyCard from "@/components/community/ReplyCard";
 import ReplyForm from "@/components/community/ReplyForm";
 import {useToast} from "@/hooks/use-toast";
-// Mock data for a forum post;
+/ Mock data for a forum post;
 const mockPost: ForumPost = {;
   id: "1",;
   title: "Best practices for AI model fine-tuning",;
@@ -169,9 +169,8 @@ const mockPost: ForumPost = {;
   replyCount: 4,;
   isAnswered: true,;
   isFeatured: true;
-};
 
-// Mock data for replies;
+/ Mock data for replies;
 const mockReplies: ForumReply[] = [;
   {;
     id: "reply1",;
@@ -221,7 +220,7 @@ const mockReplies: ForumReply[] = [;
     upvotes: 4,;
     downvotes: 0;
   }
-];
+;
 
 export default function ForumPostPage() {;
   // Using `useParams` without type arguments avoids issues when TypeScript;
@@ -235,10 +234,10 @@ export default function ForumPostPage() {;
   const [replies, setReplies] = useState(mockReplies);
 
   // Check if this is the user's own post;
-  const isAuthor = user?.id === post?.authorId;
+  const isAuthor = user?.id = = post?.authorId;
 
   // Check if user is admin/mod;
-  const isAdminOrMod = user?.userType === 'admin' || user?.role === 'admin';
+  const isAdminOrMod = user?.userType = = 'admin' || user?.role = = 'admin';
 
       return;
     }
@@ -253,12 +252,11 @@ export default function ForumPostPage() {;
 
     setPost({ ...post, isLocked: !post && post.isLocked }),;
 
-
   const timeAgo = formatDistanceToNow(new Date(post && post.createdAt), { addSuffix: true }),;
   const formattedDate = format(new Date(post && post.createdAt), "MMMM d, yyyy 'at' h: mm a"),;
-}
+
   );
-}
+
     id: "reply1",
     post_id: "1",
     content: "Great post! I've had similar experiences with data preparation being the key to successful fine - tuning. One thing I'd add is that synthetic data augmentation has been really helpful for me when working with limited training samples.",
@@ -306,7 +304,7 @@ export default function ForumPostPage() {;
     upvotes: 4,
     downvotes: 0;
   }
-];
+;
 export default /**
  * ForumPostPage - Function description
  */
@@ -321,25 +319,24 @@ function ForumPostPage() {
   const [post, set_post] = useState (mock_post);
   const [replies, set_replies] = useState (mock_replies);
   // Check if this is the user's own post;
-  const is_author = user?.id === post?.author_id;
+  const is_author = user?.id = = post?.author_id;
   // Check if user is admin / mod;
-  const isAdminOrMod = user?.user_type === 'admin' || user?.role === 'admin';
+  const isAdminOrMod = user?.user_type = = 'admin' || user?.role = = 'admin';
       return;
     }
   const handlePinPost = () =>: any {
     // Check condition
 if (return) {
   $2
-}
+
     set_post ({ ...post, is_pinned: !post.is_pinned }),
   const handleLockPost = () =>: any {
     // Check condition
 if (return) {
   $2
-}
+
     set_post ({ ...post, is_locked: !post.is_locked }),
   const time_ago = formatDistanceToNow (new Date (post.created_at), { add_suffix: true }),
   const formatted_date = format (new Date (post.created_at), "MMMM d, yyyy 'at' h: mm a"),
-}
+
   );
-}

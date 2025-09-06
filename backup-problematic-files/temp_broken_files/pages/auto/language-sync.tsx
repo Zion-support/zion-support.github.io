@@ -1,7 +1,7 @@
 import type { NextPage } from 'next',;
 import Head from 'next/head',;
 import Link from 'next/link',;
-;
+
 const LanguageSync:NextPage = () => {;
   return (;
     <div>;
@@ -21,6 +21,6 @@ const LanguageSync:NextPage = () => {;
       </main>;
     </div>;
   ),;
-},;
-;export default LanguageSync,
+,;
+export default LanguageSync,
  <div> <Head> <title>Global Language Sync Agent</title> <meta name="description" content="AI-powered translation backfill for locale files." /> </Head> export default LanguageSync;

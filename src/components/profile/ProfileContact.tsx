@@ -21,7 +21,7 @@ export function ProfileContact({
   email
   profileName
   profileType
-}: ProfileContactProps) {
+: ProfileContactProps) {
   const [message, setMessage] = useState('')
   const [subject, setSubject] = useState('')
   const [isSending, setIsSending] = useState(false)
@@ -29,7 +29,7 @@ export function ProfileContact({
     e.preventDefault()
     setIsSending(true)
     // Here would be the actual API call to send the message
-    setTimeout(() => {
+    setTimeout() => {
       setIsSending(false)
       setMessage('')
       setSubject('');      toast({
@@ -60,7 +60,7 @@ export function ProfileContact({
     setIsSending(true);
 
     // Here would be the actual API call to send the message;
-    setTimeout(() => {;
+    setTimeout() => {;
       setIsSending(false);
       setMessage('');
       setSubject('');      toast({;
@@ -162,9 +162,9 @@ export function ProfileContact({
   )
   `mailto:$ {
   email
-}` "
-}className="text-zion-cyan hover:underline truncate block" > required /> </div> <div> <Textarea required /> </div> <Button </Button> </div> </form> </div>)
-}'"}
+` "
+className="text-zion-cyan hover:underline truncate block" > required /> </div> <div> <Textarea required /> </div> <Button </Button> </div> </form> </div>)
+'"}
           </Button>;
         </div>;
       </form>;
@@ -173,10 +173,10 @@ export function ProfileContact({
 
   `mailto:$ {;
   email ;
-}` ";
-}className="text-zion-cyan hover:underline truncate block" > required /> </div> <div> <Textarea required /> </div> <Button </Button> </div> </form> </div>) ;
-}'"}
-}
+` ";
+className="text-zion-cyan hover:underline truncate block" > required /> </div> <div> <Textarea required /> </div> <Button </Button> </div> </form> </div>) ;
+'"}
+
               on_change={e => set_message (e.target.value)}
               className='bg - zion - blue border - zion - blue - light text - white min - h-[120px]';
               required;
@@ -204,6 +204,6 @@ export function ProfileContact({
     </div>);
   `mailto:$ {
   email;
-}` ";
-}className="text - zion - cyan hover:underline truncate block" > required /> </div> <div> <Textarea required /> </div> <Button </Button> </div> </form> </div>);
-}'"}
+` ";
+className="text - zion - cyan hover:underline truncate block" > required /> </div> <div> <Textarea required /> </div> <Button </Button> </div> </form> </div>);
+'"}

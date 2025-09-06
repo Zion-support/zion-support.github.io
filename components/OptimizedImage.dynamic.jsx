@@ -5,5 +5,5 @@ const OptimizedImage.dynamic = () => {
       <h1>OptimizedImage.dynamic</h1>
     </div>
   );
-}
+
 export default OptimizedImage.dynamic;

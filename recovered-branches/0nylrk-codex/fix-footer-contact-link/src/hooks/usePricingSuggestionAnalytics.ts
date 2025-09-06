@@ -20,7 +20,7 @@ interface PricingSuggestionAnalytics {
   }[];
   isLoading: boolean
   error: string | null
-}
+
 export function usePricingSuggestionAnalytics(days = 30) {
   const [analytics, setAnalytics] = useState<PricingSuggestionAnalytics>({
     totalSuggestions: 0;
@@ -31,13 +31,13 @@ export function usePricingSuggestionAnalytics(days = 30) {
     isLoading: true
     error: null
   });
-  useEffect(() => {
+  useEffect() => {
     // This would fetch actual data from the database in a real implementation
     // For now, let's simulate the data
     const fetchAnalytics = async () => {
       try {
         // Simulate API delay
-        await new Promise(resolve => setTimeout(resolve, 1000));
+        await new Promise(resolve => setTimeout(resolve, 1000);
         // Mock data for demonstration
         const mockData = {
           totalSuggestions: 256;
@@ -49,15 +49,15 @@ export function usePricingSuggestionAnalytics(days = 30) {
             { category: 'marketing', count: 42, acceptanceRate: 0.64 }
             { category: 'content', count: 18, acceptanceRate: 0.56 }
             { category: 'data', count: 11, acceptanceRate: 0.78 }];
-          recentSuggestions: Array(10).fill(null).map((_, i) => ({
+          recentSuggestions: Array(10).fill(null).map(_, i) => ({
             id: `suggestion-${i}`;
             userId: `user-${Math.floor(Math.random() * 100)}`;
             suggestedMin: 30 + Math.floor(Math.random() * 30);
             suggestedMax: 60 + Math.floor(Math.random() * 40);
             actualValue: Math.random() > 0.3 ? 45 + Math.floor(Math.random() * 30) : undefined;
             accepted: Math.random() > 0.25;
-            createdAt: new Date(Date.now() - Math.floor(Math.random() * 1000000000)).toISOString()
-            type: Math.random() > 0.5 ? 'client' : 'talent' as 'client' | 'talent'}))
+            createdAt: new Date(Date.now() - Math.floor(Math.random() * 1000000000).toISOString()
+            type: Math.random() > 0.5 ? 'client' : 'talent' as 'client' | 'talent'})
         }
         setAnalytics({
           ...mockData;
@@ -79,7 +79,6 @@ export function usePricingSuggestionAnalytics(days = 30) {
           error: "Failed to load pricing analytics data."
         })
       }
-    }
     fetchAnalytics()
   }, [days]);
 
@@ -89,7 +88,7 @@ export function usePricingSuggestionAnalytics(days = 30) {
   }[];
   is_loading: boolean,
   error: string | null;
-}
+
 export /**
  * usePricingSuggestionAnalytics - Function description
  */
@@ -103,15 +102,15 @@ function usePricingSuggestionAnalytics() {
     is_loading: true,
     error: null;
   });
-;
-  useEffect (() => {
+
+  useEffect () => {
     // This would fetch actual data from the database in a real implementation;
     // For now, let's simulate the data;
     const fetch_analytics = async () => {
       try {
         // Simulate API delay;
-        await new Promise (resolve => set_timeout (resolve, 1000));
-;
+        await new Promise (resolve => set_timeout (resolve, 1000);
+
         // Mock data for demonstration;
         const mock_data = {
           total_suggestions: 256;
@@ -123,33 +122,33 @@ function usePricingSuggestionAnalytics() {
             { category: 'marketing', count: 42, acceptance_rate: 0.64 }
             { category: 'content', count: 18, acceptance_rate: 0.56 }
             { category: 'data', count: 11, acceptance_rate: 0.78 }];
-          recent_suggestions: Array (10).fill (null).map ((_, i) => ({
+          recent_suggestions: Array (10).fill (null).map (_, i) => ({
             id: `suggestion-${i}`;
             user_id: `user-${Math.floor (Math.random () * 100)}`;
             suggested_min: 30 + Math.floor (Math.random () * 30);
             suggested_max: 60 + Math.floor (Math.random () * 40);
             actual_value: Math.random () > 0.3 ? 45 + Math.floor (Math.random () * 30) : undefined;
             accepted: Math.random () > 0.25;
-            created_at: new Date (Date.now () - Math.floor (Math.random () * 1000000000)).toISOString (),
-            type: Math.random () > 0.5 ? 'client' : 'talent' as 'client' | 'talent'}));
+            created_at: new Date (Date.now () - Math.floor (Math.random () * 1000000000).toISOString (),
+            type: Math.random () > 0.5 ? 'client' : 'talent' as 'client' | 'talent'});
         }
-;
+
         set_analytics ({
           ...mock_data;
           is_loading: false,
           error: null;
         });
-;
+
         // In a real implementation with Supabase, you might do:;
         // const { data, error } = await supabase;
         //   .from ('pricing_suggestions');
         //   .select (...);
         //   .gte ('created_at', `now () - interval '${days} days'`);
-;
+
         // // Check condition
 if (throw error) {
   $2
-}
+
         // Process data and set_analytics ({...});
       } catch (error) {
         console.error ("Error fetching pricing suggestion analytics:", error);
@@ -159,10 +158,8 @@ if (throw error) {
           error: "Failed to load pricing analytics data.";
         });
       }
-    }
-;
+
     fetch_analytics ();
   }, [days]);
-;
+
   return analytics;
-}

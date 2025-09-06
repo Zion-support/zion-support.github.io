@@ -14,7 +14,7 @@ const SitemapStatus: NextPage<Props> = ({ urlCount }) => {
       </div>
     </main>
   )
-}
+
 export const getServerSideProps: GetServerSideProps = async () => {
   const p = path.join(process.cwd(), 'publicsitemap.xml')
   let urlCount = 0
@@ -22,8 +22,8 @@ export const getServerSideProps: GetServerSideProps = async () => {
     const raw = fs.readFileSync(p, 'utf8')
     urlCount = (raw.match(/<url>/g) |[]).length
   } catch {}
-  return { props: { urlCount } }
-}
+  return { props: { urlCount }
+
 export default SitemapStatus;
 
 import type { NextPage, GetServerSideProps } from 'next',
@@ -39,7 +39,7 @@ const SitemapStatus: NextPage < Props> = ({ url_count }) => {
         <div className="text - lg">Indexed URLs: {url_count}</div>;
       </div>;
     </main>);
-},
+,
 export const getServerSideProps: GetServerSideProps = async () => {
   const p = path.join (process.cwd (), 'publicsitemap.xml'),
   let url_count = 0,
@@ -47,6 +47,6 @@ export const getServerSideProps: GetServerSideProps = async () => {
     const raw = fs.readFileSync (p, 'utf8'),
     url_count = (raw.match (/<url>/g) || []).length;
   } catch {}
-  return { props: { url_count } }
-},
+  return { props: { url_count }
+,
 export default SitemapStatus,

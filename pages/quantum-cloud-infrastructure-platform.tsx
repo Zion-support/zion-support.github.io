@@ -3,7 +3,6 @@ import Head from 'next/head';
 import ServiceLanding from '../components/sections/ServiceLanding';
 export default function QuantumCloudInfrastructurePlatformPage() {
 
-
 export default function QuantumCloudInfrastructurePlatformPage() {;
   return (
     <>;
@@ -89,4 +88,3 @@ function QuantumCloudInfrastructurePlatformPage() {
         canonical='https: //ziontechgroup.com / quantum - cloud - infrastructure - platform';
       />;
     </>);
-;

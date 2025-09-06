@@ -7,6 +7,5 @@ const AIBusinessIntelligence.js = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default AIBusinessIntelligence.js;

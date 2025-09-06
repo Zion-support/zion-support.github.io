@@ -4,28 +4,28 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import Layout from '../../components/Layout';
-import {Shield,, Users,, FileText,, Globe,, Database} from 'lucide-react';
+import {Shield, Users, FileText, Globe, Database} from 'lucide-react';
 import React from 'react';
 import Layout from '../../components/Layout';';
-import {Shield,, Users,, FileText,, Globe,, Database,, CheckCircle,, ArrowRight} from 'lucide-react';
+import {Shield, Users, FileText, Globe, Database, CheckCircle, ArrowRight} from 'lucide-react';
 const features = [;
   {}
     icon: Shield,;
@@ -56,7 +56,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import {motion} from 'framer-motion';
-import {Shield,, Users,, FileText,, Globe,, Database,, CheckCircle,, ArrowRight} from 'lucide-react';
+import {Shield, Users, FileText, Globe, Database, CheckCircle, ArrowRight} from 'lucide-react';
 
 import Layout from '../../components/Layout';
 import { Shield, Users, FileText, Globe, Database } from 'lucide-react';
@@ -121,7 +121,7 @@ const features = [;
     title: 'Data Analytics',;
     description: 'Government data analysis and reporting tools';
   }
-;];
+];
 const solutions = [;
 
   'Citizen Portal Development',',;
@@ -179,7 +179,7 @@ export default function GovernmentSolutionsPage() {;
               </p>;
             </div>;
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">",;
-              {features && features.map((feature, index) => (,;
+              {features && features.map(feature, index) => (,;
                 <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover: border-blue-500 transition-colors">";
                   <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-6">";
                     <feature && feature.icon className="w-6 h-6 text-white" />";
@@ -194,14 +194,13 @@ const benefits = [;
   'Better data security and compliance',;
   'Reduced operational costs',;
   'Increased government efficiency';
-];
 export default function GovernmentSolutions() {;
     icon: Database,;
     title: 'Data Management',;
     description: 'Secure data management and analytics for government data',;
     benefits: ['Data governance', 'Analytics', 'Reporting', 'Integration'];
   }
-];
+;
 
 export default function GovernmentSolutionsPage() {;
   return (
@@ -247,7 +246,7 @@ export default function GovernmentSolutionsPage() {;
               </p>;
             </div>;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
-              {features && features.map((feature, index) => (,;
+              {features && features.map(feature, index) => (,;
                 <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover:border-blue-500 transition-colors">";
                   <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-6">";
                     <feature && feature.icon className="w-6 h-6 text-white" />";
@@ -262,7 +261,6 @@ const benefits = [;
   'Better data security and compliance',;
   'Reduced operational costs',;
   'Increased government efficiency';
-];
 export default function GovernmentSolutions() {;
   return (
     <Layout
@@ -315,7 +313,7 @@ export default function GovernmentSolutions() {;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
             </div>;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-              {features && features.map((feature, index) => (;
+              {features && features.map(feature, index) => (;
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">;
                   <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-6">;
                     <feature && feature.icon className="w-6 h-6 text-gray-600" />;
@@ -327,7 +325,7 @@ export default function GovernmentSolutions() {;
                     {feature && feature.description}
                   </p>;
                 </div>;
-              ))}
+              )}
             </div>,;
           </div>;
         </section>;
@@ -339,12 +337,12 @@ export default function GovernmentSolutions() {;
                 Our Government Solutions;
               </h2>;
               <div className="grid grid-cols-1 md: grid-cols-2 gap-6">",;
-                {solutions && solutions.map((solution, index) => (,;
+                {solutions && solutions.map(solution, index) => (,;
                   <div key={index} className="flex items-center space-x-3">";
                     <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />";
                     <span className="text-gray-300 text-lg">{solution}</span>";
                   </div>;
-                ))}
+                )}
               </div>,;
             </div>;
           </div>;
@@ -422,12 +420,12 @@ export default function GovernmentSolutions() {;
                   citizen services, enhance transparency, and streamline operations.;
                 </p>;
                 <ul className="space-y-4">;
-                  {benefits && benefits.map((benefit, index) => (;
+                  {benefits && benefits.map(benefit, index) => (;
                     <li key={index} className="flex items-start">;
                       <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" />;
                       <span className="text-gray-700">{benefit}</span>;
                     </li>;
-                  ))}
+                  )}
                 </ul>;
               </div>;
               <div className="bg-gradient-to-r from-gray-700 to-blue-800 p-8 rounded-xl text-white">;
@@ -444,15 +442,15 @@ export default function GovernmentSolutions() {;
                   <h3 className="text-xl font-semibold mb-2">{feature && feature.title}</h3>;
                   <p className="text-gray-600 mb-4">{feature && feature.description}</p>;
                   <div className="space-y-2">;
-                    {feature && feature.benefits.map((benefit, benefitIndex) => (;
+                    {feature && feature.benefits.map(benefit, benefitIndex) => (;
                       <div key={benefitIndex} className="flex items-center text-sm text-gray-600">;
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2" />;
                         {benefit}
                       </div>
-                    ))}
+                    )}
                   </div>
                 </motion.div>
-              ))}
+              )}
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">;
                     {feature && feature.title}
                   </h3>;
@@ -460,7 +458,7 @@ export default function GovernmentSolutions() {;
                     {feature && feature.description}
                   </p>;
                 </div>;
-              ))}
+              )}
             </div>,;
           </div>;
         </section>;
@@ -472,12 +470,12 @@ export default function GovernmentSolutions() {;
                 Our Government Solutions;
               </h2>;
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">";
-                {solutions && solutions.map((solution, index) => (,;
+                {solutions && solutions.map(solution, index) => (,;
                   <div key={index} className="flex items-center space-x-3">";
                     <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />";
                     <span className="text-gray-300 text-lg">{solution}</span>";
                   </div>;
-                ))}
+                )}
               </div>,;
             </div>;
           </div>;
@@ -558,12 +556,12 @@ export default function GovernmentSolutions() {;
                   citizen services, enhance transparency, and streamline operations.;
                 </p>;
                 <ul className="space-y-4">;
-                  {benefits && benefits.map((benefit, index) => (;
+                  {benefits && benefits.map(benefit, index) => (;
                     <li key={index} className="flex items-start">;
                       <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" />;
                       <span className="text-gray-700">{benefit}</span>;
                     </li>;
-                  ))}
+                  )}
                 </ul>;
               </div>;
               <div className="bg-gradient-to-r from-gray-700 to-blue-800 p-8 rounded-xl text-white">;
@@ -608,4 +606,3 @@ export default function GovernmentSolutions() {;
     </>;
     </Layout>;
   );
-}

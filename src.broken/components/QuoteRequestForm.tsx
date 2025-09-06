@@ -6,5 +6,3 @@ export function QuoteRequestForm() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

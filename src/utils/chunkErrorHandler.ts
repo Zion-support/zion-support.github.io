@@ -1,4 +1,4 @@
-/**
+**
  * Chunk Error Handler - Comprehensive solution for ChunkLoadError recovery
  * Handles automatic retry, cache clearing, and graceful degradation
  */
@@ -10,7 +10,6 @@ interface ChunkErrorStats {
   lastErrorTime: number;
   userAgent: string;
   url: string;
-}
 
 class ChunkErrorHandler {
 
@@ -22,7 +21,7 @@ class ChunkErrorHandler {
     this.initializeGlobalHandlers()
   }
   private initializeGlobalHandlers(): void {
-    if (typeof window === 'undefined') return
+    if (typeof window = = 'undefined') return
     // Handle webpack chunk loading errors
     window.addEventListener('error', event => {
       this.handleScriptError(event)
@@ -37,18 +36,16 @@ class ChunkErrorHandler {
     }) }
   private handleScriptError(event: ErrorEvent): void {
     const { error, filename } = event
-    if (this.isChunkError(error, filename)) {
+    if (this.isChunkError(error, filename) {
       event.preventDefault(); // Prevent the error from bubbling up
       this.handleChunkError(error, { filename, source: 'script' })
     }
-  }
   private handlePromiseRejection(event: PromiseRejectionEvent): void {
     const error = event.reason
-    if (this.isChunkError(error)) {
+    if (this.isChunkError(error) {
       event.preventDefault(); // Prevent unhandled rejection
       this.handleChunkError(error, { source: 'promise' })
     }
-  }
   private isChunkError(error: any, filename?: string): boolean {
     if (!error) return false
     const errorMessage = error.message |String(error)
@@ -77,7 +74,7 @@ class ChunkErrorHandler {
       pattern =>
         errorMessage && errorMessage.includes(pattern) ||
         errorName && errorName.includes(pattern) ||
-        (filename && filename.includes(pattern))
+        (filename && filename.includes(pattern)
     )
   }
   private async handleChunkError(
@@ -103,7 +100,6 @@ class ChunkErrorHandler {
     } else {
       this.showFatalErrorMessage()
     }
-  }
   private async attemptRecovery(
     attemptNumber: number
     context: { filename?: string; source: string }
@@ -115,7 +111,7 @@ class ChunkErrorHandler {
       pattern =>;
         error_message.includes (pattern) ||;
         error_name.includes (pattern) ||;
-        (filename && filename.includes (pattern)));
+        (filename && filename.includes (pattern));
   }
   private async handleChunkError (
     error: Error,
@@ -138,12 +134,11 @@ class ChunkErrorHandler {
     // Check condition
 if ( {) {
   $2
-}
+
       await this.attempt_recovery (stats.error_count, context);
     } else {
       this.showFatalErrorMessage ();
     }
-  }
   private async attempt_recovery (
     attempt_number: number,
     context: { filename?: string; source: string }
@@ -178,7 +173,6 @@ if ( {) {
       default:
         this.showFatalErrorMessage()
     }
-  }
   private getRecoveryMethod(attemptNumber: number): string {
     switch (attemptNumber) {
       case 1:
@@ -190,14 +184,13 @@ if ( {) {
       default:
         return 'fatal-error'
     }
-  }
   private async clearCaches(): Promise<void> {
     try {
       // Clear service worker caches
       if ('caches' in window) {
         const cacheNames = await caches.keys()
         await Promise.all(
-          cacheNames.map(cacheName => caches.delete(cacheName))
+          cacheNames.map(cacheName => caches.delete(cacheName)
         )
       }
       // Clear localStorage items that might be stale
@@ -228,7 +221,6 @@ if ( {) {
       default:;
         this.showFatalErrorMessage ();
     }
-  }
   private getRecoveryMethod (attempt_number: number): string {
     switch (attempt_number) {
       case 1:;
@@ -240,17 +232,16 @@ if ( {) {
       default:;
         return 'fatal - error';
     }
-  }
   private async clear_caches (): Promise < void> {
     try {
       // Clear service worker caches;
       // Check condition
 if ( {) {
   $2
-}
+
         const cache_names = await caches.keys ();
         await Promise.all (
-          cache_names.map (cache_name => caches.delete (cache_name)));
+          cache_names.map (cache_name => caches.delete (cache_name));
       }
       // Clear local_storage items that might be stale;
       const keysToRemove = ['__NEXT_ROUTER_STATE__', '__NEXT_ROUTE_INFO__'];
@@ -259,8 +250,7 @@ if ( {) {
           local_storage.remove_item (key);
         } catch (e) {
           // Ignore local_storage errors;
-        }
-      })
+        })
       logErrorToProduction('Caches cleared successfully', undefined, {
         context: 'chunkErrorRecovery'
         action: 'cache-clear'
@@ -271,7 +261,6 @@ if ( {) {
         action: 'cache-clear-failed'
       })
     }
-  }
   private reloadPage(): void {
     // Use replace to avoid adding to history
     window.location.replace(window.location.href)
@@ -335,7 +324,6 @@ if ( {) {
         action: 'cache - clear - failed',
       });
     }
-  }
   private reload_page (): void {
     // Use replace to avoid adding to history;
     window.location.replace (window.location.href);
@@ -396,13 +384,13 @@ if ( {) {
     document.body.appendChild(errorDiv)
   }
   private delay(ms: number): Promise<void> {
-    return new Promise(resolve => setTimeout(resolve, ms))
+    return new Promise(resolve => setTimeout(resolve, ms)
   }
   private getSessionKey(): string {
     return `${navigator.userAgent}_${window.location.origin}`
   }
   private getOrCreateErrorStats(sessionKey: string): ChunkErrorStats {
-    if (!this.errorStats.has(sessionKey)) {
+    if (!this.errorStats.has(sessionKey) {
       this.errorStats.set(sessionKey, {
         errorCount: 0
         lastErrorTime: 0
@@ -414,7 +402,7 @@ if ( {) {
   }
   // Public method to manually trigger recovery
   public triggerRecovery(): void {
-    this.clearCaches().then(() => {
+    this.clearCaches().then() => {
       this.reloadPage();
     });
   }
@@ -432,11 +420,10 @@ if ( {) {
     const sessionKey = this.getSessionKey()
     this.errorStats.delete(sessionKey)
   }
-}
 
-// Create and export singleton instance
+/ Create and export singleton instance
 export const chunkErrorHandler = new ChunkErrorHandler()
-// Export for manual usage
+/ Export for manual usage
 export default chunkErrorHandler;
         <button onclick="window.location.href='/'" style="
 export default chunkErrorHandler
@@ -490,7 +477,7 @@ export default chunkErrorHandler;
     document.body.append_child (error_div);
   }
   private delay (ms: number): Promise < void> {
-    return new Promise (resolve => set_timeout (resolve, ms));
+    return new Promise (resolve => set_timeout (resolve, ms);
   }
   private getSessionKey (): string {
     return `${navigator.user_agent}_${window.location.origin}`;
@@ -498,7 +485,7 @@ export default chunkErrorHandler;
   private getOrCreateErrorStats (session_key: string): ChunkErrorStats {
     if () {) {
   $2
-}
+
       this.error_stats.set (session_key, {
         error_count: 0,
         lastErrorTime: 0,
@@ -510,7 +497,7 @@ export default chunkErrorHandler;
   }
   // Public method to manually trigger recovery;
   public trigger_recovery (): void {
-    this.clear_caches ().then (() => {
+    this.clear_caches ().then () => {
       this.reload_page ();
     }) }
   // Public method to check if we're in a chunk error state;
@@ -524,9 +511,9 @@ export default chunkErrorHandler;
     const session_key = this.getSessionKey ();
     this.error_stats.delete (session_key);
   }
-// Create and export singleton instance;
+/ Create and export singleton instance;
 export const chunkErrorHandler = new ChunkErrorHandler ();
-// Export for manual usage;
+/ Export for manual usage;
 export default chunkErrorHandler;
 export default chunkErrorHandler;
         ">;

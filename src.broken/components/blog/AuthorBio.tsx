@@ -6,5 +6,3 @@ export function AuthorBio() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

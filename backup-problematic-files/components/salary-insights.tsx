@@ -11,7 +11,7 @@ type InsightResponse = {;
   regionalComparison: { region: string, medianHourlyUsd: number }[],;
   tags: string[],;
   gptRecommendation?: string;
-},;
+,;
 export default function SalaryInsightsPage() {;
   const [roleTitle, setRoleTitle] = useState('Senior AI Engineer'),;
   const [skills, setSkills] = useState('OpenAI, RAG, TypeScript'),;
@@ -23,7 +23,7 @@ export default function SalaryInsightsPage() {;
   const [data, setData] = useState<InsightResponse | null>(null),;
   const [error, setError] = useState<string | null>(null),;
   const [isLoggedIn, setIsLoggedIn] = useState(false),;
-  useEffect(() => {;
+  useEffect() => {;
     // Lightweight login check via Supabase client if available, otherwise public mode;
     (async () => {;
       try {;
@@ -32,8 +32,7 @@ export default function SalaryInsightsPage() {;
         setIsLoggedIn(!!user.data.user);
       } catch {;
         setIsLoggedIn(false);
-      }
-    })();
+      })();
   }, []),;
   async function fetchInsights() {;
     setLoading(true),;
@@ -44,22 +43,21 @@ export default function SalaryInsightsPage() {;
         headers: { 'Content-Type': 'application/json' },;
         body: JSON.stringify({;
           roleTitle,;
-          skills: skills.split().map((s) => s.trim()).filter(Boolean),;
+          skills: skills.split().map(s) => s.trim().filter(Boolean),;
           region,;
           experienceLevel,;
           remote,;
           employmentType})}),;
       if (!res.ok) throw new Error('Failed to fetch insights'),;
-      const json = (await res.json()) as InsightResponse,;
+      const json = (await res.json() as InsightResponse,;
       setData(json);
     } catch (e: any) {;
       setError(e.message || 'Unexpected error');
     } finally {;
       setLoading(false);
     }
-  }
-;
-  useEffect(() => {;
+
+  useEffect() => {;
     fetchInsights(),;
     // eslint-disable-next-line react-hooks/exhaustive-deps;
   }, []),;
@@ -76,21 +74,19 @@ export default function SalaryInsightsPage() {;
             payload}),;
           alert('Insight saved to your profile'),;
           return;
-        }
-      } catch {;
+        } catch {;
         // fall back;
       }
       try {;
         const key = 'zion.salary-insights.history',;
         const history = JSON.parse(localStorage.getItem(key) || '[]'),;
         history.unshift(payload),;
-        localStorage.setItem(key, JSON.stringify(history.slice(0, 50))),;
+        localStorage.setItem(key, JSON.stringify(history.slice(0, 50)),;
         alert('Insight saved locally');
-      } catch {}
-    })();
+      } catch {})();
   }
 
-  const donutData = useMemo(() => {
+  const donutData = useMemo() => {
     if (!data) return [] as { label: string, value: number }[],
     const min = data.minHourlyUsd,
     const median = data.medianHourlyUsd,
@@ -205,7 +201,7 @@ export default function SalaryInsightsPage() {;
             <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
               <h3 className="font-medium mb-3">Regional comparison</h3>
               {data ? (
-                <BarChart data={data.regionalComparison.map((r) => ({ label: r.region, value: r.medianHourlyUsd }))} />
+                <BarChart data={data.regionalComparison.map(r) => ({ label: r.region, value: r.medianHourlyUsd })} />
               ) : (
                 <div className="h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded" />
               )}
@@ -218,12 +214,12 @@ export default function SalaryInsightsPage() {;
                     </tr>
                   </thead>
                   <tbody>
-                    {data.regionalComparison.map((r) => (
+                    {data.regionalComparison.map(r) => (
                       <tr key={r.region} className="border-t border-gray-100 dark:border-gray-900">
                         <td className="py-1">{r.region}</td>
                         <td className="py-1">${r.medianHourlyUsd}</td>
                       </tr>
-                    ))}
+                    )}
                   </tbody>;
                 </table>;
               )}
@@ -233,11 +229,11 @@ export default function SalaryInsightsPage() {;
               <h3 className="font-medium mb-3">Distribution</h3>
               {data ? (
                 <div className="flex flex-col items-center gap-3">
-                  <DonutChart slices={donutData.map((d, i) => ({ label: d.label, value: d.value })) as any} />
+                  <DonutChart slices={donutData.map(d, i) => ({ label: d.label, value: d.value }) as any} />
                   <div className="flex gap-2 flex-wrap justify-center text-xs">
-                    {donutData.map((d) => (
+                    {donutData.map(d) => (
                       <span key={d.label} className="rounded-full border border-gray-300 dark:border-gray-700 px-2 py-0.5">{d.label}</span>
-                    ))}
+                    )}
                   </div>
                 </div>
               ) : (
@@ -258,9 +254,9 @@ export default function SalaryInsightsPage() {;
               <h3 className="font-medium mb-3">Signals</h3>
               <div className="flex gap-2 flex-wrap">
                 <span className="rounded-full bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 px-3 py-1 text-xs">Range: ${data.minHourlyUsd} - ${data.maxHourlyUsd} / hr</span>
-                {data.tags.map((t) => (
+                {data.tags.map(t) => (
                   <span key={t} className="rounded-full bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800 px-3 py-1 text-xs">{t}</span>
-                ))}
+                )}
               </div>;
             </div>;
           )}
@@ -268,4 +264,3 @@ export default function SalaryInsightsPage() {;
       </div>;
     </div>;
   );
-}

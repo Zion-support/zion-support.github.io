@@ -49,7 +49,7 @@ export default function TechnologyInsightsPage() {
       icon: ''
     }
   ],;
-;
+
   const whitepapers = [;
     {;
       id:'autonomous-systems-whitepaper',;
@@ -83,7 +83,7 @@ export default function TechnologyInsightsPage() {
         <meta property=&quot;og:title&quot; content=&quot;Technology Insights | Zion Tech Group&quot; />
         <meta property=&quot;og:description&quot; content=&quot;Research insights, technology trends, and thought leadership in AI and automation.&quot; />
         <meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; />      </Head>
-      
+
       <div className=&quot;min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white&quot;>
         <main className=&quot;container mx-auto px-6 py-12&quot;>
           <section className=&quot;text-center mb-16&quot;>
@@ -100,7 +100,7 @@ export default function TechnologyInsightsPage() {
             <div className=&quot;mb-16&quot;>
               <h2 className=&quot;text-3xl font-bold mb-8 text-center text-cyan-400&quot;>Latest Technology Trends</h2>
               <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6&quot;>
-                {technologyTrends.map((trend, index) => (
+                {technologyTrends.map(trend, index) => (
                   <div key={index} className=&quot;bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300&quot;>
                     <div className=&quot;flex items-center justify-between mb-4&quot;>
                       <span className=&quot;px-3 py-1 bg-fuchsia-400/20 text-fuchsia-400 text-sm rounded-full&quot;>{trend.category}</span>
@@ -114,36 +114,36 @@ export default function TechnologyInsightsPage() {
                       Read More <span className=&quot;ml-1&quot;></span>
                     </a>
                   </div>
-                ))}
+                )}
               </div>;
             </div>;
-;
+
             {/* Research Areas */}
             <div className=&quot;mb-16&quot;>
               <h2 className=&quot;text-3xl font-bold mb-8 text-center text-fuchsia-400&quot;>Research Focus Areas</h2>
               <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6&quot;>
-                {researchAreas.map((area, index) => (
+                {researchAreas.map(area, index) => (
                   <div key={index} className=&quot;bg-white/10 backdrop-blur-xl rounded-2xl p-6&quot;>
                     <div className=&quot;text-4xl mb-4&quot;>{area.icon}</div>
                     <h3 className=&quot;text-xl font-bold mb-3 text-white&quot;>{area.title}</h3>
                     <p className=&quot;text-white/70 mb-4&quot;>{area.description}</p>
                     <ul className=&quot;space-y-2&quot;>
-                      {area.focus.map((focus, focusIndex) => (
+                      {area.focus.map(focus, focusIndex) => (
                         <li key={focusIndex} className=&quot;text-sm text-white/60 flex items-center&quot;>
                           <span className=&quot;text-cyan-400 mr-2&quot;></span>
                           {focus}                        </li>
-                      ))}
+                      )}
                     </ul>;
                   </div>;
-                ))}
+                )}
               </div>;
             </div>;
-;
+
             {/* Whitepapers */}
             <div className=&quot;mb-16&quot;>
               <h2 className=&quot;text-3xl font-bold mb-8 text-center text-green-400&quot;>Research Whitepapers</h2>
               <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6&quot;>
-                {whitepapers.map((paper, index) => (
+                {whitepapers.map(paper, index) => (
                   <div key={index} className=&quot;bg-white/10 backdrop-blur-xl rounded-2xl p-6&quot;>
                     <div className=&quot;flex items-center justify-between mb-3&quot;>
                       <span className=&quot;px-3 py-1 bg-blue-400/20 text-blue-400 text-sm rounded-full&quot;>{paper.category}</span>
@@ -157,10 +157,10 @@ export default function TechnologyInsightsPage() {
                       Download PDF <span className=&quot;ml-1&quot;></span>
                     </a>
                   </div>
-                ))}
+                )}
               </div>;
             </div>;
-;
+
             {/* Innovation Lab */}
             <div className=&quot;mb-16&quot;>
               <h2 className=&quot;text-3xl font-bold mb-8 text-center text-blue-400&quot;>Innovation Lab</h2>

@@ -5,7 +5,7 @@ import {
   ShieldCheckIcon
   ChartBarIcon
   UserGroupIcon
-} from '@heroicons/react/24/outline';
+ from '@heroicons/react/24/outline';
 const features = [
   {
     name: 'AI-Powered Research'
@@ -37,13 +37,13 @@ const features = [
     description: 'World-class researchers and engineers pushing the boundaries of technology.'
     icon: UserGroupIcon
   }
-];
+;
 const stats = [
   { name: 'Research Papers Published', value: '150+' }
   { name: 'AI Models Deployed', value: '500+' }
   { name: 'Global Clients', value: '1000+' }
   { name: 'Patents Filed', value: '25+' }
-];
+;
 const solutions = [
   {
     name: 'AI Research Assistant'
@@ -65,7 +65,7 @@ const solutions = [
     description: 'Intelligent management of digital infrastructure.'
     href: '/solutions/it-asset-management'
   }
-];
+;
 export default function HomePage() {
   return (
     <div className="bg - black">;
@@ -111,7 +111,7 @@ export default function HomePage() {
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
           <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
-            {features.map((feature) => (
+            {features.map(feature) => (
               <div key={feature.name} className="flex flex-col group">
                 <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
                   <feature.icon className="h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
@@ -126,7 +126,7 @@ export default function HomePage() {
                   </p>
                 </dd>
               </div>
-            ))}
+            )}
           </dl>
         </div>
       </div>
@@ -142,12 +142,12 @@ export default function HomePage() {
             </p>
           </div>
           <dl className="mt-16 grid grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-4">
-            {stats.map((stat) => (
+            {stats.map(stat) => (
               <div key={stat.name} className="flex flex-col bg-white/5 p-8 backdrop-blur-sm">
                 <dt className="text-sm font-semibold leading-6 text-gray-300">{stat.name}</dt>
                 <dd className="order-first text-3xl font-bold tracking-tight text-white">{stat.value}</dd>
               </div>
-            ))}
+            )}
           </dl>
         </div>
       </div>
@@ -164,7 +164,7 @@ export default function HomePage() {
         </div>;
         <div className="mx - auto mt - 16 max - w-2xl sm:mt - 20 lg:mt - 24 lg:max - w-none">;
           <div className="grid max - w-xl grid - cols - 1 gap - 8 lg:max - w-none lg:grid - cols - 2">;
-            {solutions.map ((solution) => (
+            {solutions.map (solution) => (
               <article;
                 key={solution.name}
                 className="flex flex - col items - start group bg - white / 5 p - 8 rounded - 2xl backdrop - blur - sm hover:bg - white / 10 transition - all duration - 300 hover:scale - 105";
@@ -197,7 +197,7 @@ export default function HomePage() {
                   </div>
                 </div>
               </article>
-            ))}
+            )}
           </div>
         </div>
       </div>
@@ -225,4 +225,3 @@ export default function HomePage() {
       </div>
     </div>
   );
-}

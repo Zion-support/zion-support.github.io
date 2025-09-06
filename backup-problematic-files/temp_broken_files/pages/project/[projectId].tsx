@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react",;
 import { useRouter } from "next/router",;
 import FeedbackModal from "../../components/ui/FeedbackModal",;
-;
+
 export default function ProjectPage() {;
   const router = useRouter(),;
   const { projectId } = router.query as { projectId?:string },;
@@ -9,15 +9,15 @@ export default function ProjectPage() {;
   const [loading, setLoading] = useState(true),;
   const [error, setError] = useState<string | null>(null),;
   const [note, setNote] = useState(""),;
-;
+
   const headers = {;
     "x-demo-user-role":"client",;
     "x-demo-user-id":"client-1",;
     // For talent view demo, swap role and provide slug;
     // "x-demo-user-role":"talent",;
     // "x-demo-talent-slug":"ava-chen"} as Record<string string>,;
-;
-  useEffect(() => {;
+
+  useEffect() => {;
     async function load() {;
       if (!projectId) return,;
       try {;
@@ -35,12 +35,11 @@ export default function ProjectPage() {;
         if (!json.ok) throw new Error(json.error || "Failed to load project");
         setProject(json.project)
       } catch (e: unknown) {setError(e.message)} finally {setLoading(false)}
-    }
     load(),;
   }, [projectId]),;
-;
+
   const [showFeedback, setShowFeedback] = useState(false),;
-;
+
   async function addNote() {;
     const res = await fetch(`/api/marketplace/projects`, {;
       method:"PATCH",;
@@ -52,8 +51,7 @@ export default function ProjectPage() {;
       setNote(""),;
       setShowFeedback(true),;
     }
-  }
-;
+
   async function markCompleted() {;
     const res = await fetch(`/api/marketplace/projects`, {;
       method:"PATCH",;
@@ -64,8 +62,7 @@ export default function ProjectPage() {;
       setProject(json.project),;
       setShowFeedback(true),;
     }
-  }
-;
+
   return (;
     <div className="max-w-4xl mx-auto p-6 space-y-6">;      {loading && <div>Loading</div>}
       {error && <div className="text-red-600">{error}</div>}
@@ -73,11 +70,11 @@ export default function ProjectPage() {;
         <div className="space-y-6">;
           <div className="flex items-center gap-3">;
             <h1 className="text-2xl font-semibold">Project Kickoff</h1>;
-            <span className={`px-2 py-0.5 rounded text-xs ${project.status === "ACTIVE" ? "bg-emerald-100 text-emerald-700" :"bg-gray-200"}`}>;
+            <span className={`px-2 py-0.5 rounded text-xs ${project.status = = "ACTIVE" ? "bg-emerald-100 text-emerald-700" :"bg-gray-200"}`}>;
               {project.status}
             </span>;
           </div>;
-;
+
           <section className="rounded border p-4">;
             <h2 className="font-medium mb-2">Project Summary</h2>;
             <div className="text-sm">;
@@ -87,29 +84,29 @@ export default function ProjectPage() {;
               <div className="mt-2">{project.summary}</div>;
             </div>;
           </section>;
-;
+
           <section className="rounded border p-4">;
             <h2 className="font-medium mb-2">Timeline</h2>;
             <ul className="list-disc pl-6 space-y-1 text-sm">;
               {project.timeline?.length ? (;
-                project.timeline.map((m:any) => (;
+                project.timeline.map(m:any) => (;
                   <li key={m.id}>;
                     <span className="font-medium">{m.title}</span>;                    {m.dueDateIso && <span>  due {new Date(m.dueDateIso).toLocaleDateString()}</span>}
                     {m.amountUsd && <span>  ${m.amountUsd}</span>}
                     {m.status && <span>  {m.status}</span>}
                   </li>;
-                ));
+                );
               ) :(;
                 <li>No timeline defined</li>;
               )}
             </ul>;
           </section>;
-;
+
           <section className="rounded border p-4">;
             <h2 className="font-medium mb-2">Documents</h2>;
             <ul className="list-disc pl-6 space-y-1 text-sm">;
               {project.documents?.length ? (;
-                project.documents.map((d:any) => (;
+                project.documents.map(d:any) => (;
                   <li key={d.id}>;
                     {d.url ? (;
                       <a href={d.url} className="text-indigo-600 underline" target="_blank" rel="noreferrer">{d.name}</a>;
@@ -118,23 +115,23 @@ export default function ProjectPage() {;
                     )}
                     <span className="text-gray-500">  uploaded {new Date(d.uploadedAtIso).toLocaleString()}</span>;
                   </li>;
-                ));
+                );
               ) :(;
                 <li>No documents</li>;
               )}
             </ul>;
           </section>;
-;
+
           <section className="rounded border p-4 space-y-3">;
             <h2 className="font-medium">Shared notes/messages</h2>;
             <div className="space-y-2">;
               {project.notes?.length ? (;
-                project.notes.map((n:any) => (;
+                project.notes.map(n:any) => (;
                   <div key={n.id} className="text-sm">;
                     <span className="font-medium">{n.authorRole}</span>:{n.content}
                     <span className="text-gray-500">  {new Date(n.createdAtIso).toLocaleString()}</span>;
                   </div>;
-                ));
+                );
               ) :(;
                 <div className="text-sm text-gray-600">No notes yet.</div>;
               )}
@@ -144,9 +141,9 @@ export default function ProjectPage() {;
               <button onClick={addNote} className="px-3 py-2 rounded bg-gray-900 text-white">Add</button>;
             </div>;
           </section>;
-;
+
           <div className="flex justify-end">;
-            {project.status !== "COMPLETED" && (;
+            {project.status != "COMPLETED" && (;
               <button onClick={markCompleted} className="px-4 py-2 rounded bg-emerald-600 text-white">Mark as Completed</button>;
             )}
           </div>;
@@ -155,7 +152,7 @@ export default function ProjectPage() {;
       <FeedbackModal;
         isOpen={showFeedback}
         onClose={() => setShowFeedback(false)}
-        defaultContext={{ actionType:'chatbot_use', metadata:{ projectId } }}
+        defaultContext={ actionType:'chatbot_use', metadata:{ projectId }}
         userHeaders={headers}
       />;
     </div>;
@@ -163,87 +160,84 @@ export default function ProjectPage() {;
   const router = useRouter ();
 const {
   projectId 
-}= router.query as {
+= router.query as {
   projectId?: string 
-};
+;
 const [project, setProject] = useState<any | null> (null);
 const [loading, setLoading] = useState (true);
 const [error, setError] = useState<string | null> (null);
 const [note, setNote] = useState ("");
   async function load () {
   if (!projectId) return;
-}catch (e: any) {
+catch (e: any) {
   setError (e.message) 
-}finally {
+finally {
   setLoading (false) 
-}
-}load () 
-}, [projectId]);
+
+load () 
+, [projectId]);
 const [showFeedback, setShowFeedback] = useState (false);
-}
-}async function markCompleted () {
+
+async function markCompleted () {
   const res = await fetch (`/api/marketplace/projects`, {
   if (json.ok) {
   setProject (json.project);
 setShowFeedback (true) 
-}
-}return (<div className=" max-w-4xl mx-auto p-6 space-y-6"> {
+
+return (<div className=" max-w-4xl mx-auto p-6 space-y-6"> {
   loading && <div>Loading</div> 
-}{
+{
   error && <div className=" text-red-600"> {
   error 
-}</div> 
-}{
+</div> 
+{
   project && (<div className=" space-y-6"> <div className=" flex items-center gap-3"> <h1 className=" text-2xl font-semibold">Project Kickoff</h1> <span className= {
   `px-2 py-0.5 rounded text-xs $ {
-  project.status === " ACTIVE"? " bg-emerald-100 text-emerald-700": " bg-gray-200" 
-}` 
-}> {
+  project.status = = " ACTIVE"? " bg-emerald-100 text-emerald-700": " bg-gray-200" 
+` 
+> {
   project.status 
-}</span> </div> <section className=" rounded border p-4"> <h2 className=" font-medium mb-2">Project Summary</h2> <div className=" text-sm"> <div><b>Client</b>: {
+</span> </div> <section className=" rounded border p-4"> <h2 className=" font-medium mb-2">Project Summary</h2> <div className=" text-sm"> <div><b>Client</b>: {
   project.clientId 
-}</div> <div><b>Talent</b>: {
+</div> <div><b>Talent</b>: {
   project.talentSlug 
-}</div> <div><b>Start</b>: {
+</div> <div><b>Start</b>: {
   new Date (project.startDateIso) .toLocaleDateString () 
-}</div> <div className=" mt-2"> {
+</div> <div className=" mt-2"> {
   project.summary 
-}</div> </div> </section> <section className=" rounded border p-4"> <h2 className=" font-medium mb-2">Timeline</h2> <ul className=" list-disc pl-6 space-y-1 text-sm"> {
-  project.timeline?.length ? (project.timeline.map ( (m: any) => (<li key= {
+</div> </div> </section> <section className=" rounded border p-4"> <h2 className=" font-medium mb-2">Timeline</h2> <ul className=" list-disc pl-6 space-y-1 text-sm"> {
+  project.timeline?.length ? (project.timeline.map (m: any) => (<li key= {
   m.id 
-}> <span className=" font-medium"> {
+> <span className=" font-medium"> {
   m.title 
-}</span> {
+</span> {
   m.dueDateIso && <span>  due {
   new Date (m.dueDateIso) .toLocaleDateString () 
-}</span> 
-}{
+</span> 
+{
   m.amountUsd && <span>  $ {
   m.amountUsd 
-}</span> 
-}{
+</span> 
+{
   m.status && <span>  {
   m.status 
-}</span> 
-}
-}</ul> </section>) : (<span> {
+</span> 
+
+</ul> </section>) : (<span> {
   d.name 
-}</span>) 
-}</li>) ) ) : (<li>No documents</li>) 
-}</ul> </section> </div>) ) ) : (<div className=" text-sm text-gray-600" >No notes yet.</div>) 
-}</div>) 
-}</div> </div>) 
-}<FeedbackModal isOpen= {
+</span>) 
+</li>) ) : (<li>No documents</li>) 
+</ul> </section> </div>) ) : (<div className=" text-sm text-gray-600" >No notes yet.</div>) 
+</div>) 
+</div> </div>) 
+<FeedbackModal isOpen= {
   showFeedback 
-}onClose= {
+onClose= {
   () => setShowFeedback (false) 
-}defaultContext= {
-  {
+defaultContext= {
   actionType: 'chatbot use', metadata: {
   projectId 
-}
-}
-}userHeaders= {
+
+userHeaders= {
   headers 
-}/> </div>) 
-}
+/> </div>) 

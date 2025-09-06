@@ -3,20 +3,20 @@ import EnhancedLayout from '../components/layout/EnhancedLayout',;
 import TrustBadge from '../components/ui/TrustBadge',;
 import TrustRadar from '../components/ui/TrustRadar',;
 import RiskIndicator from '../components/ui/RiskIndicator',;
-;
+
 export default function TrustPage() {;
   const [userId, setUserId] = useState<string>('demo-user'),;
   const [data, setData] = useState<any>(null),;
   const [loading, setLoading] = useState<boolean>(true),;
   const [showLogic, setShowLogic] = useState<boolean>(false),;
-;
-  useEffect(() => {;
+
+  useEffect() => {;
     const params = new URLSearchParams(window.location.search),;
     const u = params.get('user'),;
     if (u) setUserId(u),;
   }, []),;
-;
-  useEffect(() => {;
+
+  useEffect() => {;
     async function load() {;
       setLoading(true),;
       const res = await fetch(`/api/trust/${encodeURIComponent(userId)}?analyze=true`),;
@@ -26,12 +26,12 @@ export default function TrustPage() {;
     }
     load(),;
   }, [userId]),;
-;
+
   async function submitPeer(type:'endorse' | 'flag') {;
     await fetch('/api/trust/peer', { method:'POST', headers:{ 'Content-Type':'application/json' }, body:JSON.stringify({ userId, reviewerId:'demo-reviewer', type }) }),;
-    alert(type === 'endorse' ? 'Endorsed' :'Flagged'),;
+    alert(type = = 'endorse' ? 'Endorsed' :'Flagged'),;
   }
-;
+
   async function submitAppeal(e:React.FormEvent) {;
     e.preventDefault(),;
     const form = e.target as HTMLFormElement,;
@@ -42,7 +42,7 @@ export default function TrustPage() {;
     alert('Appeal submitted'),;
     form.reset(),;
   }
-;
+
   return (;
     <EnhancedLayout>;
       <div className="space-y-6">;
@@ -52,7 +52,7 @@ export default function TrustPage() {;
             <label className="text-sm inline-flex items-center gap-2"><input type="checkbox" checked={showLogic} onChange={() => setShowLogic(!showLogic)} /> Transparent logic</label>;
           </div>;
         </div>;
-;
+
         {loading && <div>Loading...</div>}
         {!loading && data && (;
           <div className="grid md:grid-cols-3 gap-6">;
@@ -63,18 +63,18 @@ export default function TrustPage() {;
               </div>;
               <div className="bg-white dark:bg-gray-900 rounded border p-4">;
                 <h2 className="font-medium mb-2">Trust Metrics</h2>;
-                <TrustRadar metrics={(data.components || []).map((c:any) => ({ label:c.key, value:Math.round(c.raw * 100) }))} />;
+                <TrustRadar metrics={(data.components || []).map(c:any) => ({ label:c.key, value:Math.round(c.raw * 100) })} />;
               </div>;
               {showLogic && (;
                 <div className="bg-white dark:bg-gray-900 rounded border p-4 text-sm">;
                   <h3 className="font-medium mb-2">Score Breakdown</h3>;
                   <ul className="space-y-1">;
-                    {data.components.map((c:any) => (;
+                    {data.components.map(c:any) => (;
                       <li key={c.key} className="flex justify-between">;
                         <span>{c.key}</span>;
                         <span>{Math.round(c.raw * 100)} / weighted {c.weighted.toFixed(3)}</span>;
                       </li>;
-                    ))}
+                    )}
                   </ul>;
                 </div>;
               )}
@@ -106,4 +106,3 @@ export default function TrustPage() {;
       </div>;
     </EnhancedLayout>;
   ),;
-}

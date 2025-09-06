@@ -14,10 +14,10 @@ export type ReviewFormValues = {;
     wouldWorkWithAgain?: boolean;
   },;
   anonymous?: boolean;
-},;
+,;
 type Props = {;
   initial: Pick<ReviewFormValues 'projectId' | 'fromRole' | 'fromId'>;
-},;
+,;
 const ReviewForm: React.FC<Props> = ({ initial }) => {;
   const [rating, setRating] = useState(0),;
   const [text, setText] = useState(''),;
@@ -47,7 +47,7 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {;
             communication,;
             qualityOfWork,;
             timeliness,;
-            wouldWorkWithAgain}})}),;
+            wouldWorkWithAgain})}),;
       const data = await res.json(),;
       if (!res.ok) throw new Error(data.error || 'Failed to submit'),;
       setMessage('Review submitted! Pending admin approval.');
@@ -57,8 +57,8 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {;
       setSubmitting(false);
 </div> <div> <label className="block text-sm font-medium mb-2" >Your Review</label> <textarea required /> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <button > {
   submitting ? 'Submitting...' : 'Submit Review'
-}</button> </form>)
-}
+</button> </form>)
+
 type Props = {
   initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;};import React, { useState } from 'react';
 import StarRating from './StarRating';
@@ -75,7 +75,7 @@ export type ReviewFormValues = {
     wouldWorkWithAgain?: boolean
   }
   anonymous?: boolean
-}
+
 type Props = {
   initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>
 const ReviewForm: React.FC<Props> = ({ initial }) => {
@@ -108,8 +108,7 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {
             qualityOfWork
             timeliness
             wouldWorkWithAgain
-          }
-        })
+          })
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error |'Failed to submit');
@@ -118,7 +117,6 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {
       setMessage(err.message);
     } finally {
       setSubmitting(false);    }
-  }
   return (
     <form onSubmit={handleSubmit} className='space-y-6'>
       <div>
@@ -129,7 +127,7 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {
             communication;
             qualityOfWork;
             timeliness;
-            wouldWorkWithAgain}})});
+            wouldWorkWithAgain})});
       const data = await res.json();
       if (!res.ok) throw new Error(data.error |'Failed to submit');
       setMessage('Review submitted! Pending admin approval.')
@@ -138,7 +136,6 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {
     } finally {
       setSubmitting(false)
     }
-  }
   return (
     <form onSubmit={handleSubmit} className='space-y-6'>
       <div>
@@ -148,7 +145,6 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {
         <label className='block text-sm font-medium mb-2'>Your Review</label>
 
     }
-  }
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
@@ -290,7 +286,7 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {
       {message && <p className="text-sm">{message}</p>}
     </form>
   )
-},
+,
 
 export default ReviewForm,
       >
@@ -299,9 +295,8 @@ export default ReviewForm,
       {message && <p className='text-sm'>{message}</p>}
     </form>
   );
-}
+
 export default ReviewForm;    </form>
   )
-}
-export default ReviewForm;
 
+export default ReviewForm;

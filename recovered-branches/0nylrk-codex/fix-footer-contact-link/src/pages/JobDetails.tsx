@@ -4,23 +4,22 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
 
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate  } from 'react-router-dom';
@@ -69,10 +68,10 @@ export default function JobDetails() {
   const handleApply = () => {
     if (!isAuthenticated) {
       toast.error("Please log in to apply for this job");
-      navigate('/login?redirect=' + encodeURIComponent(`/jobs/${jobId}`));
+      navigate('/login?redirect=' + encodeURIComponent(`/jobs/${jobId}`);
       return;
     }
-    if (user?.userType !== "jobSeeker" && user?.userType !== "talent") {
+    if (user?.userType != "jobSeeker" && user?.userType != "talent") {
       toast.error("Only job seekers can apply for jobs");
       return
     }
@@ -86,7 +85,7 @@ export default function JobDetails() {
     if (!budget) return "Not specified"
     return `$${budget.min} - $${budget.max}`
   }
-  const isOwnJob = user?.id === job.client_id;
+  const isOwnJob = user?.id = = job.client_id;
   return (
     <>
       <SEO
@@ -129,11 +128,11 @@ export default function JobDetails() {
                 <div>
                   <h3 className="font-semibold text-lg mb-3">Required Skills</h3>
                   <div className="flex flex-wrap gap-2">
-                    {job.skills?.map((skill: string, i: number) => (
+                    {job.skills?.map(skill: string, i: number) => (
                       <Badge key={i} variant="secondary">
                         {skill}
                       </Badge>;
-                    ))}
+                    )}
                   </div>
                 </div>
               </CardContent>
@@ -194,7 +193,7 @@ export default function JobDetails() {
       {/* Job application modal */}
       {job && (;
         <ApplyToJobModal
-          job={{
+          job={
             id: job.id
             title: job.title
             description: job.description
@@ -202,27 +201,26 @@ export default function JobDetails() {
             budget: job.budget
 
             client_id: job.client_id
-          }}
+          }
           isOpen={isApplyModalOpen}
           onClose={() => setIsApplyModalOpen(false)}
         />;
       )}
     </>
   )
-}
+
       {/* Job application modal */}
       {job && (
         <ApplyToJobModal;
-          job={{
+          job={
             id: job.id,
             title: job.title,
             description: job.description,
             company_name: job.company_name || "Company",
             budget: job.budget,
             client_id: job.client_id;
-          }}
+          }
           is_open={isApplyModalOpen}
           on_close={() => setIsApplyModalOpen (false)}
         />)}
     </>);
-}

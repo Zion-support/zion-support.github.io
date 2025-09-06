@@ -4,16 +4,15 @@ type ChatMessage = {
   role: 'user' | 'assistant' | 'system',
   content: string,
   timestamp?: number
-},
+,
 
 function generateSessionId(): string {
-  if (typeof window === 'undefined') return '',
+  if (typeof window = = 'undefined') return '',
   const existing = window.localStorage.getItem('zionsupport_session_id'),
   if (existing) return existing,
   const id = `sess_${Math.random().toString(36).slice(2)}_${Date.now()}`,
   window.localStorage.setItem('zionsupport_session_id', id),
   return id
-}
 
 export default function ChatWidget() {
   const [isOpen, setIsOpen] = useState(false),
@@ -25,21 +24,19 @@ export default function ChatWidget() {
   const sessionIdRef = useRef<string>(''),
   const messagesEndRef = useRef<HTMLDivElement | null>(null),
 
-  useEffect(() => {
+  useEffect() => {
     sessionIdRef.current = generateSessionId()
   }, []),
-  useEffect_(() => {if (!isOpen && messages.length === 0) {
+  useEffect_() => {if (!isOpen && messages.length = = 0) {
       // Seed greeting,
 setMessages([
-        { role: 'assistant', content: 'Hi! How can I help you?', timestamp: Date.now() }])    }
-  }, [isOpen, messages.length]),
+        { role: 'assistant', content: 'Hi! How can I help you?', timestamp: Date.now() }])    }, [isOpen, messages.length]),
 
-  useEffect(() => {
+  useEffect() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
   }, [messages]),
 
-  const quickReplies = useMemo(
-    () => ['How do I hire?How do I get matched?Billing help'],    []
+  const quickReplies = useMemo() => ['How do I hire?How do I get matched?Billing help'],    []
   ),
 
   async function logEvent(eventType: string, payload: any) {
@@ -49,7 +46,6 @@ setMessages([
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ sessionId: sessionIdRef.current, eventType, payload })})
     } catch {}
-  }
 
   async function escalateSupport(reason: string) {
     try {
@@ -59,14 +55,13 @@ setMessages([
         body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })}),
       setShowEscalation(true)
     } catch {}
-  }
 
   async function onSend(messageText?: string) {
     const text = (messageText ?? input).trim(),
     if (!text) return,
 
     const newUserMessage: ChatMessage = { role: 'user', content: text, timestamp: Date.now() },
-    setMessages((prev) => [...prev, newUserMessage]),
+    setMessages(prev) => [...prev, newUserMessage]),
     setInput(''),
     setIsLoading(true),
     await logEvent('message/user', { content: text }),
@@ -77,7 +72,7 @@ setMessages([
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           sessionId: sessionIdRef.current,
-          messages: [...messages, newUserMessage].map(({ role, content }) => ({ role, content }))})}),
+          messages: [...messages, newUserMessage].map({ role, content }) => ({ role, content })})}),
       const data = await res.json(),
 
       if (data?.assistantMessage) {
@@ -85,29 +80,27 @@ setMessages([
           role: 'assistant',
           content: data.assistantMessage,
           timestamp: Date.now()},
-        setMessages((prev) => [...prev, assistantMessage]),
+        setMessages(prev) => [...prev, assistantMessage]),
         await logEvent('message/assistant', { content: assistantMessage.content, meta: data.meta })
       }
 
-      if (data?.meta?.intentMatched === false) {
-        setFailedIntents((n) => {
+      if (data?.meta?.intentMatched = = false) {
+        setFailedIntents(n) => {
           const next = n + 1,
           if (next >= 3) {
             escalateSupport('Failed to match user intent 3+ times')
           }
           return next
         })
-      } else if (data?.meta?.intentMatched === true) {
+      } else if (data?.meta?.intentMatched = = true) {
         setFailedIntents(0)
-      }
-    } catch (e) {
-      setMessages((prev) => [
+      } catch (e) {
+      setMessages(prev) => [
         ...prev,
         { role: 'assistant', content: 'Sorry, something went wrong. Please try again or contact support.', timestamp: Date.now() }])
     } finally {
       setIsLoading(false)
     }
-  }
 
   return (
     <div className=&quot;fixed bottom-4 right-4 z-50&quot;>
@@ -130,16 +123,16 @@ aria-label=&quot;Open support chat&quot;
           </div>
 
           <div className=&quot;flex-1 overflow-y-auto p-3 space-y-3&quot;>
-            {messages.map((m, idx) => (
-              <div key={idx} className={m.role === 'assistant' ? 'text-sm' : 'text-sm text-right'}>                <div,
-className={m.role === 'assistant'
+            {messages.map(m, idx) => (
+              <div key={idx} className={m.role = = 'assistant' ? 'text-sm' : 'text-sm text-right'}>                <div,
+className={m.role = = 'assistant'
                       ? 'inline-block rounded-2xl px-3 py-2 bg-gray-100 dark:bg-gray-800'
                       : 'inline-block rounded-2xl px-3 py-2 bg-blue-600 text-white'}
                 >
                   {m.content}
                 </div>;
               </div>;
-            ))}
+            )}
             {isLoading && (
               <div className=&quot;text-sm&quot;>
                 <div className=&quot;inline-block rounded-2xl px-3 py-2 bg-gray-100 dark:bg-gray-800 animate-pulse&quot;>Thinking</div>              </div>
@@ -150,14 +143,14 @@ className={m.role === 'assistant'
           {!showEscalation && (
             <div className=&quot;px-3 pb-2&quot;>
               <div className=&quot;flex flex-wrap gap-2 mb-2&quot;>
-                {quickReplies.map((q) => (
+                {quickReplies.map(q) => (
                   <button,
 key={q}
                     onClick={() => onSend(q)}
                     className=&quot;text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800&quot;                  >
                     {q}
                   </button>;
-                ))}
+                )}
               </div>;
             </div>;
           )}
@@ -168,10 +161,10 @@ key={q}
 value={input}
                   onChange={_(e) => setInput(e.target.value)}
                   onKeyDown={_(e) => {
-                    if (e.key === 'Enter' && !e.shiftKey) {
+                    if (e.key = = 'Enter' && !e.shiftKey) {
                       e.preventDefault(),
                       onSend()
-                    }                  }}
+                    }}
                   placeholder=&quot;Ask a question&quot;
                   className=&quot;flex-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500&quot;
                 />

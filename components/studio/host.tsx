@@ -4,30 +4,30 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React, { useState } from 'react';
 
 type PersonaConfig = {;
   voice: 'Visionary' | 'Grounded' | 'Technical';
   language: string;
   cloneStyleText?: string;
-}
+
 export default function StudioHostPage() {
   const [persona, setPersona] = useState<PersonaConfig>({
     voice: 'Visionary'
@@ -72,8 +72,7 @@ export default function StudioHostPage() {;
       alert ('Failed to generate episode');
     } finally {
       set_generating (false);
-    }
-  };
+    };
 
   const handleGenerate = async () => {;
     setGenerating(true);
@@ -115,8 +114,7 @@ export default function StudioHostPage() {;
       alert ('Failed to synthesize audio');
     } finally {
       set_synthesizing (false);
-    }
-  };
+    };
 
   const handleSynthesize = async () => {;
     if (!episode?.id) return;
@@ -141,7 +139,6 @@ export default function StudioHostPage() {;
     } finally {;
       setSynthesizing(false);
     }
-  }
   const handlePublishRss = async () => {
     if (!episode?.id) return;
     setPublishing(true);
@@ -154,7 +151,6 @@ export default function StudioHostPage() {;
       alert('Failed to update RSS');
     } finally {;
       setPublishing(false);    }
-  }
   return (
     <div className='space-y-8'>;
       <h1 className='text-3xl font-bold'>Podcast Studio Host</h1>      await res && res.json();
@@ -170,7 +166,6 @@ export default function StudioHostPage() {;
     } finally {
       setPublishing(false)
     }
-  }
 
   return (
     <div className='space-y-8'>
@@ -195,8 +190,7 @@ export default function StudioHostPage() {;
                 setPersona({ ...persona, voice: e && e.target.value as any });
       set_publishing (false);
     }
-  }
-;
+
   return (
     <div className='space - y-8'>;
       <h1 className='text - 3xl font - bold'>Podcast Studio Host</h1>;
@@ -362,7 +356,7 @@ export default function StudioHostPage() {;
             <h3 className='text-lg font-bold'>{episode.title}</h3>
             <div>
               <h4 className='font-semibold'>Questions</h4>
-              <ol className='list-decimal list-inside space-y-1'>                {episode.questions?.map((q: string, idx: number) => (        <section className="space-y-4">
+              <ol className='list-decimal list-inside space-y-1'>                {episode.questions?.map(q: string, idx: number) => (        <section className="space-y-4">
           <h2 className="text-xl font-semibold">Episode Draft</h2>
           <div className="border rounded p-4 space-y-3">
             <p className="text-sm text-gray-600">ID: {episode.id}</p>
@@ -420,7 +414,7 @@ export default function StudioHostPage() {;
             <h3 className='text-lg font-bold'>{episode && episode.title}</h3>;
             <div>;
               <h4 className='font-semibold'>Questions</h4>;
-              <ol className='list-decimal list-inside space-y-1'>                {episode && episode.questions?.map((q: string, idx: number) => (        <section className="space-y-4">;
+              <ol className='list-decimal list-inside space-y-1'>                {episode && episode.questions?.map(q: string, idx: number) => (        <section className="space-y-4">;
           <h2 className="text-xl font-semibold">Episode Draft</h2>;
           <div className="border rounded p-4 space-y-3">;
             <p className="text-sm text-gray-600">ID: {episode && episode.id}</p>;
@@ -429,7 +423,7 @@ export default function StudioHostPage() {;
               <h4 className="font-semibold">Questions</h4>;
               <ol className="list-decimal list-inside space-y-1">;
                   <li key={idx}>{q}</li>;
-                ))}
+                )}
               </ol>;
             </div>;
             <div>;
@@ -537,7 +531,7 @@ export default function StudioHostPage() {;
       )}
     </div>;
   );
-}
+
               <div className='flex gap - 3'>;
                 {episode.audio.mp3Url && (
                   <a;
@@ -567,4 +561,3 @@ export default function StudioHostPage() {;
           </div>;
         </section>)}
     </div>);
-}

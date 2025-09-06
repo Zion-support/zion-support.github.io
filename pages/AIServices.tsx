@@ -47,7 +47,7 @@ export default function AIServices() {;
             <p className="text-gray-600">;
 import React from './react';
 import Layout from "../components / Layout";
-;
+
 export default /**
  * AIServices - Function description
  */
@@ -77,7 +77,5 @@ function AIServices() {
       </div>;
     </Layout>;
   );
-}
-}
+
     </Layout>);
-}

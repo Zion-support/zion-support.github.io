@@ -9,8 +9,8 @@ import ForumCategories from "@/components/community/ForumCategories",;
 import PostCard from "@/components/community/PostCard",;
 import { useAuth } from "@/hooks/useAuth",;
 import { ForumPost } from "@/types/community",;
-;
-// Mock data for featured posts;
+
+/ Mock data for featured posts;
 const featuredPosts:ForumPost[] = [;
   {;
     id:"1",;
@@ -47,9 +47,9 @@ const featuredPosts:ForumPost[] = [;
     isPinned:true,;
     isFeatured:true;
   }
-],;
-;
-// Mock data for recent posts;
+,;
+
+/ Mock data for recent posts;
 const recentPosts:ForumPost[] = [;
   {;
     id:"3",;
@@ -94,12 +94,11 @@ const recentPosts:ForumPost[] = [;
     replyCount:7,;
     isAnswered:true;
   }
-],;
-;
+,;
+
 export default function CommunityPage() {;
   const { user } = useAuth(),;
   const [activeTab, setActiveTab] = useState("categories"),;
-  ;
   return (;
     <AppLayout>;
       <SEO ;
@@ -107,7 +106,6 @@ export default function CommunityPage() {;
         description="Join the Zion AI Marketplace community forum. Ask questions, share knowledge, and connect with other AI professionals.";
         keywords="community, forum, discussion, AI marketplace, questions, answers";
       />;
-      ;
       <div className="container py-8">;
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 gap-4">;
           <div>;
@@ -116,44 +114,37 @@ export default function CommunityPage() {;
               Join the conversation, ask questions, and share your knowledge;
             </p>;
           </div>;
-          ;
           <Button asChild>;
             <Link to={user ? "/community/create" :"/login?next=/community/create"}>;
               Create New Post;
             </Link>;
           </Button>;
         </div>;
-        ;
         <Tabs defaultValue="categories" value={activeTab} onValueChange={setActiveTab} className="mb-8">;
           <TabsList className="mb-6">;
             <TabsTrigger value="categories">Categories</TabsTrigger>;
             <TabsTrigger value="featured">Featured</TabsTrigger>;
             <TabsTrigger value="recent">Recent</TabsTrigger>;
           </TabsList>;
-          ;
           <TabsContent value="categories">;
             <ForumCategories />;
           </TabsContent>;
-          ;
           <TabsContent value="featured">;
             <div className="space-y-4">;
-              {featuredPosts.map((post) => (;
+              {featuredPosts.map(post) => (;
                 <PostCard key={post.id} post={post} />;
-              ))}
+              )}
             </div>;
           </TabsContent>;
-          ;
           <TabsContent value="recent">;
             <div className="space-y-4">;
-              {recentPosts.map((post) => (;
+              {recentPosts.map(post) => (;
                 <PostCard key={post.id} post={post} />;
-              ))}
+              )}
             </div>;
           </TabsContent>;
         </Tabs>;
       </div>;
     </AppLayout>;
-  ),;}
- }</div> </TabsContent>) ) 
-}</div> </TabsContent> </Tabs> </div> </AppLayout>) 
-}
+  ),;}</div> </TabsContent>) 
+</div> </TabsContent> </Tabs> </div> </AppLayout>) 

@@ -7,7 +7,5 @@ export interface Application {
   skills: string[];
   createdAt: string;
   updatedAt?: string;
-}
 
 export type UserRole = 'admin' | 'user' | 'guest';
-

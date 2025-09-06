@@ -82,7 +82,7 @@ const MarketplaceRoutes = () => {
       />
     </Routes>
   )
-}
+
 export default MarketplaceRoutes;
 
 import { Route, Routes } from './react-router-dom';
@@ -166,7 +166,5 @@ const MarketplaceRoutes = () =>: any {
         }
       />;
     </Routes>);
-}
-;
+
 export default MarketplaceRoutes;
-;

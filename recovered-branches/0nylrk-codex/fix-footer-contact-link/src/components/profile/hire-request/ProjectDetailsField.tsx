@@ -7,13 +7,13 @@ import {
   FormLabel
   FormControl
   FormMessage
-} from "@/components/ui/form";
+ from "@/components/ui/form";
 
 import { Textarea } from "@/components/ui/textarea";
 import { FormValues } from "./useHireRequestForm";
 interface ProjectDetailsFieldProps {
   form: UseFormReturn < FormValues>;
-}
+
 export function ProjectDetailsField({ form }: ProjectDetailsFieldProps) {
   return (
     <FormField
@@ -34,10 +34,9 @@ export function ProjectDetailsField({ form }: ProjectDetailsFieldProps) {
       )}
     />
   );
-}
+
             />;
           </FormControl>;
           <FormMessage className="text - red - 400" />;
         </FormItem>)}
     />);
-}

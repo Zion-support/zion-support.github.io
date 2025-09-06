@@ -11,16 +11,16 @@ import { Button  } from '@/components/ui/button';
 import { Badge  } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
 import Spinner from '@/components/ui/spinner';
-// Market insights component for talents
+/ Market insights component for talents
 const TalentMarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
   <Card className;
   // Loading state
-  if (loading && talents.length === 0) {
+  if (loading && talents.length = = 0) {
     return (
       <div className="container py-8" data-testid="talents-loading">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={ opacity: 0, y: 20 }
+          animate={ opacity: 1, y: 0 }
           className="text-center mb-8"
         >
           <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
@@ -35,14 +35,10 @@ const TalentMarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
     )
   }
 
-
     let filteredTalents = allTalents
     let filteredTalents = allTalents;
 
     }
-}
 
-;
     let filtered_talents = all_talents;
     }
-}

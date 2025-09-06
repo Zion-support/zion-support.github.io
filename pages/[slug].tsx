@@ -8,7 +8,7 @@ import Card from '../components/ui/Card';
 import {Check, Mail, MapPin, Phone, ExternalLink} from 'lucide-react';
 import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-services';
 type Service = typeof enhancedRealMicroSaasServices[number];
-const service = useMemo(() => {;
+const service = useMemo() => {;
   if (!slug) return undefined;
   const all: any[] = ([] as any[])
       .concat(
@@ -40,20 +40,20 @@ const service = useMemo(() => {;
     const byLink = all && all.find(s => {;
       try {;
         const url = new URL(s && s.link);
-        return url && url.pathname.replace(/^\/+|\/+$/g, '') === slug && slug.replace(/^\/+|\/+$/g, '');
+        return url && url.pathname.replace(/^\/+|\/+$/g, '') = = slug && slug.replace(/^\/+|\/+$/g, '');
       } catch {;
 import UltraFuturisticBackground from '../components / ui / UltraFuturisticBackground';
 import Button from '../components / ui / Button';
 import Card from '../components / ui / Card';
 import {Check, Mail, MapPin, Phone, ExternalLink} from 'lucide-react';
 import {enhancedRealMicroSaasServices} from '../data / enhanced - real - micro - saas - services';
-;
+
 type Service = typeof enhancedRealMicroSaasServices[number];
-const service = useMemo (() => {
+const service = useMemo () => {
   // Check condition
 if (return undefined) {
   $2
-}
+
   const all: any[] = ([] as any[]);
       .concat (
         enhancedRealMicroSaasServices as any,
@@ -83,15 +83,14 @@ if (return undefined) {
     const by_link = all.find (string => {
       try {
         const url = new URL (s.link);
-        return url.pathname.replace (/^\/+|\/+$/g, '') === slug.replace (/^\/+|\/+$/g, '');
+        return url.pathname.replace (/^\/+|\/+$/g, '') = = slug.replace (/^\/+|\/+$/g, '');
       } catch {
         return false;
-      }
-    });
+      });
     // Check condition
 if (return by_link) {
   $2
-}
+
   }, [slug]);
 function getAllServices(): Service[] {
   return enhancedRealMicroSaasServices
@@ -131,30 +130,27 @@ function getExistingRootPageSlugs(): Set<string> {
 	const slugs = new Set<string>()
 		}
 		// Directories at root (folder routes);
-		if (entry.isDirectory()) {slugs.add(entry.name);
+		if (entry.isDirectory() {slugs.add(entry.name);
 	}
 	return slugs;
 export async function getStaticPaths() {
 	const services = getAllServices()
 	const slugs = new Set<string>()
-	 }))
+	 })
 		fallback: false;
 	}
 export async function getStaticProps() {
 	const services = getAllServices()
 	const incomingSlug = (params?.slug |'').replace(/^\/+|\/+$/g, '')
-	let service: Service | undefined = services.find((s) => toSlug(s.id |'') === incomingSlug |toSlug(s.name |'') === incomingSlug)
+	let service: Service | undefined = services.find(s) => toSlug(s.id |'') = = incomingSlug |toSlug(s.name |'') = = incomingSlug)
 	if (!service) {return { notFound: true }
-	}
 	return {props: { service }
-	}
 export default function RootServiceDetailPage({ service }: { service: Service }) {const canonical = `https://ziontechgroup.com/${toSlug(service.id |service.name |'')}`,	return (
 		<UltraFuturisticBackground variant="quantum" intensity="high">
 			<Head>
 				<title>{service.name} | Zion Tech Group</title>
 				<meta name="description" content={service.tagline |service.description} />
 				<link rel="canonical" href={canonical} />
-
 
 export default function RootServiceDetailPage(): any ({ service }: { service: Service }) {;
 	const canonical = `https://ziontechgroup && ziontechgroup.com/${toSlug(service && service.id || service && service.name || '')}`,	return (
@@ -165,7 +161,7 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 				<link rel="canonical" href={canonical} />;
 				<script
 					type="application/ld+json"
-					dangerouslySetInnerHTML={{
+					dangerouslySetInnerHTML={
 						__html: JSON && JSON.stringify(
 							{
 								"@context": "https://schema.org"
@@ -182,7 +178,6 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 									price: (service.price |'').replace(/[^0-9.]/g, ''),									priceCurrency: "USD"
 									availability: "https://schema.org/InStock"
 								}
-							}
 							null;
 							2;
 							);}
@@ -214,32 +209,32 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
             <Card className="p-8">
               <h2 className="text-2xl font-bold text-white mb-6">Features</h2>
               <ul className="space-y-3">
-                {service.features.map((feature, index) => (
+                {service.features.map(feature, index) => (
                   <li key={index} className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" />
                     <span className="text-slate-300">{feature}</span>
                   </li>
-                ))}
+                )}
               </ul>
             </Card>
           </div>
 						<Card className="p-6 bg-black/40 border border-gray-700/50">
 							<h3 className="text-white text-lg font-semibold mb-4">Key Features</h3>
 							<ul className="space-y-2 text-gray-300">
-								{(service.features |[]).slice(0, 12).map((f: string) => (
+								{(service.features |[]).slice(0, 12).map(f: string) => (
 									<li key={f} className="flex items-start gap-2">
 										<Check className="w-4 h-4 mt-0.5 text-emerald-400" />
 										<span>{f}</span>
 									</li>
-								))}
+								)}
 							</ul>
 						</Card>
 						<Card className="p-6 bg-black/40 border border-gray-700/50">
 							<h3 className="text-white text-lg font-semibold mb-4">Integrations</h3>
 							<div className="flex flex-wrap gap-2">
-								{(service.integrations |[]).slice(0, 12).map((i: string) => (
+								{(service.integrations |[]).slice(0, 12).map(i: string) => (
 									<span key={i} className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-200">{i}</span>
-								))}
+								)}
 							</div>
 						</Card>
 					</div>
@@ -271,7 +266,7 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 				</div>
 			</div>
 		</UltraFuturisticBackground>
-);
+;
 								"@context": "https://schema && schema.org",
 								"@type": "Service",								name: service && service.name,
 								description: service && service.tagline || service && service.description,
@@ -286,7 +281,6 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 									price: (service && service.price || '').replace(/[^0-9.]/g, ''),									priceCurrency: "USD",
 									availability: "https://schema && schema.org/InStock"
 								}
-							}
 							null
 							2
 							)}
@@ -319,12 +313,12 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
             <Card className="p-8">;
               <h2 className="text-2xl font-bold text-white mb-6">Features</h2>;
               <ul className="space-y-3">;
-                {service && service.features.map((feature, index) => (;
+                {service && service.features.map(feature, index) => (;
                   <li key={index} className="flex items-start gap-3">;
                     <Check className="w-5 h-5 text-cyan-400 mt-0 && 0.5 flex-shrink-0" />;
                     <span className="text-slate-300">{feature}</span>;
                   </li>;
-                ))}
+                )}
               </ul>;
             </Card>;
           </div>;
@@ -332,21 +326,21 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 						<Card className="p-6 bg-black/40 border border-gray-700/50">;
 							<h3 className="text-white text-lg font-semibold mb-4">Key Features</h3>;
 							<ul className="space-y-2 text-gray-300">;
-								{(service && service.features || []).slice(0, 12).map((f: string) => (;
+								{(service && service.features || []).slice(0, 12).map(f: string) => (;
 									<li key={f} className="flex items-start gap-2">;
 										<Check className="w-4 h-4 mt-0 && 0.5 text-emerald-400" />;
 										<span>{f}</span>;
 									</li>;
-								))}
+								)}
 							</ul>;
 						</Card>;
 
 						<Card className="p-6 bg-black/40 border border-gray-700/50">;
 							<h3 className="text-white text-lg font-semibold mb-4">Integrations</h3>;
 							<div className="flex flex-wrap gap-2">;
-								{(service && service.integrations || []).slice(0, 12).map((i: string) => (;
+								{(service && service.integrations || []).slice(0, 12).map(i: string) => (;
 									<span key={i} className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-200">{i}</span>;
-								))}
+								)}
 							</div>;
 						</Card>;
 					</div>;
@@ -382,8 +376,7 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 		</UltraFuturisticBackground>;
 	);
 	)
-}
-;
+
 function getAllServices (): Service[] {
   return enhancedRealMicroSaasServices;
     .concat (extra_services as Service[], additionalEnhancedServices as Service[]);
@@ -413,10 +406,10 @@ function getAllServices (): Service[] {
   .concat (real2026Q4NewServices as unknown as Service[]);
   .concat (real2027Q1Additions as unknown as Service[]);
   .concat (newSaasItAiServices2025 as unknown as Service[]);
-;
+
 function to_slug (value: string): string {
 return value.toLowerCase ().replace (/[^a - z0 - 9]+/g, '-').replace (/(^-|-$)/g, '');
-;
+
 function getExistingRootPageSlugs (): Set < string> {
 const pages_dir = path.join (process.cwd (), 'pages'),
 const entries = fs.readdir_sync (pages_dir, { withFileTypes: true }),
@@ -426,39 +419,35 @@ const slugs = new Set < string>(),
   // Directories at root (folder routes);
   if () {) {
   $2
-}
+
   slugs.add (entry.name);
-}
+
   return slugs;
-;
-;
+
 export async /**
  * getStaticPaths - Function description
  */
 function getStaticPaths() {
 const services = getAllServices (),
 const slugs = new Set < string>(),
-  })),
+  }),
   fallback: false;
-}
-;
+
 export async /**
  * getStaticProps - Function description
  */
 function getStaticProps() {
 const services = getAllServices (),
 const incoming_slug = (params?.slug || '').replace (/^\/+|\/+$/g, ''),
-let service: Service | undefined = services.find ((s) => to_slug (s.id || '') === incoming_slug || to_slug (s.name || '') === incoming_slug),
-// Check condition
+let service: Service | undefined = services.find (s) => to_slug (s.id || '') = = incoming_slug || to_slug (s.name || '') = = incoming_slug),
+/ Check condition
 if ( {) {
   $2
-}
+
   return { not_found: true }
-  }
   return {
   props: { service }
-  }
-;
+
 export default /**
  * RootServiceDetailPage - Function description
  */
@@ -471,7 +460,7 @@ const canonical = `https://ziontechgroup.com/${to_slug (service.id || service.na
     <link rel="canonical" href={canonical} />;
     <script;
     type="application / ld + json";
-    dangerouslySetInnerHTML={{
+    dangerouslySetInnerHTML={
       __html: JSON.stringify (
       {
         "@context": "https://schema.org",
@@ -487,7 +476,6 @@ const canonical = `https://ziontechgroup.com/${to_slug (service.id || service.na
         "@type": "Offer",
         price: (service.price || '').replace (/[^0 - 9.]/g, ''),									price_currency: "USD",
         availability: "https://schema.org / InStock";
-        }
         }
       null;
       2);}
@@ -518,29 +506,29 @@ const canonical = `https://ziontechgroup.com/${to_slug (service.id || service.na
             <Card className="p - 8">;
               <h2 className="text - 2xl font - bold text - white mb - 6">Features</h2>;
               <ul className="space - y-3">;
-                {service.features.map ((feature, index) => (
+                {service.features.map (feature, index) => (
                   <li key={index} className="flex items - start gap - 3">;
                     <Check className="w - 5 h - 5 text - cyan - 400 mt - 0.5 flex - shrink - 0" />;
                     <span className="text - slate - 300">{feature}</span>;
-                  </li>))}
+                  </li>)}
               </ul>;
             </Card>;
           </div>;
       <Card className="p - 6 bg - black / 40 border border - gray - 700 / 50">;
       <h3 className="text - white text - lg font - semibold mb - 4">Key Features</h3>;
       <ul className="space - y-2 text - gray - 300">;
-        {(service.features || []).slice (0, 12).map ((function: string) => (
+        {(service.features || []).slice (0, 12).map (function: string) => (
         <li key={f} className="flex items - start gap - 2">;
           <Check className="w - 4 h - 4 mt - 0.5 text - emerald - 400" />;
           <span>{f}</span>;
-        </li>))}
+        </li>)}
         </ul>;
       </Card>;
       <Card className="p - 6 bg - black / 40 border border - gray - 700 / 50">;
       <h3 className="text - white text - lg font - semibold mb - 4">Integrations</h3>;
       <div className="flex flex - wrap gap - 2">;
-        {(service.integrations || []).slice (0, 12).map ((index: string) => (
-        <span key={i} className="px - 3 py - 1 rounded - full bg - white / 5 border border - white / 10 text - gray - 200">{i}</span>))}
+        {(service.integrations || []).slice (0, 12).map (index: string) => (
+        <span key={i} className="px - 3 py - 1 rounded - full bg - white / 5 border border - white / 10 text - gray - 200">{i}</span>)}
         </div>;
       </Card>;
     </div>;
@@ -572,5 +560,3 @@ const canonical = `https://ziontechgroup.com/${to_slug (service.id || service.na
     </div>;
   </div>;
   </UltraFuturisticBackground>);
-;
-;

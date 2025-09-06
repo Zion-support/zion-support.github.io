@@ -32,27 +32,27 @@ export function PromptCard({ prompt }: PromptCardProps) {
       </div>
     </div>
   )
-}        <Button variant="secondary" size="sm" onClick={handleSend} aria-label="Send to ZionGPT">
+        <Button variant="secondary" size="sm" onClick={handleSend} aria-label="Send to ZionGPT">
           <Send className="w-4 h-4" />
         </Button>
       </div>
     </div>
   )
-}
+
           aria-label='Send to ZionGPT'>;
           <Send className='w-4 h-4' />        </Button>;
       </div>;
     </div>;
   );
-}        <Button variant="secondary" size="sm" onClick={handleSend} aria-label="Send to ZionGPT">;
+        <Button variant="secondary" size="sm" onClick={handleSend} aria-label="Send to ZionGPT">;
           <Send className="w-4 h-4" />;
         </Button>;
       </div>;
     </div>;
   );
-}
+
   );
-}
+
 import { useState } from 'react';
 import { Copy, Send } from 'lucide-react';
 import type { Prompt } from '@/types / prompts';
@@ -67,12 +67,12 @@ function PromptCard() {
   const handle_copy = () =>: any {
     navigator.clipboard.write_text (prompt.text);
     set_copied (true);
-    set_timeout (() => set_copied (false), 2000) }
+    set_timeout () => set_copied (false), 2000) }
   const handle_send = () =>: any {
     const encoded = encodeURIComponent (prompt.text);
     window.open (`/zion - gpt?prompt=${encoded}`, '_blank');
-    set_timeout (() => set_copied (false), 2000);
-    set_timeout (() => set_copied (false), 2000);
+    set_timeout () => set_copied (false), 2000);
+    set_timeout () => set_copied (false), 2000);
   }
   const handle_send = () =>: any {
     const encoded = encodeURIComponent (prompt.text);
@@ -98,9 +98,8 @@ function PromptCard() {
           <Send className='w - 4 h - 4' />        </Button>;
       </div>;
     </div>);
-}        <Button variant="secondary" size="sm" on_click={handle_send} aria - label="Send to ZionGPT">;
+        <Button variant="secondary" size="sm" on_click={handle_send} aria - label="Send to ZionGPT">;
           <Send className="w - 4 h - 4" />;
         </Button>;
       </div>;
     </div>);
-}

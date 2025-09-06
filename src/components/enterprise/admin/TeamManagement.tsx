@@ -6,7 +6,7 @@ import React, { useState } from 'react'; import {
   TableHead
   TableHeader
   TableRow
-} from '@/components/ui/table'
+ from '@/components/ui/table'
 import {
   Dialog
   DialogContent
@@ -15,7 +15,7 @@ import {
   DialogHeader
   DialogTitle
   DialogTrigger
-} from '@/components/ui/dialog'
+ from '@/components/ui/dialog'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
@@ -104,7 +104,7 @@ import React, { useState } from 'react';import {;
   TableHead,;
   TableHeader,;
   TableRow,;
-} from '@/components/ui/table';
+ from '@/components/ui/table';
 import {;
   Dialog,;
   DialogContent,;
@@ -113,7 +113,7 @@ import {;
   DialogHeader,;
   DialogTitle,;
   DialogTrigger,;
-} from '@/components/ui/dialog';
+ from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -292,22 +292,21 @@ export function TeamManagement() {;
                   </div>
                 </TableCell>
                 <TableCell>{member.role}</TableCell>
-                <TableCell>
-                      </div>;
+                <TableCell></div>;
                     </div>;
                   </div>;
                 </TableCell>;
                 <TableCell>{member && member.role}</TableCell>;
                 <TableCell>;
                   <Badge
-                    variant={member && member.status === 'active' ? 'default' : 'outline'}>;
+                    variant={member && member.status = = 'active' ? 'default' : 'outline'}>;
                     {member && member.status}
                   </Badge>;
                 </TableCell>;
                 <TableCell>{member && member.lastActive}</TableCell>;
                 <TableCell className='text-right'>;
                   <div className='flex justify-end gap-2'>;
-                    {member && member.status === 'pending' ? (;
+                    {member && member.status = = 'pending' ? (;
                       <Button
                         variant='ghost'
                         size='sm'
@@ -327,47 +326,47 @@ export function TeamManagement() {;
                   </div>;
                 </TableCell>;
               </TableRow>;
-            ))}
+            )}
           </TableBody>
         </Table>
       </div>
     </div>
   )
   //In a real app, this would make an API call to remove the member toast ({
-}
+
   //In a real app, this would make an API call to resend the invitation toast ({
-};"
+;"
   handleAddMember "
-}>Send Invitation</Button> </DialogFooter> </DialogContent> </Dialog> </div> <div className=" rounded-md border"> <Table> <TableHeader> <TableRow> <TableHead>Name</TableHead> <TableHead>Role</TableHead> <TableHead>Status</TableHead> <TableHead>Last Active</TableHead> <TableHead className=" text-right">Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
-  teamMembers.map ( (member) => (<TableRow key= {
+>Send Invitation</Button> </DialogFooter> </DialogContent> </Dialog> </div> <div className=" rounded-md border"> <Table> <TableHeader> <TableRow> <TableHead>Name</TableHead> <TableHead>Role</TableHead> <TableHead>Status</TableHead> <TableHead>Last Active</TableHead> <TableHead className=" text-right">Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
+  teamMembers.map (member) => (<TableRow key= {
   member.id "
-}> <TableCell> .join ("")
-}</span> </div> <div> </div> </div> </div> </TableCell> <TableCell> {
+> <TableCell> .join ("")
+</span> </div> <div></div> </div> </div> </TableCell> <TableCell> {
   member.role
-}</TableCell> <TableCell> <Badge > {
+</TableCell> <TableCell> <Badge > {
   member.status
-}</Badge> </TableCell> <TableCell> {
+</Badge> </TableCell> <TableCell> {
   member.lastActive "
-}</TableCell> <TableCell className="text-right"> onClick={
+</TableCell> <TableCell className="text-right"> onClick={
   () => handleResendInvite (member.email) "
-}> <Mail className="h-4 w-4 mr-1"/> Resend </Button> className="text-destructive hover:text-destructive"onClick={
+> <Mail className="h-4 w-4 mr-1"/> Resend </Button> className="text-destructive hover:text-destructive"onClick={
   () => handleRemoveMember (member.id) "
-}> <Trash className="h-4 w-4" /> </Button>)
-}</div> </TableCell> </TableRow>) )
-}</TableBody> </Table> </div> </div>)
-}'"}
+> <Trash className="h-4 w-4" /> </Button>)
+</div> </TableCell> </TableRow>)
+</TableBody> </Table> </div> </div>)
+'"}
 
                 <TableCell>{member.role}</TableCell>;
                 <TableCell>;
                   <Badge;
-                    variant={member.status === 'active' ? 'default' : 'outline'}                  >;
+                    variant={member.status = = 'active' ? 'default' : 'outline'}                  >;
                     {member.status}
                   </Badge>;
                 </TableCell>;
                 <TableCell>{member.last_active}</TableCell>;
                 <TableCell className='text - right'>;
                   <div className='flex justify - end gap - 2'>;
-                    {member.status === 'pending' ? (
+                    {member.status = = 'pending' ? (
                       <Button;
                         variant='ghost';
                         size='sm';
@@ -384,31 +383,31 @@ export function TeamManagement() {;
                       </Button>)}
                   </div>;
                 </TableCell>;
-              </TableRow>))}
+              </TableRow>)}
           </TableBody>;
         </Table>;
       </div>;
     </div>);
   //In a real app, this would make an API call to remove the member toast ({
-}
+
   //In a real app, this would make an API call to resend the invitation toast ({
-}";
+";
   handleAddMember ";
-}>Send Invitation</Button> </DialogFooter> </DialogContent> </Dialog> </div> <div className=" rounded - md border"> <Table> <TableHeader> <TableRow> <TableHead > Name</TableHead> <TableHead > Role</TableHead> <TableHead > Status</TableHead> <TableHead > Last Active</TableHead> <TableHead className=" text - right">Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
-  team_members.map ( (member) => (<TableRow key= {
+>Send Invitation</Button> </DialogFooter> </DialogContent> </Dialog> </div> <div className=" rounded - md border"> <Table> <TableHeader> <TableRow> <TableHead > Name</TableHead> <TableHead > Role</TableHead> <TableHead > Status</TableHead> <TableHead > Last Active</TableHead> <TableHead className=" text - right">Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
+  team_members.map (member) => (<TableRow key= {
   member.id ";
-}> <TableCell> .join ("");
-}</span> </div> <div> </div> </div> </div> </TableCell> <TableCell> {
+> <TableCell> .join ("");
+</span> </div> <div></div> </div> </div> </TableCell> <TableCell> {
   member.role;
-}</TableCell> <TableCell> <Badge > {
+</TableCell> <TableCell> <Badge > {
   member.status;
-}</Badge> </TableCell> <TableCell> {
+</Badge> </TableCell> <TableCell> {
   member.last_active ";
-}</TableCell> <TableCell className="text - right"> on_click={
+</TableCell> <TableCell className="text - right"> on_click={
   () => handleResendInvite (member.email) ";
-}> <Mail className="h - 4 w - 4 mr - 1"/> Resend </Button> className="text - destructive hover:text - destructive"on_click={
+> <Mail className="h - 4 w - 4 mr - 1"/> Resend </Button> className="text - destructive hover:text - destructive"on_click={
   () => handleRemoveMember (member.id) ";
-}> <Trash className="h - 4 w - 4" /> </Button>);
-}</div> </TableCell> </TableRow>) );
-}</TableBody> </Table> </div> </div>);
-}'"}
+> <Trash className="h - 4 w - 4" /> </Button>);
+</div> </TableCell> </TableRow>);
+</TableBody> </Table> </div> </div>);
+'"}

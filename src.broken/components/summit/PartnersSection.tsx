@@ -6,5 +6,3 @@ export function PartnersSection() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

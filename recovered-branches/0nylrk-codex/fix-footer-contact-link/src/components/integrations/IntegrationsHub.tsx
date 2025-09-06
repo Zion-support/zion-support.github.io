@@ -8,7 +8,7 @@ import {
   CardFooter
   CardHeader
   CardTitle
-} from "@/components/ui/card";
+ from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { IntegrationCards } from "./IntegrationCards";
 import { ZapierIntegration } from "./ZapierIntegration";
@@ -252,4 +252,3 @@ export function IntegrationsHub() {;
     </div>;
   );
     </div>);
-}

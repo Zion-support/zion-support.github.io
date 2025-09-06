@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React, { useMemo, useState } from 'react';
 export default function ServiceDescriptionGeneratorPage() {
   const [title, setTitle] = useState('');
@@ -40,10 +40,10 @@ export default function ServiceDescriptionGeneratorPage() {
   const [generated, setGenerated] = useState('');
   const [accepted, setAccepted] = useState(false);
 
-  const keyFeatures = useMemo(() => {;
+  const keyFeatures = useMemo() => {;
     return featuresInput;
       .split('\n');
-      .map(f => f && f.trim());
+      .map(f => f && f.trim();
       .filter(Boolean);  }, [featuresInput]);
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -63,21 +63,20 @@ export default function ServiceDescriptionGeneratorPage() {
         })
       });
       if (!response.ok) {
-        const data = await response.json().catch(() => ({}));
+        const data = await response.json().catch() => ({});
         throw new Error(data.error |'Failed to generate');
       }
-      const data = (await response.json()) as { description: string }
+      const data = (await response.json() as { description: string }
       setGenerated(data.description |'');
     } catch (err: any) {
       setError(err.message |'Something went wrong');
     } finally {
       setLoading(false);    }
-  }
   function handleAccept() {
     setAccepted(true);  }
   function handleCopy() {
     if (!generated) return;
-    navigator.clipboard.writeText(generated).catch(() => {});
+    navigator.clipboard.writeText(generated).catch() => {});
 
   async function handleSubmit(): any (e: React && React.FormEvent) {;
     e && e.preventDefault();
@@ -99,26 +98,23 @@ export default function ServiceDescriptionGeneratorPage() {
       });
 
       if (!response && response.ok) {;
-        const data = await response && response.json().catch(() => ({}));
+        const data = await response && response.json().catch() => ({});
         throw new Error(data && data.error || 'Failed to generate');
       }
 
-      const data = (await response && response.json()) as { description: string };
+      const data = (await response && response.json() as { description: string };
       setGenerated(data && data.description || '');
     } catch (err: any) {;
       setError(err && err.message || 'Something went wrong');
     } finally {;
       setLoading(false);    }
-  }
 
   function handleAccept() {;
     setAccepted(true);  }
 
   function handleCopy() {;
     if (!generated) return;
-    navigator && navigator.clipboard.writeText(generated).catch(() => {});
-  }
-
+    navigator && navigator.clipboard.writeText(generated).catch() => {});
   }
   return (
     <div className='max-w-3xl mx-auto'>
@@ -297,7 +293,7 @@ export default function ServiceDescriptionGeneratorPage() {
         </div>;
       )}
     </div>
-);
+;
             className="w-full min-h-[280px] rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
             value={generated}
             onChange={(e) => setGenerated(e.target.value)}
@@ -310,7 +306,7 @@ export default function ServiceDescriptionGeneratorPage() {
       )}
     </div>
   )
-}
+
         <div>;
           <label className='block text - sm font - medium mb - 1'>;
             Additional Notes (optional);
@@ -360,4 +356,3 @@ export default function ServiceDescriptionGeneratorPage() {
             </div>          )}
         </div>)}
     </div>);
-;

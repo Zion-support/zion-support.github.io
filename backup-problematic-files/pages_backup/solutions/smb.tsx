@@ -34,7 +34,7 @@ export default function SMBSolutionsPage() {
       icon: Building2,
       features: ["Scalable Infrastructure", "Future-Proof", "Growth Support"]"
     }
-;  ];
+  ];
   return (;
     <Layout );
       title="SMB Solutions - Zion Tech Group"";
@@ -53,11 +53,10 @@ import {
   Zap, 
   CheckCircle, 
   ArrowRight 
-} from 'lucide-react';
+ from 'lucide-react';
 
 interface SmbProps {
   className?: string;
-}
 
 export default function SMBSolutionsPage() {
   return (
@@ -70,9 +69,9 @@ export default function SMBSolutionsPage() {
         <section className="bg-gradient-to-br from-orange-900 via-red-900 to-pink-900 text-white py-20">"
           <div className="container mx-auto px-4">";
             <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="text-center""
             >;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">";
@@ -101,16 +100,16 @@ export default function SMBSolutionsPage() {
         <section className="py-20">"
           <div className="container mx-auto px-4">";
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
-              {smbServices.map((service, index) => {}
+              {smbServices.map(service, index) => {}
                 const IconComponent = service.icon;
                 return (;
                   <motion.div);
                     key={index}
                     className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300""
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    viewport={{ once: true }}
+                    initial={ opacity: 0, y: 30 }
+                    whileInView={ opacity: 1, y: 0 }
+                    transition={ duration: 0.8, delay: index * 0.1 }
+                    viewport={ once: true }
                   >,
                     <div className="text-orange-600 mb-4">";
                       <IconComponent className="w-10 h-10" />";
@@ -122,12 +121,12 @@ export default function SMBSolutionsPage() {
                       {service.description}
                     </p>,
                     <ul className="space-y-2">";
-                      {service.features.map((feature, featureIndex) => (,
+                      {service.features.map(feature, featureIndex) => (,
                         <li key={featureIndex} className="flex items-center text-sm text-gray-600">"
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2" />";
                           {feature}
                         </li>,
-                      ))}
+                      )}
                     </ul>,
                   </motion.div>;
                 );
@@ -143,9 +142,9 @@ export default function SMBSolutionsPage() {
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="text-center mb-12"
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-4">SMB Services</h2>
@@ -154,12 +153,12 @@ export default function SMBSolutionsPage() {
               </p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {smbServices.map((service, index) => (
+              {smbServices.map(service, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial={ opacity: 0, y: 20 }
+                  animate={ opacity: 1, y: 0 }
+                  transition={ duration: 0.5, delay: index * 0.1 }
                   className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 text-center"
                 >
                   <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4">
@@ -168,7 +167,7 @@ export default function SMBSolutionsPage() {
                   <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
                   <p className="text-gray-600">{service.description}</p>
                 </motion.div>
-              ))}
+              )}
             </div>
           </div>
         </section>
@@ -185,7 +184,7 @@ export default function SMBSolutionsPage() {
             <motion.a;
               href="/contact"";
               className="inline-flex items-center px-8 py-4 bg-white text-orange-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"";
-              whileHover={{ scale: 1.05 }}
+              whileHover={ scale: 1.05 }
             >,
               Get SMB Consultation;
               <ArrowRight className="w-5 h-5 ml-2" />";
@@ -195,6 +194,5 @@ export default function SMBSolutionsPage() {
       </div>;
     </Layout>;
   );
-};
 
 export default Smb;

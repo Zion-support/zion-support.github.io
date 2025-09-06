@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-// Type definitions for performance APIs
+/ Type definitions for performance APIs
 declare global {
   interface PerformanceEntry {
     name: string;
@@ -21,20 +21,18 @@ declare global {
   interface PerformanceEventTiming extends PerformanceEntry {
     processingStart: number;
   }
-}
 
 interface PerformanceMetrics {
   loadTime: number;
   renderTime: number;
   memoryUsage: number;
   fps: number;
-}
 
 export function usePerformanceMonitor(): PerformanceMetrics | null {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
 
-  useEffect(() => {
-    if (typeof window === 'undefined' || !('performance' in window)) {
+  useEffect() => {
+    if (typeof window = = 'undefined' || !('performance' in window) {
       return;
     }
 
@@ -53,10 +51,9 @@ export function usePerformanceMonitor(): PerformanceMetrics | null {
           memoryUsage: memory?.usedJSHeapSize || 0,
           fps: 60,
         });
-      }
-    };
+      };
 
-    if (document.readyState === 'complete') {
+    if (document.readyState = = 'complete') {
       updateMetrics();
     } else {
       window.addEventListener('load', updateMetrics);
@@ -68,6 +65,6 @@ export function usePerformanceMonitor(): PerformanceMetrics | null {
   }, []);
 
   return metrics;
-}
-},;
+
+,;
 export default usePerformanceMonitor;

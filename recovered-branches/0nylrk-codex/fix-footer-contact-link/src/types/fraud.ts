@@ -1,5 +1,4 @@
 
-
 export type FraudSeverity = 'safe' | 'suspicious' | 'dangerous';
 export interface FraudFlag {
   id: string;
@@ -19,7 +18,7 @@ export interface FraudFlag {
   gpt_classification?: string;
   gpt_explanation?: string
   is_false_positive?: boolean
-}
+
 export interface FraudStats {
   total_flags: number;
   pending_flags: number;
@@ -28,4 +27,3 @@ export interface FraudStats {
   false_positives: number
 
   actioned_count: number
-}

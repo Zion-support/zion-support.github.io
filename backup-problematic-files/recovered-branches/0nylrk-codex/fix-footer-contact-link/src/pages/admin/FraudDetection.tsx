@@ -7,15 +7,15 @@ import { Button } from "@/components/ui/button",;
 import { toast } from "@/hooks/use-toast",;
 import { supabase } from "@/integrations/supabase/client",;
 import { FraudFlag, FraudStats } from "@/types/fraud",;
-;
-// Import refactored components;
+
+/ Import refactored components;
 import {;
   FraudStatsCards,;
   FraudFilters,;
   FraudFlagsTable,;
   FraudTabContent;
-} from "@/components/admin/fraud-detection",;
-;
+ from "@/components/admin/fraud-detection",;
+
 export default function FraudDetection() {;
   const [flags, setFlags] = useState<FraudFlag[]>([]),;
   const [filteredFlags, setFilteredFlags] = useState<FraudFlag[]>([]),;
@@ -31,7 +31,7 @@ export default function FraudDetection() {;
     dangerous_count:0,;
     false_positives:0,;
     actioned_count:0}),;
-;
+
   // Fetch fraud flags;
   const fetchFraudFlags = async () => {;
     setIsLoading(true),;
@@ -40,22 +40,20 @@ export default function FraudDetection() {;
         .from("fraud_flags");
         .select("*");
         .order("timestamp", { ascending:false }),;
-;
+
       if (error) throw error,;
-;
+
       setFlags(data || []),;
       setFilteredFlags(data || []),;
-      ;
       // Calculate stats;
       const newStats:FraudStats = {;
         total_flags:data?.length || 0,;
-        pending_flags:data?.filter(flag => flag.status === 'pending').length || 0,;
-        suspicious_count:data?.filter(flag => flag.severity === 'suspicious').length || 0,;
-        dangerous_count:data?.filter(flag => flag.severity === 'dangerous').length || 0,;
+        pending_flags:data?.filter(flag => flag.status = = 'pending').length || 0,;
+        suspicious_count:data?.filter(flag => flag.severity = = 'suspicious').length || 0,;
+        dangerous_count:data?.filter(flag => flag.severity = = 'dangerous').length || 0,;
         false_positives:data?.filter(flag => flag.is_false_positive).length || 0,;
-        actioned_count:data?.filter(flag => flag.action_taken && flag.action_taken !== 'none').length || 0},;
+        actioned_count:data?.filter(flag => flag.action_taken && flag.action_taken != 'none').length || 0},;
       setStats(newStats),;
-      ;
     } catch (error) {;
       console.error("Error fetching fraud flags:", error),;
       toast({;
@@ -64,17 +62,16 @@ export default function FraudDetection() {;
         variant:"destructive"}),;
     } finally {;
       setIsLoading(false),;
-    }
-  },;
-;
-  useEffect(() => {;
+    },;
+
+  useEffect() => {;
     fetchFraudFlags(),;
   }, []),;
-;
+
   // Apply filters;
-  useEffect(() => {;
+  useEffect() => {;
     let result = [...flags],;
-;
+
     // Apply search filter;
     if (searchQuery) {;
       const query = searchQuery.toLowerCase(),;
@@ -85,30 +82,29 @@ export default function FraudDetection() {;
           flag.reason.toLowerCase().includes(query);
       ),;
     }
-;
+
     // Apply status filter;
     if (statusFilter) {;
-      result = result.filter((flag) => flag.status === statusFilter),;
+      result = result.filter(flag) => flag.status = = statusFilter),;
     }
-;
+
     // Apply severity filter;
     if (severityFilter) {;
-      result = result.filter((flag) => flag.severity === severityFilter),;
+      result = result.filter(flag) => flag.severity = = severityFilter),;
     }
-;
+
     // Apply content type filter;
     if (contentTypeFilter) {;
-      result = result.filter((flag) => flag.content_type === contentTypeFilter),;
+      result = result.filter(flag) => flag.content_type = = contentTypeFilter),;
     }
-;
+
     setFilteredFlags(result),;
   }, [flags, searchQuery, statusFilter, severityFilter, contentTypeFilter]),;
-;
+
   const handleAction = async (flagId:string, action:'warning' | 'suspension' | 'ban' | 'ignore') => {;
     try {;
-      const status = action === 'ignore' ? 'ignored' :'actioned',;
-      const actionTaken = action === 'ignore' ? 'none' :action,;
-      ;
+      const status = action = = 'ignore' ? 'ignored' :'actioned',;
+      const actionTaken = action = = 'ignore' ? 'none' :action,;
       const { error } = await supabase;
         .from("fraud_flags");
         .update({;
@@ -119,41 +115,37 @@ export default function FraudDetection() {;
           reviewed_by:'admin';
         });
         .eq("id", flagId),;
-;
+
       if (error) throw error,;
-;
+
       toast({;
         title:"Flag updated",;
         description:`Action '${action}' was applied successfully.`}),;
-      ;
       // Refresh the data;
       fetchFraudFlags(),;
-      ;
     } catch (error) {;
       console.error("Error updating fraud flag:", error),;
       toast({;
         title:"Error",;
         description:"Failed to update flag",;
         variant:"destructive"}),;
-    }
-  },;
-;
+    },;
+
   const resetFilters = () => {;
     setSearchQuery(""),;
     setStatusFilter(null),;
     setSeverityFilter(null),;
     setContentTypeFilter(null),;
   },;
-;
+
   const hasFilters = !!(searchQuery || statusFilter || severityFilter || contentTypeFilter),;
-;
+
   return (;
     <AppLayout>;
       <SEO ;
         title="Fraud Detection | Admin Dashboard" ;
         description="Monitor and manage fraud detection alerts on the Zion AI Marketplace" ;
       />;
-      ;
       <div className="container mx-auto px-4 py-8">;
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8">;
           <div>;
@@ -164,7 +156,6 @@ export default function FraudDetection() {;
               Monitor suspicious activities and protect the marketplace from fraud and abuse;
             </p>;
           </div>;
-          ;
           <div className="mt-4 md:mt-0">;
             <Button ;
               onClick={fetchFraudFlags} ;
@@ -175,10 +166,8 @@ export default function FraudDetection() {;
             </Button>;
           </div>;
         </div>;
-        ;
         {/* Stats Cards */}
         <FraudStatsCards stats={stats} />;
-        ;
         <Tabs defaultValue="all" className="mb-8">;
           <TabsList>;
             <TabsTrigger value="all">All Flags</TabsTrigger>;
@@ -186,7 +175,6 @@ export default function FraudDetection() {;
             <TabsTrigger value="dangerous">Dangerous</TabsTrigger>;
             <TabsTrigger value="actioned">Actioned</TabsTrigger>;
           </TabsList>;
-          ;
           <TabsContent value="all" className="mt-6">;
             {/* Search and Filters */}
             <FraudFilters;
@@ -199,7 +187,6 @@ export default function FraudDetection() {;
               setContentTypeFilter={setContentTypeFilter}
               resetFilters={resetFilters}
             />;
-            ;
             {/* Flags Table */}
             <Card>;
               <CardContent className="p-0">;
@@ -212,15 +199,12 @@ export default function FraudDetection() {;
               </CardContent>;
             </Card>;
           </TabsContent>;
-          ;
           <TabsContent value="pending">;
             <FraudTabContent tabValue="pending" />;
           </TabsContent>;
-          ;
           <TabsContent value="dangerous">;
             <FraudTabContent tabValue="dangerous" />;
           </TabsContent>;
-          ;
           <TabsContent value="actioned">;
             <FraudTabContent tabValue="actioned" />;
           </TabsContent>;
@@ -238,75 +222,72 @@ suspicious count: 0;
 dangerous count: 0;
 false positives: 0;
 actioned count: 0 
-});
-//Fetch fraud flags const fetchFraudFlags = async () => {
+);
+/Fetch fraud flags const fetchFraudFlags = async () => {
   setIsLoading (true);
 try {
   const {
   data, error 
-}= await supabase setFlags (data || []);
+= await supabase setFlags (data || []);
 setFilteredFlags (data || []);
-//Calculate stats 
-}finally {
+/Calculate stats 
+finally {
   setIsLoading (false) 
-}
-};
-useEffect ( () => {
+
+;
+useEffect () => {
   fetchFraudFlags () 
-}, []);
-//Apply filters useEffect ( () => {
+, []);
+/Apply filters useEffect () => {
   let result = [...flags];
-//Apply search filter if (searchQuery) {
+/Apply search filter if (searchQuery) {
   const query = searchQuery.toLowerCase ();
-result = result.filter ( (flag) => flag.user email?.toLowerCase () .includes (query) || flag.content excerpt.toLowerCase () .includes (query) || flag.reason.toLowerCase () .includes (query) ) 
-}//Apply status filter if (statusFilter) {
-  result = result.filter ( (flag) => flag.status === statusFilter) 
-}//Apply severity filter if (severityFilter) {
-  result = result.filter ( (flag) => flag.severity === severityFilter) 
-}//Apply content type filter if (contentTypeFilter) {
-  result = result.filter ( (flag) => flag.content type === contentTypeFilter) 
-}
-}, [flags, searchQuery, statusFilter, severityFilter, contentTypeFilter]);
-}catch (error) {
+result = result.filter (flag) => flag.user email?.toLowerCase () .includes (query) || flag.content excerpt.toLowerCase () .includes (query) || flag.reason.toLowerCase () .includes (query) 
+//Apply status filter if (statusFilter) {
+  result = result.filter (flag) => flag.status = = statusFilter) 
+//Apply severity filter if (severityFilter) {
+  result = result.filter (flag) => flag.severity = = severityFilter) 
+//Apply content type filter if (contentTypeFilter) {
+  result = result.filter (flag) => flag.content type = = contentTypeFilter) 
+
+, [flags, searchQuery, statusFilter, severityFilter, contentTypeFilter]);
+catch (error) {
   toast ({
   title: "Error", description: "Failed to update flag", variant: "destructive" 
-});
-}
-};
+);
 const hasFilters = !! (searchQuery || statusFilter || severityFilter || contentTypeFilter);
 Fraud Detection | Admin Dashboard"description=" Monitor and manage fraud detection alerts on the Zion AI Marketplace"/> <div className=" container mx-auto px-4 py-8"> <div className=" flex flex-col md:flex-row items-start md:items-center justify-between mb-8"> <div> <h1 className=" text-3xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent"> Fraud Detection </h1> <p className=" text-zion-slate-light mt-2"> Monitor suspicious activities and protect the marketplace from fraud and abuse </p> </div> <div className=" mt-4 md:mt-0"> <Button > Refresh Data </Button> </div> </div> {
   /* Stats Cards */ 
-}<FraudStatsCards stats= {
+<FraudStatsCards stats= {
   stats 
-}/> <Tabs defaultValue=" all"className=" mb-8"> <TabsList> <TabsTrigger value=" all">All Flags</TabsTrigger> <TabsTrigger value=" pending">Pending Review</TabsTrigger> <TabsTrigger value=" dangerous">Dangerous</TabsTrigger> <TabsTrigger value=" actioned">Actioned</TabsTrigger> </TabsList> <FraudFilters searchQuery= {
+/> <Tabs defaultValue=" all"className=" mb-8"> <TabsList> <TabsTrigger value=" all">All Flags</TabsTrigger> <TabsTrigger value=" pending">Pending Review</TabsTrigger> <TabsTrigger value=" dangerous">Dangerous</TabsTrigger> <TabsTrigger value=" actioned">Actioned</TabsTrigger> </TabsList> <FraudFilters searchQuery= {
   searchQuery 
-}setSearchQuery= {
+setSearchQuery= {
   setSearchQuery 
-}statusFilter= {
+statusFilter= {
   statusFilter 
-}setStatusFilter= {
+setStatusFilter= {
   setStatusFilter 
-}severityFilter= {
+severityFilter= {
   severityFilter 
-}setSeverityFilter= {
+setSeverityFilter= {
   setSeverityFilter 
-}contentTypeFilter= {
+contentTypeFilter= {
   contentTypeFilter 
-}setContentTypeFilter= {
+setContentTypeFilter= {
   setContentTypeFilter 
-}resetFilters= {
+resetFilters= {
   resetFilters 
-}/> {
+/> {
   /* Flags Table */ 
-}<Card> <CardContent className=" p-0"> <FraudFlagsTable flags= {
+<Card> <CardContent className=" p-0"> <FraudFlagsTable flags= {
   filteredFlags 
-}isLoading= {
+isLoading= {
   isLoading 
-}hasFilters= {
+hasFilters= {
   hasFilters 
-}resetFilters= {
+resetFilters= {
   resetFilters 
-}onAction= {
+onAction= {
   handleAction 
-}/> </CardContent> </Card> </TabsContent> <TabsContent value=" pending"> <FraudTabContent tabValue=" pending"/> </TabsContent> <TabsContent value=" dangerous"> <FraudTabContent tabValue=" dangerous"/> </TabsContent> <TabsContent value=" actioned"> <FraudTabContent tabValue=" actioned" /> </TabsContent> </Tabs> </div> </AppLayout>) 
-}
+/> </CardContent> </Card> </TabsContent> <TabsContent value=" pending"> <FraudTabContent tabValue=" pending"/> </TabsContent> <TabsContent value=" dangerous"> <FraudTabContent tabValue=" dangerous"/> </TabsContent> <TabsContent value=" actioned"> <FraudTabContent tabValue=" actioned" /> </TabsContent> </Tabs> </div> </AppLayout>) 

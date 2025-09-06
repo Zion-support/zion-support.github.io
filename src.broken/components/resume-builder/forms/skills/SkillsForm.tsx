@@ -6,5 +6,3 @@ export function SkillsForm() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

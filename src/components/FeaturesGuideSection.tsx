@@ -14,7 +14,7 @@ import {
   BarChart3
   Plus
   HelpCircle
-} from 'lucide-react'
+ from 'lucide-react'
 export function FeaturesGuideSection() {
   const features = [
     {import Link from "next/link"
@@ -286,7 +286,7 @@ import {;
   BarChart3,;
   Plus,;
   HelpCircle,;
-} from 'lucide-react';
+ from 'lucide-react';
 export function FeaturesGuideSection() {;
   const features = [;
     {import Link from "next/link";
@@ -554,7 +554,7 @@ import {
   BarChart3,
   Plus,
   HelpCircle,
-} from 'lucide-react';
+ from 'lucide-react';
 export /**
  * FeaturesGuideSection - Function description
  */
@@ -840,7 +840,7 @@ function FeaturesGuideSection() {
               >
                 {feature.title}
               </TabsTrigger>
-            ))}
+            )}
           </TabsList>
           <TabsList className='grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1'>
             {features.slice(4).map(feature => (
@@ -856,7 +856,7 @@ function FeaturesGuideSection() {
               >
                 {feature.title}
               </TabsTrigger>
-            ))}
+            )}
           </TabsList>
           {features.map(feature => (
             <TabsContent key={feature.id} value={feature.id} className='mt-8'>
@@ -892,22 +892,22 @@ function FeaturesGuideSection() {
                     How to Use
                   </h4>
                   <ol className='list-decimal list-inside space-y-3 pl-4'>
-                    {feature.instructions.map((instruction, idx) => (
+                    {feature.instructions.map(instruction, idx) => (
                       <li key={idx} className='text-zion-slate-light'>
                         <span className='text-zion-cyan mr-2'>{idx + 1}.</span>                        {instruction}
                 <div className="md:w-2/3 bg-zion-blue-dark p-6 rounded-lg">
                   <h4 className="text-xl font-semibold text-white mb-4">How to Use</h4>
                   <ol className="list-decimal list-inside space-y-3 pl-4">
-                    {feature.instructions.map((instruction, idx,) => (
+                    {feature.instructions.map(instruction, idx,) => (
                       <li key={idx} className="text-zion-slate-light">
                         <span className="text-zion-cyan mr-2">{idx + 1}.</span>
                       </li>
-                    ))}
+                    )}
                   </ol>;
                 </div>;
               </div>;
             </TabsContent>;
-          ))}
+          )}
         </Tabs>
         <div className='mt-12 text-center'>
         </Tabs>;
@@ -930,9 +930,7 @@ function FeaturesGuideSection() {
       </div>
     </section>
   )
-}
-  )
-}
+
             >;
               Explore Full Marketplace;
               <ArrowRight className='ml-2 h-4 w-4' />            </Link>              <ArrowRight className="ml-2 h-4 w-4" />;
@@ -942,11 +940,10 @@ function FeaturesGuideSection() {
       </div>;
     </section>;
   );
-}
+
   );
-};
   );
-}
+
                   </p>;
                   <Button;
                     className='bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple'                    as_child;
@@ -969,20 +966,20 @@ function FeaturesGuideSection() {
                     How to Use;
                   </h4>;
                   <ol className='list - decimal list - inside space - y-3 pl - 4'>;
-                    {feature.instructions.map ((instruction, idx) => (
+                    {feature.instructions.map (instruction, idx) => (
                       <li key={idx} className='text - zion - slate - light'>;
                         <span className='text - zion - cyan mr - 2'>{idx + 1}.</span>                        {instruction}
                 <div className="md:w - 2/3 bg - zion - blue - dark p - 6 rounded - lg">;
                   <h4 className="text - xl font - semibold text - white mb - 4">How to Use</h4>;
                   <ol className="list - decimal list - inside space - y-3 pl - 4">;
-                    {feature.instructions.map ((instruction, idx, ) => (
+                    {feature.instructions.map (instruction, idx, ) => (
                       <li key={idx} className="text - zion - slate - light">;
                         <span className="text - zion - cyan mr - 2">{idx + 1}.</span>;
-                      </li>))}
+                      </li>)}
                   </ol>;
                 </div>;
               </div>;
-            </TabsContent>))}
+            </TabsContent>)}
         </Tabs>;
         <div className='mt - 12 text - center'>;
           <Button;
@@ -1002,6 +999,5 @@ function FeaturesGuideSection() {
         </div>;
       </div>;
     </section>);
-}
+
   );
-}

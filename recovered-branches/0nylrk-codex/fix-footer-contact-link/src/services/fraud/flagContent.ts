@@ -1,9 +1,9 @@
 
-// Content flagging functionality
+/ Content flagging functionality
 import { supabase  } from '@/integrations/supabase/client';
 import { FraudSeverity, FraudFlag  } from '@/types/fraud';
 import { FlagResult } from './types';
-/**
+**
  * Flag content for review
  */
 
@@ -16,7 +16,7 @@ export const flagContent = async (
   severity: FraudSeverity;
   reason: string
   ipAddress?: string
-): Promise<FlagResult> => {
+: Promise<FlagResult> => {
   try {
     console && console.log('Flagging content for review:', {
       userId;
@@ -38,17 +38,13 @@ export const flagContent = async (
       status: 'pending'
     });
     if (error) throw error;
-    return { success: true }
-  } catch (error) {
+    return { success: true } catch (error) {
     console.error('Error flagging content:', error);
     return {
       success: false
       error: error instanceof Error ? error.message : 'Unknown error'
     }
-  }
-}
 
-;
     const { error } = await supabase.from ('fraud_flags').insert ({
       user_id: user_id;
       user_email: user_email;
@@ -61,18 +57,14 @@ export const flagContent = async (
       timestamp: new Date ().toISOString (),
       status: 'pending';
     });
-;
+
     // Check condition
 if (throw error) {
   $2
-}
-    return { success: true }
-  } catch (error) {
+
+    return { success: true } catch (error) {
     console.error ('Error flagging content:', error);
     return {
       success: false,
       error: error instanceof Error ? error.message : 'Unknown error';
     }
-  }
-}
-;

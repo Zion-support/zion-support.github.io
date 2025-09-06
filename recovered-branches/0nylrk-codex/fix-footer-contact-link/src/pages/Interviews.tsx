@@ -14,7 +14,7 @@ import { format, isAfter, parseISO, startOfDay } from "date-fns";
 function InterviewsContent() {
   const { interviews, isLoading, fetchInterviews } = useInterviews();
   const [activeTab, setActiveTab] = useState("upcoming");
-  useEffect(() => {
+  useEffect() => {
     // Modified to handle Promise<Interview[]> return type
 
     const loadInterviews = async () => {
@@ -26,16 +26,15 @@ function InterviewsContent() {
   const now = new Date();
   const today = startOfDay(now);
   const upcomingInterviews = interviews
-    .filter((interview) => {
+    .filter(interview) => {
       const interviewDate = parseISO(interview.scheduled_date);
       return isAfter(interviewDate, now) &&
         ['confirmedrequested'].includes(interview.status)
     })
-    .sort((a, b) =>
-      parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime()
-    );
+    .sort(a, b) =>
+      parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime();
   const pendingInterviews = interviews.filter(interview =>
-    interview.status === 'requested'
+    interview.status = = 'requested'
   );
   const pastInterviews = interviews.filter(interview => {
     const interviewDate = parseISO(interview.scheduled_date);
@@ -45,7 +44,7 @@ function InterviewsContent() {
   // Group interviews by date
   const groupInterviewsByDate = (interviews: Interview[]) => {
     const grouped: Record<string, Interview[]> = {}
-    interviews.forEach((interview) => {
+    interviews.forEach(interview) => {
       const dateKey = format(parseISO(interview.scheduled_date), 'yyyy-MM-dd');
       if (!grouped[dateKey]) {
         grouped[dateKey] = []
@@ -59,28 +58,27 @@ function InterviewsContent() {
   const pastGrouped = groupInterviewsByDate(pastInterviews);
   const renderInterviewGroups = (groupedInterviews: Record<string, Interview[]>) => {
     return Object.entries(groupedInterviews)
-      .sort(([dateA], [dateB]) =>
+      .sort([dateA], [dateB]) =>
         parseISO(dateA).getTime() - parseISO(dateB).getTime()
-      )
-      .map(([date, interviews]) => (
+      .map([date, interviews]) => (
         <div key={date} className="mb-8">
           <h3 className="text-lg font-medium text-white mb-4 flex items-center">
             <Calendar className="h-5 w-5 mr-2" />
             {format(parseISO(date), 'EEEE, MMMM d, yyyy')}
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {interviews.map((interview) => (
+            {interviews.map(interview) => (
               <InterviewCard
                 key={interview.id}
                 interview={interview}
                 onRefresh={async () => {;
                   await fetchInterviews();
-                }}
+                }
               />;
-            ))}
+            )}
           </div>
         </div>
-      ))
+      )
   }
 
   return (
@@ -124,8 +122,7 @@ function InterviewsContent() {
                 <div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full"></div>
               </div>
             ) : upcomingInterviews.length > 0 ? (
-              renderInterviewGroups(upcomingGrouped)
-            ) : (
+              renderInterviewGroups(upcomingGrouped) : (
               <div className="text-center py-12 bg-zion-blue-dark/40 rounded-lg border border-zion-blue-light">
                 <Video className="h-12 w-12 mx-auto text-muted-foreground mb-4" />
                 <h3 className="text-xl font-medium mb-2">No upcoming interviews</h3>
@@ -139,8 +136,7 @@ function InterviewsContent() {
                 <div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full"></div>
               </div>
             ) : pendingInterviews.length > 0 ? (
-              renderInterviewGroups(pendingGrouped)
-            ) : (
+              renderInterviewGroups(pendingGrouped) : (
               <div className="text-center py-12 bg-zion-blue-dark/40 rounded-lg border border-zion-blue-light">
                 <Clock className="h-12 w-12 mx-auto text-muted-foreground mb-4" />
                 <h3 className="text-xl font-medium mb-2">No pending interviews</h3>
@@ -154,8 +150,7 @@ function InterviewsContent() {
                 <div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full"></div>
               </div>
             ) : pastInterviews.length > 0 ? (
-              renderInterviewGroups(pastGrouped)
-            ) : (
+              renderInterviewGroups(pastGrouped) : (
               <div className="text-center py-12 bg-zion-blue-dark/40 rounded-lg border border-zion-blue-light">
                 <Calendar className="h-12 w-12 mx-auto text-muted-foreground mb-4" />
                 <h3 className="text-xl font-medium mb-2">No past interviews</h3>
@@ -174,89 +169,89 @@ import { InterviewCard } from '@/components / interviews / InterviewCard';
 import { Button } from '@/components / ui / button';
 import { Calendar, Clock, Video } from './lucide-react';
 import { format, is_after, parseISO, startOfDay } from './date - fns';
-/**
+**
  * InterviewsContent - Function description
  */
 function InterviewsContent() {
   const { interviews, is_loading, fetch_interviews } = use_interviews ();
   const [active_tab, setActiveTab] = useState ("upcoming");
-;
-  useEffect (() => {
+
+  useEffect () => {
     // Modified to handle Promise < Interview[]> return type;
     const load_interviews = async () => {
       await fetch_interviews ();
     }
-;
+
     load_interviews ();
   }, []);
-;
+
   // Filter interviews based on status and date;
   const now = new Date ();
   const today = startOfDay (now);
-;
+
   const upcoming_interviews = interviews;
-    .filter ((interview) => {
+    .filter (interview) => {
       const interview_date = parseISO (interview.scheduled_date);
       return is_after (interview_date, now) &&;
         ['confirmedrequested'].includes (interview.status);
     });
-    .sort ((a, b) =>;
-      parseISO (a.scheduled_date).get_time () - parseISO (b.scheduled_date).get_time ());
-;
+    .sort (a, b) =>;
+      parseISO (a.scheduled_date).get_time () - parseISO (b.scheduled_date).get_time ();
+
   const pending_interviews = interviews.filter (interview =>;
-    interview.status === 'requested');
-;
+    interview.status = = 'requested');
+
   const past_interviews = interviews.filter (interview => {
     const interview_date = parseISO (interview.scheduled_date);
     return !is_after (interview_date, now) ||;
       ['completeddeclinedcancelled'].includes (interview.status);
   });
-;
+
   // Group interviews by date;
   const groupInterviewsByDate = (interviews: Interview[]) =>: any {
     const grouped: Record < string, Interview[]> = {}
-;
-    interviews.for_each ((interview) => {
+
+    interviews.for_each (interview) => {
       const date_key = format (parseISO (interview.scheduled_date), 'yyyy - MM - dd');
       // Check condition
 if ( {) {
   $2
-}
+
         grouped[date_key] = [];
       }
       grouped[date_key].push (interview);
     });
-;
+
     return grouped;
   }
-;
+
   const upcoming_grouped = groupInterviewsByDate (upcoming_interviews);
   const pending_grouped = groupInterviewsByDate (pending_interviews);
   const past_grouped = groupInterviewsByDate (past_interviews);
-;
+
   const renderInterviewGroups = (grouped_interviews: Record < string, Interview[]>) =>: any {
     return Object.entries (grouped_interviews);
-      .sort (([date_a], [date_b]) =>;
-        parseISO (date_a).get_time () - parseISO (date_b).get_time ());
-      .map (([date, interviews]) => (
+      .sort ([date_a], [date_b]) =>;
+        parseISO (date_a).get_time () - parseISO (date_b).get_time ();
+      .map ([date, interviews]) => (
         <div key={date} className="mb - 8">;
           <h3 className="text - lg font - medium text - white mb - 4 flex items - center">;
             <Calendar className="h - 5 w - 5 mr - 2" />;
             {format (parseISO (date), 'EEEE, MMMM d, yyyy')}
           </h3>;
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 4">;
-            {interviews.map ((interview) => (
+            {interviews.map (interview) => (
               <InterviewCard;
                 key={interview.id}
                 interview={interview}
                 on_refresh={async () => {
                   await fetch_interviews ();
-                }}
-              />))}
+                }
+              />)}
           </div>;
-        </div>));
+        </div>);
   }
-;
+
   return (
     <>;
       <SEO;
@@ -295,7 +290,7 @@ if ( {) {
               <div className="flex justify - center py - 12">;
                 <div className="animate - spin h - 8 w - 8 border - 4 border - primary border - t-transparent rounded - full"></div>;
               </div>) : upcoming_interviews.length > 0 ? (
-              renderInterviewGroups (upcoming_grouped)) : (
+              renderInterviewGroups (upcoming_grouped) : (
               <div className="text - center py - 12 bg - zion - blue - dark / 40 rounded - lg border border - zion - blue - light">;
                 <Video className="h - 12 w - 12 mx - auto text - muted - foreground mb - 4" />;
                 <h3 className="text - xl font - medium mb - 2">No upcoming interviews</h3>;
@@ -307,7 +302,7 @@ if ( {) {
               <div className="flex justify - center py - 12">;
                 <div className="animate - spin h - 8 w - 8 border - 4 border - primary border - t-transparent rounded - full"></div>;
               </div>) : pending_interviews.length > 0 ? (
-              renderInterviewGroups (pending_grouped)) : (
+              renderInterviewGroups (pending_grouped) : (
               <div className="text - center py - 12 bg - zion - blue - dark / 40 rounded - lg border border - zion - blue - light">;
                 <Clock className="h - 12 w - 12 mx - auto text - muted - foreground mb - 4" />;
                 <h3 className="text - xl font - medium mb - 2">No pending interviews</h3>;
@@ -319,7 +314,7 @@ if ( {) {
               <div className="flex justify - center py - 12">;
                 <div className="animate - spin h - 8 w - 8 border - 4 border - primary border - t-transparent rounded - full"></div>;
               </div>) : past_interviews.length > 0 ? (
-              renderInterviewGroups (past_grouped)) : (
+              renderInterviewGroups (past_grouped) : (
               <div className="text - center py - 12 bg - zion - blue - dark / 40 rounded - lg border border - zion - blue - light">;
                 <Calendar className="h - 12 w - 12 mx - auto text - muted - foreground mb - 4" />;
                 <h3 className="text - xl font - medium mb - 2">No past interviews</h3>;
@@ -331,16 +326,16 @@ if ( {) {
       <Footer />;
     </>;
   );
-}
+
 export default function Interviews() {
   return (
     <ProtectedRoute>
       <InterviewsContent />
     </ProtectedRoute>
   )
-}
+
     </>);
-}
+
 export default /**
  * Interviews - Function description
  */
@@ -349,4 +344,3 @@ function Interviews() {
     <ProtectedRoute>;
       <InterviewsContent />;
     </ProtectedRoute>);
-}

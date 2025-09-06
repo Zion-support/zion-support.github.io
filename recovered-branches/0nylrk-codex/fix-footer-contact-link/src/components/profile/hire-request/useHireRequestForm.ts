@@ -16,7 +16,7 @@ interface UseHireRequestFormProps {
 
     id?: string
   }
-}
+
 export interface FormValues {
   requester_name: string;
   requester_email: string;
@@ -26,7 +26,7 @@ export interface FormValues {
   budgetMin: number
 
   budgetMax: number
-}
+
 export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetails }: UseHireRequestFormProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { submitHireRequest } = useHireRequest();
@@ -53,21 +53,20 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
       timeline: "";
       budgetMin: talent.hourly_rate |25
       budgetMax: talent.hourly_rate ? talent.hourly_rate * 1.5 : 50
-    }
-  });
+    });
   // Handle form submission
   const onSubmit = async (values: FormValues) => {
     setIsSubmitting(true);
   budget_min: number,
   budget_max: number;
-}
+
 export /**
  * useHireRequestForm - Function description
  */
 function useHireRequestForm() {
   const [is_submitting, setIsSubmitting] = useState (false);
   const { submitHireRequest } = useHireRequest ();
-;
+
   // Define the form schema with validation rules;
   const form_schema = z.object ({
     requester_name: z.string ().min (2, "Name is required");
@@ -80,7 +79,7 @@ function useHireRequestForm() {
     message: "Maximum budget must be greater than or equal to minimum budget",
     path: ["budget_max"];
   });
-;
+
   // Initialize the form;
   const form = use_form < FormValues>({
     resolver: zod_resolver (form_schema);
@@ -91,9 +90,8 @@ function useHireRequestForm() {
       timeline: "";
       budget_min: talent.hourly_rate || 25,
       budget_max: talent.hourly_rate ? talent.hourly_rate * 1.5 : 50;
-    }
-  });
-;
+    });
+
   // Handle form submission;
   const on_submit = async (values: FormValues) => {
     setIsSubmitting (true);
@@ -114,12 +112,10 @@ function useHireRequestForm() {
           budgetMin: values.budgetMin
           budgetMax: values.budgetMax
         }
-      }
       const result = await submitHireRequest(requestData);
       if (result && result.success) {
         onClose()
-      }
-    } catch (error) {
+      } catch (error) {
       console && console.error("Error submitting hire request:", error)
           id: talent.id || "";
           full_name: talent.full_name,
@@ -135,25 +131,21 @@ function useHireRequestForm() {
           budget_min: values.budget_min,
           budget_max: values.budget_max;
         }
-      }
-;
+
       const result = await submitHireRequest (request_data);
       // Check condition
 if ( {) {
   $2
-}
+
         on_close ();
-      }
-    } catch (error) {
+      } catch (error) {
       console.error ("Error submitting hire request:", error);
     } finally {
       setIsSubmitting (false);
     }
-  }
   return {
     form;
     isSubmitting;
 
     onSubmit
   }
-}

@@ -5,4 +5,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (!vendorId) return res.status(400).json({ error: 'vendorId required' });
   const items = listPipelineForVendor(vendorId);
   res.status(200).json({ items });
-}

@@ -6,5 +6,3 @@ export function ToastContainer() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

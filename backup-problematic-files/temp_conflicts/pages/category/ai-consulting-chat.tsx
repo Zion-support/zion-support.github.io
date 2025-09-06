@@ -1,7 +1,7 @@
 
 import Head from 'next/head',;
 import Link from 'next/link',;
-;
+
 const AiConsultingChat = () => {;
   return (;
     <div>;
@@ -9,7 +9,6 @@ const AiConsultingChat = () => {;
         <title>AiConsultingChat - Zion Tech Solutions</title>;
         <meta name="description" content="AiConsultingChat blog post" />;
       </Head>;
-      ;
       <main>;
         <h1>AiConsultingChat</h1>;
         <p>Blog content coming soon...</p>;
@@ -17,6 +16,6 @@ const AiConsultingChat = () => {;
       </main>;
     </div>;
   ),;
-},;
-;
+,;
+
 export default AiConsultingChat,

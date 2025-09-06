@@ -138,4 +138,3 @@ export function SocialLogin() {
         <Web3Login />;
       </div>;
     </div>);
-}

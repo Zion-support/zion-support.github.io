@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
 const { exec } = require('child_process');
@@ -17,7 +17,7 @@ class BuildMonitor {
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}\n`;
-    console.log(logMessage.trim());
+    console.log(logMessage.trim();
     fs.appendFileSync(this.logFile, logMessage);
   }
   async checkBuildHealth() {
@@ -26,8 +26,7 @@ class BuildMonitor {
       build: { status: 'unknown', duration: 0, errors: [] },
       lint: { status: 'unknown', issues: [] },
       typeCheck: { status: 'unknown', errors: [] },
-      dependencies: { status: 'unknown', outdated: [] }
-    };
+      dependencies: { status: 'unknown', outdated: [] };
     try {
       // Check build
       this.log('Checking build status...');
@@ -81,8 +80,7 @@ class BuildMonitor {
       } catch (error) {
         results.dependencies.status = 'warning';
         this.log('Dependencies check: Some packages may be outdated', 'WARN');
-      }
-    } catch (error) {
+      } catch (error) {
       this.log(`Error during health check: ${error.message}`, 'ERROR');
     }
     return results;
@@ -91,30 +89,27 @@ class BuildMonitor {
     const errors = [];
     const lines = output.split('\n');
     lines.forEach(line => {
-      if (line.includes('Error:') || line.includes('SyntaxError:')) {
-        errors.push(line.trim());
-      }
-    });
+      if (line.includes('Error:') || line.includes('SyntaxError:') {
+        errors.push(line.trim();
+      });
     return errors;
   }
   parseLintIssues(output) {
     const issues = [];
     const lines = output.split('\n');
     lines.forEach(line => {
-      if (line.includes('error') || line.includes('warning')) {
-        issues.push(line.trim());
-      }
-    });
+      if (line.includes('error') || line.includes('warning') {
+        issues.push(line.trim();
+      });
     return issues;
   }
   parseTypeErrors(output) {
     const errors = [];
     const lines = output.split('\n');
     lines.forEach(line => {
-      if (line.includes('error TS')) {
-        errors.push(line.trim());
-      }
-    });
+      if (line.includes('error TS') {
+        errors.push(line.trim();
+      });
     return errors;
   }
   async sendAlert(results) {
@@ -130,16 +125,14 @@ class BuildMonitor {
       };
       fs.writeFileSync(
         path.join(__dirname, 'alerts', 'build-failure-alert.json'),
-        JSON.stringify(alertData, null, 2)
-      );
+        JSON.stringify(alertData, null, 2);
     }
-  }
   async generateReport(results) {
     // Read previous report for trends
     let previousReport = null;
-    if (fs.existsSync(this.reportFile)) {
+    if (fs.existsSync(this.reportFile) {
       try {
-        previousReport = JSON.parse(fs.readFileSync(this.reportFile, 'utf8'));
+        previousReport = JSON.parse(fs.readFileSync(this.reportFile, 'utf8');
       } catch (error) {
         this.log('Could not read previous report', 'WARN');
       }
@@ -153,52 +146,51 @@ class BuildMonitor {
   log(level, message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}`;
-    if (level === 'error') {
+    if (level = = 'error') {
       console.error(logMessage);
-    } else if (level === 'warn') {
+    } else if (level = = 'warn') {
       console.warn(logMessage);
     } else {
       console.log(logMessage);
     }
-  }
 
     const report = {
       ...results,
       trends: {
         consecutiveFailures: this.consecutiveFailures,
         improvementSinceLastRun: previousReport ? 
-          (results.build.status === 'success' && previousReport.build.status === 'failed') : false,
+          (results.build.status = = 'success' && previousReport.build.status = = 'failed') : false,
         degradationSinceLastRun: previousReport ?
-          (results.build.status === 'failed' && previousReport.build.status === 'success') : false
+          (results.build.status = = 'failed' && previousReport.build.status = = 'success') : false
       },
       healthScore: this.calculateHealthScore(results),
       recommendations: this.generateRecommendations(results)
     };
-    fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
+    fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2);
     this.log(`Build health report updated: ${this.reportFile}`);
     return report;
   }
   calculateHealthScore(results) {
     let score = 100;
-    if (results.build.status === 'failed') score -= 40;
-    if (results.lint.status === 'failed') score -= 20;
-    if (results.typeCheck.status === 'failed') score -= 20;
-    if (results.dependencies.status === 'warning') score -= 10;
+    if (results.build.status = = 'failed') score -= 40;
+    if (results.lint.status = = 'failed') score -= 20;
+    if (results.typeCheck.status = = 'failed') score -= 20;
+    if (results.dependencies.status = = 'warning') score -= 10;
     // Penalty for slow builds
     if (results.build.duration > 120000) score -= 10; // 2 minutes
     return Math.max(0, score);
   }
   generateRecommendations(results) {
     const recommendations = [];
-    if (results.build.status === 'failed') {
+    if (results.build.status = = 'failed') {
       recommendations.push('Fix build errors immediately');
       recommendations.push('Run intelligent error fixer');
     }
-    if (results.lint.status === 'failed') {
+    if (results.lint.status = = 'failed') {
       recommendations.push('Address linting issues');
       recommendations.push('Consider running auto-formatter');
     }
-    if (results.typeCheck.status === 'failed') {
+    if (results.typeCheck.status = = 'failed') {
       recommendations.push('Fix TypeScript errors');
       recommendations.push('Review type definitions');
     }
@@ -219,7 +211,7 @@ class BuildMonitor {
       this.log('info', 'Checking build status...');
       // Check if .next directory exists and is recent
       const nextDir = path.join(process.cwd(), '.next');
-      if (fs.existsSync(nextDir)) {
+      if (fs.existsSync(nextDir) {
         const stats = fs.statSync(nextDir);
         const age = Date.now() - stats.mtime.getTime();
         const maxAge = 30 * 60 * 1000; // 30 minutes
@@ -228,16 +220,14 @@ class BuildMonitor {
           await this.triggerBuild();
         } else {
           this.log('info', 'Build is fresh');
-        }
-      } else {
+        } else {
         this.log('warn', 'No build found, triggering build...');
         await this.triggerBuild();
       }
-      
+
       if (report.healthScore < 70) {
         this.log('Build health is below threshold. Consider immediate action.', 'WARN');
-      }
-    } catch (error) {
+      } catch (error) {
       this.log(`Error in build monitor: ${error.message}`, 'ERROR');
     }
       return true;
@@ -245,7 +235,6 @@ class BuildMonitor {
       this.log('error', `Build check failed: ${error.message}`);
       return false;
     }
-  }
   async triggerBuild() {
     try {
       this.log('info', 'Triggering build...');
@@ -278,21 +267,20 @@ class BuildMonitor {
       this.log('error', `Build trigger failed: ${error.message}`);
       return false;
     }
-  }
   async handleBuildFailure(buildResult) {
     try {
       this.log('info', 'Handling build failure...');
       // Analyze common build errors
       const errors = buildResult.errors.toLowerCase();
-      if (errors.includes('typescript') || errors.includes('ts')) {
+      if (errors.includes('typescript') || errors.includes('ts') {
         this.log('info', 'TypeScript errors detected, running type check...');
         await execAsync('npm run type-check');
       }
-      if (errors.includes('eslint') || errors.includes('lint')) {
+      if (errors.includes('eslint') || errors.includes('lint') {
         this.log('info', 'Linting errors detected, running lint fix...');
         await execAsync('npm run lint:fix');
       }
-      if (errors.includes('dependency') || errors.includes('module not found')) {
+      if (errors.includes('dependency') || errors.includes('module not found') {
         this.log('info', 'Dependency issues detected, reinstalling...');
         await execAsync('npm install');
       }
@@ -304,11 +292,9 @@ class BuildMonitor {
       if (!retryResult) {
         this.log('error', 'Build retry failed, manual intervention required');
         await this.notifyBuildFailure(buildResult);
-      }
-    } catch (error) {
+      } catch (error) {
       this.log('error', `Build failure handling failed: ${error.message}`);
     }
-  }
   async fixCommonSyntaxErrors() {
     try {
       this.log('info', 'Fixing common syntax errors...');
@@ -321,20 +307,20 @@ class BuildMonitor {
         'utils/next-link-shim.tsx'
       ];
       for (const file of filesToCheck) {
-        if (fs.existsSync(file)) {
+        if (fs.existsSync(file) {
           let content = fs.readFileSync(file, 'utf8');
           let modified = false;
           // Fix common issues
-          if (content.includes("'") && !content.includes("'")) {
+          if (content.includes("'") && !content.includes("'") {
             content = content.replace(/'/g, "'");
             modified = true;
           }
-          if (content.includes('"') && !content.includes('"')) {
+          if (content.includes('"') && !content.includes('"') {
             content = content.replace(/"/g, '"');
             modified = true;
           }
           // Fix missing semicolons
-          if (content.includes('export const') && !content.includes(';')) {
+          if (content.includes('export const') && !content.includes(';') {
             content = content.replace(/(export const[^;]+)/g, '$1;');
             modified = true;
           }
@@ -349,12 +335,9 @@ class BuildMonitor {
             fs.writeFileSync(file, content);
             this.log('info', `Fixed syntax errors in ${file}`);
           }
-        }
-      }
-    } catch (error) {
+      } catch (error) {
       this.log('error', `Syntax error fixing failed: ${error.message}`);
     }
-  }
   async notifyBuildFailure(buildResult) {
     try {
       this.log('info', 'Notifying about build failure...');
@@ -367,28 +350,27 @@ class BuildMonitor {
         suggestions: this.generateBuildSuggestions(buildResult.errors)
       };
       const reportPath = path.join(__dirname, 'logs', 'build-failure-report.json');
-      fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+      fs.writeFileSync(reportPath, JSON.stringify(report, null, 2);
       this.log('error', `Build failure report saved to ${reportPath}`);
     } catch (error) {
       this.log('error', `Build failure notification failed: ${error.message}`);
     }
-  }
   generateBuildSuggestions(errors) {
     const suggestions = [];
     const errorText = errors.toLowerCase();
-    if (errorText.includes('typescript')) {
+    if (errorText.includes('typescript') {
       suggestions.push('Run "npm run type-check" to identify TypeScript errors');
       suggestions.push('Check for missing type annotations');
     }
-    if (errorText.includes('eslint')) {
+    if (errorText.includes('eslint') {
       suggestions.push('Run "npm run lint:fix" to auto-fix linting issues');
       suggestions.push('Check for unused variables and imports');
     }
-    if (errorText.includes('module not found')) {
+    if (errorText.includes('module not found') {
       suggestions.push('Run "npm install" to install missing dependencies');
       suggestions.push('Check import paths and file locations');
     }
-    if (errorText.includes('syntax')) {
+    if (errorText.includes('syntax') {
       suggestions.push('Check for missing semicolons and brackets');
       suggestions.push('Validate JSX syntax in React components');
     }
@@ -400,7 +382,7 @@ class BuildMonitor {
       totalBuilds: this.buildHistory.length,
       successfulBuilds: this.buildHistory.filter(b => b.success).length,
       failedBuilds: this.buildHistory.filter(b => !b.success).length,
-      averageBuildTime: this.buildHistory.reduce((sum, b) => sum + b.duration, 0) / this.buildHistory.length || 0
+      averageBuildTime: this.buildHistory.reduce(sum, b) => sum + b.duration, 0) / this.buildHistory.length || 0
     };
     return stats;
   }
@@ -413,7 +395,7 @@ class BuildMonitor {
     this.log('info', 'Starting build monitor...');
     // Create logs directory
     const logsDir = path.join(__dirname, 'logs');
-    if (!fs.existsSync(logsDir)) {
+    if (!fs.existsSync(logsDir) {
       fs.mkdirSync(logsDir, { recursive: true });
     }
     // Initial build check
@@ -435,10 +417,10 @@ class BuildMonitor {
     }
     this.log('info', 'Build monitor stopped');
   }
-}
-// Handle command line arguments
+
+/ Handle command line arguments
 const monitor = new BuildMonitor();
-if (require.main === module) {
+if (require.main = = module) {
   const monitor = new BuildMonitor();
   monitor.run().catch(console.error);
   const command = process.argv[2];
@@ -460,19 +442,18 @@ if (require.main === module) {
       break;
     case 'stats':
       monitor.getBuildStats().then(stats => {
-        console.log('Build Statistics:', JSON.stringify(stats, null, 2));
+        console.log('Build Statistics:', JSON.stringify(stats, null, 2);
       }).catch(console.error);
       break;
     default:
       console.log('Usage: node build-monitor.js [start|stop|status|check|build|stats]');
   }
-}
 
 const fs = require('fs);
 const path = require('path'),
   const { execSync } = require(child_process');
 
-/**
+**
  * Build Monitor - Continuously monitors build health and reports issues
  */
 
@@ -482,7 +463,7 @@ class BuildMonitor {
     this.reportFile = path.join(__dirname, 'reportsbuild-status.json');
     this.alertThreshold = 3; // Alert after 3 consecutive failures
     this.consecutiveFailures = 0;
-    
+
     // Ensure directories exist
     fs.mkdirSync(path.dirname(this.logFile), { recursive: true });
     fs.mkdirSync(path.dirname(this.reportFile), { recursive: true })}
@@ -490,7 +471,7 @@ class BuildMonitor {
   log(message, level = INFO') {
     const timestamp = new Date().toISOString(),
   const logMessage = `[${timestamp}] [${level}] ${message}\n`;
-    console.log(logMessage.trim());
+    console.log(logMessage.trim();
     fs.appendFileSync(this.logFile, logMessage)}
 
   async checkBuildHealth() {
@@ -499,8 +480,7 @@ class BuildMonitor {
       build: { status: 'unknown, duration: 0, errors: [] },
       lint: { status: 'unknown', issues: [] },
       typeCheck: { status: unknown', errors: [] },
-      dependencies: { status: 'unknown, outdated: [] }
-    };
+      dependencies: { status: 'unknown, outdated: [] };
 
     try {
       // Check build
@@ -550,9 +530,7 @@ class BuildMonitor {
         results.dependencies.outdated = JSON.parse(outdated),
   this.log(Dependencies check: SUCCESS')} catch (error) {
         results.dependencies.status = 'warning,
-  this.log('Dependencies check: Some packages may be outdatedWARN')}
-
-    } catch (error) {
+  this.log('Dependencies check: Some packages may be outdatedWARN')} catch (error) {
       this.log(`Error during health check: ${error.message}`, ERROR')}
 
     return results}
@@ -561,36 +539,33 @@ class BuildMonitor {
     const errors = [];
     const lines = output.split('\n),
   lines.forEach(line => {
-      if (line.includes('Error:') || line.includes(SyntaxError:')) {
-        errors.push(line.trim())}
-    });
-    
+      if (line.includes('Error:') || line.includes(SyntaxError:') {
+        errors.push(line.trim()});
+
     return errors}
 
   parseLintIssues(output) {
     const issues = [];
     const lines = output.split('\n),
   lines.forEach(line => {
-      if (line.includes('error') || line.includes(warning')) {
-        issues.push(line.trim())}
-    });
-    
+      if (line.includes('error') || line.includes(warning') {
+        issues.push(line.trim()});
+
     return issues}
 
   parseTypeErrors(output) {
     const errors = [];
     const lines = output.split('\n),
   lines.forEach(line => {
-      if (line.includes('error TS')) {
-        errors.push(line.trim())}
-    });
-    
+      if (line.includes('error TS') {
+        errors.push(line.trim()});
+
     return errors}
 
   async sendAlert(results) {
     if (this.consecutiveFailures >= this.alertThreshold) {
       this.log(`ALERT: ${this.consecutiveFailures} consecutive build failures!`, CRITICAL');
-      
+
       // Create alert file for other processes to pick up
       const alertData = {
         type: 'build_failure,
@@ -599,96 +574,90 @@ class BuildMonitor {
         lastError: results.build.errors[0] || 'Unknown error',
         results: results
       };
-      
+
       fs.writeFileSync(
         path.join(__dirname, alertsbuild-failure-alert.json'),
-        JSON.stringify(alertData, null, 2)
-      )}
-  }
+        JSON.stringify(alertData, null, 2)}
 
   async generateReport(results) {
     // Read previous report for trends
     let previousReport = null,
-  if (fs.existsSync(this.reportFile)) {
+  if (fs.existsSync(this.reportFile) {
       try {
-        previousReport = JSON.parse(fs.readFileSync(this.reportFile, 'utf8))} catch (error) {
+        previousReport = JSON.parse(fs.readFileSync(this.reportFile, 'utf8)} catch (error) {
         this.log('Could not read previous reportWARN')}
-    }
 
     const report = {
       ...results,
       trends: {
         consecutiveFailures: this.consecutiveFailures,
         improvementSinceLastRun: previousReport ? 
-          (results.build.status === success' && previousReport.build.status === 'failed) : false,
+          (results.build.status = = success' && previousReport.build.status = = 'failed) : false,
         degradationSinceLastRun: previousReport ?
-          (results.build.status === 'failed' && previousReport.build.status === success') : false
+          (results.build.status = = 'failed' && previousReport.build.status = = success') : false
       },
       healthScore: this.calculateHealthScore(results),
       recommendations: this.generateRecommendations(results)
     };
 
-    fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
+    fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2);
     this.log(`Build health report updated: ${this.reportFile}`);
-    
+
     return report}
 
   calculateHealthScore(results) {
     let score = 100;
-    
-    if (results.build.status === 'failed) score -= 40;
-    if (results.lint.status === 'failed') score -= 20;
-    if (results.typeCheck.status === failed') score -= 20,
-  if (results.dependencies.status === 'warning) score -= 10;
-    
+
+    if (results.build.status = = 'failed) score -= 40;
+    if (results.lint.status = = 'failed') score -= 20;
+    if (results.typeCheck.status = = failed') score -= 20,
+  if (results.dependencies.status = = 'warning) score -= 10;
+
     // Penalty for slow builds
     if (results.build.duration > 120000) score -= 10; // 2 minutes
-    
+
     return Math.max(0, score)}
 
   generateRecommendations(results) {
     const recommendations = [];
-    
-    if (results.build.status === 'failed') {
+
+    if (results.build.status = = 'failed') {
       recommendations.push(Fix build errors immediately'),
   recommendations.push('Run intelligent error fixer)}
-    
-    if (results.lint.status === 'failed') {
+
+    if (results.lint.status = = 'failed') {
       recommendations.push(Address linting issues'),
   recommendations.push('Consider running auto-formatter)}
-    
-    if (results.typeCheck.status === 'failed') {
+
+    if (results.typeCheck.status = = 'failed') {
       recommendations.push(Fix TypeScript errors'),
   recommendations.push('Review type definitions)}
-    
+
     if (results.build.duration > 180000) { // 3 minutes
       recommendations.push('Optimize build performance');
       recommendations.push(Consider build caching')}
-    
+
     if (results.dependencies.outdated.length > 10) {
       recommendations.push('Update outdated dependencies);
       recommendations.push('Schedule dependency maintenance')}
-    
+
     return recommendations}
 
   async run() {
     this.log(Starting build health check...');
-    
+
     try {
       const results = await this.checkBuildHealth();
       await this.sendAlert(results);
       const report = await this.generateReport(results),
   this.log(`Build health check completed. Health score: ${report.healthScore}/100`);
-      
-      if (report.healthScore < 70) {
-        this.log('Build health is below threshold. Consider immediate action.WARN)}
-      
-    } catch (error) {
-      this.log(`Error in build monitor: ${error.message}`, 'ERROR')}
-  }
 
-// Main execution
-if (require.main === module) {
+      if (report.healthScore < 70) {
+        this.log('Build health is below threshold. Consider immediate action.WARN)} catch (error) {
+      this.log(`Error in build monitor: ${error.message}`, 'ERROR')}
+
+/ Main execution
+if (require.main = = module) {
   const monitor = new BuildMonitor(),
   monitor.run().catch(console.error)}
 

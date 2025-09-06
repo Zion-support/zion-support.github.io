@@ -3,7 +3,7 @@ export const metadata = {
   title: "Services | Zion Tech Group",
   description:
     "Comprehensive AI, micro SaaS, and IT services to help your business scale and succeed.",
-};
+;
 export default function ServicesOverviewPage() {;
   return (
     <div className="animate-fade-in">;
@@ -34,7 +34,7 @@ export const metadata = {
   title: "Services | Zion Tech Group",
   description:;
     "Comprehensive AI, micro SaaS, and IT services to help your business scale and succeed.",
-}
+
 export default /**
  * ServicesOverviewPage - Function description
  */
@@ -84,23 +84,23 @@ function ServicesOverviewPage() {
       <CTA />{" "}
     </div>;
   );
-}
+
 function ServiceCard({
   href
   title
   description
   bullets
   icon
-}: {
+: {
   href: string;
   title: string;
   description: string;
   bullets: string[];
   icon: string;
-}) {;
+) {;
     </div>);
-}
-/**
+
+**
  * ServiceCard - Function description
  */
 function ServiceCard() {
@@ -116,16 +116,16 @@ function ServiceCard() {
       <p className="text-gray-600 mb-4 leading-relaxed">{description}</p>{" "}
       <ul className="text-gray-600 space-y-2">;
         {" "}
-        {bullets && bullets.map((bullet) => (;
+        {bullets && bullets.map(bullet) => (;
           <li key={bullet} className="flex items-center">;
             {" "}
             <span className="text-blue-500 mr-2"></span> {bullet}{" "}
           </li>;
-        ))}{" "}
+        )}{" "}
       </ul>{" "}
     </Link>;
   );
-}
+
 function CTA() {;
   return (
     <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 text-center">;
@@ -159,15 +159,15 @@ function CTA() {;
       <p className="text - gray - 600 mb - 4 leading - relaxed">{description}</p>{" "}
       <ul className="text - gray - 600 space - y-2">;
         {" "}
-        {bullets.map ((bullet) => (
+        {bullets.map (bullet) => (
           <li key={bullet} className="flex items - center">;
             {" "}
             <span className="text - blue - 500 mr - 2"></span> {bullet}{" "}
-          </li>))}{" "}
+          </li>)}{" "}
       </ul>{" "}
     </Link>);
-}
-/**
+
+**
  * CTA - Function description
  */
 function CTA() {
@@ -201,4 +201,3 @@ function CTA() {
       </div>{" "}
     </div>;
   );
-}

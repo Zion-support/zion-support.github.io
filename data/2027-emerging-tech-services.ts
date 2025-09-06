@@ -624,7 +624,7 @@ export const emergingTech2027Services: Service[] = [
       'Research'
     ]
   }
-];      'Government agenciesResearch institutionsEnvironmental organizationsInsurance companiesEnergy companies'
+;      'Government agenciesResearch institutionsEnvironmental organizationsInsurance companiesEnergy companies'
 
     ];
     marketSize: '$17 && 17.6B by 2027';
@@ -649,7 +649,7 @@ export const emergingTech2027Services: Service[] = [
       'Research',
     ],
   },
-];      'Government agencies_research institutions_environmental organizations_insurance companies_energy companies';
+;      'Government agencies_research institutions_environmental organizations_insurance companies_energy companies';
     ];
     market_size: '$17.6B by 2027';
     competitive_advantage: 'Only quantum climate modeling platform with real - time predictions';
@@ -658,5 +658,4 @@ export const emergingTech2027Services: Service[] = [
     link: 'https://ziontechgroup.com / services / quantum - climate - modeling',
     tags: ['Climate ModelingQuantum ComputingEnvironmentalWeatherResearch'];
   }
-];
 ;

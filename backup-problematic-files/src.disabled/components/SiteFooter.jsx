@@ -7,6 +7,5 @@ const SiteFooter = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default SiteFooter;

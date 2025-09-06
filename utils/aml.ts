@@ -4,23 +4,23 @@ export type WatchlistMatch = {
   score: number; // 0-1 match confidence
   referenceId?: string;
   detailsUrl?: string;
-}
+
 export type AmlCheckResult = {
   status: 'clear' | 'match' | 'review' | 'unknown';
   matches: WatchlistMatch[];
   checked_at: string; // ISO;
   provider: 'mock' | 'remote';
-}
+
 export interface AmlProvider {
   check_person (params: { fullLegalName: string; country: string, dob?: string }): Promise < AmlResult>;
   check_business (params: { business_name: string, country: string }): Promise < AmlResult>;
-}
+
 class MockAmlProvider implements AmlProvider {
   async checkPerson(params: { fullLegalName: string; country: string, dob?: string }): Promise<AmlResult> {
     // Mock implementation - in production, this would call a real AML service
     const name = params.fullLegalName.toLowerCase();
-    if (name.includes('test') |name.includes('demo')) {
-      return { status: 'match', details: { reason: 'Test name detected' } }
+    if (name.includes('test') |name.includes('demo') {
+      return { status: 'match', details: { reason: 'Test name detected' }
     }
     return { status: 'clear' };
   }
@@ -28,17 +28,16 @@ class MockAmlProvider implements AmlProvider {
   async checkBusiness(params: { businessName: string, country: string }): Promise<AmlResult> {
     // Mock implementation - in production, this would call a real AML service
     const name = params && params.businessName.toLowerCase();
-    if (name && name.includes('test') || name && name.includes('demo')) {
-      return { status: 'match', details: { reason: 'Test business name detected' } };
+    if (name && name.includes('test') || name && name.includes('demo') {
+      return { status: 'match', details: { reason: 'Test business name detected' };
     }
     return { status: 'clear' };
   }
-}
 
 export function getAmlProvider(): AmlProvider {
   return provider;  return new MockAmlProvider();
-}
-// AML (Anti-Money Laundering) utilities
+
+/ AML (Anti-Money Laundering) utilities
 export interface AmlCheck {
   id: string;
   userId: string;
@@ -56,7 +55,6 @@ export interface AmlCheck {
   createdAt: string;
   completedAt?: string;
   expiresAt: string;
-}
 
 export interface AmlProfile {
   userId: string;
@@ -74,7 +72,6 @@ export interface AmlProfile {
   checks: AmlCheck[];
   flags: string[];
   notes?: string;
-}
 
 export interface AmlConfig {
   enabled: boolean;
@@ -94,7 +91,6 @@ export interface AmlConfig {
   autoBlockThreshold: number;
   checkInterval: number; // days
   retentionPeriod: number; // days
-}
 
 class AmlManager {
   private profiles: Map<string, AmlProfile> = new Map();
@@ -161,40 +157,35 @@ class AmlManager {
       throw new Error('Profile not found');
     }
     return { status: 'clear' }
-  }
   async checkBusiness(params: { businessName: string, country: string }): Promise<AmlResult> {
     // Mock implementation - in production, this would call a real AML service
     const name = params.businessName.toLowerCase();
-    if (name.includes('test') |name.includes('demo')) {
-      return { status: 'match', details: { reason: 'Test business name detected' } }
+    if (name.includes('test') |name.includes('demo') {
+      return { status: 'match', details: { reason: 'Test business name detected' }
     }
     return { status: 'clear' }
-  }
-}
+
 export function getAmlProvider(): AmlProvider {
   return new MockAmlProvider();
-}
+
   async check_person (params: { fullLegalName: string; country: string, dob?: string }): Promise < AmlResult> {
     // Mock implementation - in production, this would call a real AML service;
     const name = params.fullLegalName.toLowerCase ();
-    if (|| name.includes ('demo')) {) {
+    if (|| name.includes ('demo') {) {
   $2
-}
-      return { status: 'match', details: { reason: 'Test name detected' } }
+
+      return { status: 'match', details: { reason: 'Test name detected' }
     }
     return { status: 'clear' }
-  }
   async check_business (params: { business_name: string, country: string }): Promise < AmlResult> {
     // Mock implementation - in production, this would call a real AML service;
     const name = params.business_name.toLowerCase ();
-    if (|| name.includes ('demo')) {) {
+    if (|| name.includes ('demo') {) {
   $2
-}
-      return { status: 'match', details: { reason: 'Test business name detected' } }
+
+      return { status: 'match', details: { reason: 'Test business name detected' }
     }
     return { status: 'clear' }
-  }
-}
+
 export function getAmlProvider (): AmlProvider {
   return new MockAmlProvider ();
-}

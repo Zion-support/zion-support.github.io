@@ -1,7 +1,7 @@
 import type { NextPage } from 'next',;
 import Head from 'next/head',;
 import Link from 'next/link',;
-;
+
 const ProductsPage:NextPage = () => {;
   const products = [;
     // AI & Automation Tools;
@@ -236,7 +236,7 @@ const ProductsPage:NextPage = () => {;
       ];
     }
   ],;
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-green-50">;
       <Head>;
@@ -244,7 +244,6 @@ const ProductsPage:NextPage = () => {;
         <meta name="description" content="Discover our comprehensive portfolio of micro SAAS products, IT solutions, and AI tools. From AI analytics to blockchain development, we offer cutting-edge technology products." />;
         <meta name="keywords" content="micro SAAS, AI tools, cloud solutions, development platforms, security tools, blockchain, IoT, business software" />;
       </Head>;
-      ;
       <main className="container mx-auto px-4 py-16">;
         {/* Header Section */}
         <div className="text-center mb-16">;
@@ -256,16 +255,16 @@ const ProductsPage:NextPage = () => {;
             Each product is designed to solve real business challenges and drive digital transformation.;
           </p>;
         </div>;
-;
+
         {/* Products Grid */}
         <div className="space-y-16">;
-          {products.map((category, categoryIndex) => (;
+          {products.map(category, categoryIndex) => (;
             <div key={categoryIndex} className="bg-white rounded-2xl shadow-xl p-8">;
               <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">;
                 {category.category}
               </h2>;
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
-                {category.products.map((product, productIndex) => (;
+                {category.products.map(product, productIndex) => (;
                   <div key={productIndex} className="bg-gradient-to-br from-green-50 to-blue-50 rounded-xl p-6 hover:shadow-lg transition-all duration-300 border border-green-100">;
                     <div className="flex items-center justify-between mb-4">;
                       <div className="text-4xl">{product.icon}</div>;
@@ -282,12 +281,12 @@ const ProductsPage:NextPage = () => {;
                     <div className="mb-4">;
                       <h4 className="font-semibold text-gray-800 mb-2">Key Features:</h4>;
                       <ul className="space-y-1">;
-                        {product.features.map((feature, featureIndex) => (;
+                        {product.features.map(feature, featureIndex) => (;
                           <li key={featureIndex} className="text-sm text-gray-600 flex items-center">;
                             <span className="text-green-500 mr-2"></span>;
                             {feature}
                           </li>;
-                        ))}
+                        )}
                       </ul>;
                     </div>;
                     <div className="mb-4">;
@@ -302,12 +301,12 @@ const ProductsPage:NextPage = () => {;
                       Learn More;
                     </Link>;
                   </div>;
-                ))}
+                )}
               </div>;
             </div>;
-          ))}
+          )}
         </div>;
-;
+
         {/* Enterprise Solutions Section */}
         <div className="bg-gradient-to-r from-green-600 to-blue-600 rounded-2xl p-8 mt-16 text-center text-white">;
           <h2 className="text-3xl font-bold mb-4">;
@@ -337,7 +336,7 @@ const ProductsPage:NextPage = () => {;
             Contact Sales Team;
           </Link>;
         </div>;
-;
+
         {/* Contact Section */}
         <div className="mt-16 text-center">;
           <h2 className="text-3xl font-bold text-gray-900 mb-8">;
@@ -379,11 +378,11 @@ const ProductsPage:NextPage = () => {;
       </main>;
     </div>;
   );
-},;
-;
+,;
+
 export default ProductsPage,;
 import React from 'react',;
-;
+
 export default function ProductsIndexPage() {;
   return (;
     <div className="container mx-auto px-4 py-10">;
@@ -391,4 +390,3 @@ export default function ProductsIndexPage() {;
       <p className="mt-2 text-gray-600 dark:text-gray-300">Browse Zion products.</p>;
     </div>;
   );
-}

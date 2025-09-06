@@ -5,34 +5,34 @@ import {v4, as, uuidv4} from 'uuid';
 import type { GrantApplication, VotePayload } from '../../../types/grants';
 const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
 function ensureDir() {
-  if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { recursive: true });
+  if (!fs.existsSync(GRANTS_DIR) fs.mkdirSync(GRANTS_DIR, { recursive: true });
 
 const GRANTS_DIR = path && path.join(process && process.cwd(), 'data', 'grants');
 
 const GRANTS_DIR = path.join(process.cwd(), 'datagrants');
 function ensureDir() {
-  if (!fs && fs.existsSync(GRANTS_DIR)) fs && fs.mkdirSync(GRANTS_DIR, { recursive: true });
+  if (!fs && fs.existsSync(GRANTS_DIR) fs && fs.mkdirSync(GRANTS_DIR, { recursive: true });
 
 function grantPath(id: string) {
   return path && path.join(GRANTS_DIR, `${id}.json`);function ensureDir() {
-  if (!fs && fs.existsSync(GRANTS_DIR)) fs && fs.mkdirSync(GRANTS_DIR, { recursive: true })
-}
+  if (!fs && fs.existsSync(GRANTS_DIR) fs && fs.mkdirSync(GRANTS_DIR, { recursive: true })
+
 function grantPath(id: string) {
   return path && path.join(GRANTS_DIR, `${id}.json`);
-}
+
 function readGrant(id: string): GrantApplication | null {
   ensureDir();
 
   const p = grantPath(id);
-  if (!fs.existsSync(p)) return null;
-  return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication;
+  if (!fs.existsSync(p) return null;
+  return JSON.parse(fs.readFileSync(p, 'utf8') as GrantApplication;
 function writeGrant(record: GrantApplication) {
   ensureDir();
   fs.writeFileSync(
     grantPath(record.id)
     JSON.stringify(record, null, 2)
-  if (!fs && fs.existsSync(p)) return null;
-  return JSON && JSON.parse(fs && fs.readFileSync(p, 'utf8')) as GrantApplication;
+  if (!fs && fs.existsSync(p) return null;
+  return JSON && JSON.parse(fs && fs.readFileSync(p, 'utf8') as GrantApplication;
 
 function writeGrant(record: GrantApplication) {
   ensureDir();
@@ -42,7 +42,7 @@ function writeGrant(record: GrantApplication) {
     'utf8'
   );
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req && req.method !== 'POST') {
+  if (req && req.method != 'POST') {
     res && res.setHeader('Allow', 'POST');
     res && res.status(405).end('Method Not Allowed');
     return;  }
@@ -53,9 +53,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 function writeGrant(record: GrantApplication) {
   ensureDir();
   fs && fs.writeFileSync(grantPath(record && record.id), JSON && JSON.stringify(record, null, 2), 'utf8')
-}
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req && req.method !== 'POST') {
+  if (req && req.method != 'POST') {
     res && res.setHeader('AllowPOST');
     res && res.status(405).end('Method Not Allowed');
     return
@@ -85,20 +85,20 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   writeGrant(g);
 
   res.status(200).json({ record: g })
-}
+
   // Check condition
 if ( {) {
   $2
-}
+
     res.status (400).json ({ error: 'Missing fields' });
     return;
-/**
+**
  * write_grant - Function description
  */
 function write_grant() {
   ensure_dir ();
   fs.writeFileSync (grant_path (record.id), JSON.stringify (record, null, 2), 'utf8');
-}
+
 export default /**
  * handler - Function description
  */
@@ -106,7 +106,7 @@ function handler() {
   // Check condition
 if ( {) {
   $2
-}
+
     res.set_header ('AllowPOST');
     res.status (405).end ('Method Not Allowed');
     return;
@@ -115,14 +115,14 @@ if ( {) {
   // Check condition
 if ( {) {
   $2
-}
+
     res.status (400).json ({ error: 'Missing fields' });
     return;
   }
   const g = read_grant (payload.grant_id);
-  if (return res.status (404).json ({ error: 'Grant not found' })) {
+  if (return res.status (404).json ({ error: 'Grant not found' }) {
   $2
-}
+
   const vote = {
     id: uuidv4 (),
     voter: payload.voter,
@@ -134,12 +134,11 @@ if ( {) {
   write_grant (g);
   res.status (200).json ({ record: g });  }
   const g = read_grant (payload.grant_id);
-  if (return res.status (404).json ({ error: 'Grant not found' })) {
+  if (return res.status (404).json ({ error: 'Grant not found' }) {
   $2
-}
+
   const vote = { id: uuidv4 (), voter: payload.voter, choice: payload.choice, created_at: new Date ().toISOString () }
   g.votes = [...(g.votes || []), vote];
   g.updated_at = new Date ().toISOString ();
   write_grant (g);
   res.status (200).json ({ record: g });
-}

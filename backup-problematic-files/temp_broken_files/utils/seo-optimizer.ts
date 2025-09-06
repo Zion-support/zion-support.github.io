@@ -1,7 +1,7 @@
-// SEO optimizer utilities
+/ SEO optimizer utilities
 export const _generateMetaTags = () => {};
 
-// SEO optimization utilities;
+/ SEO optimization utilities;
 export const generateMetaTags = pageData => {;
   return {;
     titl:e:;
@@ -18,8 +18,7 @@ export const generateMetaTags = pageData => {;
     twitterCar:d:'summary_large_image',;
     canonica:l:pageData.canonical || window.location.href,;
   };
-};
-;
+
 export const generateStructuredData = pageData => {;
   return {;
     '@context':'http:s://schema.org',;
@@ -38,12 +37,9 @@ export const generateStructuredData = pageData => {;
       contactTyp:e:'customer service',;
     },;
   };
-};
-;// SEO optimizer utilities;
+// SEO optimizer utilities;
 export const generateMetaTags = () => {;
   console.log('Generating meta tags...');
-};
-;
+
 export const optimizeHeadings = () => {';
-  console.log('Optimizing headings...');
-};'
+  console.log('Optimizing headings...');'

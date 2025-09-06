@@ -6,5 +6,3 @@ export function ExportsSection() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

@@ -11,41 +11,37 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { useForm } from "react-hook-form",;
 import z from "zod",;
 import { zodResolver } from "@hookform/resolvers/zod",;
-;
+
 const formSchema = z.object({;
   title:z.string().min(3, "Title must be at least 3 characters"),;
   keyFeatures:z.string(),;
   targetAudience:z.string()}),;
-;
+
 type FormData = z.infer<typeof formSchema>,;
-;
+
 interface ServiceDescriptionFormProps {;
   onDescriptionGenerated:(description:string) => void;
-}
-;
+
 export function ServiceDescriptionForm({ onDescriptionGenerated } ServiceDescriptionFormProps) {;
   const { toast } = useToast(),;
   const [isLoading, setIsLoading] = useState(false),;
-  ;
   const form = useForm<FormData>({;
     resolver:zodResolver(formSchema),;
     defaultValues:{;
       title:"",;
       keyFeatures:"",;
-      targetAudience:""}}),;
-;
+      targetAudience:""}),;
+
   const handleSubmit = async (data:FormData) => {;
     setIsLoading(true),;
-    ;
     try {;
       const { data:response, error } = await supabase.functions.invoke('generate-service-description', {;
         body:{ ;
           title:data.title, ;
           keyFeatures:data.keyFeatures, ;
           targetAudience:data.targetAudience ;
-        }
-      }),;
-;
+        }),;
+
       if (error) {;
         throw new Error(error.message),;
       }
@@ -53,9 +49,8 @@ export function ServiceDescriptionForm({ onDescriptionGenerated } ServiceDescrip
       if (response.error) {;
         throw new Error(response.error),;
       }
-;
+
       onDescriptionGenerated(response.description),;
-      ;
       toast({;
         title:"Description Generated",;
         description:"Your professional service description has been created.";
@@ -69,9 +64,8 @@ export function ServiceDescriptionForm({ onDescriptionGenerated } ServiceDescrip
       }),;
     } finally {;
       setIsLoading(false),;
-    }
-  },;
-;
+    },;
+
   return (;
     <Card className="border border-zion-blue-light bg-zion-blue-dark">;
       <CardHeader>;
@@ -103,7 +97,6 @@ export function ServiceDescriptionForm({ onDescriptionGenerated } ServiceDescrip
                   <FormMessage />;
                 </FormItem>;              )}
             />;
-            ;
             <FormField;
               control={form.control}
               name="keyFeatures";
@@ -121,7 +114,6 @@ export function ServiceDescriptionForm({ onDescriptionGenerated } ServiceDescrip
                   <FormMessage />;
                 </FormItem>;              )}
             />;
-            ;
             <FormField;
               control={form.control}
               name="targetAudience";
@@ -140,7 +132,6 @@ export function ServiceDescriptionForm({ onDescriptionGenerated } ServiceDescrip
                 </FormItem>;
               )}
             />;
-            ;
             <Button ;
               type="submit";
               disabled={isLoading}
@@ -165,33 +156,31 @@ export function ServiceDescriptionForm({ onDescriptionGenerated } ServiceDescrip
   ),; const formSchema = z.object ({
   title: z.string () .min (3, "Title must be at least 3 characters");
 keyFeatures: z.string ();
-targetAudience: z.string () 
-});
+targetAudience: z.string ();
 const handleSubmit = async (data: FormData) => {
   setIsLoading (true);
 try {
   const {
   data: response, error 
-}= await supabase.functions.invoke ('generate-service-description', {
+= await supabase.functions.invoke ('generate-service-description', {
   body: {
   title: data.title;
 keyFeatures: data.keyFeatures;
 targetAudience: data.targetAudience 
-}
-});
+
+);
 if (error) {
   throw new Error (error.message) 
-}if (response.error) {
+if (response.error) {
   throw new Error (response.error) 
-}
-}finally {
+
+finally {
   setIsLoading (false) 
-}
-};
->Service Title</FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) 
-}/> <FormField <FormItem> <FormLabel className="text-zion-slate-light" >Key Features</FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) 
-}/> <FormField <FormItem> <FormLabel className="text-zion-slate-light" >Target Audience</FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) 
-}/> <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white" > {
+
+;
+Service Title</FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) 
+/> <FormField <FormItem> <FormLabel className="text-zion-slate-light" >Key Features</FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) 
+/> <FormField <FormItem> <FormLabel className="text-zion-slate-light" >Target Audience</FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) 
+/> <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white" > {
   isLoading ? (<> <Loader className="mr-2 h-4 w-4 animate-spin" /> Generating Description... </>) : (<> <Sparkles className="h-4 w-4 mr-2" /> Generate Description </>) 
-}</Button> </form> </Form> </CardContent> </Card>) 
-}
+</Button> </form> </Form> </CardContent> </Card>) 

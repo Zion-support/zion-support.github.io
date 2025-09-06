@@ -6,5 +6,3 @@ export function MilestoneCard() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

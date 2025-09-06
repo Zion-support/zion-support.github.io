@@ -4,39 +4,38 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 export default function LeadEnrichment() {; return ( <Article title=\"Lead Enrichment API\" subtitle=\"Company,technographic,and intent signals from an email or domain\" price=\"from $149/mo\" bullets={[
-     \'"Firmographics\": \'size\',industry,location,funding stage\', \'"Technographics\": \'CMS\',analytics,ads,cloud stack\', \'Buying \"signals\": \'hiring\',product launches,traffic spikes\',,
+     \'"Firmographics\": \'size\',industry,location,funding stage\', \'"Technographics\": \'CMS\',analytics,ads,cloud stack\', \'Buying \"signals\": \'hiring\',product launches,traffic spikes\',
     \'REST API + Zapier + native HubSpot/Salesforce connectors\'
-  ]} links={{ \"website\": \'https: /> );
-  } ; function Article(): any ({ title,subtitle,price,bullets,links }: { \"title\": string; subtitle: string, price: string, bullets: string[], links: { website: string, contact: string } }) {; return ( <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}></div> <p><strong>{subtitle}</strong>></div> <p><strong>\"Pricing\": </strong> {price}></div> <ul> {bullets && bullets.map((b) => (; <li key={b}>{b}></div> ))} ></div> <p> \"Site\": <a href={links && links.website} target=\"_blank\" rel=\"noreferrer\">ziontechgroup && ziontechgroup.com</a>  \"Email\": <a href={links && links.contact}>kleber@ziontechgroup && ziontechgroup.com></div> ></div> ></div> );} ;
+  ]} links={ \"website\": \'https: /> );
+  } ; function Article(): any ({ title,subtitle,price,bullets,links }: { \"title\": string; subtitle: string, price: string, bullets: string[], links: { website: string, contact: string }) {; return ( <main style={ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }> <h1 style={ \"marginTop\": \'0\' }>{title}></div> <p><strong>{subtitle}</strong></div> <p><strong>\"Pricing\": </strong> {price}></div> <ul> {bullets && bullets.map(b) => (; <li key={b}>{b}></div> )} ></div> <p> \"Site\": <a href={links && links.website} target=\"_blank\" rel=\"noreferrer\">ziontechgroup && ziontechgroup.com</a>  \"Email\": <a href={links && links.contact}>kleber@ziontechgroup && ziontechgroup.com></div></div></div> );} ;
 module && module.exports = default function LeadEnrichment() {; return ( <Article title="Lead Enrichment API" subtitle="Company,technographic,and intent signals from an email or domain" price="from $149/mo" bullets={[
-     "Firmographics: "size",industry,location,funding stage", "Technographics: "CMS",analytics,ads,cloud stack", "Buying signals: "hiring",product launches,traffic spikes",,
+     "Firmographics: "size",industry,location,funding stage", "Technographics: "CMS",analytics,ads,cloud stack", "Buying signals: "hiring",product launches,traffic spikes",
     "REST API + Zapier + native HubSpot/Salesforce connectors"
-  ]} links={{ website: "https: /> );
+  ]} links={ website: "https: /> );
   } ; function Article(): any ({ title,subtitle,price,bullets,links }: { title: string, subtitle: string, price: string, bullets: string[], links: { website: string,;
-    contact: string } }) {; return ( <main style={{ fontFamily: "system-ui,sans-serif",padding: "32",maxWidth: "920",margin: "0 auto" }}> <h1 style={{ marginTop: "0" }}>{title}></div> <p><strong>{subtitle}</strong>></div> <p><strong>Pricing: </strong> {price}></div> <ul> {bullets && bullets.map((b) => (; <li key={b}>{b}></div> ))} ></div> <p> Site: <a href={links && links.website} target="_blank" rel="noreferrer">ziontechgroup && ziontechgroup.com</a> Email: <a href={links && links.contact}>kleber@ziontechgroup && ziontechgroup.com></div> ></div> ></div> );} ;""";
+    contact: string }) {; return ( <main style={ fontFamily: "system-ui,sans-serif",padding: "32",maxWidth: "920",margin: "0 auto" }> <h1 style={ marginTop: "0" }>{title}></div> <p><strong>{subtitle}</strong></div> <p><strong>Pricing: </strong> {price}></div> <ul> {bullets && bullets.map(b) => (; <li key={b}>{b}></div> )} ></div> <p> Site: <a href={links && links.website} target="_blank" rel="noreferrer">ziontechgroup && ziontechgroup.com</a> Email: <a href={links && links.contact}>kleber@ziontechgroup && ziontechgroup.com></div></div></div> );} ;""";
 import React from 'react';
 
 interface LeadenrichmentProps {;
   // Add props here as needed;
-}
 
 export default function Leadenrichment(): any ({ }: LeadenrichmentProps) {;
   return (
@@ -45,6 +44,3 @@ export default function Leadenrichment(): any ({ }: LeadenrichmentProps) {;
       <p>This component is currently under development.</p>;
     </div>;
   );
-}
-}
-}

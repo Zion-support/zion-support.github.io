@@ -8,7 +8,6 @@ interface LazyImageProps {
   threshold?: number,
   width?: number,
   height?: number
-}
 
 export const LazyImage: React.FC<LazyImageProps> = ({
   src,
@@ -18,17 +17,16 @@ export const LazyImage: React.FC<LazyImageProps> = ({
   threshold = 0.1,
   width,
   height
-}) => {
+) => {
   const [isLoaded, setIsLoaded] = useState(false),
   const [isInView, setIsInView] = useState(false),
   const imgRef = useRef<HTMLImageElement>(null),
-  useEffect_(() => {
+  useEffect_() => {
     const observer = new IntersectionObserver(_([entry]) => {
         if (entry.isIntersecting) {
           setIsInView(true),
           observer.disconnect()
-        }
-      },;
+        },;
       { threshold }
     ),
 
@@ -49,9 +47,9 @@ src={placeholder}
         alt=""
         className={_`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
           isLoaded ? 'opacity-0' : 'opacity-100'}`}
-        style={_{ width, height}}
+        style={_{ width, height}
       />
-      
+
       {_/* Actual Image */}
       {isInView && (
         <motion.img,
@@ -59,15 +57,15 @@ ref={imgRef}
           src={src}
           alt={alt}
           onLoad={handleLoad}
-          initial={{ opacity: 0, scale: 1.1 }}
-          animate={{ opacity: isLoaded ? 1 : 0, scale: isLoaded ? 1 : 1.1 }}
-          transition={{ duration: 0.5 }}
+          initial={ opacity: 0, scale: 1.1 }
+          animate={ opacity: isLoaded ? 1 : 0, scale: isLoaded ? 1 : 1.1 }
+          transition={ duration: 0.5 }
           className="w-full h-full object-cover&quot;
           loading=&quot;lazy"
-          style={{ width, height }}        />
+          style={ width, height }        />
       )}
     </div>
   )
-},
+,
 
 export default LazyImage,

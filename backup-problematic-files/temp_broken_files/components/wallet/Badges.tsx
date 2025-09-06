@@ -2,7 +2,7 @@ import React from "react",export type Badge = {
   id: string,
   label: string,
   threshold: number, // token balance threshold
-},
+,
 
 const BADGES: Badge[] = [
   { id: "starter", label: "Starter", threshold: 50 },
@@ -15,7 +15,6 @@ export function currentBadge(balance: number): Badge | null {
     if (balance >= b.threshold) current = b
   }
   return current
-}
 
 export default function Badges({ balance }: { balance: number }) {
   const active = currentBadge(balance),
@@ -35,11 +34,10 @@ export function currentBadge(_balance: number): Badge | null {_let current: Badg
   for (const b of BADGES) {
     if (balance >= b.threshold) current = b;}
   return current;
-}
 
 export default function Badges(_{_balance}: {_balance: number}) {_const _active = currentBadge(balance);
   return (_<div className="flex gap-2 items-center flex-wrap">
-      {BADGES.map((b) => (
+      {BADGES.map(b) => (
         <span
           key={b.id}
           className={_`px-3 py-1 rounded-full text-xs border ${
@@ -50,7 +48,7 @@ export default function Badges(_{_balance}: {_balance: number}) {_const _active 
           title={`Requires ${b.threshold} ZION$`}        >
           {_b.label}
         </span>
-      ))}
+      )}
       {active && (
         <span className=&quot;ml-2 text-xs text-green-600&quot;>Current: {active.label}</span>      )}
     </div>

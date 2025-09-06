@@ -6,5 +6,3 @@ export function EnterpriseAdmin() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

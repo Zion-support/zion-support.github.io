@@ -17,7 +17,7 @@ export function useUIState() {
     setExpandedSections(prev => ({
       ...prev
       [sectionName]: !prev[sectionName]
-    }))
+    })
   }
   // Handler for closing mobile filter sidebar
   const closeMobileFilter = () => {
@@ -36,4 +36,3 @@ export function useUIState() {
     toggleSection;
 
     closeMobileFilter}
-}

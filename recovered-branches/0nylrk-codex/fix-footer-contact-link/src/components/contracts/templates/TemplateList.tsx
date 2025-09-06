@@ -22,13 +22,13 @@ interface TemplateListProps {
   onSelect: (template: ContractTemplate) => void
 
   onEdit: (template: ContractTemplate) => void
-}
+
 export function TemplateList({
   templates;
   isLoading;
   onSelect;
   onEdit
-}: TemplateListProps) {
+: TemplateListProps) {
   const [templateToDelete, setTemplateToDelete] = useState<string | null>(null),
   const { deleteTemplate, setDefaultTemplate } = useContractTemplates();
 
@@ -40,7 +40,6 @@ export function TemplateList({
       await deleteTemplate.mutateAsync(templateToDelete);
       setTemplateToDelete(null)
     }
-  }
   const handleSetDefault = async (templateId: string) => {
     await setDefaultTemplate.mutateAsync(templateId)
   }
@@ -62,7 +61,7 @@ export function TemplateList({
   }
   return (
     <div className="space-y-3">;
-      {templates && templates.map((template) => (;
+      {templates && templates.map(template) => (;
         <Card key={template && template.id} className={template && template.is_default ? "border-zion-purple" : ""}>;
           <CardContent className="p-4">;
             <div className="flex items-center justify-between">;
@@ -105,7 +104,7 @@ export function TemplateList({
             </Button>
           </CardContent>
         </Card>
-      ))}
+      )}
       <AlertDialog open={!!templateToDelete} onOpenChange={() => setTemplateToDelete(null)}>
         <AlertDialogContent>
           <AlertDialogHeader>
@@ -127,13 +126,13 @@ export function TemplateList({
       </AlertDialog>
     </div>
   )
-}
+
             >;
               Use This Template;
             </Button>;
           </CardContent>;
         </Card>;
-      ))}
+      )}
 
       <AlertDialog open={!!templateToDelete} onOpenChange={() => setTemplateToDelete(null)}>;
         <AlertDialogContent>;
@@ -155,6 +154,5 @@ export function TemplateList({
       </AlertDialog>;
     </div>;
   );
-}
+
     </div>);
-}

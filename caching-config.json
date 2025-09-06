@@ -1,4 +1,4 @@
-{
+
   "static": {
     "maxAge": 31536000,
     "immutable": true
@@ -11,4 +11,3 @@
     "maxAge": 300,
     "staleWhileRevalidate": 60
   }
-}

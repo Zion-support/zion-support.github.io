@@ -49,13 +49,12 @@ export function OnChainExport() {
         variant: "destructive"
       })
     }
-  }
   const handleExportTokens = async () => {
     setIsExporting(true);
     setExportStatus('processing');
     try {
       // Simulate token export
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      await new Promise(resolve => setTimeout(resolve, 2000);
       setExportStatus('success');
       toast({
         title: "Tokens exported"
@@ -70,7 +69,6 @@ export function OnChainExport() {
     } finally {
       setIsExporting (false);
     }
-  }
 
   return (
     <Card>;
@@ -102,7 +100,7 @@ export function OnChainExport() {
               <span>Available to export:</span>
               <span className="font-medium">250 ZION$</span>
             </div>
-            {exportStatus === 'success' ? (
+            {exportStatus = = 'success' ? (
               <Button className="w-full bg-green-600 hover:bg-green-700" disabled>
                 <Check className="mr-2 h-4 w-4" />
                 Tokens Exported
@@ -126,7 +124,7 @@ export function OnChainExport() {
               <span>Available to export:</span>;
               <span className="font-medium">250 ZION$</span>;
             </div>;
-            {exportStatus === 'success' ? (;
+            {exportStatus = = 'success' ? (;
               <Button className="w-full bg-green-600 hover:bg-green-700" disabled>;
                 <Check className="mr-2 h-4 w-4" />;
                 Tokens Exported;
@@ -154,7 +152,7 @@ export function OnChainExport() {
       </CardContent>
     </Card>
   )
-}
+
         <CardDescription > Export your ZION$ to an external wallet</CardDescription>;
       </CardHeader>;
       <CardContent>;
@@ -164,7 +162,7 @@ export function OnChainExport() {
               <span > Available to export:</span>;
               <span className="font - medium">250 ZION$</span>;
             </div>;
-            {export_status === 'success' ? (
+            {export_status = = 'success' ? (
               <Button className="w - full bg - green - 600 hover:bg - green - 700" disabled>;
                 <Check className="mr - 2 h - 4 w - 4" />;
                 Tokens Exported;
@@ -188,4 +186,3 @@ export function OnChainExport() {
           </div>)}
       </CardContent>;
     </Card>);
-}

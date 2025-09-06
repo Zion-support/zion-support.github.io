@@ -15,6 +15,5 @@ const Custom: React.FC<CustomProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default Custom;

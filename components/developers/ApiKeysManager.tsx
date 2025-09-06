@@ -12,7 +12,6 @@ interface ApiKey {
   createdAt: string;
   lastUsed?: string;
   permissions: string[];
-}
 
 const ApiKeysManager: React.FC = () => {
   const [apiKeys, setApiKeys] = useState<ApiKey[]>([
@@ -31,7 +30,7 @@ const ApiKeysManager: React.FC = () => {
   const handleCreateKey = () => {
     setIsCreating(true);
     // Simulate API call
-    setTimeout(() => {
+    setTimeout() => {
       const newKey: ApiKey = {
         id: Date.now().toString(),
         name: 'New API Key',
@@ -45,11 +44,11 @@ const ApiKeysManager: React.FC = () => {
   };
 
   const handleDeleteKey = (id: string) => {
-    setApiKeys(apiKeys.filter(key => key.id !== id));
+    setApiKeys(apiKeys.filter(key => key.id != id);
   };
 
   const toggleShowKey = (id: string) => {
-    setShowKey(showKey === id ? null : id);
+    setShowKey(showKey = = id ? null : id);
   };
 
   return (
@@ -66,7 +65,7 @@ const ApiKeysManager: React.FC = () => {
       </div>
 
       <div className="grid gap-4">
-        {apiKeys.map((apiKey) => (
+        {apiKeys.map(apiKey) => (
           <Card key={apiKey.id}>
             <CardHeader>
               <div className="flex items-center justify-between">
@@ -90,7 +89,7 @@ const ApiKeysManager: React.FC = () => {
                     size="sm"
                     onClick={() => toggleShowKey(apiKey.id)}
                   >
-                    {showKey === apiKey.id ? (
+                    {showKey = = apiKey.id ? (
                       <EyeOff className="h-4 w-4" />
                     ) : (
                       <Eye className="h-4 w-4" />
@@ -113,7 +112,7 @@ const ApiKeysManager: React.FC = () => {
                   <div className="flex items-center space-x-2">
                     <Input
                       id={`key-${apiKey.id}`}
-                      value={showKey === apiKey.id ? apiKey.key : ''}
+                      value={showKey = = apiKey.id ? apiKey.key : ''}
                       readOnly
                       className="font-mono"
                     />
@@ -129,23 +128,23 @@ const ApiKeysManager: React.FC = () => {
                 <div>
                   <Label>Permissions</Label>
                   <div className="flex flex-wrap gap-2 mt-1">
-                    {apiKey.permissions.map((permission) => (
+                    {apiKey.permissions.map(permission) => (
                       <span
                         key={permission}
                         className="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full"
                       >
                         {permission}
                       </span>
-                    ))}
+                    )}
                   </div>
                 </div>
               </div>
             </CardContent>
           </Card>
-        ))}
+        )}
       </div>
 
-      {apiKeys.length === 0 && (
+      {apiKeys.length = = 0 && (
         <Card>
           <CardContent className="text-center py-8">
             <Key className="h-12 w-12 text-gray-400 mx-auto mb-4" />
@@ -162,6 +161,5 @@ const ApiKeysManager: React.FC = () => {
       )}
     </div>
   );
-};
 
 export default ApiKeysManager;

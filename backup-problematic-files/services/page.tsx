@@ -1,7 +1,5 @@
 
-;
   };
-],;
 ,;
 export default function ServicesPage() {,;
   return (,;
@@ -28,7 +26,7 @@ export default function ServicesPage() {,;
                     <div className="mb-6">,;
                       <h4 className="text-sm font-semibold text-gray-900 mb-3">Key:Services:</h4>,;
                       <ul className="space-y-2">,;
-                        {service.services.map((item, idx) => (,;
+                        {service.services.map(item, idx) => (,;
                           <li key={idx} className="flex items-center text-sm text-gray-600">,;
                             <CheckCircle className={`w-4 h-4 text-${service.color}-500 mr-2 flex-shrink-0`} />,;
                             {item};
@@ -40,13 +38,13 @@ export default function ServicesPage() {,;
                     </Link>,;
                   </div>,;
                 </motion.div>,;
-              ))};
+              )};
             </div>,;
           </div>,;
         </section>,;
-;
+
         {/* Why Choose Us */};
-;          </div>,
+          </div>,
         </section>,
         {/* Why Choose Us */};
         {/* Why Choose Us */};

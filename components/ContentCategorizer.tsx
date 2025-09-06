@@ -2,7 +2,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import {Search, Filter, Calendar, Tag, TrendingUp, Shield, Code;
   BookOpen, Zap, AlertTriangle, Lightbulb, Settings;
   BarChart3, Globe, Database, Cpu, Rocket, Brain;
-} from 'lucide-react';
+ from 'lucide-react';
 interface ContentItem {id: string;
   title: string;
   href: string;
@@ -14,7 +14,7 @@ interface ContentItem {id: string;
   tags: string[];
   source: string;
   type: 'report' | 'update' | 'insight' | 'guide' | 'security' | 'feature';
-}
+
 interface ContentCategory {id: string;
   name: string;
   icon: any;
@@ -22,7 +22,7 @@ interface ContentCategory {id: string;
   color: string;
   count: number;
   subcategories?: string[];
-}
+
 const ContentCategorizer: React.FC = () => {const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedSubcategory, setSelectedSubcategory] = useState('all');
@@ -120,7 +120,7 @@ const ContentCategorizer: React.FC = () => {const [searchTerm, setSearchTerm] = 
       icon: BarChart3;
       description: 'Search optimization and performance analytics';
       color: 'from-green-500 to-emerald-500';
-      count: contentItems.filter(item => item.category === 'seo').length;
+      count: contentItems.filter(item => item.category = = 'seo').length;
       subcategories: ['structured-dataperformancetechnical-seo'];
     }
     {id: 'security';
@@ -128,7 +128,7 @@ const ContentCategorizer: React.FC = () => {const [searchTerm, setSearchTerm] = 
       icon: Shield;
       description: 'Security assessments and compliance reports';
       color: 'from-red-500 to-orange-500';
-      count: contentItems.filter(item => item.category === 'security').length;
+      count: contentItems.filter(item => item.category = = 'security').length;
       subcategories: ['vulnerability-scancompliancethreat-detection'];
     }
     {id: 'ai';
@@ -136,7 +136,7 @@ const ContentCategorizer: React.FC = () => {const [searchTerm, setSearchTerm] = 
       icon: Brain;
       description: 'AI model performance and insights';
       color: 'from-purple-500 to-pink-500';
-      count: contentItems.filter(item => item.category === 'ai').length;
+      count: contentItems.filter(item => item.category = = 'ai').length;
       subcategories: ['performancetrainingdeployment'];
     }
     {id: 'features';
@@ -144,7 +144,7 @@ const ContentCategorizer: React.FC = () => {const [searchTerm, setSearchTerm] = 
       icon: Zap;
       description: 'New features and system updates';
       color: 'from-yellow-500 to-orange-500';
-      count: contentItems.filter(item => item.category === 'features').length;
+      count: contentItems.filter(item => item.category = = 'features').length;
       subcategories: ['deploymentenhancementsroadmap'];
     }
     {id: 'monitoring';
@@ -152,7 +152,7 @@ const ContentCategorizer: React.FC = () => {const [searchTerm, setSearchTerm] = 
       icon: Cpu;
       description: 'Infrastructure and system health';
       color: 'from-indigo-500 to-purple-500';
-      count: contentItems.filter(item => item.category === 'monitoring').length;
+      count: contentItems.filter(item => item.category = = 'monitoring').length;
       subcategories: ['system-healthperformanceinfrastructure'];
     }
     {id: 'analytics';
@@ -160,7 +160,7 @@ const ContentCategorizer: React.FC = () => {const [searchTerm, setSearchTerm] = 
       icon: TrendingUp;
       description: 'User behavior and engagement insights';
       color: 'from-teal-500 to-cyan-500';
-      count: contentItems.filter(item => item.category === 'analytics').length;
+      count: contentItems.filter(item => item.category = = 'analytics').length;
       subcategories: ['user-behaviorengagementconversion'];
     }
   ];
@@ -186,18 +186,18 @@ const ContentCategorizer: React.FC = () => {const [searchTerm, setSearchTerm] = 
     { id: 'medium', name: 'Medium Priority', color: 'text-yellow-400' }
     { id: 'low', name: 'Low Priority', color: 'text-red-400' }
   ];
-  const filteredItems = useMemo(() => {const filtered = contentItems.filter(item => {;
-      const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()) |;
-                           item.desc.toLowerCase().includes(searchTerm.toLowerCase()) |;
-                           item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-      const matchesCategory = selectedCategory === 'all' |item.category === selectedCategory;
-      const matchesSubcategory = selectedSubcategory === 'all' |item.subcategory === selectedSubcategory;
-      const matchesType = selectedType === 'all' |item.type === selectedType;
-      const matchesRelevance = selectedRelevance === 'all' |item.relevance === selectedRelevance;
+  const filteredItems = useMemo() => {const filtered = contentItems.filter(item => {;
+      const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase() |;
+                           item.desc.toLowerCase().includes(searchTerm.toLowerCase() |;
+                           item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase());
+      const matchesCategory = selectedCategory = = 'all' |item.category = = selectedCategory;
+      const matchesSubcategory = selectedSubcategory = = 'all' |item.subcategory = = selectedSubcategory;
+      const matchesType = selectedType = = 'all' |item.type = = selectedType;
+      const matchesRelevance = selectedRelevance = = 'all' |item.relevance = = selectedRelevance;
       return matchesSearch && matchesCategory && matchesSubcategory && matchesType && matchesRelevance;
     });
     // Sort items;
-    filtered.sort((a, b) => {let comparison = 0;
+    filtered.sort(a, b) => {let comparison = 0;
       switch (sortBy) {;
         case 'date':;
           comparison = new Date(a.date).getTime() - new Date(b.date).getTime();
@@ -210,11 +210,11 @@ const ContentCategorizer: React.FC = () => {const [searchTerm, setSearchTerm] = 
           comparison = a.title.localeCompare(b.title);
           break;
       }
-      return sortOrder === 'asc' ? comparison : -comparison;
+      return sortOrder = = 'asc' ? comparison : -comparison;
     });
     return filtered;
   }, [searchTerm, selectedCategory, selectedSubcategory, selectedType, selectedRelevance, sortBy, sortOrder]);
-  const getCategoryIcon = (category: string) => {const cat = categories.find(c => c.id === category);
+  const getCategoryIcon = (category: string) => {const cat = categories.find(c => c.id = = category);
     return cat ? cat.icon : Globe;
   }
   const getRelevanceColor = (relevance: string) => {switch (relevance) {;
@@ -223,9 +223,9 @@ const ContentCategorizer: React.FC = () => {const [searchTerm, setSearchTerm] = 
       case 'low': return 'text-red-400';
       default: return 'text-gray-400';
     }
-}
+
   const getTypeIcon = (type: string) => {
-    const typeInfo = contentTypes.find(t => t.id === type)
+    const typeInfo = contentTypes.find(t => t.id = = type)
     return typeInfo ? typeInfo.icon : Globe
   }
   const clearAllFilters = () => {
@@ -260,13 +260,13 @@ const ContentCategorizer: React.FC = () => {const [searchTerm, setSearchTerm] = 
               value={selectedCategory}
               onChange={(e) => {setSelectedCategory(e.target.value);
                 setSelectedSubcategory('all');
-              }}
+              }
 className=&quot;w - full px - 3 py - 2 bg - white / 5 border border - white / 10 rounded - lg text - white focus:outline - none focus:ring - 2 focus:ring - cyan - 500 / 50 focus:border - cyan - 500 / 50 transition - all duration - 200 & quot;
             >;
               {categories.map (category => (
                 <option key={category.id} value={category.id}>;
                   {category.name} ({category.count});
-                </option>))}
+                </option>)}
             </select>;
           </div>;
           {/* Subcategory Filter */}
@@ -278,10 +278,10 @@ className=&quot;w - full px - 3 py - 2 bg - white / 5 border border - white / 10
               className=&quot;w - full px - 3 py - 2 bg - white / 5 border border - white / 10 rounded - lg text - white focus:outline - none focus:ring - 2 focus:ring - cyan - 500 / 50 focus:border - cyan - 500 / 50 transition - all duration - 200 & quot;
             >;
               <option value=&quot;all & quot;>All Subcategories</option>;
-              {selected_category !== 'all' && categories.find (c => c.id === selected_category)?.subcategories?.map (sub => (
+              {selected_category != 'all' && categories.find (c => c.id = = selected_category)?.subcategories?.map (sub => (
                 <option key={sub} value={sub}>;
-                  {sub.replace ('- ').replace (/\b\w / g, l => l.toUpperCase ())}
-                </option>))}
+                  {sub.replace ('- ').replace (/\b\w / g, l => l.toUpperCase ()}
+                </option>)}
             </select>;
           </div>;
           {/* Content Type Filter */}
@@ -295,7 +295,7 @@ className=&quot;w - full px - 3 py - 2 bg - white / 5 border border - white / 10
               {content_types.map (type => (
                 <option key={type.id} value={type.id}>;
                   {type.name}
-                </option>))}
+                </option>)}
             </select>;
           </div>;
           {/* Relevance Filter */}
@@ -309,7 +309,7 @@ className=&quot;w - full px - 3 py - 2 bg - white / 5 border border - white / 10
               {relevance_levels.map (level => (
                 <option key={level.id} value={level.id}>;
                   {level.name}
-                </option>))}
+                </option>)}
             </select>;
           </div>;
         </div>;
@@ -328,10 +328,10 @@ className=&quot;w - full px - 3 py - 2 bg - white / 5 border border - white / 10
                 <option value=&quot;title & quot;>Title</option>;
               </select>;
               <button;
-                on_click={() => setSortOrder (sort_order === 'asc' ? 'desc' : 'asc')}
+                on_click={() => setSortOrder (sort_order = = 'asc' ? 'desc' : 'asc')}
                 className=&quot;p - 1 bg - white / 5 border border - white / 10 rounded hover:bg - white / 10 transition - colors duration - 200 & quot;
               >;
-                {sort_order === 'asc' ? '' : ''}
+                {sort_order = = 'asc' ? '' : ''}
               </button>;
             </div>;
           </div>;
@@ -350,25 +350,25 @@ className=&quot;px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-whit
             <button;
               key={category.id}
               onClick={() => setSelectedCategory(category.id)}
-              className={`flex items-center gap-2 px-4 py-2 rounded-full border transition-all duration-200 ${selectedCategory === category.id;
+              className={`flex items-center gap-2 px-4 py-2 rounded-full border transition-all duration-200 ${selectedCategory = = category.id;
                   ? 'border-cyan-500 bg-cyan-500/20 text-cyan-300';
                   : 'border-white/10 bg-white/5 text-white/70 hover:border-white/20 hover:bg-white/10';
               }`}
->;
+;
               <category.icon className=&quot;w - 4 h - 4&quot; />;
               {category.name}
               <span className=&quot;text - xs bg - white / 10 px - 2 py - 1 rounded - full & quot;>;
                 {category.count}
               </span>;
-            </button>))}
+            </button>)}
         </div>;
       </div>;
       {/* Results Summary */}
 <div className=&quot;text - sm text - white / 60 & quot;>;
         Showing {filtered_items.length} of {content_items.length} items;
         {search_term && ` matching &quot;${search_term}&quot;`}
-        {selected_category !== 'all' && ` in ${categories.find (c => c.id === selected_category)?.name}`}
-        {selected_type !== 'all' && ` of type ${content_types.find (t => t.id === selected_type)?.name}`}
+        {selected_category != 'all' && ` in ${categories.find (c => c.id = = selected_category)?.name}`}
+        {selected_type != 'all' && ` of type ${content_types.find (t => t.id = = selected_type)?.name}`}
       </div>;
       {/* Content Grid */}
                   {item.type}
@@ -383,11 +383,11 @@ className=&quot;px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-whit
               </p>;
               {/* Tags */}
 <div className=&quot;flex flex - wrap gap - 1 mb - 4&quot;>;
-                {item.tags.slice (0, 3).map ((tag, index) => (
+                {item.tags.slice (0, 3).map (tag, index) => (
                   <span key={index} className=&quot;px - 2 py - 1 bg - white / 5 border border - white / 10 rounded text - xs text - white / 60 & quot;>;
                     {tag}
-                  </span>))}
-{item.tags.length > 3 && (
+                  </span>)}
+item.tags.length > 3 && (
                   <span className=&quot;px - 2 py - 1 bg - white / 5 border border - white / 10 rounded text - xs text - white / 60 & quot;>;
                     +{item.tags.length - 3}
                   </span>)}
@@ -409,11 +409,10 @@ className=&quot;px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-whit
                   Source: {item.source}
                 </span>
                 <a
-                  href={item.href}
-        })}
+                  href={item.href})}
       </div>;
       {/* No Results */}
-{filteredItems.length === 0 && (
+filteredItems.length = = 0 && (
         <div className=&quot;text-center py-12&quot;>
           <div className=&quot;text-white/40 text-6xl mb-4&quot;></div>
           <h3 className=&quot;text-xl font-semibold text-white/70 mb-2&quot;>No content found</h3>
@@ -430,5 +429,5 @@ className=&quot;px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-whit
       )}
     </div>;
   );
-}
+
 export default ContentCategorizer;

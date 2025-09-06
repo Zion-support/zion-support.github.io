@@ -6,5 +6,3 @@ export function CurrentSubscription() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

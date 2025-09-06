@@ -6,5 +6,3 @@ export function badge() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

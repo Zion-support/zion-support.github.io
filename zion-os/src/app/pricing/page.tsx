@@ -1,4 +1,4 @@
-"use client";
+use client";
 import { useState } from "react";
 interface PricingTier {name: string;
   price: string;
@@ -8,14 +8,14 @@ interface PricingTier {name: string;
   popular?: boolean;
   cta: string;
   ctaLink: string;
-}
+
 interface ServicePricing {serviceName: string;
   category: string;
   description: string;
   tiers: PricingTier[];
   features: string[];
   benefits: string[];
-}
+
 const servicePricing: ServicePricing[] = [;
   {serviceName: "Zion OS Platform";
     category: "Core Platform";
@@ -216,18 +216,18 @@ const servicePricing: ServicePricing[] = [;
       }
     ];
   }
-];
+;
 const categories = ["All", "Core Platform", "AI Services", "IT Services", "E-commerce & Services"];
 export default function PricingPage() {const [selectedCategory, setSelectedCategory] = useState("All");
-  const filteredServices = selectedCategory === "All";
+  const filteredServices = selectedCategory = = "All";
     ? servicePricing;
-    : servicePricing.filter(service => service.category === selectedCategory);
+    : servicePricing.filter(service => service.category = = selectedCategory);
   return (;
     <div className="space-y-8">;
       <div className="text-center space-y-4">;
         <h1 className="text-4xl font-bold">Pricing & Plans</h1>;
         <p className="text-xl opacity-80 max-w-3xl mx-auto">;
-"use client",
+use client",
 import { useState  } from './react';,
 interface PricingTier {
   name: string,
@@ -238,7 +238,7 @@ interface PricingTier {
   popular?: boolean,
   cta: string,
   cta_link: string;
-}
+
 interface ServicePricing {
   service_name: string,
   category: string,
@@ -246,7 +246,7 @@ interface ServicePricing {
   tiers: PricingTier[],
   features: string[],
   benefits: string[];
-}
+
 const service_pricing: ServicePricing[] = [;
   {
     service_name: "Zion OS Platform",
@@ -465,16 +465,16 @@ const service_pricing: ServicePricing[] = [;
       }
     ];
   }
-],
+,
 const categories = ["All", "Core Platform", "AI Services", "IT Services", "E - commerce & Services"],
 export default /**
  * PricingPage - Function description
  */
 function PricingPage() {
   const [selected_category, setSelectedCategory] = useState ("All");
-  const filtered_services = selected_category === "All";
+  const filtered_services = selected_category = = "All";
     ? service_pricing;
-    : service_pricing.filter (service => service.category === selected_category);
+    : service_pricing.filter (service => service.category = = selected_category);
   return (
     <div className="space - y-8">;
       <div className="text - center space - y-4">;
@@ -490,23 +490,23 @@ function PricingPage() {
             <button;
               key={category}
               onClick={() => setSelectedCategory(category)}
-              className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${selectedCategory === category;
+              className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${selectedCategory = = category;
                   ? 'bg-blue-600 text-white';
                   : 'text-gray-300 hover:text-white hover:bg-zinc-700';
               on_click={() => setSelectedCategory (category)}
               className={`px - 4 py - 2 rounded - md text - sm font - medium transition - colors ${
-                selected_category === category;
+                selected_category = = category;
                   ? 'bg - blue - 600 text - white';
                   : 'text - gray - 300 hover:text - white hover:bg - zinc - 700';
               }`}
             >;
               {category}
-            </button>))}
+            </button>)}
         </div>;
       </div>;
       {/* Services Pricing */}
       <div className="space - y-12">;
-        {filtered_services.map ((service, service_index) => (
+        {filtered_services.map (service, service_index) => (
           <div key={service_index} className="space - y-6">;
             <div className="text - center space - y-2">;
               <h2 className="text - 2xl font - bold">{service.service_name}</h2>;
@@ -517,27 +517,27 @@ function PricingPage() {
               <div>;
                 <h3 className="text - lg font - semibold mb - 3">Key Features</h3>;
                 <ul className="space - y-2">;
-                  {service.features.map ((feature, index) => (
+                  {service.features.map (feature, index) => (
                     <li key={index} className="flex items - center gap - 2">;
                       <span className="w - 2 h - 2 bg - blue - 500 rounded - full"></span>;
                       {feature}
-                    </li>))}
+                    </li>)}
                 </ul>;
               </div>;
               <div>;
                 <h3 className="text - lg font - semibold mb - 3">Benefits</h3>;
                 <ul className="space - y-2">;
-                  {service.benefits.map ((benefit, index) => (
+                  {service.benefits.map (benefit, index) => (
                     <li key={index} className="flex items - center gap - 2">;
                       <span className="w - 2 h - 2 bg - green - 500 rounded - full"></span>;
                       {benefit}
-                    </li>))}
+                    </li>)}
                 </ul>;
               </div>;
             </div>;
             {/* Pricing Tiers */}
             <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6">;
-              {service.tiers.map ((tier, tier_index) => (
+              {service.tiers.map (tier, tier_index) => (
                 <div;
                   key={tierIndex}
                   className={`relative border rounded-lg p-6 ${tier.popular;
@@ -569,11 +569,11 @@ function PricingPage() {
                     <p className="text - sm opacity - 80">{tier.description}</p>;
                   </div>;
                   <ul className="space - y-3 mt - 6">;
-                    {tier.features.map ((feature, index) => (
+                    {tier.features.map (feature, index) => (
                       <li key={index} className="flex items - center gap - 2 text - sm">;
                         <span className="w - 2 h - 2 bg - green - 500 rounded - full"></span>;
                         {feature}
-                      </li>))}
+                      </li>)}
                   </ul>;
                   <div className="mt - 6">;
                     <a;
@@ -591,9 +591,9 @@ function PricingPage() {
                       {tier.cta}
                     </a>;
                   </div>;
-                </div>))}
+                </div>)}
             </div>;
-          </div>))}
+          </div>)}
       </div>;
       {/* Additional Services */}
       <div className="bg - gradient - to - r from - purple - 600 to - blue - 600 rounded - lg p - 8 text - white">;
@@ -646,4 +646,3 @@ function PricingPage() {
         </div>;
       </div>;
     </div>);
-}

@@ -6,5 +6,3 @@ export function AdminHeader() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

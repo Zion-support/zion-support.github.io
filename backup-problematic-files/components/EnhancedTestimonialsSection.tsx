@@ -9,8 +9,7 @@ interface Testimonial {;
   rating: number,;
   avatar: string,;
   category: string;
-}
-;
+
 const EnhancedTestimonialsSection: React.FC = () => {;
   const testimonials: Testimonial[] = [;
     {;
@@ -88,7 +87,7 @@ const EnhancedTestimonialsSection: React.FC = () => {;
           i < rating ? 'text-yellow-400 fill-current' : 'text-gray-400';
         }`}
       />
-    ))
+    )
   },
 
   return (
@@ -114,7 +113,7 @@ const EnhancedTestimonialsSection: React.FC = () => {;
 
         {/* Stats Section */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-          {stats.map((stat, index) => (
+          {stats.map(stat, index) => (
             <div key={index} className="text-center group">
               <div className="w-20 h-20 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                 <stat.icon className="w-10 h-10 text-blue-400" />
@@ -122,11 +121,11 @@ const EnhancedTestimonialsSection: React.FC = () => {;
               <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
               <p className="text-blue-300 font-medium">{stat.label}</p>
             </div>
-          ))}
+          )}
         </div>;
         {/* Testimonials Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {testimonials.map((testimonial) => (
+          {testimonials.map(testimonial) => (
             <div
               key={testimonial.id}
               className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-blue-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
@@ -169,7 +168,7 @@ const EnhancedTestimonialsSection: React.FC = () => {;
               {/* Hover Effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 via-blue-400/5 to-cyan-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
             </div>
-          ))}
+          )}
         </div>;
         {/* CTA Section */}
         <div className="text-center mt-16">
@@ -218,6 +217,6 @@ const EnhancedTestimonialsSection: React.FC = () => {;
       </div>
     </section>
   )
-},
+,
 
 export default EnhancedTestimonialsSection,

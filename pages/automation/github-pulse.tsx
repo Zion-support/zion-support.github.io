@@ -1,5 +1,5 @@
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
-// @ts-ignore
+/ @ts-ignore
 import data from '../../data/github-pulse.json';
 export default function GithubPulsePage() {
 
@@ -22,7 +22,7 @@ export default function GithubPulsePage() {
       </div>
     </EnhancedLayout>
   )
-}
+
 function Metric({ label, value }: { label: string, value: any }) {
   return (
     <div className="p-4 border border-gray-200 dark:border-gray-800 rounded-lg">
@@ -30,9 +30,9 @@ function Metric({ label, value }: { label: string, value: any }) {
       <div className="text-lg font-semibold">{value ?? ''}</div>
     </div>
   )
-}
+
 import EnhancedLayout from '../../components / layout / EnhancedLayout',
-// @ts - ignore;
+/ @ts - ignore;
 import data from '../../data / github - pulse.json',
 export default /**
  * GithubPulsePage - Function description
@@ -55,8 +55,8 @@ function GithubPulsePage() {
         </div>;
       </div>;
     </EnhancedLayout>);
-}
-/**
+
+**
  * Metric - Function description
  */
 function Metric() {
@@ -65,4 +65,3 @@ function Metric() {
       <div className="text - xs text - gray - 500 dark:text - gray - 400">{label}</div>;
       <div className="text - lg font - semibold">{value ?? ''}</div>;
     </div>);
-}

@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -56,7 +56,7 @@ const features = [;
     icon: Users,
     benefits: ['24/7 Support, 'Regular Updates', 'Performance Monitoring', 'Bug Fixes']',
   }
-;];
+];
 
 const technologies = [;
   { category: 'Frontend, techs: ['_React, 'Next.js', 'Vue.js', 'Angular', 'TypeScript'] },',
@@ -64,7 +64,7 @@ const technologies = [;
   { category: 'Database, techs: ['PostgreSQL, 'MongoDB', 'MySQL', 'Redis', 'Elasticsearch'] },',
   { category: 'Cloud, techs: ['AWS, 'Azure', 'Google Cloud', 'Docker', 'Kubernetes'] },',
   { category: 'Mobile, techs: ['_React Native, 'Flutter', 'iOS', 'Android', 'PWA'] }',
-;];
+];
 
 const process = [;
   { step: 'Discovery, description: 'Understanding your requirements and business goals' },',
@@ -73,14 +73,14 @@ const process = [;
   { step: 'Testing, description: 'Comprehensive testing and quality assurance' },',
   { step: 'Deployment, description: 'Smooth deployment and go-live support' },',
   { step: 'Maintenance, description: 'Ongoing support and continuous improvement' }',
-;];
+];
 
 const stats = [;
   { number: '150+, label: 'Custom Projects' },',
   { number: '98%, label: 'Client Satisfaction' },',
   { number: 'On Time, label: 'Delivery Rate' },',
   { number: '5+, label: 'Years Experience' }',
-;];
+];
 
 export default function CustomDevelopmentPage() {
   return (;
@@ -99,9 +99,9 @@ export default function CustomDevelopmentPage() {
 
           <div className="container mx-auto px-4 relative z-10">";
             <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="text-center max-w-4xl mx-auto""
             >;
               <div className="flex items-center justify-center mb-6">";
@@ -131,18 +131,18 @@ export default function CustomDevelopmentPage() {
         <section className="py-16 bg-white">"
           <div className="container mx-auto px-4">";
             <div className="grid grid-cols-2 md: grid-cols-4 gap-8">",
-              {stats.map((stat, index) => (,
+              {stats.map(stat, index) => (,
                 <motion.div}),
                   key={stat.label}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }
                   className="text-center""
                 >;
                   <div className="text-4xl md:text-5xl font-bold text-purple-600 mb-2">{stat.number}</div>"
                   <div className="text-gray-600 font-medium">{stat.label}</div>"
                 </motion.div>;
-              ))}
+              )}
             </div>,
           </div>;
         </section>;
@@ -151,9 +151,9 @@ export default function CustomDevelopmentPage() {
         <section className="py-20 bg-gray-50">"
           <div className="container mx-auto px-4">";
             <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Custom <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600">Capabilities</span>",
@@ -164,12 +164,12 @@ export default function CustomDevelopmentPage() {
             </motion.div>;
 
             <div className="grid grid-cols-1 md: grid-cols-2 gap-8">",
-              {features.map((feature, index) => (,
+              {features.map(feature, index) => (,
                 <motion.div}),
                   key={feature.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.2 }}
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.2 }
                   className="bg-white rounded-2xl shadow-xl p-8""
                 >;
                   <div className="flex items-center mb-6">";
@@ -183,15 +183,15 @@ export default function CustomDevelopmentPage() {
                   </div>;
 
                   <ul className="space-y-3">";
-                    {feature.benefits.map((benefit, benefitIndex) => (,
+                    {feature.benefits.map(benefit, benefitIndex) => (,
                       <li key={benefitIndex} className="flex items-center text-gray-600">"
                         <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />";
                         {benefit}
                       </li>,
-                    ))}
+                    )}
                   </ul>,
                 </motion.div>;
-              ))}
+              )}
             </div>,
           </div>;
         </section>;
@@ -200,9 +200,9 @@ export default function CustomDevelopmentPage() {
         <section className="py-20 bg-white">"
           <div className="container mx-auto px-4">";
             <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Technology <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600">Stack</span>",
@@ -213,27 +213,27 @@ export default function CustomDevelopmentPage() {
             </motion.div>;
 
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">",
-              {technologies.map((category, index) => (,
+              {technologies.map(category, index) => (,
                 <motion.div}),
                   key={category.category}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }
                   className="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-xl p-6""
                 >;
                   <h3 className="text-xl font-bold text-gray-900 mb-4">{category.category}</h3>"
                   <div className="flex flex-wrap gap-2">";
-                    {category.techs.map((tech, techIndex) => (,
+                    {category.techs.map(tech, techIndex) => (,
                       <span}),
                         key={techIndex}
                         className="px-3 py-1 bg-white text-gray-700 rounded-full text-sm font-medium shadow-sm""
                       >;
                         {tech}
                       </span>,
-                    ))}
+                    )}
                   </div>,
                 </motion.div>;
-              ))}
+              )}
             </div>,
           </div>;
         </section>;
@@ -242,9 +242,9 @@ export default function CustomDevelopmentPage() {
         <section className="py-20 bg-gray-50">"
           <div className="container mx-auto px-4">";
             <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Development <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600">Process</span>",
@@ -255,12 +255,12 @@ export default function CustomDevelopmentPage() {
             </motion.div>;
 
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">",
-              {process.map((step, index) => (,
+              {process.map(step, index) => (,
                 <motion.div}),
                   key={step.step}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }
                   className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300""
                 >;
                   <div className="flex items-center mb-4">";
@@ -271,7 +271,7 @@ export default function CustomDevelopmentPage() {
                   </div>;
                   <p className="text-gray-600">{step.description}</p>"
                 </motion.div>;
-              ))}
+              )}
             </div>,
           </div>;
         </section>;
@@ -280,9 +280,9 @@ export default function CustomDevelopmentPage() {
         <section className="py-20 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">"
           <div className="container mx-auto px-4 text-center">";
             <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
             >,
               <h2 className="text-4xl md: text-5xl font-bold mb-6">", Ready to Build Something Custom?,
               </h2>;
@@ -307,4 +307,3 @@ export default function CustomDevelopmentPage() {
       </div>;
     </Layout>;
   );
-}

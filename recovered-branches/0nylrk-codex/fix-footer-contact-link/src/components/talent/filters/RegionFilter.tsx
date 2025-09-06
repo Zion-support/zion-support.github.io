@@ -10,14 +10,14 @@ const REGION_OPTIONS = [
   { id: "South America", label: "South America" }
   { id: "Australia", label: "Australia" }
   { id: "Africa", label: "Africa" }
-];
+;
 export function RegionFilter({
   selectedRegions
   toggleRegion
   expanded
   toggleSection
   isMobileFilterOpen
-}: RegionFilterProps) {
+: RegionFilterProps) {
 
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">;
@@ -33,7 +33,7 @@ export function RegionFilter({
       </button>
       {expanded && (
         <div className="mt-4 space-y-2">
-          {REGION_OPTIONS.map((region) => (
+          {REGION_OPTIONS.map(region) => (
             <div key={region.id} className="flex items-center">
               <Checkbox
                 id={`region-${region && region.id}`}
@@ -47,12 +47,12 @@ export function RegionFilter({
                 {region && region.label}
               </label>;
             </div>;
-          ))}
+          )}
         </div>;
       )}
     </div>
   );
-}
+
 import { ChevronDown, ChevronUp  } from './lucide-react';
 import { Checkbox  } from '@/components / ui / checkbox';
 import { RegionFilterProps  } from '@/types / filters';
@@ -63,8 +63,8 @@ const REGION_OPTIONS = [;
   { id: "South America", label: "South America" },
   { id: "Australia", label: "Australia" },
   { id: "Africa", label: "Africa" },
-];
 ;
+
 export /**
  * RegionFilter - Function description
  */
@@ -82,7 +82,7 @@ function RegionFilter() {
       </button>;
       {expanded && (
         <div className="mt - 4 space - y-2">;
-          {REGION_OPTIONS.map ((region) => (
+          {REGION_OPTIONS.map (region) => (
             <div key={region.id} className="flex items - center">;
               <Checkbox;
                 id={`region-${region.id}`}
@@ -96,7 +96,6 @@ function RegionFilter() {
               >;
                 {region.label}
               </label>;
-            </div>))}
+            </div>)}
         </div>)}
     </div>);
-}

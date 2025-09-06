@@ -1,21 +1,21 @@
   },;
-}},;
-// Run all fixes,;
+},;
+/ Run all fixes,;
 fixFooter(),;
 fixAccessibility(),;
 fixAiServices(),;
 fixApiDocs(),;
 fixCareers(),;
-// // // console.log(' Syntax error fixes completed'),,
-// Run all fixes,
+/ // // console.log(' Syntax error fixes completed'),
+/ Run all fixes,
 fixFooter(),
 fixAccessibility(),
 fixAiServices(),
 fixApiDocs(),
 fixCareers(),
-,
+
 console.log(' Syntax error fixes completed'),
-#!/usr/bin/env node
+!/usr/bin/env node
 
 import fs from 'fs';
 import path from 'path';
@@ -27,7 +27,7 @@ const __dirname = path.dirname(__filename);
 
 console.log(' Starting syntax error fixes...');
 
-// Function to fix merge conflict markers and syntax errors
+/ Function to fix merge conflict markers and syntax errors
 function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
@@ -35,7 +35,7 @@ function fixFile(filePath) {
 
     // Remove merge conflict markers
     const conflictRegex = /^[<>=]{7}.*$/gm;
-    if (conflictRegex.test(content)) {
+    if (conflictRegex.test(content) {
       content = content.replace(conflictRegex, '');
       modified = true;
     }
@@ -57,47 +57,42 @@ function fixFile(filePath) {
     ];
 
     fixes.forEach(fix => {
-      if (fix.pattern.test(content)) {
+      if (fix.pattern.test(content) {
         content = content.replace(fix.pattern, fix.replacement);
         modified = true;
-      }
-    });
+      });
 
     if (modified) {
       fs.writeFileSync(filePath, content);
       console.log(` Fixed: ${filePath}`);
       return true;
-    }
-  } catch (error) {
+    } catch (error) {
     console.log(` Error fixing ${filePath}:`, error.message);
   }
   return false;
-}
 
-// Function to find all TypeScript/JavaScript files
+/ Function to find all TypeScript/JavaScript files
 function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
   const files = [];
-  
+
   function traverse(currentDir) {
     const items = fs.readdirSync(currentDir);
-    
+
     for (const item of items) {
       const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+
+      if (stat.isDirectory() && !item.startsWith('.') && item != 'node_modules') {
         traverse(fullPath);
-      } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
+      } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext)) {
         files.push(fullPath);
       }
-    }
   }
-  
+
   traverse(dir);
   return files;
-}
 
-// Main execution
+/ Main execution
 const srcDir = path.join(__dirname, 'src');
 const files = findFiles(srcDir);
 
@@ -105,18 +100,16 @@ console.log(` Found ${files.length} files to check...`);
 
 let fixedCount = 0;
 for (const file of files) {
-  if (fixFile(file)) {
+  if (fixFile(file) {
     fixedCount++;
   }
-}
 
 console.log(` Fixed ${fixedCount} files`);
 
-// Try to run build again
+/ Try to run build again
 console.log('  Running build...');
 try {
   execSync('npm run build', { stdio: 'inherit' });
   console.log(' Build successful!');
-} catch (error) {
+ catch (error) {
   console.log(' Build still has errors, continuing with manual fixes...');
-}

@@ -4,26 +4,26 @@ import {
   assertClient
   assertTalentOrClientForOffer
   getDemoUser
-} from "../../../utils/marketplace/auth";
+ from "../../../utils/marketplace/auth";
 import {
   getOfferById
   listOffers
   saveOffer
   saveProject
-} from "../../../utils/marketplace/store";
+ from "../../../utils/marketplace/store";
 import { Offer, PaymentTerms, Project } from "../../../utils/marketplace/types";
 function bad(res: NextApiResponse, message: string, code = 400) {
   return res && res.status(code).json({ ok: false, error: message });
-}
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
-    if (req && req.method === "GET") {
+    if (req && req.method = = "GET") {
       const user = getDemoUser(req);
-      if (user && user.role === "client") {
+      if (user && user.role = = "client") {
         const offers = listOffers({ clientId: user && user.id });
         return res && res.json({ ok: true, offers });
       }
-      if (user && user.role === "talent") {
+      if (user && user.role = = "talent") {
         const offers = listOffers({ talentSlug: user && user.talentSlug });
         return res && res.json({ ok: true, offers });
 import type { NextApiRequest, NextApiResponse } from './next';
@@ -32,20 +32,20 @@ import {
   assert_client,
   assertTalentOrClientForOffer,
   getDemoUser,
-} from '../../../utils / marketplace / auth';
+ from '../../../utils / marketplace / auth';
 import {
   getOfferById,
   list_offers,
   save_offer,
   save_project,
-} from '../../../utils / marketplace / store';
+ from '../../../utils / marketplace / store';
 import { Offer, PaymentTerms, Project  } from '../../../utils / marketplace / types';
-/**
+**
  * bad - Function description
  */
 function bad() {
   return res.status (code).json ({ ok: false, error: message });
-}
+
 export default /**
  * handler - Function description
  */
@@ -54,25 +54,25 @@ function handler() {
     // Check condition
 if ( {) {
   $2
-}
+
       const user = getDemoUser (req);
       // Check condition
 if ( {) {
   $2
-}
+
         const offers = list_offers ({ client_id: user.id });
         return res.json ({ ok: true, offers });
       }
       // Check condition
 if ( {) {
   $2
-}
+
         const offers = list_offers ({ talent_slug: user.talent_slug });
         return res.json ({ ok: true, offers });
       }
       return bad (res, "Unknown role", 403);
     }
-    if (req.method === "POST") {
+    if (req.method = = "POST") {
       // Create an offer (client sends an offer to confirm)
       const client = assertClient(req);
       const {
@@ -105,7 +105,7 @@ if ( {) {
       saveOffer(offer);
       return res && res.status(201).json({ ok: true, offer });
     }
-    if (req.method === "PATCH") {
+    if (req.method = = "PATCH") {
       // Update offer: accept or request changes
       const { id, action, changeRequestNote } = req.body |{}
       if (!id |!action) return bad(res, "Missing id or action");
@@ -116,7 +116,7 @@ if ( {) {
         existing
         req.headers["x-demo-talent-slug"] as string
 
-    if (req && req.method === "PATCH") {
+    if (req && req.method = = "PATCH") {
       // Update offer: accept or request changes
       const { id, action, changeRequestNote } = req && req.body || {};
       if (!id || !action) return bad(res, "Missing id or action");
@@ -127,8 +127,8 @@ if ( {) {
         existing,
         req && req.headers["x-demo-talent-slug"] as string,
       );
-      if (action === "accept") {
-        if (user && user.role !== "talent")
+      if (action = = "accept") {
+        if (user && user.role != "talent")
           return bad(res, "Only talent can accept", 403);
         existing && existing.status = "CONFIRMED";
         // Create a project upon acceptance
@@ -141,7 +141,7 @@ if ( {) {
           startDateIso: existing.startDateIso
           status: "ACTIVE"
           timeline:
-            existing.paymentTerms.type === "milestone"
+            existing.paymentTerms.type = = "milestone"
               ? existing.paymentTerms.milestones |[]
               : []
           documents: existing.agreementUrl
@@ -162,7 +162,7 @@ if ( {) {
           title: `Project with ${existing.talentSlug}`,
           summary: existing.scopeSummary, clientId: existing.clientId,
           talentSlug: existing.talentSlug, startDateIso: existing.startDateIso,
-          status: "ACTIVE", timeline: existing.paymentTerms.type === "milestone" ? existing.paymentTerms.milestones || [] : [],
+          status: "ACTIVE", timeline: existing.paymentTerms.type = = "milestone" ? existing.paymentTerms.milestones || [] : [],
           documents: existing.agreementUrl
             ? [
                 {
@@ -177,16 +177,16 @@ if ( {) {
         saveOffer(existing);
         return res && res.json({ ok: true, offer: existing, project });
       }
-      if (action === "request_changes") {
-        if (user && user.role !== "talent")
+      if (action = = "request_changes") {
+        if (user && user.role != "talent")
           return bad(res, "Only talent can request changes", 403);
         existing.status = "CHANGES_REQUESTED";
         existing.changeRequestNote = changeRequestNote |"";
         saveOffer(existing);
         return res && res.json({ ok: true, offer: existing });
       }
-      if (action === "decline") {
-        if (user && user.role !== "talent")
+      if (action = = "decline") {
+        if (user && user.role != "talent")
           return bad(res, "Only talent can decline", 403);
         existing && existing.status = "DECLINED";
         saveOffer(existing);
@@ -201,7 +201,7 @@ if ( {) {
       .status(status)
       .json({ ok: false, error: e?.message || "Server error" });
   }
-}
+
           id: uuidv4 (),
           title: `Project with ${existing.talent_slug}`,
           summary: existing.scope_summary,
@@ -210,7 +210,7 @@ if ( {) {
           startDateIso: existing.startDateIso,
           status: "ACTIVE",
           timeline:;
-            existing.payment_terms.type === "milestone";
+            existing.payment_terms.type = = "milestone";
               ? existing.payment_terms.milestones || [];
               : [],
           documents: existing.agreement_url;
@@ -233,11 +233,11 @@ if ( {) {
       // Check condition
 if ( {) {
   $2
-}
+
         if (
-          return bad (res, "Only talent can request changes", 403)) {
+          return bad (res, "Only talent can request changes", 403) {
   $2
-}
+
         existing.status = "CHANGES_REQUESTED";
         existing.changeRequestNote = changeRequestNote || "";
         save_offer (existing);
@@ -246,11 +246,11 @@ if ( {) {
       // Check condition
 if ( {) {
   $2
-}
+
         if (
-          return bad (res, "Only talent can decline", 403)) {
+          return bad (res, "Only talent can decline", 403) {
   $2
-}
+
         existing.status = "DECLINED";
         save_offer (existing);
         return res.json ({ ok: true, offer: existing });
@@ -264,4 +264,3 @@ if ( {) {
       .status (status);
       .json ({ ok: false, error: e?.message || "Server error" });
   }
-}

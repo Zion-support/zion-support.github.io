@@ -1,4 +1,4 @@
-{
+
   "timestamp": "2025-09-06T09:47:31.613Z",
   "filesFixed": 5,
   "errors": 0,
@@ -9,4 +9,3 @@
     "pages/api/proposals/comment.ts",
     "utils/data/proposals.ts"
   ]
-}

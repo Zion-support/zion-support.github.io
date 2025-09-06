@@ -7,6 +7,5 @@ const AccessibilityManager.dynamic = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default AccessibilityManager.dynamic;

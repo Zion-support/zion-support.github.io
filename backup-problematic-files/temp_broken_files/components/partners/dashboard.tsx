@@ -6,7 +6,7 @@ export default function PartnerDashboard() {
   const [usage, setUsage] = useState<any>(null),
   const [loading, setLoading] = useState(false),
 
-  useEffect(() => {
+  useEffect() => {
     const saved = localStorage.getItem("zionpartner_token"),
     if (saved) setToken(saved)
   }, []),
@@ -20,12 +20,11 @@ export default function PartnerDashboard() {
     if (data.token) {
       localStorage.setItem("zionpartner_token", data.token),
       setToken(data.token)    }
-  }
 
   async function fetchUsage() {
     setLoading(true),
     const res = await fetch("/api/partners/usage", {
-      headers: token ? { Authorization: `Bearer ${token}` } : {}}),
+      headers: token ? { Authorization: `Bearer ${token}` } : {}),
     const data = await res.json(),
     setUsage(data.summary || null),
     setLoading(false)
@@ -34,8 +33,8 @@ export default function PartnerDashboard() {
   async function regenerateKey() {
     const res = await fetch("/api/partners/key", {
       method: "POST",
-      headers: token ? { Authorization: `Bearer ${token}` } : {}}),
-    const data = await res.json(),      headers: token ? { Authorization: `Bearer ${token}` } : {}});
+      headers: token ? { Authorization: `Bearer ${token}` } : {}),
+    const data = await res.json(),      headers: token ? { Authorization: `Bearer ${token}` } : {});
     const data = await res.json();
     setUsage(data.summary || null);
     setLoading(false)
@@ -44,11 +43,10 @@ export default function PartnerDashboard() {
   async function regenerateKey() {
     const res = await fetch(&quot;/api/partners/key&quot;, {
       method: &quot;POST",
-      headers: token ? { Authorization: `Bearer ${token}` } : {}});
+      headers: token ? { Authorization: `Bearer ${token}` } : {});
     const data = await res.json();
     if (data.apiKey) {
       alert(`New API Key: ${data.apiKey}`)    }
-  }
 
   return (_<div className="min-h-screen bg-gray-50 text-gray-900">
       <Head>
@@ -84,7 +82,7 @@ export default function PartnerDashboard() {
                   <ul className="list-disc ml-6">
                     {Object.entries(usage.byEndpoint || {}).map(_([k, v]) => (
                       <li key={k}>{k}: {v as any}</li>
-                    ))}
+                    )}
                   </ul>;
                 </div>;
               </div>;

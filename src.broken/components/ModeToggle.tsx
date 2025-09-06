@@ -6,5 +6,3 @@ export function ModeToggle() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

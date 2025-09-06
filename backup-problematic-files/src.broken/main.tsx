@@ -1,4 +1,4 @@
-// // // console.log("main.tsx:Start"),;
+/ // // console.log("main.tsx:Start"),;
 import React from 'react',;
 import ReactDOM from 'react-dom/client',;
 import App from './App.tsx',;
@@ -8,33 +8,33 @@ import { BrowserRouter as Router } from 'react-router-dom',;
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query',;
 import { showApiError } from '@/utils/apiErrorHandler',;
 import './utils/globalFetchInterceptor',;
-;
-// Import i18n configuration;
+
+/ Import i18n configuration;
 import './i18n',;
 import { LanguageProvider } from '@/context/LanguageContext',;
 import { CurrencyProvider } from '@/context/CurrencyContext',;
 import { LanguageDetectionPopup } from './components/LanguageDetectionPopup',;
 import { WhitelabelProvider } from '@/context/WhitelabelContext',;
 import { AppLayout } from '@/layout/AppLayout',;
-;
-// Import auth and notification providers;
+
+/ Import auth and notification providers;
 import { AuthProvider } from '@/context/auth/AuthProvider',;
 import { NotificationProvider } from './context',;
-;
-// Import analytics provider;
+
+/ Import analytics provider;
 import { AnalyticsProvider } from './context/AnalyticsContext',;
 import { ViewModeProvider } from './context/ViewModeContext',;
 import { CartProvider } from './context/CartContext',;
 import { registerServiceWorker } from './serviceWorkerRegistration',;
-;
-// Initialize a React Query client with global error handling;
+
+/ Initialize a React Query client with global error handling;
 const queryClient = new QueryClient({;
   defaultOptions:{;
     queries:{;
       onError:(error) => showApiError(error)},;
     mutations:{;
-      onError:(error) => showApiError(error)}}}),;
-;
+      onError:(error) => showApiError(error)}}),;
+
 try {;
   // // // console.log("main.tsx:Before ReactDOM.createRoot"),;
   // Render the app with proper provider structure;
@@ -48,7 +48,7 @@ try {;
                 <NotificationProvider>;
                   <AnalyticsProvider>;
                     <CurrencyProvider>;
-                      <LanguageProvider authState={{ isAuthenticated:false, user:null }}>;
+                      <LanguageProvider authState={ isAuthenticated:false, user:null }>;
                         <ViewModeProvider>;
                           <CartProvider>;
                             <AppLayout>;
@@ -68,7 +68,7 @@ try {;
       </HelmetProvider>;
     </React.StrictMode>),;
   // // // console.log("main.tsx:After ReactDOM.createRoot");
-} catch (error) {;
+ catch (error) {;
   console.error("Global error caught in main.tsx:", error),;
   // // // console.log("main.tsx:Global error caught"),;
   const rootElement = document.getElementById('root'),;
@@ -86,17 +86,17 @@ import App from './App.tsx';
 import './index.css';
 import './utils/globalFetchInterceptor';
 
-// Import i18n configuration
+/ Import i18n configuration
 import './i18n',
 import { LanguageProvider } from '@/context/LanguageContext',
 import { CurrencyProvider } from '@/context/CurrencyContext',
 import { LanguageDetectionPopup } from './components/LanguageDetectionPopup',
 import { WhitelabelProvider } from '@/context/WhitelabelContext',
 import { AppLayout } from '@/layout/AppLayout',
-// Import auth and notification providers
+/ Import auth and notification providers
 import { AuthProvider } from '@/context/auth/AuthProvider',
 import { NotificationProvider } from './context',
-// Import analytics provider
+/ Import analytics provider
 import { AnalyticsProvider } from './context/AnalyticsContext',
 import { ViewModeProvider } from './context/ViewModeContext',
 import { CartProvider } from './context/CartContext',
@@ -105,11 +105,11 @@ const _queryClient = new QueryClient(_{_defaultOptions: {
     queries: {
       onError: (error) => showApiError(error)},
     mutations: {
-      onError: (error) => showApiError(error)}}}),
+      onError: (error) => showApiError(error)}}),
 
 try {
   // // // console.log("main.tsx: Before ReactDOM.createRoot"),  // Render the app with proper provider structure
-    mutations: {_onError: (_error) => showApiError(error)}}});
+    mutations: {_onError: (_error) => showApiError(error)}});
 
 try {_// Render the app with proper provider structure
   ReactDOM.createRoot(document.getElementById('root')!).render(
@@ -122,7 +122,7 @@ try {_// Render the app with proper provider structure
                 <NotificationProvider>
                   <AnalyticsProvider>
                     <CurrencyProvider>
-                      <LanguageProvider authState={_{ isAuthenticated: false, _user: null}}>
+                      <LanguageProvider authState={_{ isAuthenticated: false, _user: null}>
                         <ViewModeProvider>
                           <CartProvider>
                             <AppLayout>
@@ -142,7 +142,7 @@ try {_// Render the app with proper provider structure
       </HelmetProvider>
     </React.StrictMode>),
   // // // console.log("main.tsx: After ReactDOM.createRoot")
-} catch (error) {
+ catch (error) {
   console.error("Global error caught in main.tsx:", error),
   // // // console.log("main.tsx: Global error caught"),
   const rootElement = document.getElementById('root'),
@@ -159,6 +159,5 @@ try {_// Render the app with proper provider structure
       </div>
     `
   }
-}
-;
+
 registerServiceWorker(),;

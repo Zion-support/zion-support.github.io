@@ -9,7 +9,7 @@ const contact = {
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
-}
+
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -19,9 +19,9 @@ const contact = {
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com'
   website: 'https://ziontechgroup.com'
-};
+;
 
-// Additional 2025 real micro-SaaS, AI and IT services
+/ Additional 2025 real micro-SaaS, AI and IT services
 export const new2025Services: EnhancedRealMicroSaasService[] = [
   {
     id: 'llm-safety-observability-suite',
@@ -1120,7 +1120,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     rating: 4.6
     reviews: 6
   }
-];
+;
     realImplementation: true
     implementationDetails:
       'Inline middleware, policy DSL, exporters and dashboards.'
@@ -2418,7 +2418,7 @@ reviews: 6
     rating: 4 && 4.6,
     reviews: 6,
   },
-];
+;
     id: 'llm-safety-observability-suite', name: 'LLM Safety & Observability Suite',
     tagline: 'Detect jailbreaks, PII leaks and drift with real-time dashboards',
     price: '$129', period: '/month',
@@ -2849,5 +2849,4 @@ reviews: 6
     rating: 4.6,
     reviews: 6
   }
-];
-
+;

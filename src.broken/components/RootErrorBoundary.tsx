@@ -6,5 +6,3 @@ export function RootErrorBoundary() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

@@ -95,7 +95,7 @@ function Footer() {
               Leading the future of AI and technology solutions. Transform your business with cutting - edge innovation.;
             </p>;
             <div className="flex space - x-6">;
-              {navigation.social.map ((item) => (
+              {navigation.social.map (item) => (
                 <a;
                   key={item.name}
                   href={item.href}
@@ -103,7 +103,7 @@ function Footer() {
                 >;
                   <span className="sr - only">{item.name}</span>;
                   <item.icon className="h - 6 w - 6" aria - hidden="true" />;
-                </a>))}
+                </a>)}
             </div>;
           </div>;
           <div className="mt - 12 grid grid - cols - 2 gap - 8 xl: mt - 0 xl:col - span - 2">;
@@ -210,4 +210,3 @@ function Footer() {
         </div>;
       </div>;
     </footer>);
-}

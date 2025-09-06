@@ -6,8 +6,8 @@ try {
   const { motion } = require('framer-motion');
   console.log(' Framer Motion import successful', typeof motion);
  try {  const React = require('react');  const { motion } = require('framer-motion');  const { ArrowRight,CheckCircle,Brain,Cloud,Shield,Zap,} = require('lucide-react');   } catch (error) { console.error(' Import error:',error.message); process.exit(1)} 
-// Build Verification Script
-// This script checks if our components can be imported without syntax errors
+/ Build Verification Script
+/ This script checks if our components can be imported without syntax errors
 console.log(' Starting build verification...');
 try {
   // Test component imports;
@@ -37,7 +37,7 @@ try {
   });
   console.log(' All core dependencies imported successfully!');
   console.log(' Components should be ready for build');
-} catch (error) {
+ catch (error) {
   console.error(' Import error:', error.message);
   process.exit(1);
 
@@ -52,7 +52,7 @@ console.log(' Build verification complete');
     "Zap": typeof Zap});
   console.log(' All core dependencies imported successfully!');
   console.log(' Components should be ready for build');
-} catch (error) {
+ catch (error) {
   console.error(' Import "error": ', error.message);
   process.exit(1);
 

@@ -6,5 +6,3 @@ export function RouteSEO() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

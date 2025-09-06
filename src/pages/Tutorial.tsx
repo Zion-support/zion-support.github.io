@@ -10,40 +10,40 @@ interface TutorialPageProps {
   tutorial?: TutorialType
 export default function Tutorial({
   tutorial: initialTutorial
-}: TutorialPageProps) {
+: TutorialPageProps) {
   const router = useRouter()
   const slug = router.query.slug as string | undefined
-  const tutorial = initialTutorial |TUTORIALS.find(t => t.slug === slug);interface TutorialPageProps {
+  const tutorial = initialTutorial |TUTORIALS.find(t => t.slug = = slug);interface TutorialPageProps {
   tutorial?: TutorialType
-}
+
 export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProps) {
 
   const router = useRouter()
   const slug = router.query.slug as string | undefined
-  const tutorial = initialTutorial |TUTORIALS.find((t,) => t.slug === slug)
+  const tutorial = initialTutorial |TUTORIALS.find(t,) => t.slug = = slug)
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { TUTORIALS } from '@/data/tutorials';
@@ -58,16 +58,16 @@ interface TutorialPageProps {;
 
 export default function Tutorial(): any ({;
   tutorial: initialTutorial,;
-}: TutorialPageProps) {;
+: TutorialPageProps) {;
   const router = useRouter();
   const slug = router && router.query.slug as string | undefined;
-  const tutorial = initialTutorial || TUTORIALS && TUTORIALS.find(t => t && t.slug === slug);interface TutorialPageProps {;
+  const tutorial = initialTutorial || TUTORIALS && TUTORIALS.find(t => t && t.slug = = slug);interface TutorialPageProps {;
   tutorial?: TutorialType;
-}
+
 export default function Tutorial(): any ({ tutorial: initialTutorial }: TutorialPageProps) {;
   const router = useRouter(),;
   const slug = router && router.query.slug as string | undefined,;
-  const tutorial = initialTutorial || TUTORIALS && TUTORIALS.find((t,) => t && t.slug === slug),;
+  const tutorial = initialTutorial || TUTORIALS && TUTORIALS.find(t,) => t && t.slug = = slug),;
 
   if (!tutorial) {;
     return (
@@ -99,7 +99,7 @@ export default function Tutorial(): any ({ tutorial: initialTutorial }: Tutorial
           {tutorial && tutorial.author && (;
             <p className='mt-8 text-white font-semibold'>;
               {' '}
-              {typeof tutorial && tutorial.author === 'string';
+              {typeof tutorial && tutorial.author = = 'string';
                 ? tutorial && tutorial.author;
                 : tutorial && tutorial.author.name}
             </p>;
@@ -108,7 +108,6 @@ export default function Tutorial(): any ({ tutorial: initialTutorial }: Tutorial
       </div>
     </>
   )
-}
 
 import Link from 'next / link';
 import { use_router } from 'next / router';
@@ -126,20 +125,20 @@ export default /**
 function Tutorial() {
   const router = use_router ();
   const slug = router.query.slug as string | undefined;
-  const tutorial = initial_tutorial || TUTORIALS.find (t => t.slug === slug);interface TutorialPageProps {
+  const tutorial = initial_tutorial || TUTORIALS.find (t => t.slug = = slug);interface TutorialPageProps {
   tutorial?: TutorialType;
-}
+
 export default /**
  * Tutorial - Function description
  */
 function Tutorial() {
   const router = use_router (),
   const slug = router.query.slug as string | undefined,
-  const tutorial = initial_tutorial || TUTORIALS.find ((t, ) => t.slug === slug),
+  const tutorial = initial_tutorial || TUTORIALS.find (t, ) => t.slug = = slug),
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <div className='min - h-screen bg - zion - blue flex items - center justify - center text - white'>;
         Tutorial not found.;
@@ -169,11 +168,10 @@ if ( {) {
           {tutorial.author && (
             <p className='mt - 8 text - white font - semibold'>;
               {' '}
-              {typeof tutorial.author === 'string';
+              {typeof tutorial.author = = 'string';
                 ? tutorial.author;
                 : tutorial.author.name}
             </p>)}
         </div>;
       </div>;
     </>);
-}

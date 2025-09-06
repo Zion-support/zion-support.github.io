@@ -6,5 +6,3 @@ export function DeveloperRoutes() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

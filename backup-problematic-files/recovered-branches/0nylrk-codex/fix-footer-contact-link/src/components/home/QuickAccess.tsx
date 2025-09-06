@@ -9,8 +9,8 @@ import { ;
   Settings, ;
   MessageSquare, ;
   Smartphone ;
-} from "lucide-react",;
-;
+ from "lucide-react",;
+
 export function QuickAccess() {;
   const quickLinks = [;
     {;
@@ -50,7 +50,7 @@ export function QuickAccess() {;
       link:"/mobile-launch";
     }
   ],;
-;
+
   return (;
     <section className="py-12 bg-zion-blue-dark">;
       <div className="container mx-auto px-4">;
@@ -62,9 +62,8 @@ export function QuickAccess() {;
             Jump directly to our most popular features;
           </p>;
         </div>;
-        ;
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-6xl mx-auto">;
-          {quickLinks.map((link, index) => (;
+          {quickLinks.map(link, index) => (;
             <Link ;
               key={index} ;
               to={link.link} ;
@@ -80,7 +79,7 @@ export function QuickAccess() {;
                 <ArrowRight className="ml-1 h-3 w-3" />;
               </div>;
             </Link>;
-          ))}
+          )}
         </div>;
       </div>;
     </section>;
@@ -93,6 +92,5 @@ Briefcase;
 Settings;
 MessageSquare;
 Smartphone const quickLinks = [ {
-  Quick Access </h2> <p className="text-zion-slate-light text-lg" > Jump directly to our most popular features </p> </div> <span>Access</span> <ArrowRight className="ml-1 h-3 w-3" /> </div> </Link>) ) 
-}</div> </div> </section>) 
-}
+  Quick Access </h2> <p className="text-zion-slate-light text-lg" > Jump directly to our most popular features </p> </div> <span>Access</span> <ArrowRight className="ml-1 h-3 w-3" /> </div> </Link>) 
+</div> </div> </section>) 

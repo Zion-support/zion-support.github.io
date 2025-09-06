@@ -6,5 +6,3 @@ export function Rewards() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

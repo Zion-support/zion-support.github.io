@@ -7,6 +7,5 @@ const AIClimatePredictionPlatform = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default AIClimatePredictionPlatform;

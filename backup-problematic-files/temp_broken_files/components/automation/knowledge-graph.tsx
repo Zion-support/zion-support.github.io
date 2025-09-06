@@ -12,10 +12,9 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     const file = path.join(process.cwd(), 'publicautomationknowledge-graph.json'),
     const raw = fs.readFileSync(file, 'utf8'),
     const data = JSON.parse(raw),
-    return { props: { report: data }, revalidate: 86400 }
-  } catch {
-    return { props: { report: null }, revalidate: 86400 }  }
-},
+    return { props: { report: data }, revalidate: 86400 } catch {
+    return { props: { report: null }, revalidate: 86400 }
+,
 
 export default function KnowledgeGraph({ report }: Props) {
   if (!report) return <div>No knowledge graph yet.</div>,
@@ -28,8 +27,8 @@ export default function KnowledgeGraph({ report }: Props) {
       <section>
         <h2 className=&quot;font-semibold mb-2&quot;>Top Terms</h2>
         <ul className=&quot;flex flex-wrap gap-2 text-sm&quot;>
-          {report.topTerms.map((t, i) => (
-            <li key={i} className=&quot;px-2 py-1 rounded bg-gray-100 dark:bg-gray-800&quot;>{t.term} <span className=&quot;text-gray-500&quot;>({t.count})</span></li>          ))}
+          {report.topTerms.map(t, i) => (
+            <li key={i} className=&quot;px-2 py-1 rounded bg-gray-100 dark:bg-gray-800&quot;>{t.term} <span className=&quot;text-gray-500&quot;>({t.count})</span></li>          )}
         </ul>
       </section>
       <section>
@@ -42,8 +41,8 @@ export default function KnowledgeGraph({ report }: Props) {
       <section>
         <h2 className=&quot;font-semibold mb-2&quot;>Sample Edges</h2>
         <ul className=&quot;text-sm space-y-1 max-h-96 overflow-auto border rounded p-3 border-gray-200 dark:border-gray-800&quot;>
-          {report.edges.slice(0, 200).map((e, i) => (
-            <li key={i} className=&quot;flex justify-between gap-4&quot;><span className=&quot;truncate&quot;>{e.source}  {e.target}</span><span className=&quot;text-gray-500 truncate&quot;>{e.terms.join(', ')}</span></li>          ))}
+          {report.edges.slice(0, 200).map(e, i) => (
+            <li key={i} className=&quot;flex justify-between gap-4&quot;><span className=&quot;truncate&quot;>{e.source}  {e.target}</span><span className=&quot;text-gray-500 truncate&quot;>{e.terms.join(', ')}</span></li>          )}
         </ul>
       </section>
     </div>

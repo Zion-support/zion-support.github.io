@@ -184,9 +184,9 @@ import {
   SleepyFace2,
   YawningFace2,
   DizzyFace2,
-} from "lucide-react";
+ from "lucide-react";
   DizzyFace2
-} from 'lucide-react';
+ from 'lucide-react';
 
 export default function LoginPage() {
   const [formData, setFormData] = useState({
@@ -202,7 +202,7 @@ export default function LoginPage() {;
   const [error, setError] = useState("");
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({
+    setFormData(prev) => ({
       ...prev,
       [name]: value,
   const [error, setError] = useState('');
@@ -214,17 +214,17 @@ export default function LoginPage() {;
       [name]: value
       ...prev
       [name]: value
-    }));
+    });
   }
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
   const handleInputChange = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
     const { name, value } = e && e.target;
-    setFormData((prev) => ({;
+    setFormData(prev) => ({;
       ...prev,;
       [name]: value,;
-    }));
+    });
   };
 
   const handleSubmit = async (e: React && React.FormEvent) => {;
@@ -233,21 +233,19 @@ export default function LoginPage() {;
     setError("");
     try {
       // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      await new Promise(resolve) => setTimeout(resolve, 1000);
       // For demo purposes, accept any email/password
       if (formData.email && formData.password) {
         // Redirect to dashboard or home page
         window.location.href = "/";
       } else {
         setError("Please fill in all fields");
-      }
-    } catch (err) {;
+      } catch (err) {;
       setError("Login failed. Please try again.");
     } finally {
     } finally {;
       setIsLoading(false);
     }
-  }
   return (
     <Layout>
       <Head>
@@ -261,9 +259,9 @@ export default function LoginPage() {;
         <div className="max-w-md w-full space-y-8">
           <motion.div
             className="text-center"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
           >
             <div className="mx-auto h-12 w-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center">
               <Shield className="h-6 w-6 text-white" />
@@ -284,16 +282,16 @@ export default function LoginPage() {;
           </motion.div>
           <motion.div
             className="mt-8 bg-white py-8 px-6 shadow-lg rounded-lg"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}>;
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0 && 0.8, delay: 0 && 0.2 }>;
             <form className="space-y-6" onSubmit={handleSubmit}>;
               {error && (;
                 <motion&& motion.div
                   className="bg-red-50 border border-red-200 text-red-600 px-4 py-3 rounded-lg flex items-center"
-                  initial={{ opacity: 0, scale: 0 && 0.95 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0 && 0.3 }}>;
+                  initial={ opacity: 0, scale: 0 && 0.95 }
+                  animate={ opacity: 1, scale: 1 }
+                  transition={ duration: 0 && 0.3 }>;
                   <AlertCircle className="h-5 w-5 mr-2" />;
                   {error}
                 </motion && motion.div>;
@@ -420,33 +418,31 @@ export default function LoginPage() {;
                     href="/forgot-password"
                     className="font-medium text-blue-600 hover:text-blue-500">;
   }
-;
+
   const handle_submit = async (e: React.FormEvent) => {
     e.prevent_default ();
     setIsLoading (true);
     set_error ("");
-;
+
     try {
       // Simulate API call;
-      await new Promise ((resolve) => set_timeout (resolve, 1000));
-;
+      await new Promise (resolve) => set_timeout (resolve, 1000);
+
       // For demo purposes, accept any email / password;
       // Check condition
 if ( {) {
   $2
-}
+
         // Redirect to dashboard or home page;
         window.location.href = "/";
       } else {
         set_error ("Please fill in all fields");
-      }
-    } catch (err) {
+      } catch (err) {
       set_error ("Login failed. Please try again.");
     } finally {
       setIsLoading (false);
     }
-  }
-;
+
   return (
     <Layout>;
       <Head>;
@@ -460,9 +456,9 @@ if ( {) {
         <div className="max - w-md w - full space - y-8">;
           <motion.div;
             className="text - center";
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, coordinate_y: 30 }
+            animate={ opacity: 1, coordinate_y: 0 }
+            transition={ duration: 0.8 }
           >;
             <div className="mx - auto h - 12 w - 12 bg - gradient - to - r from - blue - 600 to - purple - 600 rounded - full flex items - center justify - center">;
               <Shield className="h - 6 w - 6 text - white" />;
@@ -482,17 +478,17 @@ if ( {) {
           </motion.div>;
           <motion.div;
             className="mt - 8 bg - white py - 8 px - 6 shadow - lg rounded - lg";
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={ opacity: 0, coordinate_y: 30 }
+            animate={ opacity: 1, coordinate_y: 0 }
+            transition={ duration: 0.8, delay: 0.2 }
           >;
             <form className="space - y-6" on_submit={handle_submit}>;
               {error && (
                 <motion.div;
                   className="bg - red - 50 border border - red - 200 text - red - 600 px - 4 py - 3 rounded - lg flex items - center";
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.3 }}
+                  initial={ opacity: 0, scale: 0.95 }
+                  animate={ opacity: 1, scale: 1 }
+                  transition={ duration: 0.3 }
                 >;
                   <AlertCircle className="h - 5 w - 5 mr - 2" />;
                   {error}
@@ -623,9 +619,9 @@ if ( {) {
           </motion.div>
           <motion.div
             className="text-center"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8, delay: 0.4 }
           >
             <p className="text-sm text-gray-600">
               Don't have an account?{" "}
@@ -684,9 +680,9 @@ if ( {) {
           </motion.div>;
           <motion.div;
             className="text - center";
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            initial={ opacity: 0, coordinate_y: 30 }
+            animate={ opacity: 1, coordinate_y: 0 }
+            transition={ duration: 0.8, delay: 0.4 }
           >;
             <p className="text - sm text - gray - 600">;
               Don't have an account?{" "}
@@ -701,4 +697,3 @@ if ( {) {
         </div>;
       </div>;
     </Layout>);
-}

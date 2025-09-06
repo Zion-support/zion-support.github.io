@@ -105,7 +105,7 @@ export function FilterSidebar(): any ({;
       {/* Filter header */}
   isMobileFilterOpen;
   isMobileFilterOpen
-}: FilterSidebarProps) {
+: FilterSidebarProps) {
   return (
     <>;
       {/* Filter header */}
@@ -176,11 +176,11 @@ export function FilterSidebar(): any ({;
       {isMobileFilterOpen && (
         <Button
           onClick={() =>;
-            window && window.dispatchEvent(new CustomEvent('closeMobileFilter'));
+            window && window.dispatchEvent(new CustomEvent('closeMobileFilter');
           }
           className='w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4'        >
         <Button
-          onClick = {(,) => window.dispatchEvent(new CustomEvent('closeMobileFilter')),}
+          onClick = {(,) => window.dispatchEvent(new CustomEvent('closeMobileFilter'),}
           className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4"
       {/* Search */}
       <SearchFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
@@ -274,22 +274,19 @@ export function FilterSidebar(): any ({;
       />;
       {isMobileFilterOpen && (
         <Button 
-          onClick={() => window.dispatchEvent(new CustomEvent('closeMobileFilter'))}
+          onClick={() => window.dispatchEvent(new CustomEvent('closeMobileFilter')}
           className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4"
         >
           Apply Filters
         </Button>
       )}
     </>
-  )
-}
   );
-}
+
         <Button;
-          on_click={() => window.dispatch_event (new CustomEvent ('closeMobileFilter'))}
+          on_click={() => window.dispatch_event (new CustomEvent ('closeMobileFilter')}
           className="w - full bg - zion - purple hover:bg - zion - purple - dark text - white mt - 4";
         >;
           Apply Filters;
         </Button>)}
     </>);
-}

@@ -6,5 +6,3 @@ export export export default function RecommendationsPage()      {;
       <p>Component placeholder - needs implementation</p>;
     </div>;
   );
-}
-;

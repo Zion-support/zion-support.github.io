@@ -4,7 +4,6 @@ import React from 'react';
 
 interface InfrastructureProps {
   className?: string;
-}
 
 const Infrastructure: React.FC<InfrastructureProps> = ({ className }) => {
   return (
@@ -13,6 +12,3 @@ const Infrastructure: React.FC<InfrastructureProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-}
-}
-}

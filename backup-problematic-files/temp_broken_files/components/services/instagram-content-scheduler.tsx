@@ -8,7 +8,7 @@ const ServicePage: NextPage<Props> = () => {_return (
         <title>Instagram Content Scheduler | Services</title>
         <meta name=&quot;description&quot; content=&quot;Auto-generate posts from blog feeds and schedule with analytics.&quot; />
       </Head>
-      
+
       <main>
         <h1>InstagramContentScheduler</h1>
         <p>Service details coming soon...</p>
@@ -16,5 +16,5 @@ const ServicePage: NextPage<Props> = () => {_return (
       </main>
     </div>
   )
-},
+,
 export default ServicePage,

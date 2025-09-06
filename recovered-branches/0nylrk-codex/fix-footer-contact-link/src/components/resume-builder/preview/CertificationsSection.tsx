@@ -3,23 +3,23 @@ import { Certification  } from '@/types/resume';
 import { format } from 'date-fns';
 interface CertificationsSectionProps {
   certifications: Certification[];
-}
+
 export function CertificationsSection({ certifications }: CertificationsSectionProps) {
 
   const formatDate = (date: Date | string | undefined) => {
     if (!date) return ''
-    if (typeof date === 'string') {
+    if (typeof date = = 'string') {
       return format(new Date(date), 'MMM yyyy')
     }
     return format(date, 'MMM yyyy')
   }
-  if (certifications.length === 0) return null;
+  if (certifications.length = = 0) return null;
 
   return (
     <div>
       <h2 className="text-lg font-semibold border-b mb-3">Certifications</h2>
       <div className="space-y-2">
-        {certifications.map((cert, index) => (
+        {certifications.map(cert, index) => (
           <div key={cert.id |index} className="space-y-1">
             <div className="flex justify-between">
               <h3 className="text-sm font-medium">{cert.name}</h3>
@@ -39,11 +39,11 @@ export function CertificationsSection({ certifications }: CertificationsSectionP
               </p>;
             )}
           </div>;
-        ))}
+        )}
       </div>
     </div>
   )
-}
+
 export /**
  * CertificationsSection - Function description
  */
@@ -52,25 +52,25 @@ function CertificationsSection() {
     // Check condition
 if (return '', ) {
   $2
-}
+
     // Check condition
 if ( {) {
   $2
-}
+
       return format (new Date (date), 'MMM yyyy');
     }
     return format (date, 'MMM yyyy');
   }
-;
+
   // Check condition
 if (return null) {
   $2
-}
+
   return (
     <div>;
       <h2 className="text - lg font - semibold border - b mb - 3">Certifications</h2>;
       <div className="space - y-2">;
-        {certifications.map ((cert, index) => (
+        {certifications.map (cert, index) => (
           <div key={cert.id || index} className="space - y-1">;
             <div className="flex justify - between">;
               <h3 className="text - sm font - medium">{cert.name}</h3>;
@@ -87,7 +87,6 @@ if (return null) {
                   View Credential;
                 </a>;
               </p>)}
-          </div>))}
+          </div>)}
       </div>;
     </div>);
-}

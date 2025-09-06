@@ -6,5 +6,3 @@ export function dialog() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

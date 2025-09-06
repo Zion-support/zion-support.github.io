@@ -1,11 +1,11 @@
 import React from 'react',;
 import Head from 'next/head',;
 import { useRouter } from 'next/router',;
-;
+
 export default function ProposalDetailPage() {;
   const router = useRouter(),;
   const { proposalId } = router.query,;
-;
+
   return (;
     <>;
       <Head>;
@@ -26,4 +26,3 @@ export default function ProposalDetailPage() {;
       </div>;
     </>;
   );
-}

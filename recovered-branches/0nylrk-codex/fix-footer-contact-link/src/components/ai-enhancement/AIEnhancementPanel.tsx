@@ -14,7 +14,7 @@ interface AIEnhancementPanelProps {
   onClose?: () => void;
   showInstructions?: boolean;
   initialContent?: string;
-}
+
 export function AIEnhancementPanel({
   title;
   defaultOptions;
@@ -23,7 +23,7 @@ export function AIEnhancementPanel({
 
   showInstructions = true;
   initialContent = '';
-}: AIEnhancementPanelProps) {;
+: AIEnhancementPanelProps) {;
   const [options, setOptions] = useState<AIEnhancementOptions>({;
     ...defaultOptions;
     content: initialContent |defaultOptions.content})
@@ -35,7 +35,6 @@ export function AIEnhancementPanel({
     if (result) {;
       setGeneratedContent(result);
     }
-  }
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
     field: keyof AIEnhancementOptions
@@ -51,7 +50,7 @@ export function AIEnhancementPanel({
   const handleCopy = () => {
     navigator.clipboard.writeText(generatedContent);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000)
+    setTimeout() => setCopied(false), 2000)
   }
 
   return (
@@ -153,7 +152,7 @@ export function AIEnhancementPanel({
       )}
     </Card>
   )
-}
+
 import {Card, CardContent, CardHeader, CardTitle, CardFooter} from '@/components / ui / card';
 import {Textarea} from '@/components / ui / textarea';
 import {Button} from '@/components / ui / button';
@@ -167,7 +166,7 @@ interface AIEnhancementPanelProps {
   on_close?: () => void;
   show_instructions?: boolean;
   initial_content?: string;
-}
+
 export /**
  * AIEnhancementPanel - Function description
  */
@@ -178,17 +177,16 @@ function AIEnhancementPanel() {
   const [generated_content, setGeneratedContent] = useState < string>('');
   const [copied, set_copied] = useState (false);
   const { enhance_content, is_enhancing } = useAIContentEnhancer ();
-;
+
   const handle_generate = async () => {
     const result = await enhance_content (options);
     // Check condition
 if ( {) {
   $2
-}
+
       setGeneratedContent (result);
     }
-  }
-;
+
   const handleInputChange = (
     e: React.ChangeEvent < HTMLInputElement | HTMLTextAreaElement>,
     field: keyof AIEnhancementOptions) =>: any {
@@ -196,20 +194,20 @@ if ( {) {
       ...options,
       [field]: e.target.value});
   }
-;
+
   const handle_apply = () =>: any {
     on_apply (generated_content);
-    if (on_close ()) {
+    if (on_close () {
   $2
-}
+
   }
-;
+
   const handle_copy = () =>: any {
     navigator.clipboard.write_text (generated_content);
     set_copied (true);
-    set_timeout (() => set_copied (false), 2000);
+    set_timeout () => set_copied (false), 2000);
   }
-;
+
   return (
     <Card className="w - full max - w-2xl mx - auto">;
       <CardHeader>;
@@ -301,4 +299,3 @@ if ( {) {
           </Button>;
         </CardFooter>)}
     </Card>);
-}

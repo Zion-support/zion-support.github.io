@@ -6,5 +6,3 @@ export function Faq() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

@@ -155,7 +155,7 @@ export default function FAQ() {;
         <section className="py-16 px-4">;
           <div className="max-w-4xl mx-auto">;
             <div className="space-y-8">;
-              {faqs && faqs.map((faq, index) => (;
+              {faqs && faqs.map(faq, index) => (;
                 <div
                   key={index}
                   className="p-8 bg-slate-900/60 rounded-xl border border-white/10">;
@@ -164,7 +164,7 @@ export default function FAQ() {;
                   </h3>;
                   <p className="text-slate-300 leading-relaxed">{faq && faq.answer}</p>;
                 </div>;
-              ))}
+              )}
             </div>
           </div>
         </section>
@@ -234,4 +234,3 @@ export default function FAQ() {;
     </>;
   );
     </>);
-}

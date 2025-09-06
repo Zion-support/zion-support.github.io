@@ -11,15 +11,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       supabase.from('applications').select('id, talent_id, status').eq('talent_id', talentId),
       supabase.from('search_matches').select('talent_id, tag').eq('talent_id', talentId)]),
 
-    const views = viewsR.status === 'fulfilled' && viewsR.value.data ? viewsR.value.data as any[] : [],
-    const invites = invitesR.status === 'fulfilled' && invitesR.value.data ? invitesR.value.data as any[] : [],
-    const apps = appsR.status === 'fulfilled' && appsR.value.data ? appsR.value.data as any[] : [],
-    const tags = tagsR.status === 'fulfilled' && tagsR.value.data ? tagsR.value.data as any[] : [],
+    const views = viewsR.status = = 'fulfilled' && viewsR.value.data ? viewsR.value.data as any[] : [],
+    const invites = invitesR.status = = 'fulfilled' && invitesR.value.data ? invitesR.value.data as any[] : [],
+    const apps = appsR.status = = 'fulfilled' && appsR.value.data ? appsR.value.data as any[] : [],
+    const tags = tagsR.status = = 'fulfilled' && tagsR.value.data ? tagsR.value.data as any[] : [],
 
     const profileViews = (views.length || 27),
     const quoteInvites = (invites.length || 6),
     const jobApplications = (apps.length || 9),
-    const successRate = ((apps.filter(a => a.status === 'accepted').length || 3) / Math.max(jobApplications, 1)) * 100,
+    const successRate = (apps.filter(a => a.status = = 'accepted').length || 3) / Math.max(jobApplications, 1) * 100,
 
     const tagCounts: Record<string number> = {},
     (tags.length ? tags : [
@@ -33,7 +33,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       quoteInvites,
       jobApplications,
       successRate,
-      topTags: Object.entries(tagCounts).sort((a, b) => b[1] - a[1]).slice(0, 5).map(([label, value]) => ({ label, value }))})
+      topTags: Object.entries(tagCounts).sort(a, b) => b[1] - a[1]).slice(0, 5).map([label, value]) => ({ label, value })})
   } catch (e) {
     res.status(200).json({
       profileViews: 27,
@@ -43,4 +43,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       topTags: [
         { label: 'react', value: 2 },
         { label: 'node', value: 1 },
-        { label: 'ai', value: 1 }]})  }}
+        { label: 'ai', value: 1 }]})  }

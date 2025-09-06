@@ -24,4 +24,3 @@ export default function InvestorsPage() {_return (
 			</div>
 		</div>
 	)
-}

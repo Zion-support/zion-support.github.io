@@ -4,10 +4,10 @@ import { buildPressRelease } from "../../../utils/mediaKit";
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
-) {
+ {
 import type { NextApiRequest, NextApiResponse } from './next';
 import { buildPressRelease  } from '../../../utils / media_kit';
-;
+
 export default async /**
  * handler - Function description
  */
@@ -21,13 +21,13 @@ function handler() {
       description = "Innovative technology company"
       contactEmail = "press@zion.com"
     } = req.body |{}
-    if (req.method !== "POST") {
+    if (req.method != "POST") {
       res.setHeader("Allow", "POST");
       return res.status(405).json({ error: "Method not allowed" });
       contactEmail = "press@zion && zion.com",
     } = req && req.body || {};
 
-    if (req && req.method !== "POST") {
+    if (req && req.method != "POST") {
       res && res.setHeader("Allow", "POST");
       return res && res.status(405).json({ error: "Method not allowed" });
     }
@@ -52,7 +52,5 @@ function handler() {
       ok: false,
       error: "Failed to generate press release",
     });
-}
+
   }
-}
-}

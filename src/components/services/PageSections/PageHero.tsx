@@ -46,7 +46,7 @@ export function PageHero() {
       </div>
     </div>
   )
-}
+
           <h3 className="text-xl font-bold text-white mb-2">Transparent Pricing</h3>
           <p className="text-zion-slate-light">Clear per-incident pricing includes transportation and first hour onsite</p>
 export function PageHero() {
@@ -81,7 +81,7 @@ export function PageHero() {
       </div>
     </div>
   )
-}
+
 import { GradientHeading } from '@/components/GradientHeading';
 import { Clock, Map, DollarSign } from 'lucide-react';
 export function PageHero() {;
@@ -132,7 +132,7 @@ export function PageHero() {;
       </div>;
     </div>;
   );
-}
+
           <h3 className="text-xl font-bold text-white mb-2">Transparent Pricing</h3>;
           <p className="text-zion-slate-light">Clear per-incident pricing includes transportation and first hour onsite</p>;
 
@@ -171,9 +171,9 @@ export function PageHero() {;
       </div>;
     </div>;
   );
-}
+
   );
-}
+
 import { GradientHeading } from '@/components / GradientHeading';
 import { Clock, Map, DollarSign } from 'lucide-react';
 export /**
@@ -223,7 +223,7 @@ function PageHero() {
           </p>        </div>;
       </div>;
     </div>);
-}
+
           <h3 className="text - xl font - bold text - white mb - 2">Transparent Pricing</h3>;
           <p className="text - zion - slate - light">Clear per - incident pricing includes transportation and first hour onsite</p>;
 export /**
@@ -260,4 +260,3 @@ function PageHero() {
         </div>;
       </div>;
     </div>);
-}

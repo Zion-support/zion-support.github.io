@@ -4,7 +4,6 @@ import React from 'react';
 
 interface Customer-experienceProps {
   className?: string;
-}
 
 const Customer-experience: React.FC<Customer-experienceProps> = ({ className }) => {
   return (
@@ -13,6 +12,3 @@ const Customer-experience: React.FC<Customer-experienceProps> = ({ className }) 
       <p>This component is under development.</p>
     </div>
   );
-}
-}
-}

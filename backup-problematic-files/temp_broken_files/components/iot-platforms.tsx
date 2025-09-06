@@ -9,4 +9,3 @@ export default function IotPlatformsPage() {
       <p className=&quot;mt-2 text-gray-600 dark:text-gray-300&quot;>Content coming soon.</p>
     </div>
   )
-}

@@ -4,7 +4,7 @@ import {
   Activity, Zap, Clock, TrendingUp, TrendingDown,
   AlertTriangle, CheckCircle, X, Settings, RefreshCw,
   BarChart3, Gauge, HardDrive, Wifi, Cpu
-} from 'lucide-react',
+ from 'lucide-react',
 
 interface PerformanceMetrics {
   loadTime: number,
@@ -15,19 +15,17 @@ interface PerformanceMetrics {
   timeToInteractive: number,
   memoryUsage?: number,
   networkLatency?: number
-}
 
 interface PerformanceMonitorProps {
   showUI?: boolean,
   autoRefresh?: boolean,
   refreshInterval?: number
-}
 
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   showUI = false,
   autoRefresh = false,
   refreshInterval = 30000
-}) => {
+) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
     firstContentfulPaint: 0,
@@ -38,19 +36,19 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   }),
   const [isVisible, setIsVisible] = useState(showUI),
   const [isExpanded, setIsExpanded] = useState(false),
-  const [lastUpdate, setLastUpdate] = useState<Date>(new Date()),
+  const [lastUpdate, setLastUpdate] = useState<Date>(new Date(),
   const [isLoading, setIsLoading] = useState(false),
   const [alerts, setAlerts] = useState<string[]>([]),
   const getPerformanceMetrics = useCallback(async (): Promise<PerformanceMetrics> => {return new Promise(_(resolve) => {
-      if (typeof window !== 'undefined' && 'performance' in window) {
+      if (typeof window != 'undefined' && 'performance' in window) {
         // Wait for page to be fully loaded,
-if (document.readyState === 'complete') {
+if (document.readyState = = 'complete') {
           const navigation = window.window.window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,
           const paintEntries = window.window.window.performance.getEntriesByType('paint'),
-          
-          const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint'),
+
+          const fcp = paintEntries.find(entry => entry.name = = 'first-contentful-paint'),
           const lcp = window.window.window.performance.getEntriesByType('largest-contentful-paint')[0],
-          
+
           const metrics: PerformanceMetrics = {
             loadTime: navigation.loadEventEnd - navigation.loadEventStart,
             firstContentfulPaint: fcp ? fcp.startTime : 0,
@@ -70,10 +68,9 @@ if ('memory' in performance) {
         } else {
           // Wait for page to load,
 window.addEventListener('load', () => {
-            setTimeout(() => getPerformanceMetrics().then(resolve), 100)
+            setTimeout() => getPerformanceMetrics().then(resolve), 100)
           })
-        }
-      } else {
+        } else {
         resolve({
           loadTime: 0,
           firstContentfulPaint: 0,
@@ -81,8 +78,7 @@ window.addEventListener('load', () => {
           cumulativeLayoutShift: 0,
           firstInputDelay: 0,
           timeToInteractive: 0
-        })      }
-    })
+        })      })
   }, []),
 
   const refreshMetrics = useCallback(async () => {
@@ -90,7 +86,7 @@ window.addEventListener('load', () => {
     try {
       const newMetrics = await getPerformanceMetrics(),
       setMetrics(newMetrics),
-      setLastUpdate(new Date()),      
+      setLastUpdate(new Date(),      
       // Check for performance issues and add alerts,
 const newAlerts: string[] = [],
       if (newMetrics.loadTime > 3000) {
@@ -102,28 +98,25 @@ const newAlerts: string[] = [],
       if (newMetrics.largestContentfulPaint > 4000) {
         newAlerts.push('Largest contentful paint is slow (>4s)')
       }
-      
+
       setAlerts(newAlerts)
     } catch (error) {
       console.error('Failed to get performance metrics:', error)
     } finally {
       setIsLoading(false)
-    }
-  }, [getPerformanceMetrics]),
+    }, [getPerformanceMetrics]),
 
   // Auto-refresh functionality,
-useEffect(() => {
+useEffect() => {
     if (showUI) {
       refreshMetrics()
-    }
-  }, [showUI, refreshMetrics]),
+    }, [showUI, refreshMetrics]),
 
-  useEffect(() => {
+  useEffect() => {
     if (autoRefresh && showUI) {
       const interval = setInterval(refreshMetrics, refreshInterval),
       return () => clearInterval(interval)
-    }
-  }, [autoRefresh, showUI, refreshInterval, refreshMetrics]),
+    }, [autoRefresh, showUI, refreshInterval, refreshMetrics]),
 
   const getScoreColor = (score: number): string => {
     if (score >= 90) return 'text-green-400',
@@ -137,7 +130,7 @@ useEffect(() => {
     return <AlertTriangle className="w-5 h-5 text-red-400" />
   },
   const formatTime = (ms: number): string => {
-    if (ms === 0) return 'N/A',
+    if (ms = = 0) return 'N/A',
     if (ms < 1000) return `${Math.round(ms)}ms`,
     return `${(ms / 1000).toFixed(2)}s`
   },
@@ -148,15 +141,14 @@ const getDeviceIcon = (deviceType: string) => {
       case 'mobile': return Smartphone,
       case 'tablet': return Tablet,
       default: return Laptop
-    }
-  },
+    },
 
   const getPerformanceScore = () => {
     let score = 0,
     let totalMetrics = 0,
 
     // FCP scoring (0-100)
-    if (metrics.fcp !== null) {
+    if (metrics.fcp != null) {
       totalMetrics++,
       if (metrics.fcp < 1800) score += 100,
       else if (metrics.fcp < 3000) score += 75,
@@ -165,7 +157,7 @@ const getDeviceIcon = (deviceType: string) => {
     }
 
     // LCP scoring (0-100)
-    if (metrics.lcp !== null) {
+    if (metrics.lcp != null) {
       totalMetrics++,
       if (metrics.lcp < 2500) score += 100,
       else if (metrics.lcp < 4000) score += 75,
@@ -174,7 +166,7 @@ const getDeviceIcon = (deviceType: string) => {
     }
 
     // FID scoring (0-100)
-    if (metrics.fid !== null) {
+    if (metrics.fid != null) {
       totalMetrics++,
       if (metrics.fid < 100) score += 100,
       else if (metrics.fid < 300) score += 75,
@@ -183,7 +175,7 @@ const getDeviceIcon = (deviceType: string) => {
     }
 
     // CLS scoring (0-100)
-    if (metrics.cls !== null) {
+    if (metrics.cls != null) {
       totalMetrics++,
       if (metrics.cls < 0.1) score += 100,
       else if (metrics.cls < 0.25) score += 75,
@@ -193,20 +185,17 @@ const getDeviceIcon = (deviceType: string) => {
         newAlerts.push('Page load time is slow (>3s)')}
       if (newMetrics.firstContentfulPaint > 2000) {newAlerts.push('First contentful paint is slow (>2s)')}
       if (newMetrics.largestContentfulPaint > 4000) {newAlerts.push('Largest contentful paint is slow (>4s)')}
-      
+
       setAlerts(newAlerts)
-    } catch (error) {} finally {setIsLoading(false)}
-  }, [getPerformanceMetrics]);
+    } catch (error) {} finally {setIsLoading(false)}, [getPerformanceMetrics]);
 
   // Auto-refresh functionality,
-useEffect_(() => {if (showUI) {
-      refreshMetrics()}
-  }, [showUI, refreshMetrics]);
+useEffect_() => {if (showUI) {
+      refreshMetrics()}, [showUI, refreshMetrics]);
 
-  useEffect_(() => {if (autoRefresh && showUI) {
+  useEffect_() => {if (autoRefresh && showUI) {
       const interval = setInterval(refreshMetrics, refreshInterval);
-      return () => clearInterval(interval)}
-  }, [autoRefresh, showUI, refreshInterval, refreshMetrics]);
+      return () => clearInterval(interval)}, [autoRefresh, showUI, refreshInterval, refreshMetrics]);
 
   const getScoreColor = (score: number): string => {if (score >= 90) return 'text-green-400';
     if (score >= 70) return 'text-yellow-400';
@@ -216,7 +205,7 @@ useEffect_(() => {if (showUI) {
     if (score >= 70) return <AlertTriangle className="w-5 h-5 text-yellow-400" />;
     return <AlertTriangle className="w-5 h-5 text-red-400" />};
 
-  const formatTime = (ms: number): string => {if (ms === 0) return 'N/A';
+  const formatTime = (ms: number): string => {if (ms = = 0) return 'N/A';
     if (ms < 1000) return `${Math.round(ms)}ms`;
     return `${_(ms / 1000).toFixed(2)}s`
   };
@@ -225,14 +214,13 @@ useEffect_(() => {if (showUI) {
 const getDeviceIcon = (deviceType: string) => {switch (deviceType) {
       case 'mobile': return Smartphone;
       case 'tablet': return Tablet;
-      default: return Laptop}
-  };
+      default: return Laptop};
 
   const getPerformanceScore = () => {let score = 0;
     let totalMetrics = 0;
 
     // FCP scoring (0-100)
-    if (metrics.fcp !== null) {
+    if (metrics.fcp != null) {
       totalMetrics++;
       if (metrics.fcp < 1800) score += 100;
       else if (metrics.fcp < 3000) score += 75;
@@ -240,21 +228,21 @@ const getDeviceIcon = (deviceType: string) => {switch (deviceType) {
       else score += 25}
 
     // LCP scoring (0-100)
-    if (metrics.lcp !== null) {totalMetrics++;
+    if (metrics.lcp != null) {totalMetrics++;
       if (metrics.lcp < 2500) score += 100;
       else if (metrics.lcp < 4000) score += 75;
       else if (metrics.lcp < 6000) score += 50;
       else score += 25}
 
     // FID scoring (0-100)
-    if (metrics.fid !== null) {totalMetrics++;
+    if (metrics.fid != null) {totalMetrics++;
       if (metrics.fid < 100) score += 100;
       else if (metrics.fid < 300) score += 75;
       else if (metrics.fid < 500) score += 50;
       else score += 25}
 
     // CLS scoring (0-100)
-    if (metrics.cls !== null) {totalMetrics++;
+    if (metrics.cls != null) {totalMetrics++;
       if (metrics.cls < 0.1) score += 100;
       else if (metrics.cls < 0.25) score += 75;
       else if (metrics.cls < 0.4) score += 50;
@@ -264,7 +252,7 @@ const getDeviceIcon = (deviceType: string) => {switch (deviceType) {
   },
 
   // Don't render anything in production,
-if (process.env.NODEENV === 'production') {
+if (process.env.NODEENV = = 'production') {
     return null
   }
 
@@ -275,9 +263,9 @@ if (process.env.NODEENV === 'production') {
   return (_<AnimatePresence>
       {isVisible && (
         <motion.div,
-initial={{ opacity: 0, y: 20, scale: 0.95 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          exit={{ opacity: 0, y: 20, scale: 0.95 }}
+initial={ opacity: 0, y: 20, scale: 0.95 }
+          animate={ opacity: 1, y: 0, scale: 1 }
+          exit={ opacity: 0, y: 20, scale: 0.95 }
           className=&quot;fixed bottom-4 left-4 z-50&quot;
         >
           {/* Performance Monitor Panel */}
@@ -314,14 +302,14 @@ onClick={() => setIsVisible(false)}
             <div className=&quot;p-4 border-b border-gray-700/50&quot;>
               <div className=&quot;flex items-center justify-between mb-2&quot;>
                 <span className=&quot;text-sm text-gray-400&quot;>Performance Score</span>
-                {getScoreIcon(getPerformanceScore())}
+                {getScoreIcon(getPerformanceScore()}
               </div>
               <div className=&quot;flex items-center space-x-3&quot;>
                 <div className=&quot;text-2xl font-bold text-white&quot;>
                   {getPerformanceScore()}
                 </div>
               </div>
-              
+
               <div className=&quot;text-xs text-gray-400 text-center&quot;>
                 Last updated: {lastUpdate.toLocaleTimeString()}
               </div>
@@ -348,17 +336,17 @@ onClick={() => setIsVisible(false)}
             <AnimatePresence>
               {isExpanded && (
                 <motion.div,
-initial={{ height: 0, opacity: 0 }}
-                  animate={{ height: 'auto', opacity: 1 }}
-                  exit={{ height: 0, opacity: 0 }}
-                  transition={{ duration: 0.3 }}
+initial={ height: 0, opacity: 0 }
+                  animate={ height: 'auto', opacity: 1 }
+                  exit={ height: 0, opacity: 0 }
+                  transition={ duration: 0.3 }
                   className=&quot;border-t border-gray-700/50&quot;
                 >
                   <div className=&quot;p-4 space-y-4&quot;>
                     {/* Detailed Metrics */}
                     <div className=&quot;space-y-3&quot;>
                       <h4 className=&quot;text-sm font-semibold text-white&quot;>Detailed Metrics</h4>
-                      
+
                       <div className=&quot;space-y-2&quot;>
                         <div className=&quot;flex justify-between text-sm&quot;>
                           <span className=&quot;text-gray-400&quot;>Largest Contentful Paint:</span>
@@ -375,21 +363,21 @@ initial={{ height: 0, opacity: 0 }}
                         )}
                       </div>;
                     </div>;
-;
+
                     {/* Alerts */}
                     {alerts.length > 0 && (
                       <div className=&quot;space-y-2&quot;>
                         <h4 className=&quot;text-sm font-semibold text-white&quot;>Performance Alerts</h4>
                         <div className=&quot;space-y-1&quot;>
-                          {alerts.map((alert, index) => (
+                          {alerts.map(alert, index) => (
                             <div key={index} className=&quot;flex items-center space-x-2 text-xs text-yellow-400&quot;>
                               <AlertTriangle className=&quot;w-3 h-3&quot; />
                               <span>{alert}</span>                            </div>
-                          ))}
+                          )}
                         </div>;
                       </div>;
                     )}
-;
+
                     {/* Recommendations */}
                     <div className=&quot;space-y-2&quot;>
                       <h4 className=&quot;text-sm font-semibold text-white&quot;>Recommendations</h4>
@@ -414,20 +402,20 @@ initial={{ height: 0, opacity: 0 }}
       </motion.div>
     </AnimatePresence>
   )
-},
+,
 
-// Helper functions,
+/ Helper functions,
 const getScoreIcon = (score: number) => {
   if (score >= 90) return <CheckCircle className="w-5 h-5 text-green-400" />,
   if (score >= 70) return <AlertTriangle className="w-5 h-5 text-yellow-400" />,
   return <AlertTriangle className="w-5 h-5 text-red-400" />
-},
+,
 const getScoreLabel = (score: number) => {
   if (score >= 90) return 'Excellent',
   if (score >= 70) return 'Good',
   if (score >= 50) return 'Needs Improvement',
   return 'Poor'
-},
+,
 const getScoreIcon = (score: number) => {if (score >= 90) return <CheckCircle className="w-5 h-5 text-green-400" />;
   if (score >= 70) return <AlertTriangle className="w-5 h-5 text-yellow-400" />;
   return <AlertTriangle className="w-5 h-5 text-red-400" />};

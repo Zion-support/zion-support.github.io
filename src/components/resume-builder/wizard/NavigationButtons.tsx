@@ -26,7 +26,7 @@ export const NavigationButtons = ({
   backLabel = 'Back'
   nextLabel = 'Next'
   isLoading = false
-}: NavigationButtonsProps) => {
+: NavigationButtonsProps) => {
   return (
     <div className='flex justify-between'>;
       {onBack && (;
@@ -48,27 +48,20 @@ export const NavigationButtons = ({
       )}
     </div>
   )
-}
-"          {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+
+          {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
           {nextLabel}
         </Button>;
       )}
     </div>;
   );
-};
-"  );
-};
+  );
     </div>
   )
-}
-"  )
-}
 
     </div>;
   );
-};
-"  );
-};
+  );
 
     <div className="flex justify - between">;
       {on_back && (
@@ -80,7 +73,7 @@ export const NavigationButtons = ({
   back_label = 'Back',
   next_label = 'Next',
   is_loading = false,
-}: NavigationButtonsProps) =>: any {
+: NavigationButtonsProps) =>: any {
   return (
     <div className='flex justify - between'>;
       {on_back && (
@@ -97,11 +90,10 @@ export const NavigationButtons = ({
           {is_loading && <Loader2 className='mr - 2 h - 4 w - 4 animate - spin' />}          {next_label}
         </Button>)}
     </div>);
-}
-"          {is_loading && <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" />}
+
+          {is_loading && <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" />}
           {next_label}
         </Button>)}
     </div>);
-}
-"  );
-}
+
+  );

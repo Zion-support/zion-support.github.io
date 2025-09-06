@@ -1,4 +1,4 @@
-:src.broken/pages/About.js
+src.broken/pages/About.js
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
@@ -20,7 +20,7 @@ export default function About() {
                 </p>
             </div>
         </div>
-:src.broken/pages/About.js
+src.broken/pages/About.js
       </main>
       <Footer />
     </>);
@@ -112,7 +112,7 @@ const About = () => {
                 accessible to businesses of all sizes, enabling them to thrive in the digital age.
               </p>
             </div>
-            
+
             <div className="bg-slate-800/50 border border-white/10 rounded-xl p-8">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-6">
                 <Lightbulb className="w-8 h-8 text-white"/>
@@ -406,26 +406,24 @@ const About = () => {
       </section>
     </div>
   );
-};
 
-// Icon components
+/ Icon components
 const Innovation = ({className}: {className ?  : string}) => (
   <Lightbulb className={className}/>
-);
+;
 
 const Excellence = ({className}: {className ?  : string}) => (
   <Award className={className}/>
-);
+;
 
 const Collaboration = ({className}: {className ?  : string}) => (
   <Users className={className}/>
-);
+;
 
 const Integrity = ({className}: {className ?  : string}) => (
   <Shield className={className}/>
-);
+;
 
 export default About;
     </></></></></></>);
-};
     );

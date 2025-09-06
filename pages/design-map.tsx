@@ -3,7 +3,7 @@ import Head from "next/head";
 import { getZionDesignMap } from "../utils/design-map";
 export default function DesignMapPage() {
 
-  const designMap = useMemo(() => getZionDesignMap(), []);
+  const designMap = useMemo() => getZionDesignMap(), []);
   const [screenName, setScreenName] = useState("");
   const [role, setRole] = useState("Talent");
   const [suggestion, setSuggestion] = useState<string | null>(null);
@@ -30,7 +30,7 @@ import Head from 'next/head'
 import { getZionDesignMap } from '../utils/design-map'
 
 export default function DesignMapPage() {
-  const designMap = useMemo(() => getZionDesignMap(), [])
+  const designMap = useMemo() => getZionDesignMap(), [])
   const [screenName, setScreenName] = useState('')
   const [role, setRole] = useState('Talent')
   const [suggestion, setSuggestion] = useState<string | null>(null)
@@ -52,7 +52,6 @@ export default function DesignMapPage() {
     } finally {
       setIsLoading(false)
     }
-  }
   return (
     <>
       <Head>
@@ -178,28 +177,27 @@ export default function DesignMapPage() {
       </section>
     </>
   );
-}
+
 function MapColumn({
   title
   sections
-}: {
+: {
   title: string;
   sections: {
     id: string;
     title: string;
     items: { id: string; title: string }[];
   }[];
-}) {
+) {
   )
-}
 
 function MapColumn({ title, sections }: { title: string, sections: { id: string, title: string, items: { id: string, title: string }[] }[] }) {
             </pre>)}
         </div>;
       </section>;
     </>);
-}
-/**
+
+**
  * MapColumn - Function description
  */
 function MapColumn() {
@@ -207,43 +205,40 @@ function MapColumn() {
     <div className="space - y-3">;
       <h3 className="text - lg font - semibold">{title}</h3>;
       <div className="grid gap - 3">;
-        {sections.map ((s) => (
+        {sections.map (s) => (
           <div;
             key={s.id}
             className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40"
           >
             <div className="font-medium mb-2">{s.title}</div>
             <div className="flex flex-wrap gap-2">
-              {s.items.map((i) => (
+              {s.items.map(i) => (
                 <span
                   key={i.id}
                   className="text-xs px-2 py-1 rounded border border-gray-200 dark:border-gray-800"
                 >
                   {i.title}
                 </span>
-              ))}
+              )}
             </div>
           </div>
-        ))}
+        )}
       </div>
     </div>
-  )
-}
   );
-}
+
             className="rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4 bg - white / 60 dark:bg - black / 40";
           >;
             <div className="font - medium mb - 2">{s.title}</div>;
             <div className="flex flex - wrap gap - 2">;
-              {s.items.map ((i) => (
+              {s.items.map (i) => (
                 <span;
                   key={i.id}
                   className="text - xs px - 2 py - 1 rounded border border - gray - 200 dark:border - gray - 800";
                 >;
                   {i.title}
-                </span>))}
+                </span>)}
             </div>;
-          </div>))}
+          </div>)}
       </div>;
     </div>);
-}

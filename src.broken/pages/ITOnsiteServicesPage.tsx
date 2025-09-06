@@ -6,5 +6,3 @@ export function ITOnsiteServicesPage() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

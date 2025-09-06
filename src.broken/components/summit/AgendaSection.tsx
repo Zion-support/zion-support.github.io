@@ -6,5 +6,3 @@ export function AgendaSection() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

@@ -17,7 +17,7 @@ interface PaymentButtonProps {
   className?: string;
   onPaymentInitiated?: () => void;
   redirectUrl?: string;
-}
+
 export function PaymentButton({
   amount;
   serviceId;
@@ -36,8 +36,7 @@ export function PaymentButton({
         title: "Authentication required"
         description: "Please sign in to make a purchase."})
       navigate("/login", {
-        state: { from: window.location.pathname }
-      });
+        state: { from: window.location.pathname });
       return;
     }
     try {
@@ -53,7 +52,7 @@ export function PaymentButton({
           providerId
           userId: user?.id
           successUrl: redirectUrl |window.location.href
-          cancelUrl: window.location.href}})
+          cancelUrl: window.location.href})
       if (error) {
         throw error
       }
@@ -62,8 +61,7 @@ export function PaymentButton({
         window.open(data.url, '_blank')
       } else {
         throw new Error ("No checkout URL returned");
-      }
-    } catch (error) {
+      } catch (error) {
       console.error("Payment error:", error);
       toast({
         title: "Payment error"
@@ -71,11 +69,10 @@ export function PaymentButton({
         variant: "destructive"})
     } finally {
       // Reset button state after a short delay;
-      set_timeout (() => {
+      set_timeout () => {
         setIsProcessing (false);
       }, 1500);
     }
-  }
   return (
     <Button
       onClick={handlePaymentClick}
@@ -104,8 +101,7 @@ export function PaymentButton({
       )}
     </Button>
   )
-}
-;
+
   return (
     <Button;
       on_click={handlePaymentClick}
@@ -121,4 +117,3 @@ export function PaymentButton({
         </>) : (
         button_text)}
     </Button>);
-}

@@ -1,4 +1,4 @@
-"use client";
+use client";
 import { createContext, useContext, useEffect, useState } from "react";
 import { useSession, signIn, signOut } from "next-auth/react";
 import { useRouter } from "next/navigation";
@@ -7,7 +7,7 @@ interface User {id: string;
   email: string;
   role: string;
   onboardingCompleted: boolean;
-}
+
 interface AuthContextType {user: User | null;
   isLoading: boolean;
   isAuthenticated: boolean;
@@ -15,13 +15,13 @@ interface AuthContextType {user: User | null;
   logout: () => Promise<void>;
   register: (name: string, email: string, password: string) => Promise<void>;
   completeOnboarding: () => Promise<void>;
-}
+
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 export function AuthProvider({ children }: { children: React.ReactNode }) {const { data: session, status } = useSession();
   const [user, setUser] = useState<User | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const router = useRouter();
-  useEffect(() => {if (status === "loading") {;
+  useEffect() => {if (status = = "loading") {;
       setIsLoading(true);
       return;
     }
@@ -46,7 +46,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {const
       router.push("/dashboard");
     } catch (error) {throw error;
     }
-  }
   const logout = async () => {await signOut({ redirect: false });
     router.push("/");
   }
@@ -63,19 +62,16 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {const
       await login(email, password);
     } catch (error) {throw error;
     }
-  }
   const completeOnboarding = async () => {try {;
       const response = await fetch("/api/user/onboarding", {;
         method: "POST";
         headers: {;
-          "Content-Type": "application/json"}});
+          "Content-Type": "application/json"});
       if (!response.ok) {throw new Error("Failed to complete onboarding");
       }
       if (user) {setUser({ ...user, onboardingCompleted: true });
-      }
-    } catch (error) {throw error;
+      } catch (error) {throw error;
     }
-  }
   const value: AuthContextType = {user;
     isLoading;
     isAuthenticated: !!user;
@@ -84,12 +80,12 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {const
     register;
     completeOnboarding}
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
-}
+
 export function useAuth() {const context = useContext(AuthContext);
-  if (context === undefined) {;
+  if (context = = undefined) {;
     throw new Error("useAuth must be used within an AuthProvider");
   }
-"use client",;
+use client",;
 import { createContext, useContext, useEffect, useState } from "react",;
 import { useSession, signIn, signOut } from "next-auth/react",;
 import { useRouter } from "next/navigation",;
@@ -99,8 +95,7 @@ interface User {;
   email: string,;
   role: string,;
   onboardingCompleted: boolean;
-}
-;
+
 interface AuthContextType {;
   user: User | null,;
   isLoading: boolean,;
@@ -109,20 +104,19 @@ interface AuthContextType {;
   logout: () => Promise<void>,;
   register: (name: string, email: string, password: string) => Promise<void>,;
   completeOnboarding: () => Promise<void>;
-}
-;
+
 const AuthContext = createContext<AuthContextType | undefined>(undefined),;
 export function AuthProvider({ children }: { children: React.ReactNode }) {;
   const { data: session, status } = useSession(),;
   const [user, setUser] = useState<User | null>(null),;
   const [isLoading, setIsLoading] = useState(true),;
   const router = useRouter(),;
-  useEffect(() => {;
-    if (status === "loading") {;
+  useEffect() => {;
+    if (status = = "loading") {;
       setIsLoading(true),;
       return;
     }
-;
+
     if (session?.user) {;
       setUser({;
         id: session.user.id,;
@@ -134,7 +128,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {;
     } else {;
       setUser(null);
     }
-;
+
     setIsLoading(false);
   }, [session, status]),;
   const login = async (email: string, password: string) => {;
@@ -146,12 +140,11 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {;
       if (result?.error) {;
         throw new Error(result.error);
       }
-;
+
       router.push("/dashboard");
     } catch (error) {;
       throw error;
-    }
-  },;
+    },;
   const logout = async () => {;
     await signOut({ redirect: false }),;
     router.push("/");
@@ -167,30 +160,27 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {;
         const error = await response.json(),;
         throw new Error(error.message);
       }
-;
+
       // Auto-login after successful registration;
       await login(email, password);
     } catch (error) {;
       throw error;
-    }
-  },;
+    },;
   const completeOnboarding = async () => {;
     try {;
       const response = await fetch("/api/user/onboarding", {;
         method: "POST",;
         headers: {;
-          "Content-Type": "application/json"}}),;
+          "Content-Type": "application/json"}),;
       if (!response.ok) {;
         throw new Error("Failed to complete onboarding");
       }
-;
+
       if (user) {;
         setUser({ ...user, onboardingCompleted: true });
-      }
-    } catch (error) {;
+      } catch (error) {;
       throw error;
-    }
-  },;
+    },;
   const value: AuthContextType = {;
     user,;
     isLoading,;
@@ -200,12 +190,10 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {;
     register,;
     completeOnboarding};
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
-}
-;
+
 export function useAuth() {;
   const context = useContext(AuthContext);
-  if (context === undefined) {;
+  if (context = = undefined) {;
     throw new Error("useAuth must be used within an AuthProvider");
   }
   return context;
-}

@@ -10,7 +10,7 @@ export default function AIEducationPlatformPage() {
       </div>
     </div>
   )
-}
+
 import React from 'react',
 import SEO from '../components / SEO',
 export default /**
@@ -25,4 +25,3 @@ function AIEducationPlatformPage() {
         <p className="text - gray - 300">Adaptive learning and skill development powered by AI. Details coming soon.</p>;
       </div>;
     </div>);
-}

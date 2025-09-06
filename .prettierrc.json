@@ -1,4 +1,4 @@
-{
+
   "semi": true,
   "trailingComma": "es5",
   "singleQuote": true,
@@ -10,4 +10,3 @@
   "bracketSpacing": true,
   "jsxSingleQuote": true,
   "quoteProps": "as-needed"
-}

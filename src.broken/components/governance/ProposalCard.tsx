@@ -6,5 +6,3 @@ export function ProposalCard() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

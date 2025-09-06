@@ -1,4 +1,4 @@
-"use client";
+use client";
 import Link from "next/link";
 import { ReactNode } from "react";
 interface FeatureCardProps {id: number;
@@ -9,7 +9,7 @@ interface FeatureCardProps {id: number;
   href: string;
   isActive: boolean;
   onClick: () => void;
-}
+
 export function FeatureCard({title;
   description;
   icon;
@@ -17,7 +17,7 @@ export function FeatureCard({title;
   href;
   isActive;
   onClick;
-}: FeatureCardProps) {const colorClasses = {;
+: FeatureCardProps) {const colorClasses = {;
     blue: "bg-blue-500/20 hover:bg-blue-500/30 border-blue-500/30";
     purple: "bg-purple-500/20 hover:bg-purple-500/30 border-purple-500/30";
     green: "bg-green-500/20 hover:bg-green-500/30 border-green-500/30";
@@ -30,10 +30,10 @@ export function FeatureCard({title;
       className={`card group cursor-pointer transition-all duration-300 ${isActive ? 'scale-105 shadow-2xl' : 'hover:scale-105';
       } ${colorClasses[color as keyof typeof colorClasses]}`}
       onClick={onClick}
-      onKeyDown={(e) => {if (e.key === 'Enter' |e.key === ' ') {;
+      onKeyDown={(e) => {if (e.key = = 'Enter' |e.key = = ' ') {;
           e.preventDefault();
           onClick();
-"use client",
+use client",
 import Link from './next / link';,
 import { ReactNode  } from './react';,
 interface FeatureCardProps {
@@ -45,7 +45,7 @@ interface FeatureCardProps {
   href: string,
   is_active: boolean,
   on_click: () => void;
-}
+
 export /**
  * FeatureCard - Function description
  */
@@ -68,11 +68,10 @@ function FeatureCard() {
         // Check condition
 if ( {) {
   $2
-}
+
           e.prevent_default ();
           on_click ();
-        }
-      }}
+        }}
       tab_index={0}
       role="button";
       aria - pressed={is_active}
@@ -97,4 +96,3 @@ if ( {) {
         </Link>;
       </div>;
     </div>);
-}

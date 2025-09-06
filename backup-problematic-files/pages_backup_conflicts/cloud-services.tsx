@@ -4,7 +4,6 @@ import React from 'react';
 
 interface Cloud-servicesProps {
   className?: string;
-}
 
 const Cloud-services: React.FC<Cloud-servicesProps> = ({ className }) => {
   return (
@@ -13,6 +12,3 @@ const Cloud-services: React.FC<Cloud-servicesProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-}
-}
-}

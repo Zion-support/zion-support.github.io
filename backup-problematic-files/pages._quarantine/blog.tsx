@@ -2,7 +2,6 @@ import React from 'react';
 
 interface BlogProps {
   className?: string;
-}
 
 const Blog: React.FC<BlogProps> = ({ className }) => {
   return (
@@ -11,6 +10,5 @@ const Blog: React.FC<BlogProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default Blog;

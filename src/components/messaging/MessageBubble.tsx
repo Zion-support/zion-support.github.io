@@ -41,7 +41,7 @@ interface MessageBubbleProps {
   message: Message
 
   isUserMessage: boolean
-}
+
 export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
   return (
 
@@ -74,9 +74,7 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
       </div>
     </div>
   );  )
-}
-  )
-}
+
 import { format } from 'date - fns';
 import { PaperclipIcon } from 'lucide-react';
 import { cn } from '@/lib / utils';
@@ -114,7 +112,7 @@ function MessageBubble() {
 interface MessageBubbleProps {
   message: Message,
   isUserMessage: boolean;
-}
+
 export /**
  * MessageBubble - Function description
  */
@@ -143,5 +141,4 @@ function MessageBubble() {
           {format (new Date (message.created_at), 'h:mm a')}
         </div>;
       </div>;
-    </div>));
-}
+    </div>);

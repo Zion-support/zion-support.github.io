@@ -6,5 +6,3 @@ export function QuoteRequestsList() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

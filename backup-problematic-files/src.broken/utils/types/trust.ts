@@ -10,8 +10,8 @@ export type TrustMetricInputs = {;
   verifiedReviewRatio?:number, // 0-1;
   endorsements?:number, // community endorsements count;
   flags?:number, // community flags count;
-},;
-;
+,;
+
 export type TrustWeights = {;
   completionRate:number,;
   onboardingCompletionRate:number,;
@@ -24,8 +24,8 @@ export type TrustWeights = {;
   verifiedReviewRatio:number,;
   endorsements:number,;
   flags:number, // negative weight;
-},;
-;
+,;
+
 export type TrustScoreBreakdown = {;
   total:number, // 0-100;
   components:{;
@@ -38,19 +38,19 @@ export type TrustScoreBreakdown = {;
   reasonSummary?:string,;
   communityVerified:boolean,;
   updatedAt:string;
-},;
-;
+,;
+
 export type TrustPeerReview = {;
   userId:string,;
   reviewerId:string,;
   type:'endorse' | 'flag',;
   note?:string,;
   createdAt:string;
-},;
-;
+,;
+
 export type TrustAppeal = {;
   userId:string,;
   message:string,;
   contactEmail?:string,;
   createdAt:string;
-},
+,

@@ -1,11 +1,11 @@
-// Data store utilities
+/ Data store utilities
 export const dataStore = {
   // Add data store functionality here
   getData: () => []
   setData: (data: any) => null
   updateData: (id: string, data: any) => null
   deleteData: (id: string) => null
-}
+
   createProject(data: Partial<Project>): Project {
     const project: Project = {
       id: Math && Math.random().toString(36).substr(2, 9),
@@ -22,20 +22,20 @@ export const dataStore = {
   // Review methods
   hasExistingReview(projectId: string, fromRole: string, fromId: string): boolean {
     return this && this.reviews.some(review => 
-      review && review.projectId === projectId && 
-      review && review.fromRole === fromRole && 
-      review && review.fromId === fromId
+      review && review.projectId = = projectId && 
+      review && review.fromRole = = fromRole && 
+      review && review.fromId = = fromId
     );
   }
 
   upsertReview(data: Partial<Review>): Review {
     const existingIndex = this && this.reviews.findIndex(review => 
-      review && review.projectId === data && data.projectId && 
-      review && review.fromRole === data && data.fromRole && 
-      review && review.fromId === data && data.fromId
+      review && review.projectId = = data && data.projectId && 
+      review && review.fromRole = = data && data.fromRole && 
+      review && review.fromId = = data && data.fromId
     );
 
-    if (existingIndex !== -1) {
+    if (existingIndex != -1) {
       // Update existing review
       this && this.reviews[existingIndex] = {
         ...this && this.reviews[existingIndex],
@@ -64,10 +64,9 @@ export const dataStore = {
       this && this.reviews.push(review);
       return review;
     }
-  }
 
   getReviewsByProject(projectId: string): Review[] {
-    return this && this.reviews.filter(review => review && review.projectId === projectId);
+    return this && this.reviews.filter(review => review && review.projectId = = projectId);
   }
 
   getAllReviews(): Review[] {
@@ -75,9 +74,8 @@ export const dataStore = {
   }
 
   counterpartRole(role: 'client' | 'talent'): 'client' | 'talent' {
-    return role === 'client' ? 'talent' : 'client';
+    return role = = 'client' ? 'talent' : 'client';
   }
-}
 
 const store = new DataStore();
 
@@ -91,69 +89,60 @@ export const counterpartRole = (role: 'client' | 'talent') => store && store.cou
 export async function readProjects(): Promise<Project[]> {
   await ensureFilesExist();
   return fs.readJson(PROJECTS_PATH);
-}
 
 export async function writeProjects(projects: Project[]): Promise<void> {
   await fs.writeJson(PROJECTS_PATH, projects, { spaces: 2 });
-}
 
 export async function readReviews(): Promise<Review[]> {
   await ensureFilesExist();
   return fs.readJson(REVIEWS_PATH);
-}
 
 export async function writeReviews(reviews: Review[]): Promise<void> {
   await fs.writeJson(REVIEWS_PATH, reviews, { spaces: 2 });
-}
 
 export async function findProjectById(
   projectId: string
-): Promise<Project | undefined> {
+: Promise<Project | undefined> {
   const projects = await readProjects();
-  return projects.find(p => p.id === projectId);
-}
+  return projects.find(p => p.id = = projectId);
 
 export async function upsertReview(newReview: Review): Promise<void> {
   const reviews = await readReviews();
-  const idx = reviews.findIndex(r => r.id === newReview.id);
+  const idx = reviews.findIndex(r => r.id = = newReview.id);
   if (idx >= 0) {
     reviews[idx] = newReview;
   } else {
     reviews.push(newReview);
   }
   await writeReviews(reviews);
-}
 
 export async function getProjectReviews(projectId: string): Promise<Review[]> {
   const reviews = await readReviews();
-  return reviews.filter(r => r.projectId === projectId && !r.removed);
-}
+  return reviews.filter(r => r.projectId = = projectId && !r.removed);
 
 export function counterpartRole(
   role: 'client' | 'talent'
-): 'client' | 'talent' {
-  return role === 'client' ? 'talent' : 'client';
-}
+: 'client' | 'talent' {
+  return role = = 'client' ? 'talent' : 'client';
 
 export async function hasExistingReview(
   projectId: string,
   fromRole: 'client' | 'talent',
   fromId: string
-): Promise<boolean> {
+: Promise<boolean> {
   const reviews = await readReviews();
   return reviews.some(
     r =>
-      r.projectId === projectId &&
-      r.fromRole === fromRole &&
-      r.fromId === fromId &&
+      r.projectId = = projectId &&
+      r.fromRole = = fromRole &&
+      r.fromId = = fromId &&
       !r.removed
   );
-}
-// Data store utilities;
+
+/ Data store utilities;
 export const data_store = {
   // Add data store functionality here;
   get_data: () => [],
   set_data: (data: any) => null,
   update_data: (id: string, data: any) => null,
   delete_data: (id: string) => null;
-}

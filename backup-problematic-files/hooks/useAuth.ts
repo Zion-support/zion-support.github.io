@@ -3,23 +3,23 @@ interface User {
   id: string;
   email: string;
   name: string;
-}
+
 export const useAuth = () => {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
-  useEffect(() => {
+  useEffect() => {
     // Simulate auth check
     setLoading(false);
   }, []);
 export const use_auth = () =>: any {
   const [user, set_user] = useState < User | null>(null);
   const [loading, set_loading] = useState (true);
-;
-  useEffect (() => {
+
+  useEffect () => {
     // Simulate auth check;
     set_loading (false);
   }, []);
-;
+
   return {
     user
     loading
@@ -30,5 +30,3 @@ export const use_auth = () =>: any {
     logout: () => {
       setUser(null);
     }
-  }
-}

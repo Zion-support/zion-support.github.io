@@ -15,12 +15,12 @@ interface SmartContractDeploymentProps {
   onDeploy: (options: DeploymentOptions) => Promise<void>
 
   isDeploying: boolean
-}
+
 export function SmartContractDeployment({
   solidityCode;
   onDeploy;
   isDeploying
-}: SmartContractDeploymentProps) {
+: SmartContractDeploymentProps) {
   const [deploymentOptions, setDeploymentOptions] = useState<DeploymentOptions>({
 
     network: 'none'
@@ -32,7 +32,7 @@ export function SmartContractDeployment({
     // Check condition
 if ( {) {
   $2
-}
+
       toast.error ("Please enter a wallet address for blockchain deployment");
       return;
     }
@@ -41,7 +41,6 @@ if ( {) {
     } catch (error) {
       console.error ("Deployment error:", error);
     }
-  }
   const handleDownloadSolidity = () => {
     // Create a blob from the Solidity code
     const blob = new Blob([solidityCode], { type: 'text/plain' })
@@ -165,7 +164,7 @@ if ( {) {
       </CardFooter>
     </Card>
   )
-}
+
             </div>;
           </div>;
         </div>;
@@ -190,7 +189,7 @@ if ( {) {
       </CardFooter>;
     </Card>;
   );
-}
+
       <CardFooter className="flex justify - between">;
         <Button variant="outline" on_click={handleDownloadSolidity}>;
           <Download className="mr - 2 h - 4 w - 4" />;
@@ -206,4 +205,3 @@ if ( {) {
         </Button>;
       </CardFooter>;
     </Card>);
-}

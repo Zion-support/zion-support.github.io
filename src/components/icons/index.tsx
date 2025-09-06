@@ -295,7 +295,7 @@ import {
   Zap as LucideZap
   ZoomIn as LucideZoomIn
   ZoomOut as LucideZoomOut
-} from 'lucide-react'
+ from 'lucide-react'
 export const Home = LucideHome
 export const Bot = LucideBot
 export const Sparkles = LucideSparkles
@@ -597,13 +597,13 @@ export const ZapOff = LucideZapOff
 export const Zap = LucideZap
 export const ZoomIn = LucideZoomIn
 export const ZoomOut = LucideZoomOut
-// Define the props for your Icon component
+/ Define the props for your Icon component
 export type IconProps = SVGProps<SVGSVGElement> & {
   name: keyof typeof iconMap
   size?: number | string
   className?: string
-}
-// Create a map of icon names to component references
+
+/ Create a map of icon names to component references
 const iconMap = {
   home: LucideHome
   'bot-message-square': LucideBot, // Assuming Bot is used for bot-message-square
@@ -898,13 +898,13 @@ const iconMap = {
   zap: LucideZap
   'zoom-in': LucideZoomIn
   'zoom-out': LucideZoomOut
-}
+
 export const Icon: React.FC<IconProps> = ({
   name
   size = 24, // Default size
   className
   ...props
-}) => {
+) => {
   const LucideIconComponent = iconMap[name]
   if (!LucideIconComponent) {
     logWarn(`Icon "${name}" not found.`)
@@ -912,7 +912,7 @@ export const Icon: React.FC<IconProps> = ({
   }
   // Render the dynamically selected Lucide icon component
   return <LucideIconComponent size={size} className={className} {...props} />
-}
+
 export default Icon; // Default export the Icon component
 export const Icons = iconMap; // Export the map if you need to refer to available icons
 
@@ -920,7 +920,6 @@ export default Icon, // Default export the Icon component
 export const Icons = iconMap, // Export the map if you need to refer to available icons
 export default Icon, // Default export the Icon component
 export const Icons = iconMap, // Export the map if you need to refer to available icons
-
 
 import React, { SVGProps } from 'react';
 import { log_warn } from '@/utils / production_logger';
@@ -1218,7 +1217,7 @@ import {
   Zap as LucideZap,
   ZoomIn as LucideZoomIn,
   ZoomOut as LucideZoomOut,
-} from 'lucide-react';
+ from 'lucide-react';
 export const Home = LucideHome;
 export const Bot = LucideBot;
 export const Sparkles = LucideSparkles;
@@ -1520,13 +1519,13 @@ export const ZapOff = LucideZapOff;
 export const Zap = LucideZap;
 export const ZoomIn = LucideZoomIn;
 export const ZoomOut = LucideZoomOut;
-// Define the props for your Icon component;
+/ Define the props for your Icon component;
 export type IconProps = SVGProps < SVGSVGElement> & {
   name: keyof typeof icon_map;
   size?: number | string;
   class_name?: string;
-}
-// Create a map of icon names to component references;
+
+/ Create a map of icon names to component references;
 const icon_map = {
   home: LucideHome,
   'bot - message - square': LucideBot, // Assuming Bot is used for bot - message - square;
@@ -1821,24 +1820,24 @@ const icon_map = {
   zap: LucideZap,
   'zoom - in': LucideZoomIn,
   'zoom - out': LucideZoomOut,
-}
+
 export const Icon: React.FC < IconProps> = ({
   name,
   size = 24, // Default size;
   class_name,
   ...props;
-}) => {
+) => {
   const LucideIconComponent = icon_map[name];
   // Check condition
 if ( {) {
   $2
-}
+
     log_warn (`Icon "${name}" not found.`);
     return null;
   }
   // Render the dynamically selected Lucide icon component;
   return <LucideIconComponent size={size} className={class_name} {...props} />;
-}
+
 export default Icon; // Default export the Icon component;
 export const Icons = icon_map; // Export the map if you need to refer to available icons;
 export default Icon, // Default export the Icon component;

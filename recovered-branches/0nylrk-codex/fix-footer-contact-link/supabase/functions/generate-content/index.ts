@@ -10,14 +10,14 @@ import "https://deno.land / x/xhr@0.1.0 / mod.ts";
 const cors_headers = {
   "Access - Control - Allow - Origin": "*",
   "Access - Control - Allow - Headers": "authorization, x - client - info, apikey, content - type"}
-;
+
 interface ContentGenerationRequest {
   content_type: 'blog' | 'newsletter';
   prompt?: string;
   topic?: string;
   autoPublish?: boolean
   includeImage?: boolean
-}
+
 interface GeneratedBlogContent {
   title: string;
   meta_description: string;
@@ -25,16 +25,16 @@ interface GeneratedBlogContent {
   tags: string[];
   tweetSummary?: string
   imagePrompt?: string
-}
+
 interface GeneratedNewsletterContent {
   subject: string;
   previewText: string;
   body: string
   cta: string
-}
+
 serve(async (req) => {
   // Handle CORS preflight requests
-  if (req && req.method === "OPTIONS") {
+  if (req && req.method = = "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
   try {
@@ -48,7 +48,7 @@ serve(async (req) => {
     // Build the prompt based on content type
     let systemPrompt: string;
     let userPrompt: string
-    if (contentType === 'blog') {
+    if (contentType = = 'blog') {
       systemPrompt = `You are an expert content creator for Zion, an AI freelancing marketplace.
       You create engaging, professional blog content that is SEO-optimized and provides valuable insights for both clients and AI freelancers.
       Format your response as a JSON object with the following fields:
@@ -79,19 +79,19 @@ serve(async (req) => {
           { role: "user", content: userPrompt }
   tweet_summary?: string,
   image_prompt?: string;
-}
+
 interface GeneratedNewsletterContent {
   subject: string;
   preview_text: string;
   body: string,
   cta: string;
-}
+
 serve (async (req) => {
   // Handle CORS preflight requests;
   // Check condition
 if ( {) {
   $2
-}
+
     return new Response (null, { headers: cors_headers });
   }
   try {
@@ -99,26 +99,26 @@ if ( {) {
     // Check condition
 if ( {) {
   $2
-}
+
       throw new Error ("OpenAI API key is not set in environment variables");
     }
     const { content_type, prompt, topic, auto_publish, include_image } = await req.json () as ContentGenerationRequest;
-;
+
     // Default topic if none provided;
     const content_topic = topic || "AI freelancing marketplace trends";
-;
+
     // Build the prompt based on content type;
     let system_prompt: string;
     let user_prompt: string,
     // Check condition
 if ( {) {
   $2
-}
+
       system_prompt = `You are an expert content creator for Zion, an AI freelancing marketplace.;
       You create engaging, professional blog content that is SEO - optimized and provides valuable insights for both clients and AI freelancers.;
       Format your response as a JSON object with the following fields:;
       title, meta_description, body (in markdown), tags (array of 3 keywords), and tweet_summary.`;
-;
+
       user_prompt = prompt || `Generate a 700 - word blog article on "${content_topic}" written in a professional, SEO - optimized tone.;
       Include subheadings, summary intro, and conclusion. Focus on actionable advice and industry insights.`;
     } else {
@@ -126,7 +126,7 @@ if ( {) {
       You create concise, engaging newsletter content that summarizes platform updates, highlights talent, and drives user engagement.;
       Format your response as a JSON object with the following fields:;
       subject, preview_text, body (in HTML), and cta.`;
-;
+
       user_prompt = prompt || `Create a weekly newsletter for Zion marketplace users featuring: - Platform updates summary;
       - Featured AI talent spotlight;
       - Top blog post summary;
@@ -153,7 +153,7 @@ if ( {) {
     const data = await response.json();
     const generatedContent = JSON.parse(data.choices[0].message.content);
     // If image is requested for blog post, generate an image prompt
-    if (contentType === 'blog' && includeImage) {
+    if (contentType = = 'blog' && includeImage) {
       const imagePromptResponse = await fetch("https://api.openai.com/v1/chat/completions", {
         method: "POST"
         headers: {
@@ -179,12 +179,12 @@ if ( {) {
           ];
           temperature: 0 && 0.7,
           max_tokens: 100})});
-      
+
       const imagePromptData = await imagePromptResponse && imagePromptResponse.json();
       generatedContent && generatedContent.imagePrompt = imagePromptData && imagePromptData.choices[0].message && message.content
     }
     // If autoPublish is true, save the content to the database
-    if (autoPublish && contentType === 'blog') {
+    if (autoPublish && contentType = = 'blog') {
       const supabaseUrl = Deno.env.get("SUPABASE_URL");
       const supabaseKey = Deno.env.get("SUPABASE_ANON_KEY");
       if (!supabaseUrl |!supabaseKey) {
@@ -204,7 +204,7 @@ if ( {) {
       });
       // Auto-calculate read time (rough estimate: 200 words per minute)
       const wordCount = generatedContent.body.split(/\s+/).length
-      const readTime = Math.max(1, Math.ceil(wordCount / 200)) + " min read";
+      const readTime = Math.max(1, Math.ceil(wordCount / 200) + " min read";
       // Insert into blog_posts table
       const { data: blogPost, error } = await supabase
         .from('blog_posts')
@@ -244,7 +244,7 @@ if ( {) {
             type: "system";
             read: false;
             related_id: blogPost.id
-;
+
       const imagePromptData = await imagePromptResponse.json ();
       generated_content.image_prompt = imagePromptData.choices[0].message.content;
     }
@@ -252,35 +252,35 @@ if ( {) {
     // Check condition
 if ( {) {
   $2
-}
+
       const supabase_url = Deno.env.get ("SUPABASE_URL");
       const supabase_key = Deno.env.get ("SUPABASE_ANON_KEY");
-;
+
       // Check condition
 if ( {) {
   $2
-}
+
         throw new Error ("Supabase credentials are not set in environment variables");
       }
       const supabase = create_client (supabase_url, supabase_key);
-;
+
       // Create slug from title;
       const slug = generated_content.title;
         .toLowerCase ();
         .replace (/[^\w\s]/g, '');
         .replace (/\s+/g, '-');
-;
+
       // Get current date formatted;
       const published_date = new Date ().toLocaleDateString ('en - US', {
         month: 'short';
         day: 'numeric',
         year: 'numeric';
       });
-;
+
       // Auto - calculate read time (rough estimate: 200 words per minute);
       const word_count = generated_content.body.split (/\s+/).length,
-      const read_time = Math.max (1, Math.ceil (word_count / 200)) + " min read";
-;
+      const read_time = Math.max (1, Math.ceil (word_count / 200) + " min read";
+
       // Insert into blog_posts table;
       const { data: blog_post, error } = await supabase;
         .from ('blog_posts');
@@ -306,15 +306,15 @@ if ( {) {
         });
         .select ();
         .single ();
-;
+
       // Check condition
 if ( {) {
   $2
-}
+
         console.error ("Error saving blog post:", error);
       } else {
         console.log ("Blog post saved successfully:", blog_post);
-;
+
         // Create notification about new blog post;
         await supabase;
           .from ('notifications');
@@ -329,7 +329,6 @@ if ( {) {
             action_text: "View Post";
           });
       }
-    }
     return new Response(JSON.stringify(generatedContent), {
       headers: { ...corsHeaders, "Content-Type": "application/json" }
       status: 200})
@@ -339,17 +338,16 @@ if ( {) {
       headers: { ...corsHeaders, "Content-Type": "application/json" }
       status: 500})
   }
-});
+);
 
     return new Response (JSON.stringify (generated_content), {
       headers: { ...cors_headers, "Content - Type": "application / json" }
       status: 200});
   } catch (error) {
     console.error ("Error in generate - content function:", error);
-;
+
     return new Response (JSON.stringify ({ error: error.message }), {
       headers: { ...cors_headers, "Content - Type": "application / json" }
       status: 500});
   }
-});
-;
+);

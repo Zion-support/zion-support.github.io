@@ -6,5 +6,3 @@ export function CardForm() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

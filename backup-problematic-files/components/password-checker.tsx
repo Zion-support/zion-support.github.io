@@ -20,13 +20,12 @@ export default function PasswordCheckerPage() {;
   }),;
   const [suggestions, setSuggestions] = useState<string[]>([]),;
   const [generatedPassword, setGeneratedPassword] = useState(''),;
-  useEffect(() => {;
+  useEffect() => {;
     if (password) {;
       analyzePassword(password);
     } else {;
       resetAnalysis();
-    }
-  }, [password]),
+    }, [password]),
 
   const analyzePassword = (pass: string) => {
     const newChecks = {
@@ -83,17 +82,17 @@ export default function PasswordCheckerPage() {;
     const commonPasswords = [
       'password123456123456789qwertyabc123password123adminletmein', 'welcomemonkeydragonmasterhello'
     ],
-    return commonPasswords.includes(pass.toLowerCase())
+    return commonPasswords.includes(pass.toLowerCase()
   },
 
   const hasSequentialChars = (pass: string) => {
     const sequences = ['123abcqweasdzxc789456'],
-    return sequences.some(seq => pass.toLowerCase().includes(seq))
+    return sequences.some(seq => pass.toLowerCase().includes(seq)
   },
 
   const generateSuggestions = (checks: any, pass: string) => {
     const suggestions: string[] = [],
-    
+
     if (!checks.length) suggestions.push('Make your password at least 8 characters long'),
     if (!checks.uppercase) suggestions.push('Add at least one uppercase letter (A-Z)'),
     if (!checks.lowercase) suggestions.push('Add at least one lowercase letter (a-z)'),
@@ -101,10 +100,10 @@ export default function PasswordCheckerPage() {;
     if (!checks.symbols) suggestions.push('Add at least one special character (!@#$%^&*)'),
     if (!checks.noCommon) suggestions.push('Avoid common passwords like "password" or "123456"'),
     if (!checks.noSequential) suggestions.push('Avoid sequential characters like "123" or "abc"'),
-    
+
     if (pass.length < 12) suggestions.push('Consider making your password 12+ characters for better security'),
     if (pass.length < 16) suggestions.push('For maximum security, use 16+ characters'),
-    
+
     setSuggestions(suggestions)
   },
 
@@ -128,20 +127,20 @@ export default function PasswordCheckerPage() {;
     const length = 16,
     const charset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*',
     let result = '',
-    
+
     // Ensure at least one of each required character type
     result += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'[Math.floor(Math.random() * 26)], // Uppercase
     result += 'abcdefghijklmnopqrstuvwxyz'[Math.floor(Math.random() * 26)], // Lowercase
     result += '0123456789'[Math.floor(Math.random() * 10)], // Number
     result += '!@#$%^&*'[Math.floor(Math.random() * 8)], // Symbol
-    
+
     // Fill the rest randomly
     for (let i = 4, i < length, i++) {
       result += charset[Math.floor(Math.random() * charset.length)]
     }
-    
+
     // Shuffle the password
-    result = result.split('').sort(() => Math.random() - 0.5).join(''),
+    result = result.split('').sort() => Math.random() - 0.5).join(''),
     setGeneratedPassword(result),
     setPassword(result)
   },
@@ -217,7 +216,7 @@ export default function PasswordCheckerPage() {;
       setStrengthText('Very Weak'),;
       setStrengthColor('text-red-400');
     }
-;
+
     // Generate suggestions;
     generateSuggestions(newChecks, pass);
   },;
@@ -225,11 +224,11 @@ export default function PasswordCheckerPage() {;
     const commonPasswords = [;
       'password123456123456789qwertyabc123password123adminletmein', 'welcomemonkeydragonmasterhello';
     ],;
-    return commonPasswords.includes(pass.toLowerCase());
+    return commonPasswords.includes(pass.toLowerCase();
   },;
   const hasSequentialChars = (pass: string) => {;
     const sequences = ['123abcqweasdzxc789456'],;
-    return sequences.some(seq => pass.toLowerCase().includes(seq));
+    return sequences.some(seq => pass.toLowerCase().includes(seq);
   },;
   const generateSuggestions = (checks: any, pass: string) => {;
     const suggestions: string[] = [],;
@@ -272,9 +271,9 @@ export default function PasswordCheckerPage() {;
     for (let i = 4, i < length, i++) {;
       result += charset[Math.floor(Math.random() * charset.length)];
     }
-;
+
     // Shuffle the password;
-    result = result.split('').sort(() => Math.random() - 0.5).join(''),;
+    result = result.split('').sort() => Math.random() - 0.5).join(''),;
     setGeneratedPassword(result),;
     setPassword(result);
   },;
@@ -392,7 +391,7 @@ export default function PasswordCheckerPage() {;
                     </div>;
                   </div>;
                 )}
-;
+
                 <div className="text-sm text-gray-400">;
                   <p> Real-time strength analysis</p>;
                   <p> Multiple security criteria</p>;
@@ -420,7 +419,7 @@ export default function PasswordCheckerPage() {;
                     <div className="w-full bg-gray-700 rounded-full h-3">;
                       <div;
                         className={`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor()}`}
-                        style={{ width: `${strength}%` }}
+                        style={ width: `${strength}%` }
                       />;
                     </div>;
                   </div>;
@@ -428,20 +427,20 @@ export default function PasswordCheckerPage() {;
                   <div>;
                     <h4 className="text-lg font-semibold text-white mb-3">Security Criteria</h4>;
                     <div className="space-y-3">;
-                      {Object.entries(checks).map(([key, passed]) => (;
+                      {Object.entries(checks).map([key, passed]) => (;
                         <div key={key} className="flex items-center space-x-3">;
                           {getCheckIcon(passed)}
                           <span className={`text-sm ${passed ? 'text-green-400' : 'text-red-400'}`}>;
-                            {key === 'length' && 'At least 8 characters'}
-                            {key === 'uppercase' && 'Contains uppercase letter'}
-                            {key === 'lowercase' && 'Contains lowercase letter'}
-                            {key === 'numbers' && 'Contains number'}
-                            {key === 'symbols' && 'Contains special character'}
-                            {key === 'noCommon' && 'Not a common password'}
-                            {key === 'noSequential' && 'No sequential characters'}
+                            {key = = 'length' && 'At least 8 characters'}
+                            {key = = 'uppercase' && 'Contains uppercase letter'}
+                            {key = = 'lowercase' && 'Contains lowercase letter'}
+                            {key = = 'numbers' && 'Contains number'}
+                            {key = = 'symbols' && 'Contains special character'}
+                            {key = = 'noCommon' && 'Not a common password'}
+                            {key = = 'noSequential' && 'No sequential characters'}
                           </span>;
                         </div>;
-                      ))}
+                      )}
                     </div>;
                   </div>;
                   {/* Suggestions */}
@@ -449,12 +448,12 @@ export default function PasswordCheckerPage() {;
                     <div>;
                       <h4 className="text-lg font-semibold text-white mb-3">Suggestions</h4>;
                       <div className="space-y-2">;
-                        {suggestions.map((suggestion, index) => (;
+                        {suggestions.map(suggestion, index) => (;
                           <div key={index} className="flex items-start space-x-3">;
                             <AlertTriangle className="w-4 h-4 text-yellow-400 mt-0.5 flex-shrink-0" />;
                             <span className="text-sm text-yellow-300">{suggestion}</span>;
                           </div>;
-                        ))}
+                        )}
                       </div>;
                     </div>;
                   )}
@@ -626,4 +625,3 @@ export default function PasswordCheckerPage() {;
       </section>
     </>
   )
-}

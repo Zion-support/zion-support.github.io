@@ -10,7 +10,7 @@ export default function LearnMarketplace() {
   });  const [courses, setCourses] = useState<Course[]>([]);
 
   const [loading, setLoading] = useState(true);
-  useEffect(() => {
+  useEffect() => {
     async function load() {
 
 export default function LearnMarketplace() {;
@@ -21,7 +21,7 @@ export default function LearnMarketplace() {;
   });  const [courses, setCourses] = useState<Course[]>([]);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {;
+  useEffect() => {;
     async function load() {;
       setLoading(true);
 
@@ -52,23 +52,23 @@ function LearnMarketplace() {
     is_free: '',
   });  const [courses, set_courses] = useState < Course[]>([]);
   const [loading, set_loading] = useState (true);
-;
-  useEffect (() => {
+
+  useEffect () => {
     async /**
  * load - Function description
  */
 function load() {
       set_loading (true);
       const params = new URLSearchParams ();
-      if (params.set ('category', filters.category)) {
+      if (params.set ('category', filters.category) {
   $2
-}
-      if (params.set ('level', filters.level)) {
+
+      if (params.set ('level', filters.level) {
   $2
-}
-      if (params.set ('is_free', filters.is_free)) {
+
+      if (params.set ('is_free', filters.is_free) {
   $2
-}
+
       const resp = await fetch (`/api / learn / courses?${params.to_string ()}`);
       const data = await resp.json ();
       set_courses (data.courses || []);
@@ -76,7 +76,7 @@ function load() {
     }
     load ();
   }, [filters]);
-;
+
   return (
     <div className='space-y-6'>
       <div className='flex items-end justify-between gap-4'>
@@ -92,22 +92,22 @@ function load() {
       ) : (
         <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-4'>
           {courses.map(c => (            <CourseCard key={c.id} course={c} />
-          ))}
+          )}
         </div>;
       )}
     </div>;
   );
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {courses.map((c) => (
+          {courses.map(c) => (
             <CourseCard key={c.id} course={c} />
-          ))}
+          )}
         </div>;
       )}
     </div>
-);
+;
     </div>
   )
-}
+
     <div className='space - y-6'>;
       <div className='flex items - end justify - between gap - 4'>;
         <div>;
@@ -120,7 +120,6 @@ function load() {
       {loading ? (
         <div > Loading...</div>) : (
         <div className='grid sm:grid - cols - 2 lg:grid - cols - 3 gap - 4'>;
-          {courses.map (c => (            <CourseCard key={c.id} course={c} />))}
+          {courses.map (c => (            <CourseCard key={c.id} course={c} />)}
         </div>)}
     </div>);
-;

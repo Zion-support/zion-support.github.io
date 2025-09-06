@@ -4,12 +4,11 @@ import { Activity } from 'lucide-react';
 export const PerformanceMonitor: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
-  useEffect(() => {
+  useEffect() => {
     // Only show in development mode
     if (import.meta.env.DEV) {
       setIsVisible(true);
-    }
-  }, []);
+    }, []);
 
   if (!isVisible) return null;
 
@@ -25,7 +24,7 @@ export const PerformanceMonitor: React.FC = () => {
             onClick={() => setIsVisible(false)}
             className="text-gray-400 hover:text-white transition-colors"
           >
-            
+
           </button>
         </div>
       </div>
@@ -37,6 +36,4 @@ export const PerformanceMonitor: React.FC = () => {
       </div>
     </div>
   );
-};
 import React from 'react';
-

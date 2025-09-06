@@ -7,7 +7,7 @@ import {
 import { 
   Check, Star, Users, Clock, Shield, Zap, Globe, Rocket, Brain, Atom;
   ArrowRight, ExternalLink, TrendingUp, Award, Target, ChevronDown
-} from 'lucide-react'
+ from 'lucide-react'
 import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion';
 import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025';
 export default function ComprehensivePricingPage() {
@@ -52,20 +52,19 @@ export default function ComprehensivePricingPage() {
     { id: 'Quantum Internet', name: 'Q-Internet', icon: '' },
     { id: 'Neuromorphic Computing', name: 'Neuro', icon: '' }
   ]
-  const filteredServices = selectedCategory === 'all'
+  const filteredServices = selectedCategory = = 'all'
     ? allServices
-    : allServices.filter(service => service.category === selectedCategory)
+    : allServices.filter(service => service.category = = selectedCategory)
   const getCategoryIcon = (category: string) => {
-    const categoryData = categories.find(cat => cat.id === category)
+    const categoryData = categories.find(cat => cat.id = = category)
     return categoryData?.icon |''
   }
   const calculateYearlyPrice = (monthlyPrice: string) => {
-    const price = parseFloat(monthlyPrice.replace('$', '').replace(, ''))
+    const price = parseFloat(monthlyPrice.replace('$', '').replace(, '')
     return `$${(price * 12 * 0.8).toFixed(0)}`, // 20% discount for yearly
   }
   const toggleServiceExpansion = (serviceId: string) => {
-    setExpandedService(expandedService === serviceId ? null : serviceId)
-  }
+    setExpandedService(expandedService = = serviceId ? null : serviceId)
   };
 
   return (
@@ -81,16 +80,16 @@ export default function ComprehensivePricingPage() {
         <section className="py-20 px-6">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
         {/* Header */}
         <section className="py - 20 px - 6">;
           <div className="max - w-7xl mx - auto text - center">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, coordinate_y: 30 }
+              animate={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
             >
               <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
                 Comprehensive Pricing 2025
@@ -98,30 +97,30 @@ export default function ComprehensivePricingPage() {
               <p className="text-xl text-white/70 max-w-3xl mx-auto mb-8">
                 Revolutionary micro SAAS services that transform businesses with cutting-edge AI, quantum computing, and emerging technologies
               </p>
-              
+
               {/* Billing Toggle */}
               <div className="flex items-center justify-center gap-4 mb-12">
                 <span className="text-white/60">Monthly</span>
                 <button
-                  onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}
+                  onClick={() => setBillingCycle(billingCycle = = 'monthly' ? 'yearly' : 'monthly')}
                   className={`relative w-16 h-8 rounded-full transition-all duration-300 ${
-                    billingCycle === 'yearly' ? 'bg-blue-600' : 'bg-white/20'
+                    billingCycle = = 'yearly' ? 'bg-blue-600' : 'bg-white/20'
                   }`}
               {/* Billing Toggle */}
               <div className="flex items - center justify - center gap - 4 mb - 12">;
                 <span className="text - white / 60">Monthly</span>;
                 <button;
-                  on_click={() => setBillingCycle (billing_cycle === 'monthly' ? 'yearly' : 'monthly')}
+                  on_click={() => setBillingCycle (billing_cycle = = 'monthly' ? 'yearly' : 'monthly')}
                   className={`relative w - 16 h - 8 rounded - full transition - all duration - 300 ${
-                    billing_cycle === 'yearly' ? 'bg - blue - 600' : 'bg - white / 20';
+                    billing_cycle = = 'yearly' ? 'bg - blue - 600' : 'bg - white / 20';
                   }`}
                 >
                   <div className={`absolute top-1 w-6 h-6 bg-white rounded-full transition-all duration-300 ${
-                    billingCycle === 'yearly' ? 'translate-x-8' : 'translate-x-1'
+                    billingCycle = = 'yearly' ? 'translate-x-8' : 'translate-x-1'
                   }`} />
                 </button>
                 <span className="text-white/60">Yearly</span>
-                {billingCycle === 'yearly' && (
+                {billingCycle = = 'yearly' && (
                   <span className="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-sm font-medium">
                     Save 20%
                   </span>
@@ -148,14 +147,13 @@ export default function ComprehensivePricingPage() {
               </div>
             </motion.div>
           </div>
-        </section>
-                >;
+        </section>;
                   <div className={`absolute top - 1 w - 6 h - 6 bg - white rounded - full transition - all duration - 300 ${
-                    billing_cycle === 'yearly' ? 'translate - x-8' : 'translate - x-1';
+                    billing_cycle = = 'yearly' ? 'translate - x-8' : 'translate - x-1';
                   }`} />;
                 </button>;
                 <span className="text - white / 60">Yearly</span>;
-                {billing_cycle === 'yearly' && (
+                {billing_cycle = = 'yearly' && (
                   <span className="bg - green - 500 / 20 text - green - 400 px - 3 py - 1 rounded - full text - sm font - medium">;
                     Save 20%;
                   </span>)}
@@ -186,17 +184,17 @@ export default function ComprehensivePricingPage() {
         <section className="px-6 mb-16">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.6 }
               className="flex flex-wrap justify-center gap-3"
             >
-              {categories.map((category) => (
+              {categories.map(category) => (
                 <button
                   key={category.id}
                   on_click={() => setSelectedCategory (category.id)}
                   className={`px - 6 py - 3 rounded - full font - medium transition - all duration - 300 flex items - center gap - 2 ${
-                    selected_category === category.id;
+                    selected_category = = category.id;
                       ? 'bg - gradient - to - r from - blue - 600 to - cyan - 600 text - white shadow - lg';
                       : 'bg - white / 10 text - white / 70 hover:bg - white / 20 hover:text - white';
                   }`}
@@ -204,7 +202,7 @@ export default function ComprehensivePricingPage() {
                   <span>{category.icon}</span>;
                   {category.name}
                 </button>
-              ))}
+              )}
             </motion.div>
           </div>
         </section>
@@ -213,13 +211,13 @@ export default function ComprehensivePricingPage() {
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
               <AnimatePresence mode="wait">
-                {filteredServices.map((service, index) => (
+                {filteredServices.map(service, index) => (
                   <motion.div
                     key={service.id}
-                    initial={{ opacity: 0, coordinate_y: 30 }}
-                    animate={{ opacity: 1, coordinate_y: 0 }}
-                    exit={{ opacity: 0, coordinate_y: -30 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    initial={ opacity: 0, coordinate_y: 30 }
+                    animate={ opacity: 1, coordinate_y: 0 }
+                    exit={ opacity: 0, coordinate_y: -30 }
+                    transition={ duration: 0.6, delay: index * 0.1 }
                     className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300"
                   >
                     {/* Popular Badge */}
@@ -235,10 +233,10 @@ export default function ComprehensivePricingPage() {
                         <div className="text-4xl">{service.icon}</div>
                         <div className="text-right">
                           <div className="text-3xl font-bold text-white">
-                            {billingCycle === 'yearly' ? calculateYearlyPrice(service.price) : service.price}
+                            {billingCycle = = 'yearly' ? calculateYearlyPrice(service.price) : service.price}
                           </div>
                           <div className="text-white/60">
-                            {billingCycle === 'yearly' ? '/year' : service.period}
+                            {billingCycle = = 'yearly' ? '/year' : service.period}
                           </div>
                         </div>
                       </div>
@@ -247,12 +245,12 @@ export default function ComprehensivePricingPage() {
                       <p className="text-white/70 text-sm mb-4">{service.tagline}</p>
                       {/* Key Features */}
                       <div className="space-y-2 mb-6">
-                        {service.features.slice(0, 4).map((feature, idx) => (
+                        {service.features.slice(0, 4).map(feature, idx) => (
                           <div key={idx} className="flex items-center gap-2 text-sm text-white/60">
                             <Check className="w-4 h-4 text-green-400 flex-shrink-0" />
                             <span className="line-clamp-2">{feature}</span>
                           </div>
-                        ))}
+                        )}
                       </div>
                       {/* Service Stats */}
                       <div className="grid grid-cols-3 gap-4 mb-6 text-center">
@@ -274,9 +272,9 @@ export default function ComprehensivePricingPage() {
                         onClick={() => toggleServiceExpansion(service.id)}
                         className="w-full bg-white/10 text-white py-3 px-4 rounded-xl font-medium hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2 mb-4"
                       >
-                        {expandedService === service.id ? 'Show Less' : 'View Details'}
+                        {expandedService = = service.id ? 'Show Less' : 'View Details'}
                         <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${
-                          expandedService === service.id ? 'rotate-180' : ''
+                          expandedService = = service.id ? 'rotate-180' : ''
                         }`} />
                       </button>
                       <div className="absolute top - 4 right - 4 bg - gradient - to - r from - yellow - 400 to - orange - 500 text - black text - xs font - bold px - 3 py - 1 rounded - full flex items - center gap - 1 z - 10">;
@@ -289,10 +287,10 @@ export default function ComprehensivePricingPage() {
                         <div className="text - 4xl">{service.icon}</div>;
                         <div className="text - right">;
                           <div className="text - 3xl font - bold text - white">;
-                            {billing_cycle === 'yearly' ? calculateYearlyPrice (service.price) : service.price}
+                            {billing_cycle = = 'yearly' ? calculateYearlyPrice (service.price) : service.price}
                           </div>;
                           <div className="text - white / 60">;
-                            {billing_cycle === 'yearly' ? '/year' : service.period}
+                            {billing_cycle = = 'yearly' ? '/year' : service.period}
                           </div>;
                         </div>;
                       </div>;
@@ -300,11 +298,11 @@ export default function ComprehensivePricingPage() {
                       <p className="text - white / 70 text - sm mb - 4">{service.tagline}</p>;
                       {/* Key Features */}
                       <div className="space - y-2 mb - 6">;
-                        {service.features.slice (0, 4).map ((feature, idx) => (
+                        {service.features.slice (0, 4).map (feature, idx) => (
                           <div key={idx} className="flex items - center gap - 2 text - sm text - white / 60">;
                             <Check className="w - 4 h - 4 text - green - 400 flex - shrink - 0" />;
                             <span className="line - clamp - 2">{feature}</span>;
-                          </div>))}
+                          </div>)}
                       </div>;
                       {/* Service Stats */}
                       <div className="grid grid - cols - 3 gap - 4 mb - 6 text - center">;
@@ -326,9 +324,9 @@ export default function ComprehensivePricingPage() {
                         on_click={() => toggleServiceExpansion (service.id)}
                         className="w - full bg - white / 10 text - white py - 3 px - 4 rounded - xl font - medium hover:bg - white / 20 transition - all duration - 300 flex items - center justify - center gap - 2 mb - 4";
                       >;
-                        {expanded_service === service.id ? 'Show Less' : 'View Details'}
+                        {expanded_service = = service.id ? 'Show Less' : 'View Details'}
                         <ChevronDown className={`w - 4 h - 4 transition - transform duration - 300 ${
-                          expanded_service === service.id ? 'rotate - 180' : '';
+                          expanded_service = = service.id ? 'rotate - 180' : '';
                         }`} />;
                       </button>;
                       {/* CTA Button */}
@@ -352,12 +350,12 @@ export default function ComprehensivePricingPage() {
                     </div>;
                     {/* Expanded Details */}
                     <AnimatePresence>;
-                      {expanded_service === service.id && (
+                      {expanded_service = = service.id && (
                         <motion.div;
-                          initial={{ height: 0, opacity: 0 }}
-                          animate={{ height: 'auto', opacity: 1 }}
-                          exit={{ height: 0, opacity: 0 }}
-                          transition={{ duration: 0.3 }}
+                          initial={ height: 0, opacity: 0 }
+                          animate={ height: 'auto', opacity: 1 }
+                          exit={ height: 0, opacity: 0 }
+                          transition={ duration: 0.3 }
                           className="overflow-hidden border-t border-white/10"
                         >
                           <div className="p-6 bg-white/5">
@@ -374,23 +372,23 @@ export default function ComprehensivePricingPage() {
                             <div className="mb-6">
                               <h4 className="text-lg font-semibold text-white mb-2">Technology Stack</h4>
                               <div className="flex flex-wrap gap-2">
-                                {service.technology.map((tech, idx) => (
+                                {service.technology.map(tech, idx) => (
                                   <span key={idx} className="bg-white/10 text-white/70 px-3 py-1 rounded-full text-xs">
                                     {tech}
                                   </span>
-                                ))}
+                                )}
                               </div>
                             </div>
                             {/* Use Cases */}
                             <div className="mb-6">
                               <h4 className="text-lg font-semibold text-white mb-2">Use Cases</h4>
                               <div className="space-y-1">
-                                {service.useCases.map((useCase, idx) => (
+                                {service.useCases.map(useCase, idx) => (
                                   <div key={idx} className="flex items-center gap-2 text-sm text-white/60">
                                     <Target className="w-3 h-3 text-blue-400" />
                                     {useCase}
                                   </div>
-                                ))}
+                                )}
                               </div>
                             </div>
 
@@ -399,7 +397,7 @@ export default function ComprehensivePricingPage() {
                               <h4 className="text-lg font-semibold text-white mb-2">ROI & Benefits</h4>
                               <p className="text-white/70 text-sm mb-3">{service.roi}</p>
                               <div className="grid grid-cols-2 gap-2">
-                                {service.benefits.map((benefit, idx) => (
+                                {service.benefits.map(benefit, idx) => (
                                   <div key={idx} className="flex items-center gap-2 text-sm text-white/60">
                                     <TrendingUp className="w-3 h-3 text-green-400" />
                             {/* ROI and Benefits */}
@@ -407,12 +405,12 @@ export default function ComprehensivePricingPage() {
                               <h4 className="text - lg font - semibold text - white mb - 2">ROI & Benefits</h4>;
                               <p className="text - white / 70 text - sm mb - 3">{service.roi}</p>;
                               <div className="grid grid - cols - 2 gap - 2">;
-                                {service.benefits.map ((benefit, idx) => (
+                                {service.benefits.map (benefit, idx) => (
                                   <div key={idx} className="flex items - center gap - 2 text - sm text - white / 60">;
                                     <TrendingUp className="w - 3 h - 3 text - green - 400" />;
                                     {benefit}
                                   </div>
-                                ))}
+                                )}
                               </div>
                             </div>
                             {/* Contact Information */}
@@ -430,7 +428,7 @@ export default function ComprehensivePricingPage() {
                       )}
                     </AnimatePresence>
                   </motion.div>
-                ))}
+                )}
               </AnimatePresence>
             </div>
           </div>
@@ -440,18 +438,18 @@ export default function ComprehensivePricingPage() {
         <section className="px-6 pb-20">
           <div className="max-w-4xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
         {/* Contact CTA */}
         <section className="px - 6 pb - 20">;
           <div className="max - w-4xl mx - auto">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, coordinate_y: 30 }
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
               className="text-center"
             >
               <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-12 border border-blue-500/30">
@@ -483,7 +481,7 @@ export default function ComprehensivePricingPage() {
       </div>
     </>
   )
-}
+
               className="text - center";
             >;
               <div className="bg - gradient - to - r from - blue - 600 / 20 to - cyan - 600 / 20 rounded - 3xl p - 12 border border - blue - 500 / 30">;
@@ -514,4 +512,3 @@ export default function ComprehensivePricingPage() {
         </section>;
       </div>;
     </>);
-}

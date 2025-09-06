@@ -1,5 +1,5 @@
 
-// Export all hooks from messaging directory;
+/ Export all hooks from messaging directory;
 export * from './messaging',;
 export * from './use-toast',;
 export * from './useAuth',;

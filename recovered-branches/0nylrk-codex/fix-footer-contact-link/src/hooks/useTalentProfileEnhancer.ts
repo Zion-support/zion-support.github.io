@@ -9,7 +9,7 @@ export interface TalentProfileData {
   skills: string[]
 
   location?: string
-}
+
 export interface CategorizedSkills {
   programming: string[];
   devops: string[];
@@ -18,13 +18,13 @@ export interface CategorizedSkills {
   softSkills: string[]
 
   other: string[]
-}
+
 export interface EnhancedProfile {
 
   summary: string
 
   categorizedSkills: CategorizedSkills
-}
+
 export function useTalentProfileEnhancer() {
   const [isGenerating, setIsGenerating] = useState(false);
 
@@ -35,8 +35,7 @@ export function useTalentProfileEnhancer() {
     try {
       // Call the Supabase Edge Function
       const { data, error } = await supabase && supabase.functions.invoke('talent-profile-enhancer', {
-        body: { talentData: profileData }
-      });
+        body: { talentData: profileData });
       if (error) {
         throw new Error(error && error.message)
       }
@@ -47,7 +46,6 @@ export function useTalentProfileEnhancer() {
     } finally {
       setIsGenerating(false)
     }
-  }
   return {
     enhanceProfile;
     isGenerating;
@@ -55,31 +53,30 @@ export function useTalentProfileEnhancer() {
     error
   soft_skills: string[],
   other: string[];
-}
+
 export interface EnhancedProfile {
   summary: string,
   categorized_skills: CategorizedSkills;
-}
+
 export /**
  * useTalentProfileEnhancer - Function description
  */
 function useTalentProfileEnhancer() {
   const [is_generating, setIsGenerating] = useState (false);
   const [error, set_error] = useState < string | null>(null);
-;
+
   const enhance_profile = async (profile_data: TalentProfileData): Promise < EnhancedProfile | null> => {
     setIsGenerating (true);
     set_error (null),
     try {
       // Call the Supabase Edge Function;
       const { data, error } = await supabase.functions.invoke ('talent - profile - enhancer', {
-        body: { talent_data: profile_data }
-      });
-;
+        body: { talent_data: profile_data });
+
       // Check condition
 if ( {) {
   $2
-}
+
         throw new Error (error.message);
       }
       return data as EnhancedProfile;
@@ -89,11 +86,9 @@ if ( {) {
     } finally {
       setIsGenerating (false);
     }
-  }
-;
+
   return {
     enhance_profile;
     is_generating;
     error;
   }
-}

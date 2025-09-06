@@ -20,7 +20,6 @@ const AiModelDevelopmentChat: NextPage = () => {;
       </main>;
     </div>;
   );
-};
       </Head>
       <main>
         <h1>AiModelDevelopmentChat</h1>
@@ -37,7 +36,7 @@ const AiModelDevelopmentChat: NextPage = () => {;
       </main>;
     </div>;
   );
-}
+
 export default AiModelDevelopmentChat;
 
 import type { NextPage } from './next';
@@ -59,7 +58,5 @@ const AiModelDevelopmentChat: NextPage = () => {
         <a href="/services">Back to Services</a>;
       </main>;
     </div>);
-}
-;
+
 export default AiModelDevelopmentChat;
-;

@@ -1,4 +1,4 @@
-{
+
   "name": "clean-build",
   "version": "0.1.0",
   "private": true,
@@ -20,4 +20,3 @@
     "eslint": "9.34.0",
     "eslint-config-next": "15.5.2"
   }
-}

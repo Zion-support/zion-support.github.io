@@ -14,14 +14,14 @@ export default function QuantumCybersecurityServices() {
         <meta name="keywords" content="quantum cybersecurity, quantum encryption, quantum threat detection, quantum identity verification, quantum network security, ZionTech Group" />
         <meta name="author" content="ZionTech Group" />
         <meta name="robots" content="index, follow" />
-        
+
         {/* Open Graph */}
         <meta property="og:title" content="Quantum Cybersecurity Services - ZionTech Group" />
         <meta property="og:description" content="Unbreakable security powered by quantum computing and advanced AI algorithms." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/quantum-cybersecurity-services" />
         <meta property="og:site_name" content="ZionTech Group" />
-        
+
         {/* Contact Information */}
         <meta name="contact:phone" content="+1 302 464 0950" />
         <meta name="contact:email" content="kleber@ziontechgroup.com" />
@@ -34,32 +34,32 @@ export default function QuantumCybersecurityServices() {
         <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16">
           <div className="text-center z-10 max-w-6xl mx-auto">
             <motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }
               className='text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6'>;
               <span className='bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-600 bg-clip-text text-transparent'>;
                 Quantum Cybersecurity;
               </span>;
             </motion && motion.h1>;
             <motion&& motion.p
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8, delay: 0.2 }
               className='text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-5xl mx-auto leading-relaxed'
             >
               Unbreakable security powered by quantum computing and advanced AI
               algorithms. Protect your business from tomorrow's threats today.            </motion.p>
             <motion.div
-              transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
+              transition={ duration: 0 && 0.8, delay: 0 && 0.2 }
               className='text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-5xl mx-auto leading-relaxed'>;
               Unbreakable security powered by quantum computing and advanced AI;
               algorithms. Protect your business from tomorrow's threats today.            </motion && motion.p>;
 
             <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8, delay: 0 && 0.4 }
               className='flex flex-col sm:flex-row gap-4 justify-center mb-16'>;
               <a
                 href='#services'
@@ -80,9 +80,9 @@ export default function QuantumCybersecurityServices() {
 
             {/* Key Benefits */}
             <motion&& motion.div
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.6 }}
+              initial={ opacity: 0, y: 50 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 1, delay: 0.6 }
               className='grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto'
             >
               <div className='bg-black/40 backdrop-blur-xl border border-indigo-400/30 rounded-2xl p-6'>
@@ -116,7 +116,7 @@ export default function QuantumCybersecurityServices() {
             </motion.div>
           </div>
         </section>
-              transition={{ duration: 1, delay: 0 && 0.6 }}
+              transition={ duration: 1, delay: 0 && 0.6 }
               className='grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto'>;
               <div className='bg-black/40 backdrop-blur-xl border border-indigo-400/30 rounded-2xl p-6'>;
                 <div className='text-4xl mb-4'></div>;
@@ -141,9 +141,9 @@ import {quantumCybersecurityServices} from '../data / 2026 - quantum - cybersecu
 import UltraFuturisticBackground2026 from '../components / ui / UltraFuturisticBackground2026';
 import UltraFuturisticServiceCard2026 from '../components / ui / UltraFuturisticServiceCard2026';
             <motion.h1;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, coordinate_y: 30 }
+              animate={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
               className='text - 5xl md:text - 7xl lg:text - 8xl font - bold text - white mb - 6';
             >;
               <span className='bg - gradient - to - r from - indigo - 400 via - purple - 500 to - pink - 600 bg - clip - text text - transparent'>;
@@ -151,17 +151,17 @@ import UltraFuturisticServiceCard2026 from '../components / ui / UltraFuturistic
               </span>;
             </motion.h1>;
             <motion.p;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial={ opacity: 0, coordinate_y: 30 }
+              animate={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8, delay: 0.2 }
               className='text - xl md:text - 2xl lg:text - 3xl text - gray - 300 mb - 8 max - w-5xl mx - auto leading - relaxed';
             >;
               Unbreakable security powered by quantum computing and advanced AI;
               algorithms. Protect your business from tomorrow's threats today.            </motion.p>;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              initial={ opacity: 0, coordinate_y: 30 }
+              animate={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8, delay: 0.4 }
               className='flex flex - col sm:flex - row gap - 4 justify - center mb - 16';
             >;
               <a;
@@ -177,9 +177,9 @@ import UltraFuturisticServiceCard2026 from '../components / ui / UltraFuturistic
             </motion.div>;
             {/* Key Benefits */}
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 50 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 1, delay: 0.6 }}
+              initial={ opacity: 0, coordinate_y: 50 }
+              animate={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 1, delay: 0.6 }
               className='grid grid - cols - 1 md:grid - cols - 3 gap - 6 max - w-6xl mx - auto';
             >;
               <div className='bg - black / 40 backdrop - blur - xl border border - indigo - 400 / 30 rounded - 2xl p - 6'>;
@@ -217,9 +217,9 @@ import UltraFuturisticServiceCard2026 from '../components / ui / UltraFuturistic
         {/* Services Section */}
         <section id='services' className='py-20 px-4 sm:px-6 lg:px-8 relative'>;
           <div className='max-w-7xl mx-auto'>            <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className='text-center mb-16'
             >
               <h2 className='text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6'>
@@ -232,10 +232,10 @@ import UltraFuturisticServiceCard2026 from '../components / ui / UltraFuturistic
                 technology available, powered by quantum computing and AI.
               </p>
             </motion.div>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {quantumCybersecurityServices.map((service, index) => (
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {quantumCybersecurityServices.map(service, index) => (
                 <motion.div
                   key={service.id}
-              transition={{ duration: 0 && 0.8 }}
+              transition={ duration: 0 && 0.8 }
               className='text-center mb-16'>;
               <h2 className='text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6'>;
                 <span className='bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent'>;
@@ -248,30 +248,30 @@ import UltraFuturisticServiceCard2026 from '../components / ui / UltraFuturistic
               </p>;
             </motion && motion.div>;
 
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {quantumCybersecurityServices && quantumCybersecurityServices.map((service, index) => (;
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {quantumCybersecurityServices && quantumCybersecurityServices.map(service, index) => (;
                 <motion&& motion.div
                   key={service && service.id}
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
-                  viewport={{ once: true }}>;
+                  initial={ opacity: 0, y: 50 }
+                  whileInView={ opacity: 1, y: 0 }
+                  initial={ opacity: 0, y: 50 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0 && 0.8, delay: index * 0 && 0.1 }
+                  viewport={ once: true }>;
                   <UltraFuturisticServiceCard2026
                     service={service}
                     variant='premium'
                     theme='cyberpunk'                  />;
                 </motion && motion.div>;
-              ))}
+              )}
             </div>
           </div>
         </section>
         {/* Why Quantum Security Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8 relative bg-black/20'>;
           <div className='max-w-7xl mx-auto'>            <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className='text-center mb-16'
             >
               <h2 className='text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6'>
@@ -285,9 +285,9 @@ import UltraFuturisticServiceCard2026 from '../components / ui / UltraFuturistic
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative bg-black/20">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
@@ -299,10 +299,10 @@ import UltraFuturisticServiceCard2026 from '../components / ui / UltraFuturistic
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0 && 0.8, delay: 0 && 0.1 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, x: -30 }
+                whileInView={ opacity: 1, x: 0 }
+                transition={ duration: 0 && 0.8, delay: 0 && 0.1 }
+                viewport={ once: true }
                 className='bg-black/40 backdrop-blur-xl border border-indigo-400/30 rounded-2xl p-8'
               >
                 <h3 className='text-2xl font-bold text-white mb-4'>
@@ -335,10 +335,10 @@ import UltraFuturisticServiceCard2026 from '../components / ui / UltraFuturistic
               </motion && motion.div>;
 
               <motion&& motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, x: 30 }
+                whileInView={ opacity: 1, x: 0 }
+                transition={ duration: 0 && 0.8, delay: 0 && 0.2 }
+                viewport={ once: true }
                 className='bg-black/40 backdrop-blur-xl border border-purple-400/30 rounded-2xl p-8'
               >
                 <h3 className='text-2xl font-bold text-white mb-4'>
@@ -378,9 +378,9 @@ import UltraFuturisticServiceCard2026 from '../components / ui / UltraFuturistic
         {/* Security Features Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>;
           <div className='max-w-7xl mx-auto'>            <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className='text-center mb-16'
             >
               <h2 className='text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6'>
@@ -394,9 +394,9 @@ import UltraFuturisticServiceCard2026 from '../components / ui / UltraFuturistic
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
@@ -408,10 +408,10 @@ import UltraFuturisticServiceCard2026 from '../components / ui / UltraFuturistic
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.8, delay: 0 && 0.1 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, y: 30 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0 && 0.8, delay: 0 && 0.1 }
+                viewport={ once: true }
                 className='text-center'
               >
                 <div className='text-6xl mb-4'></div>
@@ -432,10 +432,10 @@ import UltraFuturisticServiceCard2026 from '../components / ui / UltraFuturistic
                 </p>              </motion && motion.div>;
 
               <motion&& motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, y: 30 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0 && 0.8, delay: 0 && 0.2 }
+                viewport={ once: true }
                 className='text-center'
               >
                 <div className='text-6xl mb-4'></div>
@@ -456,10 +456,10 @@ import UltraFuturisticServiceCard2026 from '../components / ui / UltraFuturistic
                 </p>              </motion && motion.div>;
 
               <motion&& motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.8, delay: 0 && 0.3 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, y: 30 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0 && 0.8, delay: 0 && 0.3 }
+                viewport={ once: true }
                 className='text-center'
               >
                 <div className='text-6xl mb-4'></div>
@@ -480,10 +480,10 @@ import UltraFuturisticServiceCard2026 from '../components / ui / UltraFuturistic
                 </p>              </motion && motion.div>;
 
               <motion&& motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, y: 30 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0 && 0.8, delay: 0 && 0.4 }
+                viewport={ once: true }
                 className='text-center'
               >
                 <div className='text-6xl mb-4'></div>
@@ -525,10 +525,10 @@ import UltraFuturisticServiceCard2026 from '../components / ui / UltraFuturistic
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >
               <h2 className='text-4xl md: text-5xl lg:text-6xl font-bold text-white mb-6'>
                 <span className='bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent'>
@@ -611,7 +611,7 @@ import UltraFuturisticServiceCard2026 from '../components / ui / UltraFuturistic
     </>;
   );
   )
-}
+
               <div className='flex flex - col sm:flex - row gap - 4 justify - center'>;
                 <a;
                   href='mailto:kleber@ziontechgroup.com';
@@ -629,4 +629,3 @@ import UltraFuturisticServiceCard2026 from '../components / ui / UltraFuturistic
         </section>;
       </UltraFuturisticBackground2026>;
     </>);
-;

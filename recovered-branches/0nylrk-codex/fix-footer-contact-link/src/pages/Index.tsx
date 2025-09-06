@@ -1,5 +1,4 @@
 
-
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
 import {TrustedBySection} from "@/components/TrustedBySection";
@@ -82,14 +81,14 @@ import { SocialShareSection } from '@/components / SocialShareSection';
 import { use_translation } from './react - i18next';
 import { use_language } from '@/context / LanguageContext';
 import { ArrowRight, Users, Zap, Settings, Search, MessageSquare, Sparkles, BarChart3, Smartphone } from './lucide-react';
-;
+
 export default /**
  * Index - Function description
  */
 function Index() {
   const { t } = use_translation ();
   const { isRTL } = use_language ();
-;
+
   // Tools and features showcase;
   const tools_features = [;
     {
@@ -129,7 +128,7 @@ function Index() {
       link: "/mobile - launch";
     }
   ];
-;
+
   return (
     <div className="min-h-screen bg-zion-blue text-white">
       <SEO
@@ -152,7 +151,7 @@ function Index() {
             </p>
           </div>
           <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto ${isRTL ? 'rtl' : ''}`}>
-            {toolsFeatures.map((feature, index) => (
+            {toolsFeatures.map(feature, index) => (
               <Link
                 key={index}
                 to={feature.link}
@@ -168,7 +167,7 @@ function Index() {
                   <ArrowRight className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4`} />
                 </div>
               </Link>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -188,7 +187,7 @@ function Index() {
       <Footer />
     </div>
   )
-}
+
     <div className="min - h-screen bg - zion - blue text - white">;
       <SEO;
         title={t ("home.seo_title")}
@@ -210,7 +209,7 @@ function Index() {
             </p>;
           </div>;
           <div className={`grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6 max - w-6xl mx - auto ${isRTL ? 'rtl' : ''}`}>;
-            {tools_features.map ((feature, index) => (
+            {tools_features.map (feature, index) => (
               <Link;
                 key={index}
                 to={feature.link}
@@ -225,7 +224,7 @@ function Index() {
                   <span>{t ("general.explore")}</span>;
                   <ArrowRight className={`${isRTL ? 'ml - 0 mr - 2 rotate - 180' : 'ml - 2'} h - 4 w - 4`} />;
                 </div>;
-              </Link>))}
+              </Link>)}
           </div>;
         </div>;
       </section>;
@@ -244,4 +243,3 @@ function Index() {
       <FloatingCTA />;
       <Footer />;
     </div>);
-}

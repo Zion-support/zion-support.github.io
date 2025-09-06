@@ -5,7 +5,7 @@ import {;
   ArrowRight, Star, TrendingUp, Zap, Brain, Atom,;
   Rocket, Shield, Target, CheckCircle, ExternalLink,;
   Search, Filter, Grid, List, ChevronDown;
-} from 'lucide-react',;
+ from 'lucide-react',;
 import { cuttingEdge2027Innovations } from '../../data/2027-cutting-edge-innovations',;
 import { practicalMicroSaas2027 } from '../../data/2027-practical-micro-saas',;
 import { emergingTech2027Services } from '../../data/2027-emerging-tech-services',;
@@ -21,27 +21,26 @@ const Enhanced2027ServicesShowcase: React.FC = () => {;
     ...emergingTech2027Services;
   ],;
   // Get unique categories;
-  const categories = ['all', ...Array.from(new Set(all2027Services.map(service => service.category)))],;
+  const categories = ['all', ...Array.from(new Set(all2027Services.map(service => service.category))],;
   // Filter and sort services;
   const filteredServices = all2027Services;
     .filter(service => {;
-      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                           service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),;
-      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,;
+      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase() ||;
+                           service.description.toLowerCase().includes(searchTerm.toLowerCase() ||;
+                           service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()),;
+      const matchesCategory = selectedCategory = = 'all' || service.category = = selectedCategory,;
       return matchesSearch && matchesCategory;
     });
-    .sort((a, b) => {;
+    .sort(a, b) => {;
       switch (sortBy) {;
         case 'name':;
           return a.name.localeCompare(b.name),;
         case 'price':;
-          return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, '')),;
+          return parseFloat(a.price.replace(/[^0-9.]/g, '') - parseFloat(b.price.replace(/[^0-9.]/g, ''),;
         case 'roi':;
-          return parseFloat(a.roi.replace(/[^0-9.]/g, '')) - parseFloat(b.roi.replace(/[^0-9.]/g, '')),;
+          return parseFloat(a.roi.replace(/[^0-9.]/g, '') - parseFloat(b.roi.replace(/[^0-9.]/g, ''),;
         default: return 0;
-      }
-    }),
+      }),
 
   const getCategoryColor = (category: string) => {
     const colors = {
@@ -74,9 +73,9 @@ const Enhanced2027ServicesShowcase: React.FC = () => {;
         {/* Header */}
         <motion.div 
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          initial={ opacity: 0, y: 20 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0.6 }
         >
           <h2 className="text-5xl font-bold mb-6">
             <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -93,9 +92,9 @@ const Enhanced2027ServicesShowcase: React.FC = () => {;
         {/* Search and Filters */}
         <motion.div 
           className="mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          initial={ opacity: 0, y: 20 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0.6, delay: 0.2 }
         >
           <div className="bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6">
             <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
@@ -121,7 +120,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {;
                     onChange={(e) => setSelectedCategory(e.target.value)}
                     className="appearance-none bg-gray-700/50 border border-gray-600/50 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 pr-10"
                   >
-                    {categories.map((category) => (
+                    {categories.map(category) => (
                       <option key={category} value={category}>
     }),;
   const getCategoryColor = (category: string) => {;
@@ -153,9 +152,9 @@ const Enhanced2027ServicesShowcase: React.FC = () => {;
         {/* Header */}
         <motion.div;
           className="text-center mb-16";
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          initial={ opacity: 0, y: 20 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0.6 }
         >;
           <h2 className="text-5xl font-bold mb-6">;
             <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">;
@@ -171,9 +170,9 @@ const Enhanced2027ServicesShowcase: React.FC = () => {;
         {/* Search and Filters */}
         <motion.div;
           className="mb-12";
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          initial={ opacity: 0, y: 20 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0.6, delay: 0.2 }
         >;
           <div className="bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6">;
             <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">;
@@ -198,11 +197,11 @@ const Enhanced2027ServicesShowcase: React.FC = () => {;
                     onChange={(e) => setSelectedCategory(e.target.value)}
                     className="appearance-none bg-gray-700/50 border border-gray-600/50 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 pr-10";
                   >;
-                    {categories.map((category) => (;
+                    {categories.map(category) => (;
                       <option key={category} value={category}>;
-                        {category === 'all' ? 'All Categories' : category}
+                        {category = = 'all' ? 'All Categories' : category}
                       </option>;
-                    ))}
+                    )}
                   </select>
                   <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" />
                 </div>
@@ -226,7 +225,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {;
                   <button
                     onClick={() => setViewMode('grid')}
                     className={`p-2 rounded-lg transition-all duration-200 ${;
-                      viewMode === 'grid';
+                      viewMode = = 'grid';
                         ? 'bg-cyan-500/20 text-cyan-400';
                         : 'text-gray-400 hover:text-white';
                     }`}
@@ -236,7 +235,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {;
                   <button
                     onClick={() => setViewMode('list')}
                     className={`p-2 rounded-lg transition-all duration-200 ${;
-                      viewMode === 'list';
+                      viewMode = = 'list';
                         ? 'bg-cyan-500/20 text-cyan-400';
                         : 'text-gray-400 hover:text-white';
                     }`}
@@ -252,9 +251,9 @@ const Enhanced2027ServicesShowcase: React.FC = () => {;
         {/* Results Count */}
         <motion.div 
           className="mb-8"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
+          initial={ opacity: 0 }
+          whileInView={ opacity: 1 }
+          transition={ duration: 0.6, delay: 0.3 }
         >
           <p className="text-gray-400">
             Showing <span className="text-cyan-400 font-semibold">{filteredServices.length}</span> of{' '}
@@ -264,21 +263,21 @@ const Enhanced2027ServicesShowcase: React.FC = () => {;
 
         {/* Services Grid/List */}
         <AnimatePresence mode="wait">
-          {viewMode === 'grid' ? (
+          {viewMode = = 'grid' ? (
             <motion.div
               key="grid"
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.95 }}
-              transition={{ duration: 0.3 }}
+              initial={ opacity: 0, scale: 0.95 }
+              animate={ opacity: 1, scale: 1 }
+              exit={ opacity: 0, scale: 0.95 }
+              transition={ duration: 0.3 }
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             >
-              {filteredServices.map((service, index) => (
+              {filteredServices.map(service, index) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={ opacity: 0, y: 20 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.6, delay: index * 0.1 }
                   className="group"
                 >
                   <div className="bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 h-full hover:border-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/20 transition-all duration-300 hover:-translate-y-2">
@@ -304,24 +303,24 @@ const Enhanced2027ServicesShowcase: React.FC = () => {;
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-gray-400 mb-2">Key Features:</h4>
                       <ul className="space-y-1">
-                        {service.features.slice(0, 3).map((feature, idx) => (
+                        {service.features.slice(0, 3).map(feature, idx) => (
                           <li key={idx} className="flex items-center text-sm text-gray-300">
                             <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
                             {feature}
                           </li>;
-                        ))}
+                        )}
                       </ul>;
                     </div>;
                     {/* Tags */}
                     <div className="flex flex-wrap gap-2 mb-6">
-                      {service.tags.slice(0, 3).map((tag, idx) => (
+                      {service.tags.slice(0, 3).map(tag, idx) => (
                         <span
                           key={idx}
                           className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50"
                         >
                           {tag}
                         </span>;
-                      ))}
+                      )}
                     </div>;
                     {/* CTA */}
                     <Link;
@@ -333,23 +332,23 @@ const Enhanced2027ServicesShowcase: React.FC = () => {;
                     </a>
                   </div>
                 </motion.div>
-              ))}
+              )}
             </motion.div>
           ) : (
             <motion.div
               key="list"
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.95 }}
-              transition={{ duration: 0.3 }}
+              initial={ opacity: 0, scale: 0.95 }
+              animate={ opacity: 1, scale: 1 }
+              exit={ opacity: 0, scale: 0.95 }
+              transition={ duration: 0.3 }
               className="space-y-4"
             >
-              {filteredServices.map((service, index) => (
+              {filteredServices.map(service, index) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={ opacity: 0, x: -20 }
+                  whileInView={ opacity: 1, x: 0 }
+                  transition={ duration: 0.6, delay: index * 0.1 }
                   className="group"
                 >
                   <div className="bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 hover:border-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/20 transition-all duration-300">
@@ -374,14 +373,14 @@ const Enhanced2027ServicesShowcase: React.FC = () => {;
                           {service.description}
                         </p>
                         <div className="flex flex-wrap gap-2 mb-3">
-                          {service.tags.slice(0, 4).map((tag, idx) => (
+                          {service.tags.slice(0, 4).map(tag, idx) => (
                             <span
                               key={idx}
                               className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50"
                             >
                               {tag}
                             </span>;
-                          ))}
+                          )}
                         </div>;
                       </div>;
                       {/* Stats and CTA */}
@@ -401,17 +400,17 @@ const Enhanced2027ServicesShowcase: React.FC = () => {;
                     </div>
                   </div>
                 </motion.div>
-              ))}
+              )}
             </motion.div>;
           )}
         </AnimatePresence>;
         {/* No Results */}
-        {filteredServices.length === 0 && (
+        {filteredServices.length = = 0 && (
           <motion.div 
             className="text-center py-20"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6 }}
+            initial={ opacity: 0 }
+            animate={ opacity: 1 }
+            transition={ duration: 0.6 }
           >
             <div className="text-6xl mb-4"></div>
             <h3 className="text-2xl font-bold text-white mb-4">No services found</h3>
@@ -422,20 +421,20 @@ const Enhanced2027ServicesShowcase: React.FC = () => {;
               onClick={() => {
                 setSearchTerm(''),
                 setSelectedCategory('all')
-              }}
+              }
               className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
             >
               Clear Filters
             </button>
           </motion.div>
         )}
-;
+
         {/* CTA Section */}
         <motion.div 
           className="mt-20 text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
+          initial={ opacity: 0, y: 20 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0.6, delay: 0.8 }
         >
           <div className="bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-12">
             <h3 className="text-3xl md: text-4xl font-bold text-white mb-6">
@@ -466,14 +465,14 @@ const Enhanced2027ServicesShowcase: React.FC = () => {;
       </div>
     </section>
   )
-},
+,
 
 export default Enhanced2027ServicesShowcase,
         <motion.div;
           className="mt-20 text-center";
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
+          initial={ opacity: 0, y: 20 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0.6, delay: 0.8 }
         >;
           <div className="bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-12">;
             <h3 className="text-3xl md: text-4xl font-bold text-white mb-6">;
@@ -504,5 +503,5 @@ export default Enhanced2027ServicesShowcase,
       </div>;
     </section>;
   );
-},;
+,;
 export default Enhanced2027ServicesShowcase;

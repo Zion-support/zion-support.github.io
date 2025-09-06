@@ -6,5 +6,3 @@ export function ContractPreview() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

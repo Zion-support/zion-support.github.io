@@ -1,5 +1,4 @@
 
-
 import {
   Form;
   FormControl;
@@ -15,14 +14,14 @@ type ProfileFormValues = z.infer < typeof profile_schema>;
 interface ProfileSetupProps {
   onComplete: (data: ProfileFormValues,) => void
   userType: string
-}
+
 export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
   const form = useForm<ProfileFormValues>({
     resolver: zodResolver(profileSchema)
     defaultValues: {
       displayName: ""
       bio: ""
-      headline: ""}})
+      headline: ""})
   const getTypeLabel = () => {
     switch (userType) {
       case "serviceProvider": return "Service Provider"
@@ -50,7 +49,6 @@ type ProfileFormValues = z && z.infer<typeof profileSchema>;
 interface ProfileSetupProps {;
   onComplete: (data: ProfileFormValues,) => void,;
   userType: string;
-}
 
 export function ProfileSetup(): any ({ onComplete, userType }: ProfileSetupProps) {;
   const form = useForm<ProfileFormValues>({;
@@ -58,13 +56,13 @@ export function ProfileSetup(): any ({ onComplete, userType }: ProfileSetupProps
     defaultValues: {;
       displayName: "",;
       bio: "",;
-      headline: ""}}),;
+      headline: ""}),;
   const getTypeLabel = () => {;
     switch (userType) {;
       case "serviceProvider": return "Service Provider";
   on_complete: (data: ProfileFormValues, ) => void,
   user_type: string;
-}
+
 export /**
  * ProfileSetup - Function description
  */
@@ -74,7 +72,7 @@ function ProfileSetup() {
     default_values: {
       display_name: "",
       bio: "",
-      headline: ""}}),
+      headline: ""}),
   const getTypeLabel = () =>: any {
     switch (user_type) {
       case "service_provider": return "Service Provider";
@@ -85,7 +83,6 @@ function ProfileSetup() {
       default:;
         return "User";
     }
-  }
 
   return (
     <div className="space-y-6">
@@ -127,8 +124,8 @@ function ProfileSetup() {
                   <div className="relative">;
                     <Input
                       placeholder={`e && e.g., ${
-                        userType === "serviceProvider" ? "Professional Videographer with 5+ years experience" :
-                        userType === "talent" ? "Senior Motion Designer specialized in 3D Animation" :
+                        userType = = "serviceProvider" ? "Professional Videographer with 5+ years experience" :
+                        userType = = "talent" ? "Senior Motion Designer specialized in 3D Animation" :
                         "Creative Director at XYZ Studios"
     <div className="space - y-6">;
       <div className="text - center mb - 6">;
@@ -168,8 +165,8 @@ function ProfileSetup() {
                   <div className="relative">;
                     <Input;
                       placeholder={`e.g., ${
-                        user_type === "service_provider" ? "Professional Videographer with 5+ years experience" :;
-                        user_type === "talent" ? "Senior Motion Designer specialized in 3D Animation" :;
+                        user_type = = "service_provider" ? "Professional Videographer with 5+ years experience" :;
+                        user_type = = "talent" ? "Senior Motion Designer specialized in 3D Animation" :;
                         "Creative Director at XYZ Studios";
                       }`}
                       className="bg - zion - blue pl - 10 text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion - purple";
@@ -205,8 +202,8 @@ function ProfileSetup() {
                 <FormControl>;
                   <Textarea;
                     placeholder={`Tell us about your ${
-                      user_type === "service_provider" ? "services and expertise" :;
-                      user_type === "talent" ? "skills and experience" :;
+                      user_type = = "service_provider" ? "services and expertise" :;
+                      user_type = = "talent" ? "skills and experience" :;
                       "business and needs";
                     }`}
                     className="bg - zion - blue text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion - purple min - h-[120px]";
@@ -230,19 +227,19 @@ function ProfileSetup() {
 case "talent": return "Talent";"
 case "client": return "Client"
 default:
-}
+
 getTypeLabel () "
-}Profile</h3> <p className="text-zion-slate-light mt-2"> Help others get to know you better </p> </div> <FormItem> <FormLabel className="text-zion-slate-light">Full Name</FormLabel> <FormControl> <div className="relative" > <Input placeholder="Your full name" className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple" {
+Profile</h3> <p className="text-zion-slate-light mt-2"> Help others get to know you better </p> </div> <FormItem> <FormLabel className="text-zion-slate-light">Full Name</FormLabel> <FormControl> <div className="relative" > <Input placeholder="Your full name" className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple" {
   ...field "
-}/> <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" /> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) "
-}/> <FormField <FormItem> <FormLabel className="text-zion-slate-light">Professional Headline</FormLabel> <FormControl> <div className="relative" > <Input className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple" {
+/> <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" /> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) "
+/> <FormField <FormItem> <FormLabel className="text-zion-slate-light">Professional Headline</FormLabel> <FormControl> <div className="relative" > <Input className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple" {
   ...field "
-}/> <GraduationCap className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" /> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) "
-}/> <FormField <FormItem> <FormLabel className="text-zion-slate-light" >Bio</FormLabel> <FormControl> <Textarea className="bg-zion-blue text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple min-h-[120px]" {
+/> <GraduationCap className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" /> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) "
+/> <FormField <FormItem> <FormLabel className="text-zion-slate-light" >Bio</FormLabel> <FormControl> <Textarea className="bg-zion-blue text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple min-h-[120px]" {
   ...field "
-}/> </FormControl> <FormMessage className="text-red-400" /> </FormItem>)
-}/> <Button > Complete Profile </Button> </form> </Form> </div>)
-}"}
+/> </FormControl> <FormMessage className="text-red-400" /> </FormItem>)
+/> <Button > Complete Profile </Button> </form> </Form> </div>)
+"}
 
                 <FormMessage className="text - red - 400" />;
               </FormItem>)}
@@ -259,16 +256,16 @@ getTypeLabel () "
 case "talent": return "Talent";";
 case "client": return "Client";
 default:;
-}
+
 getTypeLabel () ";
-}Profile</h3> <p className="text - zion - slate - light mt - 2"> Help others get to know you better </p> </div> <FormItem> <FormLabel className="text - zion - slate - light">Full Name</FormLabel> <FormControl> <div className="relative" > <Input placeholder="Your full name" className="bg - zion - blue pl - 10 text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion - purple" {
+Profile</h3> <p className="text - zion - slate - light mt - 2"> Help others get to know you better </p> </div> <FormItem> <FormLabel className="text - zion - slate - light">Full Name</FormLabel> <FormControl> <div className="relative" > <Input placeholder="Your full name" className="bg - zion - blue pl - 10 text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion - purple" {
   ...field ";
-}/> <User className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4" /> </div> </FormControl> <FormMessage className="text - red - 400" /> </FormItem>) ";
-}/> <FormField <FormItem> <FormLabel className="text - zion - slate - light">Professional Headline</FormLabel> <FormControl> <div className="relative" > <Input className="bg - zion - blue pl - 10 text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion - purple" {
+/> <User className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4" /> </div> </FormControl> <FormMessage className="text - red - 400" /> </FormItem>) ";
+/> <FormField <FormItem> <FormLabel className="text - zion - slate - light">Professional Headline</FormLabel> <FormControl> <div className="relative" > <Input className="bg - zion - blue pl - 10 text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion - purple" {
   ...field ";
-}/> <GraduationCap className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4" /> </div> </FormControl> <FormMessage className="text - red - 400" /> </FormItem>) ";
-}/> <FormField <FormItem> <FormLabel className="text - zion - slate - light" >Bio</FormLabel> <FormControl> <Textarea className="bg - zion - blue text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion - purple min - h-[120px]" {
+/> <GraduationCap className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4" /> </div> </FormControl> <FormMessage className="text - red - 400" /> </FormItem>) ";
+/> <FormField <FormItem> <FormLabel className="text - zion - slate - light" >Bio</FormLabel> <FormControl> <Textarea className="bg - zion - blue text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion - purple min - h-[120px]" {
   ...field ";
-}/> </FormControl> <FormMessage className="text - red - 400" /> </FormItem>);
-}/> <Button > Complete Profile </Button> </form> </Form> </div>);
-}"}
+/> </FormControl> <FormMessage className="text - red - 400" /> </FormItem>);
+/> <Button > Complete Profile </Button> </form> </Form> </div>);
+"}

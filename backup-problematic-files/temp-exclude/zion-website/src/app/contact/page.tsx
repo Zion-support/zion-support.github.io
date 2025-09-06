@@ -4,8 +4,8 @@ import { ;
   MapPinIcon,;
   ClockIcon,;
   ChatBubbleLeftRightIcon;
-} from '@heroicons/react/24/outline';
-;
+ from '@heroicons/react/24/outline';
+
 const contactMethods = [;
   {;
     name:'Email',;
@@ -25,7 +25,7 @@ const contactMethods = [;
     value:'1234 Innovation Drive, Silicon Valley, CA 94025',;
     href:'#',;
     icon:MapPinIcon}];
-;
+
 const officeLocations = [;
   {;
     name:'Silicon Valley',;
@@ -45,7 +45,7 @@ const officeLocations = [;
     phone:'+81 3 1234 5678',;
     email:'tokyo@ziontechgroup.com',;
     hours:'Mon-Fri:9:00 AM - 6:00 PM JST'}];
-;
+
 const faqs = [;
   {;
     question:'What industries do you serve?',;
@@ -59,7 +59,7 @@ const faqs = [;
   {;
     question:'What security measures do you have?',;
     answer:'We implement enterprise-grade security including end-to-end encryption, SOC 2 compliance, regular security audits, and strict access controls to protect your data and systems.'}];
-;
+
 export default function ContactPage() {;
   return (;
     <div className="bg-black">;
@@ -80,7 +80,7 @@ export default function ContactPage() {;
           </div>;
         </div>;
       </div>;
-;
+
       {/* Contact methods */}
       <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8">;
         <div className="mx-auto max-w-2xl lg:text-center">;
@@ -91,7 +91,7 @@ export default function ContactPage() {;
         </div>;
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">;
           <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">;
-            {contactMethods.map((method) => (;
+            {contactMethods.map(method) => (;
               <div key={method.name} className="flex flex-col group">;
                 <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">;
                   <method.icon className="h-5 w-5 flex-none text-blue-400" aria-hidden="true" />;
@@ -109,11 +109,11 @@ export default function ContactPage() {;
                   </p>;
                 </dd>;
               </div>;
-            ))}
+            )}
           </dl>;
         </div>;
       </div>;
-;
+
       {/* Contact form */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">;
         <div className="mx-auto max-w-2xl lg:text-center">;
@@ -207,7 +207,7 @@ export default function ContactPage() {;
           </form>;
         </div>;
       </div>;
-;
+
       {/* Office locations */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">;
         <div className="mx-auto max-w-2xl lg:text-center">;
@@ -218,7 +218,7 @@ export default function ContactPage() {;
         </div>;
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">;
           <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3">;
-            {officeLocations.map((office) => (;
+            {officeLocations.map(office) => (;
               <div key={office.name} className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300">;
                 <div className="flex items-center gap-x-3 mb-4">;
                   <MapPinIcon className="h-8 w-8 text-blue-400" />;
@@ -243,11 +243,11 @@ export default function ContactPage() {;
                   </p>;
                 </div>;
               </div>;
-            ))}
+            )}
           </div>;
         </div>;
       </div>;
-;
+
       {/* FAQ */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">;
         <div className="mx-auto max-w-2xl lg:text-center">;
@@ -258,7 +258,7 @@ export default function ContactPage() {;
         </div>;
         <div className="mx-auto mt-16 max-w-2xl lg:max-w-none">;
           <dl className="space-y-8">;
-            {faqs.map((faq, index) => (;
+            {faqs.map(faq, index) => (;
               <div key={index} className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm">;
                 <dt className="text-lg font-semibold leading-7 text-white mb-4">;
                   {faq.question}
@@ -267,11 +267,11 @@ export default function ContactPage() {;
                   {faq.answer}
                 </dd>;
               </div>;
-            ))}
+            )}
           </dl>;
         </div>;
       </div>;
-;
+
       {/* CTA section */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">;
         <div className="mx-auto max-w-2xl text-center">;

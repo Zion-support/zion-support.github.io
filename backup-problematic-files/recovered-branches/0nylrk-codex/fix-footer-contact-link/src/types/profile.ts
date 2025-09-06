@@ -3,8 +3,7 @@ export interface ProfileSkill {;
   name:string,;
   level:number, // 1-5;
   endorsements?:number;
-}
-;
+
 export interface ProfileProject {;
   id:string,;
   title:string,;
@@ -13,8 +12,7 @@ export interface ProfileProject {;
   tags?:string[],;
   url?:string,;
   date:string;
-}
-;
+
 export interface ProfileExperience {;
   id:string,;
   role:string,;
@@ -23,15 +21,13 @@ export interface ProfileExperience {;
   startDate:string,;
   endDate?:string,;
   current?:boolean;
-}
-;
+
 export interface Availability {;
   status:'available' | 'limited' | 'unavailable',;
   nextAvailable?:string,;
   message?:string,;
   availableHours?:{ day:string, hours:string }[],;
-}
-;
+
 export interface ProfileData {;
   id:string,;
   name:string,;
@@ -50,4 +46,3 @@ export interface ProfileData {;
   availability:Availability,;
   hourlyRate?:number,;
   contactEmail?:string;
-} 

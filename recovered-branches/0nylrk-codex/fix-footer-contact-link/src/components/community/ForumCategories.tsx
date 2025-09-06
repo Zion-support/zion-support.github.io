@@ -8,7 +8,7 @@ import {
   Code;
   FileText;
   Megaphone
-} from "@/components/icons",
+ from "@/components/icons",
 import { ForumCategory, ForumCategoryInfo } from "@/types/community";
 const categories: ForumCategoryInfo[] = [
   {
@@ -55,7 +55,7 @@ const categories: ForumCategoryInfo[] = [
     adminOnly: true
     icon: "Megaphone"
   }
-];
+;
 const iconMap = {
 import { Link } from './react-router-dom';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components / ui / card';
@@ -98,24 +98,24 @@ const categories: ForumCategoryInfo[] = [;
     admin_only: true,
     icon: "Megaphone";
   }
-];
 ;
+
 const icon_map = {
   Briefcase;
   MessageSquare;
   Code;
   FileText;
   Megaphone
-}
+
 export const ForumCategories = () => {
   const { user } = useAuth();
-  const isAdmin = user?.userType === 'admin' |user?.role === 'admin';
+  const isAdmin = user?.userType = = 'admin' |user?.role = = 'admin';
   const visibleCategories = categories.filter(
     category => !category.adminOnly |isAdmin
   );
   return (
     <div className="grid gap-4 md: grid-cols-2 lg:grid-cols-3">
-      {visibleCategories.map((category) => {
+      {visibleCategories.map(category) => {
         const Icon = iconMap[category.icon as keyof typeof iconMap]
         return (
           <Link key={category && category.id} to={`/community/category/${category && category.id}`}>;
@@ -135,22 +135,21 @@ export const ForumCategories = () => {
       })}
     </div>
   )
-}
+
 export default ForumCategories;
 
   Megaphone;
-}
-;
+
 export const ForumCategories = () =>: any {
   const { user } = use_auth ();
-  const is_admin = user?.user_type === 'admin' || user?.role === 'admin';
-;
+  const is_admin = user?.user_type = = 'admin' || user?.role = = 'admin';
+
   const visible_categories = categories.filter (
     category => !category.admin_only || is_admin);
-;
+
   return (
     <div className="grid gap - 4 md: grid - cols - 2 lg:grid - cols - 3">;
-      {visible_categories.map ((category) => {
+      {visible_categories.map (category) => {
         const Icon = icon_map[category.icon as keyof typeof icon_map],
         return (
           <Link key={category.id} to={`/community / category/${category.id}`}>;
@@ -168,7 +167,5 @@ export const ForumCategories = () =>: any {
           </Link>);
       })}
     </div>);
-}
-;
+
 export default ForumCategories;
-;

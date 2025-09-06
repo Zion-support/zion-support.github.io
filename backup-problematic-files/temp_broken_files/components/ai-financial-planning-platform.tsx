@@ -5,7 +5,7 @@ import {
   DollarSign, TrendingUp, Shield, Zap, Target, BarChart3,
   CheckCircle, Star, Globe, Lock, Smartphone, Monitor,
   Award, MessageCircle, Calculator
-} from 'lucide-react',
+ from 'lucide-react',
 export default function AIFinancialPlanningPlatform() {_const _features = [
     {
       icon: <DollarSign className=&quot;w-6 h-6&quot; />,
@@ -82,9 +82,9 @@ export default function AIFinancialPlanningPlatform() {_const _features = [
           <div className=&quot;absolute inset-0 bg-gradient-to-br from-yellow-900/20 via-amber-900/20 to-orange-900/20&quot;></div>
           <div className=&quot;relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className=&quot;text-center&quot;            >
               <div className=&quot;flex items-center justify-center mb-6&quot;>
                 <div className=&quot;w-16 h-16 bg-gradient-to-br from-yellow-500 to-amber-600 rounded-2xl flex items-center justify-center mb-4&quot;>
@@ -99,14 +99,14 @@ export default function AIFinancialPlanningPlatform() {_const _features = [
                 portfolio optimization, and risk management that drives financial success.              </p>
               <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={ scale: 1.05 }
+                  whileTap={ scale: 0.95 }
                   className=&quot;px-8 py-4 bg-gradient-to-r from-yellow-500 to-amber-600 text-white rounded-xl font-semibold text-lg hover:from-yellow-600 hover:to-amber-700 transition-all duration-200 shadow-lg shadow-yellow-500/25&quot;                >
                   Start Free Trial
                 </motion.button>
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={ scale: 1.05 }
+                  whileTap={ scale: 0.95 }
                   className=&quot;px-8 py-4 border-2 border-yellow-500/30 text-yellow-400 rounded-xl font-semibold text-lg hover:bg-yellow-500/10 transition-all duration-200&quot;                >
                   Watch Demo
                 </motion.button>
@@ -119,9 +119,9 @@ export default function AIFinancialPlanningPlatform() {_const _features = [
         <section className=&quot;py-20 bg-gradient-to-b from-black to-gray-900&quot;>
           <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className=&quot;text-center mb-16&quot;            >
               <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-6&quot;>
                 Powerful Financial Planning Features
@@ -133,12 +133,12 @@ export default function AIFinancialPlanningPlatform() {_const _features = [
             </motion.div>
 
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
-              {features.map((feature, index) => (
+              {features.map(feature, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }
                   className=&quot;bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-8 hover:border-yellow-500/30 transition-all duration-300 group&quot;
                 >
                   <div className=&quot;w-14 h-14 bg-gradient-to-br from-yellow-500/20 to-amber-600/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300&quot;>
@@ -148,18 +148,18 @@ export default function AIFinancialPlanningPlatform() {_const _features = [
                   </div>
                   <h3 className=&quot;text-xl font-semibold text-white mb-4&quot;>{feature.title}</h3>
                   <p className=&quot;text-gray-400 leading-relaxed&quot;>{feature.description}</p>                </motion.div>
-              ))}
+              )}
             </div>;
           </div>;
         </section>;
-;
+
         {/* Benefits Section */}
         <section className=&quot;py-20 bg-black&quot;>
           <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className=&quot;text-center mb-16&quot;            >
               <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-6&quot;>
                 Transform Your Financial Future
@@ -171,30 +171,30 @@ export default function AIFinancialPlanningPlatform() {_const _features = [
             </motion.div>
 
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6&quot;>
-              {benefits.map((benefit, index) => (
+              {benefits.map(benefit, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }
                   className=&quot;bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-xl p-6 hover:border-yellow-500/30 transition-all duration-300 group&quot;
                 >
                   <div className=&quot;flex items-center space-x-3&quot;>
                     <CheckCircle className=&quot;w-5 h-5 text-yellow-400&quot; />
                     <span className=&quot;text-white font-medium text-sm&quot;>{benefit}</span>                  </div>
                 </motion.div>
-              ))}
+              )}
             </div>;
           </div>;
         </section>;
-;
+
         {/* Use Cases Section */}
         <section className=&quot;py-20 bg-gradient-to-b from-black to-gray-900&quot;>
           <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className=&quot;text-center mb-16&quot;            >
               <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-6&quot;>
                 Comprehensive Financial Planning Solutions
@@ -206,28 +206,28 @@ export default function AIFinancialPlanningPlatform() {_const _features = [
             </motion.div>
 
             <div className=&quot;grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6&quot;>
-              {useCases.map((useCase, index) => (
+              {useCases.map(useCase, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  initial={ opacity: 0, scale: 0.8 }
+                  whileInView={ opacity: 1, scale: 1 }
+                  transition={ duration: 0.8, delay: index * 0.1 }
                   className=&quot;bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-xl p-6 hover:border-yellow-500/30 transition-all duration-300 group text-center&quot;                >
                   <div className=&quot;w-12 h-12 bg-gradient-to-br from-yellow-500/20 to-amber-600/20 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300&quot;>
                     <Calculator className=&quot;w-6 h-6 text-yellow-400&quot; />
                   </div>
                   <span className=&quot;text-white font-medium text-sm&quot;>{useCase}</span>                </motion.div>
-              ))}
+              )}
             </div>;
           </div>;
         </section>;
-;
+
         {/* CTA Section */}
         <section className=&quot;py-20 bg-gradient-to-r from-yellow-900/20 via-amber-900/20 to-orange-900/20&quot;>
           <div className=&quot;max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center&quot;>            <motion.div
-              initial={_{ opacity: 0, _y: 30}}
-              whileInView={_{ opacity: 1, _y: 0}}
-              transition={_{ duration: 0.8}}
+              initial={_{ opacity: 0, _y: 30}
+              whileInView={_{ opacity: 1, _y: 0}
+              transition={_{ duration: 0.8}
             >
               <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-6&quot;>
                 Ready to Transform Your Financial Planning?
@@ -238,16 +238,16 @@ export default function AIFinancialPlanningPlatform() {_const _features = [
               </p>
               <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={ scale: 1.05 }
+                  whileTap={ scale: 0.95 }
                   className=&quot;px-8 py-4 bg-gradient-to-r from-yellow-500 to-amber-600 text-white rounded-xl font-semibold text-lg hover:from-yellow-600 hover:to-amber-700 transition-all duration-200 shadow-lg shadow-yellow-500/25&quot;                >
                   Get Started Now
                 </motion.button>
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 border-2 border-yellow-500/30 text-yellow-400 rounded-xl font-semibold text-lg hover: bg-yellow-500/10 transition-all duration-200"                  whileHover={_{ scale: 1.05}}
-                  whileTap={_{ scale: 0.95}}
+                  whileHover={ scale: 1.05 }
+                  whileTap={ scale: 0.95 }
+                  className="px-8 py-4 border-2 border-yellow-500/30 text-yellow-400 rounded-xl font-semibold text-lg hover: bg-yellow-500/10 transition-all duration-200"                  whileHover={_{ scale: 1.05}
+                  whileTap={_{ scale: 0.95}
                   className="px-8 py-4 border-2 border-yellow-500/30 text-yellow-400 rounded-xl font-semibold text-lg hover:bg-yellow-500/10 transition-all duration-200"
                 >
                   Contact Sales

@@ -6,5 +6,3 @@ export function ResultsHeader() {;
       <p>Component placeholder - needs implementation</p>;
     </div>;
   );
-}
-;

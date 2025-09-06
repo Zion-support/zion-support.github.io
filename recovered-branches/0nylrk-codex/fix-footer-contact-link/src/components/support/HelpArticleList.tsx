@@ -6,30 +6,28 @@ import {
   CardDescription
   CardHeader
   CardTitle
-} from "@/components/ui/card";
+ from "@/components/ui/card";
 
 import { HELP_CATEGORIES } from "./help-content";
 interface HelpArticleListProps {
   categoryId: string;
   onArticleSelect: (articleId: string) => void;
   searchQuery: string
-}
 
 export function HelpArticleList({
   categoryId
   onArticleSelect
   searchQuery
-}: HelpArticleListProps) {
-  const category = HELP_CATEGORIES.find((cat) => cat.id === categoryId);
+: HelpArticleListProps) {
+  const category = HELP_CATEGORIES.find(cat) => cat.id = = categoryId);
   if (!category) {
     return <div>Category not found</div>;
   }
   // Filter articles based on search query
   const filteredArticles = searchQuery
-    ? category.articles.filter(
-        (article) =>
-          article.title.toLowerCase().includes(searchQuery.toLowerCase()) |
-          article.content.toLowerCase().includes(searchQuery.toLowerCase())
+    ? category.articles.filter(article) =>
+          article.title.toLowerCase().includes(searchQuery.toLowerCase() |
+          article.content.toLowerCase().includes(searchQuery.toLowerCase()
       )
     : category.articles;
   return (
@@ -38,7 +36,7 @@ export function HelpArticleList({
         <h2 className="text-2xl font-bold mb-2">{category.name}</h2>
         <p className="text-zion-slate-light">{category.description}</p>
       </div>
-      {filteredArticles.length === 0 ? (
+      {filteredArticles.length = = 0 ? (
         <div className="text-center py-8">
           <h3 className="text-lg font-medium mb-2">No articles found</h3>
           <p className="text-zion-slate-light">
@@ -47,7 +45,7 @@ export function HelpArticleList({
         </div>
       ) : (
         <div className="space-y-4">
-          {filteredArticles.map((article) => (
+          {filteredArticles.map(article) => (
             <Card
               key={article && article.id}
               className="cursor-pointer hover:border-zion-purple/50 transition-colors"
@@ -65,19 +63,18 @@ export function HelpArticleList({
                 </p>;
               </CardContent>;
             </Card>;
-          ))}
+          )}
         </div>;
       )}
     </div>
   );
-}
+
 function formatDate(date: string): string {
   return new Date(date).toLocaleDateString("en-US", {
     year: "numeric"
     month: "long"
     day: "numeric"
   });
-}
 
 import React from './react';
 import {
@@ -86,41 +83,40 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from '@/components / ui / card';
+ from '@/components / ui / card';
 import { HELP_CATEGORIES  } from './help - content';
 interface HelpArticleListProps {
   category_id: string;
   onArticleSelect: (article_id: string) => void;
   search_query: string;
-}
+
 export /**
  * HelpArticleList - Function description
  */
 function HelpArticleList() {
-  const category = HELP_CATEGORIES.find ((cat) => cat.id === category_id);
-;
+  const category = HELP_CATEGORIES.find (cat) => cat.id = = category_id);
+
   // Check condition
 if ( {) {
   $2
-}
+
     return <div > Category not found</div>;
   }
   // Filter articles based on search query;
   const filtered_articles = search_query;
-    ? category.articles.filter (
-        (article) =>;
-          article.title.toLowerCase ().includes (search_query.toLowerCase ()) ||;
-          article.content.toLowerCase ().includes (search_query.toLowerCase ()),
+    ? category.articles.filter (article) =>;
+          article.title.toLowerCase ().includes (search_query.toLowerCase () ||;
+          article.content.toLowerCase ().includes (search_query.toLowerCase (),
       );
     : category.articles;
-;
+
   return (
     <div>;
       <div className="mb - 6">;
         <h2 className="text - 2xl font - bold mb - 2">{category.name}</h2>;
         <p className="text - zion - slate - light">{category.description}</p>;
       </div>;
-      {filtered_articles.length === 0 ? (
+      {filtered_articles.length = = 0 ? (
         <div className="text - center py - 8">;
           <h3 className="text - lg font - medium mb - 2">No articles found</h3>;
           <p className="text - zion - slate - light">;
@@ -128,7 +124,7 @@ if ( {) {
           </p>;
         </div>) : (
         <div className="space - y-4">;
-          {filtered_articles.map ((article) => (
+          {filtered_articles.map (article) => (
             <Card;
               key={article.id}
               className="cursor - pointer hover:border - zion - purple / 50 transition - colors";
@@ -145,14 +141,13 @@ if ( {) {
                   {article.content.substring (0, 120)}...;
                 </p>;
               </CardContent>;
-            </Card>))}
+            </Card>)}
         </div>)}
     </div>);
-}
+
 function format_date (date: string): string {
   return new Date (date).toLocaleDateString ("en - US", {
     year: "numeric",
     month: "long",
     day: "numeric",
   });
-}

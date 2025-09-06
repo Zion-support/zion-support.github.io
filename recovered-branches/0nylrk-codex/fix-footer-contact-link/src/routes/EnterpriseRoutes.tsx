@@ -20,7 +20,7 @@ const EnterpriseRoutes = () => {
       <Route path="/hire-ai" element={<ZionHireAI />} />
     </Routes>
   )
-}
+
 export default EnterpriseRoutes;
 
 import { Fragment } from './react';
@@ -43,7 +43,5 @@ const EnterpriseRoutes = () =>: any {
       <Route path="/zion - hire - ai" element={<ZionHireAI />} />;
       <Route path="/hire - ai" element={<ZionHireAI />} />;
     </Routes>);
-}
-;
+
 export default EnterpriseRoutes;
-;

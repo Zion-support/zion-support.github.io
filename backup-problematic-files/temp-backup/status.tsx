@@ -3,7 +3,6 @@ import React from 'react';
 
 interface StatusProps {
   className?: string;
-}
 
 const Status: React.FC<StatusProps> = ({ className }) => {
   return (
@@ -12,6 +11,3 @@ const Status: React.FC<StatusProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-}
-}
-}

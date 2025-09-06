@@ -10,7 +10,7 @@ export default function EventsPage() {
 			</div>
 		</>
 	)
-}
+
 import React from 'react',
 import SEO from '../components / SEO',
 export default /**
@@ -25,4 +25,3 @@ return (
     <p className="text - gray - 300">No upcoming events at this time. Check back soon.</p>;
   </div>;
   </>);
-}

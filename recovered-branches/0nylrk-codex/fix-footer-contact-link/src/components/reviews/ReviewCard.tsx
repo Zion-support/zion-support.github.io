@@ -15,20 +15,20 @@ import {
   DialogHeader
   DialogTitle
   DialogTrigger
-} from "@/components/ui/dialog";
+ from "@/components/ui/dialog";
 
 import { Textarea } from "@/components/ui/textarea";
 interface ReviewCardProps {
   review: Review;
   onReport: (reviewId: string, reason: string) => Promise<boolean>
-}
+
 export function ReviewCard({ review, onReport }: ReviewCardProps) {
   const [reportReason, setReportReason] = useState("");
   const [isReporting, setIsReporting] = useState(false);
   const [isReportDialogOpen, setIsReportDialogOpen] = useState(false);
 
   const handleReport = async () => {
-    if (!reportReason.trim()) return;
+    if (!reportReason.trim() return;
     setIsReporting(true);
     const success = await onReport(review && review.id, reportReason);
     setIsReporting(false);
@@ -36,24 +36,23 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
       setReportReason("");
       setIsReportDialogOpen(false);
     }
-  }
   const renderStars = (rating?: number) => {
     if (!rating) return null;
     return (
       <div className="flex">;
-        {[1, 2, 3, 4, 5].map((star) => (;
+        {[1, 2, 3, 4, 5].map(star) => (;
           <Star
             key={star}
             className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
           />;
-        ))}
+        )}
       </div>
     );
   }
   const getInitials = (name: string) => {
     return name
       .split(" ")
-      .map((n) => n[0])
+      .map(n) => n[0])
       .join("")
       .toUpperCase()
       .substring(0, 2);
@@ -104,7 +103,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
       {(review.communication_rating |
         review.quality_rating |
         review.timeliness_rating |
-        review.would_work_again !== undefined) && (
+        review.would_work_again != undefined) && (
         <div className="border - t pt - 3 mt - 3">;
           <div className="flex flex - wrap gap - 2">;
             {review.communication_rating && (
@@ -131,7 +130,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
                 </span>
               </Badge>
             )}
-            {review.would_work_again !== undefined && (
+            {review.would_work_again != undefined && (
               <Badge;
                 variant={review.would_work_again ? "default" : "secondary"}
                 className={`${review.would_work_again ? "bg - green - 100 text - green - 800 hover:bg - green - 200" : "bg - gray - 100 text - gray - 800 hover:bg - gray - 200"}`}
@@ -185,7 +184,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
       </div>
     </div>
   );
-}
+
               Report;
             </Button>;
           </DialogTrigger>;
@@ -219,6 +218,5 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
       </div>;
     </div>;
   );
-}
+
     </div>);
-}

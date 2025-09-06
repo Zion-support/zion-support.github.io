@@ -3,7 +3,6 @@ import React from 'react';
 
 interface CybersecurityProps {
   className?: string;
-}
 
 const Cybersecurity: React.FC<CybersecurityProps> = ({ className }) => {
   return (
@@ -12,6 +11,3 @@ const Cybersecurity: React.FC<CybersecurityProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-}
-}
-}

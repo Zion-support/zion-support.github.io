@@ -6,5 +6,3 @@ export function EducationFormFields() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

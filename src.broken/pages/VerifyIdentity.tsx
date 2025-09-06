@@ -6,5 +6,3 @@ export function VerifyIdentity() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

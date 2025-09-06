@@ -7,6 +7,5 @@ const TestimonialsSection.dynamic = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default TestimonialsSection.dynamic;

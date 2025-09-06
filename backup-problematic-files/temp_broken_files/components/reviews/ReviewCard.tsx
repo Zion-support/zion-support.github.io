@@ -4,14 +4,14 @@ import type { PublicReview } from '../../types/reviews',
 type Props = {
   review: PublicReview,
   onReport?: (id: string) => void
-},
+,
 
 const ReviewCard: React.FC<Props> = ({ review, onReport }) => {
   return (
     <div className=&quot;enhanced-card hover:shadow-lg transition-shadow&quot;>
       <div className=&quot;flex items-center justify-between mb-2&quot;>
         <div className=&quot;flex items-center gap-2&quot;>
-          <StarRating value={review.rating} onChange={() => {}} readOnly size={18} />
+          <StarRating value={review.rating} onChange={() => {} readOnly size={18} />
           <span className=&quot;text-sm text-gray-500&quot;>{new Date(review.createdAt).toLocaleDateString()}</span>
         </div>
         <button
@@ -29,17 +29,17 @@ const ReviewCard: React.FC<Props> = ({ review, onReport }) => {
       <p className=&quot;text-sm leading-6&quot;>{review.text}</p>
 
       <div className=&quot;flex flex-wrap gap-2 mt-3&quot;>
-        {typeof review.categories?.communication === 'number' && (
+        {typeof review.categories?.communication = = 'number' && (
           <span className=&quot;pill&quot;>Communication: {review.categories.communication}</span>
         )}
-        {typeof review.categories?.qualityOfWork === 'number' && (
+        {typeof review.categories?.qualityOfWork = = 'number' && (
           <span className=&quot;pill&quot;>Quality: {review.categories.qualityOfWork}</span>
         )}
-        {typeof review.categories?.timeliness === 'number' && (
+        {typeof review.categories?.timeliness = = 'number' && (
           <span className=&quot;pill&quot;>Timeliness: {review.categories.timeliness}</span>        )}
       </div>
     </div>
   )
-},
+,
 
 export default ReviewCard,

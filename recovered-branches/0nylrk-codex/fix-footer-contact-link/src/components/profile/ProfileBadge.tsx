@@ -1,5 +1,4 @@
 
-
 import React from "react";
 import {BadgeCheck, Star, Clock, Award} from "lucide-react";
 import {cn} from "@/lib/utils";
@@ -7,7 +6,7 @@ type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated';
 interface ProfileBadgeProps {
   type: BadgeType
   className?: string
-}
+
 export function ProfileBadge({ type, className }: ProfileBadgeProps) {
   const badgeConfig = {
     verified: {
@@ -25,7 +24,7 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
     "top-rated": {
       icon: Award
       text: "Top Rated"
-      colors: "bg-purple-500/20 text-purple-400"}}
+      colors: "bg-purple-500/20 text-purple-400"}
   const { icon: Icon, text, colors } = badgeConfig[type];
   return (
     <div className={cn(
@@ -38,16 +37,16 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
       <span>{text}</span>
     </div>
   )
-}
+
 import React from './react';
 import { BadgeCheck, Star, Clock, Award } from './lucide-react';
 import { cn } from '@/lib / utils';
 type BadgeType = 'verified' | 'featured' | 'new' | 'top - rated';
-;
+
 interface ProfileBadgeProps {
   type: BadgeType,
   class_name?: string;
-}
+
 export /**
  * ProfileBadge - Function description
  */
@@ -68,9 +67,9 @@ function ProfileBadge() {
     "top - rated": {
       icon: Award,
       text: "Top Rated",
-      colors: "bg - purple - 500 / 20 text - purple - 400"}},
+      colors: "bg - purple - 500 / 20 text - purple - 400"},
   const { icon: Icon, text, colors } = badge_config[type];
-;
+
   return (
     <div className={cn (
       "flex items - center gap - 1 px - 2 py - 1 rounded - full text - xs font - medium";
@@ -79,4 +78,3 @@ function ProfileBadge() {
       <Icon className="w - 3 h - 3" />;
       <span>{text}</span>;
     </div>);
-}

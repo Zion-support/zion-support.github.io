@@ -6,5 +6,3 @@ export function Contact() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

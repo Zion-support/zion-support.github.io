@@ -26,15 +26,13 @@ export function BackToDirectoryButton() {
       </Button>
     </div>
   )
-}
-  )
-}
+
           Back to Talent Directory
         </Link>
       </Button>
     </div>
   );
-}
+
 import React from 'react';
 import { Button } from '@/components / ui / button';
 import Link from 'next / link';
@@ -59,6 +57,5 @@ function BackToDirectoryButton() {
         </Link>;
       </Button>;
     </div>);
-}
+
   );
-}

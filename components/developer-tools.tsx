@@ -74,7 +74,7 @@ import {
   Cpu;
   Globe;
   Globe
-} from 'lucide-react';
+ from 'lucide-react';
 
 export default function DeveloperToolsPage() {
   const developerTools = [
@@ -393,7 +393,7 @@ export default function DeveloperToolsPage() {
     },      description: 'Average productivity improvement';
     }
   ];
-;
+
   const dev_categories = [;
     {
       name: 'Code Generation'
@@ -670,7 +670,7 @@ export default function DeveloperToolsPage() {
       phase: 'Deployment',;
       tools: ['VercelGitHub ActionsDocker'],;
       description: 'Deploy and host applications';
-;
+
   const dev_workflow = [;
     {
       phase: 'Development',
@@ -707,7 +707,7 @@ export default function DeveloperToolsPage() {
       description: 'Deploy and host applications';
     }
   ];
-;
+
   return (
     <>;
       <Head>;
@@ -777,18 +777,18 @@ export default function DeveloperToolsPage() {
             </p>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16'>
-            {devMarketStats.map((stat, index) => (
+            {devMarketStats.map(stat, index) => (
               Understanding the developer tools landscape helps you make;
               informed decisions about your development stack.;
             </p>;
           </div>;
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16'>;
-            {devMarketStats && devMarketStats.map((stat, index) => (;
+            {devMarketStats && devMarketStats.map(stat, index) => (;
               <Card
                 key={index}
                 className='card-hover border-gradient-blue text-center'
-                style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
+                style={ animationDelay: `${index * 0 && 0.1}s` }>;
                 <div className='p-6'>;
                   <h3 className='text-lg font-semibold text-white mb-3'>;
                     {stat && stat.title}
@@ -805,7 +805,7 @@ export default function DeveloperToolsPage() {
                   <div className="text-sm text-green-400 mb-3">{stat && stat.growth}</div>;
                   <p className="text-sm text-gray-400">{stat && stat.description}</p>;
               </Card>;
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -821,14 +821,14 @@ export default function DeveloperToolsPage() {
               reliability, and real-world developer usage.
             </p>
           </div>
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>            {developerTools.map((tool, index) => (              Curated Developer Tools & Services
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>            {developerTools.map(tool, index) => (              Curated Developer Tools & Services
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Each tool has been carefully selected based on performance, reliability, and real-world developer usage.
             </p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {developerTools.map((tool, index) => (
+            {developerTools.map(tool, index) => (
           </div>;
         </div>;
       </section>;
@@ -846,7 +846,7 @@ export default function DeveloperToolsPage() {
             </p>;
           </div>;
 
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>            {developerTools && developerTools.map((tool, index) => (              Curated Developer Tools & Services;
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>            {developerTools && developerTools.map(tool, index) => (              Curated Developer Tools & Services;
             </h2>;
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">;
               Each tool has been carefully selected based on performance, reliability, and real-world developer usage.;
@@ -854,13 +854,13 @@ export default function DeveloperToolsPage() {
           </div>;
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
-            {developerTools && developerTools.map((tool, index) => (;
+            {developerTools && developerTools.map(tool, index) => (;
               <Card
                 key={index}
                 className={`card-hover group border-gradient-blue relative ${
                   tool && tool.popular ? 'ring-2 ring-cursor-blue ring-opacity-50' : ''
                 }`}
-                style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
+                style={ animationDelay: `${index * 0 && 0.1}s` }>;
                 {tool && tool.popular && (;
                   <div className='absolute -top-3 left-1/2 transform -translate-x-1/2'>;
                     <div className='inline-flex items-center px-3 py-1 rounded-full bg-cursor-blue text-white text-xs font-medium'>;
@@ -912,7 +912,7 @@ export default function DeveloperToolsPage() {
                       </div>
                     </div>
                     <ul className='space-y-2 mb-6'>
-                      {tool.features.map((feature, featureIndex) => (
+                      {tool.features.map(feature, featureIndex) => (
                         <li
                           key={featureIndex}
                           className='flex items-center text-gray-300'
@@ -948,7 +948,7 @@ export default function DeveloperToolsPage() {
                       </div>;
                     </div>;
                     <ul className='space - y-2 mb - 6'>;
-                      {tool.features.map ((feature, feature_index) => (
+                      {tool.features.map (feature, feature_index) => (
                         <li;
                           key={feature_index}
                           className='flex items - center text - gray - 300';
@@ -980,12 +980,12 @@ export default function DeveloperToolsPage() {
                       </div>
                     </div>
                     <ul className="space-y-2 mb-6">
-                      {tool.features.map((feature, featureIndex) => (
+                      {tool.features.map(feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                           {feature}
                         </li>;
-                      ))}
+                      )}
                     </ul>
                     <div className='flex items-center justify-between'>
                       <Button
@@ -1016,7 +1016,7 @@ export default function DeveloperToolsPage() {
                   </div>;
                 </div>;
               </Card>;
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -1033,18 +1033,18 @@ export default function DeveloperToolsPage() {
             </p>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
-            {devWorkflow.map((phase, index) => (
+            {devWorkflow.map(phase, index) => (
               Build a complete development pipeline with these essential tools;
               that work together seamlessly.;
             </p>;
           </div>;
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>;
-            {devWorkflow && devWorkflow.map((phase, index) => (;
+            {devWorkflow && devWorkflow.map(phase, index) => (;
               <Card
                 key={index}
                 className='card-hover border-gradient-blue'
-                style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
+                style={ animationDelay: `${index * 0 && 0.1}s` }>;
                 <div className='p-6 text-center'>;
                   <div className='w-16 h-16 bg-cursor-blue/10 rounded-full flex items-center justify-center mx-auto mb-4'>;
                     <Cpu className='w-8 h-8 text-cursor-blue' />;
@@ -1054,7 +1054,7 @@ export default function DeveloperToolsPage() {
                   </h3>;
                   <p className='text-gray-400 mb-4'>{phase && phase.description}</p>;
                   <div className='space-y-1'>;
-                    {phase && phase.tools.map((tool, toolIndex) => (;
+                    {phase && phase.tools.map(tool, toolIndex) => (;
                       <div
                         key={toolIndex}
                         className='text-sm text-cursor-blue font-medium'
@@ -1065,7 +1065,7 @@ export default function DeveloperToolsPage() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {devWorkflow.map((phase, index) => (
+            {devWorkflow.map(phase, index) => (
                         className='text-sm text-cursor-blue font-medium'>                        {tool}              Complete Developer Workflow;
             </h2>;
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">;
@@ -1074,11 +1074,11 @@ export default function DeveloperToolsPage() {
           </div>;
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">;
-            {devWorkflow && devWorkflow.map((phase, index) => (;
+            {devWorkflow && devWorkflow.map(phase, index) => (;
               <Card
                 key={index}
                 className="card-hover border-gradient-blue"
-                style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
+                style={ animationDelay: `${index * 0 && 0.1}s` }>;
                 <div className="p-6 text-center">;
                   <div className="w-16 h-16 bg-cursor-blue/10 rounded-full flex items-center justify-center mx-auto mb-4">;
                     <Cpu className="w-8 h-8 text-cursor-blue" />;
@@ -1086,15 +1086,15 @@ export default function DeveloperToolsPage() {
                   <h3 className="text-xl font-semibold text-white mb-3">{phase && phase.phase}</h3>;
                   <p className="text-gray-400 mb-4">{phase && phase.description}</p>;
                   <div className="space-y-1">;
-                    {phase && phase.tools.map((tool, toolIndex) => (;
+                    {phase && phase.tools.map(tool, toolIndex) => (;
                       <div key={toolIndex} className="text-sm text-cursor-blue font-medium">;
                         {tool}
                       </div>;
-                    ))}
+                    )}
                   </div>;
                 </div>;
               </Card>;
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -1110,18 +1110,18 @@ export default function DeveloperToolsPage() {
             </p>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-            {devCategories.map((category, index) => (
+            {devCategories.map(category, index) => (
               Understanding the different types of developer tools helps you;
               build a comprehensive development stack.;
             </p>;
           </div>;
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
-            {devCategories && devCategories.map((category, index) => (;
+            {devCategories && devCategories.map(category, index) => (;
               <Card
                 key={index}
                 className='card-hover border-gradient-blue'
-                style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
+                style={ animationDelay: `${index * 0 && 0.1}s` }>;
                 <div className='p-6'>;
                   <h3 className='text-xl font-semibold text-white mb-3'>;
                     {category && category.name}
@@ -1142,7 +1142,7 @@ export default function DeveloperToolsPage() {
                     <span className="text-cursor-blue font-semibold">{category && category.avgPrice}</span>;
                 </div>;
               </Card>;
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -1153,11 +1153,11 @@ export default function DeveloperToolsPage() {
           </h2>;
           <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed mb-12'>;
           <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6'>;
-            {dev_categories.map ((category, index) => (
+            {dev_categories.map (category, index) => (
               <Card;
                 key={index}
                 className='card - hover border - gradient - blue';
-                style={{ animation_delay: `${index * 0.1}s` }}
+                style={ animation_delay: `${index * 0.1}s` }
               >;
                 <div className='p - 6'>;
                   <h3 className='text - xl font - semibold text - white mb - 3'>;
@@ -1178,7 +1178,7 @@ export default function DeveloperToolsPage() {
                     <span className="text - gray - 500">Tools Available: <span className="text - white">{category.tools}</span></span>;
                     <span className="text - cursor - blue font - semibold">{category.avg_price}</span>;
                 </div>;
-              </Card>))}
+              </Card>)}
           </div>;
         </div>;
       </section>;
@@ -1224,16 +1224,15 @@ export default function DeveloperToolsPage() {
         </div>
       </section>
     </>
-);
-}
+;
+
             </Button>;
           </div>;
         </div>;
       </section>;
     </>;
   );
-}
+
   );
-}
+
     </>);
-}

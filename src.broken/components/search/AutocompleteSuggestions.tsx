@@ -6,5 +6,3 @@ export function AutocompleteSuggestions() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

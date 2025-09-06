@@ -7,6 +7,5 @@ const ServicesComparisonTable.js = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default ServicesComparisonTable.js;

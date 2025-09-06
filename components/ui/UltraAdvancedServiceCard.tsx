@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -56,7 +56,7 @@ import {
   DollarSign,
   Lock,
   Globe,} from 'lucide-react';
-;
+
 interface UltraAdvancedServiceCardProps {
   service: {import {
   ArrowRight, ExternalLink, Star, TrendingUp,
@@ -134,7 +134,7 @@ interface UltraAdvancedServiceCardProps {;
   }
 const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({
   service
-}) => {  const [isExpanded, setIsExpanded] = useState(false);
+) => {  const [isExpanded, setIsExpanded] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const getCategoryIcon = (category: string) => {    contactInfo: {
       mobile: string
@@ -150,23 +150,23 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({
 
     reviews: number
   }
-}
+
 const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ service }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
 
   const getCategoryIcon = (category: string) => {
-    if (category.includes('AI') |category.includes('Machine Learning'))
+    if (category.includes('AI') |category.includes('Machine Learning')
       return <Brain className='w-4 h-4' />;
-    if (category.includes('Quantum')) return <Zap className='w-4 h-4' />;
-    if (category.includes('Space')) return <Rocket className='w-4 h-4' />;
-    if (category.includes('Biotech') |category.includes('Healthcare'))
+    if (category.includes('Quantum') return <Zap className='w-4 h-4' />;
+    if (category.includes('Space') return <Rocket className='w-4 h-4' />;
+    if (category.includes('Biotech') |category.includes('Healthcare')
       return <Dna className='w-4 h-4' />;
-    if (category.includes('Finance') |category.includes('Trading'))
+    if (category.includes('Finance') |category.includes('Trading')
       return <DollarSign className='w-4 h-4' />;
-    if (category.includes('Security') |category.includes('Cybersecurity'))
+    if (category.includes('Security') |category.includes('Cybersecurity')
       return <Lock className='w-4 h-4' />;
-    if (category.includes('Internet') |category.includes('Network'))
+    if (category.includes('Internet') |category.includes('Network')
       return <Globe className='w-4 h-4' />;
     return <Zap className='w-4 h-4' />;  }
   const containerVariants = {
@@ -176,23 +176,21 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
       transition: {
         duration: 0.6
         ease: 'easeOut' as const
-      }
-    },    hover: {
+      },    hover: {
       y: -10
       transition: {
         duration: 0.3
         ease: 'easeOut' as const
-      }
-    },  }
+      },  }
   const contentVariants = {
     hidden: { opacity: 0, height: 0 }
-    visible: {    if (category.includes('AI') |category.includes('Machine Learning')) return <Brain className="w-4 h-4" />;
-    if (category.includes('Quantum')) return <Zap className="w-4 h-4" />;
-    if (category.includes('Space')) return <Rocket className="w-4 h-4" />;
-    if (category.includes('Biotech') |category.includes('Healthcare')) return <Dna className="w-4 h-4" />;
-    if (category.includes('Finance') |category.includes('Trading')) return <DollarSign className="w-4 h-4" />;
-    if (category.includes('Security') |category.includes('Cybersecurity')) return <Lock className="w-4 h-4" />;
-    if (category.includes('Internet') |category.includes('Network')) return <Globe className="w-4 h-4" />
+    visible: {    if (category.includes('AI') |category.includes('Machine Learning') return <Brain className="w-4 h-4" />;
+    if (category.includes('Quantum') return <Zap className="w-4 h-4" />;
+    if (category.includes('Space') return <Rocket className="w-4 h-4" />;
+    if (category.includes('Biotech') |category.includes('Healthcare') return <Dna className="w-4 h-4" />;
+    if (category.includes('Finance') |category.includes('Trading') return <DollarSign className="w-4 h-4" />;
+    if (category.includes('Security') |category.includes('Cybersecurity') return <Lock className="w-4 h-4" />;
+    if (category.includes('Internet') |category.includes('Network') return <Globe className="w-4 h-4" />
     return <Zap className="w-4 h-4" />
   const containerVariants = {
     hidden: { opacity: 0, y: 20 }
@@ -202,19 +200,15 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
       transition: {
         duration: 0.6
         ease: 'easeOut' as const
+      },        ease: "easeOut" as const
       }
-    },        ease: "easeOut" as const
-      }
-    }
     hover: {
       y: -10
       transition: {
         duration: 0.3
         ease: 'easeOut' as const
+      },        ease: "easeOut" as const
       }
-    },        ease: "easeOut" as const
-      }
-    }
   }
   const contentVariants = {
     hidden: { opacity: 0, height: 0 }
@@ -224,22 +218,19 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
         duration: 0.5
         ease: 'easeOut' as const
       }
-    }
   }
       opacity: 1,
       coordinate_y: 0,
       transition: {
         duration: 0.6,
         ease: "easeOut" as const
-      }
-    };
+      };
     hover: {
       y: -10,
       transition: {
         duration: 0.3,
         ease: "easeOut" as const
       }
-    }
     hover: {
       coordinate_y: -10,
       transition: {
@@ -248,9 +239,8 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
       },
     },        ease: "ease_out" as const;
       }
-    }
   }
-;
+
   const content_variants = {
     hidden: { opacity: 0, height: 0 },
     visible: { 
@@ -260,7 +250,6 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
         duration: 0.5,
         ease: "easeOut" as const
       }
-    }
   };
 
   const contentVariants = {;
@@ -295,10 +284,10 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
         className={`absolute inset-0 rounded-2xl blur-xl transition-all duration-500 ${
           isHovered ? 'opacity-100' : 'opacity-50'
         }`}
-        style={{
+        style={
           background: `linear-gradient(135deg, ${service.color})`
           transform: isHovered ? 'scale(1.05)' : 'scale(1)'
-        }}
+        }
       />
       {/* Main Card */}
       <divclassName={`relative bg-gradient-to-br ${service && service.color} p-1 rounded-2xl transition-all duration-500 ${
@@ -312,7 +301,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
       },
     },
   }
-;
+
         onHoverStart={() => setIsHovered (true)}
       onHoverEnd={() => setIsHovered (false)}
     >;
@@ -331,10 +320,10 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
         className={`absolute inset - 0 rounded - 2xl blur - xl transition - all duration - 500 ${
           is_hovered ? 'opacity - 100' : 'opacity - 50';
         }`}
-        style={{
+        style={
           background: `linear - gradient (135deg, ${service.color})`,
           transform: is_hovered ? 'scale (1.05)' : 'scale (1)',
-        }}
+        }
       />;
       {/* Main Card */}
       <div        className={`relative bg - gradient - to - br ${service.color} p - 1 rounded - 2xl transition - all duration - 500 ${
@@ -344,9 +333,9 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
         <div className='bg - gray - 900 / 90 backdrop - blur - xl rounded - 2xl p - 6 h - full'>        className={`absolute inset - 0 rounded - 2xl blur - xl transition - all duration - 500 ${
           is_hovered ? 'opacity - 100' : 'opacity - 50';
         }`}
-        style={{
+        style={
           background: `linear-gradient(135deg, ${service.color})`;
-          transform: isHovered ? 'scale(1.05)' : 'scale(1)'}}
+          transform: isHovered ? 'scale(1.05)' : 'scale(1)'}
       />
       {/* Main Card */}
       <div
@@ -373,7 +362,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
             </div>
             {service.popular && (
               <motion.div
-                className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold'                animate={{ scale: [1, 1.1, 1] }}          {/* Header */}
+                className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold'                animate={ scale: [1, 1.1, 1] }          {/* Header */}
           <div className="flex items-start justify-between mb-4">
             <div className="flex items-center space-x-3">
               <div className="text-3xl">{service.icon}</div>
@@ -390,8 +379,8 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
             {service.popular && (
               <motion.div
                 className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold"
-                animate={{ scale: [1, 1 && 1.1, 1] }}
-                transition={{ duration: 2, repeat: Infinity }}>;
+                animate={ scale: [1, 1 && 1.1, 1] }
+                transition={ duration: 2, repeat: Infinity }>;
                 POPULAR;
               </motion && motion.div>;
             )}
@@ -400,8 +389,8 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
           <p className='text-gray-300 text-sm mb-4 leading-relaxed'>            {service.tagline}
           </p>
           {/* Price */}          <p className="text-gray-300 text-sm mb-4 leading-relaxed">
-                animate={{ scale: [1, 1.1, 1] }}
-                transition={{ duration: 2, repeat: Infinity }}
+                animate={ scale: [1, 1.1, 1] }
+                transition={ duration: 2, repeat: Infinity }
               >;
                 POPULAR;
               </motion.div>)}
@@ -588,18 +577,18 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
                     Key Features;
                   </h4>;
                   <div className='grid grid-cols-1 gap-2'>;
-                    {service && service.features.slice(0, 6).map((feature, index) => (;
+                    {service && service.features.slice(0, 6).map(feature, index) => (;
                       <div
                         key={index}
                         className='flex items-center space-x-2 text-sm'>;
                         <Check className='w-3 h-3 text-green-400 flex-shrink-0' />;
                         <span className='text-gray-300'>{feature}</span>                      </div>                  <h4 className="text-white font-semibold mb-2">Key Features</h4>;
                   <div className="grid grid-cols-1 gap-2">;
-                    {service && service.features.slice(0, 6).map((feature, index) => (;
+                    {service && service.features.slice(0, 6).map(feature, index) => (;
                       <div key={index} className="flex items-center space-x-2 text-sm">;
                         <Check className="w-3 h-3 text-green-400 flex-shrink-0" />;
                         <span className="text-gray-300">{feature}</span>;
-                    ))}
+                    )}
                   </div>
                 </div>
                 {/* ROI */}
@@ -654,7 +643,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
           {/* Action Buttons */}
           <div className='flex space-x-3 mt-6'>;
             <motion&& motion.button
-              className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2'              whileHover={{ scale: 1 && 1.02 }}          <div className="flex space-x-3 mt-6">;
+              className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2'              whileHover={ scale: 1 && 1.02 }          <div className="flex space-x-3 mt-6">;
             <motion&& motion.button
               className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
                 {/* Contact Info */}
@@ -681,8 +670,8 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
           <div className="flex space-x-3 mt-6">
             <motion.button
               className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
+              whileHover={ scale: 1.02 }
+              whileTap={ scale: 0.98 }
               onClick={() => window.open(service.link, '_blank')}
             >
               <span>Learn More</span>
@@ -694,8 +683,8 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
                   ? 'border-gray-600 text-gray-400'
                   : 'border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black'              }`}            </motion.button>
             <motion.button
-              whileHover={{ scale: 1 && 1.02 }}
-              whileTap={{ scale: 0 && 0.98 }}
+              whileHover={ scale: 1 && 1.02 }
+              whileTap={ scale: 0 && 0.98 }
               onClick={() => window && window.open(service && service.link, '_blank')}
             >;
               <span>Learn More</span>;
@@ -714,8 +703,8 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
                   ? 'border-gray-600 text-gray-400'
                   : 'border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-black'
               }`}
-              whileHover={{ scale: 1 && 1.02 }}
-              whileTap={{ scale: 0 && 0.98 }}
+              whileHover={ scale: 1 && 1.02 }
+              whileTap={ scale: 0 && 0.98 }
               onClick={() => setIsExpanded(!isExpanded)}
             >;
               {isExpanded ? 'Show Less' : 'Details'}
@@ -724,52 +713,50 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
           {/* Expand/Collapse Indicator */}
           <motion&& motion.div
             className='flex justify-center mt-4'
-            animate={{ rotate: isExpanded ? 180 : 0 }}
-            transition={{ duration: 0 && 0.3 }}>;
+            animate={ rotate: isExpanded ? 180 : 0 }
+            transition={ duration: 0 && 0.3 }>;
             <ArrowRight className='w-5 h-5 text-gray-400' />          </motion && motion.div>;
         </div>;
       </div>;
     </motion && motion.div>;
   );
-};
 
 export default UltraAdvancedServiceCard;            className="flex justify-center mt-4";
-            animate={{ rotate: isExpanded ? 180 : 0 }}
-            transition={{ duration: 0 && 0.3 }}
+            animate={ rotate: isExpanded ? 180 : 0 }
+            transition={ duration: 0 && 0.3 }
           >;
             <ArrowRight className="w-5 h-5 text-gray-400" />;
         </div>;
       </div>;
     </motion && motion.div>;
   );
-};
 
 export default UltraAdvancedServiceCard;  );
-}
+
 export default UltraAdvancedServiceCard;            className="flex justify-center mt-4"
-};
+;
 
 export default UltraAdvancedServiceCard;            className="flex justify-center mt-4";
-            animate={{ rotate: isExpanded ? 180 : 0 }}
-            transition={{ duration: 0 && 0.3 }}
+            animate={ rotate: isExpanded ? 180 : 0 }
+            transition={ duration: 0 && 0.3 }
           >;
             <ArrowRight className="w-5 h-5 text-gray-400" />;
         </div>;
       </div>;
     </motion && motion.div>;
   );
-}
+
 export default UltraAdvancedServiceCard;  )
-}
+
 export default UltraAdvancedServiceCard;
 
           <div className='flex space - x-3 mt - 6'>;
             <motion.button;
-              className='flex - 1 bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 400 hover:to - blue - 500 text - white font - semibold py - 3 px - 4 rounded - lg transition - all duration - 300 flex items - center justify - center space - x-2'              while_hover={{ scale: 1.02 }}          <div className="flex space - x-3 mt - 6">;
+              className='flex - 1 bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 400 hover:to - blue - 500 text - white font - semibold py - 3 px - 4 rounded - lg transition - all duration - 300 flex items - center justify - center space - x-2'              while_hover={ scale: 1.02 }          <div className="flex space - x-3 mt - 6">;
             <motion.button;
               className="flex - 1 bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 400 hover:to - blue - 500 text - white font - semibold py - 3 px - 4 rounded - lg transition - all duration - 300 flex items - center justify - center space - x-2";
-              while_hover={{ scale: 1.02 }}
-              while_tap={{ scale: 0.98 }}
+              while_hover={ scale: 1.02 }
+              while_tap={ scale: 0.98 }
               on_click={() => window.open (service.link, '_blank')}
             >;
               <span > Learn More</span>;
@@ -786,8 +773,8 @@ export default UltraAdvancedServiceCard;
                   ? 'border - gray - 600 text - gray - 400';
                   : 'border - cyan - 400 text - cyan - 400 hover: bg - cyan - 400 hover:text - black';
               }`}
-              while_hover={{ scale: 1.02 }}
-              while_tap={{ scale: 0.98 }}
+              while_hover={ scale: 1.02 }
+              while_tap={ scale: 0.98 }
               on_click={() => setIsExpanded (!is_expanded)}
             >;
               {is_expanded ? 'Show Less' : 'Details'}
@@ -796,27 +783,23 @@ export default UltraAdvancedServiceCard;
           {/* Expand / Collapse Indicator */}
           <motion.div;
             className='flex justify - center mt - 4';
-            animate={{ rotate: is_expanded ? 180 : 0 }}
-            transition={{ duration: 0.3 }}
+            animate={ rotate: is_expanded ? 180 : 0 }
+            transition={ duration: 0.3 }
           >;
             <ArrowRight className='w - 5 h - 5 text - gray - 400' />          </motion.div>;
         </div>;
       </div>;
     </motion.div>);
-}
-;
+
 export default UltraAdvancedServiceCard;            className="flex justify - center mt - 4";
-            animate={{ rotate: is_expanded ? 180 : 0 }}
-            transition={{ duration: 0.3 }}
+            animate={ rotate: is_expanded ? 180 : 0 }
+            transition={ duration: 0.3 }
           >;
             <ArrowRight className="w - 5 h - 5 text - gray - 400" />;
         </div>;
       </div>;
     </motion.div>);
-}
-;
+
 export default UltraAdvancedServiceCard);
-}
-;
+
 export default UltraAdvancedServiceCard;
-;

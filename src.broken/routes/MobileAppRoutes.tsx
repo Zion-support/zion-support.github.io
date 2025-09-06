@@ -6,5 +6,3 @@ export function MobileAppRoutes() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

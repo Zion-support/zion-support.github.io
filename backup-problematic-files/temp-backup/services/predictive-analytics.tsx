@@ -3,7 +3,6 @@ import React from 'react';
 
 interface Predictive-analyticsProps {
   className?: string;
-}
 
 const Predictive-analytics: React.FC<Predictive-analyticsProps> = ({ className }) => {
   return (
@@ -12,6 +11,3 @@ const Predictive-analytics: React.FC<Predictive-analyticsProps> = ({ className }
       <p>This component is under development.</p>
     </div>
   );
-}
-}
-}

@@ -6,5 +6,3 @@ export function ApiLogsChart() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

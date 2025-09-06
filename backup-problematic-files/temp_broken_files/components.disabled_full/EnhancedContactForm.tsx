@@ -2,7 +2,6 @@ import React from 'react';
 
 interface EnhancedContactFormProps {
   className?: string;
-}
 
 const EnhancedContactForm: React.FC<EnhancedContactFormProps> = ({ className }) => {
   return (
@@ -11,6 +10,5 @@ const EnhancedContactForm: React.FC<EnhancedContactFormProps> = ({ className }) 
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default EnhancedContactForm;

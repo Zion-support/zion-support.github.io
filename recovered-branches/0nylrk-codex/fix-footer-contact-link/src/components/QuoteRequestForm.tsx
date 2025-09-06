@@ -1,5 +1,4 @@
 
-
 import {useState} from "react";
 import {useToast} from "@/hooks/use-toast";
 import {useNavigate} from "react-router-dom";
@@ -38,13 +37,12 @@ export function QuoteRequestForm() {
       email: ""
       phone: ""
       company: ""
-    }
-  });
+    });
   const updateFormData = (data: Partial<QuoteFormData>) => {
     setFormData(prev => ({
       ...prev
       ...data
-    }))
+    })
   }
   const handleNext = () => {
     switch (currentStep) {
@@ -62,7 +60,6 @@ export function QuoteRequestForm() {
       default:;
         break;
     }
-  }
   const handleBack = () => {
     switch (currentStep) {
       case "details": setCurrentStep("service");
@@ -79,14 +76,13 @@ export function QuoteRequestForm() {
       default:;
         break;
     }
-  }
   const handleSubmit = async () => {
     setIsSubmitting(true);
     try {
       // In a real application, you would send the data to your backend
       console.log("Submitting form data:", formData);
       // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1500));
+      await new Promise(resolve => setTimeout(resolve, 1500);
       toast({
         title: "Quote Request Submitted"
         description: "We've received your request and will get back to you soon."})
@@ -100,7 +96,6 @@ export function QuoteRequestForm() {
     } finally {
       setIsSubmitting (false);
     }
-  }
   const renderStepContent = () => {
     switch (currentStep) {
       case "service":
@@ -115,7 +110,6 @@ export function QuoteRequestForm() {
         return <SummaryStep formData={formData} updateFormData={updateFormData} />;
       default: return null;
     }
-  }
 
   return (
     <div className="container mx-auto px-4 py-12">
@@ -137,7 +131,7 @@ export function QuoteRequestForm() {
               {renderStepContent()}
             </div>
             <div className="flex justify-between mt-8">
-              {currentStep !== "service" && (
+              {currentStep != "service" && (
                 <Button
                   variant="outline"
                   onClick={handleBack}
@@ -145,7 +139,7 @@ export function QuoteRequestForm() {
                   Back;
                 </Button>;
               )}
-              {currentStep !== "summary" ? (
+              {currentStep != "summary" ? (
                 <Button
                   onClick={handleNext}
                   className="ml-auto bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
@@ -166,13 +160,12 @@ export function QuoteRequestForm() {
       </div>
     </div>
   )
-}
+
             </div>;
           </CardContent>;
         </Card>;
       </div>;
     </div>;
   );
-}
+
     </div>);
-}

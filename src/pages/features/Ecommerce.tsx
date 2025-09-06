@@ -24,23 +24,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React from 'react';
 import { Header } from '@/components/Header';
 import { SEO } from '@/components/SEO';
@@ -73,7 +73,7 @@ export default function Ecommerce() {;
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type='application/ld+json'
-        dangerouslySetInnerHTML={{ __html: JSON && JSON.stringify(schema) }}></script>;
+        dangerouslySetInnerHTML={ __html: JSON && JSON.stringify(schema) }></script>;
       <Header />;
       <main className='bg-background text-white py-12'>;
         <div className='container mx-auto px-4 md:px-6'>;
@@ -106,7 +106,7 @@ export default function Ecommerce() {;
       {/* Use a normal script tag so JSON - LD is correctly parsed */}
       <script;
         type='application / ld + json';
-        dangerouslySetInnerHTML={{ __html: JSON.stringify (schema) }}
+        dangerouslySetInnerHTML={ __html: JSON.stringify (schema) }
       ></script>;
       <Header />;
       <main className='bg - background text - white py - 12'>;
@@ -162,7 +162,7 @@ export default function Ecommerce() {;
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON && JSON.stringify(schema) }}></script>;
+        dangerouslySetInnerHTML={ __html: JSON && JSON.stringify(schema) }></script>;
       <Header />;
       <main className="bg-background text-white py-12">;
         <div className="container mx-auto px-4 md: px-6">;
@@ -203,7 +203,7 @@ export default function Ecommerce() {;
       </main>
     </>
   )
-}
+
             />;
           </div>;
           <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>;
@@ -232,8 +232,7 @@ export default function Ecommerce() {;
       </main>;
     </>;
   );
-}
+
   );
-}
+
     </>);
-}

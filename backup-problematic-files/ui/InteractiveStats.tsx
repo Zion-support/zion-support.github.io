@@ -1,20 +1,19 @@
 import { useEffect, useState } from 'react',;
 function useCounter(target: number, durationMs: number) {;
   const [value, setValue] = useState(0),;
-  useEffect(() => {;
+  useEffect() => {;
     let start: number | null = null,;
     let raf: number,;
     const step = (ts: number) => {;
-      if (start === null) start = ts,;
+      if (start = = null) start = ts,;
       const progress = Math.min(1, (ts - start) / durationMs),;
-      setValue(Math.floor(progress * target)),;
+      setValue(Math.floor(progress * target),;
       if (progress < 1) raf = requestAnimationFrame(step);
     },;
     raf = requestAnimationFrame(step),;
     return () => cancelAnimationFrame(raf);
   }, [target, durationMs]),;
   return value;
-}
 
 export default function InteractiveStats() {
   const hires = useCounter(1200, 1200),
@@ -29,7 +28,6 @@ export default function InteractiveStats() {
       <Stat label="Satisfaction" value={satisfaction} suffix="%" />
     </div>
   )
-}
 
 function Stat({ label, value, suffix = '' }: { label: string, value: number, suffix?: string }) {
   return (
@@ -38,4 +36,3 @@ function Stat({ label, value, suffix = '' }: { label: string, value: number, suf
       <div className="text-sm text-gray-600 dark:text-gray-300">{label}</div>
     </div>
   )
-}

@@ -1,5 +1,4 @@
 
-
 import {useState} from 'react';
 import {Button} from '@/components / ui / button';
 import {Education} from '@/types / resume';
@@ -13,13 +12,13 @@ export function EducationForm({
   educationEntries
   onComplete
   onBack
-}: EducationFormProps) {
+: EducationFormProps) {
   const { addEducation, updateEducation, deleteEducation, isLoading } = useResume();
   const [editingId, setEditingId] = useState<string | null>(null);
   // Helper function to format dates to string
   const formatDateValue = (dateValue: string | Date | undefined): string => {
     if (!dateValue) return '';
-    if (typeof dateValue === 'string') return dateValue
+    if (typeof dateValue = = 'string') return dateValue
     return format(dateValue, 'yyyy-MM-dd')
   }
   const handleAddOrUpdate = async (data: any) => {
@@ -41,23 +40,20 @@ export function EducationForm({
     if (success) {
       setEditingId(null)
     }
-  }
   const handleEdit = (edu: Education) => {
     setEditingId(edu.id!)
     // Form reset happens in the child component
   }
   const handleDelete = async (id: string) => {
-    if (confirm('Are you sure you want to delete this education entry?')) {
+    if (confirm('Are you sure you want to delete this education entry?') {
       await deleteEducation(id)
     }
-  }
   const handleCancel = () => {
     if (editingId) {
       setEditingId(null)
     } else {
       onBack()
     }
-  }
 
   return (
     <div className="space-y-6">
@@ -91,27 +87,27 @@ export function EducationForm({
       )}
     </div>
   )
-}
+
 export /**
  * EducationForm - Function description
  */
 function EducationForm() {
   const { add_education, update_education, delete_education, is_loading } = use_resume ();
   const [editing_id, setEditingId] = useState < string | null>(null);
-;
+
   // Helper function to format dates to string;
   const formatDateValue = (date_value: string | Date | undefined): string => {
     // Check condition
 if (return '') {
   $2
-}
+
     // Check condition
 if (return date_value, ) {
   $2
-}
+
     return format (date_value, 'yyyy - MM - dd');
   }
-;
+
   const handleAddOrUpdate = async (data: any) => {
     const education_data: Education = {
       institution: data.institution,
@@ -126,7 +122,7 @@ if (return date_value, ) {
     // Check condition
 if ( {) {
   $2
-}
+
       success = await update_education (editing_id, education_data);
     } else {
       success = await add_education (resume_id, education_data);
@@ -134,35 +130,32 @@ if ( {) {
     // Check condition
 if ( {) {
   $2
-}
+
       setEditingId (null);
     }
-  }
-;
+
   const handle_edit = (edu: Education) =>: any {
     setEditingId (edu.id!),
     // Form reset happens in the child component;
   }
-;
+
   const handle_delete = async (id: string) => {
     if () {) {
   $2
-}
+
       await delete_education (id);
     }
-  }
-;
+
   const handle_cancel = () =>: any {
     // Check condition
 if ( {) {
   $2
-}
+
       setEditingId (null);
     } else {
       on_back ();
     }
-  }
-;
+
   return (
     <div className="space - y-6">;
       <div>;
@@ -193,4 +186,3 @@ if ( {) {
           </Button>;
         </div>)}
     </div>);
-}

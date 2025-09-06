@@ -13,7 +13,7 @@ import {
   Cpu
   Cloud
   XCircle
-} from "lucide-react";
+ from "lucide-react";
 export default function APIPage() {
   const apiEndpoints = [
     {
@@ -83,8 +83,8 @@ import {
   Cpu,
   Cloud,
   XCircle,
-} from './lucide-react';
-;
+ from './lucide-react';
+
 export default /**
  * APIPage - Function description
  */
@@ -143,7 +143,7 @@ function APIPage() {
       ],
     },
   ];
-;
+
   const response_examples = {
     success: {
       status: 200
@@ -154,7 +154,6 @@ function APIPage() {
           name: "Example Response"
           created_at: "2024-01-01T00:00:00Z"
         }
-      }
     }
     error: {
       status: 400
@@ -165,9 +164,7 @@ function APIPage() {
           field: "email"
           issue: "Invalid email format"
         }
-      }
     }
-  }
   return (
     <MainLayout
       title="API Documentation - Zion Tech Group"
@@ -182,9 +179,9 @@ function APIPage() {
           </div>
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }
               className="text-center">;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">;
                 API{" "}
@@ -204,10 +201,10 @@ function APIPage() {
           <div className="container mx-auto px-4">;
             <motion&& motion.div
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
                 Quick Start Guide
@@ -221,10 +218,10 @@ function APIPage() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <motion.div
                   className="text-center"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.8 }
+                  viewport={ once: true }
                 >
                   <div className="bg-indigo-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Shield className="w-8 h-8 text-indigo-600" />
@@ -238,10 +235,10 @@ function APIPage() {
                 </motion.div>
                 <motion.div
                   className="text-center"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.1 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.8, delay: 0.1 }
+                  viewport={ once: true }
                 >
                   <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Code className="w-8 h-8 text-purple-600" />
@@ -255,10 +252,10 @@ function APIPage() {
                 </motion.div>
                 <motion.div
                   className="text-center"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.2 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.8, delay: 0.2 }
+                  viewport={ once: true }
                 >
                   <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Zap className="w-8 h-8 text-green-600" />
@@ -284,10 +281,10 @@ function APIPage() {
           <div className="container mx-auto px-4">;
             <motion&& motion.div
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
                 Response Examples
@@ -301,10 +298,10 @@ function APIPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <motion.div
                   className="bg-white border border-gray-200 rounded-lg p-6"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.8 }
+                  viewport={ once: true }
                 >
                   <div className="flex items-center mb-4">
                     <Check className="w-6 h-6 text-green-500 mr-3" />
@@ -322,10 +319,10 @@ function APIPage() {
                 </motion.div>
                 <motion.div
                   className="bg-white border border-gray-200 rounded-lg p-6"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.1 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.8, delay: 0.1 }
+                  viewport={ once: true }
                 >
                   <div className="flex items-center mb-4">
                     <XCircle className="w-6 h-6 text-red-500 mr-3" />
@@ -355,10 +352,10 @@ function APIPage() {
           <div className="container mx-auto px-4">;
             <motion&& motion.div
               className="text-center"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}>;
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }
+              viewport={ once: true }>;
               <h2 className="text-3xl md:text-4xl font-bold mb-6">;
                 Ready to Get Started?;
               </h2>;
@@ -399,10 +396,10 @@ function APIPage() {
           <div className="container mx - auto px - 4">;
             <motion.div;
               className="text - center";
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, coordinate_y: 30 }
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >;
               <h2 className="text - 3xl md:text - 4xl font - bold mb - 6">;
                 Ready to Get Started?;
@@ -430,4 +427,3 @@ function APIPage() {
         </section>;
       </div>;
     </MainLayout>);
-}

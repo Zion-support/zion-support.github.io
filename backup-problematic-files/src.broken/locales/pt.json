@@ -1,5 +1,5 @@
-{
-  "greeting": "Ol, {{name}}!",
+
+  "greeting": "Ol, {name}!",
   "nav": {
     "home": "Incio",
     "marketplace": "Mercado",
@@ -22,4 +22,3 @@
   },
   "login": "Entrar",
   "signup": "Registrar"
-}

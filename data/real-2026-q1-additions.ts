@@ -4,12 +4,12 @@ import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-service
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
-}
+
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com',
-};
+;
 
 export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
   {
@@ -885,7 +885,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.7,
     reviews: 6,
   },
-];	{
+;	{
 		id: 'affiliate-analytics-starter';
 		name: 'Affiliate Analytics Starter'
 		tagline: 'Attribution, fraud detection and automated payouts for SMBs';
@@ -1309,7 +1309,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		rating: 4.7
 		reviews: 6
 	}
-];
+;
 
   id: 'affiliate - analytics - starter';
   name: 'Affiliate Analytics Starter',
@@ -1344,8 +1344,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
   customers: 12;
   rating: 4.6,
   reviews: 7;
-}
-{
+
   id: 'customer - feedback - intelligence';
   name: 'Customer Feedback Intelligence';
   tagline: 'Summarize NPS / CSAT and reviews into prioritized insights';
@@ -1379,8 +1378,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
   customers: 9;
   rating: 4.7,
   reviews: 5;
-}
-{
+
   id: 'api - security - posture - monitor';
   name: 'API Security Posture Monitor';
   tagline: 'Detect OWASP API risks and auth gaps with CI annotations';
@@ -1414,8 +1412,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
   customers: 11;
   rating: 4.5,
   reviews: 6;
-}
-{
+
   id: 'edge - cron - orchestrator';
   name: 'Edge Cron Orchestrator',
   tagline: 'Reliable schedules with retries, jitter and DLQs';
@@ -1449,8 +1446,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
   customers: 7;
   rating: 4.5,
   reviews: 4;
-}
-{
+
   id: 'email - parsing - routing - api';
   name: 'Email Parsing & Routing API';
   tagline: 'Inbound email to structured events with attachments';
@@ -1484,8 +1480,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
   customers: 8;
   rating: 4.6,
   reviews: 5;
-}
-{
+
   id: 'ai - marketing - content - studio';
   name: 'AI Marketing Content Studio',
   tagline: 'Campaign - ready blogs, emails and ads with brand guardrails';
@@ -1519,8 +1514,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
   customers: 15;
   rating: 4.6,
   reviews: 9;
-}
-{
+
   id: 'security - headers - scanner';
   name: 'Security Headers Scanner';
   tagline: 'Continuous CSP / HSTS / cookie flag auditing with diffs';
@@ -1554,8 +1548,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
   customers: 20;
   rating: 4.5,
   reviews: 10;
-}
-{
+
   id: 'ml - feature - store - starter';
   name: 'ML Feature Store Starter',
   tagline: 'Versioned features, validation and online serving';
@@ -1589,8 +1582,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
   customers: 6;
   rating: 4.5,
   reviews: 3;
-}
-{
+
   id: 'slo - burn - rate - coach';
   name: 'SLO Burn Rate Coach';
   tagline: 'Compute SLOs and coach on burn - rate risks';
@@ -1624,8 +1616,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
   customers: 10;
   rating: 4.5,
   reviews: 6;
-}
-{
+
   id: 'browser - performance - optimizer';
   name: 'Browser Performance Optimizer';
   tagline: 'Budget - driven CWV with hints and PR annotations';
@@ -1659,8 +1650,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
   customers: 5;
   rating: 4.5,
   reviews: 3;
-}
-{
+
   id: 'cloud - cost - governance - suite';
   name: 'Cloud Cost Governance Suite',
   tagline: 'Budgets, owners, and policy guardrails across clouds';
@@ -1694,8 +1684,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
   customers: 6;
   rating: 4.6,
   reviews: 4;
-}
-{
+
   id: 'api - changelog - sdk - publisher';
   name: 'API Changelog & SDK Publisher',
   tagline: 'Generate docs, changelogs and SDKs from schemas';
@@ -1729,6 +1718,3 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
   customers: 9;
   rating: 4.7,
   reviews: 6;
-}
-];
-;

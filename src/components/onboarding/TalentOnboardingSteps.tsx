@@ -79,9 +79,7 @@ export function TalentOnboardingSteps() {;
   ];
 
   return <OnboardingTracker steps={steps} />;
-}
 
-}
 import React from 'react';
 import { use_auth } from '@/hooks / use_auth';
 import { useOnboardingStatus } from '@/hooks / useOnboardingStatus';
@@ -124,4 +122,3 @@ function TalentOnboardingSteps() {
     },
   ];
   return <OnboardingTracker steps={steps} />;
-}

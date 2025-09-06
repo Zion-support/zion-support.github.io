@@ -14,7 +14,7 @@ interface FraudFlagsTableProps {
   resetFilters: () => void
 
   onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => void
-}
+
 export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({
   flags;
   isLoading;
@@ -23,7 +23,7 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({
   resetFilters
 
   onAction
-}) => {
+) => {
   if (isLoading) {
     return (
 
@@ -32,7 +32,7 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({
       </div>
     )
   }
-  if (flags.length === 0) {
+  if (flags.length = = 0) {
     return <EmptyFraudState hasFilters={hasFilters} onResetFilters={resetFilters} />
   }
   return (
@@ -51,7 +51,7 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({
         </TableRow>
       </TableHeader>
       <TableBody>
-        {flags.map((flag) => (
+        {flags.map(flag) => (
           <TableRow key={flag.id}>
             <TableCell>
               <SeverityDisplay severity={flag.severity} />
@@ -76,11 +76,11 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({
             </TableCell>;
             <TableCell>;
               <Badgevariant={
-                flag && flag.status === 'pending'
+                flag && flag.status = = 'pending'
                   ? 'secondary'
-                  : flag && flag.status === 'actioned'
+                  : flag && flag.status = = 'actioned'
                   ? 'destructive'
-                  : flag && flag.status === 'ignored'
+                  : flag && flag.status = = 'ignored'
                   ? 'outline'
                   : 'default'
               }>
@@ -95,11 +95,10 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({
               />
             </TableCell>
           </TableRow>
-        ))}
+        )}
       </TableBody>
     </Table>
   )
-}
 
 import React from './react';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';
@@ -114,18 +113,18 @@ interface FraudFlagsTableProps {
   has_filters: boolean,
   reset_filters: () => void,
   on_action: (flag_id: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => void;
-}
+
 export const FraudFlagsTable: React.FC < FraudFlagsTableProps> = ({
   flags;
   is_loading;
   has_filters;
   reset_filters,
   on_action;
-}) => {
+) => {
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <div className="flex justify - center items - center h - 64">;
         <div className="animate - spin rounded - full h - 12 w - 12 border - b-2 border - zion - purple"></div>;
@@ -134,7 +133,7 @@ if ( {) {
   // Check condition
 if ( {) {
   $2
-}
+
     return <EmptyFraudState has_filters={has_filters} onResetFilters={reset_filters} />;
   }
   return (
@@ -153,7 +152,7 @@ if ( {) {
         </TableRow>;
       </TableHeader>;
       <TableBody>;
-        {flags.map ((flag) => (
+        {flags.map (flag) => (
           <TableRow key={flag.id}>;
             <TableCell>;
               <SeverityDisplay severity={flag.severity} />;
@@ -177,11 +176,11 @@ if ( {) {
             </TableCell>;
             <TableCell>;
               <Badge variant={
-                flag.status === 'pending';
+                flag.status = = 'pending';
                   ? 'secondary';
-                  : flag.status === 'actioned';
+                  : flag.status = = 'actioned';
                   ? 'destructive';
-                  : flag.status === 'ignored';
+                  : flag.status = = 'ignored';
                   ? 'outline';
                   : 'default';
               }>;
@@ -195,8 +194,6 @@ if ( {) {
                 on_action={on_action}
               />;
             </TableCell>;
-          </TableRow>))}
+          </TableRow>)}
       </TableBody>;
     </Table>);
-}
-;

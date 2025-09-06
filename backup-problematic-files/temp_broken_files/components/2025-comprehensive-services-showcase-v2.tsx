@@ -11,8 +11,8 @@ import {;
   Brain, Atom, Shield, Target, Rocket,;
   ArrowRight, Check, Star, TrendingUp, Users,;
   Globe, Zap, Lock, Cloud, Smartphone, Building, Phone, Mail, MapPin;
-} from 'lucide-react';
-// Import our new 2025 V2 innovative services;
+ from 'lucide-react';
+/ Import our new 2025 V2 innovative services;
 
 import { innovativeMicroSaas2025ExpansionV2 } from '../data/2025-innovative-micro-saas-expansion-v2';
 import { innovativeITServices2025ExpansionV2 } from '../data/2025-innovative-it-services-expansion-v2';
@@ -23,13 +23,12 @@ import { emergingTechBreakthroughs2025V2 } from '../data/2025-emerging-tech-brea
 const fadeInUp = {initial: { opacity: 0, y: 20 }
   animate: { opacity: 1, y: 0 }
   transition: { duration: 0.6 }
-}
+
 const staggerContainer = {animate: {;
     transition: {;
       staggerChildren: 0.1;
     }
-  }
-}
+
 export default function ComprehensiveServicesShowcase2025V2() {const allNewServices = [;
     ...innovativeMicroSaas2025ExpansionV2;
     ...innovativeITServices2025ExpansionV2;
@@ -91,9 +90,9 @@ export default function ComprehensiveServicesShowcase2025V2() {const allNewServi
         <div className="max-w-7xl mx-auto text-center">;
           <motion.h1;
             className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6";
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
           >;
             2025 V2 Comprehensive;
             <br />;
@@ -101,9 +100,9 @@ export default function ComprehensiveServicesShowcase2025V2() {const allNewServi
           </motion.h1>;
           <motion.p;
             className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto";
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={ opacity: 0, y: 20 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8, delay: 0.2 }
           >;
             Experience the future of technology with our revolutionary portfolio of innovative micro SAAS;
             IT infrastructure, AI services, industry solutions, and emerging technology breakthroughs.;
@@ -111,9 +110,9 @@ export default function ComprehensiveServicesShowcase2025V2() {const allNewServi
           <motion.div;
             className="flex flex-col sm:flex-row gap-4 justify-center";
 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            initial={ opacity: 0, y: 20 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8, delay: 0.4 }
           >;
             <a;
               href="#services";
@@ -135,19 +134,19 @@ export default function ComprehensiveServicesShowcase2025V2() {const allNewServi
         <div className="max-w-4xl mx-auto text-center">;
           <motion.h2;
             className="text-3xl md:text-4xl font-bold text-white mb-8";
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            initial={ opacity: 0, y: 20 }
+            whileInView={ opacity: 1, y: 0 }
+            viewport={ once: true }
+            transition={ duration: 0.6 }
           >;
             Ready to Transform Your Business?;
           </motion.h2>;
           <motion.div;
             className="grid md:grid-cols-3 gap-8";
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            initial={ opacity: 0, y: 20 }
+            whileInView={ opacity: 1, y: 0 }
+            viewport={ once: true }
+            transition={ duration: 0.6, delay: 0.2 }
           >;
             <div className="text-center">;
               <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />;
@@ -172,10 +171,10 @@ export default function ComprehensiveServicesShowcase2025V2() {const allNewServi
         <div className="max-w-7xl mx-auto">;
           <motion.h2;
             className="text-4xl md:text-5xl font-bold text-white text-center mb-16";
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            initial={ opacity: 0, y: 20 }
+            whileInView={ opacity: 1, y: 0 }
+            viewport={ once: true }
+            transition={ duration: 0.6 }
           >;
             Our Comprehensive Service Portfolio;
           </motion.h2>;
@@ -184,13 +183,13 @@ export default function ComprehensiveServicesShowcase2025V2() {const allNewServi
             variants={staggerContainer}
             initial="initial";
             whileInView="animate";
-            viewport={{ once: true }}
+            viewport={ once: true }
           >;
-            {serviceCategories.map((category) => (;
+            {serviceCategories.map(category) => (;
               <motion.div key={category.id} variants={fadeInUp}>;
                 <div className="text-center mb-12">;
                   <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-r ${category.color} mb-6`}>;
-// Import our new 2025 V2 innovative services,
+/ Import our new 2025 V2 innovative services,
 import { innovativeMicroSaas2025ExpansionV2 } from '../data/2025-innovative-micro-saas-expansion-v2',
 import { innovativeITServices2025ExpansionV2 } from '../data/2025-innovative-it-services-expansion-v2',
 import { innovativeAIServices2025ExpansionV2 } from '../data/2025-innovative-ai-services-expansion-v2',
@@ -200,12 +199,11 @@ const fadeInUp = {
   initial: { opacity: 0, y: 20 },
   animate: { opacity: 1, y: 0 },
   transition: { duration: 0.6 }
-},
+,
 const staggerContainer = {animate: {
     transition: {
       staggerChildren: 0.1}
-  }
-},
+,
 
 export default function ComprehensiveServicesShowcase2025V2() {
   const allNewServices = [
@@ -269,15 +267,15 @@ title="2025 Comprehensive Services Showcase V2 | Zion Tech Group"
         description="Discover our comprehensive portfolio of innovative micro SAAS, IT infrastructure, AI services, industry solutions, and emerging technology breakthroughs. Transform your business with cutting-edge solutions."
         keywords={_["micro SAAS", _"IT infrastructure", _"AI services", _"industry solutions", _"emerging technology", _"Zion Tech Group"]}
       />
-      
+
       {_/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="max-w-7xl mx-auto text-center">
           <motion.h1,
 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6"
-            initial={_{ opacity: 0, y: 30}}
-            animate={_{ opacity: 1, y: 0}}
-            transition={_{ duration: 0.8}}
+            initial={_{ opacity: 0, y: 30}
+            animate={_{ opacity: 1, y: 0}
+            transition={_{ duration: 0.8}
           >
             2025 V2 Comprehensive
             <br />
@@ -285,17 +283,17 @@ className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blu
           </motion.h1>
           <motion.p,
 className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"
-            initial={_{ opacity: 0, y: 20}}
-            animate={_{ opacity: 1, y: 0}}
-            transition={_{ duration: 0.8, delay: 0.2}}
+            initial={_{ opacity: 0, y: 20}
+            animate={_{ opacity: 1, y: 0}
+            transition={_{ duration: 0.8, delay: 0.2}
           >
             Experience the future of technology with our revolutionary portfolio of innovative micro SAAS, IT infrastructure, AI services, industry solutions, and emerging technology breakthroughs.
           </motion.p>
           <motion.div,
 className="flex flex-col sm:flex-row gap-4 justify-center"
-            initial={_{ opacity: 0, y: 20}}
-            animate={_{ opacity: 1, y: 0}}
-            transition={_{ duration: 0.8, delay: 0.4}}
+            initial={_{ opacity: 0, y: 20}
+            animate={_{ opacity: 1, y: 0}
+            transition={_{ duration: 0.8, delay: 0.4}
           >
             <a,
 href="#services" 
@@ -318,19 +316,19 @@ href="#contact"
         <div className="max-w-4xl mx-auto text-center">
           <motion.h2,
 className="text-3xl md:text-4xl font-bold text-white mb-8"
-            initial={_{ opacity: 0, y: 20}}
-            whileInView={_{ opacity: 1, y: 0}}
-            viewport={_{ once: true}}
-            transition={_{ duration: 0.6}}
+            initial={_{ opacity: 0, y: 20}
+            whileInView={_{ opacity: 1, y: 0}
+            viewport={_{ once: true}
+            transition={_{ duration: 0.6}
           >
             Ready to Transform Your Business?
           </motion.h2>
           <motion.div,
 className="grid md:grid-cols-3 gap-8"
-            initial={_{ opacity: 0, y: 20}}
-            whileInView={_{ opacity: 1, y: 0}}
-            viewport={_{ once: true}}
-            transition={_{ duration: 0.6, delay: 0.2}}
+            initial={_{ opacity: 0, y: 20}
+            whileInView={_{ opacity: 1, y: 0}
+            viewport={_{ once: true}
+            transition={_{ duration: 0.6, delay: 0.2}
           >
             <div className="text-center">
               <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
@@ -356,22 +354,22 @@ className="grid md:grid-cols-3 gap-8"
         <div className="max-w-7xl mx-auto">
           <motion.h2,
 className="text-4xl md:text-5xl font-bold text-white text-center mb-16"
-            initial={_{ opacity: 0, y: 20}}
-            whileInView={_{ opacity: 1, y: 0}}
-            viewport={_{ once: true}}
-            transition={_{ duration: 0.6}}
+            initial={_{ opacity: 0, y: 20}
+            whileInView={_{ opacity: 1, y: 0}
+            viewport={_{ once: true}
+            transition={_{ duration: 0.6}
           >
             Our Comprehensive Service Portfolio
           </motion.h2>
-          
+
           <motion.div,
 className="space-y-20"
             variants={staggerContainer}
             initial="initial"
             whileInView="animate"
-            viewport={_{ once: true}}
+            viewport={_{ once: true}
           >
-            {serviceCategories.map((category) => (_<motion.div key={category.id} variants={fadeInUp}>
+            {serviceCategories.map(category) => (_<motion.div key={category.id} variants={fadeInUp}>
                 <div className="text-center mb-12">
                   <div className={_`inline-flex p-4 rounded-2xl bg-gradient-to-r ${category.color} mb-6`}>
                     {category.icon}
@@ -384,11 +382,11 @@ className="space-y-20"
                   </p>;
                 </div>;
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
-                  {category.services.map((service) => (;
+                  {category.services.map(service) => (;
                     <motion.div;
                       key={service.id}
                       className="bg-black/30 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105";
-                      whileHover={{ y: -5 }}
+                      whileHover={ y: -5 }
                     >;
                       <h4 className="text-xl font-semibold text-white mb-3">;
                         {service.title}
@@ -424,10 +422,10 @@ className="space-y-20"
                         Learn More <ArrowRight className="w-4 h-4 ml-2" />;
                       </a>;
                     </motion.div>;
-                  ))}
+                  )}
                 </div>;
               </motion.div>;
-            ))}
+            )}
           </motion.div>;
         </div>;
       </section>;
@@ -436,19 +434,19 @@ className="space-y-20"
         <div className="max-w-7xl mx-auto">;
           <motion.h2;
             className="text-4xl md:text-5xl font-bold text-white text-center mb-16";
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            initial={ opacity: 0, y: 20 }
+            whileInView={ opacity: 1, y: 0 }
+            viewport={ once: true }
+            transition={ duration: 0.6 }
           >;
             Market Impact & Growth;
           </motion.h2>;
           <motion.div;
             className="grid md:grid-cols-2 lg:grid-cols-4 gap-8";
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            initial={ opacity: 0, y: 20 }
+            whileInView={ opacity: 1, y: 0 }
+            viewport={ once: true }
+            transition={ duration: 0.6, delay: 0.2 }
           >;
             <div className="text-center">;
               <div className="text-4xl md:text-5xl font-bold text-cyan-400 mb-2">25+</div>;
@@ -474,28 +472,28 @@ className="space-y-20"
         <div className="max-w-4xl mx-auto text-center">;
           <motion.h2;
             className="text-4xl md:text-5xl font-bold text-white mb-6";
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            initial={ opacity: 0, y: 20 }
+            whileInView={ opacity: 1, y: 0 }
+            viewport={ once: true }
+            transition={ duration: 0.6 }
           >;
             Ready to Lead the Future?;
           </motion.h2>;
           <motion.p;
             className="text-xl text-gray-300 mb-8";
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            initial={ opacity: 0, y: 20 }
+            whileInView={ opacity: 1, y: 0 }
+            viewport={ once: true }
+            transition={ duration: 0.6, delay: 0.2 }
           >;
             Join thousands of businesses already transforming their operations with our cutting-edge solutions.;
           </motion.p>;
           <motion.div;
             className="flex flex-col sm:flex-row gap-4 justify-center";
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            initial={ opacity: 0, y: 20 }
+            whileInView={ opacity: 1, y: 0 }
+            viewport={ once: true }
+            transition={ duration: 0.6, delay: 0.4 }
           >;
             <a;
               href={`mailto:${contactInfo.email}`}
@@ -514,4 +512,3 @@ className="space-y-20"
       </section>;
     </div>;
   );
-}

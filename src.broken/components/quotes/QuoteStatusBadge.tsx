@@ -6,5 +6,3 @@ export function QuoteStatusBadge() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

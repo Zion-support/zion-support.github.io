@@ -11,7 +11,7 @@ interface ResourceItem {
   icon: JSX.Element
 
   url: string
-}
+
 export function PartnerResources() {
   const resources: ResourceItem[] = [
     {
@@ -83,7 +83,7 @@ export function PartnerResources() {
         </CardHeader>;
         <CardContent>;
           <div className="grid md:grid - cols - 2 lg:grid - cols - 3 gap - 4">;
-            {resources.map ((resource) => (
+            {resources.map (resource) => (
               <Card key={resource.id} className="bg - zion - blue border - zion - blue - light overflow - hidden">;
                 <CardContent className="p - 6 flex flex - col items - center text - center">;
                   <div className="mb - 4">;
@@ -98,11 +98,11 @@ export function PartnerResources() {
                     className="w-full flex items-center gap-2";
                   >;
                     <Download className="h-4 w-4" />;
-                    {resource && resource.type === 'link' ? 'Visit Link' : 'Download'}
+                    {resource && resource.type = = 'link' ? 'Visit Link' : 'Download'}
                   </Button>;
                 </CardContent>;
               </Card>;
-            ))}
+            )}
           </div>
         </CardContent>
       </Card>
@@ -204,4 +204,3 @@ export function PartnerResources() {
     </div>;
   );
     </div>);
-}

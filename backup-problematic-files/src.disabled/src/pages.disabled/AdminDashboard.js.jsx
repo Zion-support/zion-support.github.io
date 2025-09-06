@@ -7,6 +7,5 @@ const AdminDashboard.js = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default AdminDashboard.js;

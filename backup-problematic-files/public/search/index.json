@@ -1,4 +1,4 @@
-[
+
   {
     "route": "/2025-advanced-services-showcase",
     "title": "",
@@ -3342,7 +3342,7 @@
   {
     "route": "/grants/apply",
     "title": "",
-    "h1": "Apply for Zion {program === 'incubator' ? 'Incubator' : 'Grant'}"
+    "h1": "Apply for Zion {program = = 'incubator' ? 'Incubator' : 'Grant'}"
   },
   {
     "route": "/grants",
@@ -3959,4 +3959,3 @@
     "title": "",
     "h1": "Founder Course: Launch Your Zion Instance"
   }
-]

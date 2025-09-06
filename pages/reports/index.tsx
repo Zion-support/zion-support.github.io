@@ -6,28 +6,28 @@ export default function Reports() {
   const [deps, setDeps] = useState<any>({}),
   const [changelog, setChangelog] = useState<any>({}),
   const [pagespeed, setPagespeed] = useState<any>({});
-  useEffect(() => {
+  useEffect() => {
     Promise.all([
 
       fetch('/api/reports/uptime')
-        .then(r => r.json())
+        .then(r => r.json()
         .then(setUptime)
       fetch('/api/reports/seo')
-        .then(r => r.json())
+        .then(r => r.json()
         .then(setSeo)
       fetch('/api/reports/links')
-        .then(r => r.json())
+        .then(r => r.json()
         .then(setLinks)
       fetch('/api/reports/deps')
-        .then(r => r.json())
+        .then(r => r.json()
         .then(setDeps)
       fetch('/api/reports/changelog')
-        .then(r => r.json())
+        .then(r => r.json()
         .then(setChangelog)
       fetch('/api/reports/pagespeed')
-        .then(r => r.json())
+        .then(r => r.json()
         .then(setPagespeed)
-    ]).catch(() => {});  }, []);
+    ]).catch() => {});  }, []);
   const lastUptime = uptime[uptime.length - 1];
 
   return (
@@ -45,8 +45,7 @@ export default function Reports() {
             <div className='text-sm'>
               Last check: {new Date(lastUptime.timestamp).toLocaleString()} {' '}
               {
-                lastUptime.results?.filter(
-                  (r: any) => r.status >= 200 && r.status < 400
+                lastUptime.results?.filter(r: any) => r.status >= 200 && r.status < 400
                 ).length
               }
               /{lastUptime && lastUptime.results?.length} ok;
@@ -87,7 +86,7 @@ export default function Reports() {
         </div>
       </section>
     </div>
-);
+;
 
         <div className='border rounded p-4'>;
           <div className='font-medium mb-1'>SEO (weekly)</div>;
@@ -138,6 +137,5 @@ export default function Reports() {
       </section>
     </div>
   )
-}
+
     </div>);
-;

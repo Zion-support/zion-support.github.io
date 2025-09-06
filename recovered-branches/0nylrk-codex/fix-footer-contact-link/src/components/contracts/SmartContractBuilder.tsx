@@ -20,7 +20,7 @@ interface SmartContractBuilderProps {
   onContractGenerated?: (contractContent: string) => void
 
   onDeploy?: (contractContent: string) => void
-}
+
 export function SmartContractBuilder({
   isOpen;
   onClose;
@@ -28,7 +28,7 @@ export function SmartContractBuilder({
   clientName;
   onContractGenerated;
   onDeploy;
-}: SmartContractBuilderProps) {;
+: SmartContractBuilderProps) {;
   const [activeTab, setActiveTab] = useState<string>("form");
   const [generatedContract, setGeneratedContract] = useState<string | null>(null);
   const [formValues, setFormValues] = useState<ContractFormValues | undefined>(
@@ -77,7 +77,7 @@ interface SmartContractBuilderProps {
   client_name: string,
   onContractGenerated?: (contract_content: string) => void,
   on_deploy?: (contract_content: string) => void;
-}
+
 export /**
  * SmartContractBuilder - Function description
  */
@@ -94,19 +94,19 @@ function SmartContractBuilder() {
   });
   const [deploy_status, setDeployStatus] = useState < string>('');
   const [deployment_info, setDeploymentInfo] = useState < SmartContractInfo | null>(null);
-;
+
   const { generateSolidityContract, deploySmartContract, deployment_status } = useSmartContracts ();
-;
+
   const handleLoadTemplate = (template_data: ContractFormValues) =>: any {
     setFormValues (template_data);
   }
-;
+
   // Convert ContractFormValues to contract content string;
   const handleContractGenerated = async (form_values: ContractFormValues) => {
     // Check condition
 if (return, ) {
   $2
-}
+
     try {
       const generatedContractText = await generateSolidityContract (form_values, talent, client_name);
       setGeneratedContract (generatedContractText);
@@ -114,14 +114,12 @@ if (return, ) {
       // Check condition
 if ( {) {
   $2
-}
+
         onContractGenerated (generatedContractText);
-      }
-    } catch (error) {
+      } catch (error) {
       console.error ("Error generating contract:", error);
       toast.error ("Failed to generate smart contract");
     }
-  }
   const handleDeployContract = async () => {
     if (!generatedContract) return;
     try {
@@ -134,13 +132,11 @@ if ( {) {
       } else {
         setDeployStatus ('error');
         toast.error ("Failed to deploy smart contract");
-      }
-    } catch (error) {
+      } catch (error) {
       console.error ("Error deploying contract:", error);
       setDeployStatus ('error');
       toast.error ("Failed to deploy smart contract");
     }
-  }
   // Modified to match the expected interface
   const handleFormSubmit = (contract: string) => {
     // This should be a function that takes a string (contract content)
@@ -206,9 +202,9 @@ if ( {) {
                   <div className="mt-6 flex justify-center">
                     <Button
                       onClick={handleDeployContract}
-                      disabled={deployStatus === 'deploying'}
+                      disabled={deployStatus = = 'deploying'}
                       className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700">;
-                      {deployStatus === 'deploying' ? 'Deploying...' : 'Deploy to Blockchain'}
+                      {deployStatus = = 'deploying' ? 'Deploying...' : 'Deploy to Blockchain'}
                     </Button>;
                   </div>;
                 )}
@@ -225,7 +221,7 @@ if ( {) {
       </DialogContent>
     </Dialog>
   )
-}
+
             />;
           </TabsContent>;
           <TabsContent value="preview" className="pt - 4">;
@@ -242,10 +238,10 @@ if ( {) {
                   <div className="mt - 6 flex justify - center">;
                     <Button;
                       on_click={handleDeployContract}
-                      disabled={deploy_status === 'deploying'}
+                      disabled={deploy_status = = 'deploying'}
                       className="bg - gradient - to - r from - blue - 600 to - indigo - 600 hover:from - blue - 700 hover:to - indigo - 700";
                     >;
-                      {deploy_status === 'deploying' ? 'Deploying...' : 'Deploy to Blockchain'}
+                      {deploy_status = = 'deploying' ? 'Deploying...' : 'Deploy to Blockchain'}
                     </Button>;
                   </div>)}
               </div>)}
@@ -259,4 +255,3 @@ if ( {) {
         />;
       </DialogContent>;
     </Dialog>);
-}

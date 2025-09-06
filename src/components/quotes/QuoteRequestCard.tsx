@@ -1,5 +1,4 @@
 
-
 import React from "react"
 import {format} from "date-fns"
 import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card"
@@ -12,13 +11,13 @@ type QuoteRequestCardProps = {
   onViewDetails: (quote: QuoteRequest) => void
   onMarkAsResponded?: (id: string) => void
   onToggleArchive: (id: string, isArchived: boolean) => void
-}
+
 export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
   quote
   onViewDetails
   onMarkAsResponded
   onToggleArchive
-},) => {
+,) => {
   // Format date for display
   const formatDate = (dateString: string,) => {
     try {
@@ -26,7 +25,6 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
     } catch (e) {
       return dateString
     }
-  }
   return (
     <Card key={quote.id} className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
       <CardHeader className="pb-2">
@@ -61,7 +59,7 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
             View Details
           </Button>
           <div className="flex items-center">
-            {quote.status !== 'responded' && onMarkAsResponded && (
+            {quote.status != 'responded' && onMarkAsResponded && (
               <Button
                 variant="ghost"
                 size="sm"
@@ -89,15 +87,11 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
       </CardContent>
     </Card>
   )
-}
-"}
-}
 
-
+}
 
       return date_string;
     }
-  }
   return (
     <Card key={quote.id} className="bg - zion - blue - dark border border - zion - blue - light overflow - hidden">;
       <CardHeader className="pb - 2">;
@@ -132,7 +126,7 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
             View Details;
           </Button>;
           <div className="flex items - center">;
-            {quote.status !== 'responded' && onMarkAsResponded && (
+            {quote.status != 'responded' && onMarkAsResponded && (
               <Button;
                 variant="ghost";
                 size="sm";
@@ -156,6 +150,5 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
         </div>;
       </CardContent>;
     </Card>);
-}
-"},
-}
+
+},

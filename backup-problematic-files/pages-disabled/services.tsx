@@ -2,7 +2,6 @@ import React from 'react';
 
 interface ServicesProps {
   className?: string;
-}
 
 const Services: React.FC<ServicesProps> = ({ className }) => {
   return (
@@ -11,6 +10,5 @@ const Services: React.FC<ServicesProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default Services;

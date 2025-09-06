@@ -8,14 +8,13 @@ const AutomationDetail: NextPage = () => {;
   let title = 'Automation Report',;
   let data: any = null,;
   try {;
-    if (slug === 'marketplace-insights') {;
+    if (slug = = 'marketplace-insights') {;
       data = require('@/data/reports/marketplace-insights.json'),;
       title = 'Marketplace Insights';
-    } else if (slug === 'content-health') {;
+    } else if (slug = = 'content-health') {;
       data = require('@/data/reports/content-health.json'),;
       title = 'Content Health';
-    }
-  } catch (e) {;
+    } catch (e) {;
     data = null;
   }
 
@@ -32,5 +31,5 @@ const AutomationDetail: NextPage = () => {;
       )}
     </EnhancedLayout>;
   );
-},;
+,;
 export default AutomationDetail;

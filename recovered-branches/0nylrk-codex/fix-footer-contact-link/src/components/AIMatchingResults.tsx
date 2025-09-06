@@ -15,7 +15,7 @@ interface AIMatchingResultsProps {
   isLoading?: boolean;
   projectDescription?: string;
   serviceType?: string;
-}
+
 export function AIMatchingResults({
   matches;
   onSelectMatch;
@@ -23,20 +23,20 @@ export function AIMatchingResults({
   isLoading = false;
   projectDescription = "";
   serviceType: _serviceType = "";
-}: AIMatchingResultsProps) {;
+: AIMatchingResultsProps) {;
   const [activeTab, setActiveTab] = useState("all");
   // Group matches by category
   const categories = {
     all: matches
-    talent: matches.filter(match => match.category.toLowerCase().includes("talent"))
-    services: matches.filter(match => match.category.toLowerCase().includes("service"))
-    equipment: matches.filter(match => match.category.toLowerCase().includes("equipment"))
+    talent: matches.filter(match => match.category.toLowerCase().includes("talent")
+    services: matches.filter(match => match.category.toLowerCase().includes("service")
+    equipment: matches.filter(match => match.category.toLowerCase().includes("equipment")
   }
   // Get the icon for a category
   const getCategoryIcon = (category: string) => {
     const lowerCategory = category.toLowerCase();
-    if (lowerCategory.includes("talent")) return User;
-    if (lowerCategory.includes("equipment")) return Monitor
+    if (lowerCategory.includes("talent") return User;
+    if (lowerCategory.includes("equipment") return Monitor
     return BriefcaseIcon
   }
   if (isLoading) {
@@ -51,7 +51,7 @@ export function AIMatchingResults({
       </div>;
     );
   }
-  if (matches.length === 0) {
+  if (matches.length = = 0) {
     return (
       <Card className="bg-zion-blue-dark border-zion-blue-light text-center p-6">;
         <CardContent className="pt-6">;
@@ -87,10 +87,10 @@ export function AIMatchingResults({
             Equipment ({categories.equipment.length})
           </TabsTrigger>
         </TabsList>
-        {Object.entries(categories).map(([tab, items]) => (
+        {Object.entries(categories).map([tab, items]) => (
           <TabsContent key={tab} value={tab} className="mt-4 space-y-3">
             {items.length > 0 ? (
-              items.map ((match) => {
+              items.map (match) => {
                 const CategoryIcon = getCategoryIcon (match.category);
                 return (
                   <Card
@@ -136,11 +136,11 @@ export function AIMatchingResults({
                               <Badge variant="outline" className="text-xs bg-zion-blue text-zion-cyan border-zion-cyan/30">
                                 {match.category}
                               </Badge>
-                              {match.skills && match.skills.slice(0, 3).map((skill: string, i: number) => (
+                              {match.skills && match.skills.slice(0, 3).map(skill: string, i: number) => (
                                 <Badge key={i} variant="outline" className="text-xs bg-zion-blue-dark text-white border-zion-blue-light">
                                   {skill}
                                 </Badge>;
-                              ))}
+                              )}
                   <Card;
                     key={match.id}
                     className="bg - zion - blue - dark border - zion - blue - light overflow - hidden transition - all hover:border - zion - purple / 50 cursor - pointer";
@@ -179,10 +179,10 @@ export function AIMatchingResults({
                               <Badge variant="outline" className="text - xs bg - zion - blue text - zion - cyan border - zion - cyan / 30">;
                                 {match.category}
                               </Badge>;
-                              {match.skills && match.skills.slice (0, 3).map ((skill: string, index: number) => (
+                              {match.skills && match.skills.slice (0, 3).map (skill: string, index: number) => (
                                 <Badge key={i} variant="outline" className="text - xs bg - zion - blue - dark text - white border - zion - blue - light">;
                                   {skill}
-                                </Badge>))}
+                                </Badge>)}
                             </div>;
                           </div>;
                         </div>;
@@ -197,8 +197,7 @@ export function AIMatchingResults({
               </div>;
             )}
           </TabsContent>;
-        ))}
+        )}
       </Tabs>;
     </div>;
   );
-}

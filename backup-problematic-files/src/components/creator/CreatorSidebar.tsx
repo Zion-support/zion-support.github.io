@@ -9,8 +9,8 @@ import {;
   // SidebarMenuButton, // Removed;
   // SidebarGroupLabel, // Not needed;
   // SidebarGroupContent, // Not needed;
-} from "@/components/ui/sidebar",;
-;
+ from "@/components/ui/sidebar",;
+
 export function AppSidebar() {;
   return (;
     <Sidebar>;
@@ -26,7 +26,6 @@ export function AppSidebar() {;
             <span>Notifications</span>;
           </SidebarMenuItem>;
         </SidebarGroup>;
-        ;
         <SidebarGroup title="Content">;
           <SidebarMenuItem href="/publish" icon={<FileText size={16} />}>;
             <span>My Content</span>;
@@ -35,7 +34,6 @@ export function AppSidebar() {;
             <span>Analytics</span>;
           </SidebarMenuItem>;
         </SidebarGroup>;
-        ;
         <SidebarGroup title="Settings">;
           <SidebarMenuItem href="/profile" icon={<Users size={16} />}>;
             <span>Profile</span>;
@@ -50,6 +48,6 @@ export function AppSidebar() {;
  return (<Sidebar> <SidebarContent> <SidebarGroup title="Dashboard" > <SidebarMenuItem href="/creator-dashboard" icon= {;
   <Home size= {;
   16 ;
-}/> ;
-}> <span>Home</span> </SidebarMenuItem> <span>Notifications</span> </SidebarMenuItem> </SidebarGroup> <span>Analytics</span> </SidebarMenuItem> </SidebarGroup> <span>Settings</span> </SidebarMenuItem> </SidebarGroup> </SidebarContent> </Sidebar>) ;
-}"
+/> ;
+> <span>Home</span> </SidebarMenuItem> <span>Notifications</span> </SidebarMenuItem> </SidebarGroup> <span>Analytics</span> </SidebarMenuItem> </SidebarGroup> <span>Settings</span> </SidebarMenuItem> </SidebarGroup> </SidebarContent> </Sidebar>) ;
+"

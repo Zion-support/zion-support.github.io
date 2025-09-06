@@ -1,9 +1,9 @@
-'use client';
+use client';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 export default function Header() {const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  useEffect(() => {;
+  useEffect() => {;
     const handleScroll = () => {;
       setIsScrolled(window.scrollY > 20);
     }
@@ -51,7 +51,7 @@ role=&quot;banner & quot;
           </div>
           {/* Desktop Navigation */}
           <nav className=&quot;hidden lg:flex items - center space - x-8 & quot; role=&quot;navigation & quot; aria - label=&quot;Main menu & quot;>;
-            {navigation.map ((item) => (
+            {navigation.map (item) => (
               <Link;
                 key={item.name}
                 href={item.href}
@@ -61,7 +61,7 @@ role=&quot;banner & quot;
                 {item.name}
 <span className=&quot;absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-blue-400 transition-all duration-300 group-hover:w-full&quot;></span>
               </Link>
-            ))}
+            )}
             {/* Services Dropdown */}
 <div className=&quot;relative group&quot;>
               <button
@@ -77,7 +77,7 @@ role=&quot;banner & quot;
               </button>
               <div className=&quot;absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-xl border border-white/20 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0&quot;>
                 <div className=&quot;p-6 grid grid-cols-1 gap-3&quot;>
-                  {services.map((service) => (
+                  {services.map(service) => (
                     <Link
                       key={service.name}
                       href={service.href}
@@ -90,7 +90,7 @@ role=&quot;banner & quot;
                           <path stroke_linecap=&quot;round & quot; stroke_linejoin=&quot;round & quot; stroke_width={2} d=&quot;M9 5l7 7 - 7 7 & quot; />;
                         </svg>;
                       </div>;
-                    </Link>))}
+                    </Link>)}
                 </div>;
               </div>;
             </div>;
@@ -121,7 +121,7 @@ className=&quot;lg:hidden p - 2 rounded - lg text - gray - 400 hover:text - whit
           </button>;
         </div>;
         {/* Mobile Navigation */}
-{isMenuOpen && (
+isMenuOpen && (
           <div
             id=&quot;mobile-menu&quot;
             className=&quot;lg:hidden border-t border-white/10 animate-fade-in&quot;
@@ -129,7 +129,7 @@ className=&quot;lg:hidden p - 2 rounded - lg text - gray - 400 hover:text - whit
             aria-label=&quot;Mobile menu&quot;
           >
             <div className=&quot;px-2 pt-2 pb-3 space-y-1&quot;>
-              {navigation.map((item) => (
+              {navigation.map(item) => (
                 <Link
                   key={item.name}
                   href={item.href}
@@ -138,10 +138,10 @@ className=&quot;lg:hidden p - 2 rounded - lg text - gray - 400 hover:text - whit
                   aria - label={`Navigate to ${item.name} page`}
                 >;
                   {item.name}
-                </Link>))}
+                </Link>)}
 <div className=&quot;px - 3 py - 2&quot;>;
                 <div className=&quot;text - gray - 400 text - sm font - medium mb - 2&quot;>Services</div>;
-                {services.map ((service) => (
+                {services.map (service) => (
                   <Link;
                     key={service.name}
                     href={service.href}
@@ -150,7 +150,7 @@ className=&quot;lg:hidden p - 2 rounded - lg text - gray - 400 hover:text - whit
                     aria - label={`Navigate to ${service.name} service page`}
                   >;
                     {service.name}
-                  </Link>))}
+                  </Link>)}
 </div>;
               <div className=&quot;pt - 4&quot;>;
                 <Link;
@@ -166,4 +166,3 @@ className=&quot;lg:hidden p - 2 rounded - lg text - gray - 400 hover:text - whit
           </div>)}
       </div>;
     </header>);
-}

@@ -1,6 +1,6 @@
 import "@testing-library/jest-dom";
 
-// Mock Next.js router
+/ Mock Next.js router
 jest.mock("next/router", () => ({
   useRouter() {
     return {
@@ -22,29 +22,28 @@ jest.mock("next/router", () => ({
       isFallback: false,
       isFallback: false
     }
-  }
-}));
+);
 
-// Mock Next.js Image component
+/ Mock Next.js Image component
 jest.mock('next/image', () => ({
   __esModule: true,
   default: (props) => {
     // eslint-disable-next-line @next/next/no-img-element
     return <img {...props} />
   }
-}));
+);
     };
   },
-}));
+);
 
-// Mock Next.js Image component
+/ Mock Next.js Image component
 jest.mock("next/image", () => {
   return function MockedImage({ src, alt, ...props }) {
     return <img src={src} alt={alt} {...props} />;
   };
-});
+);
 
-// Mock Next.js Link component
+/ Mock Next.js Link component
 jest.mock("next/link", () => {
   return function MockedLink({ children, href, ...props }) {
     return (
@@ -53,17 +52,17 @@ jest.mock("next/link", () => {
       </a>
     );
   };
-});
+);
 
-// Mock Next.js Link component
+/ Mock Next.js Link component
 jest.mock('next/link', () => ({
   __esModule: true,
   default: ({ children, href, ...props }) => {
     return <a href={href} {...props}>{children}</a>
   }
-}));
+);
 
-// Mock window.matchMedia
+/ Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
   value: jest.fn().mockImplementation(query => ({
@@ -75,21 +74,21 @@ Object.defineProperty(window, 'matchMedia', {
     addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
     dispatchEvent: jest.fn()
-  }))
-});
+  })
+);
 
-// Mock IntersectionObserver
+/ Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {
   constructor() {}
   disconnect() {}
   observe() {}
   unobserve() {}
-};
+;
 
-// Mock ResizeObserver
+/ Mock ResizeObserver
 global.ResizeObserver = class ResizeObserver {
   constructor() {}
   disconnect() {}
   observe() {}
   unobserve() {}
-};
+;

@@ -2,7 +2,7 @@ import { ChevronDown, ChevronUp } from 'lucide-react'
 import { Button } from "@/components/ui/button",
 import { Checkbox } from "@/components/ui/checkbox";
 import { SkillsFilterProps } from "@/types/filters";
-// Common skills in AI and tech
+/ Common skills in AI and tech
 
 const POPULAR_SKILLS = [
   'Machine Learning'
@@ -21,21 +21,21 @@ const POPULAR_SKILLS = [
   'TypeScript'
   'DevOps'
   'Security'
-]
+
 export function SkillsFilter({
   selectedSkills
   toggleSkill
   expanded
   toggleSection
   isMobileFilterOpen
-}: SkillsFilterProps) {
+: SkillsFilterProps) {
 import React from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/checkbox';
 import { SkillsFilterProps } from '@/types/filters';
 
-// Common skills in AI and tech;
+/ Common skills in AI and tech;
 const POPULAR_SKILLS = [;
   'Machine Learning',;
   'Deep Learning',;
@@ -53,7 +53,6 @@ const POPULAR_SKILLS = [;
   'TypeScript',;
   'DevOps',;
   'Security',;
-];
 
 export function SkillsFilter(): any ({;
   selectedSkills,;
@@ -61,7 +60,7 @@ export function SkillsFilter(): any ({;
   expanded,;
   toggleSection,;
   isMobileFilterOpen,;
-}: SkillsFilterProps) {;
+: SkillsFilterProps) {;
   return (
     <div className='mb-6 border-b border-zion-blue-light pb-6'>;
       <button
@@ -89,7 +88,7 @@ export function SkillsFilter(): any ({;
 import { Button } from "@/components/ui/button"
 import { Checkbox } from "@/components/ui/checkbox"
 import { SkillsFilterProps } from "@/types/filters"
-// Common skills in AI and tech
+/ Common skills in AI and tech
 const POPULAR_SKILLS = [
   "Machine Learning"
   "Deep Learning"
@@ -107,8 +106,8 @@ const POPULAR_SKILLS = [
   "TypeScript"
   "DevOps"
   "Security"
-]
-// Common skills in AI and tech;
+
+/ Common skills in AI and tech;
 const POPULAR_SKILLS = [;
   "Machine Learning";
   "Deep Learning";
@@ -126,7 +125,6 @@ const POPULAR_SKILLS = [;
   "TypeScript";
   "DevOps";
   "Security";
-];
 
 export function SkillsFilter(): any ({ selectedSkills, toggleSkill, expanded, toggleSection, isMobileFilterOpen }: SkillsFilterProps) {;
   return (
@@ -164,15 +162,15 @@ export function SkillsFilter(): any ({ selectedSkills, toggleSkill, expanded, to
               ">;
               </label>;
             </div>;
-          ))}
+          )}
         </div>;
       )}
     </div>
   )
-}
+
     </div>
   );
-}
+
 export /**
  * SkillsFilter - Function description
  */
@@ -205,7 +203,6 @@ function SkillsFilter() {
                 {skill}
               ">;
               </label>;
-            </div>))}
+            </div>)}
         </div>)}
     </div>);
-}

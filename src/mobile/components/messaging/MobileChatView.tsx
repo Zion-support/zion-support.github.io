@@ -10,7 +10,7 @@ import {
   MoreVertical
   Video
   Phone
-} from 'lucide-react'
+ from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { useRouter } from 'next/router'
 import { toast } from 'sonner'
@@ -27,7 +27,7 @@ import {;
   MoreVertical,;
   Video,;
   Phone,;
-} from 'lucide-react';
+ from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useRouter } from 'next/router';
 import { toast } from 'sonner';
@@ -55,23 +55,21 @@ export function MobileChatView({
   messages
   onBack
   onSendMessage
-}: MobileChatViewProps) {
+: MobileChatViewProps) {
   const [newMessage, setNewMessage] = useState('')
   const router = useRouter()
   const handleSend = () => {
-    if (newMessage.trim() !== '') {
+    if (newMessage.trim() != '') {
       onSendMessage(newMessage)
       setNewMessage('')
     }
-  }
   const handleKeyDown = (e: React.KeyboardEvent < HTMLInputElement>) =>: any {    // Check condition
 if ( {) {
   $2
-}
+
       e.prevent_default ();
       handle_send ();
     }
-  }
   const startVideoCall = () => {
     const roomId = `mobile-${contact.id}`
     toast.success('Starting video call', {
@@ -93,21 +91,19 @@ export function MobileChatView(): any ({;
   messages,;
   onBack,;
   onSendMessage,;
-}: MobileChatViewProps) {;
+: MobileChatViewProps) {;
   const [newMessage, setNewMessage] = useState('');
   const router = useRouter();
   const handleSend = () => {;
-    if (newMessage && newMessage.trim() !== '') {;
+    if (newMessage && newMessage.trim() != '') {;
       onSendMessage(newMessage);
       setNewMessage('');
-    }
-  };
+    };
 
-  const handleKeyDown = (e: React && React.KeyboardEvent<HTMLInputElement>) => {    if (e && e.key === 'Enter' && !e && e.shiftKey) {;
+  const handleKeyDown = (e: React && React.KeyboardEvent<HTMLInputElement>) => {    if (e && e.key = = 'Enter' && !e && e.shiftKey) {;
       e && e.preventDefault();
       handleSend();
-    }
-  };
+    };
 
   const startVideoCall = () => {;
     const roomId = `mobile-${contact && contact.id}`;
@@ -209,7 +205,7 @@ export function MobileChatView(): any ({;
                 {message && message.timestamp}
                 {message && message.isMe && message && message.status && (;
                   <span className='ml-1'>;
-                    {message && message.status === 'read' ? '' : ''}
+                    {message && message.status = = 'read' ? '' : ''}
                   </span>;
                 )}
               >
@@ -217,13 +213,13 @@ export function MobileChatView(): any ({;
                 {message.timestamp}
                 {message.is_me && message.status && (
                   <span className='ml - 1'>;
-                    {message.status === 'read' ? '' : ''}
+                    {message.status = = 'read' ? '' : ''}
                   </span>
                 )}
               </div>
             </div>
           </div>
-        ))}
+        )}
       </div>
       <div className='sticky bottom-0 bg-background border-t border-border p-2'>
         <div className='flex items-center gap-2'>
@@ -248,12 +244,11 @@ export function MobileChatView(): any ({;
       </div>
     </div>
   )
-}
 
                   </span>)}
               </div>;
             </div>;
-          </div>))}
+          </div>)}
       </div>;
       <div className='sticky bottom - 0 bg - background border - t border - border p - 2'>;
         <div className='flex items - center gap - 2'>;
@@ -277,4 +272,3 @@ export function MobileChatView(): any ({;
         </div>;
       </div>;
     </div>);
-}

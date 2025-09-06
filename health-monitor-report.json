@@ -1,4 +1,4 @@
-{
+
   "timestamp": "2025-09-06T05:21:56.848Z",
   "status": "critical",
   "checks": [
@@ -36,4 +36,3 @@
   "recommendations": [
     "Consider cleaning node_modules or reviewing dependencies"
   ]
-}

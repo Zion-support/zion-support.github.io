@@ -1,4 +1,4 @@
-:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/wallet/TokenDisplay && TokenDisplay.tsx;
+recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/wallet/TokenDisplay && TokenDisplay.tsx;
 
 import React from "react";
 import {BadgeDollarSign} from "lucide-react";
@@ -48,4 +48,3 @@ export function TokenDisplay() {
           </div>)}
       </CardContent>;
     </Card>);
-}

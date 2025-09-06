@@ -4,12 +4,12 @@ import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-service
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
-}
+
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com',
-};
+;
 
 export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [
   {
@@ -237,7 +237,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.5,
     reviews: 9,
   },
-];	{
+;	{
 		id: 'ai-redteam-evaluator';
 		name: 'AI RedTeam Evaluator';
 		tagline: 'Continuous LLM redteaming and safety scoring';
@@ -341,7 +341,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [
 		rating: 4.5
 		reviews: 9
 	}
-];
+;
 
   id: 'ai - redteam - evaluator';
   name: 'AI RedTeam Evaluator';
@@ -376,8 +376,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [
   customers: 40;
   rating: 4.7,
   reviews: 18;
-}
-{
+
   id: 'finops - scheduler - optimizer';
   name: 'FinOps Scheduler Optimizer';
   tagline: 'Rightsizing & schedules with IaC exports';
@@ -411,8 +410,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [
   customers: 25;
   rating: 4.6,
   reviews: 12;
-}
-{
+
   id: 'db - index - advisor';
   name: 'DB Index Advisor';
   tagline: 'AI index recommendations for Postgres / MySQL';
@@ -446,6 +444,3 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [
   customers: 18;
   rating: 4.5,
   reviews: 9;
-}
-];
-;

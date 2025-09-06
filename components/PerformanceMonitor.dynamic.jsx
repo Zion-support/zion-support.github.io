@@ -5,5 +5,5 @@ const PerformanceMonitor.dynamic = () => {
       <h1>PerformanceMonitor.dynamic</h1>
     </div>
   );
-}
+
 export default PerformanceMonitor.dynamic;

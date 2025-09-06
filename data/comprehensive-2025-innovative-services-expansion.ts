@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import { ServiceVariant } from '../types/service-variants';
 export interface ComprehensiveInnovativeService {
 import { ServiceVariant } from '../types / service - variants';
@@ -71,19 +71,18 @@ import { ServiceVariant } from '../types / service - variants';
   marketAdvantage: string
   capabilities: string[],
   market_advantage: string;
-}
+
 const contact = {
   mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
-}
+
 export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] = [
   // AI & Machine Learning Services
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com';
-}
-;
+
 export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] = [;
   // AI & Machine Learning Services;
   {
@@ -614,7 +613,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     ]
     marketAdvantage: 'Advanced AI energy platform with comprehensive sustainability features'
   }
-];
+;
 export default comprehensiveInnovativeServices;
 
     capabilities: [;
@@ -622,7 +621,6 @@ export default comprehensiveInnovativeServices;
     ],
     market_advantage: 'Advanced AI energy platform with comprehensive sustainability features';
   }
-];
 ;
+
 export default comprehensiveInnovativeServices;
-;

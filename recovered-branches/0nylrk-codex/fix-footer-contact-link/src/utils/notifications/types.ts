@@ -1,5 +1,4 @@
 
-
 export type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system';
 export interface CreateNotificationParams {
   user_id: string;
@@ -10,12 +9,12 @@ export interface CreateNotificationParams {
   sendEmail?: boolean;
   actionUrl?: string | null
   actionText?: string | null
-}
+
 export interface CreateNotificationResult {
   success: boolean;
   notificationId?: string
   error?: any
-}
+
 export interface HireRequestNotificationParams {
   talentId: string;
   adminId?: string;
@@ -24,12 +23,12 @@ export interface HireRequestNotificationParams {
   projectType?: string;
   projectSummary?: string
   hireRequestId: string
-}
+
 export interface OnboardingNotificationParams {
   userId: string;
   missingMilestone: string
   userRole: 'talent' | 'client'
-}
+
 export interface SystemNotificationParams {
   user_id: string;
   title: string;
@@ -38,4 +37,3 @@ export interface SystemNotificationParams {
   actionText?: string | null
 
   sendEmail?: boolean
-}

@@ -1,6 +1,6 @@
 import React from 'react',;
 import SEO from '../components/SEO',;
-;
+
 export default function PressPage() {;
 	return (;
 		<>;
@@ -11,7 +11,7 @@ export default function PressPage() {;
 			</div>;
 		</>;
 	),;
-}import React from 'react';
+import React from 'react';
 export default function Page() {
   return (
     <main className="min-h-screen bg-black text-zinc-100 p-8">
@@ -21,4 +21,3 @@ export default function Page() {
       </section>
     </main>
   );
-}

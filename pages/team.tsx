@@ -16,7 +16,7 @@ import {
   Globe
   Code
   Shield
-} from "lucide-react";
+ from "lucide-react";
 import Layout from "../components/Layout";
 const teamMembers = [
   {
@@ -204,7 +204,7 @@ const teamMembers = [
     github: "https://github.com/lisawang"
     expertise: ["Product Strategy", "SaaS Development", "UX/UI", "Mobile Apps"]
   }
-];
+;
 const departments = [
   {
     name: "Leadership"
@@ -254,7 +254,7 @@ const departments = [
     icon: ""
     count: 5
   }
-];
+;
 const stats = [
   { number: "65+", label: "Team Members" }
   { number: "15+", label: "Years Experience" }
@@ -273,7 +273,7 @@ import {;
   Globe,;
   Code,;
   Shield,;
-} from "lucide-react";
+ from "lucide-react";
 import Layout from "../components/Layout";
 
 const teamMembers = [;
@@ -359,7 +359,6 @@ const teamMembers = [;
     github: "https://github && github.com/lisawang",;
     expertise: ["Product Strategy", "SaaS Development", "UX/UI", "Mobile Apps"],;
   },;
-];
 
 const departments = [;
   {;
@@ -410,14 +409,12 @@ const departments = [;
     icon: "",;
     count: 5,;
   },;
-];
 
 const stats = [;
   { number: "65+", label: "Team Members" },;
   { number: "15+", label: "Years Experience" },;
   { number: "25+", label: "Countries Represented" },;
   { number: "95%", label: "Employee Satisfaction" },;
-];
 
 export default function TeamPage() {;
   return (
@@ -432,17 +429,17 @@ export default function TeamPage() {;
           <div className="text-center max-w-4xl mx-auto">;
             <motion&& motion.h1
               className="text-5xl md:text-6xl font-bold mb-6 leading-tight"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}>;
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }>;
               Meet Our;
               <span className="text-purple-400"> Expert Team</span>;
             </motion && motion.h1>;
             <motion&& motion.p
               className="text-xl mb-8 text-purple-100"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8, delay: 0.2 }
             >
               Our diverse team of technology professionals brings together
               decades of experience in AI, cloud computing, cybersecurity, and
@@ -455,19 +452,19 @@ export default function TeamPage() {;
       <section className="py-16 bg-gray-50">;
         <div className="container mx-auto px-4">;
           <div className="grid md:grid-cols-4 gap-8">;
-            {stats && stats.map((stat, index) => (;
+            {stats && stats.map(stat, index) => (;
               <motion&& motion.div
                 key={index}
                 className="text-center"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}>;
+                initial={ opacity: 0, y: 30 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0 && 0.8, delay: index * 0 && 0.1 }>;
                 <div className="text-4xl font-bold text-purple-600 mb-2">;
                   {stat && stat.number}
                 </div>;
                 <div className="text-gray-600">{stat && stat.label}</div>;
               </motion && motion.div>;
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -483,13 +480,13 @@ export default function TeamPage() {;
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {teamMembers.slice(0, 3).map((member, index) => (
+            {teamMembers.slice(0, 3).map(member, index) => (
               <motion.div
                 key={member.id}
                 className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}>;
+                initial={ opacity: 0, y: 30 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0 && 0.8, delay: index * 0 && 0.1 }>;
                 <div className="text-center mb-4">;
                   <img
                     src={member && member.image}
@@ -505,13 +502,13 @@ export default function TeamPage() {;
                 </div>;
                 <p className="text-gray-600 text-sm mb-4">{member && member.bio}</p>;
                 <div className="flex flex-wrap gap-2 mb-4">;
-                  {member && member.expertise.slice(0, 2).map((skill) => (;
+                  {member && member.expertise.slice(0, 2).map(skill) => (;
                     <span
                       key={skill}
                       className="px-2 py-1 bg-purple-100 text-purple-800 rounded text-xs">;
                       {skill}
                     </span>;
-                  ))}
+                  )}
                 </div>;
                 <div className="flex justify-center space-x-4">;
                   <a
@@ -531,7 +528,7 @@ export default function TeamPage() {;
                   </a>;
                 </div>;
               </motion && motion.div>;
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -547,13 +544,13 @@ export default function TeamPage() {;
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {teamMembers.map((member, index) => (
+            {teamMembers.map(member, index) => (
               <motion.div
                 key={member.id}
                 className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}>;
+                initial={ opacity: 0, y: 30 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0 && 0.8, delay: index * 0 && 0.1 }>;
                 <div className="text-center mb-4">;
                   <img
                     src={member && member.image}
@@ -570,13 +567,13 @@ export default function TeamPage() {;
                 </div>;
                 <p className="text-gray-600 text-sm mb-4">{member && member.bio}</p>;
                 <div className="flex flex-wrap gap-1 mb-4">;
-                  {member && member.expertise.slice(0, 3).map((skill) => (;
+                  {member && member.expertise.slice(0, 3).map(skill) => (;
                     <span
                       key={skill}
                       className="px-2 py-1 bg-purple-100 text-purple-800 rounded text-xs">;
                       {skill}
                     </span>;
-                  ))}
+                  )}
                 </div>;
                 <div className="flex justify-center space-x-3">;
                   <a
@@ -596,7 +593,7 @@ export default function TeamPage() {;
                   </a>;
                 </div>;
               </motion && motion.div>;
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -612,13 +609,13 @@ export default function TeamPage() {;
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {departments.map((dept, index) => (
+            {departments.map(dept, index) => (
               <motion.div
                 key={dept.name}
                 className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}>;
+                initial={ opacity: 0, y: 30 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0 && 0.8, delay: index * 0 && 0.1 }>;
                 <div className="text-4xl mb-4">{dept && dept.icon}</div>;
                 <h3 className="text-lg font-semibold mb-2">{dept && dept.name}</h3>;
                 <p className="text-gray-600 text-sm mb-2">{dept && dept.description}</p>;
@@ -626,7 +623,7 @@ export default function TeamPage() {;
                   {dept && dept.count} members;
                 </div>;
               </motion && motion.div>;
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -750,7 +747,7 @@ export default function TeamPage() {;
       </section>;
     </Layout>;
   );
-}
+
 import Head from "next/head";
 import { motion } from "framer-motion";
 import { Brain, Cloud, Shield, Users } from "lucide-react";
@@ -787,7 +784,7 @@ const teamMembers = [
     description:
       "Leading our development teams with agile methodologies and client-focused delivery."
   }
-];
+;
 export default function TeamPage() {
   return (
     <>;
@@ -819,13 +816,13 @@ export default function TeamPage() {
       </div>;
     </>;
   );
-}
+
     </Layout>);
-}
+
 import Head from './next / head';
 import { motion  } from './framer-motion';
 import { Brain, Cloud, Shield, Users  } from './lucide-react';
-;
+
 const team_members = [;
   {
     name: "Dr. Sarah Johnson",
@@ -859,8 +856,8 @@ const team_members = [;
     description:;
       "Leading our development teams with agile methodologies and client - focused delivery.",
   },
-];
 ;
+
 export default /**
  * TeamPage - Function description
  */
@@ -893,5 +890,3 @@ function TeamPage() {
         </p>;
       </div>;
     </>);
-;
-}

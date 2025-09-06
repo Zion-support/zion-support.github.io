@@ -6,5 +6,3 @@ export function MainNavigation() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

@@ -31,8 +31,8 @@ export const SitemapPage: React.FC = () => {;
             </h2>;
             <ul className="space - y-2">;
               {complete_sitemap;
-                .filter ((route) => !route.required_auth);
-                .map ((route) => (
+                .filter (route) => !route.required_auth);
+                .map (route) => (
                   <li key={route.path}>;
                     <Link;
                       to={route.path}
@@ -42,7 +42,7 @@ export const SitemapPage: React.FC = () => {;
                       {route.label}
                     </Link>
                   </li>
-                ))}
+                )}
             </ul>
           </div>
           {/* Talent Routes */}
@@ -55,12 +55,10 @@ export const SitemapPage: React.FC = () => {;
             </p>
             <ul className="space-y-2">
               {completeSitemap
-                .filter(
-                  (route) =>
+                .filter(route) =>
                     route.requiredRoles?.includes("jobSeeker") |
                     route.requiredRoles?.includes("creator")
-                )
-                .map((route) => (
+                .map(route) => (
                   <li key={route.path}>
                     <Link
                       to={route.path}
@@ -70,7 +68,7 @@ export const SitemapPage: React.FC = () => {;
                       {route.label}
                     </Link>
                   </li>
-                ))}
+                )}
             </ul>
           </div>
           {/* Client Routes */}
@@ -83,12 +81,10 @@ export const SitemapPage: React.FC = () => {;
             </p>
             <ul className="space-y-2">
               {completeSitemap
-                .filter(
-                  (route) =>
+                .filter(route) =>
                     route.requiredRoles?.includes("employer") |
                     route.requiredRoles?.includes("buyer")
-                )
-                .map((route) => (
+                .map(route) => (
                   <li key={route.path}>
                     <Link
                       to={route.path}
@@ -98,7 +94,7 @@ export const SitemapPage: React.FC = () => {;
                       {route.label}
                     </Link>
                   </li>
-                ))}
+                )}
             </ul>
           </div>
           {/* Shared Routes */}
@@ -111,12 +107,10 @@ export const SitemapPage: React.FC = () => {;
             </p>
             <ul className="space-y-2">
               {completeSitemap
-                .filter(
-                  (route) =>
+                .filter(route) =>
                     route.requiredAuth &&
-                    (!route.requiredRoles |route.requiredRoles.length === 0)
-                )
-                .map((route) => (
+                    (!route.requiredRoles |route.requiredRoles.length = = 0)
+                .map(route) => (
                   <li key={route.path}>
                     <Link
                       to={route.path}
@@ -126,7 +120,7 @@ export const SitemapPage: React.FC = () => {;
                       {route.label}
                     </Link>
                   </li>
-                ))}
+                )}
             </ul>
           </div>
           {/* Admin Routes */}
@@ -139,8 +133,8 @@ export const SitemapPage: React.FC = () => {;
             </p>;
             <ul className="space - y-2">;
               {complete_sitemap;
-                .filter ((route) => route.required_roles?.includes ("admin"));
-                .map ((route) => (
+                .filter (route) => route.required_roles?.includes ("admin");
+                .map (route) => (
                   <li key={route.path}>;
                     <Link;
                       to={route.path}
@@ -150,7 +144,7 @@ export const SitemapPage: React.FC = () => {;
                       {route.label}
                     </Link>
                   </li>
-                ))}
+                )}
             </ul>
           </div>
           {/* Dynamic Routes */}
@@ -162,21 +156,20 @@ export const SitemapPage: React.FC = () => {;
               Pages with dynamic parameters
             </p>
             <ul className="space-y-2">
-              {Object.entries(dynamicPaths).map(([key, path]) => (
+              {Object.entries(dynamicPaths).map([key, path]) => (
                 <li key={key}>
                   <div className="flex items-center text-zion-slate">
                     <ChevronRight className="h-4 w-4 mr-2" />
                     {path} <span className="ml-2 text-xs italic">({key})</span>
                   </div>
                 </li>
-              ))}
+              )}
             </ul>
           </div>
         </div>
       </div>
     </AppLayout>
   );
-}
 
             </ul>;
           </div>;
@@ -184,7 +177,4 @@ export const SitemapPage: React.FC = () => {;
       </div>;
     </AppLayout>;
   );
-};
     </AppLayout>);
-}
-;

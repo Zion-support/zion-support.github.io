@@ -4,14 +4,14 @@ import { supabase } from '@/integrations/supabase/client',;
 import { useAuth } from '@/hooks/useAuth',;
 import { toast } from 'sonner',;
 import { Milestone, MilestoneActivity } from './types',;
-;
+
 export const useLoadMilestones = (projectId?:string) => {;
   const { user } = useAuth(),;
   const [milestones, setMilestones] = useState<Milestone[]>([]),;
-  const [activities, setActivities] = useState<Record<string MilestoneActivity[]>>({}),;
+  const [activities, setActivities] = useState<Record<string MilestoneActivity[]>({}),;
   const [isLoading, setIsLoading] = useState(true),;
   const [error, setError] = useState<string | null>(null),;
-;
+
   const fetchMilestones = async () => {;
     if (!projectId) {;
       setIsLoading(false),;
@@ -20,20 +20,15 @@ export const useLoadMilestones = (projectId?:string) => {;
     ;
     try {;
       setIsLoading(true),;
-      ;
       const { data:milestonesData, error:milestonesError } = await supabase;
         .from('project_milestones');
         .select('*');
         .eq('project_id', projectId);
         .order('due_date', { ascending:true }),;
-      ;
       if (milestonesError) throw milestonesError,;
-      ;
       setMilestones(milestonesData),;
-      ;
       // Fetch activities for each milestone;
       const activitiesMap:Record<string MilestoneActivity[]> = {},;
-      ;
       for (const milestone of milestonesData) {;
         const { data:activitiesData, error:activitiesError } = await supabase;
           .from('milestone_activities');
@@ -43,9 +38,7 @@ export const useLoadMilestones = (projectId?:string) => {;
           `);
           .eq('milestone_id', milestone.id);
           .order('created_at', { ascending:false }),;
-          ;
         if (activitiesError) throw activitiesError,;
-        ;
         activitiesMap[milestone.id] = activitiesData || [],;
       }
       ;
@@ -57,16 +50,14 @@ export const useLoadMilestones = (projectId?:string) => {;
       toast.error("Failed to fetch milestones");
     } finally {;
       setIsLoading(false),;
-    }
-  },;
-;
+    },;
+
   // Fetch milestones when component mounts or projectId changes;
-  useEffect(() => {;
+  useEffect() => {;
     if (projectId) {;
       fetchMilestones(),;
-    }
-  }, [projectId]),;
-;
+    }, [projectId]),;
+
   return {;
     milestones,;
     activities,;
@@ -74,34 +65,34 @@ export const useLoadMilestones = (projectId?:string) => {;
     error,;
     refetch:fetchMilestones;
   },;
-},; const {
+,; const {
   data: milestonesData, error: milestonesError 
-}= await supabase .from ('project milestones') .select ('*') .eq ('project id', projectId) if (milestonesError) throw milestonesError;
+= await supabase .from ('project milestones') .select ('*') .eq ('project id', projectId) if (milestonesError) throw milestonesError;
 setMilestones (milestonesData);
-//Fetch activities for each milestone const activitiesMap: Record<string MilestoneActivity[]> = {
-  
-};
+/Fetch activities for each milestone const activitiesMap: Record<string MilestoneActivity[]> = {
+
+;
 for (const milestone of milestonesData) {
   const {
   data: activitiesData, error: activitiesError 
-}= await supabase .from ('milestone activities') .select (`*;
+= await supabase .from ('milestone activities') .select (`*;
 created by profile:profiles!user id (display name, avatar url) `) .eq ('milestone id', milestone.id) if (activitiesError) throw activitiesError;
 activitiesMap[milestone.id] = activitiesData || [] 
-}
-}finally {
+
+finally {
   setIsLoading (false) 
-}
-};
-// Fetch milestones when component mounts or projectId changes useEffect ( () => {
+
+;
+/ Fetch milestones when component mounts or projectId changes useEffect () => {
   if (projectId) {
   fetchMilestones () 
-}
-}, [projectId]);
+
+, [projectId]);
 return {
   milestones;
 activities;
 isLoading;
 error;
 refetch: fetchMilestones 
-}
-};
+
+;

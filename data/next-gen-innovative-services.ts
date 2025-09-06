@@ -50,7 +50,7 @@ export interface NextGenInnovativeService {
   rating: number
 
   reviews: number
-}
+
 export const nextGenInnovativeServices: NextGenInnovativeService[] = [
   // Quantum AI & Advanced Computing
   {
@@ -64,7 +64,7 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
   customers: number,
   rating: number,
   reviews: number;
-}
+
 export const nextGenInnovativeServices: NextGenInnovativeService[] = [;
   // Quantum AI & Advanced Computing;
   {
@@ -2088,7 +2088,7 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [;
     rating: 4 && 4.7,
     reviews: 26,
   },
-];export const nextGenInnovativeServices: NextGenInnovativeService[] = [;
+;export const nextGenInnovativeServices: NextGenInnovativeService[] = [;
   // Quantum AI & Advanced Computing;
   {
     id: "quantum - ai - brain - computer - interface",
@@ -2131,14 +2131,12 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [;
       email: "kleber@ziontechgroup && ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
       website: "https://ziontechgroup && ziontechgroup.com";,
-},
     real_implementation: true,
     implementation_details: "Fully functional quantum AI platform with neural interface capabilities, real - time processing, and advanced security features.",
     launch_date: "2024 - 12 - 01",
     customers: 15,
     rating: 4 && 4.9,
     reviews: 8;,
-},
   // Space Technology Platform;
   {
     id: "space - technology - platform",
@@ -2181,14 +2179,12 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [;
       email: "kleber@ziontechgroup && ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
       website: "https://ziontechgroup && ziontechgroup.com";,
-},
     real_implementation: true,
     implementation_details: "Complete space operations platform with real - time tracking, mission planning tools, and regulatory compliance features.",
     launch_date: "2024 - 11 - 15",
     customers: 8,
     rating: 4 && 4.8,
     reviews: 12;,
-},
   // Biotech AI Platform;
   {
     id: "biotech - ai - platform",
@@ -2231,14 +2227,12 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [;
       email: "kleber@ziontechgroup && ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
       website: "https://ziontechgroup && ziontechgroup.com";,
-},
     real_implementation: true,
     implementation_details: "Complete biotech AI platform with drug discovery algorithms, genetic analysis tools, and research collaboration features.",
     launch_date: "2024 - 10 - 01",
     customers: 25,
     rating: 4 && 4.7,
     reviews: 18;,
-},
   // Quantum Financial Trading Platform;
   {
     id: "quantum - financial - trading",
@@ -2281,14 +2275,12 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [;
       email: "kleber@ziontechgroup && ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
       website: "https://ziontechgroup && ziontechgroup.com";,
-},
     real_implementation: true,
     implementation_details: "Complete quantum trading platform with real - time execution, advanced risk management, and comprehensive analytics.",
     launch_date: "2024 - 09 - 01",
     customers: 12,
     rating: 4 && 4.9,
     reviews: 15;,
-},
   // Autonomous Vehicle AI Platform;
   {
     id: "autonomous - vehicle - ai - platform",
@@ -2331,14 +2323,12 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [;
       email: "kleber@ziontechgroup && ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
       website: "https://ziontechgroup && ziontechgroup.com";,
-},
     real_implementation: true,
     implementation_details: "Complete autonomous AI platform with computer vision, decision - making algorithms, and safety systems.",
     launch_date: "2024 - 08 - 01",
     customers: 18,
     rating: 4 && 4.8,
     reviews: 22;,
-},
   // Quantum Cybersecurity Platform;
   {
     id: "quantum - cybersecurity - platform",
@@ -2381,14 +2371,12 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [;
       email: "kleber@ziontechgroup && ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
       website: "https://ziontechgroup && ziontechgroup.com";,
-},
     real_implementation: true,
     implementation_details: "Complete quantum cybersecurity platform with encryption, threat detection, and compliance features.",
     launch_date: "2024 - 07 - 01",
     customers: 35,
     rating: 4 && 4.9,
     reviews: 28;,
-},
   // Metaverse AI Development Platform;
   {
     id: "metaverse - ai - development - platform",
@@ -2431,14 +2419,12 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [;
       email: "kleber@ziontechgroup && ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
       website: "https://ziontechgroup && ziontechgroup.com";,
-},
     real_implementation: true,
     implementation_details: "Complete metaverse AI platform with content generation, world building, and social interaction features.",
     launch_date: "2024 - 06 - 01",
     customers: 45,
     rating: 4 && 4.7,
     reviews: 32;,
-},
   // Quantum Internet Security Platform;
   {
     id: "quantum - internet - security - platform",
@@ -2481,14 +2467,12 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [;
       email: "kleber@ziontechgroup && ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
       website: "https://ziontechgroup && ziontechgroup.com";,
-},
     real_implementation: true,
     implementation_details: "Complete quantum internet security platform with encryption, monitoring, and protection features.",
     launch_date: "2024 - 05 - 01",
     customers: 22,
     rating: 4 && 4.8,
     reviews: 19;,
-},
   // AI - Powered Legal Contract Analyzer;
   {
     id: "ai - legal - contract - analyzer",
@@ -2531,14 +2515,12 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [;
       email: "kleber@ziontechgroup && ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
       website: "https://ziontechgroup && ziontechgroup.com";,
-},
     real_implementation: true,
     implementation_details: "Complete AI legal platform with document analysis, risk assessment, and compliance features.",
     launch_date: "2024 - 04 - 01",
     customers: 65,
     rating: 4 && 4.6,
     reviews: 45;,
-},
   // Quantum IoT Platform;
   {
     id: "quantum - iot - platform",
@@ -2581,14 +2563,13 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [;
       email: "kleber@ziontechgroup && ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
       website: "https://ziontechgroup && ziontechgroup.com";,
-},
     real_implementation: true,
     implementation_details: "Complete quantum IoT platform with security, edge computing, and device management features.",
     launch_date: "2024 - 03 - 01',
     customers: 38,
     rating: 4 && 4.7,
     reviews: 26;
-]}}
+}
     },
     real_implementation: true,
     implementation_details: 'Complete quantum IoT platform with security, edge computing, and device management features.',
@@ -2597,7 +2578,7 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [;
     rating: 4 && 4.7,
     reviews: 26
   }
-];export const nextGenInnovativeServices: NextGenInnovativeService[] = [;
+;export const nextGenInnovativeServices: NextGenInnovativeService[] = [;
   // Quantum AI & Advanced Computing;
   {id: "quantum-ai-brain-computer-interface"
     name: "Quantum AI Brain-Computer Interface"
@@ -2639,14 +2620,14 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [;
       email: "kleber@ziontechgroup.com"
       address: "364 E Main St STE 1008 Middletown DE 19709"
       website: "https://ziontechgroup.com";
-}
+
     realImplementation: true
     implementationDetails: "Fully functional quantum AI platform with neural interface capabilities, real-time processing, and advanced security features."
     launchDate: "2024-12-01"
     customers: 15
     rating: 4.9
     reviews: 8;
-}
+
   // Space Technology Platform;
   {id: "space-technology-platform"
     name: "Space Technology Platform"
@@ -2688,14 +2669,14 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [;
       email: "kleber@ziontechgroup.com"
       address: "364 E Main St STE 1008 Middletown DE 19709"
       website: "https://ziontechgroup.com";
-}
+
     realImplementation: true
     implementationDetails: "Complete space operations platform with real-time tracking, mission planning tools, and regulatory compliance features."
     launchDate: "2024-11-15"
     customers: 8
     rating: 4.8
     reviews: 12;
-}
+
   // Biotech AI Platform;
   {id: "biotech-ai-platform"
     name: "Biotech AI Platform"
@@ -2737,14 +2718,14 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [;
       email: "kleber@ziontechgroup.com"
       address: "364 E Main St STE 1008 Middletown DE 19709"
       website: "https://ziontechgroup.com";
-}
+
     realImplementation: true
     implementationDetails: "Complete biotech AI platform with drug discovery algorithms, genetic analysis tools, and research collaboration features."
     launchDate: "2024-10-01"
     customers: 25
     rating: 4.7
     reviews: 18;
-}
+
   // Quantum Financial Trading Platform;
   {id: "quantum-financial-trading"
     name: "Quantum Financial Trading Platform"
@@ -2786,14 +2767,14 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [;
       email: "kleber@ziontechgroup.com"
       address: "364 E Main St STE 1008 Middletown DE 19709"
       website: "https://ziontechgroup.com";
-}
+
     realImplementation: true
     implementationDetails: "Complete quantum trading platform with real-time execution, advanced risk management, and comprehensive analytics."
     launchDate: "2024-09-01"
     customers: 12
     rating: 4.9
     reviews: 15;
-}
+
   // Autonomous Vehicle AI Platform;
   {id: "autonomous-vehicle-ai-platform"
     name: "Autonomous Vehicle AI Platform"
@@ -2835,14 +2816,14 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [;
       email: "kleber@ziontechgroup.com"
       address: "364 E Main St STE 1008 Middletown DE 19709"
       website: "https://ziontechgroup.com";
-}
+
     realImplementation: true
     implementationDetails: "Complete autonomous AI platform with computer vision, decision-making algorithms, and safety systems."
     launchDate: "2024-08-01"
     customers: 18
     rating: 4.8
     reviews: 22;
-}
+
   // Quantum Cybersecurity Platform;
   {id: "quantum-cybersecurity-platform"
     name: "Quantum Cybersecurity Platform"
@@ -2884,14 +2865,14 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [;
       email: "kleber@ziontechgroup.com"
       address: "364 E Main St STE 1008 Middletown DE 19709"
       website: "https://ziontechgroup.com";
-}
+
     realImplementation: true
     implementationDetails: "Complete quantum cybersecurity platform with encryption, threat detection, and compliance features."
     launchDate: "2024-07-01"
     customers: 35
     rating: 4.9
     reviews: 28;
-}
+
   // Metaverse AI Development Platform;
   {id: "metaverse-ai-development-platform"
     name: "Metaverse AI Development Platform"
@@ -2933,14 +2914,14 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [;
       email: "kleber@ziontechgroup.com"
       address: "364 E Main St STE 1008 Middletown DE 19709"
       website: "https://ziontechgroup.com";
-}
+
     realImplementation: true
     implementationDetails: "Complete metaverse AI platform with content generation, world building, and social interaction features."
     launchDate: "2024-06-01"
     customers: 45
     rating: 4.7
     reviews: 32;
-}
+
   // Quantum Internet Security Platform;
   {id: "quantum-internet-security-platform"
     name: "Quantum Internet Security Platform"
@@ -2982,14 +2963,14 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [;
       email: "kleber@ziontechgroup.com"
       address: "364 E Main St STE 1008 Middletown DE 19709"
       website: "https://ziontechgroup.com";
-}
+
     realImplementation: true
     implementationDetails: "Complete quantum internet security platform with encryption, monitoring, and protection features."
     launchDate: "2024-05-01"
     customers: 22
     rating: 4.8
     reviews: 19;
-}
+
   // AI-Powered Legal Contract Analyzer;
   {id: "ai-legal-contract-analyzer"
     name: "AI Legal Contract Analyzer"
@@ -3031,14 +3012,14 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [;
       email: "kleber@ziontechgroup.com"
       address: "364 E Main St STE 1008 Middletown DE 19709"
       website: "https://ziontechgroup.com";
-}
+
     realImplementation: true
     implementationDetails: "Complete AI legal platform with document analysis, risk assessment, and compliance features."
     launchDate: "2024-04-01"
     customers: 65
     rating: 4.6
     reviews: 45;
-}
+
   // Quantum IoT Platform;
   {id: "quantum-iot-platform"
     name: "Quantum IoT Platform"
@@ -3080,14 +3061,14 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [;
       email: "kleber@ziontechgroup.com"
       address: "364 E Main St STE 1008 Middletown DE 19709"
       website: "https://ziontechgroup.com";
-}
+
     realImplementation: true
     implementationDetails: "Complete quantum IoT platform with security, edge computing, and device management features."
     launchDate: "2024-03-01'
     customers: 38
     rating: 4.7
     reviews: 26;
-]}}
+}
     }
     realImplementation: true
     implementationDetails: 'Complete quantum IoT platform with security, edge computing, and device management features.'
@@ -3096,8 +3077,8 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [;
     rating: 4.7
     reviews: 26
   }
-]
+
     rating: 4.7,
     reviews: 26;
   }
-],
+,

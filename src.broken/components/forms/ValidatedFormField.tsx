@@ -6,5 +6,3 @@ export function ValidatedFormField() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

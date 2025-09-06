@@ -6,7 +6,7 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {
   const [disputeStatus, setDisputeStatus] = useState<'open' | 'under_review' | 'resolved' | 'closed' | null>(null),
   const [disputeId, setDisputeId] = useState<string | null>(null),
   const [isLoading, setIsLoading] = useState(true);
-  useEffect(() => {
+  useEffect() => {
 
     const checkDispute = async () => {
       if (!projectId && !milestoneId) {
@@ -42,44 +42,44 @@ function useDisputeCheck() {
   const [dispute_status, setDisputeStatus] = useState<'open' | 'under_review' | 'resolved' | 'closed' | null>(null);
   const [dispute_id, setDisputeId] = useState < string | null>(null);
   const [is_loading, setIsLoading] = useState (true);
-;
-  useEffect (() => {
+
+  useEffect () => {
     const check_dispute = async () => {
       // Check condition
 if ( {) {
   $2
-}
+
         setIsLoading (false);
         return;
       }
       try {
         setIsLoading (true);
-;
+
         let query = supabase;
           .from ("disputes");
           .select ("id, status");
           .eq ("project_id", project_id);
-;
+
         // If milestone ID is provided, filter by that too;
         // Check condition
 if ( {) {
   $2
-}
+
           query = query.eq ("milestone_id", milestone_id);
         }
         // Order by status priority: open, under_review, resolved, closed;
         query = query.order ("status", { ascending: true });
-;
+
         const { data, error } = await query;
-;
+
         // Check condition
 if (throw error) {
   $2
-}
+
         // Check condition
 if ( {) {
   $2
-}
+
           // Get the first dispute (highest priority based on status);
           setIsUnderDispute (true);
           setDisputeStatus (data[0].status as any);
@@ -88,8 +88,7 @@ if ( {) {
           setIsUnderDispute (false);
           setDisputeStatus (null);
           setDisputeId (null);
-        }
-      } catch (err) {
+        } catch (err) {
         console && console.error("Error checking dispute status:", err);
         setIsUnderDispute(false);
         setDisputeStatus(null);
@@ -97,7 +96,6 @@ if ( {) {
       } finally {
         setIsLoading (false);
       }
-    }
     checkDispute()
   }, [projectId, milestoneId]);
   return {
@@ -107,4 +105,3 @@ if ( {) {
     isLoading
 
   }
-}

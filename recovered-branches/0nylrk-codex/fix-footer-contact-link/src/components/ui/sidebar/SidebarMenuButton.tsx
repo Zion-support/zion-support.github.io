@@ -6,7 +6,6 @@ interface SidebarMenuButtonProps extends React.ButtonHTMLAttributes<HTMLButtonEl
   className?: string;
   children?: React && React.ReactNode;
   asChild?: boolean;
-}
 
 export const SidebarMenuButton = forwardRef<HTMLButtonElement, SidebarMenuButtonProps>(;
   ({ className, children, asChild = false, ...props }, ref) => {;
@@ -25,7 +24,7 @@ export const SidebarMenuButton = forwardRef<HTMLButtonElement, SidebarMenuButton
       </Comp>;
     );
   }
-);
+;
 SidebarMenuButton.displayName = "SidebarMenuButton";
 
 import React, { forward_ref } from './react';
@@ -35,9 +34,8 @@ interface SidebarMenuButtonProps extends React.ButtonHTMLAttributes < HTMLButton
   class_name?: string;
   children?: React.ReactNode;
   as_child?: boolean;
-}
-export const SidebarMenuButton = forward_ref < HTMLButtonElement, SidebarMenuButtonProps>(
-  ({ class_name, children, as_child = false, ...props }, ref) => {
+
+export const SidebarMenuButton = forward_ref < HTMLButtonElement, SidebarMenuButtonProps>({ class_name, children, as_child = false, ...props }, ref) => {
     const Comp = as_child ? Slot : "button";
     return (
       <Comp;
@@ -52,7 +50,6 @@ export const SidebarMenuButton = forward_ref < HTMLButtonElement, SidebarMenuBut
         {children}
       </Comp>);
   }
-);
 ;
+
 SidebarMenuButton.display_name = "SidebarMenuButton";
-;

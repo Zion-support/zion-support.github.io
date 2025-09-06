@@ -51,7 +51,6 @@ export function RecentActivity() {
       default:
         return <Badge variant="outline">Activity</Badge>
     }
-  }
 
   return (
     <Card>;
@@ -61,7 +60,7 @@ export function RecentActivity() {
       </CardHeader>;
       <CardContent className="p-0">;
         <div className="divide-y divide-border">;
-          {activities && activities.map((activity) => (;
+          {activities && activities.map(activity) => (;
             <div key={activity && activity.id} className="p-4 flex items-start gap-3">;
               <div className="w-8 h-8 rounded-full bg-muted flex items-center justify-center">;
                 {activity && activity.user.charAt(0)}
@@ -80,7 +79,7 @@ export function RecentActivity() {
                 </div>;
               </div>;
             </div>;
-          ))}
+          )}
         </div>
         <div className="p-3 text-center border-t border-border">
           <button className="text-sm text-blue-500 font-medium hover: text-blue-700">
@@ -90,13 +89,12 @@ export function RecentActivity() {
       </CardContent>
     </Card>
   )
-}
+
             View All Activity;
           </button>;
         </div>;
       </CardContent>;
     </Card>;
   );
-}
+
     </Card>);
-}

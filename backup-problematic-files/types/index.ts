@@ -1,12 +1,11 @@
-// Contact information
+/ Contact information
 export interface ContactInfo {
   phone: string;
   email: string;
   address: string;
   site: string;
-}
 
-// Service interfaces
+/ Service interfaces
 export interface Service {
   id: string;
   name: string;
@@ -23,7 +22,6 @@ export interface Service {
   support: string;
   image?: string;
   popular?: boolean;
-}
 
 export interface ServiceCategory {
   title: string;
@@ -32,9 +30,8 @@ export interface ServiceCategory {
   features: string[];
   href: string;
   color: string;
-}
 
-// SEO and performance
+/ SEO and performance
 export interface SEOProps {
   title: string;
   description: string;
@@ -42,7 +39,6 @@ export interface SEOProps {
   canonical?: string;
   ogImage?: string;
   noindex?: boolean;
-}
 
 export interface PerformanceMetrics {
   fcp?: number;
@@ -50,14 +46,12 @@ export interface PerformanceMetrics {
   fid?: number;
   cls?: number;
   ttfb?: number;
-}
 
-// Loading and error states
+/ Loading and error states
 export interface LoadingState {
   isLoading: boolean;
   error?: string;
   progress?: number;
-}
 
 export interface ErrorInfo {
   message: string;
@@ -66,9 +60,8 @@ export interface ErrorInfo {
   timestamp: string;
   userAgent?: string;
   url?: string;
-}
 
-// Form interfaces
+/ Form interfaces
 export interface ContactForm {
   name: string;
   email: string;
@@ -78,7 +71,6 @@ export interface ContactForm {
   budget?: string;
   message: string;
   preferredContact: 'email' | 'phone' | 'both';
-}
 
 export interface FormField {
   name: string;
@@ -93,9 +85,8 @@ export interface FormField {
     pattern?: string;
     message?: string;
   };
-}
 
-// Team and company
+/ Team and company
 export interface TeamMember {
   id: string;
   name: string;
@@ -106,7 +97,6 @@ export interface TeamMember {
   linkedin?: string;
   github?: string;
   twitter?: string;
-}
 
 export interface CompanyInfo {
   name: string;
@@ -125,9 +115,8 @@ export interface CompanyInfo {
     website: string;
   };
   certifications: string[];
-}
 
-// Content interfaces
+/ Content interfaces
 export interface Testimonial {
   id: string;
   name: string;
@@ -137,7 +126,6 @@ export interface Testimonial {
   rating: number;
   image?: string;
   project?: string;
-}
 
 export interface CaseStudy {
   id: string;
@@ -152,7 +140,6 @@ export interface CaseStudy {
   teamSize: number;
   image: string;
   featured?: boolean;
-}
 
 export interface BlogPost {
   id: string;
@@ -167,9 +154,8 @@ export interface BlogPost {
   image: string;
   featured?: boolean;
   readTime: number;
-}
 
-// Pricing
+/ Pricing
 export interface PricingTier {
   id: string;
   name: string;
@@ -181,30 +167,26 @@ export interface PricingTier {
   popular?: boolean;
   cta: string;
   description: string;
-}
 
-// API interfaces
+/ API interfaces
 export interface ApiRequest {
   method: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
   url: string;
   data?: any;
   params?: Record<string, any>;
   headers?: Record<string, string>;
-}
 
 export interface ApiResponse<T> {
   success: boolean;
   data?: T;
   error?: string;
   message?: string;
-}
 
 export interface PaginationParams {
   page: number;
   limit: number;
   sort?: string;
   order?: 'asc' | 'desc';
-}
 
 export interface PaginatedResponse<T> {
   data: T[];
@@ -216,9 +198,8 @@ export interface PaginatedResponse<T> {
     hasNext: boolean;
     hasPrev: boolean;
   };
-}
 
-// User and preferences
+/ User and preferences
 export interface User {
   id: string;
   email: string;
@@ -255,7 +236,6 @@ export interface User {
     endDate: Date;
     features: string[];
   };
-}
 
 export interface UserPreferences {
   theme: 'light' | 'dark' | 'system';
@@ -266,30 +246,26 @@ export interface UserPreferences {
     browser: boolean;
     marketing: boolean;
   };
-}
 
 export interface AccessibilitySettings {
   highContrast: boolean;
   fontSize: number;
   reducedMotion: boolean;
   screenReader: boolean;
-}
 
-// Navigation
+/ Navigation
 export interface NavigationItem {
   name: string;
   href: string;
   submenu?: NavigationItem[];
   external?: boolean;
-}
 
 export interface SocialLink {
   platform: 'linkedin' | 'twitter' | 'github' | 'facebook' | 'instagram';
   url: string;
   label: string;
-}
 
-// Notifications
+/ Notifications
 export interface Notification {
   id: string;
   type: 'info' | 'success' | 'warning' | 'error';
@@ -304,9 +280,8 @@ export interface Notification {
   category: 'system' | 'project' | 'team' | 'client' | 'billing';
   priority: 'low' | 'medium' | 'high';
   expires?: Date;
-}
 
-// Project management
+/ Project management
 export interface Project {
   id: string;
   name: string;
@@ -358,9 +333,8 @@ export interface Project {
     category: 'technical' | 'process' | 'communication' | 'management';
     impact: 'positive' | 'negative' | 'neutral';
   }[];
-}
 
-// Component props
+/ Component props
 export interface BaseComponentProps {
   className?: string;
   children?: React.ReactNode;
@@ -369,7 +343,6 @@ export interface BaseComponentProps {
   loading?: boolean;
   onClick?: () => void;
   type?: 'button' | 'submit' | 'reset';
-}
 
 export interface InputProps {
   className?: string;
@@ -384,13 +357,11 @@ export interface InputProps {
   onChange?: (value: string) => void;
   error?: string;
   required?: boolean;
-}
 
-// Environment
+/ Environment
 export interface Environment {
   NODE_ENV: 'development' | 'production' | 'test';
   NEXT_PUBLIC_API_URL?: string;
   NEXT_PUBLIC_APP_URL?: string;
   NEXT_PUBLIC_GA_ID?: string;
   NEXT_PUBLIC_SENTRY_DSN?: string;
-}

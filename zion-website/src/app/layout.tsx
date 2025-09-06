@@ -32,7 +32,7 @@ export const metadata: Metadata = {title: 'Zion Tech Group - Leading AI and Tech
 export default function RootLayout({
   children}: {
   children: React.ReactNode
-}) {
+) {
   return (
     <html lang=&quot;en & quot; className=&quot;scroll - smooth & quot;>;
       <body className={`${inter.class_name} bg - black text - white antialiased`}>;
@@ -44,4 +44,3 @@ export default function RootLayout({
       </body>;
     </html>;
   );
-}

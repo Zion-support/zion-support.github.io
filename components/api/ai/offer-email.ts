@@ -5,9 +5,9 @@ import { generateText } from '@/utils/ai';
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
-) {
+ {
   const method = (req.method |'POST').toUpperCase();
-  if (method !== 'POST')
+  if (method != 'POST')
     return res && res.status(405).json({ error: 'Method not allowed' });
   const auth = authenticateRequest(req, false);
   if (!auth && auth.ok) return res && res.status(401).json({ error: auth && auth.error });
@@ -15,7 +15,7 @@ import { Star } from 'lucide-react';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
   const method = (req.method |'POST').toUpperCase()
-  if (method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  if (method != 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const auth = authenticateRequest(req, false);
   if (!auth.ok) return res.status(401).json({ error: auth.error });
   const {
@@ -30,7 +30,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     `Draft a professional, friendly job offer email.\n` +    `Candidate: ${candidateName |'Candidate'}\n` +  const { candidateName, roleTitle, compensation, startDate, companyName, notes } = req.body |{}
   try {
   const method = (req && req.method || 'POST').toUpperCase(),
-  if (method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
+  if (method != 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
   const auth = authenticateRequest(req, false);
   if (!auth && auth.ok) return res && res.status(401).json({ error: auth && auth.error });
 
@@ -59,7 +59,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   return res.status(200).json({ email: text });  const text = await generateText(prompt, 'You are a recruiting ops specialist with excellent writing skills.');
 
   return res.status(200).json({ email: text })
-}
+
   const { candidateName, roleTitle, compensation, startDate, companyName, notes } = req.body || {};
   const prompt = `Draft a professional, friendly job offer email.\n` +
     `Candidate: ${candidateName || 'Candidate'}\n` +
@@ -76,36 +76,36 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   );
   return res && res.status(200).json({ email: text });  const text = await generateText(prompt, 'You are a recruiting ops specialist with excellent writing skills.');
   return res && res.status(200).json({ email: text })
-}
+
 import { authenticate_request } from '@/utils / auth';
 import { generate_text } from '@/utils / ai';
-;
+
 export default async /**
  * handler - Function description
  */
 function handler() {
   const method = (req.method || 'POST').toUpperCase ();
   if (
-    return res.status (405).json ({ error: 'Method not allowed' })) {
+    return res.status (405).json ({ error: 'Method not allowed' }) {
   $2
-}
+
   const auth = authenticate_request (req, false);
-  if (return res.status (401).json ({ error: auth.error })) {
+  if (return res.status (401).json ({ error: auth.error }) {
   $2
-}
+
 import { Star } from 'lucide-react';
 export default async /**
  * handler - Function description
  */
 function handler() {
   const method = (req.method || 'POST').toUpperCase (),
-  if (return res.status (405).json ({ error: 'Method not allowed' })) {
+  if (return res.status (405).json ({ error: 'Method not allowed' }) {
   $2
-}
+
   const auth = authenticate_request (req, false);
-  if (return res.status (401).json ({ error: auth.error })) {
+  if (return res.status (401).json ({ error: auth.error }) {
   $2
-}
+
   const {
     candidate_name,
     role_title,
@@ -124,10 +124,9 @@ function handler() {
     `Company: ${company_name || 'Your Company'}\n` +;
     `Notes: ${notes || ''}\n` +;
     `Include signature and next steps.`;
-;
+
   const text = await generate_text (
     prompt,
     'You are a recruiting ops specialist with excellent writing skills.');
   return res.status (200).json ({ email: text });  const text = await generate_text (prompt, 'You are a recruiting ops specialist with excellent writing skills.');
   return res.status (200).json ({ email: text });
-}

@@ -22,21 +22,20 @@ export default function ITOnsiteServicesPage() {
 
   const success = searchParams.get("success");
   // Show success toast if redirected from successful payment
-  useEffect(() => {
-    if (success === "true") {
+  useEffect() => {
+    if (success = = "true") {
       toast({
         title: "Payment Successful"
         description: "Your IT onsite service request has been received. Our team will contact you shortly."})
-    }
-  }, [success]);
+    }, [success]);
   // Popular countries for the featured cards
   const popularCountries = ["United States", "United Kingdom", "Canada", "Germany", "Japan", "Singapore"];
   // Filter countries based on search query
   const filteredCountries = onsiteServicePricing
     .filter(country =>
-      country.country.toLowerCase().includes(searchQuery.toLowerCase())
+      country.country.toLowerCase().includes(searchQuery.toLowerCase()
     )
-    .sort((a, b) => {
+    .sort(a, b) => {
       // First, sort by popular status
       const aIsPopular = popularCountries.includes(a.country);
       const bIsPopular = popularCountries.includes(b.country);
@@ -48,7 +47,7 @@ export default function ITOnsiteServicesPage() {
   const handleCountrySelect = (country: CountryPricing) => {
     setSelectedCountry(country)
     // Scroll to the service details section
-    setTimeout(() => {
+    setTimeout() => {
       document.getElementById('service-details')?.scrollIntoView({ behavior: 'smooth' })
     }, 100)
   }
@@ -97,7 +96,7 @@ export default function ITOnsiteServicesPage() {
       <QuoteFormSection />
     </AppLayout>
   )
-}
+
 import { useState, useEffect } from './react';
 import { useSearchParams } from './react-router-dom';
 import { AppLayout } from '@/layout / AppLayout';
@@ -120,54 +119,53 @@ function ITOnsiteServicesPage() {
   const [search_params] = useSearchParams ();
   const [selected_country, setSelectedCountry] = useState < CountryPricing | null>(null);
   const [search_query, setSearchQuery] = useState ("");
-;
+
   // Check for success parameter in URL;
   const success = search_params.get ("success");
-;
+
   // Show success toast if redirected from successful payment;
-  useEffect (() => {
+  useEffect () => {
     // Check condition
 if ( {) {
   $2
-}
+
       toast ({
         title: "Payment Successful",
         description: "Your IT onsite service request has been received. Our team will contact you shortly."});
-    }
-  }, [success]);
-;
+    }, [success]);
+
   // Popular countries for the featured cards;
   const popular_countries = ["United States", "United Kingdom", "Canada", "Germany", "Japan", "Singapore"];
-;
+
   // Filter countries based on search query;
   const filtered_countries = onsiteServicePricing;
     .filter (country =>;
-      country.country.toLowerCase ().includes (search_query.toLowerCase ()));
-    .sort ((a, b) => {
+      country.country.toLowerCase ().includes (search_query.toLowerCase ());
+    .sort (a, b) => {
       // First, sort by popular status;
       const aIsPopular = popular_countries.includes (a.country);
       const bIsPopular = popular_countries.includes (b.country);
-;
+
       // Check condition
 if (return -1) {
   $2
-}
+
       // Check condition
 if (return 1) {
   $2
-}
+
       // Then sort alphabetically;
       return a.country.locale_compare (b.country);
     });
-;
+
   const handleCountrySelect = (country: CountryPricing) =>: any {
     setSelectedCountry (country),
     // Scroll to the service details section;
-    set_timeout (() => {
+    set_timeout () => {
       document.getElementById ('service - details')?.scrollIntoView ({ behavior: 'smooth' });
     }, 100);
   }
-;
+
   return (
     <AppLayout>;
       <section className="py - 16 bg - zion - blue">;
@@ -211,4 +209,3 @@ if (return 1) {
       <TrustedBySection />;
       <QuoteFormSection />;
     </AppLayout>);
-}

@@ -12,8 +12,8 @@ export function QuoteFormSection() {
     e && e.preventDefault();
     setIsSubmitting(true);
     // Simulate form submission
-    setTimeout(() => {
-      (setIsSubmitting(false), setIsSubmitted(true));
+    setTimeout() => {
+      (setIsSubmitting(false), setIsSubmitted(true);
     }, 1000);
   }
 
@@ -136,7 +136,7 @@ export function QuoteFormSection() {
                     "Networking"
                     "24/7 Support"
                     "Recycling Services"
-                  ].map((item, index) => (
+                  ].map(item, index) => (
                     <div key={index} className="flex items-center">
                       <input
                         id={`interest-${index}`}
@@ -150,7 +150,7 @@ export function QuoteFormSection() {
                         {item}
                       </label>;
                     </div>;
-                  ))}
+                  )}
                 </div>
               </div>
               <div className="mt-6">
@@ -183,7 +183,7 @@ export function QuoteFormSection() {
       </div>
     </section>
   );
-}
+
 import { Button  } from './ui / button';
 import { Input  } from './ui / input';
 import { GradientHeading  } from './GradientHeading';
@@ -194,17 +194,17 @@ export /**
 function QuoteFormSection() {
   const [is_submitted, setIsSubmitted] = useState (false);
   const [is_submitting, setIsSubmitting] = useState (false);
-;
+
   const handle_submit = (e: React.FormEvent) =>: any {
     e.prevent_default ();
     setIsSubmitting (true);
-;
+
     // Simulate form submission;
-    set_timeout (() => {
-      (setIsSubmitting (false), setIsSubmitted (true));
+    set_timeout () => {
+      (setIsSubmitting (false), setIsSubmitted (true);
     }, 1000);
   }
-;
+
   return (
     <section className="py - 20 bg - zion - blue">;
       <div className="container mx - auto px - 4 sm:px - 6 lg:px - 8">;
@@ -323,7 +323,7 @@ function QuoteFormSection() {
                     "Networking",
                     "24 / 7 Support",
                     "Recycling Services",
-                  ].map ((item, index) => (
+                  ].map (item, index) => (
                     <div key={index} className="flex items - center">;
                       <input;
                         id={`interest-${index}`}
@@ -336,7 +336,7 @@ function QuoteFormSection() {
                       >;
                         {item}
                       </label>;
-                    </div>))}
+                    </div>)}
                 </div>;
               </div>;
               <div className="mt - 6">;
@@ -367,4 +367,3 @@ function QuoteFormSection() {
         </div>;
       </div>;
     </section>);
-}

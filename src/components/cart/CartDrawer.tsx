@@ -7,8 +7,8 @@ import { useAuth } from '@/hooks/useAuth';
 import { LoginModal } from '@/components/auth/LoginModal';
 export function CartDrawer() {
 
-  const items = useSelector((s: RootState) => s.cart.items);  const count = items.reduce((sum, i) => sum + i.quantity, 0);  const items = useSelector((s: RootState) => s.cart.items)
-  const count = items.reduce((sum, i) => sum + i.quantity, 0)
+  const items = useSelector(s: RootState) => s.cart.items);  const count = items.reduce(sum, i) => sum + i.quantity, 0);  const items = useSelector(s: RootState) => s.cart.items)
+  const count = items.reduce(sum, i) => sum + i.quantity, 0)
   const { isAuthenticated } = useAuth()
   const [loginOpen, setLoginOpen] = React.useState(false)
   const handleClick = (e: React.MouseEvent,) => {
@@ -16,14 +16,13 @@ export function CartDrawer() {
       e.preventDefault()
       setLoginOpen(true)
     }
-  }
 import { ShoppingCart } from 'lucide-react';import { useAuth } from '@/hooks/useAuth';import { ShoppingCart } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 import { LoginModal } from '@/components/auth/LoginModal';
 
 export function CartDrawer() {;
-  const items = useSelector((s: RootState) => s && s.cart.items);  const count = items && items.reduce((sum, i) => sum + i && i.quantity, 0);  const items = useSelector((s: RootState) => s && s.cart.items),;
-  const count = items && items.reduce((sum, i) => sum + i && i.quantity, 0);
+  const items = useSelector(s: RootState) => s && s.cart.items);  const count = items && items.reduce(sum, i) => sum + i && i.quantity, 0);  const items = useSelector(s: RootState) => s && s.cart.items),;
+  const count = items && items.reduce(sum, i) => sum + i && i.quantity, 0);
   const { isAuthenticated } = useAuth();
   const [loginOpen, setLoginOpen] = React && React.useState(false);
 
@@ -34,8 +33,7 @@ export function CartDrawer() {;
     if (!isAuthenticated) {;
       e && e.preventDefault();
       setLoginOpen(true);
-    }
-  };
+    };
 
   return (
     <>;
@@ -55,10 +53,8 @@ export function CartDrawer() {;
       </Link>
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
-  )
-}
   );
-}
+
       <Link;
         href='/cart';
         aria - label='Cart';
@@ -75,4 +71,3 @@ export function CartDrawer() {;
       </Link>;
       <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
     </>);
-}

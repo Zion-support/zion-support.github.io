@@ -9,7 +9,7 @@ export type ProposalForm = {;
   supportingMultiverses: string,;
   language?: string,;
   customPrompt?: string;
-},;
+,;
 export default function ProposalGenerator() {;
   const [form, setForm] = useState<ProposalForm>({;
     targetInstitution: 'UNDP',;
@@ -26,9 +26,9 @@ export default function ProposalGenerator() {;
   const [exportLinks, setExportLinks] = useState<{ pdfUrl?: string, jsonUrl?: string, mdUrl?: string } | null>(null),;
   const [statusMessage, setStatusMessage] = useState(''),;
   function handleChange<K extends keyof ProposalForm>(key: K, value: ProposalForm[K]) {;
-    setForm((prev) => ({ ...prev, [key]: value }));
+    setForm(prev) => ({ ...prev, [key]: value });
   }
-;
+
   async function handleGenerate() {;
     setIsGenerating(true),;
     setStatusMessage('Generating draft...'),;
@@ -47,8 +47,7 @@ export default function ProposalGenerator() {;
     } finally {;
       setIsGenerating(false);
     }
-  }
-;
+
   async function handleExport() {;
     setStatusMessage('Exporting to PDF/Markdown/JSON...'),;
     try {;
@@ -66,8 +65,7 @@ export default function ProposalGenerator() {;
       console.error(e),;
       setStatusMessage('Export failed');
     }
-  }
-;
+
   async function handleSubmitBridge() {;
     setStatusMessage('Submitting via bridge (email/IPFS/signature)...'),;
     try {;
@@ -81,7 +79,6 @@ export default function ProposalGenerator() {;
       console.error(e);
       setStatusMessage('Submission failed');
     }
-  }
 
   return (
     <div className="space-y-6">
@@ -158,7 +155,7 @@ export default function ProposalGenerator() {;
           <div className="flex gap-2">
             <button
               className="px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50"
-;
+
   return (;
     <div className="space-y-6">;
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
@@ -286,4 +283,3 @@ export default function ProposalGenerator() {;
       </div>;
     </div>;
   );
-}

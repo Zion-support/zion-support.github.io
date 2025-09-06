@@ -3,7 +3,6 @@ import React from 'react';
 
 interface 5g-solutionsProps {
   className?: string;
-}
 
 const 5g-solutions: React.FC<5g-solutionsProps> = ({ className }) => {
   return (
@@ -12,6 +11,3 @@ const 5g-solutions: React.FC<5g-solutionsProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-}
-}
-}

@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React, { useState } from 'react';
 import Head from 'next / head';
 import { motion } from 'framer-motion';
@@ -119,7 +119,7 @@ import {
   Lock, Cloud, BarChart3, Settings, Eye, Code, Palette;
   Search, Filter, Grid, List, ExternalLink, Phone, Mail, MapPin
  } from 'lucide-react';
-} from 'lucide-react';
+ from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services';
 import { cuttingEdgeQuantumServices2025 } from '../data/2025-cutting-edge-quantum-services';
@@ -137,7 +137,7 @@ const contact_info = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-}
+
 const heroStats = [
   {
     label: 'Cutting-Edge Services'
@@ -242,7 +242,7 @@ const serviceCategories = [
     gradient: 'bg-gradient-to-r from-teal-500 to-emerald-600',
     count: cuttingEdgeMicroSaasServices2025.length
   }
-];
+;
 export default function CuttingEdgeServicesShowcase2025() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -255,21 +255,21 @@ export default function CuttingEdgeServicesShowcase2025() {
   ];
   const filteredServices = allServices.filter(service => {
     const matchesSearch =
-      service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
-      service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
+      service.name.toLowerCase().includes(searchTerm.toLowerCase() |
+      service.description.toLowerCase().includes(searchTerm.toLowerCase() |
       service.tags.some(tag =>
-        tag.toLowerCase().includes(searchTerm.toLowerCase())
+        tag.toLowerCase().includes(searchTerm.toLowerCase()
       );
     const matchesCategory =
-      selectedCategory === 'all' |service.category === selectedCategory;
-    return matchesSearch && matchesCategory;  });    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
-                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    const matchesCategory = selectedCategory === 'all' |service.category === selectedCategory;
+      selectedCategory = = 'all' |service.category = = selectedCategory;
+    return matchesSearch && matchesCategory;  });    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase() |
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase() |
+                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesCategory = selectedCategory = = 'all' |service.category = = selectedCategory;
     return matchesSearch && matchesCategory
   const containerVariants = {
     hidden: { opacity: 0 }
-;
+
 export default /**
  * CuttingEdgeServicesShowcase2025 - Function description
  */
@@ -277,26 +277,26 @@ function CuttingEdgeServicesShowcase2025() {
   const [search_term, setSearchTerm] = useState ('');
   const [selected_category, setSelectedCategory] = useState ('all');
   const [view_mode, setViewMode] = useState<'grid' | 'list'>('grid');
-;
+
   const all_services = [;
     ...cuttingEdgeAIServices2025,
     ...cuttingEdgeQuantumServices2025,
     ...cuttingEdgeEnterpriseITServices2025,
     ...cuttingEdgeMicroSaasServices2025,
   ];
-;
+
   const filtered_services = all_services.filter (service => {
     const matches_search =;
-      service.name.toLowerCase ().includes (search_term.toLowerCase ()) ||;
-      service.description.toLowerCase ().includes (search_term.toLowerCase ()) ||;
+      service.name.toLowerCase ().includes (search_term.toLowerCase () ||;
+      service.description.toLowerCase ().includes (search_term.toLowerCase () ||;
       service.tags.some (tag =>;
-        tag.toLowerCase ().includes (search_term.toLowerCase ()));
+        tag.toLowerCase ().includes (search_term.toLowerCase ());
     const matches_category =;
-      selected_category === 'all' || service.category === selected_category;
-    return matches_search && matches_category;  });    const matches_search = service.name.toLowerCase ().includes (search_term.toLowerCase ()) ||;
-                        service.description.toLowerCase ().includes (search_term.toLowerCase ()) ||;
-                        service.tags.some (tag => tag.toLowerCase ().includes (search_term.toLowerCase ()));
-    const matches_category = selected_category === 'all' || service.category === selected_category;
+      selected_category = = 'all' || service.category = = selected_category;
+    return matches_search && matches_category;  });    const matches_search = service.name.toLowerCase ().includes (search_term.toLowerCase () ||;
+                        service.description.toLowerCase ().includes (search_term.toLowerCase () ||;
+                        service.tags.some (tag => tag.toLowerCase ().includes (search_term.toLowerCase ());
+    const matches_category = selected_category = = 'all' || service.category = = selected_category;
     return matches_search && matches_category;
   const container_variants = {
     hidden: { opacity: 0 },
@@ -304,10 +304,8 @@ function CuttingEdgeServicesShowcase2025() {
       opacity: 1
       transition: {
         staggerChildren: 0.1
+      },  };        staggerChildren: 0.1
       }
-    },  };        staggerChildren: 0.1
-      }
-    }
   }
   const itemVariants = {
     hidden: { y: 20, opacity: 0 }
@@ -316,14 +314,12 @@ function CuttingEdgeServicesShowcase2025() {
       opacity: 1
       transition: {
         duration: 0.5
-      }
-    },  };        duration: 0.5
+      },  };        duration: 0.5
 const contactInfo = {;
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup && ziontechgroup.com',;
   address: '364 E Main St STE 1008 Middletown DE 19709',;
   website: 'https://ziontechgroup && ziontechgroup.com',;
-};
 
 const heroStats = [;
   {;
@@ -403,7 +399,7 @@ const serviceCategories = [;
     count: cuttingEdgeMicroSaasServices2025 && cuttingEdgeMicroSaasServices2025.length,;
   },];    count: cuttingEdgeMicroSaasServices2025 && cuttingEdgeMicroSaasServices2025.length;
   }
-];
+;
 
 export default function CuttingEdgeServicesShowcase2025() {;
   const [searchTerm, setSearchTerm] = useState('');
@@ -419,17 +415,17 @@ export default function CuttingEdgeServicesShowcase2025() {;
 
   const filteredServices = allServices && allServices.filter(service => {;
     const matchesSearch =;
-      service && service.name.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
-      service && service.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
+      service && service.name.toLowerCase().includes(searchTerm && searchTerm.toLowerCase() ||;
+      service && service.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase() ||;
       service && service.tags.some(tag =>;
-        tag && tag.toLowerCase().includes(searchTerm && searchTerm.toLowerCase());
+        tag && tag.toLowerCase().includes(searchTerm && searchTerm.toLowerCase();
       );
     const matchesCategory =;
-      selectedCategory === 'all' || service && service.category === selectedCategory;
-    return matchesSearch && matchesCategory;  });    const matchesSearch = service && service.name.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
-                         service && service.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
-                         service && service.tags.some(tag => tag && tag.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()));
-    const matchesCategory = selectedCategory === 'all' || service && service.category === selectedCategory;
+      selectedCategory = = 'all' || service && service.category = = selectedCategory;
+    return matchesSearch && matchesCategory;  });    const matchesSearch = service && service.name.toLowerCase().includes(searchTerm && searchTerm.toLowerCase() ||;
+                         service && service.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase() ||;
+                         service && service.tags.some(tag => tag && tag.toLowerCase().includes(searchTerm && searchTerm.toLowerCase());
+    const matchesCategory = selectedCategory = = 'all' || service && service.category = = selectedCategory;
     return matchesSearch && matchesCategory;
 
   const containerVariants = {;
@@ -446,7 +442,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
       transition: {
         duration: 0.5
       }
-    }
   };
 
   const itemVariants = {;
@@ -459,7 +454,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
       },;
     },  };        duration: 0 && 0.5;
       }
-    }
   }
   return (
     <>;
@@ -483,13 +477,13 @@ export default function CuttingEdgeServicesShowcase2025() {;
         <section className='relative overflow-hidden'>;
           <div className='absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black'></div>;
           <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32'>            <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className='text-center'
             >
               <motion.h1
-                className='text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6'                initial={{ opacity: 0, scale: 0.9 }}        <title>Cutting-Edge Services Showcase 2025 - Zion Tech Group | Future Technology Solutions</title>
+                className='text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6'                initial={ opacity: 0, scale: 0.9 }        <title>Cutting-Edge Services Showcase 2025 - Zion Tech Group | Future Technology Solutions</title>
         <meta name="description" content="Explore our revolutionary cutting-edge services including AI consciousness, quantum computing, space mining, and advanced enterprise solutions. Transform your business with future technology." />
         <meta name="keywords" content="cutting-edge services, AI consciousness, quantum computing, space mining, enterprise IT, micro SAAS, future technology" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -502,9 +496,9 @@ export default function CuttingEdgeServicesShowcase2025() {;
           <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black"></div>;
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">;
             <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className='text-center'
             >
               <motion.h1
@@ -512,8 +506,8 @@ export default function CuttingEdgeServicesShowcase2025() {;
             >
               <motion.h1
                 className="text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6"
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 1, delay: 0.2 }}
+                animate={ opacity: 1, scale: 1 }
+                transition={ duration: 1, delay: 0.2 }
               >
                 Cutting-Edge Services
                 <span className='block text-2xl md:text-3xl lg:text-4xl mt-4 text-white/90'>
@@ -521,17 +515,17 @@ export default function CuttingEdgeServicesShowcase2025() {;
                 </span>
               </motion.h1>
               <motion.p
-                className='text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed'                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
+                className='text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed'                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.8, delay: 0.4 }
               >                <span className="block text-2xl md:text-3xl lg:text-4xl mt-4 text-white/90">
                   Showcase 2025
                 </span>
               </motion.h1>
               <motion.p
                 className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed"
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.8, delay: 0.4 }
               >
                 Discover revolutionary technology solutions that are reshaping
                 industries and defining the future. From AI consciousness to
@@ -539,19 +533,19 @@ export default function CuttingEdgeServicesShowcase2025() {;
               </motion.p>
               {/* Hero Stats */}
               <motion.div
-                className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12'                initial={{ opacity: 0, y: 20 }}                Discover revolutionary technology solutions that are reshaping industries and defining the future.
+                className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12'                initial={ opacity: 0, y: 20 }                Discover revolutionary technology solutions that are reshaping industries and defining the future.
                 From AI consciousness to space mining, experience the cutting edge of innovation.
               </motion.p>
               {/* Hero Stats */}
               <motion.div
-              transition={{ duration: 0 && 0.8 }}
+              transition={ duration: 0 && 0.8 }
               className='text-center'>;
               <motion&& motion.h1
                 className='text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6'              className="text-center">;
               <motion&& motion.h1 
                 className="text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6"
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 1, delay: 0 && 0.2 }}>;
+                animate={ opacity: 1, scale: 1 }
+                transition={ duration: 1, delay: 0 && 0.2 }>;
                 Cutting-Edge Services;
                 <span className='block text-2xl md:text-3xl lg:text-4xl mt-4 text-white/90'>;
                   Showcase 2025;
@@ -559,17 +553,17 @@ export default function CuttingEdgeServicesShowcase2025() {;
               </motion && motion.h1>;
 
               <motion&& motion.p
-                className='text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed'                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>                <span className="block text-2xl md:text-3xl lg:text-4xl mt-4 text-white/90">;
+                className='text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed'                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0 && 0.8, delay: 0 && 0.4 }>                <span className="block text-2xl md:text-3xl lg:text-4xl mt-4 text-white/90">;
                   Showcase 2025;
                 </span>;
               </motion && motion.h1>;
 
               <motion&& motion.p 
                 className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed"
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0 && 0.8, delay: 0 && 0.4 }>;
                 Discover revolutionary technology solutions that are reshaping;
                 industries and defining the future. From AI consciousness to;
                 space mining, experience the cutting edge of innovation.;
@@ -577,16 +571,16 @@ export default function CuttingEdgeServicesShowcase2025() {;
 
               {/* Hero Stats */}
               <motion&& motion.div
-                className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12'                initial={{ opacity: 0, y: 20 }}                Discover revolutionary technology solutions that are reshaping industries and defining the future. 
+                className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12'                initial={ opacity: 0, y: 20 }                Discover revolutionary technology solutions that are reshaping industries and defining the future. 
                 From AI consciousness to space mining, experience the cutting edge of innovation.
               </motion && motion.p>;
 
               {/* Hero Stats */}
               <motion&& motion.div 
                 className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12"
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.8, delay: 0 && 0.6 }}>;
-                {heroStats && heroStats.map((stat, index) => (;
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0 && 0.8, delay: 0 && 0.6 }>;
+                {heroStats && heroStats.map(stat, index) => (;
                   <div key={index} className='text-center'>;
                     <div className='flex justify-center mb-2'>;
                       <div className='p-3 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30'>;
@@ -604,20 +598,20 @@ export default function CuttingEdgeServicesShowcase2025() {;
                     </div>;
                     <div className="text-2xl md:text-3xl font-bold text-white mb-1">{stat && stat.value}</div>;
                     <div className="text-sm text-white/70">{stat && stat.label}</div>;
-                ))}
+                )}
               </motion.div>
               {/* CTA Buttons */}
               <motion.div
-                className='flex flex-col sm:flex-row gap-4 justify-center'                initial={{ opacity: 0, y: 20 }}              <motion.div
+                className='flex flex-col sm:flex-row gap-4 justify-center'                initial={ opacity: 0, y: 20 }              <motion.div
               <motion&& motion.div
-                className='flex flex-col sm:flex-row gap-4 justify-center'                initial={{ opacity: 0, y: 20 }}              <motion && motion.div 
+                className='flex flex-col sm:flex-row gap-4 justify-center'                initial={ opacity: 0, y: 20 }              <motion && motion.div 
               <motion&& motion.div
-                className='flex flex-col sm:flex-row gap-4 justify-center'                initial={{ opacity: 0, y: 20 }}              <motion && motion.div 
+                className='flex flex-col sm:flex-row gap-4 justify-center'                initial={ opacity: 0, y: 20 }              <motion && motion.div 
               <motion.div 
                 className="flex flex-col sm:flex-row gap-4 justify-center"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.8, delay: 0 && 0.8 }}>;
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0 && 0.8, delay: 0 && 0.8 }>;
                 <a
                   href='#services'
                   className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25'>;
@@ -626,7 +620,7 @@ export default function CuttingEdgeServicesShowcase2025() {;
                 </a>;
                 <a
                   href='/contact'
-                  className='inline-flex items-center px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105'>                >;
+                  className='inline-flex items-center px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105'>;
                   Explore Services;
                   <ArrowRight className="ml-2 w-5 h-5" />;
                 </a>;
@@ -650,7 +644,7 @@ export default function CuttingEdgeServicesShowcase2025() {;
         <section className='py-12 bg-black/50 backdrop-blur-sm border-t border-cyan-500/20'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <motion.div
-              className='flex flex-col lg:flex-row gap-6 items-center justify-between'              initial={{ opacity: 0, y: 20 }}        <section className="py-12 bg-black/50 backdrop-blur-sm border-t border-cyan-500/20">
+              className='flex flex-col lg:flex-row gap-6 items-center justify-between'              initial={ opacity: 0, y: 20 }        <section className="py-12 bg-black/50 backdrop-blur-sm border-t border-cyan-500/20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
                   className="inline-flex items-center px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105">;
@@ -665,13 +659,13 @@ export default function CuttingEdgeServicesShowcase2025() {;
         <section className='py-12 bg-black/50 backdrop-blur-sm border-t border-cyan-500/20'>;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
             <motion&& motion.div
-              className='flex flex-col lg:flex-row gap-6 items-center justify-between'              initial={{ opacity: 0, y: 20 }}        <section className="py-12 bg-black/50 backdrop-blur-sm border-t border-cyan-500/20">;
+              className='flex flex-col lg:flex-row gap-6 items-center justify-between'              initial={ opacity: 0, y: 20 }        <section className="py-12 bg-black/50 backdrop-blur-sm border-t border-cyan-500/20">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
             <motion&& motion.div 
               className="flex flex-col lg:flex-row gap-6 items-center justify-between"
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.6 }}
-              viewport={{ once: true }}>;
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.6 }
+              viewport={ once: true }>;
               {/* Search */}
               <div className='relative flex-1 max-w-md'>;
                 <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-cyan-400 w-5 h-5' />;
@@ -699,33 +693,33 @@ export default function CuttingEdgeServicesShowcase2025() {;
                 <button
                   onClick={() => setSelectedCategory('all')}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${;
-                    selectedCategory === 'all';
+                    selectedCategory = = 'all';
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white';
                       : 'bg-black/50 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/10';
                   }`}
                 >;
                   All ({allServices && allServices.length});
                 </button>;
-                {serviceCategories && serviceCategories.map(category => (                  <button                {serviceCategories && serviceCategories.map((category) => (;
+                {serviceCategories && serviceCategories.map(category => (                  <button                {serviceCategories && serviceCategories.map(category) => (;
                   <button
                     key={category && category.title}
                     onClick={() => setSelectedCategory(category && category.title)}
                     className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${;
-                      selectedCategory === category && category.title;
+                      selectedCategory = = category && category.title;
                         ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white';
                         : 'bg-black/50 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/10';
                     }`}
                   >;
                     {category && category.title} ({category && category.count});
                   </button>;
-                ))}
+                )}
               </div>
               {/* View Mode Toggle */}
               <div className='flex items-center gap-2'>                <button              <div className="flex items-center gap-2">;
                 <button
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded-lg transition-all duration-300 ${;
-                    viewMode === 'grid';
+                    viewMode = = 'grid';
                       ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/50';
                       : 'bg-black/50 text-white/70 hover:text-white hover:bg-black/70';
                   }`}
@@ -738,7 +732,7 @@ export default function CuttingEdgeServicesShowcase2025() {;
                 <button
                   onClick={() => setViewMode('list')}
                   className={`p-2 rounded-lg transition-all duration-300 ${;
-                    viewMode === 'list';
+                    viewMode = = 'list';
                       ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/50';
                       : 'bg-black/50 text-white/70 hover:text-white hover:bg-black/70';
                   }`}
@@ -748,8 +742,7 @@ export default function CuttingEdgeServicesShowcase2025() {;
               </div>
             </motion.div>
           </div>
-        </section>
-                >;
+        </section>;
                   <List className='w-5 h-5' />                </button>                  <List className="w-5 h-5" />;
                 </button>;
               </div>;
@@ -766,27 +759,27 @@ export default function CuttingEdgeServicesShowcase2025() {;
               variants={containerVariants}
               initial='hidden'
               whileInView='visible'
-              viewport={{ once: true }}
+              viewport={ once: true }
               className={
-                viewMode === 'grid'
+                viewMode = = 'grid'
                   ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
                   : 'space-y-6'
               }>            <motion&& motion.div
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
-              className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}>;
-              {filteredServices && filteredServices.map((service, index) => (;
+              viewport={ once: true }
+              className={viewMode = = 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}>;
+              {filteredServices && filteredServices.map(service, index) => (;
                 <motion&& motion.div
                   key={service && service.id}
                   variants={itemVariants}
                   className={`group relative overflow-hidden rounded-2xl border border-cyan-500/20 bg-gradient-to-br from-black/80 via-purple-900/10 to-black/80 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 ${
-                    viewMode === 'list' ? 'flex flex-col lg:flex-row' : ''
+                    viewMode = = 'list' ? 'flex flex-col lg:flex-row' : ''
                   }`}>;
                   {/* Service Header */}
                   <div
-                    className={`p-6 ${viewMode === 'list' ? 'lg:w-1/3' : ''}`}
+                    className={`p-6 ${viewMode = = 'list' ? 'lg:w-1/3' : ''}`}
                   >
                     <div className='flex items-start justify-between mb-4'>
                       <div className='flex-1'>
@@ -811,7 +804,7 @@ export default function CuttingEdgeServicesShowcase2025() {;
                         </div>
                       </div>
                     </div>
-                    className={`p-6 ${viewMode === 'list' ? 'lg:w-1/3' : ''}`}>;
+                    className={`p-6 ${viewMode = = 'list' ? 'lg:w-1/3' : ''}`}>;
                     <div className='flex items-start justify-between mb-4'>;
                       <div className='flex-1'>;
                         <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>;
@@ -838,17 +831,17 @@ export default function CuttingEdgeServicesShowcase2025() {;
 
                     {/* Tags */}
                     <div className='flex flex-wrap gap-2 mb-4'>;
-                      {service && service.tags.slice(0, 3).map((tag, tagIndex) => (;
+                      {service && service.tags.slice(0, 3).map(tag, tagIndex) => (;
                         <span
                           key={tagIndex}
                           className='px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20'>                    <div className="flex flex-wrap gap-2 mb-4">;
-                      {service && service.tags.slice(0, 3).map((tag, tagIndex) => (;
+                      {service && service.tags.slice(0, 3).map(tag, tagIndex) => (;
                         <span
                           key={tagIndex}
                           className="px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20"
                           {tag}
                         </span>;
-                      ))}
+                      )}
                     </div>
                     {/* Market Info */}
                     <div className='flex items-center justify-between text-sm text-white/60 mb-4'>
@@ -857,7 +850,7 @@ export default function CuttingEdgeServicesShowcase2025() {;
                   </div>
                   {/* Service Details */}
                   <div
-                    className={`px-6 pb-6 ${viewMode === 'list' ? 'lg:w-2/3' : ''}`}
+                    className={`px-6 pb-6 ${viewMode = = 'list' ? 'lg:w-2/3' : ''}`}
                   >                    <div className="flex items-center justify-between text-sm text-white/60 mb-4">
                       <span>Market: {service.marketSize}</span>
                       <span className="text-cyan-400">{service.category}</span>
@@ -865,7 +858,7 @@ export default function CuttingEdgeServicesShowcase2025() {;
                   </div>
                   {/* Service Details */}
                   <div
-                    className={`px-6 pb-6 ${viewMode === 'list' ? 'lg:w-2/3' : ''}`}>;
+                    className={`px-6 pb-6 ${viewMode = = 'list' ? 'lg:w-2/3' : ''}`}>;
                     <div className='mb-6'>;
                       <h4 className='text-sm font-semibold text-cyan-400 mb-3 uppercase tracking-wider'>;
                         Key Features;
@@ -873,7 +866,7 @@ export default function CuttingEdgeServicesShowcase2025() {;
                       <ul className='space-y-2'>;
                         {service && service.features;
                           .slice(0, 3);
-                          .map((feature, featureIndex) => (;
+                          .map(feature, featureIndex) => (;
                             <li
                               key={featureIndex}
                               className='flex items-start text-sm text-white/80'
@@ -881,24 +874,24 @@ export default function CuttingEdgeServicesShowcase2025() {;
                               <CheckCircle className='w-4 h-4 text-cyan-400 mt-0.5 mr-2 flex-shrink-0' />
                               <span>{feature}</span>
                             </li>
-                          ))}                      </ul>
+                          )}                      </ul>
                     </div>
                               className='flex items-start text-sm text-white/80'>;
                               <CheckCircle className='w-4 h-4 text-cyan-400 mt-0 && 0.5 mr-2 flex-shrink-0' />;
                               <span>{feature}</span>;
                             </li>;
-                          ))}                      </ul>;
+                          )}                      </ul>;
                     </div>;
 
                     {/* Pricing */}
                     <div className='mb-6'>;
                       <h4 className='text-sm font-semibold text-cyan-400 mb-3 uppercase tracking-wider'>                      <ul className="space-y-2">;
-                        {service && service.features.slice(0, 3).map((feature, featureIndex) => (;
+                        {service && service.features.slice(0, 3).map(feature, featureIndex) => (;
                           <li key={featureIndex} className="flex items-start text-sm text-white/80">;
                             <CheckCircle className="w-4 h-4 text-cyan-400 mt-0 && 0.5 mr-2 flex-shrink-0" />;
                             <span>{feature}</span>;
                           </li>;
-                        ))}
+                        )}
                     </div>
                     {/* Pricing */}
                     <div className='mb - 6'>;
@@ -981,19 +974,19 @@ export default function CuttingEdgeServicesShowcase2025() {;
                   {/* Hover Effect Overlay */}
                   <div className='absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none' />                </motion && motion.div>                  <div className="absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />;
                 </motion && motion.div>;
-              ))}
+              )}
             </motion.div>
 
                   {/* Hover Effect Overlay */}
                   <div className='absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none' />                </motion && motion.div>                  <div className="absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />;
                 </motion && motion.div>;
-              ))}
+              )}
             </motion.div>
             {/* No Results */}
-            {filteredServices && filteredServices.length === 0 && (;
+            {filteredServices && filteredServices.length = = 0 && (;
               <motion&& motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+                initial={ opacity: 0 }
+                animate={ opacity: 1 }
                 className='text-center py-20'>;
                 <div className='text-6xl mb-4'></div>;
                 <h3 className='text-2xl font-bold text-white mb-2'>;
@@ -1006,8 +999,8 @@ export default function CuttingEdgeServicesShowcase2025() {;
                   onClick={() => {;
                     setSearchTerm('');
                     setSelectedCategory('all');
-                  }}
-                  className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'                >              >;
+                  }
+                  className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'                >;
                 <div className="text-6xl mb-4"></div>;
                 <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>;
                 <p className="text-white/70 mb-6">Try adjusting your search terms or category filter</p>;
@@ -1016,7 +1009,7 @@ export default function CuttingEdgeServicesShowcase2025() {;
                     setSearchTerm('');
 
                     setSelectedCategory('all')
-                  }}
+                  }
                   className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300";
                 >;
                   Clear Filters;
@@ -1035,10 +1028,10 @@ export default function CuttingEdgeServicesShowcase2025() {;
         <section className="py-20 bg-gradient-to-br from-black via-purple-900/20 to-black">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >
               <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
                 Ready to Transform Your Business?
@@ -1157,25 +1150,25 @@ export default function CuttingEdgeServicesShowcase2025() {;
         </section>
       </Layout>
     </>
-);
-  const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) |service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) |const containerVariants = {
+;
+  const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () |service.description.toLowerCase () .includes (searchTerm.toLowerCase () |const containerVariants = {
   hidden: {
   opacity: 0
-}
+
 visible: {
   opacity: 1, transition: {
   staggerChildren: 0.1
-}
+
 const itemVariants = {
   hidden: {
   y: 20, opacity: 0
-}
+
 visible: {
   y: 0, opacity: 1, transition: {
   duration: 0.5
-};}
+;}
   );
-}
+
                         </span>                      </div>;
                     </div>;
                     {/* CTA */}
@@ -1218,13 +1211,13 @@ visible: {
                   </div>;
                   {/* Hover Effect Overlay */}
                   <div className='absolute inset - 0 bg - gradient - to - t from - cyan - 500 / 5 to - transparent opacity - 0 group - hover:opacity - 100 transition - opacity duration - 500 pointer - events - none' />                </motion.div>                  <div className="absolute inset - 0 bg - gradient - to - t from - cyan - 500 / 5 to - transparent opacity - 0 group - hover:opacity - 100 transition - opacity duration - 500 pointer - events - none" />;
-                </motion.div>))}
+                </motion.div>)}
             </motion.div>;
             {/* No Results */}
-            {filtered_services.length === 0 && (
+            {filtered_services.length = = 0 && (
               <motion.div;
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+                initial={ opacity: 0 }
+                animate={ opacity: 1 }
                 className='text - center py - 20';
               >;
                 <div className='text - 6xl mb - 4'></div>;
@@ -1238,8 +1231,8 @@ visible: {
                   on_click={() => {
                     setSearchTerm ('');
                     setSelectedCategory ('all');
-                  }}
-                  className='px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - lg hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300'                >              >;
+                  }
+                  className='px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - lg hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300'                >;
                 <div className="text - 6xl mb - 4"></div>;
                 <h3 className="text - 2xl font - bold text - white mb - 2">No services found</h3>;
                 <p className="text - white / 70 mb - 6">Try adjusting your search terms or category filter</p>;
@@ -1247,7 +1240,7 @@ visible: {
                   on_click={() => {
                     setSearchTerm ('');
                     setSelectedCategory ('all');
-                  }}
+                  }
                   className="px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - lg hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300";
                 >;
                   Clear Filters;
@@ -1260,10 +1253,10 @@ visible: {
           <div className='max - w-4xl mx - auto text - center px - 4 sm:px - 6 lg:px - 8'>            <motion.div        <section className="py - 20 bg - gradient - to - br from - black via - purple - 900 / 20 to - black">;
           <div className="max - w-4xl mx - auto text - center px - 4 sm:px - 6 lg:px - 8">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, coordinate_y: 30 }
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >;
               <h2 className='text - 3xl md:text - 4xl font - bold text - white mb - 6'>;
                 Ready to Transform Your Business?;
@@ -1368,20 +1361,20 @@ visible: {
         </section>;
       </Layout>;
     </>);
-;
-  const matches_search = service.name.toLowerCase () .includes (search_term.toLowerCase () ) || service.description.toLowerCase () .includes (search_term.toLowerCase () ) || const container_variants = {
+
+  const matches_search = service.name.toLowerCase () .includes (search_term.toLowerCase () || service.description.toLowerCase () .includes (search_term.toLowerCase () || const container_variants = {
   hidden: {
   opacity: 0;
-}
+
 visible: {
   opacity: 1, transition: {
   stagger_children: 0.1;
-}
+
 const item_variants = {
   hidden: {
   coordinate_y: 20, opacity: 0;
-}
+
 visible: {
   coordinate_y: 0, opacity: 1, transition: {
   duration: 0.5;
-}}
+}

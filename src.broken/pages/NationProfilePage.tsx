@@ -6,5 +6,3 @@ export function NationProfilePage() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

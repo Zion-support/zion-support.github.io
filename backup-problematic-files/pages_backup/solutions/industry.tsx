@@ -15,6 +15,5 @@ const Industry: React.FC<IndustryProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default Industry;

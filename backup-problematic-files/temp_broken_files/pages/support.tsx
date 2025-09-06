@@ -5,12 +5,12 @@ import { ;
   BookOpen, Video, FileText, Search, Filter,;
   CheckCircle, ArrowRight, Brain, Atom, Rocket, ;
   Shield, Zap, Users, Star, TrendingUp, Code;
-} from 'lucide-react',;
-;
+ from 'lucide-react',;
+
 export default function Support() {;
   const [searchQuery, setSearchQuery] = useState(''),;
   const [selectedCategory, setSelectedCategory] = useState('all'),;
-;
+
   const supportCategories = [;
     {;
       id:'ai-services',;
@@ -55,7 +55,7 @@ export default function Support() {;
       articles:42;
     }
   ],;
-;
+
   const quickActions = [;
     {;
       title:'Live Chat',;
@@ -98,7 +98,7 @@ export default function Support() {;
   FileText, 
   Video, 
   Users 
-} from 'lucide-react';
+ from 'lucide-react';
 
 export default function Support() {
   const [searchQuery, setSearchQuery] = useState(''),
@@ -182,7 +182,7 @@ export default function Support() {
       available: true
     }
   ],;
-;
+
   const popularArticles = [;
     {;
       title:'Getting Started with AI Consciousness Platform',;
@@ -220,7 +220,7 @@ export default function Support() {
       helpful:'89%';
     }
   ],;
-;
+
   const supportHours = [;
     {;
       day:'Monday - Friday',;
@@ -238,11 +238,11 @@ export default function Support() {
       status:'Limited';
     }
   ],;
-;
-  const filteredCategories = selectedCategory === 'all' ;
+
+  const filteredCategories = selectedCategory = = 'all' ;
     ? supportCategories ;
-    :supportCategories.filter(cat => cat.id === selectedCategory),;
-;
+    :supportCategories.filter(cat => cat.id = = selectedCategory),;
+
   return (;
     <div className="min-h-screen bg-black text-white">;
       {/* Hero Section */}
@@ -250,9 +250,9 @@ export default function Support() {
         <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/20 via-purple-900/20 to-pink-900/20" />;
         <div className="relative z-10 container mx-auto px-4">;
           <motion.div;
-            initial={{ opacity:0, y:20 }}
-            animate={{ opacity:1, y:0 }}
-            transition={{ duration:0.8 }}
+            initial={ opacity:0, y:20 }
+            animate={ opacity:1, y:0 }
+            transition={ duration:0.8 }
             className="text-center max-w-4xl mx-auto";
           >;
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">;
@@ -262,7 +262,6 @@ export default function Support() {
               Get the support you need for our AI consciousness, quantum computing, ;
               and autonomous systems. Our expert team is here to help 24/7.;
             </p>;
-            ;
             {/* Search Bar */}
             <div className="max-w-2xl mx-auto mb-8">;
               <div className="relative">;
@@ -276,7 +275,6 @@ export default function Support() {
                 />;
               </div>;
             </div>;
-            ;
             <div className="flex flex-wrap justify-center gap-6">;
               <div className="flex items-center gap-2 text-cyan-400">;
                 <HelpCircle className="w-6 h-6" />;
@@ -294,14 +292,14 @@ export default function Support() {
           </motion.div>;
         </div>;
       </section>;
-;
+
       {/* Quick Actions */}
       <section className="py-20">;
         <div className="container mx-auto px-4">;
           <motion.div;
-            initial={{ opacity:0, y:20 }}
-            whileInView={{ opacity:1, y:0 }}
-            transition={{ duration:0.8 }}
+            initial={ opacity:0, y:20 }
+            whileInView={ opacity:1, y:0 }
+            transition={ duration:0.8 }
             className="text-center mb-16";
           >;
             <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">;
@@ -309,40 +307,37 @@ export default function Support() {
             </h2>;
             <p className="text-xl text-gray-400">Choose your preferred support method</p>;
           </motion.div>;
-          ;
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
-            {quickActions.map((action, index) => (;
+            {quickActions.map(action, index) => (;
               <motion.div;
                 key={action.title}
-                initial={{ opacity:0, y:20 }}
-                whileInView={{ opacity:1, y:0 }}
-                transition={{ duration:0.8, delay:index * 0.1 }}
+                initial={ opacity:0, y:20 }
+                whileInView={ opacity:1, y:0 }
+                transition={ duration:0.8, delay:index * 0.1 }
                 className="group cursor-pointer";
               >;
                 <div className="p-6 bg-gradient-to-br from-gray-900/50 to-black/50 rounded-2xl border border-gray-800/50 hover:border-cyan-500/30 transition-all duration-300">;
                   <div className="flex justify-center mb-4 group-hover:scale-110 transition-transform duration-300">;
                     {action.icon}
                   </div>;
-                  ;
                   <h3 className="text-xl font-bold text-white mb-3 text-center">{action.title}</h3>;
                   <p className="text-gray-300 mb-4 text-center leading-relaxed">{action.description}</p>;
-                  ;
                   <button className={`w-full py-3 px-4 bg-gradient-to-r ${action.color} text-white rounded-xl font-semibold hover:shadow-2xl transition-all duration-300`}>;                    {action.action}
                   </button>;
                 </div>;
               </motion.div>;
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Support Categories */}
       <section className="py-20 bg-gradient-to-r from-gray-900/50 to-black">;
         <div className="container mx-auto px-4">;
           <motion.div;
-            initial={{ opacity:0, y:20 }}
-            whileInView={{ opacity:1, y:0 }}
-            transition={{ duration:0.8 }}
+            initial={ opacity:0, y:20 }
+            whileInView={ opacity:1, y:0 }
+            transition={ duration:0.8 }
             className="text-center mb-16";
           >;
             <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">;
@@ -350,42 +345,40 @@ export default function Support() {
             </h2>;
             <p className="text-xl text-gray-400">Find solutions organized by topic and service area</p>;
           </motion.div>;
-          ;
           {/* Category Filter */}
           <div className="flex justify-center mb-12">;
             <div className="flex flex-wrap gap-3">;
               <button;
                 onClick={() => setSelectedCategory('all')}
                 className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 ${;
-                  selectedCategory === 'all';
+                  selectedCategory = = 'all';
                     ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white';
                     :'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50';
                 }`}
               >;
                 All Categories;
               </button>;
-              {supportCategories.map((category) => (;
+              {supportCategories.map(category) => (;
                 <button;
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
                   className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 ${;
-                    selectedCategory === category.id;
+                    selectedCategory = = category.id;
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white';
                       :'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50';
                   }`}
                 >;                  {category.name}
                 </button>;
-              ))}
+              )}
             </div>;
           </div>;
-          ;
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {filteredCategories.map((category, index) => (;
+            {filteredCategories.map(category, index) => (;
               <motion.div;
                 key={category.id}
-                initial={{ opacity:0, y:20 }}
-                whileInView={{ opacity:1, y:0 }}
-                transition={{ duration:0.8, delay:index * 0.1 }}
+                initial={ opacity:0, y:20 }
+                whileInView={ opacity:1, y:0 }
+                transition={ duration:0.8, delay:index * 0.1 }
                 className="group cursor-pointer";
               >;
                 <div className="p-6 bg-gradient-to-br from-gray-900/30 to-black/30 rounded-2xl border border-gray-800/50 hover:border-cyan-500/30 transition-all duration-300">;
@@ -398,7 +391,6 @@ export default function Support() {
                       <p className="text-gray-300 text-sm leading-relaxed">{category.description}</p>;
                     </div>;
                   </div>;
-                  ;
                   <div className="flex items-center justify-between pt-4 border-t border-gray-800/50">;
                     <span className="text-sm text-gray-400">{category.articles} articles</span>;
                     <div className="flex items-center gap-2 text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300">;
@@ -407,17 +399,17 @@ export default function Support() {
                     </div>;
                   </div>;
                 </div>;
-              </motion.div>;            ))}
+              </motion.div>;            )}
           </div>;
         </section>;
-;
+
         {/* Support Channels */}
         <section className="py-20 px-4 bg-gradient-to-r from-gray-900/50 to-black/50">;
           <div className="max-w-6xl mx-auto">;
             <motion.div;
-              initial={{ opacity:0, y:20 }}
-              whileInView={{ opacity:1, y:0 }}
-              transition={{ duration:0.6 }}
+              initial={ opacity:0, y:20 }
+              whileInView={ opacity:1, y:0 }
+              transition={ duration:0.6 }
               className="text-center mb-16";
             >;
               <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">;
@@ -427,14 +419,14 @@ export default function Support() {
                 Multiple support channels to meet your needs;
               </p>;
             </motion.div>;
-;
+
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">;
-              {supportChannels.map((channel, index) => (;
+              {supportChannels.map(channel, index) => (;
                 <motion.div;
                   key={channel.title}
-                  initial={{ opacity:0, y:20 }}
-                  whileInView={{ opacity:1, y:0 }}
-                  transition={{ duration:0.6, delay:index * 0.1 }}
+                  initial={ opacity:0, y:20 }
+                  whileInView={ opacity:1, y:0 }
+                  transition={ duration:0.6, delay:index * 0.1 }
                   className="text-center p-6 bg-gradient-to-br from-gray-800/30 to-gray-900/30 rounded-2xl border border-gray-700/30 hover:border-cyan-500/50 transition-all duration-300";
                 >;
                   <div className="flex justify-center mb-4">;
@@ -456,9 +448,9 @@ export default function Support() {
                       <span className="text-purple-400">{channel.priority}</span>;
                     </div>;
                   </div>;
-                </motion.div>;                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                </motion.div>;                  initial={ opacity: 0, y: 20 }
+                  animate={ opacity: 1, y: 0 }
+                  transition={ duration: 0.5, delay: index * 0.1 }
                   className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 text-center"
                 >
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
@@ -479,11 +471,11 @@ export default function Support() {
                       <span className=&quot;text-gray-400&quot;>Priority:</span>
                       <span className=&quot;text-purple-400&quot;>{channel.priority}</span>                    </div>                  </div>
                 </motion.div>
-              ))}
+              )}
             </div>;
           </div>;
         </section>;
-;
+
         {/* Search and Filter */}
         <section className="py-12 px-4">;
           <div className="max-w-6xl mx-auto">;
@@ -501,15 +493,15 @@ export default function Support() {
                   />;
                 </div>;
               </div>;
-;
+
               {/* Category Filter */}
               <div className="flex flex-wrap gap-2">;
-                {supportCategories.map((category) => (;
+                {supportCategories.map(category) => (;
                   <button;
                     key={category.id}
                     onClick={() => setSelectedCategory(category.id)}
                     className={`px-4 py-2 rounded-lg border transition-all duration-300 flex items-center gap-2 ${;
-                      selectedCategory === category.id;
+                      selectedCategory = = category.id;
                         ? 'bg-cyan-500/20 border-cyan-500/50 text-cyan-400';
                         :'bg-gray-800/50 border-gray-600 text-gray-300 hover:bg-cyan-500/20 hover:border-cyan-500/50';
                     }`}
@@ -517,12 +509,12 @@ export default function Support() {
                     {category.icon}
                     {category.name}
                     <span className="text-sm text-gray-400">({category.count})</span>;
-                  </button>;                ))}
+                  </button>;                )}
               </div>;
             </div>;
           </div>;
         </section>;
-;
+
         {/* FAQ Section */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
             {[;
@@ -550,7 +542,7 @@ export default function Support() {
                 question:"What support do you offer for enterprise deployments?",;
                 answer:"We provide dedicated enterprise support including 24/7 technical assistance, custom training programs, and dedicated account managers for large-scale deployments.";
               }
-            ].map((faq, index) => (;
+            ].map(faq, index) => (;
               <div key={index} className="p-6 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 border border-white/10">;
                 <h3 className="text-lg font-semibold mb-3 text-white">{faq.question}</h3>;
                 <p className="text-gray-300 leading-relaxed">{faq.answer}</p>;
@@ -562,15 +554,15 @@ export default function Support() {
       <section className="py-20">;
         <div className="container mx-auto px-4">;
           <motion.div;
-            initial={{ opacity:0, y:20 }}
-            whileInView={{ opacity:1, y:0 }}
-            transition={{ duration:0.8 }}
+            initial={ opacity:0, y:20 }
+            whileInView={ opacity:1, y:0 }
+            transition={ duration:0.8 }
         <section id="knowledge-base" className="py-20 px-4 bg-gradient-to-r from-black/50 to-gray-900/50">;
           <div className="max-w-6xl mx-auto">;
             <motion.div;
-              initial={{ opacity:0, y:20 }}
-              whileInView={{ opacity:1, y:0 }}
-              transition={{ duration:0.6 }}
+              initial={ opacity:0, y:20 }
+              whileInView={ opacity:1, y:0 }
+              transition={ duration:0.6 }
               className="text-center mb-16";
             >;
               <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">;
@@ -580,8 +572,8 @@ export default function Support() {
                 Quick answers to common questions and solutions;
               </p>;
             </motion.div>;
-;
-            {filteredFAQs.length === 0 ? (;
+
+            {filteredFAQs.length = = 0 ? (;
               <div className="text-center py-20">;
                 <HelpCircle className="w-16 h-16 text-gray-400 mx-auto mb-4" />;
                 <h3 className="text-2xl font-semibold text-white mb-4">No results found</h3>;
@@ -589,39 +581,39 @@ export default function Support() {
               </div>;
             ) :(;
               <div className="space-y-6">;
-                {filteredFAQs.map((faq, index) => (;
+                {filteredFAQs.map(faq, index) => (;
                   <motion.div;
                     key={index}
-                    initial={{ opacity:0, y:20 }}
-                    whileInView={{ opacity:1, y:0 }}
-                    transition={{ duration:0.6, delay:index * 0.1 }}
+                    initial={ opacity:0, y:20 }
+                    whileInView={ opacity:1, y:0 }
+                    transition={ duration:0.6, delay:index * 0.1 }
                     className="p-6 bg-gradient-to-br from-gray-800/30 to-gray-900/30 rounded-2xl border border-gray-700/30";
                   >;
                     <h3 className="text-lg font-semibold text-white mb-3">{faq.question}</h3>;
                     <p className="text-gray-300 mb-4">{faq.answer}</p>;
                     <div className="flex flex-wrap gap-2">;
-                      {faq.tags.map((tag) => (;
+                      {faq.tags.map(tag) => (;
                         <span;
                           key={tag}
                           className="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm border border-cyan-500/30";
                         >;                          {tag}
                         </span>;
-                      ))}
+                      )}
                     </div>;
                   </motion.div>;
-                ))}
+                )}
               </div>;
             )}
           </div>;
         </section>;
-;
+
         {/* Support Resources */}
         <section className="py-20 px-4">;
           <div className="max-w-6xl mx-auto">;
             <motion.div;
-              initial={{ opacity:0, y:20 }}
-              whileInView={{ opacity:1, y:0 }}
-              transition={{ duration:0.6 }}
+              initial={ opacity:0, y:20 }
+              whileInView={ opacity:1, y:0 }
+              transition={ duration:0.6 }
               className="text-center mb-16";
             >;
               <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">;
@@ -631,14 +623,14 @@ export default function Support() {
                 Comprehensive documentation and learning materials;
               </p>;
             </motion.div>;
-;
+
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">;
-              {resources.map((resource, index) => (;
+              {resources.map(resource, index) => (;
                 <motion.div;
                   key={resource.title}
-                  initial={{ opacity:0, y:20 }}
-                  whileInView={{ opacity:1, y:0 }}
-                  transition={{ duration:0.6, delay:index * 0.1 }}
+                  initial={ opacity:0, y:20 }
+                  whileInView={ opacity:1, y:0 }
+                  transition={ duration:0.6, delay:index * 0.1 }
                   className="p-6 bg-gradient-to-br from-gray-800/30 to-gray-900/30 rounded-2xl border border-gray-700/30 hover:border-cyan-500/50 transition-all duration-300";
                 >;
                   <div className="flex justify-center mb-4">;
@@ -658,7 +650,7 @@ export default function Support() {
                     </a>;
                   </div>;
                 </motion.div>;
-              ))}
+              )}
             </div>;
             className="text-center mb-16";
           >;
@@ -667,14 +659,13 @@ export default function Support() {
             </h2>;
             <p className="text-xl text-gray-400">Most viewed and helpful support content</p>;
           </motion.div>;
-          ;
           <div className="max-w-4xl mx-auto space-y-4">;
-            {popularArticles.map((article, index) => (;
+            {popularArticles.map(article, index) => (;
               <motion.div;
                 key={article.title}
-                initial={{ opacity:0, x:-20 }}
-                whileInView={{ opacity:1, x:0 }}
-                transition={{ duration:0.8, delay:index * 0.1 }}
+                initial={ opacity:0, x:-20 }
+                whileInView={ opacity:1, x:0 }
+                transition={ duration:0.8, delay:index * 0.1 }
                 className="group cursor-pointer";
               >;
                 <div className="p-6 bg-gradient-to-br from-gray-900/50 to-black/50 rounded-2xl border border-gray-800/50 hover:border-cyan-500/30 transition-all duration-300">;
@@ -702,26 +693,25 @@ export default function Support() {
                         </span>;
                       </div>;
                     </div>;
-                    ;
                     <div className="flex items-center gap-2 text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300">;
                       <span className="text-sm font-medium">Read</span>;
                       <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />;
                     </div>;
                   </div>;
                 </div>;
-              </motion.div>;            ))}
+              </motion.div>;            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Support Hours & Contact */}
       <section className="py-20 bg-gradient-to-r from-gray-900/50 to-black">;
         <div className="container mx-auto px-4">;
           <div className="grid lg:grid-cols-2 gap-12 items-center">;
             <motion.div;
-              initial={{ opacity:0, x:-20 }}
-              whileInView={{ opacity:1, x:0 }}
-              transition={{ duration:0.8 }}
+              initial={ opacity:0, x:-20 }
+              whileInView={ opacity:1, x:0 }
+              transition={ duration:0.8 }
             >;
               <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">;
                 Support Hours & Availability;
@@ -730,29 +720,27 @@ export default function Support() {
                 Our expert support team is available to help you succeed with our ;
                 revolutionary technology solutions.;
               </p>;
-              ;
               <div className="space-y-4">;
-                {supportHours.map((schedule, index) => (;
+                {supportHours.map(schedule, index) => (;
                   <div key={schedule.day} className="flex items-center justify-between p-4 bg-gray-800/30 rounded-xl">;
                     <div>;
                       <h3 className="font-semibold text-white">{schedule.day}</h3>;
                       <p className="text-gray-400">{schedule.hours}</p>;
                     </div>;
                     <span className={`px-3 py-1 rounded-full text-sm font-medium ${;
-                      schedule.status === 'Available' ;
+                      schedule.status = = 'Available' ;
                         ? 'bg-green-500/20 text-green-400' ;
                         :'bg-yellow-500/20 text-yellow-400';
                     }`}>;                      {schedule.status}
                     </span>;
                   </div>;
-                ))}
+                )}
               </div>;
             </motion.div>;
-            ;
             <motion.div;
-              initial={{ opacity:0, x:20 }}
-              whileInView={{ opacity:1, x:0 }}
-              transition={{ duration:0.8 }}
+              initial={ opacity:0, x:20 }
+              whileInView={ opacity:1, x:0 }
+              transition={ duration:0.8 }
               className="relative";
             >;
               <div className="bg-gradient-to-br from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl p-8 border border-cyan-500/20">;
@@ -761,7 +749,6 @@ export default function Support() {
                   For urgent technical issues or critical support needs, ;
                   our team is available around the clock.;
                 </p>;
-                ;
                 <div className="space-y-4">;
                   <div className="flex items-center gap-3">;
                     <Phone className="w-5 h-5 text-cyan-400" />;
@@ -776,7 +763,6 @@ export default function Support() {
                     <span className="text-white">Live Chat Available</span>;
                   </div>;
                 </div>;
-                ;
                 <div className="mt-6 pt-6 border-t border-cyan-500/20">;
                   <a;
                     href="/contact";
@@ -791,14 +777,14 @@ export default function Support() {
           </div>;
         </div>;
       </section>;
-;
+
       {/* Contact CTA */}
       <section className="py-20 bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20">;
         <div className="container mx-auto px-4 text-center">;
           <motion.div;
-            initial={{ opacity:0, y:20 }}
-            whileInView={{ opacity:1, y:0 }}
-            transition={{ duration:0.8 }}
+            initial={ opacity:0, y:20 }
+            whileInView={ opacity:1, y:0 }
+            transition={ duration:0.8 }
           >;
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">;
               Still Need Help?;
@@ -827,19 +813,19 @@ export default function Support() {
       </section>;
     </div>;
   );
-},;
-;
+,;
+
 export default Support,;
           </div>;
         </section>;
-;
+
         {/* Contact Support */}
         <section id="contact-support" className="py-20 px-4 bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20">;
           <div className="max-w-4xl mx-auto text-center">;
             <motion.div;
-              initial={{ opacity:0, y:20 }}
-              whileInView={{ opacity:1, y:0 }}
-              transition={{ duration:0.6 }}
+              initial={ opacity:0, y:20 }
+              whileInView={ opacity:1, y:0 }
+              transition={ duration:0.6 }
             >;
               <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">;
                 Still Need Help?;
@@ -876,8 +862,8 @@ export default Support,;
       </main>;
     </Layout>;
   );
-},;
-;
+,;
+
 export default SupportPage,;                </div>
               </div>
             </motion.div>
@@ -888,9 +874,9 @@ export default SupportPage,;                </div>
       {/* Contact CTA */}
       <section className=&quot;py-20 bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20&quot;>
         <div className=&quot;container mx-auto px-4 text-center&quot;>          <motion.div,
-initial={_{ opacity: 0, y: 20}}
-            whileInView={_{ opacity: 1, y: 0}}
-            transition={_{ duration: 0.8}}
+initial={_{ opacity: 0, y: 20}
+            whileInView={_{ opacity: 1, y: 0}
+            transition={_{ duration: 0.8}
           >
             <h2 className=&quot;text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent&quot;>
               Still Need Help?
@@ -918,7 +904,7 @@ href=&quot;/resources&quot;
       </section>
     </div>
   )
-},
+,
 
 export default Support,
           </div>
@@ -927,9 +913,9 @@ export default Support,
         {/* Contact Support */}
         <section id=&quot;contact-support&quot; className=&quot;py-20 px-4 bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20&quot;>
           <div className=&quot;max-w-4xl mx-auto text-center&quot;>            <motion.div,
-initial={_{ opacity: 0, y: 20}}
-              whileInView={_{ opacity: 1, y: 0}}
-              transition={_{ duration: 0.6}}            >
+initial={_{ opacity: 0, y: 20}
+              whileInView={_{ opacity: 1, y: 0}
+              transition={_{ duration: 0.6}            >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Need Immediate Help?
               </h2>
@@ -961,6 +947,6 @@ href=&quot;tel:+13024640950&quot;
       </main>
     </Layout>
   )
-},
+,
 
 export default SupportPage,

@@ -9,8 +9,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       supabase.from('jobs').select('id, client_id, status, posted_at, hired_at').eq('client_id', clientId),
       supabase.from('quotes').select('id, job_id, status, created_at').eq('client_id', clientId)]),
 
-    const jobs = jobsR.status === 'fulfilled' && jobsR.value.data ? jobsR.value.data as any[] : [],
-    const quotes = quotesR.status === 'fulfilled' && quotesR.value.data ? quotesR.value.data as any[] : [],
+    const jobs = jobsR.status = = 'fulfilled' && jobsR.value.data ? jobsR.value.data as any[] : [],
+    const quotes = quotesR.status = = 'fulfilled' && quotesR.value.data ? quotesR.value.data as any[] : [],
 
     const jobsData = jobs.length ? jobs : [
       { id: 11, client_id: 'c1', status: 'posted', posted_at: '2025-01-01' },
@@ -24,9 +24,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const jobsPosted = jobsData.length,
     const quotesReceived = quotesData.length,
 
-    const filled = jobsData.filter(j => j.status === 'filled'),
+    const filled = jobsData.filter(j => j.status = = 'filled'),
     const timeToHireDays = filled.length
-      ? filled.reduce((acc, j) => acc + ((new Date(j.hired_at).getTime() - new Date(j.posted_at).getTime()) / (1000 * 60 * 60 * 24)), 0) / filled.length
+      ? filled.reduce(acc, j) => acc + (new Date(j.hired_at).getTime() - new Date(j.posted_at).getTime() / (1000 * 60 * 60 * 24), 0) / filled.length
       : 0,
 
     const talentViewed = 12, // Placeholder
@@ -34,7 +34,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const funnel = [
       { label: 'Post', value: jobsData.length },
-      { label: 'Invite', value: Math.max(shortlisted, Math.floor(jobsData.length * 0.8)) },
+      { label: 'Invite', value: Math.max(shortlisted, Math.floor(jobsData.length * 0.8) },
       { label: 'Hire', value: filled.length }],
 
     res.status(200).json({
@@ -54,4 +54,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       funnel: [
         { label: 'Post', value: 3 },
         { label: 'Invite', value: 2 },
-        { label: 'Hire', value: 2 }]})  }}
+        { label: 'Hire', value: 2 }]})  }

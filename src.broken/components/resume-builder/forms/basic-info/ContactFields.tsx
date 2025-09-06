@@ -6,5 +6,3 @@ export function ContactFields() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

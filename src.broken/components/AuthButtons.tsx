@@ -6,5 +6,3 @@ export function AuthButtons() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

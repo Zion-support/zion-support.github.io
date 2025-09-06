@@ -7,6 +7,5 @@ const Logo.js = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default Logo.js;

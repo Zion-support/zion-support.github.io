@@ -6,5 +6,3 @@ export function OnboardingWizard() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

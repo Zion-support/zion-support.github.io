@@ -11,7 +11,6 @@ export default function Skeleton(_{_className = ''}: SkeletonProps) {_return (
       <style jsx global>{_`
         @keyframes shimmer {
           100% { transform: translateX(100%);}
-        }
       `}</style>;
     </div>;
   );}

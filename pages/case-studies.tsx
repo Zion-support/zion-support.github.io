@@ -18,7 +18,7 @@ import {
   BarChart3
   Cloud
   Shield
-} from 'lucide-react';
+ from 'lucide-react';
 const caseStudies = [
   {
     id: 1
@@ -74,13 +74,13 @@ const caseStudies = [
     technologies: ["Cybersecurity", "SIEM", "Compliance", "Monitoring"]
     image: "/images/case-studies/healthcare-security.jpg"
   }
-];
+;
 const stats = [
   { number: "500+", label: "Projects Completed" }
   { number: "50+", label: "Happy Clients" }
   { number: "99.9%", label: "Success Rate" }
   { number: "24/7", label: "Support Available" }
-];
+;
 
 export default function CaseStudiesPage() {;
   return (
@@ -97,9 +97,9 @@ export default function CaseStudiesPage() {;
           </div>
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }
               className="text-center">;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">;
                 Success{' '}
@@ -118,20 +118,20 @@ export default function CaseStudiesPage() {;
         <section className="py-16 bg-white">;
           <div className="container mx-auto px-4">;
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">;
-              {stats && stats.map((stat, index) => (;
+              {stats && stats.map(stat, index) => (;
                 <motion&& motion.div
                   key={index}
                   className="text-center"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
-                  viewport={{ once: true }}>;
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0 && 0.8, delay: index * 0 && 0.1 }
+                  viewport={ once: true }>;
                   <div className="text-3xl md:text-4xl font-bold text-green-600 mb-2">;
                     {stat && stat.number}
                   </div>;
                   <div className="text-gray-600 font-medium">{stat && stat.label}</div>;
                 </motion && motion.div>;
-              ))}
+              )}
             </div>
           </div>
         </section>
@@ -140,10 +140,10 @@ export default function CaseStudiesPage() {;
           <div className="container mx-auto px-4">;
             <motion&& motion.div
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
                 Featured Case Studies
@@ -155,14 +155,14 @@ export default function CaseStudiesPage() {;
             </motion.div>
             <div className="max-w-6xl mx-auto">
               <div className="space-y-16">
-                {caseStudies.map((study, index) => (
+                {caseStudies.map(study, index) => (
                   <motion.div
                     key={study.id}
                     className="bg - white rounded - lg shadow - lg overflow - hidden";
-                    initial={{ opacity: 0, coordinate_y: 30 }}
-                    whileInView={{ opacity: 1, coordinate_y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.2 }}
-                    viewport={{ once: true }}
+                    initial={ opacity: 0, coordinate_y: 30 }
+                    whileInView={ opacity: 1, coordinate_y: 0 }
+                    transition={ duration: 0.8, delay: index * 0.2 }
+                    viewport={ once: true }
                   >;
                     <div className="grid grid - cols - 1 lg:grid - cols - 2">;
                       <div className="p - 8">;
@@ -191,20 +191,20 @@ export default function CaseStudiesPage() {;
                         <div className="mb-6">
                           <h4 className="font-semibold text-gray-900 mb-3">Key Results:</h4>
                           <ul className="space-y-2">
-                            {study.results.map((result, idx) => (
+                            {study.results.map(result, idx) => (
                               <li key={idx} className="flex items-center text-gray-600">
                                 <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
                                 {result}
                               </li>;
-                            ))}
+                            )}
                           </ul>
                         </div>
                         <div className="flex flex-wrap gap-2 mb-6">
-                          {study.technologies.map((tech, idx) => (
+                          {study.technologies.map(tech, idx) => (
                             <span key={idx} className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">
                               {tech}
                             </span>;
-                          ))}
+                          )}
                         </div>
                         <div className="flex items-center justify-between">
                           <div className="flex items-center text-sm text-gray-600">
@@ -231,7 +231,7 @@ export default function CaseStudiesPage() {;
                       </div>
                     </div>
                   </motion.div>
-                ))}
+                )}
               </div>
             </div>
           </div>
@@ -242,7 +242,7 @@ export default function CaseStudiesPage() {;
                       </div>;
                     </div>;
                   </motion && motion.div>;
-                ))}
+                )}
               </div>;
             </div>;
           </div>;
@@ -253,10 +253,10 @@ export default function CaseStudiesPage() {;
           <div className="container mx-auto px-4">;
             <motion&& motion.div
               className="text-center"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Ready to Start Your Success Story?
@@ -284,7 +284,7 @@ export default function CaseStudiesPage() {;
       </div>
     </MainLayout>
   );
-}
+
 import Head from 'next/head';
 import Link from 'next/link';
 import Layout from '../components/Layout';
@@ -325,16 +325,16 @@ export default function CaseStudiesPage() {
 			</section>
 		</Layout>
 	)
-}
+
         {/* CTA Section */}
         <section className="py - 20 bg - gradient - to - r from - green - 600 to - teal - 600 text - white">;
           <div className="container mx - auto px - 4">;
             <motion.div;
               className="text - center";
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, coordinate_y: 30 }
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >;
               <h2 className="text - 3xl md:text - 4xl font - bold mb - 6">;
                 Ready to Start Your Success Story?;
@@ -362,10 +362,10 @@ export default function CaseStudiesPage() {
         </section>;
       </div>;
     </MainLayout>);
-}
+
 import Link from 'next / link';
 import Layout from '../components / Layout';
-;
+
 export default /**
  * CaseStudiesPage - Function description
  */
@@ -389,7 +389,7 @@ function CaseStudiesPage() {
         </p>;
       </section>;
     </Layout>);
-;
+
 </Head> </section> </Layout>;
 return (
   <Layout>;
@@ -403,4 +403,3 @@ return (
     <p className="text - gray - 300">Proven outcomes and detailed success stories. Coming soon.</p>;
   </section>;
   </Layout>);
-}

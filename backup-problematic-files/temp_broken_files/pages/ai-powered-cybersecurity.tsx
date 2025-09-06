@@ -1,7 +1,7 @@
 import React from 'react',;
 import Head from 'next/head',;
 import ServiceLanding from '../components/sections/ServiceLanding',;
-;
+
 export default function AIPoweredCybersecurityPage() {;
 	return (;
 		<>;
@@ -54,4 +54,3 @@ export default function AIPoweredCybersecurityPage() {_return (
 			/>
 		</>
 	)
-}

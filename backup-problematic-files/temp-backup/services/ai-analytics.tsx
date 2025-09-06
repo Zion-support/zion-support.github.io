@@ -3,7 +3,6 @@ import React from 'react';
 
 interface Ai-analyticsProps {
   className?: string;
-}
 
 const Ai-analytics: React.FC<Ai-analyticsProps> = ({ className }) => {
   return (
@@ -12,6 +11,3 @@ const Ai-analytics: React.FC<Ai-analyticsProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-}
-}
-}

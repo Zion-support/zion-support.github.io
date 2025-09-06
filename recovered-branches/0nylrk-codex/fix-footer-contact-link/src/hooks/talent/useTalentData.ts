@@ -1,10 +1,8 @@
 
-
 import {useState} from 'react';
 import {TALENT_PROFILES} from '@/data/talentData';
 import {TalentProfile} from '@/types/talent';
 export function useTalentData() {;
-
 
   const [isLoading, setIsLoading] = useState(false);
 
@@ -17,8 +15,4 @@ export function useTalentData() {;
 
     isLoading;
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
-}

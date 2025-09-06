@@ -15,13 +15,13 @@ interface TemplateManagerProps {
   onSelectTemplate: (template: ContractFormValues) => void
 
   currentValues?: ContractFormValues
-}
+
 export function TemplateManager({
   isOpen;
   onClose;
   onSelectTemplate;
   currentValues
-}: TemplateManagerProps) {
+: TemplateManagerProps) {
   const [mode, setMode] = useState<"list" | "save">("list"),
   const [selectedTemplate, setSelectedTemplate] = useState<ContractTemplate | null>(null),
   const { templates, isLoading } = useContractTemplates();
@@ -35,7 +35,6 @@ export function TemplateManager({
         title: "Template loaded"
         description: `Template "${template.title}" has been loaded.`})
     }
-  }
   const handleSaveComplete = () => {
     setMode("list");
     setSelectedTemplate(null)
@@ -45,10 +44,10 @@ export function TemplateManager({
       <DialogContent className="sm:max-w-lg max-h-[90vh] overflow-y-auto">;
         <DialogHeader>;
           <DialogTitle>;
-            {mode === "list" ? "Contract Templates" : "Save Template"}
+            {mode = = "list" ? "Contract Templates" : "Save Template"}
           </DialogTitle>
         </DialogHeader>
-        {mode === "list" ? (
+        {mode = = "list" ? (
           <div className="space-y-4">
             <div className="flex justify-end">
               <Button
@@ -58,8 +57,7 @@ export function TemplateManager({
               >
                 Save Current as Template
               </Button>
-            </div>
-              >;
+            </div>;
                 Save Current as Template;
               </Button>;
             </div>;
@@ -71,7 +69,7 @@ export function TemplateManager({
               onEdit={(template) => {;
                 setSelectedTemplate(template);
                 setMode("save");
-              }}
+              }
             />
           </div>
         ) : (
@@ -80,7 +78,7 @@ export function TemplateManager({
               setMode("list");
 
               setSelectedTemplate(null)
-            }}
+            }
             onComplete={handleSaveComplete}
             editTemplate={selectedTemplate}
             currentValues={currentValues}
@@ -89,7 +87,7 @@ export function TemplateManager({
       </DialogContent>
     </Dialog>
   )
-}
+
             <TemplateList;
               templates={templates}
               is_loading={is_loading}
@@ -97,18 +95,17 @@ export function TemplateManager({
               on_edit={(template) => {
                 setSelectedTemplate (template);
                 set_mode ("save");
-              }}
+              }
             />;
           </div>) : (
           <TemplateSaveForm;
             on_cancel={() => {
               set_mode ("list");
               setSelectedTemplate (null);
-            }}
+            }
             on_complete={handleSaveComplete}
             edit_template={selected_template}
             current_values={current_values}
           />)}
       </DialogContent>;
     </Dialog>);
-}

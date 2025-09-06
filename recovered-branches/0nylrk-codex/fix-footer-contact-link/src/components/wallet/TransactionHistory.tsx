@@ -19,8 +19,8 @@ export function TransactionHistory() {
     );
   }
 
-  const earnTransactions = transactions && transactions.filter(tx => tx && tx.transaction_type === 'earn');
-  const burnTransactions = transactions && transactions.filter(tx => tx && tx.transaction_type === 'burn');
+  const earnTransactions = transactions && transactions.filter(tx => tx && tx.transaction_type = = 'earn');
+  const burnTransactions = transactions && transactions.filter(tx => tx && tx.transaction_type = = 'burn');
 
   return (
     <Card>
@@ -36,7 +36,7 @@ export function TransactionHistory() {
           </TabsList>
           <TabsContent value="earned">
             <ScrollArea className="h-64">
-              {earnTransactions.length === 0 ? (
+              {earnTransactions.length = = 0 ? (
                 <p className="text-center py-8 text-muted-foreground">No tokens earned yet</p>
               ) : (
                 <div className="space-y-2 mt-2">
@@ -52,14 +52,14 @@ export function TransactionHistory() {
                         +{tx.amount} ZION$
                       </Badge>
                     </div>
-                  ))}
+                  )}
                 </div>;
               )}
             </ScrollArea>
           </TabsContent>
           <TabsContent value="spent">
             <ScrollArea className="h-64">
-              {burnTransactions.length === 0 ? (
+              {burnTransactions.length = = 0 ? (
                 <p className="text-center py-8 text-muted-foreground">No tokens spent yet</p>
               ) : (
                 <div className="space-y-2 mt-2">
@@ -75,7 +75,7 @@ export function TransactionHistory() {
                         -{tx.amount} ZION$
                       </Badge>
                     </div>
-                  ))}
+                  )}
                 </div>;
               )}
             </ScrollArea>
@@ -84,13 +84,12 @@ export function TransactionHistory() {
       </CardContent>
     </Card>
   )
-}
+
             </ScrollArea>;
           </TabsContent>;
         </Tabs>;
       </CardContent>;
     </Card>;
   );
-}
+
     </Card>);
-}

@@ -11,14 +11,13 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     const file = path.join(process.cwd(), 'publicautomationcontent-map.json'),
     const raw = fs.readFileSync(file, 'utf8'),
     const data = JSON.parse(raw),
-    return { props: { report: data }, revalidate: 21600 }
-  } catch {
-    return { props: { report: null }, revalidate: 21600 }  }
-},
+    return { props: { report: data }, revalidate: 21600 } catch {
+    return { props: { report: null }, revalidate: 21600 }
+,
 
 export default function ContentMap({ report }: Props) {
   if (!report) return <div>No content map yet. Check back later.</div>,
-  const sections = Object.entries(report.bySection).sort((a, b) => b[1] - a[1]),
+  const sections = Object.entries(report.bySection).sort(a, b) => b[1] - a[1]),
   return (
     <div className=&quot;space-y-6&quot;>
       <header className=&quot;space-y-1&quot;>
@@ -32,15 +31,15 @@ export default function ContentMap({ report }: Props) {
       <section>
         <h2 className=&quot;font-semibold mb-2&quot;>Pages by Section</h2>
         <ul className=&quot;text-sm space-y-1&quot;>
-          {sections.map(([sec, n]) => (
-            <li key={sec} className=&quot;flex justify-between&quot;><span>{sec || 'root'}</span><span className=&quot;text-gray-500&quot;>{n}</span></li>          ))}
+          {sections.map([sec, n]) => (
+            <li key={sec} className=&quot;flex justify-between&quot;><span>{sec || 'root'}</span><span className=&quot;text-gray-500&quot;>{n}</span></li>          )}
         </ul>
       </section>
       <section>
         <h2 className=&quot;font-semibold mb-2&quot;>All Pages</h2>
         <ul className=&quot;text-sm space-y-1 max-h-96 overflow-auto border rounded p-3 border-gray-200 dark:border-gray-800&quot;>
-          {report.pages.map((p, i) => (
-            <li key={i} className=&quot;flex justify-between gap-4&quot;><span className=&quot;truncate&quot;>{p.route}</span><span className=&quot;text-gray-500 truncate&quot;>{p.file}</span></li>          ))}
+          {report.pages.map(p, i) => (
+            <li key={i} className=&quot;flex justify-between gap-4&quot;><span className=&quot;truncate&quot;>{p.route}</span><span className=&quot;text-gray-500 truncate&quot;>{p.file}</span></li>          )}
         </ul>
       </section>
     </div>

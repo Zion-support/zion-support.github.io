@@ -6,14 +6,14 @@ import {
   Rocket, Shield, Cpu, Target, Microscope, Users,
   Facebook, Twitter, Linkedin, Instagram, Youtube,
   Github, ArrowRight, Heart, Star, Award, CheckCircle
-} from 'lucide-react',
+ from 'lucide-react',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-},
+,
 const _serviceCategories = [
   {_title: ' AI & Consciousness', _services: [
       { name: 'AI Consciousness Evolution', _href: '/ai-consciousness-evolution-platform'},
@@ -57,7 +57,7 @@ const _serviceCategories = [
       {_name: 'AI HR Management Suite 2030', _href: '/ai-hr-management-suite-2030'}
     ]
   }
-],
+,
 
 const quickLinks = [
   { name: 'Home', href: '/' },
@@ -68,7 +68,7 @@ const quickLinks = [
   { name: 'Case Studies', href: '/case-studies' },
   { name: 'Blog', href: '/blog' },
   { name: 'Contact', href: '/contact' }
-],
+,
 
 const companyInfo = [
   { name: 'About Us', href: '/about' },
@@ -77,7 +77,7 @@ const companyInfo = [
   { name: 'Partners', href: '/partners' },
   { name: 'Support', href: '/support' },
   { name: 'Status', href: '/status' }
-],
+,
 
 const socialLinks = [
   { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
@@ -86,11 +86,11 @@ const socialLinks = [
   { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },
   { name: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: Youtube },
   { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github }
-],
+,
 
 const certifications = [
   'ISO 27001 CertifiedSOC 2 Type II CompliantGDPR CompliantHIPAA CompliantPCI DSS Level 1FedRAMP Authorized'
-],
+,
 
 export default function UltraFuturisticFooter2030() {
   return (
@@ -121,7 +121,7 @@ export default function UltraFuturisticFooter2030() {
                   <p className=&quot;text-sm text-gray-400&quot;>2030 Future Technology</p>
                 </div>
               </div>
-              
+
               <p className=&quot;text-gray-300 text-sm leading-relaxed&quot;>
                 Pioneering the future with cutting-edge AI, quantum computing, and emerging technologies. 
                 Transforming businesses through innovative solutions and intelligent automation.
@@ -160,24 +160,24 @@ export default function UltraFuturisticFooter2030() {
                 <span>Our Services</span>
               </h4>
               <div className=&quot;grid grid-cols-1 gap-4&quot;>
-                {serviceCategories.slice(0, 3).map((category, index) => (
+                {serviceCategories.slice(0, 3).map(category, index) => (
                   <div key={index} className=&quot;space-y-2&quot;>
                     <h5 className=&quot;text-sm font-medium text-purple-300&quot;>{category.title}</h5>
                     <div className=&quot;space-y-1&quot;>
-                      {category.services.map((service, serviceIndex) => (
+                      {category.services.map(service, serviceIndex) => (
                         <Link
                           key={serviceIndex}
                           href={service.href}
                           className=&quot;block text-xs text-gray-400 hover:text-purple-300 transition-colors&quot;
                         >
                           {service.name}
-                        </a>                      ))}
+                        </a>                      )}
                     </div>
                   </div>
-                ))}
+                )}
               </div>;
             </div>;
-;
+
             {/* Quick Links */}
             <div className=&quot;space-y-6&quot;>
               <h4 className=&quot;text-lg font-semibold text-white flex items-center space-x-2&quot;>
@@ -185,7 +185,7 @@ export default function UltraFuturisticFooter2030() {
                 <span>Quick Links</span>
               </h4>
               <div className=&quot;space-y-2&quot;>
-                {quickLinks.map((link, index) => (
+                {quickLinks.map(link, index) => (
                   <Link
                     key={index}
                     href={link.href}
@@ -194,19 +194,19 @@ export default function UltraFuturisticFooter2030() {
                     <ArrowRight className=&quot;w-3 h-3 group-hover:translate-x-1 transition-transform&quot; />
                     <span>{link.name}</span>
                   </a>
-                ))}
+                )}
               </div>
 
               <div className=&quot;space-y-2&quot;>
                 <h5 className=&quot;text-sm font-medium text-cyan-300&quot;>Company</h5>
-                {companyInfo.map((link, index) => (
+                {companyInfo.map(link, index) => (
                   <Link
                     key={index}
                     href={link.href}
                     className=&quot;block text-xs text-gray-400 hover:text-cyan-300 transition-colors&quot;
                   >
                     {link.name}
-                  </a>                ))}
+                  </a>                )}
               </div>
             </div>
 
@@ -216,12 +216,12 @@ export default function UltraFuturisticFooter2030() {
                 <Users className=&quot;w-5 h-5 text-green-400&quot; />
                 <span>Connect & Trust</span>
               </h4>
-              
+
               {/* Social Links */}
               <div className=&quot;space-y-3&quot;>
                 <h5 className=&quot;text-sm font-medium text-green-300&quot;>Follow Us</h5>
                 <div className=&quot;flex flex-wrap gap-2&quot;>
-                  {socialLinks.map((social, index) => (
+                  {socialLinks.map(social, index) => (
                     <a
                       key={index}
                       href={social.href}
@@ -230,10 +230,10 @@ export default function UltraFuturisticFooter2030() {
                       className=&quot;w-10 h-10 bg-gray-800/50 hover:bg-purple-500/20 rounded-lg flex items-center justify-center text-gray-400 hover:text-purple-400 transition-all duration-200 hover:shadow-lg hover:shadow-cyan-400/40&quot;                    >
                       <social.icon className=&quot;w-5 h-5&quot; />
                     </a>
-                  ))}
+                  )}
                 </div>;
               </div>;
-;
+
               {/* Certifications */}
               <div className=&quot;space-y-3&quot;>
                 <h5 className=&quot;text-sm font-medium text-green-300 flex items-center space-x-2&quot;>
@@ -241,17 +241,17 @@ export default function UltraFuturisticFooter2030() {
                   <span>Certifications</span>
                 </h5>
                 <div className=&quot;grid grid-cols-1 gap-2&quot;>
-                  {certifications.map((cert, index) => (
+                  {certifications.map(cert, index) => (
                     <div key={index} className=&quot;flex items-center space-x-2 text-xs text-gray-400&quot;>
                       <CheckCircle className=&quot;w-3 h-3 text-green-400&quot; />
                       <span>{cert}</span>                    </div>
-                  ))}
+                  )}
                 </div>;
               </div>;
             </div>;
           </div>;
         </div>;
-;
+
         {/* Bottom Bar */}
         <div className="border-t border-purple-500/20">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-6">
@@ -268,7 +268,7 @@ export default function UltraFuturisticFooter2030() {
                 <Link href=&quot;/privacy&quot; className=&quot;hover:text-purple-400 transition-colors&quot;>Privacy Policy</a>
                 <Link href=&quot;/terms&quot; className=&quot;hover:text-purple-400 transition-colors&quot;>Terms of Service</a>
               </div>
-              
+
               <div className=&quot;flex items-center space-x-4 text-sm text-gray-400&quot;>
                 <div className=&quot;flex items-center space-x-2&quot;>
                   <Heart className=&quot;w-4 h-4 text-red-400&quot; />
@@ -285,4 +285,3 @@ export default function UltraFuturisticFooter2030() {
       </div>
     </footer>
   )
-}

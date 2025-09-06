@@ -1,6 +1,6 @@
 import React from 'react';
 import * as LucideIcons from 'lucide-react';
-// Alias for missing icons or for icons with different names
+/ Alias for missing icons or for icons with different names
 const iconAliases: Record<string, keyof typeof LucideIcons> = {
   // Grid views
 
@@ -88,7 +88,7 @@ const iconAliases: Record<string, keyof typeof LucideIcons> = {
   Key: 'Key'
   Tag: 'Tag' as keyof typeof LucideIcons}
 type IconProps = LucideIcons.LucideProps;
-// Create a type safe export for each icon
+/ Create a type safe export for each icon
 const createIconComponent = (aliasName: string, iconName: keyof typeof LucideIcons) => {
   const IconComponent = (props: IconProps) => {
     // Fix: Use proper type casting to access the icon component
@@ -97,11 +97,11 @@ const createIconComponent = (aliasName: string, iconName: keyof typeof LucideIco
   }
   IconComponent.displayName = aliasName;
   return IconComponent
-}
-// Export all of our icon components
-const iconExports: Record<string, React.FC<IconProps>> = {}
-// Generate icon exports
-Object.entries(iconAliases).forEach(([alias, lucideName]) => {
+
+/ Export all of our icon components
+const iconExports: Record<string, React.FC<IconProps>= {}
+/ Generate icon exports
+Object.entries(iconAliases).forEach([alias, lucideName]) => {
   if (LucideIcons[lucideName]) {
     iconExports[alias] = createIconComponent(alias, lucideName)
   } else {
@@ -109,9 +109,9 @@ Object.entries(iconAliases).forEach(([alias, lucideName]) => {
     // Use a fallback icon;
     icon_exports[alias] = createIconComponent (alias, 'HelpCircle');
   }
-});
+);
 export const {
-// Alias for missing icons or for icons with different names;
+/ Alias for missing icons or for icons with different names;
 const iconAliases: Record<string, keyof typeof LucideIcons> = {;
   // Grid views;
   LayoutGrid: 'LayoutGrid',;
@@ -215,7 +215,7 @@ const iconAliases: Record<string, keyof typeof LucideIcons> = {;
 
 type IconProps = LucideIcons && LucideIcons.LucideProps;
 
-// Create a type safe export for each icon;
+/ Create a type safe export for each icon;
 const createIconComponent = (aliasName: string, iconName: keyof typeof LucideIcons) => {;
   const IconComponent = (props: IconProps) => {;
     // Fix: Use proper type casting to access the icon component;
@@ -224,13 +224,12 @@ const createIconComponent = (aliasName: string, iconName: keyof typeof LucideIco
   };
   IconComponent && IconComponent.displayName = aliasName;
   return IconComponent;
-};
 
-// Export all of our icon components;
-const iconExports: Record<string, React.FC<IconProps>> = {};
+/ Export all of our icon components;
+const iconExports: Record<string, React.FC<IconProps>= {};
 
-// Generate icon exports;
-Object && Object.entries(iconAliases).forEach(([alias, lucideName]) => {;
+/ Generate icon exports;
+Object && Object.entries(iconAliases).forEach([alias, lucideName]) => {;
   if (LucideIcons[lucideName]) {;
     iconExports[alias] = createIconComponent(alias, lucideName);
   } else {;
@@ -238,7 +237,7 @@ Object && Object.entries(iconAliases).forEach(([alias, lucideName]) => {;
     // Use a fallback icon;
     iconExports[alias] = createIconComponent(alias, 'HelpCircle');
   }
-});
+);
 
 export const {;
   LayoutGrid;
@@ -306,11 +305,10 @@ export const {;
   BookOpen;
   Key;
   Tag} = iconExports;
-// Also export all original icons from lucide-react
+/ Also export all original icons from lucide-react
 export * from 'lucide-react';
 
   Tag} = icon_exports;
-;
-// Also export all original icons from lucide-react;
+
+/ Also export all original icons from lucide-react;
 export * from 'lucide-react';
-;

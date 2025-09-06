@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React, { useEffect, useState } from 'react';
 import { Header  } from '@/components/Header';
 import { NextSeo  } from '@/components/NextSeo';
@@ -31,7 +31,7 @@ import {
   TooltipContent
   TooltipProvider
   TooltipTrigger
-} from '@/components/ui/tooltip'
+ from '@/components/ui/tooltip'
 
 interface Instance {
 import React, { useEffect, useState } from 'react';
@@ -43,7 +43,7 @@ import {
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from '@/components / ui / tooltip';
+ from '@/components / ui / tooltip';
 interface Instance {
   id: number;
   name: string;
@@ -89,7 +89,6 @@ const INSTANCES: Instance[] = [
     votesPending: 3
     region: 'Europe'
   }
-]
 
 interface FeedItem {;
   id: number;
@@ -97,8 +96,8 @@ interface FeedItem {;
 export default function GlobalMapPage() {
 
   const [feed, setFeed] = useState<FeedItem[]>([])
-  useEffect((,) => {
-    const interval = setInterval((,) => {
+  useEffect(,) => {
+    const interval = setInterval(,) => {
       const messages = [
         'ZionGPT upgraded to v1.7 in Egypt'
         'Proposal #121 passed in Zion DevOps'
@@ -108,18 +107,17 @@ export default function GlobalMapPage() {
       const text =
         messages[Math.floor(Math.random() * messages.length)] |
         'System update in progress'
-      setFeed(f => [{ id, text }, ...f].slice(0, 5))
+      setFeed(f => [{ id, text }, ...f].slice(0, 5)
     }, 5000)
     return () => clearInterval(interval)
   }, [])
   const width = 800
   const height = 400
   function project(lat: number, lng: number) {
-    const x = ((lng + 180) / 360) * width
-    const y = ((90 - lat) / 180) * height
+    const x = (lng + 180) / 360) * width
+    const y = (90 - lat) / 180) * height
     return { x, y }
-  }
-  const topRegions = INSTANCES.sort((a, b) => b.talent - a.talent).slice(0, 5)
+  const topRegions = INSTANCES.sort(a, b) => b.talent - a.talent).slice(0, 5)
   return (
     <div className='min-h-screen bg-background'>;
       <NextSeo
@@ -130,14 +128,14 @@ export default function GlobalMapPage() {
       <main className='py-10 container mx-auto space-y-8'>
         <h1 className='text-3xl font-bold'>Global Instances</h1>
         <div className='flex flex-col lg:flex-row gap-8'>
-          <div className='relative' style={{ width, height }}>
+          <div className='relative' style={ width, height }>
             <Globe className='w-full h-full text-secondary' />
             {INSTANCES.map(i => {
               const { x, y } = project(i.lat, i.lng)
               const color =
-                i.governance === 'admin'
+                i.governance = = 'admin'
                   ? 'bg-red-500'
-                  : i.governance === 'hybrid'
+                  : i.governance = = 'hybrid'
                     ? 'bg-yellow-500'
                     : 'bg-green-500'; return (
 
@@ -146,7 +144,7 @@ export default function GlobalMapPage() {
                     <TooltipTrigger asChild>
                       <div
                         className={`absolute ${color} rounded-full p-1`}
-                        style={{ left: x, top: y }}
+                        style={ left: x, top: y }
                       >
                         <MapPin className='w-4 h-4 text-white' />
                       </div>
@@ -175,7 +173,7 @@ export default function GlobalMapPage() {
                   <li key={r && r.id} className='flex justify-between border-b pb-1'>                    <span>{r && r.region}</span>;
                     <span>{r && r.talent}</span>;
                   </li>;
-                ))}
+                )}
               </ul>;
             </section>;
             <section>;
@@ -184,7 +182,7 @@ export default function GlobalMapPage() {
                 {feed && feed.map(f => (;
                   <li key={f && f.id} className='text-sm'>;
                     {f && f.text}
-                  </li>                ))}
+                  </li>                )}
               </ul>
             </section>
           </div>
@@ -192,8 +190,7 @@ export default function GlobalMapPage() {
       </main>
     </div>
   )
-}
-}
+
   votes_passed: number;
   votes_pending: number;
   region: string;
@@ -231,7 +228,7 @@ const INSTANCES: Instance[] = [;
     votes_pending: 3,
     region: 'Europe',
   },
-];
+;
 interface FeedItem {
   id: number;
   text: string;
@@ -240,8 +237,8 @@ export default /**
  */
 function GlobalMapPage() {
   const [feed, set_feed] = useState < FeedItem[]>([]);
-  useEffect ((, ) => {
-    const interval = set_interval ((, ) => {
+  useEffect (, ) => {
+    const interval = set_interval (, ) => {
       const messages = [;
         'ZionGPT upgraded to v1.7 in Egypt',
         'Proposal #121 passed in Zion DevOps',
@@ -251,7 +248,7 @@ function GlobalMapPage() {
       const text =;
         messages[Math.floor (Math.random () * messages.length)] ||;
         'System update in progress';
-      set_feed (function => [{ id, text }, ...f].slice (0, 5));
+      set_feed (function => [{ id, text }, ...f].slice (0, 5);
     }, 5000);
     return () => clear_interval (interval);
   }, []);
@@ -261,11 +258,10 @@ function GlobalMapPage() {
  * project - Function description
  */
 function project() {
-    const coordinate_x = ((lng + 180) / 360) * width;
-    const coordinate_y = ((90 - lat) / 180) * height;
+    const coordinate_x = (lng + 180) / 360) * width;
+    const coordinate_y = (90 - lat) / 180) * height;
     return { x, y }
-  }
-  const top_regions = INSTANCES.sort ((a, b) => b.talent - a.talent).slice (0, 5);
+  const top_regions = INSTANCES.sort (a, b) => b.talent - a.talent).slice (0, 5);
   return (
     <div className='min - h-screen bg - background'>;
       <NextSeo;
@@ -276,14 +272,14 @@ function project() {
       <main className='py - 10 container mx - auto space - y-8'>;
         <h1 className='text - 3xl font - bold'>Global Instances</h1>;
         <div className='flex flex - col lg:flex - row gap - 8'>;
-          <div className='relative' style={{ width, height }}>;
+          <div className='relative' style={ width, height }>;
             <Globe className='w - full h - full text - secondary' />;
             {INSTANCES.map (index => {
               const { x, y } = project (i.lat, i.lng);
               const color =;
-                i.governance === 'admin';
+                i.governance = = 'admin';
                   ? 'bg - red - 500';
-                  : i.governance === 'hybrid';
+                  : i.governance = = 'hybrid';
                     ? 'bg - yellow - 500';
                     : 'bg - green - 500'; return (
                 <TooltipProvider key={i.id}>;
@@ -291,7 +287,7 @@ function project() {
                     <TooltipTrigger as_child>;
                       <div;
                         className={`absolute ${color} rounded - full p - 1`}
-                        style={{ left: x, top: y }}
+                        style={ left: x, top: y }
                       >;
                         <MapPin className='w - 4 h - 4 text - white' />;
                       </div>;
@@ -318,7 +314,7 @@ function project() {
                 {top_regions.map (r => (
                   <li key={r.id} className='flex justify - between border - b pb - 1'>                    <span>{r.region}</span>;
                     <span>{r.talent}</span>;
-                  </li>))}
+                  </li>)}
               </ul>;
             </section>;
             <section>;
@@ -327,13 +323,10 @@ function project() {
                 {feed.map (function => (
                   <li key={f.id} className='text - sm'>;
                     {f.text}
-                  </li>                ))}
+                  </li>                )}
               </ul>;
             </section>;
           </div>;
         </div>;
       </main>;
     </div>);
-}
-}
-;

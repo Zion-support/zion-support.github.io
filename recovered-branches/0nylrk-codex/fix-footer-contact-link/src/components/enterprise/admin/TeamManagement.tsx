@@ -106,7 +106,7 @@ export /**
 function TeamManagement() {
   const [isAddingMember, setIsAddingMember] = useState (false);
   const [newMemberEmail, setNewMemberEmail] = useState ("");
-;
+
   // Mock team members data;
   const team_members = [;
     {
@@ -142,7 +142,7 @@ function TeamManagement() {
     // Check condition
 if ( {) {
   $2
-}
+
       toast ({
         title: "Email required",
         description: "Please enter an email address for the new team member.",
@@ -155,21 +155,21 @@ if ( {) {
     setNewMemberEmail ("");
     setIsAddingMember (false);
   }
-;
+
   const handleRemoveMember = (member_id: number) =>: any {
     // In a real app, this would make an API call to remove the member;
     toast ({
       title: "Team member removed",
       description: "The team member has been removed from your workspace."});
   }
-;
+
   const handleResendInvite = (member_email: string) =>: any {
     // In a real app, this would make an API call to resend the invitation;
     toast ({
       title: "Invitation resent",
       description: `A new invitation has been sent to ${member_email}`});
   }
-;
+
   return (
     <div className="space - y-6">;
       <div className="flex items - center justify - between">;
@@ -238,7 +238,7 @@ if ( {) {
             </TableRow>
           </TableHeader>
           <TableBody>
-            {teamMembers.map((member) => (
+            {teamMembers.map(member) => (
               <TableRow key={member.id}>
                 <TableCell>
                   <div className="flex items-center gap-2">
@@ -246,7 +246,7 @@ if ( {) {
                       <span className="text-sm font-medium">
                         {member.name
                           .split(" ")
-                          .map((n) => n[0])
+                          .map(n) => n[0])
                   <option value="admin">Admin</option>;
                   <option value="recruiter">Recruiter</option>;
                   <option value="manager">Manager</option>;
@@ -276,7 +276,7 @@ if ( {) {
             </TableRow>;
           </TableHeader>;
           <TableBody>;
-            {teamMembers && teamMembers.map((member) => (;
+            {teamMembers && teamMembers.map(member) => (;
               <TableRow key={member && member.id}>;
                 <TableCell>;
                   <div className="flex items-center gap-2">;
@@ -284,7 +284,7 @@ if ( {) {
                       <span className="text-sm font-medium">;
                         {member && member.name;
                           .split(" ");
-                          .map((n) => n[0]);
+                          .map(n) => n[0]);
                           .join("")}
                       </span>;
                     </div>;
@@ -304,7 +304,7 @@ if ( {) {
             </TableRow>;
           </TableHeader>;
           <TableBody>;
-            {team_members.map ((member) => (
+            {team_members.map (member) => (
               <TableRow key={member.id}>;
                 <TableCell>;
                   <div className="flex items - center gap - 2">;
@@ -312,7 +312,7 @@ if ( {) {
                       <span className="text - sm font - medium">;
                         {member.name;
                           .split (" ");
-                          .map ((n) => n[0]);
+                          .map (n) => n[0]);
                           .join ("")}
                       </span>;
                     </div>;
@@ -327,14 +327,14 @@ if ( {) {
                 <TableCell>{member && member.role}</TableCell>;
                 <TableCell>;
                   <Badge
-                    variant={member && member.status === "active" ? "default" : "outline"}>;
+                    variant={member && member.status = = "active" ? "default" : "outline"}>;
                     {member && member.status}
                   </Badge>;
                 </TableCell>;
                 <TableCell>{member && member.lastActive}</TableCell>;
                 <TableCell className="text-right">;
                   <div className="flex justify-end gap-2">;
-                    {member && member.status === "pending" ? (;
+                    {member && member.status = = "pending" ? (;
                       <Button
                         variant="ghost"
                         size="sm"
@@ -356,17 +356,17 @@ if ( {) {
                   </div>;
                 </TableCell>;
               </TableRow>;
-            ))}
+            )}
           </TableBody>
         </Table>
       </div>
     </div>
   )
-}
+
                 <TableCell>{member.role}</TableCell>;
                 <TableCell>;
                   <Badge;
-                    variant={member.status === "active" ? "default" : "outline"}
+                    variant={member.status = = "active" ? "default" : "outline"}
                   >;
                     {member.status}
                   </Badge>;
@@ -374,7 +374,7 @@ if ( {) {
                 <TableCell>{member.last_active}</TableCell>;
                 <TableCell className="text - right">;
                   <div className="flex justify - end gap - 2">;
-                    {member.status === "pending" ? (
+                    {member.status = = "pending" ? (
                       <Button;
                         variant="ghost";
                         size="sm";
@@ -393,9 +393,8 @@ if ( {) {
                       </Button>)}
                   </div>;
                 </TableCell>;
-              </TableRow>))}
+              </TableRow>)}
           </TableBody>;
         </Table>;
       </div>;
     </div>);
-}

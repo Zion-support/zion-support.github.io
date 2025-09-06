@@ -15,7 +15,7 @@ export function ContactPage() {
   const [selectedService, setSelectedService] = useState('');
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData(prev => ({ ...prev, [name]: value });
   };
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
@@ -82,7 +82,7 @@ export function ContactPage() {
             <p className="text-gray-600 mb-8">
               Fill out the form below and we'll get back to you within 24 hours to discuss your project requirements.
             </p>
-            
+
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
@@ -100,7 +100,7 @@ export function ContactPage() {
                     placeholder="Your full name"
                   />
                 </div>
-                
+
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                     Email Address *
@@ -117,7 +117,7 @@ export function ContactPage() {
                   />
                 </div>
               </div>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
@@ -133,7 +133,7 @@ export function ContactPage() {
                     placeholder="Your company name"
                   />
                 </div>
-                
+
                 <div>
                   <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
                     Phone Number
@@ -149,7 +149,7 @@ export function ContactPage() {
                   />
                 </div>
               </div>
-              
+
               <div>
                 <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
                   Service of Interest *
@@ -163,48 +163,48 @@ export function ContactPage() {
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 >
                   <option value="">Select a service</option>
-                  {SERVICE_CATEGORIES.map((category) => (
+                  {SERVICE_CATEGORIES.map(category) => (
                     <optgroup key={category.id} label={category.name}>
-                      {category.id === 'ai-services' && (
+                      {category.id = = 'ai-services' && (
                         <>
                           <option value="ai-customer-service">AI Customer Service Automation</option>
                           <option value="ai-content-generation">AI Content Generation Suite</option>
                           <option value="ai-data-analytics">AI-Powered Business Intelligence</option>
                         </>
                       )}
-                      {category.id === 'it-services' && (
+                      {category.id = = 'it-services' && (
                         <>
                           <option value="onsite-it-support">Onsite IT Support & Infrastructure</option>
                           <option value="cloud-migration">Cloud Migration & Optimization</option>
                         </>
                       )}
-                      {category.id === 'micro-saas' && (
+                      {category.id = = 'micro-saas' && (
                         <>
                           <option value="project-management-saas">Smart Project Management Platform</option>
                           <option value="crm-saas">AI-Powered CRM System</option>
                           <option value="hr-management-saas">HR Management & Talent Platform</option>
                         </>
                       )}
-                      {category.id === 'cybersecurity' && (
+                      {category.id = = 'cybersecurity' && (
                         <>
                           <option value="security-audit">Security Audit & Penetration Testing</option>
                         </>
                       )}
-                      {category.id === 'data-analytics' && (
+                      {category.id = = 'data-analytics' && (
                         <>
                           <option value="business-intelligence">Advanced Business Intelligence Platform</option>
                         </>
                       )}
-                      {category.id === 'cloud-solutions' && (
+                      {category.id = = 'cloud-solutions' && (
                         <>
                           <option value="devops-automation">DevOps Automation & CI/CD Pipeline</option>
                         </>
                       )}
                     </optgroup>
-                  ))}
+                  )}
                 </select>
               </div>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="budget" className="block text-sm font-medium text-gray-700 mb-2">
@@ -225,7 +225,7 @@ export function ContactPage() {
                     <option value="over-500k">Over $500,000</option>
                   </select>
                 </div>
-                
+
                 <div>
                   <label htmlFor="timeline" className="block text-sm font-medium text-gray-700 mb-2">
                     Project Timeline
@@ -246,7 +246,7 @@ export function ContactPage() {
                   </select>
                 </div>
               </div>
-              
+
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                   Project Details *
@@ -262,7 +262,7 @@ export function ContactPage() {
                   placeholder="Tell us about your project, goals, and requirements..."
                 />
               </div>
-              
+
               <button
                 type="submit"
                 className="w-full bg-blue-600 text-white py-4 px-6 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors"
@@ -289,7 +289,7 @@ export function ContactPage() {
                     </a>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center gap-4">
                   <div className="bg-green-100 w-12 h-12 rounded-full flex items-center justify-center">
                     <span className="text-green-600 text-xl"></span>
@@ -301,7 +301,7 @@ export function ContactPage() {
                     </a>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center gap-4">
                   <div className="bg-purple-100 w-12 h-12 rounded-full flex items-center justify-center">
                     <span className="text-purple-600 text-xl"></span>
@@ -314,7 +314,7 @@ export function ContactPage() {
                     </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center gap-4">
                   <div className="bg-orange-100 w-12 h-12 rounded-full flex items-center justify-center">
                     <span className="text-orange-600 text-xl"></span>
@@ -414,4 +414,3 @@ export function ContactPage() {
       </div>
     </div>
   )
-}

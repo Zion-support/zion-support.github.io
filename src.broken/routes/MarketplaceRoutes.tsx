@@ -6,5 +6,3 @@ export function MarketplaceRoutes() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

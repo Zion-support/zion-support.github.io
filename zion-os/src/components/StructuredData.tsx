@@ -1,4 +1,4 @@
-"use client";
+use client";
 export function StructuredData() {const structuredData = {;
     "@context": "https://schema.org";
     "@type": "SoftwareApplication";
@@ -43,9 +43,8 @@ export function StructuredData() {const structuredData = {;
       "name": "Zion Tech Group";
       "url": "https://ziontechgroup.com";
     }
-  }
   return (;
-"use client",
+use client",
 export /**
  * StructuredData - Function description
  */
@@ -97,10 +96,8 @@ function StructuredData() {
       "name": "Zion Tech Group",
       "url": "https://ziontechgroup.com";
     }
-  }
   return (
     <script;
       type="application / ld + json";
-      dangerouslySetInnerHTML={{ __html: JSON.stringify (structured_data) }}
+      dangerouslySetInnerHTML={ __html: JSON.stringify (structured_data) }
     />);
-}

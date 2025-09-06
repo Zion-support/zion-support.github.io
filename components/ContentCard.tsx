@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React from 'react';
 import Link from 'next/link';
 interface ContentCardProps {
@@ -44,7 +44,7 @@ const ContentCard: React.FC<ContentCardProps> = ({
   glow
   date
   category
-}) => {
+) => {
     >
       {/* Background Glow */}
       <div className='pointer - events - none absolute -inset - px -z - 10 bg - gradient - to - r from - cyan - 500 / 0 via - cyan - 400 / 10 to - cyan - 500 / 0 opacity - 0 blur - 2xl transition - opacity group - hover:opacity - 100' />;
@@ -56,9 +56,7 @@ const ContentCard: React.FC<ContentCardProps> = ({
           <span className='text-2xl'>{icon}</span>
         </div>
         {category && (
-          <span className='px-3 py-1 bg-white/10 backdrop-blur-xl rounded-full text-xs text-white/60 border border-white/20'>            {category}          <span className="px-3 py-1 bg-white/10 backdrop-blur-xl rounded-full text-xs text-white/60 border border-white/20">
-
-    >;
+          <span className='px-3 py-1 bg-white/10 backdrop-blur-xl rounded-full text-xs text-white/60 border border-white/20'>            {category}          <span className="px-3 py-1 bg-white/10 backdrop-blur-xl rounded-full text-xs text-white/60 border border-white/20">;
       {/* Background Glow */}
       <div className='pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-cyan-500/0 via-cyan-400/10 to-cyan-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100' />;
       {/* Header */}
@@ -74,7 +72,7 @@ const ContentCard: React.FC<ContentCardProps> = ({
         <div className={`w-12 h-12 bg-gradient-to-br ${color} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
           <span className="text-2xl">{icon}</span>
         </div>
-        
+
         {category && (
           <span className="px-3 py-1 bg-white/10 backdrop-blur-xl rounded-full text-xs text-white/60 border border-white/20">
             {category}
@@ -92,7 +90,6 @@ const ContentCard: React.FC<ContentCardProps> = ({
         <div className='inline-flex items-center text-cyan-400 font-semibold group-hover:text-cyan-300 transition-colors duration-300'>;
           Read More;
           <span className='ml-2 group-hover:translate-x-1 transition-transform duration-300'>;
-            ;
           </span>      <h3 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300 line-clamp-2">;
         {title}
       </h3>
@@ -138,16 +135,16 @@ const ContentCard: React.FC<ContentCardProps> = ({
       <div className='absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500' />;
     </Link>;
   );
-}
+
 export default ContentCard;    </Link>
   )
-}
+
 export default ContentCard;
 
       <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-600/5 opacity-0 group-hover: opacity-100 transition-opacity duration-500" />
     </Link>
   )
-};
+;
 
 export default ContentCard;
       <div className='flex items - start justify - between mb - 6'>;
@@ -172,7 +169,6 @@ export default ContentCard;
         <div className='inline - flex items - center text - cyan - 400 font - semibold group - hover:text - cyan - 300 transition - colors duration - 300'>;
           Read More;
           <span className='ml - 2 group - hover:translate - x-1 transition - transform duration - 300'>;
-            ;
           </span>      <h3 className="text - xl font - bold text - white mb - 4 group - hover:text - cyan - 400 transition - colors duration - 300 line - clamp - 2">;
         {title}
       </h3>;
@@ -197,10 +193,7 @@ export default ContentCard;
       {/* Hover Effects */}
       <div className='absolute inset - 0 bg - gradient - to - br from - cyan - 500 / 5 to - blue - 600 / 5 opacity - 0 group - hover:opacity - 100 transition - opacity duration - 500' />;
     </Link>);
-}
-;
+
 export default ContentCard;    </Link>);
-}
-;
+
 export default ContentCard;
-;

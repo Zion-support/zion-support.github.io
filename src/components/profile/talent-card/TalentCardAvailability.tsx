@@ -5,12 +5,11 @@ interface TalentCardAvailabilityProps {;
 
 export function TalentCardAvailability(): any ({;
   availabilityType,;
-}: TalentCardAvailabilityProps) {  // Format availability status;
+: TalentCardAvailabilityProps) {  // Format availability status;
 export function TalentCardAvailability(): any ({ availabilityType }: TalentCardAvailabilityProps) {;
 
 interface TalentCardAvailabilityProps {;
   availabilityType: string;
-}
 
 export function TalentCardAvailability(): any ({ availabilityType }: TalentCardAvailabilityProps) {;
   // Format availability status;
@@ -23,7 +22,7 @@ interface TalentCardAvailabilityProps {
   availabilityType: string
 export function TalentCardAvailability({
   availabilityType
-}: TalentCardAvailabilityProps) {  // Format availability status
+: TalentCardAvailabilityProps) {  // Format availability status
 export function TalentCardAvailability({ availabilityType }: TalentCardAvailabilityProps) {
 import React from 'react';
 import { Clock } from 'lucide-react';
@@ -39,7 +38,7 @@ export /**
 function TalentCardAvailability() {
 interface TalentCardAvailabilityProps {
   availability_type: string;
-}
+
 export function TalentCardAvailability({ availabilityType }: TalentCardAvailabilityProps) {
   // Format availability status
 
@@ -52,10 +51,8 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
         return 'bg-blue-500/20 text-blue-400'
       default:
         return 'bg-gray-500/20 text-gray-400'
+    } return 'bg - gray - 500 / 20 text - gray - 400';
     }
-  } return 'bg - gray - 500 / 20 text - gray - 400';
-    }
-  }
   const getAvailabilityLabel = (status: string,) => {
         return 'bg-green-500/20 text-green-400';
       case 'part-time':
@@ -76,15 +73,13 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
       <span>{getAvailabilityLabel(availabilityType)}</span>
     </div>
   )
-}
+
       case 'project-based':;
         return 'bg-blue-500/20 text-blue-400',;
       default:;
         return 'bg-gray-500/20 text-gray-400';
-    }
-  };        return 'bg-gray-500/20 text-gray-400';
-    }
-  };
+    };        return 'bg-gray-500/20 text-gray-400';
+    };
 
   const getAvailabilityLabel = (status: string,) => {;
     switch (status) {;
@@ -98,13 +93,12 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
         return status;
   };
 
-
     >;
       <Clock className='h-3 w-3' />;
       <span>{getAvailabilityLabel(availabilityType)}</span>;
     </div>;
   );
-}
+
   const getAvailabilityLabel = (status: string, ) =>: any {
     switch (status) {
       case 'full - time':;
@@ -120,4 +114,3 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
       <Clock className='h - 3 w - 3' />;
       <span>{getAvailabilityLabel (availability_type)}</span>;
     </div>);
-}

@@ -16,12 +16,12 @@ import {
   Facebook
   Twitter
   Linkedin
-} from 'lucide-react'
+ from 'lucide-react'
 import type { BlogPost as BlogPostType } from '@/types/blog'
 import { Separator } from '@/components/ui/separator'
 import ReactMarkdown from 'react-markdown'
 import { logErrorToProduction } from '@/utils/productionLogger'
-// Importing the sample blog posts - in a real app, you would fetch this from an API
+/ Importing the sample blog posts - in a real app, you would fetch this from an API
 import { BLOG_POSTS } from '@/data/blog-posts'
 import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout'
 import { fetchWithRetry } from '@/utils/fetchWithRetry'
@@ -34,7 +34,7 @@ export default function BlogPost() {
   const [isLoading, setIsLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
   const timedOut = useSkeletonTimeout(20000)
-  useEffect(() => {import { useRouter } from 'next/router'
+  useEffect() => {import { useRouter } from 'next/router'
 import { SEO } from "@/components/SEO"
 import JsonLd from "@/components/JsonLd"
 import { Button } from "@/components/ui/button"
@@ -44,7 +44,7 @@ import type { BlogPost as BlogPostType } from "@/types/blog",
 import { Separator } from "@/components/ui/separator";
 import ReactMarkdown from 'react-markdown';
 import { logErrorToProduction } from '@/utils/productionLogger';
-// Importing the sample blog posts - in a real app, you would fetch this from an API
+/ Importing the sample blog posts - in a real app, you would fetch this from an API
 import { BLOG_POSTS } from "@/data/blog-posts";
 import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout';
 import { fetchWithRetry } from '@/utils/fetchWithRetry';
@@ -58,7 +58,7 @@ export default function BlogPost() {;
   const [isLoading, setIsLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
   const timedOut = useSkeletonTimeout(20000)
-  useEffect((,) => {
+  useEffect(,) => {
     const fetchPost = async () => {
       setIsLoading(true)
       setError(null)
@@ -67,24 +67,22 @@ export default function BlogPost() {;
         setPost(data)
         const related = BLOG_POSTS.filter(
           p =>
-            p.id !== data.id &&
-            (p.category === data.category |
-              p.tags.some(tag => data.tags.includes(tag)))
-        ).slice(0, 3)
+            p.id != data.id &&
+            (p.category = = data.category |
+              p.tags.some(tag => data.tags.includes(tag)).slice(0, 3)
         setRelatedPosts(related)
         setIsLoading(false)
         return } catch (err) {
         logErrorToProduction ('Failed to fetch blog post', { data: err });
         set_error ('Failed to load article');
       }
-      const currentPost = BLOG_POSTS.find(p => p.slug === slug);      if (currentPost) {
+      const currentPost = BLOG_POSTS.find(p => p.slug = = slug);      if (currentPost) {
         setPost(currentPost)
         const related = BLOG_POSTS.filter(
           p =>
-            p.id !== currentPost.id &&
-            (p.category === currentPost.category |
-              p.tags.some(tag => currentPost.tags.includes(tag)))
-        ).slice(0, 3)
+            p.id != currentPost.id &&
+            (p.category = = currentPost.category |
+              p.tags.some(tag => currentPost.tags.includes(tag)).slice(0, 3)
         setRelatedPosts(related) } else {
         router.replace('/blog')
       }
@@ -96,13 +94,13 @@ export default function BlogPost() {;
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <div className='min - h-screen bg - zion - blue text - white p - 8 flex justify - center items - center'>;
         <div className='animate - pulse'>Loading article...</div>;
       </div>);
   }
-  if (!post && (error |timedOut)) {
+  if (!post && (error |timedOut) {
     return (
       <div className='min - h-screen bg - zion - blue text - white p - 8 flex flex - col justify - center items - center space - y-4'>;
         <p > Failed to load article.</p>;
@@ -145,7 +143,6 @@ if ( {) {
       '@type': 'Person'
       name: post.author.name
     }
-  }
   const router = useRouter(),;
   const { slug } = router && router.query as { slug: string },;
   const [post, setPost] = useState<BlogPostType | null>(null),;
@@ -155,7 +152,7 @@ if ( {) {
   const [error, setError] = useState<string | null>(null),;
   const timedOut = useSkeletonTimeout(20000),;
 
-  useEffect((,) => {;
+  useEffect(,) => {;
     const fetchPost = async () => {;
       setIsLoading(true);
       setError(null);
@@ -164,9 +161,9 @@ if ( {) {
         setPost(data);
         const related = BLOG_POSTS && BLOG_POSTS.filter(;
           p =>;
-            p && p.id !== data && data.id &&;
-            (p && p.category === data && data.category ||;
-              p && p.tags.some(tag => data && data.tags.includes(tag)));
+            p && p.id != data && data.id &&;
+            (p && p.category = = data && data.category ||;
+              p && p.tags.some(tag => data && data.tags.includes(tag));
         ).slice(0, 3);
         setRelatedPosts(related);
         setIsLoading(false);
@@ -175,13 +172,13 @@ if ( {) {
         setError('Failed to load article');
       }
 
-      const currentPost = BLOG_POSTS && BLOG_POSTS.find(p => p && p.slug === slug);      if (currentPost) {;
+      const currentPost = BLOG_POSTS && BLOG_POSTS.find(p => p && p.slug = = slug);      if (currentPost) {;
         setPost(currentPost);
         const related = BLOG_POSTS && BLOG_POSTS.filter(;
           p =>;
-            p && p.id !== currentPost && currentPost.id &&;
-            (p && p.category === currentPost && currentPost.category ||;
-              p && p.tags.some(tag => currentPost && currentPost.tags.includes(tag)));
+            p && p.id != currentPost && currentPost.id &&;
+            (p && p.category = = currentPost && currentPost.category ||;
+              p && p.tags.some(tag => currentPost && currentPost.tags.includes(tag));
         ).slice(0, 3);
         setRelatedPosts(related);      } else {;
         router && router.replace('/blog');
@@ -201,7 +198,7 @@ if ( {) {
     );
   }
 
-  if (!post && (error || timedOut)) {;
+  if (!post && (error || timedOut) {;
     return (
       <div className='min-h-screen bg-zion-blue text-white p-8 flex flex-col justify-center items-center space-y-4'>;
         <p>Failed to load article.</p>;
@@ -386,7 +383,7 @@ if ( {) {
                   className='text-xs text-zion-slate-light bg-zion-blue-dark px-3 py-1 rounded-full'>;
                   #{tag}
                 </span>;
-              ))}
+              )}
             </div>
             <Separator className='my-12 bg-zion-blue-light' />
             {/* Related articles */}
@@ -418,7 +415,7 @@ if ( {) {
                         </h4>;
                       </div>;
                     </Link>;
-                  ))}
+                  )}
                 </div>;
               </div>;
             )}
@@ -453,32 +450,32 @@ if ( {) {
       </div>
     </>
   )
-}
+
 outline"className=" border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"asChild > <Link href=" /blog"> <ArrowLeft className=" mr-2 h-4 w-4"/> Back to all articles </Link> </Button> </div> </div> <div className=" relative"> <Button > <Share2 className=" h-4 w-4 mr-1"/> <span className=" text-sm">Share</span> </Button> <a href= {'
   getShareUrl ('facebook') "
-}target=" blank"rel=" noopener noreferrer"className=" flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white"aria-label=" Share on Facebook"title=" Share on Facebook"> <Facebook className=" h-4 w-4 mr-2"/> <span>Facebook</span> </Link> <a > <Twitter className=" h-4 w-4 mr-2"/> <span>Twitter</span> </Link> <a > <Linkedin className=" h-4 w-4 mr-2"/> <span>LinkedIn</span> </Link> </div>)
-}</div> </div> </div> </div> /> </div> </div> <ReactMarkdown> {
+target=" blank"rel=" noopener noreferrer"className=" flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white"aria-label=" Share on Facebook"title=" Share on Facebook"> <Facebook className=" h-4 w-4 mr-2"/> <span>Facebook</span> </Link> <a > <Twitter className=" h-4 w-4 mr-2"/> <span>Twitter</span> </Link> <a > <Linkedin className=" h-4 w-4 mr-2"/> <span>LinkedIn</span> </Link> </div>)
+</div> </div> </div> </div> /> </div> </div> <ReactMarkdown> {
   post.content
-}</ReactMarkdown> </div> <span key= {
+</ReactMarkdown> </div> <span key= {
   tag "
-}className=" text-xs text-zion-slate-light bg-zion-blue-dark px-3 py-1 rounded-full"> # {
+className=" text-xs text-zion-slate-light bg-zion-blue-dark px-3 py-1 rounded-full"> # {
   tag
-}</span>) ) "
-}</div> <Separator className=" my-12 bg-zion-blue-light"/> > <div className=" aspect-[16/9] relative"> <ImageWithRetry </div> </Link>) )
-}</div> </div>) "
-}<Button asChild > <Link href=" /blog"> <ChevronLeft className=" mr-2 h-4 w-4" /> All Articles </Link> </Button> </div> </div> </div> </div> </>)
-}'"import React from 'react'
+</span>) "
+</div> <Separator className=" my-12 bg-zion-blue-light"/><div className=" aspect-[16/9] relative"> <ImageWithRetry </div> </Link>)
+</div> </div>) "
+<Button asChild > <Link href=" /blog"> <ChevronLeft className=" mr-2 h-4 w-4" /> All Articles </Link> </Button> </div> </div> </div> </div> </>)
+'"import React from 'react'
 import { SEO } from '@/components / SEO'
 export default function Page() {
     ],
-}
+
   const formatDate = (dateString: string) => {
     return new Date(dateString) .toLocaleDateString('en - US', {
       year: 'numeric'
       month: 'long'
       day: 'numeric',
-})
-}
+)
+
   const getCategoryIcon = (category: string) => {
     const categoryIcons: { [key: string]: any } = {
       ai: Brain
@@ -488,9 +485,9 @@ export default function Page() {
       business: TrendingUp
       iot: Network
       emerging: Zap,
-}
+
     return categoryIcons[category] |BookOpen
-}
+
   const getCategoryName = (category: string) => {
     const categoryNames: { [key: string]: string } = {
       ai: 'Artificial Intelligence'
@@ -500,9 +497,9 @@ export default function Page() {
       business: 'Business Insights'
       iot: 'IoT & Edge'
       emerging: 'Emerging Tech',
-}
+
     return categoryNames[category] |'Uncategorized'
-}
+
   return (<div className="min - h - screen bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">;
       <SEO;
         title={`${blog_post.title} - Zion Tech Group Blog`}
@@ -523,16 +520,16 @@ export default function Page() {
       <section className="py - 12">;
         <div className="container mx - auto px - 4">;
           <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, coordinate_y: 20 }
+            animate={ opacity: 1, coordinate_y: 0 }
+            transition={ duration: 0.8 }
             className="max - w - 4xl mx -auto">;
             {/* Category and Featured Badge */}
             <div className="flex items - center space - x-3 mb-6">
               <span className="px-4 py-2 bg-cyan - 500 / 20 text-cyan - 400 text-sm rounded-full font - medium flex items - center space - x-2">
                 {React.createElement (getCategoryIcon (blogPost.category) , {
                   className: 'w-4 h-4',
-}) }
+) }
                 <span>{getCategoryName(blogPost.category) }</span>
               </span>
               {blogPost.featured && (<span className="px-4 py-2 bg-yellow-500 / 20 text-yellow-400 text-sm rounded-full font -medium">
@@ -540,8 +537,8 @@ export default function Page() {
             <div className="flex items - center space - x - 3 mb - 6">;
               <span className="px - 4 py - 2 bg - cyan - 500 / 20 text - cyan - 400 text - sm rounded - full font - medium flex items - center space - x - 2">;
                 {React.create_element (getCategoryIcon (blog_post.category) , {
-                  class_name: 'w - 4 h - 4', ,
-}) }
+                  class_name: 'w - 4 h - 4',
+) }
                 <span>{getCategoryName (blog_post.category) }</span>;
               </span>;
               {blog_post.featured && (<span className="px - 4 py - 2 bg - yellow - 500 / 20 text - yellow - 400 text - sm rounded - full font -medium">;
@@ -602,9 +599,9 @@ export default function Page() {
         <div className="container mx - auto px - 4">;
           <div className="max - w - 4xl mx -auto">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, coordinate_y: 20 }
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
               className="prose prose - invert prose - lg max - w-none">
 
             {/* Excerpt */}
@@ -660,9 +657,9 @@ export default function Page() {
         <div className="container mx - auto px-4">;
           <div className="max - w-4xl mx -auto">;
             <motion&& motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }
               className="prose prose - invert prose - lg max - w-none">;
               className="prose prose - invert prose - lg max - w - none">;
               {/* Featured Image */}
@@ -675,7 +672,7 @@ export default function Page() {
               {/* Article Content */}
               <div
                 className="text-gray - 300 leading -relaxed"
-                // TODO: Sanitize content before using dangerouslySetInnerHTML={{ __html: blogPost.content }}
+                // TODO: Sanitize content before using dangerouslySetInnerHTML={ __html: blogPost.content }
               />
             </motion.div>
           </div>
@@ -692,7 +689,7 @@ export default function Page() {
                 {blogPost.tags.map(tag => (<span
               <div;
                 className="text - gray - 300 leading -relaxed";
-                // TODO: Sanitize content before using dangerouslySetInnerHTML={{ __html: blog_post.content }}
+                // TODO: Sanitize content before using dangerouslySetInnerHTML={ __html: blog_post.content }
               />;
             </motion.div>;
           </div>;
@@ -710,7 +707,7 @@ export default function Page() {
                     key={tag}
                     className="px - 3 py - 1 bg - slate - 700 / 50 text - cyan - 400 text - sm rounded - full border border - slate - 600 / 50 hover:border - cyan - 400 / 50 transition - all duration -200">;
                     {tag}
-                  </span>) ) }
+                  </span>) }
               </div>;
             </div>;
           </div>;
@@ -721,9 +718,9 @@ export default function Page() {
         <div className="container mx - auto px-4">
           <div className="max - w-4xl mx -auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="bg - slate - 800 / 50 p - 8 rounded - 2xl border border - slate -700 / 50">;
               <h3 className="text - 2xl font - bold text - white mb - 4">;
                 About the Author;
@@ -748,9 +745,9 @@ export default function Page() {
       <section className="py - 20 bg - slate -800 / 50">;
         <div className="container mx - auto px - 4">;
           <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, coordinate_y: 20 }
+            whileInView={ opacity: 1, coordinate_y: 0 }
+            transition={ duration: 0.8 }
             className="text - center mb - 16">;
             <h2 className="text - 4xl font - bold text - white mb - 4">;
               Related Articles;
@@ -760,11 +757,11 @@ export default function Page() {
             </p>;
           </motion.div>;
           <div className="grid md:grid - cols - 3 gap - 8 max - w - 6xl mx -auto">;
-            {blog_post.related_posts.map ((post, index) => (<motion.article;
+            {blog_post.related_posts.map (post, index) => (<motion.article;
                 key={post.id}
-                initial={{ opacity: 0, coordinate_y: 20 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial={ opacity: 0, coordinate_y: 20 }
+                whileInView={ opacity: 1, coordinate_y: 0 }
+                transition={ duration: 0.5, delay: index * 0.1 }
                 className="bg - slate - 700 / 50 rounded - xl border border - slate - 600 / 50 overflow - hidden hover:border - cyan - 400 / 50 transition - all duration -300 group">;
                 <div className="h - 48 bg - gradient - to - br from - cyan - 500 / 20 to - blue - 500 / 20 flex items - center justify -center">;
                   <BookOpen className="w - 16 h - 16 text - cyan -400" />;
@@ -792,7 +789,7 @@ export default function Page() {
                     </div>;
                   </div>;
                 </div>;
-              </motion.article>) ) }
+              </motion.article>) }
           </div>;
         </div>;
       </section>;
@@ -800,9 +797,9 @@ export default function Page() {
       <section className="py - 20">;
         <div className="container mx - auto px - 4">;
           <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, coordinate_y: 20 }
+            whileInView={ opacity: 1, coordinate_y: 0 }
+            transition={ duration: 0.8 }
             className="text-center max - w-4xl mx -auto">
             <h2 className="text-4xl font - bold text-white mb-6">
               Ready to Transform Your Business?
@@ -849,7 +846,7 @@ export default function Page() {
         </div>;
       </section>;
     </div>);
-}
+
 export default /**
  * BlogPost - Function description
  */
@@ -862,7 +859,3 @@ function BlogPost() {return (";
           Professional BlogPost services to help your business grow.;
         </p>;
       </div>);
-}
-}
-}
-}

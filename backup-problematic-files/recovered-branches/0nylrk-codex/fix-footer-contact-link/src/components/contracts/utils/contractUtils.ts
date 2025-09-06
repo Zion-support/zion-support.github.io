@@ -3,22 +3,20 @@ import { supabase } from "@/integrations/supabase/client",;
 import { TalentProfile } from "@/types/talent",;
 import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator",;
 import { ContractFormValues } from "../components/ContractForm",;
-;
+
 interface Milestone {;
   title:string,;
   description:string,;
   dueDate:string,;
   estimatedHours:number;
-}
-;
+
 export async function generateContract(;
   values:ContractFormValues,;
   talent:TalentProfile, ;
   clientName:string,;
   generatedMilestones:GeneratedMilestone[];
-):Promise<string> {;
+:Promise<string> {;
   const additionalClauses = values.additionalClauses || [],;
-  ;
   // Prepare milestone data if we have AI-generated milestones;
   const milestoneData = generatedMilestones.length > 0 ;
     ? generatedMilestones.map(m => ({;
@@ -26,9 +24,8 @@ export async function generateContract(;
         description:m.description,;
         dueDate:m.dueDate,;
         estimatedHours:m.estimatedHours;
-      }));
+      });
     :[],;
-  ;
   const { data, error } = await supabase.functions.invoke("generate-contract", {;
     body:{;
       talentName:talent.full_name,;
@@ -40,9 +37,7 @@ export async function generateContract(;
       paymentTerms:values.paymentTerms,;
       paymentAmount:values.paymentAmount,;
       additionalClauses:additionalClauses,;
-      milestones:milestoneData}
-  }),;
-  ;
+      milestones:milestoneData}),;
   if (error) {;
     throw error,;
   }
@@ -56,10 +51,8 @@ export async function generateContract(;
 description: string;
 dueDate: string;
 estimatedHours: number 
-}export async function generateContract (values: ContractFormValues;
+export async function generateContract (values: ContractFormValues;
 talent: TalentProfile;
 clientName: string;
 generatedMilestones: GeneratedMilestone[]) : Promise<string> {
   const additionalClauses = values.additionalClauses || [];
-}
-}

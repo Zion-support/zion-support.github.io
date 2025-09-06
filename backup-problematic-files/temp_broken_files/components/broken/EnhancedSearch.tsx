@@ -15,15 +15,13 @@ interface SearchResult {
     starter?: string,
     enterprise?: string
   }
-}
-;
+
 interface SearchProps {;
   onSearch:(query:string) => void,;
   onResultSelect:(result:SearchResult) => void,;
   placeholder?:string,;
   className?:string,;
   showFilters?:boolean;
-}
 
 const EnhancedSearch: React.FC<SearchProps> = ({
   onSearch,
@@ -31,7 +29,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
   placeholder = &quot;Search revolutionary services...&quot;,
   className = "",
   showFilters = true
-}) => {
+) => {
   const [query, setQuery] = useState(''),
   const [isSearching, setIsSearching] = useState(false),
   const [showResults, setShowResults] = useState(false),
@@ -52,8 +50,7 @@ const mockSearchResults: SearchResult[] = [
       slug: '/ai-consciousness-evolution-platform-2045',
       relevance: 95,
       features: ['Emotional IntelligenceSelf-AwarenessConsciousness Evolution'],
-      pricing: { starter: '$999/month', enterprise: 'Contact Sales' }
-    },
+      pricing: { starter: '$999/month', enterprise: 'Contact Sales' },
     {
       id: '2',
       name: 'Quantum AI Hybrid Computing',
@@ -63,8 +60,7 @@ const mockSearchResults: SearchResult[] = [
       slug: '/quantum-ai-hybrid-computing',
       relevance: 92,
       features: ['Quantum SupremacyAI IntegrationHybrid Computing'],
-      pricing: { starter: '$1,499/month', enterprise: 'Contact Sales' }
-    },
+      pricing: { starter: '$1,499/month', enterprise: 'Contact Sales' },
     {
       id: '3',
       name: 'Quantum Cybersecurity Intelligence',
@@ -74,7 +70,7 @@ const mockSearchResults: SearchResult[] = [
       slug: '/quantum-cybersecurity-intelligence',
       relevance: 88,
       features: ['Quantum ResistanceThreat PredictionAI Security'],
-      pricing: { starter: '$799/month', enterprise: 'Contact Sales' }    }
+      pricing: { starter: '$799/month', enterprise: 'Contact Sales' }
   ],
 
   const categories = [
@@ -86,32 +82,31 @@ const mockSearchResults: SearchResult[] = [
 
   // Debounced search function,
 const debouncedSearch = useCallback(
-    useMemo(
-      () => debounce((searchQuery: string) => {
+    useMemo() => debounce(searchQuery: string) => {
         if (searchQuery.trim().length < 2) {
           setResults([]),
           setShowResults(false),
           return
         }
         setIsSearching(true),
-        
+
         // Simulate API call delay,
-setTimeout_(() => {const filteredResults = mockSearchResults.filter(result => {
-            const matchesQuery = result.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                               result.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                               result.category.toLowerCase().includes(searchQuery.toLowerCase()),
-            
-            const matchesFilters = selectedFilters.length === 0 || 
+setTimeout_() => {const filteredResults = mockSearchResults.filter(result => {
+            const matchesQuery = result.name.toLowerCase().includes(searchQuery.toLowerCase() ||
+                               result.description.toLowerCase().includes(searchQuery.toLowerCase() ||
+                               result.category.toLowerCase().includes(searchQuery.toLowerCase(),
+
+            const matchesFilters = selectedFilters.length = = 0 || 
                                  selectedFilters.some(filter => 
-                                   result.category.toLowerCase().includes(filter.toLowerCase()) ||
-                                   result.type.toLowerCase().includes(filter.toLowerCase())
+                                   result.category.toLowerCase().includes(filter.toLowerCase() ||
+                                   result.type.toLowerCase().includes(filter.toLowerCase()
                                  ),
-            
+
             return matchesQuery && matchesFilters
           }),
 
           // Sort by relevance,
-const sortedResults = filteredResults.sort((a, b) => b.relevance - a.relevance),          
+const sortedResults = filteredResults.sort(a, b) => b.relevance - a.relevance),          
           setResults(sortedResults),
           setShowResults(true),
           setIsSearching(false)
@@ -122,7 +117,7 @@ const sortedResults = filteredResults.sort((a, b) => b.relevance - a.relevance),
     [selectedFilters]
   ),
 
-  useEffect(() => {
+  useEffect() => {
     debouncedSearch(query)
   }, [query, debouncedSearch]),
 
@@ -130,57 +125,54 @@ const sortedResults = filteredResults.sort((a, b) => b.relevance - a.relevance),
 const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value,
     setQuery(value),
-    
-    if (value.trim().length === 0) {
+
+    if (value.trim().length = = 0) {
       setShowResults(false),
       setResults([])
-    }
-  }, [suggestions, selectedIndex, query, handleSearch]),
+    }, [suggestions, selectedIndex, query, handleSearch]),
   // Close search on outside click,
-useEffect_(() => {const handleClickOutside = (event: MouseEvent) => {
-      if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
+useEffect_() => {const handleClickOutside = (event: MouseEvent) => {
+      if (searchRef.current && !searchRef.current.contains(event.target as Node) {
         setIsOpen(false)
-      }
-    },
+      },
 
   // Handle search submission,
 const handleSearch = (e: React.FormEvent) => {
     e.preventDefault(),
-    if (query.trim()) {
+    if (query.trim() {
       onSearch(query),
       addToSearchHistory(query),
       setShowResults(false)
-    }
-  }, [router, handleSearch]),
+    }, [router, handleSearch]),
 
   // Handle quick action click,
-const handleQuickAction = useCallback((action: string) => {
+const handleQuickAction = useCallback(action: string) => {
     router.push(action),
     setIsOpen(false)
   }, [router]),
 
   // Add search to history,
 const addToSearchHistory = (searchTerm: string) => {
-    const newHistory = [searchTerm, ...searchHistory.filter(item => item !== searchTerm)].slice(0, 5),
+    const newHistory = [searchTerm, ...searchHistory.filter(item => item != searchTerm)].slice(0, 5),
     setSearchHistory(newHistory),
-    localStorage.setItem('zion-search-history', JSON.stringify(newHistory))
+    localStorage.setItem('zion-search-history', JSON.stringify(newHistory)
   },
 
   // Load search history from localStorage,
-useEffect(() => {
+useEffect() => {
     const savedHistory = localStorage.getItem('zion-search-history'),
     if (savedHistory) {
       try {
-        setSearchHistory(JSON.parse(savedHistory))
+        setSearchHistory(JSON.parse(savedHistory)
       } catch (error) {
         console.error('Failed to parse search history:', error)
-      }    }
+      }
   }, []),
 
   // Handle filter toggle,
 const toggleFilter = (filterId: string) => {setSelectedFilters(prev => 
       prev.includes(filterId) 
-        ? prev.filter(id => id !== filterId)
+        ? prev.filter(id => id != filterId)
         : [...prev, filterId]
     )
   },
@@ -210,7 +202,7 @@ type=&quot;text"
             placeholder={placeholder}
             className="w-full pl-12 pr-20 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300&quot;
             onFocus={() => setShowResults(true)}          />
-          
+
           {_/* Clear Button */}
           {query && (
             <button,
@@ -221,7 +213,7 @@ type=&quot;button"
               <X className="w-4 h-4&quot; />
             </button>
           )}
-          
+
           {_/* Search Button */}
           <button,
 type=&quot;submit"
@@ -235,10 +227,10 @@ type=&quot;submit"
       {_/* Search Results Dropdown */}
       <AnimatePresence>
         {showResults && (_<motion.div,
-initial={{ opacity: 0, y: -10, scale: 0.95}}
-            animate={_{ opacity: 1, y: 0, scale: 1}}
-            exit={_{ opacity: 0, y: -10, scale: 0.95}}
-            transition={_{ duration: 0.2}}
+initial={ opacity: 0, y: -10, scale: 0.95}
+            animate={_{ opacity: 1, y: 0, scale: 1}
+            exit={_{ opacity: 0, y: -10, scale: 0.95}
+            transition={_{ duration: 0.2}
             className="absolute top-full left-0 right-0 mt-2 bg-gray-900/95 backdrop-blur-md border border-gray-700 rounded-xl shadow-2xl z-50 max-h-96 overflow-y-auto"
           >
             {_/* Filters */}
@@ -249,7 +241,7 @@ initial={{ opacity: 0, y: -10, scale: 0.95}}
                   <span className="text-sm font-medium text-gray-300">Filter by Category</span>
                 </div>
                 <div className="flex flex-wrap gap-2">
-                  {categories.map((category) => (_<button,
+                  {categories.map(category) => (_<button,
 key={category.id}
                       onClick={_() => toggleFilter(category.id)}
                       className={_`flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-300 ${
@@ -276,16 +268,16 @@ onClick={_() => handleSearch()}
                 {_/* Search Suggestions */}
                 <AnimatePresence>
                   {showSuggestions && suggestions.length > 0 && (_<motion.div,
-initial={{ opacity: 0, y: -10}}
-                      animate={_{ opacity: 1, y: 0}}
-                      exit={_{ opacity: 0, y: -10}}
+initial={ opacity: 0, y: -10}
+                      animate={_{ opacity: 1, y: 0}
+                      exit={_{ opacity: 0, y: -10}
                       className="absolute top-full left-0 right-0 mt-2 bg-gray-900 border border-gray-700 rounded-xl shadow-2xl overflow-hidden z-10"
                     >
                       {_/* Quick Actions */}
                       <div className="p-4 border-b border-gray-700">
                         <h3 className="text-sm font-medium text-gray-400 mb-3">Quick Actions</h3>
                         <div className="grid grid-cols-2 gap-2">
-                          {quickActions.map((action) => (_<button,
+                          {quickActions.map(action) => (_<button,
 key={action.name}
                               onClick={_() => handleQuickAction(action.action)}
                               className="flex items-center space-x-2 p-2 text-sm text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg transition-colors"
@@ -293,7 +285,7 @@ key={action.name}
                               {action.icon}
                               <span>{action.name}</span>;
                             </button>;
-                          ))}
+                          )}
                         </div>
                       </div>
 
@@ -315,7 +307,7 @@ key={suggestion.id}
                             </div>;
                             <ArrowRight className="w-4 h-4 text-gray-400" />;
                           </button>;
-                        ))}
+                        )}
                       </div>;
                     </motion.div>;
                   )}
@@ -331,9 +323,9 @@ key={suggestion.id}
                   <span className="ml-3 text-gray-400">Searching...</span>
                 </div>
               ) : results.length > 0 ? (_<div className="space-y-3">
-                  {results.map((result) => (_<motion.div,
+                  {results.map(result) => (_<motion.div,
 key={result.id}
-                      whileHover={_{ scale: 1.02}}
+                      whileHover={_{ scale: 1.02}
                       className="p-3 bg-gray-800/50 rounded-lg cursor-pointer hover:bg-gray-700/50 transition-all duration-300 border border-transparent hover:border-cyan-400/30"
                       onClick={_() => handleResultSelect(result)}
                     >
@@ -358,7 +350,7 @@ key={result.id}
                         </div>;
                       </div>;
                     </motion.div>;
-                  ))}
+                  )}
                 </div>
               ) : query.trim().length > 0 ? (
                 <div className="text-center py-8">
@@ -373,14 +365,14 @@ key={result.id}
                         <span className="text-sm font-medium text-gray-300">Recent Searches</span>
                       </div>
                       <div className="flex flex-wrap gap-2">
-                        {searchHistory.map((term, index) => (_<button,
+                        {searchHistory.map(term, index) => (_<button,
 key={index}
                             onClick={_() => setQuery(term)}
                             className="px-3 py-1.5 bg-gray-700/50 text-gray-300 text-sm rounded-lg hover:bg-gray-600/50 transition-colors"
                           >
                             {term}
                           </button>;
-                        ))}
+                        )}
                       </div>;
                     </div>;
                   )}
@@ -399,7 +391,7 @@ key={index}
                         >
                           {term}
                         </button>;
-                      ))}
+                      )}
                     </div>;
                   </div>;
                 </div>;
@@ -410,17 +402,17 @@ key={index}
       </AnimatePresence>
     </div>
   )
-},
+,
 
-// Debounce utility function,
+/ Debounce utility function,
 function debounce<T extends (_...args: unknown[]) => any>(
   func: T,
   wait: number
-): (...args: Parameters<T>) => void {
+: (...args: Parameters<T>) => void {
   let timeout: NodeJS.Timeout,
   return (...args: Parameters<T>) => {
     clearTimeout(timeout),
-    timeout = setTimeout(() => func(...args), wait)
-  }}
+    timeout = setTimeout() => func(...args), wait)
+  }
 
 export default EnhancedSearch,

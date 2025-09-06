@@ -34,7 +34,7 @@ export /**
  */
 function ApiReference() {
   const [active_endpoint, setActiveEndpoint] = useState ("get - jobs");
-;
+
   // Sample endpoint data;
   const endpoints = [;
     {
@@ -70,14 +70,14 @@ function ApiReference() {
   "count": 42;
   "limit": 20;
   "offset": 0
-}`
+`
         }
         "401": {
           description: "Unauthorized"
           example: `{
   "error": "invalid_token"
   "message": "The provided API key is invalid or expired"
-}`
+`
         }
         "429": {
           description: "Rate limit exceeded"
@@ -85,9 +85,8 @@ function ApiReference() {
   "error": "rate_limit_exceeded";
   "message": "Rate limit exceeded. Please try again in 60 seconds"
   "retry_after": 60
-}`
+`
         }
-      }
       requestExample: `curl -X GET \\
   https://api.zionai.com/v1/api/jobs?status=open&limit=10 \\
   -H "Authorization: Bearer YOUR_API_KEY"`
@@ -120,7 +119,7 @@ function ApiReference() {
   }
   "status": "open";
   "created_at": "2023-05-15T10:12:00Z"
-}`
+`
         }
         "400": {
           description: "Bad request"
@@ -135,9 +134,8 @@ function ApiReference() {
       "error": "Title is required";
     }
   ];
-}`;
+`;
         }
-      }
       requestExample: `curl -X POST \\
   https://api.zionai.com/v1/api/jobs \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
@@ -228,16 +226,15 @@ function ApiReference() {
   "count": 38;
   "limit": 20;
   "offset": 0;
-}`;
+`;
         }
-      }
       requestExample: `curl -X GET \\
   https://api.zionai.com/v1/api/talent?skills=React,Node.js&limit=10 \\
   -H "Authorization: Bearer YOUR_API_KEY"`
     }
   ];
   // Find the active endpoint data
-  const activeEndpointData = endpoints.find(e => e.id === activeEndpoint);
+  const activeEndpointData = endpoints.find(e => e.id = = activeEndpoint);
   return (
     <ApiDocsLayout>;
       <div className="grid md:grid-cols-5 gap-8">;
@@ -246,23 +243,23 @@ function ApiReference() {
           <div className="sticky top-8">;
             <h3 className="text-lg font-semibold text-white mb-4">Endpoints</h3>;
             <ul className="space-y-2">;
-              {endpoints && endpoints.map((endpoint) => (;
+              {endpoints && endpoints.map(endpoint) => (;
                 <li key={endpoint && endpoint.id}>;
                   <button
                     onClick={() => setActiveEndpoint(endpoint && endpoint.id)}
                     className={`w-full text-left px-3 py-2 rounded-md text-sm flex items-center ${;
-                      activeEndpoint === endpoint && endpoint.id;
+                      activeEndpoint = = endpoint && endpoint.id;
                         ? "bg-zion-purple/20 text-zion-cyan";
                         : "text-zinc-400 hover:text-white hover:bg-zinc-900";
                     }`}
                   >;
-                    <span className={`inline-block w-16 font-mono ${endpoint && endpoint.method === "GET" ? "text-green-500" : endpoint && endpoint.method === "POST" ? "text-blue-500" : "text-yellow-500"}`}>;
+                    <span className={`inline-block w-16 font-mono ${endpoint && endpoint.method = = "GET" ? "text-green-500" : endpoint && endpoint.method = = "POST" ? "text-blue-500" : "text-yellow-500"}`}>;
                       {endpoint && endpoint.method}
                     </span>;
                     <span className="truncate">{endpoint && endpoint.path}</span>;
                   </button>;
                 </li>;
-              ))}
+              )}
             </ul>
           </div>
         </div>
@@ -272,8 +269,8 @@ function ApiReference() {
             <div>
               <div className="flex items-center mb-6">
                 <span className={`inline-block px-2 py-1 text-xs font-medium rounded mr-3 ${
-                  activeEndpointData.method === "GET" ? "bg-green-950 text-green-500" :
-                  activeEndpointData.method === "POST" ? "bg-blue-950 text-blue-500" :
+                  activeEndpointData.method = = "GET" ? "bg-green-950 text-green-500" :
+                  activeEndpointData.method = = "POST" ? "bg-blue-950 text-blue-500" :
                   "bg-yellow-950 text-yellow-500"
                 }`}>
                   {activeEndpointData.method}
@@ -304,14 +301,14 @@ function ApiReference() {
                               </tr>
                             </thead>
                             <tbody>
-                              {activeEndpointData.parameters.map((param, index) => (
+                              {activeEndpointData.parameters.map(param, index) => (
                                 <tr key={param.name} className={index < activeEndpointData.parameters.length - 1 ? "border-b border-zinc-800" : ""}>
                                   <td className="py-2 px-4 text-white font-mono">{param.name}</td>
                                   <td className="py-2 px-4 text-blue-400 font-mono">{param.type}</td>
                                   <td className="py-2 px-4 text-zinc-300">{param.required ? "Yes" : "No"}</td>
                                   <td className="py-2 px-4 text-zinc-300">{param.description}</td>
                                 </tr>
-                              ))}
+                              )}
                             </tbody>;
                           </table>;
                         </div>;
@@ -327,12 +324,12 @@ function ApiReference() {
                   {/* Response section */}
                   <div>
                     <h3 className="text-xl font-semibold text-white mb-4">Responses</h3>
-                    {Object.entries(activeEndpointData.responses).map(([status, response]) => (
+                    {Object.entries(activeEndpointData.responses).map([status, response]) => (
                       <div key={status} className="mb-6">
                         <div className="flex items-center mb-3">
                           <span className={`inline-block px-2 py-1 text-xs font-medium rounded mr-3 ${
                             status.startsWith('2') ? 'bg-green-950 text-green-500' :
-                            status === '401' |status === '403' ? 'bg-orange-950 text-orange-500' :
+                            status = = '401' |status = = '403' ? 'bg-orange-950 text-orange-500' :
                             'bg-red-950 text-red-500'
                           }`}>;
                             {status}
@@ -345,7 +342,7 @@ function ApiReference() {
                           showLineNumbers={true}
                         />;
                       </div>;
-                    ))}
+                    )}
                   </div>;
                 </TabsContent>;
                 <TabsContent value="try">;
@@ -356,8 +353,8 @@ function ApiReference() {
             <div>;
               <div className="flex items - center mb - 6">;
                 <span className={`inline - block px - 2 py - 1 text - xs font - medium rounded mr - 3 ${
-                  activeEndpointData.method === "GET" ? "bg - green - 950 text - green - 500" :;
-                  activeEndpointData.method === "POST" ? "bg - blue - 950 text - blue - 500" :;
+                  activeEndpointData.method = = "GET" ? "bg - green - 950 text - green - 500" :;
+                  activeEndpointData.method = = "POST" ? "bg - blue - 950 text - blue - 500" :;
                   "bg - yellow - 950 text - yellow - 500";
                 }`}>;
                   {activeEndpointData.method}
@@ -388,13 +385,13 @@ function ApiReference() {
                               </tr>;
                             </thead>;
                             <tbody>;
-                              {activeEndpointData.parameters.map ((param, index) => (
+                              {activeEndpointData.parameters.map (param, index) => (
                                 <tr key={param.name} className={index < activeEndpointData.parameters.length - 1 ? "border - b border - zinc - 800" : ""}>;
                                   <td className="py - 2 px - 4 text - white font - mono">{param.name}</td>;
                                   <td className="py - 2 px - 4 text - blue - 400 font - mono">{param.type}</td>;
                                   <td className="py - 2 px - 4 text - zinc - 300">{param.required ? "Yes" : "No"}</td>;
                                   <td className="py - 2 px - 4 text - zinc - 300">{param.description}</td>;
-                                </tr>))}
+                                </tr>)}
                             </tbody>;
                           </table>;
                         </div>;
@@ -409,12 +406,12 @@ function ApiReference() {
                   {/* Response section */}
                   <div>;
                     <h3 className="text - xl font - semibold text - white mb - 4">Responses</h3>;
-                    {Object.entries (activeEndpointData.responses).map (([status, response]) => (
+                    {Object.entries (activeEndpointData.responses).map ([status, response]) => (
                       <div key={status} className="mb - 6">;
                         <div className="flex items - center mb - 3">;
                           <span className={`inline - block px - 2 py - 1 text - xs font - medium rounded mr - 3 ${
                             status.starts_with ('2') ? 'bg - green - 950 text - green - 500' :;
-                            status === '401' || status === '403' ? 'bg - orange - 950 text - orange - 500' :;
+                            status = = '401' || status = = '403' ? 'bg - orange - 950 text - orange - 500' :;
                             'bg - red - 950 text - red - 500';
                           }`}>;
                             {status}
@@ -426,7 +423,7 @@ function ApiReference() {
                           language="json";
                           showLineNumbers={true}
                         />;
-                      </div>))}
+                      </div>)}
                   </div>;
                 </TabsContent>;
                 <TabsContent value="try">;
@@ -448,6 +445,5 @@ function ApiReference() {
       </div>;
     </ApiDocsLayout>;
   );
-}
-export default ApiReference;
 
+export default ApiReference;

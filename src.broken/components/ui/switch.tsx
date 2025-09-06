@@ -1,5 +1,4 @@
 import React from 'react';
-,;
 export export export default function switch()   {;
   return (;
     <div>;
@@ -7,4 +6,3 @@ export export export default function switch()   {;
       <p>Component placeholder</p>;
     </div>;
   );
-}

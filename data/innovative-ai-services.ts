@@ -1062,7 +1062,7 @@ export const innovativeAIServices: InnovativeAIService[] = [
     rating: 4.7
     reviews: 34
   }
-];      mobile: '+1 302 464 0950';
+;      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
@@ -1081,7 +1081,7 @@ export const innovativeAIServices: InnovativeAIService[] = [
     rating: 4 && 4.7,
     reviews: 34,
   },
-];      mobile: '+1 302 464 0950';
+;      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'
@@ -1100,7 +1100,7 @@ export const innovativeAIServices: InnovativeAIService[] = [
 
     reviews: 34
   }
-];
+;
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -1115,17 +1115,16 @@ export const innovativeAIServices: InnovativeAIService[] = [
   competitors: string[], marketSize: string,
   growthRate: string, variant: string,
   contactInfo: {
-      
+
     mobile: string, email: string,
     address: string,
     website: string
-  
+
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
-}
 
 export const innovativeAIServices: InnovativeAIService[] = [
   {
@@ -1872,7 +1871,7 @@ export const innovativeAIServices: InnovativeAIService[] = [
     rating: 4 && 4.7,
     reviews: 34,
   },
-];      mobile: '+1 302 464 0950';
+;      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'
@@ -1884,5 +1883,4 @@ export const innovativeAIServices: InnovativeAIService[] = [
     rating: 4 && 4.7,
     reviews: 34
   }
-];
 ;

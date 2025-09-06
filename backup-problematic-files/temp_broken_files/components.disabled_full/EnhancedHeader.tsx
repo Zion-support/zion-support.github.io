@@ -2,7 +2,6 @@ import React from 'react';
 
 interface EnhancedHeaderProps {
   className?: string;
-}
 
 const EnhancedHeader: React.FC<EnhancedHeaderProps> = ({ className }) => {
   return (
@@ -11,6 +10,5 @@ const EnhancedHeader: React.FC<EnhancedHeaderProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default EnhancedHeader;

@@ -6,5 +6,3 @@ export function PreviewResume() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

@@ -5,7 +5,7 @@ import {
   ArrowRight, Star, TrendingUp, Zap, Brain, Atom,
   Rocket, Shield, Target, CheckCircle, ExternalLink,
   Search, Filter, Grid, List, ChevronDown
-} from 'lucide-react',
+ from 'lucide-react',
 import { cuttingEdge2027Innovations } from '../../data/2027-cutting-edge-innovations',
 import { practicalMicroSaas2027 } from '../../data/2027-practical-micro-saas',
 import { emergingTech2027Services } from '../../data/2027-emerging-tech-services',
@@ -23,26 +23,25 @@ const all2027Services = [
   ],
 
   // Get unique categories,
-const categories = ['all', ...Array.from(new Set(all2027Services.map(service => service.category)))],
+const categories = ['all', ...Array.from(new Set(all2027Services.map(service => service.category))],
   // Filter and sort services,
 const filteredServices = all2027Services
     .filter(service => {
-      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),
-      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
+      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase() ||
+                           service.description.toLowerCase().includes(searchTerm.toLowerCase() ||
+                           service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()),
+      const matchesCategory = selectedCategory = = 'all' || service.category = = selectedCategory,
       return matchesSearch && matchesCategory
     })
-    .sort((a, b) => {
+    .sort(a, b) => {
       switch (sortBy) {        case 'name':
           return a.name.localeCompare(b.name),
         case 'price':
-          return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, '')),
+          return parseFloat(a.price.replace(/[^0-9.]/g, '') - parseFloat(b.price.replace(/[^0-9.]/g, ''),
         case 'roi':
-          return parseFloat(a.roi.replace(/[^0-9.]/g, '')) - parseFloat(b.roi.replace(/[^0-9.]/g, '')),
+          return parseFloat(a.roi.replace(/[^0-9.]/g, '') - parseFloat(b.roi.replace(/[^0-9.]/g, ''),
         default: return 0
-      }
-    }),
+      }),
 
   const getCategoryColor = (category: string) => {
     const colors = {
@@ -67,7 +66,7 @@ const filteredServices = all2027Services
       'Environmental Technology': <Rocket className="w-5 h-5" />
     },
     return icons[category as keyof typeof icons] || <Zap className="w-5 h-5" />
-  }  };
+  };
 
   return (
     <section className=&quot;py-20 bg-gray-900&quot;>
@@ -75,9 +74,9 @@ const filteredServices = all2027Services
         {/* Header */}
         <motion.div,
 className=&quot;text-center mb-16&quot;
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}        >
+          initial={ opacity: 0, y: 20 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0.6 }        >
           <h2 className=&quot;text-5xl font-bold mb-6&quot;>
             <span className=&quot;bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent&quot;>
               2027 Revolutionary Services
@@ -92,9 +91,9 @@ className=&quot;text-center mb-16&quot;
         {_/* Search and Filters */}
         <motion.div,
 className=&quot;mb-12&quot;
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          initial={ opacity: 0, y: 20 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0.6, delay: 0.2 }
         >
           <div className=&quot;bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6&quot;>
             <div className=&quot;flex flex-col lg:flex-row gap-6 items-center justify-between&quot;>
@@ -120,9 +119,9 @@ value={selectedCategory}
                     className=&quot;appearance-none bg-gray-700/50 border border-gray-600/50 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 pr-10&quot;                  >
                     {categories.map(_(category) => (
                       <option key={category} value={category}>
-                        {category === 'all' ? 'All Categories' : category}
+                        {category = = 'all' ? 'All Categories' : category}
                       </option>
-                    ))}
+                    )}
                   </select>
                   <ChevronDown className=&quot;absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none&quot; />
                 </div>
@@ -144,7 +143,7 @@ value={sortBy}
                 <div className=&quot;flex bg-gray-700/50 rounded-xl p-1&quot;>                  <button,
 onClick={_() => setViewMode('grid')}
                     className={_`p-2 rounded-lg transition-all duration-200 ${
-                      viewMode === 'grid' 
+                      viewMode = = 'grid' 
                         ? 'bg-cyan-500/20 text-cyan-400' 
                         : 'text-gray-400 hover:text-white'}`}
                   >
@@ -153,7 +152,7 @@ onClick={_() => setViewMode('grid')}
                   <button,
 onClick={_() => setViewMode('list')}
                     className={_`p-2 rounded-lg transition-all duration-200 ${
-                      viewMode === 'list' 
+                      viewMode = = 'list' 
                         ? 'bg-cyan-500/20 text-cyan-400' 
                         : 'text-gray-400 hover:text-white'}`}
                   >
@@ -168,9 +167,9 @@ onClick={_() => setViewMode('list')}
         {_/* Results Count */}
         <motion.div,
 className=&quot;mb-8&quot;
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
+          initial={ opacity: 0 }
+          whileInView={ opacity: 1 }
+          transition={ duration: 0.6, delay: 0.3 }
         >
           <p className=&quot;text-gray-400&quot;>
             Showing <span className=&quot;text-cyan-400 font-semibold&quot;>{filteredServices.length}</span> of{' '}
@@ -180,20 +179,20 @@ className=&quot;mb-8&quot;
 
         {/* Services Grid/List */}
         <AnimatePresence mode=&quot;wait&quot;>
-          {viewMode === 'grid' ? (
+          {viewMode = = 'grid' ? (
             <motion.div,
 key=&quot;grid&quot;
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.95 }}
-              transition={{ duration: 0.3 }}
+              initial={ opacity: 0, scale: 0.95 }
+              animate={ opacity: 1, scale: 1 }
+              exit={ opacity: 0, scale: 0.95 }
+              transition={ duration: 0.3 }
               className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;            >
-              {filteredServices.map((service, index) => (
+              {filteredServices.map(service, index) => (
                 <motion.div,
 key={service.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={ opacity: 0, y: 20 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.6, delay: index * 0.1 }
                   className=&quot;group&quot;
                 >
                   <div className=&quot;bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 h-full hover:border-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/20 transition-all duration-300 hover:-translate-y-2&quot;>
@@ -215,28 +214,28 @@ key={service.id}
                     <p className=&quot;text-gray-300 mb-4 leading-relaxed&quot;>
                       {service.description}
                     </p>;
-;
+
                     {/* Features */}
                     <div className=&quot;mb-4&quot;>
                       <h4 className=&quot;text-sm font-semibold text-gray-400 mb-2&quot;>Key Features:</h4>
                       <ul className=&quot;space-y-1&quot;>
-                        {service.features.slice(0, 3).map((feature, idx) => (
+                        {service.features.slice(0, 3).map(feature, idx) => (
                           <li key={idx} className=&quot;flex items-center text-sm text-gray-300&quot;>
                             <CheckCircle className=&quot;w-4 h-4 text-cyan-400 mr-2 flex-shrink-0&quot; />
                             {feature}                          </li>
-                        ))}
+                        )}
                       </ul>;
                     </div>;
-;
+
                     {/* Tags */}
                     <div className=&quot;flex flex-wrap gap-2 mb-6&quot;>
-                      {service.tags.slice(0, 3).map((tag, idx) => (                        <span,
+                      {service.tags.slice(0, 3).map(tag, idx) => (                        <span,
 key={idx}
                           className=&quot;px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50&quot;
                         >
                           {tag}
                         </span>;
-                      ))}
+                      )}
                     </div>
 
                     {_/* CTA */}
@@ -248,22 +247,22 @@ href={service.link}
                     </a>
                   </div>
                 </motion.div>
-              ))}
+              )}
             </motion.div>
           ) : (
             <motion.div,
 key=&quot;list&quot;
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.95 }}
-              transition={{ duration: 0.3 }}
+              initial={ opacity: 0, scale: 0.95 }
+              animate={ opacity: 1, scale: 1 }
+              exit={ opacity: 0, scale: 0.95 }
+              transition={ duration: 0.3 }
               className=&quot;space-y-4&quot;            >
-              {filteredServices.map((service, index) => (
+              {filteredServices.map(service, index) => (
                 <motion.div,
 key={service.id}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={ opacity: 0, x: -20 }
+                  whileInView={ opacity: 1, x: 0 }
+                  transition={ duration: 0.6, delay: index * 0.1 }
                   className=&quot;group&quot;
                 >
                   <div className=&quot;bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 hover:border-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/20 transition-all duration-300&quot;>
@@ -288,16 +287,16 @@ key={service.id}
                           {service.description}
                         </p>
                         <div className=&quot;flex flex-wrap gap-2 mb-3&quot;>
-                          {service.tags.slice(0, 4).map((tag, idx) => (                            <span,
+                          {service.tags.slice(0, 4).map(tag, idx) => (                            <span,
 key={idx}
                               className=&quot;px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50&quot;
                             >
                               {tag}
                             </span>;
-                          ))}
+                          )}
                         </div>;
                       </div>;
-;
+
                       {/* Stats and CTA */}
                       <div className=&quot;flex flex-col items-end space-y-3&quot;>
                         <div className=&quot;text-right&quot;>
@@ -314,18 +313,18 @@ href={service.link}
                     </div>
                   </div>
                 </motion.div>
-              ))}
+              )}
             </motion.div>;
           )}
         </AnimatePresence>;
-;
+
         {/* No Results */}
-        {filteredServices.length === 0 && (
+        {filteredServices.length = = 0 && (
           <motion.div,
 className=&quot;text-center py-20&quot;
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6 }}          >
+            initial={ opacity: 0 }
+            animate={ opacity: 1 }
+            transition={ duration: 0.6 }          >
             <div className=&quot;text-6xl mb-4&quot;></div>
             <h3 className=&quot;text-2xl font-bold text-white mb-4&quot;>No services found</h3>
             <p className=&quot;text-gray-400 mb-8&quot;>
@@ -335,7 +334,7 @@ className=&quot;text-center py-20&quot;
 onClick={() => {
                 setSearchTerm(''),
                 setSelectedCategory('all')
-              }}
+              }
               className=&quot;px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300&quot;            >
               Clear Filters
             </button>
@@ -345,9 +344,9 @@ onClick={() => {
         {_/* CTA Section */}
         <motion.div,
 className=&quot;mt-20 text-center&quot;
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}        >
+          initial={ opacity: 0, y: 20 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0.6, delay: 0.8 }        >
           <div className="bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-12">
             <h3 className="text-3xl md: text-4xl font-bold text-white mb-6">              Ready to Transform Your Business?
             </h3>
@@ -376,56 +375,56 @@ href=&quot;/pricing&quot;
       </div>
     </section>
   )
-},
+,
 
 export default Enhanced2027ServicesShowcase,  /* Search and Filters */ 
-}<motion.div /> </div> </div> > {
-  categories.map ( (category) => (<option key= {
+<motion.div /> </div> </div>{
+  categories.map (category) => (<option key= {
   category 
-}value= {
+value= {
   category 
-}> {
-  category === 'all' ? 'All Categories' : category 
-}</option>) ) 
-}</select> <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" /> </div> > <option value="name" >Sort by Name</option> <option value="price" >Sort by Price</option> <option value="roi" >Sort by ROI</option> </select> <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" /> </div> <button onClick= {
+> {
+  category = = 'all' ? 'All Categories' : category 
+</option>) 
+</select> <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" /> </div><option value="name" >Sort by Name</option> <option value="price" >Sort by Price</option> <option value="roi" >Sort by ROI</option> </select> <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" /> </div> <button onClick= {
   () => setViewMode ('grid') 
-}className= {
+className= {
   `p-2 rounded-lg transition-all duration-200 $ {
-  viewMode === 'grid' ? 'bg-cyan-500/20 text-cyan-400' : 'text-gray-400 hover:text-white' 
-}` 
-}> <Grid className="w-5 h-5" /> </button> <button onClick= {
+  viewMode = = 'grid' ? 'bg-cyan-500/20 text-cyan-400' : 'text-gray-400 hover:text-white' 
+` 
+> <Grid className="w-5 h-5" /> </button> <button onClick= {
   () => setViewMode ('list') 
-}className= {
+className= {
   `p-2 rounded-lg transition-all duration-200 $ {
-  viewMode === 'list' ? 'bg-cyan-500/20 text-cyan-400' : 'text-gray-400 hover:text-white' 
-}` 
-}> <List className="w-5 h-5" /> </button> </div> </div> </div> </div> </motion.div> {
+  viewMode = = 'list' ? 'bg-cyan-500/20 text-cyan-400' : 'text-gray-400 hover:text-white' 
+` 
+> <List className="w-5 h-5" /> </button> </div> </div> </div> </div> </motion.div> {
   /* Results Count */ 
-}<motion.div > {
-  filteredServices.map ( (service, index) => (<motion.div key= {
+<motion.div > {
+  filteredServices.map (service, index) => (<motion.div key= {
   service.id 
-}</li>) ) 
-}</ul> </div> <span key= {
+</li>) 
+</ul> </div> <span key= {
   idx 
-}className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50" > {
+className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50" > {
   tag 
-}</span>) ) 
-}</div> {
+</span>) 
+</div> {
   /* CTA */ 
-}<Link > <span>Learn More</span> <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" /> </a> </div> </motion.div>) ) 
-}</motion.div> > {
-  filteredServices.map ( (service, index) => (<motion.div key= {
+<Link > <span>Learn More</span> <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" /> </a> </div> </motion.div>) 
+</motion.div>{
+  filteredServices.map (service, index) => (<motion.div key= {
   service.id 
-}<span key= {
+<span key= {
   idx 
-}className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50" > {
+className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50" > {
   tag 
-}</span>) ) 
-}</div> </div> > <span>Learn More</span> <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" /> </a> </div> </div> </div> </motion.div>) ) 
-}</motion.div>) 
-}</AnimatePresence> > <div className="text-6xl mb-4" ></div> <h3 className="text-2xl font-bold text-white mb-4" >No services found</h3> <p className="text-gray-400 mb-8" > Try adjusting your search terms or category filter to find what you're looking for. </p> <button > Clear Filters </button> </motion.div>) 
-}{
+</span>) 
+</div> </div><span>Learn More</span> <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" /> </a> </div> </div> </div> </motion.div>) 
+</motion.div>) 
+</AnimatePresence><div className="text-6xl mb-4" ></div> <h3 className="text-2xl font-bold text-white mb-4" >No services found</h3> <p className="text-gray-400 mb-8" > Try adjusting your search terms or category filter to find what you're looking for. </p> <button > Clear Filters </button> </motion.div>) 
+{
   /* CTA Section */ 
-}<motion.div > Ready to Transform Your Business? </h3> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Our team of experts is ready to help you implement these revolutionary services and achieve unprecedented growth. Let's build the future together. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/25" > <span>Get Started Today</span> <ArrowRight className="w-5 h-5" /> </a> <Link href="/pricing" className="inline-flex items-center space-x-2 bg-gradient-to-r from-gray-700 to-gray-800 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl border border-gray-600/50" > <span>View Pricing</span> <TrendingUp className="w-5 h-5" /> </a> </div> </div> </motion.div> </div> </section>) 
-};
+<motion.div > Ready to Transform Your Business? </h3> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Our team of experts is ready to help you implement these revolutionary services and achieve unprecedented growth. Let's build the future together. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/25" > <span>Get Started Today</span> <ArrowRight className="w-5 h-5" /> </a> <Link href="/pricing" className="inline-flex items-center space-x-2 bg-gradient-to-r from-gray-700 to-gray-800 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl border border-gray-600/50" > <span>View Pricing</span> <TrendingUp className="w-5 h-5" /> </a> </div> </div> </motion.div> </div> </section>) 
+;
 export default Enhanced2027ServicesShowcase;

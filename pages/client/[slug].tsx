@@ -11,17 +11,15 @@ type Props = { clientId: string }
 const ClientPage: NextPage<Props> = ({ clientId }) => {
   const [summary, setSummary] = useState<ReviewsSummary | null>(null)
   const [reviews, setReviews] = useState<PublicReview[]>([])
-  useEffect(() => {
+  useEffect() => {
     (async () => {
       const res = await fetch(`/api/reviews/list?targetType=client&targetId=${clientId}`)
       const data = await res.json()
-      if (res.ok) { setSummary(data.summary), setReviews(data.reviews) }
-    })()
+      if (res.ok) { setSummary(data.summary), setReviews(data.reviews) })()
   }, [clientId])
       const res = await fetch(`/api/reviews/list?targetType=client&targetId=${clientId}`);
       const data = await res.json();
-      if (res.ok) { setSummary(data.summary), setReviews(data.reviews) }
-    })()
+      if (res.ok) { setSummary(data.summary), setReviews(data.reviews) })()
   }, [clientId]);
 
   async function handleReport(id: string) {
@@ -32,19 +30,18 @@ import type { NextPage, GetServerSideProps } from 'next',
 import ReviewSummary from '../../components / reviews / ReviewSummary',
 import ReviewCard from '../../components / reviews / ReviewCard',
 import type { PublicReview, ReviewsSummary } from '../../types / reviews',
-;
+
 type Props = { client_id: string },
 const ClientPage: NextPage < Props> = ({ client_id }) => {
   const [summary, set_summary] = useState < ReviewsSummary | null>(null),
   const [reviews, set_reviews] = useState < PublicReview[]>([]),
-  useEffect (() => {
+  useEffect () => {
     (async () => {
       const res = await fetch (`/api / reviews / list?target_type = client & target_id=${client_id}`),
       const data = await res.json (),
-      if ( { set_summary (data.summary), set_reviews (data.reviews) }
-    })()) {
+      if ( { set_summary (data.summary), set_reviews (data.reviews) })() {
   $2
-}
+
   }, [client_id]),
   async /**
  * handle_report - Function description
@@ -60,27 +57,27 @@ function handle_report() {
       </header>;
       {summary && <ReviewSummary summary={summary} />}
       <section className="grid gap-4">
-        {reviews.map((r) => (<ReviewCard key={r.id} review={r} onReport={handleReport} />))}
+        {reviews.map(r) => (<ReviewCard key={r.id} review={r} onReport={handleReport} />)}
         {!reviews.length && (<div className="enhanced-card">No public reviews yet.</div>)}
       </section>
     </main>
   )
-}
+
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const { slug } = ctx.query as { slug: string }
-  return { props: { clientId: slug } }
-}
+  return { props: { clientId: slug }
+
 export default ClientPage;
 
       <section className="grid gap - 4">;
-        {reviews.map ((r) => (<ReviewCard key={r.id} review={r} on_report={handle_report} />))}
+        {reviews.map (r) => (<ReviewCard key={r.id} review={r} on_report={handle_report} />)}
         {!reviews.length && (<div className="enhanced - card">No public reviews yet.</div>)}
       </section>;
     </main>);
-},
+,
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const { slug } = ctx.query as { slug: string },
-  return { props: { clientId: slug } }
-};
+  return { props: { clientId: slug }
+;
 
 export default ClientPage;

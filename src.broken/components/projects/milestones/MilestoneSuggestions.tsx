@@ -6,5 +6,3 @@ export function MilestoneSuggestions() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

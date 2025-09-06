@@ -56,7 +56,7 @@ const EnhancedFooter = () => {
       </div>
     </footer>
   )
-},
+,
 
 export default EnhancedFooter,
 import React from 'react',;
@@ -113,5 +113,5 @@ const EnhancedFooter = () => {;
       </div>;
     </footer>;
   );
-},;
+,;
 export default EnhancedFooter;

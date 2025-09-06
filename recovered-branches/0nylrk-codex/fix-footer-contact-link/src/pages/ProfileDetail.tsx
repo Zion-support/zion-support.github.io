@@ -20,7 +20,7 @@ import {
   Mail;
   Phone;
   Globe
-} from "lucide-react",
+ from "lucide-react",
 import { HireNowCTA } from "@/components/profile/HireNowCTA";
 export default function ProfileDetail() {
   // useParams is typed as `any` in this environment due to missing type
@@ -30,7 +30,7 @@ export default function ProfileDetail() {
   const [isLoading, setIsLoading] = useState(true);
 
   const [error, setError] = useState<string | null>(null);
-  useEffect(() => {
+  useEffect() => {
     const fetchProfile = async () => {
       setIsLoading(true);
       setError(null);
@@ -61,7 +61,6 @@ export default function ProfileDetail() {
       } finally {
         setIsLoading (false);
       }
-    }
     fetchProfile()
   }, [profileId]);
   if (isLoading) {
@@ -115,14 +114,14 @@ export default function ProfileDetail() {
                       )}
                     </CardTitle>;
                     <CardDescription className="text-zion-cyan">{profileData && profileData.professional_title}</CardDescription>;
-;
+
     fetch_profile ();
   }, [profile_id]);
-;
+
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <div className="min - h-screen flex items - center justify - center">;
         <p > Loading profile...</p>;
@@ -131,7 +130,7 @@ if ( {) {
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <div className="min - h-screen flex items - center justify - center">;
         <p > Error: {error}</p>;
@@ -140,7 +139,7 @@ if ( {) {
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <div className="min - h-screen flex items - center justify - center">;
         <p > Profile not found.</p>;
@@ -215,9 +214,9 @@ if ( {) {
               </CardHeader>
               <CardContent>
                 <div className="flex flex-wrap gap-2">
-                  {profileData.skills?.map((skill: string, index: number) => (
+                  {profileData.skills?.map(skill: string, index: number) => (
                     <Badge key={index} className="bg-zion-blue-light text-zion-slate-light border-none">{skill}</Badge>
-                  )) |<p className="text-zion-slate-light">No skills provided.</p>}
+                  ) |<p className="text-zion-slate-light">No skills provided.</p>}
                 </div>
               </CardContent>
             </Card>
@@ -228,14 +227,14 @@ if ( {) {
               </CardHeader>
               <CardContent>
                 {profileData.experience ? (
-                  profileData.experience.map((exp: any, index: number) => (
+                  profileData.experience.map(exp: any, index: number) => (
                     <div key={index} className="mb-4">
                       <h4 className="font-bold text-white">{exp.title}</h4>
                       <p className="text-zion-cyan">{exp.company}</p>
                       <p className="text-sm text-zion-slate-light">{exp.start_date} - {exp.end_date |"Present"}</p>
                       <p className="text-zion-slate-light">{exp.description}</p>
                     </div>
-                  ))
+                  )
                 ) : (
                   <p className="text-zion-slate-light">No experience provided.</p>
                 )}
@@ -249,7 +248,7 @@ if ( {) {
               <CardContent>;
                 {profileData && profileData.portfolio_links ? (;
                   <div className="flex flex-col gap-3">;
-                    {profileData && profileData.portfolio_links.map((link: any, index: number) => (;
+                    {profileData && profileData.portfolio_links.map(link: any, index: number) => (;
                       <a
                         key={index}
                         href={link && link.url}
@@ -260,7 +259,7 @@ if ( {) {
                         <LinkIcon className="h-4 w-4" />
                         {link.title |link.url}
                       </a>
-                    ))}
+                    )}
                   </div>;
                 ) : (;
                   <p className="text-zion-slate-light">No portfolio links provided.</p>;
@@ -271,13 +270,13 @@ if ( {) {
           {/* Sidebar with HireNowCTA */}
           <div className="col-span-4 lg:col-span-1">;
             <HireNowCTA
-              talentProfile={{
+              talentProfile={
                 id: profileData?.id |''
                 full_name: profileData?.full_name |''
                 professional_title: profileData?.professional_title |''
                 hourly_rate: profileData?.hourly_rate |0
 
-              }}
+              }
             />;
             {/* Contact Information */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mt-6">;
@@ -335,7 +334,7 @@ if ( {) {
       <Footer />
     </>
   )
-}
+
               </div>;
             </div>;
           </div>;
@@ -344,6 +343,5 @@ if ( {) {
       <Footer />;
     </>;
   );
-}
+
     </>);
-}

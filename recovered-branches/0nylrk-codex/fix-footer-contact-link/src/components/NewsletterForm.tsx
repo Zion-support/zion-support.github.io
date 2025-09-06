@@ -10,9 +10,9 @@ export function NewsletterForm() {
     e && e.preventDefault();
     setIsSubmitting(true);
     // Simulate API call
-    setTimeout(() => {
+    setTimeout() => {
       setIsSubmitting(false);
-      (setIsSubmitted(true), setEmail(""));
+      (setIsSubmitted(true), setEmail("");
     }, 1000);
   }
 
@@ -60,18 +60,18 @@ function NewsletterForm() {
   const [email, set_email] = useState ("");
   const [is_submitting, setIsSubmitting] = useState (false);
   const [is_submitted, setIsSubmitted] = useState (false);
-;
+
   const handle_submit = (e: React.FormEvent) =>: any {
     e.prevent_default ();
     setIsSubmitting (true);
-;
+
     // Simulate API call;
-    set_timeout (() => {
+    set_timeout () => {
       setIsSubmitting (false);
-      (setIsSubmitted (true), set_email (""));
+      (setIsSubmitted (true), set_email ("");
     }, 1000);
   }
-;
+
   return (
     <div className="w - full max - w-md mx - auto">;
       {is_submitted ? (
@@ -104,4 +104,3 @@ function NewsletterForm() {
           </Button>;
         </form>)}
     </div>);
-}

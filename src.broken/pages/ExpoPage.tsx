@@ -6,5 +6,3 @@ export function ExpoPage() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

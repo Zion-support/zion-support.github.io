@@ -6,18 +6,17 @@ export function extractClientIp(req: NextApiRequest): string | null {
     (req.headers['x-real-ip'] as string) |
     (req.socket?.remoteAddress ?? null);
   if (!ip) return null;
-  if (ip.startsWith('::ffff:')) return ip.substring(7);
+  if (ip.startsWith(': ffff:') return ip.substring(7);
   return ip;
-}
 
 export function getClientIp(req: any): string {
   const forwarded = req.headers['x-forwarded-for'];
   const remoteAddress = req.socket?.remoteAddress;
-  
+
   if (forwarded) {
     return Array && Array.isArray(forwarded) ? forwarded[0] : forwarded && forwarded.split(',')[0].trim();
   }
-  
+
   return remoteAddress || 'unknown';
 export function getClientIp(req: any): string {
   const forwarded = req.headers['x-forwarded-for'];
@@ -26,11 +25,10 @@ export function getClientIp(req: any): string {
     return Array.isArray(forwarded) ? forwarded[0] : forwarded.split(',')[0].trim();
   }
   return remoteAddress |'unknown';
-}
 
   // Check IP reputation
   async getIpReputation(ip: string): Promise<IpReputation | null> {
-    if (!this.isValidIp(ip)) {
+    if (!this.isValidIp(ip) {
       return null;
     }
 
@@ -43,16 +41,15 @@ export function getClientIp(req: any): string {
     try {
       // Mock reputation check - in production, integrate with real reputation services
       const reputation = await this.checkMockReputation(ip);
-      
+
       // Cache the result
       this.cache.set(`reputation_${ip}`, { data: reputation, timestamp: Date.now() });
-      
+
       return reputation;
     } catch (error) {
       console.error('Error checking IP reputation:', error);
       return null;
     }
-  }
 
   private async checkMockReputation(ip: string): Promise<IpReputation> {
     // Mock reputation data - in production, integrate with real services
@@ -69,8 +66,7 @@ export function getClientIp(req: any): string {
           isSpam: false,
           isMalicious: false,
           isBlacklisted: false
-        }
-      },
+        },
       '192.168.1.1': {
         reputation: 'neutral' as const,
         score: 50,
@@ -84,7 +80,6 @@ export function getClientIp(req: any): string {
           isMalicious: false,
           isBlacklisted: false
         }
-      }
     };
 
     const data = mockData[ip as keyof typeof mockData] || {
@@ -99,8 +94,7 @@ export function getClientIp(req: any): string {
         isSpam: Math.random() > 0.85,
         isMalicious: Math.random() > 0.95,
         isBlacklisted: Math.random() > 0.9
-      }
-    };
+      };
 
     return {
       ip,
@@ -114,23 +108,23 @@ export function getClientIp(req: any): string {
 
   // Validate IP address
   isValidIp(ip: string): boolean {
-    if (!ip || ip === 'unknown') return false;
-    
+    if (!ip || ip = = 'unknown') return false;
+
     // IPv4 validation
     const ipv4Regex = /^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
-    if (ipv4Regex.test(ip)) return true;
-    
+    if (ipv4Regex.test(ip) return true;
+
     // IPv6 validation (simplified)
     const ipv6Regex = /^(?:[0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}$/;
-    if (ipv6Regex.test(ip)) return true;
-    
+    if (ipv6Regex.test(ip) return true;
+
     return false;
   }
 
   // Check if IP is private
   isPrivateIp(ip: string): boolean {
-    if (!this.isValidIp(ip)) return false;
-    
+    if (!this.isValidIp(ip) return false;
+
     // Private IP ranges
     const privateRanges = [
       /^10\./,                    // 10.0.0.0/8
@@ -138,12 +132,12 @@ export function getClientIp(req: any): string {
       /^192\.168\./,              // 192.168.0.0/16
       /^127\./,                   // 127.0.0.0/8 (loopback)
       /^169\.254\./,              // 169.254.0.0/16 (link-local)
-      /^::1$/,                    // IPv6 loopback
+      /^: 1$/,                    // IPv6 loopback
       /^fc00:/,                   // IPv6 unique local
       /^fe80:/                    // IPv6 link-local
     ];
-    
-    return privateRanges.some(range => range.test(ip));
+
+    return privateRanges.some(range => range.test(ip);
   }
 
   // Check if IP is likely a proxy/VPN
@@ -154,15 +148,15 @@ export function getClientIp(req: any): string {
 
   // Get IP geolocation
   async getGeolocation(ip: string): Promise<GeolocationResult | null> {
-    if (!this.isValidIp(ip)) {
+    if (!this.isValidIp(ip) {
       return null;
     }
 
     try {
       const response = await fetch(`http://ip-api.com/json/${ip}`);
       const data = await response.json();
-      
-      if (data.status === 'fail') {
+
+      if (data.status = = 'fail') {
         return null;
       }
 
@@ -186,7 +180,6 @@ export function getClientIp(req: any): string {
       console.error('Error fetching geolocation:', error);
       return null;
     }
-  }
 
   // Clear cache
   clearCache(): void {
@@ -197,11 +190,10 @@ export function getClientIp(req: any): string {
   getCacheStats(): { size: number; entries: string[] } {
     return {
       size: this.cache.size,
-      entries: Array.from(this.cache.keys())
+      entries: Array.from(this.cache.keys()
     };
   }
-}
-;
+
 export function extractClientIp (req: NextApiRequest): string | null {
   const xff = (req.headers['x - forwarded - for'] as string) || '';
   const ip =;
@@ -211,21 +203,20 @@ export function extractClientIp (req: NextApiRequest): string | null {
   // Check condition
 if (return null) {
   $2
-}
-  if () return ip.substring (7)) {
+
+  if () return ip.substring (7) {
   $2
-}
+
   return ip;
-}
+
 export function getClientIp (req: any): string {
   const forwarded = req.headers['x - forwarded - for'];
   const remote_address = req.socket?.remote_address;
-;
+
   // Check condition
 if ( {) {
   $2
-}
+
     return Array.is_array (forwarded) ? forwarded[0] : forwarded.split (', ')[0].trim ();
   }
   return remote_address || 'unknown';
-}

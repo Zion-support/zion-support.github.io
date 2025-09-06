@@ -2,7 +2,6 @@ import React from 'react';
 
 interface ManufacturingProps {
   className?: string;
-}
 
 const Manufacturing: React.FC<ManufacturingProps> = ({ className }) => {
   return (
@@ -11,6 +10,5 @@ const Manufacturing: React.FC<ManufacturingProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default Manufacturing;

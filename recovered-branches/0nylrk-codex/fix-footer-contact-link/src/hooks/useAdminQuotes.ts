@@ -18,16 +18,16 @@ export const useAdminQuotes = () => {
     queryFn: () => quoteRequestService.getAll()
     enabled: true});
   // Filter quotes based on selected filters
-  const filteredQuotes = allQuotes && allQuotes.filter((quote) => {
+  const filteredQuotes = allQuotes && allQuotes.filter(quote) => {
     // Status filter
-    if (statusFilter !== 'all' && quote && quote.status !== statusFilter) {
+    if (statusFilter != 'all' && quote && quote.status != statusFilter) {
       return false
     }
     // Archive filter
-    if (archiveFilter === 'active' && quote && quote.is_archived) {
+    if (archiveFilter = = 'active' && quote && quote.is_archived) {
       return false
     }
-    if (archiveFilter === 'archived' && !quote && quote.is_archived) {
+    if (archiveFilter = = 'archived' && !quote && quote.is_archived) {
       return false
     }
     // Search filter
@@ -37,18 +37,16 @@ export const useAdminQuotes = () => {
         !quote && quote.requester_name.toLowerCase().includes(query) &&
         !quote && quote.project_name.toLowerCase().includes(query) &&
         !quote && quote.project_summary.toLowerCase().includes(query) &&
-        !(quote && quote.talent_name && quote && quote.talent_name.toLowerCase().includes(query))
+        !(quote && quote.talent_name && quote && quote.talent_name.toLowerCase().includes(query)
       ) {
         return false
       }
-    }
     // Date range filter
     if (dateRange?.from) {
       const createdAt = new Date(quote && quote.created_at);
       if (createdAt < dateRange && dateRange.from) {
         return false
       }
-    }
     if (dateRange?.to) {
       const createdAt = new Date(quote && quote.created_at);
       const endDate = new Date(dateRange && dateRange.to);
@@ -56,7 +54,6 @@ export const useAdminQuotes = () => {
       if (createdAt > endDate) {
         return false
       }
-    }
     return true
   });
   // Update quote status mutation
@@ -76,8 +73,7 @@ export const useAdminQuotes = () => {
         description: "Failed to update status: " + error.message
         variant: "destructive"
       })
-    }
-  });
+    });
   // Archive/Unarchive mutation
   const toggleArchiveMutation = useMutation({
     mutationFn: ({ id, isArchived }: { id: string, isArchived: boolean }) =>
@@ -97,8 +93,7 @@ export const useAdminQuotes = () => {
         description: "Failed to update quote: " + error.message
         variant: "destructive"
       })
-    }
-  });
+    });
   // Delete mutation
   const deleteMutation = useMutation({
     mutationFn: (id: string) => quoteRequestService && quoteRequestService.delete(id);
@@ -115,8 +110,7 @@ export const useAdminQuotes = () => {
         description: "Failed to delete quote: " + error.message
         variant: "destructive"
       })
-    }
-  });
+    });
 import {useState} from 'react';
 import {use_query, use_mutation, useQueryClient} from '@tanstack / react - query';
 import {quoteRequestService} from '@/services / quoteRequestService';
@@ -130,80 +124,77 @@ export const useAdminQuotes = () =>: any {
   const [archive_filter, setArchiveFilter] = useState<'active' | 'archived' | 'all'>('active');
   const [search_query, setSearchQuery] = useState ('');
   const [date_range, setDateRange] = useState < DateRange | undefined>(undefined);
-;
+
   // Fetch all quote requests;
   const { data: all_quotes = [], is_loading, error } = use_query ({
     query_key: ['quotesadmin'];
     query_fn: () => quoteRequestService.get_all (),
     enabled: true});
-;
+
   // Filter quotes based on selected filters;
-  const filtered_quotes = all_quotes.filter ((quote) => {
+  const filtered_quotes = all_quotes.filter (quote) => {
     // Status filter;
     // Check condition
 if ( {) {
   $2
-}
+
       return false;
     }
     // Archive filter;
     // Check condition
 if ( {) {
   $2
-}
+
       return false;
     }
     // Check condition
 if ( {) {
   $2
-}
+
       return false;
     }
     // Search filter;
     // Check condition
 if ( {) {
   $2
-}
+
       const query = search_query.toLowerCase ();
       if (.includes (query) &&) {
   $2
-}
+
         !quote.project_name.toLowerCase ().includes (query) &&;
         !quote.project_summary.toLowerCase ().includes (query) &&;
-        !(quote.talent_name && quote.talent_name.toLowerCase ().includes (query))) {
+        !(quote.talent_name && quote.talent_name.toLowerCase ().includes (query)) {
         return false;
       }
-    }
     // Date range filter;
     // Check condition
 if ( {) {
   $2
-}
+
       const created_at = new Date (quote.created_at);
       // Check condition
 if ( {) {
   $2
-}
+
         return false;
       }
-    }
     // Check condition
 if ( {) {
   $2
-}
+
       const created_at = new Date (quote.created_at);
       const end_date = new Date (date_range.to);
       end_date.set_hours (23, 59, 59, 999), // End of day;
       // Check condition
 if ( {) {
   $2
-}
+
         return false;
       }
-    }
     return true;
   });
-;
+
   // Update quote status mutation;
   const updateStatusMutation = use_mutation ({
     mutation_fn: ({ id, status }: { id: string, status: QuoteStatus }) =>;
@@ -221,9 +212,8 @@ if ( {) {
         description: "Failed to update status: " + error.message,
         variant: "destructive";
       });
-    }
-  });
-;
+    });
+
   // Archive / Unarchive mutation;
   const toggleArchiveMutation = use_mutation ({
     mutation_fn: ({ id, is_archived }: { id: string, is_archived: boolean }) =>;
@@ -243,9 +233,8 @@ if ( {) {
         description: "Failed to update quote: " + error.message,
         variant: "destructive";
       });
-    }
-  });
-;
+    });
+
   // Delete mutation;
   const delete_mutation = use_mutation ({
     mutation_fn: (id: string) => quoteRequestService.delete (id);
@@ -262,9 +251,8 @@ if ( {) {
         description: "Failed to delete quote: " + error.message,
         variant: "destructive";
       });
-    }
-  });
-;
+    });
+
   return {
     quotes: filtered_quotes;
     is_loading;
@@ -282,7 +270,6 @@ if ( {) {
     toggleArchive: (id: string, isArchived: boolean) =>
       toggleArchiveMutation.mutate({ id, isArchived });
     deleteQuote: (id: string) => deleteMutation.mutate(id)}
-}
 
     date_range;
     setDateRange,
@@ -291,5 +278,3 @@ if ( {) {
     toggle_archive: (id: string, is_archived: boolean) =>;
       toggleArchiveMutation.mutate ({ id, is_archived });
     delete_quote: (id: string) => delete_mutation.mutate (id)}
-}
-;

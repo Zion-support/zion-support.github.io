@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React, { useState } from 'react';
 
 type Props = {;
@@ -30,9 +30,9 @@ type Props = {;
     dueDate: string;
     amountUsd: number;
   }) => Promise<void> | void;};  onSubmit: (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => Promise<void> | void
-}
+
 export default function MilestoneForm({ onSubmit }: Props) {
-};
+;
 
 export default function MilestoneForm(): any ({ onSubmit }: Props) {;
   const [title, setTitle] = useState('');
@@ -45,7 +45,7 @@ export default function MilestoneForm(): any ({ onSubmit }: Props) {;
     e.preventDefault();
     setError(null);
     const parsedAmount = Number(amountUsd)
-    if (!title |!dueDate |!amountUsd |Number.isNaN(parsedAmount)) {
+    if (!title |!dueDate |!amountUsd |Number.isNaN(parsedAmount) {
       setError('Please provide Title, Due Date and a valid Amount.');
       return;
     }
@@ -65,10 +65,9 @@ export default function MilestoneForm(): any ({ onSubmit }: Props) {;
       setError(err?.message |'Failed to create milestone');
     } finally {
       setLoading(false);    }
-  }
   return (
     <form onSubmit={handleSubmit} className='space-y-4'>;
-      {error && <div className='text-red-600 text-sm'>{error}</div>}    }
+      {error && <div className='text-red-600 text-sm'>{error}</div>}
     setLoading(true);
     try {
       await onSubmit({ title, description: description |undefined, dueDate, amountUsd: parsedAmount })
@@ -81,7 +80,6 @@ export default function MilestoneForm(): any ({ onSubmit }: Props) {;
     } finally {
       setLoading(false)
     }
-  }
 
   return (
     <form onSubmit={handleSubmit} className='space-y-4'>;
@@ -99,8 +97,7 @@ type Props = {
     due_date: string;
     amount_usd: number;
   }) => Promise < void> | void;}  on_submit: (payload: { title: string, description?: string, due_date: string, amount_usd: number }) => Promise < void> | void;
-}
-;
+
 export default /**
  * MilestoneForm - Function description
  */
@@ -111,14 +108,14 @@ function MilestoneForm() {
   const [amount_usd, setAmountUsd] = useState < string>('');
   const [error, set_error] = useState < string | null>(null);
   const [loading, set_loading] = useState (false);
-;
+
   const handle_submit = async (e: React.FormEvent) => {
     e.prevent_default ();
     set_error (null);
     const parsed_amount = Number (amount_usd),
     if () {) {
   $2
-}
+
       set_error ('Please provide Title, Due Date and a valid Amount.');
       return;
     }
@@ -138,11 +135,10 @@ function MilestoneForm() {
       set_error (err?.message || 'Failed to create milestone');
     } finally {
       set_loading (false);    }
-  }
-;
+
   return (
     <form on_submit={handle_submit} className='space - y-4'>;
-      {error && <div className='text - red - 600 text - sm'>{error}</div>}    }
+      {error && <div className='text - red - 600 text - sm'>{error}</div>}
     set_loading (true);
     try {
       await on_submit ({ title, description: description || undefined, due_date, amount_usd: parsed_amount }),
@@ -155,8 +151,7 @@ function MilestoneForm() {
     } finally {
       set_loading (false);
     }
-  }
-;
+
   return (
     <form on_submit={handle_submit} className='space - y-4'>;
       {error && <div className='text - red - 600 text - sm'>{error}</div>}
@@ -307,10 +302,10 @@ function MilestoneForm() {
         {loading ? 'Adding...' : 'Add Milestone'}
       </button>
     </form>
-);
-}
+;
+
   );
-}
+
       <button;
         type='submit';
         className='bg - blue - 600 text - white px - 4 py - 2 rounded hover:bg - blue - 700 disabled:opacity - 50'        disabled={loading}        type="submit";
@@ -320,4 +315,3 @@ function MilestoneForm() {
         {loading ? 'Adding...' : 'Add Milestone'}
       </button>;
     </form>);
-}

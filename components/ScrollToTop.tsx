@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React, { useState, useEffect } from 'react';
 import { ChevronUp } from 'lucide-react';
 
@@ -30,7 +30,7 @@ import { ChevronUp } from 'lucide-react';
 
 export default function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false);
-  useEffect(() => {
+  useEffect() => {
     const toggleVisibility = () => {
       if (window.pageYOffset > 300) {
         setIsVisible(true);
@@ -39,13 +39,12 @@ export default function ScrollToTop() {
 export default function ScrollToTop() {;
   const [isVisible, setIsVisible] = useState(false);
 
-  useEffect(() => {;
+  useEffect() => {;
     const toggleVisibility = () => {;
       if (window && window.pageYOffset > 300) {;
         setIsVisible(true);
       } else {;
         setIsVisible(false);      }
-    }
     window.addEventListener('scroll', toggleVisibility);
     return () => window.removeEventListener('scroll', toggleVisibility);  }, []);        setIsVisible(true)
       } else {
@@ -54,7 +53,6 @@ export default function ScrollToTop() {;
       } else {
         setIsVisible(false)
       }
-    }
     window.addEventListener('scroll', toggleVisibility);
     return () => window.removeEventListener('scroll', toggleVisibility);    return () => window.removeEventListener('scroll', toggleVisibility)
     return () => window.removeEventListener('scroll', toggleVisibility);
@@ -82,7 +80,7 @@ export default function ScrollToTop() {;
       <ChevronUp className="w-6 h-6" />
     </button>
   );
-}
+
       behavior: 'smooth',
       top: 0
       behavior: 'smooth'
@@ -105,7 +103,7 @@ export default function ScrollToTop() {;
               strokeLinecap='round'
               strokeLinejoin='round'
               strokeWidth={2}
-              d='M5 10l7-7m0 0l7 7m-7-7v18'            />        >;
+              d='M5 10l7-7m0 0l7 7m-7-7v18'            />;
           <svg
             className="w-6 h-6 transform group-hover:-translate-y-1 transition-transform duration-300"
             fill="none"
@@ -123,55 +121,50 @@ export default function ScrollToTop() {;
       )}
     </>;
   );
-};
 
 export default ScrollToTop;  );
-}
+
 export default ScrollToTop;  )
-}
-};
+
+;
 
 export default ScrollToTop;  );
-};
 
 export default ScrollToTop;
 
-;
 export default /**
  * ScrollToTop - Function description
  */
 function ScrollToTop() {
   const [is_visible, setIsVisible] = useState (false);
-;
-  useEffect (() => {
+
+  useEffect () => {
     const toggle_visibility = () =>: any {
       // Check condition
 if ( {) {
   $2
-}
+
         setIsVisible (true);
       } else {
         setIsVisible (false);      }
-    }
-;
+
     window.addEventListener ('scroll', toggle_visibility);
     return () => window.removeEventListener ('scroll', toggle_visibility);  }, []);        setIsVisible (true);
       } else {
         setIsVisible (false);
       }
-    }
-;
+
     window.addEventListener ('scroll', toggle_visibility);
     return () => window.removeEventListener ('scroll', toggle_visibility);    return () => window.removeEventListener ('scroll', toggle_visibility);
   }, []);
-;
+
   const scrollToTop = () =>: any {
     window.scroll_to ({
       top: 0,
       behavior: 'smooth',
     });  }      behavior: 'smooth'});
   }
-;
+
   return (
     <>;
       {is_visible && (
@@ -191,7 +184,7 @@ if ( {) {
               stroke_linecap='round';
               stroke_linejoin='round';
               stroke_width={2}
-              d='M5 10l7 - 7m0 0l7 7m - 7-7v18'            />        >;
+              d='M5 10l7 - 7m0 0l7 7m - 7-7v18'            />;
           <svg;
             className="w - 6 h - 6 transform group - hover:-translate - y-1 transition - transform duration - 300";
             fill="none";
@@ -208,10 +201,7 @@ if ( {) {
           </svg>;
         </button>)}
     </>);
-}
-;
+
 export default ScrollToTop);
-}
-;
+
 export default ScrollToTop;
-;

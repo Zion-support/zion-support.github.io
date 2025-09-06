@@ -1,5 +1,5 @@
 import Link from 'next/link',;
-;
+
 export default function Reports() {;
   return (;
     <div className="space-y-6">;

@@ -1,21 +1,20 @@
 
 import { createNotification } from './createNotification',;
 import { OnboardingNotificationParams } from './types',;
-;
-/**;
+
+**;
  * Creates an onboarding notification for a user;
  */;
 export async function createOnboardingNotification({;
   userId,;
   missingMilestone,;
   userRole;
-} OnboardingNotificationParams) {;
+ OnboardingNotificationParams) {;
   let title = '',;
   let message = '',;
   let actionUrl = '',;
   let actionText = '',;
-  ;
-  if (userRole === 'talent') {;
+  if (userRole = = 'talent') {;
     switch (missingMilestone) {;
       case 'profile_completed':;
         title = 'Complete your profile',;
@@ -35,8 +34,7 @@ export async function createOnboardingNotification({;
         actionUrl = '/profile/settings',;
         actionText = 'Set Availability',;
         break,;
-    }
-  } else {;
+    } else {;
     switch (missingMilestone) {;
       case 'job_posted':;
         title = 'Post your first job',;
@@ -57,7 +55,6 @@ export async function createOnboardingNotification({;
         actionText = 'Find Talent',;
         break,;
     }
-  }
   ;
   return createNotification({;
     userId,;
@@ -68,7 +65,7 @@ export async function createOnboardingNotification({;
     actionUrl,;
     actionText;
   }),;
-} if (userRole === 'talent') {
+ if (userRole = = 'talent') {
   switch (missingMilestone) {
   case 'profile completed': title = 'Complete your profile';
 message = 'Complete your profile to get discovered by clients';
@@ -91,4 +88,3 @@ actionUrl = '/client-dashboard';
 actionText = 'View Matches';
 break;
 case 'talent invited': 
-}

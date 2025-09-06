@@ -5,18 +5,15 @@ import { useAuth } from '@/hooks/useAuth',;
 import { toast } from 'sonner',;
 import { Milestone } from './types',;
 import { useRecordActivity } from './useRecordActivity',;
-;
+
 export const useCreateMilestone = (projectId?:string) => {;
   const { user } = useAuth(),;
   const [isSubmitting, setIsSubmitting] = useState(false),;
   const { recordMilestoneActivity } = useRecordActivity(),;
-  ;
   const createMilestone = async (milestoneData:Omit<Milestone 'id' | 'created_at' | 'updated_at' | 'created_by'>) => {;
     if (!user || !projectId) return null,;
-    ;
     try {;
       setIsSubmitting(true),;
-      ;
       const { data, error } = await supabase;
         .from('project_milestones');
         .insert({;
@@ -25,14 +22,10 @@ export const useCreateMilestone = (projectId?:string) => {;
           created_by:user.id});
         .select();
         .single(),;
-      ;
       if (error) throw error,;
-      ;
       // Create activity record;
       await recordMilestoneActivity(data.id, 'created', null, 'pendingMilestone created'),;
-      ;
       toast.success("Milestone created successfully"),;
-      ;
       return data,;
     } catch (err:any) {;
       console.error("Error creating milestone:", err),;
@@ -40,28 +33,26 @@ export const useCreateMilestone = (projectId?:string) => {;
       return null;
     } finally {;
       setIsSubmitting(false),;
-    }
-  },;
-  ;
+    },;
   return {;
     createMilestone,;
     isSubmitting;
   },;
-},; try {
+,; try {
   setIsSubmitting (true);
 const {
   data, error 
-}= await supabase .from ('project milestones') .insert ({
+= await supabase .from ('project milestones') .insert ({
   ...milestoneData, project id: projectId, created by: user.id 
-}) .select () .single ();
+) .select () .single ();
 if (error) throw error;
-// Create activity record await recordMilestoneActivity (data.id, 'created', null, 'pendingMilestone created');
-}finally {
+/ Create activity record await recordMilestoneActivity (data.id, 'created', null, 'pendingMilestone created');
+finally {
   setIsSubmitting (false) 
-}
-};
+
+;
 return {
   createMilestone;
 isSubmitting 
-}
-};
+
+;

@@ -1,5 +1,4 @@
 
-
 import {useState, useEffect} from "react";
 import {format} from "date-fns";
 import {Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X} from "lucide-react";
@@ -42,17 +41,17 @@ export function WebhooksManager() {;
   const [testEventType, setTestEventType] = useState<WebhookEventType>('new_application');
 
   // Load webhooks on mount;
-  useEffect(() => {;
+  useEffect() => {;
     fetchWebhooks();
   }, []);
 
   const handleCreateWebhook = async () => {
-    if (webhookName.trim() === "" |webhookUrl.trim() === "" |selectedEvents.length === 0) return;
+    if (webhookName.trim() = = "" |webhookUrl.trim() = = "" |selectedEvents.length = = 0) return;
     await createWebhook(
       webhookName
       webhookUrl
       selectedEvents
-      webhookSecret.trim() === "" ? undefined : webhookSecret
+      webhookSecret.trim() = = "" ? undefined : webhookSecret
     );
     setShowCreateDialog(false);
     resetWebhookForm()
@@ -84,7 +83,7 @@ export function WebhooksManager() {;
   const toggleEvent = (event: WebhookEventType) => {
     setSelectedEvents(prev =>
       prev.includes(event)
-        ? prev.filter(e => e !== event)
+        ? prev.filter(e => e != event)
         : [...prev, event]
     )
   }
@@ -101,7 +100,7 @@ export function WebhooksManager() {;
       <CardContent>
         <div className="flex justify-between items-center mb-6">
           <p className="text-sm text-zinc-400">
-            You have {webhooks.length} {webhooks.length === 1 ? 'webhook' : 'webhooks'}
+            You have {webhooks.length} {webhooks.length = = 1 ? 'webhook' : 'webhooks'}
           </p>
           <Dialog open={showCreateDialog} onOpenChange={setShowCreateDialog}>
             <DialogTrigger asChild>
@@ -157,7 +156,7 @@ export function WebhooksManager() {;
                 <div className="space-y-2">
                   <Label>Event Types</Label>
                   <div className="grid gap-2 pt-2">
-                    {eventOptions.map((event) => (
+                    {eventOptions.map(event) => (
                       <div key={event.value} className="flex items-center space-x-2">
                         <Checkbox
                           id={event.value}
@@ -171,7 +170,7 @@ export function WebhooksManager() {;
                           <span className="block text-xs text-zinc-400 mt-1">{event && event.description}</span>;
                         </Label>;
                       </div>;
-                    ))}
+                    )}
                   </div>
                 </div>
               </div>
@@ -179,13 +178,13 @@ export function WebhooksManager() {;
                 <Button variant="outline" onClick={() => {
                   setShowCreateDialog(false);
                   resetWebhookForm()
-                }}>
+                }>
                   Cancel
                 </Button>
                 <Button onClick={handleCreateWebhook} disabled={
-                  webhookName.trim() === "" |
-                  webhookUrl.trim() === "" |
-                  selectedEvents.length === 0
+                  webhookName.trim() = = "" |
+                  webhookUrl.trim() = = "" |
+                  selectedEvents.length = = 0
                 }>
                   Create Webhook
                 </Button>
@@ -197,14 +196,14 @@ export function WebhooksManager() {;
         <div className="space - y-4">;
           {loading ? (
             <div className="text-center py-8 text-zinc-500">Loading webhooks...</div>
-          ) : webhooks.length === 0 ? (
+          ) : webhooks.length = = 0 ? (
             <div className="text-center py-8 text-zinc-500">
               <Webhook className="mx-auto mb-2 opacity-30" size={24} />
               <p>No webhooks found.</p>
               <p className="text-sm mt-1">Create one to receive event notifications.</p>
             </div>
           ) : (
-            webhooks.map((webhook) => (
+            webhooks.map(webhook) => (
               <div key={webhook.id} className="p-4 border border-zinc-800 rounded-lg">
                 <div className="flex items-center justify-between">
                   <div>
@@ -253,7 +252,7 @@ export function WebhooksManager() {;
                   </div>
                 </div>
                 <div className="mt-3 flex flex-wrap gap-2">
-                  {webhook.event_types.map((event) => (
+                  {webhook.event_types.map(event) => (
                     <Badge
                       key={event}
                         </DropdownMenuItem>;
@@ -263,14 +262,14 @@ export function WebhooksManager() {;
                 </div>;
 
                 <div className="mt-3 flex flex-wrap gap-2">;
-                  {webhook && webhook.event_types.map((event) => (;
+                  {webhook && webhook.event_types.map(event) => (;
                     <Badge
                       key={event} 
                       variant="secondary"
                       className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800">;
                       {event}
                     </Badge>;
-                  ))}
+                  )}
                 </div>
                 <div className="mt-3 text-xs text-zinc-500 flex items-center space-x-4">
                   <span>Created: {format(new Date(webhook.created_at), 'MMM d, yyyy')}</span>
@@ -279,7 +278,7 @@ export function WebhooksManager() {;
                   )}
                 </div>;
               </div>;
-            ));
+            );
           )}
         </div>
       </CardContent>
@@ -293,7 +292,7 @@ export function WebhooksManager() {;
       </CardFooter>
       {/* Test Webhook Dialog */}
       <Dialog
-        open={showTestDialog !== null}
+        open={showTestDialog != null}
         onOpenChange={(open) => {
           if (!open) {
             setShowTestDialog(null);
@@ -302,8 +301,7 @@ export function WebhooksManager() {;
               setShowTestResult(false);
               clearTestResult();
             }
-          }
-        }}
+        }
       >
         <DialogContent className="bg-zinc-900 border-zinc-800 text-white">
           <DialogHeader>
@@ -325,11 +323,11 @@ export function WebhooksManager() {;
                       <SelectValue placeholder="Select an event type" />;
                     </SelectTrigger>;
                     <SelectContent className="bg-zinc-900 border-zinc-800">;
-                      {eventOptions && eventOptions.map((option) => (;
+                      {eventOptions && eventOptions.map(option) => (;
                         <SelectItem key={option && option.value} value={option && option.value}>;
                           {option && option.label}
                         </SelectItem>;
-                      ))}
+                      )}
                     </SelectContent>
                   </Select>
                   <p className="text-xs text-zinc-500">
@@ -405,14 +403,14 @@ export function WebhooksManager() {;
                   setShowTestDialog(null);
                   setShowTestResult(false);
                   clearTestResult();
-                }}>;
+                }>;
                   Close;
                 </Button>;
                 <Button variant="outline" onClick={() => {;
                   setShowTestResult(false);
 
                   clearTestResult()
-                }}>
+                }>
                   Test Another Event
                 </Button>
               </DialogFooter>
@@ -422,7 +420,7 @@ export function WebhooksManager() {;
       </Dialog>
       {/* Delete Webhook Confirmation Dialog */}
       <AlertDialog
-        open={showDeleteConfirm !== null}
+        open={showDeleteConfirm != null}
         onOpenChange={(open) => !open && setShowDeleteConfirm(null)}
       >
         <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white">
@@ -448,7 +446,7 @@ export function WebhooksManager() {;
       </AlertDialog>
     </Card>
   )
-}
+
               This action will permanently remove this webhook.;
               You will no longer receive events at this endpoint.;
             </AlertDialogDescription>;
@@ -468,6 +466,5 @@ export function WebhooksManager() {;
       </AlertDialog>;
     </Card>;
   );
-}
+
     </Card>);
-}

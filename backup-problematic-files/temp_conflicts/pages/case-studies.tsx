@@ -3,7 +3,7 @@ import Head from 'next/head',;
 import Link from 'next/link',;
 import SmartHeader from '../components/SmartHeader',;
 import SmartFooter from '../components/SmartFooter',;
-;
+
 export default function CaseStudies() {;
   const caseStudies = [;
     {;
@@ -103,7 +103,7 @@ export default function CaseStudies() {;
       image:'';
     }
   ],;
-;
+
   return (;
     <>;
       <Head>;
@@ -116,10 +116,9 @@ export default function CaseStudies() {;
         <meta property="og:url" content="https://ziontechgroup.com/case-studies" />;
         <link rel="canonical" href="https://ziontechgroup.com/case-studies" />;
       </Head>;
-;
+
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white">;
         <SmartHeader />;
-        ;
         <main id="main-content" className="pt-16">;
           {/* Hero Section */}
           <section className="relative py-20 px-6">;
@@ -148,7 +147,7 @@ export default function CaseStudies() {;
               </div>;
             </div>;
           </section>;
-;
+
           {/* Stats Section */}
           <section className="py-20 px-6 bg-white/5">;
             <div className="mx-auto max-w-7xl">;
@@ -172,7 +171,7 @@ export default function CaseStudies() {;
               </div>;
             </div>;
           </section>;
-;
+
           {/* Case Studies Grid */}
           <section className="py-20 px-6">;
             <div className="mx-auto max-w-7xl">;
@@ -182,9 +181,8 @@ export default function CaseStudies() {;
                   Discover how our AI solutions have transformed businesses and delivered measurable results;
                 </p>;
               </div>;
-              ;
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
-                {caseStudies.map((study) => (;
+                {caseStudies.map(study) => (;
                   <div key={study.id} className="bg-white/5 rounded-lg border border-white/10 overflow-hidden hover:border-fuchsia-500/30 transition-all duration-300 hover:scale-105">;
                     <div className="p-6">;
                       <div className="text-4xl mb-4">{study.image}</div>;
@@ -193,7 +191,6 @@ export default function CaseStudies() {;
                       </div>;
                       <h3 className="text-xl font-bold text-white mb-2">{study.title}</h3>;
                       <p className="text-white/60 text-sm mb-4">{study.company}</p>;
-                      ;
                       <div className="space-y-3 mb-6">;
                         <div>;
                           <h4 className="text-white font-semibold text-sm mb-1">Challenge:</h4>;
@@ -204,19 +201,19 @@ export default function CaseStudies() {;
                           <p className="text-white/70 text-sm">{study.solution}</p>;
                         </div>;
                       </div>;
-;
+
                       <div className="mb-6">;
                         <h4 className="text-white font-semibold text-sm mb-2">Key Results:</h4>;
                         <ul className="space-y-1">;
-                          {study.results.map((result, index) => (;
+                          {study.results.map(result, index) => (;
                             <li key={index} className="text-white/70 text-sm flex items-start">;
                               <span className="text-green-400 mr-2 mt-1"></span>;
                               {result}
                             </li>;
-                          ))}
+                          )}
                         </ul>;
                       </div>;
-;
+
                       <div className="grid grid-cols-2 gap-4 mb-6 text-sm">;
                         <div>;
                           <span className="text-white/60">Duration:</span>;
@@ -227,18 +224,18 @@ export default function CaseStudies() {;
                           <div className="text-white font-semibold">{study.roi}</div>;
                         </div>;
                       </div>;
-;
+
                       <div className="mb-6">;
                         <h4 className="text-white font-semibold text-sm mb-2">Technologies:</h4>;
                         <div className="flex flex-wrap gap-2">;
-                          {study.technologies.map((tech, index) => (;
+                          {study.technologies.map(tech, index) => (;
                             <span key={index} className="px-2 py-1 bg-white/10 rounded text-xs text-white/80">;
                               {tech}
                             </span>;
-                          ))}
+                          )}
                         </div>;
                       </div>;
-;
+
                       <Link ;
                         href={`/case-studies/${study.id}`}
                         className="w-full px-4 py-2 bg-gradient-to-r from-fuchsia-500 to-cyan-500 text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300 text-center block";
@@ -247,11 +244,11 @@ export default function CaseStudies() {;
                       </Link>;
                     </div>;
                   </div>;
-                ))}
+                )}
               </div>;
             </div>;
           </section>;
-;
+
           {/* Industry Focus */}
           <section className="py-20 px-6 bg-white/5">;
             <div className="mx-auto max-w-7xl">;
@@ -261,7 +258,6 @@ export default function CaseStudies() {;
                   Our AI solutions are designed to work across diverse industries and business models;
                 </p>;
               </div>;
-              ;
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">;
                 <div className="text-center">;
                   <div className="w-20 h-20 bg-gradient-to-r from-fuchsia-500 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4">;
@@ -270,7 +266,6 @@ export default function CaseStudies() {;
                   <h3 className="text-lg font-bold text-white mb-2">Manufacturing</h3>;
                   <p className="text-white/60 text-sm">Supply chain optimization, predictive maintenance, quality control</p>;
                 </div>;
-                ;
                 <div className="text-center">;
                   <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4">;
                     <span className="text-3xl"></span>;
@@ -278,7 +273,6 @@ export default function CaseStudies() {;
                   <h3 className="text-lg font-bold text-white mb-2">Financial Services</h3>;
                   <p className="text-white/60 text-sm">Risk management, fraud detection, compliance automation</p>;
                 </div>;
-                ;
                 <div className="text-center">;
                   <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mx-auto mb-4">;
                     <span className="text-3xl"></span>;
@@ -286,7 +280,6 @@ export default function CaseStudies() {;
                   <h3 className="text-lg font-bold text-white mb-2">Healthcare</h3>;
                   <p className="text-white/60 text-sm">Diagnostic assistance, patient monitoring, research automation</p>;
                 </div>;
-                ;
                 <div className="text-center">;
                   <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-violet-500 rounded-lg flex items-center justify-center mx-auto mb-4">;
                     <span className="text-3xl"></span>;
@@ -297,7 +290,7 @@ export default function CaseStudies() {;
               </div>;
             </div>;
           </section>;
-;
+
           {/* Testimonials */}
           <section className="py-20 px-6">;
             <div className="mx-auto max-w-7xl">;
@@ -307,7 +300,6 @@ export default function CaseStudies() {;
                   Real feedback from businesses that have transformed with our AI solutions;
                 </p>;
               </div>;
-              ;
               <div className="grid md:grid-cols-3 gap-8">;
                 <div className="bg-white/5 rounded-lg p-6 border border-white/10">;
                   <div className="flex items-center mb-4">;
@@ -323,7 +315,6 @@ export default function CaseStudies() {;
                     "Zion Tech Group's AI solution transformed our operations completely. We've seen a 40% reduction in delays and 25% improvement in efficiency. The autonomous decision-making capabilities are game-changing.";
                   </p>;
                 </div>;
-                ;
                 <div className="bg-white/5 rounded-lg p-6 border border-white/10">;
                   <div className="flex items-center mb-4">;
                     <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mr-4">;
@@ -338,7 +329,6 @@ export default function CaseStudies() {;
                     "The AI content generation platform has revolutionized our business. We're producing 3x more content with 60% better quality. Our clients are amazed by the results.";
                   </p>;
                 </div>;
-                ;
                 <div className="bg-white/5 rounded-lg p-6 border border-white/10">;
                   <div className="flex items-center mb-4">;
                     <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mr-4">;
@@ -356,7 +346,7 @@ export default function CaseStudies() {;
               </div>;
             </div>;
           </section>;
-;
+
           {/* CTA Section */}
           <section className="py-20 px-6 bg-white/5">;
             <div className="mx-auto max-w-4xl text-center">;
@@ -381,9 +371,8 @@ export default function CaseStudies() {;
             </div>;
           </section>;
         </main>;
-;
+
         <SmartFooter />;
       </div>;
     </>;
   );
-}

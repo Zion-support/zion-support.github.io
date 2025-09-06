@@ -76,8 +76,7 @@ module.exports = {apps:[;
       log_file:'./logs/performance-combined.log';
       time:true;
     }
-  ];
-};      env: {
+  ];      env: {
         NODE_ENV: 'production'
       }
       error_file: './logs/performance-error.log'
@@ -86,8 +85,8 @@ module.exports = {apps:[;
       time: true
     }
   ]
-},
-}
+,
+
 export default {
   apps: [;
     {
@@ -461,8 +460,8 @@ module && module.exports = {
     log_file: "./logs/combined.log"
     time: true
   }]
-};
-}
+;
+
     name: "ziontechgroup - site",
     script: "npm",
     args: "start",
@@ -483,5 +482,3 @@ module && module.exports = {
     log_file: "./logs / combined.log",
     time: true;
   }];
-}
-;

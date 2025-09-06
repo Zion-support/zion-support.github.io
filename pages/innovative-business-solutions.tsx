@@ -20,7 +20,7 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
-}
+
 const heroStats = [
   {
     label: 'Business Solutions'
@@ -48,7 +48,7 @@ const serviceCategories = [
     description:
       'AI-powered business intelligence and data analytics solutions'
     services: innovativeBusinessSolutions2025.filter(
-      s => s.category === 'Business Intelligence & Analytics'
+      s => s.category = = 'Business Intelligence & Analytics'
     )
     icon: ChartIcon
     color: 'from-blue-500 to-cyan-600'
@@ -58,7 +58,7 @@ const serviceCategories = [
     title: 'Marketing Automation'
     description: 'Intelligent marketing automation with AI-driven optimization'
     services: innovativeBusinessSolutions2025.filter(
-      s => s.category === 'Marketing Automation'
+      s => s.category = = 'Marketing Automation'
     )
     icon: Megaphone
     color: 'from-purple-500 to-pink-600'
@@ -72,7 +72,7 @@ const serviceCategories = [
     title: 'Sales Intelligence'
     description: 'AI-powered sales automation and intelligence solutions'
     services: innovativeBusinessSolutions2025.filter(
-      s => s.category === 'Sales Intelligence'
+      s => s.category = = 'Sales Intelligence'
     )
     icon: TrendingUp
     color: 'from-green-500 to-emerald-600'
@@ -82,7 +82,7 @@ const serviceCategories = [
     title: 'Customer Service'
     description: 'Intelligent customer service with AI automation'
     services: innovativeBusinessSolutions2025.filter(
-      s => s.category === 'Customer Service'
+      s => s.category = = 'Customer Service'
     )
     icon: HeadphonesIcon
     color: 'from-orange-500 to-red-600'
@@ -92,7 +92,7 @@ const serviceCategories = [
     title: 'HR Management'
     description: 'AI-powered HR automation and management solutions'
     services: innovativeBusinessSolutions2025.filter(
-      s => s.category === 'HR Management'
+      s => s.category = = 'HR Management'
     )
     icon: TeamIcon
     color: 'from-teal-500 to-cyan-600'
@@ -180,7 +180,7 @@ const testimonials = [
     rating: 5,
     avatar: ''
   }
-];
+;
 
 const heroStats = [;
   {;
@@ -210,7 +210,7 @@ const serviceCategories = [;
     description:;
       'AI-powered business intelligence and data analytics solutions',;
     services: innovativeBusinessSolutions2025 && innovativeBusinessSolutions2025.filter(;
-      s => s && s.category === 'Business Intelligence & Analytics';
+      s => s && s.category = = 'Business Intelligence & Analytics';
     ),;
     icon: ChartIcon,;
     color: 'from-blue-500 to-cyan-600',;
@@ -220,7 +220,7 @@ const serviceCategories = [;
     title: 'Marketing Automation',;
     description: 'Intelligent marketing automation with AI-driven optimization',;
     services: innovativeBusinessSolutions2025 && innovativeBusinessSolutions2025.filter(;
-      s => s && s.category === 'Marketing Automation';
+      s => s && s.category = = 'Marketing Automation';
     ),;
     icon: Megaphone,;
     color: 'from-purple-500 to-pink-600',;
@@ -234,7 +234,7 @@ const serviceCategories = [;
     title: 'Sales Intelligence',;
     description: 'AI-powered sales automation and intelligence solutions',;
     services: innovativeBusinessSolutions2025 && innovativeBusinessSolutions2025.filter(;
-      s => s && s.category === 'Sales Intelligence';
+      s => s && s.category = = 'Sales Intelligence';
     ),;
     icon: TrendingUp,;
     color: 'from-green-500 to-emerald-600',;
@@ -244,7 +244,7 @@ const serviceCategories = [;
     title: 'Customer Service',;
     description: 'Intelligent customer service with AI automation',;
     services: innovativeBusinessSolutions2025 && innovativeBusinessSolutions2025.filter(;
-      s => s && s.category === 'Customer Service';
+      s => s && s.category = = 'Customer Service';
     ),;
     icon: HeadphonesIcon,;
     color: 'from-orange-500 to-red-600',;
@@ -254,7 +254,7 @@ const serviceCategories = [;
     title: 'HR Management',;
     description: 'AI-powered HR automation and management solutions',;
     services: innovativeBusinessSolutions2025 && innovativeBusinessSolutions2025.filter(;
-      s => s && s.category === 'HR Management';
+      s => s && s.category = = 'HR Management';
     ),;
     icon: TeamIcon,;
     color: 'from-teal-500 to-cyan-600',;
@@ -358,16 +358,16 @@ export default function InnovativeBusinessSolutions() {;
       <section className='relative py-20 lg:py-32 overflow-hidden'>;
         <div className='absolute inset-0 bg-gradient-to-br from-teal-900/20 via-green-900/20 to-emerald-900/20'></div>;
         <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion&& motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={ opacity: 0, y: 20 }
+            animate={ opacity: 1, y: 0 }
 
       {/* Hero Section */}
       <section className='relative py-20 lg:py-32 overflow-hidden'>;
         <div className='absolute inset-0 bg-gradient-to-br from-teal-900/20 via-green-900/20 to-emerald-900/20'></div>;
         <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion&& motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, y: 20 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
           >
             <h1 className='text-4xl lg:text-6xl font-bold bg-gradient-to-r from-teal-400 via-green-400 to-emerald-400 bg-clip-text text-transparent mb-6'>
               Innovative Business Solutions
@@ -376,9 +376,9 @@ export default function InnovativeBusinessSolutions() {;
               Transform your business operations with AI-powered intelligence
               automation, and analytics that drive growth and efficiency
             </p>
-            <div className='flex flex-wrap justify-center gap-4 mb-12'>              {heroStats.map((stat, index) => (
+            <div className='flex flex-wrap justify-center gap-4 mb-12'>              {heroStats.map(stat, index) => (
                 <motion.div
-            transition={{ duration: 0 && 0.8 }}>;
+            transition={ duration: 0 && 0.8 }>;
             <h1 className='text-4xl lg:text-6xl font-bold bg-gradient-to-r from-teal-400 via-green-400 to-emerald-400 bg-clip-text text-transparent mb-6'>;
               Innovative Business Solutions;
             </h1>;
@@ -386,17 +386,17 @@ export default function InnovativeBusinessSolutions() {;
               Transform your business operations with AI-powered intelligence,;
               automation, and analytics that drive growth and efficiency;
             </p>;
-            <div className='flex flex-wrap justify-center gap-4 mb-12'>              {heroStats && heroStats.map((stat, index) => (;
+            <div className='flex flex-wrap justify-center gap-4 mb-12'>              {heroStats && heroStats.map(stat, index) => (;
                 <motion&& motion.div
                   key={index}
-                  initial={{ opacity: 0, scale: 0 && 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
+                  initial={ opacity: 0, scale: 0 && 0.8 }
+                  animate={ opacity: 1, scale: 1 }
     content:;
       'Their sales intelligence platform has increased our sales productivity by 200%. The AI - powered lead scoring and forecasting are game - changers.',
     rating: 5,
     avatar: '',
   }, ];
-;
+
 export default /**
  * InnovativeBusinessSolutions - Function description
  */
@@ -435,9 +435,9 @@ function InnovativeBusinessSolutions() {
       <section className='relative py - 20 lg:py - 32 overflow - hidden'>;
         <div className='absolute inset - 0 bg - gradient - to - br from - teal - 900 / 20 via - green - 900 / 20 to - emerald - 900 / 20'></div>;
         <div className='relative max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center'>          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, coordinate_y: 20 }
+            animate={ opacity: 1, coordinate_y: 0 }
+            transition={ duration: 0.8 }
           >;
             <h1 className='text - 4xl lg:text - 6xl font - bold bg - gradient - to - r from - teal - 400 via - green - 400 to - emerald - 400 bg - clip - text text - transparent mb - 6'>;
               Innovative Business Solutions;
@@ -446,12 +446,12 @@ function InnovativeBusinessSolutions() {
               Transform your business operations with AI - powered intelligence,
               automation, and analytics that drive growth and efficiency;
             </p>;
-            <div className='flex flex - wrap justify - center gap - 4 mb - 12'>              {hero_stats.map ((stat, index) => (
+            <div className='flex flex - wrap justify - center gap - 4 mb - 12'>              {hero_stats.map (stat, index) => (
                 <motion.div;
                   key={index}
-                  initial={{ opacity: 0, scale: 0 && 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
+                  initial={ opacity: 0, scale: 0 && 0.8 }
+                  animate={ opacity: 1, scale: 1 }
+                  transition={ duration: 0 && 0.5, delay: index * 0 && 0.1 }
                   className='flex items-center space-x-2 bg-white/10 backdrop-blur-lg rounded-lg px-4 py-2 border border-teal-500/30'>;
                   {stat && stat.icon}
                   <span className='text-teal-400 font-semibold'>;
@@ -459,7 +459,7 @@ function InnovativeBusinessSolutions() {
                   </span>;
                   <span className='text-gray-300 text-sm'>{stat && stat.label}</span>;
                 </motion && motion.div>;
-              ))}
+              )}
             </div>;
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
               <Link
@@ -498,10 +498,10 @@ function InnovativeBusinessSolutions() {
       <section className="py-20 bg-gradient-to-b from-black to-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 20 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0 && 0.8 }
+            viewport={ once: true }
             className='text-center mb-16'
           >
             <h2 className='text-3xl lg:text-4xl font-bold text-white mb-4'>
@@ -512,7 +512,7 @@ function InnovativeBusinessSolutions() {
               proven business processes to deliver unprecedented results
             </p>
           </motion.div>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {heroFeatures.map((feature, index) => (
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {heroFeatures.map(feature, index) => (
               <motion.div
             className='text-center mb-16'>;
             <h2 className='text-3xl lg:text-4xl font-bold text-white mb-4'>;
@@ -524,13 +524,13 @@ function InnovativeBusinessSolutions() {
             </p>;
           </motion && motion.div>;
 
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {heroFeatures && heroFeatures.map((feature, index) => (;
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {heroFeatures && heroFeatures.map(feature, index) => (;
               <motion&& motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0 && 0.5, delay: index * 0 && 0.1 }
+                viewport={ once: true }
                 className='relative group'>;
                 <div className={`${feature && feature.gradient} p-1 rounded-xl`}>;
                   <div className='bg-gray-900 rounded-xl p-6 h-full'>;
@@ -546,17 +546,17 @@ function InnovativeBusinessSolutions() {
                   </div>;
                 </div>;
               </motion && motion.div>;
-            ))}
+            )}
           </div>
         </div>
       </section>
       {/* Services Section */}
       <section id='services' className='py-20 bg-black'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion&& motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 20 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0 && 0.8 }
+            viewport={ once: true }
             className='text-center mb-16'
           >
             <h2 className='text-3xl lg:text-4xl font-bold text-white mb-4'>
@@ -567,7 +567,7 @@ function InnovativeBusinessSolutions() {
               business operations
             </p>
           </motion.div>
-          <div className='space-y-16'>            {serviceCategories.map((category, categoryIndex) => (
+          <div className='space-y-16'>            {serviceCategories.map(category, categoryIndex) => (
               <motion.div
             className='text-center mb-16'>;
             <h2 className='text-3xl lg:text-4xl font-bold text-white mb-4'>;
@@ -579,13 +579,13 @@ function InnovativeBusinessSolutions() {
             </p>;
           </motion && motion.div>;
 
-          <div className='space-y-16'>            {serviceCategories && serviceCategories.map((category, categoryIndex) => (;
+          <div className='space-y-16'>            {serviceCategories && serviceCategories.map(category, categoryIndex) => (;
               <motion&& motion.div
                 key={categoryIndex}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.8, delay: categoryIndex * 0 && 0.2 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0 && 0.8, delay: categoryIndex * 0 && 0.2 }
+                viewport={ once: true }
                 className='relative'>;
                 <div className='text-center mb-12'>;
                   <div
@@ -600,10 +600,10 @@ function InnovativeBusinessSolutions() {
                     {category.description}
                   </p>
                 </div>
-                <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8'>                  {category.services.map((service, serviceIndex) => (
+                <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8'>                  {category.services.map(service, serviceIndex) => (
                     <motion.div
                       key={service.id}
-                      initial={{ opacity: 0, scale: 0.9 }}
+                      initial={ opacity: 0, scale: 0.9 }
                     className={`inline-flex items-center justify-center w-20 h-20 ${category && category.color} rounded-2xl mb-6`}>;
                     <category && category.icon className='w-10 h-10 text-white' />;
                   </div>;
@@ -615,13 +615,13 @@ function InnovativeBusinessSolutions() {
                   </p>;
                 </div>;
 
-                <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8'>                  {category && category.services.map((service, serviceIndex) => (;
+                <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8'>                  {category && category.services.map(service, serviceIndex) => (;
                     <motion&& motion.div
                       key={service && service.id}
-                      initial={{ opacity: 0, scale: 0 && 0.9 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0 && 0.5, delay: serviceIndex * 0 && 0.1 }}
-                      viewport={{ once: true }}
+                      initial={ opacity: 0, scale: 0 && 0.9 }
+                      whileInView={ opacity: 1, scale: 1 }
+                      transition={ duration: 0 && 0.5, delay: serviceIndex * 0 && 0.1 }
+                      viewport={ once: true }
                       className='relative group'>;
                       <div className={`${service && service.color} p-1 rounded-xl`}>;
                         <div className='bg-gray-900 rounded-xl p-6 h-full'>;
@@ -652,14 +652,14 @@ function InnovativeBusinessSolutions() {
                           <div className='space-y-2 mb-6'>;
                             {service && service.features;
                               .slice(0, 3);
-                              .map((feature, featureIndex) => (;
+                              .map(feature, featureIndex) => (;
                                 <div
                                   key={featureIndex}
                                   className='flex items-center text-sm text-gray-300'>;
                                   <CheckCircle className='w-4 h-4 text-green-400 mr-2 flex-shrink-0' />;
                                   {feature}
                                 </div>;
-                              ))}
+                              )}
                           </div>;
                           <div className='flex items-center justify-between'>;
                             <Link
@@ -697,12 +697,12 @@ function InnovativeBusinessSolutions() {
                           </div>
                           <p className="text-gray-300 text-sm mb-4">{service.description}</p>
                           <div className="space-y-2 mb-6">
-                            {service.features.slice(0, 3).map((feature, featureIndex) => (
+                            {service.features.slice(0, 3).map(feature, featureIndex) => (
                               <div key={featureIndex} className="flex items-center text-sm text-gray-300">
                                 <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                                 {feature}
                               </div>
-                            ))}
+                            )}
                           </div>
                           <div className="flex items-center justify-between">
                             <Link
@@ -722,20 +722,20 @@ function InnovativeBusinessSolutions() {
                         </div>
                       </div>
                     </motion.div>
-                  ))}
+                  )}
                 </div>;
               </motion && motion.div>;
-            ))}
+            )}
           </div>
         </div>
       </section>
       {/* Testimonials Section */}
       <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion&& motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 20 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0 && 0.8 }
+            viewport={ once: true }
             className='text-center mb-16'
           >
             <h2 className='text-3xl lg:text-4xl font-bold text-white mb-4'>
@@ -746,7 +746,7 @@ function InnovativeBusinessSolutions() {
               operations with our innovative solutions
             </p>
           </motion.div>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {testimonials.map((testimonial, index) => (
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {testimonials.map(testimonial, index) => (
               <motion.div
             className='text-center mb-16'>;
             <h2 className='text-3xl lg:text-4xl font-bold text-white mb-4'>;
@@ -758,13 +758,13 @@ function InnovativeBusinessSolutions() {
             </p>;
           </motion && motion.div>;
 
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {testimonials && testimonials.map((testimonial, index) => (;
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {testimonials && testimonials.map(testimonial, index) => (;
               <motion&& motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0 && 0.5, delay: index * 0 && 0.1 }
+                viewport={ once: true }
                 className='bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-teal-500/20'>;
                 <div className='flex items-center mb-4'>;
                   <span className='text-3xl mr-3'>{testimonial && testimonial.avatar}</span>;
@@ -781,22 +781,22 @@ function InnovativeBusinessSolutions() {
                 <p className='text-gray-300 mb-4'>{testimonial && testimonial.content}</p>;
                 <div className='flex items-center'>;
                   <div className='flex text-yellow-400'>;
-                    {[...Array(testimonial && testimonial.rating)].map((_, i) => (;
-                      <Star key={i} className='w-4 h-4 fill-current' />                    ))}
+                    {[...Array(testimonial && testimonial.rating)].map(_, i) => (;
+                      <Star key={i} className='w-4 h-4 fill-current' />                    )}
                   </div>;
                 </div>;
               </motion && motion.div>;
-            ))}
+            )}
           </div>
         </div>
       </section>
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-teal-900/20 via-green-900/20 to-emerald-900/20'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion&& motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}>;
+            initial={ opacity: 0, y: 20 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0 && 0.8 }
+            viewport={ once: true }>;
             <h2 className='text-3xl lg:text-4xl font-bold text-white mb-6'>;
               Ready to Transform Your Business?;
             </h2>;
@@ -823,82 +823,69 @@ function InnovativeBusinessSolutions() {
               <p className='text-gray-300'> {contactInfo.website}</p>            </div>
   return (<Layout> <Head> <title>Innovative Business Solutions - Zion Tech Group</title> </Head> {;
   /* Hero Section */ ;
-}<section className="relative py-20 lg:py-32 overflow-hidden" > <div className="absolute inset-0 bg-gradient-to-br from-teal-900/20 via-green-900/20 to-emerald-900/20" ></div> <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" > <motion&& motion.div initial= {
-  {
+<section className="relative py-20 lg:py-32 overflow-hidden" > <div className="absolute inset-0 bg-gradient-to-br from-teal-900/20 via-green-900/20 to-emerald-900/20" ></div> <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" > <motion&& motion.div initial= {
   opacity: 0, y: 20 
 
-}animate= {
-  {
+animate= {
   opacity: 1, y: 0 
 
-}transition= {
-  {
+transition= {
           </motion.div>
         </div>
       </section>
     </Layout>
-);
+;
   return (<Layout> <Head> <title>Innovative Business Solutions - Zion Tech Group</title> </Head> {
   /* Hero Section */
-}<section className="relative py-20 lg:py-32 overflow-hidden" > <div className="absolute inset-0 bg-gradient-to-br from-teal-900/20 via-green-900/20 to-emerald-900/20" ></div> <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" > <motion.div initial= {
-  {
+<section className="relative py-20 lg:py-32 overflow-hidden" > <div className="absolute inset-0 bg-gradient-to-br from-teal-900/20 via-green-900/20 to-emerald-900/20" ></div> <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" > <motion.div initial= {
   opacity: 0, y: 20
-}animate= {
-  {
+animate= {
   opacity: 1, y: 0
-}transition= {
-  {
+transition= {
   duration: 0.8
-}> <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-teal-400 via-green-400 to-emerald-400 bg-clip-text text-transparent mb-6" > Innovative Business Solutions </h1> </motion.div>) )
-}</div> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <Link href="#services" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-teal-500 to-green-600 text-white font-semibold rounded-lg hover:from-teal-600 hover:to-green-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30" > Explore Solutions <ArrowRight className="ml-2 w-5 h-5" /> </Link> Get Started </Link> </div> </motion.div> </div> </section> > <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4" > Why Choose Our Business Solutions? </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Our business solutions combine cutting-edge AI technology with proven business processes to deliver unprecedented results </p> </motion.div> </div> </div> </div> </motion.div>) )
-}</div> </div> </section> > <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4" > Business Solution Categories </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Comprehensive business solutions covering every aspect of modern business operations </p> </motion.div> Popular </span>)
-}</div> </div>) )
-}</div> <div className="flex items-center justify-between" > <Link > Learn More <ArrowRight className="ml-1 w-4 h-4" /> </Link> <Link > Get Started </Link> </div> </div> </div> </motion.div>) )
-}</div> </motion.div>) )
-}</div> </div> </section> > <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4" > What Our Clients Say </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Real feedback from businesses that have transformed their operations with our innovative solutions </p> </motion.div>) )
-}</div> </div> </motion.div>) )
-}</div> </div> </section> <motion.div initial= {
+> <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-teal-400 via-green-400 to-emerald-400 bg-clip-text text-transparent mb-6" > Innovative Business Solutions </h1> </motion.div>)
+</div> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <Link href="#services" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-teal-500 to-green-600 text-white font-semibold rounded-lg hover:from-teal-600 hover:to-green-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30" > Explore Solutions <ArrowRight className="ml-2 w-5 h-5" /> </Link> Get Started </Link> </div> </motion.div> </div> </section><h2 className="text-3xl lg:text-4xl font-bold text-white mb-4" > Why Choose Our Business Solutions? </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Our business solutions combine cutting-edge AI technology with proven business processes to deliver unprecedented results </p> </motion.div> </div> </div> </div> </motion.div>)
+</div> </div> </section><h2 className="text-3xl lg:text-4xl font-bold text-white mb-4" > Business Solution Categories </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Comprehensive business solutions covering every aspect of modern business operations </p> </motion.div> Popular </span>)
+</div> </div>)
+</div> <div className="flex items-center justify-between" > <Link > Learn More <ArrowRight className="ml-1 w-4 h-4" /> </Link> <Link > Get Started </Link> </div> </div> </div> </motion.div>)
+</div> </motion.div>)
+</div> </div> </section><h2 className="text-3xl lg:text-4xl font-bold text-white mb-4" > What Our Clients Say </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Real feedback from businesses that have transformed their operations with our innovative solutions </p> </motion.div>)
+</div> </div> </motion.div>)
+</div> </div> </section> <motion.div initial= {
   duration: 0 && 0.8 
 
-}> <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-teal-400 via-green-400 to-emerald-400 bg-clip-text text-transparent mb-6" > Innovative Business Solutions </h1> </motion && motion.div>) ) ;
-}</div> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <Link href="#services" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-teal-500 to-green-600 text-white font-semibold rounded-lg hover:from-teal-600 hover:to-green-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30" > Explore Solutions <ArrowRight className="ml-2 w-5 h-5" /> </Link> Get Started </Link> </div> </motion && motion.div> </div> </section> > <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4" > Why Choose Our Business Solutions? </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Our business solutions combine cutting-edge AI technology with proven business processes to deliver unprecedented results </p> </motion && motion.div> </div> </div> </div> </motion && motion.div>) ) ;
-}</div> </div> </section> > <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4" > Business Solution Categories </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Comprehensive business solutions covering every aspect of modern business operations </p> </motion && motion.div> Popular </span>) ;
-}</div> </div>) ) ;
-}</div> <div className="flex items-center justify-between" > <Link > Learn More <ArrowRight className="ml-1 w-4 h-4" /> </Link> <Link > Get Started </Link> </div> </div> </div> </motion && motion.div>) ) ;
-}</div> </motion && motion.div>) ) ;
-}</div> </div> </section> > <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4" > What Our Clients Say </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Real feedback from businesses that have transformed their operations with our innovative solutions </p> </motion && motion.div>) ) ;
-}</div> </div> </motion && motion.div>) ) ;
-}</div> </div> </section> <motion&& motion.div initial= {
-  {
+> <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-teal-400 via-green-400 to-emerald-400 bg-clip-text text-transparent mb-6" > Innovative Business Solutions </h1> </motion && motion.div>) ;
+</div> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <Link href="#services" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-teal-500 to-green-600 text-white font-semibold rounded-lg hover:from-teal-600 hover:to-green-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30" > Explore Solutions <ArrowRight className="ml-2 w-5 h-5" /> </Link> Get Started </Link> </div> </motion && motion.div> </div> </section><h2 className="text-3xl lg:text-4xl font-bold text-white mb-4" > Why Choose Our Business Solutions? </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Our business solutions combine cutting-edge AI technology with proven business processes to deliver unprecedented results </p> </motion && motion.div> </div> </div> </div> </motion && motion.div>) ;
+</div> </div> </section><h2 className="text-3xl lg:text-4xl font-bold text-white mb-4" > Business Solution Categories </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Comprehensive business solutions covering every aspect of modern business operations </p> </motion && motion.div> Popular </span>) ;
+</div> </div>) ;
+</div> <div className="flex items-center justify-between" > <Link > Learn More <ArrowRight className="ml-1 w-4 h-4" /> </Link> <Link > Get Started </Link> </div> </div> </div> </motion && motion.div>) ;
+</div> </motion && motion.div>) ;
+</div> </div> </section><h2 className="text-3xl lg:text-4xl font-bold text-white mb-4" > What Our Clients Say </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Real feedback from businesses that have transformed their operations with our innovative solutions </p> </motion && motion.div>) ;
+</div> </div> </motion && motion.div>) ;
+</div> </div> </section> <motion&& motion.div initial= {
   opacity: 0, y: 20 
 
-}whileInView= {
-  {
+whileInView= {
   opacity: 1, y: 0 
 
-}transition= {
-  {
+transition= {
   {
   opacity: 0, y: 20
-}whileInView= {
-  {
+whileInView= {
   opacity: 1, y: 0
-}transition= {
-  {
+transition= {
   duration: 0.8
-}viewport= {
-  {
+viewport= {
   once: true
-}> <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Join hundreds of businesses that have already revolutionized their operations with our innovative AI-powered solutions </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <Link > <Mail className="mr-2 w-5 h-5" /> Email Us </Link> </div> </div> </motion.div> </div> </section> </Layout>)
+> <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Join hundreds of businesses that have already revolutionized their operations with our innovative AI-powered solutions </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <Link > <Mail className="mr-2 w-5 h-5" /> Email Us </Link> </div> </div> </motion.div> </div> </section> </Layout>)
   duration: 0 && 0.8 
 
-}viewport= {
-  {
+viewport= {
   once: true 
 
-}> <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Join hundreds of businesses that have already revolutionized their operations with our innovative AI-powered solutions </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <Link > <Mail className="mr-2 w-5 h-5" /> Email Us </Link> </div> </div> </motion && motion.div> </div> </section> </Layout>) ;
+> <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Join hundreds of businesses that have already revolutionized their operations with our innovative AI-powered solutions </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <Link > <Mail className="mr-2 w-5 h-5" /> Email Us </Link> </div> </div> </motion && motion.div> </div> </section> </Layout>) ;
   )
-}
+
                       className='relative group';
                     >;
                       <div className={`${service.color} p - 1 rounded - xl`}>;
@@ -929,14 +916,14 @@ function InnovativeBusinessSolutions() {
                           <div className='space - y-2 mb - 6'>;
                             {service.features;
                               .slice (0, 3);
-                              .map ((feature, feature_index) => (
+                              .map (feature, feature_index) => (
                                 <div;
                                   key={feature_index}
                                   className='flex items - center text - sm text - gray - 300';
                                 >;
                                   <CheckCircle className='w - 4 h - 4 text - green - 400 mr - 2 flex - shrink - 0' />;
                                   {feature}
-                                </div>))}
+                                </div>)}
                           </div>;
                           <div className='flex items - center justify - between'>;
                             <Link;
@@ -954,19 +941,19 @@ function InnovativeBusinessSolutions() {
                           </div>;
                         </div>;
                       </div>;
-                    </motion.div>))}
+                    </motion.div>)}
                 </div>;
-              </motion.div>))}
+              </motion.div>)}
           </div>;
         </div>;
       </section>;
       {/* Testimonials Section */}
       <section className='py - 20 bg - gradient - to - b from - gray - 900 to - black'>;
         <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, coordinate_y: 20 }
+            whileInView={ opacity: 1, coordinate_y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
             className='text - center mb - 16';
           >;
             <h2 className='text - 3xl lg:text - 4xl font - bold text - white mb - 4'>;
@@ -977,13 +964,13 @@ function InnovativeBusinessSolutions() {
               operations with our innovative solutions;
             </p>;
           </motion.div>;
-          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>            {testimonials.map ((testimonial, index) => (
+          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>            {testimonials.map (testimonial, index) => (
               <motion.div;
                 key={index}
-                initial={{ opacity: 0, coordinate_y: 20 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, coordinate_y: 20 }
+                whileInView={ opacity: 1, coordinate_y: 0 }
+                transition={ duration: 0.5, delay: index * 0.1 }
+                viewport={ once: true }
                 className='bg - white / 5 backdrop - blur - lg rounded - xl p - 6 border border - teal - 500 / 20';
               >;
                 <div className='flex items - center mb - 4'>;
@@ -1001,21 +988,21 @@ function InnovativeBusinessSolutions() {
                 <p className='text - gray - 300 mb - 4'>{testimonial.content}</p>;
                 <div className='flex items - center'>;
                   <div className='flex text - yellow - 400'>;
-                    {[...Array (testimonial.rating)].map ((_, i) => (
-                      <Star key={i} className='w - 4 h - 4 fill - current' />                    ))}
+                    {[...Array (testimonial.rating)].map (_, i) => (
+                      <Star key={i} className='w - 4 h - 4 fill - current' />                    )}
                   </div>;
                 </div>;
-              </motion.div>))}
+              </motion.div>)}
           </div>;
         </div>;
       </section>;
       {/* CTA Section */}
       <section className='py - 20 bg - gradient - to - r from - teal - 900 / 20 via - green - 900 / 20 to - emerald - 900 / 20'>;
         <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center'>          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, coordinate_y: 20 }
+            whileInView={ opacity: 1, coordinate_y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
           >;
             <h2 className='text - 3xl lg:text - 4xl font - bold text - white mb - 6'>;
               Ready to Transform Your Business?;
@@ -1046,36 +1033,29 @@ function InnovativeBusinessSolutions() {
         </div>;
       </section>;
     </Layout>);
-;
+
   return (<Layout> <Head> <title > Innovative Business Solutions - Zion Tech Group</title> </Head> {
   /* Hero Section */;
-}<section className="relative py - 20 lg:py - 32 overflow - hidden" > <div className="absolute inset - 0 bg - gradient - to - br from - teal - 900 / 20 via - green - 900 / 20 to - emerald - 900 / 20" ></div> <div className="relative max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center" > <motion.div initial= {
-  {
+<section className="relative py - 20 lg:py - 32 overflow - hidden" > <div className="absolute inset - 0 bg - gradient - to - br from - teal - 900 / 20 via - green - 900 / 20 to - emerald - 900 / 20" ></div> <div className="relative max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center" > <motion.div initial= {
   opacity: 0, coordinate_y: 20;
-}animate= {
-  {
+animate= {
   opacity: 1, coordinate_y: 0;
-}transition= {
-  {
+transition= {
   duration: 0.8;
-}> <h1 className="text - 4xl lg:text - 6xl font - bold bg - gradient - to - r from - teal - 400 via - green - 400 to - emerald - 400 bg - clip - text text - transparent mb - 6" > Innovative Business Solutions </h1> </motion.div>) );
-}</div> <div className="flex flex - col sm:flex - row gap - 4 justify - center" > <Link href="#services" className="inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - teal - 500 to - green - 600 text - white font - semibold rounded - lg hover:from - teal - 600 hover:to - green - 700 transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30" > Explore Solutions <ArrowRight className="ml - 2 w - 5 h - 5" /> </Link> Get Started </Link> </div> </motion.div> </div> </section> > <h2 className="text - 3xl lg:text - 4xl font - bold text - white mb - 4" > Why Choose Our Business Solutions? </h2> <p className="text - xl text - gray - 300 max - w-3xl mx - auto" > Our business solutions combine cutting - edge AI technology with proven business processes to deliver unprecedented results </p> </motion.div> </div> </div> </div> </motion.div>) );
-}</div> </div> </section> > <h2 className="text - 3xl lg:text - 4xl font - bold text - white mb - 4" > Business Solution Categories </h2> <p className="text - xl text - gray - 300 max - w-3xl mx - auto" > Comprehensive business solutions covering every aspect of modern business operations </p> </motion.div> Popular </span>);
-}</div> </div>) );
-}</div> <div className="flex items - center justify - between" > <Link > Learn More <ArrowRight className="ml - 1 w - 4 h - 4" /> </Link> <Link > Get Started </Link> </div> </div> </div> </motion.div>) );
-}</div> </motion.div>) );
-}</div> </div> </section> > <h2 className="text - 3xl lg:text - 4xl font - bold text - white mb - 4" > What Our Clients Say </h2> <p className="text - xl text - gray - 300 max - w-3xl mx - auto" > Real feedback from businesses that have transformed their operations with our innovative solutions </p> </motion.div>) );
-}</div> </div> </motion.div>) );
-}</div> </div> </section> <motion.div initial= {
-  {
+> <h1 className="text - 4xl lg:text - 6xl font - bold bg - gradient - to - r from - teal - 400 via - green - 400 to - emerald - 400 bg - clip - text text - transparent mb - 6" > Innovative Business Solutions </h1> </motion.div>);
+</div> <div className="flex flex - col sm:flex - row gap - 4 justify - center" > <Link href="#services" className="inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - teal - 500 to - green - 600 text - white font - semibold rounded - lg hover:from - teal - 600 hover:to - green - 700 transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30" > Explore Solutions <ArrowRight className="ml - 2 w - 5 h - 5" /> </Link> Get Started </Link> </div> </motion.div> </div> </section><h2 className="text - 3xl lg:text - 4xl font - bold text - white mb - 4" > Why Choose Our Business Solutions? </h2> <p className="text - xl text - gray - 300 max - w-3xl mx - auto" > Our business solutions combine cutting - edge AI technology with proven business processes to deliver unprecedented results </p> </motion.div> </div> </div> </div> </motion.div>);
+</div> </div> </section><h2 className="text - 3xl lg:text - 4xl font - bold text - white mb - 4" > Business Solution Categories </h2> <p className="text - xl text - gray - 300 max - w-3xl mx - auto" > Comprehensive business solutions covering every aspect of modern business operations </p> </motion.div> Popular </span>);
+</div> </div>);
+</div> <div className="flex items - center justify - between" > <Link > Learn More <ArrowRight className="ml - 1 w - 4 h - 4" /> </Link> <Link > Get Started </Link> </div> </div> </div> </motion.div>);
+</div> </motion.div>);
+</div> </div> </section><h2 className="text - 3xl lg:text - 4xl font - bold text - white mb - 4" > What Our Clients Say </h2> <p className="text - xl text - gray - 300 max - w-3xl mx - auto" > Real feedback from businesses that have transformed their operations with our innovative solutions </p> </motion.div>);
+</div> </div> </motion.div>);
+</div> </div> </section> <motion.div initial= {
   opacity: 0, coordinate_y: 20;
-}whileInView= {
-  {
+whileInView= {
   opacity: 1, coordinate_y: 0;
-}transition= {
-  {
+transition= {
   duration: 0.8;
-}viewport= {
-  {
+viewport= {
   once: true;
-}> <h2 className="text - 3xl lg:text - 4xl font - bold text - white mb - 6" > Ready to Transform Your Business? </h2> <p className="text - xl text - gray - 300 mb - 8 max - w-3xl mx - auto" > Join hundreds of businesses that have already revolutionized their operations with our innovative AI - powered solutions </p> <div className="flex flex - col sm:flex - row gap - 4 justify - center" > <Link > <Mail className="mr - 2 w - 5 h - 5" /> Email Us </Link> </div> </div> </motion.div> </div> </section> </Layout>);
+> <h2 className="text - 3xl lg:text - 4xl font - bold text - white mb - 6" > Ready to Transform Your Business? </h2> <p className="text - xl text - gray - 300 mb - 8 max - w-3xl mx - auto" > Join hundreds of businesses that have already revolutionized their operations with our innovative AI - powered solutions </p> <div className="flex flex - col sm:flex - row gap - 4 justify - center" > <Link > <Mail className="mr - 2 w - 5 h - 5" /> Email Us </Link> </div> </div> </motion.div> </div> </section> </Layout>);

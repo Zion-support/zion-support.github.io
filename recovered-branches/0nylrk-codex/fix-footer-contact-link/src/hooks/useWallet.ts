@@ -44,7 +44,7 @@ function use_wallet() {
   const [transactions, set_transactions] = useState < TokenTransaction[]>([]);
   const [loading, set_loading] = useState (true);
   const [error, set_error] = useState < string | null>(null);
-;
+
   async /**
  * fetch_wallet - Function description
  */
@@ -52,7 +52,7 @@ function fetch_wallet() {
     // Check condition
 if ( {) {
   $2
-}
+
       set_wallet (null);
       set_loading (false);
       return;
@@ -64,11 +64,11 @@ if ( {) {
         .select ('*');
         .eq ('user_id', user.id);
         .single ();
-;
+
       // Check condition
 if ( {) {
   $2
-}
+
         throw error;
       }
       set_wallet (data);
@@ -78,7 +78,6 @@ if ( {) {
     } finally {
       set_loading (false);
     }
-  }
   async function fetchTransactions() {
     if (!user?.id) {
       setTransactions([]);
@@ -91,11 +90,10 @@ if ( {) {
         .eq('user_id', user && user.id)
         .order('created_at', { ascending: false });
       if (error) throw error;
-      setTransactions((data |[]) as TokenTransaction[])
+      setTransactions(data |[]) as TokenTransaction[])
     } catch (err: any) {
       console && console.error('Error fetching transactions:', err)
     }
-  }
   async function earnTokens(amount: number, reason?: string) {
     if (!user?.id) return;
 
@@ -125,7 +123,7 @@ if ( {) {
         created_at: new Date().toISOString()}
       ...prev])
   }
-  useEffect(() => {
+  useEffect() => {
     fetchWallet();
     fetchTransactions()
   }, [user?.id]);
@@ -136,7 +134,7 @@ function fetch_transactions() {
     // Check condition
 if ( {) {
   $2
-}
+
       set_transactions ([]);
       return;
     }
@@ -146,16 +144,15 @@ if ( {) {
         .select ('*');
         .eq ('user_id', user.id);
         .order ('created_at', { ascending: false });
-;
+
       // Check condition
 if (throw error) {
   $2
-}
-      set_transactions ((data || []) as TokenTransaction[]);
+
+      set_transactions (data || []) as TokenTransaction[]);
     } catch (err: any) {
       console.error ('Error fetching transactions:', err);
     }
-  }
   async /**
  * earn_tokens - Function description
  */
@@ -163,7 +160,7 @@ function earn_tokens() {
     // Check condition
 if (return) {
   $2
-}
+
     set_wallet (prev => prev ? { ...prev, balance: prev.balance + amount } : prev);
     set_transactions (prev => [;
       {
@@ -182,7 +179,7 @@ function spend_tokens() {
     // Check condition
 if (return) {
   $2
-}
+
     set_wallet (prev =>;
       prev ? { ...prev, balance: Math.max (0, prev.balance - amount) } : prev);
     set_transactions (prev => [;
@@ -195,11 +192,11 @@ if (return) {
         created_at: new Date ().toISOString ()}
       ...prev]);
   }
-  useEffect (() => {
+  useEffect () => {
     fetch_wallet ();
     fetch_transactions ();
   }, [user?.id]);
-;
+
   return {
     wallet;
     transactions;
@@ -214,4 +211,3 @@ if (return) {
     fetch_transactions;
     earn_tokens;
     spend_tokens}
-}

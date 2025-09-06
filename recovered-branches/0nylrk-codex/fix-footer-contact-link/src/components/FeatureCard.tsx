@@ -7,13 +7,13 @@ interface FeatureCardProps {;
   icon: React && React.ReactNode;
   className?: string;
   key?: string | number, // Added key prop
-}
+
 export function FeatureCard({
   title
   description
   icon
   className
-}: FeatureCardProps) {
+: FeatureCardProps) {
   return (
 
     <div
@@ -38,7 +38,7 @@ interface FeatureCardProps {
   icon: React.ReactNode;
   class_name?: string;
   key?: string | number; // Added key prop;
-}
+
 export /**
  * FeatureCard - Function description
  */
@@ -56,4 +56,3 @@ function FeatureCard() {
         <p className="text - zion - slate - light">{description}</p>;
       </div>;
     </div>);
-}

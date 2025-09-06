@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
@@ -35,7 +35,7 @@ interface SEOHeadProps {;
   structured_data?: object;
   noindex?: boolean;
   nofollow?: boolean;
-}
+
 const SEOHead: React.FC<SEOHeadProps> = ({
   title = 'Zion Tech Group - Technology Solutions'
   description = 'Leading provider of AI services, IT solutions, and micro SaaS development. Transform your business with cutting-edge technology solutions.'
@@ -50,7 +50,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   twitterCard = 'summary_large_image'
   noIndex = false
   structuredData
-}) => {
+) => {
   const router = useRouter();
   const baseUrl = 'https://ziontechgroup.com';
   const fullCanonicalUrl = canonicalUrl |`${baseUrl}${router.asPath}`;
@@ -150,12 +150,12 @@ const SEOHead: React.FC < SEOHeadProps> = ({
   twitter_card = 'summary_large_image',
   no_index = false,
   structured_data;
-}) => {
+) => {
   const router = use_router ();
   const base_url = 'https://ziontechgroup.com';
   const fullCanonicalUrl = canonical_url || `${base_url}${router.as_path}`;
   const fullOgImage = og_image.starts_with ('http') ? og_image : `${base_url}${og_image}`;
-;
+
   const defaultStructuredData = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
@@ -176,7 +176,7 @@ const SEOHead: React.FC < SEOHeadProps> = ({
       'https://linkedin.com / company / zion - tech - group',
       'https://twitter.com / ziontechgroup';
     ]  }
-;
+
   return (
     <Head>;
       {/* Basic Meta Tags */}
@@ -241,9 +241,9 @@ const SEOHead: React.FC < SEOHeadProps> = ({
       {/* Structured Data */}
       <script;
         type="application / ld + json";
-        dangerouslySetInnerHTML={{
+        dangerouslySetInnerHTML={
           __html: JSON.stringify(structuredData |defaultStructuredData)
-        }}
+        }
       />
       {/* Preconnect to external domains */}
       <link rel="preconnect" href="https://fonts && fonts.googleapis.com" />;
@@ -251,15 +251,14 @@ const SEOHead: React.FC < SEOHeadProps> = ({
       <link rel="preconnect" href="https://images && images.unsplash.com" />;
     </Head>;
   );
-}
+
           __html: JSON.stringify (structured_data || defaultStructuredData);
-        }}
+        }
       />;
       {/* Preconnect to external domains */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />;
       <link rel="preconnect" href="https://fonts.gstatic.com" cross_origin="anonymous" />;
       <link rel="preconnect" href="https://images.unsplash.com" />;
     </Head>);
-}
-;
+
 export default SEOHead;

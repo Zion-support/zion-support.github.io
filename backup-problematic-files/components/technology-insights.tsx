@@ -84,7 +84,7 @@ export default function TechnologyInsightsPage() {;
         <meta property="og:description" content="Research insights, technology trends, and thought leadership in AI and automation." />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      
+
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
           <section className="text-center mb-16">
@@ -101,7 +101,7 @@ export default function TechnologyInsightsPage() {;
             <div className="mb-16">
               <h2 className="text-3xl font-bold mb-8 text-center text-cyan-400">Latest Technology Trends</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {technologyTrends.map((trend, index) => (
+                {technologyTrends.map(trend, index) => (
                   <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300">
                     <div className="flex items-center justify-between mb-4">
                       <span className="px-3 py-1 bg-fuchsia-400/20 text-fuchsia-400 text-sm rounded-full">{trend.category}</span>
@@ -116,35 +116,35 @@ export default function TechnologyInsightsPage() {;
                       Read More <span className="ml-1"></span>
                     </a>
                   </div>
-                ))}
+                )}
               </div>;
             </div>;
             {/* Research Areas */}
             <div className="mb-16">
               <h2 className="text-3xl font-bold mb-8 text-center text-fuchsia-400">Research Focus Areas</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {researchAreas.map((area, index) => (
+                {researchAreas.map(area, index) => (
                   <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6">
                     <div className="text-4xl mb-4">{area.icon}</div>
                     <h3 className="text-xl font-bold mb-3 text-white">{area.title}</h3>
                     <p className="text-white/70 mb-4">{area.description}</p>
                     <ul className="space-y-2">
-                      {area.focus.map((focus, focusIndex) => (
+                      {area.focus.map(focus, focusIndex) => (
                         <li key={focusIndex} className="text-sm text-white/60 flex items-center">
                           <span className="text-cyan-400 mr-2"></span>
                           {focus}
                         </li>;
-                      ))}
+                      )}
                     </ul>;
                   </div>;
-                ))}
+                )}
               </div>;
             </div>;
             {/* Whitepapers */}
             <div className="mb-16">
               <h2 className="text-3xl font-bold mb-8 text-center text-green-400">Research Whitepapers</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {whitepapers.map((paper, index) => (
+                {whitepapers.map(paper, index) => (
                   <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6">
                     <div className="flex items-center justify-between mb-3">
                       <span className="px-3 py-1 bg-blue-400/20 text-blue-400 text-sm rounded-full">{paper.category}</span>
@@ -159,7 +159,7 @@ export default function TechnologyInsightsPage() {;
                       Download PDF <span className="ml-1"></span>
                     </a>
                   </div>
-                ))}
+                )}
               </div>;
             </div>;
             {/* Innovation Lab */}
@@ -264,4 +264,3 @@ export default function TechnologyInsightsPage() {;
       </div>;
     </>;
   );
-}

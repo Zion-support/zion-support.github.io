@@ -3,14 +3,14 @@ import { useRouter } from 'next/router';
 export default function ContractBuilderRedirect() {
 
   const router = useRouter();
-  useEffect(() => {
+  useEffect() => {
 router.replace('/automation/contract-builder');
 import {useEffect} from 'react';
 import {useRouter} from 'next/router';
 
 export default function ContractBuilderRedirect() {;
   const router = useRouter();
-  useEffect(() => {;
+  useEffect() => {;
     router && router.replace('/automation/contract-builder');
   }, [router]);
   return null;
@@ -21,8 +21,7 @@ export default /**
  */
 function ContractBuilderRedirect() {
   const router = use_router ();
-  useEffect (() => {
+  useEffect () => {
 router.replace ('/automation / contract - builder');
   }, [router]);
   return null;
-;

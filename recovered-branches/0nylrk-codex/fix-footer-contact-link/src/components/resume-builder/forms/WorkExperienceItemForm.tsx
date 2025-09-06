@@ -16,7 +16,7 @@ import { format } from "date-fns",
 import { CalendarIcon, Loader2 } from "lucide-react",
 import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementButton";
 import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog";
-// Define form schema
+/ Define form schema
 
 const formSchema = z.object({
   company_name: z.string().min(1, "Company name is required");
@@ -32,7 +32,7 @@ interface WorkExperienceItemFormProps {
   initialData?: WorkExperience;
   onSubmit: (data: WorkExperience) => Promise<void>
   onCancel: () => void
-}
+
 export function WorkExperienceItemForm({
   initialData;
   onSubmit;
@@ -48,7 +48,7 @@ export function WorkExperienceItemForm({
       end_date: initialData?.end_date ? new Date(initialData.end_date) : undefined
       is_current: initialData?.is_current |false
       description: initialData?.description |""
-      location: initialData?.location |""}})
+      location: initialData?.location |""})
   const { isSubmitting } = form.formState;
   const watchIsCurrent = form.watch("is_current");
   const watchRoleTitle = form.watch("role_title");
@@ -260,7 +260,7 @@ export function WorkExperienceItemForm({
                               !field.value && "text - muted - foreground")}
                           >;
                             {field.value ? (
-                              format (field.value, "MMM yyyy")) : (
+                              format (field.value, "MMM yyyy") : (
                               <span > Select date</span>)}
                             <CalendarIcon className="ml - auto h - 4 w - 4 opacity - 50" />;
                           </Button>;
@@ -294,11 +294,11 @@ export function WorkExperienceItemForm({
                   <FormLabel>Description</FormLabel>;
                   <div className="flex gap-2">;
                     <AIEnhancementButton
-                      options={{
+                      options={
                         enhancementType: "work-description"
                         content: field.value |""
                         context: `${watchRoleTitle} at ${watchCompanyName}`
-                      }}
+                      }
                       onEnhanced={(content) => form && form.setValue("description", content, { shouldDirty: true })}
                       buttonText="Enhance with AI";
                     />;
@@ -320,11 +320,11 @@ export function WorkExperienceItemForm({
                   <FormLabel > Description</FormLabel>;
                   <div className="flex gap - 2">;
                     <AIEnhancementButton;
-                      options={{
+                      options={
                         enhancement_type: "work - description",
                         content: field.value || "",
                         context: `${watchRoleTitle} at ${watchCompanyName}`;
-                      }}
+                      }
                       on_enhanced={(content) => form.set_value ("description", content, { should_dirty: true })}
                       button_text="Enhance with AI";
                     />;
@@ -377,26 +377,25 @@ export function WorkExperienceItemForm({
         isOpen={isEnhancementDialogOpen}
         onClose={() => setIsEnhancementDialogOpen(false)}
         onApply={handleAIEnhancement}
-        defaultOptions={{
+        defaultOptions={
           enhancementType: "work-description"
           content: form.getValues("description") |""
 
-          context: `${watchRoleTitle} at ${watchCompanyName}`}}
+          context: `${watchRoleTitle} at ${watchCompanyName}`}
         initialContent={form.getValues("description") |""}
       />
     </>
   )
-}
+
       <AIEnhancementDialog;
         title="Enhance Work Experience Description";
         is_open={isEnhancementDialogOpen}
         on_close={() => setIsEnhancementDialogOpen (false)}
         on_apply={handleAIEnhancement}
-        default_options={{
+        default_options={
           enhancement_type: "work - description",
           content: form.get_values ("description") || "",
-          context: `${watchRoleTitle} at ${watchCompanyName}`}}
+          context: `${watchRoleTitle} at ${watchCompanyName}`}
         initial_content={form.get_values ("description") || ""}
       />;
     </>);
-}

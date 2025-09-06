@@ -1,6 +1,6 @@
 
 export type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system',;
-;
+
 export interface CreateNotificationParams {;
   userId:string,;
   title:string,;
@@ -10,14 +10,12 @@ export interface CreateNotificationParams {;
   sendEmail?:boolean,;
   actionUrl?:string | null,;
   actionText?:string | null;
-}
-;
+
 export interface CreateNotificationResult {;
   success:boolean,;
   notificationId?:string,;
   error?:any;
-}
-;
+
 export interface HireRequestNotificationParams {;
   talentId:string,;
   adminId?:string,;
@@ -26,14 +24,12 @@ export interface HireRequestNotificationParams {;
   projectType?:string,;
   projectSummary?:string,;
   hireRequestId:string;
-}
-;
+
 export interface OnboardingNotificationParams {;
   userId:string,;
   missingMilestone:string,;
   userRole:'talent' | 'client';
-}
-;
+
 export interface SystemNotificationParams {;
   userId:string,;
   title:string,;
@@ -41,4 +37,4 @@ export interface SystemNotificationParams {;
   actionUrl?:string | null,;
   actionText?:string | null,;
   sendEmail?:boolean;
-} export type NotificationType = 'message' | 'quote request' | 'booking confirmation' | 'hire request' | 'onboarding' | 'system';
+ export type NotificationType = 'message' | 'quote request' | 'booking confirmation' | 'hire request' | 'onboarding' | 'system';

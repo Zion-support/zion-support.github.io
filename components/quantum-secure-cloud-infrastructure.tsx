@@ -12,30 +12,29 @@ export default function QuantumSecureCloudInfrastructure() {
 			url="https: //ziontechgroup.com/quantum-secure-cloud-infrastructure"
 		/>
 	)
-}
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
  import React from 'react';
 import { motion } from 'framer-motion';
 import { Cloud, Shield, Lock, Zap, Users, Target, ArrowRight, Check, Star, Globe, Cpu, Network } from 'lucide-react';
@@ -60,7 +59,7 @@ export default function QuantumSecureCloudInfrastructure() {;
 			url="https: //ziontechgroup && ziontechgroup.com/quantum-secure-cloud-infrastructure"
 		/>;
 	);
-}
+
 import { motion } from 'framer-motion';
 import { Cloud, Shield, Lock, Zap, Users, Target, ArrowRight, Check, Star, Globe, Cpu, Network } from 'lucide-react';
 import SEO from '../components / SEO';
@@ -86,4 +85,3 @@ return (<ServiceLanding;
     industries={["Financial Services", "Healthcare", "Government"]}
     url="https: //ziontechgroup.com / quantum - secure - cloud - infrastructure";
   />);
-}

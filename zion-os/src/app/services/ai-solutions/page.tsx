@@ -1,4 +1,4 @@
-"use client";
+use client";
 import { useState } from "react";
 interface AIService {id: string;
   name: string;
@@ -11,7 +11,7 @@ interface AIService {id: string;
   icon: string;
   features: string[];
   integration: string[];
-}
+
 const aiServices: AIService[] = [;
   {id: "zion-gpt-enterprise";
     name: "ZionGPT Enterprise";
@@ -181,11 +181,11 @@ const aiServices: AIService[] = [;
       "Cloud services";
     ];
   }
-];
+;
 export default function AISolutionsPage() {const [selectedService, setSelectedService] = useState<string | null>(null);
   return (;
     <div className="space-y-8">;
-"use client",
+use client",
 import { useState  } from './react';,
 interface AIService {
   id: string,
@@ -199,7 +199,7 @@ interface AIService {
   icon: string,
   features: string[],
   integration: string[];
-}
+
 const ai_services: AIService[] = [;
   {
     id: "zion - gpt - enterprise",
@@ -373,7 +373,7 @@ const ai_services: AIService[] = [;
       "Cloud services";
     ];
   }
-],
+,
 export default /**
  * AISolutionsPage - Function description
  */
@@ -407,44 +407,44 @@ function AISolutionsPage() {
             <div>;
               <h3 className="font - semibold mb - 3 text - blue - 400">Key Features</h3>;
               <div className="grid grid - cols - 1 sm:grid - cols - 2 gap - 2">;
-                {service.features.map ((feature, index) => (
+                {service.features.map (feature, index) => (
                   <div key={index} className="flex items - center gap - 2 text - sm">;
                     <span className="text - green - 400"></span>;
                     <span>{feature}</span>;
-                  </div>))}
+                  </div>)}
               </div>;
             </div>;
             {/* Technical Specifications */}
             <div>;
               <h3 className="font - semibold mb - 3 text - purple - 400">Technical Specifications</h3>;
               <div className="grid grid - cols - 1 sm:grid - cols - 2 gap - 2">;
-                {service.technical_specs.map ((spec, index) => (
+                {service.technical_specs.map (spec, index) => (
                   <div key={index} className="flex items - center gap - 2 text - sm">;
                     <span className="text - blue - 400"></span>;
                     <span>{spec}</span>;
-                  </div>))}
+                  </div>)}
               </div>;
             </div>;
             {/* Use Cases */}
             <div>;
               <h3 className="font - semibold mb - 3 text - green - 400">Use Cases</h3>;
               <div className="grid grid - cols - 1 sm:grid - cols - 2 gap - 2">;
-                {service.use_cases.map ((use_case, index) => (
+                {service.use_cases.map (use_case, index) => (
                   <div key={index} className="flex items - center gap - 2 text - sm">;
                     <span className="text - yellow - 400"></span>;
                     <span>{use_case}</span>;
-                  </div>))}
+                  </div>)}
               </div>;
             </div>;
             {/* Integration */}
             <div>;
               <h3 className="font - semibold mb - 3 text - orange - 400">Integration Options</h3>;
               <div className="grid grid - cols - 1 sm:grid - cols - 2 gap - 2">;
-                {service.integration.map ((integration, index) => (
+                {service.integration.map (integration, index) => (
                   <div key={index} className="flex items - center gap - 2 text - sm">;
                     <span className="text - purple - 400"></span>;
                     <span>{integration}</span>;
-                  </div>))}
+                  </div>)}
               </div>;
             </div>;
             {/* CTA */}
@@ -462,7 +462,7 @@ function AISolutionsPage() {
                 Learn More;
               </a>;
             </div>;
-          </div>))}
+          </div>)}
       </div>;
       {/* AI Capabilities Overview */}
       <div className="space - y-6">;
@@ -517,4 +517,3 @@ function AISolutionsPage() {
         </a>;
       </div>;
     </div>);
-}

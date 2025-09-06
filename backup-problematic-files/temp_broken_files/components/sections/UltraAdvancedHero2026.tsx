@@ -7,7 +7,7 @@ import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech
 import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services',
 export default function UltraAdvancedHero2026() {
   const totalServices = aiAutonomousServices2026.length + quantumSpaceTechServices2026.length + metaverseDigitalRealityServices2026.length,
-  
+
   const contactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -16,13 +16,11 @@ export default function UltraAdvancedHero2026() {
   const _containerVariants = {_hidden: { opacity: 0},
     visible: {_opacity: 1, _transition: {
         staggerChildren: 0.1}
-    }
   },
 
   const _itemVariants = {_hidden: { opacity: 0, _y: 30},
     visible: {_opacity: 1, _y: 0, _transition: {
         duration: 0.8}
-    }
   },
 
   return (
@@ -33,7 +31,7 @@ export default function UltraAdvancedHero2026() {
         <div className=&quot;absolute inset-0 bg-gradient-to-tl from-pink-900/30 via-transparent to-blue-900/30&quot;></div>
         <div className=&quot;absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,rgba(120,119,198,0.15),transparent_50%)]&quot;></div>
         <div className=&quot;absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_80%,rgba(120,119,198,0.15),transparent_50%)]&quot;></div>
-        
+
         {/* Animated Background Elements */}
         <div className=&quot;absolute top-20 left-20 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl animate-pulse&quot;></div>
         <div className=&quot;absolute bottom-20 right-20 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000&quot;></div>
@@ -124,7 +122,7 @@ export default function UltraAdvancedHero2026() {
               Explore All Services
               <ArrowRight className=&quot;w-6 h-6 ml-3&quot; />
             </a>
-            
+
             <Link 
               href=&quot;/contact&quot;
               className=&quot;inline-flex items-center px-8 py-4 border-2 border-purple-500/50 text-purple-300 font-bold text-lg rounded-2xl hover:bg-purple-500/10 hover:border-purple-400 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30&quot;
@@ -148,7 +146,7 @@ export default function UltraAdvancedHero2026() {
                   <div className=&quot;text-white font-semibold&quot;>Call Us</div>
                   <div className=&quot;text-purple-300&quot;>{contactInfo.phone}</div>                </div>
               </div>
-              
+
               <div className=&quot;flex items-center space-x-3&quot;>
                 <div className=&quot;w-12 h-12 bg-gradient-to-br from-pink-500 to-cyan-500 rounded-xl flex items-center justify-center&quot;>
                   <Mail className=&quot;w-6 h-6 text-white&quot; />
@@ -157,7 +155,7 @@ export default function UltraAdvancedHero2026() {
                   <div className=&quot;text-white font-semibold&quot;>Email Us</div>
                   <div className=&quot;text-cyan-300&quot;>{contactInfo.email}</div>                </div>
               </div>
-              
+
               <div className=&quot;flex items-center space-x-3&quot;>
                 <div className=&quot;w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-500 rounded-xl flex items-center justify-center&quot;>
                   <MapPin className=&quot;w-6 h-6 text-white&quot; />
@@ -192,59 +190,59 @@ export default function UltraAdvancedHero2026() {
       {/* Floating Elements */}
       <div className=&quot;absolute inset-0 pointer-events-none&quot;>
         <motion.div
-          animate={{ 
+          animate={ 
             y: [0, -20, 0],
             rotate: [0, 5, 0]
-          }}
-          transition={{ 
+          }
+          transition={ 
             duration: 6,
             repeat: Infinity,
             ease: &quot;easeInOut&quot;
-          }}
+          }
           className=&quot;absolute top-20 right-20 text-6xl opacity-20&quot;        >
-          
+
         </motion.div>
-        
+
         <motion.div
-          animate={{ 
+          animate={ 
             y: [0, 20, 0],
             rotate: [0, -5, 0]
-          }}
-          transition={{ 
+          }
+          transition={ 
             duration: 8,
             repeat: Infinity,
             ease: &quot;easeInOut&quot;
-          }}
+          }
           className=&quot;absolute bottom-20 left-20 text-6xl opacity-20&quot;        >
-          
+
         </motion.div>
-        
+
         <motion.div
-          animate={{ 
+          animate={ 
             y: [0, -15, 0],
             rotate: [0, 3, 0]
-          }}
-          transition={{ 
+          }
+          transition={ 
             duration: 7,
             repeat: Infinity,
             ease: &quot;easeInOut&quot;
-          }}
+          }
           className=&quot;absolute top-1/3 left-10 text-5xl opacity-20&quot;        >
-          
+
         </motion.div>
-        
+
         <motion.div
-          animate={{ 
+          animate={ 
             y: [0, 15, 0],
             rotate: [0, -3, 0]
-          }}
-          transition={{ 
+          }
+          transition={ 
             duration: 9,
             repeat: Infinity,
             ease: &quot;easeInOut&quot;
-          }}
+          }
           className=&quot;absolute bottom-1/3 right-10 text-5xl opacity-20&quot;        >
-          
+
         </motion.div>
       </div>
     </section>

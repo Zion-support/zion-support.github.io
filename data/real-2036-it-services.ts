@@ -657,10 +657,10 @@ export const real2036ITServices = [
       'Business continuity'
     ]
   }
-];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity'
+;      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity'
     ]
   }
-];
+;
 
 export const real2036ITServices = [;
   {
@@ -992,8 +992,7 @@ export const real2036ITServices = [;
       'Business continuity',
     ],
   },
-];      'Data center recovery_cloud recovery_application recovery_business continuity';
+;      'Data center recovery_cloud recovery_application recovery_business continuity';
     ];
   }
-];
 ;

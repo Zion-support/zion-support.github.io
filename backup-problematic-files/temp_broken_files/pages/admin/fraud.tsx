@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react',;
-;
+
 interface FraudItem {;
   id:string,;
   userId:string | null,;
@@ -8,24 +8,23 @@ interface FraudItem {;
   heuristic:{ reasons:string[], severity:string },;
   gpt?:{ label:string, reason:string, confidence:number },;
   status:string;
-}
-;
+
 export default function FraudAdminPage() {;
   const [items, setItems] = useState<FraudItem[]>([]),;
   const [adminToken, setAdminToken] = useState<string>(''),;
   const [loading, setLoading] = useState<boolean>(false),;
   const [error, setError] = useState<string | null>(null),;
-;
-  useEffect(() => {;
+
+  useEffect() => {;
     const saved = localStorage.getItem('admin-token') || '',;
     setAdminToken(saved),;
   }, []),;
-;
+
   const fetchItems = async () => {;
     setLoading(true),;
     setError(null),;
     try {;
-      const res = await fetch('/api/fraud/admin/list', { headers:adminToken ? { 'x-admin-token':adminToken } {} }),;
+      const res = await fetch('/api/fraud/admin/list', { headers:adminToken ? { 'x-admin-token':adminToken } {}),;
       const json = await res.json(),;
       if (!res.ok) throw new Error(json.error || 'Failed to load'),;
       setItems(json.items || []),;
@@ -33,19 +32,18 @@ export default function FraudAdminPage() {;
       setError(e.message || 'Failed to load');
     } finally {;
       setLoading(false),;
-    }
-  },;
-;
-  useEffect(() => {;
+    },;
+
+  useEffect() => {;
     fetchItems(),;
     // eslint-disable-next-line react-hooks/exhaustive-deps;
   }, [adminToken]),;
-;
+
   const onSaveToken = () => {;
     localStorage.setItem('admin-token', adminToken),;
     fetchItems(),;
   },;
-;
+
   const takeAction = async (id:string, action:'SUSPEND' | 'WARN' | 'IGNORE') => {;
     const res = await fetch('/api/fraud/admin/action', {;
       method:'POST',;
@@ -57,11 +55,11 @@ export default function FraudAdminPage() {;
     if (res.ok) fetchItems(),;
     else alert(json.error || 'Action failed'),;
   },;
-;
+
   return (;
     <div className="p-6 max-w-7xl mx-auto">;
       <h1 className="text-2xl font-bold mb-4">Fraud Monitoring - Admin Review</h1>;
-;
+
       <div className="flex items-center gap-2 mb-4">;
         <input;
           className="border rounded px-2 py-1 w-80";
@@ -72,10 +70,10 @@ export default function FraudAdminPage() {;
         <button className="bg-blue-600 text-white px-3 py-1 rounded" onClick={onSaveToken}>Save</button>;
         <button className="bg-gray-200 px-3 py-1 rounded" onClick={fetchItems}>Refresh</button>;
       </div>;
-;
+
       {loading && <div>Loading...</div>}
       {error && <div className="text-red-600">{error}</div>}
-;
+
       <div className="overflow-x-auto">;
         <table className="min-w-full border">;
           <thead>;
@@ -90,16 +88,16 @@ export default function FraudAdminPage() {;
             </tr>;
           </thead>;
           <tbody>;
-            {items.map((it) => (;
+            {items.map(it) => (;
               <tr key={it.id} className="border-t">;
                 <td className="p-2 border">{it.userId || ''}</td>;
                 <td className="p-2 border">{it.source}</td>;
                 <td className="p-2 border">{new Date(it.createdAt).toLocaleString()}</td>;
                 <td className="p-2 border">;
                   <div className="text-sm space-y-1">;
-                    {it.heuristic?.reasons?.slice(0, 3).map((r, idx) => (;
+                    {it.heuristic?.reasons?.slice(0, 3).map(r, idx) => (;
                       <div key={idx} className="text-gray-700">{r}</div>;
-                    ))}
+                    )}
                   </div>;
                 </td>;
                 <td className="p-2 border">;
@@ -117,7 +115,7 @@ export default function FraudAdminPage() {;
                   </div>;
                 </td>;
               </tr>;
-            ))}
+            )}
           </tbody>;
         </table>;
       </div>;
@@ -128,9 +126,9 @@ export default function FraudAdminPage() {;
         <title>Fraud Monitoring - Admin Review</title>
         <meta name="description" content="Fraud monitoring and detection system" />
       </Head>
-      
+
       <h1 className="text-2xl font-bold mb-4">Fraud Monitoring - Admin Review</h1>
-      
+
       <div className="flex items-center gap-2 mb-4">
         <input
           className=&quot;border rounded px-2 py-1 w-80&quot;
@@ -154,16 +152,16 @@ export default function FraudAdminPage() {;
             </tr>
           </thead>
           <tbody>
-            {items.map((it) => (
+            {items.map(it) => (
               <tr key={it.id} className=&quot;border-t&quot;>
                 <td className=&quot;p-2 border&quot;>{it.userId || ''}</td>
                 <td className=&quot;p-2 border&quot;>{it.source}</td>
                 <td className=&quot;p-2 border&quot;>{new Date(it.createdAt).toLocaleString()}</td>
                 <td className=&quot;p-2 border&quot;>
                   <div className=&quot;text-sm space-y-1&quot;>
-                    {it.heuristic?.reasons?.slice(0, 3).map((r, idx) => (
+                    {it.heuristic?.reasons?.slice(0, 3).map(r, idx) => (
                       <div key={idx} className=&quot;text-gray-700&quot;>{r}</div>
-                    ))}
+                    )}
                   </div>
                 </td>
                 <td className=&quot;p-2 border&quot;>
@@ -180,9 +178,8 @@ export default function FraudAdminPage() {;
                     <button className=&quot;px-2 py-1 text-xs bg-gray-300 rounded&quot; onClick={() => takeAction(it.id, 'IGNORE')}>Ignore</button>                  </div>
                 </td>
               </tr>
-            ))}          </tbody>
+            )}          </tbody>
         </table>
       </div>
     </div>
   )
-}

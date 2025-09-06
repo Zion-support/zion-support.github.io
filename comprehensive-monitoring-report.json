@@ -1,4 +1,4 @@
-{
+
   "timestamp": "2025-09-06T10:50:06.565Z",
   "totalDuration": 42259,
   "monitoringData": {
@@ -31,8 +31,7 @@
           "totalFiles": 54
         },
         "buildTime": 25268
-      }
-    },
+      },
     "security": {
       "status": "secure",
       "vulnerabilities": []
@@ -51,5 +50,3 @@
         }
       ]
     }
-  }
-}

@@ -21,37 +21,37 @@ interface AIMatchmakerProps {
   serviceType?: string
 onMatchSelect?: (match: any) => void
 className?: string
-}if (!query.trim () ) {
+if (!query.trim () {
   toast ({
   return
-}setIsMatchmaking (true)
+setIsMatchmaking (true)
 setHasSearched (true)
 serviceType
 3)
-}catch (error) {'
+catch (error) {'
   logErrorToProduction ('Error during AI matching:', {
   data: error
-})
+)
 toast ({
   //Set empty matches to show no results found UI setMatches ([])
-}finally {
+finally {
   setIsMatchmaking (false) ; import { logInfo, logErrorToProduction } from '@/utils/productionLogger'
 interface AIMatchmakerProps {
   serviceType?: string
   onMatchSelect?: (match: any,) => void
   className?: string
-}
+
 export function AIMatchmaker({
   serviceType = ''
   onMatchSelect
   className
-}: AIMatchmakerProps) {
+: AIMatchmakerProps) {
   const [query, setQuery] = useState('')
   const [isMatchmaking, setIsMatchmaking] = useState(false)
   const [matches, setMatches] = useState([] as MatchResult[])
   const [hasSearched, setHasSearched] = useState(false)
   const handleSearch = async () => {
-    if (!query.trim()) {
+    if (!query.trim() {
       toast({
         title: 'Please enter a description'
         description: "Tell us what you're looking for so we can find matches."
@@ -62,7 +62,7 @@ export function AIMatchmaker({
     setIsMatchmaking(true)
     setHasSearched(true)
     try {
-      logInfo('Starting AI matching', { data: { query, serviceType } })
+      logInfo('Starting AI matching', { data: { query, serviceType })
       // Get AI matches
       const results = await findMatches(query, serviceType, 3)
       logInfo('AI matching results:', { data: results })
@@ -84,14 +84,12 @@ export function AIMatchmaker({
     } finally {
       setIsMatchmaking (false);
     }
-  }
   const handleItemSelect = (item: any) => {    if (onMatchSelect) {
       // Find the original MatchResult that contains this item
-      const matchResult = matches.find(match => match.item.id === item.id)
+      const matchResult = matches.find(match => match.item.id = = item.id)
       if (matchResult) {
         onMatchSelect(matchResult)
       }
-    }
   }
   // Extract just the items from each MatchResult
   const matchItems = matches.map(match => match.item)
@@ -150,7 +148,6 @@ export function AIMatchmaker({
       </CardContent>
     </Card>
   )
-}
 
         <div className='space - y-4'>;
           <div className='space - y-2'>;
@@ -184,4 +181,3 @@ export function AIMatchmaker({
         </div>;
       </CardContent>;
     </Card>);
-}

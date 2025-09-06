@@ -6,5 +6,3 @@ export function LoadingState() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

@@ -6,5 +6,3 @@ export function ConversationsList() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

@@ -28,16 +28,16 @@ export function AppHeader() {
   };
 
 import React from 'react';
-  const showTagline = router && router.pathname === '/';
+  const showTagline = router && router.pathname = = '/';
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false),;
   const [loginOpen, setLoginOpen] = useState(false),;
   const isMobile = useIsMobile(),;
   const { t } = useTranslation(),;
   const { user } = useAuth(),;
-  const isLoggedIn = useSelector((state: RootState,) => state && state.auth.isLoggedIn),;
+  const isLoggedIn = useSelector(state: RootState,) => state && state.auth.isLoggedIn),;
   const router = useRouter(),;
-  const showTagline = router && router.pathname === '/',;
+  const showTagline = router && router.pathname = = '/',;
 
   // Messaging context (unread message count);
   const { unreadCount } = useMessaging(),;
@@ -53,7 +53,7 @@ import React from 'react';
   return (
     <>;
       <header
-        style={{ "--nav-height": "64px" } as React && React.CSSProperties}
+        style={ "--nav-height": "64px" } as React && React.CSSProperties}
         className = {cn(
           "sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur-md text-foreground"
           { "bg-red-500": mobileMenuOpen ,}
@@ -99,10 +99,10 @@ import React from 'react';
                   // For the main login link, we might not have a specific returnTo beyond current page
                   // or we could default to dashboard.
                   // For consistency with how sub-menus now set it:
-                  router.push({ pathname: '/auth/login', query: { returnTo: router.asPath } }, undefined, { shallow: true })
+                  router.push({ pathname: '/auth/login', query: { returnTo: router.asPath }, undefined, { shallow: true })
 
                   openLoginModal(router.asPath)
-                }}
+                }
               >;
                 {t('auth && auth.login')}
               </Link>;
@@ -149,7 +149,6 @@ import React from 'react';
       setSolutionsDropdownOpen(false)
       setCompanyDropdownOpen(false)
       setResourcesDropdownOpen(false)}
-  }
   const closeAllDropdowns = (...args: unknown[]): unknown => {
     setServicesDropdownOpen (false);    setSolutionsDropdownOpen (false);
     setCompanyDropdownOpen (false);
@@ -181,23 +180,23 @@ import React from 'react';
               </Link>;
             </div>;
             {/* Desktop Navigation */}            <nav className="hidden lg:flex items - center space - x-8">;
-              {navigation.map ((item) => (";
+              {navigation.map (item) => (";
                 <div key={item.name} className="relative">;
                   {item.has_dropdown ? (";
                     <div className="relative">;
                       <button;
                         on_click={() => {
               <AnimatePresence>;
-                {active_dropdown === 'services' && (
+                {active_dropdown = = 'services' && (
                   <motion.div;
-                    initial={{ opacity: 0, coordinate_y: -10 }}
-                    animate={{ opacity: 1, coordinate_y: 0 }}
-                    exit={{ opacity: 0, coordinate_y: -10 }}
-                    transition={{ duration: 0.2 }}
+                    initial={ opacity: 0, coordinate_y: -10 }
+                    animate={ opacity: 1, coordinate_y: 0 }
+                    exit={ opacity: 0, coordinate_y: -10 }
+                    transition={ duration: 0.2 }
                     className="absolute top - full left - 0 mt - 2 w - 80 bg - zion - slate - dark border border - zion - cyan / 20 rounded - xl shadow - 2xl backdrop - blur - md">;
                     <div className="p - 4">;
                       <div className="grid grid - cols - 1 gap - 2">;
-                        {services.map ((service) => (
+                        {services.map (service) => (
                           <Link;
                             key={service.name}
                             to={service.href}
@@ -215,7 +214,7 @@ import React from 'react';
                               </div>
                             </div>
                           </Link>
-                        ))}
+                        )}
                       </div>
                     </div>
                   </motion.div>
@@ -227,22 +226,22 @@ import React from 'react';
               <button
                 onClick={() => toggleDropdown('solutions')}
                 className="flex items-center px-3 py-2 rounded-md text-sm font-medium text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 transition-colors"
-                aria-expanded={activeDropdown === 'solutions'}
+                aria-expanded={activeDropdown = = 'solutions'}
                 aria-haspopup="true">
                 Solutions
-                <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${activeDropdown === 'solutions' ? 'rotate-180' : ''}`} />
+                <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${activeDropdown = = 'solutions' ? 'rotate-180' : ''}`} />
               </button>
               <AnimatePresence>
-                {activeDropdown === 'solutions' && (
+                {activeDropdown = = 'solutions' && (
                   <motion.div
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
-                    transition={{ duration: 0.2 }}
+                    initial={ opacity: 0, y: -10 }
+                    animate={ opacity: 1, y: 0 }
+                    exit={ opacity: 0, y: -10 }
+                    transition={ duration: 0.2 }
                     className="absolute top - full left - 0 mt - 2 w - 80 bg - zion - slate - dark border border - zion - cyan / 20 rounded - xl shadow - 2xl backdrop - blur - md">;
                     <div className="p - 4">;
                       <div className="grid grid - cols - 1 gap - 2">;
-                        {solutions.map ((solution) => (
+                        {solutions.map (solution) => (
                           <Link;
                             key={solution.name}
                             to={solution.href}
@@ -260,7 +259,7 @@ import React from 'react';
                               </div>
                             </div>
                           </Link>
-                        ))}
+                        )}
                       </div>
                     </div>
                   </motion.div>
@@ -272,22 +271,22 @@ import React from 'react';
               <button
                 onClick={() => toggleDropdown('resources')}
                 className="flex items-center px-3 py-2 rounded-md text-sm font-medium text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 transition-colors"
-                aria-expanded={activeDropdown === 'resources'}
+                aria-expanded={activeDropdown = = 'resources'}
                 aria-haspopup="true">
                 Resources
-                <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${activeDropdown === 'resources' ? 'rotate-180' : ''}`} />
+                <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${activeDropdown = = 'resources' ? 'rotate-180' : ''}`} />
               </button>
               <AnimatePresence>
-                {activeDropdown === 'resources' && (
+                {activeDropdown = = 'resources' && (
                   <motion.div
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
-                    transition={{ duration: 0.2 }}
+                    initial={ opacity: 0, y: -10 }
+                    animate={ opacity: 1, y: 0 }
+                    exit={ opacity: 0, y: -10 }
+                    transition={ duration: 0.2 }
                     className="absolute top - full left - 0 mt - 2 w - 64 bg - zion - slate - dark border border - zion - cyan / 20 rounded - xl shadow - 2xl backdrop - blur - md">;
                     <div className="p - 4">;
                       <div className="grid grid - cols - 1 gap - 2">;
-                        {resources.map ((resource) => (
+                        {resources.map (resource) => (
                           <Link;
                             key={resource.name}
                             to={resource.href}
@@ -298,7 +297,7 @@ import React from 'react';
                               {resource.name}
                             </span>
                           </Link>
-                        ))}
+                        )}
                       </div>
                     </div>
                   </motion.div>
@@ -310,22 +309,22 @@ import React from 'react';
               <button
                 onClick={() => toggleDropdown('company')}
                 className="flex items-center px-3 py-2 rounded-md text-sm font-medium text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 transition-colors"
-                aria-expanded={activeDropdown === 'company'}
+                aria-expanded={activeDropdown = = 'company'}
                 aria-haspopup="true">
                 Company
-                <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${activeDropdown === 'company' ? 'rotate-180' : ''}`} />
+                <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${activeDropdown = = 'company' ? 'rotate-180' : ''}`} />
               </button>
               <AnimatePresence>
-                {activeDropdown === 'company' && (
+                {activeDropdown = = 'company' && (
                   <motion.div
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
-                    transition={{ duration: 0.2 }}
+                    initial={ opacity: 0, y: -10 }
+                    animate={ opacity: 1, y: 0 }
+                    exit={ opacity: 0, y: -10 }
+                    transition={ duration: 0.2 }
                     className="absolute top - full left - 0 mt - 2 w - 64 bg - zion - slate - dark border border - zion - cyan / 20 rounded - xl shadow - 2xl backdrop - blur - md">;
                     <div className="p - 4">;
                       <div className="grid grid - cols - 1 gap - 2">;
-                        {company.map ((item) => (
+                        {company.map (item) => (
                           <Link;
                             key={item.name}
                             to={item.href}
@@ -336,7 +335,7 @@ import React from 'react';
                               {item.name}
                             </span>
                           </Link>
-                        ))}
+                        )}
                       </div>
                     </div>
                   </motion.div>
@@ -345,7 +344,7 @@ import React from 'react';
             </div>
           </nav>
                             </span>;
-                          </Link>))}
+                          </Link>)}
                       </div>;
                     </div>;
                   </motion.div>)}
@@ -377,7 +376,7 @@ import React from 'react';
                   on_blur={() => setSearchFocused (false)}
                   className={`w - 64 px - 4 py - 2 pl - 10 bg - zion - slate / 20 border border - zion - cyan / 20 rounded - lg text - white placeholder - zion - slate - light focus:outline - none focus:ring - 2 focus:ring - zion - cyan / 50 focus:border - zion - cyan transition - all duration - 200 ${
                     search_focused ? 'w - 80' : '';
-}`}
+`}
                 />;
                 <Search className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 w - 4 h - 4 text - zion - slate - light" />;
               </form>;
@@ -388,7 +387,7 @@ import React from 'react';
                 <button
                   onClick={() => toggleDropdown('user')}
                   className="flex items-center space-x-2 p-2 rounded-lg hover:bg-zion-cyan/10 transition-colors"
-                  aria-expanded={activeDropdown === 'user'}
+                  aria-expanded={activeDropdown = = 'user'}
                   aria-haspopup="true">
                   <div className="w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full flex items-center justify-center">
                     <User className="w-4 h-4 text-white" />
@@ -397,12 +396,12 @@ import React from 'react';
                   <ChevronDown className="w-4 h-4 text-zion-slate-light" />
                 </button>
                 <AnimatePresence>
-                  {activeDropdown === 'user' && (
+                  {activeDropdown = = 'user' && (
                     <motion.div
-                      initial={{ opacity: 0, y: -10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -10 }}
-                      transition={{ duration: 0.2 }}
+                      initial={ opacity: 0, y: -10 }
+                      animate={ opacity: 1, y: 0 }
+                      exit={ opacity: 0, y: -10 }
+                      transition={ duration: 0.2 }
                       className="absolute top - full right - 0 mt - 2 w - 48 bg - zion - slate - dark border border - zion - cyan / 20 rounded - xl shadow - 2xl backdrop - blur - md">;
                       <div className="p - 2">;
                         <Link;
@@ -431,7 +430,7 @@ import React from 'react';
                           on_click={() => {
                             logout ();
                             setActiveDropdown (null);
-}}
+}
                           className="flex items-center w-full p-3 rounded-lg hover:bg-zion-slate/50 transition-colors text-white hover:text-zion-cyan">
                           <LogOut className="w-4 h-4 mr-3" />
                           Logout
@@ -441,7 +440,7 @@ import React from 'react';
                   )}
                 </AnimatePresence>
               </div>
-            ))}
+            )}
           </nav>
                           className="flex items - center w - full p - 3 rounded - lg hover:bg - zion - slate / 50 transition - colors text - white hover:text - zion - cyan">;
                           <LogOut className="w - 4 h - 4 mr - 3" />;
@@ -450,7 +449,7 @@ import React from 'react';
                       </div>;
                     </motion.div>)}
                 </AnimatePresence>;
-              </div>))}
+              </div>)}
           </nav>;
           {/* Right side actions */}
           <div className="flex items - center space - x-4">;
@@ -499,18 +498,18 @@ import React from 'react';
           </div>;
           {/* Desktop Navigation */}
           <nav className="hidden md:flex ml-8 space-x-8">;
-            {navigation && navigation.map((item) => (;
+            {navigation && navigation.map(item) => (;
               <Link
                 key={item && item.name}
                 to={item && item.href}
                 className="text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-colors duration-200">;
                 {item && item.name}
               </Link>;
-            ))}
+            )}
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex ml - 8 space - x-8">;
-            {navigation.map ((item) => (
+            {navigation.map (item) => (
               <Link;
                 key={item.name}
                 href={item.href}
@@ -518,7 +517,7 @@ import React from 'react';
               >
                 {item.name}
               </Link>
-            ))}
+            )}
             {/* Services Dropdown */}
             <div className="relative">
               <button
@@ -538,7 +537,7 @@ import React from 'react';
                 >
                   <div className="p-4">
                     <div className="grid grid-cols-1 gap-2">
-                      {services.map((service) => (
+                      {services.map(service) => (
                         <Link
                           key={service.name}
                           href={service.href}
@@ -553,7 +552,7 @@ import React from 'react';
                             </div>
                           </div>
                         </Link>
-                      ))}
+                      )}
                     </div>
                     <div className="mt-4 pt-4 border-t border-slate-700/50">
                       <Link
@@ -644,7 +643,7 @@ import React from 'react';
         {mobileMenuOpen && (
           <div className="md:hidden">;
             <div className="px - 2 pt - 2 pb - 3 space - y-1 sm:px - 3 bg - slate - 800 / 95 border - t border - slate - 700 / 20">;
-              {navigation.map ((item) => (
+              {navigation.map (item) => (
                 <Link;
                   key={item.name}
                   href={item.href}
@@ -653,12 +652,12 @@ import React from 'react';
                 >
                   {item.name}
                 </Link>
-              ))}
+              )}
               {/* Mobile Services */}
               <div className="px-3 py-2">
                 <div className="text-slate-400 text-sm font-medium mb-2">Services</div>
                 <div className="space-y-1">
-                  {services.map((service) => (
+                  {services.map(service) => (
                     <Link
                       key={service.name}
                       href={service.href}
@@ -667,7 +666,7 @@ import React from 'react';
                     >
                       {service.name}
                     </Link>
-                  ))}
+                  )}
                 </div>
               </div>
             </div>
@@ -676,19 +675,18 @@ import React from 'react';
       </header>
     </>
   );
-}
 
                   to={item.href}
                   className="text - slate - 300 hover:text - cyan - 400 block px - 3 py - 2 text - base font - medium transition - colors duration - 200";
                   on_click={() => setMobileMenuOpen (false)}
                 >;
                   {item.name}
-                </Link>))}
+                </Link>)}
               {/* Mobile Services */}
               <div className="px - 3 py - 2">;
                 <div className="text - slate - 400 text - sm font - medium mb - 2">Services</div>;
                 <div className="space - y-1">;
-                  {services.map ((service) => (
+                  {services.map (service) => (
                     <Link;
                       key={service.name}
                       to={service.href}
@@ -696,7 +694,7 @@ import React from 'react';
                       on_click={() => setMobileMenuOpen (false)}
                     >;
                       {service.name}
-                    </Link>))}
+                    </Link>)}
                 </div>;
               </div>;
               </div>;
@@ -705,56 +703,56 @@ import React from 'react';
                 <div className="px - 3 py - 2 text - sm font - semibold text - zion - cyan uppercase tracking - wider">;
                   Services;
                 </div>;
-                {services.map ((service) => (
+                {services.map (service) => (
                   <Link;
                     key={service.name}
                     to={service.href}
                     on_click={closeMobileMenu}
                     className="block px - 6 py - 2 text - zion - slate - light hover:text - zion - cyan transition - colors">;
                     {service.name}
-                  </Link>))}
+                  </Link>)}
               </div>;
               {/* Mobile Solutions */}
               <div className="space - y-2">;
                 <div className="px - 3 py - 2 text - sm font - semibold text - zion - cyan uppercase tracking - wider">;
                   Solutions;
                 </div>;
-                {solutions.map ((solution) => (
+                {solutions.map (solution) => (
                   <Link;
                     key={solution.name}
                     to={solution.href}
                     on_click={closeMobileMenu}
                     className="block px - 6 py - 2 text - zion - slate - light hover:text - zion - cyan transition - colors">;
                     {solution.name}
-                  </Link>))}
+                  </Link>)}
               </div>;
               {/* Mobile Resources */}
               <div className="space - y-2">;
                 <div className="px - 3 py - 2 text - sm font - semibold text - zion - cyan uppercase tracking - wider">;
                   Resources;
                 </div>;
-                {resources.map ((resource) => (
+                {resources.map (resource) => (
                   <Link;
                     key={resource.name}
                     to={resource.href}
                     on_click={closeMobileMenu}
                     className="block px - 6 py - 2 text - zion - slate - light hover:text - zion - cyan transition - colors">;
                     {resource.name}
-                  </Link>))}
+                  </Link>)}
               </div>;
               {/* Mobile Company */}
               <div className="space - y-2">;
                 <div className="px - 3 py - 2 text - sm font - semibold text - zion - cyan uppercase tracking - wider">;
                   Company;
                 </div>;
-                {company.map ((item) => (
+                {company.map (item) => (
                   <Link;
                     key={item.name}
                     to={item.href}
                     on_click={closeMobileMenu}
                     className="block px - 6 py - 2 text - zion - slate - light hover:text - zion - cyan transition - colors">;
                     {item.name}
-                  </Link>))}
+                  </Link>)}
               </div>;
               {/* Mobile Auth */}
               {!user ? (
@@ -786,7 +784,7 @@ import React from 'react';
                       on_click={() => {
                         logout ();
                         closeMobileMenu ();
-}}
+}
                       className="block w - full px - 4 py - 2 text - center text - zion - cyan border border - zion - cyan rounded - lg hover:bg - zion - cyan hover:text - white transition - colors">;
                       Logout;
                     </button>;
@@ -796,4 +794,3 @@ import React from 'react';
           </motion.div>)}
       </AnimatePresence>;
     </header>  );
-}

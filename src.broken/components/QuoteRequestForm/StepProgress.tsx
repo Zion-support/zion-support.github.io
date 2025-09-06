@@ -6,5 +6,3 @@ export function StepProgress() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

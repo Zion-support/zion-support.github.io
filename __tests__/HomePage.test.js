@@ -19,4 +19,4 @@ describe("HomePage", () => {
     const ctaButton = screen && screen.getByText(/Start Your Journey/i);
     expect(ctaButton).toBeInTheDocument();
   });
-});
+);

@@ -187,7 +187,7 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com',};  website: 'https://ziontechgroup.com'
-}
+
 const serviceCategories = [
   {
     title: ' 2028 Futuristic Innovations'
@@ -220,7 +220,7 @@ const serviceCategories = [
         price: '$3,999/month'
       }
     ]
-  },  {      { name: 'AI Climate Prediction Platform', href: '/ai-climate-prediction-platform', description: 'Predict climate changes with 99.9% accuracy', price: '$2,999/month' }
+  },  { name: 'AI Climate Prediction Platform', href: '/ai-climate-prediction-platform', description: 'Predict climate changes with 99.9% accuracy', price: '$2,999/month' }
       { name: 'Quantum Cybersecurity Firewall', href: '/quantum-cybersecurity-firewall', description: 'Unbreakable quantum encryption', price: '$4,999/month' }
       { name: 'Autonomous Drone Delivery Network', href: '/autonomous-drone-delivery-network', description: 'AI-powered drone delivery', price: '$1,999/month' }
       { name: 'AI Healthcare Diagnosis Platform', href: '/ai-healthcare-diagnosis-platform', description: 'Revolutionary medical diagnosis', price: '$3,999/month' }
@@ -256,7 +256,7 @@ const serviceCategories = [
         price: '$6,999/month'
       }
     ]
-  },  {      { name: 'Smart City Infrastructure Management', href: '/smart-city-infrastructure-management', description: 'IoT and AI urban optimization', price: '$5,999/month' }
+  },  { name: 'Smart City Infrastructure Management', href: '/smart-city-infrastructure-management', description: 'IoT and AI urban optimization', price: '$5,999/month' }
       { name: 'IoT Energy Management System', href: '/iot-energy-management-system', description: 'Smart energy optimization', price: '$1,999/month' }
       { name: 'Digital Twin Manufacturing Platform', href: '/digital-twin-manufacturing-platform', description: 'Virtual manufacturing replicas', price: '$4,999/month' }
       { name: 'Autonomous Manufacturing AI', href: '/autonomous-manufacturing-ai', description: 'Self-optimizing factories', price: '$6,999/month' }
@@ -292,7 +292,7 @@ const serviceCategories = [
         price: '$5,999/month'
       }
     ]
-  },  {      { name: 'Quantum Financial Trading Platform', href: '/quantum-financial-trading-platform', description: 'Quantum-powered trading', price: '$8,999/month' }
+  },  { name: 'Quantum Financial Trading Platform', href: '/quantum-financial-trading-platform', description: 'Quantum-powered trading', price: '$8,999/month' }
       { name: 'Quantum Machine Learning Platform', href: '/quantum-machine-learning-platform', description: 'Quantum computing for ML', price: '$7,999/month' }
       { name: 'Quantum Internet Security Gateway', href: '/quantum-internet-security-gateway', description: 'Unbreakable internet security', price: '$3,999/month' }
       { name: 'Quantum Internet Protocol', href: '/quantum-internet-protocol', description: 'Next-generation internet', price: '$5,999/month' }
@@ -328,7 +328,7 @@ const serviceCategories = [
         price: '$2,999/month'
       }
     ]
-  },  {      { name: 'AI Customer Service Automation', href: '/ai-customer-service-automation', description: 'Intelligent customer support', price: '$899/month' }
+  },  { name: 'AI Customer Service Automation', href: '/ai-customer-service-automation', description: 'Intelligent customer support', price: '$899/month' }
       { name: 'AI Education Platform', href: '/ai-education-platform', description: 'Personalized learning with AI', price: '$1,499/month' }
       { name: 'AI Content Creation Suite', href: '/ai-content-creation-suite', description: 'Unlimited AI content creation', price: '$1,299/month' }
       { name: 'AI Legal Research Platform', href: '/ai-legal-research-platform', description: 'Intelligent legal research', price: '$2,999/month' }
@@ -364,7 +364,7 @@ const serviceCategories = [
         price: '$2,999/month'
       }
     ]
-  },  {      { name: 'Blockchain Supply Chain Transparency', href: '/blockchain-supply-chain-transparency', description: 'End-to-end supply chain visibility', price: '$2,499/month' }
+  },  { name: 'Blockchain Supply Chain Transparency', href: '/blockchain-supply-chain-transparency', description: 'End-to-end supply chain visibility', price: '$2,499/month' }
       { name: 'Smart Contract Automation Platform', href: '/smart-contract-automation', description: 'Automated blockchain contracts', price: '$1,999/month' }
       { name: 'DeFi Yield Optimization', href: '/defi-yield-optimization', description: 'Maximize DeFi returns', price: '$3,999/month' }
       { name: 'NFT Marketplace Platform', href: '/nft-marketplace-platform', description: 'Complete NFT ecosystem', price: '$2,999/month' }
@@ -400,7 +400,7 @@ const serviceCategories = [
         price: '$1,999/month'
       }
     ]
-  },  {      { name: 'Autonomous Vehicle Fleet Management', href: '/autonomous-vehicle-fleet-management', description: 'Intelligent fleet management', price: '$3,999/month' }
+  },  { name: 'Autonomous Vehicle Fleet Management', href: '/autonomous-vehicle-fleet-management', description: 'Intelligent fleet management', price: '$3,999/month' }
       { name: 'Smart Traffic Management System', href: '/smart-traffic-management', description: 'AI traffic optimization', price: '$4,999/month' }
       { name: 'Electric Vehicle Charging Network', href: '/ev-charging-network', description: 'Smart EV infrastructure', price: '$2,999/month' }
       { name: 'Mobility as a Service Platform', href: '/mobility-as-a-service', description: 'Integrated mobility solutions', price: '$1,999/month' }
@@ -436,7 +436,7 @@ const serviceCategories = [
         price: '$3,999/month'
       }
     ]
-  },  {      { name: 'AI Drug Discovery Platform', href: '/ai-drug-discovery-platform', description: 'Accelerate drug development', price: '$9,999/month' }
+  },  { name: 'AI Drug Discovery Platform', href: '/ai-drug-discovery-platform', description: 'Accelerate drug development', price: '$9,999/month' }
       { name: 'Personalized Medicine AI', href: '/personalized-medicine-ai', description: 'Tailored treatment plans', price: '$4,999/month' }
       { name: 'Telemedicine AI Platform', href: '/telemedicine-ai-platform', description: 'Intelligent remote healthcare', price: '$2,999/month' }
       { name: 'Medical Imaging AI', href: '/medical-imaging-ai', description: 'Advanced diagnostic imaging', price: '$3,999/month' }
@@ -472,7 +472,7 @@ const serviceCategories = [
         price: '$1,299/month'
       }
     ]
-  },  {      { name: 'Virtual Reality Learning Platform', href: '/vr-learning-platform', description: 'Immersive educational experiences', price: '$1,999/month' }
+  },  { name: 'Virtual Reality Learning Platform', href: '/vr-learning-platform', description: 'Immersive educational experiences', price: '$1,999/month' }
       { name: 'AI Tutoring System', href: '/ai-tutoring-system', description: 'Personalized AI tutoring', price: '$899/month' }
       { name: 'Corporate Training AI', href: '/corporate-training-ai', description: 'Intelligent employee training', price: '$2,499/month' }
       { name: 'Language Learning AI', href: '/language-learning-ai', description: 'AI-powered language acquisition', price: '$1,299/month' }
@@ -508,7 +508,7 @@ const serviceCategories = [
         price: '$1,499/month'
       }
     ]
-  },  {      { name: 'Contract Analysis AI', href: '/contract-analysis-ai', description: 'Intelligent contract review', price: '$2,999/month' }
+  },  { name: 'Contract Analysis AI', href: '/contract-analysis-ai', description: 'Intelligent contract review', price: '$2,999/month' }
       { name: 'Compliance Monitoring Platform', href: '/compliance-monitoring-platform', description: 'Automated compliance tracking', price: '$3,999/month' }
       { name: 'Legal Document Automation', href: '/legal-document-automation', description: 'Automated legal documents', price: '$1,999/month' }
       { name: 'Regulatory Change Tracker', href: '/regulatory-change-tracker', description: 'Monitor regulatory updates', price: '$1,499/month' }
@@ -582,7 +582,7 @@ const serviceCategories = [
         price: '$6,999/month',;
       },;
     ],;
-  },  {      { name: 'Smart City Infrastructure Management', href: '/smart-city-infrastructure-management', description: 'IoT and AI urban optimization', price: '$5,999/month' };
+  },  { name: 'Smart City Infrastructure Management', href: '/smart-city-infrastructure-management', description: 'IoT and AI urban optimization', price: '$5,999/month' };
     title: ' Smart City & Infrastructure',
     icon: Building,
     color: 'from - blue - 600 to - cyan - 600',
@@ -624,7 +624,7 @@ const serviceCategories = [
         price: '$5,999/month',;
       },;
     ],;
-  },  {      { name: 'Quantum Financial Trading Platform', href: '/quantum-financial-trading-platform', description: 'Quantum-powered trading', price: '$8,999/month' };
+  },  { name: 'Quantum Financial Trading Platform', href: '/quantum-financial-trading-platform', description: 'Quantum-powered trading', price: '$8,999/month' };
     title: ' Quantum & Advanced Tech',
     icon: Atom,
     color: 'from - indigo - 600 to - blue - 600',
@@ -666,7 +666,7 @@ const serviceCategories = [
         price: '$2,999/month',;
       },;
     ],;
-  },  {      { name: 'AI Customer Service Automation', href: '/ai-customer-service-automation', description: 'Intelligent customer support', price: '$899/month' },;
+  },  { name: 'AI Customer Service Automation', href: '/ai-customer-service-automation', description: 'Intelligent customer support', price: '$899/month' },;
       { name: 'AI Education Platform', href: '/ai-education-platform', description: 'Personalized learning with AI', price: '$1,499/month' };
       { name: 'AI Content Creation Suite', href: '/ai-content-creation-suite', description: 'Unlimited AI content creation', price: '$1,299/month' };
       { name: 'AI Legal Research Platform', href: '/ai-legal-research-platform', description: 'Intelligent legal research', price: '$2,999/month' }
@@ -702,7 +702,7 @@ const serviceCategories = [
         price: '$2,999/month',;
       },;
     ],;
-  },  {      { name: 'Blockchain Supply Chain Transparency', href: '/blockchain-supply-chain-transparency', description: 'End-to-end supply chain visibility', price: '$2,499/month' };
+  },  { name: 'Blockchain Supply Chain Transparency', href: '/blockchain-supply-chain-transparency', description: 'End-to-end supply chain visibility', price: '$2,499/month' };
     title: ' Blockchain & Web3',
     icon: Layers,
     color: 'from - orange - 600 to - red - 600',
@@ -744,7 +744,7 @@ const serviceCategories = [
         price: '$1,999/month',;
       },;
     ],;
-  },  {      { name: 'Autonomous Vehicle Fleet Management', href: '/autonomous-vehicle-fleet-management', description: 'Intelligent fleet management', price: '$3,999/month' };
+  },  { name: 'Autonomous Vehicle Fleet Management', href: '/autonomous-vehicle-fleet-management', description: 'Intelligent fleet management', price: '$3,999/month' };
       { name: 'Smart Traffic Management System', href: '/smart-traffic-management', description: 'AI traffic optimization', price: '$4,999/month' };
       { name: 'Electric Vehicle Charging Network', href: '/ev-charging-network', description: 'Smart EV infrastructure', price: '$2,999/month' };
       { name: 'Mobility as a Service Platform', href: '/mobility-as-a-service', description: 'Integrated mobility solutions', price: '$1,999/month' }
@@ -780,7 +780,7 @@ const serviceCategories = [
         price: '$3,999/month',;
       },;
     ],;
-  },  {      { name: 'AI Drug Discovery Platform', href: '/ai-drug-discovery-platform', description: 'Accelerate drug development', price: '$9,999/month' };
+  },  { name: 'AI Drug Discovery Platform', href: '/ai-drug-discovery-platform', description: 'Accelerate drug development', price: '$9,999/month' };
     title: ' Healthcare & Biotech',
     icon: Heart,
     color: 'from - pink - 600 to - rose - 600',
@@ -822,7 +822,7 @@ const serviceCategories = [
         price: '$1,299/month',;
       },;
     ],;
-  },  {      { name: 'Virtual Reality Learning Platform', href: '/vr-learning-platform', description: 'Immersive educational experiences', price: '$1,999/month' };
+  },  { name: 'Virtual Reality Learning Platform', href: '/vr-learning-platform', description: 'Immersive educational experiences', price: '$1,999/month' };
       { name: 'AI Tutoring System', href: '/ai-tutoring-system', description: 'Personalized AI tutoring', price: '$899/month' },;
       { name: 'Corporate Training AI', href: '/corporate-training-ai', description: 'Intelligent employee training', price: '$2,499/month' };
       { name: 'Language Learning AI', href: '/language-learning-ai', description: 'AI-powered language acquisition', price: '$1,299/month' }
@@ -858,7 +858,7 @@ const serviceCategories = [
         price: '$1,499/month',;
       },;
     ],;
-  },  {      { name: 'Contract Analysis AI', href: '/contract-analysis-ai', description: 'Intelligent contract review', price: '$2,999/month' };
+  },  { name: 'Contract Analysis AI', href: '/contract-analysis-ai', description: 'Intelligent contract review', price: '$2,999/month' };
     title: ' Legal & Compliance',
     icon: Scale,
     color: 'from - slate - 600 to - gray - 600',
@@ -939,7 +939,7 @@ const companyLinks = [
   { name: ' About Us', href: '/about', icon: Users },
   { name: ' Contact', href: '/contact', icon: MessageCircle },
   { name: ' Support', href: '/support', icon: ShieldCheck }
-];
+;
 const resourceLinks = [
   { name: ' Documentation', href: '/docs', icon: BookOpen }
   { name: ' Video Tutorials', href: '/tutorials', icon: Video }
@@ -949,7 +949,7 @@ const resourceLinks = [
   { name: ' Cloud Services', href: '/cloud', icon: Cloud }
   { name: ' Security Center', href: '/security', icon: Shield }
   { name: ' Analytics', href: '/analytics', icon: BarChart3 },];  { name: ' Analytics', href: '/analytics', icon: BarChart3 }
-];
+;
 export default function UltraFuturisticNavigation2028() {
 
 const companyLinks = [;
@@ -975,7 +975,7 @@ const companyLinks = [;
   { name: ' About Us', href: '/about', icon: Users },;
   { name: ' Contact', href: '/contact', icon: MessageCircle },;
   { name: ' Support', href: '/support', icon: ShieldCheck },  { name: ' Support', href: '/support', icon: ShieldCheck }
-;
+
 const resource_links = [;
   { name: ' Documentation', href: '/docs', icon: BookOpen },
   { name: ' Video Tutorials', href: '/tutorials', icon: Video },
@@ -985,7 +985,7 @@ const resource_links = [;
   { name: ' Cloud Services', href: '/cloud', icon: Cloud },
   { name: ' Security Center', href: '/security', icon: Shield },
   { name: ' Analytics', href: '/analytics', icon: BarChart3 }
-];
+;
 
 const resourceLinks = [;
   { name: ' Documentation', href: '/docs', icon: BookOpen },;
@@ -996,7 +996,7 @@ const resourceLinks = [;
   { name: ' Cloud Services', href: '/cloud', icon: Cloud },;
   { name: ' Security Center', href: '/security', icon: Shield },;
   { name: ' Analytics', href: '/analytics', icon: BarChart3 },];  { name: ' Analytics', href: '/analytics', icon: BarChart3 }
-];
+;
 
 export default function UltraFuturisticNavigation2028() {;
   const [isOpen, setIsOpen] = useState(false);
@@ -1013,8 +1013,8 @@ export default function UltraFuturisticNavigation2028() {;
   const filteredServices = serviceCategories.flatMap(category =>
     category.services.filter(
       service =>
-        service.name.toLowerCase().includes(searchQuery.toLowerCase()) |
-        service.description.toLowerCase().includes(searchQuery.toLowerCase())    )
+        service.name.toLowerCase().includes(searchQuery.toLowerCase() |
+        service.description.toLowerCase().includes(searchQuery.toLowerCase()    )
   };
 
   const handleCategoryLeave = () => {;
@@ -1024,8 +1024,8 @@ export default function UltraFuturisticNavigation2028() {;
   const filteredServices = serviceCategories && serviceCategories.flatMap(category =>;
     category && category.services.filter(;
       service =>;
-        service && service.name.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
-        service && service.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase())    );
+        service && service.name.toLowerCase().includes(searchQuery && searchQuery.toLowerCase() ||;
+        service && service.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()    );
   );
   return (
     <nav className='relative z-50 bg-black/90 backdrop-blur-xl border-b border-purple-500/30'>  }
@@ -1034,10 +1034,9 @@ export default function UltraFuturisticNavigation2028() {;
   }
   const filteredServices = serviceCategories.flatMap(category =>
     category.services.filter(service =>
-      service.name.toLowerCase().includes(searchQuery.toLowerCase()) |
-      service.description.toLowerCase().includes(searchQuery.toLowerCase())
-    )
-  );
+      service.name.toLowerCase().includes(searchQuery.toLowerCase() |
+      service.description.toLowerCase().includes(searchQuery.toLowerCase()
+    );
 
   return (
     <nav className='relative z-50 bg-black/90 backdrop-blur-xl border-b border-purple-500/30'>;
@@ -1195,7 +1194,7 @@ export default function UltraFuturisticNavigation2028() {;
               <div className="absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-purple-500/30 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">;
                 <div className="p-6">;
                   <div className="grid grid-cols-3 gap-6">;
-                    {serviceCategories && serviceCategories.slice(0, 6).map((category) => (;
+                    {serviceCategories && serviceCategories.slice(0, 6).map(category) => (;
                       <div key={category && category.title} className="space-y-3">;
                         <div className="flex items-center space-x-3">;
                           <category && category.icon className={`w-6 h-6 bg-gradient-to-r ${category && category.color} bg-clip-text text-transparent`} />;
@@ -1203,7 +1202,7 @@ export default function UltraFuturisticNavigation2028() {;
                         </div>;
                         <p className="text-sm text-purple-300">{category && category.description}</p>;
                         <div className="space-y-2">;
-                          {category && category.services.slice(0, 2).map((service) => (;
+                          {category && category.services.slice(0, 2).map(service) => (;
                             <Link
                               key={service && service.name}
                               href={service && service.href}
@@ -1232,10 +1231,10 @@ export default function UltraFuturisticNavigation2028() {;
                                 <span className="text-xs text-purple-400 font-medium">{service.price}</span>
                               </div>
                             </Link>
-                          ))}
+                          )}
                         </div>;
                       </div>;
-                    ))}
+                    )}
                   </div>;
                   <div className='mt-6 pt-6 border-t border-purple-500/20'>;
                     <div className='flex items-center justify-between'>;
@@ -1280,7 +1279,7 @@ export default function UltraFuturisticNavigation2028() {;
                 <link && link.icon className="w-4 h-4" />;
                 <span>{link && link.name.replace(/^[]/g, '').trim()}</span>;
               </Link>;
-            ))}
+            )}
           </div>
           {/* Search and Actions */}
           <div className='hidden lg:flex items-center space-x-4'>;
@@ -1339,7 +1338,7 @@ export default function UltraFuturisticNavigation2028() {;
               >;
                 <link.icon className="w - 4 h - 4" />;
                 <span>{link.name.replace (/^[]/g, '').trim ()}</span>;
-              </Link>))}
+              </Link>)}
           </div>;
           {/* Search and Actions */}
           <div className='hidden lg:flex items - center space - x-4'>;
@@ -1414,9 +1413,9 @@ export default function UltraFuturisticNavigation2028() {;
       <AnimatePresence>;
         {isOpen && (;
           <motion&& motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
+            initial={ opacity: 0, height: 0 }
+            animate={ opacity: 1, height: 'auto' }
+            exit={ opacity: 0, height: 0 }
             className='lg:hidden bg-black/95 backdrop-blur-xl border-t border-purple-500/30'>;
             <div className='px-4 py-6 space-y-6'>;
               {/* Mobile Search */}
@@ -1431,7 +1430,7 @@ export default function UltraFuturisticNavigation2028() {;
               </div>
               {/* Mobile Service Categories */}
               <div className='space-y-4'>;
-                <h3 className='text-lg font-semibold text-white border-b border-purple-500/30 pb-2'>          >;
+                <h3 className='text-lg font-semibold text-white border-b border-purple-500/30 pb-2'>;
             <div className="px-4 py-6 space-y-6">;
               {/* Mobile Search */}
               <div className="relative">;
@@ -1466,14 +1465,14 @@ export default function UltraFuturisticNavigation2028() {;
                           href={service && service.href}
                           onClick={closeMenu}                  Services
                 </h3>;
-                {serviceCategories && serviceCategories.map((category) => (;
+                {serviceCategories && serviceCategories.map(category) => (;
                   <div key={category && category.title} className="space-y-2">;
                     <div className="flex items-center space-x-3 text-purple-200">;
                       <category && category.icon className="w-5 h-5" />;
                       <span className="font-medium">{category && category.title}</span>;
                     </div>;
                     <div className="ml-8 space-y-2">;
-                      {category && category.services.map((service) => (;
+                      {category && category.services.map(service) => (;
                         <Link
                           key={service && service.name}
                           href={service && service.href}
@@ -1492,10 +1491,10 @@ export default function UltraFuturisticNavigation2028() {;
                           <h4 className="text-sm font-medium text-white">{service && service.name}</h4>;
                           <p className="text-xs text-purple-300">{service && service.description}</p>;
                           <span className="text-xs text-purple-400 font-medium">{service && service.price}</span>;
-                      ))}
+                      )}
                     </div>;
                   </div>;
-                ))}
+                )}
               </div>
               {/* Mobile Company Links */}
               <div className='space-y-4'>;
@@ -1511,7 +1510,7 @@ export default function UltraFuturisticNavigation2028() {;
                   Company;
                 </h3>;
                 <div className="grid grid-cols-2 gap-4">;
-                  {companyLinks && companyLinks.map((link) => (;
+                  {companyLinks && companyLinks.map(link) => (;
                       key={link && link.name}
                       href={link && link.href}
                       onClick={closeMenu}
@@ -1524,7 +1523,7 @@ export default function UltraFuturisticNavigation2028() {;
                     >;
                       <link && link.icon className="w-5 h-5 text-purple-400" />;
                       <span className="text-purple-200">{link && link.name.replace(/^[]/g, '').trim()}</span>;
-                  ))}
+                  )}
                 </div>
               </div>
               {/* Mobile CTA */}
@@ -1540,9 +1539,9 @@ export default function UltraFuturisticNavigation2028() {;
       <AnimatePresence>;
         {is_open && (
           <motion.div;
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
+            initial={ opacity: 0, height: 0 }
+            animate={ opacity: 1, height: 'auto' }
+            exit={ opacity: 0, height: 0 }
             className='lg:hidden bg - black / 95 backdrop - blur - xl border - t border - purple - 500 / 30';
           >;
             <div className='px - 4 py - 6 space - y-6'>;
@@ -1558,7 +1557,7 @@ export default function UltraFuturisticNavigation2028() {;
               </div>;
               {/* Mobile Service Categories */}
               <div className='space - y-4'>;
-                <h3 className='text - lg font - semibold text - white border - b border - purple - 500 / 30 pb - 2'>          >;
+                <h3 className='text - lg font - semibold text - white border - b border - purple - 500 / 30 pb - 2'>;
             <div className="px - 4 py - 6 space - y-6">;
               {/* Mobile Search */}
               <div className="relative">;
@@ -1588,14 +1587,14 @@ export default function UltraFuturisticNavigation2028() {;
                           href={service.href}
                           on_click={close_menu}                  Services;
                 </h3>;
-                {service_categories.map ((category) => (
+                {service_categories.map (category) => (
                   <div key={category.title} className="space - y-2">;
                     <div className="flex items - center space - x-3 text - purple - 200">;
                       <category.icon className="w - 5 h - 5" />;
                       <span className="font - medium">{category.title}</span>;
                     </div>;
                     <div className="ml - 8 space - y-2">;
-                      {category.services.map ((service) => (
+                      {category.services.map (service) => (
                         <Link;
                           key={service.name}
                           href={service.href}
@@ -1614,9 +1613,9 @@ export default function UltraFuturisticNavigation2028() {;
                         >;
                           <h4 className="text - sm font - medium text - white">{service.name}</h4>;
                           <p className="text - xs text - purple - 300">{service.description}</p>;
-                          <span className="text - xs text - purple - 400 font - medium">{service.price}</span>))}
+                          <span className="text - xs text - purple - 400 font - medium">{service.price}</span>)}
                     </div>;
-                  </div>))}
+                  </div>)}
               </div>;
               {/* Mobile Company Links */}
               <div className='space - y-4'>;
@@ -1632,7 +1631,7 @@ export default function UltraFuturisticNavigation2028() {;
                   Company;
                 </h3>;
                 <div className="grid grid - cols - 2 gap - 4">;
-                  {company_links.map ((link) => (
+                  {company_links.map (link) => (
                       key={link.name}
                       href={link.href}
                       on_click={close_menu}
@@ -1644,7 +1643,7 @@ export default function UltraFuturisticNavigation2028() {;
                       </span>                    </Link>                      className="flex items - center space - x-3 p - 3 rounded - lg bg - purple - 900 / 20 hover:bg - purple - 900 / 40 transition - colors";
                     >;
                       <link.icon className="w - 5 h - 5 text - purple - 400" />;
-                      <span className="text - purple - 200">{link.name.replace (/^[]/g, '').trim ()}</span>))}
+                      <span className="text - purple - 200">{link.name.replace (/^[]/g, '').trim ()}</span>)}
                 </div>;
               </div>;
               {/* Mobile CTA */}
@@ -1697,17 +1696,17 @@ export default function UltraFuturisticNavigation2028() {;
                     <span className="text-xs text-purple-400 font-medium">{service && service.price}</span>;
                   </div>;
                 </Link>;
-              ))}
+              )}
             </div>;
           </div>;
         </div>;
       )}
     </nav>
-);
-}
+;
+
     </nav>
   );
-}
+
           </motion.div>)}
       </AnimatePresence>;
       {/* Search Results Dropdown */}
@@ -1744,9 +1743,8 @@ export default function UltraFuturisticNavigation2028() {;
                     </div>;
                     <span className="text - xs text - purple - 400 font - medium">{service.price}</span>;
                   </div>;
-                </Link>))}
+                </Link>)}
             </div>;
           </div>;
         </div>)}
     </nav>);
-}

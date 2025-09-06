@@ -20,7 +20,7 @@ export function TalentCardSaveButton({
   isSaved
   onToggleSave
   isAuthenticated
-}: TalentCardSaveButtonProps) {
+: TalentCardSaveButtonProps) {
   const { toast } = useToast()
   const router = useRouter()
   // Using router.asPath for current path
@@ -59,13 +59,11 @@ export function TalentCardSaveButton({
 
     </button>
   )
-}variant: "default"
-})
-}
-}/> </button>)
-}"
-}
+variant: "default"
+)
 
+/> </button>)
+"
 
 import React from 'react';
 import { Heart } from 'lucide-react';
@@ -92,7 +90,7 @@ function TalentCardSaveButton() {
     // Check condition
 if ( {) {
   $2
-}
+
       toast ({
         title: 'Authentication required',
         description: 'Please log in to save talents to your favorites',
@@ -106,7 +104,7 @@ if ( {) {
     // Check condition
 if ( {) {
   $2
-}
+
       onToggleSave (profile_id, !localIsSaved);
     }
     toast ({
@@ -123,9 +121,8 @@ if ( {) {
           'h - 4 w - 4 transition - colors',
           localIsSaved ? 'fill - red - 500 text - red - 500' : 'text - zion - slate')}      />;
     </button>);
-}variant: "default";
-});
-}
-}/> </button>);
-}";
-}
+variant: "default";
+);
+
+/> </button>);
+";

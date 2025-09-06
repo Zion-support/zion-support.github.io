@@ -16,7 +16,6 @@ export function useFraudPreventionSignup() {
       console && console.error('Error getting IP:', error);
       return undefined
     }
-  }
   // Check if the signup attempt might be fraudulent
   const checkFraudBeforeSignup = useCallback(async (email: string): Promise<boolean> => {
     setIsCheckingFraud(true);
@@ -45,8 +44,7 @@ export function useFraudPreventionSignup() {
         // If the check is very suspicious, block the signup
         if (fraudCheck.reasons.some(r =>
           r.includes('Multiple accounts') |
-          r.includes('suspicious email domain')
-        )) {
+          r.includes('suspicious email domain')) {
           toast({
 import {useState, useCallback} from 'react';
 import {checkSignupPatterns} from '@/services / fraud / signup_check';
@@ -57,7 +55,7 @@ export /**
  */
 function useFraudPreventionSignup() {
   const [isCheckingFraud, setIsCheckingFraud] = useState (false);
-;
+
   // Get the user's IP address (in a real app, you'd do this server - side);
   const getIP = async (): Promise < string | undefined> => {
     try {
@@ -68,8 +66,7 @@ function useFraudPreventionSignup() {
       console.error ('Error getting IP:', error);
       return undefined;
     }
-  }
-;
+
   // Check if the signup attempt might be fraudulent;
   const checkFraudBeforeSignup = useCallback (async (email: string): Promise < boolean> => {
     setIsCheckingFraud (true);
@@ -77,13 +74,13 @@ function useFraudPreventionSignup() {
       const ip_address = await getIP (),
       // Check for suspicious patterns;
       const fraud_check = await checkSignupPatterns (email, ip_address);
-;
+
       // Check condition
 if ( {) {
   $2
-}
+
         console.log ('Suspicious signup detected:', fraud_check.reasons);
-;
+
         // Create a fraud flag for admin review;
         const { error } = await supabase.from ('fraud_flags').insert ({
           user_email: email;
@@ -96,11 +93,11 @@ if ( {) {
           timestamp: new Date ().toISOString (),
           status: 'pending';
         });
-;
+
         // Check condition
 if ( {) {
   $2
-}
+
           console.error ('Error creating fraud flag:', error);
         }
         // Depending on how strict we want to be, we could block the signup;
@@ -108,8 +105,8 @@ if ( {) {
         // Check condition
 if (||) {
   $2
-}
-          r.includes ('suspicious email domain'))) {
+
+          r.includes ('suspicious email domain')) {
           toast ({
             title: "Signup blocked";
             description: "This signup attempt has been flagged for security reasons. Please contact support if you believe this is an error."
@@ -127,10 +124,8 @@ if (||) {
       return true
     } finally {
       setIsCheckingFraud (false);
-    }
-  }, []);
+    }, []);
   return {
     isCheckingFraud;
 
     checkFraudBeforeSignup}
-}

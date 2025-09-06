@@ -3,7 +3,6 @@ import Head from 'next/head';
 import ServiceLanding from '../components/sections/ServiceLanding';
 export default function ZeroTrustSecurityPlatformPage() {
 
-
 export default function ZeroTrustSecurityPlatformPage() {;
   return (
     <>;
@@ -89,4 +88,3 @@ function ZeroTrustSecurityPlatformPage() {
         canonical='https: //ziontechgroup.com / zero - trust - security - platform';
       />;
     </>);
-;

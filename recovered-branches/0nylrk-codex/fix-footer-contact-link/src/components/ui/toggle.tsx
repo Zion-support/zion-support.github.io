@@ -15,26 +15,25 @@ const toggleVariants = cva(
       size: {
         default: "h-10 px-3"
         sm: "h-9 px-2.5"
-        lg: "h-11 px-5"}}
+        lg: "h-11 px-5"}
     defaultVariants: {
       variant: "default"
 
-      size: "default"}}
-)
+      size: "default"}
+
 type ToggleRef = React.ElementRef<typeof TogglePrimitive.Root>
 type ToggleProps = React.ComponentPropsWithoutRef<typeof TogglePrimitive.Root> &
   VariantProps<typeof toggleVariants>
-const Toggle = React.forwardRef<ToggleRef, ToggleProps>(
-  ({ className, variant, size, ...props }, ref) => (
+const Toggle = React.forwardRef<ToggleRef, ToggleProps>({ className, variant, size, ...props }, ref) => (
     <TogglePrimitive.Root
       ref={ref}
-      className={cn (toggle_variants ({ variant, size, class_name }))}
+      className={cn (toggle_variants ({ variant, size, class_name })}
       {...props}
     />
   )
-)
+
 Toggle.displayName = TogglePrimitive.Root.displayName
 export { Toggle, toggleVariants }
-    />));
+    />);
 Toggle.display_name = TogglePrimitive.Root.display_name;
 export { Toggle, toggle_variants }

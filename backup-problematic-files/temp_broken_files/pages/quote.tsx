@@ -2,7 +2,6 @@ import React from 'react';
 
 interface QuoteProps {
   className?: string;
-}
 
 const Quote: React.FC<QuoteProps> = ({ className }) => {
   return (
@@ -11,6 +10,5 @@ const Quote: React.FC<QuoteProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default Quote;

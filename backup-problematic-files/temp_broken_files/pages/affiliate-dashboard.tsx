@@ -1,32 +1,30 @@
 import { useEffect, useMemo, useState } from 'react',;
-;
+
 function getRefCode():string {;
-  if (typeof window === 'undefined') return '',;
+  if (typeof window = = 'undefined') return '',;
   return localStorage.getItem('ref_code') || '',;
-}
-;
+
 export default function AffiliateDashboard() {;
   const [code, setCode] = useState<string>(''),;
   const [metrics, setMetrics] = useState<any>(null),;
   const [amount, setAmount] = useState<string>(''),;
   const [msg, setMsg] = useState<string>(''),;
-;
-  useEffect(() => {;
+
+  useEffect() => {;
     const c = getRefCode(),;
     setCode(c),;
   }, []),;
-;
-  useEffect(() => {;
+
+  useEffect() => {;
     if (!code) return,;
     (async () => {;
       try {;
         const res = await fetch(`/api/partners/metrics?code=${encodeURIComponent(code)}`),;
         const json = await res.json(),;
         setMetrics(json),;
-      } catch {}
-    })(),;
+      } catch {})(),;
   }, [code]),;
-;
+
   async function requestPayout() {;
     setMsg(''),;
     try {;
@@ -40,10 +38,9 @@ export default function AffiliateDashboard() {;
     } catch (e:any) {;
       setMsg(e?.message || 'Error');
     }
-  }
-;
-  const exportUrl = useMemo(() => (code ? `/api/partners/export?code=${encodeURIComponent(code)}` :'#'), [code]),;
-;
+
+  const exportUrl = useMemo() => (code ? `/api/partners/export?code=${encodeURIComponent(code)}` :'#'), [code]),;
+
   if (!code) {;
     return (;
       <div className="space-y-4">;
@@ -52,7 +49,7 @@ export default function AffiliateDashboard() {;
       </div>;
     );
   }
-;
+
   return (;
     <div className="space-y-6">;
       <h1 className="text-2xl font-semibold">Affiliate Dashboard</h1>;
@@ -78,8 +75,7 @@ export default function AffiliateDashboard() {;
       </div>;
     </div>;
   ),;
-}
-;
+
 function Stat({ label, value } { label:string, value:number | string }) {;
   return (;
     <div className="p-4 rounded border border-gray-200 dark:border-gray-800">;
@@ -93,7 +89,6 @@ interface AffiliateStats {
   totalReferrals: number;
   conversionRate: number;
   pendingPayouts: number;
-}
 
 interface Referral {
   id: string;
@@ -101,7 +96,6 @@ interface Referral {
   status: 'pending' | 'converted' | 'paid';
   commission: number;
   date: string;
-}
 
 const mockStats: AffiliateStats = {
   totalEarnings: 12500,
@@ -109,7 +103,7 @@ const mockStats: AffiliateStats = {
   totalReferrals: 45,
   conversionRate: 12.5,
   pendingPayouts: 750
-};
+;
 
 const mockReferrals: Referral[] = [
   {
@@ -133,7 +127,7 @@ const mockReferrals: Referral[] = [
     commission: 750,
     date: '2025-01-13T09:15:00Z'
   }
-];
+;
 
 const AffiliateDashboard: React.FC = () => {
   const [stats, setStats] = useState<AffiliateStats | null>(null);
@@ -141,23 +135,22 @@ const AffiliateDashboard: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [activeTab, setActiveTab] = useState<'overview' | 'referrals' | 'payouts'>('overview');
 
-  useEffect(() => {
+  useEffect() => {
     // Simulate loading data
-    setTimeout(() => {
+    setTimeout() => {
       setStats(mockStats);
       setReferrals(mockReferrals);
       setLoading(false);
     }, 1000);
   }, []);
 
-  useEffect(() => {
+  useEffect() => {
     if (!code) return,
     (async () => {
       try {
         const res = await fetch(`/api/partners/metrics?code=${encodeURIComponent(code)}`),
         const json = await res.json(),
-        setMetrics(json)      } catch {}
-    })()
+        setMetrics(json)      } catch {})()
   }, [code]),
 
   async function requestPayout() {
@@ -171,8 +164,7 @@ const AffiliateDashboard: React.FC = () => {
       if (!res.ok) throw new Error(json.error || 'Failed'),
       setMsg('Payout requested')
     } catch (e: any) {
-      setMsg(e?.message || 'Error')    }
-  };
+      setMsg(e?.message || 'Error')    };
 
   if (loading) {
     return (
@@ -215,7 +207,6 @@ const AffiliateDashboard: React.FC = () => {
         {msg && <p className=&quot;mt-2 text-sm&quot;>{msg}</p>}      </div>
     </div>
   )
-}
 
 function Stat({ label, value }: { label: string, value: number | string }) {
   return (
@@ -223,4 +214,3 @@ function Stat({ label, value }: { label: string, value: number | string }) {
       <div className=&quot;text-sm text-gray-600 dark:text-gray-300&quot;>{label}</div>
       <div className=&quot;text-2xl font-semibold&quot;>{value}</div>    </div>
   )
-}

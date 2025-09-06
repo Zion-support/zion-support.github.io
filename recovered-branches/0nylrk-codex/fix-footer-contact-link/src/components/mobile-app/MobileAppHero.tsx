@@ -49,7 +49,6 @@ export const MobileAppHero: React.FC = () => {
       </div>
     </section>
   );
-}
 
             </div>;
           </div>;
@@ -57,7 +56,4 @@ export const MobileAppHero: React.FC = () => {
       </div>;
     </section>;
   );
-};
     </section>);
-}
-;

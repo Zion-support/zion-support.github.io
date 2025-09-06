@@ -9,19 +9,19 @@ export default function EmailValidatorPage() {;
   const [isValidating, setIsValidating] = useState(false),;
   const [bulkMode, setBulkMode] = useState(false),;
   const validateEmails = async () => {;
-    if (!emails.trim()) return,;
+    if (!emails.trim() return,;
     setIsValidating(true),;
     setValidationResults([]),;
-    const emailList = emails.split('\n').filter(email => email.trim()),;
+    const emailList = emails.split('\n').filter(email => email.trim(),;
     const results = [],;
     // Simulate email validation with realistic results;
     for (let i = 0, i < emailList.length, i++) {;
-      await new Promise(resolve => setTimeout(resolve, 200)),;
+      await new Promise(resolve => setTimeout(resolve, 200),;
       const email = emailList[i].trim(),;
       const result = validateSingleEmail(email),;
       results.push(result);
     }
-;
+
     setValidationResults(results),;
     setIsValidating(false);
   },;
@@ -42,13 +42,13 @@ export default function EmailValidatorPage() {;
     },;
     const domain = email.split('@')[1],;
     const isDisposable = disposableDomains.includes(domain),;
-    const hasTypo = Object.entries(commonTypos).some(([correct, typos]) =>;
+    const hasTypo = Object.entries(commonTypos).some([correct, typos]) =>;
       typos.includes(domain);
     ),;
     let status = 'valid',;
     let score = 100,;
     const issues = [],;
-    if (!emailRegex.test(email)) {;
+    if (!emailRegex.test(email) {;
       status = 'invalid',;
       score = 0,;
       issues.push('Invalid email format');
@@ -61,20 +61,20 @@ export default function EmailValidatorPage() {;
       score = 60,;
       issues.push('Possible typo in domain');
     }
-;
+
     // Additional checks;
     if (email.length > 254) {;
       status = 'invalid',;
       score = 0,;
       issues.push('Email too long');
     }
-;
+
     if (email.split('@')[0].length > 64) {;
       status = 'invalid',;
       score = 0,;
       issues.push('Local part too long');
     }
-;
+
     return {;
       email,;
       status,;
@@ -84,8 +84,7 @@ export default function EmailValidatorPage() {;
       isDisposable,;
       hasTypo,;
       timestamp: new Date().toLocaleTimeString();
-    }
-  },
+    },
 
   const getStatusIcon = (status: string) => {
     switch (status) {
@@ -112,8 +111,7 @@ export default function EmailValidatorPage() {;
         return <XCircle className="w-5 h-5 text-red-400" />,;
       default:;
         return <AlertTriangle className="w-5 h-5 text-gray-400" />;
-    }
-  },;
+    },;
   const getStatusColor = (status: string) => {;
     switch (status) {;
       case 'valid':;
@@ -126,8 +124,7 @@ export default function EmailValidatorPage() {;
         return 'text-red-400',;
       default:;
         return 'text-gray-400';
-    }
-  },;
+    },;
   const getScoreColor = (score: number) => {;
     if (score >= 80) return 'text-green-400',;
     if (score >= 60) return 'text-yellow-400',;
@@ -145,15 +142,14 @@ export default function EmailValidatorPage() {;
     setEmails('');
   },;
   const getStats = () => {;
-    if (validationResults.length === 0) return null,;
+    if (validationResults.length = = 0) return null,;
     const total = validationResults.length,;
-    const valid = validationResults.filter(r => r.status === 'valid').length,;
-    const invalid = validationResults.filter(r => r.status === 'invalid').length,;
-    const suspicious = validationResults.filter(r => r.status === 'suspicious').length,;
-    const disposable = validationResults.filter(r => r.status === 'disposable').length,;
-    const avgScore = validationResults.reduce((sum, r) => sum + r.score, 0) / total,;
-    return { total, valid, invalid, suspicious, disposable, avgScore }
-  },
+    const valid = validationResults.filter(r => r.status = = 'valid').length,;
+    const invalid = validationResults.filter(r => r.status = = 'invalid').length,;
+    const suspicious = validationResults.filter(r => r.status = = 'suspicious').length,;
+    const disposable = validationResults.filter(r => r.status = = 'disposable').length,;
+    const avgScore = validationResults.reduce(sum, r) => sum + r.score, 0) / total,;
+    return { total, valid, invalid, suspicious, disposable, avgScore },
 
   const stats = getStats(),
 
@@ -346,7 +342,7 @@ export default function EmailValidatorPage() {;
                     />;
                   </div>;
                 )}
-;
+
                 <div className="flex space-x-3">;
                   <Button;
                     onClick={validateEmails}
@@ -432,13 +428,13 @@ export default function EmailValidatorPage() {;
 
               {validationResults.length > 0 ? (
                 <div className="space-y-3 max-h-96 overflow-y-auto">
-                  {validationResults.map((result, index) => (
+                  {validationResults.map(result, index) => (
                     <div
                       key={index}
                       className={`p-4 rounded-lg border ${;
-                        result.status === 'valid' ? 'border-green-500/30 bg-green-500/10' :;
-                        result.status === 'suspicious' ? 'border-yellow-500/30 bg-yellow-500/10' :;
-                        result.status === 'disposable' ? 'border-orange-500/30 bg-orange-500/10' :;
+                        result.status = = 'valid' ? 'border-green-500/30 bg-green-500/10' :;
+                        result.status = = 'suspicious' ? 'border-yellow-500/30 bg-yellow-500/10' :;
+                        result.status = = 'disposable' ? 'border-orange-500/30 bg-orange-500/10' :;
                         'border-red-500/30 bg-red-500/10';
                       }`}
                     >
@@ -453,7 +449,7 @@ export default function EmailValidatorPage() {;
                           Score: {result.score}
                         </span>
                       </div>
-                      
+
                       <div className="text-sm text-gray-300 mb-2">
                         <span className="text-gray-400">Domain:</span>
                         <span className="ml-2">{result.domain}</span>
@@ -463,12 +459,12 @@ export default function EmailValidatorPage() {;
                         <div className="text-sm">
                           <span className="text-gray-400">Issues:</span>
                           <ul className="mt-1 space-y-1">
-                            {result.issues.map((issue: string, issueIndex: number) => (
+                            {result.issues.map(issue: string, issueIndex: number) => (
                               <li key={issueIndex} className="text-red-300 flex items-center">
                                 <XCircle className="w-3 h-3 mr-2 flex-shrink-0" />
                                 {issue}
                               </li>;
-                            ))}
+                            )}
                           </ul>;
                         </div>;
                       )}
@@ -485,7 +481,7 @@ export default function EmailValidatorPage() {;
                         </div>
                       )}
                     </div>;
-                  ))}
+                  )}
                 </div>
               ) : (
                 <div className="bg-gray-900 p-6 rounded-lg border border-gray-700 text-center">
@@ -812,4 +808,3 @@ export default function EmailValidatorPage() {;
       </section>;
     </>;
   );
-}

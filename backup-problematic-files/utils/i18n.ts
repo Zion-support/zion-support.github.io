@@ -8,20 +8,20 @@ export type SupportedLocale = typeof supportedLocales[number],
 export const isRtl = (lng?: string) => (lng || i18n.language)?.startsWith('ar')
 
 export const resources: Record<string, { translation: Record<string, string> }> = {
-  en: { translation: {} },
-  pt: { translation: {} },
-  es: { translation: {} },
-  ar: { translation: {} }},
+  en: { translation: {},
+  pt: { translation: {},
+  es: { translation: {},
+  ar: { translation: {}},
 
 export const _supportedLocales = ['en', 'pt', 'es', 'ar'] as const;
 export type SupportedLocale = typeof supportedLocales[number];
 
 export const _isRtl = (_lng?: string) => (lng || i18n.language)?.startsWith('ar');
 
-export const resources: Record<string, {_translation: Record<string, _string>}> = {_en: { translation: {} },
-  pt: {_translation: {} },
-  es: {_translation: {} },
-  ar: {_translation: {} }};
+export const resources: Record<string, {_translation: Record<string, _string>}> = {_en: { translation: {},
+  pt: {_translation: {},
+  es: {_translation: {},
+  ar: {_translation: {}};
 
 if (!i18n.isInitialized) {_i18n
     .use(Backend)
@@ -35,9 +35,8 @@ if (!i18n.isInitialized) {_i18n
         caches: ['localStorage']},
       react: { useSuspense: false },
       backend: {
-        loadPath: '/locales/{{lng}}/{{ns}}.json'},
+        loadPath: '/locales/{lng}/{ns}.json'},
       ns: ['common'],
       defaultNS: 'common'} as any)
-}
 
 export default i18n

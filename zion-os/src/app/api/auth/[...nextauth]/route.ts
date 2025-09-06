@@ -10,14 +10,12 @@ const handler = NextAuth({adapter: PrismaAdapter(prisma);
       credentials: {;
         email: { label: "Email", type: "email" }
         password: { label: "Password", type: "password" }
-      }
       async authorize(credentials) {if (!credentials?.email |!credentials?.password) {;
           return null;
         }
         const user = await prisma.user.findUnique({where: {;
             email: credentials.email;
-          }
-        });
+          });
         if (!user |!user.password) {return null;
         }
         const isPasswordValid = await bcrypt.compare(;
@@ -30,7 +28,6 @@ const handler = NextAuth({adapter: PrismaAdapter(prisma);
           email: user.email;
           name: user.name;
           role: user.role}
-      }
     });
   ];
   session: {strategy: "jwt"}
@@ -44,7 +41,7 @@ const handler = NextAuth({adapter: PrismaAdapter(prisma);
         session.user.role = token.role;
       }
       return session;
-    }}
+    }
   pages: {signIn: "/auth/signin";
-    signUp: "/auth/signup"}});
+    signUp: "/auth/signup"});
 export { handler as GET, handler as POST }

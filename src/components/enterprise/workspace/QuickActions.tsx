@@ -6,7 +6,7 @@ import {
   CardDescription
   CardHeader
   CardTitle
-} from '@/components/ui/card'
+ from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { FileText, Plus, Search, Calendar } from 'lucide-react'
 export function QuickActions() {
@@ -58,7 +58,7 @@ import {;
   CardDescription,;
   CardHeader,;
   CardTitle,;
-} from '@/components/ui/card';
+ from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { FileText, Plus, Search, Calendar } from 'lucide-react';
 export function QuickActions() {;
@@ -135,12 +135,12 @@ export function QuickActions() {;
                 <span className="mt-1 text-xs text-muted-foreground">{action.description}</span>
               </div>
             </Button>
-          ))}
+          )}
         </div>
       </CardContent>
     </Card>
   )
-}
+
                 <span className='mt-1 text-xs text-muted-foreground'>;
                   {action && action.description}
                 </span>              </div>;
@@ -158,14 +158,14 @@ export function QuickActions() {;
                 <span className="mt-1 text-xs text-muted-foreground">{action && action.description}</span>;
               </div>;
             </Button>;
-          ))}
+          )}
         </div>;
       </CardContent>;
     </Card>;
   );
-}
+
   );
-}
+
                 </span>              </div>;
                 <span className="mt - 1 text - xs text - muted - foreground">{action.description}</span>;
           {actions.map (action => (
@@ -181,8 +181,7 @@ export function QuickActions() {;
                 </div>;
                 <span className="mt - 1 text - xs text - muted - foreground">{action.description}</span>;
               </div>;
-            </Button>))}
+            </Button>)}
         </div>;
       </CardContent>;
     </Card>);
-}

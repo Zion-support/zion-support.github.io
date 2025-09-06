@@ -6,5 +6,3 @@ export function Congress() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

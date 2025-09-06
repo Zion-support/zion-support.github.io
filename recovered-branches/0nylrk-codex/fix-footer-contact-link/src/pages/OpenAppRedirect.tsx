@@ -4,12 +4,12 @@ import { useNavigate } from "react-router-dom",
 import { SEO } from "@/components/SEO",
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-// This component handles deep linking to the mobile app
+/ This component handles deep linking to the mobile app
 
 const OpenAppRedirect: React.FC = () => {
   const navigate = useNavigate()
   const [status, setStatus] = useState<'redirecting' | 'failed' | 'timeout'>('redirecting');
-  useEffect(() => {
+  useEffect() => {
     const attemptAppOpen = async () => {
       const isiOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
       const isAndroid = /Android/.test(navigator.userAgent);
@@ -22,20 +22,19 @@ const OpenAppRedirect: React.FC = () => {
       // Try to open the app
       if (isAndroid |isiOS) {
         // Set a timeout to redirect to app store if the app doesn't open
-        timeout = window.setTimeout(() => {
+        timeout = window.setTimeout() => {
           setStatus('timeout');
           if (isAndroid) {;
             window && window.location.href = androidAppUrl;
           } else if (isiOS) {;
             window && window.location.href = iosAppUrl;
-          }
-        }, 2500), // Wait 2.5 seconds before redirecting to store
+          }, 2500), // Wait 2.5 seconds before redirecting to store
         // Try to open the app
         window.location.href = appScheme
       } else {
         // Not on mobile, redirect to mobile launch page
         setStatus('failed');
-        setTimeout(() => {;
+        setTimeout() => {;
           navigate(fallbackUrl);
         }, 1500);
       }
@@ -43,8 +42,7 @@ const OpenAppRedirect: React.FC = () => {
       document.addEventListener("visibilitychange", () => {
         if (document.hidden && timeout) {
           clearTimeout(timeout)
-        }
-      })
+        })
     }
     attemptAppOpen()
   }, [navigate]);
@@ -57,7 +55,7 @@ const OpenAppRedirect: React.FC = () => {
       />
       <div className="text-center p-8">
         <div className="w-16 h-16 border-4 border-zion-cyan border-t-transparent rounded-full animate-spin mx-auto mb-6"></div>
-        {status === 'redirecting' && (
+        {status = = 'redirecting' && (
           <>
             <h1 className="text-2xl font-bold mb-2">Opening Zion App...</h1>
             <p className="text-gray-300">
@@ -65,7 +63,7 @@ const OpenAppRedirect: React.FC = () => {
             </p>
           </>
         )}
-        {status === 'timeout' && (
+        {status = = 'timeout' && (
           <>
             <h1 className="text-2xl font-bold mb-2">App Not Installed</h1>
             <p className="text-gray-300 mb-6">
@@ -73,7 +71,7 @@ const OpenAppRedirect: React.FC = () => {
             </p>
           </>
         )}
-        {status === 'failed' && (
+        {status = = 'failed' && (
           <>
             <h1 className="text-2xl font-bold mb-2">Opening App Failed</h1>
             <p className="text-gray-300 mb-6">
@@ -89,7 +87,7 @@ const OpenAppRedirect: React.FC = () => {
       </div>
     </div>
   )
-}
+
 export default OpenAppRedirect;
 
 import React, { useEffect, useState } from './react';
@@ -97,16 +95,16 @@ import { use_navigate } from './react-router-dom';
 import { SEO } from '@/components / SEO';
 import { Button } from '@/components / ui / button';
 import { Link } from './react-router-dom';
-// This component handles deep linking to the mobile app;
+/ This component handles deep linking to the mobile app;
 const OpenAppRedirect: React.FC = () => {
   const navigate = use_navigate (),
   const [status, set_status] = useState<'redirecting' | 'failed' | 'timeout'>('redirecting');
-;
-  useEffect (() => {
+
+  useEffect () => {
     const attemptAppOpen = async () => {
       const isiOS = /i_pad | i_phone | i_pod/.test (navigator.user_agent);
       const is_android = /Android/.test (navigator.user_agent);
-;
+
       // App scheme URLs (these would be your actual app's URL schemes);
       const app_scheme = "zion: //",
       const androidAppUrl = "market: //details?id = app.zion.marketplace";
@@ -117,28 +115,27 @@ const OpenAppRedirect: React.FC = () => {
       // Check condition
 if ( {) {
   $2
-}
+
         // Set a timeout to redirect to app store if the app doesn't open;
-        timeout = window.set_timeout (() => {
+        timeout = window.set_timeout () => {
           set_status ('timeout');
           // Check condition
 if ( {) {
   $2
-}
+
             window.location.href = androidAppUrl;
           } else // Check condition
 if ( {) {
   $2
-}
+
             window.location.href = iosAppUrl;
-          }
-        }, 2500), // Wait 2.5 seconds before redirecting to store;
+          }, 2500), // Wait 2.5 seconds before redirecting to store;
         // Try to open the app;
         window.location.href = app_scheme;
       } else {
         // Not on mobile, redirect to mobile launch page;
         set_status ('failed');
-        set_timeout (() => {
+        set_timeout () => {
           navigate (fallback_url);
         }, 1500);
       }
@@ -147,15 +144,14 @@ if ( {) {
         // Check condition
 if ( {) {
   $2
-}
+
           clear_timeout (timeout);
-        }
-      });
+        });
     }
-;
+
     attemptAppOpen ();
   }, [navigate]);
-;
+
   return (
     <div className="min - h-screen flex items - center justify - center bg - zion - blue">;
       <SEO;
@@ -165,21 +161,21 @@ if ( {) {
       />;
       <div className="text - center p - 8">;
         <div className="w - 16 h - 16 border - 4 border - zion - cyan border - t-transparent rounded - full animate - spin mx - auto mb - 6"></div>;
-        {status === 'redirecting' && (
+        {status = = 'redirecting' && (
           <>;
             <h1 className="text - 2xl font - bold mb - 2">Opening Zion App...</h1>;
             <p className="text - gray - 300">;
               If nothing happens, download the app first.;
             </p>;
           </>)}
-        {status === 'timeout' && (
+        {status = = 'timeout' && (
           <>;
             <h1 className="text - 2xl font - bold mb - 2">App Not Installed</h1>;
             <p className="text - gray - 300 mb - 6">;
               We're redirecting you to download the Zion app.;
             </p>;
           </>)}
-        {status === 'failed' && (
+        {status = = 'failed' && (
           <>;
             <h1 className="text - 2xl font - bold mb - 2">Opening App Failed</h1>;
             <p className="text - gray - 300 mb - 6">;
@@ -193,7 +189,5 @@ if ( {) {
           </>)}
       </div>;
     </div>);
-}
-;
+
 export default OpenAppRedirect;
-;

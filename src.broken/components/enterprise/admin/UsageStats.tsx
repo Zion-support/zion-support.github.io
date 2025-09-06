@@ -6,5 +6,3 @@ export function UsageStats() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

@@ -6,5 +6,3 @@ export function FraudDetection() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

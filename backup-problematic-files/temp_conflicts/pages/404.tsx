@@ -3,7 +3,7 @@ import Head from 'next/head',;
 import Link from 'next/link',;
 import { motion } from 'framer-motion',;
 import { Home, Search, ArrowLeft, AlertTriangle, Map, Users, Rocket } from 'lucide-react',;
-;
+
 export default function Custom404() {;
   const quickLinks = [;
     { href:'/', label:' Home', icon:Home },;
@@ -11,7 +11,7 @@ export default function Custom404() {;
     { href:'/explore', label:' Explore', icon:Search },;
     { href:'/about', label:' About', icon:Users },;
     { href:'/sitemap', label:' Sitemap', icon:Map }],;
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white flex items-center justify-center px-6">;
       <Head>;
@@ -19,13 +19,13 @@ export default function Custom404() {;
         <meta name="description" content="The page you're looking for doesn't exist. Navigate back to Zion Tech Group's main services and solutions." />;
         <meta name="robots" content="noindex, nofollow" />;
       </Head>;
-;
+
       <div className="max-w-4xl mx-auto text-center">;
         {/* 404 Icon and Title */}
         <motion.div;
-          initial={{ opacity:0, scale:0.8 }}
-          animate={{ opacity:1, scale:1 }}
-          transition={{ duration:0.6 }}
+          initial={ opacity:0, scale:0.8 }
+          animate={ opacity:1, scale:1 }
+          transition={ duration:0.6 }
           className="mb-8";
         >;
           <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-red-500/20 to-orange-500/20 border border-red-500/30 flex items-center justify-center">;
@@ -42,24 +42,24 @@ export default function Custom404() {;
             Don't worry, we've got plenty of amazing content for you to explore.;
           </p>;
         </motion.div>;
-;
+
         {/* Quick Navigation */}
         <motion.div;
-          initial={{ opacity:0, y:20 }}
-          animate={{ opacity:1, y:0 }}
-          transition={{ duration:0.6, delay:0.2 }}
+          initial={ opacity:0, y:20 }
+          animate={ opacity:1, y:0 }
+          transition={ duration:0.6, delay:0.2 }
           className="mb-12";
         >;
           <h3 className="text-xl font-semibold text-white mb-6">;
             Quick Navigation;
           </h3>;
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4 max-w-2xl mx-auto">;
-            {quickLinks.map((link, index) => (;
+            {quickLinks.map(link, index) => (;
               <motion.div;
                 key={link.href}
-                initial={{ opacity:0, y:20 }}
-                animate={{ opacity:1, y:0 }}
-                transition={{ duration:0.4, delay:0.3 + index * 0.1 }}
+                initial={ opacity:0, y:20 }
+                animate={ opacity:1, y:0 }
+                transition={ duration:0.4, delay:0.3 + index * 0.1 }
               >;
                 <Link;
                   href={link.href}
@@ -69,15 +69,15 @@ export default function Custom404() {;
                   <span className="text-sm text-white/80">{link.label}</span>;
                 </Link>;
               </motion.div>;
-            ))}
+            )}
           </div>;
         </motion.div>;
-;
+
         {/* Popular Services Section */}
         <motion.div;
-          initial={{ opacity:0, y:20 }}
-          animate={{ opacity:1, y:0 }}
-          transition={{ duration:0.6, delay:0.4 }}
+          initial={ opacity:0, y:20 }
+          animate={ opacity:1, y:0 }
+          transition={ duration:0.6, delay:0.4 }
           className="mb-12";
         >;
           <h3 className="text-xl font-semibold text-white mb-6">;
@@ -87,12 +87,12 @@ export default function Custom404() {;
             {[;
               { href:'/ai-business-intelligence', label:'AI Business Intelligence', desc:'Transform data into actionable insights' },;
               { href:'/quantum-cybersecurity', label:'Quantum Cybersecurity', desc:'Future-proof security solutions' },;
-              { href:'/edge-computing-orchestration', label:'Edge Computing', desc:'Advanced edge optimization platform' }].map((service, index) => (;
+              { href:'/edge-computing-orchestration', label:'Edge Computing', desc:'Advanced edge optimization platform' }].map(service, index) => (;
               <motion.div;
                 key={service.href}
-                initial={{ opacity:0, y:20 }}
-                animate={{ opacity:1, y:0 }}
-                transition={{ duration:0.4, delay:0.5 + index * 0.1 }}
+                initial={ opacity:0, y:20 }
+                animate={ opacity:1, y:0 }
+                transition={ duration:0.4, delay:0.5 + index * 0.1 }
               >;
                 <Link;
                   href={service.href}
@@ -102,15 +102,15 @@ export default function Custom404() {;
                   <p className="text-sm text-white/60">{service.desc}</p>;
                 </Link>;
               </motion.div>;
-            ))}
+            )}
           </div>;
         </motion.div>;
-;
+
         {/* Action Buttons */}
         <motion.div;
-          initial={{ opacity:0, y:20 }}
-          animate={{ opacity:1, y:0 }}
-          transition={{ duration:0.6, delay:0.6 }}
+          initial={ opacity:0, y:20 }
+          animate={ opacity:1, y:0 }
+          transition={ duration:0.6, delay:0.6 }
           className="flex flex-col sm:flex-row gap-4 justify-center";
         >;
           <Link;
@@ -128,12 +128,12 @@ export default function Custom404() {;
             View Sitemap;
           </Link>;
         </motion.div>;
-;
+
         {/* Help Section */}
         <motion.div;
-          initial={{ opacity:0, y:20 }}
-          animate={{ opacity:1, y:0 }}
-          transition={{ duration:0.6, delay:0.8 }}
+          initial={ opacity:0, y:20 }
+          animate={ opacity:1, y:0 }
+          transition={ duration:0.6, delay:0.8 }
           className="mt-12 pt-8 border-t border-white/10";
         >;
           <p className="text-white/60 mb-4">;
@@ -163,4 +163,3 @@ export default function Custom404() {;
       </div>;
     </div>;
   );
-}

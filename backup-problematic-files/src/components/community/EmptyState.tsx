@@ -3,15 +3,14 @@ import Link from 'next/link',;
 import { MessageSquare } from 'lucide-react';
 import { Button } from '@/components/ui/button',;
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip',;
-;
+
 interface EmptyStateProps {;
   title:string,;
   subtitle:string,;
   cta:string,;
   href:string,;
   hasSession:boolean;
-}
-;
+
 const EmptyState:React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, hasSession }) => {;
   return (;
     <div className="text-center py-16">;
@@ -36,18 +35,17 @@ const EmptyState:React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, hasS
       </TooltipProvider>;
     </div>;
   ),;
-},;
-;
+,;
+
 export default EmptyState,; <TooltipProvider> <Tooltip> <TooltipTrigger asChild> {;
   hasSession ? (<Button asChild> <Link href= {;
   href ;
-}> {;
+> {;
   cta ;
-}</Link> </Button>) : (<Button disabled> {;
+</Link> </Button>) : (<Button disabled> {;
   cta ;
-}</Button>) ;
-}</TooltipTrigger> {;
+</Button>) ;
+</TooltipTrigger> {;
   !hasSession && <TooltipContent>Login required</TooltipContent> ;
-}</Tooltip> </TooltipProvider> </div>) ;
-};
+</Tooltip> </TooltipProvider> </div>) ;
 export default EmptyState;

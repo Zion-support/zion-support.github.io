@@ -7,23 +7,21 @@ import { CalendarIcon } from 'lucide-react';
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",;
 import { cn } from "@/lib/utils",;
 import { QuoteFormData } from "@/types/quotes",;
-;
+
 interface TimelineStepProps {;
   formData:QuoteFormData,;
   updateFormData:(data:Partial<QuoteFormData>) => void;
-}
-;
+
 export function TimelineStep({ formData, updateFormData } TimelineStepProps) {;
   return (;
     <div className="space-y-6">;
       <div>;
         <h3 className="text-xl font-semibold text-white mb-4">When do you need this?</h3>;
-        ;
         <div className="space-y-4">;
           <div className="flex items-center space-x-4">;
             <div ;
               className={`flex-1 p-4 rounded-lg border-2 cursor-pointer transition-colors ${;
-                formData.timeline === "fixed" ;
+                formData.timeline = = "fixed" ;
                   ? "bg-zion-purple/20 border-zion-purple" ;
                   :"bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50";
               }`}
@@ -32,10 +30,9 @@ export function TimelineStep({ formData, updateFormData } TimelineStepProps) {;
               <h4 className="font-medium text-white">Fixed Dates</h4>;
               <p className="text-sm text-zion-slate-light">I have specific start and end dates</p>;
             </div>;
-            ;
             <div ;
               className={`flex-1 p-4 rounded-lg border-2 cursor-pointer transition-colors ${;
-                formData.timeline === "flexible" ;
+                formData.timeline = = "flexible" ;
                   ? "bg-zion-purple/20 border-zion-purple" ;
                   :"bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50";
               }`}
@@ -45,8 +42,7 @@ export function TimelineStep({ formData, updateFormData } TimelineStepProps) {;
               <p className="text-sm text-zion-slate-light">I'm flexible on the timing</p>;
             </div>;
           </div>;
-          ;
-          {formData.timeline === "fixed" && (;
+          {formData.timeline = = "fixed" && (;
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">;
               <div>;
                 <Label className="block mb-2 text-zion-slate-light">Start Date</Label>;
@@ -74,7 +70,6 @@ export function TimelineStep({ formData, updateFormData } TimelineStepProps) {;
                   </PopoverContent>;
                 </Popover>;
               </div>;
-              ;
               <div>;
                 <Label className="block mb-2 text-zion-slate-light">End Date</Label>;
                 <Popover>;
@@ -97,7 +92,7 @@ export function TimelineStep({ formData, updateFormData } TimelineStepProps) {;
                       onSelect={(date) => updateFormData({ endDate:date })}
                       initialFocus;
                       className="p-3 pointer-events-auto";
-                      disabled={(date) => date < (formData.startDate || new Date())}
+                      disabled={(date) => date < (formData.startDate || new Date()}
                     />;
                   </PopoverContent>;
                 </Popover>;
@@ -111,12 +106,12 @@ export function TimelineStep({ formData, updateFormData } TimelineStepProps) {;
  interface TimelineStepProps {;
   formData: QuoteFormData;
 updateFormData: (data: Partial<QuoteFormData>) => void ;
-}export function TimelineStep ({;
+export function TimelineStep ({;
   formData, updateFormData ;
-}: TimelineStepProps) {;
+: TimelineStepProps) {;
   return (<div className="space-y-6" > text-xl font-semibold text-white mb-4">When do you need this?</h3> <div className=" space-y-4"> <div className=" flex items-center space-x-4"> <div className= {;
   `flex-1 p-4 rounded-lg border-2 cursor-pointer transition-colors $ {";
   > <h4 className=" font-medium text-white">Fixed Dates</h4> <p className=" text-sm text-zion-slate-light">I have specific start and end dates</p> </div> <div > <h4 className=" font-medium text-white">Flexible Timeline</h4> <p className=" text-sm text-zion-slate-light">I'm flexible on the timing</p> </div> </div> <div> <Label className=" block mb-2 text-zion-slate-light">Start Date</Label> <Popover> <PopoverTrigger asChild> <Button variant=" outline"className= {";
   cn (</Button> </PopoverTrigger> <PopoverContent className=" w-auto p-0 bg-zion-blue-dark border border-zion-blue-light"align=" start"> <Calendar initialFocus className=" p-3 pointer-events-auto"/> </PopoverContent> </Popover> </div> <div> <Label className=" block mb-2 text-zion-slate-light">End Date</Label> <Popover> <PopoverTrigger asChild> <Button </Button> </PopoverTrigger> <PopoverContent className=" w-auto p-0 bg-zion-blue-dark border border-zion-blue-light"align=" start" > <Calendar /> </PopoverContent> </Popover> </div> </div>) ;
-}</div> </div> </div>) ;
-}'"
+</div> </div> </div>) ;
+'"

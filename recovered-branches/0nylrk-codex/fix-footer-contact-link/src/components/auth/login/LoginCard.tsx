@@ -40,4 +40,3 @@ export function LoginCard() {;
         <SocialLogin />;
       </div>;
     </div>);
-}

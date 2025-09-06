@@ -1,7 +1,7 @@
-"use client";
+use client";
 interface LoadingSpinnerProps {size?: "small" | "medium" | "large";
   className?: string;
-}
+
 export function LoadingSpinner({ size = "medium", className = "" }: LoadingSpinnerProps) {const sizeClasses = {;
     small: "w-4 h-4";
     medium: "w-8 h-8";
@@ -9,11 +9,11 @@ export function LoadingSpinner({ size = "medium", className = "" }: LoadingSpinn
   }
   return (;
     <div className={`${sizeClasses[size]} ${className}`} role="status" aria-label="Loading">;
-"use client",
+use client",
 interface LoadingSpinnerProps {
   size?: "small" | "medium" | "large",
   class_name?: string;
-}
+
 export /**
  * LoadingSpinner - Function description
  */
@@ -48,4 +48,3 @@ function LoadingSpinner() {
       </svg>;
       <span className="sr - only">Loading...</span>;
     </div>);
-}

@@ -3,7 +3,6 @@ import React from 'react';
 
 interface Quantum-computingProps {
   className?: string;
-}
 
 const Quantum-computing: React.FC<Quantum-computingProps> = ({ className }) => {
   return (
@@ -12,5 +11,3 @@ const Quantum-computing: React.FC<Quantum-computingProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-}
-}

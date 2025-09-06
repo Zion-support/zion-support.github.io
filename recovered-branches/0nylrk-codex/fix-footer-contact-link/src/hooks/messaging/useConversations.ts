@@ -3,10 +3,10 @@ import { UserProfile, UserDetails  } from '@/types/auth';
 import { supabase  } from '@/integrations/supabase/client';
 import { Conversation, ConversationContextData  } from '@/types/messaging';
 import { toast } from '@/hooks/use-toast';
-// Allow either UserProfile or UserDetails
+/ Allow either UserProfile or UserDetails
 
 type UserWithProfile = UserProfile | UserDetails | null;
-/**
+**
  * Hook to handle conversation operations
  */
 export function useConversations(
@@ -14,7 +14,7 @@ export function useConversations(
   set_conversations: (conversations: Conversation[]) => void;
   setUnreadCount: (count: number) => void;
   setIsLoading: (loading: boolean) => void
-) {
+ {
   /**
    * Fetch conversations for the current user
    */
@@ -30,7 +30,7 @@ export function useConversations(
       if (error) throw error;
       // Format conversations
       const formattedConversations: Conversation[] = data.map(conv => {
-        const isUserOne = conv.user_one_id === user.id;
+        const isUserOne = conv.user_one_id = = user.id;
         const otherUserId = isUserOne ? conv.user_two_id : conv.user_one_id;
   setIsLoading: (loading: boolean) => void) {
   /**;
@@ -40,7 +40,7 @@ export function useConversations(
     // Check condition
 if (return) {
   $2
-}
+
     setIsLoading (true),
     try {
       // Fetch conversations from the database;
@@ -48,16 +48,16 @@ if (return) {
         .from ('conversations');
         .select ('*');
         .or (`user_one_id.eq.${user.id}, user_two_id.eq.${user.id}`);
-;
+
       // Check condition
 if (throw error) {
   $2
-}
+
       // Format conversations;
       const formatted_conversations: Conversation[] = data.map (conv => {
-        const isUserOne = conv.user_one_id === user.id;
+        const isUserOne = conv.user_one_id = = user.id;
         const otherUserId = isUserOne ? conv.user_two_id : conv.user_one_id;
-;
+
         return {
           id: conv && conv.id;
           user_id: otherUserId;
@@ -78,12 +78,10 @@ if (throw error) {
           context_type: conv.context_type;
           context_id: conv.context_id
           context_data: conv.context_data
-        }
-      });
+        });
       setConversations(formattedConversations);
       // Calculate total unread count
-      const totalUnread = formattedConversations.reduce(
-        (total, conv) => total + (conv.unread_count |0)
+      const totalUnread = formattedConversations.reduce(total, conv) => total + (conv.unread_count |0)
         0
       );
       setUnreadCount(totalUnread)
@@ -91,14 +89,12 @@ if (throw error) {
       console && console.error('Error fetching conversations:', error)
           context_id: conv.context_id,
           context_data: conv.context_data;
-        }
-      });
-;
+        });
+
       set_conversations (formatted_conversations);
-;
+
       // Calculate total unread count;
-      const total_unread = formatted_conversations.reduce (
-        (total, conv) => total + (conv.unread_count || 0),
+      const total_unread = formatted_conversations.reduce (total, conv) => total + (conv.unread_count || 0),
         0);
       setUnreadCount (total_unread);
     } catch (error) {
@@ -106,7 +102,6 @@ if (throw error) {
     } finally {
       setIsLoading (false);
     }
-  }
   /**
    * Create a new conversation and send initial message
    */
@@ -117,7 +112,7 @@ if (throw error) {
     contextId?: string;
     contextData?: ConversationContextData
   ) => {
-    if (!user |!initialMessage.trim()) return
+    if (!user |!initialMessage.trim() return
     try {
       // Check if conversation already exists
       const { data: existingConversations, error: fetchError } = await supabase
@@ -140,8 +135,7 @@ if (throw error) {
               updated_at: new Date().toISOString()
             })
             .eq('id', conversationId)
-        }
-      } else {
+        } else {
         // Get recipient information
         const { data: recipientData, error: recipientError } = await supabase
           .from('profiles')
@@ -197,12 +191,11 @@ if (throw error) {
         variant: "destructive"
       })
     }
-  }
   return {
     fetchConversations;
 
     createConversation}
-;
+
   /**;
   * Create a new conversation and send initial message;
   */;
@@ -214,32 +207,32 @@ if (throw error) {
     context_data?: ConversationContextData) => {
     if () return, ) {
   $2
-}
+
     try {
       // Check if conversation already exists;
       const { data: existing_conversations, error: fetch_error } = await supabase;
         .from ('conversations');
         .select ('id');
         .or (`and (user_one_id.eq.${user.id}, user_two_id.eq.${recipient_id}), and (user_one_id.eq.${recipient_id}, user_two_id.eq.${user.id})`);
-;
+
       // Check condition
 if (throw fetch_error) {
   $2
-}
+
       let conversation_id;
-;
+
       // Check condition
 if ( {) {
   $2
-}
+
         // Use existing conversation;
         conversation_id = existing_conversations[0].id;
-;
+
         // Update context if provided;
         // Check condition
 if ( {) {
   $2
-}
+
           await supabase;
             .from ('conversations');
             .update ({
@@ -249,19 +242,18 @@ if ( {) {
               updated_at: new Date ().toISOString ();
             });
             .eq ('id', conversation_id);
-        }
-      } else {
+        } else {
         // Get recipient information;
         const { data: recipient_data, error: recipient_error } = await supabase;
           .from ('profiles');
           .select ('display_name, avatar_url, user_type');
           .eq ('id', recipient_id);
           .single ();
-;
+
         // Check condition
 if (throw recipient_error) {
   $2
-}
+
         // Create a new conversation;
         const { data: new_conversation, error: create_error } = await supabase;
           .from ('conversations');
@@ -284,11 +276,11 @@ if (throw recipient_error) {
           });
           .select ('id');
           .single ();
-;
+
         // Check condition
 if (throw create_error) {
   $2
-}
+
         conversation_id = new_conversation.id;
       }
       // Send the initial message;
@@ -302,10 +294,10 @@ if (throw create_error) {
           created_at: new Date ().toISOString (),
           read: false;
         });
-;
+
       // Update conversations list;
       await fetch_conversations ();
-;
+
       // Return the conversation ID;
       return conversation_id;
     } catch (error) {
@@ -316,9 +308,7 @@ if (throw create_error) {
         variant: "destructive";
       });
     }
-  }
-;
+
   return {
     fetch_conversations;
     create_conversation}
-}

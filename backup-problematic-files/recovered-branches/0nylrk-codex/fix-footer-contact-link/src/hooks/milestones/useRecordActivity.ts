@@ -2,10 +2,9 @@
 import { useAuth } from '@/hooks/useAuth',;
 import { supabase } from '@/integrations/supabase/client',;
 import { MilestoneActivity } from './types',;
-;
+
 export const useRecordActivity = () => {;
   const { user } = useAuth(),;
-  ;
   const recordMilestoneActivity = async (;
     milestoneId:string,;
     action:string, ;
@@ -14,7 +13,6 @@ export const useRecordActivity = () => {;
     comment?:string;
   ) => {;
     if (!user) return null,;
-    ;
     try {;
       const { data, error } = await supabase;
         .from('milestone_activities');
@@ -30,30 +28,24 @@ export const useRecordActivity = () => {;
           created_by_profile:profiles!user_id(display_name, avatar_url);
         `);
         .single(),;
-      ;
       if (error) throw error,;
-      ;
       return data,;
     } catch (err:any) {;
       console.error("Error recording activity:", err),;
       return null,;
-    }
-  },;
-  ;
+    },;
   return {;
     recordMilestoneActivity;
   },;
-},; try {
+,; try {
   const {
   data, error 
-}= await supabase .from ('milestone activities') .insert ({
+= await supabase .from ('milestone activities') .insert ({
   milestone id: milestoneId, user id: user.id, action, previous status: previousStatus, new status: newStatus, comment 
-}) .select (`*;
+) .select (`*;
 created by profile: profiles!user id (display name, avatar url) `) .single ();
 if (error) throw error;
-}
-};
 return {
   recordMilestoneActivity 
-}
-};
+
+;

@@ -6,5 +6,3 @@ export function UNBridge() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

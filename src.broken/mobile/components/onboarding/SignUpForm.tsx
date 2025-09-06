@@ -6,5 +6,3 @@ export function SignUpForm() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

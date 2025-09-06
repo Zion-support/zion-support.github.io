@@ -7,24 +7,24 @@ import { ;
   SelectItem, ;
   SelectTrigger, ;
   SelectValue ;
-} from "@/components/ui/select",;
+ from "@/components/ui/select",;
 import type { QuoteStatus } from "@/types/quotes",;
-;
+
 type RequestsHeaderProps = {;
   unreadCount:number,;
   statusFilter:QuoteStatus | 'all',;
   setStatusFilter:(value:QuoteStatus | 'all') => void,;
   archiveFilter:'active' | 'archived' | 'all',;
   setArchiveFilter:(value:'active' | 'archived' | 'all') => void;
-},;
-;
+,;
+
 export const RequestsHeader:React.FC<RequestsHeaderProps> = ({;
   unreadCount,;
   statusFilter,;
   setStatusFilter,;
   archiveFilter,;
   setArchiveFilter;
-}) => {;
+) => {;
   return (;
     <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">;
       <div>;
@@ -40,7 +40,6 @@ export const RequestsHeader:React.FC<RequestsHeaderProps> = ({;
           Manage client requests to hire your services;
         </p>;
       </div>;
-      ;
       <div className="flex gap-3 mt-4 md:mt-0">;
         <Select ;
           value={statusFilter} ;
@@ -58,7 +57,6 @@ export const RequestsHeader:React.FC<RequestsHeaderProps> = ({;
             <SelectItem value="closed">Closed</SelectItem>;
           </SelectContent>;
         </Select>;
-        ;
         <Select ;
           value={archiveFilter} ;
           onValueChange={(value) => setArchiveFilter(value as 'active' | 'archived' | 'all')}
@@ -75,13 +73,13 @@ export const RequestsHeader:React.FC<RequestsHeaderProps> = ({;
       </div>;
     </div>;
   ),;
-},;export const RequestsHeader: React.FC<RequestsHeaderProps> = ({
+,;export const RequestsHeader: React.FC<RequestsHeaderProps> = ({
   unreadCount;
 statusFilter;
 setStatusFilter;
 archiveFilter;
 setArchiveFilter 
-}) => {
+) => {
   return (
     <div className=&quot;flex flex-col md:flex-row justify-between items-start md:items-center mb-8&quot;>
 import React from "react";
@@ -109,7 +107,7 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = (_{unreadCount, sta
           Manage client requests to hire your services
         </p>
       </div>
-      
+
       <div className=&quot;flex gap-3 mt-4 md:mt-0&quot;>
         <Select,
 value={statusFilter} 
@@ -127,7 +125,7 @@ value={statusFilter}
             <SelectItem value=&quot;closed&quot;>Closed</SelectItem>
           </SelectContent>
         </Select>
-        
+
         <Select,
 value={archiveFilter} 
           onValueChange={_(value) => setArchiveFilter(value as 'active' | 'archived' | 'all')}
@@ -144,4 +142,4 @@ value={archiveFilter}
       </div>
     </div>
   )
-},
+,

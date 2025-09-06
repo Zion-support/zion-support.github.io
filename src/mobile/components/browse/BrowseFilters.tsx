@@ -9,7 +9,7 @@ import {
   SelectItem
   SelectTrigger
   SelectValue
-} from '@/components/ui/select'
+ from '@/components/ui/select'
 import { X, Filter } from 'lucide-react'
 
   Sheet
@@ -18,7 +18,7 @@ import { X, Filter } from 'lucide-react'
   SheetTitle
   SheetFooter
   SheetTrigger
-} from '@/components/ui/sheet'
+ from '@/components/ui/sheet'
 import { Badge } from '@/components/ui/badge'
 import { Label } from '@/components/ui/label'
 
@@ -38,7 +38,7 @@ import {;
   SelectItem,;
   SelectTrigger,;
   SelectValue,;
-} from '@/components/ui/select';
+ from '@/components/ui/select';
 import { X, Filter } from 'lucide-react';
 import {;
   Sheet,;
@@ -47,7 +47,7 @@ import {;
   SheetTitle,;
   SheetFooter,;
   SheetTrigger,;
-} from '@/components/ui/sheet';
+ from '@/components/ui/sheet';
 import { Badge } from '@/components/ui/badge';
 import { Label } from '@/components/ui/label';
 
@@ -57,13 +57,12 @@ interface BrowseFiltersProps {;
 export function BrowseFilters(): any ({ type }: BrowseFiltersProps) {;
   const [activeFilters, setActiveFilters] = useState<string[]>([]);
 
-  const addFilter = (filter: string) => {    if (!activeFilters && activeFilters.includes(filter)) {;
+  const addFilter = (filter: string) => {    if (!activeFilters && activeFilters.includes(filter) {;
       setActiveFilters([...activeFilters, filter]);
-    }
-  };
+    };
 
   const removeFilter = (filter: string) => {;
-    setActiveFilters(activeFilters && activeFilters.filter(f => f !== filter));
+    setActiveFilters(activeFilters && activeFilters.filter(f => f != filter);
   };
   return (
     <div className='space-y-3'>;
@@ -79,11 +78,11 @@ export function BrowseFilters(): any ({ type }: BrowseFiltersProps) {;
             <SheetContent side='bottom' className='h-[85vh] rounded-t-xl'>;
               <SheetHeader>;
                 <SheetTitle>;
-                  Filter {type === 'jobs' ? 'Jobs' : 'Talents'}
+                  Filter {type = = 'jobs' ? 'Jobs' : 'Talents'}
                 </SheetTitle>
               </SheetHeader>
               <div className='py-6 space-y-6'>
-                {type === 'jobs' ? (
+                {type = = 'jobs' ? (
                   <>
                     <div className='space-y-2'>
                       <Label>Job Type</Label>
@@ -349,12 +348,11 @@ export function BrowseFilters(): any ({ type }: BrowseFiltersProps) {;
                 className='h-3 w-3 cursor-pointer'
                 onClick={() => removeFilter(filter)}              />;
             </Badge>;
-          ))}
+          )}
         </div>
       </div>
     </div>
   )
-}
 
           {active_filters.map (filter => (
             <Badge;
@@ -366,8 +364,7 @@ export function BrowseFilters(): any ({ type }: BrowseFiltersProps) {;
               <X;
                 className='h - 3 w - 3 cursor - pointer';
                 on_click={() => remove_filter (filter)}              />;
-            </Badge>))}
+            </Badge>)}
         </div>;
       </div>;
     </div>);
-}

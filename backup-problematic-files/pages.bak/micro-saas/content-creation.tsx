@@ -4,7 +4,6 @@ import React from 'react';
 
 interface Content-creationProps {
   className?: string;
-}
 
 const Content-creation: React.FC<Content-creationProps> = ({ className }) => {
   return (
@@ -13,6 +12,3 @@ const Content-creation: React.FC<Content-creationProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-}
-}
-}

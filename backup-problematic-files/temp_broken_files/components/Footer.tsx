@@ -99,11 +99,11 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-6>Services</h3>
             <div className="space-y-4">
-              {Object.entries(services).map(([category, links]) => (
+              {Object.entries(services).map([category, links]) => (
                 <div key={category}>
                   <h4 className=text-sm font-medium text-blue-400 mb-2">{category}</h4>
                   <ul className="space-y-1>
-                    {links.slice(0, 3).map((link) => (
+                    {links.slice(0, 3).map(link) => (
                       <li key={link.name}>
                         <Link
                           href={link.href}
@@ -112,17 +112,17 @@ const Footer: React.FC = () => {
                           {link.name}
                         </Link>
                       </li>
-                    ))}
+                    )}
                   </ul>
                 </div>
-              ))}
+              )}
             </div>
           </div>
           {/* Company */}
           <div>
             <h3 className=text-lg font-semibold mb-6">Company</h3>
             <ul className="space-y-3>
-              {company.map((link) => (
+              {company.map(link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
@@ -131,14 +131,14 @@ const Footer: React.FC = () => {
                     {link.name}
                   </Link>
                 </li>
-              ))}
+              )}
             </ul>
           </div>
           {/* Resources */}
           <div>
             <h3 className=text-lg font-semibold mb-6">Resources</h3>
             <ul className="space-y-3>
-              {resources.map((link) => (
+              {resources.map(link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
@@ -147,13 +147,13 @@ const Footer: React.FC = () => {
                     {link.name}
                   </Link>
                 </li>
-              ))}
+              )}
             </ul>
             {/* Social Links */}
             <div className=mt-6">
               <h4 className="text-sm font-medium text-blue-400 mb-3>Follow Us</h4>
               <div className="flex space-x-4">
-                {socialLinks.map((social) => (
+                {socialLinks.map(social) => (
                   <a
                     key={social.name}
                     href={social.href}
@@ -164,7 +164,7 @@ const Footer: React.FC = () => {
                   >
                     <social.icon className=h-5 w-5" />
                   </a>
-                ))}
+                )}
               </div>
             </div>
           </div>
@@ -191,6 +191,5 @@ const Footer: React.FC = () => {
       </div>
     </footer>
   );
-};
 
 export default Footer;

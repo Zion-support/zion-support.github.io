@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 declare module 'react' {
   const React: any;
 
@@ -31,10 +31,9 @@ declare module 'react' {
   export function useRef<T = undefined>(initialValue?: T): { current: T | undefined }
   export const useEffect: any;
   export type Dispatch<A> = (value: A) => void;
-  export type SetStateAction<S> = S | ((prevState: S) => S)
+  export type SetStateAction<S> = S | (prevState: S) => S)
   export function useState<S>(
-    initialState: S | (() => S)
-  ): [S, Dispatch<SetStateAction<S>>];
+    initialState: S | () => S): [S, Dispatch<SetStateAction<S>];
   export function createContext<T>(defaultValue: T): any;
   export function useContext<T>(context: any): T;
   export const useMemo: any;
@@ -68,13 +67,12 @@ declare module 'react' {
   export type LegacyRef<T = any> = any;
   export type ElementRef<T = any> = any
   export type CSSProperties = Record<string, string | number | undefined>
-}
+
 declare module 'react-dom' {
   export * from 'react-dom / index';
-}
+
 declare module 'react/jsx-runtime' {
   export const jsx: any;
   export const jsxs: any
 
   export const Fragment: any
-}

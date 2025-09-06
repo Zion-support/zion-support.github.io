@@ -4,7 +4,6 @@ import { X } from 'lucide-react';
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
-}
 
 export default function Sidebar({ isOpen, onClose }: SidebarProps) {
   if (!isOpen) return null;
@@ -43,4 +42,3 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
       </div>
     </div>
   );
-}

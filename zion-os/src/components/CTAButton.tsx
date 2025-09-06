@@ -1,4 +1,4 @@
-"use client";
+use client";
 import Link from "next/link";
 import { ReactNode } from "react";
 interface CTAButtonProps {href: string;
@@ -7,14 +7,14 @@ interface CTAButtonProps {href: string;
   children: ReactNode;
   className?: string;
   onClick?: () => void;
-}
+
 export function CTAButton({href;
   variant = "primary";
   size = "medium";
   children;
   className = "";
   onClick;
-}: CTAButtonProps) {const baseClasses = "inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 transform hover: scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900";
+: CTAButtonProps) {const baseClasses = "inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 transform hover: scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900";
   const variantClasses = {;
     primary: "bg-blue-600 hover:bg-blue-700 text-white focus:ring-blue-500";
     secondary: "bg-gray-700 hover:bg-gray-600 text-white border border-gray-600 hover:border-gray-500";
@@ -28,7 +28,7 @@ export function CTAButton({href;
   return (;
     <Link;
       href={href}
-"use client",;
+use client",;
 import Link from "next/link",;
 import { ReactNode } from "react",;
 interface CTAButtonProps {;
@@ -38,8 +38,7 @@ interface CTAButtonProps {;
   children: ReactNode,;
   className?: string,;
   onClick?: () => void;
-}
-;
+
 export function CTAButton({;
   href,;
   variant = "primary",;
@@ -47,7 +46,7 @@ export function CTAButton({;
   children,;
   className = "",;
   onClick;
-}: CTAButtonProps) {;
+: CTAButtonProps) {;
   const baseClasses = "inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 transform hover: scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900",;
   const variantClasses = {;
     primary: "bg-blue-600 hover:bg-blue-700 text-white focus:ring-blue-500",;
@@ -70,4 +69,3 @@ export function CTAButton({;
     >;
       {children}
     </Link>);
-}

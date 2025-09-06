@@ -9,7 +9,7 @@ export async function POST() {
   try {const body = await request.json();
     const { name, email, password } = registerSchema.parse(body);
     // Check if user already exists;
-    const existingUser = await prisma.user.findUnique({where: { email }});
+    const existingUser = await prisma.user.findUnique({where: { email });
     if (existingUser) {return NextResponse.json(;
         { error: "User with this email already exists" }
         { status: 400 }
@@ -23,7 +23,7 @@ export async function POST() {
         email;
         password: hashedPassword;
         role: "user";
-        onboardingCompleted: false}});
+        onboardingCompleted: false});
     // Remove password from response;
     const { password: _, ...userWithoutPassword } = user;
     return NextResponse.json(;
@@ -55,14 +55,14 @@ export async function POST(request: NextRequest) {;
     const { name, email, password } = registerSchema.parse(body),;
     // Check if user already exists;
     const existingUser = await prisma.user.findUnique({;
-      where: { email }}),;
+      where: { email }),;
     if (existingUser) {;
       return NextResponse.json(;
         { error: "User with this email already exists" },;
         { status: 400 }
       );
     }
-;
+
     // Hash password;
     const hashedPassword = await bcrypt.hash(password, 12),;
     // Create user;
@@ -72,7 +72,7 @@ export async function POST(request: NextRequest) {;
         email,;
         password: hashedPassword,;
         role: "user",;
-        onboardingCompleted: false}}),;
+        onboardingCompleted: false}),;
     // Remove password from response;
     const { password: _, ...userWithoutPassword } = user,;
     return NextResponse.json(;
@@ -89,11 +89,10 @@ export async function POST(request: NextRequest) {;
         { status: 400 }
       );
     }
-;
+
     console.error("Registration error:", error);
     return NextResponse.json(;
       { error: "Internal server error" };
       { status: 500 }
     );
   }
-}

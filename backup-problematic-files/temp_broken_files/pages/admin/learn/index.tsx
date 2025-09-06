@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react',;
-;
+
 export default function AdminLearn() {;
   const [form, setForm] = useState<any>({ id:'', title:'', category:'AI Development', durationMinutes:60, level:'Beginner', isFree:true, certificationBadge:'' }),;
   const [message, setMessage] = useState(''),;
-;
+
   async function saveCourse() {;
     setMessage(''),;
     const resp = await fetch('/api/admin/learn/course', {;
@@ -13,9 +13,9 @@ export default function AdminLearn() {;
     }),;
     const data = await resp.json(),;
     if (data.ok) setMessage('Saved'),;
-    else setMessage('Error:' + (data.error || 'unknown'));
+    else setMessage('Error:' + (data.error || 'unknown');
   }
-;
+
   return (;
     <div className="space-y-4">;
       <h1 className="text-2xl font-semibold">Learning Admin</h1>;
@@ -69,12 +69,12 @@ const AdminLearnPage: React.FC = () => {
       </Head>
       <main className="max-w-6xl mx-auto px-4 py-8">
         <h1 className="text-3xl font-bold mb-6">Learning Center</h1>
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           <div className="lg:col-span-1">
             <div className="bg-white rounded-lg shadow p-6">
               <h2 className="text-xl font-semibold mb-4">Filter Resources</h2>
-              
+
               <div className="space-y-4">
                 <div>
                   <label className="block text-sm font-medium mb-2">Category</label>
@@ -86,10 +86,10 @@ const AdminLearnPage: React.FC = () => {
                     <option value="">All Categories</option>
                     {categories.map(category => (
                       <option key={category} value={category}>{category}</option>
-                    ))}
+                    )}
                   </select>
                 </div>
-                
+
                 <div>
                   <label className="block text-sm font-medium mb-2">Level</label>
                   <select
@@ -100,17 +100,17 @@ const AdminLearnPage: React.FC = () => {
                     <option value="">All Levels</option>
                     {levels.map(level => (
                       <option key={level} value={level}>{level}</option>
-                    ))}
+                    )}
                   </select>
                 </div>
               </div>
             </div>
           </div>
-          
+
           <div className="lg:col-span-2">
             <div className="bg-white rounded-lg shadow p-6">
               <h2 className="text-xl font-semibold mb-4">Learning Resources</h2>
-              
+
               <div className="space-y-4">
                 <div className="border rounded-lg p-4">
                   <h3 className="font-semibold text-lg">Getting Started with AI Development</h3>
@@ -120,7 +120,7 @@ const AdminLearnPage: React.FC = () => {
                     <span className="px-2 py-1 bg-green-100 text-green-800 rounded text-sm">Beginner</span>
                   </div>
                 </div>
-                
+
                 <div className="border rounded-lg p-4">
                   <h3 className="font-semibold text-lg">Advanced Cloud Architecture</h3>
                   <p className="text-gray-600 mb-2">Master cloud architecture patterns and best practices.</p>
@@ -129,7 +129,7 @@ const AdminLearnPage: React.FC = () => {
                     <span className="px-2 py-1 bg-yellow-100 text-yellow-800 rounded text-sm">Advanced</span>
                   </div>
                 </div>
-                
+
                 <div className="border rounded-lg p-4">
                   <h3 className="font-semibold text-lg">Remote Team Management</h3>
                   <p className="text-gray-600 mb-2">Best practices for managing remote development teams.</p>
@@ -145,6 +145,5 @@ const AdminLearnPage: React.FC = () => {
       </main>
     </>
   );
-};
 
 export default AdminLearnPage;

@@ -6,7 +6,7 @@ export type AIAssistantProps = {;
   systemPrompt?: string,;
   onAccept: (markdown: string) => void,;
   authorizationToken?: string;
-},;
+,;
 export default function AIAssistant({;
   buttonLabel = 'Generate with AI',;
   title = 'AI Writing Assistant',;
@@ -20,7 +20,7 @@ export default function AIAssistant({;
   const [loading, setLoading] = useState(false),;
   const [isEditing, setIsEditing] = useState(false),;
   const [error, setError] = useState<string | null>(null),;
-  useEffect(() => {;
+  useEffect() => {;
     setPrompt(defaultPrompt);
   }, [defaultPrompt]),;
   const callOperator = useCallback(async () => {;
@@ -42,30 +42,28 @@ export default function AIAssistant({;
       if (!res.ok) {;
         throw new Error(data?.error || 'Failed to generate');
       }
-      setOutput(String(data.text || '')),;
+      setOutput(String(data.text || ''),;
       setIsEditing(false);
     } catch (e: any) {;
       setError(e.message || 'Request failed');
     } finally {;
       setLoading(false);
-    }
-  }, [authorizationToken, prompt, systemPrompt]),;
+    }, [authorizationToken, prompt, systemPrompt]),;
   const onCopy = useCallback(async () => {;
     try {;
       await navigator.clipboard.writeText(output);
-    } catch {}
-  }, [output]),
+    } catch {}, [output]),
 
-  const onOpen = useCallback(() => {
+  const onOpen = useCallback() => {
     setIsOpen(true),
     setOutput(''),
     setIsEditing(false),
     setError(null)
   }, []),
 
-  const onClose = useCallback(() => setIsOpen(false), []),
+  const onClose = useCallback() => setIsOpen(false), []),
 
-  const canAccept = useMemo(() => (output && output.trim().length > 0), [output]),
+  const canAccept = useMemo() => (output && output.trim().length > 0), [output]),
 
   return (
     <>
@@ -104,10 +102,10 @@ export default function AIAssistant({;
                 <button onClick={callOperator} disabled={loading} className="rounded-md border px-3 py-1.5 text-sm">
                   {loading ? '' : 'Regenerate'}
                 </button>
-                <button onClick={() => setIsEditing((v) => !v)} className="rounded-md border px-3 py-1.5 text-sm">{isEditing ? 'Preview' : 'Edit'}</button>
+                <button onClick={() => setIsEditing(v) => !v)} className="rounded-md border px-3 py-1.5 text-sm">{isEditing ? 'Preview' : 'Edit'}</button>
                 <button onClick={onCopy} disabled={!output} className="rounded-md border px-3 py-1.5 text-sm disabled: opacity-60">Copy</button>
                 <button
-                  onClick={() => { onAccept(output), onClose() }}
+                  onClick={() => { onAccept(output), onClose() }
                   disabled={!canAccept}
                   className="ml-auto rounded-md bg-green-600 text-white px-3 py-1.5 text-sm disabled:opacity-60"
                 >
@@ -131,14 +129,14 @@ export default function AIAssistant({;
                 ) : (
                   <pre className="w-full rounded-md border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-3 text-sm whitespace-pre-wrap">{output || 'No content yet. Click Generate.'}</pre>
   }, [output]),;
-  const onOpen = useCallback(() => {;
+  const onOpen = useCallback() => {;
     setIsOpen(true),;
     setOutput(''),;
     setIsEditing(false),;
     setError(null);
   }, []),;
-  const onClose = useCallback(() => setIsOpen(false), []);
-  const canAccept = useMemo(() => (output && output.trim().length > 0), [output]);
+  const onClose = useCallback() => setIsOpen(false), []);
+  const canAccept = useMemo() => (output && output.trim().length > 0), [output]);
   return (;
     <>;
       <button;
@@ -173,10 +171,10 @@ export default function AIAssistant({;
                 <button onClick={callOperator} disabled={loading} className="rounded-md border px-3 py-1.5 text-sm">;
                   {loading ? '' : 'Regenerate'}
                 </button>;
-                <button onClick={() => setIsEditing((v) => !v)} className="rounded-md border px-3 py-1.5 text-sm">{isEditing ? 'Preview' : 'Edit'}</button>;
+                <button onClick={() => setIsEditing(v) => !v)} className="rounded-md border px-3 py-1.5 text-sm">{isEditing ? 'Preview' : 'Edit'}</button>;
                 <button onClick={onCopy} disabled={!output} className="rounded-md border px-3 py-1.5 text-sm disabled: opacity-60">Copy</button>;
                 <button;
-                  onClick={() => { onAccept(output), onClose() }}
+                  onClick={() => { onAccept(output), onClose() }
                   disabled={!canAccept}
                   className="ml-auto rounded-md bg-green-600 text-white px-3 py-1.5 text-sm disabled:opacity-60";
                 >;
@@ -186,7 +184,7 @@ export default function AIAssistant({;
               {error && (;
                 <div className="text-red-600 text-sm">{error}</div>;
               )}
-;
+
               <div>;
                 <label className="block text-xs font-medium mb-1">Output (markdown)</label>;
                 {isEditing ? (;
@@ -206,4 +204,3 @@ export default function AIAssistant({;
       )}
     </>;
   );
-}

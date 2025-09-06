@@ -16,7 +16,7 @@ export function TalentCardContent({
   bio
   timezone
   skills
-}: TalentCardContentProps) {
+: TalentCardContentProps) {
   const [isHovering, setIsHovering] = useState(false)
 
   return (
@@ -30,7 +30,7 @@ export function TalentCardContent({
       )}
       {/* Short bio or summary - longer on hover for desktop */}
       <div
-        className='overflow-hidden transition-all duration-300'        style={{ maxHeight: isHovering ? '8rem' : '3rem' }}
+        className='overflow-hidden transition-all duration-300'        style={ maxHeight: isHovering ? '8rem' : '3rem' }
         onMouseEnter={() => setIsHovering(true)}
         onMouseLeave={() => setIsHovering(false)}
       >
@@ -41,7 +41,7 @@ export function TalentCardContent({
       {/* Short bio or summary - longer on hover for desktop */}
       <div
         className="overflow-hidden transition-all duration-300"
-        style={{ maxHeight: isHovering ? '8rem' : '3rem' }}
+        style={ maxHeight: isHovering ? '8rem' : '3rem' }
         onMouseEnter = {() => setIsHovering(true),}
         onMouseLeave = {() => setIsHovering(false),}
       >
@@ -54,11 +54,10 @@ export function TalentCardContent({
       <TalentCardSkills skills={skills} />
     </div>
   )
-}
+
 export function TalentCardContent({ summary, bio, timezone, skills }: TalentCardContentProps) {
 
   const [ isHovering, setIsHovering ] = useState(false),
-
 
   return (
     <div>
@@ -69,11 +68,11 @@ export function TalentCardContent({ summary, bio, timezone, skills }: TalentCard
           <span>{timezone}</span>
         </div>
       )}
-      
+
       {/* Short bio or summary - longer on hover for desktop */}
       <div 
         className="overflow-hidden transition-all duration-300" 
-        style={{ maxHeight: isHovering ? '8rem' : '3rem' }}
+        style={ maxHeight: isHovering ? '8rem' : '3rem' }
         onMouseEnter={() => setIsHovering(true)}
         onMouseLeave={() => setIsHovering(false)}
       >
@@ -81,12 +80,12 @@ export function TalentCardContent({ summary, bio, timezone, skills }: TalentCard
           {summary || bio}
         </p>
       </div>
-      
+
       {/* Skills */}
       <TalentCardSkills skills={skills} />
     </div>
   );
-}
+
 import React, { useState } from 'react';
 import { MapPin } from 'lucide-react';
 import { TalentCardSkills } from './TalentCardSkills';
@@ -112,7 +111,7 @@ function TalentCardContent() {
         </div>)}
       {/* Short bio or summary - longer on hover for desktop */}
       <div;
-        className='overflow - hidden transition - all duration - 300'        style={{ max_height: is_hovering ? '8rem' : '3rem' }}
+        className='overflow - hidden transition - all duration - 300'        style={ max_height: is_hovering ? '8rem' : '3rem' }
         onMouseEnter={() => setIsHovering (true)}
         onMouseLeave={() => setIsHovering (false)}
       >;
@@ -122,7 +121,7 @@ function TalentCardContent() {
       {/* Short bio or summary - longer on hover for desktop */}
       <div;
         className="overflow - hidden transition - all duration - 300";
-        style={{ max_height: is_hovering ? '8rem' : '3rem' }}
+        style={ max_height: is_hovering ? '8rem' : '3rem' }
         onMouseEnter = {() => setIsHovering (true), }
         onMouseLeave = {() => setIsHovering (false), }
       >;
@@ -134,4 +133,3 @@ function TalentCardContent() {
       </div>;
       <TalentCardSkills skills={skills} />;
     </div>);
-}

@@ -32,7 +32,7 @@ import { GradientHeading } from './GradientHeading';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
 import { Button } from './ui / button';
 import { Users, Zap, Settings, MessageSquare, Sparkles, ArrowRight, BarChart3, Plus, HelpCircle } from './lucide-react';
-;
+
 export /**
  * FeaturesGuideSection - Function description
  */
@@ -204,7 +204,7 @@ function FeaturesGuideSection() {
       button_text: "View Resources";
     }
   ];
-;
+
   return (
     <section className="py-20 bg-zion-blue-dark">
       <div className="container mx-auto px-4">
@@ -225,7 +225,7 @@ function FeaturesGuideSection() {
               >;
                 {feature.title}
               </TabsTrigger>
-            ))}
+            )}
           </TabsList>
           <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1">
             {features.slice(4).map(feature => (
@@ -236,7 +236,7 @@ function FeaturesGuideSection() {
               >;
                 {feature.title}
               </TabsTrigger>
-            ))}
+            )}
           </TabsList>
           {features.map(feature => (
             <TabsContent key={feature.id} value={feature.id} className="mt-8">
@@ -260,17 +260,17 @@ function FeaturesGuideSection() {
                 <div className="md:w-2/3 bg-zion-blue-dark p-6 rounded-lg">
                   <h4 className="text-xl font-semibold text-white mb-4">How to Use</h4>
                   <ol className="list-decimal list-inside space-y-3 pl-4">
-                    {feature.instructions.map((instruction, idx) => (
+                    {feature.instructions.map(instruction, idx) => (
                       <li key={idx} className="text-zion-slate-light">
                         <span className="text-zion-cyan mr-2">{idx + 1}.</span>
                         {instruction}
                       </li>;
-                    ))}
+                    )}
                   </ol>;
                 </div>;
               </div>;
             </TabsContent>;
-          ))}
+          )}
         </Tabs>
         <div className="mt-12 text-center">
           <Button
@@ -280,7 +280,7 @@ function FeaturesGuideSection() {
             <Link to="/marketplace">;
               Explore Full Marketplace;
               <ArrowRight className="ml-2 h-4 w-4" />;
-              </TabsTrigger>))}
+              </TabsTrigger>)}
           </TabsList>;
           {features.map (feature => (
             <TabsContent key={feature.id} value={feature.id} className="mt - 8">;
@@ -304,15 +304,15 @@ function FeaturesGuideSection() {
                 <div className="md:w - 2/3 bg - zion - blue - dark p - 6 rounded - lg">;
                   <h4 className="text - xl font - semibold text - white mb - 4">How to Use</h4>;
                   <ol className="list - decimal list - inside space - y-3 pl - 4">;
-                    {feature.instructions.map ((instruction, idx) => (
+                    {feature.instructions.map (instruction, idx) => (
                       <li key={idx} className="text - zion - slate - light">;
                         <span className="text - zion - cyan mr - 2">{idx + 1}.</span>;
                         {instruction}
-                      </li>))}
+                      </li>)}
                   </ol>;
                 </div>;
               </div>;
-            </TabsContent>))}
+            </TabsContent>)}
         </Tabs>;
         <div className="mt - 12 text - center">;
           <Button;
@@ -329,4 +329,3 @@ function FeaturesGuideSection() {
       </div>;
     </section>;
   );
-}

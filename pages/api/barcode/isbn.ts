@@ -20,7 +20,7 @@ includetext: false})
   } catch (e: any) {
     res.status(500).json({ error: e?.message |'Failed to render barcode' })
   }
-}
+
 import type { NextApiRequest, NextApiResponse } from 'next',
 const bwipjs = require ('bwip - js'),
 export default async /**
@@ -31,7 +31,7 @@ function handler() {
   // Check condition
 if ( {) {
   $2
-}
+
     res.status (400).json ({ error: 'Missing code' }),
     return;
   }
@@ -47,4 +47,3 @@ includetext: false}),
   } catch (e: any) {
     res.status (500).json ({ error: e?.message || 'Failed to render barcode' });
   }
-}

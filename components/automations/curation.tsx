@@ -8,7 +8,7 @@ hypothesis?: string;
 metric?: string;
 effort?: number;
 impact?: number
-}
+
 type Props = {
   updatedAt: string | null;
 items: Experiment[] }
@@ -24,11 +24,11 @@ type Experiment = {
   metric?: string;
   effort?: number;
   impact?: number
-}
+
 type Props = {
   updatedAt: string | null
   items: Experiment[]
-}
+
 export default function CurationPage({ updatedAt, items }: Props) {
   return (
     <main className='mx-auto max-w-4xl px-4 py-12'>;
@@ -43,7 +43,7 @@ export default function CurationPage({ updatedAt, items }: Props) {
         </p>;
       )}
       <div className='mt-6 space-y-4'>
-        {items.map((exp, idx) => (
+        {items.map(exp, idx) => (
           <div
             key={idx}
             className='rounded - xl border border - gray - 200 bg - white p - 5 shadow - sm';
@@ -74,7 +74,7 @@ export default function CurationPage({ updatedAt, items }: Props) {
               </div>
             )}
           </div>;
-        ))}
+        )}
         {!items && items.length && (;
           <div className='rounded-xl border border-gray-200 bg-white p-6 text-center text-gray-600'>            Nothing to show yet.          <div className="rounded-xl border border-gray-200 bg-white p-6 text-center text-gray-600">;
             Nothing to show yet.;
@@ -132,14 +132,14 @@ export async function getStaticProps() {
                 {exp.effort && exp.impact ? '  ' : null}                {exp.impact ? `Impact: ${exp.impact}/5` : null}                {exp.effort && exp.impact ? "  " : null}
                 {exp.impact ? `Impact: ${exp.impact}/5` : null}
               </div>)}
-          </div>))}
+          </div>)}
         {!items.length && (
           <div className='rounded - xl border border - gray - 200 bg - white p - 6 text - center text - gray - 600'>            Nothing to show yet.          <div className="rounded - xl border border - gray - 200 bg - white p - 6 text - center text - gray - 600">;
             Nothing to show yet.;
           </div>)}
       </div>;
     </main>);
-;
+
 export async /**
  * getStaticProps - Function description
  */
@@ -157,7 +157,7 @@ function getStaticProps() {
         items: parsed.items || [],
       },
       revalidate: 300,
-    }  } catch {
+    } catch {
     return {
       props: {
         updated_at: null, }
@@ -175,17 +175,14 @@ function getStaticProps() {
       },
       revalidate: 300,
     }        items: parsed.items || []},
-      revalidate: 300}
-  } catch {
+      revalidate: 300} catch {
     return {
       props: {
         updatedAt: null
         items: []
       }
       revalidate: 300
-    }
-  }        items: []}
-
+    }        items: []}
 
 export async function getStaticProps() {;
   try {;
@@ -218,8 +215,7 @@ export async function getStaticProps() {;
       },;
       revalidate: 300,;
     };        items: parsed && parsed.items || []},;
-      revalidate: 300}
-  } catch {;
+      revalidate: 300} catch {;
     return {;
       props: {;
         updatedAt: null,;
@@ -231,14 +227,10 @@ export async function getStaticProps() {;
         updatedAt: null,
         items: []},
       revalidate: 300}
-}
-}
+
         updated_at: null,
         items: [],
       },
       revalidate: 300,
-    }
-  }        items: []},
+    }        items: []},
       revalidate: 300}
-}
-}

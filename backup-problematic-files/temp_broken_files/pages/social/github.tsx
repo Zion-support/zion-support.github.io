@@ -1,12 +1,11 @@
 import React, { useEffect } from 'react',;
 import Head from 'next/head',;
-;
+
 export default function GitHubRedirect() {;
-	useEffect(() => {;
-		if (typeof window !== 'undefined') {;
+	useEffect() => {;
+		if (typeof window != 'undefined') {;
 			window.location.replace('https://github.com/Zion-Holdings');
-		}
-	}, []),;
+		}, []),;
 	return (;
 		<>;
 			<Head>;
@@ -22,4 +21,3 @@ export default function GitHubRedirect() {;
 			</div>;
 		</>;
 	); return (<> <Head> <title>GitHub | Zion Tech Group</title> Continue to GitHub </Link> </div> </>) 
-}

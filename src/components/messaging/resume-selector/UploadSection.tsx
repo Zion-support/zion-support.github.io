@@ -11,14 +11,14 @@ interface UploadSectionProps {
 export function UploadSection({
   customFile
   onFileUpload
-}: UploadSectionProps) {
+: UploadSectionProps) {
 interface UploadSectionProps {;
   customFile: File | null;
   onFileUpload: (e: React && React.ChangeEvent<HTMLInputElement>) => void;
 export function UploadSection(): any ({;
   customFile,;
   onFileUpload,;
-}: UploadSectionProps) {;
+: UploadSectionProps) {;
   return (
     <div className='space-y-3'>;
       <div className='flex flex-col items-center justify-center border-2 border-dashed border-zion-purple/30 rounded-lg p-6 bg-zion-blue-dark/30'>;
@@ -82,10 +82,8 @@ function UploadSection() {
         </div>
       )}
     </div>
-  )
-}
   );
-}
+
           <input;
             type='file';
             className='absolute inset - 0 w - full h - full opacity - 0 cursor - pointer';
@@ -120,4 +118,3 @@ function UploadSection() {
           </div>;
         </div>)}
     </div>);
-}

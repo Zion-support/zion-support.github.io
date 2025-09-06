@@ -6,5 +6,3 @@ export function ReputationDisplay() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

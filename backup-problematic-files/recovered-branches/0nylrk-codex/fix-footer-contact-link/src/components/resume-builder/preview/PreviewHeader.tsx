@@ -5,18 +5,17 @@ import { PdfExportButton } from '../PdfExportButton',;
 import { Resume } from '@/types/resume',;
 import { useState } from 'react',;
 import { useIsMobile } from '@/hooks/use-mobile',;
-;
+
 interface PreviewHeaderProps {;
   resume:Resume,;
   onBack:() => void;}
-;
+
 export function PreviewHeader({ resume, onBack } PreviewHeaderProps) {;
   const [isPrinting, setIsPrinting] = useState(false),;
   const isMobile = useIsMobile(),;
-;
+
   const handleBrowserPrint = () => {;
     setIsPrinting(true),;
-    ;
     // Inject print-specific CSS only for the duration of printing;
     const style = document.createElement('style'),;
     style.innerHTML = `;
@@ -36,20 +35,17 @@ export function PreviewHeader({ resume, onBack } PreviewHeaderProps) {;
         .no-print {;
           display:none !important;
         }
-      }
     `,;
     document.head.appendChild(style),;
-    ;
     // Trigger print dialog;
     window.print(),;
-    ;
     // Remove the temporary style element after printing;
-    setTimeout(() => {;
+    setTimeout() => {;
       document.head.removeChild(style),;
       setIsPrinting(false),;
     }, 1000),;
   },;
-;
+
   return (;
     <div className={`flex ${isMobile ? 'flex-col' :'justify-between'} items-${isMobile ? 'stretch' :'center'} gap-3`}>;
       <Button ;
@@ -60,10 +56,8 @@ export function PreviewHeader({ resume, onBack } PreviewHeaderProps) {;
         <ArrowLeft className="h-4 w-4" />;
         Back;
       </Button>;
-      ;
       <div className={`flex ${isMobile ? 'flex-col' :'flex-row'} space-${isMobile ? 'y-2' :'x-2'} no-print`}>;
         <PdfExportButton resume={resume} />;
-        ;
         <Button ;
           variant="outline" ;
           onClick={handleBrowserPrint} ;
@@ -73,7 +67,6 @@ export function PreviewHeader({ resume, onBack } PreviewHeaderProps) {;
           <FileText className="h-4 w-4" />;
           Print;
         </Button>;
-        ;
         <Button variant="outline" className="gap-2">;
           <Link className="h-4 w-4" />;
           Add to Profile;
@@ -81,23 +74,22 @@ export function PreviewHeader({ resume, onBack } PreviewHeaderProps) {;
       </div>;
     </div>;
   ),;}
- 
-}`;
+
+`;
 document.head.appendChild (style);
-//Trigger print dialog window.print ();
-//Remove the temporary style element after printing return (<div className= {
+/Trigger print dialog window.print ();
+/Remove the temporary style element after printing return (<div className= {
   `flex $ {
   isMobile ? 'flex-col' : 'justify-between' 
-}items-$ {
+items-$ {
   isMobile ? 'stretch' : 'center' 
-}gap-3` 
-}> <Button > <ArrowLeft className="h-4 w-4" /> Back </Button> <div className= {
+gap-3` 
+> <Button > <ArrowLeft className="h-4 w-4" /> Back </Button> <div className= {
   `flex $ {
   isMobile ? 'flex-col' : 'flex-row' 
-}space-$ {
+space-$ {
   isMobile ? 'y-2' : 'x-2' 
-}no-print` 
-}> <PdfExportButton resume= {
+no-print` 
+> <PdfExportButton resume= {
   resume 
-}/> <Button > <FileText className="h-4 w-4" /> Print </Button> <Button variant="outline" className="gap-2" > <Link className="h-4 w-4" /> Add to Profile </Button> </div> </div>) 
-}
+/> <Button > <FileText className="h-4 w-4" /> Print </Button> <Button variant="outline" className="gap-2" > <Link className="h-4 w-4" /> Add to Profile </Button> </div> </div>) 

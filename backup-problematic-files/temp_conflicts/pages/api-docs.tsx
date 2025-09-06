@@ -5,14 +5,14 @@ import { ;
   Brain, Rocket, Globe, ArrowRight, Copy, Check,;
   Download, Bookmark, Share2, Clock, User, Tag,;
   Zap, Lock, Globe2, Cpu;
-} from 'lucide-react',;
+ from 'lucide-react',;
 import Link from 'next/link',;
-;
+
 const APIDocs:React.FC = () => {;
   const [searchQuery, setSearchQuery] = useState(''),;
   const [selectedAPI, setSelectedAPI] = useState('all'),;
   const [copiedEndpoint, setCopiedEndpoint] = useState(''),;
-;
+
   const apiCategories = [;
     { id:'all', name:'All APIs', icon:<Code className="w-4 h-4" /> },;
     { id:'ai', name:'AI & ML', icon:<Brain className="w-4 h-4" /> },;
@@ -21,7 +21,7 @@ const APIDocs:React.FC = () => {;
     { id:'metaverse', name:'Metaverse', icon:<Globe className="w-4 h-4" /> },;
     { id:'security', name:'Security', icon:<Shield className="w-4 h-4" /> }
   ],;
-;
+
   const apis = [;
     {;
       name:'AI Consciousness Platform',;
@@ -104,7 +104,7 @@ const APIDocs:React.FC = () => {;
       color:'from-yellow-500 to-orange-500';
     }
   ],;
-;
+
   const authenticationMethods = [;
     {;
       name:'API Key',;
@@ -125,7 +125,7 @@ const APIDocs:React.FC = () => {;
       security:'High';
     }
   ],;
-;
+
   const rateLimits = [;
     {;
       tier:'Free',;
@@ -146,24 +146,22 @@ const APIDocs:React.FC = () => {;
       description:'High-volume enterprise applications';
     }
   ],;
-;
+
   const codeExamples = [;
     {;
       language:'Python',;
       title:'AI Consciousness Analysis',;
       code:`import requests;
-;
+
 url = "https://api.ziontechgroup.com/ai/v2/consciousness/analyze";
 headers = {;
     "Authorization":"Bearer YOUR_API_KEY",;
     "Content-Type":"application/json";
-}
-;
+
 data = {;
     "model_id":"gpt-4",;
     "text":"Hello, how are you today?";
-}
-;
+
 response = requests.post(url, json=data, headers=headers);
 result = response.json();
 print(f"Consciousness Level:{result['consciousness_score']}")`;
@@ -172,18 +170,18 @@ print(f"Consciousness Level:{result['consciousness_score']}")`;
       language:'JavaScript',;
       title:'Quantum Circuit Execution',;
       code:`const axios = require('axios'),;
-;
+
 const url = 'https://api.ziontechgroup.com/quantum/v1/circuit/execute',;
 const headers = {;
     'Authorization':'Bearer YOUR_API_KEYContent-Type':'application/json';
-},;
-;
+,;
+
 const data = {;
     qubits:2,;
     gates:['HCNOT', 'H'],;
     measurements:[0, 1];
-},;
-;
+,;
+
 axios.post(url, data, { headers });
     .then(response => {;
         // // // console.log('Result:', response.data.result),;
@@ -208,18 +206,18 @@ axios.post(url, data, { headers });
   }'`;
     }
   ],;
-;
+
   const filteredAPIs = apis.filter(api => {;
-    if (selectedAPI === 'all') return true,;
-    return api.category === selectedAPI,;
+    if (selectedAPI = = 'all') return true,;
+    return api.category = = selectedAPI,;
   }),;
-;
+
   const copyToClipboard = (text:string) => {;
     navigator.clipboard.writeText(text),;
     setCopiedEndpoint(text),;
-    setTimeout(() => setCopiedEndpoint(''), 2000),;
+    setTimeout() => setCopiedEndpoint(''), 2000),;
   },;
-;
+
 export default function ApiDocs() {;
 	return (;
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
@@ -233,4 +231,3 @@ export default function ApiDocs() {;
 			</div>;
 		</div>;
 	);
-}

@@ -14,15 +14,15 @@ interface DnDLocation {
   droppableId: string
 
   index: number
-}
+
 interface DropResult {
 
   draggableId: string
   source: DnDLocation
 
   destination?: DnDLocation | null
-}
-// Define the kanban board columns based on application statuses
+
+/ Define the kanban board columns based on application statuses
 
 const COLUMNS = [
   {
@@ -47,33 +47,32 @@ const COLUMNS = [
     description: "Not moving forward"}]
 interface KanbanBoardProps {
   jobId?: string
-}
+
 export function KanbanBoard({ jobId }: KanbanBoardProps) {
   const { applications, isLoading, updateApplicationStatus } = useJobApplications(jobId);
-  const [columns, setColumns] = useState<Record<string, JobApplication[]>>({});
+  const [columns, setColumns] = useState<Record<string, JobApplication[]>({});
   const isMobile = useIsMobile();
   // Initialize columns with applications based on their status
-  useEffect(() => {
+  useEffect() => {
     if (applications) {
       // Group applications by status
-      const groupedApplications = COLUMNS.reduce((acc, column) => {
-        acc[column.id] = applications.filter(app => app.status === column.id);
+      const groupedApplications = COLUMNS.reduce(acc, column) => {
+        acc[column.id] = applications.filter(app => app.status = = column.id);
         return acc
       }, {} as Record<string, JobApplication[]>);
       setColumns(groupedApplications)
-    }
-  }, [applications]);
+    }, [applications]);
   // Handle drag end event to update the application status
   const handleDragEnd = async (result: DropResult) => {
     const { destination, source, draggableId } = result;
     // If there's no destination or the item is dropped in the same place, do nothing
     if (!destination |
-        (destination.droppableId === source.droppableId &&
-         destination.index === source.index)) {
+        (destination.droppableId = = source.droppableId &&
+         destination.index = = source.index) {
       return
     }
     // Get the application that was dragged
-    const application = applications.find(app => app.id === draggableId);
+    const application = applications.find(app => app.id = = draggableId);
     if (!application) return;
     // Update the application status in the database
     const newStatus = destination.droppableId as ApplicationStatus;
@@ -91,7 +90,7 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {
       await updateApplicationStatus(draggableId, newStatus);
       toast({
         title: "Status updated"
-        description: `Candidate moved to ${COLUMNS.find(col => col.id === newStatus)?.title}`})
+        description: `Candidate moved to ${COLUMNS.find(col => col.id = = newStatus)?.title}`})
     } catch (error) {
       // Revert the UI changes if the database update fails
       toast({
@@ -99,12 +98,11 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {
         description: "Please try again"
         variant: "destructive"})
     }
-  }
 
   if (isLoading) {
     return (
       <div className={`grid grid-cols-1 ${!isMobile ? 'md:grid-cols-3 lg:grid-cols-5' : ''} gap-4`}>;
-        {Array && Array.from({ length: isMobile ? 1 : 5 }).map((_, i) => (;
+        {Array && Array.from({ length: isMobile ? 1 : 5 }).map(_, i) => (;
           <Card key={i} className="h-[500px]">;
             <CardHeader>;
               <Skeleton className="h-8 w-24" />;
@@ -113,11 +111,11 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {
               <Skeleton className="h-[400px] w-full" />;
             </CardContent>;
           </Card>;
-        ))}
+        )}
       </div>;
     );
   }
-  if (!applications |applications.length === 0) {
+  if (!applications |applications.length = = 0) {
     return (
       <Card className="text-center py-16">;
         <CardContent>;
@@ -141,14 +139,13 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {
             applications={columns[column.id] |[]}
             count={columns[column.id]?.length |0}
           />
-        ))}
+        )}
       </div>
     </DragDropContext>
   )
-}
+
             applications={columns[column.id] || []}
             count={columns[column.id]?.length || 0}
-          />))}
+          />)}
       </div>;
     </DragDropContext>);
-}

@@ -24,7 +24,7 @@ export default function AIEthicsGovernanceFramework() {
 			canonical="https: //ziontechgroup.com/ai-ethics-governance-framework"
 		/>
 	)
-}
+
 import React from 'react',
 import ServiceLanding from '../components / sections / ServiceLanding',
 export default /**
@@ -51,4 +51,3 @@ return (
     industries={["Finance", "Healthcare", "Public Sector", "SaaS"]}
     canonical="https: //ziontechgroup.com / ai - ethics - governance - framework";
   />);
-}

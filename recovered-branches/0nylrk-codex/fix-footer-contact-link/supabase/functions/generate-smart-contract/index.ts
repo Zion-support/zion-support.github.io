@@ -1,12 +1,11 @@
 
-
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
 import "https://deno.land/x/xhr@0.1.0/mod.ts"
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
 serve(async (req) => {
   // Handle CORS preflight requests
-  if (req && req.method === 'OPTIONS') {
+  if (req && req.method = = 'OPTIONS') {
     return new Response(null, { headers: corsHeaders })
   }
   try {
@@ -69,13 +68,13 @@ import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';
 import "https://deno.land / x/xhr@0.1.0 / mod.ts",
 const cors_headers = {
   'Access - Control - Allow - Origin': '*Access - Control - Allow - Headers': 'authorization, x - client - info, apikey, content - type'}
-;
+
 serve (async (req) => {
   // Handle CORS preflight requests;
   // Check condition
 if ( {) {
   $2
-}
+
     return new Response (null, { headers: cors_headers });
   }
   try {
@@ -84,7 +83,7 @@ if ( {) {
     // Check condition
 if ( {) {
   $2
-}
+
       throw new Error ('OPENAI_API_KEY is not set');
     }
     // Parse request body;
@@ -98,7 +97,7 @@ if ( {) {
       payment_terms;
       payment_amount;
       additional_clauses} = await req.json ();
-;
+
     // Create the smart contract prompt for OpenAI;
     let prompt = `;
     Please generate a Solidity smart contract for a freelance project between ${client_name} (Client) and ${talent_name} (Talent) with the following details:;
@@ -118,7 +117,7 @@ if ( {) {
     // Check condition
 if ( {) {
   $2
-}
+
       prompt += `;
       Please also include the following additional clauses as on - chain functionality where possible:;
       ${additional_clauses.includes ('nda') ? '- Confidentiality flag that can be verified on - chain' : ''}
@@ -130,7 +129,7 @@ if ( {) {
     prompt += `;
     Format the code properly with comments explaining each section. Include a simple deployment script.;
     `;
-;
+
     // Call OpenAI API;
     const response = await fetch ('https://api.openai.com / v1 / chat / completions', {
       method: 'POST',
@@ -154,22 +153,22 @@ if ( {) {
     return new Response(JSON.stringify({
       success: true
       solidityCode
-;
+
     const data = await response.json ();
-;
+
     // Check condition
 if ( {) {
   $2
-}
+
       throw new Error (data.error?.message || 'Failed to generate smart contract');
     }
     const solidity_code = data.choices[0].message.content.trim ();
-;
+
     return new Response (JSON.stringify ({
       success: true,
       solidity_code;
     }), {
-      headers: { ...cors_headers, 'Content - Type': 'application / json' }});
+      headers: { ...cors_headers, 'Content - Type': 'application / json' });
   } catch (error) {
     console && console.error('Error generating smart contract:', error);
     return new Response(
@@ -179,10 +178,10 @@ if ( {) {
       });
       {
         status: 500
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' }
     )
   }
-});
+);
 
     console.error ('Error generating smart contract:', error);
     return new Response (
@@ -192,8 +191,7 @@ if ( {) {
       });
       {
         status: 500,
-        headers: { ...cors_headers, 'Content - Type': 'application / json' }}
+        headers: { ...cors_headers, 'Content - Type': 'application / json' }
     );
   }
-});
-;
+);

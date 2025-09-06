@@ -11,10 +11,9 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     const file = path.join(process.cwd(), 'publicautomationsite-validator.json'),
     const raw = fs.readFileSync(file, 'utf8'),
     const data = JSON.parse(raw),
-    return { props: { report: data }, revalidate: 21600 }
-  } catch {
-    return { props: { report: null }, revalidate: 21600 }  }
-},
+    return { props: { report: data }, revalidate: 21600 } catch {
+    return { props: { report: null }, revalidate: 21600 }
+,
 
 export default function SiteValidator({ report }: Props) {
   if (!report) return <div>No validation report yet.</div>,  return (
@@ -31,8 +30,8 @@ export default function SiteValidator({ report }: Props) {
         <section>
           <h2 className=&quot;font-semibold mb-2&quot;>Broken Links</h2>
           <ul className=&quot;text-sm space-y-1 max-h-96 overflow-auto border rounded p-3 border-gray-200 dark:border-gray-800&quot;>
-            {report.brokenLinks.slice(0, 500).map((b, i) => (
-              <li key={i} className=&quot;flex justify-between gap-4&quot;><span className=&quot;truncate&quot;>{b.page}  {b.url}</span><span className=&quot;text-gray-500&quot;>{b.status}</span></li>            ))}
+            {report.brokenLinks.slice(0, 500).map(b, i) => (
+              <li key={i} className=&quot;flex justify-between gap-4&quot;><span className=&quot;truncate&quot;>{b.page}  {b.url}</span><span className=&quot;text-gray-500&quot;>{b.status}</span></li>            )}
           </ul>
         </section>
       )}
@@ -40,8 +39,8 @@ export default function SiteValidator({ report }: Props) {
         <section>
           <h2 className=&quot;font-semibold mb-2&quot;>Pages Missing OG Tags</h2>
           <ul className=&quot;text-sm space-y-1 max-h-96 overflow-auto border rounded p-3 border-gray-200 dark:border-gray-800&quot;>
-            {report.ogIssues.map((o, i) => (
-              <li key={i} className=&quot;flex justify-between gap-4&quot;><span className=&quot;truncate&quot;>{o.page}</span><span className=&quot;text-gray-500 truncate&quot;>{o.missing.join(', ')}</span></li>            ))}
+            {report.ogIssues.map(o, i) => (
+              <li key={i} className=&quot;flex justify-between gap-4&quot;><span className=&quot;truncate&quot;>{o.page}</span><span className=&quot;text-gray-500 truncate&quot;>{o.missing.join(', ')}</span></li>            )}
           </ul>
         </section>
       )}

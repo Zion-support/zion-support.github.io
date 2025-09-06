@@ -1,7 +1,7 @@
 import React from 'react',;
 import Head from 'next/head',;
 import Button from '../components/ui/Button',;
-;
+
 export default function AIAssistantPage() {;
   return (;
     <>;
@@ -21,9 +21,9 @@ export default function AIAssistantPage() {;
               'Research and summarize documents and web sourcesDraft emails, posts, briefs, and reports',;
               'Auto-schedule meetings and follow-upsIntegrations:Gmail, Google Drive, Slack, Calendar',;
               'Team approvals and audit trailStarting at $99/mo';
-            ].map((f) => (;
+            ].map(f) => (;
               <div key={f} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 text-gray-200">{f}</div>;
-            ))}
+            )}
           </section>;
           <div className="text-center">;
             <Button href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">Request a Demo</Button>;
@@ -109,6 +109,5 @@ const AIAssistant: React.FC = () => {
       </main>
     </Layout>
   );
-};
 
 export default AIAssistant;

@@ -17,9 +17,9 @@ export default function CloudflareWorkersEdgeConfigPage() {
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">Cloudflare Workers Edge Config</h1>
           <p className="text-slate-300">Managed configuration for Workers/KV: environments, approvals, previews, rollbacks, and audit logs for edge apps.</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {[ 'Versioned config with approvalsPreview links & automatic rollbacksAudit logs & drift detectionMulti-env & secret management' ].map((f) => (
+            {[ 'Versioned config with approvalsPreview links & automatic rollbacksAudit logs & drift detectionMulti-env & secret management' ].map(f) => (
               <div key={f} className="p-4 rounded-xl bg-black/40 border border-indigo-500/30 text-slate-200">{f}</div>
-            ))}
+            )}
           </div>
           <div className="flex gap-3">
             <a href="/contact" className="px-6 py-3 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-700 text-white">Start from $99/mo</a>
@@ -29,7 +29,7 @@ export default function CloudflareWorkersEdgeConfigPage() {
       </div>
     </Layout>
   )
-}
+
 import React from 'react',
 import Head from 'next / head',
 import Layout from '../components / layout / Layout',
@@ -49,8 +49,8 @@ function CloudflareWorkersEdgeConfigPage() {
           <h1 className="text - 4xl md:text - 6xl font - bold bg - gradient - to - r from - indigo - 400 to - purple - 500 bg - clip - text text - transparent">Cloudflare Workers Edge Config</h1>;
           <p className="text - slate - 300">Managed configuration for Workers / KV: environments, approvals, previews, rollbacks, and audit logs for edge apps.</p>;
           <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
-            {[ 'Versioned config with approvals_preview links & automatic rollbacks_audit logs & drift detection_multi - env & secret management' ].map ((f) => (
-              <div key={f} className="p - 4 rounded - xl bg - black / 40 border border - indigo - 500 / 30 text - slate - 200">{f}</div>))}
+            {[ 'Versioned config with approvals_preview links & automatic rollbacks_audit logs & drift detection_multi - env & secret management' ].map (f) => (
+              <div key={f} className="p - 4 rounded - xl bg - black / 40 border border - indigo - 500 / 30 text - slate - 200">{f}</div>)}
           </div>;
           <div className="flex gap - 3">;
             <a href="/contact" className="px - 6 py - 3 rounded - xl bg - gradient - to - r from - indigo - 600 to - purple - 700 text - white">Start from $99 / mo</a>;
@@ -59,4 +59,3 @@ function CloudflareWorkersEdgeConfigPage() {
         </div>;
       </div>;
     </Layout>);
-}

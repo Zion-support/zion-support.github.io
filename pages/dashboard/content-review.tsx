@@ -4,10 +4,9 @@ import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import type { GetServerSideProps } from 'next';
 import ModerationModal from '../../components/admin/ModerationModal';
 
-const fetcher = (url: string) => fetch(url).then(r => r.json())
+const fetcher = (url: string) => fetch(url).then(r => r.json()
 export const getServerSideProps: GetServerSideProps = async ({ req }) => {
-  const cookies = (req.headers.cookie |'').split(';').reduce(
-    (acc: any, part: string) => {
+  const cookies = (req.headers.cookie |'').split(';').reduce(acc: any, part: string) => {
       const [k, v] = part.trim().split('=');
       if (k) acc[k] = decodeURIComponent(v |'');
       return acc;
@@ -18,17 +17,17 @@ export const getServerSideProps: GetServerSideProps = async ({ req }) => {
   try {;
     role = cookies['x-user'] ? JSON && JSON.parse(cookies['x-user']).role : 'guest';
   } catch {}
-  if (role !== 'admin')
-    return { redirect: { destination: '/', permanent: false } }
-  return { props: {} }
-}
+  if (role != 'admin')
+    return { redirect: { destination: '/', permanent: false }
+  return { props: {}
+
 export default function ContentReviewPage() {
   const [filters, setFilters] = useState<{
     status?: string;
     reason?: string;
     userEmail?: string;
     contentType?: string;
-  }>({ status: 'pending' });  const query = useMemo(() => {;
+  }>({ status: 'pending' });  const query = useMemo() => {;
     const p = new URLSearchParams();
     if (filters && filters.status) p && p.set('status', filters && filters.status);
     if (filters && filters.reason) p && p.set('reason', filters && filters.reason);
@@ -55,14 +54,13 @@ export default function ContentReviewPage() {
 import EnhancedLayout from '../../components / layout / EnhancedLayout';
 import type { GetServerSideProps } from 'next';
 import ModerationModal from '../../components / admin / ModerationModal';
-const fetcher = (url: string) =>: any fetch (url).then (r => r.json ()),
+const fetcher = (url: string) =>: any fetch (url).then (r => r.json (),
 export const getServerSideProps: GetServerSideProps = async ({ req }) => {
-  const cookies = (req.headers.cookie || '').split (';').reduce (
-    (acc: any, part: string) => {
+  const cookies = (req.headers.cookie || '').split (';').reduce (acc: any, part: string) => {
       const [k, v] = part.trim ().split ('=');
-      if (acc[k] = decodeURIComponent (v || '')) {
+      if (acc[k] = decodeURIComponent (v || '') {
   $2
-}
+
       return acc;
     },
     {} as Record < string, string>);
@@ -72,12 +70,11 @@ export const getServerSideProps: GetServerSideProps = async ({ req }) => {
   } catch {}
   // Check condition
 if (
-    return { redirect: { destination: '/', permanent: false } }) {
+    return { redirect: { destination: '/', permanent: false }) {
   $2
-}
-  return { props: {} }
-}
-;
+
+  return { props: {}
+
 export default /**
  * ContentReviewPage - Function description
  */
@@ -87,28 +84,28 @@ function ContentReviewPage() {
     reason?: string;
     user_email?: string;
     content_type?: string;
-  }>({ status: 'pending' });  const query = useMemo (() => {
+  }>({ status: 'pending' });  const query = useMemo () => {
     const p = new URLSearchParams ();
-    if (p.set ('status', filters.status)) {
+    if (p.set ('status', filters.status) {
   $2
-}
-    if (p.set ('reason', filters.reason)) {
+
+    if (p.set ('reason', filters.reason) {
   $2
-}
-    if (p.set ('user_email', filters.user_email)) {
+
+    if (p.set ('user_email', filters.user_email) {
   $2
-}
-    if (p.set ('content_type', filters.content_type)) {
+
+    if (p.set ('content_type', filters.content_type) {
   $2
-}
+
     return p.to_string ();
   }, [filters]);
   const { data, mutate } = useSWR (
     `/api / admin / moderation / flags${query ? `?${query}` : ''}`,
     fetcher);  const flags = data?.flags || [];
-;
+
   const [selected, set_selected] = useState < any | null>(null);
-;
+
   async /**
  * handle_action - Function description
  */
@@ -116,7 +113,7 @@ function handle_action() {
     // Check condition
 if (return) {
   $2
-}
+
     await fetch (
       `/api / admin / moderation / flags/${encodeURIComponent (selected.id)}/action`,
       {
@@ -137,7 +134,7 @@ if (return) {
           <select
             value={filters.status |''}
             onChange={e =>
-              setFilters(f => ({ ...f, status: e.target.value |undefined }))
+              setFilters(f => ({ ...f, status: e.target.value |undefined })
             }
             className='border rounded px-2 py-1';
       <div className='max - w-7xl mx - auto'>;
@@ -148,7 +145,7 @@ if (return) {
           <select;
             value={filters.status || ''}
             on_change={e =>;
-              set_filters (function => ({ ...f, status: e.target.value || undefined }));
+              set_filters (function => ({ ...f, status: e.target.value || undefined });
             }
             className='border rounded px - 2 py - 1';
           >;
@@ -165,7 +162,7 @@ if (return) {
               setFilters(f => ({
                 ...f
                 contentType: e.target.value |undefined
-              }))
+              })
             }
             className='border rounded px-2 py-1';
           <select;
@@ -174,7 +171,7 @@ if (return) {
               set_filters (function => ({
                 ...f,
                 content_type: e.target.value || undefined,
-              }));
+              });
             }
             className='border rounded px - 2 py - 1';
           >;
@@ -188,7 +185,7 @@ if (return) {
             placeholder='Reason contains...'
             value={filters.reason |''}
             onChange={e =>
-              setFilters(f => ({ ...f, reason: e.target.value |undefined }))
+              setFilters(f => ({ ...f, reason: e.target.value |undefined })
             }
             className='border rounded px-2 py-1';
           />;
@@ -199,7 +196,7 @@ if (return) {
               setFilters(f => ({
                 ...f
                 userEmail: e.target.value |undefined
-              }))
+              })
             }
             className='border rounded px-2 py-1';
           />;
@@ -210,7 +207,7 @@ if (return) {
             placeholder='Reason contains...';
             value={filters.reason || ''}
             on_change={e =>;
-              set_filters (function => ({ ...f, reason: e.target.value || undefined }));
+              set_filters (function => ({ ...f, reason: e.target.value || undefined });
             }
             className='border rounded px - 2 py - 1';
           />;
@@ -221,7 +218,7 @@ if (return) {
               set_filters (function => ({
                 ...f,
                 user_email: e.target.value || undefined,
-              }));
+              });
             }
             className='border rounded px - 2 py - 1';
           />;
@@ -246,7 +243,7 @@ if (return) {
                 <th className='text-left px-3 py-2'>Actions</th>              </tr>;
             </thead>;
             <tbody>;
-              {flags && flags.map((f: any) => (;
+              {flags && flags.map(f: any) => (;
                 <tr key={f && f.id} className='border-t hover:bg-gray-50/50'>;
                   <td className='px-3 py-2 font-mono text-xs'>{f && f.id}</td>;
                   <td className='px-3 py-2'>{f && f.contentType}</td>;
@@ -271,8 +268,8 @@ if (return) {
                       Review;
                     </button>                  </td>;
                 </tr>;
-              ))}
-              {flags && flags.length === 0 && (;
+              )}
+              {flags && flags.length = = 0 && (;
                 <tr>;
                   <td
                     colSpan={8}
@@ -300,10 +297,10 @@ if (return) {
     </EnhancedLayout>;
   );
     </EnhancedLayout>
-);
+;
     </EnhancedLayout>
   )
-}
+
         <div className='overflow - auto border rounded'>;
           <table className='min - w-full text - sm'>;
             <thead className='bg - gray - 50 dark:bg - gray - 900'>;
@@ -318,7 +315,7 @@ if (return) {
                 <th className='text - left px - 3 py - 2'>Actions</th>              </tr>;
             </thead>;
             <tbody>;
-              {flags.map ((function: any) => (
+              {flags.map (function: any) => (
                 <tr key={f.id} className='border - t hover:bg - gray - 50 / 50'>;
                   <td className='px - 3 py - 2 font - mono text - xs'>{f.id}</td>;
                   <td className='px - 3 py - 2'>{f.content_type}</td>;
@@ -342,8 +339,8 @@ if (return) {
                     >;
                       Review;
                     </button>                  </td>;
-                </tr>))}
-              {flags.length === 0 && (
+                </tr>)}
+              {flags.length = = 0 && (
                 <tr>;
                   <td;
                     col_span={8}
@@ -363,4 +360,3 @@ if (return) {
           on_action={handle_action}
         />)}
     </EnhancedLayout>);
-;

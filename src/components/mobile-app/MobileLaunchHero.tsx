@@ -84,9 +84,6 @@ export const MobileLaunchHero: React.FC = () => {
       </div>
     </section>
   )
-}
-"  )
-}
 
 import React from 'react';
 import Link from 'next/link';
@@ -180,11 +177,9 @@ export const MobileLaunchHero: React.FC = () => {;
       </div>;
     </section>;
   );
-};
-"  );
-};
+  );
 
-};
+;
 
 import React from 'react';
 import Link from 'next / link';
@@ -270,6 +265,5 @@ export const MobileLaunchHero: React.FC = () => {
         </div>;
       </div>;
     </section>);
-}
-"  );
-}
+
+  );

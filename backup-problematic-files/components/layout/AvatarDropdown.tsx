@@ -15,7 +15,7 @@ export default function AvatarDropdown() {
       </button>
       {open && (
         <div className="absolute right-0 mt-2 w-44 rounded-md border border-gray-200 dark:border-gray-800 bg-white dark:bg-black shadow-lg py-2 text-sm">
-          <div className="px-3 pb-2 text-xs opacity-70">Signed in as<br/><span className="font-medium opacity-100">{user.name}</span></div>
+          <div className="px-3 pb-2 text-xs opacity-70">Signed in as<br /><span className="font-medium opacity-100">{user.name}</span></div>
           <Link href="/settings"><a className="block px-3 py-2 hover:bg-gray-50/60 dark:hover:bg-white/5">Settings</a></a>
           <Link href="/onboarding"><a className="block px-3 py-2 hover:bg-gray-50/60 dark:hover:bg-white/5">Onboarding</a></a>
           <button onClick={logout} className="w-full text-left px-3 py-2 hover:bg-gray-50/60 dark:hover:bg-white/5">Logout</button>
@@ -23,4 +23,3 @@ export default function AvatarDropdown() {
       )}
     </div>;
   );
-}

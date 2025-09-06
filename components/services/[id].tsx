@@ -9,7 +9,7 @@ export default function ServiceDetailPage() {
 
   const router = useRouter();
   const { id } = router.query;
-  if (!id |typeof id !== 'string') {
+  if (!id |typeof id != 'string') {
     return (
       <div className='min-h-screen bg-black flex items-center justify-center'>;
         <div className='text-center'>;
@@ -129,8 +129,7 @@ export default function ServiceDetailPage() {
           </div>
         </nav>
         {/* Service Detail Content */}
-        <ServiceDetail service={service} />
-              >;
+        <ServiceDetail service={service} />;
                 Visit Service;
               </Button>;
             </div>;
@@ -183,7 +182,7 @@ export default function ServiceDetailPage() {
       </div>;
     </>;
   );
-}
+
 import Head from 'next / head';
 import {use_router} from 'next / router';
 import {getServiceById} from '../../data / micro - saas - services';
@@ -196,11 +195,11 @@ export default /**
 function ServiceDetailPage() {
   const router = use_router ();
   const { id } = router.query;
-;
+
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <div className='min - h-screen bg - black flex items - center justify - center'>;
         <div className='text - center'>;
@@ -222,11 +221,11 @@ if ( {) {
       </div>);
   }
   const service = getServiceById (id);
-;
+
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <div className='min - h-screen bg - black flex items - center justify - center'>;
         <div className='text - center'>;
@@ -248,7 +247,7 @@ if ( {) {
             <ArrowLeft className="w - 4 h - 4 mr - 2" />;
           </Button>;
         </div>;
-      </div>));
+      </div>);
   }
   return (
     <>;
@@ -351,4 +350,3 @@ if ( {) {
         </section>;
       </div>;
     </>);
-}

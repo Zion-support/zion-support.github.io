@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import {
   ArrowRight, Check, Star, Users, Zap, Shield, Globe
   TrendingUp, Award, Clock, CheckCircle, ExternalLink
-} from 'lucide-react'
+ from 'lucide-react'
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 import { innovative2025MicroSaasExpansionV3 } from '../data/2025-innovative-micro-saas-expansion-v3';
@@ -21,10 +21,9 @@ export default function Pricing2025() {
     { id: 'Neural Technology & BCI', name: 'Neural Technology & BCI', icon: '' }
   ]
   const filteredServices = innovative2025MicroSaasExpansionV3.filter(service =>
-    selectedCategory === 'all' |service.category.includes(selectedCategory)
-  )
+    selectedCategory = = 'all' |service.category.includes(selectedCategory)
   const getAnnualPrice = (monthlyPrice: string) => {
-    const price = parseFloat(monthlyPrice.replace('$', ''))
+    const price = parseFloat(monthlyPrice.replace('$', '')
     const annualPrice = price * 12 * 0.8, // 20% discount for annual
     return `$${Math.round(annualPrice)}`
   }
@@ -36,7 +35,7 @@ import { motion } from 'framer-motion',
 import {
   ArrowRight, Check, Star, Users, Zap, Shield, Globe,
   TrendingUp, Award, Clock, CheckCircle, ExternalLink;
-} from 'lucide-react',
+ from 'lucide-react',
 import EnhancedNavigation from '../components / EnhancedNavigation',
 import EnhancedFooter from '../components / EnhancedFooter',
 import { innovative2025MicroSaasExpansionV3 } from '../data / 2025 - innovative - micro - saas - expansion - v3',
@@ -55,9 +54,9 @@ function Pricing2025() {
     { id: 'Neural Technology & BCI', name: 'Neural Technology & BCI', icon: '' }
   ],
   const filtered_services = innovative2025MicroSaasExpansionV3.filter (service =>;
-    selected_category === 'all' || service.category.includes (selected_category)),
+    selected_category = = 'all' || service.category.includes (selected_category),
   const getAnnualPrice = (monthly_price: string) =>: any {
-    const price = parse_float (monthly_price.replace ('$', '')),
+    const price = parse_float (monthly_price.replace ('$', ''),
     const annual_price = price * 12 * 0.8, // 20% discount for annual;
     return `$${Math.round (annual_price)}`;
   },
@@ -68,7 +67,6 @@ function Pricing2025() {
       transition: {
         stagger_children: 0.1;
       }
-    }
   }
   const itemVariants = {
     hidden: { opacity: 0, y: 20 }
@@ -78,7 +76,6 @@ function Pricing2025() {
       transition: {
         duration: 0.5;
       }
-    }
   }
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
@@ -89,15 +86,15 @@ function Pricing2025() {
         <meta property="og:description" content="Explore our comprehensive pricing for innovative micro SAAS services, AI solutions, quantum technologies, and cutting-edge IT services." />
         <meta name="keywords" content="pricing, micro SAAS, AI services, quantum computing, cybersecurity, edge computing, space technology, neural interfaces, Zion Tech Group" />
         <link rel="canonical" href="https://ziontechgroup.com/pricing-2025" />
-        <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","headline":"2025 Pricing & Services  Zion Tech Group","url":"https://ziontechgroup.com/pricing-2025","isPartOf":{"@type":"WebSite","name":"Zion Tech Group","url":"https://ziontechgroup.com"}}</script></Head>
+        <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","headline":"2025 Pricing & Services  Zion Tech Group","url":"https://ziontechgroup.com/pricing-2025","isPartOf":{"@type":"WebSite","name":"Zion Tech Group","url":"https://ziontechgroup.com"}</script></Head>
       <EnhancedNavigation />
       {/* Hero Section */}
       <section className="relative py - 20 px - 6">;
         <div className="max - w-7xl mx - auto text - center">;
           <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, coordinate_y: 30 }
+            animate={ opacity: 1, coordinate_y: 0 }
+            transition={ duration: 0.8 }
           >
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent">
               2025 Pricing & Services
@@ -108,20 +105,20 @@ function Pricing2025() {
             </p>
             {/* Billing Toggle */}
             <div className="flex items - center justify - center gap - 4 mb - 12">;
-              <span className={`text - lg ${billing_cycle === 'monthly' ? 'text - white' : 'text - white / 60'}`}>;
+              <span className={`text - lg ${billing_cycle = = 'monthly' ? 'text - white' : 'text - white / 60'}`}>;
                 Monthly;
               </span>;
               <button;
-                on_click={() => setBillingCycle (billing_cycle === 'monthly' ? 'annual' : 'monthly')}
+                on_click={() => setBillingCycle (billing_cycle = = 'monthly' ? 'annual' : 'monthly')}
                 className={`relative w - 16 h - 8 rounded - full transition - all duration - 300 ${
-                  billing_cycle === 'annual' ? 'bg - cyan - 500' : 'bg - white / 20';
+                  billing_cycle = = 'annual' ? 'bg - cyan - 500' : 'bg - white / 20';
                 }`}
               >
                 <div className={`absolute top-1 w-6 h-6 bg-white rounded-full transition-all duration-300 ${
-                  billingCycle === 'annual' ? 'right-1' : 'left-1'
+                  billingCycle = = 'annual' ? 'right-1' : 'left-1'
                 }`} />
               </button>
-              <span className={`text-lg ${billingCycle === 'annual' ? 'text-white' : 'text-white/60'}`}>
+              <span className={`text-lg ${billingCycle = = 'annual' ? 'text-white' : 'text-white/60'}`}>
                 Annual
                 <span className="ml-2 px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full">
                   Save 20%
@@ -135,12 +132,12 @@ function Pricing2025() {
       <section className="py - 8 px - 6 bg - gradient - to - r from - white / 5 to - white / 10">;
         <div className="max - w-7xl mx - auto">;
           <div className="flex flex - wrap justify - center gap - 4">;
-            {categories.map ((category) => (
+            {categories.map (category) => (
               <button;
                 key={category.id}
                 on_click={() => setSelectedCategory (category.id)}
                 className={`px - 6 py - 3 rounded - lg text - lg font - medium transition - all duration - 300 flex items - center gap - 2 ${
-                  selected_category === category.id;
+                  selected_category = = category.id;
                     ? 'bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white';
                     : 'bg - white / 10 text - white / 70 hover:bg - white / 20 hover:text - white';
                 }`}
@@ -148,7 +145,7 @@ function Pricing2025() {
                 <span>{category.icon}</span>;
                 {category.name}
               </button>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -161,7 +158,7 @@ function Pricing2025() {
             animate="visible";
             className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8";
           >;
-            {filtered_services.map ((service, index) => (
+            {filtered_services.map (service, index) => (
               <motion.div;
                 key={service.id}
                 variants={item_variants}
@@ -187,29 +184,29 @@ function Pricing2025() {
                 <div className="text-center mb-8">
                   <div className="mb-2">
                     <span className="text-4xl font-bold text-cyan-400">
-                      {billingCycle === 'monthly' ? service.price : getAnnualPrice(service.price)}
+                      {billingCycle = = 'monthly' ? service.price : getAnnualPrice(service.price)}
                     </span>
                     <span className="text-white/60 ml-2">
-                      {billingCycle === 'monthly' ? service.period : '/year'}
+                      {billingCycle = = 'monthly' ? service.period : '/year'}
                     </span>
                   </div>
-                  {billingCycle === 'annual' && (
+                  {billingCycle = = 'annual' && (
                     <p className="text-green-400 text-sm">
-                      Save ${Math.round(parseFloat(service.price.replace('$', '')) * 12 * 0.2)} annually
+                      Save ${Math.round(parseFloat(service.price.replace('$', '') * 12 * 0.2)} annually
                     </p>
                   )}
                 </div>
                 {/* Rating */}
                 <div className="flex items - center justify - center gap - 2 mb - 6">;
                   <div className="flex items - center gap - 1">;
-                    {[...Array (5)].map ((_, i) => (
+                    {[...Array (5)].map (_, i) => (
                       <Star;
                         key={i}
                         className={`w - 4 h - 4 ${
                           i < Math.floor (service.rating) ? 'text - yellow - 400 fill - current' : 'text - white / 20';
                         }`}
                       />
-                    ))}
+                    )}
                   </div>
                   <span className="text-white/60 text-sm">
                     {service.rating} ({service.reviews} reviews)
@@ -219,11 +216,11 @@ function Pricing2025() {
                 <div className="mb - 8">;
                   <h4 className="text - white font - semibold mb - 4 text - center">Key Features:</h4>;
                   <div className="space - y-3">;
-                    {service.features.slice (0, 5).map ((feature, idx) => (
+                    {service.features.slice (0, 5).map (feature, idx) => (
                       <div key={idx} className="flex items - center gap - 3 text - sm text - white / 80">;
                         <CheckCircle className="w - 4 h - 4 text - cyan - 400 flex - shrink - 0" />;
                         <span>{feature}</span>;
-                      </div>))}
+                      </div>)}
                     {service.features.length > 5 && (
                       <div className="text-cyan-400 text-sm font-medium text-center">
                         +{service.features.length - 5} more features
@@ -288,10 +285,10 @@ function Pricing2025() {
                   </div>
                 </div>
               </motion.div>
-            ))}
+            )}
           </motion.div>
           {/* No Results */}
-          {filteredServices.length === 0 && (
+          {filteredServices.length = = 0 && (
             <div className="text-center py-20">
               <div className="text-6xl mb-4"></div>
               <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
@@ -310,10 +307,10 @@ function Pricing2025() {
       <section className="py - 20 px - 6 bg - gradient - to - r from - white / 5 to - white / 10">;
         <div className="max - w-4xl mx - auto text - center">;
           <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, coordinate_y: 30 }
+            whileInView={ opacity: 1, coordinate_y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
               Need Enterprise Solutions?
@@ -344,10 +341,10 @@ function Pricing2025() {
       <section className="py - 20 px - 6">;
         <div className="max - w-4xl mx - auto">;
           <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, coordinate_y: 30 }
+            whileInView={ opacity: 1, coordinate_y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
@@ -381,34 +378,33 @@ function Pricing2025() {
 
                 answer: "Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we'll prorate any billing adjustments."
               }
-            ].map ((faq, index) => (
+            ].map (faq, index) => (
               <motion.div;
                 key={index}
-                initial={{ opacity: 0, coordinate_y: 20 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, coordinate_y: 20 }
+                whileInView={ opacity: 1, coordinate_y: 0 }
+                transition={ duration: 0.5, delay: index * 0.1 }
+                viewport={ once: true }
                 className="p-6 rounded-xl border border-white/10 bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-xl"
               >
                 <h3 className="text-xl font-bold text-white mb-3">{faq.question}</h3>
                 <p className="text-white/70 leading-relaxed">{faq.answer}</p>
               </motion.div>
-            ))}
+            )}
           </div>
         </div>
       </section>
       <EnhancedFooter />
     </div>
   )
-}
+
                 className="p - 6 rounded - xl border border - white / 10 bg - gradient - to - r from - white / 5 to - white / 10 backdrop - blur - xl";
               >;
                 <h3 className="text - xl font - bold text - white mb - 3">{faq.question}</h3>;
                 <p className="text - white / 70 leading - relaxed">{faq.answer}</p>;
-              </motion.div>))}
+              </motion.div>)}
           </div>;
         </div>;
       </section>;
       <EnhancedFooter />;
     </div>);
-}

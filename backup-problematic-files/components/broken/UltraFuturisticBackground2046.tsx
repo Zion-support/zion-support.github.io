@@ -4,7 +4,7 @@ const UltraFuturisticBackground2046: React.FC = () => {;
   const canvasRef = useRef<HTMLCanvasElement>(null),;
   const particlesRef = useRef<any[]>([]),;
   const animationRef = useRef<number>(),;
-  useEffect(() => {;
+  useEffect() => {;
     const canvas = canvasRef.current,;
     if (!canvas) return,;
     const ctx = canvas.getContext('2d'),;
@@ -51,8 +51,7 @@ const UltraFuturisticBackground2046: React.FC = () => {;
             this.color = `hsl(${40 + Math.random() * 60}, 100%, 70%)`,;
             break;
         }
-      }
-;
+
       update() {;
         this.x += this.vx,;
         this.y += this.vy,;
@@ -65,12 +64,12 @@ const UltraFuturisticBackground2046: React.FC = () => {;
           this.vx += (Math.random() - 0.5) * 0.5,;
           this.vy += (Math.random() - 0.5) * 0.5;
         }
-;
+
         // Limit velocity;
-        this.vx = Math.max(-3, Math.min(3, this.vx)),;
-        this.vy = Math.max(-3, Math.min(3, this.vy));
+        this.vx = Math.max(-3, Math.min(3, this.vx),;
+        this.vy = Math.max(-3, Math.min(3, this.vy);
       }
-;
+
       draw() {;
         if (!ctx) return,;
         const alpha = this.life / this.maxLife,;
@@ -101,7 +100,7 @@ const UltraFuturisticBackground2046: React.FC = () => {;
             ctx.fill(),;
             // Neural connections;
             particlesRef.current.forEach(particle => {;
-              if (particle.type === 'neural' && particle !== this) {;
+              if (particle.type = = 'neural' && particle != this) {;
                 const distance = Math.sqrt(;
                   Math.pow(this.x - particle.x, 2) + Math.pow(this.y - particle.y, 2);
                 ),;
@@ -114,7 +113,6 @@ const UltraFuturisticBackground2046: React.FC = () => {;
                   ctx.globalAlpha = alpha * (1 - distance / 100),;
                   ctx.stroke();
                 }
-              }
             }),;
             break,;
           case 'data':;
@@ -143,22 +141,20 @@ const UltraFuturisticBackground2046: React.FC = () => {;
             ctx.fill(),;
             break;
         }
-;
+
         ctx.restore();
       }
-;
+
       isDead() {;
         return this.life <= 0;
       }
-    }
-;
+
     // Initialize particles;
     const initParticles = () => {;
       particlesRef.current = [],;
       for (let i = 0, i < 150, i++) {;
-        particlesRef.current.push(new Particle());
-      }
-    },;
+        particlesRef.current.push(new Particle();
+      },;
     // Animation loop;
     const animate = () => {;
       if (!ctx || !canvas) return,;
@@ -166,14 +162,13 @@ const UltraFuturisticBackground2046: React.FC = () => {;
       ctx.fillStyle = 'rgba(0, 0, 0, 0.1)',;
       ctx.fillRect(0, 0, canvas.width, canvas.height),;
       // Update and draw particles;
-      particlesRef.current.forEach((particle, index) => {;
+      particlesRef.current.forEach(particle, index) => {;
         particle.update(),;
         particle.draw(),;
         // Remove dead particles and add new ones;
-        if (particle.isDead()) {;
+        if (particle.isDead() {;
           particlesRef.current[index] = new Particle();
-        }
-      }),;
+        }),;
       // Draw quantum field lines;
       drawQuantumField(ctx, canvas.width, canvas.height),;
       // Draw neural network grid;
@@ -196,10 +191,9 @@ const UltraFuturisticBackground2046: React.FC = () => {;
           const waveY = y + Math.sin(time * 2 + i * 0.3) * 30,;
           ctx.lineTo(x + Math.sin(time + j * 0.01) * 20, j);
         }
-;
+
         ctx.stroke();
-      }
-    },;
+      },;
     // Neural network grid;
     const drawNeuralGrid = (ctx: CanvasRenderingContext2D, width: number, height: number) => {;
       const time = Date.now() * 0.002,;
@@ -216,7 +210,6 @@ const UltraFuturisticBackground2046: React.FC = () => {;
           ctx.lineTo(x, y + gridSize + offset),;
           ctx.stroke();
         }
-      }
     },;
     // Start animation;
     initParticles(),;
@@ -227,7 +220,6 @@ const UltraFuturisticBackground2046: React.FC = () => {;
       if (animationRef.current) {;
         cancelAnimationFrame(animationRef.current);
       }
-    }
   }, []),
 
   return (
@@ -235,103 +227,103 @@ const UltraFuturisticBackground2046: React.FC = () => {;
       {/* Animated gradient background */}
       <motion.div
         className="absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 via-cyan-900/30 to-black"
-        animate={{
+        animate={
           background: [
-            'linear-gradient(to bottom right, #000000, #1e1b4b, #0c4a6e, #000000)linear-gradient(to bottom right, #000000, #0c4a6e, #1e1b4b, #000000)linear-gradient(to bottom right, #000000, #1e1b4b, #0c4a6e, #000000)']}}
-        transition={{
+            'linear-gradient(to bottom right, #000000, #1e1b4b, #0c4a6e, #000000)linear-gradient(to bottom right, #000000, #0c4a6e, #1e1b4b, #000000)linear-gradient(to bottom right, #000000, #1e1b4b, #0c4a6e, #000000)']}
+        transition={
           duration: 10,
           repeat: Infinity,
           ease: "easeInOut"
-        }}
+        }
       />;
       {/* Quantum particle canvas */}
       <canvas;
         ref={canvasRef}
         className="absolute inset-0 w-full h-full"
-        style={{ filter: 'blur(0.5px)' }}
+        style={ filter: 'blur(0.5px)' }
       />;
       {/* Floating geometric shapes */}
       <div className="absolute inset-0 overflow-hidden">
-        {[...Array(8)].map((_, i) => (
+        {[...Array(8)].map(_, i) => (
           <motion.div
             key={i}
             className="absolute w-32 h-32 border border-cyan-500/20 rounded-full"
-            style={{
+            style={
               left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`}}
-            animate={{;
+              top: `${Math.random() * 100}%`}
+            animate={;
               rotate: [0, 360],;
               scale: [0.5, 1, 0.5],;
-              opacity: [0.1, 0.3, 0.1]}}
-            transition={{
+              opacity: [0.1, 0.3, 0.1]}
+            transition={
               duration: Math.random() * 10 + 10,
               repeat: Infinity,
               ease: "linear",
-              delay: i * 0.5}}
+              delay: i * 0.5}
           />;
-        ))}
-;
-        {[...Array(6)].map((_, i) => (;
+        )}
+
+        {[...Array(6)].map(_, i) => (;
           <motion.div;
             key={`square-${i}`}
             className="absolute w-24 h-24 border border-purple-500/20 rotate-45"
-            style={{
+            style={
               left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`}}
-            animate={{;
+              top: `${Math.random() * 100}%`}
+            animate={;
               rotate: [45, 405],;
               scale: [0.3, 0.8, 0.3],;
-              opacity: [0.1, 0.2, 0.1]}}
-            transition={{
+              opacity: [0.1, 0.2, 0.1]}
+            transition={
               duration: Math.random() * 8 + 8,
               repeat: Infinity,
               ease: "linear",
-              delay: i * 0.7}}
+              delay: i * 0.7}
           />;
-        ))}
+        )}
       </div>;
       {/* Energy waves */}
       <div className="absolute bottom-0 left-0 right-0 h-32">
         <motion.div
           className="absolute inset-0 bg-gradient-to-t from-cyan-500/10 to-transparent"
-          animate={{
-            height: ['32px48px32px']}}
-          transition={{
+          animate={
+            height: ['32px48px32px']}
+          transition={
             duration: 4,
             repeat: Infinity,
-            ease: "easeInOut"}}
+            ease: "easeInOut"}
         />
         <motion.div
           className="absolute inset-0 bg-gradient-to-t from-purple-500/10 to-transparent"
-          animate={{
-            height: ['24px40px24px']}}
-          transition={{
+          animate={
+            height: ['24px40px24px']}
+          transition={
             duration: 3,
             repeat: Infinity,
             ease: "easeInOut",
-            delay: 1}}
+            delay: 1}
         />;
       </div>;
       {/* Quantum interference patterns */}
       <div className="absolute inset-0">
-        {[...Array(5)].map((_, i) => (
+        {[...Array(5)].map(_, i) => (
           <motion.div
             key={`interference-${i}`}
             className="absolute inset-0 opacity-5"
-            style={{
-              background: `radial-gradient(circle at ${20 + i * 20}% ${30 + i * 15}%, rgba(0, 255, 255, 0.3) 0%, transparent 50%)`}}
-            animate={{;
+            style={
+              background: `radial-gradient(circle at ${20 + i * 20}% ${30 + i * 15}%, rgba(0, 255, 255, 0.3) 0%, transparent 50%)`}
+            animate={;
               scale: [1, 1.5, 1],;
-              opacity: [0.05, 0.1, 0.05]}}
-            transition={{
+              opacity: [0.05, 0.1, 0.05]}
+            transition={
               duration: Math.random() * 6 + 4,
               repeat: Infinity,
               ease: "easeInOut",
-              delay: i * 0.8}}
+              delay: i * 0.8}
           />;
-        ))}
+        )}
       </div>;
     </div>;
   );
-},;
+,;
 export default UltraFuturisticBackground2046;

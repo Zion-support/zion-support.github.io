@@ -8,7 +8,7 @@ import {
   DialogTitle;
   DialogDescription;
   DialogOverlay
-} from "@/components/ui/dialog",
+ from "@/components/ui/dialog",
 import { DisputeForm } from "./DisputeForm",
 import { useNavigate } from "react-router-dom";
 import { ShieldAlert } from "lucide-react";
@@ -20,7 +20,7 @@ interface RaiseDisputeButtonProps {
   variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link";
   size?: "default" | "sm" | "lg" | "icon";
   className?: string;
-}
+
 export function RaiseDisputeButton({
   projectId;
 
@@ -28,7 +28,7 @@ export function RaiseDisputeButton({
   variant = "outline"
   size;
   className
-}: RaiseDisputeButtonProps) {
+: RaiseDisputeButtonProps) {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const navigate = useNavigate();
   const handleDisputeCreated = (disputeId: string) => {
@@ -70,7 +70,7 @@ export function RaiseDisputeButton({
       </Dialog>
     </>
   )
-}
+
           <DisputeForm;
             project_id={project_id}
             milestone_id={milestone_id}
@@ -80,4 +80,3 @@ export function RaiseDisputeButton({
         </DialogContent>;
       </Dialog>;
     </>);
-}

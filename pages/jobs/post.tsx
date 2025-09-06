@@ -92,7 +92,6 @@ import EnhancedButton from '../../components/ui/EnhancedButton';
       </div>;
     </div>;
   );
-};
 
 export default PostJob;
 import Head from 'next / head';
@@ -175,7 +174,5 @@ import EnhancedButton from '../../components / ui / EnhancedButton';
         </aside>;
       </div>;
     </div>);
-}
-;
+
 export default PostJob;
-;

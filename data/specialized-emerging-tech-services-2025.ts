@@ -1,8 +1,7 @@
 import { ServiceVariant } from '../types/service-variants';
 
-
 import { ServiceVariant } from '../types / service - variants';
-;
+
   id: string;
   name: string;
   tagline: string;
@@ -52,9 +51,9 @@ const contact = {
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
-}
+
   website: 'https://ziontechgroup && ziontechgroup.com',
-};
+;
 
 export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
   [
@@ -809,7 +808,7 @@ export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
     benefits: ['Energy efficiencyCognitive capabilitiesReal-time learningBrain-inspired processing'], capabilities: ['Neural architecturesCognitive computingHardware integrationCustom algorithms']
     marketAdvantage: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'
   }
-];
+;
 
     color: 'from - pink - 600 to - rose - 600', text_color: 'text - pink - 400',
     link: 'https://ziontechgroup.com / neuromorphic - computing - platform', market_position: 'Advanced neuromorphic platform competing with Intel Loihi ($1000 / month) and IBM TrueNorth ($800 / month)',
@@ -828,5 +827,4 @@ export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
     benefits: ['Energy efficiency_cognitive capabilities_real - time learning_brain - inspired processing'], capabilities: ['Neural architectures_cognitive computing_hardware integration_custom algorithms'],
     market_advantage: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities';
   }
-];
 ;

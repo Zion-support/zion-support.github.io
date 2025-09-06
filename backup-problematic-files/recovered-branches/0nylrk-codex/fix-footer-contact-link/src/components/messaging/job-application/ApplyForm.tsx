@@ -10,13 +10,12 @@ import { ResumeSelector, ResumeOption } from "../resume-selector",;
 import { MessageTab } from "./MessageTab",;
 import { ResumeTab } from "./ResumeTab",;
 import { Job } from "./types",;
-;
+
 interface ApplyFormProps {;
   job:Job,;
   onClose:() => void,;
   onApplySuccess?:(jobId:string) => Promise<void>;
-}
-;
+
 export function ApplyForm({ job, onClose, onApplySuccess } ApplyFormProps) {;
   const { createConversation } = useMessaging(),;
   const { applyToJob } = useJobApplications(),;
@@ -28,14 +27,12 @@ export function ApplyForm({ job, onClose, onApplySuccess } ApplyFormProps) {;
   const [activeTab, setActiveTab] = useState<string>("message"),;
   const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null),;
   const [selectedResumeId, setSelectedResumeId] = useState<string | null>(null),;
-  ;
   const handleResumeSelected = (resume:ResumeOption) => {;
     setSelectedResume(resume),;
     setSelectedResumeId(resume.id);
   },;
-  ;
   const handleApply = async () => {;
-    if (!message.trim()) {;
+    if (!message.trim() {;
       toast({;
         title:"Message required",;
         description:"Please enter a message before applying.",;
@@ -46,21 +43,18 @@ export function ApplyForm({ job, onClose, onApplySuccess } ApplyFormProps) {;
     ;
     try {;
       setIsSubmitting(true),;
-      ;
       // First submit the application to the job applications table;
       const applicationSuccess = await applyToJob(;
         job.id, ;
         message, ;
         selectedResumeId;
       ),;
-      ;
       if (!applicationSuccess) {;
         throw new Error("Failed to submit application"),;
       }
       ;
       // Format message with proposal link if provided;
       let fullMessage = message,;
-      ;
       if (proposalLink) {;
         fullMessage += `\n\nHere's a link to my proposal:${proposalLink}`,;
       }
@@ -80,7 +74,6 @@ export function ApplyForm({ job, onClose, onApplySuccess } ApplyFormProps) {;
           type:selectedResume.type;
         } null;
       },;
-      ;
       // Create conversation with the job client;
       await createConversation(;
         job.client_id,;
@@ -89,7 +82,6 @@ export function ApplyForm({ job, onClose, onApplySuccess } ApplyFormProps) {;
         job.id,;
         contextData;
       ),;
-      ;
       // Call onApplySuccess to update job status in the UI;
       if (onApplySuccess) {;
         await onApplySuccess(job.id),;
@@ -98,7 +90,6 @@ export function ApplyForm({ job, onClose, onApplySuccess } ApplyFormProps) {;
       toast({;
         title:"Application sent",;
         description:`Your application for "${job.title}" has been sent.`}),;
-      ;
       onClose(),;
     } catch (error) {;
       console.error("Failed to send application:", error),;
@@ -109,9 +100,8 @@ export function ApplyForm({ job, onClose, onApplySuccess } ApplyFormProps) {;
       }),;
     } finally {;
       setIsSubmitting(false),;
-    }
-  },;
-;
+    },;
+
   return (;
     <>;
       <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;
@@ -123,7 +113,6 @@ export function ApplyForm({ job, onClose, onApplySuccess } ApplyFormProps) {;
             Resume;
           </TabsTrigger>;
         </TabsList>;
-        ;
         <TabsContent value="message">;
           <MessageTab ;
             message={message}
@@ -132,7 +121,6 @@ export function ApplyForm({ job, onClose, onApplySuccess } ApplyFormProps) {;
             setProposalLink={setProposalLink}
           />;
         </TabsContent>;
-        ;
         <TabsContent value="resume">;
           <ResumeTab ;
             onResumeSelected={handleResumeSelected}
@@ -140,7 +128,6 @@ export function ApplyForm({ job, onClose, onApplySuccess } ApplyFormProps) {;
           />;
         </TabsContent>;
       </Tabs>;
-      ;
       <div className="flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2 gap-2 sm:gap-0 mt-4">;
         <Button;
           type="button";
@@ -171,71 +158,70 @@ export function ApplyForm({ job, onClose, onApplySuccess } ApplyFormProps) {;
   job: Job;
 onClose: () => void;
 onApplySuccess?: (jobId: string) => Promise<void> 
-}export function ApplyForm ({
+export function ApplyForm ({
   job, onClose, onApplySuccess 
-}: ApplyFormProps) {
+: ApplyFormProps) {
   const {
   createConversation 
-}= useMessaging ();
+= useMessaging ();
 const {
   applyToJob 
-}= useJobApplications ();
+= useJobApplications ();
 const [message, setMessage] = useState ();
 const [proposalLink, setProposalLink] = useState ('');
 const [isSubmitting, setIsSubmitting] = useState (false);
 const [activeTab, setActiveTab] = useState<string> ("message");
 const [selectedResume, setSelectedResume] = useState<ResumeOption | null> (null);
 const [selectedResumeId, setSelectedResumeId] = useState<string | null> (null);
-  if (!message.trim () ) {
+  if (!message.trim () {
   toast ({
   return;
-}
-}//Format message with proposal link if provided let fullMessage = message;
+
+//Format message with proposal link if provided let fullMessage = message;
 if (proposalLink) {
   fullMessage += `\n\nHere's a link to my proposal: $ {
   proposalLink 
-}` 
-}//Add info about attached resume if available if (selectedResume) {
+` 
+//Add info about attached resume if available if (selectedResume) {
   fullMessage += `\n\nI've attached my resume: $ {
   selectedResume.title 
-}` 
-}//Create context data for the conversation const contextData = {
+` 
+//Create context data for the conversation const contextData = {
   title: job.title;
 description: job.description;
 attachedResume: selectedResume ? {
   id: selectedResume.id;
 title: selectedResume.title;
 type: selectedResume.type 
-}: null 
-};
+: null 
+;
 fullMessage;
-'job';
+job';
 job.id;
 contextData);
-//Call onApplySuccess to update job status in the UI onClose () 
-}catch (error) {
-  
-}finally {
+/Call onApplySuccess to update job status in the UI onClose () 
+catch (error) {
+
+finally {
   setIsSubmitting (false) 
-}
-};
+
+;
 return (<> <Tabs value= {
   activeTab 
-}onValueChange= {
+onValueChange= {
   setActiveTab 
-}className="w-full" > <TabsList className="w-full mb-4 bg-zion-blue-dark/30" > <TabsTrigger value="message" className="flex-1" > resume"className=" flex-1"> Resume </TabsTrigger> </TabsList> <TabsContent value=" message"> <MessageTab message= {
+className="w-full" > <TabsList className="w-full mb-4 bg-zion-blue-dark/30" > <TabsTrigger value="message" className="flex-1" > resume"className=" flex-1"> Resume </TabsTrigger> </TabsList> <TabsContent value=" message"> <MessageTab message= {
   message 
-}setMessage= {
+setMessage= {
   setMessage 
-}proposalLink= {
+proposalLink= {
   proposalLink 
-}setProposalLink= {
+setProposalLink= {
   setProposalLink 
-}/> </TabsContent> <TabsContent value=" resume"> <ResumeTab onResumeSelected= {
+/> </TabsContent> <TabsContent value=" resume"> <ResumeTab onResumeSelected= {
   handleResumeSelected 
-}selectedResumeId= {
+selectedResumeId= {
   selectedResumeId 
-}/> </TabsContent> </Tabs> <div className=" flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2 gap-2 sm:gap-0 mt-4"> <Button > Cancel </Button> <Button > {
+/> </TabsContent> </Tabs> <div className=" flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2 gap-2 sm:gap-0 mt-4"> <Button > Cancel </Button> <Button > {
   isSubmitting ? (<> <Loader2 className=" h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ('Submit Application') 
-}</Button> </div> </>) 
-}
+</Button> </div> </>) 

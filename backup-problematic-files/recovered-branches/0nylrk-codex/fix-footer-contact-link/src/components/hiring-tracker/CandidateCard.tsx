@@ -16,7 +16,7 @@ import { ;
   Calendar,;
   AlertTriangle,;
   BriefcaseIcon;
-} from "lucide-react",;
+ from "lucide-react",;
 import {;
   DropdownMenu,;
   DropdownMenuContent,;
@@ -25,22 +25,19 @@ import {;
 import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge",;
 import { toast } from "@/hooks/use-toast",;
 import { HireConfirmationModal } from "./HireConfirmationModal",;
-;
+
 interface CandidateCardProps {;
   application:JobApplication,;
   index:number;
-}
-;
+
 export function CandidateCard({ application, index } CandidateCardProps) {;
   const [showNotes, setShowNotes] = useState(false),;
   const [notes, setNotes] = useState(application.notes || ""),;
   const [showHireModal, setShowHireModal] = useState(false),;
-  ;
   // Check if application is stalled (no activity for 7 days);
   const isStalled = application.updated_at && ;
     new Date(application.updated_at).getTime() < ;
     (Date.now() - 7 * 24 * 60 * 60 * 1000),;
-  ;
   const handleSaveNotes = () => {;
     // Here you would save the notes to the database;
     // For now, we'll just show a toast;
@@ -50,7 +47,6 @@ export function CandidateCard({ application, index } CandidateCardProps) {;
     }),;
     setShowNotes(false),;
   },;
-  ;
   const handleHireConfirmed = () => {;
     // Hiring process completed via the modal;
     toast({;
@@ -58,7 +54,6 @@ export function CandidateCard({ application, index } CandidateCardProps) {;
       description:"Offer has been sent to the talent.";
     }),;
   },;
-  ;
   return (;
     <>;
       <Draggable draggableId={application.id} index={index}>;
@@ -92,7 +87,6 @@ export function CandidateCard({ application, index } CandidateCardProps) {;
                     </p>;
                   </div>;
                 </div>;
-                ;
                 <DropdownMenu>;
                   <DropdownMenuTrigger asChild>;
                     <Button variant="ghost" className="h-8 w-8 p-0">;
@@ -121,14 +115,12 @@ export function CandidateCard({ application, index } CandidateCardProps) {;
                   </DropdownMenuContent>;
                 </DropdownMenu>;
               </div>;
-              ;
               {/* Application Info */}
               <div className="flex flex-wrap gap-2 items-center text-xs text-muted-foreground mb-2">;
                 <div className="flex items-center">;
                   <Calendar className="h-3 w-3 mr-1" />;
                   {formatDistanceToNow(new Date(application.created_at), { addSuffix:true })}
                 </div>;
-                ;
                 {isStalled && (;
                   <div className="flex items-center text-amber-500">;
                     <AlertTriangle className="h-3 w-3 mr-1" />;
@@ -136,9 +128,8 @@ export function CandidateCard({ application, index } CandidateCardProps) {;
                   </div>;
                 )}
               </div>;
-              ;
               {/* Match Score */}
-              {application.match_score !== null && application.match_score !== undefined && (;
+              {application.match_score != null && application.match_score != undefined && (;
                 <div className="mb-2">;
                   <ScoreBadge application={application} />;
                 </div>;              )}
@@ -169,7 +160,6 @@ export function CandidateCard({ application, index } CandidateCardProps) {;
                     <MessageSquare className="h-3 w-3 mr-1" /> Message;
                   </Link>;
                 </Button>;
-                ;
                 <Button ;
                   variant="outline" ;
                   size="sm" ;
@@ -186,7 +176,6 @@ export function CandidateCard({ application, index } CandidateCardProps) {;
                     </span>;
                   )}
                 </Button>;
-                ;
                 <Button ;
                   variant="default" ;
                   size="sm" ;
@@ -200,7 +189,6 @@ export function CandidateCard({ application, index } CandidateCardProps) {;
           </Card>;
         )}
       </Draggable>;
-      ;
       {/* Hire Confirmation Modal */}
       <HireConfirmationModal;
         isOpen={showHireModal}
@@ -224,76 +212,74 @@ DropdownMenuItem;
 interface CandidateCardProps {
   application: JobApplication;
 index: number 
-}export function CandidateCard ({
+export function CandidateCard ({
   application, index 
-}: CandidateCardProps) {
+: CandidateCardProps) {
   const handleSaveNotes = () => {
   //Here you would save the notes to the database //For now, we'll just show a toast toast ({
   setShowNotes (false);
-};
   //Hiring process completed via the modal toast ({
-  
-};
+
+;
   application.id 
-}index= {
+index= {
   index 
-}> {
+> {
   (provided) => (<Card className="mb-2 p-0 shadow-sm border" ref= {
   provided.innerRef 
-}{
+{
   ...provided.draggableProps 
-}{
+{
   ...provided.dragHandleProps 
-}> <CardContent className="p-3"> {
+> <CardContent className="p-3"> {
   /* Candidate Header */ 
-}<div className="flex justify-between items-start mb-2"> <div className="flex items-center gap-2"> <Avatar className="h-8 w-8"> {
+<div className="flex justify-between items-start mb-2"> <div className="flex items-center gap-2"> <Avatar className="h-8 w-8"> {
   application.talent profile?.profile picture url ? (<img src= {
   application.talent profile.profile picture url 
-}alt= {
+alt= {
   application.talent profile.full name || "Candidate" 
-}/>) : (<User className="h-4 w-4" />) 
-}</Avatar> <div> </p> </div> </div> <DropdownMenu> <DropdownMenuTrigger asChild> <Button variant="ghost" className="h-8 w-8 p-0"> <MoreVertical className="h-4 w-4" /> </Button> </DropdownMenuTrigger> </DropdownMenuItem> <DropdownMenuItem onClick= {
+/>) : (<User className="h-4 w-4" />) 
+</Avatar> <div></p> </div> </div> <DropdownMenu> <DropdownMenuTrigger asChild> <Button variant="ghost" className="h-8 w-8 p-0"> <MoreVertical className="h-4 w-4" /> </Button> </DropdownMenuTrigger> </DropdownMenuItem> <DropdownMenuItem onClick= {
   () => setShowHireModal (true) 
-}> <BriefcaseIcon className="h-4 w-4 mr-2" /> Hire Candidate </DropdownMenuItem> <DropdownMenuItem asChild> <Link to= {
+> <BriefcaseIcon className="h-4 w-4 mr-2" /> Hire Candidate </DropdownMenuItem> <DropdownMenuItem asChild> <Link to= {
   `/messages?talentId=$ {
   application.talent id 
-}` 
-}> Message </Link> </DropdownMenuItem> {
+` 
+> Message </Link> </DropdownMenuItem> {
   application.resume?.file url && (<DropdownMenuItem asChild> <a href= {
   application.resume.file url 
-}target="blank" rel="noopener noreferrer"> View Resume </Link> </DropdownMenuItem>) 
-}</DropdownMenuContent> </DropdownMenu> </div> {
+target="blank" rel="noopener noreferrer"> View Resume </Link> </DropdownMenuItem>) 
+</DropdownMenuContent> </DropdownMenu> </div> {
   /* Application Info */ 
-}<div className="flex flex-wrap gap-2 items-center text-xs text-muted-foreground mb-2"> <div className="flex items-center"> <Calendar className="h-3 w-3 mr-1" /> {
+<div className="flex flex-wrap gap-2 items-center text-xs text-muted-foreground mb-2"> <div className="flex items-center"> <Calendar className="h-3 w-3 mr-1" /> {
   formatDistanceToNow (new Date (application.created at), {
   addSuffix: true 
-}) 
-}</div> {
+) 
+</div> {
   isStalled && (<div className="flex items-center text-amber-500"> <AlertTriangle className="h-3 w-3 mr-1" /> Stalled </div>) 
-}</div> {
+</div> {
   /* Match Score */ 
-}{
-  application.match score !== null && application.match score !== undefined && (<div className="mb-2"> <ScoreBadge application= {
+{
+  application.match score != null && application.match score != undefined && (<div className="mb-2"> <ScoreBadge application= {
   application 
-}/> </div>) 
-}<Textarea placeholder="Add private notes about this candidate..." className="text-xs min-h-[60px]" value= {
+/> </div>) 
+<Textarea placeholder="Add private notes about this candidate..." className="text-xs min-h-[60px]" value= {
   notes 
-}onChange= {
+onChange= {
   (e) => setNotes (e.target.value) 
-}/> </div> </div>) 
-}<Button variant="outline" size="sm" className="flex-1" asChild > </Link> </Button> <Button variant="outline" size="sm" className="flex-1" asChild > <FileText className="h-3 w-3 mr-1" /> Resume </Link>) : (<span> <FileText className="h-3 w-3 mr-1" /> No Resume </span>) 
-}</Button> <Button variant="default" size="sm" className="flex-1" onClick= {
+/> </div> </div>) 
+<Button variant="outline" size="sm" className="flex-1" asChild > </Link> </Button> <Button variant="outline" size="sm" className="flex-1" asChild > <FileText className="h-3 w-3 mr-1" /> Resume </Link>) : (<span> <FileText className="h-3 w-3 mr-1" /> No Resume </span>) 
+</Button> <Button variant="default" size="sm" className="flex-1" onClick= {
   () => setShowHireModal (true) 
-}> <BriefcaseIcon className="h-3 w-3 mr-1" /> Hire </Button> </div> </CardContent> </Card>) 
-}</Draggable> {
+> <BriefcaseIcon className="h-3 w-3 mr-1" /> Hire </Button> </div> </CardContent> </Card>) 
+</Draggable> {
   /* Hire Confirmation Modal */ 
-}<HireConfirmationModal isOpen= {
+<HireConfirmationModal isOpen= {
   showHireModal 
-}onClose= {
+onClose= {
   () => setShowHireModal (false) 
-}application= {
+application= {
   application 
-}onConfirm= {
+onConfirm= {
   handleHireConfirmed 
-}/> </>) 
-}
+/> </>) 

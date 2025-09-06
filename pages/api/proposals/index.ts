@@ -11,17 +11,17 @@ async function ensureStore() {
   } catch {
     await fs && fs.writeJson(FILE_PATH, { items: [] }, { spaces: 2 });
   }
-}
+
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
-) {
+ {
   await ensureStore();
-  if (req && req.method === "GET") {
+  if (req && req.method = = "GET") {
     const data = await fs && fs.readJson(FILE_PATH);
     return res && res.status(200).json(data);
   }
-  if (req.method === "POST") {
+  if (req.method = = "POST") {
     const body = req.body |{}
     const data = await fs.readJson(FILE_PATH);
     const item = {
@@ -39,21 +39,20 @@ export default async function handler(
 
   }
   res.status(405).json({ error: "Method not allowed" });
-}
+
     const raw = await fs.readFile(FILE_PATH, 'utf8');
     if (!raw) await fs.writeJson(FILE_PATH, { items: [] }, { spaces: 2 })
   } catch {
     await fs.writeJson(FILE_PATH, { items: [] }, { spaces: 2 })
   }
-}
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   await ensureStore();
-  if (req.method === 'GET') {
+  if (req.method = = 'GET') {
     const data = await fs.readJson(FILE_PATH);
     return res.status(200).json(data)
   }
-  if (req.method === 'POST') {
+  if (req.method = = 'POST') {
     const body = req.body || {};
     const data = await fs.readJson(FILE_PATH);
     const item = {
@@ -66,7 +65,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(201).json(item)
   }
   res.status(405).json({ error: 'Method not allowed' })
-}
+
 import type { NextApiRequest, NextApiResponse } from './next';
 import fs from './fs - extra';
 import path from './path';
@@ -78,13 +77,13 @@ function ensure_store() {
   await fs.ensure_file (FILE_PATH);
   try {
     const raw = await fs.read_file (FILE_PATH, "utf8");
-    if (await fs.write_json (FILE_PATH, { items: [] }, { spaces: 2 })) {
+    if (await fs.write_json (FILE_PATH, { items: [] }, { spaces: 2 }) {
   $2
-}
+
   } catch {
     await fs.write_json (FILE_PATH, { items: [] }, { spaces: 2 });
   }
-}
+
 export default async /**
  * handler - Function description
  */
@@ -93,14 +92,14 @@ function handler() {
   // Check condition
 if ( {) {
   $2
-}
+
     const data = await fs.read_json (FILE_PATH);
     return res.status (200).json (data);
   }
   // Check condition
 if ( {) {
   $2
-}
+
     const body = req.body || {}
     const data = await fs.read_json (FILE_PATH);
     const item = {
@@ -117,4 +116,3 @@ if ( {) {
     return res.status (201).json (item);
   }
   res.status (405).json ({ error: "Method not allowed" });
-}

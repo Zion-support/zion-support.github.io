@@ -6,5 +6,3 @@ export function PostCard() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

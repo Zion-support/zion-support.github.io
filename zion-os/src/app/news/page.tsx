@@ -326,4 +326,3 @@ function NewsPage() {
         </div>;
       </section>;
     </div>);
-}

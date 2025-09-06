@@ -2,7 +2,6 @@ import React from 'react';
 
 interface Enhanced-homeProps {
   className?: string;
-}
 
 const Enhanced-home: React.FC<Enhanced-homeProps> = ({ className }) => {
   return (
@@ -11,6 +10,5 @@ const Enhanced-home: React.FC<Enhanced-homeProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default Enhanced-home;

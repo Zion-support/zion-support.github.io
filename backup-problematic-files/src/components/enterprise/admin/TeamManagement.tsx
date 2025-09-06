@@ -21,11 +21,11 @@ import { Label } from "@/components/ui/label",;
 import { Badge } from "@/components/ui/badge",;
 import { Trash, Mail, UserPlus } from 'lucide-react';
 import { toast } from "@/hooks/use-toast",;
-;
+
 export function TeamManagement() {;
   const [isAddingMember, setIsAddingMember] = useState(false),;
   const [newMemberEmail, setNewMemberEmail] = useState(""),;
-;
+
   // Mock team members data;
   const teamMembers = [;
     {;
@@ -56,7 +56,7 @@ export function TeamManagement() {;
       role:"Viewer",;
       status:"active",;
       lastActive:"3 days ago"}],;
-;
+
   const handleAddMember = () => {;
     // In a real app, this would make an API call to add the member;
     if (!newMemberEmail) {;
@@ -66,29 +66,29 @@ export function TeamManagement() {;
         variant:"destructive"}),;
       return,;
     }
-;
+
     toast({;
       title:"Invitation sent",;
       description:`An invitation has been sent to ${newMemberEmail}`}),;
-;
+
     setNewMemberEmail(""),;
     setIsAddingMember(false),;
   },;
-;
+
   const handleRemoveMember = (_memberId:number) => {;
     // In a real app, this would make an API call to remove the member;
     toast({;
       title:"Team member removed",;
       description:"The team member has been removed from your workspace."}),;
   },;
-;
+
   const handleResendInvite = (memberEmail:string) => {;
     // In a real app, this would make an API call to resend the invitation;
     toast({;
       title:"Invitation resent",;
       description:`A new invitation has been sent to ${memberEmail}`}),;
   },;
-;
+
   return (;
     <div className="space-y-6">;
       <div className="flex items-center justify-between">;
@@ -145,7 +145,7 @@ export function TeamManagement() {;
           </DialogContent>;
         </Dialog>;
       </div>;
-;
+
       <div className="rounded-md border">;
         <Table>;
           <TableHeader>;
@@ -158,7 +158,7 @@ export function TeamManagement() {;
             </TableRow>;
           </TableHeader>;
           <TableBody>;
-            {teamMembers.map((member) => (;
+            {teamMembers.map(member) => (;
               <TableRow key={member.id}>;
                 <TableCell>;
                   <div className="flex items-center gap-2">;
@@ -166,7 +166,7 @@ export function TeamManagement() {;
                       <span className="text-sm font-medium">;
                         {member.name;
                           .split(" ");
-                          .map((n) => n[0]);
+                          .map(n) => n[0]);
                           .join("")}
                       </span>;
                     </div>;
@@ -181,7 +181,7 @@ export function TeamManagement() {;
                 <TableCell>{member.role}</TableCell>;
                 <TableCell>;
                   <Badge;
-                    variant={member.status === "active" ? "default" :"outline"}
+                    variant={member.status = = "active" ? "default" :"outline"}
                   >;
                     {member.status}
                   </Badge>;
@@ -189,7 +189,7 @@ export function TeamManagement() {;
                 <TableCell>{member.lastActive}</TableCell>;
                 <TableCell className="text-right">;
                   <div className="flex justify-end gap-2">;
-                    {member.status === "pending" ? (;
+                    {member.status = = "pending" ? (;
                       <Button;
                         variant="ghost";
                         size="sm";
@@ -210,7 +210,7 @@ export function TeamManagement() {;
                   </div>;
                 </TableCell>;
               </TableRow>;
-            ))}
+            )}
           </TableBody>;
         </Table>;
       </div>;
@@ -229,33 +229,30 @@ DialogDescription;
 DialogFooter;
 DialogHeader;
 DialogTitle;
-//In a real app, this would make an API call to add the member if (!newMemberEmail) {;
+/In a real app, this would make an API call to add the member if (!newMemberEmail) {;
   toast ({;
   setNewMemberEmail ("");
 setIsAddingMember (false);
-};
   //In a real app, this would make an API call to remove the member toast ({;
-  ;
-};
+;
   //In a real app, this would make an API call to resend the invitation toast ({;
-  ;
-};";
+;";
   handleAddMember ";
-}>Send Invitation</Button> </DialogFooter> </DialogContent> </Dialog> </div> <div className=" rounded-md border"> <Table> <TableHeader> <TableRow> <TableHead>Name</TableHead> <TableHead>Role</TableHead> <TableHead>Status</TableHead> <TableHead>Last Active</TableHead> <TableHead className=" text-right">Actions</TableHead> </TableRow> </TableHeader> <TableBody> {;
-  teamMembers.map ( (member) => (<TableRow key= {;
+>Send Invitation</Button> </DialogFooter> </DialogContent> </Dialog> </div> <div className=" rounded-md border"> <Table> <TableHeader> <TableRow> <TableHead>Name</TableHead> <TableHead>Role</TableHead> <TableHead>Status</TableHead> <TableHead>Last Active</TableHead> <TableHead className=" text-right">Actions</TableHead> </TableRow> </TableHeader> <TableBody> {;
+  teamMembers.map (member) => (<TableRow key= {;
   member.id ";
-}> <TableCell> .join ("") ;
-}</span> </div> <div> </div> </div> </div> </TableCell> <TableCell> {;
+> <TableCell> .join ("") ;
+</span> </div> <div></div> </div> </div> </TableCell> <TableCell> {;
   member.role ;
-}</TableCell> <TableCell> <Badge > {;
+</TableCell> <TableCell> <Badge > {;
   member.status ;
-}</Badge> </TableCell> <TableCell> {;
+</Badge> </TableCell> <TableCell> {;
   member.lastActive ";
-}</TableCell> <TableCell className="text-right"> onClick={;
+</TableCell> <TableCell className="text-right"> onClick={;
   () => handleResendInvite (member.email) ";
-}> <Mail className="h-4 w-4 mr-1"/> Resend </Button> className="text-destructive hover:text-destructive"onClick={;
+> <Mail className="h-4 w-4 mr-1"/> Resend </Button> className="text-destructive hover:text-destructive"onClick={;
   () => handleRemoveMember (member.id) ";
-}> <Trash className="h-4 w-4" /> </Button>) ;
-}</div> </TableCell> </TableRow>) ) ;
-}</TableBody> </Table> </div> </div>) ;
-}'"
+> <Trash className="h-4 w-4" /> </Button>) ;
+</div> </TableCell> </TableRow>) ;
+</TableBody> </Table> </div> </div>) ;
+'"

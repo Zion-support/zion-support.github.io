@@ -3,14 +3,13 @@ import { motion } from 'framer-motion',;
 interface UltraAdvancedQuantumBackgroundProps {;
   children: React.ReactNode,;
   className?: string;
-}
-;
+
 const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundProps> = ({;
   children,;
   className = '';
-}) => {;
+) => {;
   const canvasRef = useRef<HTMLCanvasElement>(null),;
-  useEffect(() => {;
+  useEffect() => {;
     const canvas = canvasRef.current,;
     if (!canvas) return,;
     const ctx = canvas.getContext('2d'),;
@@ -40,7 +39,7 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
         this.life = Math.random() * 100,;
         this.maxLife = 100;
       }
-;
+
       update() {;
         this.x += this.vx,;
         this.y += this.vy,;
@@ -52,8 +51,7 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
           this.x = Math.random() * canvas.width,;
           this.y = Math.random() * canvas.height;
         }
-      }
-;
+
       draw() {;
         if (!ctx) return,;
         ctx.save(),;
@@ -64,8 +62,7 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
         ctx.fill(),;
         ctx.restore();
       }
-    }
-;
+
     class QuantumField {;
       x: number,;
       y: number,;
@@ -81,15 +78,15 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
         this.phase = Math.random() * Math.PI * 2,;
         this.color = `hsl(${200 + Math.random() * 60}, 80%, 60%)`;
       }
-;
+
       update() {;
         this.phase += 0.02;
       }
-;
+
       draw() {;
         if (!ctx) return,;
         ctx.save(),;
-        ctx.globalAlpha = this.intensity * (0.5 + 0.5 * Math.sin(this.phase)),;
+        ctx.globalAlpha = this.intensity * (0.5 + 0.5 * Math.sin(this.phase),;
         ctx.strokeStyle = this.color,;
         ctx.lineWidth = 2,;
         ctx.beginPath(),;
@@ -97,8 +94,7 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
         ctx.stroke(),;
         ctx.restore();
       }
-    }
-;
+
     class NeuralNetwork {;
       nodes: { x: number, y: number, connections: number[] }[],;
       connections: { from: number, to: number, weight: number }[],;
@@ -108,10 +104,10 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
         // Create neural network structure;
         const layers = [5, 8, 6, 4],;
         let nodeIndex = 0,;
-        layers.forEach((layerSize, layerIndex) => {;
+        layers.forEach(layerSize, layerIndex) => {;
           for (let i = 0, i < layerSize, i++) {;
-            const x = (layerIndex / (layers.length - 1)) * canvas.width,;
-            const y = (i / (layerSize - 1)) * canvas.height,;
+            const x = (layerIndex / (layers.length - 1) * canvas.width,;
+            const y = (i / (layerSize - 1) * canvas.height,;
             this.nodes.push({ x, y, connections: [] }),;
             // Connect to previous layer;
             if (layerIndex > 0) {;
@@ -123,20 +119,18 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
                   weight: Math.random();
                 });
               }
-            }
             nodeIndex++;
-          }
-        });
+          });
       }
-;
+
       update() {;
         // Animate neural network;
-        this.nodes.forEach((node, index) => {;
+        this.nodes.forEach(node, index) => {;
           node.x += (Math.random() - 0.5) * 0.5,;
           node.y += (Math.random() - 0.5) * 0.5;
         });
       }
-;
+
       draw() {;
         if (!ctx) return,;
         ctx.save(),;
@@ -160,18 +154,17 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
         }),;
         ctx.restore();
       }
-    }
-;
+
     // Initialize;
     for (let i = 0, i < 100, i++) {;
-      particles.push(new Particle());
+      particles.push(new Particle();
     }
-;
+
     for (let i = 0, i < 8, i++) {;
-      quantumFields.push(new QuantumField());
+      quantumFields.push(new QuantumField();
     }
-;
-    neuralNetworks.push(new NeuralNetwork()),;
+
+    neuralNetworks.push(new NeuralNetwork(),;
     const animate = () => {;
       ctx.fillStyle = 'rgba(0, 0, 0, 0.1)',;
       ctx.fillRect(0, 0, canvas.width, canvas.height),;
@@ -198,14 +191,13 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
         if (i + 1 < particles.length) {;
           const p1 = particles[i],;
           const p2 = particles[i + 1],;
-          const distance = Math.sqrt((p1.x - p2.x) ** 2 + (p1.y - p2.y) ** 2),;
+          const distance = Math.sqrt(p1.x - p2.x) ** 2 + (p1.y - p2.y) ** 2),;
           if (distance < 100) {;
             ctx.beginPath(),;
             ctx.moveTo(p1.x, p1.y),;
             ctx.lineTo(p2.x, p2.y),;
             ctx.stroke();
           }
-        }
       }
       ctx.restore(),;
       animationFrameId = requestAnimationFrame(animate);
@@ -219,8 +211,7 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
     return () => {;
       window.removeEventListener('resize', handleResize),;
       cancelAnimationFrame(animationFrameId);
-    }
-  }, []),;
+    }, []),;
   return (;
     <div className={`relative min-h-screen overflow-hidden ${className}`}>;
       {/* Quantum Matrix Overlay */}
@@ -239,46 +230,46 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
       {/* Floating Quantum Elements */}
       <motion.div
         className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full opacity-20 blur-xl"
-        animate={{
+        animate={
           scale: [1, 1.2, 1],
-          opacity: [0.2, 0.4, 0.2]}}
-        transition={{
+          opacity: [0.2, 0.4, 0.2]}
+        transition={
           duration: 4,
           repeat: Infinity,
           ease: "easeInOut"
-        }}
+        }
       />
-      
+
       <motion.div
         className="absolute top-40 right-32 w-24 h-24 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full opacity-20 blur-xl"
-        animate={{
+        animate={
           scale: [1, 1.3, 1],
-          opacity: [0.2, 0.5, 0.2]}}
-        transition={{
+          opacity: [0.2, 0.5, 0.2]}
+        transition={
           duration: 5,
           repeat: Infinity,
           ease: "easeInOut",
           delay: 1
-        }}
+        }
       />
 
       <motion.div
         className="absolute bottom-32 left-1/3 w-28 h-28 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full opacity-20 blur-xl"
-        animate={{
+        animate={
           scale: [1, 1.4, 1],
-          opacity: [0.2, 0.6, 0.2]}}
-        transition={{
+          opacity: [0.2, 0.6, 0.2]}
+        transition={
           duration: 6,
           repeat: Infinity,
           ease: "easeInOut",
           delay: 2
-        }}
+        }
       />;
       {/* Quantum Canvas */}
       <canvas;
         ref={canvasRef}
         className="absolute inset-0 w-full h-full opacity-60"
-        style={{ zIndex: 1 }}
+        style={ zIndex: 1 }
       />;
       {/* Content Layer */}
       <div className="relative z-10">
@@ -288,27 +279,27 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
       <div className="absolute bottom-0 left-0 right-0 h-32 overflow-hidden">
         <motion.div
           className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cyan-500/20 to-transparent"
-          animate={{
-            x: [0, -100, 0]}}
-          transition={{
+          animate={
+            x: [0, -100, 0]}
+          transition={
             duration: 8,
             repeat: Infinity,
             ease: "linear"
-          }}
+          }
         />
         <motion.div
           className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-purple-500/20 to-transparent"
-          animate={{
-            x: [0, 100, 0]}}
-          transition={{
+          animate={
+            x: [0, 100, 0]}
+          transition={
             duration: 10,
             repeat: Infinity,
             ease: "linear",
             delay: 2
-          }}
+          }
         />;
       </div>;
     </div>;
   );
-},;
+,;
 export default UltraAdvancedQuantumBackground;

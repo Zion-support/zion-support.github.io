@@ -3,7 +3,6 @@ import React from 'react';
 
 interface TermsProps {
   className?: string;
-}
 
 const Terms: React.FC<TermsProps> = ({ className }) => {
   return (
@@ -12,5 +11,3 @@ const Terms: React.FC<TermsProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-}
-}

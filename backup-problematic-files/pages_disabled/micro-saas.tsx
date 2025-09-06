@@ -2,7 +2,6 @@ import React from 'react';
 
 interface Micro-saasProps {
   className?: string;
-}
 
 const Micro-saas: React.FC<Micro-saasProps> = ({ className }) => {
   return (
@@ -11,6 +10,5 @@ const Micro-saas: React.FC<Micro-saasProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default Micro-saas;

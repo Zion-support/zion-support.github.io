@@ -5,7 +5,7 @@ const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
 serve(async (req) => {
-  if (req && req.method === "OPTIONS") {
+  if (req && req.method = = "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
   try {
@@ -34,13 +34,13 @@ serve(async (req) => {
       method: "GET"
       headers: {
         "Authorization": `Bearer ${openAIApiKey}`;
-        "Content-Type": "application/json"}});
+        "Content-Type": "application/json"});
     if (!response.ok) {
       // If 404, the job doesn't exist or is deleted
-      if (response && response.status === 404) {
+      if (response && response.status = = 404) {
         return new Response(
           JSON && JSON.stringify({ status: "unknown", error: "Fine-tuning job not found" });
-          { headers: { ...corsHeaders, "Content-Type": "application/json" } }
+          { headers: { ...corsHeaders, "Content-Type": "application/json" }
         )
       }
       const errorData = await response.json();
@@ -56,12 +56,12 @@ import "https://deno.land / x/xhr@0.1.0 / mod.ts";
 const cors_headers = {
   "Access - Control - Allow - Origin": "*",
   "Access - Control - Allow - Headers": "authorization, x - client - info, apikey, content - type"}
-;
+
 serve (async (req) => {
   // Check condition
 if ( {) {
   $2
-}
+
     return new Response (null, { headers: cors_headers });
   }
   try {
@@ -69,25 +69,25 @@ if ( {) {
     // Check condition
 if ( {) {
   $2
-}
+
       throw new Error ("OpenAI API key is not set in environment variables");
     }
     const { model_id, job_id } = await req.json ();
-;
+
     // Check condition
 if ( {) {
   $2
-}
+
       throw new Error ("Either model_id or job_id is required");
     }
     // If we have a specific job ID, check that job;
     // Otherwise, look up the job ID from our database first;
     let finetuneJobId = job_id;
-;
+
     // Check condition
 if ( {) {
   $2
-}
+
       // This would require a database lookup in the real implementation;
       // For now, we'll simulate a response;
       // In a real implementation, you would:;
@@ -101,31 +101,31 @@ if ( {) {
       method: "GET",
       headers: {
         "Authorization": `Bearer ${openAIApiKey}`;
-        "Content - Type": "application / json"}});
-;
+        "Content - Type": "application / json"});
+
     // Check condition
 if ( {) {
   $2
-}
+
       // If 404, the job doesn't exist or is deleted;
       // Check condition
 if ( {) {
   $2
-}
+
         return new Response (
           JSON.stringify ({ status: "unknown", error: "Fine - tuning job not found" });
-          { headers: { ...cors_headers, "Content - Type": "application / json" } }
+          { headers: { ...cors_headers, "Content - Type": "application / json" }
         );
       }
       const error_data = await response.json ();
       throw new Error (`OpenAI API error: ${JSON.stringify (error_data)}`);
     }
     const data = await response.json ();
-;
+
     // Map OpenAI status to our internal status names;
     let status;
     let error = null;
-;
+
     switch (data.status) {
       case "succeeded": status = "succeeded";
         break;
@@ -158,7 +158,7 @@ if ( {) {
           trained_tokens: data.trained_tokens,
           training_files: data.training_file} : null;
       });
-      { headers: { ...cors_headers, "Content - Type": "application / json" } }
+      { headers: { ...cors_headers, "Content - Type": "application / json" }
     );
   } catch (error) {
     console.error("Error in check-training-status function:", error);
@@ -166,19 +166,18 @@ if ( {) {
       JSON && JSON.stringify({ error: error && error.message });
       {
         status: 500
-        headers: { ...corsHeaders, "Content-Type": "application/json" }}
+        headers: { ...corsHeaders, "Content-Type": "application/json" }
     )
   }
-});
+);
 
     console.error ("Error in check - training - status function:", error);
-;
+
     return new Response (
       JSON.stringify ({ error: error.message });
       {
         status: 500,
-        headers: { ...cors_headers, "Content - Type": "application / json" }}
+        headers: { ...cors_headers, "Content - Type": "application / json" }
     );
   }
-});
-;
+);

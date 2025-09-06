@@ -2,7 +2,6 @@ import React from 'react';
 
 interface RetailProps {
   className?: string;
-}
 
 const Retail: React.FC<RetailProps> = ({ className }) => {
   return (
@@ -11,6 +10,5 @@ const Retail: React.FC<RetailProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default Retail;

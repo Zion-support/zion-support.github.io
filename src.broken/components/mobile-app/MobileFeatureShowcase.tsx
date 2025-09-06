@@ -6,5 +6,3 @@ export function MobileFeatureShowcase() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

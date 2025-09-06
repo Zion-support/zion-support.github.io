@@ -2,7 +2,6 @@ import React from 'react';
 
 interface GovernmentProps {
   className?: string;
-}
 
 const Government: React.FC<GovernmentProps> = ({ className }) => {
   return (
@@ -11,6 +10,5 @@ const Government: React.FC<GovernmentProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default Government;

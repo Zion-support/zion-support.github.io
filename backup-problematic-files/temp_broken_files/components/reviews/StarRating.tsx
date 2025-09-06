@@ -5,7 +5,7 @@ type Props = {
   onChange: (val: number) => void,
   size?: number,
   readOnly?: boolean
-},
+,
 
 export const StarRating: React.FC<Props> = ({ value, onChange, size = 24, readOnly }) => {
   const [hovered, setHovered] = useState<number | null>(null),
@@ -14,7 +14,7 @@ export const StarRating: React.FC<Props> = ({ value, onChange, size = 24, readOn
 
   return (
     <div className=&quot;flex items-center gap-1&quot;>
-      {stars.map((star) => {
+      {stars.map(star) => {
         const active = (hovered ?? value) >= star,
         return (
           <button
@@ -44,6 +44,6 @@ export const StarRating: React.FC<Props> = ({ value, onChange, size = 24, readOn
       })}
     </div>
   )
-},
+,
 
 export default StarRating,

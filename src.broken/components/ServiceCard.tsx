@@ -6,5 +6,3 @@ export function ServiceCard() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

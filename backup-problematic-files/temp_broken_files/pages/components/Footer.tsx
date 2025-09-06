@@ -46,7 +46,7 @@ import {
   PieChart,
   ClipboardList,
   Layers
-} from 'lucide-react';
+ from 'lucide-react';
 
 const footerSections = [
   {
@@ -127,7 +127,7 @@ const footerSections = [
       { title: 'Get Quote', href: '/quote', icon: FileText }
     ]
   }
-];
+;
 
 const microSaasCategories = [
   { title: 'Marketing Tools', icon: Target, count: 15 },
@@ -138,7 +138,7 @@ const microSaasCategories = [
   { title: 'Finance', icon: DollarSign, count: 10 },
   { title: 'Design', icon: Paintbrush, count: 6 },
   { title: 'Development', icon: Code, count: 14 }
-];
+;
 
 const aiServiceCategories = [
   { title: 'Machine Learning', icon: Brain, count: 25 },
@@ -147,7 +147,7 @@ const aiServiceCategories = [
   { title: 'Predictive Analytics', icon: TrendingUp, count: 15 },
   { title: 'Robotics', icon: Settings, count: 8 },
   { title: 'Quantum AI', icon: Code, count: 5 }
-];
+;
 
 const itServiceCategories = [
   { title: 'Cloud Computing', icon: Cloud, count: 30 },
@@ -156,7 +156,7 @@ const itServiceCategories = [
   { title: 'Data Management', icon: HardDrive, count: 15 },
   { title: 'Network Security', icon: Lock, count: 18 },
   { title: 'Infrastructure', icon: Building, count: 22 }
-];
+;
 
 export default function Footer() {
   return (
@@ -175,12 +175,12 @@ export default function Footer() {
                 <div className="text-sm text-gray-400">AI & Technology Solutions</div>
               </div>
             </div>
-            
+
             <p className="text-gray-400 mb-6 leading-relaxed">
               Leading provider of AI services, IT solutions, and innovative micro SaaS platforms. 
               We help businesses scale, automate, and innovate with cutting-edge technology.
             </p>
-            
+
             {/* Contact Info */}
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
@@ -202,7 +202,7 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-6">Services</h3>
             <div className="space-y-4">
-              {footerSections[0].links.map((link) => (
+              {footerSections[0].links.map(link) => (
                 <Link
                   key={link.title}
                   href={link.href}
@@ -212,7 +212,7 @@ export default function Footer() {
                   <span>{link.title}</span>
                   <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </Link>
-              ))}
+              )}
             </div>
           </div>
 
@@ -220,7 +220,7 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-6">Solutions</h3>
             <div className="space-y-4">
-              {footerSections[1].links.map((link) => (
+              {footerSections[1].links.map(link) => (
                 <Link
                   key={link.title}
                   href={link.href}
@@ -230,7 +230,7 @@ export default function Footer() {
                   <span>{link.title}</span>
                   <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </Link>
-              ))}
+              )}
             </div>
           </div>
 
@@ -238,7 +238,7 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-6">Resources</h3>
             <div className="space-y-4">
-              {footerSections[3].links.map((link) => (
+              {footerSections[3].links.map(link) => (
                 <Link
                   key={link.title}
                   href={link.href}
@@ -248,7 +248,7 @@ export default function Footer() {
                   <span>{link.title}</span>
                   <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </Link>
-              ))}
+              )}
             </div>
           </div>
         </div>
@@ -260,13 +260,13 @@ export default function Footer() {
             <div>
               <h4 className="text-lg font-semibold mb-4 text-blue-400">Micro SaaS Solutions</h4>
               <div className="grid grid-cols-2 gap-2">
-                {microSaasCategories.map((category) => (
+                {microSaasCategories.map(category) => (
                   <div key={category.title} className="flex items-center space-x-2 text-sm text-gray-400">
                     <category.icon className="w-4 h-4" />
                     <span>{category.title}</span>
                     <span className="text-blue-400">({category.count})</span>
                   </div>
-                ))}
+                )}
               </div>
             </div>
 
@@ -274,13 +274,13 @@ export default function Footer() {
             <div>
               <h4 className="text-lg font-semibold mb-4 text-green-400">AI Services</h4>
               <div className="grid grid-cols-2 gap-2">
-                {aiServiceCategories.map((category) => (
+                {aiServiceCategories.map(category) => (
                   <div key={category.title} className="flex items-center space-x-2 text-sm text-gray-400">
                     <category.icon className="w-4 h-4" />
                     <span>{category.title}</span>
                     <span className="text-green-400">({category.count})</span>
                   </div>
-                ))}
+                )}
               </div>
             </div>
 
@@ -288,13 +288,13 @@ export default function Footer() {
             <div>
               <h4 className="text-lg font-semibold mb-4 text-purple-400">IT Services</h4>
               <div className="grid grid-cols-2 gap-2">
-                {itServiceCategories.map((category) => (
+                {itServiceCategories.map(category) => (
                   <div key={category.title} className="flex items-center space-x-2 text-sm text-gray-400">
                     <category.icon className="w-4 h-4" />
                     <span>{category.title}</span>
                     <span className="text-purple-400">({category.count})</span>
                   </div>
-                ))}
+                )}
               </div>
             </div>
           </div>
@@ -332,7 +332,7 @@ export default function Footer() {
               <Link href="/privacy" className="hover:text-white transition-colors ml-1">Privacy Policy</Link> | 
               <Link href="/terms" className="hover:text-white transition-colors ml-1">Terms of Service</Link>
             </div>
-            
+
             <div className="flex items-center space-x-6">
               <Link href="/sitemap" className="text-gray-400 hover:text-white transition-colors text-sm">
                 Sitemap
@@ -349,4 +349,3 @@ export default function Footer() {
       </div>
     </footer>
   );
-}

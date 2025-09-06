@@ -6,5 +6,3 @@ export function EnterpriseTrustBadges() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

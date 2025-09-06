@@ -6,5 +6,3 @@ export function PartnerLeaderboard() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

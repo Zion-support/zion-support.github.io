@@ -3,15 +3,14 @@ import React from "react";
 interface TalentDirectoryHeaderProps {
   title: string;
   description: string
-}
+
 export function TalentDirectoryHeader({
   title
   description
-}: TalentDirectoryHeaderProps) {
+: TalentDirectoryHeaderProps) {
 interface TalentDirectoryHeaderProps {;
   title: string,;
   description: string;
-}
 
 export function TalentDirectoryHeader(): any ({ title, description }: TalentDirectoryHeaderProps) {;
   return (
@@ -24,7 +23,7 @@ export function TalentDirectoryHeader(): any ({ title, description }: TalentDire
       </div>
     </div>
   );
-}
+
 export /**
  * TalentDirectoryHeader - Function description
  */
@@ -38,4 +37,3 @@ function TalentDirectoryHeader() {
         <p className="text - zion - slate - light max - w-2xl">{description}</p>;
       </div>;
     </div>);
-}

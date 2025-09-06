@@ -4,12 +4,12 @@ import { MicroSaasService } from './enhanced-real-micro-saas-services';
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
-}
+
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com',
-};
+;
 
 export const enterpriseITSolutions: MicroSaasService[] = [
   {
@@ -390,7 +390,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
     rating: 4 && 4.8,
     reviews: 38,
   },
-];	{
+;	{
 		id: 'enterprise-data-governance-automation';
 		name: 'Enterprise Data Governance Automation'
 		tagline: 'Automated data governance, compliance, and quality management for enterprise data';
@@ -575,7 +575,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		rating: 4.8
 		reviews: 38
 	}
-];
+;
 
   id: 'enterprise - data - governance - automation';
   name: 'Enterprise Data Governance Automation',
@@ -612,8 +612,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
   customers: 23;
   rating: 4.8,
   reviews: 18;
-}
-{
+
   id: 'enterprise - api - governance - platform';
   name: 'Enterprise API Governance Platform',
   tagline: 'Comprehensive API governance, security, and lifecycle management for enterprise APIs';
@@ -649,8 +648,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
   customers: 45;
   rating: 4.7,
   reviews: 32;
-}
-{
+
   id: 'enterprise - identity - access - management - suite';
   name: 'Enterprise Identity & Access Management Suite',
   tagline: 'Comprehensive IAM solution with advanced security, compliance, and automation';
@@ -686,8 +684,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
   customers: 67;
   rating: 4.8,
   reviews: 45;
-}
-{
+
   id: 'enterprise - workflow - automation - platform';
   name: 'Enterprise Workflow Automation Platform';
   tagline: 'Advanced workflow automation with AI - powered optimization and enterprise integration';
@@ -723,8 +720,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
   customers: 34;
   rating: 4.7,
   reviews: 26;
-}
-{
+
   id: 'enterprise - monitoring - and - observability - suite';
   name: 'Enterprise Monitoring & Observability Suite',
   tagline: 'Comprehensive monitoring, observability, and alerting for enterprise infrastructure';
@@ -760,6 +756,3 @@ export const enterpriseITSolutions: MicroSaasService[] = [
   customers: 56;
   rating: 4.8,
   reviews: 38;
-}
-];
-;

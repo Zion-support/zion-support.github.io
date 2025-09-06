@@ -6,5 +6,3 @@ export function RecentContractsTable() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

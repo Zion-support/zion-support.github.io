@@ -30,12 +30,12 @@ export default function FoundationPage() {
           <h2 className="text-2xl font-semibold">Transparency Reports</h2>
           <p className="text-gray-600 dark:text-gray-300">Quarterly financials, grants, and impact metrics. Initial placeholders shown until reports are published.</p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {[1,2,3].map((q) => (
+            {[1,2,3].map(q) => (
               <div key={q} className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
                 <div className="font-medium">Report Q{q} 2025</div>
                 <div className="text-sm text-gray-600 dark:text-gray-400">Status: Draft</div>
               </div>
-            ))}
+            )}
           </div>
         </section>
         <section className='space-y-4' id='grants'>
@@ -66,7 +66,7 @@ export default function FoundationPage() {
     </>
   );
               </div>;
-            ))}
+            )}
           </div>;
         </section>;
 
@@ -95,7 +95,7 @@ export default function FoundationPage() {
 import Head from 'next / head';
 import Link from 'next / link';
 import CharterGenerator from '../components / foundation / CharterGenerator';
-              </div>))}
+              </div>)}
           </div>;
         </section>;
         <section className='space - y-4' id='grants'>;
@@ -144,6 +144,5 @@ import CharterGenerator from '../components / foundation / CharterGenerator';
       </div>
     </>
   )
-}
+
     </>);
-;

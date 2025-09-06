@@ -7,6 +7,5 @@ const Mobile = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default Mobile;

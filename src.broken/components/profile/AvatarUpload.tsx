@@ -6,5 +6,3 @@ export function AvatarUpload() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

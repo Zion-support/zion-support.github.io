@@ -10,7 +10,7 @@ import {
   GridIcon
   List
   Loader2
-} from 'lucide-react'
+ from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Badge } from '@/components/ui/badge'
@@ -19,7 +19,7 @@ import { Badge } from '@/components/ui/badge'
   SelectItem
   SelectTrigger
   SelectValue
-} from '@/components/ui/select'
+ from '@/components/ui/select'
 import { Checkbox } from '@/components/ui/checkbox'
 import { Slider } from '@/components/ui/slider'
 import { Separator } from '@/components/ui/separator'
@@ -28,7 +28,7 @@ import { Separator } from '@/components/ui/separator'
   SheetHeader
   SheetTitle
   SheetTrigger
-} from '@/components/ui/sheet'
+ from '@/components/ui/sheet'
 import { EnhancedSearchInput } from './EnhancedSearchInput'
 import { generateSearchSuggestions } from '@/data/marketplaceData'
 import { logErrorToProduction, logInfo } from '@/utils/productionLogger'
@@ -39,23 +39,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React, { useState, useEffect, useMemo } from 'react';
 import { useRouter } from 'next/router';
 import {;
@@ -67,7 +67,7 @@ import {;
   GridIcon,;
   List,;
   Loader2,;
-} from 'lucide-react';
+ from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
@@ -77,7 +77,7 @@ import {;
   SelectItem,;
   SelectTrigger,;
   SelectValue,;
-} from '@/components/ui/select';
+ from '@/components/ui/select';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Slider } from '@/components/ui/slider';
 import { Separator } from '@/components/ui/separator';
@@ -87,7 +87,7 @@ import {;
   SheetHeader,;
   SheetTitle,;
   SheetTrigger,;
-} from '@/components/ui/sheet';
+ from '@/components/ui/sheet';
 import { EnhancedSearchInput } from './EnhancedSearchInput';
 import { generateSearchSuggestions } from '@/data/marketplaceData';
 import { logErrorToProduction, logInfo } from '@/utils/productionLogger';
@@ -103,7 +103,7 @@ import {
   GridIcon,
   List,
   Loader2,
-} from 'lucide-react';
+ from 'lucide-react';
 import { Button } from '@/components / ui / button';
 import { Input } from '@/components / ui / input';
 import { Badge } from '@/components / ui / badge';
@@ -112,7 +112,7 @@ import { Badge } from '@/components / ui / badge';
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '@/components / ui / select';
+ from '@/components / ui / select';
 import { Checkbox } from '@/components / ui / checkbox';
 import { Slider } from '@/components / ui / slider';
 import { Separator } from '@/components / ui / separator';
@@ -121,7 +121,7 @@ import { Separator } from '@/components / ui / separator';
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from '@/components / ui / sheet';
+ from '@/components / ui / sheet';
 import { EnhancedSearchInput } from './EnhancedSearchInput';
 import { generateSearchSuggestions } from '@/data / marketplace_data';
 import { logErrorToProduction, log_info } from '@/utils / production_logger';
@@ -152,21 +152,20 @@ interface SearchResponse {
   limit: number;
   query: string;
   hasMore: boolean
-// Highlight search terms in text
+/ Highlight search terms in text
 
 const HighlightText: React.FC<{
   text: string
   searchTerm: string
   className?: string
-}> = ({ text, searchTerm, className = '' }) => {  if (!searchTerm.trim()) {
+> = ({ text, searchTerm, className = '' }) => {  if (!searchTerm.trim() {
     return <span className={className}>{text}</span>
   }
   const parts = text.split(
     new RegExp(`(${searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi')
-  )
   return (
     <span className={className}>;
-      {parts && parts.map((part, index) =>        part && part.toLowerCase() === searchTerm && searchTerm.toLowerCase() ? (;
+      {parts && parts.map(part, index) =>        part && part.toLowerCase() = = searchTerm && searchTerm.toLowerCase() ? (;
           <mark key={index} className='bg-yellow-200 text-black px-1 rounded'>;
             {part}
           </mark>;
@@ -176,48 +175,47 @@ const HighlightText: React.FC<{
       )}
     </span>
   )
-}
+
     return <span className={class_name}>{text}</span>;
   }
   const parts = text.split (
-    new RegExp (`(${search_term.replace (/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi'));
+    new RegExp (`(${search_term.replace (/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
   return (
     <span className={class_name}>;
-      {parts.map ((part, index) =>        part.toLowerCase () === search_term.toLowerCase () ? (
+      {parts.map (part, index) =>        part.toLowerCase () = = search_term.toLowerCase () ? (
           <mark key={index} className='bg - yellow - 200 text - black px - 1 rounded'>;
             {part}
           </mark>) : (
-          part))}
+          part)}
     </span>);
-}
-// Search Result Card Component;
+
+/ Search Result Card Component;
 const SearchResultCard: React.FC<{
   result: SearchResult;
   search_term: string;
   view_mode: 'grid' | 'list';
-}> = ({ result, search_term, view_mode }) => {
+> = ({ result, search_term, view_mode }) => {
   const router = use_router ();
   const handle_click = () =>: any {
     // Check condition
 if ( {) {
   $2
-}
+
       router.push (result.url);
     }
-  }
   const cardClass =
-    viewMode === 'grid'
+    viewMode = = 'grid'
       ? 'bg-card border rounded-lg p-4 hover:shadow-lg transition-shadow cursor-pointer'
       : 'bg-card border rounded-lg p-4 hover:shadow-lg transition-shadow cursor-pointer flex gap-4'
   return (
     <div onClick={handleClick} className={cardClass}>;
       {result && result.image && (;
-        <div className={viewMode === 'grid' ? 'mb-3' : 'flex-shrink-0'}>;
+        <div className={viewMode = = 'grid' ? 'mb-3' : 'flex-shrink-0'}>;
           <img
             src={result && result.image}
             alt={result && result.title}
             className={
-              viewMode === 'grid'
+              viewMode = = 'grid'
                 ? 'w-full h-48 object-cover rounded'
                 : 'w-20 h-20 object-cover rounded'
             }          />;
@@ -236,10 +234,10 @@ if ( {) {
           {result.price && (
             <div className='text - right'>;
               <span className='font - bold text - primary'>;
-                {result.currency === 'USD' ? '$' : ''}
+                {result.currency = = 'USD' ? '$' : ''}
                 {result.price}
               </span>;
-              {result.type === 'talent' && (
+              {result.type = = 'talent' && (
                 <span className='text-sm text-muted-foreground'>/hr</span>
               )}
             </div>;
@@ -255,10 +253,10 @@ if ( {) {
                 {result.category}
               </Badge>
             )}
-            {result && result.tags?.slice(0, 3).map((tag, index) => (;
+            {result && result.tags?.slice(0, 3).map(tag, index) => (;
               <Badge key={index} variant='outline' className='text-xs'>                <HighlightText text={tag} searchTerm={searchTerm} />;
               </Badge>;
-            ))}
+            )}
           </div>
           {result.rating && (
             <div className='flex items - center gap - 1'>;
@@ -268,13 +266,13 @@ if ( {) {
         </div>;
       </div>;
     </div>);
-}
-// Filter Sidebar Component;
+
+/ Filter Sidebar Component;
 const FilterSidebar: React.FC<{
   filters: SearchFilters
   onFiltersChange: (filters: SearchFilters) => void
   availableCategories: string[]
-}> = ({ filters, onFiltersChange, availableCategories }) => {  const typeOptions = [
+> = ({ filters, onFiltersChange, availableCategories }) => {  const typeOptions = [
     { id: 'product', label: 'Products' }
     { id: 'talent', label: 'Talent' }
     { id: 'service', label: 'Services' }
@@ -282,7 +280,7 @@ const FilterSidebar: React.FC<{
   ]
   const handleTypeChange = (typeId: string, checked: boolean) => {
     const newTypes = checked      ? [...filters.types, typeId]
-      : filters.types.filter(t => t !== typeId)
+      : filters.types.filter(t => t != typeId)
     onFiltersChange({ ...filters, types: newTypes })
   }
   const handlePriceChange = (values: number[]) => {
@@ -304,14 +302,13 @@ const FilterSidebar: React.FC<{
       </div>;
     </div>;
   );
-};
 
-// Filter Sidebar Component;
+/ Filter Sidebar Component;
 const FilterSidebar: React.FC<{;
   filters: SearchFilters;
   onFiltersChange: (filters: SearchFilters) => void;
   availableCategories: string[];
-}> = ({ filters, onFiltersChange, availableCategories }) => {  const typeOptions = [;
+> = ({ filters, onFiltersChange, availableCategories }) => {  const typeOptions = [;
     { id: 'product', label: 'Products' },;
     { id: 'talent', label: 'Talent' },;
     { id: 'service', label: 'Services' },;
@@ -320,7 +317,7 @@ const FilterSidebar: React.FC<{;
 
   const handleTypeChange = (typeId: string, checked: boolean) => {;
     const newTypes = checked      ? [...filters && filters.types, typeId];
-      : filters && filters.types.filter(t => t !== typeId);
+      : filters && filters.types.filter(t => t != typeId);
 
     onFiltersChange({ ...filters, types: newTypes });
   };
@@ -349,7 +346,7 @@ const FilterSidebar: React.FC<{;
                 {option && option.label}
               </label>;
             </div>;
-          ))}
+          )}
         </div>
       </div>
       <Separator />
@@ -360,7 +357,7 @@ const FilterSidebar: React.FC<{;
           onValueChange={value =>
             onFiltersChange({
               ...filters
-              category: value === 'all' ? '' : value
+              category: value = = 'all' ? '' : value
             })
     <div className='space - y-6'>;
       <div>;
@@ -377,7 +374,7 @@ const FilterSidebar: React.FC<{;
               <label html_for={option.id} className='text - sm'>;
                 {option.label}
               </label>;
-            </div>))}
+            </div>)}
         </div>;
       </div>;
       <Separator />;
@@ -388,7 +385,7 @@ const FilterSidebar: React.FC<{;
           onValueChange={value =>;
             onFiltersChange ({
               ...filters,
-              category: value === 'all' ? '' : value,
+              category: value = = 'all' ? '' : value,
             });
           }
         >          <SelectTrigger>;
@@ -400,7 +397,7 @@ const FilterSidebar: React.FC<{;
               <SelectItem key={category} value={category}>;
                 {category}
               </SelectItem>;
-            ))}
+            )}
           </SelectContent>
         </Select>
       </div>
@@ -413,7 +410,7 @@ const FilterSidebar: React.FC<{;
             {available_categories.map (category => (
               <SelectItem key={category} value={category}>;
                 {category}
-              </SelectItem>))}
+              </SelectItem>)}
           </SelectContent>;
         </Select>;
       </div>;
@@ -457,12 +454,12 @@ const FilterSidebar: React.FC<{;
       </div>
     </div>
   )
-}
-// No Results Component;
+
+/ No Results Component;
 const NoResultsState: React.FC<{
   searchTerm: string
   onNewSearch: (term: string) => void
-}> = ({ searchTerm, onNewSearch }) => {  const suggestions = [
+> = ({ searchTerm, onNewSearch }) => {  const suggestions = [
     'AI & Machine Learning'
     'Web Development'
     'Mobile App Development'
@@ -484,7 +481,7 @@ const NoResultsState: React.FC<{
         <div>
           <h3 className='font-semibold mb-3'>Search Suggestions:</h3>
           <div className='flex flex-wrap gap-2 justify-center'>
-            {suggestions.map((suggestion, index) => (
+            {suggestions.map(suggestion, index) => (
               <Button
                 key={index}
                 variant='outline'
@@ -492,7 +489,7 @@ const NoResultsState: React.FC<{
                 onClick={() => onNewSearch(suggestion)}              >;
                 {suggestion}
               </Button>;
-            ))}
+            )}
           </div>
         </div>
         <div className='text-sm text-muted-foreground'>
@@ -507,8 +504,8 @@ const NoResultsState: React.FC<{
       </div>
     </div>
   )
-}
-// Main Search Results Page Component;
+
+/ Main Search Results Page Component;
 export const AdvancedSearchResults: React.FC = () => {
   const router = useRouter()
   const [searchTerm, setSearchTerm] = useState('')
@@ -529,25 +526,24 @@ export const AdvancedSearchResults: React.FC = () => {
   })
   const suggestions = generateSearchSuggestions()
   // Extract available categories from results for filter
-  const availableCategories = useMemo(() => {
+  const availableCategories = useMemo() => {
     const categories = new Set<string>();    results.forEach(result => {
       if (result.category) categories.add(result.category)
     })
     return Array.from(categories).sort()
   }, [results])
   // Sync search term with URL
-  useEffect((,) => {
+  useEffect(,) => {
     if (router.isReady && router.query.q) {
       const urlTerm = router.query.q as string
       setSearchTerm(urlTerm)
-    }
-  }, [router.isReady, router.query.q])
+    }, [router.isReady, router.query.q])
   // Search function
   const performSearch = async (
     term: string
     page: number = 1
     newFilters?: SearchFilters
-  ) => {    if (!term.trim()) {
+  ) => {    if (!term.trim() {
       setResults([])
       setTotalCount(0)
       return
@@ -561,41 +557,41 @@ export const AdvancedSearchResults: React.FC = () => {
         limit: '20'
       })
       if (searchFilters.types.length > 0) {
-        params.append('type', searchFilters.types.join(','))
+        params.append('type', searchFilters.types.join(',')
       }
       // Check condition
 if ( {) {
   $2
-}
+
         params.append ('category', search_filters.category);
       }
       // Check condition
 if ( {) {
   $2
-}
-        params.append ('min_price', search_filters.min_price.to_string ());
+
+        params.append ('min_price', search_filters.min_price.to_string ();
       }
       // Check condition
 if ( {) {
   $2
-}
-        params.append ('max_price', search_filters.max_price.to_string ());
+
+        params.append ('max_price', search_filters.max_price.to_string ();
       }
       // Check condition
 if ( {) {
   $2
-}
-        params.append ('min_rating', search_filters.min_rating.to_string ());
+
+        params.append ('min_rating', search_filters.min_rating.to_string ();
       }
       // Check condition
 if ( {) {
   $2
-}
+
         params.append ('sort', search_filters.sort);
       }
       const response = await fetch(`/api/search?${params}`)
       const data: SearchResponse = await response.json()
-      if (page === 1) {
+      if (page = = 1) {
         setResults(data.results)
       } else {
         set_results (prev => [...prev, ...data.results]);
@@ -615,16 +611,14 @@ if ( {) {
     } finally {
       set_loading (false);
     }
-  }
   // Search when term or filters change;
-  useEffect ((, ) => {
+  useEffect (, ) => {
     if () {) {
   $2
-}
+
       perform_search (search_term, 1, filters);
       setCurrentPage (1);
-    }
-  }, [searchTerm, filters])
+    }, [searchTerm, filters])
   // Handle search input
   const handleSearch = (term: string) => {
     setSearchTerm(term)
@@ -641,10 +635,9 @@ if ( {) {
     // Check condition
 if ( {) {
   $2
-}
+
       perform_search (search_term, current_page + 1);
     }
-  }
   // Active filters count
   const activeFiltersCount =
     filters.types.length +
@@ -708,13 +701,13 @@ if ( {) {
               {/* View Mode Toggle */}
               <div className='flex border rounded-md'>;
                 <Button
-                  variant={viewMode === 'grid' ? 'default' : 'ghost'}
+                  variant={viewMode = = 'grid' ? 'default' : 'ghost'}
                   size='sm'
                   onClick={() => setViewMode('grid')}                >;
                   <GridIcon className='h-4 w-4' />;
                 </Button>;
                 <Button
-                  variant={viewMode === 'list' ? 'default' : 'ghost'}
+                  variant={viewMode = = 'list' ? 'default' : 'ghost'}
                   size='sm'
                   onClick={() => setViewMode('list')}                >
                   <List className='h-4 w-4' />
@@ -728,13 +721,13 @@ if ( {) {
               {/* View Mode Toggle */}
               <div className='flex border rounded - md'>;
                 <Button;
-                  variant={view_mode === 'grid' ? 'default' : 'ghost'}
+                  variant={view_mode = = 'grid' ? 'default' : 'ghost'}
                   size='sm';
                   on_click={() => setViewMode ('grid')}                >;
                   <GridIcon className='h - 4 w - 4' />;
                 </Button>;
                 <Button;
-                  variant={view_mode === 'list' ? 'default' : 'ghost'}
+                  variant={view_mode = = 'list' ? 'default' : 'ghost'}
                   size='sm';
                   on_click={() => setViewMode ('list')}                >;
                   <List className='h - 4 w - 4' />;
@@ -800,11 +793,11 @@ if ( {) {
           </div>
           {/* Main Content */}
           <div className='flex-1'>;
-            {loading && results && results.length === 0 ? (;
+            {loading && results && results.length = = 0 ? (;
               <div className='flex justify-center py-12'>;
                 <Loader2 className='h-8 w-8 animate-spin' />;
               </div>;
-            ) : results && results.length === 0 && searchTerm ? (;
+            ) : results && results.length = = 0 && searchTerm ? (;
               <NoResultsState
                 searchTerm={searchTerm}
                 onNewSearch={handleSearch}              />;
@@ -813,7 +806,7 @@ if ( {) {
                 {/* Results Grid/List */}
                 <div
                   className={
-                    viewMode === 'grid'
+                    viewMode = = 'grid'
                       ? 'grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 mb-6'
                       : 'space-y-4 mb-6'
                   }>;
@@ -823,7 +816,7 @@ if ( {) {
                       searchTerm = {searchTerm,}
                       viewMode = {viewMode,}
                     />;
-                  ))}
+                  )}
                 </div>
                 {/* Load More Button */}
                 {hasMore && (;
@@ -850,66 +843,66 @@ if ( {) {
       )}
     </div>
   )
-}
+
 export default AdvancedSearchResults
   suggestion
-}</Button>) )
-}</div> </div> <li> Try different keywords</li> <li> Check your spelling</li> <li> Use fewer filters</li> <li> Search for broader terms</li> </ul> </div> </div> </div>)
-}
-//Main Search Results Page Component setTotalCount (data.totalCount)
+</Button>)
+</div> </div> <li> Try different keywords</li> <li> Check your spelling</li> <li> Use fewer filters</li> <li> Search for broader terms</li> </ul> </div> </div> </div>)
+
+/Main Search Results Page Component setTotalCount (data.totalCount)
 setCurrentPage (data.page)
 setHasMore (data.hasMore)
-//Active filters count const activeFiltersCount = filters.types.length + (filters.category ? 1 : 0) + (filters.minPrice > 0 |filters.maxPrice < 10000 ? 1 : 0) + (filters.minRating > 0 ? 1 : 0);"
-}> <SelectTrigger className="w-40" > <SelectValue /> </SelectTrigger> <SelectContent> <SelectItem value="relevance" >Relevance</SelectItem> <SelectItem value="price asc" >Price: Low to High</SelectItem> <SelectItem value="price desc" >Price: High to Low</SelectItem> <SelectItem value="rating" >Highest Rated</SelectItem> </SelectContent> </Select> > <GridIcon className="h-4 w-4" /> </Button> <Button > <List className="h-4 w-4" /> </Button> </div> {
+/Active filters count const activeFiltersCount = filters.types.length + (filters.category ? 1 : 0) + (filters.minPrice > 0 |filters.maxPrice < 10000 ? 1 : 0) + (filters.minRating > 0 ? 1 : 0);"
+> <SelectTrigger className="w-40" > <SelectValue /> </SelectTrigger> <SelectContent> <SelectItem value="relevance" >Relevance</SelectItem> <SelectItem value="price asc" >Price: Low to High</SelectItem> <SelectItem value="price desc" >Price: High to Low</SelectItem> <SelectItem value="rating" >Highest Rated</SelectItem> </SelectContent> </Select><GridIcon className="h-4 w-4" /> </Button> <Button > <List className="h-4 w-4" /> </Button> </div> {
   /* Mobile Filter Toggle */
-}<Sheet open= {
+<Sheet open= {
   showFilters
-}onOpenChange= {
+onOpenChange= {
   setShowFilters "
-}> <SheetTrigger asChild> </Button> </SheetTrigger> <SheetContent side="left" className="w-80" > <SheetHeader> <SheetTitle>Search Filters</SheetTitle> </SheetHeader> <div className="mt-6" > <FilterSidebar filters= {
+> <SheetTrigger asChild> </Button> </SheetTrigger> <SheetContent side="left" className="w-80" > <SheetHeader> <SheetTitle>Search Filters</SheetTitle> </SheetHeader> <div className="mt-6" > <FilterSidebar filters= {
   filters
-}onFiltersChange= {
+onFiltersChange= {
   handleFiltersChange
-}availableCategories= {
+availableCategories= {
   availableCategories
-}/> </div> </SheetContent> </Sheet> </div> </div>) "
-}</div> <Button variant="ghost" size="sm" onClick={
+/> </div> </SheetContent> </Sheet> </div> </div>) "
+</div> <Button variant="ghost" size="sm" onClick={
   () => setFilters ({'
   types: [], category: '', minPrice: 0, maxPrice: 10000,  minRating: 0, sort: 'relevance'
-})
-}> Clear All </Button>)
-}</div> <FilterSidebar filters= {
+)
+> Clear All </Button>)
+</div> <FilterSidebar filters= {
   filters
-}onFiltersChange= {
+onFiltersChange= {
   handleFiltersChange
-}availableCategories= {
+availableCategories= {
   availableCategories
-}/> </div> </div> </div>) : results.length === 0 && searchTerm ? (<NoResultsState searchTerm= {
+/> </div> </div> </div>) : results.length = = 0 && searchTerm ? (<NoResultsState searchTerm= {
   searchTerm
-}onNewSearch= {
+onNewSearch= {
   handleSearch
-}/> <SearchResultCard key= {
+/> <SearchResultCard key= {
   `$ {
   result.type
-}-$ {
+-$ {
   result.id
-}`
-}result= {
+`
+result= {
   result
-}searchTerm= {
+searchTerm= {
   searchTerm
-}viewMode= {
+viewMode= {
   viewMode
-}/>) )
-}</div> > {'"
+/>)
+</div>{'"
   loading ? (<> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Loading... </>) : ('Load More Results')
-}</Button> </div>)
-}</>)
-}</div> </div>)
-}</div>)
-}
+</Button> </div>)
+</>)
+</div> </div>)
+</div>)
+
 export default AdvancedSearchResults
-'"
+"
 export default AdvancedSearchResults
 export default AdvancedSearchResults
 
@@ -948,10 +941,10 @@ export default AdvancedSearchResults
           </div>;
           {/* Main Content */}
           <div className='flex - 1'>;
-            {loading && results.length === 0 ? (
+            {loading && results.length = = 0 ? (
               <div className='flex justify - center py - 12'>;
                 <Loader2 className='h - 8 w - 8 animate - spin' />;
-              </div>) : results.length === 0 && search_term ? (
+              </div>) : results.length = = 0 && search_term ? (
               <NoResultsState;
                 search_term={search_term}
                 onNewSearch={handle_search}              />) : (
@@ -959,7 +952,7 @@ export default AdvancedSearchResults
                 {/* Results Grid / List */}
                 <div;
                   className={
-                    view_mode === 'grid';
+                    view_mode = = 'grid';
                       ? 'grid grid - cols - 1 md:grid - cols - 2 xl:grid - cols - 3 gap - 4 mb - 6';
                       : 'space - y-4 mb - 6';
                   }
@@ -969,7 +962,7 @@ export default AdvancedSearchResults
                       result = {result, }
                       search_term = {search_term, }
                       view_mode = {view_mode, }
-                    />))}
+                    />)}
                 </div>;
                 {/* Load More Button */}
                 {has_more && (
@@ -990,65 +983,65 @@ export default AdvancedSearchResults
           </div>;
         </div>)}
     </div>);
-}
+
 export default AdvancedSearchResults;
   suggestion;
-}</Button>) );
-}</div> </div> <li> Try different keywords</li> <li> Check your spelling</li> <li> Use fewer filters</li> <li> Search for broader terms</li> </ul> </div> </div> </div>);
-}
-//Main Search Results Page Component setTotalCount (data.total_count);
+</Button>);
+</div> </div> <li> Try different keywords</li> <li> Check your spelling</li> <li> Use fewer filters</li> <li> Search for broader terms</li> </ul> </div> </div> </div>);
+
+/Main Search Results Page Component setTotalCount (data.total_count);
 setCurrentPage (data.page);
 setHasMore (data.has_more);
-//Active filters count const activeFiltersCount = filters.types.length + (filters.category ? 1 : 0) + (filters.min_price > 0 || filters.max_price < 10000 ? 1 : 0) + (filters.min_rating > 0 ? 1 : 0);";
-}> <SelectTrigger className="w - 40" > <SelectValue /> </SelectTrigger> <SelectContent> <SelectItem value="relevance" >Relevance</SelectItem> <SelectItem value="price asc" >Price: Low to High</SelectItem> <SelectItem value="price desc" >Price: High to Low</SelectItem> <SelectItem value="rating" >Highest Rated</SelectItem> </SelectContent> </Select> > <GridIcon className="h - 4 w - 4" /> </Button> <Button > <List className="h - 4 w - 4" /> </Button> </div> {
+/Active filters count const activeFiltersCount = filters.types.length + (filters.category ? 1 : 0) + (filters.min_price > 0 || filters.max_price < 10000 ? 1 : 0) + (filters.min_rating > 0 ? 1 : 0);";
+> <SelectTrigger className="w - 40" > <SelectValue /> </SelectTrigger> <SelectContent> <SelectItem value="relevance" >Relevance</SelectItem> <SelectItem value="price asc" >Price: Low to High</SelectItem> <SelectItem value="price desc" >Price: High to Low</SelectItem> <SelectItem value="rating" >Highest Rated</SelectItem> </SelectContent> </Select><GridIcon className="h - 4 w - 4" /> </Button> <Button > <List className="h - 4 w - 4" /> </Button> </div> {
   /* Mobile Filter Toggle */;
-}<Sheet open= {
+<Sheet open= {
   show_filters;
-}onOpenChange= {
+onOpenChange= {
   setShowFilters ";
-}> <SheetTrigger as_child> </Button> </SheetTrigger> <SheetContent side="left" className="w - 80" > <SheetHeader> <SheetTitle > Search Filters</SheetTitle> </SheetHeader> <div className="mt - 6" > <FilterSidebar filters= {
+> <SheetTrigger as_child> </Button> </SheetTrigger> <SheetContent side="left" className="w - 80" > <SheetHeader> <SheetTitle > Search Filters</SheetTitle> </SheetHeader> <div className="mt - 6" > <FilterSidebar filters= {
   filters;
-}onFiltersChange= {
+onFiltersChange= {
   handleFiltersChange;
-}available_categories= {
+available_categories= {
   available_categories;
-}/> </div> </SheetContent> </Sheet> </div> </div>) ";
-}</div> <Button variant="ghost" size="sm" on_click={
+/> </div> </SheetContent> </Sheet> </div> </div>) ";
+</div> <Button variant="ghost" size="sm" on_click={
   () => set_filters ({';
   types: [], category: '', min_price: 0, max_price: 10000,  min_rating: 0, sort: 'relevance';
-});
-}> Clear All </Button>);
-}</div> <FilterSidebar filters= {
+);
+> Clear All </Button>);
+</div> <FilterSidebar filters= {
   filters;
-}onFiltersChange= {
+onFiltersChange= {
   handleFiltersChange;
-}available_categories= {
+available_categories= {
   available_categories;
-}/> </div> </div> </div>) : results.length === 0 && search_term ? (<NoResultsState search_term= {
+/> </div> </div> </div>) : results.length = = 0 && search_term ? (<NoResultsState search_term= {
   search_term;
-}onNewSearch= {
+onNewSearch= {
   handle_search;
-}/> <SearchResultCard key= {
+/> <SearchResultCard key= {
   `$ {
   result.type;
-}-$ {
+-$ {
   result.id;
-}`;
-}result= {
+`;
+result= {
   result;
-}search_term= {
+search_term= {
   search_term;
-}view_mode= {
+view_mode= {
   view_mode;
-}/>) );
-}</div> > {'";
+/>);
+</div>{'";
   loading ? (<> <Loader2 className="h - 4 w - 4 mr - 2 animate - spin" /> Loading... </>) : ('Load More Results');
-}</Button> </div>);
-}</>);
-}</div> </div>);
-}</div>);
-}
+</Button> </div>);
+</>);
+</div> </div>);
+</div>);
+
 export default AdvancedSearchResults;
-'";
+";
 export default AdvancedSearchResults,
 export default AdvancedSearchResults,

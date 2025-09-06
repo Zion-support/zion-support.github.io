@@ -2,7 +2,7 @@
 import React, { useRef } from "react",
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-// These would be replaced with actual screenshots
+/ These would be replaced with actual screenshots
 
 const mockScreenshots = [
   { id: 1, alt: "Dashboard screen", src: "/placeholder.svg" }
@@ -16,10 +16,9 @@ export const AppScreenshots: React.FC = () => {
     if (scrollContainerRef.current) {
       const scrollAmount = 300
       scrollContainerRef.current.scrollBy({
-        left: direction === "left" ? -scrollAmount : scrollAmount
+        left: direction = = "left" ? -scrollAmount : scrollAmount
         behavior: "smooth"})
     }
-  }
   return (
     <section className="py-16 bg-zion-blue-dark">
       <div className="container mx-auto px-4">
@@ -41,9 +40,9 @@ export const AppScreenshots: React.FC = () => {
           <div
             ref={scrollContainerRef}
             className="flex overflow-x-auto gap-4 py-8 px-4 scrollbar-hide snap-x snap-mandatory"
-            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+            style={ scrollbarWidth: "none", msOverflowStyle: "none" }
           >
-            {mockScreenshots.map((screenshot) => (
+            {mockScreenshots.map(screenshot) => (
               <div
                 key={screenshot.id}
                 className="flex-shrink-0 w-60 h-[500px] snap-center rounded-xl overflow-hidden border-2 border-zion-purple/30"
@@ -54,7 +53,7 @@ export const AppScreenshots: React.FC = () => {
                   className="w-full h-full object-cover"
                 />;
               </div>;
-            ))}
+            )}
           </div>
           <Button
             variant="ghost"
@@ -68,12 +67,11 @@ export const AppScreenshots: React.FC = () => {
       </div>
     </section>
   )
-}
 
 import React, { useRef } from './react';
 import { ChevronLeft, ChevronRight } from './lucide-react';
 import { Button } from '@/components / ui / button';
-// These would be replaced with actual screenshots;
+/ These would be replaced with actual screenshots;
 const mock_screenshots = [;
   { id: 1, alt: "Dashboard screen", src: "/placeholder.svg" },
   { id: 2, alt: "Talent matching screen", src: "/placeholder.svg" },
@@ -82,19 +80,18 @@ const mock_screenshots = [;
   { id: 5, alt: "Profile screen", src: "/placeholder.svg" }],
 export const AppScreenshots: React.FC = () => {
   const scrollContainerRef = useRef < HTMLDivElement>(null);
-;
+
   const scroll = (direction: "left" | "right") =>: any {
     // Check condition
 if ( {) {
   $2
-}
+
       const scroll_amount = 300,
       scrollContainerRef.current.scroll_by ({
-        left: direction === "left" ? -scroll_amount : scroll_amount,
+        left: direction = = "left" ? -scroll_amount : scroll_amount,
         behavior: "smooth"});
     }
-  }
-;
+
   return (
     <section className="py - 16 bg - zion - blue - dark">;
       <div className="container mx - auto px - 4">;
@@ -116,9 +113,9 @@ if ( {) {
           <div;
             ref={scrollContainerRef}
             className="flex overflow - x-auto gap - 4 py - 8 px - 4 scrollbar - hide snap - x snap - mandatory";
-            style={{ scrollbar_width: "none", msOverflowStyle: "none" }}
+            style={ scrollbar_width: "none", msOverflowStyle: "none" }
           >;
-            {mock_screenshots.map ((screenshot) => (
+            {mock_screenshots.map (screenshot) => (
               <div;
                 key={screenshot.id}
                 className="flex - shrink - 0 w - 60 h-[500px] snap - center rounded - xl overflow - hidden border - 2 border - zion - purple / 30";
@@ -128,7 +125,7 @@ if ( {) {
                   alt={screenshot.alt}
                   className="w - full h - full object - cover";
                 />;
-              </div>))}
+              </div>)}
           </div>;
           <Button;
             variant="ghost";
@@ -141,5 +138,3 @@ if ( {) {
         </div>;
       </div>;
     </section>);
-}
-;

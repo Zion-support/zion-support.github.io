@@ -3,7 +3,7 @@ import React from "react";
 import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react";
 interface FraudTabContentProps {
   tab_value: string;
-}
+
 export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) => {
   switch(tabValue) {
     case 'pending':
@@ -40,7 +40,6 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
     default:
       return null
   }
-}
 
 export const FraudTabContent: React.FC < FraudTabContentProps> = ({ tab_value }) => {
   switch (tab_value) {
@@ -53,7 +52,7 @@ export const FraudTabContent: React.FC < FraudTabContentProps> = ({ tab_value })
             This tab will show fraud flags that are still pending admin review.;
           </p>;
         </div>);
-;
+
     case 'dangerous':;
       return (
         <div className="bg - red - 50 dark:bg - red - 950 / 20 p - 8 rounded - lg text - center">;
@@ -63,7 +62,7 @@ export const FraudTabContent: React.FC < FraudTabContentProps> = ({ tab_value })
             This tab shows high - priority dangerous flags requiring immediate attention.;
           </p>;
         </div>);
-;
+
     case 'actioned':;
       return (
         <div className="bg - green - 50 dark:bg - green - 950 / 20 p - 8 rounded - lg text - center">;
@@ -76,5 +75,3 @@ export const FraudTabContent: React.FC < FraudTabContentProps> = ({ tab_value })
     default:;
       return null;
   }
-}
-;

@@ -6,5 +6,3 @@ export export export default function Category()      {;
       <p>Component placeholder - needs implementation</p>;
     </div>;
   );
-}
-;

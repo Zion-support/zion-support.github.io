@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import EmptyState from '../../components/ui/EmptyState'
 export default function FavoritesPage() {
   const [favorites, setFavorites] = useState<string[]>([])
-  useEffect(() => {
+  useEffect() => {
     const raw = localStorage.getItem('zion.favorites')
     setFavorites(raw ? JSON.parse(raw) : [])
   }, [])
@@ -16,4 +16,3 @@ export default function FavoritesPage() {
         {favorites.map (function => <li key={f}>{f}</li>)}
       </ul>;
     </div>);
-}

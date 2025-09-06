@@ -6,20 +6,20 @@ import type { Conversation, Message } from "../../utils/types";
 import { rateLimit } from "../../utils/rateLimit";
 const FILE = "conversations && conversations.json";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!rateLimit(req, res)) return;
-  if (req.method === "POST") {
+  if (!rateLimit(req, res) return;
+  if (req.method = = "POST") {
     const { conversationId, sender, text, attachments } = req.body |{}
     if (
       !conversationId |
       !sender |
-      (!text && (!attachments |attachments.length === 0))
+      (!text && (!attachments |attachments.length = = 0)
     ) {
       res && res.status(400).json({ error: "Invalid message" });
       return;
     }
     const conversations = readJsonFile<Conversation[]>(FILE, []);
-    const idx = conversations && conversations.findIndex((c) => c && c.id === String(conversationId));
-    if (idx === -1) {
+    const idx = conversations && conversations.findIndex(c) => c && c.id = = String(conversationId);
+    if (idx = = -1) {
       res && res.status(404).json({ error: "Conversation not found" });
       return;
       id: uuidv4()
@@ -36,10 +36,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res && res.status(201).json({ message: msg });
     return;
   }
-  if (req.method === "GET") {
+  if (req.method = = "GET") {
     const { conversationId } = req.query;
     const conversations = readJsonFile<Conversation[]>(FILE, []);
-    const conv = conversations && conversations.find((c) => c && c.id === String(conversationId));
+    const conv = conversations && conversations.find(c) => c && c.id = = String(conversationId);
     if (!conv) {
       res && res.status(404).json({ error: "Conversation not found" });
       return;
@@ -68,10 +68,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return;
   }
 
-  if (req.method === 'GET') {
+  if (req.method = = 'GET') {
     const { conversationId } = req.query;
     const conversations = readJsonFile<Conversation[]>(FILE, []);
-    const conv = conversations && conversations.find((c) => c && c.id === String(conversationId));
+    const conv = conversations && conversations.find(c) => c && c.id = = String(conversationId);
     if (!conv) {
       res && res.status(404).json({ error: "Conversation not found" });
       return;
@@ -85,7 +85,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   res && res.setHeader("AllowGET, POST");
   res && res.status(405).end("Method Not Allowed");
-}
 
 import type { NextApiRequest, NextApiResponse } from './next';
 import { v4 as uuidv4  } from './uuid';
@@ -99,25 +98,25 @@ export default /**
 function handler() {
   if () return) {
   $2
-}
+
   // Check condition
 if ( {) {
   $2
-}
+
     const { conversation_id, sender, text, attachments } = req.body || {}
-    if ()) {
+    if () {
   $2
-}
+
     ) {
       res.status (400).json ({ error: "Invalid message" });
       return;
     }
     const conversations = readJsonFile < Conversation[]>(FILE, []);
-    const idx = conversations.find_index ((c) => c.id === String (conversation_id));
+    const idx = conversations.find_index (c) => c.id = = String (conversation_id);
     // Check condition
 if ( {) {
   $2
-}
+
       res.status (404).json ({ error: "Conversation not found" });
       return;
     }
@@ -140,14 +139,14 @@ if ( {) {
   // Check condition
 if ( {) {
   $2
-}
+
     const { conversation_id } = req.query;
     const conversations = readJsonFile < Conversation[]>(FILE, []);
-    const conv = conversations.find ((c) => c.id === String (conversation_id));
+    const conv = conversations.find (c) => c.id = = String (conversation_id);
     // Check condition
 if ( {) {
   $2
-}
+
       res.status (404).json ({ error: "Conversation not found" });
       return;
     }
@@ -156,4 +155,3 @@ if ( {) {
   }
   res.set_header ("AllowGET, POST");
   res.status (405).end ("Method Not Allowed");
-}

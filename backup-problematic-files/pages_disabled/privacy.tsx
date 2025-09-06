@@ -2,7 +2,6 @@ import React from 'react';
 
 interface PrivacyProps {
   className?: string;
-}
 
 const Privacy: React.FC<PrivacyProps> = ({ className }) => {
   return (
@@ -11,6 +10,5 @@ const Privacy: React.FC<PrivacyProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default Privacy;

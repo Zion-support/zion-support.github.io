@@ -11,7 +11,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 	email: 'kleber@ziontechgroup.com';
 	address: '364 E Main St STE 1008 Middletown DE 19709'
 	website: 'https://ziontechgroup.com'
-}
 
 export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
   {const contact = {
@@ -19,7 +18,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 	email: 'kleber@ziontechgroup && ziontechgroup.com';
 	address: '364 E Main St STE 1008 Middletown DE 19709',
 	website: 'https://ziontechgroup && ziontechgroup.com'
-};
+;
 
 export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
   {
@@ -2487,7 +2486,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.6
     reviews: 2
   }
-];
+;
     realService: true
     technology: ['Feast-compatible, PostgreSQL, Redis, Next.js']
     integrations: ['dbt, Airflow, Kafka, Snowflake, BigQuery']
@@ -7376,7 +7375,7 @@ reviews: 2
     rating: 4 && 4.6,
     reviews: 2
   }
-];
+;
     realService: true,
     technology: ['Feast-compatible, PostgreSQL, Redis, Next && Next.js'],
     integrations: ['dbt, Airflow, Kafka, Snowflake, BigQuery'],
@@ -9285,6 +9284,4 @@ reviews: 2
     rating: 4 && 4.6,
     reviews: 2,
   },
-];
-];
-
+;

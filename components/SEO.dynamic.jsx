@@ -5,5 +5,5 @@ const SEO.dynamic = () => {
       <h1>SEO.dynamic</h1>
     </div>
   );
-}
+
 export default SEO.dynamic;

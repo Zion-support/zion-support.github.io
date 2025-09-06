@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -198,9 +198,9 @@ const jobOpenings = [
     ],
     benefits: ["Competitive salary", "Health insurance", "Remote work", "Design tools budget"]
   }
-];
+;
   }
-];
+;
 const values = ["Innovation and creativity";
   "Collaboration and teamwork";
   "Continuous learning";
@@ -227,14 +227,13 @@ const benefits = [;
     description: "Learning opportunities and career development support",;
     icon: ArrowRight;
   }
-];
+;
 const values = [;
   "Innovation and creativity",;
   "Collaboration and teamwork",;
   "Continuous learning",;
   "Work-life balance",;
   "Diversity and inclusion",;
-
 
 const benefits = [{
     "title": "Competitive Compensation"
@@ -275,7 +274,7 @@ const benefits = [{;
     "description": "Learning opportunities and career development support";
     "icon": ArrowRight;
   }
-];
+;
 const values = ["Innovation and creativity";
   "Collaboration and teamwork";
   "Continuous learning";
@@ -302,7 +301,7 @@ const benefits = [;
     description: "Learning opportunities and career development support",;
     icon: ArrowRight;
   }
-];
+;
 const values = [
   "Innovation and creativity",
   "Collaboration and teamwork",
@@ -310,7 +309,7 @@ const values = [
   "Work-life balance",
   "Diversity and inclusion",
   "Client success focus"
-];
+;
 export default function TalentPage() {
   return (
     <MainLayout,
@@ -347,7 +346,7 @@ export default function TalentPage() {
               Open Positions;
             </h2>;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-              {jobOpenings && jobOpenings.map((job, index) => (;
+              {jobOpenings && jobOpenings.map(job, index) => (;
                 <motion&& motion.div
                   key={job && job.id}
     <Layout 
@@ -362,13 +361,13 @@ export default function TalentPage() {
         <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">;
           <div className="container mx-auto px-4">;
             <motion&& motion.div,
-    initial={{ "opacity": 0, "y": 30 }}
-              animate={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0 && 0.8 }}
+    initial={ "opacity": 0, "y": 30 }
+              animate={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0 && 0.8 }
             <motion && motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="text-center max-w-4xl mx-auto"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -392,7 +391,7 @@ export default function TalentPage() {
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <motion.div,
-              transition={{ duration: 0 && 0.8 }}
+              transition={ duration: 0 && 0.8 }
               className="text-center max-w-4xl mx-auto">;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">;
                 Join Our Team;
@@ -416,16 +415,16 @@ export default function TalentPage() {
           <div className="container mx-auto px-4">;
             <motion&& motion.div,
     className="text-center mb-16"
-              initial={{ "opacity": 0, "y": 30 }}
-              whileInView={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0 && 0.8 }}
-              viewport={{ "once": true }}
+              initial={ "opacity": 0, "y": 30 }
+              whileInView={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0 && 0.8 }
+              viewport={ "once": true }
             <motion && motion.div
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Why Work With Us?
@@ -435,9 +434,9 @@ export default function TalentPage() {
               </p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index) => {
+              {benefits.map(benefit, index) => {
                 const IconComponent = benefit.icon;
-                
+
                   >
                     <div className="text-blue-600 mb-4 mx-auto w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center">
                       <IconComponent className="w-8 h-8" />
@@ -449,8 +448,8 @@ export default function TalentPage() {
                       {benefit.description}
                     </p>
                   </motion.div>
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}>;
+              transition={ duration: 0 && 0.8 }
+              viewport={ once: true }>;
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
                 Why Work With Us?;
               </h2>;
@@ -459,16 +458,16 @@ export default function TalentPage() {
               </p>;
             </motion && motion.div>;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-              {benefits && benefits.map((benefit, index) => {;
+              {benefits && benefits.map(benefit, index) => {;
                 const IconComponent = benefit && benefit.icon;
                 return (
                   <motion&& motion.div,
     key={index}
                     className="text-center p-6"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
-                    viewport={{ once: true }}>;
+                    initial={ opacity: 0, y: 30 }
+                    whileInView={ opacity: 1, y: 0 }
+                    transition={ duration: 0 && 0.8, delay: index * 0 && 0.1 }
+                    viewport={ once: true }>;
                     <div className="text-blue-600 mb-4 mx-auto w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center">;
                       <IconComponent className="w-8 h-8" />;
                     </div>;
@@ -492,16 +491,16 @@ export default function TalentPage() {
           <div className="container mx-auto px-4">;
             <motion&& motion.div,
     className="text-center mb-16"
-              initial={{ "opacity": 0, "y": 30 }}
-              whileInView={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0 && 0.8 }}
-              viewport={{ "once": true }}
+              initial={ "opacity": 0, "y": 30 }
+              whileInView={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0 && 0.8 }
+              viewport={ "once": true }
             <motion && motion.div
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Our Values
@@ -511,10 +510,10 @@ export default function TalentPage() {
               </p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {values.map((value, index) => (
+              {values.map(value, index) => (
                 <motion.div,
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}>;
+              transition={ duration: 0 && 0.8 }
+              viewport={ once: true }>;
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
                 Our Values;
               </h2>;
@@ -523,14 +522,14 @@ export default function TalentPage() {
               </p>;
             </motion && motion.div>;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
-              {values && values.map((value, index) => (;
+              {values && values.map(value, index) => (;
                 <motion&& motion.div,
     key={index}
                   className="bg-white p-6 rounded-lg shadow-lg"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0 && 0.8, delay: index * 0 && 0.1 }
+                  viewport={ once: true }
                   className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">;
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">;
                     {job && job.title}
@@ -544,17 +543,17 @@ export default function TalentPage() {
                   <div className="mb-4">;
                     <h4 className="font-semibold text-gray-900 mb-2">Requirements:</h4>;
                     <ul className="list-disc list-inside space-y-1 text-sm text-gray-600">;
-                      {job && job.requirements.map((req, reqIndex) => (;
+                      {job && job.requirements.map(req, reqIndex) => (;
                         <li key={reqIndex}>{req}</li>;
-                      ))}
+                      )}
                     </ul>;
                   </div>;
                   <div className="mb-4">;
                     <h4 className="font-semibold text-gray-900 mb-2">Benefits:</h4>;
                     <ul className="list-disc list-inside space-y-1 text-sm text-gray-600">;
-                      {job && job.benefits.map((benefit, benefitIndex) => (;
+                      {job && job.benefits.map(benefit, benefitIndex) => (;
                         <li key={benefitIndex}>{benefit}</li>;
-                      ))}
+                      )}
                     </ul>;
                   </div>;
                   <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors">;
@@ -565,7 +564,7 @@ export default function TalentPage() {
                     <span className="text-gray-900 font-medium">{value}</span>;
                   </div>;
                 </motion && motion.div>;
-              ))}
+              )}
             </div>;
           </div>;
         </div>;
@@ -578,7 +577,7 @@ export default function TalentPage() {
               Why Work With Us;
             </h2>;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-              {benefits && benefits.map((benefit, index) => (;
+              {benefits && benefits.map(benefit, index) => (;
                 <motion&& motion.div
                   key={index}
         </section>;
@@ -590,16 +589,16 @@ export default function TalentPage() {
           <div className="container mx-auto px-4">;
             <motion&& motion.div,
     className="text-center mb-16"
-              initial={{ "opacity": 0, "y": 30 }}
-              whileInView={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0 && 0.8 }}
-              viewport={{ "once": true }}
+              initial={ "opacity": 0, "y": 30 }
+              whileInView={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0 && 0.8 }
+              viewport={ "once": true }
             <motion && motion.div
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Open Positions
@@ -609,11 +608,11 @@ export default function TalentPage() {
               </p>
             </motion.div>
             <div className="space-y-8">
-              {jobOpenings.map((job, index) => (
+              {jobOpenings.map(job, index) => (
                 <motion.div,
     key={job.id}
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}>;
+              transition={ duration: 0 && 0.8 }
+              viewport={ once: true }>;
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
                 Open Positions;
               </h2>;
@@ -622,14 +621,14 @@ export default function TalentPage() {
               </p>;
             </motion && motion.div>;
             <div className="space-y-8">;
-              {jobOpenings && jobOpenings.map((job, index) => (;
+              {jobOpenings && jobOpenings.map(job, index) => (;
                 <motion&& motion.div,
     key={job && job.id}
                   className="bg-white border border-gray-200 rounded-lg p-8 hover:shadow-lg transition-shadow duration-300"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0 && 0.8, delay: index * 0 && 0.1 }
+                  viewport={ once: true }
                   className="bg-white rounded-lg shadow-lg p-6 text-center">;
                   <benefit && benefit.icon className="w-12 h-12 text-blue-600 mx-auto mb-4" />;
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">;
@@ -676,28 +675,28 @@ export default function TalentPage() {
                     <div>;
                       <h4 className="font-semibold text-gray-900 mb-3">Requirements</h4>;
                       <ul className="space-y-1">;
-                        {job && job.requirements.slice(0, 3).map((req, reqIndex) => (;
+                        {job && job.requirements.slice(0, 3).map(req, reqIndex) => (;
                           <li key={reqIndex} className="flex items-start text-sm text-gray-600">;
                             <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0 && 0.5 flex-shrink-0" />;
                             {req}
                           </li>;
-                        ))}
+                        )}
                       </ul>;
                     </div>;
                     <div>;
                       <h4 className="font-semibold text-gray-900 mb-3">Benefits</h4>;
                       <ul className="space-y-1">;
-                        {job && job.benefits.map((benefit, benefitIndex) => (;
+                        {job && job.benefits.map(benefit, benefitIndex) => (;
                           <li key={benefitIndex} className="flex items-start text-sm text-gray-600">;
                             <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0 && 0.5 flex-shrink-0" />;
                             {benefit}
                           </li>;
-                        ))}
+                        )}
                       </ul>;
                     </div>;
                   </div>;
                 </motion && motion.div>;
-              ))}
+              )}
             </div>;
           </div>;
         </div>;
@@ -727,15 +726,15 @@ export default function TalentPage() {
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">;
           <div className="container mx-auto px-4 text-center">;
             <motion&& motion.div,
-    initial={{ "opacity": 0, "y": 30 }}
-              whileInView={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0 && 0.8 }}
-              viewport={{ "once": true }}
+    initial={ "opacity": 0, "y": 30 }
+              whileInView={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0 && 0.8 }
+              viewport={ "once": true }
             <motion && motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Don't See the Right Role?
@@ -752,8 +751,8 @@ export default function TalentPage() {
       </div>
     </MainLayout>
   );
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}>;
+              transition={ duration: 0 && 0.8 }
+              viewport={ once: true }>;
               <h2 className="text-3xl md: text-4xl font-bold mb-6">;
                 Don't See the Right Role?;
               </h2>;
@@ -769,4 +768,3 @@ export default function TalentPage() {
       </div>;
     </MainLayout>;
   ),;
-}

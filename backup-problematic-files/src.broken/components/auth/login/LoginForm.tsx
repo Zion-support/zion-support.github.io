@@ -6,7 +6,7 @@ import type { ControllerRenderProps } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
 import { z } from "zod",;
 import { LogIn, User, Eye, EyeOff } from "lucide-react",;
-;
+
 import { useAuth } from "@/hooks/useAuth",;
 import { loginUser } from "@/services/authService",;
 import { Button } from "@/components/ui/button",;
@@ -21,30 +21,29 @@ import {;
 import { Alert, AlertDescription } from "@/components/ui/alert",;
 import { Link, useNavigate } from "react-router-dom",;
 import { LoadingOverlay } from "@/components/LoadingOverlay",;
-;
-// Form validation schema;
+
+/ Form validation schema;
 const loginSchema = z.object({;
   email:z.string().email("Please enter a valid email").min(1, "Email is required"),;
   password:z.string().min(6, "Password must be at least 6 characters")}),;
-;
+
 type LoginFormValues = z.infer<typeof loginSchema>,;
-;
+
 export function LoginForm() {;
   const { isLoading, login } = useAuth(),;
   const navigate = useNavigate(),;
   const [searchParams] = useSearchParams(),;
   const [showPassword, setShowPassword] = useState(false),;
   const [isSubmitting, setIsSubmitting] = useState(false),;
-  ;
   const form = useForm<LoginFormValues>({;
     resolver:zodResolver(loginSchema),;
     defaultValues:{;
       email:"",;
-      password:""}}),;
-;
+      password:""}),;
+
   const onSubmit = async (data:LoginFormValues) => {;
     if (isSubmitting) return,;
-;
+
     try {;
       setIsSubmitting(true),;
       const { res, data:resData } = await loginUser(data.email, data.password),;
@@ -61,9 +60,8 @@ export function LoginForm() {;
       toast.error("Unable to login. Please try again."),;
     } finally {;
       setIsSubmitting(false),;
-    }
-  },;
-;
+    },;
+
   return (;
     <Form {...form}>;
       {form.formState.errors.root && (;
@@ -76,8 +74,7 @@ export function LoginForm() {;
           const firstError = Object.keys(errors)[0] as keyof LoginFormValues,;
           if (firstError) {;
             form.setFocus(firstError),;
-          }
-        })}
+          })}
         className="space-y-6";
         autoComplete="off" // Disable browser autofill;
       >;
@@ -103,7 +100,7 @@ export function LoginForm() {;
               <FormMessage className="text-red-400" />;
             </FormItem>;          )}
         />;
-;
+
         <FormField;
           control={form.control}
           name="password";
@@ -144,7 +141,7 @@ export function LoginForm() {;
             </FormItem>;
           )}
         />;
-;
+
         <div className="flex items-center justify-between">;
           <div className="text-sm">;
             <Link to="/forgot-password" className="font-medium text-zion-cyan hover:text-zion-cyan-light">;
@@ -152,7 +149,7 @@ export function LoginForm() {;
             </Link>;
           </div>;
         </div>;
-;
+
         <Button;
           type="submit";
           className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white";
@@ -169,38 +166,36 @@ FormControl;
 FormField;
 FormItem;
 FormLabel;
-//Form validation schema const loginSchema = z.object ({
+/Form validation schema const loginSchema = z.object ({
   email: z.string () .email ("Please enter a valid email") .min (1, "Email is required");
-password: z.string () .min (6, "Password must be at least 6 characters") 
-});
+password: z.string () .min (6, "Password must be at least 6 characters");
 const onSubmit = async (data: LoginFormValues) => {
   if (isSubmitting) return;
 try {
   setIsSubmitting (true);
 const {
   res, data: resData 
-}= await loginUser (data.email, data.password);
+= await loginUser (data.email, data.password);
 if (!res.ok) {
   if (resData?.token) {
   document.cookie = `token=$ {
   resData.token 
-}, path=/` 
-}
-}finally {
+, path=/` 
+
+finally {
   setIsSubmitting (false) 
-}
-};
+
+;
 return (<Form {
   ...form 
-}> {
+> {
   form.formState.errors.root && (<Alert variant="destructive" className="mb-4" > form.formState.errors.root.message 
-}</AlertDescription> </Alert>) 
-}<form 
-}) 
-}className="space-y-6" autoComplete="off" //Disable browser autofill > <FormField <FormItem> <FormLabel className="text-zion-slate-light" >Email address</FormLabel> <FormControl> <div className="relative" > <Input /> <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" /> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) 
-}/> <FormField <FormControl> <div className="relative" > <Input /> <LogIn className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" /> <Button) : (<Eye className="h-4 w-4" />) 
-}</span> </Button> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) 
-}/> <div className="flex items-center justify-between" > <div className="text-sm" > <Link to="/forgot-password" className="font-medium text-zion-cyan hover:text-zion-cyan-light" > Forgot your password? </Link> </div> </div> <Button </Button> </form> <LoadingOverlay visible= {
+</AlertDescription> </Alert>) 
+<form 
+) 
+className="space-y-6" autoComplete="off" //Disable browser autofill > <FormField <FormItem> <FormLabel className="text-zion-slate-light" >Email address</FormLabel> <FormControl> <div className="relative" > <Input /> <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" /> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) 
+/> <FormField <FormControl> <div className="relative" > <Input /> <LogIn className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" /> <Button) : (<Eye className="h-4 w-4" />) 
+</span> </Button> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) 
+/> <div className="flex items-center justify-between" > <div className="text-sm" > <Link to="/forgot-password" className="font-medium text-zion-cyan hover:text-zion-cyan-light" > Forgot your password? </Link> </div> </div> <Button </Button> </form> <LoadingOverlay visible= {
   isLoading || isSubmitting 
-}/> </Form>) 
-}
+/> </Form>) 

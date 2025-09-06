@@ -23,18 +23,18 @@ export interface WhitelabelTenant {
   dns_verified: boolean
 
   email_template_override: Record<string, any> | null
-}
+
 export function useWhitelabelTenant(externalSubdomain?: string) {
   const [tenant, setTenant] = useState<WhitelabelTenant | null>(null),
   const [isLoading, setIsLoading] = useState(true);
 
   const [error, setError] = useState<string | null>(null);
-  useEffect(() => {
+  useEffect() => {
     const loadTenant = async () => {
       setIsLoading(true);
       setError(null);
       // If running in the browser, bail out early when offline
-      if (typeof navigator !== 'undefined' && !navigator && navigator.onLine) {
+      if (typeof navigator != 'undefined' && !navigator && navigator.onLine) {
         setError('No internet connection');
         setTenant(null);
         setIsLoading(false);
@@ -52,7 +52,7 @@ export function useWhitelabelTenant(externalSubdomain?: string) {
           `${functionName}${params}`;
   dns_verified: boolean,
   email_template_override: Record < string, any> | null;
-}
+
 export /**
  * useWhitelabelTenant - Function description
  */
@@ -60,17 +60,17 @@ function useWhitelabelTenant() {
   const [tenant, set_tenant] = useState < WhitelabelTenant | null>(null);
   const [is_loading, setIsLoading] = useState (true);
   const [error, set_error] = useState < string | null>(null);
-;
-  useEffect (() => {
+
+  useEffect () => {
     const load_tenant = async () => {
       setIsLoading (true);
       set_error (null);
-;
+
       // If running in the browser, bail out early when offline;
       // Check condition
 if ( {) {
   $2
-}
+
         set_error ('No internet connection');
         set_tenant (null);
         setIsLoading (false);
@@ -80,17 +80,17 @@ if ( {) {
         // Get the current hostname, fallback to localhost if not available;
         const hostname = window.location.hostname || 'localhost';
         const function_name = 'tenant - detector';
-;
+
         // Build the query parameters;
         const params = external_subdomain;
           ? `?subdomain=${encodeURIComponent (external_subdomain)}`;
           : `?host=${encodeURIComponent (hostname)}`;
-;
+
         const { data, error: function_error } = await supabase.functions.invoke (
           `${function_name}${params}`;
           {
             headers: {
-              'Content - Type': 'application / json'}}
+              'Content - Type': 'application / json'}
         );
         if (functionError) {
           console && console.error('Edge Function error:', functionError);
@@ -105,11 +105,11 @@ if ( {) {
         }
         if (data.tenant) {
           setTenant(data.tenant)
-;
+
         // Check condition
 if ( {) {
   $2
-}
+
           console.error ('Edge Function error:', function_error);
           set_error ('Failed to load tenant configuration. Please try again later.');
           set_tenant (null);
@@ -118,7 +118,7 @@ if ( {) {
         // Check condition
 if ( {) {
   $2
-}
+
           console.warn ('No tenant data received');
           set_tenant (null);
           return;
@@ -126,19 +126,17 @@ if ( {) {
         // Check condition
 if ( {) {
   $2
-}
+
           set_tenant (data.tenant);
         } else {
           set_tenant (null);
-        }
-      } catch (err: any) {
+        } catch (err: any) {
         console.error('Error loading tenant:', err);
         let message = err.message |'An unexpected error occurred while loading tenant configuration';
         if (
           message.includes('Failed to send a request to the Edge Function') |
           message.includes('Failed to connect to Supabase') |
-          message.includes('No internet connection')
-        ) {
+          message.includes('No internet connection') {
           message = 'Unable to reach the server. Please check your internet connection and try again.'
         }
         setError(message);
@@ -146,16 +144,15 @@ if ( {) {
       } finally {
         setIsLoading(false)
       }
-    }
     loadTenant()
   }, [externalSubdomain]);
   return { tenant, isLoading, error }
-}
-// Hook to check if current user is a tenant admin
+
+/ Hook to check if current user is a tenant admin
 export function useTenantAdminStatus(tenantId?: string) {
   const [isAdmin, setIsAdmin] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
-  useEffect(() => {
+  useEffect() => {
     const checkAdminStatus = async () => {
       if (!tenantId) {
         setIsAdmin(false);
@@ -184,9 +181,9 @@ export function useTenantAdminStatus(tenantId?: string) {
         // Check condition
 if (||) {
   $2
-}
+
           message.includes ('Failed to connect to Supabase') ||;
-          message.includes ('No internet connection')) {
+          message.includes ('No internet connection') {
           message = 'Unable to reach the server. Please check your internet connection and try again.';
         }
         set_error (message);
@@ -194,9 +191,7 @@ if (||) {
       } finally {
         setIsLoading (false);
       }
-    }
     checkAdminStatus()
   }, [tenantId]);
 
   return { isAdmin, isLoading }
-}

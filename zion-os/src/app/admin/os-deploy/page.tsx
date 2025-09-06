@@ -4,24 +4,24 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
-'use client';
+
+use client';
 import React, { useState } from 'react';
 export default function OSDeployPage() {
 const [loading, setLoading] = useState(false);
@@ -29,7 +29,7 @@ const [loading, setLoading] = useState(false);
     e.preventDefault();
     setLoading(true);
     // Simulate deployment
-    setTimeout(() => {
+    setTimeout() => {
       setLoading(false);
     }, 3000);
   }
@@ -55,7 +55,7 @@ ai: 'Advanced AI capabilities and automation'
     }
     return descriptions[key] |'Feature description';
   }
-'use client';
+use client';
 
 export default function OSDeployPage() {;
   const [loading, setLoading] = useState(false);
@@ -65,7 +65,7 @@ export default function OSDeployPage() {;
     setLoading(true);
 
     // Simulate deployment;
-    setTimeout(() => {;
+    setTimeout() => {;
       setLoading(false);
     }, 3000);
   };
@@ -292,7 +292,7 @@ export default function OSDeployPage() {;
               Feature Selection
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {FeatureKeys.map((k) => (
+              {FeatureKeys.map(k) => (
                 <label
                   key={k}
                   htmlFor={`feature-${k}`}
@@ -332,7 +332,7 @@ export default function OSDeployPage() {;
               Feature Selection;
             </h2>;
             <div className="grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 3 gap - 4">;
-              {FeatureKeys.map ((k) => (
+              {FeatureKeys.map (k) => (
                 <label;
                   key={k}
                   html_for={`feature-${k}`}
@@ -353,7 +353,7 @@ export default function OSDeployPage() {;
                     <div className="text-sm text-white/60">{getFeatureDescription(k)}</div>;
                   </div>;
                 </label>;
-              ))}
+              )}
             </div>
           </div>
           {/* Additional Features */}
@@ -440,7 +440,7 @@ export default function OSDeployPage() {;
             {message && (
               <div
                 className={`mt-6 p-4 rounded-lg ${
-                  messageType === 'success'
+                  messageType = = 'success'
                     ? 'bg-green-900/20 border border-green-500/20 text-green-400'
                     : 'bg-red-900/20 border border-red-500/20 text-red-400'
                 }`}>;
@@ -452,7 +452,7 @@ export default function OSDeployPage() {;
       </div>;
     </div>;
   );
-}
+
           {/* Submit Button */}
           <div className="text - center">;
             <button;
@@ -464,7 +464,7 @@ export default function OSDeployPage() {;
             {message && (
               <div;
                 className={`mt - 6 p - 4 rounded - lg ${
-                  message_type === 'success';
+                  message_type = = 'success';
                     ? 'bg - green - 900 / 20 border border - green - 500 / 20 text - green - 400';
                     : 'bg - red - 900 / 20 border border - red - 500 / 20 text - red - 400';
                 }`}
@@ -475,4 +475,3 @@ export default function OSDeployPage() {;
         </form>;
       </div>;
     </div>);
-}

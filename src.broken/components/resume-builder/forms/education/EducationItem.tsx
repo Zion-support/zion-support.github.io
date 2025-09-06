@@ -6,5 +6,3 @@ export function EducationItem() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

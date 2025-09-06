@@ -3,7 +3,7 @@ export interface Wallet {
 
   balance: number
   updated_at: string
-}
+
 export type TransactionType = 'earn' | 'burn';
 export interface TokenTransaction {
   id: string;
@@ -13,4 +13,3 @@ export interface TokenTransaction {
   reason: string | null
 
   created_at: string
-}

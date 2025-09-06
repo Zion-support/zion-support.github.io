@@ -6,5 +6,3 @@ export function AnalyticsConsentBanner() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

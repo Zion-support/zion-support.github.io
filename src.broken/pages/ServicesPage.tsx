@@ -6,5 +6,3 @@ export function ServicesPage() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

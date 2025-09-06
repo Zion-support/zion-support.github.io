@@ -6,5 +6,3 @@ export function ApiErrorBoundary() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

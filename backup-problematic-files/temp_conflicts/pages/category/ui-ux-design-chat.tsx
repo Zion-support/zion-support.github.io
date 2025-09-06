@@ -1,7 +1,7 @@
 
 import Head from 'next/head',;
 import Link from 'next/link',;
-;
+
 const UiUxDesignChat = () => {;
   return (;
     <div>;
@@ -9,7 +9,6 @@ const UiUxDesignChat = () => {;
         <title>UiUxDesignChat - Zion Tech Solutions</title>;
         <meta name="description" content="UiUxDesignChat blog post" />;
       </Head>;
-      ;
       <main>;
         <h1>UiUxDesignChat</h1>;
         <p>Blog content coming soon...</p>;
@@ -17,6 +16,6 @@ const UiUxDesignChat = () => {;
       </main>;
     </div>;
   ),;
-},;
-;
+,;
+
 export default UiUxDesignChat,

@@ -7,6 +7,5 @@ const ThemeContext.js = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default ThemeContext.js;

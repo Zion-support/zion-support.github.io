@@ -2,7 +2,6 @@ import React from 'react';
 
 interface HelpdeskProps {
   className?: string;
-}
 
 const Helpdesk: React.FC<HelpdeskProps> = ({ className }) => {
   return (
@@ -11,6 +10,5 @@ const Helpdesk: React.FC<HelpdeskProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default Helpdesk;

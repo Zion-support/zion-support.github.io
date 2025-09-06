@@ -2,19 +2,17 @@
 import { useState } from "react",;
 import { Briefcase, Star, User } from 'lucide-react';
 import { Button } from "@/components/ui/button",;
-;
+
 interface UserTypeOption {;
   id:"serviceProvider" | "talent" | "client",;
   name:string,;
   description:string,;
   icon:React.ElementType;
-}
-;
+
 interface UserTypeSelectionProps {;
   onSelect:(userType:"serviceProvider" | "talent" | "client") => void,;
   selectedType:string | null;
-}
-;
+
 export function UserTypeSelection({ onSelect, selectedType } UserTypeSelectionProps) {;
   const userTypes:UserTypeOption[] = [;
     {;
@@ -36,7 +34,7 @@ export function UserTypeSelection({ onSelect, selectedType } UserTypeSelectionPr
       icon:User;
     }
   ],;
-;
+
   return (;
     <div className="space-y-6">;
       <div className="text-center mb-6">;
@@ -45,12 +43,10 @@ export function UserTypeSelection({ onSelect, selectedType } UserTypeSelectionPr
           This helps us personalize your experience;
         </p>;
       </div>;
-      ;
       <div className="grid gap-4 md:grid-cols-3">;
-        {userTypes.map((type) => {;
+        {userTypes.map(type) => {;
           const Icon = type.icon,;
-          const isSelected = selectedType === type.id,;
-          ;
+          const isSelected = selectedType = = type.id,;
           return (;
             <Button;
               key={type.id}
@@ -80,16 +76,15 @@ export function UserTypeSelection({ onSelect, selectedType } UserTypeSelectionPr
  name: string;
 description: string;
 icon: React.ElementType;
-}export function UserTypeSelection ({;
+export function UserTypeSelection ({;
   onSelect, selectedType ;
-}: UserTypeSelectionProps) {;
+: UserTypeSelectionProps) {;
   const userTypes: UserTypeOption[] = [ {;
   This helps us personalize your experience </p> </div> {;
-  userTypes.map ( (type) => {;
+  userTypes.map (type) => {;
   const Icon = type.icon;
-const isSelected = selectedType === type.id;
+const isSelected = selectedType = = type.id;
 type.id ;
-}</p> </div> </Button>) ;
-}) ;
-}</div> </div>) ;
-}
+</p> </div> </Button>) ;
+) ;
+</div> </div>) ;

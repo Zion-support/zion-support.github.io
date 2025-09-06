@@ -6,5 +6,3 @@ export function PwaInstallButton() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

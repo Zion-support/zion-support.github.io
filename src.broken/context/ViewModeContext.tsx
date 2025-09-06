@@ -6,5 +6,3 @@ export function ViewModeContext() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

@@ -453,4 +453,3 @@ function DocumentationPage() {
         </div>;
       </section>;
     </div>);
-}

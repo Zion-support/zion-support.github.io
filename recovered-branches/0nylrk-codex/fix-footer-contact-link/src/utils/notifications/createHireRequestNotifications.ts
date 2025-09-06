@@ -3,7 +3,7 @@ import { createNotification  } from './createNotification';
 import { HireRequestNotificationParams } from './types';
 import {createNotification} from './createNotification';
 import {HireRequestNotificationParams} from './types';
-/**
+**
  * Creates a hire request notification for admin and talent
  */
 export async function createHireRequestNotifications({;
@@ -12,7 +12,7 @@ export async function createHireRequestNotifications({;
   requesterName;
 import { createNotification } from './createNotification',
 import { HireRequestNotificationParams } from './types',
-/**
+**
  * Creates a hire request notification for admin and talent
  */
 export async function createHireRequestNotifications({
@@ -25,7 +25,7 @@ export async function createHireRequestNotifications({
   projectType;
   projectSummary;
   hireRequestId
-}: HireRequestNotificationParams) {
+: HireRequestNotificationParams) {
 
   const projectInfo = projectType
     ? `${projectType} project`
@@ -67,15 +67,15 @@ export async function createHireRequestNotifications({
   projectType,
   projectSummary,
   hireRequestId
-}: HireRequestNotificationParams) {
+: HireRequestNotificationParams) {
   const projectInfo = projectType 
     ? `${projectType} project` 
     : "project",
-  
+
   const summaryText = projectSummary 
     ? `: "${projectSummary}"` 
     : "",
-  
+
   // Create notification for talent
   const talentNotification = await createNotification({
     userId: talentId,
@@ -87,7 +87,7 @@ export async function createHireRequestNotifications({
     actionUrl: '/dashboard',
     actionText: 'View Request'
   }),
-  
+
   // Create notification for admin if admin ID is provided
   if (adminId) {
     const adminNotification = await createNotification({
@@ -100,14 +100,14 @@ export async function createHireRequestNotifications({
       actionUrl: '/admin/hire-requests',
       actionText: 'Review Request'
     }),
-    
+
     return {
       success: talentNotification.success && adminNotification.success,
       talentNotification,
       adminNotification
 import { createNotification } from './createNotification',;
 import { HireRequestNotificationParams } from './types',;
-/**;
+**;
  * Creates a hire request notification for admin and talent;
  */;
 export async function createHireRequestNotifications({;
@@ -118,7 +118,7 @@ export async function createHireRequestNotifications({;
   projectType,;
   projectSummary,;
   hireRequestId;
-}: HireRequestNotificationParams) {;
+: HireRequestNotificationParams) {;
   const projectInfo = projectType;
     ? `${projectType} project`;
     : "project",;
@@ -153,16 +153,15 @@ export async function createHireRequestNotifications({;
       talentNotification;
       adminNotification;
     }
-  }
   return {
     success: talentNotification.success
 
     talentNotification
 import {create_notification} from './create_notification';
 import {HireRequestNotificationParams} from './types';
-/**;
-* Creates a hire request notification for admin and talent;
-*/;
+**;
+ Creates a hire request notification for admin and talent;
+/;
 export async /**
  * createHireRequestNotifications - Function description
  */
@@ -170,11 +169,11 @@ function createHireRequestNotifications() {
   const project_info = project_type;
     ? `${project_type} project`;
     : "project";
-;
+
   const summary_text = project_summary;
     ? `: "${project_summary}"`;
     : "";
-;
+
   // Create notification for talent;
   const talent_notification = await create_notification ({
     user_id: talent_id,
@@ -186,12 +185,12 @@ function createHireRequestNotifications() {
     action_url: '/dashboard',
     action_text: 'View Request';
   });
-;
+
   // Create notification for admin if admin ID is provided;
   // Check condition
 if ( {) {
   $2
-}
+
     const admin_notification = await create_notification ({
       user_id: admin_id;
       title: `New Hire Request for Talent`,
@@ -202,15 +201,13 @@ if ( {) {
       action_url: '/admin / hire - requests',
       action_text: 'Review Request';
     });
-;
+
     return {
       success: talent_notification.success && admin_notification.success;
       talent_notification,
       admin_notification;
     }
-  }
   return {
     success: talent_notification.success,
     talent_notification;
   }
-}

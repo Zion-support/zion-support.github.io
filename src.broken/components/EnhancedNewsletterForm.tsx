@@ -6,5 +6,3 @@ export function EnhancedNewsletterForm() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

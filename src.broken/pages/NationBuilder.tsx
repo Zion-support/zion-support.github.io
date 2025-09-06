@@ -6,5 +6,3 @@ export function NationBuilder() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

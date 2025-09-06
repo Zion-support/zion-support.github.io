@@ -4,7 +4,7 @@ export default function CoachWidget() {;
   const [reply, setReply] = useState<string | null>(null),;
   const [loading, setLoading] = useState(false),;
   async function ask() {;
-    if (!input.trim()) return,;
+    if (!input.trim() return,;
     setLoading(true),;
     try {;
       const resp = await fetch('/api/learn/coach', {;
@@ -17,7 +17,6 @@ export default function CoachWidget() {;
     } finally {;
       setLoading(false);
     }
-  }
 
   return (
     <div className="border rounded p-3">
@@ -29,4 +28,3 @@ export default function CoachWidget() {;
       {reply && <div className="mt-2 text-sm text-gray-800 dark:text-gray-200">{reply}</div>}
     </div>
   )
-}

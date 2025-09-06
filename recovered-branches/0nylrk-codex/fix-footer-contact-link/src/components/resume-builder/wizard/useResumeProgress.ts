@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { Resume } from "@/types/resume";
 export const useResumeProgress = (resume: Resume | null) => {
   const [progress, setProgress] = useState(0);
-  useEffect(() => {
+  useEffect() => {
     // Calculate progress based on completed sections
     if (!resume) {
       setProgress(0);
@@ -40,5 +40,3 @@ export const useResumeProgress = (resume: Resume | null) => {
     setProgress(progressPercentage);
   }, [resume]);
   return progress;
-}
-

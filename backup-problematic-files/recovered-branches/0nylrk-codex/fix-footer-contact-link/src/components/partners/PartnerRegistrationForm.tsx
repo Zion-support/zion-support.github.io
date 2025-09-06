@@ -11,10 +11,10 @@ import { Textarea } from "@/components/ui/textarea",;
 import { toast } from "@/hooks/use-toast",;
 import { useAuth } from "@/hooks/useAuth",;
 import { supabase } from "@/integrations/supabase/client",;
-;
+
 const partnerFormSchema = z.object({;
   name:z.string().min(2, { message:"Name must be at least 2 characters." }),;
-  website:z.string().url({ message:"Please enter a valid URL." }).optional().or(z.literal("")),;
+  website:z.string().url({ message:"Please enter a valid URL." }).optional().or(z.literal(""),;
   twitter:z.string().optional(),;
   instagram:z.string().optional(),;
   youtube:z.string().optional(),;
@@ -23,13 +23,13 @@ const partnerFormSchema = z.object({;
   audience_size:z.string(),;
   payout_method:z.string(),;
   bio:z.string().min(10, { message:"Bio must be at least 10 characters." }).max(500)}),;
-;
+
 type PartnerFormValues = z.infer<typeof partnerFormSchema>,;
-;
+
 export function PartnerRegistrationForm() {;
   const [isSubmitting, setIsSubmitting] = useState(false),;
   const { user } = useAuth(),;
-;
+
   const form = useForm<PartnerFormValues>({;
     resolver:zodResolver(partnerFormSchema),;
     defaultValues:{;
@@ -42,15 +42,15 @@ export function PartnerRegistrationForm() {;
       niche:"",;
       audience_size:"",;
       payout_method:"paypal",;
-      bio:""}}),;
-;
+      bio:""}),;
+
   const checkExistingPartner = async () => {;
     const { data:existingPartner } = await supabase;
       .from('partner_profiles');
       .select('id');
       .eq('user_id', user.id);
       .single(),;
-;
+
     if (existingPartner) {;
       toast({;
         title:"Already registered",;
@@ -61,7 +61,7 @@ export function PartnerRegistrationForm() {;
     }
     return false,;
   },;
-;
+
   async function onSubmit(data:PartnerFormValues) {;
     if (!user) {;
       toast({;
@@ -70,13 +70,13 @@ export function PartnerRegistrationForm() {;
         variant:"destructive"}),;
       return,;
     }
-;
+
     setIsSubmitting(true),;
     try {;
       // Check if they already have a partner profile;
       const hasExistingPartner = await checkExistingPartner(),;
       if (hasExistingPartner) return,;
-;
+
       // Insert new partner profile;
       const { data:newPartner, error } = await supabase;
         .from('partner_profiles');
@@ -98,26 +98,24 @@ export function PartnerRegistrationForm() {;
           }
         ]);
         .select(),;
-;
+
       if (error) throw error,;
-;
+
       toast({;
         title:"Application submitted!",;
         description:"Your partner application has been submitted for review.",;
         variant:"default"}),;
-;
+
       // Create a referral code if they don't have one already;
       const { data:existingCode } = await supabase;
         .from('referral_codes');
         .select('code');
         .eq('user_id', user.id);
         .single(),;
-;
+
       if (!existingCode) {;
         await supabase.rpc('generate_referral_code', { user_id:user.id }),;
-      }
-;
-    } catch (error:any) {;
+      } catch (error:any) {;
       console.error('Error submitting partner application:', error),;
       toast({;
         title:"Submission failed",;
@@ -126,13 +124,10 @@ export function PartnerRegistrationForm() {;
     } finally {;
       setIsSubmitting(false),;    }
       if (!existingCode) {_await supabase.rpc('generate_referral_code', _{ user_id: user.id});
-      }
-
-    } catch (error: unknown) {_toast({
+      } catch (error: unknown) {_toast({
         title: "Submission failed", _description: error.message || "There was a problem submitting your application.", _variant: "destructive"});
     } finally {_setIsSubmitting(false);}
-  }
-;
+
   return (;
     <Card className="bg-zion-blue-dark border-zion-blue-light">;
       <CardHeader>;
@@ -155,7 +150,7 @@ export function PartnerRegistrationForm() {;
                     <FormMessage />;
                   </FormItem>;                )}
               />;
-;
+
               <FormField;
                 control={form.control}
                 name="website";
@@ -169,7 +164,7 @@ export function PartnerRegistrationForm() {;
                   </FormItem>;
                 )}
               />;
-;
+
               <div className="grid sm:grid-cols-2 gap-4">;
                 <FormField;
                   control={form.control}
@@ -183,7 +178,6 @@ export function PartnerRegistrationForm() {;
                       <FormMessage />;
                     </FormItem>;                  )}
                 />;
-                ;
                 <FormField;
                   control={form.control}
                   name="instagram";
@@ -198,7 +192,7 @@ export function PartnerRegistrationForm() {;
                   )}
                 />;
               </div>;
-;
+
               <div className="grid sm:grid-cols-2 gap-4">;
                 <FormField;
                   control={form.control}
@@ -212,7 +206,6 @@ export function PartnerRegistrationForm() {;
                       <FormMessage />;
                     </FormItem>;                  )}
                 />;
-                ;
                 <FormField;
                   control={form.control}
                   name="linkedin";
@@ -226,7 +219,7 @@ export function PartnerRegistrationForm() {;
                     </FormItem>;                  )}
                 />;
               </div>;
-;
+
               <FormField;
                 control={form.control}
                 name="niche";
@@ -243,7 +236,7 @@ export function PartnerRegistrationForm() {;
                   </FormItem>;
                 )}
               />;
-;
+
               <div className="grid sm:grid-cols-2 gap-4">;
                 <FormField;
                   control={form.control}
@@ -268,7 +261,6 @@ export function PartnerRegistrationForm() {;
                       <FormMessage />;
                     </FormItem>;                  )}
                 />;
-                ;
                 <FormField;
                   control={form.control}
                   name="payout_method";
@@ -292,7 +284,7 @@ export function PartnerRegistrationForm() {;
                     </FormItem>;                  )}
                 />;
               </div>;
-;
+
               <FormField;
                 control={form.control}
                 name="bio";
@@ -314,7 +306,7 @@ export function PartnerRegistrationForm() {;
                 )}
               />;
             </div>;
-;
+
             <Button ;
               type="submit" ;
               className="w-full bg-zion-purple hover:bg-zion-purple-dark";
@@ -329,59 +321,57 @@ export function PartnerRegistrationForm() {;
   ),; const partnerFormSchema = z.object ({
   name: z.string () .min (2, {
   message: "Name must be at least 2 characters." 
-});
+);
 website: z.string () .url ({
   message: "Please enter a valid URL." 
-}) .optional () .or (z.literal ("") );
+) .optional () .or (z.literal ("");
 instagram: z.string () .optional ();
 youtube: z.string () .optional ();
 linkedin: z.string () .optional ();
 const {
   data: existingPartner 
-}= await supabase .from ('partner profiles') .select ('id') .eq ('user id', user.id) .single ();
+= await supabase .from ('partner profiles') .select ('id') .eq ('user id', user.id) .single ();
 setIsSubmitting (false);
 return true;
-}return false;
-};
+return false;
 async function onSubmit (data: PartnerFormValues) {
   if (!user) {
   toast ({
   return;
-}//Insert new partner profile const {
+//Insert new partner profile const {
   data: newPartner, error 
-}= await supabase .from ('partner profiles') .insert ([ {
+= await supabase .from ('partner profiles') .insert ([ {
   user id: user.id, name: data.name, website: data.website || null, social media: {
   twitter: data.twitter || null, instagram: data.instagram || null, youtube: data.youtube || null, linkedin: data.linkedin || null 
-};
+;
 niche: data.niche;
 audience size: data.audience size;
 payout method: data.payout method;
 bio: data.bio;
 status: 'pending', //Partners need approval 
-}]) .select ();
+]) .select ();
 if (error) throw error;
 data: existingCode 
-}= await supabase .from ('referral codes') .select ('code') .eq ('user id', user.id) .single ();
-}finally {
+= await supabase .from ('referral codes') .select ('code') .eq ('user id', user.id) .single ();
+finally {
   setIsSubmitting (false) 
-}
-}return (<Card className=" bg-zion-blue-dark border-zion-blue-light"> <CardHeader> <CardTitle>Partner Registration</CardTitle> <CardDescription>Register to become a Zion AI partner and start earning rewards</CardDescription> </CardHeader> <CardContent> </FormControl> <FormMessage /> </FormItem>) 
-}/> <FormField </FormControl> <FormMessage /> </FormItem>) 
-}/> <div className=" grid sm:grid-cols-2 gap-4"> <FormField </FormControl> <FormMessage /> </FormItem>) 
-}/> <FormField </FormControl> <FormMessage /> </FormItem>) 
-}/> </div> <div className=" grid sm:grid-cols-2 gap-4"> <FormField </FormControl> <FormMessage /> </FormItem>) 
-}/> <FormField </FormControl> <FormMessage /> </FormItem>) 
-}/> </div> <FormField </FormControl> <FormDescription> What topics do you focus on in your content? </FormDescription> <FormMessage /> </FormItem>) 
-}/> <div className=" grid sm:grid-cols-2 gap-4"> <FormField <FormItem> <FormLabel>Audience Size</FormLabel> <Select onValueChange= {
+
+return (<Card className=" bg-zion-blue-dark border-zion-blue-light"> <CardHeader> <CardTitle>Partner Registration</CardTitle> <CardDescription>Register to become a Zion AI partner and start earning rewards</CardDescription> </CardHeader> <CardContent></FormControl> <FormMessage /> </FormItem>) 
+/> <FormField </FormControl> <FormMessage /> </FormItem>) 
+/> <div className=" grid sm:grid-cols-2 gap-4"> <FormField </FormControl> <FormMessage /> </FormItem>) 
+/> <FormField </FormControl> <FormMessage /> </FormItem>) 
+/> </div> <div className=" grid sm:grid-cols-2 gap-4"> <FormField </FormControl> <FormMessage /> </FormItem>) 
+/> <FormField </FormControl> <FormMessage /> </FormItem>) 
+/> </div> <FormField </FormControl> <FormDescription> What topics do you focus on in your content? </FormDescription> <FormMessage /> </FormItem>) 
+/> <div className=" grid sm:grid-cols-2 gap-4"> <FormField <FormItem> <FormLabel>Audience Size</FormLabel> <Select onValueChange= {
   field.onChange 
-}defaultValue= {
+defaultValue= {
   field.value 
-}> <FormControl> <SelectTrigger> <SelectValue placeholder=" Select audience size"/> </SelectTrigger> </FormControl> <SelectContent> <SelectItem value=" under1k">Under 1, 000</SelectItem> <SelectItem value=" 1k-10k">1, 000 - 10, 000</SelectItem> <SelectItem value=" 10k-50k">10, 000 - 50, 000</SelectItem> <SelectItem value=" 50k-100k">50, 000 - 100, 000</SelectItem> <SelectItem value=" over100k">Over 100, 000</SelectItem> </SelectContent> </Select> <FormMessage /> </FormItem>) 
-}/> <FormField <FormItem> <FormLabel>Preferred Payout Method</FormLabel> <Select onValueChange= {
+> <FormControl> <SelectTrigger> <SelectValue placeholder=" Select audience size"/> </SelectTrigger> </FormControl> <SelectContent> <SelectItem value=" under1k">Under 1, 000</SelectItem> <SelectItem value=" 1k-10k">1, 000 - 10, 000</SelectItem> <SelectItem value=" 10k-50k">10, 000 - 50, 000</SelectItem> <SelectItem value=" 50k-100k">50, 000 - 100, 000</SelectItem> <SelectItem value=" over100k">Over 100, 000</SelectItem> </SelectContent> </Select> <FormMessage /> </FormItem>) 
+/> <FormField <FormItem> <FormLabel>Preferred Payout Method</FormLabel> <Select onValueChange= {
   field.onChange 
-}defaultValue= {
+defaultValue= {
   field.value 
-}> <FormControl> <SelectTrigger> <SelectValue placeholder=" Select payout method" /> </SelectTrigger> </FormControl> <SelectContent> </SelectContent> </Select> <FormMessage /> </FormItem>) 
-}/> </div> <FormField <FormItem> <FormLabel>Bio</FormLabel> <FormControl> <Textarea /> </FormControl> <FormDescription> Limit: 500 characters </FormDescription> <FormMessage /> </FormItem>) 
-}/> </div> <Button </Button> </form> </Form> </CardContent> </Card>) 
-}
+> <FormControl> <SelectTrigger> <SelectValue placeholder=" Select payout method" /> </SelectTrigger> </FormControl> <SelectContent></SelectContent> </Select> <FormMessage /> </FormItem>) 
+/> </div> <FormField <FormItem> <FormLabel>Bio</FormLabel> <FormControl> <Textarea /> </FormControl> <FormDescription> Limit: 500 characters </FormDescription> <FormMessage /> </FormItem>) 
+/> </div> <Button </Button> </form> </Form> </CardContent> </Card>) 

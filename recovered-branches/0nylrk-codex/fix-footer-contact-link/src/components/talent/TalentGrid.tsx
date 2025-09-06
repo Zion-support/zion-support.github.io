@@ -12,7 +12,7 @@ export interface TalentGridProps {
   viewProfile?: (id: string) => void
   clearFilters?: () => void;
   handleRequestHire?: (talent: TalentProfile) => void;
-}
+
 export function TalentGrid({
   talents
   isLoading
@@ -24,7 +24,7 @@ export function TalentGrid({
   viewProfile;
   clearFilters;
   handleRequestHire
-}: TalentGridProps) {
+: TalentGridProps) {
 
   const handleRequestHireInternal = (talent: TalentProfile) => {
     if (handleRequestHire) {
@@ -33,14 +33,12 @@ export function TalentGrid({
       // Default implementation;
       console.log ("Request to hire:", talent.id);
     }
-  }
   const handleViewProfile = (id: string) => {
     if (viewProfile) {
       viewProfile(id)
     } else {
       onTalentClick (id);
     }
-  }
 
   if (isLoading) {
     return <div className="py-8 text-center">
@@ -48,7 +46,7 @@ export function TalentGrid({
       <p className="text-zion-cyan">Loading talent profiles...</p>
     </div>
   }
-  if (!talents |talents.length === 0) {
+  if (!talents |talents.length = = 0) {
     return <div className="py-8 text-center bg-zion-blue-dark rounded-lg border border-zion-blue-light p-6">
       <p className="text-zion-slate-light mb-4">No talents found matching your criteria</p>
       {clearFilters && (
@@ -62,7 +60,7 @@ export function TalentGrid({
   }
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
-      {talents && talents.map((talent) => (;
+      {talents && talents.map(talent) => (;
         <TalentCard
           key={talent && talent.id}
           talent={talent}
@@ -72,16 +70,16 @@ export function TalentGrid({
           onToggleSave={onToggleSave}
           isAuthenticated={isAuthenticated}
         />;
-      ))}
+      )}
     </div>
   )
-}
+
   }
-;
+
   // Check condition
 if ( {) {
   $2
-}
+
     return <div className="py - 8 text - center">;
       <div className="animate - spin rounded - full h - 12 w - 12 border - t-2 border - b-2 border - zion - cyan mx - auto mb - 4"></div>;
       <p className="text - zion - cyan">Loading talent profiles...</p>;
@@ -90,7 +88,7 @@ if ( {) {
   // Check condition
 if ( {) {
   $2
-}
+
     return <div className="py - 8 text - center bg - zion - blue - dark rounded - lg border border - zion - blue - light p - 6">;
       <p className="text - zion - slate - light mb - 4">No talents found matching your criteria</p>;
       {clear_filters && (
@@ -104,7 +102,7 @@ if ( {) {
   }
   return (
     <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
-      {talents.map ((talent) => (
+      {talents.map (talent) => (
         <TalentCard;
           key={talent.id}
           talent={talent}
@@ -113,6 +111,5 @@ if ( {) {
           is_saved={savedTalentIds.includes (talent.id)}
           onToggleSave={onToggleSave}
           is_authenticated={is_authenticated}
-        />))}
+        />)}
     </div>);
-}

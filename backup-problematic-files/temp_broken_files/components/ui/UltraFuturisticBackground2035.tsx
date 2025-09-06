@@ -10,7 +10,6 @@ interface UltraFuturisticBackground2035Props {
   enableQuantumEffects?: boolean,
   enableNeonEffects?: boolean,
   enableSpaceTime?: boolean
-}
 
 const UltraFuturisticBackground2035: React.FC<UltraFuturisticBackground2035Props> = ({
   intensity = 'medium',
@@ -21,7 +20,7 @@ const UltraFuturisticBackground2035: React.FC<UltraFuturisticBackground2035Props
   enableQuantumEffects = true,
   enableNeonEffects = true,
   enableSpaceTime = true
-}) => {
+) => {
   const canvasRef = useRef<HTMLCanvasElement>(null),
   const particlesRef = useRef<any[]>([]),
   const animationRef = useRef<number | undefined>(undefined),
@@ -66,12 +65,12 @@ const UltraFuturisticBackground2035: React.FC<UltraFuturisticBackground2035Props
           accent: '#ffff00',
           background: 'rgba(0, 0, 0, 0.95)',
           glow: 'rgba(0, 255, 255, 0.3)'
-        }    }
+        }
   },
 
   const colors = getColorScheme(),
 
-  useEffect(() => {
+  useEffect() => {
     const canvas = canvasRef.current,
     if (!canvas) return,
 
@@ -99,8 +98,7 @@ const initParticles = () => {
           maxLife: Math.random() * 100 + 50,
           type: Math.random() > 0.7 ? 'quantum' : 'normal',
           color: Math.random() > 0.5 ? colors.primary : colors.secondary
-        })      }
-    },
+        })      },
 
     initParticles(),
 
@@ -133,7 +131,7 @@ if (particle.life <= 0) {
 const alpha = particle.life / particle.maxLife,
         ctx.globalAlpha = alpha,
 
-        if (particle.type === 'quantum' && enableQuantumEffects) {
+        if (particle.type = = 'quantum' && enableQuantumEffects) {
           // Quantum particle effect,
 ctx.beginPath(),
           ctx.arc(particle.x, particle.y, particle.size * 2, 0, Math.PI * 2),
@@ -154,8 +152,7 @@ ctx.beginPath(),
           ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2),
           ctx.fillStyle = particle.color,
           ctx.fill()
-        }
-      }),
+        }),
 
       // Draw holographic grid,
 if (enableHolographic) {
@@ -181,7 +178,6 @@ if (enableSpaceTime) {
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current)
       }
-    }
   }, [particleCount, animationSpeed, colorScheme, enableHolographic, enableQuantumEffects, enableNeonEffects, enableSpaceTime]),
 
   const drawHolographicGrid = (ctx: CanvasRenderingContext2D, colors: any) => {
@@ -214,12 +210,11 @@ ctx.strokeStyle = colors.secondary,
       ctx.moveTo(offset, 0),
       ctx.lineTo(offset + 200, ctx.canvas.height),
       ctx.stroke()
-    }
-  },
+    },
 
   const drawNeonEffects = (ctx: CanvasRenderingContext2D, colors: any) => {
     const time = Date.now() * 0.001,
-    
+
     // Neon orbs,
 for (let i = 0, i < 3, i++) {
       const x = (Math.sin(time * 0.5 + i) * 0.3 + 0.5) * ctx.canvas.width,
@@ -240,12 +235,11 @@ ctx.shadowBlur = 0,
       ctx.arc(x, y, size * 0.6, 0, Math.PI * 2),
       ctx.fillStyle = colors.primary,
       ctx.fill()
-    }
-  },
+    },
 
   const drawSpaceTimeEffects = (ctx: CanvasRenderingContext2D, colors: any) => {
     const time = Date.now() * 0.001,
-    
+
     // Wormhole effect,
 const centerX = ctx.canvas.width / 2,
     const centerY = ctx.canvas.height / 2,
@@ -263,60 +257,58 @@ const centerX = ctx.canvas.width / 2,
       ctx.beginPath(),
       ctx.arc(x, y, 2, 0, Math.PI * 2),
       ctx.fill()
-    }
-  },
+    },
   return (
     <div className=&quot;fixed inset-0 -z-10 overflow-hidden&quot;>
       <canvas,
 ref={canvasRef}
         className=&quot;w-full h-full&quot;
-        style={{
-          background: colors.background}}
+        style={
+          background: colors.background}
       />
-      
+
       {/* Additional overlay effects */}
       <div className=&quot;absolute inset-0 pointer-events-none&quot;>
         {/* Quantum energy field */}
         <motion.div,
 className=&quot;absolute inset-0&quot;
-          animate={{            background: [
+          animate={            background: [
               `radial-gradient(circle at 20% 20%, _${colors.glow} 0%, transparent 50%)`,
               `radial-gradient(circle at 80% 80%, ${colors.glow} 0%, transparent 50%)`,
               `radial-gradient(circle at 20% 20%, ${colors.glow} 0%, transparent 50%)`
             ]
-          }}
-          transition={{
+          }
+          transition={
             duration: 8,
             repeat: Infinity,
             ease: &quot;easeInOut&quot
-          }}
+          }
         />;
-        ;
         {/* Holographic scan lines */}
         <div className=&quot;absolute inset-0 opacity-20&quot;>
-          {[...Array(20)].map((_, i) => (
+          {[...Array(20)].map(_, i) => (
             <motion.div,
 key={i}
               className=&quot;absolute w-full h-px bg-gradient-to-r from-transparent via-current to-transparent&quot;
-              style={{
+              style={
                 top: `${(i / 20) * 100}%`,
                 color: colors.primary
-              }}
-              animate={{;
+              }
+              animate={;
                 opacity:[0, 1, 0],;
                 scaleX:[0, 1, 0];
-              }}
-              transition={{
+              }
+              transition={
                 duration: 3,
                 delay: i * 0.1,
                 repeat: Infinity,
                 ease: &quot;easeInOut&quot
-              }}            />
-          ))}
+              }            />
+          )}
         </div>
       </div>
     </div>
   )
-},
+,
 
 export default UltraFuturisticBackground2035,

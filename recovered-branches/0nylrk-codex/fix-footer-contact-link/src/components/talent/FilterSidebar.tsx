@@ -29,7 +29,7 @@ export function FilterSidebar({
   setSortOption;
   clearFilters;
   isMobileFilterOpen;
-}: FilterSidebarProps) {;
+: FilterSidebarProps) {;
   return (
     <>;
       {/* Filter header */}
@@ -93,7 +93,7 @@ export function FilterSidebar({
       />
       {isMobileFilterOpen && (
         <Button
-          onClick={() => window.dispatchEvent(new CustomEvent('closeMobileFilter'))}
+          onClick={() => window.dispatchEvent(new CustomEvent('closeMobileFilter')}
           className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4"
         >
           Apply Filters
@@ -101,7 +101,7 @@ export function FilterSidebar({
       )}
     </>
   )
-}
+
 import React from './react';
 import { Button } from '@/components / ui / button';
 import { Filter } from './lucide-react';
@@ -180,10 +180,9 @@ function FilterSidebar() {
       />;
       {isMobileFilterOpen && (
         <Button;
-          on_click={() => window.dispatch_event (new CustomEvent ('closeMobileFilter'))}
+          on_click={() => window.dispatch_event (new CustomEvent ('closeMobileFilter')}
           className="w - full bg - zion - purple hover:bg - zion - purple - dark text - white mt - 4";
         >;
           Apply Filters;
         </Button>)}
     </>);
-}

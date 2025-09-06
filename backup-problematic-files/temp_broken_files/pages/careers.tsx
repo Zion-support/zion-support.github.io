@@ -24,4 +24,3 @@ export default function CareersPage() {
       </div>
     </Layout>
   );
-}

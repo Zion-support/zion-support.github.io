@@ -5,13 +5,13 @@ import {;
   Phone, Mail, MapPin, Globe, ArrowRight, Star, Shield,;
   Brain, DollarSign, Dna, Rocket, Users, Award, Zap,;
   Facebook, Twitter, Linkedin, Instagram, Youtube, Github;
-} from 'lucide-react',;
+ from 'lucide-react',;
 const contactInfo = {;
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup.com',;
   address: '364 E Main St STE 1008 Middletown DE 19709',;
   website: 'https://ziontechgroup.com';
-},;
+,;
 const serviceCategories = [;
   {;
     title: 'AI & Automation',;
@@ -53,7 +53,7 @@ const serviceCategories = [;
       { name: 'AI Autonomous Clinical Trials', href: '/ai-autonomous-clinical-trials' }
     ];
   }
-],;
+,;
 const companyLinks = [;
   { name: 'About Us', href: '/about' },;
   { name: 'Leadership Team', href: '/leadership' },;
@@ -63,7 +63,7 @@ const companyLinks = [;
   { name: 'Investors', href: '/investors' },;
   { name: 'Contact Us', href: '/contact' },;
   { name: 'Locations', href: '/locations' }
-],;
+,;
 const resourceLinks = [;
   { name: 'Documentation', href: '/docs' },;
   { name: 'API Reference', href: '/api-documentation' },;
@@ -73,7 +73,7 @@ const resourceLinks = [;
   { name: 'Training & Certification', href: '/training' },;
   { name: 'Community Forum', href: '/community' },;
   { name: 'Developer Resources', href: '/developer-resources' }
-],;
+,;
 const socialLinks = [;
   { name: 'Facebook', href: '#', icon: Facebook },;
   { name: 'Twitter', href: '#', icon: Twitter },;
@@ -81,7 +81,7 @@ const socialLinks = [;
   { name: 'Instagram', href: '#', icon: Instagram },;
   { name: 'YouTube', href: '#', icon: Youtube },;
   { name: 'GitHub', href: '#', icon: Github }
-],
+,
 
 export default function UltraFuturisticFooter2026() {
   return (
@@ -98,9 +98,9 @@ export default function UltraFuturisticFooter2026() {
           {/* Company Info */}
           <div className="lg:col-span-2">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.6 }
             >
               <div className="flex items-center mb-6">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mr-4">
@@ -114,7 +114,7 @@ export default function UltraFuturisticFooter2026() {
                 Leading provider of revolutionary AI automation, quantum cybersecurity, fintech blockchain, 
                 and healthcare biotech solutions. Transforming businesses with cutting-edge technology.
               </p>
-              
+
               {/* Contact Info */}
               <div className="space-y-3">
                 <div className="flex items-center text-gray-300">
@@ -138,22 +138,22 @@ export default function UltraFuturisticFooter2026() {
           </div>
 
           {/* Service Categories */}
-          {serviceCategories.map((category, index) => (;
+          {serviceCategories.map(category, index) => (;
             <motion.div;
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.6, delay: index * 0.1 }
             >
               <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
-                {category.title === 'AI & Automation' && <Brain className="w-5 h-5 mr-2 text-cyan-400" />}
-                {category.title === 'Cybersecurity & Quantum' && <Shield className="w-5 h-5 mr-2 text-red-400" />}
-                {category.title === 'Fintech & Blockchain' && <DollarSign className="w-5 h-5 mr-2 text-green-400" />}
-                {category.title === 'Healthcare & Biotech' && <Dna className="w-5 h-5 mr-2 text-blue-400" />}
+                {category.title = = 'AI & Automation' && <Brain className="w-5 h-5 mr-2 text-cyan-400" />}
+                {category.title = = 'Cybersecurity & Quantum' && <Shield className="w-5 h-5 mr-2 text-red-400" />}
+                {category.title = = 'Fintech & Blockchain' && <DollarSign className="w-5 h-5 mr-2 text-green-400" />}
+                {category.title = = 'Healthcare & Biotech' && <Dna className="w-5 h-5 mr-2 text-blue-400" />}
                 {category.title}
               </h4>
               <ul className="space-y-2">
-                {category.services.map((service, serviceIndex) => (
+                {category.services.map(service, serviceIndex) => (
                   <li key={serviceIndex}>
                     <Link 
                       href={service.href}
@@ -163,25 +163,25 @@ export default function UltraFuturisticFooter2026() {
                       {service.name}
                     </a>
                   </li>
-                ))}
+                )}
               </ul>;
             </motion.div>;
-          ))}
+          )}
         </div>;
         {/* Additional Links */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {/* Company Links */}
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            initial={ opacity: 0, y: 20 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.6, delay: 0.2 }
           >
             <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
               <Users className="w-5 h-5 mr-2 text-purple-400" />
               Company
             </h4>
             <ul className="space-y-2">
-              {companyLinks.map((link, index) => (
+              {companyLinks.map(link, index) => (
                 <li key={index}>
                   <Link 
                     href={link.href}
@@ -190,21 +190,21 @@ export default function UltraFuturisticFooter2026() {
                     {link.name}
                   </a>
                 </li>
-              ))}
+              )}
             </ul>;
           </motion.div>;
           {/* Resources */}
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            initial={ opacity: 0, y: 20 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.6, delay: 0.3 }
           >
             <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
               <Award className="w-5 h-5 mr-2 text-yellow-400" />
               Resources
             </h4>
             <ul className="space-y-2">
-              {resourceLinks.map((link, index) => (
+              {resourceLinks.map(link, index) => (
                 <li key={index}>
                   <Link 
                     href={link.href}
@@ -213,21 +213,21 @@ export default function UltraFuturisticFooter2026() {
                     {link.name}
                   </a>
                 </li>
-              ))}
+              )}
             </ul>;
           </motion.div>;
           {/* Social Media */}
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            initial={ opacity: 0, y: 20 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.6, delay: 0.4 }
           >
             <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
               <Rocket className="w-5 h-5 mr-2 text-pink-400" />
               Follow Us
             </h4>
             <div className="grid grid-cols-3 gap-4">
-              {socialLinks.map((social, index) => (
+              {socialLinks.map(social, index) => (
                 <Link
                   key={index}
                   href={social.href}
@@ -235,15 +235,15 @@ export default function UltraFuturisticFooter2026() {
                 >
                   <social.icon className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors duration-300" />
                 </a>
-              ))}
+              )}
             </div>;
           </motion.div>;
         </div>;
         {/* Newsletter Signup */}
         <motion.div;
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
+          initial={ opacity: 0, y: 20 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0.6, delay: 0.5 }
           className="bg-gradient-to-r from-gray-800 to-gray-900 rounded-3xl p-8 border border-gray-700 mb-12"
         >
           <div className="text-center">
@@ -269,9 +269,9 @@ export default function UltraFuturisticFooter2026() {
 
         {/* Bottom Bar */}
         <motion.div;
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
+          initial={ opacity: 0 }
+          whileInView={ opacity: 1 }
+          transition={ duration: 0.6, delay: 0.6 }
           className="border-t border-gray-800 pt-8"
         >
           <div className="flex flex-col md: flex-row justify-between items-center">
@@ -328,4 +328,3 @@ export default function UltraFuturisticFooter2026() {
       </div>;
     </footer>;
   );
-}

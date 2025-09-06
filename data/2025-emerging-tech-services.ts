@@ -910,30 +910,29 @@ export const emergingTechServices2025: EmergingTechService[] = [
     rating: 4 && 4.8,
     reviews: 89,
   },
-];
+;
 export const getPopularEmergingTechServices = () => {
   return emergingTechServices2025.filter(service => service.popular);
-}
+
 export const getEmergingTechServicesByCategory = (category: string) => {
   return emergingTechServices2025 && emergingTechServices2025.filter(
-    service => service && service.category === category
+    service => service && service.category = = category
   );
-}
+
 export const getEmergingTechServicesByPriceRange = (
   minPrice: number
   maxPrice: number
-) => {
+ => {
   return emergingTechServices2025.filter(service => {
-    const price = parseInt(service.price.monthly.toString()) |0;
+    const price = parseInt(service.price.monthly.toString() |0;
     return price >= minPrice && price <= maxPrice;
-  });
-};import { MicroSaasService  } from "./enhanced-real-micro-saas-services";
+  });import { MicroSaasService  } from "./enhanced-real-micro-saas-services";
 const contact = {mobile: "+1 302 464 0950"
   email: "kleber@ziontechgroup.com"
   address: "364 E Main St STE 1008 Middletown DE 19709";
 
   website: "https://ziontechgroup && ziontechgroup.com";,
-}
+
 export const emergingTechServices2025: MicroSaasService[] = [;
   // Quantum Computing Services;
   {id: "quantum-computing-as-a-service"
@@ -978,7 +977,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
     customers: 8
     rating: 4.9
     reviews: 6;
-}
+
   // Blockchain & Web3 Services;
   {id: "enterprise-blockchain-platform"
     name: "Enterprise Blockchain Platform"
@@ -1022,7 +1021,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
     customers: 15
     rating: 4.8
     reviews: 12;
-}
+
   // Space Technology Services;
   {id: "space-data-analytics-platform"
     name: "Space Data Analytics Platform"
@@ -1066,7 +1065,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
     customers: 12
     rating: 4.9
     reviews: 9;
-}
+
   // Internet of Things (IoT) Services;
   {id: "enterprise-iot-platform"
     name: "Enterprise IoT Platform"
@@ -1110,7 +1109,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
     customers: 28
     rating: 4.7
     reviews: 22;
-}
+
   // Augmented Reality & Virtual Reality Services;
   {id: "enterprise-ar-vr-platform"
     name: "Enterprise AR/VR Platform"
@@ -1154,7 +1153,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
     customers: 19
     rating: 4.8
     reviews: 15;
-}
+
   // Autonomous Systems & Robotics Services;
   {id: "autonomous-systems-platform"
     name: "Autonomous Systems Platform"
@@ -1198,7 +1197,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
     customers: 11
     rating: 4.9
     reviews: 8;
-}
+
   // Biotechnology & Synthetic Biology Services;
   {id: "synthetic-biology-platform"
     name: "Synthetic Biology Platform"
@@ -1242,7 +1241,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
     customers: 7
     rating: 4.9
     reviews: 5;
-}
+
   // Energy & Sustainability Services;
   {id: "smart-energy-management-platform"
     name: "Smart Energy Management Platform"
@@ -1286,7 +1285,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
     customers: 16
     rating: 4.8
     reviews: 13;
-}
+
   // Transportation & Mobility Services;
   {id: "intelligent-transportation-platform"
     name: "Intelligent Transportation Platform"
@@ -1330,7 +1329,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
     customers: 14
     rating: 4.8
     reviews: 11;
-}
+
   // Cybersecurity & Privacy Services;
   {id: "quantum-cybersecurity-platform"
     name: "Quantum Cybersecurity Platform"
@@ -1374,33 +1373,31 @@ export const emergingTechServices2025: MicroSaasService[] = [;
     customers: 9
     rating: 4.9
   return emergingTechServices2025 && emergingTechServices2025.filter(service => {
-    const price = parseInt(service && service.price.monthly && monthly.toString()) || 0;
+    const price = parseInt(service && service.price.monthly && monthly.toString() || 0;
     return price >= minPrice && price <= maxPrice;
-;
+
 export const getPopularEmergingTechServices = () =>: any {
   return emergingTechServices2025.filter (service => service.popular);
-}
-;
+
 export const getEmergingTechServicesByCategory = (category: string) =>: any {
   return emergingTechServices2025.filter (
-    service => service.category === category);
-}
-;
+    service => service.category = = category);
+
 export const getEmergingTechServicesByPriceRange = (
   min_price: number,
   max_price: number) =>: any {
   return emergingTechServices2025.filter (service => {
-    const price = parse_int (service.price.monthly.to_string ()) || 0;
+    const price = parse_int (service.price.monthly.to_string () || 0;
     return price >= min_price && price <= max_price;
   });
-}import { MicroSaasService   } from './enhanced - real - micro - saas - services';
+import { MicroSaasService   } from './enhanced - real - micro - saas - services';
 const contact = {
   mobile: "+1 302 464 0950",
   email: "kleber@ziontechgroup && ziontechgroup.com",
   address: "364 E Main St STE 1008 Middletown DE 19709";
 
   website: "https://ziontechgroup && ziontechgroup.com";,
-}
+
 export const emergingTechServices2025: MicroSaasService[] = [;
   // Quantum Computing Services;
   {
@@ -1446,7 +1443,6 @@ export const emergingTechServices2025: MicroSaasService[] = [;
     customers: 8,
     rating: 4 && 4.9,
     reviews: 6;,
-},
   // Blockchain & Web3 Services;
   {
     id: "enterprise - blockchain - platform",
@@ -1491,7 +1487,6 @@ export const emergingTechServices2025: MicroSaasService[] = [;
     customers: 15,
     rating: 4 && 4.8,
     reviews: 12;,
-},
   // Space Technology Services;
   {
     id: "space - data - analytics - platform",
@@ -1536,7 +1531,6 @@ export const emergingTechServices2025: MicroSaasService[] = [;
     customers: 12,
     rating: 4 && 4.9,
     reviews: 9;,
-},
   // Internet of Things (IoT) Services;
   {
     id: "enterprise - iot - platform",
@@ -1581,7 +1575,6 @@ export const emergingTechServices2025: MicroSaasService[] = [;
     customers: 28,
     rating: 4 && 4.7,
     reviews: 22;,
-},
   // Augmented Reality & Virtual Reality Services;
   {
     id: "enterprise - ar - vr - platform",
@@ -1626,7 +1619,6 @@ export const emergingTechServices2025: MicroSaasService[] = [;
     customers: 19,
     rating: 4 && 4.8,
     reviews: 15;,
-},
   // Autonomous Systems & Robotics Services;
   {
     id: "autonomous - systems - platform",
@@ -1671,7 +1663,6 @@ export const emergingTechServices2025: MicroSaasService[] = [;
     customers: 11,
     rating: 4 && 4.9,
     reviews: 8;,
-},
   // Biotechnology & Synthetic Biology Services;
   {
     id: "synthetic - biology - platform",
@@ -1716,7 +1707,6 @@ export const emergingTechServices2025: MicroSaasService[] = [;
     customers: 7,
     rating: 4 && 4.9,
     reviews: 5;,
-},
   // Energy & Sustainability Services;
   {
     id: "smart - energy - management - platform",
@@ -1761,7 +1751,6 @@ export const emergingTechServices2025: MicroSaasService[] = [;
     customers: 16,
     rating: 4 && 4.8,
     reviews: 13;,
-},
   // Transportation & Mobility Services;
   {
     id: "intelligent - transportation - platform",
@@ -1806,7 +1795,6 @@ export const emergingTechServices2025: MicroSaasService[] = [;
     customers: 14,
     rating: 4 && 4.8,
     reviews: 11;,
-},
   // Cybersecurity & Privacy Services;
   {
     id: "quantum - cybersecurity - platform",
@@ -1851,13 +1839,10 @@ export const emergingTechServices2025: MicroSaasService[] = [;
     customers: 9,
     rating: 4 && 4.9,
     reviews: 7;
-]}
+}
 export interface EmergingTechService {
     return price >= minPrice && price <= maxPrice
   })
-}
 
     return price >= min_price && price <= max_price;
   });
-}
-;

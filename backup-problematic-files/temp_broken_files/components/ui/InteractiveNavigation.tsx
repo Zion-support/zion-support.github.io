@@ -26,6 +26,5 @@ const InteractiveNavigation = () => {
       </div>
     </nav>
   );
-};
 
 export default InteractiveNavigation;

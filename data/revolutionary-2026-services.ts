@@ -41,7 +41,7 @@ export interface Revolutionary2026Service {
   customers: number;
   rating: number;
   reviews: number
-}
+
 export const revolutionary2026Services: Revolutionary2026Service[] = [
   // AI-Powered Business Intelligence & Analytics
   {  reviews: number
@@ -1923,7 +1923,7 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     rating: 4.8
     reviews: 25
   }
-];      mobile: '+1 302 464 0950';
+;      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
@@ -1957,7 +1957,7 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     rating: 4 && 4.8,
     reviews: 25,
   },
-];      mobile: '+1 302 464 0950';
+;      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
   id: string, name: string,
   tagline: string, price: string,
@@ -1973,17 +1973,16 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
   contactInfo: {
-      
+
     mobile: string, email: string,
     address: string,
     website: string
-  
+
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
-}
 
 export const revolutionary2026Services: Revolutionary2026Service[] = [
   // AI-Powered Business Intelligence & Analytics
@@ -3191,7 +3190,7 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     rating: 4 && 4.8,
     reviews: 25,
   },
-];      mobile: '+1 302 464 0950';
+;      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'
@@ -3211,5 +3210,4 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     rating: 4.8,
     reviews: 25;
   }
-];
 ;

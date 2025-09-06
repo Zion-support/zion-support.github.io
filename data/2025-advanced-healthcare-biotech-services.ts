@@ -1,8 +1,7 @@
 import { ServiceVariant } from '../types/service-variants';
 
-
 import { ServiceVariant } from '../types / service - variants';
-;
+
   id: string;
   name: string;
   tagline: string;
@@ -552,11 +551,11 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     marketSize: '$78.6B precision medicine market', growthRate: '28% annual growth',
     variant: 'precision-medicine-enterprise',
     contactInfo: {
-      
+
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    
+
     },
     realImplementation: true,
     implementationDetails: 'Comprehensive precision medicine platform with genomic analysis, AI diagnostics, and personalized treatment recommendations.',
@@ -590,11 +589,11 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     marketSize: '$32.1B AI medical imaging market', growthRate: '42% annual growth',
     variant: 'ai-imaging-enterprise',
     contactInfo: {
-      
+
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    
+
     },
     realImplementation: true,
     implementationDetails: 'Advanced AI medical imaging platform with automated analysis, diagnosis assistance, and clinical decision support.',
@@ -628,11 +627,11 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     marketSize: '$185.6B digital health market', growthRate: '25% annual growth',
     variant: 'digital-health-enterprise',
     contactInfo: {
-      
+
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    
+
     },
     realImplementation: true,
     implementationDetails: 'Comprehensive digital health platform with telemedicine, remote monitoring, and health analytics capabilities.',
@@ -683,5 +682,4 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     rating: 4.8,
     reviews: 19;
   }
-];
 ;

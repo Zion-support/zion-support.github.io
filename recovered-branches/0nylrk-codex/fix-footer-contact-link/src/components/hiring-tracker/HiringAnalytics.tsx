@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip } from 'recharts';
 interface HiringAnalyticsProps {
   job_id?: string;
-}
+
 export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {
   const { applications, isLoading } = useJobApplications(jobId);
   const [analyticsData, setAnalyticsData] = useState<{
@@ -19,49 +19,48 @@ export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {
     timeToHire: 0
     conversionRate: 0
     funnelData: []})
-  useEffect(() => {
+  useEffect() => {
     if (applications && applications.length > 0) {
       // Calculate status distribution
       const statusCounts: Record<string, number> = {}
       applications.forEach(app => {
         statusCounts[app.status] = (statusCounts[app.status] |0) + 1
       });
-      const statusDistribution = Object.entries(statusCounts).map(([status, count]) => ({
+      const statusDistribution = Object.entries(statusCounts).map([status, count]) => ({
         status;
-        count}));
+        count});
       // Calculate time to hire (in days)
-      const hiredApplications = applications.filter(app => app.status === 'hired');
+      const hiredApplications = applications.filter(app => app.status = = 'hired');
       let avgTimeToHire = 0;
       if (hiredApplications.length > 0) {
-        const totalDays = hiredApplications.reduce((sum, app) => {
+        const totalDays = hiredApplications.reduce(sum, app) => {
           const hireDate = new Date(app.updated_at);
           const applyDate = new Date(app.created_at);
-          const daysDiff = (hireDate.getTime() - applyDate.getTime()) / (1000 * 3600 * 24);
+          const daysDiff = (hireDate.getTime() - applyDate.getTime() / (1000 * 3600 * 24);
           return sum + daysDiff
         }, 0);
         avgTimeToHire = Math.round(totalDays / hiredApplications.length)
       }
       // Calculate conversion rate
       const conversionRate = hiredApplications.length > 0
-        ? Math.round((hiredApplications.length / applications.length) * 100)
+        ? Math.round(hiredApplications.length / applications.length) * 100)
         : 0;
       // Funnel data
       const funnelData = [
         { name: 'Applied', value: applications.length }
-        { name: 'Shortlisted', value: applications.filter(app => app.status === 'shortlisted').length }
-        { name: 'Interview', value: applications.filter(app => app.status === 'interview').length }
-        { name: 'Hired', value: applications.filter(app => app.status === 'hired').length }]
+        { name: 'Shortlisted', value: applications.filter(app => app.status = = 'shortlisted').length }
+        { name: 'Interview', value: applications.filter(app => app.status = = 'interview').length }
+        { name: 'Hired', value: applications.filter(app => app.status = = 'hired').length }]
       setAnalyticsData({
         statusDistribution;
         timeToHire: avgTimeToHire
         conversionRate;
         funnelData});
-    }
-  }, [applications]);
+    }, [applications]);
   if (isLoading) {
     return <div>Loading analytics data...</div>
   }
-  if (!applications |applications.length === 0) {
+  if (!applications |applications.length = = 0) {
     return (
       <Card className="text-center py-16">;
         <CardContent>;
@@ -95,9 +94,9 @@ export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {
                 dataKey="count"
                 label={({name, percent}) => `${name}: ${(percent * 100).toFixed(0)}%`}
               >;
-                {analyticsData && analyticsData.statusDistribution.map((entry, index) => (;
+                {analyticsData && analyticsData.statusDistribution.map(entry, index) => (;
                   <Cell key={`cell-${index}`} fill={COLORS[index % COLORS && COLORS.length]} />;
-                ))}
+                )}
               </Pie>
               <Tooltip />
             </PieChart>
@@ -146,9 +145,9 @@ export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {
               <YAxis dataKey="name" type="category" width={100} />;
               <Tooltip />;
               <Bar dataKey="value" fill="#8884d8" radius={[0, 4, 4, 0]}>;
-                {analyticsData && analyticsData.funnelData.map((entry, index) => (;
+                {analyticsData && analyticsData.funnelData.map(entry, index) => (;
                   <Cell key={`cell-${index}`} fill={COLORS[index % COLORS && COLORS.length]} />;
-                ))}
+                )}
               </Bar>
             </BarChart>
           </ResponsiveContainer>
@@ -156,7 +155,7 @@ export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {
       </Card>
     </div>
   )
-}
+
               </Bar>;
             </BarChart>;
           </ResponsiveContainer>;
@@ -164,6 +163,5 @@ export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {
       </Card>;
     </div>;
   );
-}
+
     </div>);
-}

@@ -5,7 +5,7 @@ import {
   Twitter, Linkedin, Github,
   ArrowUp, Crown, Zap, Brain, Rocket,
   Shield, Users, BookOpen, Briefcase, Atom
-} from 'lucide-react',
+ from 'lucide-react',
 import Link from 'next/link',
 import { AnimatePresence } from 'framer-motion',
 interface FooterLink {
@@ -13,12 +13,11 @@ interface FooterLink {
   href: string,
   description?: string,
   external?: boolean
-}
-;
+
 interface FooterSection {;
   title:string,;
   links:FooterLink[];
-}
+
 const footerSections: FooterSection[] = [
   {_title: 'Services', _links: [
       { label: 'AI & Machine Learning', _href: '/ai-services', _description: 'Advanced AI solutions'},
@@ -64,13 +63,13 @@ const footerSections: FooterSection[] = [
       {_label: 'Education', _href: '/education-technology-solutions', _description: 'EdTech solutions'}
     ]
   }
-],
+,
 
 const socialLinks = [
   { icon: <Linkedin className="w-5 h-5" />, href: 'https://linkedin.com/company/ziontechgroup', label: 'LinkedIn', external: true },
   { icon: <Twitter className="w-5 h-5" />, href: 'https://twitter.com/ziontechgroup', label: 'Twitter', external: true },
   { icon: <Github className="w-5 h-5" />, href: 'https://github.com/ziontechgroup', label: 'GitHub', external: true }
-],
+,
 
 const quickLinks = [
   { name: 'About Us', href: '/about', icon: <Users className="w-4 h-4" /> },
@@ -79,7 +78,7 @@ const quickLinks = [
   { name: 'Documentation', href: '/docs', icon: <FileText className="w-4 h-4" /> },
   { name: 'API Reference', href: '/api', icon: <Code className="w-4 h-4" /> },
   { name: 'Status', href: '/status', icon: <TrendingUp className="w-4 h-4" /> }
-],
+,
 const UltraAdvancedFuturisticFooter2025: React.FC = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -88,7 +87,7 @@ const _socialLinks = [
   {_icon: <Linkedin className="w-5 h-5" />, _href: 'https://linkedin.com/company/ziontechgroup', _label: 'LinkedIn', _external: true},
   {_icon: <Twitter className="w-5 h-5" />, _href: 'https://twitter.com/ziontechgroup', _label: 'Twitter', _external: true},
   {_icon: <Github className="w-5 h-5" />, _href: 'https://github.com/ziontechgroup', _label: 'GitHub', _external: true}
-];
+;
 
 const _quickLinks = [
   {_name: 'About Us', _href: '/about', _icon: <Users className="w-4 h-4" />},
@@ -97,7 +96,7 @@ const _quickLinks = [
   {_name: 'Documentation', _href: '/docs', _icon: <FileText className="w-4 h-4" />},
   {_name: 'API Reference', _href: '/api', _icon: <Code className="w-4 h-4" />},
   {_name: 'Status', _href: '/status', _icon: <TrendingUp className="w-4 h-4" />}
-];
+;
 
 const UltraAdvancedFuturisticFooter2025: React.FC = () => {_const _scrollToTop = () => {
     window.scrollTo({ top: 0, _behavior: 'smooth'});
@@ -147,13 +146,11 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {_const _scrollToTop =
   const _containerVariants = {_hidden: { opacity: 0},
     visible: {_opacity: 1, _transition: {
         staggerChildren: 0.1}
-    }
   },
 
   const _itemVariants = {_hidden: { y: 20, _opacity: 0},
     visible: {_y: 0, _opacity: 1, _transition: {
         duration: 0.5}
-    }
   },
 
   return (
@@ -161,26 +158,26 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {_const _scrollToTop =
       {/* Animated Background Elements */}
       <div className=&quot;absolute inset-0 -z-10&quot;>
         {/* Quantum Particle Field */}
-        {[...Array(30)].map((_, i) => (;
+        {[...Array(30)].map(_, i) => (;
           <motion.div;
             key={i}
             className=&quot;absolute w-1 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full&quot;
-            animate={{
+            animate={
               x: [0, Math.random() * 1000, 0],
               y: [0, Math.random() * 1000, 0],
               opacity: [0, 0.6, 0],
-              scale: [0, 1, 0]}}
-            transition={{
+              scale: [0, 1, 0]}
+            transition={
               duration: 15 + Math.random() * 10,
               repeat: -1,
               delay: Math.random() * 8,
               ease: &quot;easeInOut&quot;
-            }}
-            style={{              left: `${Math.random() * 100}%`,
+            }
+            style={              left: `${Math.random() * 100}%`,
               top: `${_Math.random() * 100}%`
-            }}
+            }
           />;
-        ))}
+        )}
         ;
         {/* Gradient Overlays */}
         <div className=&quot;absolute inset-0 bg-gradient-to-t from-gray-900 via-purple-900/20 to-transparent&quot;></div>
@@ -194,7 +191,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {_const _scrollToTop =
             variants={containerVariants}
             initial=&quot;hidden&quot;
             whileInView=&quot;visible&quot;
-            viewport={{ once: true }}
+            viewport={ once: true }
             className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12&quot;
           >
             {/* Company Info */}
@@ -212,12 +209,12 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {_const _scrollToTop =
                   <p className=&quot;text-sm text-gray-400&quot;>Future Technology Solutions</p>
                 </div>
               </div>
-              
+
               <p className=&quot;text-gray-300 mb-6 leading-relaxed&quot;>
                 Pioneering the future with revolutionary AI consciousness, quantum computing, 
                 and autonomous systems. Transforming businesses through next-generation technology.
               </p>
-              
+
               <p className=&quot;text-gray-300 leading-relaxed mb-6 max-w-md&quot;>
                 Leading provider of innovative technology solutions, specializing in AI, automation, and future-ready services. 
                 We help businesses transform and thrive in the digital age.
@@ -246,17 +243,17 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {_const _scrollToTop =
             </motion.div>
 
             {/* Footer Sections */}
-            {footerSections.map((section, index) => (
+            {footerSections.map(section, index) => (
               <motion.div key={section.title} variants={itemVariants}>
                 <h4 className=&quot;text-lg font-semibold text-white mb-6 flex items-center space-x-2&quot;>
-                  {section.title === 'Services' && <Briefcase className=&quot;w-5 h-5 text-cyan-400&quot; />}
-                  {section.title === 'Solutions' && <Zap className=&quot;w-5 h-5 text-purple-400&quot; />}
-                  {section.title === 'Company' && <Users className=&quot;w-5 h-5 text-pink-400&quot; />}
-                  {section.title === 'Resources' && <BookOpen className=&quot;w-5 h-5 text-blue-400&quot; />}
+                  {section.title = = 'Services' && <Briefcase className=&quot;w-5 h-5 text-cyan-400&quot; />}
+                  {section.title = = 'Solutions' && <Zap className=&quot;w-5 h-5 text-purple-400&quot; />}
+                  {section.title = = 'Company' && <Users className=&quot;w-5 h-5 text-pink-400&quot; />}
+                  {section.title = = 'Resources' && <BookOpen className=&quot;w-5 h-5 text-blue-400&quot; />}
                   <span>{section.title}</span>
                 </h4>
                 <ul className=&quot;space-y-3&quot;>
-                  {section.items.map((item) => (
+                  {section.items.map(item) => (
                     <li key={item.label}>
                       <Link
                         href={item.href}
@@ -264,38 +261,38 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {_const _scrollToTop =
                       >
                         {item.label}
                       </a>                    </li>
-                  ))}
+                  )}
                 </ul>;
               </motion.div>;
-            ))}
+            )}
           </motion.div>
 
           {_/* Social Links & Newsletter */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 20 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.6 }
+            viewport={ once: true }
             className=&quot;mt-16 pt-12 border-t border-gray-800/50&quot;
           >
             <div className=&quot;flex flex-col lg:flex-row items-center justify-between gap-8&quot;>
               {/* Social Links */}
               <div className=&quot;flex items-center space-x-6&quot;>
                 <span className=&quot;text-gray-400 font-medium&quot;>Follow Us:</span>
-                {socialLinks.map((social) => (
+                {socialLinks.map(social) => (
                   <motion.a
                     key={social.label}
                     href={social.href}
                     target=&quot;_blank&quot;
                     rel=&quot;noopener noreferrer&quot;
                     className=&quot;w-10 h-10 bg-gray-800/50 hover:bg-gradient-to-r hover:from-cyan-500 hover:to-purple-500 rounded-xl flex items-center justify-center text-gray-300 hover:text-white transition-all duration-200 hover:scale-110&quot;
-                    whileHover={{ y: -2 }}
-                    whileTap={{ scale: 0.95 }}                  >
+                    whileHover={ y: -2 }
+                    whileTap={ scale: 0.95 }                  >
                     <social.icon className=&quot;w-5 h-5&quot; />
                   </motion.a>
-                ))}
+                )}
               </div>;
-;
+
               {/* Newsletter Signup */}
               <div className=&quot;flex-1 max-w-md&quot;>
                 <h5 className=&quot;text-lg font-semibold text-white mb-3&quot;>Stay Updated</h5>
@@ -309,8 +306,8 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {_const _scrollToTop =
                   />
                   <motion.button
                     className=&quot;px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-200&quot;
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}                  >
+                    whileHover={ scale: 1.05 }
+                    whileTap={ scale: 0.95 }                  >
                     Subscribe
                   </motion.button>
                 </div>
@@ -321,10 +318,10 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {_const _scrollToTop =
 
         {_/* Bottom Bar */}
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+          initial={ opacity: 0 }
+          whileInView={ opacity: 1 }
+          transition={ duration: 0.6 }
+          viewport={ once: true }
           className=&quot;border-t border-gray-800/50 bg-gray-900/50 backdrop-blur-xl&quot;        >
           <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6&quot;>
             <div className=&quot;flex flex-col md:flex-row items-center justify-between gap-4&quot;>
@@ -337,7 +334,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {_const _scrollToTop =
                   Terms of Service
                 </a>
               </div>
-              
+
               <div className=&quot;flex items-center space-x-4 text-gray-400 text-sm&quot;>
                 <span>Powered by</span>
                 <div className=&quot;flex items-center space-x-2&quot;>
@@ -364,15 +361,15 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {_const _scrollToTop =
       <motion.button
         onClick={scrollToTop}
         className=&quot;fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full shadow-2xl hover:shadow-purple-500/25 transition-all duration-200 z-50&quot;
-        whileHover={{ scale: 1.1, y: -2 }}
-        whileTap={{ scale: 0.9 }}
-        initial={{ opacity: 0, scale: 0 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.3, delay: 1 }}      >
+        whileHover={ scale: 1.1, y: -2 }
+        whileTap={ scale: 0.9 }
+        initial={ opacity: 0, scale: 0 }
+        animate={ opacity: 1, scale: 1 }
+        transition={ duration: 0.3, delay: 1 }      >
         <ArrowUp className=&quot;w-6 h-6 mx-auto&quot; />
       </motion.button>
     </footer>
   )
-},
+,
 
 export default UltraAdvancedFuturisticFooter2025,

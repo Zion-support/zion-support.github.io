@@ -6,13 +6,13 @@ import type {
   GrantApplication
   GrantCategory
   GrantStatus;
-} from '../../types/grants';
+ from '../../types/grants';
 const categories: GrantCategory[] = [
   'Ecosystem Tools'
   'Talent Development'
   'Regional Expansion'
   'Research Grants'
-];
+;
 const statuses: GrantStatus[] = [
   'Draft'
   'Submitted'
@@ -23,21 +23,19 @@ import type {;
   GrantApplication,;
   GrantCategory,;
   GrantStatus,;
-} from '../../types/grants';
+ from '../../types/grants';
 
 const categories: GrantCategory[] = [;
   'Ecosystem Tools',;
   'Talent Development',;
   'Regional Expansion',;
   'Research Grants',;
-];
 const statuses: GrantStatus[] = [;
   'Draft',;
   'Submitted',;
   'Under Review',;
   'Approved',;
   'Rejected',;
-];
 
 export default function GrantsPage() {;
   const [items, setItems] = useState<GrantApplication[]>([]);
@@ -49,22 +47,22 @@ import type {
   GrantApplication,
   GrantCategory,
   GrantStatus,
-} from '../../types / grants';
-;
+ from '../../types / grants';
+
 const categories: GrantCategory[] = [;
   'Ecosystem Tools',
   'Talent Development',
   'Regional Expansion',
   'Research Grants',
-];
+;
 const statuses: GrantStatus[] = [;
   'Draft',
   'Submitted',
   'Under Review',
   'Approved',
   'Rejected',
-];
 ;
+
 export default /**
  * GrantsPage - Function description
  */
@@ -85,7 +83,7 @@ export default function GrantsPage() {
   const [items, setItems] = useState<GrantApplication[]>([]);
   const [filters, setFilters] = useState<{ sector?: string, status?: string, region?: string, program?: string }>({});
 
-  useEffect(() => {
+  useEffect() => {
 
     const params = new URLSearchParams();
     if (filters.sector) params.set('sector', filters.sector);
@@ -93,60 +91,60 @@ export default function GrantsPage() {
     if (filters.region) params.set('region', filters.region);
     if (filters.program) params.set('program', filters.program);
     fetch(`/api/grants?${params.toString()}`)
-      .then(r => r.json())
-      .then(d => setItems(d.items |[]))
+      .then(r => r.json()
+      .then(d => setItems(d.items |[])
 const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],;
 const statuses: GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected'],;
 export default function GrantsPage() {;
   const [items, setItems] = useState<GrantApplication[]>([]);
   const [filters, setFilters] = useState<{ sector?: string, status?: string, region?: string, program?: string }>({});
 
-  useEffect(() => {;
+  useEffect() => {;
     const params = new URLSearchParams();
     if (filters && filters.sector) params && params.set('sector', filters && filters.sector);
     if (filters && filters.status) params && params.set('status', filters && filters.status);
     if (filters && filters.region) params && params.set('region', filters && filters.region);
     if (filters && filters.program) params && params.set('program', filters && filters.program);
     fetch(`/api/grants?${params && params.toString()}`);
-      .then(r => r && r.json());
-      .then(d => setItems(d && d.items || []));
-      .catch(() => setItems([]));  }, [filters]);
+      .then(r => r && r.json();
+      .then(d => setItems(d && d.items || []);
+      .catch() => setItems([]);  }, [filters]);
   return (
-    <EnhancedLayout>      .then((r) => r.json())
-      .then((d) => setItems(d.items |[]))
-      .catch(() => setItems([]))
+    <EnhancedLayout>      .then(r) => r.json()
+      .then(d) => setItems(d.items |[])
+      .catch() => setItems([])
 export default /**
  * GrantsPage - Function description
  */
 function GrantsPage() {
   const [items, set_items] = useState < GrantApplication[]>([]);
   const [filters, set_filters] = useState<{ sector?: string, status?: string, region?: string, program?: string }>({});
-;
-  useEffect (() => {
+
+  useEffect () => {
     const params = new URLSearchParams ();
-    if (params.set ('sector', filters.sector)) {
+    if (params.set ('sector', filters.sector) {
   $2
-}
-    if (params.set ('status', filters.status)) {
+
+    if (params.set ('status', filters.status) {
   $2
-}
-    if (params.set ('region', filters.region)) {
+
+    if (params.set ('region', filters.region) {
   $2
-}
-    if (params.set ('program', filters.program)) {
+
+    if (params.set ('program', filters.program) {
   $2
-}
+
     fetch (`/api / grants?${params.to_string ()}`);
-      .then (r => r.json ());
-      .then (d => set_items (d.items || []));
-      .catch (() => set_items ([]));  }, [filters]);
-;
+      .then (r => r.json ();
+      .then (d => set_items (d.items || []);
+      .catch () => set_items ([]);  }, [filters]);
+
   return (
-    <EnhancedLayout>      .then ((r) => r.json ());
-      .then ((d) => set_items (d.items || []));
-      .catch (() => set_items ([]));
+    <EnhancedLayout>      .then (r) => r.json ();
+      .then (d) => set_items (d.items || []);
+      .catch () => set_items ([]);
   }, [filters]);
-;
+
   return (
     <EnhancedLayout>
       <div className='flex items-center justify-between mb-6'>
@@ -166,7 +164,7 @@ function GrantsPage() {
           className='border rounded p-2'
           value={filters.sector |''}
           onChange={e =>
-            setFilters(f => ({ ...f, sector: e.target.value |undefined }))
+            setFilters(f => ({ ...f, sector: e.target.value |undefined })
               Incubator;
             </a>;
           </Link>;
@@ -177,7 +175,7 @@ function GrantsPage() {
           className='border rounded p-2'
           value={filters && filters.sector || ''}
           onChange={e =>;
-            setFilters(f => ({ ...f, sector: e && e.target.value || undefined }));
+            setFilters(f => ({ ...f, sector: e && e.target.value || undefined });
           }
         >;
           <option value=''>All Sectors</option>;
@@ -185,13 +183,13 @@ function GrantsPage() {
             <option key={c} value={c}>;
               {c}
             </option>;
-          ))}
+          )}
         </select>;
         <select
           className='border rounded p-2'
           value={filters.status |''}
           onChange={e =>
-            setFilters(f => ({ ...f, status: e.target.value |undefined }))
+            setFilters(f => ({ ...f, status: e.target.value |undefined })
           }
         >;
           <option value=''>All Stages</option>;
@@ -199,21 +197,21 @@ function GrantsPage() {
             <option key={s} value={s}>;
               {s}
             </option>;
-          ))}
+          )}
         </select>;
         <input
           className='border rounded p-2'
           placeholder='Region'
           value={filters.region |''}
           onChange={e =>
-            setFilters(f => ({ ...f, region: e.target.value |undefined }))
+            setFilters(f => ({ ...f, region: e.target.value |undefined })
           }
         />;
         <select
           className='border rounded p-2'
           value={filters.program |''}
           onChange={e =>
-            setFilters(f => ({ ...f, program: e.target.value |undefined }))
+            setFilters(f => ({ ...f, program: e.target.value |undefined })
           }
         >
           <option value=''>All Programs</option>
@@ -236,11 +234,11 @@ function GrantsPage() {
                 </h3>
                 <div className='text-xs text-gray-600 dark:text-gray-400'>
                   {g.sector |'General'}  {g.region |'Global'} {' '}
-                  {g.program === 'incubator' ? 'Incubator' : 'Grant'}
+                  {g.program = = 'incubator' ? 'Incubator' : 'Grant'}
                 </div>;
               </div>;
               <div className='flex gap - 2 items - center'>;
-                {g.program === 'incubator' && (
+                {g.program = = 'incubator' && (
                   <span className='px-2 py-1 text-xs rounded bg-purple-100 text-purple-700'>
                     Incubated by Zion
                   </span>
@@ -259,16 +257,16 @@ function GrantsPage() {
                 </h3>;
                 <div className='text-xs text-gray-600 dark:text-gray-400'>;
                   {g && g.sector || 'General'}  {g && g.region || 'Global'} {' '}
-                  {g && g.program === 'incubator' ? 'Incubator' : 'Grant'}
+                  {g && g.program = = 'incubator' ? 'Incubator' : 'Grant'}
                 </div>;
               </div>;
               <div className='flex gap-2 items-center'>;
-                {g && g.program === 'incubator' && (;
+                {g && g.program = = 'incubator' && (;
                   <span className='px-2 py-1 text-xs rounded bg-purple-100 text-purple-700'>;
                     Incubated by Zion;
                   </span>;
                 )}
-                {g && g.status === 'Approved' && (;
+                {g && g.status = = 'Approved' && (;
                   <span className='px-2 py-1 text-xs rounded bg-emerald-100 text-emerald-700'>;
                     Grant Winner;
                   </span>;
@@ -285,22 +283,22 @@ function GrantsPage() {
               Budget: {g && g.budgetAmount} {g && g.budgetCurrency}
             </div>;
           </div>;
-        ))}
-        {items && items.length === 0 && (;
+        )}
+        {items && items.length = = 0 && (;
           <div className='text-sm text-gray-600'>No grants found.</div>;
         )}
       </div>
     </EnhancedLayout>
-);
-}
+;
+
       </div>;
     </EnhancedLayout>;
   );
-}
+
                   <span className='px - 2 py - 1 text - xs rounded bg - purple - 100 text - purple - 700'>;
                     Incubated by Zion;
                   </span>)}
-                {g.status === 'Approved' && (
+                {g.status = = 'Approved' && (
                   <span className='px - 2 py - 1 text - xs rounded bg - emerald - 100 text - emerald - 700'>;
                     Grant Winner;
                   </span>)}
@@ -315,9 +313,8 @@ function GrantsPage() {
             <div className='mt - 3 text - sm text - gray - 600 dark:text - gray - 400'>;
               Budget: {g.budget_amount} {g.budget_currency}
             </div>;
-          </div>))}
-        {items.length === 0 && (
+          </div>)}
+        {items.length = = 0 && (
           <div className='text - sm text - gray - 600'>No grants found.</div>)}
       </div>;
     </EnhancedLayout>);
-}

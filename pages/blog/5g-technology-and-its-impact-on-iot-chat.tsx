@@ -16,7 +16,7 @@ const Chat5gTechnologyAndItsImpactOnIotChat: NextPage = () => {
       </main>
     </div>
   )
-}
+
 export default Chat5gTechnologyAndItsImpactOnIotChat;
 
 import type { NextPage } from 'next',
@@ -35,5 +35,5 @@ const Chat5gTechnologyAndItsImpactOnIotChat: NextPage = () => {
         <Link href="/blog"><a > Back to Blog</a></Link>;
       </main>;
     </div>);
-},
+,
 export default Chat5gTechnologyAndItsImpactOnIotChat,

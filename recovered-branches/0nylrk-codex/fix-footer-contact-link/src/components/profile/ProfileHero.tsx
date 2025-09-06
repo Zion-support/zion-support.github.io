@@ -16,7 +16,7 @@ interface ProfileHeroProps {
   reviewCount?: number;
   aiScore?: number;
   profileType: 'service' | 'talent';
-}
+
 export function ProfileHero({
   name;
   title;
@@ -27,7 +27,7 @@ export function ProfileHero({
   reviewCount;
   aiScore;
   profileType;
-}: ProfileHeroProps) {;
+: ProfileHeroProps) {;
   return (
 
     <div className="w-full overflow-hidden">
@@ -62,9 +62,9 @@ export function ProfileHero({
                   className={cn(
                     "ml-2 border-zion-purple/50 text-zion-cyan";
 
-                    profileType === 'service' ? "bg-zion-purple/10" : "bg-zion-cyan/10"
+                    profileType = = 'service' ? "bg-zion-purple/10" : "bg-zion-cyan/10"
                   )}>;
-                  {profileType === 'service' ? 'Service Provider' : 'Talent'}
+                  {profileType = = 'service' ? 'Service Provider' : 'Talent'}
                 </Badge>
               </div>
               <h2 className="text-lg md:text-xl text-zion-slate-light mb-1">{title}</h2>
@@ -93,7 +93,7 @@ export function ProfileHero({
       </div>
     </div>
   )
-}
+
               </div>;
             </div>;
           </div>;
@@ -101,6 +101,5 @@ export function ProfileHero({
       </div>;
     </div>;
   );
-}
+
     </div>);
-}

@@ -10,8 +10,7 @@ interface UltraAdvancedFuturisticBackground2026Props {;
   enableNeuralNetworks?: boolean,;
   enableMultidimensional?: boolean,;
   children?: React.ReactNode;
-}
-;
+
 const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBackground2026Props> = ({;
   intensity = 'high',;
   colorScheme = 'neural-network',;
@@ -22,10 +21,10 @@ const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBac
   enableNeuralNetworks = true,;
   enableMultidimensional = true,;
   children;
-}) => {;
+) => {;
   const canvasRef = useRef<HTMLCanvasElement>(null),;
   const containerRef = useRef<HTMLDivElement>(null),;
-  useEffect(() => {;
+  useEffect() => {;
     const canvas = canvasRef.current,;
     if (!canvas) return,;
     const ctx = canvas.getContext('2d'),;
@@ -41,8 +40,7 @@ const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBac
         const rect = containerRef.current.getBoundingClientRect(),;
         canvas.width = rect.width,;
         canvas.height = rect.height;
-      }
-    },;
+      },;
     resizeCanvas(),;
     window.addEventListener('resize', resizeCanvas),;
     // Particle class;
@@ -67,7 +65,7 @@ const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBac
         this.life = Math.random() * 100 + 50,;
         this.maxLife = this.life;
       }
-;
+
       update() {;
         this.x += this.vx,;
         this.y += this.vy,;
@@ -83,7 +81,7 @@ const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBac
         // Fade out;
         this.alpha = this.life / this.maxLife;
       }
-;
+
       draw() {;
         ctx.save(),;
         ctx.globalAlpha = this.alpha,;
@@ -93,8 +91,7 @@ const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBac
         ctx.fill(),;
         ctx.restore();
       }
-    }
-;
+
     // Neural network node class;
     class NeuralNode {;
       x: number,;
@@ -109,13 +106,13 @@ const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBac
         this.activation = Math.random(),;
         this.pulse = 0;
       }
-;
+
       update() {;
         this.activation += (Math.random() - 0.5) * 0.1,;
-        this.activation = Math.max(0, Math.min(1, this.activation)),;
+        this.activation = Math.max(0, Math.min(1, this.activation),;
         this.pulse = Math.sin(Date.now() * 0.001 + this.x * 0.01) * 0.5 + 0.5;
       }
-;
+
       draw() {;
         ctx.save(),;
         ctx.globalAlpha = 0.8,;
@@ -135,12 +132,10 @@ const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBac
             ctx.moveTo(this.x, this.y),;
             ctx.lineTo(connection.x, connection.y),;
             ctx.stroke();
-          }
-        }),;
+          }),;
         ctx.restore();
       }
-    }
-;
+
     // Quantum field class;
     class QuantumField {;
       x: number,;
@@ -155,11 +150,11 @@ const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBac
         this.intensity = Math.random() * 0.8 + 0.2,;
         this.phase = Math.random() * Math.PI * 2;
       }
-;
+
       update() {;
         this.phase += 0.02 * animationSpeed;
       }
-;
+
       draw() {;
         ctx.save(),;
         ctx.globalAlpha = 0.1,;
@@ -172,11 +167,10 @@ const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBac
           ctx.arc(this.x, this.y, waveRadius, 0, Math.PI * 2),;
           ctx.stroke();
         }
-;
+
         ctx.restore();
       }
-    }
-;
+
     // Holographic layer class;
     class HolographicLayer {;
       x: number,;
@@ -195,12 +189,12 @@ const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBac
         this.alpha = Math.random() * 0.3 + 0.1,;
         this.color = getColorSchemeColor();
       }
-;
+
       update() {;
         this.rotation += 0.005 * animationSpeed,;
         this.alpha = Math.sin(Date.now() * 0.001) * 0.1 + 0.2;
       }
-;
+
       draw() {;
         ctx.save(),;
         ctx.translate(this.x, this.y),;
@@ -214,8 +208,7 @@ const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBac
         ctx.stroke(),;
         ctx.restore();
       }
-    }
-;
+
     // Get color based on scheme;
     function getColorSchemeColor(): string {;
       const colors = {;
@@ -228,51 +221,48 @@ const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBac
       const schemeColors = colors[colorScheme] || colors['neural-network'],;
       return schemeColors[Math.floor(Math.random() * schemeColors.length)];
     }
-;
+
     // Initialize particles;
     for (let i = 0, i < particleCount, i++) {;
       particles.push(new Particle(;
         Math.random() * canvas.width,;
         Math.random() * canvas.height;
-      ));
+      );
     }
-;
+
     // Initialize neural network;
     if (enableNeuralNetworks) {;
       for (let i = 0, i < 20, i++) {;
         neuralNodes.push(new NeuralNode(;
           Math.random() * canvas.width,;
           Math.random() * canvas.height;
-        ));
+        );
       }
-;
+
       // Create connections;
       neuralNodes.forEach(node => {;
         neuralNodes.forEach(otherNode => {;
-          if (node !== otherNode && Math.random() < 0.3) {;
+          if (node != otherNode && Math.random() < 0.3) {;
             node.connections.push(otherNode);
-          }
-        });
+          });
       });
     }
-;
+
     // Initialize quantum fields;
     if (enableQuantumEffects) {;
       for (let i = 0, i < 8, i++) {;
         quantumFields.push(new QuantumField(;
           Math.random() * canvas.width,;
           Math.random() * canvas.height;
-        ));
+        );
       }
-    }
-;
+
     // Initialize holographic layers;
     if (enableHolographic) {;
       for (let i = 0, i < 5, i++) {;
-        holographicLayers.push(new HolographicLayer());
+        holographicLayers.push(new HolographicLayer();
       }
-    }
-;
+
     // Animation loop;
     const animate = () => {;
       ctx.clearRect(0, 0, canvas.width, canvas.height),;
@@ -301,7 +291,7 @@ const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBac
           field.draw();
         });
       }
-;
+
       // Update and draw holographic layers;
       if (enableHolographic) {;
         holographicLayers.forEach(layer => {;
@@ -309,7 +299,7 @@ const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBac
           layer.draw();
         });
       }
-;
+
       // Update and draw neural network;
       if (enableNeuralNetworks) {;
         neuralNodes.forEach(node => {;
@@ -317,9 +307,9 @@ const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBac
           node.draw();
         });
       }
-;
+
       // Update and draw particles;
-      particles.forEach((particle, index) => {;
+      particles.forEach(particle, index) => {;
         particle.update(),;
         particle.draw(),;
         // Remove dead particles and create new ones;
@@ -328,11 +318,10 @@ const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBac
             Math.random() * canvas.width,;
             Math.random() * canvas.height;
           );
-        }
-      }),;
+        }),;
       // Draw particle connections;
-      if (intensity === 'extreme' || intensity === 'high') {;
-        particles.forEach((particle, i) => {;
+      if (intensity = = 'extreme' || intensity = = 'high') {;
+        particles.forEach(particle, i) => {;
           particles.slice(i + 1).forEach(otherParticle => {;
             const distance = Math.sqrt(;
               Math.pow(particle.x - otherParticle.x, 2) +;
@@ -348,61 +337,59 @@ const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBac
               ctx.lineTo(otherParticle.x, otherParticle.y),;
               ctx.stroke(),;
               ctx.restore();
-            }
-          });
+            });
         });
       }
-;
+
       animationFrameId = requestAnimationFrame(animate);
     },;
     animate(),;
     return () => {;
       window.removeEventListener('resize', resizeCanvas),;
       cancelAnimationFrame(animationFrameId);
-    }
-  }, [intensity, colorScheme, particleCount, animationSpeed, enableHolographic, enableQuantumEffects, enableNeuralNetworks, enableMultidimensional]),
+    }, [intensity, colorScheme, particleCount, animationSpeed, enableHolographic, enableQuantumEffects, enableNeuralNetworks, enableMultidimensional]),
 
   return (
     <div ref={containerRef} className="fixed inset-0 w-full h-full overflow-hidden">
       <canvas
         ref={canvasRef}
         className="absolute inset-0 w-full h-full"
-        style={{ zIndex: -1 }}
+        style={ zIndex: -1 }
       />;
       {/* Additional visual effects */}
       {enableMultidimensional && (
         <div className="absolute inset-0 pointer-events-none">
           <motion.div
             className="absolute top-1/4 left-1/4 w-64 h-64 border border-cyan-400/20 rounded-full"
-            animate={{
+            animate={
               scale: [1, 1.2, 1],
               rotate: [0, 180, 360],
               opacity: [0.1, 0.3, 0.1]
-            }}
-            transition={{
+            }
+            transition={
               duration: 8,
               repeat: Infinity,
               ease: "easeInOut"
-            }}
+            }
           />
           <motion.div
             className="absolute bottom-1/4 right-1/4 w-96 h-96 border border-purple-400/20 rounded-full"
-            animate={{
+            animate={
               scale: [1.2, 1, 1.2],
               rotate: [360, 180, 0],
               opacity: [0.1, 0.3, 0.1]
-            }}
-            transition={{
+            }
+            transition={
               duration: 10,
               repeat: Infinity,
               ease: "easeInOut"
-            }}
+            }
           />;
         </div>;
       )}
-;
+
       {children}
     </div>;
   );
-},;
+,;
 export default UltraAdvancedFuturisticBackground2026;

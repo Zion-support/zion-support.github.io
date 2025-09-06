@@ -5,13 +5,13 @@ import {;
   Brain, Rocket, Dna, Globe, Shield, Wifi, Package,;
   Bot, Car, Building2, DollarSign, Monitor, Users,;
   Cpu, Zap, Atom, Database, Cloud, Lock, Code;
-} from 'lucide-react',;
+ from 'lucide-react',;
 import Link from 'next/link',;
 const UltraAdvancedNavigation: React.FC = () => {;
   const [isOpen, setIsOpen] = useState(false),;
   const [isScrolled, setIsScrolled] = useState(false),;
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null),;
-  useEffect(() => {;
+  useEffect() => {;
     const handleScroll = () => {;
       setIsScrolled(window.scrollY > 50);
     },;
@@ -229,9 +229,9 @@ const UltraAdvancedNavigation: React.FC = () => {;
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <motion.div;
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
+            initial={ opacity: 0, x: -20 }
+            animate={ opacity: 1, x: 0 }
+            transition={ duration: 0.5 }
             className="flex items-center"
           >
             <Link href="/" className="flex items-center space-x-3 group">
@@ -249,17 +249,17 @@ const UltraAdvancedNavigation: React.FC = () => {;
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            {navigationItems.map((item, index) => (
+            {navigationItems.map(item, index) => (
               <div key={item.name} className="relative group">
                 {item.dropdown ? (
                   <button
-                    onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)}
+                    onClick={() => setActiveDropdown(activeDropdown = = item.name ? null : item.name)}
                     className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 py-2"
                   >
                     {item.icon && <item.icon className="w-4 h-4" />}
                     <span>{item.name}</span>
                     <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${
-                      activeDropdown === item.name ? 'rotate-180' : ''
+                      activeDropdown = = item.name ? 'rotate-180' : ''
                     }`} />
                   </button>
                 ) : (
@@ -271,22 +271,22 @@ const UltraAdvancedNavigation: React.FC = () => {;
                     <span>{item.name}</span>
                   </a>
                 )}
-;
+
                 {/* Dropdown Menu */}
                 {item.dropdown && (;
                   <AnimatePresence>;
-                    {activeDropdown === item.name && (;
+                    {activeDropdown = = item.name && (;
                       <motion.div;
-                        initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                        animate={{ opacity: 1, y: 0, scale: 1 }}
-                        exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                        transition={{ duration: 0.2 }}
+                        initial={ opacity: 0, y: 10, scale: 0.95 }
+                        animate={ opacity: 1, y: 0, scale: 1 }
+                        exit={ opacity: 0, y: 10, scale: 0.95 }
+                        transition={ duration: 0.2 }
                         className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden"
                       >
                         <div className="p-4">
                           <div className="text-sm text-gray-400 mb-3">{item.description}</div>
                           <div className="space-y-2">
-                            {item.dropdown.map((dropdownItem) => (
+                            {item.dropdown.map(dropdownItem) => (
                               <Link
                                 key={dropdownItem.name}
                                 href={dropdownItem.href}
@@ -305,7 +305,7 @@ const UltraAdvancedNavigation: React.FC = () => {;
                                   {dropdownItem.price}
                                 </div>
                               </a>
-                            ))}
+                            )}
                           </div>;
                         </div>;
                       </motion.div>;
@@ -313,7 +313,7 @@ const UltraAdvancedNavigation: React.FC = () => {;
                   </AnimatePresence>;
                 )}
               </div>;
-            ))}
+            )}
           </div>;
           {/* Contact Info & CTA */}
           <div className="hidden lg:flex items-center space-x-6">
@@ -327,11 +327,11 @@ const UltraAdvancedNavigation: React.FC = () => {;
                 <span className="hidden xl:inline">{contactInfo.email}</span>
               </a>
             </div>
-            
+
             <motion.a
               href="/contact"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={ scale: 1.05 }
+              whileTap={ scale: 0.95 }
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-2xl font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
             >
               Get Started
@@ -354,19 +354,19 @@ const UltraAdvancedNavigation: React.FC = () => {;
       <AnimatePresence>;
         {isOpen && (;
           <motion.div;
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
+            initial={ opacity: 0, height: 0 }
+            animate={ opacity: 1, height: 'auto' }
+            exit={ opacity: 0, height: 0 }
+            transition={ duration: 0.3 }
             className="lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-800/50 overflow-hidden"
           >
             <div className="px-4 py-6 space-y-4">
-              {navigationItems.map((item) => (
+              {navigationItems.map(item) => (
                 <div key={item.name}>
                   {item.dropdown ? (
                     <div>
                       <button
-                        onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)}
+                        onClick={() => setActiveDropdown(activeDropdown = = item.name ? null : item.name)}
                         className="flex items-center justify-between w-full text-left text-gray-300 hover:text-white transition-colors duration-200 py-3"
                       >
                         <div className="flex items-center space-x-3">
@@ -374,13 +374,13 @@ const UltraAdvancedNavigation: React.FC = () => {;
                           <span>{item.name}</span>
                         </div>
                         <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                          activeDropdown === item.name ? 'rotate-180' : ''
+                          activeDropdown = = item.name ? 'rotate-180' : ''
                         }`} />
                       </button>
-                      
-                      {activeDropdown === item.name && (
+
+                      {activeDropdown = = item.name && (
                         <div className="ml-8 mt-2 space-y-2">
-                          {item.dropdown.map((dropdownItem) => (
+                          {item.dropdown.map(dropdownItem) => (
                             <Link
                               key={dropdownItem.name}
                               href={dropdownItem.href}
@@ -389,7 +389,7 @@ const UltraAdvancedNavigation: React.FC = () => {;
                             >
                               {dropdownItem.name}
                             </a>
-                          ))}
+                          )}
                         </div>;
                       )}
                     </div>;
@@ -404,8 +404,8 @@ const UltraAdvancedNavigation: React.FC = () => {;
                     </a>
                   )}
                 </div>;
-              ))}
-;
+              )}
+
               {/* Mobile Contact Info */}
               <div className="pt-6 border-t border-gray-800/50">
                 <div className="space-y-3 text-sm text-gray-400">
@@ -422,11 +422,11 @@ const UltraAdvancedNavigation: React.FC = () => {;
                     <span>{contactInfo.address}</span>
                   </div>
                 </div>
-                
+
                 <motion.a
                   href="/contact"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={ scale: 1.05 }
+                  whileTap={ scale: 0.95 }
                   className="block w-full mt-6 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-center py-3 rounded-2xl font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
                 >
                   Get Started
@@ -438,5 +438,5 @@ const UltraAdvancedNavigation: React.FC = () => {;
       </AnimatePresence>;
     </nav>;
   );
-},;
+,;
 export default UltraAdvancedNavigation;

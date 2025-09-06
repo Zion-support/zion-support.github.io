@@ -6,5 +6,3 @@ export function SeverityIndicator() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

@@ -6,5 +6,3 @@ export function NotificationList() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

@@ -7,6 +7,5 @@ const Interviews = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default Interviews;

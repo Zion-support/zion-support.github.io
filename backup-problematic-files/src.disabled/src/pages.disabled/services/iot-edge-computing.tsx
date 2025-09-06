@@ -2,7 +2,6 @@ import React from 'react';
 
 interface Iot-edge-computingProps {
   className?: string;
-}
 
 const Iot-edge-computing: React.FC<Iot-edge-computingProps> = ({ className }) => {
   return (
@@ -11,6 +10,5 @@ const Iot-edge-computing: React.FC<Iot-edge-computingProps> = ({ className }) =>
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default Iot-edge-computing;

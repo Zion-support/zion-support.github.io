@@ -7,20 +7,18 @@ const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json'),
 
 function ensureStorage() {
   const dir = path.dirname(EPISODES_PATH),
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true }),
-  if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]utf8')}
-};
+  if (!fs.existsSync(dir) fs.mkdirSync(dir, { recursive: true }),
+  if (!fs.existsSync(EPISODES_PATH) fs.writeFileSync(EPISODES_PATH, '[]utf8')}
+;
 episodes.unshift (episode);
 writeEpisodes (episodes);
-}
 
 function writeEpisodes(episodes: any[]) {
   ensureStorage(),
   fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8')
-}
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' }),
+  if (req.method != 'POST') return res.status(405).json({ error: 'Method not allowed' }),
 
   const { persona, invitee, topic, operatorPrompt } = req.body || {},
   const id = uuidv4(),
@@ -87,7 +85,7 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
       youtubeDescription: generated.youtubeDescription || '',
       spotifyDescription: generated.spotifyDescription || '',
       bestQuote: generated.bestQuote || '',
-      audio: {}},
+      audio: {},
     episodes.unshift(episode),
     writeEpisodes(episodes),
 
@@ -95,4 +93,3 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
   } catch (error: any) {
     console.error(error),
     return res.status(500).json({ error: error?.message || 'Unknown error' })  }
-}

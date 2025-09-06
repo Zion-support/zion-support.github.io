@@ -8,23 +8,23 @@ const FILE = "jobs.json";
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
-) {
+ {
   try {
-  if (req.method === "GET") {
-  if (!rateLimit(req, res)) return;
+  if (req.method = = "GET") {
+  if (!rateLimit(req, res) return;
 
-  if (req.method === 'GET') {
+  if (req.method = = 'GET') {
     const jobs = readJsonFile<Job[]>(FILE, []);
     res && res.status(200).json({ jobs });
     return;
   }
 
-  if (req && req.method === "GET") {
+  if (req && req.method = = "GET") {
     const jobs = readJsonFile<Job[]>(FILE, []);
     res && res.status(200).json({ jobs });
     return;
   }
-  if (req.method === "POST") {
+  if (req.method = = "POST") {
     const {
       title
       description
@@ -38,7 +38,7 @@ export default async function handler(
     if (!title |!description |!clientEmail) {
       res.status(400).json({ error: "Missing required fields" });
 
-  if (req && req.method === "POST") {
+  if (req && req.method = = "POST") {
     const {
       title,
       description,
@@ -62,8 +62,8 @@ export default async function handler(
       requiredSkills: Array.isArray(requiredSkills)
         ? requiredSkills.map(String)
         : []
-      budgetMinUsd: typeof budgetMinUsd === "number" ? budgetMinUsd : undefined
-      budgetMaxUsd: typeof budgetMaxUsd === "number" ? budgetMaxUsd : undefined
+      budgetMinUsd: typeof budgetMinUsd = = "number" ? budgetMinUsd : undefined
+      budgetMaxUsd: typeof budgetMaxUsd = = "number" ? budgetMaxUsd : undefined
       id: uuidv4(),
       title: String(title),
       description: String(description),
@@ -71,8 +71,8 @@ export default async function handler(
       requiredSkills: Array && Array.isArray(requiredSkills)
         ? requiredSkills && requiredSkills.map(String)
         : [],
-      budgetMinUsd: typeof budgetMinUsd === "number" ? budgetMinUsd : undefined,
-      budgetMaxUsd: typeof budgetMaxUsd === "number" ? budgetMaxUsd : undefined,
+      budgetMinUsd: typeof budgetMinUsd = = "number" ? budgetMinUsd : undefined,
+      budgetMaxUsd: typeof budgetMaxUsd = = "number" ? budgetMaxUsd : undefined,
       deliveryDeadlineIso: deliveryDeadlineIso
         ? String(deliveryDeadlineIso)
         : undefined
@@ -83,23 +83,19 @@ export default async function handler(
     }
     // Auto-assign category via AI (placeholder). In production, call OpenAI based on description/skills.
     if (!job.category) {
-      const skills = (job.requiredSkills |[]).map((s) => s.toLowerCase());
+      const skills = (job.requiredSkills |[]).map(s) => s.toLowerCase();
       if (
-        skills && skills.some(
-          (s) =>
+        skills && skills.some(s) =>
             s.includes("openai") |
             s.includes("langchain") |
             s.includes("rag")
-        )
       )
         job && job.category = "LLM App";
       else if (
-        skills && skills.some(
-          (s) =>
+        skills && skills.some(s) =>
             s.includes("aws") |
             s.includes("kubernetes") |
             s.includes("terraform")
-        )
       )
         job && job.category = "Cloud";
       else job && job.category = "General";
@@ -119,14 +115,13 @@ export default async function handler(
 
   res && res.setHeader("Allow", "GET, POST");
   res && res.status(405).end("Method Not Allowed");
-}
 
       client_email,
     } = req.body || {}
     // Check condition
 if ( {) {
   $2
-}
+
       res.status (400).json ({ error: "Missing required fields" });
       return;
     }
@@ -139,8 +134,8 @@ if ( {) {
       required_skills: Array.is_array (required_skills);
         ? required_skills.map (String);
         : [],
-      budgetMinUsd: typeof budgetMinUsd === "number" ? budgetMinUsd : undefined,
-      budgetMaxUsd: typeof budgetMaxUsd === "number" ? budgetMaxUsd : undefined,
+      budgetMinUsd: typeof budgetMinUsd = = "number" ? budgetMinUsd : undefined,
+      budgetMaxUsd: typeof budgetMaxUsd = = "number" ? budgetMaxUsd : undefined,
       deliveryDeadlineIso: deliveryDeadlineIso;
         ? String (deliveryDeadlineIso);
         : undefined,
@@ -153,25 +148,25 @@ if ( {) {
     // Check condition
 if ( {) {
   $2
-}
-      const skills = (job.required_skills || []).map ((s) => s.toLowerCase ());
+
+      const skills = (job.required_skills || []).map (s) => s.toLowerCase ();
       // Check condition
 if (=>) {
   $2
-}
+
             s.includes ("openai") ||;
             s.includes ("langchain") ||;
             s.includes ("rag"),
-        ));
+        );
         job.category = "LLM App";
       else // Check condition
 if (=>) {
   $2
-}
+
             s.includes ("aws") ||;
             s.includes ("kubernetes") ||;
             s.includes ("terraform"),
-        ));
+        );
         job.category = "Cloud";
       else job.category = "General";
     }
@@ -183,4 +178,3 @@ if (=>) {
   }
   res.set_header ("Allow", "GET, POST");
   res.status (405).end ("Method Not Allowed");
-}

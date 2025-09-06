@@ -1,14 +1,13 @@
-"use client";
+use client";
 import { useAuth } from "@/contexts/AuthContext";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 import Link from "next/link";
 export default function DashboardPage() {const { user, isAuthenticated, isLoading } = useAuth();
   const router = useRouter();
-  useEffect(() => {if (!isLoading && !isAuthenticated) {;
+  useEffect() => {if (!isLoading && !isAuthenticated) {;
       router.push("/auth/signin");
-    }
-  }, [isAuthenticated, isLoading, router]);
+    }, [isAuthenticated, isLoading, router]);
   if (isLoading) {return (;
       <div className="min-h-screen flex items-center justify-center">;
         <div className="text-center">;
@@ -114,4 +113,3 @@ export default function DashboardPage() {const { user, isAuthenticated, isLoadin
         </div>;
       </div>;
     </div>);
-}

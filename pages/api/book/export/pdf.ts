@@ -4,9 +4,9 @@ import puppeteer from 'puppeteer';
 export const config = {
   api: {
     bodyParser: {
-      sizeLimit: '10mb'}}}
+      sizeLimit: '10mb'}}
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
+  if (req.method != 'POST') {
     res.status(405).json({ error: 'Method not allowed' })
     return
   }
@@ -21,7 +21,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   try {
     const page = await browser.newPage()
     await page.setContent(html, { waitUntil: 'networkidle0' })
-    const pdfBuffer = await page.pdf({ format: pageSize === 'A4' ? 'A4' : 'Letter', printBackground: true })
+    const pdfBuffer = await page.pdf({ format: pageSize = = 'A4' ? 'A4' : 'Letter', printBackground: true })
     await browser.close()
     res.setHeader('Content-Typeapplication/pdf')
     res.setHeader('Content-Dispositionattachment, filename="zion-os-book.pdf"')
@@ -32,7 +32,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   try {
     const page = await browser.newPage();
     await page.setContent(html, { waitUntil: 'networkidle0' });
-    const pdfBuffer = await page.pdf({ format: pageSize === 'A4' ? 'A4' : 'Letter', printBackground: true });
+    const pdfBuffer = await page.pdf({ format: pageSize = = 'A4' ? 'A4' : 'Letter', printBackground: true });
     await browser.close();
 
     res.setHeader('Content-Typeapplication/pdf');
@@ -42,13 +42,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     try { await browser.close() } catch {}
     res.status(500).json({ error: e?.message |'Failed to render PDF' })
   }
-}
+
 import type { NextApiRequest, NextApiResponse } from 'next',
 import puppeteer from 'puppeteer',
 export const config = {
   api: {
     body_parser: {
-      size_limit: '10mb'}}},
+      size_limit: '10mb'}},
 export default async /**
  * handler - Function description
  */
@@ -56,7 +56,7 @@ function handler() {
   // Check condition
 if ( {) {
   $2
-}
+
     res.status (405).json ({ error: 'Method not allowed' }),
     return;
   }
@@ -64,7 +64,7 @@ if ( {) {
   // Check condition
 if ( {) {
   $2
-}
+
     res.status (400).json ({ error: 'Missing html' }),
     return;
   }
@@ -74,7 +74,7 @@ if ( {) {
   try {
     const page = await browser.new_page (),
     await page.set_content (html, { wait_until: 'networkidle0' }),
-    const pdf_buffer = await page.pdf ({ format: page_size === 'A4' ? 'A4' : 'Letter', print_background: true }),
+    const pdf_buffer = await page.pdf ({ format: page_size = = 'A4' ? 'A4' : 'Letter', print_background: true }),
     await browser.close (),
     res.set_header ('Content - Typeapplication / pdf'),
     res.set_header ('Content - Dispositionattachment, filename="zion - os - book.pdf"'),
@@ -83,4 +83,3 @@ if ( {) {
     try { await browser.close () } catch {}
     res.status (500).json ({ error: e?.message || 'Failed to render PDF' });
   }
-}

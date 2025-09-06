@@ -7,6 +7,5 @@ const StatsSection = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default StatsSection;

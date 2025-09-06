@@ -6,5 +6,3 @@ export function OnsiteQuoteModal() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

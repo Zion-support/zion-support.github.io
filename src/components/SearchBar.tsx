@@ -8,7 +8,7 @@ import { SearchSuggestion  } from '@/types/search';
 import { slugify  } from '@/lib/slugify';
 import { useDebounce  } from '@/hooks/useDebounce';
 import { useOnClickOutside } from '@/hooks/useOnClickOutside';
-/**
+**
  * SearchBar component props
  */
 interface SearchBarProps {
@@ -39,7 +39,7 @@ interface SearchBarProps {
    * The placeholder text for the search input
    */
   placeholder?: string
-/**
+**
  * SearchBar component that allows users to search for content.
  */  onSelectSuggestion?: (suggestion: SearchSuggestion) => void
 
@@ -47,8 +47,8 @@ interface SearchBarProps {
    * The placeholder text for the search input
    */
   placeholder?: string
-}
-/**
+
+**
  * SearchBar component that allows users to search for content.
  */
 
@@ -57,7 +57,7 @@ export function SearchBar({
   onChange
   onSelectSuggestion
   placeholder = 'Search...'
-}: SearchBarProps) {  const router = useRouter(); export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = 'Search...' }: SearchBarProps) {
+: SearchBarProps) {  const router = useRouter(); export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = 'Search...' }: SearchBarProps) {
   const router = useRouter()
   const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([])
   const [focused, setFocused] = useState(false)
@@ -65,7 +65,7 @@ export function SearchBar({
   const listId = 'searchbar-autocomplete-list';  const debounced = useDebounce(value, 150)
   const inputRef = useRef<HTMLInputElement>(null)
   const containerRef = useRef<HTMLDivElement>(null)
-  useEffect((,) => {
+  useEffect(,) => {
     if (!debounced) {
       setSuggestions([])
       setHighlightedIndex(-1)
@@ -80,11 +80,11 @@ export function SearchBar({
         return res.json()
       })
       .then(data => {
-        if (Array.isArray(data)) {
-          setSuggestions(data.slice(0, 5)) } else {  const debounced = useDebounce(value, 150)
+        if (Array.isArray(data) {
+          setSuggestions(data.slice(0, 5) } else {  const debounced = useDebounce(value, 150)
   const inputRef = useRef<HTMLInputElement>(null)
   const containerRef = useRef<HTMLDivElement>(null)
-  useEffect(() => {
+  useEffect() => {
     if (!debounced) {
       setSuggestions([])
       setHighlightedIndex(-1)
@@ -96,14 +96,14 @@ export function SearchBar({
         return res.json()
       })
       .then(data => {
-        if (Array.isArray(data)) {
-          setSuggestions(data.slice(0, 5))
+        if (Array.isArray(data) {
+          setSuggestions(data.slice(0, 5)
         } else {
           setSuggestions([])
         }
         setHighlightedIndex(-1)
       })
-      .catch(() => setSuggestions([]))
+      .catch() => setSuggestions([])
     return () => controller.abort() }, [debounced])
   useOnClickOutside(containerRef, () => {
     setFocused(false)
@@ -136,7 +136,7 @@ import { SearchSuggestion } from '@/types/search';
 import { slugify } from '@/lib/slugify';
 import { useDebounce } from '@/hooks/useDebounce';
 import { useOnClickOutside } from '@/hooks/useOnClickOutside';
-/**;
+**;
  * SearchBar component props;
  */;
 interface SearchBarProps {;
@@ -162,15 +162,15 @@ interface SearchBarProps {;
    * The placeholder text for the search input;
    */;
   placeholder?: string;
-/**;
+**;
  * SearchBar component that allows users to search for content.;
  */  onSelectSuggestion?: (suggestion: SearchSuggestion) => void,;
   /**;
    * The placeholder text for the search input;
    */;
   placeholder?: string;
-}
-/**;
+
+**;
  * SearchBar component that allows users to search for content.;
  */;
 export function SearchBar(): any ({;
@@ -178,7 +178,7 @@ export function SearchBar(): any ({;
   onChange,;
   onSelectSuggestion,;
   placeholder = 'Search...',;
-}: SearchBarProps) {  const router = useRouter();export function SearchBar(): any ({ value, onChange, onSelectSuggestion, placeholder = 'Search...' }: SearchBarProps) {;
+: SearchBarProps) {  const router = useRouter();export function SearchBar(): any ({ value, onChange, onSelectSuggestion, placeholder = 'Search...' }: SearchBarProps) {;
   const router = useRouter();
   const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([]);
   const [focused, setFocused] = useState(false);
@@ -187,7 +187,7 @@ export function SearchBar(): any ({;
   const inputRef = useRef<HTMLInputElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  useEffect((,) => {;
+  useEffect(,) => {;
     if (!debounced) {;
       setSuggestions([]);
       setHighlightedIndex(-1);
@@ -202,12 +202,12 @@ export function SearchBar(): any ({;
         return res && res.json();
       });
       .then(data => {;
-        if (Array && Array.isArray(data)) {;
-          setSuggestions(data && data.slice(0, 5));        } else {  const debounced = useDebounce(value, 150);
+        if (Array && Array.isArray(data) {;
+          setSuggestions(data && data.slice(0, 5);        } else {  const debounced = useDebounce(value, 150);
   const inputRef = useRef<HTMLInputElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {;
+  useEffect() => {;
     if (!debounced) {;
       setSuggestions([]);
       setHighlightedIndex(-1);
@@ -219,14 +219,14 @@ export function SearchBar(): any ({;
         return res && res.json();
       });
       .then(data => {;
-        if (Array && Array.isArray(data)) {;
-          setSuggestions(data && data.slice(0, 5));
+        if (Array && Array.isArray(data) {;
+          setSuggestions(data && data.slice(0, 5);
         } else {;
           setSuggestions([]);
         }
         setHighlightedIndex(-1);
       });
-      .catch(() => setSuggestions([]));
+      .catch() => setSuggestions([]);
     return () => controller && controller.abort();  }, [debounced]);
 
   useOnClickOutside(containerRef, () => {;
@@ -252,7 +252,6 @@ export function SearchBar(): any ({;
     setHighlightedIndex(-1);
     inputRef && inputRef.current?.blur();
 
-
       aria-expanded={focused && suggestions && suggestions.length > 0}
       aria-haspopup='listbox';
       aria-controls={listId}
@@ -272,79 +271,78 @@ export function SearchBar(): any ({;
               e.target.value.length
               e.target.value.length
             )
-          }}
+          }
           onBlur={e => {
             // Only blur if not clicking on suggestions
             const relatedTarget = e.relatedTarget as HTMLElement
             if (
               !relatedTarget |
-              !containerRef.current?.contains(relatedTarget)
-            ) {
+              !containerRef.current?.contains(relatedTarget) {
               setFocused(false)
               setHighlightedIndex(-1)
-            }          }}
+            }}
           className='pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate';
           aria-autocomplete='list';
           aria-activedescendant={;
-            highlightedIndex !== -1;
+            highlightedIndex != -1;
               ? `suggestion-item-${highlightedIndex}`;
               : undefined;
           }
           autoComplete='search'
-          onKeyDown={e => {            if (!focused |suggestions.length === 0) {
+          onKeyDown={e => {            if (!focused |suggestions.length = = 0) {
           className="pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder: text-zion-slate"
           aria-autocomplete="list"
-          aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}
+          aria-activedescendant={highlightedIndex != -1 ? `suggestion-item-${highlightedIndex}` : undefined}
           autoComplete="search"
           onKeyDown={(e) => {
-            if (!focused |suggestions.length === 0) {
-              if (e.key === 'Escape') {
+            if (!focused |suggestions.length = = 0) {
+              if (e.key = = 'Escape') {
                 e.preventDefault()
                 setFocused(false)
                 setHighlightedIndex(-1)
                 inputRef.current?.blur()
               }
               // If Enter is pressed and there's a value, navigate with query parameter
-              if (e.key === 'Enter' && value.trim()) {                e.preventDefault(); // Prevent form submission if SearchBar is in a form
+              if (e.key = = 'Enter' && value.trim() {                e.preventDefault(); // Prevent form submission if SearchBar is in a form
                 fireEvent('search', { search_term: value })
                 router.push(`/search?q=${encodeURIComponent(value)}`)
                 setFocused(false)
                 inputRef.current?.blur()
               }
               return }              // If Enter is pressed and there's a value, navigate with query parameter
-              if (e.key === 'Enter' && value.trim()) {
+              if (e.key = = 'Enter' && value.trim() {
                 e.preventDefault(), // Prevent form submission if SearchBar is in a form
                 fireEvent('search', { search_term: value })
                 router.push(`/search?q=${encodeURIComponent(value)}`)
                 setFocused(false)
                 inputRef.current?.blur()
           autoComplete='search';
-          onKeyDown={e => {            if (!focused || suggestions && suggestions.length === 0) {;
+          onKeyDown={e => {            if (!focused || suggestions && suggestions.length = = 0) {;
           className="pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder: text-zion-slate";
           aria-autocomplete="list";
-          aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}
+          aria-activedescendant={highlightedIndex != -1 ? `suggestion-item-${highlightedIndex}` : undefined}
           autoComplete="search";
           onKeyDown={(e) => {;
-            if (!focused || suggestions && suggestions.length === 0) {;
-              if (e && e.key === 'Escape') {;
+            if (!focused || suggestions && suggestions.length = = 0) {;
+              if (e && e.key = = 'Escape') {;
                 e && e.preventDefault();
                 setFocused(false);
                 setHighlightedIndex(-1);
                 inputRef && inputRef.current?.blur();
               }
               // If Enter is pressed and there's a value, navigate with query parameter;
-              if (e && e.key === 'Enter' && value && value.trim()) {                e && e.preventDefault(); // Prevent form submission if SearchBar is in a form;
+              if (e && e.key = = 'Enter' && value && value.trim() {                e && e.preventDefault(); // Prevent form submission if SearchBar is in a form;
               }
               return;
-            if (!focused || suggestions.length === 0) {
-              if (e.key === 'Escape') {
+            if (!focused || suggestions.length = = 0) {
+              if (e.key = = 'Escape') {
                 e.preventDefault();
                 setFocused(false);
                 setHighlightedIndex(-1);
                 inputRef.current?.blur()
               }
               // If Enter is pressed and there's a value, navigate with query parameter
-              if (e.key = == 'Enter' && value.trim()) {
+              if (e.key = = 'Enter' && value.trim() {
                 e.preventDefault(); // Prevent form submission if SearchBar is in a form
                 fireEvent('search', { search_term: value });
                 router.push(`/search?q=${encodeURIComponent(value)}`);
@@ -363,29 +361,29 @@ export function SearchBar(): any ({;
                 setHighlightedIndex(
                   prev => (prev - 1 + suggestions.length) % suggestions.length
                 );                break;              case 'Enter':
-                if (highlightedIndex !== -1 && suggestions[highlightedIndex]) {
+                if (highlightedIndex != -1 && suggestions[highlightedIndex]) {
                   e.preventDefault()
                   handleSelect(suggestions[highlightedIndex])
-                } else if (value.trim()) {
+                } else if (value.trim() {
                   // This case should ideally be handled by the form's onSubmit,                  // but if SearchBar is used standalone, this provides a fallback.
-                setHighlightedIndex((prev) => (prev + 1) % suggestions.length)
+                setHighlightedIndex(prev) => (prev + 1) % suggestions.length)
                 break
               case 'ArrowUp':
                 e.preventDefault()
-                setHighlightedIndex((prev) => (prev - 1 + suggestions.length) % suggestions.length)
-                setHighlightedIndex((prev) => (prev + 1) % suggestions.length)
+                setHighlightedIndex(prev) => (prev - 1 + suggestions.length) % suggestions.length)
+                setHighlightedIndex(prev) => (prev + 1) % suggestions.length)
                 break
               case 'ArrowUp':
                 e.preventDefault()
-                setHighlightedIndex((prev) => (prev - 1 + suggestions.length) % suggestions.length)
+                setHighlightedIndex(prev) => (prev - 1 + suggestions.length) % suggestions.length)
                 break
               case 'Enter':
-                if (highlightedIndex !== -1 && suggestions[highlightedIndex]) {
+                if (highlightedIndex != -1 && suggestions[highlightedIndex]) {
                   e.preventDefault()
                   handleSelect(suggestions[highlightedIndex])
-                } else if (value.trim()) {
+                } else if (value.trim() {
                   // This case should ideally be handled by the form's onSubmit,                  handleSelect(suggestions[highlightedIndex])
-                } else if (value.trim()) {
+                } else if (value.trim() {
                   // This case should ideally be handled by the form's onSubmit
                   // but if SearchBar is used standalone, this provides a fallback.
                   e.preventDefault()
@@ -404,17 +402,17 @@ export function SearchBar(): any ({;
                 break }              default: break
 
                 e.preventDefault();
-                setHighlightedIndex((prev) => (prev + 1) % suggestions.length);
+                setHighlightedIndex(prev) => (prev + 1) % suggestions.length);
                 break;
               case 'ArrowUp':
                 e.preventDefault();
-                setHighlightedIndex((prev) => (prev - 1 + suggestions.length) % suggestions.length);
+                setHighlightedIndex(prev) => (prev - 1 + suggestions.length) % suggestions.length);
                 break;
               case 'Enter':
-                if (highlightedIndex !== -1 && suggestions[highlightedIndex]) {
+                if (highlightedIndex != -1 && suggestions[highlightedIndex]) {
                   e.preventDefault();
                   handleSelect(suggestions[highlightedIndex])
-                } else if (value.trim()) {
+                } else if (value.trim() {
                   // This case should ideally be handled by the form's onSubmit;
                   // but if SearchBar is used standalone, this provides a fallback.
                   e.preventDefault();
@@ -433,8 +431,7 @@ export function SearchBar(): any ({;
 
                 break;
               default: break
-            }
-          }}
+            }}
         />;
         {value && (;
           <button
@@ -460,25 +457,24 @@ export function SearchBar(): any ({;
       />
     </div>
   )
-}/> onClick={'
+/> onClick={'
   () => onChange ('') "
-}aria-label="Clear search" > <X className="h-4 w-4" /> </button>)
-}</div> <AutocompleteSuggestions suggestions= {
+aria-label="Clear search" > <X className="h-4 w-4" /> </button>)
+</div> <AutocompleteSuggestions suggestions= {
   suggestions
-}searchTerm= {
+searchTerm= {
   value
-}onSelectSuggestion= {
+onSelectSuggestion= {
   handleSelect
-}visible= {
+visible= {
   focused
-}highlightedIndex= {
+highlightedIndex= {
   highlightedIndex
-}listId= {
+listId= {
   listId
-}/> </div>)
-}'"  )
-}
-}
+/> </div>)
+'"  )
+
 import { use_router } from 'next / router';
 import { Search, X } from 'lucide-react'; import { Input } from '@/components / ui / input'; import { Search, X } from 'lucide-react';
 import { Input } from '@/components / ui / input';
@@ -489,9 +485,9 @@ import { SearchSuggestion } from '@/types / search';
 import { slugify } from '@/lib / slugify';
 import { use_debounce } from '@/hooks / use_debounce';
 import { useOnClickOutside } from '@/hooks / useOnClickOutside';
-/**;
-* SearchBar component props;
-*/;
+**;
+ SearchBar component props;
+/;
 interface SearchBarProps {
   /**;
   * The current value of the search input;
@@ -515,17 +511,17 @@ interface SearchBarProps {
   * The placeholder text for the search input;
   */;
   placeholder?: string;
-/**;
-* SearchBar component that allows users to search for content.;
-*/  onSelectSuggestion?: (suggestion: SearchSuggestion) => void,
+**;
+ SearchBar component that allows users to search for content.;
+/  onSelectSuggestion?: (suggestion: SearchSuggestion) => void,
   /**;
   * The placeholder text for the search input;
   */;
   placeholder?: string;
-}
-/**;
-* SearchBar component that allows users to search for content.;
-*/;
+
+**;
+ SearchBar component that allows users to search for content.;
+/;
 export /**
  * SearchBar - Function description
  */
@@ -540,11 +536,11 @@ function SearchBar() {
   const list_id = 'searchbar - autocomplete - list';  const debounced = use_debounce (value, 150);
   const input_ref = useRef < HTMLInputElement>(null);
   const container_ref = useRef < HTMLDivElement>(null);
-  useEffect ((, ) => {
+  useEffect (, ) => {
     // Check condition
 if ( {) {
   $2
-}
+
       set_suggestions ([]);
       setHighlightedIndex (-1);
       return;
@@ -554,45 +550,45 @@ if ( {) {
       signal: controller.signal,
     });
       .then (res => {
-        if (throw new Error ('Failed to fetch suggestions')) {
+        if (throw new Error ('Failed to fetch suggestions') {
   $2
-}
+
         return res.json ();
       });
       .then (data => {
         if () {) {
   $2
-}
-          set_suggestions (data.slice (0, 5)) } else {  const debounced = use_debounce (value, 150);
+
+          set_suggestions (data.slice (0, 5) } else {  const debounced = use_debounce (value, 150);
   const input_ref = useRef < HTMLInputElement>(null);
   const container_ref = useRef < HTMLDivElement>(null);
-  useEffect (() => {
+  useEffect () => {
     // Check condition
 if ( {) {
   $2
-}
+
       set_suggestions ([]);
       setHighlightedIndex (-1);
     }
     const controller = new AbortController ();
     fetch (`/api / search / suggest?q=${encodeURIComponent (debounced)}`, { signal: controller.signal });
       .then (res => {
-        if (throw new Error ('Failed to fetch suggestions')) {
+        if (throw new Error ('Failed to fetch suggestions') {
   $2
-}
+
         return res.json ();
       });
       .then (data => {
         if () {) {
   $2
-}
-          set_suggestions (data.slice (0, 5));
+
+          set_suggestions (data.slice (0, 5);
         } else {
           set_suggestions ([]);
         }
         setHighlightedIndex (-1);
       });
-      .catch (() => set_suggestions ([]));
+      .catch () => set_suggestions ([]);
     return () => controller.abort () }, [debounced]);
   useOnClickOutside (container_ref, () => {
     set_focused (false);
@@ -605,9 +601,9 @@ if ( {) {
   });
   const handle_select = (suggestion: SearchSuggestion) =>: any {
     on_change (suggestion.text);
-    if (onSelectSuggestion (suggestion)) {
+    if (onSelectSuggestion (suggestion) {
   $2
-}
+
     const search_query = encodeURIComponent (suggestion.text);
     router.push (`/search?q=${search_query}`);
     fire_event ('search', { search_term: suggestion.text });
@@ -632,7 +628,7 @@ if ( {) {
             e.target.setSelectionRange (
               e.target.value.length,
               e.target.value.length);
-          }}
+          }
           on_blur={e => {
             // Only blur if not clicking on suggestions;
             const related_target = e.related_target as HTMLElement;
@@ -640,14 +636,14 @@ if ( {) {
 if (
             ) {) {
   $2
-}
+
               set_focused (false);
               setHighlightedIndex (-1);
-            }          }}
+            }}
           className='pl - 10 bg - zion - blue border border - zion - blue - light text - white placeholder:text - zion - slate';
           aria - autocomplete='list';
           aria - activedescendant={
-            highlighted_index !== -1;
+            highlighted_index != -1;
               ? `suggestion - item-${highlighted_index}`;
               : undefined;
           }
@@ -655,29 +651,29 @@ if (
           onKeyDown={e => {            // Check condition
 if ( {) {
   $2
-}
+
           className="pl - 10 bg - zion - blue border border - zion - blue - light text - white placeholder: text - zion - slate";
           aria - autocomplete="list";
-          aria - activedescendant={highlighted_index !== -1 ? `suggestion - item-${highlighted_index}` : undefined}
+          aria - activedescendant={highlighted_index != -1 ? `suggestion - item-${highlighted_index}` : undefined}
           auto_complete="search";
           onKeyDown={(e) => {
             // Check condition
 if ( {) {
   $2
-}
+
               // Check condition
 if ( {) {
   $2
-}
+
                 e.prevent_default ();
                 set_focused (false);
                 setHighlightedIndex (-1);
                 input_ref.current?.blur ();
               }
               // If Enter is pressed and there's a value, navigate with query parameter;
-              if () {                e.prevent_default ()) {
+              if () {                e.prevent_default () {
   $2
-} // Prevent form submission if SearchBar is in a form;
+ // Prevent form submission if SearchBar is in a form;
                 fire_event ('search', { search_term: value });
                 router.push (`/search?q=${encodeURIComponent (value)}`);
                 set_focused (false);
@@ -686,7 +682,7 @@ if ( {) {
               return }              // If Enter is pressed and there's a value, navigate with query parameter;
               if () {) {
   $2
-}
+
                 e.prevent_default (), // Prevent form submission if SearchBar is in a form;
                 fire_event ('search', { search_term: value }),
                 router.push (`/search?q=${encodeURIComponent (value)}`);
@@ -707,38 +703,38 @@ if ( {) {
                 // Check condition
 if ( {) {
   $2
-}
+
                   e.prevent_default ();
                   handle_select (suggestions[highlighted_index]);
                 } else if () {) {
   $2
-}
+
                   // This case should ideally be handled by the form's on_submit,                  // but if SearchBar is used standalone, this provides a fallback.;
-                setHighlightedIndex ((prev) => (prev + 1) % suggestions.length);
+                setHighlightedIndex (prev) => (prev + 1) % suggestions.length);
                 break;
               case 'ArrowUp':;
                 e.prevent_default ();
-                setHighlightedIndex ((prev) => (prev - 1 + suggestions.length) % suggestions.length);
-                setHighlightedIndex ((prev) => (prev + 1) % suggestions.length);
+                setHighlightedIndex (prev) => (prev - 1 + suggestions.length) % suggestions.length);
+                setHighlightedIndex (prev) => (prev + 1) % suggestions.length);
                 break;
               case 'ArrowUp':;
                 e.prevent_default ();
-                setHighlightedIndex ((prev) => (prev - 1 + suggestions.length) % suggestions.length);
+                setHighlightedIndex (prev) => (prev - 1 + suggestions.length) % suggestions.length);
                 break;
               case 'Enter':;
                 // Check condition
 if ( {) {
   $2
-}
+
                   e.prevent_default ();
                   handle_select (suggestions[highlighted_index]);
                 } else if () {) {
   $2
-}
+
                   // This case should ideally be handled by the form's on_submit,                  handle_select (suggestions[highlighted_index]);
                 } else if () {) {
   $2
-}
+
                   // This case should ideally be handled by the form's on_submit;
                   // but if SearchBar is used standalone, this provides a fallback.;
                   e.prevent_default ();
@@ -755,8 +751,7 @@ if ( {) {
                 break;
               default:;
                 break }              default: break;
-            }
-          }}
+            }}
         />;
         {value && (
           <button;
@@ -780,21 +775,20 @@ if ( {) {
         list_id = {list_id, }
       />;
     </div>);
-}/> on_click={';
+/> on_click={';
   () => on_change ('') ";
-}aria - label="Clear search" > <X className="h - 4 w - 4" /> </button>);
-}</div> <AutocompleteSuggestions suggestions= {
+aria - label="Clear search" > <X className="h - 4 w - 4" /> </button>);
+</div> <AutocompleteSuggestions suggestions= {
   suggestions;
-}search_term= {
+search_term= {
   value;
-}onSelectSuggestion= {
+onSelectSuggestion= {
   handle_select;
-}visible= {
+visible= {
   focused;
-}highlighted_index= {
+highlighted_index= {
   highlighted_index;
-}list_id= {
+list_id= {
   list_id;
-}/> </div>);
-}'"  );
-}
+/> </div>);
+'"  );

@@ -1,6 +1,6 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
-;
+
 interface Props {;
   children:ReactNode;
   level?:string;
@@ -11,7 +11,7 @@ interface State {
   hasError: boolean,
   error?: Error,
   errorInfo?: ErrorInfo
-}
+
 class ErrorBoundary extends Component<Props, State> {_constructor(props: Props) {
     super(props);
     this.state = { hasError: false};  }
@@ -36,9 +36,9 @@ class ErrorBoundary extends Component<Props, State> {_constructor(props: Props) 
     }
 
     // Log error to external service (e.g., Sentry)
-    if (typeof window !== 'undefined' && (window as any).Sentry) {
+    if (typeof window != 'undefined' && (window as any).Sentry) {
       (window as any).Sentry.captureException(error, { extra: errorInfo }),
-    }  }
+    }
 
   render() {
     if (this.state.hasError) {
@@ -54,12 +54,12 @@ class ErrorBoundary extends Component<Props, State> {_constructor(props: Props) 
               Something went wrong
             </h1>
             <p className="text-slate-300 mb-6">
-              {this.props.level === 'page' 
+              {this.props.level = = 'page' 
                 ? 'We encountered an error while loading this page.'
                 : 'An unexpected error occurred.'
               }            </p>
-            
-            {process.env.NODE_ENV === 'development' && this.state.error && (
+
+            {process.env.NODE_ENV = = 'development' && this.state.error && (
               <details className="mb-6 text-left">
                 <summary className="text-slate-400 cursor-pointer mb-2">
                   Error Details (Development)
@@ -91,6 +91,5 @@ class ErrorBoundary extends Component<Props, State> {_constructor(props: Props) 
 
     return this.props.children;
   }
-}
 
 export default ErrorBoundary,

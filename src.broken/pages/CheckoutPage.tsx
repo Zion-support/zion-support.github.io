@@ -6,5 +6,3 @@ export function CheckoutPage() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

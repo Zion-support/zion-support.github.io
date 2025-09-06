@@ -6,5 +6,3 @@ export function BackToTopButton() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

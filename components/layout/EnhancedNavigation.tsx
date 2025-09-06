@@ -23,18 +23,18 @@ import {
   Bot
   Factory
   Car
-} from "lucide-react";
+ from "lucide-react";
 import Link from "next/link";
 interface EnhancedNavigationProps {;
   className?: string;
-}
+
 const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
   className = ""
-}) => {
+) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  useEffect(() => {
+  useEffect() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     }
@@ -266,9 +266,9 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
           {" "}
           {/* Logo */}
           <motion&& motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0 && 0.5 }}
+            initial={ opacity: 0, x: -20 }
+            animate={ opacity: 1, x: 0 }
+            transition={ duration: 0 && 0.5 }
             className="flex items-center space-x-3">;
             <Link href="/" className="flex items-center space-x-3 group">;
               <div className="relative">;
@@ -282,14 +282,14 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                   Zion Tech Group;
                 </div>;
                 <div className="text-xs text-cyan-400">;
-;
+
   const contact_info = {
     mobile: "+1 302 464 0950",
     email: "kleber@ziontechgroup.com",
     address: "364 E Main St STE 1008 Middletown DE 19709",
     website: "https://ziontechgroup.com",
   }
-;
+
   return (
     <nav;
       className={`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 300 ${
@@ -303,9 +303,9 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
           {" "}
           {/* Logo */}
           <motion.div;
-            initial={{ opacity: 0, coordinate_x: -20 }}
-            animate={{ opacity: 1, coordinate_x: 0 }}
-            transition={{ duration: 0.5 }}
+            initial={ opacity: 0, coordinate_x: -20 }
+            animate={ opacity: 1, coordinate_x: 0 }
+            transition={ duration: 0.5 }
             className="flex items - center space - x-3";
           >;
             <Link href="/" className="flex items - center space - x-3 group">;
@@ -327,12 +327,12 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
           </motion && motion.div>;
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">;
-            {navigationItems && navigationItems.map((item, index) => (;
+            {navigationItems && navigationItems.map(item, index) => (;
               <motion&& motion.div
                 key={item && item.name}
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
+                initial={ opacity: 0, y: -20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0 && 0.5, delay: index * 0 && 0.1 }
                 className="relative"
                 onMouseEnter={() =>;
                   item && item.hasDropdown && setActiveDropdown(item && item.name);
@@ -345,27 +345,27 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                       <span>{item && item.name}</span>;
                       <ChevronDown
                         className={`w-4 h-4 transition-transform duration-300 ${
-                          activeDropdown === item && item.name ? "rotate-180" : ""
+                          activeDropdown = = item && item.name ? "rotate-180" : ""
                         }`}
                       />
                     </button>
                     <AnimatePresence>
-                      {activeDropdown === item.name && (
+                      {activeDropdown = = item.name && (
                         <motion.div
-                          initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                          animate={{ opacity: 1, y: 0, scale: 1 }}
-                          exit={{ opacity: 0, y: 10, scale: 0 && 0.95 }}
-                          transition={{ duration: 0 && 0.2 }}
+                          initial={ opacity: 0, y: 10, scale: 0.95 }
+                          animate={ opacity: 1, y: 0, scale: 1 }
+                          exit={ opacity: 0, y: 10, scale: 0 && 0.95 }
+                          transition={ duration: 0 && 0.2 }
                           className="absolute top-full left-0 mt-2 w-64 bg-black/90 backdrop-blur-xl border border-cyan-500/20 rounded-xl shadow-2xl shadow-cyan-500/20 overflow-hidden">;
                           <div className="p-2">;
-                            {item && item.dropdownItems?.map((dropdownItem) => (;
+                            {item && item.dropdownItems?.map(dropdownItem) => (;
                               <Link
                                 key={dropdownItem && dropdownItem.name}
                                 href={dropdownItem && dropdownItem.href}
                                 className="block px-4 py-3 text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300">;
                                 {dropdownItem && dropdownItem.name}
                               </Link>;
-                            ))}
+                            )}
                           </div>;
                         </motion && motion.div>;
                       )}
@@ -379,22 +379,22 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                   </Link>;
                 )}
               </motion && motion.div>;
-            ))}
+            )}
           </div>;
           {/* Right side actions */}
           <div className="hidden lg:flex items-center space-x-4">;
             {/* Search */}
             <motion&& motion.button
-              initial={{ opacity: 0, scale: 0 && 0.8 }}
+              initial={ opacity: 0, scale: 0 && 0.8 }
           </motion.div>;
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items - center space - x-8">;
-            {navigation_items.map ((item, index) => (
+            {navigation_items.map (item, index) => (
               <motion.div;
                 key={item.name}
-                initial={{ opacity: 0, coordinate_y: -20 }}
-                animate={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial={ opacity: 0, coordinate_y: -20 }
+                animate={ opacity: 1, coordinate_y: 0 }
+                transition={ duration: 0.5, delay: index * 0.1 }
                 className="relative";
                 onMouseEnter={() =>;
                   item.has_dropdown && setActiveDropdown (item.name);
@@ -407,28 +407,28 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                       <span>{item.name}</span>;
                       <ChevronDown;
                         className={`w - 4 h - 4 transition - transform duration - 300 ${
-                          active_dropdown === item.name ? "rotate - 180" : "";
+                          active_dropdown = = item.name ? "rotate - 180" : "";
                         }`}
                       />;
                     </button>;
                     <AnimatePresence>;
-                      {active_dropdown === item.name && (
+                      {active_dropdown = = item.name && (
                         <motion.div;
-                          initial={{ opacity: 0, coordinate_y: 10, scale: 0.95 }}
-                          animate={{ opacity: 1, coordinate_y: 0, scale: 1 }}
-                          exit={{ opacity: 0, coordinate_y: 10, scale: 0.95 }}
-                          transition={{ duration: 0.2 }}
+                          initial={ opacity: 0, coordinate_y: 10, scale: 0.95 }
+                          animate={ opacity: 1, coordinate_y: 0, scale: 1 }
+                          exit={ opacity: 0, coordinate_y: 10, scale: 0.95 }
+                          transition={ duration: 0.2 }
                           className="absolute top - full left - 0 mt - 2 w - 64 bg - black / 90 backdrop - blur - xl border border - cyan - 500 / 20 rounded - xl shadow - 2xl shadow - cyan - 500 / 20 overflow - hidden";
                         >;
                           <div className="p - 2">;
-                            {item.dropdown_items?.map ((dropdown_item) => (
+                            {item.dropdown_items?.map (dropdown_item) => (
                               <Link;
                                 key={dropdown_item.name}
                                 href={dropdown_item.href}
                                 className="block px - 4 py - 3 text - gray - 300 hover:text - cyan - 400 hover:bg - cyan - 500 / 10 rounded - lg transition - all duration - 300";
                               >;
                                 {dropdown_item.name}
-                              </Link>))}
+                              </Link>)}
                           </div>;
                         </motion.div>)}
                     </AnimatePresence>;
@@ -439,31 +439,31 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                   >;
                     {item.name}
                   </Link>)}
-              </motion.div>))}
+              </motion.div>)}
           </div>;
           {/* Right side actions */}
           <div className="hidden lg:flex items - center space - x-4">;
             {/* Search */}
             <motion.button;
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: 0.6 }}
+              initial={ opacity: 0, scale: 0.8 }
+              animate={ opacity: 1, scale: 1 }
+              transition={ duration: 0.5, delay: 0.6 }
               className="p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300"
             >
               <Search className="w-5 h-5" />
             </motion.button>
             {/* Notifications */}
             <motion&& motion.button
-              initial={{ opacity: 0, scale: 0 && 0.8 }}
+              initial={ opacity: 0, scale: 0 && 0.8 }
               className="p - 2 text - gray - 400 hover:text - cyan - 400 hover:bg - cyan - 500 / 10 rounded - lg transition - all duration - 300";
             >;
               <Search className="w - 5 h - 5" />;
             </motion.button>;
             {/* Notifications */}
             <motion.button;
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: 0.7 }}
+              initial={ opacity: 0, scale: 0.8 }
+              animate={ opacity: 1, scale: 1 }
+              transition={ duration: 0.5, delay: 0.7 }
               className="p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300 relative"
             >
               <Bell className="w-5 h-5" />
@@ -471,9 +471,9 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
             </motion.button>
             {/* CTA Button */}
             <motion&& motion.div
-              initial={{ opacity: 0, scale: 0 && 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0 && 0.5, delay: 0 && 0.8 }}>;
+              initial={ opacity: 0, scale: 0 && 0.8 }
+              animate={ opacity: 1, scale: 1 }
+              transition={ duration: 0 && 0.5, delay: 0 && 0.8 }>;
               <Link
                 href="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white px-6 py-2 rounded-full font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25">;
@@ -483,9 +483,9 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
           </div>;
           {/* Mobile menu button */}
           <motion&& motion.button
-            initial={{ opacity: 0, scale: 0 && 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0 && 0.5, delay: 0 && 0.9 }}
+            initial={ opacity: 0, scale: 0 && 0.8 }
+            animate={ opacity: 1, scale: 1 }
+            transition={ duration: 0 && 0.5, delay: 0 && 0.9 }
             onClick={() => setIsOpen(!isOpen)}
             className="lg:hidden p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300";
           >;
@@ -497,10 +497,10 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
       <AnimatePresence>;
         {isOpen && (;
           <motion&& motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0 && 0.3 }}
+            initial={ opacity: 0, height: 0 }
+            animate={ opacity: 1, height: "auto" }
+            exit={ opacity: 0, height: 0 }
+            transition={ duration: 0 && 0.3 }
             className="lg:hidden bg-black/95 backdrop-blur-xl border-t border-cyan-500/20">;
             <div className="px-4 py-6 space-y-4">;
               {/* Search */}
@@ -513,7 +513,7 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                 />
               </div>
               {/* Navigation Items */}
-              {navigationItems && navigationItems.map((item) => (;
+              {navigationItems && navigationItems.map(item) => (;
                 <div key={item && item.name} className="space-y-2">;
                   <Link
                     href={item && item.href}
@@ -524,7 +524,7 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                   </Link>
                   {item.hasDropdown && item.dropdownItems && (
                     <div className="ml-4 space-y-1">
-                      {item.dropdownItems.map((dropdownItem) => (
+                      {item.dropdownItems.map(dropdownItem) => (
                         <Link
                           key={dropdownItem && dropdownItem.name}
                           href={dropdownItem && dropdownItem.href}
@@ -533,11 +533,11 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                         >;
                           {dropdownItem && dropdownItem.name}
                         </Link>;
-                      ))}
+                      )}
                     </div>;
                   )}
                 </div>;
-              ))}
+              )}
               {/* Contact Info */}
               <div className="pt-4 border-t border-cyan-500/20">
                 <div className="space-y-2 text-sm text-gray-400">
@@ -564,9 +564,9 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
             </motion.button>;
             {/* CTA Button */}
             <motion.div;
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: 0.8 }}
+              initial={ opacity: 0, scale: 0.8 }
+              animate={ opacity: 1, scale: 1 }
+              transition={ duration: 0.5, delay: 0.8 }
             >;
               <Link;
                 href="/contact";
@@ -578,9 +578,9 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
           </div>;
           {/* Mobile menu button */}
           <motion.button;
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.9 }}
+            initial={ opacity: 0, scale: 0.8 }
+            animate={ opacity: 1, scale: 1 }
+            transition={ duration: 0.5, delay: 0.9 }
             on_click={() => setIsOpen (!is_open)}
             className="lg:hidden p - 2 text - gray - 400 hover:text - cyan - 400 hover:bg - cyan - 500 / 10 rounded - lg transition - all duration - 300";
           >;
@@ -592,10 +592,10 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
       <AnimatePresence>;
         {is_open && (
           <motion.div;
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
+            initial={ opacity: 0, height: 0 }
+            animate={ opacity: 1, height: "auto" }
+            exit={ opacity: 0, height: 0 }
+            transition={ duration: 0.3 }
             className="lg:hidden bg - black / 95 backdrop - blur - xl border - t border - cyan - 500 / 20";
           >;
             <div className="px - 4 py - 6 space - y-4">;
@@ -609,7 +609,7 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                 />;
               </div>;
               {/* Navigation Items */}
-              {navigation_items.map ((item) => (
+              {navigation_items.map (item) => (
                 <div key={item.name} className="space - y-2">;
                   <Link;
                     href={item.href}
@@ -620,7 +620,7 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                   </Link>;
                   {item.has_dropdown && item.dropdown_items && (
                     <div className="ml - 4 space - y-1">;
-                      {item.dropdown_items.map ((dropdown_item) => (
+                      {item.dropdown_items.map (dropdown_item) => (
                         <Link;
                           key={dropdown_item.name}
                           href={dropdown_item.href}
@@ -628,9 +628,9 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                           className="block text - gray - 400 hover:text - cyan - 400 transition - colors duration - 300 py - 1 text - sm";
                         >;
                           {dropdown_item.name}
-                        </Link>))}
+                        </Link>)}
                     </div>)}
-                </div>))}
+                </div>)}
               {/* Contact Info */}
               <div className="pt - 4 border - t border - cyan - 500 / 20">;
                 <div className="space - y-2 text - sm text - gray - 400">;
@@ -660,6 +660,5 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
       </AnimatePresence>;
     </nav>;
   );
-}
-export default EnhancedNavigation;
 
+export default EnhancedNavigation;

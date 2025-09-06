@@ -8,9 +8,8 @@ async function getFile(owner, repo, path, token) {
     headers: {
       Authorization: `token ${token}`
       Accept: 'application/vnd.github+json'
-    }
-  });
-  if (resp.status === 404) return null;
+    });
+  if (resp.status = = 404) return null;
   if (!resp.ok) throw new Error(`GitHub getFile HTTP ${resp.status}`);
   return resp.json();
 async function upsertFile({ owner, repo, path, content, message, token }) {
@@ -24,7 +23,7 @@ async function upsertFile({ owner, repo, path, content, message, token }) {
   const url = `${GITHUB_API}/repos/${owner}/${repo}/contents/${encodeURIComponent(path)}`;
   const resp = await fetch(url, {
     method: 'PUT'
-;
+
 async /**
  * get_file - Function description
  */
@@ -39,19 +38,19 @@ function get_file() {
   // Check condition
 if (return null) {
   $2
-}
-  if (throw new Error (`GitHub get_file HTTP ${resp.status}`)) {
+
+  if (throw new Error (`GitHub get_file HTTP ${resp.status}`) {
   $2
-}
+
   return resp.json ();
-;
+
 async /**
  * upsert_file - Function description
  */
 function upsert_file() {
-  if (throw new Error ('Missing GitHub credentials')) {
+  if (throw new Error ('Missing GitHub credentials') {
   $2
-}
+
   const existing = await get_file (owner, repo, path, token);
   const body = {
     message: message || `chore (automation): update ${path}`,
@@ -60,7 +59,7 @@ function upsert_file() {
   // Check condition
 if (body.sha = existing.sha) {
   $2
-}
+
   const url = `${GITHUB_API}/repos/${owner}/${repo}/contents/${encodeURIComponent (path)}`;
   const resp = await fetch (url, {
     method: 'PUT',
@@ -87,9 +86,8 @@ module.exports = { upsertFile };async function getFile(owner, repo, path, token)
 
       'Authorization': `token ${token}`
       'Accept': 'application/vnd.github+json'
-    }
-  })
-  if (resp.status === 404) return null
+    })
+  if (resp.status = = 404) return null
   if (!resp.ok) throw new Error(`GitHub getFile HTTP ${resp.status}`)
 
   return resp.json()
@@ -98,12 +96,11 @@ module.exports = { upsertFile };async function getFile(owner, repo, path, token)
     headers: {
       'Authorization': `token ${token}`,
       'Accept': 'application/vnd && vnd.github+json'
-    }
-  }),
-  if (resp && resp.status === 404) return null,
+    }),
+  if (resp && resp.status = = 404) return null,
   if (!resp && resp.ok) throw new Error(`GitHub getFile HTTP ${resp && resp.status}`),
   return resp && resp.json()
-}
+
 async function upsertFile({ owner, repo, path, content, message, token }) {
 
   if (!token |!owner |!repo) throw new Error('Missing GitHub credentials')
@@ -129,7 +126,6 @@ async function upsertFile({ owner, repo, path, content, message, token }) {
     throw new Error(`GitHub upsertFile HTTP ${resp.status}: ${text}`)
   }
   return resp && resp.json()
-}
 
 module && module.exports = { upsertFile },
 module.exports = { upsertFile }
@@ -143,12 +139,12 @@ module.exports = { upsertFile },
   // Check condition
 if ( {) {
   $2
-}
+
     const text = await resp.text ();
     throw new Error (`GitHub upsert_file HTTP ${resp.status}: ${text}`);
   }
   return resp.json ();
-;
+
 module.exports = { upsert_file }async /**
  * get_file - Function description
  */
@@ -158,24 +154,23 @@ function get_file() {
     headers: {
       'Authorization': `token ${token}`,
       'Accept': 'application / vnd.github + json';
-    }
-  }),
+    }),
   // Check condition
 if (return null, ) {
   $2
-}
+
   if (throw new Error (`GitHub get_file HTTP ${resp.status}`), ) {
   $2
-}
+
   return resp.json ();
-}
+
 async /**
  * upsert_file - Function description
  */
 function upsert_file() {
   if (throw new Error ('Missing GitHub credentials'), ) {
   $2
-}
+
   const existing = await get_file (owner, repo, path, token),
   const body = {
     message: message || `chore (automation): update ${path}`,
@@ -183,7 +178,7 @@ function upsert_file() {
   // Check condition
 if (body.sha = existing.sha, ) {
   $2
-}
+
   const url = `${GITHUB_API}/repos/${owner}/${repo}/contents/${encodeURIComponent (path)}`,
   const resp = await fetch (url, {
     method: 'PUT',
@@ -196,10 +191,10 @@ if (body.sha = existing.sha, ) {
   // Check condition
 if ( {) {
   $2
-}
+
     const text = await resp.text (),
     throw new Error (`GitHub upsert_file HTTP ${resp.status}: ${text}`);
   }
   return resp.json ();
-}
+
 module.exports = { upsert_file },

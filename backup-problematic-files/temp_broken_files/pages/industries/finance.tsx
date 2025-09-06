@@ -2,7 +2,6 @@ import React from 'react';
 
 interface FinanceProps {
   className?: string;
-}
 
 const Finance: React.FC<FinanceProps> = ({ className }) => {
   return (
@@ -11,6 +10,5 @@ const Finance: React.FC<FinanceProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default Finance;

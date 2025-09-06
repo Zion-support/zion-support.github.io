@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid',
 export type FeedbackWidgetProps = {
   responseId?: string,
   aiModel?: string
-},
+,
 
 export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetProps) {
   const [rating, setRating] = useState<null | 'up' | 'down'>(null),
@@ -12,7 +12,7 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
   const [submitted, setSubmitted] = useState(false),
   const [error, setError] = useState<string | null>(null),
 
-  const effectiveResponseId = useMemo(() => responseId || uuidv4(), [responseId]),
+  const effectiveResponseId = useMemo() => responseId || uuidv4(), [responseId]),
   const _submit = async () => {
     if (!rating) {
       setError('Please choose  or '),
@@ -28,7 +28,7 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
           responseId: effectiveResponseId,
           rating,
           comment: comment.trim(),
-          pagePath: typeof window !== 'undefined' ? window.location.pathname : undefined,
+          pagePath: typeof window != 'undefined' ? window.location.pathname : undefined,
           aiModel})}),
       if (!res.ok) throw new Error('Failed to submit feedback'),
       setSubmitted(true)
@@ -36,8 +36,7 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
       setError(e?.message || 'Something went wrong')
     } finally {
       setSubmitting(false)
-    }
-  },
+    },
 
   return (
     <div className=&quot;mt-6 rounded-lg border p-4 bg-white/60 dark:bg-neutral-900/60&quot;>
@@ -48,18 +47,18 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
         <div className=&quot;space-y-3&quot;>
           <div className=&quot;flex items-center gap-2&quot;>            <button
               type=&quot;button&quot;
-              onClick={() => setRating(rating === 'up' ? null : 'up')}
-              className={_`inline-flex items-center gap-1 rounded-md border px-2 py-1 text-sm ${rating === 'up' ? 'bg-emerald-600 text-white border-emerald-600' : ''}`}
-              aria-pressed={_rating === 'up'}
+              onClick={() => setRating(rating = = 'up' ? null : 'up')}
+              className={_`inline-flex items-center gap-1 rounded-md border px-2 py-1 text-sm ${rating = = 'up' ? 'bg-emerald-600 text-white border-emerald-600' : ''}`}
+              aria-pressed={_rating = = 'up'}
             >
               <span></span>
               <span>Yes</span>
             </button>
             <button
               type=&quot;button&quot;
-              onClick={() => setRating(rating === 'down' ? null : 'down')}
-              className={`inline-flex items-center gap-1 rounded-md border px-2 py-1 text-sm ${rating === 'down' ? 'bg-red-600 text-white border-red-600' : ''}`}
-              aria-pressed={rating === 'down'}            >
+              onClick={() => setRating(rating = = 'down' ? null : 'down')}
+              className={`inline-flex items-center gap-1 rounded-md border px-2 py-1 text-sm ${rating = = 'down' ? 'bg-red-600 text-white border-red-600' : ''}`}
+              aria-pressed={rating = = 'down'}            >
               <span></span>
               <span>No</span>
             </button>
@@ -67,7 +66,7 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
           <textarea
             placeholder=&quot;Optional feedback (what worked, what didnt)&quot;
             value={comment}
-            onChange={(e) => setComment(e.target.value.slice(0, 2000))}
+            onChange={(e) => setComment(e.target.value.slice(0, 2000)}
             className=&quot;w-full rounded-md border px-3 py-2 text-sm&quot;
             rows={3}
           />

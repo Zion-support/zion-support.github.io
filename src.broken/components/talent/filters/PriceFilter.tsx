@@ -6,5 +6,3 @@ export function PriceFilter() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

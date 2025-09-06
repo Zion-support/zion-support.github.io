@@ -8,7 +8,7 @@ const MobileAppDevelopmentChat: NextPage = () => {
         <title>MobileAppDevelopmentChat - Zion Tech Solutions</title>
         <meta name="description" content="MobileAppDevelopmentChat service" />
       </Head>
-      
+
       <main>
         <h1>MobileAppDevelopmentChat</h1>
         <p>Service details coming soon...</p>
@@ -16,6 +16,6 @@ const MobileAppDevelopmentChat: NextPage = () => {
       </main>
     </div>
   )
-},
+,
 
 export default MobileAppDevelopmentChat,

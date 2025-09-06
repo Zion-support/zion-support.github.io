@@ -10,7 +10,7 @@ import {
   TableHead
   TableHeader
   TableRow
-} from "./ui/table";
+ from "./ui/table";
 export function ComparisonSection() {
   return (
     <section className="py-20 bg-zion-blue-dark">
@@ -71,7 +71,7 @@ export function ComparisonSection() {
                     zion: "Free"
                     savings: "100%"
                   }
-                ].map((item, index) => (
+                ].map(item, index) => (
 
                   <TableRow key={index} className="border-b border-zion-blue">
                     <TableCell className="font-medium text-white">
@@ -87,7 +87,7 @@ export function ComparisonSection() {
                       {item.savings}
                     </TableCell>
                   </TableRow>
-                ))}
+                )}
               </TableBody>
             </Table>
           </div>
@@ -127,4 +127,3 @@ export function ComparisonSection() {
     </section>;
   );
     </section>);
-}

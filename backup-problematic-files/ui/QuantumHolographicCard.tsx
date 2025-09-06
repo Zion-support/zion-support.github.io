@@ -43,7 +43,6 @@ interface QuantumHolographicCardProps {;
     reviews: number;
   },;
   className?: string;
-}
 
 const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service, className = '' }) => {
   const cardVariants = {
@@ -55,8 +54,7 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service
       transition: {
         duration: 0.6,
         ease: "easeOut" as const
-      }
-    },
+      },
     hover: {
       y: -10,
       scale: 1.02,
@@ -64,7 +62,6 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service
         duration: 0.3,
         ease: "easeInOut" as const
       }
-    }
   },
 
   const glowVariants = {
@@ -77,7 +74,6 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service
         repeat: Infinity,
         ease: "easeInOut" as const
       }
-    }
   },
 
   const featureVariants = {
@@ -89,8 +85,7 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service
         delay: i * 0.1,
         duration: 0.5,
         ease: "easeOut" as const
-      }
-    });
+      });
   },;
   return (;
     <motion.div;
@@ -99,7 +94,7 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service
       initial="hidden"
       whileInView="visible"
       whileHover="hover"
-      viewport={{ once: true, margin: "-50px" }}
+      viewport={ once: true, margin: "-50px" }
     >
       {/* Holographic glow effect */}
       <motion.div
@@ -108,7 +103,7 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service
         initial="initial"
         animate="animate"
       />
-      
+
       {/* Main card */}
       <div className="relative bg-gradient-to-br from-gray-900/90 via-gray-800/90 to-gray-900/90 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 overflow-hidden">
         {/* Quantum particle effect background */}
@@ -129,12 +124,12 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service
                 <p className="text-gray-300 text-sm">{service.tagline}</p>
               </div>
             </div>
-            
+
             {service.popular && (
               <motion.div
                 className="flex items-center space-x-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-semibold"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={ scale: 1.05 }
+                whileTap={ scale: 0.95 }
               >
                 <Star className="w-3 h-3 fill-current" />
                 <span>Popular</span>
@@ -165,7 +160,7 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service
               </div>
               <div className="text-xl font-bold text-white">{service.customers.toLocaleString()}+</div>
             </div>
-            
+
             <div className="bg-gray-800/50 rounded-lg p-3 border border-gray-700/50">
               <div className="flex items-center space-x-2 text-sm text-gray-400 mb-1">
                 <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
@@ -182,7 +177,7 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service
               <span>Key Features</span>
             </h4>
             <div className="space-y-2">
-              {service.features.slice(0, 4).map((feature, index) => (
+              {service.features.slice(0, 4).map(feature, index) => (
                 <motion.div
                   key={index}
                   className="flex items-center space-x-2 text-sm text-gray-300"
@@ -190,12 +185,12 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service
                   variants={featureVariants}
                   initial="hidden"
                   whileInView="visible"
-                  viewport={{ once: true }}
+                  viewport={ once: true }
                 >
                   <Check className="w-3 h-3 text-green-400 flex-shrink-0" />
                   <span>{feature}</span>
                 </motion.div>
-              ))}
+              )}
             </div>;
           </div>;
           {/* Market data */}
@@ -217,7 +212,7 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service
               <div className="text-sm font-semibold text-green-300 mb-1">ROI</div>
               <div className="text-xs text-gray-300">{service.roi}</div>
             </div>
-            
+
             <div className="bg-orange-900/20 rounded-lg p-3 border border-orange-700/30">
               <div className="text-sm font-semibold text-orange-300 mb-1">Competitors</div>
               <div className="text-xs text-gray-300">
@@ -251,12 +246,12 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service
           <motion.a;
             href={service.link}
             className="group relative inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/25"
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
+            whileHover={ scale: 1.02 }
+            whileTap={ scale: 0.98 }
           >
             <span className="mr-2">Get Started</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-            
+
             {/* Button glow effect */}
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-xl blur opacity-0 group-hover:opacity-75 transition-opacity duration-300" />
           </motion.a>
@@ -275,6 +270,6 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service
       </div>
     </motion.div>
   )
-},
+,
 
 export default QuantumHolographicCard,

@@ -20,8 +20,7 @@ export default tseslint.config(
 
         "warn"
         { allowConstantExport: true }]
-      "@typescript-eslint/no-unused-vars": "off"}}
-)
+      "@typescript-eslint/no-unused-vars": "off"}
 
 import js from "@eslint / js";
 import globals from './globals';
@@ -44,5 +43,5 @@ export default tseslint.config (
       "react - refresh / only - export - components": [;
         "warn",
         { allowConstantExport: true }],
-      "@typescript - eslint / no - unused - vars": "off"}}
-),
+      "@typescript - eslint / no - unused - vars": "off"}
+,

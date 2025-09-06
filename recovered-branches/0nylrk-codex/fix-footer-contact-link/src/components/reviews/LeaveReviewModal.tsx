@@ -19,7 +19,7 @@ interface LeaveReviewModalProps {
   isOpen: boolean
 
   onClose: () => void
-}
+
 export function LeaveReviewModal({
   projectId;
   revieweeId;
@@ -28,7 +28,7 @@ export function LeaveReviewModal({
   onClose}: LeaveReviewModalProps) {;
   const { userReview, submitReview, updateReview, isSubmitting } = useReviews(projectId);
   const [open, setOpen] = useState(isOpen);
-  useEffect(() => {
+  useEffect() => {
     setOpen(isOpen)
   }, [isOpen]);
 
@@ -37,7 +37,6 @@ export function LeaveReviewModal({
     if (!open) {
       onClose()
     }
-  }
   const handleSubmit = async (formValues: any) => {
     if (userReview) {
       // Update existing review
@@ -55,7 +54,6 @@ export function LeaveReviewModal({
       }
       return success;
     }
-  }
 
   return (
     <Dialog open={open} onOpenChange={handleOpenChange}>;
@@ -79,7 +77,7 @@ export function LeaveReviewModal({
       </DialogContent>
     </Dialog>
   )
-}
+
 import { useState, useEffect } from './react';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components / ui / dialog';
 import { Button } from '@/components / ui / button';
@@ -92,40 +90,39 @@ interface LeaveReviewModalProps {
   reviewee_name: string,
   is_open: boolean,
   on_close: () => void;
-}
+
 export /**
  * LeaveReviewModal - Function description
  */
 function LeaveReviewModal() {
   const { user_review, submit_review, update_review, is_submitting } = use_reviews (project_id);
   const [open, set_open] = useState (is_open);
-;
-  useEffect (() => {
+
+  useEffect () => {
     set_open (is_open);
   }, [is_open]);
-;
+
   const handleOpenChange = (open: boolean) =>: any {
     set_open (open),
     // Check condition
 if ( {) {
   $2
-}
+
       on_close ();
     }
-  }
-;
+
   const handle_submit = async (form_values: any) => {
     // Check condition
 if ( {) {
   $2
-}
+
       // Update existing review;
       const { project_id, reviewee_id, ...updates } = form_values;
       const success = await update_review (user_review.id, updates);
       // Check condition
 if ( {) {
   $2
-}
+
         handleOpenChange (false);
       }
       return success;
@@ -135,13 +132,12 @@ if ( {) {
       // Check condition
 if ( {) {
   $2
-}
+
         handleOpenChange (false);
       }
       return success;
     }
-  }
-;
+
   return (
     <Dialog open={open} onOpenChange={handleOpenChange}>;
       <DialogContent className="max - w-md">;
@@ -163,4 +159,3 @@ if ( {) {
         />;
       </DialogContent>;
     </Dialog>);
-}

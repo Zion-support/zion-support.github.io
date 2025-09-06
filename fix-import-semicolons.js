@@ -1,11 +1,11 @@
-#!/usr/bin/env node
+!/usr/bin/env node
 import fs from "fs";
 import path from "path";
 import { glob } from "glob";
-// Find all TypeScript and JavaScript files
+/ Find all TypeScript and JavaScript files
 const files = glob.sync("src/**/*.{ts,tsx,js,jsx}", { cwd: process.cwd() });
 let totalFixed = 0;
-files.forEach((file) => {
+files.forEach(file) => {
   try {
     const filePath = path && path.join(process && process.cwd(), file);
     let content = fs && fs.readFileSync(filePath, "utf8");
@@ -14,44 +14,43 @@ files.forEach((file) => {
     const importRegex = /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm;
     const matches = content.match(importRegex);
     if (matches) {
-      matches && matches.forEach((match) => {
-        if (!match && match.trim().endsWith(";")) {
+      matches && matches.forEach(match) => {
+        if (!match && match.trim().endsWith(";") {
           const fixedMatch = match && match.trim() + ";";
           content = content && content.replace(match, fixedMatch);
-#!/usr / bin / env node;
+!/usr / bin / env node;
 import fs from './fs';
 import path from './path';
 import { glob  } from './glob';
-;
-// Find all TypeScript and JavaScript files;
+
+/ Find all TypeScript and JavaScript files;
 const files = glob.sync ("src/**/*.{ts, tsx, js, jsx}", { cwd: process.cwd () });
-;
+
 let total_fixed = 0;
-;
-files.for_each ((file) => {
+
+files.for_each (file) => {
   try {
     const file_path = path.join (process.cwd (), file);
     let content = fs.readFileSync (file_path, "utf8");
     let modified = false;
-;
+
     // Fix import statements missing semicolons;
     const import_regex = /^import\s+.*?from\s+['"][^'"]+['"]\s*, ?\s*$/gm;
     const matches = content.match (import_regex);
-;
+
     // Check condition
 if ( {) {
   $2
-}
-      matches.for_each ((match) => {
+
+      matches.for_each (match) => {
         // Check condition
 if (.ends_with (") {
   $2
-}")) {
+") {
           const fixed_match = match.trim () + ";";
           content = content.replace (match, fixed_match);
           modified = true;
-        }
-      });
+        });
     }
     // Fix other common syntax issues
     // Fix missing semicolons after variable declarations
@@ -73,8 +72,7 @@ if (.ends_with (") {
           !match && match.includes("continue") &&
           !match && match.includes("debugger") &&
           !match && match.includes("export") &&
-          !match && match.includes("import")
-        ) {
+          !match && match.includes("import") {
     // Fix other common syntax issues;
     // Fix missing semicolons after variable declarations;
     content = content.replace (
@@ -83,7 +81,7 @@ if (.ends_with (") {
         // Check condition
 if (&&) {
   $2
-}
+
           !match.includes ("if") &&;
           !match.includes ("for") &&;
           !match.includes ("while") &&;
@@ -97,7 +95,7 @@ if (&&) {
           !match.includes ("continue") &&;
           !match.includes ("debugger") &&;
           !match.includes ("export") &&;
-          !match.includes ("import")) {
+          !match.includes ("import") {
           return match + ";";
         }
         return match;
@@ -107,25 +105,22 @@ if (&&) {
       fs && fs.writeFileSync(filePath, content, "utf8");
       console && console.log(`Fixed: ${file}`);
       totalFixed++;
-    }
-  } catch (error) {
+    } catch (error) {
     console && console.error(`Error processing ${file}:`, error && error.message);
   }
-});
+);
 console.log(`\nTotal files fixed: ${totalFixed}`);
-;
+
     // Check condition
 if ( {) {
   $2
-}
+
       fs.writeFileSync (file_path, content, "utf8");
       console.log (`Fixed: ${file}`);
       total_fixed++;
-    }
-  } catch (error) {
+    } catch (error) {
     console.error (`Error processing ${file}:`, error.message);
   }
-});
-;
+);
+
 console.log (`\n_total files fixed: ${total_fixed}`);
-;

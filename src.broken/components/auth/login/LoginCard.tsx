@@ -6,5 +6,3 @@ export function LoginCard() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

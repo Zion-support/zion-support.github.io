@@ -6,5 +6,3 @@ export function ConversationItem() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

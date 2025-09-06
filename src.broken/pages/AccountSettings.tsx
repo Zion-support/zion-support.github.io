@@ -6,5 +6,3 @@ export function AccountSettings() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

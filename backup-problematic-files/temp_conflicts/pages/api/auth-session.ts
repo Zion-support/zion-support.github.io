@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { requireAdminAuth, isAdmin } from '../../../utils/adminAuth',;
-;
+
 export default function handler(req:NextApiRequest, res:NextApiResponse) {;
   const isAuthorized = requireAdminAuth(),;
   if (!isAuthorized) {;
@@ -8,4 +8,3 @@ export default function handler(req:NextApiRequest, res:NextApiResponse) {;
     return,;
   }
   res.status(200).json({ message:'OK' }),;
-}

@@ -1,7 +1,7 @@
 
 import { supabase } from "@/integrations/supabase/client",;
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes",;
-;
+
 export const quoteRequestService = {;
   // Get all quote requests (for admin);
   getAll:async () => {;
@@ -14,15 +14,12 @@ export const quoteRequestService = {;
         );
       `);
       .order('created_at', { ascending:false }),;
-    ;
     if (error) throw error,;
-    ;
     // Format the data to include talent_name;
-    return data.map((item:any) => ({;
+    return data.map(item:any) => ({;
       ...item,;
-      talent_name:item.talent?.display_name || 'Unknown Talent'})) as QuoteRequest[],;
+      talent_name:item.talent?.display_name || 'Unknown Talent'}) as QuoteRequest[],;
   },;
-  ;
   // Get quote requests for a specific talent;
   getByTalentId:async (talentId:string) => {;
     const { data, error } = await supabase;
@@ -30,11 +27,9 @@ export const quoteRequestService = {;
       .select('*');
       .eq('talent_id', talentId);
       .order('created_at', { ascending:false }),;
-    ;
     if (error) throw error,;
     return data as QuoteRequest[],;
   },;
-  ;
   // Get a single quote request by id;
   getById:async (id:string) => {;
     const { data, error } = await supabase;
@@ -47,46 +42,38 @@ export const quoteRequestService = {;
       `);
       .eq('id', id);
       .single(),;
-    ;
     if (error) throw error,;
-    ;
     return {;
       ...data,;
       talent_name:data.talent?.display_name || 'Unknown Talent'} as QuoteRequest,;
   },;
-  ;
   // Update quote request status;
   updateStatus:async (id:string, status:QuoteStatus) => {;
     const updates:any = { status },;
-    ;
     // If marking as responded, set replied_at;
-    if (status === 'responded') {;
+    if (status = = 'responded') {;
       updates.replied_at = new Date().toISOString(),;
     }
     ;
     // If marking as in_review and viewed_at is null, set viewed_at;
-    if (status === 'in_review') {;
+    if (status = = 'in_review') {;
       const { data } = await supabase;
         .from('quote_requests');
         .select('viewed_at');
         .eq('id', id);
         .single(),;
-      ;
       if (!data.viewed_at) {;
         updates.viewed_at = new Date().toISOString(),;
       }
-    }
     ;
     const { data, error } = await supabase;
       .from('quote_requests');
       .update(updates);
       .eq('id', id);
       .select(),;
-    ;
     if (error) throw error,;
     return data[0] as QuoteRequest,;
   },;
-  ;
   // Archive/Unarchive a quote request;
   toggleArchive:async (id:string, isArchived:boolean) => {;
     const { data, error } = await supabase;
@@ -94,64 +81,59 @@ export const quoteRequestService = {;
       .update({ is_archived:isArchived });
       .eq('id', id);
       .select(),;
-    ;
     if (error) throw error,;
     return data[0] as QuoteRequest,;
   },;
-  ;
   // Delete a quote request;
   delete:async (id:string) => {;
     const { error } = await supabase;
       .from('quote_requests');
       .delete();
       .eq('id', id),;
-    ;
     if (error) throw error,;
     return true,;  }
-},;
+,;
  //Get all quote requests (for admin) getAll: async () => {
   const {
   data, error 
-}= await supabase .from ('quote requests') .select (`*;
+= await supabase .from ('quote requests') .select (`*;
 talent:talent id (display name) `) if (error) throw error;
-//Format the data to include talent name 
-};
-//Get quote requests for a specific talent getByTalentId: async (talentId: string) => {
+/Format the data to include talent name 
+;
+/Get quote requests for a specific talent getByTalentId: async (talentId: string) => {
   const {
   data, error 
-}= await supabase .from ('quote requests') .select ('*') .eq ('talent id', talentId) if (error) throw error;
+= await supabase .from ('quote requests') .select ('*') .eq ('talent id', talentId) if (error) throw error;
 return data as QuoteRequest[] 
-};
-//Get a single quote request by id getById: async (id: string) => {
+;
+/Get a single quote request by id getById: async (id: string) => {
   const {
   data, error 
-}= await supabase .from ('quote requests') .select (`*;
+= await supabase .from ('quote requests') .select (`*;
 talent: talent id (display name) `) .eq ('id', id) .single ();
 if (error) throw error;
-//If marking as in review and viewed at is null, set viewed at if (status === 'in review') {
+/If marking as in review and viewed at is null, set viewed at if (status = = 'in review') {
   const {
   data 
-}= await supabase .from ('quote requests') .select ('viewed at') .eq ('id', id) .single ();
-}const {
+= await supabase .from ('quote requests') .select ('viewed at') .eq ('id', id) .single ();
+const {
   data, error 
-}= await supabase .from ('quote requests') .update (updates) .eq ('id', id) .select ();
+= await supabase .from ('quote requests') .update (updates) .eq ('id', id) .select ();
 if (error) throw error;
 return data[0] as QuoteRequest 
-};
-//Archive/Unarchive a quote request toggleArchive: async (id: string, isArchived: boolean) => {
+;
+/Archive/Unarchive a quote request toggleArchive: async (id: string, isArchived: boolean) => {
   const {
   data, error 
-}= await supabase .from ('quote requests') .update ({
+= await supabase .from ('quote requests') .update ({
   is archived: isArchived 
-}) .eq ('id', id) .select ();
+) .eq ('id', id) .select ();
 if (error) throw error;
 return data[0] as QuoteRequest 
-};
-// Delete a quote request delete: async (id: string) => {
+;
+/ Delete a quote request delete: async (id: string) => {
   const {
   error 
-}= await supabase .from ('quote requests') .delete () .eq ('id', id);
+= await supabase .from ('quote requests') .delete () .eq ('id', id);
 if (error) throw error;
 return true;
-}
-};

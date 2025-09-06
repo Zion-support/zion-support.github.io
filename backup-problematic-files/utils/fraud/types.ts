@@ -15,4 +15,3 @@ export interface StoredFraudRecord extends FraudEvent {
   gpt?: GptClassification,
   autoHidden: boolean,
   status: FraudReviewStatus
-}

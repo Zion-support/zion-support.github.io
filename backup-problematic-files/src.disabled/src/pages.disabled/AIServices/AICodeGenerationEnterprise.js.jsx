@@ -7,6 +7,5 @@ const AICodeGenerationEnterprise.js = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default AICodeGenerationEnterprise.js;

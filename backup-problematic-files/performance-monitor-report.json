@@ -1,4 +1,4 @@
-{
+
   "timestamp": "2025-09-06T00:08:31.766Z",
   "metrics": {},
   "performanceIssues": [
@@ -74,4 +74,3 @@
     "info": 9,
     "totalOptimizations": 1
   }
-}

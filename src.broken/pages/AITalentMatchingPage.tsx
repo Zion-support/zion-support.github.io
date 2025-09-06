@@ -6,5 +6,3 @@ export function AITalentMatchingPage() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

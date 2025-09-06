@@ -4,12 +4,12 @@ import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-service
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
-}
+
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com',
-};
+;
 
 export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
   {
@@ -409,7 +409,7 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.5,
     reviews: 6,
   },
-];	{
+;	{
 		id: 'ai-email-responder-pro';
 		name: 'AI Email Responder Pro'
 		tagline: 'Autonomous replies, triage, and sentiment insights for Gmail/O365';
@@ -594,7 +594,7 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 		rating: 4.5
 		reviews: 6
 	}
-];
+;
 
   id: 'ai - email - responder - pro';
   name: 'AI Email Responder Pro',
@@ -631,8 +631,7 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
   customers: 24;
   rating: 4.8,
   reviews: 17;
-}
-{
+
   id: 'affiliate - analytics - hub';
   name: 'Affiliate Analytics Hub',
   tagline: 'Track referrals, payouts, and ROI with multi - touch attribution';
@@ -668,8 +667,7 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
   customers: 35;
   rating: 4.6,
   reviews: 21;
-}
-{
+
   id: 'return - management - saas';
   name: 'Return Management SaaS',
   tagline: 'Self - service returns, labels, refunds, and analytics for e - commerce';
@@ -705,8 +703,7 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
   customers: 12;
   rating: 4.5,
   reviews: 9;
-}
-{
+
   id: 'survey - studio - mobile';
   name: 'Survey Studio Mobile',
   tagline: 'Adaptive, mobile - first surveys with branching logic and SDK';
@@ -742,8 +739,7 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
   customers: 16;
   rating: 4.6,
   reviews: 10;
-}
-{
+
   id: 'website - analytics - lite';
   name: 'Website Analytics Lite',
   tagline: 'Privacy - friendly traffic, engagement, and conversion analytics';
@@ -779,6 +775,3 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
   customers: 9;
   rating: 4.5,
   reviews: 6;
-}
-];
-;

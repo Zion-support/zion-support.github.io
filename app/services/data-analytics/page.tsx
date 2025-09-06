@@ -1,7 +1,7 @@
 export const metadata = { 
   title: 'Data Analytics Services | Zion Tech Group',
   description: 'Advanced data analytics solutions including business intelligence, predictive modeling, data visualization, and real-time analytics. Transform data into actionable insights.'
-}; 
+; 
 
 export default function DataAnalyticsPage() { 
   return ( 
@@ -312,30 +312,28 @@ export default function DataAnalyticsPage() {
       </div>
     </div>
   );
-}
 
 function AnalyticsServiceCategory({ title, icon, description, services }: {
   title: string;
   icon: string;
   description: string;
   services: string[];
-}) {
+) {
   return (
     <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-200">
       <div className="text-3xl mb-4">{icon}</div>
       <h3 className="text-xl font-bold text-gray-900 mb-2">{title}</h3>
       <p className="text-gray-600 mb-4">{description}</p>
       <ul className="space-y-2">
-        {services.map((service, index) => (
+        {services.map(service, index) => (
           <li key={index} className="flex items-center text-gray-600">
             <span className="text-indigo-500 mr-2"></span>
             {service}
           </li>
-        ))}
+        )}
       </ul>
     </div>
   );
-}
 
 function AnalyticsSolution({ title, description, features, price, timeline, useCase }: {
   title: string;
@@ -344,7 +342,7 @@ function AnalyticsSolution({ title, description, features, price, timeline, useC
   price: string;
   timeline: string;
   useCase: string;
-}) {
+) {
   return (
     <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
       <h3 className="text-xl font-bold text-gray-900 mb-2">{title}</h3>
@@ -355,12 +353,12 @@ function AnalyticsSolution({ title, description, features, price, timeline, useC
         </span>
       </div>
       <ul className="space-y-1 mb-4">
-        {features.map((feature, index) => (
+        {features.map(feature, index) => (
           <li key={index} className="text-sm text-gray-600 flex items-center">
             <span className="text-green-500 mr-2"></span>
             {feature}
           </li>
-        ))}
+        )}
       </ul>
       <div className="flex justify-between items-center pt-4 border-t border-gray-200">
         <div>
@@ -376,42 +374,39 @@ function AnalyticsSolution({ title, description, features, price, timeline, useC
       </div>
     </div>
   );
-}
 
 function AnalyticsTechnology({ category, technologies }: { category: string; technologies: string[] }) {
   return (
     <div className="bg-white rounded-lg p-6 shadow-md border border-gray-200">
       <h3 className="font-bold text-gray-900 mb-4">{category}</h3>
       <div className="flex flex-wrap gap-2">
-        {technologies.map((tech, index) => (
+        {technologies.map(tech, index) => (
           <span key={index} className="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">
             {tech}
           </span>
-        ))}
+        )}
       </div>
     </div>
   );
-}
 
 function DataSource({ title, description, sources }: {
   title: string;
   description: string;
   sources: string[];
-}) {
+) {
   return (
     <div className="bg-white rounded-lg p-6 shadow-md border border-gray-200">
       <h3 className="font-bold text-gray-900 mb-2">{title}</h3>
       <p className="text-gray-600 mb-4">{description}</p>
       <div className="flex flex-wrap gap-2">
-        {sources.map((source, index) => (
+        {sources.map(source, index) => (
           <span key={index} className="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">
             {source}
           </span>
-        ))}
+        )}
       </div>
     </div>
   );
-}
 
 function AnalyticsPricingPlan({ name, price, duration, features, popular }: {
   name: string;
@@ -419,7 +414,7 @@ function AnalyticsPricingPlan({ name, price, duration, features, popular }: {
   duration: string;
   features: string[];
   popular: boolean;
-}) {
+) {
   return (
     <div className={`bg-white rounded-xl p-8 shadow-lg border-2 ${popular ? 'border-indigo-500' : 'border-gray-200'} relative`}>
       {popular && (
@@ -431,12 +426,12 @@ function AnalyticsPricingPlan({ name, price, duration, features, popular }: {
       <div className="text-3xl font-bold text-indigo-600 mb-1">{price}</div>
       <div className="text-gray-500 mb-6">{duration}</div>
       <ul className="space-y-3">
-        {features.map((feature, index) => (
+        {features.map(feature, index) => (
           <li key={index} className="flex items-center text-gray-600">
             <span className="text-green-500 mr-3"></span>
             {feature}
           </li>
-        ))}
+        )}
       </ul>
       <a
         href="tel:+13024640950"
@@ -450,7 +445,6 @@ function AnalyticsPricingPlan({ name, price, duration, features, popular }: {
       </a>
     </div>
   );
-}
 
 function MetricCard({ metric, description, icon }: { metric: string; description: string; icon: string }) {
   return (
@@ -460,4 +454,3 @@ function MetricCard({ metric, description, icon }: { metric: string; description
       <div className="text-gray-600">{description}</div>
     </div>
   );
-}

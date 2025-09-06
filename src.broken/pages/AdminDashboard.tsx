@@ -6,5 +6,3 @@ export function AdminDashboard() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

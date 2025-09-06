@@ -1,4 +1,4 @@
-:src.broken/pages/Blog.js
+src.broken/pages/Blog.js
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { GradientHeading } from "@/components/GradientHeading";
@@ -10,7 +10,7 @@ import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@
 import { generateRandomBlogPost } from "@/utils/generateRandomBlogPost";
 import { BLOG_POSTS } from "@/data/blog-posts";
 import { Search } from "lucide-react";
-// Categories for filtering
+/ Categories for filtering
 const CATEGORIES = [
     "All Categories",
     "Trends",
@@ -19,23 +19,23 @@ const CATEGORIES = [
     "Ethics",
     "Recruitment",
     "Infrastructure"
-];
+;
 export default function Blog() {
     const [searchQuery, setSearchQuery] = useState("");
     const [selectedCategory, setSelectedCategory] = useState("All Categories");
     const [posts, setPosts] = useState([...BLOG_POSTS]);
-    useEffect(() => {
-        const interval = setInterval(() => {
+    useEffect() => {
+        const interval = setInterval() => {
             setPosts(prev => [...prev, generateRandomBlogPost()]);
         }, 120000); // every 2 minutes
         return () => clearInterval(interval);
     }, []);
     // Filter blog posts based on search and category
     const filteredPosts = posts.filter(post => {
-        const matchesSearch = post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-        const matchesCategory = selectedCategory === "All Categories" || post.category === selectedCategory;
+        const matchesSearch = post.title.toLowerCase().includes(searchQuery.toLowerCase() ||
+            post.excerpt.toLowerCase().includes(searchQuery.toLowerCase() ||
+            post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase());
+        const matchesCategory = selectedCategory = = "All Categories" || post.category = = selectedCategory;
         return matchesSearch && matchesCategory;
     });
     // Get featured posts
@@ -50,7 +50,7 @@ export default function Blog() {
               Expert perspectives on artificial intelligence, tech innovation, and digital transformation
             </p>
           </div>
-          
+
           {/* Featured Post Section - Only show if there are featured posts */}
           {featuredPosts.length > 0 && (<div className="mb-16">
               <h2 className="text-2xl font-bold text-white mb-6">Featured Article</h2>
@@ -59,7 +59,7 @@ export default function Blog() {
                   <img src={featuredPosts[0].featuredImage} alt={featuredPosts[0].title} className="object-cover w-full h-full hover:scale-105 transition-transform duration-300" onError={(e) => {
                 const target = e.currentTarget;
                 target.src = "/images/blog-placeholder.svg";
-            }}/>
+            }/>
                 </div>
                 <div className="flex flex-col justify-center">
                   <span className="text-sm text-zion-cyan bg-zion-blue-dark px-3 py-1 rounded-full inline-block mb-2">
@@ -75,7 +75,7 @@ export default function Blog() {
                     <img src={featuredPosts[0].author.avatarUrl} alt={featuredPosts[0].author.name} className="w-10 h-10 rounded-full mr-3" onError={(e) => {
                 const target = e.currentTarget;
                 target.src = "/images/blog-placeholder.svg";
-            }}/>
+            }/>
                     <div>
                       <p className="text-white font-medium">{featuredPosts[0].author.name}</p>
                       <p className="text-sm text-zion-slate-light">
@@ -91,7 +91,7 @@ export default function Blog() {
                 </div>
               </div>
             </div>)}
-        
+
           {/* Filters and Search */}
           <div className="bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -99,15 +99,15 @@ export default function Blog() {
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate"/>
                 <Input type="text" placeholder="Search articles..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="pl-10 bg-zion-blue border border-zion-blue-light text-white"/>
               </div>
-              
+
               <Select value={selectedCategory} onValueChange={setSelectedCategory}>
                 <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">
                   <SelectValue placeholder="Select Category"/>
                 </SelectTrigger>
                 <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">
-                  {CATEGORIES.map((category) => (<SelectItem key={category} value={category} className="text-white">
+                  {CATEGORIES.map(category) => (<SelectItem key={category} value={category} className="text-white">
                       {category}
-                    </SelectItem>))}
+                    </SelectItem>)}
                 </SelectContent>
               </Select>
             </div>
@@ -154,7 +154,7 @@ export default function Blog() {
                 </div>
             </div>
         </div>
-:src.broken/pages/Blog.js
+src.broken/pages/Blog.js
       </div>
     </>);
     );

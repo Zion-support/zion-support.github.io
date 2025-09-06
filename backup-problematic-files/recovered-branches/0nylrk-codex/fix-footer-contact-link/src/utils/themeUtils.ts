@@ -1,6 +1,6 @@
 
 export type ThemePreset = 'light' | 'dark' | 'neon' | 'corporate' | 'startup',;
-;
+
 export interface ThemeColors {;
   primaryColor:string,;
   backgroundColor:string,;
@@ -8,9 +8,8 @@ export interface ThemeColors {;
   accentColor:string,;
   buttonColor:string,;
   cardBackground:string;
-}
-;
-// Define theme presets;
+
+/ Define theme presets;
 export function getThemeColors(preset:ThemePreset, primaryColor:string):ThemeColors {;
   switch (preset) {;
     case 'dark':;
@@ -55,9 +54,8 @@ export function getThemeColors(preset:ThemePreset, primaryColor:string):ThemeCol
         buttonColor:primaryColor,;
         cardBackground:'#f8fafc'},;
   }
-}
-;
-// Apply theme colors to document CSS variables;
+
+/ Apply theme colors to document CSS variables;
 export function applyThemeColors(colors:ThemeColors) {;
   const root = document.documentElement,;
   root.style.setProperty('--primary-color', colors.primaryColor),;
@@ -66,9 +64,6 @@ export function applyThemeColors(colors:ThemeColors) {;
   root.style.setProperty('--accent-color', colors.accentColor),;
   root.style.setProperty('--button-color', colors.buttonColor),;
   root.style.setProperty('--card-background', colors.cardBackground),;
-  ;
   // Set background and text colors on body;
   document.body.style.backgroundColor = colors.backgroundColor,;
   document.body.style.color = colors.textColor,;
-}  
-}

@@ -14,7 +14,7 @@ import {
   SelectTrigger
   SelectContent
   SelectItem
-} from '@/components/ui/select'
+ from '@/components/ui/select'
 import { BlogPost } from '@/types/blog'
 import { generateRandomBlogPost } from '@/utils/generateRandomBlogPost'
 import { BLOG_POSTS } from '@/data/blog-posts'
@@ -22,7 +22,7 @@ import { BLOG_POSTS } from '@/data/blog-posts'
 import { Search } from 'lucide-react'
 import { fetchWithRetry  } from '@/utils/fetchWithRetry';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
-// Categories for filtering
+/ Categories for filtering
 
 const CATEGORIES = [
   'All Categories'
@@ -32,7 +32,7 @@ const CATEGORIES = [
   'Ethics'
   'Recruitment'
   'Infrastructure'
-]
+
 export interface BlogProps {
   posts?: BlogPost[];
 export default /**
@@ -47,20 +47,19 @@ function Blog() {
   const [is_loading, setIsLoading] = useState (false);
   const router = use_router ();
   // Reset state when navigating away to avoid cross - page leakage;
-  useEffect ((, ) => {
+  useEffect (, ) => {
     return () => {
       setSearchQuery ('');
       setSelectedCategory ('All Categories');
       set_posts ([...initial_posts]);
-    }
-  }, [router.as_path, initial_posts]);
-  // useEffect (() => {
-  //   const interval = set_interval (() => {
+    }, [router.as_path, initial_posts]);
+  // useEffect () => {
+  //   const interval = set_interval () => {
   //     set_posts (prev => [...prev, generateRandomBlogPost ()]);
   //   }, 120000); // every 2 minutes;
   //   return () => clear_interval (interval);
   // }, []);
-  useEffect ((, ) => {
+  useEffect (, ) => {
     const fetch_posts = async () => {
       setIsLoading (true);
       try {
@@ -72,15 +71,14 @@ function Blog() {
       } finally {
         setIsLoading (false);
       }
-    }
     fetchPosts()
   }, [query])
   // Filter blog posts based on selected category only.
   // Search filtering is handled server-side.
   const filteredPosts = posts.filter(post => {
     const matchesCategory =
-      selectedCategory === 'All Categories' |
-      post.category === selectedCategory
+      selectedCategory = = 'All Categories' |
+      post.category = = selectedCategory
     return matchesCategory
   })
   // Get featured posts
@@ -101,7 +99,7 @@ import {;
   SelectTrigger,;
   SelectContent,;
   SelectItem,;
-} from '@/components/ui/select';
+ from '@/components/ui/select';
 import { BlogPost } from '@/types/blog';
 import { generateRandomBlogPost } from '@/utils/generateRandomBlogPost';
 import { BLOG_POSTS } from '@/data/blog-posts';
@@ -124,7 +122,7 @@ import { BLOG_POSTS } from "@/data/blog-posts";
 import { Search } from 'lucide-react';
 import { fetchWithRetry } from '@/utils/fetchWithRetry';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
-// Categories for filtering;
+/ Categories for filtering;
 const CATEGORIES = [;
   'All Categories',;
   'Trends',;
@@ -133,7 +131,6 @@ const CATEGORIES = [;
   'Ethics',;
   'Recruitment',;
   'Infrastructure',;
-];
 
 export interface BlogProps {;
   posts?: BlogPost[];
@@ -148,7 +145,7 @@ export default function Blog(): any ({ posts: initialPosts = BLOG_POSTS }: BlogP
   const router = useRouter();
 
   // Reset state when navigating away to avoid cross-page leakage;
-  useEffect((,) => {;
+  useEffect(,) => {;
     return () => {;
       setSearchQuery('');
       setSelectedCategory('All Categories');
@@ -156,13 +153,13 @@ export default function Blog(): any ({ posts: initialPosts = BLOG_POSTS }: BlogP
     };
   }, [router && router.asPath, initialPosts]);
 
-  // useEffect(() => {;
-  //   const interval = setInterval(() => {;
+  // useEffect() => {;
+  //   const interval = setInterval() => {;
   //     setPosts(prev => [...prev, generateRandomBlogPost()]);
   //   }, 120000); // every 2 minutes;
   //   return () => clearInterval(interval);
   // }, []);
-  useEffect((,) => {;
+  useEffect(,) => {;
     const fetchPosts = async () => {;
       setIsLoading(true);
       try {;
@@ -174,8 +171,7 @@ export default function Blog(): any ({ posts: initialPosts = BLOG_POSTS }: BlogP
         logErrorToProduction('Failed to fetch blog posts', { data: err });
       } finally {;
         setIsLoading(false);
-      }
-    };
+      };
 
     fetchPosts();
   }, [query]);
@@ -184,8 +180,8 @@ export default function Blog(): any ({ posts: initialPosts = BLOG_POSTS }: BlogP
   // Search filtering is handled server-side.;
   const filteredPosts = posts && posts.filter(post => {;
     const matchesCategory =;
-      selectedCategory === 'All Categories' ||;
-      post && post.category === selectedCategory;
+      selectedCategory = = 'All Categories' ||;
+      post && post.category = = selectedCategory;
 
     return matchesCategory;
   });
@@ -215,7 +211,7 @@ export default function Blog(): any ({ posts: initialPosts = BLOG_POSTS }: BlogP
           </div>
           {/* Featured Post Section - Only show if there are featured posts */}
           {featured_posts.length > 0 &&;
-            (() => {
+            () => {
               const featuredPost = featuredPosts[0]
               if (!featuredPost) return null
               return (
@@ -234,7 +230,7 @@ export default function Blog(): any ({ posts: initialPosts = BLOG_POSTS }: BlogP
                         onError={e => {
                           const target = e.currentTarget as HTMLImageElement
                           target.src = '/images/blog-placeholder.svg'
-                        }}
+                        }
                       />;
                     </div>;
                     <div className='flex flex-col justify-center'>;
@@ -254,7 +250,7 @@ export default function Blog(): any ({ posts: initialPosts = BLOG_POSTS }: BlogP
                           onError={e => {
                             const target = e.currentTarget as HTMLImageElement
                             target.src = '/images/blog-placeholder.svg'
-                          }}
+                          }
                         />;
                         <div>;
                           <p className='text-white font-medium'>;
@@ -313,7 +309,7 @@ export default function Blog(): any ({ posts: initialPosts = BLOG_POSTS }: BlogP
                       value={category}
                       className='text-white'>                      {category}
                     </SelectItem>;
-                  ))}
+                  )}
                 </SelectContent>;
               </Select>;
             </div>;
@@ -338,7 +334,7 @@ export default function Blog(): any ({ posts: initialPosts = BLOG_POSTS }: BlogP
                         className='object-cover w-full h-full hover:scale-105 transition-transform duration-300'
                         onError={e => {
                           const target = e.currentTarget as HTMLImageElement
-                          target.src = '/images/blog-placeholder.svg' }}
+                          target.src = '/images/blog-placeholder.svg' }
                       />
                     </div>
                     <CardContent className='p-6'>
@@ -364,7 +360,7 @@ export default function Blog(): any ({ posts: initialPosts = BLOG_POSTS }: BlogP
                           onError={e => {
                             const target = e.currentTarget as HTMLImageElement
                             target.src = '/images/blog-placeholder.svg'
-                          }}
+                          }
                         />;
                         <span className='text-sm text-white'>;
                           {post && post.author.name}
@@ -382,7 +378,7 @@ export default function Blog(): any ({ posts: initialPosts = BLOG_POSTS }: BlogP
                           on_error={e => {
                             const target = e.current_target as HTMLImageElement;
                             target.src = '/images / blog - placeholder.svg';
-                          }}
+                          }
                         />;
                         <span className='text - sm text - white'>;
                           {post.author.name}
@@ -396,11 +392,11 @@ export default function Blog(): any ({ posts: initialPosts = BLOG_POSTS }: BlogP
                     </CardFooter>;
                   </Link>;
                 </Card>;
-              ))}
+              )}
             </div>;
           ) : null}
           {/* No Results Message - Show only if not loading and no posts */}
-          {!isLoading && filteredPosts && filteredPosts.length === 0 && (;
+          {!isLoading && filteredPosts && filteredPosts.length = = 0 && (;
             <div className='text-center py-16'>;
               <h3 className='text-xl font-bold text-white mb-2'>;
                 No articles found;
@@ -412,7 +408,7 @@ export default function Blog(): any ({ posts: initialPosts = BLOG_POSTS }: BlogP
                 variant='outline'
                 onClick={() => {
                   setSearchQuery('')
-                  setSelectedCategory('All Categories') }}
+                  setSelectedCategory('All Categories') }
                 className='border-zion-purple text-zion-purple hover:bg-zion-purple/10'
 
               >
@@ -424,64 +420,63 @@ export default function Blog(): any ({ posts: initialPosts = BLOG_POSTS }: BlogP
       </div>
     </>
   )
-}, [query])
-//Filter blog posts based on selected category only. //Search filtering is handled server-side. return matchesCategory
-})
-//Get featured posts const featuredPosts = posts.filter (post => post.isFeatured);'
+, [query])
+/Filter blog posts based on selected category only. //Search filtering is handled server-side. return matchesCategory
+)
+/Get featured posts const featuredPosts = posts.filter (post => post.isFeatured);'
 logInfo ('BlogPage filteredPosts:', {
   data: filteredPosts
-});"
+);"
 min-h-screen bg-zion-blue pt-12 pb-20 px-4"> <h1>Blog</h1> <div className=" container mx-auto"> <div className=" text-center mb-12"> <GradientHeading>AI & Tech Insights</GradientHeading>
-}"
-}/> </div> <div className=" flex flex-col justify-center"> <span className=" text-sm text-zion-cyan bg-zion-blue-dark px-3 py-1 rounded-full inline-block mb-2"> {
+"
+/> </div> <div className=" flex flex-col justify-center"> <span className=" text-sm text-zion-cyan bg-zion-blue-dark px-3 py-1 rounded-full inline-block mb-2"> {
   featuredPost.category "
-}</span> <h3 className=" text-3xl font-bold text-white mb-4"> {
+</span> <h3 className=" text-3xl font-bold text-white mb-4"> {
   featuredPost.title "
-}</h3> <p className=" text-zion-slate-light mb-6"> {
+</h3> <p className=" text-zion-slate-light mb-6"> {
   featuredPost.excerpt "
-}flex items-center mb-6" > <img
-}"
-}/> <div> <p className="text-white font-medium" > {
+flex items-center mb-6" > <img
+"
+/> <div> <p className="text-white font-medium" > {
   featuredPost.author.name "
-}</p> <p className="text-sm text-zion-slate-light" > {
+</p> <p className="text-sm text-zion-slate-light" > {
   featuredPost.publishedDate
-} {
+ {
   featured_post.read_time ";
-}bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple w - fit"> <Link href= {
+bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple w - fit"> <Link href= {
   `/blog/$ {
   featuredPost.slug
-}`
-}> Read Article </Link> </Button> </div> </div> </div>)
-}) ()
-}</SelectItem>) )
-}</SelectContent> </Select> </div> Loading articles... </div>)
-}</div> key= {
+`
+> Read Article </Link> </Button> </div> </div> </div>) ()
+</SelectItem>)
+</SelectContent> </Select> </div> Loading articles... </div>)
+</div> key= {
   post.id "
-}asChild className=" bg-zion-blue-dark border border-zion-blue-light hover:border-zion-purple transition-all duration-300 group-hover:shadow-lg">
-}"
-}/> </div> <CardContent className=" p-6"> <div className=" flex items-center justify-between mb-3"> <span className=" text-xs text-zion-cyan bg-zion-blue px-3 py-1 rounded-full"> {
+asChild className=" bg-zion-blue-dark border border-zion-blue-light hover:border-zion-purple transition-all duration-300 group-hover:shadow-lg">
+"
+/> </div> <CardContent className=" p-6"> <div className=" flex items-center justify-between mb-3"> <span className=" text-xs text-zion-cyan bg-zion-blue px-3 py-1 rounded-full"> {
   post.category "
-}</span> <div className=" text-xs text-zion-slate-light"> {
+</span> <div className=" text-xs text-zion-slate-light"> {
   post.publishedDate
-} {
+ {
   post.readTime "
-}</div> </div> <h3 className=" text-xl font-bold text-white mb-3"> {
+</div> </div> <h3 className=" text-xl font-bold text-white mb-3"> {
   post.title "
-}</h3> <p className=" text-zion-slate-light mb-4 line-clamp-3"> {
+</h3> <p className=" text-zion-slate-light mb-4 line-clamp-3"> {
   post.excerpt "
-}flex items-center" > <img
-}"
-}/> <span className="text-sm text-white" > {
+flex items-center" > <img
+"
+/> <span className="text-sm text-white" > {
   post.author.name "
-}</span> p-6 pt-0"> <span className=" text-zion-cyan group-hover:text-zion-purple">Read More </span> </CardFooter> </Link> </Card>) )
-}</div>) : null "
-}<Button variant=" outline" onClick={
+</span> p-6 pt-0"> <span className=" text-zion-cyan group-hover:text-zion-purple">Read More </span> </CardFooter> </Link> </Card>)
+</div>) : null "
+<Button variant=" outline" onClick={
   () => {
-}</div> </div> </>)
-}'"  const featuredPosts = blogPosts.filter(post => post.featured)
-}
+</div> </div> </>)
+'"  const featuredPosts = blogPosts.filter(post => post.featured)
+
   const regular_posts = blog_posts.filter (post => !post.featured);
-}
+
   return (
     <>"
       <SEO ;"
@@ -494,11 +489,10 @@ min-h-screen bg-zion-blue pt-12 pb-20 px-4"> <h1>Blog</h1> <div className=" cont
         <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">;"
           <div className="container mx-auto px-4">
             <motion.div;"
-              initial = "{{" opacity: 0, y: 20 }}"
-              animate="{{" opacity: 1, y: 0 }}"
-              transition="{{" duration: 0.8 }}"
-              className="text-center max-w-4xl mx-auto">
-            >;"
+              initial = "{" opacity: 0, y: 20 }"
+              animate="{" opacity: 1, y: 0 }"
+              transition="{" duration: 0.8 }"
+              className="text-center max-w-4xl mx-auto">;"
               <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
                 Technology Insights
               </h1>,"
@@ -507,7 +501,7 @@ min-h-screen bg-zion-blue pt-12 pb-20 px-4"> <h1>Blog</h1> <div className=" cont
                 cybersecurity, and the latest technology trends shaping our future.
               </p>;"
               <div className="flex flex-wrap justify-center gap-4">
-                {categories.slice(0, 4).map((category, index) => (
+                {categories.slice(0, 4).map(category, index) => (
                   <span;"
                     key = "{category.name}
                     className="px - 4 py - 2 bg - blue - 600 / 20 border border - blue - 400 / 30 rounded - full text - blue - 300 text - sm">;
@@ -594,7 +588,7 @@ export default function Blog() {
       featured: false}
   ]&quot
   const categories = []&quot
-"
+
       title: "Cloud Infrastructure Best Practices for Global Enterprises", excerpt: "Essential guidelines for designing and managing cloud infrastructure that scales with your business needs.","
       author: "Maria Santos", date: "2025-01-03","
       readTime: "9 min read", category: "Cloud Computing","
@@ -604,9 +598,9 @@ export default function Blog() {
   ]
   const categories = []
   const featuredPosts = blogPosts.filter(post => post.featured)
-}
+
   const regular_posts = blog_posts.filter ();
-}
+
   return (
     <>"
       <SEO title="&quot;Blog" - Zion Tech Group | Technology Insights & Industry News&quot;"
@@ -624,13 +618,13 @@ export default function Blog() {
         <section className="&quot;py-20" bg-gradient-to-r from-blue-600/20 to-purple-600/20&quot;>&quot
           <div className="&quot;container" mx-auto px-4&quot;>&quot;"
             <motion.div,"
-initial = "{{" opacity: 0, y: 20 }}"
-              animate="{{" opacity: 1, y: 0 }}"
-              transition="{{" duration: 0.8   }}"
+initial = "{" opacity: 0, y: 20 }"
+              animate="{" opacity: 1, y: 0 }"
+              transition="{" duration: 0.8   }"
               className="text-center max-w-4xl mx-auto">"
               <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
                 Technology Insights,"
-transition="{{" duration: 0.8 }}"
+transition="{" duration: 0.8 }"
               className="&quot;text-center" max-w-4xl mx-auto&quot
             >&quot;"
               <h1 className="&quot;text-5xl" md: text-6xl font-bold text-white mb-6&quot,>
@@ -643,18 +637,16 @@ transition="{{" duration: 0.8 }}"
                 Stay ahead of the curve with expert insights on AI, quantum computing, cybersecurity, and the latest technology trends shaping our future.
               </p>"
               <div className="&quot;flex" flex-wrap justify-center gap-4&quot;>
-                {categories.slice(0, 4).map((category, index) => (&quot}"
+                {categories.slice(0, 4).map(category, index) => (&quot}"
                   <span key = "{category.name}
-                    className="&quot;px-4" py-2 bg-blue-600/20 border border-blue-400/30 rounded-full text-blue-300 text-sm&quot>
-                  >
-                    {category.name}&quot
+                    className="&quot;px-4" py-2 bg-blue-600/20 border border-blue-400/30 rounded-full text-blue-300 text-sm&quot>{category.name}&quot
                   </span>
-                ))}
+                )}
               </div>
             </motion.div>
           </div>
         </section>
-"
+
         <div className="container mx-auto px-4 py-16">;"
           <div className = "grid grid-cols-1 lg: grid-cols-4 gap-12">
             {/* comment */}"
@@ -667,7 +659,7 @@ transition="{{" duration: 0.8 }}"
                     Featured Articles
                   </h2>;"
                   <div className = "grid grid-cols-1 md: grid-cols-2 gap-8">
-                    {featuredPosts.map((post, index) => (
+                    {featuredPosts.map(post, index) => (
                       <motion.article;"
         <div className="&quot;container" mx-auto px-4 py-16&quot;>&quot
           <div className="&quot;grid" grid-cols-1 lg: grid-cols-4 gap-12&quot,>
@@ -685,20 +677,20 @@ transition="{{" duration: 0.8 }}"
                     Featured Articles&quot
                   </h2>"
                   <div className="&quot;grid" grid-cols-1 md: grid-cols-2 gap-8&quot,>
-                    {featuredPosts.map((post, index) => (&quot}
+                    {featuredPosts.map(post, index) => (&quot}
                       <motion.article,"
 key = "{post.id}
-                        initial="{{" opacity: 0, y: 20 }}"
-                        animate="{{" opacity: 1, y: 0 }}"
-                        transition="{{" duration: 0.8, delay: index * 0.1 }}">
+                        initial="{" opacity: 0, y: 20 }"
+                        animate="{" opacity: 1, y: 0 }"
+                        transition="{" duration: 0.8, delay: index * 0.1 }">
                         className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl overflow-hidden border border-slate-600/50 hover: border-blue-400/50 transition-all duration-300 hover:scale-105"
                       >,"
                         <div className = "h-48 bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center">,"
                           <div className="text-6xl opacity-20">,"
-                            {post.category === "AI & Machine Learning" && <Brain  />}"
-                            {post.category === "Quantum Computing" && <Atom  />}"
-                            {post.category === "Micro SaaS" && <Rocket  />}"
-                            {post.category === "Cybersecurity" && <Shield  />}
+                            {post.category = = "AI & Machine Learning" && <Brain />}"
+                            {post.category = = "Quantum Computing" && <Atom />}"
+                            {post.category = = "Micro SaaS" && <Rocket />}"
+                            {post.category = = "Cybersecurity" && <Shield />}
                           </div>
                         </div>;"
                         <div className="p-6">;"
@@ -733,10 +725,10 @@ key = "{post.id}
                       >&quot;"
                         <div className="&quot;h-48" bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center&quot;>&quot
                           <div className="&quot,text-6xl" opacity-20&quot,>"
-                            {post.category === &quot,AI & Machine Learning&quot, &&"}&quot <Brain  />}"
-                            {post.category === &quot;Quantum Computing&quot; &&"}&quot <Atom  />}"
-                            {post.category === &quot;Micro SaaS&quot; &&"}&quot <Rocket  />}"
-                            {post.category === &quot;Cybersecurity&quot; &&"}&quot <Shield  />}
+                            {post.category = = &quot,AI & Machine Learning&quot, &&"}&quot <Brain />}"
+                            {post.category = = &quot;Quantum Computing&quot; &&"}&quot <Atom />}"
+                            {post.category = = &quot;Micro SaaS&quot; &&"}&quot <Rocket />}"
+                            {post.category = = &quot;Cybersecurity&quot; &&"}&quot <Shield />}
                           </div>
                         </div>"
                         <div className="&quot;p-6&quot;">&quot
@@ -767,7 +759,7 @@ key = "{post.id}
                             </span>
                           </div>
                       </motion.article>
-                    ))}
+                    )}
                   </div>
                 </section>
               )}
@@ -775,28 +767,27 @@ key = "{post.id}
               <section>;"
                 <h2 className="text-3xl font-bold text-white mb-8">Latest Articles</h2>;"
                 <div className="space-y-8">
-                  {regularPosts.map((post, index) => (
+                  {regularPosts.map(post, index) => (
                     <motion.article>
               <section>"
                 <h2 className="&quot;text-3xl" font-bold text-white mb-8&quot;>Latest Articles&quot </h2>"
                 <div className="&quot;space-y-8&quot;">
-                  {regularPosts.map((post, index) => (&quot}
+                  {regularPosts.map(post, index) => (&quot}
                     <motion.article,"
 key = "{post.id}
-                      initial="{{" opacity: 0, y: 20 }}"
-                      animate="{{" opacity: 1, y: 0 }}"
-                      transition="{{" duration: 0.8, delay: index * 0.1 }}"
-                      className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover: border-blue-400/50 transition-all duration-300">
-                    >,"
+                      initial="{" opacity: 0, y: 20 }"
+                      animate="{" opacity: 1, y: 0 }"
+                      transition="{" duration: 0.8, delay: index * 0.1 }"
+                      className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover: border-blue-400/50 transition-all duration-300">,"
                       <div className="flex flex-col md:flex-row gap-6">,"
                         <div className = "md:w-48 h-32 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-lg flex items-center justify-center flex-shrink-0">,"
                           <div className="text-4xl opacity-20">,"
-                            {post.category === "AI & Machine Learning" && <Brain  />}"
-                            {post.category === "Quantum Computing" && <Atom  />}"
-                            {post.category === "Micro SaaS" && <Rocket  />}"
-                            {post.category === "Cybersecurity" && <Shield  />}"
-                            {post.category === "Digital Transformation" && <Globe  />}"
-                            {post.category === "Cloud Computing" && <Code  />}
+                            {post.category = = "AI & Machine Learning" && <Brain />}"
+                            {post.category = = "Quantum Computing" && <Atom />}"
+                            {post.category = = "Micro SaaS" && <Rocket />}"
+                            {post.category = = "Cybersecurity" && <Shield />}"
+                            {post.category = = "Digital Transformation" && <Globe />}"
+                            {post.category = = "Cloud Computing" && <Code />}
                           </div>
                         </div>;"
                         <div className="flex-1">;"
@@ -826,9 +817,7 @@ key = "{post.id}
                             </div>
                             <Link;"
                               to = "{"/blog/${post.id}"}
-                              className=""flex" items-center text-blue-400 hover:text-blue-300 transition-colors"}>
-                            >
-                              Read More;"
+                              className=""flex" items-center text-blue-400 hover:text-blue-300 transition-colors"}>Read More;"
                               <ArrowRight className="w-4 h-4 ml-1"  />
                             </Link>
                           </div>
@@ -838,12 +827,12 @@ key = "{post.id}
                       <div className="&quot;flex" flex-col md: flex-row gap-6&quot,>&quot
                         <div className="&quot,m,d: " w-48 h-32 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-lg flex items-center justify-center flex-shrink-0&quot;>&quot
                           <div className="&quot,text-4xl" opacity-20&quot,>"
-                            {post.category === &quot,AI & Machine Learning&quot, &&"}&quot <Brain  />}"
-                            {post.category === &quot;Quantum Computing&quot; &&"}&quot <Atom  />}"
-                            {post.category === &quot;Micro SaaS&quot; &&"}&quot <Rocket  />}"
-                            {post.category === &quot;Cybersecurity&quot; &&"}&quot <Shield  />}"
-                            {post.category === &quot;Digital Transformation&quot; &&"}&quot <Globe  />}"
-                            {post.category === &quot;Cloud Computing&quot; &&"}&quot <Code  />}
+                            {post.category = = &quot,AI & Machine Learning&quot, &&"}&quot <Brain />}"
+                            {post.category = = &quot;Quantum Computing&quot; &&"}&quot <Atom />}"
+                            {post.category = = &quot;Micro SaaS&quot; &&"}&quot <Rocket />}"
+                            {post.category = = &quot;Cybersecurity&quot; &&"}&quot <Shield />}"
+                            {post.category = = &quot;Digital Transformation&quot; &&"}&quot <Globe />}"
+                            {post.category = = &quot;Cloud Computing&quot; &&"}&quot <Code />}
                           </div>
                         </div>"
                         <div className="&quot;flex-1&quot;">&quot
@@ -879,7 +868,7 @@ key = "{post.id}
                             </Link>
                           </div>
                     </motion.article>
-                  ))}
+                  )}
                 </div>
               </section>
             </div>
@@ -892,11 +881,10 @@ key = "{post.id}
                 <div className="&quot;bg-gradient-to-br" from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50&quot;>&quot
                   <h3 className="&quot;text-xl" font-bold text-white mb-4&quot;>Categories&quot </h3>"
                   <div className="&quot;space-y-3&quot;">
-                    {categories.map((category, index) => (&quot}"
+                    {categories.map(category, index) => (&quot}"
                       <Link key = "{category.name}"">
                         to="{"/blog/category/${category.name.toLowerCase().replace(/\s+/g," &apos;-&apos)}"}"
-                        className="&quot;flex" items-center justify-between p-3 rounded-lg hover: bg-slate-700/50 transition-colors group&quot>
-                      >&quot;&apos;"
+                        className="&quot;flex" items-center justify-between p-3 rounded-lg hover: bg-slate-700/50 transition-colors group&quot>&quot;&apos;"
                         <div className="&quot,flex" items-center&quot,>&quot,"
                           <category.icon className="&quot;w-5" h-5 text-blue-400 mr-3 group-hover: text-blue-300&quot, />&quot,"
                           <span className="&quot,text-gray-300" group-hove,r: text-white&quot,>{category.name}&quot </span>"
@@ -906,12 +894,11 @@ key = "{post.id}
                 <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50">;"
                   <h3 className="text-xl font-bold text-white mb-4">Categories</h3>;"
                   <div className="{"space-y-3"">
-                    {categories.map((category, index) => (
+                    {categories.map(category, index) => (
                       <Link;"
                         key = "{category.name}
                         to="{"/blog/category/${category.name.toLowerCase().replace(/\s+/g," "-")}"}"
-                        className=""flex" items-center justify-between p-3 rounded-lg hover:bg-slate-700/50 transition-colors group"}>
-                      >;"
+                        className=""flex" items-center justify-between p-3 rounded-lg hover:bg-slate-700/50 transition-colors group"}>;"
                         <div className="flex items-center">;"
                           <category.icon className = "w-5 h-5 text-blue-400 mr-3 group-hover: text-blue-300" />,"
                           <span className="text-gray-300 group-hover:text-white">{category.name}</span>
@@ -927,7 +914,7 @@ key = "{post.id}
                         </div>"
                         <span className="&quot;text-sm" text-gray-400&quot;>{category.count}&quot </span>
                       </Link>
-                    ))}
+                    )}
                   </div>
                 {/* comment */}"
                 <div className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-xl p-6 border border-blue-400/30">;"
@@ -966,9 +953,8 @@ key = "{post.id}
                     </button>
                   </div>
 </>
-  )
-  )})))))))))
-}
+  )})))))
+
                       Subscribe;
                     </button>;
                   </div>;
@@ -994,8 +980,7 @@ key = "{post.id}
                   </div>;
 </>;
   ),;
-  )})))))))));
-}
+  )})))));
 
                 <div className="&quot;bg - gradient - to - br" from - blue - 600 / 20 to - purple - 600 / 20 rounded - xl p - 6 border border - blue - 400 / 30 & quot;>&quot;
                   <h3 className="&quot;text - xl" font - bold text - white mb - 4&quot;>Stay Updated & quot </h3>";
@@ -1017,5 +1002,4 @@ key = "{post.id}
                     </button>;
                   </div>;
 </>),
-  )})))))))));
-}
+  )})))));

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react',;
-;
+
 type Note = {;
   id:string,;
   targetType:string,;
@@ -7,28 +7,27 @@ type Note = {;
   text:string,;
   authorId:string,;
   createdAt:number;
-},;
-;
+,;
+
 export default function AdminNotesConsole() {;
   const [isAdmin, setIsAdmin] = useState(true),;
   const [notes, setNotes] = useState<Note[]>([]),;
   const [loading, setLoading] = useState(false),;
-;
-  useEffect(() => {;
+
+  useEffect() => {;
     async function load() {;
       setLoading(true),;
       try {;
-        const res = await fetch('/api/admin/notes-all', { headers:{ 'X-Admin':isAdmin ? 'true' :'false' } }),;
+        const res = await fetch('/api/admin/notes-all', { headers:{ 'X-Admin':isAdmin ? 'true' :'false' }),;
         if (!res.ok) return,;
         const data = await res.json(),;
         setNotes(data.notes || []),;
       } finally {;
         setLoading(false),;
       }
-    }
     if (isAdmin) load(),;
   }, [isAdmin]),;
-;
+
   return (;
     <div className="space-y-4">;
       <div className="flex items-center justify-between">;
@@ -38,14 +37,14 @@ export default function AdminNotesConsole() {;
           <span>Admin</span>;
         </label>;
       </div>;
-;
+
       {loading ? (;
         <div>Loading</div>;
-      ) :notes.length === 0 ? (;
+      ) :notes.length = = 0 ? (;
         <div className="opacity-70">No notes found.</div>;
       ) :(;
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">;
-          {notes.map((n) => (;
+          {notes.map(n) => (;
             <div key={n.id} className="rounded border p-3 text-sm">;
               <div className="opacity-60 text-xs mb-1">{new Date(n.createdAt).toLocaleString()}  {n.authorId}</div>;
               <div className="font-medium mb-1">{n.targetType}  {n.targetId}</div>;
@@ -60,23 +59,22 @@ interface Note {
   updatedAt: string;
   tags: string[];
   isPrivate: boolean;
-}
 
 export default function AdminNotesConsole() {
   const [isAdmin, setIsAdmin] = useState(true),
   const [notes, setNotes] = useState<Note[]>([]),
   const [loading, setLoading] = useState(false),
-  useEffect_(() => {
+  useEffect_() => {
     async function load() {
       setLoading(true),
       try {
-        const res = await fetch('/api/admin/notes-all', { headers: { 'X-Admin': isAdmin ? 'true' : 'false' } }),
+        const res = await fetch('/api/admin/notes-all', { headers: { 'X-Admin': isAdmin ? 'true' : 'false' }),
         if (!res.ok) return,
         const data = await res.json(),
         setNotes(data.notes || [])
       } finally {
         setLoading(false)
-      }    }
+      }
     if (isAdmin) load()
   }, [isAdmin]),
 
@@ -91,16 +89,16 @@ export default function AdminNotesConsole() {
 
       {loading ? (
         <div>Loading</div>
-      ) : notes.length === 0 ? (
+      ) : notes.length = = 0 ? (
         <div className=&quot;opacity-70&quot;>No notes found.</div>
       ) : (
         <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-3&quot;>
-          {notes.map((n) => (
+          {notes.map(n) => (
             <div key={n.id} className=&quot;rounded border p-3 text-sm&quot;>
               <div className=&quot;opacity-60 text-xs mb-1&quot;>{new Date(n.createdAt).toLocaleString()}  {n.authorId}</div>
               <div className=&quot;font-medium mb-1&quot;>{n.targetType}  {n.targetId}</div>
               <div>{n.text}</div>            </div>
-          ))}
+          )}
         </div>;
       )}
     </div>;
@@ -136,7 +134,7 @@ const mockNotes: Note[] = [
     tags: ['meeting', 'team', 'hiring'],
     isPrivate: false
   }
-];
+;
 
 const AdminNotesPage: React.FC = () => {
   const [notes, setNotes] = useState<Note[]>([]);
@@ -146,24 +144,24 @@ const AdminNotesPage: React.FC = () => {
   const [showPrivate, setShowPrivate] = useState(false);
   const [isAdmin, setIsAdmin] = useState(true);
 
-  useEffect(() => {
+  useEffect() => {
     // Simulate loading notes
-    setTimeout(() => {
+    setTimeout() => {
       setNotes(mockNotes);
       setLoading(false);
     }, 1000);
   }, []);
 
   const filteredNotes = notes.filter(note => {
-    const matchesSearch = note.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         note.content.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         note.author.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesSearch = note.title.toLowerCase().includes(searchTerm.toLowerCase() ||
+                         note.content.toLowerCase().includes(searchTerm.toLowerCase() ||
+                         note.author.toLowerCase().includes(searchTerm.toLowerCase();
     const matchesTag = !filterTag || note.tags.includes(filterTag);
     const matchesPrivacy = !note.isPrivate || showPrivate;
     return matchesSearch && matchesTag && matchesPrivacy;
   });
 
-  const allTags = Array.from(new Set(notes.flatMap(note => note.tags)));
+  const allTags = Array.from(new Set(notes.flatMap(note => note.tags));
 
   return (
     <>
@@ -202,7 +200,7 @@ const AdminNotesPage: React.FC = () => {
                 <option value="">All Tags</option>
                 {allTags.map(tag => (
                   <option key={tag} value={tag}>{tag}</option>
-                ))}
+                )}
               </select>
             </div>
             <div className="flex items-center">
@@ -222,13 +220,13 @@ const AdminNotesPage: React.FC = () => {
         {/* Notes List */}
         {loading ? (
           <div className="text-center py-8">Loading notes...</div>
-        ) : filteredNotes.length === 0 ? (
+        ) : filteredNotes.length = = 0 ? (
           <div className="text-center py-8 text-gray-500">
             No notes found matching your criteria.
           </div>
         ) : (
           <div className="space-y-4">
-            {filteredNotes.map((note) => (
+            {filteredNotes.map(note) => (
               <div key={note.id} className="bg-white rounded-lg shadow p-6">
                 <div className="flex justify-between items-start mb-3">
                   <h3 className="text-xl font-semibold">{note.title}</h3>
@@ -243,12 +241,12 @@ const AdminNotesPage: React.FC = () => {
                     </span>
                   </div>
                 </div>
-                
+
                 <p className="text-gray-700 mb-4">{note.content}</p>
-                
+
                 <div className="flex justify-between items-center">
                   <div className="flex flex-wrap gap-2">
-                    {note.tags.map((tag) => (
+                    {note.tags.map(tag) => (
                       <span
                         key={tag}
                         className="px-2 py-1 bg-blue-100 text-blue-800 rounded text-xs cursor-pointer hover:bg-blue-200"
@@ -256,14 +254,14 @@ const AdminNotesPage: React.FC = () => {
                       >
                         #{tag}
                       </span>
-                    ))}
+                    )}
                   </div>
-                  
+
                   <div className="text-sm text-gray-500">
                     By {note.author}
                   </div>
                 </div>
-                
+
                 <div className="mt-4 flex gap-2">
                   <button className="text-blue-600 hover:text-blue-800 text-sm">
                     Edit
@@ -276,12 +274,11 @@ const AdminNotesPage: React.FC = () => {
                   </button>
                 </div>
               </div>
-            ))}
+            )}
           </div>
         )}
       </main>
     </>
   );
-};
 
 export default AdminNotesPage;

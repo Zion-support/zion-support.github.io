@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from "next",
 import { createPartner } from "../../../utils/api/partnerAuth",
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== "POST") {
+  if (req.method != "POST") {
     res.setHeader("Allow", "POST"),
     return res.status(405).json({ error: "Method Not Allowed" })  }
   const { name, entityType, pointOfContact, useCaseType, brand } = req.body || {},
@@ -27,7 +27,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (e) {
     return res.status(500).json({ error: "Failed to create partner" })import type {_NextApiRequest, _NextApiResponse} from "next";
 
-export default async function handler(_req: NextApiRequest, _res: NextApiResponse) {_if (req.method !== "POST") {
+export default async function handler(_req: NextApiRequest, _res: NextApiResponse) {_if (req.method != "POST") {
     res.setHeader("Allow", _"POST");
     return res.status(405).json({ error: "Method Not Allowed"});
   }
@@ -40,4 +40,4 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
       apiKey: apiKey.key,
       dashboardUrl: `/partners/dashboard?pid=${_partner.id}`});
   } catch (e) {_return res.status(500).json({ error: "Failed to create partner"});
-  }}
+  }

@@ -1,4 +1,4 @@
-'use client',;
+use client',;
 import React, { useState } from 'react',;
 import { motion } from 'framer-motion',;
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react',;
@@ -24,7 +24,7 @@ const ContactForm: React.FC = () => {;
     setIsSubmitting(true),;
     // Simulate API call;
     try {;
-      await new Promise(resolve => setTimeout(resolve, 2000)),;
+      await new Promise(resolve => setTimeout(resolve, 2000),;
       setSubmitStatus('success'),;
       setFormData({;
         name: '',;
@@ -38,8 +38,7 @@ const ContactForm: React.FC = () => {;
       setSubmitStatus('error');
     } finally {;
       setIsSubmitting(false);
-    }
-  },;
+    },;
   const services = [;
     'AI DevelopmentCloud ArchitectureDigital TransformationIoT PlatformsBlockchain SolutionsData AnalyticsOther';
   ],;
@@ -75,10 +74,10 @@ const ContactForm: React.FC = () => {;
       <div className="relative container mx-auto px-4">
         {/* Section Header */}
         <motion.div;
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          initial={ opacity: 0, y: 30 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0.8 }
+          viewport={ once: true }
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -87,7 +86,7 @@ const ContactForm: React.FC = () => {;
               Conversation
             </span>
           </h2>
-          
+
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Ready to transform your business? Get in touch with our team of experts to discuss 
             how we can help you achieve your technology goals.
@@ -111,10 +110,10 @@ const ContactForm: React.FC = () => {;
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto">;
           {/* Contact Information */}
           <motion.div;
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, x: -30 }
+            whileInView={ opacity: 1, x: 0 }
+            transition={ duration: 0.8, delay: 0.2 }
+            viewport={ once: true }
             className="space-y-8"
           >
             <div>
@@ -127,14 +126,14 @@ const ContactForm: React.FC = () => {;
 
             {/* Contact Details */}
             <div className="space-y-6">
-              {contactInfo.map((info, index) => (
+              {contactInfo.map(info, index) => (
                 <motion.a
                   key={info.title}
                   href={info.href}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, x: -20 }
+                  whileInView={ opacity: 1, x: 0 }
+                  transition={ duration: 0.6, delay: 0.3 + index * 0.1 }
+                  viewport={ once: true }
                   className="flex items-start space-x-4 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-blue-500/30 transition-all duration-300 group"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
@@ -147,14 +146,14 @@ const ContactForm: React.FC = () => {;
                     </p>;
                   </div>;
                 </motion.a>;
-              ))}
+              )}
             </div>;
             {/* Additional Info */}
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.6, delay: 0.6 }
+              viewport={ once: true }
               className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-xl p-6"
             >
               <h4 className="text-lg font-semibold text-white mb-3">Why Choose Zion Tech?</h4>
@@ -181,16 +180,16 @@ const ContactForm: React.FC = () => {;
 
           {/* Contact Form */}
           <motion.div;
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, x: 30 }
+            whileInView={ opacity: 1, x: 0 }
+            transition={ duration: 0.8, delay: 0.4 }
+            viewport={ once: true }
             className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-8"
           >
-            {submitStatus === 'success' ? (
+            {submitStatus = = 'success' ? (
               <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
+                initial={ opacity: 0, scale: 0.8 }
+                animate={ opacity: 1, scale: 1 }
                 className="text-center py-12"
               >
                 <CheckCircle className="w-20 h-20 text-green-400 mx-auto mb-6" />
@@ -223,7 +222,7 @@ const ContactForm: React.FC = () => {;
                       placeholder="Enter your full name"
                     />
                   </div>
-                  
+
                   <div>
                     <label htmlFor="email" className="block text-white font-medium mb-2">
                       Email Address *
@@ -256,7 +255,7 @@ const ContactForm: React.FC = () => {;
                       placeholder="Enter company name"
                     />
                   </div>
-                  
+
                   <div>
                     <label htmlFor="phone" className="block text-white font-medium mb-2">
                       Phone Number
@@ -285,11 +284,11 @@ const ContactForm: React.FC = () => {;
                     className="w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-blue-500 transition-colors"
                   >
                     <option value="">Select a service</option>
-                    {services.map((service) => (
+                    {services.map(service) => (
                       <option key={service} value={service} className="bg-gray-800 text-white">
                         {service}
                       </option>;
-                    ))}
+                    )}
                   </select>
                 </div>
 
@@ -309,10 +308,10 @@ const ContactForm: React.FC = () => {;
                   />
                 </div>
 
-                {submitStatus === 'error' && (
+                {submitStatus = = 'error' && (
                   <motion.div
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    initial={ opacity: 0, y: -10 }
+                    animate={ opacity: 1, y: 0 }
                     className="flex items-center space-x-2 text-red-400 bg-red-400/10 border border-red-400/20 rounded-lg p-4"
                   >
                     <AlertCircle className="w-5 h-5" />
@@ -344,5 +343,5 @@ const ContactForm: React.FC = () => {;
       </div>;
     </section>;
   );
-},;
+,;
 export default ContactForm;

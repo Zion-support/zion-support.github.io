@@ -2,7 +2,6 @@ import React from 'react';
 
 interface AI-Supply-Chain-Optimization-PlatformProps {
   className?: string;
-}
 
 const AI-Supply-Chain-Optimization-Platform: React.FC<AI-Supply-Chain-Optimization-PlatformProps> = ({ className }) => {
   return (
@@ -11,6 +10,5 @@ const AI-Supply-Chain-Optimization-Platform: React.FC<AI-Supply-Chain-Optimizati
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default AI-Supply-Chain-Optimization-Platform;

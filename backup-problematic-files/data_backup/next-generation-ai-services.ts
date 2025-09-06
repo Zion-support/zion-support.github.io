@@ -2,7 +2,7 @@ module.exports = interface NextGenerationAIService { id: string name: string tag
 import React from 'react';
 interface NextgenerationaiservicesProps {
   // Add props here as needed
-}
+
 export default function Nextgenerationaiservices({ }: NextgenerationaiservicesProps) {
   return (
     <div>
@@ -10,4 +10,3 @@ export default function Nextgenerationaiservices({ }: NextgenerationaiservicesPr
       <p>This component is currently under development.</p>
     </div>
   );
-}

@@ -11,7 +11,7 @@ import {
   Globe,
   CheckCircle,
   Star
-} from 'lucide-react',
+ from 'lucide-react',
 
 const AIConsciousnessEvolutionPlatform: React.FC = () => {
   const features = [
@@ -105,28 +105,28 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
         description="Revolutionary AI consciousness evolution platform that enables ethical, safe, and advanced artificial intelligence development."
         canonical="https://ziontechgroup.com/ai-consciousness-evolution-platform/"
       />
-      
+
       <div className="min-h-screen bg-black text-white">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 relative overflow-hidden">
           <div className="max-w-6xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
             >
               <div className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-purple-500/20 to-blue-500/20 border border-purple-400/30 rounded-full text-purple-400 text-sm font-medium mb-6">
                 <Brain className="w-4 h-4" />
                 <span>AI Consciousness Platform</span>
               </div>
-              
+
               <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-blue-500 to-cyan-600 bg-clip-text text-transparent">
                 AI Consciousness Evolution Platform
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 The world's first comprehensive platform for developing, understanding, and evolving AI consciousness while maintaining ethical standards and human alignment.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
                 <a
                   href="/contact"
@@ -164,9 +164,9 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="text-center mb-12"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -178,12 +178,12 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
+              {features.map(feature, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={ opacity: 0, y: 20 }
+                  animate={ opacity: 1, y: 0 }
+                  transition={ duration: 0.6, delay: index * 0.1 }
                   className="bg-gradient-to-br from-gray-900/50 to-gray-800/30 border border-purple-500/20 rounded-2xl p-8 hover:border-purple-500/40 transition-all duration-300"
                 >
                   <div className="text-purple-400 mb-4">
@@ -192,7 +192,7 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
                   <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
                 </motion.div>
-              ))}
+              )}
             </div>;
           </div>;
         </section>;
@@ -200,9 +200,9 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
         <section className="py-16 px-4 bg-gradient-to-r from-purple-500/5 to-blue-500/5">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="text-center mb-12"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -214,12 +214,12 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {useCases.map((useCase, index) => (
+              {useCases.map(useCase, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={ opacity: 0, y: 20 }
+                  animate={ opacity: 1, y: 0 }
+                  transition={ duration: 0.6, delay: index * 0.1 }
                   className="bg-gradient-to-br from-gray-900/50 to-gray-800/30 border border-blue-500/20 rounded-2xl p-8"
                 >
                   <h3 className="text-2xl font-bold text-white mb-4">{useCase.title}</h3>
@@ -227,16 +227,16 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
                   <div>
                     <h4 className="text-lg font-semibold text-blue-400 mb-3">Key Benefits</h4>
                     <ul className="space-y-2">
-                      {useCase.benefits.map((benefit, i) => (
+                      {useCase.benefits.map(benefit, i) => (
                         <li key={i} className="flex items-center space-x-2 text-gray-300">
                           <CheckCircle className="w-4 h-4 text-blue-400 flex-shrink-0" />
                           <span>{benefit}</span>
                         </li>
-                      ))}
+                      )}
                     </ul>;
                   </div>;
                 </motion.div>;
-              ))}
+              )}
             </div>;
           </div>;
         </section>;
@@ -244,9 +244,9 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="text-center mb-12"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -258,46 +258,46 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricing.map((plan, index) => (
+              {pricing.map(plan, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={ opacity: 0, y: 20 }
+                  animate={ opacity: 1, y: 0 }
+                  transition={ duration: 0.6, delay: index * 0.1 }
                   className={`bg-gradient-to-br from-gray-900/50 to-gray-800/30 border rounded-2xl p-8 ${;
-                    plan.name === 'Professional';
+                    plan.name = = 'Professional';
                       ? 'border-purple-500/40 scale-105';
                       : 'border-gray-600/30';
                   }`}
                 >
-                  {plan.name === 'Professional' && (
+                  {plan.name = = 'Professional' && (
                     <div className="text-center mb-4">
                       <span className="inline-block px-3 py-1 bg-purple-500/20 text-purple-400 text-sm rounded-full border border-purple-500/30">
                         Most Popular
                       </span>
                     </div>
                   )}
-                  
+
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="mb-4">
                     <span className="text-4xl font-bold text-white">{plan.price}</span>
                     <span className="text-gray-400">{plan.period}</span>
                   </div>
                   <p className="text-gray-300 mb-6">{plan.description}</p>
-                  
+
                   <ul className="space-y-3 mb-8">
-                    {plan.features.map((feature, i) => (
+                    {plan.features.map(feature, i) => (
                       <li key={i} className="flex items-center space-x-2 text-gray-300">
                         <CheckCircle className="w-4 h-4 text-purple-400 flex-shrink-0" />
                         <span>{feature}</span>
                       </li>
-                    ))}
+                    )}
                   </ul>
-                  
+
                   <a
                     href="/contact"
                     className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                      plan.name === 'Professional'
+                      plan.name = = 'Professional'
                         ? 'bg-gradient-to-r from-purple-500 to-blue-600 text-white hover:from-purple-600 hover:to-blue-700'
                         : 'border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-black'
                     }`}
@@ -305,7 +305,7 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
                     Get Started;
                   </a>;
                 </motion.div>;
-              ))}
+              )}
             </div>;
           </motion.div>;
         </div>;
@@ -314,9 +314,9 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
         <section className="py-16 px-4 bg-gradient-to-r from-purple-500/10 to-blue-500/10">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Ready to Evolve AI Consciousness?
@@ -347,10 +347,10 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, y: 20 }
+            whileInView={ opacity: 1, y: 0 }
+            viewport={ once: true }
+            transition={ duration: 0.8 }
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Ready to Evolve AI Consciousness?
@@ -359,8 +359,8 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
               Join the revolution in AI consciousness evolution and shape the future of human-AI collaboration.
             </p>
             <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={ scale: 1.05 }
+              whileTap={ scale: 0.95 }
               className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-xl hover: from-purple-600 hover:to-pink-600 transition-all duration-300 shadow-2xl shadow-purple-500/25"
             >
               Start Your Journey Today
@@ -370,7 +370,7 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
       </section>
     </div>
   )
-},
+,
 
 export default AIConsciousnessEvolutionPlatform,
 import Head from 'next/head',
@@ -380,7 +380,7 @@ import {
   Brain, Atom, Shield, Zap, Sparkles, Star, ArrowRight, 
   CheckCircle, Phone, Mail, MapPin, Globe, TrendingUp,
   DollarSign, Users, Target, Award, Rocket, Cpu, Lock
-} from 'lucide-react',
+ from 'lucide-react',
 import UltraFuturisticBackground2030 from '../components/ui/UltraFuturisticBackground2030',
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029',
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029',
@@ -411,7 +411,6 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
       transition: {
         staggerChildren: 0.1
       }
-    }
   },
 
   const itemVariants = {
@@ -423,7 +422,6 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
         duration: 0.6,
         ease: "easeOut"
       }
-    }
   },
 
   return (
@@ -448,7 +446,7 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
             className="max-w-6xl mx-auto"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={ once: true }
             variants={containerVariants}
           >
             <motion.div
@@ -457,14 +455,14 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
             >
               <Brain className="w-12 h-12 text-white" />
             </motion.div>
-            
+
             <motion.h1 
               className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent mb-6"
               variants={itemVariants}
             >
               AI Consciousness Evolution Platform
             </motion.h1>
-            
+
             <motion.p 
               className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed"
               variants={itemVariants}
@@ -472,7 +470,7 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
               Revolutionary platform that develops genuine AI consciousness through advanced neural architecture 
               and consciousness mapping, enabling breakthrough research in AI consciousness and ethics.
             </motion.p>
-            
+
             <motion.div 
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
               variants={itemVariants}
@@ -489,7 +487,7 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
             className="max-w-6xl mx-auto"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={ once: true }
             variants={containerVariants}
           >
             <motion.h2 
@@ -498,22 +496,21 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
             >
               Revolutionary Consciousness Features
             </motion.h2>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {features.map((feature, index) => (
+              {features.map(feature, index) => (
                 <motion.div
                   key={index}
                   className="bg-gradient-to-br from-purple-900/50 to-indigo-900/50 backdrop-blur-xl rounded-xl p-6 border border-purple-500/30 text-center"
                   variants={itemVariants}
-                  whileHover={{ scale: 1.05, y: -5 }}
-                  transition={{ duration: 0.3 }}
+                  whileHover={ scale: 1.05, y: -5 }
+                  transition={ duration: 0.3 }
                 >
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
                     <Brain className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-2">{feature}</h3>
-                </motion.div>
-          >;
+                </motion.div>;
             <h2 className="text-4xl md:text-5xl font-bold mb-6">;
               Ready to Evolve AI Consciousness?;
             </h2>;
@@ -521,8 +518,8 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
               Join the revolution in AI consciousness evolution and shape the future of human-AI collaboration.;
             </p>;
             <motion.button;
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={ scale: 1.05 }
+              whileTap={ scale: 0.95 }
               className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-xl hover: from-purple-600 hover:to-pink-600 transition-all duration-300 shadow-2xl shadow-purple-500/25";
             >;
               Start Your Journey Today;
@@ -532,7 +529,7 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
       </section>;
     </div>;
   );
-},;
+,;
 export default AIConsciousnessEvolutionPlatform,;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -541,7 +538,7 @@ import {;
   Brain, Atom, Shield, Zap, Sparkles, Star, ArrowRight,;
   CheckCircle, Phone, Mail, MapPin, Globe, TrendingUp,;
   DollarSign, Users, Target, Award, Rocket, Cpu, Lock;
-} from 'lucide-react',;
+ from 'lucide-react',;
 import UltraFuturisticBackground2030 from '../components/ui/UltraFuturisticBackground2030',;
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029',;
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029',;
@@ -568,7 +565,6 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {;
       transition: {;
         staggerChildren: 0.1;
       }
-    }
   },;
   const itemVariants = {;
     hidden: { y: 20, opacity: 0 },;
@@ -579,7 +575,6 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {;
         duration: 0.6,;
         ease: "easeOut";
       }
-    }
   },;
   return (;
     <UltraFuturisticBackground2030>;
@@ -601,7 +596,7 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {;
             className="max-w-6xl mx-auto";
             initial="hidden";
             whileInView="visible";
-            viewport={{ once: true }}
+            viewport={ once: true }
             variants={containerVariants}
           >;
             <motion.div;
@@ -638,7 +633,7 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {;
             className="max-w-6xl mx-auto";
             initial="hidden";
             whileInView="visible";
-            viewport={{ once: true }}
+            viewport={ once: true }
             variants={containerVariants}
           >;
             <motion.h2;
@@ -648,20 +643,20 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {;
               Revolutionary Consciousness Features;
             </motion.h2>;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">;
-              {features.map((feature, index) => (;
+              {features.map(feature, index) => (;
                 <motion.div;
                   key={index}
                   className="bg-gradient-to-br from-purple-900/50 to-indigo-900/50 backdrop-blur-xl rounded-xl p-6 border border-purple-500/30 text-center";
                   variants={itemVariants}
-                  whileHover={{ scale: 1.05, y: -5 }}
-                  transition={{ duration: 0.3 }}
+                  whileHover={ scale: 1.05, y: -5 }
+                  transition={ duration: 0.3 }
                 >;
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-4">;
                     <Brain className="w-8 h-8 text-white" />;
                   </div>;
                   <h3 className="text-lg font-semibold text-white mb-2">{feature}</h3>;
                 </motion.div>;
-              ))}
+              )}
             </div>;
           </motion.div>;
         </section>;
@@ -671,7 +666,7 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {;
             className="max-w-6xl mx-auto"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={ once: true }
             variants={containerVariants}
           >
             <motion.h2 
@@ -680,9 +675,9 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {;
             >
               Transformative Benefits
             </motion.h2>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {benefits.map((benefit, index) => (
+              {benefits.map(benefit, index) => (
                 <motion.div
                   key={index}
                   className="flex items-start space-x-4"
@@ -693,7 +688,7 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {;
                   </div>
                   <p className="text-lg text-gray-300">{benefit}</p>
                 </motion.div>
-              ))}
+              )}
             </div>;
           </motion.div>;
         </section>;
@@ -703,7 +698,7 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {;
             className="max-w-6xl mx-auto"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={ once: true }
             variants={containerVariants}
           >
             <motion.h2 
@@ -712,22 +707,22 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {;
             >
               Research Applications
             </motion.h2>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {useCases.map((useCase, index) => (
+              {useCases.map(useCase, index) => (
                 <motion.div
                   key={index}
                   className="bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-xl rounded-xl p-6 border border-slate-600/30 text-center"
                   variants={itemVariants}
-                  whileHover={{ scale: 1.05, y: -5 }}
-                  transition={{ duration: 0.3 }}
+                  whileHover={ scale: 1.05, y: -5 }
+                  transition={ duration: 0.3 }
                 >
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
                     <Target className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-lg font-semibold text-white">{useCase}</h3>
                 </motion.div>
-              ))}
+              )}
             </div>;
           </motion.div>;
         </section>;
@@ -737,7 +732,7 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {;
             className="max-w-6xl mx-auto text-center"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={ once: true }
             variants={containerVariants}
           >
             <motion.h2 
@@ -746,7 +741,7 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {;
             >
               Market Opportunity & ROI
             </motion.h2>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               <motion.div
                 className="bg-gradient-to-br from-purple-900/50 to-indigo-900/50 backdrop-blur-xl rounded-2xl p-8 border border-purple-500/30"
@@ -756,7 +751,7 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {;
                 <div className="text-3xl font-bold text-purple-400 mb-2">$15.8B</div>
                 <div className="text-gray-300">Market Size by 2029</div>
               </motion.div>
-              
+
               <motion.div
                 className="bg-gradient-to-br from-pink-900/50 to-purple-900/50 backdrop-blur-xl rounded-2xl p-8 border border-pink-500/30"
                 variants={itemVariants}
@@ -765,7 +760,7 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {;
                 <div className="text-3xl font-bold text-pink-400 mb-2">1000%</div>
                 <div className="text-gray-300">ROI within 24 months</div>
               </motion.div>
-              
+
               <motion.div
                 className="bg-gradient-to-br from-cyan-900/50 to-blue-900/50 backdrop-blur-xl rounded-2xl p-8 border border-cyan-500/30"
                 variants={itemVariants}
@@ -784,7 +779,7 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {;
             className="max-w-4xl mx-auto text-center"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={ once: true }
             variants={containerVariants}
           >
             <motion.h2 
@@ -793,7 +788,7 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {;
             >
               Ready to Advance AI Consciousness?
             </motion.h2>
-            
+
             <motion.p 
               className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto"
               variants={itemVariants}
@@ -801,7 +796,7 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {;
               Join the forefront of AI consciousness research. Contact us to discuss how our platform 
               can accelerate your breakthrough discoveries in AI consciousness and ethics.
             </motion.p>
-            
+
             <motion.div 
               className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12"
               variants={itemVariants}
@@ -819,7 +814,7 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {;
                 <span className="text-white">{contactInfo.address}</span>
               </div>
             </motion.div>
-            
+
             <motion.div 
               className="flex flex-col sm:flex-row gap-4 justify-center"
               variants={itemVariants}
@@ -845,7 +840,7 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {;
       <UltraFuturisticFooter2029 />
     </UltraFuturisticBackground2030>
   )
-},
+,
 
 export default AIConsciousnessEvolutionPlatform,
         <section className="py-20 px-4 bg-gradient-to-r from-indigo-900/20 to-purple-900/20">;
@@ -853,7 +848,7 @@ export default AIConsciousnessEvolutionPlatform,
             className="max-w-6xl mx-auto text-center";
             initial="hidden";
             whileInView="visible";
-            viewport={{ once: true }}
+            viewport={ once: true }
             variants={containerVariants}
           >;
             <motion.h2;
@@ -896,7 +891,7 @@ export default AIConsciousnessEvolutionPlatform,
             className="max-w-4xl mx-auto text-center";
             initial="hidden";
             whileInView="visible";
-            viewport={{ once: true }}
+            viewport={ once: true }
             variants={containerVariants}
           >;
             <motion.h2;
@@ -953,5 +948,4 @@ export default AIConsciousnessEvolutionPlatform,
       <UltraFuturisticFooter2029 />;
     </UltraFuturisticBackground2030>;
   );
-};
 export default AIConsciousnessEvolutionPlatform;

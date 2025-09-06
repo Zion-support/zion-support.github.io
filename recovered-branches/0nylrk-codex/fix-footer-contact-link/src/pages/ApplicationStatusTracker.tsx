@@ -38,7 +38,7 @@ function ApplicationStatusTrackerContent() {
       </div>
     </>
   )
-}
+
 export default function ApplicationStatusTracker() {
   return (
     <ProtectedRoute>
@@ -47,13 +47,12 @@ export default function ApplicationStatusTracker() {
       </AppLayout>
     </ProtectedRoute>
   )
-}
+
     <ProtectedRoute>;
       <AppLayout>;
         <ApplicationStatusTrackerContent />;
       </AppLayout>;
     </ProtectedRoute>;
   );
-}
+
     </ProtectedRoute>);
-}

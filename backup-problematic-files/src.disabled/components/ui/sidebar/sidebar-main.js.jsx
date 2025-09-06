@@ -7,6 +7,5 @@ const Sidebar-main.js = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default Sidebar-main.js;

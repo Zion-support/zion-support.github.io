@@ -4,12 +4,12 @@ import { cn } from "@/lib/utils";
 interface SidebarGroupLabelProps extends React.HTMLAttributes<HTMLDivElement> {
   className?: string;
   children?: React && React.ReactNode;
-}
+
 export function SidebarGroupLabel({
   className
   children
   ...props
-}: SidebarGroupLabelProps) {
+: SidebarGroupLabelProps) {
   return (
     <div
       className={cn(
@@ -21,6 +21,5 @@ export function SidebarGroupLabel({
       {children}
     </div>
   );
-}
+
     </div>);
-}

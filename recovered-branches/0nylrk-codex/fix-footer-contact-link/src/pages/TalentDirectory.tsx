@@ -34,7 +34,7 @@ export default /**
  */
 function TalentDirectory() {
   const navigate = use_navigate ();
-;
+
   // Use our custom hook to manage state;
   const {
     filtered_talents;
@@ -98,17 +98,17 @@ function TalentDirectory() {
     clear_filters;
     toggle_section;
     handleToggleSave} = useTalentDirectory ();
-;
+
   const handleRequestHire = (talent: TalentProfile) =>: any {
     setSelectedTalent (talent),
     setIsHireModalOpen (true);
   }
-;
+
   const view_profile = (id: string) =>: any {
     // Navigate to the talent profile page;
     navigate (`/talent/${id}`);
   }
-;
+
   return (
     <AppLayout>;
       <div className="container mx - auto px - 4 py - 8">;
@@ -152,8 +152,7 @@ function TalentDirectory() {
               >
                 Filter & Sort
               </Button>
-            </div>
-              >;
+            </div>;
                 Filter & Sort;
               </Button>;
             </div>;
@@ -167,7 +166,7 @@ function TalentDirectory() {
               saved_talents={saved_talents}
               handleToggleSave={handleToggleSave}
               is_authenticated={is_authenticated}
-              activeFiltersProps={{
+              activeFiltersProps={
                 selectedSkills;
                 toggleSkill;
                 selectedAvailability;
@@ -179,7 +178,7 @@ function TalentDirectory() {
                 experience_range;
                 setExperienceRange;
 
-                clearFilters}}
+                clearFilters}
             />
             {/* Mobile filter sidebar */}
             {isMobileFilterOpen && (;
@@ -199,7 +198,7 @@ function TalentDirectory() {
                   </div>;
                   <FilterSidebar
                     searchTerm={searchTerm}
-                clear_filters}}
+                clear_filters}
             />;
             {/* Mobile filter sidebar */}
             {isMobileFilterOpen && (
@@ -245,10 +244,9 @@ function TalentDirectory() {
       </div>
     </AppLayout>
   )
-}
+
               </div>)}
           </div>;
         </div>;
       </div>;
     </AppLayout>);
-}

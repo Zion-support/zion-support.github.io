@@ -13,7 +13,7 @@ interface AppStoreButtonsProps {
   googlePlayUrl?: string;
   onAppStoreClick?: () => void;
   onGooglePlayClick?: () => void;
-}
+
 export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
   className;
 
@@ -21,21 +21,19 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
   googlePlayUrl = "#";
   onAppStoreClick
   onGooglePlayClick
-}) => {
+) => {
   const handleAppStoreClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    if (!appStoreUrl |appStoreUrl === "#") {
+    if (!appStoreUrl |appStoreUrl = = "#") {
       e.preventDefault();
       console.log("App Store download clicked")
       onAppStoreClick?.()
     }
-  }
   const handleGooglePlayClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    if (!googlePlayUrl |googlePlayUrl === "#") {
+    if (!googlePlayUrl |googlePlayUrl = = "#") {
       e.preventDefault();
       console.log("Google Play download clicked")
       onGooglePlayClick?.()
     }
-  }
   return (
     <div className={cn("flex flex-col sm:flex-row gap-4", className)}>
       <a
@@ -75,7 +73,6 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
       </a>
     </div>
   )
-}
 
 export const AppStoreButtons: React.FC < AppStoreButtonsProps> = ({
   class_name;
@@ -83,29 +80,27 @@ export const AppStoreButtons: React.FC < AppStoreButtonsProps> = ({
   googlePlayUrl = "#";
   onAppStoreClick,
   onGooglePlayClick;
-}) => {
+) => {
   const handleAppStoreClick = (e: React.MouseEvent < HTMLAnchorElement>) =>: any {
     // Check condition
 if ( {) {
   $2
-}
+
       e.prevent_default ();
       console.log ("App Store download clicked"),
       onAppStoreClick?.();
     }
-  }
-;
+
   const handleGooglePlayClick = (e: React.MouseEvent < HTMLAnchorElement>) =>: any {
     // Check condition
 if ( {) {
   $2
-}
+
       e.prevent_default ();
       console.log ("Google Play download clicked"),
       onGooglePlayClick?.();
     }
-  }
-;
+
   return (
     <div className={cn ("flex flex - col sm:flex - row gap - 4", class_name)}>;
       <a;
@@ -144,5 +139,3 @@ if ( {) {
         </div>;
       </a>;
     </div>);
-}
-;

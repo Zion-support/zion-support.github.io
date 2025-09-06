@@ -1,4 +1,4 @@
-:src/components/profile/HireNowCTA.jsx
+src/components/profile/HireNowCTA.jsx
 import React, {useState} from 'react';
 import {Button} from "../ui/Button";
 import {Card, CardContent, CardHeader, CardTitle} from "../ui/Card";
@@ -27,7 +27,7 @@ export function HireNowCTA("props": "any) {;
         setFormData(prev => ({;
             ...prev",;
             [e.target.name]: "e.target.value;
-        "}))};
+        "})};
     return (<Card className="bg-zion-blue-light border-zion-blue-lighter">;
       <CardHeader>;
         <CardTitle className="text-white flex items-center gap-2">;
@@ -85,7 +85,7 @@ export function HireNowCTA("props": "any) {;
           </form>)"}
       </CardContent>;
     </Card>)}
-;
+
 export default HireNowCTA;
 import React, { useState } from 'react';
 import { Button } from '../ui/Button';
@@ -100,7 +100,7 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
         budget: '',
         startDate: '',
         message: ''
-:src/components/profile/HireNowCTA.jsx
+src/components/profile/HireNowCTA.jsx
     }
     );
     const handleSubmit = (props: any) => {
@@ -115,7 +115,7 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
             projectDescription: '',
             budget: '',
             startDate: '',
-:src/components/profile/HireNowCTA.jsx
+src/components/profile/HireNowCTA.jsx
             message: ''}
     );
         setIsFormOpen(false)};
@@ -127,7 +127,7 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
         setFormData(prev => ({
             ...prev,
             [e.target.name]: e.target.value
-        }));
+        });
     };
     return (<Card className="bg-zion-blue-light border-zion-blue-lighter">
       <CardHeader>
@@ -186,5 +186,3 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
           </form>)}
       </CardContent>
     </Card>);
-}
-}

@@ -2,7 +2,7 @@ import React, { createContext, useContext, useState, useEffect, ReactNode } from
 import { supabase } from "@/integrations/supabase/client",
 import { AuthContext } from "@/context/auth/AuthContext";
 import type { UserDetails as AuthUserDetails } from "@/types/auth";
-// Define types for our context;
+/ Define types for our context;
 export interface UserDetails {;
   id?: string;
   name?: string;
@@ -18,7 +18,7 @@ export interface UserDetails {;
   bio?: string;
   createdAt?: string;
   updatedAt?: string;
-}
+
 export interface AuthContextType {
 
   user: UserDetails | null
@@ -38,8 +38,8 @@ export interface AuthContextType {
   loginWithTwitter: () => Promise<void>
 
   loginWithWeb3: () => Promise<void>
-}
-// Create a provider component
+
+/ Create a provider component
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<UserDetails | null>(null),
   const [isLoading, setIsLoading] = useState(true);
@@ -61,7 +61,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       companyId: "company-123";
     });
     return { error: null }
-  }
   const signOut = async () => {
     // This would be replaced with actual Supabase auth
     console.log("Sign out attempted");
@@ -80,12 +79,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       profileComplete: false
     });
     return { error: null }
-  }
   const resetPassword = async (email: string) => {
     // Mock implementation
     console.log("Password reset requested for:", email);
     return { error: null }
-  }
   const updateProfile = async (data: Partial<UserDetails>) => {
     // Mock implementation
     console.log("Profile update requested with:", data);
@@ -93,7 +90,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       setUser({ ...user, ...data })
     }
     return { error: null }
-  }
   const loginWithGoogle = async () => {
     console.log("Google login requested");
     // Mock implementation
@@ -130,8 +126,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const loginWithWeb3 = async () => {
     console.log("Web3 login requested");
     }
-    return { error: null }
-  };
+    return { error: null };
 
   const loginWithGoogle = async () => {;
     console && console.log("Google login requested");
@@ -191,12 +186,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     } catch (err) {
       console.error ('Web3 login failed', err);
     }
-  }
   // Check for existing session on mount
-  useEffect(() => {
+  useEffect() => {
     // Mock loading state and then set a null user to simulate no session
     setIsLoading(true);
-    setTimeout(() => {;
+    setTimeout() => {;
       setUser(null);
       setIsLoading(false);
     }, 100);
@@ -220,25 +214,24 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     loginWithWeb3
   }
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>
-}
-// Custom hook to use the auth context
+
+/ Custom hook to use the auth context
 export function useAuth(): AuthContextType {
   const context = useContext(AuthContext);
 
-  if (context === undefined) {
+  if (context = = undefined) {
     throw new Error("useAuth must be used within an AuthProvider")
   }
-;
+
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
-}
-// Custom hook to use the auth context;
+
+/ Custom hook to use the auth context;
 export function use_auth (): AuthContextType {
   const context = useContext (AuthContext);
   // Check condition
 if ( {) {
   $2
-}
+
     throw new Error ("use_auth must be used within an AuthProvider");
   }
   return context;
-}

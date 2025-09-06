@@ -9,8 +9,8 @@ import { ArrowLeft, ExternalLink } from 'lucide-react',
 export default function ServiceDetailPage() {
   const router = useRouter(),
   const { id } = router.query,
-  
-  if (!id || typeof id !== 'string') {
+
+  if (!id || typeof id != 'string') {
     return (
       <div className=&quot;min-h-screen bg-black flex items-center justify-center&quot;>
         <div className=&quot;text-center&quot;>
@@ -112,4 +112,3 @@ export default function ServiceDetailPage() {
       </div>
     </>
   )
-}

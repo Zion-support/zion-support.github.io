@@ -6,5 +6,3 @@ export function FeatureHighlights() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

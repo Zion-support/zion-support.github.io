@@ -34,7 +34,7 @@ import {
   Zap2,
   Brain2,
   Cloud2
-} from 'lucide-react';
+ from 'lucide-react';
 
 interface Service {
   id: string;
@@ -58,7 +58,6 @@ interface Service {
   path: string;
   color: string;
   featured: boolean;
-}
 
 export const ComprehensiveServicesShowcase: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -351,25 +350,25 @@ export const ComprehensiveServicesShowcase: React.FC = () => {
     }
   ];
 
-  const categories = useMemo(() => ['all', ...new Set(services.map(s => s.category))], [services]);
-  const subcategories = useMemo(() => {
+  const categories = useMemo() => ['all', ...new Set(services.map(s => s.category)], [services]);
+  const subcategories = useMemo() => {
     const allSubcategories = services.map(s => s.subcategory);
     return ['all', ...new Set(allSubcategories)];
   }, [services]);
 
-  const filteredServices = useMemo(() => {
+  const filteredServices = useMemo() => {
     return services.filter(service => {
-      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-      const matchesSubcategory = selectedSubcategory === 'all' || service.subcategory === selectedSubcategory;
-      const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.features.some(f => f.toLowerCase().includes(searchTerm.toLowerCase()));
+      const matchesCategory = selectedCategory = = 'all' || service.category = = selectedCategory;
+      const matchesSubcategory = selectedSubcategory = = 'all' || service.subcategory = = selectedSubcategory;
+      const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase() ||
+                           service.description.toLowerCase().includes(searchTerm.toLowerCase() ||
+                           service.features.some(f => f.toLowerCase().includes(searchTerm.toLowerCase());
       return matchesCategory && matchesSubcategory && matchesSearch;
     });
   }, [services, selectedCategory, selectedSubcategory, searchTerm]);
 
-  const sortedServices = useMemo(() => {
-    return [...filteredServices].sort((a, b) => {
+  const sortedServices = useMemo() => {
+    return [...filteredServices].sort(a, b) => {
       switch (sortBy) {
         case 'price':
           return a.pricing.startingPrice - b.pricing.startingPrice;
@@ -379,8 +378,7 @@ export const ComprehensiveServicesShowcase: React.FC = () => {
           return parseInt(a.deliveryTime.split('-')[0]) - parseInt(b.deliveryTime.split('-')[0]);
         default:
           return a.title.localeCompare(b.title);
-      }
-    });
+      });
   }, [filteredServices, sortBy]);
 
   const stats = [
@@ -393,7 +391,7 @@ export const ComprehensiveServicesShowcase: React.FC = () => {
   ];
 
   const toggleServiceExpansion = (serviceId: string) => {
-    setExpandedService(expandedService === serviceId ? null : serviceId);
+    setExpandedService(expandedService = = serviceId ? null : serviceId);
   };
 
   return (
@@ -408,30 +406,30 @@ export const ComprehensiveServicesShowcase: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          initial={ opacity: 0, y: 30 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0.8 }
+          viewport={ once: true }
           className="text-center mb-20"
         >
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, scale: 0.8 }
+            whileInView={ opacity: 1, scale: 1 }
+            transition={ duration: 0.6, delay: 0.2 }
+            viewport={ once: true }
             className="inline-flex items-center gap-2 px-4 py-2 bg-zion-cyan/10 border border-zion-cyan/30 rounded-full text-zion-cyan text-sm font-medium mb-6"
           >
             <div className="w-2 h-2 bg-zion-cyan rounded-full animate-pulse"></div>
             Comprehensive Technology Solutions
           </motion.div>
-          
+
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
             Solutions That Drive
             <span className="block bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-cyan bg-clip-text text-transparent">
               Business Growth
             </span>
           </h2>
-          
+
           <p className="text-xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed">
             From concept to deployment, we provide end-to-end technology solutions that 
             accelerate your business transformation and competitive advantage. Choose from our 
@@ -441,10 +439,10 @@ export const ComprehensiveServicesShowcase: React.FC = () => {
 
         {/* Search and Filter Controls */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          viewport={{ once: true }}
+          initial={ opacity: 0, y: 20 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0.6, delay: 0.3 }
+          viewport={ once: true }
           className="mb-12"
         >
           <div className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-cyan/20 rounded-2xl p-6">
@@ -471,9 +469,9 @@ export const ComprehensiveServicesShowcase: React.FC = () => {
                 >
                   {categories.map(category => (
                     <option key={category} value={category}>
-                      {category === 'all' ? 'All Categories' : category}
+                      {category = = 'all' ? 'All Categories' : category}
                     </option>
-                  ))}
+                  )}
                 </select>
               </div>
 
@@ -486,9 +484,9 @@ export const ComprehensiveServicesShowcase: React.FC = () => {
                 >
                   {subcategories.map(subcategory => (
                     <option key={subcategory} value={subcategory}>
-                      {subcategory === 'all' ? 'All Subcategories' : subcategory}
+                      {subcategory = = 'all' ? 'All Subcategories' : subcategory}
                     </option>
-                  ))}
+                  )}
                 </select>
               </div>
 
@@ -511,7 +509,7 @@ export const ComprehensiveServicesShowcase: React.FC = () => {
                 <button
                   onClick={() => setViewMode('grid')}
                   className={`p-3 rounded-xl transition-all duration-300 ${
-                    viewMode === 'grid' 
+                    viewMode = = 'grid' 
                       ? 'bg-zion-cyan text-white' 
                       : 'bg-zion-blue-light/20 text-zion-cyan hover:bg-zion-cyan/20'
                   }`}
@@ -526,7 +524,7 @@ export const ComprehensiveServicesShowcase: React.FC = () => {
                 <button
                   onClick={() => setViewMode('list')}
                   className={`p-3 rounded-xl transition-all duration-300 ${
-                    viewMode === 'list' 
+                    viewMode = = 'list' 
                       ? 'bg-zion-cyan text-white' 
                       : 'bg-zion-blue-light/20 text-zion-cyan hover:bg-zion-cyan/20'
                   }`}
@@ -544,22 +542,22 @@ export const ComprehensiveServicesShowcase: React.FC = () => {
 
         {/* Services Grid/List */}
         <div className={`${
-          viewMode === 'grid' 
+          viewMode = = 'grid' 
             ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' 
             : 'space-y-6'
         } mb-20`}>
           <AnimatePresence>
-            {sortedServices.map((service, index) => {
+            {sortedServices.map(service, index) => {
               const IconComponent = service.icon;
               return (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.6, delay: index * 0.1 }
+                  viewport={ once: true }
                   className={`group relative ${
-                    viewMode === 'list' ? 'bg-zion-blue-light/5 backdrop-blur-md border border-zion-cyan/20 rounded-2xl p-6' : ''
+                    viewMode = = 'list' ? 'bg-zion-blue-light/5 backdrop-blur-md border border-zion-cyan/20 rounded-2xl p-6' : ''
                   }`}
                 >
                   {/* Badge */}
@@ -580,21 +578,21 @@ export const ComprehensiveServicesShowcase: React.FC = () => {
                       </span>
                     </div>
                   )}
-                  
+
                   <div className={`h-full ${
-                    viewMode === 'grid' 
+                    viewMode = = 'grid' 
                       ? 'bg-zion-blue-light/5 backdrop-blur-md border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 hover:bg-zion-blue-light/10 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 group-hover:-translate-y-2'
                       : 'hover:border-zion-cyan/40 hover:bg-zion-blue-light/10 transition-all duration-300'
                   }`}>
                     {/* Header */}
-                    <div className={`flex ${viewMode === 'list' ? 'items-start gap-6' : 'flex-col'} mb-6`}>
+                    <div className={`flex ${viewMode = = 'list' ? 'items-start gap-6' : 'flex-col'} mb-6`}>
                       {/* Icon */}
                       <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300 flex-shrink-0`}>
                         <IconComponent className="w-8 h-8" />
                       </div>
-                      
+
                       {/* Title and Category */}
-                      <div className={`${viewMode === 'list' ? 'flex-1' : ''}`}>
+                      <div className={`${viewMode = = 'list' ? 'flex-1' : ''}`}>
                         <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-zion-cyan transition-colors">
                           {service.title}
                         </h3>
@@ -623,7 +621,7 @@ export const ComprehensiveServicesShowcase: React.FC = () => {
                           <div className="w-16 h-2 bg-zion-blue-light/30 rounded-full overflow-hidden">
                             <div 
                               className="h-full bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full transition-all duration-300"
-                              style={{ width: `${service.aiScore}%` }}
+                              style={ width: `${service.aiScore}%` }
                             ></div>
                           </div>
                           <span className="text-sm text-white font-medium">{service.aiScore}%</span>
@@ -637,13 +635,13 @@ export const ComprehensiveServicesShowcase: React.FC = () => {
                         <CheckCircle className="w-4 h-4" />
                         Key Features
                       </h4>
-                      <div className={`grid ${viewMode === 'list' ? 'grid-cols-2' : 'grid-cols-1'} gap-2`}>
-                        {service.features.slice(0, viewMode === 'list' ? 6 : 4).map((feature, featureIndex) => (
+                      <div className={`grid ${viewMode = = 'list' ? 'grid-cols-2' : 'grid-cols-1'} gap-2`}>
+                        {service.features.slice(0, viewMode = = 'list' ? 6 : 4).map(feature, featureIndex) => (
                           <div key={featureIndex} className="flex items-center gap-2 text-sm text-zion-slate-light">
                             <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full"></div>
                             {feature}
                           </div>
-                        ))}
+                        )}
                       </div>
                     </div>
 
@@ -654,12 +652,12 @@ export const ComprehensiveServicesShowcase: React.FC = () => {
                         Key Benefits
                       </h4>
                       <div className="space-y-2">
-                        {service.benefits.slice(0, 3).map((benefit, benefitIndex) => (
+                        {service.benefits.slice(0, 3).map(benefit, benefitIndex) => (
                           <div key={benefitIndex} className="flex items-center gap-2 text-sm text-zion-slate-light">
                             <div className="w-1 h-1 bg-green-400 rounded-full"></div>
                             {benefit}
                           </div>
-                        ))}
+                        )}
                       </div>
                     </div>
 
@@ -670,11 +668,11 @@ export const ComprehensiveServicesShowcase: React.FC = () => {
                         Technology Stack
                       </h4>
                       <div className="flex flex-wrap gap-2">
-                        {service.technologyStack.slice(0, 4).map((tech, techIndex) => (
+                        {service.technologyStack.slice(0, 4).map(tech, techIndex) => (
                           <span key={techIndex} className="px-2 py-1 bg-zion-blue-light/20 text-zion-cyan text-xs rounded border border-zion-cyan/30">
                             {tech}
                           </span>
-                        ))}
+                        )}
                       </div>
                     </div>
 
@@ -699,52 +697,52 @@ export const ComprehensiveServicesShowcase: React.FC = () => {
                         onClick={() => toggleServiceExpansion(service.id)}
                         className="text-zion-cyan hover:text-white transition-colors text-sm font-medium flex items-center gap-2"
                       >
-                        {expandedService === service.id ? 'Show Less' : 'Show More Details'}
+                        {expandedService = = service.id ? 'Show Less' : 'Show More Details'}
                         <ArrowRight className={`w-4 h-4 transition-transform duration-300 ${
-                          expandedService === service.id ? 'rotate-90' : ''
+                          expandedService = = service.id ? 'rotate-90' : ''
                         }`} />
                       </button>
-                      
+
                       <AnimatePresence>
-                        {expandedService === service.id && (
+                        {expandedService = = service.id && (
                           <motion.div
-                            initial={{ opacity: 0, height: 0 }}
-                            animate={{ opacity: 1, height: 'auto' }}
-                            exit={{ opacity: 0, height: 0 }}
-                            transition={{ duration: 0.3 }}
+                            initial={ opacity: 0, height: 0 }
+                            animate={ opacity: 1, height: 'auto' }
+                            exit={ opacity: 0, height: 0 }
+                            transition={ duration: 0.3 }
                             className="mt-4 pt-4 border-t border-zion-cyan/20"
                           >
                             <div className="space-y-4">
                               <div>
                                 <h5 className="text-sm font-semibold text-zion-cyan mb-2">All Features</h5>
                                 <div className="grid grid-cols-1 gap-2">
-                                  {service.features.map((feature, featureIndex) => (
+                                  {service.features.map(feature, featureIndex) => (
                                     <div key={featureIndex} className="flex items-center gap-2 text-sm text-zion-slate-light">
                                       <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full"></div>
                                       {feature}
                                     </div>
-                                  ))}
+                                  )}
                                 </div>
                               </div>
                               <div>
                                 <h5 className="text-sm font-semibold text-zion-cyan mb-2">All Benefits</h5>
                                 <div className="space-y-2">
-                                  {service.benefits.map((benefit, benefitIndex) => (
+                                  {service.benefits.map(benefit, benefitIndex) => (
                                     <div key={benefitIndex} className="flex items-center gap-2 text-sm text-zion-slate-light">
                                       <div className="w-1 h-1 bg-green-400 rounded-full"></div>
                                       {benefit}
                                     </div>
-                                  ))}
+                                  )}
                                 </div>
                               </div>
                               <div>
                                 <h5 className="text-sm font-semibold text-zion-cyan mb-2">Full Tech Stack</h5>
                                 <div className="flex flex-wrap gap-2">
-                                  {service.technologyStack.map((tech, techIndex) => (
+                                  {service.technologyStack.map(tech, techIndex) => (
                                     <span key={techIndex} className="px-2 py-1 bg-zion-blue-light/20 text-zion-cyan text-xs rounded border border-zion-cyan/30">
                                       {tech}
                                     </span>
-                                  ))}
+                                  )}
                                 </div>
                               </div>
                             </div>
@@ -762,7 +760,7 @@ export const ComprehensiveServicesShowcase: React.FC = () => {
                         Learn More
                         <ArrowRight className="w-4 h-4" />
                       </Link>
-                      
+
                       <Link
                         to="/request-quote"
                         className="px-4 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover:from-zion-cyan/90 hover:to-zion-purple/90 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-zion-cyan/25"
@@ -779,27 +777,27 @@ export const ComprehensiveServicesShowcase: React.FC = () => {
 
         {/* Stats Section */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          viewport={{ once: true }}
+          initial={ opacity: 0, y: 30 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0.8, delay: 0.4 }
+          viewport={ once: true }
           className="text-center mb-20"
         >
           <div className="bg-zion-blue-light/5 backdrop-blur-md border border-zion-cyan/20 rounded-2xl p-12">
             <h3 className="text-2xl md:text-3xl font-bold text-white mb-12">
               Trusted by Industry Leaders
             </h3>
-            
+
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-              {stats.map((stat, index) => {
+              {stats.map(stat, index) => {
                 const IconComponent = stat.icon;
                 return (
                   <motion.div
                     key={stat.label}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
-                    viewport={{ once: true }}
+                    initial={ opacity: 0, scale: 0.8 }
+                    whileInView={ opacity: 1, scale: 1 }
+                    transition={ duration: 0.6, delay: 0.6 + index * 0.1 }
+                    viewport={ once: true }
                     className="text-center group"
                   >
                     <div className="w-16 h-16 bg-zion-cyan/10 border border-zion-cyan/20 rounded-2xl mx-auto mb-4 flex items-center justify-center group-hover:bg-zion-cyan/20 group-hover:border-zion-cyan/40 transition-all duration-300">
@@ -816,10 +814,10 @@ export const ComprehensiveServicesShowcase: React.FC = () => {
 
         {/* CTA Section */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          viewport={{ once: true }}
+          initial={ opacity: 0, y: 30 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0.8, delay: 0.6 }
+          viewport={ once: true }
           className="text-center"
         >
           <div className="bg-gradient-to-r from-zion-cyan/20 via-zion-purple/20 to-zion-cyan/20 border border-zion-cyan/30 rounded-2xl p-12 backdrop-blur-md">
@@ -854,4 +852,3 @@ export const ComprehensiveServicesShowcase: React.FC = () => {
       </div>
     </section>
   );
-};

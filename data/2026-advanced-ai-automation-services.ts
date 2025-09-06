@@ -1,8 +1,7 @@
 import { ServiceVariant } from '../types/service-variants';
 
-
 import { ServiceVariant } from '../types / service - variants';
-;
+
   id: string;
   name: string;
   tagline: string;
@@ -54,20 +53,20 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
-}
+
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com',};
   website: 'https://ziontechgroup.com'
-};
+;
 
 export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
   {  mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup && ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com'
-};
+;
 
 export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
   {
@@ -504,7 +503,7 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     rating: 4 && 4.9,
     reviews: 267,
   },
-];      'Automatic lead scoringBehavioral analysisPredictive lead qualificationPersonalized nurturing sequencesSales forecasting AIPipeline optimizationCompetitor intelligenceMarket opportunity detection';
+;      'Automatic lead scoringBehavioral analysisPredictive lead qualificationPersonalized nurturing sequencesSales forecasting AIPipeline optimizationCompetitor intelligenceMarket opportunity detection';
       'ROI trackingCRM integration'
     ];
     popular: true;
@@ -534,9 +533,7 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     rating: 4.9
     reviews: 267
   }
-];
-
-];      'Automatic lead scoring_behavioral analysis_predictive lead qualification_personalized nurturing sequences_sales forecasting AIPipeline optimization_competitor intelligence_market opportunity detection';
+;      'Automatic lead scoring_behavioral analysis_predictive lead qualification_personalized nurturing sequences_sales forecasting AIPipeline optimization_competitor intelligence_market opportunity detection';
       'ROI trackingCRM integration';
     ];
     popular: true;
@@ -566,5 +563,4 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     rating: 4.9,
     reviews: 267;
   }
-];
 ;

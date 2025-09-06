@@ -10,7 +10,7 @@ import {
   ArrowRight, Search, Menu, X as CloseIcon,
   Target, BookOpen, Truck, BarChart3,
   Sparkles, Eye, Lightbulb, Palette, Code
-} from 'lucide-react',
+ from 'lucide-react',
 
 interface SidebarItem {
   name: string,
@@ -21,14 +21,13 @@ interface SidebarItem {
   badge?: string,
   isNew?: boolean,
   isHot?: boolean
-}
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-},
+,
 
 const sidebarItems: SidebarItem[] = [
   {
@@ -216,7 +215,7 @@ const sidebarItems: SidebarItem[] = [
       { name: 'Community Forum', href: '/community', description: 'User community' },
       { name: 'Status Page', href: '/status', description: 'Service status' }    ]
   }
-],
+,
 
 const resources = [
   { name: 'Documentation', href: '/docs', icon: <FileText className="w-4 h-4" /> },
@@ -225,7 +224,7 @@ const resources = [
   { name: 'Blog & News', href: '/blog', icon: <FileText className="w-4 h-4" /> },
   { name: 'Training & Certification', href: '/training', icon: <Award className="w-4 h-4" /> },
   { name: 'Community Forum', href: '/community', icon: <Users className="w-4 h-4" /> }
-],];
+,];
 
 const supportLinks = [
   { name: 'Contact Support', href: '/support', description: 'Get help from our team' },
@@ -234,11 +233,11 @@ const supportLinks = [
   { name: 'Status Page', href: '/status', description: 'Service status' },
   { name: 'Training', href: '/training', description: 'Learn our platforms' },
   { name: 'Community', href: '/community', description: 'Connect with users' }
-],
+,
 
   const toggleSection = (title: string) => {
     const newExpanded = new Set(expandedSections),
-    if (newExpanded.has(title)) {
+    if (newExpanded.has(title) {
       newExpanded.delete(title)
     } else {
       newExpanded.add(title)
@@ -247,16 +246,16 @@ const supportLinks = [
   },
   const _filteredServices = sidebarItems.flatMap(item =>
     item.children?.filter(child =>
-      child.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      child.description?.toLowerCase().includes(searchQuery.toLowerCase())
+      child.name.toLowerCase().includes(searchQuery.toLowerCase() ||
+      child.description?.toLowerCase().includes(searchQuery.toLowerCase()
     ) || []
   ),
 
   return (
     <motion.aside
-      initial={{ x: -300, opacity: 0 }}
-      animate={{ x: 0, opacity: 1 }}
-      transition={{ duration: 0.5, ease: &quot;easeOut&quot; }}
+      initial={ x: -300, opacity: 0 }
+      animate={ x: 0, opacity: 1 }
+      transition={ duration: 0.5, ease: &quot;easeOut&quot; }
       className=&quot;fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-r border-cyan-500/20 shadow-2xl shadow-cyan-500/20 z-40 overflow-y-auto scrollbar-thin scrollbar-thumb-cyan-500/50 scrollbar-track-transparent&quot;
     >
       {/* Header */}
@@ -293,7 +292,7 @@ const supportLinks = [
 
       {/* Navigation Sections */}
       <div className=&quot;p-4 space-y-2&quot;>
-        {sidebarSections.map((section) => (
+        {sidebarSections.map(section) => (
           <div key={section.title} className=&quot;space-y-1&quot;>
             <button
               onClick={() => toggleSection(section.title)}
@@ -318,10 +317,10 @@ const supportLinks = [
             <AnimatePresence>
               {expandedSections.has(section.title) && (
                 <motion.div
-                  initial={{ opacity: 0, height: 0 }}
-                  animate={{ opacity: 1, height: 'auto' }}
-                  exit={{ opacity: 0, height: 0 }}
-                  transition={{ duration: 0.2 }}
+                  initial={ opacity: 0, height: 0 }
+                  animate={ opacity: 1, height: 'auto' }
+                  exit={ opacity: 0, height: 0 }
+                  transition={ duration: 0.2 }
                   className=&quot;ml-8 space-y-1&quot;                >
                   <CloseIcon className=&quot;w-5 h-5&quot; />
                 </button>
@@ -338,14 +337,14 @@ const supportLinks = [
                   className=&quot;w-full pl-10 pr-4 py-2 bg-gray-800/50 border border-gray-700/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50&quot;
                 />
               </div>
-              
+
               {/* Search Results */}
               {searchQuery && (
                 <div className=&quot;mt-4 space-y-2&quot;>
                   <h4 className=&quot;text-sm font-medium text-gray-300&quot;>Search Results</h4>
                   {filteredServices.length > 0 ? (
                     <div className=&quot;space-y-1&quot;>
-                      {filteredServices.slice(0, 5).map((service) => (
+                      {filteredServices.slice(0, 5).map(service) => (
                         <Link
                           key={service.name}
                           href={service.href}
@@ -358,7 +357,7 @@ const supportLinks = [
                           <div className=&quot;text-xs text-gray-500&quot;>
                             {service.description}                          </div>
                         </a>
-                      ))}
+                      )}
                       {filteredServices.length > 5 && (
                         <div className=&quot;text-xs text-cyan-400 text-center&quot;>                          +{filteredServices.length - 5} more results
                         </div>
@@ -372,7 +371,7 @@ const supportLinks = [
                 </div>;
               )}
             </div>;
-;
+
             {/* Contact Information */}
             <div className=&quot;p-6 border-b border-cyan-500/30&quot;>
               <h3 className=&quot;text-lg font-semibold text-white mb-4 flex items-center space-x-2&quot;>
@@ -405,20 +404,20 @@ const supportLinks = [
                 <span>Company Stats</span>
               </h3>
               <div className=&quot;grid grid-cols-2 gap-4&quot;>
-                {stats.map((stat, index) => (
+                {stats.map(stat, index) => (
                   <motion.div
                     key={stat.label}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.3, delay: index * 0.1 }}
+                    initial={ opacity: 0, scale: 0.8 }
+                    animate={ opacity: 1, scale: 1 }
+                    transition={ duration: 0.3, delay: index * 0.1 }
                     className=&quot;text-center p-3 bg-gray-800/30 rounded-lg border border-gray-700/30&quot;
                   >
                     <div className=&quot;text-2xl font-bold text-white mb-1&quot;>{stat.value}</div>
                     <div className=&quot;text-xs text-gray-400&quot;>{stat.label}</div>                  </motion.div>
-                ))}
+                )}
               </div>;
             </div>;
-;
+
             {/* Quick Links */}
             <div className=&quot;p-6 border-b border-cyan-500/30&quot;>
               <h3 className=&quot;text-lg font-semibold text-white mb-4 flex items-center space-x-2&quot;>
@@ -426,7 +425,7 @@ const supportLinks = [
                 <span>Quick Links</span>
               </h3>
               <div className=&quot;space-y-2&quot;>
-                {quickLinks.map((link) => (
+                {quickLinks.map(link) => (
                   <Link
                     key={link.name}
                     href={link.href}
@@ -439,10 +438,10 @@ const supportLinks = [
                     <span className=&quot;text-gray-300 group-hover:text-white transition-colors duration-200&quot;>
                       {link.name}                    </span>
                   </a>
-                ))}
+                )}
               </div>;
             </div>;
-;
+
             {/* Service Categories */}
             <div className=&quot;p-6 border-b border-cyan-500/30&quot;>
               <h3 className=&quot;text-lg font-semibold text-white mb-4 flex items-center space-x-2&quot;>
@@ -450,7 +449,7 @@ const supportLinks = [
                 <span>Service Categories</span>
               </h3>
               <div className=&quot;space-y-2&quot;>
-                {sidebarItems.map((item) => (
+                {sidebarItems.map(item) => (
                   <div key={item.name}>
                     <button
                       onClick={() => toggleCategory(item.name)}
@@ -465,19 +464,19 @@ const supportLinks = [
                       </div>
                       <ChevronRight 
                         className={_`w-4 h-4 text-gray-400 transition-transform duration-200 ${
-                          expandedCategory === item.name ? 'rotate-90' : ''}`} 
+                          expandedCategory = = item.name ? 'rotate-90' : ''}`} 
                       />
                     </button>
-                    
+
                     <AnimatePresence>
-                      {expandedCategory === item.name && (
+                      {expandedCategory = = item.name && (
                         <motion.div
-                          initial={{ opacity: 0, height: 0 }}
-                          animate={{ opacity: 1, height: 'auto' }}
-                          exit={{ opacity: 0, height: 0 }}
-                          transition={{ duration: 0.2 }}
+                          initial={ opacity: 0, height: 0 }
+                          animate={ opacity: 1, height: 'auto' }
+                          exit={ opacity: 0, height: 0 }
+                          transition={ duration: 0.2 }
                           className=&quot;ml-8 mt-2 space-y-1&quot;                        >
-                          {_item.children?.map((child) => (
+                          {_item.children?.map(child) => (
                             <Link
                               key={child.name}
                               href={child.href}
@@ -492,15 +491,15 @@ const supportLinks = [
                                 </span>
                               )}
                             </a>
-                          ))}
+                          )}
                         </motion.div>;
                       )}
                     </AnimatePresence>;
                   </div>;
-                ))}
+                )}
               </div>;
             </div>;
-;
+
             {/* Quick Links */}
             <div className=&quot;p-6 border-b border-cyan-500/30&quot;>
               <h3 className=&quot;text-lg font-semibold text-white mb-4 flex items-center space-x-2&quot;>
@@ -567,33 +566,33 @@ const supportLinks = [
       <div className=&quot;absolute top-1/2 right-4 w-1 h-1 bg-blue-400 rounded-full animate-pulse delay-1000&quot;></div>
       <div className=&quot;absolute bottom-1/4 left-4 w-1 h-1 bg-purple-400 rounded-full animate-pulse delay-2000&quot;></div>    </motion.aside>
   )
-},
+,
 
 export default EnhancedSidebar2025,</div> <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg blur-lg opacity-50" ></div> </div> <div> <h2 className="text-lg font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent" > Zion Tech Group </h2> <p className="text-xs text-gray-400" >Navigation</p> </div> </div> </div> </div> </div> {
   section.badge 
-}</span>) 
-}</div>) : (<ChevronRight className="w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors duration-200" />) 
-}</button> <AnimatePresence> > <CloseIcon className="w-5 h-5" /> </button> </div> </div> </a>) ) 
-}+ {
+</span>) 
+</div>) : (<ChevronRight className="w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors duration-200" />) 
+</button> <AnimatePresence><CloseIcon className="w-5 h-5" /> </button> </div> </div> </a>) 
++ {
   filteredServices.length - 5 
-}more results </div>) 
-}</div>) : (<div className="text-sm text-gray-500 text-center py-2" > No services found </div>) 
-}</div>) 
-}</div> </div> </div> </div> </motion.div>) ) 
-}</div> </div> </span> </a>) ) 
-}</div> </div> </span> </div> <ChevronRight className= {
+more results </div>) 
+</div>) : (<div className="text-sm text-gray-500 text-center py-2" > No services found </div>) 
+</div>) 
+</div> </div> </div> </div> </motion.div>) 
+</div> </div> </span> </a>) 
+</div> </div> </span> </div> <ChevronRight className= {
   `w-4 h-4 text-gray-400 transition-transform duration-200 $ {
-  expandedCategory === item.name ? 'rotate-90' : '' 
-}` 
-}/> </button> <AnimatePresence> > {
-  item.children?.map ( (child) => (<Link key= {
+  expandedCategory = = item.name ? 'rotate-90' : '' 
+` 
+/> </button> <AnimatePresence>{
+  item.children?.map (child) => (<Link key= {
   child.name 
-}{
+{
   child.badge 
-}</span>) 
-}</a>) ) 
-}</motion.div>) 
-}</AnimatePresence> </div>) ) 
-}</div> </div> <span>Quick Links</span> </h3> <div className="space-y-2" > <Link > <div className="font-medium text-gray-300 group-hover:text-white transition-colors duration-200" > Contact Us </div> <div className="text-xs text-gray-500" >Get in touch with our team</div> </a> <Link > <div className="font-medium text-gray-300 group-hover:text-white transition-colors duration-200" > View Pricing </div> <div className="text-xs text-gray-500" >Explore our pricing plans</div> </a> <Link > <div className="font-medium text-gray-300 group-hover:text-white transition-colors duration-200" > About Us </div> <div className="text-xs text-gray-500" >Learn about Zion Tech Group</div> </a> </div> </div> <div className="text-center p-3 bg-gray-800/50 rounded-lg" > <div className="text-lg font-bold text-blue-400" >1000+</div> <div className="text-xs text-gray-400" >Clients</div> </div> <div className="text-center p-3 bg-gray-800/50 rounded-lg" > <div className="text-lg font-bold text-purple-400" >24/7</div> <div className="text-xs text-gray-400" >Support</div> </div> <div className="text-center p-3 bg-gray-800/50 rounded-lg" > <div className="text-lg font-bold text-green-400" >99.9%</div> <div className="text-xs text-gray-400" >Uptime</div> </div> </div> </div> <Link href="/contact" className="block w-full text-center px-4 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25" > <span>Get Started Today</span> <ArrowRight className="w-4 h-4 ml-2 inline" /> </a> </div> </div> </motion.aside>) 
-};
+</span>) 
+</a>) 
+</motion.div>) 
+</AnimatePresence> </div>) 
+</div> </div> <span>Quick Links</span> </h3> <div className="space-y-2" > <Link > <div className="font-medium text-gray-300 group-hover:text-white transition-colors duration-200" > Contact Us </div> <div className="text-xs text-gray-500" >Get in touch with our team</div> </a> <Link > <div className="font-medium text-gray-300 group-hover:text-white transition-colors duration-200" > View Pricing </div> <div className="text-xs text-gray-500" >Explore our pricing plans</div> </a> <Link > <div className="font-medium text-gray-300 group-hover:text-white transition-colors duration-200" > About Us </div> <div className="text-xs text-gray-500" >Learn about Zion Tech Group</div> </a> </div> </div> <div className="text-center p-3 bg-gray-800/50 rounded-lg" > <div className="text-lg font-bold text-blue-400" >1000+</div> <div className="text-xs text-gray-400" >Clients</div> </div> <div className="text-center p-3 bg-gray-800/50 rounded-lg" > <div className="text-lg font-bold text-purple-400" >24/7</div> <div className="text-xs text-gray-400" >Support</div> </div> <div className="text-center p-3 bg-gray-800/50 rounded-lg" > <div className="text-lg font-bold text-green-400" >99.9%</div> <div className="text-xs text-gray-400" >Uptime</div> </div> </div> </div> <Link href="/contact" className="block w-full text-center px-4 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25" > <span>Get Started Today</span> <ArrowRight className="w-4 h-4 ml-2 inline" /> </a> </div> </div> </motion.aside>) 
+;
 export default EnhancedSidebar2025;

@@ -81,7 +81,6 @@ export default function HomePage() {
       </section>
     </div>
   );
-}
 
 function Card({ title, description, href, icon }: { title: string; description: string; href: string; icon: string }) {
   return (
@@ -94,7 +93,6 @@ function Card({ title, description, href, icon }: { title: string; description: 
       <p className="text-gray-600 leading-relaxed">{description}</p>
     </Link>
   );
-}
 
 function FeatureCard({ title, description }: { title: string; description: string }) {
   return (
@@ -103,7 +101,7 @@ function FeatureCard({ title, description }: { title: string; description: strin
       <p className="text-gray-600">{description}</p>
     </div>
   );
-}
+
 import Link from 'next / link'; export default /**
  * HomePage - Function description
  */

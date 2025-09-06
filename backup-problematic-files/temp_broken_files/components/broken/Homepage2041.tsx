@@ -22,7 +22,7 @@ import {
   Users,
   Award,
   Clock
-} from 'lucide-react',
+ from 'lucide-react',
 import Link from 'next/link',
 import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026',
 import { innovative2041MicroSaasServices } from '../data/innovative-2041-micro-saas-services',
@@ -32,10 +32,9 @@ const Homepage2041: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState(''),
 
   const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault(),    if (searchQuery.trim()) {
-      window.location.href = `/services?search=${encodeURIComponent(searchQuery.trim())}`
-    }
-  },
+    e.preventDefault(),    if (searchQuery.trim() {
+      window.location.href = `/services?search=${encodeURIComponent(searchQuery.trim()}`
+    },
 
   const featuredServices = [
     ...innovative2041MicroSaasServices.filter(s => s.popular).slice(0, 3),
@@ -90,36 +89,36 @@ className=&quot;min-h-screen flex items-center justify-center px-4 relative over
             <div className=&quot;absolute top-20 left-20 w-96 h-96 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse&quot;></div>
             <div className=&quot;absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000&quot;></div>
             <div className=&quot;absolute top-1/2 left-1/2 w-72 h-72 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 rounded-full blur-3xl animate-pulse delay-500&quot;></div>
-            
+
             {/* Enhanced particle system */}
             <div className=&quot;absolute inset-0&quot;>
-              {[...Array(12)].map((_, i) => (
+              {[...Array(12)].map(_, i) => (
                 <motion.div,
 key={i}
                   className=&quot;absolute w-2 h-2 bg-cyan-400/40 rounded-full&quot;
-                  animate={{
+                  animate={
                     x: [0, 60, 0],
                     y: [0, -60, 0],
                     opacity: [0, 0.7, 0],
-                    scale: [0.5, 1, 0.5]}}
-                  transition={{
+                    scale: [0.5, 1, 0.5]}
+                  transition={
                     duration: 5 + i * 0.3,
                     repeat: Infinity,
                     delay: i * 0.2,
                     ease: &quot;easeInOut&quot
-                  }}
-                  style={{                    left: `${Math.random() * 100}%`,
-                    top: `${Math.random() * 100}%`}}
+                  }
+                  style={                    left: `${Math.random() * 100}%`,
+                    top: `${Math.random() * 100}%`}
                 />
-              ))}
+              )}
             </div>;
           </div>;
-;
+
           {/* Hero Content */}
           <div className=&quot;text-center max-w-7xl mx-auto relative z-10&quot;>            <motion.div,
-initial={_{ opacity: 0, y: 50}}
-              animate={_{ opacity: 1, y: 0}}
-              transition={_{ duration: 0.8}}
+initial={_{ opacity: 0, y: 50}
+              animate={_{ opacity: 1, y: 0}
+              transition={_{ duration: 0.8}
             >
               <h1,
 id=&quot;hero-heading&quot;
@@ -133,7 +132,7 @@ id=&quot;hero-heading&quot;
                   Future is Now
                 </span>
               </h1>
-              
+
               <p className=&quot;text-xl md:text-2xl lg:text-3xl text-gray-300 mb-12 max-w-5xl mx-auto leading-relaxed&quot;>
                 Experience the revolution of technology with our cutting-edge 2041 services. 
                 From AI consciousness evolution to quantum space mining, we're redefining what's possible.
@@ -142,9 +141,9 @@ id=&quot;hero-heading&quot;
               {_/* Search Bar */}
               <motion.div,
 className=&quot;max-w-3xl mx-auto mb-12&quot;
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.8, delay: 0.2 }
               >
                 <form onSubmit={handleSearch} className=&quot;relative&quot;>
                   <input,
@@ -165,9 +164,9 @@ type=&quot;submit&quot;
               {_/* CTA Buttons */}
               <motion.div,
 className=&quot;flex flex-col sm:flex-row gap-6 justify-center items-center&quot;
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}              >
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.8, delay: 0.4 }              >
                 <Link,
 href=&quot;/2041-futuristic-services-showcase&quot;
                   className=&quot;px-10 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-2xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-3&quot;
@@ -176,7 +175,7 @@ href=&quot;/2041-futuristic-services-showcase&quot;
                   Explore 2041 Services
                   <ArrowRight className=&quot;w-5 h-5&quot; />
                 </a>
-                
+
                 <Link,
 href=&quot;/contact&quot;
                   className=&quot;px-10 py-4 border-2 border-cyan-500/50 text-cyan-400 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300 flex items-center gap-3&quot;
@@ -194,37 +193,37 @@ href=&quot;/contact&quot;
           <div className=&quot;max-w-7xl mx-auto&quot;>
             <motion.div,
 className=&quot;grid grid-cols-2 md:grid-cols-4 gap-8&quot;
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}            >
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }            >
               {stats.map(_(stat, index) => (
                 <motion.div,
 key={stat.label}
                   className=&quot;text-center&quot;
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}                >
+                  initial={ opacity: 0, y: 20 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.5, delay: index * 0.1 }
+                  viewport={ once: true }                >
                   <div className=&quot;w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4&quot;>
                     <stat.icon className=&quot;w-8 h-8 text-white&quot; />
                   </div>
                   <div className=&quot;text-3xl md:text-4xl font-bold text-white mb-2&quot;>{stat.number}</div>
                   <div className=&quot;text-gray-400&quot;>{stat.label}</div>                </motion.div>
-              ))}
+              )}
             </motion.div>;
           </div>;
         </section>;
-;
+
         {/* Featured Services Section */}
         <section className=&quot;py-20 px-4 bg-gradient-to-b from-black to-gray-900/50&quot;>
           <div className=&quot;max-w-7xl mx-auto&quot;>
             <motion.div,
 className=&quot;text-center mb-16&quot;
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}            >
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }            >
               <h2 className=&quot;text-5xl md:text-6xl font-bold text-white mb-6&quot;>
                 Revolutionary 2041 Services
               </h2>
@@ -235,29 +234,29 @@ className=&quot;text-center mb-16&quot;
 
             <motion.div,
 className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}            >
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8, delay: 0.2 }
+              viewport={ once: true }            >
               {featuredServices.map(_(service, index) => (
                 <motion.div,
 key={service.id}
-                  initial={_{ opacity: 0, y: 30}}
-                  whileInView={_{ opacity: 1, y: 0}}
-                  transition={_{ duration: 0.5, delay: 0.4 + index * 0.1}}
-                  viewport={_{ once: true}}
+                  initial={_{ opacity: 0, y: 30}
+                  whileInView={_{ opacity: 1, y: 0}
+                  transition={_{ duration: 0.5, delay: 0.4 + index * 0.1}
+                  viewport={_{ once: true}
                 >
                   <UltraFuturisticServiceCard2026 service={service} />
                 </motion.div>
-              ))}
+              )}
             </motion.div>
 
             <motion.div,
 className=&quot;text-center mt-12&quot;
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              viewport={{ once: true }}            >
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8, delay: 0.6 }
+              viewport={ once: true }            >
               <Link,
 href=&quot;/2041-futuristic-services-showcase&quot;
                 className=&quot;inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-2xl font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105&quot;
@@ -275,10 +274,10 @@ href=&quot;/2041-futuristic-services-showcase&quot;
           <div className=&quot;max-w-7xl mx-auto&quot;>
             <motion.div,
 className=&quot;text-center mb-16&quot;
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}            >
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }            >
               <h2 className=&quot;text-5xl md:text-6xl font-bold text-white mb-6&quot;>
                 Leading the Future
               </h2>
@@ -289,43 +288,43 @@ className=&quot;text-center mb-16&quot;
 
             <motion.div,
 className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8&quot;
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}            >
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8, delay: 0.2 }
+              viewport={ once: true }            >
               {testimonials.map(_(testimonial, index) => (
                 <motion.div,
 key={testimonial.name}
                   className=&quot;bg-gradient-to-br from-gray-900/50 to-black/50 border border-cyan-500/30 rounded-3xl p-8 backdrop-blur-sm&quot;
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.5, delay: 0.4 + index * 0.1 }
+                  viewport={ once: true }
                 >
                   <div className=&quot;text-4xl mb-4&quot;>{testimonial.avatar}</div>
                   <p className=&quot;text-gray-300 mb-6 leading-relaxed&quot;>{testimonial.content}</p>
                   <div className=&quot;flex items-center gap-2 mb-3&quot;>
-                    {[...Array(testimonial.rating)].map((_, i) => (
+                    {[...Array(testimonial.rating)].map(_, i) => (
                       <Star key={i} className=&quot;w-5 h-5 text-yellow-400 fill-current&quot; />
-                    ))}
+                    )}
                   </div>
                   <div className=&quot;font-semibold text-white&quot;>{testimonial.name}</div>
                   <div className=&quot;text-cyan-400&quot;>{testimonial.role}</div>
                   <div className=&quot;text-gray-500 text-sm&quot;>{testimonial.company}</div>                </motion.div>
-              ))}
+              )}
             </motion.div>;
           </div>;
         </section>;
-;
+
         {/* CTA Section */}
         <section className=&quot;py-20 px-4&quot;>
           <div className=&quot;max-w-4xl mx-auto text-center&quot;>
             <motion.div,
 className=&quot;bg-gradient-to-r from-black/50 to-gray-900/50 border border-cyan-500/30 rounded-3xl p-16 backdrop-blur-sm&quot;
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}            >
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }            >
               <h2 className=&quot;text-5xl md:text-6xl font-bold text-white mb-8&quot;>
                 Ready to Shape the Future?
               </h2>
@@ -354,61 +353,54 @@ href=&quot;/2041-futuristic-services-showcase&quot;
       </main>
     </Layout>
   )
-},
+,
 
 export default Homepage2041,  Math.random () * 100 
-}%`;
+%`;
 top: `$ {
   Math.random () * 100 
-}%` 
-}
-}/>) ) 
-}</div> </div> <motion.div initial= {
-  {
+%` 
+
+/>) 
+</div> </div> <motion.div initial= {
   opacity: 0, y: 50 
-}
-}animate= {
-  {
+
+animate= {
   opacity: 1, y: 0 
-}
-}transition= {
-  {
+
+transition= {
   duration: 0.8 
-}
-}> <h1 id="hero-heading" className="text-6xl md:text-8xl lg:text-9xl font-bold mb-8 leading-tight" > <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent" > 2041 </span> <br /> <span className="text-white" > Future is Now </span> </h1> <p className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-12 max-w-5xl mx-auto leading-relaxed" > Experience the revolution of technology with our cutting-edge 2041 services. From AI consciousness evolution to quantum space mining, we're redefining what's possible. </p> {
+
+> <h1 id="hero-heading" className="text-6xl md:text-8xl lg:text-9xl font-bold mb-8 leading-tight" > <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent" > 2041 </span> <br /> <span className="text-white" > Future is Now </span> </h1> <p className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-12 max-w-5xl mx-auto leading-relaxed" > Experience the revolution of technology with our cutting-edge 2041 services. From AI consciousness evolution to quantum space mining, we're redefining what's possible. </p> {
   /* Search Bar */ 
-}<motion.div /> <button type="submit" className="absolute right-3 top-3 px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-2xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 font-semibold" > Explore Future </button> </form> </motion.div> {
+<motion.div /> <button type="submit" className="absolute right-3 top-3 px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-2xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 font-semibold" > Explore Future </button> </form> </motion.div> {
   /* CTA Buttons */ 
-}<motion.div > <Link href="/2041-futuristic-services-showcase" className="px-10 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-2xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-3" > <Rocket className="w-6 h-6" /> Explore 2041 Services <ArrowRight className="w-5 h-5" /> </a> <Link href="/contact" className="px-10 py-4 border-2 border-cyan-500/50 text-cyan-400 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300 flex items-center gap-3" > <Users className="w-6 h-6" /> Start Your Journey </a> </motion.div> </motion.div> </div> </section> > {
-  stats.map ( (stat, index) => (<motion.div key= {
+<motion.div > <Link href="/2041-futuristic-services-showcase" className="px-10 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-2xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-3" > <Rocket className="w-6 h-6" /> Explore 2041 Services <ArrowRight className="w-5 h-5" /> </a> <Link href="/contact" className="px-10 py-4 border-2 border-cyan-500/50 text-cyan-400 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300 flex items-center gap-3" > <Users className="w-6 h-6" /> Start Your Journey </a> </motion.div> </motion.div> </div> </section>{
+  stats.map (stat, index) => (<motion.div key= {
   stat.label 
-}> <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4" > <stat.icon className="w-8 h-8 text-white" /> </div> </motion.div>) ) 
-}</motion.div> </div> </section> > <h2 className="text-5xl md:text-6xl font-bold text-white mb-6" > Revolutionary 2041 Services </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Experience the future of technology with our cutting-edge services that are redefining industries and pushing the boundaries of what's possible. </p> </motion.div> <motion.div > {
-  featuredServices.map ( (service, index) => (<motion.div key= {
+> <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4" > <stat.icon className="w-8 h-8 text-white" /> </div> </motion.div>) 
+</motion.div> </div> </section><h2 className="text-5xl md:text-6xl font-bold text-white mb-6" > Revolutionary 2041 Services </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Experience the future of technology with our cutting-edge services that are redefining industries and pushing the boundaries of what's possible. </p> </motion.div> <motion.div > {
+  featuredServices.map (service, index) => (<motion.div key= {
   service.id 
-}initial= {
-  {
+initial= {
   opacity: 0, y: 30 
-}
-}whileInView= {
-  {
+
+whileInView= {
   opacity: 1, y: 0 
-}
-}transition= {
-  {
+
+transition= {
   duration: 0.5, delay: 0.4 + index * 0.1 
-}
-}viewport= {
-  {
+
+viewport= {
   once: true 
-}
-}> <UltraFuturisticServiceCard2026 service= {
+
+> <UltraFuturisticServiceCard2026 service= {
   service 
-}/> </motion.div>) ) 
-}</motion.div> <motion.div > <Link href="/2041-futuristic-services-showcase" className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-2xl font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105" > <Eye className="w-5 h-5" /> View All 2041 Services <ArrowRight className="w-5 h-5" /> </a> </motion.div> </div> </section> > <h2 className="text-5xl md:text-6xl font-bold text-white mb-6" > Leading the Future </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > See how industry leaders are transforming their businesses with our revolutionary 2041 services. </p> </motion.div> <motion.div > {
-  testimonials.map ( (testimonial, index) => (<motion.div key= {
+/> </motion.div>) 
+</motion.div> <motion.div > <Link href="/2041-futuristic-services-showcase" className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-2xl font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105" > <Eye className="w-5 h-5" /> View All 2041 Services <ArrowRight className="w-5 h-5" /> </a> </motion.div> </div> </section><h2 className="text-5xl md:text-6xl font-bold text-white mb-6" > Leading the Future </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > See how industry leaders are transforming their businesses with our revolutionary 2041 services. </p> </motion.div> <motion.div > {
+  testimonials.map (testimonial, index) => (<motion.div key= {
   testimonial.name 
-}</motion.div>) ) 
-}</motion.div> </div> </section> > <h2 className="text-5xl md:text-6xl font-bold text-white mb-8" > Ready to Shape the Future? </h2> <p className="text-xl text-gray-300 mb-12 leading-relaxed" > Join the technological revolution with our cutting-edge 2041 services. Transform your business, accelerate innovation, and lead the future of technology. </p> <Link href="/contact" className="px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-2xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-3" > <Sparkles className="w-6 h-6" /> Start Your Journey </a> <Link href="/2041-futuristic-services-showcase" className="px-10 py-5 border-2 border-cyan-500/50 text-cyan-400 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center gap-3" > <Target className="w-6 h-6" /> Explore Services </a> </div> </motion.div> </div> </section> </main> </Layout>) 
-};
+</motion.div>) 
+</motion.div> </div> </section><h2 className="text-5xl md:text-6xl font-bold text-white mb-8" > Ready to Shape the Future? </h2> <p className="text-xl text-gray-300 mb-12 leading-relaxed" > Join the technological revolution with our cutting-edge 2041 services. Transform your business, accelerate innovation, and lead the future of technology. </p> <Link href="/contact" className="px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-2xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-3" > <Sparkles className="w-6 h-6" /> Start Your Journey </a> <Link href="/2041-futuristic-services-showcase" className="px-10 py-5 border-2 border-cyan-500/50 text-cyan-400 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center gap-3" > <Target className="w-6 h-6" /> Explore Services </a> </div> </motion.div> </div> </section> </main> </Layout>) 
+;
 export default Homepage2041;

@@ -7,12 +7,12 @@ import {
   CheckCircle, Star, Zap, Shield, Globe, Cpu, Brain
   Atom, Rocket, Target, Microscope, DollarSign, Phone
   Mail, MapPin, ArrowRight, TrendingUp, Users, Briefcase
-} from 'lucide-react'
+ from 'lucide-react'
 import { 
   CheckCircle, Star, Zap, Shield, Globe, Cpu, Brain, 
   Atom, Rocket, Target, Microscope, DollarSign, Phone, 
   Mail, MapPin, ArrowRight, TrendingUp, Users, Briefcase
-} from 'lucide-react';
+ from 'lucide-react';
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
 import FuturisticAnimatedBackground2029 from '../components/ui/FuturisticAnimatedBackground2029';
@@ -24,7 +24,7 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
-}
+
 export default function ComprehensivePricing2029() {
   const [selectedCategory, setSelectedCategory] = useState('all')
   const [billingCycle, setBillingCycle] = useState('monthly')
@@ -41,27 +41,26 @@ export default function ComprehensivePricing2029() {
     { id: 'emerging-tech', name: 'Emerging Tech', icon: Atom, count: emergingTechBreakthroughServices2029.length }
     { id: 'business-solutions', name: 'Business Solutions', icon: Target, count: practicalBusinessSolutionServices2029.length }
   ]
-  const filteredServices = selectedCategory === 'all'
+  const filteredServices = selectedCategory = = 'all'
     ? allServices
     : allServices.filter(service => {
-        if (selectedCategory === 'ai-autonomous') {
-          return service.category.some(cat => cat.includes('AI') && cat.includes('Autonomous'))
-        } else if (selectedCategory === 'emerging-tech') {
-          return service.category.some(cat => cat.includes('Quantum') |cat.includes('Biotech') |cat.includes('Space'))
-        } else if (selectedCategory === 'business-solutions') {
-          return service.category.some(cat => cat.includes('Business') |cat.includes('Marketing') |cat.includes('Education'))
+        if (selectedCategory = = 'ai-autonomous') {
+          return service.category.some(cat => cat.includes('AI') && cat.includes('Autonomous')
+        } else if (selectedCategory = = 'emerging-tech') {
+          return service.category.some(cat => cat.includes('Quantum') |cat.includes('Biotech') |cat.includes('Space')
+        } else if (selectedCategory = = 'business-solutions') {
+          return service.category.some(cat => cat.includes('Business') |cat.includes('Marketing') |cat.includes('Education')
         }
         return true
       })
   const getPrice = (price: string) => {
-    const numericPrice = parseInt(price.replace(/[^0-9]/g, ''))
-    return billingCycle === 'monthly' ? numericPrice : Math.round(numericPrice * 0.8)
-  }
+    const numericPrice = parseInt(price.replace(/[^0-9]/g, '')
+    return billingCycle = = 'monthly' ? numericPrice : Math.round(numericPrice * 0.8)
   };
 
   const getBillingText = (price: string) => {
-    const numericPrice = parseInt(price.replace(/[^0-9]/g, ''))
-    if (billingCycle === 'monthly') {
+    const numericPrice = parseInt(price.replace(/[^0-9]/g, '')
+    if (billingCycle = = 'monthly') {
       return `$${numericPrice.toLocaleString()}/month`
 import React, { useState } from 'react',
 import Head from 'next / head',
@@ -71,7 +70,7 @@ import {
   CheckCircle, Star, Zap, Shield, Globe, Cpu, Brain,
   Atom, Rocket, Target, Microscope, DollarSign, Phone,
   Mail, MapPin, ArrowRight, TrendingUp, Users, Briefcase;
-} from 'lucide-react',
+ from 'lucide-react',
 import UltraFuturisticNavigation2029 from '../components / layout / UltraFuturisticNavigation2029',
 import UltraFuturisticFooter2029 from '../components / layout / UltraFuturisticFooter2029',
 import FuturisticAnimatedBackground2029 from '../components / ui / FuturisticAnimatedBackground2029',
@@ -83,7 +82,7 @@ const contact_info = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com';
-},
+,
 export default /**
  * ComprehensivePricing2029 - Function description
  */
@@ -101,42 +100,41 @@ function ComprehensivePricing2029() {
     { id: 'emerging - tech', name: 'Emerging Tech', icon: Atom, count: emergingTechBreakthroughServices2029.length },
     { id: 'business - solutions', name: 'Business Solutions', icon: Target, count: practicalBusinessSolutionServices2029.length }
   ],
-  const filtered_services = selected_category === 'all';
+  const filtered_services = selected_category = = 'all';
     ? all_services;
     : all_services.filter (service => {
         // Check condition
 if ( {) {
   $2
-}
-          return service.category.some (cat => cat.includes ('AI') && cat.includes ('Autonomous'));
+
+          return service.category.some (cat => cat.includes ('AI') && cat.includes ('Autonomous');
         } else // Check condition
 if ( {) {
   $2
-}
-          return service.category.some (cat => cat.includes ('Quantum') || cat.includes ('Biotech') || cat.includes ('Space'));
+
+          return service.category.some (cat => cat.includes ('Quantum') || cat.includes ('Biotech') || cat.includes ('Space');
         } else // Check condition
 if ( {) {
   $2
-}
-          return service.category.some (cat => cat.includes ('Business') || cat.includes ('Marketing') || cat.includes ('Education'));
+
+          return service.category.some (cat => cat.includes ('Business') || cat.includes ('Marketing') || cat.includes ('Education');
         }
         return true;
       }),
   const get_price = (price: string) =>: any {
-    const numeric_price = parse_int (price.replace (/[^0 - 9]/g, '')),
-    return billing_cycle === 'monthly' ? numeric_price : Math.round (numeric_price * 0.8);
+    const numeric_price = parse_int (price.replace (/[^0 - 9]/g, ''),
+    return billing_cycle = = 'monthly' ? numeric_price : Math.round (numeric_price * 0.8);
   },
   const getBillingText = (price: string) =>: any {
-    const numeric_price = parse_int (price.replace (/[^0 - 9]/g, '')),
+    const numeric_price = parse_int (price.replace (/[^0 - 9]/g, ''),
     // Check condition
 if ( {) {
   $2
-}
+
       return `$${numeric_price.toLocaleString ()}/month`;
     } else {
       return `$${Math.round(numericPrice * 0.8).toLocaleString()}/month (billed annually)`
     }
-  }
 
   return (
     <div className="min-h-screen bg-black text-white relative">
@@ -152,9 +150,9 @@ if ( {) {
       <section className="relative overflow-hidden py-32">
         <div className="relative z-10 container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
           >
             <h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-8">
               2029 Comprehensive Pricing
@@ -168,26 +166,26 @@ if ( {) {
             <div className="flex items-center justify-center gap-4 mb-12">
               <span className="text-gray-400">Monthly</span>
               <button
-                onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'annual' : 'monthly')}
+                onClick={() => setBillingCycle(billingCycle = = 'monthly' ? 'annual' : 'monthly')}
                 className={`relative w-16 h-8 bg-gray-700 rounded-full transition-colors duration-300 ${
-                  billingCycle === 'annual' ? 'bg-purple-600' : ''
+                  billingCycle = = 'annual' ? 'bg-purple-600' : ''
                 }`}
               >
                 <div
                   className={`absolute top-1 w-6 h-6 bg-white rounded-full transition-transform duration-300 ${
-                    billingCycle === 'annual' ? 'translate-x-8' : 'translate-x-1'
+                    billingCycle = = 'annual' ? 'translate-x-8' : 'translate-x-1'
             {/* Billing Toggle */}
             <div className="flex items - center justify - center gap - 4 mb - 12">;
               <span className="text - gray - 400">Monthly</span>;
               <button;
-                on_click={() => setBillingCycle (billing_cycle === 'monthly' ? 'annual' : 'monthly')}
+                on_click={() => setBillingCycle (billing_cycle = = 'monthly' ? 'annual' : 'monthly')}
                 className={`relative w - 16 h - 8 bg - gray - 700 rounded - full transition - colors duration - 300 ${
-                  billing_cycle === 'annual' ? 'bg - purple - 600' : '';
+                  billing_cycle = = 'annual' ? 'bg - purple - 600' : '';
                 }`}
               >;
                 <div;
                   className={`absolute top - 1 w - 6 h - 6 bg - white rounded - full transition - transform duration - 300 ${
-                    billing_cycle === 'annual' ? 'translate - x-8' : 'translate - x-1';
+                    billing_cycle = = 'annual' ? 'translate - x-8' : 'translate - x-1';
                   }`}
                 />
               </button>
@@ -200,17 +198,17 @@ if ( {) {
       <section className="py-12 bg-gradient-to-b from-black to-gray-900">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-center gap-4">
-            {categories.map((category) => (
+            {categories.map(category) => (
               <motion.button
                 key={category.id}
                 on_click={() => setSelectedCategory (category.id)}
                 className={`flex items - center gap - 3 px - 6 py - 3 rounded - full border - 2 transition - all duration - 300 ${
-                  selected_category === category.id;
+                  selected_category = = category.id;
                     ? 'border - purple - 500 bg - purple - 500 / 20 text - purple - 300';
                     : 'border - gray - 600 text - gray - 400 hover:border - gray - 500 hover:text - gray - 300';
                 }`}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={ scale: 1.05 }
+                whileTap={ scale: 0.95 }
               >
                 <category.icon className="w-5 h-5" />
                 <span>{category.name}</span>
@@ -218,7 +216,7 @@ if ( {) {
                   {category.count}
                 </span>
               </motion.button>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -227,17 +225,17 @@ if ( {) {
       <section className="py-20 bg-black">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
       {/* Services Grid */}
       <section className="py - 20 bg - black">;
         <div className="container mx - auto px - 4">;
           <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }} className="text-center mb-16">
+            initial={ opacity: 0, coordinate_y: 30 }
+            whileInView={ opacity: 1, coordinate_y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true } className="text-center mb-16">
             <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6">
               Service Pricing
             </h2>
@@ -247,20 +245,20 @@ if ( {) {
             </p>
           </motion.div>
           <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
-            {filteredServices.map((service, index) => (
+            {filteredServices.map(service, index) => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }} className="relative group">
+                initial={ opacity: 0, y: 30 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.8, delay: index * 0.1 }
+                viewport={ once: true } className="relative group">
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-blue-600/10 rounded-2xl blur-xl group-hover:opacity-100 transition-opacity duration-500"></div>
                 <div className="relative bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 hover:border-gray-500 transition-all duration-500 h-full">
                 key={service.id}
-                initial={{ opacity: 0, coordinate_y: 30 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }} className="relative group">;
+                initial={ opacity: 0, coordinate_y: 30 }
+                whileInView={ opacity: 1, coordinate_y: 0 }
+                transition={ duration: 0.8, delay: index * 0.1 }
+                viewport={ once: true } className="relative group">;
                 <div className="absolute inset - 0 bg - gradient - to - r from - purple - 600 / 10 to - blue - 600 / 10 rounded - 2xl blur - xl group - hover:opacity - 100 transition - opacity duration - 500"></div>;
                 <div className="relative bg - gray - 900 / 50 backdrop - blur - sm border border - gray - 700 rounded - 2xl p - 8 hover:border - gray - 500 transition - all duration - 500 h - full">;
                   {/* Service Header */}
@@ -277,7 +275,7 @@ if ( {) {
                       {getBillingText(service.price)}
                     </div>
                     <div className="text-sm text-gray-400">
-                      {billingCycle === 'annual' && (
+                      {billingCycle = = 'annual' && (
                         <span className="text-green-400">Save 20% with annual billing</span>
                       )}
                     </div>
@@ -285,40 +283,40 @@ if ( {) {
 
                   {/* Categories */}
                   <div className="flex flex-wrap gap-2 mb-6 justify-center">
-                    {service.category.slice(0, 3).map((cat, catIndex) => (
+                    {service.category.slice(0, 3).map(cat, catIndex) => (
                       <span
                         key={catIndex} className="px-3 py-1 bg-gray-800 text-gray-300 text-sm rounded-full border border-gray-600">
                   {/* Categories */}
                   <div className="flex flex - wrap gap - 2 mb - 6 justify - center">;
-                    {service.category.slice (0, 3).map ((cat, cat_index) => (
+                    {service.category.slice (0, 3).map (cat, cat_index) => (
                       <span;
                         key={cat_index} className="px - 3 py - 1 bg - gray - 800 text - gray - 300 text - sm rounded - full border border - gray - 600">;
                         {cat}
                       </span>
-                    ))}
+                    )}
                   </div>
                   {/* Key Features */}
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-white mb-3">Key Features</h4>
                     <ul className="space-y-2">
-                      {service.features.slice(0, 4).map((feature, featureIndex) => (
+                      {service.features.slice(0, 4).map(feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center gap-2 text-gray-300 text-sm">
                           <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                           <span>{feature}</span>
                         </li>
-                      ))}
+                      )}
                     </ul>
                   </div>
                   {/* Key Benefits */}
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-white mb-3">Key Benefits</h4>
                     <ul className="space-y-2">
-                      {service.benefits.slice(0, 2).map((benefit, benefitIndex) => (
+                      {service.benefits.slice(0, 2).map(benefit, benefitIndex) => (
                         <li key={benefitIndex} className="flex items-center gap-2 text-gray-300 text-sm">
                           <Star className="w-4 h-4 text-yellow-400 flex-shrink-0" />
                           <span>{benefit}</span>
                         </li>
-                      ))}
+                      )}
                     </ul>
                   </div>
                   {/* Market Info */}
@@ -345,7 +343,7 @@ if ( {) {
                   </div>
                 </div>
               </motion.div>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -354,18 +352,18 @@ if ( {) {
       <section className="py-20 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
       {/* Enterprise Solutions */}
       <section className="py - 20 bg - gradient - to - br from - purple - 900 / 20 via - black to - blue - 900 / 20">;
         <div className="container mx - auto px - 4 text - center">;
           <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, coordinate_y: 30 }
+            whileInView={ opacity: 1, coordinate_y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
           >
             <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6">
               Enterprise Solutions
@@ -428,18 +426,18 @@ if ( {) {
       <section className="py-20 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
       {/* Contact CTA */}
       <section className="py - 20 bg - gradient - to - br from - purple - 900 / 20 via - black to - blue - 900 / 20">;
         <div className="container mx - auto px - 4 text - center">;
           <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, coordinate_y: 30 }
+            whileInView={ opacity: 1, coordinate_y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
           >
             <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6">
               Ready to Get Started?
@@ -465,8 +463,8 @@ if ( {) {
 
             <div className="flex flex-wrap justify-center gap-4">
               <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={ scale: 1.05 }
+                whileTap={ scale: 0.95 }
               >
                 <Link
                   href="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-full hover:from-purple-700 hover:to-blue-700 transition-all duration-300 text-lg">
@@ -475,8 +473,8 @@ if ( {) {
                 </Link>
               </motion.div>
               <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={ scale: 1.05 }
+                whileTap={ scale: 0.95 }
               >
                 <Link
                   href="/2029-innovative-services-showcase" className="inline-flex items-center px-8 py-4 border-2 border-purple-500 text-purple-400 font-semibold rounded-full hover: bg-purple-500 hover:text-white transition-all duration-300 text-lg">
@@ -490,7 +488,7 @@ if ( {) {
       <UltraFuturisticFooter2029 />
     </div>
   )
-}
+
           >;
             <h2 className="text - 5xl md:text - 6xl font - bold bg - gradient - to - r from - purple - 400 to - blue - 400 bg - clip - text text - transparent mb - 6">;
               Ready to Get Started?;
@@ -515,8 +513,8 @@ if ( {) {
             </div>;
             <div className="flex flex - wrap justify - center gap - 4">;
               <motion.div;
-                while_hover={{ scale: 1.05 }}
-                while_tap={{ scale: 0.95 }}
+                while_hover={ scale: 1.05 }
+                while_tap={ scale: 0.95 }
               >;
                 <Link;
                   href="/contact" className="inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - purple - 600 to - blue - 600 text - white font - semibold rounded - full hover:from - purple - 700 hover:to - blue - 700 transition - all duration - 300 text - lg">;
@@ -525,8 +523,8 @@ if ( {) {
                 </Link>;
               </motion.div>;
               <motion.div;
-                while_hover={{ scale: 1.05 }}
-                while_tap={{ scale: 0.95 }}
+                while_hover={ scale: 1.05 }
+                while_tap={ scale: 0.95 }
               >;
                 <Link;
                   href="/2029 - innovative - services - showcase" className="inline - flex items - center px - 8 py - 4 border - 2 border - purple - 500 text - purple - 400 font - semibold rounded - full hover: bg - purple - 500 hover:text - white transition - all duration - 300 text - lg">;
@@ -539,4 +537,3 @@ if ( {) {
       </section>;
       <UltraFuturisticFooter2029 />;
     </div>);
-}

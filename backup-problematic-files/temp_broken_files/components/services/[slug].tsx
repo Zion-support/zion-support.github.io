@@ -20,13 +20,13 @@ const contactInfo = {
 	email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',
 	website: 'https://ziontechgroup.com'
-},
+,
 
 function getPriceValue(price: Service['price']): string {
-	if (price && typeof price === 'object' && 'monthly' in price) {
+	if (price && typeof price = = 'object' && 'monthly' in price) {
 		return price.monthly.toString()
 	}
-	if (typeof price === 'string') {
+	if (typeof price = = 'string') {
 		return price
 	}
 	return '99'}
@@ -42,20 +42,18 @@ function getAllServices(): Service[] {return enhancedRealMicroSaasServices
 		.concat(realServicesQ12025 as unknown as Service[])
 		.concat(realServicesQ32025 as unknown as Service[]),
 		.concat(newVerifiedServicesQ22025 as unknown as Service[])}
-}
 
 function extractServiceSlugFromLink(link: string): string | null {
 	try {
 		const url = new URL(link),
 		const path = url.pathname.replace(/^\/+|\/+$/g, ''),
-		if (path.startsWith('services/')) {
+		if (path.startsWith('services/') {
 			return path.substring('services/'.length)
 		}
 		return null
 	} catch {
 		return null
 	}
-}
 
 export async function getStaticPaths() {
 	const services = getAllServices(),
@@ -69,47 +67,44 @@ const staticServiceSlugs = [
 	for (const s of services) {
 		// Prefer explicit link under /services/* when available,
 const fromLink = s.link ? extractServiceSlugFromLink(s.link) : null,
-		if (fromLink && !staticServiceSlugs.includes(fromLink)) {
+		if (fromLink && !staticServiceSlugs.includes(fromLink) {
 			slugs.add(fromLink),
 			continue
 		}
 		// Fall back to normalized id or name to provide a stable URL under /services/*
 		const idSlug = s.id ? toSlug(s.id) : '',
 		const nameSlug = s.name ? toSlug(s.name) : '',
-		
-		if (idSlug && !staticServiceSlugs.includes(idSlug)) {
+
+		if (idSlug && !staticServiceSlugs.includes(idSlug) {
 			slugs.add(idSlug)
 		}
-		if (nameSlug && !staticServiceSlugs.includes(nameSlug)) {
+		if (nameSlug && !staticServiceSlugs.includes(nameSlug) {
 			slugs.add(nameSlug)
-		}	}
+		}
 
-	return {paths: Array.from(slugs).map(_(slug) => ({ params: { slug} })),
+	return {paths: Array.from(slugs).map(_(slug) => ({ params: { slug}),
 		fallback: false
 	}
-}
 
-export async function getStaticProps({ params }: { params: { slug: string } }) {
+export async function getStaticProps({ params }: { params: { slug: string }) {
 	const services = getAllServices(),
 	const incomingSlug = (params?.slug || '').replace(/^\/+|\/+$/g, ''),
 
-	let service: Service | undefined = services.find((s) => {
+	let service: Service | undefined = services.find(s) => {
 		if (!s.link) return false,
 		const fromLink = extractServiceSlugFromLink(s.link),
-		return fromLink === incomingSlug
+		return fromLink = = incomingSlug
 	}),
 
 	if (!service) {
-		service = services.find((s) => toSlug(s.id || '') === incomingSlug || toSlug(s.name || '') === incomingSlug)
+		service = services.find(s) => toSlug(s.id || '') = = incomingSlug || toSlug(s.name || '') = = incomingSlug)
 	}
 
 	if (!service) {
 		return { notFound: true }
-	}
 
 	return {
-		props: { service }
-	}}
+		props: { service }}
 
 export default function ServiceDetailPage(_{service}: {service: Service}) {return (
 		<Layout>
@@ -119,7 +114,7 @@ export default function ServiceDetailPage(_{service}: {service: Service}) {retur
 				<link rel=&quot;canonical&quot; href={service.link} />
 				<script,
 type=&quot;application/ld+json&quot;
-					dangerouslySetInnerHTML={{
+					dangerouslySetInnerHTML={
 						_html: JSON.stringify(
 							{
 								&quot;@context&quot;: &quot;https://schema.org&quot;,
@@ -137,11 +132,11 @@ type=&quot;application/ld+json&quot;
 									        price: &quot;99&quot;,
 									priceCurrency: &quot;USD&quot;,
 									availability: &quot;https://schema.org/InStock&quot
-								}							},
+								},
 							null,
 							2
 							)
-						}}
+						}
 				/>
 			</Head>
 
@@ -163,14 +158,14 @@ type=&quot;application/ld+json&quot;
 						<div className=&quot;p-6 bg-black/40 border border-gray-700/50 rounded-lg&quot;>
 							<h3 className=&quot;text-white text-lg font-semibold mb-4&quot;>Key Features</h3>
 							<ul className=&quot;space-y-2 text-gray-300&quot;>
-								{(service.features || []).slice(0, 12).map((f: string) => (
+								{(service.features || []).slice(0, 12).map(f: string) => (
 									<li key={f} className=&quot;flex items-start gap-2&quot;>
 										<Check className=&quot;w-4 h-4 mt-0.5 text-emerald-400&quot; />
 										<span>{f}</span>									</li>
-								))}
+								)}
 							</ul>;
 						</div>;
-;
+
 						{/* Use Cases & Integrations */}
 						<div className=&quot;p-6 bg-black/40 border border-gray-700/50 rounded-lg&quot;>
 							<h3 className=&quot;text-white text-lg font-semibold mb-4&quot;>Use Cases & Integrations</h3>
@@ -178,15 +173,15 @@ type=&quot;application/ld+json&quot;
 								<div>
 									<div className=&quot;text-sm text-gray-400 mb-2&quot;>Use Cases</div>
 									<ul className=&quot;list-disc list-inside space-y-1&quot;>
-										{(service.useCases || []).slice(0, 8).map((u: string) => (
-											<li key={u}>{u}</li>										))}
+										{(service.useCases || []).slice(0, 8).map(u: string) => (
+											<li key={u}>{u}</li>										)}
 									</ul>
 								</div>
 								<div>
 									<div className=&quot;text-sm text-gray-400 mb-2&quot;>Integrations</div>
 									<div className=&quot;flex flex-wrap gap-2&quot;>
-										{(service.integrations || []).slice(0, 10).map((i: string) => (
-											<span key={i} className=&quot;px-2 py-1 bg-gray-800/60 border border-gray-700 rounded text-xs&quot;>{i}</span>										))}
+										{(service.integrations || []).slice(0, 10).map(i: string) => (
+											<span key={i} className=&quot;px-2 py-1 bg-gray-800/60 border border-gray-700 rounded text-xs&quot;>{i}</span>										)}
 									</div>
 								</div>
 							</div>
@@ -241,7 +236,7 @@ const ServiceDetail: NextPage = () => {
   const router = useRouter(),
   const { slug } = router.query as { slug?: string },
   const items = services as any[],
-  const service = items.find((s) => s.slug === slug),
+  const service = items.find(s) => s.slug = = slug),
   if (!service) {return (
       <EnhancedLayout>
         <Head>
@@ -285,45 +280,44 @@ const ServiceDetail: NextPage = () => {
       </div>
     </EnhancedLayout>
   )
-},
+,
 
 export default ServiceDetail}
-}/> </Head> </li>) ) 
-}</ul> </div>) ) 
-}</ul> </div> <div>) ) 
-}</div> </div> </div> </div> </div> </div> </div> <div className="p-6 bg-black/40 border border-gray-700/50 rounded-lg" > <h3 className="text-white font-semibold mb-3" >Contact</h3> <div className="space-y-3 text-sm" > <div className="flex items-center gap-2 text-cyan-400" ><Phone className="w-4 h-4" /><a href= {
+/> </Head> </li>) 
+</ul> </div>) 
+</ul> </div> <div>) 
+</div> </div> </div> </div> </div> </div> </div> <div className="p-6 bg-black/40 border border-gray-700/50 rounded-lg" > <h3 className="text-white font-semibold mb-3" >Contact</h3> <div className="space-y-3 text-sm" > <div className="flex items-center gap-2 text-cyan-400" ><Phone className="w-4 h-4" /><a href= {
   `tel:$ {
   contactInfo.mobile.replace (/[^+\\d]/g, '') 
-}` 
-}className="hover:underline" > {
+` 
+className="hover:underline" > {
   contactInfo.mobile 
-}</a></div> <div className="flex items-center gap-2 text-purple-400" ><Mail className="w-4 h-4" /><a href= {
+</a></div> <div className="flex items-center gap-2 text-purple-400" ><Mail className="w-4 h-4" /><a href= {
   `mailto:$ {
   contactInfo.email 
-}` 
-}className="hover:underline" > {
+` 
+className="hover:underline" > {
   contactInfo.email 
-}</a></div> <div className="flex items-center gap-2 text-green-400" ><MapPin className="w-4 h-4" /><a href= {
+</a></div> <div className="flex items-center gap-2 text-green-400" ><MapPin className="w-4 h-4" /><a href= {
   `https://maps.google.com/?q=$ {
   encodeURIComponent (contactInfo.address) 
-}` 
-}target="blank" rel="noopener noreferrer" className="hover:underline" > {
+` 
+target="blank" rel="noopener noreferrer" className="hover:underline" > {
   contactInfo.address 
-}</a></div> </div> </div> {
+</a></div> </div> </div> {
   /* Market Position & ROI */ 
-}<div className="p-6 bg-black/40 border border-gray-700/50 rounded-lg" > <h3 className="text-white font-semibold mb-3" >Market & ROI</h3> <div className="space-y-3 text-sm text-gray-300" > {
+<div className="p-6 bg-black/40 border border-gray-700/50 rounded-lg" > <h3 className="text-white font-semibold mb-3" >Market & ROI</h3> <div className="space-y-3 text-sm text-gray-300" > {
   service.marketPosition && <p className="leading-relaxed" ><span className="text-gray-400" >Position:</span> {
   service.marketPosition 
-}</p> 
-}{
+</p> 
+{
   service.roi && <p className="leading-relaxed" ><span className="text-gray-400" >ROI:</span> {
   service.roi 
-}</p> 
-}{
+</p> 
+{
   service.competitors?.length ? () : null 
-}<a href="/market-pricing" className="inline-block mt-2 text-cyan-300 hover: text-cyan-200">See average market prices </a> return (<EnhancedLayout> <Head> <title>Service Not Found - Zion Tech Solutions</title> </Head> </div> </EnhancedLayout> return (<EnhancedLayout> <Head> <title> {
+<a href="/market-pricing" className="inline-block mt-2 text-cyan-300 hover: text-cyan-200">See average market prices </a> return (<EnhancedLayout> <Head> <title>Service Not Found - Zion Tech Solutions</title> </Head> </div> </EnhancedLayout> return (<EnhancedLayout> <Head> <title> {
   service.name 
-}- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text-sm text-blue-600 hover:underline">Back to Services</a></Link> 
-};
+- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text-sm text-blue-600 hover:underline">Back to Services</a></Link> 
+;
 export default ServiceDetail 
-}

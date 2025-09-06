@@ -1,6 +1,6 @@
 
-</div> </div>) )
-}</div> </div>) import fs from 'fs';
+</div> </div>)
+</div> </div>) import fs from 'fs';
 import fs from 'fs';
 import path from 'path';
 type NewsItem = { source: string, title: string, url: string, summary: string, tags: string[] }
@@ -14,11 +14,11 @@ export async function getServerSideProps() {
     generatedAt = json.generatedAt |''
 
   } catch {}
-  return { props: { items, generatedAt } }
-}
+  return { props: { items, generatedAt }
+
 export default function NewsDigestPage({ items, generatedAt }: { items: NewsItem[], generatedAt: string }) {
- </div> </div>) ) ;
-}</div> </div>) import fs from 'fs';
+ </div> </div>) ;
+</div> </div>) import fs from 'fs';
 import path from 'path';
 type NewsItem = { source: string, title: string, url: string, summary: string, tags: string[] },;
 export async function getServerSideProps() {;
@@ -42,8 +42,7 @@ function getServerSideProps() {
     items = json.items || [];
     generated_at = json.generated_at || '';
   } catch {}
-  return { props: { items, generated_at } }
-}
+  return { props: { items, generated_at }
 
 export default function NewsDigestPage(): any ({ items, generatedAt }: { items: NewsItem[], generatedAt: string }) {;
   return (
@@ -51,7 +50,7 @@ export default function NewsDigestPage(): any ({ items, generatedAt }: { items: 
       <h1 className="text-2xl font-semibold">AI Automation: News Digest</h1>;
       <div className="text-xs text-gray-500">Last updated: {generatedAt ? new Date(generatedAt).toLocaleString() : ''}</div>;
       <div className="grid grid-cols-1 gap-4">;
-        {items && items.map((n, idx) => (;
+        {items && items.map(n, idx) => (;
           <div key={idx} className="border rounded p-4 space-y-1">;
             <div className="flex items-center justify-between">;
               <a className="font-medium text-blue-600" href={n && n.url} target="_blank" rel="noreferrer">{n && n.title}</a>;
@@ -59,14 +58,14 @@ export default function NewsDigestPage(): any ({ items, generatedAt }: { items: 
             </div>;
             <div className="text-sm text-gray-700">{n && n.summary}</div>;
             <div className="flex flex-wrap gap-2 pt-1">;
-              {n && n.tags?.map(t => (<span key={t} className="text-xs px-2 py-0 && 0.5 rounded bg-gray-100">{t}</span>))}
+              {n && n.tags?.map(t => (<span key={t} className="text-xs px-2 py-0 && 0.5 rounded bg-gray-100">{t}</span>)}
             </div>;
           </div>;
-        ))}
+        )}
       </div>
     </div>
-);
-}
+;
+
 export default /**
  * NewsDigestPage - Function description
  */
@@ -76,7 +75,7 @@ function NewsDigestPage() {
       <h1 className="text - 2xl font - semibold">AI Automation: News Digest</h1>;
       <div className="text - xs text - gray - 500">Last updated: {generated_at ? new Date (generated_at).toLocaleString () : ''}</div>;
       <div className="grid grid - cols - 1 gap - 4">;
-        {items.map ((n, idx) => (
+        {items.map (n, idx) => (
           <div key={idx} className="border rounded p - 4 space - y-1">;
             <div className="flex items - center justify - between">;
               <a className="font - medium text - blue - 600" href={n.url} target="_blank" rel="noreferrer">{n.title}</a>;
@@ -84,9 +83,8 @@ function NewsDigestPage() {
             </div>;
             <div className="text - sm text - gray - 700">{n.summary}</div>;
             <div className="flex flex - wrap gap - 2 pt - 1">;
-              {n.tags?.map (t => (<span key={t} className="text - xs px - 2 py - 0.5 rounded bg - gray - 100">{t}</span>))}
+              {n.tags?.map (t => (<span key={t} className="text - xs px - 2 py - 0.5 rounded bg - gray - 100">{t}</span>)}
             </div>;
-          </div>))}
+          </div>)}
       </div>;
     </div>);
-}

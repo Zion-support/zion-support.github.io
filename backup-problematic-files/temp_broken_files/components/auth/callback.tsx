@@ -9,4 +9,3 @@ export default function AuthCallbackPage() {
       <p className=&quot;mt-2 text-gray-600 dark:text-gray-300&quot;>Processing sign-in...</p>
     </div>
   )
-}

@@ -4,7 +4,7 @@ export interface ProfileSkill {
 
   level: number, // 1-5
   endorsements?: number
-}
+
 export interface ProfileProject {
   id: string;
   title: string;
@@ -15,7 +15,7 @@ export interface ProfileProject {
   url?: string
 
   date: string
-}
+
 export interface ProfileExperience {
   id: string;
   role: string;
@@ -26,7 +26,7 @@ export interface ProfileExperience {
   endDate?: string
 
   current?: boolean
-}
+
 export interface Availability {
   status: 'available' | 'limited' | 'unavailable';
   nextAvailable?: string;
@@ -34,7 +34,7 @@ export interface Availability {
   message?: string
 
   availableHours?: { day: string, hours: string }[]
-}
+
 export interface ProfileData {
   id: string;
   name: string;
@@ -55,4 +55,3 @@ export interface ProfileData {
   hourlyRate?: number
 
   contactEmail?: string
-}

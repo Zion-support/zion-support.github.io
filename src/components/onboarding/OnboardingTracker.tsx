@@ -11,20 +11,20 @@ export interface OnboardingStep {
   link: string
 
   action?: string
-}
+
 interface OnboardingTrackerProps {
 
   steps: OnboardingStep[]
   title?: string
   className?: string
-}
+
 export function OnboardingTracker({
   steps
   title = "Complete Your Profile"
   className
-}: OnboardingTrackerProps) {
+: OnboardingTrackerProps) {
   const completedSteps = steps.filter(step => step.completed).length
-  const progress = Math.round((completedSteps / steps.length) * 100)
+  const progress = Math.round(completedSteps / steps.length) * 100)
 
   return (
     <div className={cn("rounded-lg border border-zion-blue-light bg-zion-blue-dark/60 p-4 md:p-6", className)}>
@@ -36,7 +36,7 @@ export function OnboardingTracker({
       <div className="w-full h-2 bg-zion-blue rounded-full mb-5">
         <div
           className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out"
-          style={{ width: `${progress}%` }}
+          style={ width: `${progress}%` }
         ></div>
       </div>
   title = "Complete Your Profile", ;
@@ -50,21 +50,19 @@ export interface OnboardingStep {;
   completed: boolean,;
   link: string,;
   action?: string;
-}
 
 interface OnboardingTrackerProps {;
   steps: OnboardingStep[],;
   title?: string;
   className?: string;
-}
 
 export function OnboardingTracker(): any ({ ;
   steps;
   title = "Complete Your Profile", ;
   className ;
-}: OnboardingTrackerProps) {;
+: OnboardingTrackerProps) {;
   const completedSteps = steps && steps.filter(step => step && step.completed).length;
-  const progress = Math && Math.round((completedSteps / steps && steps.length) * 100);
+  const progress = Math && Math.round(completedSteps / steps && steps.length) * 100);
 
   return (
     <div className={cn("rounded-lg border border-zion-blue-light bg-zion-blue-dark/60 p-4 md:p-6", className)}>;
@@ -77,12 +75,12 @@ export function OnboardingTracker(): any ({ ;
       <div className="w-full h-2 bg-zion-blue rounded-full mb-5">;
         <div
           className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out"
-          style={{ width: `${progress}%` }}></div>;
+          style={ width: `${progress}%` }></div>;
       </div>;
 
       {/* Steps list */}
       <div className="space-y-3">;
-        {steps && steps.map((step,) => (;
+        {steps && steps.map(step,) => (;
           <div key={step && step.id} className="flex items-center">;
             <div className="mr-3">;
               {step && step.completed ? (;
@@ -107,33 +105,32 @@ export function OnboardingTracker(): any ({ ;
               </Button>
             )}
           </div>;
-        ))}
+        )}
       </div>
     </div>
   )
-}></div> </div> {
+></div> </div> {
   /* Steps list */ ";
-}<div className="space - y-3" > {
-  steps.map ( (step) => (<div key= {
+<div className="space - y-3" > {
+  steps.map (step) => (<div key= {
   step.id "
-}className="flex items-center" > <div className="mr-3" > {"
+className="flex items-center" > <div className="mr-3" > {"
   step.completed ? (<CheckCircle className="h-5 w-5 text-zion-cyan" /> h-5 w-5 text-zion-slate-light"/>)
-}</div> </div> {"
+</div> </div> {"
   !step.completed && step.action && (<Button asChild variant=" ghost"size=" sm"className=" text-zion-purple hover:text-zion-cyan hover:bg-zion-blue" > <Link href= {
   step.link
-}> </Link> </Button>)
-}</div>) )
-}</div> </div>)
-}"}
-
+> </Link> </Button>)
+</div>)
+</div> </div>)
+"}
 
   step.id ";
-}className="flex items - center" > <div className="mr - 3" > {";
+className="flex items - center" > <div className="mr - 3" > {";
   step.completed ? (<CheckCircle className="h - 5 w - 5 text - zion - cyan" /> h - 5 w - 5 text - zion - slate - light"/>);
-}</div> </div> {";
+</div> </div> {";
   !step.completed && step.action && (<Button as_child variant=" ghost"size=" sm"className=" text - zion - purple hover:text - zion - cyan hover:bg - zion - blue" > <Link href= {
   step.link;
-}> </Link> </Button>);
-}</div>) );
-}</div> </div>);
-}"}
+> </Link> </Button>);
+</div>);
+</div> </div>);
+"}

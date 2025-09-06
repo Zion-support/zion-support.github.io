@@ -9,4 +9,3 @@ export default function DigitalTransformationInsightsPage() {
       <p className=&quot;mt-2 text-gray-600 dark:text-gray-300&quot;>Article coming soon.</p>
     </div>
   )
-}

@@ -12,10 +12,10 @@ interface QuoteStatusCardsProps {;
     closed: number;
 
   }
-}
+
 export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({
   statusCounts
-}) => {
+) => {
   return (
 
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-8">
@@ -147,8 +147,5 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({
       </Card>;
     </div>;
   );
-}
 
     </div>);
-}
-;

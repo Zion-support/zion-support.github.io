@@ -7,12 +7,12 @@ import { Navigate } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
 interface AnalyticsContainerProps {;
   children: React && React.ReactNode;
-}
+
 export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
   const { isAuthenticated, isLoading, user } = useAuth();
   // Check if user is admin (using either role or userType)
 
-  const isAdmin = user?.role === "admin" |user?.userType === "admin";
+  const isAdmin = user?.role = = "admin" |user?.userType = = "admin";
 
   // If still loading auth status, show loading;
   if (isLoading) {;
@@ -24,7 +24,7 @@ export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
   }
   // If not authenticated, redirect
   if (!isAuthenticated) {
-    return <Navigate to="/login" state={{ from: "/analytics" }} replace />;
+    return <Navigate to="/login" state={ from: "/analytics" } replace />;
   }
   // If not admin, redirect
   if (!isAdmin) {
@@ -52,21 +52,21 @@ import { Navigate  } from './react-router-dom';
 import { use_auth  } from '@/hooks / use_auth';
 interface AnalyticsContainerProps {
   children: React.ReactNode;
-}
+
 export /**
  * AnalyticsContainer - Function description
  */
 function AnalyticsContainer() {
   const { is_authenticated, is_loading, user } = use_auth ();
-;
+
   // Check if user is admin (using either role or user_type);
-  const is_admin = user?.role === "admin" || user?.user_type === "admin";
-;
+  const is_admin = user?.role = = "admin" || user?.user_type = = "admin";
+
   // If still loading auth status, show loading;
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <div className="flex justify - center items - center min - h-screen bg - zion - blue">;
         <div className="animate - pulse text - zion - purple text - lg">Loading...</div>;
@@ -76,14 +76,14 @@ if ( {) {
   // Check condition
 if ( {) {
   $2
-}
-    return <Navigate to="/login" state={{ from: "/analytics" }} replace />;
+
+    return <Navigate to="/login" state={ from: "/analytics" } replace />;
   }
   // If not admin, redirect;
   // Check condition
 if ( {) {
   $2
-}
+
     return <Navigate to="/unauthorized" replace />;
   }
   return (
@@ -108,4 +108,3 @@ if ( {) {
       <Footer />;
     </div>;
   );
-}

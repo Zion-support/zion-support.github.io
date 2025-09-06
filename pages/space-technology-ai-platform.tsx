@@ -90,9 +90,9 @@ export default function SpaceTechnologyAIPlatform() {
         <section className='pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>;
           <div className='absolute inset-0 bg-gradient-to-r from-blue-900/30 via-transparent to-indigo-900/30'></div>;
           <div className='max-w-7xl mx-auto relative z-10'>            <motion&& motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className='text-center mb-16'
             >
               <div className='inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-blue-600/20 to-indigo-600/20 rounded-full border border-blue-500/30 mb-6'>
@@ -115,16 +115,16 @@ export default function SpaceTechnologyAIPlatform() {
               </p>
               <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-12'>
                 <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={ scale: 1.05 }
+                  whileTap={ scale: 0.95 }
                   className='flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-xl shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/40 transition-all duration-200'
                 >
                   <span className='text-2xl font-bold'>$3,999</span>
                   <span>/month</span>
                 </motion.div>
                 <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={ scale: 1.05 }
+                  whileTap={ scale: 0.95 }
                   className='flex items-center space-x-2 px-8 py-4 border-2 border-blue-500/50 text-blue-400 font-semibold rounded-xl hover:bg-blue-500/10 transition-all duration-200'
                 >
                   <span>7-Day Free Trial</span>
@@ -147,7 +147,7 @@ export default function SpaceTechnologyAIPlatform() {
             </motion.div>
           </div>
         </section>
-              transition={{ duration: 0 && 0.8 }}
+              transition={ duration: 0 && 0.8 }
               className='text-center mb-16'>;
               <div className='inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-blue-600/20 to-indigo-600/20 rounded-full border border-blue-500/30 mb-6'>;
                 <Sparkles className='w-4 h-4 text-blue-400' />;
@@ -172,16 +172,16 @@ export default function SpaceTechnologyAIPlatform() {
 
               <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-12'>;
                 <motion&& motion.div
-                  whileHover={{ scale: 1 && 1.05 }}
-                  whileTap={{ scale: 0 && 0.95 }}
+                  whileHover={ scale: 1 && 1.05 }
+                  whileTap={ scale: 0 && 0.95 }
                   className='flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-xl shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/40 transition-all duration-200'>;
                   <span className='text-2xl font-bold'>$3,999</span>;
                   <span>/month</span>;
                 </motion && motion.div>;
 
                 <motion&& motion.div
-                  whileHover={{ scale: 1 && 1.05 }}
-                  whileTap={{ scale: 0 && 0.95 }}
+                  whileHover={ scale: 1 && 1.05 }
+                  whileTap={ scale: 0 && 0.95 }
                   className='flex items-center space-x-2 px-8 py-4 border-2 border-blue-500/50 text-blue-400 font-semibold rounded-xl hover:bg-blue-500/10 transition-all duration-200'>;
                   <span>7-Day Free Trial</span>;
                   <ArrowRight className='w-5 h-5' />;
@@ -216,10 +216,10 @@ export default function SpaceTechnologyAIPlatform() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.6 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.6 }
+              viewport={ once: true }
               className='text-center mb-16'
             >
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
@@ -232,7 +232,7 @@ export default function SpaceTechnologyAIPlatform() {
                 operations and autonomous exploration
               </p>
             </motion.div>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {features.map((feature, index) => (
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {features.map(feature, index) => (
                 <motion.div
               className='text-center mb-16'>;
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
@@ -246,13 +246,13 @@ export default function SpaceTechnologyAIPlatform() {
               </p>;
             </motion && motion.div>;
 
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {features && features.map((feature, index) => (;
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {features && features.map(feature, index) => (;
                 <motion&& motion.div
                   key={feature}
-                  initial={{ opacity: 0, scale: 0 && 0.8, y: 20 }}
-                  whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, scale: 0 && 0.8, y: 20 }
+                  whileInView={ opacity: 1, scale: 1, y: 0 }
+                  transition={ duration: 0 && 0.6, delay: index * 0 && 0.1 }
+                  viewport={ once: true }
                   className='group relative'>;
                   <div className='absolute inset-0 bg-gradient-to-r from-blue-600/10 to-indigo-600/10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500'></div>;
                   <div className='relative bg-black/40 backdrop-blur-xl border border-blue-500/20 rounded-2xl p-6 hover:border-blue-500/40 transition-all duration-300'>;
@@ -280,7 +280,7 @@ export default function SpaceTechnologyAIPlatform() {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
+              {features.map(feature, index) => (
                 <motion.div
 import Head from 'next / head';
 import Link from 'next / link';
@@ -298,7 +298,7 @@ function SpaceTechnologyAIPlatform() {
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com',
   }
-;
+
   const features = [;
     'AI - powered satellite operations',
     'Autonomous space exploration',
@@ -311,7 +311,7 @@ function SpaceTechnologyAIPlatform() {
     'API access',
     'Expert consultation',
   ];
-;
+
   const use_cases = [;
     'Satellite operations',
     'Space exploration',
@@ -320,7 +320,7 @@ function SpaceTechnologyAIPlatform() {
     'Mission planning',
     'Space research',
   ];
-;
+
   const integrations = [;
     'NASA APIs',
     'ESA APIs',
@@ -330,7 +330,7 @@ function SpaceTechnologyAIPlatform() {
     'Microsoft Teams',
     'Custom applications',
   ];
-;
+
   const competitors = [;
     'Maxar ($5000 - 50000 / month)',
     'Planet Labs ($1000 - 10000 / month)',
@@ -339,7 +339,7 @@ function SpaceTechnologyAIPlatform() {
     'Boeing',
     'Northrop Grumman',
   ];
-;
+
     >;
       <div className='min - h-screen'>;
         <Head>;
@@ -374,9 +374,9 @@ function SpaceTechnologyAIPlatform() {
         <section className='pt - 32 pb - 20 px - 4 sm:px - 6 lg:px - 8 relative overflow - hidden'>;
           <div className='absolute inset - 0 bg - gradient - to - r from - blue - 900 / 30 via - transparent to - indigo - 900 / 30'></div>;
           <div className='max - w-7xl mx - auto relative z - 10'>            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, coordinate_y: 20 }
+              animate={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
               className='text - center mb - 16';
             >;
               <div className='inline - flex items - center space - x-2 px - 4 py - 2 bg - gradient - to - r from - blue - 600 / 20 to - indigo - 600 / 20 rounded - full border border - blue - 500 / 30 mb - 6'>;
@@ -399,16 +399,16 @@ function SpaceTechnologyAIPlatform() {
               </p>;
               <div className='flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-6 mb - 12'>;
                 <motion.div;
-                  while_hover={{ scale: 1.05 }}
-                  while_tap={{ scale: 0.95 }}
+                  while_hover={ scale: 1.05 }
+                  while_tap={ scale: 0.95 }
                   className='flex items - center space - x-2 px - 8 py - 4 bg - gradient - to - r from - blue - 600 to - indigo - 600 text - white font - semibold rounded - xl shadow - lg shadow - blue - 500 / 25 hover:shadow - xl hover:shadow - blue - 500 / 40 transition - all duration - 200';
                 >;
                   <span className='text - 2xl font - bold'>$3, 999</span>;
                   <span>/month</span>;
                 </motion.div>;
                 <motion.div;
-                  while_hover={{ scale: 1.05 }}
-                  while_tap={{ scale: 0.95 }}
+                  while_hover={ scale: 1.05 }
+                  while_tap={ scale: 0.95 }
                   className='flex items - center space - x-2 px - 8 py - 4 border - 2 border - blue - 500 / 50 text - blue - 400 font - semibold rounded - xl hover:bg - blue - 500 / 10 transition - all duration - 200';
                 >;
                   <span > 7-Day Free Trial</span>;
@@ -434,10 +434,10 @@ function SpaceTechnologyAIPlatform() {
         {/* Features Section */}
         <section className='py - 20 px - 4 sm:px - 6 lg:px - 8 relative'>;
           <div className='max - w-7xl mx - auto'>            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, coordinate_y: 20 }
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.6 }
+              viewport={ once: true }
               className='text - center mb - 16';
             >;
               <h2 className='text - 4xl md:text - 5xl font - bold text - white mb - 6'>;
@@ -450,13 +450,13 @@ function SpaceTechnologyAIPlatform() {
                 operations and autonomous exploration;
               </p>;
             </motion.div>;
-            <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>              {features.map ((feature, index) => (
+            <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>              {features.map (feature, index) => (
                 <motion.div;
                   key={feature}
-                  initial={{ opacity: 0, scale: 0.8, coordinate_y: 20 }}
-                  whileInView={{ opacity: 1, scale: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, scale: 0.8, coordinate_y: 20 }
+                  whileInView={ opacity: 1, scale: 1, coordinate_y: 0 }
+                  transition={ duration: 0.6, delay: index * 0.1 }
+                  viewport={ once: true }
                   className='group relative'>;
                   <div className='absolute inset-0 bg-gradient-to-r from-blue-600/10 to-indigo-600/10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500'></div>;
                   <div className='relative bg-black/40 backdrop-blur-xl border border-blue-500/20 rounded-2xl p-6 hover:border-blue-500/40 transition-all duration-300'>;
@@ -484,17 +484,17 @@ function SpaceTechnologyAIPlatform() {
                     </p>
                   </div>
                 </motion.div>
-              ))}
+              )}
             </div>
           </div>
         </section>
         {/* Market Position Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>;
           <div className='max-w-7xl mx-auto'>            <motion&& motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.6 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.6 }
+              viewport={ once: true }
               className='text-center mb-16'
             >
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
@@ -535,23 +535,23 @@ function SpaceTechnologyAIPlatform() {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0 && 0.6 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, x: -20 }
+                whileInView={ opacity: 1, x: 0 }
+                transition={ duration: 0 && 0.6 }
+                viewport={ once: true }
                 className='space-y-6'>;
                 <h3 className='text-2xl font-bold text-white mb-6'>;
                   Competitive Analysis;
                 </h3>;
                 <div className='space-y-4'>;
-                  {competitors && competitors.map((competitor, index) => (;
+                  {competitors && competitors.map(competitor, index) => (;
                     <div
                       key={index}
                       className='flex items-center space-x-3 p-4 bg-black/20 rounded-xl border border-gray-700'>;
                       <div className='w-3 h-3 bg-red-500 rounded-full'></div>;
                       <span className='text-gray-300'>{competitor}</span>;
                     </div>;
-                  ))}
+                  )}
                 </div>
                 <div className='p-4 bg-gradient-to-r from-green-600/20 to-emerald-600/20 rounded-xl border border-green-500/30'>
                   <div className='flex items-center space-x-3'>
@@ -575,10 +575,10 @@ function SpaceTechnologyAIPlatform() {
               </motion && motion.div>;
 
               <motion&& motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0 && 0.6 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, x: 20 }
+                whileInView={ opacity: 1, x: 0 }
+                transition={ duration: 0 && 0.6 }
+                viewport={ once: true }
                 className='space-y-6'
               >
                 <h3 className='text-2xl font-bold text-white mb-6'>
@@ -650,10 +650,10 @@ function SpaceTechnologyAIPlatform() {
         {/* Use Cases Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>;
           <div className='max-w-7xl mx-auto'>            <motion&& motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.6 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.6 }
+              viewport={ once: true }
               className='text-center mb-16'
             >
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
@@ -666,7 +666,7 @@ function SpaceTechnologyAIPlatform() {
                 intelligence
               </p>
             </motion.div>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {useCases.map((useCase, index) => (
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {useCases.map(useCase, index) => (
                 <motion.div
               className='text-center mb-16'>;
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
@@ -680,13 +680,13 @@ function SpaceTechnologyAIPlatform() {
               </p>;
             </motion && motion.div>;
 
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {useCases && useCases.map((useCase, index) => (;
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {useCases && useCases.map(useCase, index) => (;
                 <motion&& motion.div
                   key={useCase}
-                  initial={{ opacity: 0, scale: 0 && 0.8, y: 20 }}
-                  whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, scale: 0 && 0.8, y: 20 }
+                  whileInView={ opacity: 1, scale: 1, y: 0 }
+                  transition={ duration: 0 && 0.6, delay: index * 0 && 0.1 }
+                  viewport={ once: true }
                   className='group relative'>;
                   <div className='absolute inset-0 bg-gradient-to-r from-cyan-600/10 to-blue-600/10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500'></div>;
                   <div className='relative bg-black/40 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-500/40 transition-all duration-300'>;
@@ -714,13 +714,13 @@ function SpaceTechnologyAIPlatform() {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {useCases.map((useCase, index) => (
+              {useCases.map(useCase, index) => (
                 <motion.div
                   key={useCase}
-                  initial={{ opacity: 0, scale: 0.8, y: 20 }}
-                  whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, scale: 0.8, y: 20 }
+                  whileInView={ opacity: 1, scale: 1, y: 0 }
+                  transition={ duration: 0.6, delay: index * 0.1 }
+                  viewport={ once: true }
                   className='group relative'>;
                   <div className='absolute inset-0 bg-gradient-to-r from-cyan-600/10 to-blue-600/10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500'></div>;
                   <div className='relative bg-black/40 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-500/40 transition-all duration-300'>;
@@ -735,7 +735,7 @@ function SpaceTechnologyAIPlatform() {
                       {useCase && useCase.toLowerCase()} and drive innovation.                    </p>;
                   </div>;
                 </motion && motion.div>;
-              ))}
+              )}
             </div>
           </div>
         </section>
@@ -747,10 +747,10 @@ function SpaceTechnologyAIPlatform() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.6 }
+              viewport={ once: true }
             >
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
                 <span className='bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent'>
@@ -764,8 +764,8 @@ function SpaceTechnologyAIPlatform() {
               </p>
               <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-8'>                <motion.a
                   href={`tel:${contactInfo.mobile}`}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={ scale: 1.05 }
+                  whileTap={ scale: 0.95 }
                   className='flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-xl shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/40 transition-all duration-200'
                 >
                   <Phone className='w-5 h-5' />
@@ -773,8 +773,8 @@ function SpaceTechnologyAIPlatform() {
                 </motion.a>
                 <motion.a
                   href={`mailto:${contactInfo.email}`}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={ scale: 1.05 }
+                  whileTap={ scale: 0.95 }
                   className='flex items-center space-x-2 px-8 py-4 border-2 border-blue-500/50 text-blue-400 font-semibold rounded-xl hover:bg-blue-500/10 transition-all duration-200'
                 >
                   <Mail className='w-5 h-5' />                  <span>Email Us</span>
@@ -806,7 +806,7 @@ function SpaceTechnologyAIPlatform() {
         </section>
       </div>
     </UltraAdvancedFuturisticBackground>
-);
+;
                 Join 120+ space companies already leveraging our Space;
                 Technology AI Platform to achieve unprecedented exploration;
                 capabilities and operational efficiency.;
@@ -814,16 +814,16 @@ function SpaceTechnologyAIPlatform() {
 
               <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-8'>                <motion&& motion.a
                   href={`tel:${contactInfo && contactInfo.mobile}`}
-                  whileHover={{ scale: 1 && 1.05 }}
-                  whileTap={{ scale: 0 && 0.95 }}
+                  whileHover={ scale: 1 && 1.05 }
+                  whileTap={ scale: 0 && 0.95 }
                   className='flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-xl shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/40 transition-all duration-200'>;
                   <Phone className='w-5 h-5' />;
                   <span>Call {contactInfo && contactInfo.mobile}</span>;
                 </motion && motion.a>;
                 <motion&& motion.a
                   href={`mailto:${contactInfo && contactInfo.email}`}
-                  whileHover={{ scale: 1 && 1.05 }}
-                  whileTap={{ scale: 0 && 0.95 }}
+                  whileHover={ scale: 1 && 1.05 }
+                  whileTap={ scale: 0 && 0.95 }
                   className='flex items-center space-x-2 px-8 py-4 border-2 border-blue-500/50 text-blue-400 font-semibold rounded-xl hover:bg-blue-500/10 transition-all duration-200'>;
                   <Mail className='w-5 h-5' />                  <span>Email Us</span>;
                 </motion && motion.a>;
@@ -857,12 +857,11 @@ function SpaceTechnologyAIPlatform() {
     </UltraAdvancedFuturisticBackground>;
   );
   )
-}
 
               <div className='flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-6 mb - 8'>                <motion.a;
                   href={`tel:${contact_info.mobile}`}
-                  while_hover={{ scale: 1.05 }}
-                  while_tap={{ scale: 0.95 }}
+                  while_hover={ scale: 1.05 }
+                  while_tap={ scale: 0.95 }
                   className='flex items - center space - x-2 px - 8 py - 4 bg - gradient - to - r from - blue - 600 to - indigo - 600 text - white font - semibold rounded - xl shadow - lg shadow - blue - 500 / 25 hover:shadow - xl hover:shadow - blue - 500 / 40 transition - all duration - 200';
                 >;
                   <Phone className='w - 5 h - 5' />;
@@ -870,8 +869,8 @@ function SpaceTechnologyAIPlatform() {
                 </motion.a>;
                 <motion.a;
                   href={`mailto:${contact_info.email}`}
-                  while_hover={{ scale: 1.05 }}
-                  while_tap={{ scale: 0.95 }}
+                  while_hover={ scale: 1.05 }
+                  while_tap={ scale: 0.95 }
                   className='flex items - center space - x-2 px - 8 py - 4 border - 2 border - blue - 500 / 50 text - blue - 400 font - semibold rounded - xl hover:bg - blue - 500 / 10 transition - all duration - 200';
                 >;
                   <Mail className='w - 5 h - 5' />                  <span > Email Us</span>;
@@ -903,4 +902,3 @@ function SpaceTechnologyAIPlatform() {
         </section>;
       </div>;
     </UltraAdvancedFuturisticBackground>);
-;

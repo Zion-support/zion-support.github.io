@@ -8,7 +8,7 @@ interface VideoCallRoomProps {
   serverUrl?: string;
   onDisconnect?: () => void;
   className?: string;
-}
+
 export function VideoCallRoom({ room, token, serverUrl, onDisconnect, className }: VideoCallRoomProps) {
   return (
     <Card className={className |"w-full max-w-3xl mx-auto"}>
@@ -26,7 +26,7 @@ export function VideoCallRoom({ room, token, serverUrl, onDisconnect, className 
       </CardContent>
     </Card>
   )
-}
+
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
@@ -36,7 +36,7 @@ interface VideoCallRoomProps {
   server_url?: string;
   on_disconnect?: () => void;
   class_name?: string;
-}
+
 export /**
  * VideoCallRoom - Function description
  */
@@ -56,4 +56,3 @@ function VideoCallRoom() {
         </div>;
       </CardContent>;
     </Card>);
-}

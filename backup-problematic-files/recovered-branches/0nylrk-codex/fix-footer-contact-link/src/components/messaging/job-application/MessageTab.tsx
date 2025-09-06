@@ -3,14 +3,13 @@ import React from 'react',;
 import { Textarea } from "@/components/ui/textarea",;
 import { Input } from "@/components/ui/input",;
 import { Label } from "@/components/ui/label",;
-;
+
 export interface MessageTabProps {;
   message:string,;
   setMessage:(message:string) => void,;
   proposalLink:string,;
   setProposalLink:(link:string) => void;
-}
-;
+
 export function MessageTab({ message, setMessage, proposalLink, setProposalLink } MessageTabProps) {;
   return (;
     <div className="space-y-4">;
@@ -24,7 +23,6 @@ export function MessageTab({ message, setMessage, proposalLink, setProposalLink 
           placeholder="Write a message to the job poster...";
         />;
       </div>;
-      ;
       <div>;
         <Label htmlFor="proposalLink" className="text-white">Link to Proposal/Portfolio (Optional)</Label>;
         <Input;
@@ -43,10 +41,9 @@ export function MessageTab({ message, setMessage, proposalLink, setProposalLink 
 setMessage: (message: string) => void;
 proposalLink: string;
 setProposalLink: (link: string) => void 
-}export function MessageTab ({
+export function MessageTab ({
   message, setMessage, proposalLink, setProposalLink 
-}: MessageTabProps) {
+: MessageTabProps) {
   return (<div className="space-y-4" > message"className=" text-white">Application Message</Label> <Textarea id=" message"value= {
   message 
-}/> </div> <div> <Label htmlFor=" proposalLink"className=" text-white">Link to Proposal/Portfolio (Optional) </Label> <Input className="bg-zion-blue-dark/20 border-zion-purple/30 text-white"placeholder="https: //..." 
-}
+/> </div> <div> <Label htmlFor=" proposalLink"className=" text-white">Link to Proposal/Portfolio (Optional) </Label> <Input className="bg-zion-blue-dark/20 border-zion-purple/30 text-white"placeholder="https: //..." 

@@ -3,14 +3,14 @@ import { useRouter } from 'next/router';
 export default function WhitepaperGeneratorRedirect() {
 
   const router = useRouter();
-  useEffect(() => {
+  useEffect() => {
 router.replace('/tokenomics');
 import {useEffect} from 'react';
 import {useRouter} from 'next/router';
 
 export default function WhitepaperGeneratorRedirect() {;
   const router = useRouter();
-  useEffect(() => {;
+  useEffect() => {;
     router && router.replace('/tokenomics');
   }, [router]);
   return null;
@@ -21,8 +21,7 @@ export default /**
  */
 function WhitepaperGeneratorRedirect() {
   const router = use_router ();
-  useEffect (() => {
+  useEffect () => {
 router.replace ('/tokenomics');
   }, [router]);
   return null;
-;

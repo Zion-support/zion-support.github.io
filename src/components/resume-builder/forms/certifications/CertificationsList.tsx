@@ -18,16 +18,16 @@ export function CertificationsList({
   certifications
   onEdit
   onDelete
-}: CertificationsListProps) {  if (certifications.length === 0) {
+: CertificationsListProps) {  if (certifications.length = = 0) {
 export function CertificationsList({ certifications, onEdit, onDelete }: CertificationsListProps) {
 interface CertificationsListProps {
   certifications: Certification[]
   onEdit: (cert: Certification) => void
 
   onDelete: (id: string) => void
-}
+
 export function CertificationsList({ certifications, onEdit, onDelete }: CertificationsListProps) {
-  if (certifications.length === 0) {
+  if (certifications.length = = 0) {
     return null
 interface CertificationsListProps {;
   certifications: Certification[];
@@ -37,7 +37,7 @@ export function CertificationsList(): any ({;
   certifications,;
   onEdit,;
   onDelete,;
-}: CertificationsListProps) {  if (certifications && certifications.length === 0) {;
+: CertificationsListProps) {  if (certifications && certifications.length = = 0) {;
 export function CertificationsList(): any ({ certifications, onEdit, onDelete }: CertificationsListProps) {;
 import { Certification } from '@/types/resume';
 import { Card, CardContent } from '@/components/ui/card';
@@ -48,13 +48,12 @@ interface CertificationsListProps {;
   certifications: Certification[],;
   onEdit: (cert: Certification) => void,;
   onDelete: (id: string) => void;
-}
 
 export function CertificationsList(): any ({ certifications, onEdit, onDelete }: CertificationsListProps) {;
-  if (certifications && certifications.length === 0) {;
+  if (certifications && certifications.length = = 0) {;
 
 export function CertificationsList({ certifications, onEdit, onDelete }: CertificationsListProps) {
-  if (certifications.length === 0) {
+  if (certifications.length = = 0) {
     return null;
   }
   return (
@@ -71,7 +70,7 @@ export function CertificationsList({ certifications, onEdit, onDelete }: Certifi
                 <p className='text-xs text-muted-foreground mt-1'>;
                   Issued:{' '}
                   {cert && cert.issue_date;
-                    ? typeof cert && cert.issue_date === 'string';
+                    ? typeof cert && cert.issue_date = = 'string';
                       ? cert && cert.issue_date;
                       : format(cert && cert.issue_date, 'MMM yyyy');
                     : 'N/A'}
@@ -79,25 +78,25 @@ export function CertificationsList({ certifications, onEdit, onDelete }: Certifi
                     <>;
                       {' '}
                        Expires:{' '}
-                      {typeof cert && cert.expiration_date === 'string';
+                      {typeof cert && cert.expiration_date = = 'string';
                         ? cert && cert.expiration_date;
                         : format(cert && cert.expiration_date, 'MMM yyyy')}                    </>;
                   )}
                 </p>
               </div>
               <div className='flex gap-2'>
-                    <>  Expires: {typeof cert.expiration_date === 'string'
+                    <>  Expires: {typeof cert.expiration_date = = 'string'
                       ? cert.expiration_date
                       : format(cert.expiration_date, 'MMM yyyy')}
               <div>
                 <h4 className="font-medium">{cert.name}</h4>
                 <p className="text-sm text-muted-foreground">{cert.issuing_organization}</p>
                 <p className="text-xs text-muted-foreground mt-1">
-                  Issued: {cert.issue_date ? (typeof cert.issue_date === 'string'
+                  Issued: {cert.issue_date ? (typeof cert.issue_date = = 'string'
                     ? cert.issue_date
-                    : format(cert.issue_date, 'MMM yyyy')) : 'N/A'}
+                    : format(cert.issue_date, 'MMM yyyy') : 'N/A'}
                   {cert.expiration_date && (
-                    <>  Expires: {typeof cert.expiration_date === 'string'
+                    <>  Expires: {typeof cert.expiration_date = = 'string'
                       ? cert.expiration_date
                       : format(cert.expiration_date, 'MMM yyyy')}
                     </>
@@ -154,13 +153,13 @@ export function CertificationsList({ certifications, onEdit, onDelete }: Certifi
             )}
           </CardContent>;
         </Card>;
-      ))}
+      )}
     </div>
   )
-}
+
     </div>
   );
-}
+
 export /**
  * CertificationsList - Function description
  */
@@ -168,7 +167,7 @@ function CertificationsList() {
   // Check condition
 if ( {) {
   $2
-}
+
     return null;
   }
   return (
@@ -185,7 +184,7 @@ if ( {) {
                 <p className='text - xs text - muted - foreground mt - 1'>;
                   Issued:{' '}
                   {cert.issue_date;
-                    ? typeof cert.issue_date === 'string';
+                    ? typeof cert.issue_date = = 'string';
                       ? cert.issue_date;
                       : format (cert.issue_date, 'MMM yyyy');
                     : 'N / A'}
@@ -193,24 +192,24 @@ if ( {) {
                     <>;
                       {' '}
                        Expires:{' '}
-                      {typeof cert.expiration_date === 'string';
+                      {typeof cert.expiration_date = = 'string';
                         ? cert.expiration_date;
                         : format (cert.expiration_date, 'MMM yyyy')}                    </>)}
                 </p>;
               </div>;
               <div className='flex gap - 2'>;
-                    <>  Expires: {typeof cert.expiration_date === 'string';
+                    <>  Expires: {typeof cert.expiration_date = = 'string';
                       ? cert.expiration_date;
                       : format (cert.expiration_date, 'MMM yyyy')}
               <div>;
                 <h4 className="font - medium">{cert.name}</h4>;
                 <p className="text - sm text - muted - foreground">{cert.issuing_organization}</p>;
                 <p className="text - xs text - muted - foreground mt - 1">;
-                  Issued: {cert.issue_date ? (typeof cert.issue_date === 'string';
+                  Issued: {cert.issue_date ? (typeof cert.issue_date = = 'string';
                     ? cert.issue_date;
-                    : format (cert.issue_date, 'MMM yyyy')) : 'N / A'}
+                    : format (cert.issue_date, 'MMM yyyy') : 'N / A'}
                   {cert.expiration_date && (
-                    <>  Expires: {typeof cert.expiration_date === 'string';
+                    <>  Expires: {typeof cert.expiration_date = = 'string';
                       ? cert.expiration_date;
                       : format (cert.expiration_date, 'MMM yyyy')}
                     </>)}
@@ -256,6 +255,5 @@ if ( {) {
                 </a>;
               </p>)}
           </CardContent>;
-        </Card>))}
+        </Card>)}
     </div>);
-}

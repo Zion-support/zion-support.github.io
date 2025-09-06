@@ -17,7 +17,7 @@ interface LeaderboardEntry {
   earnings: number
 
   badges: string[]
-}
+
 export function PartnerLeaderboard() {
   // Placeholder data - would come from API in real implementation
   const leaderboard: LeaderboardEntry[] = [
@@ -81,10 +81,8 @@ export function PartnerLeaderboard() {
         return <Medal className="h-5 w-5 text-amber-700" />
       default:
         return <span className="text-sm font-semibold">{rank}</span>
-}
 
   )
-}
 
 import { Badge } from '@/components / ui / badge';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components / ui / card';
@@ -97,7 +95,7 @@ interface LeaderboardEntry {
   referrals: number,
   earnings: number,
   badges: string[];
-}
+
 export /**
  * PartnerLeaderboard - Function description
  */
@@ -161,6 +159,5 @@ function PartnerLeaderboard() {
         return <Medal className="h - 5 w - 5 text - amber - 700" />,
       default:;
         return <span className="text - sm font - semibold">{rank}</span>;
-}
+
   );
-}

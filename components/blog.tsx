@@ -32,7 +32,7 @@ export default function BlogPage() {;
       </div>;
     </UltraFuturisticBackground>;
   );
-}
+
 import React from 'react';
 import SEO from '../components / SEO';
 import UltraFuturisticBackground from '../components / ui / UltraFuturisticBackground';
@@ -69,4 +69,3 @@ function BlogPage() {
         <p className="mt - 4 text - gray - 300 max - w-3xl">Curated insights, implementation guides, and trend reports. New articles are published regularly. For press or guest posts, contact kleber@ziontechgroup.com.</p>;
       </div>;
     </UltraFuturisticBackground>);
-}

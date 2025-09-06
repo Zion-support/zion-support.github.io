@@ -6,5 +6,3 @@ export function DeveloperPortal() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

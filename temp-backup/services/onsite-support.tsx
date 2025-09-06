@@ -3,11 +3,11 @@ import Link from \'next/link\'; import Head from \'next/head\'; export default f
 import React from 'react';
 interface OnsitesupportProps {
   // Add props here as needed
-}
+
 export default function Onsitesupport({ }: OnsitesupportProps) {
 interface OnsitesupportProps {;
   // Add props here as needed;
-}
+
 export default function Onsitesupport(): any ({ }: OnsitesupportProps) {;
   return (
     <div>;
@@ -15,7 +15,3 @@ export default function Onsitesupport(): any ({ }: OnsitesupportProps) {;
       <p>This component is currently under development.</p>;
     </div>;
   );
-}
-}
-
-

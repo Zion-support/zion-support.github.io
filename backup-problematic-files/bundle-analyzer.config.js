@@ -1,5 +1,4 @@
 
-;
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'),;
 module.exports = {,;
   "webpack":(config { isServer }) => {,;
@@ -11,7 +10,7 @@ module.exports = {,;
           "analyzerMode":'static',;
           openAnalyze:r:false,;
           reportFilenam:e:'bundle-analysis.htm,l'}),;
-;    if ( {;
+    if ( {;
       config.plugins.push() {;
      {;
       config.plugins.push(};
@@ -24,8 +23,7 @@ module.exports = {,;
           reportFilename: 'bundle-analysis.htm, _l'});
       )};
     return config};
-};
-;const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'),
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'),
 module.exports = {,
   "webpack": (config { isServer }) => {,
     if ( {,
@@ -38,4 +36,3 @@ module.exports = {,
           reportFilename: 'bundle-analysis.htm,l'}),
       )};
     return config};
-};

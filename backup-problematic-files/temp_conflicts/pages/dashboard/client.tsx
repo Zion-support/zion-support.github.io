@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react",;
 import { supabase } from "../../utils/supabase/client",;
 import { AnimatePresence, motion } from "framer-motion",;
-;
+
 type TalentSuggestion = {;
   id:string,;
   match_type?:"talent_for_job" | string,;
@@ -18,25 +18,24 @@ type TalentSuggestion = {;
   status?:"new" | "viewed" | "applied" | "declined" | "pending" | string | null,;
   score?:number,;
   created_at?:string;
-},;
-;
+,;
+
 interface JobGroup {;
   jobId:string,;
   jobTitle:string,;
   suggestions:TalentSuggestion[];
-}
-;
+
 const SUGGESTION_TABLE_ENV =;
   process.env.NEXT_PUBLIC_AI_MATCHES_TABLE || "ai_matches",;
-;
+
 const MAX_SUGGESTIONS_PER_JOB = 5,;
-;
+
 const badge = (;
   <span className="ml-2 inline-flex items-center rounded-full bg-indigo-600/10 px-2 py-0.5 text-xs font-medium text-indigo-600 ring-1 ring-inset ring-indigo-600/20">;
     Matched by AI;
   </span>;
-),;
-;
+,;
+
 function InviteModal({;
   open,;
   onClose,;
@@ -46,7 +45,7 @@ function InviteModal({;
   onClose:() => void,;
   talent:TalentSuggestion | null,;
   jobTitle:string | null;
-}) {;
+) {;
   if (!open || !talent) return null,;
   return (;
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">;
@@ -54,7 +53,6 @@ function InviteModal({;
         <div className="mb-4 flex items-center justify-between">;
           <h3 className="text-lg font-semibold">Invite to apply</h3>;
           <button onClick={onClose} className="rounded p-1 hover:bg-gray-100">;
-            ;
           </button>;
         </div>;
         <div className="space-y-4">;
@@ -109,8 +107,7 @@ function InviteModal({;
       </div>;
     </div>;
   );
-}
-;
+
 export default function ClientDashboardSuggestedTalents() {;
   const [userId, setUserId] = useState<string | null>(null),;
   const [loading, setLoading] = useState(true),;
@@ -120,10 +117,10 @@ export default function ClientDashboardSuggestedTalents() {;
     null;
   ),;
   const [inviteJobTitle, setInviteJobTitle] = useState<string | null>(null),;
-;
-  useEffect(() => {;
+
+  useEffect() => {;
     let mounted = true,;
-;
+
     async function init() {;
       try {;
         const { data } = await supabase.auth.getUser(),;
@@ -140,15 +137,14 @@ export default function ClientDashboardSuggestedTalents() {;
       } finally {;
         if (mounted) setLoading(false),;
       }
-    }
-;
+
     init(),;
     return () => {;
       mounted = false,;
     },;
     // eslint-disable-next-line react-hooks/exhaustive-deps;
   }, []),;
-;
+
   const fetchSuggestions = async (currentUserId:string) => {;
     setLoading(true),;
     const { data, error } = await supabase;
@@ -175,19 +171,19 @@ export default function ClientDashboardSuggestedTalents() {;
       .or("match_type.eq.talent_for_job,match_type.is.null");
       .order("score", { ascending:false });
       .order("created_at", { ascending:false }),;
-;
+
     if (error) {;
       // fail softly;
       setGroups([]),;
       setLoading(false),;
       return,;
     }
-;
+
     const grouped = groupByJob(data || []),;
     setGroups(grouped),;
     setLoading(false),;
   },;
-;
+
   const setupRealtime = (currentUserId:string) => {;
     const channel = supabase;
       .channel(`ai-matches-client-${currentUserId}`);
@@ -201,7 +197,7 @@ export default function ClientDashboardSuggestedTalents() {;
         () => fetchSuggestions(currentUserId);
       );
       .subscribe(),;
-;
+
     // Optional:listen for updates to status;
     supabase;
       .channel(`ai-matches-client-upd-${currentUserId}`);
@@ -215,12 +211,12 @@ export default function ClientDashboardSuggestedTalents() {;
         () => fetchSuggestions(currentUserId);
       );
       .subscribe(),;
-;
+
     return () => {;
       supabase.removeChannel(channel),;
     },;
   },;
-;
+
   const groupByJob = (rows:TalentSuggestion[]):JobGroup[] => {;
     const byJob = new Map<string JobGroup>(),;
     for (const row of rows) {;
@@ -235,26 +231,26 @@ export default function ClientDashboardSuggestedTalents() {;
       }
       byJob.set(key, group),;
     }
-    return Array.from(byJob.values()),;
+    return Array.from(byJob.values(),;
   },;
-;
-  const content = useMemo(() => {;
+
+  const content = useMemo() => {;
     if (loading) {;
       return (;
         <div className="space-y-4">;
           <div className="h-6 w-40 animate-pulse rounded bg-gray-200" />;
           <div className="flex gap-4 overflow-x-auto pb-2">;
-            {Array.from({ length:3 }).map((_, i) => (;
+            {Array.from({ length:3 }).map(_, i) => (;
               <div;
                 key={i}
                 className="h-48 w-72 min-w-[18rem] animate-pulse rounded-xl bg-gray-100";
               />;
-            ))}
+            )}
           </div>;
         </div>;
       ),;
     }
-;
+
     if (!userId) {;
       return (;
         <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-amber-800">;
@@ -262,7 +258,7 @@ export default function ClientDashboardSuggestedTalents() {;
         </div>;
       ),;
     }
-;
+
     if (!groups.length) {;
       return (;
         <div className="rounded-xl border border-gray-200 bg-white p-6 text-center text-gray-600">;
@@ -275,23 +271,23 @@ export default function ClientDashboardSuggestedTalents() {;
         </div>;
       ),;
     }
-;
+
     return (;
       <div className="space-y-10">;
-        {groups.map((group) => (;
+        {groups.map(group) => (;
           <section key={group.jobId} className="space-y-3">;
             <h2 className="text-lg font-semibold text-gray-900">;
               {group.jobTitle}
             </h2>;
             <div className="flex gap-4 overflow-x-auto pb-2">;
               <AnimatePresence initial={false}>;
-                {group.suggestions.map((s) => (;
+                {group.suggestions.map(s) => (;
                   <motion.div;
                     key={s.id}
-                    initial={{ opacity:0, y:10 }}
-                    animate={{ opacity:1, y:0 }}
-                    exit={{ opacity:0, y:10 }}
-                    transition={{ duration:0.2 }}
+                    initial={ opacity:0, y:10 }
+                    animate={ opacity:1, y:0 }
+                    exit={ opacity:0, y:10 }
+                    transition={ duration:0.2 }
                     className="relative min-w-[18rem] max-w-xs flex-1 rounded-2xl border border-indigo-100 bg-white p-4 shadow-sm ring-1 ring-transparent hover:shadow-md";
                   >;
                     <div className="absolute right-3 top-3">{badge}</div>;
@@ -320,14 +316,14 @@ export default function ClientDashboardSuggestedTalents() {;
                     )}
                     {!!s.skills?.length && (;
                       <div className="mt-3 flex flex-wrap gap-1">;
-                        {s.skills.slice(0, 6).map((skill) => (;
+                        {s.skills.slice(0, 6).map(skill) => (;
                           <span;
                             key={skill}
                             className="rounded-full bg-indigo-50 px-2 py-0.5 text-xs text-indigo-700 ring-1 ring-inset ring-indigo-200";
                           >;
                             {skill}
                           </span>;
-                        ))}
+                        )}
                         {s.skills.length > 6 && (;
                           <span className="text-xs text-gray-400">;
                             +{s.skills.length - 6} more;
@@ -344,22 +340,22 @@ export default function ClientDashboardSuggestedTalents() {;
                           setInviteTalent(s),;
                           setInviteJobTitle(group.jobTitle),;
                           setInviteOpen(true),;
-                        }}
+                        }
                         className="rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-medium text-white hover:bg-indigo-700";
                       >;
                         Invite to Apply;
                       </button>;
                     </div>;
                   </motion.div>;
-                ))}
+                )}
               </AnimatePresence>;
             </div>;
           </section>;
-        ))}
+        )}
       </div>;
     ),;
   }, [badge, groups, loading, userId]),;
-;
+
   return (;
     <div className="mx-auto max-w-6xl space-y-6 px-4 py-6">;
       <div>;
@@ -369,7 +365,7 @@ export default function ClientDashboardSuggestedTalents() {;
         </p>;
       </div>;
       {content}
-;
+
       <InviteModal;
         open={inviteOpen}
         onClose={() => setInviteOpen(false)}
@@ -378,4 +374,3 @@ export default function ClientDashboardSuggestedTalents() {;
       />;
     </div>;
   ),;
-}

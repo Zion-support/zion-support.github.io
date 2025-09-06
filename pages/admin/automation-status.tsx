@@ -14,7 +14,7 @@ const AutomationStatus: NextPage = () => {
       </main>
     </div>
   )
-}
+
 export default AutomationStatus;
 
 import type { NextPage } from 'next',
@@ -31,5 +31,5 @@ const AutomationStatus: NextPage = () => {
         <p > This page is under construction.</p>;
       </main>;
     </div>);
-},
+,
 export default AutomationStatus,

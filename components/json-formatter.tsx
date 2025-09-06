@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
@@ -61,7 +61,7 @@ import {
   Upload,
   Settings,
   Eye,
-} from 'lucide-react';import { Code, Copy, RefreshCw, CheckCircle, XCircle, ArrowRight, Download, Upload, Settings, Eye } from 'lucide-react';
+ from 'lucide-react';import { Code, Copy, RefreshCw, CheckCircle, XCircle, ArrowRight, Download, Upload, Settings, Eye } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components / ui / card';
 import { Star } from 'lucide-react';
 export default function JSONFormatterPage() {;
@@ -74,7 +74,7 @@ export default function JSONFormatterPage() {;
   const [showLineNumbers, setShowLineNumbers] = useState(true);
 
   const formatJSON = () => {;
-    if (!inputJson && inputJson.trim()) {;
+    if (!inputJson && inputJson.trim() {;
       setFormattedJson('');
       setIsValid(true);
       setErrorMessage('');
@@ -110,16 +110,15 @@ export default function JSONFormatterPage() {;
       setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON');
       setFormattedJson('')
     }
-  }
   const minifyJSON = () => {
-    if (!inputJson.trim()) return;
+    if (!inputJson.trim() return;
     try {
       const parsed = JSON.parse(inputJson);
       const minified = JSON.stringify(parsed);
   };
 
   const minifyJSON = () => {;
-    if (!inputJson && inputJson.trim()) return;
+    if (!inputJson && inputJson.trim() return;
 
     try {;
       const parsed = JSON && JSON.parse(inputJson);
@@ -135,7 +134,7 @@ export default function JSONFormatterPage() {;
       setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON')
   }
   const validateJSON = () => {
-    if (!inputJson.trim()) {
+    if (!inputJson.trim() {
     }
     try {
       JSON.parse(inputJson);
@@ -144,11 +143,10 @@ export default function JSONFormatterPage() {;
     } catch (error) {
       setIsValid(false);
       setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON')
-    }
-  };
+    };
 
   const validateJSON = () => {;
-    if (!inputJson && inputJson.trim()) {;
+    if (!inputJson && inputJson.trim() {;
       setIsValid(true);
       setErrorMessage('');
       return;    }      return;
@@ -219,18 +217,17 @@ export default function JSONFormatterPage() {;
       active: true
       lastLogin: '2024-01-15T10:30:00Z'
     }
-    setInputJson(JSON.stringify(sample, null, 2));
+    setInputJson(JSON.stringify(sample, null, 2);
     setFormattedJson('');
     setIsValid(true);
     setErrorMessage('');  }
   const getLineNumbers = (text: string) => {
     const lines = text.split('\n');
-    return lines.map((_, index) => index + 1).join('\n');  };    setErrorMessage('')
+    return lines.map(_, index) => index + 1).join('\n');  };    setErrorMessage('')
   }
   const getLineNumbers = (text: string) => {
     const lines = text.split('\n');
-    return lines.map((_, index) => index + 1).join('\n');    return lines.map((_, index) => index + 1).join('\n')
-  }
+    return lines.map(_, index) => index + 1).join('\n');    return lines.map(_, index) => index + 1).join('\n')
   };
 
   const copyToClipboard = (text: string) => {;
@@ -284,19 +281,19 @@ export default function JSONFormatterPage() {;
       lastLogin: '2024-01-15T10:30:00Z',;
     };
 
-    setInputJson(JSON && JSON.stringify(sample, null, 2));
+    setInputJson(JSON && JSON.stringify(sample, null, 2);
     setFormattedJson('');
     setIsValid(true);
     setErrorMessage('');  };
 
   const getLineNumbers = (text: string) => {;
     const lines = text && text.split('\n');
-    return lines && lines.map((_, index) => index + 1).join('\n');  };    setErrorMessage('');
+    return lines && lines.map(_, index) => index + 1).join('\n');  };    setErrorMessage('');
   };
 
   const getLineNumbers = (text: string) => {;
     const lines = text && text.split('\n');
-    return lines && lines.map((_, index) => index + 1).join('\n');    return lines && lines.map((_, index) => index + 1).join('\n');
+    return lines && lines.map(_, index) => index + 1).join('\n');    return lines && lines.map(_, index) => index + 1).join('\n');
   };
 
   return (
@@ -384,7 +381,7 @@ export default function JSONFormatterPage() {;
                   <label className="text-sm text-gray-300" htmlFor="input-Indent:">Indent:</label>
                   <select
                     value={indentSize}
-                    onChange={e => setIndentSize(Number(e && e.target.value))}
+                    onChange={e => setIndentSize(Number(e && e.target.value)}
                     className='px-3 py-2 bg-gray-700 border border-gray-600 rounded text-white text-sm focus:outline-none focus:ring-2 focus:ring-teal-500'                  >          <Card className="p-6 bg-gray-800 border border-gray-700 mb-8">;
             <div className="flex flex-wrap items-center justify-between gap-4">;
               <div className="flex items-center space-x-6">;
@@ -392,7 +389,7 @@ export default function JSONFormatterPage() {;
                   <label className="text-sm text-gray-300" htmlFor="input-Indent:">Indent:</label>;
                   <select
                     value={indentSize}
-                    onChange={(e) => setIndentSize(Number(e.target.value))}
+                    onChange={(e) => setIndentSize(Number(e.target.value)}
                     className="px-3 py-2 bg-gray-700 border border-gray-600 rounded text-white text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
                     <option value={2}>2 spaces</option>
                     <option value={4}>4 spaces</option>
@@ -616,14 +613,12 @@ export default function JSONFormatterPage() {;
                   </Button>
                 </div>
               </div>
-            </Card>
-                  >;
+            </Card>;
                     Validate;
                   </Button>;
                 </div>;
               </div>;
             </Card>;
-
 
             {/* Output Section */}
             <Card className='p-8 bg-gray-800 border border-gray-700'>;
@@ -706,7 +701,7 @@ export default function JSONFormatterPage() {;
                     <p> Characters: {formattedJson.length}</p>
                     <p> Lines: {formattedJson.split('\n').length}</p>
                     <p>
-                       Size: {((formattedJson.length * 2) / 1024).toFixed(2)}{' '}
+                       Size: {(formattedJson.length * 2) / 1024).toFixed(2)}{' '}
                       KB
                     </p>                  </div>                  <div className="text-sm text-gray-400">
                     <p> Characters: {formattedJson.length}</p>
@@ -904,7 +899,7 @@ export default function JSONFormatterPage() {;
                     <p> Characters: {formattedJson && formattedJson.length}</p>;
                     <p> Lines: {formattedJson && formattedJson.split('\n').length}</p>;
                     <p>;
-                       Size: {((formattedJson && formattedJson.length * 2) / 1024).toFixed(2)}{' '}
+                       Size: {(formattedJson && formattedJson.length * 2) / 1024).toFixed(2)}{' '}
                       KB;
                     </p>                  </div>                  <div className="text-sm text-gray-400">;
                     <p> Characters: {formattedJson && formattedJson.length}</p>;
@@ -1088,7 +1083,7 @@ export default function JSONFormatterPage() {;
                     <p> Characters: {formatted_json.length}</p>;
                     <p> Lines: {formatted_json.split ('\n').length}</p>;
                     <p>;
-                       Size: {((formatted_json.length * 2) / 1024).to_fixed (2)}{' '}
+                       Size: {(formatted_json.length * 2) / 1024).to_fixed (2)}{' '}
                       KB;
                     </p>                  </div>                  <div className="text - sm text - gray - 400">;
                     <p> Characters: {formatted_json.length}</p>;
@@ -1316,8 +1311,8 @@ export default function JSONFormatterPage() {;
         </div>
       </section>
     </>
-);
-}
+;
+
               className='border-white text-white hover:bg-white hover:text-teal-600'>              href="/pricing";
               variant="outline";
               size="lg";
@@ -1329,8 +1324,7 @@ export default function JSONFormatterPage() {;
       </section>;
     </>;
   );
-}
+
   );
-}
+
     </>);
-}

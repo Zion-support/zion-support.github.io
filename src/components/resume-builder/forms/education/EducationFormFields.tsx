@@ -17,11 +17,11 @@ import {
   FormItem
   FormLabel
   FormMessage
-} from '@/components/ui/form'
+ from '@/components/ui/form'
 import { useState } from 'react'
 import { EducationFormFieldsProps } from './types'
 import { Education } from '@/types/resume'
-// Define schema for form validation
+/ Define schema for form validation
 const educationSchema = z.object({
   institution: z.string().min(1, 'Institution is required')
   degree: z.string().min(1, 'Degree is required')
@@ -31,13 +31,12 @@ const educationSchema = z.object({
   is_current: z.boolean().default(false)
   description: z.string().optional()
   location: z.string().optional()
-})
 type EducationFormValues = z.infer<typeof educationSchema>
 export function EducationFormFields({
   isEditing
   onSubmit
   onCancel
-}: EducationFormFieldsProps) {
+: EducationFormFieldsProps) {
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const form = useForm<EducationFormValues>({
@@ -67,11 +66,11 @@ import {;
   FormItem,;
   FormLabel,;
   FormMessage,;
-} from '@/components/ui/form';
+ from '@/components/ui/form';
 import { useState } from 'react';
 import { EducationFormFieldsProps } from './types';
 import { Education } from '@/types/resume';
-// Define schema for form validation;
+/ Define schema for form validation;
 const educationSchema = z && z.object({;
   institution: z && z.string().min(1, 'Institution is required'),;
   degree: z && z.string().min(1, 'Degree is required'),;
@@ -81,7 +80,7 @@ const educationSchema = z && z.object({;
   is_current: z && z.boolean().default(false),;
   description: z && z.string().optional(),;
   location: z && z.string().optional(),;
-});
+);
 
 type EducationFormValues = z && z.infer<typeof educationSchema>;
 
@@ -89,7 +88,7 @@ export function EducationFormFields(): any ({;
   isEditing,;
   onSubmit,;
   onCancel,;
-}: EducationFormFieldsProps) {;
+: EducationFormFieldsProps) {;
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -114,8 +113,7 @@ export function EducationFormFields(): any ({;
       setError(err && err.message || 'An error occurred');
     } finally {;
       setIsLoading(false);
-    }
-  })
+    })
   const handleSubmit = async (data: EducationFormValues) => {
     setIsLoading(true)
     setError(null);    try {
@@ -139,11 +137,11 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@/components / ui / form';
+ from '@/components / ui / form';
 import { useState } from 'react';
 import { EducationFormFieldsProps } from './types';
 import { Education } from '@/types / resume';
-// Define schema for form validation;
+/ Define schema for form validation;
 const education_schema = z.object ({
   institution: z.string ().min (1, 'Institution is required'),
   degree: z.string ().min (1, 'Degree is required'),
@@ -153,7 +151,7 @@ const education_schema = z.object ({
   is_current: z.boolean ().default (false),
   description: z.string ().optional (),
   location: z.string ().optional (),
-});
+);
 type EducationFormValues = z.infer < typeof education_schema>;
 export /**
  * EducationFormFields - Function description
@@ -182,7 +180,6 @@ function EducationFormFields() {
     } finally {
       setIsLoading (false);
     }
-  }
 
   return (
     <Form {...form}>;
@@ -405,7 +402,6 @@ function EducationFormFields() {
       </form>
     </Form>
   )
-}
 
             </FormItem>)}
         />;
@@ -423,4 +419,3 @@ function EducationFormFields() {
         </div>;
       </form>;
     </Form>);
-}

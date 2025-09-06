@@ -6,5 +6,3 @@ export function ITServiceRequestHero() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

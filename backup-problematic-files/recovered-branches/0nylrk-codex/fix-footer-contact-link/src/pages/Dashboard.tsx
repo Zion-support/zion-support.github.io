@@ -9,13 +9,13 @@ import { createTestNotification, createOnboardingNotification, createSystemNotif
 import { NotificationCenter } from "@/components/NotificationCenter",;
 import { useToast } from "@/hooks/use-toast",;
 import { Link } from "react-router-dom",;
-;
+
 export default function Dashboard() {;
   const { user, logout } = useAuth(),;
   const { toast } = useToast(),;
-;
+
   if (!user) return null,;
-;
+
   const handleTestNotification = async () => {;
     const result = await createTestNotification(user.id),;
     if (result.success) {;
@@ -27,9 +27,8 @@ export default function Dashboard() {;
         title:"Error creating test notification",;
         description:"Something went wrong",;
         variant:"destructive"}),;
-    }
-  },;
-;
+    },;
+
   return (;
     <>;
       <Header />;
@@ -45,13 +44,11 @@ export default function Dashboard() {;
                   </div>;
                   <h2 className="text-xl font-bold text-white">{user.displayName}</h2>;
                   <p className="text-zion-slate-light mb-2">{user.email}</p>;
-                  ;
                   <Badge ;
                     className="bg-zion-purple text-white mb-4";
                   >;
                     {user.userType ? user.userType.charAt(0).toUpperCase() + user.userType.slice(1) :"New User"}
                   </Badge>;
-                  ;
                   <Button ;
                     className="w-full flex items-center gap-2 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white";
                     onClick={() => window.location.href = "/profile"}
@@ -61,7 +58,6 @@ export default function Dashboard() {;
                   </Button>;
                 </div>;
               </div>;
-              ;
               {/* Stats & Metrics */}
               <div className="bg-zion-blue-dark rounded-xl p-6 mb-6">;
                 <h3 className="text-lg font-bold text-white mb-4">Your Activity</h3>;
@@ -71,9 +67,8 @@ export default function Dashboard() {;
                     <span className="text-zion-cyan font-medium">65%</span>;
                   </div>;
                   <div className="w-full bg-zion-blue rounded-full h-2">;
-                    <div className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full" style={{ width:"65%" }}></div>;
+                    <div className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full" style={ width:"65%" }></div>;
                   </div>;
-                  ;
                   <div className="flex justify-between items-center">;
                     <span className="text-zion-slate-light">Community Points</span>;
                     <span className="text-zion-cyan font-medium">125</span>;
@@ -84,12 +79,10 @@ export default function Dashboard() {;
                       <a href="/wallet" className="hover:underline">View Wallet</a>;
                     </span>;
                   </div>;
-                  ;
                   <div className="flex justify-between items-center">;
                     <span className="text-zion-slate-light">Badges Earned</span>;
                     <span className="text-zion-cyan font-medium">3/12</span>;
                   </div>;
-                  ;
                   {/* Test notification buttons */}
                   <div className="flex flex-col gap-2 mt-4">;
                     <Button ;
@@ -100,7 +93,7 @@ export default function Dashboard() {;
                       <Send size={16} className="text-zion-cyan" />;
                       Send Test Notification;
                     </Button>;
-;
+
                     <Button ;
                       className="w-full flex items-center justify-center gap-2";
                       variant="outline";
@@ -108,18 +101,18 @@ export default function Dashboard() {;
                         await createOnboardingNotification({;
                           userId:user.id,;
                           missingMilestone:'profile_completed',;
-                          userRole:user.userType === 'employer' || user.userType === 'buyer' ? 'client' :'talent';
+                          userRole:user.userType = = 'employer' || user.userType = = 'buyer' ? 'client' :'talent';
                         }),;
                         toast({;
                           title:"Onboarding notification sent",;
                           description:"Check your notification center";
                         }),;
-                      }}
+                      }
                     >;
                       <Settings size={16} className="text-zion-purple" />;
                       Send Onboarding Nudge;
                     </Button>;
-;
+
                     <Button ;
                       className="w-full flex items-center justify-center gap-2";
                       variant="outline";
@@ -135,7 +128,7 @@ export default function Dashboard() {;
                           title:"System notification sent",;
                           description:"Check your notification center";
                         }),;
-                      }}
+                      }
                     >;
                       <Bell size={16} className="text-yellow-500" />;
                       Send System Alert;
@@ -143,7 +136,6 @@ export default function Dashboard() {;
                   </div>;
                 </div>;
               </div>;
-              ;
               {/* Notifications */}
               <div className="bg-zion-blue-dark rounded-xl p-6">;
                 <h3 className="text-lg font-bold text-white mb-4 flex items-center">;
@@ -160,7 +152,6 @@ export default function Dashboard() {;
                 </div>;
               </div>;
             </div>;
-            ;
             {/* Main Content - Dashboard */}
             <div className="lg:col-span-2">;
               <div className="bg-zion-blue-dark rounded-xl p-6 mb-6">;
@@ -178,7 +169,6 @@ export default function Dashboard() {;
                     </Button>;
                   </div>;
                 </div>;
-                ;
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 mb-6">;
                   <div className="p-4 rounded-lg bg-gradient-to-br from-zion-blue to-zion-purple/30 border border-zion-blue-light">;
                     <h3 className="text-lg font-medium text-white">Welcome, {user.displayName.split(' ')[0]}</h3>;
@@ -189,7 +179,6 @@ export default function Dashboard() {;
                     <p className="text-zion-slate-light mt-1">Complete your profile to unlock all features.</p>;
                   </div>;
                 </div>;
-                ;
                 {/* Badges Preview */}
                 <div className="mb-8">;
                   <h3 className="text-lg font-bold text-white mb-4">Your Badges</h3>;
@@ -220,7 +209,6 @@ export default function Dashboard() {;
                     </div>;
                   </div>;
                 </div>;
-                ;
                 {/* Community Section */}
                 <div>;
                   <h3 className="text-lg font-bold text-white mb-4">Community</h3>;
@@ -236,23 +224,18 @@ export default function Dashboard() {;
   ),; export default function Dashboard () {
   const {
   user, logout 
-}= useAuth ();
+= useAuth ();
 const {
   toast 
-}= useToast ();
-}
-};
-return (<> <Header /> <Badge className="bg-zion-purple text-white mb-4" > > <UserCheck size= {
+= useToast ();
+return (<> <Header /> <Badge className="bg-zion-purple text-white mb-4" ><UserCheck size= {
   16 
-}/> Edit Profile </Button> </div> </div> </div> <div className="flex justify-between items-center" > <span className="text-zion-slate-light" >Community Points</span> <span className="text-zion-cyan font-medium" >125</span> </div> <div className="flex justify-between items-center" > <span className="text-zion-slate-light" >ZION$ Balance</span> <span className="text-zion-cyan font-medium" > <a href="/wallet" className="hover:underline" >View Wallet</Link> </span> </div> <div className="flex justify-between items-center" > <span className="text-zion-slate-light" >Badges Earned</span> <span className="text-zion-cyan font-medium" >3/12</span> </div> Send Test Notification </Button> <Button 
-}
-}> <Settings size= {
+/> Edit Profile </Button> </div> </div> </div> <div className="flex justify-between items-center" > <span className="text-zion-slate-light" >Community Points</span> <span className="text-zion-cyan font-medium" >125</span> </div> <div className="flex justify-between items-center" > <span className="text-zion-slate-light" >ZION$ Balance</span> <span className="text-zion-cyan font-medium" > <a href="/wallet" className="hover:underline" >View Wallet</Link> </span> </div> <div className="flex justify-between items-center" > <span className="text-zion-slate-light" >Badges Earned</span> <span className="text-zion-cyan font-medium" >3/12</span> </div> Send Test Notification </Button> <Button 
+
+> <Settings size= {
   16 
-}className="text-zion-purple" /> 
-}
-}> <Bell size= {
+className="text-zion-purple" /><Bell size= {
   16 
-}className="text-yellow-500" /> space-y-4"> <Link to=" /notifications"className=" block"> <Button variant=" outline"className=" w-full"> <Bell className=" mr-2 h-4 w-4"/> View All Notifications </Button> </Link> </div> </div> </div> Logout </Button> </div> </div> </div> <div className=" p-4 rounded-lg bg-gradient-to-br from-zion-blue to-zion-cyan/30 border border-zion-blue-light"> <h3 className=" text-lg font-medium text-white">Getting Started</h3> <p className=" text-zion-slate-light mt-1">Complete your profile to unlock all features.</p> </div> </div> </div> <span className=" text-xs text-center text-zion-slate-light">Newcomer</span> </div> </div> <span className=" text-xs text-center text-zion-slate-light">First Post</span> </div> </div> <span className=" text-xs text-center text-zion-slate-light">Locked</span> </div> <div className=" flex flex-col items-center opacity-40"> <div className=" w-16 h-16 rounded-full bg-zion-blue-light flex items-center justify-center mb-2"> <span className=" text-zion-slate-light text-xl">?</span> </div> <span className=" text-xs text-center text-zion-slate-light">Locked</span> </div> </div> </div> {
+className="text-yellow-500" /> space-y-4"> <Link to=" /notifications"className=" block"> <Button variant=" outline"className=" w-full"> <Bell className=" mr-2 h-4 w-4"/> View All Notifications </Button> </Link> </div> </div> </div> Logout </Button> </div> </div> </div> <div className=" p-4 rounded-lg bg-gradient-to-br from-zion-blue to-zion-cyan/30 border border-zion-blue-light"> <h3 className=" text-lg font-medium text-white">Getting Started</h3> <p className=" text-zion-slate-light mt-1">Complete your profile to unlock all features.</p> </div> </div> </div> <span className=" text-xs text-center text-zion-slate-light">Newcomer</span> </div> </div> <span className=" text-xs text-center text-zion-slate-light">First Post</span> </div> </div> <span className=" text-xs text-center text-zion-slate-light">Locked</span> </div> <div className=" flex flex-col items-center opacity-40"> <div className=" w-16 h-16 rounded-full bg-zion-blue-light flex items-center justify-center mb-2"> <span className=" text-zion-slate-light text-xl">?</span> </div> <span className=" text-xs text-center text-zion-slate-light">Locked</span> </div> </div> </div> {
   /* Community Section */ 
-}<div> <h3 className=" text-lg font-bold text-white mb-4" >Community</h3> <CommunityDiscussion /> </div> </div> </div> </div> </div> </div> <Footer /> </>) 
-}
+<div> <h3 className=" text-lg font-bold text-white mb-4" >Community</h3> <CommunityDiscussion /> </div> </div> </div> </div> </div> </div> <Footer /> </>) 

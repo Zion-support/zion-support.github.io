@@ -27,7 +27,7 @@ interface AddMilestoneFormProps {
   projectStartDate?: string;
   projectEndDate?: string;
   projectType?: string;
-}
+
 export function AddMilestoneForm({
   onSubmit;
   isSubmitting;
@@ -36,20 +36,20 @@ export function AddMilestoneForm({
   projectStartDate = '';
   projectEndDate = null;
   projectType = 'Other'
-}: AddMilestoneFormProps) {
+: AddMilestoneFormProps) {
   const form = useForm<MilestoneFormValues>({
     resolver: zodResolver(formSchema)
     defaultValues: {
       title: ''
       description: ''
-      amount: 0}})
+      amount: 0})
   const handleSubmit = (values: MilestoneFormValues) => {
     onSubmit(values)
     form.reset()
   }
   const handleAddMilestones = (milestones: GeneratedMilestone[]) => {
     // If there's only one milestone, submit it directly
-    if (milestones.length === 1) {
+    if (milestones.length = = 1) {
       const milestone = milestones[0];
       onSubmit({
         title: milestone.title
@@ -105,9 +105,9 @@ const form_schema = z.object ({
   description: z.string ().optional (),
   due_date: z.date ().optional (),
   amount: z.coerce.number ().min (0, 'Amount must be greater than or equal to 0')});
-;
+
 type MilestoneFormValues = z.infer < typeof form_schema>;
-;
+
 interface AddMilestoneFormProps {
   on_submit: (data: MilestoneFormValues) => void,
   is_submitting: boolean,
@@ -116,7 +116,7 @@ interface AddMilestoneFormProps {
   projectStartDate?: string;
   projectEndDate?: string;
   project_type?: string;
-}
+
 export /**
  * AddMilestoneForm - Function description
  */
@@ -126,18 +126,18 @@ function AddMilestoneForm() {
     default_values: {
       title: '',
       description: '',
-      amount: 0}}),
+      amount: 0}),
   const handle_submit = (values: MilestoneFormValues) =>: any {
     on_submit (values),
     form.reset ();
   }
-;
+
   const handleAddMilestones = (milestones: GeneratedMilestone[]) =>: any {
     // If there's only one milestone, submit it directly;
     // Check condition
 if ( {) {
   $2
-}
+
       const milestone = milestones[0];
       on_submit ({
         title: milestone.title,
@@ -157,7 +157,7 @@ if ( {) {
       });
     });
   }
-;
+
   const handleAddMilestone = (milestone: GeneratedMilestone) =>: any {
     on_submit ({
       title: milestone.title,
@@ -166,7 +166,7 @@ if ( {) {
       amount: milestone.estimated_hours * 10, // Convert hours to a default payment amount;
     });
   }
-;
+
   return (
     <div className="space - y-6">;
       {/* AI Milestone Generator */}
@@ -271,7 +271,7 @@ if ( {) {
                           className="w - full pl - 3 text - left font - normal";
                         >;
                           {field.value ? (
-                            format (field.value, "PPP")) : (
+                            format (field.value, "PPP") : (
                             <span className="text - muted - foreground">;
                               Pick a date;
                             </span>)}
@@ -352,13 +352,12 @@ if ( {) {
       </Form>
     </div>
   )
-}
+
             </Button>;
           </div>;
         </form>;
       </Form>;
     </div>;
   );
-}
+
     </div>);
-}

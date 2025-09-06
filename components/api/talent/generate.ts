@@ -1,12 +1,11 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 
-
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
-) {
-  if (req && req.method !== 'POST') {
+ {
+  if (req && req.method != 'POST') {
     return res && res.setHeader('Allow', 'POST').status(405).end('Method Not Allowed');
   }
   const { name, title, bio, experience, skills } = req.body as {
@@ -98,10 +97,10 @@ INPUT\nName: ${name}\nCurrent Title: ${title || ''}\nBio: ${bio || ''}\nExperien
         { role: 'user', content: prompt }];
       response_format: { type: 'json_object' }
       temperature: 0.6});
-;
+
     const content = completion.choices?.[0]?.message?.content || '{}';
     const parsed = JSON.parse (content);
-;
+
     return res.status (200).json ({
       name,
       title: parsed.title || title || 'Professional',
@@ -120,10 +119,7 @@ INPUT\nName: ${name}\nCurrent Title: ${title || ''}\nBio: ${bio || ''}\nExperien
   } catch (e: any) {
     return res && res.status(500).json({ error: e && e.message || 'OpenAI error' })
   };
-}
-}
+
       skills: Array.is_array (parsed.skills) ? parsed.skills.slice (0, 20) : []});
   } catch (e: any) {
     return res.status (500).json ({ error: e.message || 'OpenAI error' });
-}
-}

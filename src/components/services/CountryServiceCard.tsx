@@ -4,7 +4,7 @@ import {
   CardContent
   CardFooter
   CardHeader
-} from '@/components/ui/card'
+ from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 import { Badge } from '@/components/ui/badge'
@@ -25,13 +25,13 @@ interface CountryServiceCardProps {
   onQuote?: (country: CountryPricing,) => void
 
   isPopular?: boolean
-}
+
 export function CountryServiceCard({
   country
   onSelect
   onQuote
   isPopular
-}: CountryServiceCardProps) {
+: CountryServiceCardProps) {
   // Get region flag based on country name (for demo purposes)
 
   const getRegionEmoji = (countryName: string | undefined): string => {
@@ -77,14 +77,13 @@ export function CountryServiceCard({
       'South Africa'
       'Russia'
     ]
-    if (tier1.includes(countryName)) {
+    if (tier1.includes(countryName) {
       return '4 hours'
-    } else if (tier2.includes(countryName)) {
+    } else if (tier2.includes(countryName) {
       return '6 hours'
     } else {
       return '8 - 24 hours';
     }
-  }
     >
       <CardHeader className='pb-2'>
         <div className='flex items-center justify-between'>
@@ -135,7 +134,7 @@ import {;
   CardContent,;
   CardFooter,;
   CardHeader,;
-} from '@/components/ui/card';
+ from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { Badge } from '@/components/ui/badge';
@@ -155,14 +154,13 @@ interface CountryServiceCardProps {;
   onSelect: (country: CountryPricing,) => void,;
   onQuote?: (country: CountryPricing,) => void,;
   isPopular?: boolean;
-}
 
 export function CountryServiceCard(): any ({;
   country,;
   onSelect,;
   onQuote,;
   isPopular,;
-}: CountryServiceCardProps) {;
+: CountryServiceCardProps) {;
   // Get region flag based on country name (for demo purposes);
   const getRegionEmoji = (countryName: string | undefined): string => {;
     if (!countryName) return '';
@@ -212,15 +210,13 @@ export function CountryServiceCard(): any ({;
       'Russia',;
     ];
 
-    if (tier1 && tier1.includes(countryName)) {;
+    if (tier1 && tier1.includes(countryName) {;
       return '4 hours';
-    } else if (tier2 && tier2.includes(countryName)) {;
+    } else if (tier2 && tier2.includes(countryName) {;
       return '6 hours';
     } else {;
       return '8-24 hours';
-    }
-  };
-
+    };
 
     >;
       <CardHeader className='pb-2'>;
@@ -342,7 +338,6 @@ export function CountryServiceCard(): any ({;
       </CardFooter>
     </Card>
   )
-}
 
         <Button;
           variant='outline';
@@ -359,4 +354,3 @@ export function CountryServiceCard(): any ({;
         </Button>;
       </CardFooter>;
     </Card>);
-}

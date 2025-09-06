@@ -1,13 +1,12 @@
 import React, { useEffect } from 'react',;
 import Head from 'next/head',;
-;
+
 export default function LinkedInRedirect() {;
-	useEffect(() => {;
-		if (typeof window !== 'undefined') {;
+	useEffect() => {;
+		if (typeof window != 'undefined') {;
 			window.location.replace('https://www.linkedin.com/company/zion-tech-group');
-		}
-	}, []),;
-;
+		}, []),;
+
 	return (;
 		<>;
 			<Head>;
@@ -23,4 +22,3 @@ export default function LinkedInRedirect() {;
 			</div>;
 		</>;
 	); return (<> <Head> <title>LinkedIn | Zion Tech Group</title> Continue to LinkedIn </Link> </div> </>) 
-}

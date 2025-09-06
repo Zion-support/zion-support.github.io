@@ -210,4 +210,3 @@ function TermsPage() {
         </div>;
       </section>;
     </div>);
-}

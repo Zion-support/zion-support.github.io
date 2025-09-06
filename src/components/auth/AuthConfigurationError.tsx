@@ -4,7 +4,7 @@ import {;
   RefreshCw,;
   Settings,;
   CheckCircle,;
-} from 'lucide-react';import { Button } from '@/components/ui/button';import { AlertTriangle, ExternalLink, RefreshCw, Settings, CheckCircle } from 'lucide-react';
+ from 'lucide-react';import { Button } from '@/components/ui/button';import { AlertTriangle, ExternalLink, RefreshCw, Settings, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 
@@ -16,7 +16,7 @@ import {
   RefreshCw
   Settings
   CheckCircle
-} from 'lucide-react'; import { Button } from '@/components/ui/button'; import { AlertTriangle, ExternalLink, RefreshCw, Settings, CheckCircle } from 'lucide-react'
+ from 'lucide-react'; import { Button } from '@/components/ui/button'; import { AlertTriangle, ExternalLink, RefreshCw, Settings, CheckCircle } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Alert, AlertDescription } from '@/components/ui/alert'
 
@@ -30,15 +30,13 @@ interface AuthConfigurationErrorProps {;
 export function AuthConfigurationError({
   onRetry
   showSetupButton = true
-}: AuthConfigurationErrorProps) {
+: AuthConfigurationErrorProps) {
   const handleRefresh = () => {
     if (onRetry) {
       onRetry()
     } else {
       window.location.reload() }
-  }
-    }
-  };
+    };
 
   return (
     <div className='min-h-screen bg-gradient-to-br from-red-50 via-orange-50 to-yellow-50 flex items-center justify-center p-4'>;
@@ -50,7 +48,6 @@ export function AuthConfigurationError(): any ({ onRetry, showSetupButton = true
     } else {;
       window && window.location.reload();
     }
-  }
   return (
     <div className='min-h-screen bg-gradient-to-br from-red-50 via-orange-50 to-yellow-50 flex items-center justify-center p-4'>;
       <div className='max-w-2xl w-full'>;
@@ -417,8 +414,7 @@ export function AuthConfigurationError(): any ({ onRetry, showSetupButton = true
               href='/marketplace'
               className='flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800'
             >
-              <span>Browse Marketplace</span>            >
-              <span>Browse Marketplace</span>
+              <span>Browse Marketplace</span><span>Browse Marketplace</span>
               <ExternalLink className="w-4 h-4" />
             </Link>
             <Link
@@ -555,7 +551,6 @@ export function AuthConfigurationError(): any ({ onRetry, showSetupButton = true
 export default AuthConfigurationError }
 export default AuthConfigurationError
 
-
 export default AuthConfigurationError;}
 
 export default AuthConfigurationError,;
@@ -571,7 +566,7 @@ export default AuthConfigurationError;
               href='/marketplace';
               className='flex items - center gap - 2 p - 3 bg - white rounded - lg hover:bg - blue - 50 transition - colors text - blue - 700 hover:text - blue - 800';
             >;
-              <span > Browse Marketplace</span>            >;
+              <span > Browse Marketplace</span>;
               <span > Browse Marketplace</span>;
               <ExternalLink className="w - 4 h - 4" />;
             </Link>;

@@ -6,5 +6,3 @@ export function ScrollProgressBar() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

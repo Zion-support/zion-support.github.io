@@ -21,7 +21,7 @@ interface ServiceQuoteModalProps {
   open: boolean
   onOpenChange: (open: boolean) => void
   service: ProductListing | null
-}
+
 const BUDGET_RANGES = [
   { label: "Less than $5,000", value: "0-5000" }
   { label: "$5,000 - $10,000", value: "5000-10000" }
@@ -39,13 +39,13 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
     email: ''
     budget: BUDGET_RANGES[0].value
     timeframe: TIMELINE_OPTIONS[0].value})
-  const [startDate, setStartDate] = useState<Date | undefined>(new Date());
+  const [startDate, setStartDate] = useState<Date | undefined>(new Date();
   const [endDate, setEndDate] = useState<Date | undefined>(undefined);
   const [currentStep, setCurrentStep] = useState<'details' | 'timeline' | 'contact'>('details');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }))
+    setFormData(prev => ({ ...prev, [name]: value })
   }
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -62,7 +62,6 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
             ...formData
             startDate: startDate?.toISOString()
             endDate: endDate?.toISOString()}
-        }
       });
       if (error) throw error;
       // Show success message
@@ -76,7 +75,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
         email: ''
         budget: BUDGET_RANGES[0].value
         timeframe: TIMELINE_OPTIONS[0].value})
-      setStartDate(new Date());
+      setStartDate(new Date();
       setEndDate(undefined);
       setCurrentStep('details')
     } catch (error) {
@@ -88,14 +87,13 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
     } finally {
       setIsSubmitting (false);
     }
-  }
   const nextStep = () => {
-    if (currentStep === 'details') setCurrentStep('timeline');
-    else if (currentStep === 'timeline') setCurrentStep('contact')
+    if (currentStep = = 'details') setCurrentStep('timeline');
+    else if (currentStep = = 'timeline') setCurrentStep('contact')
   }
   const prevStep = () => {
-    if (currentStep === 'timeline') setCurrentStep('details');
-    else if (currentStep === 'contact') setCurrentStep('timeline')
+    if (currentStep = = 'timeline') setCurrentStep('details');
+    else if (currentStep = = 'contact') setCurrentStep('timeline')
   }
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
@@ -107,7 +105,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
         </DialogHeader>
         <form onSubmit={handleSubmit} className="space-y-6">
           {/* Step 1: Service Details */}
-          {currentStep === 'details' && (
+          {currentStep = = 'details' && (
             <div className="space-y-4">
               <div className="p-4 bg-zion-blue-dark rounded-md border border-zion-blue-light">
                 <h3 className="font-medium text-zion-cyan mb-2">Selected Service</h3>
@@ -130,40 +128,40 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                 <Label htmlFor="budget" className="text-white">Estimated Budget</Label>
                 <Select
                   value={formData.budget}
-                  onValueChange={(value) => setFormData(prev => ({ ...prev, budget: value }))}
+                  onValueChange={(value) => setFormData(prev => ({ ...prev, budget: value })}
                 >;
                   <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white">;
                     <SelectValue placeholder="Select your budget range" />;
                   </SelectTrigger>;
                   <SelectContent className="bg-zion-blue-dark border-zion-blue-light">;
-                    {BUDGET_RANGES && BUDGET_RANGES.map((range) => (;
+                    {BUDGET_RANGES && BUDGET_RANGES.map(range) => (;
                       <SelectItem key={range && range.value} value={range && range.value} className="text-white hover:bg-zion-blue-light">;
                         {range && range.label}
                       </SelectItem>;
-                    ))}
+                    )}
                   </SelectContent>;
                 </Select>;
               </div>;
             </div>;
           )}
           {/* Step 2: Timeline */}
-          {currentStep === 'timeline' && (
+          {currentStep = = 'timeline' && (
             <div className="space-y-4">
               <div className="space-y-2">
                 <Label className="text-white">Project Timeline</Label>
                 <Select
                   value={formData.timeframe}
-                  onValueChange={(value) => setFormData(prev => ({ ...prev, timeframe: value }))}
+                  onValueChange={(value) => setFormData(prev => ({ ...prev, timeframe: value })}
                 >;
                   <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white">;
                     <SelectValue placeholder="Select your timeline" />;
                   </SelectTrigger>;
                   <SelectContent className="bg-zion-blue-dark border-zion-blue-light">;
-                    {TIMELINE_OPTIONS && TIMELINE_OPTIONS.map((option) => (;
+                    {TIMELINE_OPTIONS && TIMELINE_OPTIONS.map(option) => (;
                       <SelectItem key={option && option.value} value={option && option.value} className="text-white hover:bg-zion-blue-light">;
                         {option && option.label}
                       </SelectItem>;
-                    ))}
+                    )}
                   </SelectContent>
                 </Select>
               </div>
@@ -224,7 +222,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
             </div>
           )}
           {/* Step 3: Contact */}
-          {currentStep === 'contact' && (;
+          {currentStep = = 'contact' && (;
             <div className="space-y-4">;
               <div className="space-y-2">;
                 <Label htmlFor="email" className="text-white">Contact Email</Label>;
@@ -248,11 +246,11 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                   </div>
                   <div className="flex justify-between">
                     <span className="text-zion-slate-light">Budget:</span>
-                    <span className="text-white">{BUDGET_RANGES.find(b => b.value === formData.budget)?.label}</span>
+                    <span className="text-white">{BUDGET_RANGES.find(b => b.value = = formData.budget)?.label}</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-zion-slate-light">Timeline:</span>
-                    <span className="text-white">{TIMELINE_OPTIONS.find(t => t.value === formData.timeframe)?.label}</span>
+                    <span className="text-white">{TIMELINE_OPTIONS.find(t => t.value = = formData.timeframe)?.label}</span>
                   </div>
                   {startDate && (
                     <div className="flex justify-between">
@@ -271,7 +269,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
             </div>;
           )}
           <DialogFooter className="flex-col sm:flex-row sm:justify-between sm:space-x-2">
-            {currentStep !== 'details' && (
+            {currentStep != 'details' && (
               <Button
                 type="button"
                 variant="outline"
@@ -280,7 +278,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                 Previous;
               </Button>;
             )}
-            <div className={cn("flex gap-2", currentStep === 'details' && "ml-auto")}>
+            <div className={cn("flex gap-2", currentStep = = 'details' && "ml-auto")}>
               <Button
                 type="button"
                 variant="outline"
@@ -289,7 +287,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
               >
                 Cancel
               </Button>
-              {currentStep !== 'contact' ? (
+              {currentStep != 'contact' ? (
                 <Button
                   type="button"
                   onClick={nextStep}
@@ -311,13 +309,12 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
       </DialogContent>
     </Dialog>
   )
-}
+
             </div>;
           </DialogFooter>;
         </form>;
       </DialogContent>;
     </Dialog>;
   );
-}
+
     </Dialog>);
-}

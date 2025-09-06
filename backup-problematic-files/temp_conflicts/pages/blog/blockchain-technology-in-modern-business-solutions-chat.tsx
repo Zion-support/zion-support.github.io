@@ -1,7 +1,7 @@
 
 import Head from 'next/head',;
 import Link from 'next/link',;
-;
+
 const BlockchainTechnologyInModernBusinessSolutionsChat = () => {;
   return (;
     <div>;
@@ -9,7 +9,6 @@ const BlockchainTechnologyInModernBusinessSolutionsChat = () => {;
         <title>BlockchainTechnologyInModernBusinessSolutionsChat - Zion Tech Solutions</title>;
         <meta name="description" content="BlockchainTechnologyInModernBusinessSolutionsChat blog post" />;
       </Head>;
-      ;
       <main>;
         <h1>BlockchainTechnologyInModernBusinessSolutionsChat</h1>;
         <p>Blog content coming soon...</p>;
@@ -17,6 +16,6 @@ const BlockchainTechnologyInModernBusinessSolutionsChat = () => {;
       </main>;
     </div>;
   ),;
-},;
-;
+,;
+
 export default BlockchainTechnologyInModernBusinessSolutionsChat,

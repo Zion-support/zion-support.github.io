@@ -14,7 +14,7 @@ export default function PartnerDashboard() {;
   const [token, setToken] = useState<string | null>(null),
   const [usage, setUsage] = useState<any>(null),
   const [loading, setLoading] = useState(false);
-  useEffect(() => {
+  useEffect() => {
 
     const saved = localStorage.getItem('zion_partner_token');
     if (saved) setToken(saved);
@@ -28,11 +28,11 @@ export default function PartnerDashboard() {;
     const data = await res.json();
     if (data.token) {
       localStorage.setItem('zion_partner_token', data.token);
-      setToken(data.token);    }  }, []);
+      setToken(data.token);    }, []);
   const [usage, setUsage] = useState<any>(null);
   const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
+  useEffect() => {
     const saved = localStorage.getItem("zion_partner_token");
     if (saved) setToken(saved)
   }, []);
@@ -47,12 +47,10 @@ export default function PartnerDashboard() {;
       localStorage.setItem("zion_partner_token", data.token);
       setToken(data.token)
     }
-  }
   async function fetchUsage() {
     setLoading(true);
     const res = await fetch('/api/partners/usage', {
-      headers: token ? { Authorization: `Bearer ${token}` } : {}
-    });
+      headers: token ? { Authorization: `Bearer ${token}` } : {});
     const data = await res.json();
     setUsage(data.summary |null);
     setLoading(false);
@@ -61,7 +59,6 @@ export default function PartnerDashboard() {;
     const res = await fetch('/api/partners/key', {
       method: 'POST'
       headers: token ? { Authorization: `Bearer ${token}` } : {}
-    }
   }
 
   async function fetchUsage() {;
@@ -82,7 +79,6 @@ export default function PartnerDashboard() {;
     const data = await res && res.json();
     if (data && data.apiKey) {;
       alert(`New API Key: ${data && data.apiKey}`);    }
-  }
   return (
     <div className='min-h-screen bg-gray-50 text-gray-900'>    const data = await res.json();
     setUsage(data.summary |null);
@@ -91,7 +87,7 @@ export default function PartnerDashboard() {;
   async function regenerateKey() {
     const res = await fetch("/api/partners/key", {
       method: "POST"
-      headers: token ? { Authorization: `Bearer ${token}` } : {}})
+      headers: token ? { Authorization: `Bearer ${token}` } : {})
     const data = await res.json();
 
     if (data.apiKey) {
@@ -101,12 +97,11 @@ export default function PartnerDashboard() {;
   async function regenerateKey() {;
     const res = await fetch("/api/partners/key", {;
       method: "POST",;
-      headers: token ? { Authorization: `Bearer ${token}` } : {}}),;
+      headers: token ? { Authorization: `Bearer ${token}` } : {}),;
     const data = await res && res.json();
     if (data && data.apiKey) {;
       alert(`New API Key: ${data && data.apiKey}`);
     }
-  }
   return (
     <div className='min-h-screen bg-gray-50 text-gray-900'>
         <title>Zion Partner Dashboard</title>
@@ -181,7 +176,7 @@ export default function PartnerDashboard() {;
                 <div className='mt-3'>
                   <p className='font-medium'>By Endpoint</p>
                   <ul className='list-disc ml-6'>
-                    {Object.entries(usage.byEndpoint |{}).map(([k, v]) => (
+                    {Object.entries(usage.byEndpoint |{}).map([k, v]) => (
                       <li key={k}>
                         {k}: {v as any}
           <div className="bg-white p-6 rounded-lg shadow md:col-span-2">
@@ -193,9 +188,9 @@ export default function PartnerDashboard() {;
                 <div className="mt-3">
                   <p className="font-medium">By Endpoint</p>
                   <ul className="list-disc ml-6">
-                    {Object.entries(usage.byEndpoint |{}).map(([k, v]) => (
+                    {Object.entries(usage.byEndpoint |{}).map([k, v]) => (
                       <li key={k}>{k}: {v as any}</li>
-                      </li>                    ))}          </div>;
+                      </li>                    )}          </div>;
 
           <div className="bg-white p-6 rounded-lg shadow md:col-span-2">;
             <h3 className="font-medium mb-2">Usage</h3>;
@@ -206,9 +201,9 @@ export default function PartnerDashboard() {;
                 <div className="mt-3">;
                   <p className="font-medium">By Endpoint</p>;
                   <ul className="list-disc ml-6">;
-                    {Object && Object.entries(usage && usage.byEndpoint || {}).map(([k, v]) => (;
+                    {Object && Object.entries(usage && usage.byEndpoint || {}).map([k, v]) => (;
                       <li key={k}>{k}: {v as any}</li>;
-                    ))}
+                    )}
                   </ul>;
                 </div>;
               </div>;
@@ -235,14 +230,13 @@ export default function PartnerDashboard() {;
       </div>;
     </div>;
   );
-}        <div className="bg-white p-6 rounded-lg shadow mt-6">
+        <div className="bg-white p-6 rounded-lg shadow mt-6">
           <h3 className="font-medium mb-2">SDKs</h3>
           <a className="text-blue-600 underline mr-4" href="/api/partners/sdk?type=rest">REST SDK</a>
           <a className="text-blue-600 underline" href="/api/partners/sdk?type=graphql">GraphQL SDK</a>
       </div>
     </div>
-);
-}
+;
 
         <div className="bg-white p-6 rounded-lg shadow mt-6">
           <h3 className="font-medium mb-2">SDKs</h3>
@@ -252,7 +246,7 @@ export default function PartnerDashboard() {;
       </div>
     </div>
   );
-}
+
 import Head from 'next / head';
 export default /**
  * PartnerDashboard - Function description
@@ -267,14 +261,14 @@ function PartnerDashboard() {
   const [api_key, setApiKey] = useState ("");
   const [usage, set_usage] = useState < any>(null);
   const [loading, set_loading] = useState (false);
-;
-  useEffect (() => {
+
+  useEffect () => {
     const saved = local_storage.get_item ('zion_partner_token');
-    if (set_token (saved)) {
+    if (set_token (saved) {
   $2
-}
+
   }, []);
-;
+
   async /**
  * get_token - Function description
  */
@@ -288,10 +282,10 @@ function get_token() {
     // Check condition
 if ( {) {
   $2
-}
+
       local_storage.set_item ('zion_partner_token', data.token);
-      set_token (data.token);    }  }, []);
-;
+      set_token (data.token);    }, []);
+
   async /**
  * get_token - Function description
  */
@@ -304,11 +298,10 @@ function get_token() {
     // Check condition
 if ( {) {
   $2
-}
+
       local_storage.set_item ("zion_partner_token", data.token);
       set_token (data.token);
     }
-  }
   async /**
  * fetch_usage - Function description
  */
@@ -333,9 +326,8 @@ function regenerate_key() {
     // Check condition
 if ( {) {
   $2
-}
+
       alert (`New API Key: ${data.api_key}`);    }
-  }
   return (
     <div className='min - h-screen bg - gray - 50 text - gray - 900'>    const data = await res.json ();
     set_usage (data.summary || null);
@@ -347,15 +339,14 @@ if ( {) {
 function regenerate_key() {
     const res = await fetch ("/api / partners / key", {
       method: "POST",
-      headers: token ? { Authorization: `Bearer ${token}` } : {}}),
+      headers: token ? { Authorization: `Bearer ${token}` } : {}),
     const data = await res.json ();
     // Check condition
 if ( {) {
   $2
-}
+
       alert (`New API Key: ${data.api_key}`);
     }
-  }
   return (
     <div className='min - h-screen bg - gray - 50 text - gray - 900'>;
         <title > Zion Partner Dashboard</title>;
@@ -417,10 +408,10 @@ if ( {) {
                 <div className='mt - 3'>;
                   <p className='font - medium'>By Endpoint</p>;
                   <ul className='list - disc ml - 6'>;
-                    {Object.entries (usage.by_endpoint || {}).map (([k, v]) => (
+                    {Object.entries (usage.by_endpoint || {}).map ([k, v]) => (
                       <li key={k}>;
                         {k}: {v as any}
-                      </li>                    ))}          </div>;
+                      </li>                    )}          </div>;
           <div className="bg - white p - 6 rounded - lg shadow md:col - span - 2">;
             <h3 className="font - medium mb - 2">Usage</h3>;
             <button on_click={fetch_usage} className="bg - gray - 900 text - white px - 3 py - 2 rounded text - sm mb - 3">{loading ? "Loading..." : "Refresh"}</button>;
@@ -430,8 +421,8 @@ if ( {) {
                 <div className="mt - 3">;
                   <p className="font - medium">By Endpoint</p>;
                   <ul className="list - disc ml - 6">;
-                    {Object.entries (usage.by_endpoint || {}).map (([k, v]) => (
-                      <li key={k}>{k}: {v as any}</li>))}
+                    {Object.entries (usage.by_endpoint || {}).map ([k, v]) => (
+                      <li key={k}>{k}: {v as any}</li>)}
                   </ul>;
                 </div>;
               </div>) : (
@@ -457,10 +448,9 @@ if ( {) {
           </a>        </div>;
       </div>;
     </div>);
-}        <div className="bg - white p - 6 rounded - lg shadow mt - 6">;
+        <div className="bg - white p - 6 rounded - lg shadow mt - 6">;
           <h3 className="font - medium mb - 2">SDKs</h3>;
           <a className="text - blue - 600 underline mr - 4" href="/api / partners / sdk?type = rest">REST SDK</a>;
           <a className="text - blue - 600 underline" href="/api / partners / sdk?type = graphql">GraphQL SDK</a>;
       </div>;
     </div>);
-}

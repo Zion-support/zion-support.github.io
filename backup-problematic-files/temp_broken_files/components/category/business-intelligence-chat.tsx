@@ -7,7 +7,7 @@ const BusinessIntelligenceChat: NextPage = () => {
         <title>BusinessIntelligenceChat - Zion Tech Solutions</title>
         <meta name=&quot;description&quot; content=&quot;BusinessIntelligenceChat blog post&quot; />
       </Head>
-      
+
       <main>
         <h1>BusinessIntelligenceChat</h1>
         <p>Blog content coming soon...</p>
@@ -15,5 +15,5 @@ const BusinessIntelligenceChat: NextPage = () => {
       </main>
     </div>
   )
-},
+,
 export default BusinessIntelligenceChat,

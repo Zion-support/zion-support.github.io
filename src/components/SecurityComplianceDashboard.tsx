@@ -7,4 +7,3 @@ export function SecurityComplianceDashboard() {
       <p className="text-slate-400 text-sm">Security metrics will be displayed here</p>
     </div>
   );
-}

@@ -10,11 +10,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!auth) {
     return res.status(401).json({ error: "Unauthorized" })
   }
-  if (!(await enforceRateLimit(auth.apiKey))) {
+  if (!(await enforceRateLimit(auth.apiKey)) {
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 429),
     return res.status(429).json({ error: "Rate limit exceeded" })
   }
-  if (req.method !== "POST") {
+  if (req.method != "POST") {
     res.setHeader("Allow", "POST"),
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 405),
     return res.status(405).json({ error: "Method Not Allowed" })  }
@@ -22,8 +22,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!studentEmail || !grantCode || !courseId) {
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 400),
     return res.status(400).json({ error: "Missing required fields" })  }
-  await fs.ensureDir(path.dirname(REDEMPTIONS_FILE)),
-  const records = (await fs.pathExists(REDEMPTIONS_FILE)) ? await fs.readJSON(REDEMPTIONS_FILE) : [],
+  await fs.ensureDir(path.dirname(REDEMPTIONS_FILE),
+  const records = (await fs.pathExists(REDEMPTIONS_FILE) ? await fs.readJSON(REDEMPTIONS_FILE) : [],
   const now = new Date().toISOString(),
   const record = {
     id: uuidv4(),
@@ -47,10 +47,10 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
   if (!auth) {
     return res.status(401).json({ error: "Unauthorized"});
   }
-  if (!(await enforceRateLimit(auth.apiKey))) {_await recordRequest(req, _res, _auth.partner, _auth.apiKey, _started, _429);
+  if (!(await enforceRateLimit(auth.apiKey)) {_await recordRequest(req, _res, _auth.partner, _auth.apiKey, _started, _429);
     return res.status(429).json({ error: "Rate limit exceeded"});
   }
-  if (req.method !== "POST") {_res.setHeader("Allow", _"POST");
+  if (req.method != "POST") {_res.setHeader("Allow", _"POST");
     await recordRequest(req, _res, _auth.partner, _auth.apiKey, _started, _405);
     return res.status(405).json({ error: "Method Not Allowed"});
   }
@@ -58,8 +58,8 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
   if (!studentEmail || !grantCode || !courseId) {_await recordRequest(req, _res, _auth.partner, _auth.apiKey, _started, _400);
     return res.status(400).json({ error: "Missing required fields"});
   }
-  await fs.ensureDir(path.dirname(REDEMPTIONS_FILE));
-  const _records = (await fs.pathExists(REDEMPTIONS_FILE)) ? await fs.readJSON(REDEMPTIONS_FILE) : [];
+  await fs.ensureDir(path.dirname(REDEMPTIONS_FILE);
+  const _records = (await fs.pathExists(REDEMPTIONS_FILE) ? await fs.readJSON(REDEMPTIONS_FILE) : [];
   const _now = new Date().toISOString();
   const _record = {_id: uuidv4(), _partnerId: auth.partner.id, _studentEmail, _grantCode, _courseId, _redeemedAt: now};
   records.push(record);

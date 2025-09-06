@@ -4,17 +4,17 @@ import App from './App.tsx',
 import './index.css';
 import { HelmetProvider  } from 'react-helmet-async';
 import { BrowserRouter as Router  } from 'react-router-dom';
-// Import i18n configuration
+/ Import i18n configuration
 import './i18n';
 import { LanguageProvider  } from '@/context/LanguageContext';
 import { LanguageDetectionPopup  } from './components/LanguageDetectionPopup';
 import { WhitelabelProvider  } from '@/context/WhitelabelContext';
-// Import auth and notification providers
+/ Import auth and notification providers
 import { AuthProvider  } from '@/context/auth/AuthProvider';
 import { NotificationProvider  } from './context';
-// Import analytics provider
+/ Import analytics provider
 import { AnalyticsProvider } from './context/AnalyticsContext';
-// Render the app with proper provider structure
+/ Render the app with proper provider structure
 ReactDOM.createRoot(document.getElementById('root')!).render(<React.StrictMode>
     <HelmetProvider>
       <WhitelabelProvider>
@@ -23,7 +23,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(<React.StrictMode>
             <NotificationProvider>
               <AnalyticsProvider>
 
-                <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
+                <LanguageProvider authState={ isAuthenticated: false, user: null }>
                   <App />
                   <LanguageDetectionPopup />
                 </LanguageProvider>
@@ -41,17 +41,17 @@ import App from './App.tsx';
 import './index.css';
 import {HelmetProvider} from 'react - helmet - async';
 import {BrowserRouter, as, Router} from 'react-router-dom';
-// Import i18n configuration;
+/ Import i18n configuration;
 import './i18n';
 import {LanguageProvider} from '@/context / LanguageContext';
 import {LanguageDetectionPopup} from './components / LanguageDetectionPopup';
 import {WhitelabelProvider} from '@/context / WhitelabelContext';
-// Import auth and notification providers;
+/ Import auth and notification providers;
 import {AuthProvider} from '@/context / auth / AuthProvider';
 import {NotificationProvider} from './context';
-// Import analytics provider;
+/ Import analytics provider;
 import {AnalyticsProvider} from './context / AnalyticsContext';
-// Render the app with proper provider structure;
+/ Render the app with proper provider structure;
 ReactDOM.create_root (document.getElementById ('root')!).render (<React.StrictMode>;
     <HelmetProvider>;
       <WhitelabelProvider>;
@@ -59,7 +59,7 @@ ReactDOM.create_root (document.getElementById ('root')!).render (<React.StrictMo
           <AuthProvider>;
             <NotificationProvider>;
               <AnalyticsProvider>;
-                <LanguageProvider auth_state={{ is_authenticated: false, user: null }}>;
+                <LanguageProvider auth_state={ is_authenticated: false, user: null }>;
                   <App />;
                   <LanguageDetectionPopup />;
                 </LanguageProvider>;
@@ -70,4 +70,3 @@ ReactDOM.create_root (document.getElementById ('root')!).render (<React.StrictMo
       </WhitelabelProvider>;
     </HelmetProvider>;
   </React.StrictMode>);
-;

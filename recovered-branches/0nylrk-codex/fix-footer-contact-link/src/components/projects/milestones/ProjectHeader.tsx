@@ -5,7 +5,7 @@ import { Button  } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react';
 interface ProjectHeaderProps {
   title: string;
-}
+
 export function ProjectHeader({ title }: ProjectHeaderProps) {
 
   const navigate = useNavigate();
@@ -28,8 +28,7 @@ export function ProjectHeader({ title }: ProjectHeaderProps) {
       </div>
     </div>
   );
-}
+
         </h1>;
       </div>;
     </div>);
-}

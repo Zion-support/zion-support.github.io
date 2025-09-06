@@ -13,7 +13,7 @@ interface DiscussionPost {;
   time: string;
   title: string;
   body: string
-}
+
 const initialPosts: DiscussionPost[] = [
   {
 
@@ -30,7 +30,7 @@ const initialPosts: DiscussionPost[] = [
     title: "Quick tip: How to rank your Zion listing higher"
     body: "Fill out every profile detail, add strong tags, and post weekly! See results in a month."
   }
-];
+;
 export const CommunityDiscussion: React.FC = () => {
 
 const initialPosts: DiscussionPost[] = [;
@@ -48,7 +48,6 @@ const initialPosts: DiscussionPost[] = [;
     title: "Quick tip: How to rank your Zion listing higher",;
     body: "Fill out every profile detail, add strong tags, and post weekly! See results in a month.",;
   },;
-];
 
 export const CommunityDiscussion: React.FC = () => {;
   const [posts, setPosts] = useState(initialPosts);
@@ -56,7 +55,7 @@ export const CommunityDiscussion: React.FC = () => {;
   const [newTitle, setNewTitle] = useState("");
   const [newBody, setNewBody] = useState("");
   const handleAddPost = () => {
-    if (!newTitle.trim() |!newBody.trim()) return;
+    if (!newTitle.trim() |!newBody.trim() return;
     setPosts([
       {
         id: Date.now()
@@ -87,7 +86,7 @@ export const CommunityDiscussion: React.FC = () => {;
         <Button
           className="bg-zion-purple text-white hover:bg-zion-purple-light transition hover-scale"
           size="sm"
-          onClick={() => setShowNew((v) => !v)}
+          onClick={() => setShowNew(v) => !v)}
         >;
           {showNew ? "Cancel" : "New Post"}
         </Button>;
@@ -110,17 +109,17 @@ export const CommunityDiscussion: React.FC = () => {;
               value={newBody}
               onChange={(e: React && React.ChangeEvent<HTMLTextAreaElement>) =>;
                 setNewBody(e && e.target.value);
-;
+
 export const CommunityDiscussion: React.FC = () => {
   const [posts, set_posts] = useState (initial_posts);
   const [show_new, setShowNew] = useState (false);
   const [new_title, setNewTitle] = useState ("");
   const [new_body, setNewBody] = useState ("");
-;
+
   const handleAddPost = () =>: any {
-    if (|| !new_body.trim ()) return) {
+    if (|| !new_body.trim () return) {
   $2
-}
+
     set_posts ([;
       {
         id: Date.now (),
@@ -135,7 +134,7 @@ export const CommunityDiscussion: React.FC = () => {
     setNewBody ("");
     setShowNew (false);
   }
-;
+
   return (
     <div className="w - full max - w-2xl mx - auto mt - 8 p - 6 bg - zion - blue - light rounded - 2xl shadow - xl animate - fade - in">;
       <div className="flex items - center gap - 3 mb - 4">;
@@ -152,7 +151,7 @@ export const CommunityDiscussion: React.FC = () => {
         <Button;
           className="bg - zion - purple text - white hover:bg - zion - purple - light transition hover - scale";
           size="sm";
-          on_click={() => setShowNew ((v) => !v)}
+          on_click={() => setShowNew (v) => !v)}
         >;
           {show_new ? "Cancel" : "New Post"}
         </Button>;
@@ -206,7 +205,7 @@ export const CommunityDiscussion: React.FC = () => {
         </Card>;
       )}
       <div className="flex flex-col gap-6">;
-        {posts && posts.map((post) => (;
+        {posts && posts.map(post) => (;
           <Card
             key={post && post.id}
             className="bg-zion-blue border-zion-slate-dark shadow-lg">;
@@ -215,7 +214,7 @@ export const CommunityDiscussion: React.FC = () => {
                 <AvatarFallback>;
                   {post && post.author;
                     .split(" ");
-                    .map((s) => s[0]);
+                    .map(s) => s[0]);
                     .join("");
                     .toUpperCase();
                     .slice(0, 2)}
@@ -239,7 +238,7 @@ export const CommunityDiscussion: React.FC = () => {
               </div>;
             </CardContent>;
           </Card>;
-        ))}
+        )}
       </div>;
       <div className="mt-8 text-xs text-zion-slate-dark text-center">;
          Stay engaged! Top contributors are regularly featured on the;
@@ -247,11 +246,10 @@ export const CommunityDiscussion: React.FC = () => {
       </div>;
     </div>;
   );
-}
 
         </Card>)}
       <div className="flex flex - col gap - 6">;
-        {posts.map ((post) => (
+        {posts.map (post) => (
           <Card;
             key={post.id}
             className="bg - zion - blue border - zion - slate - dark shadow - lg";
@@ -261,7 +259,7 @@ export const CommunityDiscussion: React.FC = () => {
                 <AvatarFallback>;
                   {post.author;
                     .split (" ");
-                    .map ((s) => s[0]);
+                    .map (s) => s[0]);
                     .join ("");
                     .toUpperCase ();
                     .slice (0, 2)}
@@ -284,12 +282,10 @@ export const CommunityDiscussion: React.FC = () => {
                 </p>;
               </div>;
             </CardContent>;
-          </Card>))}
+          </Card>)}
       </div>;
       <div className="mt - 8 text - xs text - zion - slate - dark text - center">;
          Stay engaged! Top contributors are regularly featured on the;
         homepage.;
       </div>;
     </div>);
-}
-;

@@ -6,23 +6,21 @@ interface NavItem {
   label: string;
   href: string;
   children?: NavItem[];
-}
 
 interface InteractiveNavigationProps {
   items: NavItem[];
   className?: string;
-}
 
 const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({
   items,
   className = '',
-}) => {
+) => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const toggleDropdown = (label: string) => {
-    setActiveDropdown(activeDropdown === label ? null : label);
+    setActiveDropdown(activeDropdown = = label ? null : label);
   };
 
   return (
@@ -45,7 +43,7 @@ const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({
                       {item.label}
                       <ChevronDown className="w-4 h-4 ml-1" />
                     </button>
-                    {activeDropdown === item.label && (
+                    {activeDropdown = = item.label && (
                       <div className="absolute top-full left-0 mt-1 w-48 bg-white rounded-md shadow-lg z-50">
                         {item.children.map(child => (
                           <Link
@@ -55,7 +53,7 @@ const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({
                           >
                             {child.label}
                           </Link>
-                        ))}
+                        )}
                       </div>
                     )}
                   </div>
@@ -68,7 +66,7 @@ const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({
                   </Link>
                 )}
               </div>
-            ))}
+            )}
           </div>
 
           <button
@@ -92,7 +90,7 @@ const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({
                       {item.label}
                       <ChevronDown className="w-4 h-4" />
                     </button>
-                    {activeDropdown === item.label && (
+                    {activeDropdown = = item.label && (
                       <div className="pl-4">
                         {item.children.map(child => (
                           <Link
@@ -103,7 +101,7 @@ const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({
                           >
                             {child.label}
                           </Link>
-                        ))}
+                        )}
                       </div>
                     )}
                   </div>
@@ -117,13 +115,12 @@ const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({
                   </Link>
                 )}
               </div>
-            ))}
+            )}
           </div>
         )}
       </div>
     </nav>
   );
-};
 
 export default InteractiveNavigation;
 import React, { useState } from 'react';
@@ -142,6 +139,6 @@ export default function InteractiveNavigation() {
       )}
     </div>
   );
-}
+
 const InteractiveNavigation = () => {},;
 export default InteractiveNavigation;

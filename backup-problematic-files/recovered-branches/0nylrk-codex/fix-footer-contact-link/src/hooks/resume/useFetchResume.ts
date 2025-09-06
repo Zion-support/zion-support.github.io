@@ -2,13 +2,12 @@ import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Resume } from '@/types/resume',;
 import { useAuth } from '@/hooks/useAuth',;
-;
+
 export function useFetchResume() {;
   const { user } = useAuth(),;
   const [isLoading, setIsLoading] = useState(false),;
   const [error, setError] = useState<string | null>(null),;
   const [resume, setResume] = useState<Resume | null>(null),;
-  ;
   const fetchResume = async (resumeId?:string) => {;
     if (!user) {;
       setError('You must be logged in to access resumes'),;
@@ -17,12 +16,10 @@ export function useFetchResume() {;
     ;
     setIsLoading(true),;
     setError(null),;
-    ;
     try {;
       // If resumeId is provided, fetch that specific resume;
       // Otherwise, fetch the user's active resume or most recent resume;
       let resumeQuery = supabase.from('talent_resumes').select('*'),;
-      ;
       if (resumeId) {;
         resumeQuery = resumeQuery.eq('id', resumeId),;
       } else {;
@@ -34,9 +31,8 @@ export function useFetchResume() {;
       }
       ;
       const { data:resumeData, error:resumeError } = await resumeQuery.single(),;
-      ;
       if (resumeError) {;
-        if (resumeError.code === 'PGRST116') {;
+        if (resumeError.code = = 'PGRST116') {;
           // No resume found, this is not a critical error for a new user;
           setResume(null),;
           setIsLoading(false),;
@@ -52,9 +48,7 @@ export function useFetchResume() {;
         .eq('resume_id', resumeData.id);
         .order('is_current', { ascending:false });
         .order('start_date', { ascending:false }),;
-        ;
       if (workError) throw workError,;
-      ;
       // Fetch education;
       const { data:educationData, error:educationError } = await supabase;
         .from('education');
@@ -62,25 +56,19 @@ export function useFetchResume() {;
         .eq('resume_id', resumeData.id);
         .order('is_current', { ascending:false });
         .order('start_date', { ascending:false }),;
-        ;
       if (educationError) throw educationError,;
-      ;
       // Fetch skills;
       const { data:skillsData, error:skillsError } = await supabase;
         .from('resume_skills');
         .select('*');
         .eq('resume_id', resumeData.id),;
-        ;
       if (skillsError) throw skillsError,;
-      ;
       // Fetch certifications;
       const { data:certData, error:certError } = await supabase;
         .from('certifications');
         .select('*');
         .eq('resume_id', resumeData.id),;
-        ;
       if (certError) throw certError,;
-      ;
       const fullResume:Resume = {;
         id:resumeData.id,;
         user_id:resumeData.user_id,;
@@ -96,7 +84,6 @@ export function useFetchResume() {;
         certifications:certData || [],;
         is_active:resumeData.is_active;
       },;
-      ;
       setResume(fullResume),;
       return fullResume,;
     } catch (e:any) {;
@@ -105,38 +92,36 @@ export function useFetchResume() {;
       return null,;
     } finally {;
       setIsLoading(false),;
-    }
-  },;
-;
+    },;
+
   return {;
     isLoading,;
     error,;
     resume,;
     fetchResume},;
-} setIsLoading (true);
+ setIsLoading (true);
 setError (null);
-}// Fetch work experience const {
+// Fetch work experience const {
   data: workData, error: workError 
-}= await supabase .from ('work history') .select ('*') .eq ('resume id', resumeData.id) if (workError) throw workError;
-// Fetch education const {
+= await supabase .from ('work history') .select ('*') .eq ('resume id', resumeData.id) if (workError) throw workError;
+/ Fetch education const {
   data: educationData, error: educationError 
-}= await supabase .from ('education') .select ('*') .eq ('resume id', resumeData.id) if (educationError) throw educationError;
-// Fetch skills const {
+= await supabase .from ('education') .select ('*') .eq ('resume id', resumeData.id) if (educationError) throw educationError;
+/ Fetch skills const {
   data: skillsData, error: skillsError 
-}= await supabase .from ('resume skills') .select ('*') .eq ('resume id', resumeData.id);
+= await supabase .from ('resume skills') .select ('*') .eq ('resume id', resumeData.id);
 if (skillsError) throw skillsError;
-// Fetch certifications const {
+/ Fetch certifications const {
   data: certData, error: certError 
-}= await supabase .from ('certifications') .select ('*') .eq ('resume id', resumeData.id);
+= await supabase .from ('certifications') .select ('*') .eq ('resume id', resumeData.id);
 if (certError) throw certError;
 const fullResume: Resume = {
   id: resumeData.id, user id: resumeData.user id, basic info: {
   id: resumeData.id, title: resumeData.title, headline: resumeData.headline, summary: resumeData.summary 
-};
+;
 work experience: workData || [];
 education: educationData || [];
 skills: skillsData || [];
 certifications: certData || [];
 is active: resumeData.is active 
-};
-}
+;

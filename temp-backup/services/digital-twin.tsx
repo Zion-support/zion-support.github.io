@@ -3,11 +3,11 @@ import Link from \'next/link\'; import Head from \'next/head\'; export default f
 import React from 'react';
 interface DigitaltwinProps {
   // Add props here as needed
-}
+
 export default function Digitaltwin({ }: DigitaltwinProps) {
 interface DigitaltwinProps {;
   // Add props here as needed;
-}
+
 export default function Digitaltwin(): any ({ }: DigitaltwinProps) {;
   return (
     <div>;
@@ -15,7 +15,3 @@ export default function Digitaltwin(): any ({ }: DigitaltwinProps) {;
       <p>This component is currently under development.</p>;
     </div>;
   );
-}
-}
-
-

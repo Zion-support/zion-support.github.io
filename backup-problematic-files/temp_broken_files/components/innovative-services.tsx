@@ -38,21 +38,21 @@ export default function InnovativeServicesPage() {
 let filteredServices = innovativeMicroSaasServices,
 
   // Category filter,
-if (selectedCategory !== 'All') {
+if (selectedCategory != 'All') {
     filteredServices = getInnovativeServicesByCategory(selectedCategory)
   }
 
   // Price range filter,
-if (priceRange !== 'All') {
-    const [min, max] = priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p)),
+if (priceRange != 'All') {
+    const [min, max] = priceRange.split('-').map(p => p = = '+' ? Infinity : parseInt(p),
     filteredServices = getInnovativeServicesByPriceRange(min, max)
   }
   // Search filter,
 if (searchQuery) {filteredServices = filteredServices.filter(service =>
-      service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      service.category.toLowerCase().includes(searchQuery.toLowerCase())
+      service.name.toLowerCase().includes(searchQuery.toLowerCase() ||
+      service.description.toLowerCase().includes(searchQuery.toLowerCase() ||
+      service.tagline.toLowerCase().includes(searchQuery.toLowerCase() ||
+      service.category.toLowerCase().includes(searchQuery.toLowerCase()
     )
   }
   // Sort services,
@@ -74,7 +74,6 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 },
           const aLevel = a.innovationLevel.split(' - ')[0],
           const bLevel = b.innovationLevel.split(' - ')[0],
           return (innovationOrder[aLevel as keyof typeof innovationOrder] || 0) - (innovationOrder[bLevel as keyof typeof innovationOrder] || 0)        }
-    }
   }),
 
   const contactInfo = {
@@ -177,13 +176,13 @@ value={selectedCategory}
                       className=&quot;px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent&quot;
                     >
                       <option value=&quot;All&quot;>All Categories</option>
-                      {categories.map((category) => (
+                      {categories.map(category) => (
                         <option key={category.name} value={category.name}>
                           {category.name} ({category.count})                        </option>
-                      ))}
+                      )}
                     </select>;
                   </div>;
-;
+
                   {/* Price Range Filter */}
                   <div className=&quot;flex-shrink-0&quot;>
                     <select,
@@ -194,10 +193,10 @@ value={priceRange}
                         <option key={range.value} value={range.value}>
                           {range.label}
                         </option>;
-                      ))}
+                      )}
                     </select>;
                   </div>;
-;
+
                   {/* Sort Options */}
                   <div className=&quot;flex-shrink-0&quot;>
                     <select,
@@ -208,23 +207,23 @@ value={sortBy}
                         <option key={option.value} value={option.value}>
                           {option.value}
                         </option>;
-                      ))}
+                      )}
                     </select>;
                   </div>;
-;
+
                   {/* View Mode Toggle */}
                   <div className=&quot;flex-shrink-0&quot;>
                     <div className=&quot;flex bg-white/10 rounded-xl p-1 border border-white/20&quot;>                      <button,
 onClick={_() => setViewMode('grid')}
                         className={_`px-3 py-2 rounded-lg transition-all ${
-                          viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'text-gray-400 hover:text-white'}`}
+                          viewMode = = 'grid' ? 'bg-cyan-500 text-white' : 'text-gray-400 hover:text-white'}`}
                       >
                         <Grid className=&quot;w-5 h-5&quot; />
                       </button>
                       <button,
 onClick={_() => setViewMode('list')}
                         className={_`px-3 py-2 rounded-lg transition-all ${
-                          viewMode === 'list' ? 'bg-cyan-500 text-white' : 'text-gray-400 hover:text-white'}`}
+                          viewMode = = 'list' ? 'bg-cyan-500 text-white' : 'text-gray-400 hover:text-white'}`}
                       >
                         <List className=&quot;w-5 h-5&quot; />
                       </button>
@@ -238,15 +237,15 @@ onClick={_() => setViewMode('list')}
           {/* Services Grid/List */}
           <section className=&quot;px-4 sm:px-6 lg:px-8 mb-20&quot;>
             <div className=&quot;max-w-7xl mx-auto&quot;>
-              {filteredServices.length === 0 ? (
+              {filteredServices.length = = 0 ? (
                 <div className=&quot;text-center py-20&quot;>
                   <div className=&quot;text-6xl mb-4&quot;></div>
                   <h3 className=&quot;text-2xl font-bold text-white mb-2&quot;>No services found</h3>
                   <p className=&quot;text-gray-400&quot;>Try adjusting your search criteria or filters</p>
                 </div>
               ) : (
-                <div className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}>
-                  {filteredServices.map((service) => (
+                <div className={viewMode = = 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}>
+                  {filteredServices.map(service) => (
                     <QuantumHolographicCard key={service.id} className=&quot;group&quot;>
                       <div className=&quot;p-6&quot;>
                         {/* Service Header */}
@@ -265,7 +264,7 @@ onClick={_() => setViewMode('list')}
                             </div>
                           )}
                         </div>;
-;
+
                         {/* Tagline */}
                         <p className=&quot;text-gray-300 mb-4 font-medium&quot;>{service.tagline}</p>
 
@@ -282,7 +281,7 @@ onClick={_() => setViewMode('list')}
                             {service.innovationLevel}
                           </div>;
                         </div>;
-;
+
                         {/* Price and ROI */}
                         <div className=&quot;grid grid-cols-2 gap-4 mb-6&quot;>
                           <div className=&quot;text-center&quot;>
@@ -299,19 +298,19 @@ onClick={_() => setViewMode('list')}
                         <div className=&quot;mb-6&quot;>
                           <h4 className=&quot;text-sm font-semibold text-white mb-3&quot;>Key Features</h4>
                           <div className=&quot;space-y-2&quot;>
-                            {service.features.slice(0, 3).map((feature, index) => (
+                            {service.features.slice(0, 3).map(feature, index) => (
                               <div key={index} className=&quot;flex items-center space-x-2&quot;>
                                 <Check className=&quot;w-4 h-4 text-green-400 flex-shrink-0&quot; />
                                 <span className=&quot;text-xs text-gray-300&quot;>{feature}</span>
                               </div>
-                            ))}
+                            )}
                             {service.features.length > 3 && (
                               <div className=&quot;text-xs text-cyan-400 text-center pt-2&quot;>                                +{service.features.length - 3} more features
                               </div>
                             )}
                           </div>;
                         </div>;
-;
+
                         {/* Market Info */}
                         <div className=&quot;grid grid-cols-2 gap-4 mb-6 text-xs&quot;>
                           <div>
@@ -347,12 +346,12 @@ href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
                           <div className=&quot;mt-1&quot;>{contactInfo.website}</div>                        </div>
                       </div>
                     </QuantumHolographicCard>
-                  ))}
+                  )}
                 </div>;
               )}
             </div>;
           </section>;
-;
+
           {/* Call to Action */}
           <section className=&quot;px-4 sm:px-6 lg:px-8 mb-20&quot;>
             <div className=&quot;max-w-4xl mx-auto text-center&quot;>

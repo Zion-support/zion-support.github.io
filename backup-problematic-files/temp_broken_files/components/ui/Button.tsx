@@ -8,7 +8,6 @@ import Link from 'next/link',interface ButtonProps {
   className?: string;
   disabled?: boolean;
   style?: React.CSSProperties;
-}
 
 const Button: React.FC<ButtonProps> = ({
   children,
@@ -19,7 +18,7 @@ const Button: React.FC<ButtonProps> = ({
   className = "",
   disabled = false,
   style,
-}) => {
+) => {
   const baseClasses =
     "px-4 py-2 rounded-md font-medium transition-colors duration-200";
 
@@ -36,13 +35,13 @@ const Button: React.FC<ButtonProps> = ({
   const _content = (
     <>
       {/* Shine effect for primary buttons */}
-      {variant === 'primary' && (
+      {variant = = 'primary' && (
         <div className=&quot;absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent group-hover:translate-x-full transition-transform duration-1000&quot; />
       )}
-      
-      {icon && iconPosition === 'left' && <span className=&quot;mr-2 transition-transform duration-200 group-hover:scale-110&quot;>{icon}</span>}
+
+      {icon && iconPosition = = 'left' && <span className=&quot;mr-2 transition-transform duration-200 group-hover:scale-110&quot;>{icon}</span>}
       <span className=&quot;relative z-10&quot;>{children}</span>
-      {icon && iconPosition === 'right' && <span className=&quot;ml-2 transition-transform duration-200 group-hover:scale-110&quot;>{icon}</span>}    </>
+      {icon && iconPosition = = 'right' && <span className=&quot;ml-2 transition-transform duration-200 group-hover:scale-110&quot;>{icon}</span>}    </>
   ),
   if (href) {
     return (

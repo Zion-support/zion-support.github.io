@@ -36,7 +36,7 @@ export default function QuantumFinancialTradingPlatformPage() {
       </div>
     </Layout>
   )
-}
+
 import React from 'react',
 import Head from 'next / head',
 import Layout from '../components / layout / Layout',
@@ -74,4 +74,3 @@ function QuantumFinancialTradingPlatformPage() {
         </div>;
       </div>;
     </Layout>);
-}

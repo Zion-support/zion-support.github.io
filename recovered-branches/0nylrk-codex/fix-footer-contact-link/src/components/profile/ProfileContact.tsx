@@ -10,13 +10,12 @@ interface ProfileContactProps {
   email?: string;
   profileName: string;
   profileType: 'service' | 'talent'
-}
 
 export function ProfileContact({
   email
   profileName
   profileType
-}: ProfileContactProps) {
+: ProfileContactProps) {
   const [message, setMessage] = useState("");
   const [subject, setSubject] = useState("");
   const [isSending, setIsSending] = useState(false);
@@ -24,14 +23,14 @@ export function ProfileContact({
     e.preventDefault();
     setIsSending(true);
     // Here would be the actual API call to send the message
-    setTimeout(() => {
+    setTimeout() => {
       setIsSending(false);
       setMessage("");
       (setSubject("")
         toast({
           title: "Message Sent"
           description: `Your message has been sent to ${profileName}.`
-        }));
+        });
     }, 1000);
   }
 
@@ -96,7 +95,7 @@ export function ProfileContact({
       </form>
     </div>
   );
-}
+
             <Textarea;
               placeholder={`Message to ${profile_name}...`}
               value={message}
@@ -116,4 +115,3 @@ export function ProfileContact({
         </div>;
       </form>;
     </div>);
-}

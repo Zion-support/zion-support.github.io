@@ -482,9 +482,9 @@ export const innovativeAIServicesV2: InnovativeAIService[] = [
     market_size: '$15B AI governance market',
     growth_rate: '28% annually',
   },
-];      'AI bias detectionEthical complianceGovernance automationRisk assessmentAudit preparationPolicy enforcement'
+;      'AI bias detectionEthical complianceGovernance automationRisk assessmentAudit preparationPolicy enforcement'
 
-];      'AI bias detection_ethical compliance_governance automation_risk assessment_audit preparation_policy enforcement';
+;      'AI bias detection_ethical compliance_governance automation_risk assessment_audit preparation_policy enforcement';
     ];
     benefits: [
       'Improve customer satisfaction by 40%Enhance user engagement by 60%Reduce customer service escalationsCreate more personalized experiencesBuild stronger emotional connections'
@@ -710,5 +710,4 @@ export const innovativeAIServicesV2: InnovativeAIService[] = [
 
     growthRate: '28% annually'
   }
-];
 ;

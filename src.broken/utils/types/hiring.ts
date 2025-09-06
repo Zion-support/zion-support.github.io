@@ -23,8 +23,7 @@ export interface TalentProfile {;
   name: string,;
   title?: string,;
   photoUrl?: string;
-}
-;
+
 export interface JobApplication {;
   id: string,;
   jobId: string,;
@@ -37,17 +36,15 @@ export interface JobApplication {;
   updatedAt?: string,;
   lastActivityAt?: string | null,;
   talent?: TalentProfile;
-}
 
 export interface ApplicationFilters {
   status?: CandidateStatus | "all",
   minScore?: number,
   fromDate?: Date | null,
   toDate?: Date | null
-;
+
 export interface ApplicationFilters {;
   status?: CandidateStatus | "all",;
   minScore?: number,;
   fromDate?: Date | null;
   toDate?: Date | null;
-}

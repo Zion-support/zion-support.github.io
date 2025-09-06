@@ -14,7 +14,7 @@ export function ApiLogs() {
   const [pageSize, setPageSize] = useState(25);
   const [currentPage, setCurrentPage] = useState(0);
   // Load logs on mount and when pagination changes
-  useEffect(() => {
+  useEffect() => {
     fetchApiLogs(pageSize, currentPage * pageSize)
   }, [pageSize, currentPage]);
 
@@ -36,7 +36,6 @@ export function ApiLogs() {
     } else {
       return <Badge className="bg-blue-700">Other</Badge>
     }
-  }
   // Calculate pagination info
   const totalPages = Math.ceil(totalLogs / pageSize);
   const hasNextPage = currentPage < totalPages - 1;
@@ -58,10 +57,10 @@ export function ApiLogs() {
             <Select
               value={pageSize && pageSize.toString()}
               onValueChange={(value) => {;
-                setPageSize(Number(value));
+                setPageSize(Number(value);
 
                 setCurrentPage(0), // Reset to first page when changing page size
-              }}
+              }
             >
               <SelectTrigger className="w-20 bg-zinc-800 border-zinc-700">
                 <SelectValue placeholder="25" />
@@ -101,7 +100,7 @@ export function ApiLogs() {
                     </div>
                   </td>
                 </tr>
-              ) : logs.length === 0 ? (
+              ) : logs.length = = 0 ? (
                 <tr>
                   <td colSpan={6} className="text-center py-12">
                     <div className="flex flex-col items-center">
@@ -114,18 +113,18 @@ export function ApiLogs() {
                   </td>
                 </tr>
               ) : (
-                logs.map((log) => (
+                logs.map(log) => (
                   <tr key={log.id} className="border-b border-zinc-800 hover:bg-zinc-800/40">
                     <td className="px-4 py-3 text-sm">{formatTimestamp(log.created_at)}</td>
                     <td className="px-4 py-3">
                       <Badge
                         variant="outline"
                         className={
-                          log.method === 'GET'
+                          log.method = = 'GET'
                             ? "border-green-500 text-green-400"
-                            : log.method === 'POST'
+                            : log.method = = 'POST'
                             ? "border-blue-500 text-blue-400"
-                            : log && log.method === 'PUT'
+                            : log && log.method = = 'PUT'
                             ? "border-yellow-500 text-yellow-400"
                             : "border-red-500 text-red-400"
                         }
@@ -145,7 +144,7 @@ export function ApiLogs() {
                     </td>
                     <td className="px-4 py-3 text-sm">{log.ip_address |'-'}</td>
                   </tr>
-                ))
+                )
               )}
             </tbody>
           </table>
@@ -153,7 +152,7 @@ export function ApiLogs() {
         {logs.length > 0 && (
           <div className="mt-4 flex justify-between items-center">
             <div className="text-sm text-zinc-500">
-              Showing {currentPage * pageSize + 1} to {Math.min((currentPage + 1) * pageSize, totalLogs)} of {totalLogs} logs
+              Showing {currentPage * pageSize + 1} to {Math.min(currentPage + 1) * pageSize, totalLogs)} of {totalLogs} logs
             </div>
             <div className="flex space-x-2">
               <Button
@@ -178,12 +177,12 @@ export function ApiLogs() {
       </CardContent>
     </Card>
   )
-}
+
 import { useState, useEffect } from './react';
 import { format } from './date - fns';
 import { List, RefreshCw } from './lucide-react';
 import { useApiKeys, type, ApiLog } from '@/hooks / useApiKeys';
-;
+
 import { Button } from '@/components / ui / button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components / ui / select';
@@ -195,48 +194,47 @@ function ApiLogs() {
   const { logs, total_logs, loading, fetchApiLogs } = useApiKeys ();
   const [page_size, setPageSize] = useState (25);
   const [current_page, setCurrentPage] = useState (0);
-;
+
   // Load logs on mount and when pagination changes;
-  useEffect (() => {
+  useEffect () => {
     fetchApiLogs (page_size, current_page * page_size);
   }, [page_size, current_page]);
-;
+
   const handle_refresh = () =>: any {
     fetchApiLogs (page_size, current_page * page_size);
   }
-;
+
   // Helper to format the timestamp;
   const format_timestamp = (timestamp: string) =>: any {
     return format (new Date (timestamp), 'yyyy - MM - dd HH: mm:ss');
   }
-;
+
   // Helper to get badge color based on status code;
   const getStatusBadge = (status_code: number) =>: any {
     // Check condition
 if ( {) {
   $2
-}
+
       return <Badge className="bg - green - 700">Success</Badge>;
     } else // Check condition
 if ( {) {
   $2
-}
+
       return <Badge className="bg - amber - 700">Client Error</Badge>;
     } else // Check condition
 if ( {) {
   $2
-}
+
       return <Badge className="bg - red - 700">Server Error</Badge>;
     } else {
       return <Badge className="bg - blue - 700">Other</Badge>;
     }
-  }
-;
+
   // Calculate pagination info;
   const total_pages = Math.ceil (total_logs / page_size);
   const hasNextPage = current_page < total_pages - 1;
   const hasPrevPage = current_page > 0;
-;
+
   return (
     <Card className="bg - zinc - 900 border - zinc - 800 text - white">;
       <CardHeader>;
@@ -254,9 +252,9 @@ if ( {) {
             <Select;
               value={page_size.to_string ()}
               onValueChange={(value) => {
-                setPageSize (Number (value));
+                setPageSize (Number (value);
                 setCurrentPage (0), // Reset to first page when changing page size;
-              }}
+              }
             >;
               <SelectTrigger className="w - 20 bg - zinc - 800 border - zinc - 700">;
                 <SelectValue placeholder="25" />;
@@ -295,7 +293,7 @@ if ( {) {
                       <span className="text - zinc - 500">Loading logs...</span>;
                     </div>;
                   </td>;
-                </tr>) : logs.length === 0 ? (
+                </tr>) : logs.length = = 0 ? (
                 <tr>;
                   <td col_span={6} className="text - center py - 12">;
                     <div className="flex flex - col items - center">;
@@ -307,18 +305,18 @@ if ( {) {
                     </div>;
                   </td>;
                 </tr>) : (
-                logs.map ((log) => (
+                logs.map (log) => (
                   <tr key={log.id} className="border - b border - zinc - 800 hover:bg - zinc - 800 / 40">;
                     <td className="px - 4 py - 3 text - sm">{format_timestamp (log.created_at)}</td>;
                     <td className="px - 4 py - 3">;
                       <Badge;
                         variant="outline";
                         className={
-                          log.method === 'GET';
+                          log.method = = 'GET';
                             ? "border - green - 500 text - green - 400";
-                            : log.method === 'POST';
+                            : log.method = = 'POST';
                             ? "border - blue - 500 text - blue - 400";
-                            : log.method === 'PUT';
+                            : log.method = = 'PUT';
                             ? "border - yellow - 500 text - yellow - 400";
                             : "border - red - 500 text - red - 400";
                         }
@@ -337,14 +335,14 @@ if ( {) {
                       {log.response_time_ms ? `${log.response_time_ms}ms` : '-'}
                     </td>;
                     <td className="px - 4 py - 3 text - sm">{log.ip_address || '-'}</td>;
-                  </tr>)))}
+                  </tr>))}
             </tbody>;
           </table>;
         </div>;
         {logs.length > 0 && (
           <div className="mt - 4 flex justify - between items - center">;
             <div className="text - sm text - zinc - 500">;
-              Showing {current_page * page_size + 1} to {Math.min ((current_page + 1) * page_size, total_logs)} of {total_logs} logs;
+              Showing {current_page * page_size + 1} to {Math.min (current_page + 1) * page_size, total_logs)} of {total_logs} logs;
             </div>;
             <div className="flex space - x-2">;
               <Button;
@@ -367,4 +365,3 @@ if ( {) {
           </div>)}
       </CardContent>;
     </Card>);
-}

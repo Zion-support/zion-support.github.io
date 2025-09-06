@@ -78,6 +78,6 @@ const EnhancedNavigation = () => {
       </div>
     </nav>
   )
-},
+,
 
 export default EnhancedNavigation,

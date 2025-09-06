@@ -71,4 +71,3 @@ export function BillingDashboard() {;
         </TabsContent>;
       </Tabs>;
     </div>);
-}

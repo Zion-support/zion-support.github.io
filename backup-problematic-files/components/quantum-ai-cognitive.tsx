@@ -5,7 +5,7 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
 import Button from '../components/ui/Button',;
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',;
 export default function QuantumAICognitivePage() {;
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/quantum-ai-cognitive'));
+  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/quantum-ai-cognitive');
   if (!service) {;
     return null;
   }
@@ -34,12 +34,12 @@ export default function QuantumAICognitivePage() {;
               <h2 className="text-2xl font-semibold mb-4">What you get</h2>
               <p className="text-slate-300 mb-6">{service.description}</p>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                {service.features.slice(0, 12).map((feat, i) => (
+                {service.features.slice(0, 12).map(feat, i) => (
                   <li key={i} className="flex items-start space-x-3 text-slate-200">
                     <Check className="w-5 h-5 text-purple-400 mt-0.5" />
                     <span>{feat}</span>
                   </li>
-                ))}
+                )}
               </ul>
             </div>
 
@@ -82,5 +82,3 @@ export default function QuantumAICognitivePage() {;
       </div>
     </UltraAdvancedFuturisticBackground>
   )
-}
-;

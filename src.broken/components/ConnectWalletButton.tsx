@@ -6,5 +6,3 @@ export function ConnectWalletButton() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

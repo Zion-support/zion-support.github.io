@@ -16,7 +16,7 @@ interface CategoryCardProps {
   color?: string;
   count?: number;
   className?: string;
-}
+
 export function CategoryCard({ title, description, icon, color, count, className }: CategoryCardProps) {
   // Create a URL-friendly slug from the category title
 
@@ -39,7 +39,7 @@ export function CategoryCard({ title, description, icon, color, count, className
       </div>;
       <h3 className="text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors">{title}</h3>;
       <p className="text-zion-slate-light text-center">{description}</p>;
-      {count !== undefined && (;
+      {count != undefined && (;
         <div className="mt-3 text-sm text-zion-cyan">{count} listings</div>;
       )}
     </Link>;
@@ -60,14 +60,14 @@ interface CategoryCardProps {
   color?: string;
   count?: number;
   class_name?: string;
-}
+
 export /**
  * CategoryCard - Function description
  */
 function CategoryCard() {
   // Create a URL - friendly slug from the category title;
   const slug = slugify (title);
-;
+
   return (
     <Link;
       to={`/category/${slug}`}
@@ -85,7 +85,6 @@ function CategoryCard() {
       </div>;
       <h3 className="text - xl font - bold mb - 2 text - white group - hover:text - zion - purple transition - colors">{title}</h3>;
       <p className="text - zion - slate - light text - center">{description}</p>;
-      {count !== undefined && (
+      {count != undefined && (
         <div className="mt - 3 text - sm text - zion - cyan">{count} listings</div>)}
     </Link>);
-}

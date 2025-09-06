@@ -19,40 +19,40 @@ const EnhancedContactForm: React.FC = () => {;
   ],;
   const validateForm = (): boolean => {;
     const newErrors: FormErrors = {},;
-    if (!formData.name.trim()) {;
+    if (!formData.name.trim() {;
       newErrors.name = 'Name is required';
     } else if (formData.name.trim().length < 2) {;
       newErrors.name = 'Name must be at least 2 characters long';
     }
-;
-    if (!formData.email.trim()) {;
+
+    if (!formData.email.trim() {;
       newErrors.email = 'Email is required';
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {;
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email) {;
       newErrors.email = 'Please enter a valid email address';
     }
-;
-    if (!formData.message.trim()) {;
+
+    if (!formData.message.trim() {;
       newErrors.message = 'Message is required';
     } else if (formData.message.trim().length < 10) {;
       newErrors.message = 'Message must be at least 10 characters long';
     } else if (formData.message.trim().length > 1000) {;
       newErrors.message = 'Message must be less than 1000 characters';
     }
-;
+
     setErrors(newErrors),;
-    return Object.keys(newErrors).length === 0;
+    return Object.keys(newErrors).length = = 0;
   },;
   const handleSubmit = async (e: React.FormEvent) => {;
     e.preventDefault(),;
-    if (!validateForm()) {;
+    if (!validateForm() {;
       showError('Validation ErrorPlease fix the errors in the form'),;
       return;
     }
-;
+
     setIsSubmitting(true),;
     try {;
       // Simulate API call;
-      await new Promise(resolve => setTimeout(resolve, 2000)),;
+      await new Promise(resolve => setTimeout(resolve, 2000),;
       setIsSubmitted(true),;
       showSuccess('Message Sent!Thank you for contacting us. We\'ll get back to you soon.'),;
       setFormData({;
@@ -68,8 +68,7 @@ const EnhancedContactForm: React.FC = () => {;
       showError('Submission FailedThere was an error sending your message. Please try again.');
     } finally {;
       setIsSubmitting(false);
-    }
-  },;
+    },;
   const services = [;
     'AI Business IntelligenceQuantum CybersecurityEdge Computing OrchestrationSpace Technology InnovationNeural Interface DevelopmentOther';
   ],;
@@ -79,13 +78,12 @@ const EnhancedContactForm: React.FC = () => {;
       const newErrors = { ...errors },;
       delete newErrors[name],;
       setErrors(newErrors);
-    }
-  },;
+    },;
   if (isSubmitted) {;
     return (;
       <motion.div;
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
+        initial={ opacity: 0, scale: 0.9 }
+        animate={ opacity: 1, scale: 1 }
         className="text-center py-12"
       >
         <div className="w-20 h-20 rounded-full bg-green-500/20 mx-auto mb-6 flex items-center justify-center">
@@ -180,7 +178,7 @@ const EnhancedContactForm: React.FC = () => {;
       </div>;
     );
   }
-;
+
   return (;
     <div className="max-w-4xl mx-auto">;
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">;
@@ -246,8 +244,8 @@ const EnhancedContactForm: React.FC = () => {;
                 />
                 {errors.name && (
                   <motion.p
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    initial={ opacity: 0, y: -10 }
+                    animate={ opacity: 1, y: 0 }
                     className="mt-2 text-sm text-red-400 flex items-center gap-2"
                   >
                     <AlertCircle className="w-4 h-4" />
@@ -276,8 +274,8 @@ const EnhancedContactForm: React.FC = () => {;
                 />
                 {errors.email && (
                   <motion.p
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    initial={ opacity: 0, y: -10 }
+                    animate={ opacity: 1, y: 0 }
                     className="mt-2 text-sm text-red-400 flex items-center gap-2"
                   >
                     <AlertCircle className="w-4 h-4" />
@@ -315,11 +313,11 @@ const EnhancedContactForm: React.FC = () => {;
                   className="w-full px-4 py-3 rounded-xl border border-white/20 bg-white/5 text-white focus:outline-none focus:ring-2 focus:ring-cyan-400/20 focus:border-cyan-400 focus:bg-white/10 transition-all duration-300"
                 >
                   <option value="">Select a service</option>
-                  {services.map((service) => (
+                  {services.map(service) => (
                     <option key={service} value={service} className="bg-slate-800 text-white">
                       {service}
                     </option>;
-                  ))}
+                  )}
                 </select>
               </div>
             </div>
@@ -344,8 +342,8 @@ const EnhancedContactForm: React.FC = () => {;
               />;
               {errors.message && (;
                 <motion.p;
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  initial={ opacity: 0, y: -10 }
+                  animate={ opacity: 1, y: 0 }
                   className="mt-2 text-sm text-red-400 flex items-center gap-2"
                 >
                   <AlertCircle className="w-4 h-4" />
@@ -380,5 +378,5 @@ const EnhancedContactForm: React.FC = () => {;
       </div>;
     </section>;
   );
-},;
+,;
 export default EnhancedContactForm;

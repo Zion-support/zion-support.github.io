@@ -6,5 +6,3 @@ export function PartnerIntegration() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

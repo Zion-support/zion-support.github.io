@@ -8,7 +8,7 @@ import { useToast } from "@/hooks/use-toast",;
 import { useRouter } from "next/router",;
 import Image from 'next/image', // Import next/image;
 import {logErrorToProduction} from '@/utils/productionLogger',;
-;
+
 import {;
   Form,;
   FormControl,;
@@ -24,24 +24,24 @@ import { AspectRatio } from "@/components/ui/aspect-ratio",;
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",;
 import { AIListingGenerator } from "@/components/listing/AIListingGenerator",;
 import { Sparkles } from 'lucide-react';
-;
-// Define the form schema with zod;
+
+/ Define the form schema with zod;
 const productSchema = z.object({;
   title:z.string().min(3, "Title must be at least 3 characters"),;
   description:z.string().min(10, "Description must be at least 10 characters"),;
   price:z;
     .string();
-    .refine((val) => !isNaN(parseFloat(val)) && parseFloat(val) >= 0, {;
+    .refine(val) => !isNaN(parseFloat(val) && parseFloat(val) >= 0, {;
       message:"Price must be a valid number"}),;
   category:z.string().min(1, "Please select a category"),;
-  image:typeof window === 'undefined' ? z.any().optional() :z.instanceof(File).optional(),;
-  video:typeof window === 'undefined' ? z.any().optional() :z.instanceof(File).optional(),;
-  model:typeof window === 'undefined' ? z.any().optional() :z.instanceof(File).optional(),;
+  image:typeof window = = 'undefined' ? z.any().optional() :z.instanceof(File).optional(),;
+  video:typeof window = = 'undefined' ? z.any().optional() :z.instanceof(File).optional(),;
+  model:typeof window = = 'undefined' ? z.any().optional() :z.instanceof(File).optional(),;
   tags:z.string().optional()}),;
-;
-// Type for our form values;
+
+/ Type for our form values;
 type ProductFormValues = z.infer<typeof productSchema>,;
-;
+
 export function ProductSubmissionForm() {;
   const { user } = useAuth(),;
   const { toast } = useToast(),;
@@ -49,7 +49,6 @@ export function ProductSubmissionForm() {;
   const [isSubmitting, setIsSubmitting] = React.useState(false),;
   const [imagePreview, setImagePreview] = React.useState(null as string | null),;
   const [activeTab, setActiveTab] = React.useState("manual"),;
-  ;
   // Initialize the form;
   const form = useForm<ProductFormValues>({;
     resolver:zodResolver(productSchema),;
@@ -60,8 +59,7 @@ export function ProductSubmissionForm() {;
       category:"",;
       video:undefined,;
       model:undefined,;
-      tags:""}}),;
-  ;
+      tags:""}),;
   // Handle image upload preview;
   const handleImageChange = (e:React.ChangeEvent<HTMLInputElement>) => {;
     const file = e.target.files?.[0],;
@@ -72,36 +70,31 @@ export function ProductSubmissionForm() {;
         setImagePreview(reader.result as string),;
       },;
       reader.readAsDataURL(file),;
-    }
-  },;
-;
+    },;
+
   const handleVideoChange = (e:React.ChangeEvent<HTMLInputElement>) => {;
     const file = e.target.files?.[0],;
     if (file) {;
       form.setValue("video", file),;
-    }
-  },;
-;
+    },;
+
   const handleModelChange = (e:React.ChangeEvent<HTMLInputElement>) => {;
     const file = e.target.files?.[0],;
     if (file) {;
       form.setValue("model", file),;
-    }
-  },;
-;
+    },;
+
   // Apply AI-generated content to the form;
   const handleApplyGenerated = (content:any) => {;
     form.setValue("description", content.description),;
-    form.setValue("tags", content.tags.join(", ")),;
-    ;
+    form.setValue("tags", content.tags.join(", "),;
     // Set a default price as the middle of the suggested range;
-    const averagePrice = ((content.suggestedPrice.min + content.suggestedPrice.max) / 2).toFixed(2),;
+    const averagePrice = (content.suggestedPrice.min + content.suggestedPrice.max) / 2).toFixed(2),;
     form.setValue("price", averagePrice),;
-    ;
     // Switch to the manual tab to show applied content;
     setActiveTab("manual"),;
   },;
-;
+
   // Handle form submission;
   const onSubmit = async (values:ProductFormValues) => {;
     if (!user) {;
@@ -111,9 +104,8 @@ export function ProductSubmissionForm() {;
         variant:"destructive"}),;
       return,;
     }
-;
+
     setIsSubmitting(true),;
-    ;
     try {;
       // Create the product listing;
       const productData = {;
@@ -122,31 +114,28 @@ export function ProductSubmissionForm() {;
         price:parseFloat(values.price),;
         category:values.category,;
         currency:"USD", // Default currency;
-        tags:values.tags ? values.tags.split().map(tag => tag.trim()) :[],;
+        tags:values.tags ? values.tags.split().map(tag => tag.trim() :[],;
         author:{;
           name:user.displayName || "Anonymous Creator",;
           id:user.id},;
         createdAt:new Date().toISOString()},;
-      ;
       const { data:productRecord, error:productError } = await supabase;
         .from('product_listings');
         .insert([productData]);
         .select('id');
         .single(),;
-        ;
       if (productError) {;
         throw new Error(productError.message),;
       }
-;
+
       let imagePublicUrl:string | undefined,;
-;
+
       // If we have an image, upload it;
       if (values.image) {;
         const imagePath = `product_images/${productRecord.id}/${values.image.name}`,;
         const { error:uploadError } = await supabase.storage;
           .from('products');
           .upload(imagePath, values.image),;
-          ;
         if (uploadError) {;
           throw new Error(uploadError.message),;
         }
@@ -156,7 +145,6 @@ export function ProductSubmissionForm() {;
           .from('products');
           .getPublicUrl(imagePath),;
         imagePublicUrl = publicUrlData.publicUrl,;
-          ;
         // Update the product with the image URL;
         const { error:updateError } = await supabase;
           .from('product_listings');
@@ -164,62 +152,58 @@ export function ProductSubmissionForm() {;
             images:[imagePublicUrl];
           });
           .eq('id', productRecord.id),;
-          ;
       if (updateError) {;
         throw new Error(updateError.message),;
       }
-    }
-;
+
       // Upload video if provided;
       if (values.video) {;
         const videoPath = `product_videos/${productRecord.id}/${values.video.name}`,;
         const { error:uploadError } = await supabase.storage;
           .from('products');
           .upload(videoPath, values.video),;
-;
+
         if (uploadError) {;
           throw new Error(uploadError.message),;
         }
-;
+
         const { data:publicUrlData } = supabase.storage;
           .from('products');
           .getPublicUrl(videoPath),;
-;
+
         const { error:updateError } = await supabase;
           .from('product_listings');
           .update({ video_url:publicUrlData.publicUrl });
           .eq('id', productRecord.id),;
-;
+
         if (updateError) {;
           throw new Error(updateError.message),;
         }
-      }
-;
+
       // Upload model if provided;
       if (values.model) {;
         const modelPath = `product_models/${productRecord.id}/${values.model.name}`,;
         const { error:uploadError } = await supabase.storage;
           .from('products');
           .upload(modelPath, values.model),;
-;
+
         if (uploadError) {;
           throw new Error(uploadError.message),;
         }
-;
+
         const { data:publicUrlData } = supabase.storage;
           .from('products');
           .getPublicUrl(modelPath),;
-;
+
         const { error:updateError } = await supabase;
           .from('product_listings');
           .update({ model_url:publicUrlData.publicUrl });
           .eq('id', productRecord.id),;
-;
+
         if (updateError) {;
           throw new Error(updateError.message),;
         }
-      }
-;
+
       // Send listing to moderation service;
       try {;
         await supabase.functions.invoke('moderate-listing', {;
@@ -228,8 +212,7 @@ export function ProductSubmissionForm() {;
             listingType:'product',;
             description:values.description,;
             images:imagePublicUrl ? [imagePublicUrl] :[],;
-            sellerId:user.id}
-        }),;
+            sellerId:user.id}),;
       } catch (err) {;
         logErrorToProduction('Error invoking moderation:', { data:err }),;
       }
@@ -238,7 +221,6 @@ export function ProductSubmissionForm() {;
       toast({;
         title:"Product Published!",;
         description:"Your product has been successfully published on Zion."}),;
-      ;
       // Redirect to product page;
       router.push(`/marketplace/listing/${productRecord.id}`),;
     } catch (error) {;
@@ -248,9 +230,8 @@ export function ProductSubmissionForm() {;
         variant:"destructive"}),;
     } finally {;
       setIsSubmitting(false),;
-    }
-  },;
-;
+    },;
+
   return (;
     <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;
       <TabsList className="grid grid-cols-2 mb-6">;
@@ -262,7 +243,6 @@ export function ProductSubmissionForm() {;
           AI-Powered Creation;
         </TabsTrigger>;
       </TabsList>;
-      ;
       <TabsContent value="manual">;
         <Form {...form}>;
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">;
@@ -289,9 +269,9 @@ export function ProductSubmissionForm() {;
                     <FormMessage />;
                   </FormItem>;
                 ),;
-              }}
+              }
             />;
-;
+
             <FormField;
               control={form.control}
               name="description";
@@ -312,7 +292,7 @@ export function ProductSubmissionForm() {;
                 </FormItem>;
               )}
             />;
-;
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
               <FormField;
                 control={form.control}
@@ -330,7 +310,7 @@ export function ProductSubmissionForm() {;
                   </FormItem>;
                 )}
               />;
-;
+
               <FormField;
                 control={form.control}
                 name="category";
@@ -356,7 +336,7 @@ export function ProductSubmissionForm() {;
                 )}
               />;
             </div>;
-;
+
             <FormField;
               control={form.control}
               name="tags";
@@ -373,7 +353,7 @@ export function ProductSubmissionForm() {;
                 </FormItem>;
               )}
             />;
-;
+
             <FormField;
               control={form.control}
               name="image";
@@ -392,7 +372,6 @@ export function ProductSubmissionForm() {;
                     Upload a high-quality image of your product (recommended size:1200x800px);
                   </FormDescription>;
                   <FormMessage />;
-                  ;
                   {imagePreview && (;
                     <div className="mt-2 w-full max-w-md border rounded overflow-hidden">;
                       <AspectRatio ratio={3/2}>;
@@ -412,7 +391,7 @@ export function ProductSubmissionForm() {;
                 </FormItem>;
               )}
             />;
-;
+
             <FormField;
               control={form.control}
               name="video";
@@ -429,7 +408,7 @@ export function ProductSubmissionForm() {;
                 </FormItem>;
               )}
             />;
-;
+
             <FormField;
               control={form.control}
               name="model";
@@ -446,7 +425,7 @@ export function ProductSubmissionForm() {;
                 </FormItem>;
               )}
             />;
-;
+
             <div className="flex justify-end">;
               <Button ;
                 type="submit" ;
@@ -459,14 +438,13 @@ export function ProductSubmissionForm() {;
           </form>;
         </Form>;
       </TabsContent>;
-      ;
       <TabsContent value="ai">;
         <AIListingGenerator ;
           onApplyGenerated={handleApplyGenerated}
-          initialValues={{;
+          initialValues={;
             title:form.getValues("title"),;
             category:form.getValues("category");
-          }}
+          }
         />;
       </TabsContent>;
     </Tabs>;
@@ -474,20 +452,20 @@ export function ProductSubmissionForm() {;
  import {;
   {;
   Image from 'next/image';
-//Import next/image import {;
+/Import next/image import {;
   Sparkles ';
-}from 'lucide-react' //Define the form schema with zod const productSchema = z.object ({;
+from 'lucide-react' //Define the form schema with zod const productSchema = z.object ({;
   title: z.string () .min (3, "Title must be at least 3 characters");";
 description: z.string () .min (10,  "Description must be at least 10 characters");
-price: z .string () .refine ( (val) => !isNaN (parseFloat (val) ) && parseFloat (val) >= 0, {";
+price: z .string () .refine (val) => !isNaN (parseFloat (val) && parseFloat (val) >= 0, {";
   message: "Price must be a valid number" ;
-});";
+);";
 category: z.string () .min (1, "Please select a category");';
-video: typeof window === 'undefined' ? z.any () .optional () : z.instanceof (File) .optional ();';
-model: typeof window === 'undefined' ? z.any () .optional () : z.instanceof (File) .optional ();
+video: typeof window = = 'undefined' ? z.any () .optional () : z.instanceof (File) .optional ();';
+model: typeof window = = 'undefined' ? z.any () .optional () : z.instanceof (File) .optional ();
 tags: z.string () .optional () ;
-});
-//Type for our form values type ProductFormValues = z.infer<typeof productSchema>;
+);
+/Type for our form values type ProductFormValues = z.infer<typeof productSchema>;
 const [isSubmitting, setIsSubmitting] = React.useState (false);
 const [imagePreview, setImagePreview] = React.useState (null as string | null);";
 const [activeTab, setActiveTab] = React.useState ("manual");
@@ -495,89 +473,80 @@ const [activeTab, setActiveTab] = React.useState ("manual");
 if (file) {;
   reader.onloadend = () => {;
   setImagePreview (reader.result as string) ;
-};
 reader.readAsDataURL (file) ;
-}
-};
-}
-};
+
+;
 const handleModelChange = (e: React.ChangeEvent<HTMLInputElement>) => {;
   const file = e.target.files?.[0];
 if (file) {;
-  ;
-}
-};
-//Apply AI-generated content to the form const handleApplyGenerated = (content: any) => {;
+
+;
+/Apply AI-generated content to the form const handleApplyGenerated = (content: any) => {;
   if (!user) {;
   toast ({;
   return;
-}setIsSubmitting (true);
+setIsSubmitting (true);
 author: {";
   name: user.displayName || "Anonymous Creator";
 id: user.id ;
-};
 createdAt: new Date () .toISOString () ;
-};
 data: productRecord, error: productError ';
-}= await supabase .from ('product listings') .insert ([productData]) .select ('id') .single ();
+= await supabase .from ('product listings') .insert ([productData]) .select ('id') .single ();
 let imagePublicUrl: string | undefined;';
-//If we have an image, upload it .from ('products') .upload (imagePath, values.image);
-//Get the public window.URL for the image const {;
+/If we have an image, upload it .from ('products') .upload (imagePath, values.image);
+/Get the public window.URL for the image const {;
   data: publicUrlData ';
-}= supabase.storage.from ('products') .getPublicUrl (imagePath);
+= supabase.storage.from ('products') .getPublicUrl (imagePath);
 imagePublicUrl = publicUrlData.publicUrl;
-//Update the product with the image window.URL const {;
+/Update the product with the image window.URL const {;
   error: updateError ';
-}= await supabase .from ('product listings') .from ('products') .upload (videoPath, values.video);
+= await supabase .from ('product listings') .from ('products') .upload (videoPath, values.video);
 const {;
   data: publicUrlData ';
-}= supabase.storage.from ('products') .getPublicUrl (videoPath);
+= supabase.storage.from ('products') .getPublicUrl (videoPath);
 const {;
   error: updateError ';
-}= await supabase .from ('product listings') .from ('products') .upload (modelPath, values.model);
+= await supabase .from ('product listings') .from ('products') .upload (modelPath, values.model);
 const {;
   data: publicUrlData ';
-}= supabase.storage.from ('products') .getPublicUrl (modelPath);
+= supabase.storage.from ('products') .getPublicUrl (modelPath);
 const {;
   error: updateError ';
-}= await supabase .from ('product listings') ;
-}//Send listing to moderation service try {';
+= await supabase .from ('product listings') ;
+//Send listing to moderation service try {';
   await supabase.functions.invoke ('moderate-listing', {;
   body: {;
   //Redirect to product page router.push (`/marketplace/listing/$ {;
   productRecord.id ;
-}`) ;
-}catch (error) {;
+`) ;
+catch (error) {;
   toast ({;
-  ;
-}finally {;
+finally {;
   setIsSubmitting (false) ;
-}
-};
 return (<Tabs value= {;
   activeTab ;
-}onValueChange= {;
+onValueChange= {;
   setActiveTab ";
-}className="w-full"> <TabsList className="grid grid-cols-2 mb-6" > <TabsTrigger value="manual" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple" > ai"className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple"> <Sparkles className="h-4 w-4 mr-2"/> AI-Powered Creation </TabsTrigger> </TabsList> ;
-}";
-}/> <FormField Describe your product in detail..." className="min-h-32" {;
+className="w-full"> <TabsList className="grid grid-cols-2 mb-6" > <TabsTrigger value="manual" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple" > ai"className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple"> <Sparkles className="h-4 w-4 mr-2"/> AI-Powered Creation </TabsTrigger> </TabsList> ;
+";
+/> <FormField Describe your product in detail..." className="min-h-32" {;
   ...field ';
-}/> </FormControl> <FormDescription> Provide a detailed description of what you're offering </FormDescription> <FormMessage /> </FormItem>) ";
-}/> <div className="grid grid-cols-1 md:grid-cols-2 gap-6" > <FormField <FormItem> <FormLabel>Price (USD) </FormLabel> <FormControl> <Input type="number" min="0" step="0.01" placeholder="0.00" {;
+/> </FormControl> <FormDescription> Provide a detailed description of what you're offering </FormDescription> <FormMessage /> </FormItem>) ";
+/> <div className="grid grid-cols-1 md:grid-cols-2 gap-6" > <FormField <FormItem> <FormLabel>Price (USD) </FormLabel> <FormControl> <Input type="number" min="0" step="0.01" placeholder="0.00" {;
   ...field ;
-}/> ";
-}/> <FormField >Select a category</option> <option value="digital product" >Digital Product</option> <option value="service" >Service</option> <option value="ai tool" >AI Tool</option> <option value="course" >Course</option> <option value="template" >Template</option> <option value="other" >Other</option> </select> </FormControl> <FormMessage /> </FormItem>) ";
-}/> </div> <FormField <FormItem> <FormLabel>Tags</FormLabel> <FormControl> <Input placeholder="Enter tags separated by commas" {;
+/> ";
+/> <FormField >Select a category</option> <option value="digital product" >Digital Product</option> <option value="service" >Service</option> <option value="ai tool" >AI Tool</option> <option value="course" >Course</option> <option value="template" >Template</option> <option value="other" >Other</option> </select> </FormControl> <FormMessage /> </FormItem>) ";
+/> </div> <FormField <FormItem> <FormLabel>Tags</FormLabel> <FormControl> <Input placeholder="Enter tags separated by commas" {;
   ...field ;
-}/> ";
-}/> <FormField <FormItem> <FormLabel>Product Image</FormLabel> <FormControl> <Input type="file" accept="image/*" onChange= {;
+/> ";
+/> <FormField <FormItem> <FormLabel>Product Image</FormLabel> <FormControl> <Input type="file" accept="image/*" onChange= {;
   handleImageChange ";
-}className="cursor-pointer" /> </FormControl> <FormDescription> Upload a high-quality image of your product (recommended size: 1200x800px) </FormDescription> <FormMessage /> //`sizes` might not be strictly necessary for a preview of this nature;';
-//but can be added if responsive behavior is critical here. //For local object URLs, optimization via loader won't occur. /> </AspectRatio> </div>) ;
-}</FormItem>) ";
-}/> <FormField <FormItem> <FormLabel>Product Video (MP4) </FormLabel> <FormControl> <Input type="file" accept="video/mp4" onChange= {;
+className="cursor-pointer" /> </FormControl> <FormDescription> Upload a high-quality image of your product (recommended size: 1200x800px) </FormDescription> <FormMessage /> //`sizes` might not be strictly necessary for a preview of this nature;';
+/but can be added if responsive behavior is critical here. //For local object URLs, optimization via loader won't occur. /> </AspectRatio> </div>) ;
+</FormItem>) ";
+/> <FormField <FormItem> <FormLabel>Product Video (MP4) </FormLabel> <FormControl> <Input type="file" accept="video/mp4" onChange= {;
   handleVideoChange ";
-}className="cursor-pointer" /> </FormControl> <FormDescription> Optional video demonstrating your product </FormDescription> <FormMessage /> </FormItem>) ;
-}/> <FormField </FormControl> <FormDescription> Upload a 3D model for interactive viewing </FormDescription> <FormMessage /> </FormItem>) ";
-}/> <div className="flex justify-end" > <Button </Button> </div> </form> </Form> </TabsContent> <TabsContent value="ai" > <AIListingGenerator /> </TabsContent> </Tabs>) ;
-}'"
+className="cursor-pointer" /> </FormControl> <FormDescription> Optional video demonstrating your product </FormDescription> <FormMessage /> </FormItem>) ;
+/> <FormField </FormControl> <FormDescription> Upload a 3D model for interactive viewing </FormDescription> <FormMessage /> </FormItem>) ";
+/> <div className="flex justify-end" > <Button </Button> </div> </form> </Form> </TabsContent> <TabsContent value="ai" > <AIListingGenerator /> </TabsContent> </Tabs>) ;
+'"

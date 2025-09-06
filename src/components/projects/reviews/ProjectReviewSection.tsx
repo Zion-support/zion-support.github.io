@@ -10,7 +10,7 @@ import {
   CardDescription
   CardHeader
   CardTitle
-} from '@/components/ui/card'
+ from '@/components/ui/card'
 import { ReviewsList } from '@/components/reviews/ReviewsList'
 import { LeaveReviewModal } from '@/components/reviews/LeaveReviewModal'
 import { useReviews } from '@/hooks/useReviews'
@@ -23,9 +23,9 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
     project.id
   )
   const [isReviewModalOpen, setIsReviewModalOpen] = useState(false)
-  const isCompleted = project.status === 'completed'
-  const isClient = user?.id === project.client_id
-  const isTalent = user?.id === project.talent_id
+  const isCompleted = project.status = = 'completed'
+  const isClient = user?.id = = project.client_id
+  const isTalent = user?.id = = project.talent_id
   const clientProfile = project?.talent_profile
   const talentProfile = project.talent_profile
   // Determine who the current user needs to review
@@ -70,11 +70,11 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
                     </h3>
                     <p className='text-sm text-muted-foreground mb-3'>
                       Your review is{' '}
-                      {userReview && userReview.status === 'approved';
+                      {userReview && userReview.status = = 'approved';
                         ? 'published';
                         : 'pending approval'}
                     </p>;
-                    {userReview && userReview.status === 'pending' && (;
+                    {userReview && userReview.status = = 'pending' && (;
                       <Button
                         variant='outline'
                         onClick={() => setIsReviewModalOpen(true)}
@@ -115,7 +115,7 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
       )}
     </Card>
   )
-}
+
 import { Project } from '@/types / projects';
 import { useState } from 'react';
 import { Star } from 'lucide-react';
@@ -126,7 +126,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from '@/components / ui / card';
+ from '@/components / ui / card';
 import { ReviewsList } from '@/components / reviews / ReviewsList';
 import { LeaveReviewModal } from '@/components / reviews / LeaveReviewModal';
 import { use_reviews } from '@/hooks / use_reviews';
@@ -141,9 +141,9 @@ function ProjectReviewSection() {
   const { reviews, user_review, is_loading, report_review } = use_reviews (
     project.id);
   const [isReviewModalOpen, setIsReviewModalOpen] = useState (false);
-  const is_completed = project.status === 'completed';
-  const is_client = user?.id === project.client_id;
-  const is_talent = user?.id === project.talent_id;
+  const is_completed = project.status = = 'completed';
+  const is_client = user?.id = = project.client_id;
+  const is_talent = user?.id = = project.talent_id;
   const client_profile = project?.talent_profile;
   const talent_profile = project.talent_profile;
   // Determine who the current user needs to review;
@@ -186,11 +186,11 @@ function ProjectReviewSection() {
                     </h3>;
                     <p className='text - sm text - muted - foreground mb - 3'>;
                       Your review is{' '}
-                      {user_review.status === 'approved';
+                      {user_review.status = = 'approved';
                         ? 'published';
                         : 'pending approval'}
                     </p>;
-                    {user_review.status === 'pending' && (
+                    {user_review.status = = 'pending' && (
                       <Button;
                         variant='outline';
                         on_click={() => setIsReviewModalOpen (true)}
@@ -224,5 +224,3 @@ function ProjectReviewSection() {
           on_close = {(, ) => setIsReviewModalOpen (false), }
         />)}
     </Card>);
-}
-}

@@ -6,5 +6,3 @@ export function YoutubeEmbed() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

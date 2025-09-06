@@ -11,15 +11,14 @@ import { Button } from "@/components/ui/button",;
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
 import { ReviewForm } from "./ReviewForm",;
 import { useReviews } from "@/hooks/useReviews",;
-;
+
 interface LeaveReviewModalProps {;
   projectId:string,;
   revieweeId:string,;
   revieweeName:string,;
   isOpen:boolean,;
   onClose:() => void;
-}
-;
+
 export function LeaveReviewModal({;
   projectId,;
   revieweeId,;
@@ -28,18 +27,14 @@ export function LeaveReviewModal({;
   onClose} LeaveReviewModalProps) {;
   const { userReview, submitReview, updateReview, isSubmitting } = useReviews(projectId),;
   const [open, setOpen] = useState(isOpen),;
-  ;
-  useEffect(() => {;
+  useEffect() => {;
     setOpen(isOpen),;
   }, [isOpen]),;
-  ;
   const handleOpenChange = (open:boolean) => {;
     setOpen(open),;
     if (!open) {;
       onClose();
-    }
-  },;
-  ;
+    },;
   const handleSubmit = async (formValues:any) => {;
     if (userReview) {;
       // Update existing review;
@@ -56,9 +51,7 @@ export function LeaveReviewModal({;
         handleOpenChange(false),;
       }
       return success,;
-    }
-  },;
-  ;
+    },;
   return (;
     <Dialog open={open} onOpenChange={handleOpenChange}>;
       <DialogContent className="max-w-md">;
@@ -70,7 +63,6 @@ export function LeaveReviewModal({;
             Your feedback helps build a trustworthy community. It will be visible after moderation.;
           </DialogDescription>;
         </DialogHeader>;
-        ;
         <ReviewForm;
           projectId={projectId}          revieweeId={revieweeId}
           revieweeName={revieweeName}
@@ -92,41 +84,40 @@ revieweeId: string;
 revieweeName: string;
 isOpen: boolean;
 onClose: () => void 
-}export function LeaveReviewModal ({
+export function LeaveReviewModal ({
   projectId;
 revieweeId;
 revieweeName;
 isOpen;
 onClose 
-}: LeaveReviewModalProps) {
+: LeaveReviewModalProps) {
   const {
   userReview, submitReview, updateReview, isSubmitting 
-}= useReviews (projectId);
+= useReviews (projectId);
 const [open, setOpen] = useState (isOpen);
-useEffect ( () => {
+useEffect () => {
   setOpen (isOpen) 
-}, [isOpen]);
+, [isOpen]);
 const handleOpenChange = (open: boolean) => {
   setOpen (open);
 if (!open) {
   onClose () 
-}
-};
+
+;
 if (userReview) {
   //Update existing review 
-}
-};
+
+;
 return (</DialogTitle> <DialogDescription> Your feedback helps build a trustworthy community. It will be visible after moderation. </DialogDescription> </DialogHeader> <ReviewForm projectId= {
   projectId 
-}revieweeId= {
+revieweeId= {
   revieweeId 
-}revieweeName= {
+revieweeName= {
   revieweeName 
-}onSubmit= {
+onSubmit= {
   handleSubmit 
-}defaultValues= {
+defaultValues= {
   userReview || undefined 
-}isSubmitting= {
+isSubmitting= {
   isSubmitting 
-}/> </DialogContent> </Dialog>) 
-}
+/> </DialogContent> </Dialog>) 

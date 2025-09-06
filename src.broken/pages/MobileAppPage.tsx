@@ -6,5 +6,3 @@ export function MobileAppPage() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

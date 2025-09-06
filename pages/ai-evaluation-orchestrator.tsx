@@ -44,7 +44,7 @@ const AIEvaluationOrchestrator: React.FC = () => {;
                 className='p-6 rounded-2xl bg-black/40 border border-gray-700/60 text-gray-200'>;
                 {f}
               </div>;
-            ))}
+            )}
           </section>;
           <div className='text-center'>;
             <Button
@@ -94,9 +94,9 @@ export default function AIEvaluationOrchestratorPage() {
           <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               'Create datasets and scoring functionsBatch runs across models and versionsTrack regressions and enforce quality gatesIntegrations: OpenAI, Anthropic, Groq, OpenRouter, LangfuseExport reports, share baselines, and diff resultsFrom $199/mo'
-            ].map((f) => (
+            ].map(f) => (
               <div key={f} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 text-gray-200">{f}</div>
-            ))}
+            )}
           </section>
           <div className="text-center">
             <Button href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">Talk to Sales</Button>
@@ -105,6 +105,5 @@ export default function AIEvaluationOrchestratorPage() {
       </div>
     </>
   )
-}
+
     </Layout>);
-;

@@ -91,10 +91,10 @@ export default function APITestingSuitePage() {
     }
   ],;
   const handleTestAPI = async () => {;
-    if (!apiEndpoint.trim()) return,;
+    if (!apiEndpoint.trim() return,;
     setIsTesting(true),;
     // Simulate API testing;
-    setTimeout(() => {;
+    setTimeout() => {;
       setTestResults({;
         endpoint: apiEndpoint,;
         status: 'success',;
@@ -130,7 +130,7 @@ export default function APITestingSuitePage() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(99,102,241,0.08),transparent_50%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(99,102,241,0.06),transparent_50%)]" />
         <div className="absolute inset-0 bg-grid opacity-10" />
-        
+
         <div className="relative z-10 container-cursor text-center">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-sm font-medium mb-6">
             <Code className="w-4 h-4 mr-2" />
@@ -143,7 +143,7 @@ export default function APITestingSuitePage() {
             Test, monitor, and optimize your APIs with our comprehensive testing suite. Functional, performance, 
             and security testing for REST, GraphQL, and SOAP APIs. Ensure your APIs are reliable, fast, and secure.
           </p>
-          
+
           {/* API Testing Form */}
           <div className="max-w-3xl mx-auto mb-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
@@ -216,11 +216,11 @@ export default function APITestingSuitePage() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {features.map((feature, index) => (
+            {features.map(feature, index) => (
               <Card
                 key={index}
                 className="card-hover group border-gradient-indigo"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={ animationDelay: `${index * 0.1}s` }
               >
                 <div className="flex items-start space-x-6">
                   <div className="relative">
@@ -239,7 +239,7 @@ export default function APITestingSuitePage() {
                   </div>;
                 </div>;
               </Card>;
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
@@ -256,24 +256,24 @@ export default function APITestingSuitePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {testTypes.map((type, index) => (
+            {testTypes.map(type, index) => (
               <Card
                 key={index}
                 className="card-hover border-gradient-indigo"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={ animationDelay: `${index * 0.1}s` }
               >
                 <h3 className="text-xl font-bold mb-4 text-white">{type.name}</h3>
                 <p className="text-gray-400 mb-6">{type.description}</p>
                 <ul className="space-y-2">
-                  {type.tests.map((test, testIndex) => (
+                  {type.tests.map(test, testIndex) => (
                     <li key={testIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-4 h-4 text-indigo-400 mr-3 flex-shrink-0" />
                       {test}
                     </li>;
-                  ))}
+                  )}
                 </ul>;
               </Card>;
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
@@ -289,7 +289,7 @@ export default function APITestingSuitePage() {
                 Here's a sample API test result. Get comprehensive insights for your own API endpoints.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
               {/* Summary Card */}
               <Card className="border-gradient-indigo text-center">
@@ -314,19 +314,19 @@ export default function APITestingSuitePage() {
               <Card className="border-gradient-indigo">
                 <h3 className="text-2xl font-bold mb-6 text-white">Test Results</h3>
                 <div className="space-y-3">
-                  {testResults.tests.map((test, index) => (
+                  {testResults.tests.map(test, index) => (
                     <div key={index} className="flex items-center justify-between">
                       <span className="text-gray-300 text-sm">{test.name}</span>
                       <div className="flex items-center space-x-2">
                         <span className={`text-xs px-2 py-1 rounded ${
-                          test.status === 'pass' ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'
+                          test.status = = 'pass' ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'
                         }`}>
                           {test.status}
                         </span>
                         <span className="text-xs text-gray-400">{test.value}</span>
                       </div>
                     </div>
-                  ))}
+                  )}
                 </div>;
               </Card>;
               {/* Performance Metrics */}
@@ -357,18 +357,18 @@ export default function APITestingSuitePage() {
             <Card className="border-gradient-indigo">
               <h3 className="text-2xl font-bold mb-6 text-white">Optimization Recommendations</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {testResults.recommendations.map((rec, index) => (
+                {testResults.recommendations.map(rec, index) => (
                   <div key={index} className="flex items-start space-x-3">
                     <CheckCircle className="w-5 h-5 text-indigo-400 mt-1 flex-shrink-0" />
                     <span className="text-gray-300">{rec}</span>
                   </div>
-                ))}
+                )}
               </div>;
             </Card>;
           </div>;
         </section>;
       )}
-;
+
       {/* Pricing Section */}
       <section id="pricing" className="section-padding bg-gradient-cursor">
         <div className="container-cursor">
@@ -382,11 +382,11 @@ export default function APITestingSuitePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
+            {pricing.map(plan, index) => (
               <Card
                 key={index}
                 className={`card-hover border-gradient-indigo ${plan.popular ? 'ring-2 ring-indigo-500 scale-105' : ''}`}
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={ animationDelay: `${index * 0.1}s` }
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -395,7 +395,7 @@ export default function APITestingSuitePage() {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-4">{plan.name}</h3>
                   <div className="mb-6">
@@ -406,12 +406,12 @@ export default function APITestingSuitePage() {
                 </div>
 
                 <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map(feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-indigo-400 mr-3 flex-shrink-0" />
                       {feature}
                     </li>;
-                  ))}
+                  )}
                 </ul>
 
                 <Button
@@ -423,7 +423,7 @@ export default function APITestingSuitePage() {
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               </Card>
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
@@ -490,4 +490,3 @@ export default function APITestingSuitePage() {
       </section>;
     </>;
   );
-}

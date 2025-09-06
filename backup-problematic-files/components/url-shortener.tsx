@@ -10,10 +10,10 @@ export default function URLShortenerPage() {;
   const [isShortening, setIsShortening] = useState(false),;
   const [showQR, setShowQR] = useState<string | null>(null),;
   const generateShortUrl = async () => {;
-    if (!longUrl.trim()) return,;
+    if (!longUrl.trim() return,;
     setIsShortening(true),;
     // Simulate API call delay;
-    await new Promise(resolve => setTimeout(resolve, 1000)),;
+    await new Promise(resolve => setTimeout(resolve, 1000),;
     const alias = customAlias.trim() || generateRandomAlias(),;
     const shortUrl = `https://zion.tech/${alias}`,;
     const newShortUrl = {;
@@ -34,7 +34,7 @@ export default function URLShortenerPage() {;
     const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789',;
     let result = '',;
     for (let i = 0, i < 6, i++) {;
-      result += chars.charAt(Math.floor(Math.random() * chars.length));
+      result += chars.charAt(Math.floor(Math.random() * chars.length);
     }
     return result
   },
@@ -46,17 +46,16 @@ export default function URLShortenerPage() {;
   const incrementClicks = (id: number) => {
     setShortenedUrls(prev => 
       prev.map(url => 
-        url.id === id ? { ...url, clicks: url.clicks + 1 } : url
+        url.id = = id ? { ...url, clicks: url.clicks + 1 } : url
       )
-    )
   },
 
   const deleteUrl = (id: number) => {
-    setShortenedUrls(prev => prev.filter(url => url.id !== id))
+    setShortenedUrls(prev => prev.filter(url => url.id != id)
   },
 
   const getTotalClicks = () => {
-    return shortenedUrls.reduce((sum, url) => sum + url.clicks, 0)
+    return shortenedUrls.reduce(sum, url) => sum + url.clicks, 0)
   },
 
   const getTotalUrls = () => {
@@ -198,7 +197,7 @@ export default function URLShortenerPage() {;
                   </div>
                 </div>
 
-                {shortenedUrls.length === 0 ? (
+                {shortenedUrls.length = = 0 ? (
                   <div className="bg-gray-900 p-6 rounded-lg border border-gray-700 text-center">
                     <div className="text-6xl mb-4"></div>
                     <p className="text-gray-400">
@@ -208,7 +207,7 @@ export default function URLShortenerPage() {;
                 ) : (
                   <div className="space-y-3">
                     <h4 className="text-lg font-semibold text-white mb-3">Recent URLs</h4>
-                    {shortenedUrls.slice(0, 3).map((url) => (
+                    {shortenedUrls.slice(0, 3).map(url) => (
                       <div key={url.id} className="p-3 bg-gray-700 rounded-lg">
                         <div className="flex items-center justify-between">
                           <div className="flex-1 min-w-0">
@@ -226,7 +225,7 @@ export default function URLShortenerPage() {;
                           </div>
                         </div>
                       </div>
-                    ))}
+                    )}
                   </div>;
                 )}
               </div>;
@@ -248,7 +247,7 @@ export default function URLShortenerPage() {;
             </div>
 
             <div className="space-y-4">
-              {shortenedUrls.map((url) => (
+              {shortenedUrls.map(url) => (
                 <Card key={url.id} className="p-6 bg-gray-700 border border-gray-600">
                   <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                     {/* URL Info */}
@@ -306,7 +305,7 @@ export default function URLShortenerPage() {;
 
                       <div className="flex space-x-2">
                         <Button
-                          onClick={() => setShowQR(showQR === url.id ? null : url.id)}
+                          onClick={() => setShowQR(showQR = = url.id ? null : url.id)}
                           variant="outline"
                           size="sm"
                           className="flex-1 border-gray-600 text-gray-300 hover:bg-gray-600"
@@ -327,7 +326,7 @@ export default function URLShortenerPage() {;
                   </div>
 
                   {/* QR Code */}
-                  {showQR === url.id && (
+                  {showQR = = url.id && (
                     <div className="mt-4 p-4 bg-gray-800 rounded-lg text-center">
                       <img 
                         src={url.qrCode} 
@@ -340,12 +339,12 @@ export default function URLShortenerPage() {;
                     </div>
                   )}
                 </Card>;
-              ))}
+              )}
             </div>;
           </div>;
         </section>;
       )}
-;
+
       {/* Features */}
       <section className="py-20 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -659,4 +658,3 @@ export default function URLShortenerPage() {;
       </section>;
     </>;
   );
-}

@@ -6,12 +6,12 @@ interface SaveTalentButtonProps {
   talentId: string;
   onSave: (talentId: string) => void;
   isSaved: boolean
-}
+
 export function SaveTalentButton({
   talentId
   onSave
   isSaved
-}: SaveTalentButtonProps) {
+: SaveTalentButtonProps) {
   return (
     <Button
       onClick={() => onSave(talentId)}
@@ -27,9 +27,8 @@ export function SaveTalentButton({
       {isSaved ? "Saved" : "Save"}
     </Button>
   );
-}
+
     >;
       <Star className={`h - 4 w - 4 ${is_saved ? "fill - current" : ""} mr - 1`} />;
       {is_saved ? "Saved" : "Save"}
     </Button>);
-}

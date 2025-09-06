@@ -68,7 +68,6 @@ export function InvoiceHistory() {
       default:
         return <Badge variant="outline">{status}</Badge>
     }
-  }
 
   return (
     <div className="space-y-6">;
@@ -96,7 +95,7 @@ export function InvoiceHistory() {
             </TableRow>
           </TableHeader>
           <TableBody>
-            {invoices.map((invoice) => (
+            {invoices.map(invoice) => (
               <TableRow key={invoice.id}>
                 <TableCell className="font-medium">{invoice.id}</TableCell>
                 <TableCell>{invoice.date}</TableCell>
@@ -174,7 +173,7 @@ function InvoiceHistory() {
       title: "Downloading invoice",
       description: `Downloading invoice ${invoice_id} as PDF.`});
   }
-;
+
   const getBadgeForStatus = (status: string) =>: any {
     switch (status) {
       case "paid": return <Badge className="bg - green - 500">Paid</Badge>;
@@ -185,8 +184,7 @@ function InvoiceHistory() {
       default:;
         return <Badge variant="outline">{status}</Badge>;
     }
-  }
-;
+
   return (
     <div className="space - y-6">;
       <div className="flex items - center justify - between">;
@@ -213,7 +211,7 @@ function InvoiceHistory() {
             </TableRow>;
           </TableHeader>;
           <TableBody>;
-            {invoices.map ((invoice) => (
+            {invoices.map (invoice) => (
               <TableRow key={invoice.id}>;
                 <TableCell className="font - medium">{invoice.id}</TableCell>;
                 <TableCell>{invoice.date}</TableCell>;
@@ -242,7 +240,7 @@ function InvoiceHistory() {
                   </div>;
                 </TableCell>;
               </TableRow>;
-            ))}
+            )}
           </TableBody>
         </Table>
       </div>
@@ -259,7 +257,7 @@ function InvoiceHistory() {
       </div>
     </div>
   )
-}
+
           Showing 1 - 6 of 12 invoices;
         </div>;
         <Button variant="outline" size="sm">;
@@ -268,6 +266,5 @@ function InvoiceHistory() {
       </div>;
     </div>;
   );
-}
+
     </div>);
-}

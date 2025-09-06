@@ -180,10 +180,10 @@ export default function ToolResourcePage() {
       ]
     }
   ]
-  const tool = tools.find(t => t.id === id)
+  const tool = tools.find(t => t.id = = id)
   ];
 
-  const tool = tools.find(t => t.id === id);
+  const tool = tools.find(t => t.id = = id);
 
   if (!tool) {
     return (
@@ -243,24 +243,24 @@ export default function ToolResourcePage() {
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
                   <div
                     className="prose prose-invert max-w-none"
-                    dangerouslySetInnerHTML={{ __html: tool.fullContent }}
+                    dangerouslySetInnerHTML={ __html: tool.fullContent }
                   />
                 </div>
               </div>
-              
+
               <div className="space-y-6">
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
                   <h3 className="font-semibold text-green-400 text-lg mb-4">Key Features</h3>
                   <ul className="space-y-3">
-                    {tool.features.map((feature, index) => (
+                    {tool.features.map(feature, index) => (
                       <li key={index} className="text-white/80 flex items-center gap-3">
                         <div className="w-2 h-2 bg-green-400 rounded-full"></div>
                         {feature}
                       </li>
-                    ))}
+                    )}
                   </ul>
                 </div>
-                
+
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
                   <h3 className="font-semibold text-blue-400 text-lg mb-4">Tool Details</h3>
                   <div className="space-y-3">
@@ -276,7 +276,7 @@ export default function ToolResourcePage() {
                 </div>
               </div>
             </div>
-            
+
             <div className="text-center">
               <Link
                 href="/contact"
@@ -290,7 +290,7 @@ export default function ToolResourcePage() {
       </div>
     </>
   )
-}
+
       estimated_time: '15 minutes',
       full_content: `;
         <h2 > About This Tool</h2>;
@@ -448,11 +448,11 @@ export default function ToolResourcePage() {
       ];
     }
   ],
-  const tool = tools.find (t => t.id === id),
+  const tool = tools.find (t => t.id = = id),
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <>;
         <Head>;
@@ -509,7 +509,7 @@ if ( {) {
                 <div className="bg - white / 10 backdrop - blur - xl rounded - 2xl p - 8 border border - white / 20">;
                   <div;
                     className="prose prose - invert max - w-none";
-                    dangerouslySetInnerHTML={{ __html: tool.full_content }}
+                    dangerouslySetInnerHTML={ __html: tool.full_content }
                   />;
                 </div>;
               </div>;
@@ -517,11 +517,11 @@ if ( {) {
                 <div className="bg - white / 10 backdrop - blur - xl rounded - 2xl p - 6 border border - white / 20">;
                   <h3 className="font - semibold text - green - 400 text - lg mb - 4">Key Features</h3>;
                   <ul className="space - y-3">;
-                    {tool.features.map ((feature, index) => (
+                    {tool.features.map (feature, index) => (
                       <li key={index} className="text - white / 80 flex items - center gap - 3">;
                         <div className="w - 2 h - 2 bg - green - 400 rounded - full"></div>;
                         {feature}
-                      </li>))}
+                      </li>)}
                   </ul>;
                 </div>;
                 <div className="bg - white / 10 backdrop - blur - xl rounded - 2xl p - 6 border border - white / 20">;
@@ -551,4 +551,3 @@ if ( {) {
         </main>;
       </div>;
     </>);
-}

@@ -6,5 +6,3 @@ export function MarketplaceSearch() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

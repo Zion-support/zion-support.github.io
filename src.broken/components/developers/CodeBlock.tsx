@@ -6,5 +6,3 @@ export function CodeBlock() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

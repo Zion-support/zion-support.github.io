@@ -9,4 +9,3 @@ export default function ProductsIndexPage() {
       <p className=&quot;mt-2 text-gray-600 dark:text-gray-300&quot;>Browse Zion products.</p>
     </div>
   )
-}

@@ -31,7 +31,7 @@ export const metadata = {
       'max-snippet': -1,
     },
   },
-};
+;
 
 function Header() {
   return (
@@ -53,7 +53,6 @@ function Header() {
       </nav>
     </header>
   );
-}
 
 function Footer() {
   return (
@@ -92,7 +91,6 @@ function Footer() {
       </div>
     </footer>
   );
-}
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -106,7 +104,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </body>
     </html>
   );
-}
+
 import React from 'react'; import Link from 'next / link'; import './globals.css'; export const metadata = { title: 'Zion Tech Group  AI, Micro SaaS, and IT Services', description: 'Enterprise - grade AI, micro SaaS, and IT solutions. Build faster with Zion Tech Group.', keywords: 'AI services, micro SaaS, IT services, cloud migration, DevOps, SRE, enterprise software', authors: [{ name: 'Zion Tech Group' }], open_graph: { title: 'Zion Tech Group  AI, Micro SaaS, and IT Services', description: 'Enterprise - grade AI, micro SaaS, and IT solutions. Build faster with Zion Tech Group.', url: 'https: site_name: 'Zion Tech Group', locale: 'en_US', type: 'website', }, twitter: { card: 'summary_large_image', title: 'Zion Tech Group  AI, Micro SaaS, and IT Services', description: 'Enterprise - grade AI, micro SaaS, and IT solutions. Build faster with Zion Tech Group.', }, robots: { index: true, follow: true, google_bot: { index: true, follow: true, 'max - video - preview': -1, 'max - image - preview': 'large', 'max - snippet': -1, }, }, } /**
  * Header - Function description
  */

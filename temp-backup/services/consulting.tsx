@@ -3,11 +3,11 @@ import Link from \'next/link\'; import Head from \'next/head\'; export default f
 import React from 'react';
 interface ConsultingProps {
   // Add props here as needed
-}
+
 export default function Consulting({ }: ConsultingProps) {
 interface ConsultingProps {;
   // Add props here as needed;
-}
+
 export default function Consulting(): any ({ }: ConsultingProps) {;
   return (
     <div>;
@@ -15,7 +15,3 @@ export default function Consulting(): any ({ }: ConsultingProps) {;
       <p>This component is currently under development.</p>;
     </div>;
   );
-}
-}
-
-

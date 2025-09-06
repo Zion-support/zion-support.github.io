@@ -5,13 +5,13 @@ import {;
   Twitter, Linkedin, Facebook, Instagram,;
   ArrowRight, Rocket, Brain, Cpu, Shield,;
   Star, Users, TrendingUp, Zap;
-} from 'lucide-react',;
+ from 'lucide-react',;
 const contactInfo = {;
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup.com',;
   address: '364 E Main St STE 1008 Middletown DE 19709',;
   website: 'https://ziontechgroup.com';
-},;
+,;
 const serviceCategories = [;
   {;
     title: 'Next-Generation AI',;
@@ -40,7 +40,7 @@ const serviceCategories = [;
       { name: 'AI Mental Health Companion', href: '/ai-mental-health-companion' }
     ];
   }
-],;
+,;
 const companyLinks = [;
   { name: 'About Us', href: '/about' },;
   { name: 'Careers', href: '/careers' },;
@@ -48,7 +48,7 @@ const companyLinks = [;
   { name: 'Case Studies', href: '/case-studies' },;
   { name: 'Blog', href: '/blog' },;
   { name: 'Resources', href: '/resources' }
-],;
+,;
 const supportLinks = [;
   { name: 'Contact Support', href: '/contact' },;
   { name: 'Documentation', href: '/docs' },;
@@ -56,7 +56,7 @@ const supportLinks = [;
   { name: 'Status Page', href: '/status' },;
   { name: 'Security', href: '/security' },;
   { name: 'Privacy Policy', href: '/privacy' }
-],
+,
 
 const socialLinks = [
   { name: 'LinkedIn', href: 'https://www.linkedin.com/company/zion-tech-group', icon: Linkedin },
@@ -74,10 +74,10 @@ export default function EnhancedFooter() {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.6 }
+              viewport={ once: true }
             >
               <div className="flex items-center space-x-3 mb-6">
                 <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center">
@@ -90,12 +90,12 @@ export default function EnhancedFooter() {
                   <div className="text-sm text-gray-400">Revolutionary Technology</div>
                 </div>
               </div>
-              
+
               <p className="text-gray-300 mb-6 leading-relaxed">
                 Leading provider of 600+ revolutionary AI, quantum computing, and IT services. 
                 Delivering 1000% ROI through cutting-edge solutions that transform businesses.
               </p>
-              
+
               <div className="space-y-3">
                 <div className="flex items-center space-x-3 text-gray-300">
                   <Phone className="w-4 h-4 text-cyan-400" />
@@ -114,17 +114,17 @@ export default function EnhancedFooter() {
           </div>
 
           {/* Service Categories */}
-          {serviceCategories.map((category, index) => (;
+          {serviceCategories.map(category, index) => (;
             <motion.div;
               key={category.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.6, delay: index * 0.1 }
+              viewport={ once: true }
             >
               <h3 className="text-lg font-semibold text-white mb-6">{category.title}</h3>
               <ul className="space-y-3">
-                {category.services.map((service) => (
+                {category.services.map(service) => (
                   <li key={service.name}>
                     <a
                       href={service.href}
@@ -134,24 +134,24 @@ export default function EnhancedFooter() {
                       {service.name}
                     </a>;
                   </li>;
-                ))}
+                )}
               </ul>;
             </motion.div>;
-          ))}
+          )}
         </div>;
         {/* Additional Links */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12 pt-12 border-t border-gray-700/50">
           {/* Company & Support Links */}
           <div className="grid grid-cols-2 gap-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.6, delay: 0.2 }
+              viewport={ once: true }
             >
               <h4 className="text-lg font-semibold text-white mb-4">Company</h4>
               <ul className="space-y-3">
-                {companyLinks.map((link) => (
+                {companyLinks.map(link) => (
                   <li key={link.name}>
                     <a
                       href={link.href}
@@ -160,18 +160,18 @@ export default function EnhancedFooter() {
                       {link.name}
                     </a>;
                   </li>;
-                ))}
+                )}
               </ul>;
             </motion.div>;
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.6, delay: 0.3 }
+              viewport={ once: true }
             >
               <h4 className="text-lg font-semibold text-white mb-4">Support</h4>
               <ul className="space-y-3">
-                {supportLinks.map((link) => (
+                {supportLinks.map(link) => (
                   <li key={link.name}>
                     <a
                       href={link.href}
@@ -180,17 +180,17 @@ export default function EnhancedFooter() {
                       {link.name}
                     </a>;
                   </li>;
-                ))}
+                )}
               </ul>;
             </motion.div>;
           </div>;
           {/* Stats & Social */}
           <div className="grid grid-cols-1 gap-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.6, delay: 0.4 }
+              viewport={ once: true }
             >
               <h4 className="text-lg font-semibold text-white mb-4">Our Impact</h4>
               <div className="grid grid-cols-2 gap-4">
@@ -214,14 +214,14 @@ export default function EnhancedFooter() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.6, delay: 0.5 }
+              viewport={ once: true }
             >
               <h4 className="text-lg font-semibold text-white mb-4">Follow Us</h4>
               <div className="flex space-x-4">
-                {socialLinks.map((social) => {
+                {socialLinks.map(social) => {
                   const Icon = social.icon,
                   return (
                     <a
@@ -235,7 +235,7 @@ export default function EnhancedFooter() {
             >;
               <h4 className="text-lg font-semibold text-white mb-4">Follow Us</h4>;
               <div className="flex space-x-4">;
-                {socialLinks.map((social) => {;
+                {socialLinks.map(social) => {;
                   const Icon = social.icon;
                   return (;
                     <a;
@@ -253,10 +253,10 @@ export default function EnhancedFooter() {
         </div>;
         {/* Newsletter Signup */}
         <motion.div;
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          viewport={{ once: true }}
+          initial={ opacity: 0, y: 20 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0.6, delay: 0.6 }
+          viewport={ once: true }
           className="mt-12 pt-12 border-t border-gray-700/50"
         >
           <div className="text-center">
@@ -267,7 +267,7 @@ export default function EnhancedFooter() {
               Get exclusive insights into the latest AI, quantum computing, and IT innovations. 
               Be the first to know about new services and breakthrough technologies.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input
                 type="email"
@@ -289,7 +289,7 @@ export default function EnhancedFooter() {
             <div className="text-gray-400 text-sm">
                {currentYear} Zion Tech Group. All rights reserved.
             </div>
-            
+
             <div className="flex items-center space-x-6 text-sm text-gray-400">
               <a href="/terms" className="hover: text-cyan-400 transition-colors duration-200">
                 Terms of Service
@@ -352,5 +352,3 @@ export default function EnhancedFooter() {
       </div>;
     </footer>;
   );
-}
-;

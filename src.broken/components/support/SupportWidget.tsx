@@ -6,5 +6,3 @@ export function SupportWidget() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

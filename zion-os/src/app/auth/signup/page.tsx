@@ -1,4 +1,4 @@
-"use client";
+use client";
 import { useState } from "react";
 import Link from "next/link";
 import { useAuth } from "@/contexts/AuthContext";
@@ -12,7 +12,7 @@ export default function SignUpPage() {const [name, setName] = useState("");
   const handleSubmit = async (e: React.FormEvent) => {e.preventDefault();
     setIsLoading(true);
     setError("");
-    if (password !== confirmPassword) {;
+    if (password != confirmPassword) {;
       setError("Passwords do not match");
       setIsLoading(false);
       return;
@@ -21,7 +21,6 @@ export default function SignUpPage() {const [name, setName] = useState("");
     } catch (error) {setError(error instanceof Error ? error.message : "Registration failed");
     } finally {setIsLoading(false);
     }
-  }
   return (;
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-zinc-900 to-zinc-800">;
       <div className="max-w-md w-full space-y-8 p-8">;
@@ -154,4 +153,3 @@ export default function SignUpPage() {const [name, setName] = useState("");
         </div>;
       </div>;
     </div>);
-}

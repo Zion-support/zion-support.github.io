@@ -19,7 +19,7 @@ interface ApplyToJobFormProps {
   job: Job
 
   onSuccess?: () => void
-}
+
 export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
   const { user } = useAuth();
   const { applyToJob } = useJobApplications();
@@ -34,10 +34,10 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
     e.preventDefault();
     if (!user) {
       toast.error("You must be logged in to apply")
-      navigate("/login", { state: { returnTo: `/jobs/${job.id}` } })
+      navigate("/login", { state: { returnTo: `/jobs/${job.id}` })
       return
     }
-    if (!coverLetter.trim()) {
+    if (!coverLetter.trim() {
       setError("Please provide a cover letter");
       return;
     }
@@ -50,14 +50,12 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
         if (onSuccess) {
           onSuccess()
         }
-      }
     } catch (err: any) {
       setError(err.message |"Failed to submit application")
       toast.error("Failed to submit application")
     } finally {
       setIsSubmitting (false);
     }
-  }
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
@@ -104,11 +102,11 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="">No resume</SelectItem>
-                {resumes.map((resume) => (
+                {resumes.map(resume) => (
                   <SelectItem key={resume.id} value={resume.id}>
                     {resume.basic_info.title |"Untitled Resume"}
                   </SelectItem>
-                ))}
+                )}
               </SelectContent>
             </Select>
           ) : (
@@ -124,11 +122,11 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
               </SelectTrigger>;
               <SelectContent>;
                 <SelectItem value="">No resume</SelectItem>;
-                {resumes && resumes.map((resume) => (;
+                {resumes && resumes.map(resume) => (;
                   <SelectItem key={resume && resume.id} value={resume && resume.id}>;
                     {resume && resume.basic_info.title || "Untitled Resume"}
                   </SelectItem>;
-                ))}
+                )}
               </SelectContent>;
             </Select>;
           ) : (;
@@ -156,7 +154,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
           disabled={isSubmitting}
           onClick={() => {;
             if (onSuccess) onSuccess();
-          }}
+          }
         >;
           Cancel;
         </Button>;
@@ -173,11 +171,11 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
       </div>
     </form>
   )
-}
-                {resumes.map ((resume) => (
+
+                {resumes.map (resume) => (
                   <SelectItem key={resume.id} value={resume.id}>;
                     {resume.basic_info.title || "Untitled Resume"}
-                  </SelectItem>))}
+                  </SelectItem>)}
               </SelectContent>;
             </Select>) : (
             <div className="flex items - center justify - between mt - 2 p - 3 border rounded - md">;
@@ -202,10 +200,10 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
           variant="outline";
           disabled={is_submitting}
           on_click={() => {
-            if (on_success ()) {
+            if (on_success () {
   $2
-}
-          }}
+
+          }
         >;
           Cancel;
         </Button>;
@@ -219,4 +217,3 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
         </Button>;
       </div>;
     </form>);
-}

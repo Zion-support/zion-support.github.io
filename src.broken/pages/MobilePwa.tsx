@@ -6,5 +6,3 @@ export function MobilePwa() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

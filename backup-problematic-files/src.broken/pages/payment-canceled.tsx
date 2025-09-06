@@ -1,5 +1,4 @@
 import React from 'react';
-,;
 export export export default function payment-canceled()      {,;
   return (;
     <div>;

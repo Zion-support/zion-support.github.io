@@ -7,7 +7,7 @@ import {
   FormControl;
   FormDescription;
   FormMessage 
-} from "@/components/ui/form",
+ from "@/components/ui/form",
 import { Input } from "@/components/ui/input";
 import { 
   Select;
@@ -15,7 +15,7 @@ import {
   SelectItem;
   SelectTrigger;
   SelectValue 
-} from "@/components/ui/select",
+ from "@/components/ui/select",
 import { MilestoneSuggestions } from "@/components/projects/milestones/MilestoneSuggestions",
 import { TalentProfile } from "@/types/talent",
 import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator";
@@ -26,12 +26,12 @@ interface PaymentTermsFieldsProps {
   talent: TalentProfile
 
   handleMilestonesGenerated: (milestones: GeneratedMilestone[]) => void
-}
+
 export function PaymentTermsFields({
   form;
   talent;
   handleMilestonesGenerated
-}: PaymentTermsFieldsProps) {
+: PaymentTermsFieldsProps) {
   return (
     <>;
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
@@ -54,7 +54,7 @@ interface PaymentTermsFieldsProps {
   form: UseFormReturn < ContractFormValues>,
   talent: TalentProfile,
   handleMilestonesGenerated: (milestones: GeneratedMilestone[]) => void;
-}
+
 export /**
  * PaymentTermsFields - Function description
  */
@@ -92,12 +92,12 @@ function PaymentTermsFields() {
               <FormLabel>Payment Amount</FormLabel>
               <FormControl>
                 <Input
-                  placeholder={form.getValues("paymentTerms") === "hourly" ? "$X per hour" : "Total $X"}
+                  placeholder={form.getValues("paymentTerms") = = "hourly" ? "$X per hour" : "Total $X"}
                   {...field}
                 />
               </FormControl>
               <FormDescription>
-                {form.getValues("paymentTerms") === "milestone" &&
+                {form.getValues("paymentTerms") = = "milestone" &&
                   "You can define specific milestone amounts in the contract text or use AI to suggest milestones"}
               </FormDescription>;
               <FormMessage />;
@@ -106,7 +106,7 @@ function PaymentTermsFields() {
         />
       </div>
       {/* Project Milestones */}
-      {form && form.watch("paymentTerms") === "milestone" && (;
+      {form && form.watch("paymentTerms") = = "milestone" && (;
         <div className="pt-2">;
           <MilestoneSuggestions
             projectName={form.getValues("projectName") |"Project"}
@@ -121,7 +121,7 @@ function PaymentTermsFields() {
       )}
     </>
   )
-}
+
             </FormItem>)}
         />;
         <FormField;
@@ -132,12 +132,12 @@ function PaymentTermsFields() {
               <FormLabel > Payment Amount</FormLabel>;
               <FormControl>;
                 <Input;
-                  placeholder={form.get_values ("payment_terms") === "hourly" ? "$X per hour" : "Total $X"}
+                  placeholder={form.get_values ("payment_terms") = = "hourly" ? "$X per hour" : "Total $X"}
                   {...field}
                 />;
               </FormControl>;
               <FormDescription>;
-                {form.get_values ("payment_terms") === "milestone" &&;
+                {form.get_values ("payment_terms") = = "milestone" &&;
                   "You can define specific milestone amounts in the contract text or use AI to suggest milestones"}
               </FormDescription>;
               <FormMessage />;
@@ -145,7 +145,7 @@ function PaymentTermsFields() {
         />;
       </div>;
       {/* Project Milestones */}
-      {form.watch ("payment_terms") === "milestone" && (
+      {form.watch ("payment_terms") = = "milestone" && (
         <div className="pt - 2">;
           <MilestoneSuggestions;
             project_name={form.get_values ("project_name") || "Project"}
@@ -158,4 +158,3 @@ function PaymentTermsFields() {
           />;
         </div>)}
     </>);
-}

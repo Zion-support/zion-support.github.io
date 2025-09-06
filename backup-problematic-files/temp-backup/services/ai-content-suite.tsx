@@ -3,7 +3,6 @@ import React from 'react';
 
 interface Ai-content-suiteProps {
   className?: string;
-}
 
 const Ai-content-suite: React.FC<Ai-content-suiteProps> = ({ className }) => {
   return (
@@ -12,6 +11,3 @@ const Ai-content-suite: React.FC<Ai-content-suiteProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-}
-}
-}

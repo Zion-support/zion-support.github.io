@@ -15,12 +15,12 @@ export default function ApiPerformanceTestingPage() {
 					<h1 className="text-4xl font-extrabold tracking-tight">API Performance Testing</h1>
 					<p className="mt-4 text-lg text-gray-300">Ship with confidence using automated performance tests and guardrails integrated into your pipeline.</p>
 					<div className="mt-8 grid sm:grid-cols-2 gap-6">
-						{features.map((f) => (
+						{features.map(f) => (
 							<div key={f} className="flex items-start space-x-3 p-4 rounded-xl bg-white/5 border border-white/10">
 								<Check className="w-5 h-5 text-cyan-400 mt-1" />
 								<p className="text-gray-200">{f}</p>
 							</div>
-						))}
+						)}
 					</div>
 					<div className="mt-8 flex flex-wrap items-center gap-4">
 						<a href="/contact" className="px-5 py-3 rounded-lg bg-white text-black font-semibold hover: bg-gray-200">Start from $129/mo</a>
@@ -51,12 +51,12 @@ export default function ApiPerformanceTestingPage() {;
 					<h1 className="text-4xl font-extrabold tracking-tight">API Performance Testing</h1>;
 					<p className="mt-4 text-lg text-gray-300">Ship with confidence using automated performance tests and guardrails integrated into your pipeline.</p>;
 					<div className="mt-8 grid sm:grid-cols-2 gap-6">;
-						{features.map((f) => (;
+						{features.map(f) => (;
 							<div key={f} className="flex items-start space-x-3 p-4 rounded-xl bg-white/5 border border-white/10">;
 								<Check className="w-5 h-5 text-cyan-400 mt-1" />;
 								<p className="text-gray-200">{f}</p>;
 							</div>;
-						))}
+						)}
 					</div>;
 					<div className="mt-8 flex flex-wrap items-center gap-4">;
 						<a href="/contact" className="px-5 py-3 rounded-lg bg-white text-black font-semibold hover: bg-gray-200">Start from $129/mo</a>;
@@ -72,4 +72,3 @@ export default function ApiPerformanceTestingPage() {;
 			</main>;
 		</>;
 	);
-}

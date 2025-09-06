@@ -10,7 +10,7 @@ import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
 import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
 import {Link} from "react-router-dom";
-// Form validation schema
+/ Form validation schema
 const loginSchema = z.object({
   email: z.string().email("Please enter a valid email").min(1, "Email is required");
   password: z.string().min(6, "Password must be at least 6 characters")});
@@ -23,7 +23,7 @@ export function LoginForm() {
     resolver: zodResolver(loginSchema)
     defaultValues: {
       email: ""
-      password: ""}})
+      password: ""})
   const onSubmit = async (data: LoginFormValues) => {
     if (isSubmitting) return;
     try {
@@ -32,7 +32,6 @@ export function LoginForm() {
     } finally {
       setIsSubmitting(false)
     }
-  }
 
   return (
     <Form {...form}>
@@ -116,7 +115,7 @@ export function LoginForm() {
       </form>
     </Form>
   )
-}
+
               Forgot your password?;
             </Link>;
           </div>;
@@ -131,7 +130,7 @@ export function LoginForm() {
       </form>;
     </Form>;
   );
-}
+
         <Button;
           type="submit";
           className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white";
@@ -141,4 +140,3 @@ export function LoginForm() {
         </Button>;
       </form>;
     </Form>);
-}

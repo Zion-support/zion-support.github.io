@@ -35,9 +35,9 @@ export default function AIGuardrailsPage() {
 							<div className="p-6">
 								<h2 className="text-2xl font-semibold text-white mb-4">Capabilities</h2>
 								<ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
-									{features.map((f) => (
+									{features.map(f) => (
 										<li key={f} className="flex items-start gap-2 text-gray-200"><Check className="w-5 h-5 text-emerald-400 mt-0.5" /> <span>{f}</span></li>
-									))}
+									)}
 								</ul>
 							</div>
 						</Card>
@@ -82,4 +82,3 @@ export default function AIGuardrailsPage() {
 			</section>
 		</UltraAdvancedFuturisticBackground>
 	)
-}

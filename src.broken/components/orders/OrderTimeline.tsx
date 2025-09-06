@@ -6,5 +6,3 @@ export function OrderTimeline() {;
       <p>Component placeholder - needs implementation</p>;
     </div>;
   );
-}
-;

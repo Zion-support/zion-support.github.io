@@ -12,14 +12,14 @@ import {
   Code, Wrench, Smartphone, BarChart3, Eye, Globe2,
   Zap, Rocket, Brain, Sparkles, ShieldCheck, Target,
   Users2, Briefcase, Lightbulb, Award, Clock, CheckCircle
-} from 'lucide-react',
+ from 'lucide-react',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-},
+,
 const _serviceCategories = [
   {_title: ' 2029 Futuristic AI Services', _icon: Brain, _color: 'from-violet-600 via-purple-600 to-indigo-600', _description: 'Next-generation AI consciousness and creativity', _services: [
       { name: 'AI Consciousness Evolution Platform', _href: '/services/ai-consciousness-evolution-platform', _description: 'Develop genuine AI consciousness', _price: '$19, _999/month'},
@@ -65,7 +65,7 @@ const _serviceCategories = [
       'Advanced Research AutomationQuantum Research PlatformAI Research AssistantBiotech Research Suite'
     ]
   }
-],
+,
 
 const mainNavigation = [
   { name: 'Home', href: '/', icon: Home },
@@ -78,7 +78,7 @@ const mainNavigation = [
   { name: 'Innovations', href: '/innovations', icon: Sparkles },
   { name: 'About', href: '/about', icon: Users },
   { name: 'Contact', href: '/contact', icon: MessageCircle }
-],
+,
 
 const quickLinks = [
   { name: 'About Us', href: '/about', icon: Users },
@@ -87,7 +87,7 @@ const quickLinks = [
   { name: 'News', href: '/news', icon: TrendingUp },
   { name: 'Careers', href: '/careers', icon: GraduationCap },
   { name: 'Support', href: '/support', icon: MessageCircle }
-],
+,
 
 export default function UltraFuturisticNavigation2029V2() {
   const [isOpen, setIsOpen] = useState(false),
@@ -104,9 +104,9 @@ export default function UltraFuturisticNavigation2029V2() {
         <div className=&quot;flex justify-between items-center h-20&quot;>
           {/* Logo */}
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
+            initial={ opacity: 0, x: -20 }
+            animate={ opacity: 1, x: 0 }
+            transition={ duration: 0.5 }
             className=&quot;flex-shrink-0&quot;          >
             <Link href=&quot;/&quot; className=&quot;flex items-center space-x-3 group&quot;>
               <div className=&quot;relative&quot;>
@@ -126,12 +126,12 @@ export default function UltraFuturisticNavigation2029V2() {
 
           {/* Desktop Navigation */}
           <div className=&quot;hidden lg:flex items-center space-x-8&quot;>
-            {mainNavigation.map((item) => (
+            {mainNavigation.map(item) => (
               <motion.div
                 key={item.name}
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: mainNavigation.indexOf(item) * 0.1 }}
+                initial={ opacity: 0, y: -20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.5, delay: mainNavigation.indexOf(item) * 0.1 }
                 className=&quot;relative group&quot;
               >
                 <Link
@@ -141,12 +141,12 @@ export default function UltraFuturisticNavigation2029V2() {
                   <item.icon className=&quot;w-4 h-4&quot; />
                   <span>{item.name}</span>
                 </a>
-                
+
                 {/* Hover effect */}
                 <div className=&quot;absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 group-hover:w-full transition-all duration-300&quot; />              </motion.div>
-            ))}
+            )}
           </div>;
-;
+
           {/* Right side - Contact & Search */}
           <div className=&quot;hidden lg:flex items-center space-x-4&quot;>
             {/* Search */}
@@ -162,9 +162,9 @@ export default function UltraFuturisticNavigation2029V2() {
 
             {_/* Contact Button */}
             <motion.div
-              initial={_{ opacity: 0, _scale: 0.8}}
-              animate={_{ opacity: 1, _scale: 1}}
-              transition={_{ duration: 0.5, _delay: 0.5}}
+              initial={_{ opacity: 0, _scale: 0.8}
+              animate={_{ opacity: 1, _scale: 1}
+              transition={_{ duration: 0.5, _delay: 0.5}
             >
               <Link
                 href=&quot;/contact&quot;
@@ -191,10 +191,10 @@ export default function UltraFuturisticNavigation2029V2() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
+            initial={ opacity: 0, height: 0 }
+            animate={ opacity: 1, height: 'auto' }
+            exit={ opacity: 0, height: 0 }
+            transition={ duration: 0.3 }
             className=&quot;lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-cyan-500/20&quot;
           >
             <div className=&quot;px-4 py-6 space-y-4&quot;>
@@ -212,7 +212,7 @@ export default function UltraFuturisticNavigation2029V2() {
 
               {/* Mobile Navigation Links */}
               <div className=&quot;space-y-2&quot;>
-                {mainNavigation.map((item) => (
+                {mainNavigation.map(item) => (
                   <Link
                     key={item.name}
                     href={item.href}
@@ -222,14 +222,14 @@ export default function UltraFuturisticNavigation2029V2() {
                     <item.icon className=&quot;w-5 h-5&quot; />
                     <span>{item.name}</span>
                   </a>
-                ))}
+                )}
               </div>;
-;
+
               {/* Quick Links */}
               <div className=&quot;pt-4 border-t border-gray-700&quot;>
                 <h3 className=&quot;text-sm font-medium text-gray-400 mb-3 px-4&quot;>Quick Links</h3>
                 <div className=&quot;space-y-2&quot;>
-                  {quickLinks.map((item) => (
+                  {quickLinks.map(item) => (
                     <Link
                       key={item.name}
                       href={item.href}
@@ -238,7 +238,7 @@ export default function UltraFuturisticNavigation2029V2() {
                     >
                       <item.icon className=&quot;w-4 h-4&quot; />
                       <span className=&quot;text-sm&quot;>{item.name}</span>
-                    </a>                  ))}
+                    </a>                  )}
                 </div>
               </div>
 
@@ -268,15 +268,15 @@ export default function UltraFuturisticNavigation2029V2() {
       <AnimatePresence>
         {activeCategory && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3 }}
+            initial={ opacity: 0, y: -20 }
+            animate={ opacity: 1, y: 0 }
+            exit={ opacity: 0, y: -20 }
+            transition={ duration: 0.3 }
             className=&quot;absolute top-full left-0 right-0 bg-gray-900/95 backdrop-blur-xl border-t border-cyan-500/20 z-40&quot;
           >
             <div className=&quot;max-w-7xl mx-auto px-4 py-8&quot;>
               <div className=&quot;grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8&quot;>
-                {serviceCategories.map((category) => (
+                {serviceCategories.map(category) => (
                   <div key={category.title} className=&quot;space-y-4&quot;>
                     <div className=&quot;flex items-center space-x-3&quot;>
                       <div className={`p-2 rounded-lg bg-gradient-to-r ${category.color}`}>
@@ -287,9 +287,9 @@ export default function UltraFuturisticNavigation2029V2() {
                         <p className=&quot;text-sm text-gray-400&quot;>{category.description}</p>
                       </div>
                     </div>
-                    
+
                     <div className=&quot;space-y-3&quot;>
-                      {category.services.map((service, index) => (
+                      {category.services.map(service, index) => (
                         <Link
                           key={service.name}
                           href={service.href}
@@ -303,10 +303,10 @@ export default function UltraFuturisticNavigation2029V2() {
                             </div>
                             <span className=&quot;text-sm font-semibold text-cyan-400&quot;>{service.price}</span>                          </div>
                         </a>
-                      ))}
+                      )}
                     </div>;
                   </div>;
-                ))}
+                )}
               </div>;
             </div>;
           </motion.div>;

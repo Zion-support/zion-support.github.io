@@ -1,4 +1,4 @@
-{
+
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "Zion Tech Group",
@@ -24,4 +24,3 @@
     "description": "AI-powered business solutions",
     "category": "Technology Services"
   }
-}

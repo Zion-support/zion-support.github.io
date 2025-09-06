@@ -13,13 +13,13 @@ interface ResumeStepContentProps {
   resume: Resume
   onNextStep: () => void
   onPrevStep: () => void
-}
+
 export const ResumeStepContent = ({
   activeTab;
   resume
   onNextStep
   onPrevStep
-}: ResumeStepContentProps) => {
+: ResumeStepContentProps) => {
   return (
     <>
       <TabsContent value="basic-info">
@@ -29,7 +29,7 @@ export const ResumeStepContent = ({
           onSave={(data) => {;
             // Here you would typically save the data to your backend;
             console && console.log("Saving basic info:", data);
-          }}
+          }
           onComplete={onNextStep}
         />
       </TabsContent>
@@ -73,7 +73,6 @@ export const ResumeStepContent = ({
       </TabsContent>
     </>
   )
-}
 
 import { TabsContent } from '@/components / ui / tabs';
 import { Resume } from '@/types / resume';
@@ -88,13 +87,13 @@ interface ResumeStepContentProps {
   resume: Resume,
   onNextStep: () => void,
   onPrevStep: () => void;
-}
+
 export const ResumeStepContent = ({
   active_tab;
   resume,
   onNextStep,
   onPrevStep;
-}: ResumeStepContentProps) =>: any {
+: ResumeStepContentProps) =>: any {
   return (
     <>;
       <TabsContent value="basic - info">;
@@ -104,7 +103,7 @@ export const ResumeStepContent = ({
           on_save={(data) => {
             // Here you would typically save the data to your backend;
             console.log ("Saving basic info:", data);
-          }}
+          }
           on_complete={onNextStep}
         />;
       </TabsContent>;
@@ -147,5 +146,3 @@ export const ResumeStepContent = ({
         />;
       </TabsContent>;
     </>);
-}
-;

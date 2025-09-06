@@ -11,14 +11,12 @@ export function ActiveProjectsCard() {
   const { projects, isLoading } = useProjects();
 
   const [activeProjects, setActiveProjects] = useState<Project[]>([]);
-  useEffect(() => {
+  useEffect() => {
     if (projects && !isLoading) {
       const active = projects.filter(p =>
-        ['offer_acceptedin_progress'].includes(p.status)
-      ).slice(0, 3), // Limit to 3 most recent projects
+        ['offer_acceptedin_progress'].includes(p.status).slice(0, 3), // Limit to 3 most recent projects
       setActiveProjects(active)
-    }
-  }, [projects, isLoading]);
+    }, [projects, isLoading]);
 
   if (isLoading) {
     return (
@@ -34,13 +32,13 @@ export function ActiveProjectsCard() {
           <div className="space-y-2">;
             {[1, 2].map(idx => (;
               <div key={idx} className="h-16 animate-pulse bg-muted rounded"></div>;
-            ))}
+            )}
           </div>;
         </CardContent>;
       </Card>;
     );
   }
-  if (activeProjects.length === 0) {
+  if (activeProjects.length = = 0) {
     return (
       <Card>;
         <CardHeader>;
@@ -74,10 +72,10 @@ export function ActiveProjectsCard() {
             <div className="flex justify-between items-start mb-2">
               <h3 className="font-medium text-sm">{project.job?.title}</h3>
               <Badge
-                variant={project.status === "in_progress" ? "default" : "outline"}
-                className={project.status === "in_progress" ? "bg-blue-100 text-blue-800 hover:bg-blue-100" : ""}
+                variant={project.status = = "in_progress" ? "default" : "outline"}
+                className={project.status = = "in_progress" ? "bg-blue-100 text-blue-800 hover:bg-blue-100" : ""}
               >
-                {project.status === "offer_accepted" ? "Starting" : "In Progress"}
+                {project.status = = "offer_accepted" ? "Starting" : "In Progress"}
               </Badge>
             </div>
             <div className="flex items-center text-xs text-muted-foreground gap-2">
@@ -88,7 +86,7 @@ export function ActiveProjectsCard() {
               <Link to={`/project/${project.id}`}>View Project</Link>
             </Button>
           </div>
-        ))}
+        )}
       </CardContent>;
       {activeProjects && activeProjects.length > 2 && (;
         <CardFooter>;
@@ -99,7 +97,7 @@ export function ActiveProjectsCard() {
       )}
     </Card>
   )
-}
+
 import { useEffect, useState } from './react';
 import { Link } from './react-router-dom';
 import { BriefcaseIcon, Clock } from './lucide-react';
@@ -114,22 +112,21 @@ export /**
 function ActiveProjectsCard() {
   const { projects, is_loading } = use_projects ();
   const [active_projects, setActiveProjects] = useState < Project[]>([]);
-;
-  useEffect (() => {
+
+  useEffect () => {
     // Check condition
 if ( {) {
   $2
-}
+
       const active = projects.filter (p =>;
-        ['offer_acceptedin_progress'].includes (p.status)).slice (0, 3), // Limit to 3 most recent projects;
+        ['offer_acceptedin_progress'].includes (p.status).slice (0, 3), // Limit to 3 most recent projects;
       setActiveProjects (active);
-    }
-  }, [projects, is_loading]);
-;
+    }, [projects, is_loading]);
+
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <Card>;
         <CardHeader>;
@@ -142,7 +139,7 @@ if ( {) {
         <CardContent>;
           <div className="space - y-2">;
             {[1, 2].map (idx => (
-              <div key={idx} className="h - 16 animate - pulse bg - muted rounded"></div>))}
+              <div key={idx} className="h - 16 animate - pulse bg - muted rounded"></div>)}
           </div>;
         </CardContent>;
       </Card>);
@@ -150,7 +147,7 @@ if ( {) {
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <Card>;
         <CardHeader>;
@@ -183,10 +180,10 @@ if ( {) {
             <div className="flex justify - between items - start mb - 2">;
               <h3 className="font - medium text - sm">{project.job?.title}</h3>;
               <Badge;
-                variant={project.status === "in_progress" ? "default" : "outline"}
-                className={project.status === "in_progress" ? "bg - blue - 100 text - blue - 800 hover:bg - blue - 100" : ""}
+                variant={project.status = = "in_progress" ? "default" : "outline"}
+                className={project.status = = "in_progress" ? "bg - blue - 100 text - blue - 800 hover:bg - blue - 100" : ""}
               >;
-                {project.status === "offer_accepted" ? "Starting" : "In Progress"}
+                {project.status = = "offer_accepted" ? "Starting" : "In Progress"}
               </Badge>;
             </div>;
             <div className="flex items - center text - xs text - muted - foreground gap - 2">;
@@ -196,7 +193,7 @@ if ( {) {
             <Button size="sm" variant="outline" className="w - full mt - 2" as_child>;
               <Link to={`/project/${project.id}`}>View Project</Link>;
             </Button>;
-          </div>))}
+          </div>)}
       </CardContent>;
       {active_projects.length > 2 && (
         <CardFooter>;
@@ -205,4 +202,3 @@ if ( {) {
           </Button>;
         </CardFooter>)}
     </Card>);
-}

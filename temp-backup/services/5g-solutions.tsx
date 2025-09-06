@@ -3,11 +3,11 @@ import Link from \'next/link\'; import Head from \'next/head\'; export default f
 import React from 'react';
 interface 5gsolutionsProps {
   // Add props here as needed
-}
+
 export default function 5gsolutions({ }: 5gsolutionsProps) {
 interface 5gsolutionsProps {;
   // Add props here as needed;
-}
+
 export default function 5gsolutions(): any ({ }: 5gsolutionsProps) {;
   return (
     <div>;
@@ -15,7 +15,3 @@ export default function 5gsolutions(): any ({ }: 5gsolutionsProps) {;
       <p>This component is currently under development.</p>;
     </div>;
   );
-}
-}
-
-

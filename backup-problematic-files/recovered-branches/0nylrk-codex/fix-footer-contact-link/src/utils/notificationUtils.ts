@@ -1,9 +1,9 @@
 
 import { supabase } from "@/integrations/supabase/client",;
-;
+
 type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system',;
-;
-/**;
+
+**;
  * Creates a notification for a user and optionally sends an email notification;
  */;
 export async function createNotification({;
@@ -15,7 +15,7 @@ export async function createNotification({;
   sendEmail = false,;
   actionUrl = null,;
   actionText = null;
-} {;
+ {;
   userId:string,;
   title:string,;
   message:string,;
@@ -24,7 +24,7 @@ export async function createNotification({;
   sendEmail?:boolean,;
   actionUrl?:string | null,;
   actionText?:string | null;
-}) {;
+) {;
   void actionUrl,;
   void actionText,;
   try {;
@@ -36,15 +36,12 @@ export async function createNotification({;
       _type:type,;
       _related_id:relatedId;
     }),;
-    ;
     if (error) throw error,;
-    ;
     // If sendEmail is true, call the edge function to send an email;
     if (sendEmail && data) {;
       const notificationId = data,;
       await supabase.functions.invoke('send-notification-email', {;
-        body:{ user_id:userId, notification_id:notificationId }
-      }),;
+        body:{ user_id:userId, notification_id:notificationId }),;
     }
     ;
     return { success:true, notificationId:data },;
@@ -52,9 +49,8 @@ export async function createNotification({;
     console.error('Error creating notification:', error),;
     return { success:false, error },;
   }
-}
-;
-/**;
+
+**;
  * Creates a hire request notification for admin and talent;
  */;
 export async function createHireRequestNotifications({;
@@ -65,7 +61,7 @@ export async function createHireRequestNotifications({;
   projectType,;
   projectSummary,;
   hireRequestId;
-} {;
+ {;
   talentId:string,;
   adminId?:string,;
   requesterName:string,;
@@ -73,15 +69,13 @@ export async function createHireRequestNotifications({;
   projectType?:string,;
   projectSummary?:string,;
   hireRequestId:string;
-}) {;
+) {;
   const projectInfo = projectType ;
     ? `${projectType} project` ;
     :"project",;
-  ;
   const summaryText = projectSummary ;
     ? `:"${projectSummary}"` ;
     :"",;
-  ;
   // Create notification for talent;
   const talentNotification = await createNotification({;
     userId:talentId,;
@@ -93,7 +87,6 @@ export async function createHireRequestNotifications({;
     actionUrl:'/dashboard',;
     actionText:'View Request';
   }),;
-  ;
   // Create notification for admin if admin ID is provided;
   if (adminId) {;
     const adminNotification = await createNotification({;
@@ -106,7 +99,6 @@ export async function createHireRequestNotifications({;
       actionUrl:'/admin/hire-requests',;
       actionText:'Review Request';
     }),;
-    ;
     return {;
       success:talentNotification.success && adminNotification.success,;
       talentNotification,;
@@ -118,26 +110,24 @@ export async function createHireRequestNotifications({;
     success:talentNotification.success,;
     talentNotification;
   },;
-}
-;
-/**;
+
+**;
  * Creates an onboarding notification for a user;
  */;
 export async function createOnboardingNotification({;
   userId,;
   missingMilestone,;
   userRole;
-} {;
+ {;
   userId:string,;
   missingMilestone:string,;
   userRole:'talent' | 'client';
-}) {;
+) {;
   let title = '',;
   let message = '',;
   let actionUrl = '',;
   let actionText = '',;
-  ;
-  if (userRole === 'talent') {;
+  if (userRole = = 'talent') {;
     switch (missingMilestone) {;
       case 'profile_completed':;
         title = 'Complete your profile',;
@@ -157,8 +147,7 @@ export async function createOnboardingNotification({;
         actionUrl = '/profile/settings',;
         actionText = 'Set Availability',;
         break,;
-    }
-  } else {;
+    } else {;
     switch (missingMilestone) {;
       case 'job_posted':;
         title = 'Post your first job',;
@@ -179,7 +168,6 @@ export async function createOnboardingNotification({;
         actionText = 'Find Talent',;
         break,;
     }
-  }
   ;
   return createNotification({;
     userId,;
@@ -190,9 +178,8 @@ export async function createOnboardingNotification({;
     actionUrl,;
     actionText;
   }),;
-}
-;
-/**;
+
+**;
  * Creates a system notification for a user;
  */;
 export async function createSystemNotification({;
@@ -202,14 +189,14 @@ export async function createSystemNotification({;
   actionUrl = null,;
   actionText = null,;
   sendEmail = false;
-} {;
+ {;
   userId:string,;
   title:string,;
   message:string,;
   actionUrl?:string | null,;
   actionText?:string | null,;
   sendEmail?:boolean;
-}) {;
+) {;
   return createNotification({;
     userId,;
     title,;
@@ -219,32 +206,26 @@ export async function createSystemNotification({;
     actionUrl,;
     actionText;
   }),;
-}
-;
-/**;
+
+**;
  * Demo function to create test notifications for the current user;
  */;
 export async function createTestNotification(userId:string) {;
   const types:NotificationType[] = ['messagequote_request', 'booking_confirmationhire_request', 'onboardingsystem'],;
   const randomType = types[Math.floor(Math.random() * types.length)],;
-  ;
   const titles = {;
     'message':'New Message Receivedquote_request':'Quote Request Submittedbooking_confirmation':'Booking Confirmedhire_request':'New Hire Requestonboarding':'Complete Your Profilesystem':'System Update';
   },;
-  ;
   const messages = {;
     'message':'You have received a new message from a potential client.quote_request':'A client has submitted a quote request for your services.booking_confirmation':'Your booking has been confirmed and scheduled.hire_request':'A client wants to hire you for a project. Check your dashboard for details.onboarding':'Complete your profile to get more visibility and job matches.system':'Our platform has been updated with new features. Check them out!';
   },;
-  ;
   const actions = {;
     'message':{ url:'/messages', text:'View Messages' },;
     'quote_request':{ url:'/quotes', text:'View Quote' },;
     'booking_confirmation':{ url:'/bookings', text:'View Booking' },;
     'hire_request':{ url:'/dashboard', text:'View Request' },;
     'onboarding':{ url:'/profile', text:'Complete Profile' },;
-    'system':{ url:'/dashboard', text:'Learn More' }
-  },;
-  ;
+    'system':{ url:'/dashboard', text:'Learn More' },;
   return createNotification({;
     userId,;
     title:titles[randomType],;
@@ -254,48 +235,48 @@ export async function createTestNotification(userId:string) {;
     actionUrl:actions[randomType].url,;
     actionText:actions[randomType].text;
   }),;
-} type NotificationType = 'message' | 'quote request' | 'booking confirmation' | 'hire request' | 'onboarding' | 'system';
-//If sendEmail is true, call the edge function to send an email 
-}
-}/** * Creates a hire request notification for admin and talent */? `$ {
+ type NotificationType = 'message' | 'quote request' | 'booking confirmation' | 'hire request' | 'onboarding' | 'system';
+/If sendEmail is true, call the edge function to send an email 
+
+/** * Creates a hire request notification for admin and talent */? `$ {
   projectType 
-}project` : "";
+project` : "";
   userId: talentId, title: `New Hire Request from $ {
   requesterName 
-}`;
+`;
 message: `$ {
   requesterName 
-}($ {
+($ {
   requesterEmail 
-}) wants to hire you for a $ {
+) wants to hire you for a $ {
   projectInfo 
-}$ {
+$ {
   summaryText 
-}`;
+`;
 type: 'hire request';
 relatedId: hireRequestId;
 sendEmail: true;
 actionUrl: '/dashboard';
 actionText: 'View Request' 
-});
-//Create notification for admin if admin ID is provided if (adminId) {
+);
+/Create notification for admin if admin ID is provided if (adminId) {
   const adminNotification = await createNotification ({
   userId: adminId, title: `New Hire Request for Talent`, message: `$ {
   requesterName 
-}($ {
+($ {
   requesterEmail 
-}) wants to hire talent for a $ {
+) wants to hire talent for a $ {
   projectInfo 
-}$ {
+$ {
   summaryText 
-}`;
+`;
 type: 'hire request';
 relatedId: hireRequestId;
 sendEmail: true;
 actionUrl: '/admin/hire-requests';
 actionText: 'Review Request' 
-});
-}/** * Creates an onboarding notification for a user */if (userRole === 'talent') {
+);
+/** * Creates an onboarding notification for a user */if (userRole = = 'talent') {
   switch (missingMilestone) {
   case 'profile completed': title = 'Complete your profile';
 message = 'Complete your profile to get discovered by clients';
@@ -318,6 +299,5 @@ actionUrl = '/client-dashboard';
 actionText = 'View Matches';
 break;
 case 'talent invited': 
-}/** * Creates a system notification for a user */ 
-}/** * Demo function to create test notifications for the current user */ 
-}
+/** * Creates a system notification for a user */ 
+/** * Demo function to create test notifications for the current user */ 

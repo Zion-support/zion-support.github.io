@@ -6,5 +6,3 @@ export function Storybook() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

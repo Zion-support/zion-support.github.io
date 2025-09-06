@@ -6,5 +6,3 @@ export function HydrationErrorBoundary() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

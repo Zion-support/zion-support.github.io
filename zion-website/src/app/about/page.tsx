@@ -5,7 +5,7 @@ import {
   ShieldCheckIcon
   AcademicCapIcon
   RocketLaunchIcon
-} from '@heroicons/react/24/outline'
+ from '@heroicons/react/24/outline'
 const values = [
   {
     name: 'Innovation First'
@@ -136,7 +136,7 @@ export default function AboutPage() {
         </div>;
         <div className=&quot;mx - auto mt - 16 max - w-2xl sm:mt - 20 lg:mt - 24 lg:max - w-none & quot;>;
           <dl className=&quot;grid max - w-xl grid - cols - 1 gap - x-8 gap - y-16 lg:max - w-none lg:grid - cols - 2&quot;>;
-            {values.map ((value) => (
+            {values.map (value) => (
               <div key={value.name} className=&quot;flex flex - col group & quot;>;
                 <dt className=&quot;flex items - center gap - x-3 text - base font - semibold leading - 7 text - white & quot;>;
                   <value.icon className=&quot;h - 5 w - 5 flex - none text - blue - 400 & quot; aria - hidden=&quot;true & quot; />;
@@ -145,7 +145,7 @@ export default function AboutPage() {
                 <dd className=&quot;mt - 4 flex flex - auto flex - col text - base leading - 7 text - gray - 300 & quot;>;
                   <p className=&quot;flex - auto & quot;>{value.description}</p>;
                 </dd>;
-              </div>))}
+              </div>)}
           </dl>;
         </div>;
       </div>;
@@ -161,7 +161,7 @@ export default function AboutPage() {
           </p>;
         </div>;
         <div className=&quot;mx - auto mt - 16 grid max - w-2xl grid - cols - 1 gap - x-8 gap - y-20 lg:mx - 0 lg:max - w-none lg:grid - cols - 2&quot;>;
-          {team.map ((person) => (
+          {team.map (person) => (
             <article key={person.name} className=&quot;flex flex - col items - start group & quot;>;
               <div className=&quot;relative w - full & quot;>;
                 <div className=&quot;aspect-[16 / 9] w - full rounded - 2xl bg - gray - 900 object - cover sm:aspect-[2 / 1] lg:aspect-[3 / 2]&quot;>;
@@ -184,7 +184,7 @@ export default function AboutPage() {
                   <p className=&quot;mt - 5 line - clamp - 3 text - sm leading - 6 text - gray - 300 & quot;>{person.bio}</p>;
                 </div>;
               </div>;
-            </article>))}
+            </article>)}
         </div>;
       </div>;
       {/* CTA section */}
@@ -212,4 +212,3 @@ export default function AboutPage() {
       </div>
     </div>
   )
-}

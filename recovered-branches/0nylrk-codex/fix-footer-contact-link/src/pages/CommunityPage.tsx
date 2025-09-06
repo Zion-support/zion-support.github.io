@@ -9,7 +9,7 @@ import ForumCategories from "@/components/community/ForumCategories",
 import PostCard from "@/components/community/PostCard",
 import { useAuth } from "@/hooks/useAuth";
 import { ForumPost } from "@/types/community";
-// Mock data for featured posts
+/ Mock data for featured posts
 const featuredPosts: ForumPost[] = [
   {
 
@@ -47,8 +47,8 @@ const featuredPosts: ForumPost[] = [
     isPinned: true
     isFeatured: true
   }
-];
-// Mock data for recent posts
+;
+/ Mock data for recent posts
 const recentPosts: ForumPost[] = [
   {
     id: "3"
@@ -93,7 +93,7 @@ const recentPosts: ForumPost[] = [
     replyCount: 7
     isAnswered: true
   }
-];
+;
 export default function CommunityPage() {
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("categories");
@@ -130,23 +130,23 @@ export default function CommunityPage() {
           </TabsContent>
           <TabsContent value="featured">
             <div className="space-y-4">
-              {featuredPosts.map((post) => (
+              {featuredPosts.map(post) => (
                 <PostCard key={post.id} post={post} />
-              ))}
+              )}
             </div>
           </TabsContent>
           <TabsContent value="recent">
             <div className="space-y-4">
-              {recentPosts.map((post) => (
+              {recentPosts.map(post) => (
                 <PostCard key={post.id} post={post} />
-              ))}
+              )}
             </div>
           </TabsContent>
         </Tabs>
       </div>
     </AppLayout>
   )
-}
+
               Create New Post;
             </Link>;
           </Button>;
@@ -165,23 +165,22 @@ export default function CommunityPage() {
 
           <TabsContent value="featured">;
             <div className="space-y-4">;
-              {featuredPosts && featuredPosts.map((post) => (;
+              {featuredPosts && featuredPosts.map(post) => (;
                 <PostCard key={post && post.id} post={post} />;
-              ))}
+              )}
             </div>;
           </TabsContent>;
 
           <TabsContent value="recent">;
             <div className="space-y-4">;
-              {recentPosts && recentPosts.map((post) => (;
+              {recentPosts && recentPosts.map(post) => (;
                 <PostCard key={post && post.id} post={post} />;
-              ))}
+              )}
             </div>;
           </TabsContent>;
         </Tabs>;
       </div>;
     </AppLayout>;
   );
-}
+
     </AppLayout>);
-}

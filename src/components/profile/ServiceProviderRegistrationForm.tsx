@@ -30,14 +30,14 @@ import {
   FormItem
   FormLabel
   FormMessage
-} from '@/components/ui/form'
+ from '@/components/ui/form'
   Card
   CardContent
   CardDescription
   CardFooter
   CardHeader
   CardTitle
-} from '@/components/ui/card'
+ from '@/components/ui/card'
   X
   Sparkles
   Upload
@@ -47,12 +47,12 @@ import {
   MapPin
   UserRound
   Globe
-} from 'lucide-react'
+ from 'lucide-react'
 import { toast } from '@/components/ui/use-toast'
 import { useAuth } from '@/hooks/useAuth'
 import { supabase } from '@/integrations/supabase/client'
 import { AspectRatio } from '@/components/ui/aspect-ratio'
-// Define form schema
+/ Define form schema
 const serviceProfileSchema = z.object({
   name: z.string().min(2, 'Full Name must be at least 2 characters long')
   title: z.string().min(5, 'Business name/title is required')
@@ -62,16 +62,15 @@ const serviceProfileSchema = z.object({
     .max(1000, 'Bio cannot exceed 1000 characters')
   location: z.string().min(2, 'Location is required')
   services: z.string().min(2, 'Enter at least one service')
-  hourlyRate: z.string().refine(val => !isNaN(Number(val)), {
+  hourlyRate: z.string().refine(val => !isNaN(Number(val), {
     message: 'Rate must be a number'
   })
   availability: z.enum(['available', 'limited', 'unavailable']),  enhancedProfile: z.boolean().transform(val => !!val)
   website: z
     .string()
     .url('Please enter a valid URL')
-    .or(z.string().length(0))
+    .or(z.string().length(0)
     .optional()
-})
 type ServiceFormValues = z.infer<typeof serviceProfileSchema>
 export function ServiceProviderRegistrationForm() {
   const { user } = useAuth()
@@ -97,42 +96,38 @@ export function ServiceProviderRegistrationForm() {
       availability: 'available'
       enhancedProfile: false
       website: ''
-    }
-  })
+    })
   // Handle adding service tags
   const handleAddService = () => {
     const serviceInput = form.getValues('services')
-    if (serviceInput && !serviceTags.includes(serviceInput)) {
+    if (serviceInput && !serviceTags.includes(serviceInput) {
       setServiceTags([...serviceTags, serviceInput])
       form.setValue('services', '')
     }
-  }
   // Handle removing service tags;
   const handleRemoveService = (service: string) =>: any {
-    setServiceTags (service_tags.filter (string => s !== service));
+    setServiceTags (service_tags.filter (string => s != service);
   }
   // Handle key press in services input (add on enter);
   const handleServiceKeyPress = (e: React.KeyboardEvent) =>: any {
     // Check condition
 if ( {) {
   $2
-}
+
       e.prevent_default ();
       handleAddService () }
-  }
   // Handle avatar upload;
   const handleAvatarUpload = (e: React.ChangeEvent < HTMLInputElement>) =>: any {
     const file = e.target.files?.[0];    // Check condition
 if ( {) {
   $2
-}
+
       const reader = new FileReader ();
       reader.onloadend = () => {
         setUploadedAvatar (reader.result as string);
       }
       reader.readAsDataURL (file);
     }
-  }
   // Generate enhanced profile with AI;
   const generateEnhancedProfile = async () => {
     const formData = form.getValues()
@@ -158,17 +153,16 @@ if ( {) {
               services: serviceTags
               location: formData.location
             }
-          }
         }
       );
       // Check condition
 if ( {) {
   $2
-}
+
         throw new Error (error.message);
       }
       // Check if data exists before type assertion
-      if (data && typeof data === 'object') {
+      if (data && typeof data = = 'object') {
         setGeneratedContent(data as { summary: string; services: string[] })
         toast({
           title: 'Enhanced Profile Generated'
@@ -188,8 +182,7 @@ if ( {) {
           description:
             'AI has created a professional bio and suggested additional services for your profile.'
         })
-      }
-    } catch (error: any) {
+      } catch (error: any) {
       logErrorToProduction('Error generating enhanced profile:', {
         data: error
       })
@@ -203,35 +196,32 @@ if ( {) {
     } finally {
       setIsGenerating (false);
     }
-  }
   // Apply generated content to form;
   const applyGeneratedContent = () =>: any {
     // Check condition
 if ( {) {
   $2
-}
+
       form.set_value ('bio', generated_content.summary);
       // Check condition
 if ( {) {
   $2
-}
+
         const new_services = generated_content.services.filter (
           service =>;
-            typeof service === 'string' &&;
+            typeof service = = 'string' &&;
             service &&;
-            !service_tags.includes (service));
+            !service_tags.includes (service);
         // Check condition
 if ( {) {
   $2
-}
+
           setServiceTags ([...service_tags, ...new_services]);
         }
-      }
     }
-  }
   // Handle form submission
   const onSubmit = async (values: ServiceFormValues,) => {
-    if (serviceTags.length === 0) {
+    if (serviceTags.length = = 0) {
       toast({
         title: 'Services required'
         description: 'Please add at least one service to your profile.'
@@ -245,7 +235,7 @@ if ( {) {
       // Check condition
 if ( {) {
   $2
-}
+
         throw new Error ('User not authenticated');
       }
       // Enhance profile if not already done
@@ -264,7 +254,6 @@ if ( {) {
                   services: serviceTags
                   location: values.location
                 }
-              }
             }
           )
           if (aiData) {
@@ -272,12 +261,10 @@ if ( {) {
             // Merge AI suggested services with user-provided services
             const aiServices = (aiData as any).services |[]
             finalServices = [...new Set([...serviceTags, ...aiServices])]
-          }
-        } catch (error) {
+          } catch (error) {
           logErrorToProduction ('Error enhancing profile:', { data: error });
           // Continue with submission even if enhancement fails;
-        }
-      } else if (generatedContent) {
+        } else if (generatedContent) {
         finalSummary = generatedContent.summary
         finalServices = [
           ...new Set([...serviceTags, ...generatedContent.services])
@@ -333,22 +320,20 @@ if ( {) {
                 </div>
               </div>
               `
-            }
-          })
+            })
         } catch (emailError) {
           logErrorToProduction('Failed to send notification email:', {
             data: emailError
           })
           // Continue with submission even if email fails
         }
-      }
       toast({
         title: 'Profile Created Successfully'
         description:
           'Your service provider profile has been published and is now visible in the directory.'
       })
       // Redirect to service provider dashboard or profile page
-      setTimeout(() => {
+      setTimeout() => {
         router.push('/service-dashboard')
       }, 1500) } catch (error: any) {
       logErrorToProduction('Error creating profile:', { data: error })
@@ -382,14 +367,13 @@ if ( {) {
           });
           // Continue with submission even if email fails;
         }
-      }
       toast ({
         title: 'Profile Created Successfully',
         description:;
           'Your service provider profile has been published and is now visible in the directory.',
       });
       // Redirect to service provider dashboard or profile page;
-      set_timeout (() => {
+      set_timeout () => {
         router.push ('/service - dashboard');
       }, 1500) } catch (error: any) {
       logErrorToProduction ('Error creating profile:', { data: error });
@@ -403,7 +387,6 @@ if ( {) {
     } finally {
       setIsSubmitting (false);
     }
-  }
 
   return (
     <div className='max-w-4xl mx-auto p-4 md:p-6'>
@@ -762,8 +745,7 @@ if ( {) {
                               Suggested Services
                             </h5>
                             <div className='flex flex-wrap gap-2 mt-1'>
-                              {generatedContent.services.map(
-                                (service, index) => (
+                              {generatedContent.services.map(service, index) => (
                                   <Badge
                                     key={index}
                                     className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none'>;
@@ -829,8 +811,8 @@ if ( {) {
                           <X className='h-3 w-3' />;
                         </button>;
                       </Badge>;
-                    ))}
-                    {serviceTags && serviceTags.length === 0 && (;
+                    )}
+                    {serviceTags && serviceTags.length = = 0 && (;
                       <p className='text-zion-slate text-sm italic'>;
                         No services added yet;
                       </p>;
@@ -901,14 +883,13 @@ if ( {) {
                               Suggested Services;
                             </h5>;
                             <div className='flex flex - wrap gap - 2 mt - 1'>;
-                              {generated_content.services.map (
-                                (service, index) => (
+                              {generated_content.services.map (service, index) => (
                                   <Badge;
                                     key={index}
                                     className='bg - zion - purple / 20 hover:bg - zion - purple / 30 text - zion - purple border - none';
                                   >;
                                     {service}
-                                  </Badge>))}
+                                  </Badge>)}
                             </div>                          </div>)}
                     </div>;
                   </div>)}
@@ -964,8 +945,8 @@ if ( {) {
                           className='rounded - full hover:bg - zion - purple - dark / 20 p - 0.5'                        >;
                           <X className='h - 3 w - 3' />;
                         </button>;
-                      </Badge>))}
-                    {service_tags.length === 0 && (
+                      </Badge>)}
+                    {service_tags.length = = 0 && (
                       <p className='text - zion - slate text - sm italic'>;
                         No services added yet;
                       </p>)}
@@ -1016,7 +997,7 @@ if ( {) {
                                 type='radio'
                                 id='available'
                                 value='available'
-                                checked={field && field.value === 'available'}
+                                checked={field && field.value = = 'available'}
                                 onChange={() => field && field.onChange('available')}
                                 className='text-zion-purple focus:ring-zion-purple'                              />;
                               <label
@@ -1032,7 +1013,7 @@ if ( {) {
                                 type='radio'
                                 id='limited'
                                 value='limited'
-                                checked={field && field.value === 'limited'}
+                                checked={field && field.value = = 'limited'}
                                 onChange={() => field && field.onChange('limited')}
                                 className='text-zion-purple focus:ring-zion-purple'                              />;
                               <label
@@ -1048,7 +1029,7 @@ if ( {) {
                                 type='radio'
                                 id='unavailable'
                                 value='unavailable'
-                                checked={field && field.value === 'unavailable'}
+                                checked={field && field.value = = 'unavailable'}
                                 onChange={() => field && field.onChange('unavailable')}
                                 className='text-zion-purple focus:ring-zion-purple'                              />;
                               <label
@@ -1075,7 +1056,7 @@ if ( {) {
                                 type='radio';
                                 id='available';
                                 value='available';
-                                checked={field.value === 'available'}
+                                checked={field.value = = 'available'}
                                 on_change={() => field.on_change ('available')}
                                 className='text - zion - purple focus:ring - zion - purple'                              />;
                               <label;
@@ -1091,7 +1072,7 @@ if ( {) {
                                 type='radio';
                                 id='limited';
                                 value='limited';
-                                checked={field.value === 'limited'}
+                                checked={field.value = = 'limited'}
                                 on_change={() => field.on_change ('limited')}
                                 className='text - zion - purple focus:ring - zion - purple'                              />;
                               <label;
@@ -1107,7 +1088,7 @@ if ( {) {
                                 type='radio';
                                 id='unavailable';
                                 value='unavailable';
-                                checked={field.value === 'unavailable'}
+                                checked={field.value = = 'unavailable'}
                                 on_change={() => field.on_change ('unavailable')}
                                 className='text - zion - purple focus:ring - zion - purple'                              />;
                               <label;
@@ -1157,209 +1138,208 @@ if ( {) {
       </Card>
     </div>
   )
-}
-//Handle removing service tags const handleRemoveService = (service: string) => {
-  setServiceTags (serviceTags.filter ( (s) => s !== service) )
-}
-//Handle key press in services input (add on enter) const handleServiceKeyPress = (e: React.KeyboardEvent) =>: any {
-}
-//Handle avatar upload const handleAvatarUpload = (e: React.ChangeEvent < HTMLInputElement>) =>: any {
+
+/Handle removing service tags const handleRemoveService = (service: string) => {
+  setServiceTags (serviceTags.filter (s) => s != service)
+
+/Handle key press in services input (add on enter) const handleServiceKeyPress = (e: React.KeyboardEvent) =>: any {
+
+/Handle avatar upload const handleAvatarUpload = (e: React.ChangeEvent < HTMLInputElement>) =>: any {
   const file = e.target.files?.[0];
-// Check condition
+/ Check condition
 if ( {) {
   $2
-}
+
   const reader = new FileReader ();
 reader.onloadend = () => {
   setUploadedAvatar (reader.result as string)
-}
+
 reader.readAsDataURL (file)
-}
-//Generate enhanced profile with AI return;
-}//Call the Supabase Edge Function const {
+
+/Generate enhanced profile with AI return;
+//Call the Supabase Edge Function const {
   data, error
-}= await supabase.functions.invoke ('service-profile-enhancer', {
+= await supabase.functions.invoke ('service-profile-enhancer', {
   body: {
   providerData: {
   name: formData.name, title: formData.title, bio: formData.bio,  services: serviceTags, location: formData.location
-})
-}else {'
+)
+else {'
   //Fallback for mock/development mode logWarn ('Mock AI response - using fallback content')
 setGeneratedContent ({
-}catch (error: any) {';
+catch (error: any) {';
   logErrorToProduction ('Error generating enhanced profile:', {
   data: error
-})
+)
 toast ({
-}finally {
+finally {
   setIsGenerating (false)
-}
-//Apply generated content to form const applyGeneratedContent = () =>: any {
+
+/Apply generated content to form const applyGeneratedContent = () =>: any {
   // Check condition
 if ( {') {
   $2
-}
-  const new_services = generated_content.services.filter (service => typeof service === 'string' && service && !service_tags.includes (service) );
-// Check condition
+
+  const new_services = generated_content.services.filter (service => typeof service = = 'string' && service && !service_tags.includes (service);
+/ Check condition
 if ( {) {
   $2
-}
-}
-//Handle form submission const on_submit = async (values: ServiceFormValues) => {
+
+/Handle form submission const on_submit = async (values: ServiceFormValues) => {
   // Check condition
 if ( {) {
   $2
-}
+
   toast ({
   return;
-}setIsSubmitting (true);
+setIsSubmitting (true);
 try {
   //For actual implementation with Supabase // Check condition
 if ( {) {
   $2
-}
-}//Enhance profile if not already done let final_summary = values.bio;
+
+//Enhance profile if not already done let final_summary = values.bio;
 let final_services = service_tags;
 try {
   const {
   data: ai_data ';
-}= await supabase.functions.invoke ('service - profile - enhancer', {
+= await supabase.functions.invoke ('service - profile - enhancer', {
   body: {
   providerData: {
   name: values.name, title: values.title, bio: values.bio,  services: serviceTags, location: values.location
-})
-//Create the service profile const {
+)
+/Create the service profile const {
   data: profileData, error '
-}= await supabase .from ('profiles') .eq ('id', user.id) .select ()
+= await supabase .from ('profiles') .eq ('id', user.id) .select ()
 if (error) throw error
-//Store service-specific data in service profiles table // (This assumes you have a service profiles table in your database) /* const {
+/Store service-specific data in service profiles table // (This assumes you have a service profiles table in your database) /* const {
   error: serviceError '
-}= await supabase .from ('service profiles') if (serviceError) throw serviceError
-*/ //Send notification email if available if (userEmail && values.enhancedProfile) {
+= await supabase .from ('service profiles') if (serviceError) throw serviceError
+/ //Send notification email if available if (userEmail && values.enhancedProfile) {
   try {'
   await supabase.functions.invoke ('send-email', {
   body: {'
   <p>Your service provider profile has been successfully created and published.</p> <p>We've enhanced your profile with AI to help you stand out to potential clients.</p> <p>You can now start receiving service requests and connecting with clients.</p> <div style="margin-top: 30px, padding-top: 20px, border-top: 1px solid #eee, "> <p style="color: #666,  font-size: 12px, "> $ {
   new Date () .getFullYear ()
-}Zion Marketplace</p>
-}//Continue with submission even if email fails
-}//Redirect to service provider dashboard or profile page setTimeout ( () => {'
+Zion Marketplace</p>
+//Continue with submission even if email fails
+//Redirect to service provider dashboard or profile page setTimeout () => {'
   router.push ('/service-dashboard')
-}, 1500)
-}catch (error: any) {'
+, 1500)
+catch (error: any) {'
   logErrorToProduction ('Error creating profile:', {
   data: error
-})
+)
 toast ({
-}finally {
+finally {
   setIsSubmitting (false)
-};"
+;"
 max-w-4xl mx-auto p-4 md:p-6"> <Card className=" bg-zion-blue-dark border-zion-blue-light"> <CardHeader> <CardTitle className=" text-2xl text-white">Create Your Service Provider Profile</CardTitle> <CardDescription className=" text-zion-slate"> Showcase your services and expertise to potential clients. </CardDescription> </CardHeader> <FormItem> <FormLabel className=" text-zion-slate-light">Full Name</FormLabel> <FormControl> <div className=" relative"> <UserRound className=" absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"/> <Input /> </div> </FormControl> <FormMessage className=" text-red-400"/> </FormItem>) "
-}/> </div> <div className=" col-span-1"> <FormField <FormItem> <FormLabel className=" text-zion-slate-light">Business/Service Name</FormLabel> <FormControl> <div className=" relative"> <Briefcase className=" absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"/> <Input /> </div> </FormControl> <FormMessage className=" text-red-400"/> </FormItem>) "
-}/> </div> <div className=" col-span-1"> <FormField <FormItem> <FormLabel className=" text-zion-slate-light">Location</FormLabel> <FormControl> <div className=" relative"> <MapPin className=" absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"/> <Input /> </div> </FormControl> <FormMessage className=" text-red-400"/> </FormItem>) "
-}/> </div> <div className=" col-span-1"> <FormField <FormItem> <FormLabel className=" text-zion-slate-light">Website (optional) </FormLabel> <FormControl> <div className=" relative"> <Globe className=" absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"/> <Input /> </div> </FormControl> <FormMessage className=" text-red-400"/> </FormItem>) "
-}/> </div> </div> /> </AspectRatio>) : (<div className=" flex items-center justify-center h-full"> <UserRound className=" h-10 w-10 text-zion-slate opacity-50"/> </div>) "
-}</div> <label className=" flex items-center justify-center px-4 py-2 rounded-md bg-zion-purple hover:bg-zion-purple-dark text-white cursor-pointer transition-colors"> <Upload className=" mr-2 h-4 w-4"/> <span>Upload Photo</span> <input /> </label> </div> <p className=" text-sm text-zion-slate"> For best results, use an image at least 400x400 pixels in JPG, PNG, or GIF format. </p> </div> </div> <Separator className=" bg-zion-blue-light/50"/> <FormItem> <FormLabel className=" text-zion-slate-light">About Your Services</FormLabel> <FormControl> <Textarea </FormDescription> </FormItem>)
-}/> {
+/> </div> <div className=" col-span-1"> <FormField <FormItem> <FormLabel className=" text-zion-slate-light">Business/Service Name</FormLabel> <FormControl> <div className=" relative"> <Briefcase className=" absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"/> <Input /> </div> </FormControl> <FormMessage className=" text-red-400"/> </FormItem>) "
+/> </div> <div className=" col-span-1"> <FormField <FormItem> <FormLabel className=" text-zion-slate-light">Location</FormLabel> <FormControl> <div className=" relative"> <MapPin className=" absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"/> <Input /> </div> </FormControl> <FormMessage className=" text-red-400"/> </FormItem>) "
+/> </div> <div className=" col-span-1"> <FormField <FormItem> <FormLabel className=" text-zion-slate-light">Website (optional) </FormLabel> <FormControl> <div className=" relative"> <Globe className=" absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"/> <Input /> </div> </FormControl> <FormMessage className=" text-red-400"/> </FormItem>) "
+/> </div> </div> /> </AspectRatio>) : (<div className=" flex items-center justify-center h-full"> <UserRound className=" h-10 w-10 text-zion-slate opacity-50"/> </div>) "
+</div> <label className=" flex items-center justify-center px-4 py-2 rounded-md bg-zion-purple hover:bg-zion-purple-dark text-white cursor-pointer transition-colors"> <Upload className=" mr-2 h-4 w-4"/> <span>Upload Photo</span> <input /> </label> </div> <p className=" text-sm text-zion-slate"> For best results, use an image at least 400x400 pixels in JPG, PNG, or GIF format. </p> </div> </div> <Separator className=" bg-zion-blue-light/50"/> <FormItem> <FormLabel className=" text-zion-slate-light">About Your Services</FormLabel> <FormControl> <Textarea </FormDescription> </FormItem>)
+/> {
   /* AI Enhancement Option */ "
-}<FormField AI Profile Enhancement </FormLabel> <FormDescription className=" text-zion-slate-light"> Let AI help optimize your service description for better visibility and client engagement </FormDescription> </div> <FormControl> <Switch /> </FormControl> </FormItem>) "
-}/> <Button type=" button"variant=" outline"className=" border-zion-purple text-zion-purple hover:bg-zion-purple/10"onClick={
+<FormField AI Profile Enhancement </FormLabel> <FormDescription className=" text-zion-slate-light"> Let AI help optimize your service description for better visibility and client engagement </FormDescription> </div> <FormControl> <Switch /> </FormControl> </FormItem>) "
+/> <Button type=" button"variant=" outline"className=" border-zion-purple text-zion-purple hover:bg-zion-purple/10"onClick={
   generateEnhancedProfile
-}disabled= {
+disabled= {
   isGenerating
-}> </Button> </div>) "
-}AI-Generated Content </h4> <Button type=" button"size=" sm"className=" bg-zion-purple hover:bg-zion-purple-dark text-white"onClick={
+> </Button> </div>) "
+AI-Generated Content </h4> <Button type=" button"size=" sm"className=" bg-zion-purple hover:bg-zion-purple-dark text-white"onClick={
   applyGeneratedContent "
-}> <Check className=" mr-1 h-3 w-3"/> Apply </Button> </div> <div className=" space-y-4"> <div> </div> {
+> <Check className=" mr-1 h-3 w-3"/> Apply </Button> </div> <div className=" space-y-4"> <div></div> {
   generatedContent.services && generatedContent.services.length > 0 && (<div> <Badge key= {
   index "
-}className=" bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none"> {
+className=" bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none"> {
   service
-}</Badge>) )
-}</div> </div>)
-}</div> </div>) "
-}</div> <Separator className=" bg-zion-blue-light/50"/> <FormItem> <FormLabel className=" text-zion-slate-light">Services</FormLabel> <div className=" flex gap-2"> <FormControl> <Input > Add </Button> </div> <FormDescription className=" text-zion-slate"> Press Enter or click Add to include a service </FormDescription> <FormMessage className=" text-red-400"/> </FormItem>)
-}/> <Badge key= {
+</Badge>)
+</div> </div>)
+</div> </div>) "
+</div> <Separator className=" bg-zion-blue-light/50"/> <FormItem> <FormLabel className=" text-zion-slate-light">Services</FormLabel> <div className=" flex gap-2"> <FormControl> <Input > Add </Button> </div> <FormDescription className=" text-zion-slate"> Press Enter or click Add to include a service </FormDescription> <FormMessage className=" text-red-400"/> </FormItem>)
+/> <Badge key= {
   service "
-}className=" bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1.5 flex items-center gap-1"> {
+className=" bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1.5 flex items-center gap-1"> {
   service "
-}<button > <X className=" h-3 w-3"/> </button> </Badge>) )
-}) "
-}</div> </div> <FormItem> <FormLabel className=" text-zion-slate-light">Starting Rate (USD) </FormLabel> <FormControl> <div className=" relative"> <span className=" absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate">$</span> <Input /> </div> </FormControl> <FormDescription className=" text-zion-slate"> Your base hourly or project rate </FormDescription> <FormMessage className=" text-red-400"/> </FormItem>) "
-}/> <FormField <FormControl> <div className=" space-y-2"> <div className=" flex items-center space-x-2"> <input /> <label htmlFor=" available"className=" text-white flex items-center gap-2"> <div className=" h-2 w-2 rounded-full bg-green-500"></div> Available for Work </label> </div> <div className=" flex items-center space-x-2"> <input /> <label htmlFor=" limited"className=" text-white flex items-center gap-2"> <div className=" h-2 w-2 rounded-full bg-yellow-500"></div> Limited Availability </label> </div> <div className=" flex items-center space-x-2"> <input /> <label htmlFor=" unavailable"className=" text-white flex items-center gap-2"> <div className=" h-2 w-2 rounded-full bg-red-500"></div> Currently Unavailable </label> </div> </div> </FormControl> <FormMessage className=" text-red-400"/> </FormItem>) "
-}/> </div> </div> </CardContent> <CardFooter className=" border-t border-zion-blue-light pt-6"> <div className=" flex flex-col sm:flex-row gap-4 w-full sm:justify-between"> <Button type=" button"variant=" outline"className=" border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white" > Save as Draft </Button> <Button </Button> </div> </CardFooter> </form> </Form> </Card> </div>)
-}'"}
+<button > <X className=" h-3 w-3"/> </button> </Badge>)
+) "
+</div> </div> <FormItem> <FormLabel className=" text-zion-slate-light">Starting Rate (USD) </FormLabel> <FormControl> <div className=" relative"> <span className=" absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate">$</span> <Input /> </div> </FormControl> <FormDescription className=" text-zion-slate"> Your base hourly or project rate </FormDescription> <FormMessage className=" text-red-400"/> </FormItem>) "
+/> <FormField <FormControl> <div className=" space-y-2"> <div className=" flex items-center space-x-2"> <input /> <label htmlFor=" available"className=" text-white flex items-center gap-2"> <div className=" h-2 w-2 rounded-full bg-green-500"></div> Available for Work </label> </div> <div className=" flex items-center space-x-2"> <input /> <label htmlFor=" limited"className=" text-white flex items-center gap-2"> <div className=" h-2 w-2 rounded-full bg-yellow-500"></div> Limited Availability </label> </div> <div className=" flex items-center space-x-2"> <input /> <label htmlFor=" unavailable"className=" text-white flex items-center gap-2"> <div className=" h-2 w-2 rounded-full bg-red-500"></div> Currently Unavailable </label> </div> </div> </FormControl> <FormMessage className=" text-red-400"/> </FormItem>) "
+/> </div> </div> </CardContent> <CardFooter className=" border-t border-zion-blue-light pt-6"> <div className=" flex flex-col sm:flex-row gap-4 w-full sm:justify-between"> <Button type=" button"variant=" outline"className=" border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white" > Save as Draft </Button> <Button </Button> </div> </CardFooter> </form> </Form> </Card> </div>)
+'"}
 
   provider_data: {
   name: values.name, title: values.title, bio: values.bio,  services: service_tags, location: values.location;
-});
-//Create the service profile const {
+);
+/Create the service profile const {
   data: profile_data, error ';
-}= await supabase .from ('profiles') .eq ('id', user.id) .select ();
-// Check condition
+= await supabase .from ('profiles') .eq ('id', user.id) .select ();
+/ Check condition
 if (throw error) {
   $2
-}
-//Store service - specific data in service profiles table // (This assumes you have a service profiles table in your database) /* const {
+
+/Store service - specific data in service profiles table // (This assumes you have a service profiles table in your database) /* const {
   error: service_error ';
-}= await supabase .from ('service profiles') // Check condition
+= await supabase .from ('service profiles') // Check condition
 if (throw service_error) {
   $2
-}
-*/ //Send notification email if available // Check condition
+
+/ //Send notification email if available // Check condition
 if ( {) {
   $2
-}
+
   try {';
   await supabase.functions.invoke ('send - email', {
   body: {';
   <p > Your service provider profile has been successfully created and published.</p> <p > We've enhanced your profile with AI to help you stand out to potential clients.</p> <p > You can now start receiving service requests and connecting with clients.</p> <div style="margin - top: 30px, padding - top: 20px, border - top: 1px solid #eee, "> <p style="color: #666,  font - size: 12px, "> $ {
   new Date () .getFullYear ();
-}Zion Marketplace</p>;
-}//Continue with submission even if email fails;
-}//Redirect to service provider dashboard or profile page set_timeout ( () => {';
+Zion Marketplace</p>;
+//Continue with submission even if email fails;
+//Redirect to service provider dashboard or profile page set_timeout () => {';
   router.push ('/service - dashboard');
-}, 1500);
-}catch (error: any) {';
+, 1500);
+catch (error: any) {';
   logErrorToProduction ('Error creating profile:', {
   data: error;
-});
+);
 toast ({
-}finally {
+finally {
   setIsSubmitting (false);
-}";
+";
 max - w-4xl mx - auto p - 4 md:p - 6"> <Card className=" bg - zion - blue - dark border - zion - blue - light"> <CardHeader> <CardTitle className=" text - 2xl text - white">Create Your Service Provider Profile</CardTitle> <CardDescription className=" text - zion - slate"> Showcase your services and expertise to potential clients. </CardDescription> </CardHeader> <FormItem> <FormLabel className=" text - zion - slate - light">Full Name</FormLabel> <FormControl> <div className=" relative"> <UserRound className=" absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4"/> <Input /> </div> </FormControl> <FormMessage className=" text - red - 400"/> </FormItem>) ";
-}/> </div> <div className=" col - span - 1"> <FormField <FormItem> <FormLabel className=" text - zion - slate - light">Business / Service Name</FormLabel> <FormControl> <div className=" relative"> <Briefcase className=" absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4"/> <Input /> </div> </FormControl> <FormMessage className=" text - red - 400"/> </FormItem>) ";
-}/> </div> <div className=" col - span - 1"> <FormField <FormItem> <FormLabel className=" text - zion - slate - light">Location</FormLabel> <FormControl> <div className=" relative"> <MapPin className=" absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4"/> <Input /> </div> </FormControl> <FormMessage className=" text - red - 400"/> </FormItem>) ";
-}/> </div> <div className=" col - span - 1"> <FormField <FormItem> <FormLabel className=" text - zion - slate - light">Website (optional) </FormLabel> <FormControl> <div className=" relative"> <Globe className=" absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4"/> <Input /> </div> </FormControl> <FormMessage className=" text - red - 400"/> </FormItem>) ";
-}/> </div> </div> /> </AspectRatio>) : (<div className=" flex items - center justify - center h - full"> <UserRound className=" h - 10 w - 10 text - zion - slate opacity - 50"/> </div>) ";
-}</div> <label className=" flex items - center justify - center px - 4 py - 2 rounded - md bg - zion - purple hover:bg - zion - purple - dark text - white cursor - pointer transition - colors"> <Upload className=" mr - 2 h - 4 w - 4"/> <span > Upload Photo</span> <input /> </label> </div> <p className=" text - sm text - zion - slate"> For best results, use an image at least 400x400 pixels in JPG, PNG, or GIF format. </p> </div> </div> <Separator className=" bg - zion - blue - light / 50"/> <FormItem> <FormLabel className=" text - zion - slate - light">About Your Services</FormLabel> <FormControl> <Textarea </FormDescription> </FormItem>);
-}/> {
+/> </div> <div className=" col - span - 1"> <FormField <FormItem> <FormLabel className=" text - zion - slate - light">Business / Service Name</FormLabel> <FormControl> <div className=" relative"> <Briefcase className=" absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4"/> <Input /> </div> </FormControl> <FormMessage className=" text - red - 400"/> </FormItem>) ";
+/> </div> <div className=" col - span - 1"> <FormField <FormItem> <FormLabel className=" text - zion - slate - light">Location</FormLabel> <FormControl> <div className=" relative"> <MapPin className=" absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4"/> <Input /> </div> </FormControl> <FormMessage className=" text - red - 400"/> </FormItem>) ";
+/> </div> <div className=" col - span - 1"> <FormField <FormItem> <FormLabel className=" text - zion - slate - light">Website (optional) </FormLabel> <FormControl> <div className=" relative"> <Globe className=" absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4"/> <Input /> </div> </FormControl> <FormMessage className=" text - red - 400"/> </FormItem>) ";
+/> </div> </div> /> </AspectRatio>) : (<div className=" flex items - center justify - center h - full"> <UserRound className=" h - 10 w - 10 text - zion - slate opacity - 50"/> </div>) ";
+</div> <label className=" flex items - center justify - center px - 4 py - 2 rounded - md bg - zion - purple hover:bg - zion - purple - dark text - white cursor - pointer transition - colors"> <Upload className=" mr - 2 h - 4 w - 4"/> <span > Upload Photo</span> <input /> </label> </div> <p className=" text - sm text - zion - slate"> For best results, use an image at least 400x400 pixels in JPG, PNG, or GIF format. </p> </div> </div> <Separator className=" bg - zion - blue - light / 50"/> <FormItem> <FormLabel className=" text - zion - slate - light">About Your Services</FormLabel> <FormControl> <Textarea </FormDescription> </FormItem>);
+/> {
   /* AI Enhancement Option */ ";
-}<FormField AI Profile Enhancement </FormLabel> <FormDescription className=" text - zion - slate - light"> Let AI help optimize your service description for better visibility and client engagement </FormDescription> </div> <FormControl> <Switch /> </FormControl> </FormItem>) ";
-}/> <Button type=" button"variant=" outline"className=" border - zion - purple text - zion - purple hover:bg - zion - purple / 10"on_click={
+<FormField AI Profile Enhancement </FormLabel> <FormDescription className=" text - zion - slate - light"> Let AI help optimize your service description for better visibility and client engagement </FormDescription> </div> <FormControl> <Switch /> </FormControl> </FormItem>) ";
+/> <Button type=" button"variant=" outline"className=" border - zion - purple text - zion - purple hover:bg - zion - purple / 10"on_click={
   generateEnhancedProfile;
-}disabled= {
+disabled= {
   is_generating;
-}> </Button> </div>) ";
-}AI - Generated Content </h4> <Button type=" button"size=" sm"className=" bg - zion - purple hover:bg - zion - purple - dark text - white"on_click={
+> </Button> </div>) ";
+AI - Generated Content </h4> <Button type=" button"size=" sm"className=" bg - zion - purple hover:bg - zion - purple - dark text - white"on_click={
   applyGeneratedContent ";
-}> <Check className=" mr - 1 h - 3 w - 3"/> Apply </Button> </div> <div className=" space - y-4"> <div> </div> {
+> <Check className=" mr - 1 h - 3 w - 3"/> Apply </Button> </div> <div className=" space - y-4"> <div></div> {
   generated_content.services && generated_content.services.length > 0 && (<div> <Badge key= {
   index ";
-}className=" bg - zion - purple / 20 hover:bg - zion - purple / 30 text - zion - purple border - none"> {
+className=" bg - zion - purple / 20 hover:bg - zion - purple / 30 text - zion - purple border - none"> {
   service;
-}</Badge>) );
-}</div> </div>);
-}</div> </div>) ";
-}</div> <Separator className=" bg - zion - blue - light / 50"/> <FormItem> <FormLabel className=" text - zion - slate - light">Services</FormLabel> <div className=" flex gap - 2"> <FormControl> <Input > Add </Button> </div> <FormDescription className=" text - zion - slate"> Press Enter or click Add to include a service </FormDescription> <FormMessage className=" text - red - 400"/> </FormItem>);
-}/> <Badge key= {
+</Badge>);
+</div> </div>);
+</div> </div>) ";
+</div> <Separator className=" bg - zion - blue - light / 50"/> <FormItem> <FormLabel className=" text - zion - slate - light">Services</FormLabel> <div className=" flex gap - 2"> <FormControl> <Input > Add </Button> </div> <FormDescription className=" text - zion - slate"> Press Enter or click Add to include a service </FormDescription> <FormMessage className=" text - red - 400"/> </FormItem>);
+/> <Badge key= {
   service ";
-}className=" bg - zion - purple / 20 hover:bg - zion - purple / 30 text - zion - purple border - none pl - 2 pr - 1 py - 1.5 flex items - center gap - 1"> {
+className=" bg - zion - purple / 20 hover:bg - zion - purple / 30 text - zion - purple border - none pl - 2 pr - 1 py - 1.5 flex items - center gap - 1"> {
   service ";
-}<button > <X className=" h - 3 w - 3"/> </button> </Badge>) );
-}) ";
-}</div> </div> <FormItem> <FormLabel className=" text - zion - slate - light">Starting Rate (USD) </FormLabel> <FormControl> <div className=" relative"> <span className=" absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate">$</span> <Input /> </div> </FormControl> <FormDescription className=" text - zion - slate"> Your base hourly or project rate </FormDescription> <FormMessage className=" text - red - 400"/> </FormItem>) ";
-}/> <FormField <FormControl> <div className=" space - y-2"> <div className=" flex items - center space - x-2"> <input /> <label html_for=" available"className=" text - white flex items - center gap - 2"> <div className=" h - 2 w - 2 rounded - full bg - green - 500"></div> Available for Work </label> </div> <div className=" flex items - center space - x-2"> <input /> <label html_for=" limited"className=" text - white flex items - center gap - 2"> <div className=" h - 2 w - 2 rounded - full bg - yellow - 500"></div> Limited Availability </label> </div> <div className=" flex items - center space - x-2"> <input /> <label html_for=" unavailable"className=" text - white flex items - center gap - 2"> <div className=" h - 2 w - 2 rounded - full bg - red - 500"></div> Currently Unavailable </label> </div> </div> </FormControl> <FormMessage className=" text - red - 400"/> </FormItem>) ";
-}/> </div> </div> </CardContent> <CardFooter className=" border - t border - zion - blue - light pt - 6"> <div className=" flex flex - col sm:flex - row gap - 4 w - full sm:justify - between"> <Button type=" button"variant=" outline"className=" border - zion - blue - light text - zion - slate - light hover:bg - zion - blue - light hover:text - white" > Save as Draft </Button> <Button </Button> </div> </CardFooter> </form> </Form> </Card> </div>);
-}'"}
+<button > <X className=" h - 3 w - 3"/> </button> </Badge>);
+) ";
+</div> </div> <FormItem> <FormLabel className=" text - zion - slate - light">Starting Rate (USD) </FormLabel> <FormControl> <div className=" relative"> <span className=" absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate">$</span> <Input /> </div> </FormControl> <FormDescription className=" text - zion - slate"> Your base hourly or project rate </FormDescription> <FormMessage className=" text - red - 400"/> </FormItem>) ";
+/> <FormField <FormControl> <div className=" space - y-2"> <div className=" flex items - center space - x-2"> <input /> <label html_for=" available"className=" text - white flex items - center gap - 2"> <div className=" h - 2 w - 2 rounded - full bg - green - 500"></div> Available for Work </label> </div> <div className=" flex items - center space - x-2"> <input /> <label html_for=" limited"className=" text - white flex items - center gap - 2"> <div className=" h - 2 w - 2 rounded - full bg - yellow - 500"></div> Limited Availability </label> </div> <div className=" flex items - center space - x-2"> <input /> <label html_for=" unavailable"className=" text - white flex items - center gap - 2"> <div className=" h - 2 w - 2 rounded - full bg - red - 500"></div> Currently Unavailable </label> </div> </div> </FormControl> <FormMessage className=" text - red - 400"/> </FormItem>) ";
+/> </div> </div> </CardContent> <CardFooter className=" border - t border - zion - blue - light pt - 6"> <div className=" flex flex - col sm:flex - row gap - 4 w - full sm:justify - between"> <Button type=" button"variant=" outline"className=" border - zion - blue - light text - zion - slate - light hover:bg - zion - blue - light hover:text - white" > Save as Draft </Button> <Button </Button> </div> </CardFooter> </form> </Form> </Card> </div>);
+'"}

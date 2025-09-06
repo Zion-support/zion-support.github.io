@@ -1,6 +1,6 @@
 import React from 'react',;
 import SEO from '../components/SEO',;
-;
+
 export default function AccessibilityScannerPage() {;
 	return (;
 		<>;
@@ -17,7 +17,7 @@ export default function AccessibilityScannerPage() {;
 			</section>;
 		</>;
 	);
-}import React from 'react';
+import React from 'react';
 import Head from 'next/head';
 
 const AccessibilityScannerPage: React.FC = () => {
@@ -27,7 +27,7 @@ const AccessibilityScannerPage: React.FC = () => {
         <title>Accessibility Scanner - Zion Tech Group</title>
         <meta name="description" content="Accessibility scanning tools and services" />
       </Head>
-      
+
       <div className="min-h-screen bg-gradient-to-br from-gray-900 to-black">
         <div className="container mx-auto px-4 py-16">
           <div className="max-w-4xl mx-auto text-center">
@@ -40,6 +40,5 @@ const AccessibilityScannerPage: React.FC = () => {
       </div>
     </>
   );
-};
 
 export default AccessibilityScannerPage;

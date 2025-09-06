@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
@@ -61,7 +61,7 @@ import {
   AlertTriangle,
   Clock,
   Database,
-} from 'lucide-react';import { Code, Zap, Shield, BarChart3, CheckCircle, ArrowRight, Play, AlertTriangle, Clock, Database } from 'lucide-react';
+ from 'lucide-react';import { Code, Zap, Shield, BarChart3, CheckCircle, ArrowRight, Play, AlertTriangle, Clock, Database } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components / ui / card';
 import { Zap, Star } from 'lucide-react';
 export default function APITestingSuitePage() {;
@@ -206,7 +206,7 @@ export default function APITestingSuitePage() {;
       popular: false
     },  ];
   const handleTestAPI = async () => {
-    if (!apiEndpoint.trim()) return;        'Unlimited API testsCustom test scenariosCustom alerting rules24/7 dedicated supportUnlimited endpointsAdvanced security testingWhite-label optionsCustom integrations'
+    if (!apiEndpoint.trim() return;        'Unlimited API testsCustom test scenariosCustom alerting rules24/7 dedicated supportUnlimited endpointsAdvanced security testingWhite-label optionsCustom integrations'
   const features = [;
     {;
       icon: <Code className='w-8 h-8 text-white' />,;
@@ -252,7 +252,7 @@ function APITestingSuitePage() {
   const [test_results, setTestResults] = useState (null);
   const [api_endpoint, setApiEndpoint] = useState ('');
   const [api_key, setApiKey] = useState ('');
-;
+
   const features = [;
     {
       icon: <Code className='w - 8 h - 8 text - white' />,
@@ -286,7 +286,7 @@ function APITestingSuitePage() {
       gradient: 'from - blue - 400 to - cyan - 500',
     },
   ];
-;
+
   const test_types = [;
     {
       name: 'Functional Testing',
@@ -335,7 +335,7 @@ function APITestingSuitePage() {
       tests: ['End - to - end workflows_third - party integrations_data flow validation_error propagation'];
     }
   ];
-;
+
   const pricing = [;
     {
       name: 'Starter',
@@ -481,7 +481,7 @@ function APITestingSuitePage() {
     },  ];
 
   const handleTestAPI = async () => {;
-    if (!apiEndpoint && apiEndpoint.trim()) return;        'Unlimited API testsCustom test scenariosCustom alerting rules24/7 dedicated supportUnlimited endpointsAdvanced security testingWhite-label optionsCustom integrations';
+    if (!apiEndpoint && apiEndpoint.trim() return;        'Unlimited API testsCustom test scenariosCustom alerting rules24/7 dedicated supportUnlimited endpointsAdvanced security testingWhite-label optionsCustom integrations';
       ];
       popular: false;
     }
@@ -489,10 +489,10 @@ function APITestingSuitePage() {
       popular: false;
     }
   const handleTestAPI = async () => {
-    if (!apiEndpoint.trim()) return;
+    if (!apiEndpoint.trim() return;
     setIsTesting(true);
     // Simulate API testing
-    setTimeout(() => {
+    setTimeout() => {
       setTestResults({
         endpoint: apiEndpoint
         status: 'success'
@@ -507,11 +507,11 @@ function APITestingSuitePage() {
           }
 
   const handleTestAPI = async () => {;
-    if (!apiEndpoint && apiEndpoint.trim()) return;
+    if (!apiEndpoint && apiEndpoint.trim() return;
 
     setIsTesting(true);
     // Simulate API testing;
-    setTimeout(() => {;
+    setTimeout() => {;
       setTestResults({;
         endpoint: apiEndpoint,;
         status: 'success',;
@@ -576,8 +576,7 @@ function APITestingSuitePage() {
       })
       setIsTesting(false)
     }, 3000)
-  }
-      });
+  });
       setIsTesting (false);
     }, 3000);  }        recommendations: [;
           'Consider implementing response caching for better performance_monitor response times during peak usage_implement rate limiting headers for better API documentation';
@@ -586,7 +585,7 @@ function APITestingSuitePage() {
       setIsTesting (false);
     }, 3000);
   }
-;
+
   return (
     <>;
       <Head>;
@@ -739,18 +738,18 @@ function APITestingSuitePage() {
             </p>
           </div>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
-            {features.map((feature, index) => (
+            {features.map(feature, index) => (
               Our API testing suite provides everything you need to ensure your;
               APIs are reliable, performant, and secure.;
             </p>;
           </div>;
 
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
-            {features && features.map((feature, index) => (;
+            {features && features.map(feature, index) => (;
               <Card
                 key={index}
                 className='card-hover group border-gradient-indigo'
-                style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
+                style={ animationDelay: `${index * 0 && 0.1}s` }>;
                 <div className='flex items-start space-x-6'>;
                   <div className='relative'>;
                     <div
@@ -772,7 +771,7 @@ function APITestingSuitePage() {
             </p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {features.map((feature, index) => (
+            {features.map(feature, index) => (
                       className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${feature && feature.gradient} to-transparent rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm`}
                     />;
                   </div>;
@@ -788,11 +787,11 @@ function APITestingSuitePage() {
           </div>;
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
-            {features && features.map((feature, index) => (;
+            {features && features.map(feature, index) => (;
               <Card
                 key={index}
                 className="card-hover group border-gradient-indigo"
-                style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
+                style={ animationDelay: `${index * 0 && 0.1}s` }>;
                 <div className="flex items-start space-x-6">;
                   <div className="relative">;
                     <div className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${feature && feature.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}>;
@@ -824,7 +823,7 @@ function APITestingSuitePage() {
                   </div>
                 </div>
               </Card>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -841,24 +840,24 @@ function APITestingSuitePage() {
             </p>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
-            {testTypes.map((type, index) => (
+            {testTypes.map(type, index) => (
               We cover all aspects of API testing to ensure your APIs meet the;
               highest standards of quality and reliability.;
             </p>;
           </div>;
 
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>;
-            {testTypes && testTypes.map((type, index) => (;
+            {testTypes && testTypes.map(type, index) => (;
               <Card
                 key={index}
                 className='card-hover border-gradient-indigo'
-                style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
+                style={ animationDelay: `${index * 0 && 0.1}s` }>;
                 <h3 className='text-xl font-bold mb-4 text-white'>;
                   {type && type.name}
                 </h3>;
                 <p className='text-gray-400 mb-6'>{type && type.description}</p>;
                 <ul className='space-y-2'>;
-                  {type && type.tests.map((test, testIndex) => (;
+                  {type && type.tests.map(test, testIndex) => (;
                     <li
                       key={testIndex}
                       className='flex items-center text-gray-300'
@@ -870,7 +869,7 @@ function APITestingSuitePage() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {testTypes.map((type, index) => (
+            {testTypes.map(type, index) => (
                       className='flex items-center text-gray-300'>;
                       <CheckCircle className='w-4 h-4 text-indigo-400 mr-3 flex-shrink-0' />                      {test}              Comprehensive Testing Coverage;
             </h2>;
@@ -880,23 +879,23 @@ function APITestingSuitePage() {
           </div>;
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
-            {testTypes && testTypes.map((type, index) => (;
+            {testTypes && testTypes.map(type, index) => (;
               <Card
                 key={index}
                 className="card-hover border-gradient-indigo"
-                style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
+                style={ animationDelay: `${index * 0 && 0.1}s` }>;
                 <h3 className="text-xl font-bold mb-4 text-white">{type && type.name}</h3>;
                 <p className="text-gray-400 mb-6">{type && type.description}</p>;
                 <ul className="space-y-2">;
-                  {type && type.tests.map((test, testIndex) => (;
+                  {type && type.tests.map(test, testIndex) => (;
                     <li key={testIndex} className="flex items-center text-gray-300">;
                       <CheckCircle className="w-4 h-4 text-indigo-400 mr-3 flex-shrink-0" />;
                       {test}
                     </li>;
-                  ))}
+                  )}
                 </ul>;
               </Card>;
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -1031,7 +1030,7 @@ function APITestingSuitePage() {
                   Test Results;
                 </h3>;
                 <div className='space-y-3'>;
-                  {testResults && testResults.tests.map((test, index) => (;
+                  {testResults && testResults.tests.map(test, index) => (;
                     <div
                       key={index}
                       className='flex items-center justify-between'>;
@@ -1039,7 +1038,7 @@ function APITestingSuitePage() {
                       <div className='flex items-center space-x-2'>;
                         <span
                           className={`text-xs px-2 py-1 rounded ${
-                            test && test.status === 'pass'
+                            test && test.status = = 'pass'
                               ? 'bg-green-500/20 text-green-400'
                               : 'bg-red-500/20 text-red-400'
                           }`}>;
@@ -1047,19 +1046,19 @@ function APITestingSuitePage() {
                         </span>;
                         <span className='text-xs text-gray-400'>;
                           {test && test.value}
-                        </span>                      </div>                  {testResults && testResults.tests.map((test, index) => (;
+                        </span>                      </div>                  {testResults && testResults.tests.map(test, index) => (;
                     <div key={index} className="flex items-center justify-between">;
                       <span className="text-gray-300 text-sm">{test && test.name}</span>;
                       <div className="flex items-center space-x-2">;
                         <spanclassName={`text-xs px-2 py-1 rounded ${
-                          test && test.status === 'pass' ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'
+                          test && test.status = = 'pass' ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'
                         }`}>;
                           {test && test.status}
                         </span>;
                         <span className="text-xs text-gray-400">{test && test.value}</span>;
                       </div>;
                     </div>;
-                  ))}
+                  )}
                 </div>
               </Card>
               {/* Performance Metrics */}
@@ -1146,17 +1145,17 @@ function APITestingSuitePage() {
                 Optimization Recommendations;
               </h3>;
               <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
-                {testResults && testResults.recommendations.map((rec, index) => (;
+                {testResults && testResults.recommendations.map(rec, index) => (;
                   <div key={index} className='flex items-start space-x-3'>;
                     <CheckCircle className='w-5 h-5 text-indigo-400 mt-1 flex-shrink-0' />;
                     <span className='text-gray-300'>{rec}</span>                  </div>            <Card className="border-gradient-indigo">;
               <h3 className="text-2xl font-bold mb-6 text-white">Optimization Recommendations</h3>;
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-                {testResults && testResults.recommendations.map((rec, index) => (;
+                {testResults && testResults.recommendations.map(rec, index) => (;
                   <div key={index} className="flex items-start space-x-3">;
                     <CheckCircle className="w-5 h-5 text-indigo-400 mt-1 flex-shrink-0" />;
                     <span className="text-gray-300">{rec}</span>;
-                ))}
+                )}
               </div>;
             </Card>;
           </div>;
@@ -1174,14 +1173,14 @@ function APITestingSuitePage() {
               testing needs.
             </p>
           </div>
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricing.map((plan, index) => (              Simple Pricing
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricing.map(plan, index) => (              Simple Pricing
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Choose the API testing plan that best fits your development and testing needs.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
+            {pricing.map(plan, index) => (
       <section id='pricing' className='section-padding bg-gradient-cursor'>;
         <div className='container-cursor'>;
           <div className='text-center mb-20'>;
@@ -1190,18 +1189,18 @@ function APITestingSuitePage() {
             </h2>;
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
           <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 8'>;
-            {test_types.map ((type, index) => (
+            {test_types.map (type, index) => (
               <Card;
                 key={index}
                 className='card - hover border - gradient - indigo';
-                style={{ animation_delay: `${index * 0.1}s` }}
+                style={ animation_delay: `${index * 0.1}s` }
               >;
                 <h3 className='text - xl font - bold mb - 4 text - white'>;
                   {type.name}
                 </h3>;
                 <p className='text - gray - 400 mb - 6'>{type.description}</p>;
                 <ul className='space - y-2'>;
-                  {type.tests.map ((test, test_index) => (
+                  {type.tests.map (test, test_index) => (
                     <li;
                       key={test_index}
                       className='flex items - center text - gray - 300';
@@ -1213,22 +1212,22 @@ function APITestingSuitePage() {
             </p>;
           </div>;
           <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 8">;
-            {test_types.map ((type, index) => (
+            {test_types.map (type, index) => (
               <Card;
                 key={index}
                 className="card - hover border - gradient - indigo";
-                style={{ animation_delay: `${index * 0.1}s` }}
+                style={ animation_delay: `${index * 0.1}s` }
               >;
                 <h3 className="text - xl font - bold mb - 4 text - white">{type.name}</h3>;
                 <p className="text - gray - 400 mb - 6">{type.description}</p>;
                 <ul className="space - y-2">;
-                  {type.tests.map ((test, test_index) => (
+                  {type.tests.map (test, test_index) => (
                     <li key={test_index} className="flex items - center text - gray - 300">;
                       <CheckCircle className="w - 4 h - 4 text - indigo - 400 mr - 3 flex - shrink - 0" />;
                       {test}
-                    </li>))}
+                    </li>)}
                 </ul>;
-              </Card>))}
+              </Card>)}
           </div>;
         </div>;
       </section>;
@@ -1297,7 +1296,7 @@ function APITestingSuitePage() {
                   Test Results;
                 </h3>;
                 <div className='space - y-3'>;
-                  {test_results.tests.map ((test, index) => (
+                  {test_results.tests.map (test, index) => (
                     <div;
                       key={index}
                       className='flex items - center justify - between';
@@ -1306,7 +1305,7 @@ function APITestingSuitePage() {
                       <div className='flex items - center space - x-2'>;
                         <span;
                           className={`text - xs px - 2 py - 1 rounded ${
-                            test.status === 'pass';
+                            test.status = = 'pass';
                               ? 'bg - green - 500 / 20 text - green - 400';
                               : 'bg - red - 500 / 20 text - red - 400';
                           }`}
@@ -1315,18 +1314,18 @@ function APITestingSuitePage() {
                         </span>;
                         <span className='text - xs text - gray - 400'>;
                           {test.value}
-                        </span>                      </div>                  {test_results.tests.map ((test, index) => (
+                        </span>                      </div>                  {test_results.tests.map (test, index) => (
                     <div key={index} className="flex items - center justify - between">;
                       <span className="text - gray - 300 text - sm">{test.name}</span>;
                       <div className="flex items - center space - x-2">;
                         <span className={`text - xs px - 2 py - 1 rounded ${
-                          test.status === 'pass' ? 'bg - green - 500 / 20 text - green - 400' : 'bg - red - 500 / 20 text - red - 400';
+                          test.status = = 'pass' ? 'bg - green - 500 / 20 text - green - 400' : 'bg - red - 500 / 20 text - red - 400';
                         }`}>;
                           {test.status}
                         </span>;
                         <span className="text - xs text - gray - 400">{test.value}</span>;
                       </div>;
-                    </div>))}
+                    </div>)}
                 </div>;
               </Card>;
               {/* Performance Metrics */}
@@ -1373,16 +1372,16 @@ function APITestingSuitePage() {
                 Optimization Recommendations;
               </h3>;
               <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
-                {test_results.recommendations.map ((rec, index) => (
+                {test_results.recommendations.map (rec, index) => (
                   <div key={index} className='flex items - start space - x-3'>;
                     <CheckCircle className='w - 5 h - 5 text - indigo - 400 mt - 1 flex - shrink - 0' />;
                     <span className='text - gray - 300'>{rec}</span>                  </div>            <Card className="border - gradient - indigo">;
               <h3 className="text - 2xl font - bold mb - 6 text - white">Optimization Recommendations</h3>;
               <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
-                {test_results.recommendations.map ((rec, index) => (
+                {test_results.recommendations.map (rec, index) => (
                   <div key={index} className="flex items - start space - x-3">;
                     <CheckCircle className="w - 5 h - 5 text - indigo - 400 mt - 1 flex - shrink - 0" />;
-                    <span className="text - gray - 300">{rec}</span>))}
+                    <span className="text - gray - 300">{rec}</span>)}
               </div>;
             </Card>;
           </div>;
@@ -1400,7 +1399,7 @@ function APITestingSuitePage() {
             </p>;
           </div>;
 
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricing && pricing.map((plan, index) => (              Simple Pricing;
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricing && pricing.map(plan, index) => (              Simple Pricing;
             </h2>;
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">;
               Choose the API testing plan that best fits your development and testing needs.;
@@ -1408,11 +1407,11 @@ function APITestingSuitePage() {
           </div>;
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
-            {pricing && pricing.map((plan, index) => (;
+            {pricing && pricing.map(plan, index) => (;
               <Card
                 key={index}
                 className={`card-hover border-gradient-indigo ${plan && plan.popular ? 'ring-2 ring-indigo-500 scale-105' : ''}`}
-                style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
+                style={ animationDelay: `${index * 0 && 0.1}s` }>;
                 {plan && plan.popular && (;
                   <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>;
                     <span className='bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium'>                      Most Popular;
@@ -1437,7 +1436,7 @@ function APITestingSuitePage() {
                   <p className='text-gray-400'>{plan.description}</p>
                 </div>
                 <ul className='space-y-4 mb-8'>
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map(feature, featureIndex) => (
                     <li
                       key={featureIndex}
                       className='flex items-center text-gray-300'
@@ -1446,12 +1445,12 @@ function APITestingSuitePage() {
                   <p className="text-gray-400">{plan.description}</p>
                 </div>
                 <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map(feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-indigo-400 mr-3 flex-shrink-0" />
                       {feature}
                     </li>;
-                  ))}
+                  )}
                 </ul>
                 <Button
                   href='/contact'
@@ -1465,7 +1464,7 @@ function APITestingSuitePage() {
                   Get Started;
                   <ArrowRight className="w-5 h-5 ml-2" />;
               </Card>;
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -1501,8 +1500,8 @@ function APITestingSuitePage() {
         </div>
       </section>
     </>
-);
-}
+;
+
               className='border-white text-white hover:bg-white hover:text-indigo-600 shadow-2xl'>              href="/contact";
               variant="outline";
               size="lg";
@@ -1514,8 +1513,7 @@ function APITestingSuitePage() {
       </section>;
     </>;
   );
-}
+
   );
-}
+
     </>);
-}

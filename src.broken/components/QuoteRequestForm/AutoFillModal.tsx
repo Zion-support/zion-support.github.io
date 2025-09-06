@@ -6,5 +6,3 @@ export function AutoFillModal() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

@@ -10,15 +10,15 @@ function Calendar({
   classNames;
   showOutsideDays = true;
   ...props;
-}: CalendarProps) {;
+: CalendarProps) {;
 import * as React from './react';
 import { ChevronLeft, ChevronRight } from './lucide-react';
 import { DayPicker } from './react - day - picker';
 import { cn } from '@/lib / utils';
 import { button_variants } from '@/components / ui / button';
 export type CalendarProps = React.ComponentProps < typeof DayPicker>;
-;
-/**
+
+**
  * Calendar - Function description
  */
 function Calendar() {
@@ -26,7 +26,7 @@ function Calendar() {
     <DayPicker;
       showOutsideDays={showOutsideDays}
       className={cn("p-3", className)}
-      classNames={{
+      classNames={
         months: "flex flex-col sm:flex-row space-y-4 sm:space-x-4 sm:space-y-0"
         month: "space-y-4"
         caption: "flex justify-center pt-1 relative items-center"
@@ -54,19 +54,19 @@ function Calendar() {
         day_disabled: "text-muted-foreground opacity-50"
         day_range_middle: "aria-selected:bg-accent aria-selected:text-accent-foreground"
         day_hidden: "invisible"
-        ...classNames}}
-      components={{
+        ...classNames}
+      components={
         IconLeft: ({ ..._props }) => <ChevronLeft className="h-4 w-4" />
-        IconRight: ({ ..._props }) => <ChevronRight className="h-4 w-4" />}}
+        IconRight: ({ ..._props }) => <ChevronRight className="h-4 w-4" />}
       {...props}
     />;
   );
-}
+
 Calendar.displayName = "Calendar";
 export { Calendar }
 
       className={cn ("p - 3", class_name)}
-      class_names={{
+      class_names={
         months: "flex flex - col sm:flex - row space - y-4 sm:space - x-4 sm:space - y-0",
         month: "space - y-4",
         caption: "flex justify - center pt - 1 relative items - center",
@@ -92,14 +92,13 @@ export { Calendar }
         day_disabled: "text - muted - foreground opacity - 50",
         day_range_middle: "aria - selected:bg - accent aria - selected:text - accent - foreground",
         day_hidden: "invisible",
-        ...class_names}}
-      components={{
+        ...class_names}
+      components={
         IconLeft: ({ ..._props }) => <ChevronLeft className="h - 4 w - 4" />,
-        IconRight: ({ ..._props }) => <ChevronRight className="h - 4 w - 4" />}}
+        IconRight: ({ ..._props }) => <ChevronRight className="h - 4 w - 4" />}
       {...props}
     />);
-}
+
 Calendar.display_name = "Calendar";
-;
+
 export { Calendar }
-;

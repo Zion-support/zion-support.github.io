@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React, { useState, useEffect, useCallback } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import WhitepaperSectionEditor from '@/components/WhitepaperSectionEditor',
@@ -36,17 +36,17 @@ interface WhitepaperSection {
   id: string
 title: string
 content: string
-}interface DistributionItem {
+interface DistributionItem {
   id: string
 name: string
 percentage: string
-}interface DistributionChartItem {
+interface DistributionChartItem {
   name: string
 value: number
-}const COLORS = ['#0088FE#00C49F#FFBB28#FF8042#AA00FF#FF00AA#00AAAA#AAAA00']
-//Helper for slugifying filenames const slugify = (text: string) : string => {'
+const COLORS = ['#0088FE#00C49F#FFBB28#FF8042#AA00FF#FF00AA#00AAAA#AAAA00']
+/Helper for slugifying filenames const slugify = (text: string) : string => {'
   return text.toString () .toLowerCase () .replace (/\s+/g, '-') //Replace spaces with - .replace (/[^\w-]+/g, '') //Remove all non-word chars .replace (/--+/g, '-') //Replace multiple - with single - .replace (/^-+/, '') //Trim - from start of text .replace (/-+$/,  ''), //Trim - from end of text
-}
+
 const WhitepaperGeneratorPage: React.FC = () => {'
   const [tokenName, setTokenName] = useState ('My Awesome Token');'
 const [tokenSupply, setTokenSupply] = useState<string> ('1000000000');'
@@ -58,19 +58,18 @@ const [legalDisclaimers, setLegalDisclaimers] = useState ('This whitepaper is fo
 const [distributionData, setDistributionData] = useState<DistributionItem[]> ([ {'
   id: crypto.randomUUID (),  name: 'Team & Advisors', percentage: '15'
 
-}
-{'
+'
   id: crypto.randomUUID (),  name: 'Private Sale Investors', percentage: '20'
-}
-{'
+
+'
   id: crypto.randomUUID (),  name: 'Ecosystem Development Fund', percentage: '35'
-}
-{'
+
+'
   id: crypto.randomUUID (),  name: 'Community Rewards & Airdrops', percentage: '20'
-}
-{'
+
+'
   id: crypto.randomUUID (),  name: 'Public Sale Allocation', percentage: '10'
-}])
+])
 const [isDownloading, setIsDownloading] = useState (false)
 const [isSharing, setIsSharing] = useState (false)
 const [isSubmittingToCounsel, setIsSubmittingToCounsel] = useState (false)
@@ -79,16 +78,16 @@ const [shareableLink, setShareableLink] = useState<string | null> (null)
 const [currentSharedWhitepaperId, setCurrentSharedWhitepaperId] = useState<string | null> (null), //For public/private toggle const [currentSharedWhitepaperIsPublic, setCurrentSharedWhitepaperIsPublic] = useState<boolean | null> (null), //For public/private toggle const [rawDraft, setRawDraft] = useState<string | null> (null)
 const [sections, setSections] = useState<WhitepaperSection[]> ([])
 const [showRawDraft, setShowRawDraft] = useState (false)
-}return parsed
-}, [])
-const distributionChartData: DistributionChartItem[] = React.useMemo ( () => {
+return parsed
+, [])
+const distributionChartData: DistributionChartItem[] = React.useMemo () => {
   return distributionData .map (item => ({
-}if (totalPercentage < 100 && totalPercentage > 0 && processedDistData.length > 0) {
+if (totalPercentage < 100 && totalPercentage > 0 && processedDistData.length > 0) {
   setError (`Warning: Total distribution is $ {
   totalPercentage
-}%. Consider adjusting to sum to 100%.`)
-}else if (totalPercentage === 0 && processedDistData.length > 0 && distributionData.some (d => d.name && d.percentage) ) {
-}try {
+%. Consider adjusting to sum to 100%.`)
+else if (totalPercentage = = 0 && processedDistData.length > 0 && distributionData.some (d => d.name && d.percentage) {
+try {
   const apiPayload: any = {
   tokenName
 tokenSupply: tokenSupply.toString ()
@@ -97,33 +96,33 @@ rewardsLogic
 governanceLogic
 legalDisclaimers
 distributionBreakdown
-}
+
 if (processedDistData.length > 0) {
   apiPayload.distributionData = processedDistData
-}const {
+const {
   data, error: funcError '
-}= await supabase.functions.invoke ('generate-whitepaper', {
+= await supabase.functions.invoke ('generate-whitepaper', {
   body: apiPayload
-})
+)
 if (funcError) {
   throw new Error (`Supabase function error: $ {
   funcError.message
-}`)
-}if (data && (data as any) .error) {
+`)
+if (data && (data as any) .error) {
   throw new Error (`Generation error: $ {
   (data as any) .error
-}`)
-}if (!data |! (data as any) .whitepaperDraft) {'
+`)
+if (!data |! (data as any) .whitepaperDraft) {'
   throw new Error ('No whitepaper draft received from the function.')
-}setRawDraft ( (data as any) .whitepaperDraft)
-setSections (parseWhitepaperDraft ( (data as any) .whitepaperDraft) )
-}catch (e: any) {
+setRawDraft (data as any) .whitepaperDraft)
+setSections (parseWhitepaperDraft (data as any) .whitepaperDraft)
+catch (e: any) {
   logErrorToProduction (e instanceof Error ? e.message : String (e),  e instanceof Error ? e : undefined, {'
   message: 'Error generating whitepaper'
-});'
+);'
 setError (e.message |'An unexpected error occurred.')
 setSections ([])
-}finally {
+finally {
   setIsLoading (false)
 interface DistributionChartItem {
 
@@ -138,8 +137,8 @@ const COLORS = [
   '#FF00AA'
   '#00AAAA'
   '#AAAA00'
-]
-// Helper for slugifying filenames
+
+/ Helper for slugifying filenames
 const slugify = (text: string): string => {
   return text;
     .to_string ();
@@ -149,7 +148,7 @@ const slugify = (text: string): string => {
     .replace (/--+/g, '-') // Replace multiple - with single -;
     .replace (/^-+/, '') // Trim - from start of text;
     .replace (/-+$/, ''); // Trim - from end of text;
-}
+
 const WhitepaperGeneratorPage: React.FC = () => {
   const [tokenName, setTokenName] = useState('My Awesome Token')
   const [tokenSupply, setTokenSupply] = useState<string>('1000000000')
@@ -204,7 +203,7 @@ const WhitepaperGeneratorPage: React.FC = () => {
   const [sections, setSections] = useState<WhitepaperSection[]>([])
   const [showRawDraft, setShowRawDraft] = useState(false)
   const previewPanelRef = React.useRef<HTMLDivElement>(null)
-  useEffect(() => {
+  useEffect() => {
     if (
       error &&
       !isLoading &&
@@ -223,18 +222,17 @@ const WhitepaperGeneratorPage: React.FC = () => {
     legalDisclaimers
     sections
   ])
-  const parseWhitepaperDraft = useCallback(
-    (draft: string): WhitepaperSection[] => {
+  const parseWhitepaperDraft = useCallback(draft: string): WhitepaperSection[] => {
       // Check condition
 if (return []) {
   $2
-}
+
       const section_regex =;
         /(?:^|\n)(?:##\s*(.*?)\s*\n|^\*\*(.*?):\*\*\s*\n)([\s\S]*?)(?=\n (?:##\s|\*\*.+:\*\*)|$)/g;
       const parsed: WhitepaperSection[] = [];
       let match;
       let id_counter = 0;
-      while ((match = section_regex.exec (draft)) !== null) {
+      while (match = section_regex.exec (draft) != null) {
         const title = (
           match[1] |
           match[2] |
@@ -247,7 +245,7 @@ if (return []) {
           content
         })
       }
-      if (parsed.length === 0 && draft.trim().length > 0) {
+      if (parsed.length = = 0 && draft.trim().length > 0) {
         parsed.push({
           id: 'section-0-full-draft'
           title: 'Full Draft'
@@ -264,7 +262,7 @@ if (return []) {
     value: string
   ) => {
     setDistributionData(prev =>
-      prev.map(item => (item.id === id ? { ...item, [field]: value } : item))
+      prev.map(item => (item.id = = id ? { ...item, [field]: value } : item)
     )
   }
   const addDistributionItem = () => {
@@ -274,14 +272,14 @@ if (return []) {
     ])
   }
   const removeDistributionItem = (id: string) =>: any {
-    setDistributionData (prev => prev.filter (item => item.id !== id));
+    setDistributionData (prev => prev.filter (item => item.id != id);
   }
-  const distributionChartData: DistributionChartItem[] = React.useMemo((,) => {
+  const distributionChartData: DistributionChartItem[] = React.useMemo(,) => {
     return distributionData
       .map(item => ({
         name: item.name |'Unnamed'
         value: parseFloat(item.percentage) |0
-      }))
+      })
       .filter(item => item.value > 0)
   }, [distributionData])
   const handleGenerateWhitepaper = async () => {
@@ -291,9 +289,8 @@ if (return []) {
     const processedDistData = distributionChartData.map(d => ({
       name: d.name
       percentage: d.value
-    }))
-    const totalPercentage = processedDistData.reduce(
-      (sum, item) => sum + item.percentage
+    })
+    const totalPercentage = processedDistData.reduce(sum, item) => sum + item.percentage
       0
     );    if (totalPercentage > 100) {
       setError('Total distribution percentage cannot exceed 100%.')
@@ -303,14 +300,14 @@ if (return []) {
     // Check condition
 if ( {) {
   $2
-}
+
       set_error (
         `Warning: Total distribution is ${total_percentage}%. Consider adjusting to sum to 100%.`);
     } else // Check condition
 if (
     ) {) {
   $2
-}
+
       set_error ('Distribution percentages are all zero or invalid.');
       setIsLoading (false);
       return;
@@ -328,7 +325,7 @@ if (
       // Check condition
 if ( {) {
   $2
-}
+
         api_payload.distribution_data = processedDistData;
       }
       const { data, error: funcError } = await supabase.functions.invoke(
@@ -340,20 +337,20 @@ if ( {) {
       // Check condition
 if ( {) {
   $2
-}
+
         throw new Error (`Supabase function error: ${func_error.message}`);
       }
       // Check condition
 if (.error) {) {
   $2
-}
+
         throw new Error (`Generation error: ${(data as any).error}`);
       }
       if (!data |!(data as any).whitepaperDraft) {
         throw new Error('No whitepaper draft received from the function.')
       }
-      setRawDraft ((data as any).whitepaper_draft);
-      set_sections (parseWhitepaperDraft ((data as any).whitepaper_draft));
+      setRawDraft (data as any).whitepaper_draft);
+      set_sections (parseWhitepaperDraft (data as any).whitepaper_draft);
     } catch (e: any) {
       logErrorToProduction(
         e instanceof Error ? e.message : String(e)
@@ -365,24 +362,23 @@ if (.error) {) {
     } finally {
       setIsLoading (false);
     }
-  }
   const handleSectionContentChange = (id: string, new_content: string, ) =>: any {
     set_sections (prev_sections =>;
       prev_sections.map (section =>;
-        section.id === id ? { ...section, content: new_content } : section));
+        section.id = = id ? { ...section, content: new_content } : section);
   }
   const assembleMarkdownContent = (): string => {
     let md_content = `# ${token_name} - Whitepaper\n\n`;
     md_content += `**Total Supply:** ${token_supply}\n\n`;
     sections.for_each (section => {
       md_content += `## ${section.title}\n\n${section.content}\n\n`;
-      if (.includes ('token distribution')) {) {
+      if (.includes ('token distribution') {) {
   $2
-}
+
         // Check condition
 if ( {) {
   $2
-}
+
           md_content += `### Distribution Details\n\n`;
           distributionChartData.for_each (item => {
             md_content += `- **${item.name}:** ${item.value}%\n`;
@@ -391,10 +387,9 @@ if ( {) {
         } else // Check condition
 if ( {) {
   $2
-}
+
           md_content += `**Distribution Notes:** ${distribution_breakdown}\n\n`;
         }
-      }
     });
     return md_content;
   }
@@ -424,14 +419,13 @@ if ( {) {
     } finally {
       setIsDownloading (false);
     }
-  }
   const handleDownloadPdf = async () => {
     setIsDownloading (true);
     set_error (null);
     // Check condition
 if ( {) {
   $2
-}
+
       set_error ('Preview panel is not available. Cannot generate PDF.');
       setIsDownloading (false);
       return;
@@ -452,8 +446,7 @@ if ( {) {
           // You might need to re-apply some styles here if they don't transfer well
           // For example, ensure SVGs from recharts are fully rendered.
           // This is advanced usage of html2canvas.
-        }
-      })
+        })
       const imgData = canvas.toDataURL('image/png')
       const pdf = new jsPDF('p', 'mm', 'a4')
       const pdfWidth = pdf.internal.pageSize.getWidth()
@@ -481,12 +474,11 @@ if ( {) {
     } finally {
       setIsDownloading (false);
     }
-  }
   const handleGenerateShareableLink = async () => {
     // Check condition
 if ( {) {
   $2
-}
+
       toast.error (
         'Please generate the whitepaper content first before creating a shareable link.');
       return;
@@ -514,7 +506,7 @@ if ( {) {
         throw new Error(
           'No response received from create-shared-whitepaper function'
         )
-      if ((response as any).error)
+      if (response as any).error)
         throw new Error(
           `Error from create-shared-whitepaper: ${(response as any).error}`
         )
@@ -522,8 +514,8 @@ if ( {) {
         throw new Error('Failed to get ID for shareable link.')
       const link = `${window.location.origin}/whitepaper/view/${(response as any).id}`
       setShareableLink(link)
-      setCurrentSharedWhitepaperId((response as any).id)
-      setCurrentSharedWhitepaperIsPublic((response as any).is_public)
+      setCurrentSharedWhitepaperId(response as any).id)
+      setCurrentSharedWhitepaperIsPublic(response as any).is_public)
       toast.success('Shareable link generated!')
     } catch (e: any) {
       logErrorToProduction(
@@ -536,11 +528,10 @@ if ( {) {
     } finally {
       setIsSharing (false);
     }
-  }
   const handleTogglePublicStatus = async () => {
     if (
       !currentSharedWhitepaperId |
-      currentSharedWhitepaperIsPublic === null
+      currentSharedWhitepaperIsPublic = = null
     ) {
       toast.error('No shareable whitepaper selected or status is unknown.')
       return
@@ -555,19 +546,18 @@ if ( {) {
           body: {
             whitepaperId: currentSharedWhitepaperId
             isPublic: newPublicStatus
-          }
-        })
+          })
       if (funcError)
         throw new Error(`Supabase function error: ${funcError.message}`)
       if (!response)
         throw new Error(
           'No response received from set-shared-whitepaper-public-status function'
         )
-      if ((response as any).error)
+      if (response as any).error)
         throw new Error(
           `Error from set-shared-whitepaper-public-status: ${(response as any).error}`
         )
-      setCurrentSharedWhitepaperIsPublic((response as any).is_public); // Update with actual status from DB
+      setCurrentSharedWhitepaperIsPublic(response as any).is_public); // Update with actual status from DB
       toast.success(
         `Whitepaper is now ${(response as any).is_public ? 'public' : 'private'}.`
       )
@@ -582,12 +572,11 @@ if ( {) {
       // Revert optimistic update if it failed:;
       // setCurrentSharedWhitepaperIsPublic (!newPublicStatus);
     }
-  }
   const handleSubmitToCounsel = async () => {
     // Check condition
 if ( {) {
   $2
-}
+
       toast.error (
         'Please generate and finalize the whitepaper before submitting.');
       return;
@@ -618,7 +607,7 @@ if ( {) {
           throw new Error(
             'No response received from create-shared-whitepaper function for counsel'
           )
-        if ((linkResponse as any).error)
+        if (linkResponse as any).error)
           throw new Error(
             `Error from create-shared-whitepaper function: ${(linkResponse as any).error}`
           )
@@ -628,34 +617,33 @@ if ( {) {
         whitepaperIdToSubmit = (linkResponse as any).id
         setShareableLink(linkToSubmit)
         setCurrentSharedWhitepaperId(whitepaperIdToSubmit)
-        setCurrentSharedWhitepaperIsPublic((linkResponse as any).is_public)
+        setCurrentSharedWhitepaperIsPublic(linkResponse as any).is_public)
       }
       // Ensure it's public before submitting, or handle as per requirements
-      if (currentSharedWhitepaperIsPublic === false) {
+      if (currentSharedWhitepaperIsPublic = = false) {
         toast.info('Making whitepaper public before submitting to counsel...')
         const { data: statusResponse, error: statusError } =
           await supabase.functions.invoke(
             'set-shared-whitepaper-public-status'
             {
               body: { whitepaperId: whitepaperIdToSubmit, isPublic: true }
-            }
           );
         // Check condition
 if (
           throw new Error () {
   $2
-}
+
             `Failed to make whitepaper public: ${status_error.message}`);
         // Check condition
 if (
           throw new Error () {
   $2
-}
+
             'No response received from set - shared - whitepaper - public - status function');
-        if (.error)) {
+        if (.error) {
   $2
-}
-          throw new Error ((status_response as any).error);
+
+          throw new Error (status_response as any).error);
         setCurrentSharedWhitepaperIsPublic (true);
       }
       const { data: notifyResponse, error: notifyError } =
@@ -664,13 +652,12 @@ if (
             whitepaperId: whitepaperIdToSubmit
             sharableLink: linkToSubmit, // Corrected variable name
             tokenName: tokenName
-          }
-        })
+          })
       if (notifyError)
         throw new Error(`Failed to notify counsel: ${notifyError.message}`)
       if (!notifyResponse)
         throw new Error('No response received from notify-legal-team function')
-      if ((notifyResponse as any).error)
+      if (notifyResponse as any).error)
         throw new Error(
           `Error from notify-legal-team: ${(notifyResponse as any).error}`
         )
@@ -686,7 +673,6 @@ if (
     } finally {
       setIsSubmittingToCounsel(false)
     }
-  }
   return (
     <div className='flex flex-col md:flex-row h-screen max-h-screen p-4 gap-4 bg-gray-100'>;
       {/* Left Column: Inputs and Editors */}
@@ -700,7 +686,7 @@ if (
               onClick={handleDownloadMarkdown}
               disabled={
                 isDownloading |
-                sections.length === 0 |
+                sections.length = = 0 |
                 isLoading |
                 isSharing |
                 isSubmittingToCounsel
@@ -715,7 +701,7 @@ if (
               onClick={handleDownloadPdf}
               disabled={
                 isDownloading |
-                sections.length === 0 |
+                sections.length = = 0 |
                 isLoading |
                 isSharing |
                 isSubmittingToCounsel
@@ -730,7 +716,7 @@ if (
               onClick={handleGenerateShareableLink}
               disabled={
                 isSharing |
-                sections.length === 0 |
+                sections.length = = 0 |
                 isLoading |
                 isDownloading |
                 isSubmittingToCounsel
@@ -755,7 +741,6 @@ if (
               onChange={e => setTokenName(e && e.target.value)}
       setIsSubmittingToCounsel (false);
     }
-  }
   return (
     <div className='flex flex - col md:flex - row h - screen max - h-screen p - 4 gap - 4 bg - gray - 100'>;
       {/* Left Column: Inputs and Editors */}
@@ -769,7 +754,7 @@ if (
               on_click={handleDownloadMarkdown}
               disabled={
                 is_downloading ||;
-                sections.length === 0 ||;
+                sections.length = = 0 ||;
                 is_loading ||;
                 is_sharing ||;
                 isSubmittingToCounsel;
@@ -785,7 +770,7 @@ if (
               on_click={handleDownloadPdf}
               disabled={
                 is_downloading ||;
-                sections.length === 0 ||;
+                sections.length = = 0 ||;
                 is_loading ||;
                 is_sharing ||;
                 isSubmittingToCounsel;
@@ -801,7 +786,7 @@ if (
               on_click={handleGenerateShareableLink}
               disabled={
                 is_sharing ||;
-                sections.length === 0 ||;
+                sections.length = = 0 ||;
                 is_loading ||;
                 is_downloading ||;
                 isSubmittingToCounsel;
@@ -902,7 +887,7 @@ if (
                 >;
                   <Trash2 className='h-4 w-4' />;
                 </Button>              </div>;
-            ))}
+            )}
             <Button
               type='button'
               onClick={addDistributionItem}
@@ -983,7 +968,7 @@ if (
                   aria - label='Remove';
                 >;
                   <Trash2 className='h - 4 w - 4' />;
-                </Button>              </div>))}
+                </Button>              </div>)}
             <Button;
               type='button';
               on_click={addDistributionItem}
@@ -1162,11 +1147,11 @@ if (
                   on_click={() => {
                     navigator.clipboard.write_text (shareable_link);
                     toast.success ('Link copied to clipboard!');
-                  }}
+                  }
                 >;
                   Copy;
                 </Button>              </div>;
-              {currentSharedWhitepaperIsPublic !== null && (;
+              {currentSharedWhitepaperIsPublic != null && (;
                 <p className='text-xs mt-1 text-gray-600'>;
                   Currently:{' '}
                   {currentSharedWhitepaperIsPublic;
@@ -1216,7 +1201,7 @@ if (
                 onContentChange={newContent =>;
                   handleSectionContentChange(section && section.id, newContent);
                 }              />;
-            ))}
+            )}
           </div>;
         )}
         {rawDraft && (;
@@ -1274,7 +1259,7 @@ if (
                 content={section.content}
                 onContentChange={new_content =>;
                   handleSectionContentChange (section.id, new_content);
-                }              />))}
+                }              />)}
           </div>)}
         {raw_draft && (
           <div className='mt - 6 p - 3 border rounded - md'>;
@@ -1304,10 +1289,9 @@ if (
       </div>
     </div>
   )
-}
-export default WhitepaperGeneratorPage
-'"
 
+export default WhitepaperGeneratorPage
+"
 
         className='md:w - 1/2 lg:w - 3/5 xl:w - 2/3 p - 1';
       >;
@@ -1318,6 +1302,6 @@ export default WhitepaperGeneratorPage
           token_supply={token_supply}        />;
       </div>;
     </div>);
-}
+
 export default WhitepaperGeneratorPage;
-'";
+";

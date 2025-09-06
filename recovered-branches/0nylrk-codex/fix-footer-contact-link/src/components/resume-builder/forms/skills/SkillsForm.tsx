@@ -36,26 +36,22 @@ export function SkillsForm(): any ({ resumeId, skills, onComplete, onBack }: Ski
       setError(err.message |'An error occurred')
       return false
     }
-  }
   const handleDeleteSkill = async (id: string, category: string = 'Other') => {
-    if (confirm('Are you sure you want to delete this skill?')) {
+    if (confirm('Are you sure you want to delete this skill?') {
       const success = await deleteSkill(id)
       if (success) {
         // Update local state
-        setLocalSkills(localSkills.filter(skill => skill.id !== id))
+        setLocalSkills(localSkills.filter(skill => skill.id != id)
       }
-    }
   }
   const refreshSkills = async () => {
     try {
       const resumeData = await fetchResume(resumeId);
       if (resumeData && resumeData.skills) {;
         setLocalSkills(resumeData.skills);
-      }
-    } catch (err: any) {
+      } catch (err: any) {
       setError(err.message |'Failed to refresh skills')
     }
-  }
 
   return (
     <div className="space-y-6">
@@ -79,13 +75,13 @@ export function SkillsForm(): any ({ resumeId, skills, onComplete, onBack }: Ski
         <Button variant="outline" onClick={onBack}>
           Back
         </Button>
-        <Button onClick={onComplete} disabled={localSkills.length === 0}>
+        <Button onClick={onComplete} disabled={localSkills.length = = 0}>
           Next
         </Button>
       </div>
     </div>
   )
-}
+
 export /**
  * SkillsForm - Function description
  */
@@ -93,7 +89,7 @@ function SkillsForm() {
   const { add_skill, delete_skill, fetch_resume } = use_resume ();
   const [error, set_error] = useState < string | null>(null);
   const [local_skills, setLocalSkills] = useState < Skill[]>(skills);
-;
+
   const handleAddSkill = async (data: Skill) => {
     try {
       set_error (null),
@@ -101,7 +97,7 @@ function SkillsForm() {
       // Check condition
 if ( {) {
   $2
-}
+
         // Refresh the skills list;
         await refresh_skills ();
       }
@@ -110,37 +106,33 @@ if ( {) {
       set_error (err.message || 'An error occurred'),
       return false;
     }
-  }
-;
+
   const handleDeleteSkill = async (id: string, category: string = 'Other') => {
     if () {) {
   $2
-}
+
       const success = await delete_skill (id),
       // Check condition
 if ( {) {
   $2
-}
+
         // Update local state;
-        setLocalSkills (local_skills.filter (skill => skill.id !== id));
+        setLocalSkills (local_skills.filter (skill => skill.id != id);
       }
-    }
   }
-;
+
   const refresh_skills = async () => {
     try {
       const resume_data = await fetch_resume (resume_id);
       // Check condition
 if ( {) {
   $2
-}
+
         setLocalSkills (resume_data.skills);
-      }
-    } catch (err: any) {
+      } catch (err: any) {
       set_error (err.message || 'Failed to refresh skills');
     }
-  }
-;
+
   return (
     <div className="space - y-6">;
       <div>;
@@ -163,9 +155,8 @@ if ( {) {
         <Button variant="outline" on_click={on_back}>;
           Back;
         </Button>;
-        <Button on_click={on_complete} disabled={local_skills.length === 0}>;
+        <Button on_click={on_complete} disabled={local_skills.length = = 0}>;
           Next;
         </Button>;
       </div>;
     </div>);
-}

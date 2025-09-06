@@ -12,5 +12,3 @@ export default function OrderSuccess() {
       <Link className="underline" to="/">Return Home</Link>
     </div>
   )
-}
-;

@@ -11,14 +11,14 @@ import {
   Palette, Camera, Video, Music, Gamepad2, Heart,
   Leaf, Sun, Moon, Wind, Droplets, Mountain,
   Code, Wrench, Smartphone, BarChart3
-} from 'lucide-react',
+ from 'lucide-react',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-},
+,
 const serviceCategories = [
   {title: ' 2028 Futuristic Innovations', icon: Rocket, color: 'from-violet-600 to-purple-600', description: 'Beyond the future of technology', services: [
       { name: 'AI Climate Prediction Platform', href: '/ai-climate-prediction-platform', description: 'Predict climate changes with 99.9% accuracy', price: '$2, 999/month'},
@@ -90,7 +90,7 @@ const serviceCategories = [
       {name: 'Sustainable Supply Chain', href: '/sustainable-supply-chain', description: 'Green supply chain solutions', price: '$3, 999/month'}
     ]
   }
-],
+,
 
 const companyLinks = [
   { name: ' Home', href: '/', icon: Home },
@@ -102,7 +102,7 @@ const companyLinks = [
   { name: ' About Us', href: '/about', icon: Users },
   { name: ' Contact', href: '/contact', icon: MessageCircle },
   { name: ' Support', href: '/support', icon: ShieldCheck }
-],
+,
 
 const resourceLinks = [
   { name: ' Documentation', href: '/docs', icon: BookOpen },
@@ -113,7 +113,7 @@ const resourceLinks = [
   { name: ' Cloud Services', href: '/cloud', icon: Cloud },
   { name: ' Security Center', href: '/security', icon: Shield },
   { name: ' Analytics', href: '/analytics', icon: BarChart3 }
-],
+,
 
 export default function UltraFuturisticNavigation2028() {
   const [isOpen, setIsOpen] = useState(false),
@@ -132,10 +132,9 @@ export default function UltraFuturisticNavigation2028() {
   },
   const filteredServices = serviceCategories.flatMap(category =>
     category.services.filter(service =>
-      service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      service.description.toLowerCase().includes(searchQuery.toLowerCase())
-    )
-  ),
+      service.name.toLowerCase().includes(searchQuery.toLowerCase() ||
+      service.description.toLowerCase().includes(searchQuery.toLowerCase()
+    ),
 
   return (
     <nav className=&quot;relative z-50 bg-black/90 backdrop-blur-xl border-b border-purple-500/30&quot;>
@@ -193,12 +192,12 @@ export default function UltraFuturisticNavigation2028() {
                 <Sparkles className=&quot;w-5 h-5&quot; />                <span>Services</span>
                 <ChevronDown className=&quot;w-4 h-4&quot; />
               </button>
-              
+
               {/* Mega Menu */}
               <div className=&quot;absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-purple-500/30 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0&quot;>
                 <div className=&quot;p-6&quot;>
                   <div className=&quot;grid grid-cols-3 gap-6&quot;>
-                    {serviceCategories.slice(0, 6).map((category) => (
+                    {serviceCategories.slice(0, 6).map(category) => (
                       <div key={category.title} className=&quot;space-y-3&quot;>
                         <div className=&quot;flex items-center space-x-3&quot;>
                           <category.icon className={`w-6 h-6 bg-gradient-to-r ${category.color} bg-clip-text text-transparent`} />
@@ -206,7 +205,7 @@ export default function UltraFuturisticNavigation2028() {
                         </div>
                         <p className=&quot;text-sm text-purple-300&quot;>{category.description}</p>
                         <div className=&quot;space-y-2&quot;>
-                          {category.services.slice(0, 2).map((service) => (
+                          {category.services.slice(0, 2).map(service) => (
                             <Link,
 key={service.name}
                               href={service.href}
@@ -220,10 +219,10 @@ key={service.name}
                                 </div>
                                 <span className=&quot;text-xs text-purple-400 font-medium&quot;>{service.price}</span>                              </div>
                             </a>
-                          ))}
+                          )}
                         </div>;
                       </div>;
-                    ))}
+                    )}
                   </div>
                   <div className=&quot;mt-6 pt-6 border-t border-purple-500/20&quot;>
                     <div className=&quot;flex items-center justify-between&quot;>
@@ -250,9 +249,9 @@ key={link.name}
                 <link.icon className=&quot;w-4 h-4&quot; />
                 <span>{link.name.replace(/^[]/g, '').trim()}</span>
               </a>
-            ))}
+            )}
           </div>;
-;
+
           {/* Search and Actions */}
           <div className=&quot;hidden lg:flex items-center space-x-4&quot;>
             {/* Search */}
@@ -290,9 +289,9 @@ onClick={toggleMenu}
       <AnimatePresence>
         {isOpen && (
           <motion.div,
-initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
+initial={ opacity: 0, height: 0 }
+            animate={ opacity: 1, height: 'auto' }
+            exit={ opacity: 0, height: 0 }
             className=&quot;lg:hidden bg-black/95 backdrop-blur-xl border-t border-purple-500/30&quot;
           >
             <div className=&quot;px-4 py-6 space-y-6&quot;>
@@ -313,14 +312,14 @@ type=&quot;text&quot;
                 <h3 className=&quot;text-lg font-semibold text-white border-b border-purple-500/30 pb-2&quot;>
                   Services
                 </h3>
-                {serviceCategories.map((category) => (
+                {serviceCategories.map(category) => (
                   <div key={category.title} className=&quot;space-y-2&quot;>
                     <div className=&quot;flex items-center space-x-3 text-purple-200&quot;>
                       <category.icon className=&quot;w-5 h-5&quot; />
                       <span className=&quot;font-medium&quot;>{category.title}</span>
                     </div>
                     <div className=&quot;ml-8 space-y-2&quot;>
-                      {category.services.map((service) => (
+                      {category.services.map(service) => (
                         <Link,
 key={service.name}
                           href={service.href}
@@ -330,19 +329,19 @@ key={service.name}
                           <h4 className=&quot;text-sm font-medium text-white&quot;>{service.name}</h4>
                           <p className=&quot;text-xs text-purple-300&quot;>{service.description}</p>
                           <span className=&quot;text-xs text-purple-400 font-medium&quot;>{service.price}</span>
-                        </a>                      ))}
+                        </a>                      )}
                     </div>
                   </div>
-                ))}
+                )}
               </div>;
-;
+
               {/* Mobile Company Links */}
               <div className=&quot;space-y-4&quot;>
                 <h3 className=&quot;text-lg font-semibold text-white border-b border-purple-500/30 pb-2&quot;>
                   Company
                 </h3>
                 <div className=&quot;grid grid-cols-2 gap-4&quot;>
-                  {companyLinks.map((link) => (
+                  {companyLinks.map(link) => (
                     <Link,
 key={link.name}
                       href={link.href}
@@ -351,7 +350,7 @@ key={link.name}
                     >
                       <link.icon className=&quot;w-5 h-5 text-purple-400&quot; />
                       <span className=&quot;text-purple-200&quot;>{link.name.replace(/^[]/g, '').trim()}</span>
-                    </a>                  ))}
+                    </a>                  )}
                 </div>
               </div>
 
@@ -368,13 +367,13 @@ href=&quot;/contact&quot;
           </motion.div>
         )}
       </AnimatePresence>;
-;
+
       {/* Search Results Dropdown */}
       {searchQuery && filteredServices.length > 0 && (
         <div className=&quot;absolute top-full left-0 right-0 bg-black/95 backdrop-blur-xl border border-purple-500/30 rounded-2xl shadow-2xl z-50&quot;>
           <div className=&quot;p-4&quot;>
             <div className=&quot;space-y-2&quot;>
-              {filteredServices.slice(0, 8).map((service) => (
+              {filteredServices.slice(0, 8).map(service) => (
                 <Link,
 key={service.name}
                   href={service.href}
@@ -386,7 +385,7 @@ key={service.name}
                     </div>
                     <span className=&quot;text-xs text-purple-400 font-medium&quot;>{service.price}</span>                  </div>
                 </a>
-              ))}
+              )}
             </div>;
           </div>;
         </div>;

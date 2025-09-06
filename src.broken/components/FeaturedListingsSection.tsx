@@ -6,5 +6,3 @@ export function FeaturedListingsSection() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

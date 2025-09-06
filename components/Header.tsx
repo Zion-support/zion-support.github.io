@@ -1,6 +1,6 @@
-"use client";
+use client";
 
-"use client";
+use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import {
@@ -49,7 +49,7 @@ import {;
   Factory,;
   Truck,;
   CreditCard,;
-} from "lucide-react";
+ from "lucide-react";
 
 export default function Header() {;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -59,14 +59,14 @@ export default function Header() {;
   const [isScrolled, setIsScrolled] = useState(false);
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const closeMenu = () => setIsMenuOpen(false);
-  useEffect(() => {
+  useEffect() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 0);
     }
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-;
+
   const services_dropdown = [;
     {
       title: "Web Development"
@@ -173,9 +173,9 @@ export default function Header() {;
           </div>
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex space-x-8">
-            {navigation.map((item) => (
+            {navigation.map(item) => (
           <nav className="hidden md:flex space-x-8">
-            {navigation.map((item) => (
+            {navigation.map(item) => (
               <div key={item.name} className="relative group">
                 <Link
                   href={item.href}
@@ -186,7 +186,7 @@ export default function Header() {;
                 {item.submenu && (
                   <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                     <div className="py-1">
-                      {item.submenu.map((subItem) => (
+                      {item.submenu.map(subItem) => (
                         <Link
                           key={subItem.name}
                           href={subItem.href}
@@ -195,15 +195,15 @@ export default function Header() {;
                           <subItem.icon className="h-4 w-4 mr-2" />
                           {subItem.name}
                         </Link>
-                      ))}
+                      )}
                     </div>
                   </div>
                 )}
               </div>
-            ))}
+            )}
           </nav>
 
-  useEffect(() => {;
+  useEffect() => {;
     const handleScroll = () => {;
       setIsScrolled(window && window.scrollY > 0);
     };
@@ -322,14 +322,14 @@ export default function Header() {;
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex space-x-8">;
-            {navigation && navigation.map((item) => (;
+            {navigation && navigation.map(item) => (;
               <Link
                 key={item && item.name}
                 href={item && item.href}
                 className="text-gray-700 hover:text-blue-600 font-medium transition-colors">;
                 {item && item.name}
               </Link>;
-            ))}
+            )}
           </nav>
           </nav>;
 
@@ -362,12 +362,12 @@ export default function Header() {;
         <AnimatePresence>;
           {isMenuOpen && (;
             <motion&& motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: "auto" }}
-              exit={{ opacity: 0, height: 0 }}
+              initial={ opacity: 0, height: 0 }
+              animate={ opacity: 1, height: "auto" }
+              exit={ opacity: 0, height: 0 }
               className="lg:hidden bg-white shadow-lg">;
               <div className="px-4 py-6 space-y-4">;
-                {navigation && navigation.map((item) => (;
+                {navigation && navigation.map(item) => (;
                   <Link
                     key={item && item.name}
                     href={item && item.href}
@@ -375,7 +375,7 @@ export default function Header() {;
                     className="block text-gray-700 hover:text-blue-600 font-medium">;
                     {item && item.name}
                   </Link>;
-                ))}
+                )}
                 <Link
                   href="/contact"
                   onClick={closeMenu}
@@ -425,7 +425,7 @@ export default function Header() {;
       icon: Zap,
     },
   ];
-;
+
   const solutions_dropdown = [;
     {
       title: "Enterprise Solutions",
@@ -452,7 +452,7 @@ export default function Header() {;
       icon: GraduationCap,
     },
   ];
-;
+
   const industries_dropdown = [;
     { name: "Manufacturing", href: "/industries / manufacturing", icon: Factory },
     { name: "Logistics", href: "/industries / logistics", icon: Truck },
@@ -461,7 +461,7 @@ export default function Header() {;
     { name: "Education", href: "/industries / education", icon: GraduationCap },
     { name: "Retail", href: "/industries / retail", icon: ShoppingCart },
   ];
-;
+
   const navigation = [;
     { name: "Home", href: "/" },
     {
@@ -479,12 +479,12 @@ export default function Header() {;
     { name: "Industries", href: "/industries" },
     { name: "Contact", href: "/contact" },
   ];
-;
+
   const handleServiceClick = (href: string) =>: any {
     close_menu ();
     window.location.href = href;
   }
-;
+
   return (
     <header className="bg - white shadow - lg sticky top - 0 z - 50">;
       <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
@@ -497,14 +497,14 @@ export default function Header() {;
           </div>;
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex space - x-8">;
-            {navigation.map ((item) => (
+            {navigation.map (item) => (
               <Link;
                 key={item.name}
                 href={item.href}
                 className="text - gray - 700 hover:text - blue - 600 font - medium transition - colors";
               >;
                 {item.name}
-              </Link>))}
+              </Link>)}
           </nav>;
           {/* Desktop CTA Button */}
           <div className="hidden lg:flex items - center space - x-4">;
@@ -529,13 +529,13 @@ export default function Header() {;
         <AnimatePresence>;
           {isMenuOpen && (
             <motion.div;
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: "auto" }}
-              exit={{ opacity: 0, height: 0 }}
+              initial={ opacity: 0, height: 0 }
+              animate={ opacity: 1, height: "auto" }
+              exit={ opacity: 0, height: 0 }
               className="lg:hidden bg - white shadow - lg";
             >;
               <div className="px - 4 py - 6 space - y-4">;
-                {navigation.map ((item) => (
+                {navigation.map (item) => (
                   <Link;
                     key={item.name}
                     href={item.href}
@@ -543,7 +543,7 @@ export default function Header() {;
                     className="block text - gray - 700 hover:text - blue - 600 font - medium";
                   >;
                     {item.name}
-                  </Link>))}
+                  </Link>)}
                 <Link;
                   href="/contact";
                   on_click={close_menu}
@@ -556,4 +556,3 @@ export default function Header() {;
         </AnimatePresence>;
       </div>;
     </header>);
-}

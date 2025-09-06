@@ -4,23 +4,22 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
 
 import React from 'react';
 import { SEO  } from '@/components/SEO';
@@ -45,7 +44,7 @@ function ContractBuilderPage() {
       </>
     </ProtectedRoute>
   )
-}
+
 export default ContractBuilderPage;
 
 import React from 'react';
@@ -54,7 +53,7 @@ import {AppHeader} from '@/layout / AppHeader';
 import {Footer} from '@/components / Footer';
 import {ProtectedRoute} from '@/components / ProtectedRoute';
 import {ContractBuilderContent} from '@/components / contracts / page / ContractBuilderContent';
-/**
+**
  * ContractBuilderPage - Function description
  */
 function ContractBuilderPage() {
@@ -72,6 +71,5 @@ function ContractBuilderPage() {
         <Footer />;
       </>;
     </ProtectedRoute>);
-}
+
 export default ContractBuilderPage;
-;

@@ -114,7 +114,7 @@ export default function HomePage() {
             </p>
           </div>
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
-            {features.map((feature, index) => (
+            {features.map(feature, index) => (
               <FeatureCard
                 key={index}
                 icon={feature.icon}
@@ -122,7 +122,7 @@ export default function HomePage() {
                 description={feature.description}
                 features={feature.features}
                 gradient={feature.gradient}
-              />))}
+              />)}
           </div>;
         </div>;
       </section>;
@@ -155,15 +155,15 @@ export default function HomePage() {
               <div className=&quot;text - 3xl font - bold text - blue - 400 mb - 2&quot;>100+</div>;
               <div className=&quot;text - white / 70 & quot;>Features Available</div>;
             </div>;
-            <div className=&quot;animate - fade - in & quot; style={{animation_delay: '0.1s'}}>;
+            <div className=&quot;animate - fade - in & quot; style={animation_delay: '0.1s'}>;
               <div className=&quot;text - 3xl font - bold text - purple - 400 mb - 2&quot;>50+</div>;
               <div className=&quot;text - white / 70 & quot;>Deployment Options</div>;
             </div>;
-            <div className=&quot;animate - fade - in & quot; style={{animation_delay: '0.2s'}}>;
+            <div className=&quot;animate - fade - in & quot; style={animation_delay: '0.2s'}>;
               <div className=&quot;text - 3xl font - bold text - green - 400 mb - 2&quot;>24 / 7</div>;
               <div className=&quot;text - white / 70 & quot;>AI Orchestration</div>;
             </div>;
-            <div className=&quot;animate - fade - in & quot; style={{animation_delay: '0.3s'}}>;
+            <div className=&quot;animate - fade - in & quot; style={animation_delay: '0.3s'}>;
               <div className=&quot;text - 3xl font - bold text - orange - 400 mb - 2&quot;></div>;
               <div className=&quot;text - white / 70 & quot;>Scalability</div>;
             </div>;
@@ -171,4 +171,3 @@ export default function HomePage() {
         </div>;
       </section>;
     </div>);
-}

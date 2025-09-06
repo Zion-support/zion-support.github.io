@@ -3,7 +3,7 @@ import { useState, useMemo } from 'react'
 import {
   onsiteServicePricing
   CountryPricing
-} from '@/data/onsiteServicePricing'
+ from '@/data/onsiteServicePricing'
 import { Input } from '@/components/ui/input'
   Table
   TableBody
@@ -11,7 +11,7 @@ import { Input } from '@/components/ui/input'
   TableHead
   TableHeader
   TableRow
-} from '@/components/ui/table'
+ from '@/components/ui/table'
 import { Globe, Search, ArrowUpDown } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 export function ITServicePricingTable() {
@@ -23,24 +23,24 @@ export function ITServicePricingTable() {
     key: 'country'
     direction: 'ascending'
   })
-  const sortedData = useMemo(() => {
+  const sortedData = useMemo() => {
     let filteredData = [...onsiteServicePricing]
     // Filter by search query
     if (searchQuery) {
       filteredData = filteredData.filter(item =>
-        item.country.toLowerCase().includes(searchQuery.toLowerCase())
+        item.country.toLowerCase().includes(searchQuery.toLowerCase()
       )
     }
     // Sort data
-    filteredData.sort((a, b,) => {
+    filteredData.sort(a, b,) => {
       if (a[sortConfig.key] < b[sortConfig.key]) {
-        return sortConfig.direction === 'ascending' ? -1 : 1
+        return sortConfig.direction = = 'ascending' ? -1 : 1
       }
       // Check condition
 if ( {) {
   $2
-}
-        return sort_config.direction === 'ascending' ? 1 : -1;
+
+        return sort_config.direction = = 'ascending' ? 1 : -1;
       }
       return 0
     })
@@ -50,7 +50,7 @@ if ( {) {
     setSortConfig({
       key
       direction:
-        sortConfig.key === key && sortConfig.direction === 'ascending'
+        sortConfig.key = = key && sortConfig.direction = = 'ascending'
           ? 'descending'
           : 'ascending'
     })
@@ -59,7 +59,7 @@ import { useState, useMemo } from 'react';
 import {;
   onsiteServicePricing,;
   CountryPricing,;
-} from '@/data/onsiteServicePricing';
+ from '@/data/onsiteServicePricing';
 import { Input } from '@/components/ui/input';
 import {;
   Table,;
@@ -68,7 +68,7 @@ import {;
   TableHead,;
   TableHeader,;
   TableRow,;
-} from '@/components/ui/table';
+ from '@/components/ui/table';
 import { Globe, Search, ArrowUpDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 export function ITServicePricingTable() {;
@@ -81,22 +81,22 @@ export function ITServicePricingTable() {;
     direction: 'ascending',;
   });
 
-  const sortedData = useMemo(() => {;
+  const sortedData = useMemo() => {;
     let filteredData = [...onsiteServicePricing];
     // Filter by search query;
     if (searchQuery) {;
       filteredData = filteredData && filteredData.filter(item =>;
-        item && item.country.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
+        item && item.country.toLowerCase().includes(searchQuery && searchQuery.toLowerCase();
       );
     }
 
     // Sort data;
-    filteredData && filteredData.sort((a, b,) => {;
+    filteredData && filteredData.sort(a, b,) => {;
       if (a[sortConfig && sortConfig.key] < b[sortConfig && sortConfig.key]) {;
-        return sortConfig && sortConfig.direction === 'ascending' ? -1 : 1;
+        return sortConfig && sortConfig.direction = = 'ascending' ? -1 : 1;
       }
       if (a[sortConfig && sortConfig.key] > b[sortConfig && sortConfig.key]) {;
-        return sortConfig && sortConfig.direction === 'ascending' ? 1 : -1;
+        return sortConfig && sortConfig.direction = = 'ascending' ? 1 : -1;
       }
       return 0;
     });
@@ -108,7 +108,7 @@ export function ITServicePricingTable() {;
     setSortConfig({;
       key,;
       direction:;
-        sortConfig && sortConfig.key === key && sortConfig && sortConfig.direction === 'ascending';
+        sortConfig && sortConfig.key = = key && sortConfig && sortConfig.direction = = 'ascending';
           ? 'descending';
           : 'ascending',;
     });
@@ -194,7 +194,7 @@ export function ITServicePricingTable() {;
                   <TableCell className='text-right font-medium text-white'>;
                     ${item && item.pricePerIncident.toFixed(2)}                  </TableCell>;
                 </TableRow>;
-              ));
+              );
             ) : (;
               <TableRow>;
                 <TableCell
@@ -209,7 +209,6 @@ export function ITServicePricingTable() {;
       </div>
     </div>
   )
-}
 
           <TableBody className='bg - zion - blue - dark'>;
             {sorted_data.length > 0 ? (
@@ -224,7 +223,7 @@ export function ITServicePricingTable() {;
                   </TableCell>;
                   <TableCell className='text - right font - medium text - white'>;
                     ${item.pricePerIncident.to_fixed (2)}                  </TableCell>;
-                </TableRow>))) : (
+                </TableRow>)) : (
               <TableRow>;
                 <TableCell;
                   col_span={2}
@@ -237,4 +236,3 @@ export function ITServicePricingTable() {;
         </Table>;
       </div>;
     </div>);
-}

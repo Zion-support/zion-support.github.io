@@ -6,5 +6,3 @@ export function ITServicePricingTable() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

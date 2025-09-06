@@ -8,7 +8,6 @@ interface CollaborativeTextEditorProps {
   enableAI: boolean;
   enableCollaboration: boolean;
   enableVersioning: boolean;
-}
 
 export function CollaborativeTextEditor(props: CollaborativeTextEditorProps) {
   return (
@@ -21,4 +20,3 @@ export function CollaborativeTextEditor(props: CollaborativeTextEditorProps) {
       />
     </div>
   );
-}

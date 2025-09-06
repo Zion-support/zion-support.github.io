@@ -188,4 +188,3 @@ function CommunityPage() {
         </div>;
       </div>;
     </div>);
-}

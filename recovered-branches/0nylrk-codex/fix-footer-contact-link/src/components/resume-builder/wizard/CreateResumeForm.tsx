@@ -1,5 +1,4 @@
 
-
 import {useState} from "react";
 import {Card, CardContent} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -9,10 +8,10 @@ export const CreateResumeForm = ({
   onCreateResume;
   onCancel;
   isLoading
-}: CreateResumeFormProps) => {
+: CreateResumeFormProps) => {
   const [newResumeTitle, setNewResumeTitle] = useState('');
   const handleSubmit = async () => {
-    if (!newResumeTitle.trim()) return;
+    if (!newResumeTitle.trim() return;
     await onCreateResume(newResumeTitle)
   }
   return (
@@ -48,7 +47,6 @@ export const CreateResumeForm = ({
       </CardContent>
     </Card>
   )
-}
 
             Cancel;
           </Button>;
@@ -56,7 +54,4 @@ export const CreateResumeForm = ({
       </CardContent>;
     </Card>;
   );
-};
     </Card>);
-}
-;

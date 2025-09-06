@@ -3,12 +3,12 @@ import Head from 'next/head',;
 import Card from '../components/ui/Card',;
 import Button from '../components/ui/Button',;
 import { Code, CheckCircle, AlertTriangle, Zap, BarChart3, ArrowRight, Play, Shield, Clock, TrendingUp } from 'lucide-react',;
-;
+
 export default function CodeQualityCheckerPage() {;
   const [isAnalyzing, setIsAnalyzing] = useState(false),;
   const [analysisResults, setAnalysisResults] = useState(null),;
   const [codeInput, setCodeInput] = useState(''),;
-;
+
   const features = [;
     {;
       icon:<Code className="w-8 h-8 text-white" />,;
@@ -34,7 +34,7 @@ export default function CodeQualityCheckerPage() {;
       description:'Automated detection of security vulnerabilities, dependency issues, and best practice violations.',;
       color:'bg-gradient-to-br from-purple-500 to-indigo-600',;
       gradient:'from-purple-400 to-indigo-500'}],;
-;
+
   const supportedLanguages = [;
     { name:'JavaScript/TypeScript', icon:'', features:['ESLint rulesTypeScript checks', 'React best practices'] },;
     { name:'Python', icon:'', features:['PEP 8 complianceType hints', 'Security scanning'] },;
@@ -43,7 +43,7 @@ export default function CodeQualityCheckerPage() {;
     { name:'Go', icon:'', features:['Golangci-lintGo vet', 'Performance analysis'] },;
     { name:'PHP', icon:'', features:['PHPStanPHP CS Fixer', 'Security analysis'] }
   ],;
-;
+
   const pricing = [;
     {;
       name:'Developer',;
@@ -84,13 +84,12 @@ export default function CodeQualityCheckerPage() {;
       popular:false;
     }
   ],;
-;
+
   const handleAnalyzeCode = async () => {;
-    if (!codeInput.trim()) return,;
-    ;
+    if (!codeInput.trim() return,;
     setIsAnalyzing(true),;
     // Simulate code analysis;
-    setTimeout(() => {;
+    setTimeout() => {;
       setAnalysisResults({;
         language:'JavaScript',;
         qualityScore:85,;
@@ -113,7 +112,7 @@ export default function CodeQualityCheckerPage() {;
       setIsAnalyzing(false),;
     }, 3000),;
   },;
-;
+
   return (;
     <>;
       <Head>;
@@ -123,13 +122,12 @@ export default function CodeQualityCheckerPage() {;
         <meta property="og:description" content="Professional code quality analysis tool with multi-language support and security scanning." />;
         <meta name="twitter:card" content="summary_large_image" />;
       </Head>;
-;
+
       {/* Hero Section */}
       <section className="relative section-padding bg-gradient-cursor overflow-hidden">;
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(20,184,166,0.08),transparent_50%)]" />;
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(20,184,166,0.06),transparent_50%)]" />;
         <div className="absolute inset-0 bg-grid opacity-10" />;
-        ;
         <div className="relative z-10 container-cursor text-center">;
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-teal-500/10 border border-teal-500/20 text-teal-400 text-sm font-medium mb-6">;
             <Code className="w-4 h-4 mr-2" />;
@@ -142,7 +140,6 @@ export default function CodeQualityCheckerPage() {;
             Analyze and improve your code quality with our comprehensive checker. Support for multiple programming languages, ;
             security scanning, and detailed improvement recommendations. Write better, safer, and more maintainable code.;
           </p>;
-          ;
           {/* Code Input Form */}
           <div className="max-w-4xl mx-auto mb-8">;
             <textarea;
@@ -170,7 +167,7 @@ export default function CodeQualityCheckerPage() {;
               )}
             </Button>;
           </div>;
-;
+
           <div className="flex flex-col sm:flex-row gap-6 justify-center">;
             <Button;
               href="#pricing";
@@ -191,7 +188,7 @@ export default function CodeQualityCheckerPage() {;
           </div>;
         </div>;
       </section>;
-;
+
       {/* Features Section */}
       <section className="section-padding bg-gradient-cursor-accent">;
         <div className="container-cursor">;
@@ -203,13 +200,13 @@ export default function CodeQualityCheckerPage() {;
               Our code quality checker provides comprehensive analysis and improvement suggestions for better code.;
             </p>;
           </div>;
-;
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
-            {features.map((feature, index) => (;
+            {features.map(feature, index) => (;
               <Card;
                 key={index}
                 className="card-hover group border-gradient-teal";
-                style={{ animationDelay:`${index * 0.1}s` }}
+                style={ animationDelay:`${index * 0.1}s` }
               >;
                 <div className="flex items-start space-x-6">;
                   <div className="relative">;
@@ -228,11 +225,11 @@ export default function CodeQualityCheckerPage() {;
                   </div>;
                 </div>;
               </Card>;
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Supported Languages Section */}
       <section className="section-padding bg-gradient-cursor">;
         <div className="container-cursor">;
@@ -244,32 +241,32 @@ export default function CodeQualityCheckerPage() {;
               We support a wide range of programming languages with language-specific analysis rules and best practices.;
             </p>;
           </div>;
-;
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
-            {supportedLanguages.map((language, index) => (;
+            {supportedLanguages.map(language, index) => (;
               <Card;
                 key={index}
                 className="card-hover border-gradient-teal";
-                style={{ animationDelay:`${index * 0.1}s` }}
+                style={ animationDelay:`${index * 0.1}s` }
               >;
                 <div className="text-center mb-4">;
                   <div className="text-4xl mb-3">{language.icon}</div>;
                   <h3 className="text-xl font-bold text-white mb-3">{language.name}</h3>;
                 </div>;
                 <ul className="space-y-2">;
-                  {language.features.map((feature, featureIndex) => (;
+                  {language.features.map(feature, featureIndex) => (;
                     <li key={featureIndex} className="flex items-center text-gray-300 text-sm">;
                       <CheckCircle className="w-4 h-4 text-teal-400 mr-3 flex-shrink-0" />;
                       {feature}
                     </li>;
-                  ))}
+                  )}
                 </ul>;
               </Card>;
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Demo Analysis Results */}
       {analysisResults && (;
         <section className="section-padding bg-gradient-cursor-accent">;
@@ -282,7 +279,6 @@ export default function CodeQualityCheckerPage() {;
                 Here's a sample code quality analysis. Get comprehensive insights for your own code.;
               </p>;
             </div>;
-            ;
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">;
               {/* Quality Score */}
               <Card className="border-gradient-teal text-center">;
@@ -302,16 +298,16 @@ export default function CodeQualityCheckerPage() {;
                 </div>;
                 <p className="text-gray-400">Good code quality with room for improvement</p>;
               </Card>;
-;
+
               {/* Issues Found */}
               <Card className="border-gradient-teal">;
                 <h3 className="text-2xl font-bold mb-6 text-white">Issues Found</h3>;
                 <div className="space-y-3">;
-                  {analysisResults.issues.map((issue, index) => (;
+                  {analysisResults.issues.map(issue, index) => (;
                     <div key={index} className="flex items-start space-x-3">;
-                      {issue.type === 'error' ? (;
+                      {issue.type = = 'error' ? (;
                         <AlertTriangle className="w-5 h-5 text-red-400 mt-1 flex-shrink-0" />;
-                      ) :issue.type === 'warning' ? (;
+                      ) :issue.type = = 'warning' ? (;
                         <AlertTriangle className="w-5 h-5 text-yellow-400 mt-1 flex-shrink-0" />;
                       ) :(;
                         <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />;
@@ -323,10 +319,10 @@ export default function CodeQualityCheckerPage() {;
                         </div>;
                       </div>;
                     </div>;
-                  ))}
+                  )}
                 </div>;
               </Card>;
-;
+
               {/* Quality Metrics */}
               <Card className="border-gradient-teal">;
                 <h3 className="text-2xl font-bold mb-6 text-white">Quality Metrics</h3>;
@@ -350,23 +346,23 @@ export default function CodeQualityCheckerPage() {;
                 </div>;
               </Card>;
             </div>;
-;
+
             {/* Recommendations */}
             <Card className="border-gradient-teal">;
               <h3 className="text-2xl font-bold mb-6 text-white">Improvement Recommendations</h3>;
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-                {analysisResults.recommendations.map((rec, index) => (;
+                {analysisResults.recommendations.map(rec, index) => (;
                   <div key={index} className="flex items-start space-x-3">;
                     <CheckCircle className="w-5 h-5 text-teal-400 mt-1 flex-shrink-0" />;
                     <span className="text-gray-300">{rec}</span>;
                   </div>;
-                ))}
+                )}
               </div>;
             </Card>;
           </div>;
         </section>;
       )}
-;
+
       {/* Pricing Section */}
       <section id="pricing" className="section-padding bg-gradient-cursor">;
         <div className="container-cursor">;
@@ -378,13 +374,13 @@ export default function CodeQualityCheckerPage() {;
               Choose the code quality analysis plan that best fits your development needs.;
             </p>;
           </div>;
-;
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
-            {pricing.map((plan, index) => (;
+            {pricing.map(plan, index) => (;
               <Card;
                 key={index}
                 className={`card-hover border-gradient-teal ${plan.popular ? 'ring-2 ring-teal-500 scale-105' :''}`}
-                style={{ animationDelay:`${index * 0.1}s` }}
+                style={ animationDelay:`${index * 0.1}s` }
               >;
                 {plan.popular && (;
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">;
@@ -402,16 +398,16 @@ export default function CodeQualityCheckerPage() {;
                   </div>;
                   <p className="text-gray-400">{plan.description}</p>;
                 </div>;
-;
+
                 <ul className="space-y-4 mb-8">;
-                  {plan.features.map((feature, featureIndex) => (;
+                  {plan.features.map(feature, featureIndex) => (;
                     <li key={featureIndex} className="flex items-center text-gray-300">;
                       <CheckCircle className="w-5 h-5 text-teal-400 mr-3 flex-shrink-0" />;
                       {feature}
                     </li>;
-                  ))}
+                  )}
                 </ul>;
-;
+
                 <Button;
                   href="/contact";
                   size="lg";
@@ -421,11 +417,11 @@ export default function CodeQualityCheckerPage() {;
                   <ArrowRight className="w-5 h-5 ml-2" />;
                 </Button>;
               </Card>;
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* CTA Section */}
       <section className="section-padding bg-gradient-to-r from-teal-600 to-cyan-700 relative overflow-hidden">;
         <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10" />;
@@ -458,4 +454,3 @@ export default function CodeQualityCheckerPage() {;
       </section>;
     </>;
   );
-}

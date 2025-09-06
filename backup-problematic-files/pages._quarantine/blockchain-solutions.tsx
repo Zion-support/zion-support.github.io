@@ -2,7 +2,6 @@ import React from 'react';
 
 interface Blockchain-solutionsProps {
   className?: string;
-}
 
 const Blockchain-solutions: React.FC<Blockchain-solutionsProps> = ({ className }) => {
   return (
@@ -11,6 +10,5 @@ const Blockchain-solutions: React.FC<Blockchain-solutionsProps> = ({ className }
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default Blockchain-solutions;

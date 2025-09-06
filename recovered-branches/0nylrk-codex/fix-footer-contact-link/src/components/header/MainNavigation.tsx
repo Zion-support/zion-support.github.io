@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import { NavLink } from "react-router-dom";
 interface MainNavigationProps {
   class_name?: string;
-}
+
 export function MainNavigation({ className }: MainNavigationProps) {
   return (
 
@@ -94,7 +94,7 @@ function MainNavigation() {
       </NavLink>
     </nav>
   )
-}
+
       <NavLink;
         to="/signup";
         className={({ is_active }) =>;
@@ -107,4 +107,3 @@ function MainNavigation() {
         Register;
       </NavLink>;
     </nav>);
-}

@@ -84,16 +84,16 @@ const nextConfig = {_reactStrictMode: true, _eslint: {
     }
     return config;
   }
-};
 ;
+
 export default nextConfig;      };
     }
     return config;
   }
-};
+;
 
 export default nextConfig;
-/** @type {import('next').NextConfig} */
+** @type {import('next').NextConfig} */
 const nextConfig = {
   compress: true,
   poweredByHeader: false,
@@ -123,6 +123,6 @@ const nextConfig = {
     }
     return config;
   }
-};
+;
 
 export default nextConfig;

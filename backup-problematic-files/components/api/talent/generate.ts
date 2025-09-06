@@ -2,10 +2,10 @@ import type { NextApiRequest, NextApiResponse } from 'next',;
 import OpenAI from 'openai',;
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY }),;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
-  if (req.method !== 'POST') {;
+  if (req.method != 'POST') {;
     return res.setHeader('AllowPOST').status(405).end('Method Not Allowed');
   }
-;
+
   const { name, title, bio, experience, skills } = req.body as {;
     name: string,;
     title?: string,;
@@ -35,4 +35,3 @@ INPUT\nName: ${name}\nCurrent Title: ${title || ''}\nBio: ${bio || ''}\nExperien
   } catch (e: any) {;
     return res.status(500).json({ error: e.message || 'OpenAI error' });
   }
-}

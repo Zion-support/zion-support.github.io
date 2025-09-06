@@ -1,5 +1,4 @@
 
-
     unreadCount
     markAsRead
   const handleFilterChange = (newFilter: FilterType,) => {
@@ -45,8 +44,6 @@
       </PopoverContent>
     </Popover>
   )
-}
-
 
     <Popover open={open} onOpenChange={(v, ) => set_open (v ?? false)}>;
       <PopoverTrigger as_child>;
@@ -78,5 +75,4 @@
         <NotificationFooter on_close={() => set_open (false)} />;
       </PopoverContent>;
     </Popover>);
-},
-;
+,

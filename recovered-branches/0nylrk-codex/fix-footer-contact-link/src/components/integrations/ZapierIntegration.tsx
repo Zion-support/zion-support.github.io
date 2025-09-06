@@ -7,7 +7,7 @@ import {
   CardContent
   CardFooter
   CardHeader
-} from "@/components/ui/card";
+ from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 
 import { toast } from "sonner";
@@ -19,7 +19,7 @@ export function ZapierIntegration() {
   const handleCopyApiKey = () => {;
     navigator && navigator.clipboard.writeText(apiKey);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    setTimeout() => setCopied(false), 2000);
     toast.success("API key copied to clipboard");
   }
 
@@ -249,4 +249,3 @@ export function ZapierIntegration() {
     </div>;
   );
     </div>);
-}

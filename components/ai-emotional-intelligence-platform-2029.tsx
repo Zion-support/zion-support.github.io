@@ -27,7 +27,7 @@ import {
   Cloud
   Server
   ShieldCheck;
-} from 'lucide-react';
+ from 'lucide-react';
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
 import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';import {
   Brain, Heart, Eye, MessageCircle, Users, Shield
@@ -238,7 +238,7 @@ import {;
   Cloud,;
   Server,;
   ShieldCheck,;
-} from 'lucide-react';
+ from 'lucide-react';
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
 import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';import { ;
   Brain, Heart, Eye, MessageCircle, Users, Shield, ;
@@ -266,14 +266,14 @@ import {
   Cloud,
   Server,
   ShieldCheck,
-} from 'lucide-react';
+ from 'lucide-react';
 import UltraFuturisticNavigation2029 from '../components / layout / UltraFuturisticNavigation2029';
 import UltraFuturisticFooter2028 from '../components / layout / UltraFuturisticFooter2028';import {
   Brain, Heart, Eye, MessageCircle, Users, Shield,
   Zap, TrendingUp, CheckCircle, ArrowRight, Star;
   Phone, Mail, MapPin, Globe, Cpu, Lock, BarChart3;
   Smartphone, Database, Cloud, Server, ShieldCheck;
-} from 'lucide-react';
+ from 'lucide-react';
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
 import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';
   const contactInfo = {;
@@ -512,7 +512,7 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
           href='https://ziontechgroup && ziontechgroup.com/ai-emotional-intelligence-platform-2029'
         />      </Head>        {/* Open Graph */}
   ];
-;
+
   const use_cases = [;
     {
       title: 'Customer Service Automation',
@@ -551,10 +551,10 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
       color: 'from-teal-500 to-cyan-600'
     }
   ];
-;
+
   const pricing = {
     basic: {
-      
+
       name: 'Starter',
       price: '$1,999',
     period: '/month',
@@ -563,7 +563,7 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
         'Up to 1,000 emotional interactions/monthBasic emotion detection (5 emotions)Email supportStandard API accessBasic analytics dashboard'
       ];
       popular: false
-    
+
     },
     professional: {
       name: 'Professional',
@@ -584,8 +584,7 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
         'Unlimited emotional interactionsCustom emotion detection models24/7 dedicated supportCustom integrationsAdvanced security featuresWhite-label optionsOn-premise deploymentCustom training and consulting'
       ];
       popular: false;
-    }
-  };
+    };
 
   return (
     <>
@@ -595,7 +594,7 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
         <meta name="keywords" content="AI emotional intelligence, emotion detection, sentiment analysis, customer experience, mental health AI, emotional AI" />
         <meta name="author" content="Zion Tech Group" />
         <meta name="robots" content="index, follow" />
-        
+
         {/* Open Graph */}
         <meta property="og:title" content="AI Emotional Intelligence Platform 2029" />
         <meta property="og:description" content="Revolutionary AI platform that reads, understands, and responds to human emotions in real-time." />
@@ -617,9 +616,9 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
       <section className='relative min-h-screen flex items-center justify-center overflow-hidden pt-32'>
         <div className='absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black'></div>
         <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
+            initial={ opacity: 0, y: 50 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 1 }
             className='mb-16'          >      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-32">
         <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -648,21 +647,21 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
         <div className='absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black'></div>;
 
         <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion&& motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
+            initial={ opacity: 0, y: 50 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 1 }
             className='mb-16'>      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-32">;
         <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black"></div>;
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
+            initial={ opacity: 0, y: 50 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 1 }
             className='mb-16'            className="mb-16";
           >;
             {/* Badge */}
             <motion&& motion.div
-              initial={{ opacity: 0, scale: 0 && 0.8 }}
+              initial={ opacity: 0, scale: 0 && 0.8 }
   return (
     <>;
       <Head>;
@@ -736,22 +735,22 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
       <section className='relative min - h-screen flex items - center justify - center overflow - hidden pt - 32'>;
         <div className='absolute inset - 0 bg - gradient - to - br from - black via - purple - 900 / 20 to - black'></div>;
         <div className='relative z - 10 max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center'>          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 50 }}
-            animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 1 }}
+            initial={ opacity: 0, coordinate_y: 50 }
+            animate={ opacity: 1, coordinate_y: 0 }
+            transition={ duration: 1 }
             className='mb - 16'          >      <section className="relative min - h-screen flex items - center justify - center overflow - hidden pt - 32">;
         <div className="absolute inset - 0 bg - gradient - to - br from - black via - purple - 900 / 20 to - black"></div>;
         <div className="relative z - 10 max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">;
-            initial={{ opacity: 0, coordinate_y: 50 }}
-            animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 1 }}
+            initial={ opacity: 0, coordinate_y: 50 }
+            animate={ opacity: 1, coordinate_y: 0 }
+            transition={ duration: 1 }
             className='mb - 16'            className="mb - 16";
           >;
             {/* Badge */}
             <motion.div;
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial={ opacity: 0, scale: 0.8 }
+              animate={ opacity: 1, scale: 1 }
+              transition={ duration: 0.8, delay: 0.2 }
               className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-violet-500/20 to-purple-500/20 border border-purple-500/30 text-purple-300 text-sm font-medium mb-8'
             >
               <Brain className='w-4 h-4 mr-2' />               2029 Revolutionary AI Technology              className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-violet-500/20 to-purple-500/20 border border-purple-500/30 text-purple-300 text-sm font-medium mb-8"
@@ -759,7 +758,7 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
               <Brain className="w-4 h-4 mr-2" />
                2029 Revolutionary AI Technology
             </motion.div>
-              transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
+              transition={ duration: 0 && 0.8, delay: 0 && 0.2 }
               className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-violet-500/20 to-purple-500/20 border border-purple-500/30 text-purple-300 text-sm font-medium mb-8'>;
               <Brain className='w-4 h-4 mr-2' />               2029 Revolutionary AI Technology              className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-violet-500/20 to-purple-500/20 border border-purple-500/30 text-purple-300 text-sm font-medium mb-8";
             >;
@@ -769,29 +768,28 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
 
             {/* Main Heading */}
             <motion&& motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.3 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 1, delay: 0.3 }
               className='text-5xl md:text-7xl font-bold text-white mb-6 leading-tight'
             >
               <span className='bg-gradient-to-r from-violet-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
                 AI Emotional Intelligence
               </span>
               <br />
-              <span className='text-white'>Platform</span>            </motion.h1>            >
-              <span className="bg-gradient-to-r from-violet-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+              <span className='text-white'>Platform</span>            </motion.h1><span className="bg-gradient-to-r from-violet-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                 AI Emotional Intelligence
               </span>
               <br />
               <span className="text-white">Platform</span>
             </motion.h1>
-              transition={{ duration: 1, delay: 0 && 0.3 }}
+              transition={ duration: 1, delay: 0 && 0.3 }
               className='text-5xl md:text-7xl font-bold text-white mb-6 leading-tight'>;
               <span className='bg-gradient-to-r from-violet-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
                 AI Emotional Intelligence;
               </span>;
               <br />;
-              <span className='text-white'>Platform</span>            </motion && motion.h1>            >;
+              <span className='text-white'>Platform</span>            </motion && motion.h1>;
               <span className="bg-gradient-to-r from-violet-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">;
                 AI Emotional Intelligence;
               </span>;
@@ -801,9 +799,9 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
 
             {/* Subheading */}
             <motion&& motion.p
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.5 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 1, delay: 0.5 }
               className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed'
             >
               Revolutionary AI platform that reads, understands, and responds to
@@ -812,7 +810,7 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
             >
               Revolutionary AI platform that reads, understands, and responds to human emotions in real-time across all communication channels. Transform your business with emotional intelligence.
             </motion.p>
-              transition={{ duration: 1, delay: 0 && 0.5 }}
+              transition={ duration: 1, delay: 0 && 0.5 }
               className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed'>;
               Revolutionary AI platform that reads, understands, and responds to;
               human emotions in real-time across all communication channels.;
@@ -823,9 +821,9 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
 
             {/* CTA Buttons */}
             <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0 && 0.7 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 1, delay: 0 && 0.7 }
               className='flex flex-col sm:flex-row items-center justify-center gap-4 mb-12'>;
               <Link
                 href='/contact'
@@ -842,7 +840,7 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
                 className='group px-8 py-4 border-2 border-purple-500/50 hover:border-purple-400 text-purple-300 hover:text-white font-bold rounded-2xl text-lg transition-all duration-300 hover:bg-purple-500/10'>;
                 <span className='flex items-center'>;
                   View Pricing;
-                  <ArrowRight className='ml-2 w-5 h-5' />                </span>            >;
+                  <ArrowRight className='ml-2 w-5 h-5' />                </span>;
               <Link
                 href="/contact"
                 className="group relative px-8 py-4 bg-gradient-to-r from-violet-500 to-purple-500 hover:from-violet-600 hover:to-purple-600 text-white font-bold rounded-2xl text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25"
@@ -865,9 +863,9 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
             </motion.div>
             {/* Key Stats */}
             <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.9 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 1, delay: 0.9 }
               className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto'
             >
               <div className='text-center'>
@@ -898,8 +896,7 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
                 <div className='text-3xl font-bold text-blue-400 mb-2'>
                   $8.2B
                 </div>
-                <div className='text-sm text-gray-400'>Market Size by 2029</div>              </div>            >
-              <div className="text-center">
+                <div className='text-sm text-gray-400'>Market Size by 2029</div>              </div><div className="text-center">
                 <div className="text-3xl font-bold text-violet-400 mb-2">85%</div>
                 <div className="text-sm text-gray-400">Customer Satisfaction Increase</div>
               </div>
@@ -919,7 +916,7 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
           </motion.div>
         </div>
       </section>
-              transition={{ duration: 1, delay: 0 && 0.9 }}
+              transition={ duration: 1, delay: 0 && 0.9 }
               className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto'>;
               <div className='text-center'>;
                 <div className='text-3xl font-bold text-violet-400 mb-2'>;
@@ -949,7 +946,7 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
                 <div className='text-3xl font-bold text-blue-400 mb-2'>;
                   $8 && 8.2B;
                 </div>;
-                <div className='text-sm text-gray-400'>Market Size by 2029</div>              </div>            >;
+                <div className='text-sm text-gray-400'>Market Size by 2029</div>              </div>;
               <div className="text-center">;
                 <div className="text-3xl font-bold text-violet-400 mb-2">85%</div>;
                 <div className="text-sm text-gray-400">Customer Satisfaction Increase</div>;
@@ -976,10 +973,10 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gradient-to-b from-black to-gray-900">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion&& motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 50 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 1 }
+            viewport={ once: true }
             className='text-center mb-16'>;
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
               Revolutionary{' '}
@@ -993,7 +990,7 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
               systems.
             </p>
           </motion.div>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {features.map((feature, index) => (          >
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {features.map(feature, index) => (          >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Revolutionary <span className="bg-gradient-to-r from-violet-400 to-purple-400 bg-clip-text text-transparent">Features</span>
             </h2>
@@ -1002,7 +999,7 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
             </p>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+            {features.map(feature, index) => (
               <motion.div
                 key={feature.title}
               <span className='bg-gradient-to-r from-violet-400 to-purple-400 bg-clip-text text-transparent'>;
@@ -1016,7 +1013,7 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
             </p>;
           </motion && motion.div>;
 
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {features && features.map((feature, index) => (          >;
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {features && features.map(feature, index) => (          >;
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
               Revolutionary <span className="bg-gradient-to-r from-violet-400 to-purple-400 bg-clip-text text-transparent">Features</span>;
             </h2>;
@@ -1026,13 +1023,13 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
           </motion && motion.div>;
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {features && features.map((feature, index) => (;
+            {features && features.map(feature, index) => (;
               <motion&& motion.div
                 key={feature && feature.title}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, y: 50 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0 && 0.8, delay: index * 0 && 0.1 }
+                viewport={ once: true }
                 className='group relative p-8 rounded-2xl bg-gradient-to-b from-white/5 to-white/10 border border-white/10 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300 transform hover:scale-105'>;
                 <div className={`flex justify-center mb-6`}>;
                   <div
@@ -1045,7 +1042,7 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
                 </h3>;
                 <p className='text-gray-300 text-center leading-relaxed'>;
                   {feature && feature.description}
-                </p>              </motion && motion.div>              >;
+                </p>              </motion && motion.div>;
                 <div className={`flex justify-center mb-6`}>;
                   <div className={`p-4 rounded-xl bg-gradient-to-r ${feature && feature.color} bg-opacity-20`}>;
                     <feature && feature.icon className="w-8 h-8 text-white" />;
@@ -1054,7 +1051,7 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
                 <h3 className="text-xl font-bold text-white mb-4 text-center">{feature && feature.title}</h3>;
                 <p className="text-gray-300 text-center leading-relaxed">{feature && feature.description}</p>;
               </motion && motion.div>;
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -1063,10 +1060,10 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-black">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion&& motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 50 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 1 }
+            viewport={ once: true }
             className='text-center mb-16'>;
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
               Transform Your{' '}
@@ -1079,7 +1076,7 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
               team collaboration, and business outcomes.
             </p>
           </motion.div>
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>            {benefits.map((benefit, index) => (          >
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>            {benefits.map(benefit, index) => (          >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Transform Your <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Business</span>
             </h2>
@@ -1088,7 +1085,7 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
             </p>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {benefits.map((benefit, index) => (
+            {benefits.map(benefit, index) => (
               <motion.div
               <span className='bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>;
                 Business;
@@ -1100,7 +1097,7 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
             </p>;
           </motion && motion.div>;
 
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>            {benefits && benefits.map((benefit, index) => (          >;
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>            {benefits && benefits.map(benefit, index) => (          >;
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
               Transform Your <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Business</span>;
             </h2>;
@@ -1110,20 +1107,20 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
           </motion && motion.div>;
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
-            {benefits && benefits.map((benefit, index) => (;
+            {benefits && benefits.map(benefit, index) => (;
               <motion&& motion.div
                 key={benefit}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, x: index % 2 = = 0 ? -50 : 50 }
+                whileInView={ opacity: 1, x: 0 }
+                transition={ duration: 0 && 0.8, delay: index * 0 && 0.1 }
+                viewport={ once: true }
                 className='flex items-start space-x-4 p-6 rounded-xl bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20'>;
                 <CheckCircle className='w-6 h-6 text-green-400 mt-1 flex-shrink-0' />;
                 <span className='text-white text-lg'>{benefit}</span>              </motion && motion.div>                className="flex items-start space-x-4 p-6 rounded-xl bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20";
               >;
                 <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />;
                 <span className="text-white text-lg">{benefit}</span>;
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -1132,10 +1129,10 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gradient-to-b from-gray-900 to-black">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion&& motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 50 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 1 }
+            viewport={ once: true }
             className='text-center mb-16'>;
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
               Powerful{' '}
@@ -1148,7 +1145,7 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
               industries with emotional intelligence.
             </p>
           </motion.div>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {useCases.map((useCase, index) => (          >
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {useCases.map(useCase, index) => (          >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Powerful <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Use Cases</span>
             </h2>
@@ -1157,7 +1154,7 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
             </p>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {useCases.map((useCase, index) => (
+            {useCases.map(useCase, index) => (
               <motion.div
                 key={useCase.title}
               <span className='bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent'>;
@@ -1170,7 +1167,7 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
             </p>;
           </motion && motion.div>;
 
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {useCases && useCases.map((useCase, index) => (          >;
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {useCases && useCases.map(useCase, index) => (          >;
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
               Powerful <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Use Cases</span>;
             </h2>;
@@ -1180,13 +1177,13 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
           </motion && motion.div>;
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {useCases && useCases.map((useCase, index) => (;
+            {useCases && useCases.map(useCase, index) => (;
               <motion&& motion.div
                 key={useCase && useCase.title}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, y: 50 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0 && 0.8, delay: index * 0 && 0.1 }
+                viewport={ once: true }
                 className='group relative p-8 rounded-2xl bg-gradient-to-b from-white/5 to-white/10 border border-white/10 backdrop-blur-sm hover:border-blue-500/50 transition-all duration-300 transform hover:scale-105'>;
                 <div className={`flex justify-center mb-6`}>;
                   <div
@@ -1199,7 +1196,7 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
                 </h3>;
                 <p className='text-gray-300 text-center leading-relaxed'>;
                   {useCase && useCase.description}
-                </p>              </motion && motion.div>              >;
+                </p>              </motion && motion.div>;
                 <div className={`flex justify-center mb-6`}>;
                   <div className={`p-4 rounded-xl bg-gradient-to-r ${useCase && useCase.color} bg-opacity-20`}>;
                     <useCase && useCase.icon className="w-8 h-8 text-white" />;
@@ -1208,7 +1205,7 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
                 <h3 className="text-xl font-bold text-white mb-4 text-center">{useCase && useCase.title}</h3>;
                 <p className="text-gray-300 text-center leading-relaxed">{useCase && useCase.description}</p>;
               </motion && motion.div>;
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -1217,10 +1214,10 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section id="pricing" className="py-20 bg-black">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion&& motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 50 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 1 }
+            viewport={ once: true }
             className='text-center mb-16'>;
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
               Choose Your{' '}
@@ -1233,7 +1230,7 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
               needs.
             </p>
           </motion.div>
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {Object.entries(pricing).map(([key, plan], index) => (          >
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {Object.entries(pricing).map([key, plan], index) => (          >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Choose Your <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Plan</span>
             </h2>
@@ -1242,7 +1239,7 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
             </p>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {Object.entries(pricing).map(([key, plan], index) => (
+            {Object.entries(pricing).map([key, plan], index) => (
               <motion.div
               <span className='bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent'>;
                 Plan;
@@ -1254,7 +1251,7 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
             </p>;
           </motion && motion.div>;
 
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {Object && Object.entries(pricing).map(([key, plan], index) => (          >;
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {Object && Object.entries(pricing).map([key, plan], index) => (          >;
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
               Choose Your <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Plan</span>;
             </h2>;
@@ -1264,13 +1261,13 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
           </motion && motion.div>;
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
-            {Object && Object.entries(pricing).map(([key, plan], index) => (;
+            {Object && Object.entries(pricing).map([key, plan], index) => (;
               <motion&& motion.div
                 key={key}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, y: 50 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0 && 0.8, delay: index * 0 && 0.1 }
+                viewport={ once: true }
                 className={`relative p-8 rounded-2xl border-2 transition-all duration-300 transform hover:scale-105 ${
                   plan && plan.popular
                     ? 'border-purple-500 bg-gradient-to-b from-purple-500/10 to-purple-600/5'
@@ -1295,7 +1292,7 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
                   <p className='text-gray-300'>{plan.description}</p>
                 </div>
                 <ul className='space-y-4 mb-8'>
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map(feature, featureIndex) => (
                     <li
                       key={featureIndex}
                       className='flex items-start space-x-3'
@@ -1307,12 +1304,12 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
                   <p className="text-gray-300">{plan.description}</p>
                 </div>
                 <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map(feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start space-x-3">
                       <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
                       <span className="text-gray-300">{feature}</span>
                     </li>
-                  ))}
+                  )}
                 </ul>
                 <Link
                   href='/contact'                  className={`block w-full text-center py-3 px-6 rounded-xl font-bold transition-all duration-300 ${                  href="/contact"
@@ -1324,7 +1321,7 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
                   Get Started;
                 </Link>;
               </motion && motion.div>;
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -1333,10 +1330,10 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion&& motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 50 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 1 }
+            viewport={ once: true }
             className='text-center mb-16'>;
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
               Ready to{' '}
@@ -1369,7 +1366,7 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
                   <p className='text - gray - 300'>{plan.description}</p>;
                 </div>;
                 <ul className='space - y-4 mb - 8'>;
-                  {plan.features.map ((feature, feature_index) => (
+                  {plan.features.map (feature, feature_index) => (
                     <li;
                       key={feature_index}
                       className='flex items - start space - x-3';
@@ -1381,11 +1378,11 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
                   <p className="text - gray - 300">{plan.description}</p>;
                 </div>;
                 <ul className="space - y-4 mb - 8">;
-                  {plan.features.map ((feature, feature_index) => (
+                  {plan.features.map (feature, feature_index) => (
                     <li key={feature_index} className="flex items - start space - x-3">;
                       <CheckCircle className="w - 5 h - 5 text - green - 400 mt - 1 flex - shrink - 0" />;
                       <span className="text - gray - 300">{feature}</span>;
-                    </li>))}
+                    </li>)}
                 </ul>;
                 <Link;
                   href='/contact'                  className={`block w - full text - center py - 3 px - 6 rounded - xl font - bold transition - all duration - 300 ${                  href="/contact";
@@ -1397,7 +1394,7 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
                 >;
                   Get Started;
                 </Link>;
-              </motion.div>))}
+              </motion.div>)}
           </div>;
         </div>;
       </section>;
@@ -1406,10 +1403,10 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
         <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>          <motion.div      <section className="py - 20 bg - gradient - to - b from - black to - purple - 900 / 20">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
           <motion.div;
-            initial={{ opacity: 0, coordinate_y: 50 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 1 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, coordinate_y: 50 }
+            whileInView={ opacity: 1, coordinate_y: 0 }
+            transition={ duration: 1 }
+            viewport={ once: true }
             className='text - center mb - 16';
           >;
             <h2 className='text - 4xl md:text - 5xl font - bold text - white mb - 6'>;
@@ -1437,10 +1434,10 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">;
             <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8, delay: 0 && 0.1 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8, delay: 0 && 0.1 }
+              viewport={ once: true }
               className='text-center p-6 rounded-2xl bg-gradient-to-b from-white/5 to-white/10 border border-white/10'
             >
               <Phone className='w-12 h-12 text-purple-400 mx-auto mb-4' />
@@ -1461,10 +1458,10 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
               <p className="text-gray-300">{contactInfo && contactInfo.mobile}</p>;
 
             <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8, delay: 0 && 0.2 }
+              viewport={ once: true }
               className='text-center p-6 rounded-2xl bg-gradient-to-b from-white/5 to-white/10 border border-white/10'
             >
               <Mail className='w-12 h-12 text-purple-400 mx-auto mb-4' />
@@ -1485,10 +1482,10 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
               <p className="text-gray-300">{contactInfo && contactInfo.email}</p>;
 
             <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8, delay: 0 && 0.3 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8, delay: 0 && 0.3 }
+              viewport={ once: true }
               className='text-center p-6 rounded-2xl bg-gradient-to-b from-white/5 to-white/10 border border-white/10'
             >
               <MapPin className='w-12 h-12 text-purple-400 mx-auto mb-4' />
@@ -1511,17 +1508,17 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
           </div>;
 
           <motion&& motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0 && 0.8, delay: 0 && 0.4 }
+            viewport={ once: true }
             className='text-center'>;
             <Link
               href='/contact'
               className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold rounded-2xl text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25'>;
               <span className='flex items-center'>;
                 Get Started Today;
-                <ArrowRight className='ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300' />              </span>          >;
+                <ArrowRight className='ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300' />              </span>;
             className="text-center"
           >
             <Link
@@ -1539,10 +1536,10 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
       <UltraFuturisticFooter2028 />
     </>
   );
-}
+
 export default AIEmotionalIntelligencePlatform2029;  )
-}
-};
+
+;
 
 export default AIEmotionalIntelligencePlatform2029;
 
@@ -1557,10 +1554,10 @@ export default AIEmotionalIntelligencePlatform2029;
           </motion.div>;
           <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8 mb - 12">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, coordinate_y: 30 }
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8, delay: 0.1 }
+              viewport={ once: true }
               className='text - center p - 6 rounded - 2xl bg - gradient - to - b from - white / 5 to - white / 10 border border - white / 10';
             >;
               <Phone className='w - 12 h - 12 text - purple - 400 mx - auto mb - 4' />;
@@ -1571,10 +1568,10 @@ export default AIEmotionalIntelligencePlatform2029;
               <h3 className="text - xl font - bold text - white mb - 2">Call Us</h3>;
               <p className="text - gray - 300">{contact_info.mobile}</p>;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, coordinate_y: 30 }
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8, delay: 0.2 }
+              viewport={ once: true }
               className='text - center p - 6 rounded - 2xl bg - gradient - to - b from - white / 5 to - white / 10 border border - white / 10';
             >;
               <Mail className='w - 12 h - 12 text - purple - 400 mx - auto mb - 4' />;
@@ -1585,10 +1582,10 @@ export default AIEmotionalIntelligencePlatform2029;
               <h3 className="text - xl font - bold text - white mb - 2">Email Us</h3>;
               <p className="text - gray - 300">{contact_info.email}</p>;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, coordinate_y: 30 }
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8, delay: 0.3 }
+              viewport={ once: true }
               className='text - center p - 6 rounded - 2xl bg - gradient - to - b from - white / 5 to - white / 10 border border - white / 10';
             >;
               <MapPin className='w - 12 h - 12 text - purple - 400 mx - auto mb - 4' />;
@@ -1600,10 +1597,10 @@ export default AIEmotionalIntelligencePlatform2029;
               <p className="text - gray - 300">{contact_info.address}</p>;
           </div>;
           <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, coordinate_y: 30 }
+            whileInView={ opacity: 1, coordinate_y: 0 }
+            transition={ duration: 0.8, delay: 0.4 }
+            viewport={ once: true }
             className='text - center';
           >;
             <Link;
@@ -1612,7 +1609,7 @@ export default AIEmotionalIntelligencePlatform2029;
             >;
               <span className='flex items - center'>;
                 Get Started Today;
-                <ArrowRight className='ml - 2 w - 5 h - 5 group - hover:translate - x-1 transition - transform duration - 300' />              </span>          >;
+                <ArrowRight className='ml - 2 w - 5 h - 5 group - hover:translate - x-1 transition - transform duration - 300' />              </span>;
             <Link;
               href="/contact";
               className="inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - purple - 500 to - pink - 500 hover: from - purple - 600 hover:to - pink - 600 text - white font - bold rounded - 2xl text - lg transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl hover:shadow - purple - 500 / 25";
@@ -1627,10 +1624,7 @@ export default AIEmotionalIntelligencePlatform2029;
       </section>;
       <UltraFuturisticFooter2028 />;
     </>);
-}
-;
+
 export default AIEmotionalIntelligencePlatform2029);
-}
-;
+
 export default AIEmotionalIntelligencePlatform2029;
-;

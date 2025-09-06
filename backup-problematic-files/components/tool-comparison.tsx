@@ -17,7 +17,7 @@ import {
   Brain,
   Globe,
   Rocket
-} from 'lucide-react',
+ from 'lucide-react',
 
 export default function ToolComparisonPage() {
   const [searchTerm, setSearchTerm] = React.useState(''),
@@ -148,27 +148,26 @@ export default function ToolComparisonPage() {
   ],;
   const categories = ['AllAI AssistantAI ArtAI WritingAutomationProductivityPaymentsMarketing & Sales', 'Email Marketing'],;
   const filteredTools = allTools.filter(tool => {;
-    const matchesSearch = tool.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         tool.category.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         tool.bestFor.toLowerCase().includes(searchTerm.toLowerCase()),;
-    const matchesCategory = selectedCategory === 'All' || tool.category === selectedCategory,;
+    const matchesSearch = tool.name.toLowerCase().includes(searchTerm.toLowerCase() ||;
+                         tool.category.toLowerCase().includes(searchTerm.toLowerCase() ||;
+                         tool.bestFor.toLowerCase().includes(searchTerm.toLowerCase(),;
+    const matchesCategory = selectedCategory = = 'All' || tool.category = = selectedCategory,;
     return matchesSearch && matchesCategory;
   }),;
-  const sortedTools = [...filteredTools].sort((a, b) => {;
+  const sortedTools = [...filteredTools].sort(a, b) => {;
     switch (sortBy) {;
       case 'rating':;
         return b.rating - a.rating,;
       case 'users':;
-        return parseInt(b.users.replace(/[^0-9]/g, '')) - parseInt(a.users.replace(/[^0-9]/g, '')),;
+        return parseInt(b.users.replace(/[^0-9]/g, '') - parseInt(a.users.replace(/[^0-9]/g, ''),;
       case 'name':;
         return a.name.localeCompare(b.name),;
       default: return 0;
-    }
-  }),
+    }),
 
   const getPricingColor = (pricing: string) => {
-    if (pricing.includes('Free')) return 'text-green-400',
-    if (pricing.includes('$')) return 'text-blue-400',
+    if (pricing.includes('Free') return 'text-green-400',
+    if (pricing.includes('$') return 'text-blue-400',
     return 'text-gray-400'
   },
 
@@ -200,7 +199,7 @@ export default function ToolComparisonPage() {
                 Smart Tool Selection
               </div>
             </div>
-            
+
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-8 text-white leading-tight tracking-tight">
               Tool Comparison
             </h1>
@@ -214,7 +213,7 @@ export default function ToolComparisonPage() {
                 href="#comparison"
                 size="lg"
                 className="animate-scale-in shadow-2xl shadow-purple-500/25 hover:shadow-purple-500/40"
-                style={{ animationDelay: '0.2s' }}
+                style={ animationDelay: '0.2s' }
               >
                 Start Comparing
                 <ArrowRight className="w-5 h-5 ml-2" />
@@ -224,14 +223,14 @@ export default function ToolComparisonPage() {
                 variant="outline"
                 size="lg"
                 className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5"
-                style={{ animationDelay: '0.4s' }}
+                style={ animationDelay: '0.4s' }
               >;
                 Get Expert Advice;
               </Button>;
             </div>;
           </div>;
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in" style={{ animationDelay: '0.6s' }}>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in" style={ animationDelay: '0.6s' }>
             <div className="text-center group">
               <div className="text-3xl md:text-4xl font-bold mb-3 text-purple-400 group-hover:scale-110 transition-transform duration-300">
                 {allTools.length}+
@@ -278,19 +277,19 @@ export default function ToolComparisonPage() {
 
             {/* Category Filter */}
             <div className="flex flex-wrap gap-2">
-              {categories.map((category) => (
+              {categories.map(category) => (
                 <button
                   key={category}
                   onClick={() => setSelectedCategory(category)}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${;
-                    selectedCategory === category;
+                    selectedCategory = = category;
                       ? 'bg-purple-600 text-white shadow-lg';
                       : 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white';
                   }`}
                 >;
                   {category}
                 </button>;
-              ))}
+              )}
             </div>;
             {/* Sort */}
             <div className="flex items-center space-x-2">
@@ -335,7 +334,7 @@ export default function ToolComparisonPage() {
                 </tr>
               </thead>
               <tbody>
-                {sortedTools.map((tool, index) => (
+                {sortedTools.map(tool, index) => (
                   <tr key={index} className="border-b border-gray-800/50 hover:bg-gray-900/50 transition-colors duration-200">
                     <td className="py-4 px-6">
                       <div className="flex items-center space-x-3">
@@ -389,12 +388,12 @@ export default function ToolComparisonPage() {
                       </div>
                     </td>
                   </tr>
-                ))}
+                )}
               </tbody>
             </table>
           </div>
 
-          {sortedTools.length === 0 && (
+          {sortedTools.length = = 0 && (
             <div className="text-center py-20">
               <Search className="w-16 h-16 text-gray-600 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-gray-400 mb-2">No tools found</h3>
@@ -416,11 +415,11 @@ export default function ToolComparisonPage() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {sortedTools.slice(0, 6).map((tool, index) => (
+            {sortedTools.slice(0, 6).map(tool, index) => (
               <Card
                 key={index}
                 className="group border border-gray-800 hover:border-purple-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={ animationDelay: `${index * 0.1}s` }
               >
                 <div className="flex items-start space-x-4 mb-4">
                   <div className={`w-12 h-12 rounded-xl bg-gray-800 flex items-center justify-center ${tool.color}`}>
@@ -452,12 +451,12 @@ export default function ToolComparisonPage() {
                       Pros
                     </h4>
                     <ul className="space-y-1">
-                      {tool.pros.slice(0, 3).map((pro, proIndex) => (
+                      {tool.pros.slice(0, 3).map(pro, proIndex) => (
                         <li key={proIndex} className="text-xs text-gray-400 flex items-start">
                           <span className="w-1 h-1 bg-green-400 rounded-full mr-2 mt-2 flex-shrink-0" />
                           {pro}
                         </li>;
-                      ))}
+                      )}
                     </ul>
                   </div>
                   <div>
@@ -466,12 +465,12 @@ export default function ToolComparisonPage() {
                       Cons
                     </h4>
                     <ul className="space-y-1">
-                      {tool.cons.slice(0, 3).map((con, conIndex) => (
+                      {tool.cons.slice(0, 3).map(con, conIndex) => (
                         <li key={conIndex} className="text-xs text-gray-400 flex items-start">
                           <span className="w-1 h-1 bg-red-400 rounded-full mr-2 mt-2 flex-shrink-0" />
                           {con}
                         </li>;
-                      ))}
+                      )}
                     </ul>
                   </div>
                 </div>
@@ -491,7 +490,7 @@ export default function ToolComparisonPage() {
                   </Button>
                 </div>
               </Card>
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
@@ -560,4 +559,3 @@ export default function ToolComparisonPage() {
       </section>;
     </>;
   );
-}

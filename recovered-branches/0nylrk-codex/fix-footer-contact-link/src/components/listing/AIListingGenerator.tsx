@@ -17,7 +17,7 @@ interface GeneratedContent {
     max: number
   }
   keyPoints: string[]
-}
+
 interface AIListingGeneratorProps {
 
   onApplyGenerated?: (content: GeneratedContent) => void
@@ -28,9 +28,8 @@ interface AIListingGeneratorProps {
     keyFeatures?: string;
     targetAudience?: string;
   }
-}
 
-export function AIListingGenerator(): any ({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {;
+export function AIListingGenerator(): any ({ onApplyGenerated, initialValues = {}: AIListingGeneratorProps) {;
   const { toast } = useToast();
   const [isLoading, setIsLoading] = useState(false);
   const [generatedContent, setGeneratedContent] = useState<GeneratedContent | null>(null);
@@ -48,8 +47,7 @@ export function AIListingGenerator(): any ({ onApplyGenerated, initialValues = {
     setIsLoading(true);
     try {
       const { data, error } = await supabase.functions.invoke ('ai - listing - generator', {
-        body: { title, category, key_features, target_audience }
-      });
+        body: { title, category, key_features, target_audience });
       if (error) {
         throw new Error(error.message)
       }
@@ -71,7 +69,6 @@ export function AIListingGenerator(): any ({ onApplyGenerated, initialValues = {
     } finally {
       setIsLoading (false);
     }
-  }
   const handleApply = () => {
     if (generatedContent && onApplyGenerated) {
       onApplyGenerated(generatedContent);
@@ -80,7 +77,6 @@ export function AIListingGenerator(): any ({ onApplyGenerated, initialValues = {
         description: "The generated content has been applied to your listing."
       })
     }
-  }
 
   return (
     <div className="space-y-6">
@@ -108,21 +104,19 @@ export function AIListingGenerator(): any ({ onApplyGenerated, initialValues = {
       )}
     </div>
   )
-}
-;
+
   const handle_apply = () =>: any {
     // Check condition
 if ( {) {
   $2
-}
+
       onApplyGenerated (generated_content);
       toast ({
         title: "Content Applied",
         description: "The generated content has been applied to your listing.";
       });
     }
-  }
-;
+
   return (
     <div className="space - y-6">;
       <Card className="border border - zion - blue - light bg - zion - blue - dark">;
@@ -147,4 +141,3 @@ if ( {) {
       {generated_content && !is_loading && (
         <GeneratedContentDisplay content={generated_content} on_apply={handle_apply} />)}
     </div>);
-}

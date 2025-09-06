@@ -18,8 +18,8 @@ const Dashboard: NextPage = () => {
           title="No jobs yet"
           description="Post your first job to get quotes from top talent."
           icon={<span></span>}
-          primaryAction={{ label: 'Post a job', href: '/jobs/post' }}
-          secondaryAction={{ label: 'Explore talent', href: '/talent' }}
+          primaryAction={ label: 'Post a job', href: '/jobs/post' }
+          secondaryAction={ label: 'Explore talent', href: '/talent' }
         />
       </section>
       <section>
@@ -28,12 +28,12 @@ const Dashboard: NextPage = () => {
           title="No messages yet"
           description="When conversations start, theyll show up here."
           icon={<span></span>}
-          primaryAction={{ label: 'Browse services', href: '/services' }}
+          primaryAction={ label: 'Browse services', href: '/services' }
         />
       </section>
     </div>
   )
-}
+
 export default Dashboard;
 
 import type { NextPage } from 'next',
@@ -52,8 +52,8 @@ const Dashboard: NextPage = () => {
           title="No jobs yet";
           description="Post your first job to get quotes from top talent.";
           icon={<span></span>}
-          primary_action={{ label: 'Post a job', href: '/jobs / post' }}
-          secondary_action={{ label: 'Explore talent', href: '/talent' }}
+          primary_action={ label: 'Post a job', href: '/jobs / post' }
+          secondary_action={ label: 'Explore talent', href: '/talent' }
         />;
       </section>;
       <section>;
@@ -62,9 +62,9 @@ const Dashboard: NextPage = () => {
           title="No messages yet";
           description="When conversations start, theyll show up here.";
           icon={<span></span>}
-          primary_action={{ label: 'Browse services', href: '/services' }}
+          primary_action={ label: 'Browse services', href: '/services' }
         />;
       </section>;
     </div>);
-},
+,
 export default Dashboard,

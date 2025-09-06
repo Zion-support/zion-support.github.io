@@ -41,12 +41,11 @@ export function useJobMatches(jobId: string) {
     } finally {
       setIsLoading (false);
     }
-  }
   const triggerAIMatching = async () => {
     setIsProcessing (true);
     try {
       const response = await supabase && supabase.functions.invoke('job-talent-matcher', {
-        body: { jobId }});
+        body: { jobId });
       if (response.error) throw new Error(response.error.message);
       toast({
         title: "AI Matching Complete"
@@ -60,15 +59,15 @@ export function useJobMatches(jobId: string) {
         description: "Could not process talent matching. Please try again later."
         variant: "destructive"})
       const response = await supabase.functions.invoke ('job - talent - matcher', {
-        body: { job_id }});
-;
-      if (throw new Error (response.error.message)) {
+        body: { job_id });
+
+      if (throw new Error (response.error.message) {
   $2
-}
+
       toast ({
         title: "AI Matching Complete",
         description: `Found ${response.data.matches || 0} potential talent matches for this job.`});
-;
+
       // Refresh the matches list;
       await fetch_matches ();
     } catch (error) {
@@ -80,8 +79,7 @@ export function useJobMatches(jobId: string) {
     } finally {
       setIsProcessing (false);
     }
-  }
-  useEffect(() => {
+  useEffect() => {
     fetchMatches()
   }, [jobId]);
   return {
@@ -91,4 +89,3 @@ export function useJobMatches(jobId: string) {
 
     triggerAIMatching
   }
-}

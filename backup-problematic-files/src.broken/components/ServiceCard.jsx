@@ -14,8 +14,7 @@ export default function ServiceCard({ service, onSelect }) {
   const handleClick = () => {
     if (onSelect) {
       onSelect(service.id)
-    }
-  },
+    },
 
   const handleSave = (e) => {
     e.stopPropagation(),
@@ -27,8 +26,7 @@ export default function ServiceCard(_{_service, _onSelect}) {_const _navigate = 
   const _dispatch = useAppDispatch();
 
   const _handleClick = () => {_if (onSelect) {
-      onSelect(service.id);}
-  };
+      onSelect(service.id);};
 
   const _handleSave = (_e) => {_e.stopPropagation();
     if (!user) {
@@ -36,12 +34,12 @@ export default function ServiceCard(_{_service, _onSelect}) {_const _navigate = 
       navigate(`/login?next=${encodeURIComponent(location.pathname + location.search)}`),
       return
     }
-    dispatch(addToWishlist({ id: service.id, type: 'service', data: service })),
+    dispatch(addToWishlist({ id: service.id, type: 'service', data: service }),
     fetch(`${getApiUrl()}/wishlist`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ id: service.id, type: 'service' })
-    }).catch(() => {})
+    }).catch() => {})
   },
 
   return (
@@ -58,13 +56,12 @@ export default function ServiceCard(_{_service, _onSelect}) {_const _navigate = 
       </button>
       <h3 className=&quot;text-white font-medium&quot;>{service.title}</h3>    </div>
   )}
-};
+;
 const handleSave = (e) => {
   e.stopPropagation ();
 toast.info ('Log in to save favorites');
 navigate (`/login?next=$ {
   encodeURIComponent (location.pathname + location.search) 
-}`);
+`);
 return 
-}> <Heart className="w-4 h-4" /> </button> </div>) 
-}
+> <Heart className="w-4 h-4" /> </button> </div>) 

@@ -26,7 +26,6 @@ export default function Dashboard() {
         description: "Something went wrong"
         variant: "destructive"})
     }
-  }
   return (
     <>;
       <Header />;
@@ -65,7 +64,7 @@ export default function Dashboard() {
                     <span className="text-zion-cyan font-medium">65%</span>
                   </div>
                   <div className="w-full bg-zion-blue rounded-full h-2">
-                    <div className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full" style={{ width: "65%" }}></div>
+                    <div className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full" style={ width: "65%" }></div>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-zion-slate-light">Community Points</span>
@@ -98,13 +97,13 @@ export default function Dashboard() {
                         await createOnboardingNotification({
                           userId: user.id
                           missingMilestone: 'profile_completed'
-                          userRole: user.userType === 'employer' |user.userType === 'buyer' ? 'client' : 'talent'
+                          userRole: user.userType = = 'employer' |user.userType = = 'buyer' ? 'client' : 'talent'
                         });
                         toast({
                           title: "Onboarding notification sent"
                           description: "Check your notification center"
                         })
-                      }}
+                      }
                     >
                       <Settings size={16} className="text-zion-purple" />
                       Send Onboarding Nudge
@@ -125,7 +124,7 @@ export default function Dashboard() {
 
                           description: "Check your notification center"
                         })
-                      }}
+                      }
                     >
                       <Bell size={16} className="text-yellow-500" />
                       Send System Alert
@@ -219,7 +218,7 @@ export default function Dashboard() {
       <Footer />
     </>
   )
-}
+
                   <CommunityDiscussion />;
                 </div>;
               </div>;
@@ -230,6 +229,5 @@ export default function Dashboard() {
       <Footer />;
     </>;
   );
-}
+
     </>);
-}

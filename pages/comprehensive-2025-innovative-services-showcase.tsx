@@ -6,12 +6,12 @@ import {
   ArrowRight, CheckCircle, Globe
   Search, Grid, List, Star as StarIcon
   Phone, Mail, MapPin
-} from 'lucide-react'
+ from 'lucide-react'
 import { 
   ArrowRight, CheckCircle, Globe;
   Search, Grid, List, Star as StarIcon;
   Phone, Mail, MapPin
-} from 'lucide-react';
+ from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 import { comprehensiveInnovativeServices } from '../data/comprehensive-2025-innovative-services-expansion';
@@ -26,64 +26,63 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
   const allServices = [...comprehensiveInnovativeServices, ...specializedEnterpriseServices]
   const categories = [
     { id: 'all', name: 'All Services', count: allServices.length }
-    { id: 'AI & Machine Learning', name: 'AI & ML', count: allServices.filter(s => s.category.includes('AI') |s.category.includes('Machine Learning')).length }
-    { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s => s.category.includes('Cybersecurity')).length }
-    { id: 'DevOps & Infrastructure', name: 'DevOps', count: allServices.filter(s => s.category.includes('DevOps')).length }
-    { id: 'Edge Computing', name: 'Edge Computing', count: allServices.filter(s => s.category.includes('Edge')).length }
-    { id: 'Healthcare AI', name: 'Healthcare', count: allServices.filter(s => s.category.includes('Healthcare')).length }
-    { id: 'Financial Technology', name: 'FinTech', count: allServices.filter(s => s.category.includes('Financial')).length }
-    { id: 'Education Technology', name: 'EdTech', count: allServices.filter(s => s.category.includes('Education')).length }
-    { id: 'Supply Chain & Logistics', name: 'Supply Chain', count: allServices.filter(s => s.category.includes('Supply Chain')).length }
-    { id: 'Energy & Sustainability', name: 'Energy', count: allServices.filter(s => s.category.includes('Energy')).length }
-    { id: 'Advanced AI & Consciousness', name: 'AI Consciousness', count: allServices.filter(s => s.category.includes('Consciousness')).length }
-    { id: 'Quantum Computing & AI', name: 'Quantum AI', count: allServices.filter(s => s.category.includes('Quantum')).length }
-    { id: 'Space Technology', name: 'Space Tech', count: allServices.filter(s => s.category.includes('Space')).length }
-    { id: 'Neural Technology & BCI', name: 'Neural Tech', count: allServices.filter(s => s.category.includes('Neural')).length }
-    { id: 'Advanced IoT & Edge Computing', name: 'Advanced IoT', count: allServices.filter(s => s.category.includes('Advanced IoT')).length }
-    { id: 'Advanced Analytics & AI', name: 'Advanced Analytics', count: allServices.filter(s => s.category.includes('Advanced Analytics')).length }
+    { id: 'AI & Machine Learning', name: 'AI & ML', count: allServices.filter(s => s.category.includes('AI') |s.category.includes('Machine Learning').length }
+    { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s => s.category.includes('Cybersecurity').length }
+    { id: 'DevOps & Infrastructure', name: 'DevOps', count: allServices.filter(s => s.category.includes('DevOps').length }
+    { id: 'Edge Computing', name: 'Edge Computing', count: allServices.filter(s => s.category.includes('Edge').length }
+    { id: 'Healthcare AI', name: 'Healthcare', count: allServices.filter(s => s.category.includes('Healthcare').length }
+    { id: 'Financial Technology', name: 'FinTech', count: allServices.filter(s => s.category.includes('Financial').length }
+    { id: 'Education Technology', name: 'EdTech', count: allServices.filter(s => s.category.includes('Education').length }
+    { id: 'Supply Chain & Logistics', name: 'Supply Chain', count: allServices.filter(s => s.category.includes('Supply Chain').length }
+    { id: 'Energy & Sustainability', name: 'Energy', count: allServices.filter(s => s.category.includes('Energy').length }
+    { id: 'Advanced AI & Consciousness', name: 'AI Consciousness', count: allServices.filter(s => s.category.includes('Consciousness').length }
+    { id: 'Quantum Computing & AI', name: 'Quantum AI', count: allServices.filter(s => s.category.includes('Quantum').length }
+    { id: 'Space Technology', name: 'Space Tech', count: allServices.filter(s => s.category.includes('Space').length }
+    { id: 'Neural Technology & BCI', name: 'Neural Tech', count: allServices.filter(s => s.category.includes('Neural').length }
+    { id: 'Advanced IoT & Edge Computing', name: 'Advanced IoT', count: allServices.filter(s => s.category.includes('Advanced IoT').length }
+    { id: 'Advanced Analytics & AI', name: 'Advanced Analytics', count: allServices.filter(s => s.category.includes('Advanced Analytics').length }
   ]
   const getPriceRange = (price: string) => {
-    const numPrice = parseFloat(price.replace('$', '').replace(, ''))
+    const numPrice = parseFloat(price.replace('$', '').replace(, '')
     if (numPrice < 1000) return 'budget'
     if (numPrice < 5000) return 'mid'
     return 'enterprise'
   }
   const filteredServices = allServices
     .filter(service => {
-      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
-                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
-                           service.tagline.toLowerCase().includes(searchTerm.toLowerCase())
-      const matchesCategory = selectedCategory === 'all' |service.category.includes(selectedCategory)
-      const matchesPrice = priceRange === 'all' |getPriceRange(service.price) === priceRange
+      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase() |
+                           service.description.toLowerCase().includes(searchTerm.toLowerCase() |
+                           service.tagline.toLowerCase().includes(searchTerm.toLowerCase()
+      const matchesCategory = selectedCategory = = 'all' |service.category.includes(selectedCategory)
+      const matchesPrice = priceRange = = 'all' |getPriceRange(service.price) = = priceRange
   };
 
   const filteredServices = allServices
     .filter(service => {
-      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
-      const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory);
-      const matchesPrice = priceRange === 'all' || getPriceRange(service.price) === priceRange;
+      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase() ||
+                           service.description.toLowerCase().includes(searchTerm.toLowerCase() ||
+                           service.tagline.toLowerCase().includes(searchTerm.toLowerCase();
+      const matchesCategory = selectedCategory = = 'all' || service.category.includes(selectedCategory);
+      const matchesPrice = priceRange = = 'all' || getPriceRange(service.price) = = priceRange;
       return matchesSearch && matchesCategory && matchesPrice
     })
-    .sort((a, b) => {
+    .sort(a, b) => {
       switch (sortBy) {
         case 'popularity':
           return (b.popular ? 1 : 0) - (a.popular ? 1 : 0)
         case 'price':
-          return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, ''))
+          return parseFloat(a.price.replace('$', '').replace(, '') - parseFloat(b.price.replace('$', '').replace(, '')
         case 'rating':
           return b.rating - a.rating
         case 'newest':
           return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime()
-          return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, ''));
+          return parseFloat(a.price.replace('$', '').replace(, '') - parseFloat(b.price.replace('$', '').replace(, '');
         case 'rating':
           return b.rating - a.rating;
         case 'newest':
           return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime();
         default: return 0
-      }
-    })
+      })
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -91,14 +90,11 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
       transition: {
         staggerChildren: 0.1
       }
-    }
     visible: {
       opacity: 1
       transition: {
         stagger_children: 0.1;
       }
-    }
-  }
   };
 
   const itemVariants = {
@@ -115,7 +111,6 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
       transition: {
         duration: 0.5
       }
-    }
   }
   const contactInfo = {
     mobile: '+1 302 464 0950'
@@ -162,9 +157,9 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
       <section className="relative py-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
           >
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent">
               2025 Comprehensive Services Showcase
@@ -209,8 +204,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
             </div>
           </motion.div>
         </div>
-      </section>
-          >;
+      </section>;
             <h1 className="text - 5xl md:text - 7xl font - bold mb - 6 bg - gradient - to - r from - white via - blue - 100 to - cyan - 100 bg - clip - text text - transparent">;
               2025 Comprehensive Services Showcase;
             </h1>;
@@ -259,9 +253,9 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
       <section className="px-6 pb-12">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={ opacity: 0, y: 20 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.6 }
             className="bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10"
           >
             {/* Search Bar */}
@@ -290,11 +284,11 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                   onChange={(e) => setSelectedCategory(e.target.value)}
                   className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50"
                 >
-                  {categories.map((category) => (
+                  {categories.map(category) => (
                     <option key={category.id} value={category.id}>
                       {category.name} ({category.count})
                     </option>
-                  ))}
+                  )}
                 </select>
               </div>
               {/* Price Range Filter */}
@@ -332,7 +326,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                   <button
                     onClick={() => setViewMode('grid')}
                     className={`px-3 py-2 rounded-lg transition-all duration-300 ${
-                      viewMode === 'grid'
+                      viewMode = = 'grid'
                         ? 'bg-cyan-500 text-white'
                         : 'bg-white/10 text-white/70 hover:bg-white/20'
                     }`}
@@ -342,9 +336,9 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                   <button
                     onClick={() => setViewMode('list')}
                     className={`px-3 py-2 rounded-lg transition-all duration-300 ${
-                      viewMode === 'list'
+                      viewMode = = 'list'
                         ? 'bg-cyan-500 text-white'
-                      viewMode === 'list' 
+                      viewMode = = 'list' 
                         ? 'bg-cyan-500 text-white' 
                         : 'bg-white/10 text-white/70 hover:bg-white/20'
                     }`}
@@ -371,10 +365,10 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                 {filteredServices.length} Services Found
               </h2>
               <p className="text-white/60">
-                Showing results for &quot,{searchTerm |'all services'}&quot, in {selectedCategory === 'all' ? 'all categories' : selectedCategory}
+                Showing results for &quot,{searchTerm |'all services'}&quot, in {selectedCategory = = 'all' ? 'all categories' : selectedCategory}
               </p>
             </div>
-            {filteredServices.length === 0 ? (
+            {filteredServices.length = = 0 ? (
               <div className="text-center py-20">
                 <div className="text-6xl mb-4"></div>
                 <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
@@ -385,36 +379,36 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                     setSelectedCategory('all')
 
                     setPriceRange('all')
-                  }}
+                  }
                   className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg transition-colors duration-300"
                 >
                   Clear Filters
                 </button>
               </div>
             ) : (
-              <div className={viewMode === 'grid'
-              <div className={viewMode === 'grid' 
+              <div className={viewMode = = 'grid'
+              <div className={viewMode = = 'grid' 
                 ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
                 : 'space-y-6'
               }>
-                {filteredServices.map((service, index) => (
+                {filteredServices.map(service, index) => (
                   <motion.div
                     key={service.id}
                     variants={itemVariants}
                     className={`group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl ${
-                      viewMode === 'list' ? 'flex' : ''
+                      viewMode = = 'list' ? 'flex' : ''
                     }`}
                   >
                     {/* Service Card Content */}
-                    <div className={`p-6 ${viewMode === 'list' ? 'flex-1' : ''}`}>
+                    <div className={`p-6 ${viewMode = = 'list' ? 'flex-1' : ''}`}>
                     key={service.id}
                     variants={item_variants}
                     className={`group relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl ${
-                      view_mode === 'list' ? 'flex' : '';
+                      view_mode = = 'list' ? 'flex' : '';
                     }`}
                   >;
                     {/* Service Card Content */}
-                    <div className={`p - 6 ${view_mode === 'list' ? 'flex - 1' : ''}`}>;
+                    <div className={`p - 6 ${view_mode = = 'list' ? 'flex - 1' : ''}`}>;
                       {/* Header */}
                       <div className="flex items - start justify - between mb - 4">;
                         <div className="flex items - center gap - 3">;
@@ -443,7 +437,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                       <div className="mb-4">
                         <h4 className="text-sm font-semibold text-white/70 mb-2">Key Features:</h4>
                         <div className="grid grid-cols-1 gap-1">
-                          {service.features.slice(0, 3).map((feature, idx) => (
+                          {service.features.slice(0, 3).map(feature, idx) => (
                             <div key={idx} className="flex items-center gap-2 text-xs text-white/60">
                               <CheckCircle className="w-3 h-3 text-green-400" />
                       </p>
@@ -451,11 +445,11 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                       <div className="mb - 4">;
                         <h4 className="text - sm font - semibold text - white / 70 mb - 2">Key Features:</h4>;
                         <div className="grid grid - cols - 1 gap - 1">;
-                          {service.features.slice (0, 3).map ((feature, idx) => (
+                          {service.features.slice (0, 3).map (feature, idx) => (
                             <div key={idx} className="flex items - center gap - 2 text - xs text - white / 60">;
                               <CheckCircle className="w - 3 h - 3 text - green - 400" />;
                               {feature}
-                            </div>))}
+                            </div>)}
                           {service.features.length > 3 && (
                             <div className="text-xs text-white/40">
                               +{service.features.length - 3} more features
@@ -523,7 +517,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                       </div>
                     </div>
                   </motion.div>
-                ))}
+                )}
               </div>
             )}
           </motion.div>
@@ -534,18 +528,18 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
       <section className="px-6 pb-20">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
       {/* Contact CTA */}
       <section className="px - 6 pb - 20">;
         <div className="max - w-4xl mx - auto text - center">;
           <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, coordinate_y: 30 }
+            whileInView={ opacity: 1, coordinate_y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
             className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 backdrop-blur-xl rounded-3xl p-12 border border-cyan-400/20"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -585,7 +579,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
       <EnhancedFooter />
     </div>
   )
-}
+
             className="bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 backdrop - blur - xl rounded - 3xl p - 12 border border - cyan - 400 / 20";
           >;
             <h2 className="text - 4xl font - bold text - white mb - 6">;
@@ -624,4 +618,3 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
       </section>;
       <EnhancedFooter />;
     </div>);
-}

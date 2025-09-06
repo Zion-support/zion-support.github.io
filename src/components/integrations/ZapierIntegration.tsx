@@ -7,7 +7,7 @@ import {
   CardContent
   CardFooter
   CardHeader
-} from '@/components/ui/card'
+ from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 import { toast } from 'sonner'
 import { Check, Copy, ExternalLink } from 'lucide-react'
@@ -23,11 +23,11 @@ export function ZapierIntegration() {
   const handleCopyApiKey = () => {
     navigator.clipboard.writeText(apiKey)
     setCopied(true)
-    setTimeout(() => setCopied(false), 2000)
+    setTimeout() => setCopied(false), 2000)
     toast.success('API key copied to clipboard')
     navigator.clipboard.writeText(apiKey)
     setCopied(true)
-    setTimeout((,) => setCopied(false), 2000)
+    setTimeout(,) => setCopied(false), 2000)
     toast.success("API key copied to clipboard")
   }
 
@@ -60,7 +60,7 @@ import {;
   CardContent,;
   CardFooter,;
   CardHeader,;
-} from '@/components/ui/card';
+ from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { toast } from 'sonner';
 import { Check, Copy, ExternalLink } from 'lucide-react';
@@ -80,12 +80,12 @@ export function ZapierIntegration() {;
   const handleCopyApiKey = () => {;
     navigator && navigator.clipboard.writeText(apiKey);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    setTimeout() => setCopied(false), 2000);
     toast && toast.success('API key copied to clipboard');
 
     navigator && navigator.clipboard.writeText(apiKey),;
     setCopied(true),;
-    setTimeout((,) => setCopied(false), 2000),;
+    setTimeout(,) => setCopied(false), 2000),;
     toast && toast.success("API key copied to clipboard");
   },;
 
@@ -105,7 +105,7 @@ import {
   CardContent,
   CardFooter,
   CardHeader,
-} from '@/components / ui / card';
+ from '@/components / ui / card';
 import { Input } from '@/components / ui / input';
 import { toast } from 'sonner';
 import { Check, Copy, ExternalLink } from 'lucide-react';
@@ -127,11 +127,11 @@ function ZapierIntegration() {
   const handleCopyApiKey = () =>: any {
     navigator.clipboard.write_text (api_key);
     set_copied (true);
-    set_timeout (() => set_copied (false), 2000);
+    set_timeout () => set_copied (false), 2000);
     toast.success ('API key copied to clipboard');
     navigator.clipboard.write_text (api_key),
     set_copied (true),
-    set_timeout ((, ) => set_copied (false), 2000),
+    set_timeout (, ) => set_copied (false), 2000),
     toast.success ("API key copied to clipboard");
   },
   return (
@@ -262,7 +262,7 @@ function ZapierIntegration() {
       </Card>
     </div>
   )
-}
+
                   </Button>;
                 </div>;
               </div>;
@@ -360,8 +360,7 @@ function ZapierIntegration() {
       </Card>;
     </div>;
   );
-}
+
   );
-}
+
     </div>);
-}

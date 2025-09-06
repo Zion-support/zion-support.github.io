@@ -9,4 +9,3 @@ export default function ResetPasswordPage() {
       <p className=&quot;mt-2 text-gray-600 dark:text-gray-300&quot;>Update your password below.</p>
     </div>
   )
-}

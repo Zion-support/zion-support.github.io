@@ -6,5 +6,3 @@ export function FeatureCard() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

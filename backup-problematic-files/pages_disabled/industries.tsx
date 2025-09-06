@@ -2,7 +2,6 @@ import React from 'react';
 
 interface IndustriesProps {
   className?: string;
-}
 
 const Industries: React.FC<IndustriesProps> = ({ className }) => {
   return (
@@ -11,6 +10,5 @@ const Industries: React.FC<IndustriesProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default Industries;

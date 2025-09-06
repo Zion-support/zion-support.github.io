@@ -3,9 +3,9 @@ import React, { useEffect, useState } from 'react',;
 import { useWallet } from '../../hooks/useWallet',;
 import { fetchDepinActivities, calculateRewards, DepinReward } from '../../utils/depins',;
 import { CHAINS } from '../../utils/chains',;
-;
-const ClientOnlyBridge = dynamic(() => import('../../components/ui/BridgeForm'), { ssr:false }),;
-;
+
+const ClientOnlyBridge = dynamic() => import('../../components/ui/BridgeForm'), { ssr:false }),;
+
 export default function TokenIntegrationsPage() {;
   const { account, connect } = useWallet(),;
   const [region, setRegion] = useState(''),;
@@ -13,7 +13,7 @@ export default function TokenIntegrationsPage() {;
   const [suggestion, setSuggestion] = useState<any>(null),;
   const [rewards, setRewards] = useState<DepinReward[] | null>(null),;
   const [depinsSyncing, setDepinsSyncing] = useState(false),;
-;
+
   async function syncDepin() {;
     if (!account) {;
       await connect(),;
@@ -25,7 +25,7 @@ export default function TokenIntegrationsPage() {;
     setRewards(r),;
     setDepinsSyncing(false),;
   }
-;
+
   async function runOperator() {;
     const res = await fetch('/api/operator/suggest-chain', {;
       method:'POST',;
@@ -34,18 +34,18 @@ export default function TokenIntegrationsPage() {;
     const data = await res.json(),;
     setSuggestion(data),;
   }
-;
+
   return (;
     <div className="space-y-8">;
       <section className="space-y-2">;
         <h1 className="text-2xl font-bold">ZION$ Integrations</h1>;
         <p className="text-gray-600 dark:text-gray-300">Omnichain transfers via LayerZero and DePIN rewards.</p>;
       </section>;
-;
+
       <section className="space-y-4">;
         <ClientOnlyBridge />;
       </section>;
-;
+
       <section className="space-y-3 p-4 border rounded border-gray-200 dark:border-gray-800">;
         <h2 className="text-lg font-semibold">DePIN Hook</h2>;
         <p className="text-sm text-gray-600 dark:text-gray-300">Plug into DIMO, Helium, Hivemapper to reward ZION$ for compute, IoT jobs, and data streaming.</p>;
@@ -55,16 +55,16 @@ export default function TokenIntegrationsPage() {;
         </div>;
         {rewards && (;
           <div className="mt-3 space-y-2 text-sm">;
-            {rewards.map((r, i) => (;
+            {rewards.map(r, i) => (;
               <div key={i} className="flex items-center justify-between">;
                 <span>{r.network}  {r.reason}</span>;
                 <span className="font-medium">+{r.points} ZION$</span>;
               </div>;
-            ))}
+            )}
           </div>;
         )}
       </section>;
-;
+
       <section className="space-y-3 p-4 border rounded border-gray-200 dark:border-gray-800">;
         <h2 className="text-lg font-semibold">Operator AI Actions</h2>;
         <p className="text-sm text-gray-600 dark:text-gray-300">Based on your region and stake, we suggest the best chain for ZION$.</p>;
@@ -85,12 +85,12 @@ export default function TokenIntegrationsPage() {;
               <span className="text-gray-500">Recommendation:</span> <b>{suggestion.recommendation?.chain?.name}</b>;
             </div>;
             {suggestion.alternatives && (;
-              <div className="text-gray-500">Alternatives:{suggestion.alternatives.map((a:any) => a.chain.name).join(', ')}</div>;
+              <div className="text-gray-500">Alternatives:{suggestion.alternatives.map(a:any) => a.chain.name).join(', ')}</div>;
             )}
           </div>;
         )}
       </section>;
-;
+
       <section className="space-y-2 text-xs text-gray-500">;
         <div>Security</div>;
         <ul className="list-disc ml-5 space-y-1">;
@@ -101,4 +101,3 @@ export default function TokenIntegrationsPage() {;
       </section>;
     </div>;
   ),;
-}

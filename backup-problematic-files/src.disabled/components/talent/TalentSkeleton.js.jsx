@@ -7,6 +7,5 @@ const TalentSkeleton.js = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default TalentSkeleton.js;

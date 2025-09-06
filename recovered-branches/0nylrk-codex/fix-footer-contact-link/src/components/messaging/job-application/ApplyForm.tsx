@@ -16,7 +16,7 @@ interface ApplyFormProps {
   onClose: () => void
 
   onApplySuccess?: (jobId: string) => Promise<void>
-}
+
 export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
   const { createConversation } = useMessaging();
   const { applyToJob } = useJobApplications();
@@ -34,7 +34,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
     setSelectedResumeId(resume.id)
   }
   const handleApply = async () => {
-    if (!message.trim()) {
+    if (!message.trim() {
       toast({
         title: "Message required"
         description: "Please enter a message before applying."
@@ -98,7 +98,6 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
     } finally {
       setIsSubmitting(false)
     }
-  }
 
   return (
     <>
@@ -128,7 +127,7 @@ interface ApplyFormProps {
   job: Job,
   on_close: () => void,
   onApplySuccess?: (job_id: string) => Promise < void>;
-}
+
 export /**
  * ApplyForm - Function description
  */
@@ -142,16 +141,16 @@ function ApplyForm() {
   const [active_tab, setActiveTab] = useState < string>("message");
   const [selected_resume, setSelectedResume] = useState < ResumeOption | null>(null);
   const [selectedResumeId, setSelectedResumeId] = useState < string | null>(null);
-;
+
   const handleResumeSelected = (resume: ResumeOption) =>: any {
     setSelectedResume (resume),
     setSelectedResumeId (resume.id);
   }
-;
+
   const handle_apply = async () => {
     if () {) {
   $2
-}
+
       toast ({
         title: "Message required",
         description: "Please enter a message before applying.",
@@ -161,33 +160,33 @@ function ApplyForm() {
     }
     try {
       setIsSubmitting (true);
-;
+
       // First submit the application to the job applications table;
       const application_success = await applyToJob (
         job.id,
         message,
         selectedResumeId);
-;
+
       // Check condition
 if ( {) {
   $2
-}
+
         throw new Error ("Failed to submit application");
       }
       // Format message with proposal link if provided;
       let full_message = message;
-;
+
       // Check condition
 if ( {) {
   $2
-}
+
         full_message += `\n\n_here's a link to my proposal: ${proposal_link}`;
       }
       // Add info about attached resume if available;
       // Check condition
 if ( {) {
   $2
-}
+
         full_message += `\n\n_i've attached my resume: ${selected_resume.title}`;
       }
       // Create context data for the conversation;
@@ -200,7 +199,7 @@ if ( {) {
           type: selected_resume.type;
         } : null;
       }
-;
+
       // Create conversation with the job client;
       await create_conversation (
         job.client_id;
@@ -208,12 +207,12 @@ if ( {) {
         'job';
         job.id;
         context_data);
-;
+
       // Call onApplySuccess to update job status in the UI;
       // Check condition
 if ( {) {
   $2
-}
+
         await onApplySuccess (job.id);
       }
       toast ({
@@ -230,8 +229,7 @@ if ( {) {
     } finally {
       setIsSubmitting (false);
     }
-  }
-;
+
   return (
     <>;
       <Tabs value={active_tab} onValueChange={setActiveTab} className="w - full">;
@@ -283,7 +281,7 @@ if ( {) {
       </div>
     </>
   )
-}
+
           />;
         </TabsContent>;
         <TabsContent value="resume">;
@@ -317,4 +315,3 @@ if ( {) {
         </Button>;
       </div>;
     </>);
-}

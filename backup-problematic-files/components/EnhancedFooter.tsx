@@ -60,7 +60,7 @@ const EnhancedFooter: React.FC = () => {;
               Leading-edge technology solutions and autonomous innovation platform. 
               Empowering businesses with cutting-edge AI, quantum computing, and digital transformation.
             </p>
-            
+
             {/* Contact Info */}
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-white/70">
@@ -83,11 +83,11 @@ const EnhancedFooter: React.FC = () => {;
           </div>
 
           {/* Footer Sections */}
-          {footerSections.map((section) => (
+          {footerSections.map(section) => (
             <div key={section.title}>
               <h3 className="text-white font-semibold mb-4">{section.title}</h3>
               <ul className="space-y-2">
-                {section.links.map((link) => (
+                {section.links.map(link) => (
                   <li key={link.name}>
                     <Link
                       href={link.href}
@@ -96,10 +96,10 @@ const EnhancedFooter: React.FC = () => {;
                       {link.name}
                     </a>
                   </li>
-                ))}
+                )}
               </ul>;
             </div>;
-          ))}
+          )}
         </div>;
         {/* Bottom Section */}
         <div className="pt-8 border-t border-white/10">
@@ -111,7 +111,7 @@ const EnhancedFooter: React.FC = () => {;
 
             {/* Social Links */}
             <div className="flex items-center space-x-4">
-              {socialLinks.map((social) => (
+              {socialLinks.map(social) => (
                 <a
                   key={social.name}
                   href={social.href}
@@ -122,12 +122,12 @@ const EnhancedFooter: React.FC = () => {;
                 >
                   <social.icon className="w-5 h-5" />
                 </a>
-              ))}
+              )}
             </div>;
           </div>;
         </div>;
       </div>;
     </footer>;
   );
-},;
+,;
 export default EnhancedFooter;

@@ -5,13 +5,13 @@ import { ;
   Users, Rocket, Brain, Shield, Globe, Award, ;
   Zap, Heart, Star, MapPin, Clock, DollarSign,;
   ExternalLink, Send, ArrowRight;
-} from 'lucide-react',;
+ from 'lucide-react',;
 import EnhancedNavigation from '../components/EnhancedNavigation',;
 import EnhancedFooter from '../components/EnhancedFooter',;
-;
+
 export default function CareersPage() {;
   const [selectedDepartment, setSelectedDepartment] = useState('all'),;
-;
+
   const departments = [;
     { id:'all', name:'All Departments' },;
     { id:'ai', name:'AI & Machine Learning' },;
@@ -20,7 +20,7 @@ export default function CareersPage() {;
     { id:'research', name:'Research & Development' },;
     { id:'business', name:'Business Development' }
   ],;
-;
+
   const jobOpenings = [;
     {;
       id:1,;
@@ -133,11 +133,11 @@ export default function CareersPage() {;
       ];
     }
   ],;
-;
-  const filteredJobs = selectedDepartment === 'all' ;
+
+  const filteredJobs = selectedDepartment = = 'all' ;
     ? jobOpenings ;
-    :jobOpenings.filter(job => job.department === selectedDepartment),;
-;
+    :jobOpenings.filter(job => job.department = = selectedDepartment),;
+
   const values = [;
     {;
       icon:Brain,;
@@ -160,7 +160,7 @@ export default function CareersPage() {;
       description:"We believe in sustainable innovation and personal well-being";
     }
   ],;
-;
+
   const benefits = [;
     {;
       icon:DollarSign,;
@@ -193,7 +193,7 @@ export default function CareersPage() {;
       description:"Regular recognition and rewards for outstanding contributions";
     }
   ],;
-;
+
   return (;
     <>;
       <Head>;
@@ -205,17 +205,17 @@ export default function CareersPage() {;
         <meta property="og:type" content="website" />;
         <meta property="og:url" content="https://ziontechgroup.com/careers" />;
       </Head>;
-;
+
       <EnhancedNavigation />;
-;
+
       <main className="min-h-screen bg-slate-900 text-white">;
         {/* Hero Section */}
         <section className="pt-32 pb-20 px-6">;
           <div className="max-w-7xl mx-auto text-center">;
             <motion.div;
-              initial={{ opacity:0, y:20 }}
-              animate={{ opacity:1, y:0 }}
-              transition={{ duration:0.8 }}
+              initial={ opacity:0, y:20 }
+              animate={ opacity:1, y:0 }
+              transition={ duration:0.8 }
             >;
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">;
                 Join Our Mission;
@@ -241,15 +241,15 @@ export default function CareersPage() {;
             </motion.div>;
           </div>;
         </section>;
-;
+
         {/* Company Culture */}
         <section className="py-20 px-6 bg-slate-800/50">;
           <div className="max-w-7xl mx-auto">;
             <motion.div;
-              initial={{ opacity:0, y:20 }}
-              whileInView={{ opacity:1, y:0 }}
-              transition={{ duration:0.8 }}
-              viewport={{ once:true }}
+              initial={ opacity:0, y:20 }
+              whileInView={ opacity:1, y:0 }
+              transition={ duration:0.8 }
+              viewport={ once:true }
               className="text-center mb-16";
             >;
               <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">;
@@ -259,15 +259,15 @@ export default function CareersPage() {;
                 We're building more than technology - we're building the future;
               </p>;
             </motion.div>;
-;
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-              {values.map((value, index) => (;
+              {values.map(value, index) => (;
                 <motion.div;
                   key={value.title}
-                  initial={{ opacity:0, y:20 }}
-                  whileInView={{ opacity:1, y:0 }}
-                  transition={{ duration:0.6, delay:index * 0.1 }}
-                  viewport={{ once:true }}
+                  initial={ opacity:0, y:20 }
+                  whileInView={ opacity:1, y:0 }
+                  transition={ duration:0.6, delay:index * 0.1 }
+                  viewport={ once:true }
                   className="group";
                 >;
                   <div className="p-6 rounded-2xl bg-slate-700/50 border border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:bg-slate-700/70 text-center">;
@@ -278,19 +278,19 @@ export default function CareersPage() {;
                     <p className="text-white/70 leading-relaxed">{value.description}</p>;
                   </div>;
                 </motion.div>;
-              ))}
+              )}
             </div>;
           </div>;
         </section>;
-;
+
         {/* Benefits */}
         <section className="py-20 px-6">;
           <div className="max-w-7xl mx-auto">;
             <motion.div;
-              initial={{ opacity:0, y:20 }}
-              whileInView={{ opacity:1, y:0 }}
-              transition={{ duration:0.8 }}
-              viewport={{ once:true }}
+              initial={ opacity:0, y:20 }
+              whileInView={ opacity:1, y:0 }
+              transition={ duration:0.8 }
+              viewport={ once:true }
               className="text-center mb-16";
             >;
               <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">;
@@ -300,15 +300,15 @@ export default function CareersPage() {;
                 We take care of our team so you can focus on changing the world;
               </p>;
             </motion.div>;
-;
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-              {benefits.map((benefit, index) => (;
+              {benefits.map(benefit, index) => (;
                 <motion.div;
                   key={benefit.title}
-                  initial={{ opacity:0, y:20 }}
-                  whileInView={{ opacity:1, y:0 }}
-                  transition={{ duration:0.6, delay:index * 0.1 }}
-                  viewport={{ once:true }}
+                  initial={ opacity:0, y:20 }
+                  whileInView={ opacity:1, y:0 }
+                  transition={ duration:0.6, delay:index * 0.1 }
+                  viewport={ once:true }
                   className="group";
                 >;
                   <div className="p-6 rounded-2xl bg-slate-800/50 border border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:bg-slate-800/70">;
@@ -319,19 +319,19 @@ export default function CareersPage() {;
                     <p className="text-white/70 leading-relaxed">{benefit.description}</p>;
                   </div>;
                 </motion.div>;
-              ))}
+              )}
             </div>;
           </div>;
         </section>;
-;
+
         {/* Job Openings */}
         <section id="openings" className="py-20 px-6 bg-slate-800/50">;
           <div className="max-w-7xl mx-auto">;
             <motion.div;
-              initial={{ opacity:0, y:20 }}
-              whileInView={{ opacity:1, y:0 }}
-              transition={{ duration:0.8 }}
-              viewport={{ once:true }}
+              initial={ opacity:0, y:20 }
+              whileInView={ opacity:1, y:0 }
+              transition={ duration:0.8 }
+              viewport={ once:true }
               className="text-center mb-16";
             >;
               <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">;
@@ -340,33 +340,33 @@ export default function CareersPage() {;
               <p className="text-xl text-white/70 max-w-3xl mx-auto mb-8">;
                 Join our team of innovators and help shape the future of technology;
               </p>;
-;
+
               {/* Department Filter */}
               <div className="flex flex-wrap justify-center gap-3">;
-                {departments.map((dept) => (;
+                {departments.map(dept) => (;
                   <button;
                     key={dept.id}
                     onClick={() => setSelectedDepartment(dept.id)}
                     className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 ${;
-                      selectedDepartment === dept.id;
+                      selectedDepartment = = dept.id;
                         ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white';
                         :'bg-slate-700/50 text-white/70 hover:bg-slate-700/70 hover:text-white';
                     }`}
                   >;
                     {dept.name}
                   </button>;
-                ))}
+                )}
               </div>;
             </motion.div>;
-;
+
             <div className="space-y-6">;
-              {filteredJobs.map((job, index) => (;
+              {filteredJobs.map(job, index) => (;
                 <motion.div;
                   key={job.id}
-                  initial={{ opacity:0, y:20 }}
-                  whileInView={{ opacity:1, y:0 }}
-                  transition={{ duration:0.6, delay:index * 0.1 }}
-                  viewport={{ once:true }}
+                  initial={ opacity:0, y:20 }
+                  whileInView={ opacity:1, y:0 }
+                  transition={ duration:0.6, delay:index * 0.1 }
+                  viewport={ once:true }
                   className="group";
                 >;
                   <div className="p-8 rounded-2xl bg-slate-700/50 border border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:bg-slate-700/70">;
@@ -380,7 +380,6 @@ export default function CareersPage() {;
                             {job.type}
                           </span>;
                         </div>;
-                        ;
                         <div className="flex flex-wrap items-center gap-6 mb-4 text-white/70">;
                           <div className="flex items-center gap-2">;
                             <MapPin className="w-4 h-4" />;
@@ -395,35 +394,35 @@ export default function CareersPage() {;
                             <span>{job.salary}</span>;
                           </div>;
                         </div>;
-;
+
                         <p className="text-white/80 mb-4 leading-relaxed">{job.description}</p>;
-;
+
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
                           <div>;
                             <h4 className="font-semibold text-white mb-2">Requirements:</h4>;
                             <ul className="space-y-1">;
-                              {job.requirements.map((req, idx) => (;
+                              {job.requirements.map(req, idx) => (;
                                 <li key={idx} className="text-white/70 text-sm flex items-start gap-2">;
                                   <span className="w-1.5 h-1.5 bg-blue-400 rounded-full mt-2 flex-shrink-0"></span>;
                                   {req}
                                 </li>;
-                              ))}
+                              )}
                             </ul>;
                           </div>;
                           <div>;
                             <h4 className="font-semibold text-white mb-2">Benefits:</h4>;
                             <ul className="space-y-1">;
-                              {job.benefits.map((benefit, idx) => (;
+                              {job.benefits.map(benefit, idx) => (;
                                 <li key={idx} className="text-white/70 text-sm flex items-start gap-2">;
                                   <span className="w-1.5 h-1.5 bg-green-400 rounded-full mt-2 flex-shrink-0"></span>;
                                   {benefit}
                                 </li>;
-                              ))}
+                              )}
                             </ul>;
                           </div>;
                         </div>;
                       </div>;
-;
+
                       <div className="lg:flex-shrink-0">;
                         <button className="px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2">;
                           <Send className="w-4 h-4" />;
@@ -433,14 +432,14 @@ export default function CareersPage() {;
                     </div>;
                   </div>;
                 </motion.div>;
-              ))}
-;
-              {filteredJobs.length === 0 && (;
+              )}
+
+              {filteredJobs.length = = 0 && (;
                 <motion.div;
-                  initial={{ opacity:0, y:20 }}
-                  whileInView={{ opacity:1, y:0 }}
-                  transition={{ duration:0.6 }}
-                  viewport={{ once:true }}
+                  initial={ opacity:0, y:20 }
+                  whileInView={ opacity:1, y:0 }
+                  transition={ duration:0.6 }
+                  viewport={ once:true }
                   className="text-center py-12";
                 >;
                   <p className="text-white/70 text-lg mb-4">;
@@ -454,15 +453,15 @@ export default function CareersPage() {;
             </div>;
           </div>;
         </section>;
-;
+
         {/* CTA Section */}
         <section className="py-20 px-6 bg-gradient-to-r from-blue-600/20 to-cyan-600/20">;
           <div className="max-w-4xl mx-auto text-center">;
             <motion.div;
-              initial={{ opacity:0, y:20 }}
-              whileInView={{ opacity:1, y:0 }}
-              transition={{ duration:0.8 }}
-              viewport={{ once:true }}
+              initial={ opacity:0, y:20 }
+              whileInView={ opacity:1, y:0 }
+              transition={ duration:0.8 }
+              viewport={ once:true }
             >;
               <h2 className="text-4xl font-bold mb-6 text-white">;
                 Don't See the Perfect Role?;
@@ -492,8 +491,7 @@ export default function CareersPage() {;
           </div>;
         </section>;
       </main>;
-;
+
       <EnhancedFooter />;
     </>;
   );
-}

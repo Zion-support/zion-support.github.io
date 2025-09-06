@@ -2,7 +2,6 @@ import React from 'react';
 
 interface AI-Powered-Legal-Document-GeneratorProps {
   className?: string;
-}
 
 const AI-Powered-Legal-Document-Generator: React.FC<AI-Powered-Legal-Document-GeneratorProps> = ({ className }) => {
   return (
@@ -11,6 +10,5 @@ const AI-Powered-Legal-Document-Generator: React.FC<AI-Powered-Legal-Document-Ge
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default AI-Powered-Legal-Document-Generator;

@@ -6,5 +6,3 @@ export function CountrySelector() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

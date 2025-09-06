@@ -6,5 +6,3 @@ export function MessageBubble() {;
       <p>Component placeholder - needs implementation</p>;
     </div>;
   );
-}
-;

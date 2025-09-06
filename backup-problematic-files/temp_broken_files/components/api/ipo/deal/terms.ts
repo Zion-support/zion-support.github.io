@@ -2,7 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next',
 import { readJsonFile } from '../../../../utils/api/storage',
 import { requireSuperadminApi } from '../../../../utils/api/auth',
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!requireSuperadminApi(req, res)) return,
+  if (!requireSuperadminApi(req, res) return,
   const terms = readJsonFile('deal/terms.json', {
     round: 'Series A',
     target: '$10,000,000',

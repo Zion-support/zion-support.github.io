@@ -6,5 +6,3 @@ export function Integrations() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

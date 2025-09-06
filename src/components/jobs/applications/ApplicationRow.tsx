@@ -26,7 +26,6 @@ interface ApplicationRowProps {
   onStatusChange: (applicationId: string, newStatus: ApplicationStatus,) => Promise<void>
   onViewScore: (application: JobApplication,) => void
 
-}
 export function ApplicationRow({
 
   application
@@ -34,7 +33,7 @@ export function ApplicationRow({
   onViewApplication
   onStatusChange
   onViewScore
-}: ApplicationRowProps) {
+: ApplicationRowProps) {
   const [avatarError, setAvatarError] = useState(false)
   const talentName = application.talent_profile?.full_name |'Unknown'
 import { formatDistanceToNow } from 'date-fns';
@@ -64,7 +63,6 @@ interface ApplicationRowProps {;
   onViewApplication: (applicationId: string,) => Promise<void>,;
   onStatusChange: (applicationId: string, newStatus: ApplicationStatus,) => Promise<void>,;
   onViewScore: (application: JobApplication,) => void;
-}
 
 export function ApplicationRow(): any ({;
   application,;
@@ -72,7 +70,7 @@ export function ApplicationRow(): any ({;
   onViewApplication,;
   onStatusChange,;
   onViewScore,;
-}: ApplicationRowProps) {;
+: ApplicationRowProps) {;
   const [avatarError, setAvatarError] = useState(false);
   const talentName = application && application.talent_profile?.full_name || 'Unknown';
 
@@ -166,7 +164,6 @@ export function ApplicationRow(): any ({;
       </TableCell>
     </TableRow>
   )
-}
 
         {application.resume ? (
           <Button variant='ghost' size='sm' as_child>;
@@ -189,4 +186,3 @@ export function ApplicationRow(): any ({;
         />;
       </TableCell>;
     </TableRow>);
-}

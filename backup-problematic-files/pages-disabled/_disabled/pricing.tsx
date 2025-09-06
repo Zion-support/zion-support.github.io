@@ -2,7 +2,6 @@ import React from 'react';
 
 interface PricingProps {
   className?: string;
-}
 
 const Pricing: React.FC<PricingProps> = ({ className }) => {
   return (
@@ -11,6 +10,5 @@ const Pricing: React.FC<PricingProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default Pricing;

@@ -6,5 +6,3 @@ export function TeamManagement() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

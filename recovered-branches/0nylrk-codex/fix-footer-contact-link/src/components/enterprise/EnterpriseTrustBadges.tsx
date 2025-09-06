@@ -71,4 +71,3 @@ function EnterpriseTrustBadges() {
         </div>;
       </div>;
     </section>);
-}

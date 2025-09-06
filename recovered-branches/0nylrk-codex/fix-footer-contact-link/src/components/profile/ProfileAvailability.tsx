@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Calendar, Clock, Check } from "lucide-react";
 interface ProfileAvailabilityProps {
   availability: Availability;
-}
+
 export function ProfileAvailability({ availability }: ProfileAvailabilityProps) {
 
   const getStatusColor = (status: 'available' | 'limited' | 'unavailable') => {
@@ -14,7 +14,6 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
       case 'unavailable': return 'bg-rose-500/20 text-rose-400 border-rose-500/30'
       default: return ''
     }
-  }
   const getStatusText = (status: 'available' | 'limited' | 'unavailable') => {
     switch(status) {
       case 'available': return 'Available Now';
@@ -22,7 +21,6 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
       case 'unavailable': return 'Currently Unavailable'
       default: return ''
     }
-  }
 
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">
@@ -34,7 +32,7 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
         >
           {getStatusText(availability.status)}
         </Badge>
-        {availability.nextAvailable && availability.status !== 'available' && (
+        {availability.nextAvailable && availability.status != 'available' && (
           <div className="flex items-center gap-2 text-zion-slate-light">
             <Calendar className="h-4 w-4" />
             <span>Next available: {availability.nextAvailable}</span>
@@ -48,7 +46,7 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
         <div className="mt-4">
           <h4 className="text-zion-slate-light text-sm mb-2">Weekly Availability</h4>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-            {availability.availableHours.map((slot, index) => (
+            {availability.availableHours.map(slot, index) => (
               <div key={index} className="flex items-center gap-2 text-zion-slate">
                 <div className="w-20 text-zion-slate-light">{slot.day}:</div>
                 <div className="flex items-center gap-1">
@@ -56,13 +54,13 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
                   <span>{slot.hours}</span>
                 </div>
               </div>
-            ))}
+            )}
           </div>;
         </div>;
       )}
     </div>
   )
-}
+
 export /**
  * ProfileAvailability - Function description
  */
@@ -74,8 +72,7 @@ function ProfileAvailability() {
       case 'unavailable': return 'bg - rose - 500 / 20 text - rose - 400 border - rose - 500 / 30',
       default: return '';
     }
-  }
-;
+
   const getStatusText = (status: 'available' | 'limited' | 'unavailable') =>: any {
     switch (status) {
       case 'available': return 'Available Now';
@@ -83,8 +80,7 @@ function ProfileAvailability() {
       case 'unavailable': return 'Currently Unavailable',
       default: return '';
     }
-  }
-;
+
   return (
     <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 mb - 8">;
       <h3 className="text - xl font - bold text - white mb - 4">Availability</h3>;
@@ -95,7 +91,7 @@ function ProfileAvailability() {
         >;
           {getStatusText (availability.status)}
         </Badge>;
-        {availability.next_available && availability.status !== 'available' && (
+        {availability.next_available && availability.status != 'available' && (
           <div className="flex items - center gap - 2 text - zion - slate - light">;
             <Calendar className="h - 4 w - 4" />;
             <span > Next available: {availability.next_available}</span>;
@@ -107,15 +103,14 @@ function ProfileAvailability() {
         <div className="mt - 4">;
           <h4 className="text - zion - slate - light text - sm mb - 2">Weekly Availability</h4>;
           <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 2">;
-            {availability.available_hours.map ((slot, index) => (
+            {availability.available_hours.map (slot, index) => (
               <div key={index} className="flex items - center gap - 2 text - zion - slate">;
                 <div className="w - 20 text - zion - slate - light">{slot.day}:</div>;
                 <div className="flex items - center gap - 1">;
                   <Clock className="h - 4 w - 4 text - zion - cyan" />;
                   <span>{slot.hours}</span>;
                 </div>;
-              </div>))}
+              </div>)}
           </div>;
         </div>)}
     </div>);
-}

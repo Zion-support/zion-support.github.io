@@ -49,7 +49,6 @@ export const innovativeITInfrastructureServices2025 = [
           'Unlimited nodes'
         ]
       }
-    }
     category: 'IT Infrastructure'
     tags: [
       'Quantum Computing'
@@ -158,7 +157,6 @@ export const innovativeITInfrastructureServices2025 = [
           'White-label solution'
         ]
       }
-    }
     category: 'Cybersecurity'
     tags: [
       'Zero Trust'
@@ -253,7 +251,6 @@ export const innovativeITInfrastructureServices2025 = [
           'Unlimited environments'
         ]
       }
-    }
     category: 'DevOps & Automation'
     tags: [
       'DevOps'
@@ -342,7 +339,6 @@ export const innovativeITInfrastructureServices2025 = [
           'Unlimited resources'
         ]
       }
-    }
     category: 'Cloud Computing'
     tags: [
       'Quantum Computing'
@@ -443,7 +439,6 @@ export const innovativeITInfrastructureServices2025 = [
           'Unlimited data centers'
         ]
       }
-    }
     category: 'Data Center Management'
     tags: [
       'AI Automation'
@@ -533,6 +528,4 @@ export const innovativeITInfrastructureServices2025 = [
     integrations: ['Data center infrastructure_monitoring systems_energy management_security platforms_compliance tools'];
     compliance: ['SOC2ISO 27001Uptime InstituteEnergy StarIndustry - specific regulations'];
   }
-];
-
 ;

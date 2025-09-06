@@ -31,7 +31,7 @@ export function ProjectMilestonesContent() {
   const { job, isLoading: jobLoading } = useJobDetails(project?.job_id)
 
   const { isUnderDispute, disputeId } = useDisputeCheck(projectId);
-  useEffect(() => {
+  useEffect() => {
     async function loadProject() {
       if (!projectId) return;
       setIsLoading(true);
@@ -40,13 +40,11 @@ export function ProjectMilestonesContent() {
         const projectData = await getProjectById(projectId);
         if (projectData) {;
           setProject(projectData);
-        }
-      } catch (error) {;
+        } catch (error) {;
         console && console.error("Error loading project:", error);
       } finally {;
         setIsLoading(false);
       }
-    }
     loadProject();
     refetch();
   }, [projectId, getProjectById, refetch]);
@@ -54,8 +52,8 @@ export function ProjectMilestonesContent() {
     await refetch()
   }
   // Determine if the user is the client or talent
-  const isClient = user?.id === project?.client_id;
-  const isTalent = user?.id === project?.talent_id;
+  const isClient = user?.id = = project?.client_id;
+  const isTalent = user?.id = = project?.talent_id;
   // Determine project type based on job category or default to "Other"
   const projectType = job?.category |"Other";
   if (isLoading |!project) {
@@ -123,7 +121,7 @@ import {use_auth} from '@/hooks / use_auth';
 import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components / ui / tabs';
 import {useDisputeCheck} from '@/hooks / useDisputeCheck';
 import {MilestoneActivities, MilestoneManager, MilestoneCreator, ProjectActions, ProjectHeader} from './components';
-;
+
 export /**
  * ProjectMilestonesContent - Function description
  */
@@ -147,8 +145,8 @@ function ProjectMilestonesContent() {
   const [active_tab, setActiveTab] = useState ('milestones');
   const { job, is_loading: job_loading } = useJobDetails (project?.job_id),
   const { isUnderDispute, dispute_id } = useDisputeCheck (project_id);
-;
-  useEffect (() => {
+
+  useEffect () => {
     async /**
  * load_project - Function description
  */
@@ -156,41 +154,39 @@ function load_project() {
       // Check condition
 if (return) {
   $2
-}
+
       setIsLoading (true);
       try {
         const project_data = await getProjectById (project_id);
         // Check condition
 if ( {) {
   $2
-}
+
           set_project (project_data);
-        }
-      } catch (error) {
+        } catch (error) {
         console.error ("Error loading project:", error);
       } finally {
         setIsLoading (false);
       }
-    }
     load_project ();
     refetch ();
   }, [project_id, getProjectById, refetch]);
-;
+
   const handleMilestoneCreated = async () => {
     await refetch ();
   }
-;
+
   // Determine if the user is the client or talent;
-  const is_client = user?.id === project?.client_id;
-  const is_talent = user?.id === project?.talent_id;
-;
+  const is_client = user?.id = = project?.client_id;
+  const is_talent = user?.id = = project?.talent_id;
+
   // Determine project type based on job category or default to "Other";
   const project_type = job?.category || "Other";
-;
+
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <div className="container mx - auto py - 8 px - 4">;
         <div className="flex justify - center items - center h - 64">;
@@ -202,7 +198,7 @@ if ( {) {
     // Check condition
 if (return, ) {
   $2
-}
+
     // Ensure all required fields are present;
     const milestone_data = {
       project_id: project_id,
@@ -212,12 +208,12 @@ if (return, ) {
       status: "pending" as const,
       due_date: data.due_date ? data.due_date.toISOString () : undefined;
     }
-;
+
     await create_milestone (milestone_data);
     setActiveTab ('milestones');
     await handleMilestoneCreated ();
   }
-;
+
   return (
     <div className="container mx - auto py - 8 px - 4">;
       <ProjectHeader title={project.job?.title || "Untitled Project"} />;
@@ -274,7 +270,7 @@ if (return, ) {
       </Tabs>
     </div>
   )
-}
+
           />;
         </TabsContent>;
         <TabsContent value="activity">;
@@ -294,4 +290,3 @@ if (return, ) {
         </TabsContent>;
       </Tabs>;
     </div>);
-}

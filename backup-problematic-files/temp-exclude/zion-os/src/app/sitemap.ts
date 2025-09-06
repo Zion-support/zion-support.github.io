@@ -1,8 +1,7 @@
 import { MetadataRoute } from 'next';
-;
+
 export default function sitemap():MetadataRoute.Sitemap {;
   const baseUrl = 'https://ziontechgroup.com';
-  ;
   const routes = [;
     '',;
     '/about/services',;
@@ -16,7 +15,7 @@ export default function sitemap():MetadataRoute.Sitemap {;
     '/terms/cookies',;
     '/accessibility/multiverse/launch',;
     '/admin/instances/admin/os-deploy'];
-;
+
   const aiServices = [;
     '/ai-autonomous-business-manager/ai-autonomous-business-operations',;
     '/ai-autonomous-business-platform/ai-autonomous-business-process-automation',;
@@ -61,38 +60,37 @@ export default function sitemap():MetadataRoute.Sitemap {;
     '/advanced-research-automation/advanced-cybersecurity-suite',;
     '/advanced-it-infrastructure-services/accessibility-auditor',;
     '/accessibility-scanner'];
-;
+
   const quantumServices = [;
     '/quantum-neural-network-platform/quantum-cloud-infrastructure',;
     '/quantum-financial-trading/quantum-network-optimization',;
     '/quantum-private-network-solutions/quantum-private-network-solutions-2026'];
-;
+
   const networkServices = [;
     '/5g-enterprise-network/5g-enterprise-solutions',;
     '/5g-network-optimization'];
-;
+
   const complianceServices = [;
     '/soc2-compliance-automation'];
-;
+
   const allRoutes = [;
     ...routes,;
     ...aiServices,;
     ...quantumServices,;
     ...networkServices,;
     ...complianceServices];
-;
-  return allRoutes.map((route) => ({;
+
+  return allRoutes.map(route) => ({;
     url:`${baseUrl}${route}`,;
     lastModified:new Date(),;
     changeFrequency:'weekly',;
-    priority:route === '' ? 1 :0.8})); const complianceServices = [ '/soc2-compliance-automation'] const allRoutes = [ ...routes, ...aiServices, ...quantumServices, ...networkServices, ...complianceServices] return allRoutes.map ( (route) => ({
+    priority:route = = '' ? 1 :0.8}); const complianceServices = [ '/soc2-compliance-automation'] const allRoutes = [ ...routes, ...aiServices, ...quantumServices, ...networkServices, ...complianceServices] return allRoutes.map (route) => ({
   url: `$ {
   baseUrl 
-}$ {
+$ {
   route 
-}`;
+`;
 lastModified: new Date ();
 changeFrequency: 'weekly';
-priority: route === '' ? 1 : 0.8 
-}) ) 
-}
+priority: route = = '' ? 1 : 0.8 
+) 

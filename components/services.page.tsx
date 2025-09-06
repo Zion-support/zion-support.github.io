@@ -37,14 +37,14 @@ export default function ServicesPage() {
       </div>;
     </EnhancedLayout>;
   );
-}        <section id="ai" className="rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950">;
+        <section id="ai" className="rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950">;
           <BadgeCheck className="h-6 w-6 text-indigo-500" />;
           <div className="mt-3 text-lg font-semibold">AI Integrations</div>;
           <p className="mt-1 text-sm opacity-80">Copilots, agents, vector search, and automation tailored to your product.</p>;
       </div>;
     </EnhancedLayout>;
   );
-}
+
 import EnhancedLayout from '../components / layout / EnhancedLayout';
 import {Rocket, ShieldCheck, BadgeCheck} from 'lucide-react';
 export default /**
@@ -89,10 +89,9 @@ function ServicesPage() {
           </p>        </section>;
       </div>;
     </EnhancedLayout>);
-}        <section id="ai" className="rounded - 2xl border border - gray - 200 dark:border - gray - 800 p - 6 bg - white dark:bg - gray - 950">;
+        <section id="ai" className="rounded - 2xl border border - gray - 200 dark:border - gray - 800 p - 6 bg - white dark:bg - gray - 950">;
           <BadgeCheck className="h - 6 w - 6 text - indigo - 500" />;
           <div className="mt - 3 text - lg font - semibold">AI Integrations</div>;
           <p className="mt - 1 text - sm opacity - 80">Copilots, agents, vector search, and automation tailored to your product.</p>;
       </div>;
     </EnhancedLayout>);
-}

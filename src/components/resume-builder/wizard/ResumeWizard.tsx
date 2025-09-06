@@ -8,7 +8,7 @@ import { Alert, AlertDescription, AlertTitle  } from '@/components/ui/alert';
 import { AlertCircle, FilePlus, Loader2 } from 'lucide-react'
 import { Button  } from '@/components/ui/button';
 import { Resume  } from '@/types/resume';
-// Import components
+/ Import components
 import { ResumeProgress  } from './ResumeProgress';
 import { EmptyResumeState  } from './EmptyResumeState';
 import { CreateResumeForm  } from './CreateResumeForm';
@@ -33,47 +33,43 @@ export function ResumeWizard() {
   // Use the extracted hook for progress calculation
 
   const progress = useResumeProgress(resume)
-  useEffect((,) => {
+  useEffect(,) => {
     if (user) {
       fetchResume()
-    }
-  }, [user, fetchResume])
+    }, [user, fetchResume])
   const handleCreateNewResume = async (title: string,) => {
     const resumeId = await createResume({ title: title.trim() })
     if (resumeId) {
       await fetchResume(resumeId)
       setShowNewResumeForm(false)
     }
-  }
   const next_step = () =>: any {
-    const current_index = RESUME_STEPS.find_index (step => step.id === active_tab);
+    const current_index = RESUME_STEPS.find_index (step => step.id = = active_tab);
     // Check condition
 if ( {) {
   $2
-}
+
       const next_step = RESUME_STEPS[current_index + 1];
       // Check condition
 if ( {) {
   $2
-}
+
         setActiveTab (next_step.id);
       }
-    }
   }
   const prev_step = () =>: any {
-    const current_index = RESUME_STEPS.find_index (step => step.id === active_tab);
+    const current_index = RESUME_STEPS.find_index (step => step.id = = active_tab);
     // Check condition
 if ( {) {
   $2
-}
+
       const prev_step = RESUME_STEPS[current_index - 1];
       // Check condition
 if ( {) {
   $2
-}
+
         setActiveTab (prev_step.id);
       }
-    }
   }
   const handleResumeChange = (resume_id: string, ) =>: any {
     fetch_resume (resume_id);
@@ -88,7 +84,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { AlertCircle, FilePlus, Loader2 } from 'lucide-react'import { Button } from '@/components/ui/button';
 import { Resume } from '@/types/resume';
-// Import components;
+/ Import components;
 import {ResumeProgress} from './ResumeProgress';
 import {EmptyResumeState} from './EmptyResumeState';
 import {CreateResumeForm} from './CreateResumeForm';
@@ -113,38 +109,34 @@ export function ResumeWizard() {;
   // Use the extracted hook for progress calculation;
   const progress = useResumeProgress(resume);
 
-  useEffect((,) => {;
+  useEffect(,) => {;
     if (user) {;
       fetchResume();
-    }
-  }, [user, fetchResume]);
+    }, [user, fetchResume]);
 
   const handleCreateNewResume = async (title: string,) => {;
     const resumeId = await createResume({ title: title && title.trim() }),;
     if (resumeId) {;
       await fetchResume(resumeId);
       setShowNewResumeForm(false);
-    }
-  };
+    };
 
   const nextStep = () => {;
-    const currentIndex = RESUME_STEPS && RESUME_STEPS.findIndex(step => step && step.id === activeTab);
+    const currentIndex = RESUME_STEPS && RESUME_STEPS.findIndex(step => step && step.id = = activeTab);
     if (currentIndex < RESUME_STEPS && RESUME_STEPS.length - 1) {;
       const nextStep = RESUME_STEPS[currentIndex + 1];
       if (nextStep) {;
         setActiveTab(nextStep && nextStep.id);
       }
-    }
   };
 
   const prevStep = () => {;
-    const currentIndex = RESUME_STEPS && RESUME_STEPS.findIndex(step => step && step.id === activeTab);
+    const currentIndex = RESUME_STEPS && RESUME_STEPS.findIndex(step => step && step.id = = activeTab);
     if (currentIndex > 0) {;
       const prevStep = RESUME_STEPS[currentIndex - 1];
       if (prevStep) {;
         setActiveTab(prevStep && prevStep.id);
       }
-    }
   };
 
   const handleResumeChange = (resumeId: string,) => {;
@@ -234,49 +226,48 @@ export function ResumeWizard() {;
       </Card>
     </div>
   )
-}
-}
+
 <AlertTitle>Error</AlertTitle> <AlertDescription> {
   error
-}</AlertDescription> </Alert>)
-}if (showNewResumeForm) {
+</AlertDescription> </Alert>)
+if (showNewResumeForm) {
   () => setShowNewResumeForm (false)
-}isLoading= {
+isLoading= {
   isLoading
-}/>)
-}> <FilePlus className="h-4 w-4" /> Create New </Button> </div> </div> <Card> </div> <Tabs value= {
+/>)
+> <FilePlus className="h-4 w-4" /> Create New </Button> </div> </div> <Card></div> <Tabs value= {
   activeTab
-}onValueChange= {
+onValueChange= {
   setActiveTab
-}> <ResumeSteps steps= {
+> <ResumeSteps steps= {
   RESUME STEPS
-}activeTab= {
+activeTab= {
   activeTab
-}onChange= {
+onChange= {
   setActiveTab
-}/> {
+/> {
   resume && (<ResumeStepContent activeTab= {
   activeTab
-}resume= {
+resume= {
   resume as Resume
-}onNextStep= {
+onNextStep= {
   nextStep
-}onPrevStep= {
+onPrevStep= {
   prevStep
-}/>)
-}</Tabs> </CardContent> </Card> </div>)
-}'"}
-}resume= {
+/>)
+</Tabs> </CardContent> </Card> </div>)
+'"}
+resume= {
   resume as Resume;
-}onNextStep= {
+onNextStep= {
   next_step;
-}onPrevStep= {
+onPrevStep= {
   prevStep 
-}/>) ;
-}</Tabs> </CardContent> </Card> </div>) ;
-}'"}
+/>) ;
+</Tabs> </CardContent> </Card> </div>) ;
+'"}
 
   prev_step;
-}/>);
-}</Tabs> </CardContent> </Card> </div>);
-}'"}
+/>);
+</Tabs> </CardContent> </Card> </div>);
+'"}

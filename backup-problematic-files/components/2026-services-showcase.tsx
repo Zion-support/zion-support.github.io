@@ -20,31 +20,30 @@ export default function ServicesShowcase2026() {;
   // Filter and sort services;
   const filteredServices = allServices;
     .filter(service => {;
-      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                           service.category.toLowerCase().includes(searchTerm.toLowerCase()),;
-      const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory),;
+      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase() ||;
+                           service.description.toLowerCase().includes(searchTerm.toLowerCase() ||;
+                           service.category.toLowerCase().includes(searchTerm.toLowerCase(),;
+      const matchesCategory = selectedCategory = = 'all' || service.category.includes(selectedCategory),;
       return matchesSearch && matchesCategory;
     });
-    .sort((a, b) => {;
+    .sort(a, b) => {;
       switch (sortBy) {;
         case 'price':;
-          return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, '')),;
+          return parseFloat(a.price.replace(/[^0-9.]/g, '') - parseFloat(b.price.replace(/[^0-9.]/g, ''),;
         case 'rating':;
           return b.rating - a.rating,;
         case 'customers':;
           return b.customers - a.customers,;
         default: return a.name.localeCompare(b.name);
-      }
-    }),;
+      }),;
   const categories = [;
     { id: 'all', name: 'All Services', icon: Globe, count: allServices.length },;
-    { id: 'AI', name: 'AI & Machine Learning', icon: Brain, count: allServices.filter(s => s.category.includes('AI')).length },;
-    { id: 'Quantum', name: 'Quantum Computing', icon: Atom, count: allServices.filter(s => s.category.includes('Quantum')).length },;
-    { id: 'Emerging', name: 'Emerging Technology', icon: Sparkles, count: allServices.filter(s => s.category.includes('Emerging')).length },;
-    { id: 'IT', name: 'IT & Infrastructure', icon: Shield, count: allServices.filter(s => s.category.includes('IT') || s.category.includes('Infrastructure')).length },;
-    { id: 'Autonomous', name: 'Autonomous Systems', icon: Target, count: allServices.filter(s => s.category.includes('Autonomous')).length },;
-    { id: 'Cloud', name: 'Cloud & DevOps', icon: Cloud, count: allServices.filter(s => s.category.includes('Cloud') || s.category.includes('DevOps')).length }
+    { id: 'AI', name: 'AI & Machine Learning', icon: Brain, count: allServices.filter(s => s.category.includes('AI').length },;
+    { id: 'Quantum', name: 'Quantum Computing', icon: Atom, count: allServices.filter(s => s.category.includes('Quantum').length },;
+    { id: 'Emerging', name: 'Emerging Technology', icon: Sparkles, count: allServices.filter(s => s.category.includes('Emerging').length },;
+    { id: 'IT', name: 'IT & Infrastructure', icon: Shield, count: allServices.filter(s => s.category.includes('IT') || s.category.includes('Infrastructure').length },;
+    { id: 'Autonomous', name: 'Autonomous Systems', icon: Target, count: allServices.filter(s => s.category.includes('Autonomous').length },;
+    { id: 'Cloud', name: 'Cloud & DevOps', icon: Cloud, count: allServices.filter(s => s.category.includes('Cloud') || s.category.includes('DevOps').length }
   ],;
   const contactInfo = {;
     mobile: '+1 302 464 0950',;
@@ -80,9 +79,9 @@ export default function ServicesShowcase2026() {;
         <section className="relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto text-center">;
             <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
             >;
               <h1 className="text-5xl md:text-7xl font-bold mb-6">;
                 <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">;
@@ -100,15 +99,15 @@ export default function ServicesShowcase2026() {;
                   <div className="text-gray-400 text-sm">Total Services</div>;
                 </div>;
                 <div className="text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/50 backdrop-blur-sm">;
-                  <div className="text-3xl font-bold text-purple-400 mb-2">{allServices.filter(s => s.category.includes('AI')).length}</div>;
+                  <div className="text-3xl font-bold text-purple-400 mb-2">{allServices.filter(s => s.category.includes('AI').length}</div>;
                   <div className="text-gray-400 text-sm">AI Services</div>;
                 </div>;
                 <div className="text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/50 backdrop-blur-sm">;
-                  <div className="text-3xl font-bold text-pink-400 mb-2">{allServices.filter(s => s.category.includes('Quantum')).length}</div>;
+                  <div className="text-3xl font-bold text-pink-400 mb-2">{allServices.filter(s => s.category.includes('Quantum').length}</div>;
                   <div className="text-gray-400 text-sm">Quantum Services</div>;
                 </div>;
                 <div className="text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/50 backdrop-blur-sm">;
-                  <div className="text-3xl font-bold text-green-400 mb-2">{allServices.filter(s => s.category.includes('Emerging')).length}</div>;
+                  <div className="text-3xl font-bold text-green-400 mb-2">{allServices.filter(s => s.category.includes('Emerging').length}</div>;
                   <div className="text-gray-400 text-sm">Emerging Tech</div>;
                 </div>;
               </div>;
@@ -143,7 +142,7 @@ export default function ServicesShowcase2026() {;
                       <option key={category.id} value={category.id}>;
                         {category.name} ({category.count});
                       </option>;
-                    ))}
+                    )}
                   </select>;
                 </div>;
                 {/* Sort By */}
@@ -168,12 +167,12 @@ export default function ServicesShowcase2026() {;
         <section className="relative z-10 py-16 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-              {filteredServices.map((service, index) => (;
+              {filteredServices.map(service, index) => (;
                 <motion.div;
                   key={service.id}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={ opacity: 0, y: 30 }
+                  animate={ opacity: 1, y: 0 }
+                  transition={ duration: 0.6, delay: index * 0.1 }
                   className="group";
                 >;
                   <div className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">;
@@ -214,12 +213,12 @@ export default function ServicesShowcase2026() {;
                     <div className="mb-4">;
                       <h4 className="text-white font-semibold mb-2 text-sm">Key Features:</h4>;
                       <ul className="space-y-1">;
-                        {service.features.slice(0, 3).map((feature, idx) => (;
+                        {service.features.slice(0, 3).map(feature, idx) => (;
                           <li key={idx} className="text-gray-400 text-xs flex items-center">;
                             <Zap className="w-3 h-3 text-cyan-400 mr-2 flex-shrink-0" />;
                             {feature}
                           </li>;
-                        ))}
+                        )}
                       </ul>;
                     </div>;
                     {/* Category and Technology */}
@@ -240,13 +239,13 @@ export default function ServicesShowcase2026() {;
                     </a>;
                   </div>;
                 </motion.div>;
-              ))}
+              )}
             </div>;
             {/* No Results */}
-            {filteredServices.length === 0 && (;
+            {filteredServices.length = = 0 && (;
               <motion.div;
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+                initial={ opacity: 0 }
+                animate={ opacity: 1 }
                 className="text-center py-16";
               >;
                 <div className="text-6xl mb-4"></div>;
@@ -260,10 +259,10 @@ export default function ServicesShowcase2026() {;
         <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-4xl mx-auto text-center">;
             <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              viewport={ once: true }
+              transition={ duration: 0.8 }
               className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50 backdrop-blur-sm";
             >;
               <h2 className="text-3xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>;
@@ -304,4 +303,3 @@ export default function ServicesShowcase2026() {;
       </div>;
     </UltraAdvancedFuturisticBackground>;
   );
-}

@@ -6,13 +6,12 @@ const AutomationDetail: NextPage = () => {const router = useRouter();
   const { slug } = router.query as { slug?: string }
   let title = 'Automation Report';
   let data: any = null;
-  try {if (slug === 'marketplace-insights') {;
+  try {if (slug = = 'marketplace-insights') {;
       data = require('@/data/reports/marketplace-insights.json');
       title = 'Marketplace Insights';
-    } else if (slug === 'content-health') {data = require('@/data/reports/content-health.json');
+    } else if (slug = = 'content-health') {data = require('@/data/reports/content-health.json');
       title = 'Content Health';
-    }
-  } catch (e) {data = null;
+    } catch (e) {data = null;
   }
 return (
     <EnhancedLayout>;
@@ -27,5 +26,5 @@ return (
       )}
     </EnhancedLayout>;
   );
-}
+
 export default AutomationDetail;

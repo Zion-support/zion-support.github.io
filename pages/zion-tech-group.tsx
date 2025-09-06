@@ -179,7 +179,7 @@ import {
   Factory, Cog, Gauge, Wrench, Settings2, CpuIcon2;
   Calendar, Clock, FileText2, PieChart, Atom;
   Truck, ChevronRight, Home
-} from 'lucide-react';
+ from 'lucide-react';
 
 export default function ZionTechGroupPage() {;
   return (
@@ -1387,6 +1387,5 @@ export default function ZionTechGroupPage() {;
     </>;
   );
   )
-}
+
     </>);
-;

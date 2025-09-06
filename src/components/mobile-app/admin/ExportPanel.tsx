@@ -12,13 +12,13 @@ interface ExportPanelProps {
 
   platform: AppPlatform
   metadata: AppMetadataValues
-}
+
 export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata },) => {
   const handleExport = (format: 'json' | 'csv',) => {
     try {
       let content: string
       let fileName: string
-      if (format === 'json') {
+      if (format = = 'json') {
         content = JSON.stringify(metadata, null, 2)
         fileName = `zion-app-metadata-${platform}-${metadata.version}.json`
       } else {
@@ -34,10 +34,10 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata },)
         content = headers.join () + '\n' + values.map (value => `"${String (value).replace (/"/g, '""')}"`).join ();
         // Add keywords as additional rows;
         content += '\n\n_keywords:\n' + metadata.keywords.join ();
-}        file_name = `zion - app - metadata-${platform}-${metadata.version}.csv`;
+        file_name = `zion - app - metadata-${platform}-${metadata.version}.csv`;
       }
       // Create download link
-      const blob = new Blob([content], { type: format === 'json' ? 'application/json' : 'text/csv' })
+      const blob = new Blob([content], { type: format = = 'json' ? 'application/json' : 'text/csv' })
       const url = URL.createObjectURL(blob)
       const link = document.createElement('a')
       link.href = url
@@ -51,7 +51,6 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata },)
       logErrorToProduction('Export failed:', { data: error })
       toast.error(`Failed to export ${format.toUpperCase()} file`)
     }
-  }
   const trackAnalytics = () => {
     logInfo("Tracking app installation analytics...")
     toast.success("Analytics tracking enabled")
@@ -92,7 +91,6 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata },)
       </CardContent>
     </Card>
   )
-}
 
                 CSV;
               </Button>;
@@ -112,8 +110,7 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata },)
       </CardContent>;
     </Card>;
   );
-},;
+,;
 
     </Card>);
-},
-;
+,

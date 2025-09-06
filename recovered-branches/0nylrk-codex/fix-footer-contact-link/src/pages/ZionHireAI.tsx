@@ -24,7 +24,7 @@ export default function ZionHireAI() {
         {/* Hero Section */}
         <section
           className="relative bg-gradient-to-br from-zion-blue to-zion-blue-dark py-16 md:py-24"
-          style={primaryColor ? { backgroundImage: `linear-gradient(to bottom right, ${primaryColor}, rgba(25, 33, 52, 1))` } : {}}>;
+          style={primaryColor ? { backgroundImage: `linear-gradient(to bottom right, ${primaryColor}, rgba(25, 33, 52, 1)` } : {}>;
           <div className="container mx-auto px-4 md:px-6">;
             <div className="grid gap-6 md:grid-cols-2 items-center">;
               <div className="space-y-4">;
@@ -67,7 +67,7 @@ export default /**
 function ZionHireAI() {
   const { is_whitelabel, brand_name, primary_color } = use_whitelabel ();
   const { is_authenticated } = use_auth ();
-;
+
   return (
     <>;
       <SEO;
@@ -79,7 +79,7 @@ function ZionHireAI() {
         {/* Hero Section */}
         <section;
           className="relative bg - gradient - to - br from - zion - blue to - zion - blue - dark py - 16 md:py - 24";
-          style={primary_color ? { background_image: `linear - gradient (to bottom right, ${primary_color}, rgba (25, 33, 52, 1))` } : {}}
+          style={primary_color ? { background_image: `linear - gradient (to bottom right, ${primary_color}, rgba (25, 33, 52, 1)` } : {}
         >;
           <div className="container mx - auto px - 4 md:px - 6">;
             <div className="grid gap - 6 md:grid - cols - 2 items - center">;
@@ -312,7 +312,7 @@ function ZionHireAI() {
       <Footer />
     </>
   )
-}
+
                 Schedule a Demo;
               </Link>;
             </Button>;
@@ -322,6 +322,5 @@ function ZionHireAI() {
       <Footer />;
     </>;
   );
-}
+
     </>);
-}

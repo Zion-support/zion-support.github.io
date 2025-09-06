@@ -9,14 +9,14 @@ import {
   CardFooter
   CardHeader
   CardTitle
-} from '@/components/ui/card'
+ from '@/components/ui/card'
   FileText
   MessageSquare
   HelpCircle
   Calendar
   ExternalLink
   Download
-} from 'lucide-react'
+ from 'lucide-react'
 import Link from 'next/link'
 import { StatusBadge } from './StatusBadge'
 import { ApplicationProgress } from './ApplicationProgress'
@@ -41,7 +41,7 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
   const renderActionButtons = () => {
     switch (application.status) {interface ApplicationCardProps {
   application: JobApplication
-}
+
 export function ApplicationCard({ application }: ApplicationCardProps) {
 
   const [expanded, setExpanded] = useState(false)
@@ -74,7 +74,6 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
       default:;
         return null;
     }
-  }
 
   return (
     <Card className='overflow-hidden'>
@@ -125,7 +124,7 @@ import {;
   CardFooter,;
   CardHeader,;
   CardTitle,;
-} from '@/components/ui/card';
+ from '@/components/ui/card';
 import {;
   FileText,;
   MessageSquare,;
@@ -133,7 +132,7 @@ import {;
   Calendar,;
   ExternalLink,;
   Download,;
-} from 'lucide-react';
+ from 'lucide-react';
 import Link from 'next/link';
 import { StatusBadge } from './StatusBadge';
 import { ApplicationProgress } from './ApplicationProgress';
@@ -162,7 +161,6 @@ export function ApplicationCard(): any ({ application }: ApplicationCardProps) {
   const renderActionButtons = () => {;
     switch (application && application.status) {interface ApplicationCardProps {;
   application: JobApplication;
-}
 
 export function ApplicationCard(): any ({ application }: ApplicationCardProps) {;
   const [expanded, setExpanded] = useState(false);
@@ -199,8 +197,7 @@ export function ApplicationCard(): any ({ application }: ApplicationCardProps) {
         );
       default:;
         return null;
-    }
-  };
+    };
 
   return (
     <Card className='overflow-hidden'>;
@@ -409,21 +406,21 @@ export function ApplicationCard(): any ({ application }: ApplicationCardProps) {
       </CardFooter>
     </Card>
   )
-default: return (<Card className="overflow-hidden" > <CardHeader className="pb-3" > <div className="flex justify-between items-start" > <div> </div> </div> <StatusBadge status= {
+default: return (<Card className="overflow-hidden" > <CardHeader className="pb-3" > <div className="flex justify-between items-start" > <div></div> </div> <StatusBadge status= {
   application.status
-}/> </div> </CardHeader> {"
+/> </div> </CardHeader> {"
   application.cover letter && (<div> <h4 className="text-sm font-medium mb-1" >Your Cover Letter</h4> <p className="text-sm text-muted-foreground" > {
   application.cover letter
-}</p> </div>)
-}</Button> </div> </div>)
-}{"
+</p> </div>)
+</Button> </div> </div>)
+{"
   application.match score && (<div> <h4 className="text-sm font-medium mb-1" >Match Score</h4> <div className="flex items-center" > <div className="h-6 w-6 rounded-full bg-blue-100 text-blue-800 flex items-center justify-center text-xs font-medium" > {
   application.match score "
-}% </div> <span className="ml-2 text-xs text-muted-foreground" >Relevance to job requirements</span> </div> </div>)
-}</div>) "
-}</CardContent> <Button variant="outline" size="sm" asChild > </Link> </Button> </div> </div> <Button variant="secondary" size="sm" className="w-full" asChild > </Link> </Button> </CardFooter> </Card>)
-}"
-}
+% </div> <span className="ml-2 text-xs text-muted-foreground" >Relevance to job requirements</span> </div> </div>)
+</div>) "
+</CardContent> <Button variant="outline" size="sm" asChild > </Link> </Button> </div> </div> <Button variant="secondary" size="sm" className="w-full" asChild > </Link> </Button> </CardFooter> </Card>)
+"
+
               </Link>;
             </Button>;
           </div>;
@@ -444,26 +441,26 @@ default: return (<Card className="overflow-hidden" > <CardHeader className="pb-3
     </Card>;
   );
 
-default: return (<Card className="overflow-hidden" > <CardHeader className="pb-3" > <div className="flex justify-between items-start" > <div> </div> </div> <StatusBadgestatus= {
+default: return (<Card className="overflow-hidden" > <CardHeader className="pb-3" > <div className="flex justify-between items-start" > <div></div> </div> <StatusBadgestatus= {
   application && application.status 
-}/> </div> </CardHeader> {";
+/> </div> </CardHeader> {";
   application && application.cover letter && (<div> <h4 className="text-sm font-medium mb-1" >Your Cover Letter</h4> <p className="text-sm text-muted-foreground" > {;
   application && application.cover letter ;
-}</p> </div>) ;
-}</Button> </div> </div>) ;
-}{";
+</p> </div>) ;
+</Button> </div> </div>) ;
+{";
   application && application.match score && (<div> <h4 className="text-sm font-medium mb-1" >Match Score</h4> <div className="flex items-center" > <div className="h-6 w-6 rounded-full bg-blue-100 text-blue-800 flex items-center justify-center text-xs font-medium" > {;
   application && application.match score ";
-}% </div> <span className="ml-2 text-xs text-muted-foreground" >Relevance to job requirements</span> </div> </div>) ;
-}</div>) ";
-}</CardContent> <Button variant="outline" size="sm" asChild > </Link> </Button> </div> </div> <Button variant="secondary" size="sm" className="w-full" asChild > </Link> </Button> </CardFooter> </Card>) ;
-}";
+% </div> <span className="ml-2 text-xs text-muted-foreground" >Relevance to job requirements</span> </div> </div>) ;
+</div>) ";
+</CardContent> <Button variant="outline" size="sm" asChild > </Link> </Button> </div> </div> <Button variant="secondary" size="sm" className="w-full" asChild > </Link> </Button> </CardFooter> </Card>) ;
+";
           </Link>
         </Button>
       </CardFooter>
     </Card>
   );
-}
+
         <Button variant='secondary' size='sm' className='w - full' as_child>;
           <Link href={`/messages?job_id=${application.job_id}`}>;
             <MessageSquare className='h - 4 w - 4 mr - 1' /> Message Client;
@@ -478,18 +475,17 @@ default: return (<Card className="overflow-hidden" > <CardHeader className="pb-3
         </Button>;
       </CardFooter>;
     </Card>);
-default: return (<Card className="overflow - hidden" > <CardHeader className="pb - 3" > <div className="flex justify - between items - start" > <div> </div> </div> <StatusBadge status= {
+default: return (<Card className="overflow - hidden" > <CardHeader className="pb - 3" > <div className="flex justify - between items - start" > <div></div> </div> <StatusBadge status= {
   application.status;
-}/> </div> </CardHeader> {";
+/> </div> </CardHeader> {";
   application.cover letter && (<div> <h4 className="text - sm font - medium mb - 1" >Your Cover Letter</h4> <p className="text - sm text - muted - foreground" > {
   application.cover letter;
-}</p> </div>);
-}</Button> </div> </div>);
-}{";
+</p> </div>);
+</Button> </div> </div>);
+{";
   application.match score && (<div> <h4 className="text - sm font - medium mb - 1" >Match Score</h4> <div className="flex items - center" > <div className="h - 6 w - 6 rounded - full bg - blue - 100 text - blue - 800 flex items - center justify - center text - xs font - medium" > {
   application.match score ";
-}% </div> <span className="ml - 2 text - xs text - muted - foreground" >Relevance to job requirements</span> </div> </div>);
-}</div>) ";
-}</CardContent> <Button variant="outline" size="sm" as_child > </Link> </Button> </div> </div> <Button variant="secondary" size="sm" className="w - full" as_child > </Link> </Button> </CardFooter> </Card>);
-}";
-}
+% </div> <span className="ml - 2 text - xs text - muted - foreground" >Relevance to job requirements</span> </div> </div>);
+</div>) ";
+</CardContent> <Button variant="outline" size="sm" as_child > </Link> </Button> </div> </div> <Button variant="secondary" size="sm" className="w - full" as_child > </Link> </Button> </CardFooter> </Card>);
+";

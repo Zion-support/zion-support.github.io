@@ -12,9 +12,9 @@ import { Quote } from 'lucide-react';
 import Link from "next/link",;
 import Image from "next/image",;
 import { CASE_STUDIES } from "@/data/case-studies",;
-;
+
 const testimonials = CASE_STUDIES,;
-;
+
 export function TestimonialCarousel() {;
   return (;
     <section className="py-20 bg-zion-blue-dark">;
@@ -25,16 +25,15 @@ export function TestimonialCarousel() {;
             Discover how Zion is transforming the tech and AI marketplace ecosystem;
           </p>;
         </div>;
-        ;
         <div className="max-w-5xl mx-auto px-8">;
           <Carousel;
-            opts={{;
+            opts={;
               align:"start",;
-              loop:true}}
+              loop:true}
             className="w-full";
           >;
             <CarouselContent>;
-              {testimonials.map((testimonial, index) => (;
+              {testimonials.map(testimonial, index) => (;
                 <CarouselItem key={index} className="md:basis-1/1 lg:basis-1/1">;
                   <Card className="bg-zion-blue-light border border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300 flex flex-col">;
                     <CardContent className="p-8 flex flex-col md:flex-row gap-6 flex-1">;
@@ -74,7 +73,7 @@ export function TestimonialCarousel() {;
                     </CardFooter>;
                   </Card>;
                 </CarouselItem>;
-              ))}
+              )}
             </CarouselContent>;
             <div className="flex justify-center mt-8 gap-2">;
               <CarouselPrevious className="relative static left-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />;
@@ -88,6 +87,6 @@ export function TestimonialCarousel() {;
  const testimonials = CASE STUDIES;
 Discover how Zion is transforming the tech and AI marketplace ecosystem </p> </div> <div className="max-w-5xl mx-auto px-8" > <Carousel opts= {;
   {";
-  </div> </div> <div className="flex-1" > <div className="flex items-center gap-3 mb-4" > <Image </Button> </CardFooter> </Card> </CarouselItem>) ) ;
-}</CarouselContent> </div> </Carousel> </div> </div> </section>) ;
-}"
+  </div> </div> <div className="flex-1" > <div className="flex items-center gap-3 mb-4" > <Image </Button> </CardFooter> </Card> </CarouselItem>) ;
+</CarouselContent> </div> </Carousel> </div> </div> </section>) ;
+"

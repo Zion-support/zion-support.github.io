@@ -1,20 +1,19 @@
 import { useEffect, useState } from 'react',;
-;
+
 export default function AdminPartners() {;
   const [partners, setPartners] = useState<any[]>([]),;
   const [selected, setSelected] = useState<string>(''),;
   const [flags, setFlags] = useState<any[]>([]),;
-;
-  useEffect(() => {;
+
+  useEffect() => {;
     (async () => {;
       try {;
         const res = await fetch('/api/admin/partners/list'),;
         const json = await res.json(),;
         setPartners(json.partners || []),;
-      } catch {}
-    })(),;
+      } catch {})(),;
   }, []),;
-;
+
   async function updatePartner(code:string, updates:any) {;
     await fetch('/api/admin/partners/update', {;
       method:'POST',;
@@ -24,14 +23,14 @@ export default function AdminPartners() {;
     const json = await res.json(),;
     setPartners(json.partners || []),;
   }
-;
+
   async function viewFlags(code:string) {;
     setSelected(code),;
     const res = await fetch(`/api/admin/partners/fraud-flags?code=${encodeURIComponent(code)}`),;
     const json = await res.json(),;
     setFlags(json.flags || []),;
   }
-;
+
   return (;
     <div className="space-y-6">;
       <h1 className="text-2xl font-semibold">Admin  Partners</h1>;
@@ -47,7 +46,7 @@ export default function AdminPartners() {;
             </tr>;
           </thead>;
           <tbody>;
-            {partners.map((p) => (;
+            {partners.map(p) => (;
               <tr key={p.code} className="border-b">;
                 <td className="py-2 pr-4">{p.code}</td>;
                 <td className="py-2 pr-4">{p.name}</td>;
@@ -69,27 +68,27 @@ export default function AdminPartners() {;
                   <button className="px-2 py-1 rounded border" onClick={() => viewFlags(p.code)}>Fraud Flags</button>;
                 </td>;
               </tr>;
-            ))}
+            )}
           </tbody>;
         </table>;
       </div>;
-;
+
       {selected && (;
         <div className="p-4 rounded border">;
           <h2 className="font-semibold mb-2">Fraud Flags  {selected}</h2>;
           <ul className="list-disc pl-6">;
-            {flags.map((f, idx) => (;
+            {flags.map(f, idx) => (;
               <li key={idx}>;
                 <span className="font-medium">{f.type}</span>  {f.severity} {f.note && <span className="text-gray-500">({f.note})</span>}
               </li>;
-            ))}
-            {flags.length === 0 && <li className="text-gray-500 list-none">No flags</li>}
+            )}
+            {flags.length = = 0 && <li className="text-gray-500 list-none">No flags</li>}
           </ul>;
         </div>;
       )}
     </div>;
   ),;  }
-];
+;
 
 const AdminPartnersPage: React.FC = () => {
   const [partners, setPartners] = useState<Partner[]>([]);
@@ -111,7 +110,7 @@ const AdminPartnersPage: React.FC = () => {
             </tr>
           </thead>
           <tbody>
-            {partners.map((p) => (
+            {partners.map(p) => (
               <tr key={p.code} className=&quot;border-b&quot;>
                 <td className=&quot;py-2 pr-4&quot;>{p.code}</td>
                 <td className=&quot;py-2 pr-4&quot;>{p.name}</td>
@@ -132,7 +131,7 @@ type=&quot;number&quot;
                   <button className=&quot;px-2 py-1 rounded border&quot; onClick={() => updatePartner(p.code, { status: 'rejected' })}>Reject</button>
                   <button className=&quot;px-2 py-1 rounded border&quot; onClick={() => viewFlags(p.code)}>Fraud Flags</button>                </td>
               </tr>
-            ))}
+            )}
           </tbody>
         </table>
       </div>
@@ -141,14 +140,13 @@ type=&quot;number&quot;
         <div className=&quot;p-4 rounded border&quot;>
           <h2 className=&quot;font-semibold mb-2&quot;>Fraud Flags  {selected}</h2>
           <ul className=&quot;list-disc pl-6&quot;>
-            {flags.map((f, idx) => (
+            {flags.map(f, idx) => (
               <li key={idx}>
                 <span className=&quot;font-medium&quot;>{f.type}</span>  {f.severity} {f.note && <span className=&quot;text-gray-500&quot;>({f.note})</span>}
               </li>
-            ))}
-            {flags.length === 0 && <li className=&quot;text-gray-500 list-none&quot;>No flags</li>}          </ul>
+            )}
+            {flags.length = = 0 && <li className=&quot;text-gray-500 list-none&quot;>No flags</li>}          </ul>
         </div>
       )}
     </div>
   )
-}

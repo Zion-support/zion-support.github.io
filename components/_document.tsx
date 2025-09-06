@@ -5,7 +5,7 @@ import Document, {
   Main
   NextScript
   DocumentContext;
-} from 'next/document';
+ from 'next/document';
 
 export default function Document() {
 import Document, {;
@@ -14,7 +14,7 @@ import Document, {;
   Main,;
   NextScript,;
   DocumentContext,;
-} from 'next/document';
+ from 'next/document';
 export default function Document() {;
   return (
     <Html lang='en'>;
@@ -45,7 +45,7 @@ export default function Document() {;
   Main,
   NextScript,
   DocumentContext,
-} from 'next / document';
+ from 'next / document';
 export default /**
  * Document - Function description
  */
@@ -80,6 +80,5 @@ function Document() {
       </body>;
     </Html>;
   );
-}
+
     </Html>);
-}

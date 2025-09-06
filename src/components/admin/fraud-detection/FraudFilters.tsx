@@ -17,7 +17,7 @@ interface FraudFiltersProps {
   setContentTypeFilter: (value: string | null,) => void
 
   resetFilters: () => void
-}
+
 export const FraudFilters: React.FC<FraudFiltersProps> = ({
 
   searchQuery
@@ -29,7 +29,6 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
   contentTypeFilter
   setContentTypeFilter
 import React from 'react';
-};
 
 interface FraudFiltersProps {;
   searchQuery: string,;
@@ -41,7 +40,6 @@ interface FraudFiltersProps {;
   contentTypeFilter: string | null,;
   setContentTypeFilter: (value: string | null,) => void,;
   resetFilters: () => void;
-}
 
 export const FraudFilters: React.FC<FraudFiltersProps> = ({;
   searchQuery;
@@ -104,10 +102,8 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
       </Button>
     </div>
   )
-}
-'"}
-}
 
+"}
 
   search_query: string,
   setSearchQuery: (value: string, ) => void,
@@ -118,7 +114,7 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
   contentTypeFilter: string | null,
   setContentTypeFilter: (value: string | null, ) => void,
   reset_filters: () => void;
-}
+
 export const FraudFilters: React.FC < FraudFiltersProps> = ({
   search_query;
   setSearchQuery;
@@ -179,6 +175,5 @@ export const FraudFilters: React.FC < FraudFiltersProps> = ({
         <Filter className="h - 4 w - 4 mr - 2" /> Reset Filters;
       </Button>;
     </div>);
-}
-'"},
-}
+
+"},

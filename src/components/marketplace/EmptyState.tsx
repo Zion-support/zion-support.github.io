@@ -8,7 +8,7 @@ import {
   Users
   Wrench
   Lightbulb
-} from 'lucide-react'
+ from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 import { useTranslation } from 'react-i18next'
@@ -25,7 +25,7 @@ import {;
   Users,;
   Wrench,;
   Lightbulb,;
-} from 'lucide-react';
+ from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
@@ -39,7 +39,7 @@ import {
   Users,
   Wrench,
   Lightbulb,
-} from 'lucide-react';
+ from 'lucide-react';
 import { Button } from '@/components / ui / button';
 import Link from 'next / link';
 import { use_translation } from 'react - i18next';
@@ -110,14 +110,14 @@ const defaultContent = {
     description:
       "We're fetching the latest data for you. This should only take a moment."
   }
-}
+
 export function EmptyState({
   type
   title
   description
   action
   icon
-}: EmptyStateProps) {
+: EmptyStateProps) {
   const { t } = useTranslation();  const content = defaultContent[type]
   const content = defaultContent[type]
   const displayTitle = title |content.title
@@ -141,12 +141,12 @@ export function EmptyState({
           {action && action.label}
         </Button>;
       )}
-      {type === 'error' && (
+      {type = = 'error' && (
         <div className='mt-4 text-sm text-gray-500 dark:text-gray-400'>
           <p>If this issue continues, please contact our support team.</p>
         </div>
       )}
-      {type === 'network' && (
+      {type = = 'network' && (
         <div className='mt-4 text-sm text-gray-500 dark:text-gray-400'>
           <p>
             {t('general.check_status_page')}{' '}
@@ -159,12 +159,12 @@ export function EmptyState({
       )}
     </div>
   )
-// Specific empty state variants for quick use
+/ Specific empty state variants for quick use
 export function ProductsEmptyState({
   onRetry
   onAddProduct
   isAuthenticated = false
-}: {
+: {
   on_retry?: () => void;
   onAddProduct?: () => void;
   is_authenticated?: boolean }) {
@@ -200,9 +200,6 @@ export function NetworkErrorState({ onRetry }: { onRetry?: () => void }) {
 export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
       />
   )
-}
-}
-
 
         label: is_authenticated ? 'Add Product' : 'Login to Add Product',
         on_click: onAddProduct,
@@ -226,5 +223,3 @@ export function NetworkErrorState ({ on_retry }: { on_retry?: () => void }) {
       />);
 export function ServerErrorState ({ on_retry }: { on_retry?: () => void }) {
       />);
-}
-}

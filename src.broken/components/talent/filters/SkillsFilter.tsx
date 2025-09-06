@@ -6,5 +6,3 @@ export function SkillsFilter() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

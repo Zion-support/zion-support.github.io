@@ -10,7 +10,7 @@ import {
   Github
   Linkedin
   Twitter;
-} from 'lucide-react';import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter } from 'lucide-react';
+ from 'lucide-react';import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter } from 'lucide-react';
 import Link from 'next/link';
 import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter } from 'lucide-react';
 
@@ -29,7 +29,7 @@ const EnhancedFooter: React.FC = () => {
           href: '/comprehensive-2025-services-showcase'
         }
       ]
-    },    {        { name: 'View All Services', href: '/comprehensive-2025-services-showcase' }
+    },    { name: 'View All Services', href: '/comprehensive-2025-services-showcase' }
       ]
     }
     {
@@ -41,7 +41,7 @@ const EnhancedFooter: React.FC = () => {
         { name: 'Careers', href: '/careers' }
         { name: 'Contact', href: '/contact' }
       ]
-    },    {        { name: 'Contact', href: '/contact' }
+    },    { name: 'Contact', href: '/contact' }
       ]
     }
     {
@@ -142,7 +142,7 @@ const EnhancedFooter: React.FC = () => {
                       className='text-white/70 hover:text-white transition-colors duration-200'>            <div key={section && section.title}>;
               <h3 className="text-white font-semibold mb-4">{section && section.title}</h3>;
               <ul className="space-y-2">;
-                {section && section.links.map((link) => (;
+                {section && section.links.map(link) => (;
                   <li key={link && link.name}>;
                     <Link
                       href={link && link.href}
@@ -156,10 +156,10 @@ const EnhancedFooter: React.FC = () => {
                       {link.name}
                     </Link>
                   </li>
-                ))}
+                )}
               </ul>;
             </div>;
-          ))}
+          )}
         </div>
         {/* Bottom Section */}
         <div className='pt-8 border-t border-white/10'>;
@@ -193,22 +193,20 @@ const EnhancedFooter: React.FC = () => {
                   aria-label={social && social.name}>;
                   <social && social.icon className="w-5 h-5" />;
                 </a>;
-              ))}
+              )}
             </div>;
           </div>;
         </div>;
       </div>;
     </footer>;
-  );
-};export default EnhancedFooter;  )
-}
+  );export default EnhancedFooter;  )
+
 export default EnhancedFooter;
 import React from "react";
   FileText
   HelpCircle} from "lucide-react";
 export default function EnhancedFooter() {const scrollToTop = () => {";
     window.scrollTo({ top: 0, behavior: "smooth" });
-};
 
 export default EnhancedFooter;
 import React from "react";
@@ -219,9 +217,9 @@ export default function EnhancedFooter() {;
   const scrollToTop = () => {";
     window && window.scrollTo({ top: 0, behavior: "smooth" });
                     </Link>;
-                  </li>))}
+                  </li>)}
               </ul>;
-            </div>))}
+            </div>)}
         </div>;
         {/* Bottom Section */}
         <div className='pt - 8 border - t border - white / 10'>;
@@ -256,15 +254,14 @@ export default function EnhancedFooter() {;
                   aria - label={social.name}
                 >;
                   <social.icon className="w - 5 h - 5" />;
-                </a>))}
+                </a>)}
             </div>;
           </div>;
         </div>;
       </div>;
     </footer>);
-}export default EnhancedFooter);
-}
-;
+export default EnhancedFooter);
+
 export default EnhancedFooter;
 import React from './react';
   FileText,
@@ -273,12 +270,12 @@ export default /**
  * EnhancedFooter - Function description
  */
 function EnhancedFooter() {
-;
+
   const scrollToTop = () =>: any {";
     window.scroll_to ({ top: 0, behavior: "smooth" });
-}
+
   const current_year = new Date ().getFullYear ();
-}
+
   const footerLinks = {},";
       { name: "IT Services", href: "/services/it-services" },";
       { name: "Micro SaaS", href: "/services/micro-saas" },";
@@ -341,7 +338,7 @@ function EnhancedFooter() {
       { name: "Terms of Service", href: "/terms" }, ";
       { name: "Cookie Policy", href: "/cookies" }]}
   const social_links = [];
-;
+
   return (
     <footer className="bg - gray - 900 text - white">";
       <div className="max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8 py - 12">";
@@ -397,11 +394,11 @@ digital age.;
                     {link.name}
                   </Link>;
                 </li>;
-              ))}
+              )}
                     className="text - gray - 400 hover: text - white transition - colors text - sm">,
                     {link.name}
                   </Link>;
-                </li>))}
+                </li>)}
             </ul>;
           </div>;
           {/* comment */}
@@ -418,11 +415,11 @@ digital age.;
                     {link.name}
                   </Link>;
                 </li>;
-              ))}
+              )}
                     className="text - gray - 400 hover: text - white transition - colors text - sm">,
                     {link.name}
                   </Link>;
-                </li>))}
+                </li>)}
             </ul>;
           </div>;
           {/* comment */}
@@ -439,11 +436,11 @@ digital age.;
                     {link.name}
                   </Link>;
                 </li>;
-              ))}
+              )}
                     className="text - gray - 400 hover: text - white transition - colors text - sm">,
                     {link.name}
                   </Link>;
-                </li>))}
+                </li>)}
             </ul>;
           </div>;
           {/* comment */}
@@ -460,7 +457,7 @@ digital age.;
                     {link.name}
                   </Link>;
                 </li>;
-              ))}
+              )}
             </ul>";
             <h4 className="text-md font-semibold mb-3 text-gray-300">Legal</h4>";
             <ul className="space-y-2">;
@@ -471,7 +468,7 @@ digital age.;
                     {link.name}
                   </Link>;
                 </li>;
-              ))}
+              )}
             </ul>;
           </div>;
         {/* comment */}";
@@ -492,7 +489,7 @@ company updates.;
                     className="text - gray - 400 hover: text - white transition - colors text - sm">,
                     {link.name}
                   </Link>;
-                </li>))}
+                </li>)}
             </ul>";
             <h4 className="text - md font - semibold mb - 3 text - gray - 300">Legal</h4>";
             <ul className="space - y-2">;
@@ -502,7 +499,7 @@ company updates.;
                     className="text - gray - 400 hover: text - white transition - colors text - sm">,
                     {link.name}
                   </Link>;
-                </li>))}
+                </li>)}
             </ul>;
           </div>;
         {/* comment */}";
@@ -540,7 +537,7 @@ company updates.;
                     aria-label="{social && social.name}">";
                     <social && social.icon className="w-5 h-5" />;
                   </a>;
-                ))}
+                )}
               </div>;
       {/* comment */}";
       <buttononClick="{scrollToTop}
@@ -566,7 +563,7 @@ company updates.;
                     className="text - gray - 400 hover: text - white transition - colors"">;
                     aria - label="{social.name}">";
                     <social.icon className="w - 5 h - 5" />;
-                  </a>))}
+                  </a>)}
               </div>;
       {/* comment */}";
       <button on_click="{scrollToTop}

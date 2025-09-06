@@ -3,22 +3,22 @@ import OpenAI from 'openai',
 export type AnalyzeRequestBody = {
   operatorPrompt: string,
   context?: Record<string unknown>
-},
+,
 
 export type AnalyzeResponse = {
   analysis: string
-},
+,
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<AnalyzeResponse | { error: string }>
-) {
-  if (req.method !== 'POST') {
+ {
+  if (req.method != 'POST') {
     return res.status(405).json({ error: 'Method not allowed' })
   }
 
   const { operatorPrompt, context } = (req.body || {}) as AnalyzeRequestBody,
-  if (!operatorPrompt || typeof operatorPrompt !== 'string') {
+  if (!operatorPrompt || typeof operatorPrompt != 'string') {
     return res.status(400).json({ error: 'operatorPrompt is required' })
   }
 
@@ -48,4 +48,4 @@ export default async function handler(
     return res.status(200).json({ analysis })
   } catch (error: any) {
     console.error('Analyze API error', error?.message || error),
-    return res.status(500).json({ error: 'Failed to generate analysis' })  }}
+    return res.status(500).json({ error: 'Failed to generate analysis' })  }

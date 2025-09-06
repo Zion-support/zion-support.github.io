@@ -6,5 +6,3 @@ export function AuthModal() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

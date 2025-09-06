@@ -6,5 +6,3 @@ export function KeynotesSection() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

@@ -9,7 +9,7 @@ export function PriceFilter({
   expanded
   toggleSection
   isMobileFilterOpen
-}: PriceFilterProps) {
+: PriceFilterProps) {
   const handleChange = (values: number[]) => {
     setPriceRange([values[0], values[1]]);
   }
@@ -44,7 +44,7 @@ export function PriceFilter({
       )}
     </div>
   );
-}
+
 import { ChevronDown, ChevronUp  } from './lucide-react';
 import { Slider  } from '@/components / ui / slider';
 import { PriceFilterProps  } from '@/types / filters';
@@ -55,7 +55,7 @@ function PriceFilter() {
   const handle_change = (values: number[]) =>: any {
     setPriceRange ([values[0], values[1]]);
   }
-;
+
   return (
     <div className="mb - 6 border - b border - zion - blue - light pb - 6">;
       <button;
@@ -83,4 +83,3 @@ function PriceFilter() {
           />;
         </div>)}
     </div>);
-}

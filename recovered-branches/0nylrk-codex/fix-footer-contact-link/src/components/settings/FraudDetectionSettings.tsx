@@ -12,7 +12,7 @@ import {
   CardDescription
   CardHeader
   CardTitle
-} from "@/components/ui/card";
+ from "@/components/ui/card";
 import { Switch } from "@/components/ui/switch";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
@@ -22,7 +22,7 @@ import {
   AccordionContent
   AccordionItem
   AccordionTrigger
-} from "@/components/ui/accordion";
+ from "@/components/ui/accordion";
 import { toast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
@@ -40,7 +40,7 @@ export function FraudDetectionSettings() {
     try {
       // In a real implementation, we would save these preferences to the database
       // For now, we'll just simulate a successful save
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      await new Promise(resolve) => setTimeout(resolve, 1000);
       toast({
         title: "Settings saved"
         description: "Your fraud detection preferences have been updated."
@@ -55,7 +55,6 @@ export function FraudDetectionSettings() {
     } finally {
       setIsSaving(false);
     }
-  }
 
   return (
     <Card className="mb-8">
@@ -164,13 +163,12 @@ export function FraudDetectionSettings() {
       </CardContent>
     </Card>
   );
-}
+
             </Button>;
           </div>;
         </div>;
       </CardContent>;
     </Card>;
   );
-}
+
     </Card>);
-}

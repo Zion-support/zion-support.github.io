@@ -9,17 +9,16 @@ import { QuoteDetails } from "@/components/quotes/QuoteDetails",;
 import { ;
   RequestsHeader,;
   QuoteRequestsList ;
-} from "@/components/quotes",;
+ from "@/components/quotes",;
 import type { QuoteRequest } from "@/types/quotes",;
 import { ProtectedRoute } from "@/components/ProtectedRoute",;
-;
+
 export default function RequestsPanel() {;
   const { user } = useAuth(),;
-  const isTalent = user?.userType === 'creator' || user?.userType === 'jobSeeker',;
-  ;
+  const isTalent = user?.userType = = 'creator' || user?.userType = = 'jobSeeker',;
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null),;
   const [showDetails, setShowDetails] = useState(false),;
-;
+
   const {;
     quotes,;
     unreadCount,;
@@ -32,21 +31,19 @@ export default function RequestsPanel() {;
     markAsResponded,;
     toggleArchive;
   } = useTalentQuotes(),;
-;
+
   const handleViewDetails = (quote:QuoteRequest) => {;
     setSelectedQuote(quote),;
     setShowDetails(true),;
-    ;
     // If status is new, mark as viewed;
-    if (quote.status === 'new') {;
+    if (quote.status = = 'new') {;
       markAsViewed(quote.id),;
-    }
-  },;
-;
+    },;
+
   // Filter quotes by archive status;
   const activeQuotes = quotes.filter(q => !q.is_archived),;
   const archivedQuotes = quotes.filter(q => q.is_archived),;
-;
+
   return (;
     <ProtectedRoute>;
       <div>;
@@ -59,14 +56,12 @@ export default function RequestsPanel() {;
               archiveFilter={archiveFilter}
               setArchiveFilter={setArchiveFilter}
             />;
-            ;
             {/* Main Content */}
             <Tabs defaultValue="active" className="mb-6">;
               <TabsList className="bg-zion-blue-dark border border-zion-blue-light">;
                 <TabsTrigger value="active">Active Requests</TabsTrigger>;
                 <TabsTrigger value="archived">Archived</TabsTrigger>;
               </TabsList>;
-              ;
               <TabsContent value="active">;
                 <QuoteRequestsList;
                   quotes={activeQuotes}                  isLoading={isLoading}
@@ -76,7 +71,6 @@ export default function RequestsPanel() {;
                   onToggleArchive={toggleArchive}
                 />;
               </TabsContent>;
-              ;
               <TabsContent value="archived">;
                 <QuoteRequestsList;
                   quotes={archivedQuotes}                  isLoading={isLoading}
@@ -89,7 +83,6 @@ export default function RequestsPanel() {;
             </Tabs>;
           </div>;
         </div>;
-        ;
         {/* Quote Details Modal */}
         <QuoteDetails;
           quote={selectedQuote}
@@ -97,9 +90,8 @@ export default function RequestsPanel() {;
           onClose={() => {;
             setShowDetails(false),;
             setSelectedQuote(null),;
-          }}
+          }
         />;
-        ;
         <Footer />;
       </div>;
     </ProtectedRoute>;
@@ -109,45 +101,44 @@ export default function RequestsPanel() {;
 QuoteRequestsList export default function RequestsPanel () {
   const {
   user 
-}= useAuth ();
-const isTalent = user?.userType === 'creator' || user?.userType === 'jobSeeker';
+= useAuth ();
+const isTalent = user?.userType = = 'creator' || user?.userType = = 'jobSeeker';
 const [showDetails, setShowDetails] = useState (false);
-//If status is new, mark as viewed if (quote.status === 'new') {
+/If status is new, mark as viewed if (quote.status = = 'new') {
   return (<ProtectedRoute> <div> <Header /> <div className="min-h-screen bg-zion-blue px-4 py-8" > <div className="container mx-auto" > <RequestsHeader unreadCount= {
   unreadCount 
-}statusFilter= {
+statusFilter= {
   statusFilter 
-}setStatusFilter= {
+setStatusFilter= {
   setStatusFilter 
-}archiveFilter= {
+archiveFilter= {
   archiveFilter 
-}setArchiveFilter= {
+setArchiveFilter= {
   setArchiveFilter 
-}/> </TabsList> <TabsContent value="active" > <QuoteRequestsList quotes= {
+/> </TabsList> <TabsContent value="active" > <QuoteRequestsList quotes= {
   activeQuotes 
-}isLoading= {
+isLoading= {
   isLoading 
-}isArchived= {
+isArchived= {
   false 
-}onViewDetails= {
+onViewDetails= {
   handleViewDetails 
-}onMarkAsResponded= {
+onMarkAsResponded= {
   markAsResponded 
-}onToggleArchive= {
+onToggleArchive= {
   toggleArchive 
-}/> </TabsContent> <TabsContent value="archived" > <QuoteRequestsList quotes= {
+/> </TabsContent> <TabsContent value="archived" > <QuoteRequestsList quotes= {
   archivedQuotes 
-}isLoading= {
+isLoading= {
   isLoading 
-}isArchived= {
+isArchived= {
   true 
-}onViewDetails= {
+onViewDetails= {
   handleViewDetails 
-}onMarkAsResponded= {
+onMarkAsResponded= {
   markAsResponded 
-}onToggleArchive= {
+onToggleArchive= {
   toggleArchive 
-}/> </TabsContent> </Tabs> </div> </div> {
+/> </TabsContent> </Tabs> </div> </div> {
   /* Quote Details Modal */ 
-}<QuoteDetails /> <Footer /> </div> </ProtectedRoute>) 
-}
+<QuoteDetails /> <Footer /> </div> </ProtectedRoute>) 

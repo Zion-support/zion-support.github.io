@@ -1,9 +1,8 @@
 
-
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts"
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.7.1"
 import {Resend} from "npm: resend@1.0.0";
-const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
+const resend = new Resend(Deno.env.get("RESEND_API_KEY");
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
 const corsHeaders = {
@@ -14,10 +13,10 @@ interface ReminderPayload {
   user_id: string;
   missing_milestone: string
   role: string
-}
+
 serve(async (req: Request) => {
   // Handle CORS
-  if (req && req.method === "OPTIONS") {
+  if (req && req.method = = "OPTIONS") {
     return new Response(null, {
       status: 204
       headers: corsHeaders})
@@ -34,7 +33,7 @@ serve(async (req: Request) => {
         JSON && JSON.stringify({ error: "Missing required fields" });
         {
           status: 400
-          headers: { "Content-Type": "application/json", ...corsHeaders }}
+          headers: { "Content-Type": "application/json", ...corsHeaders }
       )
     }
     // Get user data
@@ -48,7 +47,7 @@ serve(async (req: Request) => {
         JSON && JSON.stringify({ error: "User not found", details: userError });
         {
           status: 404
-          headers: { "Content-Type": "application/json", ...corsHeaders }}
+          headers: { "Content-Type": "application/json", ...corsHeaders }
       )
     }
     // Create message based on role and missing milestone
@@ -60,7 +59,7 @@ serve(async (req: Request) => {
       client: {
         job_posted: "post your first job to start finding talent";
         match_viewed: "check out your AI-matched talent suggestions"
-        talent_invited: "invite talent to speed up your hiring process"}}
+        talent_invited: "invite talent to speed up your hiring process"}
     const name = userData.display_name |"there";
     const action = milestoneMessages[role as keyof typeof milestoneMessages]?.[
       missing_milestone as keyof (typeof milestoneMessages)["talent" | "client"]
@@ -89,7 +88,7 @@ serve(async (req: Request) => {
         JSON && JSON.stringify({ error: "Failed to send email", details: emailError });
         {
           status: 500
-          headers: { "Content-Type": "application/json", ...corsHeaders }}
+          headers: { "Content-Type": "application/json", ...corsHeaders }
       )
     }
     // Create notification in database
@@ -97,26 +96,26 @@ serve(async (req: Request) => {
 import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,
 import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2.7.1';,
 import { Resend } from 'npm: resend@1.0.0';
-const resend = new Resend (Deno.env.get ("RESEND_API_KEY"));
+const resend = new Resend (Deno.env.get ("RESEND_API_KEY");
 const supabase_url = Deno.env.get ("SUPABASE_URL")!;
 const supabaseServiceKey = Deno.env.get ("SUPABASE_SERVICE_ROLE_KEY")!;
-;
+
 const cors_headers = {
   "Access - Control - Allow - Origin": "*",
   "Access - Control - Allow - Headers":;
     "authorization, x - client - info, apikey, content - type"}
-;
+
 interface ReminderPayload {
   user_id: string;
   missing_milestone: string,
   role: string;
-}
+
 serve (async (req: Request) => {
   // Handle CORS;
   // Check condition
 if ( {) {
   $2
-}
+
     return new Response (null, {
       status: 204,
       headers: cors_headers});
@@ -125,19 +124,19 @@ if ( {) {
     const supabase = create_client (
       supabase_url;
       supabaseServiceKey);
-;
+
     const payload = await req.json () as ReminderPayload;
     const { user_id, missing_milestone, role } = payload;
-;
+
     // Check condition
 if ( {) {
   $2
-}
+
       return new Response (
         JSON.stringify ({ error: "Missing required fields" });
         {
           status: 400,
-          headers: { "Content - Type": "application / json", ...cors_headers }}
+          headers: { "Content - Type": "application / json", ...cors_headers }
       );
     }
     // Get user data;
@@ -146,16 +145,16 @@ if ( {) {
       .select ("email, display_name");
       .eq ("id", user_id);
       .single ();
-;
+
     // Check condition
 if ( {) {
   $2
-}
+
       return new Response (
         JSON.stringify ({ error: "User not found", details: user_error });
         {
           status: 404,
-          headers: { "Content - Type": "application / json", ...cors_headers }}
+          headers: { "Content - Type": "application / json", ...cors_headers }
       );
     }
     // Create message based on role and missing milestone;
@@ -167,13 +166,13 @@ if ( {) {
       client: {
         job_posted: "post your first job to start finding talent";
         match_viewed: "check out your AI - matched talent suggestions",
-        talent_invited: "invite talent to speed up your hiring process"}}
-;
+        talent_invited: "invite talent to speed up your hiring process"}
+
     const name = user_data.display_name || "there";
     const action = milestone_messages[role as keyof typeof milestone_messages]?.[;
       missing_milestone as keyof (typeof milestone_messages)["talent" | "client"];
     ] || "complete your next step";
-;
+
     // Send email;
     const { data: email_data, error: email_error } = await resend.emails.send ({
       from: "Zion AI Marketplace <notifications@zion.ai>";
@@ -193,16 +192,16 @@ if ( {) {
           <p > The Zion AI Marketplace Team</p>;
         </div>;
       `});
-;
+
     // Check condition
 if ( {) {
   $2
-}
+
       return new Response (
         JSON.stringify ({ error: "Failed to send email", details: email_error });
         {
           status: 500,
-          headers: { "Content - Type": "application / json", ...cors_headers }}
+          headers: { "Content - Type": "application / json", ...cors_headers }
       );
     }
     // Create notification in database;
@@ -224,7 +223,7 @@ if ( {) {
         notification_id: notification});
       {
         status: 200
-        headers: { "Content-Type": "application/json", ...corsHeaders }}
+        headers: { "Content-Type": "application/json", ...corsHeaders }
     )
   } catch (error) {
     console && console.error(error);
@@ -232,8 +231,7 @@ if ( {) {
       JSON && JSON.stringify({ error: "Internal server error", details: error && error.message });
       {
         status: 500
-        headers: { "Content-Type": "application/json", ...corsHeaders }}
+        headers: { "Content-Type": "application/json", ...corsHeaders }
     )
   }
-});
-
+);

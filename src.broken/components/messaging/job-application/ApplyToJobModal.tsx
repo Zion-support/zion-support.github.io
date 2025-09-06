@@ -6,5 +6,3 @@ export function ApplyToJobModal() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

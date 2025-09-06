@@ -6,5 +6,3 @@ export function MobileThemeProvider() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

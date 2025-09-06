@@ -10,12 +10,12 @@ import {
   AlertDialogFooter
   AlertDialogHeader
   AlertDialogTitle
-} from "../components/ui/alert-dialog";
+ from "../components/ui/alert-dialog";
 import {
   useLanguage
   SupportedLanguage
   LanguageContextType
-} from "../context/LanguageContext";
+ from "../context/LanguageContext";
 export function LanguageDetectionPopup() {
   const [open, setOpen] = useState(false);
   const { t } = useTranslation();
@@ -23,7 +23,7 @@ export function LanguageDetectionPopup() {
     useLanguage() as LanguageContextType;
   const [detectedLanguage, setDetectedLanguage] =;
     useState<SupportedLanguage | null>(null);
-  useEffect(() => {
+  useEffect() => {
     // Check if this is first visit
     const hasVisited = localStorage.getItem("zion_has_visited");
     if (hasVisited) return;
@@ -32,17 +32,15 @@ export function LanguageDetectionPopup() {
     // Get browser language
     const browserLang = navigator.language.substring(0, 2) as SupportedLanguage;
     // Check if browser language is supported and different from current language
-    const isSupported = supportedLanguages.some(
-      (lang) => lang.code === browserLang
+    const isSupported = supportedLanguages.some(lang) => lang.code = = browserLang
     );
-    if (isSupported && browserLang !== currentLanguage) {;
+    if (isSupported && browserLang != currentLanguage) {;
       setDetectedLanguage(browserLang);
       setOpen(true);
-    }
-  }, []);
+    }, []);
   if (!detectedLanguage) return null;
   const languageName =
-    supportedLanguages.find((lang) => lang.code === detectedLanguage)?.name |
+    supportedLanguages.find(lang) => lang.code = = detectedLanguage)?.name |
     detectedLanguage;
   const handleAccept = async () => {
     await changeLanguage(detectedLanguage);
@@ -57,7 +55,7 @@ export function LanguageDetectionPopup() {
             {t("language.switch_to_detected", { language: languageName })}
           </AlertDialogTitle>
           <AlertDialogDescription className="text-zion-slate-light">
-            {`${supportedLanguages.find((lang) => lang.code === detectedLanguage)?.flag |""} ${languageName}`}
+            {`${supportedLanguages.find(lang) => lang.code = = detectedLanguage)?.flag |""} ${languageName}`}
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>
@@ -84,12 +82,12 @@ import {
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
-} from '../components / ui / alert - dialog';
+ from '../components / ui / alert - dialog';
 import {
   use_language,
   SupportedLanguage,
   LanguageContextType,
-} from '../context / LanguageContext';
+ from '../context / LanguageContext';
 export /**
  * LanguageDetectionPopup - Function description
  */
@@ -100,46 +98,44 @@ function LanguageDetectionPopup() {
     use_language () as LanguageContextType;
   const [detected_language, setDetectedLanguage] =;
     useState < SupportedLanguage | null>(null);
-;
-  useEffect (() => {
+
+  useEffect () => {
     // Check if this is first visit;
     const has_visited = local_storage.get_item ("zion_has_visited");
     // Check condition
 if (return) {
   $2
-}
+
     // Mark as visited;
     local_storage.set_item ("zion_has_visitedtrue");
-;
+
     // Get browser language;
     const browser_lang = navigator.language.substring (0, 2) as SupportedLanguage;
-;
+
     // Check if browser language is supported and different from current language;
-    const is_supported = supported_languages.some (
-      (lang) => lang.code === browser_lang,
+    const is_supported = supported_languages.some (lang) => lang.code = = browser_lang,
     );
     // Check condition
 if ( {) {
   $2
-}
+
       setDetectedLanguage (browser_lang);
       set_open (true);
-    }
-  }, []);
-;
+    }, []);
+
   // Check condition
 if (return null) {
   $2
-}
+
   const language_name =;
-    supported_languages.find ((lang) => lang.code === detected_language)?.name ||;
+    supported_languages.find (lang) => lang.code = = detected_language)?.name ||;
     detected_language;
-;
+
   const handle_accept = async () => {
     await change_language (detected_language);
     set_open (false);
   }
-;
+
   return (
     <AlertDialog open={open} onOpenChange={set_open}>;
       <AlertDialogContent className="bg - zion - blue - dark text - white border border - zion - purple / 20">;
@@ -148,7 +144,7 @@ if (return null) {
             {t ("language.switch_to_detected", { language: language_name })}
           </AlertDialogTitle>;
           <AlertDialogDescription className="text - zion - slate - light">;
-            {`${supported_languages.find ((lang) => lang.code === detected_language)?.flag || ""} ${language_name}`}
+            {`${supported_languages.find (lang) => lang.code = = detected_language)?.flag || ""} ${language_name}`}
           </AlertDialogDescription>;
         </AlertDialogHeader>;
         <AlertDialogFooter>;
@@ -164,4 +160,3 @@ if (return null) {
         </AlertDialogFooter>;
       </AlertDialogContent>;
     </AlertDialog>);
-}

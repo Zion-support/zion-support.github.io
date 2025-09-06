@@ -3,11 +3,11 @@ import Head from \'next/head\'; import Link from \'next/link\'; export default f
 import React from 'react';
 interface HelpdeskProps {
   // Add props here as needed
-}
+
 export default function Helpdesk({ }: HelpdeskProps) {
 interface HelpdeskProps {;
   // Add props here as needed;
-}
+
 export default function Helpdesk(): any ({ }: HelpdeskProps) {;
   return (
     <div>;
@@ -15,7 +15,3 @@ export default function Helpdesk(): any ({ }: HelpdeskProps) {;
       <p>This component is currently under development.</p>;
     </div>;
   );
-}
-}
-
-

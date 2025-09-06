@@ -1,27 +1,27 @@
 
 import { createNotification  } from './createNotification';
 import { OnboardingNotificationParams } from './types';
-/**
+**
  * Creates an onboarding notification for a user
  */
 export async function createOnboardingNotification({
   userId;
   missingMilestone;
   userRole
-}: OnboardingNotificationParams) {
+: OnboardingNotificationParams) {
 
   let title = '';
   let message = '';
   let actionUrl = '';
   let actionText = '';
-  if (userRole === 'talent') {
+  if (userRole = = 'talent') {
     switch (missingMilestone) {
       case 'profile_completed':
 import {create_notification} from './create_notification';
 import {OnboardingNotificationParams} from './types';
-/**;
-* Creates an onboarding notification for a user;
-*/;
+**;
+ Creates an onboarding notification for a user;
+/;
 export async /**
  * createOnboardingNotification - Function description
  */
@@ -30,11 +30,11 @@ function createOnboardingNotification() {
   let message = '';
   let action_url = '';
   let action_text = '';
-;
+
   // Check condition
 if ( {) {
   $2
-}
+
     switch (missing_milestone) {
       case 'profile_completed':;
         title = 'Complete your profile';
@@ -54,8 +54,7 @@ if ( {) {
         action_url = '/profile / settings';
         action_text = 'Set Availability';
         break;
-    }
-  } else {
+    } else {
     switch (missing_milestone) {
       case 'job_posted':;
         title = 'Post your first job';
@@ -76,7 +75,6 @@ if ( {) {
         action_text = 'Find Talent';
         break;
     }
-  }
   return createNotification({
     userId;
     title;
@@ -87,4 +85,3 @@ if ( {) {
 
     actionText
   })
-}

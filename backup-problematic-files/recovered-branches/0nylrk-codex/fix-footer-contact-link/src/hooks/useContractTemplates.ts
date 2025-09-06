@@ -5,13 +5,13 @@ import { useToast } from "@/hooks/use-toast",;
 import { useAuth } from "@/hooks/useAuth",;
 import { ContractTemplate } from "@/types/contracts",;
 import { ContractFormValues } from "@/components/contracts/components/ContractForm",;
-;
+
 export function useContractTemplates() {;
   const { user, isAuthenticated } = useAuth(),;
   const queryClient = useQueryClient(),;
   const { toast } = useToast(),;
   const [isLoading, setIsLoading] = useState(false),;
-;
+
   // Fetch templates for the current user;
   const { ;
     data:templates = [], ;
@@ -23,13 +23,12 @@ export function useContractTemplates() {;
       if (!isAuthenticated || !user) {;
         return [];
       }
-;
+
       const { data, error } = await supabase;
         .from('contract_templates');
         .select('*');
         .order('is_default', { ascending:false });
         .order('created_at', { ascending:false }),;
-      ;
       if (error) {;
         throw error,;
       }
@@ -38,7 +37,7 @@ export function useContractTemplates() {;
     },;
     enabled:isAuthenticated && !!user;
   }),;
-;
+
   // Create a new template;
   const createTemplate = useMutation({;
     mutationFn:async ({ ;
@@ -51,9 +50,7 @@ export function useContractTemplates() {;
       isDefault?:boolean;
     }) => {;
       if (!user) throw new Error("User not authenticated"),;
-      ;
       setIsLoading(true),;
-      ;
       try {;
         // If this is set as default, unset any existing default;
         if (isDefault) {;
@@ -75,13 +72,11 @@ export function useContractTemplates() {;
           });
           .select();
           .single(),;
-        ;
         if (error) throw error,;
         return data as ContractTemplate,;
       } finally {;
         setIsLoading(false),;
-      }
-    },;
+      },;
     onSuccess:() => {;
       queryClient.invalidateQueries({ queryKey:['contractTemplates', user?.id] }),;
       toast({;
@@ -94,9 +89,8 @@ export function useContractTemplates() {;
         title:"Failed to save template",;
         description:"There was an error saving your contract template.",;
         variant:"destructive"}),;
-    }
-  }),;
-;
+    }),;
+
   // Update an existing template;
   const updateTemplate = useMutation({;
     mutationFn:async ({;
@@ -111,9 +105,7 @@ export function useContractTemplates() {;
       isDefault?:boolean;
     }) => {;
       if (!user) throw new Error("User not authenticated"),;
-      ;
       setIsLoading(true),;
-      ;
       try {;
         // If this is set as default, unset any existing default;
         if (isDefault) {;
@@ -138,13 +130,11 @@ export function useContractTemplates() {;
           .eq('user_id', user.id);
           .select();
           .single(),;
-        ;
         if (error) throw error,;
         return data as ContractTemplate,;
       } finally {;
         setIsLoading(false),;
-      }
-    },;
+      },;
     onSuccess:() => {;
       queryClient.invalidateQueries({ queryKey:['contractTemplates', user?.id] }),;
       toast({;
@@ -157,28 +147,23 @@ export function useContractTemplates() {;
         title:"Failed to update template",;
         description:"There was an error updating your contract template.",;
         variant:"destructive"}),;
-    }
-  }),;
-;
+    }),;
+
   // Delete a template;
   const deleteTemplate = useMutation({;
     mutationFn:async (templateId:string) => {;
       if (!user) throw new Error("User not authenticated"),;
-      ;
       setIsLoading(true),;
-      ;
       try {;
         const { error } = await supabase;
           .from('contract_templates');
           .delete();
           .eq('id', templateId);
           .eq('user_id', user.id),;
-        ;
         if (error) throw error,;
       } finally {;
         setIsLoading(false),;
-      }
-    },;
+      },;
     onSuccess:() => {;
       queryClient.invalidateQueries({ queryKey:['contractTemplates', user?.id] }),;
       toast({;
@@ -191,16 +176,13 @@ export function useContractTemplates() {;
         title:"Failed to delete template",;
         description:"There was an error deleting your contract template.",;
         variant:"destructive"}),;
-    }
-  }),;
-;
+    }),;
+
   // Set a template as default;
   const setDefaultTemplate = useMutation({;
     mutationFn:async (templateId:string) => {;
       if (!user) throw new Error("User not authenticated"),;
-      ;
       setIsLoading(true),;
-      ;
       try {;
         // First unset any existing default;
         await supabase;
@@ -208,19 +190,16 @@ export function useContractTemplates() {;
           .update({ is_default:false });
           .eq('user_id', user.id);
           .eq('is_default', true),;
-        ;
         // Then set the new default;
         const { error } = await supabase;
           .from('contract_templates');
           .update({ is_default:true });
           .eq('id', templateId);
           .eq('user_id', user.id),;
-        ;
         if (error) throw error,;
       } finally {;
         setIsLoading(false),;
-      }
-    },;
+      },;
     onSuccess:() => {;
       queryClient.invalidateQueries({ queryKey:['contractTemplates', user?.id] }),;
       toast({;
@@ -233,9 +212,8 @@ export function useContractTemplates() {;
         title:"Failed to set default template",;
         description:"There was an error setting your default contract template.",;
         variant:"destructive"}),;
-    }
-  }),;
-;
+    }),;
+
   return {;
     templates,;
     isLoading:isLoading || isLoadingTemplates,;
@@ -245,64 +223,62 @@ export function useContractTemplates() {;
     deleteTemplate,;
     setDefaultTemplate;
   },;
-} export function useContractTemplates () {
+ export function useContractTemplates () {
   const {
   user, isAuthenticated 
-}= useAuth ();
+= useAuth ();
 const queryClient = useQueryClient ();
 const {
   toast 
-}= useToast ();
+= useToast ();
 const [isLoading, setIsLoading] = useState (false);
 data: templates = [], isLoading: isLoadingTemplates, error: templatesError 
-}= useQuery ({
+= useQuery ({
   queryKey: ['contractTemplates', user?.id], queryFn: async () => {
   if (!isAuthenticated || !user) {
   const {
   data, error 
-}= await supabase .from ('contract templates') .select ('*') return data as ContractTemplate[] 
-};
+= await supabase .from ('contract templates') .select ('*') return data as ContractTemplate[] 
+;
 enabled: isAuthenticated && !!user 
-});
-//Create a new template try {
+);
+/Create a new template try {
   //If this is set as default, unset any existing default if (isDefault) {
   await supabase .from ('contract templates') .update ({
   is default: false 
-}) .eq ('user id', user.id) .eq ('is default', true) 
-}//Insert the new template const {
+) .eq ('user id', user.id) .eq ('is default', true) 
+//Insert the new template const {
   data, error 
-}= await supabase .from ('contract templates') .insert ({
+= await supabase .from ('contract templates') .insert ({
   user id: user.id, title: title, template data: templateData, is default: isDefault 
-}) .select () .single ();
-}
-});
-//Update an existing template try {
+) .select () .single ();
+
+);
+/Update an existing template try {
   //If this is set as default, unset any existing default if (isDefault) {
   await supabase .from ('contract templates') .update ({
   is default: false 
-}) .eq ('user id', user.id) .eq ('is default', true) .neq ('id', templateId) 
-}//Update the template const {
+) .eq ('user id', user.id) .eq ('is default', true) .neq ('id', templateId) 
+//Update the template const {
   data, error 
-}= await supabase .from ('contract templates') .update ({
-  title: title, template data: templateData, is default: isDefault, updated at: new Date () .toISOString () 
-}) .eq ('id', templateId) .eq ('user id', user.id) .select () .single ();
-}
-});
-//Delete a template try {
+= await supabase .from ('contract templates') .update ({
+  title: title, template data: templateData, is default: isDefault, updated at: new Date () .toISOString () .eq ('id', templateId) .eq ('user id', user.id) .select () .single ();
+
+);
+/Delete a template try {
   const {
   error 
-}= await supabase .from ('contract templates') .delete () .eq ('id', templateId) .eq ('user id', user.id);
-}
-});
-//Set a template as default try {
+= await supabase .from ('contract templates') .delete () .eq ('id', templateId) .eq ('user id', user.id);
+
+);
+/Set a template as default try {
   //First unset any existing default await supabase .from ('contract templates') .update ({
   is default: false 
-}) .eq ('user id', user.id) .eq ('is default', true);
-// Then set the new default const {
+) .eq ('user id', user.id) .eq ('is default', true);
+/ Then set the new default const {
   error 
-}= await supabase .from ('contract templates') .update ({
+= await supabase .from ('contract templates') .update ({
   is default: true 
-}) .eq ('id', templateId) .eq ('user id', user.id);
-}
-});
-}
+) .eq ('id', templateId) .eq ('user id', user.id);
+
+);

@@ -3,15 +3,14 @@ import { motion } from 'framer-motion',
 interface UltraAdvancedFuturisticBackgroundV2Props {
   children: React.ReactNode,
   className?: string
-}
 
 const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackgroundV2Props> = ({ 
   children,
   className = '' 
-}) => {
+) => {
   const canvasRef = useRef<HTMLCanvasElement>(null),
 
-  useEffect(() => {
+  useEffect() => {
     const canvas = canvasRef.current,
     if (!canvas) return,
 
@@ -49,8 +48,7 @@ const initParticles = () => {
           color: colors[Math.floor(Math.random() * colors.length)],
           life: Math.random() * 100,
           maxLife: 100
-        })      }
-    },
+        })      },
 
     // Update and draw particles,
 const updateParticles = () => {
@@ -68,7 +66,7 @@ const gradient = ctx.createRadialGradient(
       ctx.fillRect(0, 0, canvas.width, canvas.height),
 
       // Update and draw particles,
-particles.forEach((particle, index) => {
+particles.forEach(particle, index) => {
         particle.x += particle.vx,
         particle.y += particle.vy,
         particle.life--,
@@ -93,12 +91,11 @@ const alpha = particle.life / particle.maxLife,
         ctx.fill(),
 
         // Draw connections,
-particles.forEach((otherParticle, otherIndex) => {
-          if (index !== otherIndex) {
+particles.forEach(otherParticle, otherIndex) => {
+          if (index != otherIndex) {
             const distance = Math.sqrt(
               Math.pow(particle.x - otherParticle.x, 2) + 
-              Math.pow(particle.y - otherParticle.y, 2)
-            ),
+              Math.pow(particle.y - otherParticle.y, 2),
             if (distance < 100) {
               ctx.strokeStyle = `rgba(0, 255, 255, ${0.1 * (1 - distance / 100)})`,
               ctx.lineWidth = 1,
@@ -106,7 +103,6 @@ particles.forEach((otherParticle, otherIndex) => {
               ctx.moveTo(particle.x, particle.y),
               ctx.lineTo(otherParticle.x, otherParticle.y),
               ctx.stroke()            }
-          }
         })
       }),
 
@@ -114,7 +110,7 @@ particles.forEach((otherParticle, otherIndex) => {
 ctx.globalAlpha = 0.1,
       ctx.strokeStyle = '#00ffff',
       ctx.lineWidth = 0.5,
-      
+
       // Vertical lines,
 for (let x = 0, x < canvas.width, x += 50) {
         ctx.beginPath(),
@@ -122,7 +118,7 @@ for (let x = 0, x < canvas.width, x += 50) {
         ctx.lineTo(x, canvas.height),
         ctx.stroke()
       }
-      
+
       // Horizontal lines,
 for (let y = 0, y < canvas.height, y += 50) {
         ctx.beginPath(),
@@ -162,7 +158,6 @@ const handleResize = () => {
       if (animationFrameId) {
         cancelAnimationFrame(animationFrameId)
       }
-    }
   }, []),
   return (
     <div className={_`relative min-h-screen overflow-hidden ${className}`}>
@@ -170,96 +165,96 @@ const handleResize = () => {
       <canvas,
 ref={canvasRef}
         className=&quot;fixed inset-0 w-full h-full pointer-events-none z-0&quot;
-        style={{ background: 'radial-gradient(circle at center, rgba(0,0,0,0.8) 0%, rgba(20,20,40,0.6) 50%, rgba(0,0,0,0.9) 100%)' }}
+        style={ background: 'radial-gradient(circle at center, rgba(0,0,0,0.8) 0%, rgba(20,20,40,0.6) 50%, rgba(0,0,0,0.9) 100%)' }
       />
-      
+
       {/* Floating Geometric Shapes */}
       <div className=&quot;fixed inset-0 pointer-events-none z-10&quot;>
         <motion.div,
 className=&quot;absolute top-20 left-20 w-32 h-32 border border-cyan-400 opacity-20&quot;
-          animate={{
+          animate={
             rotate: [0, 360],
             scale: [1, 1.2, 1],
             opacity: [0.1, 0.3, 0.1]
-          }}
-          transition={{
+          }
+          transition={
             duration: 8,
             repeat: Infinity,
             ease: &quot;easeInOut&quot
-          }}
+          }
         />
-        
+
         <motion.div,
 className=&quot;absolute top-40 right-32 w-24 h-24 border border-purple-400 opacity-20&quot;
-          animate={{
+          animate={
             rotate: [360, 0],
             scale: [1, 0.8, 1],
             opacity: [0.1, 0.4, 0.1]
-          }}
-          transition={{
+          }
+          transition={
             duration: 6,
             repeat: Infinity,
             ease: &quot;easeInOut&quot
-          }}
+          }
         />
-        
+
         <motion.div,
 className=&quot;absolute bottom-32 left-32 w-40 h-40 border border-pink-400 opacity-20&quot;
-          animate={{
+          animate={
             rotate: [0, 360],
             scale: [1, 1.3, 1],
             opacity: [0.1, 0.2, 0.1]
-          }}
-          transition={{
+          }
+          transition={
             duration: 10,
             repeat: Infinity,
             ease: &quot;easeInOut&quot
-          }}
+          }
         />
-        
+
         <motion.div,
 className=&quot;absolute bottom-20 right-20 w-28 h-28 border border-green-400 opacity-20&quot;
-          animate={{
+          animate={
             rotate: [360, 0],
             scale: [1, 0.9, 1],
             opacity: [0.1, 0.3, 0.1]
-          }}
-          transition={{
+          }
+          transition={
             duration: 7,
             repeat: Infinity,
             ease: &quot;easeInOut&quot
-          }}
+          }
         />;
       </div>;
-;
+
       {/* Quantum Energy Particles */}
       <div className=&quot;fixed inset-0 pointer-events-none z-20&quot;>
-        {[...Array(20)].map((_, i) => (
+        {[...Array(20)].map(_, i) => (
           <motion.div,
 key={i}
             className=&quot;absolute w-2 h-2 bg-cyan-400 rounded-full&quot;
-            style={{
+            style={
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`
-            }}
-            animate={{;
+            }
+            animate={;
               y:[0, -100, 0],;
               opacity:[0, 1, 0],;
               scale:[0, 1, 0];
-            }}
-            transition={{
+            }
+            transition={
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
               delay: Math.random() * 2,
-              ease: &quot;easeInOut&quot            }}
+              ease: &quot;easeInOut&quot            }
             animate={_{
-              y: [0, _-100, 0], opacity: [0, 1, 0], scale: [0, 1, 0]}}
+              y: [0, _-100, 0], opacity: [0, 1, 0], scale: [0, 1, 0]}
             transition={_{
-              duration: 3 + Math.random() * 2, repeat: Infinity, delay: Math.random() * 2, ease: "easeInOut"}}
+              duration: 3 + Math.random() * 2, repeat: Infinity, delay: Math.random() * 2, ease: "easeInOut"}
           />
-        ))}
+        )}
       </div>;
-;
+
       {/* Neural Network Connections */}
       <div className=&quot;fixed inset-0 pointer-events-none z-30&quot;>
         <svg className=&quot;w-full h-full&quot;>          <defs>
@@ -278,25 +273,25 @@ key={i}
               stroke=&quot;url(#neuralGradient)&quot;
               strokeWidth=&quot;1&quot;
               opacity=&quot;0.1&quot;
-              animate={{
+              animate={
                 opacity: [0.1, 0.3, 0.1],
                 strokeDasharray: [0, 100, 0]
-              }}
-              transition={{
+              }
+              transition={
                 duration: 4 + Math.random() * 2,
                 repeat: Infinity,
                 delay: Math.random() * 2,
                 ease: &quot;easeInOut&quot
-              }}            />
-          ))}
+              }            />
+          )}
         </svg>;
       </div>;
-;
+
       {/* Content */}
       <div className=&quot;relative z-40&quot;>
         {children}      </div>
     </div>
   )
-},
+,
 
 export default UltraAdvancedFuturisticBackgroundV2,

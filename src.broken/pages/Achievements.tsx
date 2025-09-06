@@ -6,5 +6,3 @@ export function Achievements() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

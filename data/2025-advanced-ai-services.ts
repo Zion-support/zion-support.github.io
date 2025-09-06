@@ -57,7 +57,6 @@ export const advancedAIServices2025 = [;
           'Dedicated support'
         ]
       }
-    }
     category: 'Business Intelligence'
     tags: ['AI', 'Business Intelligence', 'Analytics', 'Data Visualization']
     website: 'https://ziontechgroup.com/business-intelligence-ai-pro'
@@ -131,7 +130,6 @@ export const advancedAIServices2025 = [;
           'Dedicated support'
         ]
       }
-    }
     category: 'Customer Analytics'
     tags: ['AI', 'Customer Analytics', 'Personalization', 'Behavior Analysis']
     website: 'https://ziontechgroup.com/customer-analytics-ai'
@@ -205,7 +203,6 @@ export const advancedAIServices2025 = [;
           'Regulatory consultation'
         ]
       }
-    }
     category: 'Financial Risk Management'
     tags: ['AI', 'Financial Risk', 'Fraud Detection', 'Compliance']
     website: 'https://ziontechgroup.com/financial-risk-ai'
@@ -233,7 +230,6 @@ export const advancedAIServices2025 = [;
       'Banks, financial institutions, insurance companies, fintech startups'
     competitiveAdvantage:
       'Advanced AI fraud detection with 99.7% accuracy, comprehensive risk assessment, and regulatory compliance automation'
-  }
   },
   {
     id: 'intelligent-supply-chain-optimization'
@@ -280,7 +276,6 @@ export const advancedAIServices2025 = [;
           'Dedicated support'
         ]
       }
-    }
     category: 'Supply Chain Optimization'
     tags: ['AI', 'Supply Chain', 'Logistics', 'Optimization']
     website: 'https://ziontechgroup.com/supply-chain-ai'
@@ -354,7 +349,6 @@ export const advancedAIServices2025 = [;
           'Dedicated support'
         ]
       }
-    }
     category: 'Healthcare AI'
     tags: ['AI', 'Healthcare', 'Medical Imaging', 'Diagnostics']
     website: 'https://ziontechgroup.com/healthcare-diagnostics-ai'
@@ -428,7 +422,6 @@ export const advancedAIServices2025 = [;
           'Legal consultation'
         ]
       }
-    }
     category: 'Legal AI'
     tags: ['AI', 'Legal Tech', 'Document Analysis', 'Compliance']
     website: 'https://ziontechgroup.com/legal-document-ai'
@@ -498,7 +491,6 @@ export const advancedAIServices2025 = [;
           'Dedicated support'
         ]
       }
-    }
     category: 'Marketing AI'
     tags: [
       'AI'
@@ -573,7 +565,6 @@ export const advancedAIServices2025 = [;
           'Dedicated support'
         ]
       }
-    }
     category: 'Sales AI'
     tags: ['AI', 'Sales Optimization', 'Lead Scoring', 'Forecasting']
     website: 'https://ziontechgroup.com/sales-optimization-ai'
@@ -647,7 +638,6 @@ export const advancedAIServices2025 = [;
           'Dedicated support'
         ]
       }
-    }
     category: 'HR AI'
     tags: [
       'AI'
@@ -722,7 +712,6 @@ export const advancedAIServices2025 = [;
           'Dedicated SOC team'
         ]
       }
-    }
     category: 'Cybersecurity AI'
     tags: ['AI', 'Cybersecurity', 'Threat Detection', 'Incident Response']
     website: 'https://ziontechgroup.com/cybersecurity-ai'
@@ -751,7 +740,7 @@ export const advancedAIServices2025 = [;
     competitiveAdvantage:
       'Advanced threat detection with 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration'
   }
-];      phone: '+1 302 464 0950';
+;      phone: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com'
     }
     marketSize: '$173.5B'
@@ -760,7 +749,7 @@ export const advancedAIServices2025 = [;
     targetAudience: 'IT security teams, cybersecurity firms, enterprise businesses, government agencies';
     competitiveAdvantage: 'Advanced threat detection with 99 && 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration'
   }
-];
+;
 
     market_size: '$173.5B',
     target_audience:;
@@ -768,12 +757,11 @@ export const advancedAIServices2025 = [;
     competitive_advantage:;
       'Advanced threat detection with 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration',
   },
-];      phone: '+1 302 464 0950';
+;      phone: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
     }
     market_size: '$173.5B',
     target_audience: 'IT security teams, cybersecurity firms, enterprise businesses, government agencies';
     competitive_advantage: 'Advanced threat detection with 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration';
   }
-];
 ;

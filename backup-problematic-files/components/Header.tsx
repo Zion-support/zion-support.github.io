@@ -28,7 +28,7 @@ const servicesDropdown = [
     description: 'Cloud Infrastructure & Migration',
     icon: () => <div className="w-6 h-6 bg-blue-100 rounded flex items-center justify-center"></div>
   }
-];
+;
 
 const solutionsDropdown = [
   {
@@ -43,19 +43,19 @@ const solutionsDropdown = [
     description: 'Streamline your business processes',
     icon: () => <div className="w-6 h-6 bg-green-100 rounded flex items-center justify-center"></div>
   }
-];
+;
 
 const industriesDropdown = [
   { name: 'Healthcare', href: '/healthcare', icon: () => <div className="w-5 h-5 bg-red-100 rounded flex items-center justify-center"></div> },
   { name: 'Finance', href: '/finance', icon: () => <div className="w-5 h-5 bg-red-100 rounded flex items-center justify-center"></div> },
   { name: 'E-commerce', href: '/ecommerce', icon: () => <div className="w-5 h-5 bg-red-100 rounded flex items-center justify-center"></div> }
-];
+;
 
 const navigation = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
   { name: 'Contact', href: '/contact' }
-];
+;
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -122,16 +122,16 @@ export default function Header() {
               <AnimatePresence>
                 {isServicesOpen && (
                   <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 10 }}
+                    initial={ opacity: 0, y: 10 }
+                    animate={ opacity: 1, y: 0 }
+                    exit={ opacity: 0, y: 10 }
                     className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-xl border z-50"
                     onMouseEnter={() => setIsServicesOpen(true)}
                     onMouseLeave={() => setIsServicesOpen(false)}
                   >
                     <div className="p-6">
                       <div className="grid grid-cols-2 gap-4">
-                        {servicesDropdown.map((service) => (
+                        {servicesDropdown.map(service) => (
                           <Link key={service.title} href={service.href} className="group">
                             <div className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
                               <service.icon />
@@ -141,7 +141,7 @@ export default function Header() {
                               </div>
                             </div>
                           </Link>
-                        ))}
+                        )}
                       </div>
                     </div>
                   </motion.div>
@@ -161,15 +161,15 @@ export default function Header() {
               <AnimatePresence>
                 {isSolutionsOpen && (
                   <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 10 }}
+                    initial={ opacity: 0, y: 10 }
+                    animate={ opacity: 1, y: 0 }
+                    exit={ opacity: 0, y: 10 }
                     className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border z-50"
                     onMouseEnter={() => setIsSolutionsOpen(true)}
                     onMouseLeave={() => setIsSolutionsOpen(false)}
                   >
                     <div className="p-6">
-                      {solutionsDropdown.map((solution) => (
+                      {solutionsDropdown.map(solution) => (
                         <Link key={solution.title} href={solution.href} className="group block mb-4 last:mb-0">
                           <div className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
                             <solution.icon />
@@ -179,7 +179,7 @@ export default function Header() {
                             </div>
                           </div>
                         </Link>
-                      ))}
+                      )}
                     </div>
                   </motion.div>
                 )}
@@ -198,27 +198,27 @@ export default function Header() {
               <AnimatePresence>
                 {isIndustriesOpen && (
                   <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 10 }}
+                    initial={ opacity: 0, y: 10 }
+                    animate={ opacity: 1, y: 0 }
+                    exit={ opacity: 0, y: 10 }
                     className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border z-50"
                     onMouseEnter={() => setIsIndustriesOpen(true)}
                     onMouseLeave={() => setIsIndustriesOpen(false)}
                   >
                     <div className="p-4">
-                      {industriesDropdown.map((industry) => (
+                      {industriesDropdown.map(industry) => (
                         <Link key={industry.name} href={industry.href} className="group flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-50 transition-colors">
                           <industry.icon />
                           <span className="text-gray-700 group-hover:text-blue-600">{industry.name}</span>
                         </Link>
-                      ))}
+                      )}
                     </div>
                   </motion.div>
                 )}
               </AnimatePresence>
             </div>
 
-            {navigation.map((item) => (
+            {navigation.map(item) => (
               <Link
                 key={item.name}
                 href={item.href}
@@ -226,7 +226,7 @@ export default function Header() {
               >
                 {item.name}
               </Link>
-            ))}
+            )}
           </div>
 
           {/* Contact Info */}
@@ -256,13 +256,13 @@ export default function Header() {
         <AnimatePresence>
           {isMenuOpen && (
             <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
+              initial={ opacity: 0, height: 0 }
+              animate={ opacity: 1, height: 'auto' }
+              exit={ opacity: 0, height: 0 }
               className="md:hidden"
             >
               <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-50 rounded-lg mt-2">
-                {navigation.map((item) => (
+                {navigation.map(item) => (
                   <Link
                     key={item.name}
                     href={item.href}
@@ -271,7 +271,7 @@ export default function Header() {
                   >
                     {item.name}
                   </Link>
-                ))}
+                )}
                 <Link
                   href="/contact"
                   onClick={() => setIsMenuOpen(false)}
@@ -286,4 +286,3 @@ export default function Header() {
       </nav>
     </header>
   );
-}

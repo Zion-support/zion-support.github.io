@@ -6,5 +6,3 @@ export function ProductsAdminPage() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

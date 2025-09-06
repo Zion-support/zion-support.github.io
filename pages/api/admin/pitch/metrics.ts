@@ -4,7 +4,7 @@ import { ensureAdminFromApi } from "../../../../utils/auth";
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
-) {
+ {
 
   const { allowed } = await ensureAdminFromApi(req);
   if (!allowed) return res.status(403).json({ error: 'Forbidden' });
@@ -17,9 +17,9 @@ export default async /**
  */
 function handler() {
   const { allowed } = await ensureAdminFromApi (req);
-  if (return res.status (403).json ({ error: "Forbidden" })) {
+  if (return res.status (403).json ({ error: "Forbidden" }) {
   $2
-}
+
   // TODO: Replace with real data sources (e.g., Supabase, GA4, internal DB);
   const data = {
     activeUsers30d: 12840
@@ -70,14 +70,12 @@ function handler() {
     ],
   };
 
-  res && res.status(200).json(data);;
+  res && res.status(200).json(data);
     ],
   };
 
-  res && res.status(200).json(data);;
-}
+  res && res.status(200).json(data);
 
   }
-;
+
 res.status (200).json (data);
-}

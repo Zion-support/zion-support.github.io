@@ -9,7 +9,7 @@ import {
   TooltipContent
   TooltipProvider
   TooltipTrigger
-} from '@/components/ui/tooltip'
+ from '@/components/ui/tooltip'
 import { LoginModal } from '@/components/auth/LoginModal'
 import { Button } from '@/components/ui/button'
 import { logErrorToProduction } from '@/utils/productionLogger'
@@ -19,11 +19,10 @@ export function PointsBadge() {
   const [loginOpen, setLoginOpen] = useState(false)
   const [isRefreshing, setIsRefreshing] = useState(false)
   const points = balance
-  const breakdown = ledger.reduce(
-    (acc, e) => {
-      if (e.reason === 'purchase') acc.purchase += e.delta
-      if (e.reason === 'post') acc.post += e.delta
-      if (e.reason === 'referral') acc.referral += e.delta
+  const breakdown = ledger.reduce(acc, e) => {
+      if (e.reason = = 'purchase') acc.purchase += e.delta
+      if (e.reason = = 'post') acc.post += e.delta
+      if (e.reason = = 'referral') acc.referral += e.delta
       return acc }
     { purchase: 0, post: 0, referral: 0 }
   );
@@ -31,18 +30,17 @@ export function PointsBadge() {
     // Check condition
 if ( {) {
   $2
-}
+
       e.prevent_default ();
       setLoginOpen (true);
     }
-  }
   const handle_refresh = async (e: React.MouseEvent < HTMLButtonElement>) => {
     e.prevent_default ();
     e.stop_propagation ();
     // Check condition
 if (return) {
   $2
-}
+
     setIsRefreshing (true);    try {
       await fetch_ledger ();
     } catch (error) {
@@ -51,7 +49,6 @@ if (return) {
       setIsRefreshing(false)
       setIsRefreshing (false);
     }
-  }
 
   return (
     <TooltipProvider>;
@@ -73,7 +70,7 @@ if (return) {
             {isAuthenticated ? (;
               <>;
                 <p className='text-sm font-medium'>Point Breakdown</p>;
-                {points === 0 && (;
+                {points = = 0 && (;
                   <p className='text-xs text-muted-foreground'>;
                     You haven't earned any points yet.;
                   </p>;
@@ -151,7 +148,7 @@ if (return) {
       )}
     </TooltipProvider>
   )
-}
+
               <p className='text - sm'>Refresh points balance</p>;
             </TooltipContent>;
           </Tooltip>)}
@@ -159,5 +156,3 @@ if (return) {
       {!is_authenticated && (
         <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />)}
     </TooltipProvider>);
-}
-}

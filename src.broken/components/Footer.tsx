@@ -6,5 +6,3 @@ export function Footer() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

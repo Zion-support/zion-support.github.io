@@ -5,7 +5,7 @@ import {;
   Brain, Rocket, Globe, ArrowRight, Copy, Check,;
   Download, Bookmark, Share2, Clock, User, Tag,;
   Zap, Lock, Globe2, Cpu;
-} from 'lucide-react',;
+ from 'lucide-react',;
 import Link from 'next/link',;
 const APIDocs: React.FC = () => {;
   const [searchQuery, setSearchQuery] = useState(''),;
@@ -150,13 +150,11 @@ url = "https://api.ziontechgroup.com/ai/v2/consciousness/analyze";
 headers = {;
     "Authorization": "Bearer YOUR_API_KEY",;
     "Content-Type": "application/json";
-}
-;
+
 data = {;
     "model_id": "gpt-4",;
     "text": "Hello, how are you today?";
-}
-;
+
 response = requests.post(url, json=data, headers=headers);
 result = response.json();
 print(f"Consciousness Level: {result['consciousness_score']}")`;
@@ -168,12 +166,12 @@ print(f"Consciousness Level: {result['consciousness_score']}")`;
 const url = 'https://api.ziontechgroup.com/quantum/v1/circuit/execute',;
 const headers = {;
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json';
-},;
+,;
 const data = {;
     qubits: 2,;
     gates: ['HCNOTH'],;
     measurements: [0, 1];
-},;
+,;
 axios.post(url, data, { headers });
     .then(response => {;
         // // // console.log('Result:', response.data.result);
@@ -199,13 +197,13 @@ axios.post(url, data, { headers });
     }
   ],;
   const filteredAPIs = apis.filter(api => {;
-    if (selectedAPI === 'all') return true,;
-    return api.category === selectedAPI;
+    if (selectedAPI = = 'all') return true,;
+    return api.category = = selectedAPI;
   }),;
   const copyToClipboard = (text: string) => {;
     navigator.clipboard.writeText(text),;
     setCopiedEndpoint(text),;
-    setTimeout(() => setCopiedEndpoint(''), 2000);
+    setTimeout() => setCopiedEndpoint(''), 2000);
   };
 export default function ApiDocs() {;
 	return (;
@@ -220,6 +218,3 @@ export default function ApiDocs() {;
 			</div>;
 		</div>;
 	);
-}
-;
-}

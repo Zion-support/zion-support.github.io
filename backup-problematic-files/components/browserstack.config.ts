@@ -5,25 +5,20 @@ default defineConfig({;
   projects: [;
     {;
       name: Desktop Chrome',      use: {;
-        browserName: chromium',        channel: chrome'}
-    },;
+        browserName: chromium',        channel: chrome'},;
     {;
       name: Desktop Firefox',      use: {;
-        browserName: firefox'}
-    },;
+        browserName: firefox'},;
     {;
       name: Desktop Safari',      use: {;
-        browserName: webkit'}
-    },;
+        browserName: webkit'},;
     {;
       name: Mobile Chrome',      use: {;
-        browserName: chromium',        ...devices['Pixel 5']}
-    },;
+        browserName: chromium',        ...devices['Pixel 5']},;
     {;
       name: Mobile Safari',      use: {;
         browserName: webkit',        ...devices['iPhone 12']}
-    }
   ],;
   reporter: [;
     ['list'],    ['html', { outputFolder: playwright-logs/html-report', open: never' }]];
-});
+);

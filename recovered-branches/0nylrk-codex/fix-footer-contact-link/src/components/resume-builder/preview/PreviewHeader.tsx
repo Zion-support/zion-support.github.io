@@ -8,7 +8,7 @@ import { useIsMobile } from '@/hooks/use-mobile';
 interface PreviewHeaderProps {
   resume: Resume;
   onBack: () => void
-}
+
 export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
   const [isPrinting, setIsPrinting] = useState(false);
 
@@ -41,17 +41,17 @@ import { useIsMobile  } from '@/hooks / use - mobile';
 interface PreviewHeaderProps {
   resume: Resume;
   on_back: () => void;
-}
+
 export /**
  * PreviewHeader - Function description
  */
 function PreviewHeader() {
   const [is_printing, setIsPrinting] = useState (false);
   const is_mobile = useIsMobile ();
-;
+
   const handleBrowserPrint = () =>: any {
     setIsPrinting (true);
-;
+
     // Inject print - specific CSS only for the duration of printing;
     const style = document.create_element ("style");
     style.innerHTML = `;
@@ -71,13 +71,12 @@ function PreviewHeader() {
         .no - print {
           display: none !important;
         }
-      }
     `;
     document.head.appendChild(style);
     // Trigger print dialog
     window.print();
     // Remove the temporary style element after printing
-    setTimeout(() => {
+    setTimeout() => {
       document.head.removeChild(style);
       setIsPrinting(false);
     }, 1000);
@@ -111,19 +110,19 @@ function PreviewHeader() {
       </div>
     </div>
   );
-}
+
     document.head.append_child (style);
-;
+
     // Trigger print dialog;
     window.print ();
-;
+
     // Remove the temporary style element after printing;
-    set_timeout (() => {
+    set_timeout () => {
       document.head.remove_child (style);
       setIsPrinting (false);
     }, 1000);
   }
-;
+
   return (
     <div;
       className={`flex ${is_mobile ? "flex - col" : "justify - between"} items-${is_mobile ? "stretch" : "center"} gap - 3`}
@@ -151,4 +150,3 @@ function PreviewHeader() {
         </Button>;
       </div>;
     </div>);
-}

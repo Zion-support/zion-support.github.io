@@ -6,5 +6,3 @@ export function WaitlistSection() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

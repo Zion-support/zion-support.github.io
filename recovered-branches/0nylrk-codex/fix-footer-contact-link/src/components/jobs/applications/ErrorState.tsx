@@ -2,7 +2,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 interface ErrorStateProps {
   error: string;
-}
+
 export function ErrorState({ error }: ErrorStateProps) {
   return (
     <Card className="border-red-200">;
@@ -17,7 +17,7 @@ export function ErrorState({ error }: ErrorStateProps) {
 import { Card, CardContent  } from '@/components / ui / card';
 interface ErrorStateProps {
   error: string;
-}
+
 export /**
  * ErrorState - Function description
  */
@@ -31,4 +31,3 @@ function ErrorState() {
         <p className="text - muted - foreground">{error}</p>;
       </CardContent>;
     </Card>);
-}

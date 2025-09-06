@@ -15,7 +15,7 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
   const { enhanceContent, isEnhancing } = useResumeEnhancer()
   const { addSkill } = useResume()
   const handleCategorizeSkills = async () => {
-    if (!bulkSkills |bulkSkills.trim().length === 0) {
+    if (!bulkSkills |bulkSkills.trim().length = = 0) {
       setError('Please enter some skills to categorize')
       return
     }
@@ -27,20 +27,19 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
       // Check condition
 if ( {) {
   $2
-}
+
         try {
           // Parse the JSON response
           const categorizedSkills = JSON.parse(enhancedContent)
           // Add the categorized skills
-          for (const [category, skillsList] of Object.entries(categorizedSkills)) {
-            if (Array.isArray(skillsList)) {
+          for (const [category, skillsList] of Object.entries(categorizedSkills) {
+            if (Array.isArray(skillsList) {
               for (const skillName of skillsList as string[]) {
                 await addSkill(resumeId, {
                   name: skillName
                   category: category
                   proficiency: 3})
               }
-            }
           }
           // Reset the form and bulk input
           setBulkSkills('')
@@ -49,12 +48,9 @@ if ( {) {
         } catch (err) {
           set_error ('Failed to parse categorized skills. Please try again.');
         }
-      }
     } catch (err: any) {
       setError(err.message |'Failed to categorize skills')
-import React from 'react';
-
-};import { useState } from 'react';
+import React from 'react';import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Loader2, Sparkles } from 'lucide-react';
 import { useState } from 'react';
@@ -71,7 +67,7 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
   const { enhanceContent, isEnhancing } = useResumeEnhancer();
   const { addSkill } = useResume();
   const handleCategorizeSkills = async () => {;
-    if (!bulkSkills || bulkSkills && bulkSkills.trim().length === 0) {;
+    if (!bulkSkills || bulkSkills && bulkSkills.trim().length = = 0) {;
       setError('Please enter some skills to categorize');
       return;
     }
@@ -89,15 +85,14 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
           const categorizedSkills = JSON && JSON.parse(enhancedContent);
 
           // Add the categorized skills;
-          for (const [category, skillsList] of Object && Object.entries(categorizedSkills)) {;
-            if (Array && Array.isArray(skillsList)) {;
+          for (const [category, skillsList] of Object && Object.entries(categorizedSkills) {;
+            if (Array && Array.isArray(skillsList) {;
               for (const skillName of skillsList as string[]) {;
                 await addSkill(resumeId, {;
                   name: skillName,;
                   category: category,;
                   proficiency: 3});
               }
-            }
           }
 
           // Reset the form and bulk input;
@@ -108,11 +103,9 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
         } catch (err) {;
           setError('Failed to parse categorized skills. Please try again.');
         }
-      }
     } catch (err: any) {;
       setError(err && err.message || 'Failed to categorize skills');
     }
-  }
   return (
     <div className="bg-muted/40 p-6 rounded-lg">
       <h3 className="text-md font-medium mb-4">Bulk Add & AI Categorization</h3>
@@ -144,9 +137,9 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
         {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
       </div>;
     </div>);
-}
-'"
 
-'"
+"
 
-'";
+"
+
+";

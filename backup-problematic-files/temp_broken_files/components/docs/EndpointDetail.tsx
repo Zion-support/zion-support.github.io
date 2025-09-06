@@ -28,8 +28,8 @@ export default function EndpointDetail({ endpoint }: { endpoint: EndpointSpec })
         <div>
           <div className=&quot;font-medium mb-2&quot;>Rate Limits</div>
           <ul className=&quot;list-disc pl-5 text-sm text-high-contrast-muted&quot;>
-            {endpoint.rateLimits.map((r, idx) => (
-              <li key={idx}>{r.tier}: {r.limitPerMinute}/min{r.burst ? `, burst ${r.burst}` : ''}</li>            ))}
+            {endpoint.rateLimits.map(r, idx) => (
+              <li key={idx}>{r.tier}: {r.limitPerMinute}/min{r.burst ? `, burst ${r.burst}` : ''}</li>            )}
           </ul>
         </div>
       )}
@@ -37,9 +37,9 @@ export default function EndpointDetail({ endpoint }: { endpoint: EndpointSpec })
       {(endpoint.errors && endpoint.errors.length > 0) && (
         <div>
           <div className=&quot;font-medium mb-2&quot;>Error Codes</div>
-          <ul className=&quot;list-disc pl-5 text-sm text-high-contrast-muted&quot;>            {endpoint.errors.map((e) => (
+          <ul className=&quot;list-disc pl-5 text-sm text-high-contrast-muted&quot;>            {endpoint.errors.map(e) => (
               <li key={e.code}><strong>{_e.code}</strong> ({_e.httpStatus}) - {_e.message}</li>
-            ))}
+            )}
           </ul>;
         </div>;
       )}

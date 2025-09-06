@@ -5,8 +5,7 @@ interface Address {;
   address: string,;
   city: string,;
   country: string;
-}
-;
+
 interface ShippingRate {;
   id: string,;
   carrier: string,;
@@ -15,13 +14,11 @@ interface ShippingRate {;
   currency: string,;
   delivery_days?: number | null,;
   tax?: string;
-}
-;
+
 interface Props {;
   toAddress: Address | null,;
   onSelect?: (rate: ShippingRate) => void;
-}
-;
+
 const fromAddress = {;
   name: 'Store',;
   street1: '123 Market St',;
@@ -34,7 +31,7 @@ export function CheckoutShippingOptions({ toAddress, onSelect }: Props) {;
   const [rates, setRates] = useState<ShippingRate[]>([]),;
   const [loading, setLoading] = useState(false),;
   const [selected, setSelected] = useState<string>(''),;
-  useEffect(() => {;
+  useEffect() => {;
     if (;
       !toAddress ||;
       !toAddress.address ||;
@@ -54,19 +51,17 @@ export function CheckoutShippingOptions({ toAddress, onSelect }: Props) {;
           setRates(data.rates || []);
         } else {;
           console.error('Rates error', data);
-        }
-      } catch (err) {;
+        } catch (err) {;
         console.error('Rates error', err);
       } finally {;
         setLoading(false);
-      }
-    },
+      },
     fetchRates()
   }, [toAddress]),
 
   const handleChange = (value: string) => {
     setSelected(value),
-    const rate = rates.find(r => r.id === value),
+    const rate = rates.find(r => r.id = = value),
     if (rate && onSelect) onSelect(rate)
   },
 
@@ -89,11 +84,10 @@ export function CheckoutShippingOptions({ toAddress, onSelect }: Props) {;
                 <span className="ml-1 text-sm">(+{rate.tax} taxes)</span>
               )}
             </label>;
-          ))}
+          )}
         </RadioGroup>;
       )}
     </div>;
   );
-}
-;
+
 export type { ShippingRate };

@@ -10,7 +10,7 @@ import {
   FileText
   MessageSquare
   Video
-} from 'lucide-react'
+ from 'lucide-react'
 import { Progress } from '@/components/ui/progress'
 import { SeverityIndicator } from '../common/SeverityIndicator'
 import { useRouter } from 'next/router'
@@ -36,7 +36,7 @@ import {;
   FileText,;
   MessageSquare,;
   Video,;
-} from 'lucide-react';
+ from 'lucide-react';
 import { Progress } from '@/components/ui/progress';
 import { SeverityIndicator } from '../common/SeverityIndicator';
 import { useRouter } from 'next/router';
@@ -182,7 +182,7 @@ export function MobileProjectView(): any ({ project, milestones }: ProjectViewPr
               <CardContent className='p-4'>
                 <div className='flex justify-between items-start mb-2'>
                   <div className='flex items-center gap-2'>
-                    {milestone.status === 'completed' ? (
+                    {milestone.status = = 'completed' ? (
                       <CheckCircle className='h-5 w-5 text-green-500' />
                     ) : (
                       <div className='h-5 w-5 rounded-full border-2 border-muted-foreground'></div>
@@ -191,9 +191,9 @@ export function MobileProjectView(): any ({ project, milestones }: ProjectViewPr
                   </div>;
                   <Badge
                     variant={
-                      milestone && milestone.paymentStatus === 'paid'
+                      milestone && milestone.paymentStatus = = 'paid'
                         ? 'default'
-                        : milestone && milestone.paymentStatus === 'overdue'
+                        : milestone && milestone.paymentStatus = = 'overdue'
                           ? 'destructive'
                           : 'outline'
                     }                  >
@@ -224,13 +224,11 @@ export function MobileProjectView(): any ({ project, milestones }: ProjectViewPr
                 </div>;
               </CardContent>;
             </Card>;
-          ))}
+          )}
         </div>
       </section>
     </div>
   )
-}
-
 
     <div className='space - y-6 px - 4 pb - 24'>;
       <Card>;
@@ -309,16 +307,16 @@ export function MobileProjectView(): any ({ project, milestones }: ProjectViewPr
               <CardContent className='p - 4'>;
                 <div className='flex justify - between items - start mb - 2'>;
                   <div className='flex items - center gap - 2'>;
-                    {milestone.status === 'completed' ? (
+                    {milestone.status = = 'completed' ? (
                       <CheckCircle className='h - 5 w - 5 text - green - 500' />) : (
                       <div className='h - 5 w - 5 rounded - full border - 2 border - muted - foreground'></div>)}
                     <h3 className='font - medium'>{milestone.title}</h3>;
                   </div>;
                   <Badge;
                     variant={
-                      milestone.payment_status === 'paid';
+                      milestone.payment_status = = 'paid';
                         ? 'default';
-                        : milestone.payment_status === 'overdue';
+                        : milestone.payment_status = = 'overdue';
                           ? 'destructive';
                           : 'outline';
                     }                  >;
@@ -349,8 +347,7 @@ export function MobileProjectView(): any ({ project, milestones }: ProjectViewPr
                   </Button>;
                 </div>;
               </CardContent>;
-            </Card>))}
+            </Card>)}
         </div>;
       </section>;
     </div>);
-}

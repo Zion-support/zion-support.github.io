@@ -9,4 +9,3 @@ export default function EnhancedHomePage() {
       <p className=&quot;mt-2 text-gray-600 dark:text-gray-300&quot;>Enhanced UI coming soon.</p>
     </div>
   )
-}

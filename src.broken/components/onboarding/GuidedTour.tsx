@@ -6,5 +6,3 @@ export function GuidedTour() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

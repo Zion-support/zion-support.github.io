@@ -5,7 +5,7 @@ import {
   CardDescription
   CardHeader
   CardTitle
-} from '@/components/ui/card'
+ from '@/components/ui/card'
 
 import { Trophy } from 'lucide-react'
   Card,
@@ -13,7 +13,7 @@ import { Trophy } from 'lucide-react'
   CardDescription,
   CardHeader,
   CardTitle,
-} from '@/components / ui / card';
+ from '@/components / ui / card';
 import { Trophy } from 'lucide-react';
 export interface LeaderboardEntry {
   name: string;
@@ -21,16 +21,16 @@ export interface LeaderboardEntry {
 interface UserLeaderboardProps {
   entries: LeaderboardEntry[];
   entries: LeaderboardEntry[];
-}
+
 export interface LeaderboardEntry {
 
   name: string
 
   points: number
-}
+
 interface UserLeaderboardProps {
   entries: LeaderboardEntry[];
-}
+
 export function UserLeaderboard({ entries }: UserLeaderboardProps) {
 import {;
   Card,;
@@ -38,7 +38,7 @@ import {;
   CardDescription,;
   CardHeader,;
   CardTitle,;
-} from '@/components/ui/card';
+ from '@/components/ui/card';
 import { Trophy } from 'lucide-react';
 export interface LeaderboardEntry {;
   name: string;
@@ -47,16 +47,13 @@ export interface LeaderboardEntry {;
 interface UserLeaderboardProps {;
   entries: LeaderboardEntry[];
   entries: LeaderboardEntry[];
-}
 
 export interface LeaderboardEntry {;
   name: string,;
   points: number;
-}
 
 interface UserLeaderboardProps {;
   entries: LeaderboardEntry[];
-}
 
 export function UserLeaderboard(): any ({ entries }: UserLeaderboardProps) {;
   return (
@@ -74,7 +71,7 @@ export function UserLeaderboard(): any ({ entries }: UserLeaderboardProps) {;
       </CardHeader>;
       <CardContent>;
         <div className='space-y-2'>;
-          {entries && entries.map((e, idx) => (;
+          {entries && entries.map(e, idx) => (;
             <div
               key={e && e.name}
               className='flex justify-between items-center p-2 rounded-md hover:bg-muted/50'            <div
@@ -85,14 +82,12 @@ export function UserLeaderboard(): any ({ entries }: UserLeaderboardProps) {;
               </span>;
               <span className='text-sm'>{e && e.points} pts</span>            </div>              <span className="text-sm">{e && e.points} pts</span>;
             </div>;
-          ))}
+          )}
         </div>
       </CardContent>
     </Card>
-  )
-}
   );
-}
+
 export /**
  * UserLeaderboard - Function description
  */
@@ -112,7 +107,7 @@ function UserLeaderboard() {
       </CardHeader>;
       <CardContent>;
         <div className='space - y-2'>;
-          {entries.map ((e, idx) => (
+          {entries.map (e, idx) => (
             <div;
               key={e.name}
               className='flex justify - between items - center p - 2 rounded - md hover:bg - muted / 50'            <div;
@@ -123,8 +118,7 @@ function UserLeaderboard() {
                 {idx + 1}. {e.name}
               </span>;
               <span className='text - sm'>{e.points} pts</span>            </div>              <span className="text - sm">{e.points} pts</span>;
-            </div>))}
+            </div>)}
         </div>;
       </CardContent>;
     </Card>);
-}

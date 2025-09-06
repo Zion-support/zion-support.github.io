@@ -9,18 +9,17 @@ import { ;
   FormControl, ;
   FormDescription, ;
   FormMessage ;
-} from "@/components/ui/form",;
+ from "@/components/ui/form",;
 import { Input } from "@/components/ui/input",;
 import { Textarea } from "@/components/ui/textarea",;
 import { Button } from "@/components/ui/button",;
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",;
 import { Calendar } from "@/components/ui/calendar",;
 import { ContractFormValues } from "./ContractForm",;
-;
+
 interface ProjectDetailsFieldsProps {;
   form:UseFormReturn<ContractFormValues>;
-}
-;
+
 export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
   return (;
     <>;
@@ -36,7 +35,6 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
             <FormMessage />;
           </FormItem>;        )}
       />;
-      ;
       <FormField;
         control={form.control}
         name="scopeSummary";
@@ -57,7 +55,6 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
           </FormItem>;
         )}
       />;
-      ;
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
         <FormField;
           control={form.control}
@@ -94,7 +91,6 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
               <FormMessage />;
             </FormItem>;          )}
         />;
-        ;
         <FormField;
           control={form.control}
           name="endDate";
@@ -145,15 +141,14 @@ FormControl;
 FormDescription;
 FormMessage interface ProjectDetailsFieldsProps {
   form: UseFormReturn<ContractFormValues> 
-}form 
-}: ProjectDetailsFieldsProps) {
+form 
+: ProjectDetailsFieldsProps) {
   return (<> <FormField control= {
   form.control 
-}</FormControl> <FormMessage /> </FormItem>) 
-}/> <FormField <FormItem> <FormLabel>Scope Summary</FormLabel> <FormControl> <Textarea /> </FormControl> <FormDescription> Be specific about what is included and any limitations </FormDescription> <FormMessage /> </FormItem>) 
-}/> <div className="grid grid-cols-1 md:grid-cols-2 gap-6" > <FormField <FormLabel>Start Date</FormLabel> <Popover> <PopoverTrigger asChild> <FormControl> <Button) : (<span>Pick a date</span>) 
-}<CalendarIcon className="ml-auto h-4 w-4 opacity-50" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w-auto p-0" align="start" > <Calendar initialFocus /> </PopoverContent> </Popover> <FormMessage /> </FormItem>) 
-}/> <FormField <FormLabel>End Date (Optional) </FormLabel> <Popover> <PopoverTrigger asChild> <FormControl> <Button) : (<span>Pick a date</span>) 
-}<CalendarIcon className="ml-auto h-4 w-4 opacity-50" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w-auto p-0" align="start" > <Calendar initialFocus /> </PopoverContent> </Popover> <FormDescription> Leave empty if the end date is flexible </FormDescription> <FormMessage /> </FormItem>) 
-}/> </div> </>) 
-}
+</FormControl> <FormMessage /> </FormItem>) 
+/> <FormField <FormItem> <FormLabel>Scope Summary</FormLabel> <FormControl> <Textarea /> </FormControl> <FormDescription> Be specific about what is included and any limitations </FormDescription> <FormMessage /> </FormItem>) 
+/> <div className="grid grid-cols-1 md:grid-cols-2 gap-6" > <FormField <FormLabel>Start Date</FormLabel> <Popover> <PopoverTrigger asChild> <FormControl> <Button) : (<span>Pick a date</span>) 
+<CalendarIcon className="ml-auto h-4 w-4 opacity-50" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w-auto p-0" align="start" > <Calendar initialFocus /> </PopoverContent> </Popover> <FormMessage /> </FormItem>) 
+/> <FormField <FormLabel>End Date (Optional) </FormLabel> <Popover> <PopoverTrigger asChild> <FormControl> <Button) : (<span>Pick a date</span>) 
+<CalendarIcon className="ml-auto h-4 w-4 opacity-50" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w-auto p-0" align="start" > <Calendar initialFocus /> </PopoverContent> </Popover> <FormDescription> Leave empty if the end date is flexible </FormDescription> <FormMessage /> </FormItem>) 
+/> </div> </>) 

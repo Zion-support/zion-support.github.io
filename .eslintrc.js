@@ -1,4 +1,4 @@
-/* eslint-env node */
+* eslint-env node */
 module && module.exports = {
   env: {
     node: true,
@@ -7,7 +7,7 @@ module && module.exports = {
   extends: ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
   parser: "@typescript-eslint/parser",
   plugins: ["@typescript-eslint"],
-/* eslint-env node */
+* eslint-env node */
 module.exports = {
   extends: [
     'next/core-web-vitals',
@@ -90,8 +90,8 @@ export default {
     "dist/**",
     "build/**"
   ]
-};
-module.exports = { extends: [ 'next/core-web-vitals','eslint:recommended','@typescript-eslint/recommended',],parser: '@typescript-eslint/parser',plugins: ['@typescript-eslint'],rules: { '@typescript-eslint/no-unused-vars': 'warn','@typescript-eslint/no-explicit-any': 'warn','no-console': 'off','react/no-unescaped-entities': 'warn','no-undef': 'off',},overrides: [{ files: ['*.ts','*.tsx'],rules: { 'no-undef': 'off' } }],env: { browser: true,node: true,es6: true,dom: true },globals: { KeyboardEvent: 'readonly',HTMLElement: 'readonly',HTMLButtonElement: 'readonly',HTMLAnchorElement: 'readonly',MutationObserver: 'readonly',RequestInit: 'readonly',AbortController: 'readonly',fs: 'readonly',CodeQualityChecker: 'readonly',},};
+;
+module.exports = { extends: [ 'next/core-web-vitals','eslint:recommended','@typescript-eslint/recommended',],parser: '@typescript-eslint/parser',plugins: ['@typescript-eslint'],rules: { '@typescript-eslint/no-unused-vars': 'warn','@typescript-eslint/no-explicit-any': 'warn','no-console': 'off','react/no-unescaped-entities': 'warn','no-undef': 'off',},overrides: [{ files: ['*.ts','*.tsx'],rules: { 'no-undef': 'off' }],env: { browser: true,node: true,es6: true,dom: true },globals: { KeyboardEvent: 'readonly',HTMLElement: 'readonly',HTMLButtonElement: 'readonly',HTMLAnchorElement: 'readonly',MutationObserver: 'readonly',RequestInit: 'readonly',AbortController: 'readonly',fs: 'readonly',CodeQualityChecker: 'readonly',},};
 module.exports = {
   extends: [
     'next/core-web-vitals',
@@ -450,10 +450,10 @@ module.exports = {
     "commit-and-push.js",
     "temp_exclude/",
   ],
-};
+;
     "commit-and-push.js"
   ]
-};
+;
     "ecosystem.simple.js",
     "ecosystem.working.js",
     "execute - automation.js",
@@ -504,5 +504,3 @@ module.exports = {
     "clean - conflicts.js",
     "commit - and - push.js",
   ],
-}
-;

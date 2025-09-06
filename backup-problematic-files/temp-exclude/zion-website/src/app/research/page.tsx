@@ -7,8 +7,8 @@ import { ;
   UserGroupIcon,;
   RocketLaunchIcon,;
   ShieldCheckIcon;
-} from '@heroicons/react/24/outline';
-;
+ from '@heroicons/react/24/outline';
+
 const researchAreas = [;
   {;
     name:'Artificial Intelligence & Machine Learning',;
@@ -46,7 +46,7 @@ const researchAreas = [;
       'AI Safety & AlignmentEthical AI Guidelines',;
       'AI Regulation & PolicyHuman-AI Collaboration';
     ]}];
-;
+
 const recentPublications = [;
   {;
     title:'Quantum Neural Networks:A New Paradigm for AI',;
@@ -80,7 +80,7 @@ const recentPublications = [;
     doi:'10.1000/aie.2023.001',;
     abstract:'We propose a comprehensive framework for developing AI systems that prioritize human values and ethical considerations.',;
     impact:'Foundational'}];
-;
+
 const researchImpact = [;
   {;
     metric:'Research Papers Published',;
@@ -98,7 +98,7 @@ const researchImpact = [;
     metric:'Research Collaborations',;
     value:'50+',;
     description:'Partnerships with leading academic institutions'}];
-;
+
 const academicPartners = [;
   {;
     name:'Stanford University',;
@@ -120,7 +120,7 @@ const academicPartners = [;
     location:'Tokyo, Japan',;
     focus:'Robotics & Autonomous Systems',;
     collaboration:'Robotic learning and human-robot interaction'}];
-;
+
 export default function ResearchPage() {;
   return (;
     <div className="bg-black">;      {/* Hero section */}
@@ -140,7 +140,7 @@ export default function ResearchPage() {;
           </div>;
         </div>;
       </div>;
-;
+
       {/* Research Focus Areas */}
       <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8">;
         <div className="mx-auto max-w-2xl lg:text-center">;
@@ -155,7 +155,7 @@ export default function ResearchPage() {;
         </div>;
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">;
           <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-2">;
-            {researchAreas.map((area) => (;
+            {researchAreas.map(area) => (;
               <div key={area.name} className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover:scale-105">;
                 <div className="flex items-center gap-x-3 mb-4">;
                   <area.icon className="h-8 w-8 text-blue-400" />;
@@ -163,19 +163,19 @@ export default function ResearchPage() {;
                 </div>;
                 <p className="text-gray-300 mb-6">{area.description}</p>;
                 <div className="space-y-2">;
-                  {area.topics.map((topic) => (;
+                  {area.topics.map(topic) => (;
                     <div key={topic} className="flex items-center gap-2">;
                       <div className="h-1.5 w-1.5 bg-blue-400 rounded-full"></div>;
                       <span className="text-sm text-gray-400">{topic}</span>;
                     </div>;
-                  ))}
+                  )}
                 </div>;
               </div>;
-            ))}
+            )}
           </div>;
         </div>;
       </div>;
-;
+
       {/* Recent Publications */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">;
         <div className="mx-auto max-w-2xl lg:text-center">;
@@ -189,13 +189,13 @@ export default function ResearchPage() {;
         </div>;
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">;
           <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-2">;
-            {recentPublications.map((publication) => (;
+            {recentPublications.map(publication) => (;
               <div key={publication.title} className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover:scale-105">;
                 <div className="flex items-center gap-x-2 mb-4">;
                   <span className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium ${;
-                    publication.impact === 'High Impact' ? 'bg-blue-600/20 text-blue-400' :;
-                    publication.impact === 'Industry Leading' ? 'bg-green-600/20 text-green-400' :;
-                    publication.impact === 'Breakthrough' ? 'bg-purple-600/20 text-purple-400' :;
+                    publication.impact = = 'High Impact' ? 'bg-blue-600/20 text-blue-400' :;
+                    publication.impact = = 'Industry Leading' ? 'bg-green-600/20 text-green-400' :;
+                    publication.impact = = 'Breakthrough' ? 'bg-purple-600/20 text-purple-400' :;
                     'bg-gray-600/20 text-gray-400';
                   }`}>;
                     {publication.impact}
@@ -215,11 +215,11 @@ export default function ResearchPage() {;
                   View Publication <span aria-hidden="true"></span>;
                 </a>;
               </div>;
-            ))}
+            )}
           </div>;
         </div>;
       </div>;
-;
+
       {/* Research Impact */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">;
         <div className="mx-auto max-w-2xl lg:text-center">;
@@ -234,17 +234,17 @@ export default function ResearchPage() {;
         </div>;
         <div className="mx-auto mt-16 max-w-2xl lg:max-w-none">;
           <dl className="grid max-w-xl grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-4">;
-            {researchImpact.map((item) => (;
+            {researchImpact.map(item) => (;
               <div key={item.metric} className="flex flex-col bg-white/5 p-8 backdrop-blur-sm">;
                 <dt className="text-sm font-semibold leading-6 text-gray-300">{item.metric}</dt>;
                 <dd className="order-first text-3xl font-bold tracking-tight text-white">{item.value}</dd>;
                 <p className="mt-2 text-sm text-gray-400">{item.description}</p>;
               </div>;
-            ))}
+            )}
           </dl>;
         </div>;
       </div>;
-;
+
       {/* Academic Collaborations */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">;
         <div className="mx-auto max-w-2xl lg:text-center">;
@@ -259,7 +259,7 @@ export default function ResearchPage() {;
         </div>;
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">;
           <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-2">;
-            {academicPartners.map((partner) => (;
+            {academicPartners.map(partner) => (;
               <div key={partner.name} className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover:scale-105">;
                 <div className="flex items-center gap-x-3 mb-4">;
                   <AcademicCapIcon className="h-8 w-8 text-blue-400" />;
@@ -280,11 +280,11 @@ export default function ResearchPage() {;
                   </p>;
                 </div>;
               </div>;
-            ))}
+            )}
           </div>;
         </div>;
       </div>;
-;
+
       {/* CTA section */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">;
         <div className="mx-auto max-w-2xl text-center">;

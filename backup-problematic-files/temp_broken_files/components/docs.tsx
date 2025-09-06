@@ -66,9 +66,9 @@ export default function DocsPage() {
   ],
 
   const filteredDocs = documentationItems.filter(doc => {
-    const matchesSearch = doc.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         doc.description.toLowerCase().includes(searchTerm.toLowerCase()),
-    const matchesCategory = selectedCategory === 'all' || doc.category === selectedCategory,
+    const matchesSearch = doc.title.toLowerCase().includes(searchTerm.toLowerCase() ||
+                         doc.description.toLowerCase().includes(searchTerm.toLowerCase(),
+    const matchesCategory = selectedCategory = = 'all' || doc.category = = selectedCategory,
     return matchesSearch && matchesCategory
   }),
 
@@ -78,8 +78,7 @@ export default function DocsPage() {
       case 'Intermediate': return 'bg-yellow-500/20 text-yellow-400',
       case 'Advanced': return 'bg-red-500/20 text-red-400',
       default: return 'bg-gray-500/20 text-gray-400'
-    }
-  },
+    },
 
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
@@ -103,24 +102,24 @@ export default function DocsPage() {
           </div>
 
           <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6&quot;>
-            {sections.map((s) => (
+            {sections.map(s) => (
               <Card key={s.title} className=&quot;p-6 bg-black/40 border border-gray-700/50&quot;>
                 <h2 className=&quot;text-xl font-semibold mb-4 text-white&quot;>{s.title}</h2>
                 <ul className=&quot;space-y-2&quot;>
-                  {s.links.map((l) => (
+                  {s.links.map(l) => (
                     <li key={l.name}>
                       <a href={l.href} className=&quot;text-cyan-400 hover:underline&quot;>{l.name}</a>                    </li>
-                  ))}
+                  )}
                 </ul>;
               </Card>;
-            ))}
+            )}
           </div>
 
           <Card className=&quot;p-6 bg-black/40 border border-gray-700/50&quot;>
             <h2 className=&quot;text-xl font-semibold mb-4 text-white&quot;>External References</h2>
             <ul className=&quot;grid grid-cols-1 md:grid-cols-2 gap-3 text-slate-300&quot;>
-              {external.map((e) => (
-                <li key={e.name}><a href={e.url} target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; className=&quot;text-cyan-400 hover:underline&quot;>{e.name}</a></li>              ))}
+              {external.map(e) => (
+                <li key={e.name}><a href={e.url} target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; className=&quot;text-cyan-400 hover:underline&quot;>{e.name}</a></li>              )}
             </ul>
           </Card>
 
@@ -136,4 +135,3 @@ export default function DocsPage() {
       </div>
     </UltraAdvancedFuturisticBackground>
   )
-}

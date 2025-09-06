@@ -6,8 +6,8 @@ import { BrowseFilters } from "../components/browse/BrowseFilters",;
 import { BrowseCards } from "../components/browse/BrowseCards",;
 import { Button } from "@/components/ui/button",;
 import { useAuth } from "@/hooks/useAuth",;
-;
-// Mock data for demonstration;
+
+/ Mock data for demonstration;
 const jobsData = [;
   {;
     id:"1",;
@@ -42,8 +42,8 @@ const jobsData = [;
     timePosted:"1 week ago",;
     match:78;
   }
-],;
-;
+,;
+
 const talentsData = [;
   {;
     id:"1",;
@@ -78,36 +78,33 @@ const talentsData = [;
     image:"",;
     match:82;
   }
-],;
-;
+,;
+
 export function MobileBrowse() {;
   const { user } = useAuth(),;
-  const isClient = user?.userType === 'employer' || user?.userType === 'buyer',;
+  const isClient = user?.userType = = 'employer' || user?.userType = = 'buyer',;
   const [browseType, setBrowseType] = useState<"jobs" | "talents">(isClient ? "talents" :"jobs"),;
-  ;
   const handleViewDetails = (id:string) => {;
     // // // console.log(`View details for item ${id}`),;
     // Navigate to details page;
   },;
-  ;
   return (;
     <div className="min-h-screen">;
       <MobileHeader;
-        title={browseType === "jobs" ? "Browse Jobs" :"Browse Talents"}
+        title={browseType = = "jobs" ? "Browse Jobs" :"Browse Talents"}
         showBack;
       />;
-      ;
       <div className="flex justify-center my-3 px-4">;
         <div className="inline-flex rounded-full border border-border p-1">;
           <Button;
-            variant={browseType === "jobs" ? "default" :"ghost"}
+            variant={browseType = = "jobs" ? "default" :"ghost"}
             className="rounded-full";
             onClick={() => setBrowseType("jobs")}
           >;
             Jobs;
           </Button>;
           <Button;
-            variant={browseType === "talents" ? "default" :"ghost"}
+            variant={browseType = = "talents" ? "default" :"ghost"}
             className="rounded-full";
             onClick={() => setBrowseType("talents")}
           >;
@@ -115,24 +112,19 @@ export function MobileBrowse() {;
           </Button>;
         </div>;
       </div>;
-      ;
       <BrowseFilters type={browseType} />;
-      ;
       <div className="py-4 px-4">;
         <BrowseCards;
-          items={browseType === "jobs" ? jobsData :talentsData}
+          items={browseType = = "jobs" ? jobsData :talentsData}
           type={browseType}
           onViewDetails={handleViewDetails}
         />;
       </div>;
-      ;
       <BottomNavigation />;
     </div>;
-  ),;}
- };
+  ),;};
 return (<div className="min-h-screen" > <MobileHeader title= {
-  browseType === "jobs" ? "Browse Jobs" : "Browse Talents" 
-}> <Button > Jobs </Button> <Button > Talents </Button> </div> </div> <BrowseFilters type= {
+  browseType = = "jobs" ? "Browse Jobs" : "Browse Talents" 
+> <Button > Jobs </Button> <Button > Talents </Button> </div> </div> <BrowseFilters type= {
   browseType 
-}/> <div className="py-4 px-4" > <BrowseCards /> </div> <BottomNavigation /> </div>) 
-}
+/> <div className="py-4 px-4" > <BrowseCards /> </div> <BottomNavigation /> </div>) 

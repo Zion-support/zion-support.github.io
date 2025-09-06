@@ -10,7 +10,7 @@ export default function PressPage() {
 			</div>
 		</>
 	)
-}
+
 import React from 'react',
 import SEO from '../components / SEO',
 export default /**
@@ -25,4 +25,3 @@ return (
     <p className="text - gray - 300">Media kit and announcements coming soon.</p>;
   </div>;
   </>);
-}

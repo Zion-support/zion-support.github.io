@@ -9,7 +9,7 @@ interface ConversationItemProps {
   isActive: boolean
 
   onClick: () => void
-}
+
 export function ConversationItem({ conversation, isActive, onClick }: ConversationItemProps) {
   return (
 
@@ -51,7 +51,6 @@ export function ConversationItem({ conversation, isActive, onClick }: Conversati
       )}
     </div>
   )
-}
+
         </div>)}
     </div>);
-}

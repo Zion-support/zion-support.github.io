@@ -15,7 +15,7 @@ import {
   TrendingUp,
   Cpu,
   Globe
-} from 'lucide-react',
+ from 'lucide-react',
 export default function DeveloperToolsPage() {_const _developerTools = [
     {
       icon: <Code className=&quot;w-8 h-8 text-white&quot; />,
@@ -114,7 +114,7 @@ export default function DeveloperToolsPage() {_const _developerTools = [
       category: 'API Development'
     }
   ],;
-;
+
   const devMarketStats = [;
     {;
       title:'Dev Tools Market',;
@@ -141,7 +141,7 @@ export default function DeveloperToolsPage() {_const _developerTools = [
       description:'Average productivity improvement';
     }
   ],;
-;
+
   const devCategories = [;
     {;
       name:'Code Generation',;
@@ -245,11 +245,11 @@ export default function DeveloperToolsPage() {_const _developerTools = [
           </div>
 
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16&quot;>
-            {devMarketStats.map((stat, index) => (
+            {devMarketStats.map(stat, index) => (
               <Card
                 key={index}
                 className=&quot;card-hover border-gradient-blue text-center&quot;
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={ animationDelay: `${index * 0.1}s` }
               >
                 <div className=&quot;p-6&quot;>
                   <h3 className=&quot;text-lg font-semibold text-white mb-3&quot;>{stat.title}</h3>
@@ -257,11 +257,11 @@ export default function DeveloperToolsPage() {_const _developerTools = [
                   <div className=&quot;text-sm text-green-400 mb-3&quot;>{stat.growth}</div>
                   <p className=&quot;text-sm text-gray-400&quot;>{stat.description}</p>                </div>
               </Card>
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Developer Tools Grid */}
       <section className=&quot;section-padding bg-gradient-cursor&quot;>
         <div className=&quot;container-cursor&quot;>
@@ -274,11 +274,11 @@ export default function DeveloperToolsPage() {_const _developerTools = [
           </div>
 
           <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-8&quot;>
-            {developerTools.map((tool, index) => (              <Card
+            {developerTools.map(tool, index) => (              <Card
                 key={index}
                 className={_`card-hover group border-gradient-blue relative ${
                   tool.popular ? 'ring-2 ring-cursor-blue ring-opacity-50' : ''}`}
-                style={_{ animationDelay: `${index * 0.1}s` }}
+                style={_{ animationDelay: `${index * 0.1}s` }
               >
                 {tool.popular && (
                   <div className=&quot;absolute -top-3 left-1/2 transform -translate-x-1/2&quot;>
@@ -294,7 +294,7 @@ export default function DeveloperToolsPage() {_const _developerTools = [
                       {tool.icon}                    </div>
                     <div className={_`absolute -inset-2 bg-gradient-to-r from-transparent via-${tool.gradient} to-transparent rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm`} />
                   </div>
-                  
+
                   <div className=&quot;flex-1&quot;>
                     <div className=&quot;flex items-center justify-between mb-2&quot;>
                       <h3 className={`text-2xl font-bold ${tool.textColor}`}>
@@ -304,11 +304,11 @@ export default function DeveloperToolsPage() {_const _developerTools = [
                         {tool.category}
                       </span>
                     </div>
-                    
+
                     <p className=&quot;text-gray-400 leading-relaxed mb-6&quot;>
                       {tool.description}
                     </p>
-                    
+
                     <div className=&quot;mb-6&quot;>
                       <div className=&quot;flex items-center justify-between mb-3&quot;>
                         <span className=&quot;text-sm text-gray-500&quot;>Service Price:</span>
@@ -321,11 +321,11 @@ export default function DeveloperToolsPage() {_const _developerTools = [
                     </div>
 
                     <ul className=&quot;space-y-2 mb-6&quot;>
-                      {tool.features.map((feature, featureIndex) => (
+                      {tool.features.map(feature, featureIndex) => (
                         <li key={featureIndex} className=&quot;flex items-center text-gray-300&quot;>
                           <CheckCircle className=&quot;w-4 h-4 text-green-400 mr-3 flex-shrink-0&quot; />
                           {feature}                        </li>
-                      ))}
+                      )}
                     </ul>
 
                     <div className=&quot;flex items-center justify-between&quot;>
@@ -344,11 +344,11 @@ export default function DeveloperToolsPage() {_const _developerTools = [
                   </div>
                 </div>
               </Card>
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Developer Workflow */}
       <section className=&quot;section-padding bg-gradient-cursor-accent&quot;>
         <div className=&quot;container-cursor&quot;>
@@ -361,11 +361,11 @@ export default function DeveloperToolsPage() {_const _developerTools = [
           </div>
 
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6&quot;>
-            {devWorkflow.map((phase, index) => (
+            {devWorkflow.map(phase, index) => (
               <Card
                 key={index}
                 className=&quot;card-hover border-gradient-blue&quot;
-                style={{ animationDelay: `${index * 0.1}s` }}              >
+                style={ animationDelay: `${index * 0.1}s` }              >
                 <div className=&quot;p-6 text-center&quot;>
                   <div className=&quot;w-16 h-16 bg-cursor-blue/10 rounded-full flex items-center justify-center mx-auto mb-4&quot;>
                     <Cpu className=&quot;w-8 h-8 text-cursor-blue&quot; />
@@ -373,18 +373,18 @@ export default function DeveloperToolsPage() {_const _developerTools = [
                   <h3 className=&quot;text-xl font-semibold text-white mb-3&quot;>{phase.phase}</h3>
                   <p className=&quot;text-gray-400 mb-4&quot;>{phase.description}</p>
                   <div className=&quot;space-y-1&quot;>
-                    {phase.tools.map((tool, toolIndex) => (
+                    {phase.tools.map(tool, toolIndex) => (
                       <div key={toolIndex} className=&quot;text-sm text-cursor-blue font-medium&quot;>
                         {tool}                      </div>
-                    ))}
+                    )}
                   </div>;
                 </div>;
               </Card>;
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Tool Categories */}
       <section className=&quot;section-padding bg-gradient-cursor&quot;>
         <div className=&quot;container-cursor&quot;>
@@ -397,11 +397,11 @@ export default function DeveloperToolsPage() {_const _developerTools = [
           </div>
 
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6&quot;>
-            {devCategories.map((category, index) => (
+            {devCategories.map(category, index) => (
               <Card
                 key={index}
                 className=&quot;card-hover border-gradient-blue&quot;
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={ animationDelay: `${index * 0.1}s` }
               >
                 <div className=&quot;p-6&quot;>
                   <h3 className=&quot;text-xl font-semibold text-white mb-3&quot;>{category.name}</h3>
@@ -411,11 +411,11 @@ export default function DeveloperToolsPage() {_const _developerTools = [
                     <span className=&quot;text-cursor-blue font-semibold&quot;>{category.avgPrice}</span>                  </div>
                 </div>
               </Card>
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* CTA Section */}
       <section className=&quot;section-padding bg-gradient-cursor-accent&quot;>
         <div className=&quot;container-cursor text-center&quot;>

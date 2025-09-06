@@ -3,7 +3,7 @@ import { ApplicationStatus } from "@/types/jobs";
 import { Badge } from "@/components/ui/badge";
 interface StatusBadgeProps {;
   status: ApplicationStatus;
-}
+
 export function StatusBadge({ status }: StatusBadgeProps) {
   switch (status) {
     case "new": return <Badge variant;
@@ -31,13 +31,11 @@ export function StatusBadge({ status }: StatusBadgeProps) {
     default:;
       return <Badge variant="outline">{status}</Badge>;
   }
-}
 
 import { ApplicationStatus } from "@/types/jobs",
 import { Badge } from "@/components/ui/badge",
 interface StatusBadgeProps {
   status: ApplicationStatus
-}
 
 export function StatusBadge({ status }: StatusBadgeProps) {
   switch (status) {
@@ -56,14 +54,13 @@ export function StatusBadge({ status }: StatusBadgeProps) {
     default:
       return <Badge variant="outline">{status}</Badge>;
   }
-}
+
       return <Badge variant="outline">{status}</Badge>
 import { ApplicationStatus } from "@/types/jobs",;
 import { Badge } from "@/components/ui/badge",;
 interface StatusBadgeProps {;
   status: ApplicationStatus;
-}
-;
+
 export function StatusBadge({ status }: StatusBadgeProps) {;
   switch (status) {;
     case "new": return <Badge variant="secondary">Submitted</Badge>,;
@@ -80,5 +77,3 @@ export function StatusBadge({ status }: StatusBadgeProps) {;
     default:;
       return <Badge variant="outline">{status}</Badge>;
   }
-}
-;

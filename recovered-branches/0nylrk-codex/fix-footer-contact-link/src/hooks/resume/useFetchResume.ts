@@ -30,7 +30,7 @@ export function useFetchResume() {
       }
       const { data: resumeData, error: resumeError } = await resumeQuery.single();
       if (resumeError) {
-        if (resumeError && resumeError.code === 'PGRST116') {
+        if (resumeError && resumeError.code = = 'PGRST116') {
           // No resume found, this is not a critical error for a new user
           setResume(null);
           setIsLoading(false);
@@ -47,27 +47,27 @@ function useFetchResume() {
   const [is_loading, setIsLoading] = useState (false);
   const [error, set_error] = useState < string | null>(null);
   const [resume, set_resume] = useState < Resume | null>(null);
-;
+
   const fetch_resume = async (resume_id?: string) => {
     // Check condition
 if ( {) {
   $2
-}
+
       set_error ('You must be logged in to access resumes');
       return null;
     }
     setIsLoading (true);
     set_error (null);
-;
+
     try {
       // If resume_id is provided, fetch that specific resume;
       // Otherwise, fetch the user's active resume or most recent resume;
       let resume_query = supabase.from ('talent_resumes').select ('*');
-;
+
       // Check condition
 if ( {) {
   $2
-}
+
         resume_query = resume_query.eq ('id', resume_id);
       } else {
         resume_query = resume_query;
@@ -77,15 +77,15 @@ if ( {) {
           .limit (1);
       }
       const { data: resume_data, error: resume_error } = await resume_query.single ();
-;
+
       // Check condition
 if ( {) {
   $2
-}
+
         // Check condition
 if ( {) {
   $2
-}
+
           // No resume found, this is not a critical error for a new user;
           set_resume (null);
           setIsLoading (false);
@@ -149,11 +149,11 @@ if ( {) {
         .eq ('resume_id', resume_data.id);
         .order ('is_current', { ascending: false });
         .order ('start_date', { ascending: false });
-;
+
       // Check condition
 if (throw work_error) {
   $2
-}
+
       // Fetch education;
       const { data: education_data, error: education_error } = await supabase;
         .from ('education');
@@ -161,31 +161,31 @@ if (throw work_error) {
         .eq ('resume_id', resume_data.id);
         .order ('is_current', { ascending: false });
         .order ('start_date', { ascending: false });
-;
+
       // Check condition
 if (throw education_error) {
   $2
-}
+
       // Fetch skills;
       const { data: skills_data, error: skills_error } = await supabase;
         .from ('resume_skills');
         .select ('*');
         .eq ('resume_id', resume_data.id);
-;
+
       // Check condition
 if (throw skills_error) {
   $2
-}
+
       // Fetch certifications;
       const { data: cert_data, error: cert_error } = await supabase;
         .from ('certifications');
         .select ('*');
         .eq ('resume_id', resume_data.id);
-;
+
       // Check condition
 if (throw cert_error) {
   $2
-}
+
       const full_resume: Resume = {
         id: resume_data.id;
         user_id: resume_data.user_id;
@@ -201,7 +201,7 @@ if (throw cert_error) {
         certifications: cert_data || [],
         is_active: resume_data.is_active;
       }
-;
+
       set_resume (full_resume);
       return full_resume;
     } catch (e: any) {
@@ -211,11 +211,9 @@ if (throw cert_error) {
     } finally {
       setIsLoading (false);
     }
-  }
   return {
     is_loading;
     error;
     resume;
 
     fetchResume}
-}

@@ -9,23 +9,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
@@ -39,7 +39,7 @@ import {
   Phone
   MapPin
   Users
-} from "lucide-react";
+ from "lucide-react";
 import MainLayout from "../components/layout/MainLayout";
 import React from 'react';
 import Head from 'next/head';
@@ -50,7 +50,7 @@ import MainLayout from '../components/layout/MainLayout';
 import { 
   Shield, Lock, Eye, Database, Globe, 
   User, Settings, AlertTriangle, CheckCircle, Mail
-} from 'lucide-react';
+ from 'lucide-react';
 
 const PrivacyPage: React.FC = () => {
   const lastUpdated = 'January 17, 2025';
@@ -136,9 +136,9 @@ export default function PrivacyPage() {;
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">;
           <div className="max-w-7xl mx-auto px-4">;
             <motion&& motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -151,7 +151,7 @@ export default function PrivacyPage() {;
             </motion.div>
           </div>
         </section>
-              transition={{ duration: 0 && 0.8 }}
+              transition={ duration: 0 && 0.8 }
               className="text-center">;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">;
                 Privacy Policy;
@@ -168,9 +168,9 @@ export default function PrivacyPage() {;
         <section className="py-16 px-4">;
           <div className="max-w-4xl mx-auto">;
             <motion&& motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="bg-white rounded-2xl shadow-lg p-8 md:p-12"
             >
               <div className="prose prose-lg max-w-none">
@@ -281,7 +281,7 @@ export default function PrivacyPage() {;
         </section>
       </div>
     </MainLayout>
-              transition={{ duration: 0 && 0.8 }}
+              transition={ duration: 0 && 0.8 }
               className="bg-white rounded-2xl shadow-lg p-8 md:p-12">;
               <div className="prose prose-lg max-w-none">;
                 <h2 className="text-2xl font-bold mb-6">;
@@ -301,9 +301,9 @@ import {
   Phone,
   MapPin,
   Users,
-} from './lucide-react';
+ from './lucide-react';
 import MainLayout from "../components / layout / MainLayout";
-;
+
 export default /**
  * PrivacyPage - Function description
  */
@@ -320,9 +320,9 @@ function PrivacyPage() {
         <section className="bg - gradient - to - r from - blue - 600 to - purple - 600 text - white py - 20">;
           <div className="max - w-7xl mx - auto px - 4">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, coordinate_y: 20 }
+              animate={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
               className="text - center";
             >;
               <h1 className="text - 4xl md:text - 6xl font - bold mb - 6">;
@@ -339,9 +339,9 @@ function PrivacyPage() {
         <section className="py - 16 px - 4">;
           <div className="max - w-4xl mx - auto">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, coordinate_y: 20 }
+              animate={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
               className="bg - white rounded - 2xl shadow - lg p - 8 md:p - 12";
             >;
               <div className="prose prose - lg max - w-none">;
@@ -451,7 +451,7 @@ function PrivacyPage() {
       </div>;
     </MainLayout>;
   );
-}
+
     <ErrorBoundary>
       <SEOOptimizer />
       <AnalyticsTracker />
@@ -461,9 +461,9 @@ function PrivacyPage() {
           <section className="py-20 px-4">
             <div className="max-w-6xl mx-auto text-center">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.6 }
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                   Privacy Policy
@@ -484,9 +484,9 @@ function PrivacyPage() {
             <div className="max-w-6xl mx-auto">
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6 }}
+                  initial={ opacity: 0, x: -20 }
+                  whileInView={ opacity: 1, x: 0 }
+                  transition={ duration: 0.6 }
                 >
                   <h2 className="text-4xl font-bold mb-6 text-white">
                     Our Commitment to Privacy
@@ -505,11 +505,11 @@ function PrivacyPage() {
                     <span className="font-medium">Your data is safe with us</span>
                   </div>
                 </motion.div>
-                
+
                 <motion.div
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
+                  initial={ opacity: 0, x: 20 }
+                  whileInView={ opacity: 1, x: 0 }
+                  transition={ duration: 0.6, delay: 0.2 }
                   className="relative"
                 >
                   <div className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-2xl p-8 border border-cyan-500/30">
@@ -519,7 +519,7 @@ function PrivacyPage() {
                       </div>
                       <h3 className="text-2xl font-bold text-white">Data Protection</h3>
                       <p className="text-gray-300">Enterprise-grade security for your information</p>
-                      
+
                       <div className="grid grid-cols-2 gap-4 text-sm">
                         <div className="text-center">
                           <div className="text-2xl font-bold text-cyan-400">256-bit</div>
@@ -541,22 +541,22 @@ function PrivacyPage() {
           <section className="py-20 px-4">
             <div className="max-w-6xl mx-auto">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.6 }
                 className="text-center mb-16"
               >
                 <h2 className="text-4xl font-bold mb-4 text-white">Our Privacy Principles</h2>
                 <p className="text-xl text-gray-300">The foundation of how we handle your data</p>
               </motion.div>
-              
+
               <div className="grid md:grid-cols-2 gap-8">
-                {privacySections.map((section, index) => (
+                {privacySections.map(section, index) => (
                   <motion.div
                     key={section.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    initial={ opacity: 0, y: 20 }
+                    whileInView={ opacity: 1, y: 0 }
+                    transition={ duration: 0.6, delay: index * 0.1 }
                     className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50"
                   >
                     <div className={`w-16 h-16 bg-gradient-to-r ${section.color} rounded-2xl flex items-center justify-center mb-6`}>
@@ -566,15 +566,15 @@ function PrivacyPage() {
                     </div>
                     <h3 className="text-2xl font-bold text-white mb-4">{section.title}</h3>
                     <ul className="space-y-3">
-                      {section.content.map((item, itemIndex) => (
+                      {section.content.map(item, itemIndex) => (
                         <li key={itemIndex} className="flex items-start gap-3">
                           <div className="w-2 h-2 bg-cyan-500 rounded-full mt-2 flex-shrink-0"></div>
                           <span className="text-gray-300">{item}</span>
                         </li>
-                      ))}
+                      )}
                     </ul>
                   </motion.div>
-                ))}
+                )}
               </div>
             </div>
           </section>
@@ -583,22 +583,22 @@ function PrivacyPage() {
           <section className="py-20 px-4 bg-gradient-to-r from-black/50 to-gray-900/50">
             <div className="max-w-6xl mx-auto">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.6 }
                 className="text-center mb-16"
               >
                 <h2 className="text-4xl font-bold mb-4 text-white">Your Privacy Rights</h2>
                 <p className="text-xl text-gray-300">You have control over your personal information</p>
               </motion.div>
-              
+
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {rights.map((right, index) => (
+                {rights.map(right, index) => (
                   <motion.div
                     key={right.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    initial={ opacity: 0, y: 20 }
+                    whileInView={ opacity: 1, y: 0 }
+                    transition={ duration: 0.6, delay: index * 0.1 }
                     className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl p-6 border border-gray-700/50 text-center"
                   >
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4">
@@ -609,7 +609,7 @@ function PrivacyPage() {
                     <h3 className="text-xl font-bold text-white mb-2">{right.title}</h3>
                     <p className="text-gray-300 text-sm">{right.description}</p>
                   </motion.div>
-                ))}
+                )}
               </div>
             </div>
           </section>
@@ -618,14 +618,14 @@ function PrivacyPage() {
           <section className="py-20 px-4">
             <div className="max-w-4xl mx-auto">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.6 }
                 className="space-y-12"
               >
                 <div>
                   <h2 className="text-3xl font-bold text-white mb-6">Detailed Privacy Information</h2>
-                  
+
                   <div className="space-y-8">
                     <div>
                       <h3 className="text-2xl font-bold text-white mb-4">Information Collection</h3>
@@ -751,9 +751,9 @@ function PrivacyPage() {
           <section className="py-20 px-4 bg-gradient-to-r from-gray-900/50 to-black/50">
             <div className="max-w-4xl mx-auto text-center">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.6 }
               >
                 <h2 className="text-4xl font-bold mb-6 text-white">
                   Questions About Privacy?
@@ -785,11 +785,9 @@ function PrivacyPage() {
       </Layout>
     </ErrorBoundary>
   )
-};
+;
 
 export default PrivacyPage;
-
- 
 
                 <h2 className="text - 2xl font - bold mb - 6 mt - 12">Contact Us</h2>;
                 <p className="mb - 6">;
@@ -823,4 +821,3 @@ export default PrivacyPage;
         </section>;
       </div>;
     </MainLayout>);
-}

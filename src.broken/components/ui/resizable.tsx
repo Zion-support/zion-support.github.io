@@ -6,5 +6,3 @@ export function resizable() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

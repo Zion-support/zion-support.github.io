@@ -1,5 +1,4 @@
 
-
 export type InterviewStatus =
   | 'requested'
   | 'confirmed'
@@ -28,7 +27,7 @@ export interface Interview {
   talent_name?: string;
   client_avatar?: string
   talent_avatar?: string
-}
+
 export interface InterviewRequest {
   talent_id: string;
   client_id: string;
@@ -39,11 +38,10 @@ export interface InterviewRequest {
   meeting_platform?: MeetingPlatform;
   interview_type: InterviewType
   title?: string
-}
+
 export interface InterviewResponse {
   interview_id: string;
   status: InterviewStatus;
   alternative_date?: string
 
   message?: string
-}

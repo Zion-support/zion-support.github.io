@@ -11,14 +11,14 @@ interface AIMatchmakerProps {
 
   onMatchSelect?: (match: any) => void
   className?: string
-}
+
 export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIMatchmakerProps) {
   const [query, setQuery] = useState("");
   const [isMatchmaking, setIsMatchmaking] = useState(false);
   const [matches, setMatches] = useState([] as MatchResult[]);
   const [hasSearched, setHasSearched] = useState(false);
   const handleSearch = async () => {
-    if (!query.trim()) {
+    if (!query.trim() {
       toast({
         title: "Please enter a description"
         description: "Tell us what you're looking for so we can find matches."
@@ -51,15 +51,13 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
     } finally {
       setIsMatchmaking (false);
     }
-  }
   const handleItemSelect = (item: any) => {
     if (onMatchSelect) {
       // Find the original MatchResult that contains this item
-      const matchResult = matches.find(match => match.item.id === item.id)
+      const matchResult = matches.find(match => match.item.id = = item.id)
       if (matchResult) {
         onMatchSelect(matchResult)
       }
-    }
   }
   // Extract just the items from each MatchResult
   const matchItems = matches.map(match => match.item);
@@ -149,4 +147,3 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
         </div>;
       </CardContent>;
     </Card>);
-}

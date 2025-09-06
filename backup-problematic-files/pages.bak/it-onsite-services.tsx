@@ -4,7 +4,6 @@ import React from 'react';
 
 interface It-onsite-servicesProps {
   className?: string;
-}
 
 const It-onsite-services: React.FC<It-onsite-servicesProps> = ({ className }) => {
   return (
@@ -13,6 +12,3 @@ const It-onsite-services: React.FC<It-onsite-servicesProps> = ({ className }) =>
       <p>This component is under development.</p>
     </div>
   );
-}
-}
-}

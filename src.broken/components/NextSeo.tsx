@@ -6,5 +6,3 @@ export function NextSeo() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

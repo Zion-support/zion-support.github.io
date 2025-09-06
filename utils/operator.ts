@@ -1,10 +1,10 @@
-// Operator utilities
+/ Operator utilities
 export const operator = {
   // Add operator functionality here
   logEvent: (event: any) => null
   getEvents: () => []
   getEventById: (id: string) => null
-}
+
 class OperatorManager {
   private sessions: Map<string, OperatorSession> = new Map();
   private events: SupportEvent[] = [];
@@ -20,13 +20,12 @@ class OperatorManager {
   }
 
   getOperatorSessions(): OperatorSession[] {
-    return Array && Array.from(this && this.sessions.values());
+    return Array && Array.from(this && this.sessions.values();
   }
 
   getSupportEvents(): SupportEvent[] {
     return [...this && this.events];
   }
-}
 
 const operatorManager = new OperatorManager();
 
@@ -40,22 +39,20 @@ export const getOperatorSessions = () => operatorManager && operatorManager.getO
 export const getSupportEvents = () => operatorManager && operatorManager.getSupportEvents();
 export async function logSupportEventToOperator(
   event: OperatorEvent
-): Promise<void> {
+: Promise<void> {
   // Placeholder for real Operator integration; could POST to external service
   // For now, we just no-op to avoid failures
   return Promise.resolve();
-}
 
 export async function tagOperatorSession(
   sessionId: string,
   tag: string
-): Promise<void> {
+: Promise<void> {
   return Promise.resolve();
-}
-// Operator utilities;
+
+/ Operator utilities;
 export const operator = {
   // Add operator functionality here;
   log_event: (event: any) => null,
   get_events: () => [],
   getEventById: (id: string) => null;
-}

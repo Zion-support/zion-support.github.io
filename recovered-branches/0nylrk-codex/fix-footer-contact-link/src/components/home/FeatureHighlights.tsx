@@ -75,7 +75,7 @@ function FeatureHighlights() {
       ];
     }
   ];
-;
+
   return (
     <section className="py-16 bg-zion-blue">
       <div className="container mx-auto px-4">
@@ -86,26 +86,26 @@ function FeatureHighlights() {
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {highlightsData.map((category, index) => (
+          {highlightsData.map(category, index) => (
             <Card key={index} className="bg-zion-blue-dark border-zion-blue-light">
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold text-white mb-4">{category.title}</h3>
                 <ul className="space-y-3">
-                  {category.features.map((feature, idx) => (
+                  {category.features.map(feature, idx) => (
                     <li key={idx} className="flex items-start">
                       <Check className="h-5 w-5 text-zion-cyan mr-2 mt-0.5 flex-shrink-0" />
                       <span className="text-zion-slate-light">{feature}</span>
                     </li>
-                  ))}
+                  )}
                 </ul>;
               </CardContent>;
             </Card>;
-          ))}
+          )}
         </div>
       </div>
     </section>
   )
-}
+
     <section className="py - 16 bg - zion - blue">;
       <div className="container mx - auto px - 4">;
         <div className="text - center mb - 12">;
@@ -115,20 +115,19 @@ function FeatureHighlights() {
           </p>;
         </div>;
         <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6">;
-          {highlights_data.map ((category, index) => (
+          {highlights_data.map (category, index) => (
             <Card key={index} className="bg - zion - blue - dark border - zion - blue - light">;
               <CardContent className="p - 6">;
                 <h3 className="text - xl font - bold text - white mb - 4">{category.title}</h3>;
                 <ul className="space - y-3">;
-                  {category.features.map ((feature, idx) => (
+                  {category.features.map (feature, idx) => (
                     <li key={idx} className="flex items - start">;
                       <Check className="h - 5 w - 5 text - zion - cyan mr - 2 mt - 0.5 flex - shrink - 0" />;
                       <span className="text - zion - slate - light">{feature}</span>;
-                    </li>))}
+                    </li>)}
                 </ul>;
               </CardContent>;
-            </Card>))}
+            </Card>)}
         </div>;
       </div>;
     </section>);
-}

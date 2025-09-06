@@ -3,11 +3,11 @@ import Link from \'next/link\'; import Head from \'next/head\'; export default f
 import React from 'react';
 interface TeamProps {
   // Add props here as needed
-}
+
 export default function Team({ }: TeamProps) {
 interface TeamProps {;
   // Add props here as needed;
-}
+
 export default function Team(): any ({ }: TeamProps) {;
   return (
     <div>;
@@ -15,7 +15,3 @@ export default function Team(): any ({ }: TeamProps) {;
       <p>This component is currently under development.</p>;
     </div>;
   );
-}
-}
-
-

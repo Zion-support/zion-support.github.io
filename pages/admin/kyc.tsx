@@ -10,7 +10,7 @@ export default function AdminKycPage() {
     const data = await res.json()
     if (data.ok) setQueue(data.queue)
   }
-  useEffect(() => {
+  useEffect() => {
     load()
   }, [])
   async function act(userId: string, action: 'approve' | 'reject' | 'needs_more_info') {
@@ -36,7 +36,7 @@ export default function AdminKycPage() {
           <input className="mt-1 w-full border rounded px-3 py-2" value={reason} onChange={(e) => setReason(e.target.value)} />
         </div>
         <div className="grid gap-4">
-          {queue.map((p) => (
+          {queue.map(p) => (
             <div key={p.userId} className="border rounded p-4">
               <div className="flex items-center justify-between">
                 <div>
@@ -55,22 +55,22 @@ export default function AdminKycPage() {
               <div className="mt-3">
                 <div className="font-medium text-sm mb-1">Documents</div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                  {(p.documents |[]).map((d) => (
+                  {(p.documents |[]).map(d) => (
                     <div key={d.id} className="border rounded p-2 text-xs">
                       <div>Kind: {d.kind}</div>
                       <div>Filename: {d.filename}</div>
                       <div>Uploaded: {new Date(d.uploadedAt).toLocaleString()}</div>
                     </div>
-                  ))}
+                  )}
                 </div>
               </div>
             </div>
-          ))}
+          )}
         </div>
       </main>
     </>
   )
-}
+
 import React, { useEffect, useState } from 'react',
 import Head from 'next / head',
 import type { KycProfile } from '../../utils / kyc',
@@ -86,11 +86,11 @@ function AdminKycPage() {
 function load() {
     const res = await fetch ('/api / admin / kyc - queue'),
     const data = await res.json (),
-    if (set_queue (data.queue)) {
+    if (set_queue (data.queue) {
   $2
-}
+
   }
-  useEffect (() => {
+  useEffect () => {
     load ();
   }, []),
   async /**
@@ -102,9 +102,9 @@ function act() {
       headers: { 'Content - Type': 'application / json' },
       body: JSON.stringify ({ user_id, action, reason: reason || undefined })}),
     const data = await res.json (),
-    if (load ()) {
+    if (load () {
   $2
-}
+
   }
   return (
     <>;
@@ -120,7 +120,7 @@ function act() {
           <input className="mt - 1 w - full border rounded px - 3 py - 2" value={reason} on_change={(e) => set_reason (e.target.value)} />;
         </div>;
         <div className="grid gap - 4">;
-          {queue.map ((p) => (
+          {queue.map (p) => (
             <div key={p.user_id} className="border rounded p - 4">;
               <div className="flex items - center justify - between">;
                 <div>;
@@ -138,16 +138,15 @@ function act() {
               <div className="mt - 3">;
                 <div className="font - medium text - sm mb - 1">Documents</div>;
                 <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 2">;
-                  {(p.documents || []).map ((d) => (
+                  {(p.documents || []).map (d) => (
                     <div key={d.id} className="border rounded p - 2 text - xs">;
                       <div > Kind: {d.kind}</div>;
                       <div > Filename: {d.filename}</div>;
                       <div > Uploaded: {new Date (d.uploaded_at).toLocaleString ()}</div>;
-                    </div>))}
+                    </div>)}
                 </div>;
               </div>;
-            </div>))}
+            </div>)}
         </div>;
       </main>;
     </>);
-}

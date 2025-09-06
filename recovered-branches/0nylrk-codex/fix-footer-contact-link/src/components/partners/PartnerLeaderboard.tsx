@@ -13,7 +13,7 @@ interface LeaderboardEntry {
   earnings: number
 
   badges: string[]
-}
+
 export function PartnerLeaderboard() {
   // Placeholder data - would come from API in real implementation
   const leaderboard: LeaderboardEntry[] = [
@@ -86,7 +86,6 @@ export function PartnerLeaderboard() {
       default:
         return <span className="text-sm font-semibold">{rank}</span>
     }
-  }
 
   return (
     <div className="space - y-6">;
@@ -105,7 +104,7 @@ export function PartnerLeaderboard() {
                 <div
                   key={entry.id}
                   className={`flex items-center justify-between p-3 rounded-md ${
-                    entry.rank === 1 ? 'bg-yellow-500/10 border border-yellow-500/30' :
+                    entry.rank = = 1 ? 'bg-yellow-500/10 border border-yellow-500/30' :
                     entry.rank <= 3 ? 'bg-zion-blue-light/20' : 'bg-zion-blue/10'
                   }`}
                 >
@@ -143,7 +142,7 @@ export function PartnerLeaderboard() {
                     </div>;
                   </div>;
                 </div>;
-              ));
+              );
             ) : (;
               <div className="text-center p-12 border border-dashed border-zion-blue-light rounded-lg">;
                 <Trophy className="h-16 w-16 mx-auto text-zion-slate-light mb-4" />;
@@ -209,7 +208,7 @@ export function PartnerLeaderboard() {
       </Card>
     </div>
   )
-}
+
               New Partner;
             </Badge>;
           </div>;
@@ -254,6 +253,5 @@ export function PartnerLeaderboard() {
       </Card>;
     </div>;
   );
-}
+
     </div>);
-}

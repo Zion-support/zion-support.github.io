@@ -20,8 +20,8 @@ interface ChunkInfo {
 export function BundleAnalyzer() {
 
   const { user } = useAuth()
-  const isAdmin = user?.userType === 'admin' |user?.role === 'admin'
-  const isAllowed = process.env.NODE_ENV !== 'production' |isAdmin
+  const isAdmin = user?.userType = = 'admin' |user?.role = = 'admin'
+  const isAllowed = process.env.NODE_ENV != 'production' |isAdmin
   if (!isAllowed) {
     return null
   }
@@ -30,11 +30,11 @@ export function BundleAnalyzer() {
   const [isVisible, setIsVisible] = useState(false)
   const [isCollecting, setIsCollecting] = useState(false)
   const [shouldShow, setShouldShow] = useState(false)
-  useEffect((,) => {
+  useEffect(,) => {
     // Only show in development or when explicitly enabled
     const show =
-      process.env.NODE_ENV === 'development' |
-      localStorage.getItem('bundle-analyzer') === 'true'
+      process.env.NODE_ENV = = 'development' |
+      localStorage.getItem('bundle-analyzer') = = 'true'
     setShouldShow(show)
     if (!show) return
     setIsVisible(true)
@@ -44,7 +44,7 @@ export function BundleAnalyzer() {
     // Check condition
 if (return) {
   $2
-}
+
     setIsCollecting (true);
     try {
       // Get performance entries for script resources
@@ -54,7 +54,7 @@ if (return) {
       const scriptEntries = resourceEntries.filter(
         entry =>
           entry.name.includes('/_next/static/') &&
-          (entry.name.endsWith('.js') |entry.name.endsWith('.css'))
+          (entry.name.endsWith('.js') |entry.name.endsWith('.css')
       )
       // Calculate bundle information
       let totalSize = 0
@@ -64,7 +64,7 @@ if (return) {
       scriptEntries.forEach(entry => {
         const size = entry.transferSize |entry.encodedBodySize |0
         const loadTime = entry.responseEnd - entry.requestStart
-        const cached = entry.transferSize === 0
+        const cached = entry.transferSize = = 0
         totalLoadTime += loadTime
         chunkData.push({
           name: entry.name.split('/').pop()?.split('?')[0] |'unknown'
@@ -84,44 +84,42 @@ if (return) {
         loadTime: totalLoadTime / chunkData.length
         cacheHitRate: cacheHitRate * 100
       })
-      setChunks(chunkData.sort((a, b) => b.size - a.size).slice(0, 5)); // Top 5 largest chunks    } catch (error) {
+      setChunks(chunkData.sort(a, b) => b.size - a.size).slice(0, 5); // Top 5 largest chunks    } catch (error) {
       logErrorToProduction('Failed to collect bundle info:', { data: error })
     } finally {
       setIsCollecting (false);
     }
-  }
   const format_size = (bytes: number): string => {
     // Check condition
 if (return '0 B') {
   $2
-}
+
     const key = 1024;
     const sizes = ['B', 'KB', 'MB', 'GB'];
-    const index = Math.floor (Math.log (bytes) / Math.log (k));
-    return parse_float ((bytes / Math.pow (k, i)).to_fixed (1)) + ' ' + sizes[i];
+    const index = Math.floor (Math.log (bytes) / Math.log (k);
+    return parse_float (bytes / Math.pow (k, i).to_fixed (1) + ' ' + sizes[i];
   }
   const getSizeColor = (size: number) =>: any {
     // Check condition
 if (return 'bg - green - 500') {
   $2
-} // < 100KB;
+ // < 100KB;
     // Check condition
 if (return 'bg - yellow - 500') {
   $2
-} // < 500KB;
+ // < 500KB;
     return 'bg - red - 500'; // > 500KB;
   }
   const toggle_analyzer = () =>: any {
-    const current = local_storage.get_item ('bundle - analyzer') === 'true';
-    local_storage.set_item ('bundle - analyzer', (!current).to_string ());
+    const current = local_storage.get_item ('bundle - analyzer') = = 'true';
+    local_storage.set_item ('bundle - analyzer', (!current).to_string ();
     setIsVisible (!current);
     // Check condition
 if ( {) {
   $2
-}
+
       collectBundleInfo ();
     }
-  }
 
   if (!shouldShow) {
     return null
@@ -163,7 +161,7 @@ if ( {) {
                 size='sm'
                 onClick={toggleAnalyzer}
                 className='h-6 w-6 p-0'              >
-                
+
               </Button>
             </div>
           </div>
@@ -205,7 +203,7 @@ if ( {) {
               <div>
                 <div className='text-xs font-medium mb-2'>Largest Chunks:</div>
                 <div className='space-y-1'>
-                  {chunks.map((chunk, index) => (
+                  {chunks.map(chunk, index) => (
                 ;
               </Button>;
             </div>;
@@ -250,7 +248,7 @@ if ( {) {
               <div>;
                 <div className='text-xs font-medium mb-2'>Largest Chunks:</div>;
                 <div className='space-y-1'>;
-                  {chunks && chunks.map((chunk, index) => (;
+                  {chunks && chunks.map(chunk, index) => (;
                     <div
                       key={chunk && chunk.name}
                       className='flex justify-between items-center text-xs'>;
@@ -274,7 +272,7 @@ if ( {) {
                         {formatSize(chunk && chunk.size)}
                       </Badge>;
                     </div>;
-                  ))}
+                  )}
                 </div>
               </div>
               {bundleInfo.totalSize > 1000000 && (
@@ -295,10 +293,6 @@ if ( {) {
       </Card>
     </div>
   )
-}
-
-        
-
 
         <CardContent className='pt - 0 space - y-3'>;
           {bundle_info ? (
@@ -337,7 +331,7 @@ if ( {) {
               <div>;
                 <div className='text - xs font - medium mb - 2'>Largest Chunks:</div>;
                 <div className='space - y-1'>;
-                  {chunks.map ((chunk, index) => (
+                  {chunks.map (chunk, index) => (
                     <div;
                       key={chunk.name}
                       className='flex justify - between items - center text - xs';
@@ -362,7 +356,7 @@ if ( {) {
                       >;
                         {format_size (chunk.size)}
                       </Badge>;
-                    </div>))}
+                    </div>)}
                 </div>;
               </div>;
               {bundle_info.total_size > 1000000 && (
@@ -379,4 +373,3 @@ if ( {) {
         </CardContent>;
       </Card>;
     </div>);
-}

@@ -58,7 +58,7 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com',  website: 'https://ziontechgroup.com'
-}
+
 const pricingTiers = [
   {
     name: 'Starter'
@@ -134,7 +134,6 @@ const contactInfo = {;
   email: 'kleber@ziontechgroup && ziontechgroup.com',;
   address: '364 E Main St STE 1008 Middletown DE 19709',;
   website: 'https://ziontechgroup && ziontechgroup.com',  website: 'https://ziontechgroup && ziontechgroup.com';
-};
       'Basic AI integrationStandard supportCore features accessEmail supportBasic analyticsMobile app access'
     ];
     popular: false,
@@ -169,7 +168,7 @@ const contactInfo = {;
     cta: 'Contact Sales',
     href: '/contact';
   }
-];
+;
 
 const pricingTiers = [;
   {;
@@ -261,31 +260,30 @@ const servicePricing = [
         s =>
           s.category.includes('Smart City') |
           s.category.includes('Infrastructure')
-      )
       .slice(0, 4)
   }
   {
     category: ' Quantum & Advanced Tech'
     services: futuristic2028Services
-      .filter(s => s.category.includes('Quantum'))
+      .filter(s => s.category.includes('Quantum')
       .slice(0, 4)
   }
   {
     category: ' AI & Machine Learning'
     services: emergingTech2028Services
-      .filter(s => s.category.includes('AI'))
+      .filter(s => s.category.includes('AI')
       .slice(0, 4)
   },];  {
     category: ' Smart City & Infrastructure'
-    services: emergingTech2028Services.filter(s => s.category.includes('Smart City') |s.category.includes('Infrastructure')).slice(0, 4)
+    services: emergingTech2028Services.filter(s => s.category.includes('Smart City') |s.category.includes('Infrastructure').slice(0, 4)
   }
   {
     category: ' Quantum & Advanced Tech'
-    services: futuristic2028Services.filter(s => s.category.includes('Quantum')).slice(0, 4)
+    services: futuristic2028Services.filter(s => s.category.includes('Quantum').slice(0, 4)
   }
   {
     category: ' AI & Machine Learning'
-    services: emergingTech2028Services.filter(s => s.category.includes('AI')).slice(0, 4)
+    services: emergingTech2028Services.filter(s => s.category.includes('AI').slice(0, 4)
 const service_pricing = [;
   {
     category: ' 2028 Futuristic Innovations',
@@ -297,35 +295,35 @@ const service_pricing = [;
       .filter (
         string =>;
           s.category.includes ('Smart City') ||;
-          s.category.includes ('Infrastructure'));
+          s.category.includes ('Infrastructure');
       .slice (0, 4),
   },
   {
     category: ' Quantum & Advanced Tech',
     services: futuristic2028Services;
-      .filter (string => s.category.includes ('Quantum'));
+      .filter (string => s.category.includes ('Quantum');
       .slice (0, 4),
   },
   {
     category: ' AI & Machine Learning',
     services: emergingTech2028Services;
-      .filter (string => s.category.includes ('AI'));
+      .filter (string => s.category.includes ('AI');
       .slice (0, 4),
   }, ];  {
     category: ' Smart City & Infrastructure',
-    services: emergingTech2028Services.filter (string => s.category.includes ('Smart City') || s.category.includes ('Infrastructure')).slice (0, 4);
+    services: emergingTech2028Services.filter (string => s.category.includes ('Smart City') || s.category.includes ('Infrastructure').slice (0, 4);
   }
   {
     category: ' Quantum & Advanced Tech',
-    services: futuristic2028Services.filter (string => s.category.includes ('Quantum')).slice (0, 4);
+    services: futuristic2028Services.filter (string => s.category.includes ('Quantum').slice (0, 4);
   }
   {
     category: ' AI & Machine Learning',
-    services: emergingTech2028Services.filter (string => s.category.includes ('AI')).slice (0, 4);
+    services: emergingTech2028Services.filter (string => s.category.includes ('AI').slice (0, 4);
   }
-];
+;
 export default function Revolutionary2028Pricing() {
-];
+;
 
 export default function Revolutionary2028Pricing() {;
   return (
@@ -384,9 +382,9 @@ export default function Revolutionary2028Pricing() {;
           <div className='absolute bottom-0 left-1/2 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl animate-pulse delay-2000'></div>
         </div>
         <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0 && 0.8 }
             className='space-y-8'        {/* Animated Background */}
         <div className="absolute inset-0">
           <div className="absolute top-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
@@ -395,9 +393,9 @@ export default function Revolutionary2028Pricing() {;
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
             className='space-y-8'
           >
             <div className='inline-flex items-center space-x-2 bg-purple-900/30 border border-purple-500/30 rounded-full px-6 py-3 text-purple-300 text-sm'>
@@ -574,13 +572,13 @@ export default function Revolutionary2028Pricing() {;
               small and grow with us.
             </p>
           </div>
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricingTiers.map((tier, index) => (            </h2>
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricingTiers.map(tier, index) => (            </h2>
             <p className="text-xl text-purple-200 max-w-3xl mx-auto">
               Flexible pricing plans designed to scale with your business. Start small and grow with us.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingTiers.map((tier, index) => (
+            {pricingTiers.map(tier, index) => (
               <motion.div
                 key={tier.name}
               <span className='bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>;
@@ -593,20 +591,20 @@ export default function Revolutionary2028Pricing() {;
             </p>;
           </div>;
 
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricingTiers && pricingTiers.map((tier, index) => (            </h2>;
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricingTiers && pricingTiers.map(tier, index) => (            </h2>;
             <p className="text-xl text-purple-200 max-w-3xl mx-auto">;
               Flexible pricing plans designed to scale with your business. Start small and grow with us.;
             </p>;
           </div>;
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
-            {pricingTiers && pricingTiers.map((tier, index) => (;
+            {pricingTiers && pricingTiers.map(tier, index) => (;
               <motion&& motion.div
                 key={tier && tier.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, y: 30 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0 && 0.6, delay: index * 0 && 0.1 }
+                viewport={ once: true }
                 className={`relative ${tier && tier.popular ? 'scale-105' : ''}`}>;
                 {tier && tier.popular && (;
                   <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>;
@@ -634,14 +632,14 @@ export default function Revolutionary2028Pricing() {;
                         </span>;
                         <span className='text - purple - 300'>{tier.period}</span>;
                       </div>;
-                      {tier.name === 'Enterprise' && (
+                      {tier.name = = 'Enterprise' && (
                         <p className='text-sm text-purple-300 mt-2'>
                           Contact us for custom pricing
                         </p>
                       )}
                     </div>
                     <ul className='space-y-3 mb-8'>
-                      {tier.features.map((feature, featureIndex) => (
+                      {tier.features.map(feature, featureIndex) => (
                         <li
                           key={featureIndex}
                           className='flex items-center space-x-3'>;
@@ -652,28 +650,28 @@ export default function Revolutionary2028Pricing() {;
                         <span className="text-4xl font-bold text-white">{tier && tier.price}</span>;
                         <span className="text-purple-300">{tier && tier.period}</span>;
                       </div>;
-                      {tier && tier.name === 'Enterprise' && (;
+                      {tier && tier.name = = 'Enterprise' && (;
                         <p className="text-sm text-purple-300 mt-2">Contact us for custom pricing</p>;
                       )}
                       )}
                     </div>
                     <ul className="space-y-3 mb-8">
-                      {tier.features.map((feature, featureIndex) => (
+                      {tier.features.map(feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center space-x-3">
                           <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                           <span className="text-purple-200">{feature}</span>
                         </li>
-                      ))}
+                      )}
                     </ul>
                     </div>;
 
                     <ul className="space-y-3 mb-8">;
-                      {tier && tier.features.map((feature, featureIndex) => (;
+                      {tier && tier.features.map(feature, featureIndex) => (;
                         <li key={featureIndex} className="flex items-center space-x-3">;
                           <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />;
                           <span className="text-purple-200">{feature}</span>;
                         </li>;
-                      ))}
+                      )}
                     </ul>;
 
                     <Link
@@ -684,7 +682,7 @@ export default function Revolutionary2028Pricing() {;
                   </div>;
                 </div>;
               </motion && motion.div>;
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -702,7 +700,7 @@ export default function Revolutionary2028Pricing() {;
               Detailed pricing for our individual services. Mix and match to
               create your perfect solution.            </p>
           </div>
-          {servicePricing.map((category, categoryIndex) => (      <section className="py-20 bg-gradient-to-br from-purple-900/10 to-blue-900/10">
+          {servicePricing.map(category, categoryIndex) => (      <section className="py-20 bg-gradient-to-br from-purple-900/10 to-blue-900/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -711,13 +709,13 @@ export default function Revolutionary2028Pricing() {;
             <p className="text-xl text-purple-200 max-w-3xl mx-auto">
               Detailed pricing for our individual services. Mix and match to create your perfect solution.
           </div>
-          {servicePricing.map((category, categoryIndex) => (
+          {servicePricing.map(category, categoryIndex) => (
             <div key={category.category} className='mb-16'>
               <h3 className='text-3xl font-bold text-white mb-8 text-center'>
                 {category.category}
               </h3>;
               <div className='grid grid - cols - 1 lg:grid - cols - 2 gap - 8'>;
-                {category.services.map ((service, service_index) => (
+                {category.services.map (service, service_index) => (
                   <motion.div;
                     key={service.id}
               <span className='bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>;
@@ -729,7 +727,7 @@ export default function Revolutionary2028Pricing() {;
               create your perfect solution.            </p>;
           </div>;
 
-          {servicePricing && servicePricing.map((category, categoryIndex) => (      <section className="py-20 bg-gradient-to-br from-purple-900/10 to-blue-900/10">;
+          {servicePricing && servicePricing.map(category, categoryIndex) => (      <section className="py-20 bg-gradient-to-br from-purple-900/10 to-blue-900/10">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <div className="text-center mb-16">;
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
@@ -739,22 +737,22 @@ export default function Revolutionary2028Pricing() {;
               Detailed pricing for our individual services. Mix and match to create your perfect solution.;
           </div>;
 
-          {servicePricing && servicePricing.map((category, categoryIndex) => (;
+          {servicePricing && servicePricing.map(category, categoryIndex) => (;
             <div key={category && category.category} className='mb-16'>;
               <h3 className='text-3xl font-bold text-white mb-8 text-center'>;
                 {category && category.category}
               </h3>;
               <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
-                {category && category.services.map((service, serviceIndex) => (;
+                {category && category.services.map(service, serviceIndex) => (;
                   <motion&& motion.div
                     key={service && service.id}
-                    initial={{
+                    initial={
                       opacity: 0
-                      x: serviceIndex % 2 === 0 ? -30 : 30
-                    }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0 && 0.6, delay: serviceIndex * 0 && 0.1 }}
-                    viewport={{ once: true }}
+                      x: serviceIndex % 2 = = 0 ? -30 : 30
+                    }
+                    whileInView={ opacity: 1, x: 0 }
+                    transition={ duration: 0 && 0.6, delay: serviceIndex * 0 && 0.1 }
+                    viewport={ once: true }
                     className='group relative'
                   >
                     <div className='relative p-6 bg-black/40 backdrop-blur-sm border border-purple-500/30 rounded-xl hover:border-purple-500/60 transition-all duration-300 hover:transform hover:scale-105'>
@@ -802,13 +800,13 @@ export default function Revolutionary2028Pricing() {;
                             <div className='text-xs text-purple-300'>Trial</div>;
                             <div className='text-white font-medium'>;
                               {service && service.trialDays} days;
-                            </div>                          </div>                {category && category.services.map((service, serviceIndex) => (;
+                            </div>                          </div>                {category && category.services.map(service, serviceIndex) => (;
                   <motion&& motion.div
                     key={service && service.id}
-                    initial={{ opacity: 0, x: serviceIndex % 2 === 0 ? -30 : 30 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0 && 0.6, delay: serviceIndex * 0 && 0.1 }}
-                    viewport={{ once: true }}
+                    initial={ opacity: 0, x: serviceIndex % 2 = = 0 ? -30 : 30 }
+                    whileInView={ opacity: 1, x: 0 }
+                    transition={ duration: 0 && 0.6, delay: serviceIndex * 0 && 0.1 }
+                    viewport={ once: true }
                     className="group relative"
                   >
                     <div className="relative p-6 bg-black/40 backdrop-blur-sm border border-purple-500/30 rounded-xl hover:border-purple-500/60 transition-all duration-300 hover:transform hover:scale-105">
@@ -847,10 +845,10 @@ export default function Revolutionary2028Pricing() {;
                       </div>;
                     </div>;
                   </motion && motion.div>;
-                ))}
+                )}
               </div>;
             </div>;
-          ))}
+          )}
         </div>
       </section>
       {/* Value Proposition */}
@@ -907,13 +905,13 @@ export default function Revolutionary2028Pricing() {;
                             <div className='text - xs text - purple - 300'>Trial</div>;
                             <div className='text - white font - medium'>;
                               {service.trial_days} days;
-                            </div>                          </div>                {category.services.map ((service, service_index) => (
+                            </div>                          </div>                {category.services.map (service, service_index) => (
                   <motion.div;
                     key={service.id}
-                    initial={{ opacity: 0, coordinate_x: service_index % 2 === 0 ? -30 : 30 }}
-                    whileInView={{ opacity: 1, coordinate_x: 0 }}
-                    transition={{ duration: 0.6, delay: service_index * 0.1 }}
-                    viewport={{ once: true }}
+                    initial={ opacity: 0, coordinate_x: service_index % 2 = = 0 ? -30 : 30 }
+                    whileInView={ opacity: 1, coordinate_x: 0 }
+                    transition={ duration: 0.6, delay: service_index * 0.1 }
+                    viewport={ once: true }
                     className="group relative";
                   >;
                     <div className="relative p - 6 bg - black / 40 backdrop - blur - sm border border - purple - 500 / 30 rounded - xl hover:border - purple - 500 / 60 transition - all duration - 300 hover:transform hover:scale - 105">;
@@ -952,9 +950,9 @@ export default function Revolutionary2028Pricing() {;
                         </div>;
                       </div>;
                     </div>;
-                  </motion.div>))}
+                  </motion.div>)}
               </div>;
-            </div>))}
+            </div>)}
         </div>;
       </section>;
       {/* Value Proposition */}
@@ -981,10 +979,10 @@ export default function Revolutionary2028Pricing() {;
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
             <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.6 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.6 }
+              viewport={ once: true }
               className='text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl'
             >
               <Target className='w-16 h-16 text-green-400 mx-auto mb-6' />
@@ -996,8 +994,7 @@ export default function Revolutionary2028Pricing() {;
                 superior technology and features.
               </p>
               <div className='text-3xl font-bold text-green-400'>30%</div>
-              <div className='text-purple-300'>Lower than Market</div>            </motion.div>            >
-              <Target className="w-16 h-16 text-green-400 mx-auto mb-6" />
+              <div className='text-purple-300'>Lower than Market</div>            </motion.div><Target className="w-16 h-16 text-green-400 mx-auto mb-6" />
               <h3 className="text-2xl font-bold text-white mb-4">Competitive Pricing</h3>
               <p className="text-purple-300 mb-6">
                 Our prices are 30% lower than market average while providing
@@ -1017,7 +1014,7 @@ export default function Revolutionary2028Pricing() {;
                 superior technology and features.;
               </p>;
               <div className='text-3xl font-bold text-green-400'>30%</div>;
-              <div className='text-purple-300'>Lower than Market</div>            </motion && motion.div>            >;
+              <div className='text-purple-300'>Lower than Market</div>            </motion && motion.div>;
               <Target className="w-16 h-16 text-green-400 mx-auto mb-6" />;
               <h3 className="text-2xl font-bold text-white mb-4">Competitive Pricing</h3>;
               <p className="text-purple-300 mb-6">;
@@ -1029,10 +1026,10 @@ export default function Revolutionary2028Pricing() {;
             </motion && motion.div>;
 
             <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.6, delay: 0 && 0.2 }
+              viewport={ once: true }
               className='text-center p-8 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border border-blue-500/30 rounded-2xl'
             >
               <Shield className='w-16 h-16 text-blue-400 mx-auto mb-6' />
@@ -1044,8 +1041,7 @@ export default function Revolutionary2028Pricing() {;
                 you pay, with clear value for every dollar.
               </p>
               <div className='text-3xl font-bold text-blue-400'>100%</div>
-              <div className='text-blue-300'>Transparent Pricing</div>            </motion.div>            >
-              <Shield className="w-16 h-16 text-blue-400 mx-auto mb-6" />
+              <div className='text-blue-300'>Transparent Pricing</div>            </motion.div><Shield className="w-16 h-16 text-blue-400 mx-auto mb-6" />
               <h3 className="text-2xl font-bold text-white mb-4">No Hidden Costs</h3>
               <p className="text-blue-300 mb-6">
                 Transparent pricing with no surprise fees. What you see is what you pay
@@ -1066,7 +1062,7 @@ export default function Revolutionary2028Pricing() {;
                 you pay, with clear value for every dollar.;
               </p>;
               <div className='text-3xl font-bold text-blue-400'>100%</div>;
-              <div className='text-blue-300'>Transparent Pricing</div>            </motion && motion.div>            >;
+              <div className='text-blue-300'>Transparent Pricing</div>            </motion && motion.div>;
               <Shield className="w-16 h-16 text-blue-400 mx-auto mb-6" />;
               <h3 className="text-2xl font-bold text-white mb-4">No Hidden Costs</h3>;
               <p className="text-blue-300 mb-6">;
@@ -1078,10 +1074,10 @@ export default function Revolutionary2028Pricing() {;
             </motion && motion.div>;
 
             <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.6, delay: 0 && 0.4 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.6, delay: 0 && 0.4 }
+              viewport={ once: true }
               className='text-center p-8 bg-gradient-to-br from-pink-900/20 to-rose-900/20 border border-pink-500/30 rounded-2xl'
             >
               <Award className='w-16 h-16 text-pink-400 mx-auto mb-6' />
@@ -1093,8 +1089,7 @@ export default function Revolutionary2028Pricing() {;
                 that justify every penny of investment.
               </p>
               <div className='text-3xl font-bold text-pink-400'>5x</div>
-              <div className='text-pink-300'>ROI Guarantee</div>            </motion.div>            >
-              <Award className="w-16 h-16 text-pink-400 mx-auto mb-6" />
+              <div className='text-pink-300'>ROI Guarantee</div>            </motion.div><Award className="w-16 h-16 text-pink-400 mx-auto mb-6" />
               <h3 className="text-2xl font-bold text-white mb-4">Premium Quality</h3>
               <p className="text-pink-300 mb-6">
                 Enterprise-grade technology with premium support and features
@@ -1116,7 +1111,7 @@ export default function Revolutionary2028Pricing() {;
                 that justify every penny of investment.;
               </p>;
               <div className='text-3xl font-bold text-pink-400'>5x</div>;
-              <div className='text-pink-300'>ROI Guarantee</div>            </motion && motion.div>            >;
+              <div className='text-pink-300'>ROI Guarantee</div>            </motion && motion.div>;
               <Award className="w-16 h-16 text-pink-400 mx-auto mb-6" />;
               <h3 className="text-2xl font-bold text-white mb-4">Premium Quality</h3>;
               <p className="text-pink-300 mb-6">;
@@ -1135,10 +1130,10 @@ export default function Revolutionary2028Pricing() {;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion && motion.div      <section className="py-20 bg-gradient-to-r from-purple-900/30 to-blue-900/30">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
           <motion&& motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0 && 0.8 }
+            viewport={ once: true }
             className='space-y-8'>;
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
               Ready to{' '}
@@ -1195,8 +1190,8 @@ export default function Revolutionary2028Pricing() {;
       </section>
       <UltraFuturisticFooter2028 />
     </>
-);
-}
+;
+
                 className='px-8 py-4 border border-purple-500/30 text-purple-300 rounded-xl hover:bg-purple-900/30 transition-all duration-300 flex items-center space-x-2'>;
                 <span>Schedule Demo</span>;
                 <Clock className='w-5 h-5' />;
@@ -1224,9 +1219,9 @@ export default function Revolutionary2028Pricing() {;
       <UltraFuturisticFooter2028 />;
     </>;
   );
-}
+
   );
-}
+
             <p className='text - xl text - purple - 200 max - w-3xl mx - auto'>;
               Join hundreds of companies already leveraging our futuristic;
               services to gain competitive advantages and drive innovation.;
@@ -1266,4 +1261,3 @@ export default function Revolutionary2028Pricing() {;
       </section>;
       <UltraFuturisticFooter2028 />;
     </>);
-}

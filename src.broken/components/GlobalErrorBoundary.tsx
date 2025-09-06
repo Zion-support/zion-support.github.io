@@ -6,5 +6,3 @@ export function GlobalErrorBoundary() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

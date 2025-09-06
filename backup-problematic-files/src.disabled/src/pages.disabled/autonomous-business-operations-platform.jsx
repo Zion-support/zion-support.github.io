@@ -7,6 +7,5 @@ const Autonomous-business-operations-platform = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default Autonomous-business-operations-platform;

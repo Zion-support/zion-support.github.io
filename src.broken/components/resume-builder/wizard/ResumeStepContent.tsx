@@ -6,5 +6,3 @@ export function ResumeStepContent() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

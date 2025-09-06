@@ -6,11 +6,11 @@ import {;
   Check, Star, Users, TrendingUp, DollarSign, Clock,;
   Shield, Zap, Rocket, Brain, Atom, Globe, Target,;
   ArrowRight, Phone, Mail, MapPin, ExternalLink;
-} from 'lucide-react',;
+ from 'lucide-react',;
 import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029',;
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029',;
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029',;
-// Import all service data;
+/ Import all service data;
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',;
 import { innovativeAIServices2029 } from '../data/2029-innovative-ai-services',;
 import { quantumSpaceInnovations2029 } from '../data/2029-quantum-space-innovations',;
@@ -28,13 +28,13 @@ export default function PricingPage() {;
     ...innovativeMicroSaas2029;
   ],;
   // Get unique services by ID;
-  const uniqueServices = allServices.filter((service, index, self) =>;
-    index === self.findIndex(s => s.id === service.id);
+  const uniqueServices = allServices.filter(service, index, self) =>;
+    index = = self.findIndex(s => s.id = = service.id);
   ),;
   // Get all categories;
   const categories = ['All', ...Array.from(new Set(uniqueServices.map(s =>;
     Array.isArray(s.category) ? s.category[0] : s.category;
-  )))],;
+  ))],;
   // Price ranges;
   const priceRanges = [;
     { id: 'All', name: 'All Prices', range: 'All' },;
@@ -45,16 +45,16 @@ export default function PricingPage() {;
   ],;
   // Filter services;
   const filteredServices = uniqueServices.filter(service => {;
-    const matchesCategory = selectedCategory === 'All' ||;
+    const matchesCategory = selectedCategory = = 'All' ||;
                            (Array.isArray(service.category) ?;
                              service.category.includes(selectedCategory) :;
-                             service.category === selectedCategory),;
-    const price = parseFloat(service.price.replace(/[^0-9.]/g, '')),;
-    const matchesPrice = selectedPriceRange === 'All' ||;
-                        (selectedPriceRange === 'Under $1K' && price < 1000) ||;
-                        (selectedPriceRange === '$1K - $5K' && price >= 1000 && price < 5000) ||;
-                        (selectedPriceRange === '$5K - $20K' && price >= 5000 && price < 20000) ||;
-                        (selectedPriceRange === '$20K+' && price >= 20000),;
+                             service.category = = selectedCategory),;
+    const price = parseFloat(service.price.replace(/[^0-9.]/g, ''),;
+    const matchesPrice = selectedPriceRange = = 'All' ||;
+                        (selectedPriceRange = = 'Under $1K' && price < 1000) ||;
+                        (selectedPriceRange = = '$1K - $5K' && price >= 1000 && price < 5000) ||;
+                        (selectedPriceRange = = '$5K - $20K' && price >= 5000 && price < 20000) ||;
+                        (selectedPriceRange = = '$20K+' && price >= 20000),;
     return matchesCategory && matchesPrice;
   }),;
   const contactInfo = {;
@@ -64,7 +64,7 @@ export default function PricingPage() {;
     website: 'https://ziontechgroup.com';
   },;
   // Group services by category for better organization;
-  const servicesByCategory = filteredServices.reduce((acc, service) => {;
+  const servicesByCategory = filteredServices.reduce(acc, service) => {;
     const category = Array.isArray(service.category) ? service.category[0] : service.category,;
     if (!acc[category]) {;
       acc[category] = [];
@@ -104,9 +104,9 @@ export default function PricingPage() {;
     'Project ManagementCustomer ExperienceSecurity & Compliance'
   ],
 
-  const filteredServices = selectedCategory === 'All' 
+  const filteredServices = selectedCategory = = 'All' 
     ? microSaasServices 
-    : microSaasServices.filter(service => service.category === selectedCategory),
+    : microSaasServices.filter(service => service.category = = selectedCategory),
 
   const yearlyDiscount = 0.2, // 20% discount for yearly billing
 
@@ -126,9 +126,9 @@ export default function PricingPage() {;
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, y: 20 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
             className="max-w-4xl mx-auto"
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -141,7 +141,7 @@ export default function PricingPage() {;
             <p className="text-xl text-gray-300 mb-8">
               Transparent pricing for our cutting-edge technology services that are already operational and delivering transformative results
             </p>
-            
+
             {/* Filter Controls */}
             <div className="flex flex-col lg:flex-row gap-4 justify-center items-center mb-8">
               <select
@@ -151,7 +151,7 @@ export default function PricingPage() {;
               >
                 {categories.map(category => (
                   <option key={category} value={category}>{category}</option>
-                ))}
+                )}
               </select>;
               <select;
                 value={selectedPriceRange}
@@ -160,7 +160,7 @@ export default function PricingPage() {;
               >
                 {priceRanges.map(range => (
                   <option key={range.id} value={range.id}>{range.name}</option>
-                ))}
+                )}
               </select>
             </div>
 
@@ -173,13 +173,13 @@ export default function PricingPage() {;
         {/* Pricing Categories */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            {Object.entries(servicesByCategory).map(([category, services], categoryIndex) => (
+            {Object.entries(servicesByCategory).map([category, services], categoryIndex) => (
               <motion.div
                 key={category}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: categoryIndex * 0.2 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, y: 30 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.8, delay: categoryIndex * 0.2 }
+                viewport={ once: true }
                 className="mb-20"
               >
                 <div className="text-center mb-12">
@@ -192,13 +192,13 @@ export default function PricingPage() {;
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {services.map((service, serviceIndex) => (
+                  {services.map(service, serviceIndex) => (
                     <motion.div
                       key={service.id}
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: serviceIndex * 0.1 }}
-                      viewport={{ once: true }}
+                      initial={ opacity: 0, y: 20 }
+                      whileInView={ opacity: 1, y: 0 }
+                      transition={ duration: 0.6, delay: serviceIndex * 0.1 }
+                      viewport={ once: true }
                       className="group cursor-pointer"
                     >
                       <div className={`p-6 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 backdrop-blur-sm hover:transform hover:scale-105 ${service.popular ? 'ring-2 ring-yellow-400/50' : ''}`}>
@@ -213,7 +213,7 @@ export default function PricingPage() {;
                             </div>
                           </div>
                         )}
-;
+
                         {/* Service Icon */}
                         <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                           <span className="text-2xl">{service.icon}</span>
@@ -222,7 +222,7 @@ export default function PricingPage() {;
                         {/* Service Title and Tagline */}
                         <h3 className="text-xl font-semibold text-white mb-2">{service.name}</h3>
                         <p className="text-sm text-cyan-400 mb-4">{service.tagline}</p>
-                        
+
                         {/* Price */}
                         <div className="mb-6">
                           <div className="flex items-baseline">
@@ -243,12 +243,12 @@ export default function PricingPage() {;
                         <div className="mb-6">
                           <h4 className="text-sm font-medium text-gray-400 mb-3">Key Features:</h4>
                           <div className="space-y-2">
-                            {service.features.slice(0, 4).map((feature, idx) => (
+                            {service.features.slice(0, 4).map(feature, idx) => (
                               <div key={idx} className="flex items-center space-x-2">
                                 <Check className="w-4 h-4 text-green-400 flex-shrink-0" />
                                 <span className="text-sm text-gray-300">{feature}</span>
                               </div>
-                            ))}
+                            )}
                             {service.features.length > 4 && (
                               <span className="text-xs text-gray-500">+{service.features.length - 4} more features</span>
                             )}
@@ -289,7 +289,7 @@ export default function PricingPage() {;
                             </p>;
                           </div>;
                         )}
-;
+
                         {/* ROI Information */}
                         {service.roi && (
                           <div className="mb-6 p-3 bg-green-900/20 border border-green-500/20 rounded-lg">
@@ -298,7 +298,7 @@ export default function PricingPage() {;
                             </p>;
                           </div>;
                         )}
-;
+
                         {/* CTA */}
                         <div className="flex items-center justify-between">
                           <Link href={service.link || `/services/${service.id}`}>
@@ -313,20 +313,20 @@ export default function PricingPage() {;
                         </div>
                       </div>
                     </motion.div>
-                  ))}
+                  )}
                 </div>;
               </motion.div>;
-            ))}
+            )}
           </div>;
         </section>;
         {/* Contact CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
                 Ready to Get Started with
@@ -335,7 +335,7 @@ export default function PricingPage() {;
               <p className="text-xl text-gray-300 mb-8">
                 Contact our team to discuss pricing, implementation, and how our revolutionary 2029 services can transform your business.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
                 <Link href="/contact">
                   <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105">
@@ -463,5 +463,3 @@ export default function PricingPage() {;
       <UltraFuturisticFooter2029 />;
     </UltraFuturisticBackground2029>;
   );
-}
-;

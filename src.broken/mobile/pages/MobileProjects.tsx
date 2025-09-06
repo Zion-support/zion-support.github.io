@@ -6,5 +6,3 @@ export function MobileProjects() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

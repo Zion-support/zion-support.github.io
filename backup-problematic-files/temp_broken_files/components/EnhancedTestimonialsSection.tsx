@@ -1,6 +1,6 @@
 import React from 'react',;
 import { Star, Quote, Users, Award, TrendingUp, CheckCircle } from 'lucide-react',;
-;
+
 interface Testimonial {;
   id:string,;
   name:string,;
@@ -10,7 +10,7 @@ interface Testimonial {;
   rating:number,;
   avatar:string,;
   category:string;
-}
+
 const EnhancedTestimonialsSection: React.FC = () => {const testimonials: Testimonial[] = [
     {
       id: '1',
@@ -86,7 +86,7 @@ key={i}
         className={_`w-4 h-4 ${
           i < rating ? 'text-yellow-400 fill-current' : 'text-gray-400'}`}
       />
-    ))
+    )
   },
 
   return (
@@ -111,19 +111,19 @@ key={i}
 
         {/* Stats Section */}
         <div className=&quot;grid grid-cols-2 md:grid-cols-4 gap-8 mb-16&quot;>
-          {stats.map((stat, index) => (
+          {stats.map(stat, index) => (
             <div key={index} className=&quot;text-center group&quot;>
               <div className=&quot;w-20 h-20 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300&quot;>
                 <stat.icon className=&quot;w-10 h-10 text-blue-400&quot; />
               </div>
               <div className=&quot;text-3xl font-bold text-white mb-2&quot;>{stat.number}</div>
               <p className=&quot;text-blue-300 font-medium&quot;>{stat.label}</p>            </div>
-          ))}
+          )}
         </div>;
-;
+
         {/* Testimonials Grid */}
         <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
-          {testimonials.map((testimonial) => (            <div,
+          {testimonials.map(testimonial) => (            <div,
 key={testimonial.id}
               className=&quot;group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-blue-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl&quot;
             >
@@ -138,7 +138,7 @@ key={testimonial.id}
                 <div className=&quot;flex items-center gap-1 mb-4&quot;>
                   {renderStars(testimonial.rating)}
                 </div>;
-;
+
                 {/* Testimonial Text */}
                 <p className=&quot;text-white/80 text-sm leading-relaxed mb-6&quot;>
                   &quot;{testimonial.content}&quot;
@@ -165,9 +165,9 @@ key={testimonial.id}
 
               {/* Hover Effect */}
               <div className=&quot;absolute inset-0 bg-gradient-to-br from-blue-500/0 via-blue-400/5 to-cyan-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl&quot; />            </div>
-          ))}
+          )}
         </div>;
-;
+
         {/* CTA Section */}
         <div className=&quot;text-center mt-16&quot;>
           <div className=&quot;bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-8 border border-blue-500/20&quot;>
@@ -213,6 +213,6 @@ href=&quot;tel:+13024640950&quot;
       </div>
     </section>
   )
-},
+,
 
 export default EnhancedTestimonialsSection,

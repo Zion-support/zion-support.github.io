@@ -381,4 +381,4 @@ export const MORE_PRODUCTS: ProductListing[] = [;
     availability: "Immediate";
     aiScore: 89;
   }
-];
+;

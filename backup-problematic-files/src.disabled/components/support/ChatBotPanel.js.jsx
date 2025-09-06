@@ -7,6 +7,5 @@ const ChatBotPanel.js = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default ChatBotPanel.js;

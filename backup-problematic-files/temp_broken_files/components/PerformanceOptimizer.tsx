@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useCallback } from 'react',;
 import { motion } from 'framer-motion',;
 import { Zap, Clock, TrendingUp, Activity, Gauge, Cpu, Database, Network } from 'lucide-react',;
-;
+
 interface PerformanceMetrics {;
   loadTime:number,;
   firstContentfulPaint:number,;
@@ -9,13 +9,12 @@ interface PerformanceMetrics {;
   cumulativeLayoutShift:number,;
   firstInputDelay:number,;
   timeToInteractive:number;}
-}, []);
-//Optimize images for (const img of Array.from (images) ) {
+, []);
+/Optimize images for (const img of Array.from (images) {
   if (img.complete && img.naturalWidth > 0) {
   //Add lazy loading img.loading = 'lazy';
-//Add responsive sizes if not present if (!img.sizes) {
+/Add responsive sizes if not present if (!img.sizes) {
   optimizedCount++ 
-}
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className = '' }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
@@ -31,14 +30,14 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className =
   const [showMetrics, setShowMetrics] = useState(false),
 
   // Measure performance metrics,
-const measurePerformance = useCallback(() => {
-    if (typeof window !== 'undefined' && 'performance' in window) {
+const measurePerformance = useCallback() => {
+    if (typeof window != 'undefined' && 'performance' in window) {
       const navigation = window.window.window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,
       const paintEntries = window.window.window.performance.getEntriesByType('paint'),
-      
-      const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint'),
+
+      const fcp = paintEntries.find(entry => entry.name = = 'first-contentful-paint'),
       const lcp = window.window.window.performance.getEntriesByType('largest-contentful-paint')[0],
-      
+
       const newMetrics: PerformanceMetrics = {
         loadTime: navigation.loadEventEnd - navigation.loadEventStart,
         firstContentfulPaint: fcp ? fcp.startTime : 0,
@@ -48,8 +47,7 @@ firstInputDelay: 0, // Would need to be measured with FID API,
 timeToInteractive: navigation.domContentLoadedEventEnd - navigation.navigationStart
       },
       setMetrics(newMetrics)
-    }
-  }, []),
+    }, []),
 
   // Optimize images,
 const optimizeImages = useCallback(async () => {
@@ -59,31 +57,29 @@ const optimizeImages = useCallback(async () => {
     try {
       const images = document.querySelectorAll('img'),
       let optimizedCount = 0,
-      for (const img of Array.from(images)) {
+      for (const img of Array.from(images) {
         if (img.complete && img.naturalWidth > 0) {
           // Add lazy loading,
 img.loading = 'lazy',
-          
+
           // Add responsive sizes if not present,
 if (!img.sizes) {
             img.sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
           }          
           optimizedCount++
         }
-      }
 
       setOptimizationStatus(`Optimized ${optimizedCount} images`),      
       // Simulate optimization delay,
-await new Promise(resolve => setTimeout(resolve, 1000)),
-      
+await new Promise(resolve => setTimeout(resolve, 1000),
+
       setOptimizationStatus('Image optimization complete')
     } catch (error) {
       setOptimizationStatus('Image optimization failed'),
       console.error('Image optimization error:', error)
     } finally {
       setIsOptimizing(false)
-    }
-  }, []),
+    }, []),
 
   // Optimize fonts,
 const optimizeFonts = useCallback(async () => {
@@ -109,16 +105,15 @@ const style = document.createElement('style'),
       `,
       document.head.appendChild(style),
       setOptimizationStatus('Font optimization complete'),
-      
+
       // Simulate optimization delay,
-await new Promise(resolve => setTimeout(resolve, 800))
+await new Promise(resolve => setTimeout(resolve, 800)
     } catch (error) {
       setOptimizationStatus('Font optimization failed'),
       console.error('Font optimization error:', error)
     } finally {
       setIsOptimizing(false)
-    }
-  }, []),
+    }, []),
 
   // Optimize CSS and JavaScript,
 const optimizeCode = useCallback(async () => {
@@ -134,26 +129,24 @@ const preloadLinks = [
 
       preloadLinks.forEach(linkAttrs => {
         const link = document.createElement('link'),
-        Object.entries(linkAttrs).forEach(([key, value]) => {
-          if (key === 'crossorigin') {
+        Object.entries(linkAttrs).forEach([key, value]) => {
+          if (key = = 'crossorigin') {
             link.setAttribute(key, value as string)
           } else {
             (link as any)[key] = value
-          }
-        }),
+          }),
         document.head.appendChild(link)
       }),
       setOptimizationStatus('Code optimization complete'),
-      
+
       // Simulate optimization delay,
-await new Promise(resolve => setTimeout(resolve, 1200))
+await new Promise(resolve => setTimeout(resolve, 1200)
     } catch (error) {
       setOptimizationStatus('Code optimization failed'),
       console.error('Code optimization error:', error)
     } finally {
       setIsOptimizing(false)
-    }
-  }, []),
+    }, []),
 
   // Run all optimizations,
 const runAllOptimizations = useCallback(async () => {
@@ -163,42 +156,40 @@ const runAllOptimizations = useCallback(async () => {
       await optimizeImages(),
       await optimizeFonts(),
       await optimizeCode(),
-      
+
       setOptimizationStatus('All optimizations complete!'),
-      
+
       // Re-measure performance after optimization,
-setTimeout(() => {
+setTimeout() => {
         measurePerformance()
       }, 500)
-      
+
     } catch (error) {
       setOptimizationStatus('Optimization failed'),
       console.error('Optimization error:', error)
     } finally {
       setIsOptimizing(false)
-    }
-  }, [optimizeImages, optimizeFonts, optimizeCode, measurePerformance]),
+    }, [optimizeImages, optimizeFonts, optimizeCode, measurePerformance]),
   // Initialize performance monitoring,
-useEffect_(() => {if (typeof window !== 'undefined') {
+useEffect_() => {if (typeof window != 'undefined') {
       // Measure initial performance,
 window.addEventListener('load', measurePerformance),      
       // Monitor for performance issues,
 const observer = new PerformanceObserver(_(list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'largest-contentful-paint') {
+        for (const entry of list.getEntries() {
+          if (entry.entryType = = 'largest-contentful-paint') {
             const lcp = entry.startTime,
             if (lcp > 2500) { // LCP should be under 2.5s,
 console.warn('LCP is too slow:', lcp)
-            }          }
-        }
-      }),
-      
+            }
+        }),
+
       observer.observe({ entryTypes: ['largest-contentful-paint'] }),
-      
+
       return () => {
         window.removeEventListener('load', measurePerformance),
         observer.disconnect()
-      }    }
+      }
   }, [measurePerformance]),
 
   const getPerformanceScore = (): number => {
@@ -207,7 +198,7 @@ console.warn('LCP is too slow:', lcp)
     if (metrics.largestContentfulPaint > 2500) score -= 25,
     if (metrics.loadTime > 3000) score -= 15,
     if (metrics.timeToInteractive > 3500) score -= 20,
-    
+
     return Math.max(0, score)
   },
 
@@ -244,9 +235,9 @@ onClick={() => setShowMetrics(!showMetrics)}
         <div className=&quot;w-full bg-white/10 rounded-full h-3&quot;>
           <motion.div,
 className=&quot;h-3 bg-gradient-to-r from-red-500 via-yellow-500 to-green-500 rounded-full&quot;
-            initial={{ width: 0 }}
-            animate={{ width: `${performanceScore}%` }}
-            transition={{ duration: 1, ease: &quot;easeOut&quot }}
+            initial={ width: 0 }
+            animate={ width: `${performanceScore}%` }
+            transition={ duration: 1, ease: &quot;easeOut&quot }
           />
         </div>
         <div className=&quot;text-right mt-1&quot;>
@@ -256,9 +247,9 @@ className=&quot;h-3 bg-gradient-to-r from-red-500 via-yellow-500 to-green-500 ro
       {_/* Metrics Display */}
       {showMetrics && (
         <motion.div,
-initial={{ opacity: 0, height: 0 }}
-          animate={{ opacity: 1, height: 'auto' }}
-          exit={{ opacity: 0, height: 0 }}
+initial={ opacity: 0, height: 0 }
+          animate={ opacity: 1, height: 'auto' }
+          exit={ opacity: 0, height: 0 }
           className=&quot;grid grid-cols-2 md:grid-cols-3 gap-4 mb-6&quot;
         >
           <div className=&quot;text-center p-3 rounded-lg bg-white/5 border border-white/10&quot;>
@@ -266,38 +257,38 @@ initial={{ opacity: 0, height: 0 }}
             <div className=&quot;text-lg font-bold text-white&quot;>{Math.round(metrics.loadTime)}ms</div>
             <div className=&quot;text-xs text-white/60&quot;>Load Time</div>
           </div>
-          
+
           <div className=&quot;text-center p-3 rounded-lg bg-white/5 border border-white/10&quot;>
             <Activity className=&quot;w-6 h-6 text-green-400 mx-auto mb-2&quot; />
             <div className=&quot;text-lg font-bold text-white&quot;>{Math.round(metrics.firstContentfulPaint)}ms</div>
             <div className=&quot;text-xs text-white/60&quot;>FCP</div>
           </div>
-          
+
           <div className=&quot;text-center p-3 rounded-lg bg-white/5 border border-white/10&quot;>
             <TrendingUp className=&quot;w-6 h-6 text-purple-400 mx-auto mb-2&quot; />
             <div className=&quot;text-lg font-bold text-white&quot;>{Math.round(metrics.largestContentfulPaint)}ms</div>
             <div className=&quot;text-xs text-white/60&quot;>LCP</div>
           </div>
-          
+
           <div className=&quot;text-center p-3 rounded-lg bg-white/5 border border-white/10&quot;>
             <Cpu className=&quot;w-6 h-6 text-yellow-400 mx-auto mb-2&quot; />
             <div className=&quot;text-lg font-bold text-white&quot;>{Math.round(metrics.timeToInteractive)}ms</div>
             <div className=&quot;text-xs text-white/60&quot;>TTI</div>
           </div>
-          
+
           <div className=&quot;text-center p-3 rounded-lg bg-white/5 border border-white/10&quot;>
             <Database className=&quot;w-6 h-6 text-orange-400 mx-auto mb-2&quot; />
             <div className=&quot;text-lg font-bold text-white&quot;>{metrics.cumulativeLayoutShift.toFixed(3)}</div>
             <div className=&quot;text-xs text-white/60&quot;>CLS</div>
           </div>
-          
+
           <div className=&quot;text-center p-3 rounded-lg bg-white/5 border border-white/10&quot;>
             <Network className=&quot;w-6 h-6 text-red-400 mx-auto mb-2&quot; />
             <div className=&quot;text-lg font-bold text-white&quot;>{Math.round(metrics.firstInputDelay)}ms</div>
             <div className=&quot;text-xs text-white/60&quot;>FID</div>          </div>
         </motion.div>
       )}
-;
+
       {/* Optimization Controls */}
       <div className=&quot;space-y-3&quot;>        <button,
 onClick={runAllOptimizations}
@@ -320,12 +311,12 @@ onClick={runAllOptimizations}
           )}
         </button>
 
-        {optimizationStatus !== 'idle' && (
+        {optimizationStatus != 'idle' && (
           <div className=&quot;text-center p-3 rounded-lg bg-white/5 border border-white/10&quot;>
             <div className=&quot;text-sm text-white/80&quot;>{optimizationStatus}</div>          </div>
         )}
       </div>;
-;
+
       {/* Performance Tips */}
       <div className=&quot;mt-6 pt-4 border-t border-white/10&quot;>
         <h4 className=&quot;text-sm font-semibold text-white/80 mb-3&quot;>Performance Tips</h4>
@@ -338,6 +329,6 @@ onClick={runAllOptimizations}
       </div>
     </div>
   )
-},
+,
 
 export default PerformanceOptimizer,

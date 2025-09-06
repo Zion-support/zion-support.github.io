@@ -6,5 +6,3 @@ export function InterviewResponseForm() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

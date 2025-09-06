@@ -21,17 +21,17 @@ import { AspectRatio } from "@/components/ui/aspect-ratio",
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
 import { AIListingGenerator } from "@/components/listing/AIListingGenerator";
 import { Sparkles } from "lucide-react";
-// Define the form schema with zod
+/ Define the form schema with zod
 
 const productSchema = z.object({
   title: z.string().min(3, "Title must be at least 3 characters");
   description: z.string().min(10, "Description must be at least 10 characters");
-  price: z.string().refine((val) => !isNaN(parseFloat(val)) && parseFloat(val) >= 0, {
+  price: z.string().refine(val) => !isNaN(parseFloat(val) && parseFloat(val) >= 0, {
     message: "Price must be a valid number"})
   category: z.string().min(1, "Please select a category");
   image: z.instanceof(File).optional()
   tags: z.string().optional()})
-// Type for our form values
+/ Type for our form values
 type ProductFormValues = z.infer<typeof productSchema>;
 export function ProductSubmissionForm() {
   const { user } = useAuth();
@@ -48,7 +48,7 @@ export function ProductSubmissionForm() {
       description: ""
       price: ""
       category: ""
-      tags: ""}})
+      tags: ""})
   // Handle image upload preview
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0]
@@ -60,13 +60,12 @@ export function ProductSubmissionForm() {
       }
       reader.readAsDataURL(file)
     }
-  }
   // Apply AI-generated content to the form
   const handleApplyGenerated = (content: any) => {
     form.setValue("description", content.description);
-    form.setValue("tags", content.tags.join(", "));
+    form.setValue("tags", content.tags.join(", ");
     // Set a default price as the middle of the suggested range
-    const averagePrice = ((content.suggestedPrice.min + content.suggestedPrice.max) / 2).toFixed(2);
+    const averagePrice = (content.suggestedPrice.min + content.suggestedPrice.max) / 2).toFixed(2);
     form.setValue("price", averagePrice);
     // Switch to the manual tab to show applied content
     setActiveTab("manual")
@@ -89,7 +88,7 @@ export function ProductSubmissionForm() {
         price: parseFloat(values.price)
         category: values.category
         currency: "USD", // Default currency
-        tags: values.tags ? values.tags.split(',').map(tag => tag.trim()) : [];
+        tags: values.tags ? values.tags.split(',').map(tag => tag.trim() : [];
         author: {
           name: user.displayName |"Anonymous Creator"
           id: user.id}
@@ -125,7 +124,6 @@ export function ProductSubmissionForm() {
         if (updateError) {
           throw new Error(updateError.message)
         }
-      }
       // Show success message
       toast({
         title: "Product Published!"
@@ -140,7 +138,6 @@ export function ProductSubmissionForm() {
     } finally {
       setIsSubmitting(false)
     }
-  }
   return (
     <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
       <TabsList className="grid grid-cols-2 mb-6">
@@ -177,18 +174,18 @@ import { AspectRatio } from '@/components / ui / aspect - ratio';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components / ui / tabs';
 import { AIListingGenerator } from '@/components / listing / AIListingGenerator';
 import { Sparkles } from './lucide-react';
-// Define the form schema with zod;
+/ Define the form schema with zod;
 const product_schema = z.object ({
   title: z.string ().min (3, "Title must be at least 3 characters");
   description: z.string ().min (10, "Description must be at least 10 characters");
-  price: z.string ().refine ((val) => !isNaN (parse_float (val)) && parse_float (val) >= 0, {
+  price: z.string ().refine (val) => !isNaN (parse_float (val) && parse_float (val) >= 0, {
     message: "Price must be a valid number"}),
   category: z.string ().min (1, "Please select a category");
   image: z.instanceof (File).optional (),
   tags: z.string ().optional ()}),
-// Type for our form values;
+/ Type for our form values;
 type ProductFormValues = z.infer < typeof product_schema>;
-;
+
 export /**
  * ProductSubmissionForm - Function description
  */
@@ -199,7 +196,7 @@ function ProductSubmissionForm() {
   const [is_submitting, setIsSubmitting] = React.useState (false);
   const [image_preview, setImagePreview] = React.useState (null as string | null);
   const [active_tab, setActiveTab] = React.useState ("manual");
-;
+
   // Initialize the form;
   const form = use_form < ProductFormValues>({
     resolver: zod_resolver (product_schema),
@@ -208,14 +205,14 @@ function ProductSubmissionForm() {
       description: "",
       price: "",
       category: "",
-      tags: ""}}),
+      tags: ""}),
   // Handle image upload preview;
   const handleImageChange = (e: React.ChangeEvent < HTMLInputElement>) =>: any {
     const file = e.target.files?.[0],
     // Check condition
 if ( {) {
   $2
-}
+
       form.set_value ("image", file);
       const reader = new FileReader ();
       reader.onloadend = () => {
@@ -223,27 +220,26 @@ if ( {) {
       }
       reader.readAsDataURL (file);
     }
-  }
-;
+
   // Apply AI - generated content to the form;
   const handleApplyGenerated = (content: any) =>: any {
     form.set_value ("description", content.description);
-    form.set_value ("tags", content.tags.join (", "));
-;
+    form.set_value ("tags", content.tags.join (", ");
+
     // Set a default price as the middle of the suggested range;
-    const average_price = ((content.suggested_price.min + content.suggested_price.max) / 2).to_fixed (2);
+    const average_price = (content.suggested_price.min + content.suggested_price.max) / 2).to_fixed (2);
     form.set_value ("price", average_price);
-;
+
     // Switch to the manual tab to show applied content;
     setActiveTab ("manual");
   }
-;
+
   // Handle form submission;
   const on_submit = async (values: ProductFormValues) => {
     // Check condition
 if ( {) {
   $2
-}
+
       toast ({
         title: "Authentication Required",
         description: "You must be logged in to publish products",
@@ -251,7 +247,7 @@ if ( {) {
       return;
     }
     setIsSubmitting (true);
-;
+
     try {
       // Create the product listing;
       const product_data = {
@@ -260,7 +256,7 @@ if ( {) {
         price: parse_float (values.price),
         category: values.category,
         currency: "USD", // Default currency;
-        tags: values.tags ? values.tags.split (', ').map (tag => tag.trim ()) : [];
+        tags: values.tags ? values.tags.split (', ').map (tag => tag.trim () : [];
         author: {
           name: user.display_name || "Anonymous Creator",
           id: user.id},
@@ -270,34 +266,34 @@ if ( {) {
         .insert ([product_data]);
         .select ('id');
         .single ();
-;
+
       // Check condition
 if ( {) {
   $2
-}
+
         throw new Error (product_error.message);
       }
       // If we have an image, upload it;
       // Check condition
 if ( {) {
   $2
-}
+
         const image_path = `product_images/${product_record.id}/${values.image.name}`;
         const { error: upload_error } = await supabase.storage;
           .from ('products');
           .upload (image_path, values.image);
-;
+
         // Check condition
 if ( {) {
   $2
-}
+
           throw new Error (upload_error.message);
         }
         // Get the public URL for the image;
         const { data: publicUrlData } = supabase.storage;
           .from ('products');
           .getPublicUrl (image_path);
-;
+
         // Update the product with the image URL;
         const { error: update_error } = await supabase;
           .from ('product_listings');
@@ -305,14 +301,13 @@ if ( {) {
             images: [publicUrlData.public_url];
           });
           .eq ('id', product_record.id);
-;
+
         // Check condition
 if ( {) {
   $2
-}
+
           throw new Error (update_error.message);
         }
-      }
       // Show success message;
       toast ({
         title: "Product Published!",
@@ -327,8 +322,7 @@ if ( {) {
     } finally {
       setIsSubmitting (false);
     }
-  }
-;
+
   return (
     <Tabs value={active_tab} onValueChange={setActiveTab} className="w - full">;
       <TabsList className="grid grid - cols - 2 mb - 6">;
@@ -526,11 +520,11 @@ if ( {) {
       <TabsContent value="ai">
         <AIListingGenerator
           onApplyGenerated={handleApplyGenerated}
-          initialValues={{
+          initialValues={
             title: form.getValues("title")
 
             category: form.getValues("category")
-          }}
+          }
         />;
       </TabsContent>;
     </Tabs>;
@@ -585,11 +579,10 @@ if ( {) {
       <TabsContent value="ai">;
         <AIListingGenerator;
           onApplyGenerated={handleApplyGenerated}
-          initial_values={{
+          initial_values={
             title: form.get_values ("title"),
             category: form.get_values ("category");
-          }}
+          }
         />;
       </TabsContent>;
     </Tabs>);
-}

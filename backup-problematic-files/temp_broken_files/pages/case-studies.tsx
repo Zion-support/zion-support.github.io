@@ -1,7 +1,7 @@
 import React from 'react',;
 import Head from 'next/head',;
 import Layout from '../components/layout/Layout',;
-;
+
 export default function CaseStudiesPage() {;
 	return (;
 		<Layout>;
@@ -16,7 +16,7 @@ export default function CaseStudiesPage() {;
 			</section>;
 		</Layout>;
 	);
-}import React from 'react';
+import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import Layout from '../components/Layout';
@@ -43,5 +43,5 @@ export default function CaseStudiesPage() {
       </div>
     </Layout>
   );
-}
+
  </Head> </section> </Layout> 

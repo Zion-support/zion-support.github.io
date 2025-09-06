@@ -6,5 +6,3 @@ export function SocialLogin() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

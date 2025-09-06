@@ -6,5 +6,3 @@ export function TalentRoutes() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

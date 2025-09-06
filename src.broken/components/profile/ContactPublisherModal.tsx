@@ -6,5 +6,3 @@ export function ContactPublisherModal() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

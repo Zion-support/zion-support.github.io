@@ -24,24 +24,24 @@ const TopicPage: NextPage<Props> = (_{topic, posts}) => {return (
         <h1 className=&quot;text-4xl font-bold mb-3&quot;>{topic}</h1>
         <div className=&quot;mb-6&quot;>          <PageShareButtons,
 title={_`${topic} - Zion Blog`}
-            url={typeof window === 'undefined' ? `https://zion.app/categories/${encodeURIComponent(topic)}` : window.location.href}
+            url={typeof window = = 'undefined' ? `https://zion.app/categories/${encodeURIComponent(topic)}` : window.location.href}
             description={_`Articles about ${topic}`}
-            onShare={_(network) => fetch('/api/analytics/share', _{ method: 'POST', headers: { 'Content-Type': 'application/json'}, body: JSON.stringify({url: window.location.href, title: `${topic} - Zion Blog`, network, utm: 'utmsource=' + network + '&utmmedium=share&utmcampaign=category' }) }).catch_(() => {})}
+            onShare={_(network) => fetch('/api/analytics/share', _{ method: 'POST', headers: { 'Content-Type': 'application/json'}, body: JSON.stringify({url: window.location.href, title: `${topic} - Zion Blog`, network, utm: 'utmsource=' + network + '&utmmedium=share&utmcampaign=category' }) }).catch_() => {})}
           />
         </div>
         <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6&quot;>
-          {posts.map((p) => (
-            <BlogCard key={p.id} post={p} />          ))}
+          {posts.map(p) => (
+            <BlogCard key={p.id} post={p} />          )}
         </div>
         <div className=&quot;mt-6&quot;><Link href=&quot;/blog&quot; className=&quot;underline&quot;>Back to Blog</a></div>
       </div>
     </div>
   )
-},
+,
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const topic = String(ctx.params?.topic || ''),
-  const posts = listPublishedPosts().filter((p) => p.topics.includes(topic)),
-  return { props: { topic, posts } }
-},
+  const posts = listPublishedPosts().filter(p) => p.topics.includes(topic),
+  return { props: { topic, posts }
+,
 export default TopicPage,

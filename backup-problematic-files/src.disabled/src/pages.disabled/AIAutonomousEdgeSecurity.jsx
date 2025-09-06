@@ -7,6 +7,5 @@ const AIAutonomousEdgeSecurity = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default AIAutonomousEdgeSecurity;

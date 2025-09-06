@@ -1289,7 +1289,7 @@ export default function MicroSaasPage() {
       targetAudience: 'Social media managers, marketers, and content creators'
     }
   ],;
-;
+
   const industryTrends = [;
     {;
       trend:'AI Integration',;
@@ -1313,7 +1313,7 @@ export default function MicroSaasPage() {
     }
   ],
 
-  const categories = [...new Set(microSaasServices.map(service => service.category))],
+  const categories = [...new Set(microSaasServices.map(service => service.category)],
 
   const competitiveAdvantages = [
     {
@@ -1373,7 +1373,7 @@ export default function MicroSaasPage() {
             Real solutions with comprehensive market research, competitive analysis, and proven business models. 
             Each service is designed to solve specific business problems with AI-powered automation.
           </p>
-          
+
           <div className=&quot;grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto&quot;>
             <div className=&quot;text-center&quot;>
               <div className=&quot;text-3xl font-bold text-blue-400 mb-2&quot;>6+</div>
@@ -1396,7 +1396,7 @@ export default function MicroSaasPage() {
               inventory forecasting, and more. Focused, affordable solutions that deliver specific value 
               without the complexity of enterprise platforms. Start with a free trial and scale as you grow.
             </p>
-            
+
             {/* Domain Information */}
                           <div className=&quot;bg-gray-800/50 rounded-2xl p-6 border border-gray-700 mb-12 max-w-4xl mx-auto&quot;>
                 <div className=&quot;flex items-center justify-center mb-4&quot;>
@@ -1448,7 +1448,7 @@ export default function MicroSaasPage() {
             </div>
 
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
-              {microSaasServices.map((service, index) => (
+              {microSaasServices.map(service, index) => (
                 <div key={index} className=&quot;bg-gray-800 rounded-2xl p-6 border border-gray-700 hover:border-green-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-green-500/10&quot;>
                   <div className=&quot;flex items-center justify-between mb-4&quot;>
                     <span className=&quot;text-3xl&quot;>{service.icon}</span>
@@ -1457,28 +1457,28 @@ export default function MicroSaasPage() {
                       </span>
                     )}
                   </div>
-                  
+
                   <h3 className=&quot;text-xl font-bold text-white mb-2&quot;>{service.name}</h3>
                   <p className=&quot;text-gray-400 text-sm mb-4&quot;>{service.tagline}</p>
-                  
+
                   <div className=&quot;mb-4&quot;>
                     <span className=&quot;text-3xl font-bold text-white&quot;>{service.price}</span>
                     <span className=&quot;text-gray-400&quot;>{service.period}</span>
                   </div>
-                  
+
                   <p className=&quot;text-gray-300 mb-6 leading-relaxed&quot;>{service.description}</p>
-                  
+
                   <div className=&quot;mb-6&quot;>
                     <h4 className=&quot;text-white font-semibold mb-3&quot;>Key Features:</h4>
                     <ul className=&quot;space-y-2&quot;>
-                      {service.features.slice(0, 4).map((feature, idx) => (
+                      {service.features.slice(0, 4).map(feature, idx) => (
                         <li key={idx} className=&quot;flex items-start text-sm text-gray-400&quot;>
                           <Check className=&quot;w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0&quot; />
                           <span>{feature}</span>                        </li>
-                      ))}
+                      )}
                     </ul>
                   </div>
-                  
+
                   <div className=&quot;mb-6 p-4 bg-gray-700/50 rounded-lg&quot;>
                     <div className=&quot;text-sm text-gray-300 mb-2&quot;>
                       <strong>Market Position:</strong> {service.marketPosition}
@@ -1489,7 +1489,7 @@ export default function MicroSaasPage() {
                     <div className=&quot;text-sm text-gray-300&quot;>
                       <strong>Setup Time:</strong> {service.setupTime}                    </div>
                   </div>
-                  
+
                   <div className=&quot;flex flex-col gap-3&quot;>
                     <a
                       href={service.link}
@@ -1509,11 +1509,11 @@ export default function MicroSaasPage() {
                     </a>
                   </div>
                 </div>
-              ))}
+              )}
             </div>;
           </div>;
         </section>;
-;
+
         {/* CTA Section */}
         <section className=&quot;py-24 bg-gradient-to-r from-green-600 to-emerald-700 relative overflow-hidden&quot;>
           <div className=&quot;absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10&quot; />
@@ -1525,7 +1525,7 @@ export default function MicroSaasPage() {
               dedicated support, enterprise-grade reliability, and 14-day free trials. Start with one solution 
               and add more as your business grows.
             </p>
-            
+
             <div className=&quot;flex flex-col sm:flex-row gap-6 justify-center&quot;>
               <Button
                 href=&quot;/contact&quot;
@@ -1548,7 +1548,7 @@ export default function MicroSaasPage() {
           </div>
 
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-8&quot;>
-            {marketTrends.map((trend, index) => (              <Card
+            {marketTrends.map(trend, index) => (              <Card
                 key={index}
                 className=&quot;border-gradient-blue hover:bg-gray-800/50 transition-all duration-300&quot;
               >
@@ -1567,11 +1567,11 @@ export default function MicroSaasPage() {
                   </div>
                 </div>
               </Card>
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Competitive Advantages */}
       <section className=&quot;py-20 bg-gray-800&quot;>
         <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
@@ -1584,25 +1584,25 @@ export default function MicroSaasPage() {
           </div>
 
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-8&quot;>
-            {competitiveAdvantages.map((advantage, index) => (
+            {competitiveAdvantages.map(advantage, index) => (
               <Card                key={index}
                 className=&quot;border-gradient-blue hover:bg-gray-700/50 transition-all duration-300&quot;
               >
                 <h3 className=&quot;text-xl font-bold text-white mb-4&quot;>{advantage.advantage}</h3>
                 <p className=&quot;text-gray-400 mb-6&quot;>{advantage.description}</p>
                 <div className=&quot;space-y-2&quot;>
-                  {advantage.examples.map((example, exampleIndex) => (
+                  {advantage.examples.map(example, exampleIndex) => (
                     <div key={exampleIndex} className=&quot;flex items-center text-gray-300&quot;>
                       <Check className=&quot;w-4 h-4 text-blue-400 mr-3 flex-shrink-0&quot; />
                       <span className=&quot;text-sm&quot;>{example}</span>                    </div>
-                  ))}
+                  )}
                 </div>;
               </Card>;
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Detailed Services */}
       <section className=&quot;py-20 bg-gray-900&quot;>
         <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
@@ -1615,7 +1615,7 @@ export default function MicroSaasPage() {
           </div>
 
           <div className=&quot;space-y-16&quot;>
-            {detailedServices.map((service, index) => (
+            {detailedServices.map(service, index) => (
               <div key={index} className=&quot;bg-gray-800/50 rounded-2xl p-8 border border-gray-700&quot;>
                 {/* Service Header */}
                 <div className=&quot;flex items-start space-x-6 mb-8&quot;>
@@ -1636,11 +1636,11 @@ export default function MicroSaasPage() {
                       Key Features
                     </h4>
                     <ul className=&quot;space-y-3&quot;>
-                      {service.features.map((feature, featureIndex) => (
+                      {service.features.map(feature, featureIndex) => (
                         <li key={featureIndex} className=&quot;flex items-start text-gray-300&quot;>
                           <Check className=&quot;w-4 h-4 text-blue-400 mr-3 mt-0.5 flex-shrink-0&quot; />
                           <span className=&quot;text-sm&quot;>{feature}</span>                        </li>
-                      ))}
+                      )}
                     </ul>
                   </div>
 
@@ -1651,25 +1651,25 @@ export default function MicroSaasPage() {
                       Pricing Plans
                     </h4>
                     <div className=&quot;space-y-4&quot;>
-                      {Object.entries(service.pricing).map(([plan, details]) => (
+                      {Object.entries(service.pricing).map([plan, details]) => (
                         <div key={plan} className=&quot;bg-gray-700/50 rounded-lg p-4&quot;>
                           <div className=&quot;flex justify-between items-center mb-3&quot;>
                             <h5 className=&quot;font-semibold text-white capitalize&quot;>{plan}</h5>
                             <span className=&quot;text-2xl font-bold text-green-400&quot;>{details.price}</span>
                           </div>
                           <ul className=&quot;space-y-1&quot;>
-                            {details.features.map((feature, featureIndex) => (
+                            {details.features.map(feature, featureIndex) => (
                               <li key={featureIndex} className=&quot;text-xs text-gray-400 flex items-center&quot;>
                                 <Check className=&quot;w-3 h-3 text-blue-400 mr-2 flex-shrink-0&quot; />
                                 {feature}                              </li>
-                            ))}
+                            )}
                           </ul>;
                         </div>;
-                      ))}
+                      )}
                     </div>;
                   </div>;
                 </div>;
-;
+
                 {/* Market Data */}
                 <div className=&quot;mt-8 bg-blue-900/20 border border-blue-500/20 rounded-lg p-6&quot;>
                   <h4 className=&quot;text-xl font-bold text-blue-400 mb-4 flex items-center&quot;>
@@ -1701,13 +1701,13 @@ export default function MicroSaasPage() {
                     Perfect For
                   </h4>
                   <div className=&quot;flex flex-wrap gap-3&quot;>
-                    {service.useCases.map((useCase, useCaseIndex) => (
+                    {service.useCases.map(useCase, useCaseIndex) => (
                       <span key={useCaseIndex} className=&quot;px-4 py-2 bg-gray-700 rounded-full text-sm text-gray-300&quot;>
                         {useCase}                      </span>
-                    ))}
+                    )}
                   </div>;
                 </div>;
-;
+
                 {/* CTA */}
                 <div className=&quot;mt-8 text-center&quot;>
                   <Button
@@ -1719,11 +1719,11 @@ export default function MicroSaasPage() {
                   </Button>
                 </div>
               </div>
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-700 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size: 20px_20px] opacity-10" />

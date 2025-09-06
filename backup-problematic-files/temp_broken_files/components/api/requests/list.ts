@@ -9,4 +9,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const items = JSON.parse(raw),
     res.status(200).json({ items })
   } catch {
-    res.status(200).json({ items: [] })  }}
+    res.status(200).json({ items: [] })  }

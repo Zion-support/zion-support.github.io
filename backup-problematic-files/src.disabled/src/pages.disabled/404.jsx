@@ -7,6 +7,5 @@ const 404 = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default 404;

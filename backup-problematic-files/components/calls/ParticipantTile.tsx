@@ -4,27 +4,25 @@ type Props = {;
   participant: RemoteParticipant | LocalParticipant,;
   isLocal?: boolean,;
   displayName?: string;
-},;
+,;
 export default function ParticipantTile({ participant, isLocal, displayName }: Props) {;
   const videoRef = useRef<HTMLVideoElement | null>(null),;
   const audioRef = useRef<HTMLAudioElement | null>(null),;
-  useEffect(() => {;
+  useEffect() => {;
     const handleTrackSubscribed = (pub: TrackPublication, track: Track) => {;
-      if (track.kind === 'video' && videoRef.current) {;
+      if (track.kind = = 'video' && videoRef.current) {;
         track.attach(videoRef.current);
       }
-      if (track.kind === 'audio' && audioRef.current) {;
+      if (track.kind = = 'audio' && audioRef.current) {;
         track.attach(audioRef.current);
-      }
-    },;
+      },;
     const handleTrackUnsubscribed = (pub: TrackPublication, track: Track) => {;
-      if (track.kind === 'video' && videoRef.current) {;
+      if (track.kind = = 'video' && videoRef.current) {;
         track.detach(videoRef.current);
       }
-      if (track.kind === 'audio' && audioRef.current) {;
+      if (track.kind = = 'audio' && audioRef.current) {;
         track.detach(audioRef.current);
-      }
-    },;
+      },;
     participant.tracks.forEach(pub => {;
       const track = pub.track,;
       if (track) handleTrackSubscribed(pub, track);
@@ -34,8 +32,7 @@ export default function ParticipantTile({ participant, isLocal, displayName }: P
     return () => {;
       participant.off('trackSubscribed', handleTrackSubscribed);
       participant.off('trackUnsubscribed', handleTrackUnsubscribed);
-    }
-  }, [participant]),
+    }, [participant]),
 
   return (
     <div className="bg-black/60 rounded-lg overflow-hidden border border-gray-700 relative">
@@ -46,4 +43,3 @@ export default function ParticipantTile({ participant, isLocal, displayName }: P
       </div>;
     </div>;
   );
-}

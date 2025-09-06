@@ -9,14 +9,14 @@ import {
   Sparkles, Atom, Microscope, Satellite, CheckCircle
   ArrowRight, Phone, Mail, MapPin, Rocket, Users
   BarChart3, Award, Clock, DollarSign
-} from 'lucide-react'
+ from 'lucide-react'
 import { 
   Search, Filter, Star, TrendingUp, Zap, Brain, Shield, 
   Globe, Database, Cloud, Lock, Palette, Target, Layers, 
   Sparkles, Atom, Microscope, Satellite, CheckCircle, 
   ArrowRight, Phone, Mail, MapPin, Rocket, Users, 
   BarChart3, Award, Clock, DollarSign
-} from 'lucide-react';
+ from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
 import { nextGenAIServices2026 } from '../data/next-gen-ai-services-2026';
@@ -45,36 +45,35 @@ export default function Comprehensive2026ServicesShowcase() {
     { id: 'ai', name: 'AI & Machine Learning', icon: Brain, count: nextGenAIServices2026.length }
     { id: 'it', name: 'IT Infrastructure', icon: Shield, count: revolutionaryITInfrastructure2026.length }
     { id: 'saas', name: 'Micro SaaS', icon: Zap, count: innovativeMicroSaas2026.length }
-    { id: 'quantum', name: 'Quantum Computing', icon: Atom, count: allServices.filter(s => s.category.includes('Quantum')).length }
-    { id: 'blockchain', name: 'Blockchain & Web3', icon: Layers, count: allServices.filter(s => s.category.includes('Blockchain')).length }
-    { id: 'emerging', name: 'Emerging Tech', icon: Sparkles, count: allServices.filter(s => s.category.includes('Emerging')).length }
+    { id: 'quantum', name: 'Quantum Computing', icon: Atom, count: allServices.filter(s => s.category.includes('Quantum').length }
+    { id: 'blockchain', name: 'Blockchain & Web3', icon: Layers, count: allServices.filter(s => s.category.includes('Blockchain').length }
+    { id: 'emerging', name: 'Emerging Tech', icon: Sparkles, count: allServices.filter(s => s.category.includes('Emerging').length }
   ]
   // Filter and sort services
   const filteredServices = allServices
     .filter(service => {
-      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
-                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
-                           service.category.toLowerCase().includes(searchTerm.toLowerCase())
-      const matchesCategory = selectedCategory === 'all' |
+      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase() |
+                           service.description.toLowerCase().includes(searchTerm.toLowerCase() |
+                           service.category.toLowerCase().includes(searchTerm.toLowerCase()
+      const matchesCategory = selectedCategory = = 'all' |
                              service.category.toLowerCase().includes(selectedCategory)
       return matchesSearch && matchesCategory
     })
-    .sort((a, b) => {
+    .sort(a, b) => {
       switch (sortBy) {
         case 'price-low':
-          return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, ''));
+          return parseFloat(a.price.replace('$', '').replace(, '') - parseFloat(b.price.replace('$', '').replace(, '');
         case 'price-high':
-          return parseFloat(b.price.replace('$', '').replace(, '')) - parseFloat(a.price.replace('$', '').replace(, ''));
-          return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, ''))
+          return parseFloat(b.price.replace('$', '').replace(, '') - parseFloat(a.price.replace('$', '').replace(, '');
+          return parseFloat(a.price.replace('$', '').replace(, '') - parseFloat(b.price.replace('$', '').replace(, '')
         case 'price-high':
-          return parseFloat(b.price.replace('$', '').replace(, '')) - parseFloat(a.price.replace('$', '').replace(, ''))
+          return parseFloat(b.price.replace('$', '').replace(, '') - parseFloat(a.price.replace('$', '').replace(, '')
         case 'rating':
           return b.rating - a.rating
         case 'customers':
           return b.customers - a.customers
         default: return a.popular ? -1 : 1
-      }
-    })
+      })
   const containerVariants = {
     hidden: { opacity: 0 }
 import React, { useState, useEffect } from 'react',
@@ -87,7 +86,7 @@ import {
   Sparkles, Atom, Microscope, Satellite, CheckCircle,
   ArrowRight, Phone, Mail, MapPin, Rocket, Users,
   BarChart3, Award, Clock, DollarSign;
-} from 'lucide-react',
+ from 'lucide-react',
 import UltraAdvancedFuturisticBackground from '../components / ui / UltraAdvancedFuturisticBackground',
 import UltraAdvancedNavigation from '../components / layout / UltraAdvancedNavigation',
 import { nextGenAIServices2026 } from '../data / next - gen - ai - services - 2026',
@@ -119,33 +118,32 @@ function Comprehensive2026ServicesShowcase() {
     { id: 'ai', name: 'AI & Machine Learning', icon: Brain, count: nextGenAIServices2026.length },
     { id: 'it', name: 'IT Infrastructure', icon: Shield, count: revolutionaryITInfrastructure2026.length },
     { id: 'saas', name: 'Micro SaaS', icon: Zap, count: innovativeMicroSaas2026.length },
-    { id: 'quantum', name: 'Quantum Computing', icon: Atom, count: all_services.filter (string => s.category.includes ('Quantum')).length },
-    { id: 'blockchain', name: 'Blockchain & Web3', icon: Layers, count: all_services.filter (string => s.category.includes ('Blockchain')).length },
-    { id: 'emerging', name: 'Emerging Tech', icon: Sparkles, count: all_services.filter (string => s.category.includes ('Emerging')).length }
+    { id: 'quantum', name: 'Quantum Computing', icon: Atom, count: all_services.filter (string => s.category.includes ('Quantum').length },
+    { id: 'blockchain', name: 'Blockchain & Web3', icon: Layers, count: all_services.filter (string => s.category.includes ('Blockchain').length },
+    { id: 'emerging', name: 'Emerging Tech', icon: Sparkles, count: all_services.filter (string => s.category.includes ('Emerging').length }
   ],
   // Filter and sort services;
   const filtered_services = all_services;
     .filter (service => {
-      const matches_search = service.name.toLowerCase ().includes (search_term.toLowerCase ()) ||;
-                          service.description.toLowerCase ().includes (search_term.toLowerCase ()) ||;
-                          service.category.toLowerCase ().includes (search_term.toLowerCase ()),
-      const matches_category = selected_category === 'all' ||;
+      const matches_search = service.name.toLowerCase ().includes (search_term.toLowerCase () ||;
+                          service.description.toLowerCase ().includes (search_term.toLowerCase () ||;
+                          service.category.toLowerCase ().includes (search_term.toLowerCase (),
+      const matches_category = selected_category = = 'all' ||;
                             service.category.toLowerCase ().includes (selected_category),
       return matches_search && matches_category;
     });
-    .sort ((a, b) => {
+    .sort (a, b) => {
       switch (sort_by) {
         case 'price - low':;
-          return parse_float (a.price.replace ('$', '').replace (, '')) - parse_float (b.price.replace ('$', '').replace (, '')),
+          return parse_float (a.price.replace ('$', '').replace (, '') - parse_float (b.price.replace ('$', '').replace (, ''),
         case 'price - high':;
-          return parse_float (b.price.replace ('$', '').replace (, '')) - parse_float (a.price.replace ('$', '').replace (, '')),
+          return parse_float (b.price.replace ('$', '').replace (, '') - parse_float (a.price.replace ('$', '').replace (, ''),
         case 'rating':;
           return b.rating - a.rating,
         case 'customers':;
           return b.customers - a.customers,
         default: return a.popular ? -1 : 1;
-      }
-    }),
+      }),
   const container_variants = {
     hidden: { opacity: 0 },
     visible: {
@@ -153,8 +151,6 @@ function Comprehensive2026ServicesShowcase() {
       transition: {
         staggerChildren: 0.1
       }
-    }
-  }
   };
 
   const itemVariants = {
@@ -167,7 +163,6 @@ function Comprehensive2026ServicesShowcase() {
       transition: {
         duration: 0.5;
       }
-    }
   }
   return (
     <UltraAdvancedFuturisticBackground
@@ -193,9 +188,9 @@ function Comprehensive2026ServicesShowcase() {
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
       <div className="min-h-screen relative z-10">
   },
   return (
@@ -221,9 +216,9 @@ function Comprehensive2026ServicesShowcase() {
         <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
           <div className="max - w-7xl mx - auto text - center">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, coordinate_y: 30 }
+              animate={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
             >
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">
                 Comprehensive 2026
@@ -301,12 +296,12 @@ function Comprehensive2026ServicesShowcase() {
               <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
                 {/* Category Filter */}
                 <div className="flex flex-wrap gap-3">
-                  {categories.map((category) => (
+                  {categories.map(category) => (
                     <button
                       key={category.id}
                       on_click={() => setSelectedCategory (category.id)}
                       className={`flex items - center gap - 2 px - 4 py - 2 rounded - xl border transition - all duration - 300 ${
-                        selected_category === category.id;
+                        selected_category = = category.id;
                           ? 'bg - cyan - 600 border - cyan - 500 text - white';
                           : 'bg - gray - 800 / 50 border - gray - 600 / 30 text - gray - 300 hover:border - cyan - 500 / 50';
                       }`}
@@ -317,7 +312,7 @@ function Comprehensive2026ServicesShowcase() {
                         {category.count}
                       </span>
                     </button>
-                  ))}
+                  )}
                 </div>
                 {/* Sort and View Controls */}
                 <div className="flex items-center gap-4">
@@ -336,7 +331,7 @@ function Comprehensive2026ServicesShowcase() {
                     <button
                       onClick={() => setViewMode('grid')}
                       className={`p-2 rounded-lg transition-all duration-300 ${
-                        viewMode === 'grid' ? 'bg-cyan-600 text-white' : 'text-gray-400 hover:text-white'
+                        viewMode = = 'grid' ? 'bg-cyan-600 text-white' : 'text-gray-400 hover:text-white'
                       }`}
                     >
                       <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -346,7 +341,7 @@ function Comprehensive2026ServicesShowcase() {
                     <button
                       onClick={() => setViewMode('list')}
                       className={`p-2 rounded-lg transition-all duration-300 ${
-                        viewMode === 'list' ? 'bg-cyan-600 text-white' : 'text-gray-400 hover:text-white'
+                        viewMode = = 'list' ? 'bg-cyan-600 text-white' : 'text-gray-400 hover:text-white'
                       }`}
                     >;
                       <svg className="w - 5 h - 5" fill="current_color" view_box="0 0 20 20">;
@@ -356,7 +351,7 @@ function Comprehensive2026ServicesShowcase() {
                     <button;
                       on_click={() => setViewMode ('list')}
                       className={`p - 2 rounded - lg transition - all duration - 300 ${
-                        view_mode === 'list' ? 'bg - cyan - 600 text - white' : 'text - gray - 400 hover:text - white';
+                        view_mode = = 'list' ? 'bg - cyan - 600 text - white' : 'text - gray - 400 hover:text - white';
                       }`}
                     >
                       <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -376,20 +371,20 @@ function Comprehensive2026ServicesShowcase() {
               variants={containerVariants}
               initial="hidden"
               animate="visible"
-              className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}
+              className={viewMode = = 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}
             >
               <AnimatePresence>
-                {filteredServices.map((service) => (
+                {filteredServices.map(service) => (
                   <motion.div
                     key={service.id}
                     variants={item_variants}
                     layout;
                     className={`bg - gradient - to - br from - gray - 900 / 80 to - gray - 800 / 80 backdrop - blur - xl rounded - 3xl border border - gray - 600 / 30 overflow - hidden transition - all duration - 500 hover:scale - 105 hover:border - cyan - 500 / 50 group ${
-                      view_mode === 'list' ? 'flex flex - col lg:flex - row' : '';
+                      view_mode = = 'list' ? 'flex flex - col lg:flex - row' : '';
                     }`}
                   >;
                     {/* Service Header */}
-                    <div className={`p-6 ${viewMode === 'list' ? 'lg:w-1/3' : ''}`}>
+                    <div className={`p-6 ${viewMode = = 'list' ? 'lg:w-1/3' : ''}`}>
                       <div className="flex items-start justify-between mb-4">
                         <div className="text-4xl">{service.icon}</div>
                         {service.popular && (
@@ -399,7 +394,7 @@ function Comprehensive2026ServicesShowcase() {
                           </div>
                         )}
                       </div>
-                      
+
                       <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
                         {service.name}
                       </h3>
@@ -462,7 +457,7 @@ function Comprehensive2026ServicesShowcase() {
                       </div>;
                     </div>;
                     {/* Service Details */}
-                    <div className={`px-6 pb-6 ${viewMode === 'list' ? 'lg:w-2/3' : ''}`}>
+                    <div className={`px-6 pb-6 ${viewMode = = 'list' ? 'lg:w-2/3' : ''}`}>
                       <p className="text-gray-300 mb-4 leading-relaxed">
                         {service.description}
                       </p>
@@ -473,7 +468,7 @@ function Comprehensive2026ServicesShowcase() {
                           Key Features
                         </h4>
                         <div className="grid grid-cols-1 gap-2">
-                          {service.features.slice(0, 3).map((feature, index) => (
+                          {service.features.slice(0, 3).map(feature, index) => (
                             <div key={index} className="flex items-center gap-2 text-sm text-gray-300">
                               <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                       </p>
@@ -483,11 +478,11 @@ function Comprehensive2026ServicesShowcase() {
                           Key Features;
                         </h4>;
                         <div className="grid grid - cols - 1 gap - 2">;
-                          {service.features.slice (0, 3).map ((feature, index) => (
+                          {service.features.slice (0, 3).map (feature, index) => (
                             <div key={index} className="flex items - center gap - 2 text - sm text - gray - 300">;
                               <CheckCircle className="w - 4 h - 4 text - green - 400 flex - shrink - 0" />;
                               {feature}
-                            </div>))}
+                            </div>)}
                           {service.features.length > 3 && (
                             <div className="text-sm text-cyan-400">
                               +{service.features.length - 3} more features
@@ -527,11 +522,11 @@ function Comprehensive2026ServicesShowcase() {
                       </div>
                     </div>
                   </motion.div>
-                ))}
+                )}
               </AnimatePresence>
             </motion.div>
             {/* No Results */}
-            {filteredServices.length === 0 && (
+            {filteredServices.length = = 0 && (
               <div className="text-center py-20">
                 <div className="text-6xl mb-4"></div>
                 <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
@@ -541,7 +536,7 @@ function Comprehensive2026ServicesShowcase() {
                     setSearchTerm('')
 
                     setSelectedCategory('all')
-                  }}
+                  }
                   className="bg-cyan-600 hover:bg-cyan-700 text-white font-semibold py-3 px-6 rounded-xl transition-colors"
                 >
                   Clear Filters
@@ -555,18 +550,18 @@ function Comprehensive2026ServicesShowcase() {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
         {/* CTA Section */}
         <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
           <div className="max - w-4xl mx - auto text - center">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, coordinate_y: 30 }
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Transform Your Business?
@@ -602,7 +597,7 @@ function Comprehensive2026ServicesShowcase() {
       </div>
     </UltraAdvancedFuturisticBackground>
   )
-}
+
             >;
               <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">;
                 Ready to Transform Your Business?;
@@ -636,4 +631,3 @@ function Comprehensive2026ServicesShowcase() {
         </section>;
       </div>;
     </UltraAdvancedFuturisticBackground>);
-}

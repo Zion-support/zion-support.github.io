@@ -6,7 +6,7 @@ import {
   Heart, DollarSign, Factory, ShoppingCart, Building2,
   GraduationCap, Leaf, Shield, ArrowRight, Star, CheckCircle,
   Users, Globe, Cpu, Database, Network, Target
-} from 'lucide-react',
+ from 'lucide-react',
 const SolutionsPage: React.FC = () => {_const _industrySolutions = [
     {
       category: 'Healthcare & Life Sciences', _solutions: [
@@ -171,47 +171,47 @@ const SolutionsPage: React.FC = () => {_const _industrySolutions = [
           <div className=&quot;max-w-7xl mx-auto text-center&quot;>
             <motion.h1 
               className=&quot;text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6&quot;
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}            >
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }            >
               Revolutionary Solutions
             </motion.h1>
             <motion.p 
               className=&quot;text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12&quot;
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}            >
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8, delay: 0.2 }            >
               Transform your business with our cutting-edge technology solutions. From AI-powered tools to quantum computing platforms, _we deliver innovation that drives results.
             </motion.p>
-            
+
             {_/* Stats Grid */}
             <motion.div 
               className=&quot;grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto&quot;
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8, delay: 0.4 }
             >
-              {stats.map((stat, index) => (
+              {stats.map(stat, index) => (
                 <div key={index} className=&quot;text-center&quot;>
                   <div className=&quot;flex justify-center mb-2 text-cyan-400&quot;>
                     {stat.icon}
                   </div>
                   <div className=&quot;text-3xl font-bold text-white mb-1&quot;>{stat.value}</div>
                   <div className=&quot;text-sm text-gray-400&quot;>{stat.label}</div>                </div>
-              ))}
+              )}
             </motion.div>;
           </div>;
         </section>;
-;
+
         {/* Solutions Grid */}
         <section className=&quot;py-20 px-4 sm:px-6 lg:px-8&quot;>
           <div className=&quot;max-w-7xl mx-auto&quot;>
             <motion.div 
               className=&quot;text-center mb-16&quot;
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}            >
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }            >
               <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-6&quot;>
                 Our Solution Portfolio
               </h2>
@@ -221,34 +221,33 @@ const SolutionsPage: React.FC = () => {_const _industrySolutions = [
             </motion.div>
 
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
-              {solutions.map((solution, index) => (
+              {solutions.map(solution, index) => (
                 <motion.div
                   key={index}
                   className=&quot;group relative bg-black/40 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105&quot;
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}                >
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }
+                  viewport={ once: true }                >
                   <div className={_`w-16 h-16 bg-gradient-to-br ${solution.color} rounded-xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300`}>
                     {_solution.icon}
                   </div>
-                  
+
                   <h3 className=&quot;text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300&quot;>
                     {solution.title}
                   </h3>
-                  
+
                   <p className=&quot;text-gray-300 mb-6 leading-relaxed&quot;>
                     {solution.description}
                   </p>
-                  
+
                   <ul className=&quot;space-y-3 mb-8&quot;>
-                    {solution.features.map((feature, featureIndex) => (
+                    {solution.features.map(feature, featureIndex) => (
                       <li key={featureIndex} className=&quot;flex items-center space-x-3&quot;>
                         <CheckCircle className=&quot;w-5 h-5 text-cyan-400 flex-shrink-0&quot; />
                         <span className=&quot;text-gray-300&quot;>{feature}</span>                      </li>
-                    ))}
+                    )}
                   </ul>;
-                  ;
                   <a;
                     href={solution.href}
                     className=&quot;inline-flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 group-hover:translate-x-1&quot;                  >
@@ -256,7 +255,7 @@ const SolutionsPage: React.FC = () => {_const _industrySolutions = [
                     <ArrowRight className=&quot;w-4 h-4&quot; />
                   </a>
                 </motion.div>
-              ))}
+              )}
             </div>
             <h1 className=&quot;text-5xl md:text-6xl font-bold text-white mb-6&quot;>
               Industry Solutions
@@ -287,10 +286,10 @@ const SolutionsPage: React.FC = () => {_const _industrySolutions = [
       <section className=&quot;py-20 px-4 bg-black&quot;>
         <div className=&quot;max-w-7xl mx-auto&quot;>
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
             className=&quot;text-center mb-16&quot;          >
             <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-6&quot;>
               Industry-Specific Solutions
@@ -301,23 +300,23 @@ const SolutionsPage: React.FC = () => {_const _industrySolutions = [
           </motion.div>
 
           <div className=&quot;space-y-16&quot;>
-            {industrySolutions.map((category, categoryIndex) => (
+            {industrySolutions.map(category, categoryIndex) => (
               <motion.div                key={category.category}
-                initial={_{ opacity: 0, _y: 30}}
-                whileInView={_{ opacity: 1, _y: 0}}
-                transition={_{ duration: 0.8, _delay: categoryIndex * 0.2}}
-                viewport={_{ once: true}}
+                initial={_{ opacity: 0, _y: 30}
+                whileInView={_{ opacity: 1, _y: 0}
+                transition={_{ duration: 0.8, _delay: categoryIndex * 0.2}
+                viewport={_{ once: true}
               >
                 <h3 className=&quot;text-3xl font-bold text-white mb-8 text-center&quot;>
                   {category.category}
                 </h3>
                 <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
-                  {category.solutions.map((solution, solutionIndex) => (                    <motion.div
+                  {category.solutions.map(solution, solutionIndex) => (                    <motion.div
                       key={solution.name}
-                      initial={_{ opacity: 0, _y: 30}}
-                      whileInView={_{ opacity: 1, _y: 0}}
-                      transition={_{ duration: 0.6, _delay: solutionIndex * 0.1}}
-                      viewport={_{ once: true}}
+                      initial={_{ opacity: 0, _y: 30}
+                      whileInView={_{ opacity: 1, _y: 0}
+                      transition={_{ duration: 0.6, _delay: solutionIndex * 0.1}
+                      viewport={_{ once: true}
                       className={_`bg-gradient-to-br from-gray-900/50 to-gray-800/50 border rounded-2xl p-6 backdrop-blur-sm hover:border-green-500/40 transition-all duration-300 ${
                         solution.featured ? 'border-green-500/30' : 'border-gray-700/50'}`}
                     >
@@ -338,21 +337,21 @@ const SolutionsPage: React.FC = () => {_const _industrySolutions = [
                         Learn More <ArrowRight className=&quot;ml-2 w-4 h-4&quot; />
                       </a>
                     </motion.div>
-                  ))}
+                  )}
                 </div>;
               </motion.div>;
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* CTA Section */}
       <section className=&quot;py-20 px-4 bg-gradient-to-r from-green-900/20 to-emerald-900/20&quot;>
         <div className=&quot;max-w-4xl mx-auto text-center&quot;>          <motion.div
-            initial={_{ opacity: 0, _y: 30}}
-            whileInView={_{ opacity: 1, _y: 0}}
-            transition={_{ duration: 0.8}}
-            viewport={_{ once: true}}
+            initial={_{ opacity: 0, _y: 30}
+            whileInView={_{ opacity: 1, _y: 0}
+            transition={_{ duration: 0.8}
+            viewport={_{ once: true}
           >
             <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>
               Ready to Transform Your Industry?
@@ -379,6 +378,6 @@ const SolutionsPage: React.FC = () => {_const _industrySolutions = [
       </section>
     </Layout>
   )
-},
+,
 
 export default Solutions,

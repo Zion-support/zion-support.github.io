@@ -2,7 +2,6 @@ import React from 'react';
 
 interface HelpProps {
   className?: string;
-}
 
 const Help: React.FC<HelpProps> = ({ className }) => {
   return (
@@ -11,6 +10,5 @@ const Help: React.FC<HelpProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default Help;

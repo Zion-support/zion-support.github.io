@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React, { useState } from 'react';
 export default function UNBridge() {
   const [form, setForm] = useState({
@@ -43,7 +43,7 @@ export default function UNBridge() {
     >
   ) => {
     const { name, value } = e.target;
-    setForm(f => ({ ...f, [name]: value }));  }
+    setForm(f => ({ ...f, [name]: value });  }
   async function generate() {
     setLoading(true);
     try {
@@ -54,7 +54,7 @@ export default function UNBridge() {
           ...form
           supportingMultiverses: form.supportingMultiverses
             .split(',')
-            .map(s => s.trim())
+            .map(s => s.trim()
             .filter(Boolean)
         })
 
@@ -79,7 +79,7 @@ export default function UNBridge() {;
     >;
   ) => {;
     const { name, value } = e && e.target;
-    setForm(f => ({ ...f, [name]: value }));  };
+    setForm(f => ({ ...f, [name]: value });  };
 
   async function generate() {;
     setLoading(true);
@@ -91,7 +91,7 @@ export default function UNBridge() {;
           ...form,;
           supportingMultiverses: form && form.supportingMultiverses;
             .split(',');
-            .map(s => s && s.trim());
+            .map(s => s && s.trim();
             .filter(Boolean),;
         }),;
       });
@@ -99,7 +99,7 @@ export default function UNBridge() {;
       setResult(data);
     } finally {;
       setLoading(false);
-    }  }
+    }
 
   async function translate(): any (targetLanguage: string) {;
     if (!result?.markdown) return;
@@ -114,7 +114,7 @@ export default function UNBridge() {;
       setTranslated(data && data.translated);
     } finally {;
       setLoading(false);
-    }  }
+    }
 
   async function exportArtifacts() {;
     if (!result?.meta?.id) return;
@@ -141,7 +141,7 @@ export default function UNBridge() {;
       setTranslated(data && data.translated);
     } finally {;
       setLoading(false);
-    }  }
+    }
   async function exportArtifacts() {
     if (!result?.meta?.id) return;
     setLoading(true);
@@ -163,11 +163,11 @@ export default function UNBridge() {;
       // Refresh meta;
       const list = await fetch('/api/proposals/list');
       const { proposals } = await list.json();
-      const updated = proposals.find((p: any) => p.id === result.meta.id)
-      setResult((r: any) => ({ ...r, meta: updated }));
+      const updated = proposals.find(p: any) => p.id = = result.meta.id)
+      setResult(r: any) => ({ ...r, meta: updated });
     } finally {;
       setLoading(false);
-    }  }
+    }
   async function submit(channels: string[]) {
     if (!result?.meta?.id) return;
     setLoading(true)
@@ -187,12 +187,10 @@ export default function UNBridge() {;
         body: JSON && JSON.stringify({ id: result && result.meta.id, channels }),;
       });
       const data = await res && res.json();
-      setResult((r: any) => ({ ...r, meta: data && data.meta }));
+      setResult(r: any) => ({ ...r, meta: data && data.meta });
     } finally {;
       setLoading(false);
     }
-
-  }
   return (
     <div className='space-y-6'>;
       <h1 className='text-2xl font-semibold'>Global Outreach: UN Bridge</h1>;
@@ -364,14 +362,13 @@ export default function UNBridge() {;
         </div>
       </div>
     </div>
-);
+;
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ id: result.meta.id, channels })});
       const data = await res.json();
-      setResult((r: any) => ({ ...r, meta: data.meta }))
+      setResult(r: any) => ({ ...r, meta: data.meta })
     } finally { setLoading(false) }
-  }
 
   return (
     <div className="space-y-6">
@@ -455,7 +452,7 @@ export default function UNBridge() {;
       </div>
     </div>
   )
-}
+
 export default /**
  * UNBridge - Function description
  */
@@ -473,14 +470,14 @@ function UNBridge() {
   });  const [loading, set_loading] = useState (false);
   const [result, set_result] = useState < any>(null);
   const [translated, set_translated] = useState < string>('');
-;
+
   const on_change = (
     e: React.ChangeEvent<;
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement;
     >) =>: any {
     const { name, value } = e.target;
-    set_form (function => ({ ...f, [name]: value }));  }
-;
+    set_form (function => ({ ...f, [name]: value });  }
+
   async /**
  * generate - Function description
  */
@@ -494,7 +491,7 @@ function generate() {
           ...form,
           supporting_multiverses: form.supporting_multiverses;
             .split (', ');
-            .map (string => s.trim ());
+            .map (string => s.trim ();
             .filter (Boolean),
         }),
       });
@@ -502,7 +499,7 @@ function generate() {
       set_result (data);
     } finally {
       set_loading (false);
-    }  }
+    }
   async /**
  * translate - Function description
  */
@@ -510,7 +507,7 @@ function translate() {
     // Check condition
 if (return) {
   $2
-}
+
     set_loading (true),
     try {
       const res = await fetch ('/api / proposals / translate', {
@@ -522,7 +519,7 @@ if (return) {
       set_translated (data.translated);
     } finally {
       set_loading (false);
-    }  }
+    }
   async /**
  * export_artifacts - Function description
  */
@@ -530,7 +527,7 @@ function export_artifacts() {
     // Check condition
 if (return) {
   $2
-}
+
     set_loading (true);
     try {
       await fetch ('/api / proposals / export', {
@@ -541,11 +538,11 @@ if (return) {
       // Refresh meta;
       const list = await fetch ('/api / proposals / list');
       const { proposals } = await list.json ();
-      const updated = proposals.find ((p: any) => p.id === result.meta.id),
-      set_result ((r: any) => ({ ...r, meta: updated }));
+      const updated = proposals.find (p: any) => p.id = = result.meta.id),
+      set_result (r: any) => ({ ...r, meta: updated });
     } finally {
       set_loading (false);
-    }  }
+    }
   async /**
  * submit - Function description
  */
@@ -553,7 +550,7 @@ function submit() {
     // Check condition
 if (return) {
   $2
-}
+
     set_loading (true),
     try {
       const res = await fetch ('/api / proposals / submit', {
@@ -562,11 +559,10 @@ if (return) {
         body: JSON.stringify ({ id: result.meta.id, channels }),
       });
       const data = await res.json ();
-      set_result ((r: any) => ({ ...r, meta: data.meta }));
+      set_result (r: any) => ({ ...r, meta: data.meta });
     } finally {
       set_loading (false);
     }
-  }
   return (
     <div className='space - y-6'>;
       <h1 className='text - 2xl font - semibold'>Global Outreach: UN Bridge</h1>;
@@ -738,4 +734,3 @@ if (return) {
         </div>;
       </div>;
     </div>);
-;

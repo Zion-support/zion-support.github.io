@@ -7,7 +7,6 @@ interface CategoryCardProps {
   icon: React.ComponentType<any>;
   href: string;
   color: string;
-}
 
 export function CategoryCard({ title, description, icon: Icon, href, color }: CategoryCardProps) {
   return (
@@ -25,4 +24,3 @@ export function CategoryCard({ title, description, icon: Icon, href, color }: Ca
       </div>
     </Link>
   );
-}

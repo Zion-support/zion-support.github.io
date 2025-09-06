@@ -4,10 +4,10 @@ import { motion } from 'framer-motion',;
 import { ;
   Brain, BarChart3, TrendingUp, Users, Target, Zap, ;
   Shield, Database, Globe, ArrowRight, CheckCircle, Star;
-} from 'lucide-react',;
+ from 'lucide-react',;
 import EnhancedNavigation from '../components/EnhancedNavigation',;
 import EnhancedFooter from '../components/EnhancedFooter',;
-;
+
 export default function AIBusinessIntelligencePage() {;
   const features = [;
     {;
@@ -47,7 +47,7 @@ export default function AIBusinessIntelligencePage() {;
       color:"from-yellow-500 to-orange-500";
     }
   ],;
-;
+
   const benefits = [;
     "Increase revenue by 25-40% through data-driven insights",;
     "Reduce operational costs by 15-30% with process optimization",;
@@ -56,7 +56,7 @@ export default function AIBusinessIntelligencePage() {;
     "Reduce manual reporting time by 80% with automation",;
     "Achieve 99.9% data accuracy with AI-powered validation";
   ],;
-;
+
   const useCases = [;
     {;
       industry:"Retail & E-commerce",;
@@ -79,7 +79,7 @@ export default function AIBusinessIntelligencePage() {;
       results:"45% reduction in downtime, 35% improvement in product quality";
     }
   ],;
-;
+
   const pricing = [;
     {;
       plan:"Starter",;
@@ -128,7 +128,7 @@ export default function AIBusinessIntelligencePage() {;
       popular:false;
     }
   ],;
-;
+
   return (;
     <>;
       <Head>;
@@ -140,16 +140,16 @@ export default function AIBusinessIntelligencePage() {;
         <meta property="og:type" content="website" />;
         <meta property="og:url" content="https://ziontechgroup.com/ai-business-intelligence" />;
       </Head>;
-;
+
       <EnhancedNavigation />;
-;
+
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
         <div className="max-w-7xl mx-auto px-6">;
           <motion.div;
-            initial={{ opacity:0, y:20 }}
-            animate={{ opacity:1, y:0 }}
-            transition={{ duration:0.6 }}
+            initial={ opacity:0, y:20 }
+            animate={ opacity:1, y:0 }
+            transition={ duration:0.6 }
             className="text-center";
           >;
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">;
@@ -180,14 +180,14 @@ export default function AIBusinessIntelligencePage() {;
           </motion.div>;
         </div>;
       </section>;
-;
+
       {/* Features */}
       <section className="py-20 bg-white">;
         <div className="max-w-7xl mx-auto px-6">;
           <motion.div;
-            initial={{ opacity:0, y:20 }}
-            whileInView={{ opacity:1, y:0 }}
-            transition={{ duration:0.6 }}
+            initial={ opacity:0, y:20 }
+            whileInView={ opacity:1, y:0 }
+            transition={ duration:0.6 }
             className="text-center mb-16";
           >;
             <h2 className="text-4xl font-bold text-slate-900 mb-6">Powerful Features</h2>;
@@ -195,14 +195,14 @@ export default function AIBusinessIntelligencePage() {;
               Everything you need to transform your business data into strategic insights.;
             </p>;
           </motion.div>;
-;
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {features.map((feature, index) => (;
+            {features.map(feature, index) => (;
               <motion.div;
                 key={feature.title}
-                initial={{ opacity:0, y:20 }}
-                whileInView={{ opacity:1, y:0 }}
-                transition={{ duration:0.6, delay:index * 0.1 }}
+                initial={ opacity:0, y:20 }
+                whileInView={ opacity:1, y:0 }
+                transition={ duration:0.6, delay:index * 0.1 }
                 className="bg-slate-50 rounded-2xl p-8 hover:bg-slate-100 transition-all duration-300 transform hover:-translate-y-2";
               >;
                 <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${feature.color} flex items-center justify-center mb-6`}>;
@@ -211,19 +211,19 @@ export default function AIBusinessIntelligencePage() {;
                 <h3 className="text-xl font-bold text-slate-900 mb-4">{feature.title}</h3>;
                 <p className="text-slate-600 leading-relaxed">{feature.description}</p>;
               </motion.div>;
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Benefits */}
       <section className="py-20 bg-slate-50">;
         <div className="max-w-7xl mx-auto px-6">;
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">;
             <motion.div;
-              initial={{ opacity:0, x:-20 }}
-              whileInView={{ opacity:1, x:0 }}
-              transition={{ duration:0.6 }}
+              initial={ opacity:0, x:-20 }
+              whileInView={ opacity:1, x:0 }
+              transition={ duration:0.6 }
             >;
               <h2 className="text-4xl font-bold text-slate-900 mb-6">Why Choose AI Business Intelligence?</h2>;
               <p className="text-lg text-slate-600 leading-relaxed mb-8">;
@@ -231,25 +231,25 @@ export default function AIBusinessIntelligencePage() {;
                 From increased revenue to reduced costs, see the difference data-driven decisions can make.;
               </p>;
               <div className="space-y-4">;
-                {benefits.map((benefit, index) => (;
+                {benefits.map(benefit, index) => (;
                   <motion.div;
                     key={benefit}
-                    initial={{ opacity:0, x:-20 }}
-                    whileInView={{ opacity:1, x:0 }}
-                    transition={{ duration:0.6, delay:index * 0.1 }}
+                    initial={ opacity:0, x:-20 }
+                    whileInView={ opacity:1, x:0 }
+                    transition={ duration:0.6, delay:index * 0.1 }
                     className="flex items-center space-x-3";
                   >;
                     <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0" />;
                     <span className="text-slate-700">{benefit}</span>;
                   </motion.div>;
-                ))}
+                )}
               </div>;
             </motion.div>;
-;
+
             <motion.div;
-              initial={{ opacity:0, x:20 }}
-              whileInView={{ opacity:1, x:0 }}
-              transition={{ duration:0.6, delay:0.2 }}
+              initial={ opacity:0, x:20 }
+              whileInView={ opacity:1, x:0 }
+              transition={ duration:0.6, delay:0.2 }
               className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8";
             >;
               <h3 className="text-2xl font-bold text-slate-900 mb-6">Key Metrics</h3>;
@@ -271,14 +271,14 @@ export default function AIBusinessIntelligencePage() {;
           </div>;
         </div>;
       </section>;
-;
+
       {/* Use Cases */}
       <section className="py-20 bg-white">;
         <div className="max-w-7xl mx-auto px-6">;
           <motion.div;
-            initial={{ opacity:0, y:20 }}
-            whileInView={{ opacity:1, y:0 }}
-            transition={{ duration:0.6 }}
+            initial={ opacity:0, y:20 }
+            whileInView={ opacity:1, y:0 }
+            transition={ duration:0.6 }
             className="text-center mb-16";
           >;
             <h2 className="text-4xl font-bold text-slate-900 mb-6">Industry Applications</h2>;
@@ -286,14 +286,14 @@ export default function AIBusinessIntelligencePage() {;
               See how businesses across different industries are leveraging AI to transform their operations.;
             </p>;
           </motion.div>;
-;
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
-            {useCases.map((useCase, index) => (;
+            {useCases.map(useCase, index) => (;
               <motion.div;
                 key={useCase.industry}
-                initial={{ opacity:0, y:20 }}
-                whileInView={{ opacity:1, y:0 }}
-                transition={{ duration:0.6, delay:index * 0.1 }}
+                initial={ opacity:0, y:20 }
+                whileInView={ opacity:1, y:0 }
+                transition={ duration:0.6, delay:index * 0.1 }
                 className="bg-slate-50 rounded-2xl p-8 hover:bg-slate-100 transition-all duration-300";
               >;
                 <h3 className="text-2xl font-bold text-slate-900 mb-4">{useCase.industry}</h3>;
@@ -302,18 +302,18 @@ export default function AIBusinessIntelligencePage() {;
                   <p className="text-green-800 font-medium">Results:{useCase.results}</p>;
                 </div>;
               </motion.div>;
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Pricing */}
       <section className="py-20 bg-slate-900">;
         <div className="max-w-7xl mx-auto px-6">;
           <motion.div;
-            initial={{ opacity:0, y:20 }}
-            whileInView={{ opacity:1, y:0 }}
-            transition={{ duration:0.6 }}
+            initial={ opacity:0, y:20 }
+            whileInView={ opacity:1, y:0 }
+            transition={ duration:0.6 }
             className="text-center mb-16";
           >;
             <h2 className="text-4xl font-bold text-white mb-6">Simple, Transparent Pricing</h2>;
@@ -321,14 +321,14 @@ export default function AIBusinessIntelligencePage() {;
               Choose the plan that fits your business needs. All plans include our core AI features.;
             </p>;
           </motion.div>;
-;
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
-            {pricing.map((plan, index) => (;
+            {pricing.map(plan, index) => (;
               <motion.div;
                 key={plan.plan}
-                initial={{ opacity:0, y:20 }}
-                whileInView={{ opacity:1, y:0 }}
-                transition={{ duration:0.6, delay:index * 0.1 }}
+                initial={ opacity:0, y:20 }
+                whileInView={ opacity:1, y:0 }
+                transition={ duration:0.6, delay:index * 0.1 }
                 className={`relative bg-white rounded-2xl p-8 ${;
                   plan.popular ? 'ring-2 ring-blue-500 transform scale-105' :'';
                 }`}
@@ -436,9 +436,9 @@ export default function AIBusinessIntelligencePage() {;
       <section className="pt-32 pb-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div,
-initial={_{ opacity: 0, y: 20}}
-            animate={_{ opacity: 1, y: 0}}
-            transition={_{ duration: 0.6}}
+initial={_{ opacity: 0, y: 20}
+            animate={_{ opacity: 1, y: 0}
+            transition={_{ duration: 0.6}
             className="text-center"
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -471,9 +471,9 @@ href="#demo"
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div,
-initial={_{ opacity: 0, y: 20}}
-            whileInView={_{ opacity: 1, y: 0}}
-            transition={_{ duration: 0.6}}
+initial={_{ opacity: 0, y: 20}
+            whileInView={_{ opacity: 1, y: 0}
+            transition={_{ duration: 0.6}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-slate-900 mb-6">Powerful Features</h2>
@@ -488,12 +488,12 @@ initial={_{ opacity: 0, y: 20}}
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+            {features.map(feature, index) => (
               <motion.div,
 key={feature.title}
-                initial={_{ opacity: 0, y: 20}}
-                whileInView={_{ opacity: 1, y: 0}}
-                transition={_{ duration: 0.6, delay: index * 0.1}}
+                initial={_{ opacity: 0, y: 20}
+                whileInView={_{ opacity: 1, y: 0}
+                transition={_{ duration: 0.6, delay: index * 0.1}
                 className="bg-slate-50 rounded-2xl p-8 hover:bg-slate-100 transition-all duration-300 transform hover:-translate-y-2"
               >
                 <div className={_`w-16 h-16 rounded-xl bg-gradient-to-br ${feature.color} flex items-center justify-center mb-6`}>
@@ -502,7 +502,7 @@ key={feature.title}
                 <h3 className="text-xl font-bold text-slate-900 mb-4">{feature.title}</h3>
                 <p className="text-slate-600 leading-relaxed">{feature.description}</p>
               </motion.div>
-            ))}          </div>
+            )}          </div>
         </div>
 
       {_/* Benefits */}
@@ -510,9 +510,9 @@ key={feature.title}
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <motion.div,
-initial={_{ opacity: 0, x: -20}}
-              whileInView={_{ opacity: 1, x: 0}}
-              transition={_{ duration: 0.6}}
+initial={_{ opacity: 0, x: -20}
+              whileInView={_{ opacity: 1, x: 0}
+              transition={_{ duration: 0.6}
             >
               <h2 className="text-4xl font-bold text-slate-900 mb-6">Why Choose AI Business Intelligence?</h2>
               <p className="text-lg text-slate-600 leading-relaxed mb-8">
@@ -523,22 +523,22 @@ initial={_{ opacity: 0, x: -20}}
                 {benefits.map(_(benefit, index) => (
                   <motion.div,
 key={benefit}
-                    initial={_{ opacity: 0, x: -20}}
-                    whileInView={_{ opacity: 1, x: 0}}
-                    transition={_{ duration: 0.6, delay: index * 0.1}}
+                    initial={_{ opacity: 0, x: -20}
+                    whileInView={_{ opacity: 1, x: 0}
+                    transition={_{ duration: 0.6, delay: index * 0.1}
                     className="flex items-center space-x-3"
                   >
                     <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0" />
                     <span className="text-slate-700">{benefit}</span>
                   </motion.div>
-                ))}
+                )}
               </div>
             </motion.div>
 
             <motion.div,
-initial={_{ opacity: 0, x: 20}}
-              whileInView={_{ opacity: 1, x: 0}}
-              transition={_{ duration: 0.6, delay: 0.2}}
+initial={_{ opacity: 0, x: 20}
+              whileInView={_{ opacity: 1, x: 0}
+              transition={_{ duration: 0.6, delay: 0.2}
               className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8"
             >
               <h3 className="text-2xl font-bold text-slate-900 mb-6">Key Metrics</h3>
@@ -565,9 +565,9 @@ initial={_{ opacity: 0, x: 20}}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div,
-initial={_{ opacity: 0, y: 20}}
-            whileInView={_{ opacity: 1, y: 0}}
-            transition={_{ duration: 0.6}}
+initial={_{ opacity: 0, y: 20}
+            whileInView={_{ opacity: 1, y: 0}
+            transition={_{ duration: 0.6}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-slate-900 mb-6">Industry Applications</h2>
@@ -580,9 +580,9 @@ initial={_{ opacity: 0, y: 20}}
             {useCases.map(_(useCase, index) => (
               <motion.div,
 key={useCase.industry}
-                initial={_{ opacity: 0, y: 20}}
-                whileInView={_{ opacity: 1, y: 0}}
-                transition={_{ duration: 0.6, delay: index * 0.1}}
+                initial={_{ opacity: 0, y: 20}
+                whileInView={_{ opacity: 1, y: 0}
+                transition={_{ duration: 0.6, delay: index * 0.1}
                 className="bg-slate-50 rounded-2xl p-8 hover:bg-slate-100 transition-all duration-300"
               >
                 <h3 className="text-2xl font-bold text-slate-900 mb-4">{useCase.industry}</h3>
@@ -590,7 +590,7 @@ key={useCase.industry}
                 <div className="bg-green-50 border border-green-200 rounded-lg p-4">
                   <p className="text-green-800 font-medium">Results: {useCase.results}</p>
                 </div>
-              </motion.div>            ))}
+              </motion.div>            )}
           </div>
         </div>
 
@@ -598,9 +598,9 @@ key={useCase.industry}
       <section className="py-20 bg-slate-900">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div,
-initial={_{ opacity: 0, y: 20}}
-            whileInView={_{ opacity: 1, y: 0}}
-            transition={_{ duration: 0.6}}
+initial={_{ opacity: 0, y: 20}
+            whileInView={_{ opacity: 1, y: 0}
+            transition={_{ duration: 0.6}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-6">Simple, Transparent Pricing</h2>
@@ -613,9 +613,9 @@ initial={_{ opacity: 0, y: 20}}
             {pricing.map(_(plan, index) => (
               <motion.div,
 key={plan.plan}
-                initial={_{ opacity: 0, y: 20}}
-                whileInView={_{ opacity: 1, y: 0}}
-                transition={_{ duration: 0.6, delay: index * 0.1}}
+                initial={_{ opacity: 0, y: 20}
+                whileInView={_{ opacity: 1, y: 0}
+                transition={_{ duration: 0.6, delay: index * 0.1}
                 className={_`relative bg-white rounded-2xl p-8 ${
                   plan.popular ? 'ring-2 ring-blue-500 transform scale-105' : ''}`}
               >
@@ -633,16 +633,16 @@ key={plan.plan}
                   </div>;
                   <p className="text-slate-600">{plan.description}</p>;
                 </div>;
-;
+
                 <ul className="space-y-4 mb-8">;
-                  {plan.features.map((feature) => (;
+                  {plan.features.map(feature) => (;
                     <li key={feature} className="flex items-center space-x-3">;
                       <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />;
                       <span className="text-slate-700">{feature}</span>;
                     </li>;
-                  ))}
+                  )}
                 </ul>;
-;
+
                 <a;
                   href="/contact";
                   className="block w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white text-center py-3 rounded-xl font-medium transition-all duration-200 transform hover:scale-105";
@@ -650,18 +650,18 @@ key={plan.plan}
                   Get Started;
                 </a>;
               </motion.div>;
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* CTA */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-cyan-600">;
         <div className="max-w-4xl mx-auto px-6 text-center">;
           <motion.div;
-            initial={{ opacity:0, y:20 }}
-            whileInView={{ opacity:1, y:0 }}
-            transition={{ duration:0.6 }}
+            initial={ opacity:0, y:20 }
+            whileInView={ opacity:1, y:0 }
+            transition={ duration:0.6 }
           >;
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>;
             <p className="text-xl text-blue-100 mb-8">;
@@ -684,7 +684,7 @@ key={plan.plan}
           </motion.div>;
         </div>;
       </section>;
-;
+
       <EnhancedFooter />;
     </>;
   );          </div>
@@ -692,15 +692,14 @@ key={plan.plan}
       </main>
     </Layout>
   );
-};
 
       {_/* CTA */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-cyan-600">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <motion.div,
-initial={_{ opacity: 0, y: 20}}
-            whileInView={_{ opacity: 1, y: 0}}
-            transition={_{ duration: 0.6}}
+initial={_{ opacity: 0, y: 20}
+            whileInView={_{ opacity: 1, y: 0}
+            transition={_{ duration: 0.6}
           >
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl text-blue-100 mb-8">
@@ -727,4 +726,3 @@ href="/contact"
       <EnhancedFooter />
     </>
   )
-}

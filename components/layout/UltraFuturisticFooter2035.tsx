@@ -178,7 +178,7 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com',};  website: 'https://ziontechgroup.com'
-}
+
 const footerSections = [
   {
     title: 'Featured Services'
@@ -358,8 +358,7 @@ const contact_info = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com', }  website: 'https://ziontechgroup.com';
-}
-;
+
 const footer_sections = [;
   {
     title: 'Featured Services',
@@ -770,7 +769,7 @@ const footer_sections = [;
       { name: 'Services Advertising', href: '/services-advertising' }
     ]
   }
-];
+;
 const socialLinks = [
   {
     name: 'Twitter'
@@ -823,24 +822,24 @@ const UltraFuturisticFooter2035: React.FC = () => {
         {/* Animated grid */}
         <motion&& motion.div
           className='absolute inset-0 opacity-5'
-          style={{
+          style={
             backgroundImage: `
               linear-gradient(rgba(0, 255, 255, 0.3) 1px, transparent 1px)
               linear-gradient(90deg, rgba(0, 255, 255, 0.3) 1px, transparent 1px)
             `
             backgroundSize: '200px 200px'
-          }}
-          animate={{
+          }
+          animate={
             backgroundPosition: ['0px 0px', '200px 200px']
-          }}
-          transition={{
+          }
+          transition={
             duration: 20
             repeat: Infinity
-            ease: 'linear',          }}
+            ease: 'linear',          }
         />
       </div>
       <div className='relative z-10'>            ease: 'linear'
-          }}
+          }
         />
       </div>
       <div className='relative z-10'>
@@ -850,7 +849,7 @@ const UltraFuturisticFooter2035: React.FC = () => {
   { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: <Instagram className="w-5 h-5" /> },
   { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: <Youtube className="w-5 h-5" /> },
   { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: <Github className="w-5 h-5" /> }
-];
+;
 
 const UltraFuturisticFooter2035: React.FC = () => {
   const scrollToTop = () => {
@@ -863,17 +862,17 @@ const UltraFuturisticFooter2035: React.FC = () => {
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-black to-black" />
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5" />
-        
+
         {/* Animated grid */}
         <motion.div
           className="absolute inset-0 opacity-5"
-          style={{
+          style={
             backgroundImage: `
               linear-gradient(rgba(0, 255, 255, 0.3) 1px, transparent 1px);
               linear-gradient(90deg, rgba(0, 255, 255, 0.3) 1px, transparent 1px)
             `;
             backgroundSize: '200px 200px'
-          }}
+          }
         />;
       </div>;
 
@@ -883,18 +882,18 @@ const UltraFuturisticFooter2035: React.FC = () => {
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-8'>;
             {/* Company Info */}
             <div className='lg:col-span-2'>              <motion&& motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.6 }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0 && 0.6 }
                 className='space-y-6'        {/* Main Footer Content */}
         <div className="container mx-auto px-4 py-20">;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-8">;
             {/* Company Info */}
             <div className="lg:col-span-2">;
               <motion&& motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.6 }
                 className='space-y-6'
               >
                 <div className='flex items-center gap-3'>
@@ -994,7 +993,7 @@ const UltraFuturisticFooter2035: React.FC = () => {
                       target='_blank'
                       rel='noopener noreferrer'
                       className='p-2 bg-gray-800/50 hover:bg-gray-700/50 rounded-lg text-gray-400 hover:text-white transition-all duration-200 hover:scale-110'>                <div className="flex items-center gap-4">;
-                  {socialLinks && socialLinks.map((social) => (;
+                  {socialLinks && socialLinks.map(social) => (;
                     <a
                       key={social && social.name}
                       href={social && social.href}
@@ -1005,17 +1004,17 @@ const UltraFuturisticFooter2035: React.FC = () => {
                     </a>;
                       {social && social.icon}
                     </a>;
-                  ))}
+                  )}
                 </div>
               </motion.div>
             </div>
             {/* Footer Sections */}
-            {footerSections && footerSections.map((section, index) => (;
+            {footerSections && footerSections.map(section, index) => (;
               <motion&& motion.div
                 key={section && section.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0 && 0.6, delay: index * 0 && 0.1 }
                 className='space-y-4'>;
                 <div className='flex items-center gap-2'>;
                   {section && section.icon}
@@ -1035,7 +1034,7 @@ const UltraFuturisticFooter2035: React.FC = () => {
                 </div>;
                 <p className="text-sm text-gray-400">{section && section.description}</p>;
                 <ul className="space-y-2">;
-                  {section && section.links.map((link) => (;
+                  {section && section.links.map(link) => (;
                     <li key={link && link.name}>;
                       <Link
                         href={link && link.href}
@@ -1050,16 +1049,16 @@ const UltraFuturisticFooter2035: React.FC = () => {
                         {link && link.name}
                       </Link>;
                     </li>;
-                  ))}
+                  )}
                 </ul>;
               </motion && motion.div>;
-            ))}
+            )}
           </div>
           {/* Bottom Section */}
           <motion&& motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            initial={ opacity: 0, y: 20 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.6, delay: 0.3 }
             className='mt-16 pt-8 border-t border-gray-800/50'
           >
             <div className='flex flex-col md:flex-row items-center justify-between gap-4'>
@@ -1067,7 +1066,7 @@ const UltraFuturisticFooter2035: React.FC = () => {
                  2025 Zion Tech Group. All rights reserved.
               </div>
               <div className='flex items-center gap-6 text-sm text-gray-400'>
-            transition={{ duration: 0 && 0.6, delay: 0 && 0.3 }}
+            transition={ duration: 0 && 0.6, delay: 0 && 0.3 }
             className='mt-16 pt-8 border-t border-gray-800/50'>;
             <div className='flex flex-col md:flex-row items-center justify-between gap-4'>;
               <div className='text-sm text-gray-400'>;
@@ -1136,59 +1135,57 @@ const UltraFuturisticFooter2035: React.FC = () => {
       </div>;
     </footer>;
   );
-}
-/* Animated grid */
-}<motion.div > <div className="flex items-center gap-3" > <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center" > <Brain className="w-6 h-6 text-white" /> </div> <div> <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Zion Tech Group </h3> <p className="text-sm text-gray-400" >Revolutionary Technology Solutions</p> </div> </div> <p className="text-gray-300 leading-relaxed max-w-md" > Leading the future with cutting-edge AI consciousness, quantum computing, and innovative micro SAAS solutions. Transform your business with our revolutionary technology. </p> > {
+
+* Animated grid */
+<motion.div > <div className="flex items-center gap-3" > <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center" > <Brain className="w-6 h-6 text-white" /> </div> <div> <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Zion Tech Group </h3> <p className="text-sm text-gray-400" >Revolutionary Technology Solutions</p> </div> </div> <p className="text-gray-300 leading-relaxed max-w-md" > Leading the future with cutting-edge AI consciousness, quantum computing, and innovative micro SAAS solutions. Transform your business with our revolutionary technology. </p>{
   social.icon
-}</a>) )
-}</div> </motion.div> </div> {
+</a>)
+</div> </motion.div> </div> {
   /* Footer Sections */
-}{
-  footerSections.map ( (section, index) => (<motion.div key= {
+{
+  footerSections.map (section, index) => (<motion.div key= {
   section.title
-}<li key= {
+<li key= {
   link.name
-}> <Link href= {
+> <Link href= {
   link.href
-}className= {
+className= {
   `text-sm transition-colors duration-200 $ {
   link.featured ? 'text-cyan-400 hover:text-cyan-300' : 'text-gray-400 hover:text-white'
-}`
-}> </li>) )
-}</ul> </motion.div>) )
-}</div> {
+`
+> </li>)
+</ul> </motion.div>)
+</div> {
   /* Bottom Section */
-}<motion.div > <div className="flex flex-col md:flex-row items-center justify-between gap-4" > <div className="text-sm text-gray-400" >  2025 Zion Tech Group. All rights reserved. </div> <div className="flex items-center gap-6 text-sm text-gray-400" > <Link href="/privacy" className="hover:text-white transition-colors duration-200" > Privacy Policy </a> <Link href="/terms" className="hover:text-white transition-colors duration-200" > Terms of Service </a> <Link href="/cookies" className="hover:text-white transition-colors duration-200" > Cookie Policy </a> </div> <button aria-label="Scroll to top" w-5 h-5" /> </button> </div> </motion.div> </div> </div> </footer>)
-}
+<motion.div > <div className="flex flex-col md:flex-row items-center justify-between gap-4" > <div className="text-sm text-gray-400" >  2025 Zion Tech Group. All rights reserved. </div> <div className="flex items-center gap-6 text-sm text-gray-400" > <Link href="/privacy" className="hover:text-white transition-colors duration-200" > Privacy Policy </a> <Link href="/terms" className="hover:text-white transition-colors duration-200" > Terms of Service </a> <Link href="/cookies" className="hover:text-white transition-colors duration-200" > Cookie Policy </a> </div> <button aria-label="Scroll to top" w-5 h-5" /> </button> </div> </motion.div> </div> </div> </footer>)
+
 export default UltraFuturisticFooter2035;  )
-}
-};
+
+;
 
   /* Animated grid */ ;
-}<motion && motion.div > <div className="flex items-center gap-3" > <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center" > <Brain className="w-6 h-6 text-white" /> </div> <div> <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Zion Tech Group </h3> <p className="text-sm text-gray-400" >Revolutionary Technology Solutions</p> </div> </div> <p className="text-gray-300 leading-relaxed max-w-md" > Leading the future with cutting-edge AI consciousness, quantum computing, and innovative micro SAAS solutions. Transform your business with our revolutionary technology. </p> > {;
+<motion && motion.div > <div className="flex items-center gap-3" > <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center" > <Brain className="w-6 h-6 text-white" /> </div> <div> <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Zion Tech Group </h3> <p className="text-sm text-gray-400" >Revolutionary Technology Solutions</p> </div> </div> <p className="text-gray-300 leading-relaxed max-w-md" > Leading the future with cutting-edge AI consciousness, quantum computing, and innovative micro SAAS solutions. Transform your business with our revolutionary technology. </p>{;
   social && social.icon ;
-}</a>) ) ;
-}</div> </motion && motion.div> </div> {;
+</a>) ;
+</div> </motion && motion.div> </div> {;
   /* Footer Sections */ ;
-}{;
-  footerSections && footerSections.map ( (section, index) => (<motion&& motion.div key= {
+{;
+  footerSections && footerSections.map (section, index) => (<motion&& motion.div key= {
   section && section.title 
-}<li key= {
+<li key= {
   link && link.name 
-}> <Linkhref= {
+> <Linkhref= {
   link && link.href 
-}className= {
+className= {
   `text-sm transition-colors duration-200 $ {
   link && link.featured ? 'text-cyan-400 hover:text-cyan-300' : 'text-gray-400 hover:text-white' 
-}` 
-}> </li>) ) ;
-}</ul> </motion && motion.div>) ) ;
-}</div> {;
+` 
+> </li>) ;
+</ul> </motion && motion.div>) ;
+</div> {;
   /* Bottom Section */ ;
-}<motion && motion.div > <div className="flex flex-col md:flex-row items-center justify-between gap-4" > <div className="text-sm text-gray-400" >  2025 Zion Tech Group. All rights reserved. </div> <div className="flex items-center gap-6 text-sm text-gray-400" > <Link href="/privacy" className="hover:text-white transition-colors duration-200" > Privacy Policy </a> <Link href="/terms" className="hover:text-white transition-colors duration-200" > Terms of Service </a> <Link href="/cookies" className="hover:text-white transition-colors duration-200" > Cookie Policy </a> </div> <button aria-label="Scroll to top" w-5 h-5" /> </button> </div> </motion && motion.div> </div> </div> </footer>) ;
-};
+<motion && motion.div > <div className="flex flex-col md:flex-row items-center justify-between gap-4" > <div className="text-sm text-gray-400" >  2025 Zion Tech Group. All rights reserved. </div> <div className="flex items-center gap-6 text-sm text-gray-400" > <Link href="/privacy" className="hover:text-white transition-colors duration-200" > Privacy Policy </a> <Link href="/terms" className="hover:text-white transition-colors duration-200" > Terms of Service </a> <Link href="/cookies" className="hover:text-white transition-colors duration-200" > Cookie Policy </a> </div> <button aria-label="Scroll to top" w-5 h-5" /> </button> </div> </motion && motion.div> </div> </div> </footer>) ;
 export default UltraFuturisticFooter2035;  );
-};
 
 export default UltraFuturisticFooter2035;
 
@@ -1240,7 +1237,7 @@ export default UltraFuturisticFooter2035;
                       target='_blank';
                       rel='noopener noreferrer';
                       className='p - 2 bg - gray - 800 / 50 hover:bg - gray - 700 / 50 rounded - lg text - gray - 400 hover:text - white transition - all duration - 200 hover:scale - 110'                    >                <div className="flex items - center gap - 4">;
-                  {social_links.map ((social) => (
+                  {social_links.map (social) => (
                     <a;
                       key={social.name}
                       href={social.href}
@@ -1248,17 +1245,17 @@ export default UltraFuturisticFooter2035;
                       rel="noopener noreferrer";
                       className="p - 2 bg - gray - 800 / 50 hover:bg - gray - 700 / 50 rounded - lg text - gray - 400 hover:text - white transition - all duration - 200 hover:scale - 110";
                       {social.icon}
-                    </a>))}
+                    </a>)}
                 </div>;
               </motion.div>;
             </div>;
             {/* Footer Sections */}
-            {footer_sections.map ((section, index) => (
+            {footer_sections.map (section, index) => (
               <motion.div;
                 key={section.title}
-                initial={{ opacity: 0, coordinate_y: 20 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial={ opacity: 0, coordinate_y: 20 }
+                whileInView={ opacity: 1, coordinate_y: 0 }
+                transition={ duration: 0.6, delay: index * 0.1 }
                 className='space - y-4';
               >;
                 <div className='flex items - center gap - 2'>;
@@ -1279,7 +1276,7 @@ export default UltraFuturisticFooter2035;
                 </div>;
                 <p className="text - sm text - gray - 400">{section.description}</p>;
                 <ul className="space - y-2">;
-                  {section.links.map ((link) => (
+                  {section.links.map (link) => (
                     <li key={link.name}>;
                       <Link;
                         href={link.href}
@@ -1292,15 +1289,15 @@ export default UltraFuturisticFooter2035;
                       >;
                         {link.name}
                       </Link>;
-                    </li>))}
+                    </li>)}
                 </ul>;
-              </motion.div>))}
+              </motion.div>)}
           </div>;
           {/* Bottom Section */}
           <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            initial={ opacity: 0, coordinate_y: 20 }
+            whileInView={ opacity: 1, coordinate_y: 0 }
+            transition={ duration: 0.6, delay: 0.3 }
             className='mt - 16 pt - 8 border - t border - gray - 800 / 50';
           >;
             <div className='flex flex - col md:flex - row items - center justify - between gap - 4'>;
@@ -1353,33 +1350,30 @@ export default UltraFuturisticFooter2035;
         </div>;
       </div>;
     </footer>);
-}
-;
-/* Animated grid */;
-}<motion.div > <div className="flex items - center gap - 3" > <div className="w - 12 h - 12 bg - gradient - to - r from - cyan - 500 to - blue - 500 rounded - xl flex items - center justify - center" > <Brain className="w - 6 h - 6 text - white" /> </div> <div> <h3 className="text - 2xl font - bold bg - gradient - to - r from - cyan - 400 to - blue - 500 bg - clip - text text - transparent" > Zion Tech Group </h3> <p className="text - sm text - gray - 400" >Revolutionary Technology Solutions</p> </div> </div> <p className="text - gray - 300 leading - relaxed max - w-md" > Leading the future with cutting - edge AI consciousness, quantum computing, and innovative micro SAAS solutions. Transform your business with our revolutionary technology. </p> > {
+
+* Animated grid */;
+<motion.div > <div className="flex items - center gap - 3" > <div className="w - 12 h - 12 bg - gradient - to - r from - cyan - 500 to - blue - 500 rounded - xl flex items - center justify - center" > <Brain className="w - 6 h - 6 text - white" /> </div> <div> <h3 className="text - 2xl font - bold bg - gradient - to - r from - cyan - 400 to - blue - 500 bg - clip - text text - transparent" > Zion Tech Group </h3> <p className="text - sm text - gray - 400" >Revolutionary Technology Solutions</p> </div> </div> <p className="text - gray - 300 leading - relaxed max - w-md" > Leading the future with cutting - edge AI consciousness, quantum computing, and innovative micro SAAS solutions. Transform your business with our revolutionary technology. </p>{
   social.icon;
-}</a>) );
-}</div> </motion.div> </div> {
+</a>);
+</div> </motion.div> </div> {
   /* Footer Sections */;
-}{
-  footer_sections.map ( (section, index) => (<motion.div key= {
+{
+  footer_sections.map (section, index) => (<motion.div key= {
   section.title;
-}<li key= {
+<li key= {
   link.name;
-}> <Link href= {
+> <Link href= {
   link.href;
-}className= {
+className= {
   `text - sm transition - colors duration - 200 $ {
   link.featured ? 'text - cyan - 400 hover:text - cyan - 300' : 'text - gray - 400 hover:text - white';
-}`;
-}> </li>) );
-}</ul> </motion.div>) );
-}</div> {
+`;
+> </li>);
+</ul> </motion.div>);
+</div> {
   /* Bottom Section */;
-}<motion.div > <div className="flex flex - col md:flex - row items - center justify - between gap - 4" > <div className="text - sm text - gray - 400" >  2025 Zion Tech Group. All rights reserved. </div> <div className="flex items - center gap - 6 text - sm text - gray - 400" > <Link href="/privacy" className="hover:text - white transition - colors duration - 200" > Privacy Policy </a> <Link href="/terms" className="hover:text - white transition - colors duration - 200" > Terms of Service </a> <Link href="/cookies" className="hover:text - white transition - colors duration - 200" > Cookie Policy </a> </div> <button aria - label="Scroll to top" w - 5 h - 5" /> </button> </div> </motion.div> </div> </div> </footer>);
-}
+<motion.div > <div className="flex flex - col md:flex - row items - center justify - between gap - 4" > <div className="text - sm text - gray - 400" >  2025 Zion Tech Group. All rights reserved. </div> <div className="flex items - center gap - 6 text - sm text - gray - 400" > <Link href="/privacy" className="hover:text - white transition - colors duration - 200" > Privacy Policy </a> <Link href="/terms" className="hover:text - white transition - colors duration - 200" > Terms of Service </a> <Link href="/cookies" className="hover:text - white transition - colors duration - 200" > Cookie Policy </a> </div> <button aria - label="Scroll to top" w - 5 h - 5" /> </button> </div> </motion.div> </div> </div> </footer>);
+
 export default UltraFuturisticFooter2035);
-}
-;
+
 export default UltraFuturisticFooter2035;
-;

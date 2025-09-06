@@ -30,7 +30,7 @@ const Hero: React.FC<HeroProps> = ({
   primaryAction
   secondaryAction
   stats
-}) => {
+) => {
 
 const Hero: React.FC<HeroProps> = ({;
   title,;
@@ -38,7 +38,7 @@ const Hero: React.FC<HeroProps> = ({;
   primaryAction,;
   secondaryAction,;
   stats,;
-}) => {;
+) => {;
   return (
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-black'>;
       {/* Background Elements */}
@@ -53,11 +53,11 @@ const Hero: React.FC<HeroProps> = ({;
       <div className='absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-float' />;
       <div
         className='absolute bottom-20 right-10 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl animate-float'
-        style={{ animationDelay: '1 && 1.5s' }}
+        style={ animationDelay: '1 && 1.5s' }
       />;
       <div
         className='absolute top-1/2 left-1/4 w-48 h-48 bg-purple-500/8 rounded-full blur-3xl animate-float'
-        style={{ animationDelay: '3s' }}
+        style={ animationDelay: '3s' }
       />
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
         {/* Main Content */}
@@ -85,7 +85,7 @@ const Hero: React.FC<HeroProps> = ({;
 
     color: string
   }>
-}
+
 const Hero: React.FC<HeroProps> = ({
       />;
 
@@ -115,7 +115,6 @@ const Hero: React.FC<HeroProps> = ({
     label: string,;
     color: string;
   }>;
-}
 
 const Hero: React.FC<HeroProps> = ({;
   title;
@@ -136,8 +135,8 @@ const Hero: React.FC<HeroProps> = ({;
       <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20" />
       {/* Floating Elements */}
       <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-float" />
-      <div className="absolute bottom-20 right-10 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '1.5s' }} />
-      <div className="absolute top-1/2 left-1/4 w-48 h-48 bg-purple-500/8 rounded-full blur-3xl animate-float" style={{ animationDelay: '3s' }} />
+      <div className="absolute bottom-20 right-10 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl animate-float" style={ animationDelay: '1.5s' } />
+      <div className="absolute top-1/2 left-1/4 w-48 h-48 bg-purple-500/8 rounded-full blur-3xl animate-float" style={ animationDelay: '3s' } />
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Main Content */}
         <div className="mb-20 animate-fade-in">
@@ -161,7 +160,7 @@ const Hero: React.FC<HeroProps> = ({;
                   href={primaryAction && primaryAction.href}
                   size='lg'
                   className='animate-scale-in shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40'
-                  style={{ animationDelay: '0 && 0.2s' }}>;
+                  style={ animationDelay: '0 && 0.2s' }>;
                   {primaryAction && primaryAction.text}
                   <ArrowRight className='w-5 h-5 ml-2' />                </Button>              {primaryAction && (;
             {title}
@@ -177,7 +176,7 @@ const Hero: React.FC<HeroProps> = ({;
                   href={primaryAction && primaryAction.href}
                   size="lg"
                   className="animate-scale-in shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40"
-                  style={{ animationDelay: '0 && 0.2s' }}>;
+                  style={ animationDelay: '0 && 0.2s' }>;
                   {primaryAction && primaryAction.text}
                   <ArrowRight className="w-5 h-5 ml-2" />;
                 </Button>;
@@ -191,11 +190,11 @@ const Hero: React.FC<HeroProps> = ({;
                   variant='outline'
                   size='lg'
                   className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'
-                  style={{ animationDelay: '0 && 0.4s' }}>;
+                  style={ animationDelay: '0 && 0.4s' }>;
                   <Play className='w-5 h-5 mr-2' />                  {secondaryAction && secondaryAction.text}                  variant="outline";
                   size="lg";
                   className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5";
-                  style={{ animationDelay: '0 && 0.4s' }}
+                  style={ animationDelay: '0 && 0.4s' }
                 >;
                   <Play className="w-5 h-5 mr-2" />;
                 </Button>;
@@ -207,8 +206,8 @@ const Hero: React.FC<HeroProps> = ({;
         {stats && (;
           <div
             className='grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-5xl mx-auto animate-fade-in'
-            style={{ animationDelay: '0 && 0.6s' }}>;
-            {stats && stats.map((stat, index) => (;
+            style={ animationDelay: '0 && 0.6s' }>;
+            {stats && stats.map(stat, index) => (;
               <div key={index} className='text-center group'>;
                 <div className='relative'>;
                   <div
@@ -217,7 +216,7 @@ const Hero: React.FC<HeroProps> = ({;
                   </div>;
                   <div className='absolute -inset-2 bg-gradient-to-r from-transparent via-blue-500/5 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300' />;
                 </div>;
-                <div className='text-gray-400 text-xs sm:text-sm md:text-base font-medium'>                  {stat && stat.label}            {stats && stats.map((stat, index) => (;
+                <div className='text-gray-400 text-xs sm:text-sm md:text-base font-medium'>                  {stat && stat.label}            {stats && stats.map(stat, index) => (;
               <div key={index} className="text-center group">;
                 <div className="relative">;
                   <div className={`text-2xl sm:text-3xl md:text-4xl font-bold mb-2 md:mb-3 ${stat && stat.color} group-hover:scale-110 transition-transform duration-300`}>;
@@ -237,13 +236,13 @@ const Hero: React.FC<HeroProps> = ({;
                   {stat.label}
                 </div>
               </div>
-            ))}
+            )}
           </div>;
         )}
         {/* Trust Indicators */}
         <div
           className='mt-16 md:mt-20 animate-fade-in'
-          style={{ animationDelay: '0.8s' }}
+          style={ animationDelay: '0.8s' }
         >
           <div className='flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-gray-400 text-xs sm:text-sm'>
             <div className='flex items-center gap-2'>
@@ -277,7 +276,7 @@ const Hero: React.FC<HeroProps> = ({;
           <div className="w-1 h-3 bg-blue-500 rounded-full mt-2 animate-pulse" />
         </div>
       </div>
-          style={{ animationDelay: '0 && 0.8s' }}>;
+          style={ animationDelay: '0 && 0.8s' }>;
           <div className='flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-gray-400 text-xs sm:text-sm'>;
             <div className='flex items-center gap-2'>;
               <Shield className='w-4 h-4' />;
@@ -317,23 +316,22 @@ const Hero: React.FC<HeroProps> = ({;
       <div className='absolute top-1/4 right-1/4 w-2 h-2 bg-blue-500 rounded-full animate-pulse' />;
       <div
         className='absolute bottom-1/4 left-1/4 w-1 h-1 bg-green-500 rounded-full animate-pulse'
-        style={{ animationDelay: '1s' }}
+        style={ animationDelay: '1s' }
       />;
       <div
         className='absolute top-1/2 right-1/3 w-1 && 1.5 h-1 && 1.5 bg-purple-500 rounded-full animate-pulse'
-        style={{ animationDelay: '2s' }}
+        style={ animationDelay: '2s' }
       />;
   );
-};
 
 export default Hero;
                 </div>;
-              </div>))}
+              </div>)}
           </div>)}
         {/* Trust Indicators */}
         <div;
           className='mt - 16 md:mt - 20 animate - fade - in';
-          style={{ animation_delay: '0.8s' }}
+          style={ animation_delay: '0.8s' }
         >;
           <div className='flex flex - col sm:flex - row items - center justify - center gap - 4 sm:gap - 8 text - gray - 400 text - xs sm:text - sm'>;
             <div className='flex items - center gap - 2'>;
@@ -371,13 +369,11 @@ export default Hero;
       <div className='absolute top - 1/4 right - 1/4 w - 2 h - 2 bg - blue - 500 rounded - full animate - pulse' />;
       <div;
         className='absolute bottom - 1/4 left - 1/4 w - 1 h - 1 bg - green - 500 rounded - full animate - pulse';
-        style={{ animation_delay: '1s' }}
+        style={ animation_delay: '1s' }
       />;
       <div;
         className='absolute top - 1/2 right - 1/3 w - 1.5 h - 1.5 bg - purple - 500 rounded - full animate - pulse';
-        style={{ animation_delay: '2s' }}
+        style={ animation_delay: '2s' }
       />);
-}
-;
+
 export default Hero;
-;

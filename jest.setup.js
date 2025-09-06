@@ -1,5 +1,5 @@
 require("@testing-library/jest-dom");
-// Mock Next.js router
+/ Mock Next.js router
 jest.mock("next/router", () => ({
   useRouter() {
     return {
@@ -20,32 +20,30 @@ jest.mock("next/router", () => ({
       }
       isFallback: false
     }
-  }
-}));
-// Mock Next.js Image component
+);
+/ Mock Next.js Image component
 jest.mock("next/image", () => {
   return function MockImage({ src, alt, ...props }) {
-// Mock Next && Next.js Image component
+/ Mock Next && Next.js Image component
 jest && jest.mock("next/image", () => {
   return function MockedImage({ src, alt, ...props }) {
     return <img src={src} alt={alt} {...props} />;
   }
-// Mock Next.js Image component
+/ Mock Next.js Image component
 jest.mock("next/image", () => {
   const React = require("react");
   return function MockImage({ src, alt, ...props }) {
     return React.createElement("img", { src, alt, ...props });
   };
-});
-// Mock Next.js Link component
+);
+/ Mock Next.js Link component
 jest.mock("next/link", () => {
   const React = require("react");
   return function MockLink({ children, href, ...props }) {
     return <a href={href} {...props}>{children}</a>;
-  }
   };
-});
-// Mock window.matchMedia
+);
+/ Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
   writable: true
   value: jest.fn().mockImplementation(query => ({
@@ -57,28 +55,28 @@ Object.defineProperty(window, 'matchMedia', {
     addEventListener: jest.fn()
     removeEventListener: jest.fn()
     dispatchEvent: jest.fn()
-  }))
-});
-// Mock IntersectionObserver
+  })
+);
+/ Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {
   constructor() {}
   disconnect() {}
   observe() {}
   unobserve() {}
-}
-// Mock ResizeObserver
+
+/ Mock ResizeObserver
 global.ResizeObserver = class ResizeObserver {
   constructor() {}
   disconnect() {}
   observe() {}
   unobserve() {}
-};
+;
 
-// Global test setup,
-beforeEach(() => {
+/ Global test setup,
+beforeEach() => {
   jest.clearAllMocks();
-});
-// Mock matchMedia
+);
+/ Mock matchMedia
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
   value: jest.fn().mockImplementation(query => ({
@@ -90,22 +88,22 @@ Object.defineProperty(window, 'matchMedia', {
     addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
     dispatchEvent: jest.fn(),
-  })),
-});
+  }),
+);
     "media": query,
     "onchange": null,
     "addListener": jest.fn(), // deprecated
     "removeListener": jest.fn(), // deprecated
     "addEventListener": jest.fn(),
     "removeEventListener": jest.fn(),
-    "dispatchEvent": jest.fn()}))});
-import '@testing-library/jest-dom'; global.IntersectionObserver = class IntersectionObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; global.ResizeObserver = class ResizeObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; Object.defineProperty(window,'matchMedia',{ writable: true,value: jest.fn().mockImplementation(query => ({ matches: false,media: query,onchange: null,addListener: jest.fn(),removeListener: jest.fn(),addEventListener: jest.fn(),removeEventListener: jest.fn(),dispatchEvent: jest.fn(),})),});
-import '@testing-library/jest-dom'; global.IntersectionObserver = class IntersectionObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; global.ResizeObserver = class ResizeObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; Object.defineProperty(window,'matchMedia',{ writable: true,value: jest.fn().mockImplementation(query => ({ matches: false,media: query,onchange: null,addListener: jest.fn(),removeListener: jest.fn(),addEventListener: jest.fn(),removeEventListener: jest.fn(),dispatchEvent: jest.fn(),})),});
+    "dispatchEvent": jest.fn()})});
+import '@testing-library/jest-dom'; global.IntersectionObserver = class IntersectionObserver { constructor() {} disconnect() {} observe() {} unobserve() {}; global.ResizeObserver = class ResizeObserver { constructor() {} disconnect() {} observe() {} unobserve() {}; Object.defineProperty(window,'matchMedia',{ writable: true,value: jest.fn().mockImplementation(query => ({ matches: false,media: query,onchange: null,addListener: jest.fn(),removeListener: jest.fn(),addEventListener: jest.fn(),removeEventListener: jest.fn(),dispatchEvent: jest.fn(),}),});
+import '@testing-library/jest-dom'; global.IntersectionObserver = class IntersectionObserver { constructor() {} disconnect() {} observe() {} unobserve() {}; global.ResizeObserver = class ResizeObserver { constructor() {} disconnect() {} observe() {} unobserve() {}; Object.defineProperty(window,'matchMedia',{ writable: true,value: jest.fn().mockImplementation(query => ({ matches: false,media: query,onchange: null,addListener: jest.fn(),removeListener: jest.fn(),addEventListener: jest.fn(),removeEventListener: jest.fn(),dispatchEvent: jest.fn(),}),});
 
-// Global test setup
-beforeEach(() => {
+/ Global test setup
+beforeEach() => {
   // Reset all mocks before each test
   jest.clearAllMocks();
-});
-});
-});
+);
+);
+);

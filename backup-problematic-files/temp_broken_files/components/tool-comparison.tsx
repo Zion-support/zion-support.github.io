@@ -17,7 +17,7 @@ import {
   Brain,
   Globe,
   Rocket
-} from 'lucide-react',
+ from 'lucide-react',
 
 export default function ToolComparisonPage() {
   const [searchTerm, setSearchTerm] = React.useState(''),
@@ -147,26 +147,25 @@ export default function ToolComparisonPage() {
   ],
 
   const categories = ['AllAI AssistantAI ArtAI WritingAutomationProductivityPaymentsMarketing & Sales', 'Email Marketing'],
-  const filteredTools = allTools.filter(tool => {const matchesSearch = tool.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         tool.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         tool.bestFor.toLowerCase().includes(searchTerm.toLowerCase()),
-    const matchesCategory = selectedCategory === 'All' || tool.category === selectedCategory,
+  const filteredTools = allTools.filter(tool => {const matchesSearch = tool.name.toLowerCase().includes(searchTerm.toLowerCase() ||
+                         tool.category.toLowerCase().includes(searchTerm.toLowerCase() ||
+                         tool.bestFor.toLowerCase().includes(searchTerm.toLowerCase(),
+    const matchesCategory = selectedCategory = = 'All' || tool.category = = selectedCategory,
     return matchesSearch && matchesCategory
   }),
   const sortedTools = [...filteredTools].sort(_(a, b) => {switch (sortBy) {
       case 'rating':
         return b.rating - a.rating,
       case 'users':
-        return parseInt(b.users.replace(/[^0-9]/g, '')) - parseInt(a.users.replace(/[^0-9]/g, '')),
+        return parseInt(b.users.replace(/[^0-9]/g, '') - parseInt(a.users.replace(/[^0-9]/g, ''),
       case 'name':
         return a.name.localeCompare(b.name),
       default: return 0
-    }
-  }),
+    }),
 
   const getPricingColor = (pricing: string) => {
-    if (pricing.includes('Free')) return 'text-green-400',
-    if (pricing.includes('$')) return 'text-blue-400',
+    if (pricing.includes('Free') return 'text-green-400',
+    if (pricing.includes('$') return 'text-blue-400',
     return 'text-gray-400'
   },
   return (
@@ -196,7 +195,7 @@ export default function ToolComparisonPage() {
                 Smart Tool Selection
               </div>
             </div>
-            
+
             <h1 className=&quot;text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-8 text-white leading-tight tracking-tight&quot;>
               Tool Comparison
             </h1>
@@ -210,7 +209,7 @@ export default function ToolComparisonPage() {
 href=&quot;#comparison&quot;
                 size=&quot;lg&quot;
                 className=&quot;animate-scale-in shadow-2xl shadow-purple-500/25 hover:shadow-purple-500/40&quot;
-                style={{ animationDelay: '0.2s' }}              >
+                style={ animationDelay: '0.2s' }              >
                 Start Comparing
                 <ArrowRight className=&quot;w-5 h-5 ml-2&quot; />
               </Button>
@@ -219,14 +218,14 @@ href=&quot;/contact&quot;
                 variant=&quot;outline&quot;
                 size=&quot;lg&quot;
                 className=&quot;animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5&quot;
-                style={{ animationDelay: '0.4s' }}              >
+                style={ animationDelay: '0.4s' }              >
                 Get Expert Advice
               </Button>
             </div>
           </div>
 
           {/* Stats */}
-          <div className=&quot;grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in&quot; style={{ animationDelay: '0.6s' }}>
+          <div className=&quot;grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in&quot; style={ animationDelay: '0.6s' }>
             <div className=&quot;text-center group&quot;>
               <div className=&quot;text-3xl md:text-4xl font-bold mb-3 text-purple-400 group-hover:scale-110 transition-transform duration-300&quot;>
                 {allTools.length}+              </div>
@@ -272,19 +271,19 @@ type=&quot;text&quot;
 
             {/* Category Filter */}
             <div className=&quot;flex flex-wrap gap-2&quot;>
-              {categories.map((category) => (
+              {categories.map(category) => (
                 <button                  key={category}
                   onClick={_() => setSelectedCategory(category)}
                   className={_`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                    selectedCategory === category
+                    selectedCategory = = category
                       ? 'bg-purple-600 text-white shadow-lg'
                       : 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white'}`}
                 >
                   {category}
                 </button>;
-              ))}
+              )}
             </div>;
-;
+
             {/* Sort */}
             <div className=&quot;flex items-center space-x-2&quot;>
               <Filter className=&quot;w-5 h-5 text-gray-400&quot; />
@@ -326,7 +325,7 @@ value={sortBy}
                 </tr>
               </thead>
               <tbody>
-                {sortedTools.map((tool, index) => (
+                {sortedTools.map(tool, index) => (
                   <tr key={index} className=&quot;border-b border-gray-800/50 hover:bg-gray-900/50 transition-colors duration-200&quot;>
                     <td className=&quot;py-4 px-6&quot;>
                       <div className=&quot;flex items-center space-x-3&quot;>
@@ -377,12 +376,12 @@ href={`/tool-details/${tool.name.toLowerCase().replace(/\s+/g, '-')}`}
                       </div>
                     </td>
                   </tr>
-                ))}
+                )}
               </tbody>
             </table>
           </div>
 
-          {sortedTools.length === 0 && (
+          {sortedTools.length = = 0 && (
             <div className=&quot;text-center py-20&quot;>
               <Search className=&quot;w-16 h-16 text-gray-600 mx-auto mb-4&quot; />
               <h3 className=&quot;text-xl font-semibold text-gray-400 mb-2&quot;>No tools found</h3>
@@ -390,7 +389,7 @@ href={`/tool-details/${tool.name.toLowerCase().replace(/\s+/g, '-')}`}
           )}
         </div>;
       </section>;
-;
+
       {/* Detailed Comparison Cards */}
       <section className=&quot;py-24 bg-gray-900&quot;>
         <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
@@ -403,11 +402,11 @@ href={`/tool-details/${tool.name.toLowerCase().replace(/\s+/g, '-')}`}
           </div>
 
           <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-8&quot;>
-            {sortedTools.slice(0, 6).map((tool, index) => (
+            {sortedTools.slice(0, 6).map(tool, index) => (
               <Card,
 key={index}
                 className=&quot;group border border-gray-800 hover:border-purple-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1&quot;
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={ animationDelay: `${index * 0.1}s` }
               >
                 <div className=&quot;flex items-start space-x-4 mb-4&quot;>
                   <div className={`w-12 h-12 rounded-xl bg-gray-800 flex items-center justify-center ${tool.color}`}>
@@ -437,11 +436,11 @@ key={index}
                       Pros
                     </h4>
                     <ul className=&quot;space-y-1&quot;>
-                      {tool.pros.slice(0, 3).map((pro, proIndex) => (
+                      {tool.pros.slice(0, 3).map(pro, proIndex) => (
                         <li key={proIndex} className=&quot;text-xs text-gray-400 flex items-start&quot;>
                           <span className=&quot;w-1 h-1 bg-green-400 rounded-full mr-2 mt-2 flex-shrink-0&quot; />
                           {pro}                        </li>
-                      ))}
+                      )}
                     </ul>
                   </div>
                   <div>
@@ -450,11 +449,11 @@ key={index}
                       Cons
                     </h4>
                     <ul className=&quot;space-y-1&quot;>
-                      {tool.cons.slice(0, 3).map((con, conIndex) => (
+                      {tool.cons.slice(0, 3).map(con, conIndex) => (
                         <li key={conIndex} className=&quot;text-xs text-gray-400 flex items-start&quot;>
                           <span className=&quot;w-1 h-1 bg-red-400 rounded-full mr-2 mt-2 flex-shrink-0&quot; />
                           {con}                        </li>
-                      ))}
+                      )}
                     </ul>
                   </div>
                 </div>
@@ -473,11 +472,11 @@ href={tool.website}
                   </Button>
                 </div>
               </Card>
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* CTA Section */}
       <section className="py-24 bg-gradient-to-r from-purple-600 to-purple-700 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)1px,transparent1px)] bg-[size: 20px20px] opacity-10" />

@@ -22,35 +22,35 @@ export default function Services2026ShowcaseEnhancedPage() {
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')
   // Map service variants to supported card variants
   const mapServiceVariantToCardVariant = (serviceVariant: string): 'default' | 'holographic' | 'quantum' | 'cyberpunk' | 'neural' | 'quantum-holographic' | 'quantum-advanced' | 'holographic-advanced' | 'neural-quantum' | 'quantum-cyberpunk' | 'holographic-neural' | 'quantum-holographic-advanced' | 'quantum-matrix' | 'neural-cyberpunk' | 'holographic-quantum' | 'quantum-neural-advanced' | 'cyberpunk-holographic' | 'quantum-space' | 'ai-futuristic' | 'quantum-entanglement' | 'holographic-matrix' | 'neural-quantum-cyberpunk' | 'enterprise-futuristic' | 'quantum-futuristic' | 'holographic-futuristic' | 'quantum-iot' | 'quantum-logistics' | 'quantum-financial' | 'quantum-energy' | 'quantum-neural' | 'quantum-cyberpunk' => {
-    if (serviceVariant.includes('quantum') && serviceVariant.includes('ai')) return 'quantum-advanced'
-    if (serviceVariant.includes('quantum')) return 'quantum'
-    if (serviceVariant.includes('ai')) return 'ai-futuristic'
-    if (serviceVariant.includes('holographic')) return 'holographic'
-    if (serviceVariant.includes('neural')) return 'neural'
-    if (serviceVariant.includes('cyberpunk')) return 'cyberpunk'
-    if (serviceVariant.includes('enterprise')) return 'enterprise-futuristic'
-    if (serviceVariant.includes('cloud')) return 'quantum-advanced'
-    if (serviceVariant.includes('security')) return 'cyberpunk'
-    if (serviceVariant.includes('data')) return 'neural'
-    if (serviceVariant.includes('mobility')) return 'holographic'
-    if (serviceVariant.includes('network')) return 'quantum-advanced'
-    if (serviceVariant.includes('backup')) return 'quantum-advanced'
-    if (serviceVariant.includes('itsm')) return 'enterprise-futuristic'
-    if (serviceVariant.includes('monitoring')) return 'neural'
-    if (serviceVariant.includes('blockchain')) return 'quantum-advanced'
-    if (serviceVariant.includes('metaverse')) return 'holographic'
-    if (serviceVariant.includes('iot')) return 'quantum-iot'
-    if (serviceVariant.includes('edge')) return 'quantum-advanced'
-    if (serviceVariant.includes('ar')) return 'holographic'
-    if (serviceVariant.includes('digital-twin')) return 'quantum-advanced'
-    if (serviceVariant.includes('5g')) return 'quantum-advanced'
-    if (serviceVariant.includes('biometric')) return 'cyberpunk'
-    if (serviceVariant.includes('autonomous')) return 'ai-futuristic'
-    if (serviceVariant.includes('revolutionary')) return 'quantum-advanced'
-    if (serviceVariant.includes('consulting')) return 'enterprise-futuristic'
-    if (serviceVariant.includes('api')) return 'quantum-advanced'
-    if (serviceVariant.includes('integration')) return 'quantum-advanced'
-    if (serviceVariant.includes('analytics')) return 'neural'
+    if (serviceVariant.includes('quantum') && serviceVariant.includes('ai') return 'quantum-advanced'
+    if (serviceVariant.includes('quantum') return 'quantum'
+    if (serviceVariant.includes('ai') return 'ai-futuristic'
+    if (serviceVariant.includes('holographic') return 'holographic'
+    if (serviceVariant.includes('neural') return 'neural'
+    if (serviceVariant.includes('cyberpunk') return 'cyberpunk'
+    if (serviceVariant.includes('enterprise') return 'enterprise-futuristic'
+    if (serviceVariant.includes('cloud') return 'quantum-advanced'
+    if (serviceVariant.includes('security') return 'cyberpunk'
+    if (serviceVariant.includes('data') return 'neural'
+    if (serviceVariant.includes('mobility') return 'holographic'
+    if (serviceVariant.includes('network') return 'quantum-advanced'
+    if (serviceVariant.includes('backup') return 'quantum-advanced'
+    if (serviceVariant.includes('itsm') return 'enterprise-futuristic'
+    if (serviceVariant.includes('monitoring') return 'neural'
+    if (serviceVariant.includes('blockchain') return 'quantum-advanced'
+    if (serviceVariant.includes('metaverse') return 'holographic'
+    if (serviceVariant.includes('iot') return 'quantum-iot'
+    if (serviceVariant.includes('edge') return 'quantum-advanced'
+    if (serviceVariant.includes('ar') return 'holographic'
+    if (serviceVariant.includes('digital-twin') return 'quantum-advanced'
+    if (serviceVariant.includes('5g') return 'quantum-advanced'
+    if (serviceVariant.includes('biometric') return 'cyberpunk'
+    if (serviceVariant.includes('autonomous') return 'ai-futuristic'
+    if (serviceVariant.includes('revolutionary') return 'quantum-advanced'
+    if (serviceVariant.includes('consulting') return 'enterprise-futuristic'
+    if (serviceVariant.includes('api') return 'quantum-advanced'
+    if (serviceVariant.includes('integration') return 'quantum-advanced'
+    if (serviceVariant.includes('analytics') return 'neural'
     return 'default'
   }
   const contactInfo = {
@@ -71,13 +71,13 @@ export default function Services2026ShowcaseEnhancedPage() {
   // Enhanced categories for 2026
   const categories = [
     { id: 'all', name: 'All 2026 Services', icon: '', count: all2026Services.length }
-    { id: 'ai', name: 'AI & Machine Learning', icon: '', count: all2026Services.filter(s => s.category.includes('AI')).length }
-    { id: 'quantum', name: 'Quantum & Emerging Tech', icon: '', count: all2026Services.filter(s => s.category.includes('Quantum') |s.category.includes('Emerging')).length }
-    { id: 'enterprise', name: 'Enterprise IT', icon: '', count: all2026Services.filter(s => s.category.includes('Enterprise') |s.category.includes('IT')).length }
-    { id: 'micro-saas', name: 'Micro SaaS', icon: '', count: all2026Services.filter(s => s.category.includes('SaaS')).length }
-    { id: 'healthcare', name: 'Healthcare & Biotech', icon: '', count: all2026Services.filter(s => s.category.includes('Healthcare') |s.category.includes('Biotech')).length }
-    { id: 'financial', name: 'Financial Technology', icon: '', count: all2026Services.filter(s => s.category.includes('Financial') |s.category.includes('Trading')).length }
-    { id: 'manufacturing', name: 'Manufacturing & IoT', icon: '', count: all2026Services.filter(s => s.category.includes('Manufacturing') |s.category.includes('IoT')).length }
+    { id: 'ai', name: 'AI & Machine Learning', icon: '', count: all2026Services.filter(s => s.category.includes('AI').length }
+    { id: 'quantum', name: 'Quantum & Emerging Tech', icon: '', count: all2026Services.filter(s => s.category.includes('Quantum') |s.category.includes('Emerging').length }
+    { id: 'enterprise', name: 'Enterprise IT', icon: '', count: all2026Services.filter(s => s.category.includes('Enterprise') |s.category.includes('IT').length }
+    { id: 'micro-saas', name: 'Micro SaaS', icon: '', count: all2026Services.filter(s => s.category.includes('SaaS').length }
+    { id: 'healthcare', name: 'Healthcare & Biotech', icon: '', count: all2026Services.filter(s => s.category.includes('Healthcare') |s.category.includes('Biotech').length }
+    { id: 'financial', name: 'Financial Technology', icon: '', count: all2026Services.filter(s => s.category.includes('Financial') |s.category.includes('Trading').length }
+    { id: 'manufacturing', name: 'Manufacturing & IoT', icon: '', count: all2026Services.filter(s => s.category.includes('Manufacturing') |s.category.includes('IoT').length }
   ]
   const priceRanges = [
     { id: 'all', name: 'All Prices', range: 'All' }
@@ -116,61 +116,60 @@ export default function Services2026ShowcaseEnhancedPage() {
   ];
 
   // Filter and sort services
-  const filteredServices = useMemo(() => {
+  const filteredServices = useMemo() => {
     let filtered = all2026Services
     // Search filter
     if (searchTerm) {
       filtered = filtered.filter(service =>
-        service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
-        service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
-        service.category.toLowerCase().includes(searchTerm.toLowerCase())
+        service.name.toLowerCase().includes(searchTerm.toLowerCase() |
+        service.description.toLowerCase().includes(searchTerm.toLowerCase() |
+        service.category.toLowerCase().includes(searchTerm.toLowerCase()
       )
     }
     // Category filter
-    if (selectedCategory !== 'all') {
-      if (selectedCategory === 'ai') {
-        filtered = filtered.filter(service => service.category.includes('AI'))
-      } else if (selectedCategory === 'quantum') {
-        filtered = filtered.filter(service => service.category.includes('Quantum') |service.category.includes('Emerging'))
-      } else if (selectedCategory === 'enterprise') {
-        filtered = filtered.filter(service => service.category.includes('Enterprise') |service.category.includes('IT'))
-      } else if (selectedCategory === 'micro-saas') {
-        filtered = filtered.filter(service => service.category.includes('SaaS'))
-      } else if (selectedCategory === 'healthcare') {
-        filtered = filtered.filter(service => service.category.includes('Healthcare') |service.category.includes('Biotech'))
-      } else if (selectedCategory === 'financial') {
-        filtered = filtered.filter(service => service.category.includes('Financial') |service.category.includes('Trading'))
-      } else if (selectedCategory === 'manufacturing') {
-        filtered = filtered.filter(service => service.category.includes('Manufacturing') |service.category.includes('IoT'))
+    if (selectedCategory != 'all') {
+      if (selectedCategory = = 'ai') {
+        filtered = filtered.filter(service => service.category.includes('AI')
+      } else if (selectedCategory = = 'quantum') {
+        filtered = filtered.filter(service => service.category.includes('Quantum') |service.category.includes('Emerging')
+      } else if (selectedCategory = = 'enterprise') {
+        filtered = filtered.filter(service => service.category.includes('Enterprise') |service.category.includes('IT')
+      } else if (selectedCategory = = 'micro-saas') {
+        filtered = filtered.filter(service => service.category.includes('SaaS')
+      } else if (selectedCategory = = 'healthcare') {
+        filtered = filtered.filter(service => service.category.includes('Healthcare') |service.category.includes('Biotech')
+      } else if (selectedCategory = = 'financial') {
+        filtered = filtered.filter(service => service.category.includes('Financial') |service.category.includes('Trading')
+      } else if (selectedCategory = = 'manufacturing') {
+        filtered = filtered.filter(service => service.category.includes('Manufacturing') |service.category.includes('IoT')
       }
-    }
     // Price filter
-    if (selectedPriceRange !== 'all') {
+    if (selectedPriceRange != 'all') {
       filtered = filtered.filter(service => {
-        const price = parseInt(service.price.replace(/[^0-9]/g, ''))
-        if (selectedPriceRange === 'low') return price < 1000
-        if (selectedPriceRange === 'medium') return price >= 1000 && price < 5000
-        if (selectedPriceRange === 'high') return price >= 5000 && price < 20000
-        if (selectedPriceRange === 'premium') return price >= 20000
+        const price = parseInt(service.price.replace(/[^0-9]/g, '')
+        if (selectedPriceRange = = 'low') return price < 1000
+        if (selectedPriceRange = = 'medium') return price >= 1000 && price < 5000
+        if (selectedPriceRange = = 'high') return price >= 5000 && price < 20000
+        if (selectedPriceRange = = 'premium') return price >= 20000
         return true
       })
     }
     // Sort services
-    filtered.sort((a, b) => {
+    filtered.sort(a, b) => {
       switch (sortBy) {
         case 'price-low':
-          return parseInt(a.price.replace(/[^0-9]/g, '')) - parseInt(b.price.replace(/[^0-9]/g, ''))
+          return parseInt(a.price.replace(/[^0-9]/g, '') - parseInt(b.price.replace(/[^0-9]/g, '')
         case 'price-high':
-          return parseInt(b.price.replace(/[^0-9]/g, '')) - parseInt(a.price.replace(/[^0-9]/g, ''))
+          return parseInt(b.price.replace(/[^0-9]/g, '') - parseInt(a.price.replace(/[^0-9]/g, '')
         case 'popularity':
           return (b.rating * b.reviews) - (a.rating * a.reviews)
         case 'newest':
           return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime()
         case 'rating':
           return b.rating - a.rating
-          return parseInt(a.price.replace(/[^0-9]/g, '')) - parseInt(b.price.replace(/[^0-9]/g, ''));
+          return parseInt(a.price.replace(/[^0-9]/g, '') - parseInt(b.price.replace(/[^0-9]/g, '');
         case 'price-high':
-          return parseInt(b.price.replace(/[^0-9]/g, '')) - parseInt(a.price.replace(/[^0-9]/g, ''));
+          return parseInt(b.price.replace(/[^0-9]/g, '') - parseInt(a.price.replace(/[^0-9]/g, '');
         case 'popularity':
           return (b.rating * b.reviews) - (a.rating * a.reviews);
         case 'newest':
@@ -178,20 +177,19 @@ export default function Services2026ShowcaseEnhancedPage() {
         case 'rating':
           return b.rating - a.rating;
         default: return a.name.localeCompare(b.name)
-      }
-    })
+      })
     return filtered
   }, [all2026Services, searchTerm, selectedCategory, selectedPriceRange, sortBy])
   // Service statistics
   const serviceStats = {
     totalServices: all2026Services.length
-    aiServices: all2026Services.filter(s => s.category.includes('AI')).length
-    quantumServices: all2026Services.filter(s => s.category.includes('Quantum')).length
-    enterpriseServices: all2026Services.filter(s => s.category.includes('Enterprise') |s.category.includes('IT')).length
-    microSaasServices: all2026Services.filter(s => s.category.includes('SaaS')).length
-    healthcareServices: all2026Services.filter(s => s.category.includes('Healthcare') |s.category.includes('Biotech')).length
-    financialServices: all2026Services.filter(s => s.category.includes('Financial') |s.category.includes('Trading')).length
-    manufacturingServices: all2026Services.filter(s => s.category.includes('Manufacturing') |s.category.includes('IoT')).length
+    aiServices: all2026Services.filter(s => s.category.includes('AI').length
+    quantumServices: all2026Services.filter(s => s.category.includes('Quantum').length
+    enterpriseServices: all2026Services.filter(s => s.category.includes('Enterprise') |s.category.includes('IT').length
+    microSaasServices: all2026Services.filter(s => s.category.includes('SaaS').length
+    healthcareServices: all2026Services.filter(s => s.category.includes('Healthcare') |s.category.includes('Biotech').length
+    financialServices: all2026Services.filter(s => s.category.includes('Financial') |s.category.includes('Trading').length
+    manufacturingServices: all2026Services.filter(s => s.category.includes('Manufacturing') |s.category.includes('IoT').length
   }
 
   return (
@@ -220,25 +218,24 @@ export default function Services2026ShowcaseEnhancedPage() {
           <div className="absolute inset-0 bg-gradient-to-r from-purple-900/30 via-transparent to-cyan-900/30"></div>
           <div className="max-w-7xl mx-auto relative z-10 text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
         {/* Enhanced Header Section */}
         <section className="relative py - 32 px - 4 sm:px - 6 lg:px - 8 overflow - hidden">;
           <div className="absolute inset - 0 bg - gradient - to - r from - purple - 900 / 30 via - transparent to - cyan - 900 / 30"></div>;
           <div className="max - w-7xl mx - auto relative z - 10 text - center">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, coordinate_y: 20 }
+              animate={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
             >
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
                 Enhanced 2026 Services Showcase
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
                 Discover our comprehensive collection of innovative micro SAAS services, AI solutions, quantum computing, and enterprise IT services that will transform your business in 2026 and beyond.
-              </p>
-            >;
+              </p>;
               <h1 className="text - 5xl md:text - 7xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent mb - 6">;
                 Enhanced 2026 Services Showcase;
               </h1>;
@@ -247,18 +244,18 @@ export default function Services2026ShowcaseEnhancedPage() {
               </p>;
               {/* Service Statistics */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-                {Object.entries(serviceStats).map(([key, value]) => (
+                {Object.entries(serviceStats).map([key, value]) => (
                   <motion.div
                     key={key}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5, delay: key.length * 0.1 }}
+                    initial={ opacity: 0, scale: 0.8 }
+                    animate={ opacity: 1, scale: 1 }
+                    transition={ duration: 0.5, delay: key.length * 0.1 }
                     className="bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-xl p-4 border border-gray-600/30"
                   >
                     <div className="text-3xl font-bold text-cyan-400">{value}</div>
                     <div className="text-sm text-gray-400 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</div>
                   </motion.div>
-                ))}
+                )}
               </div>
               {/* Contact Information */}
               <div className="bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-xl p-6 border border-gray-600/30 max-w-2xl mx-auto">
@@ -314,11 +311,11 @@ export default function Services2026ShowcaseEnhancedPage() {
                     onChange={(e) => setSelectedCategory(e.target.value)}
                     className="w-full bg-gray-800/50 border border-gray-600/30 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
                   >
-                    {categories.map((category) => (
+                    {categories.map(category) => (
                       <option key={category.id} value={category.id}>
                         {category.name} ({category.count})
                       </option>
-                    ))}
+                    )}
                   </select>
                 </div>
                 {/* Price Range Filter */}
@@ -329,11 +326,11 @@ export default function Services2026ShowcaseEnhancedPage() {
                     onChange={(e) => setSelectedPriceRange(e.target.value)}
                     className="w-full bg-gray-800/50 border border-gray-600/30 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
                   >
-                    {priceRanges.map((range) => (
+                    {priceRanges.map(range) => (
                       <option key={range.id} value={range.id}>
                         {range.name}
                       </option>
-                    ))}
+                    )}
                   </select>
                 </div>
                 {/* Sort Options */}
@@ -344,11 +341,11 @@ export default function Services2026ShowcaseEnhancedPage() {
                     onChange={(e) => setSortBy(e.target.value)}
                     className="w-full bg-gray-800/50 border border-gray-600/30 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
                   >
-                    {sortOptions.map((option) => (
+                    {sortOptions.map(option) => (
                       <option key={option.id} value={option.id}>
                         {option.name}
                       </option>
-                    ))}
+                    )}
                   </select>
                 </div>
                 {/* View Mode Toggle */}
@@ -358,7 +355,7 @@ export default function Services2026ShowcaseEnhancedPage() {
                     <button
                       onClick={() => setViewMode('grid')}
                       className={`flex-1 py-2 px-3 rounded-md text-sm font-medium transition-colors ${
-                        viewMode === 'grid' ? 'bg-cyan-600 text-white' : 'text-gray-400 hover:text-white'
+                        viewMode = = 'grid' ? 'bg-cyan-600 text-white' : 'text-gray-400 hover:text-white'
                       }`}
                     >
                       <Grid className="w-4 h-4 mx-auto" />
@@ -366,7 +363,7 @@ export default function Services2026ShowcaseEnhancedPage() {
                     <button
                       onClick={() => setViewMode('list')}
                       className={`flex-1 py-2 px-3 rounded-md text-sm font-medium transition-colors ${
-                        viewMode === 'list' ? 'bg-cyan-600 text-white' : 'text-gray-400 hover:text-white'
+                        viewMode = = 'list' ? 'bg-cyan-600 text-white' : 'text-gray-400 hover:text-white'
                       }`}
                     >
                       <List className="w-4 h-4 mx-auto" />
@@ -389,11 +386,11 @@ export default function Services2026ShowcaseEnhancedPage() {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <AnimatePresence mode="wait">
-              {filteredServices.length === 0 ? (
+              {filteredServices.length = = 0 ? (
                 <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
+                  initial={ opacity: 0 }
+                  animate={ opacity: 1 }
+                  exit={ opacity: 0 }
                   className="text-center py-20"
                 >
                   <div className="text-6xl mb-4"></div>
@@ -401,33 +398,33 @@ export default function Services2026ShowcaseEnhancedPage() {
                   <p className="text-gray-400">Try adjusting your search criteria or filters</p>
                 </motion.div>
               ) : (
-                <div className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6' : 'space-y-4'}>
-                  {filteredServices.map((service, index) => (
+                <div className={viewMode = = 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6' : 'space-y-4'}>
+                  {filteredServices.map(service, index) => (
                     <motion.div
         {/* Enhanced Services Grid */}
         <section className="py - 16 px - 4 sm:px - 6 lg:px - 8">;
           <div className="max - w-7xl mx - auto">;
             <AnimatePresence mode="wait">;
-              {filtered_services.length === 0 ? (
+              {filtered_services.length = = 0 ? (
                 <motion.div;
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
+                  initial={ opacity: 0 }
+                  animate={ opacity: 1 }
+                  exit={ opacity: 0 }
                   className="text - center py - 20";
                 >;
                   <div className="text - 6xl mb - 4"></div>;
                   <h3 className="text - 2xl font - semibold text - gray - 300 mb - 2">No services found</h3>;
                   <p className="text - gray - 400">Try adjusting your search criteria or filters</p>;
                 </motion.div>) : (
-                <div className={view_mode === 'grid' ? 'grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6' : 'space - y-4'}>;
-                  {filtered_services.map ((service, index) => (
+                <div className={view_mode = = 'grid' ? 'grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6' : 'space - y-4'}>;
+                  {filtered_services.map (service, index) => (
                     <motion.div;
                       key={service.id}
-                      initial={{ opacity: 0, coordinate_y: 20 }}
-                      animate={{ opacity: 1, coordinate_y: 0 }}
-                      exit={{ opacity: 0, coordinate_y: -20 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
-                      className={viewMode === 'grid' ? '' : 'bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-xl p-6 border border-gray-600/30'}
+                      initial={ opacity: 0, coordinate_y: 20 }
+                      animate={ opacity: 1, coordinate_y: 0 }
+                      exit={ opacity: 0, coordinate_y: -20 }
+                      transition={ duration: 0.5, delay: index * 0.1 }
+                      className={viewMode = = 'grid' ? '' : 'bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-xl p-6 border border-gray-600/30'}
                     >
                       <UltraFuturisticCard
                         variant={mapServiceVariantToCardVariant(service.variant)}
@@ -471,11 +468,11 @@ export default function Services2026ShowcaseEnhancedPage() {
                           <div className="mb - 4">;
                             <h4 className="text - sm font - semibold text - gray - 200 mb - 2">Key Features:</h4>;
                             <ul className="space - y-1">;
-                              {service.features.slice (0, 3).map ((feature, idx) => (
+                              {service.features.slice (0, 3).map (feature, idx) => (
                                 <li key={idx} className="flex items - center text - xs text - gray - 400">;
                                   <CheckCircle className="w - 3 h - 3 text - green - 400 mr - 2 flex - shrink - 0" />;
                                   {feature}
-                                </li>))}
+                                </li>)}
                             </ul>;
                             {service.features.length > 3 && (
                               <p className="text-xs text-gray-500 mt-1">+{service.features.length - 3} more features</p>
@@ -528,7 +525,7 @@ export default function Services2026ShowcaseEnhancedPage() {
                         </div>
                       </UltraFuturisticCard>
                     </motion.div>
-                  ))}
+                  )}
                 </div>
               )}
             </AnimatePresence>
@@ -539,18 +536,18 @@ export default function Services2026ShowcaseEnhancedPage() {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
         {/* Enhanced Footer CTA */}
         <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
           <div className="max - w-4xl mx - auto text - center">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, coordinate_y: 20 }
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
               className="bg-gradient-to-r from-cyan-900/50 via-purple-900/50 to-pink-900/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -587,7 +584,7 @@ export default function Services2026ShowcaseEnhancedPage() {
       </div>
     </UltraFuturisticBackground>
   )
-}
+
               className="bg - gradient - to - r from - cyan - 900 / 50 via - purple - 900 / 50 to - pink - 900 / 50 backdrop - blur - sm rounded - 2xl p - 8 border border - cyan - 500 / 30";
             >;
               <h2 className="text - 3xl md:text - 4xl font - bold text - white mb - 4">;
@@ -623,4 +620,3 @@ export default function Services2026ShowcaseEnhancedPage() {
         </section>;
       </div>;
     </UltraFuturisticBackground>);
-}

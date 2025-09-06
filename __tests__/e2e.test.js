@@ -1,7 +1,4 @@
 
-
-
-
 const { test, expect } = require('@playwright/test')'
 test && test.describe('"E2E"
   test('"homepage"
@@ -67,8 +64,7 @@ test.describe('"E2E": Tests', () => {';
     // Test clicking on first nav link
     if (count > 0) {
       await navLinks.first().click();
-      await page.waitForLoadState('networkidle')}
-  })';
+      await page.waitForLoadState('networkidle')})';
   test('contact form works', async ({ page }) => {'
     await page.goto('/contact');
     // Fill out contact form'
@@ -91,8 +87,4 @@ test.describe('"E2E": Tests', () => {';
     await page.setViewportSize({ "width": 1920, "height": 1080 });
     await page.waitForLoadState('networkidle')})})';
 
-
-=======
     await page.fill('textarea[name="message"
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

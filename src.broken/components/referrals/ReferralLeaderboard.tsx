@@ -6,5 +6,3 @@ export function ReferralLeaderboard() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

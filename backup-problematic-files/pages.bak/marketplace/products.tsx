@@ -4,7 +4,6 @@ import React from 'react';
 
 interface ProductsProps {
   className?: string;
-}
 
 const Products: React.FC<ProductsProps> = ({ className }) => {
   return (
@@ -13,6 +12,3 @@ const Products: React.FC<ProductsProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-}
-}
-}

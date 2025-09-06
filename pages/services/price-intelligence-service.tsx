@@ -18,7 +18,7 @@ const PriceIntelligenceService: NextPage = () => {
       </main>
     </div>
   )
-}
+
 export default PriceIntelligenceService;
 
 import type { NextPage } from 'next',
@@ -39,5 +39,5 @@ const PriceIntelligenceService: NextPage = () => {
         <Link href="/services">Back to Services</Link>;
       </main>;
     </div>);
-},
+,
 export default PriceIntelligenceService,

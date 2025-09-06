@@ -6,5 +6,3 @@ export function ActiveFilters() {;
       <p>Component placeholder - needs implementation</p>;
     </div>;
   );
-}
-;

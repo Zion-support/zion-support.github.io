@@ -6,5 +6,3 @@ export function ServiceOnboarding() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

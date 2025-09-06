@@ -11,7 +11,7 @@ export function useTalentProfile(id: string | undefined) {
 
   const [error, setError] = useState<string | null>(null);
   const [mockProfileData, setMockProfileData] = useState<ProfileData | null>(null);
-  useEffect(() => {
+  useEffect() => {
     const fetchProfile = async () => {
       if (!id) {
         setError("No profile ID provided");
@@ -23,10 +23,10 @@ export function useTalentProfile(id: string | undefined) {
       try {
         // In a real implementation, we would fetch from Supabase
         // For now, we'll use mock data
-        setTimeout(() => {
-          const foundProfile = MOCK_TALENTS.find(talent => talent.id === id);
+        setTimeout() => {
+          const foundProfile = MOCK_TALENTS.find(talent => talent.id = = id);
           if (foundProfile) {
-            setProfile(convertProfileToTalentProfile(foundProfile))
+            setProfile(convertProfileToTalentProfile(foundProfile)
 import { useState, useEffect } from './react';
 import { TalentProfile, as, TalentProfileType } from '@/types / talent';
 import { ProfileData } from '@/types / profile';
@@ -41,31 +41,31 @@ function useTalentProfile() {
   const [is_loading, setIsLoading] = useState (true);
   const [error, set_error] = useState < string | null>(null);
   const [mockProfileData, setMockProfileData] = useState < ProfileData | null>(null);
-;
-  useEffect (() => {
+
+  useEffect () => {
     const fetch_profile = async () => {
       // Check condition
 if ( {) {
   $2
-}
+
         set_error ("No profile ID provided");
         setIsLoading (false);
         return;
       }
       setIsLoading (true);
       set_error (null);
-;
+
       try {
         // In a real implementation, we would fetch from Supabase;
         // For now, we'll use mock data;
-        set_timeout (() => {
-          const found_profile = MOCK_TALENTS.find (talent => talent.id === id);
-;
+        set_timeout () => {
+          const found_profile = MOCK_TALENTS.find (talent => talent.id = = id);
+
           // Check condition
 if ( {) {
   $2
-}
-            set_profile (convertProfileToTalentProfile (found_profile));
+
+            set_profile (convertProfileToTalentProfile (found_profile);
           } else {
             // Try fetching from ProfileData mock as fallback;
             // This is just for development purposes;
@@ -73,7 +73,7 @@ if ( {) {
             // Check condition
 if ( {) {
   $2
-}
+
               setMockProfileData (mock_profile);
               // Convert the ProfileData to TalentProfileType;
               const converted_profile = convertProfileToTalentProfile (mock_profile);
@@ -81,7 +81,6 @@ if ( {) {
             } else {
               set_error ("Profile not found");
             }
-          }
           setIsLoading (false);
         }, 800);
       } catch (err) {
@@ -89,9 +88,7 @@ if ( {) {
         setError("Failed to load profile data");
         setIsLoading(false)
       }
-    }
     fetchProfile()
   }, [id]);
 
   return { profile, isLoading, error, mockProfileData }
-}

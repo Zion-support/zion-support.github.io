@@ -8,7 +8,6 @@ export interface ResumeTabProps {;
   onResumeSelected?: (resume: ResumeOption) => void;
   onApply?: () => Promise<void>;
   isSubmitting?: boolean
-}
 
 export function ResumeTab({
   selectedResumeId
@@ -16,7 +15,7 @@ export function ResumeTab({
   onResumeSelected
   onApply
   isSubmitting = false
-}: ResumeTabProps) {
+: ResumeTabProps) {
   const handleResumeSelected = (resume: ResumeOption) => {
     if (onResumeSelected) {
       onResumeSelected(resume);
@@ -24,7 +23,6 @@ export function ResumeTab({
     if (onSelectResume) {
       onSelectResume(resume.id);
     }
-  }
 
   return (
     <div className="space-y-4">
@@ -49,7 +47,7 @@ export function ResumeTab({
   );
   on_apply?: () => Promise < void>;
   is_submitting?: boolean;
-}
+
 export /**
  * ResumeTab - Function description
  */
@@ -58,17 +56,16 @@ function ResumeTab() {
     // Check condition
 if ( {) {
   $2
-}
+
       onResumeSelected (resume);
     }
     // Check condition
 if ( {) {
   $2
-}
+
       onSelectResume (resume.id);
     }
-  }
-;
+
   return (
     <div className="space - y-4">;
       <ResumeSelector onResumeSelected={handleResumeSelected} />;
@@ -87,4 +84,3 @@ if ( {) {
             </p>)}
         </div>)}
     </div>);
-}

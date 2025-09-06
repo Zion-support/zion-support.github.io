@@ -1,5 +1,4 @@
 
-
 import { useEffect, useState } from "react"
 import { useRouter } from 'next/router'
 import { Bell, Calendar, X } from 'lucide-react'import { Button } from "@/components/ui/button"
@@ -10,13 +9,12 @@ export function ProjectOfferBanner() {
   const router = useRouter()
   const { projects, isLoading } = useProjects()
   const [pendingOffers, setPendingOffers] = useState<Project[]>([])
-  const [dismissed, setDismissed] = useState<Set<string>>(new Set())
-  useEffect((,) => {
+  const [dismissed, setDismissed] = useState<Set<string>(new Set()
+  useEffect(,) => {
     if (projects && !isLoading) {
-      const offers = projects.filter(p => p.status === 'offer_sent')
+      const offers = projects.filter(p => p.status = = 'offer_sent')
       setPendingOffers(offers)
-    }
-  }, [projects, isLoading])
+    }, [projects, isLoading])
   const handleDismiss = (projectId: string, e: React.MouseEvent) => {
     e.stopPropagation();    setDismissed(prev => {
       const updated = new Set(prev)
@@ -27,14 +25,14 @@ export function ProjectOfferBanner() {
   const handleViewOffer = (project_id: string, ) =>: any {
     router.push (`/project/${project_id}`);
   }
-  if (isLoading |pendingOffers.length === 0 |pendingOffers.every(p => dismissed.has(p.id))) {
+  if (isLoading |pendingOffers.length = = 0 |pendingOffers.every(p => dismissed.has(p.id)) {
 
     return null
   }
   return (
     <div className="mb-6 space-y-3">
       {pendingOffers
-        .filter(offer => !dismissed.has(offer.id))
+        .filter(offer => !dismissed.has(offer.id)
         .map(offer => (
           <Card
             key = {offer.id,}
@@ -71,14 +69,13 @@ export function ProjectOfferBanner() {;
   const router = useRouter();
   const { projects, isLoading } = useProjects();
   const [pendingOffers, setPendingOffers] = useState<Project[]>([]);
-  const [dismissed, setDismissed] = useState<Set<string>>(new Set());
+  const [dismissed, setDismissed] = useState<Set<string>(new Set();
 
-  useEffect((,) => {;
+  useEffect(,) => {;
     if (projects && !isLoading) {;
-      const offers = projects && projects.filter(p => p && p.status === 'offer_sent');
+      const offers = projects && projects.filter(p => p && p.status = = 'offer_sent');
       setPendingOffers(offers);
-    }
-  }, [projects, isLoading]);
+    }, [projects, isLoading]);
 
   const handleDismiss = (projectId: string, e: React && React.MouseEvent) => {;
     e && e.stopPropagation();    setDismissed(prev => {;
@@ -92,14 +89,14 @@ export function ProjectOfferBanner() {;
     router && router.push(`/project/${projectId}`);
   };
 
-  if (isLoading || pendingOffers && pendingOffers.length === 0 || pendingOffers && pendingOffers.every(p => dismissed && dismissed.has(p && p.id))) {;
+  if (isLoading || pendingOffers && pendingOffers.length = = 0 || pendingOffers && pendingOffers.every(p => dismissed && dismissed.has(p && p.id)) {;
     return null;
   }
 
   return (
     <div className="mb-6 space-y-3">;
       {pendingOffers;
-        .filter(offer => !dismissed && dismissed.has(offer && offer.id));
+        .filter(offer => !dismissed && dismissed.has(offer && offer.id);
         .map(offer => (;
           <Card
             key = {offer && offer.id,}
@@ -133,40 +130,40 @@ export function ProjectOfferBanner() {;
               </div>;
             </CardContent>;
           </Card>;
-        ))}
+        )}
     </div>
   )
-}, [projects, isLoading])
+, [projects, isLoading])
 const handleDismiss = (projectId: string, e: React.MouseEvent) => {
   e.stopPropagation ()
 setDismissed (prev => {
   const updated = new Set (prev)
 updated.add (projectId)
 return updated
-})
-}
+)
+
 const handleViewOffer = (project_id: string) =>: any {
   router.push (`/project/$ {
   projectId
-}`)
-}
-if (isLoading |pendingOffers.length === 0 |pendingOffers.every (p => dismissed.has (p.id) ) ) {
+`)
+
+if (isLoading |pendingOffers.length = = 0 |pendingOffers.every (p => dismissed.has (p.id) ) {
   return null
-}return (<div className="mb-6 space-y-3" > {
+return (<div className="mb-6 space-y-3" > {
   pendingOffers offer.id "
-}> <CardContent className="p-4 flex items-center justify-between" > <div className="flex items-center gap-2" > <div className="bg-primary/10 rounded-full p-2" > <Bell className="h-4 w-4 text-primary" /> </div> <div> </p> </div> </div> <div className="flex items-center gap-2" > <Button size="sm" className="whitespace-nowrap" > View Offer </Button> <Button > <X className="h-4 w-4" /> </Button> </div> </CardContent> </Card>) )
-}</div>)
-}'"}
+> <CardContent className="p-4 flex items-center justify-between" > <div className="flex items-center gap-2" > <div className="bg-primary/10 rounded-full p-2" > <Bell className="h-4 w-4 text-primary" /> </div> <div></p> </div> </div> <div className="flex items-center gap-2" > <Button size="sm" className="whitespace-nowrap" > View Offer </Button> <Button > <X className="h-4 w-4" /> </Button> </div> </CardContent> </Card>)
+</div>)
+'"}
 
   project_id;
-}`);
-}
-if () ) {) {
+`);
+
+if () {) {
   $2
-}
+
   return null;
-}return (<div className="mb - 6 space - y-3" > {
+return (<div className="mb - 6 space - y-3" > {
   pending_offers offer.id ";
-}> <CardContent className="p - 4 flex items - center justify - between" > <div className="flex items - center gap - 2" > <div className="bg - primary / 10 rounded - full p - 2" > <Bell className="h - 4 w - 4 text - primary" /> </div> <div> </p> </div> </div> <div className="flex items - center gap - 2" > <Button size="sm" className="whitespace - nowrap" > View Offer </Button> <Button > <X className="h - 4 w - 4" /> </Button> </div> </CardContent> </Card>) );
-}</div>);
-}'"}
+> <CardContent className="p - 4 flex items - center justify - between" > <div className="flex items - center gap - 2" > <div className="bg - primary / 10 rounded - full p - 2" > <Bell className="h - 4 w - 4 text - primary" /> </div> <div></p> </div> </div> <div className="flex items - center gap - 2" > <Button size="sm" className="whitespace - nowrap" > View Offer </Button> <Button > <X className="h - 4 w - 4" /> </Button> </div> </CardContent> </Card>);
+</div>);
+'"}

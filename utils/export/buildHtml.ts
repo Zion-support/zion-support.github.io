@@ -1,7 +1,7 @@
 import type { BookProject } from '../book/bookTypes';
 export function buildPrintableHtml(project: BookProject): string {const { meta, chapters, visuals } = project;
   const quotesHtml = visuals.quoteCallouts;
-    .map((q) => `<blockquote class="quote"><p>${escapeHtml(q.text)}</p>${q.attribution ? `<cite>${escapeHtml(q.attribution)}</cite>` : ''}</blockquote>`);
+    .map(q) => `<blockquote class="quote"><p>${escapeHtml(q.text)}</p>${q.attribution ? `<cite>${escapeHtml(q.attribution)}</cite>` : ''}</blockquote>`);
     .join('\n');
   const chapterHtml = chapters;
     .map(;
@@ -16,7 +16,7 @@ export function buildPrintableHtml(project: BookProject): string {const { meta, 
     ...visuals.timelineImages;
     ...visuals.daoVoteCharts;
     ...visuals.uiScreens];
-    .map((src) => `<figure class="visual"><img src="${src}" /></figure>`) // base64 ok;
+    .map(src) => `<figure class="visual"><img src="${src}" /></figure>`) // base64 ok;
     .join('\n');
   const barcode = meta.isbn ? `<img class="barcode" src="/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}" />` : '';
   return `<!doctype html>;
@@ -54,17 +54,16 @@ export function buildPrintableHtml(project: BookProject): string {const { meta, 
   ${visuals_html}
 </body>;
 </html>`;
-}
+
 function paragraphize(text: string): string {if (!text) return '';
   return text;
     .split(/\n\n+/);
-    .map((p) => `<p>${escapeHtml(p)}</p>`);
+    .map(p) => `<p>${escapeHtml(p)}</p>`);
     .join('\n');
-}
+
 function escapeHtml(s: string): string {return s;
     .replace(/&/g, '&amp,');
     .replace(/</g, '<');
     .replace(/>/g, '>');
     .replace(/"/g, '"');
     .replace(/'/g, '&#039,');
-}

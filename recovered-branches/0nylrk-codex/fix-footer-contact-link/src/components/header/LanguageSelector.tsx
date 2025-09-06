@@ -8,7 +8,7 @@ import {
   DropdownMenuContent
   DropdownMenuItem
   DropdownMenuTrigger
-} from "@/components/ui/dropdown-menu";
+ from "@/components/ui/dropdown-menu";
 import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
 
 export function LanguageSelector() {;
@@ -28,11 +28,11 @@ export function LanguageSelector() {;
       <DropdownMenuContent
         align="end"
         className="bg-zion-blue-dark border border-zion-purple/20">;
-        {supportedLanguages && supportedLanguages.map((lang) => (;
+        {supportedLanguages && supportedLanguages.map(lang) => (;
           <DropdownMenuItem
             key={lang && lang.code}
             className={`cursor-pointer ${
-              currentLanguage === lang && lang.code
+              currentLanguage = = lang && lang.code
                 ? "bg-zion-purple/20 text-zion-cyan"
                 : "text-white hover:bg-zion-purple/10"
             }`}
@@ -43,7 +43,7 @@ export function LanguageSelector() {;
               <span>{t(`language.${lang && lang.code}`)}</span>;
             </div>;
           </DropdownMenuItem>;
-        ))}
+        )}
       </DropdownMenuContent>;
     </DropdownMenu>;
   );
@@ -56,7 +56,7 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from '@/components / ui / dropdown - menu';
+ from '@/components / ui / dropdown - menu';
 import { use_language, SupportedLanguage  } from '@/context / LanguageContext';
 export /**
  * LanguageSelector - Function description
@@ -64,7 +64,7 @@ export /**
 function LanguageSelector() {
   const { t } = use_translation ();
   const { current_language, change_language, supported_languages } = use_language ();
-;
+
   return (
     <DropdownMenu>;
       <DropdownMenuTrigger as_child>;
@@ -81,11 +81,11 @@ function LanguageSelector() {
         align="end";
         className="bg - zion - blue - dark border border - zion - purple / 20";
       >;
-        {supported_languages.map ((lang) => (
+        {supported_languages.map (lang) => (
           <DropdownMenuItem;
             key={lang.code}
             className={`cursor - pointer ${
-              current_language === lang.code;
+              current_language = = lang.code;
                 ? "bg - zion - purple / 20 text - zion - cyan";
                 : "text - white hover:bg - zion - purple / 10";
             }`}
@@ -95,7 +95,6 @@ function LanguageSelector() {
               <span className="text - lg">{lang.flag}</span>;
               <span>{t (`language.${lang.code}`)}</span>;
             </div>;
-          </DropdownMenuItem>))}
+          </DropdownMenuItem>)}
       </DropdownMenuContent>;
     </DropdownMenu>);
-}

@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React from "react";
 import Link from "next/link";
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github } from "lucide-react";
@@ -51,13 +51,13 @@ import {
   Twitter, Linkedin, Facebook, Instagram
   ArrowRight, Rocket, Brain, Cpu, Shield
   Star, Users, TrendingUp, Zap
-} from 'lucide-react'
+ from 'lucide-react'
 const contactInfo = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
-}
+
 const serviceCategories = [
   {
     title: 'Next-Generation AI'
@@ -86,7 +86,7 @@ const serviceCategories = [
       { name: 'AI Mental Health Companion', href: '/ai-mental-health-companion' }
     ]
   }
-]
+
 const companyLinks = [
   { name: 'About Us', href: '/about' }
   { name: 'Careers', href: '/careers' }
@@ -94,7 +94,7 @@ const companyLinks = [
   { name: 'Case Studies', href: '/case-studies' }
   { name: 'Blog', href: '/blog' }
   { name: 'Resources', href: '/resources' }
-]
+
 const supportLinks = [
   { name: 'Contact Support', href: '/contact' }
   { name: 'Documentation', href: '/docs' }
@@ -102,7 +102,7 @@ const supportLinks = [
   { name: 'Status Page', href: '/status' }
   { name: 'Security', href: '/security' }
   { name: 'Privacy Policy', href: '/privacy' }
-]
+
 const socialLinks = [
   { name: 'LinkedIn', href: 'https://www.linkedin.com/company/zion-tech-group', icon: Linkedin }
   { name: 'Instagram', href: 'https://www.instagram.com/ziontechgroup', icon: Instagram }
@@ -155,10 +155,10 @@ export default function EnhancedFooter() {
 
         {/* Newsletter Signup */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          viewport={{ once: true }}
+          initial={ opacity: 0, y: 20 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0.6, delay: 0.6 }
+          viewport={ once: true }
           className="mt-12 pt-12 border-t border-gray-700/50"
         >
           <div className="text-center">
@@ -187,7 +187,7 @@ export default function EnhancedFooter() {
 import React from './react';
 import Link from './next / link';
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github  } from './lucide-react';
-;
+
 const EnhancedFooter: React.FC = () => {
   const current_year = new Date ().getFullYear ();
 import React from 'react',
@@ -197,13 +197,13 @@ import {
   Twitter, Linkedin, Facebook, Instagram,
   ArrowRight, Rocket, Brain, Cpu, Shield,
   Star, Users, TrendingUp, Zap;
-} from 'lucide-react',
+ from 'lucide-react',
 const contact_info = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com';
-},
+,
 const service_categories = [;
   {
     title: 'Next - Generation AI',
@@ -232,7 +232,7 @@ const service_categories = [;
       { name: 'AI Mental Health Companion', href: '/ai - mental - health - companion' }
     ];
   }
-],
+,
 const company_links = [;
   { name: 'About Us', href: '/about' },
   { name: 'Careers', href: '/careers' },
@@ -240,7 +240,7 @@ const company_links = [;
   { name: 'Case Studies', href: '/case - studies' },
   { name: 'Blog', href: '/blog' },
   { name: 'Resources', href: '/resources' }
-],
+,
 const support_links = [;
   { name: 'Contact Support', href: '/contact' },
   { name: 'Documentation', href: '/docs' },
@@ -248,7 +248,7 @@ const support_links = [;
   { name: 'Status Page', href: '/status' },
   { name: 'Security', href: '/security' },
   { name: 'Privacy Policy', href: '/privacy' }
-],
+,
 const social_links = [;
   { name: 'LinkedIn', href: 'https://www.linkedin.com / company / zion - tech - group', icon: Linkedin },
   { name: 'Instagram', href: 'https://www.instagram.com / ziontechgroup', icon: Instagram },
@@ -266,7 +266,7 @@ function EnhancedFooter() {
     { name: 'Security', href: '/security' },
     { name: 'Case Studies', href: '/case - studies' },
   ];
-;
+
   const company = [;
     { name: 'About Us', href: '/about' },
     { name: 'Our Team', href: '/team' },
@@ -274,20 +274,20 @@ function EnhancedFooter() {
     { name: 'News', href: '/news' },
     { name: 'Partners', href: '/partners' },
   ];
-;
+
   const resources = [;
     { name: 'Blog', href: '/blog' },
     { name: 'Documentation', href: '/docs' },
     { name: 'Support', href: '/support' },
     { name: 'FAQ', href: '/faq' },
   ];
-;
+
   const social_links = [;
     { name: 'LinkedIn', href: 'https://linkedin.com / company / zion - tech - group', icon: Linkedin },
     { name: 'Twitter', href: 'https://twitter.com / ziontechgroup', icon: Twitter },
     { name: 'GitHub', href: 'https://github.com / zion - tech - group', icon: Github },
   ];
-;
+
   return (
     <footer className="bg - gray - 900 text - white">;
       <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 12">;
@@ -459,10 +459,8 @@ function EnhancedFooter() {
       </div>;
     </footer>;
   );
-}
+
 export default EnhancedFooter;
     </footer>);
-}
-;
+
 export default EnhancedFooter;
-;

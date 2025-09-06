@@ -13,7 +13,7 @@ export type Job = {
   status: JobStatus,
   createdAtIso: string,
   updatedAtIso: string
-},
+,
 
 export type ApplicationStatus = 'applied' | 'skipped' | 'withdrawn',
 
@@ -23,4 +23,4 @@ export type Application = {
   talentSlug: string,
   status: ApplicationStatus,
   createdAtIso: string
-},
+,

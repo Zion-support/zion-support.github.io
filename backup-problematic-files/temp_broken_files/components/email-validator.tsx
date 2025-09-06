@@ -8,14 +8,14 @@ export default function EmailValidatorPage() {const [emails, setEmails] = useSta
   const [isValidating, setIsValidating] = useState(false);
   const [bulkMode, setBulkMode] = useState(false);
   const validateEmails = async () => {;
-    if (!emails.trim()) return;
+    if (!emails.trim() return;
     setIsValidating(true);
     setValidationResults([]);
-    const emailList = emails.split('\n').filter(email => email.trim());
+    const emailList = emails.split('\n').filter(email => email.trim();
     const results = [];
     // Simulate email validation with realistic results;
     for (let i = 0, i < emailList.length, i++) {;
-      await new Promise(resolve => setTimeout(resolve, 200));
+      await new Promise(resolve => setTimeout(resolve, 200);
       const email = emailList[i].trim();
       const result = validateSingleEmail(email);
       results.push(result);
@@ -39,13 +39,13 @@ export default function EmailValidatorPage() {const [emails, setEmails] = useSta
     }
     const domain = email.split('@')[1];
     const isDisposable = disposableDomains.includes(domain);
-    const hasTypo = Object.entries(commonTypos).some(([correct, typos]) =>;
+    const hasTypo = Object.entries(commonTypos).some([correct, typos]) =>;
       typos.includes(domain);
     );
     let status = 'valid';
     let score = 100;
     const issues = [];
-    if (!emailRegex.test(email)) {status = 'invalid';
+    if (!emailRegex.test(email) {status = 'invalid';
       score = 0;
       issues.push('Invalid email format');
     } else if (isDisposable) {status = 'disposable';
@@ -73,12 +73,11 @@ export default function EmailValidatorPage() {const [emails, setEmails] = useSta
       hasTypo;
       timestamp: new Date().toLocaleTimeString();
     }
-}
+
   const getStatusIcon = (status: string) => {
     switch (status) {
       case 'valid':
     }
-  }
   const getStatusColor = (status: string) => {switch (status) {;
       case 'valid':;
         return 'text-green-400';
@@ -91,7 +90,6 @@ export default function EmailValidatorPage() {const [emails, setEmails] = useSta
       default:;
         return 'text-gray-400';
     }
-  }
   const getScoreColor = (score: number) => {if (score >= 80) return 'text-green-400';
     if (score >= 60) return 'text-yellow-400';
     if (score >= 40) return 'text-orange-400';
@@ -105,15 +103,15 @@ export default function EmailValidatorPage() {const [emails, setEmails] = useSta
   const clearResults = () => {setValidationResults([]);
     setEmails('');
   }
-  const getStats = () => {if (validationResults.length === 0) return null;
+  const getStats = () => {if (validationResults.length = = 0) return null;
     const total = validationResults.length;
-    const valid = validationResults.filter(r => r.status === 'valid').length;
-    const invalid = validationResults.filter(r => r.status === 'invalid').length;
-    const suspicious = validationResults.filter(r => r.status === 'suspicious').length;
-    const disposable = validationResults.filter(r => r.status === 'disposable').length;
-    const avgScore = validationResults.reduce((sum, r) => sum + r.score, 0) / total;
+    const valid = validationResults.filter(r => r.status = = 'valid').length;
+    const invalid = validationResults.filter(r => r.status = = 'invalid').length;
+    const suspicious = validationResults.filter(r => r.status = = 'suspicious').length;
+    const disposable = validationResults.filter(r => r.status = = 'disposable').length;
+    const avgScore = validationResults.reduce(sum, r) => sum + r.score, 0) / total;
     return { total, valid, invalid, suspicious, disposable, avgScore }
-}
+
   const stats = getStats()
   return (
     <>
@@ -241,17 +239,17 @@ variant=&quot;outline&quot;
                     </div>;
                   </div>;
                 </div>)}
-{validation_results.length > 0 ? (
+validation_results.length > 0 ? (
                 <div className=&quot;space - y-3 max - h-96 overflow - y-auto & quot;>;
-                  {validation_results.map ((result, index) => (
+                  {validation_results.map (result, index) => (
                     <div;
                       key={index}
-                      className={`p-4 rounded-lg border ${result.status === 'valid' ? 'border-green-500/30 bg-green-500/10' :;
-                        result.status === 'suspicious' ? 'border-yellow-500/30 bg-yellow-500/10' :;
-                        result.status === 'disposable' ? 'border-orange-500/30 bg-orange-500/10' :;
+                      className={`p-4 rounded-lg border ${result.status = = 'valid' ? 'border-green-500/30 bg-green-500/10' :;
+                        result.status = = 'suspicious' ? 'border-yellow-500/30 bg-yellow-500/10' :;
+                        result.status = = 'disposable' ? 'border-orange-500/30 bg-orange-500/10' :;
                         'border-red-500/30 bg-red-500/10';
                       }`}
->;
+;
                       <div className=&quot;flex items - center justify - between mb - 2&quot;>;
                         <div className=&quot;flex items - center space - x-3 & quot;>;
                           {getStatusIcon (result.status)}
@@ -271,15 +269,15 @@ variant=&quot;outline&quot;
                         <div className=&quot;text - sm & quot;>;
                           <span className=&quot;text - gray - 400 & quot;>Issues:</span>;
                           <ul className=&quot;mt - 1 space - y-1 & quot;>;
-                            {result.issues.map ((issue: string, issue_index: number) => (
+                            {result.issues.map (issue: string, issue_index: number) => (
                               <li key={issue_index} className=&quot;text - red - 300 flex items - center & quot;>;
                                 <XCircle className=&quot;w - 3 h - 3 mr - 2 flex - shrink - 0&quot; />;
                                 {issue}
-                              </li>))}
+                              </li>)}
                           </ul>;
                         </div>;
                       )}
-{result.isDisposable && (
+result.isDisposable && (
                         <div className=&quot;mt-2 p-2 bg-orange-500/20 border border-orange-500/30 rounded text-sm text-orange-300&quot;>
                            Disposable email domain detected
                         </div>
@@ -290,7 +288,7 @@ variant=&quot;outline&quot;
                         </div>
                       )}
                     </div>;
-                  ))}
+                  )}
 </div>
               ) : (
                 <div className=&quot;bg-gray-900 p-6 rounded-lg border border-gray-700 text-center&quot;>
@@ -425,4 +423,3 @@ variant=&quot;outline&quot;
         </div>
       </section>
       {/* CTA Section */}
-}

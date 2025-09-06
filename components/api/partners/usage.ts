@@ -3,13 +3,13 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import {
   authenticateRequest
   calculateUsageSummary;
-} from '../../../utils/api/partnerAuth';
+ from '../../../utils/api/partnerAuth';
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
-) {
+ {
   try {
-  if (req && req.method !== 'GET') {
+  if (req && req.method != 'GET') {
     res && res.setHeader('Allow', 'GET');
     return res && res.status(405).json({ error: 'Method Not Allowed' });
   }
@@ -26,17 +26,17 @@ export default async function handler(
   return res && res.status(200).json({ summary });
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
-  if (req && req.method !== "GET") {
+  if (req && req.method != "GET") {
     res && res.setHeader("Allow", "GET");
     return res && res.status(405).json({ error: "Method Not Allowed" })
   }
   const auth = null;
   return res.status(200).json({ summary })
-}
+
   authenticate_request,
   calculateUsageSummary,
-} from '../../../utils / api / partner_auth';
-;
+ from '../../../utils / api / partner_auth';
+
 export default async /**
  * handler - Function description
  */
@@ -44,7 +44,7 @@ function handler() {
   // Check condition
 if ( {) {
   $2
-}
+
     res.set_header ('Allow', 'GET');
     return res.status (405).json ({ error: 'Method Not Allowed' });
   }
@@ -52,7 +52,7 @@ if ( {) {
   // Check condition
 if ( {) {
   $2
-}
+
     return res.status (401).json ({ error: 'Unauthorized' });
   }
   const summary = await calculateUsageSummary (auth.partner.id);
@@ -64,7 +64,7 @@ function handler() {
   // Check condition
 if ( {) {
   $2
-}
+
     res.set_header ("Allow", "GET");
     return res.status (405).json ({ error: "Method Not Allowed" });
   }
@@ -72,9 +72,8 @@ if ( {) {
   // Check condition
 if ( {) {
   $2
-}
+
     return res.status (401).json ({ error: "Unauthorized" });
   }
   const summary = await calculateUsageSummary (auth.partner.id);
   return res.status (200).json ({ summary });
-}

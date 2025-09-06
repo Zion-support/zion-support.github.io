@@ -2,7 +2,6 @@ import React from 'react';
 
 interface AnalyticsDashboardProps {
   className?: string;
-}
 
 const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({ className }) => {
   return (
@@ -11,6 +10,5 @@ const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({ className }) =>
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default AnalyticsDashboard;

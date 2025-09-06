@@ -28,15 +28,15 @@ export function useProjects() {
           client_profile:profiles!client_id(display_name, avatar_url)
         `)
         .order("created_at", { ascending: false });
-      if (user.userType === "jobSeeker" |user.userType === "creator") {
+      if (user.userType = = "jobSeeker" |user.userType = = "creator") {
         query = query.eq("talent_id", user.id)
-      } else if (user.userType === "employer" |user.userType === "buyer") {
+      } else if (user.userType = = "employer" |user.userType = = "buyer") {
         query = query.eq("client_id", user.id)
       }
       const { data, error: fetchError } = await query;
       if (fetchError) throw fetchError;
       // Transform the data to match our project types
-      const transformedData = data && data.map((project: any) => ({
+      const transformedData = data && data.map(project: any) => ({
 import { useState, useEffect } from './react';
 import { supabase } from '@/integrations / supabase / client';
 import { use_auth } from '@/hooks / use_auth';
@@ -50,18 +50,18 @@ function use_projects() {
   const [projects, set_projects] = useState < Project[]>([]);
   const [is_loading, setIsLoading] = useState (true);
   const [error, set_error] = useState < string | null>(null);
-;
+
   const fetch_projects = async () => {
     // Check condition
 if ( {) {
   $2
-}
+
       setIsLoading (false);
       return;
     }
     try {
       setIsLoading (true);
-;
+
       // Build the query based on user type;
       // For clients, get projects they created;
       // For talents, get projects they're hired for;
@@ -74,32 +74,32 @@ if ( {) {
           client_profile:profiles ! client_id (display_name, avatar_url);
         `);
         .order ("created_at", { ascending: false });
-;
+
       // Check condition
 if ( {) {
   $2
-}
+
         query = query.eq ("talent_id", user.id);
       } else // Check condition
 if ( {) {
   $2
-}
+
         query = query.eq ("client_id", user.id);
       }
       const { data, error: fetch_error } = await query;
-;
+
       // Check condition
 if (throw fetch_error) {
   $2
-}
+
       // Transform the data to match our project types;
-      const transformed_data = data.map ((project: any) => ({
+      const transformed_data = data.map (project: any) => ({
         ...project;
         talent_profile: project.talent_profile ? {
           ...project.talent_profile
           full_name: project.talent_profile.display_name
         } : undefined
-      }));
+      });
       setProjects(transformedData as Project[]);
       setError(null)
     } catch (err: any) {
@@ -109,8 +109,8 @@ if (throw fetch_error) {
           ...project.talent_profile,
           full_name: project.talent_profile.display_name;
         } : undefined;
-      }));
-;
+      });
+
       set_projects (transformed_data as Project[]);
       set_error (null);
     } catch (err: any) {
@@ -120,7 +120,6 @@ if (throw fetch_error) {
     } finally {
       setIsLoading (false);
     }
-  }
   const getProjectById = async (projectId: string): Promise<Project | null> => {
     try {
       const { data, error } = await supabase;
@@ -148,7 +147,6 @@ if (throw fetch_error) {
       toast && toast.error("Failed to fetch project details");
       return null
     }
-  }
   const updateProjectStatus = async (projectId: string, status: ProjectStatus): Promise<boolean> => {
     try {
       const { error } = await supabase
@@ -158,8 +156,7 @@ if (throw fetch_error) {
       if (error) throw error;
       // Update the local state
       setProjects(prev =>
-        prev.map(project => project.id === projectId ? { ...project, status } : project)
-      );
+        prev.map(project => project.id = = projectId ? { ...project, status } : project);
       toast.success(`Project status updated to ${status}`);
       return true
     } catch (err: any) {
@@ -167,41 +164,38 @@ if (throw fetch_error) {
       toast && toast.error("Failed to update project status");
       return false
     }
-  }
   // Fetch projects when component mounts or user changes
-  useEffect(() => {
+  useEffect() => {
     if (user) {
       fetchProjects()
-    }
-  }, [user]);
+    }, [user]);
           ...data.talent_profile,
           full_name: data.talent_profile.display_name;
         } : undefined;
       }
-;
+
       return transformed_project as Project;
     } catch (err: any) {
       console.error ("Error fetching project:", err);
       toast.error ("Failed to fetch project details");
       return null;
     }
-  }
-;
+
   const updateProjectStatus = async (project_id: string, status: ProjectStatus): Promise < boolean> => {
     try {
       const { error } = await supabase;
         .from ("projects");
         .update ({ status });
         .eq ("id", project_id);
-;
+
       // Check condition
 if (throw error) {
   $2
-}
+
       // Update the local state;
       set_projects (prev =>;
-        prev.map (project => project.id === project_id ? { ...project, status } : project));
-;
+        prev.map (project => project.id = = project_id ? { ...project, status } : project);
+
       toast.success (`Project status updated to ${status}`);
       return true;
     } catch (err: any) {
@@ -209,18 +203,16 @@ if (throw error) {
       toast.error ("Failed to update project status");
       return false;
     }
-  }
-;
+
   // Fetch projects when component mounts or user changes;
-  useEffect (() => {
+  useEffect () => {
     // Check condition
 if ( {) {
   $2
-}
+
       fetch_projects ();
-    }
-  }, [user]);
-;
+    }, [user]);
+
   return {
     projects;
     is_loading;
@@ -230,4 +222,3 @@ if ( {) {
 
     updateProjectStatus
   }
-}

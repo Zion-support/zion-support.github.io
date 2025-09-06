@@ -1,7 +1,7 @@
 import EnhancedLayout from '../../components/layout/EnhancedLayout',;
-// @ts-ignore;
+/ @ts-ignore;
 import data from '../../data/github-pulse.json',;
-;
+
 export default function GithubPulsePage() {;
   const repo = data?.repo || {},;
   const last24h = data?.last24h || {},;
@@ -21,8 +21,7 @@ export default function GithubPulsePage() {;
       </div>;
     </EnhancedLayout>;
   ),;
-}
-;
+
 function Metric({ label, value } { label:string, value:any }) {;
   return (;
     <div className="p-4 border border-gray-200 dark:border-gray-800 rounded-lg">;
@@ -30,6 +29,5 @@ function Metric({ label, value } { label:string, value:any }) {;
       <div className="text-lg font-semibold">{value ?? ''}</div>;
     </div>;
   ),;import EnhancedLayout from '../../components/layout/EnhancedLayout';
-// @ts-ignore </div> </div> </EnhancedLayout>) 
-}</div>) 
-}
+/ @ts-ignore </div> </div> </EnhancedLayout>) 
+</div>) 

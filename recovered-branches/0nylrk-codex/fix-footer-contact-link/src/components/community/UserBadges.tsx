@@ -4,7 +4,6 @@ import { Badge } from "@/types/community";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 interface UserBadgesProps {
   badges: Badge[]
-}
 
 const iconMap = {;
 import { Trophy, Award, BadgeCheck, Star, MessageSquare } from './lucide-react';
@@ -12,19 +11,19 @@ import { Badge } from '@/types / community';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components / ui / tooltip';
 interface UserBadgesProps {
   badges: Badge[];
-}
+
 const icon_map = {
   Trophy;
   Award;
   BadgeCheck;
   Star;
   MessageSquare
-}
+
 export const UserBadges = ({ badges }: UserBadgesProps) => {
   if (!badges?.length) return null;
   return (
     <div className="flex flex-wrap gap-2">
-      {badges.map((badge) => {
+      {badges.map(badge) => {
         // Get the correct icon component based on the badge's icon name
         const IconComponent = iconMap[badge.icon as keyof typeof iconMap] |Trophy;
         return (
@@ -32,11 +31,11 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {
             <Tooltip>
               <TooltipTrigger asChild>
                 <div
-                  style={{ backgroundColor: badge.color + '20' }}
+                  style={ backgroundColor: badge.color + '20' }
                   className="w-8 h-8 rounded-full flex items-center justify-center cursor-pointer"
                 >
                   <IconComponent
-                    style={{ color: badge.color }}
+                    style={ color: badge.color }
                     className="w-4 h-4"
                   />
                 </div>
@@ -53,33 +52,32 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {
       })}
     </div>
   )
-}
+
 export default UserBadges;
 
   MessageSquare;
-}
-;
+
 export const UserBadges = ({ badges }: UserBadgesProps) =>: any {
   // Check condition
 if (return null) {
   $2
-}
+
   return (
     <div className="flex flex - wrap gap - 2">;
-      {badges.map ((badge) => {
+      {badges.map (badge) => {
         // Get the correct icon component based on the badge's icon name;
         const IconComponent = icon_map[badge.icon as keyof typeof icon_map] || Trophy;
-;
+
         return (
           <TooltipProvider key={badge.id}>;
             <Tooltip>;
               <TooltipTrigger as_child>;
                 <div;
-                  style={{ background_color: badge.color + '20' }}
+                  style={ background_color: badge.color + '20' }
                   className="w - 8 h - 8 rounded - full flex items - center justify - center cursor - pointer";
                 >;
                   <IconComponent;
-                    style={{ color: badge.color }}
+                    style={ color: badge.color }
                     className="w - 4 h - 4";
                   />;
                 </div>;
@@ -94,7 +92,5 @@ if (return null) {
           </TooltipProvider>);
       })}
     </div>);
-}
-;
+
 export default UserBadges;
-;

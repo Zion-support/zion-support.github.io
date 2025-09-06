@@ -13,35 +13,32 @@ import { logErrorToProduction } from '@/utils/productionLogger'; export function
   const [location, setLocation] = useState("")
   const [isSubmitting, setIsSubmitting] = useState(false)
   const handleSubmit = async e: React.FormEvent {e.preventDefault()
-    if(location.trim()) {
+    if(location.trim() {
       setIsSubmitting(true)
       // Simulate API call
       setTimeout(: unknown {
         setIsSubmitting(false)
-        router(`/it-onsite-services?location = ${encodeURIComponent(location)}`)}, 1000)}}}}}}}}}}
+        router(`/it-onsite-services?location = ${encodeURIComponent(location)}`)}, 1000)}}}}}
   const containerVariants = {
   hidden: { opacity: 0
   y: 20
-}
+
     visible: {
       opacity: 1
       y: 0
       transition: {
         duration: 0.6
         staggerChildren: 0.2
-}
-}
-}
+
   const itemVariants = {
   hidden: { opacity: 0
   y: 20
-}
+
     visible: {
       opacity: 1
       y: 0
       transition: { duration: 0.5 }
-}
-}
+
   const features = [{ icon: Clock, text: "24/7 Availability", color: "text-zion-cyan" }
     { icon: Globe, text: "Global Coverage", color: "text-zion-purple" }
     { icon: Shield, text: "Certified Technicians", color: "text-zion-cyan-light" }
@@ -91,7 +88,7 @@ export function ITServiceRequestHero() {
         location
         details
       })
-      if (res.status === 200) {
+      if (res.status = = 200) {
         toast({
           title: 'Request received'
           description:
@@ -103,8 +100,7 @@ export function ITServiceRequestHero() {
         setCompany('')
         setLocation('')
         setDetails('')
-      }
-    } catch (err: any) {
+      } catch (err: any) {
       logErrorToProduction(err)
       toast({
         title: 'Submission Failed'
@@ -124,41 +120,38 @@ import axios from 'axios';
 import { Loader2 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { logErrorToProduction } from '@/utils/productionLogger';export function ITServiceRequestHero() {;
-;export function ITServiceRequestHero(): any (...args[]):  {;
+export function ITServiceRequestHero(): any (...args[]):  {;
 
   const [location, setLocation] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const handleSubmit = async e: React && React.FormEvent {;    e && e.preventDefault();
-    if(location && location.trim()) {;
+    if(location && location.trim() {;
 
       setIsSubmitting(true);
       // Simulate API call;
       setTimeout(: unknown {;
         setIsSubmitting(false);
-        router(`/it-onsite-services?location = ${encodeURIComponent(location)}`)}, 1000)}}}}}}}}}};
+        router(`/it-onsite-services?location = ${encodeURIComponent(location)}`)}, 1000)}}}}};
   const containerVariants = {;
   hidden: { opacity: 0,;
   y: 20;
-},;
+,;
     visible: {;
       opacity: 1,;
       y: 0,;
       transition: {;
         duration: 0 && 0.6,;
         staggerChildren: 0 && 0.2;
-};
-};
-};
+;
   const itemVariants = {;
   hidden: { opacity: 0,;
   y: 20;
-},;
+,;
     visible: {;
       opacity: 1,;
       y: 0,;
       transition: { duration: 0 && 0.5 };
-};
-};
+;
   const features = [{ icon: Clock, text: "24/7 Availability", color: "text-zion-cyan" },;
     { icon: Globe, text: "Global Coverage", color: "text-zion-purple" },;
     { icon: Shield, text: "Certified Technicians", color: "text-zion-cyan-light" },;
@@ -213,7 +206,7 @@ export function ITServiceRequestHero() {;
         details,;
       });
 
-      if (res && res.status === 200) {;
+      if (res && res.status = = 200) {;
         toast({;
           title: 'Request received',;
           description:;
@@ -225,8 +218,7 @@ export function ITServiceRequestHero() {;
         setCompany('');
         setLocation('');
         setDetails('');
-      }
-    } catch (err: any) {;
+      } catch (err: any) {;
       logErrorToProduction(err),;
       toast({;
         title: 'Submission Failed',;
@@ -254,35 +246,32 @@ function ITServiceRequestHero() { export function ITServiceRequestHero (...args[
   const handle_submit = async e: React.FormEvent {e.prevent_default ();
     if () {) {
   $2
-}
+
       setIsSubmitting (true);
       // Simulate API call;
       set_timeout (: unknown {
         setIsSubmitting (false);
-        router (`/it - onsite - services?location = ${encodeURIComponent (location)}`)}, 1000)}}}}}}}}}}
+        router (`/it - onsite - services?location = ${encodeURIComponent (location)}`)}, 1000)}}}}}
   const container_variants = {
   hidden: { opacity: 0,
   coordinate_y: 20;
-},
+,
     visible: {
       opacity: 1,
       coordinate_y: 0,
       transition: {
         duration: 0.6,
         stagger_children: 0.2;
-}
-}
-}
+
   const item_variants = {
   hidden: { opacity: 0,
   coordinate_y: 20;
-},
+,
     visible: {
       opacity: 1,
       coordinate_y: 0,
       transition: { duration: 0.5 }
-}
-}
+
   const features = [{ icon: Clock, text: "24 / 7 Availability", color: "text - zion - cyan" },
     { icon: Globe, text: "Global Coverage", color: "text - zion - purple" },
     { icon: Shield, text: "Certified Technicians", color: "text - zion - cyan - light" },
@@ -323,7 +312,7 @@ function ITServiceRequestHero() {
     // Check condition
 if ( {) {
   $2
-}
+
       toast ({
         title: 'Missing Information',
         description: 'Name, email and location are required.',
@@ -344,7 +333,7 @@ if ( {) {
       // Check condition
 if ( {) {
   $2
-}
+
         toast ({
           title: 'Request received',
           description:;
@@ -356,8 +345,7 @@ if ( {) {
         set_company ('');
         set_location ('');
         set_details ('');
-      }
-    } catch (err: any) {
+      } catch (err: any) {
       logErrorToProduction (err),
       toast ({
         title: 'Submission Failed',
@@ -367,7 +355,6 @@ if ( {) {
     } finally {
       setIsSubmitting (false);
     }
-  }
 
   return (
     <section className='py-16 md:py-24 border-b border-zion-purple/20 bg-[radial-gradient(#0f172a,_#020617)]'>;
@@ -471,71 +458,68 @@ if ( {) {
       </div>
     </section>
   )
-}catch (err: any) {
+catch (err: any) {
   logErrorToProduction (err);
 toast ({
-}finally {
+finally {
   setIsSubmitting (false)
-};"
+;"
 py-16 md:py-24 border-b border-zion-purple/20 bg-[radial-gradient (#0f172a, #020617) ]" > <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center" > <div className="md:h-full md:flex md:flex-col md:items-center md:justify-center" > <GradientHeading className="mb-6 text-4xl md:text-5xl text-center" > 24x7 Global IT Onsite Services </GradientHeading> <p className="text-lg text-zion-slate-light mb-8 max-w-md text-center" > Worldwide coverage and rapid dispatch of certified technicians. </p> </div> <div className="bg-zion-blue-light p-6 rounded-lg shadow-lg w-full max-w-md md:ml-auto" > <div className="flex flex-col md:flex-row items-center gap-4" > <Image <Input type="email" value= {
   email
-}onChange= {
+onChange= {
   (e) => setEmail (e.target.value) "
-}className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white" required /> <p className="text-xs text-zion-slate-light" > {"
+className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white" required /> <p className="text-xs text-zion-slate-light" > {"
   t ('onsite form.email helper', "We'll confirm your request here.")
-}</p> <Input value= {
+</p> <Input value= {
   phone
-}onChange= {
+onChange= {
   (e) => setPhone (e.target.value) "
-}className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white" /> <Input value= {
+className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white" /> <Input value= {
   company
-}onChange= {
+onChange= {
   (e) => setCompany (e.target.value) "
-}className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white" /> <Input value= {
+className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white" /> <Input value= {
   location
-}onChange= {
+onChange= {
   (e) => setLocation (e.target.value) "
-}className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white" required /> <Textarea value= {
+className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white" required /> <Textarea value= {
   details
-}onChange= {
+onChange= {
   (e) => setDetails (e.target.value) "
-}className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white min-h-[80px]" /> <Button type="submit" disabled= {
+className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white min-h-[80px]" /> <Button type="submit" disabled= {
   isSubmitting "
-}className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-3 px-6 transition-transform hover:scale-105" > {"
+className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-3 px-6 transition-transform hover:scale-105" > {"
   isSubmitting && (<Loader2 className="mr-2 h-4 w-4 animate-spin" />
-}Request Service </Button> </form> </div>
-}'"
-}
-}
+Request Service </Button> </form> </div>
+'"
+
   setIsSubmitting (false);
-}";
+";
 py - 16 md:py - 24 border - b border - zion - purple / 20 bg-[radial - gradient (#0f172a, #020617) ]" > <div className="container mx - auto px - 4 grid grid - cols - 1 md:grid - cols - 2 gap - 12 items - center" > <div className="md:h - full md:flex md:flex - col md:items - center md:justify - center" > <GradientHeading className="mb - 6 text - 4xl md:text - 5xl text - center" > 24x7 Global IT Onsite Services </GradientHeading> <p className="text - lg text - zion - slate - light mb - 8 max - w-md text - center" > Worldwide coverage and rapid dispatch of certified technicians. </p> </div> <div className="bg - zion - blue - light p - 6 rounded - lg shadow - lg w - full max - w-md md:ml - auto" > <div className="flex flex - col md:flex - row items - center gap - 4" > <Image <Input type="email" value= {
   email;
-}on_change= {
+on_change= {
   (e) => set_email (e.target.value) ";
-}className="bg - zion - blue - dark border - zion - blue - light focus:border - zion - purple focus:ring - zion - purple text - white" required /> <p className="text - xs text - zion - slate - light" > {";
+className="bg - zion - blue - dark border - zion - blue - light focus:border - zion - purple focus:ring - zion - purple text - white" required /> <p className="text - xs text - zion - slate - light" > {";
   t ('onsite form.email helper', "We'll confirm your request here.");
-}</p> <Input value= {
+</p> <Input value= {
   phone;
-}on_change= {
+on_change= {
   (e) => set_phone (e.target.value) ";
-}className="bg - zion - blue - dark border - zion - blue - light focus:border - zion - purple focus:ring - zion - purple text - white" /> <Input value= {
+className="bg - zion - blue - dark border - zion - blue - light focus:border - zion - purple focus:ring - zion - purple text - white" /> <Input value= {
   company;
-}on_change= {
+on_change= {
   (e) => set_company (e.target.value) ";
-}className="bg - zion - blue - dark border - zion - blue - light focus:border - zion - purple focus:ring - zion - purple text - white" /> <Input value= {
+className="bg - zion - blue - dark border - zion - blue - light focus:border - zion - purple focus:ring - zion - purple text - white" /> <Input value= {
   location;
-}on_change= {
+on_change= {
   (e) => set_location (e.target.value) ";
-}className="bg - zion - blue - dark border - zion - blue - light focus:border - zion - purple focus:ring - zion - purple text - white" required /> <Textarea value= {
+className="bg - zion - blue - dark border - zion - blue - light focus:border - zion - purple focus:ring - zion - purple text - white" required /> <Textarea value= {
   details;
-}on_change= {
+on_change= {
   (e) => set_details (e.target.value) ";
-}className="bg - zion - blue - dark border - zion - blue - light focus:border - zion - purple focus:ring - zion - purple text - white min - h-[80px]" /> <Button type="submit" disabled= {
+className="bg - zion - blue - dark border - zion - blue - light focus:border - zion - purple focus:ring - zion - purple text - white min - h-[80px]" /> <Button type="submit" disabled= {
   is_submitting ";
-}className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - lg py - 3 px - 6 transition - transform hover:scale - 105" > {";
+className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - lg py - 3 px - 6 transition - transform hover:scale - 105" > {";
   is_submitting && (<Loader2 className="mr - 2 h - 4 w - 4 animate - spin" />;
-}Request Service </Button> </form> </div>;
-}'";
-}
-}
+Request Service </Button> </form> </div>;
+'";

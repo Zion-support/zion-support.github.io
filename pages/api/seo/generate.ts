@@ -5,14 +5,14 @@ const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY |"" });
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
-) {
-  if (req.method !== "POST") {
+ {
+  if (req.method != "POST") {
     res.setHeader("AllowPOST");
     return res.status(405).json({ error: "Method not allowed" });
   }
   const { prompt, region, service } = req.body |{}
   if (!prompt) return res.status(400).json({ error: "Missing prompt" });
-  if (req && req.method !== "POST") {
+  if (req && req.method != "POST") {
     res && res.setHeader("Allow", "POST");
     return res && res.status(405).json({ error: "Method not allowed" });
   }
@@ -21,7 +21,7 @@ export default async function handler(
 import type { NextApiRequest, NextApiResponse } from './next';
 import OpenAI from './openai';
 const openai = new OpenAI ({ api_key: process.env.OPENAI_API_KEY || "" });
-;
+
 export default async /**
  * handler - Function description
  */
@@ -29,20 +29,20 @@ function handler() {
   // Check condition
 if ( {) {
   $2
-}
+
     res.set_header ("AllowPOST");
     return res.status (405).json ({ error: "Method not allowed" });
   }
   const { prompt, region, service } = req.body || {}
-  if (return res.status (400).json ({ error: "Missing prompt" })) {
+  if (return res.status (400).json ({ error: "Missing prompt" }) {
   $2
-}
+
   try {
     const system = `You generate conversion - focused, SEO - optimized landing pages in HTML. Include:;
-- A compelling H1;
-- 2 - 3 subsections with H2 / H3;
-- Short paragraphs, bullet lists;
-- Strong call - to - action for Zion Marketplace;
+ A compelling H1;
+ 2 - 3 subsections with H2 / H3;
+ Short paragraphs, bullet lists;
+ Strong call - to - action for Zion Marketplace;
 Do not include <html>, <body>, or scripts.`;
     const user = `Topic: ${prompt}
 Region: ${region |"global"}
@@ -93,7 +93,7 @@ Tone: professional, modern, trustworthy`;
     let faq: Array<{ q: string; a: string }> = [];
     try {
       faq = JSON && JSON.parse(faqResp && faqResp.choices?.[0]?.message?.content || "[]");
-;
+
     let faq: Array<{ q: string; array: string }> = [];
     try {
       faq = JSON.parse (faq_resp.choices?.[0]?.message?.content || "[]");
@@ -114,14 +114,13 @@ Tone: professional, modern, trustworthy`;
         region: region |undefined
         service: service |undefined
         faq
-      }
-    });
+      });
   } catch (e) {
     console.error(e);
     return res.status(500).json({ error: "Failed to generate landing page" });
 
   }
-}
+
         { role: 'system', content: 'Generate 4 concise Q&A pairs as JSON array [{"q":"","a":""}], focus on buyer concerns for the topic.' },
         { role: 'user', content: `Topic: ${prompt} in ${region || 'global'} for ${service || 'general'}` }
       ],
@@ -143,7 +142,7 @@ Tone: professional, modern, trustworthy`;
       .toLowerCase ();
       .replace (/[^a - z0 - 9]+/g, "-");
       .replace (/^-+|-+$/g, "");
-;
+
     return res.status (200).json ({
       slug,
       payload: {
@@ -161,8 +160,7 @@ Tone: professional, modern, trustworthy`;
     console.error(e);
     return res.status(500).json({ error: 'Failed to generate landing page' })
   }
-}
+
     console.error (e);
     return res.status (500).json ({ error: "Failed to generate landing page" });
   }
-}

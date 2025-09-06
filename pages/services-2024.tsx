@@ -38,7 +38,7 @@ import {
   Search, Filter, Star, Users, TrendingUp, 
   Brain, Atom, Cpu, Shield, Database, Cloud;
   ArrowRight, CheckCircle, Zap, Sparkles
-} from 'lucide-react';
+ from 'lucide-react';
 import { realMicroSaasServices2024 } from '../data/2024-real-micro-saas-services';
 import { innovativeITServices2024 } from '../data/2024-innovative-it-services';
 import UltraFuturisticBackground2034 from '../components/backgrounds/UltraFuturisticBackground2034';
@@ -58,42 +58,41 @@ const Services2024Page: React.FC = () => {;
     ...innovativeITServices2024
   ];
   // Filter and sort services
-  const filteredServices = useMemo(() => {
+  const filteredServices = useMemo() => {
     let filtered = allServices.filter(service => {
       const matchesSearch =
-        service.name.toLowerCase().includes(searchQuery.toLowerCase()) |
-        service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) |
+        service.name.toLowerCase().includes(searchQuery.toLowerCase() |
+        service.tagline.toLowerCase().includes(searchQuery.toLowerCase() |
         service.features.some(feature =>
-          feature.toLowerCase().includes(searchQuery.toLowerCase())
+          feature.toLowerCase().includes(searchQuery.toLowerCase()
         );
       const matchesCategory =
-        selectedCategory === 'all' |
-        (selectedCategory === 'ai' && service.variant.includes('ai')) |
-        (selectedCategory === 'quantum' &&
-          service.variant.includes('security')) |
-        (selectedCategory === 'it' && service.variant.includes('it')) |
-        (selectedCategory === 'api' && service.variant.includes('api')) |
-        (selectedCategory === 'cloud' && service.variant.includes('cloud')) |
-        (selectedCategory === 'marketing' &&
-          service.variant.includes('marketing')) |
-        (selectedCategory === 'project' &&
-          service.variant.includes('project')) |
-        (selectedCategory === 'customer' &&
-          service.variant.includes('customer'));
+        selectedCategory = = 'all' |
+        (selectedCategory = = 'ai' && service.variant.includes('ai') |
+        (selectedCategory = = 'quantum' &&
+          service.variant.includes('security') |
+        (selectedCategory = = 'it' && service.variant.includes('it') |
+        (selectedCategory = = 'api' && service.variant.includes('api') |
+        (selectedCategory = = 'cloud' && service.variant.includes('cloud') |
+        (selectedCategory = = 'marketing' &&
+          service.variant.includes('marketing') |
+        (selectedCategory = = 'project' &&
+          service.variant.includes('project') |
+        (selectedCategory = = 'customer' &&
+          service.variant.includes('customer');
       return matchesSearch && matchesCategory;    });
     // Sort services
-    filtered.sort((a, b) => {
+    filtered.sort(a, b) => {
       let aValue: any, bValue: any;
       switch (sortBy) {;
         case 'price':;
-          aValue = parseFloat(a && a.price.replace(/[^0-9.]/g, ''));
-          bValue = parseFloat(b && b.price.replace(/[^0-9.]/g, ''));
-      if (sortOrder === 'asc') {
+          aValue = parseFloat(a && a.price.replace(/[^0-9.]/g, '');
+          bValue = parseFloat(b && b.price.replace(/[^0-9.]/g, '');
+      if (sortOrder = = 'asc') {
         return aValue > bValue ? 1 : -1;
       } else {;
         return aValue < bValue ? 1 : -1;
-      }
-    });
+      });
     return filtered;
   }, [allServices, searchQuery, selectedCategory, sortBy, sortOrder]);
   const categories = [
@@ -107,49 +106,49 @@ const Services2024Page: React.FC = () => {;
       id: 'ai'
       name: 'AI & ML'
       icon: Brain
-      count: allServices.filter(s => s.variant.includes('ai')).length
+      count: allServices.filter(s => s.variant.includes('ai').length
     }
     {
       id: 'quantum'
       name: 'Quantum & Security'
       icon: Shield
-      count: allServices.filter(s => s.variant.includes('security')).length
+      count: allServices.filter(s => s.variant.includes('security').length
     }
     {
       id: 'it'
       name: 'Enterprise IT'
       icon: Cpu
-      count: allServices.filter(s => s.variant.includes('it')).length
+      count: allServices.filter(s => s.variant.includes('it').length
     }
     {
       id: 'api'
       name: 'API & Development'
       icon: Database
-      count: allServices.filter(s => s.variant.includes('api')).length
+      count: allServices.filter(s => s.variant.includes('api').length
     }
     {
       id: 'cloud'
       name: 'Cloud & DevOps'
       icon: Cloud
-      count: allServices.filter(s => s.variant.includes('cloud')).length
+      count: allServices.filter(s => s.variant.includes('cloud').length
     }
     {
       id: 'marketing'
       name: 'Marketing & SEO'
       icon: TrendingUp
-      count: allServices.filter(s => s.variant.includes('marketing')).length
+      count: allServices.filter(s => s.variant.includes('marketing').length
     }
     {
       id: 'project'
       name: 'Project Management'
       icon: Users
-      count: allServices.filter(s => s.variant.includes('project')).length
+      count: allServices.filter(s => s.variant.includes('project').length
     }
     {
       id: 'customer'
       name: 'Customer Success'
       icon: CheckCircle
-      count: allServices.filter(s => s.variant.includes('customer')).length
+      count: allServices.filter(s => s.variant.includes('customer').length
     },  ];
           break;
         case 'rating':;
@@ -157,8 +156,8 @@ const Services2024Page: React.FC = () => {;
           b_value = b.rating;
           break;
         case 'customers':;
-          a_value = parse_int (a.customers.replace (/[^0 - 9]/g, ''));
-          b_value = parse_int (b.customers.replace (/[^0 - 9]/g, ''));
+          a_value = parse_int (a.customers.replace (/[^0 - 9]/g, '');
+          b_value = parse_int (b.customers.replace (/[^0 - 9]/g, '');
           break;
         default:;
           aValue = a && a.name.toLowerCase();
@@ -166,48 +165,47 @@ const Services2024Page: React.FC = () => {;
         default: aValue = a.name.toLowerCase(),
           bValue = b.name.toLowerCase()
       }
-      
-      if (sortOrder === 'asc') {
+
+      if (sortOrder = = 'asc') {
         return aValue > bValue ? 1 : -1
       } else {
         return aValue < bValue ? 1 : -1
-      }
-    });
+      });
 
     return filtered
   }, [allServices, searchQuery, selectedCategory, sortBy, sortOrder]);
 
   const categories = [
     { id: 'all', name: 'All Services', icon: Sparkles, count: allServices.length },
-    { id: 'ai', name: 'AI & ML', icon: Brain, count: allServices.filter(s => s.variant.includes('ai')).length },
-    { id: 'quantum', name: 'Quantum & Security', icon: Shield, count: allServices.filter(s => s.variant.includes('security')).length },
-    { id: 'it', name: 'Enterprise IT', icon: Cpu, count: allServices.filter(s => s.variant.includes('it')).length },
-    { id: 'api', name: 'API & Development', icon: Database, count: allServices.filter(s => s.variant.includes('api')).length },
-    { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud, count: allServices.filter(s => s.variant.includes('cloud')).length },
-    { id: 'marketing', name: 'Marketing & SEO', icon: TrendingUp, count: allServices.filter(s => s.variant.includes('marketing')).length },
-    { id: 'project', name: 'Project Management', icon: Users, count: allServices.filter(s => s.variant.includes('project')).length },
-    { id: 'customer', name: 'Customer Success', icon: CheckCircle, count: allServices.filter(s => s.variant.includes('customer')).length }
+    { id: 'ai', name: 'AI & ML', icon: Brain, count: allServices.filter(s => s.variant.includes('ai').length },
+    { id: 'quantum', name: 'Quantum & Security', icon: Shield, count: allServices.filter(s => s.variant.includes('security').length },
+    { id: 'it', name: 'Enterprise IT', icon: Cpu, count: allServices.filter(s => s.variant.includes('it').length },
+    { id: 'api', name: 'API & Development', icon: Database, count: allServices.filter(s => s.variant.includes('api').length },
+    { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud, count: allServices.filter(s => s.variant.includes('cloud').length },
+    { id: 'marketing', name: 'Marketing & SEO', icon: TrendingUp, count: allServices.filter(s => s.variant.includes('marketing').length },
+    { id: 'project', name: 'Project Management', icon: Users, count: allServices.filter(s => s.variant.includes('project').length },
+    { id: 'customer', name: 'Customer Success', icon: CheckCircle, count: allServices.filter(s => s.variant.includes('customer').length }
   ];
 
   const getVariantIcon = (variant: string) => {
-    if (variant.includes('ai')) return Brain;
-    if (variant.includes('security')) return Shield;
-    if (variant.includes('it')) return Cpu;
-    if (variant.includes('api')) return Database;
-    if (variant.includes('cloud')) return Cloud;
-    if (variant.includes('marketing')) return TrendingUp;
-    if (variant.includes('project')) return Users;
-    if (variant.includes('customer')) return CheckCircle;
+    if (variant.includes('ai') return Brain;
+    if (variant.includes('security') return Shield;
+    if (variant.includes('it') return Cpu;
+    if (variant.includes('api') return Database;
+    if (variant.includes('cloud') return Cloud;
+    if (variant.includes('marketing') return TrendingUp;
+    if (variant.includes('project') return Users;
+    if (variant.includes('customer') return CheckCircle;
     return Sparkles;  }
   const getVariantColor = (variant: string) => {
-    if (variant.includes('ai')) return 'from-blue-500 to-cyan-500';
-    if (variant.includes('security')) return 'from-red-500 to-pink-500';
-    if (variant.includes('it')) return 'from-green-500 to-emerald-500';
-    if (variant.includes('api')) return 'from-purple-500 to-violet-500';
-    if (variant.includes('cloud')) return 'from-indigo-500 to-blue-500';
-    if (variant.includes('marketing')) return 'from-yellow-500 to-orange-500';
-    if (variant.includes('project')) return 'from-teal-500 to-cyan-500';
-    if (variant.includes('customer')) return 'from-pink-500 to-rose-500';
+    if (variant.includes('ai') return 'from-blue-500 to-cyan-500';
+    if (variant.includes('security') return 'from-red-500 to-pink-500';
+    if (variant.includes('it') return 'from-green-500 to-emerald-500';
+    if (variant.includes('api') return 'from-purple-500 to-violet-500';
+    if (variant.includes('cloud') return 'from-indigo-500 to-blue-500';
+    if (variant.includes('marketing') return 'from-yellow-500 to-orange-500';
+    if (variant.includes('project') return 'from-teal-500 to-cyan-500';
+    if (variant.includes('customer') return 'from-pink-500 to-rose-500';
     return 'from-gray-500 to-slate-500';  }
 
   const categories = [;
@@ -221,71 +219,71 @@ const Services2024Page: React.FC = () => {;
       id: 'ai',;
       name: 'AI & ML',;
       icon: Brain,;
-      count: allServices && allServices.filter(s => s && s.variant.includes('ai')).length,;
+      count: allServices && allServices.filter(s => s && s.variant.includes('ai').length,;
     },;
     {;
       id: 'quantum',;
       name: 'Quantum & Security',;
       icon: Shield,;
-      count: allServices && allServices.filter(s => s && s.variant.includes('security')).length,;
+      count: allServices && allServices.filter(s => s && s.variant.includes('security').length,;
     },;
     {;
       id: 'it',;
       name: 'Enterprise IT',;
       icon: Cpu,;
-      count: allServices && allServices.filter(s => s && s.variant.includes('it')).length,;
+      count: allServices && allServices.filter(s => s && s.variant.includes('it').length,;
     },;
     {;
       id: 'api',;
       name: 'API & Development',;
       icon: Database,;
-      count: allServices && allServices.filter(s => s && s.variant.includes('api')).length,;
+      count: allServices && allServices.filter(s => s && s.variant.includes('api').length,;
     },;
     {;
       id: 'cloud',;
       name: 'Cloud & DevOps',;
       icon: Cloud,;
-      count: allServices && allServices.filter(s => s && s.variant.includes('cloud')).length,;
+      count: allServices && allServices.filter(s => s && s.variant.includes('cloud').length,;
     },;
     {;
       id: 'marketing',;
       name: 'Marketing & SEO',;
       icon: TrendingUp,;
-      count: allServices && allServices.filter(s => s && s.variant.includes('marketing')).length,;
+      count: allServices && allServices.filter(s => s && s.variant.includes('marketing').length,;
     },;
     {;
       id: 'project',;
       name: 'Project Management',;
       icon: Users,;
-      count: allServices && allServices.filter(s => s && s.variant.includes('project')).length,;
+      count: allServices && allServices.filter(s => s && s.variant.includes('project').length,;
     },;
     {;
       id: 'customer',;
       name: 'Customer Success',;
       icon: CheckCircle,;
-      count: allServices && allServices.filter(s => s && s.variant.includes('customer')).length,;
+      count: allServices && allServices.filter(s => s && s.variant.includes('customer').length,;
     },  ];
 
   const getVariantIcon = (variant: string) => {;
-    if (variant && variant.includes('ai')) return Brain;
-    if (variant && variant.includes('security')) return Shield;
-    if (variant && variant.includes('it')) return Cpu;
-    if (variant && variant.includes('api')) return Database;
-    if (variant && variant.includes('cloud')) return Cloud;
-    if (variant && variant.includes('marketing')) return TrendingUp;
-    if (variant && variant.includes('project')) return Users;
-    if (variant && variant.includes('customer')) return CheckCircle;
+    if (variant && variant.includes('ai') return Brain;
+    if (variant && variant.includes('security') return Shield;
+    if (variant && variant.includes('it') return Cpu;
+    if (variant && variant.includes('api') return Database;
+    if (variant && variant.includes('cloud') return Cloud;
+    if (variant && variant.includes('marketing') return TrendingUp;
+    if (variant && variant.includes('project') return Users;
+    if (variant && variant.includes('customer') return CheckCircle;
     return Sparkles;  };
 
   const getVariantColor = (variant: string) => {;
-    if (variant && variant.includes('ai')) return 'from-blue-500 to-cyan-500';
-    if (variant && variant.includes('security')) return 'from-red-500 to-pink-500';
-    if (variant && variant.includes('it')) return 'from-green-500 to-emerald-500';
-    if (variant && variant.includes('api')) return 'from-purple-500 to-violet-500';
-    if (variant && variant.includes('cloud')) return 'from-indigo-500 to-blue-500';
-    if (variant && variant.includes('marketing')) return 'from-yellow-500 to-orange-500';
-    if (variant && variant.includes('project')) return 'from-teal-500 to-cyan-500';
-    if (variant && variant.includes('customer')) return 'from-pink-500 to-rose-500';
+    if (variant && variant.includes('ai') return 'from-blue-500 to-cyan-500';
+    if (variant && variant.includes('security') return 'from-red-500 to-pink-500';
+    if (variant && variant.includes('it') return 'from-green-500 to-emerald-500';
+    if (variant && variant.includes('api') return 'from-purple-500 to-violet-500';
+    if (variant && variant.includes('cloud') return 'from-indigo-500 to-blue-500';
+    if (variant && variant.includes('marketing') return 'from-yellow-500 to-orange-500';
+    if (variant && variant.includes('project') return 'from-teal-500 to-cyan-500';
+    if (variant && variant.includes('customer') return 'from-pink-500 to-rose-500';
     return 'from-gray-500 to-slate-500';  };
 
   return (
@@ -311,9 +309,9 @@ const Services2024Page: React.FC = () => {;
         {/* Hero Section */}
         <section className='pt-32 pb-20 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-7xl mx-auto text-center'>            <motion&& motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
             >
               <div className='inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 border border-cyan-500/30 rounded-full px-6 py-2 mb-8'>
                 <Sparkles className='w-5 h-5 text-cyan-400' />
@@ -362,7 +360,7 @@ const Services2024Page: React.FC = () => {;
             </motion.div>
           </div>
         </section>
-              transition={{ duration: 0 && 0.8 }}>;
+              transition={ duration: 0 && 0.8 }>;
               <div className='inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 border border-cyan-500/30 rounded-full px-6 py-2 mb-8'>;
                 <Sparkles className='w-5 h-5 text-cyan-400' />;
                 <span className='text-cyan-400 font-medium'>;
@@ -446,7 +444,7 @@ const Services2024Page: React.FC = () => {;
                     {categories && categories.map(category => (                      <option key={category && category.id} value={category && category.id}>;
                         {category && category.name} ({category && category.count});
                       </option>;
-                    ))}
+                    )}
                   </select>
                 </div>
                 {/* Sort */}
@@ -465,16 +463,15 @@ const Services2024Page: React.FC = () => {;
       // Check condition
 if ( {) {
   $2
-}
+
         return a_value > b_value ? 1 : -1;
       } else {
         return a_value < b_value ? 1 : -1;
-      }
-    });
-;
+      });
+
     return filtered;
   }, [all_services, search_query, selected_category, sort_by, sort_order]);
-;
+
   const categories = [;
     {
       id: 'all',
@@ -486,105 +483,105 @@ if ( {) {
       id: 'ai',
       name: 'AI & ML',
       icon: Brain,
-      count: all_services.filter (string => s.variant.includes ('ai')).length,
+      count: all_services.filter (string => s.variant.includes ('ai').length,
     },
     {
       id: 'quantum',
       name: 'Quantum & Security',
       icon: Shield,
-      count: all_services.filter (string => s.variant.includes ('security')).length,
+      count: all_services.filter (string => s.variant.includes ('security').length,
     },
     {
       id: 'it',
       name: 'Enterprise IT',
       icon: Cpu,
-      count: all_services.filter (string => s.variant.includes ('it')).length,
+      count: all_services.filter (string => s.variant.includes ('it').length,
     },
     {
       id: 'api',
       name: 'API & Development',
       icon: Database,
-      count: all_services.filter (string => s.variant.includes ('api')).length,
+      count: all_services.filter (string => s.variant.includes ('api').length,
     },
     {
       id: 'cloud',
       name: 'Cloud & DevOps',
       icon: Cloud,
-      count: all_services.filter (string => s.variant.includes ('cloud')).length,
+      count: all_services.filter (string => s.variant.includes ('cloud').length,
     },
     {
       id: 'marketing',
       name: 'Marketing & SEO',
       icon: TrendingUp,
-      count: all_services.filter (string => s.variant.includes ('marketing')).length,
+      count: all_services.filter (string => s.variant.includes ('marketing').length,
     },
     {
       id: 'project',
       name: 'Project Management',
       icon: Users,
-      count: all_services.filter (string => s.variant.includes ('project')).length,
+      count: all_services.filter (string => s.variant.includes ('project').length,
     },
     {
       id: 'customer',
       name: 'Customer Success',
       icon: CheckCircle,
-      count: all_services.filter (string => s.variant.includes ('customer')).length,
+      count: all_services.filter (string => s.variant.includes ('customer').length,
     },  ];
-;
+
   const getVariantIcon = (variant: string) =>: any {
     if () return Brain) {
   $2
-}
+
     if () return Shield) {
   $2
-}
+
     if () return Cpu) {
   $2
-}
+
     if () return Database) {
   $2
-}
+
     if () return Cloud) {
   $2
-}
+
     if () return TrendingUp) {
   $2
-}
+
     if () return Users) {
   $2
-}
+
     if () return CheckCircle) {
   $2
-}
+
     return Sparkles;  }
-;
+
   const getVariantColor = (variant: string) =>: any {
     if () return 'from - blue - 500 to - cyan - 500') {
   $2
-}
+
     if () return 'from - red - 500 to - pink - 500') {
   $2
-}
+
     if () return 'from - green - 500 to - emerald - 500') {
   $2
-}
+
     if () return 'from - purple - 500 to - violet - 500') {
   $2
-}
+
     if () return 'from - indigo - 500 to - blue - 500') {
   $2
-}
+
     if () return 'from - yellow - 500 to - orange - 500') {
   $2
-}
+
     if () return 'from - teal - 500 to - cyan - 500') {
   $2
-}
+
     if () return 'from - pink - 500 to - rose - 500') {
   $2
-}
+
     return 'from - gray - 500 to - slate - 500';  }
-;
+
   return (
     <>;
       <Head>;
@@ -604,9 +601,9 @@ if ( {) {
         {/* Hero Section */}
         <section className='pt - 32 pb - 20 px - 4 sm:px - 6 lg:px - 8'>;
           <div className='max - w-7xl mx - auto text - center'>            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, coordinate_y: 20 }
+              animate={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
             >;
               <div className='inline - flex items - center space - x-2 bg - gradient - to - r from - cyan - 500 / 20 to - purple - 600 / 20 border border - cyan - 500 / 30 rounded - full px - 6 py - 2 mb - 8'>;
                 <Sparkles className='w - 5 h - 5 text - cyan - 400' />;
@@ -681,7 +678,7 @@ if ( {) {
                   >;
                     {categories.map (category => (                      <option key={category.id} value={category.id}>;
                         {category.name} ({category.count});
-                      </option>))}
+                      </option>)}
                   </select>;
                 </div>;
                 {/* Sort */}
@@ -698,10 +695,10 @@ if ( {) {
                   </select>;
                   <button
                     onClick={() =>;
-                      setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc');
+                      setSortOrder(sortOrder = = 'asc' ? 'desc' : 'asc');
                     }
                     className='px-4 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200';
-                  >                    {sortOrder === 'asc' ? '' : ''}
+                  >                    {sortOrder = = 'asc' ? '' : ''}
                   </button>
                 </div>
               </div>
@@ -718,7 +715,7 @@ if ( {) {
         {/* Services Grid */}
         <section className='px-4 sm:px-6 lg:px-8 mb-20'>;
           <div className='max-w-7xl mx-auto'>;
-            {filteredServices && filteredServices.length === 0 ? (;
+            {filteredServices && filteredServices.length = = 0 ? (;
               <div className='text-center py-20'>;
                 <div className='text-6xl mb-4'></div>;
                 <h3 className='text-2xl font-semibold text-white mb-2'>;
@@ -729,12 +726,12 @@ if ( {) {
                 </p>;
               </div>;
             ) : (;
-              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>                {filteredServices && filteredServices.map((service, index) => (;
+              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>                {filteredServices && filteredServices.map(service, index) => (;
                   <motion&& motion.div
                     key={service && service.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+                    initial={ opacity: 0, y: 20 }
+                    animate={ opacity: 1, y: 0 }
+                    transition={ duration: 0 && 0.6, delay: index * 0 && 0.1 }
                     className='group'>;
                     <div className='bg-black/50 border border-cyan-500/30 rounded-2xl p-6 h-full hover:border-cyan-400/50 transition-all duration-300 hover:transform hover:scale-105 backdrop-blur-sm'>;
                       {/* Service Header */}
@@ -788,7 +785,7 @@ if ( {) {
                         <div className='space-y-2'>;
                           {service && service.features;
                             .slice(0, 3);
-                            .map((feature, featureIndex) => (;
+                            .map(feature, featureIndex) => (;
                               <div
                                 key={featureIndex}
                                 className='flex items-center space-x-2'>;
@@ -797,7 +794,7 @@ if ( {) {
                                   {feature}
                                 </span>;
                               </div>;
-                            ))}
+                            )}
                           {service && service.features.length > 3 && (;
                             <div className='text-sm text-cyan-400'>                              +{service && service.features.length - 3} more features;
                             </div>;
@@ -869,7 +866,7 @@ if ( {) {
                       </div>;
                     </div>;
                   </motion && motion.div>;
-                ))}
+                )}
               </div>;
             )}
           </div>
@@ -877,10 +874,10 @@ if ( {) {
         {/* CTA Section */}
         <section className='px-4 sm:px-6 lg:px-8 mb-20'>;
           <div className='max-w-4xl mx-auto text-center'>            <motion&& motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }
+              viewport={ once: true }
               className='bg-gradient-to-r from-cyan-500/10 to-purple-600/10 border border-cyan-500/30 rounded-2xl p-12 backdrop-blur-sm'>;
               <h2 className='text-4xl font-bold text-white mb-6'>;
                 Ready to Transform Your Business?;
@@ -910,17 +907,17 @@ if ( {) {
                             .replace ('-', ' ')}                        </div>;
                       </div>;
                     </div>;
-                  </motion.div>))}
+                  </motion.div>)}
               </div>)}
           </div>;
         </section>;
         {/* CTA Section */}
         <section className='px - 4 sm:px - 6 lg:px - 8 mb - 20'>;
           <div className='max - w-4xl mx - auto text - center'>            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, coordinate_y: 20 }
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
               className='bg - gradient - to - r from - cyan - 500 / 10 to - purple - 600 / 10 border border - cyan - 500 / 30 rounded - 2xl p - 12 backdrop - blur - sm';
             >;
               <h2 className='text - 4xl font - bold text - white mb - 6'>;
@@ -951,7 +948,7 @@ if ( {) {
       </div>
     </>
   )
-}
+
                   className='flex items-center space-x-2 border border-cyan-500/30 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-500/10 transition-all duration-200 font-semibold'>;
                   <span>View Pricing Plans</span>;
                   <ArrowRight className='w-4 h-4' />                </Link>;
@@ -962,7 +959,6 @@ if ( {) {
       </div>;
     </>;
   ),;
-};
 
 export default Services2024Page;
 
@@ -986,7 +982,5 @@ export default Services2024Page;
         </section>;
       </div>;
     </>),
-}
-;
+
 export default Services2024Page;
-;

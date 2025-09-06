@@ -5,7 +5,7 @@ import {
   Award, Clock, Zap, Shield, Brain, Atom, Rocket,
   ShoppingCart, Cpu, Globe, Lock, Video, Palette,
   BarChart, UserCheck, FileText, Heart, Eye, Search, Phone
-} from 'lucide-react',
+ from 'lucide-react',
 import { realMarketServices } from '../../data/2024-real-market-services',
 import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-services',
 const contactInfo = {
@@ -13,27 +13,24 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-},
+,
 
 const serviceCategories = [  {
   opacity: 0, y: 20 
-}
-}whileInView= {
-  {
+
+whileInView= {
   opacity: 1, y: 0 
-}
-}transition= {
-  {
+
+transition= {
   duration: 0.5, delay: index * 0.1 
-}
-}viewport= {
-  {
+
+viewport= {
     id: 'business-automation',
     title: ' Business Automation',
     description: 'Streamline business operations',
     icon: ShoppingCart,
     color: 'from-teal-500 to-emerald-500',
-    services: realMarketServices.filter(s => s.category.includes('E-commerce') || s.category.includes('Marketing') || s.category.includes('Finance')),
+    services: realMarketServices.filter(s => s.category.includes('E-commerce') || s.category.includes('Marketing') || s.category.includes('Finance'),
     gradient: 'from-teal-500/20 to-green-500/20'
   },
   {
@@ -42,7 +39,7 @@ const serviceCategories = [  {
     description: 'Intelligent automation solutions',
     icon: Rocket,
     color: 'from-green-500 to-yellow-500',
-    services: aiEmergingTechServices.filter(s => s.category.includes('Robotics') || s.category.includes('Edge')),
+    services: aiEmergingTechServices.filter(s => s.category.includes('Robotics') || s.category.includes('Edge'),
     gradient: 'from-green-500/20 to-orange-500/20'
   },
   {
@@ -51,35 +48,33 @@ const serviceCategories = [  {
     description: 'Breakthrough technologies and innovations',
     icon: Globe,
     color: 'from-orange-500 to-red-500',
-    services: aiEmergingTechServices.filter(s => s.category.includes('Drug') || s.category.includes('Climate')),
+    services: aiEmergingTechServices.filter(s => s.category.includes('Drug') || s.category.includes('Climate'),
     gradient: 'from-orange-500/20 to-pink-500/20'
   }
-],
+,
 
 export default function UltraFuturisticServiceShowcase2034() {
   const [selectedCategory, setSelectedCategory] = useState('all'),
   const [searchTerm, setSearchTerm] = useState(''),
 
   const allServices = [...realMarketServices, ...aiEmergingTechServices],
-  
+
   const filteredServices = allServices.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || 
-      serviceCategories.some(cat => cat.services.includes(service)),
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.category.toLowerCase().includes(searchTerm.toLowerCase()),
+    const matchesCategory = selectedCategory = = 'all' || 
+      serviceCategories.some(cat => cat.services.includes(service),
+    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase() ||
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase() ||
+                         service.category.toLowerCase().includes(searchTerm.toLowerCase(),
     return matchesCategory && matchesSearch
   }),
   const containerVariants = {hidden: { opacity: 0},
     visible: {opacity: 1, transition: {
         staggerChildren: 0.1}
-    }
   },
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 }
-  },
+    visible: { opacity: 1, y: 0 },
 
   return (
     <section className=&quot;py-20 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden&quot;>
@@ -93,10 +88,10 @@ export default function UltraFuturisticServiceShowcase2034() {
       <div className=&quot;relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
         {/* Header */}
         <motion.div,
-initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+initial={ opacity: 0, y: 20 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0.6 }
+          viewport={ once: true }
           className=&quot;text-center mb-16&quot;        >
           <h2 className=&quot;text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6&quot;>
             Revolutionary Technology Services
@@ -105,7 +100,7 @@ initial={{ opacity: 0, y: 20 }}
             Discover our comprehensive suite of cutting-edge AI, quantum computing, and emerging technology solutions. 
             Each service is designed to transform your business and propel you into the future.
           </p>
-          
+
           {/* Stats */}
           <div className=&quot;grid grid-cols-2 md:grid-cols-4 gap-6 mt-12&quot;>
             {[
@@ -113,28 +108,28 @@ initial={{ opacity: 0, y: 20 }}
               { label: 'Happy Customers', value: '50K+', icon: Users },
               { label: 'Success Rate', value: '99.9%', icon: CheckCircle },
               { label: 'Global Reach', value: '45+ Countries', icon: Globe }
-            ].map((stat, index) => (
+            ].map(stat, index) => (
               <motion.div,
 key={stat.label}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, scale: 0.8 }
+                whileInView={ opacity: 1, scale: 1 }
+                transition={ duration: 0.5, delay: index * 0.1 }
+                viewport={ once: true }
                 className=&quot;text-center p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300&quot;
               >
                 <stat.icon className=&quot;w-8 h-8 text-cyan-400 mx-auto mb-2&quot; />
                 <div className=&quot;text-2xl font-bold text-white&quot;>{stat.value}</div>
                 <div className=&quot;text-sm text-gray-400&quot;>{stat.label}</div>              </motion.div>
-            ))}
+            )}
           </div>
         </motion.div>
 
         {_/* Search and Filter */}
         <motion.div,
-initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
+initial={ opacity: 0, y: 20 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0.6, delay: 0.2 }
+          viewport={ once: true }
           className=&quot;mb-12&quot;
         >
           <div className=&quot;flex flex-col md:flex-row gap-4 items-center justify-center&quot;>
@@ -159,31 +154,31 @@ value={selectedCategory}
               {serviceCategories.map(category => (
                 <option key={category.id} value={category.id}>
                   {category.title.split(' ')[0]}                </option>
-              ))}
+              )}
             </select>
           </div>
         </motion.div>
 
         {_/* Service Categories */}
         <motion.div,
-initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          viewport={{ once: true }}
+initial={ opacity: 0, y: 20 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0.6, delay: 0.4 }
+          viewport={ once: true }
           className=&quot;mb-16&quot;
         >
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6&quot;>
-            {serviceCategories.map((category, index) => (
+            {serviceCategories.map(category, index) => (
               <motion.div                key={category.id}
-                initial={_{ opacity: 0, y: 20}}
-                whileInView={_{ opacity: 1, y: 0}}
-                transition={_{ duration: 0.5, delay: index * 0.1}}
-                viewport={_{ once: true}}
+                initial={_{ opacity: 0, y: 20}
+                whileInView={_{ opacity: 1, y: 0}
+                transition={_{ duration: 0.5, delay: index * 0.1}
+                viewport={_{ once: true}
                 className={_`p-6 rounded-xl border transition-all duration-300 hover:scale-105 cursor-pointer ${
-                  selectedCategory === category.id 
+                  selectedCategory = = category.id 
                     ? 'border-cyan-500 bg-cyan-500/10' 
                     : 'border-white/20 bg-white/5 hover:border-cyan-500/50 hover:bg-cyan-500/5'}`}
-                onClick={_() => setSelectedCategory(category.id === selectedCategory ? 'all' : category.id)}
+                onClick={_() => setSelectedCategory(category.id = = selectedCategory ? 'all' : category.id)}
               >
                 <div className=&quot;flex items-center space-x-3 mb-4&quot;>
                   <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${category.color} flex items-center justify-center`}>
@@ -197,7 +192,7 @@ initial={{ opacity: 0, y: 20 }}
                 <div className=&quot;text-sm text-gray-300&quot;>
                   {category.services.length} services available                </div>
               </motion.div>
-            ))}
+            )}
           </div>
         </motion.div>
 
@@ -206,7 +201,7 @@ initial={{ opacity: 0, y: 20 }}
 variants={containerVariants}
           initial=&quot;hidden&quot;
           whileInView=&quot;visible&quot;
-          viewport={{ once: true }}
+          viewport={ once: true }
           className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;        >
           {filteredServices.map(_(service, index) => (
             <motion.div,
@@ -219,7 +214,7 @@ key={service.id}
                 <div className=&quot;absolute -top-3 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold&quot;>                  Popular
                 </div>
               )}
-;
+
               {/* Service Icon */}
               <div className=&quot;flex items-center justify-between mb-4&quot;>
                 <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${service.color} flex items-center justify-center text-2xl`}>
@@ -238,21 +233,21 @@ key={service.id}
               <p className=&quot;text-gray-300 mb-4 leading-relaxed&quot;>
                 {service.description}
               </p>;
-;
+
               {/* Features */}
               <div className=&quot;space-y-2 mb-4&quot;>
-                {service.features.slice(0, 3).map((feature, idx) => (
+                {service.features.slice(0, 3).map(feature, idx) => (
                   <div key={idx} className=&quot;flex items-center space-x-2 text-sm text-gray-400&quot;>
                     <CheckCircle className=&quot;w-4 h-4 text-green-400 flex-shrink-0&quot; />
                     <span>{feature}</span>
                   </div>
-                ))}
+                )}
                 {service.features.length > 3 && (
                   <div className=&quot;text-sm text-cyan-400&quot;>                    +{service.features.length - 3} more features
                   </div>
                 )}
               </div>;
-;
+
               {/* Service Meta */}
               <div className=&quot;grid grid-cols-2 gap-4 mb-6 text-sm&quot;>
                 <div className=&quot;flex items-center space-x-2 text-gray-400&quot;>
@@ -280,7 +275,7 @@ key={service.id}
                   {service.marketPosition}
                 </div>;
               </div>;
-;
+
               {/* ROI */}
               <div className=&quot;mb-6 p-3 rounded-lg bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30&quot;>
                 <div className=&quot;text-xs text-green-400 mb-1 font-semibold&quot;>Expected ROI</div>
@@ -288,7 +283,7 @@ key={service.id}
                   {service.roi}
                 </div>;
               </div>;
-;
+
               {/* Action Buttons */}
               <div className=&quot;flex space-x-3&quot;>
                 <a,
@@ -308,15 +303,15 @@ href={service.link}
                   <span className=&quot;text-cyan-400 font-semibold&quot;>{service.trialDays} days</span> free trial                </div>
               </div>
             </motion.div>
-          ))}
+          )}
         </motion.div>
 
         {_/* Call to Action */}
         <motion.div,
-initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          viewport={{ once: true }}
+initial={ opacity: 0, y: 20 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0.6, delay: 0.6 }
+          viewport={ once: true }
           className=&quot;text-center mt-20&quot;        >
           <div className=&quot;bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-12 backdrop-blur-sm&quot;>
             <h3 className=&quot;text-3xl font-bold text-white mb-4&quot;>

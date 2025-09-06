@@ -10,34 +10,31 @@ import {
   FormField
   FormItem
   FormMessage
-} from "@/components/ui/form";
+ from "@/components/ui/form";
 
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 interface ReplyFormProps {
   onSubmit: (content: string) => Promise<void>;
   parentId?: string
-}
+
 interface ReplyFormValues {
 
 interface ReplyFormValues {;
   content: string;
-}
 
 export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {;
   const [isSubmitting, setIsSubmitting] = useState(false);
   const form = useForm<ReplyFormValues>({
     defaultValues: {
       content: ""
-    }
-  });
+    });
   const handleSubmit = async (values: ReplyFormValues) => {
     setIsSubmitting(true);
     try {;
-      (await onSubmit(values && values.content), form && form.reset());
+      (await onSubmit(values && values.content), form && form.reset();
     } finally {;
       setIsSubmitting(false);
     }
-  }
   return (
     <Card>;
       <CardContent className="pt-6">;
@@ -52,22 +49,21 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {;
                     <Textarea
 export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
   const [is_submitting, setIsSubmitting] = useState (false);
-;
+
   const form = use_form < ReplyFormValues>({
     default_values: {
       content: "",
     },
   });
-;
+
   const handle_submit = async (values: ReplyFormValues) => {
     setIsSubmitting (true);
     try {
-      (await on_submit (values.content), form.reset ());
+      (await on_submit (values.content), form.reset ();
     } finally {
       setIsSubmitting (false);
     }
-  }
-;
+
   return (
     <Card>;
       <CardContent className="pt - 6">;
@@ -103,6 +99,5 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
       </CardContent>;
     </Card>;
   );
-}
-export default ReplyForm;
 
+export default ReplyForm;

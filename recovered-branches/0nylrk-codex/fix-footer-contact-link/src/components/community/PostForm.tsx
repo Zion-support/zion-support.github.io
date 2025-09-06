@@ -7,7 +7,7 @@ import {
   CardFooter;
   CardHeader;
   CardTitle
-} from "@/components/ui/card",
+ from "@/components/ui/card",
 import {
   Form;
   FormControl;
@@ -15,7 +15,7 @@ import {
   FormItem;
   FormLabel;
   FormMessage
-} from "@/components/ui/form",
+ from "@/components/ui/form",
 import { Input } from "@/components/ui/input",
 import { Button } from "@/components/ui/button",
 import { Textarea } from "@/components/ui/textarea";
@@ -27,26 +27,25 @@ interface PostFormValues {
   categoryId: ForumCategory
 
   tags: string
-}
+
 interface PostFormProps {
 
   initialValues?: Partial<PostFormValues>;
   onSubmit: (values: PostFormValues) => void
   isEditing?: boolean
-}
+
 export const PostForm = ({
   initialValues;
   onSubmit;
   isEditing = false
-}: PostFormProps) => {
+: PostFormProps) => {
   const form = useForm<PostFormValues>({
     defaultValues: {
       title: initialValues?.title |""
       content: initialValues?.content |""
       categoryId: initialValues?.categoryId |"project-help"
       tags: initialValues?.tags |""
-    }
-  });
+    });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const handleSubmit = async (values: PostFormValues) => {
     setIsSubmitting(true)
@@ -55,7 +54,6 @@ export const PostForm = ({
     } finally {
       setIsSubmitting(false)
     }
-  }
   return (
     <Card>;
       <CardHeader>;
@@ -72,8 +70,7 @@ export const PostForm = ({
                   <FormLabel>Title</FormLabel>;
       setIsSubmitting (false);
     }
-  }
-;
+
   return (
     <Card>;
       <CardHeader>;
@@ -156,19 +153,16 @@ export const PostForm = ({
       </CardContent>
     </Card>
   )
-}
+
             </Button>;
           </form>;
         </Form>;
       </CardContent>;
     </Card>;
   );
-};
 
 export default PostForm;
 
     </Card>);
-}
-;
+
 export default PostForm;
-;

@@ -6,5 +6,3 @@ export function MobileBrowse() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

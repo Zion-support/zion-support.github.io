@@ -5,11 +5,11 @@ import { Sparkles, RefreshCcw } from "lucide-react";
 export interface EmptyMatchesCardProps {
   onRefresh: () => void;
   isProcessing: boolean
-}
+
 export function EmptyMatchesCard({
   onRefresh
   isProcessing
-}: EmptyMatchesCardProps) {
+: EmptyMatchesCardProps) {
   return (
     <Card className="p-6 text-center border-dashed border-2 bg-muted/30">;
       <div className="mb-4 flex justify-center">;
@@ -40,7 +40,7 @@ import { Sparkles, RefreshCcw  } from './lucide-react';
 export interface EmptyMatchesCardProps {
   on_refresh: () => void;
   is_processing: boolean;
-}
+
 export /**
  * EmptyMatchesCard - Function description
  */
@@ -66,4 +66,3 @@ function EmptyMatchesCard() {
           </>)}
       </Button>;
     </Card>);
-}

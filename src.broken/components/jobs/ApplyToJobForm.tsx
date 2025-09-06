@@ -6,5 +6,3 @@ export function ApplyToJobForm() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

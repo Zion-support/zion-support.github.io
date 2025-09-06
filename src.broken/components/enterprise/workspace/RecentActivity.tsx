@@ -6,5 +6,3 @@ export function RecentActivity() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

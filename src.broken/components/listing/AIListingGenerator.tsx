@@ -6,5 +6,3 @@ export function AIListingGenerator() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

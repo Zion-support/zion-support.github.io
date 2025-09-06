@@ -2,7 +2,6 @@ import React from 'react';
 
 interface NewsletterProps {
   className?: string;
-}
 
 const Newsletter: React.FC<NewsletterProps> = ({ className }) => {
   return (
@@ -11,6 +10,5 @@ const Newsletter: React.FC<NewsletterProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default Newsletter;

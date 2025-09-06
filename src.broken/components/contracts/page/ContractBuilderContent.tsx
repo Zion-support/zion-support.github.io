@@ -6,5 +6,3 @@ export function ContractBuilderContent() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

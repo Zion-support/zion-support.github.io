@@ -6,5 +6,3 @@ export function AddMilestoneForm() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

@@ -1,5 +1,5 @@
 import Head from 'next/head',;
-;
+
 export default function SiteHealth() {;
   return (;
     <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">;
@@ -7,7 +7,7 @@ export default function SiteHealth() {;
         <title>Site Health  A11y, Performance, Links</title>;
         <meta name="description" content="Dashboards and audits for accessibility, performance, and link integrity." />;
       </Head>;
-;
+
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">;
         <div className="absolute -top-24 -left-24 h-[38rem] w-[38rem] rounded-full bg-fuchsia-500/20 blur-3xl animate-float" />;
         <div className="absolute top-1/4 -right-32 h-[30rem] w-[30rem] rounded-full bg-cyan-400/20 blur-3xl animate-float-slow" />;
@@ -18,7 +18,7 @@ export default function SiteHealth() {;
         </div>;
         <div className="absolute inset-0 beams opacity-[0.06]" />;
       </div>;
-;
+
       <header className="relative z-10">;
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6">;
           <div className="text-2xl font-bold tracking-wide">;
@@ -32,7 +32,7 @@ export default function SiteHealth() {;
           </div>;
         </nav>;
       </header>;
-;
+
       <main className="relative z-10">;
         <section className="mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-20 text-center">;
           <div className="mx-auto inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-white/70 backdrop-blur-md">;
@@ -50,14 +50,14 @@ export default function SiteHealth() {;
             <Link href="/automation"><a className="rounded-xl bg-gradient-to-r from-fuchsia-500 to-cyan-500 px-6 py-3 font-semibold shadow-[0_0_30px_rgba(34,211,238,0.35)] hover:shadow-[0_0_40px_rgba(34,211,238,0.6)] transition-shadow">Open Automation Hub</a></Link>;
           </div>;
         </section>;
-;
+
         <section className="mx-auto max-w-7xl px-6 pb-14">;
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Dashboards</h2>;
           <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">;
             {[;
               { title:'Accessibility', desc:'WCAG checks with actionable fixes and reports.', href:'/reports/seo' },;
               { title:'Performance', desc:'Core Web Vitals and performance budgets.', href:'/reports/seo' },;
-              { title:'Link Integrity', desc:'Broken links identified and prevented.', href:'/reports/links' }].map((card) => (;
+              { title:'Link Integrity', desc:'Broken links identified and prevented.', href:'/reports/links' }].map(card) => (;
               <Link key={card.title} href={card.href}>;
                 <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">;
                   <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />;
@@ -66,10 +66,10 @@ export default function SiteHealth() {;
                   <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open </div>;
                 </a>;
               </Link>;
-            ))}
+            )}
           </div>;
         </section>;
-;
+
         <section className="mx-auto max-w-7xl px-6 pb-16">;
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Artifacts</h2>;
           <div className="mx-auto mt-6 max-w-4xl grid grid-cols-1 gap-4 sm:grid-cols-2">;
@@ -77,7 +77,7 @@ export default function SiteHealth() {;
             <a href="/reports/seo/index.html" className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30">SEO Audit Dashboard </a>;
           </div>;
         </section>;
-;
+
         <section className="mx-auto max-w-7xl px-6 pb-24">;
           <div className="animated-border relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-fuchsia-600/20 via-violet-600/20 to-cyan-600/20 p-8 text-center backdrop-blur-xl">;
             <h3 className="text-2xl font-bold">Keep quality high  continuously</h3>;
@@ -91,4 +91,3 @@ export default function SiteHealth() {;
       </main>;
     </div>;
   );
-}

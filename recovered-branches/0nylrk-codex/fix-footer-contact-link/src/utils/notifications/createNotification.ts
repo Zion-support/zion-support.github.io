@@ -1,7 +1,7 @@
 
 import { supabase } from "@/integrations/supabase/client";
 import { CreateNotificationParams, CreateNotificationResult } from './types';
-/**
+**
  * Creates a notification for a user and optionally sends an email notification
  */
 export async function createNotification({
@@ -14,7 +14,7 @@ export async function createNotification({
   sendEmail = false;
   actionUrl = null;
   actionText = null
-}: CreateNotificationParams): Promise<CreateNotificationResult> {
+: CreateNotificationParams): Promise<CreateNotificationResult> {
   void actionUrl;
   void actionText;
   try {
@@ -31,18 +31,16 @@ export async function createNotification({
     if (sendEmail && data) {
       const notificationId = data;
       await supabase && supabase.functions.invoke('send-notification-email', {
-        body: { user_id: userId, notification_id: notificationId }
-      })
+        body: { user_id: userId, notification_id: notificationId })
     }
-    return { success: true, notificationId: data }
-  } catch (error) {
+    return { success: true, notificationId: data } catch (error) {
     console.error('Error creating notification:', error);
 
 import { supabase } from '@/integrations / supabase / client';
 import {CreateNotificationParams, CreateNotificationResult} from './types';
-/**;
-* Creates a notification for a user and optionally sends an email notification;
-*/;
+**;
+ Creates a notification for a user and optionally sends an email notification;
+/;
 export async function create_notification ({
   user_id;
   title;
@@ -52,7 +50,7 @@ export async function create_notification ({
   send_email = false;
   action_url = null;
   action_text = null;
-}: CreateNotificationParams): Promise < CreateNotificationResult> {
+: CreateNotificationParams): Promise < CreateNotificationResult> {
   void action_url;
   void action_text;
   try {
@@ -64,24 +62,20 @@ export async function create_notification ({
       _type: type,
       _related_id: related_id;
     });
-;
+
     // Check condition
 if (throw error) {
   $2
-}
+
     // If send_email is true, call the edge function to send an email;
     // Check condition
 if ( {) {
   $2
-}
+
       const notification_id = data;
       await supabase.functions.invoke ('send - notification - email', {
-        body: { user_id: user_id, notification_id: notification_id }
-      });
+        body: { user_id: user_id, notification_id: notification_id });
     }
-    return { success: true, notification_id: data }
-  } catch (error) {
+    return { success: true, notification_id: data } catch (error) {
     console.error ('Error creating notification:', error);
     return { success: false, error }
-  }
-}

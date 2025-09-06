@@ -6,14 +6,14 @@ import {
   Rocket, Brain, Atom, Building, Briefcase, Microscope,
   Twitter, Facebook, Linkedin, Instagram, Youtube,
   Github, Zap, Sparkles, Shield, Cpu, Database
-} from 'lucide-react',
+ from 'lucide-react',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-},
+,
 const _serviceCategories = [
   {_title: 'AI & Machine Learning', _icon: Brain, _services: [
       { name: 'AI Consciousness Evolution', _href: '/ai-consciousness-evolution-2029'},
@@ -43,7 +43,7 @@ const _serviceCategories = [
       {_name: 'DevOps Automation', _href: '/devops-automation'}
     ]
   }
-],
+,
 
 const quickLinks = [
   { name: 'Home', href: '/', icon: Home },
@@ -54,14 +54,14 @@ const quickLinks = [
   { name: 'Contact', href: '/contact', icon: MessageCircle },
   { name: 'Support', href: '/support', icon: MessageCircle },
   { name: 'Privacy', href: '/privacy', icon: Shield }
-],
+,
 
 const socialLinks = [
   { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-400' },
   { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-sky-400' },
   { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github, color: 'hover:text-gray-400' },
   { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-500' }
-],
+,
 const _footerSections = [
   {_title: 'Company', _links: [
       { name: 'About Us', _href: '/about'},
@@ -99,7 +99,7 @@ const _footerSections = [
       {_name: 'Compliance', _href: '/compliance'}
     ]
   }
-],
+,
 
 const UltraFuturisticFooter2029 = () => {
   return (
@@ -117,7 +117,7 @@ const UltraFuturisticFooter2029 = () => {
                 <p className=&quot;text-sm text-gray-400&quot;>Innovating the Future</p>
               </div>
             </div>
-            
+
             <p className=&quot;text-gray-400 mb-6 leading-relaxed&quot;>
               Leading the revolution in AI, quantum computing, and autonomous technology solutions. 
               Transforming businesses with cutting-edge innovation.
@@ -145,7 +145,7 @@ const UltraFuturisticFooter2029 = () => {
 
             {/* Social Links */}
             <div className=&quot;flex space-x-4&quot;>
-              {socialLinks.map((social) => (
+              {socialLinks.map(social) => (
                 <a
                   key={social.name}
                   href={social.href}
@@ -154,19 +154,19 @@ const UltraFuturisticFooter2029 = () => {
                   className={`p-2 bg-slate-800/50 rounded-lg text-gray-400 ${social.color} transition-all duration-200 hover:bg-slate-700/50`}                >
                   <social.icon className=&quot;w-5 h-5&quot; />
                 </a>
-              ))}
+              )}
             </div>;
           </div>;
-;
+
           {/* Service Categories */}
           <div className=&quot;lg:col-span-1&quot;>
             <h4 className=&quot;text-lg font-semibold text-white mb-6&quot;>Our Services</h4>
             <div className=&quot;space-y-4&quot;>
-              {serviceCategories.map((category, index) => (
+              {serviceCategories.map(category, index) => (
                 <div key={index}>
                   <h5 className=&quot;text-sm font-medium text-gray-300 mb-3&quot;>{category.title}</h5>
                   <ul className=&quot;space-y-2&quot;>
-                    {category.services.map((service) => (
+                    {category.services.map(service) => (
                       <li key={service.name}>
                         <Link
                           href={service.href}
@@ -175,18 +175,18 @@ const UltraFuturisticFooter2029 = () => {
                           <ArrowRight className=&quot;w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200&quot; />
                           <span>{service.name}</span>
                         </a>                      </li>
-                    ))}
+                    )}
                   </ul>;
                 </div>;
-              ))}
+              )}
             </div>;
           </div>;
-;
+
           {/* Quick Links */}
           <div className=&quot;lg:col-span-1&quot;>
             <h4 className=&quot;text-lg font-semibold text-white mb-6&quot;>Quick Links</h4>
             <div className=&quot;grid grid-cols-2 gap-2&quot;>
-              {quickLinks.map((link) => (
+              {quickLinks.map(link) => (
                 <Link
                   key={link.name}
                   href={link.href}
@@ -194,7 +194,7 @@ const UltraFuturisticFooter2029 = () => {
                 >
                   <link.icon className=&quot;w-4 h-4&quot; />
                   <span>{link.name}</span>
-                </a>              ))}
+                </a>              )}
             </div>
           </div>
 
@@ -202,11 +202,11 @@ const UltraFuturisticFooter2029 = () => {
           <div className=&quot;lg:col-span-1&quot;>
             <h4 className=&quot;text-lg font-semibold text-white mb-6&quot;>Company</h4>
             <div className=&quot;space-y-4&quot;>
-              {footerSections.map((section) => (
+              {footerSections.map(section) => (
                 <div key={section.title}>
                   <h5 className=&quot;text-sm font-medium text-gray-300 mb-3&quot;>{section.title}</h5>
                   <ul className=&quot;space-y-2&quot;>
-                    {section.links.map((link) => (
+                    {section.links.map(link) => (
                       <li key={link.name}>
                         <Link
                           href={link.href}
@@ -214,22 +214,22 @@ const UltraFuturisticFooter2029 = () => {
                         >
                           {link.name}
                         </a>                      </li>
-                    ))}
+                    )}
                   </ul>;
                 </div>;
-              ))}
+              )}
             </div>;
           </div>;
         </div>;
       </div>;
-;
+
       {/* Bottom Footer */}
       <div className=&quot;border-t border-slate-700/50&quot;>
         <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8&quot;>
           <div className=&quot;flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0&quot;>
             <div className=&quot;text-sm text-gray-400&quot;>               2025 Zion Tech Group. All rights reserved.
             </div>
-            
+
             <div className=&quot;flex items-center space-x-6 text-sm text-gray-400&quot;>
               <Link href=&quot;/privacy&quot; className=&quot;hover:text-white transition-colors&quot;>
                 Privacy Policy
@@ -255,7 +255,7 @@ const UltraFuturisticFooter2029 = () => {
               Get the latest insights on AI, quantum computing, and autonomous technology. 
               Join our newsletter for exclusive updates and industry insights.
             </p>
-            
+
             <div className="flex flex-col sm: flex-row gap-4 justify-center max-w-md mx-auto">              <input
                 type=&quot;email&quot;
                 placeholder=&quot;Enter your email&quot;
@@ -270,6 +270,6 @@ const UltraFuturisticFooter2029 = () => {
       </div>
     </footer>
   )
-},
+,
 
 export default UltraFuturisticFooter2029,

@@ -5,11 +5,10 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar',;
 import { format } from 'date-fns',;
 import { Skeleton } from '@/components/ui/skeleton',;
-;
+
 interface MilestoneActivitiesProps {;
   projectId:string;
-}
-;
+
 interface Activity {;
   id:string,;
   milestone_id:string,;
@@ -26,17 +25,15 @@ interface Activity {;
     display_name:string,;
     avatar_url:string | null;
   },;
-}
-;
+
 export function MilestoneActivities({ projectId } MilestoneActivitiesProps) {;
   const [activities, setActivities] = useState<Activity[]>([]),;
   const [isLoading, setIsLoading] = useState(true),;
-;
-  useEffect(() => {;
+
+  useEffect() => {;
     async function fetchActivities() {;
       try {;
         setIsLoading(true),;
-        ;
         const { data, error } = await supabase;
           .from('milestone_activities');
           .select(`;
@@ -46,22 +43,19 @@ export function MilestoneActivities({ projectId } MilestoneActivitiesProps) {;
           `);
           .eq('project_id', projectId);
           .order('created_at', { ascending:false }),;
-;
+
         if (error) throw error,;
-        ;
         setActivities(data || []),;
       } catch (err) {;
         console.error('Error fetching milestone activities:', err),;
       } finally {;
         setIsLoading(false),;
       }
-    }
-;
+
     if (projectId) {;
       fetchActivities(),;
-    }
-  }, [projectId]),;
-;
+    }, [projectId]),;
+
   function getActivityDescription(activity:Activity):string {;
     switch (activity.action) {;
       case 'created':;
@@ -75,12 +69,11 @@ export function MilestoneActivities({ projectId } MilestoneActivitiesProps) {;
       default:;
         return activity.action.replace(/_/g, ' '),;
     }
-  }
-;
+
   if (isLoading) {;
     return (;
       <div className="space-y-4">;
-        {[1, 2, 3].map((i) => (;
+        {[1, 2, 3].map(i) => (;
           <Card key={i}>;
             <CardContent className="p-6">;
               <div className="flex items-center space-x-4">;
@@ -92,12 +85,12 @@ export function MilestoneActivities({ projectId } MilestoneActivitiesProps) {;
               </div>;
             </CardContent>;
           </Card>;
-        ))}
+        )}
       </div>;
     ),;
   }
-;
-  if (activities.length === 0) {;
+
+  if (activities.length = = 0) {;
     return (;
       <Card>;
         <CardContent className="p-6 text-center">;
@@ -106,7 +99,7 @@ export function MilestoneActivities({ projectId } MilestoneActivitiesProps) {;
       </Card>;
     ),;
   }
-;
+
   return (;
     <div className="space-y-4">;
       <Card>;
@@ -115,7 +108,7 @@ export function MilestoneActivities({ projectId } MilestoneActivitiesProps) {;
         </CardHeader>;
         <CardContent className="p-6">;
           <div className="space-y-6">;
-            {activities.map((activity) => (;
+            {activities.map(activity) => (;
               <div key={activity.id} className="flex items-start space-x-4">;
                 <Avatar className="h-10 w-10">;
                   <AvatarImage src={activity.created_by_profile?.avatar_url || ''} alt="User" />;
@@ -141,18 +134,18 @@ export function MilestoneActivities({ projectId } MilestoneActivitiesProps) {;
                   </p>;
                 </div>;
               </div>;
-            ))}
+            )}
           </div>;
         </CardContent>;
       </Card>;
     </div>;
-  ),; useEffect ( () => {
+  ),; useEffect () => {
   async function fetchActivities () {
   try {
   setIsLoading (true);
 const {
   data, error 
-}= await supabase .from ('milestone activities') .select (`*;
+= await supabase .from ('milestone activities') .select (`*;
 milestone: milestone id (title);
 created by profile:profiles!user id (display name, avatar url) `) .eq ('project id', projectId) if (error) throw error;
 function getActivityDescription (activity: Activity) : string {
@@ -161,15 +154,14 @@ function getActivityDescription (activity: Activity) : string {
 case 'status changed': case 'updated': return 'updated milestone details';
 case 'deliverable added': return 'added a deliverable';
 default: return activity.action.replace (/ /g, ' ') 
-}
-}<Card key= {
+
+<Card key= {
   i 
-}> <CardContent className="p-6" > <div className="flex items-center space-x-4" > <Skeleton className="h-10 w-10 rounded-full" /> <div className="space-y-2" > <Skeleton className="h-4 w-40" /> <Skeleton className="h-4 w-60" /> </div> </div> </CardContent> </Card>) ) 
-}</div>) 
-}if (activities.length === 0) {
+> <CardContent className="p-6" > <div className="flex items-center space-x-4" > <Skeleton className="h-10 w-10 rounded-full" /> <div className="space-y-2" > <Skeleton className="h-4 w-40" /> <Skeleton className="h-4 w-60" /> </div> </div> </CardContent> </Card>) 
+</div>) 
+if (activities.length = = 0) {
   return (<Card> <CardContent className="p-6 text-center" > <p className="text-muted-foreground py-8" >No activity found for this project</p> </CardContent> </Card> <Card> <CardHeader> <CardTitle>Project Activity</CardTitle> </CardHeader> <AvatarFallback> {
   activity.created by profile?.display name?.charAt (0) || '?' 
-}</AvatarFallback> </Avatar>) 
-}</p> </div> </div>) ) 
-}</div> </CardContent> </Card> </div>) 
-}
+</AvatarFallback> </Avatar>) 
+</p> </div> </div>) 
+</div> </CardContent> </Card> </div>) 

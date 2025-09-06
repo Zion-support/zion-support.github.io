@@ -1,12 +1,10 @@
 
-
-}
-) )
-}</ul> </section> <section>) )
-}</ul> </section> </div>)
+ )
+</ul> </section> <section>)
+</ul> </section> </div>)
 export default function ContentMap({ report }: Props) {
   if (!report) return <div>No content map yet. Check back later.</div>;
-  const sections = Object.entries(report.bySection).sort((a, b) => b[1] - a[1]);
+  const sections = Object.entries(report.bySection).sort(a, b) => b[1] - a[1]);
 
   return (
     <div className="space-y-6">
@@ -21,15 +19,15 @@ export default function ContentMap({ report }: Props) {
       <section>
         <h2 className="font-semibold mb-2">Pages by Section</h2>
         <ul className="text-sm space-y-1">
-          {sections.map(([sec, n]) => (
+          {sections.map([sec, n]) => (
             <li key={sec} className="flex justify-between"><span>{sec |'root'}</span><span className="text-gray-500">{n}</span></li>
-};
-) ) ;
-}</ul> </section> <section>) ) ;
-}</ul> </section> </div>) ;
+;
+ ) ;
+</ul> </section> <section>) ;
+</ul> </section> </div>) ;
 export default function ContentMap(): any ({ report }: Props) {;
   if (!report) return <div>No content map yet. Check back later.</div>;
-  const sections = Object && Object.entries(report && report.bySection).sort((a, b) => b[1] - a[1]);
+  const sections = Object && Object.entries(report && report.bySection).sort(a, b) => b[1] - a[1]);
   return (
     <div className="space-y-6">;
       <header className="space-y-1">;
@@ -43,26 +41,25 @@ export default function ContentMap(): any ({ report }: Props) {;
       <section>;
         <h2 className="font-semibold mb-2">Pages by Section</h2>;
         <ul className="text-sm space-y-1">;
-          {sections && sections.map(([sec, n]) => (;
+          {sections && sections.map([sec, n]) => (;
             <li key={sec} className="flex justify-between"><span>{sec || 'root'}</span><span className="text-gray-500">{n}</span></li>;
-          ))}
+          )}
         </ul>;
       </section>;
       <section>;
         <h2 className="font-semibold mb-2">All Pages</h2>;
         <ul className="text-sm space-y-1 max-h-96 overflow-auto border rounded p-3 border-gray-200 dark:border-gray-800">;
-          {report && report.pages.map((p, i) => (;
+          {report && report.pages.map(p, i) => (;
             <li key={i} className="flex justify-between gap-4"><span className="truncate">{p && p.route}</span><span className="text-gray-500 truncate">{p && p.file}</span></li>;
-          ))}
+          )}
         </ul>
       </section>
     </div>
-);
-}
-}
-) );
-}</ul> </section> <section>) );
-}</ul> </section> </div>);
+;
+
+ );
+</ul> </section> <section>);
+</ul> </section> </div>);
 export default /**
  * ContentMap - Function description
  */
@@ -70,8 +67,8 @@ function ContentMap() {
   // Check condition
 if (return <div > No content map yet. Check back later.</div>) {
   $2
-}
-  const sections = Object.entries (report.by_section).sort ((a, b) => b[1] - a[1]);
+
+  const sections = Object.entries (report.by_section).sort (a, b) => b[1] - a[1]);
   return (
     <div className="space - y-6">;
       <header className="space - y-1">;
@@ -85,16 +82,15 @@ if (return <div > No content map yet. Check back later.</div>) {
       <section>;
         <h2 className="font - semibold mb - 2">Pages by Section</h2>;
         <ul className="text - sm space - y-1">;
-          {sections.map (([sec, n]) => (
-            <li key={sec} className="flex justify - between"><span>{sec || 'root'}</span><span className="text - gray - 500">{n}</span></li>))}
+          {sections.map ([sec, n]) => (
+            <li key={sec} className="flex justify - between"><span>{sec || 'root'}</span><span className="text - gray - 500">{n}</span></li>)}
         </ul>;
       </section>;
       <section>;
         <h2 className="font - semibold mb - 2">All Pages</h2>;
         <ul className="text - sm space - y-1 max - h-96 overflow - auto border rounded p - 3 border - gray - 200 dark:border - gray - 800">;
-          {report.pages.map ((p, i) => (
-            <li key={i} className="flex justify - between gap - 4"><span className="truncate">{p.route}</span><span className="text - gray - 500 truncate">{p.file}</span></li>))}
+          {report.pages.map (p, i) => (
+            <li key={i} className="flex justify - between gap - 4"><span className="truncate">{p.route}</span><span className="text - gray - 500 truncate">{p.file}</span></li>)}
         </ul>;
       </section>;
     </div>);
-}

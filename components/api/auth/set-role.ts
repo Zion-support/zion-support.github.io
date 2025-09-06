@@ -19,24 +19,24 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         `${k}=${encodeURIComponent(v)}; Path=/; SameSite=Lax; Expires=${expires}`
       );
     }
-    if (role === "admin" |role === "talent" |role === "guest") {
+    if (role = = "admin" |role = = "talent" |role = = "guest") {
       set("role", role);
     }
     if (talent) {
       set("talentSlug", talent);
     }
-    set("userId", role === "guest" ? "" : "test-user");
+    set("userId", role = = "guest" ? "" : "test-user");
     headers["Set-Cookie"] = cookies.join(", ");
     res.writeHead(302, { ...headers, Location: "/" });
     res.end();
   }
-  if (role === "admin" |role === "talent" |role === "guest") {
+  if (role = = "admin" |role = = "talent" |role = = "guest") {
     set("role", role);
   }
   if (talent) {
     set("talentSlug", talent);
   }
-  set("userId", role === "guest" ? "" : "test-user");
+  set("userId", role = = "guest" ? "" : "test-user");
   headers["Set-Cookie"] = cookies.join();
   res.writeHead(302, { ...headers, Location: "/" });
   res.end();
@@ -44,7 +44,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   headers["Set-Cookie"] = cookies && cookies.join();
   res && res.writeHead(302, { ...headers, Location: "/" });
   res && res.end();
-}
 
   export default /**
  * handler - Function description
@@ -54,7 +53,7 @@ function handler() {
       role?: string;
       talent?: string;
     }
-;
+
     const headers: Record < string, string> = {}
     const cookies: string[] = [];
     const set = (key: string, v: string, days = 7) =>: any {
@@ -63,21 +62,21 @@ function handler() {
         `${k}=${encodeURIComponent (v)} Path=/; SameSite = Lax; Expires=${expires}`,
       );
     }
-;
+
     // Check condition
 if ( {) {
   $2
-}
+
       set ("role", role);
     }
     // Check condition
 if ( {) {
   $2
-}
+
       set ("talent_slug", talent);
     }
-    set ("user_id", role === "guest" ? "" : "test - user");
-;
+    set ("user_id", role = = "guest" ? "" : "test - user");
+
     headers["Set - Cookie"] = cookies.join (", ");
     res.write_head (302, { ...headers, Location: "/" });
     res.end ();
@@ -85,18 +84,17 @@ if ( {) {
   // Check condition
 if ( {) {
   $2
-}
+
     set ("role", role);
   }
   // Check condition
 if ( {) {
   $2
-}
+
     set ("talent_slug", talent);
   }
-  set ("user_id", role === "guest" ? "" : "test - user");
-;
+  set ("user_id", role = = "guest" ? "" : "test - user");
+
   headers["Set - Cookie"] = cookies.join ();
   res.write_head (302, { ...headers, Location: "/" });
   res.end ();
-}

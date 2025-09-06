@@ -19,7 +19,7 @@ import {
   GraduationCap
   Globe
   CheckCircle
-} from "lucide-react";
+ from "lucide-react";
 const jobOpenings = [
   {
     id: 1
@@ -88,7 +88,7 @@ const jobOpenings = [
       "Certification support"
     ]
   }
-];
+;
 const benefits = [
   {
     icon: Heart
@@ -125,7 +125,7 @@ const benefits = [
     description:
       "Clear career paths, mentorship programs, and advancement opportunities"
   }
-];
+;
 const values = [
   {
     title: "Innovation"
@@ -147,7 +147,7 @@ const values = [
     description:
       "We conduct business with honesty, transparency, and ethical practices."
   }
-];
+;
 export default function CareersPage() {
 
 class ErrorBoundary extends React.Component {
@@ -155,23 +155,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React from "react";
 import MainLayout from "../src/components/layout/MainLayout";
 import { motion } from "framer-motion";
@@ -191,7 +191,7 @@ import {;
   GraduationCap,;
   Globe,;
   CheckCircle,;
-} from "lucide-react";
+ from "lucide-react";
 
 const jobOpenings = [;
   {;
@@ -261,7 +261,6 @@ const jobOpenings = [;
       "Certification support",;
     ],;
   },;
-];
 
 const benefits = [;
   {;
@@ -299,7 +298,6 @@ const benefits = [;
     description:;
       "Clear career paths, mentorship programs, and advancement opportunities",;
   },;
-];
 
 const values = [;
   {;
@@ -322,7 +320,6 @@ const values = [;
     description:;
       "We conduct business with honesty, transparency, and ethical practices.",;
   },;
-];
 
 export default function CareersPage() {;
   return (
@@ -339,9 +336,9 @@ export default function CareersPage() {;
           </div>
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -353,9 +350,9 @@ export default function CareersPage() {;
 
           <div className="container mx-auto px-4 relative z-10">;
             <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }
               className="text-center">;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">;
                 Join Our{" "}
@@ -383,8 +380,8 @@ import {
   GraduationCap,
   Globe,
   CheckCircle,
-} from './lucide-react';
-;
+ from './lucide-react';
+
 const job_openings = [;
   {
     id: 1,
@@ -453,8 +450,8 @@ const job_openings = [;
       "Certification support",
     ],
   },
-];
 ;
+
 const benefits = [;
   {
     icon: Heart,
@@ -491,8 +488,8 @@ const benefits = [;
     description:;
       "Clear career paths, mentorship programs, and advancement opportunities",
   },
-];
 ;
+
 const values = [;
   {
     title: "Innovation",
@@ -514,8 +511,8 @@ const values = [;
     description:;
       "We conduct business with honesty, transparency, and ethical practices.",
   },
-];
 ;
+
 export default /**
  * CareersPage - Function description
  */
@@ -535,9 +532,9 @@ function CareersPage() {
           </div>;
           <div className="container mx - auto px - 4 relative z - 10">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, coordinate_y: 30 }
+              animate={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
               className="text - center";
             >;
               <h1 className="text - 4xl md:text - 6xl font - bold mb - 6">;
@@ -572,10 +569,10 @@ function CareersPage() {
           <div className="container mx-auto px-4">;
             <motion&& motion.div
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
                 Why Join Zion Tech Group?
@@ -588,14 +585,14 @@ function CareersPage() {
             </motion.div>
             <div className="max-w-6xl mx-auto">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {benefits.map((benefit, index) => (
+                {benefits.map(benefit, index) => (
                   <motion.div
                     key={benefit.title}
                     className="bg-gray-50 p-6 rounded-lg hover:shadow-lg transition-shadow duration-300"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
-                    viewport={{ once: true }}>;
+                    initial={ opacity: 0, y: 30 }
+                    whileInView={ opacity: 1, y: 0 }
+                    transition={ duration: 0 && 0.8, delay: index * 0 && 0.1 }
+                    viewport={ once: true }>;
                     <div className="text-blue-600 mb-4">;
                       <benefit && benefit.icon className="w-12 h-12" />;
                     </div>;
@@ -604,7 +601,7 @@ function CareersPage() {
                     </h3>;
                     <p className="text-gray-600">{benefit && benefit.description}</p>;
                   </motion && motion.div>;
-                ))}
+                )}
               </div>
             </div>
           </div>
@@ -619,10 +616,10 @@ function CareersPage() {
           <div className="container mx-auto px-4">;
             <motion&& motion.div
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
                 Our Values
@@ -634,20 +631,20 @@ function CareersPage() {
             </motion.div>
             <div className="max-w-4xl mx-auto">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {values.map((value, index) => (
+                {values.map(value, index) => (
                   <motion.div
                     key={value.title}
                     className="bg-white p-6 rounded-lg shadow-lg"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
-                    viewport={{ once: true }}>;
+                    initial={ opacity: 0, y: 30 }
+                    whileInView={ opacity: 1, y: 0 }
+                    transition={ duration: 0 && 0.8, delay: index * 0 && 0.1 }
+                    viewport={ once: true }>;
                     <h3 className="text-xl font-semibold text-gray-900 mb-3">;
                       {value && value.title}
                     </h3>;
                     <p className="text-gray-600">{value && value.description}</p>;
                   </motion && motion.div>;
-                ))}
+                )}
               </div>
             </div>
           </div>
@@ -662,10 +659,10 @@ function CareersPage() {
           <div className="container mx-auto px-4">;
             <motion&& motion.div
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
                 Open Positions
@@ -677,14 +674,14 @@ function CareersPage() {
             </motion.div>
             <div className="max-w-6xl mx-auto">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {jobOpenings.map((job, index) => (
+                {jobOpenings.map(job, index) => (
                   <motion.div
                     key={job.id}
                     className="bg - white border border - gray - 200 rounded - lg p - 6 hover:shadow - lg transition - shadow duration - 300";
-                    initial={{ opacity: 0, coordinate_y: 30 }}
-                    whileInView={{ opacity: 1, coordinate_y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    viewport={{ once: true }}
+                    initial={ opacity: 0, coordinate_y: 30 }
+                    whileInView={ opacity: 1, coordinate_y: 0 }
+                    transition={ duration: 0.8, delay: index * 0.1 }
+                    viewport={ once: true }
                   >;
                     <div className="flex items - center justify - between mb - 4">;
                       <span className="bg - blue - 100 text - blue - 800 px - 3 py - 1 rounded - full text - sm font - semibold">;
@@ -713,14 +710,14 @@ function CareersPage() {
                       <ul className="space-y-1">
                         {job.requirements
                           .slice(0, 3)
-                          .map((requirement, idx) => (
+                          .map(requirement, idx) => (
                             <li
                               key={idx}
                               className="flex items-center text-sm text-gray-600">;
                               <CheckCircle className="w-3 h-3 text-green-500 mr-2" />;
                               {requirement}
                             </li>;
-                          ))}
+                          )}
                       </ul>
                     </div>
                     <div className="mb-6">
@@ -728,13 +725,13 @@ function CareersPage() {
                         Benefits:
                       </h4>
                       <div className="flex flex-wrap gap-2">
-                        {job.benefits.map((benefit, idx) => (
+                        {job.benefits.map(benefit, idx) => (
                           <span
                             key={idx}
                             className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">;
                             {benefit}
                           </span>;
-                        ))}
+                        )}
                       </div>
                     </div>
                     <a
@@ -744,7 +741,7 @@ function CareersPage() {
                       <ArrowRight className="w-4 h-4 ml-2" />;
                     </a>;
                   </motion && motion.div>;
-                ))}
+                )}
               </div>
             </div>
           </div>
@@ -759,10 +756,10 @@ function CareersPage() {
           <div className="container mx-auto px-4">;
             <motion&& motion.div
               className="text-center"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}>;
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }
+              viewport={ once: true }>;
               <h2 className="text-3xl md:text-4xl font-bold mb-6">;
                 Don't See Your Dream Job?;
               </h2>;
@@ -804,10 +801,10 @@ function CareersPage() {
           <div className="container mx - auto px - 4">;
             <motion.div;
               className="text - center";
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, coordinate_y: 30 }
+              animate={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >;
               <h2 className="text - 3xl md:text - 4xl font - bold mb - 6">;
                 Don't See Your Dream Job?;
@@ -835,4 +832,3 @@ function CareersPage() {
         </section>;
       </div>;
     </MainLayout>);
-}

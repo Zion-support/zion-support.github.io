@@ -9,34 +9,32 @@ interface ReportingData {
     costPerHireUsd?: number,
     updatedAt: string
   }>
-}
 
 const FILE = 'reporting.json',
-const FALLBACK: ReportingData = { byTenant: {} },
+const FALLBACK: ReportingData = { byTenant: {},
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const method = (req.method || 'GET').toUpperCase(),
-  const auth = authenticateRequest(req, method === 'GET'),
+  const auth = authenticateRequest(req, method = = 'GET'),
   if (!auth.ok) return res.status(401).json({ error: auth.error }),
   const tenantId = auth.tenantId!,
 
-  if (method === 'GET') {
+  if (method = = 'GET') {
     const data = readJsonFile<ReportingData>(FILE, FALLBACK),
     const entry = data.byTenant[tenantId] || { funnel: [], timeToHireDays: 0, updatedAt: new Date().toISOString() },
     return res.status(200).json(entry)
   }
 
-  if (method === 'POST') {
+  if (method = = 'POST') {
     const { funnel, timeToHireDays, costPerHireUsd } = req.body || {},
     const updated = updateJsonFile<ReportingData>(FILE, (curr) => {
       const next = curr.byTenant || {},
       next[tenantId] = {
         funnel: funnel || next[tenantId]?.funnel || [],
-        timeToHireDays: typeof timeToHireDays === 'number' ? timeToHireDays : (next[tenantId]?.timeToHireDays || 0),
-        costPerHireUsd: typeof costPerHireUsd === 'number' ? costPerHireUsd : next[tenantId]?.costPerHireUsd,
+        timeToHireDays: typeof timeToHireDays = = 'number' ? timeToHireDays : (next[tenantId]?.timeToHireDays || 0),
+        costPerHireUsd: typeof costPerHireUsd = = 'number' ? costPerHireUsd : next[tenantId]?.costPerHireUsd,
         updatedAt: new Date().toISOString()},
-      return { byTenant: next }
-    }, FALLBACK),
+      return { byTenant: next }, FALLBACK),
     return res.status(200).json(updated.byTenant[tenantId])
   }
 

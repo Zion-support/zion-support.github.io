@@ -23,19 +23,19 @@ export default /**
  */
 function Login() {
   const { is_authenticated, user } = use_auth ();
-;
+
   // Redirect if user is already logged in and has completed profile;
   // Check condition
 if ( {) {
   $2
-}
+
     return <Navigate to="/" />;
   }
   // Redirect to onboarding if user is authenticated but hasn't completed profile;
   // Check condition
 if ( {) {
   $2
-}
+
     return <Navigate to="/onboarding" />;
   }
   return (
@@ -45,4 +45,3 @@ if ( {) {
       <Footer />;
     </>;
   );
-}

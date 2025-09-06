@@ -6,5 +6,3 @@ export function SearchPage() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

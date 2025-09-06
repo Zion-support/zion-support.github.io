@@ -6,4 +6,3 @@ export default function QuoteRequestsPage() {
       <p className=&quot;text-white/70 mt-2&quot;>This runs hourly and auto-PRs updates.</p>
     </div>
   )
-}

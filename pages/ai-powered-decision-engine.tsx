@@ -25,7 +25,7 @@ export default function AiPoweredDecisionEngine() {
 			canonical="https: //ziontechgroup.com/ai-powered-decision-engine"
 		/>
 	)
-}
+
 import React from 'react',
 import ServiceLanding from '../components / sections / ServiceLanding',
 export default /**
@@ -53,4 +53,3 @@ return (
     industries={["Fintech", "SaaS", "Marketplaces", "Logistics"]}
     canonical="https: //ziontechgroup.com / ai - powered - decision - engine";
   />);
-}

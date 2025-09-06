@@ -1,35 +1,33 @@
 import { useEffect, useMemo, useState } from 'react';
 function getRefCode(): string {
 
-  if (typeof window === 'undefined') return ''
+  if (typeof window = = 'undefined') return ''
   return localStorage.getItem('ref_code') |''
-}
+
 export default function AffiliateDashboard() {
   const [code, setCode] = useState<string>('')
   const [metrics, setMetrics] = useState<any>(null)
   const [amount, setAmount] = useState<string>('')
   const [msg, setMsg] = useState<string>('')
-  useEffect(() => {
+  useEffect() => {
     const c = getRefCode()
     setCode(c)
   }, [])
   }, []);
 
-  useEffect(() => {
+  useEffect() => {
     if (!code) return
     (async () => {
       try {
         const res = await fetch(`/api/partners/metrics?code=${encodeURIComponent(code)}`)
         const json = await res.json()
         setMetrics(json)
-      } catch {}
-    })()
+      } catch {})()
   }, [code])
         const res = await fetch(`/api/partners/metrics?code=${encodeURIComponent(code)}`);
         const json = await res.json();
         setMetrics(json)
-      } catch {}
-    })()
+      } catch {})()
   }, [code]);
 
   async function requestPayout() {
@@ -45,8 +43,7 @@ export default function AffiliateDashboard() {
     } catch (e: any) {
       setMsg(e?.message |'Error')
     }
-  }
-  const exportUrl = useMemo(() => (code ? `/api/partners/export?code=${encodeURIComponent(code)}` : '#'), [code])
+  const exportUrl = useMemo() => (code ? `/api/partners/export?code=${encodeURIComponent(code)}` : '#'), [code])
 
   if (!code) {
     return (
@@ -81,7 +78,7 @@ export default function AffiliateDashboard() {
       </div>
     </div>
   )
-}
+
 function Stat({ label, value }: { label: string, value: number | string }) {
   return (
     <div className="p-4 rounded border border-gray-200 dark:border-gray-800">
@@ -89,16 +86,16 @@ function Stat({ label, value }: { label: string, value: number | string }) {
       <div className="text-2xl font-semibold">{value}</div>
     </div>
   )
-}
+
 import { useEffect, useMemo, useState } from 'react',
-;
+
 function getRefCode (): string {
   // Check condition
 if (return '', ) {
   $2
-}
+
   return local_storage.get_item ('ref_code') || '';
-}
+
 export default /**
  * AffiliateDashboard - Function description
  */
@@ -107,22 +104,21 @@ function AffiliateDashboard() {
   const [metrics, set_metrics] = useState < any>(null),
   const [amount, set_amount] = useState < string>(''),
   const [msg, set_msg] = useState < string>(''),
-  useEffect (() => {
+  useEffect () => {
     const c = getRefCode (),
     set_code (c);
   }, []),
-  useEffect (() => {
+  useEffect () => {
     // Check condition
 if (return, ) {
   $2
-}
+
     (async () => {
       try {
         const res = await fetch (`/api / partners / metrics?code=${encodeURIComponent (code)}`),
         const json = await res.json (),
         set_metrics (json);
-      } catch {}
-    })();
+      } catch {})();
   }, [code]),
   async /**
  * request_payout - Function description
@@ -137,17 +133,16 @@ function request_payout() {
       const json = await res.json (),
       if (throw new Error (json.error || 'Failed'), ) {
   $2
-}
+
       set_msg ('Payout requested');
     } catch (e: any) {
       set_msg (e?.message || 'Error');
     }
-  }
-  const export_url = useMemo (() => (code ? `/api / partners / export?code=${encodeURIComponent (code)}` : '#'), [code]),
+  const export_url = useMemo () => (code ? `/api / partners / export?code=${encodeURIComponent (code)}` : '#'), [code]),
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <div className="space - y-4">;
         <h1 className="text - 2xl font - semibold">Affiliate Dashboard</h1>;
@@ -178,8 +173,8 @@ if ( {) {
         {msg && <p className="mt - 2 text - sm">{msg}</p>}
       </div>;
     </div>);
-}
-/**
+
+**
  * Stat - Function description
  */
 function Stat() {
@@ -188,4 +183,3 @@ function Stat() {
       <div className="text - sm text - gray - 600 dark:text - gray - 300">{label}</div>;
       <div className="text - 2xl font - semibold">{value}</div>;
     </div>);
-}

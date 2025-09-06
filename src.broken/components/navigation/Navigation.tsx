@@ -6,5 +6,3 @@ export function Navigation() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

@@ -14,14 +14,12 @@ export interface IntegrationProviderMeta {
   id: IntegrationProviderId, name: string
   category: IntegrationCategory, description?: string,  oauthScopes?: string[];
   icon?: string
-}
 
-;
 export interface IntegrationProviderMeta {
   id: IntegrationProviderId, name: string,
   category: IntegrationCategory, description?: string,  oauth_scopes?: string[];
   icon?: string;
-}
+
 export interface SyncRules {
   // CRM rules;
   autoCreateContacts?: boolean;
@@ -37,7 +35,7 @@ export interface ProviderConnection {
   syncRules?: SyncRules;
   lastSyncAt?: number;
   lastError?: string | null;
-;
+
 export interface ProviderConnection {
   provider_id: IntegrationProviderId;
   status: SyncStatus;  access_token?: string;  refresh_token?: string;
@@ -67,6 +65,5 @@ export interface IntegrationsState {
   logs: SyncLogEntry[];
   overrides: ManualOverride[];
   events: ZapierEvent[];  events: ZapierEvent[]
-}
+
   events: ZapierEvent[];  events: ZapierEvent[];
-}

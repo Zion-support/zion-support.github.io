@@ -6,18 +6,17 @@ import { CreditCard } from 'lucide-react';
 interface PaymentSummaryProps {
   milestones: Milestone[];
   paymentTerms: string | null
-}
 
 export const PaymentSummary: React.FC<PaymentSummaryProps> = ({
   milestones
   paymentTerms
-}) => {
+) => {
   const totalPayment = milestones
-    .reduce((sum, m) => sum + parseFloat(m.amount.toString()), 0)
+    .reduce(sum, m) => sum + parseFloat(m.amount.toString(), 0)
     .toFixed(2);
   const paidAmount = milestones
-    .filter((m) => m.status === "paid")
-    .reduce((sum, m) => sum + parseFloat(m.amount.toString()), 0)
+    .filter(m) => m.status = = "paid")
+    .reduce(sum, m) => sum + parseFloat(m.amount.toString(), 0)
     .toFixed(2);
   return (
     <Card className="mb-8 bg-muted/30">
@@ -46,7 +45,6 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({
       </CardContent>
     </Card>
   );
-}
 
 import React from './react';
 import { Milestone  } from '@/hooks / use_milestones';
@@ -55,20 +53,20 @@ import { CreditCard  } from './lucide-react';
 interface PaymentSummaryProps {
   milestones: Milestone[];
   payment_terms: string | null;
-}
+
 export const PaymentSummary: React.FC < PaymentSummaryProps> = ({
   milestones,
   payment_terms,
-}) => {
+) => {
   const total_payment = milestones;
-    .reduce ((sum, m) => sum + parse_float (m.amount.to_string ()), 0);
+    .reduce (sum, m) => sum + parse_float (m.amount.to_string (), 0);
     .to_fixed (2);
-;
+
   const paid_amount = milestones;
-    .filter ((m) => m.status === "paid");
-    .reduce ((sum, m) => sum + parse_float (m.amount.to_string ()), 0);
+    .filter (m) => m.status = = "paid");
+    .reduce (sum, m) => sum + parse_float (m.amount.to_string (), 0);
     .to_fixed (2);
-;
+
   return (
     <Card className="mb - 8 bg - muted / 30">;
       <CardHeader className="pb - 3">;
@@ -95,5 +93,3 @@ export const PaymentSummary: React.FC < PaymentSummaryProps> = ({
         </div>;
       </CardContent>;
     </Card>);
-}
-;

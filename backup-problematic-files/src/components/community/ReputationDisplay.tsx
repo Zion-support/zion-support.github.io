@@ -1,21 +1,19 @@
 
 import { Trophy } from 'lucide-react';
 import { Progress } from "@/components/ui/progress",;
-;
+
 interface ReputationDisplayProps {;
   reputation:number,;
   size?:'sm' | 'md' | 'lg';
-}
-;
+
 export const ReputationDisplay = ({ ;
   reputation,;
   size = 'md' ;
-} ReputationDisplayProps) => {;
+ ReputationDisplayProps) => {;
   // Calculate next milestone;
   const currentLevel = Math.floor(reputation / 100),;
   const nextMilestone = (currentLevel + 1) * 100,;
-  const progress = ((reputation % 100) / 100) * 100,;
-  ;
+  const progress = (reputation % 100) / 100) * 100,;
   // Styling based on size;
   const sizeClasses = {;
     sm:{;
@@ -32,9 +30,7 @@ export const ReputationDisplay = ({ ;
       container:"text-base",;
       icon:"w-5 h-5",;
       progress:"h-3";
-    }
-  },;
-  ;
+    },;
   return (;
     <div className="space-y-1">;
       <div className={`flex items-center gap-1 ${sizeClasses[size].container}`}>;
@@ -48,20 +44,18 @@ export const ReputationDisplay = ({ ;
       </div>;
     </div>;
   ),;
-},;
-;
+,;
+
 export default ReputationDisplay,; interface ReputationDisplayProps {;
   reputation: number;
 size?: 'sm' | 'md' | 'lg' ;
-}export const ReputationDisplay = ({;
+export const ReputationDisplay = ({;
   reputation;';
 size = 'md' ;
-}: ReputationDisplayProps) => {;
+: ReputationDisplayProps) => {;
   //Calculate next milestone const currentLevel = Math.floor (reputation / 100);
 const nextMilestone = (currentLevel + 1) * 100;
-const progress = ( (reputation % 100) /100) * 100;
+const progress = (reputation % 100) /100) * 100;
 sm: {;
   </div> </div>) ;
-};
 export default ReputationDisplay;
-'

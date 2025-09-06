@@ -6,4 +6,3 @@ export default function App() {
       <h1>Zion Tech Group</h1>
     </div>
   );
-}

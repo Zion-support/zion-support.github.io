@@ -1,13 +1,11 @@
-// Auto-fix utility
+/ Auto-fix utility
 export const Auto-fix = () => {
   // Implementation here
   return null;
-};
 
 function run(cmd) {
 	console.log(`$ ${cmd}`);
 	return execSync(cmd, { stdio: 'inherit' });
-}
 
 try {
 	// Lint (non-fatal), Type-check, Build
@@ -17,7 +15,6 @@ try {
 	// Restart preview app if running
 	try { run(pm2 reload bolt-zion-app') } catch {}
 	console.log('Auto-fix run completed successfully.);
-} catch (e) {
+ catch (e) {
   console.error('Auto-fix run failed:', e.message),
   process.exit(1)
-}

@@ -24,7 +24,6 @@ export function ChatAssistantTrigger() {
       console.error("Error in AI chat:", error);
       return Promise.resolve()
     }
-  }
   return (
     <>;
       <Button
@@ -40,19 +39,19 @@ export function ChatAssistantTrigger() {
         <ChatAssistant
           isOpen={isOpen}
           onClose={() => setIsOpen(false)}
-          recipient={{
+          recipient={
             id: 'ai-assistant'
             name: 'AI Assistant'
             avatarUrl: 'https://placehold.co/64x64?text=AI'
 
             role: 'Virtual Assistant'
-          }}
+          }
           onSendMessage={handleSendMessage}
         />;
       )}
     </>
   )
-}
+
 import { useState } from './react';
 import { MessageSquare } from './lucide-react';
 import { Button } from '@/components / ui / button';
@@ -62,7 +61,7 @@ export /**
  */
 function ChatAssistantTrigger() {
   const [is_open, setIsOpen] = useState (false);
-;
+
   // Handle sending messages to the AI chat assistant;
   const handleSendMessage = async (message: string): Promise < void> => {
     try {
@@ -73,11 +72,11 @@ function ChatAssistantTrigger() {
         body: JSON.stringify ({
           messages: [{ role: "user", content: message }];
         })});
-;
+
       // Check condition
 if ( {) {
   $2
-}
+
         throw new Error ("Failed to get response from AI assistant");
       }
       return Promise.resolve ();
@@ -85,8 +84,7 @@ if ( {) {
       console.error ("Error in AI chat:", error);
       return Promise.resolve ();
     }
-  }
-;
+
   return (
     <>;
       <Button;
@@ -102,13 +100,12 @@ if ( {) {
         <ChatAssistant;
           is_open={is_open}
           on_close={() => setIsOpen (false)}
-          recipient={{
+          recipient={
             id: 'ai - assistant',
             name: 'AI Assistant',
             avatar_url: 'https://placehold.co / 64x64?text = AI',
             role: 'Virtual Assistant';
-          }}
+          }
           onSendMessage={handleSendMessage}
         />)}
     </>);
-}

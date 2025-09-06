@@ -6,5 +6,3 @@ export function ProfileRatings() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

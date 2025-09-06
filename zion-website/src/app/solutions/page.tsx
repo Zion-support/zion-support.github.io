@@ -7,7 +7,7 @@ import {
   GlobeAltIcon
   UserGroupIcon
   CogIcon
-} from '@heroicons/react/24/outline'
+ from '@heroicons/react/24/outline'
 const flagshipSolutions = [
   {
     name: 'AI Research Assistant'
@@ -121,7 +121,7 @@ export default function SolutionsPage() {
         </div>;
         <div className=&quot;mx - auto mt - 16 max - w-2xl sm:mt - 20 lg:mt - 24 lg:max - w-none & quot;>;
           <div className=&quot;grid max - w-xl grid - cols - 1 gap - 8 lg:max - w-none lg:grid - cols - 2&quot;>;
-            {flagship_solutions.map ((solution) => (
+            {flagship_solutions.map (solution) => (
               <div key={solution.name} className=&quot;bg - white / 5 p - 8 rounded - 2xl backdrop - blur - sm hover:bg - white / 10 transition - all duration - 300 hover:scale - 105 & quot;>;
                 <div className=&quot;flex items - center gap - x-3 mb - 4&quot;>;
                   <solution.icon className=&quot;h - 8 w - 8 text - blue - 400 & quot; />;
@@ -129,11 +129,11 @@ export default function SolutionsPage() {
                 </div>;
                 <p className=&quot;text - gray - 300 mb - 6&quot;>{solution.description}</p>;
                 <div className=&quot;space - y-3 mb - 6&quot;>;
-                  {solution.features.map ((feature) => (
+                  {solution.features.map (feature) => (
                     <div key={feature} className=&quot;flex items - center gap - 2&quot;>;
                       <div className=&quot;h - 2 w - 2 bg - blue - 400 rounded - full & quot;></div>;
                       <span className=&quot;text - sm text - gray - 300 & quot;>{feature}</span>;
-                    </div>))}
+                    </div>)}
                 </div>;
                 <a;
                   href={solution.href}
@@ -141,7 +141,7 @@ className=&quot;text - sm font - semibold leading - 6 text - blue - 400 hover:te
                 >;
                   Learn more <span aria - hidden=&quot;true & quot;></span>;
                 </Link>;
-              </div>))}
+              </div>)}
           </div>;
         </div>;
       </div>;
@@ -159,7 +159,7 @@ className=&quot;text - sm font - semibold leading - 6 text - blue - 400 hover:te
         </div>
         <div className=&quot;mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none&quot;>
           <dl className=&quot;grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2&quot;>
-            {industryApplications.map((industry) => (
+            {industryApplications.map(industry) => (
               <div key={industry.name} className=&quot;flex flex-col group&quot;>
                 <dt className=&quot;flex items-center gap-x-3 text-base font-semibold leading-7 text-white&quot;>
                   <industry.icon className=&quot;h-5 w-5 flex-none text-blue-400&quot; aria-hidden=&quot;true&quot; />
@@ -168,14 +168,14 @@ className=&quot;text - sm font - semibold leading - 6 text - blue - 400 hover:te
                 <dd className=&quot;mt - 4 flex flex - auto flex - col text - base leading - 7 text - gray - 300 & quot;>;
                   <p className=&quot;flex - auto mb - 4&quot;>{industry.description}</p>;
                   <div className=&quot;space - y-2 & quot;>;
-                    {industry.use_cases.map ((use_case) => (
+                    {industry.use_cases.map (use_case) => (
                       <div key={use_case} className=&quot;flex items - center gap - 2&quot;>;
                         <div className=&quot;h - 1.5 w - 1.5 bg - blue - 400 rounded - full & quot;></div>;
                         <span className=&quot;text - sm text - gray - 400 & quot;>{use_case}</span>;
-                      </div>))}
+                      </div>)}
                   </div>;
                 </dd>;
-              </div>))}
+              </div>)}
           </dl>;
         </div>;
       </div>;
@@ -193,7 +193,7 @@ className=&quot;text - sm font - semibold leading - 6 text - blue - 400 hover:te
         </div>
         <div className=&quot;mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none&quot;>
           <div className=&quot;grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-5&quot;>
-            {implementationSteps.map((step, index) => (
+            {implementationSteps.map(step, index) => (
               <div key={step.step} className=&quot;relative&quot;>
                 {index < implementationSteps.length - 1 && (
                   <div className=&quot;hidden lg:block absolute top-8 left-8 w-full h-0.5 bg-gray-700&quot;></div>
@@ -207,7 +207,7 @@ className=&quot;text - sm font - semibold leading - 6 text - blue - 400 hover:te
                   <p className=&quot;text-sm text-gray-300&quot;>{step.description}</p>
                 </div>
               </div>
-            ))}
+            )}
           </div>;
         </div>;
       </div>;
@@ -236,4 +236,3 @@ className=&quot;text - sm font - semibold leading - 6 text - blue - 400 hover:te
       </div>
     </div>
   )
-}

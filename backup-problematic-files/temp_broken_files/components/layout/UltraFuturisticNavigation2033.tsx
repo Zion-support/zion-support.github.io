@@ -6,14 +6,14 @@ import {
   Cpu, Target, Microscope, Shield, Zap, Sparkles,
   Menu, X, Search, ChevronDown, Home, Briefcase,
   DollarSign, BookOpen, Users, MessageCircle
-} from 'lucide-react',
+ from 'lucide-react',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-},
+,
 const serviceCategories = [
   {title: ' Revolutionary AI', icon: Brain, color: 'from-violet-500 to-purple-600', services: [
       { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-platform', description: 'Advanced AI consciousness', price: '$2, 999/month'},
@@ -44,7 +44,7 @@ const serviceCategories = [
       {name: 'Virtual Event Holograms', href: '/virtual-event-hologram-platform', description: 'Holographic events', price: '$2, 499/month'}
     ]
   }
-],
+,
 
 const quickLinks = [
   { name: 'Services Overview', href: '/enhanced-services-overview', icon: Globe, color: 'from-cyan-500 to-blue-600' },
@@ -53,7 +53,7 @@ const quickLinks = [
   { name: 'Space Tech', href: '/space-technology', icon: Rocket, color: 'from-teal-500 to-emerald-600' },
   { name: 'Enterprise IT', href: '/enterprise-it', icon: Cpu, color: 'from-blue-500 to-cyan-600' },
   { name: 'Micro SAAS', href: '/enhanced-micro-saas-showcase', icon: Target, color: 'from-green-500 to-yellow-600' }
-],
+,
 
 export default function UltraFuturisticNavigation2033() {
   const [isOpen, setIsOpen] = useState(false),
@@ -64,9 +64,9 @@ export default function UltraFuturisticNavigation2033() {
   const closeMenu = () => setIsOpen(false),
 
   // Close menu on escape key,
-useEffect(() => {
+useEffect() => {
     const handleEscape = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') closeMenu()
+      if (e.key = = 'Escape') closeMenu()
     },
     document.addEventListener('keydown', handleEscape),
     return () => document.removeEventListener('keydown', handleEscape)
@@ -108,8 +108,8 @@ useEffect(() => {
             {/* Logo */}
             <motion.div,
 className=&quot;flex items-center space-x-3&quot;
-              whileHover={{ scale: 1.05 }}
-              transition={{ type: &quot;spring&quot;, stiffness: 400, damping: 10 }}            >
+              whileHover={ scale: 1.05 }
+              transition={ type: &quot;spring&quot;, stiffness: 400, damping: 10 }            >
               <Link href=&quot;/&quot; className=&quot;flex items-center space-x-3&quot;>
                 <div className=&quot;relative&quot;>
                   <div className=&quot;w-12 h-12 bg-gradient-to-br from-purple-500 via-cyan-500 to-blue-500 rounded-xl flex items-center justify-center shadow-2xl&quot;>
@@ -142,18 +142,18 @@ onMouseEnter={() => setActiveCategory('services')}
 
                 {_/* Mega Menu */}
                 <AnimatePresence>
-                  {activeCategory === 'services' && (
+                  {activeCategory = = 'services' && (
                     <motion.div,
-initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                      animate={{ opacity: 1, y: 0, scale: 1 }}
-                      exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                      transition={{ duration: 0.2 }}
+initial={ opacity: 0, y: 10, scale: 0.95 }
+                      animate={ opacity: 1, y: 0, scale: 1 }
+                      exit={ opacity: 0, y: 10, scale: 0.95 }
+                      transition={ duration: 0.2 }
                       onMouseEnter={() => setActiveCategory('services')}
                       onMouseLeave={() => setActiveCategory(null)}
                       className=&quot;absolute top-full left-0 w-screen max-w-6xl bg-gray-900/95 backdrop-blur-xl border border-purple-500/20 rounded-2xl shadow-2xl p-8 -ml-4&quot;
                     >
                       <div className=&quot;grid grid-cols-2 lg:grid-cols-4 gap-8&quot;>
-                        {serviceCategories.map((category) => (
+                        {serviceCategories.map(category) => (
                           <div key={category.title} className=&quot;space-y-4&quot;>
                             <div className=&quot;flex items-center space-x-3&quot;>
                               <div className={`w-10 h-10 rounded-lg bg-gradient-to-r ${category.color} flex items-center justify-center`}>
@@ -162,7 +162,7 @@ initial={{ opacity: 0, y: 10, scale: 0.95 }}
                               <h3 className=&quot;text-lg font-semibold text-white&quot;>{category.title}</h3>
                             </div>
                             <div className=&quot;space-y-3&quot;>
-                              {category.services.map((service) => (
+                              {category.services.map(service) => (
                                 <Link,
 key={service.name}
                                   href={service.href}
@@ -179,10 +179,10 @@ key={service.name}
                                     </div>
                                     <p className=&quot;text-sm text-gray-400&quot;>{service.description}</p>                                  </div>
                                 </a>
-                              ))}
+                              )}
                             </div>;
                           </div>;
-                        ))}
+                        )}
                       </div>;
                     </motion.div>;
                   )}
@@ -197,12 +197,12 @@ key={link.name}
                   className=&quot;text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50&quot;
                 >
                   {link.name}
-                </a>              ))}
+                </a>              )}
 
               {_/* Contact Button */}
               <motion.div,
-whileHover={_{ scale: 1.05}}
-                whileTap={_{ scale: 0.95}}
+whileHover={_{ scale: 1.05}
+                whileTap={_{ scale: 0.95}
               >
                 <Link,
 href=&quot;/contact&quot;
@@ -228,21 +228,21 @@ onClick={toggleMenu}
         <AnimatePresence>
           {isOpen && (
             <motion.div,
-initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3 }}
+initial={ opacity: 0, height: 0 }
+              animate={ opacity: 1, height: 'auto' }
+              exit={ opacity: 0, height: 0 }
+              transition={ duration: 0.3 }
               className=&quot;lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-purple-500/20&quot;
             >
               <div className=&quot;px-4 py-6 space-y-6&quot;>
                 {/* Mobile Services */}
                 <div className=&quot;space-y-4&quot;>
                   <h3 className=&quot;text-lg font-semibold text-white&quot;>Services</h3>
-                  {serviceCategories.map((category) => (
+                  {serviceCategories.map(category) => (
                     <div key={category.title} className=&quot;ml-4 space-y-2&quot;>
                       <h4 className=&quot;font-medium text-purple-300&quot;>{category.title}</h4>
                       <div className=&quot;ml-4 space-y-1&quot;>
-                        {category.services.map((service) => (
+                        {category.services.map(service) => (
                           <Link,
 key={service.name}
                             href={service.href}
@@ -250,17 +250,17 @@ key={service.name}
                             className=&quot;block text-sm text-gray-400 hover:text-cyan-400 transition-colors&quot;
                           >
                             {service.name}
-                          </a>                        ))}
+                          </a>                        )}
                       </div>
                     </div>
-                  ))}
+                  )}
                 </div>;
-;
+
                 {/* Mobile Quick Links */}
                 <div className=&quot;space-y-4&quot;>
                   <h3 className=&quot;text-lg font-semibold text-white&quot;>Quick Links</h3>
                   <div className=&quot;grid grid-cols-2 gap-2&quot;>
-                    {quickLinks.map((link) => (
+                    {quickLinks.map(link) => (
                       <Link,
 key={link.name}
                         href={link.href}
@@ -268,7 +268,7 @@ key={link.name}
                         className=&quot;text-sm text-gray-400 hover:text-cyan-400 transition-colors&quot;
                       >
                         {link.name}
-                      </a>                    ))}
+                      </a>                    )}
                   </div>
                 </div>
 
@@ -288,15 +288,13 @@ href=&quot;/contact&quot;
       </nav>
     </>
   )}
-}whileTap= {
-  {
+whileTap= {
   scale: 0.95 
-}
-}> <Link href="/contact" className="px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-200 shadow-lg" > Get Started </a> </motion.div> </div> </button> </div> </div> </div> {
+
+> <Link href="/contact" className="px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-200 shadow-lg" > Get Started </a> </motion.div> </div> </button> </div> </div> </div> {
   /* Mobile Menu */ 
-}<AnimatePresence>) ) 
-}</div> </div>) ) 
-}</div>) ) 
-}</div> </div> > Get Started </a> </div> </div> </motion.div>) 
-}</AnimatePresence> </nav> </>) 
-}
+<AnimatePresence>) 
+</div> </div>) 
+</div>) 
+</div> </div>Get Started </a> </div> </div> </motion.div>) 
+</AnimatePresence> </nav> </>) 

@@ -1,23 +1,23 @@
 import React, { useState } from 'react',;
-;
+
 type PersonaConfig = {;
   voice:'Visionary' | 'Grounded' | 'Technical',;
   language:string,;
   cloneStyleText?:string;
-},;
-;
+,;
+
 export default function StudioHostPage() {;
   const [persona, setPersona] = useState<PersonaConfig>({ voice:'Visionary', language:'English' }),;
   const [inviteeName, setInviteeName] = useState(''),;
   const [inviteeBio, setInviteeBio] = useState(''),;
   const [topic, setTopic] = useState(''),;
   const [operatorPrompt, setOperatorPrompt] = useState('Generate a 15-minute podcast script interviewing the founder of a global decentralized talent protocol called Zion. Include visionary and technical questions, plus a CTA.'),;
-;
+
   const [generating, setGenerating] = useState(false),;
   const [episode, setEpisode] = useState<any>(null),;
   const [synthesizing, setSynthesizing] = useState(false),;
   const [publishing, setPublishing] = useState(false),;
-;
+
   const handleGenerate = async () => {;
     setGenerating(true),;
     try {;
@@ -32,9 +32,8 @@ export default function StudioHostPage() {;
       alert('Failed to generate episode'),;
     } finally {;
       setGenerating(false),;
-    }
-  },;
-;
+    },;
+
   const handleSynthesize = async () => {;
     if (!episode?.id) return,;
     setSynthesizing(true),;
@@ -50,9 +49,8 @@ export default function StudioHostPage() {;
       alert('Failed to synthesize audio'),;
     } finally {;
       setSynthesizing(false),;
-    }
-  },;
-;
+    },;
+
   const handlePublishRss = async () => {;
     if (!episode?.id) return,;
     setPublishing(true),;
@@ -65,13 +63,12 @@ export default function StudioHostPage() {;
       alert('Failed to update RSS'),;
     } finally {;
       setPublishing(false),;
-    }
-  },;
-;
+    },;
+
   return (;
     <div className="space-y-8">;
       <h1 className="text-3xl font-bold">Podcast Studio Host</h1>;
-;
+
       <section className="space-y-3">;
         <h2 className="text-xl font-semibold">AI Persona</h2>;
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">;
@@ -97,7 +94,7 @@ export default function StudioHostPage() {;
           </div>;
         </div>;
       </section>;
-;
+
       <section className="space-y-3">;
         <h2 className="text-xl font-semibold">Episode Generator</h2>;
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">;
@@ -122,7 +119,7 @@ export default function StudioHostPage() {;
           {generating ? 'Generating' :'Generate Episode'}
         </button>;
       </section>;
-;
+
       {episode && (;
         <section className="space-y-4">;
           <h2 className="text-xl font-semibold">Episode Draft</h2>;
@@ -132,9 +129,9 @@ export default function StudioHostPage() {;
             <div>;
               <h4 className="font-semibold">Questions</h4>;
               <ol className="list-decimal list-inside space-y-1">;
-                {episode.questions?.map((q:string, idx:number) => (;
+                {episode.questions?.map(q:string, idx:number) => (;
                   <li key={idx}>{q}</li>;
-                ))}
+                )}
               </ol>;
             </div>;
             <div>;
@@ -175,4 +172,3 @@ export default function StudioHostPage() {;
       )}
     </div>;
   ),;
-}

@@ -3,11 +3,11 @@ import Link from \'next/link\'; import Head from \'next/head\'; export default f
 import React from 'react';
 interface DataanalyticsProps {
   // Add props here as needed
-}
+
 export default function Dataanalytics({ }: DataanalyticsProps) {
 interface DataanalyticsProps {;
   // Add props here as needed;
-}
+
 export default function Dataanalytics(): any ({ }: DataanalyticsProps) {;
   return (
     <div>;
@@ -15,7 +15,3 @@ export default function Dataanalytics(): any ({ }: DataanalyticsProps) {;
       <p>This component is currently under development.</p>;
     </div>;
   );
-}
-}
-
-

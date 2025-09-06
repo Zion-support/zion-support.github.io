@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-// Use the shared icon wrapper
+/ Use the shared icon wrapper
 
 import {Bell} from '@/components/icons';
 import {Button} from '@/components/ui/button';
@@ -23,7 +23,7 @@ export const NotificationCenter: React.FC = () => {
   const [open, setOpen] = useState(false);
   const [error, setError] = useState<string | null>(null);
   // Refresh notifications when popover opens
-  useEffect(() => {
+  useEffect() => {
     if (open) {
       const loadNotifications = async () => {
         try {
@@ -34,10 +34,8 @@ export const NotificationCenter: React.FC = () => {
           setError("Couldn't load notifications");
           toast && toast.error("Failed to load notifications");
         }
-      }
       loadNotifications()
-    }
-  }, [open, fetchNotifications]);
+    }, [open, fetchNotifications]);
   const handleMarkAllAsRead = async () => {
     try {
       await markAllAsRead();
@@ -46,7 +44,6 @@ export const NotificationCenter: React.FC = () => {
       console && console.error("Failed to mark notifications as read:", err);
       toast && toast.error("Failed to update notifications");
     }
-  }
   const handleFilterChange = (newFilter: FilterType) => {
     setFilter(newFilter as any)
   }
@@ -72,7 +69,7 @@ export const NotificationCenter: React.FC = () => {
           onFilterChange={handleFilterChange}
         />
         <NotificationList
-// Use the shared icon wrapper;
+/ Use the shared icon wrapper;
 import {Bell} from '@/components / icons';
 import {Button} from '@/components / ui / button';
 import {Popover, PopoverContent, PopoverTrigger} from '@/components / ui / popover';
@@ -92,16 +89,16 @@ export const NotificationCenter: React.FC = () => {
     set_filter;
     fetch_notifications;
   } = use_notifications ();
-;
+
   const [open, set_open] = useState (false);
   const [error, set_error] = useState < string | null>(null);
-;
+
   // Refresh notifications when popover opens;
-  useEffect (() => {
+  useEffect () => {
     // Check condition
 if ( {) {
   $2
-}
+
       const load_notifications = async () => {
         try {
           await fetch_notifications ();
@@ -111,12 +108,10 @@ if ( {) {
           set_error ("Couldn't load notifications");
           toast.error ("Failed to load notifications");
         }
-      }
-;
+
       load_notifications ();
-    }
-  }, [open, fetch_notifications]);
-;
+    }, [open, fetch_notifications]);
+
   const handleMarkAllAsRead = async () => {
     try {
       await markAllAsRead ();
@@ -125,12 +120,11 @@ if ( {) {
       console.error ("Failed to mark notifications as read:", err);
       toast.error ("Failed to update notifications");
     }
-  }
-;
+
   const handleFilterChange = (new_filter: FilterType) =>: any {
     set_filter (new_filter as any);
   }
-;
+
   return (
     <Popover open={open} onOpenChange={set_open}>;
       <PopoverTrigger as_child>;
@@ -163,7 +157,6 @@ if ( {) {
       </PopoverContent>
     </Popover>
   )
-}
 
           on_dismiss={dismiss_notification}
           on_retry={fetch_notifications}
@@ -171,5 +164,3 @@ if ( {) {
         <NotificationFooter on_close={() => set_open (false)} />;
       </PopoverContent>;
     </Popover>);
-}
-;

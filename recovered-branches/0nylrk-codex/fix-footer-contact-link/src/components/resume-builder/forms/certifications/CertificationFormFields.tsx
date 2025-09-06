@@ -5,17 +5,17 @@ import {
   FormLabel
   FormControl
   FormMessage
-} from "@/components/ui/form";
+ from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { UseFormReturn } from "react-hook-form";
 import { CertificationFormValues } from "./types";
 
 interface CertificationFormFieldsProps {
   form: UseFormReturn < CertificationFormValues>;
-}
+
 export function CertificationFormFields({
   form
-}: CertificationFormFieldsProps) {
+: CertificationFormFieldsProps) {
   return (
     <>;
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
@@ -152,7 +152,7 @@ export function CertificationFormFields({
       </div>
     </>
   );
-}
+
                 />;
               </FormControl>;
               <FormMessage />;
@@ -160,4 +160,3 @@ export function CertificationFormFields({
         />;
       </div>;
     </>);
-}

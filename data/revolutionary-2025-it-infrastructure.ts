@@ -1,8 +1,7 @@
 import { ServiceVariant } from '../types/service-variants';
 
-
 import { ServiceVariant } from '../types / service - variants';
-;
+
   id: string;
   name: string;
   tagline: string;
@@ -42,7 +41,7 @@ import { ServiceVariant } from '../types / service - variants';
   customers: number;
   rating: number;
   reviews: number
-}
+
 export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
   //  Next-Generation Cybersecurity Services
   {  reviews: number
@@ -201,7 +200,7 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     rating: 4.9,
     reviews: 145;
   }
-;
+
   //  Quantum Cloud Infrastructure Services;
   {
     id: 'quantum - cloud - infrastructure';
@@ -277,7 +276,7 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     rating: 4.8,
     reviews: 78;
   }
-;
+
   //  Autonomous DevOps & Infrastructure Services;
   {
     id: 'autonomous - devops - platform';
@@ -349,7 +348,7 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     rating: 4.9,
     reviews: 198;
   }
-;
+
   //  AI - Powered Data Management Services;
   {
     id: 'ai - data - management - platform';
@@ -421,7 +420,7 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     rating: 4.8,
     reviews: 145;
   }
-;
+
   //  Edge Computing & IoT Orchestration Services;
   {
     id: 'edge - computing - orchestrator';
@@ -493,7 +492,7 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     rating: 4.9,
     reviews: 95;
   }
-;
+
   //  Blockchain & Web3 Infrastructure Services;
   {
     id: 'blockchain - web3 - infrastructure';
@@ -572,7 +571,7 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     rating: 4.8,
     reviews: 67;
   }
-;
+
   //  API Management & Integration Services;
   {
     id: 'api - management - integration';
@@ -646,7 +645,7 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     rating: 4.8,
     reviews: 178;
   }
-;
+
   //  Business Intelligence & Analytics Services;
   {
     id: 'business - intelligence - analytics';
@@ -720,7 +719,7 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     rating: 4.9,
     reviews: 234;
   }
-;
+
   //  Digital Transformation & Innovation Services;
   {
     id: 'digital - transformation - innovation';
@@ -784,7 +783,7 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     rating: 4.9
     reviews: 52
   }
-];
+;
 export default revolutionary2025ITServices;
     growthRate: '800% annual growth'
     contactInfo: {
@@ -1612,7 +1611,7 @@ export default revolutionary2025ITServices;
     rating: 4 && 4.9,
     reviews: 52,
   },
-];
+;
 export default revolutionary2025ITServices;
 
 export interface Revolutionary2025ITService {
@@ -1630,17 +1629,16 @@ export interface Revolutionary2025ITService {
   competitors: string[], marketSize: string,
   growthRate: string,
   contactInfo: {
-      
+
     mobile: string, email: string,
     address: string,
     website: string
-  
+
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
-}
 
 export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
   //  Next-Generation Cybersecurity Services
@@ -2077,8 +2075,8 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     rating: 4 && 4.9,
     reviews: 52
   }
-];
 ;
+
 export default revolutionary2025ITServices;
     growthRate: '800% annual growth',
     contactInfo: {
@@ -2672,7 +2670,6 @@ export default revolutionary2025ITServices;
     rating: 4 && 4.9,
     reviews: 52,
   },
-];
+;
 
 export default revolutionary2025ITServices;
-;

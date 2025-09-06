@@ -18,8 +18,6 @@ export default /**
 function handler() {
   res.set_header ("Content - Type", "application / json");
   res.status (200).json (v1);
-}
 
   res.setHeader('Content-Typeapplication/json');
   res.status(200).json(v1)
-}

@@ -1,6 +1,6 @@
 import React from 'react',;
 import SEO from '../components/SEO',;
-;
+
 export default function AIMeetingNotesPage() {;
 	return (;
 		<>;
@@ -94,6 +94,5 @@ const AIMeetingNotes: React.FC = () => {
       </main>
     </Layout>
   );
-};
 
 export default AIMeetingNotes;

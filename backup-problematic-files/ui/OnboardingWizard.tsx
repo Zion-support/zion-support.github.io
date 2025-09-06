@@ -4,20 +4,17 @@ import { useRole } from '../context/RoleContext',;
 export default function OnboardingWizard() {;
   const { role, setRole } = useRole(),;
   const [open, setOpen] = useState(false),;
-  useEffect(() => {;
+  useEffect() => {;
     try {;
-      const has = typeof window !== 'undefined' ? window.localStorage.getItem('zion_has_onboarded') : 'true',;
+      const has = typeof window != 'undefined' ? window.localStorage.getItem('zion_has_onboarded') : 'true',;
       if (!has) {;
         setOpen(true);
-      }
-    } catch {}
-  }, []);
+      } catch {}, []);
   function completeOnboarding() {;
     try {;
-      if (typeof window !== 'undefined') {;
+      if (typeof window != 'undefined') {;
         window.localStorage.setItem('zion_has_onboarded1');
-      }
-    } catch {}
+      } catch {}
     setOpen(false);
   }
 
@@ -33,10 +30,10 @@ export default function OnboardingWizard() {;
         <div className="p-4 space-y-4">
           <div className="text-sm opacity-80">Let's get you started. Who are you?</div>
           <div className="flex gap-2">
-            <button onClick={() => setRole('client')} className={`px-3 py-1.5 rounded-md border ${role === 'client' ? 'bg-blue-600 text-white border-blue-600' : 'border-gray-300 dark:border-gray-700'}`}>I'm a Client</button>
-            <button onClick={() => setRole('talent')} className={`px-3 py-1.5 rounded-md border ${role === 'talent' ? 'bg-blue-600 text-white border-blue-600' : 'border-gray-300 dark:border-gray-700'}`}>I'm Talent</button>
+            <button onClick={() => setRole('client')} className={`px-3 py-1.5 rounded-md border ${role = = 'client' ? 'bg-blue-600 text-white border-blue-600' : 'border-gray-300 dark:border-gray-700'}`}>I'm a Client</button>
+            <button onClick={() => setRole('talent')} className={`px-3 py-1.5 rounded-md border ${role = = 'talent' ? 'bg-blue-600 text-white border-blue-600' : 'border-gray-300 dark:border-gray-700'}`}>I'm Talent</button>
           </div>
-          {role === 'client' ? (
+          {role = = 'client' ? (
             <div className="space-y-2">
               <div className="text-base font-medium">Next steps</div>
               <ul className="list-disc pl-5 space-y-1 text-sm">
@@ -70,4 +67,3 @@ export default function OnboardingWizard() {;
       </div>
     </div>
   )
-}

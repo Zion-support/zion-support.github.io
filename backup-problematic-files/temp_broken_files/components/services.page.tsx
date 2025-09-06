@@ -22,4 +22,3 @@ export default function ServicesPage() {_return (
       </div>
     </EnhancedLayout>
   )
-}

@@ -5,14 +5,14 @@ import { ;
   Check, Star, Zap, Shield, Rocket, Brain, Atom, ;
   Users, Globe, Code, Server, Cpu, ArrowRight,;
   TrendingUp, Award, Clock, DollarSign;
-} from 'lucide-react',;
+ from 'lucide-react',;
 import EnhancedNavigation from '../components/EnhancedNavigation',;
 import EnhancedFooter from '../components/EnhancedFooter',;
-;
+
 export default function PricingPage() {;
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('monthly'),;
   const [selectedPlan, setSelectedPlan] = useState<string | null>(null),;
-;
+
   const pricingPlans = [;
     {;
       id:'starter',;
@@ -92,7 +92,7 @@ export default function PricingPage() {;
       ctaColor:'from-orange-500 to-red-600';
     }
   ],;
-;
+
   const addOns = [;
     {;
       name:'AI Consulting',;
@@ -127,21 +127,20 @@ export default function PricingPage() {;
       color:'from-green-500 to-emerald-500';
     }
   ],;
-;
+
   const savings = {;
     monthly:0,;
     annual:20;
   },;
-;
+
   const handlePlanSelect = (planId:string) => {;
     setSelectedPlan(planId),;
-    if (planId === 'custom') {;
+    if (planId = = 'custom') {;
       window.location.href = '/contact';
     } else {;
       window.location.href = '/contact',;
-    }
-  },;
-;
+    },;
+
   return (;
     <>;
       <Head>;
@@ -154,20 +153,19 @@ export default function PricingPage() {;
         <meta property="og:url" content="https://ziontechgroup.com/pricing" />;
         <link rel="canonical" href="https://ziontechgroup.com/pricing" />;
       </Head>;
-;
+
       <EnhancedNavigation />;
-;
+
       <main className="min-h-screen bg-black text-white">;
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 overflow-hidden">;
           <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-cyan-900/20" />;
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0.1),transparent_50%)]" />;
-          ;
           <div className="max-w-7xl mx-auto px-6 relative z-10">;
             <motion.div;
-              initial={{ opacity:0, y:30 }}
-              animate={{ opacity:1, y:0 }}
-              transition={{ duration:0.8 }}
+              initial={ opacity:0, y:30 }
+              animate={ opacity:1, y:0 }
+              transition={ duration:0.8 }
               className="text-center";
             >;
               <h1 className="text-5xl md:text-7xl font-bold mb-8">;
@@ -179,34 +177,33 @@ export default function PricingPage() {;
                 Choose the perfect plan for your business needs. All plans include ;
                 free trials and our revolutionary technology solutions.;
               </p>;
-              ;
               {/* Billing Toggle */}
               <div className="flex items-center justify-center space-x-4 mb-8">;
-                <span className={`text-lg ${billingCycle === 'monthly' ? 'text-white' :'text-gray-400'}`}>;
+                <span className={`text-lg ${billingCycle = = 'monthly' ? 'text-white' :'text-gray-400'}`}>;
                   Monthly;
                 </span>;
                 <button;
-                  onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'annual' :'monthly')}
+                  onClick={() => setBillingCycle(billingCycle = = 'monthly' ? 'annual' :'monthly')}
                   className={`relative w-16 h-8 rounded-full transition-colors duration-300 ${;
-                    billingCycle === 'annual' ? 'bg-cyan-500' :'bg-gray-600';
+                    billingCycle = = 'annual' ? 'bg-cyan-500' :'bg-gray-600';
                   }`}
                 >;
                   <div;
                     className={`absolute top-1 w-6 h-6 bg-white rounded-full transition-transform duration-300 ${;
-                      billingCycle === 'annual' ? 'translate-x-8' :'translate-x-1';
+                      billingCycle = = 'annual' ? 'translate-x-8' :'translate-x-1';
                     }`}
                   />;
                 </button>;
-                <span className={`text-lg ${billingCycle === 'annual' ? 'text-white' :'text-gray-400'}`}>;
+                <span className={`text-lg ${billingCycle = = 'annual' ? 'text-white' :'text-gray-400'}`}>;
                   Annual;
-                  {billingCycle === 'annual' && (;
+                  {billingCycle = = 'annual' && (;
                     <span className="ml-2 text-sm bg-green-500 text-white px-2 py-1 rounded-full">;
                       Save {savings.annual}%;
                     </span>;
                   )}
                 </span>;
               </div>;
-;
+
               {/* Key Benefits */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">;
                 <div className="text-center">;
@@ -234,18 +231,18 @@ export default function PricingPage() {;
             </motion.div>;
           </div>;
         </section>;
-;
+
         {/* Pricing Plans */}
         <section className="py-20 relative">;
           <div className="max-w-7xl mx-auto px-6">;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-              {pricingPlans.map((plan, index) => (;
+              {pricingPlans.map(plan, index) => (;
                 <motion.div;
                   key={plan.id}
-                  initial={{ opacity:0, y:30 }}
-                  whileInView={{ opacity:1, y:0 }}
-                  transition={{ duration:0.6, delay:index * 0.1 }}
-                  viewport={{ once:true }}
+                  initial={ opacity:0, y:30 }
+                  whileInView={ opacity:1, y:0 }
+                  transition={ duration:0.6, delay:index * 0.1 }
+                  viewport={ once:true }
                   className={`relative ${;
                     plan.popular ? 'lg:scale-105' :'';
                   }`}
@@ -258,7 +255,7 @@ export default function PricingPage() {;
                       </div>;
                     </div>;
                   )}
-;
+
                   <div className={`p-8 rounded-3xl border transition-all duration-300 hover:scale-105 h-full flex flex-col ${;
                     plan.popular;
                       ? 'border-purple-500 bg-gradient-to-br from-purple-500/10 to-pink-500/10';
@@ -272,37 +269,37 @@ export default function PricingPage() {;
                       <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>;
                       <p className="text-gray-400 text-sm leading-relaxed">{plan.description}</p>;
                     </div>;
-;
+
                     {/* Pricing */}
                     <div className="text-center mb-8">;
                       <div className="mb-2">;
                         <span className="text-4xl font-bold text-white">;
-                          {typeof plan.monthlyPrice === 'number' ? '$' :''}
-                          {billingCycle === 'monthly' ? plan.monthlyPrice :plan.annualPrice}
+                          {typeof plan.monthlyPrice = = 'number' ? '$' :''}
+                          {billingCycle = = 'monthly' ? plan.monthlyPrice :plan.annualPrice}
                         </span>;
-                        {typeof plan.monthlyPrice === 'number' && (;
+                        {typeof plan.monthlyPrice = = 'number' && (;
                           <span className="text-gray-400 text-lg">/month</span>;
                         )}
                       </div>;
-                      {billingCycle === 'annual' && typeof plan.monthlyPrice === 'number' && (;
+                      {billingCycle = = 'annual' && typeof plan.monthlyPrice = = 'number' && (;
                         <div className="text-sm text-green-400">;
-                          Save ${Math.round((plan.monthlyPrice * 12 - plan.annualPrice) / 12)}/month;
+                          Save ${Math.round(plan.monthlyPrice * 12 - plan.annualPrice) / 12)}/month;
                         </div>;
                       )}
                     </div>;
-;
+
                     {/* Features */}
                     <div className="flex-grow mb-8">;
                       <ul className="space-y-3">;
-                        {plan.features.map((feature, idx) => (;
+                        {plan.features.map(feature, idx) => (;
                           <li key={idx} className="flex items-start space-x-3">;
                             <Check className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />;
                             <span className="text-gray-300 text-sm">{feature}</span>;
                           </li>;
-                        ))}
+                        )}
                       </ul>;
                     </div>;
-;
+
                     {/* CTA Button */}
                     <button;
                       onClick={() => handlePlanSelect(plan.id)}
@@ -312,19 +309,19 @@ export default function PricingPage() {;
                     </button>;
                   </div>;
                 </motion.div>;
-              ))}
+              )}
             </div>;
           </div>;
         </section>;
-;
+
         {/* Add-ons Section */}
         <section className="py-20 relative bg-gradient-to-r from-gray-900/50 to-gray-800/50">;
           <div className="max-w-7xl mx-auto px-6">;
             <motion.div;
-              initial={{ opacity:0, y:30 }}
-              whileInView={{ opacity:1, y:0 }}
-              transition={{ duration:0.8 }}
-              viewport={{ once:true }}
+              initial={ opacity:0, y:30 }
+              whileInView={ opacity:1, y:0 }
+              transition={ duration:0.8 }
+              viewport={ once:true }
               className="text-center mb-16";
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
@@ -334,15 +331,15 @@ export default function PricingPage() {;
                 Enhance your experience with our specialized add-on services;
               </p>;
             </motion.div>;
-;
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">;
-              {addOns.map((addon, index) => (;
+              {addOns.map(addon, index) => (;
                 <motion.div;
                   key={addon.name}
-                  initial={{ opacity:0, y:20 }}
-                  whileInView={{ opacity:1, y:0 }}
-                  transition={{ duration:0.6, delay:index * 0.1 }}
-                  viewport={{ once:true }}
+                  initial={ opacity:0, y:20 }
+                  whileInView={ opacity:1, y:0 }
+                  transition={ duration:0.6, delay:index * 0.1 }
+                  viewport={ once:true }
                   className="p-6 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-gray-700/50 hover:border-gray-600 transition-all duration-300";
                 >;
                   <div className={`w-12 h-12 bg-gradient-to-br ${addon.color} rounded-xl flex items-center justify-center mb-4`}>;
@@ -352,7 +349,7 @@ export default function PricingPage() {;
                   <p className="text-gray-400 text-sm mb-4">{addon.description}</p>;
                   <div className="text-center">;
                     <div className="text-2xl font-bold text-white mb-2">;
-                      ${billingCycle === 'monthly' ? addon.monthlyPrice :addon.annualPrice}
+                      ${billingCycle = = 'monthly' ? addon.monthlyPrice :addon.annualPrice}
                       <span className="text-gray-400 text-lg">/month</span>;
                     </div>;
                     <button className="text-cyan-400 hover:text-cyan-300 text-sm font-medium">;
@@ -360,19 +357,19 @@ export default function PricingPage() {;
                     </button>;
                   </div>;
                 </motion.div>;
-              ))}
+              )}
             </div>;
           </div>;
         </section>;
-;
+
         {/* FAQ Section */}
         <section className="py-20 relative">;
           <div className="max-w-4xl mx-auto px-6">;
             <motion.div;
-              initial={{ opacity:0, y:30 }}
-              whileInView={{ opacity:1, y:0 }}
-              transition={{ duration:0.8 }}
-              viewport={{ once:true }}
+              initial={ opacity:0, y:30 }
+              whileInView={ opacity:1, y:0 }
+              transition={ duration:0.8 }
+              viewport={ once:true }
               className="text-center mb-16";
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
@@ -382,7 +379,7 @@ export default function PricingPage() {;
                 Get answers to common questions about our pricing and services;
               </p>;
             </motion.div>;
-;
+
             <div className="space-y-6">;
               {[;
                 {;
@@ -405,31 +402,31 @@ export default function PricingPage() {;
                   question:"Do you offer volume discounts?",;
                   answer:"Yes! We offer significant discounts for annual billing and volume deployments. Contact our sales team for custom pricing.";
                 }
-              ].map((faq, index) => (;
+              ].map(faq, index) => (;
                 <motion.div;
                   key={index}
-                  initial={{ opacity:0, y:20 }}
-                  whileInView={{ opacity:1, y:0 }}
-                  transition={{ duration:0.6, delay:index * 0.1 }}
-                  viewport={{ once:true }}
+                  initial={ opacity:0, y:20 }
+                  whileInView={ opacity:1, y:0 }
+                  transition={ duration:0.6, delay:index * 0.1 }
+                  viewport={ once:true }
                   className="bg-gradient-to-r from-gray-900/50 to-gray-800/50 border border-gray-700/50 rounded-2xl p-6";
                 >;
                   <h3 className="text-lg font-semibold text-white mb-3">{faq.question}</h3>;
                   <p className="text-gray-300 leading-relaxed">{faq.answer}</p>;
                 </motion.div>;
-              ))}
+              )}
             </div>;
           </div>;
         </section>;
-;
+
         {/* CTA Section */}
         <section className="py-20 relative">;
           <div className="max-w-7xl mx-auto px-6">;
             <motion.div;
-              initial={{ opacity:0, y:30 }}
-              whileInView={{ opacity:1, y:0 }}
-              transition={{ duration:0.8 }}
-              viewport={{ once:true }}
+              initial={ opacity:0, y:30 }
+              whileInView={ opacity:1, y:0 }
+              transition={ duration:0.8 }
+              viewport={ once:true }
               className="text-center";
             >;
               <div className="bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 border border-cyan-500/20 rounded-3xl p-16">;
@@ -440,7 +437,6 @@ export default function PricingPage() {;
                   Start your free trial today and experience the power of revolutionary ;
                   AI, quantum computing, and space technology solutions.;
                 </p>;
-                ;
                 <div className="flex flex-col sm:flex-row gap-6 justify-center">;
                   <a;
                     href="/contact";
@@ -455,7 +451,6 @@ export default function PricingPage() {;
                      Talk to Sales;
                   </a>;
                 </div>;
-                ;
                 <div className="mt-10 text-sm text-gray-400">;
                   <p>Questions? <a href="/contact" className="text-cyan-400 hover:text-cyan-300 underline">Contact our team</a> for personalized guidance.</p>;
                 </div>;
@@ -464,8 +459,7 @@ export default function PricingPage() {;
           </div>;
         </section>;
       </main>;
-;
+
       <EnhancedFooter />;
     </>;
   );
-}

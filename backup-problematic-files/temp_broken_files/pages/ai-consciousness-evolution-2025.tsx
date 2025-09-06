@@ -1,6 +1,6 @@
 import React from 'react',;
 import ServiceLanding from '../components/sections/ServiceLanding',;
-;
+
 export default function AIConsciousnessEvolution2025() {;
 	return (;
 		<ServiceLanding;
@@ -100,6 +100,5 @@ const AIConsciousnessEvolution2025: React.FC = () => {
       </main>
     </Layout>
   );
-};
 
 export default AIConsciousnessEvolution2025;

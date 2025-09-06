@@ -9,7 +9,7 @@ import {
   Search, Phone, Mail, MapPin, Heart, Leaf, Car, GraduationCap, Scale,
   Building, Factory, Camera, Video, Music, Gamepad2, Eye,
   Globe2, Satellite, Dna, Battery, Gamepad, Cpu as CpuIcon
-} from 'lucide-react',
+ from 'lucide-react',
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029',
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029',
 import { cuttingEdge2028MicroSaas } from '../data/2028-cutting-edge-micro-saas',
@@ -34,9 +34,9 @@ export default function UltimateServicesShowcase2029() {
     { id: 'business', name: ' Business Solutions', icon: Target, count: practicalBusinessSolutions2028.length, color: 'from-green-600 to-emerald-600' },
     { id: 'ai-autonomous', name: ' AI & Autonomous', icon: Brain, count: advancedAIAutonomousServices2028.length, color: 'from-emerald-600 to-teal-600' },
     { id: 'quantum-space', name: ' Quantum & Space', icon: Atom, count: quantumSpaceInnovations2028.length, color: 'from-indigo-600 to-blue-600' },
-    { id: 'ai', name: ' AI & ML', icon: Brain, count: allServices.filter(s => s.category.some(c => c.includes('AI') || c.includes('Machine Learning'))).length, color: 'from-pink-600 to-rose-600' },
-    { id: 'quantum', name: ' Quantum Tech', icon: Atom, count: allServices.filter(s => s.category.some(c => c.includes('Quantum'))).length, color: 'from-purple-600 to-violet-600' },
-    { id: 'enterprise', name: ' Enterprise', icon: Shield, count: allServices.filter(s => s.category.some(c => c.includes('Enterprise'))).length, color: 'from-blue-600 to-cyan-600' }
+    { id: 'ai', name: ' AI & ML', icon: Brain, count: allServices.filter(s => s.category.some(c => c.includes('AI') || c.includes('Machine Learning')).length, color: 'from-pink-600 to-rose-600' },
+    { id: 'quantum', name: ' Quantum Tech', icon: Atom, count: allServices.filter(s => s.category.some(c => c.includes('Quantum')).length, color: 'from-purple-600 to-violet-600' },
+    { id: 'enterprise', name: ' Enterprise', icon: Shield, count: allServices.filter(s => s.category.some(c => c.includes('Enterprise')).length, color: 'from-blue-600 to-cyan-600' }
   ],
 
   const priceRanges = [
@@ -46,37 +46,35 @@ export default function UltimateServicesShowcase2029() {
     { id: 'high', name: '$15K - $30K', range: '$15,000 - $30,000' },
     { id: 'premium', name: 'Over $30K', range: 'Over $30,000' }
   ],
-  const filteredServices = allServices.filter(service => {const matchesCategory = selectedCategory === 'all' || 
-      (selectedCategory === 'cutting-edge' && cuttingEdge2028MicroSaas.includes(service)) ||
-      (selectedCategory === 'business' && practicalBusinessSolutions2028.includes(service)) ||
-      (selectedCategory === 'ai-autonomous' && advancedAIAutonomousServices2028.includes(service)) ||
-      (selectedCategory === 'quantum-space' && quantumSpaceInnovations2028.includes(service)) ||
-      (selectedCategory === 'ai' && service.category.some(c => c.includes('AI') || c.includes('Machine Learning'))) ||
-      (selectedCategory === 'quantum' && service.category.some(c => c.includes('Quantum'))) ||
-      (selectedCategory === 'enterprise' && service.category.some(c => c.includes('Enterprise'))),
-    
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.category.some(c => c.toLowerCase().includes(searchTerm.toLowerCase())),
-    
-    const matchesPrice = selectedPriceRange === 'all' ||
-      (selectedPriceRange === 'low' && parseFloat(service.price.replace(/[$]/g, '')) < 5000) ||
-      (selectedPriceRange === 'medium' && parseFloat(service.price.replace(/[$]/g, '')) >= 5000 && parseFloat(service.price.replace(/[$]/g, '')) < 15000) ||
-      (selectedPriceRange === 'high' && parseFloat(service.price.replace(/[$]/g, '')) >= 15000 && parseFloat(service.price.replace(/[$]/g, '')) < 30000) ||
-      (selectedPriceRange === 'premium' && parseFloat(service.price.replace(/[$]/g, '')) >= 30000),
-    
+  const filteredServices = allServices.filter(service => {const matchesCategory = selectedCategory = = 'all' || 
+      (selectedCategory = = 'cutting-edge' && cuttingEdge2028MicroSaas.includes(service) ||
+      (selectedCategory = = 'business' && practicalBusinessSolutions2028.includes(service) ||
+      (selectedCategory = = 'ai-autonomous' && advancedAIAutonomousServices2028.includes(service) ||
+      (selectedCategory = = 'quantum-space' && quantumSpaceInnovations2028.includes(service) ||
+      (selectedCategory = = 'ai' && service.category.some(c => c.includes('AI') || c.includes('Machine Learning')) ||
+      (selectedCategory = = 'quantum' && service.category.some(c => c.includes('Quantum')) ||
+      (selectedCategory = = 'enterprise' && service.category.some(c => c.includes('Enterprise')),
+
+    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase() ||
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase() ||
+                         service.category.some(c => c.toLowerCase().includes(searchTerm.toLowerCase()),
+
+    const matchesPrice = selectedPriceRange = = 'all' ||
+      (selectedPriceRange = = 'low' && parseFloat(service.price.replace(/[$]/g, '') < 5000) ||
+      (selectedPriceRange = = 'medium' && parseFloat(service.price.replace(/[$]/g, '') >= 5000 && parseFloat(service.price.replace(/[$]/g, '') < 15000) ||
+      (selectedPriceRange = = 'high' && parseFloat(service.price.replace(/[$]/g, '') >= 15000 && parseFloat(service.price.replace(/[$]/g, '') < 30000) ||
+      (selectedPriceRange = = 'premium' && parseFloat(service.price.replace(/[$]/g, '') >= 30000),
+
     return matchesCategory && matchesSearch && matchesPrice
   }),
   const containerVariants = {hidden: { opacity: 0},
     visible: {opacity: 1, transition: {
         staggerChildren: 0.1}
-    }
   },
 
   const itemVariants = {hidden: { opacity: 0, y: 20},
     visible: {opacity: 1, y: 0, transition: {
         duration: 0.5}
-    }
   },
 
   const contactInfo = {
@@ -93,13 +91,13 @@ export default function UltimateServicesShowcase2029() {
         <meta name="keywords" content="2029 technology, AI consciousness, quantum computing, space technology, autonomous AI, business automation, micro SAAS, Zion Tech Group" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="canonical" href="https://ziontechgroup.com/2029-ultimate-services-showcase" />
-        
+
         {_/* Open Graph */}
         <meta property="og:title" content="2029 Ultimate Services Showcase - Zion Tech Group" />
         <meta property="og:description" content="Revolutionary 2029 technology services including AI Consciousness Evolution, Quantum Time Manipulation, and autonomous AI systems." />
         <meta property="og:url" content="https://ziontechgroup.com/2029-ultimate-services-showcase" />
         <meta property="og:type" content="website" />
-        
+
         {_/* Twitter */}
         <meta name="twitter:card" content="summarylarge_image" />
         <meta name="twitter:title" content="2029 Ultimate Services Showcase - Zion Tech Group" />
@@ -119,9 +117,9 @@ export default function UltimateServicesShowcase2029() {
 
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8">
           <motion.div,
-initial={_{ opacity: 0, y: 30}}
-            animate={_{ opacity: 1, y: 0}}
-            transition={_{ duration: 0.8}}
+initial={_{ opacity: 0, y: 30}
+            animate={_{ opacity: 1, y: 0}
+            transition={_{ duration: 0.8}
             className="max-w-4xl mx-auto"
           >
             <div className="flex items-center justify-center space-x-2 mb-6">
@@ -135,7 +133,7 @@ initial={_{ opacity: 0, y: 30}}
                 <Atom className="w-9 h-9 text-white" />
               </div>
             </div>
-            
+
             <h1 className="text-5xl md: text-7xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                 2029 Ultimate
@@ -145,7 +143,7 @@ initial={_{ opacity: 0, y: 30}}
                 Services Showcase
               </span>
             </h1>
-            
+
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Experience the future of technology with our revolutionary AI consciousness, quantum computing,
               space technology, and autonomous systems. Transform your business with innovations that define tomorrow.
@@ -211,7 +209,7 @@ type="text"
 key={category.id}
                   onClick={_() => setSelectedCategory(category.id)}
                   className={_`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
-                    selectedCategory === category.id
+                    selectedCategory = = category.id
                       ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
                       : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700/50'
                   }`}
@@ -222,7 +220,7 @@ key={category.id}
                     <span className="text-xs opacity-75">({category.count})</span>;
                   </div>;
                 </button>;
-              ))}
+              )}
             </div>
 
             {_/* Price Filter */}
@@ -231,13 +229,13 @@ key={category.id}
 key={range.id}
                   onClick={_() => setSelectedPriceRange(range.id)}
                   className={_`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
-                    selectedPriceRange === range.id
+                    selectedPriceRange = = range.id
                       ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white shadow-lg'
                       : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700/50'}`}
                 >
                   {range.name}
                 </button>;
-              ))}
+              )}
             </div>
           </div>
         </div>
@@ -270,11 +268,10 @@ key={service.id}
                         <div className="text-xs text-gray-400">per month</div>
                       </div>
                     </div>
-                    
+
                     <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-200">
                       {service.name}
                     </h3>;
-                    ;
                     <p className="text-gray-400 text-sm leading-relaxed mb-4">;
                       {service.description}
                     </p>
@@ -290,7 +287,7 @@ key={cat}
                         >
                           {cat}
                         </span>;
-                      ))}
+                      )}
                       {service.category.length > 3 && (;
                         <span className="px-2 py-1 bg-gray-700/50 text-gray-400 text-xs rounded-lg">;
                           +{service.category.length - 3}
@@ -308,7 +305,7 @@ key={cat}
                           <CheckCircle className="h-3 w-3 text-cyan-400 flex-shrink-0" />
                           <span>{feature}</span>
                         </li>
-                      ))}
+                      )}
                       {service.features.length > 3 && (;
                         <li className="text-xs text-gray-500">;
                           +{service.features.length - 3} more features;
@@ -344,11 +341,11 @@ href={_`/services/${service.id}`}
                   <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
                 </div>
               </motion.div>
-            ))}
+            )}
           </motion.div>
 
           {_/* No Results */}
-          {filteredServices.length === 0 && (_<div className="text-center py-20">
+          {filteredServices.length = = 0 && (_<div className="text-center py-20">
               <div className="w-24 h-24 bg-gray-800/50 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Search className="w-12 h-12 text-gray-400" />
               </div>
@@ -359,7 +356,7 @@ onClick={() => {
                   setSelectedCategory('all'),
                   setSearchTerm(''),
                   setSelectedPriceRange('all')
-                }}                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
+                }                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
               >
                 Reset Filters
               </button>
@@ -372,10 +369,10 @@ onClick={() => {
       <section className="py-20 bg-gradient-to-r from-cyan-900/20 via-blue-900/20 to-purple-900/20 border-t border-cyan-500/20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div,
-initial={_{ opacity: 0, y: 30}}
-            whileInView={_{ opacity: 1, y: 0}}
-            transition={_{ duration: 0.8}}
-            viewport={_{ once: true}}
+initial={_{ opacity: 0, y: 30}
+            whileInView={_{ opacity: 1, y: 0}
+            transition={_{ duration: 0.8}
+            viewport={_{ once: true}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Business?
@@ -384,7 +381,7 @@ initial={_{ opacity: 0, y: 30}}
               Join the future of technology with our revolutionary services. 
               Contact us today to discuss how we can help you achieve your goals.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
               <Link,
 href="/contact"

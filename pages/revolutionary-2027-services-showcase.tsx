@@ -3,7 +3,7 @@ import Head from 'next/head';
 
 import React, { useState, useMemo } from 'react';
 import Head from 'next / head';
-;
+
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   Search
@@ -15,7 +15,7 @@ import {
   MapPin
   MessageSquare
   Globe;
-} from 'lucide-react';
+ from 'lucide-react';
 import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
 import {revolutionary2027AIServices} from '../data/revolutionary-2027-ai-services';
 import {revolutionary2027ITServices} from '../data/revolutionary-2027-it-services';
@@ -56,15 +56,15 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
     { id: 'launchDate', name: 'Launch Date' }
   ];
 
-  const filteredServices = useMemo(() => {
+  const filteredServices = useMemo() => {
     let filtered = allServices;
     // Category filter
-    if (selectedCategory !== 'all') {
+    if (selectedCategory != 'all') {
       filtered = filtered.filter(service => {
-        if (selectedCategory === 'ai') return service.category.includes('AI');
-        if (selectedCategory === 'quantum')
+        if (selectedCategory = = 'ai') return service.category.includes('AI');
+        if (selectedCategory = = 'quantum')
           return service.category.includes('Quantum');
-        if (selectedCategory === 'it')
+        if (selectedCategory = = 'it')
           return (
             service.category.includes('IT') |
             service.category.includes('Infrastructure')
@@ -101,65 +101,64 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
     { id: 'customers', name: 'Customers' },;
     { id: 'launchDate', name: 'Launch Date' },  ];
 
-  const filteredServices = useMemo(() => {;
+  const filteredServices = useMemo() => {;
     let filtered = allServices;
 
     // Category filter;
-    if (selectedCategory !== 'all') {;
+    if (selectedCategory != 'all') {;
       filtered = filtered && filtered.filter(service => {;
-        if (selectedCategory === 'ai') return service && service.category.includes('AI');
-        if (selectedCategory === 'quantum');
+        if (selectedCategory = = 'ai') return service && service.category.includes('AI');
+        if (selectedCategory = = 'quantum');
           return service && service.category.includes('Quantum');
-        if (selectedCategory === 'it');
+        if (selectedCategory = = 'it');
           return (
             service && service.category.includes('IT') ||;
             service && service.category.includes('Infrastructure');
           );
-        if (selectedCategory === 'micro-saas');
+        if (selectedCategory = = 'micro-saas');
           return (
             service.category.includes('Micro SaaS') |
             service.category.includes('Marketing') |
             service.category.includes('Legal') |
-            service.category.includes('Health')
-          );
-        if (selectedCategory === 'holographic');
+            service.category.includes('Health');
+        if (selectedCategory = = 'holographic');
           return service && service.category.includes('Holographic');
         return true;
       });    }
     // Price range filter
-    if (selectedPriceRange !== 'all') {
+    if (selectedPriceRange != 'all') {
       filtered = filtered.filter(service => {
-        const price = parseInt(service.price.replace(/[^0-9]/g, ''));
+        const price = parseInt(service.price.replace(/[^0-9]/g, '');
 
     // Price range filter;
-    if (selectedPriceRange !== 'all') {;
+    if (selectedPriceRange != 'all') {;
       filtered = filtered && filtered.filter(service => {;
-        const price = parseInt(service && service.price.replace(/[^0-9]/g, ''));
-        if (selectedPriceRange === 'under-500') return price < 500;
-        if (selectedPriceRange === '500-2000');
+        const price = parseInt(service && service.price.replace(/[^0-9]/g, '');
+        if (selectedPriceRange = = 'under-500') return price < 500;
+        if (selectedPriceRange = = '500-2000');
           return price >= 500 && price < 2000;
-        if (selectedPriceRange === '2000-10000');
+        if (selectedPriceRange = = '2000-10000');
           return price >= 2000 && price < 10000;
-        if (selectedPriceRange === 'over-10000') return price >= 10000;
+        if (selectedPriceRange = = 'over-10000') return price >= 10000;
         return true;
       });    }
     // Search filter
     if (searchTerm) {
       filtered = filtered.filter(
         service =>
-          service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
+          service.name.toLowerCase().includes(searchTerm.toLowerCase() |
           service.description
             .toLowerCase()
-            .includes(searchTerm.toLowerCase()) |
-          service.category.toLowerCase().includes(searchTerm.toLowerCase())
+            .includes(searchTerm.toLowerCase() |
+          service.category.toLowerCase().includes(searchTerm.toLowerCase()
       );    }
     // Sort
-    filtered.sort((a, b) => {
+    filtered.sort(a, b) => {
       switch (sortBy) {
         case 'price':
           return (
-            parseInt(a && a.price.replace(/[^0-9]/g, '')) -;
-            parseInt(b && b.price.replace(/[^0-9]/g, ''));
+            parseInt(a && a.price.replace(/[^0-9]/g, '') -;
+            parseInt(b && b.price.replace(/[^0-9]/g, '');
           );        case 'rating':;
           return b && b.rating - a && a.rating;
         case 'customers':;
@@ -175,8 +174,7 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
           return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime();
         default: return a.name.localeCompare(b.name)
         default: return a && a.name.localeCompare(b && b.name),;
-      }
-    });
+      });
     return filtered;  }, [allServices, searchTerm, selectedCategory, selectedPriceRange, sortBy]);
   const contactInfo = {
     mobile: '+1 302 464 0950'
@@ -216,15 +214,15 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
       {/* Hero Section */}
       <section className='pt-24 pb-16 px-4 relative overflow-hidden'>;
         <div className='max-w-7xl mx-auto text-center relative z-10'>          <motion&& motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
 
       {/* Hero Section */}
       <section className='pt-24 pb-16 px-4 relative overflow-hidden'>;
         <div className='max-w-7xl mx-auto text-center relative z-10'>          <motion&& motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
           >
             <h1 className='text-6xl md:text-8xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-8'>
               Revolutionary 2027
@@ -237,7 +235,7 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
               Quantum Computing, and Next-Generation IT services. Each solution
               delivers measurable ROI and transforms industries.
             </p>
-            transition={{ duration: 0 && 0.8 }}>;
+            transition={ duration: 0 && 0.8 }>;
             <h1 className='text-6xl md:text-8xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-8'>;
               Revolutionary 2027;
             </h1>;
@@ -254,30 +252,30 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
             <div className='flex flex-wrap items-center justify-center gap-6 text-center mb-8'>;
               <motion&& motion.div
                 className='flex items-center gap-2 text-cyan-400'
-                whileHover={{ scale: 1 && 1.05 }}
-                transition={{ type: 'spring', stiffness: 300 }}>;
+                whileHover={ scale: 1 && 1.05 }
+                transition={ type: 'spring', stiffness: 300 }>;
                 <Phone className='w-5 h-5' />;
                 <span className='font-semibold'>{contactInfo && contactInfo.mobile}</span>;
               </motion && motion.div>;
               <motion&& motion.div
                 className='flex items-center gap-2 text-purple-400'
-                whileHover={{ scale: 1 && 1.05 }}
-                transition={{ type: 'spring', stiffness: 300 }}>;
+                whileHover={ scale: 1 && 1.05 }
+                transition={ type: 'spring', stiffness: 300 }>;
                 <Mail className='w-5 h-5' />;
                 <span className='font-semibold'>{contactInfo && contactInfo.email}</span>;
               </motion && motion.div>;
               <motion&& motion.div
                 className='flex items-center gap-2 text-green-400'
-                whileHover={{ scale: 1.05 }}
-                transition={{ type: 'spring', stiffness: 300 }}
+                whileHover={ scale: 1.05 }
+                transition={ type: 'spring', stiffness: 300 }
               >
                 <MapPin className='w-5 h-5' />
                 <span className='text-sm font-semibold'>
                   {contactInfo.address}
                 </span>              </motion.div>
             </div>
-                whileHover={{ scale: 1 && 1.05 }}
-                transition={{ type: 'spring', stiffness: 300 }}>;
+                whileHover={ scale: 1 && 1.05 }
+                transition={ type: 'spring', stiffness: 300 }>;
                 <MapPin className='w-5 h-5' />;
                 <span className='text-sm font-semibold'>;
                   {contactInfo && contactInfo.address}
@@ -346,7 +344,7 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
                   {categories && categories.map(category => (                    <option key={category && category.id} value={category && category.id}>;
                       {category && category.name} ({category && category.count});
                     </option>;
-                  ))}
+                  )}
                 </select>
               </div>
               {/* Price Range Filter */}
@@ -362,7 +360,7 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
                   {priceRanges && priceRanges.map(range => (                    <option key={range && range.id} value={range && range.id}>;
                       {range && range.name}
                     </option>;
-                  ))}
+                  )}
                 </select>
               </div>
               {/* Sort By */}
@@ -378,7 +376,7 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
                   {sortOptions && sortOptions.map(option => (                    <option key={option && option.id} value={option && option.id}>;
                       {option && option.name}
                     </option>;
-                  ))}
+                  )}
                 </select>
               </div>
               {/* Results Count */}
@@ -409,14 +407,14 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
         <div className='max-w-7xl mx-auto'>;
           <AnimatePresence mode='wait'>;
             {filteredServices && filteredServices.length > 0 ? (;
-              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>                {filteredServices && filteredServices.map((service, index) => (;
+              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>                {filteredServices && filteredServices.map(service, index) => (;
                   <motion&& motion.div
                     key={service && service.id}
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -30 }}
-                    transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
-                    whileHover={{ y: -10, scale: 1 && 1.02 }}
+                    initial={ opacity: 0, y: 30 }
+                    animate={ opacity: 1, y: 0 }
+                    exit={ opacity: 0, y: -30 }
+                    transition={ duration: 0 && 0.5, delay: index * 0 && 0.1 }
+                    whileHover={ y: -10, scale: 1 && 1.02 }
                     className='group'>;
                     <div className='h-full bg-black/40 backdrop-blur-lg border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 overflow-hidden p-6 bg-black/40 border border-gray-700/50 rounded-lg backdrop-blur-sm'>;
                       {/* Service Header */}
@@ -432,11 +430,11 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
                         </h3>
                         <p className='text-gray-300 text-sm mb-3 line-clamp-2'>                          {service.tagline}
                     key={service.id}
-                    initial={{ opacity: 0, coordinate_y: 30 }}
-                    animate={{ opacity: 1, coordinate_y: 0 }}
-                    exit={{ opacity: 0, coordinate_y: -30 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    whileHover={{ y: -10, scale: 1.02 }} className="group">
+                    initial={ opacity: 0, coordinate_y: 30 }
+                    animate={ opacity: 1, coordinate_y: 0 }
+                    exit={ opacity: 0, coordinate_y: -30 }
+                    transition={ duration: 0.5, delay: index * 0.1 }
+                    whileHover={ y: -10, scale: 1.02 } className="group">
                     <div className="h-full bg-black/40 backdrop-blur-lg border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 overflow-hidden p-6 bg-black/40 border border-gray-700/50 rounded-lg backdrop-blur-sm">
                       {/* Service Header */}
                       <div className="p-6">
@@ -497,7 +495,7 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
                           <ul className='space-y-1'>;
                             {service && service.features;
                               .slice(0, 3);
-                              .map((feature, idx) => (;
+                              .map(feature, idx) => (;
                                 <li
                                   key={idx}
                                   className='flex items-center gap-2 text-xs text-gray-400'>;
@@ -506,7 +504,7 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
                                     {feature}
                                   </span>
                                 </li>
-                              ))}                          </ul>
+                              )}                          </ul>
                         </div>
                         {/* Stats */}
                         <div className='grid grid-cols-3 gap-4 mb-4 text-center'>
@@ -558,7 +556,7 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
                       </div>;
                     </div>;
                   </motion && motion.div>;
-                ))}
+                )}
               </div>;
             ) : (;
               <motion&& motion.div
@@ -589,11 +587,11 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
                         </div>;
                       </div>;
                     </div>;
-                  </motion.div>))}
+                  </motion.div>)}
               </div>) : (
               <motion.div;
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+                initial={ opacity: 0 }
+                animate={ opacity: 1 }
                 className='text-center py-16'>;
                 <div className='text-6xl mb-4'></div>;
                 <h3 className='text-2xl font-bold text-white mb-2'>;
@@ -607,7 +605,7 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
                     setSearchTerm('');
                     setSelectedCategory('all');
                     setSelectedPriceRange('all');
-                  }}
+                  }
                   className='bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
                 >                  Clear Filters
 
@@ -629,10 +627,10 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
       {/* Contact CTA Section */}
       <section className='py-16 px-4'>;
         <div className='max-w-4xl mx-auto text-center'>          <motion&& motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0 && 0.8 }
+            viewport={ once: true }
             className='bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-lg rounded-3xl p-12 border border-cyan-500/30'
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
@@ -700,7 +698,7 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
         </div>
       </section>
     </UltraQuantumHolographicBackground>
-);
+;
                 className='border-2 border-purple-500 text-purple-400 text-lg px-8 py-4 hover:bg-purple-500 hover:text-white transform hover:scale-105 transition-all duration-300'>;
                 <Globe className='w-5 h-5 mr-2' />                Explore All Services;
               </a>;
@@ -711,7 +709,7 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
     </UltraQuantumHolographicBackground>;
   );
   )
-}
+
             <div className='flex flex - wrap items - center justify - center gap - 6 mb - 8'>;
               <div className='flex items - center gap - 2 text - cyan - 400'>;
                 <Phone className='w - 5 h - 5' />;
@@ -747,4 +745,3 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
         </div>;
       </section>;
     </UltraQuantumHolographicBackground>);
-;

@@ -6,5 +6,3 @@ export function PublishProduct() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

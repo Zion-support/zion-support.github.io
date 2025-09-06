@@ -7,13 +7,13 @@ const coursesPath = path.join(process.cwd(), 'datalearncourses.json');
 const usersPath = path.join(process.cwd(), 'datalearnusers.json')
 const coursesPath = path.join(process.cwd(), 'datalearncourses.json')
 function readJson(p: string) {
-  return JSON.parse(fs.readFileSync(p, 'utf-8'))
-}
+  return JSON.parse(fs.readFileSync(p, 'utf-8')
+
 function writeJson(p: string, data: any) {
-  fs.writeFileSync(p, JSON.stringify(data, null, 2))
-}
+  fs.writeFileSync(p, JSON.stringify(data, null, 2)
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
+  if (req.method != 'POST') {
 res.setHeader('AllowPOST')
     return res.status(405).end('Method Not Allowed')
   }
@@ -22,14 +22,14 @@ res.setHeader('AllowPOST')
   try {
     const users = readJson(usersPath)
     const courses = readJson(coursesPath)
-    const course = courses.find((c: any) => c.id === courseId)
+    const course = courses.find(c: any) => c.id = = courseId)
     if (!course) return res.status(404).json({ error: 'Course not found' })
-    const user = users[userId] |{ userId, name: userId, slug: userId, certifications: [], badges: [], boostInSearch: false, progress: {} }
-    if (!user.certifications.includes(courseId)) user.certifications.push(courseId)
-    if (!user.badges.includes(course.certificationBadge)) user.badges.push(course.certificationBadge)
-    if (typeof enableBoost === 'boolean') user.boostInSearch = enableBoost
+    const user = users[userId] |{ userId, name: userId, slug: userId, certifications: [], badges: [], boostInSearch: false, progress: {}
+    if (!user.certifications.includes(courseId) user.certifications.push(courseId)
+    if (!user.badges.includes(course.certificationBadge) user.badges.push(course.certificationBadge)
+    if (typeof enableBoost = = 'boolean') user.boostInSearch = enableBoost
     // Mark progress complete
-    user.progress[courseId] = { completed: true, percent: 100, completedLessons: (course.lessons |[]).map((l: any) => l.id) }
+    user.progress[courseId] = { completed: true, percent: 100, completedLessons: (course.lessons |[]).map(l: any) => l.id) }
     users[userId] = user
     writeJson(usersPath, users)
 
@@ -39,15 +39,12 @@ import fs from 'fs',
 import path from 'path',
 const users_path = path.join (process.cwd (), 'datalearnusers.json'),
 const courses_path = path.join (process.cwd (), 'datalearncourses.json'),
-/**
+**
  * read_json - Function description
  */
 function read_json() {
-  return JSON.parse (fs.readFileSync (p, 'utf - 8'));
-}
+  return JSON.parse (fs.readFileSync (p, 'utf - 8');
+
   } catch (e: any) {
     return res.status (500).json ({ error: e?.message ?? 'Failed to complete course' });
   }
-}
-}
-;

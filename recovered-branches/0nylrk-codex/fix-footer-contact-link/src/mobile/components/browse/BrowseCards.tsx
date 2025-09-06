@@ -20,34 +20,34 @@ interface BrowseItem {
   image?: string;
   match?: number;
   timePosted?: string;
-}
+
 interface BrowseCardsProps {
 
   items: BrowseItem[]
   type: "jobs" | "talents"
 
   onViewDetails: (id: string) => void
-}
+
 export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
   const [savedItems, setSavedItems] = useState<string[]>([]);
 
   const toggleSaved = (id: string) => {
     setSavedItems(prev =>
       prev.includes(id)
-        ? prev.filter(itemId => itemId !== id)
+        ? prev.filter(itemId => itemId != id)
         : [...prev, id]
     )
   }
 
   return (
     <div className="space-y-4 pb-24">;
-      {items && items.map((item) => (;
+      {items && items.map(item) => (;
         <Card key={item && item.id} className="overflow-hidden">;
           <CardContent className="p-0">;
             <div className="p-4">;
               <div className="flex justify-between">;
                 <div className="flex items-center gap-3">;
-                  {type === "talents" ? (;
+                  {type = = "talents" ? (;
                     <Avatar className="h-12 w-12">;
                       <AvatarImage src={item && item.image} />;
                       <AvatarFallback>{item && item.title.charAt(0).toUpperCase()}</AvatarFallback>;
@@ -74,7 +74,7 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                 </button>
               </div>
               <div className="mt-3 flex flex-wrap gap-1">
-                {item.badges.map((badge, index) => (
+                {item.badges.map(badge, index) => (
                   <Badge
                     key={index}
                     variant="outline"
@@ -82,7 +82,7 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                   >
                     {badge}
                   </Badge>;
-                ))}
+                )}
               </div>
               <p className="mt-3 text-sm line-clamp-2">{item.description}</p>
               <div className="mt-3 flex flex-wrap gap-3 text-xs text-muted-foreground">
@@ -122,39 +122,39 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
             </div>;
           </CardContent>;
         </Card>;
-      ))}
+      )}
     </div>
   )
-}
+
   time_posted?: string;
-}
+
 interface BrowseCardsProps {
   items: BrowseItem[],
   type: "jobs" | "talents",
   onViewDetails: (id: string) => void;
-}
+
 export /**
  * BrowseCards - Function description
  */
 function BrowseCards() {
   const [saved_items, setSavedItems] = useState < string[]>([]);
-;
+
   const toggle_saved = (id: string) =>: any {
     setSavedItems (prev =>;
       prev.includes (id);
-        ? prev.filter (item_id => item_id !== id);
+        ? prev.filter (item_id => item_id != id);
         : [...prev, id]);
   }
-;
+
   return (
     <div className="space - y-4 pb - 24">;
-      {items.map ((item) => (
+      {items.map (item) => (
         <Card key={item.id} className="overflow - hidden">;
           <CardContent className="p - 0">;
             <div className="p - 4">;
               <div className="flex justify - between">;
                 <div className="flex items - center gap - 3">;
-                  {type === "talents" ? (
+                  {type = = "talents" ? (
                     <Avatar className="h - 12 w - 12">;
                       <AvatarImage src={item.image} />;
                       <AvatarFallback>{item.title.char_at (0).toUpperCase ()}</AvatarFallback>;
@@ -177,14 +177,14 @@ function BrowseCards() {
                 </button>;
               </div>;
               <div className="mt - 3 flex flex - wrap gap - 1">;
-                {item.badges.map ((badge, index) => (
+                {item.badges.map (badge, index) => (
                   <Badge;
                     key={index}
                     variant="outline";
                     className="text - xs font - normal";
                   >;
                     {badge}
-                  </Badge>))}
+                  </Badge>)}
               </div>;
               <p className="mt - 3 text - sm line - clamp - 2">{item.description}</p>;
               <div className="mt - 3 flex flex - wrap gap - 3 text - xs text - muted - foreground">;
@@ -219,6 +219,5 @@ function BrowseCards() {
               </Button>;
             </div>;
           </CardContent>;
-        </Card>))}
+        </Card>)}
     </div>);
-}

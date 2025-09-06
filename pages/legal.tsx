@@ -18,7 +18,7 @@ export default function LegalPage() {
 			</div>
 		</>
 	)
-}
+
 import React from 'react',
 import SEO from '../components / SEO',
 import Link from 'next / link',
@@ -38,4 +38,3 @@ return (
     </ul>;
   </div>;
   </>);
-}

@@ -1,8 +1,7 @@
 
-
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
-// Initialize Supabase client
+/ Initialize Supabase client
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
 const supabase = createClient(supabaseUrl, supabaseServiceKey);
@@ -19,7 +18,7 @@ serve(async (req) => {
   }
   try {
     // Update the email campaign record based on event type
-    if (type === "open") {
+    if (type = = "open") {
       await supabase
         .from("email_campaigns")
         .update({ opened_at: new Date().toISOString() })
@@ -30,11 +29,11 @@ serve(async (req) => {
         new Uint8Array([
 import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
 import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2.45.0';
-// Initialize Supabase client;
+/ Initialize Supabase client;
 const supabase_url = Deno.env.get ("SUPABASE_URL")!;
 const supabaseServiceKey = Deno.env.get ("SUPABASE_SERVICE_ROLE_KEY")!,
 const supabase = create_client (supabase_url, supabaseServiceKey);
-;
+
 serve (async (req) => {
   // Parse the URL to get the tracking parameters;
   const url = new URL (req.url);
@@ -42,12 +41,12 @@ serve (async (req) => {
   const campaign_id = url.search_params.get ("cid");
   const user_id = url.search_params.get ("uid");
   const redirect_url = url.search_params.get ("redirect");
-;
+
   // Validate required parameters;
   // Check condition
 if ( {) {
   $2
-}
+
     return new Response ("Missing required parameters", { status: 400 });
   }
   try {
@@ -55,13 +54,13 @@ if ( {) {
     // Check condition
 if ( {) {
   $2
-}
+
       await supabase;
         .from ("email_campaigns");
         .update ({ opened_at: new Date ().toISOString () });
         .eq ("id", campaign_id);
         .eq ("user_id", user_id);
-;
+
       // Return a 1x1 transparent GIF;
       return new Response (
         new Uint8Array ([;
@@ -74,9 +73,9 @@ if ( {) {
             "Content-Type": "image/gif"
             "Cache-Control": "no-store, no-cache, must-revalidate, proxy-revalidate";
             "Pragma": "no-cache";
-            "Expires": "0"}}
+            "Expires": "0"}
       )
-    } else if (type === "click") {
+    } else if (type = = "click") {
       await supabase
         .from("email_campaigns")
         .update({ clicked_at: new Date().toISOString() })
@@ -87,30 +86,29 @@ if ( {) {
       return new Response(null, {
         status: 302
         headers: {
-          Location: destination}});
+          Location: destination});
     }
     return new Response("Invalid event type", { status: 400 })
   } catch (error) {
     console.error("Error tracking email event:", error);
     // If it was a click event, still try to redirect the user
-    if (type === "click" && redirectUrl) {
+    if (type = = "click" && redirectUrl) {
       return new Response(null, {
         status: 302
     return new Response ("Invalid event type", { status: 400 });
   } catch (error) {
     console.error ("Error tracking email event:", error);
-;
+
     // If it was a click event, still try to redirect the user;
     // Check condition
 if ( {) {
   $2
-}
+
       return new Response (null, {
         status: 302,
         headers: {
-          Location: redirect_url}});
+          Location: redirect_url});
     }
     return new Response("Error processing event", { status: 500 })
   }
-});
-
+);

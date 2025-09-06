@@ -20,7 +20,6 @@ const QualityAssuranceChat: NextPage = () => {;
       </main>;
     </div>;
   );
-};
       </Head>
       <main>
         <h1>QualityAssuranceChat</h1>
@@ -37,7 +36,7 @@ const QualityAssuranceChat: NextPage = () => {;
       </main>;
     </div>;
   );
-}
+
 export default QualityAssuranceChat;
 
 import type { NextPage } from './next';
@@ -59,7 +58,5 @@ const QualityAssuranceChat: NextPage = () => {
         <a href="/blog">Back to Blog</a>;
       </main>;
     </div>);
-}
-;
+
 export default QualityAssuranceChat;
-;

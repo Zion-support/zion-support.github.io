@@ -34,7 +34,7 @@ export default function Home() {
       <Footer />
     </div>
   )
-}
+
       <CategoriesSection />;
       <BenefitsSection />;
       <HowItWorksSection />;
@@ -43,6 +43,5 @@ export default function Home() {
       <Footer />;
     </div>;
   );
-}
+
     </div>);
-}

@@ -93,7 +93,6 @@ const Revolutionary2027ServicesShowcase = () => {
   const containerVariants = {hidden: { opacity: 0},
     visible: {opacity: 1, transition: {
         staggerChildren: 0.1}
-    }
   },
 
   const itemVariants = {
@@ -104,7 +103,7 @@ const Revolutionary2027ServicesShowcase = () => {
       transition: {
         duration: 0.6,
         ease: &quot;easeOut&quot; as const
-      }    }
+      }
   },
 
   return (
@@ -113,14 +112,14 @@ const Revolutionary2027ServicesShowcase = () => {
       <div className=&quot;absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/20 to-cyan-900/20&quot;></div>
       <div className=&quot;absolute inset-0 bg-[radial-gradient(circleat_50%50%,rgba(139,92,246,0.1),transparent50%)]&quot;></div>
       <div className=&quot;absolute inset-0 bg-[radial-gradient(circleat_80%20%,rgba(0,255,255,0.1),transparent50%)]&quot;></div>
-      
+
       <div className=&quot;max-w-7xl mx-auto relative z-10&quot;>
         {/* Section Header */}
         <motion.div,
-initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+initial={ opacity: 0, y: 20 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0.8 }
+          viewport={ once: true }
           className=&quot;text-center mb-20&quot;        >
           <h2 className=&quot;text-5xl md:text-6xl font-bold text-white mb-8&quot;>
             <span className=&quot;bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent&quot;>
@@ -138,7 +137,7 @@ initial={{ opacity: 0, y: 20 }}
 variants={containerVariants}
           initial=&quot;hidden&quot;
           whileInView=&quot;visible&quot;
-          viewport={{ once: true }}
+          viewport={ once: true }
           className=&quot;grid grid-cols-2 md:grid-cols-4 gap-6 mb-16&quot;        >
           {categories.map(_(category, index) => (
             <motion.div,
@@ -153,7 +152,7 @@ key={category.name}
                 <h3 className=&quot;text-lg font-semibold text-white mb-2&quot;>{category.name}</h3>
                 <p className=&quot;text-2xl font-bold text-white&quot;>{category.count}</p>              </div>
             </motion.div>
-          ))}
+          )}
         </motion.div>
 
         {_/* Featured Services Grid */}
@@ -161,7 +160,7 @@ key={category.name}
 variants={containerVariants}
           initial=&quot;hidden&quot;
           whileInView=&quot;visible&quot;
-          viewport={{ once: true }}
+          viewport={ once: true }
           className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16&quot;        >
           {featuredServices.map(_(service, index) => (
             <motion.div,
@@ -180,20 +179,20 @@ key={service.id}
                   <h3 className=&quot;text-2xl font-bold text-white group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-purple-400 group-hover:bg-clip-text transition-all duration-300&quot;>
                     {service.name}
                   </h3>
-                  
+
                   <p className=&quot;text-gray-300 leading-relaxed&quot;>
                     {service.description}
                   </p>;
-;
+
                   {/* Features */}
                   <div className=&quot;space-y-2&quot;>
-                    {service.features.slice(0, 3).map((feature, idx) => (
+                    {service.features.slice(0, 3).map(feature, idx) => (
                       <div key={idx} className=&quot;flex items-center space-x-2&quot;>
                         <div className=&quot;w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full&quot;></div>
                         <span className=&quot;text-sm text-gray-400&quot;>{feature}</span>                      </div>
-                    ))}
+                    )}
                   </div>;
-;
+
                   {/* Market Info */}
                   <div className=&quot;pt-4 border-t border-gray-700/50&quot;>
                     <div className=&quot;flex justify-between items-center text-sm text-gray-400&quot;>
@@ -220,15 +219,15 @@ href={`/services/${service.id}`}
                 {/* Hover Effect Overlay */}
                 <div className=&quot;absolute inset-0 bg-gradient-to-br from-purple-500/5 to-cyan-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none&quot;></div>              </div>
             </motion.div>
-          ))}
+          )}
         </motion.div>
 
         {_/* Call to Action */}
         <motion.div,
-initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          viewport={{ once: true }}
+initial={ opacity: 0, y: 20 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0.8, delay: 0.4 }
+          viewport={ once: true }
           className=&quot;text-center&quot;        >
           <div className="bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-12">
             <h3 className="text-3xl md: text-4xl font-bold text-white mb-6">              Ready to Transform Your Business?
@@ -257,6 +256,6 @@ href=&quot;tel:+13024640950&quot;
       </div>
     </section>
   )
-},
+,
 
 export default Revolutionary2027ServicesShowcase,

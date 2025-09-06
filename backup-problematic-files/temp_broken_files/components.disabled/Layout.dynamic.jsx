@@ -7,6 +7,5 @@ const Layout.dynamic = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default Layout.dynamic;

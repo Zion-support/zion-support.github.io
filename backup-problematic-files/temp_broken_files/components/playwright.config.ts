@@ -14,4 +14,4 @@ default defineConfig({
   //   {_//     name: firefox', _//     use: { ...devices['Desktop Firefox']},  //   },
   //   {_//     name: webkit', _//     use: { ...devices['Desktop Safari']},  //   },
   // ]
-}),
+),

@@ -4,11 +4,11 @@ import App from "./App";
 
 describe("App Smoke Tests", () => {;
   it("should render without crashing", () => {;
-    expect(() => render(<App />)).not && not.toThrow();
+    expect() => render(<App />).not && not.toThrow();
   });
 
   it("should render a basic structure", () => {;
     const { container } = render(<App />);
     expect(container && container.firstChild).toBeTruthy();
   });
-});
+);

@@ -8,7 +8,7 @@ import { ContractTypeCards  } from './ContractTypeCards';
 import { RecentContractsTable  } from './RecentContractsTable';
 import { TalentProfile  } from '@/types/talent';
 import { useAuth } from '@/hooks/useAuth';
-// Mock data for demo purposes
+/ Mock data for demo purposes
 
 const mockTalent: TalentProfile = {
   id: 'talent-123'
@@ -58,7 +58,7 @@ export function ContractBuilderContent() {
         contracts={recentContracts}
         onViewContract={handleViewContract}
       />
-      {showBuilderType === 'standard' && (
+      {showBuilderType = = 'standard' && (
 import {useState} from 'react';
 import {SmartContractBuilder} from '@/components / contracts / SmartContractBuilder';
 import {ContractBuilder} from '@/components / contracts / ContractBuilder';
@@ -67,7 +67,7 @@ import {ContractTypeCards} from './ContractTypeCards';
 import {RecentContractsTable} from './RecentContractsTable';
 import {TalentProfile} from '@/types/talent';
 import {useAuth} from '@/hooks/useAuth';
-// Mock data for demo purposes;
+/ Mock data for demo purposes;
 const mockTalent: TalentProfile = {;
   id: 'talent-123',;
   user_id: 'user-abc-123',;
@@ -122,7 +122,7 @@ export function ContractBuilderContent() {;
         onViewContract={handleViewContract}
       />;
 
-      {showBuilderType === 'standard' && (;
+      {showBuilderType = = 'standard' && (;
         <ContractBuilder
           isOpen={true}
           onClose={() => setShowBuilderType('none')}
@@ -131,7 +131,7 @@ export function ContractBuilderContent() {;
           onContractGenerated={handleContractGenerated}
         />;
       )}
-      {showBuilderType === 'smart' && (
+      {showBuilderType = = 'smart' && (
         <SmartContractBuilder
           isOpen={true}
           onClose={() => setShowBuilderType('none')}
@@ -142,10 +142,10 @@ export function ContractBuilderContent() {;
       )}
     </>
   )
-}
+
 import {TalentProfile} from '@/types / talent';
 import {use_auth} from '@/hooks / use_auth';
-// Mock data for demo purposes;
+/ Mock data for demo purposes;
 const mock_talent: TalentProfile = {
   id: 'talent - 123',
   user_id: 'user - abc - 123',
@@ -178,16 +178,16 @@ function ContractBuilderContent() {
       isSmartContract: false;
     }
   ]);
-;
+
   const handleContractGenerated = (content: string) =>: any {
     console.log ('Contract generated:', content.substring (0, 100) + '...');
   }
-;
+
   const handleViewContract = (contract_id: string) =>: any {
     console.log ('Viewing contract:', contract_id);
     // Future implementation: View specific contract details;
   }
-;
+
   return (
     <>;
       <ContractHeader onCreateClick={() => setShowBuilderType ('smart')} />;
@@ -199,7 +199,7 @@ function ContractBuilderContent() {
         contracts={recent_contracts}
         onViewContract={handleViewContract}
       />;
-      {showBuilderType === 'standard' && (
+      {showBuilderType = = 'standard' && (
         <ContractBuilder;
           is_open={true}
           on_close={() => setShowBuilderType ('none')}
@@ -207,7 +207,7 @@ function ContractBuilderContent() {
           client_name={user?.display_name || 'Client'}
           onContractGenerated={handleContractGenerated}
         />)}
-      {showBuilderType === 'smart' && (
+      {showBuilderType = = 'smart' && (
         <SmartContractBuilder;
           is_open={true}
           on_close={() => setShowBuilderType ('none')}
@@ -216,4 +216,3 @@ function ContractBuilderContent() {
           onContractGenerated={handleContractGenerated}
         />)}
     </>);
-}

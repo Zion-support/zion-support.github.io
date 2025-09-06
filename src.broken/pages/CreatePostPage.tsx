@@ -6,5 +6,3 @@ export function CreatePostPage() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

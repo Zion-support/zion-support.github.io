@@ -7,6 +7,5 @@ const UseBlockchainWeb3.js = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default UseBlockchainWeb3.js;

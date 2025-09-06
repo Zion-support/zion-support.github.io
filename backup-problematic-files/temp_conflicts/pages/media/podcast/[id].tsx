@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react',;
 import { useRouter } from 'next/router',;
-;
+
 export default function EpisodePage() {;
   const router = useRouter(),;
   const { id } = router.query as { id?:string },;
   const [episode, setEpisode] = useState<any>(null),;
-;
-  useEffect(() => {;
+
+  useEffect() => {;
     if (!id) return,;
     (async () => {;
       const res = await fetch('/api/podcast/get?id=' + id),;
@@ -14,9 +14,9 @@ export default function EpisodePage() {;
       setEpisode(data.episode),;
     })(),;
   }, [id]),;
-;
+
   if (!episode) return <div>Loading</div>,;
-;
+
   return (;
     <div className="space-y-4">;
       <h1 className="text-2xl font-bold">{episode.title}</h1>;
@@ -32,4 +32,3 @@ export default function EpisodePage() {;
       </div>;
     </div>;
   ),;
-}

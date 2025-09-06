@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {if (req.method !== 'POST') {;
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {if (req.method != 'POST') {;
     res.status(405).json({ error: 'Method not allowed' });
     return;
   }
@@ -22,10 +22,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     res.status(500).json({ error: message });
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY
-});
+);
 export default async function handler(req, res) {
   try {
-  if (req.method !== 'POST') {
+  if (req.method != 'POST') {
     res.status(405).json({
       error: 'Method not allowed'
     });
@@ -36,13 +36,11 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-  }
-}
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
+
   const { screenName, role } = req.body || {};
   if (!screenName) {
     res.status(400).json({
@@ -55,13 +53,11 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-  }
-}
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
+
   try {
     const prompt = `Propose a concise wireframe layout (sections, primary actions, information hierarchy) for a new screen in the Zion OS design system.\n- Screen: ${screenName}\n- Primary role: ${role || 'Talent'}\n- Return a compact outline with bullets and short labels.`;
     const completion = await openai.chat.completions.create({
@@ -88,7 +84,7 @@ export default async function handler(req, res) {
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 export default async function handler(req, res) {
   try {
-  if (req.method !== '$1') {
+  if (req.method != '$1') {
     res.status(405).json({ error: 'Method not allowed' });
     return;
     } catch (error) {
@@ -97,26 +93,22 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-  }
-}
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
+
   const { screenName, role } = req.body || {  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-  }
-}
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
+
   if (!screenName) {;
     res.status(400).json({ error: 'screenName is required' });
     return;
@@ -126,14 +118,11 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-  }
-}
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
-;
+
   try {
     const prompt = `Propose a concise wireframe layout (sections, primary actions, information hierarchy) for a new screen in the Zion OS design system.\n- Screen: ${screenName}\n- Primary role: ${role || 'Talent'}\n- Return a compact outline with bullets and short labels.`;
     const completion = await openai.chat.completions.create({;
@@ -157,27 +146,20 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-  }
-}
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-  }
-}
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-  }
-}
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
-}
+
 const openai = new OpenAI ({ api_key: process.env.OPENAI_API_KEY });
 export default async /**
  * handler - Function description
@@ -186,7 +168,7 @@ function handler() {
   // Check condition
 if ( {) {
   $2
-}
+
     res.status (405).json ({ error: 'Method not allowed' });
     return;
   }
@@ -194,7 +176,7 @@ if ( {) {
   // Check condition
 if ( {) {
   $2
-}
+
     res.status (400).json ({ error: 'screen_name is required' });
     return;
   }
@@ -213,4 +195,3 @@ if ( {) {
     const message = process.env.OPENAI_API_KEY ? (e?.message || 'Failed to generate') : 'Set OPENAI_API_KEY to enable suggestions.';
     res.status (500).json ({ error: message });
   }
-}

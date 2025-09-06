@@ -13,7 +13,7 @@ import {Checkbox} from "@/components/ui/checkbox";
 import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
-// Form validation schema
+/ Form validation schema
 const signupSchema = z
   .object({
     displayName: z.string().min(2, "Name must be at least 2 characters");
@@ -24,9 +24,9 @@ const signupSchema = z
       .regex(/[a-z]/, "Password must contain at least one lowercase letter")
       .regex(/[0-9]/, "Password must contain at least one number");
     confirmPassword: z.string()
-    termsAccepted: z.boolean().refine(val => val === true, {
+    termsAccepted: z.boolean().refine(val => val = = true, {
       message: "You must accept the terms and conditions"})})
-  .refine(data => data.password === data.confirmPassword, {
+  .refine(data => data.password = = data.confirmPassword, {
     message: "Passwords do not match"
     path: ["confirmPassword"]})
 type SignupFormValues = z.infer<typeof signupSchema>;
@@ -43,7 +43,7 @@ export default function Signup() {
       email: ""
       password: ""
       confirmPassword: ""
-      termsAccepted: false}}) as UseFormReturn<SignupFormValues>
+      termsAccepted: false}) as UseFormReturn<SignupFormValues>
   // Form submission handler
   const onSubmit = async (data: SignupFormValues) => {
     if (isSubmitting) return, // Prevent multiple submissions
@@ -53,7 +53,6 @@ export default function Signup() {
     } finally {;
       setIsSubmitting(false);
     }
-  }
 
   // Redirect if user is already logged in and has completed profile;
   if (isAuthenticated && user?.profileComplete) {;
@@ -68,7 +67,7 @@ import { use_form, type, UseFormReturn } from './react - hook - form';
 import { zod_resolver } from '@hookform / resolvers / zod';
 import { z } from './zod';
 import { User, Mail, Lock, Eye, EyeOff, Facebook, Twitter } from './lucide-react';
-;
+
 import { use_auth } from '@/hooks / use_auth';
 import { Button } from '@/components / ui / button';
 import { Input } from '@/components / ui / input';
@@ -76,7 +75,7 @@ import { Checkbox } from '@/components / ui / checkbox';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components / ui / form';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
-// Form validation schema;
+/ Form validation schema;
 const signup_schema = z;
   .object ({
     display_name: z.string ().min (2, "Name must be at least 2 characters");
@@ -87,13 +86,13 @@ const signup_schema = z;
       .regex (/[a - z]/, "Password must contain at least one lowercase letter");
       .regex (/[0 - 9]/, "Password must contain at least one number");
     confirm_password: z.string (),
-    terms_accepted: z.boolean ().refine (val => val === true, {
+    terms_accepted: z.boolean ().refine (val => val = = true, {
       message: "You must accept the terms and conditions"})});
-  .refine (data => data.password === data.confirm_password, {
+  .refine (data => data.password = = data.confirm_password, {
     message: "Passwords do not match",
     path: ["confirm_password"]}),
 type SignupFormValues = z.infer < typeof signup_schema>;
-;
+
 export default /**
  * Signup - Function description
  */
@@ -102,7 +101,7 @@ function Signup() {
   const [show_password, setShowPassword] = useState (false);
   const [showConfirmPassword, setShowConfirmPassword] = useState (false);
   const [is_submitting, setIsSubmitting] = useState (false);
-;
+
   // Initialize react - hook - form;
   const form = use_form ({
     resolver: zod_resolver (signup_schema),
@@ -111,33 +110,32 @@ function Signup() {
       email: "",
       password: "",
       confirm_password: "",
-      terms_accepted: false}}) as UseFormReturn < SignupFormValues>,
+      terms_accepted: false}) as UseFormReturn < SignupFormValues>,
   // Form submission handler;
   const on_submit = async (data: SignupFormValues) => {
     // Check condition
 if (return, // Prevent multiple submissions) {
   $2
-}
+
     setIsSubmitting (true);
     try {
       await signup (data.email, data.password, data.display_name);
     } finally {
       setIsSubmitting (false);
     }
-  }
-;
+
   // Redirect if user is already logged in and has completed profile;
   // Check condition
 if ( {) {
   $2
-}
+
     return <Navigate to="/" />;
   }
   // Redirect to onboarding if user is authenticated but hasn't completed profile;
   // Check condition
 if ( {) {
   $2
-}
+
     return <Navigate to="/onboarding" />;
   }
   return (
@@ -478,7 +476,7 @@ if ( {) {
       <Footer />
     </>
   )
-}
+
                   </Button>;
                 </div>;
               </div>;
@@ -501,6 +499,5 @@ if ( {) {
       <Footer />;
     </>;
   );
-}
+
     </>);
-}

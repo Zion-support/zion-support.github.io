@@ -87,7 +87,6 @@ const UltimateRedundancyBlueprint: React.FC = () => {
       case 'excellent': return 'text - green - 400';
       default: return 'text - gray - 400';
     }
-  }
   const getPriorityColor = (priority: string) => {
     switch (priority) {
       case 'critical': return 'bg - red - 500 / 20 text - red - 400';
@@ -96,7 +95,6 @@ const UltimateRedundancyBlueprint: React.FC = () => {
       case 'low': return 'bg - green - 500 / 20 text - green - 400';
       default: return 'bg - gray - 500 / 20 text - gray - 400';
     }
-  }
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-red-900 to-gray-900 text-white">
       <Head>
@@ -144,7 +142,7 @@ const UltimateRedundancyBlueprint: React.FC = () => {
         <div className="mb - 8">;
           <h2 className="text - 2xl font - bold mb - 6 text - white">Advanced System Features</h2>;
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
-            {system_features.map ((feature, index) => (
+            {system_features.map (feature, index) => (
               <div key={index} className="bg - white / 10 rounded - xl p - 6 border border - white / 20">;
                 <div className="flex justify - between items - start mb - 4">;
                   <h3 className="text - lg font - semibold text - white">{feature.name}</h3>;
@@ -160,14 +158,14 @@ const UltimateRedundancyBlueprint: React.FC = () => {
                   <span className="text-xs text-green-400"> {feature.health}</span>
                 </div>
               </div>
-            ))}
+            )}
           </div>
         </div>
         {/* Advanced Capabilities */}
         <div className="mb - 8">;
           <h2 className="text - 2xl font - bold mb - 6 text - white">Advanced Capabilities</h2>;
           <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 6">;
-            {advanced_capabilities.map ((capability, index) => (
+            {advanced_capabilities.map (capability, index) => (
               <div key={index} className="bg - white / 10 rounded - xl p - 6 border border - white / 20">;
                 <div className="flex justify - between items - start mb - 4">;
                   <h3 className="text - lg font - semibold text - white">{capability.capability}</h3>;
@@ -178,7 +176,7 @@ const UltimateRedundancyBlueprint: React.FC = () => {
                 <p className="text-gray-300 text-sm mb-2">{capability.description}</p>
                 <p className="text-red-400 text-sm font-medium">Benefit: {capability.benefit}</p>
               </div>
-            ))}
+            )}
           </div>
         </div>
         {/* Performance Metrics */}
@@ -196,7 +194,7 @@ const UltimateRedundancyBlueprint: React.FC = () => {
                   </tr>;
                 </thead>;
                 <tbody>;
-                  {performance_metrics.map ((metric, index) => (
+                  {performance_metrics.map (metric, index) => (
                     <tr key={index} className="border - b border - white / 10">;
                       <td className="py - 3 px - 4 text - white">{metric.metric}</td>;
                       <td className="py - 3 px - 4 text - green - 400 font - semibold">{metric.value}</td>;
@@ -207,7 +205,7 @@ const UltimateRedundancyBlueprint: React.FC = () => {
                         </span>
                       </td>
                     </tr>
-                  ))}
+                  )}
                 </tbody>
               </table>
             </div>
@@ -302,5 +300,5 @@ const UltimateRedundancyBlueprint: React.FC = () => {
       </div>
     </div>
   );
-}
+
 export default UltimateRedundancyBlueprint;

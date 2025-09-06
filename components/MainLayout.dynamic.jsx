@@ -5,5 +5,5 @@ const MainLayout.dynamic = () => {
       <h1>MainLayout.dynamic</h1>
     </div>
   );
-}
+
 export default MainLayout.dynamic;

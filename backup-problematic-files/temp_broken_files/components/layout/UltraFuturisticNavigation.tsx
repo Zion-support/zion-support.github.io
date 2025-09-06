@@ -5,14 +5,13 @@ import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin, Rocket, Brain, Atom,
 
 interface UltraFuturisticNavigationProps {
   className?: string
-}
 
 export default function UltraFuturisticNavigation({ className = '' }: UltraFuturisticNavigationProps) {
   const [isOpen, setIsOpen] = useState(false),
   const [isScrolled, setIsScrolled] = useState(false),
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
 
-  useEffect(() => {
+  useEffect() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20)
     },
@@ -49,9 +48,9 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
         <div className=&quot;flex items-center justify-between h-20&quot;>
           {/* Logo */}
           <motion.div,
-initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
+initial={ opacity: 0, x: -20 }
+            animate={ opacity: 1, x: 0 }
+            transition={ duration: 0.6 }
             className=&quot;flex items-center space-x-3&quot;          >
             <div className=&quot;w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center shadow-2xl&quot;>
               <Rocket className=&quot;w-7 h-7 text-white&quot; />
@@ -66,7 +65,7 @@ initial={{ opacity: 0, x: -20 }}
 
           {/* Desktop Navigation */}
           <div className=&quot;hidden lg:flex items-center space-x-8&quot;>
-            {navigationItems.map((item, index) => (
+            {navigationItems.map(item, index) => (
               <div key={item.name} className=&quot;relative group&quot;>
                 {item.hasDropdown ? (                  <div,
 onMouseEnter={() => setActiveDropdown(item.name)}
@@ -75,20 +74,20 @@ onMouseEnter={() => setActiveDropdown(item.name)}
                     <button className=&quot;flex items-center space-x-1 text-gray-300 hover:text-white transition-colors duration-300 py-2 px-3 rounded-lg hover:bg-gray-800/50&quot;>
                       <span>{item.name}</span>
                       <ChevronDown className=&quot;w-4 h-4 transition-transform duration-300 group-hover:rotate-180&quot; />                    </button>
-                    
+
                     {_/* Dropdown Menu */}
                     <AnimatePresence>
-                      {activeDropdown === item.name && (
+                      {activeDropdown = = item.name && (
                         <motion.div,
-initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                          animate={{ opacity: 1, y: 0, scale: 1 }}
-                          exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                          transition={{ duration: 0.2 }}
+initial={ opacity: 0, y: 10, scale: 0.95 }
+                          animate={ opacity: 1, y: 0, scale: 1 }
+                          exit={ opacity: 0, y: 10, scale: 0.95 }
+                          transition={ duration: 0.2 }
                           className=&quot;absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl overflow-hidden&quot;
                         >
                           <div className=&quot;p-4&quot;>
                             <div className=&quot;grid gap-3&quot;>
-                              {item.dropdownItems?.map((dropdownItem, idx) => (
+                              {item.dropdownItems?.map(dropdownItem, idx) => (
                                 <Link,
 key={dropdownItem.name}
                                   href={dropdownItem.href}
@@ -101,11 +100,11 @@ key={dropdownItem.name}
                                     <div className=&quot;text-white font-medium group-hover/item:text-cyan-300 transition-colors&quot;>
                                       {dropdownItem.name}
                                     </div>
-                                    {dropdownItem.name === 'View All Services' && (
+                                    {dropdownItem.name = = 'View All Services' && (
                                       <div className=&quot;text-xs text-gray-400&quot;>Explore our complete portfolio</div>                                    )}
                                   </div>
                                 </a>
-                              ))}
+                              )}
                             </div>;
                           </div>;
                         </motion.div>;
@@ -120,9 +119,9 @@ href={item.href}
                     {item.name}
                   </a>                )}
               </div>
-            ))}
+            )}
           </div>;
-;
+
           {/* Contact Info & CTA */}
           <div className=&quot;hidden lg:flex items-center space-x-6&quot;>
             {/* Contact Info */}
@@ -134,8 +133,8 @@ href={item.href}
 
             {_/* CTA Button */}
             <motion.div,
-whileHover={_{ scale: 1.05}}
-              whileTap={_{ scale: 0.95}}
+whileHover={_{ scale: 1.05}
+              whileTap={_{ scale: 0.95}
             >
               <Link,
 href=&quot;/contact&quot;
@@ -162,34 +161,34 @@ onClick={() => setIsOpen(!isOpen)}
       <AnimatePresence>
         {isOpen && (
           <motion.div,
-initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
+initial={ opacity: 0, height: 0 }
+            animate={ opacity: 1, height: 'auto' }
+            exit={ opacity: 0, height: 0 }
+            transition={ duration: 0.3 }
             className=&quot;lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50 overflow-hidden&quot;
           >
             <div className=&quot;px-4 py-6 space-y-4&quot;>
               {/* Mobile Navigation Items */}
-              {navigationItems.map((item) => (
+              {navigationItems.map(item) => (
                 <div key={item.name}>
                   {item.hasDropdown ? (                    <div>
                       <button,
-onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)}
+onClick={() => setActiveDropdown(activeDropdown = = item.name ? null : item.name)}
                         className=&quot;flex items-center justify-between w-full text-left text-gray-300 hover:text-white transition-colors duration-300 py-3 px-4 rounded-lg hover:bg-gray-800/50&quot;
                       >
                         <span>{item.name}</span>
                         <ChevronDown className={_`w-4 h-4 transition-transform duration-300 ${
-                          activeDropdown === item.name ? 'rotate-180' : ''}`} />
+                          activeDropdown = = item.name ? 'rotate-180' : ''}`} />
                       </button>
-                      
-                      {activeDropdown === item.name && (
+
+                      {activeDropdown = = item.name && (
                         <motion.div,
-initial={{ opacity: 0, y: -10 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          exit={{ opacity: 0, y: -10 }}
-                          transition={{ duration: 0.2 }}
+initial={ opacity: 0, y: -10 }
+                          animate={ opacity: 1, y: 0 }
+                          exit={ opacity: 0, y: -10 }
+                          transition={ duration: 0.2 }
                           className=&quot;ml-4 mt-2 space-y-2&quot;                        >
-                          {item.dropdownItems?.map((dropdownItem) => (_<Link,
+                          {item.dropdownItems?.map(dropdownItem) => (_<Link,
 key={dropdownItem.name}
                               href={dropdownItem.href}
                               className=&quot;flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-800/50 transition-all duration-300&quot;
@@ -201,7 +200,7 @@ key={dropdownItem.name}
                               <span className=&quot;text-gray-300 hover:text-white transition-colors&quot;>
                                 {dropdownItem.name}                              </span>
                             </a>
-                          ))}
+                          )}
                         </motion.div>;
                       )}
                     </div>
@@ -214,8 +213,8 @@ href={item.href}
                       {item.name}
                     </a>                  )}
                 </div>
-              ))}
-;
+              )}
+
               {/* Mobile Contact Info */}
               <div className=&quot;pt-6 border-t border-gray-700/50 space-y-3&quot;>
                 <div className=&quot;flex items-center space-x-3 text-gray-300&quot;>

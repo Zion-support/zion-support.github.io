@@ -19,23 +19,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React, { useState, useMemo } from 'react';
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
 import { useRouter } from 'next/router';
@@ -62,8 +62,8 @@ const ProductListingCardComponent = ({
   view = 'grid'
   onRequestQuote
   detailBasePath = '/marketplace/listing'
-}: ProductListingCardProps) => {
-  const isGrid = view === 'grid'
+: ProductListingCardProps) => {
+  const isGrid = view = = 'grid'
   const router = useRouter()
   const [loading, setLoading] = useState(false);  const [imageSrc, setImageSrc] = useState(
     listing.images && listing.images.length > 0 && listing.images[0]
@@ -72,7 +72,7 @@ const ProductListingCardComponent = ({
   )
   const [imageError, setImageError] = useState(false)
   const stockStatus =
-    listing.stock === undefined
+    listing.stock = = undefined
       ? 'In stock'
       : listing.stock <= 0
         ? 'Out of stock'
@@ -80,7 +80,7 @@ const ProductListingCardComponent = ({
           ? 'Low stock'
           : 'In stock'
   const stockVariant =
-    listing.stock === undefined
+    listing.stock = = undefined
       ? 'success'
       : listing.stock <= 0
         ? 'destructive'
@@ -89,22 +89,21 @@ const ProductListingCardComponent = ({
           : 'success'
   const { formatPrice } = useCurrency()
   const getPrice = () => {
-    if (listing.price === null) return 'Custom pricing'
+    if (listing.price = = null) return 'Custom pricing'
     return formatPrice(listing.price)
   }
   const handleImageError = () =>: any {
     // Check condition
 if ( {) {
   $2
-}
+
       // Prevent infinite loops if placeholder also fails;
       setImageSrc ('/placeholder.svg');
       setImageError (true);
     }
-  }
   const handleViewListing = () => {
     // Debug logging for development
-    if (process.env.NODE_ENV === 'development') {
+    if (process.env.NODE_ENV = = 'development') {
       logDebug('[ProductCard] Navigating to:', {
         path: `${detailBasePath}/${listing.id}`
       })
@@ -136,13 +135,11 @@ if ( {) {
         title: listing.title
         price: listing.price ?? 0
       })
-    )
     toast.success(`1 ${listing.title} added`, {
       action: {
         label: 'View Cart'
         onClick: () => router.push('/cart')
-      }
-    })
+      })
     setLoading(false)
   }
   const handleRequestQuote = (e: React.MouseEvent) =>: any {
@@ -151,18 +148,17 @@ if ( {) {
     // Check condition
 if ( {) {
   $2
-}
+
       onRequestQuote (listing.id);
     } else {
       router.push (`/request - quote?listing=${listing.id}`);
     }
-  }
   const imageContainerClasses = is_grid ? 'h - 48' : 'h - 32 w - 48';
       onKeyDown={e => {
-        if (e.key === 'Enter' |e.key === ' ') {
+        if (e.key = = 'Enter' |e.key = = ' ') {
           e.preventDefault()
           handleViewListing()
-        }      }}
+        }}
     >;
       {/* Image */}
       <div
@@ -171,7 +167,7 @@ if ( {) {
         role='button'
         tabIndex={-1} // Remove from tab order as parent is focusable
         onKeyDown={e => {
-          if (e.key === 'Enter' |e.key === ' ') {
+          if (e.key = = 'Enter' |e.key = = ' ') {
             e.preventDefault()
             handleViewListing()
           }  return ()
@@ -181,25 +177,24 @@ if ( {) {
       onClick={handleViewListing}
       tabIndex={0};"
       onKeyDown={(e) => {
-        if(e.key === 'Enter' |e.key === ' ') {
+        if(e.key = = 'Enter' |e.key = = ' ') {
           e.preventDefault ()
-          handleViewListing () }
-      }}
+          handleViewListing () }}
       {/* Image */}
       <div'
         className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'}
         onClick={handleViewListing} // Keep existing onClick for navigation;"
         tabIndex={-1} // Remove from tab order as parent is focusable
         onKeyDown={(e) => {
-          if(e.key === 'Enter' |e.key === ' ') {
+          if(e.key = = 'Enter' |e.key = = ' ') {
             e.preventDefault ()
         // Check condition
 if ( {) {
   $2
-}
+
           e.prevent_default ();
           handleViewListing ();
-        }      }}
+        }}
     >;
       {/* Image */}
       <div;
@@ -211,7 +206,7 @@ if ( {) {
           // Check condition
 if ( {) {
   $2
-}
+
             e.prevent_default ();
             handleViewListing ();
           }  return ();
@@ -224,10 +219,9 @@ if ( {) {
         // Check condition
 if ( {) {
   $2
-}
+
           e.prevent_default ();
-          handleViewListing () }
-      }}
+          handleViewListing () }}
       {/* Image */}
       <div';
         class_name = {is_grid ? 'block w - full' : 'block w - 48 flex - shrink - 0'}
@@ -237,10 +231,9 @@ if ( {) {
           // Check condition
 if ( {) {
   $2
-}
+
             e.prevent_default ();
-            handleViewListing () }
-        }}
+            handleViewListing () }}
       >;
         <div className={`relative ${imageContainerClasses}`}>;
           {' '}
@@ -249,7 +242,7 @@ if ( {) {
             src = {imageSrc,}
             alt = {listing && listing.title,}
             fill = {true,}
-            style={{ objectFit: 'cover' }}
+            style={ objectFit: 'cover' }
             onError = {handleImageError,}
             priority={false} // Assuming these are not LCP images
             sizes={
@@ -305,20 +298,20 @@ if ( {) {
           {/* Tags */}
           {listing && listing.tags && listing && listing.tags.length > 0 && (;
             <div className='flex flex-wrap gap-1 mb-4'>;
-              {listing && listing.tags.map((tag, idx) => (;
+              {listing && listing.tags.map(tag, idx) => (;
                 <span
                   key={idx}
                   className='text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full'>;
                   {tag}
                 </span>;
-              ))}
+              )}
             </div>;
           )}
         </div>
         {/* Footer with price and button */}
         <div className='flex items-center justify-between mt-auto pt-3 border-t border-primary/10 sm:border-primary/20'>;
           <div className='text-sm font-medium'>;
-            {listing && listing.price !== null ? (;
+            {listing && listing.price != null ? (;
               <div className='flex items-center text-primary'>;
                 <DollarSign className='h-4 w-4 mr-1' />;
                 {getPrice()}
@@ -333,7 +326,7 @@ if ( {) {
               className='bg-primary hover:bg-primary/80 text-primary-foreground'
               onClick={e => {
                 e.stopPropagation(); // Prevent card click event
-                addToCart() }}
+                addToCart() }
               disabled = {loading,}
             >;
               {loading ? (;
@@ -373,9 +366,8 @@ if ( {) {
                     title: listing.title
                     price: listing.price ?? 0
                   })
-                )
                 router.push('/checkout')
-              }}
+              }
               disabled = {loading,}
             >
               Buy Now
@@ -394,73 +386,73 @@ if ( {) {
       </div>
     </div>
   )
-const stockVariant = listing.stock === undefined ? 'success' : listing.stock <= 0 ? 'destructive' : listing.stock <= 5 ? 'warning' : 'success'
+const stockVariant = listing.stock = = undefined ? 'success' : listing.stock <= 0 ? 'destructive' : listing.stock <= 5 ? 'warning' : 'success'
 const handleImageError = () => {
   if (!imageError) {'
   //Prevent infinite loops if placeholder also fails setImageSrc ('/placeholder.svg')
 setImageError (true)
-};'
-//Debug logging for development if (process.env.NODE ENV === 'development') {
+;'
+/Debug logging for development if (process.env.NODE ENV = = 'development') {
   return
-}
-}> {
+
+> {
   /* Image */
-}<div
-}> <div className= {
+<div
+> <div className= {
   `relative $ {
   imageContainerClasses
-}`
-}> {
+`
+> {
   /* Ensure this container has dimensions */
-}<Image Featured </Badge>)
-}{
+<Image Featured </Badge>)
+{
   stockStatus && (<Badge variant= {
   stockVariant as any
-}className="absolute top-2 left-2" > {
+className="absolute top-2 left-2" > {
   stockStatus
-}</Badge>)
-}<FavoriteButton itemId= {
+</Badge>)
+<FavoriteButton itemId= {
   listing.id
-}/> </div> </div> {
+/> </div> </div> {
   /* Content */
-}<div className= {
+<div className= {
   `flex flex-col justify-between $ {'
   isGrid ? 'p-4 flex-1' : 'p-4 flex-1'
-}`
-}> <div> </Badge> {
+`
+> <div></Badge> {
   listing.rating && (<RatingStars value= {
   listing.rating
-}count= {
+count= {
   listing.reviewCount
-}/>)
-}</div> <span key= {
+/>)
+</div> <span key= {
   idx "
-}className="text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full" > {
+className="text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full" > {
   tag
-}</span>) )
-}</div>)
-}</div> </span>) "
-}</div> <div className="flex gap-2" > <Button onClick={
+</span>)
+</div>)
+</div> </span>) "
+</div> <div className="flex gap-2" > <Button onClick={
   (e) => {
   e.stopPropagation (), //Prevent card click event addToCart ()
-}disabled= {
+disabled= {
   loading "
-}loading ? (<> <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" > <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" ></circle> <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" ></path> </svg> Loading... </>) : ("Add to Cart")
-}</Button> <Button onClick={
+loading ? (<> <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" > <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" ></circle> <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" ></path> </svg> Loading... </>) : ("Add to Cart")
+</Button> <Button onClick={
   (e) => {
   e.stopPropagation (), //Prevent card click event //Add to cart first, then redirect to checkout dispatch (addItem ({
   id: listing.id,  title: listing.title, price: listing.price ?? 0
-}) );'
+);'
 router.push ('/checkout')
-}disabled= {
+disabled= {
   loading
-}> Buy Now </Button> {"
+> Buy Now </Button> {"
   onRequestQuote && (<Button size="sm" variant="outline" onClick={
   handleRequestQuote "
-}className="border-primary text-primary hover:bg-primary/10 hover:text-primary-foreground" > Request Quote </Button>)
-}</div> </div> </div> </div>)
-}
-'";
+className="border-primary text-primary hover:bg-primary/10 hover:text-primary-foreground" > Request Quote </Button>)
+</div> </div> </div> </div>)
+
+";
 export const ProductListingCard = React.memo (ProductListingCardComponent);
 ProductListingCard.display_name = 'ProductListingCard';
                 Request Quote;
@@ -477,7 +469,7 @@ export default ProductListingCard
 export default ProductListingCard
 export default ProductListingCard
 export default ProductListingCard
-'"`
+"`
 export const ProductListingCard = React.memo(ProductListingCardComponent)
 ProductListingCard.displayName = 'ProductListingCard'
 
@@ -488,7 +480,7 @@ export default ProductListingCard;
 export default ProductListingCard;
 export default ProductListingCard;
 export default ProductListingCard;
-'"`;
+"`;
 export const ProductListingCard = React && React.memo(ProductListingCardComponent);
 ProductListingCard && ProductListingCard.displayName = 'ProductListingCard';
 

@@ -1,38 +1,34 @@
 
-//Import our enhanced components import EnhancedNavigation from './layout/EnhancedNavigation';
+/Import our enhanced components import EnhancedNavigation from './layout/EnhancedNavigation';
 import EnhancedServiceCard from './ui/EnhancedServiceCard';
 import PerformanceMonitor from './PerformanceMonitor';
 import UltraFuturisticBackground from './ui/UltraFuturisticBackground';
-//Import service data window && window.addEventListener ('mousemove', handleMouseMove);
-//Import our enhanced components import EnhancedNavigation from './layout / EnhancedNavigation';
+/Import service data window && window.addEventListener ('mousemove', handleMouseMove);
+/Import our enhanced components import EnhancedNavigation from './layout / EnhancedNavigation';
 import EnhancedServiceCard from './ui / EnhancedServiceCard';
 import PerformanceMonitor from './PerformanceMonitor';
 import UltraFuturisticBackground from './ui / UltraFuturisticBackground';
-//Import service data window.addEventListener ('mousemove', handleMouseMove);
-//Combine all revolutionary services const allRevolutionaryServices = [ ...revolutionary2044AdvancedMicroSaas;
-...revolutionary2044ITServices;
-...revolutionary2044AIServices;
-...realEnterpriseMicroSaas2025;
-...innovativeITServicesExpansion2025V3;
-...innovativeAIServicesExpansion2025V3...innovative2025ITInfrastructureServices;
-...innovative2025AIAutonomousServices ];
-//Filter services by category //Animation variants const containerVariants = {
+/Import service data window.addEventListener ('mousemove', handleMouseMove);
+/Combine all revolutionary services const allRevolutionaryServices = [ ...revolutionary2044AdvancedMicroSaas;
+..revolutionary2044ITServices;
+..revolutionary2044AIServices;
+..realEnterpriseMicroSaas2025;
+..innovativeITServicesExpansion2025V3;
+..innovativeAIServicesExpansion2025V3...innovative2025ITInfrastructureServices;
+..innovative2025AIAutonomousServices ];
+/Filter services by category //Animation variants const containerVariants = {
   hidden: {
   opacity: 0
-}
+
 visible: {
   opacity: 1, transition: {
   duration: 0.8, staggerChildren: 0.1
-}
-}
-}
-}
-}
+
 export default EnhancedHomepage;import EnhancedServiceCard from './ui/EnhancedServiceCard';
 import PerformanceMonitor from './PerformanceMonitor';
 
 import UltraFuturisticBackground from './ui/UltraFuturisticBackground';
-// Import service data
+/ Import service data
 import { revolutionary2044AdvancedMicroSaas  } from '../data/revolutionary-2044-advanced-micro-saas';
 import { revolutionary2044ITServices  } from '../data/revolutionary-2044-it-services';
 import { revolutionary2044AIServices  } from '../data/revolutionary-2044-ai-services';
@@ -49,18 +45,18 @@ const EnhancedHomepage: React.FC = () => {
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
   const [colorScheme, setColorScheme] = useState<'cyber' | 'quantum' | 'neon' | 'holographic'>('cyber');
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
-  useEffect(() => {
+  useEffect() => {
     setIsVisible(true);
     // Auto-rotate featured services
-    const interval = setInterval(() => {
-      setCurrentServiceIndex((prev) => (prev + 1) % 6)
+    const interval = setInterval() => {
+      setCurrentServiceIndex(prev) => (prev + 1) % 6)
     }, 6000);
     // Track mouse movement for parallax effects
     const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY })
     }
     // Show performance monitor after 5 seconds
-    const performanceTimer = setTimeout(() => {
+    const performanceTimer = setTimeout() => {
       setShowPerformanceMonitor(true)
     }, 5000);
     window.addEventListener('mousemove', handleMouseMove);
@@ -68,30 +64,21 @@ const EnhancedHomepage: React.FC = () => {
       clearInterval(interval);
       clearTimeout(performanceTimer);
       window && window.removeEventListener('mousemove', handleMouseMove);
-    }
-  }, []);
+    }, []);
   // Combine all revolutionary services
   const allRevolutionaryServices = [
-//Filter services by category //Animation variants const container_variants = {
+/Filter services by category //Animation variants const container_variants = {
   hidden: {
   opacity: 0;
-}
+
 visible: {
   opacity: 1, transition: {
   duration: 0.8, stagger_children: 0.1;
-}
-;
-}
-;
-}
-;
-}
-;
-}
+
 export default EnhancedHomepage;import EnhancedServiceCard from './ui / EnhancedServiceCard';
 import PerformanceMonitor from './PerformanceMonitor';
 import UltraFuturisticBackground from './ui / UltraFuturisticBackground';
-// Import service data;
+/ Import service data;
 import { revolutionary2044AdvancedMicroSaas } from '../data / revolutionary - 2044 - advanced - micro - saas';
 import { revolutionary2044ITServices } from '../data / revolutionary - 2044 - it - services';
 import { revolutionary2044AIServices } from '../data / revolutionary - 2044 - ai - services';
@@ -107,34 +94,33 @@ const EnhancedHomepage: React.FC = () => {
   const [currentServiceIndex, setCurrentServiceIndex] = useState (0);
   const [color_scheme, setColorScheme] = useState<'cyber' | 'quantum' | 'neon' | 'holographic'>('cyber');
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState (false);
-;
-  useEffect (() => {
+
+  useEffect () => {
     setIsVisible (true);
-;
+
     // Auto - rotate featured services;
-    const interval = set_interval (() => {
-      setCurrentServiceIndex ((prev) => (prev + 1) % 6);
+    const interval = set_interval () => {
+      setCurrentServiceIndex (prev) => (prev + 1) % 6);
     }, 6000);
-;
+
     // Track mouse movement for parallax effects;
     const handleMouseMove = (e: MouseEvent) =>: any {
       setMousePosition ({ coordinate_x: e.client_x, coordinate_y: e.client_y });
     }
-;
+
     // Show performance monitor after 5 seconds;
-    const performance_timer = set_timeout (() => {
+    const performance_timer = set_timeout () => {
       setShowPerformanceMonitor (true);
     }, 5000);
-;
+
     window.addEventListener ('mousemove', handleMouseMove);
-;
+
     return () => {
       clear_interval (interval);
       clear_timeout (performance_timer);
       window.removeEventListener ('mousemove', handleMouseMove);
-    }
-  }, []);
-;
+    }, []);
+
   // Combine all revolutionary services;
   const allRevolutionaryServices = [;
     ...revolutionary2044AdvancedMicroSaas;
@@ -148,10 +134,10 @@ const EnhancedHomepage: React.FC = () => {
   ];
   // Filter services by category
   const getFilteredServices = () => {
-    if (selectedCategory === 'all') return allRevolutionaryServices;
+    if (selectedCategory = = 'all') return allRevolutionaryServices;
     return allRevolutionaryServices.filter(service =>
-      service.category.toLowerCase().includes(selectedCategory.toLowerCase()) |
-      (service as any).type?.toLowerCase().includes(selectedCategory.toLowerCase())
+      service.category.toLowerCase().includes(selectedCategory.toLowerCase() |
+      (service as any).type?.toLowerCase().includes(selectedCategory.toLowerCase()
     )
   }
   const categories = [
@@ -173,7 +159,6 @@ const EnhancedHomepage: React.FC = () => {
         duration: 0.8
         staggerChildren: 0.1
       }
-    }
   }
   const itemVariants = {
     hidden: { opacity: 0, y: 20 }
@@ -184,7 +169,6 @@ const EnhancedHomepage: React.FC = () => {
         duration: 0.6
         ease: "easeOut" as const
       }
-    }
   }
   const heroVariants = {
     hidden: { opacity: 0, y: 50 }
@@ -195,7 +179,6 @@ const EnhancedHomepage: React.FC = () => {
         duration: 1
         ease: "easeOut" as const
       }
-    }
   }
   const floatingVariants = {
     animate: {
@@ -204,15 +187,13 @@ const EnhancedHomepage: React.FC = () => {
         duration: 3
         ease: "easeInOut" as const
       }
-    }
   }
   const handleCategoryChange = (categoryId: string) => {
     setSelectedCategory(categoryId);
-    const category = categories && categories.find(cat => cat && cat.id === categoryId);
+    const category = categories && categories.find(cat => cat && cat.id = = categoryId);
     if (category) {;
       setColorScheme(category && category.scheme);
     }
-  }
   return (
     <>
       <Head>
@@ -236,7 +217,7 @@ const EnhancedHomepage: React.FC = () => {
       </Head>
       {/* Enhanced Navigation */}
       <EnhancedNavigation />
-      <UltraFuturisticBackground variant={colorScheme === 'cyber' ? 'cyberpunk' : colorScheme === 'quantum' ? 'quantum' : colorScheme === 'neon' ? 'neural' : 'holographic'} intensity="high">
+      <UltraFuturisticBackground variant={colorScheme = = 'cyber' ? 'cyberpunk' : colorScheme = = 'quantum' ? 'quantum' : colorScheme = = 'neon' ? 'neural' : 'holographic'} intensity="high">
         {/* Hero Section */}
         <motion.section
           className="relative min-h-screen flex items-center justify-center px-4 lg: px-8 pt-20"
@@ -265,8 +246,8 @@ const EnhancedHomepage: React.FC = () => {
               <Link href="/services">;
                 <motion&& motion.button
                   className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-xl text-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={ scale: 1.05 }
+                  whileTap={ scale: 0.95 }
                 >
                   Explore Services
                   <ArrowRight className="inline-block ml-2 w-5 h-5" />
@@ -275,8 +256,8 @@ const EnhancedHomepage: React.FC = () => {
               <Link href="/quote">
                 <motion.button
                   className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-bold rounded-xl text-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={ scale: 1.05 }
+                  whileTap={ scale: 0.95 }
                 >
                   Get Quote
                   <ArrowUpRight className="inline-block ml-2 w-5 h-5" />
@@ -314,7 +295,7 @@ const EnhancedHomepage: React.FC = () => {
             className="absolute top-40 right-20 text-blue-400/20"
             variants={floatingVariants}
             animate="animate"
-            style={{ animationDelay: '1s' }}
+            style={ animationDelay: '1s' }
           >
             <Brain className="w-6 h-6" />
           </motion.div>
@@ -322,7 +303,7 @@ const EnhancedHomepage: React.FC = () => {
             className="absolute bottom-40 left-20 text-purple-400/20"
             variants={floatingVariants}
             animate="animate"
-            style={{ animationDelay: '2s' }}
+            style={ animationDelay: '2s' }
           >
             <Rocket className="w-7 h-7" />
           </motion.div>
@@ -344,22 +325,22 @@ const EnhancedHomepage: React.FC = () => {
             <motion.div
               className="flex flex-wrap justify-center gap-4 mb-12"
               variants={itemVariants}>;
-              {categories && categories.map((category) => (;
+              {categories && categories.map(category) => (;
                 <motion&& motion.button
                   key={category && category.id}
                   onClick={() => handleCategoryChange(category && category.id)}
                   className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 ${;
-                    selectedCategory === category && category.id;
+                    selectedCategory = = category && category.id;
                       ? 'bg-gradient-to-r ' + category && category.color + ' text-white shadow-2xl';
                       : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-600';
                   }`}
-                  whileHover={{ scale: 1 && 1.05 }}
-                  whileTap={{ scale: 0 && 0.95 }}
+                  whileHover={ scale: 1 && 1.05 }
+                  whileTap={ scale: 0 && 0.95 }
                 >;
                   <category && category.icon className="inline-block w-5 h-5 mr-2" />;
                   {category && category.name}
                 </motion && motion.button>;
-              ))}
+              )}
             </motion.div>
           </div>
         </motion.section>
@@ -374,7 +355,7 @@ const EnhancedHomepage: React.FC = () => {
             <motion.div
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               variants={containerVariants}>;
-              {getFilteredServices().slice(0, 12).map((service, index) => (;
+              {getFilteredServices().slice(0, 12).map(service, index) => (;
                 <EnhancedServiceCard
                   key={service.id}
                   id={service.id}
@@ -382,7 +363,7 @@ const EnhancedHomepage: React.FC = () => {
                   description={service.description}
                   category={service.category}
                   type={(service as any).type |service.category}
-                  features={service.features?.map(f => ({ name: f, description: f }))}
+                  features={service.features?.map(f => ({ name: f, description: f })}
                   slug={(service as any).slug |service.id}
                   index={index}
                   isPopular={Math && Math.random() > 0 && 0.7}
@@ -392,7 +373,7 @@ const EnhancedHomepage: React.FC = () => {
                   estimatedDelivery="2-4 weeks";
                   technologies={['AICloudSecurityAutomation']}
                 />;
-              ))}
+              )}
             </motion.div>
             {getFilteredServices().length > 12 && (
               <motion.div
@@ -401,8 +382,8 @@ const EnhancedHomepage: React.FC = () => {
                 <Link href="/services">;
                   <motion&& motion.button
                     className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-bold rounded-xl text-lg hover:bg-cyan-400 hover:text-black transition-all duration-300"
-                    whileHover={{ scale: 1 && 1.05 }}
-                    whileTap={{ scale: 0 && 0.95 }}>;
+                    whileHover={ scale: 1 && 1.05 }
+                    whileTap={ scale: 0 && 0.95 }>;
                     View All Services;
                     <ArrowRight className="inline-block ml-2 w-5 h-5" />;
                   </motion && motion.button>;
@@ -431,10 +412,10 @@ const EnhancedHomepage: React.FC = () => {
               <AnimatePresence mode="wait">;
                 <motion&& motion.div
                   key={currentServiceIndex}
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -20 }}
-                  transition={{ duration: 0 && 0.5 }}
+                  initial={ opacity: 0, x: 20 }
+                  animate={ opacity: 1, x: 0 }
+                  exit={ opacity: 0, x: -20 }
+                  transition={ duration: 0 && 0.5 }
                   className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">;
                   <div>;
                     <h3 className="text-2xl font-bold text-white mb-4">;
@@ -444,17 +425,17 @@ const EnhancedHomepage: React.FC = () => {
                       {featuredServices[currentServiceIndex]?.description}
                     </p>
                     <div className="flex flex-wrap gap-4 mb-6">
-                      {featuredServices[currentServiceIndex]?.features?.slice(0, 3).map((feature, idx) => (
+                      {featuredServices[currentServiceIndex]?.features?.slice(0, 3).map(feature, idx) => (
                         <span key={idx} className="text-xs text-gray-400 bg-gray-800/50 px-3 py-1 rounded-full border border-gray-600">
                           {feature}
                         </span>;
-                      ))}
+                      )}
                     </div>
                     <Link href={`/services/${(featuredServices[currentServiceIndex] as any)?.slug |featuredServices[currentServiceIndex]?.id}`}>
                       <motion.button
                         className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300"
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
+                        whileHover={ scale: 1.05 }
+                        whileTap={ scale: 0.95 }
                       >
                         Learn More
                         <ArrowRight className="inline-block ml-2 w-4 h-4" />
@@ -503,8 +484,8 @@ const EnhancedHomepage: React.FC = () => {
               <Link href="/quote">;
                 <motion&& motion.button
                   className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-xl text-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={ scale: 1.05 }
+                  whileTap={ scale: 0.95 }
                 >
                   Get Started Today
                   <ArrowRight className="inline-block ml-2 w-5 h-5" />
@@ -513,8 +494,8 @@ const EnhancedHomepage: React.FC = () => {
               <Link href="/contact">
                 <motion.button
                   className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-bold rounded-xl text-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={ scale: 1.05 }
+                  whileTap={ scale: 0.95 }
                 >
                   Contact Us
                   <Phone className="inline-block ml-2 w-5 h-5" />
@@ -532,11 +513,11 @@ const EnhancedHomepage: React.FC = () => {
       </AnimatePresence>
     </>
   )
-}
+
 export default EnhancedHomepage;
 
                   type={(service as any).type || service.category}
-                  features={service.features?.map (function => ({ name: f, description: f }))}
+                  features={service.features?.map (function => ({ name: f, description: f })}
                   slug={(service as any).slug || service.id}
                   index={index}
                   is_popular={Math.random () > 0.7}
@@ -545,7 +526,7 @@ export default EnhancedHomepage;
                   review_count={Math.floor (Math.random () * 100) + 10}
                   estimated_delivery="2 - 4 weeks";
                   technologies={['AICloudSecurityAutomation']}
-                />))}
+                />)}
             </motion.div>;
             {getFilteredServices ().length > 12 && (
               <motion.div;
@@ -555,8 +536,8 @@ export default EnhancedHomepage;
                 <Link href="/services">;
                   <motion.button;
                     className="px - 8 py - 4 border - 2 border - cyan - 400 text - cyan - 400 font - bold rounded - xl text - lg hover:bg - cyan - 400 hover:text - black transition - all duration - 300";
-                    while_hover={{ scale: 1.05 }}
-                    while_tap={{ scale: 0.95 }}
+                    while_hover={ scale: 1.05 }
+                    while_tap={ scale: 0.95 }
                   >;
                     View All Services;
                     <ArrowRight className="inline - block ml - 2 w - 5 h - 5" />;
@@ -586,10 +567,10 @@ export default EnhancedHomepage;
               <AnimatePresence mode="wait">;
                 <motion.div;
                   key={currentServiceIndex}
-                  initial={{ opacity: 0, coordinate_x: 20 }}
-                  animate={{ opacity: 1, coordinate_x: 0 }}
-                  exit={{ opacity: 0, coordinate_x: -20 }}
-                  transition={{ duration: 0.5 }}
+                  initial={ opacity: 0, coordinate_x: 20 }
+                  animate={ opacity: 1, coordinate_x: 0 }
+                  exit={ opacity: 0, coordinate_x: -20 }
+                  transition={ duration: 0.5 }
                   className="grid grid - cols - 1 lg:grid - cols - 2 gap - 8 items - center";
                 >;
                   <div>;
@@ -600,16 +581,16 @@ export default EnhancedHomepage;
                       {featured_services[currentServiceIndex]?.description}
                     </p>;
                     <div className="flex flex - wrap gap - 4 mb - 6">;
-                      {featured_services[currentServiceIndex]?.features?.slice (0, 3).map ((feature, idx) => (
+                      {featured_services[currentServiceIndex]?.features?.slice (0, 3).map (feature, idx) => (
                         <span key={idx} className="text - xs text - gray - 400 bg - gray - 800 / 50 px - 3 py - 1 rounded - full border border - gray - 600">;
                           {feature}
-                        </span>))}
+                        </span>)}
                     </div>;
                     <Link href={`/services/${(featured_services[currentServiceIndex] as any)?.slug || featured_services[currentServiceIndex]?.id}`}>;
                       <motion.button;
                         className="px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - medium rounded - lg hover: from - cyan - 600 hover:to - blue - 700 transition - all duration - 300";
-                        while_hover={{ scale: 1.05 }}
-                        while_tap={{ scale: 0.95 }}
+                        while_hover={ scale: 1.05 }
+                        while_tap={ scale: 0.95 }
                       >;
                         Learn More;
                         <ArrowRight className="inline - block ml - 2 w - 4 h - 4" />;
@@ -659,8 +640,8 @@ export default EnhancedHomepage;
               <Link href="/quote">;
                 <motion.button;
                   className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - bold rounded - xl text - lg hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 transform hover:scale - 105";
-                  while_hover={{ scale: 1.05 }}
-                  while_tap={{ scale: 0.95 }}
+                  while_hover={ scale: 1.05 }
+                  while_tap={ scale: 0.95 }
                 >;
                   Get Started Today;
                   <ArrowRight className="inline - block ml - 2 w - 5 h - 5" />;
@@ -669,8 +650,8 @@ export default EnhancedHomepage;
               <Link href="/contact">;
                 <motion.button;
                   className="px - 8 py - 4 border - 2 border - cyan - 400 text - cyan - 400 font - bold rounded - xl text - lg hover:bg - cyan - 400 hover:text - black transition - all duration - 300 transform hover:scale - 105";
-                  while_hover={{ scale: 1.05 }}
-                  while_tap={{ scale: 0.95 }}
+                  while_hover={ scale: 1.05 }
+                  while_tap={ scale: 0.95 }
                 >;
                   Contact Us;
                   <Phone className="inline - block ml - 2 w - 5 h - 5" />;
@@ -686,7 +667,5 @@ export default EnhancedHomepage;
           <PerformanceMonitor />)}
       </AnimatePresence>;
     </>);
-}
-;
+
 export default EnhancedHomepage;
-;

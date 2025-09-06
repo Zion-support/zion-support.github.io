@@ -8,7 +8,7 @@ import {
   TableHead
   TableHeader
   TableRow
-} from '@/components/ui/table'
+ from '@/components/ui/table'
 import { Badge } from '@/components/ui/badge'
 import { Switch } from '@/components/ui/switch'
 import { toast } from '@/hooks/use-toast'; import { InfoIcon } from 'lucide-react'
@@ -16,7 +16,7 @@ import { toast } from '@/hooks/use-toast'; import { InfoIcon } from 'lucide-reac
   TooltipContent
   TooltipProvider
   TooltipTrigger
-} from '@/components/ui/tooltip'
+ from '@/components/ui/tooltip'
 export function RoleManagement() {
   // Mock team members data
   const teamMembers = [
@@ -33,7 +33,6 @@ export function RoleManagement() {
         viewBilling: true
         manageBilling: true
       }
-    }
     {
       id: 2
       name: 'Jamie Smith'
@@ -47,7 +46,6 @@ export function RoleManagement() {
         viewBilling: false
         manageBilling: false
       }
-    }
     {
       id: 3
       name: 'Sam Williams'
@@ -61,7 +59,6 @@ export function RoleManagement() {
         viewBilling: true
         manageBilling: false
       }
-    }
     {
       id: 4
       name: 'Taylor Brown'
@@ -75,7 +72,6 @@ export function RoleManagement() {
         viewBilling: false
         manageBilling: false
       }
-    }
   ]
   const handlePermissionChange = (
     _memberId: number
@@ -101,7 +97,7 @@ import {;
   TableHead,;
   TableHeader,;
   TableRow,;
-} from '@/components/ui/table';
+ from '@/components/ui/table';
 import { Badge } from '@/components/ui/badge';
 import { Switch } from '@/components/ui/switch';
 import { toast } from '@/hooks/use-toast';import { InfoIcon } from 'lucide-react';
@@ -110,7 +106,7 @@ import {;
   TooltipContent,;
   TooltipProvider,;
   TooltipTrigger,;
-} from '@/components/ui/tooltip';
+ from '@/components/ui/tooltip';
 
 export function RoleManagement() {;
   // Mock team members data;
@@ -196,17 +192,17 @@ export function RoleManagement() {;
       <div>;
         <h3 className='text-xl font-medium mb-4'>Role Permissions</h3>;
         <div className='grid grid-cols-1 md:grid-cols-4 gap-4 mb-6'>;
-          {Object && Object.entries(roleDescriptions).map(([role, description]) => (;
+          {Object && Object.entries(roleDescriptions).map([role, description]) => (;
             <div
               key={role}
               className='bg-card rounded-lg p-4 border border-border'>;
               <div className='flex items-center gap-2 mb-2'>;
-                <Badge variant={role === 'Admin' ? 'default' : 'outline'}>;
+                <Badge variant={role = = 'Admin' ? 'default' : 'outline'}>;
                   {role}
                 </Badge>              </div>;
               <p className='text-sm text-muted-foreground'>{description}</p>;
             </div>;
-          ))}
+          )}
         </div>
       </div>
       <div className='rounded-md border'>
@@ -308,17 +304,17 @@ export function RoleManagement() {;
       <div>;
         <h3 className='text - xl font - medium mb - 4'>Role Permissions</h3>;
         <div className='grid grid - cols - 1 md:grid - cols - 4 gap - 4 mb - 6'>;
-          {Object.entries (role_descriptions).map (([role, description]) => (
+          {Object.entries (role_descriptions).map ([role, description]) => (
             <div;
               key={role}
               className='bg - card rounded - lg p - 4 border border - border';
             >;
               <div className='flex items - center gap - 2 mb - 2'>;
-                <Badge variant={role === 'Admin' ? 'default' : 'outline'}>;
+                <Badge variant={role = = 'Admin' ? 'default' : 'outline'}>;
                   {role}
                 </Badge>              </div>;
               <p className='text - sm text - muted - foreground'>{description}</p>;
-            </div>))}
+            </div>)}
         </div>;
       </div>;
       <div className='rounded - md border'>;
@@ -471,14 +467,12 @@ export function RoleManagement() {;
                     }                  />;
                 </TableCell>;
               </TableRow>;
-            ))}
+            )}
           </TableBody>
         </Table>
       </div>
     </div>
   )
-}
-
 
                 <TableCell className='text - center'>;
                   <Switch;
@@ -526,9 +520,8 @@ export function RoleManagement() {;
                       handlePermissionChange (member.id, 'view_billing', checked);
                     }                  />;
                 </TableCell>;
-              </TableRow>))}
+              </TableRow>)}
           </TableBody>;
         </Table>;
       </div>;
     </div>);
-}

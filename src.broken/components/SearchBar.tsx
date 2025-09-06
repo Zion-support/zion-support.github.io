@@ -6,5 +6,3 @@ export function SearchBar() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

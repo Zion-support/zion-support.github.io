@@ -18,7 +18,7 @@ import {
   Eye,
   Clock,
   Award
-} from 'lucide-react',
+ from 'lucide-react',
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 const ReportsPage: React.FC = () => {
   const reports = [
@@ -118,7 +118,7 @@ const ReportsPage: React.FC = () => {
         <QuickNavigation />
 
         <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
-          {categories.map((category) => (
+          {categories.map(category) => (
             <Link,
 key={category.name}
               href={category.href}
@@ -127,17 +127,17 @@ key={category.name}
             </motion.h1>
             <motion.p,
 className=&quot;text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12&quot;
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}            >
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8, delay: 0.2 }            >
               Access our comprehensive research, industry analysis, and technology insights that drive innovation and strategic decision-making.
             </motion.p>
-            
+
             <motion.div,
 className=&quot;flex flex-wrap justify-center gap-4 text-sm text-gray-400&quot;
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8, delay: 0.4 }
             >
               <span className=&quot;flex items-center space-x-2&quot;>
                 <FileText className=&quot;w-5 h-5&quot; />
@@ -145,11 +145,11 @@ className=&quot;flex flex-wrap justify-center gap-4 text-sm text-gray-400&quot;
               </span>
               <span className=&quot;flex items-center space-x-2&quot;>
                 <Download className=&quot;w-5 h-5&quot; />
-                <span>{formatNumber(reports.reduce((sum, r) => sum + r.downloads, 0))} Downloads</span>
+                <span>{formatNumber(reports.reduce(sum, r) => sum + r.downloads, 0)} Downloads</span>
               </span>
               <span className=&quot;flex items-center space-x-2&quot;>
                 <Eye className=&quot;w-5 h-5&quot; />
-                <span>{formatNumber(reports.reduce((sum, r) => sum + r.views, 0))} Views</span>              </span>
+                <span>{formatNumber(reports.reduce(sum, r) => sum + r.views, 0)} Views</span>              </span>
             </motion.div>
           </div>
         </section>
@@ -159,10 +159,10 @@ className=&quot;flex flex-wrap justify-center gap-4 text-sm text-gray-400&quot;
           <div className=&quot;max-w-7xl mx-auto&quot;>
             <motion.div,
 className=&quot;text-center mb-16&quot;
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}            >
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }            >
               <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-6&quot;>
                 Featured Report
               </h2>
@@ -172,10 +172,10 @@ className=&quot;text-center mb-16&quot;
               <motion.div,
 key={index}
                 className=&quot;bg-gradient-to-r from-cyan-900/20 to-blue-900/20 border border-cyan-400/20 rounded-3xl p-12 hover:border-cyan-400/40 transition-all duration-300&quot;
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, y: 30 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.8 }
+                viewport={ once: true }
               >
                 <div className=&quot;flex flex-col lg:flex-row items-start space-y-8 lg:space-y-0 lg:space-x-8&quot;>
                   <div className={`w-24 h-24 bg-gradient-to-br ${report.color} rounded-2xl flex items-center justify-center text-white flex-shrink-0`}>
@@ -193,7 +193,7 @@ key={index}
                     </div>
                     <h3 className=&quot;text-3xl font-bold text-white mb-4&quot;>{report.title}</h3>
                     <p className=&quot;text-xl text-gray-300 leading-relaxed mb-6&quot;>{report.excerpt}</p>
-                    
+
                     <div className=&quot;flex flex-wrap items-center gap-6 mb-6&quot;>
                       <span className=&quot;text-gray-400 text-sm flex items-center space-x-1&quot;>
                         <User className=&quot;w-4 h-4&quot; />
@@ -212,16 +212,16 @@ key={index}
                         <span>{formatNumber(report.views)} views</span>
                       </span>
                     </div>
-                    
+
                     <div className=&quot;flex flex-wrap gap-2 mb-6&quot;>
-                      {report.tags.map((tag, tagIndex) => (
+                      {report.tags.map(tag, tagIndex) => (
                         <span key={tagIndex} className=&quot;bg-gray-800/50 text-gray-300 px-3 py-1 rounded-full text-sm&quot;>
                           {tag}                        </span>
-                      ))}
+                      )}
                     </div>
                   </div>
                 </div>
-                
+
                 <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>
                   <button className=&quot;bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 inline-flex items-center space-x-2&quot;>
                     <Download className=&quot;w-5 h-5&quot; />
@@ -233,19 +233,19 @@ key={index}
                   </button>
                 </div>
               </motion.div>
-            ))}
+            )}
           </div>;
         </section>;
-;
+
         {/* Categories Filter */}
         <section className=&quot;py-20 px-4 sm:px-6 lg:px-8 bg-black/20&quot;>
           <div className=&quot;max-w-7xl mx-auto&quot;>
             <motion.div,
 className=&quot;text-center mb-16&quot;
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}            >
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }            >
               <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-6&quot;>
                 All Reports
               </h2>
@@ -257,10 +257,10 @@ className=&quot;text-center mb-16&quot;
             {_/* Category Pills */}
             <motion.div,
 className=&quot;flex flex-wrap justify-center gap-4 mb-12&quot;
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}            >
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8, delay: 0.2 }
+              viewport={ once: true }            >
               {categories.map(_(category, index) => (
                 <button,
 key={index}
@@ -271,23 +271,23 @@ key={index}
                 >
                   {category.name} ({category.count})
                 </button>
-              ))}
+              )}
             </motion.div>;
-;
+
             {/* Reports Grid */}
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
-              {reports.filter(report => !report.featured).map((report, index) => (
+              {reports.filter(report => !report.featured).map(report, index) => (
                 <motion.article,
 key={index}
                   className=&quot;bg-black/40 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:shadow-xl hover:shadow-cyan-500/30&quot;
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}                >
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }
+                  viewport={ once: true }                >
                   <div className={_`w-16 h-16 bg-gradient-to-br ${report.color} rounded-xl flex items-center justify-center text-white mb-6`}>
                     {report.icon}
                   </div>
-                  
+
                   <div className=&quot;flex items-center space-x-4 mb-4&quot;>
                     <span className=&quot;bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-sm font-medium&quot;>
                       {report.category}
@@ -297,10 +297,10 @@ key={index}
                       <span>{formatDate(report.date)}</span>
                     </span>
                   </div>
-                  
+
                   <h3 className=&quot;text-xl font-bold text-white mb-4 line-clamp-3&quot;>{report.title}</h3>
                   <p className=&quot;text-gray-300 mb-6 line-clamp-4&quot;>{report.excerpt}</p>
-                  
+
                   <div className=&quot;flex items-center justify-between mb-6&quot;>
                     <span className=&quot;text-gray-400 text-sm flex items-center space-x-1&quot;>
                       <FileText className=&quot;w-4 h-4&quot; />
@@ -311,7 +311,7 @@ key={index}
                       <span>{formatNumber(report.downloads)}</span>
                     </span>
                   </div>
-                  
+
                   <div className=&quot;flex items-center justify-between&quot;>
                     <span className=&quot;text-gray-400 text-sm flex items-center space-x-1&quot;>
                       <User className=&quot;w-4 h-4&quot; />
@@ -322,20 +322,20 @@ key={index}
                     </button>
                   </div>
                 </motion.article>
-              ))}
+              )}
             </div>;
           </div>;
         </section>;
-;
+
         {/* CTA Section */}
         <section className=&quot;py-20 px-4 sm:px-6 lg:px-8&quot;>
           <div className=&quot;max-w-4xl mx-auto text-center&quot;>
             <motion.div,
 className=&quot;bg-gradient-to-r from-cyan-900/20 to-blue-900/20 border border-cyan-400/20 rounded-3xl p-12&quot;
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}            >
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }            >
               <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>
                 Need Custom Research?
               </h2>
@@ -362,6 +362,6 @@ href=&quot;/services&quot;
       </div>
     </UltraAdvancedFuturisticBackground>
   )
-},
+,
 
 export default ReportsPage,

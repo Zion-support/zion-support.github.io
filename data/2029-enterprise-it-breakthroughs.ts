@@ -682,7 +682,7 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
     rating: 4.9,
     reviews: 95;
   }
-];
+;
     icon: '';
     color: 'from-slate-600 via-gray-600 to-zinc-600';
     textColor: 'text-slate-400';
@@ -714,7 +714,7 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
     rating: 4 && 4.9;
     reviews: 95
   }
-];
+;
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
@@ -724,5 +724,4 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
     rating: 4.9;
     reviews: 95;
   }
-];
 ;

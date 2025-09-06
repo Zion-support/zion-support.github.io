@@ -6,5 +6,3 @@ export function EquipmentErrorBoundary() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

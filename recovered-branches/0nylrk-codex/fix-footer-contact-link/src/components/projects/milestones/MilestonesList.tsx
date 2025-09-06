@@ -5,7 +5,7 @@ import { MilestoneCard  } from './MilestoneCard';
 import { AddMilestoneForm  } from './AddMilestoneForm';
 import { Button  } from '@/components/ui/button';
 import { Card, CardContent  } from '@/components/ui/card';
-// lucide-react doesn't export PlusIcon, use our icon wrapper
+/ lucide-react doesn't export PlusIcon, use our icon wrapper
 import { Plus  } from '@/components/icons';
 import { EmptyState } from '@/components/ui/empty-state';
 interface MilestonesListProps {
@@ -22,7 +22,7 @@ interface MilestonesListProps {
   onApprove?: (id: string) => Promise<void>
 
   onReject?: (id: string) => Promise<void>
-}
+
 export const MilestonesList: React.FC<MilestonesListProps> = ({
 import {Milestone, MilestoneStatus, MilestoneActivity} from '@/hooks / use_milestones';
 import {use_auth} from '@/hooks / use_auth';
@@ -30,7 +30,7 @@ import {MilestoneCard} from './MilestoneCard';
 import {AddMilestoneForm} from './AddMilestoneForm';
 import {Button} from '@/components / ui / button';
 import {Card, CardContent} from '@/components / ui / card';
-// lucide-react doesn't export PlusIcon, use our icon wrapper;
+/ lucide-react doesn't export PlusIcon, use our icon wrapper;
 import {Plus} from '@/components / icons';
 import {EmptyState} from '@/components / ui / empty - state';
 interface MilestonesListProps {
@@ -45,7 +45,7 @@ interface MilestonesListProps {
   is_submitting: boolean,
   on_approve?: (id: string) => Promise < void>,
   on_reject?: (id: string) => Promise < void>;
-}
+
 export const MilestonesList: React.FC < MilestonesListProps> = ({
   milestones;
   activities;
@@ -59,7 +59,7 @@ export const MilestonesList: React.FC < MilestonesListProps> = ({
 
   onApprove
   onReject
-}) => {
+) => {
   const [showAddForm, setShowAddForm] = useState(false);
   const handleSubmit = async (data: any) => {
     await onCreateMilestone(data)
@@ -68,7 +68,7 @@ export const MilestonesList: React.FC < MilestonesListProps> = ({
   if (isLoading) {
     return (
       <div className="space-y-4">;
-        {[1, 2, 3].map((i) => (;
+        {[1, 2, 3].map(i) => (;
           <Card key={i}>;
             <CardContent className="p-6">;
               <div className="h-6 w-48 bg-muted rounded animate-pulse mb-4"></div>;
@@ -76,11 +76,11 @@ export const MilestonesList: React.FC < MilestonesListProps> = ({
               <div className="h-4 bg-muted rounded animate-pulse w-3/4"></div>;
             </CardContent>;
           </Card>;
-        ))}
+        )}
       </div>;
     );
   }
-  if (milestones.length === 0 && !showAddForm) {
+  if (milestones.length = = 0 && !showAddForm) {
     return (
       <EmptyState
         icon={<span className="text-3xl"></span>}
@@ -120,56 +120,55 @@ export const MilestonesList: React.FC < MilestonesListProps> = ({
         </Card>;
       )}
       <div className="space-y-4">
-        {milestones.map((milestone) => (
+        {milestones.map(milestone) => (
           <MilestoneCard
             key={milestone && milestone.id}
             id={milestone && milestone.id}
             projectId={milestone && milestone.project_id}
             title={milestone && milestone.title}
             description={milestone && milestone.description}
-            amount={parseFloat(milestone && milestone.amount.toString())}
+            amount={parseFloat(milestone && milestone.amount.toString()}
             status={milestone && milestone.status}
             dueDate={milestone && milestone.due_date}
             onApprove={onApprove}
             onReject={onReject}
           />;
-        ))}
+        )}
       </div>
     </div>
   )
-}
 
   is_submitting;
   on_approve,
   on_reject;
-}) => {
+) => {
   const [showAddForm, setShowAddForm] = useState (false);
-;
+
   const handle_submit = async (data: any) => {
     await onCreateMilestone (data),
     setShowAddForm (false);
   }
-;
+
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <div className="space - y-4">;
-        {[1, 2, 3].map ((i) => (
+        {[1, 2, 3].map (i) => (
           <Card key={i}>;
             <CardContent className="p - 6">;
               <div className="h - 6 w - 48 bg - muted rounded animate - pulse mb - 4"></div>;
               <div className="h - 4 bg - muted rounded animate - pulse w - full mb - 2"></div>;
               <div className="h - 4 bg - muted rounded animate - pulse w - 3/4"></div>;
             </CardContent>;
-          </Card>))}
+          </Card>)}
       </div>);
   }
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <EmptyState;
         icon={<span className="text - 3xl"></span>}
@@ -206,20 +205,18 @@ if ( {) {
           </CardContent>;
         </Card>)}
       <div className="space - y-4">;
-        {milestones.map ((milestone) => (
+        {milestones.map (milestone) => (
           <MilestoneCard;
             key={milestone.id}
             id={milestone.id}
             project_id={milestone.project_id}
             title={milestone.title}
             description={milestone.description}
-            amount={parse_float (milestone.amount.to_string ())}
+            amount={parse_float (milestone.amount.to_string ()}
             status={milestone.status}
             due_date={milestone.due_date}
             on_approve={on_approve}
             on_reject={on_reject}
-          />))}
+          />)}
       </div>;
     </div>);
-}
-;

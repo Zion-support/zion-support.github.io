@@ -19,17 +19,16 @@ const contactInfo = {;
 	email: 'kleber@ziontechgroup.com',;
 	address: '364 E Main St STE 1008 Middletown DE 19709',;
 	website: 'https://ziontechgroup.com';
-},;
+,;
 function getPriceValue(price: Service['price']): string {;
-	if (price && typeof price === 'object' && 'monthly' in price) {;
+	if (price && typeof price = = 'object' && 'monthly' in price) {;
 		return price.monthly.toString();
 	}
-	if (typeof price === 'string') {;
+	if (typeof price = = 'string') {;
 		return price;
 	}
 	return '99';
-}
-;
+
 function getAllServices(): Service[] {;
 	return enhancedRealMicroSaasServices;
 		.concat(extraServices as Service[], additionalEnhancedServices as Service[]);
@@ -42,25 +41,22 @@ function getAllServices(): Service[] {;
 		.concat(realServicesQ12025 as unknown as Service[]);
 		.concat(realServicesQ32025 as unknown as Service[]),;
 		.concat(newVerifiedServicesQ22025 as unknown as Service[]);
-}
-;
+
 function toSlug(value: string): string {;
 	return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-}
-;
+
 function extractServiceSlugFromLink(link: string): string | null {;
 	try {;
 		const url = new URL(link),;
 		const path = url.pathname.replace(/^\/+|\/+$/g, ''),;
-		if (path.startsWith('services/')) {;
+		if (path.startsWith('services/') {;
 			return path.substring('services/'.length);
 		}
 		return null;
 	} catch {;
 		return null;
 	}
-}
-;
+
 export async function getStaticPaths() {;
 	const services = getAllServices(),;
 	const slugs = new Set<string>(),;
@@ -71,47 +67,42 @@ export async function getStaticPaths() {;
 	for (const s of services) {;
 		// Prefer explicit link under /services/* when available;
 		const fromLink = s.link ? extractServiceSlugFromLink(s.link) : null,;
-		if (fromLink && !staticServiceSlugs.includes(fromLink)) {;
+		if (fromLink && !staticServiceSlugs.includes(fromLink) {;
 			slugs.add(fromLink),;
 			continue;
 		}
 		// Fall back to normalized id or name to provide a stable URL under /services/*;
 		const idSlug = s.id ? toSlug(s.id) : '',;
 		const nameSlug = s.name ? toSlug(s.name) : '',;
-		if (idSlug && !staticServiceSlugs.includes(idSlug)) {;
+		if (idSlug && !staticServiceSlugs.includes(idSlug) {;
 			slugs.add(idSlug);
 		}
-		if (nameSlug && !staticServiceSlugs.includes(nameSlug)) {;
+		if (nameSlug && !staticServiceSlugs.includes(nameSlug) {;
 			slugs.add(nameSlug);
 		}
-	}
-;
+
 	return {;
-		paths: Array.from(slugs).map((slug) => ({ params: { slug } })),;
+		paths: Array.from(slugs).map(slug) => ({ params: { slug }),;
 		fallback: false;
 	}
-}
-;
-export async function getStaticProps({ params }: { params: { slug: string } }) {;
+
+export async function getStaticProps({ params }: { params: { slug: string }) {;
 	const services = getAllServices(),;
 	const incomingSlug = (params?.slug || '').replace(/^\/+|\/+$/g, ''),;
-	let service: Service | undefined = services.find((s) => {;
+	let service: Service | undefined = services.find(s) => {;
 		if (!s.link) return false,;
 		const fromLink = extractServiceSlugFromLink(s.link),;
-		return fromLink === incomingSlug;
+		return fromLink = = incomingSlug;
 	}),;
 	if (!service) {;
-		service = services.find((s) => toSlug(s.id || '') === incomingSlug || toSlug(s.name || '') === incomingSlug);
+		service = services.find(s) => toSlug(s.id || '') = = incomingSlug || toSlug(s.name || '') = = incomingSlug);
 	}
-;
+
 	if (!service) {;
 		return { notFound: true }
-	}
-;
+
 	return {;
 		props: { service }
-	}
-}
 
 export default function ServiceDetailPage({ service }: { service: Service }) {
 	return (
@@ -122,7 +113,7 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 				<link rel="canonical" href={service.link} />
 				<script
 					type="application/ld+json"
-					dangerouslySetInnerHTML={{
+					dangerouslySetInnerHTML={
 						__html: JSON.stringify(
 							{
 								"@context": "https://schema.org",
@@ -140,12 +131,11 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 									        price: "99",
 									priceCurrency: "USD",
 									availability: "https://schema.org/InStock"
-								}
-							},;
+								},;
 							null,;
 							2;
 							);
-						}}
+						}
 				/>
 			</Head>
 
@@ -167,12 +157,12 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 						<div className="p-6 bg-black/40 border border-gray-700/50 rounded-lg">
 							<h3 className="text-white text-lg font-semibold mb-4">Key Features</h3>
 							<ul className="space-y-2 text-gray-300">
-								{(service.features || []).slice(0, 12).map((f: string) => (
+								{(service.features || []).slice(0, 12).map(f: string) => (
 									<li key={f} className="flex items-start gap-2">
 										<Check className="w-4 h-4 mt-0.5 text-emerald-400" />
 										<span>{f}</span>
 									</li>
-								))}
+								)}
 							</ul>;
 						</div>;
 						{/* Use Cases & Integrations */}
@@ -182,17 +172,17 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 								<div>
 									<div className="text-sm text-gray-400 mb-2">Use Cases</div>
 									<ul className="list-disc list-inside space-y-1">
-										{(service.useCases || []).slice(0, 8).map((u: string) => (
+										{(service.useCases || []).slice(0, 8).map(u: string) => (
 											<li key={u}>{u}</li>
-										))}
+										)}
 									</ul>
 								</div>
 								<div>
 									<div className="text-sm text-gray-400 mb-2">Integrations</div>
 									<div className="flex flex-wrap gap-2">
-										{(service.integrations || []).slice(0, 10).map((i: string) => (
+										{(service.integrations || []).slice(0, 10).map(i: string) => (
 											<span key={i} className="px-2 py-1 bg-gray-800/60 border border-gray-700 rounded text-xs">{i}</span>
-										))}
+										)}
 									</div>
 								</div>
 							</div>
@@ -246,7 +236,7 @@ const ServiceDetail: NextPage = () => {
   const router = useRouter(),
   const { slug } = router.query as { slug?: string },
   const items = services as any[],
-  const service = items.find((s) => s.slug === slug),
+  const service = items.find(s) => s.slug = = slug),
 
   if (!service) {
     return (
@@ -292,7 +282,7 @@ const ServiceDetail: NextPage = () => {
       </div>
     </EnhancedLayout>
   )
-},
+,
 
 export default ServiceDetail
 						<div className="p-6 bg-black/40 border border-gray-700/50 rounded-lg">;
@@ -301,17 +291,17 @@ export default ServiceDetail
 								<div>;
 									<div className="text-sm text-gray-400 mb-2">Use Cases</div>;
 									<ul className="list-disc list-inside space-y-1">;
-										{(service.useCases || []).slice(0, 8).map((u: string) => (;
+										{(service.useCases || []).slice(0, 8).map(u: string) => (;
 											<li key={u}>{u}</li>;
-										))}
+										)}
 									</ul>;
 								</div>;
 								<div>;
 									<div className="text-sm text-gray-400 mb-2">Integrations</div>;
 									<div className="flex flex-wrap gap-2">;
-										{(service.integrations || []).slice(0, 10).map((i: string) => (;
+										{(service.integrations || []).slice(0, 10).map(i: string) => (;
 											<span key={i} className="px-2 py-1 bg-gray-800/60 border border-gray-700 rounded text-xs">{i}</span>;
-										))}
+										)}
 									</div>;
 								</div>;
 							</div>;
@@ -362,7 +352,7 @@ const ServiceDetail: NextPage = () => {;
   const router = useRouter(),;
   const { slug } = router.query as { slug?: string },;
   const items = services as any[],;
-  const service = items.find((s) => s.slug === slug),;
+  const service = items.find(s) => s.slug = = slug),;
   if (!service) {;
     return (;
       <EnhancedLayout>;
@@ -376,7 +366,7 @@ const ServiceDetail: NextPage = () => {;
       </EnhancedLayout>;
     );
   }
-;
+
   const priceRange = `$${service.priceRangeUSD[0]} - $${service.priceRangeUSD[1]}`;
   return (;
     <EnhancedLayout>;
@@ -406,7 +396,4 @@ const ServiceDetail: NextPage = () => {;
       </div>;
     </EnhancedLayout>;
   );
-};
 export default ServiceDetail;
-}
-;

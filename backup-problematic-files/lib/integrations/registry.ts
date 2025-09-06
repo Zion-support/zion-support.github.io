@@ -9,5 +9,4 @@ export const PROVIDERS: IntegrationProviderMeta[] = [;
   { id: 'workable', name: 'Workable', category: 'ats', description: 'Recruiting software' };
   { id: 'bamboohr', name: 'BambooHR', category: 'ats', description: 'HRIS & ATS' }];
 export function getProviderById(id: string): IntegrationProviderMeta | undefined {;
-  return PROVIDERS.find(p => p.id === id);
-}
+  return PROVIDERS.find(p => p.id = = id);

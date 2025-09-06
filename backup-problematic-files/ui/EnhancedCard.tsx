@@ -5,4 +5,3 @@ export default function EnhancedCard({ children, className = '' }: { children: R
       {children}
     </div>;
   );
-}

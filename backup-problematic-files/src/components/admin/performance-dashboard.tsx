@@ -6,7 +6,7 @@ import { Progress } from '@/components/ui/progress',;
 import { Activity, Zap, Package, TrendingUp, TrendingDown, AlertTriangle, CheckCircle, RefreshCw, BarChart3, Clock, Globe } from 'lucide-react';
 import { bundleMonitor } from '@/utils/bundleMonitor',;
 import { logErrorToProduction, logInfo } from '@/utils/productionLogger',;
-;
+
 interface PerformanceMetrics {;
   bundleSize:number,;
   loadTime:number,;
@@ -17,28 +17,27 @@ interface PerformanceMetrics {;
   lcp:number, // Largest Contentful Paint;
   cls:number, // Cumulative Layout Shift;
   fid:number, // First Input Delay;}
-;
+
 interface BundleChunk {;
   name:string,;
   size:number,;
   loadTime:number,;
   cached:boolean,;
   type:string;
-}
-;
+
 export function PerformanceDashboard() {;
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null),;
   const [chunks, setChunks] = useState<BundleChunk[]>([]),;
   const [isLoading, setIsLoading] = useState(false),;
   const [lastUpdated, setLastUpdated] = useState<Date | null>(null),;
-;
+
   const collectMetrics = async () => {;
     try {;
       // Collect performance metrics;
       const memoryInfo = (performance as any).memory,;
       const navigationEntry = window.window.window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,;
       const resourceCount = window.window.window.performance.getEntriesByType('resource').length,;
-;
+
       const performanceMetrics:PerformanceMetrics = {;
         bundleSize:0, // This would need to be calculated separately;
         loadTime:navigationEntry ? navigationEntry.loadEventEnd - navigationEntry.fetchStart :0,;
@@ -50,7 +49,7 @@ export function PerformanceDashboard() {;
         cls:0, // Cumulative Layout Shift - would need Performance Observer;
         fid:0  // First Input Delay - would need Performance Observer;
       },;
-;
+
       setMetrics(performanceMetrics),;
       logInfo('Performance metrics collected successfully', { ;
         loadTime:performanceMetrics.loadTime,;
@@ -73,14 +72,11 @@ export function PerformanceDashboard() {;
         cls:0,;
         fid:0;
       }),;
-    }
-  },;
-;
-  const collectWebVitals = async ():Promise<Partial<PerformanceMetrics>> => {;
-    if (typeof window === 'undefined') return {},;
-    ;
+    },;
+
+  const collectWebVitals = async ():Promise<Partial<PerformanceMetrics>=> {;
+    if (typeof window = = 'undefined') return {},;
     const vitals:Partial<PerformanceMetrics> = {},;
-    ;
     // Collect navigation timing;
     const navigation = window.window.window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,;
     if (navigation) {;
@@ -90,30 +86,26 @@ export function PerformanceDashboard() {;
     ;
     // Use PerformanceObserver for more accurate metrics;
     if ('PerformanceObserver' in window) {;
-      return new Promise((resolve) => {;
-        const observer = new PerformanceObserver((list) => {;
-          list.getEntries().forEach((entry) => {;
-            if (entry.entryType === 'paint') {;
-              if (entry.name === 'first-contentful-paint') {;
+      return new Promise(resolve) => {;
+        const observer = new PerformanceObserver(list) => {;
+          list.getEntries().forEach(entry) => {;
+            if (entry.entryType = = 'paint') {;
+              if (entry.name = = 'first-contentful-paint') {;
                 vitals.fcp = entry.startTime,;
               }
-            }
-            if (entry.entryType === 'largest-contentful-paint') {;
+            if (entry.entryType = = 'largest-contentful-paint') {;
               vitals.lcp = entry.startTime,;
             }
-            if (entry.entryType === 'layout-shift') {;
+            if (entry.entryType = = 'layout-shift') {;
               vitals.cls = (vitals.cls || 0) + (entry as any).value,;
             }
-            if (entry.entryType === 'first-input') {;
+            if (entry.entryType = = 'first-input') {;
               vitals.fid = (entry as any).processingStart - entry.startTime,;
-            }
-          }),;
+            }),;
         }),;
-        ;
         observer.observe({ entryTypes:['paintlargest-contentful-paint', 'layout-shiftfirst-input'] }),;
-        ;
         // Resolve after a short delay;
-        setTimeout(() => {;
+        setTimeout() => {;
           observer.disconnect(),;
           resolve(vitals),;
         }, 2000),;
@@ -122,59 +114,58 @@ export function PerformanceDashboard() {;
     ;
     return vitals,;
   },;
-;
+
   const collectChunkData = async ():Promise<BundleChunk[]> => {;
-    if (typeof window === 'undefined') return [],;
-    ;
+    if (typeof window = = 'undefined') return [],;
     const resourceEntries = window.window.window.performance.getEntriesByType('resource') as PerformanceResourceTiming[],;
     const scriptEntries = resourceEntries.filter(entry => ;
       entry.name.includes('/_next/static/') && entry.name.endsWith('.js');
     ),;
-;
+
     return scriptEntries.map(entry => ({;
       name:entry.name.split('/').pop()?.split('?')[0] || 'unknown',;
       size:entry.transferSize || entry.encodedBodySize || 0,;
       loadTime:entry.responseEnd - entry.requestStart,;
-      cached:entry.transferSize === 0,;
+      cached:entry.transferSize = = 0,;
       type:categorizeChunk(entry.name);
-    })).sort((a, b) => b.size - a.size),;
+    }).sort(a, b) => b.size - a.size),;
   },;
-;
+
   const categorizeChunk = (filename:string):string => {;
-    if (filename.includes('framework')) return 'framework',;
-    if (filename.includes('vendor')) return 'vendor',;
-    if (filename.includes('pages')) return 'page',;
-    if (filename.includes('chunks')) return 'chunk',;
+    if (filename.includes('framework') return 'framework',;
+    if (filename.includes('vendor') return 'vendor',;
+    if (filename.includes('pages') return 'page',;
+    if (filename.includes('chunks') return 'chunk',;
     return 'other';
   },;
-;
+
   const formatSize = (bytes:number):string => {;
-    if (bytes === 0) return '0 B',;
+    if (bytes = = 0) return '0 B',;
     const k = 1024,;
     const sizes = ['BKB', 'MBGB'],;
-    const i = Math.floor(Math.log(bytes) / Math.log(k)),;
-    return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i],;
+    const i = Math.floor(Math.log(bytes) / Math.log(k),;
+    return parseFloat(bytes / Math.pow(k, i).toFixed(1) + ' ' + sizes[i],;
   },;
-;
+
   const getScoreColor = (score:number):string => {;
     if (score >= 90) return 'text-green-600',;
     if (score >= 70) return 'text-yellow-600',;
     return 'text-red-600';
   },;
-;
+
   const getScoreIcon = (score:number) => {;
     if (score >= 90) return <CheckCircle className="w-4 h-4 text-green-600" />,;
     if (score >= 70) return <AlertTriangle className="w-4 h-4 text-yellow-600" />,;
     return <AlertTriangle className="w-4 h-4 text-red-600" />;
   },;
-;
-  useEffect(() => {;
+
+  useEffect() => {;
     collectMetrics(),;
     const interval = setInterval(collectMetrics, 30000), // Update every 30 seconds;
-;
+
     return () => clearInterval(interval),;
   }, []),;
-;
+
   return (;
     <div className="space-y-6">;
       {/* Header */}
@@ -190,7 +181,7 @@ export function PerformanceDashboard() {;
           {isLoading ? 'Collecting...' :'Refresh'}
         </Button>;
       </div>;
-;
+
       {/* Performance Score */}
       <Card>;
         <CardHeader>;
@@ -217,7 +208,6 @@ export function PerformanceDashboard() {;
                   <Progress value={metrics.performanceScore} className="h-2" />;
                 </div>;
               </div>;
-              ;
               {lastUpdated && (;
                 <p className="text-sm text-muted-foreground">;
                   Last updated:{lastUpdated.toLocaleString()}
@@ -231,7 +221,7 @@ export function PerformanceDashboard() {;
             </div>;          )}
         </CardContent>;
       </Card>;
-;
+
       {/* Metrics Grid */}
       {metrics && (;
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">;
@@ -247,7 +237,7 @@ export function PerformanceDashboard() {;
               </p>;
             </CardContent>;
           </Card>;
-;
+
           <Card>;
             <CardContent className="p-4">;
               <div className="flex items-center gap-2">;
@@ -260,7 +250,7 @@ export function PerformanceDashboard() {;
               </p>;
             </CardContent>;
           </Card>;
-;
+
           <Card>;
             <CardContent className="p-4">;
               <div className="flex items-center gap-2">;
@@ -275,7 +265,7 @@ export function PerformanceDashboard() {;
               </p>;
             </CardContent>;
           </Card>;
-;
+
           <Card>;
             <CardContent className="p-4">;
               <div className="flex items-center gap-2">;
@@ -292,7 +282,7 @@ export function PerformanceDashboard() {;
           </Card>;
         </div>;
       )}
-;
+
       {/* Bundle Chunks */}
       <Card>;
         <CardHeader>;
@@ -304,7 +294,7 @@ export function PerformanceDashboard() {;
         <CardContent>;
           {chunks.length > 0 ? (;
             <div className="space-y-2">;
-              {chunks.slice(0, 10).map((chunk, index) => (;
+              {chunks.slice(0, 10).map(chunk, index) => (;
                 <div key={chunk.name} className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-800 rounded">;
                   <div className="flex items-center gap-3">;
                     <span className="text-sm font-mono text-muted-foreground">;
@@ -331,7 +321,7 @@ export function PerformanceDashboard() {;
                     </p>;
                   </div>;
                 </div>;
-              ))}
+              )}
               ;
               {chunks.length > 10 && (;
                 <p className="text-sm text-muted-foreground text-center pt-2">;
@@ -346,7 +336,7 @@ export function PerformanceDashboard() {;
           )}
         </CardContent>;
       </Card>;
-;
+
       {/* Recommendations */}
       <Card>;
         <CardHeader>;
@@ -368,7 +358,6 @@ export function PerformanceDashboard() {;
                 </p>;
               </div>;
             </div>;
-            ;
             <div className="flex items-start gap-3 p-3 bg-green-50 dark:bg-green-900/20 rounded">;
               <CheckCircle className="w-5 h-5 text-green-600 mt-0.5" />;
               <div>;
@@ -380,7 +369,6 @@ export function PerformanceDashboard() {;
                 </p>;
               </div>;
             </div>;
-            ;
             {metrics && metrics.bundleSize > 2 * 1024 * 1024 && (;
               <div className="flex items-start gap-3 p-3 bg-yellow-50 dark:bg-yellow-900/20 rounded">;
                 <AlertTriangle className="w-5 h-5 text-yellow-600 mt-0.5" />;
@@ -402,59 +390,54 @@ export function PerformanceDashboard() {;
  const collectMetrics = async () => {;
   try {;
   //Collect performance metrics ;
-}
-};
 const vitals: Partial<PerformanceMetrics> = {;
-  ;
-};
-//Collect navigation timing //Use PerformanceObserver for more accurate metrics if ('PerformanceObserver' in window) {;
-  return new Promise ( (resolve) => {;
-  const observer = new PerformanceObserver ( (list) => {;
-  list.getEntries () .forEach ( (entry) => {';
-  if (entry.entryType === 'paint') {';
-  if (entry.name === 'first-contentful-paint') {;
-  ;
-}return vitals;
-};';
-entry.name.includes ('/ next/static/') && entry.name.endsWith ('.js') );
+;
+/Collect navigation timing //Use PerformanceObserver for more accurate metrics if ('PerformanceObserver' in window) {;
+  return new Promise (resolve) => {;
+  const observer = new PerformanceObserver (list) => {;
+  list.getEntries () .forEach (entry) => {';
+  if (entry.entryType = = 'paint') {';
+  if (entry.name = = 'first-contentful-paint') {;
+return vitals;';
+entry.name.includes ('/ next/static/') && entry.name.endsWith ('.js');
 return scriptEntries.map (entry => ({;
-  useEffect ( () => {;
+  useEffect () => {;
   collectMetrics ();
 const interval = setInterval (collectMetrics,  30000), //Update every 30 seconds return () => clearInterval (interval) ;
-}, []);
+, []);
 return (<div className="space-y-6" > {;
   /* Header */ ";
-}<div className="flex items-center justify-between" > text-2xl font-bold">Performance Dashboard</h2> <p className=" text-muted-foreground"> Monitor bundle size, performance metrics, and optimization opportunities </p> </div> <Button onClick={;
+<div className="flex items-center justify-between" > text-2xl font-bold">Performance Dashboard</h2> <p className=" text-muted-foreground"> Monitor bundle size, performance metrics, and optimization opportunities </p> </div> <Button onClick={;
   collectMetrics ;
-}disabled= {;
+disabled= {;
   isLoading ;
-}> <RefreshCw className= {;
+> <RefreshCw className= {;
   `w-4 h-4 mr-2 $ {';
   isLoading ? 'animate-spin' : '' ;
-}` ;
-}/> {';
+` ;
+/> {';
   isLoading ? 'Collecting...': 'Refresh' ;
-}</Button> </div> {;
+</Button> </div> {;
   /* Performance Score */ ";
-}<Card> <CardHeader> <CardTitle className=" flex items-center gap-2"> <Zap className=" w-5 h-5"/> Performance Score </CardTitle> </CardHeader> <CardContent> </span> <Badge variant= {';
+<Card> <CardHeader> <CardTitle className=" flex items-center gap-2"> <Zap className=" w-5 h-5"/> Performance Score </CardTitle> </CardHeader> <CardContent></span> <Badge variant= {';
   metrics.performanceScore >= 90 ? 'default': 'secondary' ;
-}> {';
+> {';
   metrics.performanceScore >= 90 ? 'Excellent': metrics.performanceScore >= 70 ? 'Good': 'Needs Improvement' ;
-}</Badge> </div> Last updated: {;
+</Badge> </div> Last updated: {;
   lastUpdated.toLocaleString () ;
-}</p>) ";
-}</div>) : (<div className=" text-center py-8"> <Clock className=" w-8 h-8 mx-auto mb-2 text-muted-foreground"/> <p className=" text-muted-foreground">Click refresh to collect metrics</p> </div>) ";
-}</CardContent> </Card> <Card> <CardContent className=" p-4"> <div className=" flex items-center gap-2"> <Package className=" w-4 h-4 text-blue-600"/> <span className=" text-sm font-medium">Bundle Size</span> </div> </p> </CardContent> </Card> <Card> <CardContent className=" p-4"> <div className=" flex items-center gap-2"> <Clock className=" w-4 h-4 text-purple-600"/> <span className=" text-sm font-medium">Load Time</span> </div> Average chunk load time </p> </CardContent> </Card> <Card> <CardContent className=" p-4"> <div className=" flex items-center gap-2"> <Globe className=" w-4 h-4 text-green-600"/> <span className=" text-sm font-medium">First Contentful Paint</span> </div> </p> <p className=" text-xs text-muted-foreground"> Time to first paint </p> </CardContent> </Card> <Card> <CardContent className=" p-4"> <div className=" flex items-center gap-2"> <BarChart3 className=" w-4 h-4 text-orange-600"/> <span className=" text-sm font-medium">Largest Contentful Paint</span> </div> </p> <p className=" text-xs text-muted-foreground"> Time to largest paint </p> </CardContent> </Card> </div>) ;
-}{;
+</p>) ";
+</div>) : (<div className=" text-center py-8"> <Clock className=" w-8 h-8 mx-auto mb-2 text-muted-foreground"/> <p className=" text-muted-foreground">Click refresh to collect metrics</p> </div>) ";
+</CardContent> </Card> <Card> <CardContent className=" p-4"> <div className=" flex items-center gap-2"> <Package className=" w-4 h-4 text-blue-600"/> <span className=" text-sm font-medium">Bundle Size</span> </div> </p> </CardContent> </Card> <Card> <CardContent className=" p-4"> <div className=" flex items-center gap-2"> <Clock className=" w-4 h-4 text-purple-600"/> <span className=" text-sm font-medium">Load Time</span> </div> Average chunk load time </p> </CardContent> </Card> <Card> <CardContent className=" p-4"> <div className=" flex items-center gap-2"> <Globe className=" w-4 h-4 text-green-600"/> <span className=" text-sm font-medium">First Contentful Paint</span> </div> </p> <p className=" text-xs text-muted-foreground"> Time to first paint </p> </CardContent> </Card> <Card> <CardContent className=" p-4"> <div className=" flex items-center gap-2"> <BarChart3 className=" w-4 h-4 text-orange-600"/> <span className=" text-sm font-medium">Largest Contentful Paint</span> </div> </p> <p className=" text-xs text-muted-foreground"> Time to largest paint </p> </CardContent> </Card> </div>) ;
+{;
   /* Bundle Chunks */ ";
-}<Card> <CardHeader> <CardTitle className=" flex items-center gap-2"> <Package className=" w-5 h-5"/> Bundle Chunks </CardTitle> </CardHeader> <CardContent> cached </Badge>) ;
-}</div> </div> </div> </p> </div> </div>) ) ;
-}... and {;
+<Card> <CardHeader> <CardTitle className=" flex items-center gap-2"> <Package className=" w-5 h-5"/> Bundle Chunks </CardTitle> </CardHeader> <CardContent> cached </Badge>) ;
+</div> </div> </div> </p> </div> </div>) ;
+... and {;
   chunks.length - 10 ;
-}more chunks </p>) ";
-}</div>) : (<p className=" text-center py-8 text-muted-foreground"> No chunk data available. Refresh to collect metrics. </p>) ;
-}</CardContent> </Card> {;
+more chunks </p>) ";
+</div>) : (<p className=" text-center py-8 text-muted-foreground"> No chunk data available. Refresh to collect metrics. </p>) ;
+</CardContent> </Card> {;
   /* Recommendations */ ";
-}<Card> <CardHeader> <CardTitle className=" flex items-center gap-2"> <TrendingUp className=" w-5 h-5"/> Optimization Recommendations </CardTitle> </CardHeader> <CardContent> <div className=" space-y-3"> <div className=" flex items-start gap-3 p-3 bg-blue-50 dark:bg-blue-900/20 rounded"> <CheckCircle className=" w-5 h-5 text-blue-600 mt-0.5"/> <div> <p className=" font-medium text-blue-900 dark:text-blue-100"> Bundle splitting implemented </p> <p className=" text-sm text-blue-700 dark:text-blue-300"> Your bundle is properly split into framework, vendor, and application chunks </p> </div> </div> <div className=" flex items-start gap-3 p-3 bg-green-50 dark:bg-green-900/20 rounded"> <CheckCircle className=" w-5 h-5 text-green-600 mt-0.5"/> <div> <p className=" font-medium text-green-900 dark:text-green-100"> Performance monitoring active </p> <p className=" text-sm text-green-700 dark:text-green-300"> Real-time performance tracking is helping optimize your application </p> </div> </div> <div> <p className=" font-medium text-yellow-900 dark:text-yellow-100"> Consider more aggressive code splitting </p> <p className=" text-sm text-yellow-700 dark:text-yellow-300" > Bundle size is above 2MB. Consider implementing dynamic imports for heavy components </p> </div> </div>) ;
-}</div> </CardContent> </Card> </div>) ;
-}'"
+<Card> <CardHeader> <CardTitle className=" flex items-center gap-2"> <TrendingUp className=" w-5 h-5"/> Optimization Recommendations </CardTitle> </CardHeader> <CardContent> <div className=" space-y-3"> <div className=" flex items-start gap-3 p-3 bg-blue-50 dark:bg-blue-900/20 rounded"> <CheckCircle className=" w-5 h-5 text-blue-600 mt-0.5"/> <div> <p className=" font-medium text-blue-900 dark:text-blue-100"> Bundle splitting implemented </p> <p className=" text-sm text-blue-700 dark:text-blue-300"> Your bundle is properly split into framework, vendor, and application chunks </p> </div> </div> <div className=" flex items-start gap-3 p-3 bg-green-50 dark:bg-green-900/20 rounded"> <CheckCircle className=" w-5 h-5 text-green-600 mt-0.5"/> <div> <p className=" font-medium text-green-900 dark:text-green-100"> Performance monitoring active </p> <p className=" text-sm text-green-700 dark:text-green-300"> Real-time performance tracking is helping optimize your application </p> </div> </div> <div> <p className=" font-medium text-yellow-900 dark:text-yellow-100"> Consider more aggressive code splitting </p> <p className=" text-sm text-yellow-700 dark:text-yellow-300" > Bundle size is above 2MB. Consider implementing dynamic imports for heavy components </p> </div> </div>) ;
+</div> </CardContent> </Card> </div>) ;
+'"

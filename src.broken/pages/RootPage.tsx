@@ -6,5 +6,3 @@ export function RootPage() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

@@ -8,7 +8,7 @@ import {;
   simulateEconomy,;
   ScenarioKey,;
   applyScenario} from '../../utils/data/tokenSimulator',;
-;
+
 export default function EconomySimulatorPage() {;
   const [inputs, setInputs] = useState<SimulatorInputs>({;
     circulatingSupply:1_000_000,;
@@ -20,21 +20,21 @@ export default function EconomySimulatorPage() {;
     emissionSchedule:'flat',;
     emissionMonthlyChangePct:0,;
     forecastMonths:24}),;
-;
+
   const [operatorPrompt, setOperatorPrompt] = useState(;
     'Analyze the impact of increasing ZION$ staking rewards by 2x over 6 months with 10K active users and weekly emission cap.';
   ),;
   const [analysis, setAnalysis] = useState<string>(''),;
   const [loadingAnalysis, setLoadingAnalysis] = useState<boolean>(false),;
-;
+
   const handleScenario = (scenario:ScenarioKey) => {;
-    setInputs((prev) => applyScenario(prev, scenario)),;
+    setInputs(prev) => applyScenario(prev, scenario),;
   },;
-;
-  const series = useMemo(() => simulateEconomy(inputs), [inputs]),;
-;
+
+  const series = useMemo() => simulateEconomy(inputs), [inputs]),;
+
   const containerId = 'zion-simulator-container',;
-;
+
   const onAnalyze = async () => {;
     try {;
       setLoadingAnalysis(true),;
@@ -42,7 +42,7 @@ export default function EconomySimulatorPage() {;
       const res = await fetch('/api/economy/analyze', {;
         method:'POST',;
         headers:{ 'Content-Type':'application/json' },;
-        body:JSON.stringify({ operatorPrompt, context:{ inputs, summary:series.summary } })}),;
+        body:JSON.stringify({ operatorPrompt, context:{ inputs, summary:series.summary })}),;
       const json = await res.json(),;
       if ('analysis' in json) setAnalysis(json.analysis as string),;
       else setAnalysis('Failed to analyze.'),;
@@ -50,9 +50,8 @@ export default function EconomySimulatorPage() {;
       setAnalysis('Failed to analyze.'),;
     } finally {;
       setLoadingAnalysis(false),;
-    }
-  },;
-;
+    },;
+
   return (;
     <EnhancedLayout>;
       <div id={containerId} className="space-y-8">;
@@ -60,11 +59,11 @@ export default function EconomySimulatorPage() {;
           <h1 className="text-2xl font-semibold">ZION$ Economy Simulator</h1>;
           <SimulatorExports points={series.points} containerId={containerId} />;
         </div>;
-;
+
         <div className="bg-white/70 dark:bg-black/40 rounded-lg p-4 border border-gray-200 dark:border-gray-800">;
           <SimulatorForm values={inputs} onChange={setInputs} onScenario={handleScenario} />;
         </div>;
-;
+
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">;
           <div className="lg:col-span-2">;
             <SimulatorCharts points={series.points} />;
@@ -80,7 +79,7 @@ export default function EconomySimulatorPage() {;
                 <li>Max inflation:{series.summary.maxInflationPct.toFixed(2)}%</li>;
               </ul>;
             </div>;
-;
+
             <div className="bg-white/70 dark:bg-black/40 rounded-lg p-4 border border-gray-200 dark:border-gray-800">;
               <label className="flex flex-col gap-2">;
                 <span className="text-sm font-medium">Operator Prompt</span>;
@@ -110,4 +109,3 @@ export default function EconomySimulatorPage() {;
       </div>;
     </EnhancedLayout>;
   ),;
-}

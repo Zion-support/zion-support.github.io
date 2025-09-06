@@ -1,4 +1,4 @@
-{
+
   "timestamp": "2025-09-06T09:31:03.020Z",
   "filesFixed": 5,
   "errors": 0,
@@ -9,4 +9,3 @@
     "pages/api/integrations/logs.ts",
     "pages/api/integrations/oauth/[provider]/callback.ts"
   ]
-}

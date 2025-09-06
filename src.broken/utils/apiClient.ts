@@ -6,13 +6,12 @@ export class ApiError extends Error {;
     this.status = status,;
     this.data = data;
   }
-}
-;
+
 export async function apiClient(;
   input: RequestInfo | URL,;
   init?: RequestInit,;
   retries = 3;
-): Promise<Response> {;
+: Promise<Response> {;
   let lastError: unknown,;
   for (let attempt = 0, attempt < retries, attempt++) {;
     try {;
@@ -36,7 +35,4 @@ export async function apiClient(;
       }
       throw err;
     }
-  }
   throw lastError;
-}
-;

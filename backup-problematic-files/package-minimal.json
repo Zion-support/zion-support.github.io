@@ -1,4 +1,4 @@
-{
+
   "name": "bolt.new.zion.app",
   "version": "0.1.0",
   "private": true,
@@ -33,4 +33,3 @@
     "eslint": "^8.57.0",
     "eslint-config-next": "^14.0.0"
   }
-}

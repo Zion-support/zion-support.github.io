@@ -3,8 +3,7 @@ function getClient(): OpenAI | null {;
   const apiKey = process.env.OPENAI_API_KEY,;
   if (!apiKey) return null,;
   return new OpenAI({ apiKey });
-}
-;
+
 export async function generateText(prompt: string, system?: string): Promise<string> {;
   const client = getClient(),;
   if (!client) {;
@@ -17,5 +16,3 @@ export async function generateText(prompt: string, system?: string): Promise<str
       { role: 'user', content: prompt }];
     temperature: 0.4});
   return resp.choices?.[0]?.message?.content || '';
-}
-;

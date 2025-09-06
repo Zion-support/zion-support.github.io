@@ -36,7 +36,7 @@ import {;
   Building,;
   Database,;
   Sprout;
-} from 'lucide-react';
+ from 'lucide-react';
 
 import React from 'react';
 import Layout from '../components / layout / Layout';
@@ -76,7 +76,7 @@ import {
   Building
   Database
   Sprout
-} from 'lucide-react';
+ from 'lucide-react';
 const microSaasProducts = [
   {
     id: 1
@@ -108,7 +108,7 @@ const microSaasProducts = [
     features: ["Threat detection", "Automated response", "Compliance reporting", "Security dashboard"]
     benefits: ["99.9% threat detection", "Automated response", "Compliance ready", "24/7 monitoring"]
   }
-];
+;
 const categories = [
   'Voice Technology'
   'IoT Management'
@@ -127,7 +127,7 @@ const categories = [
   'Recommendation Engine'
   'Data Engineering'
   'Chat Analytics'
-];
+;
 export default function MicroSaasPage() {
   ArrowRight,
   Building2,
@@ -162,8 +162,8 @@ export default function MicroSaasPage() {
   Building,
   Database,
   Sprout;
-} from 'lucide-react';
-;
+ from 'lucide-react';
+
 const microSaasProducts = [;
   {
     id: 1,
@@ -195,8 +195,8 @@ const microSaasProducts = [;
     features: ["Threat detection", "Automated response", "Compliance reporting", "Security dashboard"],
     benefits: ["99.9% threat detection", "Automated response", "Compliance ready", "24 / 7 monitoring"];
   }
-];
 ;
+
 const categories = [;
   'Voice Technology',
   'IoT Management',
@@ -215,8 +215,7 @@ const categories = [;
   'Recommendation Engine',
   'Data Engineering',
   'Chat Analytics';
-];
-;
+
 export default /**
  * MicroSaasPage - Function description
  */
@@ -232,9 +231,9 @@ function MicroSaasPage() {
         <section className="bg - gradient - to - r from - blue - 600 to - purple - 700 text - white py - 20">;
           <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, coordinate_y: 30 }
+              animate={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
               className="text - center";
             >;
               <h1 className="text - 4xl md:text - 6xl font - bold mb - 6">;
@@ -298,15 +297,15 @@ import {
   Award as AwardIcon
   Star as StarIcon
   Home;
-} from 'lucide-react';
+ from 'lucide-react';
 import Layout from '../components/Layout';
 
 export default function MicroSaaS() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('all');
-  useEffect(() => {
+  useEffect() => {
 
-    const timer = setTimeout(() => setIsLoaded(true), 100);
+    const timer = setTimeout() => setIsLoaded(true), 100);
     return () => clearTimeout(timer);  }, []);
 import Link from 'next/link';
 import Head from 'next/head';
@@ -316,9 +315,9 @@ import ErrorBoundary from '../components/ErrorBoundary';
 export default function MicroSaaS() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('all');
-  
-  useEffect(() => {
-    const timer = setTimeout(() => setIsLoaded(true), 100);
+
+  useEffect() => {
+    const timer = setTimeout() => setIsLoaded(true), 100);
     return () => clearTimeout(timer)
   }, []);
 
@@ -365,7 +364,7 @@ export default function MicroSaaS() {
   Award as AwardIcon,
   Star as StarIcon,
   Home;
-} from 'lucide-react';
+ from 'lucide-react';
 import Layout from '../components / Layout';
 export default /**
  * MicroSaaS - Function description
@@ -373,11 +372,11 @@ export default /**
 function MicroSaaS() {
   const [is_loaded, setIsLoaded] = useState (false);
   const [selected_category, setSelectedCategory] = useState ('all');
-;
-  useEffect (() => {
-    const timer = set_timeout (() => setIsLoaded (true), 100);
+
+  useEffect () => {
+    const timer = set_timeout () => setIsLoaded (true), 100);
     return () => clear_timeout (timer);  }, []);
-;
+
   const contact: ContactInfo = {
     phone: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
@@ -415,9 +414,9 @@ export default function MicroSaasPage() {
         <section className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
             <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -617,9 +616,9 @@ export default function MicroSaasPage() {
     }
   ];
   const filteredProducts =
-    selectedCategory === 'all'
+    selectedCategory = = 'all'
       ? products
-      : products.filter(product => product.category === selectedCategory);
+      : products.filter(product => product.category = = selectedCategory);
 export default function MicroSaas() {
 
   return (
@@ -681,14 +680,14 @@ export default function MicroSaas() {
                     key={category && category.id}
                     onClick={() => setSelectedCategory(category && category.id)}
                     className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${;
-                      selectedCategory === category && category.id;
+                      selectedCategory = = category && category.id;
                         ? 'bg-blue-600 text-white';
                         : 'bg-slate-800 text-slate-300 hover:bg-slate-700';
                     }`}
                   >;
                     {category && category.name} ({category && category.count});
                   </button>;
-                ))}
+                )}
               </div>
             </div>
           </section>
@@ -696,10 +695,10 @@ export default function MicroSaas() {
           <section className='py-16 px-4' role='main'>;
             <div className='max-w-7xl mx-auto'>;
               <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>;
-                {filteredProducts && filteredProducts.map((product, index) => (;
+                {filteredProducts && filteredProducts.map(product, index) => (;
                   <div                    key={product && product.id}
                     className={`p-6 bg-slate-900/60 rounded-xl border border-white/10 hover:border-blue-500/40 transition-all duration-300 hover:scale-105 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-                    style={{ transitionDelay: `${index * 100}ms` }}
+                    style={ transitionDelay: `${index * 100}ms` }
                   >;
                     {product && product.popular && (;
                       <div className='absolute -top-2 -right-2 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded-full'>;
@@ -715,11 +714,11 @@ export default function MicroSaas() {
                         Key Features:
                       </h4>
                       <ul className='text-slate-400 text-sm space-y-1'>
-                        {product.features.map((feature, featureIndex) => (
+                        {product.features.map(feature, featureIndex) => (
                           <li key={featureIndex} className='flex items-center'>
                             <span className='w-1.5 h-1.5 bg-blue-400 rounded-full mr-2 flex-shrink-0'></span>                            {feature}
                           </li>
-                        ))}
+                        )}
                       </ul>
                     </div>
                     <div className='flex items-center justify-between mb-4'>
@@ -733,7 +732,7 @@ export default function MicroSaas() {
                     <button className='w-full py-2 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors'>                      Learn More
                     </button>
                   </div>
-                ))}
+                )}
               </div>
             </div>
           </section>
@@ -891,15 +890,14 @@ export default function MicroSaas() {
           </div>;
         </section>;
 
-
         {/* Products Grid */}
         <section className="py-20 bg-gray-50">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
             <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }
+              viewport={ once: true }
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -910,7 +908,7 @@ export default function MicroSaas() {
               </p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {microSaasProducts.map((product, index) => (
+              {microSaasProducts.map(product, index) => (
                 <motion.div
                   key={product.id}
               className="text-center mb-16">;
@@ -923,13 +921,13 @@ export default function MicroSaas() {
             </motion && motion.div>;
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-              {microSaasProducts && microSaasProducts.map((product, index) => (;
+              {microSaasProducts && microSaasProducts.map(product, index) => (;
                 <motion&& motion.div
                   key={product && product.id}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0 && 0.8, delay: index * 0 && 0.1 }
+                  viewport={ once: true }
                   className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
                 >
                   <div className="flex items-center mb-4">
@@ -939,7 +937,7 @@ export default function MicroSaas() {
                     </div>;
                     <button className='w - full py - 2 bg - blue - 600 hover:bg - blue - 700 rounded - lg font - semibold transition - colors'>                      Learn More;
                     </button>;
-                  </div>))}
+                  </div>)}
               </div>;
             </div>;
           </section>;
@@ -1074,10 +1072,10 @@ export default function MicroSaas() {
         <section className="py - 20 bg - gray - 50">;
           <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, coordinate_y: 30 }
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
               className="text - center mb - 16";
             >;
               <h2 className="text - 3xl md:text - 4xl font - bold text - gray - 900 mb - 4">;
@@ -1088,13 +1086,13 @@ export default function MicroSaas() {
               </p>;
             </motion.div>;
             <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
-              {microSaasProducts.map ((product, index) => (
+              {microSaasProducts.map (product, index) => (
                 <motion.div;
                   key={product.id}
-                  initial={{ opacity: 0, coordinate_y: 30 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, coordinate_y: 30 }
+                  whileInView={ opacity: 1, coordinate_y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }
+                  viewport={ once: true }
                   className="bg - white rounded - lg shadow - lg p - 6 hover:shadow - xl transition - shadow";
                 >;
                   <div className="flex items - center mb - 4">;
@@ -1115,7 +1113,7 @@ export default function MicroSaas() {
                     </span>
                   </div>
                   <div className="space-y-2 mb-6">
-                    {product.features.slice(0, 3).map((feature, idx) => (
+                    {product.features.slice(0, 3).map(feature, idx) => (
                       <div key={idx} className="flex items-center text-sm text-gray-600">
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
                   className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">;
@@ -1137,15 +1135,15 @@ export default function MicroSaas() {
                     </span>;
                   </div>;
                   <div className="space-y-2 mb-6">;
-                    {product && product.features.slice(0, 3).map((feature, idx) => (;
+                    {product && product.features.slice(0, 3).map(feature, idx) => (;
                       <div key={idx} className="flex items-center text-sm text-gray-600">;
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2" />;
                         {feature}
                       </div>;
-                    ))}
+                    )}
                         {feature}
                       </div>;
-                    ))}
+                    )}
                   </div>
                   <Link
                     href="/contact"
@@ -1155,7 +1153,7 @@ export default function MicroSaas() {
                     Learn More
                   </Link>
                 </motion.div>
-              ))}
+              )}
             </div>
           </div>
         </section>
@@ -1166,23 +1164,22 @@ export default function MicroSaas() {
                     Learn More;
                   </Link>;
                 </motion && motion.div>;
-              ))}
+              )}
             </div>;
           </div>;
         </section>;
-
 
         {/* Categories */}
         <section className="py-20 bg-white">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
             <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }
+              viewport={ once: true }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }
+              viewport={ once: true }
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -1193,7 +1190,7 @@ export default function MicroSaas() {
               </p>
             </motion.div>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-              {categories.map((category, index) => (
+              {categories.map(category, index) => (
                 <motion.div
               className="text-center mb-16">;
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
@@ -1205,16 +1202,16 @@ export default function MicroSaas() {
             </motion && motion.div>;
 
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">;
-              {categories && categories.map((category, index) => (;
+              {categories && categories.map(category, index) => (;
                 <motion&& motion.div
                     </span>;
                   </div>;
                   <div className="space - y-2 mb - 6">;
-                    {product.features.slice (0, 3).map ((feature, idx) => (
+                    {product.features.slice (0, 3).map (feature, idx) => (
                       <div key={idx} className="flex items - center text - sm text - gray - 600">;
                         <CheckCircle className="w - 4 h - 4 text - green - 500 mr - 2" />;
                         {feature}
-                      </div>))}
+                      </div>)}
                   </div>;
                   <Link;
                     href="/contact";
@@ -1222,7 +1219,7 @@ export default function MicroSaas() {
                   >;
                     Learn More;
                   </Link>;
-                </motion.div>))}
+                </motion.div>)}
             </div>;
           </div>;
         </section>;
@@ -1230,10 +1227,10 @@ export default function MicroSaas() {
         <section className="py - 20 bg - white">;
           <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, coordinate_y: 30 }
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
               className="text - center mb - 16";
             >;
               <h2 className="text - 3xl md:text - 4xl font - bold text - gray - 900 mb - 4">;
@@ -1244,19 +1241,19 @@ export default function MicroSaas() {
               </p>;
             </motion.div>;
             <div className="grid grid - cols - 2 md:grid - cols - 3 lg:grid - cols - 4 gap - 4">;
-              {categories.map ((category, index) => (
+              {categories.map (category, index) => (
                 <motion.div;
                   key={category}
-                  initial={{ opacity: 0, scale: 0 && 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0 && 0.5, delay: index * 0 && 0.05 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, scale: 0 && 0.9 }
+                  whileInView={ opacity: 1, scale: 1 }
+                  transition={ duration: 0 && 0.5, delay: index * 0 && 0.05 }
+                  viewport={ once: true }
                   className="bg-gray-50 rounded-lg p-4 text-center hover:bg-blue-50 transition-colors">;
                   <span className="text-sm font-medium text-gray-700">;
                     {category}
                   </span>;
                 </motion && motion.div>;
-              ))}
+              )}
             </div>
           </div>
         </section>
@@ -1268,10 +1265,10 @@ export default function MicroSaas() {
         <section className="py-20 bg-blue-600 text-white">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
             <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
 Ready to Transform Your Business?
@@ -1295,15 +1292,15 @@ Ready to Transform Your Business?
       </div>
     </Layout>
   );
-}
+
             </div>
           </section>
         </main>
       </ErrorBoundary>
     </>
   )
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}>;
+              transition={ duration: 0 && 0.8 }
+              viewport={ once: true }>;
               <h2 className="text-3xl md:text-4xl font-bold mb-4">;
                 Ready to Transform Your Business?;
               </h2>;
@@ -1324,23 +1321,19 @@ Ready to Transform Your Business?
       </div>;
     </Layout>;
   );
-}
+
           </section>;
         </main>;
       </ErrorBoundary>;
     </>;
   );
-}
-}
-}
-}
-}
+
                   className="bg - gray - 50 rounded - lg p - 4 text - center hover:bg - blue - 50 transition - colors";
                 >;
                   <span className="text - sm font - medium text - gray - 700">;
                     {category}
                   </span>;
-                </motion.div>))}
+                </motion.div>)}
             </div>;
           </div>;
         </section>;
@@ -1348,10 +1341,10 @@ Ready to Transform Your Business?
         <section className="py - 20 bg - blue - 600 text - white">;
           <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, coordinate_y: 30 }
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >;
               <h2 className="text - 3xl md:text - 4xl font - bold mb - 4">;
 Ready to Transform Your Business?;
@@ -1372,10 +1365,8 @@ Ready to Transform Your Business?;
         </section>;
       </div>;
     </Layout>);
-}
+
           </section>;
         </main>;
       </ErrorBoundary>;
     </>);
-}
-}

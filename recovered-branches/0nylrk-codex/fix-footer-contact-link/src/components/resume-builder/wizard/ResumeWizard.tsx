@@ -8,7 +8,7 @@ import { Alert, AlertDescription, AlertTitle  } from '@/components/ui/alert';
 import { AlertCircle, FilePlus, Loader2  } from 'lucide-react';
 import { Button  } from '@/components/ui/button';
 import { Resume  } from '@/types/resume';
-// Import components
+/ Import components
 import { ResumeProgress  } from './ResumeProgress';
 import { EmptyResumeState  } from './EmptyResumeState';
 import { CreateResumeForm  } from './CreateResumeForm';
@@ -34,7 +34,7 @@ import {Alert, AlertDescription, AlertTitle} from '@/components / ui / alert';
 import {AlertCircle, FilePlus, Loader2} from 'lucide-react';
 import {Button} from '@/components/ui/button';
 import {Resume} from '@/types/resume';
-// Import components;
+/ Import components;
 import {ResumeProgress} from './ResumeProgress';
 import {EmptyResumeState} from './EmptyResumeState';
 import {CreateResumeForm} from './CreateResumeForm';
@@ -57,30 +57,26 @@ export function ResumeWizard() {;
   // Use the extracted hook for progress calculation
 
   const progress = useResumeProgress(resume);
-  useEffect(() => {
+  useEffect() => {
     if (user) {
       fetchResume()
-    }
-  }, [user, fetchResume]);
+    }, [user, fetchResume]);
   const handleCreateNewResume = async (title: string) => {
     const resumeId = await createResume({ title: title.trim() })
     if (resumeId) {
       await fetchResume(resumeId);
       setShowNewResumeForm(false)
     }
-  }
   const nextStep = () => {
-    const currentIndex = RESUME_STEPS.findIndex(step => step.id === activeTab);
+    const currentIndex = RESUME_STEPS.findIndex(step => step.id = = activeTab);
     if (currentIndex < RESUME_STEPS.length - 1) {
       setActiveTab(RESUME_STEPS[currentIndex + 1].id)
     }
-  }
   const prevStep = () => {
-    const currentIndex = RESUME_STEPS.findIndex(step => step.id === activeTab);
+    const currentIndex = RESUME_STEPS.findIndex(step => step.id = = activeTab);
     if (currentIndex > 0) {
       setActiveTab(RESUME_STEPS[currentIndex - 1].id)
     }
-  }
   const handleResumeChange = (resumeId: string) => {
     fetchResume(resumeId)
   }
@@ -155,7 +151,7 @@ export function ResumeWizard() {;
       </Card>
     </div>
   )
-}
+
 export /**
  * ResumeWizard - Function description
  */
@@ -168,61 +164,57 @@ function ResumeWizard() {
     fetch_resume;
     create_resume;
   } = use_resume ();
-;
+
   const [active_tab, setActiveTab] = useState ('basic - info');
   const [showNewResumeForm, setShowNewResumeForm] = useState (false);
-;
+
   // Use the extracted hook for progress calculation;
   const progress = useResumeProgress (resume);
-;
-  useEffect (() => {
+
+  useEffect () => {
     // Check condition
 if ( {) {
   $2
-}
+
       fetch_resume ();
-    }
-  }, [user, fetch_resume]);
-;
+    }, [user, fetch_resume]);
+
   const handleCreateNewResume = async (title: string) => {
     const resume_id = await create_resume ({ title: title.trim () }),
     // Check condition
 if ( {) {
   $2
-}
+
       await fetch_resume (resume_id);
       setShowNewResumeForm (false);
     }
-  }
-;
+
   const next_step = () =>: any {
-    const current_index = RESUME_STEPS.find_index (step => step.id === active_tab);
+    const current_index = RESUME_STEPS.find_index (step => step.id = = active_tab);
     // Check condition
 if ( {) {
   $2
-}
+
       setActiveTab (RESUME_STEPS[current_index + 1].id);
     }
-  }
-;
+
   const prev_step = () =>: any {
-    const current_index = RESUME_STEPS.find_index (step => step.id === active_tab);
+    const current_index = RESUME_STEPS.find_index (step => step.id = = active_tab);
     // Check condition
 if ( {) {
   $2
-}
+
       setActiveTab (RESUME_STEPS[current_index - 1].id);
     }
-  }
-;
+
   const handleResumeChange = (resume_id: string) =>: any {
     fetch_resume (resume_id);
   }
-;
+
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <div className="flex justify - center items - center h - 64">;
         <Loader2 className="h - 8 w - 8 animate - spin text - primary" />;
@@ -231,7 +223,7 @@ if ( {) {
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <Alert variant="destructive" className="mb - 6">;
         <AlertCircle className="h - 4 w - 4" />;
@@ -242,13 +234,13 @@ if ( {) {
   // Check condition
 if ( {) {
   $2
-}
+
     return <EmptyResumeState onCreateClick={() => setShowNewResumeForm (true)} />;
   }
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <CreateResumeForm;
         onCreateResume={handleCreateNewResume}
@@ -296,4 +288,3 @@ if ( {) {
         </CardContent>;
       </Card>;
     </div>);
-}

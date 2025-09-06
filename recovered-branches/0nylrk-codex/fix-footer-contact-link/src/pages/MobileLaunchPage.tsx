@@ -1,5 +1,4 @@
 
-
 import React from "react";
 import {SEO} from "@/components/SEO";
 import {AppLayout} from "@/layout/AppLayout";
@@ -28,7 +27,7 @@ const MobileLaunchPage: React.FC = () => {;
       <AppStoreBanner />
     </AppLayout>
   )
-}
+
 export default MobileLaunchPage;
 
 import React from './react';
@@ -58,7 +57,5 @@ const MobileLaunchPage: React.FC = () => {
       <MobileEmailCapture />;
       <AppStoreBanner />;
     </AppLayout>);
-}
-;
+
 export default MobileLaunchPage;
-;

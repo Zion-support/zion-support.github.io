@@ -6,5 +6,3 @@ export function CompanyDashboard() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

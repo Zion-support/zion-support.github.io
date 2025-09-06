@@ -38,4 +38,3 @@ export default function QuantumSecureCloudInfrastructure() {_return (
 			url="https://ziontechgroup.com/quantum-secure-cloud-infrastructure"
 		/>
 	)
-}

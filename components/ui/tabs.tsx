@@ -6,11 +6,10 @@ interface TabsProps {
   value?: string;
   onValueChange?: (value: string) => void;
   className?: string;
-}
 
 export function Tabs({ children, defaultValue, value, onValueChange, className = '' }: TabsProps) {
   const [activeTab, setActiveTab] = React.useState(defaultValue || '');
-  
+
   const handleTabChange = (newValue: string) => {
     setActiveTab(newValue);
     onValueChange?.(newValue);
@@ -19,7 +18,7 @@ export function Tabs({ children, defaultValue, value, onValueChange, className =
   return (
     <div className={`w-full ${className}`}>
       {React.Children.map(children, (child) => {
-        if (React.isValidElement(child)) {
+        if (React.isValidElement(child) {
           return React.cloneElement(child, { 
             activeTab: value || activeTab, 
             onTabChange: onValueChange || handleTabChange 
@@ -29,20 +28,18 @@ export function Tabs({ children, defaultValue, value, onValueChange, className =
       })}
     </div>
   );
-}
 
 interface TabsListProps {
   children: React.ReactNode;
   className?: string;
   activeTab?: string;
   onTabChange?: (value: string) => void;
-}
 
 export function TabsList({ children, className = '', activeTab, onTabChange }: TabsListProps) {
   return (
     <div className={`flex space-x-1 bg-slate-800 p-1 rounded-lg ${className}`}>
       {React.Children.map(children, (child) => {
-        if (React.isValidElement(child)) {
+        if (React.isValidElement(child) {
           return React.cloneElement(child, { 
             activeTab, 
             onTabChange 
@@ -52,7 +49,6 @@ export function TabsList({ children, className = '', activeTab, onTabChange }: T
       })}
     </div>
   );
-}
 
 interface TabsTriggerProps {
   children: React.ReactNode;
@@ -60,11 +56,10 @@ interface TabsTriggerProps {
   className?: string;
   activeTab?: string;
   onTabChange?: (value: string) => void;
-}
 
 export function TabsTrigger({ children, value, className = '', activeTab, onTabChange }: TabsTriggerProps) {
-  const isActive = activeTab === value;
-  
+  const isActive = activeTab = = value;
+
   return (
     <button
       onClick={() => onTabChange?.(value)}
@@ -80,23 +75,20 @@ export function TabsTrigger({ children, value, className = '', activeTab, onTabC
       {children}
     </button>
   );
-}
 
 interface TabsContentProps {
   children: React.ReactNode;
   value: string;
   className?: string;
   activeTab?: string;
-}
 
 export function TabsContent({ children, value, className = '', activeTab }: TabsContentProps) {
-  if (activeTab !== value) {
+  if (activeTab != value) {
     return null;
   }
-  
+
   return (
     <div className={`mt-4 ${className}`}>
       {children}
     </div>
   );
-}

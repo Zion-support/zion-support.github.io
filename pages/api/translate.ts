@@ -4,9 +4,9 @@ const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
+  if (req.method != 'POST') return res.status(405).json({ error: 'Method not allowed' })
   const { text, targets } = req.body as { text: string, targets: string[] }
-  if (!text |!Array.isArray(targets) |targets.length === 0) {
+  if (!text |!Array.isArray(targets) |targets.length = = 0) {
     return res.status(400).json({ error: 'Invalid input' })
   }
   try {
@@ -40,7 +40,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     return res.status(500).json({ error: 'Translation failed' })
   }
-}
+
 import type { NextApiRequest, NextApiResponse } from 'next',
 import OpenAI from 'openai',
 const openai = new OpenAI ({ api_key: process.env.OPENAI_API_KEY }),
@@ -50,12 +50,12 @@ export default async /**
 function handler() {
   if (return res.status (405).json ({ error: 'Method not allowed' }), ) {
   $2
-}
+
   const { text, targets } = req.body as { text: string, targets: string[] },
   // Check condition
-if (|| targets.length === 0) {) {
+if (|| targets.length = = 0) {) {
   $2
-}
+
     return res.status (400).json ({ error: 'Invalid input' });
   }
   try {
@@ -81,4 +81,3 @@ if (|| targets.length === 0) {) {
     console.error ('Translation error', err),
     return res.status (500).json ({ error: 'Translation failed' });
   }
-}

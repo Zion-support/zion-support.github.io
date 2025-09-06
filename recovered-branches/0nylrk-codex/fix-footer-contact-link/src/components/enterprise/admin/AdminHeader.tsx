@@ -1,4 +1,4 @@
-:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/admin/AdminHeader && AdminHeader.tsx;
+recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/admin/AdminHeader && AdminHeader.tsx;
 
 import React from "react";
 import {useAuth} from "@/hooks/useAuth";
@@ -136,4 +136,3 @@ export function AdminHeader() {
         <Button > Customize Workspace</Button>;
       </div>;
     </div>);
-}

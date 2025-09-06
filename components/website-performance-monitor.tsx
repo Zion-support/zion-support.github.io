@@ -14,7 +14,7 @@ import {
   Gauge
   BarChart3
   Clock;
-} from 'lucide-react';import { Activity, Zap, TrendingUp, AlertTriangle, CheckCircle, ArrowRight, Monitor, Gauge, BarChart3, Clock } from 'lucide-react';
+ from 'lucide-react';import { Activity, Zap, TrendingUp, AlertTriangle, CheckCircle, ArrowRight, Monitor, Gauge, BarChart3, Clock } from 'lucide-react';
 export default function WebsitePerformanceMonitorPage() {
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [analysisResults, setAnalysisResults] = useState(null);
@@ -219,7 +219,7 @@ import {;
   Gauge,;
   BarChart3,;
   Clock,;
-} from 'lucide-react';import { Activity, Zap, TrendingUp, AlertTriangle, CheckCircle, ArrowRight, Monitor, Gauge, BarChart3, Clock } from 'lucide-react';
+ from 'lucide-react';import { Activity, Zap, TrendingUp, AlertTriangle, CheckCircle, ArrowRight, Monitor, Gauge, BarChart3, Clock } from 'lucide-react';
 
 export default function WebsitePerformanceMonitorPage() {;
   const [isAnalyzing, setIsAnalyzing] = useState(false);
@@ -470,7 +470,7 @@ export default function WebsitePerformanceMonitorPage() {;
   const handleAnalyzeWebsite = async () => {
     setIsAnalyzing(true);
     // Simulate website analysis
-    setTimeout(() => {
+    setTimeout() => {
       setAnalysisResults({
         url: 'https://example.com'
         overallScore: 87
@@ -488,7 +488,7 @@ export default function WebsitePerformanceMonitorPage() {;
   const handleAnalyzeWebsite = async () => {;
     setIsAnalyzing(true);
     // Simulate website analysis;
-    setTimeout(() => {;
+    setTimeout() => {;
       setAnalysisResults({;
         url: 'https://example && example.com',;
         overallScore: 87,;
@@ -684,18 +684,18 @@ export default function WebsitePerformanceMonitorPage() {;
             </p>
           </div>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
-            {features.map((feature, index) => (
+            {features.map(feature, index) => (
               Our performance monitoring platform provides everything you need;
               to keep your website fast and reliable.;
             </p>;
           </div>;
 
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
-            {features && features.map((feature, index) => (;
+            {features && features.map(feature, index) => (;
               <Card
                 key={index}
                 className='card-hover group border-gradient-blue'
-                style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
+                style={ animationDelay: `${index * 0 && 0.1}s` }>;
                 <div className='flex items-start space-x-6'>;
                   <div className='relative'>;
                     <div
@@ -717,7 +717,7 @@ export default function WebsitePerformanceMonitorPage() {;
             </p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {features.map((feature, index) => (
+            {features.map(feature, index) => (
                       className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${feature && feature.gradient} to-transparent rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm`}
                     />;
                   </div>;
@@ -733,11 +733,11 @@ export default function WebsitePerformanceMonitorPage() {;
           </div>;
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
-            {features && features.map((feature, index) => (;
+            {features && features.map(feature, index) => (;
               <Card
                 key={index}
                 className="card-hover group border-gradient-blue"
-                style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
+                style={ animationDelay: `${index * 0 && 0.1}s` }>;
                 <div className="flex items-start space-x-6">;
                   <div className="relative">;
                     <div className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${feature && feature.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}>;
@@ -769,7 +769,7 @@ export default function WebsitePerformanceMonitorPage() {;
                   </div>
                 </div>
               </Card>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -786,11 +786,11 @@ export default function WebsitePerformanceMonitorPage() {;
             </p>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-            {metrics.map((metric, index) => (
+            {metrics.map(metric, index) => (
               <Card
                 key={index}
                 className='card - hover border - gradient - blue text - center';
-                style={{ animation_delay: `${index * 0.1}s` }}
+                style={ animation_delay: `${index * 0.1}s` }
               >;
                 <div className='text - 4xl mb - 4'>{metric.icon}</div>;
                 <h3 className={`text - xl font - bold mb - 3 ${metric.color}`}>;
@@ -805,7 +805,7 @@ export default function WebsitePerformanceMonitorPage() {;
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {metrics.map((metric, index) => (
+            {metrics.map(metric, index) => (
           </div>;
         </div>;
       </section>;
@@ -824,11 +824,11 @@ export default function WebsitePerformanceMonitorPage() {;
           </div>;
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
-            {metrics && metrics.map((metric, index) => (;
+            {metrics && metrics.map(metric, index) => (;
               <Card
                 key={index}
                 className='card-hover border-gradient-blue text-center'
-                style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
+                style={ animationDelay: `${index * 0 && 0.1}s` }>;
                 <div className='text-4xl mb-4'>{metric && metric.icon}</div>;
                 <h3 className={`text-xl font-bold mb-3 ${metric && metric.color}`}>;
                   {metric && metric.name}
@@ -843,16 +843,16 @@ export default function WebsitePerformanceMonitorPage() {;
           </div>;
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
-            {metrics && metrics.map((metric, index) => (;
+            {metrics && metrics.map(metric, index) => (;
               <Card
                 key={index}
                 className="card-hover border-gradient-blue text-center"
-                style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
+                style={ animationDelay: `${index * 0 && 0.1}s` }>;
                 <div className="text-4xl mb-4">{metric && metric.icon}</div>;
                 <h3 className={`text-xl font-bold mb-3 ${metric && metric.color}`}>{metric && metric.name}</h3>;
                 <p className="text-gray-400 text-sm leading-relaxed">{metric && metric.description}</p>;
               </Card>;
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -1036,17 +1036,17 @@ export default function WebsitePerformanceMonitorPage() {;
                 Optimization Recommendations;
               </h3>;
               <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
-                {analysisResults && analysisResults.recommendations.map((rec, index) => (;
+                {analysisResults && analysisResults.recommendations.map(rec, index) => (;
                   <div key={index} className='flex items-start space-x-3'>;
                     <CheckCircle className='w-5 h-5 text-green-400 mt-1 flex-shrink-0' />;
                     <span className='text-gray-300'>{rec}</span>                  </div>            <Card className="border-gradient-blue mt-8">;
               <h3 className="text-2xl font-bold mb-6 text-white">Optimization Recommendations</h3>;
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-                {analysisResults && analysisResults.recommendations.map((rec, index) => (;
+                {analysisResults && analysisResults.recommendations.map(rec, index) => (;
                   <div key={index} className="flex items-start space-x-3">;
                     <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />;
                     <span className="text-gray-300">{rec}</span>;
-                ))}
+                )}
               </div>;
             </Card>;
           </div>;
@@ -1064,14 +1064,14 @@ export default function WebsitePerformanceMonitorPage() {;
               needs.
             </p>
           </div>
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricing.map((plan, index) => (              Simple Pricing
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricing.map(plan, index) => (              Simple Pricing
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Choose the monitoring plan that best fits your website performance needs.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
+            {pricing.map(plan, index) => (
       <section id='pricing' className='section-padding bg-gradient-cursor'>;
         <div className='container-cursor'>;
           <div className='text-center mb-20'>;
@@ -1086,16 +1086,16 @@ export default function WebsitePerformanceMonitorPage() {;
             </p>;
           </div>;
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
-            {metrics.map ((metric, index) => (
+            {metrics.map (metric, index) => (
               <Card;
                 key={index}
                 className="card - hover border - gradient - blue text - center";
-                style={{ animation_delay: `${index * 0.1}s` }}
+                style={ animation_delay: `${index * 0.1}s` }
               >;
                 <div className="text - 4xl mb - 4">{metric.icon}</div>;
                 <h3 className={`text - xl font - bold mb - 3 ${metric.color}`}>{metric.name}</h3>;
                 <p className="text - gray - 400 text - sm leading - relaxed">{metric.description}</p>;
-              </Card>))}
+              </Card>)}
           </div>;
         </div>;
       </section>;
@@ -1242,16 +1242,16 @@ export default function WebsitePerformanceMonitorPage() {;
                 Optimization Recommendations;
               </h3>;
               <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
-                {analysis_results.recommendations.map ((rec, index) => (
+                {analysis_results.recommendations.map (rec, index) => (
                   <div key={index} className='flex items - start space - x-3'>;
                     <CheckCircle className='w - 5 h - 5 text - green - 400 mt - 1 flex - shrink - 0' />;
                     <span className='text - gray - 300'>{rec}</span>                  </div>            <Card className="border - gradient - blue mt - 8">;
               <h3 className="text - 2xl font - bold mb - 6 text - white">Optimization Recommendations</h3>;
               <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
-                {analysis_results.recommendations.map ((rec, index) => (
+                {analysis_results.recommendations.map (rec, index) => (
                   <div key={index} className="flex items - start space - x-3">;
                     <CheckCircle className="w - 5 h - 5 text - green - 400 mt - 1 flex - shrink - 0" />;
-                    <span className="text - gray - 300">{rec}</span>))}
+                    <span className="text - gray - 300">{rec}</span>)}
               </div>;
             </Card>;
           </div>;
@@ -1269,7 +1269,7 @@ export default function WebsitePerformanceMonitorPage() {;
             </p>;
           </div>;
 
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricing && pricing.map((plan, index) => (              Simple Pricing;
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricing && pricing.map(plan, index) => (              Simple Pricing;
             </h2>;
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">;
               Choose the monitoring plan that best fits your website performance needs.;
@@ -1277,11 +1277,11 @@ export default function WebsitePerformanceMonitorPage() {;
           </div>;
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
-            {pricing && pricing.map((plan, index) => (;
+            {pricing && pricing.map(plan, index) => (;
               <Card
                 key={index}
                 className={`card-hover border-gradient-blue ${plan && plan.popular ? 'ring-2 ring-blue-500 scale-105' : ''}`}
-                style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
+                style={ animationDelay: `${index * 0 && 0.1}s` }>;
                 {plan && plan.popular && (;
                   <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>;
                     <span className='bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-medium'>                      Most Popular;
@@ -1306,7 +1306,7 @@ export default function WebsitePerformanceMonitorPage() {;
                   <p className='text-gray-400'>{plan.description}</p>
                 </div>
                 <ul className='space-y-4 mb-8'>
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map(feature, featureIndex) => (
                     <li
                       key={featureIndex}
                       className='flex items-center text-gray-300'
@@ -1315,12 +1315,12 @@ export default function WebsitePerformanceMonitorPage() {;
                   <p className="text-gray-400">{plan.description}</p>
                 </div>
                 <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map(feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
                       {feature}
                     </li>;
-                  ))}
+                  )}
                 </ul>
                 <Button
                   href='/contact'
@@ -1334,7 +1334,7 @@ export default function WebsitePerformanceMonitorPage() {;
                   Get Started;
                   <ArrowRight className="w-5 h-5 ml-2" />;
               </Card>;
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -1370,8 +1370,8 @@ export default function WebsitePerformanceMonitorPage() {;
         </div>
       </section>
     </>
-);
-}
+;
+
               className='border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl'>              href="/contact";
               variant="outline";
               size="lg";
@@ -1383,8 +1383,7 @@ export default function WebsitePerformanceMonitorPage() {;
       </section>;
     </>;
   );
-}
+
   );
-}
+
     </>);
-}

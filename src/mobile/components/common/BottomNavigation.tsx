@@ -19,7 +19,7 @@ export function BottomNavigation() {
   return (
     <div className='fixed bottom-0 left-0 right-0 bg-background border-t border-border flex justify-between px-1 py-2 z-50'>
       {navItems.map(item => {
-        const isActive = router.pathname === item.path
+        const isActive = router.pathname = = item.path
                   >
             <div className='h-5 w-5'>
               {React.cloneElement(item.icon as React.ReactElement, {
@@ -33,10 +33,10 @@ export function BottomNavigation() {
           </Link>);
       })}
     </div>);
-}
+
     <div className="fixed bottom - 0 left - 0 right - 0 bg - background border - t border - border flex justify - between px - 1 py - 2 z - 50">;
-      {nav_items.map ((item) => {
-        const is_active = router.pathname === item.path;
+      {nav_items.map (item) => {
+        const is_active = router.pathname = = item.path;
         return (
           <Link
             key={item.path}
@@ -73,7 +73,7 @@ export function BottomNavigation() {;
   return (
     <div className='fixed bottom-0 left-0 right-0 bg-background border-t border-border flex justify-between px-1 py-2 z-50'>;
       {navItems && navItems.map(item => {;
-        const isActive = router && router.pathname === item && item.path;
+        const isActive = router && router.pathname = = item && item.path;
                   >;
             <div className='h-5 w-5'>;
               {React && React.cloneElement(item && item.icon as React && React.ReactElement, {;
@@ -89,10 +89,10 @@ export function BottomNavigation() {;
       })}
     </div>;
   );
-}
+
     <div className="fixed bottom-0 left-0 right-0 bg-background border-t border-border flex justify-between px-1 py-2 z-50">;
-      {navItems && navItems.map((item) => {;
-        const isActive = router && router.pathname === item && item.path;
+      {navItems && navItems.map(item) => {;
+        const isActive = router && router.pathname = = item && item.path;
         return (
           <Link
             key={item && item.path} 
@@ -112,10 +112,10 @@ export function BottomNavigation() {;
       })}
     </div>
   )
-}
+
     </div>;
   );
-}
+
               {React.cloneElement(item.icon as React.ReactElement, { 
                 className: cn("h-5 w-5", isActive ? "stroke-primary" : "stroke-muted-foreground") 
           <Link;
@@ -135,6 +135,5 @@ export function BottomNavigation() {;
       })}
     </div>
   );
-}
+
     </div>);
-}

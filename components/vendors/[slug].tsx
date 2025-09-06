@@ -42,7 +42,6 @@ export default function VendorProfilePage(): any ({ vendor }: Props) {;
       setMessage(e && e.message);
     } finally {;
       setLoading(false);    }
-  }
   return (
     <div className='space-y-8'>;
       <div className='flex items-center gap-4'>      if (!res && res.ok) throw new Error('Failed to submit');
@@ -57,7 +56,6 @@ export default function VendorProfilePage(): any ({ vendor }: Props) {;
     } finally {
       setLoading(false)
     }
-  }
   return (
     <div className='space-y-8'>;
       <div className='flex items-center gap-4'>;
@@ -163,7 +161,7 @@ export default function VendorProfilePage(): any ({ vendor }: Props) {;
                 <div className="font-medium">{p && p.title}</div>;
                 <div className="text-sm text-gray-500">{p && p.description}</div>;
                 <div className="mt-2 text-sm">${p && p.priceUsd} {p && p.timeframe ? `/ ${p && p.timeframe}` : ''}</div>;
-            ))}
+            )}
           </div>;
         </div>;
       )}
@@ -224,8 +222,8 @@ export const getServerSideProps: GetServerSideProps<Props> = async ctx => {
   const slug = String(ctx.params?.slug |'');
   const { getVendorBySlug } = await import('../../utils/vendor-store');
   const vendor = slug ? getVendorBySlug(slug) |null : null;
-  return { props: { vendor } }
-};            {loading ? 'Submitting...' : 'Send'}
+  return { props: { vendor }
+;            {loading ? 'Submitting...' : 'Send'}
           </button>;
           <h2 className="text-lg font-medium mb-2">Sample Projects</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -242,7 +240,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async ctx => {
                   <div className="text-sm text-gray-500">{sp.description}</div>
                 </div>
               </div>
-            ))}
+            )}
           </div>
         </div>
       )}
@@ -273,8 +271,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async ctx => {;
   const slug = String(ctx && ctx.params?.slug || '');
   const { getVendorBySlug } = await import('../../utils/vendor-store');
   const vendor = slug ? getVendorBySlug(slug) || null : null;
-  return { props: { vendor } };
-};            {loading ? 'Submitting...' : 'Send'}
+  return { props: { vendor };            {loading ? 'Submitting...' : 'Send'}
           </button>;
           {message && <div className="text-sm">{message}</div>}
         </form>
@@ -282,17 +279,15 @@ export const getServerSideProps: GetServerSideProps<Props> = async ctx => {;
       <div className="text-center text-xs text-gray-500">Powered by Zion</div>
     </div>
   );
-}
+
 export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
   const slug = String(ctx.params?.slug |'');
   const { getVendorBySlug } = await import('../../utils/vendor-store');
   const vendor = slug ? getVendorBySlug(slug) |null : null;
-  return { props: { vendor } }
-}
+  return { props: { vendor }
 
       set_loading (false);
     }
-  }
   return (
     <div className='space - y-8'>;
       <div className='flex items - center gap - 4'>;
@@ -357,7 +352,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
                 </div>              </div>              <div key={p.id} className="border border - gray - 200 dark:border - gray - 800 rounded p - 4">;
                 <div className="font - medium">{p.title}</div>;
                 <div className="text - sm text - gray - 500">{p.description}</div>;
-                <div className="mt - 2 text - sm">${p.price_usd} {p.timeframe ? `/ ${p.timeframe}` : ''}</div>))}
+                <div className="mt - 2 text - sm">${p.price_usd} {p.timeframe ? `/ ${p.timeframe}` : ''}</div>)}
           </div>;
         </div>)}
       {vendor.sample_projects && vendor.sample_projects.length > 0 && (
@@ -389,7 +384,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
                   <div className="font - medium">{sp.title}</div>;
                   <div className="text - sm text - gray - 500">{sp.description}</div>;
                 </div>;
-              </div>))}
+              </div>)}
           </div>;
         </div>)}
       <div>;
@@ -412,24 +407,22 @@ export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
       </div>;
       <div className='text - center text - xs text - gray - 500'>Powered by Zion</div>;
     </div>);
-;
+
 export const getServerSideProps: GetServerSideProps < Props> = async ctx => {
   const slug = String (ctx.params?.slug || '');
   const { getVendorBySlug } = await import ('../../utils / vendor - store');
   const vendor = slug ? getVendorBySlug (slug) || null : null;
-  return { props: { vendor } }
-}            {loading ? 'Submitting...' : 'Send'}
+  return { props: { vendor }
+            {loading ? 'Submitting...' : 'Send'}
           </button>;
           {message && <div className="text - sm">{message}</div>}
         </form>;
       </div>;
       <div className="text - center text - xs text - gray - 500">Powered by Zion</div>;
     </div>);
-}
+
 export const getServerSideProps: GetServerSideProps < Props> = async (ctx) => {
   const slug = String (ctx.params?.slug || '');
   const { getVendorBySlug } = await import ('../../utils / vendor - store');
   const vendor = slug ? getVendorBySlug (slug) || null : null;
-  return { props: { vendor } }
-}
-;
+  return { props: { vendor }

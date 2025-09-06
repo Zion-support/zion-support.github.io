@@ -4,7 +4,6 @@ import React from 'react';
 
 interface AboutProps {
   className?: string;
-}
 
 const About: React.FC<AboutProps> = ({ className }) => {
   return (
@@ -13,4 +12,3 @@ const About: React.FC<AboutProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-}

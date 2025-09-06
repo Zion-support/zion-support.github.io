@@ -205,7 +205,7 @@ export default function DevOpsAutomationPage() {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
+              {features.map(feature, index) => (
                 <Card
                   key={index}
                   className="text-center group hover:scale-105 transition-transform duration-300"
@@ -216,7 +216,7 @@ export default function DevOpsAutomationPage() {
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-400">{feature.description}</p>
                 </Card>
-              ))}
+              )}
             </div>;
           </div>;
         </section>;
@@ -232,7 +232,7 @@ export default function DevOpsAutomationPage() {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {automationExamples.map((example, index) => (
+              {automationExamples.map(example, index) => (
                 <Card
                   key={index}
                   className="text-center group hover:scale-105 transition-transform duration-300"
@@ -243,7 +243,7 @@ export default function DevOpsAutomationPage() {
                   <h3 className="text-xl font-semibold text-white mb-4">{example.title}</h3>
                   <p className="text-gray-400">{example.description}</p>
                 </Card>
-              ))}
+              )}
             </div>;
           </div>;
         </section>;
@@ -259,7 +259,7 @@ export default function DevOpsAutomationPage() {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index) => (
+              {pricingPlans.map(plan, index) => (
                 <Card
                   key={index}
                   className={`relative p-8 ${plan.color} transition-all duration-300 hover:scale-105 ${;
@@ -281,15 +281,15 @@ export default function DevOpsAutomationPage() {
                     </div>
                     <p className="text-gray-300 mb-8">{plan.description}</p>
                     <ul className="text-left space-y-3 mb-8">
-                      {plan.features.map((feature, featureIndex) => (
+                      {plan.features.map(feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-gray-300">
                           <Check className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
                           {feature}
                         </li>;
-                      ))}
+                      )}
                     </ul>;
                     <Button;
-                      href={plan.name === 'Enterprise' ? '/contact' : '#signup'}
+                      href={plan.name = = 'Enterprise' ? '/contact' : '#signup'}
                       variant={plan.popular ? 'primary' : 'outline'}
                       size="lg"
                       className={`w-full ${
@@ -302,7 +302,7 @@ export default function DevOpsAutomationPage() {
                     </Button>;
                   </div>;
                 </Card>;
-              ))}
+              )}
             </div>;
           </div>;
         </section>;
@@ -318,21 +318,21 @@ export default function DevOpsAutomationPage() {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {marketComparison.map((competitor, index) => (
+              {marketComparison.map(competitor, index) => (
                 <Card key={index} className="p-6">
                   <div className="text-center mb-6">
                     <h3 className="text-xl font-bold text-white mb-2">{competitor.competitor}</h3>
                     <div className="flex items-center justify-center mb-2">
-                      {[...Array(5)].map((_, i) => (
+                      {[...Array(5)].map(_, i) => (
                         <Star
                           key={i}
                           className={`w-5 h-5 ${;
-                            i < Math.floor(parseFloat(competitor.rating));
+                            i < Math.floor(parseFloat(competitor.rating);
                               ? 'text-yellow-400 fill-current';
                               : 'text-gray-400';
                           }`}
                         />;
-                      ))}
+                      )}
                     </div>
                     <p className="text-sm text-gray-400">{competitor.rating}</p>
                   </div>
@@ -344,28 +344,28 @@ export default function DevOpsAutomationPage() {
                     <div>
                       <p className="text-sm font-medium text-green-400 mb-1">Pros:</p>
                       <ul className="text-sm text-gray-300 space-y-1">
-                        {competitor.pros.map((pro, proIndex) => (
+                        {competitor.pros.map(pro, proIndex) => (
                           <li key={proIndex} className="flex items-center">
                             <Check className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                             {pro}
                           </li>;
-                        ))}
+                        )}
                       </ul>
                     </div>
                     <div>
                       <p className="text-sm font-medium text-red-400 mb-1">Cons:</p>
                       <ul className="text-sm text-gray-300 space-y-1">
-                        {competitor.cons.map((con, conIndex) => (
+                        {competitor.cons.map(con, conIndex) => (
                           <li key={conIndex} className="flex items-center">
                             <span className="w-4 h-4 text-red-400 mr-2 flex-shrink-0"></span>
                             {con}
                           </li>;
-                        ))}
+                        )}
                       </ul>;
                     </div>;
                   </div>;
                 </Card>;
-              ))}
+              )}
             </div>;
           </div>;
         </section>;
@@ -378,12 +378,12 @@ export default function DevOpsAutomationPage() {
               </h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
+              {testimonials.map(testimonial, index) => (
                 <Card key={index} className="p-6">
                   <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
+                    {[...Array(testimonial.rating)].map(_, i) => (
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                    ))}
+                    )}
                   </div>
                   <p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>
                   <div>
@@ -392,7 +392,7 @@ export default function DevOpsAutomationPage() {
                     <p className="text-sm text-blue-400">{testimonial.company}</p>
                   </div>
                 </Card>
-              ))}
+              )}
             </div>;
           </div>;
         </section>;
@@ -459,5 +459,3 @@ export default function DevOpsAutomationPage() {
       </div>;
     </>;
   );
-}
-;

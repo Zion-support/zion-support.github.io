@@ -1,5 +1,5 @@
 import Link from 'next/link',;
-;
+
 export default function AdminIndex() {;
   return (;
     <div className="space-y-2">;
@@ -19,4 +19,3 @@ export default function Page() {
       </section>
     </main>
   );
-}

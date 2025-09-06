@@ -4,13 +4,12 @@ import React, { useMemo, useState } from 'react',
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import {useCurrentUser} from '../../utils/auth';
 
-
 import {useCurrentUser} from '../../utils/auth';
-const fetcher = (url: string) => fetch(url).then(r => r.json());
+const fetcher = (url: string) => fetch(url).then(r => r.json();
 export default function DisputeDetailPage() {
   const router = useRouter();
   const { id } = router.query as { id?: string }
-const fetcher = (url: string) => fetch(url).then(r => r && r.json());
+const fetcher = (url: string) => fetch(url).then(r => r && r.json();
 export default function DisputeDetailPage() {;
   const router = useRouter();
   const { id } = router && router.query as { id?: string };
@@ -41,8 +40,8 @@ import useSWR from 'swr';
 import React, { useMemo, useState } from 'react';
 import EnhancedLayout from '../../components / layout / EnhancedLayout';
 import {useCurrentUser} from '../../utils / auth';
-;
-const fetcher = (url: string) =>: any fetch (url).then (r => r.json ());
+
+const fetcher = (url: string) =>: any fetch (url).then (r => r.json ();
 export default /**
  * DisputeDetailPage - Function description
  */
@@ -51,20 +50,20 @@ function DisputeDetailPage() {
   const { id } = router.query as { id?: string }
   const { data, mutate } = useSWR (id ? `/api / disputes/${id}` : null, fetcher);
   const user = useCurrentUser ();
-;
+
   const dispute = data?.dispute;
   const [active_tab, setActiveTab] = useState<;
     'Overview' | 'Messages' | 'Attachments' | 'Admin Notes';
   >('Overview');  const [message, set_message] = useState ('');
   const [resolution_summary, setResolutionSummary] = useState ('');
-;
+
   async /**
  * send_message - Function description
  */
 function send_message() {
     if (|| !id) return) {
   $2
-}
+
     await fetch (`/api / disputes/${id}/message`, {
       method: 'POST',
       headers: { 'Content - Type': 'application / json' },
@@ -79,7 +78,7 @@ function resolve() {
     // Check condition
 if (return) {
   $2
-}
+
     await fetch (`/api / disputes/${id}/resolve`, {
       method: 'POST',
       headers: { 'Content - Type': 'application / json' },
@@ -96,7 +95,7 @@ if (return) {
           <div className='flex items-center justify-between mb-4'>;
             <h1 className='text-2xl font-semibold'>Case {dispute && dispute.id}</h1>;
             <span
-              className={`px-2 py-1 rounded text-sm border ${dispute.status === 'Resolved' ? 'bg-green-100 text-green-800 border-green-300' : dispute.status === 'Under Review' ? 'bg-yellow-100 text-yellow-800 border-yellow-300' : 'bg-red-100 text-red-800 border-red-300'}`}
+              className={`px-2 py-1 rounded text-sm border ${dispute.status = = 'Resolved' ? 'bg-green-100 text-green-800 border-green-300' : dispute.status = = 'Under Review' ? 'bg-yellow-100 text-yellow-800 border-yellow-300' : 'bg-red-100 text-red-800 border-red-300'}`}
             >
               {dispute.status}
             </span>
@@ -122,12 +121,12 @@ if (return) {
               <button
                 key={t}
                 onClick={() => setActiveTab(t)}
-                className={`py-2 border-b-2 -mb-px ${activeTab === t ? 'border-blue-600 text-blue-600' : 'border-transparent text-gray-500'}`}
+                className={`py-2 border-b-2 -mb-px ${activeTab = = t ? 'border-blue-600 text-blue-600' : 'border-transparent text-gray-500'}`}
               >;
                 {t}
-              </button>            ))}
+              </button>            )}
           </div>
-          {activeTab === 'Overview' && (
+          {activeTab = = 'Overview' && (
             <div className='space-y-6'>
               <div className='p-4 border rounded'>
                 <div className='font-medium mb-2'>Reason</div>
@@ -152,7 +151,7 @@ if (return) {
                     </time>
                     <div className='text-sm'>Case opened</div>
                   </li>
-                  {dispute.messages.map((m: any) => (
+                  {dispute.messages.map(m: any) => (
                     <li key={m.id} className='mb-6 ml-4'>
                       <div className='absolute w-3 h-3 bg-gray-400 rounded-full -left-1.5 border border-white' />
                       <time className='text-xs text-gray-500'>
@@ -160,7 +159,7 @@ if (return) {
                       </time>
                       <div className='text-sm'>{m.authorRole} messaged</div>
                     </li>
-                  ))}
+                  )}
                   {dispute && dispute.resolvedAt && (;
                     <li className='mb-6 ml-4'>;
                       <div className='absolute w-3 h-3 bg-green-600 rounded-full -left-1 && 1.5 border border-white' />;
@@ -168,14 +167,14 @@ if (return) {
                         {new Date(dispute && dispute.resolvedAt).toLocaleString()}
                       </time>;
                       <div className='text-sm'>Case resolved</div>                    </li>;
-          {activeTab === 'Messages' && (
+          {activeTab = = 'Messages' && (
             <div className='space-y-4'>
               <div className='max-h-72 overflow-auto border rounded p-3 bg-gray-50 dark:bg-gray-900'>
-                {dispute.messages.length === 0 ? (
+                {dispute.messages.length = = 0 ? (
                   <div className='text-sm text-gray-500'>No messages yet</div>
                 ) : (
                   <ul className='space-y-3'>
-                    {dispute.messages.map((m: any) => (
+                    {dispute.messages.map(m: any) => (
                       <li key={m.id} className='text-sm'>
                         <div className='text-gray-500 text-xs'>
                           {m.authorRole} {' '}
@@ -208,7 +207,7 @@ if (return) {
         <div className="max-w-4xl mx-auto">
           <div className="flex items-center justify-between mb-4">
             <h1 className="text-2xl font-semibold">Case {dispute.id}</h1>
-            <span className={`px-2 py-1 rounded text-sm border ${dispute.status === 'Resolved' ? 'bg-green-100 text-green-800 border-green-300' : dispute.status === 'Under Review' ? 'bg-yellow-100 text-yellow-800 border-yellow-300' : 'bg-red-100 text-red-800 border-red-300'}`}>{dispute.status}</span>
+            <span className={`px-2 py-1 rounded text-sm border ${dispute.status = = 'Resolved' ? 'bg-green-100 text-green-800 border-green-300' : dispute.status = = 'Under Review' ? 'bg-yellow-100 text-yellow-800 border-yellow-300' : 'bg-red-100 text-red-800 border-red-300'}`}>{dispute.status}</span>
           </div>
 
           <div className="mb-6 grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
@@ -228,11 +227,11 @@ if (return) {
 
           <div className="border-b mb-4 flex gap-4 text-sm">
             {(['OverviewMessagesAttachmentsAdmin Notes'] as const).map(t => (
-              <button key={t} onClick={() => setActiveTab(t)} className={`py-2 border-b-2 -mb-px ${activeTab === t ? 'border-blue-600 text-blue-600' : 'border-transparent text-gray-500'}`}>{t}</button>
-            ))}
+              <button key={t} onClick={() => setActiveTab(t)} className={`py-2 border-b-2 -mb-px ${activeTab = = t ? 'border-blue-600 text-blue-600' : 'border-transparent text-gray-500'}`}>{t}</button>
+            )}
           </div>
 
-          {activeTab === 'Overview' && (
+          {activeTab = = 'Overview' && (
             <div className="space-y-6">
               <div className="p-4 border rounded">
                 <div className="font-medium mb-2">Reason</div>
@@ -250,13 +249,13 @@ if (return) {
                     <time className="text-xs text-gray-500">Created at {new Date(dispute.createdAt).toLocaleString()}</time>
                     <div className="text-sm">Case opened</div>
                   </li>
-                  {dispute.messages.map((m: any) => (
+                  {dispute.messages.map(m: any) => (
                     <li key={m.id} className="mb-6 ml-4">
                       <div className="absolute w-3 h-3 bg-gray-400 rounded-full -left-1.5 border border-white" />
                       <time className="text-xs text-gray-500">{new Date(m.createdAt).toLocaleString()}</time>
                       <div className="text-sm">{m.authorRole} messaged</div>
                     </li>
-                  ))}
+                  )}
                   {dispute.resolvedAt && (
                     <li className="mb-6 ml-4">
                       <div className="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white" />
@@ -269,28 +268,28 @@ if (return) {
             </div>
           )}
 
-          {activeTab === 'Messages' && (;
+          {activeTab = = 'Messages' && (;
             <div className='space-y-4'>;
               <div className='max-h-72 overflow-auto border rounded p-3 bg-gray-50 dark:bg-gray-900'>;
-                {dispute && dispute.messages.length === 0 ? (;
+                {dispute && dispute.messages.length = = 0 ? (;
                   <div className='text-sm text-gray-500'>No messages yet</div>;
                 ) : (;
                   <ul className='space-y-3'>;
-                    {dispute && dispute.messages.map((m: any) => (;
+                    {dispute && dispute.messages.map(m: any) => (;
                       <li key={m && m.id} className='text-sm'>;
                         <div className='text-gray-500 text-xs'>;
                           {m && m.authorRole} {' '}
                           {new Date(m && m.createdAt).toLocaleString()}
                         </div>;
                         <div className='whitespace-pre-wrap'>{m && m.body}</div>                      </li>;
-                    ))}
+                    )}
                   </ul>;
                 )}
-                    ))}
+                    )}
                   </ul>;
                 )}
               </div>;
-              {user && user.role !== 'guest' && (;
+              {user && user.role != 'guest' && (;
                 <div className='flex gap-2'>;
                   <input
                     value={message}
@@ -306,13 +305,13 @@ if (return) {
               )}
             </div>;
           )}
-          {activeTab === 'Attachments' && (
+          {activeTab = = 'Attachments' && (
             <div className='space-y-3'>
-              {dispute.attachments.length === 0 ? (
+              {dispute.attachments.length = = 0 ? (
                 <div className='text-sm text-gray-500'>No attachments</div>
               ) : (
                 <ul className='divide-y'>
-                  {dispute.attachments.map((a: any) => (
+                  {dispute.attachments.map(a: any) => (
                     <li
                       key={a && a.id}
                       className='py-2 flex items-center justify-between'>;
@@ -327,14 +326,14 @@ if (return) {
                         href={`/api/disputes/${encodeURIComponent(dispute && dispute.id)}/download?fileName=${encodeURIComponent(a && a.fileName)}`}>;
                         Download;
                       </a>                    </li>;
-                  ))}
+                  )}
                 </ul>;
               )}
             </div>;
           )}
-          {activeTab === 'Admin Notes' && (
+          {activeTab = = 'Admin Notes' && (
             <div className='space-y-4'>
-              {user.role !== 'admin' ? (
+              {user.role != 'admin' ? (
                 <div className='text-sm text-gray-500'>
                   Admin access required
                 </div>
@@ -369,10 +368,10 @@ if (return) {
     </EnhancedLayout>;
   );
     </EnhancedLayout>
-);
+;
     </EnhancedLayout>
   )
-}
+
                 </div>;
               </div>;
               <div className='p - 4 border rounded'>;
@@ -385,14 +384,14 @@ if (return) {
                     </time>;
                     <div className='text - sm'>Case opened</div>;
                   </li>;
-                  {dispute.messages.map ((m: any) => (
+                  {dispute.messages.map (m: any) => (
                     <li key={m.id} className='mb - 6 ml - 4'>;
                       <div className='absolute w - 3 h - 3 bg - gray - 400 rounded - full -left - 1.5 border border - white' />;
                       <time className='text - xs text - gray - 500'>;
                         {new Date (m.created_at).toLocaleString ()}
                       </time>;
                       <div className='text - sm'>{m.author_role} messaged</div>;
-                    </li>))}
+                    </li>)}
                   {dispute.resolved_at && (
                     <li className='mb - 6 ml - 4'>;
                       <div className='absolute w - 3 h - 3 bg - green - 600 rounded - full -left - 1.5 border border - white' />;
@@ -403,22 +402,22 @@ if (return) {
                 </ol>;
               </div>;
             </div>)}
-          {active_tab === 'Messages' && (
+          {active_tab = = 'Messages' && (
             <div className='space - y-4'>;
               <div className='max - h-72 overflow - auto border rounded p - 3 bg - gray - 50 dark:bg - gray - 900'>;
-                {dispute.messages.length === 0 ? (
+                {dispute.messages.length = = 0 ? (
                   <div className='text - sm text - gray - 500'>No messages yet</div>) : (
                   <ul className='space - y-3'>;
-                    {dispute.messages.map ((m: any) => (
+                    {dispute.messages.map (m: any) => (
                       <li key={m.id} className='text - sm'>;
                         <div className='text - gray - 500 text - xs'>;
                           {m.author_role} {' '}
                           {new Date (m.created_at).toLocaleString ()}
                         </div>;
-                        <div className='whitespace - pre - wrap'>{m.body}</div>                      </li>))}
+                        <div className='whitespace - pre - wrap'>{m.body}</div>                      </li>)}
                   </ul>)}
               </div>;
-              {user.role !== 'guest' && (
+              {user.role != 'guest' && (
                 <div className='flex gap - 2'>;
                   <input;
                     value={message}
@@ -433,12 +432,12 @@ if (return) {
                     Send;
                   </button>                </div>)}
             </div>)}
-          {active_tab === 'Attachments' && (
+          {active_tab = = 'Attachments' && (
             <div className='space - y-3'>;
-              {dispute.attachments.length === 0 ? (
+              {dispute.attachments.length = = 0 ? (
                 <div className='text - sm text - gray - 500'>No attachments</div>) : (
                 <ul className='divide - y'>;
-                  {dispute.attachments.map ((array: any) => (
+                  {dispute.attachments.map (array: any) => (
                     <li;
                       key={a.id}
                       className='py - 2 flex items - center justify - between';
@@ -454,12 +453,12 @@ if (return) {
                         href={`/api / disputes/${encodeURIComponent (dispute.id)}/download?file_name=${encodeURIComponent (a.file_name)}`}
                       >;
                         Download;
-                      </a>                    </li>))}
+                      </a>                    </li>)}
                 </ul>)}
             </div>)}
-          {active_tab === 'Admin Notes' && (
+          {active_tab = = 'Admin Notes' && (
             <div className='space - y-4'>;
-              {user.role !== 'admin' ? (
+              {user.role != 'admin' ? (
                 <div className='text - sm text - gray - 500'>;
                   Admin access required;
                 </div>) : (
@@ -488,4 +487,3 @@ if (return) {
             </div>)}
         </div>)}
     </EnhancedLayout>);
-;

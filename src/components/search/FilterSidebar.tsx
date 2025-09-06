@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React from 'react';
 interface FilterSidebarProps {;
   className?: string;
@@ -28,22 +28,21 @@ interface FilterSidebarProps {;
 interface FilterSidebarProps {;
   className?: string;
   children?: React && React.ReactNode;
-}
 
 export const FilterSidebar: React.FC<FilterSidebarProps> = ({
   className
   children
-},) => {  return (
+,) => {  return (
     <div className={`filter-sidebar ${className |''}`}>
       {children}
     </div>);
-}
+
 export default FilterSidebar;
 interface FilterOption {
   value: string;
   label: string;
   count?: number;
-}
+
 interface FilterGroup {
   title: string;
   key: string;
@@ -53,7 +52,7 @@ interface FilterSidebarProps extends React.PropsWithChildren<{}> {
   filters: FilterGroup[]
   selectedFilters: Record<string, any>
   onFilterChange: key: string, value: string, checked: boolean void
-  onClearFilters: : unknown void
+  onClearFilters: unknown void
   isOpen: boolean
   onClose: ()  => void}
 export function FilterSidebar({
@@ -63,7 +62,7 @@ export function FilterSidebar({
   onClearFilters
   isOpen
   onClose
-}: FilterSidebarProps) {
+: FilterSidebarProps) {
   return ()
     <>
       {/* Mobile overlay */}
@@ -73,7 +72,6 @@ interface FilterOption {;
   value: string;
   label: string;
   count?: number;
-}
 
 interface FilterGroup {;
   title: string;
@@ -86,7 +84,7 @@ interface FilterSidebarProps extends React && React.PropsWithChildren<{}> {;
   filters: FilterGroup[];
   selectedFilters: Record<string, any>;
   onFilterChange: key: string, value: string, checked: boolean void;
-  onClearFilters: : unknown void;
+  onClearFilters: unknown void;
   isOpen: boolean;
   onClose: ()  => void}
 
@@ -98,7 +96,7 @@ export function FilterSidebar(): any ({;
   onClearFilters,;
   isOpen,;
   onClose;
-}: FilterSidebarProps) {;
+: FilterSidebarProps) {;
 
   return ();
     <>;
@@ -129,17 +127,17 @@ export function FilterSidebar(): any ({;
                   )})}
               </div>
             </div>
-          ))}
+          )}
         </div>
       </div>
     </>
   )}
-'"`
+"`
 
   filters: FilterGroup[];
   selected_filters: Record < string, any>;
   onFilterChange: key: string, value: string, checked: boolean void;
-  onClearFilters: : unknown void;
+  onClearFilters: unknown void;
   is_open: boolean;
   on_close: ()  => void}
 export /**
@@ -171,8 +169,8 @@ function FilterSidebar() {
                       </span>;
                     </label>)})}
               </div>;
-            </div>))}
+            </div>)}
         </div>;
       </div>;
     </>)}
-'"`;
+"`;

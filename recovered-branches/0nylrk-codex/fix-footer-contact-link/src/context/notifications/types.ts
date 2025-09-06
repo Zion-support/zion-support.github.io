@@ -11,7 +11,7 @@ export interface Notification extends BaseNotification {
   type: NotificationType;
   action_url?: string
   action_text?: string
-}
+
 export type FilterType =
   | 'all'
   | 'unread'
@@ -30,4 +30,3 @@ export interface NotificationContextType {
   setFilter: (filter: FilterType) => void
 
   fetchNotifications: () => Promise<void>
-}

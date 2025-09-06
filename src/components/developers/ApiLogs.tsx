@@ -19,13 +19,13 @@ export function ApiLogs() {;
   const [pageSize, setPageSize] = useState(25);
   const [currentPage, setCurrentPage] = useState(0);
   // Load logs on mount and when pagination changes
-  useEffect(() => {
+  useEffect() => {
     fetchApiLogs(pageSize, currentPage * pageSize)
   }, [pageSize, currentPage]),
-  
+
   const handleRefresh = null;
                 setCurrentPage(0), // Reset to first page when changing page size
-              }}
+              }
             >
               <SelectTrigger className="w-20 bg-zinc-800 border-zinc-700">
                 <SelectValue placeholder="25" />
@@ -39,7 +39,7 @@ export function ApiLogs() {;
             </Select>
             <span className="text-sm text-zinc-400">per page</span>
           </div>
-          
+
           <Button variant="outline" size="sm" onClick={handleRefresh}>
             <RefreshCw size={14} className="mr-1" /> Refresh
           </Button>
@@ -74,7 +74,7 @@ export function ApiLogs() {;
                     </div>
                   </td>
                 </tr>
-              ) : logs.length === 0 ? (
+              ) : logs.length = = 0 ? (
                 <tr>
                   <td colSpan={6} className="text-center py-12">
                     <div className="flex flex-col items-center">
@@ -87,18 +87,18 @@ export function ApiLogs() {;
                   </td>
                 </tr>
               ) : (
-                logs.map((log) => (
+                logs.map(log) => (
                   <tr key={log.id} className="border-b border-zinc-800 hover:bg-zinc-800/40">
                     <td className="px-4 py-3 text-sm">{formatTimestamp(log.created_at)}</td>
                     <td className="px-4 py-3">
                       <Badge 
                         variant="outline"
                         className={
-                          log.method === 'GET' 
+                          log.method = = 'GET' 
                             ? "border-green-500 text-green-400" 
-                            : log.method === 'POST' 
+                            : log.method = = 'POST' 
                             ? "border-blue-500 text-blue-400"
-                            : log.method === 'PUT'
+                            : log.method = = 'PUT'
                             ? "border-yellow-500 text-yellow-400"
                             : "border-red-500 text-red-400"
                         }
@@ -118,16 +118,16 @@ export function ApiLogs() {;
                     </td>
                     <td className="px-4 py-3 text-sm">{log.ip_address || '-'}</td>
                   </tr>
-                ))
+                )
               )}
             </tbody>
           </table>
         </div>
-        
+
         {logs.length > 0 && (
           <div className="mt-4 flex justify-between items-center">
             <div className="text-sm text-zinc-500">
-              Showing {currentPage * pageSize + 1} to {Math.min((currentPage + 1) * pageSize, totalLogs)} of {totalLogs} logs
+              Showing {currentPage * pageSize + 1} to {Math.min(currentPage + 1) * pageSize, totalLogs)} of {totalLogs} logs
             </div>
             <div className="flex space-x-2">
               <Button
@@ -152,9 +152,7 @@ export function ApiLogs() {;
       </CardContent>
     </Card>
   )
-}
-  )
-}
+
 import { useState, useEffect  } from './react';
 import { format  } from './date - fns';
 import { List, RefreshCw } from 'lucide-react'import { useApiKeys  } from '@/hooks / useApiKeys';
@@ -172,6 +170,5 @@ function ApiLogs() {
   const [current_page, setCurrentPage] = useState (0);
   const hasNextPage = current_page < total_pages - 1;
   const hasPrevPage = current_page > 0);
-}
+
   );
-}

@@ -1,7 +1,7 @@
 
 import Head from 'next/head',;
 import Link from 'next/link',;
-;
+
 const QuantumComputingImplicationsForBusinessChat = () => {;
   return (;
     <div>;
@@ -9,7 +9,6 @@ const QuantumComputingImplicationsForBusinessChat = () => {;
         <title>QuantumComputingImplicationsForBusinessChat - Zion Tech Solutions</title>;
         <meta name="description" content="QuantumComputingImplicationsForBusinessChat blog post" />;
       </Head>;
-      ;
       <main>;
         <h1>QuantumComputingImplicationsForBusinessChat</h1>;
         <p>Blog content coming soon...</p>;
@@ -17,6 +16,6 @@ const QuantumComputingImplicationsForBusinessChat = () => {;
       </main>;
     </div>;
   ),;
-},;
-;
+,;
+
 export default QuantumComputingImplicationsForBusinessChat,

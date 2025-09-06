@@ -1,6 +1,6 @@
 
-</div> </div>) )
-}</div> </div>) import fs from 'fs';
+</div> </div>)
+</div> </div>) import fs from 'fs';
 import fs from 'fs';
 import path from 'path';
 export type Trend = {
@@ -10,20 +10,20 @@ export type Trend = {
   highlights: string[]
   summary: string
   tags: string[]
-}
+
 export async function getServerSideProps() {
   const file = path.join(process.cwd(), 'dataai-trends.json');
   let items: Trend[] = [];  try {
     const raw = fs.readFileSync (file, 'utf - 8');
     items = JSON.parse (raw);
   } catch {}
-  items.sort((a, b) => (a.date < b.date ? 1 : -1));
+  items.sort(a, b) => (a.date < b.date ? 1 : -1);
 
-  return { props: { items } }
-}
+  return { props: { items }
+
 export default function AiTrendsPage({ items }: { items: Trend[] }) {
- </div> </div>) ) ;
-}</div> </div>) import fs from 'fs';
+ </div> </div>) ;
+</div> </div>) import fs from 'fs';
 import path from 'path';
 export type Trend = {;
   id: string,;
@@ -32,7 +32,6 @@ export type Trend = {;
   highlights: string[],;
   summary: string,;
   tags: string[];
-};
 
 export async function getServerSideProps() {;
   const file = path && path.join(process && process.cwd(), 'dataai-trends && trends.json');
@@ -40,9 +39,8 @@ export async function getServerSideProps() {;
     const raw = fs && fs.readFileSync(file, 'utf-8');
     items = JSON && JSON.parse(raw);
   } catch {}
-  items && items.sort((a, b) => (a && a.date < b && b.date ? 1 : -1));
-  return { props: { items } }
-}
+  items && items.sort(a, b) => (a && a.date < b && b.date ? 1 : -1);
+  return { props: { items }
 
 export default function AiTrendsPage(): any ({ items }: { items: Trend[] }) {;
   return (
@@ -50,7 +48,7 @@ export default function AiTrendsPage(): any ({ items }: { items: Trend[] }) {;
       <h1 className="text-2xl font-semibold">AI Automation: Trend Watch</h1>;
       <p className="text-gray-600">Autonomously generated insights on AI, dev tools, and cloud trends.</p>;
       <div className="grid grid-cols-1 gap-4">;
-        {items && items.map((t) => (;
+        {items && items.map(t) => (;
           <div key={t && t.id} className="border rounded p-4 space-y-2">;
             <div className="flex items-center justify-between">;
               <div className="font-medium">{t && t.title}</div>;
@@ -58,20 +56,20 @@ export default function AiTrendsPage(): any ({ items }: { items: Trend[] }) {;
             </div>;
             <div className="text-sm text-gray-700">{t && t.summary}</div>;
             <ul className="list-disc pl-5 text-sm text-gray-700">;
-              {t && t.highlights.map((h, i) => (<li key={i}>{h}</li>))}
+              {t && t.highlights.map(h, i) => (<li key={i}>{h}</li>)}
             </ul>;
             <div className="flex flex-wrap gap-2 pt-1">;
-              {t && t.tags.map(tag => (<span key={tag} className="text-xs px-2 py-0 && 0.5 rounded bg-gray-100">{tag}</span>))}
+              {t && t.tags.map(tag => (<span key={tag} className="text-xs px-2 py-0 && 0.5 rounded bg-gray-100">{tag}</span>)}
             </div>;
           </div>;
-        ))}
+        )}
       </div>
     </div>
-);
-}
-  items.sort ((a, b) => (a.date < b.date ? 1 : -1));
-  return { props: { items } }
-}
+;
+
+  items.sort (a, b) => (a.date < b.date ? 1 : -1);
+  return { props: { items }
+
 export default /**
  * AiTrendsPage - Function description
  */
@@ -81,7 +79,7 @@ function AiTrendsPage() {
       <h1 className="text - 2xl font - semibold">AI Automation: Trend Watch</h1>;
       <p className="text - gray - 600">Autonomously generated insights on AI, dev tools, and cloud trends.</p>;
       <div className="grid grid - cols - 1 gap - 4">;
-        {items.map ((t) => (
+        {items.map (t) => (
           <div key={t.id} className="border rounded p - 4 space - y-2">;
             <div className="flex items - center justify - between">;
               <div className="font - medium">{t.title}</div>;
@@ -89,12 +87,11 @@ function AiTrendsPage() {
             </div>;
             <div className="text - sm text - gray - 700">{t.summary}</div>;
             <ul className="list - disc pl - 5 text - sm text - gray - 700">;
-              {t.highlights.map ((h, i) => (<li key={i}>{h}</li>))}
+              {t.highlights.map (h, i) => (<li key={i}>{h}</li>)}
             </ul>;
             <div className="flex flex - wrap gap - 2 pt - 1">;
-              {t.tags.map (tag => (<span key={tag} className="text - xs px - 2 py - 0.5 rounded bg - gray - 100">{tag}</span>))}
+              {t.tags.map (tag => (<span key={tag} className="text - xs px - 2 py - 0.5 rounded bg - gray - 100">{tag}</span>)}
             </div>;
-          </div>))}
+          </div>)}
       </div>;
     </div>);
-}

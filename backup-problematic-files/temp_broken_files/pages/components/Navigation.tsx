@@ -77,7 +77,7 @@ import {
   TrendingUp as Growth,
   Clock as Time,
   DollarSign as Money
-} from 'lucide-react';
+ from 'lucide-react';
 
 const navigationItems = [
   {
@@ -409,7 +409,7 @@ const navigationItems = [
       }
     ]
   }
-];
+;
 
 const quickLinks = [
   { title: 'Pricing', href: '/pricing', icon: DollarSign },
@@ -418,7 +418,7 @@ const quickLinks = [
   { title: 'Status', href: '/status', icon: BarChart3 },
   { title: 'Free Consultation', href: '/consultation', icon: Calendar },
   { title: 'Get Quote', href: '/quote', icon: FileText }
-];
+;
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -468,7 +468,7 @@ export default function Navigation() {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            {navigationItems.map((item) => (
+            {navigationItems.map(item) => (
               <div
                 key={item.title}
                 className="relative group"
@@ -485,15 +485,15 @@ export default function Navigation() {
                 </Link>
 
                 {/* Submenu */}
-                {activeSubmenu === item.title && (
+                {activeSubmenu = = item.title && (
                   <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 10 }}
+                    initial={ opacity: 0, y: 10 }
+                    animate={ opacity: 1, y: 0 }
+                    exit={ opacity: 0, y: 10 }
                     className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4 z-50"
                   >
                     <div className="grid grid-cols-1 gap-2">
-                      {item.submenu.map((subItem) => (
+                      {item.submenu.map(subItem) => (
                         <Link
                           key={subItem.title}
                           href={subItem.href}
@@ -513,16 +513,16 @@ export default function Navigation() {
                           </div>
                           <ArrowRight className="w-4 h-4 text-gray-400" />
                         </Link>
-                      ))}
+                      )}
                     </div>
                   </motion.div>
                 )}
               </div>
-            ))}
+            )}
 
             {/* Quick Links */}
             <div className="flex items-center space-x-4 ml-8 pl-8 border-l border-gray-200">
-              {quickLinks.map((link) => (
+              {quickLinks.map(link) => (
                 <Link
                   key={link.title}
                   href={link.href}
@@ -531,7 +531,7 @@ export default function Navigation() {
                   <link.icon className="w-4 h-4" />
                   <span>{link.title}</span>
                 </Link>
-              ))}
+              )}
             </div>
           </div>
 
@@ -547,13 +547,13 @@ export default function Navigation() {
         {/* Mobile Navigation */}
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
+            initial={ opacity: 0, height: 0 }
+            animate={ opacity: 1, height: 'auto' }
+            exit={ opacity: 0, height: 0 }
             className="lg:hidden border-t border-gray-200 py-4"
           >
             <div className="space-y-4">
-              {navigationItems.map((item) => (
+              {navigationItems.map(item) => (
                 <div key={item.title}>
                   <Link
                     href={item.href}
@@ -564,7 +564,7 @@ export default function Navigation() {
                     <span className="font-medium">{item.title}</span>
                   </Link>
                   <div className="ml-7 space-y-2 mt-2">
-                    {item.submenu.map((subItem) => (
+                    {item.submenu.map(subItem) => (
                       <Link
                         key={subItem.title}
                         href={subItem.href}
@@ -579,15 +579,15 @@ export default function Navigation() {
                           </span>
                         )}
                       </Link>
-                    ))}
+                    )}
                   </div>
                 </div>
-              ))}
-              
+              )}
+
               {/* Mobile Quick Links */}
               <div className="pt-4 border-t border-gray-200">
                 <div className="grid grid-cols-2 gap-2">
-                  {quickLinks.map((link) => (
+                  {quickLinks.map(link) => (
                     <Link
                       key={link.title}
                       href={link.href}
@@ -597,7 +597,7 @@ export default function Navigation() {
                       <link.icon className="w-4 h-4" />
                       <span>{link.title}</span>
                     </Link>
-                  ))}
+                  )}
                 </div>
               </div>
             </div>
@@ -606,4 +606,3 @@ export default function Navigation() {
       </div>
     </nav>
   );
-}

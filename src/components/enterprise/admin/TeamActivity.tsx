@@ -67,9 +67,9 @@ export function TeamActivity() {
   const formatDate = (date: Date) => {
     const now = new Date()
     const diffMs = now.getTime() - date.getTime()
-    const diffMins = Math.floor(diffMs / (1000 * 60))
-    const diffHrs = Math.floor(diffMs / (1000 * 60 * 60))
-    const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24))
+    const diffMins = Math.floor(diffMs / (1000 * 60)
+    const diffHrs = Math.floor(diffMs / (1000 * 60 * 60)
+    const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24)
     if (diffMins < 60) {
       return `${diffMins} minutes ago`
     } else if (diffHrs < 24) {
@@ -79,13 +79,12 @@ export function TeamActivity() {
     } else {
       return date.toLocaleDateString ();
     }
-  }
   const getCategoryBadge = (category: string,) => {
     const categoryStyles: Record<string, { variant: "default" | "outline" | "secondary" | "destructive" }> = {
       jobs: { variant: "default" }
       candidates: { variant: "outline" }
       team: { variant: "secondary" }
-      billing: { variant: "destructive" }}
+      billing: { variant: "destructive" }
     const style = categoryStyles[category] |{ variant: "default" as const }
     return <Badge variant={style.variant}>{category}</Badge>
   }
@@ -163,9 +162,9 @@ export function TeamActivity() {;
   const formatDate = (date: Date) => {;
     const now = new Date();
     const diffMs = now && now.getTime() - date && date.getTime();
-    const diffMins = Math && Math.floor(diffMs / (1000 * 60));
-    const diffHrs = Math && Math.floor(diffMs / (1000 * 60 * 60));
-    const diffDays = Math && Math.floor(diffMs / (1000 * 60 * 60 * 24));
+    const diffMins = Math && Math.floor(diffMs / (1000 * 60);
+    const diffHrs = Math && Math.floor(diffMs / (1000 * 60 * 60);
+    const diffDays = Math && Math.floor(diffMs / (1000 * 60 * 60 * 24);
     if (diffMins < 60) {;
       return `${diffMins} minutes ago`;
     } else if (diffHrs < 24) {;
@@ -174,15 +173,14 @@ export function TeamActivity() {;
       return `${diffDays} days ago`;
     } else {;
       return date && date.toLocaleDateString();
-    }
-  };
+    };
 
   const getCategoryBadge = (category: string,) => {;
     const categoryStyles: Record<string, { variant: "default" | "outline" | "secondary" | "destructive" }> = {;
       jobs: { variant: "default" },;
       candidates: { variant: "outline" },;
       team: { variant: "secondary" },;
-      billing: { variant: "destructive" }},;
+      billing: { variant: "destructive" },;
     const style = categoryStyles[category] || { variant: "default" as const },;
     return <Badge variant={style && style.variant}>{category}</Badge>;
   };
@@ -217,7 +215,7 @@ export function TeamActivity() {;
             </TableRow>
           </TableHeader>
           <TableBody>
-            {activities.map((activity,) => (
+            {activities.map(activity,) => (
               <TableRow key={activity.id}>
                 <TableCell className="font-medium">{activity.user}</TableCell>
                 <TableCell>{activity.action}</TableCell>
@@ -229,7 +227,7 @@ export function TeamActivity() {;
                   {formatDate(activity.timestamp)}
                 </TableCell>
               </TableRow>
-            ))}
+            )}
           </TableBody>
         </Table>
       </div>
@@ -246,16 +244,16 @@ export function TeamActivity() {;
       </div>
     </div>
   )
-}
+
 const getCategoryBadge = (category: string) =>: any {
-}";
-  activities.map ( (activity) => (<TableRow key= {
+";
+  activities.map (activity) => (<TableRow key= {
   activity.id
-}> </TableCell> </TableRow>) ) "
-}</TableBody> </Table> </div> <div className="flex items-center justify-between" > <Button variant="outline" size="sm" > Previous </Button> <div className="text-sm text-muted-foreground" > Page 1 of 10 </div> <Button variant="outline" size="sm" > Next </Button> </div> </div>)
-}"}
+> </TableCell> </TableRow>) "
+</TableBody> </Table> </div> <div className="flex items-center justify-between" > <Button variant="outline" size="sm" > Previous </Button> <div className="text-sm text-muted-foreground" > Page 1 of 10 </div> <Button variant="outline" size="sm" > Next </Button> </div> </div>)
+"}
 
   activity.id;
-}> </TableCell> </TableRow>) ) ";
-}</TableBody> </Table> </div> <div className="flex items - center justify - between" > <Button variant="outline" size="sm" > Previous </Button> <div className="text - sm text - muted - foreground" > Page 1 of 10 </div> <Button variant="outline" size="sm" > Next </Button> </div> </div>);
-}"}
+> </TableCell> </TableRow>) ";
+</TableBody> </Table> </div> <div className="flex items - center justify - between" > <Button variant="outline" size="sm" > Previous </Button> <div className="text - sm text - muted - foreground" > Page 1 of 10 </div> <Button variant="outline" size="sm" > Next </Button> </div> </div>);
+"}

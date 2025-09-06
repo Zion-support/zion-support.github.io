@@ -1,7 +1,7 @@
 import React from 'react',;
 import SEO from '../components/SEO',;
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',;
-;
+
 export default function CookiesPage() {;
   return (;
     <UltraAdvancedFuturisticBackground>;
@@ -20,7 +20,7 @@ export default function CookiesPage() {;
       </div>;
     </UltraAdvancedFuturisticBackground>;
   );
-}import { motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Layout from '../components/Layout';
 
@@ -38,9 +38,9 @@ export default function CookiesPage() {
           <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
             <div className="container mx-auto px-4">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.8 }
                 className="text-center"
               >
                 <h1 className="text-4xl md:text-5xl font-bold mb-6">
@@ -58,9 +58,9 @@ export default function CookiesPage() {
           <section className="py-20">
             <div className="container mx-auto px-4 max-w-4xl">
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
+                initial={ opacity: 0, y: 30 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.8 }
                 className="bg-white rounded-lg shadow-lg p-8"
               >
                 <h2 className="text-3xl font-bold mb-6">What Are Cookies?</h2>
@@ -99,5 +99,5 @@ export default function CookiesPage() {
       </Layout>
     </>
   );
-}
+
  <li>Purpose: performance and security</li> <li>Retention: session or shortterm</li> <li>Optout: browser settings and extensions</li> </ul> <p className="text-gray-400 text-sm" >Questions? <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com" >kleber@ziontechgroup.com</Link></p> </div> </div> </UltraAdvancedFuturisticBackground> 

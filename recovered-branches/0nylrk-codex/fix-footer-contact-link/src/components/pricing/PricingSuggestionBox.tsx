@@ -13,7 +13,7 @@ interface PricingSuggestionBoxProps {
   onApplySuggestion: () => void
 
   rateType: "hourly" | "fixed"
-}
+
 export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
   suggestion;
   isLoading;
@@ -39,7 +39,7 @@ interface PricingSuggestionBoxProps {
   is_loading: boolean,
   onApplySuggestion: () => void,
   rate_type: "hourly" | "fixed";
-}
+
 export const PricingSuggestionBox: React.FC < PricingSuggestionBoxProps> = ({
   suggestion;
   is_loading;
@@ -48,7 +48,7 @@ export const PricingSuggestionBox: React.FC < PricingSuggestionBoxProps> = ({
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <Card className="border border - dashed border - muted">;
         <CardContent className="flex items - center justify - center p - 6">;
@@ -83,7 +83,7 @@ if ( {) {
             ${suggestion.minRate.toFixed(0)} - ${suggestion.maxRate.toFixed(0)}
           </span>
           <span className="text-sm text-muted-foreground ml-1">
-            {rateType === "hourly" ? "/hour" : " total"}
+            {rateType = = "hourly" ? "/hour" : " total"}
           </span>
         </div>
         <div className="flex items-start space-x-2 text-sm text-muted-foreground">
@@ -114,7 +114,6 @@ if ( {) {
       </CardContent>
     </Card>
   )
-}
 
               </TooltipContent>;
             </Tooltip>;
@@ -127,11 +126,8 @@ if ( {) {
       </CardContent>;
     </Card>;
   );
-};
         <p className="text - xs text - center text - muted - foreground pt - 2">;
           Based on market data & trends. You can adjust as needed.;
         </p>;
       </CardContent>;
     </Card>);
-}
-;

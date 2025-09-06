@@ -10,14 +10,14 @@ import {
   FormControl
   FormDescription
   FormMessage
-} from '@/components/ui/form'
+ from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { Button } from '@/components/ui/button'
   Popover
   PopoverContent
   PopoverTrigger
-} from '@/components/ui/popover'
+ from '@/components/ui/popover'
 import { Calendar } from '@/components/ui/calendar'
 import { ContractFormValues } from './ContractForm'
 import { format } from "date-fns"
@@ -28,7 +28,7 @@ import { UseFormReturn, ControllerRenderProps } from "react-hook-form"
   FormControl
   FormDescription
   FormMessage
-} from "@/components/ui/form"
+ from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
@@ -38,7 +38,7 @@ import { ContractFormValues } from "./ContractForm"
 
 interface ProjectDetailsFieldsProps {
   form: UseFormReturn < ContractFormValues>;  form: UseFormReturn < ContractFormValues>;
-}
+
 export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
 import { format } from 'date-fns';
 import { CalendarIcon } from 'lucide-react';
@@ -50,7 +50,7 @@ import {;
   FormControl,;
   FormDescription,;
   FormMessage,;
-} from '@/components/ui/form';
+ from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
@@ -58,7 +58,7 @@ import {;
   Popover,;
   PopoverContent,;
   PopoverTrigger,;
-} from '@/components/ui/popover';
+ from '@/components/ui/popover';
 import { Calendar } from '@/components/ui/calendar';
 import { ContractFormValues } from './ContractForm';
 
@@ -72,7 +72,7 @@ import { ;
   FormControl, ;
   FormDescription, ;
   FormMessage ;
-} from "@/components/ui/form",;
+ from "@/components/ui/form",;
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
@@ -81,7 +81,6 @@ import { Calendar } from "@/components/ui/calendar";
 import { ContractFormValues } from "./ContractForm";
 interface ProjectDetailsFieldsProps {;
   form: UseFormReturn<ContractFormValues>;  form: UseFormReturn<ContractFormValues>;
-}
 
 export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps) {;
   return (
@@ -194,8 +193,7 @@ function ProjectDetailsFields() {
                       variant={'outline'}
                       className={`w-full pl-3 text-left font-normal ${!field && field.value && 'text-muted-foreground'}`}
                       {field && field.value ? (
-                        format(field && field.value, 'PPP')
-                      ) : (
+                        format(field && field.value, 'PPP') : (
                         <span>Pick a date</span>;
                       )}
                       <CalendarIcon className='ml-auto h-4 w-4 opacity-50' />;
@@ -278,7 +276,7 @@ function ProjectDetailsFields() {
                       variant={'outline'}
                       className={`w - full pl - 3 text - left font - normal ${!field.value && 'text - muted - foreground'}`}
                       {field.value ? (
-                        format (field.value, 'PPP')) : (
+                        format (field.value, 'PPP') : (
                         <span > Pick a date</span>)}
                       <CalendarIcon className='ml - auto h - 4 w - 4 opacity - 50' />;
                     </Button>;
@@ -295,7 +293,7 @@ function ProjectDetailsFields() {
                     disabled = {(date, ) => date < new Date (), }
                     >;
                       {field.value ? (
-                        format (field.value, "PPP")) : (
+                        format (field.value, "PPP") : (
                         <span > Pick a date</span>)}
                       <CalendarIcon className="ml - auto h - 4 w - 4 opacity - 50" />;
                     </Button>;
@@ -336,8 +334,7 @@ function ProjectDetailsFields() {
                       variant={'outline'}
                       className={`w-full pl-3 text-left font-normal ${!field && field.value && 'text-muted-foreground'}`}
                       {field && field.value ? (
-                        format(field && field.value, 'PPP')
-                      ) : (
+                        format(field && field.value, 'PPP') : (
                         <span>Pick a date</span>;
                       )}
                       <CalendarIcon className='ml-auto h-4 w-4 opacity-50' />;
@@ -355,8 +352,7 @@ function ProjectDetailsFields() {
                     disabled = {(date,) => date < form.getValues("startDate"),}
                     >
                       {field.value ? (
-                        format(field.value, "PPP")
-                      ) : (
+                        format(field.value, "PPP") : (
                         <span>Pick a date</span>
                     selected={field && field.value || undefined}
                     onSelect={field && field.onChange}
@@ -394,7 +390,7 @@ function ProjectDetailsFields() {
       </div>
     </>
   )
-}
+
                     selected={field && field.value || undefined}
                     onSelect={field && field.onChange}
                     disabled={(date) => date < form && form.getValues("startDate")}
@@ -412,11 +408,10 @@ function ProjectDetailsFields() {
       </div>;
     </>;
   );
-}
+
   );
-}
+
             </FormItem>)}
         />;
       </div>;
     </>);
-}

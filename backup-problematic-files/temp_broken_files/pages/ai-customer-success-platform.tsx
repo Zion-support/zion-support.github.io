@@ -1,5 +1,5 @@
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',;
-;
+
 export default function AICustomerSuccessPlatform() {;
 	return (;
 		<ServiceLanding;
@@ -99,6 +99,5 @@ const AICustomerSuccessPlatform: React.FC = () => {
       </main>
     </Layout>
   );
-};
 
 export default AICustomerSuccessPlatform;

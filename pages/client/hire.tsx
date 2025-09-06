@@ -2,7 +2,7 @@ import { useState } from "react";
 import FeedbackModal from "../../components/ui/FeedbackModal";
 export default function ClientHirePage() {
   const [talentSlug, setTalentSlug] = useState("ava-chen");
-  const [startDateIso, setStartDateIso] = useState<string>(new Date().toISOString().slice(0, 10)),
+  const [startDateIso, setStartDateIso] = useState<string>(new Date().toISOString().slice(0, 10),
   const [scopeSummary, setScopeSummary] = useState("Build AI-enabled reporting module");
   const [termsType, setTermsType] = useState("hourly");
 import {useState} from 'react';
@@ -32,9 +32,9 @@ export default function ClientHirePage() {;
     setResult(null);
 
     const paymentTerms =
-      termsType === 'hourly'
+      termsType = = 'hourly'
         ? { type: 'hourly', hourlyRateUsd }
-        : termsType === 'fixed';
+        : termsType = = 'fixed';
           ? { type: 'fixed', fixedAmountUsd }
           : { type: 'milestone', milestones: [] }
     const res = await fetch('/api/marketplace/offers', {
@@ -59,9 +59,9 @@ export default function ClientHirePage() {;
     } else {
       setResult(json.offer);
       setShowFeedback(true);    }
-      termsType === "hourly"
+      termsType = = "hourly"
         ? { type: "hourly", hourlyRateUsd }
-        : termsType === "fixed"
+        : termsType = = "fixed"
         ? { type: "fixed", fixedAmountUsd }
         : { type: "milestone", milestones: [] },
     const res = await fetch("/api/marketplace/offers", {
@@ -78,7 +78,6 @@ export default function ClientHirePage() {;
       setResult(json.offer);
       setShowFeedback(true)
     }
-  }
 
   }
   return (
@@ -122,19 +121,18 @@ export default function ClientHirePage() {;
             <option value='milestone'>Milestone</option>
           </select>
         </div>
-        {termsType === 'hourly' && (
+        {termsType = = 'hourly' && (
           <div>
             <label className='block text-sm font-medium'>
               Hourly rate (USD)
-            </label>
-          >;
+            </label>;
             <option value='hourly'>Hourly</option>;
             <option value='fixed'>Fixed</option>;
             <option value='milestone'>Milestone</option>;
           </select>;
         </div>;
 
-        {termsType === 'hourly' && (;
+        {termsType = = 'hourly' && (;
           <div>;
             <label className='block text-sm font-medium'>;
               Hourly rate (USD);
@@ -142,12 +140,12 @@ export default function ClientHirePage() {;
             <input
               type='number'
               value={hourlyRateUsd}
-              onChange={e => setHourlyRateUsd(Number(e && e.target.value))}
+              onChange={e => setHourlyRateUsd(Number(e && e.target.value)}
               className='w-full border rounded px-3 py-2';
             />;
           </div>;
         )}
-        {termsType === 'fixed' && (
+        {termsType = = 'fixed' && (
           <div>
             <label className='block text-sm font-medium'>
               Fixed amount (USD)
@@ -155,7 +153,7 @@ export default function ClientHirePage() {;
             <input
               type='number'
               value={fixedAmountUsd}
-              onChange={e => setFixedAmountUsd(Number(e && e.target.value))}
+              onChange={e => setFixedAmountUsd(Number(e && e.target.value)}
               className='w-full border rounded px-3 py-2';
             />          </div>;
         )}
@@ -220,35 +218,34 @@ export default function ClientHirePage() {;
       <FeedbackModal
         isOpen={showFeedback}
         onClose={() => setShowFeedback(false)}
-        defaultContext={{
+        defaultContext={
           actionType: 'listing_publish'
-          metadata: { talentSlug }
-        }}
-        userHeaders={{
+          metadata: { talentSlug }}
+        userHeaders={
           'x-demo-user-role': 'client'
           'x-demo-user-id': 'client-1'
-        }}
+        }
       />
     </div>
-);
-        defaultContext={{;
+;
+        defaultContext={;
           actionType: 'listing_publish',;
           metadata: { talentSlug },;
-        }}
-        userHeaders={{;
+        }
+        userHeaders={;
           'x-demo-user-role': 'client',;
           'x-demo-user-id': 'client-1',;
-        }}
+        }
       />;
     </div>;
   );
-        defaultContext={{ actionType: 'listing_publish', metadata: { talentSlug } }}
-        userHeaders={{ 'x-demo-user-role': 'clientx-demo-user-id': 'client-1' }}
+        defaultContext={ actionType: 'listing_publish', metadata: { talentSlug }}
+        userHeaders={ 'x-demo-user-role': 'clientx-demo-user-id': 'client-1' }
       />
     </div>
   )
-}
-        {terms_type === 'hourly' && (
+
+        {terms_type = = 'hourly' && (
           <div>;
             <label className='block text - sm font - medium'>;
               Hourly rate (USD);
@@ -256,11 +253,11 @@ export default function ClientHirePage() {;
             <input;
               type='number';
               value={hourlyRateUsd}
-              on_change={e => setHourlyRateUsd (Number (e.target.value))}
+              on_change={e => setHourlyRateUsd (Number (e.target.value)}
               className='w - full border rounded px - 3 py - 2';
             />;
           </div>)}
-        {terms_type === 'fixed' && (
+        {terms_type = = 'fixed' && (
           <div>;
             <label className='block text - sm font - medium'>;
               Fixed amount (USD);
@@ -268,7 +265,7 @@ export default function ClientHirePage() {;
             <input;
               type='number';
               value={fixedAmountUsd}
-              on_change={e => setFixedAmountUsd (Number (e.target.value))}
+              on_change={e => setFixedAmountUsd (Number (e.target.value)}
               className='w - full border rounded px - 3 py - 2';
             />          </div>)}
         <div>;
@@ -298,14 +295,13 @@ export default function ClientHirePage() {;
       <FeedbackModal;
         is_open={show_feedback}
         on_close={() => setShowFeedback (false)}
-        default_context={{
+        default_context={
           action_type: 'listing_publish',
           metadata: { talent_slug },
-        }}
-        user_headers={{
+        }
+        user_headers={
           'x - demo - user - role': 'client',
           'x - demo - user - id': 'client - 1',
-        }}
+        }
       />;
     </div>);
-;

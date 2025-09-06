@@ -37,7 +37,7 @@ export default function Unauthorized() {
       <Footer />
     </>
   )
-}
+
               Login with Different Account;
             </Link>;
           </div>;
@@ -46,6 +46,5 @@ export default function Unauthorized() {
       <Footer />;
     </>;
   );
-}
+
     </>);
-}

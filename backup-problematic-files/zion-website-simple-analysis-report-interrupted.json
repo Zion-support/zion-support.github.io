@@ -1,4 +1,4 @@
-{
+
   "analysis_summary": {
     "base_url": "https://ziontechgroup.com",
     "total_pages_analyzed": 38,
@@ -373,8 +373,7 @@
         "Missing navigation",
         "No images found"
       ]
-    }
-  },
+    },
   "link_hierarchy": {
     "https://ziontechgroup.com": [
       "https://ziontechgroup.com/request-quote/",
@@ -474,4 +473,3 @@
     "Add navigation to 5 pages",
     "Consider adding images to 5 pages for better visual appeal"
   ]
-}

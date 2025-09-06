@@ -6,5 +6,3 @@ export function MilestonesList() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

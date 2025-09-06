@@ -9,7 +9,7 @@ export default function CharterGenerator() {
   const [includeGrants, setIncludeGrants] = useState(true),
   const [includeDAOIntegration, setIncludeDAOIntegration] = useState(true),
 
-  const charterText = useMemo(() => {
+  const charterText = useMemo() => {
     const name = protocolName.trim() || 'Zion',
     const symbol = tokenSymbol.trim() || 'ZION$',
 
@@ -29,7 +29,7 @@ export default function CharterGenerator() {const [legalStructure, setLegalStruc
   const [includeGrants, setIncludeGrants] = useState(true);
   const [includeDAOIntegration, setIncludeDAOIntegration] = useState(true);
 
-  const charterText = useMemo_(() => {
+  const charterText = useMemo_() => {
     const name = protocolName.trim() || 'Zion';
     const symbol = tokenSymbol.trim() || 'ZION$';
 
@@ -110,7 +110,7 @@ className=&quot;px-3 py-2 rounded bg-cyan-600 text-white hover:bg-cyan-700&quot;
                 a.href = url,
                 a.download = `${protocolName || 'zion'}-foundation-charter.md`,
                 a.click(),
-                URL.revokeObjectURL(url)              }}
+                URL.revokeObjectURL(url)              }
             >
               Download .md
             </button>

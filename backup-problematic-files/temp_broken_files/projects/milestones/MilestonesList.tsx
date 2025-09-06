@@ -6,10 +6,10 @@ import { MilestoneCard } from './MilestoneCard',;
 import { AddMilestoneForm } from './AddMilestoneForm',;
 import { Button } from '@/components/ui/button',;
 import { Card, CardContent } from '@/components/ui/card',;
-// lucide-react doesn't export PlusIcon, use our icon wrapper;
+/ lucide-react doesn't export PlusIcon, use our icon wrapper;
 import { Plus } from 'lucide-react';
 import { EmptyState } from '@/components/ui/empty-state',;
-;
+
 interface MilestonesListProps {;
   milestones:Milestone[],;
   activities:Record<string MilestoneActivity[]>,;
@@ -22,8 +22,7 @@ interface MilestonesListProps {;
   isSubmitting:boolean,;
   onApprove?:(id:string) => Promise<void>,;
   onReject?:(id:string) => Promise<void>;
-}
-;
+
 export const MilestonesList:React.FC<MilestonesListProps> = ({;
   milestones,;
   activities,;
@@ -36,18 +35,17 @@ export const MilestonesList:React.FC<MilestonesListProps> = ({;
   isSubmitting,;
   onApprove,;
   onReject;
-}) => {;
+) => {;
   const [showAddForm, setShowAddForm] = useState(false),;
-  ;
   const handleSubmit = async (data:any) => {;
     await onCreateMilestone(data),;
     setShowAddForm(false);
   },;
-;
+
   if (isLoading) {;
     return (;
       <div className="space-y-4">;
-        {[1, 2, 3].map((i) => (;
+        {[1, 2, 3].map(i) => (;
           <Card key={i}>;
             <CardContent className="p-6">;
               <div className="h-6 w-48 bg-muted rounded animate-pulse mb-4"></div>;
@@ -55,12 +53,12 @@ export const MilestonesList:React.FC<MilestonesListProps> = ({;
               <div className="h-4 bg-muted rounded animate-pulse w-3/4"></div>;
             </CardContent>;
           </Card>;
-        ))}
+        )}
       </div>;
     ),;
   }
   ;
-  if (milestones.length === 0 && !showAddForm) {;
+  if (milestones.length = = 0 && !showAddForm) {;
     return (;
       <EmptyState;
         icon={<span className="text-3xl"></span>}
@@ -77,7 +75,7 @@ export const MilestonesList:React.FC<MilestonesListProps> = ({;
       />;
     ),;
   }
-;
+
   return (;
     <div className="space-y-6">;
       {isClient && !showAddForm && (;
@@ -103,56 +101,55 @@ export const MilestonesList:React.FC<MilestonesListProps> = ({;
       )}
       ;
       <div className="space-y-4">;
-        {milestones.map((milestone) => (;
+        {milestones.map(milestone) => (;
           <MilestoneCard;
             key={milestone.id}            id={milestone.id}
             projectId={milestone.projectid}
             title={milestone.title}
             description={milestone.description}
-            amount={parseFloat(milestone.amount.toString())}
+            amount={parseFloat(milestone.amount.toString()}
             status={milestone.status}
             dueDate={milestone.duedate}
             onApprove={onApprove}
             onReject={onReject}
           />;
-        ))}
+        )}
       </div>;
     </div>;
   ),;
-},; <Card key= {;
+,; <Card key= {;
   i ;
-}> <CardContent className="p-6" > <div className="h-6 w-48 bg-muted rounded animate-pulse mb-4" ></div> <div className="h-4 bg-muted rounded animate-pulse w-full mb-2" ></div> <div className="h-4 bg-muted rounded animate-pulse w-3/4" ></div> </CardContent> </Card>) ) ;
-}</div>) ;
-}
-}/>) ;
-}<Button onClick={;"  () => setShowAddForm (true) ";"}> <Plus className="h-4 w-4 mr-2" /> Add Milestone </Button> </div>) ;
-}<AddMilestoneForm onSubmit= {;
+> <CardContent className="p-6" > <div className="h-6 w-48 bg-muted rounded animate-pulse mb-4" ></div> <div className="h-4 bg-muted rounded animate-pulse w-full mb-2" ></div> <div className="h-4 bg-muted rounded animate-pulse w-3/4" ></div> </CardContent> </Card>) ;
+</div>) ;
+
+/>) ;
+<Button onClick={;"  () => setShowAddForm (true) ";"}> <Plus className="h-4 w-4 mr-2" /> Add Milestone </Button> </div>) ;
+<AddMilestoneForm onSubmit= {;
   handleSubmit ;
-}isSubmitting= {;
+isSubmitting= {;
   isSubmitting ;
-}onCancel= {;
+onCancel= {;
   () => setShowAddForm (false) ;
-}/> </CardContent> </Card>) ;
-}<MilestoneCard key= {;
+/> </CardContent> </Card>) ;
+<MilestoneCard key= {;
   milestone.id ;
-}id= {;
+id= {;
   milestone.id ;
-}projectId= {;
+projectId= {;
   milestone.project id ;
-}title= {;
+title= {;
   milestone.title ;
-}description= {;
+description= {;
   milestone.description ;
-}amount= {;
-  parseFloat (milestone.amount.toString () ) ;
-}status= {;
+amount= {;
+  parseFloat (milestone.amount.toString () ;
+status= {;
   milestone.status ;
-}dueDate= {;
+dueDate= {;
   milestone.due date ;
-}onApprove= {;
+onApprove= {;
   onApprove ;
-}onReject= {;
+onReject= {;
   onReject ;
-}/>) ) ;
-}</div> </div>) ;
-};""
+/>) ;
+</div> </div>) ;""

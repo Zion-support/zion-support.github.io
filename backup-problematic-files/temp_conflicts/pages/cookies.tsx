@@ -4,13 +4,13 @@ import { motion } from 'framer-motion',;
 import { ;
   Cookie, Settings, Shield, Eye, Database, ;
   CheckCircle, AlertTriangle, Info, Globe;
-} from 'lucide-react',;
+ from 'lucide-react',;
 import EnhancedNavigation from '../components/EnhancedNavigation',;
 import EnhancedFooter from '../components/EnhancedFooter',;
-;
+
 export default function CookiesPage() {;
   const lastUpdated = 'January 15, 2025',;
-;
+
   const cookieTypes = [;
     {;
       name:'Essential Cookies',;
@@ -53,7 +53,7 @@ export default function CookiesPage() {;
       color:'from-orange-500 to-red-600';
     }
   ],;
-;
+
   const thirdPartyCookies = [;
     {;
       name:'Google Analytics',;
@@ -80,7 +80,7 @@ export default function CookiesPage() {;
       privacy:'https://twitter.com/en/privacy';
     }
   ],;
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">;
       <Head>;
@@ -91,16 +91,16 @@ export default function CookiesPage() {;
         <meta name="twitter:card" content="summary_large_image" />;
         <link rel="canonical" href="https://ziontechgroup.com/cookies" />;
       </Head>;
-;
+
       <EnhancedNavigation />;
-;
+
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-6">;
         <div className="max-w-6xl mx-auto text-center">;
           <motion.div;
-            initial={{ opacity:0, y:30 }}
-            animate={{ opacity:1, y:0 }}
-            transition={{ duration:0.8 }}
+            initial={ opacity:0, y:30 }
+            animate={ opacity:1, y:0 }
+            transition={ duration:0.8 }
           >;
             <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6">;
               <Cookie className="w-10 h-10 text-white" />;
@@ -117,15 +117,15 @@ export default function CookiesPage() {;
           </motion.div>;
         </div>;
       </section>;
-;
+
       {/* Introduction */}
       <section className="py-20 px-6">;
         <div className="max-w-4xl mx-auto">;
           <motion.div;
-            initial={{ opacity:0, y:20 }}
-            whileInView={{ opacity:1, y:0 }}
-            transition={{ duration:0.8 }}
-            viewport={{ once:true }}
+            initial={ opacity:0, y:20 }
+            whileInView={ opacity:1, y:0 }
+            transition={ duration:0.8 }
+            viewport={ once:true }
             className="bg-gray-800/30 backdrop-blur-xl rounded-2xl p-8 border border-gray-700/50";
           >;
             <h2 className="text-3xl font-bold text-white mb-6">What Are Cookies?</h2>;
@@ -141,29 +141,29 @@ export default function CookiesPage() {;
           </motion.div>;
         </div>;
       </section>;
-;
+
       {/* Cookie Types */}
       <section className="py-20 px-6">;
         <div className="max-w-6xl mx-auto">;
           <motion.div;
-            initial={{ opacity:0, y:20 }}
-            whileInView={{ opacity:1, y:0 }}
-            transition={{ duration:0.8 }}
-            viewport={{ once:true }}
+            initial={ opacity:0, y:20 }
+            whileInView={ opacity:1, y:0 }
+            transition={ duration:0.8 }
+            viewport={ once:true }
             className="text-center mb-16";
           >;
             <h2 className="text-4xl font-bold text-white mb-4">Types of Cookies We Use</h2>;
             <p className="text-xl text-gray-300">Understanding the different categories of cookies on our website</p>;
           </motion.div>;
-;
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
-            {cookieTypes.map((type, index) => (;
+            {cookieTypes.map(type, index) => (;
               <motion.div;
                 key={type.name}
-                initial={{ opacity:0, y:20 }}
-                whileInView={{ opacity:1, y:0 }}
-                transition={{ duration:0.6, delay:index * 0.1 }}
-                viewport={{ once:true }}
+                initial={ opacity:0, y:20 }
+                whileInView={ opacity:1, y:0 }
+                transition={ duration:0.6, delay:index * 0.1 }
+                viewport={ once:true }
                 className="bg-gray-800/30 backdrop-blur-xl rounded-xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300";
               >;
                 <div className="flex items-center space-x-3 mb-4">;
@@ -175,41 +175,41 @@ export default function CookiesPage() {;
                 <p className="text-gray-300 leading-relaxed mb-4">{type.description}</p>;
                 <div className="space-y-2">;
                   <h4 className="text-white font-semibold mb-2">Examples:</h4>;
-                  {type.examples.map((example, exampleIndex) => (;
+                  {type.examples.map(example, exampleIndex) => (;
                     <div key={exampleIndex} className="flex items-center space-x-3">;
                       <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />;
                       <span className="text-gray-300 text-sm">{example}</span>;
                     </div>;
-                  ))}
+                  )}
                 </div>;
               </motion.div>;
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Third Party Cookies */}
       <section className="py-20 px-6 bg-gradient-to-r from-gray-900/50 to-gray-800/50">;
         <div className="max-w-6xl mx-auto">;
           <motion.div;
-            initial={{ opacity:0, y:20 }}
-            whileInView={{ opacity:1, y:0 }}
-            transition={{ duration:0.8 }}
-            viewport={{ once:true }}
+            initial={ opacity:0, y:20 }
+            whileInView={ opacity:1, y:0 }
+            transition={ duration:0.8 }
+            viewport={ once:true }
             className="text-center mb-16";
           >;
             <h2 className="text-4xl font-bold text-white mb-4">Third-Party Cookies</h2>;
             <p className="text-xl text-gray-300">Cookies from trusted third-party services we use</p>;
           </motion.div>;
-;
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
-            {thirdPartyCookies.map((cookie, index) => (;
+            {thirdPartyCookies.map(cookie, index) => (;
               <motion.div;
                 key={cookie.name}
-                initial={{ opacity:0, y:20 }}
-                whileInView={{ opacity:1, y:0 }}
-                transition={{ duration:0.6, delay:index * 0.1 }}
-                viewport={{ once:true }}
+                initial={ opacity:0, y:20 }
+                whileInView={ opacity:1, y:0 }
+                transition={ duration:0.6, delay:index * 0.1 }
+                viewport={ once:true }
                 className="bg-gray-800/30 backdrop-blur-xl rounded-xl p-6 border border-gray-700/50";
               >;
                 <h3 className="text-xl font-bold text-white mb-3">{cookie.name}</h3>;
@@ -226,25 +226,25 @@ export default function CookiesPage() {;
                   </a>;
                 </div>;
               </motion.div>;
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Cookie Management */}
       <section className="py-20 px-6">;
         <div className="max-w-4xl mx-auto">;
           <motion.div;
-            initial={{ opacity:0, y:20 }}
-            whileInView={{ opacity:1, y:0 }}
-            transition={{ duration:0.8 }}
-            viewport={{ once:true }}
+            initial={ opacity:0, y:20 }
+            whileInView={ opacity:1, y:0 }
+            transition={ duration:0.8 }
+            viewport={ once:true }
             className="text-center mb-16";
           >;
             <h2 className="text-4xl font-bold text-white mb-4">Managing Your Cookie Preferences</h2>;
             <p className="text-xl text-gray-300">How you can control and manage cookies on our website</p>;
           </motion.div>;
-;
+
           <div className="space-y-8">;
             <div className="bg-gray-800/30 backdrop-blur-xl rounded-xl p-6 border border-gray-700/50">;
               <h3 className="text-2xl font-bold text-white mb-4 flex items-center">;
@@ -262,7 +262,7 @@ export default function CookiesPage() {;
                 <li> Receive notifications when cookies are set</li>;
               </ul>;
             </div>;
-;
+
             <div className="bg-gray-800/30 backdrop-blur-xl rounded-xl p-6 border border-gray-700/50">;
               <h3 className="text-2xl font-bold text-white mb-4 flex items-center">;
                 <Eye className="w-6 h-6 text-green-400 mr-3" />;
@@ -279,7 +279,7 @@ export default function CookiesPage() {;
                 <li> Change your preferences at any time</li>;
               </ul>;
             </div>;
-;
+
             <div className="bg-gray-800/30 backdrop-blur-xl rounded-xl p-6 border border-gray-700/50">;
               <h3 className="text-2xl font-bold text-white mb-4 flex items-center">;
                 <AlertTriangle className="w-6 h-6 text-yellow-400 mr-3" />;
@@ -303,15 +303,15 @@ export default function CookiesPage() {;
           </div>;
         </div>;
       </section>;
-;
+
       {/* Updates and Contact */}
       <section className="py-20 px-6 bg-gradient-to-r from-gray-900/50 to-gray-800/50">;
         <div className="max-w-4xl mx-auto text-center">;
           <motion.div;
-            initial={{ opacity:0, y:20 }}
-            whileInView={{ opacity:1, y:0 }}
-            transition={{ duration:0.8 }}
-            viewport={{ once:true }}
+            initial={ opacity:0, y:20 }
+            whileInView={ opacity:1, y:0 }
+            transition={ duration:0.8 }
+            viewport={ once:true }
           >;
             <h2 className="text-4xl font-bold text-white mb-6">Questions About Cookies?</h2>;
             <p className="text-xl text-gray-300 mb-8">;
@@ -342,8 +342,7 @@ export default function CookiesPage() {;
           </motion.div>;
         </div>;
       </section>;
-;
+
       <EnhancedFooter />;
     </div>;
   ),;
-}

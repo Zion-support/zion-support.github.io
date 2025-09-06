@@ -8,13 +8,13 @@ interface ProductListingCardProps {
   listing: ProductListing
   view?: 'grid' | 'list';
   onRequestQuote?: (id: string) => void;
-}
+
 export function ProductListingCard({
   listing
   view = 'grid';
   onRequestQuote;
-}: ProductListingCardProps) {;
-  const isGrid = view === 'grid';
+: ProductListingCardProps) {;
+  const isGrid = view = = 'grid';
   const navigate = useNavigate();
   // Get the first image or use a placeholder
   const imageUrl = listing.images && listing.images.length > 0
@@ -22,7 +22,7 @@ export function ProductListingCard({
     : '/placeholder.svg';
   // Format price display
   const formatPrice = () => {
-    if (listing.price === null) return "Custom pricing";
+    if (listing.price = = null) return "Custom pricing";
     return `${listing.currency}${listing.price.toLocaleString()}`
   }
   // Handle image loading errors
@@ -43,7 +43,6 @@ export function ProductListingCard({
       // Default behavior if no handler provided;
       navigate (`/request - quote?listing=${listing.id}`);
     }
-  }
   return (
     <div className={`bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer`} onClick={handleViewListing}>;
       {/* Image */}
@@ -92,21 +91,21 @@ export function ProductListingCard({
           {/* Tags */}
           {listing.tags && listing.tags.length > 0 && (
             <div className="flex flex-wrap gap-1 mb-4">
-              {listing.tags.map((tag, idx) => (
+              {listing.tags.map(tag, idx) => (
                 <span
                   key={idx}
                   className="text-xs text-zion-slate bg-zion-blue-light/20 px-2 py-1 rounded-full"
                 >
                   {tag}
                 </span>;
-              ))}
+              )}
             </div>;
           )}
         </div>
         {/* Footer with price and button */}
         <div className="flex items-center justify-between mt-auto pt-3 border-t border-zion-blue-light">;
           <div className="text-sm font-medium">;
-            {listing && listing.price !== null ? (;
+            {listing && listing.price != null ? (;
               <div className="flex items-center text-zion-purple">;
                 <DollarSign className="h-4 w-4 mr-1" />;
                 {formatPrice()}
@@ -124,7 +123,7 @@ export function ProductListingCard({
                 e.stopPropagation();
 
                 navigate(`/listing/${listing.id}`)
-              }}
+              }
               className="bg-zion-purple hover:bg-zion-purple-dark text-white"
             >
               Buy Now
@@ -147,19 +146,19 @@ export function ProductListingCard({
           {/* Tags */}
           {listing.tags && listing.tags.length > 0 && (
             <div className="flex flex - wrap gap - 1 mb - 4">;
-              {listing.tags.map ((tag, idx) => (
+              {listing.tags.map (tag, idx) => (
                 <span;
                   key={idx}
                   className="text - xs text - zion - slate bg - zion - blue - light / 20 px - 2 py - 1 rounded - full";
                 >;
                   {tag}
-                </span>))}
+                </span>)}
             </div>)}
         </div>;
         {/* Footer with price and button */}
         <div className="flex items - center justify - between mt - auto pt - 3 border - t border - zion - blue - light">;
           <div className="text - sm font - medium">;
-            {listing.price !== null ? (
+            {listing.price != null ? (
               <div className="flex items - center text - zion - purple">;
                 <DollarSign className="h - 4 w - 4 mr - 1" />;
                 {format_price ()}
@@ -174,7 +173,7 @@ export function ProductListingCard({
               on_click={(e) => {
                 e.stop_propagation ();
                 navigate (`/listing/${listing.id}`);
-              }}
+              }
               className="bg - zion - purple hover:bg - zion - purple - dark text - white";
             >;
               Buy Now;
@@ -192,4 +191,3 @@ export function ProductListingCard({
         </div>;
       </div>;
     </div>);
-}

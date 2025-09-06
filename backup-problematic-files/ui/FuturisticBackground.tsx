@@ -28,4 +28,3 @@ export default function FuturisticBackground() {;
       <div className="absolute -top-16 right-1/3 w-72 h-72 rounded-full bg-violet-500/20 blur-3xl animate-float [animation-delay:2.1s]" />;
     </div>;
   );
-}

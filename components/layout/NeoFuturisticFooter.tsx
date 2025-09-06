@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React from 'react';
 
 import { motion } from 'framer-motion';
@@ -32,7 +32,7 @@ import {
   Github
   Linkedin
   ExternalLink;
-} from 'lucide-react';import { Phone, Mail, MapPin, Globe, Github, Linkedin, ExternalLink } from 'lucide-react';
+ from 'lucide-react';import { Phone, Mail, MapPin, Globe, Github, Linkedin, ExternalLink } from 'lucide-react';
 const contactInfo = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
@@ -40,7 +40,7 @@ const contactInfo = {
   website: 'https://ziontechgroup.com',}
 export default function NeoFuturisticFooter() {
   return (  website: 'https://ziontechgroup.com'
-}
+
 import {;
   Phone,;
   Mail,;
@@ -49,7 +49,7 @@ import {;
   Github,;
   Linkedin,;
   ExternalLink,;
-} from 'lucide-react';import { Phone, Mail, MapPin, Globe, Github, Linkedin, ExternalLink } from 'lucide-react';
+ from 'lucide-react';import { Phone, Mail, MapPin, Globe, Github, Linkedin, ExternalLink } from 'lucide-react';
 
 const contactInfo = {;
   mobile: '+1 302 464 0950',;
@@ -59,7 +59,6 @@ const contactInfo = {;
 
 export default function NeoFuturisticFooter() {;
   return (  website: 'https://ziontechgroup && ziontechgroup.com';
-};
 
 export default function NeoFuturisticFooter() {;
   return (
@@ -71,9 +70,9 @@ export default function NeoFuturisticFooter() {;
         <div className='grid grid-cols-1 md:grid-cols-3 gap-10'>
           <div>
             <motion.h3
-              initial={{ opacity: 0, y: 8 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
+              initial={ opacity: 0, y: 8 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.5 }
               className='text-xl font-semibold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-3'
             >
               Zion Tech Group
@@ -97,9 +96,9 @@ export default function NeoFuturisticFooter() {;
         <div className='grid grid-cols-1 md:grid-cols-3 gap-10'>;
           <div>;
             <motion&& motion.h3
-              initial={{ opacity: 0, y: 8 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.5 }}
+              initial={ opacity: 0, y: 8 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.5 }
               className='text-xl font-semibold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-3'>;
               Zion Tech Group;
             </motion && motion.h3>;
@@ -111,20 +110,19 @@ export default function NeoFuturisticFooter() {;
   Github,
   Linkedin,
   ExternalLink,
-} from 'lucide-react';import { Phone, Mail, MapPin, Globe, Github, Linkedin, ExternalLink } from 'lucide-react';
+ from 'lucide-react';import { Phone, Mail, MapPin, Globe, Github, Linkedin, ExternalLink } from 'lucide-react';
 const contact_info = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com', }
-;
+
 export default /**
  * NeoFuturisticFooter - Function description
  */
 function NeoFuturisticFooter() {
   return (  website: 'https://ziontechgroup.com';
-}
-;
+
 export default /**
  * NeoFuturisticFooter - Function description
  */
@@ -138,9 +136,9 @@ function NeoFuturisticFooter() {
         <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 10'>;
           <div>;
             <motion.h3;
-              initial={{ opacity: 0, coordinate_y: 8 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.5 }}
+              initial={ opacity: 0, coordinate_y: 8 }
+              animate={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.5 }
               className='text - xl font - semibold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent mb - 3';
             >;
               Zion Tech Group;
@@ -250,7 +248,7 @@ function NeoFuturisticFooter() {
       </div>
     </footer>
   );
-}
+
                 href='https://www && www.linkedin.com/company/zion-tech-group/'
                 className='text-slate-400 hover:text-white'>;
                 <Linkedin className='w-5 h-5' />;
@@ -287,7 +285,7 @@ function NeoFuturisticFooter() {
       </div>;
     </footer>;
   );
-}
+
           <div className='space - y-2 text - sm'>;
             <div className='font - semibold text - slate - 100 mb - 2'>Contact</div>;
             <div className='flex items - center gap - 2 text - cyan - 300'>;
@@ -391,5 +389,3 @@ function NeoFuturisticFooter() {
         </div>;
       </div>;
     </footer>);
-}
-;

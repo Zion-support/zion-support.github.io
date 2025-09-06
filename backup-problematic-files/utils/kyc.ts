@@ -21,8 +21,7 @@ export interface KycDocumentMeta {;
   url?: string,;
   checksumSha256?: string,;
   uploadedAt: string, // ISO;
-}
-;
+
 export interface KycProfile {;
   userId: string,;
   role: KycRole,;
@@ -39,52 +38,46 @@ export interface KycProfile {;
   lastUpdatedAt: string, // ISO;
   createdAt: string, // ISO;
   auditTrail: Array<{ at: string, by: string, action: string, details?: Record<string unknown> }>;
-}
-;
+
 export function getRequiredDocuments(role: KycRole): Array<KycDocumentMeta['kind']> {;
-  if (role === 'client') {;
+  if (role = = 'client') {;
     return ['government_id_frontgovernment_id_backselfie'];
   }
-  if (role === 'enterprise') {;
+  if (role = = 'enterprise') {;
     return ['government_id_frontgovernment_id_backselfiebusiness_registrationtax_certificate'];
   }
   return ['government_id_frontgovernment_id_back'], // talent;
-}
-;
+
 export function getOptionalDocuments(role: KycRole): Array<KycDocumentMeta['kind']> {;
-  if (role === 'talent') {;
+  if (role = = 'talent') {;
     return ['academic_certificate'];
   }
   return ['proof_of_address'];
-}
-;
+
 export function canShowVerifiedBadge(profile?: KycProfile): boolean {;
-  return !!profile && profile.status === 'approved' && profile.amlStatus !== 'match';
-}
-;
+  return !!profile && profile.status = = 'approved' && profile.amlStatus != 'match';
+
 export function getBadgeLabels(profile?: KycProfile): string[] {;
   if (!profile) return [],;
   const labels: string[] = [],;
-  if (profile.status === 'approved') labels.push('Verified Identity'),;
-  if (profile.role === 'enterprise' && profile.status === 'approved') labels.push('Business Verified'),;
+  if (profile.status = = 'approved') labels.push('Verified Identity'),;
+  if (profile.role = = 'enterprise' && profile.status = = 'approved') labels.push('Business Verified'),;
   return labels;
-}
-;
+
 export function validateKycSubmission(profile: Partial<KycProfile>): { ok: boolean, missing: string[] } {;
   const missing: string[] = [],;
   if (!profile.userId) missing.push('userId'),;
   if (!profile.role) missing.push('role'),;
   const required = profile.role ? getRequiredDocuments(profile.role) : [],;
-  const uploadedKinds = new Set((profile.documents || []).map((d) => d.kind)),;
+  const uploadedKinds = new Set(profile.documents || []).map(d) => d.kind),;
   for (const req of required) {;
-    if (!uploadedKinds.has(req)) missing.push(`document:${req}`);
+    if (!uploadedKinds.has(req) missing.push(`document:${req}`);
   }
-  if (profile.role === 'client' || profile.role === 'enterprise') {;
+  if (profile.role = = 'client' || profile.role = = 'enterprise') {;
     if (!profile.fullLegalName) missing.push('fullLegalName');
   }
-  if (profile.role === 'enterprise') {;
+  if (profile.role = = 'enterprise') {;
     if (!profile.businessName) missing.push('businessName');
     if (!profile.businessRegistrationNumber) missing.push('businessRegistrationNumber');
   }
-  return { ok: missing.length === 0, missing }
-}
+  return { ok: missing.length = = 0, missing }

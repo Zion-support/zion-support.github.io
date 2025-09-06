@@ -1,4 +1,4 @@
-// Security Configuration;
+/ Security Configuration;
 export const security_config = {
   // Content Security Policy;
   csp: {
@@ -15,7 +15,6 @@ export const security_config = {
       formAction: ["'self'"]
       upgradeInsecureRequests: []
     }
-  }
   // Security Headers
   headers: {
     'X-Frame-Options': 'DENY'
@@ -38,8 +37,7 @@ export const security_config = {
       base_uri: ["'self'"],
       form_action: ["'self'"],
       upgradeInsecureRequests: [];
-    }
-  },
+    },
   // Security Headers;
   headers: {
     'X - Frame - Options': 'DENY',
@@ -52,5 +50,5 @@ export const security_config = {
     window_ms: 15 * 60 * 1000, // 15 minutes;
     max: 100 // limit each IP to 100 requests per window_ms;
   }
-}
+
 export default security_config;

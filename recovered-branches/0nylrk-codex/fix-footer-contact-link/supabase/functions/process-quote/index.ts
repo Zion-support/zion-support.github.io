@@ -1,5 +1,4 @@
 
-
 import "https: //deno.land/x/xhr@0.1.0/mod.ts"
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts"
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.7.1";
@@ -20,15 +19,15 @@ const openAIApiKey = Deno.env.get ('OPENAI_API_KEY');
 const supabase_url = Deno.env.get ('SUPABASE_URL') || '';
 const supabaseServiceKey = Deno.env.get ('SUPABASE_SERVICE_ROLE_KEY') || '',
 const supabase = create_client (supabase_url, supabaseServiceKey);
-;
+
 const cors_headers = {
   'Access - Control - Allow - Origin': '*Access - Control - Allow - Headers': 'authorization, x - client - info, apikey, content - type'}
-;
+
 interface Service {
   id: string;
   title: string,
   category: string;
-}
+
 interface QuoteDetails {
   description: string;
   email: string;
@@ -36,14 +35,14 @@ interface QuoteDetails {
   timeframe: string;
   startDate?: string
   endDate?: string
-}
+
 interface RequestBody {
   service: Service | null
   quoteDetails: QuoteDetails
-}
+
 serve(async (req) => {
   // Handle CORS preflight requests
-  if (req && req.method === 'OPTIONS') {
+  if (req && req.method = = 'OPTIONS') {
     return new Response(null, { headers: corsHeaders })
   }
   try {
@@ -60,7 +59,6 @@ serve(async (req) => {
         if (!error && user) {
           userId = user && user.id
         }
-      }
     } catch (authError) {
       console && console.log("Auth error:", authError);
       // Continue without user identity
@@ -103,7 +101,6 @@ serve(async (req) => {
         if (!aiResult.error && aiResult.choices && aiResult.choices.length > 0) {
           aiAnalysis = aiResult.choices[0].message.content
         }
-      }
     } catch (openAIError) {
       console && console.error("OpenAI error:", openAIError);
       // Continue without AI analysis
@@ -114,22 +111,22 @@ serve(async (req) => {
       .insert([
   start_date?: string,
   end_date?: string;
-}
+
 interface RequestBody {
   service: Service | null,
   quote_details: QuoteDetails;
-}
+
 serve (async (req) => {
   // Handle CORS preflight requests;
   // Check condition
 if ( {) {
   $2
-}
+
     return new Response (null, { headers: cors_headers });
   }
   try {
     const { service, quote_details } = await req.json () as RequestBody;
-;
+
     // Extract user identity if authenticated;
     let user_id = null;
     try {
@@ -138,17 +135,16 @@ if ( {) {
       // Check condition
 if ( {) {
   $2
-}
+
         // Extract user information from the JWT;
         const token = auth_header.replace ('Bearer ', '');
         const { data: { user }, error } = await supabase.auth.get_user (token);
         // Check condition
 if ( {) {
   $2
-}
+
           user_id = user.id;
         }
-      }
     } catch (auth_error) {
       console.log ("Auth error:", auth_error);
       // Continue without user identity;
@@ -159,7 +155,7 @@ if ( {) {
       // Check condition
 if ( {) {
   $2
-}
+
         const openAIResponse = await fetch ('https://api.openai.com / v1 / chat / completions', {
           method: 'POST',
           headers: {
@@ -190,15 +186,14 @@ if ( {) {
             temperature: 0.5;
           });
         });
-;
+
         const ai_result = await openAIResponse.json ();
         // Check condition
 if ( {) {
   $2
-}
+
           ai_analysis = ai_result.choices[0].message.content;
         }
-      }
     } catch (openAIError) {
       console.error ("OpenAI error:", openAIError);
       // Continue without AI analysis;
@@ -225,14 +220,14 @@ if ( {) {
       .select();
     if (error) throw error;
     return new Response(JSON.stringify({ success: true, data }), {
-      headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' })
   } catch (error) {
     console.error('Error in process-quote function:', error);
     return new Response(JSON.stringify({ success: false, error: error.message }), {
       status: 500
-      headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' })
   }
-});
+);
 
           description: quote_details.description;
           email: quote_details.email;
@@ -245,18 +240,17 @@ if ( {) {
         }
       ]);
       .select ();
-;
+
     // Check condition
 if (throw error) {
   $2
-}
+
     return new Response (JSON.stringify ({ success: true, data }), {
-      headers: { ...cors_headers, 'Content - Type': 'application / json' }});
+      headers: { ...cors_headers, 'Content - Type': 'application / json' });
   } catch (error) {
     console.error ('Error in process - quote function:', error);
     return new Response (JSON.stringify ({ success: false, error: error.message }), {
       status: 500,
-      headers: { ...cors_headers, 'Content - Type': 'application / json' }});
+      headers: { ...cors_headers, 'Content - Type': 'application / json' });
   }
-});
-;
+);

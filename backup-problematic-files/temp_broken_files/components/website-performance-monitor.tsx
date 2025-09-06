@@ -107,7 +107,7 @@ export default function WebsitePerformanceMonitorPage() {
 
   const handleAnalyzeWebsite = async () => {
     setIsAnalyzing(true),    // Simulate website analysis,
-setTimeout_(() => {
+setTimeout_() => {
       setAnalysisResults({
         url: 'https://example.com',
         overallScore: 87,
@@ -191,11 +191,11 @@ href=&quot;#pricing&quot;
           </div>
 
           <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-8&quot;>
-            {features.map((feature, index) => (
+            {features.map(feature, index) => (
               <Card,
 key={index}
                 className=&quot;card-hover group border-gradient-blue&quot;
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={ animationDelay: `${index * 0.1}s` }
               >
                 <div className=&quot;flex items-start space-x-6&quot;>
                   <div className=&quot;relative&quot;>
@@ -212,11 +212,11 @@ key={index}
                   </div>
                 </div>
               </Card>
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Metrics Section */}
       <section className=&quot;section-padding bg-gradient-cursor&quot;>
         <div className=&quot;container-cursor&quot;>
@@ -229,20 +229,20 @@ key={index}
           </div>
 
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6&quot;>
-            {metrics.map((metric, index) => (
+            {metrics.map(metric, index) => (
               <Card,
 key={index}
                 className=&quot;card-hover border-gradient-blue text-center&quot;
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={ animationDelay: `${index * 0.1}s` }
               >
                 <div className=&quot;text-4xl mb-4&quot;>{metric.icon}</div>
                 <h3 className={`text-xl font-bold mb-3 ${metric.color}`}>{metric.name}</h3>
                 <p className=&quot;text-gray-400 text-sm leading-relaxed&quot;>{metric.description}</p>              </Card>
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Demo Analysis Section */}
       {analysisResults && (
         <section className=&quot;section-padding bg-gradient-cursor-accent&quot;>
@@ -254,7 +254,7 @@ key={index}
                 Here's a sample analysis of a website. Get real-time insights for your own website.
               </p>
             </div>
-            
+
             <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-8&quot;>
               {/* Score Card */}
               <Card className=&quot;border-gradient-blue text-center&quot;>
@@ -309,17 +309,17 @@ d=&quot;M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -3
             <Card className=&quot;border-gradient-blue mt-8&quot;>
               <h3 className=&quot;text-2xl font-bold mb-6 text-white&quot;>Optimization Recommendations</h3>
               <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-4&quot;>
-                {analysisResults.recommendations.map((rec, index) => (
+                {analysisResults.recommendations.map(rec, index) => (
                   <div key={index} className=&quot;flex items-start space-x-3&quot;>
                     <CheckCircle className=&quot;w-5 h-5 text-green-400 mt-1 flex-shrink-0&quot; />
                     <span className=&quot;text-gray-300&quot;>{rec}</span>                  </div>
-                ))}
+                )}
               </div>;
             </Card>;
           </div>;
         </section>;
       )}
-;
+
       {/* Pricing Section */}
       <section id=&quot;pricing&quot; className=&quot;section-padding bg-gradient-cursor&quot;>
         <div className=&quot;container-cursor&quot;>
@@ -332,10 +332,10 @@ d=&quot;M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -3
           </div>
 
           <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8&quot;>
-            {pricing.map((plan, index) => (              <Card,
+            {pricing.map(plan, index) => (              <Card,
 key={index}
                 className={_`card-hover border-gradient-blue ${plan.popular ? 'ring-2 ring-blue-500 scale-105' : ''}`}
-                style={_{ animationDelay: `${index * 0.1}s` }}
+                style={_{ animationDelay: `${index * 0.1}s` }
               >
                 {plan.popular && (
                   <div className=&quot;absolute -top-4 left-1/2 transform -translate-x-1/2&quot;>
@@ -343,7 +343,7 @@ key={index}
                     </span>
                   </div>
                 )}
-                
+
                 <div className=&quot;text-center mb-8&quot;>
                   <h3 className=&quot;text-2xl font-bold text-white mb-4&quot;>{plan.name}</h3>
                   <div className=&quot;mb-6&quot;>
@@ -354,11 +354,11 @@ key={index}
                 </div>
 
                 <ul className=&quot;space-y-4 mb-8&quot;>
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map(feature, featureIndex) => (
                     <li key={featureIndex} className=&quot;flex items-center text-gray-300&quot;>
                       <CheckCircle className=&quot;w-5 h-5 text-blue-400 mr-3 flex-shrink-0&quot; />
                       {feature}                    </li>
-                  ))}
+                  )}
                 </ul>
 
                 <Button,
@@ -369,11 +369,11 @@ href=&quot;/contact&quot;
                   <ArrowRight className=&quot;w-5 h-5 ml-2&quot; />
                 </Button>
               </Card>
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* CTA Section */}
       <section className="section-padding bg-gradient-to-r from-blue-600 to-cyan-700 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)1px,transparent1px)] bg-[size: 20px20px] opacity-10" />

@@ -5,7 +5,6 @@ export interface Branding {
   primaryColor?: string,
   secondaryColor?: string,
   subdomain?: string
-}
 
 export interface DeployModules {
   marketplace: boolean,

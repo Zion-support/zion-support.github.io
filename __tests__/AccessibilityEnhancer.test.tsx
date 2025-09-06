@@ -9,8 +9,8 @@ describe('AccessibilityEnhancer', () => {
         <div data-testid="test-child">Test Content</div>
       </AccessibilityEnhancer>
     );
-    expect(screen.getByTestId('test-child')).toBeInTheDocument();
-    expect(screen.getByText('Test Content')).toBeInTheDocument();
+    expect(screen.getByTestId('test-child').toBeInTheDocument();
+    expect(screen.getByText('Test Content').toBeInTheDocument();
   });
   it('applies accessibility props correctly', () => {
     render(
@@ -65,8 +65,8 @@ describe('AccessibilityEnhancer', () => {
     const element = screen.getByRole('button');
     expect(element).toHaveAttribute('tabindex', '-1');
   });
-});
-});
+);
+);
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer'

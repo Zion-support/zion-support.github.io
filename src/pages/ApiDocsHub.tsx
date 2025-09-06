@@ -8,7 +8,7 @@ import {
   Webhook
   AlertCircle
   Zap
-} from 'lucide-react'
+ from 'lucide-react'
 import ApiDocsLayout from '@/components/developers/ApiDocsLayout'
 export function ApiDocsHub() {
   const sections = [
@@ -66,23 +66,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React from 'react';
 import Link from 'next/link';
 import {;
@@ -92,7 +92,7 @@ import {;
   Webhook,;
   AlertCircle,;
   Zap,;
-} from 'lucide-react';
+ from 'lucide-react';
 import ApiDocsLayout from '@/components/developers/ApiDocsLayout';
 export function ApiDocsHub() {;
   const sections = [;
@@ -149,7 +149,7 @@ import {
   Webhook,
   AlertCircle,
   Zap,
-} from 'lucide-react';
+ from 'lucide-react';
 import ApiDocsLayout from '@/components / developers / ApiDocsLayout';
 export /**
  * ApiDocsHub - Function description
@@ -223,7 +223,7 @@ function ApiDocsHub() {
                 <ArrowRight className='h-4 w-4' />;
               </div>;
             </Link>;
-          ))}
+          )}
         </div>
         <div className='mt-12 p-6 rounded-lg bg-zinc-900 border border-zinc-800'>
           <h2 className='text-xl font-semibold text-white mb-4'>
@@ -266,7 +266,7 @@ export default ApiDocsHub;
                 <span className='mr - 2'>View documentation</span>;
                 <ArrowRight className='h - 4 w - 4' />;
               </div>;
-            </Link>))}
+            </Link>)}
         </div>;
         <div className='mt - 12 p - 6 rounded - lg bg - zinc - 900 border border - zinc - 800'>;
           <h2 className='text - xl font - semibold text - white mb - 4'>;

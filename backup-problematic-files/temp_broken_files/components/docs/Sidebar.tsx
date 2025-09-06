@@ -1,6 +1,6 @@
 import React from 'react',;
 import { ApiDocsSpec, Visibility } from '../../data/api-docs/types',;
-;
+
 interface SidebarProps {;
   spec:ApiDocsSpec,;
   activeEndpointId?:string,;
@@ -9,7 +9,6 @@ interface SidebarProps {;
   onChangeVersion:(v:string) => void,;
   visibilityFilter:Visibility | 'all',;
   onChangeVisibility:(v:Visibility | 'all') => void;
-}
 
 export default function Sidebar({ spec, activeEndpointId, onSelectEndpoint, selectedVersion, onChangeVersion, visibilityFilter, onChangeVisibility }: SidebarProps) {
   return (
@@ -18,8 +17,8 @@ export default function Sidebar({ spec, activeEndpointId, onSelectEndpoint, sele
         <div className=&quot;text-lg font-semibold&quot;>Zion OS API</div>
         <div className=&quot;text-xs text-high-contrast-muted&quot;>Version</div>
         <div className=&quot;flex gap-2 mt-2 flex-wrap&quot;>
-          {spec.versions.map((v) => (
-            <button key={v} onClick={() => onChangeVersion(v)} className={`px-2 py-1 rounded border text-xs ${selectedVersion === v ? 'bg-high-contrast-tertiary border-high-contrast-accent' : 'bg-high-contrast-tertiary border-high-contrast-secondary'}`}>{v}</button>          ))}
+          {spec.versions.map(v) => (
+            <button key={v} onClick={() => onChangeVersion(v)} className={`px-2 py-1 rounded border text-xs ${selectedVersion = = v ? 'bg-high-contrast-tertiary border-high-contrast-accent' : 'bg-high-contrast-tertiary border-high-contrast-secondary'}`}>{v}</button>          )}
         </div>
       </div>
 
@@ -34,24 +33,24 @@ export default function Sidebar({ spec, activeEndpointId, onSelectEndpoint, sele
       </div>
 
       <nav className=&quot;space-y-3&quot;>
-        {spec.sections.map((section) => (
+        {spec.sections.map(section) => (
           <div key={section.id}>
             <div className=&quot;text-sm font-medium mb-1&quot;>{section.title}</div>
             <ul className=&quot;space-y-1&quot;>
-              {section.endpoints                .filter((e) => e.versions.includes(selectedVersion))
-                .filter(_(e) => visibilityFilter === 'all' ? true : e.visibility === visibilityFilter)
+              {section.endpoints                .filter(e) => e.versions.includes(selectedVersion)
+                .filter(_(e) => visibilityFilter = = 'all' ? true : e.visibility = = visibilityFilter)
                 .map(_(e) => (_<li key={e.id}>
                     <button,
-className={_`w-full text-left px-2 py-1 rounded text-xs border ${activeEndpointId === e.id ? 'bg-high-contrast-tertiary border-high-contrast-accent' : 'bg-high-contrast-tertiary border-transparent'}`}
+className={_`w-full text-left px-2 py-1 rounded text-xs border ${activeEndpointId = = e.id ? 'bg-high-contrast-tertiary border-high-contrast-accent' : 'bg-high-contrast-tertiary border-transparent'}`}
                       onClick={_() => onSelectEndpoint(e.id)}
                     >
                       <span className=&quot;mr-2 inline-block w-10 text-center text-[10px] opacity-80&quot;>{e.method}</span>
                       <span className=&quot;font-mono&quot;>{e.path}</span>                    </button>
                   </li>
-                ))}
+                )}
             </ul>;
           </div>;
-        ))}
+        )}
       </nav>
     </aside>
   )}

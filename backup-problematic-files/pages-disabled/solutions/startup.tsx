@@ -2,7 +2,6 @@ import React from 'react';
 
 interface StartupProps {
   className?: string;
-}
 
 const Startup: React.FC<StartupProps> = ({ className }) => {
   return (
@@ -11,6 +10,5 @@ const Startup: React.FC<StartupProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default Startup;

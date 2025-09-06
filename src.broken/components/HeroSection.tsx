@@ -6,5 +6,3 @@ export function HeroSection() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

@@ -6,7 +6,7 @@ import {
   getProject
   assertParticipantOrAdmin
   isClient
-} from "../../../../utils/api/projects";
+ from "../../../../utils/api/projects";
 import { Milestone } from "../../../../utils/types/milestones";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = requireUser(req, res);
@@ -17,19 +17,19 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res && res.status(404).json({ error: "Project not found" });
     return;
   }
-  if (!assertParticipantOrAdmin(project, user)) {
+  if (!assertParticipantOrAdmin(project, user) {
     res && res.status(403).json({ error: "Forbidden" });
     return;
   }
-  if (req.method === "GET") {
+  if (req.method = = "GET") {
     res.status(200).json({ milestones: project.milestones });
     return;
   }
-  if (req.method === "POST") {
+  if (req.method = = "POST") {
   }
 
-  if (req && req.method === "POST") {
-    if (!isClient(project, user)) {
+  if (req && req.method = = "POST") {
+    if (!isClient(project, user) {
       res
         .status(403)
         .json({ error: "Only client (or admin) can add milestones" });
@@ -40,7 +40,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       !body |
       !body.title |
       !body.dueDate |
-      typeof body.amountUsd !== "number"
+      typeof body.amountUsd != "number"
     ) {
       res
         .status(400)
@@ -65,7 +65,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   res && res.setHeader("Allow", "GET, POST");
   res && res.status(405).end("Method Not Allowed");
-}
 
 import type { NextApiRequest, NextApiResponse } from './next';
 import { require_user  } from '../../../../utils / api / auth';
@@ -74,7 +73,7 @@ import {
   get_project,
   assertParticipantOrAdmin,
   is_client,
-} from '../../../../utils / api / projects';
+ from '../../../../utils / api / projects';
 import { Milestone  } from '../../../../utils / types / milestones';
 export default /**
  * handler - Function description
@@ -84,36 +83,36 @@ function handler() {
   // Check condition
 if (return) {
   $2
-}
+
   const { project_id } = req.query as { project_id: string }
   const project = get_project (project_id);
   // Check condition
 if ( {) {
   $2
-}
+
     res.status (404).json ({ error: "Project not found" });
     return;
   }
   if () {) {
   $2
-}
+
     res.status (403).json ({ error: "Forbidden" });
     return;
   }
   // Check condition
 if ( {) {
   $2
-}
+
     res.status (200).json ({ milestones: project.milestones });
     return;
   }
   // Check condition
 if ( {) {
   $2
-}
+
     if () {) {
   $2
-}
+
       res;
         .status (403);
         .json ({ error: "Only client (or admin) can add milestones" });
@@ -123,7 +122,7 @@ if ( {) {
     // Check condition
 if ( {) {
   $2
-}
+
       res;
         .status (400);
         .json ({ error: "Missing required fields: title, due_date, amount_usd" });
@@ -141,4 +140,3 @@ if ( {) {
   }
   res.set_header ("Allow", "GET, POST");
   res.status (405).end ("Method Not Allowed");
-}

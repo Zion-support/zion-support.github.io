@@ -2,13 +2,13 @@ import React from 'react',;
 import Head from 'next/head',;
 import { Phone, Mail, MapPin, Check, ArrowRight, Star, Cpu } from 'lucide-react',;
 import Layout from '../components/layout/Layout',;
-;
+
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',;
-;
+
 export default function AIIoTPlatformPage() {;
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-iot-platform')),;
+  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-iot-platform'),;
   if (!service) return null,;
-;
+
   return (;
     <Layout>;
       <Head>;
@@ -27,9 +27,9 @@ export default function AIIoTPlatformPage() {;
               <h2 className="text-2xl font-semibold mb-4">IoT intelligence</h2>;
               <p className="text-slate-300 mb-6">{service.description}</p>;
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">;
-                {service.features.slice(0, 12).map((feat, i) => (;
+                {service.features.slice(0, 12).map(feat, i) => (;
                   <li key={i} className="flex items-start space-x-3 text-slate-200 w-5 h-5 text-violet-400 mt-0.5"><Check /><span>{feat}</span></li>;
-                ))}
+                )}
               </ul>;
             </div>;
             <div className="bg-black/30 rounded-2xl border border-violet-500/30 p-6 h-fit">;
@@ -78,8 +78,8 @@ export default function AIIoTPlatformPage() {;
               <h2 className=&quot;text-2xl font-semibold mb-4&quot;>IoT intelligence</h2>
               <p className=&quot;text-slate-300 mb-6&quot;>{service.description}</p>
               <ul className=&quot;grid grid-cols-1 md:grid-cols-2 gap-3&quot;>
-                {service.features.slice(0, 12).map((feat, i) => (
-                  <li key={i} className=&quot;flex items-start space-x-3 text-slate-200 w-5 h-5 text-violet-400 mt-0.5&quot;><Check /><span>{feat}</span></li>                ))}
+                {service.features.slice(0, 12).map(feat, i) => (
+                  <li key={i} className=&quot;flex items-start space-x-3 text-slate-200 w-5 h-5 text-violet-400 mt-0.5&quot;><Check /><span>{feat}</span></li>                )}
               </ul>
             </div>
             <div className=&quot;bg-black/30 rounded-2xl border border-violet-500/30 p-6 h-fit&quot;>
@@ -115,4 +115,3 @@ export default function AIIoTPlatformPage() {;
       </main>
     </Layout>
   )
-}

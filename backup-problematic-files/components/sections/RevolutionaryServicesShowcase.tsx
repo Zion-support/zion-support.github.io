@@ -9,25 +9,25 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
   const [visibleServices, setVisibleServices] = useState(12),;
   const categories = [;
     { id: 'all', name: 'All Services', count: revolutionary2025MicroSaasServices.length + emergingTech2025Services.length + enterpriseIT2025Services.length },;
-    { id: 'ai', name: 'AI & ML', count: [...revolutionary2025MicroSaasServices, ...emergingTech2025Services, ...enterpriseIT2025Services].filter(s => s.category.includes('AI')).length },;
-    { id: 'quantum', name: 'Quantum Tech', count: [...revolutionary2025MicroSaasServices, ...emergingTech2025Services, ...enterpriseIT2025Services].filter(s => s.category.includes('Quantum')).length },;
+    { id: 'ai', name: 'AI & ML', count: [...revolutionary2025MicroSaasServices, ...emergingTech2025Services, ...enterpriseIT2025Services].filter(s => s.category.includes('AI').length },;
+    { id: 'quantum', name: 'Quantum Tech', count: [...revolutionary2025MicroSaasServices, ...emergingTech2025Services, ...enterpriseIT2025Services].filter(s => s.category.includes('Quantum').length },;
     { id: 'emerging', name: 'Emerging Tech', count: emergingTech2025Services.length },;
     { id: 'enterprise', name: 'Enterprise IT', count: enterpriseIT2025Services.length },;
     { id: 'revolutionary', name: 'Revolutionary', count: revolutionary2025MicroSaasServices.length }
   ],;
   const allServices = [...revolutionary2025MicroSaasServices, ...emergingTech2025Services, ...enterpriseIT2025Services],;
-  const filteredServices = activeCategory === 'all';
+  const filteredServices = activeCategory = = 'all';
     ? allServices;
     : allServices.filter(service => {;
-        if (activeCategory === 'ai') return service.category.includes('AI'),;
-        if (activeCategory === 'quantum') return service.category.includes('Quantum'),;
-        if (activeCategory === 'emerging') return emergingTech2025Services.includes(service),;
-        if (activeCategory === 'enterprise') return enterpriseIT2025Services.includes(service),;
-        if (activeCategory === 'revolutionary') return revolutionary2025MicroSaasServices.includes(service),;
+        if (activeCategory = = 'ai') return service.category.includes('AI'),;
+        if (activeCategory = = 'quantum') return service.category.includes('Quantum'),;
+        if (activeCategory = = 'emerging') return emergingTech2025Services.includes(service),;
+        if (activeCategory = = 'enterprise') return enterpriseIT2025Services.includes(service),;
+        if (activeCategory = = 'revolutionary') return revolutionary2025MicroSaasServices.includes(service),;
         return true;
       }),;
   const loadMore = () => {;
-    setVisibleServices(prev => Math.min(prev + 12, filteredServices.length));
+    setVisibleServices(prev => Math.min(prev + 12, filteredServices.length);
   },;
   const containerVariants = {;
     hidden: { opacity: 0 },;
@@ -36,7 +36,6 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
       transition: {;
         staggerChildren: 0.1;
       }
-    }
   },;
   const itemVariants = {;
     hidden: { opacity: 0, y: 20 },;
@@ -46,7 +45,6 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
       transition: {;
         duration: 0.5;
       }
-    }
   },
 
   return (
@@ -55,10 +53,10 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
         {/* Header */}
         <motion.div 
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          initial={ opacity: 0, y: 30 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0.8 }
+          viewport={ once: true }
         >
           <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
             <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
@@ -76,20 +74,20 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
         {/* Category Filter */}
         <motion.div 
           className="flex flex-wrap justify-center gap-4 mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+          initial={ opacity: 0, y: 20 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0.6 }
+          viewport={ once: true }
         >;
-          {categories.map((category) => (;
+          {categories.map(category) => (;
             <button;
               key={category.id}
               onClick={() => {;
                 setActiveCategory(category.id),;
                 setVisibleServices(12);
-              }}
+              }
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 ${;
-                activeCategory === category.id;
+                activeCategory = = category.id;
                   ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg shadow-cyan-500/25';
                   : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-600/50';
               }`}
@@ -99,7 +97,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
                 {category.count}
               </span>;
             </button>;
-          ))}
+          )}
         </motion.div>;
         {/* Services Grid */}
         <motion.div
@@ -107,14 +105,14 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={ once: true }
         >;
-          {filteredServices.slice(0, visibleServices).map((service, index) => (;
+          {filteredServices.slice(0, visibleServices).map(service, index) => (;
             <motion.div;
               key={service.id}
               variants={itemVariants}
               className="group relative cursor-pointer"
-              style={{ perspective: '1000px' }}
+              style={ perspective: '1000px' }
             >
               <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 opacity-0 blur-lg transition-all duration-300 group-hover:opacity-75"></div>
               <div className="relative bg-black/80 backdrop-blur-xl border border-white/10 rounded-2xl p-6 overflow-hidden h-full">
@@ -131,7 +129,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
                     POPULAR
                   </div>
                 )}
-;
+
                 {/* Service Header */}
                 <div className="relative z-10">
                   <div className="flex items-start justify-between mb-4">
@@ -192,24 +190,24 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
 
                 {/* Floating Particles */}
                 <div className="absolute inset-0 pointer-events-none overflow-hidden">
-                  <div className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" style={{ left: '20%', top: '30%' }}></div>
-                  <div className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" style={{ left: '35%', top: '40%' }}></div>
-                  <div className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" style={{ left: '50%', top: '50%' }}></div>
-                  <div className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" style={{ left: '65%', top: '60%' }}></div>
-                  <div className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" style={{ left: '80%', top: '70%' }}></div>
+                  <div className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" style={ left: '20%', top: '30%' }></div>
+                  <div className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" style={ left: '35%', top: '40%' }></div>
+                  <div className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" style={ left: '50%', top: '50%' }></div>
+                  <div className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" style={ left: '65%', top: '60%' }></div>
+                  <div className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" style={ left: '80%', top: '70%' }></div>
                 </div>
               </div>
             </motion.div>
-          ))}
+          )}
         </motion.div>;
         {/* Load More Button */}
         {visibleServices < filteredServices.length && (
           <motion.div 
             className="text-center"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0 }
+            whileInView={ opacity: 1 }
+            transition={ duration: 0.6 }
+            viewport={ once: true }
           >;
             <button;
               onClick={loadMore}
@@ -219,14 +217,14 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
             </button>
           </motion.div>
         )}
-;
+
         {/* Call to Action */}
         <motion.div 
           className="text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          initial={ opacity: 0, y: 30 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0.8 }
+          viewport={ once: true }
         >
           <h3 className="text-3xl font-bold text-white mb-4">
             Ready to Experience the Future?
@@ -253,7 +251,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
       </div>
     </section>
   )
-},
+,
 
 export default RevolutionaryServicesShowcase,
         >;
@@ -282,5 +280,5 @@ export default RevolutionaryServicesShowcase,
       </div>;
     </section>;
   );
-},;
+,;
 export default RevolutionaryServicesShowcase;

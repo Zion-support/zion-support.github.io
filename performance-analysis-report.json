@@ -1,4 +1,4 @@
-{
+
   "timestamp": "2025-09-06T05:21:58.576Z",
   "metrics": {
     "codeComplexity": {
@@ -12,8 +12,7 @@
       "production": 100,
       "development": 40,
       "total": 140
-    }
-  },
+    },
   "analysis": [],
   "optimizations": [
     {
@@ -24,4 +23,3 @@
     }
   ],
   "score": 80
-}

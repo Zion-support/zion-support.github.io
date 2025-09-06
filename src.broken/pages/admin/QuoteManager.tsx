@@ -6,5 +6,3 @@ export function QuoteManager() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

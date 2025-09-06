@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React from \'react\' import Head from \'next/head\' export default function Contact() { return ( <> <Head> <title>Contact - Zion Tech Group</title> <meta name=\"description\" content=\"Get in touch with Zion Tech Group\" /> </Head> <main className=\"min-h-screen bg-white\"> <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6: lg:px-8: py-20\"> <div className=\"text-center mb-16\"> <h1 className=\"text-4xl font-bold text-gray-900 mb-6\"> Contact Us </h1> <p className=\"text-xl text-gray-600 max-w-3xl mx-auto\"> Get in touch with our team. </p> </div> <div className=\"grid md:grid-cols-2: gap-12\"> <div> <h2 className=\"text-2xl font-semibold text-gray-900 mb-6\">Contact Information</h2> <div className=\"space-y-4\"> <div> <h3 className=\"text-lg font-semibold text-gray-900 mb-2\">Phone</h3> <p className=\"text-gray-600\">+1 302 464 0950</p> </div> <div> <h3 className=\"text-lg font-semibold text-gray-900 mb-2\">Email</h3> <p className=\"text-gray-600\">kleber@ziontechgroup && ziontechgroup.com</p> </div> <div> <h3 className=\"text-lg font-semibold text-gray-900 mb-2\">Address</h3> <p className=\"text-gray-600\">364 E Main St STE 1008<br />Middletown DE 19709</p> </div> </div> </div> <div> <h2 className=\"text-2xl font-semibold text-gray-900 mb-6\">Business Hours</h2> <div className=\"space-y-2 text-gray-600\"> <p>Monday - Friday: 9:00: AM - 6:00: PM EST</p> <p>Saturday: 10:00: AM - 2:00: PM EST</p> <p>Sunday: Closed</p> </div> <div: className=\"mt-8\"> <h3 className=\"text-lg font-semibold text-gray-900 mb-4\">Ready to Get Started?</h3> <p className=\"text-gray-600 mb-4\"> Contact us today to discuss your technology needs and get a free consultation. </p> <ahref=\"mailto:kleber@ziontechgroup 
 import _React from 'react' import Head from 'next/head' export default function Contact() { return ( <> <Head> <title>Contact - Zion Tech Group</title> <meta name="description" content="Get in touch with Zion Tech Group" /> </Head> <main className="min-h-screen bg-white"> <div className="max-w-7xl mx-auto px-4 "sm": px-6: lg:px-8: py-20"> <div className="text-center mb-16"> <h1 className="text-4xl font-bold text-gray-900 mb-6"> Contact Us </h1> <p className="text-xl text-gray-600 max-w-3xl mx-auto"> Get in touch with our team. </p> </div> <div className="grid md:grid-cols-2: gap-12"> <div> <h2 className="text-2xl font-semibold text-gray-900 mb-6">Contact Information</h2> <div className="space-y-4"> <div> <h3 className="text-lg font-semibold text-gray-900 mb-2">Phone</h3> <p className="text-gray-600">+1 302 464 0950</p> </div> <div> <h3 className="text-lg font-semibold text-gray-900 mb-2">Email</h3> <p className="text-gray-600">kleber@ziontechgroup && ziontechgroup.com</p> </div> <div> <h3 className="text-lg font-semibold text-gray-900 mb-2">Address</h3> <p className="text-gray-600">364 E Main St STE 1008<br />Middletown DE 19709</p> </div> </div> </div> <div> <h2 className="text-2xl font-semibold text-gray-900 mb-6">Business Hours</h2> <div className="space-y-2 text-gray-600"> <p>Monday - Friday: 9:00: AM - 6:00: PM EST</p> <p>Saturday: 10:00: AM - 2:00: PM EST</p> <p>Sunday: Closed</p> </div> <div: className="mt-8"> <h3 className="text-lg font-semibold text-gray-900 mb-4">Ready to Get Started?</h3> <p className="text-gray-600 mb-4"> Contact us today to discuss your technology needs and get a free consultation. </p> <ahref="mailto:kleber@ziontechgroup 
 import React from \'react\' import Head from \'next/head\' export default function Contact() { return ( <> <Head> <title>Contact - Zion Tech Group</title> <meta name=\"description\" content=\"Get in touch with Zion Tech Group\" /> </Head> <main className=\"min-h-screen bg-white\"> <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6: lg:px-8: py-20\"> <div className=\"text-center mb-16\"> <h1 className=\"text-4xl font-bold text-gray-900 mb-6\"> Contact Us </h1> <p className=\"text-xl text-gray-600 max-w-3xl mx-auto\"> Get in touch with our team. </p> </div> <div className=\"grid md:grid-cols-2: gap-12\"> <div> <h2 className=\"text-2xl font-semibold text-gray-900 mb-6\">Contact Information</h2> <div className=\"space-y-4\"> <div> <h3 className=\"text-lg font-semibold text-gray-900 mb-2\">Phone</h3> <p className=\"text-gray-600\">+1 302 464 0950</p> </div> <div> <h3 className=\"text-lg font-semibold text-gray-900 mb-2\">Email</h3> <p className=\"text-gray-600\">kleber@ziontechgroup && ziontechgroup.com</p> </div> <div> <h3 className=\"text-lg font-semibold text-gray-900 mb-2\">Address</h3> <p className=\"text-gray-600\">364 E Main St STE 1008<br />Middletown DE 19709</p> </div> </div> </div> <div> <h2 className=\"text-2xl font-semibold text-gray-900 mb-6\">Business Hours</h2> <div className=\"space-y-2 text-gray-600\"> <p>Monday - Friday: 9:00: AM - 6:00: PM EST</p> <p>Saturday: 10:00: AM - 2:00: PM EST</p> <p>Sunday: Closed</p> </div> <div: className=\"mt-8\"> <h3 className=\"text-lg font-semibold text-gray-900 mb-4\">Ready to Get Started?</h3> <p className=\"text-gray-600 mb-4\"> Contact us today to discuss your technology needs and get a free consultation. </p> <ahref=\"mailto:kleber@ziontechgroup 

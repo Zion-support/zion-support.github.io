@@ -1,15 +1,15 @@
 import type { GetServerSideProps } from 'next',;
 import { FormEvent, useState } from 'react',;
 import type { Vendor } from '../../utils/vendor-types',;
-;
+
 type Props = { vendor:Vendor | null },;
-;
+
 export default function VendorProfilePage({ vendor } Props) {;
   const [message, setMessage] = useState<string | null>(null),;
   const [loading, setLoading] = useState(false),;
-;
+
   if (!vendor) return <div className="text-gray-500">Vendor not found.</div>,;
-;
+
   async function submitLead(e:FormEvent<HTMLFormElement>) {;
     e.preventDefault(),;
     const form = e.currentTarget,;
@@ -30,8 +30,7 @@ export default function VendorProfilePage({ vendor } Props) {;
     } finally {;
       setLoading(false),;
     }
-  }
-;
+
   return (;
     <div className="space-y-8">;
       <div className="flex items-center gap-4">;
@@ -49,12 +48,12 @@ export default function VendorProfilePage({ vendor } Props) {;
           <div className="text-sm text-gray-500">{vendor.servicesOffered?.join()}</div>;
         </div>;
       </div>;
-;
+
       <div>;
         <h2 className="text-lg font-medium mb-2">About</h2>;
         <p className="text-sm text-gray-700 dark:text-gray-300 whitespace-pre-line">{vendor.about || 'No description provided.'}</p>;
       </div>;
-;
+
       {vendor.packages && vendor.packages.length > 0 && (;
         <div>;
           <h2 className="text-lg font-medium mb-2">Packages</h2>;
@@ -65,11 +64,11 @@ export default function VendorProfilePage({ vendor } Props) {;
                 <div className="text-sm text-gray-500">{p.description}</div>;
                 <div className="mt-2 text-sm">${p.priceUsd} {p.timeframe ? `/ ${p.timeframe}` :''}</div>;
               </div>;
-            ))}
+            )}
           </div>;
         </div>;
       )}
-;
+
       {vendor.sampleProjects && vendor.sampleProjects.length > 0 && (;
         <div>;
           <h2 className="text-lg font-medium mb-2">Sample Projects</h2>;
@@ -87,11 +86,11 @@ export default function VendorProfilePage({ vendor } Props) {;
                   <div className="text-sm text-gray-500">{sp.description}</div>;
                 </div>;
               </div>;
-            ))}
+            )}
           </div>;
         </div>;
       )}
-;
+
       <div>;
         <h2 className="text-lg font-medium mb-2">Request a Quote</h2>;
         <form onSubmit={submitLead} className="space-y-3">;
@@ -102,15 +101,14 @@ export default function VendorProfilePage({ vendor } Props) {;
           {message && <div className="text-sm">{message}</div>}
         </form>;
       </div>;
-;
+
       <div className="text-center text-xs text-gray-500">Powered by Zion</div>;
     </div>;
   ),;
-}
-;
+
 export const getServerSideProps:GetServerSideProps<Props> = async (ctx) => {;
   const slug = String(ctx.params?.slug || ''),;
   const { getVendorBySlug } = await import('../../utils/vendor-store'),;
   const vendor = slug ? getVendorBySlug(slug) || null :null,;
-  return { props:{ vendor } },;
-},
+  return { props:{ vendor },;
+,

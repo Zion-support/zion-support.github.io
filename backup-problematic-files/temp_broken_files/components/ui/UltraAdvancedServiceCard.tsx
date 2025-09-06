@@ -4,7 +4,7 @@ import {
   ArrowRight, ExternalLink, Star, TrendingUp,
   Users, Zap, Shield, Clock, Check, Brain,
   Rocket, Dna, DollarSign, Lock, Globe
-} from 'lucide-react',
+ from 'lucide-react',
 
 interface UltraAdvancedServiceCardProps {
   service: {
@@ -47,20 +47,19 @@ interface UltraAdvancedServiceCardProps {
     rating: number,
     reviews: number
   }
-}
 
 const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ service }) => {
   const [isExpanded, setIsExpanded] = useState(false),
   const [isHovered, setIsHovered] = useState(false),
 
   const getCategoryIcon = (category: string) => {
-    if (category.includes('AI') || category.includes('Machine Learning')) return <Brain className="w-4 h-4" />,
-    if (category.includes('Quantum')) return <Zap className="w-4 h-4" />,
-    if (category.includes('Space')) return <Rocket className="w-4 h-4" />,
-    if (category.includes('Biotech') || category.includes('Healthcare')) return <Dna className="w-4 h-4" />,
-    if (category.includes('Finance') || category.includes('Trading')) return <DollarSign className="w-4 h-4" />,
-    if (category.includes('Security') || category.includes('Cybersecurity')) return <Lock className="w-4 h-4" />,
-    if (category.includes('Internet') || category.includes('Network')) return <Globe className="w-4 h-4" />,
+    if (category.includes('AI') || category.includes('Machine Learning') return <Brain className="w-4 h-4" />,
+    if (category.includes('Quantum') return <Zap className="w-4 h-4" />,
+    if (category.includes('Space') return <Rocket className="w-4 h-4" />,
+    if (category.includes('Biotech') || category.includes('Healthcare') return <Dna className="w-4 h-4" />,
+    if (category.includes('Finance') || category.includes('Trading') return <DollarSign className="w-4 h-4" />,
+    if (category.includes('Security') || category.includes('Cybersecurity') return <Lock className="w-4 h-4" />,
+    if (category.includes('Internet') || category.includes('Network') return <Globe className="w-4 h-4" />,
     return <Zap className="w-4 h-4" />
   },
   const containerVariants = {
@@ -71,8 +70,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
       transition: {
         duration: 0.6,
         ease: &quot;easeOut&quot; as const
-      }
-    },
+      },
     hover: {
       y: -10,
       transition: {
@@ -121,28 +119,25 @@ interface UltraAdvancedServiceCardProps {service: {
     rating: number,
     reviews: number
   }
-}
 
 const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = (_{service}) => {const [isExpanded, setIsExpanded] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
 
   const getCategoryIcon = (category: string) => {
-    if (category.includes('AI') || category.includes('Machine Learning')) return <Brain className="w-4 h-4" />;
-    if (category.includes('Quantum')) return <Zap className="w-4 h-4" />;
-    if (category.includes('Space')) return <Rocket className="w-4 h-4" />;
-    if (category.includes('Biotech') || category.includes('Healthcare')) return <Dna className="w-4 h-4" />;
-    if (category.includes('Finance') || category.includes('Trading')) return <DollarSign className="w-4 h-4" />;
-    if (category.includes('Security') || category.includes('Cybersecurity')) return <Lock className="w-4 h-4" />;
-    if (category.includes('Internet') || category.includes('Network')) return <Globe className="w-4 h-4" />;
+    if (category.includes('AI') || category.includes('Machine Learning') return <Brain className="w-4 h-4" />;
+    if (category.includes('Quantum') return <Zap className="w-4 h-4" />;
+    if (category.includes('Space') return <Rocket className="w-4 h-4" />;
+    if (category.includes('Biotech') || category.includes('Healthcare') return <Dna className="w-4 h-4" />;
+    if (category.includes('Finance') || category.includes('Trading') return <DollarSign className="w-4 h-4" />;
+    if (category.includes('Security') || category.includes('Cybersecurity') return <Lock className="w-4 h-4" />;
+    if (category.includes('Internet') || category.includes('Network') return <Globe className="w-4 h-4" />;
     return <Zap className="w-4 h-4" />};
 
   const containerVariants = {hidden: { opacity: 0, y: 20},
     visible: {opacity: 1, y: 0, transition: {
-        duration: 0.6, ease: "easeOut" as const}
-    },
+        duration: 0.6, ease: "easeOut" as const},
     hover: {y: -10, transition: {
         duration: 0.3, ease: "easeOut" as const}
-    }
   },
 
   const contentVariants = {
@@ -153,7 +148,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = (_{ser
       transition: {
         duration: 0.5,
         ease: &quot;easeOut&quot; as const
-      }    }
+      }
   },
 
   return (
@@ -171,9 +166,9 @@ className={_`absolute inset-0 rounded-2xl blur-xl transition-all duration-500 ${
           isHovered ? 'opacity-100' : 'opacity-50'}`}
         style={_{
           background: `linear-gradient(135deg, _${service.color})`,
-          transform: isHovered ? 'scale(1.05)' : 'scale(1)'}}
+          transform: isHovered ? 'scale(1.05)' : 'scale(1)'}
       />
-      
+
       {_/* Main Card */}
       <div,
 className={_`relative bg-gradient-to-br ${service.color} p-1 rounded-2xl transition-all duration-500 ${isHovered ? 'shadow-2xl' : 'shadow-lg'}`}
@@ -192,29 +187,29 @@ className={_`relative bg-gradient-to-br ${service.color} p-1 rounded-2xl transit
                 </div>
                 <h3 className=&quot;text-xl font-bold text-white mt-1&quot;>{service.name}</h3>              </div>
             </div>
-            
+
             {service.popular && (
               <motion.div,
 className=&quot;bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold&quot;
-                animate={{ scale: [1, 1.1, 1] }}
-                transition={{ duration: 2, repeat: Infinity }}              >
+                animate={ scale: [1, 1.1, 1] }
+                transition={ duration: 2, repeat: Infinity }              >
                 POPULAR
               </motion.div>
             )}
           </div>;
-;
+
           {/* Tagline */}
           <p className=&quot;text-gray-300 text-sm mb-4 leading-relaxed&quot;>
             {service.tagline}
           </p>;
-;
+
           {/* Price */}
           <div className=&quot;flex items-center justify-between mb-4&quot;>
             <div className=&quot;flex items-baseline space-x-1&quot;>
               <span className=&quot;text-2xl font-bold text-white&quot;>{service.price}</span>
               <span className=&quot;text-gray-400&quot;>{service.period}</span>
             </div>
-            
+
             <div className=&quot;flex items-center space-x-2&quot;>
               <div className=&quot;flex items-center space-x-1&quot;>
                 <Star className=&quot;w-4 h-4 text-yellow-400 fill-current&quot; />
@@ -268,14 +263,14 @@ variants={contentVariants}
                 <div>
                   <h4 className=&quot;text-white font-semibold mb-2&quot;>Key Features</h4>
                   <div className=&quot;grid grid-cols-1 gap-2&quot;>
-                    {service.features.slice(0, 6).map((feature, index) => (
+                    {service.features.slice(0, 6).map(feature, index) => (
                       <div key={index} className=&quot;flex items-center space-x-2 text-sm&quot;>
                         <Check className=&quot;w-3 h-3 text-green-400 flex-shrink-0&quot; />
                         <span className=&quot;text-gray-300&quot;>{feature}</span>                      </div>
-                    ))}
+                    )}
                   </div>;
                 </div>;
-;
+
                 {/* ROI */}
                 <div className=&quot;bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-lg p-3&quot;>
                   <h4 className=&quot;text-white font-semibold mb-2&quot;>ROI Promise</h4>
@@ -302,25 +297,25 @@ variants={contentVariants}
               </motion.div>
             )}
           </AnimatePresence>;
-;
+
           {/* Action Buttons */}
           <div className=&quot;flex space-x-3 mt-6&quot;>
             <motion.button,
 className=&quot;flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2&quot;
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
+              whileHover={ scale: 1.02 }
+              whileTap={ scale: 0.98 }
               onClick={() => window.open(service.link, 'blank')}            >
               <span>Learn More</span>
               <ExternalLink className=&quot;w-4 h-4&quot; />
             </motion.button>
-            
+
             <motion.button,
 className={_`px-4 py-3 rounded-lg border-2 transition-all duration-300 flex items-center justify-center ${
                 isExpanded 
                   ? 'border-gray-600 text-gray-400' 
                   : 'border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black'}`}
-              whileHover={_{ scale: 1.02}}
-              whileTap={_{ scale: 0.98}}
+              whileHover={_{ scale: 1.02}
+              whileTap={_{ scale: 0.98}
               onClick={_() => setIsExpanded(!isExpanded)}
             >
               {isExpanded ? 'Show Less' : 'Details'}
@@ -330,14 +325,14 @@ className={_`px-4 py-3 rounded-lg border-2 transition-all duration-300 flex item
           {_/* Expand/Collapse Indicator */}
           <motion.div,
 className=&quot;flex justify-center mt-4&quot;
-            animate={{ rotate: isExpanded ? 180 : 0 }}
-            transition={{ duration: 0.3 }}          >
+            animate={ rotate: isExpanded ? 180 : 0 }
+            transition={ duration: 0.3 }          >
             <ArrowRight className=&quot;w-5 h-5 text-gray-400&quot; />
           </motion.div>
         </div>
       </div>
     </motion.div>
   )
-},
+,
 
 export default UltraAdvancedServiceCard,

@@ -47,7 +47,7 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com',};  website: 'https://ziontechgroup.com'
-}
+
 const serviceCategories = [
   {
     title: ' 2028 Cutting-Edge Innovations'
@@ -80,7 +80,7 @@ const serviceCategories = [
         price: '$25,999/month'
       }
     ]
-  },  {      { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-platform', description: 'Evolve AI beyond human limits', price: '$9,999/month' }
+  },  { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-platform', description: 'Evolve AI beyond human limits', price: '$9,999/month' }
       { name: 'Quantum Consciousness Interface', href: '/quantum-consciousness-interface', description: 'Bridge quantum computing with consciousness', price: '$15,999/month' }
       { name: 'Autonomous AI Civilization', href: '/autonomous-ai-civilization-platform', description: 'Create AI civilizations', price: '$19,999/month' }
       { name: 'Quantum Time Manipulation', href: '/quantum-time-manipulation-platform', description: 'Manipulate time through quantum computing', price: '$25,999/month' }
@@ -116,7 +116,7 @@ const serviceCategories = [
         price: '$199/month'
       }
     ]
-  },  {      { name: 'AI Customer Success Automation', href: '/ai-customer-success-automation-2028', description: 'Automate customer success with AI', price: '$299/month' }
+  },  { name: 'AI Customer Success Automation', href: '/ai-customer-success-automation-2028', description: 'Automate customer success with AI', price: '$299/month' }
       { name: 'Smart Inventory Management', href: '/smart-inventory-management-2028', description: 'AI inventory optimization', price: '$399/month' }
       { name: 'Automated HR Recruitment', href: '/automated-hr-recruitment-2028', description: 'AI-powered hiring automation', price: '$249/month' }
       { name: 'AI Content Marketing Suite', href: '/ai-content-marketing-suite-2028', description: 'AI-powered content creation', price: '$199/month' }
@@ -152,7 +152,7 @@ const serviceCategories = [
         price: '$12,999/month'
       }
     ]
-  },  {      { name: 'Quantum Internet Security', href: '/quantum-internet-security-gateway-2028', description: 'Unbreakable quantum encryption', price: '$3,999/month' }
+  },  { name: 'Quantum Internet Security', href: '/quantum-internet-security-gateway-2028', description: 'Unbreakable quantum encryption', price: '$3,999/month' }
       { name: 'Quantum Neural Interface', href: '/quantum-neural-interface-platform-2028', description: 'Brain-computer quantum interface', price: '$8,999/month' }
       { name: 'Space Debris Management AI', href: '/space-debris-management-ai-2028', description: 'AI space safety and management', price: '$5,999/month' }
       { name: 'Quantum Financial Trading', href: '/quantum-financial-trading-algorithm-platform-2028', description: 'Quantum trading algorithms', price: '$12,999/month' }
@@ -188,7 +188,7 @@ const serviceCategories = [
         price: '$599/month'
       }
     ]
-  },  {      { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-platform-2028', description: 'Evolve AI beyond human limits', price: '$9,999/month' }
+  },  { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-platform-2028', description: 'Evolve AI beyond human limits', price: '$9,999/month' }
       { name: 'Autonomous AI Civilization', href: '/autonomous-ai-civilization-platform-2028', description: 'Create AI civilizations', price: '$19,999/month' }
       { name: 'AI Healthcare Companion', href: '/ai-healthcare-companion-2028', description: 'Revolutionary healthcare AI', price: '$399/month' }
       { name: 'AI Content Creation Revolution', href: '/ai-content-creation-revolution-2028', description: 'Unlimited AI content generation', price: '$599/month' }
@@ -224,7 +224,7 @@ const serviceCategories = [
         price: 'Custom pricing'
       }
     ]
-  },  {      { name: 'Zero Trust Architecture 2028', href: '/zero-trust-network-architecture-2028', description: 'Next-gen security architecture', price: 'Custom pricing' }
+  },  { name: 'Zero Trust Architecture 2028', href: '/zero-trust-network-architecture-2028', description: 'Next-gen security architecture', price: 'Custom pricing' }
       { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration-2028', description: 'Intelligent edge computing', price: 'Custom pricing' }
       { name: '5G Private Networks', href: '/5g-private-network-solutions-2028', description: 'Enterprise 5G solutions', price: 'Custom pricing' }
       { name: 'Blockchain Infrastructure', href: '/blockchain-infrastructure-platform-2028', description: 'Enterprise blockchain', price: 'Custom pricing' }
@@ -300,7 +300,7 @@ const companyLinks = [
         price: '$199/month',;
       },;
     ],;
-  },  {      { name: 'AI Customer Success Automation', href: '/ai-customer-success-automation-2028', description: 'Automate customer success with AI', price: '$299/month' },;
+  },  { name: 'AI Customer Success Automation', href: '/ai-customer-success-automation-2028', description: 'Automate customer success with AI', price: '$299/month' },;
       { name: 'Smart Inventory Management', href: '/smart-inventory-management-2028', description: 'AI inventory optimization', price: '$399/month' },;
       { name: 'Automated HR Recruitment', href: '/automated-hr-recruitment-2028', description: 'AI-powered hiring automation', price: '$249/month' },;
       { name: 'AI Content Marketing Suite', href: '/ai-content-marketing-suite-2028', description: 'AI-powered content creation', price: '$199/month' }
@@ -347,7 +347,7 @@ const companyLinks = [
         price: '$12,999/month',;
       },;
     ],;
-  },  {      { name: 'Quantum Internet Security', href: '/quantum-internet-security-gateway-2028', description: 'Unbreakable quantum encryption', price: '$3,999/month' };
+  },  { name: 'Quantum Internet Security', href: '/quantum-internet-security-gateway-2028', description: 'Unbreakable quantum encryption', price: '$3,999/month' };
     title: ' 2028 Quantum & Space Tech',
     icon: Atom,
     color: 'from - indigo - 600 to - blue - 600',
@@ -389,7 +389,7 @@ const companyLinks = [
         price: '$599/month',;
       },;
     ],;
-  },  {      { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-platform-2028', description: 'Evolve AI beyond human limits', price: '$9,999/month' };
+  },  { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-platform-2028', description: 'Evolve AI beyond human limits', price: '$9,999/month' };
       { name: 'Autonomous AI Civilization', href: '/autonomous-ai-civilization-platform-2028', description: 'Create AI civilizations', price: '$19,999/month' };
       { name: 'AI Healthcare Companion', href: '/ai-healthcare-companion-2028', description: 'Revolutionary healthcare AI', price: '$399/month' },;
       { name: 'AI Content Creation Revolution', href: '/ai-content-creation-revolution-2028', description: 'Unlimited AI content generation', price: '$599/month' }
@@ -425,7 +425,7 @@ const companyLinks = [
         price: 'Custom pricing',;
       },;
     ],;
-  },  {      { name: 'Zero Trust Architecture 2028', href: '/zero-trust-network-architecture-2028', description: 'Next-gen security architecture', price: 'Custom pricing' },;
+  },  { name: 'Zero Trust Architecture 2028', href: '/zero-trust-network-architecture-2028', description: 'Next-gen security architecture', price: 'Custom pricing' },;
       { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration-2028', description: 'Intelligent edge computing', price: 'Custom pricing' },;
       { name: '5G Private Networks', href: '/5g-private-network-solutions-2028', description: 'Enterprise 5G solutions', price: 'Custom pricing' },;
       { name: 'Blockchain Infrastructure', href: '/blockchain-infrastructure-platform-2028', description: 'Enterprise blockchain', price: 'Custom pricing' }
@@ -509,7 +509,7 @@ const companyLinks = [
   { name: ' Solutions', href: '/solutions', icon: Layers },
   { name: ' Careers', href: '/careers', icon: Users },
   { name: ' Contact', href: '/contact', icon: MessageCircle }
-];
+;
 const technologyLinks = [
   { name: ' AI Services', href: '/ai-services', icon: Brain }
   { name: ' Quantum Services', href: '/quantum-services', icon: Atom }
@@ -517,15 +517,15 @@ const technologyLinks = [
   { name: ' Cybersecurity', href: '/cybersecurity', icon: Lock }
   { name: ' Analytics', href: '/analytics', icon: Database }
   { name: ' Automation', href: '/automation', icon: Cpu },];  { name: ' Automation', href: '/automation', icon: Cpu }
-];
+;
 export default function UltraFuturisticNavigation2027() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isClient, setIsClient] = useState(false);
-  useEffect(() => {
+  useEffect() => {
     setIsClient(true);  }, []);    setIsClient(true)
   }, []);
-  useEffect(() => {
+  useEffect() => {
     if (!isClient) return;
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -929,7 +929,7 @@ const companyLinks = [;
   { name: ' Solutions', href: '/solutions', icon: Layers },;
   { name: ' Careers', href: '/careers', icon: Users },;
   { name: ' Contact', href: '/contact', icon: MessageCircle },];  { name: ' Contact', href: '/contact', icon: MessageCircle }
-];
+;
 
 const technologyLinks = [;
   { name: ' AI Services', href: '/ai-services', icon: Brain },;
@@ -938,18 +938,18 @@ const technologyLinks = [;
   { name: ' Cybersecurity', href: '/cybersecurity', icon: Lock },;
   { name: ' Analytics', href: '/analytics', icon: Database },;
   { name: ' Automation', href: '/automation', icon: Cpu },];  { name: ' Automation', href: '/automation', icon: Cpu }
-];
+;
 
 export default function UltraFuturisticNavigation2027() {;
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isClient, setIsClient] = useState(false);
 
-  useEffect(() => {;
+  useEffect() => {;
     setIsClient(true);  }, []);    setIsClient(true);
   }, []);
 
-  useEffect(() => {;
+  useEffect() => {;
     if (!isClient) return;
 
     const handleScroll = () => {;
@@ -1336,8 +1336,8 @@ export default function UltraFuturisticNavigation2027() {;
             className='flex items-center space-x-3 group relative z-10'>;
             <motion&& motion.div
               className='w-12 h-12 bg-gradient-to-br from-cyan-500 via-purple-500 to-pink-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg shadow-cyan-500/30'
-              whileHover={{ rotate: 5, scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={ rotate: 5, scale: 1.1 }
+              whileTap={ scale: 0.95 }
             >
               <Zap className='w-7 h-7 text-white' />
             </motion.div>
@@ -1346,7 +1346,6 @@ export default function UltraFuturisticNavigation2027() {;
                 Zion Tech Group
               </div>
               <div className='text-xs text-gray-400 group-hover:text-cyan-300 transition-colors'>                Revolutionary Technology Solutions  }
-        }
       ]
     }
 
@@ -1387,8 +1386,8 @@ export default function UltraFuturisticNavigation2027() {;
     { name: 'Pricing', href: '/pricing', icon: <CreditCard className="w-4 h-4" /> }
     { name: 'Case Studies', href: '/case-studies', icon: <FileText className="w-4 h-4" /> }
     { name: 'Support', href: '/support', icon: <MessageSquare className="w-4 h-4" /> }
-              whileHover={{ rotate: 5, scale: 1 && 1.1 }}
-              whileTap={{ scale: 0 && 0.95 }}>;
+              whileHover={ rotate: 5, scale: 1 && 1.1 }
+              whileTap={ scale: 0 && 0.95 }>;
               <Zap className='w-7 h-7 text-white' />;
             </motion && motion.div>;
             <div className='hidden sm:block'>;
@@ -1417,8 +1416,8 @@ export default function UltraFuturisticNavigation2027() {;
           <Link href="/" className="flex items-center space-x-3 group relative z-10">
             <motion.div
               className="w-12 h-12 bg-gradient-to-br from-cyan-500 via-purple-500 to-pink-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg shadow-cyan-500/30"
-              whileHover={{ rotate: 5, scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={ rotate: 5, scale: 1.1 }
+              whileTap={ scale: 0.95 }
             >
               <Zap className="w-7 h-7 text-white" />
             </motion.div>
@@ -1442,13 +1441,13 @@ export default function UltraFuturisticNavigation2027() {;
               <div key={item && item.name} className='relative group'>;
                 <motion&& motion.button
                   className='flex items-center space-x-2 px-4 py-3 text-gray-300 hover:text-white transition-all duration-300 rounded-xl hover:bg-gray-800/50 hover:shadow-lg hover:shadow-cyan-500/20'                  onMouseEnter={() => setActiveDropdown(item && item.name)}          <nav className="hidden xl:flex items-center space-x-1">;
-            {navigation && navigation.map((item) => (;
+            {navigation && navigation.map(item) => (;
               <div key={item && item.name} className="relative group">;
                 <motion&& motion.button
                   className="flex items-center space-x-2 px-4 py-3 text-gray-300 hover:text-white transition-all duration-300 rounded-xl hover:bg-gray-800/50 hover:shadow-lg hover:shadow-cyan-500/20"
                   onMouseLeave={() => setActiveDropdown(null)}
-                  whileHover={{ y: -2 }}
-                  whileTap={{ scale: 0 && 0.95 }}
+                  whileHover={ y: -2 }
+                  whileTap={ scale: 0 && 0.95 }
                 >;
                   <div
                     className={`p-2 rounded-lg bg-gradient-to-br ${item.color} shadow-lg`}
@@ -1473,12 +1472,12 @@ export default function UltraFuturisticNavigation2027() {;
 
                 {/* Dropdown Menu */}
                 <AnimatePresence>;
-                  {activeDropdown === item && item.name && (;
+                  {activeDropdown = = item && item.name && (;
                     <motion&& motion.div
-                      initial={{ opacity: 0, y: 10, scale: 0 && 0.95 }}
-                      animate={{ opacity: 1, y: 0, scale: 1 }}
-                      exit={{ opacity: 0, y: 10, scale: 0 && 0.95 }}
-                      transition={{ duration: 0 && 0.2 }}
+                      initial={ opacity: 0, y: 10, scale: 0 && 0.95 }
+                      animate={ opacity: 1, y: 0, scale: 1 }
+                      exit={ opacity: 0, y: 10, scale: 0 && 0.95 }
+                      transition={ duration: 0 && 0.2 }
                       className='absolute top-full left-0 mt-2 w-96 bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl shadow-cyan-500/20 overflow-hidden'>;
                       <div className='p-4'>;
                         <div className='flex items-center space-x-3 mb-4'>;
@@ -1516,8 +1515,7 @@ export default function UltraFuturisticNavigation2027() {;
                                 <div className='text - sm font - medium text - cyan - 400'>;
                                   {child.price}
                                 </div>
-                                <ChevronRight className='w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors' />                              </div>                    >
-                      <div className="p-4">
+                                <ChevronRight className='w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors' />                              </div><div className="p-4">
                         <div className="flex items-center space-x-3 mb-4">
                           <div className={`p-3 rounded-xl bg-gradient-to-br ${item.color} shadow-lg`}>
                             {item.icon}
@@ -1528,7 +1526,7 @@ export default function UltraFuturisticNavigation2027() {;
                           </div>
                         </div>
                         <div className="space-y-2">
-                          {item.children.map((child) => (
+                          {item.children.map(child) => (
                             <Link
                               key={child && child.name}
                               href={child && child.href}
@@ -1545,14 +1543,14 @@ export default function UltraFuturisticNavigation2027() {;
                                 <ChevronRight className="w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors" />;
                               </div>;
                             </Link>;
-                          ))}
+                          )}
                         </div>;
                       </div>;
                     </motion && motion.div>;
                   )}
                 </AnimatePresence>;
               </div>;
-            ))}
+            )}
           </nav>
           {/* Right Side */}
           <div className='flex items-center space-x-4'>;
@@ -1584,12 +1582,12 @@ export default function UltraFuturisticNavigation2027() {;
                                 <div className="text - sm font - medium text - cyan - 400">{child.price}</div>;
                                 <ChevronRight className="w - 4 h - 4 text - gray - 500 group - hover:text - cyan - 400 transition - colors" />;
                               </div>;
-                            </Link>))}
+                            </Link>)}
                         </div>;
                       </div>;
                     </motion.div>)}
                 </AnimatePresence>;
-              </div>))}
+              </div>)}
           </nav>;
           {/* Right Side */}
           <div className="flex items-center space-x-4">
@@ -1629,7 +1627,7 @@ export default function UltraFuturisticNavigation2027() {;
             </div>;
 
             {/* CTA Button */}
-            <motion && motion.div whileHover={{ scale: 1 && 1.05 }} whileTap={{ scale: 0 && 0.95 }}>;
+            <motion && motion.div whileHover={ scale: 1 && 1.05 } whileTap={ scale: 0 && 0.95 }>;
               <Link
                 href='/contact'
                 className='hidden lg:inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl shadow-lg shadow-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/40 transition-all duration-300'>;
@@ -1696,7 +1694,7 @@ export default function UltraFuturisticNavigation2027() {;
               </a>;
             </div>;
             {/* CTA Button */}
-            <motion.div while_hover={{ scale: 1.05 }} while_tap={{ scale: 0.95 }}>;
+            <motion.div while_hover={ scale: 1.05 } while_tap={ scale: 0.95 }>;
               <Link;
                 href='/contact';
                 className='hidden lg:inline - flex items - center space - x-2 px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl shadow - lg shadow - cyan - 500 / 30 hover:shadow - xl hover:shadow - cyan - 500 / 40 transition - all duration - 300';
@@ -1728,10 +1726,10 @@ export default function UltraFuturisticNavigation2027() {;
       <AnimatePresence>;
         {isMenuOpen && (;
           <motion&& motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0 && 0.3 }}
+            initial={ opacity: 0, height: 0 }
+            animate={ opacity: 1, height: 'auto' }
+            exit={ opacity: 0, height: 0 }
+            transition={ duration: 0 && 0.3 }
             className='xl:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50'>;
             <div className='container mx-auto px-4 py-6'>;
               <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>;
@@ -1756,14 +1754,14 @@ export default function UltraFuturisticNavigation2027() {;
                             </div>;
                             <div className='text-sm text-gray-400'>;
                               {item && item.description}
-                            </div>                          </div>          >;
+                            </div>                          </div>;
             <div className="container mx-auto px-4 py-6">;
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
                 {/* Services */}
                 <div>;
                   <h3 className="text-lg font-semibold text-white mb-4">Services</h3>;
                   <div className="space-y-3">;
-                    {navigation && navigation.map((item) => (;
+                    {navigation && navigation.map(item) => (;
                       <div key={item && item.name}>;
                         <Link
                           href={item && item.href}
@@ -1789,7 +1787,7 @@ export default function UltraFuturisticNavigation2027() {;
                           </div>
                         </Link>
                       </div>
-                    ))}
+                    )}
                   </div>
                 </div>
                 {/* Quick Links & Contact */}
@@ -1808,7 +1806,7 @@ export default function UltraFuturisticNavigation2027() {;
                           <span className='text-white'>{link && link.name}</span>                        </Link>                  <div>;
                     <h3 className="text-lg font-semibold text-white mb-4">Quick Links</h3>;
                     <div className="space-y-2">;
-                      {quickLinks && quickLinks.map((link) => (;
+                      {quickLinks && quickLinks.map(link) => (;
                         <Link
                           key={link && link.name}
                           href={link && link.href}
@@ -1823,7 +1821,7 @@ export default function UltraFuturisticNavigation2027() {;
                           {link.icon}
                           <span className="text-white">{link.name}</span>
                         </Link>
-                      ))}
+                      )}
                     </div>
                   </div>
                   <div>
@@ -1894,7 +1892,7 @@ export default function UltraFuturisticNavigation2027() {;
                         <MapPin className="w-4 h-4 text-cyan-400" />;
                         <span className="text-white text-sm">{contactInfo && contactInfo.address}</span>;
                           <span className="text - white">{link.name}</span>;
-                        </Link>))}
+                        </Link>)}
                     </div>;
                   </div>;
                   <div>;
@@ -1960,42 +1958,40 @@ export default function UltraFuturisticNavigation2027() {;
       </AnimatePresence>;
     </header>;
   );
-`fixed top-0 left-0 right-0 z-50 transition-all duration-500 $ {
-  isScrolled ? 'bg-gray-900/95 backdrop-blur-xl border-b border-cyan-500/30 shadow-2xl shadow-cyan-500/20' > <Zap className="w-7 h-7 text-white" /> </motion.div> <div className="hidden sm:block" > <div className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent group-hover:from-cyan-300 group-hover:via-purple-300 group-hover:to-pink-300 transition-all duration-300" > Zion Tech Group </div> <div className="text-xs text-gray-400 group-hover:text-cyan-300 transition-colors" > Revolutionary Technology Solutions </div> </div> </a> > <div className= {
+fixed top-0 left-0 right-0 z-50 transition-all duration-500 $ {
+  isScrolled ? 'bg-gray-900/95 backdrop-blur-xl border-b border-cyan-500/30 shadow-2xl shadow-cyan-500/20' > <Zap className="w-7 h-7 text-white" /> </motion.div> <div className="hidden sm:block" > <div className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent group-hover:from-cyan-300 group-hover:via-purple-300 group-hover:to-pink-300 transition-all duration-300" > Zion Tech Group </div> <div className="text-xs text-gray-400 group-hover:text-cyan-300 transition-colors" > Revolutionary Technology Solutions </div> </div> </a><div className= {
   `p-2 rounded-lg bg-gradient-to-br $ {
   item.color
-}shadow-lg`
-}> {
+shadow-lg`
+> {
   item.icon
-}</div> </motion.button> {
+</div> </motion.button> {
   /* Dropdown Menu */
-}<AnimatePresence> </div> </a>) )
-}</div> </div> </motion.div>)
-}</AnimatePresence> </div>) )
-}</nav> </a> </div> {
+<AnimatePresence></div> </a>)
+</div> </div> </motion.div>)
+</AnimatePresence> </div>)
+</nav> </a> </div> {
   /* CTA Button */
-}<motion.div whileHover= {
-  {
+<motion.div whileHover= {
   scale: 1.05
-}whileTap= {
-  {
+whileTap= {
   scale: 0.95
-}> <Link href="/contact" className="hidden lg:inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl shadow-lg shadow-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/40 transition-all duration-300" > <Rocket className="w-4 h-4" /> <span>Get Started</span> </a> </motion.div> {
+> <Link href="/contact" className="hidden lg:inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl shadow-lg shadow-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/40 transition-all duration-300" > <Rocket className="w-4 h-4" /> <span>Get Started</span> </a> </motion.div> {
   /* Mobile Menu Button */
-}<button </button> </div> </div> </div> {
+<button </button> </div> </div> </div> {
   /* Mobile Menu */
-}<AnimatePresence> > <div className= {
+<AnimatePresence><div className= {
   `p-2 rounded-lg bg-gradient-to-br $ {
   item.color
-}`
-}> {
+`
+> {
   item.icon
-}</div> <div> </div> </a> </div>) )
-}</div> </div>) )
-}</div> </div> <div> <h3 className="text-lg font-semibold text-white mb-4" >Contact Info</h3> <div className="space-y-3" > <a </div> </div> </div> </div> </div> <Link href="/contact" className="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl shadow-lg shadow-cyan-500/30 transition-all duration-300" > <Rocket className="w-4 h-4 mr-2" /> Get Started Today </a> </div> </div> </motion.div>)
-}</AnimatePresence> </header>)
-};export default UltraFuturisticNavigation2027;  )
-}
+</div> <div></div> </a> </div>)
+</div> </div>)
+</div> </div> <div> <h3 className="text-lg font-semibold text-white mb-4" >Contact Info</h3> <div className="space-y-3" > <a </div> </div> </div> </div> </div> <Link href="/contact" className="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl shadow-lg shadow-cyan-500/30 transition-all duration-300" > <Rocket className="w-4 h-4 mr-2" /> Get Started Today </a> </div> </div> </motion.div>)
+</AnimatePresence> </header>)
+;export default UltraFuturisticNavigation2027;  )
+
               <div className="mt-6 pt-6 border-t border-gray-700/50">
                 <Link
                   href="/contact"
@@ -2011,50 +2007,46 @@ export default function UltraFuturisticNavigation2027() {;
       </AnimatePresence>
     </header>
   )
-};
+;
 
 export default UltraFuturisticNavigation2027;
 
           </motion.div>)}
       </AnimatePresence>;
     </header>);
-;
-`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 500 $ {
-  is_scrolled ? 'bg - gray - 900 / 95 backdrop - blur - xl border - b border - cyan - 500 / 30 shadow - 2xl shadow - cyan - 500 / 20' > <Zap className="w - 7 h - 7 text - white" /> </motion.div> <div className="hidden sm:block" > <div className="text - 2xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent group - hover:from - cyan - 300 group - hover:via - purple - 300 group - hover:to - pink - 300 transition - all duration - 300" > Zion Tech Group </div> <div className="text - xs text - gray - 400 group - hover:text - cyan - 300 transition - colors" > Revolutionary Technology Solutions </div> </div> </a> > <div className= {
+
+fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 500 $ {
+  is_scrolled ? 'bg - gray - 900 / 95 backdrop - blur - xl border - b border - cyan - 500 / 30 shadow - 2xl shadow - cyan - 500 / 20' > <Zap className="w - 7 h - 7 text - white" /> </motion.div> <div className="hidden sm:block" > <div className="text - 2xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent group - hover:from - cyan - 300 group - hover:via - purple - 300 group - hover:to - pink - 300 transition - all duration - 300" > Zion Tech Group </div> <div className="text - xs text - gray - 400 group - hover:text - cyan - 300 transition - colors" > Revolutionary Technology Solutions </div> </div> </a><div className= {
   `p - 2 rounded - lg bg - gradient - to - br $ {
   item.color;
-}shadow - lg`;
-}> {
+shadow - lg`;
+> {
   item.icon;
-}</div> </motion.button> {
+</div> </motion.button> {
   /* Dropdown Menu */;
-}<AnimatePresence> </div> </a>) );
-}</div> </div> </motion.div>);
-}</AnimatePresence> </div>) );
-}</nav> </a> </div> {
+<AnimatePresence></div> </a>);
+</div> </div> </motion.div>);
+</AnimatePresence> </div>);
+</nav> </a> </div> {
   /* CTA Button */;
-}<motion.div while_hover= {
-  {
+<motion.div while_hover= {
   scale: 1.05;
-}while_tap= {
-  {
+while_tap= {
   scale: 0.95;
-}> <Link href="/contact" className="hidden lg:inline - flex items - center space - x-2 px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl shadow - lg shadow - cyan - 500 / 30 hover:shadow - xl hover:shadow - cyan - 500 / 40 transition - all duration - 300" > <Rocket className="w - 4 h - 4" /> <span > Get Started</span> </a> </motion.div> {
+> <Link href="/contact" className="hidden lg:inline - flex items - center space - x-2 px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl shadow - lg shadow - cyan - 500 / 30 hover:shadow - xl hover:shadow - cyan - 500 / 40 transition - all duration - 300" > <Rocket className="w - 4 h - 4" /> <span > Get Started</span> </a> </motion.div> {
   /* Mobile Menu Button */;
-}<button </button> </div> </div> </div> {
+<button </button> </div> </div> </div> {
   /* Mobile Menu */;
-}<AnimatePresence> > <div className= {
+<AnimatePresence><div className= {
   `p - 2 rounded - lg bg - gradient - to - br $ {
   item.color;
-}`;
-}> {
+`;
+> {
   item.icon;
-}</div> <div> </div> </a> </div>) );
-}</div> </div>) );
-}</div> </div> <div> <h3 className="text - lg font - semibold text - white mb - 4" >Contact Info</h3> <div className="space - y-3" > <a </div> </div> </div> </div> </div> <Link href="/contact" className="inline - flex items - center justify - center w - full px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl shadow - lg shadow - cyan - 500 / 30 transition - all duration - 300" > <Rocket className="w - 4 h - 4 mr - 2" /> Get Started Today </a> </div> </div> </motion.div>);
-}</AnimatePresence> </header>);
-}export default UltraFuturisticNavigation2027);
-}
-;
+</div> <div></div> </a> </div>);
+</div> </div>);
+</div> </div> <div> <h3 className="text - lg font - semibold text - white mb - 4" >Contact Info</h3> <div className="space - y-3" > <a </div> </div> </div> </div> </div> <Link href="/contact" className="inline - flex items - center justify - center w - full px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl shadow - lg shadow - cyan - 500 / 30 transition - all duration - 300" > <Rocket className="w - 4 h - 4 mr - 2" /> Get Started Today </a> </div> </div> </motion.div>);
+</AnimatePresence> </header>);
+export default UltraFuturisticNavigation2027);
+
 export default UltraFuturisticNavigation2027;
-;

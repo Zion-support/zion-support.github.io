@@ -11,7 +11,7 @@ import {
   Cloud
   Shield
   ArrowRight;
-} from 'lucide-react';
+ from 'lucide-react';
 export default function FuturisticFooter() {
   const currentYear = new Date().getFullYear();import { Mail, Phone, MapPin, Globe, Zap, Bot, Cloud, Shield, ArrowRight } from 'lucide-react';
 export default function FuturisticFooter() {
@@ -70,7 +70,7 @@ import {;
   Cloud,;
   Shield,;
   ArrowRight,;
-} from 'lucide-react';
+ from 'lucide-react';
 
 export default function FuturisticFooter() {;
   const currentYear = new Date().getFullYear();import { Mail, Phone, MapPin, Globe, Zap, Bot, Cloud, Shield, ArrowRight } from 'lucide-react';
@@ -223,7 +223,7 @@ export default function FuturisticFooter() {;
               Leading provider of AI-powered micro SaaS solutions, helping businesses automate, optimize, and scale their operations with cutting-edge technology.;
             </p>;
             <div className="flex space-x-4">;
-              {socialLinks && socialLinks.map((social) => (;
+              {socialLinks && socialLinks.map(social) => (;
                 <a
                   key={social && social.name}
                   href={social && social.href}
@@ -235,7 +235,7 @@ export default function FuturisticFooter() {;
                   className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/40">;
                   <span className="text-lg">{social && social.icon}</span>;
                 </a>;
-              ))}
+              )}
             </div>
           </div>
           {/* Quick Links */}
@@ -252,7 +252,7 @@ export default function FuturisticFooter() {;
                     className='text-gray-400 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block'>              Quick Links;
             </h3>;
             <ul className="space-y-3">;
-              {quickLinks && quickLinks.map((link) => (;
+              {quickLinks && quickLinks.map(link) => (;
                 <li key={link && link.name}>;
                   <Link
                     href={link && link.href}
@@ -266,7 +266,7 @@ export default function FuturisticFooter() {;
                     {link.name}
                   </Link>
                 </li>
-              ))}
+              )}
             </ul>
           </div>
           {/* Services */}
@@ -283,7 +283,7 @@ export default function FuturisticFooter() {;
                     className='text-gray-400 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block'>              Services;
             </h3>;
             <ul className="space-y-3">;
-              {serviceCategories && serviceCategories.map((service) => (;
+              {serviceCategories && serviceCategories.map(service) => (;
                 <li key={service && service.name}>;
                   <Link
                     href={service && service.href}
@@ -297,7 +297,7 @@ export default function FuturisticFooter() {;
                     {service.name}
                   </Link>
                 </li>
-              ))}
+              )}
             </ul>
           </div>
           {/* Contact Info */}
@@ -401,8 +401,8 @@ export default function FuturisticFooter() {;
       <div className="absolute bottom-32 left-32 w-3 h-3 bg-purple-400 rounded-full animate-pulse delay-1000" />
       <div className="absolute top-1/2 left-10 w-1 h-1 bg-green-400 rounded-full animate-pulse delay-500" />
     </footer>
-);
-}
+;
+
                 className='text-gray-400 hover:text-white transition-colors duration-200'>                Cookie Policy               {currentYear} Zion Tech Group. All rights reserved.;
             </div>;
 
@@ -431,9 +431,9 @@ export default function FuturisticFooter() {;
       <div className="absolute top-1/2 left-10 w-1 h-1 bg-green-400 rounded-full animate-pulse delay-500" />;
     </footer>;
   );
-}
+
                   </Link>;
-                </li>))}
+                </li>)}
             </ul>;
           </div>;
           {/* Contact Info */}
@@ -538,4 +538,3 @@ export default function FuturisticFooter() {;
       <div className="absolute bottom - 32 left - 32 w - 3 h - 3 bg - purple - 400 rounded - full animate - pulse delay - 1000" />;
       <div className="absolute top - 1/2 left - 10 w - 1 h - 1 bg - green - 400 rounded - full animate - pulse delay - 500" />;
     </footer>);
-}

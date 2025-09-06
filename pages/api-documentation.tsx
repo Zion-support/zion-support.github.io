@@ -34,7 +34,7 @@ export default function APIDocumentationPage() {
 			</section>
 		</Layout>
 	)
-}
+
 import React from 'react';
 import Head from 'next / head';
 import Layout from '../components / layout / Layout';
@@ -58,4 +58,3 @@ function APIDocumentationPage() {
         <p className='text - gray - 300'>REST and SDK references. Coming soon.</p>;
       </section>;
     </Layout>);
-;

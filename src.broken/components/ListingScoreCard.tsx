@@ -6,5 +6,3 @@ export function ListingScoreCard() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

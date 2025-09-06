@@ -6,7 +6,7 @@ import {
   DialogContent
   DialogHeader
   DialogTitle
-} from '@/components/ui/dialog'; import { Button } from '@/components/ui/button'; import { Input } from '@/components/ui/input'
+ from '@/components/ui/dialog'; import { Button } from '@/components/ui/button'; import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
   Dialog
   DialogContent
@@ -20,7 +20,7 @@ import { Input } from '@/components/ui/input'
   FormLabel
   FormControl
   FormMessage
-} from '@/components/ui/form'
+ from '@/components/ui/form'
 import { useForm, type Resolver } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
@@ -54,11 +54,11 @@ interface ContactPublisherModalProps {
   publisherName: string
   publisherEmail?: string
   productId?: string
-}
+
 type FormValues = {
   subject: string
   message: string
-}
+
 const schema: yup.ObjectSchema<FormValues> = yup
   .object({
     subject: yup
@@ -75,19 +75,18 @@ export function ContactPublisherModal({  isOpen,  isOpen
   publisherName
   publisherEmail
   productId
-}: ContactPublisherModalProps) {
+: ContactPublisherModalProps) {
   const [isSubmitting, setIsSubmitting] = React.useState(false)
   const [error, setError] = React.useState<string | null>(null)
   const [loginOpen, setLoginOpen] = React.useState(false)
   const form = useForm<FormValues>({
     resolver: yupResolver(schema) as Resolver<FormValues>
     mode: 'onChange'
-    defaultValues: { subject: '', message: '' }
-  })
+    defaultValues: { subject: '', message: '' })
   const handleSend = async () => {
     if (!user) {
       setLoginOpen(true)
-      return }    defaultValues: { subject: '', message: '' }})
+      return }    defaultValues: { subject: '', message: '' })
   const handleSend = async () => {
     if (!user) {
       setLoginOpen(true)
@@ -108,12 +107,11 @@ export function ContactPublisherModal({  isOpen,  isOpen
     } finally {
       setIsSubmitting (false);
     }
-  }
   const handleKeyDown = (e: React.KeyboardEvent, ) =>: any {
     // Check condition
 if ( {) {
   $2
-}
+
       e.stop_propagation ();
       on_close ();
   }
@@ -124,7 +122,7 @@ import {;
   DialogContent,;
   DialogHeader,;
   DialogTitle,;
-} from '@/components/ui/dialog';import { Button } from '@/components/ui/button';import { Input } from '@/components/ui/input';
+ from '@/components/ui/dialog';import { Button } from '@/components/ui/button';import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import {;
   Dialog;
@@ -141,7 +139,7 @@ import {;
   FormLabel,;
   FormControl,;
   FormMessage,;
-} from '@/components/ui/form';
+ from '@/components/ui/form';
 import { useForm, type Resolver } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
@@ -181,12 +179,10 @@ interface ContactPublisherModalProps {;
   publisherName: string,;
   publisherEmail?: string;
   productId?: string;
-}
 
 type FormValues = {;
   subject: string,;
   message: string;
-};
 
 const schema: yup && yup.ObjectSchema<FormValues> = yup;
   .object({;
@@ -205,7 +201,7 @@ export function ContactPublisherModal(): any ({  isOpen,  isOpen,;
   publisherName,;
   publisherEmail,;
   productId,;
-}: ContactPublisherModalProps) {;
+: ContactPublisherModalProps) {;
   const [isSubmitting, setIsSubmitting] = React && React.useState(false);
   const [error, setError] = React && React.useState<string | null>(null);
   const [loginOpen, setLoginOpen] = React && React.useState(false);
@@ -218,7 +214,7 @@ export function ContactPublisherModal(): any ({  isOpen,  isOpen,;
   const handleSend = async () => {;
     if (!user) {;
       setLoginOpen(true);
-      return;    }    defaultValues: { subject: '', message: '' }}),;
+      return;    }    defaultValues: { subject: '', message: '' }),;
   const handleSend = async () => {;
     if (!user) {;
       setLoginOpen(true);
@@ -238,11 +234,10 @@ export function ContactPublisherModal(): any ({  isOpen,  isOpen,;
       onClose();    } finally {      onClose();
     } finally {;
       setIsSubmitting(false);
-    }
-  };
+    };
 
   const handleKeyDown = (e: React && React.KeyboardEvent,) => {;
-    if (e && e.key === 'Escape') {;
+    if (e && e.key = = 'Escape') {;
       e && e.stopPropagation();
       onClose();
   };
@@ -464,7 +459,7 @@ export function ContactPublisherModal(): any ({  isOpen,  isOpen,;
     </>
   ) </>
   )
-}
+
             </Button>;
           </form>;
         </Form>;
@@ -475,7 +470,6 @@ export function ContactPublisherModal(): any ({  isOpen,  isOpen,;
     </>;
   );    </>;
   );
-}
+
     <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
     </>) </>);
-}

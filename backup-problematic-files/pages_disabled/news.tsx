@@ -2,7 +2,6 @@ import React from 'react';
 
 interface NewsProps {
   className?: string;
-}
 
 const News: React.FC<NewsProps> = ({ className }) => {
   return (
@@ -11,6 +10,5 @@ const News: React.FC<NewsProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default News;

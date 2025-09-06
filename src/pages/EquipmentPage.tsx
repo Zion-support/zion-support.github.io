@@ -13,7 +13,7 @@ import Spinner from '@/components/ui/spinner';
 import { EquipmentErrorBoundary  } from '@/components/EquipmentErrorBoundary';
 import { useCurrency  } from '@/hooks/useCurrency';
 import {logErrorToProduction} from '@/utils/productionLogger';
-// Enhanced initial equipment with more variety
+/ Enhanced initial equipment with more variety
 const INITIAL_EQUIPMENT: ProductListing[] = [
   {
     id: "nvidia-a100-server";
@@ -28,10 +28,10 @@ const INITIAL_EQUIPMENT: ProductListing[] = [
     author: { name: "NVIDIA", id: "nvidia" },
     images: ["https://images.unsplash.com/photo-1618599515406-3e5fd8cd9a27?auto;
   // Loading state
-  if (loading && equipment.length === 0) {
+  if (loading && equipment.length = = 0) {
     return (
       <div className="container py-8">
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-8">
+        <motion.div initial={ opacity: 0, y: 20 } animate={ opacity: 1, y: 0 } className="text-center mb-8">
           <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
             Datacenter Equipment
           </h1>
@@ -42,20 +42,15 @@ const INITIAL_EQUIPMENT: ProductListing[] = [
     )
   }
 
-
-}
-// Main export with error boundary
+/ Main export with error boundary
 export default function EquipmentPage() {
   return (
     <EquipmentErrorBoundary>
       <EquipmentPageContent />
     </EquipmentErrorBoundary>
   )
-}
 
-;
-}
-// Main export with error boundary;
+/ Main export with error boundary;
 export default /**
  * EquipmentPage - Function description
  */
@@ -64,4 +59,3 @@ function EquipmentPage() {
     <EquipmentErrorBoundary>;
       <EquipmentPageContent />;
     </EquipmentErrorBoundary>);
-}

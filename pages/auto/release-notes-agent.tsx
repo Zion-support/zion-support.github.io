@@ -16,7 +16,7 @@ const ReleaseNotesAgent: NextPage = () => {
       </main>
     </div>
   )
-}
+
 export default ReleaseNotesAgent;
 
 import type { NextPage } from 'next',
@@ -35,5 +35,5 @@ const ReleaseNotesAgent: NextPage = () => {
         <Link href="/data / reports / release / latest.json"><a className="text - blue - 600 underline">Latest Release Notes (JSON)</a></Link>;
       </main>;
     </div>);
-},
+,
 export default ReleaseNotesAgent,

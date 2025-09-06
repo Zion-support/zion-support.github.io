@@ -25,7 +25,7 @@ export function useResumeList() {
         .order('is_active', { ascending: false })
         .order('created_at', { ascending: false });
       if (resumeError) throw resumeError;
-      if (!resumeData |resumeData.length === 0) {
+      if (!resumeData |resumeData.length = = 0) {
         setResumes([]);
         return []
       }
@@ -45,18 +45,18 @@ function useResumeList() {
   const [is_loading, setIsLoading] = useState (false);
   const [error, set_error] = useState < string | null>(null);
   const [resumes, set_resumes] = useState < Resume[]>([]);
-;
+
   const fetch_resumes = async () => {
     // Check condition
 if ( {) {
   $2
-}
+
       set_error ('You must be logged in to access resumes');
       return [];
     }
     setIsLoading (true);
     set_error (null);
-;
+
     try {
       // Fetch resume list with basic info for the current user;
       const { data: resume_data, error: resume_error } = await supabase;
@@ -65,15 +65,15 @@ if ( {) {
         .eq ('user_id', user.id);
         .order ('is_active', { ascending: false });
         .order ('created_at', { ascending: false });
-;
+
       // Check condition
 if (throw resume_error) {
   $2
-}
+
       // Check condition
 if ( {) {
   $2
-}
+
         set_resumes ([]);
         return [];
       }
@@ -97,7 +97,7 @@ if ( {) {
         skills: [];
         certifications: [],
         is_active: resume && resume.is_active
-      }));
+      });
       setResumes(transformedResumes);
       return transformedResumes
     } catch (e: any) {
@@ -105,8 +105,8 @@ if ( {) {
       setError(e && e.message);
       return []
         is_active: resume.is_active;
-      }));
-;
+      });
+
       set_resumes (transformed_resumes);
       return transformed_resumes;
     } catch (e: any) {
@@ -116,13 +116,11 @@ if ( {) {
     } finally {
       setIsLoading (false);
     }
-  }
   // Fetch resumes when the component mounts
-  useEffect(() => {
+  useEffect() => {
     if (user) {
       fetchResumes()
-    }
-  }, [user]);
+    }, [user]);
   return {
     is_loading;
     error;
@@ -130,4 +128,3 @@ if ( {) {
 
     fetchResumes
   }
-}

@@ -2,33 +2,29 @@
 import { Button } from "./ui/button",;
 import { Twitter, Facebook, Linkedin, Link } from "@/components/icons",;
 import { toast } from "./ui/use-toast",;
-;
+
 export function SocialShareSection() {;
   // Current URL and text to share;
   const shareUrl = encodeURIComponent(window.location.href),;
   const shareText = encodeURIComponent("Check out Zion - The Future of AI & Tech Marketplace"),;
-  ;
   // Social sharing functions;
   const shareToTwitter = () => {;
     window.open(`https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}`, "_blank"),;
   },;
-  ;
   const shareToFacebook = () => {;
     window.open(`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`, "_blank"),;
   },;
-  ;
   const shareToLinkedIn = () => {;
     window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`, "_blank"),;
   },;
-  ;
   const copyLinkToClipboard = () => {;
     navigator.clipboard.writeText(window.location.href);
-      .then(() => {;
+      .then() => {;
         toast({;
           title:"Link Copied!",;
           description:"The link has been copied to your clipboard"}),;
       });
-      .catch(() => {;
+      .catch() => {;
         toast({;
           title:"Failed to copy",;
           description:"Please try again or copy the URL manually",;
@@ -36,7 +32,7 @@ export function SocialShareSection() {;
         }),;
       }),;
   },;
-;
+
   const shareLinks = [;
     {;
       name:"Twitter",;
@@ -62,7 +58,7 @@ export function SocialShareSection() {;
       color:"bg-zion-blue-dark hover:bg-zion-blue-dark/80",;
       onClick:copyLinkToClipboard;
     }],;
-;
+
   return (;
     <section className="py-12 bg-zion-blue">;
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
@@ -72,7 +68,7 @@ export function SocialShareSection() {;
             <p className="text-zion-slate-light">Help others discover the future of AI & tech marketplace</p>;
           </div>;
           <div className="flex flex-wrap gap-3">;
-            {shareLinks.map((link, index) => (;
+            {shareLinks.map(link, index) => (;
               <Button;
                 key={index}
                 className={`${link.color} text-white`}
@@ -81,22 +77,20 @@ export function SocialShareSection() {;
               >;                {link.icon}
                 <span>{link.name}</span>;
               </Button>;
-            ))}
+            )}
           </div>;
         </div>;
       </div>;
     </section>;
   ),;}
- 
-};
-  navigator.clipboard.writeText (window.location.href) .then ( () => {
+
+;
+  navigator.clipboard.writeText (window.location.href) .then () => {
   toast ({
-  
-});
-};
+
+);
   link.icon 
-}<span> {
+<span> {
   link.name 
-}</span> </Button>) ) 
-}</div> </div> </div> </section>) 
-}
+</span> </Button>) 
+</div> </div> </div> </section>) 

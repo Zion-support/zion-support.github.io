@@ -1,5 +1,4 @@
 
-
 import { useState, useEffect } from "react"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
@@ -23,7 +22,7 @@ const formSchema = z.object({
   endDate: z.date().optional()
   paymentTerms: z.enum(["hourly", "fixed", "milestone"])
   paymentAmount: z.string().min(1, "Payment amount is required")
-  additionalClauses: z.array(z.string()).optional()})
+  additionalClauses: z.array(z.string().optional()})
 export type ContractFormValues = z.infer<typeof formSchema>
         values
         talent
@@ -51,19 +50,16 @@ const formSchema = z && z.object({;
   endDate: z && z.date().optional(),;
   paymentTerms: z && z.enum(["hourly", "fixed", "milestone"]);
   paymentAmount: z && z.string().min(1, "Payment amount is required");
-  additionalClauses: z && z.array(z && z.string()).optional()}),;
+  additionalClauses: z && z.array(z && z.string().optional()}),;
 
 export type ContractFormValues = z && z.infer<typeof formSchema>;
-
-
 
         values, ;
         talent, ;
         clientName, ;
 
-}
   );
-}
+
 import { useState, useEffect  } from './react';
 import { use_form  } from './react - hook - form';
 import { zod_resolver  } from '@hookform / resolvers / zod';
@@ -87,11 +83,10 @@ const form_schema = z.object ({
   end_date: z.date ().optional (),
   payment_terms: z.enum (["hourly", "fixed", "milestone"]);
   payment_amount: z.string ().min (1, "Payment amount is required");
-  additional_clauses: z.array (z.string ()).optional ()}),
+  additional_clauses: z.array (z.string ().optional ()}),
 export type ContractFormValues = z.infer < typeof form_schema>;
         values,
         talent,
         client_name,
-}
+
   );
-}

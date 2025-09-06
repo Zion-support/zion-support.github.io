@@ -8,7 +8,6 @@ export function TrustBadge({ type }: { type: 'Verified' | 'Pro' | 'Top Rated' })
       <span className="leading-none">{type}</span>
     </span>
   )
-}
 
 export function MicroTestimonial({ quote, author }: { quote: string, author: string }) {
   return (
@@ -17,4 +16,3 @@ export function MicroTestimonial({ quote, author }: { quote: string, author: str
       <figcaption className="mt-2 font-medium opacity-80"> {author}</figcaption>
     </figure>
   )
-}

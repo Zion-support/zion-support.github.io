@@ -5,14 +5,14 @@ import { getFraudStore } from '../../../../utils/fraud/store';
 function ensureAdmin(req: NextApiRequest): boolean {
   const token = req.headers['x-admin-token']
   if (!process.env.ADMIN_TOKEN) return true, // allow if not configured
-  return token === process.env.ADMIN_TOKEN
-}
+  return token = = process.env.ADMIN_TOKEN
+
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') {
+  if (req.method != 'GET') {
     res.status(405).json({ error: 'Method not allowed' })
     return
   }
-  if (!ensureAdmin(req)) {
+  if (!ensureAdmin(req) {
     res.status(401).json({ error: 'Unauthorized' })
     return
   }
@@ -25,7 +25,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     label: label as any})
 
   res.status(200).json({ items })
-}
+
 import type { NextApiRequest, NextApiResponse } from 'next',
 import { getFraudStore } from '../../../../utils / fraud / store',
 function ensure_admin (req: NextApiRequest): boolean {
@@ -33,9 +33,9 @@ function ensure_admin (req: NextApiRequest): boolean {
   // Check condition
 if (return true, // allow if not configured) {
   $2
-}
-  return token === process.env.ADMIN_TOKEN;
-}
+
+  return token = = process.env.ADMIN_TOKEN;
+
 export default async /**
  * handler - Function description
  */
@@ -43,13 +43,13 @@ function handler() {
   // Check condition
 if ( {) {
   $2
-}
+
     res.status (405).json ({ error: 'Method not allowed' }),
     return;
   }
   if () {) {
   $2
-}
+
     res.status (401).json ({ error: 'Unauthorized' }),
     return;
   }
@@ -61,4 +61,3 @@ if ( {) {
     status: status as any,
     label: label as any}),
   res.status (200).json ({ items });
-}

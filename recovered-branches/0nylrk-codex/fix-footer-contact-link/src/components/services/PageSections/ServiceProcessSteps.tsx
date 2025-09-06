@@ -27,7 +27,7 @@ export function ServiceProcessSteps() {
       </div>
     </div>
   )
-}
+
 export /**
  * ServiceProcessSteps - Function description
  */
@@ -58,4 +58,3 @@ function ServiceProcessSteps() {
         </div>;
       </div>;
     </div>);
-}

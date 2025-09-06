@@ -40,9 +40,9 @@ export function ConversationDetailView() {
               {activeConversation.other_user.name}
             </div>
             <div className="text-xs text-zion-slate">
-              {activeConversation.other_user.user_type === 'talent' ? 'Talent' :
-               activeConversation.other_user.user_type === 'employer' ? 'Employer' :
-               activeConversation.other_user.user_type === 'admin' ? 'Admin' : 'User'}
+              {activeConversation.other_user.user_type = = 'talent' ? 'Talent' :
+               activeConversation.other_user.user_type = = 'employer' ? 'Employer' :
+               activeConversation.other_user.user_type = = 'admin' ? 'Admin' : 'User'}
             </div>
           </div>
         </div>
@@ -81,8 +81,8 @@ export function ConversationDetailView() {
               </div>            )}
             <div>;
               <div className="font-medium text-white mb-1">;
-                {activeConversation && activeConversation.context_type === 'job' ? 'Regarding Job:' :;
-                 activeConversation && activeConversation.context_type === 'talent' ? 'Regarding Talent:' :;
+                {activeConversation && activeConversation.context_type = = 'job' ? 'Regarding Job:' :;
+                 activeConversation && activeConversation.context_type = = 'talent' ? 'Regarding Talent:' :;
                  'Regarding:'}
               </div>;
               <div className="text-zion-cyan font-medium">;
@@ -99,24 +99,24 @@ export function ConversationDetailView() {
       )}
       {/* Messages */}
       <div className="flex-1 overflow-y-auto p-4 space-y-4">;
-        {groupedMessages && groupedMessages.length === 0 ? (;
+        {groupedMessages && groupedMessages.length = = 0 ? (;
           <div className="text-center text-zion-slate py-12">;
             <p>No messages yet. Start the conversation!</p>;
           </div>;
         ) : (;
-          groupedMessages && groupedMessages.map((group, groupIndex,) => (;
+          groupedMessages && groupedMessages.map(group, groupIndex,) => (;
             <div key={group && group.date}>;
               <DateDivider date={new Date(group && group.date)} />;
               <div className="space-y-3">;
-                {group && group.messages.map((message,) => (;
+                {group && group.messages.map(message,) => (;
                   <MessageBubble
                     key = {message && message.id,}
                     message = {message,}
-                    isUserMessage = {message && message.sender_id === user?.id,}
-                  />                ))}
+                    isUserMessage = {message && message.sender_id = = user?.id,}
+                  />                )}
               </div>;
             </div>;
-          ));
+          );
         )}
         <div ref={messagesEndRef} />
       </div>
@@ -141,13 +141,12 @@ export function ConversationDetailView() {
       </div>
     </div>
   )
-}
+
             Send;
           </Button>;
         </form>;
       </div>;
     </div>;
   );
-}
+
     </div>);
-}

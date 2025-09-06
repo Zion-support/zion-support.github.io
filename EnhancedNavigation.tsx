@@ -17,7 +17,7 @@ const EnhancedNavigation: React.FC = () => {
             Zion Tech Group
           </Link>
           <div className="hidden md:flex items-center space-x-8">
-            {navigationItems.map((item) => (
+            {navigationItems.map(item) => (
               <Link
                 key={item.name}
                 href={item.href}
@@ -25,7 +25,7 @@ const EnhancedNavigation: React.FC = () => {
               >;
                 {item.name}
               </Link>
-            ))}
+            )}
           </div>
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -37,7 +37,7 @@ const EnhancedNavigation: React.FC = () => {
         {isOpen && (
           <div className="md:hidden bg-white border-t border-gray-200">
             <div className="px-4 py-2 space-y-2">
-              {navigationItems.map((item) => (
+              {navigationItems.map(item) => (
                 <Link
                   key={item.name}
                   href={item.href}
@@ -46,20 +46,19 @@ const EnhancedNavigation: React.FC = () => {
                 >;
                   {item.name}
                 </Link>
-              ))}
+              )}
             </div>
           </div>
         )}
       </div>
     </nav>
   );
-}
+
 export default EnhancedNavigation;
-                </Link>))}
+                </Link>)}
             </div>;
           </div>)}
       </div>;
     </nav>);
-}
-;
+
 export default EnhancedNavigation;

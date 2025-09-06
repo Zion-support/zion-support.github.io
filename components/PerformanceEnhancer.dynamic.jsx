@@ -5,5 +5,5 @@ const PerformanceEnhancer.dynamic = () => {
       <h1>PerformanceEnhancer.dynamic</h1>
     </div>
   );
-}
+
 export default PerformanceEnhancer.dynamic;

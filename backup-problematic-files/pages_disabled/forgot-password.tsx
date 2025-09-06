@@ -2,7 +2,6 @@ import React from 'react';
 
 interface Forgot-passwordProps {
   className?: string;
-}
 
 const Forgot-password: React.FC<Forgot-passwordProps> = ({ className }) => {
   return (
@@ -11,6 +10,5 @@ const Forgot-password: React.FC<Forgot-passwordProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default Forgot-password;

@@ -6,5 +6,3 @@ export function ProfileErrorState() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

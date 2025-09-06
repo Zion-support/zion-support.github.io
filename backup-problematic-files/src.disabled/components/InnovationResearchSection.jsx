@@ -7,6 +7,5 @@ const InnovationResearchSection = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default InnovationResearchSection;

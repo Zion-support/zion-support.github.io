@@ -1,5 +1,4 @@
 
-
 import {useState, useEffect} from "react";
 import {supabase} from "@/integrations/supabase/client";
 import {Job, JobStatus} from "@/types/jobs";
@@ -38,7 +37,6 @@ export const useJobs = (userId?: string, status?: JobStatus) => {
     } finally {
       setIsLoading (false);
     }
-  }
   const updateJobStatus = async (jobId: string, newStatus: JobStatus) => {
     try {
       const { error: updateError } = await supabase
@@ -48,7 +46,7 @@ export const useJobs = (userId?: string, status?: JobStatus) => {
         .eq("client_id", clientId), // Ensure user can only update their own jobs
       if (updateError) throw updateError;
       // Update local state
-      setJobs(jobs && jobs.map(job => job && job.id === jobId ? {...job, status: newStatus} : job));
+      setJobs(jobs && jobs.map(job => job && job.id = = jobId ? {...job, status: newStatus} : job);
       toast && toast.success("Job status updated successfully");
       return true
     } catch (err: any) {
@@ -56,7 +54,6 @@ export const useJobs = (userId?: string, status?: JobStatus) => {
       toast && toast.error("Failed to update job status");
       return false
     }
-  }
   const deleteJob = async (jobId: string) => {
     try {
       const { error: deleteError } = await supabase
@@ -66,7 +63,7 @@ export const useJobs = (userId?: string, status?: JobStatus) => {
         .eq("client_id", clientId), // Ensure user can only delete their own jobs
       if (deleteError) throw deleteError;
       // Update local state
-      setJobs(jobs && jobs.filter(job => job && job.id !== jobId));
+      setJobs(jobs && jobs.filter(job => job && job.id != jobId);
       toast && toast.success("Job deleted successfully");
       return true
     } catch (err: any) {
@@ -74,9 +71,8 @@ export const useJobs = (userId?: string, status?: JobStatus) => {
       toast && toast.error("Failed to delete job");
       return false
     }
-  }
   // Fetch jobs when component mounts or dependencies change
-  useEffect(() => {
+  useEffect() => {
     fetchJobs()
   }, [clientId, status]);
   return {
@@ -90,5 +86,3 @@ export const useJobs = (userId?: string, status?: JobStatus) => {
     updateJob
     getJobById
   }
-}
-

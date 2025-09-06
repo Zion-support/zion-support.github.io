@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 interface QuickReplyButtonProps {
   text: string;
   onClick: () => void
-}
+
 export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {
   return (
     <Button
@@ -21,14 +21,14 @@ export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {
       {text}
     </Button>
   );
-}
+
 import React from './react';
 import { Button  } from '@/components / ui / button';
 import { cn  } from '@/lib / utils';
 interface QuickReplyButtonProps {
   text: string;
   on_click: () => void;
-}
+
 export /**
  * QuickReplyButton - Function description
  */
@@ -45,4 +45,3 @@ function QuickReplyButton() {
     >;
       {text}
     </Button>);
-}

@@ -15,7 +15,7 @@ import { supabase } from "@/integrations/supabase/client",;
 import { TalentProfile } from "@/types/talent",;
 import { useAuth } from "@/hooks/useAuth",;
 import { JobApplication } from "@/types/jobs",;
-;
+
 export interface HireConfirmationModalProps {;
   isOpen:boolean,;
   onClose:() => void,;
@@ -23,8 +23,7 @@ export interface HireConfirmationModalProps {;
   application?:JobApplication,;
   onConfirm:() => void,;
   isSubmitting?:boolean;
-}
-;
+
 export function HireConfirmationModal({ ;
   isOpen,;
   onClose, ;
@@ -32,16 +31,16 @@ export function HireConfirmationModal({ ;
   application,;
   onConfirm,;
   isSubmitting = false;
-} HireConfirmationModalProps) {;
+ HireConfirmationModalProps) {;
   const [projectName, setProjectName] = useState(''),;
   const [projectDescription, setProjectDescription] = useState(''),;
   const [updateAvailability, setUpdateAvailability] = useState(true),;
   const [isLoading, setIsLoading] = useState(false),;
   const { user } = useAuth(),;
-;
+
   // Get talent information from either candidateData or application;
   const talentData = candidateData || (application?.talent_profile as TalentProfile),;
-;
+
   const handleHireCandidate = async () => {;
     if (!projectName || !projectDescription) {;
       toast({;
@@ -50,7 +49,7 @@ export function HireConfirmationModal({ ;
         variant:'destructive'}),;
       return,;
     }
-;
+
     if (!user) {;
       toast({;
         title:'Not authenticated',;
@@ -58,7 +57,7 @@ export function HireConfirmationModal({ ;
         variant:'destructive'}),;
       return,;
     }
-;
+
     if (!talentData) {;
       toast({;
         title:'Missing talent data',;
@@ -66,9 +65,9 @@ export function HireConfirmationModal({ ;
         variant:'destructive'}),;
       return,;
     }
-;
+
     setIsLoading(true),;
-;
+
     // Create a new project;
     try {;
       const { data:projectData, error:projectError } = await supabase;
@@ -84,7 +83,7 @@ export function HireConfirmationModal({ ;
             payment_terms:'hourly'}]);
         .select();
         .single(),;
-;
+
       if (projectError) {;
         toast({;
           title:'Error creating project',;
@@ -93,7 +92,7 @@ export function HireConfirmationModal({ ;
         setIsLoading(false),;
         return,;
       }
-;
+
       // Create a new hiring record;
       const { error:hiringError } = await supabase;
         .from('hiring_records');
@@ -104,7 +103,7 @@ export function HireConfirmationModal({ ;
             project_id:projectData.id,;
             hire_date:new Date().toISOString(),;
             status:'active'}]),;
-;
+
       if (hiringError) {;
         toast({;
           title:'Error creating hiring record',;
@@ -113,7 +112,7 @@ export function HireConfirmationModal({ ;
         setIsLoading(false),;
         return,;
       }
-;
+
       // Update the availability status;
       if (updateAvailability) {;
         try {;
@@ -121,7 +120,7 @@ export function HireConfirmationModal({ ;
             .from('talent_profiles');
             .update({ availability_type:'unavailable' });
             .eq('id', talentData.id),;
-;
+
           if (availabilityError) {;
             toast({;
               title:'Error updating availability',;
@@ -129,8 +128,7 @@ export function HireConfirmationModal({ ;
               variant:'destructive'}),;
             setIsLoading(false),;
             return,;
-          }
-        } catch (error) {;
+          } catch (error) {;
           console.error('Error updating availability:', error),;
           toast({;
             title:'Error updating availability',;
@@ -139,8 +137,7 @@ export function HireConfirmationModal({ ;
           setIsLoading(false),;
           return,;
         }
-      }
-;
+
       toast({;
         title:'Candidate hired successfully',;
         description:`${talentData.full_name} has been hired for the project.`}),;
@@ -154,9 +151,8 @@ export function HireConfirmationModal({ ;
         variant:'destructive'}),;
     } finally {;
       setIsLoading(false),;
-    }
-  },;
-;
+    },;
+
   return (;
     <Dialog open={isOpen} onOpenChange={onClose}>;
       <DialogContent className="sm:max-w-[425px]">;
@@ -223,38 +219,37 @@ candidateData?: TalentProfile;
 application?: JobApplication;
 onConfirm: () => void;
 isSubmitting?: boolean 
-}export function HireConfirmationModal ({
+export function HireConfirmationModal ({
   isOpen;
 onClose;
 candidateData;
 application;
 onConfirm;
 isSubmitting = false 
-}: HireConfirmationModalProps) {
+: HireConfirmationModalProps) {
   const [projectName, setProjectName] = useState ('');
 const [projectDescription, setProjectDescription] = useState ('');
 const [updateAvailability, setUpdateAvailability] = useState (true);
 const [isLoading, setIsLoading] = useState (false);
 const {
   user 
-}= useAuth ();
-//Get talent information from either candidateData or application const talentData = candidateData || (application?.talent profile as TalentProfile);
+= useAuth ();
+/Get talent information from either candidateData or application const talentData = candidateData || (application?.talent profile as TalentProfile);
 if (!projectName || !projectDescription) {
   toast ({
-  
-}setIsLoading (true);
-//Create a new project try {
+
+setIsLoading (true);
+/Create a new project try {
   const {
   data: projectData, error: projectError 
-}= await supabase .from ('projects') .insert ([ {
+= await supabase .from ('projects') .insert ([ {
   client id: user.id, talent id: talentData.user id, job id: application?.job id || null, title: projectName, description: projectDescription, status: 'active', payment terms: 'hourly' 
-}]) .select () .single ();
-}//Create a new hiring record const {
+]) .select () .single ();
+//Create a new hiring record const {
   error: hiringError 
-}= await supabase .from ('hiring records') .insert ([ 
-}//Update the availability status if (updateAvailability) {
+= await supabase .from ('hiring records') .insert ([ 
+//Update the availability status if (updateAvailability) {
   try {
   const {
   error: availabilityError 
-}= await supabase .from ('talent profiles') </DialogDescription> </DialogHeader> <div className="grid gap-4 py-4" > <div className="grid grid-cols-4 items-center gap-4" > <Label htmlFor="projectName" className="text-right" > Project Name </Label> <Input /> </div> <div className="grid grid-cols-4 items-start gap-4" > <Label htmlFor="projectDescription" className="text-right mt-2" > Project Description </Label> <Textarea /> </div> <div className="flex items-center space-x-2" > <input /> <label htmlFor="updateAvailability" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed" > Update talent availability to "Unavailable" </label> </div> </div> </Button> </div> </DialogContent> </Dialog>) 
-}
+= await supabase .from ('talent profiles') </DialogDescription> </DialogHeader> <div className="grid gap-4 py-4" > <div className="grid grid-cols-4 items-center gap-4" > <Label htmlFor="projectName" className="text-right" > Project Name </Label> <Input /> </div> <div className="grid grid-cols-4 items-start gap-4" > <Label htmlFor="projectDescription" className="text-right mt-2" > Project Description </Label> <Textarea /> </div> <div className="flex items-center space-x-2" > <input /> <label htmlFor="updateAvailability" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed" > Update talent availability to "Unavailable" </label> </div> </div> </Button> </div> </DialogContent> </Dialog>) 

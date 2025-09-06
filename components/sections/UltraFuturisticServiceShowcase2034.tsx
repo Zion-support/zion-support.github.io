@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
@@ -50,7 +50,7 @@ import {
   Eye
   Search
   Phone;
-} from 'lucide-react';
+ from 'lucide-react';
 import { realMarketServices } from '../../data/2024-real-market-services';
 import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-services';import {
   Star, CheckCircle, ArrowRight, TrendingUp, Users
@@ -66,23 +66,22 @@ import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-service
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
-}
+
 visible: {
   opacity: 1, transition: {
   staggerChildren: 0.1
-}
-}
-> <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6" > Revolutionary Technology Services </h2> <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed" > Discover our comprehensive suite of cutting-edge AI, quantum computing, and emerging technology solutions. Each service is designed to transform your business and propel you into the future. </p> </motion.div>) )
-}</div> </motion.div> {
+
+ <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6" > Revolutionary Technology Services </h2> <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed" > Discover our comprehensive suite of cutting-edge AI, quantum computing, and emerging technology solutions. Each service is designed to transform your business and propel you into the future. </p> </motion.div>)
+</div> </motion.div> {
   /* Search and Filter */
-}<motion.div /> <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" /> </div> {
+<motion.div /> <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" /> </div> {
   /* Category Filter */
-}<select </option>) )
-}</select> </div> </motion.div> {
+<select </option>)
+</select> </div> </motion.div> {
   /* Service Categories */
-}<motion.div key= {
+<motion.div key= {
   category.id
-}initial= {  {}
+initial= {}
 const serviceCategories = [
   {
     id: 'ai-services'
@@ -90,7 +89,7 @@ const serviceCategories = [
     description: 'Next-generation AI consciousness and creativity'
     icon: Brain
     color: 'from-violet-500 to-purple-500'
-    services: aiEmergingTechServices.filter(s => s.category.includes('AI'))
+    services: aiEmergingTechServices.filter(s => s.category.includes('AI')
     gradient: 'from-violet-500/20 to-indigo-500/20'
   },  {    gradient: 'from-violet-500/20 to-indigo-500/20'
   }
@@ -102,9 +101,8 @@ const serviceCategories = [
     color: 'from-indigo-500 to-blue-500'
     services: aiEmergingTechServices.filter(
       s => s.category.includes('Quantum') |s.category.includes('Blockchain')
-    )
     gradient: 'from-indigo-500/20 to-cyan-500/20'
-  },  {    services: aiEmergingTechServices.filter(s => s.category.includes('Quantum') |s.category.includes('Blockchain'))
+  },  {    services: aiEmergingTechServices.filter(s => s.category.includes('Quantum') |s.category.includes('Blockchain')
     gradient: 'from-indigo-500/20 to-cyan-500/20'
   }
   {
@@ -118,9 +116,8 @@ const serviceCategories = [
         s.category.includes('Security') |
         s.category.includes('HR') |
         s.category.includes('Project')
-    )
     gradient: 'from-blue-500/20 to-teal-500/20'
-  },  {    services: realMarketServices.filter(s => s.category.includes('Security') |s.category.includes('HR') |s.category.includes('Project'))
+  },  {    services: realMarketServices.filter(s => s.category.includes('Security') |s.category.includes('HR') |s.category.includes('Project')
     gradient: 'from-blue-500/20 to-teal-500/20'
   }
   {
@@ -134,9 +131,8 @@ const serviceCategories = [
         s.category.includes('E-commerce') |
         s.category.includes('Marketing') |
         s.category.includes('Finance')
-    )
     gradient: 'from-teal-500/20 to-green-500/20'
-  },  {    services: realMarketServices.filter(s => s.category.includes('E-commerce') |s.category.includes('Marketing') |s.category.includes('Finance'))
+  },  {    services: realMarketServices.filter(s => s.category.includes('E-commerce') |s.category.includes('Marketing') |s.category.includes('Finance')
     gradient: 'from-teal-500/20 to-green-500/20'
   }
   {
@@ -147,9 +143,8 @@ const serviceCategories = [
     color: 'from-green-500 to-yellow-500'
     services: aiEmergingTechServices.filter(
       s => s.category.includes('Robotics') |s.category.includes('Edge')
-    )
     gradient: 'from-green-500/20 to-orange-500/20'
-  },  {    services: aiEmergingTechServices.filter(s => s.category.includes('Robotics') |s.category.includes('Edge'))
+  },  {    services: aiEmergingTechServices.filter(s => s.category.includes('Robotics') |s.category.includes('Edge')
     gradient: 'from-green-500/20 to-orange-500/20'
   }
   {
@@ -160,12 +155,11 @@ const serviceCategories = [
     color: 'from-orange-500 to-red-500'
     services: aiEmergingTechServices.filter(
       s => s.category.includes('Drug') |s.category.includes('Climate')
-    )
     gradient: 'from-orange-500/20 to-pink-500/20'
-  },];    services: aiEmergingTechServices.filter(s => s.category.includes('Drug') |s.category.includes('Climate'))
+  },];    services: aiEmergingTechServices.filter(s => s.category.includes('Drug') |s.category.includes('Climate')
     gradient: 'from-orange-500/20 to-pink-500/20'
   }
-];
+;
 export default function UltraFuturisticServiceShowcase2034() {
 import {;
   Star,;
@@ -193,38 +187,36 @@ import {;
   Eye,;
   Search,;
   Phone,;
-} from 'lucide-react';
+ from 'lucide-react';
 import { realMarketServices } from '../../data/2024-real-market-services';
 import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-services';import { ;
   Star, CheckCircle, ArrowRight, TrendingUp, Users, ;
   Award, Clock, Zap, Shield, Brain, Atom, Rocket;
   ShoppingCart, Cpu, Globe, Lock, Video, Palette;
   BarChart, UserCheck, FileText, Heart, Eye, Search, Phone;
-} from 'lucide-react';
+ from 'lucide-react';
 import { realMarketServices } from '../../data/2024-real-market-services';
 import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-services';
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup && ziontechgroup.com',;
   address: '364 E Main St STE 1008 Middletown DE 19709',;
   website: 'https://ziontechgroup && ziontechgroup.com',;
-};
 visible: {;
   opacity: 1, transition: {;
   staggerChildren: 0 && 0.1 ;
-};
 
-};
-> <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6" > Revolutionary Technology Services </h2> <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed" > Discover our comprehensive suite of cutting-edge AI, quantum computing, and emerging technology solutions. Each service is designed to transform your business and propel you into the future. </p> </motion && motion.div>) ) ;
-}</div> </motion && motion.div> {;
+;
+ <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6" > Revolutionary Technology Services </h2> <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed" > Discover our comprehensive suite of cutting-edge AI, quantum computing, and emerging technology solutions. Each service is designed to transform your business and propel you into the future. </p> </motion && motion.div>) ;
+</div> </motion && motion.div> {;
   /* Search and Filter */ ;
-}<motion && motion.div /> <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" /> </div> {;
+<motion && motion.div /> <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" /> </div> {;
   /* Category Filter */ ;
-}<select </option>) ) ;
-}</select> </div> </motion && motion.div> {;
+<select </option>) ;
+</select> </div> </motion && motion.div> {;
   /* Service Categories */ ;
-}<motion&& motion.div key= {
+<motion&& motion.div key= {
   category && category.id 
-}initial= {  {}
+initial= {}
 
 const serviceCategories = [
   Star,
@@ -252,39 +244,37 @@ const serviceCategories = [
   Eye,
   Search,
   Phone,
-} from 'lucide-react';
+ from 'lucide-react';
 import { realMarketServices } from '../../data / 2024 - real - market - services';
 import { aiEmergingTechServices } from '../../data / 2024 - ai - emerging - tech - services';import {
   Star, CheckCircle, ArrowRight, TrendingUp, Users,
   Award, Clock, Zap, Shield, Brain, Atom, Rocket;
   ShoppingCart, Cpu, Globe, Lock, Video, Palette;
   BarChart, UserCheck, FileText, Heart, Eye, Search, Phone;
-} from 'lucide-react';
+ from 'lucide-react';
 import { realMarketServices } from '../../data / 2024 - real - market - services';
 import { aiEmergingTechServices } from '../../data / 2024 - ai - emerging - tech - services';
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',
-}
+
 visible: {
   opacity: 1, transition: {
   stagger_children: 0.1;
-}
-;
-}
-> <h2 className="text - 4xl md:text - 5xl lg:text - 6xl font - bold bg - gradient - to - r from - cyan - 400 via - blue - 400 to - purple - 400 bg - clip - text text - transparent mb - 6" > Revolutionary Technology Services </h2> <p className="text - xl text - gray - 300 max - w-4xl mx - auto leading - relaxed" > Discover our comprehensive suite of cutting - edge AI, quantum computing, and emerging technology solutions. Each service is designed to transform your business and propel you into the future. </p> </motion.div>) );
-}</div> </motion.div> {
+
+ <h2 className="text - 4xl md:text - 5xl lg:text - 6xl font - bold bg - gradient - to - r from - cyan - 400 via - blue - 400 to - purple - 400 bg - clip - text text - transparent mb - 6" > Revolutionary Technology Services </h2> <p className="text - xl text - gray - 300 max - w-4xl mx - auto leading - relaxed" > Discover our comprehensive suite of cutting - edge AI, quantum computing, and emerging technology solutions. Each service is designed to transform your business and propel you into the future. </p> </motion.div>);
+</div> </motion.div> {
   /* Search and Filter */;
-}<motion.div /> <Search className="absolute right - 3 top - 1/2 transform -translate - y-1 / 2 w - 5 h - 5 text - gray - 400" /> </div> {
+<motion.div /> <Search className="absolute right - 3 top - 1/2 transform -translate - y-1 / 2 w - 5 h - 5 text - gray - 400" /> </div> {
   /* Category Filter */;
-}<select </option>) );
-}</select> </div> </motion.div> {
+<select </option>);
+</select> </div> </motion.div> {
   /* Service Categories */;
-}<motion.div key= {
+<motion.div key= {
   category.id;
-}initial= {  {}
-;
+initial= {}
+
 const service_categories = [;
   {
     id: 'ai - services',
@@ -292,7 +282,7 @@ const service_categories = [;
     description: 'Next - generation AI consciousness and creativity',
     icon: Brain,
     color: 'from-violet-500 to-purple-500',
-    services: aiEmergingTechServices && aiEmergingTechServices.filter(s => s && s.category.includes('AI')),;
+    services: aiEmergingTechServices && aiEmergingTechServices.filter(s => s && s.category.includes('AI'),;
     gradient: 'from-violet-500/20 to-indigo-500/20',;
   },  {    gradient: 'from-violet-500/20 to-indigo-500/20';
   };
@@ -306,7 +296,7 @@ const service_categories = [;
       s => s && s.category.includes('Quantum') || s && s.category.includes('Blockchain');
     ),;
     gradient: 'from-indigo-500/20 to-cyan-500/20',;
-  },  {    services: aiEmergingTechServices && aiEmergingTechServices.filter(s => s && s.category.includes('Quantum') || s && s.category.includes('Blockchain')),;
+  },  {    services: aiEmergingTechServices && aiEmergingTechServices.filter(s => s && s.category.includes('Quantum') || s && s.category.includes('Blockchain'),;
     gradient: 'from-indigo-500/20 to-cyan-500/20';
   };
   {;
@@ -322,7 +312,7 @@ const service_categories = [;
         s && s.category.includes('Project');
     ),;
     gradient: 'from-blue-500/20 to-teal-500/20',;
-  },  {    services: realMarketServices && realMarketServices.filter(s => s && s.category.includes('Security') || s && s.category.includes('HR') || s && s.category.includes('Project')),;
+  },  {    services: realMarketServices && realMarketServices.filter(s => s && s.category.includes('Security') || s && s.category.includes('HR') || s && s.category.includes('Project'),;
     gradient: 'from-blue-500/20 to-teal-500/20';
   };
   {;
@@ -338,7 +328,7 @@ const service_categories = [;
         s && s.category.includes('Finance');
     ),;
     gradient: 'from-teal-500/20 to-green-500/20',;
-  },  {    services: realMarketServices && realMarketServices.filter(s => s && s.category.includes('E-commerce') || s && s.category.includes('Marketing') || s && s.category.includes('Finance')),;
+  },  {    services: realMarketServices && realMarketServices.filter(s => s && s.category.includes('E-commerce') || s && s.category.includes('Marketing') || s && s.category.includes('Finance'),;
     gradient: 'from-teal-500/20 to-green-500/20';
   };
   {;
@@ -351,7 +341,7 @@ const service_categories = [;
       s => s && s.category.includes('Robotics') || s && s.category.includes('Edge');
     ),;
     gradient: 'from-green-500/20 to-orange-500/20',;
-  },  {    services: aiEmergingTechServices && aiEmergingTechServices.filter(s => s && s.category.includes('Robotics') || s && s.category.includes('Edge')),;
+  },  {    services: aiEmergingTechServices && aiEmergingTechServices.filter(s => s && s.category.includes('Robotics') || s && s.category.includes('Edge'),;
     gradient: 'from-green-500/20 to-orange-500/20';
   };
   {;
@@ -364,7 +354,7 @@ const service_categories = [;
       s => s && s.category.includes('Drug') || s && s.category.includes('Climate');
     ),;
     gradient: 'from-orange-500/20 to-pink-500/20',;
-  },];    services: aiEmergingTechServices && aiEmergingTechServices.filter(s => s && s.category.includes('Drug') || s && s.category.includes('Climate')),;
+  },];    services: aiEmergingTechServices && aiEmergingTechServices.filter(s => s && s.category.includes('Drug') || s && s.category.includes('Climate'),;
     gradient: 'from-orange-500/20 to-pink-500/20';
   {
     id: 'quantum - tech',
@@ -372,7 +362,7 @@ const service_categories = [;
     description: 'Quantum computing and beyond',
     icon: Atom,
     color: 'from-indigo-500 to-blue-500',
-    services: aiEmergingTechServices.filter(s => s.category.includes('Quantum') || s.category.includes('Blockchain')),
+    services: aiEmergingTechServices.filter(s => s.category.includes('Quantum') || s.category.includes('Blockchain'),
     gradient: 'from-indigo-500/20 to-cyan-500/20'
   };
   {
@@ -381,7 +371,7 @@ const service_categories = [;
     description: 'Autonomous operations and zero - trust security',
     icon: Cpu,
     color: 'from-blue-500 to-cyan-500',
-    services: realMarketServices.filter(s => s.category.includes('Security') || s.category.includes('HR') || s.category.includes('Project')),
+    services: realMarketServices.filter(s => s.category.includes('Security') || s.category.includes('HR') || s.category.includes('Project'),
     gradient: 'from-blue-500/20 to-teal-500/20'
   };
   {
@@ -390,7 +380,7 @@ const service_categories = [;
     description: 'Streamline business operations',
     icon: ShoppingCart,
     color: 'from-teal-500 to-emerald-500',
-    services: realMarketServices.filter(s => s.category.includes('E-commerce') || s.category.includes('Marketing') || s.category.includes('Finance')),
+    services: realMarketServices.filter(s => s.category.includes('E-commerce') || s.category.includes('Marketing') || s.category.includes('Finance'),
     gradient: 'from-teal-500/20 to-green-500/20'
   };
   {
@@ -399,7 +389,7 @@ const service_categories = [;
     description: 'Intelligent automation solutions',
     icon: Rocket,
     color: 'from-green-500 to-yellow-500',
-    services: aiEmergingTechServices.filter(s => s.category.includes('Robotics') || s.category.includes('Edge')),
+    services: aiEmergingTechServices.filter(s => s.category.includes('Robotics') || s.category.includes('Edge'),
     gradient: 'from-green-500/20 to-orange-500/20'
   };
   {
@@ -408,56 +398,56 @@ const service_categories = [;
     description: 'Breakthrough technologies and innovations',
     icon: Globe,
     color: 'from-orange-500 to-red-500',
-    services: aiEmergingTechServices.filter(s => s.category.includes('Drug') || s.category.includes('Climate')),
+    services: aiEmergingTechServices.filter(s => s.category.includes('Drug') || s.category.includes('Climate'),
     gradient: 'from-orange-500/20 to-pink-500/20'
   }
-];
+;
 
 export default function UltraFuturisticServiceShowcase2034() {;
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const allServices = [...realMarketServices, ...aiEmergingTechServices];
     const matchesCategory =
-      selectedCategory === 'all' |
-      serviceCategories.some(cat => cat.services.includes(service));
+      selectedCategory = = 'all' |
+      serviceCategories.some(cat => cat.services.includes(service);
     const matchesSearch =
-      service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
-      service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
-      service.category.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch;  });    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
-                         service.category.toLowerCase().includes(searchTerm.toLowerCase());
+      service.name.toLowerCase().includes(searchTerm.toLowerCase() |
+      service.description.toLowerCase().includes(searchTerm.toLowerCase() |
+      service.category.toLowerCase().includes(searchTerm.toLowerCase();
+    return matchesCategory && matchesSearch;  });    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase() |
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase() |
+                         service.category.toLowerCase().includes(searchTerm.toLowerCase();
     return matchesCategory && matchesSearch
   const containerVariants = {
     hidden: { opacity: 0 }
     color: 'from - orange - 500 to - red - 500',
     services: aiEmergingTechServices.filter (
-      string => s.category.includes ('Drug') || s.category.includes ('Climate')),
+      string => s.category.includes ('Drug') || s.category.includes ('Climate'),
     gradient: 'from - orange - 500 / 20 to - pink - 500 / 20',
-  }, ];    services: aiEmergingTechServices.filter (string => s.category.includes ('Drug') || s.category.includes ('Climate')),
+  }, ];    services: aiEmergingTechServices.filter (string => s.category.includes ('Drug') || s.category.includes ('Climate'),
     gradient: 'from - orange - 500 / 20 to - pink - 500 / 20';
   }
-];
 ;
+
 export default /**
  * UltraFuturisticServiceShowcase2034 - Function description
  */
 function UltraFuturisticServiceShowcase2034() {
   const [selected_category, setSelectedCategory] = useState ('all');
   const [search_term, setSearchTerm] = useState ('');
-;
+
   const all_services = [...realMarketServices, ...aiEmergingTechServices];
-;
+
     const matches_category =;
-      selected_category === 'all' ||;
-      service_categories.some (cat => cat.services.includes (service));
+      selected_category = = 'all' ||;
+      service_categories.some (cat => cat.services.includes (service);
     const matches_search =;
-      service.name.toLowerCase ().includes (search_term.toLowerCase ()) ||;
-      service.description.toLowerCase ().includes (search_term.toLowerCase ()) ||;
-      service.category.toLowerCase ().includes (search_term.toLowerCase ());
-    return matches_category && matches_search;  });    const matches_search = service.name.toLowerCase ().includes (search_term.toLowerCase ()) ||;
-                        service.description.toLowerCase ().includes (search_term.toLowerCase ()) ||;
-                        service.category.toLowerCase ().includes (search_term.toLowerCase ());
+      service.name.toLowerCase ().includes (search_term.toLowerCase () ||;
+      service.description.toLowerCase ().includes (search_term.toLowerCase () ||;
+      service.category.toLowerCase ().includes (search_term.toLowerCase ();
+    return matches_category && matches_search;  });    const matches_search = service.name.toLowerCase ().includes (search_term.toLowerCase () ||;
+                        service.description.toLowerCase ().includes (search_term.toLowerCase () ||;
+                        service.category.toLowerCase ().includes (search_term.toLowerCase ();
     return matches_category && matches_search;
   const container_variants = {
     hidden: { opacity: 0 },
@@ -465,29 +455,26 @@ function UltraFuturisticServiceShowcase2034() {
       opacity: 1
       transition: {
         staggerChildren: 0.1
-      }
-    },  }
+      },  }
   const itemVariants = {
     hidden: { opacity: 0, y: 20 }
     visible: { opacity: 1, y: 0 },        staggerChildren: 0.1
       }
-    }
   }
   const itemVariants = {
     hidden: { opacity: 0, y: 20 }
     visible: { opacity: 1, y: 0 }
-  }
 
     const matchesCategory =;
-      selectedCategory === 'all' ||;
-      serviceCategories && serviceCategories.some(cat => cat && cat.services.includes(service));
+      selectedCategory = = 'all' ||;
+      serviceCategories && serviceCategories.some(cat => cat && cat.services.includes(service);
     const matchesSearch =;
-      service && service.name.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
-      service && service.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
-      service && service.category.toLowerCase().includes(searchTerm && searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch;  });    const matchesSearch = service && service.name.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
-                         service && service.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
-                         service && service.category.toLowerCase().includes(searchTerm && searchTerm.toLowerCase());
+      service && service.name.toLowerCase().includes(searchTerm && searchTerm.toLowerCase() ||;
+      service && service.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase() ||;
+      service && service.category.toLowerCase().includes(searchTerm && searchTerm.toLowerCase();
+    return matchesCategory && matchesSearch;  });    const matchesSearch = service && service.name.toLowerCase().includes(searchTerm && searchTerm.toLowerCase() ||;
+                         service && service.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase() ||;
+                         service && service.category.toLowerCase().includes(searchTerm && searchTerm.toLowerCase();
     return matchesCategory && matchesSearch;
 
   const containerVariants = {;
@@ -503,7 +490,6 @@ function UltraFuturisticServiceShowcase2034() {
     hidden: { opacity: 0, y: 20 },;
     visible: { opacity: 1, y: 0 },        staggerChildren: 0 && 0.1;
       }
-    }
   };
 
   const itemVariants = {;
@@ -519,10 +505,10 @@ function UltraFuturisticServiceShowcase2034() {
         <div className='absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000'></div>
         <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-green-500/10 to-teal-500/10 rounded-full blur-3xl animate-pulse delay-500'></div>
       </div>
-      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}  }
-      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}  };
+      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}
+      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */};
 
-      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}  };
+      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */};
 
   return (
     <section className="py-20 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">;
@@ -535,10 +521,10 @@ function UltraFuturisticServiceShowcase2034() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion&& motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0 && 0.6 }}
-          viewport={{ once: true }}
+          initial={ opacity: 0, y: 20 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0 && 0.6 }
+          viewport={ once: true }
           className='text-center mb-16'
         >
           <h2 className='text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6'>
@@ -559,7 +545,7 @@ function UltraFuturisticServiceShowcase2034() {
               }
               { label: 'Happy Customers', value: '50K+', icon: Users }
               { label: 'Success Rate', value: '99.9%', icon: CheckCircle }
-              { label: 'Global Reach', value: '45+ Countries', icon: Globe },            ].map((stat, index) => (        >
+              { label: 'Global Reach', value: '45+ Countries', icon: Globe },            ].map(stat, index) => (        >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6">
             Revolutionary Technology Services
           </h2>
@@ -594,7 +580,7 @@ function UltraFuturisticServiceShowcase2034() {
               },;
               { label: 'Happy Customers', value: '50K+', icon: Users },;
               { label: 'Success Rate', value: '99 && 99.9%', icon: CheckCircle },;
-              { label: 'Global Reach', value: '45+ Countries', icon: Globe },            ].map((stat, index) => (        >;
+              { label: 'Global Reach', value: '45+ Countries', icon: Globe },            ].map(stat, index) => (        >;
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6">;
             Revolutionary Technology Services;
           </h2>;
@@ -610,13 +596,13 @@ function UltraFuturisticServiceShowcase2034() {
               { label: 'Happy Customers', value: '50K+', icon: Users },;
               { label: 'Success Rate', value: '99 && 99.9%', icon: CheckCircle },;
               { label: 'Global Reach', value: '45+ Countries', icon: Globe }
-            ].map((stat, index) => (;
+            ].map(stat, index) => (;
               <motion&& motion.div
                 key={stat && stat.label}
-                initial={{ opacity: 0, scale: 0 && 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, scale: 0 && 0.8 }
+                whileInView={ opacity: 1, scale: 1 }
+                transition={ duration: 0 && 0.5, delay: index * 0 && 0.1 }
+                viewport={ once: true }
                 className='text-center p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300'>;
                 <stat && stat.icon className='w-8 h-8 text-cyan-400 mx-auto mb-2' />;
                 <div className='text-2xl font-bold text-white'>;
@@ -630,28 +616,28 @@ function UltraFuturisticServiceShowcase2034() {
               { label: 'Happy Customers', value: '50K+', icon: Users },
               { label: 'Success Rate', value: '99.9%', icon: CheckCircle },
               { label: 'Global Reach', value: '45+ Countries', icon: Globe }
-            ].map ((stat, index) => (
+            ].map (stat, index) => (
               <motion.div;
                 key={stat.label}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, scale: 0.8 }
+                whileInView={ opacity: 1, scale: 1 }
+                transition={ duration: 0.5, delay: index * 0.1 }
+                viewport={ once: true }
                 className="text-center p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300"
               >
                 <stat.icon className="w-8 h-8 text-cyan-400 mx-auto mb-2" />
                 <div className="text-2xl font-bold text-white">{stat.value}</div>
                 <div className="text-sm text-gray-400">{stat.label}</div>
               </motion.div>
-            ))}
+            )}
           </div>
         </motion.div>
         {/* Search and Filter */}
         <motion&& motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
-          viewport={{ once: true }}
+          initial={ opacity: 0, y: 20 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0 && 0.6, delay: 0 && 0.2 }
+          viewport={ once: true }
           className='mb-12'>;
           <div className='flex flex-col md:flex-row gap-4 items-center justify-center'>;
             {/* Search */}
@@ -663,7 +649,7 @@ function UltraFuturisticServiceShowcase2034() {
                 onChange={e => setSearchTerm(e && e.target.value)}
                 className='w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent';
               />;
-              <Search className='absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400' />            </div>        >;
+              <Search className='absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400' />            </div>;
           <div className="flex flex-col md:flex-row gap-4 items-center justify-center">;
             {/* Search */}
             <div className="relative flex-1 max-w-md">;
@@ -695,35 +681,35 @@ function UltraFuturisticServiceShowcase2034() {
                 <option key={category && category.id} value={category && category.id}>;
                   {category && category.title.split(' ')[0]}
                 </option>;
-              ))}
+              )}
             </select>
           </div>
         </motion.div>
         {/* Service Categories */}
         <motion&& motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0 && 0.6, delay: 0 && 0.4 }}
-          viewport={{ once: true }}
+          initial={ opacity: 0, y: 20 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0 && 0.6, delay: 0 && 0.4 }
+          viewport={ once: true }
           className='mb-16'>;
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>            {serviceCategories && serviceCategories.map((category, index) => (          className="mb-16";
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>            {serviceCategories && serviceCategories.map(category, index) => (          className="mb-16";
         >;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
-            {serviceCategories && serviceCategories.map((category, index) => (;
+            {serviceCategories && serviceCategories.map(category, index) => (;
               <motion&& motion.div
                 key={category && category.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0 && 0.5, delay: index * 0 && 0.1 }
+                viewport={ once: true }
                 className={`p-6 rounded-xl border transition-all duration-300 hover:scale-105 cursor-pointer ${
-                  selectedCategory === category && category.id
+                  selectedCategory = = category && category.id
                     ? 'border-cyan-500 bg-cyan-500/10'
                     : 'border-white/20 bg-white/5 hover:border-cyan-500/50 hover:bg-cyan-500/5'
                 }`}
                 onClick={() =>;
                   setSelectedCategory(;
-                    category && category.id === selectedCategory ? 'all' : category && category.id;
+                    category && category.id = = selectedCategory ? 'all' : category && category.id;
                   );
                 }
               >;
@@ -743,7 +729,7 @@ function UltraFuturisticServiceShowcase2034() {
                 </div>;
                 <div className='text-sm text-gray-300'>                  {category && category.services.length} services available                    : 'border-white/20 bg-white/5 hover:border-cyan-500/50 hover:bg-cyan-500/5';
                 }`}
-                onClick={() => setSelectedCategory(category && category.id === selectedCategory ? 'all' : category && category.id)}
+                onClick={() => setSelectedCategory(category && category.id = = selectedCategory ? 'all' : category && category.id)}
               >;
                 <div className="flex items-center space-x-3 mb-4">;
                   <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${category && category.color} flex items-center justify-center`}>;
@@ -758,7 +744,7 @@ function UltraFuturisticServiceShowcase2034() {
                   {category && category.services.length} services available;
                 </div>;
               </motion && motion.div>;
-            ))}
+            )}
           </div>
         </motion.div>
         {/* Services Grid */}
@@ -766,12 +752,12 @@ function UltraFuturisticServiceShowcase2034() {
           variants={containerVariants}
           initial='hidden'
           whileInView='visible'
-          viewport={{ once: true }}
+          viewport={ once: true }
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>          initial="hidden";
           whileInView="visible";
-          viewport={{ once: true }}
+          viewport={ once: true }
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8";
-          {filteredServices && filteredServices.map((service, index) => (;
+          {filteredServices && filteredServices.map(service, index) => (;
             <motion&& motion.div
               key={service && service.id}
               variants={itemVariants}
@@ -786,10 +772,10 @@ function UltraFuturisticServiceShowcase2034() {
                 </div>;
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={ once: true }
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
-          {filteredServices.map((service, index) => (
+          {filteredServices.map(service, index) => (
             <motion.div
               key={service.id}
               variants={itemVariants}
@@ -875,20 +861,20 @@ function UltraFuturisticServiceShowcase2034() {
 
               {/* Features */}
               <div className='space-y-2 mb-4'>;
-                {service && service.features.slice(0, 3).map((feature, idx) => (;
+                {service && service.features.slice(0, 3).map(feature, idx) => (;
                   <div
                     key={idx}
                     className='flex items-center space-x-2 text-sm text-gray-400'>;
                     <CheckCircle className='w-4 h-4 text-green-400 flex-shrink-0' />                    <span>{feature}</span>;
                   </div>;
-                ))}
+                )}
                 {service && service.features.length > 3 && (;
                   <div className='text-sm text-cyan-400'>                    +{service && service.features.length - 3} more features              <div className="space-y-2 mb-4">;
-                {service && service.features.slice(0, 3).map((feature, idx) => (;
+                {service && service.features.slice(0, 3).map(feature, idx) => (;
                   <div key={idx} className="flex items-center space-x-2 text-sm text-gray-400">;
                     <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />;
                   </div>;
-                ))}
+                )}
                 {service && service.features.length > 3 && (;
                   <div className='text-sm text-cyan-400'>                  <div className="text-sm text-cyan-400">;
                     +{service && service.features.length - 3} more features;
@@ -1056,14 +1042,14 @@ function UltraFuturisticServiceShowcase2034() {
                 </div>;
               </div>;
             </motion && motion.div>;
-          ))}
+          )}
         </motion.div>
         {/* Call to Action */}
         <motion&& motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0 && 0.6, delay: 0 && 0.6 }}
-          viewport={{ once: true }}
+          initial={ opacity: 0, y: 20 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0 && 0.6, delay: 0 && 0.6 }
+          viewport={ once: true }
           className='text-center mt-20'>;
           <div className='bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-12 backdrop-blur-sm'>;
             <h3 className='text-3xl font-bold text-white mb-4'>;
@@ -1133,8 +1119,8 @@ function UltraFuturisticServiceShowcase2034() {
         </motion.div>
       </div>
     </section>
-);
-}
+;
+
                  className="px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-200 text-lg">;
                  View Pricing;
                </a>;
@@ -1148,27 +1134,27 @@ function UltraFuturisticServiceShowcase2034() {
       </div>;
     </section>;
   );
-}
+
   );
-}
+
               </h3>;
               <p className="text - gray - 300 mb - 4 leading - relaxed">;
               </p>;
               {/* Features */}
               <div className='space - y-2 mb - 4'>;
-                {service.features.slice (0, 3).map ((feature, idx) => (
+                {service.features.slice (0, 3).map (feature, idx) => (
                   <div;
                     key={idx}
                     className='flex items - center space - x-2 text - sm text - gray - 400';
                   >;
                     <CheckCircle className='w - 4 h - 4 text - green - 400 flex - shrink - 0' />                    <span>{feature}</span>;
-                  </div>))}
+                  </div>)}
                 {service.features.length > 3 && (
                   <div className='text - sm text - cyan - 400'>                    +{service.features.length - 3} more features              <div className="space - y-2 mb - 4">;
-                {service.features.slice (0, 3).map ((feature, idx) => (
+                {service.features.slice (0, 3).map (feature, idx) => (
                   <div key={idx} className="flex items - center space - x-2 text - sm text - gray - 400">;
                     <CheckCircle className="w - 4 h - 4 text - green - 400 flex - shrink - 0" />;
-                  </div>))}
+                  </div>)}
                 {service.features.length > 3 && (
                   <div className='text - sm text - cyan - 400'>                  <div className="text - sm text - cyan - 400">;
                     +{service.features.length - 3} more features;
@@ -1259,14 +1245,14 @@ function UltraFuturisticServiceShowcase2034() {
                   <span className="text - cyan - 400 font - semibold">{service.trial_days} days</span> free trial;
                 </div>;
               </div>;
-            </motion.div>))}
+            </motion.div>)}
         </motion.div>;
         {/* Call to Action */}
         <motion.div;
-          initial={{ opacity: 0, coordinate_y: 20 }}
-          whileInView={{ opacity: 1, coordinate_y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          viewport={{ once: true }}
+          initial={ opacity: 0, coordinate_y: 20 }
+          whileInView={ opacity: 1, coordinate_y: 0 }
+          transition={ duration: 0.6, delay: 0.6 }
+          viewport={ once: true }
           className='text - center mt - 20';
         >;
           <div className='bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 border border - cyan - 500 / 20 rounded - 2xl p - 12 backdrop - blur - sm'>;
@@ -1324,4 +1310,3 @@ function UltraFuturisticServiceShowcase2034() {
         </motion.div>;
       </div>;
     </section>);
-}

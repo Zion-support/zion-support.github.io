@@ -4,16 +4,14 @@ interface ApiState<T> {
   data: T | null;
   loading: boolean;
   error: string | null;
-}
 
 interface UseApiOptions {
   immediate?: boolean;
-}
 
 export function useApi<T>(
   apiCall: () => Promise<T>,
   options: UseApiOptions = {}
-): ApiState<T> & { refetch: () => void } {
+: ApiState<T> & { refetch: () => void } {
   const [data, setData] = useState<T | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -29,14 +27,12 @@ export function useApi<T>(
       setError(err instanceof Error ? err.message : 'An error occurred');
     } finally {
       setLoading(false);
-    }
-  };
+    };
 
-  useEffect(() => {
-    if (options.immediate !== false) {
+  useEffect() => {
+    if (options.immediate != false) {
       fetchData();
-    }
-  }, []);
+    }, []);
 
   return {
     data,
@@ -44,5 +40,5 @@ export function useApi<T>(
     error,
     refetch: fetchData,
   };
-}
-},;
+
+,;

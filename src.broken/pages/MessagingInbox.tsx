@@ -6,5 +6,3 @@ export function MessagingInbox() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

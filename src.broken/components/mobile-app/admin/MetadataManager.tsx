@@ -6,5 +6,3 @@ export function MetadataManager() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

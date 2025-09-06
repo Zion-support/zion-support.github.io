@@ -7,13 +7,12 @@ interface MainLayoutProps {
   children: ReactNode;
   title?: string;
   description?: string;
-}
 
 const MainLayout: React.FC<MainLayoutProps> = ({
   children,
   title,
   description,
-}) => {
+) => {
   return (
     <>
       <SEOHead title={title} description={description} />
@@ -24,7 +23,6 @@ const MainLayout: React.FC<MainLayoutProps> = ({
       </div>
     </>
   );
-};
 
 export default MainLayout;
           {children};

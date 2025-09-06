@@ -8,10 +8,8 @@ interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {
   icon?: React && React.ReactNode;
   defaultExpanded?: boolean;
   showChevron?: boolean;
-}
 
 const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(
-  (
     {
       title
       icon
@@ -33,9 +31,8 @@ interface SidebarGroupProps extends React.HTMLAttributes < HTMLDivElement> {
   icon?: React.ReactNode;
   default_expanded?: boolean;
   show_chevron?: boolean;
-}
+
 const SidebarGroup = forward_ref < HTMLDivElement, SidebarGroupProps>(
-  (
     {
       title,
       icon,
@@ -48,7 +45,7 @@ const SidebarGroup = forward_ref < HTMLDivElement, SidebarGroupProps>(
     ref,
   ) => {
     const [expanded, set_expanded] = React.useState (default_expanded);
-;
+
     return (
       <div;
         ref={ref as SafeRef < HTMLDivElement>}
@@ -79,7 +76,7 @@ const SidebarGroup = forward_ref < HTMLDivElement, SidebarGroupProps>(
       </div>
     );
   }
-);
+;
 SidebarGroup.displayName = "SidebarGroup";
 export { SidebarGroup }
 
@@ -104,8 +101,7 @@ export { SidebarGroup }
         <div className={cn ("mt - 1", !expanded && "hidden")}>{children}</div>;
       </div>);
   },
-);
 ;
+
 SidebarGroup.display_name = "SidebarGroup";
 export { SidebarGroup }
-;

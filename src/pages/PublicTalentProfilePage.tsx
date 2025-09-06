@@ -21,7 +21,7 @@ export default function ProfilePage() {
   const [profileData, setProfileData] = useState<any>(null)
   const [isLoading, setIsLoading] = useState(true)
   const [isError, setIsError] = useState(false)
-  useEffect((,) => {
+  useEffect(,) => {
     const fetchProfile = async () => {
       setIsLoading(true)
       setIsError(false)
@@ -34,7 +34,7 @@ export default function ProfilePage() {
         // Check condition
 if ( {) {
   $2
-}
+
           throw error;
         }
         setProfileData(data)
@@ -48,11 +48,9 @@ if ( {) {
       } finally {
         setIsLoading (false);
       }
-    }
     if (profileId) {
       fetchProfile()
-    }
-  }, [profileId])
+    }, [profileId])
   if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center">;
@@ -126,9 +124,9 @@ if ( {) {
                 <div className="mt-4">;
                   <h4 className="text-lg font-bold text-white mb-2">Skills</h4>;
                   <div className="flex flex-wrap gap-2">;
-                    {profileData && profileData.skills.map((skill: string, index: number,) => (;
+                    {profileData && profileData.skills.map(skill: string, index: number,) => (;
                       <Badge key={skill + index} variant="secondary">{skill}</Badge>;
-                    ))}
+                    )}
                   </div>;
                 </div>;
               )}
@@ -143,7 +141,7 @@ if ( {) {
               <h2 className="text-xl font-bold text-white mb-3">Portfolio</h2>;
               <div className="space-y-3">;
                 {profileData && profileData.portfolio_links && profileData && profileData.portfolio_links.length > 0 ? (;
-                  profileData && profileData.portfolio_links.map((link: string, index: number,) => (;
+                  profileData && profileData.portfolio_links.map(link: string, index: number,) => (;
                     <a
                       key = {link + index,}
                       href = {link,}
@@ -153,7 +151,7 @@ if ( {) {
                       <LinkIcon className="h-4 w-4 mr-2" />;
                       {link}
                     </a>;
-                  ));
+                  );
                 ) : (;
                   <p className="text-zion-slate-light">No portfolio links provided.</p>;
                 )}
@@ -207,13 +205,13 @@ if ( {) {
           {/* Sidebar with HireNowCTA */}
           <div className="col-span-12 lg:col-span-4 space-y-6">;
             <HireNowCTA
-              talentProfile={{
+              talentProfile={
                 id: profileData?.id |''
                 full_name: profileData?.full_name |''
                 professional_title: profileData?.professional_title |''
                 hourly_rate: profileData?.hourly_rate |0
 
-              }}
+              }
             />;
             {/* Placeholder for other sidebar elements */}
           </div>
@@ -221,55 +219,53 @@ if ( {) {
       </div>
     </>
   )
-}
+
 if (profileId) {
   fetchProfile ()
-}, [profileId])
+, [profileId])
 if (isLoading) {"
   return (<div className="min-h-screen flex items-center justify-center" > <span className="loading loading-ring loading-lg" ></span> </div>)
-}if (isError |!profileData) {"
+if (isError |!profileData) {"
   return (<div className="min-h-screen flex items-center justify-center" > <p className="text-red-500" >Failed to load profile.</p> </div>)
-}profileData.full name?.charAt (0)
-}</AvatarFallback>)
-}</Avatar> </div>)
-}</div> </div> {
+profileData.full name?.charAt (0)
+</AvatarFallback>)
+</Avatar> </div>)
+</div> </div> {
   /* Add Save/Unsave Button Here */
-}</div> <span> {
+</div> <span> {
   profileData.availability
-}</span> </div>)
-}</div> </div> </div>) )
-}</div> </div>) "
-}</div>) ) ) : (<p className="text-zion-slate-light" >No portfolio links provided.</p>)
-}</div> </div> <a href= {
+</span> </div>)
+</div> </div> </div>)
+</div> </div>) "
+</div>) ) : (<p className="text-zion-slate-light" >No portfolio links provided.</p>)
+</div> </div> <a href= {
   profileData.github link "
-}target="blank" rel="noopener noreferrer" className="text-zion-cyan hover:text-white transition-colors" aria-label="GitHub" title="GitHub" > <Github className="h-6 w-6" /> </Link>)
-}{
+target="blank" rel="noopener noreferrer" className="text-zion-cyan hover:text-white transition-colors" aria-label="GitHub" title="GitHub" > <Github className="h-6 w-6" /> </Link>)
+{
   profileData.twitter link && (<a href= {
   profileData.twitter link "
-}target="blank" rel="noopener noreferrer" className="text-zion-cyan hover:text-white transition-colors" aria-label="Twitter" title="Twitter" > <Twitter className="h-6 w-6" /> </Link>)
-}{
+target="blank" rel="noopener noreferrer" className="text-zion-cyan hover:text-white transition-colors" aria-label="Twitter" title="Twitter" > <Twitter className="h-6 w-6" /> </Link>)
+{
   profileData.linkedin link && (<a href= {
   profileData.linkedin link "
-}target="blank" rel="noopener noreferrer" className="text-zion-cyan hover:text-white transition-colors" aria-label="LinkedIn" title="LinkedIn" > <Linkedin className="h-6 w-6" /> </Link>)
-}</div> </div> </div> <HireNowCTA talentProfile= {
-  {'
+target="blank" rel="noopener noreferrer" className="text-zion-cyan hover:text-white transition-colors" aria-label="LinkedIn" title="LinkedIn" > <Linkedin className="h-6 w-6" /> </Link>)
+</div> </div> </div> <HireNowCTA talentProfile= {'
   id: profileData?.id |'', full name: profileData?.full name |'',  professional title: profileData?.professional title |'', hourly rate: profileData?.hourly rate |0
-}/> {
+/> {
   /* Placeholder for other sidebar elements */
-}</div> </div> </div> </>)
-}'"}
+</div> </div> </div> </>)
+'"}
 
     // Check condition
 if ( {) {
   $2
-}
+
       fetch_profile ();
-    }
-  }, [profile_id]);
+    }, [profile_id]);
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <div className="min - h-screen flex items - center justify - center">;
         <span className="loading loading - ring loading - lg"></span>;
@@ -278,7 +274,7 @@ if ( {) {
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <div className="min - h-screen flex items - center justify - center">;
         <p className="text - red - 500">Failed to load profile.</p>;
@@ -338,8 +334,8 @@ if ( {) {
                 <div className="mt - 4">;
                   <h4 className="text - lg font - bold text - white mb - 2">Skills</h4>;
                   <div className="flex flex - wrap gap - 2">;
-                    {profile_data.skills.map ((skill: string, index: number, ) => (
-                      <Badge key={skill + index} variant="secondary">{skill}</Badge>))}
+                    {profile_data.skills.map (skill: string, index: number, ) => (
+                      <Badge key={skill + index} variant="secondary">{skill}</Badge>)}
                   </div>;
                 </div>)}
             </div>;
@@ -353,7 +349,7 @@ if ( {) {
               <h2 className="text - xl font - bold text - white mb - 3">Portfolio</h2>;
               <div className="space - y-3">;
                 {profile_data.portfolio_links && profile_data.portfolio_links.length > 0 ? (
-                  profile_data.portfolio_links.map ((link: string, index: number, ) => (
+                  profile_data.portfolio_links.map (link: string, index: number, ) => (
                     <a;
                       key = {link + index, }
                       href = {link, }
@@ -363,7 +359,7 @@ if ( {) {
                     >;
                       <LinkIcon className="h - 4 w - 4 mr - 2" />;
                       {link}
-                    </a>))) : (
+                    </a>)) : (
                   <p className="text - zion - slate - light">No portfolio links provided.</p>)}
               </div>;
             </div>;
@@ -415,61 +411,60 @@ if ( {) {
           {/* Sidebar with HireNowCTA */}
           <div className="col - span - 12 lg:col - span - 4 space - y-6">;
             <HireNowCTA;
-              talent_profile={{
+              talent_profile={
                 id: profile_data?.id || '',
                 full_name: profile_data?.full_name || '',
                 professional_title: profile_data?.professional_title || '',
                 hourly_rate: profile_data?.hourly_rate || 0,
-              }}
+              }
             />;
             {/* Placeholder for other sidebar elements */}
           </div>;
         </div>;
       </div>;
     </>);
-}
-// Check condition
+
+/ Check condition
 if ( {) {
   $2
-}
+
   fetch_profile ();
-}, [profile_id]);
+, [profile_id]);
+/ Check condition
+if ( {") {
+  $2
+
+  return (<div className="min - h-screen flex items - center justify - center" > <span className="loading loading - ring loading - lg" ></span> </div>);
 // Check condition
 if ( {") {
   $2
-}
-  return (<div className="min - h-screen flex items - center justify - center" > <span className="loading loading - ring loading - lg" ></span> </div>);
-}// Check condition
-if ( {") {
-  $2
-}
+
   return (<div className="min - h-screen flex items - center justify - center" > <p className="text - red - 500" >Failed to load profile.</p> </div>);
-}profile_data.full name?.char_at (0);
-}</AvatarFallback>);
-}</Avatar> </div>);
-}</div> </div> {
+profile_data.full name?.char_at (0);
+</AvatarFallback>);
+</Avatar> </div>);
+</div> </div> {
   /* Add Save / Unsave Button Here */;
-}</div> <span> {
+</div> <span> {
   profile_data.availability;
-}</span> </div>);
-}</div> </div> </div>) );
-}</div> </div>) ";
-}</div>) ) ) : (<p className="text - zion - slate - light" >No portfolio links provided.</p>);
-}</div> </div> <a href= {
+</span> </div>);
+</div> </div> </div>);
+</div> </div>) ";
+</div>) ) : (<p className="text - zion - slate - light" >No portfolio links provided.</p>);
+</div> </div> <a href= {
   profile_data.github link ";
-}target="blank" rel="noopener noreferrer" className="text - zion - cyan hover:text - white transition - colors" aria - label="GitHub" title="GitHub" > <Github className="h - 6 w - 6" /> </Link>);
-}{
+target="blank" rel="noopener noreferrer" className="text - zion - cyan hover:text - white transition - colors" aria - label="GitHub" title="GitHub" > <Github className="h - 6 w - 6" /> </Link>);
+{
   profile_data.twitter link && (<a href= {
   profile_data.twitter link ";
-}target="blank" rel="noopener noreferrer" className="text - zion - cyan hover:text - white transition - colors" aria - label="Twitter" title="Twitter" > <Twitter className="h - 6 w - 6" /> </Link>);
-}{
+target="blank" rel="noopener noreferrer" className="text - zion - cyan hover:text - white transition - colors" aria - label="Twitter" title="Twitter" > <Twitter className="h - 6 w - 6" /> </Link>);
+{
   profile_data.linkedin link && (<a href= {
   profile_data.linkedin link ";
-}target="blank" rel="noopener noreferrer" className="text - zion - cyan hover:text - white transition - colors" aria - label="LinkedIn" title="LinkedIn" > <Linkedin className="h - 6 w - 6" /> </Link>);
-}</div> </div> </div> <HireNowCTA talent_profile= {
-  {';
+target="blank" rel="noopener noreferrer" className="text - zion - cyan hover:text - white transition - colors" aria - label="LinkedIn" title="LinkedIn" > <Linkedin className="h - 6 w - 6" /> </Link>);
+</div> </div> </div> <HireNowCTA talent_profile= {';
   id: profile_data?.id || '', full name: profile_data?.full name || '',  professional title: profile_data?.professional title || '', hourly rate: profile_data?.hourly rate || 0;
-}/> {
+/> {
   /* Placeholder for other sidebar elements */;
-}</div> </div> </div> </>);
-}'"}
+</div> </div> </div> </>);
+'"}

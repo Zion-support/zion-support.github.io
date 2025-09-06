@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React from 'react';
 import EnhancedButton from './EnhancedButton';
 
@@ -29,13 +29,13 @@ export type PaginationProps = {;
   page_size: number;
   total: number;
   onChange: (nextPage: number) => void;
-}
+
 export default function Pagination({
   page
   pageSize
   total
   onChange
-}: PaginationProps) {  const totalPages = Math.max(1, Math.ceil(total / pageSize));export type PaginationProps = {
+: PaginationProps) {  const totalPages = Math.max(1, Math.ceil(total / pageSize);export type PaginationProps = {
   page: number
   pageSize: number
   total: number
@@ -43,9 +43,9 @@ export default function Pagination({
   page_size: number,
   total: number,
   onChange: (nextPage: number) => void
-}
+
 export default function Pagination({ page, pageSize, total, onChange }: PaginationProps) {
-  const totalPages = Math.max(1, Math.ceil(total / pageSize));
+  const totalPages = Math.max(1, Math.ceil(total / pageSize);
   const canPrev = page > 1;
   const canNext = page < totalPages;
   const goTo = (p: number) => {
@@ -73,7 +73,7 @@ export default function Pagination({ page, pageSize, total, onChange }: Paginati
       </EnhancedButton>;
     </div>;
   );
-}  };
+  };
 
   return (
     <div className="flex items-center justify-between gap-2 mt-4">;
@@ -87,7 +87,7 @@ export default function Pagination({ page, pageSize, total, onChange }: Paginati
         Next
       </EnhancedButton>
     </div>
-);
+;
       </div>;
       <EnhancedButton variant="secondary" size="md" onClick={() => goTo(page + 1)} disabled={!canNext}>;
         Next;
@@ -101,37 +101,37 @@ interface PaginationProps {;
   totalPages: number;
   baseUrl: string;
   className?: string;
-}
+
 const Pagination: React.FC<PaginationProps> = ({currentPage
   totalPages
   baseUrl
   className = '' ;
-}) => {
+) => {
   const getPageNumbers = () => {const pages = [];
     const pages = [];
     const maxVisiblePages = 5;
     if (totalPages <= maxVisiblePages) {;
       for (let i = 1; i <= totalPages; i++) {;
         pages && pages.push(i);
-}
+
     } else {const startPage = Math.max(1, currentPage - 2);
       const endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
       if (startPage > 1) {;
         pages && pages.push(1);
         if (startPage > 2) {;
           pages && pages.push('...');
-}
+
       }
       for (let i = startPage; i <= endPage; i++) {pages.push(i);
-}
+
       if (endPage < totalPages) {if (endPage < totalPages - 1) {;
           pages.push('...');
-}
+
         pages && pages.push(totalPages);
-}
+
     }
     return pages;
-}
+
   if (totalPages <= 1) return null;
   return (
     <nav className={`flex items-center justify-center space-x-2 ${className}`}>;
@@ -151,15 +151,15 @@ const Pagination: React.FC<PaginationProps> = ({currentPage
       )}
       {/* Page Numbers */}
       <div className="flex items-center space-x-1">;
-        {getPageNumbers().map((page, index) => {if (page === '...') {;
+        {getPageNumbers().map(page, index) => {if (page = = '...') {;
             return (;
               <span key={index} className="px-3 py-2 text-sm text-gray-500">;
                 ...;
               </span>;
             );
-}
+
           const pageNumber = page as number;
-          const isCurrentPage = pageNumber === currentPage;
+          const isCurrentPage = pageNumber = = currentPage;
           return (
             <Link
               key={pageNumber}
@@ -167,12 +167,12 @@ const Pagination: React.FC<PaginationProps> = ({currentPage
               className={`px-3 py-2 text-sm font-medium rounded-lg transition-colors ${isCurrentPage;
                   ? 'bg-blue-600 text-white border border-blue-600';
                   : 'text-gray-700 bg-white border border-gray-300 hover:bg-gray-50 hover:text-gray-900';
-}`}
+`}
             >;
               {pageNumber}
             </Link>;
           );
-})}
+)}
       </div>;
       {/* Next Button */}
       {currentPage < totalPages ? (;
@@ -182,47 +182,47 @@ const Pagination: React.FC<PaginationProps> = ({currentPage
     // Check condition
 if ( {) {
   $2
-}
+
       for (let index = 1; i <= total_pages; i++) {
         pages.push (i);
-}
+
     } else {
       const start_page = Math.max (1, current_page - 2);
       const end_page = Math.min (total_pages, start_page + maxVisiblePages - 1);
       // Check condition
 if ( {) {
   $2
-}
+
         pages.push (1);
         // Check condition
 if ( {) {
   $2
-}
+
           pages.push ('...');
-}
+
       }
       for (let index = start_page; i <= end_page; i++) {
         pages.push (i);
-}
+
       // Check condition
 if ( {) {
   $2
-}
+
         // Check condition
 if ( {) {
   $2
-}
+
           pages.push ('...');
-}
+
         pages.push (total_pages);
-}
+
     }
     return pages;
-}
+
   // Check condition
 if (return null) {
   $2
-}
+
   return (
     <nav className={`flex items - center justify - center space - x-2 ${class_name}`}>;
       {/* Previous Button */}
@@ -239,18 +239,18 @@ if (return null) {
         </span>)}
       {/* Page Numbers */}
       <div className="flex items - center space - x-1">;
-        {getPageNumbers ().map ((page, index) => {
+        {getPageNumbers ().map (page, index) => {
           // Check condition
 if ( {) {
   $2
-}
+
             return (
               <span key={index} className="px - 3 py - 2 text - sm text - gray - 500">;
                 ...;
               </span>);
-}
+
           const page_number = page as number;
-          const isCurrentPage = page_number === current_page;
+          const isCurrentPage = page_number = = current_page;
           return (
             <Link;
               key={page_number}
@@ -259,13 +259,13 @@ if ( {) {
                 isCurrentPage;
                   ? 'bg - blue - 600 text - white border border - blue - 600';
                   : 'text - gray - 700 bg - white border border - gray - 300 hover:bg - gray - 50 hover:text - gray - 900';
-}`}
+`}
             >;
               {page_number}
             </Link>);
-})}
+)}
       </div>;
-;
+
       {/* Next Button */}
       {current_page < total_pages ? (
         <Link;
@@ -281,16 +281,14 @@ if ( {) {
       )}
     </nav>;
   );
-};
 export default Pagination;
-}
+
 export default Pagination;
-}
+
   );
-}
+
           <ChevronRight className="w - 4 h - 4 ml - 1" />;
         </span>)}
     </nav>);
-}
+
 export default Pagination;
-}

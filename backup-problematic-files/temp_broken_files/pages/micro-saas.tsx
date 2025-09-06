@@ -3,23 +3,22 @@ import Head from 'next/head';
 import { useState, useEffect } from 'react';
 import { ContactInfo } from '../types';
 import ErrorBoundary from '../components/ErrorBoundary';
-;
+
 export default function MicroSaaS() {;
   const [isLoaded, setIsLoaded] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('all');
-  ;
-  useEffect(() => {;
-    const timer = setTimeout(() => setIsLoaded(true), 100);
+  useEffect() => {;
+    const timer = setTimeout() => setIsLoaded(true), 100);
     return () => clearTimeout(timer);
   }, []);
-;
+
   const contact:ContactInfo = {;
     phone:'+1 302 464 0950',;
     email:'kleber@ziontechgroup.com',;
     address:'364 E Main St STE 1008 Middletown DE 19709',;
     site:'https://ziontechgroup.com';
   };
-;
+
   const categories = [;
     { id:'all', name:'All Products', count:150 },;
     { id:'ai', name:'AI-Powered', count:45 },;
@@ -29,7 +28,7 @@ export default function MicroSaaS() {;
     { id:'productivity', name:'Productivity', count:15 },;
     { id:'marketing', name:'Marketing', count:15 }
   ];
-;
+
   const products = [;
     {;
       id:1,;
@@ -140,11 +139,11 @@ export default function MicroSaaS() {;
       popular:true;
     }
   ];
-;
-  const filteredProducts = selectedCategory === 'all' ;
+
+  const filteredProducts = selectedCategory = = 'all' ;
     ? products ;
-    :products.filter(product => product.category === selectedCategory);
-;
+    :products.filter(product => product.category = = selectedCategory);
+
   return (;
     <>;
       <Head>;
@@ -155,7 +154,6 @@ export default function MicroSaaS() {;
         <meta name="robots" content="index, follow" />;
         <link rel="canonical" href={`${contact.site}/micro-saas`} />;
       </Head>;
-      ;
       <ErrorBoundary level="page">;
         <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">;
           {/* Hero Section */}
@@ -175,17 +173,17 @@ export default function MicroSaaS() {;
               </p>;
             </div>;
           </section>;
-;
+
           {/* Category Filter */}
           <section className="py-8 px-4">;
             <div className="max-w-6xl mx-auto">;
               <div className="flex flex-wrap justify-center gap-4 mb-8">;
-                {categories.map((category) => (;
+                {categories.map(category) => (;
                   <button;
                     key={category.id}
                     onClick={() => setSelectedCategory(category.id)}
                     className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${;
-                      selectedCategory === category.id;
+                      selectedCategory = = category.id;
                         ? 'bg-blue-600 text-white';
                         :'bg-slate-800 text-slate-300 hover:bg-slate-700';
                     }`}
@@ -207,30 +205,30 @@ with focused, efficient, and cost-effective solutions.
           <section className=&quot;py-8 px-4&quot;>
             <div className=&quot;max-w-6xl mx-auto&quot;>
               <div className=&quot;flex flex-wrap justify-center gap-4 mb-8&quot;>
-                {categories.map((category) => (
+                {categories.map(category) => (
                   <button                    key={category.id}
                     onClick={_() => setSelectedCategory(category.id)}
                     className={_`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                      selectedCategory === category.id
+                      selectedCategory = = category.id
                         ? 'bg-blue-600 text-white'
                         : 'bg-slate-800 text-slate-300 hover:bg-slate-700'}`}
                   >
                     {category.name} ({category.count})
                   </button>
-                ))}
+                )}
               </div>;
             </div>;
           </section>;
-;
+
           {/* Products Grid */}
           <section className="py-16 px-4" role="main">;
             <div className="max-w-7xl mx-auto">;
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
-                {filteredProducts.map((product, index) => (;
+                {filteredProducts.map(product, index) => (;
                   <div ;
                     key={product.id}
                     className={`p-6 bg-slate-900/60 rounded-xl border border-white/10 hover:border-blue-500/40 transition-all duration-300 hover:scale-105 ${isLoaded ? 'opacity-100 translate-y-0' :'opacity-0 translate-y-8'}`}
-                    style={{ transitionDelay:`${index * 100}ms` }}
+                    style={ transitionDelay:`${index * 100}ms` }
                   >;
                     {product.popular && (;
                       <div className="absolute -top-2 -right-2 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded-full">;
@@ -240,39 +238,35 @@ with focused, efficient, and cost-effective solutions.
                     ;
                     <h3 className="text-xl font-bold mb-3">{product.name}</h3>;
                     <p className="text-slate-300 mb-4 text-sm">{product.description}</p>;
-                    ;
                     <div className="mb-4">;
                       <h4 className="text-sm font-semibold text-blue-400 mb-2">Key Features:</h4>;
                       <ul className="text-slate-400 text-sm space-y-1">;
-                        {product.features.map((feature, featureIndex) => (;
+                        {product.features.map(feature, featureIndex) => (;
                           <li key={featureIndex} className="flex items-center">;
                             <span className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-2 flex-shrink-0"></span>;
                             {feature}
                           </li>;
-                        ))}
+                        )}
                       </ul>;
                     </div>;
-                    ;
                     <div className="flex items-center justify-between mb-4">;
                       <span className="text-2xl font-bold text-green-400">{product.price}</span>;
                       <span className="text-xs text-slate-500 capitalize">{product.category}</span>;
                     </div>;
-                    ;
                     <button className="w-full py-2 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors">;
                       Learn More;
                     </button>;
-                  </div>;                ))}
+                  </div>;                )}
               </div>;
             </div>;
           </section>;
-;
+
           {/* Features Section */}
           <section className="py-16 px-4 bg-slate-900/40">;
             <div className="max-w-6xl mx-auto">;
               <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">;
                 Why Choose Our Micro SaaS Products?;
               </h2>;
-              ;
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
                 <div className="text-center">;
                   <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">;
@@ -283,7 +277,6 @@ with focused, efficient, and cost-effective solutions.
                   <h3 className="text-xl font-bold mb-2">Lightning Fast</h3>;
                   <p className="text-slate-400">Quick setup and deployment in minutes, not months</p>;
                 </div>;
-                ;
                 <div className="text-center">;
                   <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">;
                     <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
@@ -293,7 +286,6 @@ with focused, efficient, and cost-effective solutions.
                   <h3 className="text-xl font-bold mb-2">Cost Effective</h3>;
                   <p className="text-slate-400">Affordable pricing with no hidden costs or long-term contracts</p>;
                 </div>;
-                ;
                 <div className="text-center">;
                   <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">;
                     <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
@@ -303,7 +295,6 @@ with focused, efficient, and cost-effective solutions.
                   <h3 className="text-xl font-bold mb-2">Focused Solutions</h3>;
                   <p className="text-slate-400">Specialized tools that solve specific business problems</p>;
                 </div>;
-                ;
                 <div className="text-center">;
                   <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">;
                     <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
@@ -316,7 +307,7 @@ with focused, efficient, and cost-effective solutions.
               </div>;
             </div>;
           </section>;
-;
+
           {/* CTA Section */}
           <section className="py-16 px-4">;
             <div className="max-w-4xl mx-auto text-center">;
@@ -327,7 +318,6 @@ with focused, efficient, and cost-effective solutions.
                 Contact our experts to discuss which micro SaaS products are right for your business ;
                 and get started with a free trial.;
               </p>;
-              ;
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">;
                 <Link ;
                   href="/contact" ;
@@ -360,7 +350,7 @@ with focused, efficient, and cost-effective solutions.
                   <h3 className="text-xl font-semibold mb-2">{industry.name}</h3>
                   <p className="text-gray-600">{industry.description}</p>
                 </motion.div>
-              ))}
+              )}
             </div>
           </div>
         </section>
@@ -369,10 +359,10 @@ with focused, efficient, and cost-effective solutions.
         <section className="py-20 bg-blue-600">
           <div className="max-w-7xl mx-auto px-4 text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Ready to Deploy Your Micro SaaS?
@@ -414,4 +404,3 @@ href={_`mailto:${contact.email}`}
       </ErrorBoundary>
     </>
   )
-}

@@ -4,11 +4,11 @@ import { Phone, Mail, MapPin, Check, ArrowRight, Eye } from 'lucide-react',;
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',;
 import Button from '../components/ui/Button',;
 import { extraServices } from '../data/extra-services',;
-;
+
 export default function WCAGScannerPage() {;
-  const service = extraServices.find(s => s.link.endsWith('/wcag-accessibility-scanner')),;
+  const service = extraServices.find(s => s.link.endsWith('/wcag-accessibility-scanner'),;
   if (!service) return null,;
-;
+
   return (;
     <UltraAdvancedFuturisticBackground>;
       <Head>;
@@ -27,9 +27,9 @@ export default function WCAGScannerPage() {;
               <h2 className="text-2xl font-semibold mb-4">Capabilities</h2>;
               <p className="text-slate-300 mb-6">{service.description}</p>;
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">;
-                {service.features.slice(0, 12).map((feat, i) => (;
+                {service.features.slice(0, 12).map(feat, i) => (;
                   <li key={i} className="flex items-start space-x-3 text-slate-200"><Check className="w-5 h-5 text-blue-400 mt-0.5" /><span>{feat}</span></li>;
-                ))}
+                )}
               </ul>;
             </div>;
             <div className="bg-black/30 rounded-2xl border border-blue-500/30 p-6 h-fit">;
@@ -51,5 +51,3 @@ export default function WCAGScannerPage() {;
       </div>;
     </UltraAdvancedFuturisticBackground>;
   ),;
-}
-;

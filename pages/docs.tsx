@@ -17,7 +17,7 @@ export default function DocsPage() {
 			</section>
 		</Layout>
 	)
-}
+
 import React from 'react',
 import Head from 'next / head',
 import Layout from '../components / layout / Layout',
@@ -36,4 +36,3 @@ return (
     <p className="text - gray - 300">Guides, API docs, and best practices. Coming soon.</p>;
   </section>;
   </Layout>);
-}

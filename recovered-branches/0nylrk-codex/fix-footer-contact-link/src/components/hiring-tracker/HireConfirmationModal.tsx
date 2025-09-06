@@ -23,7 +23,7 @@ export interface HireConfirmationModalProps {
   onConfirm: () => void
 
   isSubmitting?: boolean
-}
+
 export function HireConfirmationModal({
   isOpen;
 
@@ -32,7 +32,7 @@ export function HireConfirmationModal({
   application;
   onConfirm;
   isSubmitting = false;
-}: HireConfirmationModalProps) {;
+: HireConfirmationModalProps) {;
   const [projectName, setProjectName] = useState('');
   const [projectDescription, setProjectDescription] = useState('');
   const [updateAvailability, setUpdateAvailability] = useState(true);
@@ -126,11 +126,11 @@ export function HireConfirmationModal({
             payment_terms: 'hourly'}]);
         .select ();
         .single ();
-;
+
       // Check condition
 if ( {) {
   $2
-}
+
         toast ({
           title: 'Error creating project',
           description: project_error.message,
@@ -151,7 +151,7 @@ if ( {) {
       // Check condition
 if ( {) {
   $2
-}
+
         toast ({
           title: 'Error creating hiring record',
           description: hiring_error.message,
@@ -163,25 +163,24 @@ if ( {) {
       // Check condition
 if ( {) {
   $2
-}
+
         try {
           const { error: availability_error } = await supabase;
             .from ('talent_profiles');
             .update ({ availability_type: 'unavailable' });
             .eq ('id', talent_data.id);
-;
+
           // Check condition
 if ( {) {
   $2
-}
+
             toast ({
               title: 'Error updating availability',
               description: availability_error.message,
               variant: 'destructive'}),
             setIsLoading (false);
             return;
-          }
-        } catch (error) {
+          } catch (error) {
           console.error('Error updating availability:', error);
           toast({
             title: 'Error updating availability'
@@ -190,7 +189,6 @@ if ( {) {
           setIsLoading(false);
           return;
         }
-      }
       toast({
         title: 'Candidate hired successfully'
         description: `${talentData.full_name} has been hired for the project.`})
@@ -205,7 +203,6 @@ if ( {) {
     } finally {
       setIsLoading(false)
     }
-  }
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
@@ -266,7 +263,7 @@ if ( {) {
       </DialogContent>
     </Dialog>
   )
-}
+
               Update talent availability to "Unavailable";
             </label>;
           </div>;
@@ -282,7 +279,7 @@ if ( {) {
       </DialogContent>;
     </Dialog>;
   );
-}
+
         <div className="flex justify - end gap - 2">;
           <Button type="button" variant="secondary" on_click={on_close}>;
             Cancel;
@@ -293,4 +290,3 @@ if ( {) {
         </div>;
       </DialogContent>;
     </Dialog>);
-}

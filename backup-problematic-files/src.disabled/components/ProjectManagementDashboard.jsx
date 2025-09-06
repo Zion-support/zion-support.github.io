@@ -7,6 +7,5 @@ const ProjectManagementDashboard = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default ProjectManagementDashboard;

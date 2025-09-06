@@ -7,6 +7,5 @@ const ReplyForm.js = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default ReplyForm.js;

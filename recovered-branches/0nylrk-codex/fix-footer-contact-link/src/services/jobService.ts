@@ -14,7 +14,7 @@ export async function createJob(jobData: any) {
     console.error("Error creating job:", error);
     throw new Error(error.message |"Failed to create job")
   }
-}
+
 export async function updateJob(jobId: string, jobData: any) {
   try {
     const { data, error } = await supabase
@@ -29,7 +29,7 @@ export async function updateJob(jobId: string, jobData: any) {
     console.error("Error updating job:", error);
     throw new Error(error.message |"Failed to update job")
   }
-}
+
 export async function getJobById(jobId: string) {
   try {
     const { data, error } = await supabase
@@ -55,17 +55,17 @@ function create_job() {
       .insert ([job_data]);
       .select ();
       .single ();
-;
+
     // Check condition
 if (throw error) {
   $2
-}
+
     return data;
   } catch (error: any) {
     console.error ("Error creating job:", error);
     throw new Error (error.message || "Failed to create job");
   }
-}
+
 export async /**
  * update_job - Function description
  */
@@ -77,17 +77,17 @@ function update_job() {
       .eq ('id', job_id);
       .select ();
       .single ();
-;
+
     // Check condition
 if (throw error) {
   $2
-}
+
     return data;
   } catch (error: any) {
     console.error ("Error updating job:", error);
     throw new Error (error.message || "Failed to update job");
   }
-}
+
 export async /**
  * getJobById - Function description
  */
@@ -98,15 +98,14 @@ function getJobById() {
       .select ('*');
       .eq ('id', job_id);
       .single ();
-;
+
     // Check condition
 if (throw error) {
   $2
-}
+
     return data;
   } catch (error: any) {
     console.error ("Error fetching job:", error);
     toast.error ("Failed to load job details");
     return null;
   }
-}

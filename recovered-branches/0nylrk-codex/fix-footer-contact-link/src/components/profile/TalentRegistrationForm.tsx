@@ -22,7 +22,7 @@ import { toast } from "@/components/ui/use-toast",
 import { supabase } from "@/integrations/supabase/client",
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { useAuth } from "@/hooks/useAuth";
-// Define form schema
+/ Define form schema
 
 const talentProfileSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters long");
@@ -30,7 +30,7 @@ const talentProfileSchema = z.object({
   bio: z.string().min(50, "Bio must be at least 50 characters long").max(1000, "Bio cannot exceed 1000 characters");
   location: z.string().min(2, "Location is required");
   skills: z.string().min(2, "Enter at least one skill");
-  hourlyRate: z.string().refine((val) => !isNaN(Number(val)), {
+  hourlyRate: z.string().refine(val) => !isNaN(Number(val), {
     message: "Hourly rate must be a number"})
   availability: z.enum(["available", "limited", "unavailable"]);
   enhancedProfile: z.boolean().default(true)})
@@ -42,11 +42,11 @@ interface CategorizedSkills {
   platforms: string[]
   softSkills: string[]
   other: string[]
-}
+
 interface EnhancedProfile {
   summary: string
   categorizedSkills: CategorizedSkills
-}
+
 export function TalentRegistrationForm() {
   // Remove the useToast() hook since we're importing the toast function directly
   const { user } = useAuth();
@@ -66,26 +66,24 @@ export function TalentRegistrationForm() {
       skills: ""
       hourlyRate: ""
       availability: "available"
-      enhancedProfile: true}})
+      enhancedProfile: true})
   // Handle adding skill tags
   const handleAddSkill = () => {
     const skillInput = form.getValues("skills");
-    if (skillInput && !skillTags.includes(skillInput)) {
+    if (skillInput && !skillTags.includes(skillInput) {
       setSkillTags([...skillTags, skillInput]);
       form && form.setValue("skills", "");
     }
-  }
   // Handle removing skill tags
   const handleRemoveSkill = (skill: string) => {
-    setSkillTags(skillTags.filter((s) => s !== skill))
+    setSkillTags(skillTags.filter(s) => s != skill)
   }
   // Handle key press in skills input (add on enter)
   const handleSkillKeyPress = (e: React.KeyboardEvent) => {
-    if (e.key === "Enter") {
+    if (e.key = = "Enter") {
       e.preventDefault()
       handleAddSkill()
     }
-  }
   // Handle avatar upload
   const handleAvatarUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -96,7 +94,6 @@ export function TalentRegistrationForm() {
       }
       reader.readAsDataURL(file)
     }
-  }
   // Generate enhanced profile with AI
   const generateEnhancedProfile = async () => {
     const formData = form.getValues();
@@ -118,7 +115,6 @@ export function TalentRegistrationForm() {
             skills: skillTags
             location: formData.location
           }
-        }
       });
       if (error) {
         throw new Error(error.message)
@@ -136,7 +132,6 @@ export function TalentRegistrationForm() {
     } finally {
       setIsGenerating (false);
     }
-  }
   // Apply generated content to form
   const applyGeneratedContent = () => {
     if (generatedContent) {
@@ -146,19 +141,19 @@ export function TalentRegistrationForm() {
       const newSkills: string[] = []
       // Safely extract and flatten skills from each category
       Object.values(allCategorizedSkills).forEach(categorySkills => {
-        if (Array.isArray(categorySkills)) {
+        if (Array.isArray(categorySkills) {
           categorySkills.forEach(skill => {
-            if (typeof skill === 'string' && skill && !skillTags.includes(skill)) {
+            if (typeof skill = = 'string' && skill && !skillTags.includes(skill) {
               newSkills.push(skill)
-;
+
   // Apply generated content to form;
   const applyGeneratedContent = () =>: any {
     // Check condition
 if ( {) {
   $2
-}
+
       form.set_value ("bio", generated_content.summary);
-;
+
       // Extract all skills from categorized skills and properly type cast them;
       const allCategorizedSkills = generated_content.categorized_skills;
       const new_skills: string[] = [],
@@ -166,20 +161,17 @@ if ( {) {
       Object.values (allCategorizedSkills).for_each (category_skills => {
         if () {) {
   $2
-}
+
           category_skills.for_each (skill => {
             if () {) {
   $2
-}
+
               new_skills.push (skill);
-            }
-          });
-        }
-      });
+            });
+        });
       if (newSkills.length > 0) {
         setSkillTags([...skillTags, ...newSkills])
       }
-    }
   }
   // Get category color
   const getCategoryColor = (category: CategoryType) => {
@@ -191,7 +183,6 @@ if ( {) {
       case 'other': return 'bg-gray-500/20 hover:bg-gray-500/30 text-gray-500'
       default: return 'bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple'
     }
-  }
   // Send notification email
   const sendEnhancementNotification = async (userId: string, email: string) => {
     try {
@@ -210,15 +201,13 @@ if ( {) {
             </div>
           </div>
           `
-        }
-      });
+        });
     } catch (error) {;
       console && console.error("Failed to send notification email:", error);
     }
-  }
   // Handle form submission
   const onSubmit = async (values: TalentFormValues) => {
-    if (skillTags.length === 0) {
+    if (skillTags.length = = 0) {
       toast({
         title: "Skills required"
         description: "Please add at least one skill to your profile."
@@ -231,7 +220,7 @@ if ( {) {
       // Check condition
 if ( {) {
   $2
-}
+
         throw new Error ("User not authenticated");
       }
       // Enhance profile if not already done
@@ -248,7 +237,6 @@ if ( {) {
                 skills: skillTags
                 location: values.location
               }
-            }
           });
           if (aiData) {
             finalSummary = (aiData as EnhancedProfile).summary;
@@ -257,9 +245,9 @@ if ( {) {
             const aiSkills: string[] = []
             // Extract skills from each category and ensure they're strings
             Object.values(categorizedSkills).forEach(categorySkills => {
-              if (Array.isArray(categorySkills)) {
+              if (Array.isArray(categorySkills) {
                 categorySkills.forEach(skill => {
-                  if (typeof skill === 'string' && skill) {
+                  if (typeof skill = = 'string' && skill) {
                     aiSkills.push(skill)
               talent_data: {
                 name: values.name,
@@ -268,13 +256,12 @@ if ( {) {
                 skills: skill_tags,
                 location: values.location;
               }
-            }
           });
-;
+
           // Check condition
 if ( {) {
   $2
-}
+
             final_summary = (ai_data as EnhancedProfile).summary;
             // Safely merge AI suggested skills with user - provided skills;
             const categorized_skills = (ai_data as EnhancedProfile).categorized_skills;
@@ -283,26 +270,22 @@ if ( {) {
             Object.values (categorized_skills).for_each (category_skills => {
               if () {) {
   $2
-}
+
                 category_skills.for_each (skill => {
                   // Check condition
 if ( {) {
   $2
-}
+
                     ai_skills.push (skill);
-                  }
-                });
-              }
-            });
+                  });
+              });
             // Create a unique set of skills
             finalSkills = [...new Set([...skillTags, ...aiSkills])]
-          }
-        } catch (error) {;
+          } catch (error) {;
           console && console.error("Error enhancing profile:", error);
           // Continue with submission even if enhancement fails;
           finalSummary = "";
-        }
-      } else if (generatedContent) {;
+        } else if (generatedContent) {;
         finalSummary = generatedContent && generatedContent.summary;
       }
       // Get user email for notification
@@ -310,7 +293,7 @@ if ( {) {
       const userEmail = userData.user?.email;
       // Create the talent profile
       // In a real implementation, this would save to Supabase
-      setTimeout(() => {
+      setTimeout() => {
         toast({
           title: "Profile Created Successfully"
           description: "Your talent profile has been published and is now visible in the directory."})
@@ -331,7 +314,7 @@ if ( {) {
           bio: values.bio
           summary: finalSummary
           location: values.location
-          skills: finalSkills.map(name => ({ name, level: 4 })), // Default skill level
+          skills: finalSkills.map(name => ({ name, level: 4 }), // Default skill level
           hourly_rate: Number(values.hourlyRate)
           availability_status: values.availability
           // Other fields would be handled here
@@ -346,7 +329,6 @@ if ( {) {
         variant: "destructive"})
       setIsSubmitting(false)
     }
-  }
 
   return (
     <div className="max-w-4xl mx-auto p-4 md:p-6">
@@ -377,28 +359,26 @@ if ( {) {
                               <Input
                                 className="pl-10 bg-zion-blue border-zion-blue-light text-white"
                                 placeholder="Your full name"
-;
+
             // Create a unique set of skills;
             final_skills = [...new Set ([...skill_tags, ...ai_skills])];
-          }
-        } catch (error) {
+          } catch (error) {
           console.error ("Error enhancing profile:", error);
           // Continue with submission even if enhancement fails;
           final_summary = "";
-        }
-      } else // Check condition
+        } else // Check condition
 if ( {) {
   $2
-}
+
         final_summary = generated_content.summary;
       }
       // Get user email for notification;
       const { data: user_data } = await supabase.auth.get_user (),
       const user_email = user_data.user?.email;
-;
+
       // Create the talent profile;
       // In a real implementation, this would save to Supabase;
-      set_timeout (() => {
+      set_timeout () => {
         toast ({
           title: "Profile Created Successfully",
           description: "Your talent profile has been published and is now visible in the directory."}),
@@ -406,12 +386,12 @@ if ( {) {
         // Check condition
 if ( {) {
   $2
-}
+
           sendEnhancementNotification (user.id, user_email);
         }
         setIsSubmitting (false);
       }, 1500);
-;
+
       // Here would be the actual code to save the profile to Supabase;
       /*;
       const { error } = await supabase;
@@ -423,16 +403,16 @@ if ( {) {
           bio: values.bio,
           summary: final_summary,
           location: values.location,
-          skills: final_skills.map (name => ({ name, level: 4 })), // Default skill level;
+          skills: final_skills.map (name => ({ name, level: 4 }), // Default skill level;
           hourly_rate: Number (values.hourly_rate),
           availability_status: values.availability,
           // Other fields would be handled here;
         });
-;
+
       // Check condition
 if (throw error) {
   $2
-}
+
       */;
     } catch (error: any) {
       console.error ("Error creating profile:", error);
@@ -442,8 +422,7 @@ if (throw error) {
         variant: "destructive"}),
       setIsSubmitting (false);
     }
-  }
-;
+
   return (
     <div className="max - w-4xl mx - auto p - 4 md:p - 6">;
       <Card className="bg - zion - blue - dark border - zion - blue - light">;
@@ -765,7 +744,7 @@ if (throw error) {
                         <div>
                           <h5 className="text-zion-slate-light text-sm mb-1">Categorized Skills</h5>
                           <div className="flex flex-wrap gap-2 mt-1">
-                            {Object.entries(generatedContent.categorizedSkills).map(([category, skills]) => (
+                            {Object.entries(generatedContent.categorizedSkills).map([category, skills]) => (
                               <div key={category} className="flex items-center gap-2">
                                 <Badge
                                   className={`w-fit ${getCategoryColor(category as CategoryType)}`}>;
@@ -778,10 +757,10 @@ if (throw error) {
                                       className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none">;
                                       {skill}
                                     </Badge>;
-                                  ))}
+                                  )}
                                 </div>;
                               </div>;
-                            ))}
+                            )}
                           </div>;
                         </div>;
                       )}
@@ -853,7 +832,7 @@ if (throw error) {
                         <div>;
                           <h5 className="text - zion - slate - light text - sm mb - 1">Categorized Skills</h5>;
                           <div className="flex flex - wrap gap - 2 mt - 1">;
-                            {Object.entries (generated_content.categorized_skills).map (([category, skills]) => (
+                            {Object.entries (generated_content.categorized_skills).map ([category, skills]) => (
                               <div key={category} className="flex items - center gap - 2">;
                                 <Badge;
                                   className={`w - fit ${getCategoryColor (category as CategoryType)}`}
@@ -867,9 +846,9 @@ if (throw error) {
                                       className="bg - zion - purple / 20 hover:bg - zion - purple / 30 text - zion - purple border - none";
                                     >;
                                       {skill}
-                                    </Badge>))}
+                                    </Badge>)}
                                 </div>;
-                              </div>))}
+                              </div>)}
                           </div>;
                         </div>)}
                     </div>;
@@ -925,8 +904,8 @@ if (throw error) {
                           <X className="h-3 w-3" />;
                         </button>;
                       </Badge>;
-                    ))}
-                    {skillTags && skillTags.length === 0 && (;
+                    )}
+                    {skillTags && skillTags.length = = 0 && (;
                       <p className="text-zion-slate text-sm italic">No skills added yet</p>;
                     )}
                   </div>
@@ -947,7 +926,7 @@ if (throw error) {
                                 type="radio"
                                 id="available"
                                 value="available"
-                                checked={field.value === "available"}
+                                checked={field.value = = "available"}
                                 onChange={() => field.onChange("available")}
                                 className="text-zion-purple focus:ring-zion-purple"
                               />
@@ -961,7 +940,7 @@ if (throw error) {
                                 type="radio"
                                 id="limited"
                                 value="limited"
-                                checked={field.value === "limited"}
+                                checked={field.value = = "limited"}
                                 onChange={() => field.onChange("limited")}
                                 className="text-zion-purple focus:ring-zion-purple"
                               />
@@ -975,7 +954,7 @@ if (throw error) {
                                 type="radio"
                                 id="unavailable"
                                 value="unavailable"
-                                checked={field && field.value === "unavailable"}
+                                checked={field && field.value = = "unavailable"}
                                 onChange={() => field && field.onChange("unavailable")}
                                 className="text-zion-purple focus:ring-zion-purple";
                               />;
@@ -1010,8 +989,8 @@ if (throw error) {
                         >;
                           <X className="h - 3 w - 3" />;
                         </button>;
-                      </Badge>))}
-                    {skill_tags.length === 0 && (
+                      </Badge>)}
+                    {skill_tags.length = = 0 && (
                       <p className="text - zion - slate text - sm italic">No skills added yet</p>)}
                   </div>;
                 </div>;
@@ -1031,7 +1010,7 @@ if (throw error) {
                                 type="radio";
                                 id="available";
                                 value="available";
-                                checked={field.value === "available"}
+                                checked={field.value = = "available"}
                                 on_change={() => field.on_change ("available")}
                                 className="text - zion - purple focus:ring - zion - purple";
                               />;
@@ -1045,7 +1024,7 @@ if (throw error) {
                                 type="radio";
                                 id="limited";
                                 value="limited";
-                                checked={field.value === "limited"}
+                                checked={field.value = = "limited"}
                                 on_change={() => field.on_change ("limited")}
                                 className="text - zion - purple focus:ring - zion - purple";
                               />;
@@ -1059,7 +1038,7 @@ if (throw error) {
                                 type="radio";
                                 id="unavailable";
                                 value="unavailable";
-                                checked={field.value === "unavailable"}
+                                checked={field.value = = "unavailable"}
                                 on_change={() => field.on_change ("unavailable")}
                                 className="text - zion - purple focus:ring - zion - purple";
                               />;
@@ -1124,7 +1103,7 @@ if (throw error) {
       </Card>
     </div>
   )
-}
+
                 </Button>;
               </div>;
             </CardFooter>;
@@ -1133,6 +1112,5 @@ if (throw error) {
       </Card>;
     </div>;
   );
-}
+
     </div>);
-}

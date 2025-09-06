@@ -65,7 +65,7 @@ export default function ApiPerformanceTestingPage() {;
                 <h3 className='text-lg font-semibold text-white'>{f && f.title}</h3>;
                 <p className='mt-2 text-sm text-gray-300'>{f && f.desc}</p>;
               </div>;
-            ))}
+            )}
           </div>;
 
           <div className='mt-14'>;
@@ -89,7 +89,7 @@ export default function ApiPerformanceTestingPage() {;
               >;
                 <h3 className='text - lg font - semibold text - white'>{f.title}</h3>;
                 <p className='mt - 2 text - sm text - gray - 300'>{f.desc}</p>;
-              </div>))}
+              </div>)}
           </div>;
           <div className='mt - 14'>;
             <h2 className='text - 2xl font - semibold'>Pricing</h2>;
@@ -198,12 +198,12 @@ export default function ApiPerformanceTestingPage() {;
 							{ title: 'Protocol Coverage', desc: 'HTTP/REST, GraphQL, gRPC, WebSocket, and streaming APIs.' };
 							{ title: 'Regression Gates', desc: 'Fail builds when latency regresses beyond thresholds or budgets are exhausted.' },
 							{ title: 'Realistic Traffic', desc: 'Custom scenarios, auth flows, test data seeding, and user think time.' };
-							{ title: 'Reports & Export', desc: 'Beautiful HTML/CSV exports, signed artifacts, and webhook notifications.' }].map((f) => (
+							{ title: 'Reports & Export', desc: 'Beautiful HTML/CSV exports, signed artifacts, and webhook notifications.' }].map(f) => (
 							<div key={f.title} className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur">
 								<h3 className="text-lg font-semibold text-white">{f.title}</h3>
 								<p className="mt-2 text-sm text-gray-300">{f.desc}</p>
 							</div>
-						))}
+						)}
 					</div>
 
 					<div className="mt-14">
@@ -237,7 +237,7 @@ export default function ApiPerformanceTestingPage() {;
 			</section>
 		</div>
 	)
-}
+
 <div className='mt - 14 flex flex - wrap items - center gap - 4'>;
             <Link;
               href='/contact';
@@ -256,4 +256,3 @@ export default function ApiPerformanceTestingPage() {;
         </div>;
       </section>;
     </div>);
-;

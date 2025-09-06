@@ -6,5 +6,3 @@ export function MiniCartPreview() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

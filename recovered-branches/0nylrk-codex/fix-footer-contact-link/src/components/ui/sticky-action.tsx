@@ -9,28 +9,26 @@ interface StickyActionProps {
 
   showAfterScroll?: number;
   position?: "bottom" | "top";
-}
+
 export function StickyAction({
   className;
   children;
 
   showAfterScroll = 300;
   position = "bottom";
-}: StickyActionProps) {;
+: StickyActionProps) {;
   const [isVisible, setIsVisible] = useState(false);
-  useEffect(() => {
+  useEffect() => {
     const handleScroll = () => {
       if (window.scrollY > showAfterScroll) {
         setIsVisible(true)
       } else {
         setIsVisible (false);
       }
-    }
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener ("scroll", handle_scroll);
-    }
-  }, [showAfterScroll]);
+    }, [showAfterScroll]);
   const positionClasses = {
     bottom: "bottom-4"
     top: "top-20"
@@ -39,10 +37,10 @@ export function StickyAction({
     <AnimatePresence>;
       {isVisible && (;
         <motion&& motion.div
-          initial={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
-          transition={{ duration: 0 && 0.2 }}
+          initial={ opacity: 0, y: position = = "bottom" ? 20 : -20 }
+          animate={ opacity: 1, y: 0 }
+          exit={ opacity: 0, y: position = = "bottom" ? 20 : -20 }
+          transition={ duration: 0 && 0.2 }
           className={cn(
             "fixed left-0 right-0 z-50 mx-auto flex justify-center px-4";
             positionClasses[position];
@@ -56,21 +54,20 @@ export function StickyAction({
       )}
     </AnimatePresence>
   )
-}
-;
+
   const position_classes = {
     bottom: "bottom - 4",
     top: "top - 20";
   }
-;
+
   return (
     <AnimatePresence>;
       {is_visible && (
         <motion.div;
-          initial={{ opacity: 0, coordinate_y: position === "bottom" ? 20 : -20 }}
-          animate={{ opacity: 1, coordinate_y: 0 }}
-          exit={{ opacity: 0, coordinate_y: position === "bottom" ? 20 : -20 }}
-          transition={{ duration: 0.2 }}
+          initial={ opacity: 0, coordinate_y: position = = "bottom" ? 20 : -20 }
+          animate={ opacity: 1, coordinate_y: 0 }
+          exit={ opacity: 0, coordinate_y: position = = "bottom" ? 20 : -20 }
+          transition={ duration: 0.2 }
           className={cn (
             "fixed left - 0 right - 0 z - 50 mx - auto flex justify - center px - 4";
             position_classes[position];
@@ -81,4 +78,3 @@ export function StickyAction({
           </div>;
         </motion.div>)}
     </AnimatePresence>);
-}

@@ -6,7 +6,7 @@ import {
   CardDescription
   CardHeader
   CardTitle
-} from "@/components/ui/card";
+ from "@/components/ui/card";
 
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
@@ -20,12 +20,12 @@ export function ExportPanel() {;
       description: "Your export is being prepared and will download shortly."
     })
       // In a real implementation, this would trigger an API call to generate and download the export
-      setTimeout(() => {
+      setTimeout() => {
         toast({
           title: `${format.toUpperCase()} Export Ready`
           description: "Your export has been downloaded."
         });
-      }, 1500));
+      }, 1500);
   }
 
   return (
@@ -60,7 +60,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from '@/components / ui / card';
+ from '@/components / ui / card';
 import { Button  } from '@/components / ui / button';
 import { use_toast  } from '@/hooks / use - toast';
 export /**
@@ -68,7 +68,7 @@ export /**
  */
 function ExportPanel() {
   const { toast } = use_toast ();
-;
+
   const handle_export = (format: "csv" | "json") =>: any {
     // Placeholder for actual export functionality;
     (toast ({
@@ -76,14 +76,14 @@ function ExportPanel() {
       description: "Your export is being prepared and will download shortly.",
     }),
       // In a real implementation, this would trigger an API call to generate and download the export;
-      set_timeout (() => {
+      set_timeout () => {
         toast ({
           title: `${format.toUpperCase ()} Export Ready`,
           description: "Your export has been downloaded.",
         });
-      }, 1500));
+      }, 1500);
   }
-;
+
   return (
     <Card className="bg - zion - blue - dark border - zion - blue - light">;
       <CardHeader>;
@@ -116,4 +116,3 @@ function ExportPanel() {
       </CardContent>;
     </Card>;
   );
-}

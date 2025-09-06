@@ -22,19 +22,19 @@ const EnhancedContactForm: React.FC = () => {
   const validateForm = (): boolean => {
     const newErrors: FormErrors = {},
 
-    if (!formData.name.trim()) {
+    if (!formData.name.trim() {
       newErrors.name = 'Name is required'
     } else if (formData.name.trim().length < 2) {
       newErrors.name = 'Name must be at least 2 characters long'
     }
 
-    if (!formData.email.trim()) {
+    if (!formData.email.trim() {
       newErrors.email = 'Email is required'
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email) {
       newErrors.email = 'Please enter a valid email address'
     }
 
-    if (!formData.message.trim()) {
+    if (!formData.message.trim() {
       newErrors.message = 'Message is required'
     } else if (formData.message.trim().length < 10) {
       newErrors.message = 'Message must be at least 10 characters long'
@@ -42,13 +42,13 @@ const EnhancedContactForm: React.FC = () => {
       newErrors.message = 'Message must be less than 1000 characters'
     }
     setErrors(newErrors),
-    return Object.keys(newErrors).length === 0
+    return Object.keys(newErrors).length = = 0
   },
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault(),
-    
-    if (!validateForm()) {
+
+    if (!validateForm() {
       showError('Validation ErrorPlease fix the errors in the form'),
       return
     }
@@ -56,11 +56,11 @@ const EnhancedContactForm: React.FC = () => {
 
     try {
       // Simulate API call,
-await new Promise(resolve => setTimeout(resolve, 2000)),
-      
+await new Promise(resolve => setTimeout(resolve, 2000),
+
       setIsSubmitted(true),
       showSuccess('Message Sent!Thank you for contacting us. We\'ll get back to you soon.'),
-      
+
       setFormData({
         name: '',
         email: '',
@@ -74,8 +74,7 @@ await new Promise(resolve => setTimeout(resolve, 2000)),
       showError('Submission FailedThere was an error sending your message. Please try again.')
     } finally {
       setIsSubmitting(false)
-    }
-  },
+    },
 
   const services = [
     'AI Business IntelligenceQuantum CybersecurityEdge Computing OrchestrationSpace Technology InnovationNeural Interface DevelopmentOther'
@@ -84,14 +83,13 @@ await new Promise(resolve => setTimeout(resolve, 2000)),
 if (formData[name] && errors[name]) {
       const newErrors = { ...errors },
       delete newErrors[name],
-      setErrors(newErrors)    }
-  },
+      setErrors(newErrors)    },
 
   if (isSubmitted) {
     return (
       <motion.div,
-initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
+initial={ opacity: 0, scale: 0.9 }
+        animate={ opacity: 1, scale: 1 }
         className=&quot;text-center py-12&quot;      >
         <div className=&quot;w-20 h-20 rounded-full bg-green-500/20 mx-auto mb-6 flex items-center justify-center&quot;>
           <CheckCircle className=&quot;w-10 h-10 text-green-400&quot; />
@@ -177,8 +175,8 @@ type=&quot;text&quot;
                   placeholder=&quot;Enter your full name&quot;                />
                 {errors.name && (
                   <motion.p,
-initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
+initial={ opacity: 0, y: -10 }
+                    animate={ opacity: 1, y: 0 }
                     className=&quot;mt-2 text-sm text-red-400 flex items-center gap-2&quot;
                   >
                     <AlertCircle className=&quot;w-4 h-4&quot; />
@@ -205,8 +203,8 @@ type=&quot;email&quot;
                   placeholder=&quot;Enter your email address&quot;                />
                 {errors.email && (
                   <motion.p,
-initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
+initial={ opacity: 0, y: -10 }
+                    animate={ opacity: 1, y: 0 }
                     className=&quot;mt-2 text-sm text-red-400 flex items-center gap-2&quot;
                   >
                     <AlertCircle className=&quot;w-4 h-4&quot; />
@@ -242,10 +240,10 @@ id=&quot;service&quot;
                   className=&quot;w-full px-4 py-3 rounded-xl border border-white/20 bg-white/5 text-white focus:outline-none focus:ring-2 focus:ring-cyan-400/20 focus:border-cyan-400 focus:bg-white/10 transition-all duration-300&quot;
                 >
                   <option value="">Select a service</option>
-                  {services.map((service) => (
+                  {services.map(service) => (
                     <option key={service} value={service} className="bg-slate-800 text-white&quot;>
                       {service}                    </option>
-                  ))}
+                  )}
                 </select>
               </div>
             </div>
@@ -268,8 +266,8 @@ id=&quot;message&quot;
               />
               {errors.message && (
                 <motion.p,
-initial={{ opacity: 0, y: -10}}
-                  animate={_{ opacity: 1, y: 0}}
+initial={ opacity: 0, y: -10}
+                  animate={_{ opacity: 1, y: 0}
                   className="mt-2 text-sm text-red-400 flex items-center gap-2"
                 >
                   <AlertCircle className="w-4 h-4&quot; />
@@ -301,6 +299,6 @@ type=&quot;submit"
       </div>
     </section>
   )
-},
+,
 
 export default EnhancedContactForm,

@@ -6,29 +6,28 @@ type Tx = {
   amount: number,
   reason: string,
   createdAt: string
-},
+,
 
 type Summary = {
   wallet: { userId: string, balance: number },
   transactions: Tx[],
   config: { usdPerToken: number, symbol: string }
-},
+,
 
 function getUserId(): string {
-  if (typeof window === "undefined") return "demo-user",
+  if (typeof window = = "undefined") return "demo-user",
   const fromStorage = window.localStorage.getItem("zion_user_id"),
   if (fromStorage) return fromStorage,
   const generated = "demo-user",
   window.localStorage.setItem("zion_user_id", generated),
   return generated
-}
 
 export default function WalletPanel() {
   const [summary, setSummary] = useState<Summary | null>(null),
   const [tab, setTab] = useState<"earnings" | "spending" | "redeem">("earnings"),
   const [ethAddress, setEthAddress] = useState<string | null>(null),
 
-  const userId = useMemo(() => getUserId(), []),
+  const userId = useMemo() => getUserId(), []),
 
   async function refresh() {
     const res = await fetch(`/api/wallet?userId=${encodeURIComponent(userId)}`),
@@ -36,20 +35,18 @@ export default function WalletPanel() {
     setSummary(data)
   }
 
-  useEffect(() => {
+  useEffect() => {
     refresh()
   }, []),
 
   const balance = summary?.wallet.balance ?? 0,
   const symbol = summary?.config.symbol ?? "ZION$",
-  const earnings = (summary?.transactions || []).filter((t) =>
-    ["earn", "issue"].includes(t.type)
-  ),
-  const spending = (summary?.transactions || []).filter((t) =>
-    ["burn", "revoke", "redeem"].includes(t.type)
-  ),
+  const earnings = (summary?.transactions || []).filter(t) =>
+    ["earn", "issue"].includes(t.type),
+  const spending = (summary?.transactions || []).filter(t) =>
+    ["burn", "revoke", "redeem"].includes(t.type),
 
-  const nextBadgeThreshold = useMemo(() => {
+  const nextBadgeThreshold = useMemo() => {
     if (balance < 50) return 50,
     if (balance < 200) return 200,
     if (balance < 500) return 500,
@@ -57,10 +54,10 @@ export default function WalletPanel() {
     return balance
   }, [balance]),
 
-  const progress = Math.min(100, Math.floor((balance / nextBadgeThreshold) * 100)),
+  const progress = Math.min(100, Math.floor(balance / nextBadgeThreshold) * 100),
 
   async function connectWallet() {
-    if (typeof window === "undefined") return,
+    if (typeof window = = "undefined") return,
     const eth = (window as any).ethereum,
     if (!eth) {
       alert("No Ethereum wallet detected. Please install MetaMask."),
@@ -72,7 +69,6 @@ export default function WalletPanel() {
     } catch (e) {
       console.error(e)
     }
-  }
 
   async function redeem(amount: number) {
     if (!amount || amount <= 0) return,
@@ -87,7 +83,6 @@ export default function WalletPanel() {
       alert(`Redeemed ${amount} ${symbol} for $${data.usd} credit.`),
       refresh()
     }
-  }
 
   return (
     <div className="space-y-6">
@@ -106,7 +101,7 @@ export default function WalletPanel() {
         </div>
         <div className="mt-4">
           <div className="h-2 bg-gray-200 rounded">
-            <div className="h-2 bg-yellow-400 rounded" style={{ width: `${progress}%` }} />
+            <div className="h-2 bg-yellow-400 rounded" style={ width: `${progress}%` } />
           </div>
           <div className="mt-2 text-xs text-gray-500">Next badge at {nextBadgeThreshold} {symbol}</div>
         </div>
@@ -117,22 +112,22 @@ export default function WalletPanel() {
 
       <div className="p-4 border rounded-lg bg-white dark:bg-zinc-900">
         <div className="flex gap-3 mb-4 text-sm">
-          <button onClick={() => setTab("earnings")} className={`px-3 py-1 rounded border ${tab === "earnings" ? "bg-gray-100" : ""}`}>Earnings</button>
-          <button onClick={() => setTab("spending")} className={`px-3 py-1 rounded border ${tab === "spending" ? "bg-gray-100" : ""}`}>Spending</button>
-          <button onClick={() => setTab("redeem")} className={`px-3 py-1 rounded border ${tab === "redeem" ? "bg-gray-100" : ""}`}>Redeem</button>
+          <button onClick={() => setTab("earnings")} className={`px-3 py-1 rounded border ${tab = = "earnings" ? "bg-gray-100" : ""}`}>Earnings</button>
+          <button onClick={() => setTab("spending")} className={`px-3 py-1 rounded border ${tab = = "spending" ? "bg-gray-100" : ""}`}>Spending</button>
+          <button onClick={() => setTab("redeem")} className={`px-3 py-1 rounded border ${tab = = "redeem" ? "bg-gray-100" : ""}`}>Redeem</button>
         </div>
-        {tab !== "redeem" && (
+        {tab != "redeem" && (
           <div className="space-y-2">
-            {(tab === "earnings" ? earnings : spending).map((t) => (
+            {(tab = = "earnings" ? earnings : spending).map(t) => (
               <div key={t.id} className="flex justify-between text-sm border rounded p-2">
                 <div className="flex gap-2 items-center">
-                  <span className={`px-2 py-0.5 rounded text-xs ${t.type === "earn" || t.type === "issue" ? "bg-green-100 text-green-700" : "bg-red-100 text-red-700"}`}>{t.type}</span>
+                  <span className={`px-2 py-0.5 rounded text-xs ${t.type = = "earn" || t.type = = "issue" ? "bg-green-100 text-green-700" : "bg-red-100 text-red-700"}`}>{t.type}</span>
                   <span className="text-gray-600">{t.reason.split('_').join(' ')}</span>
                 </div>
-                <div className="font-medium">{t.type === "earn" || t.type === "issue" ? "+" : "-"}{t.amount} {symbol}</div>
+                <div className="font-medium">{t.type = = "earn" || t.type = = "issue" ? "+" : "-"}{t.amount} {symbol}</div>
               </div>
-            ))}
-            {((tab === "earnings" ? earnings : spending).length === 0) && (
+            )}
+            {(tab = = "earnings" ? earnings : spending).length = = 0) && (
               <div className="text-sm text-gray-500">No transactions yet.</div>
 import React, { useEffect, useMemo, useState } from "react",;
 import Badges from "./Badges",;
@@ -142,53 +137,52 @@ type Tx = {;
   amount: number,;
   reason: string,;
   createdAt: string;
-},;
+,;
 type Summary = {;
   wallet: { userId: string, balance: number },;
   transactions: Tx[],;
   config: { usdPerToken: number, symbol: string }
-},;
+,;
 function getUserId(): string {;
-  if (typeof window === "undefined") return "demo-user",;
+  if (typeof window = = "undefined") return "demo-user",;
   const fromStorage = window.localStorage.getItem("zion_user_id"),;
   if (fromStorage) return fromStorage,;
   const generated = "demo-user",;
   window.localStorage.setItem("zion_user_id", generated),;
   return generated;
-}
-;
+
 export default function WalletPanel() {;
   const [summary, setSummary] = useState<Summary | null>(null),;
   const [tab, setTab] = useState<"earnings" | "spending" | "redeem">("earnings"),;
   const [ethAddress, setEthAddress] = useState<string | null>(null),;
-  const userId = useMemo(() => getUserId(), []),;
+  const userId = useMemo() => getUserId(), []),;
   async function refresh() {;
     const res = await fetch(`/api/wallet?userId=${encodeURIComponent(userId)}`),;
     const data = await res.json(),;
     setSummary(data);
   }
-;
-  useEffect(() => {;
+
+  useEffect() => {;
     refresh();
   }, []),;
   const balance = summary?.wallet.balance ?? 0,;
   const symbol = summary?.config.symbol ?? "ZION$",;
-  const earnings = (summary?.transactions || []).filter((t) =>;
+  const earnings = (summary?.transactions || []).filter(t) =>;
     ["earn", "issue"].includes(t.type);
   ),;
-  const spending = (summary?.transactions || []).filter((t) =>;
+  const spending = (summary?.transactions || []).filter(t) =>;
     ["burn", "revoke", "redeem"].includes(t.type);
   ),;
-  const nextBadgeThreshold = useMemo(() => {;
+  const nextBadgeThreshold = useMemo() => {;
     if (balance < 50) return 50,;
     if (balance < 200) return 200,;
     if (balance < 500) return 500,;
     if (balance < 1000) return 1000,;
     return balance;
   }, [balance]),;
-  const progress = Math.min(100, Math.floor((balance / nextBadgeThreshold) * 100)),;
+  const progress = Math.min(100, Math.floor(balance / nextBadgeThreshold) * 100),;
   async function connectWallet() {;
-    if (typeof window === "undefined") return,;
+    if (typeof window = = "undefined") return,;
     const eth = (window as any).ethereum,;
     if (!eth) {;
       alert("No Ethereum wallet detected. Please install MetaMask."),;
@@ -200,8 +194,7 @@ export default function WalletPanel() {;
     } catch (e) {;
       console.error(e);
     }
-  }
-;
+
   async function redeem(amount: number) {;
     if (!amount || amount <= 0) return,;
     const res = await fetch("/api/wallet/redeem", {;
@@ -215,8 +208,7 @@ export default function WalletPanel() {;
       alert(`Redeemed ${amount} ${symbol} for $${data.usd} credit.`);
       refresh();
     }
-  }
-;
+
   return (;
     <div className="space-y-6">;
       <div className="p-4 border rounded-lg bg-white dark:bg-zinc-900">;
@@ -234,7 +226,7 @@ export default function WalletPanel() {;
         </div>;
         <div className="mt-4">;
           <div className="h-2 bg-gray-200 rounded">;
-            <div className="h-2 bg-yellow-400 rounded" style={{ width: `${progress}%` }} />;
+            <div className="h-2 bg-yellow-400 rounded" style={ width: `${progress}%` } />;
           </div>;
           <div className="mt-2 text-xs text-gray-500">Next badge at {nextBadgeThreshold} {symbol}</div>;
         </div>;
@@ -244,27 +236,27 @@ export default function WalletPanel() {;
       </div>;
       <div className="p-4 border rounded-lg bg-white dark:bg-zinc-900">;
         <div className="flex gap-3 mb-4 text-sm">;
-          <button onClick={() => setTab("earnings")} className={`px-3 py-1 rounded border ${tab === "earnings" ? "bg-gray-100" : ""}`}>Earnings</button>;
-          <button onClick={() => setTab("spending")} className={`px-3 py-1 rounded border ${tab === "spending" ? "bg-gray-100" : ""}`}>Spending</button>;
-          <button onClick={() => setTab("redeem")} className={`px-3 py-1 rounded border ${tab === "redeem" ? "bg-gray-100" : ""}`}>Redeem</button>;
+          <button onClick={() => setTab("earnings")} className={`px-3 py-1 rounded border ${tab = = "earnings" ? "bg-gray-100" : ""}`}>Earnings</button>;
+          <button onClick={() => setTab("spending")} className={`px-3 py-1 rounded border ${tab = = "spending" ? "bg-gray-100" : ""}`}>Spending</button>;
+          <button onClick={() => setTab("redeem")} className={`px-3 py-1 rounded border ${tab = = "redeem" ? "bg-gray-100" : ""}`}>Redeem</button>;
         </div>;
-        {tab !== "redeem" && (;
+        {tab != "redeem" && (;
           <div className="space-y-2">;
-            {(tab === "earnings" ? earnings : spending).map((t) => (;
+            {(tab = = "earnings" ? earnings : spending).map(t) => (;
               <div key={t.id} className="flex justify-between text-sm border rounded p-2">;
                 <div className="flex gap-2 items-center">;
-                  <span className={`px-2 py-0.5 rounded text-xs ${t.type === "earn" || t.type === "issue" ? "bg-green-100 text-green-700" : "bg-red-100 text-red-700"}`}>{t.type}</span>;
+                  <span className={`px-2 py-0.5 rounded text-xs ${t.type = = "earn" || t.type = = "issue" ? "bg-green-100 text-green-700" : "bg-red-100 text-red-700"}`}>{t.type}</span>;
                   <span className="text-gray-600">{t.reason.split('_').join(' ')}</span>;
                 </div>;
-                <div className="font-medium">{t.type === "earn" || t.type === "issue" ? "+" : "-"}{t.amount} {symbol}</div>;
+                <div className="font-medium">{t.type = = "earn" || t.type = = "issue" ? "+" : "-"}{t.amount} {symbol}</div>;
               </div>;
-            ))}
-            {((tab === "earnings" ? earnings : spending).length === 0) && (;
+            )}
+            {(tab = = "earnings" ? earnings : spending).length = = 0) && (;
               <div className="text-sm text-gray-500">No transactions yet.</div>;
             )}
           </div>;
         )}
-        {tab === "redeem" && (
+        {tab = = "redeem" && (
           <div className="space-y-3 text-sm">
             <div className="text-gray-600">Convert your {symbol} into credits.</div>
             <div className="text-gray-600">Rate: 1 {symbol} = ${summary?.config.usdPerToken?.toFixed(2) ?? "0.00"}</div>
@@ -279,4 +271,3 @@ export default function WalletPanel() {;
       </div>;
     </div>;
   );
-}

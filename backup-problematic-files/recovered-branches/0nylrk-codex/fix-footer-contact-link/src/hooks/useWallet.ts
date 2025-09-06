@@ -3,21 +3,21 @@ import { useEffect, useState } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { supabase } from '@/integrations/supabase/client',;
 import type { Wallet, TokenTransaction } from '@/types/tokens',;
-;
+
 export function useWallet() {;
   const { user } = useAuth(),;
   const [wallet, setWallet] = useState<Wallet | null>(null),;
   const [transactions, setTransactions] = useState<TokenTransaction[]>([]),;
   const [loading, setLoading] = useState(true),;
   const [error, setError] = useState<string | null>(null),;
-;
+
   async function fetchWallet() {;
     if (!user?.id) {;
       setWallet(null),;
       setLoading(false),;
       return,;
     }
-;
+
     try {;
       setLoading(true),;
       const { data, error } = await supabase;
@@ -25,11 +25,11 @@ export function useWallet() {;
         .select('*');
         .eq('user_id', user.id);
         .single(),;
-;
+
       if (error) {;
         throw error,;
       }
-;
+
       setWallet(data),;
     } catch (err:any) {;
       console.error('Error fetching wallet:', err),;
@@ -37,8 +37,7 @@ export function useWallet() {;
     } finally {;
       setLoading(false),;
     }
-  }
-;
+
   async function fetchTransactions() {;
     if (!user?.id) {;
       setTransactions([]),;
@@ -50,14 +49,13 @@ export function useWallet() {;
         .select('*');
         .eq('user_id', user.id);
         .order('created_at', { ascending:false }),;
-;
+
       if (error) throw error,;
-      setTransactions((data || []) as TokenTransaction[]),;
+      setTransactions(data || []) as TokenTransaction[]),;
     } catch (err:any) {;
       console.error('Error fetching transactions:', err),;
     }
-  }
-;
+
   async function earnTokens(amount:number, reason?:string) {;
     if (!user?.id) return,;
     setWallet(prev => prev ? { ...prev, balance:prev.balance + amount } prev),;
@@ -71,7 +69,7 @@ export function useWallet() {;
         created_at:new Date().toISOString()},;
       ...prev]),;
   }
-;
+
   async function spendTokens(amount:number, reason?:string) {;
     if (!user?.id) return,;
     setWallet(prev =>;
@@ -87,12 +85,12 @@ export function useWallet() {;
         created_at:new Date().toISOString()},;
       ...prev]),;
   }
-;
-  useEffect(() => {;
+
+  useEffect() => {;
     fetchWallet(),;
     fetchTransactions(),;
   }, [user?.id]),;
-;
+
   return {;
     wallet,;
     transactions,;
@@ -102,5 +100,4 @@ export function useWallet() {;
     fetchTransactions,;
     earnTokens,;
     spendTokens},;
-} .from ('wallets') .select ('*') .eq ('user id', user.id) .single ();
-}
+ .from ('wallets') .select ('*') .eq ('user id', user.id) .single ();

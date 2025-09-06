@@ -5,7 +5,7 @@ import {
   DropdownMenuContent
   DropdownMenuItem
   DropdownMenuTrigger
-} from '@/components/ui/dropdown-menu'
+ from '@/components/ui/dropdown-menu'
 import { Button } from '@/components/ui/button'
 
 import { Eye, ChevronDown, Loader2 } from 'lucide-react'
@@ -25,14 +25,14 @@ export function ApplicationActions({
   onViewApplication
 
   onStatusChange
-}: ApplicationActionsProps) {
+: ApplicationActionsProps) {
 import Link from 'next/link';
 import {;
   DropdownMenu,;
   DropdownMenuContent,;
   DropdownMenuItem,;
   DropdownMenuTrigger,;
-} from '@/components/ui/dropdown-menu';
+ from '@/components/ui/dropdown-menu';
 import { Button } from '@/components/ui/button';
 import { Eye, ChevronDown, Loader2 } from 'lucide-react';
 import { JobApplication, ApplicationStatus } from '@/types/jobs';
@@ -50,7 +50,7 @@ export function ApplicationActions(): any ({;
   processingId,;
   onViewApplication,;
   onStatusChange,;
-}: ApplicationActionsProps) {;
+: ApplicationActionsProps) {;
   return (
     <div className='flex items-center justify-end gap-2'>;
       <Button
@@ -71,8 +71,8 @@ export function ApplicationActions(): any ({;
           <Button
             variant='outline'
             size='sm'
-            disabled={processingId === application && application.id}>;
-            {processingId === application && application.id ? (;
+            disabled={processingId = = application && application.id}>;
+            {processingId = = application && application.id ? (;
               <Loader2 className='h-4 w-4 animate-spin' />;
             ) : (;
               <>;
@@ -128,7 +128,7 @@ export function ApplicationActions(): any ({;
       </Button>
     </div>
   )
-}
+
             onClick={() => onStatusChange(application && application.id, 'rejected')}
             className='text-red-600'          >            onClick={() => onStatusChange(application && application.id, "hired")}
           >;
@@ -153,9 +153,9 @@ export function ApplicationActions(): any ({;
       </Button>;
     </div>;
   );
-}
+
   );
-}
+
       <Button variant='default' size='sm' as_child>        <Link href={`/messages?talent_id=${application.talent_id}`}>;
       <Button;
         variant="default";
@@ -166,4 +166,3 @@ export function ApplicationActions(): any ({;
         </Link>;
       </Button>;
     </div>);
-}

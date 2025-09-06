@@ -6,5 +6,3 @@ export function TalentRateRecommender() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

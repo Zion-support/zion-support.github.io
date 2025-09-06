@@ -1,7 +1,7 @@
 import React from 'react',;
 import SEO from '../components/SEO',;
 import Link from 'next/link',;
-;
+
 export default function SOC2ComplianceAutomationPage() {;
 	return (;
 		<>;
@@ -12,7 +12,7 @@ export default function SOC2ComplianceAutomationPage() {;
 					<p className="mt-6 text-lg text-gray-300 max-w-3xl">;
 						Automate SOC 2 readiness with continuous controls, evidence pipelines, and prebuilt auditor workflows. Integrates with cloud providers and ticketing systems.;
 					</p>;
-;
+
 					<div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
 						{[;
 							{ title:'Controls Library', desc:'Mapped to SOC 2 Trust Service Criteria with policy templates.' },;
@@ -21,14 +21,14 @@ export default function SOC2ComplianceAutomationPage() {;
 							{ title:'Asset Inventory', desc:'Infrastructure and device inventory with configuration checks.' },;
 							{ title:'Workflow & Tasks', desc:'Assign remediation tasks, SLAs, and approvals.' },;
 							{ title:'Audit Room', desc:'Share evidence securely with auditors, immutable logs.' }
-						].map((f) => (;
+						].map(f) => (;
 							<div key={f.title} className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur">;
 								<h3 className="text-lg font-semibold text-white">{f.title}</h3>;
 								<p className="mt-2 text-sm text-gray-300">{f.desc}</p>;
 							</div>;
-						))}
+						)}
 					</div>;
-;
+
 					<div className="mt-12">;
 						<h2 className="text-2xl font-semibold">Pricing</h2>;
 						<div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">;
@@ -50,7 +50,7 @@ export default function SOC2ComplianceAutomationPage() {;
 						</div>;
 						<p className="mt-4 text-sm text-gray-400">Market references:<a className="underline hover:text-cyan-300" href="https://www.vanta.com/" target="_blank" rel="noreferrer">Vanta</a>, <a className="underline hover:text-cyan-300" href="https://drata.com/" target="_blank" rel="noreferrer">Drata</a>, <a className="underline hover:text-cyan-300" href="https://securityscorecard.com/" target="_blank" rel="noreferrer">SecurityScorecard</a>.</p>;
 					</div>;
-;
+
 					<div className="mt-12 flex flex-wrap items-center gap-4">;
 						<Link href="/contact" className="px-5 py-3 rounded-lg bg-pink-400 text-black font-semibold">Automate SOC 2</Link>;
 						<a href="mailto:kleber@ziontechgroup.com" className="px-5 py-3 rounded-lg border border-white/20">Email:kleber@ziontechgroup.com</a>;
@@ -60,4 +60,3 @@ export default function SOC2ComplianceAutomationPage() {;
 			</section>;
 		</>;
 	);
-}

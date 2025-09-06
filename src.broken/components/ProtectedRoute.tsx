@@ -6,5 +6,3 @@ export function SupportChatbot() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

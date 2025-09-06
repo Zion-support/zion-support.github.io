@@ -1,13 +1,13 @@
 import { useState } from 'react',;
 import { useRouter } from 'next/router',;
-;
+
 export default function AdminLoginPage() {;
   const router = useRouter(),;
   const [username, setUsername] = useState(''),;
   const [password, setPassword] = useState(''),;
   const [error, setError] = useState<string | null>(null),;
   const [loading, setLoading] = useState(false),;
-;
+
   async function onSubmit(e:React.FormEvent) {;
     e.preventDefault(),;
     setLoading(true),;
@@ -24,8 +24,7 @@ export default function AdminLoginPage() {;
     } finally {;
       setLoading(false),;
     }
-  }
-;
+
   return (;
     <div className="max-w-sm mx-auto bg-white p-6 rounded shadow">;
       <h1 className="text-xl font-semibold mb-4">Admin Login</h1>;
@@ -45,4 +44,3 @@ export default function AdminLoginPage() {;
       </form>;
     </div>;
   ),;
-}

@@ -8,13 +8,13 @@ import {
   DollarSign, BarChart3, Palette, Cloud, Network, ShoppingCart, Settings, Building, Monitor,
   Layers, Globe2, Lock, Code, Server, Phone, Search, Filter, Grid, List, Eye as EyeIcon,
   ArrowUpRight, Star as StarIcon, Sparkles, Target as TargetIcon
-} from 'lucide-react',
+ from 'lucide-react',
 
-// Import our new innovative services,
+/ Import our new innovative services,
 import { innovative2025AIAutonomousEcosystemV2 } from '../data/2025-innovative-ai-autonomous-ecosystem-v2',
 import { emergingTechBreakthroughs2025V4 } from '../data/2025-emerging-tech-breakthroughs-v4',
 import { innovative2025ITInfrastructureV2 } from '../data/2025-innovative-it-infrastructure-v2',
-// Import enhanced components,
+/ Import enhanced components,
 import UltraFuturisticBackground2047 from './backgrounds/UltraFuturisticBackground2047',
 import UltraFuturisticNavigation2047 from './layout/UltraFuturisticNavigation2047',
 import UltraFuturisticFooter2047 from './layout/UltraFuturisticFooter2047',
@@ -26,22 +26,22 @@ const Homepage2047: React.FC = () => {
   const [hoveredService, setHoveredService] = useState<string | null>(null),
   const [consciousnessLevel, setConsciousnessLevel] = useState(0.5),
   const [scrollY, setScrollY] = useState(0),
-  
-  useEffect(() => {
+
+  useEffect() => {
     setIsVisible(true),
-    
+
     // Auto-rotate featured services,
-const interval = setInterval(() => {
-      setCurrentServiceIndex((prev) => (prev + 1) % 6)
+const interval = setInterval() => {
+      setCurrentServiceIndex(prev) => (prev + 1) % 6)
     }, 8000),
-    
+
     // Track mouse movement for parallax effects,
 const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY })
     },
-    
+
     // Animate consciousness level,
-const consciousnessInterval = setInterval(() => {
+const consciousnessInterval = setInterval() => {
       setConsciousnessLevel(prev => Math.sin(Date.now() * 0.001) * 0.3 + 0.7)
     }, 100),
 
@@ -51,14 +51,13 @@ const handleScroll = () => {
     },    
     window.addEventListener('mousemove', handleMouseMove),
     window.addEventListener('scroll', handleScroll),
-    
+
     return () => {
       clearInterval(interval),
       clearInterval(consciousnessInterval),
       window.removeEventListener('mousemove', handleMouseMove),
       window.removeEventListener('scroll', handleScroll)
-    }
-  }, []),
+    }, []),
   // Combine all innovative services,
 const allInnovativeServices = [
     ...innovative2025AIAutonomousEcosystemV2,
@@ -71,10 +70,10 @@ const featuredServices = allInnovativeServices.slice(0, 6),
 
   // Filter services by category,
 const getFilteredServices = () => {
-    if (selectedCategory === 'all') return allInnovativeServices,
+    if (selectedCategory = = 'all') return allInnovativeServices,
     return allInnovativeServices.filter(service => 
-      service.category.toLowerCase().includes(selectedCategory.toLowerCase()) ||
-      service.type.toLowerCase().includes(selectedCategory.toLowerCase())
+      service.category.toLowerCase().includes(selectedCategory.toLowerCase() ||
+      service.type.toLowerCase().includes(selectedCategory.toLowerCase()
     )
   },
 
@@ -103,18 +102,17 @@ const getFilteredServices = () => {
   const fadeInUp = {
     initial: { opacity: 0, y: 60 },
     animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.6 }
-  },
+    transition: { duration: 0.6 },
 
   const staggerContainer = {
     animate: {
   const featuredServices = allInnovativeServices.slice(0, 6);
 
   // Filter services by category,
-const getFilteredServices = () => {if (selectedCategory === 'all') return allInnovativeServices;
+const getFilteredServices = () => {if (selectedCategory = = 'all') return allInnovativeServices;
     return allInnovativeServices.filter(service => 
-      service.category.toLowerCase().includes(selectedCategory.toLowerCase()) ||
-      service.type.toLowerCase().includes(selectedCategory.toLowerCase())
+      service.category.toLowerCase().includes(selectedCategory.toLowerCase() ||
+      service.type.toLowerCase().includes(selectedCategory.toLowerCase()
     )};
 
   const categories = [
@@ -142,19 +140,17 @@ const getFilteredServices = () => {if (selectedCategory === 'all') return allInn
 
   const fadeInUp = {initial: { opacity: 0, y: 60},
     animate: {opacity: 1, y: 0},
-    transition: {duration: 0.6}
-  };
+    transition: {duration: 0.6};
 
   const staggerContainer = {animate: {
       transition: {
         staggerChildren: 0.1}
-    }
   },
 
   return (
     <div className=&quot;min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white overflow-hidden&quot;>
       {/* Futuristic Background */}      <UltraFuturisticBackground2047 />
-      
+
       {_/* Navigation */}
       <UltraFuturisticNavigation2047 />
 
@@ -164,15 +160,15 @@ const getFilteredServices = () => {if (selectedCategory === 'all') return allInn
           <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-16 items-center&quot;>
             {/* Left Content */}
             <motion.div,
-initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1 }}
+initial={ opacity: 0, x: -50 }
+              animate={ opacity: 1, x: 0 }
+              transition={ duration: 1 }
               className=&quot;space-y-8&quot;            >
               <div className=&quot;space-y-6&quot;>
                 <motion.div,
-initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.2 }}
+initial={ opacity: 0, y: 20 }
+                  animate={ opacity: 1, y: 0 }
+                  transition={ duration: 0.8, delay: 0.2 }
                   className=&quot;inline-flex items-center space-x-3 px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-full text-cyan-400 text-sm font-medium&quot;                >
                   <Sparkles className=&quot;w-4 h-4&quot; />
                   <span>Innovating the Future Since 2025</span>
@@ -196,9 +192,9 @@ initial={{ opacity: 0, y: 20 }}
 
               {_/* CTA Buttons */}
               <motion.div,
-initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
+initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.8, delay: 0.4 }
                 className=&quot;flex flex-col sm:flex-row gap-4&quot;              >
                 <Link,
 href=&quot;/2025-innovative-services-showcase-v2&quot;
@@ -207,7 +203,7 @@ href=&quot;/2025-innovative-services-showcase-v2&quot;
                   <span>Explore Services</span>
                   <ArrowUpRight className=&quot;w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200&quot; />
                 </a>
-                
+
                 <Link,
 href=&quot;/contact&quot;
                   className=&quot;group border-2 border-cyan-500/50 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-cyan-500/10 hover:border-cyan-500 transition-all duration-200 flex items-center justify-center space-x-2&quot;
@@ -223,7 +219,7 @@ variants={staggerContainer}
                 initial=&quot;initial&quot;
                 animate=&quot;animate&quot;
                 className=&quot;grid grid-cols-2 md:grid-cols-4 gap-6&quot;              >
-                {stats.map((stat, index) => (
+                {stats.map(stat, index) => (
                   <motion.div,
 key={index}
                     variants={fadeInUp}
@@ -231,23 +227,23 @@ key={index}
                   >
                     <div className=&quot;text-2xl font-bold text-cyan-400 mb-1&quot;>{stat.number}</div>
                     <div className=&quot;text-sm text-gray-400&quot;>{stat.label}</div>                  </motion.div>
-                ))}
+                )}
               </motion.div>
             </motion.div>
 
             {_/* Right Content - Featured Service */}
             <motion.div,
-initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1, delay: 0.3 }}
+initial={ opacity: 0, x: 50 }
+              animate={ opacity: 1, x: 0 }
+              transition={ duration: 1, delay: 0.3 }
               className=&quot;relative&quot;            >
               <AnimatePresence mode=&quot;wait&quot;>
                 <motion.div,
 key={currentServiceIndex}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.9 }}
-                  transition={{ duration: 0.5 }}
+                  initial={ opacity: 0, scale: 0.9 }
+                  animate={ opacity: 1, scale: 1 }
+                  exit={ opacity: 0, scale: 0.9 }
+                  transition={ duration: 0.5 }
                   className=&quot;relative&quot;                >
                   <div className=&quot;bg-gradient-to-br from-gray-800/30 to-gray-900/30 rounded-3xl p-8 border border-cyan-500/20 backdrop-blur-sm&quot;>
                     <div className=&quot;flex items-center justify-between mb-6&quot;>
@@ -259,14 +255,14 @@ key={currentServiceIndex}
                         <div className=&quot;text-xs text-gray-400&quot;>Auto-rotating</div>
                       </div>
                     </div>
-                    
+
                     <h3 className=&quot;text-2xl font-bold text-white mb-3&quot;>
                       {featuredServices[currentServiceIndex]?.name}
                     </h3>
                     <p className=&quot;text-gray-300 mb-6 leading-relaxed&quot;>
                       {featuredServices[currentServiceIndex]?.description}
                     </p>
-                    
+
                     <div className=&quot;space-y-3 mb-6&quot;>
                       <div className=&quot;flex items-center justify-between text-sm&quot;>
                         <span className=&quot;text-gray-400&quot;>Starting at:</span>
@@ -280,7 +276,7 @@ key={currentServiceIndex}
                           {featuredServices[currentServiceIndex]?.marketSize}                        </span>
                       </div>
                     </div>
-                    
+
                     <Link,
 href={featuredServices[currentServiceIndex]?.slug || '#'}
                       className=&quot;w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 rounded-xl font-medium text-center hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 block&quot;                    >
@@ -298,10 +294,10 @@ href={featuredServices[currentServiceIndex]?.slug || '#'}
       <section className=&quot;relative py-20 px-4 sm:px-6 lg:px-8&quot;>
         <div className=&quot;max-w-7xl mx-auto&quot;>
           <motion.div,
-initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            viewport={ once: true }
+            transition={ duration: 0.8 }
             className=&quot;text-center mb-16&quot;          >
             <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-6&quot;>
               Revolutionary Service Categories
@@ -316,7 +312,7 @@ initial={{ opacity: 0, y: 30 }}
 variants={staggerContainer}
             initial=&quot;initial&quot;
             whileInView=&quot;animate&quot;
-            viewport={{ once: true }}
+            viewport={ once: true }
             className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8&quot;          >
             {categories.map(_(category, index) => (
               <motion.div,
@@ -325,7 +321,7 @@ key={category.id}
                 className=&quot;group relative&quot;
               >
                 <Link,
-href={category.id === 'all' ? '/2025-innovative-services-showcase-v2' : `/2025-innovative-services-showcase-v2?category=${category.id}`}
+href={category.id = = 'all' ? '/2025-innovative-services-showcase-v2' : `/2025-innovative-services-showcase-v2?category=${category.id}`}
                   className=&quot;block h-full&quot;
                 >
                   <div className=&quot;h-full bg-gradient-to-br from-gray-800/30 to-gray-900/30 rounded-2xl p-8 border border-gray-700/30 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105 group-hover:shadow-2xl group-hover:shadow-cyan-500/25&quot;>
@@ -338,10 +334,10 @@ href={category.id === 'all' ? '/2025-innovative-services-showcase-v2' : `/2025-i
                         <div className=&quot;text-xs text-gray-400&quot;>Services</div>
                       </div>
                     </div>
-                    
+
                     <h3 className=&quot;text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-200&quot;>
                       {category.name}                    </h3>
-                    
+
                     <div className=&quot;flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-200&quot;>
                       <span className=&quot;text-sm font-medium&quot;>Explore Services</span>
                       <ArrowRight className=&quot;w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200&quot; />
@@ -349,19 +345,19 @@ href={category.id === 'all' ? '/2025-innovative-services-showcase-v2' : `/2025-i
                   </div>
                 </a>
               </motion.div>
-            ))}
+            )}
           </motion.div>;
         </div>;
       </section>;
-;
+
       {/* Featured Services Grid */}
       <section className=&quot;relative py-20 px-4 sm:px-6 lg:px-8&quot;>
         <div className=&quot;max-w-7xl mx-auto&quot;>
           <motion.div,
-initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            viewport={ once: true }
+            transition={ duration: 0.8 }
             className=&quot;text-center mb-16&quot;          >
             <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-6&quot;>
               Featured Innovative Services
@@ -376,7 +372,7 @@ initial={{ opacity: 0, y: 30 }}
 variants={staggerContainer}
             initial=&quot;initial&quot;
             whileInView=&quot;animate&quot;
-            viewport={{ once: true }}
+            viewport={ once: true }
             className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;          >
             {features.map(_(feature, index) => (
               <motion.div,
@@ -389,13 +385,13 @@ key={index}
                     <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${feature.color} flex items-center justify-center mb-6`}>
                       <feature.icon className=&quot;w-8 h-8 text-white&quot; />
                     </div>
-                    
+
                     <h3 className=&quot;text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-200&quot;>
                       {feature.title}
                     </h3>
                     <p className=&quot;text-gray-300 mb-6 leading-relaxed&quot;>
                       {feature.description}                    </p>
-                    
+
                     <div className=&quot;flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-200&quot;>
                       <span className=&quot;text-sm font-medium&quot;>Learn More</span>
                       <ArrowRight className=&quot;w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200&quot; />
@@ -403,15 +399,15 @@ key={index}
                   </div>
                 </a>
               </motion.div>
-            ))}
+            )}
           </motion.div>
 
           {_/* View All Services CTA */}
           <motion.div,
-initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            viewport={ once: true }
+            transition={ duration: 0.8, delay: 0.2 }
             className=&quot;text-center mt-16&quot;          >
             <Link,
 href=&quot;/2025-innovative-services-showcase-v2&quot;
@@ -426,10 +422,10 @@ href=&quot;/2025-innovative-services-showcase-v2&quot;
       {/* CTA Section */}
       <section className=&quot;relative py-20 px-4 sm:px-6 lg:px-8&quot;>
         <div className=&quot;max-w-4xl mx-auto text-center&quot;>          <motion.div,
-initial={_{ opacity: 0, y: 30}}
-            whileInView={_{ opacity: 1, y: 0}}
-            viewport={_{ once: true}}
-            transition={_{ duration: 0.8}}
+initial={_{ opacity: 0, y: 30}
+            whileInView={_{ opacity: 1, y: 0}
+            viewport={_{ once: true}
+            transition={_{ duration: 0.8}
           >
             <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-6&quot;>
               Ready to Transform Your Business?
@@ -459,6 +455,6 @@ href=&quot;/2025-innovative-services-showcase-v2&quot;
       <UltraFuturisticFooter2047 />
     </div>
   )
-},
+,
 
 export default Homepage2047,

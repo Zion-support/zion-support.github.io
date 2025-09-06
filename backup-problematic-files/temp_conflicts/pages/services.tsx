@@ -6,10 +6,10 @@ import { ;
   Brain, Shield, Rocket, Cpu, Database, Atom, ;
   Users, Target, Star, Zap, Globe, TrendingUp,;
   CheckCircle, ArrowRight, ExternalLink, Sparkles;
-} from 'lucide-react',;
+ from 'lucide-react',;
 import EnhancedNavigation from '../components/EnhancedNavigation',;
 import EnhancedFooter from '../components/EnhancedFooter',;
-;
+
 export default function ServicesPage() {;
   const mainServices = [;
     {;
@@ -103,7 +103,7 @@ export default function ServicesPage() {;
       href:"/neural-interface";
     }
   ],;
-;
+
   const specializedServices = [;
     {;
       title:"AI Autonomous Systems",;
@@ -130,7 +130,7 @@ export default function ServicesPage() {;
       color:"from-orange-500 to-red-500";
     }
   ],;
-;
+
   const industries = [;
     "Finance & Banking",;
     "Healthcare & Life Sciences",;
@@ -141,7 +141,7 @@ export default function ServicesPage() {;
     "Education & Research",;
     "Government & Defense";
   ],;
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">;
       <Head>;
@@ -152,16 +152,16 @@ export default function ServicesPage() {;
         <meta name="keywords" content="AI services, quantum computing, technology solutions, business intelligence, cybersecurity" />;
         <link rel="canonical" href="https://ziontechgroup.com/services" />;
       </Head>;
-;
+
       <EnhancedNavigation />;
-;
+
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-6">;
         <div className="max-w-6xl mx-auto text-center">;
           <motion.div;
-            initial={{ opacity:0, y:30 }}
-            animate={{ opacity:1, y:0 }}
-            transition={{ duration:0.8 }}
+            initial={ opacity:0, y:30 }
+            animate={ opacity:1, y:0 }
+            transition={ duration:0.8 }
           >;
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">;
               Our Services;
@@ -173,15 +173,15 @@ export default function ServicesPage() {;
           </motion.div>;
         </div>;
       </section>;
-;
+
       {/* Main Services Grid */}
       <section className="py-20 px-6">;
         <div className="max-w-6xl mx-auto">;
           <motion.div;
-            initial={{ opacity:0, y:30 }}
-            whileInView={{ opacity:1, y:0 }}
-            transition={{ duration:0.8 }}
-            viewport={{ once:true }}
+            initial={ opacity:0, y:30 }
+            whileInView={ opacity:1, y:0 }
+            transition={ duration:0.8 }
+            viewport={ once:true }
             className="text-center mb-16";
           >;
             <h2 className="text-4xl font-bold text-white mb-6">Core Technology Services</h2>;
@@ -190,36 +190,33 @@ export default function ServicesPage() {;
               each designed to address specific business challenges and opportunities.;
             </p>;
           </motion.div>;
-;
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {mainServices.map((service, index) => (;
+            {mainServices.map(service, index) => (;
               <motion.div;
                 key={service.title}
-                initial={{ opacity:0, y:30 }}
-                whileInView={{ opacity:1, y:0 }}
-                transition={{ duration:0.8, delay:index * 0.1 }}
-                viewport={{ once:true }}
+                initial={ opacity:0, y:30 }
+                whileInView={ opacity:1, y:0 }
+                transition={ duration:0.8, delay:index * 0.1 }
+                viewport={ once:true }
                 className="bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-slate-700/50 p-8 hover:border-slate-600/50 transition-all duration-300 group";
               >;
                 <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>;
                   <service.icon className="w-8 h-8 text-white" />;
                 </div>;
-                ;
                 <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>;
                 <p className="text-slate-300 mb-6 leading-relaxed">{service.description}</p>;
-                ;
                 <div className="mb-6">;
                   <h4 className="text-white font-semibold mb-3">Key Features:</h4>;
                   <ul className="space-y-2">;
-                    {service.features.map((feature, featureIndex) => (;
+                    {service.features.map(feature, featureIndex) => (;
                       <li key={featureIndex} className="flex items-center space-x-2 text-slate-300 text-sm">;
                         <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />;
                         <span>{feature}</span>;
                       </li>;
-                    ))}
+                    )}
                   </ul>;
                 </div>;
-                ;
                 <div className="flex items-center justify-between mb-6">;
                   <div className="text-2xl font-bold text-blue-400">{service.price}</div>;
                   <a;
@@ -230,7 +227,6 @@ export default function ServicesPage() {;
                     <ArrowRight className="w-4 h-4" />;
                   </a>;
                 </div>;
-                ;
                 <Link;
                   href="/contact";
                   className="w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-lg text-white font-semibold text-center transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2";
@@ -239,19 +235,19 @@ export default function ServicesPage() {;
                   <ExternalLink className="w-4 h-4" />;
                 </Link>;
               </motion.div>;
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Specialized Services */}
       <section className="py-20 px-6 bg-slate-900/50">;
         <div className="max-w-6xl mx-auto">;
           <motion.div;
-            initial={{ opacity:0, y:30 }}
-            whileInView={{ opacity:1, y:0 }}
-            transition={{ duration:0.8 }}
-            viewport={{ once:true }}
+            initial={ opacity:0, y:30 }
+            whileInView={ opacity:1, y:0 }
+            transition={ duration:0.8 }
+            viewport={ once:true }
             className="text-center mb-16";
           >;
             <h2 className="text-4xl font-bold text-white mb-6">Specialized Solutions</h2>;
@@ -259,15 +255,15 @@ export default function ServicesPage() {;
               Advanced technology solutions for specific use cases and emerging opportunities.;
             </p>;
           </motion.div>;
-;
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
-            {specializedServices.map((service, index) => (;
+            {specializedServices.map(service, index) => (;
               <motion.div;
                 key={service.title}
-                initial={{ opacity:0, x:index % 2 === 0 ? -30 :30 }}
-                whileInView={{ opacity:1, x:0 }}
-                transition={{ duration:0.8, delay:index * 0.1 }}
-                viewport={{ once:true }}
+                initial={ opacity:0, x:index % 2 = = 0 ? -30 :30 }
+                whileInView={ opacity:1, x:0 }
+                transition={ duration:0.8, delay:index * 0.1 }
+                viewport={ once:true }
                 className="bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-slate-700/50 p-8 hover:border-slate-600/50 transition-all duration-300";
               >;
                 <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6`}>;
@@ -283,19 +279,19 @@ export default function ServicesPage() {;
                   <ArrowRight className="w-4 h-4" />;
                 </Link>;
               </motion.div>;
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Industries We Serve */}
       <section className="py-20 px-6">;
         <div className="max-w-6xl mx-auto">;
           <motion.div;
-            initial={{ opacity:0, y:30 }}
-            whileInView={{ opacity:1, y:0 }}
-            transition={{ duration:0.8 }}
-            viewport={{ once:true }}
+            initial={ opacity:0, y:30 }
+            whileInView={ opacity:1, y:0 }
+            transition={ duration:0.8 }
+            viewport={ once:true }
             className="text-center mb-16";
           >;
             <h2 className="text-4xl font-bold text-white mb-6">Industries We Serve</h2>;
@@ -304,15 +300,15 @@ export default function ServicesPage() {;
               with specialized expertise in key sectors.;
             </p>;
           </motion.div>;
-;
+
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">;
-            {industries.map((industry, index) => (;
+            {industries.map(industry, index) => (;
               <motion.div;
                 key={industry}
-                initial={{ opacity:0, y:20 }}
-                whileInView={{ opacity:1, y:0 }}
-                transition={{ duration:0.8, delay:index * 0.05 }}
-                viewport={{ once:true }}
+                initial={ opacity:0, y:20 }
+                whileInView={ opacity:1, y:0 }
+                transition={ duration:0.8, delay:index * 0.05 }
+                viewport={ once:true }
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6 text-center hover:border-slate-600/50 transition-all duration-300 group";
               >;
                 <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">;
@@ -320,19 +316,19 @@ export default function ServicesPage() {;
                 </div>;
                 <h3 className="text-white font-semibold">{industry}</h3>;
               </motion.div>;
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Why Choose Us */}
       <section className="py-20 px-6 bg-slate-900/50">;
         <div className="max-w-6xl mx-auto">;
           <motion.div;
-            initial={{ opacity:0, y:30 }}
-            whileInView={{ opacity:1, y:0 }}
-            transition={{ duration:0.8 }}
-            viewport={{ once:true }}
+            initial={ opacity:0, y:30 }
+            whileInView={ opacity:1, y:0 }
+            transition={ duration:0.8 }
+            viewport={ once:true }
             className="text-center mb-16";
           >;
             <h2 className="text-4xl font-bold text-white mb-6">Why Choose Zion Tech Group?</h2>;
@@ -341,13 +337,13 @@ export default function ServicesPage() {;
               solutions that drive real business value.;
             </p>;
           </motion.div>;
-;
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
             <motion.div;
-              initial={{ opacity:0, y:30 }}
-              whileInView={{ opacity:1, y:0 }}
-              transition={{ duration:0.8, delay:0.1 }}
-              viewport={{ once:true }}
+              initial={ opacity:0, y:30 }
+              whileInView={ opacity:1, y:0 }
+              transition={ duration:0.8, delay:0.1 }
+              viewport={ once:true }
               className="text-center";
             >;
               <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-6">;
@@ -359,12 +355,12 @@ export default function ServicesPage() {;
                 that give you a competitive advantage.;
               </p>;
             </motion.div>;
-;
+
             <motion.div;
-              initial={{ opacity:0, y:30 }}
-              whileInView={{ opacity:1, y:0 }}
-              transition={{ duration:0.8, delay:0.2 }}
-              viewport={{ once:true }}
+              initial={ opacity:0, y:30 }
+              whileInView={ opacity:1, y:0 }
+              transition={ duration:0.8, delay:0.2 }
+              viewport={ once:true }
               className="text-center";
             >;
               <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-6">;
@@ -376,12 +372,12 @@ export default function ServicesPage() {;
                 in AI, quantum computing, and industry applications.;
               </p>;
             </motion.div>;
-;
+
             <motion.div;
-              initial={{ opacity:0, y:30 }}
-              whileInView={{ opacity:1, y:0 }}
-              transition={{ duration:0.8, delay:0.3 }}
-              viewport={{ once:true }}
+              initial={ opacity:0, y:30 }
+              whileInView={ opacity:1, y:0 }
+              transition={ duration:0.8, delay:0.3 }
+              viewport={ once:true }
               className="text-center";
             >;
               <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-6">;
@@ -396,15 +392,15 @@ export default function ServicesPage() {;
           </div>;
         </div>;
       </section>;
-;
+
       {/* CTA Section */}
       <section className="py-20 px-6">;
         <div className="max-w-4xl mx-auto text-center">;
           <motion.div;
-            initial={{ opacity:0, y:30 }}
-            whileInView={{ opacity:1, y:0 }}
-            transition={{ duration:0.8 }}
-            viewport={{ once:true }}
+            initial={ opacity:0, y:30 }
+            whileInView={ opacity:1, y:0 }
+            transition={ duration:0.8 }
+            viewport={ once:true }
           >;
             <h2 className="text-4xl font-bold text-white mb-6">;
               Ready to Transform Your Business?;
@@ -430,8 +426,7 @@ export default function ServicesPage() {;
           </motion.div>;
         </div>;
       </section>;
-;
+
       <EnhancedFooter />;
     </div>;
   );
-}

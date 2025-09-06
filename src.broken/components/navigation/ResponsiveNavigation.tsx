@@ -6,5 +6,3 @@ export function ResponsiveNavigation() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

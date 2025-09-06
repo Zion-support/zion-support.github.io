@@ -13,7 +13,7 @@ import {
   SelectItem
   SelectTrigger
   SelectValue;
-} from '@/components/ui/select';
+ from '@/components/ui/select';
 import {
   AlertTriangle
   Info
@@ -28,7 +28,7 @@ import {;
   SelectItem,;
   SelectTrigger,;
   SelectValue,;
-} from '@/components/ui/select';
+ from '@/components/ui/select';
 import {;
   AlertTriangle,;
   Info,;
@@ -37,7 +37,7 @@ import {;
   Search,;
   Download,;
   RefreshCw,;
-} from 'lucide-react';
+ from 'lucide-react';
 
 import { logErrorToProduction } from '@/utils/productionLogger';
 interface LogEntry {
@@ -91,7 +91,7 @@ const LogLevelIcon = ({ level }: { level: LogEntry['level'] }) => {;
     default:;
       return <Info className='h-4 w-4 text-gray-500' />;
   }
-];
+;
 const LogLevelBadge = ({ level }: { level: LogEntry['level'] }) => {
   const colors = {
     debug: 'bg-blue-100 text-blue-800'
@@ -101,50 +101,49 @@ const LogLevelBadge = ({ level }: { level: LogEntry['level'] }) => {
     critical: 'bg-red-200 text-red-900'
   }
   return <Badge className={colors[level]}>{level.toUpperCase()}</Badge>;
-}
+
 export default function LogsPage({
   logs: initialLogs
   errorCount
   warningCount
   totalCount
   lastUpdated
-}: LogsPageProps) {  const [logs, setLogs] = useState<LogEntry[]>(initialLogs);
+: LogsPageProps) {  const [logs, setLogs] = useState<LogEntry[]>(initialLogs);
   const [filteredLogs, setFilteredLogs] = useState<LogEntry[]>(initialLogs);
   const [searchTerm, setSearchTerm] = useState('');
   const [levelFilter, setLevelFilter] = useState<string>('all');
   const [categoryFilter, setCategoryFilter] = useState<string>('all');
   const [sourceFilter, setSourceFilter] = useState<string>('all');
   const [isLoading, setIsLoading] = useState(false);
-  const categories = Array.from(new Set(logs.map(log => log.category))).filter(
+  const categories = Array.from(new Set(logs.map(log => log.category)).filter(
     Boolean
   );
-  const sources = Array && Array.from(new Set(logs && logs.map(log => log && log.source))).filter(;
+  const sources = Array && Array.from(new Set(logs && logs.map(log => log && log.source)).filter(;
     Boolean;
   );
-  useEffect(() => {
+  useEffect() => {
     // Simulate loading logs
-    setTimeout(() => {
+    setTimeout() => {
       setLogs(mockLogs);
       setFilteredLogs(mockLogs);
       setLoading(false);
     }, 1000);
   }, []);
-  useEffect(() => {
+  useEffect() => {
     let filtered = [...logs];
     if (searchTerm) {
       filtered = filtered.filter(
         log =>
-          log.message.toLowerCase().includes(searchTerm.toLowerCase()) |
-          log.category.toLowerCase().includes(searchTerm.toLowerCase()) |
+          log.message.toLowerCase().includes(searchTerm.toLowerCase() |
+          log.category.toLowerCase().includes(searchTerm.toLowerCase() |
           (log.component &&
-            log.component.toLowerCase().includes(searchTerm.toLowerCase()))
-      );
+            log.component.toLowerCase().includes(searchTerm.toLowerCase());
     }
-    if (levelFilter !== 'all') {
-      filtered = filtered.filter(log => log.level === levelFilter);
+    if (levelFilter != 'all') {
+      filtered = filtered.filter(log => log.level = = levelFilter);
     }
-    if (categoryFilter !== 'all') {
-      filtered = filtered.filter(log => log.category === categoryFilter);
+    if (categoryFilter != 'all') {
+      filtered = filtered.filter(log => log.category = = categoryFilter);
     }
     setFilteredLogs(filtered);
   }, [logs, searchTerm, levelFilter, categoryFilter]);
@@ -156,7 +155,6 @@ export default function LogsPage({
       case 'error': return 'bg-red-100 text-red-800';
       case 'critical': return 'bg-red-200 text-red-900';
       default: return 'bg-gray-100 text-gray-800';    }
-  }
   const exportLogs = () => {
     const dataStr = JSON.stringify(filteredLogs, null, 2);
     const dataUri =
@@ -183,8 +181,8 @@ export default function LogsPage({
     }
     return parts.length > 0 ? parts.join(', ') : null;
   }
-  const errorCount = logs.filter(log => log.level === 'error' |log.level === 'critical').length;
-  const warningCount = logs.filter(log => log.level === 'warn').length;
+  const errorCount = logs.filter(log => log.level = = 'error' |log.level = = 'critical').length;
+  const warningCount = logs.filter(log => log.level = = 'warn').length;
   const totalCount = logs.length;
   return (
     <div className='container mx-auto p-6 space-y-6'>;
@@ -333,7 +331,7 @@ export default function LogsPage({
                 {categories.map(category => (
                   <SelectItem key={category} value={category}>
                     {category}
-                  </SelectItem>                ))}
+                  </SelectItem>                )}
               </SelectContent>
             </Select>
             <Select value={sourceFilter} onValueChange={setSourceFilter}>
@@ -367,7 +365,7 @@ export default function LogsPage({
                 {categories && categories.map(category => (;
                   <SelectItem key={category} value={category}>;
                     {category}
-                  </SelectItem>                ))}
+                  </SelectItem>                )}
               </SelectContent>;
             </Select>;
 
@@ -377,7 +375,7 @@ export default function LogsPage({
     duration: number;
     memory?: number;
   }
-;
+
 interface LogsPageProps {
   logs: LogEntry[];
   error_count: number;
@@ -399,7 +397,7 @@ const LogLevelIcon = ({ level }: { level: LogEntry['level'] }) =>: any {
     default:;
       return <Info className='h - 4 w - 4 text - gray - 500' />;
   }
-];
+;
 const LogLevelBadge = ({ level }: { level: LogEntry['level'] }) =>: any {
   const colors = {
     debug: 'bg - blue - 100 text - blue - 800',
@@ -408,10 +406,9 @@ const LogLevelBadge = ({ level }: { level: LogEntry['level'] }) =>: any {
     error: 'bg - red - 100 text - red - 800',
     critical: 'bg - red - 200 text - red - 900',
   }
-;
+
   return <Badge className={colors[level]}>{level.toUpperCase ()}</Badge>;
-}
-;
+
 export default /**
  * LogsPage - Function description
  */
@@ -422,50 +419,50 @@ function LogsPage() {  const [logs, set_logs] = useState < LogEntry[]>(initial_l
   const [category_filter, setCategoryFilter] = useState < string>('all');
   const [source_filter, setSourceFilter] = useState < string>('all');
   const [is_loading, setIsLoading] = useState (false);
-;
-  const categories = Array.from (new Set (logs.map (log => log.category))).filter (
+
+  const categories = Array.from (new Set (logs.map (log => log.category)).filter (
     Boolean);
-  const sources = Array.from (new Set (logs.map (log => log.source))).filter (
+  const sources = Array.from (new Set (logs.map (log => log.source)).filter (
     Boolean);
-;
-  useEffect (() => {
+
+  useEffect () => {
     // Simulate loading logs;
-    set_timeout (() => {
+    set_timeout () => {
       set_logs (mock_logs);
       setFilteredLogs (mock_logs);
       set_loading (false);
     }, 1000);
   }, []);
-;
-  useEffect (() => {
+
+  useEffect () => {
     let filtered = [...logs];
-;
+
     // Check condition
 if ( {) {
   $2
-}
+
       filtered = filtered.filter (
         log =>;
-          log.message.toLowerCase ().includes (search_term.toLowerCase ()) ||;
-          log.category.toLowerCase ().includes (search_term.toLowerCase ()) ||;
+          log.message.toLowerCase ().includes (search_term.toLowerCase () ||;
+          log.category.toLowerCase ().includes (search_term.toLowerCase () ||;
           (log.component &&;
-            log.component.toLowerCase ().includes (search_term.toLowerCase ())));
+            log.component.toLowerCase ().includes (search_term.toLowerCase ());
     }
     // Check condition
 if ( {) {
   $2
-}
-      filtered = filtered.filter (log => log.level === level_filter);
+
+      filtered = filtered.filter (log => log.level = = level_filter);
     }
     // Check condition
 if ( {) {
   $2
-}
-      filtered = filtered.filter (log => log.category === category_filter);
+
+      filtered = filtered.filter (log => log.category = = category_filter);
     }
     setFilteredLogs (filtered);
   }, [logs, search_term, level_filter, category_filter]);
-;
+
   const getLevelColor = (level: string) =>: any {
     switch (level) {
       case 'debug': return 'bg - blue - 100 text - blue - 800';
@@ -474,55 +471,54 @@ if ( {) {
       case 'error': return 'bg - red - 100 text - red - 800';
       case 'critical': return 'bg - red - 200 text - red - 900';
       default: return 'bg - gray - 100 text - gray - 800';    }
-  }
-;
+
   const export_logs = () =>: any {
     const data_str = JSON.stringify (filtered_logs, null, 2);
     const data_uri =;
       'data:application / json;charset = utf - 8, ' + encodeURIComponent (data_str);
-;
+
     const exportFileDefaultName = `logs-${new Date ().toISOString ().slice (0, 10)}.json`;
-;
+
     const link_element = document.create_element ('a');
     link_element.set_attribute ('href', data_uri);
     link_element.set_attribute ('download', exportFileDefaultName);
     link_element.click ();
   }
-;
+
   const format_timestamp = (timestamp: string) =>: any {
     return new Date (timestamp).toLocaleString ();  }
-;
+
   const format_performance = (performance?: LogEntry['performance']) =>: any {
     // Check condition
 if (return null) {
   $2
-}
+
     const parts = [];
     // Check condition
 if ( {) {
   $2
-}
+
       parts.push (`Memory: ${(performance.memory / 1024 / 1024).to_fixed (1)}MB`);
     }
     // Check condition
 if ( {) {
   $2
-}
+
       parts.push (`Timing: ${performance.timing}ms`);
     }
     // Check condition
 if ( {) {
   $2
-}
+
       parts.push (`FPS: ${performance.fps}`);
     }
     return parts.length > 0 ? parts.join (', ') : null;
   }
-;
-  const error_count = logs.filter (log => log.level === 'error' || log.level === 'critical').length;
-  const warning_count = logs.filter (log => log.level === 'warn').length;
+
+  const error_count = logs.filter (log => log.level = = 'error' || log.level = = 'critical').length;
+  const warning_count = logs.filter (log => log.level = = 'warn').length;
   const total_count = logs.length;
-;
+
   return (
     <div className='container mx - auto p - 6 space - y-6'>;
       <div className='flex items - center justify - between'>;
@@ -621,7 +617,7 @@ if ( {) {
                 {categories.map (category => (
                   <SelectItem key={category} value={category}>;
                     {category}
-                  </SelectItem>                ))}
+                  </SelectItem>                )}
               </SelectContent>;
             </Select>;
             <Select value={source_filter} onValueChange={setSourceFilter}>;
@@ -635,7 +631,7 @@ if ( {) {
                 {sources.map (source => (
                   <SelectItem key={source} value={source}>;
                     {source}
-                  </SelectItem>                ))}
+                  </SelectItem>                )}
               </SelectContent>;
             </Select>;
           </div>;
@@ -702,7 +698,7 @@ if ( {) {
         <CardContent>
           <div className="space-y-4">
             {filteredLogs.length > 0 ? (
-              filteredLogs.map((log) => (
+              filteredLogs.map(log) => (
                 <div key={log.id} className="border rounded-lg p-4 space-y-2">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-2">
@@ -718,9 +714,9 @@ if ( {) {
                       {formatTimestamp(log.timestamp)}
                     </span>
                   </div>
-                  
+
                   <div className="text-sm font-medium">{log.message}</div>
-                  
+
                   {log.context && Object.keys(log.context).length > 0 && (
                     <details className="text-xs">
                       <summary className="cursor-pointer text-muted-foreground hover:text-foreground">
@@ -731,7 +727,7 @@ if ( {) {
                       </pre>
                     </details>
                   )}
-                  
+
                   {log.error && (
                     <details className="text-xs">
                       <summary className="cursor-pointer text-red-600 hover:text-red-800">
@@ -781,7 +777,7 @@ if ( {) {
                     </div>;
                   )}
                 </div>;
-              ));
+              );
             ) : (;
               <div className='text-center text-muted-foreground py-8'>                No logs found matching the current filters.;
               </div>;
@@ -791,11 +787,10 @@ if ( {) {
       </main>;
     </>;
   );
-}
+
 export const getServerSideProps: GetServerSideProps = async () => {
   try {
     const logsDir = path.join(process.cwd(), 'logs');
-};
 export const getServerSideProps: GetServerSideProps = async () => {;
   try {;
     const logsDir = path && path.join(process && process.cwd(), 'logs');
@@ -804,7 +799,6 @@ export const getServerSideProps: GetServerSideProps = async () => {;
     const logs: LogEntry[] = [];
               // Skip malformed log entries;
             }
-          }
         } catch (fileError) {;
                             </pre>;
                           </details>)}
@@ -829,35 +823,31 @@ export const getServerSideProps: GetServerSideProps = async () => {;
                   {log.url && (
                     <div className='text - xs text - muted - foreground truncate'>                      URL: {log.url}
                     </div>)}
-                </div>))) : (
+                </div>)) : (
               <div className='text - center text - muted - foreground py - 8'>                No logs found matching the current filters.;
               </div>)}
           </div>;
         </div>;
       </main>;
     </>);
-}
+
 export const getServerSideProps: GetServerSideProps = async () => {
   try {
     const logs_dir = path.join (process.cwd (), 'logs');
     const logs: LogEntry[] = [];
               // Skip malformed log entries;
             }
-          }
         } catch (file_error) {
           // Skip problematic files;
         }
-      }
     }
     // Sort logs by timestamp (newest first)
-    logs.sort(
-      (a, b) =>
-        new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime()
-    );
+    logs.sort(a, b) =>
+        new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime();
     // Calculate statistics
     const errorCount = logs.filter(
-      log => log.level === 'error' |log.level === 'critical'
-    ).length;    const warningCount = logs.filter(log => log.level === 'warn').length;
+      log => log.level = = 'error' |log.level = = 'critical'
+    ).length;    const warningCount = logs.filter(log => log.level = = 'warn').length;
     const totalCount = logs.length;
     return {
       props: {
@@ -867,7 +857,6 @@ export const getServerSideProps: GetServerSideProps = async () => {
         totalCount
         lastUpdated: new Date().toISOString()
       }
-    }
   } catch (error) {
     logErrorToProduction ('Error reading logs:', error);    return {
       props: {
@@ -877,7 +866,6 @@ export const getServerSideProps: GetServerSideProps = async () => {
         totalCount: 0
         lastUpdated: new Date().toISOString()
       }
-    }
 
     // Sort logs by timestamp (newest first);
     logs && logs.sort(;
@@ -887,8 +875,8 @@ export const getServerSideProps: GetServerSideProps = async () => {
 
     // Calculate statistics;
     const errorCount = logs && logs.filter(;
-      log => log && log.level === 'error' || log && log.level === 'critical';
-    ).length;    const warningCount = logs && logs.filter(log => log && log.level === 'warn').length;
+      log => log && log.level = = 'error' || log && log.level = = 'critical';
+    ).length;    const warningCount = logs && logs.filter(log => log && log.level = = 'warn').length;
     const totalCount = logs && logs.length;
 
     return {;
@@ -911,19 +899,16 @@ export const getServerSideProps: GetServerSideProps = async () => {
       },;
     };
   }
-};
+;
         errorCount: 0,
         warningCount: 0,
         totalCount: 0,
-        lastUpdated: new Date().toISOString()}}
+        lastUpdated: new Date().toISOString()}
   }
-},
+,
         error_count: 0,
         warning_count: 0,
         total_count: 0,
         last_updated: new Date ().toISOString (),
       },
     }
-  }
-}
-;

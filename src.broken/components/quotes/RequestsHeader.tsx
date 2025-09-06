@@ -6,5 +6,3 @@ export function RequestsHeader() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

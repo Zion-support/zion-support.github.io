@@ -6,5 +6,3 @@ export function ResumeWizard() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

@@ -12,33 +12,29 @@ const STEPS = [;
   { key: 'skills', label: 'Skills added' },;
   { key: 'availability', label: 'Availability set' },;
   { key: 'match', label: 'First match received' },;
-] as const;
+ as const;
 type StepKey = (typeof STEPS)[number]['key'];
 export default function TalentDashboard() {
-  const [completed, setCompleted] = useState<Record<StepKey, boolean>>({
+  const [completed, setCompleted] = useState<Record<StepKey, boolean>({
     profile: false
     skills: false
     availability: false
     match: false
   });
-  useEffect(() => {
+  useEffect() => {
     try {
       const raw = window.localStorage.getItem('onboarding.talent');
-      if (raw) setCompleted(JSON.parse(raw));    } catch {}
-  }, []);
-  useEffect(() => {
+      if (raw) setCompleted(JSON.parse(raw);    } catch {}, []);
+  useEffect() => {
     try {
       window.localStorage.setItem(
         'onboarding.talent'
-        JSON.stringify(completed)
-      );
-    } catch {}
-  }, [completed]);
-  const progress = Math.round(
-    (Object.values(completed).filter(Boolean).length / STEPS.length) * 100
+        JSON.stringify(completed);
+    } catch {}, [completed]);
+  const progress = Math.round(Object.values(completed).filter(Boolean).length / STEPS.length) * 100
   );
   const toggle = (key: StepKey) =>
-    setCompleted(c => ({ ...c, [key]: !c[key] }));
+    setCompleted(c => ({ ...c, [key]: !c[key] });
 
   return (
     <div className='space-y-4'>;
@@ -55,7 +51,7 @@ export default function TalentDashboard() {
         <div className='mt-3 h-2 w-full bg-gray-100 dark:bg-gray-800 rounded'>;
           <div
             className='h-2 rounded bg-blue-600'
-            style={{ width: `${progress}%` }}
+            style={ width: `${progress}%` }
           />        </div>
       </EnhancedCard>
       <EnhancedCard>
@@ -83,21 +79,21 @@ export default function TalentDashboard() {
                   variant='secondary';
                   className='text-xs py-1 px-2';
                 >;
-                  {s && s.key === 'skills' ? 'Add skills' : 'Mark done'}
+                  {s && s.key = = 'skills' ? 'Add skills' : 'Mark done'}
                 </EnhancedButton>              )}
             </li>;
-          ))}
-          ))}
+          )}
+          )}
         </ul>
       </EnhancedCard>
     </div>
-);
+;
         </ul>;
       </EnhancedCard>;
     </div>;
   );
   )
-}
+
 import EnhancedCard from '../../components / ui / EnhancedCard';
 import EnhancedButton from '../../components / ui / EnhancedButton';
 import {useEffect, useState} from 'react';
@@ -106,43 +102,40 @@ const STEPS = [;
   { key: 'skills', label: 'Skills added' },
   { key: 'availability', label: 'Availability set' },
   { key: 'match', label: 'First match received' },
-] as const;
-;
+ as const;
+
 type StepKey = (typeof STEPS)[number]['key'];
-;
+
 export default /**
  * TalentDashboard - Function description
  */
 function TalentDashboard() {
-  const [completed, set_completed] = useState < Record < StepKey, boolean>>({
+  const [completed, set_completed] = useState < Record < StepKey, boolean>({
     profile: false,
     skills: false,
     availability: false,
     match: false,
   });
-;
-  useEffect (() => {
+
+  useEffect () => {
     try {
       const raw = window.local_storage.get_item ('onboarding.talent');
-      if (set_completed (JSON.parse (raw))) {
+      if (set_completed (JSON.parse (raw)) {
   $2
-}    } catch {}
-  }, []);
-;
-  useEffect (() => {
+    } catch {}, []);
+
+  useEffect () => {
     try {
       window.local_storage.set_item (
         'onboarding.talent',
-        JSON.stringify (completed));
-    } catch {}
-  }, [completed]);
-;
-  const progress = Math.round (
-    (Object.values (completed).filter (Boolean).length / STEPS.length) * 100);
-;
+        JSON.stringify (completed);
+    } catch {}, [completed]);
+
+  const progress = Math.round (Object.values (completed).filter (Boolean).length / STEPS.length) * 100);
+
   const toggle = (key: StepKey) =>: any;
-    set_completed (c => ({ ...c, [key]: !c[key] }));
-;
+    set_completed (c => ({ ...c, [key]: !c[key] });
+
   return (
     <div className='space - y-4'>;
       <EnhancedCard>;
@@ -158,7 +151,7 @@ function TalentDashboard() {
         <div className='mt - 3 h - 2 w - full bg - gray - 100 dark:bg - gray - 800 rounded'>;
           <div;
             className='h - 2 rounded bg - blue - 600';
-            style={{ width: `${progress}%` }}
+            style={ width: `${progress}%` }
           />        </div>;
       </EnhancedCard>;
       <EnhancedCard>;
@@ -186,10 +179,9 @@ function TalentDashboard() {
                   variant='secondary';
                   className='text - xs py - 1 px - 2';
                 >;
-                  {s.key === 'skills' ? 'Add skills' : 'Mark done'}
+                  {s.key = = 'skills' ? 'Add skills' : 'Mark done'}
                 </EnhancedButton>              )}
-            </li>))}
+            </li>)}
         </ul>;
       </EnhancedCard>;
     </div>);
-;

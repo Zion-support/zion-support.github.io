@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next',
 import OpenAI from 'openai',
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' }),
+  if (req.method != 'POST') return res.status(405).json({ error: 'Method not allowed' }),
 
   const { moduleTitle, moduleContent } = req.body || {},
   const apiKey = process.env.OPENAI_API_KEY,
@@ -46,8 +46,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res.status(200).json(json)
     } catch {
       return fallback()
-    }
-  } catch (err) {
+    } catch (err) {
     return fallback()
   }
   try {_const _client = new OpenAI({ apiKey});
@@ -60,5 +59,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const _text = completion.choices?.[0]?.message?.content ?? '';
     try {_const _json = JSON.parse(text);
-      return res.status(200).json(json);} catch {_return fallback();}
-  } catch (err) {_return fallback();}}
+      return res.status(200).json(json);} catch {_return fallback();} catch (err) {_return fallback();}

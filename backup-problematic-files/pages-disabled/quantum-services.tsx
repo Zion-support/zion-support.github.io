@@ -11,7 +11,7 @@ import {
   Monitor, Smartphone, Camera, Gamepad2, Palette, 
   Music, Film, BookOpenCheck, Building, MessageCircle, 
   Sparkles, ArrowRight, CheckCircle, Star, Globe
-} from 'lucide-react',
+ from 'lucide-react',
 
 const QuantumServicesPage: React.FC = () => {
   const quantumServices = [
@@ -118,15 +118,15 @@ export default function QuantumServices() {
         description="Revolutionary quantum computing solutions for the future. From neural networks to financial trading, unlock quantum advantage."
         keywords="quantum computing, quantum services, quantum neural networks, quantum financial trading, quantum materials discovery"
       />
-      
+
       <main className="relative z-10">
         {/* Hero Section */}
         <section className="min-h-[60vh] flex items-center justify-center px-4 py-20">
           <div className="text-center max-w-4xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
             >
               <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-600 bg-clip-text text-transparent">
                 Quantum Computing
@@ -156,10 +156,10 @@ export default function QuantumServices() {
         <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900">
           <div className="max-w-6xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
@@ -169,15 +169,15 @@ export default function QuantumServices() {
                 Harness the power of quantum mechanics for revolutionary computing solutions
               </p>
             </motion.div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {quantumCapabilities.map((capability, index) => (
+              {quantumCapabilities.map(capability, index) => (
                 <motion.div
                   key={capability.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, y: 20 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.6, delay: index * 0.1 }
+                  viewport={ once: true }
                   className="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl border border-gray-700 hover:border-blue-500 transition-all duration-300"
                 >
                   <div className="flex items-center mb-4">
@@ -188,7 +188,7 @@ export default function QuantumServices() {
                   </div>
                   <p className="text-gray-300">{capability.description}</p>
                 </motion.div>
-              ))}
+              )}
             </div>;
           </div>;
         </section>;
@@ -196,10 +196,10 @@ export default function QuantumServices() {
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
@@ -209,15 +209,15 @@ export default function QuantumServices() {
                 Choose from our comprehensive suite of quantum-powered solutions
               </p>
             </motion.div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {quantumServices.map((service, index) => (
+              {quantumServices.map(service, index) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, y: 20 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.6, delay: index * 0.1 }
+                  viewport={ once: true }
                   className={`relative bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl border transition-all duration-300 hover:scale-105 ${;
                     service.popular;
                       ? 'border-blue-500 shadow-lg shadow-blue-500/25';
@@ -231,7 +231,7 @@ export default function QuantumServices() {
                       </span>
                     </div>
                   )}
-                  
+
                   <div className="text-center mb-6">
                     <div className="inline-flex p-3 bg-blue-500/20 rounded-full mb-4">
                       {service.icon}
@@ -243,16 +243,16 @@ export default function QuantumServices() {
                       <span className="text-lg text-gray-400">/{service.period}</span>
                     </div>
                   </div>
-                  
+
                   <ul className="space-y-3 mb-6">
-                    {service.features.map((feature, featureIndex) => (
+                    {service.features.map(feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
                         {feature}
                       </li>;
-                    ))}
+                    )}
                   </ul>
-                  
+
                   <a 
                     href="/contact" 
                     className="w-full block text-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300"
@@ -260,7 +260,7 @@ export default function QuantumServices() {
                     Get Started
                   </Link>
                 </motion.div>
-              ))}
+              )}
             </div>;
           </div>;
         </section>;
@@ -268,10 +268,10 @@ export default function QuantumServices() {
         <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >
               <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
                 Ready for the Quantum Future?
@@ -299,7 +299,7 @@ export default function QuantumServices() {
       </main>
     </Layout>
   )
-},
+,
 
 export default QuantumServicesPage,
             >;
@@ -329,5 +329,4 @@ export default QuantumServicesPage,
       </main>;
     </Layout>;
   );
-};
 export default QuantumServicesPage;

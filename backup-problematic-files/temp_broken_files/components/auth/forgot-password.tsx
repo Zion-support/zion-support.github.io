@@ -9,4 +9,3 @@ export default function ForgotPasswordPage() {
       <p className=&quot;mt-2 text-gray-600 dark:text-gray-300&quot;>Enter your email to reset your password.</p>
     </div>
   )
-}

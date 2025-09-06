@@ -1,7 +1,7 @@
 import React from 'react',;
 import Head from 'next/head',;
 import Button from '../components/ui/Button',;
-;
+
 export default function AIEvaluationOrchestratorPage() {;
   return (;
     <>;
@@ -21,9 +21,9 @@ export default function AIEvaluationOrchestratorPage() {;
               'Create datasets and scoring functionsBatch runs across models and versions',;
               'Track regressions and enforce quality gatesIntegrations:OpenAI, Anthropic, Groq, OpenRouter, Langfuse',;
               'Export reports, share baselines, and diff resultsFrom $199/mo';
-            ].map((f) => (;
+            ].map(f) => (;
               <div key={f} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 text-gray-200">{f}</div>;
-            ))}
+            )}
           </section>;
           <div className="text-center">;
             <Button href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">Talk to Sales</Button>;
@@ -100,6 +100,5 @@ const AIEvaluationOrchestrator: React.FC = () => {
       </main>
     </Layout>
   );
-};
 
 export default AIEvaluationOrchestrator;

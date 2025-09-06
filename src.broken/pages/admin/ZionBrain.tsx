@@ -6,5 +6,3 @@ export function ZionBrain() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

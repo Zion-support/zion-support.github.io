@@ -6,5 +6,3 @@ export function ActiveFiltersBar() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

@@ -6,5 +6,3 @@ export function ProductCard() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

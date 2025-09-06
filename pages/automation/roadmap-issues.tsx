@@ -1,5 +1,5 @@
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
-// @ts-ignore
+/ @ts-ignore
 import data from '../../data/roadmap-issues.json';
 export default function RoadmapIssuesPage() {
 
@@ -11,19 +11,19 @@ export default function RoadmapIssuesPage() {
         <h1 className="text-3xl font-bold">Roadmap Issues</h1>
         <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">Updated at {data?.generatedAt |''}</p>
         <ul className="mt-6 space-y-4">
-          {items.map((it, idx) => (
+          {items.map(it, idx) => (
             <li key={idx} className="p-4 border border-gray-200 dark:border-gray-800 rounded-lg">
               <a href={it.url} target="_blank" rel="noreferrer" className="font-medium underline">#{it.number}  {it.title}</a>
               <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">Labels: {(it.labels |[]).join(', ')}</div>
             </li>
-          ))}
+          )}
         </ul>
       </div>
     </EnhancedLayout>
   )
-}
+
 import EnhancedLayout from '../../components / layout / EnhancedLayout',
-// @ts - ignore;
+/ @ts - ignore;
 import data from '../../data / roadmap - issues.json',
 export default /**
  * RoadmapIssuesPage - Function description
@@ -36,12 +36,11 @@ function RoadmapIssuesPage() {
         <h1 className="text - 3xl font - bold">Roadmap Issues</h1>;
         <p className="mt - 2 text - sm text - gray - 600 dark:text - gray - 300">Updated at {data?.generated_at || ''}</p>;
         <ul className="mt - 6 space - y-4">;
-          {items.map ((it, idx) => (
+          {items.map (it, idx) => (
             <li key={idx} className="p - 4 border border - gray - 200 dark:border - gray - 800 rounded - lg">;
               <a href={it.url} target="_blank" rel="noreferrer" className="font - medium underline">#{it.number}  {it.title}</a>;
               <div className="mt - 1 text - xs text - gray - 500 dark:text - gray - 400">Labels: {(it.labels || []).join (', ')}</div>;
-            </li>))}
+            </li>)}
         </ul>;
       </div>;
     </EnhancedLayout>);
-}

@@ -15,7 +15,7 @@ import { Button } from "@/components/ui/button",;
 import { useAuth } from "@/hooks/useAuth",;
 import { UserProfile } from "@/types/auth",;
 import { toast } from "@/hooks/use-toast",;
-;
+
 export default function TalentProfilePage() {;
   // Cast to specify the expected route param type since useParams may be untyped;
   const { id } = useParams() as { id?:string },;
@@ -25,7 +25,7 @@ export default function TalentProfilePage() {;
   const [isMessageModalOpen, setIsMessageModalOpen] = useState(false),;
   const { userDetails } = useAuthStatus(),;
   const { isAuthenticated, user } = useAuth(),;
-;
+
   // Create a compatible UserProfile from UserDetails or the authenticated user;
   const userProfile:UserProfile = user ? {;
     id:user.id || '',;
@@ -46,49 +46,48 @@ export default function TalentProfilePage() {;
     updatedAt:new Date().toISOString(), // Default value since userDetails doesn't have this property;
     role:'' // Default empty string since userDetails doesn't have this property;
   },;
-;
+
   // Handle loading error gracefully;
-  useEffect(() => {;
+  useEffect() => {;
     if (error) {;
       toast({;
         title:"Error loading profile",;
         description:"There was a problem loading this talent profile. Please try again.",;
         variant:"destructive"}),;
-    }
-  }, [error]),;
-;
+    }, [error]),;
+
   if (isLoading) {;
     return <ProfileLoadingState />,;
   }
-;
+
   if (error || !profile) {;
     return <ProfileErrorState error={error} />,;
   }
-;
+
   const handleRequestHire = () => {;
     if (!isAuthenticated) {;
       toast({;
         title:"Authentication required",;
         description:"Please sign in to hire this talent.",;
         variant:"default"}),;
-      navigate('/login', { state:{ from:`/talent/${id}` } }),;
+      navigate('/login', { state:{ from:`/talent/${id}` }),;
       return,;
     }
     setIsHireModalOpen(true),;
   },;
-;
+
   const handleMessageTalent = () => {;
     if (!isAuthenticated) {;
       toast({;
         title:"Authentication required",;
         description:"Please sign in to message this talent.",;
         variant:"default"}),;
-      navigate('/login', { state:{ from:`/talent/${id}` } }),;
+      navigate('/login', { state:{ from:`/talent/${id}` }),;
       return,;
     }
     setIsMessageModalOpen(true),;
   },;
-;
+
   return (;
     <div className="min-h-screen bg-zion-blue pb-12">;
       <TalentProfile ;
@@ -97,7 +96,6 @@ export default function TalentProfilePage() {;
         onMessageTalent={handleMessageTalent}
       />;
       <BackToDirectoryButton />;
-      ;
       {/* Sticky action buttons that appear when scrolling */}
       <StickyAction>;
         <div className="p-2 flex gap-2">;
@@ -120,14 +118,12 @@ export default function TalentProfilePage() {;
           </Button>;
         </div>;
       </StickyAction>;
-      ;
       {/* Request to Hire Modal */}
       <HireRequestModal ;
         talent={profile}        isOpen={isHireModalOpen}
         onClose={_() => setIsHireModalOpen(false)}
         userDetails={userProfile}
       />;
-      ;
       {/* Message Talent Modal */}
       <MessageTalentModal;
         talent={profile}
@@ -138,22 +134,22 @@ export default function TalentProfilePage() {;
   ),; export default function TalentProfilePage () {
   //Cast to specify the expected route param type since useParams may be untyped const {
   id 
-}= useParams () as {
+= useParams () as {
   id?: string 
-};
+;
 const navigate = useNavigate ();
 const {
   profile, isLoading, error 
-}= useTalentProfile (id);
+= useTalentProfile (id);
 const [isHireModalOpen, setIsHireModalOpen] = useState (false);
 const [isMessageModalOpen, setIsMessageModalOpen] = useState (false);
 const {
   userDetails 
-}= useAuthStatus ();
+= useAuthStatus ();
 const {
   isAuthenticated, user 
-}= useAuth ();
-//Create a compatible UserProfile from UserDetails or the authenticated user const userProfile: UserProfile = user ? {
+= useAuth ();
+/Create a compatible UserProfile from UserDetails or the authenticated user const userProfile: UserProfile = user ? {
   id: user.id || '';
 displayName: user.displayName || '';
 email: user.email || '', //Ensure email is always a string userType: user.userType || '';
@@ -161,50 +157,48 @@ profileComplete: user.profileComplete || false;
 createdAt: user.createdAt || new Date () .toISOString ();
 updatedAt: user.updatedAt || new Date () .toISOString ();
 role: user.role || '' 
-}: {
+: {
   id: userDetails?.id || '';
 displayName: userDetails?.name || '';
 email: userDetails?.email || '', //Ensure email is always a string userType: '', //Default empty string since userDetails doesn't have this property profileComplete: false, //Default value since userDetails doesn't have this property createdAt: new Date () .toISOString (), //Default value since userDetails doesn't have this property updatedAt: new Date () .toISOString (), //Default value since userDetails doesn't have this property role: ''//Default empty string since userDetails doesn't have this property 
-};
+;
 if (error) {
   toast ({
-  
-}
-}, [error]);
+
+, [error]);
 return;
-}setIsHireModalOpen (true) 
-};
+setIsHireModalOpen (true) 
+;
 const handleMessageTalent = () => {
   if (!isAuthenticated) {
   toast ({
   return;
-}setIsMessageModalOpen (true) 
-};
+setIsMessageModalOpen (true) 
+;
 <TalentProfile profile= {
   profile 
-}onRequestHire= {
+onRequestHire= {
   handleRequestHire 
-}onMessageTalent= {
+onMessageTalent= {
   handleMessageTalent 
-}/> <BackToDirectoryButton /> {
+/> <BackToDirectoryButton /> {
   /* Sticky action buttons that appear when scrolling */ 
-}<StickyAction> <div className="p-2 flex gap-2" > <Button > <Handshake className="mr-2 h-4 w-4" /> Hire Now </Button> <Button > <MessageSquare className="mr-2 h-4 w-4" /> Message </Button> </div> </StickyAction> {
+<StickyAction> <div className="p-2 flex gap-2" > <Button > <Handshake className="mr-2 h-4 w-4" /> Hire Now </Button> <Button > <MessageSquare className="mr-2 h-4 w-4" /> Message </Button> </div> </StickyAction> {
   /* Request to Hire Modal */ 
-}<HireRequestModal talent= {
+<HireRequestModal talent= {
   profile 
-}isOpen= {
+isOpen= {
   isHireModalOpen 
-}onClose= {
+onClose= {
   () => setIsHireModalOpen (false) 
-}userDetails= {
+userDetails= {
   userProfile 
-}/> {
+/> {
   /* Message Talent Modal */ 
-}<MessageTalentModal talent= {
+<MessageTalentModal talent= {
   profile 
-}isOpen= {
+isOpen= {
   isMessageModalOpen 
-}onClose= {
+onClose= {
   () => setIsMessageModalOpen (false) 
-}/> </div>) 
-}
+/> </div>) 

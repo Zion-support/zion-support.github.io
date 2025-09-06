@@ -4,13 +4,12 @@ import { motion, AnimatePresence } from 'framer-motion',;
 import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin, Rocket, Brain, Atom, Shield } from 'lucide-react',;
 interface UltraFuturisticNavigationProps {;
   className?: string;
-}
-;
+
 export default function UltraFuturisticNavigation({ className = '' }: UltraFuturisticNavigationProps) {;
   const [isOpen, setIsOpen] = useState(false),;
   const [isScrolled, setIsScrolled] = useState(false),;
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null),;
-  useEffect(() => {;
+  useEffect() => {;
     const handleScroll = () => {;
       setIsScrolled(window.scrollY > 20);
     },;
@@ -52,9 +51,9 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <motion.div;
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={ opacity: 0, x: -20 }
+            animate={ opacity: 1, x: 0 }
+            transition={ duration: 0.6 }
             className="flex items-center space-x-3"
           >
             <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center shadow-2xl">
@@ -70,7 +69,7 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            {navigationItems.map((item, index) => (
+            {navigationItems.map(item, index) => (
               <div key={item.name} className="relative group">
                 {item.hasDropdown ? (
                   <div
@@ -81,20 +80,20 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
                       <span>{item.name}</span>
                       <ChevronDown className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" />
                     </button>
-                    
+
                     {/* Dropdown Menu */}
                     <AnimatePresence>;
-                      {activeDropdown === item.name && (;
+                      {activeDropdown = = item.name && (;
                         <motion.div;
-                          initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                          animate={{ opacity: 1, y: 0, scale: 1 }}
-                          exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                          transition={{ duration: 0.2 }}
+                          initial={ opacity: 0, y: 10, scale: 0.95 }
+                          animate={ opacity: 1, y: 0, scale: 1 }
+                          exit={ opacity: 0, y: 10, scale: 0.95 }
+                          transition={ duration: 0.2 }
                           className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl overflow-hidden"
                         >
                           <div className="p-4">
                             <div className="grid gap-3">
-                              {item.dropdownItems?.map((dropdownItem, idx) => (
+                              {item.dropdownItems?.map(dropdownItem, idx) => (
                                 <Link
                                   key={dropdownItem.name}
                                   href={dropdownItem.href}
@@ -107,12 +106,12 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
                                     <div className="text-white font-medium group-hover/item:text-cyan-300 transition-colors">
                                       {dropdownItem.name}
                                     </div>
-                                    {dropdownItem.name === 'View All Services' && (
+                                    {dropdownItem.name = = 'View All Services' && (
                                       <div className="text-xs text-gray-400">Explore our complete portfolio</div>
                                     )}
                                   </div>
                                 </a>
-                              ))}
+                              )}
                             </div>;
                           </div>;
                         </motion.div>;
@@ -128,7 +127,7 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
                   </a>
                 )}
               </div>;
-            ))}
+            )}
           </div>;
           {/* Contact Info & CTA */}
           <div className="hidden lg:flex items-center space-x-6">
@@ -142,8 +141,8 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
 
             {/* CTA Button */}
             <motion.div;
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={ scale: 1.05 }
+              whileTap={ scale: 0.95 }
             >
               <Link
                 href="/contact"
@@ -171,37 +170,37 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
       <AnimatePresence>;
         {isOpen && (;
           <motion.div;
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
+            initial={ opacity: 0, height: 0 }
+            animate={ opacity: 1, height: 'auto' }
+            exit={ opacity: 0, height: 0 }
+            transition={ duration: 0.3 }
             className="lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50 overflow-hidden"
           >
             <div className="px-4 py-6 space-y-4">
               {/* Mobile Navigation Items */}
-              {navigationItems.map((item) => (;
+              {navigationItems.map(item) => (;
                 <div key={item.name}>;
                   {item.hasDropdown ? (;
                     <div>;
                       <button;
-                        onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)}
+                        onClick={() => setActiveDropdown(activeDropdown = = item.name ? null : item.name)}
                         className="flex items-center justify-between w-full text-left text-gray-300 hover:text-white transition-colors duration-300 py-3 px-4 rounded-lg hover:bg-gray-800/50"
                       >
                         <span>{item.name}</span>
                         <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${
-                          activeDropdown === item.name ? 'rotate-180' : ''
+                          activeDropdown = = item.name ? 'rotate-180' : ''
                         }`} />
                       </button>
-                      
-                      {activeDropdown === item.name && (
+
+                      {activeDropdown = = item.name && (
                         <motion.div
-                          initial={{ opacity: 0, y: -10 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          exit={{ opacity: 0, y: -10 }}
-                          transition={{ duration: 0.2 }}
+                          initial={ opacity: 0, y: -10 }
+                          animate={ opacity: 1, y: 0 }
+                          exit={ opacity: 0, y: -10 }
+                          transition={ duration: 0.2 }
                           className="ml-4 mt-2 space-y-2"
                         >
-                          {item.dropdownItems?.map((dropdownItem) => (
+                          {item.dropdownItems?.map(dropdownItem) => (
                             <Link
                               key={dropdownItem.name}
                               href={dropdownItem.href}
@@ -215,7 +214,7 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
                                 {dropdownItem.name}
                               </span>
                             </a>
-                          ))}
+                          )}
                         </motion.div>;
                       )}
                     </div>;
@@ -229,8 +228,8 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
                     </a>
                   )}
                 </div>;
-              ))}
-;
+              )}
+
               {/* Mobile Contact Info */}
               <div className="pt-6 border-t border-gray-700/50 space-y-3">
                 <div className="flex items-center space-x-3 text-gray-300">
@@ -264,4 +263,3 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
       </AnimatePresence>;
     </nav>;
   );
-}

@@ -11,13 +11,13 @@ import {;
   Palette, Camera, Video, Music, Gamepad2, Heart,;
   Leaf, Sun, Moon, Wind, Droplets, Mountain,;
   Code, Wrench, Smartphone, BarChart3, Eye, Timer;
-} from 'lucide-react',;
+ from 'lucide-react',;
 const contactInfo = {;
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup.com',;
   address: '364 E Main St STE 1008 Middletown DE 19709',;
   website: 'https://ziontechgroup.com';
-},;
+,;
 const serviceCategories = [;
   {;
     title: ' 2029 AI Consciousness & Innovation',;
@@ -130,7 +130,7 @@ const serviceCategories = [;
       { name: 'Corporate Intelligence Platform', href: '/corporate-intelligence-platform', description: 'AI-powered business intelligence', price: '$7,999/month' }
     ];
   }
-],;
+,;
 const mainNavItems = [;
   { name: 'Home', href: '/', icon: Home },;
   { name: 'Services', href: '/services', icon: Briefcase },;
@@ -140,12 +140,12 @@ const mainNavItems = [;
   { name: 'News', href: '/news', icon: TrendingUp },;
   { name: 'Support', href: '/support', icon: MessageCircle },;
   { name: 'Contact', href: '/contact', icon: Phone }
-],;
+,;
 export default function UltraFuturisticNavigation2029() {;
   const [isOpen, setIsOpen] = useState(false),;
   const [activeCategory, setActiveCategory] = useState<string | null>(null),;
   const [scrolled, setScrolled] = useState(false),;
-  useEffect(() => {;
+  useEffect() => {;
     const handleScroll = () => {;
       setScrolled(window.scrollY > 50);
     },;
@@ -190,8 +190,8 @@ export default function UltraFuturisticNavigation2029() {;
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <motion.div;
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
+              initial={ opacity: 0, x: -20 }
+              animate={ opacity: 1, x: 0 }
               className="flex items-center space-x-3"
             >
               <div className="relative">
@@ -210,7 +210,7 @@ export default function UltraFuturisticNavigation2029() {;
 
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-8">
-              {mainNavItems.map((item) => (
+              {mainNavItems.map(item) => (
                 <Link
                   key={item.name}
                   href={item.href}
@@ -222,8 +222,8 @@ export default function UltraFuturisticNavigation2029() {;
                   </div>
                   <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 transition-all duration-300 group-hover:w-full"></div>
                 </a>
-              ))}
-;
+              )}
+
               {/* Services Dropdown */}
               <div className="relative group">
                 <button className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200">
@@ -231,16 +231,16 @@ export default function UltraFuturisticNavigation2029() {;
                   <span>All Services</span>
                   <ChevronDown size={14} className="group-hover:rotate-180 transition-transform duration-200" />
                 </button>
-                
+
                 {/* Mega Menu */}
                 <div className="absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-cyan-500/30 rounded-lg shadow-2xl shadow-cyan-500/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                   <div className="p-6 grid grid-cols-2 lg:grid-cols-3 gap-6">
-                    {serviceCategories.map((category, index) => (
+                    {serviceCategories.map(category, index) => (
                       <motion.div
                         key={category.title}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: index * 0.1 }}
+                        initial={ opacity: 0, y: 20 }
+                        animate={ opacity: 1, y: 0 }
+                        transition={ delay: index * 0.1 }
                         className="group"
                       >
                         <div className={`p-4 rounded-lg bg-gradient-to-br ${category.color} bg-opacity-10 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300`}>
@@ -252,7 +252,7 @@ export default function UltraFuturisticNavigation2029() {;
                           </div>
                           <p className="text-sm text-gray-400 mb-4">{category.description}</p>
                           <div className="space-y-2">
-                            {category.services.slice(0, 3).map((service) => (
+                            {category.services.slice(0, 3).map(service) => (
                               <Link
                                 key={service.name}
                                 href={service.href}
@@ -268,18 +268,18 @@ export default function UltraFuturisticNavigation2029() {;
                                 </div>
                                 <p className="text-xs text-gray-500 mt-1">{service.description}</p>
                               </a>
-                            ))}
+                            )}
                           </div>;
                         </div>;
                       </motion.div>;
-                    ))}
+                    )}
                   </div>;
                 </div>;
               </div>;
               {/* CTA Button */}
               <motion.button;
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={ scale: 1.05 }
+                whileTap={ scale: 0.95 }
                 className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40"
               >
                 Get Started
@@ -302,9 +302,9 @@ export default function UltraFuturisticNavigation2029() {;
       <AnimatePresence>;
         {isOpen && (;
           <motion.div;
-            initial={{ opacity: 0, x: '100%' }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: '100%' }}
+            initial={ opacity: 0, x: '100%' }
+            animate={ opacity: 1, x: 0 }
+            exit={ opacity: 0, x: '100%' }
             className="fixed inset-0 z-50 lg:hidden"
           >
             <div className="absolute inset-0 bg-black/80 backdrop-blur-sm" onClick={closeMenu} />
@@ -324,7 +324,7 @@ export default function UltraFuturisticNavigation2029() {;
 
                 {/* Mobile Navigation Items */}
                 <div className="space-y-4">
-                  {mainNavItems.map((item) => (
+                  {mainNavItems.map(item) => (
                     <Link
                       key={item.name}
                       href={item.href}
@@ -334,18 +334,18 @@ export default function UltraFuturisticNavigation2029() {;
                       <item.icon size={20} className="text-cyan-400" />
                       <span>{item.name}</span>
                     </a>
-                  ))}
+                  )}
                 </div>;
                 {/* Mobile Services */}
                 <div className="mt-8">
                   <h3 className="text-lg font-semibold text-white mb-4">Our Services</h3>
                   <div className="space-y-3">
-                    {serviceCategories.slice(0, 6).map((category) => (
+                    {serviceCategories.slice(0, 6).map(category) => (
                       <div key={category.title} className="p-3 rounded-lg bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20">
                         <h4 className="font-medium text-white mb-2">{category.title}</h4>
                         <p className="text-sm text-gray-400 mb-3">{category.description}</p>
                         <div className="space-y-2">
-                          {category.services.slice(0, 2).map((service) => (
+                          {category.services.slice(0, 2).map(service) => (
                             <Link
                               key={service.name}
                               href={service.href}
@@ -357,17 +357,17 @@ export default function UltraFuturisticNavigation2029() {;
                                 <span className="text-xs text-cyan-400 font-mono">{service.price}</span>
                               </div>
                             </a>
-                          ))}
+                          )}
                         </div>;
                       </div>;
-                    ))}
+                    )}
                   </div>;
                 </div>;
                 {/* Mobile CTA */}
                 <div className="mt-8">
                   <motion.button
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
+                    whileHover={ scale: 1.02 }
+                    whileTap={ scale: 0.98 }
                     className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
                   >
                     Get Started
@@ -382,4 +382,3 @@ export default function UltraFuturisticNavigation2029() {;
       <div className="h-20" />
     </>
   )
-}

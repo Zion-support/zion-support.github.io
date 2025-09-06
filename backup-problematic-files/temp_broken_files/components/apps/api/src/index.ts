@@ -10,14 +10,14 @@ const app = Fastify({ logger: true }),
 
 await app.register(cors, {
   origin: (origin, cb) => {
-    const allowed = (process.env.CORS_ORIGINS || '').split().map((s) => s.trim()),
-    if (!origin || allowed.includes('*') || allowed.includes(origin)) {
+    const allowed = (process.env.CORS_ORIGINS || '').split().map(s) => s.trim(),
+    if (!origin || allowed.includes('*') || allowed.includes(origin) {
       cb(null, true),
       return
     }
     cb(new Error('Not allowed'), false)  },
   methods: ['GETPOSTOPTIONS']
-}),
+),
 
 await app.register(rateLimit, { global: true, max: 100, timeWindow: '1m' }),
 
@@ -25,7 +25,6 @@ const openai = createOpenAIClient(process.env.OPENAI_API_KEY || ''),
 
 function getUserId(req: any): string | null {
   return (req.headers['x-user-id'] as string) || (req.query as any)['user_id'] || null
-}
 
 app.post('/ai/ask', async (req, reply) => {
   const body = (req.body as any) || {},
@@ -33,7 +32,7 @@ app.post('/ai/ask', async (req, reply) => {
   if (!prompt) return reply.code(400).send({ error: 'prompt required' }),
   const completion = await openai.responses.create({ model: 'gpt-4o-mini', input: prompt }),
   return { text: completion.output_text }
-}),
+),
 
 app.post('/jobs/generate', async (req, reply) => {
   const body = (req.body as any) || {},
@@ -49,7 +48,7 @@ app.post('/jobs/generate', async (req, reply) => {
     )
   }),
   return { saved: Boolean(userId), description }
-}),
+),
 
 app.get('/talent/search', async (req, reply) => {
   const q = (req.query as any).q as string,
@@ -58,10 +57,10 @@ app.get('/talent/search', async (req, reply) => {
   if (!userId) return reply.code(401).send({ error: 'unauthorized' }),
   const rows = await withUser(userId, async (client) => {
     const res = await client.query(
-      `SELECT id, full_name, country, skills, experience_years FROM talent_profile       WHERE ($1::text IS NULL OR country = $1)
-         AND ($2::text IS NULL OR EXISTS (
+      `SELECT id, full_name, country, skills, experience_years FROM talent_profile       WHERE ($1: text IS NULL OR country = $1)
+         AND ($2: text IS NULL OR EXISTS (
               SELECT 1 FROM unnest(skills) s WHERE s ILIKE '%' || $2 || '%'
-           ))
+           )
        ORDER BY created_at DESC
        LIMIT 25`,
       [country || null, q || null]
@@ -69,7 +68,7 @@ app.get('/talent/search', async (req, reply) => {
     return res.rows
   }),
   return { results: rows }
-}),
+),
 
 app.get('/projects/:name/track', async (req, reply) => {
   const name = (req.params as any).name as string,
@@ -81,7 +80,7 @@ app.get('/projects/:name/track', async (req, reply) => {
   }),
   if (!project) return reply.code(404).send({ error: 'not found' }),
   return { project }
-}),
+),
 
 app.get('/notifications', async (req, reply) => {
   const userId = getUserId(req),
@@ -94,10 +93,9 @@ app.get('/notifications', async (req, reply) => {
     return res.rows
   }),
   return { items }
-}),
+),
 
 const port = Number(process.env.API_PORT || 4000),
-app.listen({ port, host: '0.0.0.0' }).catch((err) => {
+app.listen({ port, host: '0.0.0.0' }).catch(err) => {
   app.log.error(err),
-  process.exit(1)
-}),
+  process.exit(1),

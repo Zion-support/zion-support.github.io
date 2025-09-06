@@ -55,7 +55,7 @@ export function PaymentSection(): any ({ selectedCountry }: PaymentSectionProps)
       </p>
     </div>
   )
-}"}
+"}
 
     <div className='text - center'>;
       <p className='text - zion - slate - light mb - 2'>Selected Country</p>;
@@ -79,4 +79,4 @@ export function PaymentSection(): any ({ selectedCountry }: PaymentSectionProps)
         billed separately.;
       </p>;
     </div>);
-}"}
+"}

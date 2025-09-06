@@ -2,8 +2,8 @@ import React from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
 import { useRouter } from 'next/router',;
-;
-// Mock whitepaper data - in a real app, this would come from an API or database;
+
+/ Mock whitepaper data - in a real app, this would come from an API or database;
 const whitepapers = {;
   'autonomous-systems-guide':{;
     id:'autonomous-systems-guide',;
@@ -20,8 +20,7 @@ const whitepapers = {;
         'Best Practices & Case StudiesFuture Trends & Predictions';
       ],;
       targetAudience:'Technology leaders, engineers, and business professionals interested in implementing autonomous systems.';
-    }
-  },;
+    },;
   'ai-ethics-framework':{;
     id:'ai-ethics-framework',;
     title:'AI Ethics Framework for Business',;
@@ -37,8 +36,7 @@ const whitepapers = {;
         'Risk Assessment & MitigationCompliance & Governance';
       ],;
       targetAudience:'Business leaders, compliance officers, and AI practitioners focused on responsible AI development.';
-    }
-  },;
+    },;
   'automation-roi-calculator':{;
     id:'automation-roi-calculator',;
     title:'Automation ROI Calculator Guide',;
@@ -55,15 +53,13 @@ const whitepapers = {;
       ],;
       targetAudience:'Business analysts, project managers, and executives evaluating automation investments.';
     }
-  }
-},;
-;
+,;
+
 export default function WhitepaperPage() {;
   const router = useRouter(),;
   const { id } = router.query,;
-  ;
   const whitepaper = whitepapers[id as keyof typeof whitepapers],;
-;
+
   if (!whitepaper) {;
     return (;
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">;
@@ -79,7 +75,7 @@ export default function WhitepaperPage() {;
       </div>;
     );
   }
-;
+
   return (;
     <>;
       <Head>;
@@ -88,7 +84,6 @@ export default function WhitepaperPage() {;
         <meta property="og:title" content={whitepaper.title} />;
         <meta property="og:description" content={whitepaper.description} />;
       </Head>;
-      ;
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">;
         <main className="container mx-auto px-6 py-12">;
           {/* Breadcrumb */}
@@ -97,7 +92,7 @@ export default function WhitepaperPage() {;
                Back to Resources;
             </Link>;
           </nav>;
-;
+
           {/* Header */}
           <header className="text-center mb-16">;
             <div className="mb-6">;
@@ -119,33 +114,33 @@ export default function WhitepaperPage() {;
               <span>{whitepaper.publishDate}</span>;
             </div>;
           </header>;
-;
+
           {/* Whitepaper Content */}
           <div className="max-w-4xl mx-auto">;
             <section className="mb-12">;
               <h2 className="text-3xl font-bold mb-6 text-cyan-400">Executive Summary</h2>;
               <p className="text-lg text-white/80">{whitepaper.content.executiveSummary}</p>;
             </section>;
-;
+
             <section className="mb-12">;
               <h2 className="text-3xl font-bold mb-6 text-fuchsia-400">Key Topics Covered</h2>;
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-                {whitepaper.content.keyTopics.map((topic, index) => (;
+                {whitepaper.content.keyTopics.map(topic, index) => (;
                   <div key={index} className="bg-white/10 backdrop-blur-xl rounded-lg p-4 border border-white/20">;
                     <div className="flex items-center gap-3">;
                       <div className="w-2 h-2 bg-fuchsia-400 rounded-full"></div>;
                       <span className="text-white/90">{topic}</span>;
                     </div>;
                   </div>;
-                ))}
+                )}
               </div>;
             </section>;
-;
+
             <section className="mb-12">;
               <h2 className="text-3xl font-bold mb-6 text-green-400">Target Audience</h2>;
               <p className="text-lg text-white/80">{whitepaper.content.targetAudience}</p>;
             </section>;
-;
+
             {/* Download Section */}
             <section className="mb-12">;
               <div className="bg-gradient-to-r from-fuchsia-500/10 to-purple-500/10 rounded-2xl p-8 border border-fuchsia-500/20 text-center">;
@@ -161,15 +156,15 @@ export default function WhitepaperPage() {;
                 </p>;
               </div>;
             </section>;
-;
+
             {/* Related Whitepapers */}
             <section className="mb-12">;
               <h2 className="text-2xl font-bold mb-6 text-white">Explore More Whitepapers</h2>;
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
                 {Object.values(whitepapers);
-                  .filter(w => w.id !== whitepaper.id);
+                  .filter(w => w.id != whitepaper.id);
                   .slice(0, 2);
-                  .map((relatedPaper) => (;
+                  .map(relatedPaper) => (;
                     <Link ;
                       key={relatedPaper.id}
                       href={`/resources/whitepapers/${relatedPaper.id}`}
@@ -182,10 +177,10 @@ export default function WhitepaperPage() {;
                       <span className="inline-block px-3 py-1 bg-fuchsia-400/20 text-fuchsia-400 text-xs rounded-full border border-fuchsia-400/30">;
                         {relatedPaper.category}
                       </span>;
-                    </Link>;                  ))}
+                    </Link>;                  )}
               </div>;
             </section>;
-;
+
             {/* CTA */}
             <section className="text-center">;
               <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20">;
@@ -207,15 +202,12 @@ export default function WhitepaperPage() {;
         </main>;
       </div>;
     </>;
-  ); 
-}
-};
+  );
 <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white"> <main className="container mx-auto px-6 py-12"> <div className="text-center"> <h1 className="text-4xl font-bold mb-4">Whitepaper Not Found</h1> <p className="text-white/80 mb-8">The requested whitepaper could not be found.</p> <Link href="/resources" className="px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"> whitepaper.pages 
-}pages</span> <span></span> <span> {
+pages</span> <span></span> <span> {
   whitepaper.publishDate 
-}</span> </div> </header> </div> </div>) ) 
-}</div> </section> </p> </div> </section> .filter (w => w.id !== whitepaper.id) .slice (0, 2) .map ( (relatedPaper) => (<Link key= {
+</span> </div> </header> </div> </div>) 
+</div> </section> </p> </div> </section> .filter (w => w.id != whitepaper.id) .slice (0, 2) .map (relatedPaper) => (<Link key= {
   relatedPaper.id 
-}</span> </Link>) ) 
-}</div> </section> Our research team can conduct custom studies and create whitepapers tailored to your specific industry and needs. </p> Contact Us </Link> <Link href="/services" className="px-6 py-3 border border-white/20 text-white rounded-lg hover:border-cyan-400/50 transition-all duration-300" > Our Services </Link> </div> </div> </section> </div> </main> </div> </>) 
-}
+</span> </Link>) 
+</div> </section> Our research team can conduct custom studies and create whitepapers tailored to your specific industry and needs. </p> Contact Us </Link> <Link href="/services" className="px-6 py-3 border border-white/20 text-white rounded-lg hover:border-cyan-400/50 transition-all duration-300" > Our Services </Link> </div> </div> </section> </div> </main> </div> </>) 

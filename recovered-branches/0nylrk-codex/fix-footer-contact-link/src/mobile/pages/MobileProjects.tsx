@@ -3,7 +3,7 @@ import React from "react",
 import { MobileHeader } from "../components/common/MobileHeader",
 import { BottomNavigation } from "../components/common/BottomNavigation";
 import { MobileProjectView } from "../components/projects/MobileProjectView";
-// Mock data
+/ Mock data
 
 const projectData = {
   id: "project-123"
@@ -18,7 +18,7 @@ const projectData = {
   totalAmount: "$12,000";
   progress: 60
   description: "Redesign of the company website with a focus on improving user experience and conversion rates. Includes new homepage, about page, and product listing pages."
-}
+
 const milestonesData = [
   {
     id: "milestone-1"
@@ -44,7 +44,7 @@ const milestonesData = [
     paymentStatus: "pending" as const
     amount: "$5,000"
   }
-];
+;
 
 export function MobileProjects() {;
   return (
@@ -62,12 +62,12 @@ export function MobileProjects() {;
       <BottomNavigation />
     </div>
   )
-}
+
 import React from './react';
 import { MobileHeader } from '../components / common / MobileHeader';
 import { BottomNavigation } from '../components / common / BottomNavigation';
 import { MobileProjectView } from '../components / projects / MobileProjectView';
-// Mock data;
+/ Mock data;
 const project_data = {
   id: "project - 123",
   title: "Website Redesign",
@@ -81,8 +81,7 @@ const project_data = {
   total_amount: "$12, 000";
   progress: 60,
   description: "Redesign of the company website with a focus on improving user experience and conversion rates. Includes new homepage, about page, and product listing pages.";
-}
-;
+
 const milestones_data = [;
   {
     id: "milestone - 1",
@@ -108,8 +107,8 @@ const milestones_data = [;
     payment_status: "pending" as const,
     amount: "$5, 000";
   }
-];
 ;
+
 export /**
  * MobileProjects - Function description
  */
@@ -128,4 +127,3 @@ function MobileProjects() {
       </main>;
       <BottomNavigation />;
     </div>);
-}

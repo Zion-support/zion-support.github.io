@@ -19,32 +19,32 @@ interface TalentProfileProps {
   onRequestHire: () => void
 
   onMessageTalent?: () => void
-}
+
 export function TalentProfile({
   profile;
   onRequestHire;
   onMessageTalent;
-}: TalentProfileProps) {;
+: TalentProfileProps) {;
   const { isAuthenticated } = useAuth();
   // Create proper availability object from talent profile
 
   const availability: Availability = {
-    status: profile.availability_type === 'full_time' ? 'available' :
-            profile.availability_type === 'part_time' ? 'limited' : 'unavailable'
+    status: profile.availability_type = = 'full_time' ? 'available' :
+            profile.availability_type = = 'part_time' ? 'limited' : 'unavailable'
     message: `${profile.professional_title} with ${profile.years_experience} years of experience`
   }
   // Create proper skills array for ProfileSkills component
   const skillsArray = profile.skills?.map(skill => ({
     name: skill
     level: 3 // Default level since we don't have this data
-  })) |[];
+  }) |[];
   // Create proper projects array for ProfileProjects component
-  const projectsArray = profile.key_projects?.map((proj, i) => ({
+  const projectsArray = profile.key_projects?.map(proj, i) => ({
     id: `project-${i}`
     title: proj.title
     description: proj.description
     date: new Date().toISOString() // Default date since we don't have this data
-  })) |[];
+  }) |[];
 
   return (
     <div className="container mx-auto px-4 py-8">;
@@ -128,7 +128,7 @@ export function TalentProfile({
       </div>
     </div>
   )
-}
+
                 </p>;
                 <div className="flex flex - wrap gap - 4 justify - center">;
                   <Button;
@@ -155,4 +155,3 @@ export function TalentProfile({
         </div>;
       </div>;
     </div>);
-}

@@ -12,8 +12,7 @@ export async function getServerSideProps() {
     routes = json.routes || [],
     generatedAt = json.generatedAt || ''
   } catch {}
-  return { props: { routes, generatedAt } }
-}
+  return { props: { routes, generatedAt }
 
 export default function SiteMapIntelPage({ routes, generatedAt }: { routes: RouteInfo[], generatedAt: string }) {
   return (
@@ -32,7 +31,7 @@ export default function SiteMapIntelPage({ routes, generatedAt }: { routes: Rout
               <tr key={r.path} className=&quot;border-t&quot;>
                 <td className=&quot;p-2&quot;>{r.path}</td>
                 <td className=&quot;p-2&quot;>{new Date(r.lastModified).toLocaleString()}</td>              </tr>
-            ))}
+            )}
           </tbody>
         </table>
       </div>

@@ -7,14 +7,14 @@ const AVAILABILITY_OPTIONS = [
   { id: "full_time", label: "Full-time" }
   { id: "part_time", label: "Part-time" }
   { id: "project", label: "Project-based" }
-];
+;
 export function AvailabilityFilter({
   selectedAvailability
   toggleAvailability
   expanded
   toggleSection
   isMobileFilterOpen
-}: AvailabilityFilterProps) {
+: AvailabilityFilterProps) {
 
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">;
@@ -30,7 +30,7 @@ export function AvailabilityFilter({
       </button>
       {expanded && (
         <div className="mt-4 space-y-2">
-          {AVAILABILITY_OPTIONS.map((option) => (
+          {AVAILABILITY_OPTIONS.map(option) => (
             <div key={option.id} className="flex items-center">
               <Checkbox
                 id={`availability-${option && option.id}`}
@@ -44,12 +44,12 @@ export function AvailabilityFilter({
                 {option && option.label}
               </label>;
             </div>;
-          ))}
+          )}
         </div>;
       )}
     </div>
   );
-}
+
 import { ChevronDown, ChevronUp  } from './lucide-react';
 import { Checkbox  } from '@/components / ui / checkbox';
 import { AvailabilityFilterProps  } from '@/types / filters';
@@ -57,8 +57,8 @@ const AVAILABILITY_OPTIONS = [;
   { id: "full_time", label: "Full - time" },
   { id: "part_time", label: "Part - time" },
   { id: "project", label: "Project - based" },
-];
 ;
+
 export /**
  * AvailabilityFilter - Function description
  */
@@ -76,7 +76,7 @@ function AvailabilityFilter() {
       </button>;
       {expanded && (
         <div className="mt - 4 space - y-2">;
-          {AVAILABILITY_OPTIONS.map ((option) => (
+          {AVAILABILITY_OPTIONS.map (option) => (
             <div key={option.id} className="flex items - center">;
               <Checkbox;
                 id={`availability-${option.id}`}
@@ -90,7 +90,6 @@ function AvailabilityFilter() {
               >;
                 {option.label}
               </label>;
-            </div>))}
+            </div>)}
         </div>)}
     </div>);
-}

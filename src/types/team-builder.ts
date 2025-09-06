@@ -3,4 +3,3 @@ export interface ProjectBrief {
   timeline: string, budget: string
   techStack?: string[]
   talentFilters?: { verifiedOnly?: boolean; regions?: string[] }
-}

@@ -6,5 +6,3 @@ export function Tutorials() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

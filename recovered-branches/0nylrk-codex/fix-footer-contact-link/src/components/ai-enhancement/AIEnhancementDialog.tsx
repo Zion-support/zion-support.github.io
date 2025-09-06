@@ -14,7 +14,7 @@ interface AIEnhancementDialogProps {
   defaultOptions: AIEnhancementOptions
 
   initialContent?: string
-}
+
 export function AIEnhancementDialog({
   title;
   isOpen;
@@ -22,7 +22,7 @@ export function AIEnhancementDialog({
   onApply;
   defaultOptions;
   initialContent
-}: AIEnhancementDialogProps) {
+: AIEnhancementDialogProps) {
 
   const handleApply = (content: string) => {
     onApply(content)
@@ -44,7 +44,7 @@ export function AIEnhancementDialog({
       </DialogContent>
     </Dialog>
   )
-}
+
 import {Dialog, DialogContent, DialogHeader, DialogTitle} from '@/components / ui / dialog';
 import {AIEnhancementPanel} from './AIEnhancementPanel';
 import {AIEnhancementOptions} from '@/hooks / useAIContentEnhancer';
@@ -55,7 +55,7 @@ interface AIEnhancementDialogProps {
   on_apply: (content: string) => void,
   default_options: AIEnhancementOptions,
   initial_content?: string;
-}
+
 export /**
  * AIEnhancementDialog - Function description
  */
@@ -64,7 +64,7 @@ function AIEnhancementDialog() {
     on_apply (content),
     on_close ();
   }
-;
+
   return (
     <Dialog open={is_open} onOpenChange={() => on_close ()}>;
       <DialogContent className="max - w-3xl">;
@@ -79,4 +79,3 @@ function AIEnhancementDialog() {
         />;
       </DialogContent>;
     </Dialog>);
-}

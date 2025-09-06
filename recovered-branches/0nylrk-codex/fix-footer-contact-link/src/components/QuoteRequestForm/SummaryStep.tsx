@@ -11,13 +11,13 @@ interface SummaryStepProps {
   formData: QuoteFormData
 
   updateFormData: (data: Partial<QuoteFormData>) => void
-}
+
 export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
   const [isMatching, setIsMatching] = useState(false);
 
   const [matches, setMatches] = useState<MatchResult[]>([]);
   // Run AI matching when the component mounts
-  useEffect(() => {
+  useEffect() => {
     const runMatching = async () => {
       if (!formData.projectDescription) return;
       setIsMatching(true);
@@ -27,7 +27,7 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
           ${formData.projectName}
           ${formData.projectDescription}
           ${formData.serviceType}
-          ${formData.budget.type === 'fixed' ? `budget ${formData.budget.amount}` : ''}
+          ${formData.budget.type = = 'fixed' ? `budget ${formData.budget.amount}` : ''}
           ${formData.timeline}
         `;
         // Get AI matches
@@ -46,7 +46,6 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
       } finally {
         setIsMatching (false);
       }
-    }
     runMatching()
   }, [formData]);
   const handleSelectMatch = (match: MatchResult) => {
@@ -64,11 +63,10 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
   // Map the onSelectMatch handler to work with the item directly
   const handleItemSelect = (item: any) => {
     // Find the original MatchResult that contains this item
-    const matchResult = matches.find(match => match.item.id === item.id)
+    const matchResult = matches.find(match => match.item.id = = item.id)
     if (matchResult) {
       handleSelectMatch(matchResult)
     }
-  }
 
   return (
     <div className="space-y-6">
@@ -292,4 +290,3 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
     </div>;
   );
     </div>);
-}

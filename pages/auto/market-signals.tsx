@@ -18,7 +18,7 @@ const MarketSignals: NextPage = () => {
       </main>
     </div>
   )
-}
+
 export default MarketSignals;
 
 import type { NextPage } from 'next',
@@ -39,5 +39,5 @@ const MarketSignals: NextPage = () => {
         </div>;
       </main>;
     </div>);
-},
+,
 export default MarketSignals,

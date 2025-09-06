@@ -4,29 +4,28 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React from 'react';
 interface ButtonProps {
 
   children: React.ReactNode;  variant?: 'primary' | 'secondary' | 'outline';interface ButtonProps {
   children: React.ReactNode
-
 
 interface ButtonProps {;
   children: React && React.ReactNode;  variant?: 'primary' | 'secondary' | 'outline';interface ButtonProps {;
@@ -48,7 +47,7 @@ export default function Button({
   onClick
   type = 'button'
   disabled = false
-}: ButtonProps) {
+: ButtonProps) {
   const baseClasses =
     'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-900';
   const variantClasses = {
@@ -74,10 +73,9 @@ export default function Button(): any ({;
   onClick,;
   type = 'button',;
   disabled = false,;
-}: ButtonProps) {;
+: ButtonProps) {;
   const baseClasses =;
     'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-900';
-}
 
   const variantClasses = {;
     primary:;
@@ -102,7 +100,7 @@ export default function Button(): any ({;
       {children}
     </button>;
   );
-}  const disabledClasses = disabled ? 'opacity-50 cursor-not-allowed' : 'hover: scale-105 transform'
+  const disabledClasses = disabled ? 'opacity-50 cursor-not-allowed' : 'hover: scale-105 transform'
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${disabledClasses} ${className}`;
 
   class_name?: string;
@@ -115,7 +113,7 @@ export default /**
 function Button() {
   const base_classes =;
     'inline - flex items - center justify - center font - semibold rounded - lg transition - all duration - 200 focus:outline - none focus:ring - 2 focus:ring - offset - 2 focus:ring - offset - slate - 900';
-;
+
   const variant_classes = {
     primary:;
       'bg - gradient - to - r from - cyan - 500 to - purple - 500 text - white hover:from - cyan - 600 hover:to - purple - 600 focus:ring - cyan - 500',
@@ -124,25 +122,25 @@ function Button() {
     outline:;
       'bg - transparent text - white border border - white / 20 hover:bg - white / 10 hover:border - white / 30 focus:ring - white / 50',
   }
-;
+
   const size_classes = {
     sm: 'px - 3 py - 1.5 text - sm',
     md: 'px - 4 py - 2 text - base',
     lg: 'px - 6 py - 3 text - lg',
   }
-;
+
   const disabled_classes = disabled;
     ? 'opacity - 50 cursor - not - allowed';
     : 'hover:scale - 105 transform';
-;
+
   const classes = `${base_classes} ${variant_classes[variant]} ${size_classes[size]} ${disabled_classes} ${class_name}`;
-;
+
       >;
       {children}
     </button>);
-}  const disabled_classes = disabled ? 'opacity - 50 cursor - not - allowed' : 'hover: scale - 105 transform',
+  const disabled_classes = disabled ? 'opacity - 50 cursor - not - allowed' : 'hover: scale - 105 transform',
   const classes = `${base_classes} ${variant_classes[variant]} ${size_classes[size]} ${disabled_classes} ${class_name}`;
-;
+
   return (
     <button;
       type={type}
@@ -151,12 +149,11 @@ function Button() {
       disabled={disabled}
       {children}
     </button>
-);
-}
+;
+
     >
       {children}
     </button>
   );
-}
+
     </button>);
-}

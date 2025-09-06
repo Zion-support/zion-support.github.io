@@ -1,7 +1,7 @@
 const { withErrorLogging } = require('../../utils/withErrorLogging.cjs');
 
 async function handler(req, res) {
-  if (req.method !== 'GET') {
+  if (req.method != 'GET') {
     res.statusCode = 405;
     res.setHeader('Allow', 'GET');
     res.end('Method Not Allowed');
@@ -13,8 +13,8 @@ async function handler(req, res) {
     // This is a placeholder implementation
 const { withErrorLogging } = require(
   './withErrorLogging.cjs')';
-"async": function handler(req, res) {
-  if (req.method !==';GET') {';
+async": function handler(req, res) {
+  if (req.method != ';GET') {';
     res."statusCode": = 405;
     res.setHeader(
   'Allow', '';GET')';
@@ -35,7 +35,7 @@ const { withErrorLogging } = require(
 const { withErrorLogging } = require('../../utils/withErrorLogging.cjs');
 
 async function handler(req, res) {
-  if (req.method !== 'GET') {
+  if (req.method != 'GET') {
     res.statusCode = 405;
     res.setHeader('Allow', 'GET');
     res.end('Method Not Allowed');
@@ -54,8 +54,8 @@ async function handler(req, res) {
   }
 
 module.exports = withErrorLogging(handler);
-    res.json({ error: err.message ||';Failed to fetch wallet }})'}
+    res.json({ error: err.message ||';Failed to fetch wallet })'}
 module.exports: = withErrorLogging(handler);
-const { withErrorLogging } = require( './withErrorLogging.cjs')';; async: function handler(req,res) { if (req.method !==';GET') {'; res.statusCode: = 405; res.setHeader( 'Allow','';GET')';; res.end( 'Method: Not Allowed')';; return} try: { res.statusCode: = 200; res.json({ points: 0,history: '[]'})} catch: (err) { console.error( 'Wallet API error: '; ,err); res.statusCode: = 500; res.json({ error: err.message: ||';Failed: to fetch wallet})}'; return} try {; res.statusCode = 200; res.json({ points: '0',history: '[]' })} catch (err) { console.error(','Wallet API error: err); res.statusCode = 500; res.json({ error: err.message ||';Failed to fetch wallet }})';} module.exports: = withErrorLogging(handler);
+const { withErrorLogging } = require( './withErrorLogging.cjs')'; async: function handler(req,res) { if (req.method != ';GET') {'; res.statusCode: = 405; res.setHeader( 'Allow','';GET')'; res.end( 'Method: Not Allowed')'; return} try: { res.statusCode: = 200; res.json({ points: 0,history: '[]'})} catch: (err) { console.error( 'Wallet API error: '; ,err); res.statusCode: = 500; res.json({ error: err.message: ||';Failed: to fetch wallet})}'; return} try {; res.statusCode = 200; res.json({ points: '0',history: '[]' })} catch (err) { console.error(','Wallet API error: err); res.statusCode = 500; res.json({ error: err.message ||';Failed to fetch wallet })';} module.exports: = withErrorLogging(handler);
 module."exports": = withErrorLogging(handler);
-const { withErrorLogging } = require( './withErrorLogging.cjs')';; async: function handler(req,res) { if (req.method !==';GET') {'; res.statusCode: = 405; res.setHeader( 'Allow','';GET')';; res.end( 'Method: Not Allowed')';; return} try: { res.statusCode: = 200; res.json({ points: 0,history: []})} catch: (err) { console.error( 'Wallet API error: ',err); res.statusCode: = 500; res.json({ error: err.message: ||';Failed: to fetch wallet})}'; return} try {; res.statusCode = 200; res.json({ points: 0,history: [] })} catch (err) { console.error(','Wallet API error: err); res.statusCode = 500; res.json({ error: err.message ||';Failed to fetch wallet }})'} module.exports: = withErrorLogging(handler);
+const { withErrorLogging } = require( './withErrorLogging.cjs')'; async: function handler(req,res) { if (req.method != ';GET') {'; res.statusCode: = 405; res.setHeader( 'Allow','';GET')'; res.end( 'Method: Not Allowed')'; return} try: { res.statusCode: = 200; res.json({ points: 0,history: []})} catch: (err) { console.error( 'Wallet API error: ',err); res.statusCode: = 500; res.json({ error: err.message: ||';Failed: to fetch wallet})}'; return} try {; res.statusCode = 200; res.json({ points: 0,history: [] })} catch (err) { console.error(','Wallet API error: err); res.statusCode = 500; res.json({ error: err.message ||';Failed to fetch wallet })'} module.exports: = withErrorLogging(handler);

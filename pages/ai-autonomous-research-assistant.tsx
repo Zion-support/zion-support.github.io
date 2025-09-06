@@ -24,7 +24,7 @@ export default function AIAutonomousResearchAssistant() {
 			canonical="https: //ziontechgroup.com/ai-autonomous-research-assistant"
 		/>
 	)
-}
+
 import React from 'react',
 import ServiceLanding from '../components / sections / ServiceLanding',
 export default /**
@@ -51,4 +51,3 @@ return (
     industries={["Consulting", "Healthcare", "Finance", "Public Sector"]}
     canonical="https: //ziontechgroup.com / ai - autonomous - research - assistant";
   />);
-}

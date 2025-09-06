@@ -7,6 +7,5 @@ const LazyWrapper.js = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default LazyWrapper.js;

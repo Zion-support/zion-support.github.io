@@ -6,7 +6,6 @@ type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated';
 interface ProfileBadgeProps {
   type: BadgeType;
   className?: string;
-}
 
 export function ProfileBadge({ type, className }: ProfileBadgeProps) {
   const badgeConfig = {
@@ -29,8 +28,7 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
       icon: '',
       text: 'Top Rated',
       colors: 'bg-purple-100 text-purple-800'
-    }
-  };
+    };
 
   const { icon, text, colors } = badgeConfig[type];
 
@@ -40,4 +38,3 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
       <span>{text}</span>
     </div>
   );
-}

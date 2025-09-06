@@ -5,7 +5,7 @@ import {
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield,
   ArrowRight, Star, TrendingUp, Users, Award, Play,
   CheckCircle, DollarSign, Clock, Target, Crown
-} from 'lucide-react',
+ from 'lucide-react',
 
 export default function UltraFuturisticHero2028() {
   const features = [
@@ -35,23 +35,23 @@ export default function UltraFuturisticHero2028() {
       {/* Floating Elements */}
       <div className=&quot;absolute inset-0 overflow-hidden pointer-events-none&quot;>
         <motion.div
-          animate={{ y: [0, -20, 0] }}
-          transition={{ duration: 6, repeat: Infinity, ease: &quot;easeInOut&quot; }}
+          animate={ y: [0, -20, 0] }
+          transition={ duration: 6, repeat: Infinity, ease: &quot;easeInOut&quot; }
           className=&quot;absolute top-20 left-10 w-2 h-2 bg-cyan-400 rounded-full opacity-60&quot;
         />
         <motion.div
-          animate={{ y: [0, 20, 0] }}
-          transition={{ duration: 8, repeat: Infinity, ease: &quot;easeInOut&quot; }}
+          animate={ y: [0, 20, 0] }
+          transition={ duration: 8, repeat: Infinity, ease: &quot;easeInOut&quot; }
           className=&quot;absolute top-40 right-20 w-1 h-1 bg-blue-400 rounded-full opacity-40&quot;
         />
         <motion.div
-          animate={{ y: [0, -15, 0] }}
-          transition={{ duration: 7, repeat: Infinity, ease: &quot;easeInOut&quot; }}
+          animate={ y: [0, -15, 0] }
+          transition={ duration: 7, repeat: Infinity, ease: &quot;easeInOut&quot; }
           className=&quot;absolute bottom-40 left-20 w-1.5 h-1.5 bg-purple-400 rounded-full opacity-50&quot;
         />
         <motion.div
-          animate={{ y: [0, 25, 0] }}
-          transition={{ duration: 9, repeat: Infinity, ease: &quot;easeInOut&quot; }}
+          animate={ y: [0, 25, 0] }
+          transition={ duration: 9, repeat: Infinity, ease: &quot;easeInOut&quot; }
           className=&quot;absolute bottom-20 right-10 w-1 h-1 bg-cyan-400 rounded-full opacity-30&quot;
         />
       </div>
@@ -59,9 +59,9 @@ export default function UltraFuturisticHero2028() {
       <div className=&quot;relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center&quot;>
         {/* Badge */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          initial={ opacity: 0, y: 30 }
+          animate={ opacity: 1, y: 0 }
+          transition={ duration: 0.8 }
           className=&quot;mb-8&quot;        >
           <div className=&quot;inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-full px-6 py-3 mb-6 backdrop-blur-sm&quot;>
             <Rocket className=&quot;w-5 h-5 text-cyan-400&quot; />
@@ -72,9 +72,9 @@ export default function UltraFuturisticHero2028() {
 
         {_/* Main Heading */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          initial={ opacity: 0, y: 30 }
+          animate={ opacity: 1, y: 0 }
+          transition={ duration: 0.8, delay: 0.2 }
           className=&quot;mb-8&quot;        >
           <h1 className=&quot;text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight&quot;>
             <span className=&quot;bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent&quot;>
@@ -87,7 +87,7 @@ export default function UltraFuturisticHero2028() {
               </span>
             </span>
           </h1>
-          
+
           <p className=&quot;text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-5xl mx-auto leading-relaxed&quot;>
             Experience revolutionary 2028 technology with AI Consciousness Evolution, Quantum Time Manipulation, 
             and Autonomous AI Civilization. We're building tomorrow's solutions today.
@@ -96,22 +96,22 @@ export default function UltraFuturisticHero2028() {
 
         {_/* CTA Buttons */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          initial={ opacity: 0, y: 30 }
+          animate={ opacity: 1, y: 0 }
+          transition={ duration: 0.8, delay: 0.4 }
           className=&quot;flex flex-col sm:flex-row gap-4 justify-center items-center mb-16&quot;
         >
           <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+            whileHover={ scale: 1.05 }
+            whileTap={ scale: 0.95 }
             className=&quot;group bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-2xl shadow-cyan-500/50 hover:shadow-cyan-500/70 transition-all duration-300 border border-cyan-400/50 hover:border-cyan-300 flex items-center space-x-2&quot;          >
             <span>Explore 2028 Services</span>
             <ArrowRight className=&quot;w-5 h-5 group-hover:translate-x-1 transition-transform duration-300&quot; />
           </motion.button>
-          
+
           <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+            whileHover={ scale: 1.05 }
+            whileTap={ scale: 0.95 }
             className=&quot;group border border-cyan-500/50 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 flex items-center space-x-2 backdrop-blur-sm&quot;          >
             <Play className=&quot;w-5 h-5&quot; />
             <span>Watch Demo</span>
@@ -120,18 +120,18 @@ export default function UltraFuturisticHero2028() {
 
         {_/* Features Grid */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          initial={ opacity: 0, y: 30 }
+          animate={ opacity: 1, y: 0 }
+          transition={ duration: 0.8, delay: 0.6 }
           className=&quot;mb-16&quot;
         >
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto&quot;>
-            {features.map((feature, index) => (
+            {features.map(feature, index) => (
               <motion.div
                 key={feature.text}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
+                initial={ opacity: 0, scale: 0.8 }
+                animate={ opacity: 1, scale: 1 }
+                transition={ duration: 0.5, delay: 0.8 + index * 0.1 }
                 className=&quot;group relative&quot;
               >
                 <div className=&quot;bg-gradient-to-br from-gray-900/80 to-black/80 border border-cyan-500/30 rounded-2xl p-6 hover:border-cyan-500/50 hover:bg-gray-900/90 transition-all duration-500 hover:shadow-2xl hover:shadow-cyan-500/20 backdrop-blur-sm&quot;>
@@ -142,24 +142,24 @@ export default function UltraFuturisticHero2028() {
                     {feature.text}                  </h3>
                 </div>
               </motion.div>
-            ))}
+            )}
           </div>
         </motion.div>
 
         {_/* Stats */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.0 }}
+          initial={ opacity: 0, y: 30 }
+          animate={ opacity: 1, y: 0 }
+          transition={ duration: 0.8, delay: 1.0 }
           className=&quot;mb-16&quot;
         >
           <div className=&quot;grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto&quot;>
-            {stats.map((stat, index) => (
+            {stats.map(stat, index) => (
               <motion.div
                 key={stat.label}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: 1.2 + index * 0.1 }}
+                initial={ opacity: 0, scale: 0.8 }
+                animate={ opacity: 1, scale: 1 }
+                transition={ duration: 0.5, delay: 1.2 + index * 0.1 }
                 className=&quot;text-center group&quot;              >
                 <div className=&quot;w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-3xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 group-hover:border-cyan-400/50 transition-all duration-300&quot;>
                   <stat.icon className=&quot;w-10 h-10 text-cyan-400&quot; />
@@ -170,15 +170,15 @@ export default function UltraFuturisticHero2028() {
                 <div className=&quot;text-sm text-cyan-400/70 group-hover:text-cyan-300 transition-colors&quot;>
                   {stat.label}                </div>
               </motion.div>
-            ))}
+            )}
           </div>
         </motion.div>
 
         {_/* Trust Indicators */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.4 }}
+          initial={ opacity: 0, y: 30 }
+          animate={ opacity: 1, y: 0 }
+          transition={ duration: 0.8, delay: 1.4 }
           className=&quot;mb-16&quot;        >
           <div className=&quot;bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/30 rounded-2xl p-8 backdrop-blur-sm&quot;>
             <h3 className=&quot;text-2xl font-bold text-white mb-6&quot;>
@@ -195,9 +195,9 @@ export default function UltraFuturisticHero2028() {
 
         {_/* Bottom CTA */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.6 }}
+          initial={ opacity: 0, y: 30 }
+          animate={ opacity: 1, y: 0 }
+          transition={ duration: 0.8, delay: 1.6 }
           className=&quot;text-center&quot;        >
           <div className=&quot;inline-flex items-center space-x-4 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-2xl px-8 py-4 backdrop-blur-sm&quot;>
             <div className=&quot;flex items-center space-x-2&quot;>
@@ -216,19 +216,19 @@ export default function UltraFuturisticHero2028() {
 
       {_/* Scroll Indicator */}
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 2 }}
+        initial={ opacity: 0 }
+        animate={ opacity: 1 }
+        transition={ duration: 1, delay: 2 }
         className=&quot;absolute bottom-8 left-1/2 transform -translate-x-1/2&quot;
       >
         <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity, ease: &quot;easeInOut&quot; }}
+          animate={ y: [0, 10, 0] }
+          transition={ duration: 2, repeat: Infinity, ease: &quot;easeInOut&quot; }
           className=&quot;w-6 h-10 border-2 border-cyan-400/50 rounded-full flex justify-center&quot;
         >
           <motion.div
-            animate={{ y: [0, 12, 0] }}
-            transition={{ duration: 2, repeat: Infinity, ease: &quot;easeInOut&quot; }}
+            animate={ y: [0, 12, 0] }
+            transition={ duration: 2, repeat: Infinity, ease: &quot;easeInOut&quot; }
             className=&quot;w-1 h-3 bg-cyan-400 rounded-full mt-2&quot;          />
         </motion.div>
       </motion.div>

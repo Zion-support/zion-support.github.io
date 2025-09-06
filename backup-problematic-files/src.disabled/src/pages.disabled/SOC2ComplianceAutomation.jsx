@@ -7,6 +7,5 @@ const SOC2ComplianceAutomation = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default SOC2ComplianceAutomation;

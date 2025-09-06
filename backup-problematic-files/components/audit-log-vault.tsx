@@ -38,9 +38,9 @@ export default function AuditLogVaultPage() {
               <p className="text-gray-300 mb-6">Centralize audit logs from apps and platforms into an immutable, indexed store with strong retention controls and cryptographic integrity, ready for SOC 2, HIPAA and ISO reviews.</p>
               <h3 className="text-lg font-semibold text-white mb-3">Key Features</h3>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-gray-300">
-                {features.map((f) => (
+                {features.map(f) => (
                   <li key={f} className="flex items-start gap-2"><Check className="w-4 h-4 text-emerald-400 mt-0.5" /> <span>{f}</span></li>
-                ))}
+                )}
               </ul>
             </Card>
             <Card className="p-6 bg-black/40 border border-gray-700/50">
@@ -62,5 +62,3 @@ export default function AuditLogVaultPage() {
       </div>
     </UltraAdvancedFuturisticBackground>
   )
-}
-;

@@ -1,4 +1,4 @@
-{
+
   "general": {
     "app_name": "   ",
     "loading": " ...",
@@ -13,7 +13,7 @@
     "error": "",
     "open_main_menu": "  ",
     "toggle_mobile_menu": "  ",
-    "greeting_user": " {{name}}!",
+    "greeting_user": " {name}!",
     "status_page": " ",
     "check_status_page": "     "
   },
@@ -63,7 +63,7 @@
     "session_check_timed_out_message": "    .      .",
     "email_verification_required": "    ",
     "email_needs_verification": "       .",
-    "verification_email_sent": "      {{email}}",
+    "verification_email_sent": "      {email}",
     "resend_email": "  ",
     "check_status": "  ",
     "redirecting": "      3 ...",
@@ -124,8 +124,8 @@
     "fr": "Franais",
     "pt": "Portugus",
     "ar": "",
-    "language_changed": "    {{language}}",
-    "switch_to_detected": "  {{language}}"
+    "language_changed": "    {language}",
+    "switch_to_detected": "  {language}"
   },
   "features": {
     "ai_talent_matching": "   ",
@@ -222,4 +222,3 @@
     "sending": " ...",
     "submit": "    "
   }
-}

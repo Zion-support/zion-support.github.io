@@ -6,5 +6,3 @@ export function Unauthorized() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

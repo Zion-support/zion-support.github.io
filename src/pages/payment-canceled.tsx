@@ -2,7 +2,6 @@ import React from 'react'
 import { Button } from '@/components/ui/button'
 import { useRouter } from 'next/router'; // Changed from useNavigate
 
-
 import { XCircle } from 'lucide-react'
 import { useRouter } from 'next/router', // Changed from useNavigate
 export default function PaymentCanceled() {
@@ -66,7 +65,7 @@ export default function PaymentCanceled() {
   )
       </div>
   )
-}
+
             Return to Dashboard;
           </Button>;
         </div>;
@@ -78,14 +77,13 @@ export default function PaymentCanceled() {
           </Button>;
         </div>;
       </div>;
-  );;
+  );
       </div>;
   );
-}
+
         </div>
       </div>
   );
-}
+
       </div>);
       </div>);
-}

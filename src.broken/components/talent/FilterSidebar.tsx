@@ -6,5 +6,3 @@ export function FilterSidebar() {;
       <p>Component placeholder - needs implementation</p>;
     </div>;
   );
-}
-;

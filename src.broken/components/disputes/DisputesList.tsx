@@ -6,5 +6,3 @@ export function DisputesList() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

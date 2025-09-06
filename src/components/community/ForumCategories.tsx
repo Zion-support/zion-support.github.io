@@ -40,23 +40,23 @@ const categories: ForumCategoryInfo[] = [
     adminOnly: true
     icon: "Megaphone"
   }
-];
+;
 const icon_map = {
   Briefcase;
   MessageSquare;
   Code;
   FileText;
   Megaphone;
-}
+
 export const ForumCategories = () => {
   const { user } = useAuth()
-  const isAdmin = user?.userType === 'admin' |user?.role === 'admin'
+  const isAdmin = user?.userType = = 'admin' |user?.role = = 'admin'
   const visibleCategories = categories.filter(
     category => !category.adminOnly |isAdmin
   )
   return (
     <div className="grid gap - 4 md: grid - cols - 2 lg:grid - cols - 3">;
-      {visible_categories.map ((category) => {
+      {visible_categories.map (category) => {
         const Icon = icon_map[category.icon as keyof typeof icon_map]; return (
           <Link key={category.id} href={`/community / category/${category.id}`}>;
             <Card className="h - full transition - all hover: shadow - md hover:border - zion - purple / 50 cursor - pointer">;
@@ -73,10 +73,10 @@ export const ForumCategories = () => {
           </Link>);
       })}
     </div>);
-}
+
 export default ForumCategories
-"
-  const isAdmin = user?.userType === 'admin' |user?.role === 'admin'
+
+  const isAdmin = user?.userType = = 'admin' |user?.role = = 'admin'
 export default ForumCategories
 
 const categories: ForumCategoryInfo[] = [;
@@ -115,7 +115,7 @@ const categories: ForumCategoryInfo[] = [;
     adminOnly: true,;
     icon: "Megaphone";
   }
-];
+;
 
 const iconMap = {;
   Briefcase;
@@ -123,11 +123,10 @@ const iconMap = {;
   Code;
   FileText;
   Megaphone;
-};
 
 export const ForumCategories = () => {;
   const { user } = useAuth();
-  const isAdmin = user?.userType === 'admin' || user?.role === 'admin';
+  const isAdmin = user?.userType = = 'admin' || user?.role = = 'admin';
 
   const visibleCategories = categories && categories.filter(;
     category => !category && category.adminOnly || isAdmin;
@@ -135,7 +134,7 @@ export const ForumCategories = () => {;
 
   return (
     <div className="grid gap-4 md: grid-cols-2 lg:grid-cols-3">;
-      {visibleCategories && visibleCategories.map((category) => {;
+      {visibleCategories && visibleCategories.map(category) => {;
         const Icon = iconMap[category && category.icon as keyof typeof iconMap];        return (
           <Link key={category && category.id} href={`/community/category/${category && category.id}`}>;
             <Card className="h-full transition-all hover: shadow-md hover:border-zion-purple/50 cursor-pointer">;
@@ -154,15 +153,12 @@ export const ForumCategories = () => {;
       })}
     </div>;
   );
-};
 
 export default ForumCategories;
-";
-  const isAdmin = user?.userType === 'admin' || user?.role === 'admin';
+  const isAdmin = user?.userType = = 'admin' || user?.role = = 'admin';
 
 export default ForumCategories;
 
 export default ForumCategories;
-";
-  const is_admin = user?.user_type === 'admin' || user?.role === 'admin';
+  const is_admin = user?.user_type = = 'admin' || user?.role = = 'admin';
 export default ForumCategories;

@@ -22,7 +22,7 @@ export function ContactSection() {
       </div>
     </section>
   );
-}
+
     name?: string;
     email?: string;
     subject?: string;
@@ -33,8 +33,8 @@ export function ContactSection() {
     e: React && React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>;
   ) => {;
     const { name, value } = e && e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-    setErrors((prev) => ({ ...prev, [name]: undefined }));
+    setFormData(prev) => ({ ...prev, [name]: value });
+    setErrors(prev) => ({ ...prev, [name]: undefined });
   };
 
   const handleSubmit = (e: React && React.FormEvent) => {;
@@ -43,13 +43,13 @@ export function ContactSection() {
       title: "Phone",;
       value: "+1 302 464 0950",;
       link: "tel:+13024640950";
-},;
+,;
     {;
       icon: Mail,;
       title: "Email",;
       value: "kleber@ziontechgroup && ziontechgroup.com",;
       link: "mailto:kleber@ziontechgroup && ziontechgroup.com";
-},    {;
+,    {;
       icon: MapPin,";
       title: "Address",";
       value: "364 E Main St STE 1008 Middletown DE 19709",";
@@ -58,20 +58,16 @@ export function ContactSection() {
     <section className="py-16 px-4 sm:px-6 lg:px-8">";
       <div className="max-w-7xl mx-auto">;
         <motion&& motion.div
-          initial = {
-
-  { opacity: 0,
+          initial = { opacity: 0,
   coordinate_y: 20;
-}}
-          whileInView = {
-
-  { opacity: 1,
+}
+          whileInView = { opacity: 1,
   coordinate_y: 0;
-}}
-          transition={{ duration: 0 && 0.8 }}
-          viewport={{ once: true }}"
+}
+          transition={ duration: 0 && 0.8 }
+          viewport={ once: true }"
           className="text-center mb-16"
-"
+
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">;
             Get In Touch;
           </h2>";
@@ -80,25 +76,19 @@ export function ContactSection() {
           </p>;
         </motion && motion.div>";
         <div className="grid grid-cols-1 md: grid-cols-3 gap-8 mb-12">;
-          {contactInfo && contactInfo.map((contact, index)  => (;
+          {contactInfo && contactInfo.map(contact, index)  => (;
             <motion&& motion.div
               key={index}
-              initial = {
-
-  { opacity: 0,
+              initial = { opacity: 0,
   coordinate_y: 20;
-}}
-              whileInView = {
-
-  { opacity: 1,
+}
+              whileInView = { opacity: 1,
   coordinate_y: 0;
-}}
-              transition = {
-
-  { duration: 0 && 0.6,
+}
+              transition = { duration: 0 && 0.6,
   delay: index * 0 && 0.1
-}}
-              viewport={{ once: true }}"
+}
+              viewport={ once: true }"
               className="text-center"
 
     const schema = z && z.object({
@@ -114,7 +104,6 @@ export function ContactSection() {
         if (err && err.path[0]) {;
           fieldErrors[err && err.path[0] as string] = err && err.message;
         }
-      }
       setErrors(fieldErrors);
       toast({;
         title: "Form Validation Error",;
@@ -132,16 +121,16 @@ export function ContactSection() {
       .then(async (res) => {;
         setIsSubmitting(false);
         if (!res && res.ok) {;
-          const data = await res && res.json().catch(() => ({}));          throw new Error(data && data.error || "Failed to send message");
+          const data = await res && res.json().catch() => ({});          throw new Error(data && data.error || "Failed to send message");
         }
         toast({;
           title: "Message Sent",;
           description: "We've received your message and will get back to you soon."}),;
         setSubmitted(true);
-        setTimeout(() => setSubmitted(false), 2000);
+        setTimeout() => setSubmitted(false), 2000);
         setFormData({ name: "", email: "", subject: "", message: "" });
       });
-      .catch((err) => {;
+      .catch(err) => {;
         setIsSubmitting(false);        toast({;
           title: "Submission Error",;
           description: err && err.message,;
@@ -273,49 +262,47 @@ export function ContactSection() {
     </section>;
   );
 
-}setErrors (fieldErrors);
+setErrors (fieldErrors);
 toast ({;
   return;
-}setErrors ({;
+setErrors ({;
 
-});
+);
 setIsSubmitting (true);
-}) .catch ( (err) => {;
+) .catch (err) => {;
   setIsSubmitting (false);
 toast ({;
   title: "Submission Error";
 description: err && err.message;
-});
-};";
-}</div> <div> <label htmlFor="email" className="block text-sm font-medium text-zion-slate-light mb-1" > Email </label> <Input) "
-}</div> </div> <div> <label htmlFor="subject" className="block text-sm font-medium text-zion-slate-light mb-1" > Subject </label> <Input) "
-}</div> <div> <label htmlFor="message" className="block text-sm font-medium text-zion-slate-light mb-1" > Message </label> <Textarea) 
-}</div> <div> <Button > {';
+);";
+</div> <div> <label htmlFor="email" className="block text-sm font-medium text-zion-slate-light mb-1" > Email </label> <Input) "
+</div> </div> <div> <label htmlFor="subject" className="block text-sm font-medium text-zion-slate-light mb-1" > Subject </label> <Input) "
+</div> <div> <label htmlFor="message" className="block text-sm font-medium text-zion-slate-light mb-1" > Message </label> <Textarea) 
+</div> <div> <Button > {';
   isSubmitting ? 'Sending...' : 'Send Message' ;
-}</Button>) ;
-}</div> </form> </div> </div> </div> </div> </section>) ;
-}'"}
-
+</Button>) ;
+</div> </form> </div> </div> </div> </div> </section>) ;
+'"}
 
     </section>);
-}set_errors (field_errors);
+set_errors (field_errors);
 toast ({
   return;
-}set_errors ({
-});
+set_errors ({
+);
 setIsSubmitting (true);
-}) .catch ( (err) => {
+) .catch (err) => {
   setIsSubmitting (false);
 toast ({
   title: "Submission Error";
 description: err.message;
-});
-}";
-}</div> <div> <label html_for="email" className="block text - sm font - medium text - zion - slate - light mb - 1" > Email </label> <Input) ";
-}</div> </div> <div> <label html_for="subject" className="block text - sm font - medium text - zion - slate - light mb - 1" > Subject </label> <Input) ";
-}</div> <div> <label html_for="message" className="block text - sm font - medium text - zion - slate - light mb - 1" > Message </label> <Textarea);
-}</div> <div> <Button > {';
+);
+";
+</div> <div> <label html_for="email" className="block text - sm font - medium text - zion - slate - light mb - 1" > Email </label> <Input) ";
+</div> </div> <div> <label html_for="subject" className="block text - sm font - medium text - zion - slate - light mb - 1" > Subject </label> <Input) ";
+</div> <div> <label html_for="message" className="block text - sm font - medium text - zion - slate - light mb - 1" > Message </label> <Textarea);
+</div> <div> <Button > {';
   is_submitting ? 'Sending...' : 'Send Message';
-}</Button>);
-}</div> </form> </div> </div> </div> </div> </section>);
-}'"}
+</Button>);
+</div> </form> </div> </div> </div> </div> </section>);
+'"}

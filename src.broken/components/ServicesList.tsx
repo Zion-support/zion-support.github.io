@@ -6,5 +6,3 @@ export function ServicesList() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

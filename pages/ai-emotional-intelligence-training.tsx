@@ -24,7 +24,7 @@ export default function AIEmotionalIntelligenceTraining() {
 			canonical="https: //ziontechgroup.com/ai-emotional-intelligence-training"
 		/>
 	)
-}
+
 import React from 'react',
 import ServiceLanding from '../components / sections / ServiceLanding',
 export default /**
@@ -51,4 +51,3 @@ return (
     industries={["Customer Support", "Sales", "HR & L & D", "Leadership"]}
     canonical="https: //ziontechgroup.com / ai - emotional - intelligence - training";
   />);
-}

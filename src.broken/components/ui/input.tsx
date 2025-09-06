@@ -6,5 +6,3 @@ export function input() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

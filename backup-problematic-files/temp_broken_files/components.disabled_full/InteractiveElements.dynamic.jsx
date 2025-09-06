@@ -7,6 +7,5 @@ const InteractiveElements.dynamic = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default InteractiveElements.dynamic;

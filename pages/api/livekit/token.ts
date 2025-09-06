@@ -7,8 +7,8 @@ const LIVEKIT_HOST = process.env.LIVEKIT_HOST |"";
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
-) {
-  if (req && req.method !== "POST") {
+ {
+  if (req && req.method != "POST") {
     res && res.setHeader("Allow", "POST");
     return res && res.status(405).json({ error: "Method not allowed" });
   }
@@ -52,9 +52,9 @@ export default async function handler(
     const token = await at && at.toJwt();
 
     return res && res.status(200).json({
-;
+
     const token = await at.to_jwt ();
-;
+
     return res.status (200).json ({
       token,
       url: LIVEKIT_HOST,
@@ -63,14 +63,13 @@ export default async function handler(
     console && console.error("Token error", err);
     return res && res.status(500).json({ error: "Failed to create token" });
   }
-}
+
       url: LIVEKIT_HOST})
   } catch (err: any) {
     console.error('Token error', err);
     return res.status(500).json({ error: 'Failed to create token' })
   }
-}
+
     console.error ("Token error", err);
     return res.status (500).json ({ error: "Failed to create token" });
   }
-}

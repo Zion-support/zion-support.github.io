@@ -9,9 +9,9 @@ import { ;
   ArrowRight, Cpu, Network, Database, ;
   Lock, Clock, DollarSign, PieChart,;
   Activity, Zap, Pill, Syringe, Hospital, Ambulance;
-} from 'lucide-react',;
+ from 'lucide-react',;
 import Link from 'next/link',;
-;
+
 const AIHealthcareDiagnosticsPro:React.FC = () => {;
   const features = [;
     {;
@@ -51,7 +51,7 @@ const AIHealthcareDiagnosticsPro:React.FC = () => {;
       color:"from-yellow-500 to-orange-500";
     }
   ],;
-;
+
   const useCases = [;
     {;
       icon:Microscope,;
@@ -78,7 +78,7 @@ const AIHealthcareDiagnosticsPro:React.FC = () => {;
       benefits:["Precision medicine", "Faster results", "Standardized analysis"];
     }
   ],;
-;
+
   const pricingPlans = [;
     {;
       name:"Starter",;
@@ -134,7 +134,7 @@ const AIHealthcareDiagnosticsPro:React.FC = () => {;
       popular:false;
     }
   ],;
-;
+
   const integrations = [;
     {;
       name:"PACS Systems",;
@@ -173,7 +173,7 @@ const AIHealthcareDiagnosticsPro:React.FC = () => {;
       color:"from-yellow-500 to-orange-500";
     }
   ],;
-;
+
   const specialties = [;
     {;
       icon:Heart,;
@@ -212,7 +212,7 @@ const AIHealthcareDiagnosticsPro:React.FC = () => {;
       accuracy:"98.8%";
     }
   ],;
-;
+
   return (;
     <Layout>;
       <Head>;
@@ -225,24 +225,22 @@ const AIHealthcareDiagnosticsPro:React.FC = () => {;
         <meta property="og:url" content="https://ziontechgroup.com/ai-healthcare-diagnostics-pro" />;
         <link rel="canonical" href="https://ziontechgroup.com/ai-healthcare-diagnostics-pro" />;
       </Head>;
-;
+
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">;
         {/* Background Effects */}
         <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-900"></div>;
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(56,189,248,0.15),transparent_50%)]"></div>;
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(139,92,246,0.1),transparent_50%)]"></div>;
-        ;
         {/* Floating Elements */}
         <div className="absolute top-20 left-20 w-2 h-2 bg-cyan-400 rounded-full opacity-60 animate-pulse"></div>;
         <div className="absolute bottom-32 right-16 w-3 h-3 bg-purple-400 rounded-full opacity-60 animate-pulse delay-1000"></div>;
         <div className="absolute top-1/2 left-1/4 w-1 h-1 bg-green-400 rounded-full opacity-80 animate-pulse delay-500"></div>;
-        ;
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
           <motion.div;
-            initial={{ opacity:0, y:30 }}
-            animate={{ opacity:1, y:0 }}
-            transition={{ duration:0.8 }}
+            initial={ opacity:0, y:30 }
+            animate={ opacity:1, y:0 }
+            transition={ duration:0.8 }
             className="mb-8";
           >;
             <div className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-full text-green-400 text-sm font-medium mb-6">;
@@ -260,52 +258,51 @@ const AIHealthcareDiagnosticsPro:React.FC = () => {;
               Transform healthcare delivery with the world's most advanced AI diagnostic platform. ;
               Achieve 99.2% accuracy in disease detection, reduce diagnosis time by 80%, and save countless lives through early intervention.;
             </p>;
-            ;
             {/* Key Metrics */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto">;
               <motion.div;
-                initial={{ opacity:0, scale:0.8 }}
-                animate={{ opacity:1, scale:1 }}
-                transition={{ duration:0.6, delay:0.2 }}
+                initial={ opacity:0, scale:0.8 }
+                animate={ opacity:1, scale:1 }
+                transition={ duration:0.6, delay:0.2 }
                 className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-2xl p-6 backdrop-blur-sm";
               >;
                 <div className="text-3xl font-bold text-green-400 mb-2">99.2%</div>;
                 <div className="text-gray-300">Diagnostic Accuracy</div>;
               </motion.div>;
               <motion.div;
-                initial={{ opacity:0, scale:0.8 }}
-                animate={{ opacity:1, scale:1 }}
-                transition={{ duration:0.6, delay:0.4 }}
+                initial={ opacity:0, scale:0.8 }
+                animate={ opacity:1, scale:1 }
+                transition={ duration:0.6, delay:0.4 }
                 className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-2xl p-6 backdrop-blur-sm";
               >;
                 <div className="text-3xl font-bold text-cyan-400 mb-2">80%</div>;
                 <div className="text-gray-300">Faster Diagnosis</div>;
               </motion.div>;
               <motion.div;
-                initial={{ opacity:0, scale:0.8 }}
-                animate={{ opacity:1, scale:1 }}
-                transition={{ duration:0.6, delay:0.6 }}
+                initial={ opacity:0, scale:0.8 }
+                animate={ opacity:1, scale:1 }
+                transition={ duration:0.6, delay:0.6 }
                 className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm";
               >;
                 <div className="text-3xl font-bold text-purple-400 mb-2">24/7</div>;
                 <div className="text-gray-300">Continuous Monitoring</div>;
               </motion.div>;
             </div>;
-;
+
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
               <motion.button;
-                initial={{ opacity:0, y:20 }}
-                animate={{ opacity:1, y:0 }}
-                transition={{ duration:0.6, delay:0.8 }}
+                initial={ opacity:0, y:20 }
+                animate={ opacity:1, y:0 }
+                transition={ duration:0.6, delay:0.8 }
                 className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/25";
               >;
                 Schedule Demo;
               </motion.button>;
               <motion.button;
-                initial={{ opacity:0, y:20 }}
-                animate={{ opacity:1, y:0 }}
-                transition={{ duration:0.6, delay:1.0 }}
+                initial={ opacity:0, y:20 }
+                animate={ opacity:1, y:0 }
+                transition={ duration:0.6, delay:1.0 }
                 className="px-8 py-4 border border-green-500/50 text-green-400 font-semibold rounded-xl hover:bg-green-500/10 transition-all duration-300";
               >;
                 Contact Sales;
@@ -314,16 +311,16 @@ const AIHealthcareDiagnosticsPro:React.FC = () => {;
           </motion.div>;
         </div>;
       </section>;
-;
+
       {/* Features Section */}
       <section className="py-20 bg-gray-900 relative overflow-hidden">;
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0.05),transparent_50%)]"></div>;
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion.div;
-            initial={{ opacity:0, y:30 }}
-            whileInView={{ opacity:1, y:0 }}
-            transition={{ duration:0.8 }}
-            viewport={{ once:true }}
+            initial={ opacity:0, y:30 }
+            whileInView={ opacity:1, y:0 }
+            transition={ duration:0.8 }
+            viewport={ once:true }
             className="text-center mb-16";
           >;
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
@@ -333,15 +330,15 @@ const AIHealthcareDiagnosticsPro:React.FC = () => {;
               Our platform combines cutting-edge artificial intelligence with deep medical expertise to deliver unprecedented diagnostic accuracy and speed.;
             </p>;
           </motion.div>;
-;
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {features.map((feature, index) => (;
+            {features.map(feature, index) => (;
               <motion.div;
                 key={index}
-                initial={{ opacity:0, y:30 }}
-                whileInView={{ opacity:1, y:0 }}
-                transition={{ duration:0.6, delay:index * 0.1 }}
-                viewport={{ once:true }}
+                initial={ opacity:0, y:30 }
+                whileInView={ opacity:1, y:0 }
+                transition={ duration:0.6, delay:index * 0.1 }
+                viewport={ once:true }
                 className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm hover:border-green-500/30 transition-all duration-300 group";
               >;
                 <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>;
@@ -356,10 +353,10 @@ const AIHealthcareDiagnosticsPro:React.FC = () => {;
         <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0.05),transparent_50%)]&quot;></div>
         <div className=&quot;relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
             className=&quot;text-center mb-16&quot;          >
             <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-6&quot;>
               Powered by <span className=&quot;bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent&quot;>Advanced AI</span>
@@ -370,13 +367,13 @@ const AIHealthcareDiagnosticsPro:React.FC = () => {;
           </motion.div>
 
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
-            {features.map((feature, index) => (
+            {features.map(feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, y: 30 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.6, delay: index * 0.1 }
+                viewport={ once: true }
                 className=&quot;bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm hover:border-green-500/30 transition-all duration-300 group&quot;
               >
                 <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
@@ -384,20 +381,20 @@ const AIHealthcareDiagnosticsPro:React.FC = () => {;
                 </div>
                 <h3 className=&quot;text-xl font-semibold text-white mb-4&quot;>{feature.title}</h3>
                 <p className=&quot;text-gray-300 leading-relaxed&quot;>{feature.description}</p>              </motion.div>
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Medical Specialties Section */}
       <section className="py-20 bg-black relative overflow-hidden">;
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(139,92,246,0.08),transparent_50%)]"></div>;
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion.div;
-            initial={{ opacity:0, y:30 }}
-            whileInView={{ opacity:1, y:0 }}
-            transition={{ duration:0.8 }}
-            viewport={{ once:true }}
+            initial={ opacity:0, y:30 }
+            whileInView={ opacity:1, y:0 }
+            transition={ duration:0.8 }
+            viewport={ once:true }
             className="text-center mb-16";
           >;
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
@@ -407,15 +404,15 @@ const AIHealthcareDiagnosticsPro:React.FC = () => {;
               Our AI platform covers all major medical specialties with specialized models trained on millions of cases for maximum accuracy.;
             </p>;
           </motion.div>;
-;
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {specialties.map((specialty, index) => (;
+            {specialties.map(specialty, index) => (;
               <motion.div;
                 key={index}
-                initial={{ opacity:0, y:30 }}
-                whileInView={{ opacity:1, y:0 }}
-                transition={{ duration:0.6, delay:index * 0.1 }}
-                viewport={{ once:true }}
+                initial={ opacity:0, y:30 }
+                whileInView={ opacity:1, y:0 }
+                transition={ duration:0.6, delay:index * 0.1 }
+                viewport={ once:true }
                 className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm hover:border-purple-500/30 transition-all duration-300";
               >;
                 <div className="flex items-center justify-between mb-4">;
@@ -439,13 +436,13 @@ const AIHealthcareDiagnosticsPro:React.FC = () => {;
           </div>
 
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
-            {specialties.map((specialty, index) => (
+            {specialties.map(specialty, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, y: 30 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.6, delay: index * 0.1 }
+                viewport={ once: true }
                 className=&quot;bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm hover:border-purple-500/30 transition-all duration-300&quot;              >
                 <div className=&quot;flex items-center justify-between mb-4&quot;>
                   <div className=&quot;w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center&quot;>
@@ -458,20 +455,20 @@ const AIHealthcareDiagnosticsPro:React.FC = () => {;
                 </div>
                 <h3 className=&quot;text-xl font-semibold text-white mb-3&quot;>{specialty.name}</h3>
                 <p className=&quot;text-gray-300 leading-relaxed&quot;>{specialty.description}</p>              </motion.div>
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Use Cases Section */}
       <section className="py-20 bg-gray-900 relative overflow-hidden">;
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(236,73,153,0.06),transparent_50%)]"></div>;
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion.div;
-            initial={{ opacity:0, y:30 }}
-            whileInView={{ opacity:1, y:0 }}
-            transition={{ duration:0.8 }}
-            viewport={{ once:true }}
+            initial={ opacity:0, y:30 }
+            whileInView={ opacity:1, y:0 }
+            transition={ duration:0.8 }
+            viewport={ once:true }
             className="text-center mb-16";
           >;
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
@@ -481,15 +478,15 @@ const AIHealthcareDiagnosticsPro:React.FC = () => {;
               From radiology to pathology, our AI platform adapts to your specific medical specialty and workflow requirements.;
             </p>;
           </motion.div>;
-;
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
-            {useCases.map((useCase, index) => (;
+            {useCases.map(useCase, index) => (;
               <motion.div;
                 key={index}
-                initial={{ opacity:0, x:index % 2 === 0 ? -30 :30 }}
-                whileInView={{ opacity:1, x:0 }}
-                transition={{ duration:0.6, delay:index * 0.1 }}
-                viewport={{ once:true }}
+                initial={ opacity:0, x:index % 2 = = 0 ? -30 :30 }
+                whileInView={ opacity:1, x:0 }
+                transition={ duration:0.6, delay:index * 0.1 }
+                viewport={ once:true }
                 className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm";
               >;
                 <div className="flex items-start space-x-4">;
@@ -500,29 +497,29 @@ const AIHealthcareDiagnosticsPro:React.FC = () => {;
                     <h3 className="text-2xl font-semibold text-white mb-3">{useCase.title}</h3>;
                     <p className="text-gray-300 mb-4 leading-relaxed">{useCase.description}</p>;
                     <div className="space-y-2">;
-                      {useCase.benefits.map((benefit, benefitIndex) => (;
+                      {useCase.benefits.map(benefit, benefitIndex) => (;
                         <div key={benefitIndex} className="flex items-center space-x-2 text-sm">;
                           <CheckCircle className="w-4 h-4 text-green-400" />;
                           <span className="text-gray-300">{benefit}</span>;
-                        </div>;                      ))}
+                        </div>;                      )}
                     </div>;
                   </div>;
                 </div>;
               </motion.div>;
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Pricing Section */}
       <section className="py-20 bg-black relative overflow-hidden">;
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0.05),transparent_50%)]"></div>;
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion.div;
-            initial={{ opacity:0, y:30 }}
-            whileInView={{ opacity:1, y:0 }}
-            transition={{ duration:0.8 }}
-            viewport={{ once:true }}
+            initial={ opacity:0, y:30 }
+            whileInView={ opacity:1, y:0 }
+            transition={ duration:0.8 }
+            viewport={ once:true }
             className="text-center mb-16";
           >;
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
@@ -532,15 +529,15 @@ const AIHealthcareDiagnosticsPro:React.FC = () => {;
               Flexible pricing options designed to scale with your healthcare practice. Start with our Starter plan and upgrade as you grow.;
             </p>;
           </motion.div>;
-;
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
-            {pricingPlans.map((plan, index) => (;
+            {pricingPlans.map(plan, index) => (;
               <motion.div;
                 key={index}
-                initial={{ opacity:0, y:30 }}
-                whileInView={{ opacity:1, y:0 }}
-                transition={{ duration:0.6, delay:index * 0.1 }}
-                viewport={{ once:true }}
+                initial={ opacity:0, y:30 }
+                whileInView={ opacity:1, y:0 }
+                transition={ duration:0.6, delay:index * 0.1 }
+                viewport={ once:true }
                 className={`relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 border rounded-2xl p-8 backdrop-blur-sm ${;
                   plan.popular ;
                     ? 'border-green-500/50 shadow-lg shadow-green-500/25' ;
@@ -563,33 +560,33 @@ const AIHealthcareDiagnosticsPro:React.FC = () => {;
                   </div>;
                   <p className="text-gray-300">{plan.description}</p>;
                 </div>;
-;
+
                 <ul className="space-y-4 mb-8">;
-                  {plan.features.map((feature, featureIndex) => (;
+                  {plan.features.map(feature, featureIndex) => (;
                     <li key={featureIndex} className="flex items-center space-x-3">;
                       <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />;
                       <span className="text-gray-300">{feature}</span>;
                     </li>;
-                  ))}
+                  )}
                 </ul>;
-;
+
                 <button className={`w-full py-3 px-6 bg-gradient-to-r ${plan.color} text-white font-semibold rounded-xl hover:opacity-90 transition-all duration-300 transform hover:scale-105`}>;
                   Get Started;
                 </button>;
-              </motion.div>;            ))}
+              </motion.div>;            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Integrations Section */}
       <section className="py-20 bg-gray-900 relative overflow-hidden">;
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(139,92,246,0.08),transparent_50%)]"></div>;
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion.div;
-            initial={{ opacity:0, y:30 }}
-            whileInView={{ opacity:1, y:0 }}
-            transition={{ duration:0.8 }}
-            viewport={{ once:true }}
+            initial={ opacity:0, y:30 }
+            whileInView={ opacity:1, y:0 }
+            transition={ duration:0.8 }
+            viewport={ once:true }
             className="text-center mb-16";
           >;
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
@@ -599,15 +596,15 @@ const AIHealthcareDiagnosticsPro:React.FC = () => {;
               Connect with your existing healthcare systems and workflows. Our platform integrates with all major EHR, PACS, and medical device platforms.;
             </p>;
           </motion.div>;
-;
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {integrations.map((integration, index) => (;
+            {integrations.map(integration, index) => (;
               <motion.div;
                 key={index}
-                initial={{ opacity:0, y:30 }}
-                whileInView={{ opacity:1, y:0 }}
-                transition={{ duration:0.6, delay:index * 0.1 }}
-                viewport={{ once:true }}
+                initial={ opacity:0, y:30 }
+                whileInView={ opacity:1, y:0 }
+                transition={ duration:0.6, delay:index * 0.1 }
+                viewport={ once:true }
                 className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-6 backdrop-blur-sm text-center hover:border-green-500/30 transition-all duration-300";
               >;
                 <div className={`w-16 h-16 bg-gradient-to-r ${integration.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}>;
@@ -615,20 +612,20 @@ const AIHealthcareDiagnosticsPro:React.FC = () => {;
                 </div>;
                 <h3 className="text-xl font-semibold text-white mb-2">{integration.name}</h3>;
                 <p className="text-gray-300 text-sm">{integration.description}</p>;
-              </motion.div>;            ))}
+              </motion.div>;            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-green-900/20 via-emerald-900/20 to-cyan-900/20 relative overflow-hidden">;
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0.1),transparent_50%)]"></div>;
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
           <motion.div;
-            initial={{ opacity:0, y:30 }}
-            whileInView={{ opacity:1, y:0 }}
-            transition={{ duration:0.8 }}
-            viewport={{ once:true }}
+            initial={ opacity:0, y:30 }
+            whileInView={ opacity:1, y:0 }
+            transition={ duration:0.8 }
+            viewport={ once:true }
           >;
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
               Ready to <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Transform</span> Healthcare?;
@@ -636,7 +633,6 @@ const AIHealthcareDiagnosticsPro:React.FC = () => {;
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">;
               Join leading healthcare institutions worldwide who have already revolutionized patient care with AI-powered diagnostics.;
             </p>;
-            ;
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
               <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/25">;
                 Schedule Demo;
@@ -645,7 +641,6 @@ const AIHealthcareDiagnosticsPro:React.FC = () => {;
                 Contact Sales;
               </button>;
             </div>;
-            ;
             <div className="mt-8 text-sm text-gray-400">;
               <p>Questions? Call us at <a href="tel:+13024640950" className="text-green-400 hover:text-green-300">+1 302 464 0950</a> or email <a href="mailto:kleber@ziontechgroup.com" className="text-green-400 hover:text-green-300">kleber@ziontechgroup.com</a></p>;
             </div>;
@@ -654,9 +649,8 @@ const AIHealthcareDiagnosticsPro:React.FC = () => {;
       </section>;
     </Layout>;
   );
-},;
-;    </Layout>
+,;
+    </Layout>
   );
-};
 
 export default AIHealthcareDiagnosticsPro,

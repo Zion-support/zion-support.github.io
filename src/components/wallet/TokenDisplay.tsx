@@ -8,7 +8,7 @@ import {
   CardDescription
   CardHeader
   CardTitle
-} from '@/components/ui/card'
+ from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import Skeleton from '@/components/ui/skeleton'
 
@@ -22,7 +22,7 @@ import {;
   CardDescription,;
   CardHeader,;
   CardTitle,;
-} from '@/components/ui/card';
+ from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Skeleton from '@/components/ui/skeleton';
 export function TokenDisplay() {;
@@ -60,7 +60,7 @@ export function TokenDisplay() {;
       </CardContent>
     </Card>
   )
-}
+
     <Card>;
       <CardHeader className='flex flex-row items-center justify-between pb-2'>;
         <div>;
@@ -93,10 +93,9 @@ export function TokenDisplay() {;
       </CardContent>;
     </Card>;
   );
-}
+
   );
-}
+
           </div>)}
       </CardContent>;
     </Card>);
-}

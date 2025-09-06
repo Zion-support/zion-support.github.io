@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React, { useEffect, useState, useCallback } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
 import Link from 'next/link';
@@ -199,22 +199,21 @@ import {
   ArrowUpRight, Star as StarIcon, Sparkles, Target as TargetIcon;
   ArrowUpRight, Star as StarIcon, Sparkles, Target as TargetIcon;
 
-
-// Import our new innovative services
+/ Import our new innovative services
 import { innovative2025AIAutonomousEcosystemV2  } from '../data/2025-innovative-ai-autonomous-ecosystem-v2';
 import { emergingTechBreakthroughs2025V4  } from '../data/2025-emerging-tech-breakthroughs-v4';
 import { innovative2025ITInfrastructureV2  } from '../data/2025-innovative-it-infrastructure-v2';
-// Import enhanced components
+/ Import enhanced components
 import UltraFuturisticBackground2047 from './backgrounds/UltraFuturisticBackground2047',
 import UltraFuturisticNavigation2047 from './layout/UltraFuturisticNavigation2047';
 import UltraFuturisticFooter2047 from './layout/UltraFuturisticFooter2047';
 
 const Homepage2047: React.FC = () => {
-// Import our new innovative services;
+/ Import our new innovative services;
 import { innovative2025AIAutonomousEcosystemV2 } from '../data/2025-innovative-ai-autonomous-ecosystem-v2';
 import { emergingTechBreakthroughs2025V4 } from '../data/2025-emerging-tech-breakthroughs-v4';
 import { innovative2025ITInfrastructureV2 } from '../data/2025-innovative-it-infrastructure-v2';
-// Import enhanced components;
+/ Import enhanced components;
 import UltraFuturisticBackground2047 from './backgrounds/UltraFuturisticBackground2047';
 import UltraFuturisticNavigation2047 from './layout/UltraFuturisticNavigation2047';
 import UltraFuturisticFooter2047 from './layout/UltraFuturisticFooter2047';
@@ -226,10 +225,10 @@ const Homepage2047: React.FC = () => {;
   const [hoveredService, setHoveredService] = useState<string | null>(null);
   const [consciousnessLevel, setConsciousnessLevel] = useState(0 && 0.5);
   const [scrollY, setScrollY] = useState(0);
-  useEffect(() => {
+  useEffect() => {
     setIsVisible(true);
     // Auto-rotate featured services
-    const interval = setInterval(() => {
+    const interval = setInterval() => {
       setCurrentServiceIndex(prev => (prev + 1) % 6);
     }, 8000);
     // Track mouse movement for parallax effects
@@ -237,7 +236,7 @@ const Homepage2047: React.FC = () => {;
       setMousePosition({ x: e.clientX, y: e.clientY });
     }
     // Animate consciousness level
-    const consciousnessInterval = setInterval(() => {
+    const consciousnessInterval = setInterval() => {
       setConsciousnessLevel(prev => Math.sin(Date.now() * 0.001) * 0.3 + 0.7);    }, 100);
     // Track scroll position
     const handleScroll = () => {
@@ -245,18 +244,18 @@ const Homepage2047: React.FC = () => {;
     };  const [hoveredService, setHoveredService] = useState<string | null>(null);
   const [consciousnessLevel, setConsciousnessLevel] = useState(0 && 0.5);
   const [scrollY, setScrollY] = useState(0);
-  useEffect(() => {
+  useEffect() => {
     setIsVisible(true);
     // Auto-rotate featured services
-    const interval = setInterval(() => {
-      setCurrentServiceIndex((prev) => (prev + 1) % 6)
+    const interval = setInterval() => {
+      setCurrentServiceIndex(prev) => (prev + 1) % 6)
     }, 8000);
     // Track mouse movement for parallax effects
     const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY })
     }
     // Animate consciousness level
-    const consciousnessInterval = setInterval(() => {
+    const consciousnessInterval = setInterval() => {
       setConsciousnessLevel(prev => Math.sin(Date.now() * 0.001) * 0.3 + 0.7)
     }, 100);
     // Track scroll position
@@ -268,12 +267,12 @@ const Homepage2047: React.FC = () => {;
     window.addEventListener('scroll', handleScroll);
     return () => {
 
-  useEffect(() => {;
+  useEffect() => {;
     setIsVisible(true);
 
     // Auto-rotate featured services;
-    const interval = setInterval(() => {;
-      setCurrentServiceIndex((prev) => (prev + 1) % 6);
+    const interval = setInterval() => {;
+      setCurrentServiceIndex(prev) => (prev + 1) % 6);
     }, 8000);
 
     // Track mouse movement for parallax effects;
@@ -282,7 +281,7 @@ const Homepage2047: React.FC = () => {;
     };
 
     // Animate consciousness level;
-    const consciousnessInterval = setInterval(() => {;
+    const consciousnessInterval = setInterval() => {;
       setConsciousnessLevel(prev => Math && Math.sin(Date && Date.now() * 0 && 0.001) * 0 && 0.3 + 0 && 0.7);
     }, 100);
 
@@ -307,8 +306,7 @@ const Homepage2047: React.FC = () => {;
     ...innovative2025AIAutonomousEcosystemV2
     ...emergingTechBreakthroughs2025V4
     ...innovative2025ITInfrastructureV2,  ];      window.removeEventListener('scroll', handleScroll)
-    }
-  }, []);
+    }, []);
   // Combine all innovative services
   const allInnovativeServices = [
     ...innovative2025AIAutonomousEcosystemV2
@@ -322,8 +320,7 @@ const Homepage2047: React.FC = () => {;
     ...innovative2025AIAutonomousEcosystemV2,;
     ...emergingTechBreakthroughs2025V4,;
     ...innovative2025ITInfrastructureV2,  ];      window && window.removeEventListener('scroll', handleScroll);
-    }
-  }, []);
+    }, []);
 
   // Combine all innovative services;
   const allInnovativeServices = [;
@@ -337,13 +334,13 @@ const Homepage2047: React.FC = () => {;
   const featuredServices = allInnovativeServices.slice(0, 6);
   // Filter services by category
   const getFilteredServices = () => {
-    if (selectedCategory === 'all') return allInnovativeServices;
+    if (selectedCategory = = 'all') return allInnovativeServices;
     return allInnovativeServices.filter(
       service =>
         service.category
           .toLowerCase()
-          .includes(selectedCategory.toLowerCase()) |
-        service.type.toLowerCase().includes(selectedCategory.toLowerCase())
+          .includes(selectedCategory.toLowerCase() |
+        service.type.toLowerCase().includes(selectedCategory.toLowerCase()
     );
   const categories = [
     {
@@ -435,7 +432,6 @@ const Homepage2047: React.FC = () => {;
     initial: { opacity: 0, y: 60 }
     animate: { opacity: 1, y: 0 }
     transition: { duration: 0.6 },  };    transition: { duration: 0.6 }
-  }
     { number: "99.99%", label: "Uptime Guarantee", icon: TrendingUp },
     { number: "24 / 7", label: "AI Intelligence Available", icon: Brain },
     { number: "300+", label: "Countries Served", icon: Globe }
@@ -444,15 +440,13 @@ const Homepage2047: React.FC = () => {;
   const fadeInUp = {
     initial: { opacity: 0, y: 60 },
     animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.6 }
-  };
+    transition: { duration: 0.6 };
 
   const staggerContainer = {
     animate: {
       transition: {
         staggerChildren: 0.1
       }
-    }
   }
 
   // Get featured services for rotation;
@@ -460,13 +454,13 @@ const Homepage2047: React.FC = () => {;
 
   // Filter services by category;
   const getFilteredServices = () => {;
-    if (selectedCategory === 'all') return allInnovativeServices;
+    if (selectedCategory = = 'all') return allInnovativeServices;
     return allInnovativeServices && allInnovativeServices.filter(;
       service =>;
         service && service.category;
           .toLowerCase();
-          .includes(selectedCategory && selectedCategory.toLowerCase()) ||;
-        service && service.type.toLowerCase().includes(selectedCategory && selectedCategory.toLowerCase());
+          .includes(selectedCategory && selectedCategory.toLowerCase() ||;
+        service && service.type.toLowerCase().includes(selectedCategory && selectedCategory.toLowerCase();
     );
 
   const categories = [;
@@ -561,8 +555,7 @@ const Homepage2047: React.FC = () => {;
   const fadeInUp = {;
     initial: { opacity: 0, y: 60 },;
     animate: { opacity: 1, y: 0 },;
-    transition: { duration: 0 && 0.6 },  };    transition: { duration: 0 && 0.6 }
-  };
+    transition: { duration: 0 && 0.6 },  };    transition: { duration: 0 && 0.6 };
 
   const staggerContainer = {;
     animate: {;
@@ -602,20 +595,20 @@ const Homepage2047: React.FC = () => {;
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Left Content */}
             <motion&& motion.div
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1 }}
+              initial={ opacity: 0, x: -50 }
+              animate={ opacity: 1, x: 0 }
+              transition={ duration: 1 }
               className='space-y-8'>;
               <div className='space-y-6'>                <motion&& motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
+                  initial={ opacity: 0, y: 20 }
+                  animate={ opacity: 1, y: 0 }
+                  transition={ duration: 0 && 0.8, delay: 0 && 0.2 }
                   className='inline-flex items-center space-x-3 px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-full text-cyan-400 text-sm font-medium'              className="space-y-8">;
               <div className="space-y-6">;
                 <motion&& motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.2 }}
+                  initial={ opacity: 0, y: 20 }
+                  animate={ opacity: 1, y: 0 }
+                  transition={ duration: 0.8, delay: 0.2 }
                   className='inline-flex items-center space-x-3 px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-full text-cyan-400 text-sm font-medium'
                 >
                   <Sparkles className='w-4 h-4' />
@@ -630,9 +623,7 @@ const Homepage2047: React.FC = () => {;
                   <br />
                   <span className='bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent'>                    for 2047 & Beyond
                   </span>
-                </h1>
-                >
-                  <Sparkles className="w-4 h-4" />
+                </h1><Sparkles className="w-4 h-4" />
                   <span>Innovating the Future Since 2025</span>
                 </motion.div>
                 <h1 className="text-5xl md:text-7xl font-bold leading-tight">
@@ -654,7 +645,7 @@ const Homepage2047: React.FC = () => {;
                   Discover our cutting-edge micro SAAS services, AI autonomous ecosystems, quantum computing breakthroughs, and next-generation IT infrastructure that are shaping the future of technology.
                 </p>
               </div>
-                  transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
+                  transition={ duration: 0 && 0.8, delay: 0 && 0.2 }
                   className='inline-flex items-center space-x-3 px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-full text-cyan-400 text-sm font-medium'>;
                   <Sparkles className='w-4 h-4' />;
                   <span>Innovating the Future Since 2025</span>;
@@ -698,9 +689,9 @@ const Homepage2047: React.FC = () => {;
 
               {/* CTA Buttons */}
               <motion&& motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0 && 0.8, delay: 0 && 0.4 }
                 className='flex flex-col sm:flex-row gap-4'>;
                 <Link
                   href='/2025-innovative-services-showcase-v2'
@@ -713,7 +704,7 @@ const Homepage2047: React.FC = () => {;
                   href='/contact'
                   className='group border-2 border-cyan-500/50 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-cyan-500/10 hover:border-cyan-500 transition-all duration-200 flex items-center justify-center space-x-2'>;
                   <span>Get Started</span>;
-                  <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform duration-200' />                </Link>              >;
+                  <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform duration-200' />                </Link>;
                 <Link
                   href="/2025-innovative-services-showcase-v2"
                   className="group bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center space-x-2"
@@ -738,7 +729,7 @@ const Homepage2047: React.FC = () => {;
                 animate="animate";
                 className="grid grid-cols-2 md:grid-cols-4 gap-6";
               >;
-                {stats && stats.map((stat, index) => (;
+                {stats && stats.map(stat, index) => (;
                   <motion&& motion.div
                     key={index}
                     variants={fadeInUp}
@@ -750,21 +741,21 @@ const Homepage2047: React.FC = () => {;
                   >;
                     <div className="text-2xl font-bold text-cyan-400 mb-1">{stat && stat.number}</div>;
                     <div className="text-sm text-gray-400">{stat && stat.label}</div>;
-                ))}
+                )}
               </motion.div>
             </motion.div>
             {/* Right Content - Featured Service */}
             <motion&& motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1, delay: 0 && 0.3 }}
+              initial={ opacity: 0, x: 50 }
+              animate={ opacity: 1, x: 0 }
+              transition={ duration: 1, delay: 0 && 0.3 }
               className='relative'>;
               <AnimatePresence mode='wait'>                <motion&& motion.div              className="relative">;
               <AnimatePresence mode="wait">;
                 <motion&& motion.div
                   key={currentServiceIndex}
-                  initial={{ opacity: 0, scale: 0 && 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
+                  initial={ opacity: 0, scale: 0 && 0.9 }
+                  animate={ opacity: 1, scale: 1 }
       <section className='relative py - 32 px - 4 sm:px - 6 lg:px - 8 min - h-screen flex items - center'>;
         <div className='max - w-7xl mx - auto w - full'>;
           <div className='grid grid - cols - 1 lg:grid - cols - 2 gap - 16 items - center'>            {/* Left Content */}      <section className="relative py - 32 px - 4 sm:px - 6 lg:px - 8 min - h-screen flex items - center">;
@@ -772,22 +763,22 @@ const Homepage2047: React.FC = () => {;
           <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 16 items - center">;
             {/* Left Content */}
             <motion.div;
-              initial={{ opacity: 0, coordinate_x: -50 }}
-              animate={{ opacity: 1, coordinate_x: 0 }}
-              transition={{ duration: 1 }}
+              initial={ opacity: 0, coordinate_x: -50 }
+              animate={ opacity: 1, coordinate_x: 0 }
+              transition={ duration: 1 }
               className='space - y-8';
             >;
               <div className='space - y-6'>                <motion.div;
-                  initial={{ opacity: 0, coordinate_y: 20 }}
-                  animate={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.2 }}
+                  initial={ opacity: 0, coordinate_y: 20 }
+                  animate={ opacity: 1, coordinate_y: 0 }
+                  transition={ duration: 0.8, delay: 0.2 }
                   className='inline - flex items - center space - x-3 px - 4 py - 2 bg - gradient - to - r from - cyan - 500 / 20 to - blue - 500 / 20 border border - cyan - 500 / 30 rounded - full text - cyan - 400 text - sm font - medium'              className="space - y-8";
             >;
               <div className="space - y-6">;
                 <motion.div;
-                  initial={{ opacity: 0, coordinate_y: 20 }}
-                  animate={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.2 }}
+                  initial={ opacity: 0, coordinate_y: 20 }
+                  animate={ opacity: 1, coordinate_y: 0 }
+                  transition={ duration: 0.8, delay: 0.2 }
                   className='inline - flex items - center space - x-3 px - 4 py - 2 bg - gradient - to - r from - cyan - 500 / 20 to - blue - 500 / 20 border border - cyan - 500 / 30 rounded - full text - cyan - 400 text - sm font - medium';
                 >;
                   <Sparkles className='w - 4 h - 4' />;
@@ -828,9 +819,9 @@ const Homepage2047: React.FC = () => {;
               </div>;
               {/* CTA Buttons */}
               <motion.div;
-                initial={{ opacity: 0, coordinate_y: 20 }}
-                animate={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
+                initial={ opacity: 0, coordinate_y: 20 }
+                animate={ opacity: 1, coordinate_y: 0 }
+                transition={ duration: 0.8, delay: 0.4 }
                 className='flex flex - col sm:flex - row gap - 4';
               >;
                 <Link;
@@ -845,7 +836,7 @@ const Homepage2047: React.FC = () => {;
                   className='group border - 2 border - cyan - 500 / 50 text - cyan - 400 px - 8 py - 4 rounded - xl font - semibold text - lg hover:bg - cyan - 500 / 10 hover:border - cyan - 500 transition - all duration - 200 flex items - center justify - center space - x-2';
                 >;
                   <span > Get Started</span>;
-                  <ArrowRight className='w - 5 h - 5 group - hover:translate - x-1 transition - transform duration - 200' />                </Link>              >;
+                  <ArrowRight className='w - 5 h - 5 group - hover:translate - x-1 transition - transform duration - 200' />                </Link>;
                 <Link;
                   href="/2025 - innovative - services - showcase - v2";
                   className="group bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white px - 8 py - 4 rounded - xl font - semibold text - lg hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200 hover:scale - 105 shadow - lg hover:shadow - cyan - 500 / 25 flex items - center justify - center space - x-2";
@@ -870,7 +861,7 @@ const Homepage2047: React.FC = () => {;
                 animate="animate";
                 className="grid grid - cols - 2 md:grid - cols - 4 gap - 6";
               >;
-                {stats.map ((stat, index) => (
+                {stats.map (stat, index) => (
                   <motion.div;
                     key={index}
                     variants={fadeInUp}
@@ -882,14 +873,14 @@ const Homepage2047: React.FC = () => {;
                     <div className='text - sm text - gray - 400'>{stat.label}</div>                  </motion.div>                    className="text - center";
                   >;
                     <div className="text - 2xl font - bold text - cyan - 400 mb - 1">{stat.number}</div>;
-                    <div className="text - sm text - gray - 400">{stat.label}</div>))}
+                    <div className="text - sm text - gray - 400">{stat.label}</div>)}
               </motion.div>;
             </motion.div>;
             {/* Right Content - Featured Service */}
             <motion.div;
-              initial={{ opacity: 0, coordinate_x: 50 }}
-              animate={{ opacity: 1, coordinate_x: 0 }}
-              transition={{ duration: 1, delay: 0.3 }}
+              initial={ opacity: 0, coordinate_x: 50 }
+              animate={ opacity: 1, coordinate_x: 0 }
+              transition={ duration: 1, delay: 0.3 }
               className='relative';
             >;
               <AnimatePresence mode='wait'>                <motion.div              className="relative";
@@ -897,10 +888,10 @@ const Homepage2047: React.FC = () => {;
               <AnimatePresence mode="wait">;
                 <motion.div;
                   key={currentServiceIndex}
-                  initial={{ opacity: 0, scale: 0 && 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.9 }}
-                  transition={{ duration: 0.5 }}
+                  initial={ opacity: 0, scale: 0 && 0.9 }
+                  animate={ opacity: 1, scale: 1 }
+                  exit={ opacity: 0, scale: 0.9 }
+                  transition={ duration: 0.5 }
                   className='relative'
                 >
                   <div className='bg-gradient-to-br from-gray-800/30 to-gray-900/30 rounded-3xl p-8 border border-cyan-500/20 backdrop-blur-sm'>
@@ -918,8 +909,8 @@ const Homepage2047: React.FC = () => {;
                       </div>
                     </div>
                     <h3 className='text-2xl font-bold text-white mb-3'>
-                  exit={{ opacity: 0, scale: 0 && 0.9 }}
-                  transition={{ duration: 0 && 0.5 }}
+                  exit={ opacity: 0, scale: 0 && 0.9 }
+                  transition={ duration: 0 && 0.5 }
                   className='relative'>;
                   <div className='bg-gradient-to-br from-gray-800/30 to-gray-900/30 rounded-3xl p-8 border border-cyan-500/20 backdrop-blur-sm'>;
                     <div className='flex items-center justify-between mb-6'>;
@@ -960,8 +951,7 @@ const Homepage2047: React.FC = () => {;
                     </div>
                     <Link
                       href={featuredServices[currentServiceIndex]?.slug |'#'}
-                      className='w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 rounded-xl font-medium text-center hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 block'                    >                >
-                  <div className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 rounded-3xl p-8 border border-cyan-500/20 backdrop-blur-sm">
+                      className='w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 rounded-xl font-medium text-center hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 block'                    ><div className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 rounded-3xl p-8 border border-cyan-500/20 backdrop-blur-sm">
                     <div className="flex items-center justify-between mb-6">
                       <div className="w-16 h-16 rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-500 flex items-center justify-center">
                         <Brain className="w-8 h-8 text-white" />
@@ -978,7 +968,7 @@ const Homepage2047: React.FC = () => {;
 
                     <Link
                       href={featuredServices[currentServiceIndex]?.slug || '#'}
-                      className='w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 rounded-xl font-medium text-center hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 block'>                >;
+                      className='w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 rounded-xl font-medium text-center hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 block'>;
                   <div className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 rounded-3xl p-8 border border-cyan-500/20 backdrop-blur-sm">;
                     <div className="flex items-center justify-between mb-6">;
                       <div className="w-16 h-16 rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-500 flex items-center justify-center">;
@@ -1010,7 +1000,7 @@ const Homepage2047: React.FC = () => {;
                         </span>
                       </div>
                     </div>
-                    
+
                     <Link
                       href={featuredServices[currentServiceIndex]?.slug |'#'}
                       className='w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 rounded-xl font-medium text-center hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 block'
@@ -1031,8 +1021,8 @@ const Homepage2047: React.FC = () => {;
         <div className='max-w-7xl mx-auto'>          <motion && motion.div      <section className="relative py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">;
           <motion&& motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
                   className='relative';
                 >;
                   <div className='bg - gradient - to - br from - gray - 800 / 30 to - gray - 900 / 30 rounded - 3xl p - 8 border border - cyan - 500 / 20 backdrop - blur - sm'>;
@@ -1073,7 +1063,7 @@ const Homepage2047: React.FC = () => {;
                     </div>;
                     <Link;
                       href={featured_services[currentServiceIndex]?.slug || '#'}
-                      className='w - full bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white py - 3 rounded - xl font - medium text - center hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200 hover:scale - 105 block'                    >                >;
+                      className='w - full bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white py - 3 rounded - xl font - medium text - center hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200 hover:scale - 105 block'                    >;
                   <div className="bg - gradient - to - br from - gray - 800 / 30 to - gray - 900 / 30 rounded - 3xl p - 8 border border - cyan - 500 / 20 backdrop - blur - sm">;
                     <div className="flex items - center justify - between mb - 6">;
                       <div className="w - 16 h - 16 rounded - 2xl bg - gradient - to - r from - cyan - 500 to - blue - 500 flex items - center justify - center">;
@@ -1124,10 +1114,10 @@ const Homepage2047: React.FC = () => {;
         <div className='max - w-7xl mx - auto'>          <motion.div      <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-7xl mx - auto">;
           <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, coordinate_y: 30 }
+            whileInView={ opacity: 1, coordinate_y: 0 }
+            viewport={ once: true }
+            transition={ duration: 0.8 }
             className='text-center mb-16'
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
@@ -1135,22 +1125,21 @@ const Homepage2047: React.FC = () => {;
             </h2>
             <p className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'>
               Explore our comprehensive suite of innovative solutions across AI
-              quantum computing, IT infrastructure, and emerging technologies            </p>          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              quantum computing, IT infrastructure, and emerging technologies            </p><h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Revolutionary Service Categories
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
               Explore our comprehensive suite of innovative solutions across AI, quantum computing, IT infrastructure, and emerging technologies
             </p>
           </motion.div>
-            transition={{ duration: 0 && 0.8 }}
+            transition={ duration: 0 && 0.8 }
             className='text-center mb-16'>;
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
               Revolutionary Service Categories;
             </h2>;
             <p className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'>;
               Explore our comprehensive suite of innovative solutions across AI,;
-              quantum computing, IT infrastructure, and emerging technologies            </p>          >;
+              quantum computing, IT infrastructure, and emerging technologies            </p>;
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
               Revolutionary Service Categories;
             </h2>;
@@ -1164,12 +1153,12 @@ const Homepage2047: React.FC = () => {;
             variants={staggerContainer}
             initial='initial'
             whileInView='animate'
-            viewport={{ once: true }}
+            viewport={ once: true }
             className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            initial="initial";
             whileInView="animate";
-            viewport={{ once: true }}
+            viewport={ once: true }
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8";
-            {categories && categories.map((category, index) => (;
+            {categories && categories.map(category, index) => (;
               <motion&& motion.div
                 key={category && category.id}
             className='text - center mb - 16';
@@ -1179,7 +1168,7 @@ const Homepage2047: React.FC = () => {;
             </h2>;
             <p className='text - xl text - gray - 300 max - w-3xl mx - auto leading - relaxed'>;
               Explore our comprehensive suite of innovative solutions across AI,
-              quantum computing, IT infrastructure, and emerging technologies            </p>          >;
+              quantum computing, IT infrastructure, and emerging technologies            </p>;
             <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">;
               Revolutionary Service Categories;
             </h2>;
@@ -1192,19 +1181,19 @@ const Homepage2047: React.FC = () => {;
             variants={stagger_container}
             initial='initial';
             whileInView='animate';
-            viewport={{ once: true }}
+            viewport={ once: true }
             className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8'          >            initial="initial";
             whileInView="animate";
-            viewport={{ once: true }}
+            viewport={ once: true }
             className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8";
-            {categories.map ((category, index) => (
+            {categories.map (category, index) => (
               <motion.div;
                 key={category.id}
                 variants={fadeInUp}
                 className='group relative';
                 <Link;
                   href={
-                    category && category.id === 'all'
+                    category && category.id = = 'all'
                       ? '/2025-innovative-services-showcase-v2'
                       : `/2025-innovative-services-showcase-v2?category=${category && category.id}`
                   }
@@ -1237,7 +1226,7 @@ const Homepage2047: React.FC = () => {;
                   </div>
                 </Link>
               </motion.div>
-            ))}
+            )}
           </motion.div>
         </div>
       </section>
@@ -1267,7 +1256,7 @@ const Homepage2047: React.FC = () => {;
                   </div>;
                 </Link>;
               </motion && motion.div>;
-            ))}
+            )}
           </motion && motion.div>;
         </div>;
       </section>;
@@ -1277,9 +1266,9 @@ const Homepage2047: React.FC = () => {;
         <div className='max-w-7xl mx-auto'>          <motion && motion.div      <section className="relative py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">;
           <motion&& motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-                    category.id === 'all';
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+                    category.id = = 'all';
                       ? '/2025 - innovative - services - showcase - v2';
                       : `/2025 - innovative - services - showcase - v2?category=${category.id}`;
                   }
@@ -1312,7 +1301,7 @@ const Homepage2047: React.FC = () => {;
                       <ArrowRight className="w - 4 h - 4 ml - 2 group - hover:translate - x-1 transition - transform duration - 200" />;
                   </div>;
                 </Link>;
-              </motion.div>))}
+              </motion.div>)}
           </motion.div>;
         </div>;
       </section>;
@@ -1321,10 +1310,10 @@ const Homepage2047: React.FC = () => {;
         <div className='max - w-7xl mx - auto'>          <motion.div      <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-7xl mx - auto">;
           <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, coordinate_y: 30 }
+            whileInView={ opacity: 1, coordinate_y: 0 }
+            viewport={ once: true }
+            transition={ duration: 0.8 }
             className='text-center mb-16'
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
@@ -1332,22 +1321,21 @@ const Homepage2047: React.FC = () => {;
             </h2>
             <p className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'>
               Discover our most revolutionary and cutting-edge technology
-              solutions            </p>          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              solutions            </p><h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Featured Innovative Services
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
               Discover our most revolutionary and cutting-edge technology solutions
             </p>
           </motion.div>
-            transition={{ duration: 0 && 0.8 }}
+            transition={ duration: 0 && 0.8 }
             className='text-center mb-16'>;
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
               Featured Innovative Services;
             </h2>;
             <p className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'>;
               Discover our most revolutionary and cutting-edge technology;
-              solutions            </p>          >;
+              solutions            </p>;
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
               Featured Innovative Services;
             </h2>;
@@ -1361,12 +1349,12 @@ const Homepage2047: React.FC = () => {;
             variants={staggerContainer}
             initial='initial'
             whileInView='animate'
-            viewport={{ once: true }}
+            viewport={ once: true }
             className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            initial="initial";
             whileInView="animate";
-            viewport={{ once: true }}
+            viewport={ once: true }
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8";
-            {features && features.map((feature, index) => (;
+            {features && features.map(feature, index) => (;
               <motion&& motion.div
                 key={index}
                 variants={fadeInUp}
@@ -1391,7 +1379,7 @@ const Homepage2047: React.FC = () => {;
                   </div>
                 </Link>
               </motion.div>
-            ))}
+            )}
           </motion.div>
                       className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${feature && feature.color} flex items-center justify-center mb-6`}>;
                       <feature && feature.icon className='w-8 h-8 text-white' />;
@@ -1413,22 +1401,22 @@ const Homepage2047: React.FC = () => {;
                   </div>;
                 </Link>;
               </motion && motion.div>;
-            ))}
+            )}
           </motion && motion.div>;
 
           {/* View All Services CTA */}
           <motion&& motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            viewport={ once: true }
+            transition={ duration: 0 && 0.8, delay: 0 && 0.2 }
             className='text-center mt-16'>;
             <Link
               href='/2025-innovative-services-showcase-v2'
               className='inline-flex items-center space-x-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-purple-500/25'>;
               <span>View All {allInnovativeServices && allInnovativeServices.length}+ Services</span>;
-              <ArrowRight className='w-5 h-5' />            </Link>          >;
-            transition={{ duration: 0.8, delay: 0.2 }}
+              <ArrowRight className='w-5 h-5' />            </Link>;
+            transition={ duration: 0.8, delay: 0.2 }
             className="text-center mt-16"
           >
             <Link
@@ -1446,10 +1434,10 @@ const Homepage2047: React.FC = () => {;
         <div className='max-w-4xl mx-auto text-center'>          <motion && motion.div      <section className="relative py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-4xl mx-auto text-center">;
           <motion&& motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0 && 0.8 }}>;
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            viewport={ once: true }
+            transition={ duration: 0 && 0.8 }>;
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
               Ready to Transform Your Business?;
             </h2>;
@@ -1499,16 +1487,14 @@ const Homepage2047: React.FC = () => {;
       <UltraFuturisticFooter2047 />;
     </div>;
   );
-};
 
 export default Homepage2047;  );
-}
+
 export default Homepage2047;  )
-}
-};
+
+;
 
 export default Homepage2047;  );
-};
 
 export default Homepage2047;
 
@@ -1521,14 +1507,14 @@ export default Homepage2047;
                       <ArrowRight className="w - 4 h - 4 ml - 2 group - hover:translate - x-1 transition - transform duration - 200" />;
                   </div>;
                 </Link>;
-              </motion.div>))}
+              </motion.div>)}
           </motion.div>;
           {/* View All Services CTA */}
           <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={ opacity: 0, coordinate_y: 30 }
+            whileInView={ opacity: 1, coordinate_y: 0 }
+            viewport={ once: true }
+            transition={ duration: 0.8, delay: 0.2 }
             className='text - center mt - 16';
           >;
             <Link;
@@ -1536,7 +1522,7 @@ export default Homepage2047;
               className='inline - flex items - center space - x-3 bg - gradient - to - r from - purple - 500 to - pink - 500 text - white px - 8 py - 4 rounded - xl font - semibold text - lg hover:from - purple - 600 hover:to - pink - 600 transition - all duration - 200 hover:scale - 105 shadow - lg hover:shadow - purple - 500 / 25';
             >;
               <span > View All {allInnovativeServices.length}+ Services</span>;
-              <ArrowRight className='w - 5 h - 5' />            </Link>          >;
+              <ArrowRight className='w - 5 h - 5' />            </Link>;
             <Link;
               href="/2025 - innovative - services - showcase - v2";
               className="inline - flex items - center space - x-3 bg - gradient - to - r from - purple - 500 to - pink - 500 text - white px - 8 py - 4 rounded - xl font - semibold text - lg hover:from - purple - 600 hover:to - pink - 600 transition - all duration - 200 hover:scale - 105 shadow - lg hover:shadow - purple - 500 / 25";
@@ -1552,10 +1538,10 @@ export default Homepage2047;
         <div className='max - w-4xl mx - auto text - center'>          <motion.div      <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-4xl mx - auto text - center">;
           <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, coordinate_y: 30 }
+            whileInView={ opacity: 1, coordinate_y: 0 }
+            viewport={ once: true }
+            transition={ duration: 0.8 }
           >;
             <h2 className='text - 4xl md:text - 5xl font - bold text - white mb - 6'>;
               Ready to Transform Your Business?;
@@ -1598,10 +1584,7 @@ export default Homepage2047;
       {/* Footer */}
       <UltraFuturisticFooter2047 />;
     </div>);
-}
-;
+
 export default Homepage2047);
-}
-;
+
 export default Homepage2047;
-;

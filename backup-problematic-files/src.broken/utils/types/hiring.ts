@@ -5,13 +5,13 @@ export type CandidateStatus =;
   | "offer";
   | "hired";
   | "rejected",;
-;
+
 export interface TalentProfile {;
   id:string,;
   name:string,;
   title?:string,;
   photoUrl?:string;}
-;
+
 export interface JobApplication {;
   id:string,;
   jobId:string,;
@@ -24,12 +24,10 @@ export interface JobApplication {;
   updatedAt?:string,;
   lastActivityAt?:string | null,;
   talent?:TalentProfile;
-}
-;
+
 export interface ApplicationFilters {;
   status?:CandidateStatus | "all",;
   minScore?:number,;
   fromDate?:Date | null,;
   toDate?:Date | null,;
-}export type CandidateStatus = 
-}
+export type CandidateStatus = 

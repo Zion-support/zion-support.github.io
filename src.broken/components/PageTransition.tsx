@@ -6,5 +6,3 @@ export function PageTransition() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

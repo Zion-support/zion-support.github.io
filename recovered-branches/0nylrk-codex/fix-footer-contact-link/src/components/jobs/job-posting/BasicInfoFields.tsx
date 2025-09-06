@@ -7,20 +7,20 @@ import {
   FormLabel
   FormControl
   FormMessage
-} from "@/components/ui/form";
+ from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { ClientBudgetRecommender } from "@/components/pricing/ClientBudgetRecommender";
 import { Card, CardContent } from "@/components/ui/card";
 interface BasicInfoFieldsProps {
   control: Control < any>;
-}
+
 export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({
   control
-}) => {
+) => {
   const [minBudget, setMinBudget] = useState<string>("");
   const [maxBudget, setMaxBudget] = useState<string>("");
   const handleSuggestionApplied = (min: number, max: number) => {
-    (setMinBudget(min.toString()), setMaxBudget(max.toString()));
+    (setMinBudget(min.toString(), setMaxBudget(max.toString());
   }
   return (
     <div className="space-y-4">;
@@ -62,14 +62,14 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({
                 {...field}>;
 export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
   control,
-}) => {
+) => {
   const [min_budget, setMinBudget] = useState < string>("");
   const [max_budget, setMaxBudget] = useState < string>("");
-;
+
   const handleSuggestionApplied = (min: number, max: number) =>: any {
-    (setMinBudget (min.to_string ()), setMaxBudget (max.to_string ()));
+    (setMinBudget (min.to_string (), setMaxBudget (max.to_string ());
   }
-;
+
   return (
     <div className="space - y-4">;
       <FormField;
@@ -125,7 +125,7 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
         <FormField
           control={control}
           name="budgetMin"
-          render={({ field: { onChange, ...rest } }) => (;
+          render={({ field: { onChange, ...rest }) => (;
             <FormItem>;
               <FormLabel>Budget (Min)</FormLabel>;
               <FormControl>;
@@ -142,7 +142,7 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
         <FormField;
           control={control}
           name="budget_min";
-          render={({ field: { on_change, ...rest } }) => (
+          render={({ field: { on_change, ...rest }) => (
             <FormItem>;
               <FormLabel > Budget (Min)</FormLabel>;
               <FormControl>;
@@ -153,7 +153,7 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
                   on_change={(e) => {
                     setMinBudget (e.target.value);
                     on_change (e);
-                  }}
+                  }
                   {...rest}
                 />;
               </FormControl>;
@@ -164,7 +164,7 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
         <FormField
           control={control}
           name="budgetMax"
-          render={({ field: { onChange, ...rest } }) => (;
+          render={({ field: { onChange, ...rest }) => (;
             <FormItem>;
               <FormLabel>Budget (Max)</FormLabel>;
               <FormControl>;
@@ -180,7 +180,7 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
         <FormField;
           control={control}
           name="budget_max";
-          render={({ field: { on_change, ...rest } }) => (
+          render={({ field: { on_change, ...rest }) => (
             <FormItem>;
               <FormLabel > Budget (Max)</FormLabel>;
               <FormControl>;
@@ -191,7 +191,7 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
                   on_change={(e) => {
                     setMaxBudget (e.target.value);
                     on_change (e);
-                  }}
+                  }
                   {...rest}
                 />;
               </FormControl>;
@@ -250,5 +250,3 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
       />;
     </div>;
   );
-}
-

@@ -6,5 +6,3 @@ export function MobileFilterBar() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

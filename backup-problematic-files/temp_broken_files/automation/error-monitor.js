@@ -1,10 +1,9 @@
-// Error-monitor utility
+/ Error-monitor utility
 export const Error-monitor = () => {
   // Implementation here
   return null;
-};
 
-/**
+**
  * Error Monitor - PM2 Automation Script
  * Monitors the application for errors and automatically fixes common issues
  */
@@ -42,7 +41,7 @@ class ErrorMonitor {
 
     // Create logs directory
     const logsDir = path.join(this.projectRoot, 'automation', 'logs');
-    if (!fs.existsSync(logsDir)) {
+    if (!fs.existsSync(logsDir) {
       fs.mkdirSync(logsDir, { recursive: true });
     }
 
@@ -53,8 +52,8 @@ class ErrorMonitor {
     this.startContinuousMonitoring();
 
     // Handle graceful shutdown
-    process.on('SIGINT', () => this.shutdown());
-    process.on('SIGTERM', () => this.shutdown());
+    process.on('SIGINT', () => this.shutdown();
+    process.on('SIGTERM', () => this.shutdown();
   }
 
   async performHealthCheck() {
@@ -82,8 +81,7 @@ class ErrorMonitor {
       // Trigger error fixer if needed
       if (this.monitoringReport.metrics.totalErrors > this.alertThreshold) {
         await this.triggerErrorFixer();
-      }
-    } catch (error) {
+      } catch (error) {
       console.error(' Health check failed:', error);
       this.monitoringReport.errorsDetected.push({
         type: 'health_check_failure',
@@ -92,7 +90,6 @@ class ErrorMonitor {
         timestamp: new Date().toISOString(),
       });
     }
-  }
 
   async checkTypeScriptErrors() {
     try {
@@ -112,7 +109,6 @@ class ErrorMonitor {
         this.monitoringReport.metrics.typeCheckSuccess = false;
         console.log(` TypeScript check failed with ${errors.length} errors`);
       }
-    }
   }
 
   async checkESLintErrors() {
@@ -133,7 +129,6 @@ class ErrorMonitor {
         this.monitoringReport.metrics.lintSuccess = false;
         console.log(` ESLint check failed with ${errors.length} errors`);
       }
-    }
   }
 
   async checkBuildStatus() {
@@ -158,7 +153,6 @@ class ErrorMonitor {
       this.monitoringReport.metrics.totalErrors += 1;
       console.log(' Build check failed');
     }
-  }
 
   async checkCriticalFiles() {
     const criticalFiles = [
@@ -171,7 +165,7 @@ class ErrorMonitor {
 
     for (const file of criticalFiles) {
       const filePath = path.join(this.projectRoot, file);
-      if (!fs.existsSync(filePath)) {
+      if (!fs.existsSync(filePath) {
         this.monitoringReport.errorsDetected.push({
           type: 'missing_critical_file',
           file: file,
@@ -180,7 +174,6 @@ class ErrorMonitor {
         });
         this.monitoringReport.metrics.totalErrors += 1;
       }
-    }
   }
 
   parseTypeScriptErrors(output) {
@@ -188,7 +181,7 @@ class ErrorMonitor {
     const lines = output.split('\n');
 
     for (const line of lines) {
-      if (line.includes('error TS')) {
+      if (line.includes('error TS') {
         const match = line.match(
           /(.+):(\d+):(\d+)\s*-\s*error\s+TS\d+:\s*(.+)/
         );
@@ -203,7 +196,6 @@ class ErrorMonitor {
             timestamp: new Date().toISOString(),
           });
         }
-      }
     }
 
     return errors;
@@ -225,11 +217,9 @@ class ErrorMonitor {
           timestamp: new Date().toISOString()
         });
       }
-    }
           timestamp: new Date().toISOString(),
         });
       }
-    }
 
     return errors;
   }
@@ -238,14 +228,13 @@ class ErrorMonitor {
     const totalErrors = this.monitoringReport.metrics.totalErrors;
     const totalWarnings = this.monitoringReport.metrics.totalWarnings;
 
-    if (totalErrors === 0 && totalWarnings === 0) {
+    if (totalErrors = = 0 && totalWarnings = = 0) {
       this.monitoringReport.healthStatus = 'healthy';
     } else if (totalErrors <= this.alertThreshold) {
       this.monitoringReport.healthStatus = 'warning';
     } else {
       this.monitoringReport.healthStatus = 'critical';
     }
-  }
 
   logHealthStatus() {
     const status = this.monitoringReport.healthStatus;
@@ -288,7 +277,6 @@ class ErrorMonitor {
         timestamp: new Date().toISOString(),
       });
     }
-  }
 
   startContinuousMonitoring() {
     console.log(
@@ -299,8 +287,7 @@ class ErrorMonitor {
       if (this.isRunning) {
         await this.performHealthCheck();
         await this.saveReport();
-      }
-    }, this.checkInterval);
+      }, this.checkInterval);
   }
 
   async saveReport() {
@@ -311,7 +298,7 @@ class ErrorMonitor {
     );
     const reportDir = path.dirname(reportPath);
 
-    if (!fs.existsSync(reportDir)) {
+    if (!fs.existsSync(reportDir) {
       fs.mkdirSync(reportDir, { recursive: true });
     }
 
@@ -320,8 +307,7 @@ class ErrorMonitor {
 
     fs.writeFileSync(
       reportPath,
-      JSON.stringify(this.monitoringReport, null, 2)
-    );
+      JSON.stringify(this.monitoringReport, null, 2);
 
     // Keep only the latest 10 reports
     this.cleanupOldReports(reportDir);
@@ -331,24 +317,22 @@ class ErrorMonitor {
     try {
       const files = fs
         .readdirSync(reportDir)
-        .filter(file => file.startsWith('error-monitor-report-'))
+        .filter(file => file.startsWith('error-monitor-report-')
         .map(file => ({
           name: file,
           path: path.join(reportDir, file),
-          time: fs.statSync(path.join(reportDir, file)).mtime.getTime(),
-        }))
-        .sort((a, b) => b.time - a.time);
+          time: fs.statSync(path.join(reportDir, file).mtime.getTime(),
+        })
+        .sort(a, b) => b.time - a.time);
 
       // Remove old reports (keep only the latest 10)
       if (files.length > 10) {
         for (let i = 10; i < files.length; i++) {
           fs.unlinkSync(files[i].path);
         }
-      }
     } catch (error) {
       console.error('Error cleaning up old reports:', error);
     }
-  }
 
   async shutdown() {
     console.log(' Shutting down Error Monitor...');
@@ -360,12 +344,10 @@ class ErrorMonitor {
     console.log(' Error Monitor shutdown complete');
     process.exit(0);
   }
-}
 
-// Run the monitor
-if (require.main === module) {
+/ Run the monitor
+if (require.main = = module) {
   const monitor = new ErrorMonitor();
   monitor.start().catch(console.error);
-}
 
 module.exports = ErrorMonitor;

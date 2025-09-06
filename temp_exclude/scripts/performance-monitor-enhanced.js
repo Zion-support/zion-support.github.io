@@ -1,4 +1,4 @@
-const fs = require('fs'); const path = require('path');  const performanceChecks = { bundleSize: () => {  return true},loadTime: () => {  return true},memoryUsage: () => {  return true} }; Object && Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); } catch (error) { } }); 
+const fs = require('fs'); const path = require('path');  const performanceChecks = { bundleSize: () => {  return true},loadTime: () => {  return true},memoryUsage: () => {  return true}; Object && Object.entries(performanceChecks).forEach([name,check]) => { try { const result = check(); } catch (error) { }); 
 const fs = require('fs');
 const path = require('path');
 console && console.log(' Enhanced Performance Monitor Starting...');
@@ -18,16 +18,16 @@ const performanceChecks = {
     // Memory usage analysis would go here
     return true
   }
-};
-// Run all performance checks
-Object && Object.entries(performanceChecks).forEach(([name, check]) => {
+;
+/ Run all performance checks
+Object && Object.entries(performanceChecks).forEach([name, check]) => {
   try {
     const result = check();
     console && console.log(` ${name}: ${result ? 'PASS' : 'FAIL'}`);
   } catch (error) {
     console && console.log(` ${name}: ERROR - ${error && error.message}`);
   }
-});
+);
 console && console.log(' Performance monitoring completed!');
-const fs = require('fs'); const path = require('path'); console && console.log(' Enhanced Performance Monitor Starting...'); const performanceChecks = { bundleSize: () => { console && console.log(' Checking bundle size...'); return true},loadTime: () => { console && console.log(' Checking load times...'); return true},memoryUsage: () => { console && console.log(' Checking memory usage...'); return true} }; Object && Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); console && console.log(` ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console && console.log(` ${name}: ERROR - ${error && error.message}`)} }); console && console.log(' Performance monitoring completed!');
-const fs = require('fs'); const path = require('path'); console && console.log(' Enhanced Performance Monitor Starting...'); const performanceChecks = { bundleSize: () => { console && console.log(' Checking bundle size...'); return true},loadTime: () => { console && console.log(' Checking load times...'); return true},memoryUsage: () => { console && console.log(' Checking memory usage...'); return true} }; Object && Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); console && console.log(` ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console && console.log(` ${name}: ERROR - ${error && error.message}`)} }); console && console.log(' Performance monitoring completed!');
+const fs = require('fs'); const path = require('path'); console && console.log(' Enhanced Performance Monitor Starting...'); const performanceChecks = { bundleSize: () => { console && console.log(' Checking bundle size...'); return true},loadTime: () => { console && console.log(' Checking load times...'); return true},memoryUsage: () => { console && console.log(' Checking memory usage...'); return true}; Object && Object.entries(performanceChecks).forEach([name,check]) => { try { const result = check(); console && console.log(` ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console && console.log(` ${name}: ERROR - ${error && error.message}`)}); console && console.log(' Performance monitoring completed!');
+const fs = require('fs'); const path = require('path'); console && console.log(' Enhanced Performance Monitor Starting...'); const performanceChecks = { bundleSize: () => { console && console.log(' Checking bundle size...'); return true},loadTime: () => { console && console.log(' Checking load times...'); return true},memoryUsage: () => { console && console.log(' Checking memory usage...'); return true}; Object && Object.entries(performanceChecks).forEach([name,check]) => { try { const result = check(); console && console.log(` ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console && console.log(` ${name}: ERROR - ${error && error.message}`)}); console && console.log(' Performance monitoring completed!');

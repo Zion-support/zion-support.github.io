@@ -2,7 +2,6 @@ import React, { ReactNode } from "react";
 
 interface LayoutProps {
   children: ReactNode;
-}
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
@@ -10,6 +9,5 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       {children}
     </main>
   );
-};
 
 export default Layout;

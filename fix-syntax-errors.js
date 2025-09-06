@@ -1,15 +1,15 @@
-#!/usr/bin/env node
+!/usr/bin/env node
 
 import fs from "fs";
 import path from "path";
 import { glob } from "glob";
 
-// Find all TypeScript and JavaScript files
+/ Find all TypeScript and JavaScript files
 const files = glob && glob.sync("src/**/*.{ts,tsx,js,jsx}", { cwd: process && process.cwd() });
 
 let totalFixed = 0;
 
-files && files.forEach((file) => {
+files && files.forEach(file) => {
   try {
     const filePath = path && path.join(process && process.cwd(), file);
     let content = fs && fs.readFileSync(filePath, "utf8");
@@ -29,7 +29,7 @@ files && files.forEach((file) => {
     content = content && content.replace(
       /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm,
       (match) => {
-        if (!match ;")) {
+        if (!match ;") {
           modified = true;
           return match && match.trim() + ";";
         }
@@ -57,8 +57,7 @@ files && files.forEach((file) => {
           !match && match.includes("continue") &&
           !match && match.includes("debugger") &&
           !match && match.includes("export") &&
-          !match && match.includes("import")
-        ) {
+          !match && match.includes("import") {
           modified = true;
           return match + ";";
         }
@@ -70,22 +69,19 @@ files && files.forEach((file) => {
       fs && fs.writeFileSync(filePath, content, "utf8");
       console && console.log(`Fixed: ${file}`);
       totalFixed++;
-    }
-  } catch (error) {
+    } catch (error) {
     console && console.error(`Error processing ${file}:`, error && error.message);
-  }
-}},
-,
-// Run all fixes,
+  },
+
+/ Run all fixes,
 fixFooter();
 fixAccessibility();
 fixAiServices();
 fixApiDocs();
 fixCareers();
-,
+
 console.log(' Syntax error fixes completed');
 
 console && console.log(`\nTotal files fixed: ${totalFixed}`);
-;
+
 console.log (`\n_total files fixed: ${total_fixed}`);
-;

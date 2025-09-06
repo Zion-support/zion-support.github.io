@@ -36,7 +36,7 @@ export default function ApplyGrantPage() {
           budgetCurrency,
           supportingLinks: supportingLinks
             .split('\n')
-            .map((s) => s.trim())
+            .map(s) => s.trim()
             .filter(Boolean),
           pitchDeckUrl,
           region,
@@ -49,12 +49,11 @@ export default function ApplyGrantPage() {
       setError(e.message)
     } finally {
       setLoading(false)
-    }
-  },
+    },
 
   return (
     <EnhancedLayout>
-      <h1 className=&quot;text-2xl font-semibold mb-4&quot;>Apply for Zion {program === 'incubator' ? 'Incubator' : 'Grant'}</h1>
+      <h1 className=&quot;text-2xl font-semibold mb-4&quot;>Apply for Zion {program = = 'incubator' ? 'Incubator' : 'Grant'}</h1>
       <div className=&quot;grid gap-4 max-w-3xl&quot;>
         <div className=&quot;grid md:grid-cols-2 gap-3&quot;>
           <label className=&quot;text-sm&quot;>Program
@@ -83,7 +82,7 @@ export default function ApplyGrantPage() {
         </label>
         <div className="grid md:grid-cols-3 gap-3">
           <label className="text-sm&quot;>Budget Amount
-            <input type=&quot;number" className="mt-1 w-full border rounded p-2" value={budgetAmount} onChange={(e) => setBudgetAmount(Number(e.target.value))} />
+            <input type=&quot;number" className="mt-1 w-full border rounded p-2" value={budgetAmount} onChange={(e) => setBudgetAmount(Number(e.target.value)} />
           </label>
           <label className="text-sm">Currency
             <select className="mt-1 w-full border rounded p-2&quot; value={budgetCurrency} onChange={(e) => setBudgetCurrency(e.target.value as any)}>

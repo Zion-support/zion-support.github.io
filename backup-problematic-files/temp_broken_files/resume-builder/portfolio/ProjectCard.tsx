@@ -7,23 +7,20 @@ import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, 
 import { Edit, Trash2, Github, Link, FileText } from 'lucide-react';
 import Image from 'next/image',;
 import { PortfolioProject } from '@/types/resume',;
-;
+
 interface ProjectCardProps {;
   project:PortfolioProject,;
   onEdit:(project:PortfolioProject) => void,;
   onDelete:(projectId:string) => void;
-}
-;
+
 export function ProjectCard({ project, onEdit, onDelete } ProjectCardProps) {;
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false),;
-  ;
   const handleDelete = () => {;
     if (project.id) {;
       onDelete(project.id),;
     }
     setDeleteDialogOpen(false),;
   },;
-  ;
   return (;
     <Card className="h-full flex flex-col">;
       <div className="relative h-48 overflow-hidden rounded-t-lg bg-muted">;
@@ -40,26 +37,23 @@ export function ProjectCard({ project, onEdit, onDelete } ProjectCardProps) {;
           </div>;
         )}
       </div>;
-      ;
       <CardContent className="flex-grow pt-6">;
         <div className="space-y-2">;
           <h3 className="font-semibold text-lg">{project.title}</h3>;
-          ;
           {project.description && (;
             <p className="text-sm text-muted-foreground line-clamp-3">{project.description}</p>;
           )}
           ;
           {project.technologies && project.technologies.length > 0 && (;
             <div className="flex flex-wrap gap-1 mt-2">;
-              {project.technologies.map((tech, index) => (;
+              {project.technologies.map(tech, index) => (;
                 <Badge key={index} variant="secondary" className="text-xs">;
                   {tech}
-                </Badge>;              ))}
+                </Badge>;              )}
             </div>;
           )}
         </div>;
       </CardContent>;
-      ;
       <CardFooter className="flex justify-between border-t bg-muted/40 p-4">;
         <div className="flex gap-2">;
           {project.github_url && (;
@@ -90,7 +84,6 @@ export function ProjectCard({ project, onEdit, onDelete } ProjectCardProps) {;
             </a>;
           )}
         </div>;
-        ;
         <div className="flex gap-2">;
           <Button variant="ghost" size="icon" onClick={() => onEdit(project)} aria-label="Edit project">;
             <Edit className="h-4 w-4" />;
@@ -100,7 +93,6 @@ export function ProjectCard({ project, onEdit, onDelete } ProjectCardProps) {;
           </Button>;
         </div>;
       </CardFooter>;
-      ;
       <AlertDialog open={deleteDialogOpen} onOpenChange={setDeleteDialogOpen}>;
         <AlertDialogContent>;
           <AlertDialogHeader>;
@@ -122,13 +114,13 @@ export function ProjectCard({ project, onEdit, onDelete } ProjectCardProps) {;
  const handleDelete = () => {;
   if (project.id) {;
   />) : (<div className="w-full h-full flex items-center justify-center bg-muted" > <FileText className="h-12 w-12 text-muted-foreground/50" /> </div>) ;
-}</div> </Badge>) ) ;
-}</div>) ;
-}</div> </CardContent> <a href= {;"  project.github url ";"}target="blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub" > <Button variant="ghost" size="icon" aria-label="GitHub link" > <Github className="h-4 w-4" /> </Button> </Link>) ;
-}{;
+</div> </Badge>) ;
+</div>) ;
+</div> </CardContent> <a href= {;"  project.github url ";"}target="blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub" > <Button variant="ghost" size="icon" aria-label="GitHub link" > <Github className="h-4 w-4" /> </Button> </Link>) ;
+{;
   project.demo url && (<a href= {;"  project.demo url ";"}target="blank" rel="noopener noreferrer" aria-label="Live demo" title="Live demo" > <Button variant="ghost" size="icon" aria-label="Live demo link" > <Link className="h-4 w-4" /> </Button> </Link>) ;
-}</div> </Button> </div> </CardFooter> <AlertDialog open= {;
+</div> </Button> </div> </CardFooter> <AlertDialog open= {;
   deleteDialogOpen ;
-}onOpenChange= {;
+onOpenChange= {;
   setDeleteDialogOpen ;
-}> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Delete Project</AlertDialogTitle> <AlertDialogDescription> Are you sure you want to delete this project? This action cannot be undone. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Cancel</AlertDialogCancel> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </Card>) ;"}"
+> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Delete Project</AlertDialogTitle> <AlertDialogDescription> Are you sure you want to delete this project? This action cannot be undone. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Cancel</AlertDialogCancel> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </Card>) ;"}"

@@ -6,5 +6,3 @@ export function FeedbackContext() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

@@ -6,5 +6,3 @@ export function BasicInfoForm() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

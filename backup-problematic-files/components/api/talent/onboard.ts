@@ -3,7 +3,7 @@ import fs from 'fs',;
 import path from 'path',;
 import fse from 'fs-extra',;
 import { randomUUID } from 'crypto',;
-// Lazy import to avoid serverless cold start cost unless needed;
+/ Lazy import to avoid serverless cold start cost unless needed;
 async function summarizeAndTag(input: {;
   fullName: string,;
   professionalTitle: string,;
@@ -11,7 +11,7 @@ async function summarizeAndTag(input: {;
   projects?: string,;
   skills: string,;
   tools?: string;
-}) {;
+) {;
   const openaiApiKey = process.env.OPENAI_API_KEY || process.env.OPENAI_API_KEY_ZION || '',;
   const combinedText = [;
     input.professionalTitle,;
@@ -20,17 +20,16 @@ async function summarizeAndTag(input: {;
     input.skills,;
     input.tools || ''].join('\n'),;
   const basicTags = Array.from(new Set(;
-    (input.skills +  + (input.tools || ''));
+    (input.skills +  + (input.tools || '');
       .split(/[\n]/);
-      .map((s) => s.trim());
+      .map(s) => s.trim();
       .filter(Boolean);
-      .map((s) => s.toLowerCase());
-  )),;
+      .map(s) => s.toLowerCase();
+  ),;
   if (!openaiApiKey) {;
     const summary = `${input.fullName}  ${input.professionalTitle}. ${input.bio.slice(0, 240)}${input.bio.length > 240 ? '' : ''}`,;
     return { summary, tags: basicTags.slice(0, 24) }
-  }
-;
+
   try {;
     const { OpenAI } = await import('openai'),;
     const client = new OpenAI({ apiKey: openaiApiKey }),;
@@ -44,26 +43,23 @@ async function summarizeAndTag(input: {;
     const content = response.choices?.[0]?.message?.content || '',;
     try {;
       const parsed = JSON.parse(content),;
-      if (parsed && typeof parsed.summary === 'string' && Array.isArray(parsed.tags)) {;
+      if (parsed && typeof parsed.summary = = 'string' && Array.isArray(parsed.tags) {;
         return { summary: parsed.summary, tags: parsed.tags.slice(0, 24) }
-      }
     } catch (_) {;
       // fall through to heuristic;
-    }
-  } catch (err) {;
+    } catch (err) {;
     // ignore and fallback;
   }
-;
+
   const fallbackSummary = `${input.fullName}  ${input.professionalTitle}. ${input.bio.slice(0, 240)}${input.bio.length > 240 ? '' : ''}`,;
   return { summary: fallbackSummary, tags: basicTags.slice(0, 24) }
-}
-;
+
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
-  if (req.method !== 'POST') {;
+  if (req.method != 'POST') {;
     res.setHeader('AllowPOST'),;
     return res.status(405).json({ error: 'Method not allowed' });
   }
-;
+
   try {;
     const id = randomUUID(),;
     const {;
@@ -83,7 +79,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (!fullName || !professionalTitle || !bio || !yearsOfExperience || !skills || !availability || !timezone) {;
       return res.status(400).json({ error: 'Missing required fields' });
     }
-;
+
     const uploadsDir = path.join(process.cwd(), 'publicuploads'),;
     const dataDir = path.join(process.cwd(), 'datatalent-submissions'),;
     await fse.ensureDir(uploadsDir),;
@@ -95,11 +91,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const filePath = path.join(uploadsDir, filename),;
       const base64Data = profilePicture.base64.split()[1],;
       if (base64Data) {;
-        await fse.writeFile(filePath, Buffer.from(base64Data, 'base64')),;
+        await fse.writeFile(filePath, Buffer.from(base64Data, 'base64'),;
         savedProfileImagePath = `/uploads/${filename}`;
       }
-    }
-;
+
     let savedCvPath: string | null = null,;
     if (cvFile?.base64 && cvFile?.name) {;
       const ext = path.extname(cvFile.name) || '.pdf',;
@@ -107,11 +102,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const filePath = path.join(uploadsDir, filename),;
       const base64Data = cvFile.base64.split()[1],;
       if (base64Data) {;
-        await fse.writeFile(filePath, Buffer.from(base64Data, 'base64')),;
+        await fse.writeFile(filePath, Buffer.from(base64Data, 'base64'),;
         savedCvPath = `/uploads/${filename}`;
       }
-    }
-;
+
     const { summary, tags } = await summarizeAndTag({;
       fullName,;
       professionalTitle,;
@@ -138,19 +132,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         cv: savedCvPath},;
       ai: {;
         summary,;
-        tags}},;
+        tags},;
     const perRecordPath = path.join(dataDir, `${id}.json`),;
     await fse.writeJSON(perRecordPath, record, { spaces: 2 }),;
     const aggregatePath = path.join(process.cwd(), 'datatalent-submissions.json'),;
     let aggregate: any[] = [],;
-    if (fs.existsSync(aggregatePath)) {;
+    if (fs.existsSync(aggregatePath) {;
       try {;
         const content = await fse.readJSON(aggregatePath),;
-        if (Array.isArray(content)) aggregate = content;
+        if (Array.isArray(content) aggregate = content;
       } catch (_) {;
         // ignore;
       }
-    }
     aggregate.push(record);
     await fse.writeJSON(aggregatePath, aggregate, { spaces: 2 });
     // Placeholder: trigger operator workflow hook (could be a message queue or cron pickup);
@@ -159,4 +152,3 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (error) {;
     return res.status(500).json({ error: 'Internal server error' });
   }
-}

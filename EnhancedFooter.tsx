@@ -65,7 +65,7 @@ const EnhancedFooter: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
-              {services.slice(0, 6).map((service) => (
+              {services.slice(0, 6).map(service) => (
                 <li key={service.name}>
                   <Link href={service.href}>
                     <span className="text-gray-300 hover:text-white transition-colors">
@@ -73,13 +73,13 @@ const EnhancedFooter: React.FC = () => {
                     </span>
                   </Link>
                 </li>
-              ))}
+              )}
             </ul>
           </div>
           <div>
             <h3 className="text-lg font-semibold mb-4">Products</h3>
             <ul className="space-y-2">
-              {products.map((product) => (
+              {products.map(product) => (
                 <li key={product.name}>
                   <Link href={product.href}>
                     <span className="text-gray-300 hover:text-white transition-colors">
@@ -87,13 +87,13 @@ const EnhancedFooter: React.FC = () => {
                     </span>
                   </Link>
                 </li>
-              ))}
+              )}
             </ul>
           </div>
           <div>
             <h3 className="text-lg font-semibold mb-4">Company</h3>
             <ul className="space-y-2">
-              {company.map((item) => (
+              {company.map(item) => (
                 <li key={item.name}>
                   <Link href={item.href}>
                     <span className="text-gray-300 hover:text-white transition-colors">
@@ -101,7 +101,7 @@ const EnhancedFooter: React.FC = () => {
                     </span>
                   </Link>
                 </li>
-              ))}
+              )}
             </ul>
           </div>
         </div>
@@ -157,9 +157,9 @@ const EnhancedFooter: React.FC = () => {
       </div>
     </footer>
   );
-}
+
 export default EnhancedFooter;
-;
+
   // const resources = [;
   //   { name: 'Documentation', href: '/resources / documentation' },
   //   { name: 'API Reference', href: '/resources / api' },
@@ -167,7 +167,7 @@ export default EnhancedFooter;
   //   { name: 'Privacy Policy', href: '/legal / privacy' },
   //   { name: 'Terms of Service', href: '/legal / terms' },
   // ];
-;
+
   return (
     <footer className="bg - gray - 900 text - white">;
       <div className="container mx - auto px - 4 py - 12">;
@@ -200,40 +200,40 @@ export default EnhancedFooter;
           <div>;
             <h3 className="text - lg font - semibold mb - 4">Services</h3>;
             <ul className="space - y-2">;
-              {services.slice (0, 6).map ((service) => (
+              {services.slice (0, 6).map (service) => (
                 <li key={service.name}>;
                   <Link href={service.href}>;
                     <span className="text - gray - 300 hover:text - white transition - colors">;
                       {service.name}
                     </span>;
                   </Link>;
-                </li>))}
+                </li>)}
             </ul>;
           </div>;
           <div>;
             <h3 className="text - lg font - semibold mb - 4">Products</h3>;
             <ul className="space - y-2">;
-              {products.map ((product) => (
+              {products.map (product) => (
                 <li key={product.name}>;
                   <Link href={product.href}>;
                     <span className="text - gray - 300 hover:text - white transition - colors">;
                       {product.name}
                     </span>;
                   </Link>;
-                </li>))}
+                </li>)}
             </ul>;
           </div>;
           <div>;
             <h3 className="text - lg font - semibold mb - 4">Company</h3>;
             <ul className="space - y-2">;
-              {company.map ((item) => (
+              {company.map (item) => (
                 <li key={item.name}>;
                   <Link href={item.href}>;
                     <span className="text - gray - 300 hover:text - white transition - colors">;
                       {item.name}
                     </span>;
                   </Link>;
-                </li>))}
+                </li>)}
             </ul>;
           </div>;
         </div>;
@@ -288,6 +288,5 @@ export default EnhancedFooter;
         </div>;
       </div>;
     </footer>);
-}
-;
+
 export default EnhancedFooter;

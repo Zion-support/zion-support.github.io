@@ -1380,7 +1380,6 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     address: string,
     website: string
   }
-}
 
 export const realMicroSaasServices: RealMicroSaasService[] = [
   // AI-Powered Business Solutions
@@ -2715,9 +2714,9 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     reviews: 6,
   },];
 
-// Helper functions
+/ Helper functions
 export const getServicesByCategory = (category: string) => {
-  return realMicroSaasServices && realMicroSaasServices.filter(service => service && service.category === category);    id: 'data-contracts-hub';
+  return realMicroSaasServices && realMicroSaasServices.filter(service => service && service.category = = category);    id: 'data-contracts-hub';
     name: 'Data Contracts Hub';
     tagline: 'Diff schemas, enforce CI gates, and prevent breaking changes';
     description: 'Manage dataset contracts with schema versioning, diffs, and CI checks to prevent downstream breakages.';
@@ -2738,7 +2737,7 @@ export const getServicesByCategory = (category: string) => {
     customers: 19, rating: 4.6,
     reviews: 6
   }
-];
+;
 
     id: 'ai-legal-document-generator'
     name: 'AI Legal Document Generator'
@@ -2804,7 +2803,6 @@ export const getServicesByCategory = (category: string) => {
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
     }
-  }
   {
     id: 'ai-customer-service-automation'
     name: 'AI Customer Service Automation'
@@ -2870,7 +2868,6 @@ export const getServicesByCategory = (category: string) => {
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
     }
-  }
   {
     id: 'ai-seo-optimizer-pro'
     name: 'AI SEO Optimizer Pro'
@@ -2936,7 +2933,6 @@ export const getServicesByCategory = (category: string) => {
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
     }
-  }
   {
     id: 'ai-video-editing-suite'
     name: 'AI Video Editing Suite'
@@ -3007,7 +3003,6 @@ export const getServicesByCategory = (category: string) => {
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
     }
-  }
   {
     id: 'ai-data-analytics-platform'
     name: 'AI Data Analytics Platform'
@@ -3074,7 +3069,6 @@ export const getServicesByCategory = (category: string) => {
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
     }
-  }
   {
     id: 'ai-hr-recruitment-platform'
     name: 'AI HR Recruitment Platform'
@@ -3147,7 +3141,6 @@ export const getServicesByCategory = (category: string) => {
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
     }
-  }
   {
     id: 'ai-sales-automation-platform'
     name: 'AI Sales Automation Platform'
@@ -3220,7 +3213,6 @@ export const getServicesByCategory = (category: string) => {
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
     }
-  }
   {
     id: 'ai-market-research-platform'
     name: 'AI Market Research Platform'
@@ -3291,7 +3283,6 @@ export const getServicesByCategory = (category: string) => {
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
     }
-  }
   {
     id: 'ai-blockchain-analytics'
     name: 'AI Blockchain Analytics Platform'
@@ -3362,7 +3353,6 @@ export const getServicesByCategory = (category: string) => {
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
     }
-  }
   {
     id: 'ai-cloud-cost-optimizer'
     name: 'AI Cloud Cost Optimizer'
@@ -3434,7 +3424,6 @@ export const getServicesByCategory = (category: string) => {
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
     }
-  }
   {
     id: 'ai-database-performance-monitor'
     name: 'AI Database Performance Monitor'
@@ -4071,9 +4060,9 @@ export const getServicesByCategory = (category: string) => {
     rating: 4.6
     reviews: 6
   },];
-// Helper functions
+/ Helper functions
 export const getServicesByCategory = (category: string) => {
-  return realMicroSaasServices && realMicroSaasServices.filter(service => service && service.category === category);    id: 'data-contracts-hub';
+  return realMicroSaasServices && realMicroSaasServices.filter(service => service && service.category = = category);    id: 'data-contracts-hub';
     name: 'Data Contracts Hub';
     tagline: 'Diff schemas, enforce CI gates, and prevent breaking changes';
     description: 'Manage dataset contracts with schema versioning, diffs, and CI checks to prevent downstream breakages.';
@@ -4105,10 +4094,10 @@ export const getServicesByCategory = (category: string) => {
     rating: 4.6
     reviews: 6
   }
-];
-// Helper functions
+;
+/ Helper functions
 export const getServicesByCategory = (category: string) => {
-  return realMicroSaasServices && realMicroSaasServices.filter(service => service && service.category === category);
+  return realMicroSaasServices && realMicroSaasServices.filter(service => service && service.category = = category);
 marketPosition: 'Lightweight alternative to Typeform and SurveySparrow with better mobile UX.';
 competitors: ['TypeformSurveySparrowTally'];
 techStack: ['Next && Next.jsSupabaseVercel EdgeOpenAI'];
@@ -4117,11 +4106,11 @@ implementationDetails: 'Template gallery, response store, analytics, export jobs
     rating: 4.6,
     reviews: 6;
   }
-];
 ;
-// Helper functions;
+
+/ Helper functions;
 export const getServicesByCategory = (category: string) =>: any {
-  return realMicroSaasServices.filter (service => service.category === category);
+  return realMicroSaasServices.filter (service => service.category = = category);
 market_position: 'Lightweight alternative to Typeform and SurveySparrow with better mobile UX.';
 competitors: ['TypeformSurveySparrowTally'];
 tech_stack: ['Next.jsSupabaseVercel EdgeOpenAI'];
@@ -4140,14 +4129,14 @@ launch_date: '2024 - 12 - 10';
 customers: 95;
 rating: 4.6;
 reviews: 22
-}
+
 marketPosition: 'Alternative to Notion templates + Asana. Faster to start with curated flows.';
 competitors: ['AsanaClickUpNotion'];
 techStack: ['Next && Next.jsPrismaPostgreSQL'];
 realImplementation: true;
 implementationDetails: 'Template JSON schemas, rules engine, import/export.';
 reviews: 22;
-}
+
 market_position: 'Alternative to Notion templates + Asana. Faster to start with curated flows.';
 competitors: ['AsanaClickUpNotion'];
 tech_stack: ['Next.jsPrismaPostgreSQL'];
@@ -4166,7 +4155,7 @@ launch_date: '2025 - 01 - 20';
 customers: 60;
 rating: 4.5;
 reviews: 14
-}
+
 export const serviceCategories = [
   'Legal Technology'
   'Customer Service & Support'
@@ -4193,11 +4182,10 @@ export const serviceCategories = [
   'Financial Technology'
   'Education Technology'
   'Enterprise IT'
-];  'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
+;  'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
   'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI/UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity';
 reviews: 14;
-}
-;
+
 export const service_categories = [;
   'Legal Technology',
   'Customer Service & Support',
@@ -4224,10 +4212,7 @@ export const service_categories = [;
   'Financial Technology',
   'Education Technology',
   'Enterprise IT',
-];  'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
+;  'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
   'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI / UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity';
   'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology';
   'Enterprise IT';
-];
-
-;

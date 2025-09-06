@@ -4,35 +4,34 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 interface SearchResult {
   title: string, description: string
   url: string, type: 'service' | 'page' | 'category'
-}
+
 const SearchBar: React.FC = () => {
 
 interface SearchResult {;
   title: string, description: string,;
   url: string, type: 'service' | 'page' | 'category',;
-}
 
 const SearchBar: React.FC = () => {;
   const [query, setQuery] = useState('');
@@ -81,17 +80,17 @@ const SearchBar: React.FC = () => {;
     }
   ];
   const handleSearch = async (searchQuery: string) => {
-    if (!searchQuery.trim()) {
+    if (!searchQuery.trim() {
       setResults([]);
       setIsOpen(false);
       return
     }
     setIsLoading(true);
     // Simulate API delay
-    await new Promise(resolve => setTimeout(resolve, 300));
+    await new Promise(resolve => setTimeout(resolve, 300);
     const filteredResults = searchData.filter(item =>
-      item.title.toLowerCase().includes(searchQuery.toLowerCase()) |
-      item.description.toLowerCase().includes(searchQuery.toLowerCase())
+      item.title.toLowerCase().includes(searchQuery.toLowerCase() |
+      item.description.toLowerCase().includes(searchQuery.toLowerCase()
     );
     setResults(filteredResults);
     setIsOpen(true);
@@ -107,22 +106,19 @@ const SearchBar: React.FC = () => {;
     setQuery('')
   }
   const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === 'Escape') {
+    if (e.key = = 'Escape') {
     setIsOpen(false)
     inputRef.current?.blur()
   }
-  }
-  useEffect(() => {
+  useEffect() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
+      if (searchRef.current && !searchRef.current.contains(event.target as Node) {
         setIsOpen(false)
       }
-    }
     document.addEventListener('mousedown', handleClickOutside);
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
-    }
-  }, []);
+    }, []);
   return (
     <div ref={searchRef} className="relative w-full max-w-md">;
       <div className="relative">;
@@ -160,7 +156,7 @@ const SearchBar: React.FC = () => {;
         <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg z-50 max-h-96 overflow-y-auto">;
           {results && results.length > 0 ? (;
             <div className="py-2">;
-              {results && results.map((result, index) => (;
+              {results && results.map(result, index) => (;
                 <Link
                   key={index}
                   href={result && result.url}
@@ -169,8 +165,8 @@ const SearchBar: React.FC = () => {;
                   <div className="flex items-start space-x-3">;
                     <div className="flex-shrink-0">;
                       <divclassName={`w-2 h-2 rounded-full mt-2 ${
-                        result && result.type === 'service' ? 'bg-blue-500' :
-                        result && result.type === 'page' ? 'bg-green-500' : 'bg-purple-500'
+                        result && result.type = = 'service' ? 'bg-blue-500' :
+                        result && result.type = = 'page' ? 'bg-green-500' : 'bg-purple-500'
                       }`}></div>;
                     </div>;
                     <div className="flex-1 min-w-0">;
@@ -183,7 +179,7 @@ const SearchBar: React.FC = () => {;
                     </div>;
                   </div>;
                 </Link>;
-              ))}
+              )}
             </div>;
           ) : query && !isLoading ? (;
             <div className="px-4 py-3 text-sm text-gray-500">;
@@ -194,66 +190,62 @@ const SearchBar: React.FC = () => {;
       )}
     </div>;
   );
-}
-;
+
   const handle_search = async (search_query: string) => {
     if () {) {
   $2
-}
+
       set_results ([]);
       setIsOpen (false);
       return,
     }
     setIsLoading (true);
-;
+
     // Simulate API delay;
-    await new Promise (resolve => set_timeout (resolve, 300));
-;
+    await new Promise (resolve => set_timeout (resolve, 300);
+
     const filtered_results = search_data.filter (item =>;
-      item.title.toLowerCase ().includes (search_query.toLowerCase ()) ||;
-      item.description.toLowerCase ().includes (search_query.toLowerCase ()));
-;
+      item.title.toLowerCase ().includes (search_query.toLowerCase () ||;
+      item.description.toLowerCase ().includes (search_query.toLowerCase ());
+
     set_results (filtered_results);
     setIsOpen (true);
     setIsLoading (false);
   }
-;
+
   const handleInputChange = (e: React.ChangeEvent < HTMLInputElement>) =>: any {
     const value = e.target.value;
     set_query (value);
     handle_search (value),
   }
-;
+
   const handleResultClick = () =>: any {
     setIsOpen (false),
     set_query ('');
   }
-;
+
   const handleKeyDown = (e: React.KeyboardEvent) =>: any {
     // Check condition
 if ( {) {
   $2
-}
+
     setIsOpen (false),
     input_ref.current?.blur ();
   }
-  }
-;
-  useEffect (() => {
+
+  useEffect () => {
     const handleClickOutside = (event: MouseEvent) =>: any {
       if () {) {
   $2
-}
+
         setIsOpen (false),
       }
-    }
-;
+
     document.addEventListener ('mousedown', handleClickOutside);
     return () => {
       document.removeEventListener ('mousedown', handleClickOutside);
-    }
-  }, []);
-;
+    }, []);
+
   return (
     <div ref={search_ref} className="relative w - full max - w-md">;
       <div className="relative">;
@@ -291,7 +283,7 @@ if ( {) {
         <div className="absolute top - full left - 0 right - 0 mt - 1 bg - white border border - gray - 200 rounded - lg shadow - lg z - 50 max - h-96 overflow - y-auto">;
           {results.length > 0 ? (
             <div className="py - 2">;
-              {results.map ((result, index) => (
+              {results.map (result, index) => (
                 <Link;
                   key={index}
                   href={result.url}
@@ -301,8 +293,8 @@ if ( {) {
                   <div className="flex items - start space - x-3">;
                     <div className="flex - shrink - 0">;
                       <div className={`w - 2 h - 2 rounded - full mt - 2 ${
-                        result.type === 'service' ? 'bg - blue - 500' :;
-                        result.type === 'page' ? 'bg - green - 500' : 'bg - purple - 500';
+                        result.type = = 'service' ? 'bg - blue - 500' :;
+                        result.type = = 'page' ? 'bg - green - 500' : 'bg - purple - 500';
                       }`}></div>;
                     </div>;
                     <div className="flex - 1 min - w-0">;
@@ -314,13 +306,12 @@ if ( {) {
                       </p>;
                     </div>;
                   </div>;
-                </Link>))}
+                </Link>)}
             </div>) : query && !is_loading ? (
             <div className="px - 4 py - 3 text - sm text - gray - 500">;
               No results found for &quot;{query}&quot;
             </div>) : null}
         </div>)}
     </div>);
-}
-;
+
 export default SearchBar;

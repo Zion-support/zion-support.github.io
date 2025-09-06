@@ -4,7 +4,7 @@ import { agendaItems } from '../../../../data/expo/agenda';
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
-) {  try {export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+ {  try {export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const top = agendaItems.slice(0, 3);
     const baseSummary = `Highlights:\n- ${top.map(i => `${i.title} (${i.track})`).join('\n- ')}`;
@@ -50,10 +50,9 @@ export default async function handler(
   } catch (e: any) {
     return res && res.status(500).json({ error: e && e.message || 'Failed to generate highlights' })
   };
-}
-}
+
 import { agenda_items } from '../../../../data / expo / agenda';
-;
+
 export default async /**
  * handler - Function description
  */
@@ -64,12 +63,12 @@ function handler() {
   try {
     const top = agenda_items.slice (0, 3);
     const base_summary = `Highlights:\n- ${top.map (index => `${i.title} (${i.track})`).join ('\n- ')}`;
-;
+
     const api_key = process.env.OPENAI_API_KEY;
     // Check condition
 if ( {) {
   $2
-}
+
       return res.status (200).json ({ summary: base_summary, provider: 'local' });    }      return res.status (200).json ({ summary: base_summary, provider: 'local' });
     }
     const { OpenAI } = await import ('openai');
@@ -90,5 +89,3 @@ if ( {) {
     return res.status (200).json ({ summary: content, provider: 'openai' });
   } catch (e: any) {
     return res.status (500).json ({ error: e.message || 'Failed to generate highlights' });
-}
-}

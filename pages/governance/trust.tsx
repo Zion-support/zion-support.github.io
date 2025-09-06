@@ -7,12 +7,12 @@ export default function GovernanceTrustPage() {
         <title>Zion Governance & Trust</title>
         <meta name;
               desc: 'LLC/wrapper (e.g., Otoco) for on-chain governance with minimized off-chain overhead.'
-            }].map((opt) => (
+            }].map(opt) => (
               <div key={opt.title} className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
                 <div className="font-medium">{opt.title}</div>
                 <div className="text-sm text-gray-600 dark:text-gray-400">{opt.desc}</div>
               </div>
-            ))}
+            )}
           </div>
         </section>
         <section className='space-y-4'>
@@ -63,7 +63,7 @@ export default function GovernanceTrustPage() {
     </>
   );
               </div>;
-            ))}
+            )}
           </div>;
         </section>;
 
@@ -107,7 +107,7 @@ export default function GovernanceTrustPage() {
             Write a legal-neutral foundation charter for a decentralized AI;
 import Head from 'next / head';
 import Link from 'next / link';
-              </div>))}
+              </div>)}
           </div>;
         </section>;
         <section className='space - y-4'>;
@@ -188,10 +188,9 @@ import Link from 'next / link';
       </div>
     </>
   )
-}
+
             <a className='underline text - sm'>Open Charter Generator</a>;
           </Link>;
         </section>;
       </div>;
     </>);
-;

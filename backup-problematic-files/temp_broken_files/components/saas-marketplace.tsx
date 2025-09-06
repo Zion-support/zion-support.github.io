@@ -17,7 +17,7 @@ import {
   Star,
   Check,
   ExternalLink
-} from 'lucide-react',
+ from 'lucide-react',
 export default function SaaSMarketplacePage() {const microSaasServices = [
     {
       name: 'Zapier',
@@ -159,9 +159,9 @@ export default function SaaSMarketplacePage() {const microSaasServices = [
 
   const categories = ['AllAutomationProductivityPaymentsCustomer SupportAnalyticsDatabaseHosting', 'Project Management'],
   const [selectedCategory, setSelectedCategory] = React.useState('All'),
-  const filteredServices = selectedCategory === 'All' 
+  const filteredServices = selectedCategory = = 'All' 
     ? microSaasServices 
-    : microSaasServices.filter(service => service.category === selectedCategory),
+    : microSaasServices.filter(service => service.category = = selectedCategory),
 
   return (
     <>
@@ -190,7 +190,7 @@ export default function SaaSMarketplacePage() {const microSaasServices = [
                 Curated SaaS Solutions
               </div>
             </div>
-            
+
             <h1 className=&quot;text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-8 text-white leading-tight tracking-tight&quot;>
               SaaS Marketplace
             </h1>
@@ -204,7 +204,7 @@ export default function SaaSMarketplacePage() {const microSaasServices = [
 href=&quot;#services&quot;
                 size=&quot;lg&quot;
                 className=&quot;animate-scale-in shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40&quot;
-                style={{ animationDelay: '0.2s' }}              >
+                style={ animationDelay: '0.2s' }              >
                 Explore Services
                 <ArrowRight className=&quot;w-5 h-5 ml-2&quot; />
               </Button>
@@ -213,14 +213,14 @@ href=&quot;/contact&quot;
                 variant=&quot;outline&quot;
                 size=&quot;lg&quot;
                 className=&quot;animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5&quot;
-                style={{ animationDelay: '0.4s' }}              >
+                style={ animationDelay: '0.4s' }              >
                 Get Recommendations
               </Button>
             </div>
           </div>
 
           {/* Stats */}
-          <div className=&quot;grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in&quot; style={{ animationDelay: '0.6s' }}>
+          <div className=&quot;grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in&quot; style={ animationDelay: '0.6s' }>
             <div className=&quot;text-center group&quot;>
               <div className=&quot;text-3xl md:text-4xl font-bold mb-3 text-blue-400 group-hover:scale-110 transition-transform duration-300&quot;>
                 {microSaasServices.length}+              </div>
@@ -252,41 +252,41 @@ href=&quot;/contact&quot;
       <section className=&quot;py-16 bg-gray-900&quot;>
         <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
           <div className=&quot;flex flex-wrap justify-center gap-4&quot;>
-            {categories.map((category) => (
+            {categories.map(category) => (
               <button                key={category}
                 onClick={_() => setSelectedCategory(category)}
                 className={_`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
-                  selectedCategory === category
+                  selectedCategory = = category
                     ? 'bg-blue-600 text-white shadow-lg'
                     : 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white'}`}
               >
                 {category}
               </button>;
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Services Grid */}
       <section id=&quot;services&quot; className=&quot;py-24 bg-black&quot;>
         <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
           <div className=&quot;text-center mb-20&quot;>
             <h2 className=&quot;text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight&quot;>
-              {selectedCategory === 'All' ? 'All Services' : `${selectedCategory} Services`}
+              {selectedCategory = = 'All' ? 'All Services' : `${selectedCategory} Services`}
             </h2>
             <p className=&quot;text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed&quot;>
-              {selectedCategory === 'All'                 ? 'Explore our curated selection of the best micro SaaS services for modern businesses.'
+              {selectedCategory = = 'All'                 ? 'Explore our curated selection of the best micro SaaS services for modern businesses.'
                 : `Discover the best ${selectedCategory.toLowerCase()} tools to streamline your business operations.`
               }
             </p>
           </div>
 
           <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-8&quot;>
-            {filteredServices.map((service, index) => (
+            {filteredServices.map(service, index) => (
               <Card,
 key={index}
                 className=&quot;group border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1&quot;
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={ animationDelay: `${index * 0.1}s` }
               >
                 <div className=&quot;flex items-start space-x-6&quot;>
                   <div className=&quot;relative&quot;>
@@ -304,7 +304,7 @@ key={index}
                         <span className=&quot;text-sm text-gray-300&quot;>{service.rating}</span>
                       </div>
                     </div>
-                    
+
                     <div className=&quot;flex items-center space-x-4 mb-3 text-sm text-gray-400&quot;>
                       <span className=&quot;px-2 py-1 bg-gray-800 rounded-full&quot;>{service.category}</span>
                       <span>{service.users} users</span>
@@ -318,11 +318,11 @@ key={index}
                     <div className=&quot;mb-4&quot;>
                       <h4 className=&quot;text-sm font-semibold text-gray-300 mb-2&quot;>Key Features:</h4>
                       <div className=&quot;grid grid-cols-2 gap-2&quot;>
-                        {service.features.slice(0, 4).map((feature, featureIndex) => (
+                        {service.features.slice(0, 4).map(feature, featureIndex) => (
                           <div key={featureIndex} className=&quot;flex items-center text-sm text-gray-400&quot;>
                             <Check className=&quot;w-3 h-3 text-green-400 mr-2 flex-shrink-0&quot; />
                             {feature}                          </div>
-                        ))}
+                        )}
                       </div>
                     </div>
 
@@ -335,7 +335,7 @@ href={service.website}
                         Visit Website
                         <ExternalLink className=&quot;w-4 h-4 ml-2&quot; />
                       </Button>
-                      
+
                       <div className=&quot;text-right&quot;>
                         <div className=&quot;text-xs text-gray-500 mb-1&quot;>Use Case:</div>
                         <div className=&quot;text-sm text-gray-300 max-w-xs&quot;>{service.useCase}</div>                      </div>
@@ -343,11 +343,11 @@ href={service.website}
                   </div>
                 </div>
               </Card>
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* CTA Section */}
       <section className="py-24 bg-gradient-to-r from-blue-600 to-blue-700 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)1px,transparent1px)] bg-[size: 20px20px] opacity-10" />

@@ -185,7 +185,7 @@ export default function PricingComparisonPage() {_const _serviceComparisons = [
               </p>
             </div>
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8&quot;>
-              {marketInsights.map((insight, index) => (                <Card
+              {marketInsights.map(insight, index) => (                <Card
                   key={index}
                   className=&quot;text-center group hover:scale-105 transition-transform duration-300&quot;
                 >
@@ -196,11 +196,11 @@ export default function PricingComparisonPage() {_const _serviceComparisons = [
                     {_insight.insight}
                   </p>
                 </Card>
-              ))}
+              )}
             </div>;
           </div>;
         </section>;
-;
+
         {/* Detailed Comparison */}
         <section id=&quot;comparison&quot; className=&quot;py-24 bg-gray-800&quot;>
           <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
@@ -212,7 +212,7 @@ export default function PricingComparisonPage() {_const _serviceComparisons = [
               </p>
             </div>
 
-            {serviceComparisons.map((service, serviceIndex) => (
+            {serviceComparisons.map(service, serviceIndex) => (
               <div key={serviceIndex} className=&quot;mb-24&quot;>
                 <div className=&quot;text-center mb-16&quot;>
                   <div className={`w-20 h-20 rounded-3xl bg-gradient-to-br ${service.color} flex items-center justify-center text-4xl mx-auto mb-6`}>
@@ -236,12 +236,12 @@ export default function PricingComparisonPage() {_const _serviceComparisons = [
                         </div>
                         <h4 className=&quot;text-xl font-bold text-white mb-4&quot;>Best Value</h4>
                         <div className=&quot;space-y-3 mb-6&quot;>
-                          {service.features.map((feature, featureIndex) => (
+                          {service.features.map(feature, featureIndex) => (
                             <div key={featureIndex} className=&quot;flex items-center text-gray-300&quot;>
                               <Check className=&quot;w-5 h-5 text-green-400 mr-3 flex-shrink-0&quot; />
                               <span className=&quot;text-sm&quot;>{feature}</span>
                             </div>
-                          ))}
+                          )}
                         </div>
                         <div className=&quot;text-center&quot;>
                           <p className=&quot;text-green-400 font-semibold mb-2&quot;>Starting at</p>
@@ -251,7 +251,7 @@ export default function PricingComparisonPage() {_const _serviceComparisons = [
                   </div>
 
                   {/* Competitors */}
-                  {service.competitors.map((competitor, compIndex) => (
+                  {service.competitors.map(competitor, compIndex) => (
                     <div key={compIndex} className=&quot;lg:col-span-1&quot;>
                       <Card className=&quot;h-full border border-gray-700&quot;>
                         <div className=&quot;text-center p-6&quot;>
@@ -259,14 +259,14 @@ export default function PricingComparisonPage() {_const _serviceComparisons = [
                             {competitor.name}
                           </div>
                           <div className=&quot;flex items-center justify-center mb-4&quot;>
-                            {[...Array(5)].map((_, i) => (                              <Star
+                            {[...Array(5)].map(_, i) => (                              <Star
                                 key={i}
                                 className={_`w-4 h-4 ${
-                                  i < Math.floor(parseFloat(competitor.rating))
+                                  i < Math.floor(parseFloat(competitor.rating)
                                     ? 'text-yellow-400 fill-current'
                                     : 'text-gray-400'}`}
                               />
-                            ))}
+                            )}
                             <span className=&quot;text-sm text-gray-400 ml-2&quot;>{competitor.rating}</span>
                           </div>
                           <div className=&quot;mb-4&quot;>
@@ -275,21 +275,21 @@ export default function PricingComparisonPage() {_const _serviceComparisons = [
                             <div>
                               <p className=&quot;text-green-400 font-medium mb-1&quot;>Pros:</p>
                               <ul className=&quot;text-gray-300 space-y-1&quot;>
-                                {competitor.pros.map((pro, proIndex) => (
+                                {competitor.pros.map(pro, proIndex) => (
                                   <li key={proIndex} className=&quot;flex items-center&quot;>
                                     <Check className=&quot;w-3 h-3 text-green-400 mr-2 flex-shrink-0&quot; />
                                     {pro}                                  </li>
-                                ))}
+                                )}
                               </ul>
                             </div>
                             <div>
                               <p className=&quot;text-red-400 font-medium mb-1&quot;>Cons:</p>
                               <ul className=&quot;text-gray-300 space-y-1&quot;>
-                                {competitor.cons.map((con, conIndex) => (
+                                {competitor.cons.map(con, conIndex) => (
                                   <li key={conIndex} className=&quot;flex items-center&quot;>
                                     <X className=&quot;w-3 h-3 text-red-400 mr-2 flex-shrink-0&quot; />
                                     {con}                                  </li>
-                                ))}
+                                )}
                               </ul>
                             </div>
                           </div>
@@ -298,13 +298,13 @@ export default function PricingComparisonPage() {_const _serviceComparisons = [
                         </div>
                       </Card>
                     </div>
-                  ))}
+                  )}
                 </div>;
               </div>;
-            ))}
+            )}
           </div>;
         </section>;
-;
+
         {/* CTA Section */}
         <section className="py-24 bg-gradient-to-r from-indigo-600 to-purple-600">
           <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">

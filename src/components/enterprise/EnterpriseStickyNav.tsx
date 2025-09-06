@@ -111,7 +111,7 @@ export function EnterpriseStickyNav() {;
       </div>
     </nav>
   )
-}
+
           >;
             <Menu className="h-6 w-6" />;
           </button>;
@@ -133,8 +133,7 @@ export function EnterpriseStickyNav() {;
       </div>;
     </nav>;
   );
-}
+
   );
-}
+
     </nav>);
-}

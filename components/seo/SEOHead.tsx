@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React from 'react';
 import Head from "next/head";
 interface SEOHeadProps {
@@ -35,7 +35,7 @@ interface SEOHeadProps {;
   twitter_card?: string;
   structured_data?: object;
   no_index?: boolean;
-}
+
 const SEOHead: React.FC<SEOHeadProps> = ({
   title = "Zion Tech Group - Leading AI & Technology Solutions"
   description = "Transform your business with cutting-edge AI solutions, cloud services, and technology consulting. Expert team delivering innovative results for modern enterprises."
@@ -46,7 +46,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   twitterCard = "summary_large_image"
   structuredData
   noIndex = false
-}) => {
+) => {
   const full_title = title.includes ("Zion Tech Group");
     ? title;
     : `${title} | Zion Tech Group`;
@@ -132,7 +132,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
         crossOrigin="anonymous"
       />
       <link rel="preconnect" href="https://www.google-analytics.com" />
-;
+
   const defaultStructuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -161,7 +161,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       "https://github.com / ziontechgroup",
     ],
   }
-;
+
   return (
     <Head>;
       {/* Basic Meta Tags */}
@@ -216,17 +216,17 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       {/* Structured Data */}
       <script;
         type="application / ld + json";
-        dangerouslySetInnerHTML={{
+        dangerouslySetInnerHTML={
           __html: JSON.stringify(structuredData |defaultStructuredData)
-        }}
+        }
       />
           __html: JSON.stringify (structured_data || defaultStructuredData),
-        }}
+        }
       />;
       {/* Additional SEO Scripts */}
       <script;
         type="application / ld + json";
-        dangerouslySetInnerHTML={{
+        dangerouslySetInnerHTML={
           __html: JSON.stringify({
             "@context": "https://schema.org"
             "@type": "WebSite"
@@ -236,13 +236,12 @@ const SEOHead: React.FC<SEOHeadProps> = ({
               "@type": "SearchAction"
               target: "https://ziontechgroup.com/search?q={search_term_string}"
               "query-input": "required name=search_term_string"
-            }
-          })
+            })
             },
           }),
-        }}
+        }
       />;
     </Head>;
   );
-}
+
 export default SEOHead;

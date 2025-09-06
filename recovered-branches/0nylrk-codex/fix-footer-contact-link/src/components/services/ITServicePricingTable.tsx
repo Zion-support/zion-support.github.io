@@ -3,7 +3,7 @@ import { useState, useMemo } from "react";
 import {
   onsiteServicePricing
   CountryPricing
-} from "@/data/onsiteServicePricing";
+ from "@/data/onsiteServicePricing";
 import { Input } from "@/components/ui/input";
 import {
   Table
@@ -12,7 +12,7 @@ import {
   TableHead
   TableHeader
   TableRow
-} from "@/components/ui/table";
+ from "@/components/ui/table";
 
 import { Globe, Search, ArrowUpDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -26,24 +26,24 @@ export function ITServicePricingTable() {
     key: "country"
     direction: "ascending"
   });
-  const sortedData = useMemo(() => {
+  const sortedData = useMemo() => {
     let filteredData = [...onsiteServicePricing];
     // Filter by search query
     if (searchQuery) {
-      filteredData = filteredData.filter((item) =>
-        item.country.toLowerCase().includes(searchQuery.toLowerCase())
+      filteredData = filteredData.filter(item) =>
+        item.country.toLowerCase().includes(searchQuery.toLowerCase()
       );
     }
     // Sort data
-    filteredData.sort((a, b) => {
+    filteredData.sort(a, b) => {
       if (a[sortConfig.key] < b[sortConfig.key]) {
-        return sortConfig.direction === "ascending" ? -1 : 1;
+        return sortConfig.direction = = "ascending" ? -1 : 1;
       }
       // Check condition
 if ( {) {
   $2
-}
-        return sort_config.direction === "ascending" ? 1 : -1;
+
+        return sort_config.direction = = "ascending" ? 1 : -1;
       }
       return 0;
     });
@@ -53,7 +53,7 @@ if ( {) {
     setSortConfig({
       key
       direction:
-        sortConfig.key === key && sortConfig.direction === "ascending"
+        sortConfig.key = = key && sortConfig.direction = = "ascending"
           ? "descending"
           : "ascending"
     });
@@ -100,7 +100,7 @@ if ( {) {
           </TableHeader>
           <TableBody className="bg-zion-blue-dark">
             {sortedData.length > 0 ? (
-              sortedData.map((item) => (
+              sortedData.map(item) => (
                 <TableRow
                   key={item.country}
                   className="border-b border-zion-blue-light hover:bg-zion-blue/50"
@@ -113,7 +113,7 @@ if ( {) {
                     ${item.pricePerIncident.toFixed(2)}
                   </TableCell>
                 </TableRow>
-              ))
+              )
             ) : (
               <TableRow>
                 <TableCell
@@ -129,21 +129,20 @@ if ( {) {
       </div>
     </div>
   );
-}
-;
+
     return filtered_data;
   }, [onsiteServicePricing, search_query, sort_config]);
-;
+
   const handle_sort = (key: keyof CountryPricing) =>: any {
     setSortConfig ({
       key,
       direction:;
-        sort_config.key === key && sort_config.direction === "ascending";
+        sort_config.key = = key && sort_config.direction = = "ascending";
           ? "descending";
           : "ascending",
     });
   }
-;
+
   return (
     <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 4 w - full">;
       <div className="flex items - center mb - 6">;
@@ -185,7 +184,7 @@ if ( {) {
           </TableHeader>;
           <TableBody className="bg - zion - blue - dark">;
             {sorted_data.length > 0 ? (
-              sorted_data.map ((item) => (
+              sorted_data.map (item) => (
                 <TableRow;
                   key={item.country}
                   className="border - b border - zion - blue - light hover:bg - zion - blue / 50";
@@ -197,7 +196,7 @@ if ( {) {
                   <TableCell className="text - right font - medium text - white">;
                     ${item.pricePerIncident.to_fixed (2)}
                   </TableCell>;
-                </TableRow>))) : (
+                </TableRow>)) : (
               <TableRow>;
                 <TableCell;
                   col_span={2}
@@ -210,4 +209,3 @@ if ( {) {
         </Table>;
       </div>;
     </div>);
-}

@@ -25,7 +25,7 @@ export default function AiFinancialPlanningPlatform() {
 			canonical="https: //ziontechgroup.com/ai-financial-planning-platform"
 		/>
 	)
-}
+
 import React from 'react',
 import ServiceLanding from '../components / sections / ServiceLanding',
 export default /**
@@ -53,4 +53,3 @@ return (
     industries={["SaaS", "Ecommerce", "Fintech", "Professional Services"]}
     canonical="https: //ziontechgroup.com / ai - financial - planning - platform";
   />);
-}

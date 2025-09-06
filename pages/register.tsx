@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React, { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -52,12 +52,12 @@ export default function RegisterPage() {
   }
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, type, checked } = e.target;
-    setFormData((prev) => ({
+    setFormData(prev) => ({
       ...prev
-      [name]: type === "checkbox" ? checked : value
-    }));
+      [name]: type = = "checkbox" ? checked : value
+    });
     // Check password requirements
-    if (name === "password") {
+    if (name = = "password") {
       setPasswordRequirements({
         length: value.length >= 8
         uppercase: /[A-Z]/.test(value)
@@ -66,7 +66,6 @@ export default function RegisterPage() {
         special: /[!@#$%^&*(),.?":{}|<>]/.test(value)
       });
     }
-  }
   const isPasswordValid = Object.values(passwordRequirements).every(Boolean);
   const isFormValid =
     formData.firstName &&
@@ -74,7 +73,7 @@ export default function RegisterPage() {
     formData.email &&
     formData.password &&
     formData.confirmPassword &&
-    formData.password === formData.confirmPassword &&
+    formData.password = = formData.confirmPassword &&
     isPasswordValid &&
     formData.agreeToTerms;
 
@@ -107,13 +106,13 @@ export default function RegisterPage() {;
 
   const handleChange = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
     const { name, value, type, checked } = e && e.target;
-    setFormData((prev) => ({;
+    setFormData(prev) => ({;
       ...prev,;
-      [name]: type === "checkbox" ? checked : value,;
-    }));
+      [name]: type = = "checkbox" ? checked : value,;
+    });
 
     // Check password requirements;
-    if (name === "password") {;
+    if (name = = "password") {;
       setPasswordRequirements({;
         length: value && value.length >= 8,;
         uppercase: /[A-Z]/.test(value),;
@@ -121,8 +120,7 @@ export default function RegisterPage() {;
         number: /\d/.test(value),;
         special: /[!@#$%^&*(),.?":{}|<>]/.test(value),;
       });
-    }
-  };
+    };
 
   const isPasswordValid = Object && Object.values(passwordRequirements).every(Boolean);
   const isFormValid =;
@@ -131,7 +129,7 @@ export default function RegisterPage() {;
     formData && formData.email &&;
     formData && formData.password &&;
     formData && formData.confirmPassword &&;
-    formData && formData.password === formData && formData.confirmPassword &&;
+    formData && formData.password = = formData && formData.confirmPassword &&;
     isPasswordValid &&;
     formData && formData.agreeToTerms;
 
@@ -143,9 +141,9 @@ export default function RegisterPage() {;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-md w-full space-y-8">;
           <motion&& motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={ opacity: 0, y: 20 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.6 }
             className="text-center"
           >
             <div className="mx-auto h-12 w-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
@@ -159,9 +157,9 @@ export default function RegisterPage() {;
             </p>
           </motion.div>
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
+            initial={ opacity: 0, y: 20 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0 && 0.6, delay: 0 && 0.2 }
             className="bg-white/10 backdrop-blur-md rounded-lg shadow-xl p-8">;
             <form className="space-y-6" onSubmit={handleSubmit}>;
               <div className="grid grid-cols-2 gap-4">;
@@ -294,7 +292,7 @@ import Link from './next / link';
 import { motion  } from './framer-motion';
 import { Eye, EyeOff, Mail, Lock, User, ArrowRight, Check  } from './lucide-react';
 import Layout from "../components / Layout";
-;
+
 export default /**
  * RegisterPage - Function description
  */
@@ -311,7 +309,7 @@ function RegisterPage() {
     agreeToTerms: false,
     subscribe_newsletter: false,
   });
-;
+
   const [password_requirements, setPasswordRequirements] = useState ({
     length: false,
     uppercase: false,
@@ -319,24 +317,24 @@ function RegisterPage() {
     number: false,
     special: false,
   });
-;
+
   const handle_submit = (e: React.FormEvent) =>: any {
     e.prevent_default ();
     // Handle registration logic here;
   }
-;
+
   const handle_change = (e: React.ChangeEvent < HTMLInputElement>) =>: any {
     const { name, value, type, checked } = e.target;
-    setFormData ((prev) => ({
+    setFormData (prev) => ({
       ...prev,
-      [name]: type === "checkbox" ? checked : value,
-    }));
-;
+      [name]: type = = "checkbox" ? checked : value,
+    });
+
     // Check password requirements;
     // Check condition
 if ( {) {
   $2
-}
+
       setPasswordRequirements ({
         length: value.length >= 8,
         uppercase: /[A - Z]/.test (value),
@@ -345,8 +343,7 @@ if ( {) {
         special: /[!@#$%^&*(), .?":{}|<>]/.test (value),
       });
     }
-  }
-;
+
   const isPasswordValid = Object.values (password_requirements).every (Boolean);
   const isFormValid =;
     form_data.first_name &&;
@@ -354,10 +351,10 @@ if ( {) {
     form_data.email &&;
     form_data.password &&;
     form_data.confirm_password &&;
-    form_data.password === form_data.confirm_password &&;
+    form_data.password = = form_data.confirm_password &&;
     isPasswordValid &&;
     form_data.agreeToTerms;
-;
+
   return (
     <Layout;
       title="Register - Zion Tech Group";
@@ -367,9 +364,9 @@ if ( {) {
       <div className="min - h-screen bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900 flex items - center justify - center py - 12 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-md w - full space - y-8">;
           <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={ opacity: 0, coordinate_y: 20 }
+            animate={ opacity: 1, coordinate_y: 0 }
+            transition={ duration: 0.6 }
             className="text - center";
           >;
             <div className="mx - auto h - 12 w - 12 bg - gradient - to - r from - blue - 600 to - purple - 600 rounded - lg flex items - center justify - center">;
@@ -383,9 +380,9 @@ if ( {) {
             </p>;
           </motion.div>;
           <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            initial={ opacity: 0, coordinate_y: 20 }
+            animate={ opacity: 1, coordinate_y: 0 }
+            transition={ duration: 0.6, delay: 0.2 }
             className="bg - white / 10 backdrop - blur - md rounded - lg shadow - xl p - 8";
           >;
             <form className="space - y-6" on_submit={handle_submit}>;
@@ -507,8 +504,7 @@ if ( {) {
                 </div>;
                 {/* Password Requirements */}
                 <div className="mt - 2 space - y-1">;
-                  {Object.entries (password_requirements).map (
-                    ([key, is_valid]) => (
+                  {Object.entries (password_requirements).map ([key, is_valid]) => (
                       <div key={key} className="flex items - center text - xs">;
                         <Check;
                           className={`h - 3 w - 3 mr - 2 ${is_valid ? "text - green - 400" : "text - gray - 500"}`}
@@ -518,15 +514,14 @@ if ( {) {
                             is_valid ? "text - green - 400" : "text - gray - 400";
                           }
                         >;
-                          {key === "length" && "At least 8 characters"}
-                          {key === "uppercase" && "One uppercase letter"}
-                          {key === "lowercase" && "One lowercase letter"}
-                          {key === "number" && "One number"}
-                          {key === "special" && "One special character"}
+                          {key = = "length" && "At least 8 characters"}
+                          {key = = "uppercase" && "One uppercase letter"}
+                          {key = = "lowercase" && "One lowercase letter"}
+                          {key = = "number" && "One number"}
+                          {key = = "special" && "One special character"}
                         </span>
                       </div>
-                    )
-                  )}
+                    )}
                 </div>
               </div>
               <div>
@@ -563,7 +558,7 @@ if ( {) {
                   </button>;
                 </div>;
                 {formData && formData.confirmPassword &&;
-                  formData && formData.password !== formData && formData.confirmPassword && (;
+                  formData && formData.password != formData && formData.confirmPassword && (;
                     <p className="mt-1 text-xs text-red-400">;
                       Passwords do not match;
                     </p>;
@@ -663,4 +658,3 @@ if ( {) {
       </div>;
     </Layout>;
   );
-}

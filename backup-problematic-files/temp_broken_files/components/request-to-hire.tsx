@@ -4,7 +4,7 @@ import { TALENT_PROFILES } from '../data/talent',
 export default function RequestToHirePage() {
   const router = useRouter(),
   const { talent } = router.query as { talent?: string },
-  const selected = useMemo(() => TALENT_PROFILES.find(t => t.slug === talent), [talent]),
+  const selected = useMemo() => TALENT_PROFILES.find(t => t.slug = = talent), [talent]),
 
   const [form, setForm] = useState({
     name: '',
@@ -43,8 +43,7 @@ export default function RequestToHirePage() {
       setError(err.message || 'Something went wrong')
     } finally {
       setSubmitting(false)
-    }
-  },
+    },
 
   if (result) {
     return (

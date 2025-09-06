@@ -7,18 +7,17 @@ import { HireRequestModal } from "@/components/profile/hire-request",;
 import { useAuthStatus } from "@/hooks/talent",;
 import type { UserProfile } from "@/types/auth",;
 import { useRouter } from 'next/router',;
-;
+
 interface TalentCardFooterProps {;
   profile:TalentProfile,;
   onViewProfile:(id:string) => void,;
   onRequestHire?:(profile:TalentProfile) => void;
-}
-;
+
 export function TalentCardFooter({ profile, onViewProfile, onRequestHire } TalentCardFooterProps) {;
   const [isHireModalOpen, setIsHireModalOpen] = useState(false),;
   const { userDetails } = useAuthStatus(),;
   const router = useRouter(),;
-;
+
   // Create a compatible UserProfile from UserDetails;
   const userProfile:UserProfile = {;
     id:userDetails?.id,;
@@ -33,32 +32,27 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire } Talen
     points:0,;
     avatarUrl:userDetails?.avatar || '';
   },;
-;
+
   // Handle request to hire;
   const handleRequestHire = (e:React.MouseEvent) => {;
     e.stopPropagation(),;
-    ;
     if (onRequestHire) {;
       onRequestHire(profile);
     } else {;
       // Open hire modal directly if no handler provided;
       setIsHireModalOpen(true),;
-    }
-  },;
-;
+    },;
+
   // Handle view profile;
   const handleViewProfile = (e:React.MouseEvent) => {;
     e.stopPropagation(),;
-    ;
     // Navigate to the talent profile page;
     router.push(`/talent/${profile.id || ''}`),;
-    ;
     // Also call the onViewProfile callback if provided;
     if (onViewProfile) {;
       onViewProfile(profile.id || ''),;
-    }
-  },;
-;
+    },;
+
   return (;
     <>;
       <div className="mt-4 pt-4 border-t border-zion-blue-light flex items-center justify-between">;
@@ -75,7 +69,6 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire } Talen
               <span className="text-zion-slate-light">{profile.years_experience} years exp.</span>;
             </div>;          )}
         </div>;
-        ;
         {/* Action Buttons */}
         <div className="flex gap-2">;
           <Button ;
@@ -86,7 +79,6 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire } Talen
           >;
             Hire;
           </Button>;
-          ;
           <Button ;
             variant="outline" ;
             size="sm" ;
@@ -98,7 +90,6 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire } Talen
           </Button>;
         </div>;
       </div>;
-      ;
       {/* Hire Request Modal */}
       <HireRequestModal;
         talent={profile}        isOpen={isHireModalOpen}
@@ -110,15 +101,15 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire } Talen
   profile: TalentProfile;
 onViewProfile: (id: string) => void;
 onRequestHire?: (profile: TalentProfile) => void ;
-}export function TalentCardFooter ({;
+export function TalentCardFooter ({;
   profile,  onViewProfile, onRequestHire ;
-}: TalentCardFooterProps) {;
+: TalentCardFooterProps) {;
   const [isHireModalOpen, setIsHireModalOpen] = useState (false);
 const { ;
   userDetails ;
  } = useAuthStatus ();
 const router = useRouter ();
-//Create a compatible UserProfile from UserDetails const userProfile: UserProfile = {;
+/Create a compatible UserProfile from UserDetails const userProfile: UserProfile = {;
   id: userDetails?.id;
 name: userDetails?.name || '';';
 email: userDetails?.email || '';
@@ -130,29 +121,26 @@ role: userDetails?.userType || '';';
 displayName: userDetails?.name || '';
 points: 0;';
 avatarUrl: userDetails?.avatar || '' ;
-};
-//Handle request to hire const handleRequestHire = (e: React.MouseEvent) => {;
+/Handle request to hire const handleRequestHire = (e: React.MouseEvent) => {;
   e.stopPropagation ();
 if (onRequestHire) {;
   onRequestHire (profile) ;
-}else {;
+else {;
   //Open hire modal directly if no handler provided setIsHireModalOpen (true) ;
-}
-};
-//Handle view profile const handleViewProfile = (e: React.MouseEvent) => {;
+/Handle view profile const handleViewProfile = (e: React.MouseEvent) => {;
   e.stopPropagation ();';
 profile.id || '' ;
-}`);
-//Also call the onViewProfile callback if provided <div> {;
+`);
+/Also call the onViewProfile callback if provided <div> {;
   profile.hourly rate ? (<div> <span className="text-zion-slate-light text-xs" >Hourly Rate</span> <div className="text-white font-bold" >$ {;
-  profile.hourly rate ;"}/hr</div> </div>) : (</div>) ";"}</div> > Hire </Button> <Button > View <ExternalLink className="h-3 w-3 ml-1" /> </Button> </div> </div> {;
+  profile.hourly rate ;"}/hr</div> </div>) : (</div>) ";"}</div>Hire </Button> <Button > View <ExternalLink className="h-3 w-3 ml-1" /> </Button> </div> </div> {;
   /* Hire Request Modal */ ;
-}<HireRequestModal talent= {;
+<HireRequestModal talent= {;
   profile ;
-}isOpen= {;
+isOpen= {;
   isHireModalOpen ;
-}onClose= {;
+onClose= {;
   () => setIsHireModalOpen (false) ;
-}userDetails= {;
+userDetails= {;
   userProfile ;
-}/> </>) ;"}'"
+/> </>) ;"}'"

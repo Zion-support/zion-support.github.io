@@ -2,7 +2,6 @@ import React from 'react';
 
 interface EnhancedNavigationProps {
   className?: string;
-}
 
 const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({ className }) => {
   return (
@@ -11,6 +10,5 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({ className }) =>
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default EnhancedNavigation;

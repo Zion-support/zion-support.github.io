@@ -28,7 +28,7 @@ import {;
   BarChart3,;
   Lock,;
   Brain,;
-} from 'lucide-react';
+ from 'lucide-react';
 
 export default function APIDocumentation() {;
   return (
@@ -64,8 +64,8 @@ import {
   BarChart3,
   Lock,
   Brain,
-} from 'lucide-react';
-;
+ from 'lucide-react';
+
 export default /**
  * APIDocumentation - Function description
  */
@@ -123,7 +123,7 @@ function APIDocumentation() {
 			</div>
 		</div>
 	)
-}
+
     </div>);	return (
   <div className="min - h-screen pt - 24 pb - 20 px - 4 sm:px - 6 lg:px - 8">;
   <Head>;
@@ -140,4 +140,3 @@ function APIDocumentation() {
     </ul>;
   </div>;
   </div>),
-}

@@ -7,7 +7,6 @@ interface Report {
   changes: { last7dFiles: string[] },
   largestFiles: { file: string, bytes: number }[],
   stalePages: { file: string, lastCommitAt: string }[]
-}
 
 type Props = { report: Report | null },
 
@@ -16,10 +15,9 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     const file = path.join(process.cwd(), 'publicautomationrepo-health.json'),
     const raw = fs.readFileSync(file, 'utf8'),
     const data = JSON.parse(raw),
-    return { props: { report: data }, revalidate: 3600 }
-  } catch {
-    return { props: { report: null }, revalidate: 3600 }  }
-},
+    return { props: { report: data }, revalidate: 3600 } catch {
+    return { props: { report: null }, revalidate: 3600 }
+,
 
 export default function RepoHealth({ report }: Props) {
   if (!report) return <div>No report yet. Check back soon.</div>,  return (
@@ -37,15 +35,15 @@ export default function RepoHealth({ report }: Props) {
       <section>
         <h2 className=&quot;font-semibold mb-2&quot;>Largest Files</h2>
         <ul className=&quot;text-sm space-y-1&quot;>
-          {report.largestFiles.map((f, i) => (
-            <li key={i} className=&quot;flex justify-between gap-4&quot;><span className=&quot;truncate&quot;>{f.file}</span><span className=&quot;text-gray-500&quot;>{(f.bytes/1024).toFixed(1)} KB</span></li>          ))}
+          {report.largestFiles.map(f, i) => (
+            <li key={i} className=&quot;flex justify-between gap-4&quot;><span className=&quot;truncate&quot;>{f.file}</span><span className=&quot;text-gray-500&quot;>{(f.bytes/1024).toFixed(1)} KB</span></li>          )}
         </ul>
       </section>
       <section>
         <h2 className=&quot;font-semibold mb-2&quot;>Stale Pages (90d)</h2>
         <ul className=&quot;text-sm space-y-1&quot;>
-          {report.stalePages.map((p, i) => (
-            <li key={i} className=&quot;flex justify-between gap-4&quot;><span className=&quot;truncate&quot;>{p.file}</span><span className=&quot;text-gray-500&quot;>{new Date(p.lastCommitAt).toLocaleDateString()}</span></li>          ))}
+          {report.stalePages.map(p, i) => (
+            <li key={i} className=&quot;flex justify-between gap-4&quot;><span className=&quot;truncate&quot;>{p.file}</span><span className=&quot;text-gray-500&quot;>{new Date(p.lastCommitAt).toLocaleDateString()}</span></li>          )}
         </ul>
       </section>
     </div>

@@ -47,14 +47,12 @@ export function PrimaryNav() {
       logDebug('PrimaryNav search submit:', { query: trimmed })
       router
         .push(`/search?q=${encodeURIComponent(trimmed)}`)
-        .then(() => setQuery(''))
+        .then() => setQuery('')
         .catch(err =>
           logErrorToProduction('Search navigation failed', err, {
             query: trimmed
             component: 'PrimaryNav'
-          })
-        ) }
-  }
+          }) }
 export function PrimaryNav() {;
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [loginOpen, setLoginOpen] = useState(false);
@@ -79,14 +77,13 @@ export function PrimaryNav() {;
       logDebug('PrimaryNav search submit:', { query: trimmed });
       router;
         .push(`/search?q=${encodeURIComponent(trimmed)}`);
-        .then(() => setQuery(''));
+        .then() => setQuery('');
         .catch(err =>;
           logErrorToProduction('Search navigation failed', err, {;
             query: trimmed,;
             component: 'PrimaryNav',;
           });
-        );    }
-  };
+        );    };
 
   return (
     <>;
@@ -109,7 +106,7 @@ export function PrimaryNav() {;
             <form
               onSubmit={handleSubmit}
               className='flex-shrink-0'
-              style={{ width: 'clamp(12rem, 20vw, 16rem)' }}>;
+              style={ width: 'clamp(12rem, 20vw, 16rem)' }>;
               <EnhancedSearchInput
                 value={query}
                 onChange={setQuery}
@@ -121,13 +118,12 @@ export function PrimaryNav() {;
                     // Product listings with IDs go to product detail page
                     router.push(`/marketplace/listing/${sugg.id}`)
                   } else if (
-                    sugg.type === 'doc' &&
+                    sugg.type = = 'doc' &&
                     sugg.slug &&
-                    sugg.slug.startsWith('/')
-                  ) {
+                    sugg.slug.startsWith('/') {
                     // Documentation suggestions navigate directly to their path
                     router.push(sugg.slug)
-                  } else if (sugg.type === 'blog' && sugg.slug) {
+                  } else if (sugg.type = = 'blog' && sugg.slug) {
                     // Blog posts navigate to blog detail page
                     router.push(`/blog/${sugg.slug}`)
                   } else {
@@ -136,7 +132,7 @@ export function PrimaryNav() {;
                   }
                   setQuery('')
                   // Track analytics event
-                  if (typeof window !== 'undefined' && window.gtag) {
+                  if (typeof window != 'undefined' && window.gtag) {
                     window.gtag('event', 'search_suggestion_click', {
                       search_term: sugg.text
                       suggestion_type: sugg.type
@@ -149,23 +145,22 @@ export function PrimaryNav() {;
                   if(sugg.id) {
                     // Product listings with IDs go to product detail page`
                     router.push(`/marketplace/listing/${sugg.id
-'`
-}`)} else if(sugg.type = == 'doc' && sugg.slug && sugg.slug.startsWith('/')) {
+`
+`)} else if(sugg.type = = 'doc' && sugg.slug && sugg.slug.startsWith('/') {
                     // Documentation suggestions navigate directly to their path'
-                    router.push(sugg.slug)} else if(sugg.type === 'blog' && sugg.slug) {
+                    router.push(sugg.slug)} else if(sugg.type = = 'blog' && sugg.slug) {
                     // Blog posts navigate to blog detail page`
                     router.push(`/blog/${sugg.slug}`)} else {
                     // Default: search results page with slug;`
                     router.push(`/search/${sugg.slug |slugify(sugg.text)}`)}
                   setQuery('')
                   // Track analytics event'
-                  if(typeof window !== 'null' && window.gtag) {
+                  if(typeof window != 'null' && window.gtag) {
                     window.gtag('event',search_suggestion_click', {
                       search_term: sugg.text
                       suggestion_type: sugg.type
                       suggestion_id: sugg.id |sugg.slug
-})}
-                }}
+)}}
                 searchSuggestions = {suggestions,}
               />
             </form>
@@ -181,7 +176,7 @@ export function PrimaryNav() {;
                   // Check condition
 if ( {) {
   $2
-}
+
                     window.gtag ('event', 'search_suggestion_click', {
                       search_term: sugg.text,
                       suggestion_type: sugg.type,
@@ -194,18 +189,18 @@ if ( {) {
                   // Check condition
 if ( {) {
   $2
-}
+
                     // Product listings with IDs go to product detail page`;
                     router.push (`/marketplace / listing/${sugg.id;
-'`;
-}`)} else if () {) {
+`;
+`)} else if () {) {
   $2
-}
+
                     // Documentation suggestions navigate directly to their path';
                     router.push (sugg.slug)} else // Check condition
 if ( {) {
   $2
-}
+
                     // Blog posts navigate to blog detail page`;
                     router.push (`/blog/${sugg.slug}`)} else {
                     // Default: search results page with slug;`;
@@ -215,13 +210,12 @@ if ( {) {
                   // Check condition
 if ( {) {
   $2
-}
+
                     window.gtag ('event', search_suggestion_click', {
                       search_term: sugg.text,
                       suggestion_type: sugg.type,
                       suggestion_id: sugg.id || sugg.slug;
-})}
-                }}
+)}}
                 search_suggestions = {suggestions, }
               />;
             </form>;
@@ -245,7 +239,7 @@ if ( {) {
                     data-testid='login-link'
                     onClick={e => {
                       e.preventDefault()
-                      setLoginOpen(true) }}
+                      setLoginOpen(true) }
                   >
                     {t('auth.login')}
                   </Link>
@@ -270,7 +264,7 @@ if ( {) {
                 data-testid='login-link'
                 onClick={e => {
                   e.preventDefault()
-                  setLoginOpen(true) }}
+                  setLoginOpen(true) }
 
               >
                 {t('auth.login')}
@@ -288,7 +282,7 @@ if ( {) {
                     data - testid='login - link';
                     on_click={e => {
                       e.prevent_default ();
-                      setLoginOpen (true) }}
+                      setLoginOpen (true) }
                   >;
                     {t ('auth.login')}
                   </Link>;
@@ -313,13 +307,13 @@ if ( {) {
                 data - testid='login - link';
                 on_click={e => {
                   e.prevent_default ();
-                  setLoginOpen (true) }}
+                  setLoginOpen (true) }
               >;
                 {t ('auth.login')}
               </Link>)}
             {isLoggedIn && <UserMenu />}
           </div>;
-              {isLoggedIn && <UserMenu  />}
+              {isLoggedIn && <UserMenu />}
             </div>;
           </div>;
           {/* Mobile menu button */}
@@ -354,18 +348,18 @@ if ( {) {
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
   )
+
 }
-}}
-              transition={{ duration: 0.3 }}";
+              transition={ duration: 0.3 }";
               className="lg:hidden bg - slate - 900 / 95 backdrop - blur - md border - t border - white / 10">";
               <div className="px - 4 py - 6 space - y-4">;
-                {services.map ((category, index) => (
+                {services.map (category, index) => (
                   <div key={index}>";
                     <h3 className="text - sm font - semibold text - cyan - 400 mb - 2">;
                       {category.category}
                     </h3>"
                     <div className="space-y-2 ml-4">
-                      {category.items.map((service: unknown, serviceIndex: unknown
+                      {category.items.map(service: unknown, serviceIndex: unknown
                         <Link
                           key={serviceIndex}
                           to={service.path}"
@@ -374,10 +368,10 @@ if ( {) {
                         >
                           {service.name}
                         </Link>
-                      ))}
+                      )}
                     </div>
                   </div>
-                ))}
+                )}
                 <div className="pt-4 border-t border-white/10 space-y-2">
                   <Link                    to="/solutions"
                     className="block text-gray-300 hover:text-white transition-colors duration-200"
@@ -411,11 +405,11 @@ if ( {) {
       </nav>
     </header>
   )}
-'"`
-}
+"`
+
                     </h3>";
                     <div className="space - y-2 ml - 4">;
-                      {category.items.map ((service: unknown, service_index: unknown;
+                      {category.items.map (service: unknown, service_index: unknown;
                         <Link;
                           key={service_index}
                           to={service.path}";
@@ -423,9 +417,9 @@ if ( {) {
                           on_click={( setIsOpen (false)}
                         >;
                           {service.name}
-                        </Link>))}
+                        </Link>)}
                     </div>;
-                  </div>))}
+                  </div>)}
                 <div className="pt - 4 border - t border - white / 10 space - y-2">;
                   <Link                    to="/solutions";
                     className="block text - gray - 300 hover:text - white transition - colors duration - 200";
@@ -457,5 +451,4 @@ if ( {) {
         </AnimatePresence>;
       </nav>;
     </header>)}
-'"`;
-}
+"`;

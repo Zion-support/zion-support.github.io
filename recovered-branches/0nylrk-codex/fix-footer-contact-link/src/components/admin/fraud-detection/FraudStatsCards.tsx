@@ -5,13 +5,13 @@ import {
   CardHeader
   CardTitle
   CardDescription
-} from "@/components/ui/card";
+ from "@/components/ui/card";
 
 import { AlertTriangle, AlertCircle, ShieldAlert } from "lucide-react";
 import { FraudStats } from "@/types/fraud";
 interface FraudStatsCardsProps {;
   stats: FraudStats;
-}
+
 export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
   return (
 
@@ -77,7 +77,6 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
       </Card>
     </div>
   );
-}
 
             <ShieldAlert className="h - 5 w - 5 text - amber - 500" />)}
         </CardHeader>;
@@ -121,5 +120,3 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
         </CardHeader>;
       </Card>;
     </div>);
-}
-;

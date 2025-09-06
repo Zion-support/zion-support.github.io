@@ -182,7 +182,7 @@ export default function AISolutionsPage() {
       icon: '',
     },
   ];
-;
+
   const technologies = [;
     'TensorFlow',
     'PyTorch',
@@ -207,11 +207,11 @@ export default function AISolutionsPage() {
       icon: '';
     }
   ];
-;
+
   const technologies = [;
     'TensorFlowPyTorchScikit - learnOpenAI GPTBERTYOLOKerasPandas';
   ];
-;
+
   return (
     <>;
       <Head>;
@@ -247,7 +247,7 @@ export default function AISolutionsPage() {
                 Our AI Solutions;
               </h2>;
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
-                {aiSolutions && aiSolutions.map((solution, index) => (;
+                {aiSolutions && aiSolutions.map(solution, index) => (;
                   <div
                     key={index}
                     className='bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300'>;
@@ -265,13 +265,13 @@ export default function AISolutionsPage() {
                     </h3>;
                     <p className='text-white/70 mb-4'>{solution && solution.description}</p>;
                     <ul className='space-y-1 mb-4'>;
-                      {solution && solution.features.map((feature, featureIndex) => (;
+                      {solution && solution.features.map(feature, featureIndex) => (;
                         <li
                           key={featureIndex}
                           className='text-sm text-white/60 flex items-center'>;
                           <span className='text-cyan-400 mr-2'></span>                          {feature}
                         </li>;
-                      ))}
+                      )}
                     </ul>
                     <Link      </Head>
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
@@ -289,7 +289,7 @@ export default function AISolutionsPage() {
             <div className="mb-16">;
               <h2 className="text-3xl font-bold mb-8 text-center text-cyan-400">Our AI Solutions</h2>;
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
-                {aiSolutions && aiSolutions.map((solution, index) => (;
+                {aiSolutions && aiSolutions.map(solution, index) => (;
                   <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300">;
                     <div className="text-4xl mb-4">{solution && solution.icon}</div>;
                     <div className="flex items-center gap-2 mb-3">;
@@ -299,12 +299,12 @@ export default function AISolutionsPage() {
                     <h3 className="text-xl font-bold mb-3 text-white">{solution && solution.title}</h3>;
                     <p className="text-white/70 mb-4">{solution && solution.description}</p>;
                     <ul className="space-y-1 mb-4">;
-                      {solution && solution.features.map((feature, featureIndex) => (;
+                      {solution && solution.features.map(feature, featureIndex) => (;
                         <li key={featureIndex} className="text-sm text-white/60 flex items-center">;
                           <span className="text-cyan-400 mr-2"></span>;
                           {feature}
                         </li>;
-                      ))}
+                      )}
                     </ul>;
                     <Link
                       href={`/services#${solution && solution.id}`}
@@ -319,7 +319,7 @@ export default function AISolutionsPage() {
             <div className="mb - 16">;
               <h2 className="text - 3xl font - bold mb - 8 text - center text - cyan - 400">Our AI Solutions</h2>;
               <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
-                {ai_solutions.map ((solution, index) => (
+                {ai_solutions.map (solution, index) => (
                   <div key={index} className="bg - white / 10 backdrop - blur - xl rounded - 2xl p - 6 hover:bg - white / 15 transition - all duration - 300">;
                     <div className="text - 4xl mb - 4">{solution.icon}</div>;
                     <div className="flex items - center gap - 2 mb - 3">;
@@ -329,12 +329,12 @@ export default function AISolutionsPage() {
                     <h3 className="text - xl font - bold mb - 3 text - white">{solution.title}</h3>;
                     <p className="text - white / 70 mb - 4">{solution.description}</p>;
                     <ul className="space - y-1 mb - 4">;
-                      {solution.features.map ((feature, feature_index) => (
+                      {solution.features.map (feature, feature_index) => (
                         <li key={feature_index} className="text - sm text - white / 60 flex items - center">;
                           <span className="text - cyan - 400 mr - 2"></span>;
                           {feature}
                         </li>
-                      ))}
+                      )}
                     </ul>
                     <Link 
                       href={`/services#${solution.id}`}
@@ -343,7 +343,7 @@ export default function AISolutionsPage() {
                       Learn More <span className="ml-1"></span>
                     </Link>
                   </div>
-                ))}
+                )}
               </div>
             </div>
             {/* Industry Use Cases */}
@@ -352,7 +352,7 @@ export default function AISolutionsPage() {
                 Industry Applications;
               </h2>;
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>;
-                {useCases && useCases.map((useCase, index) => (;
+                {useCases && useCases.map(useCase, index) => (;
                   <div
                     key={index}
                     className='bg-white/10 backdrop-blur-xl rounded-2xl p-6 text-center'>;
@@ -361,22 +361,22 @@ export default function AISolutionsPage() {
                       {useCase && useCase.industry}
                     </h3>;
                     <ul className='space-y-2'>;
-                      {useCase && useCase.solutions.map((solution, solutionIndex) => (;
+                      {useCase && useCase.solutions.map(solution, solutionIndex) => (;
                         <li
                           key={solutionIndex}
-                          className='text-sm text-white/70'>                          {solution}                {useCases && useCases.map((useCase, index) => (;
+                          className='text-sm text-white/70'>                          {solution}                {useCases && useCases.map(useCase, index) => (;
                   <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 text-center">;
                     <div className="text-4xl mb-4">{useCase && useCase.icon}</div>;
                     <h3 className="text-xl font-bold mb-4 text-white">{useCase && useCase.industry}</h3>;
                     <ul className="space-y-2">;
-                      {useCase && useCase.solutions.map((solution, solutionIndex) => (;
+                      {useCase && useCase.solutions.map(solution, solutionIndex) => (;
                         <li key={solutionIndex} className="text-sm text-white/70">;
                           {solution}
                         </li>;
-                      ))}
+                      )}
                     </ul>;
                   </div>;
-                ))}
+                )}
               </div>
             </div>
             {/* Technologies */}
@@ -386,16 +386,16 @@ export default function AISolutionsPage() {
               </h2>;
               <div className='bg-white/10 backdrop-blur-xl rounded-2xl p-8'>;
                 <div className='flex flex-wrap justify-center gap-4'>;
-                  {technologies && technologies.map((tech, index) => (;
+                  {technologies && technologies.map(tech, index) => (;
                     <span
                       key={index}
-                      className='px-4 py-2 bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 text-white rounded-lg border border-white/20'                    >                  {technologies.map((tech, index) => (
+                      className='px-4 py-2 bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 text-white rounded-lg border border-white/20'                    >                  {technologies.map(tech, index) => (
                     <span
                       key={index}
                       className="px-4 py-2 bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 text-white rounded-lg border border-white/20">;
                       {tech}
                     </span>;
-                  ))}
+                  )}
                 </div>
               </div>
             </div>
@@ -509,8 +509,7 @@ export default function AISolutionsPage() {
                 <Link
                   href="/automation-insights"
                   className="px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200">;
-);
-}
+
                   Explore Insights;
                 </Link>;
               </div>;
@@ -520,8 +519,7 @@ export default function AISolutionsPage() {
       </div>;
     </>;
   );
-}
+
   );
-}
+
     </>);
-}

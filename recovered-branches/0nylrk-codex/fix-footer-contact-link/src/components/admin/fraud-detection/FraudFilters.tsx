@@ -16,7 +16,7 @@ interface FraudFiltersProps {
   setContentTypeFilter: (value: string | null) => void
 
   resetFilters: () => void
-}
+
 export const FraudFilters: React.FC<FraudFiltersProps> = ({
   searchQuery;
 import React from './react';
@@ -34,7 +34,7 @@ interface FraudFiltersProps {
   contentTypeFilter: string | null,
   setContentTypeFilter: (value: string | null) => void,
   reset_filters: () => void;
-}
+
 export const FraudFilters: React.FC < FraudFiltersProps> = ({
   search_query;
   setSearchQuery;
@@ -98,7 +98,6 @@ export const FraudFilters: React.FC < FraudFiltersProps> = ({
       </Button>
     </div>
   )
-}
 
         <SelectTrigger className="w-[180px]">;
           <SelectValue placeholder="Status" />;
@@ -143,10 +142,7 @@ export const FraudFilters: React.FC < FraudFiltersProps> = ({
       </Button>;
     </div>;
   );
-};
       <Button variant="outline" on_click={reset_filters} className="md: w - auto">;
         <Filter className="h - 4 w - 4 mr - 2" /> Reset Filters;
       </Button>;
     </div>);
-}
-;

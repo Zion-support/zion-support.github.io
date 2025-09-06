@@ -6,5 +6,3 @@ export function tabs() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

@@ -2,7 +2,7 @@ import React, { useState } from 'react',;
 import {;
   Brain, Shield, Rocket, Cpu, Database, Atom, Users,;
   CheckCircle, TrendingUp, Clock, Star, Filter, ChevronDown;
-} from 'lucide-react',;
+ from 'lucide-react',;
 interface Service {;
   id: string,;
   name: string,;
@@ -20,8 +20,7 @@ interface Service {;
   popular?: boolean,;
   icon: React.ComponentType<any>,;
   color: string;
-}
-;
+
 const EnhancedServicesShowcase: React.FC = () => {;
   const [selectedCategory, setSelectedCategory] = useState<string>('all'),;
   const [searchTerm, setSearchTerm] = useState(''),;
@@ -136,12 +135,12 @@ const EnhancedServicesShowcase: React.FC = () => {;
     }
   ],
 
-  const categories = ['all', ...Array.from(new Set(services.map(s => s.category)))],
-  
+  const categories = ['all', ...Array.from(new Set(services.map(s => s.category))],
+
   const filteredServices = services.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.tagline.toLowerCase().includes(searchTerm.toLowerCase()),
+    const matchesCategory = selectedCategory = = 'all' || service.category = = selectedCategory,
+    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase() ||
+                         service.tagline.toLowerCase().includes(searchTerm.toLowerCase(),
     return matchesCategory && matchesSearch
   }),
 
@@ -187,11 +186,11 @@ const EnhancedServicesShowcase: React.FC = () => {;
               onChange={(e) => setSelectedCategory(e.target.value)}
               className="px-6 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:border-blue-400 transition-colors duration-300 appearance-none pr-12"
             >
-              {categories.map((category) => (
+              {categories.map(category) => (
                 <option key={category} value={category} className="bg-slate-800 text-white">
-                  {category === 'all' ? 'All Categories' : category}
+                  {category = = 'all' ? 'All Categories' : category}
                 </option>;
-              ))}
+              )}
             </select>
             <ChevronDown className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/50 pointer-events-none" />
           </div>
@@ -211,7 +210,7 @@ const EnhancedServicesShowcase: React.FC = () => {;
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredServices.map((service, index) => (
+          {filteredServices.map(service, index) => (
             <div
               key={service.id}
               className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
@@ -225,7 +224,7 @@ const EnhancedServicesShowcase: React.FC = () => {;
                   </div>
                 </div>
               )}
-;
+
               {/* Service Content */}
               <div className="p-8">
                 {/* Icon and Category */}
@@ -265,24 +264,24 @@ const EnhancedServicesShowcase: React.FC = () => {;
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-white mb-3">Key Features:</h4>
                   <div className="space-y-2">
-                    {service.features.slice(0, 3).map((feature, idx) => (
+                    {service.features.slice(0, 3).map(feature, idx) => (
                       <div key={idx} className="flex items-center gap-2 text-xs text-white/70">
                         <CheckCircle className="w-3 h-3 text-green-400" />
                         {feature}
                       </div>;
-                    ))}
+                    )}
                   </div>;
                 </div>;
                 {/* Benefits */}
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-white mb-3">Key Benefits:</h4>
                   <div className="space-y-2">
-                    {service.benefits.slice(0, 2).map((benefit, idx) => (
+                    {service.benefits.slice(0, 2).map(benefit, idx) => (
                       <div key={idx} className="flex items-center gap-2 text-xs text-white/70">
                         <TrendingUp className="w-3 h-3 text-blue-400" />
                         {benefit}
                       </div>;
-                    ))}
+                    )}
                   </div>;
                 </div>;
                 {/* ROI and Market Info */}
@@ -310,7 +309,7 @@ const EnhancedServicesShowcase: React.FC = () => {;
                 </div>
               </div>
             </div>
-          ))}
+          )}
         </div>;
         {/* CTA Section */}
         <div className="text-center mt-16">
@@ -340,7 +339,7 @@ const EnhancedServicesShowcase: React.FC = () => {;
       </div>
     </section>
   )
-},
+,
 
 export default EnhancedServicesShowcase,
         <div className="text-center mt-16">;
@@ -370,5 +369,5 @@ export default EnhancedServicesShowcase,
       </div>;
     </section>;
   );
-},;
+,;
 export default EnhancedServicesShowcase;

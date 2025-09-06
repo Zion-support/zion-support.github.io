@@ -8,7 +8,7 @@ import {
   CardFooter
   CardHeader
   CardTitle
-} from "@/components/ui/card";
+ from "@/components/ui/card";
 
 import { Input } from "@/components/ui/input";
 import { Copy, Facebook, Link, Share, Twitter } from "lucide-react";
@@ -16,18 +16,17 @@ interface ReferralLinkProps {
   referralLink: string;
   onCopy: () => void;
   onShare: (platform: 'twitter' | 'facebook' | 'linkedin') => void
-}
 
 export function ReferralLink({
   referralLink
   onCopy
   onShare
-}: ReferralLinkProps) {
+: ReferralLinkProps) {
   const [copied, setCopied] = useState(false);
   const handleCopy = () => {
     onCopy();
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    setTimeout() => setCopied(false), 2000);
   }
 
   return (
@@ -100,7 +99,7 @@ export function ReferralLink({
       </CardFooter>
     </Card>
   );
-}
+
               LinkedIn;
             </Button>;
           </div>;
@@ -108,6 +107,5 @@ export function ReferralLink({
       </CardFooter>;
     </Card>;
   );
-}
+
     </Card>);
-}

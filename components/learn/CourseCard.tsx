@@ -18,7 +18,7 @@ export type Course = {
   category: string,
   certificationBadge: string,
   description?: string
-};
+;
 
 export default function CourseCard({ course }: { course: Course }) {
   return (  id: string
@@ -72,12 +72,12 @@ export default function CourseCard(): any ({ course }: { course: Course }) {;
       </div>;
     </div>;
   );
-}          <a className="text-blue-600 hover: underline text-sm">View course</a>;
+          <a className="text-blue-600 hover: underline text-sm">View course</a>;
         </Link>;
       </div>;
     </div>;
   );
-}
+
   certification_badge: string,
   description?: string;
 export default /**
@@ -113,8 +113,7 @@ function CourseCard() {
           <a className='text - blue - 600 hover:underline text - sm'>View course</a>        </Link>;
       </div>;
     </div>);
-}          <a className="text - blue - 600 hover: underline text - sm">View course</a>;
+          <a className="text - blue - 600 hover: underline text - sm">View course</a>;
         </Link>;
       </div>;
     </div>);
-}

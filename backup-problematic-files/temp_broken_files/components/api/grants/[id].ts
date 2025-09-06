@@ -6,26 +6,22 @@ import type { GrantApplication, UpdateGrantPayload } from '../../../types/grants
 const GRANTS_DIR = path.join(process.cwd(), 'datagrants'),
 
 function ensureDir() {
-  if (!fs.existsSync(GRANTS_DIR)) {
+  if (!fs.existsSync(GRANTS_DIR) {
     fs.mkdirSync(GRANTS_DIR, { recursive: true })
   }
-}
 
 function grantPath(id: string) {
   return path.join(GRANTS_DIR, `${id}.json`)
-}
 
 function readGrant(id: string): GrantApplication | null {
   ensureDir(),
   const file = grantPath(id),
-  if (!fs.existsSync(file)) return null,
-  return JSON.parse(fs.readFileSync(file, 'utf8')) as GrantApplication
-}
+  if (!fs.existsSync(file) return null,
+  return JSON.parse(fs.readFileSync(file, 'utf8') as GrantApplication
 
 function writeGrant(record: GrantApplication) {
   ensureDir(),
   fs.writeFileSync(grantPath(record.id), JSON.stringify(record, null, 2), 'utf8')
-}
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id } = req.query as { id: string },
@@ -34,7 +30,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return
   }
 
-  if (req.method === 'GET') {
+  if (req.method = = 'GET') {
     const g = readGrant(id),
     if (!g) {
       res.status(404).json({ error: 'Not found' }),
@@ -44,7 +40,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return
   }
 
-  if (req.method === 'PUT') {
+  if (req.method = = 'PUT') {
     const existing = readGrant(id),
     if (!existing) {
       res.status(404).json({ error: 'Not found' }),

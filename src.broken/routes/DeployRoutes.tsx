@@ -6,5 +6,3 @@ export function DeployRoutes() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

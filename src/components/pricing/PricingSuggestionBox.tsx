@@ -6,7 +6,7 @@ import {
   Tooltip
   TooltipTrigger
   TooltipContent
-} from '@/components/ui/tooltip'
+ from '@/components/ui/tooltip'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 
@@ -20,7 +20,7 @@ import {;
   Tooltip,;
   TooltipTrigger,;
   TooltipContent,;
-} from '@/components/ui/tooltip';
+ from '@/components/ui/tooltip';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Loader2, Info, ThumbsUp } from 'lucide-react';
@@ -30,7 +30,6 @@ interface PricingSuggestionBoxProps {;
   isLoading: boolean;
   onApplySuggestion: () => void;
   rateType: "hourly" | "fixed"
-}
 
 export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
 
@@ -38,7 +37,7 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
   isLoading
   onApplySuggestion
   rateType
-}) => {  if (isLoading) {
+) => {  if (isLoading) {
     return (
         <CardContent className="flex items-center justify-center p-6">
           <div className="text-center">
@@ -79,7 +78,7 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
             ${suggestion.minRate.toFixed(0)} - ${suggestion.maxRate.toFixed(0)}
           </span>
           <span className='text-sm text-muted-foreground ml-1'>
-            {rateType === 'hourly' ? '/hour' : ' total'}
+            {rateType = = 'hourly' ? '/hour' : ' total'}
           </span>
         </div>
         <div className='flex items-start space-x-2 text-sm text-muted-foreground'>
@@ -138,7 +137,7 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
             ${suggestion && suggestion.minRate.toFixed(0)} - ${suggestion && suggestion.maxRate.toFixed(0)}
           </span>;
           <span className='text-sm text-muted-foreground ml-1'>;
-            {rateType === 'hourly' ? '/hour' : ' total'}
+            {rateType = = 'hourly' ? '/hour' : ' total'}
           </span>;
         </div>;
 
@@ -163,7 +162,7 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
             ${suggestion.minRate.toFixed(0)} - ${suggestion.maxRate.toFixed(0)}
           </span>
           <span className="text-sm text-muted-foreground ml-1">
-            {rateType === "hourly" ? "/hour" : " total"}
+            {rateType = = "hourly" ? "/hour" : " total"}
           </span>
         </div>
         <div className="flex items-start space-x-2 text-sm text-muted-foreground">
@@ -197,20 +196,15 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
       </CardContent>
     </Card>
   )
-}
-"
+
         <p className="text-xs text-center text-muted-foreground pt-2">
           Based on market data & trends. You can adjust as needed.
         </p>
       </CardContent>
     </Card>
   )
-}
-"  )
-}
 
-
-};
+;
 
 import React from 'react';
 import { Button } from '@/components / ui / button';
@@ -219,7 +213,7 @@ import {
   Tooltip,
   TooltipTrigger,
   TooltipContent,
-} from '@/components / ui / tooltip';
+ from '@/components / ui / tooltip';
 import { Card, CardContent } from '@/components / ui / card';
 import { Badge } from '@/components / ui / badge';
 import { Loader2, Info, ThumbsUp } from 'lucide-react';
@@ -234,10 +228,10 @@ export const PricingSuggestionBox: React.FC < PricingSuggestionBoxProps> = ({
   is_loading,
   onApplySuggestion,
   rate_type,
-}) => {  // Check condition
+) => {  // Check condition
 if ( {) {
   $2
-}
+
     return (
       <Card className='border border - dashed border - muted'>;
         <CardContent className='flex items - center justify - center p - 6'>;
@@ -256,7 +250,7 @@ if ( {) {
   // Check condition
 if ( {) {
   $2
-}
+
     return null;
   }
   const confidence_color = {
@@ -285,7 +279,7 @@ if ( {) {
             ${suggestion.min_rate.to_fixed (0)} - ${suggestion.max_rate.to_fixed (0)}
           </span>;
           <span className='text - sm text - muted - foreground ml - 1'>;
-            {rate_type === 'hourly' ? '/hour' : ' total'}
+            {rate_type = = 'hourly' ? '/hour' : ' total'}
           </span>;
         </div>;
         <div className='flex items - start space - x-2 text - sm text - muted - foreground'>;
@@ -299,7 +293,7 @@ if ( {) {
                   variant='default'            ${suggestion.min_rate.to_fixed (0)} - ${suggestion.max_rate.to_fixed (0)}
           </span>;
           <span className="text - sm text - muted - foreground ml - 1">;
-            {rate_type === "hourly" ? "/hour" : " total"}
+            {rate_type = = "hourly" ? "/hour" : " total"}
           </span>;
         </div>;
         <div className="flex items - start space - x-2 text - sm text - muted - foreground">;
@@ -332,13 +326,10 @@ if ( {) {
         </p>;
       </CardContent>;
     </Card>);
-}
-";
         <p className="text - xs text - center text - muted - foreground pt - 2">;
           Based on market data & trends. You can adjust as needed.;
         </p>;
       </CardContent>;
     </Card>);
-}
-"  );
-}
+
+  );

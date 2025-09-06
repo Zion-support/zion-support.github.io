@@ -6,5 +6,3 @@ export function CountryServiceCard() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

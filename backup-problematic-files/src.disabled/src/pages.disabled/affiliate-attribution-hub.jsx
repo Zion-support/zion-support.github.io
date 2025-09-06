@@ -7,6 +7,5 @@ const Affiliate-attribution-hub = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default Affiliate-attribution-hub;

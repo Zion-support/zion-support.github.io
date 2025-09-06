@@ -12,7 +12,7 @@ export function UpcomingInterviewsCard() {
   const { fetchInterviews } = useInterviews();
   const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),
   const [isLoading, setIsLoading] = useState(true);
-  useEffect(() => {
+  useEffect() => {
 
     const loadInterviews = async () => {
       setIsLoading(true);
@@ -22,12 +22,11 @@ export function UpcomingInterviewsCard() {
         // Filter for confirmed interviews in the future
         const upcoming = interviews
           .filter(interview =>
-            interview.status === 'confirmed' &&
-            !isPast(parseISO(interview.scheduled_date))
+            interview.status = = 'confirmed' &&
+            !isPast(parseISO(interview.scheduled_date)
           )
-          .sort((a, b) =>
+          .sort(a, b) =>
             parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime()
-          )
           .slice(0, 3), // Take only the next 3 interviews
         setUpcomingInterviews(upcoming)
       } catch (error) {
@@ -35,7 +34,6 @@ export function UpcomingInterviewsCard() {
       } finally {
         setIsLoading (false);
       }
-    }
     loadInterviews()
   }, []);
   if (isLoading) {
@@ -57,13 +55,13 @@ export function UpcomingInterviewsCard() {
                   <div className="h-3 w-1/2 bg-zion-blue-light/30 rounded"></div>;
                 </div>;
               </div>;
-            ))}
+            )}
           </div>;
         </CardContent>;
       </Card>;
     );
   }
-  if (upcomingInterviews.length === 0) {
+  if (upcomingInterviews.length = = 0) {
     return (
       <Card className="bg-zion-blue-dark/40 border-zion-blue-light">;
         <CardHeader>;
@@ -148,7 +146,7 @@ export function UpcomingInterviewsCard() {
       </CardContent>
     </Card>
   )
-}
+
             <Link to="/interviews">;
               View All Interviews;
             </Link>;
@@ -157,6 +155,5 @@ export function UpcomingInterviewsCard() {
       </CardContent>;
     </Card>;
   );
-}
+
     </Card>);
-}

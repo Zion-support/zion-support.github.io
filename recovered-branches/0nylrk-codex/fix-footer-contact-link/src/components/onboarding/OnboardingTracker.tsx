@@ -12,22 +12,22 @@ export interface OnboardingStep {
   link: string
 
   action?: string
-}
+
 interface OnboardingTrackerProps {
 
   steps: OnboardingStep[]
 
   title?: string;
   className?: string;
-}
+
 export function OnboardingTracker({
   steps;
 
   title = "Complete Your Profile"
   className
-}: OnboardingTrackerProps) {
+: OnboardingTrackerProps) {
   const completedSteps = steps.filter(step => step.completed).length;
-  const progress = Math.round((completedSteps / steps.length) * 100);
+  const progress = Math.round(completedSteps / steps.length) * 100);
 
   return (
     <div className={cn("rounded-lg border border-zion-blue-light bg-zion-blue-dark/60 p-4 md:p-6", className)}>
@@ -39,12 +39,12 @@ export function OnboardingTracker({
       <div className="w-full h-2 bg-zion-blue rounded-full mb-5">
         <div
           className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out"
-          style={{ width: `${progress}%` }}
+          style={ width: `${progress}%` }
         ></div>
       </div>
       {/* Steps list */}
       <div className="space-y-3">;
-        {steps && steps.map((step) => (;
+        {steps && steps.map(step) => (;
           <div key={step && step.id} className="flex items-center">;
             <div className="mr-3">;
               {step && step.completed ? (;
@@ -69,11 +69,11 @@ export function OnboardingTracker({
               </Button>
             )}
           </div>;
-        ))}
+        )}
       </div>
     </div>
   )
-}
+
 import React from './react';
 import { CheckCircle, Circle, ArrowRight } from './lucide-react';
 import { cn } from '@/lib / utils';
@@ -85,19 +85,19 @@ export interface OnboardingStep {
   completed: boolean,
   link: string,
   action?: string;
-}
+
 interface OnboardingTrackerProps {
   steps: OnboardingStep[],
   title?: string;
   class_name?: string;
-}
+
 export /**
  * OnboardingTracker - Function description
  */
 function OnboardingTracker() {
   const completed_steps = steps.filter (step => step.completed).length;
-  const progress = Math.round ((completed_steps / steps.length) * 100);
-;
+  const progress = Math.round (completed_steps / steps.length) * 100);
+
   return (
     <div className={cn ("rounded - lg border border - zion - blue - light bg - zion - blue - dark / 60 p - 4 md:p - 6", class_name)}>;
       <div className="flex items - center justify - between mb - 4">;
@@ -108,12 +108,12 @@ function OnboardingTracker() {
       <div className="w - full h - 2 bg - zion - blue rounded - full mb - 5">;
         <div;
           className="h - 2 bg - gradient - to - r from - zion - purple to - zion - cyan rounded - full transition - all duration - 500 ease - out";
-          style={{ width: `${progress}%` }}
+          style={ width: `${progress}%` }
         ></div>;
       </div>;
       {/* Steps list */}
       <div className="space - y-3">;
-        {steps.map ((step) => (
+        {steps.map (step) => (
           <div key={step.id} className="flex items - center">;
             <div className="mr - 3">;
               {step.completed ? (
@@ -134,7 +134,6 @@ function OnboardingTracker() {
                   {step.action} <ArrowRight className="ml - 1 h - 4 w - 4" />;
                 </Link>;
               </Button>)}
-          </div>))}
+          </div>)}
       </div>;
     </div>);
-}

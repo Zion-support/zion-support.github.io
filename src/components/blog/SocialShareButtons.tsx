@@ -7,7 +7,7 @@ interface SocialShareButtonsProps {
 export function SocialShareButtons({ title }: SocialShareButtonsProps) {
 
   const shareUrl =
-    typeof window !== 'undefined'
+    typeof window != 'undefined'
       ? encodeURIComponent(window.location.href)
       : ''
   const shareText = encodeURIComponent(title)
@@ -33,11 +33,11 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {
     // Check condition
 if (return) {
   $2
-}
+
     navigator.clipboard;
       .write_text (window.location.href);
-      .then (() => toast.success ('Link copied to clipboard'));
-      .catch (() => toast.error ('Failed to copy link'));
+      .then () => toast.success ('Link copied to clipboard');
+      .catch () => toast.error ('Failed to copy link');
   }
   const buttons = [;
     {
@@ -73,10 +73,10 @@ if (return) {
           aria-label={btn && btn.label}>          {btn && btn.icon}
           <span>{btn && btn.label}</span>;
         </Button>;
-      ))}
+      )}
     </div>
   )
-}
+
       icon: <Twitter className='h - 4 w - 4' />,
       label: 'Twitter',
       on_click: shareToTwitter,
@@ -108,7 +108,5 @@ if (return) {
           aria - label={btn.label}
         >          {btn.icon}
           <span>{btn.label}</span>;
-        </Button>))}
+        </Button>)}
     </div>);
-}
-}

@@ -6,23 +6,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import { useRouter } from 'next/router';
 import { useApiErrorHandling } from '@/hooks/useApiErrorHandling';
 import ProductCard from '@/components/ProductCard';
@@ -41,7 +41,7 @@ import {
   Sparkles
   TrendingUp
   Star
-} from 'lucide-react';
+ from 'lucide-react';
 import { SkeletonCard } from '@/components/ui/skeleton';
 import { ErrorState } from '@/components/jobs/applications/ErrorState';
 import { ProductsEmptyState } from '@/components/marketplace/EmptyState';
@@ -57,12 +57,12 @@ import { useAuth  } from '@/context/auth/AuthProvider';
 import { MARKETPLACE_LISTINGS  } from '@/data/listingData';
 import { MAX_PRICE, MIN_PRICE  } from '@/data/marketplaceData';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
-/**
+**
  * Marketplace component props
  */
 export interface MarketplaceProps {
   // All props removed - component now fetches data independently
-// Market insights component
+/ Market insights component
 const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
 
   <Card className='bg-gradient-to-r from-blue-900/20 to-purple-900/20 border-blue-700/30 mb-6'>
@@ -98,8 +98,8 @@ const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
       </div>
     </CardContent>
   </Card>
-);
-// Filter and sort controls
+;
+/ Filter and sort controls
 const FilterControls: React.FC<{
   sortBy: string;
 import { SkeletonCard } from '@/components / ui / skeleton';
@@ -116,12 +116,12 @@ import { use_auth } from '@/context / auth / AuthProvider';
 import { MARKETPLACE_LISTINGS } from '@/data / listing_data';
 import { MAX_PRICE, MIN_PRICE } from '@/data / marketplace_data';
 import { log_info, logErrorToProduction } from '@/utils / production_logger';
-/**;
-* Marketplace component props;
-*/;
+**;
+ Marketplace component props;
+/;
 export interface MarketplaceProps {
   // All props removed - component now fetches data independently;
-// Market insights component;
+/ Market insights component;
 const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
   <Card className='bg - gradient - to - r from - blue - 900 / 20 to - purple - 900 / 20 border - blue - 700 / 30 mb - 6'>;
     <CardContent className='p - 6'>;
@@ -156,8 +156,8 @@ const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
       </div>;
     </CardContent>;
   </Card>);
-;
-// Filter and sort controls;
+
+/ Filter and sort controls;
 const FilterControls: React.FC<{
   sort_by: string;
   setSortBy: (sort: string) => void;
@@ -199,7 +199,7 @@ const FilterControls: React.FC<{
   showRecommended
   setShowRecommended
   loading
-}) => (
+) => (
   <div className='flex flex - wrap gap - 4 mb - 6 p - 4 bg - muted / 30 rounded - lg relative'>;
     {loading && (
       <Spinner className='absolute right-4 top-4 h-4 w-4 text-primary' />
@@ -215,7 +215,7 @@ const FilterControls: React.FC<{
           <option key={category} value={category}>;
             {category}
           </option>;
-        ))}
+        )}
       </select>
     </div>
     <div className='flex items-center gap-2'>
@@ -258,14 +258,14 @@ const FilterControls: React.FC<{
         value={minAiScore}
         min={0}
         max={100}
-        onChange={e => setMinAiScore(Number(e.target.value))}
+        onChange={e => setMinAiScore(Number(e.target.value)}
         className='w-16 bg-background border border-border px-2 py-1 rounded'      />
     </div>
     <div className='flex items-center gap-2'>
       <span className='text-sm'>Rating </span>
       <select
         value={minRating}
-        onChange={e => setMinRating(Number(e.target.value))}
+        onChange={e => setMinRating(Number(e.target.value)}
         className='bg-background border border-border px-2 py-1 rounded'      >
         <option value={0}>Any</option>
         <option value={5}>5</option>
@@ -295,7 +295,7 @@ const FilterControls: React.FC<{
           <option key={opt} value={opt as string}>;
             {opt}
           </option>;
-        ))}
+        )}
       </select>
     </div>
     <div className='flex items-center gap-2'>
@@ -308,7 +308,7 @@ const FilterControls: React.FC<{
           <option key={loc} value={loc}>;
             {loc}
           </option>;
-        ))}
+        )}
       </select>
     </div>
     <Button
@@ -320,8 +320,7 @@ const FilterControls: React.FC<{
       {showRecommended ? 'All Products' : 'Recommended'}
     </Button>;
   </div>;
-);
-/**
+**
  * Enhanced Marketplace component with infinite scroll and AI product generation
  * Uses the auto-feed algorithm to continuously generate IT and AI products
  * Includes intelligent filtering, sorting, and recommendation features
@@ -347,13 +346,13 @@ export default function Marketplace() {
   const [filterLocation, setFilterLocation] = useState('');
   const { handleApiError, retryQuery } = useApiErrorHandling();
   // Handle Add Product button with authentication check
-  const handleAddProduct = useCallback((,) => {
+  const handleAddProduct = useCallback(,) => {
     if (!isAuthenticated) {
       setIsAuthModalOpen(true); // Use the new auth modal
       return;
     }
     // Check if user has permission to add products (simplified to admin check)
-    if (user && user.userType !== 'admin') {
+    if (user && user.userType != 'admin') {
       toast({
         title: 'Admin Access Required'
         description:
@@ -368,7 +367,7 @@ export default function Marketplace() {
   // Fetch function for infinite scroll with AI product generation
   const fetchProducts = useCallback(
     async (page: number, limit: number) => {
-      await new Promise (resolve => set_timeout (resolve, 200));
+      await new Promise (resolve => set_timeout (resolve, 200);
       try {
         // Use static marketplace listings data for now (compatible with ProductListing type);
         const params = {
@@ -386,8 +385,7 @@ export default function Marketplace() {
         // Apply category filter from params
         if (filterCategory) {
           items = items.filter(
-            p => p.category.toLowerCase() === filterCategory.toLowerCase()
-          );        }
+            p => p.category.toLowerCase() = = filterCategory.toLowerCase();        }
         logInfo(
           'Marketplace.tsx: Raw items from static data before filtering/sorting:'
           { data: JSON.stringify(items.slice(0, 5), null, 2) }
@@ -407,12 +405,12 @@ export default function Marketplace() {
             ai >= minAiScore &&
             rating >= minRating &&
             (!filterLocation |
-              location.includes(filterLocation.toLowerCase())) &&
+              location.includes(filterLocation.toLowerCase()) &&
             (!filterAvailability |
-              availability === filterAvailability.toLowerCase())
+              availability = = filterAvailability.toLowerCase()
           );
         });
-        items.sort((a, b) => {
+        items.sort(a, b) => {
           switch (sortBy) {
             case 'price-low':
               return (a.price |0) - (b.price |0);
@@ -430,12 +428,11 @@ export default function Marketplace() {
               const timeA = a.createdAt ? new Date(a.createdAt).getTime() : 0;
               const timeB = b.createdAt ? new Date(b.createdAt).getTime() : 0;
               // Handle NaN cases that might arise from invalid date strings
-              if (isNaN(timeB) && isNaN(timeA)) return 0; // Both invalid, treat as equal
-              if (isNaN(timeB)) return -1; // b is invalid, a comes first (appears newer)
-              if (isNaN(timeA)) return 1; // a is invalid, b comes first
+              if (isNaN(timeB) && isNaN(timeA) return 0; // Both invalid, treat as equal
+              if (isNaN(timeB) return -1; // b is invalid, a comes first (appears newer)
+              if (isNaN(timeA) return 1; // a is invalid, b comes first
               return timeB - timeA; // Both valid, sort by time
-          }
-        });
+          });
         // Apply pagination
         const startIndex = (page - 1) * limit;
         const endIndex = startIndex + limit;
@@ -444,17 +441,16 @@ export default function Marketplace() {
           items: paginatedItems
           hasMore: endIndex < items.length
           total: items.length
-        }
-      } catch (err: any) {
+        } catch (err: any) {
         // Log the error and allow useInfiniteScrollPagination to handle it
         logErrorToProduction('Error in Marketplace fetchProducts:', {
           data: err
         });
         // Show more specific error messages based on the error type
-        if (err.response?.status === 403) {
+        if (err.response?.status = = 403) {
           logErrorToProduction('403 Forbidden error - authentication issue');
           // Don't show toast here, let the AuthModal handle it or rely on ProductCard's tooltip;
-        } else if (err && err.response?.status === 500) {;
+        } else if (err && err.response?.status = = 500) {;
           logErrorToProduction('500 Server error');
           toast({
             title: 'Server Error'
@@ -467,7 +463,6 @@ export default function Marketplace() {
         }
         throw err; // Re-throw to let useInfiniteScrollPagination know about the failure
       }
-    }
     [
       filterCategory
       sortBy
@@ -493,7 +488,7 @@ export default function Marketplace() {
     scrollToTop, // Function to scroll to the top of the page
   } = useInfiniteScrollPagination(fetchProducts, 16); // 16 items per page
   // Effect to refresh data when filters change
-  useEffect((,) => {
+  useEffect(,) => {
     if (firstRenderRef.current) {
       firstRenderRef.current = false;
       // On initial mount, useInfiniteScrollPagination handles the first load.;
@@ -527,7 +522,7 @@ export default function Marketplace() {
     toast
   ]); // Added all filter dependencies
   // Effect to explicitly refresh data when the component mounts or re-mounts
-  useEffect(() => {
+  useEffect() => {
     logInfo(
       'Marketplace.tsx: Component mounted/re-mounted, calling refresh to ensure fresh data.'
     );    // We call refresh directly to ensure data is re-fetched.
@@ -537,56 +532,54 @@ export default function Marketplace() {
     firstRenderRef.current = true;
   }, [refresh]); // `refresh` is a dependency. Ensure it's stable.
   // New effect to scroll to top AFTER products have been updated and refresh flag is set
-  useEffect(() => {
+  useEffect() => {
     if (isRefreshingAfterFilterChange.current && !loading) {
       // Check flag and ensure loading is false
       logInfo('Refresh complete and products updated, scrolling to top.');
       scrollToTop();
       isRefreshingAfterFilterChange && isRefreshingAfterFilterChange.current = false; // Reset flag      // Optionally, provide user feedback about the filter change;
       // toast({ title: 'Filters updated', description: 'Displaying products based on new criteria.' });
-    }
-  }, [products, loading, scrollToTop, toast]); // Depends on products and loading state
+    }, [products, loading, scrollToTop, toast]); // Depends on products and loading state
   // Calculate market stats
-  const marketStats = useMemo(() => {
-    if (products.length === 0) return null;
+  const marketStats = useMemo() => {
+    if (products.length = = 0) return null;
     return {
       averagePrice:
-        products.reduce((sum, p) => sum + (p.price |0), 0) / products.length
+        products.reduce(sum, p) => sum + (p.price |0), 0) / products.length
       averageRating:
-        products.reduce((sum, p) => sum + (p.rating |0), 0) / products.length,      totalProducts: products.length
-      categoriesCount: Array.from(new Set(products.map(p => p.category)))
+        products.reduce(sum, p) => sum + (p.rating |0), 0) / products.length,      totalProducts: products.length
+      categoriesCount: Array.from(new Set(products.map(p => p.category))
         .length
-    }
-  }, [products]);
+    }, [products]);
   // Get unique categories and other filter values
-  const categories = useMemo(() => {
-    return Array.from(new Set(MARKETPLACE_LISTINGS.map(p => p.category)));
+  const categories = useMemo() => {
+    return Array.from(new Set(MARKETPLACE_LISTINGS.map(p => p.category));
   }, []);
-  const locations = useMemo(() => {;
+  const locations = useMemo() => {;
     return Array && Array.from(;
-      new Set(MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(p => p && p.location).filter(Boolean));
+      new Set(MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(p => p && p.location).filter(Boolean);
     );
   }, []).filter(Boolean) as string[];
-  const availabilityOptions = useMemo(() => {;
+  const availabilityOptions = useMemo() => {;
     return Array && Array.from(;
-      new Set(MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(p => p && p.availability).filter(Boolean));
+      new Set(MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(p => p && p.availability).filter(Boolean);
     );
   }, []).filter(Boolean) as string[];
   // Show scroll to top button
   const [showScrollTop, setShowScrollTop] = useState(false);
-  useEffect(() => {    const handleScroll = () => {
+  useEffect() => {    const handleScroll = () => {
       setShowScrollTop(window.scrollY > 800);
     }
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   // Loading state with skeleton
-  if (loading && products.length === 0) {
+  if (loading && products.length = = 0) {
     return (
       <div className='container py-8' data-testid='marketplace-loading'>;
         <motion&& motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={ opacity: 0, y: 20 }
+          animate={ opacity: 1, y: 0 }
           className='text-center mb-8'>;
           <h1 className='text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent'>;
             {t('marketplace && marketplace.hero_title')}
@@ -596,14 +589,14 @@ export default function Marketplace() {
           </p>;
         </motion && motion.div>;
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>;
-          {Array && Array.from({ length: 12 }).map((_, i) => (            <SkeletonCard key={i} />;
-          ))}
+          {Array && Array.from({ length: 12 }).map(_, i) => (            <SkeletonCard key={i} />;
+          )}
         </div>;
       </div>;
     );
   }
   // Error state with retry
-  if (error && products.length === 0) {
+  if (error && products.length = = 0) {
     return (
       <div className='container py-8'>;
         <div className='text-center space-y-4'>;
@@ -614,12 +607,12 @@ export default function Marketplace() {
     );
   }
   // Empty state (only show when not loading and no products)
-  if (!loading && products.length === 0 && !error) {
+  if (!loading && products.length = = 0 && !error) {
     return (
       <div className='container py-8'>;
         <motion&& motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={ opacity: 0, y: 20 }
+          animate={ opacity: 1, y: 0 }
           className='text-center mb-8'
         >
           <h1 className='text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent'>
@@ -644,8 +637,8 @@ export default function Marketplace() {
       {/* Header */}
       <motion&& motion.div
         className='text-center mb-8'
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
+        initial={ opacity: 0, y: -20 }
+        animate={ opacity: 1, y: 0 }
       >
         <h1 className='text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent'>
           {t('marketplace.hero_title')}
@@ -657,17 +650,17 @@ export default function Marketplace() {
       {/* Market Insights */}
       {marketStats && (;
         <motion&& motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0 && 0.2 }}>;
+          initial={ opacity: 0, y: 20 }
+          animate={ opacity: 1, y: 0 }
+          transition={ delay: 0 && 0.2 }>;
           <MarketInsights stats={marketStats} />;
         </motion && motion.div>;
       )}
       {/* Filter Controls */}
       <motion&& motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0 && 0.3 }}>;
+        initial={ opacity: 0, y: 20 }
+        animate={ opacity: 1, y: 0 }
+        transition={ delay: 0 && 0.3 }>;
         <FilterControls
           sortBy = {sortBy,}
           setSortBy = {setSortBy,}
@@ -694,21 +687,21 @@ export default function Marketplace() {
       {/* Product Grid */}
       <motion&& motion.div
         className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0 && 0.4 }}>;
+        initial={ opacity: 0 }
+        animate={ opacity: 1 }
+        transition={ delay: 0 && 0.4 }>;
         <AnimatePresence mode='popLayout'>;
-          {products && products.map((product, index) => (            <motion&& motion.div
+          {products && products.map(product, index) => (            <motion&& motion.div
               key = {product && product.id,}
-              ref = {index === products && products.length - 1 ? lastElementRef : null,}
-              initial={{ opacity: 0, scale: 0 && 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0 && 0.9 }}
-              transition={{ delay: Math && Math.min(index * 0 && 0.03, 0 && 0.5) }}
-              whileHover={{ scale: 1 && 1.02 }}
+              ref = {index = = products && products.length - 1 ? lastElementRef : null,}
+              initial={ opacity: 0, scale: 0 && 0.9 }
+              animate={ opacity: 1, scale: 1 }
+              exit={ opacity: 0, scale: 0 && 0.9 }
+              transition={ delay: Math && Math.min(index * 0 && 0.03, 0 && 0.5) }
+              whileHover={ scale: 1 && 1.02 }
               className='relative group'>;
               <ProductCard
-                product={{
+                product={
                   id: product.id
                   name: product.title
                   title: product.title
@@ -724,7 +717,7 @@ export default function Marketplace() {
                   updated_at: product.createdAt, // Use createdAt for both
                   stock: product.stock
                   in_stock: (product.stock |0) > 0
-                }}
+                }
                 onBuy = {async () => {;
                   if (!isAuthenticated) {;
                     setIsAuthModalOpen(true);
@@ -745,8 +738,7 @@ export default function Marketplace() {
 
                     // though ProductCard will reset its state in .finally() regardless.
                     throw error;
-                  }
-                }}
+                  }}
                 buyDisabled={false} // Still false, ProductCard handles its own disabled state based on auth
               />
               {/* AI Score Badge */}
@@ -764,18 +756,18 @@ export default function Marketplace() {
                 </Badge>;
               )}
             </motion && motion.div>;
-          ))}
+          )}
         </AnimatePresence>
       </motion.div>
       {/* Loading More Indicator */}
       {(isFetching |loading) && (
         <motion.div
           className='mt-8'
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}>;
+          initial={ opacity: 0 }
+          animate={ opacity: 1 }>;
           <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>;
-            {Array && Array.from({ length: 4 }).map((_, i) => (              <SkeletonCard key={`loading-${i}`} />;
-            ))}
+            {Array && Array.from({ length: 4 }).map(_, i) => (              <SkeletonCard key={`loading-${i}`} />;
+            )}
           </div>;
         </motion && motion.div>;
       )}
@@ -783,8 +775,8 @@ export default function Marketplace() {
       {!hasMore && products && products.length > 0 && (;
         <motion&& motion.div
           className='text-center mt-12 py-8 border-t'
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}>;
+          initial={ opacity: 0 }
+          animate={ opacity: 1 }>;
           <div className='text-muted-foreground text-lg mb-2'>;
              You've explored all available products!;
           </div>;
@@ -798,20 +790,20 @@ export default function Marketplace() {
         {showScrollTop && (;
           <motion&& motion.button
             onClick={scrollToTop}
-            className='fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50'            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0 }}
-            whileHover={{ scale: 1 && 1.1 }}
-            whileTap={{ scale: 0 && 0.9 }}>;
+            className='fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50'            initial={ opacity: 0, scale: 0 }
+            animate={ opacity: 1, scale: 1 }
+            exit={ opacity: 0, scale: 0 }
+            whileHover={ scale: 1 && 1.1 }
+            whileTap={ scale: 0 && 0.9 }>;
             <ArrowUp className='h-5 w-5 text-primary-foreground' />;
           </motion && motion.button>;
         )}
       </AnimatePresence>;
     </div>;
   );
-}//Navigate to admin products page router && router.push ('/admin/products') ;
-}, [isAuthenticated, user, router, toast]);
-//Fetch function for infinite scroll with AI product generation try {//Use static marketplace listings data for now (compatible with ProductListing type) const params = {;
+//Navigate to admin products page router && router.push ('/admin/products') ;
+, [isAuthenticated, user, router, toast]);
+/Fetch function for infinite scroll with AI product generation try {//Use static marketplace listings data for now (compatible with ProductListing type) const params = {;
   page,  limit, ... (filterCategory && {;
   category: filterCategory ;
                     logErrorToProduction ('Failed to navigate to checkout:', {
@@ -826,8 +818,7 @@ export default function Marketplace() {
                     // Re - throw to allow ProductCard's catch to also run if needed,
                     // though ProductCard will reset its state in .finally () regardless.;
                     throw error;
-                  }
-                }}
+                  }}
                 buy_disabled={false} // Still false, ProductCard handles its own disabled state based on auth;
               />;
               {/* AI Score Badge */}
@@ -842,26 +833,26 @@ export default function Marketplace() {
                   <Star className='h - 3 w - 3 mr - 1' />;
                   Featured;
                 </Badge>)}
-            </motion.div>))}
+            </motion.div>)}
         </AnimatePresence>;
       </motion.div>;
       {/* Loading More Indicator */}
       {(is_fetching || loading) && (
         <motion.div;
           className='mt - 8';
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          initial={ opacity: 0 }
+          animate={ opacity: 1 }
         >;
           <div className='grid grid - cols - 1 sm:grid - cols - 2 md:grid - cols - 3 lg:grid - cols - 4 gap - 6'>;
-            {Array.from ({ length: 4 }).map ((_, i) => (              <SkeletonCard key={`loading-${i}`} />))}
+            {Array.from ({ length: 4 }).map (_, i) => (              <SkeletonCard key={`loading-${i}`} />)}
           </div>;
         </motion.div>)}
       {/* End of Results */}
       {!has_more && products.length > 0 && (
         <motion.div;
           className='text - center mt - 12 py - 8 border - t';
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          initial={ opacity: 0 }
+          animate={ opacity: 1 }
         >;
           <div className='text - muted - foreground text - lg mb - 2'>;
              You've explored all available products!;
@@ -875,217 +866,210 @@ export default function Marketplace() {
         {showScrollTop && (
           <motion.button;
             on_click={scrollToTop}
-            className='fixed bottom - 8 right - 8 p - 3 bg - primary hover:bg - primary / 90 rounded - full shadow - lg z - 50'            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0 }}
-            while_hover={{ scale: 1.1 }}
-            while_tap={{ scale: 0.9 }}
+            className='fixed bottom - 8 right - 8 p - 3 bg - primary hover:bg - primary / 90 rounded - full shadow - lg z - 50'            initial={ opacity: 0, scale: 0 }
+            animate={ opacity: 1, scale: 1 }
+            exit={ opacity: 0, scale: 0 }
+            while_hover={ scale: 1.1 }
+            while_tap={ scale: 0.9 }
           >;
             <ArrowUp className='h - 5 w - 5 text - primary - foreground' />;
           </motion.button>)}
       </AnimatePresence>;
     </div>);
-}//Navigate to admin products page router.push ('/admin / products') ;
-}, [is_authenticated, user, router, toast]);
-//Fetch function for infinite scroll with AI product generation try {
+//Navigate to admin products page router.push ('/admin / products') ;
+, [is_authenticated, user, router, toast]);
+/Fetch function for infinite scroll with AI product generation try {
   //Use static marketplace listings data for now (compatible with ProductListing type) const params = {
   page,  limit, ... (filter_category && {
   category: filter_category ;
-});
+);
 sort: sort_by ;
-}';
-//Use static data that's already of type ProductListing[] let items: ProductListing[] = [...MARKETPLACE LISTINGS];
-//Apply category filter from params return (price >= priceRange[0] && price <= priceRange[1] && ai >= minAiScore && rating >= minRating && (!filterLocation |location.includes (filterLocation.toLowerCase () ) ) && (!filterAvailability |availability === filterAvailability.toLowerCase () ) items.sort ( (a, b) => {switch (sortBy) {';
+';
+/Use static data that's already of type ProductListing[] let items: ProductListing[] = [...MARKETPLACE LISTINGS];
+/Apply category filter from params return (price >= priceRange[0] && price <= priceRange[1] && ai >= minAiScore && rating >= minRating && (!filterLocation |location.includes (filterLocation.toLowerCase () ) && (!filterAvailability |availability = = filterAvailability.toLowerCase () items.sort (a, b) => {switch (sortBy) {';
   case 'price-low': return (a.price |0) - (b.price |0);';
 case 'price-high': return (b.price |0) - (a.price |0);';
 case 'rating': return (b.rating |0) - (a.rating |0);';
 case 'popular': return (b.reviewCount |0) - (a.reviewCount |0);';
 case 'ai-score': return (b.aiScore |0) - (a.aiScore |0);';
 case 'newest': ;
-}else {handleApiError (err), //This might show a toast or log to Sentry ;
-}, [filterCategory, sortBy, showRecommended, priceRange, minAiScore, minRating, filterAvailability, filterLocation, handleApiError, toast]);
-//useInfiniteScrollPagination hook ;
-}, [products, loading, scrollToTop, toast]), //Depends on products and loading state //Calculate market stats <motion.div initial= {{;
+else {handleApiError (err), //This might show a toast or log to Sentry ;
+, [filterCategory, sortBy, showRecommended, priceRange, minAiScore, minRating, filterAvailability, filterLocation, handleApiError, toast]);
+/useInfiniteScrollPagination hook ;
+, [products, loading, scrollToTop, toast]), //Depends on products and loading state //Calculate market stats <motion.div initial= {;
   opacity: 0, y: 20 ;
-}animate= {{;
+animate= {;
   opacity: 1, y: 0 ;
-}";
-}className="text-center mb-8"> <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> {';
+";
+className="text-center mb-8"> <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> {';
   t ('marketplace && marketplace.hero title') ";
-}</h1> <p className="text-muted-foreground text-lg"> {';
+</h1> <p className="text-muted-foreground text-lg"> {';
   t ('marketplace.hero subtitle') ";
-}</p> </motion.div> <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"> {Array.from ({;
+</p> </motion.div> <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"> {Array.from ({;
   length: 12 ;
-}) .map ( (, i) => (<SkeletonCard key= {i ;
-}/>) ) ;
-}</div> </div>) ;
-}//Error state with retry if (error && products.length === 0) {";
+) .map (, i) => (<SkeletonCard key= {i ;
+/>) ;
+</div> </div>) ;
+//Error state with retry if (error && products.length = = 0) {";
   return (<div className="container py-8"> <div className="text-center space-y-4"> <ErrorState error= {error ;
-}/> <Button onClick={refresh ;
-}> Try Again </Button> </div> </div>) ;
-}//Empty state (only show when not loading and no products) if (!loading && products.length === 0 && !error) {";
-  return (<div className="container py-8"> <motion.div initial= {{;
+/> <Button onClick={refresh ;
+> Try Again </Button> </div> </div>) ;
+//Empty state (only show when not loading and no products) if (!loading && products.length = = 0 && !error) {";
+  return (<div className="container py-8"> <motion.div initial= {;
   opacity: 0, y: 20 ;
-}animate= {{;
+animate= {;
   opacity: 1, y: 0 ;
-}";
-}className="text-center mb-8"> <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> {';
+";
+className="text-center mb-8"> <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> {';
   t ('marketplace && marketplace.hero title') ";
-}</h1> <p className="text-muted-foreground text-lg"> {';
+</h1> <p className="text-muted-foreground text-lg"> {';
   t ('marketplace.hero subtitle') ;
-}</p> </motion.div> <ProductsEmptyState /> </div>) ";
-}//Main marketplace render return (<div className="container py-8"> <AuthModal isOpen= {isAuthModalOpen ;
-}onClose= {() => setIsAuthModalOpen (false) ;
-}returnUrl= {router.asPath ;
-}//Pass current path for better UX on return /> {/* Header */ ";
-}<motion.div className="text-center mb-8"initial= {{;
+</p> </motion.div> <ProductsEmptyState /> </div>) ";
+//Main marketplace render return (<div className="container py-8"> <AuthModal isOpen= {isAuthModalOpen ;
+onClose= {() => setIsAuthModalOpen (false) ;
+returnUrl= {router.asPath ;
+//Pass current path for better UX on return /> {/* Header */ ";
+<motion.div className="text-center mb-8"initial= {;
   opacity: 0, y: -20 ;
-}animate= {{;
+animate= {;
   opacity: 1, y: 0 ;
-}";
-}> <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> {';
+";
+> <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> {';
   t ('marketplace && marketplace.hero title') ";
-}</h1> <p className="text-muted-foreground text-lg"> {';
+</h1> <p className="text-muted-foreground text-lg"> {';
   t ('marketplace.hero subtitle') ;
-}</p> </motion.div> {/* Market Insights */ ;
-}{marketStats && (<motion.div initial= {;
+</p> </motion.div> {/* Market Insights */ ;
+{marketStats && (<motion.div initial= {;
   {;
   opacity: 0, y: 20 ;
-}animate= {{;
+animate= {;
   opacity: 1, y: 0 ;
-}transition= {{;
+transition= {;
   delay: 0.2 ;
-}> <MarketInsights stats= {marketStats ;
-}/> </motion.div>) ;
-}{/* Filter Controls */ ;
-}<motion.div initial= {{;
+> <MarketInsights stats= {marketStats ;
+/> </motion.div>) ;
+{/* Filter Controls */ ;
+<motion.div initial= {;
   opacity: 0, y: 20 ;
-}animate= {{;
+animate= {;
   opacity: 1, y: 0 ;
-}transition= {{;
+transition= {;
   delay: 0.3 ;
-}> <FilterControls sortBy= {sortBy ;
-}setSortBy= {setSortBy ;
-}filterCategory= {filterCategory ;
-}setFilterCategory= {setFilterCategory ;
-}categories= {categories ;
-}priceRange= {priceRange ;
-}setPriceRange= {setPriceRange ;
-}minAiScore= {minAiScore ;
-}setMinAiScore= {setMinAiScore ;
-}minRating= {minRating ;
-}setMinRating= {setMinRating ;
-}filterAvailability= {filterAvailability ;
-}setFilterAvailability= {setFilterAvailability ;
-}availabilityOptions= {availabilityOptions.filter (Boolean) as string[] ;
-}filterLocation= {filterLocation ;
-}setFilterLocation= {setFilterLocation ;
-}locations= {locations ;
-}showRecommended= {showRecommended ;
-}setShowRecommended= {setShowRecommended ;
-}loading= {isFetching ;
-}/> </motion.div> {/* Product Grid */ ;
-}<motion.div > <ProductCard product= {{';
+> <FilterControls sortBy= {sortBy ;
+setSortBy= {setSortBy ;
+filterCategory= {filterCategory ;
+setFilterCategory= {setFilterCategory ;
+categories= {categories ;
+priceRange= {priceRange ;
+setPriceRange= {setPriceRange ;
+minAiScore= {minAiScore ;
+setMinAiScore= {setMinAiScore ;
+minRating= {minRating ;
+setMinRating= {setMinRating ;
+filterAvailability= {filterAvailability ;
+setFilterAvailability= {setFilterAvailability ;
+availabilityOptions= {availabilityOptions.filter (Boolean) as string[] ;
+filterLocation= {filterLocation ;
+setFilterLocation= {setFilterLocation ;
+locations= {locations ;
+showRecommended= {showRecommended ;
+setShowRecommended= {setShowRecommended ;
+loading= {isFetching ;
+/> </motion.div> {/* Product Grid */ ;
+<motion.div > <ProductCard product= {';
   id: product.id, name: product.title, title: product.title, description: product.description |'', price: product.price |0, currency: product.currency, category: product.category, tags: product.tags, images: product.images, rating: product.rating |0, reviewCount: product.reviewCount |0, created at: product.createdAt, updated at: product.createdAt,  //Use createdAt for both stock: product.stock, in stock: (product.stock |0) > 0 ;
-}onBuy= {async () => {;
+onBuy= {async () => {;
   if (!isAuthenticated) {;
   //though ProductCard will reset its state in .finally () regardless. throw error ;
-}buyDisabled= {false ;
-}//Still false, ProductCard handles its own disabled state based on auth /> {/* AI Score Badge */ ;
-}{";
+buyDisabled= {false ;
+//Still false, ProductCard handles its own disabled state based on auth /> {/* AI Score Badge */ ;
+{";
   product.aiScore && product.aiScore > 90 && (<Badge className="absolute -top-2 -right-2 bg-gradient-to-r from-yellow-500 to-orange-500 z-10 text-black"> <Sparkles className="h-3 w-3 mr-1"/> AI {product.aiScore ;
-}</Badge>) ;
-}{/* Featured Badge */ ;
-}{";
+</Badge>) ;
+{/* Featured Badge */ ;
+{";
   product.featured && (<Badge className="absolute top-2 left-2 bg-gradient-to-r from-blue-500 to-purple-500 z-10"> <Star className="h-3 w-3 mr-1"/> Featured </Badge>) ;
-}</motion.div>) ) ;
-}</AnimatePresence> </motion.div> {/* Loading More Indicator */ ;
-}{";
-  (isFetching |loading) && (<motion.div className="mt-8"initial= {{;
+</motion.div>) ;
+</AnimatePresence> </motion.div> {/* Loading More Indicator */ ;
+{";
+  (isFetching |loading) && (<motion.div className="mt-8"initial= {;
   opacity: 0 ;
-}animate= {{;
+animate= {;
   opacity: 1 ;
-}";
-}> <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"> {Array.from ({;
+";
+> <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"> {Array.from ({;
   length: 4 ;
-}) .map ( (, i) => (<SkeletonCard key= {`loading-$ {;
+) .map (, i) => (<SkeletonCard key= {`loading-$ {;
   i ;
-}` ;
-}/>) ) ;
-}</div> </motion.div>) ;
-}{/* End of Results */ ;
-}{";
-  !hasMore && products.length > 0 && (<motion.div className="text-center mt-12 py-8 border-t"initial= {{;
+` ;
+/>) ;
+</div> </motion.div>) ;
+{/* End of Results */ ;
+{";
+  !hasMore && products.length > 0 && (<motion.div className="text-center mt-12 py-8 border-t"initial= {;
   opacity: 0 ;
-}animate= {{;
+animate= {;
   opacity: 1 ;
-}'";
-}> <div className="text-muted-foreground text-lg mb-2">  You've explored all available products! </div> <div className="text-sm text-muted-foreground"> Showing {products.length ;
-}AI-powered solutions </div> </motion.div>) ;
-}{/* Scroll to Top Button */ ;
-}<AnimatePresence> {showScrollTop && (<motion.button onClick={;
+'";
+> <div className="text-muted-foreground text-lg mb-2">  You've explored all available products! </div> <div className="text-sm text-muted-foreground"> Showing {products.length ;
+AI-powered solutions </div> </motion.div>) ;
+{/* Scroll to Top Button */ ;
+<AnimatePresence> {showScrollTop && (<motion.button onClick={;
   scrollToTop ";
-}className="fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50"initial= {{;
+className="fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50"initial= {;
   opacity: 0, scale: 0 ;
-}animate= {{;
+animate= {;
   opacity: 1, scale: 1 ;
-}exit= {{;
+exit= {;
   opacity: 0, scale: 0 ;
-}whileHover= {{;
+whileHover= {;
   scale: 1.1 ;
-}whileTap= {{;
+whileTap= {;
   scale: 0.9 ;
-}";
-}> <ArrowUp className="h-5 w-5 text-primary-foreground" /> </motion.button>) ;
-}</AnimatePresence> </div>) ;
-}'";
+";
+> <ArrowUp className="h-5 w-5 text-primary-foreground" /> </motion.button>) ;
+</AnimatePresence> </div>) ;
+'";
   );
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 const Marketplace = () => {return (;
-}{
+{
   /* End of Results */ ;
-}{";
+{";
   !has_more && products.length > 0 && (<motion.div className="text - center mt - 12 py - 8 border - t"initial= {
-  {
   opacity: 0 ;
-;
-}animate= {
-  {
+
+animate= {
   opacity: 1 ;
-}'";
-}> <div className="text - muted - foreground text - lg mb - 2">  You've explored all available products! </div> <div className="text - sm text - muted - foreground"> Showing {
+'";
+> <div className="text - muted - foreground text - lg mb - 2">  You've explored all available products! </div> <div className="text - sm text - muted - foreground"> Showing {
   products.length ;
-}AI - powered solutions </div> </motion.div>) ;
-}{
+AI - powered solutions </div> </motion.div>) ;
+{
   /* Scroll to Top Button */ ;
-}<AnimatePresence> {
+<AnimatePresence> {
   showScrollTop && (<motion.button on_click={
   scrollToTop ";
-}className="fixed bottom - 8 right - 8 p - 3 bg - primary hover:bg - primary / 90 rounded - full shadow - lg z - 50"initial= {
-  {
+className="fixed bottom - 8 right - 8 p - 3 bg - primary hover:bg - primary / 90 rounded - full shadow - lg z - 50"initial= {
   opacity: 0, scale: 0 ;
-;
-}animate= {
-  {
+
+animate= {
   opacity: 1, scale: 1 ;
-;
-}exit= {
-  {
+
+exit= {
   opacity: 0, scale: 0 ;
-;
-}while_hover= {
-  {
+
+while_hover= {
   scale: 1.1 ;
-;
-}while_tap= {
-  {
+
+while_tap= {
   scale: 0.9 ;
-}";
-}> <ArrowUp className="h - 5 w - 5 text - primary - foreground" /> </motion.button>) ;
-}</AnimatePresence> </div>) ;
-}'");
+";
+> <ArrowUp className="h - 5 w - 5 text - primary - foreground" /> </motion.button>) ;
+</AnimatePresence> </div>) ;
+'");
 import React from './react';
 import Head from './next / head';
 import Link from './next / link';
@@ -1134,6 +1118,5 @@ const Marketplace = () =>: any {
             </div>;
     </>;
   );
-}
+
     </>);
-}

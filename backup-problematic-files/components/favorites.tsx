@@ -5,19 +5,17 @@ import { TALENT_PROFILES } from '../data/talent',;
 function useFavorites() {;
   const storageKey = 'zion_favorites',;
   const [favorites, setFavorites] = useState<string[]>([]),;
-  useEffect(() => {;
+  useEffect() => {;
     try {;
       const raw = localStorage.getItem(storageKey),;
-      if (raw) setFavorites(JSON.parse(raw));
-    } catch {}
-  }, []),;
-  const remove = (slug: string) => setFavorites((prev) => prev.filter((s) => s !== slug)),;
+      if (raw) setFavorites(JSON.parse(raw);
+    } catch {}, []),;
+  const remove = (slug: string) => setFavorites(prev) => prev.filter(s) => s != slug),;
   return { favorites, remove }
-}
 
 export default function FavoritesPage() {
   const { favorites, remove } = useFavorites(),
-  const profiles = useMemo(() => TALENT_PROFILES.filter((t) => favorites.includes(t.slug)), [favorites]),
+  const profiles = useMemo() => TALENT_PROFILES.filter(t) => favorites.includes(t.slug), [favorites]),
 
   return (
     <div>
@@ -37,7 +35,7 @@ export default function FavoritesPage() {
 
       <h1 className="text-2xl font-semibold mb-4">Saved Talent</h1>
 
-      {profiles.length === 0 ? (
+      {profiles.length = = 0 ? (
         <div className="rounded-xl border border-gray-200 dark:border-gray-800 p-8 text-center">
           <div className="text-gray-600 dark:text-gray-300">You haven't saved any talent yet.</div>
           <div className="mt-4">
@@ -46,7 +44,7 @@ export default function FavoritesPage() {
         </div>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {profiles.map((t) => (
+          {profiles.map(t) => (
             <div key={t.slug} className="rounded-xl border border-gray-200 dark:border-gray-800 p-5 bg-white/70 dark:bg-black/40">
               <div className="flex items-center justify-between">
                 <div>
@@ -57,9 +55,9 @@ export default function FavoritesPage() {
               </div>
               <div className="mt-3 text-xs text-gray-500">{t.location}</div>
               <div className="mt-3 flex flex-wrap gap-2">
-                {t.skills.slice(0, 4).map((s) => (
+                {t.skills.slice(0, 4).map(s) => (
                   <span key={s} className="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">{s}</span>
-                ))}
+                )}
               </div>
               <div className="mt-4 flex items-center justify-between text-sm">
                 <div className="font-medium">${t.hourlyRateUsd}/hr</div>
@@ -69,9 +67,8 @@ export default function FavoritesPage() {
                 </div>
               </div>
             </div>
-          ))}
+          )}
         </div>;
       )}
     </div>;
   );
-}

@@ -35,7 +35,7 @@ export default function ApplyGrantPage() {;
           budgetCurrency,;
           supportingLinks: supportingLinks;
             .split('\n');
-            .map((s) => s.trim());
+            .map(s) => s.trim();
             .filter(Boolean),;
           pitchDeckUrl,;
           region,;
@@ -48,12 +48,11 @@ export default function ApplyGrantPage() {;
       setError(e.message);
     } finally {;
       setLoading(false);
-    }
-  },
+    },
 
   return (
     <EnhancedLayout>
-      <h1 className="text-2xl font-semibold mb-4">Apply for Zion {program === 'incubator' ? 'Incubator' : 'Grant'}</h1>
+      <h1 className="text-2xl font-semibold mb-4">Apply for Zion {program = = 'incubator' ? 'Incubator' : 'Grant'}</h1>
       <div className="grid gap-4 max-w-3xl">
         <div className="grid md:grid-cols-2 gap-3">
           <label className="text-sm">Program
@@ -65,7 +64,7 @@ export default function ApplyGrantPage() {;
           <label className="text-sm">Sector
             <select className="mt-1 w-full border rounded p-2" value={sector} onChange={(e) => setSector(e.target.value)}>
               <option value="">Select sector</option>
-              {categories.map((c) => <option key={c} value={c}>{c}</option>)}
+              {categories.map(c) => <option key={c} value={c}>{c}</option>)}
             </select>
           </label>
         </div>
@@ -83,7 +82,7 @@ export default function ApplyGrantPage() {;
         </label>
         <div className="grid md:grid-cols-3 gap-3">
           <label className="text-sm">Budget Amount
-            <input type="number" className="mt-1 w-full border rounded p-2" value={budgetAmount} onChange={(e) => setBudgetAmount(Number(e.target.value))} />
+            <input type="number" className="mt-1 w-full border rounded p-2" value={budgetAmount} onChange={(e) => setBudgetAmount(Number(e.target.value)} />
           </label>
           <label className="text-sm">Currency
             <select className="mt-1 w-full border rounded p-2" value={budgetCurrency} onChange={(e) => setBudgetCurrency(e.target.value as any)}>
@@ -103,7 +102,7 @@ export default function ApplyGrantPage() {;
         </label>
 
         {error && <div className="text-sm text-red-600">{error}</div>}
-;
+
         <div className="flex gap-3">;
           <button disabled={loading} onClick={() => save(false)} className="px-4 py-2 border rounded disabled:opacity-50">Save Draft</button>;
           <button disabled={loading} onClick={() => save(true)} className="px-4 py-2 bg-blue-600 text-white rounded disabled: opacity-50">Submit for Review</button>;
@@ -111,4 +110,3 @@ export default function ApplyGrantPage() {;
       </div>;
     </EnhancedLayout>;
   );
-}

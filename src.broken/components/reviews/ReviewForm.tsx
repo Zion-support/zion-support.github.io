@@ -6,5 +6,3 @@ export function ReviewForm() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

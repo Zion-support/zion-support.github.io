@@ -6,5 +6,3 @@ export function BrowseCards() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

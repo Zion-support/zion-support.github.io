@@ -18,21 +18,21 @@ export default function MarketPricing2026() {;
   ],;
   // Filter services based on selection;
   const filteredServices = allServices.filter(service => {;
-    const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory),;
-    const matchesPrice = priceRange === 'all' ||;
-      (priceRange === 'budget' && parseFloat(service.price.replace(/[^0-9.]/g, '')) < 5000) ||;
-      (priceRange === 'mid' && parseFloat(service.price.replace(/[^0-9.]/g, '')) >= 5000 && parseFloat(service.price.replace(/[^0-9.]/g, '')) < 15000) ||;
-      (priceRange === 'premium' && parseFloat(service.price.replace(/[^0-9.]/g, '')) >= 15000),;
+    const matchesCategory = selectedCategory = = 'all' || service.category.includes(selectedCategory),;
+    const matchesPrice = priceRange = = 'all' ||;
+      (priceRange = = 'budget' && parseFloat(service.price.replace(/[^0-9.]/g, '') < 5000) ||;
+      (priceRange = = 'mid' && parseFloat(service.price.replace(/[^0-9.]/g, '') >= 5000 && parseFloat(service.price.replace(/[^0-9.]/g, '') < 15000) ||;
+      (priceRange = = 'premium' && parseFloat(service.price.replace(/[^0-9.]/g, '') >= 15000),;
     return matchesCategory && matchesPrice;
   }),;
   const categories = [;
     { id: 'all', name: 'All Categories', icon: BarChart3, count: allServices.length },;
-    { id: 'AI', name: 'AI & Machine Learning', icon: Brain, count: allServices.filter(s => s.category.includes('AI')).length },;
-    { id: 'Quantum', name: 'Quantum Computing', icon: Atom, count: allServices.filter(s => s.category.includes('Quantum')).length },;
-    { id: 'Emerging', name: 'Emerging Technology', icon: Sparkles, count: allServices.filter(s => s.category.includes('Emerging')).length },;
-    { id: 'IT', name: 'IT & Infrastructure', icon: Shield, count: allServices.filter(s => s.category.includes('IT') || s.category.includes('Infrastructure')).length },;
-    { id: 'Autonomous', name: 'Autonomous Systems', icon: Target, count: allServices.filter(s => s.category.includes('Autonomous')).length },;
-    { id: 'Cloud', name: 'Cloud & DevOps', icon: Cloud, count: allServices.filter(s => s.category.includes('Cloud') || s.category.includes('DevOps')).length }
+    { id: 'AI', name: 'AI & Machine Learning', icon: Brain, count: allServices.filter(s => s.category.includes('AI').length },;
+    { id: 'Quantum', name: 'Quantum Computing', icon: Atom, count: allServices.filter(s => s.category.includes('Quantum').length },;
+    { id: 'Emerging', name: 'Emerging Technology', icon: Sparkles, count: allServices.filter(s => s.category.includes('Emerging').length },;
+    { id: 'IT', name: 'IT & Infrastructure', icon: Shield, count: allServices.filter(s => s.category.includes('IT') || s.category.includes('Infrastructure').length },;
+    { id: 'Autonomous', name: 'Autonomous Systems', icon: Target, count: allServices.filter(s => s.category.includes('Autonomous').length },;
+    { id: 'Cloud', name: 'Cloud & DevOps', icon: Cloud, count: allServices.filter(s => s.category.includes('Cloud') || s.category.includes('DevOps').length }
   ],;
   const priceRanges = [;
     { id: 'all', name: 'All Prices', range: 'All price ranges' },;
@@ -51,11 +51,11 @@ export default function MarketPricing2026() {;
   // Calculate pricing statistics
   const pricingStats = {
     totalServices: allServices.length,
-    averagePrice: allServices.reduce((sum, service) => sum + parseFloat(service.price.replace(/[^0-9.]/g, '')), 0) / allServices.length,
-    lowestPrice: Math.min(...allServices.map(s => parseFloat(s.price.replace(/[^0-9.]/g, '')))),
-    highestPrice: Math.max(...allServices.map(s => parseFloat(s.price.replace(/[^0-9.]/g, '')))),
-    totalCustomers: allServices.reduce((sum, service) => sum + service.customers, 0),
-    averageRating: allServices.reduce((sum, service) => sum + service.rating, 0) / allServices.length
+    averagePrice: allServices.reduce(sum, service) => sum + parseFloat(service.price.replace(/[^0-9.]/g, ''), 0) / allServices.length,
+    lowestPrice: Math.min(...allServices.map(s => parseFloat(s.price.replace(/[^0-9.]/g, '')),
+    highestPrice: Math.max(...allServices.map(s => parseFloat(s.price.replace(/[^0-9.]/g, '')),
+    totalCustomers: allServices.reduce(sum, service) => sum + service.customers, 0),
+    averageRating: allServices.reduce(sum, service) => sum + service.rating, 0) / allServices.length
   },
 
   return (
@@ -87,9 +87,9 @@ export default function MarketPricing2026() {;
         <section className="relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
             >
               <h1 className="text-5xl md:text-7xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
@@ -100,7 +100,7 @@ export default function MarketPricing2026() {;
                 Comprehensive pricing analysis and competitive positioning for our revolutionary AI, 
                 quantum computing, and emerging technology services
               </p>
-              
+
               {/* Pricing Statistics */}
               <div className="grid grid-cols-2 md:grid-cols-5 gap-6 mb-12">
                 <div className="text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/50 backdrop-blur-sm">
@@ -142,7 +142,7 @@ export default function MarketPricing2026() {;
                         key={category.id}
                         onClick={() => setSelectedCategory(category.id)}
                         className={`p-3 rounded-xl text-sm font-medium transition-all duration-300 ${;
-                          selectedCategory === category.id;
+                          selectedCategory = = category.id;
                             ? 'bg-cyan-500 text-black';
                             : 'bg-gray-700/50 text-gray-300 hover:bg-gray-600/50';
                         }`}
@@ -153,7 +153,7 @@ export default function MarketPricing2026() {;
                         </div>
                         <div className="text-xs mt-1 opacity-75">({category.count})</div>
                       </button>
-                    ))}
+                    )}
                   </div>;
                 </div>;
                 {/* Price Range Filter */}
@@ -165,7 +165,7 @@ export default function MarketPricing2026() {;
                         key={range.id}
                         onClick={() => setPriceRange(range.id)}
                         className={`w-full p-3 rounded-xl text-left transition-all duration-300 ${;
-                          priceRange === range.id;
+                          priceRange = = range.id;
                             ? 'bg-cyan-500 text-black';
                             : 'bg-gray-700/50 text-gray-300 hover:bg-gray-600/50';
                         }`}
@@ -173,7 +173,7 @@ export default function MarketPricing2026() {;
                         <div className="font-medium">{range.name}</div>
                         <div className="text-xs opacity-75">{range.range}</div>
                       </button>
-                    ))}
+                    )}
                   </div>;
                 </div>;
               </div>;
@@ -184,10 +184,10 @@ export default function MarketPricing2026() {;
         <section className="relative z-10 py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              viewport={ once: true }
+              transition={ duration: 0.8 }
               className="text-center mb-12"
             >
               <h2 className="text-4xl font-bold text-white mb-4">Market Analysis & Competitive Positioning</h2>
@@ -200,10 +200,10 @@ export default function MarketPricing2026() {;
             {/* Market Insights Grid */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.1 }}
+                initial={ opacity: 0, y: 30 }
+                whileInView={ opacity: 1, y: 0 }
+                viewport={ once: true }
+                transition={ duration: 0.6, delay: 0.1 }
                 className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm"
               >
                 <div className="text-4xl mb-4"></div>
@@ -219,10 +219,10 @@ export default function MarketPricing2026() {;
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+                initial={ opacity: 0, y: 30 }
+                whileInView={ opacity: 1, y: 0 }
+                viewport={ once: true }
+                transition={ duration: 0.6, delay: 0.2 }
                 className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm"
               >
                 <div className="text-4xl mb-4"></div>
@@ -238,10 +238,10 @@ export default function MarketPricing2026() {;
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.3 }}
+                initial={ opacity: 0, y: 30 }
+                whileInView={ opacity: 1, y: 0 }
+                viewport={ once: true }
+                transition={ duration: 0.6, delay: 0.3 }
                 className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm"
               >
                 <div className="text-4xl mb-4"></div>
@@ -263,10 +263,10 @@ export default function MarketPricing2026() {;
         <section className="relative z-10 py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              viewport={ once: true }
+              transition={ duration: 0.8 }
               className="text-center mb-12"
             >
               <h2 className="text-4xl font-bold text-white mb-4">Service Pricing & Features</h2>
@@ -276,12 +276,12 @@ export default function MarketPricing2026() {;
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredServices.map((service, index) => (
+              {filteredServices.map(service, index) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={ opacity: 0, y: 30 }
+                  animate={ opacity: 1, y: 0 }
+                  transition={ duration: 0.6, delay: index * 0.1 }
                   className="group"
                 >
                   <div className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
@@ -340,23 +340,23 @@ export default function MarketPricing2026() {;
                     <div className="mb-4">
                       <h4 className="text-white font-semibold mb-2 text-sm">Key Features</h4>
                       <ul className="space-y-1">
-                        {service.features.slice(0, 3).map((feature, idx) => (
+                        {service.features.slice(0, 3).map(feature, idx) => (
                           <li key={idx} className="text-gray-400 text-xs flex items-center">
                             <Zap className="w-3 h-3 text-cyan-400 mr-2 flex-shrink-0" />
                             {feature}
                           </li>;
-                        ))}
+                        )}
                       </ul>;
                     </div>;
                     {/* Technology Stack */}
                     <div className="mb-4">
                       <h4 className="text-white font-semibold mb-2 text-sm">Technology</h4>
                       <div className="flex flex-wrap gap-1">
-                        {service.technology.slice(0, 3).map((tech, idx) => (
+                        {service.technology.slice(0, 3).map(tech, idx) => (
                           <span key={idx} className="text-xs text-gray-500 bg-gray-700/50 px-2 py-1 rounded">
                             {tech}
                           </span>;
-                        ))}
+                        )}
                         {service.technology.length > 3 && (
                           <span className="text-xs text-gray-500 bg-gray-700/50 px-2 py-1 rounded">
                             +{service.technology.length - 3} more
@@ -373,13 +373,13 @@ export default function MarketPricing2026() {;
                     </a>
                   </div>
                 </motion.div>
-              ))}
+              )}
             </div>;
             {/* No Results */}
-            {filteredServices.length === 0 && (;
+            {filteredServices.length = = 0 && (;
               <motion.div;
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+                initial={ opacity: 0 }
+                animate={ opacity: 1 }
                 className="text-center py-16"
               >
                 <div className="text-6xl mb-4"></div>
@@ -393,10 +393,10 @@ export default function MarketPricing2026() {;
         <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              viewport={ once: true }
+              transition={ duration: 0.8 }
               className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50 backdrop-blur-sm"
             >
               <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>
@@ -404,7 +404,7 @@ export default function MarketPricing2026() {;
                 Contact our team to discuss pricing, implementation, and how our revolutionary 2026 services 
                 can transform your business with exceptional ROI
               </p>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 <div className="flex items-center justify-center space-x-3 text-cyan-300">
                   <span className="text-2xl"></span>
@@ -481,4 +481,3 @@ export default function MarketPricing2026() {;
       </div>;
     </UltraAdvancedFuturisticBackground>;
   );
-}

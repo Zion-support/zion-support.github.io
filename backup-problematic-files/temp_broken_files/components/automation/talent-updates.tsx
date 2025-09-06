@@ -13,11 +13,10 @@ export async function getServerSideProps() {
     generatedAt = json.generatedAt || '',
     summaries = json.summaries || []
   } catch {}
-  return { props: { generatedAt, summaries } }
-}
+  return { props: { generatedAt, summaries }
 
 export default function TalentUpdatesPage({ generatedAt, summaries }: { generatedAt: string, summaries: TalentSummary[] }) {
-  const map = new Map(summaries.map(s => [s.slug, s.summary])),
+  const map = new Map(summaries.map(s => [s.slug, s.summary]),
   return (
     <div className=&quot;space-y-6&quot;>
       <h1 className=&quot;text-2xl font-semibold&quot;>AI Automation: Talent Summaries</h1>
@@ -28,7 +27,7 @@ export default function TalentUpdatesPage({ generatedAt, summaries }: { generate
           <div key={t.slug} className=&quot;border rounded p-4 space-y-1&quot;>
             <div className=&quot;font-medium&quot;>{t.name}  {t.title}</div>
             <div className=&quot;text-sm text-gray-700&quot;>{map.get(t.slug) || 'No AI summary yet.'}</div>          </div>
-        ))}
+        )}
       </div>
     </div>
   )}

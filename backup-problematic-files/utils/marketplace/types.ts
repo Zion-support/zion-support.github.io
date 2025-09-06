@@ -6,7 +6,7 @@ export type Milestone = {
   dueDateIso?: string,
   amountUsd?: number,
   status?: "planned" | "in-progress" | "done"
-},
+,
 
 export type OfferStatus =
   | "SENT"
@@ -26,7 +26,7 @@ export type Offer = {
   status: OfferStatus,
   changeRequestNote?: string,
   projectId?: string
-},
+,
 
 export type ProjectStatus = "ACTIVE" | "COMPLETED" | "ARCHIVED",
 
@@ -35,7 +35,7 @@ export type ProjectDocument = {
   name: string,
   url?: string,
   uploadedAtIso: string
-},
+,
 
 export type ProjectNote = {
   id: string,
@@ -43,4 +43,4 @@ export type ProjectNote = {
   authorRole: "client" | "talent",
   content: string,
   createdAtIso: string
-},
+,

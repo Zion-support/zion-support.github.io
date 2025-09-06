@@ -6,5 +6,3 @@ export function ProfileSkills() {;
       <p>Component placeholder - needs implementation</p>;
     </div>;
   );
-}
-;

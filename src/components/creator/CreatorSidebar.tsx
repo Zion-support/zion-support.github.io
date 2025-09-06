@@ -8,7 +8,7 @@ import {
   Search
   Settings
   Users
-} from 'lucide-react'; import {
+ from 'lucide-react'; import {
   Sidebar
   SidebarContent
   SidebarGroup
@@ -18,9 +18,9 @@ import {
   // SidebarMenuButton, // Removed
   // SidebarGroupLabel, // Not needed
   // SidebarGroupContent, // Not needed
-} from '@/components/ui/sidebar'
+ from '@/components/ui/sidebar'
   // SidebarGroupContent, // Not needed
-} from "@/components/ui/sidebar"
+ from "@/components/ui/sidebar"
   Sidebar
   SidebarContent
   SidebarGroup
@@ -29,7 +29,7 @@ import {
   // SidebarMenuButton, // Removed
   // SidebarGroupLabel, // Not needed
   // SidebarGroupContent, // Not needed
-} from "@/components/ui/sidebar"
+ from "@/components/ui/sidebar"
 export function AppSidebar() {
   return (
     <Sidebar>
@@ -85,7 +85,7 @@ export function AppSidebar() {
       </SidebarContent>
     </Sidebar>
   )
-}
+
 import {;
   Bell,;
   FileText,;
@@ -94,7 +94,7 @@ import {;
   Search,;
   Settings,;
   Users,;
-} from 'lucide-react';import {;
+ from 'lucide-react';import {;
   Sidebar,;
   SidebarContent,;
   SidebarGroup,;
@@ -103,9 +103,9 @@ import {;
   // SidebarMenuButton, // Removed;
   // SidebarGroupLabel, // Not needed;
   // SidebarGroupContent, // Not needed;
-} from '@/components/ui/sidebar';
+ from '@/components/ui/sidebar';
   // SidebarGroupContent, // Not needed;
-} from "@/components/ui/sidebar";
+ from "@/components/ui/sidebar";
 import {;
   Sidebar;
   SidebarContent;
@@ -115,7 +115,7 @@ import {;
   // SidebarMenuButton, // Removed;
   // SidebarGroupLabel, // Not needed;
   // SidebarGroupContent, // Not needed;
-} from "@/components/ui/sidebar";
+ from "@/components/ui/sidebar";
 
 export function AppSidebar() {;
   return (
@@ -176,9 +176,9 @@ export function AppSidebar() {;
       </SidebarContent>;
     </Sidebar>;
   );
-}
+
   );
-}
+
   Sidebar,
   SidebarContent,
   SidebarGroup,
@@ -187,9 +187,9 @@ export function AppSidebar() {;
   // SidebarMenuButton, // Removed;
   // SidebarGroupLabel, // Not needed;
   // SidebarGroupContent, // Not needed;
-} from '@/components / ui / sidebar';
+ from '@/components / ui / sidebar';
   // SidebarGroupContent, // Not needed;
-} from "@/components / ui / sidebar";
+ from "@/components / ui / sidebar";
   Sidebar;
   SidebarContent;
   SidebarGroup;
@@ -198,7 +198,7 @@ export function AppSidebar() {;
   // SidebarMenuButton, // Removed;
   // SidebarGroupLabel, // Not needed;
   // SidebarGroupContent, // Not needed;
-} from "@/components / ui / sidebar";
+ from "@/components / ui / sidebar";
 export /**
  * AppSidebar - Function description
  */
@@ -256,4 +256,3 @@ function AppSidebar() {
         </SidebarGroup>;
       </SidebarContent>;
     </Sidebar>);
-}

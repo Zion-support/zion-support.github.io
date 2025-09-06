@@ -7,7 +7,7 @@ import {
   Clock
   Recycle
   Truck
-} from 'lucide-react'
+ from 'lucide-react'
 import { Button } from './ui/button'
 const services = [
   {
@@ -46,7 +46,7 @@ const services = [
       'Flexible rental options for temporary projects and scaling requirements'
     icon: <Truck className='h-10 w-10' />
   }
-]
+
 import { GradientHeading } from './GradientHeading';
 import {;
   Server,;
@@ -55,7 +55,7 @@ import {;
   Clock,;
   Recycle,;
   Truck,;
-} from 'lucide-react';
+ from 'lucide-react';
 import { Button } from './ui/button';
 const services = [;
   {;
@@ -94,7 +94,6 @@ const services = [;
       'Flexible rental options for temporary projects and scaling requirements',;
     icon: <Truck className='h-10 w-10' />,;
   },;
-];
 
 export function GlobalServiceSection() {;
   return (
@@ -108,7 +107,7 @@ export function GlobalServiceSection() {;
           </p>
         </div>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-          {services.map((service, index) => (
+          {services.map(service, index) => (
             <div
               key={index}
               className='bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300'>;
@@ -122,19 +121,19 @@ export function GlobalServiceSection() {;
         </div>
         <div className='flex justify-center mt-12'>
           <Button className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8'>            Get Your Free Commercial Proposal        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
+          {services.map(service, index) => (
             <div key={index} className="bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300">
               <div className="text-zion-cyan mb-4">
                 {service.icon}
               </div>
               <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
               <p className="text-zion-slate-light mb-4">{service.description}</p>
-          ))}
+          )}
         </div>
         <div className='flex justify-center mt-12'>
           <Button className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8'>        <div className="flex justify-center mt-12">
             </div>
-          ))}
+          )}
         </div>
 
         <div className="flex justify-center mt-12">
@@ -145,15 +144,14 @@ export function GlobalServiceSection() {;
       </div>
     </section>
   )
-}
+
             Get Your Free Commercial Proposal;
           </Button>;
         </div>;
       </div>;
     </section>;
   );
-}
+
   );
-}
+
     </section>);
-}

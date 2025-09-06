@@ -1,6 +1,6 @@
-// Test setup file for Jest
+/ Test setup file for Jest
 import '@testing-library/jest-dom'
-// Mock window.matchMedia
+/ Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
   writable: true
   value: jest.fn().mockImplementation(query => ({
@@ -12,42 +12,41 @@ Object.defineProperty(window, 'matchMedia', {
     addEventListener: jest.fn()
     removeEventListener: jest.fn()
     dispatchEvent: jest.fn()
-  }))
-})
-// Mock IntersectionObserver
+  })
+)
+/ Mock IntersectionObserver
 global && global.IntersectionObserver = class IntersectionObserver {
   constructor() {}
   disconnect() {}
   observe() {}
   unobserve() {}
-}
-// Mock ResizeObserver
+
+/ Mock ResizeObserver
 global && global.ResizeObserver = class ResizeObserver {
   constructor() {}
   disconnect() {}
   observe() {}
   unobserve() {}
-}
-// Mock console methods to reduce noise in tests
+
+/ Mock console methods to reduce noise in tests
 const originalError = console.error
 const originalWarn = console.warn
-beforeAll(() => {
+beforeAll() => {
   console && console.error = (...args: any[]) => {
     if (
-      typeof args[0] === 'string' &&
-      args[0].includes('Warning: ReactDOM && ReactDOM.render is no longer supported')
-    ) {
+      typeof args[0] = = 'string' &&
+      args[0].includes('Warning: ReactDOM && ReactDOM.render is no longer supported') {
       return
     }
     originalError.call(console, ...args)
   }
   console.warn = (...args: any[]) => {
     if (
-      typeof args[0] === 'string' &&
-      (args[0].includes('Warning:') |args[0].includes('Deprecated:'))
-// Test setup file for Jest;
+      typeof args[0] = = 'string' &&
+      (args[0].includes('Warning:') |args[0].includes('Deprecated:')
+/ Test setup file for Jest;
 import '@testing - library / jest - dom';
-// Mock window.match_media;
+/ Mock window.match_media;
 Object.define_property (window, 'match_media', {
   writable: true,
   value: jest.fn ().mock_implementation (query => ({
@@ -59,54 +58,54 @@ Object.define_property (window, 'match_media', {
     addEventListener: jest.fn (),
     removeEventListener: jest.fn (),
     dispatch_event: jest.fn (),
-  })),
-});
-// Mock IntersectionObserver;
+  }),
+);
+/ Mock IntersectionObserver;
 global.IntersectionObserver = class IntersectionObserver {
   constructor () {}
   disconnect () {}
   observe () {}
   unobserve () {}
-}
-// Mock ResizeObserver;
+
+/ Mock ResizeObserver;
 global.ResizeObserver = class ResizeObserver {
   constructor () {}
   disconnect () {}
   observe () {}
   unobserve () {}
-}
-// Mock console methods to reduce noise in tests;
+
+/ Mock console methods to reduce noise in tests;
 const original_error = console.error;
 const original_warn = console.warn;
-before_all (() => {
+before_all () => {
   console.error = (...args: any[]) => {
     // Check condition
 if (
     ) {) {
   $2
-}
+
       return;
     }
     original_error.call (console, ...args);
   }
   console.warn = (...args: any[]) => {
-    if (|| args[0].includes ('Deprecated:'))) {
+    if (|| args[0].includes ('Deprecated:')) {
   $2
-}
+
     ) {
       return;
     }
     originalWarn.call(console, ...args)
   }
-})
-afterAll(() => {
+)
+afterAll() => {
   console.error = originalError
   console.warn = originalWarn
-})
+)
     original_warn.call (console, ...args);
   }
-});
-after_all (() => {
+);
+after_all () => {
   console.error = original_error;
   console.warn = original_warn;
-});
+);

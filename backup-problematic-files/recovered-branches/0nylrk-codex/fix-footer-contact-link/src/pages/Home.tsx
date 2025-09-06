@@ -12,7 +12,7 @@ import { HeroSection } from "@/components/HeroSection",;
 import { QuickAccess } from "@/components/home/QuickAccess",;
 import { FeatureCTAs } from "@/components/home/FeatureCTAs",;
 import { FeatureHighlights } from "@/components/home/FeatureHighlights",;
-;
+
 export default function Home() {;
   return (;
     <div className="min-h-screen bg-background">;
@@ -23,15 +23,10 @@ export default function Home() {;
         canonical="https://app.ziontechgroup.com/";
       />;
       <Header />;
-      ;
       <HeroSection />;
-      ;
       <QuickAccess />;
-      ;
       <FeatureCTAs />;
-      ;
       <FeatureHighlights />;
-      ;
       <CategoriesSection />;
       <BenefitsSection />;
       <HowItWorksSection />;
@@ -40,5 +35,5 @@ export default function Home() {;
       <Footer />;
     </div>;
   );
-} export default function Home () {
+ export default function Home () {
   return (<div className="min-h-screen bg-background" > 

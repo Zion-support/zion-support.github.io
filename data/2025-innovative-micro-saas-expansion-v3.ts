@@ -1,8 +1,7 @@
 import { ServiceVariant } from '../types/service-variants';
 
-
 import { ServiceVariant } from '../types / service - variants';
-;
+
   id: string;
   name: string;
   tagline: string;
@@ -49,9 +48,9 @@ const contact = {
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
-}
+
   website: 'https://ziontechgroup && ziontechgroup.com',
-};
+;
 
 export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] =
   [
@@ -1487,7 +1486,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] =
     rating: 4.9
     reviews: 28
   }
-];
+;
 
     color: 'from - gray - 600 to - slate - 700', text_color: 'text - gray - 400',
     link: 'https://ziontechgroup.com / autonomous - supply - chain - robotics',
@@ -1507,5 +1506,4 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] =
     rating: 4.9,
     reviews: 28;
   }
-];
 ;

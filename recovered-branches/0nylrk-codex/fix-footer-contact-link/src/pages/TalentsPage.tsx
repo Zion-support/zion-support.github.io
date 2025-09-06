@@ -1,6 +1,6 @@
 import { DynamicListingPage } from "@/components/DynamicListingPage";
 import { ProductListing } from "@/types/listings";
-// Sample talent listings
+/ Sample talent listings
 const TALENT_LISTINGS: ProductListing[] = [
   {
 
@@ -103,7 +103,7 @@ const TALENT_LISTINGS: ProductListing[] = [
     aiScore: 94
     rating: 4.9
     reviewCount: 21}]
-// Filter options specific to talents
+/ Filter options specific to talents
 const TALENT_FILTERS = [
   { label: 'Engineering', value: 'engineering' }
   { label: 'Data Science', value: 'data-science' }
@@ -120,10 +120,10 @@ export default function TalentsPage() {;
       categorySlug="talents"
       listings={TALENT_LISTINGS}
       categoryFilters={TALENT_FILTERS}
-      initialPrice={{ min: 100, max: 200 }}
+      initialPrice={ min: 100, max: 200 }
     />
   )
-}
+
       name: "Sarah Johnson",
       id: "sarah - johnson",
       avatar_url: "https://images.unsplash.com / photo - 1573496359142 - b8d87734a5a2?auto = format & fit = crop & w=100 & h=100"},
@@ -132,7 +132,7 @@ export default function TalentsPage() {;
     ai_score: 94,
     rating: 4.9,
     review_count: 21}],
-// Filter options specific to talents;
+/ Filter options specific to talents;
 const TALENT_FILTERS = [;
   { label: 'Engineering', value: 'engineering' },
   { label: 'Data Science', value: 'data - science' },
@@ -151,6 +151,5 @@ function TalentsPage() {
       category_slug="talents";
       listings={TALENT_LISTINGS}
       category_filters={TALENT_FILTERS}
-      initial_price={{ min: 100, max: 200 }}
+      initial_price={ min: 100, max: 200 }
     />);
-}

@@ -7,7 +7,6 @@ export function TrustBadge({ type }: { type: 'Verified' | 'Pro' | 'Top Rated' })
     <span className={`inline-flex items-center gap-1 px-2 py-1 text-xs font-medium rounded ${colorMap[type]}`}>
       <span className=&quot;leading-none&quot;>{type}</span>    </span>
   )
-}
 
 export function MicroTestimonial({ quote, author }: { quote: string, author: string }) {
   return (

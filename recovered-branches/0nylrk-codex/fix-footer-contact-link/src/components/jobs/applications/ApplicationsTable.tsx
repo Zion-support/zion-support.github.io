@@ -11,7 +11,7 @@ import {
   TableHead;
   TableHeader;
   TableRow
-} from "@/components/ui/table",
+ from "@/components/ui/table",
 import { ApplicationActions } from "./ApplicationActions",
 import { StatusBadge } from "./StatusBadge",
 import { Briefcase, User } from "lucide-react",
@@ -25,7 +25,7 @@ interface ApplicationsTableProps {
   onViewApplication: (applicationId: string) => Promise<void>
   onStatusChange: (applicationId: string, newStatus: string) => Promise<void>
   onViewScore: (application: JobApplication) => void
-}
+
 export function ApplicationsTable({
   applications
   processingId
@@ -33,7 +33,7 @@ export function ApplicationsTable({
 
   onStatusChange;
   onViewScore;
-}: ApplicationsTableProps) {;
+: ApplicationsTableProps) {;
   const [hireModalOpen, setHireModalOpen] = useState(false);
 
   const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null);
@@ -63,7 +63,7 @@ export function ApplicationsTable({
             </TableRow>;
           </TableHeader>;
           <TableBody>;
-            {applications.map ((application) => (
+            {applications.map (application) => (
               <TableRow key={application.id}>;
                 <TableCell>;
                   <div className="flex items - center gap - 3">;
@@ -94,7 +94,7 @@ export function ApplicationsTable({
                   <StatusBadge status={application.status} />
                 </TableCell>
                 <TableCell className="hidden lg:table-cell">
-                  {application.match_score !== undefined && application.match_score !== null ? (
+                  {application.match_score != undefined && application.match_score != null ? (
                     <ClickableBadge
                       variant="outline"
                       className="cursor-pointer"
@@ -139,7 +139,7 @@ export function ApplicationsTable({
                   <StatusBadge status={application.status} />;
                 </TableCell>;
                 <TableCell className="hidden lg:table - cell">;
-                  {application.match_score !== undefined && application.match_score !== null ? (
+                  {application.match_score != undefined && application.match_score != null ? (
                     <ClickableBadge;
                       variant="outline";
                       className="cursor - pointer";
@@ -167,7 +167,7 @@ export function ApplicationsTable({
                   </div>;
                 </TableCell>;
               </TableRow>;
-            ))}
+            )}
           </TableBody>
         </Table>
       </div>
@@ -180,8 +180,8 @@ export function ApplicationsTable({
       />
     </>
   )
-}
-              </TableRow>))}
+
+              </TableRow>)}
           </TableBody>;
         </Table>;
       </div>;
@@ -193,4 +193,3 @@ export function ApplicationsTable({
         on_confirm={handleHireConfirmed}
       />;
     </>);
-}

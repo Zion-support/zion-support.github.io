@@ -7,6 +7,5 @@ const AIAutonomousVision = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default AIAutonomousVision;

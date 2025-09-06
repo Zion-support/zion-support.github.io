@@ -1,11 +1,11 @@
-// Mock implementation for Sentry to prevent Node.js module import issues during build;
-// This mock provides all the necessary Sentry APIs without importing any Node.js modules;
-;
+/ Mock implementation for Sentry to prevent Node.js module import issues during build;
+/ This mock provides all the necessary Sentry APIs without importing any Node.js modules;
+
 const noop = () => {},;
 const noopReturn = () => null,;
 const noopPromise = () => Promise.resolve(),;
-;
-// Mock Sentry instance with all common methods;
+
+/ Mock Sentry instance with all common methods;
 const mockSentry = {;
   // Core Sentry methods;
   init:noop,;
@@ -23,71 +23,55 @@ const mockSentry = {;
   setContext:noop,;
   getCurrentHub:() => mockHub,;
   getClient:noopReturn,;
-  ;
   // Transaction and performance monitoring;
   startTransaction:() => mockTransaction,;
   finishTransaction:noop,;
-  ;
   // Error boundary and React integration;
   ErrorBoundary:({ children } any) => children,;
   withErrorBoundary:(component:any) => component,;
   showReportDialog:noop,;
-  ;
   // Browser-specific methods;
   onLoad:noop,;
   wrap:(fn:(...args:any[]) => any) => fn,;
-  ;
   // Server-specific methods (Node.js);
   Handlers:{;
     requestHandler:() => (_req:any, _res:any, next:(...args:any[]) => any) => next(),;
     errorHandler:() => (_err:any, _req:any, _res:any, next:(...args:any[]) => any) => next(),;
     tracingHandler:() => (_req:any, _res:any, next:(...args:any[]) => any) => next()},;
-  ;
   // Next.js specific;
   withSentryConfig:(config:any) => config,;
   SentryWebpackPlugin:class SentryWebpackPlugin {;
     constructor() {}
-    apply() {}
-  },;
-  ;
+    apply() {},;
   // Tracing;
   Tracing:{;
     BrowserTracing:class BrowserTracing {;
-      constructor() {}
-    }},;
-  ;
+      constructor() {}},;
   // Integrations;
   Integrations:{;
     BrowserTracing:class BrowserTracing {;
-      constructor() {}
-    },;
+      constructor() {},;
     Http:class Http {;
-      constructor() {}
-    },;
+      constructor() {},;
     OnUncaughtException:class OnUncaughtException {;
-      constructor() {}
-    },;
+      constructor() {},;
     OnUnhandledRejection:class OnUnhandledRejection {;
-      constructor() {}
-    }},;
-  ;
+      constructor() {}},;
   // Transport;
   makeBrowserOfflineTransport:noopReturn,;
   makeFetchTransport:noopReturn,;
-  ;
   // Utils;
   createTransport:noopReturn,;
   SDK_VERSION:'7.0.0-mock',;
-  ;
   // Constants;
   Severity:{;
     Fatal:'fatal',;
     Error:'error',;
     Warning:'warning',;
     Info:'info',;
-    Debug:'debug'}},;
-;
-// Mock scope;
+    Debug:'debug'},;
+
+/ Mock scope;
 const mockScope = {;
   setUser:noop,;
   setTag:noop,;
@@ -99,8 +83,8 @@ const mockScope = {;
   setFingerprint:noop,;
   clear:noop,;
   addEventProcessor:noop},;
-;
-// Mock transaction;
+
+/ Mock transaction;
 const mockTransaction = {;
   setName:noop,;
   setTag:noop,;
@@ -111,8 +95,8 @@ const mockTransaction = {;
   setHttpStatus:noop,;
   toContext:() => ({}),;
   updateWithContext:noop},;
-;
-// Mock hub;
+
+/ Mock hub;
 const mockHub = {;
   getClient:noopReturn,;
   getScope:() => mockScope,;
@@ -129,11 +113,11 @@ const mockHub = {;
   configureScope:noop,;
   withScope:(callback:(...args:any[]) => any) => callback(mockScope),;
   startTransaction:() => mockTransaction},;
-;
-// Export default mock that covers all Sentry packages;
+
+/ Export default mock that covers all Sentry packages;
 export default mockSentry,;
-;
-// Named exports for compatibility;
+
+/ Named exports for compatibility;
 export const init = mockSentry.init,;
 export const captureException = mockSentry.captureException,;
 export const captureMessage = mockSentry.captureMessage,;
@@ -165,61 +149,51 @@ export const makeFetchTransport = mockSentry.makeFetchTransport,;
 export const createTransport = mockSentry.createTransport,;
 export const SDK_VERSION = mockSentry.SDK_VERSION,;
 export const Severity = mockSentry.Severity,;
-;
-// Additional exports for compatibility;
+
+/ Additional exports for compatibility;
 export { mockSentry as Sentry },;
-;// All exports are already defined above
-// Mock implementation for Sentry to prevent Node.js module import issues during build // This mock provides all the necessary Sentry APIs without importing any Node.js modules // Mock Sentry instance with all common methods const mockSentry = {;
+// All exports are already defined above
+/ Mock implementation for Sentry to prevent Node.js module import issues during build // This mock provides all the necessary Sentry APIs without importing any Node.js modules // Mock Sentry instance with all common methods const mockSentry = {;
   // Core Sentry methods init: noop, captureException: noop, captureMessage: noop, captureEvent: noop, addBreadcrumb: noop, configureScope: noop, withScope: (callback: (...args: unknown[]) => any) => callback (mockScope), setUser: noop, setTag: noop, setTags: noop, setExtra: noop, setExtras: noop, setContext: noop, getCurrentHub: () => mockHub, getClient: noopReturn, // Transaction and performance monitoring startTransaction: () => mockTransaction,  finishTransaction: noop, // Error boundary and React integration ErrorBoundary: ({;
   children ;
-}: unknown) => children;
+: unknown) => children;
 withErrorBoundary: (component: unknown) => component;
 showReportDialog: noop;
-// Browser-specific methods onLoad: noop;
+/ Browser-specific methods onLoad: noop;
 wrap: (fn: (...args: unknown[]) => any) => fn;
-// Server-specific methods (Node.js) Handlers: {;
+/ Server-specific methods (Node.js) Handlers: {;
   requestHandler: () => (req: unknown, res: unknown, next: (...args: unknown[]) => any) => next (), errorHandler: () => (err: unknown, req: unknown, res: unknown, next: (...args: unknown[]) => any) => next (), tracingHandler: () => (req: unknown,  res: unknown, next: (...args: unknown[]) => any) => next () ;
-};
-// Next.js specific withSentryConfig: (config: unknown) => config;
+/ Next.js specific withSentryConfig: (config: unknown) => config;
 SentryWebpackPlugin: class SentryWebpackPlugin {;
   constructor () {;
-  ;
-}apply () {;
-  ;
-}
-};
-// Tracing Tracing: {;
+apply () {;
+
+;
+/ Tracing Tracing: {;
   BrowserTracing: class BrowserTracing {;
   constructor () {;
-  ;
-}
-}
-};
-// Integrations Integrations: {;
+
+;
+/ Integrations Integrations: {;
   BrowserTracing: class BrowserTracing {;
   constructor () {;
-  ;
-}
-};
+
+;
 Http: class Http {;
   constructor () {;
-  ;
-}
-};
+
+;
 OnUncaughtException: class OnUncaughtException {;
   constructor () {;
-  ;
-}
-};
+
+;
 OnUnhandledRejection: class OnUnhandledRejection {;
   constructor () {;
-  ;
-}
-}
-};
-// Transport makeBrowserOfflineTransport: noopReturn;
+
+;
+/ Transport makeBrowserOfflineTransport: noopReturn;
 makeFetchTransport: noopReturn;
-// Utils createTransport: noopReturn;
+/ Utils createTransport: noopReturn;
 SDK VERSION: '7.0.0-mock';
-// Constants // Export default mock that covers all Sentry packages export default mockSentry;
-// Named exports for compatibility // All exports are already defined above'
+/ Constants // Export default mock that covers all Sentry packages export default mockSentry;
+/ Named exports for compatibility // All exports are already defined above'

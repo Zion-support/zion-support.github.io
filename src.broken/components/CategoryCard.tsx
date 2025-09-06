@@ -6,5 +6,3 @@ export function CategoryCard() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

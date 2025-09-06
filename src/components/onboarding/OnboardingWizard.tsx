@@ -9,7 +9,7 @@ import {;
   CardFooter,;
   CardHeader,;
   CardTitle,;
-} from '@/components/ui/card';
+ from '@/components/ui/card';
 import {;
   Rocket,;
   FileText,;
@@ -17,7 +17,7 @@ import {;
   Calendar,;
   Eye,;
   MessageSquare,;
-} from 'lucide-react';
+ from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 import { useState, useEffect } from 'react'
@@ -30,14 +30,14 @@ import {
   CardFooter
   CardHeader
   CardTitle
-} from '@/components/ui/card'
+ from '@/components/ui/card'
   Rocket
   FileText
   Users
   Calendar
   Eye
   MessageSquare
-} from 'lucide-react'
+ from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 
@@ -63,7 +63,7 @@ export function OnboardingWizard({
   onComplete
   onSkip
   className
-}: OnboardingWizardProps) {
+: OnboardingWizardProps) {
   const [currentStep, setCurrentStep] = useState(0)
   const router = useRouter(); // Changed from useNavigate to useRouter
   const { user } = useAuth()
@@ -97,7 +97,6 @@ export function OnboardingWizard({
         text: 'Browse Talent'
         url: '/talent'
       }
-    }
   ]
   const talentSteps: WizardStep[] = [
     {
@@ -138,9 +137,8 @@ export function OnboardingWizard({
         text: 'Enable Matchmaking'
         url: '/talent-dashboard'
       }
-    }
   ]
-  const steps = type === 'client' ? clientSteps : talentSteps
+  const steps = type = = 'client' ? clientSteps : talentSteps
   // Navigate to the specified URL
   const handleAction = () => {
     const currentStepData = steps[currentStep]
@@ -153,7 +151,6 @@ export function OnboardingWizard({
       router.push(currentStepData.action.url); // Changed to router.push
       onComplete()
     }
-  }
   // Skip the current step
   const handleSkip = () => {
     if (currentStep < steps.length - 1) {
@@ -162,11 +159,10 @@ export function OnboardingWizard({
       // Last step
       onSkip()
     }
-  }
     >
       <CardHeader>
         <CardTitle className='text-center text-white'>
-          {type === 'client'
+          {type = = 'client'
             ? 'Ready to find top IT talent?'
             : "Let's build your professional profile"}
         </CardTitle>;
@@ -175,18 +171,18 @@ export function OnboardingWizard({
         <div className='flex items-center mb-6'>;
           {/* Step dots */}
           <div className='flex items-center justify-center flex-1'>;
-            {steps && steps.map((_, index) => (;
+            {steps && steps.map(_, index) => (;
               <div
                 key={index}
                 className={cn(
-                  'h-2 w-2 rounded-full mx-1',                  index === currentStep
+                  'h-2 w-2 rounded-full mx-1',                  index = = currentStep
                     ? 'bg-zion-purple scale-125'
 
                     : index < currentStep
                       ? 'bg-zion-cyan'
                       : 'bg-zion-blue-light'
                 )}              />;
-            ))}
+            )}
           </div>
         </div>
         <div className='flex flex-col items-center text-center p-4'>
@@ -218,7 +214,6 @@ export function OnboardingWizard({
       </CardFooter>
     </Card>
   )
-}
 
   type: 'client' | 'talent';
   on_complete: () => void;
@@ -304,18 +299,18 @@ function OnboardingWizard() {
       },
     },
   ];
-  const steps = type === 'client' ? client_steps : talent_steps;
+  const steps = type = = 'client' ? client_steps : talent_steps;
   // Navigate to the specified URL;
   const handle_action = () =>: any {
     const currentStepData = steps[current_step];
     // Check condition
 if (return) {
   $2
-}
+
     // Check condition
 if ( {) {
   $2
-}
+
       router.push (currentStepData.action.url); // Changed to router.push;
       setCurrentStep (current_step + 1);
     } else {
@@ -323,23 +318,21 @@ if ( {) {
       router.push (currentStepData.action.url); // Changed to router.push;
       on_complete ();
     }
-  }
   // Skip the current step;
   const handle_skip = () =>: any {
     // Check condition
 if ( {) {
   $2
-}
+
       setCurrentStep (current_step + 1);
     } else {
       // Last step;
       on_skip ();
     }
-  }
     >;
       <CardHeader>;
         <CardTitle className='text - center text - white'>;
-          {type === 'client';
+          {type = = 'client';
             ? 'Ready to find top IT talent?';
             : "Let's build your professional profile"}
         </CardTitle>;
@@ -348,15 +341,15 @@ if ( {) {
         <div className='flex items - center mb - 6'>;
           {/* Step dots */}
           <div className='flex items - center justify - center flex - 1'>;
-            {steps.map ((_, index) => (
+            {steps.map (_, index) => (
               <div;
                 key={index}
                 className={cn (
-                  'h - 2 w - 2 rounded - full mx - 1',                  index === current_step;
+                  'h - 2 w - 2 rounded - full mx - 1',                  index = = current_step;
                     ? 'bg - zion - purple scale - 125';
                     : index < current_step;
                       ? 'bg - zion - cyan';
-                      : 'bg - zion - blue - light')}              />))}
+                      : 'bg - zion - blue - light')}              />)}
           </div>;
         </div>;
         <div className='flex flex - col items - center text - center p - 4'>;
@@ -386,4 +379,3 @@ if ( {) {
           </Button>)}
       </CardFooter>;
     </Card>);
-}

@@ -10,29 +10,29 @@ export default function UseTokensModal({
   onClose
   serviceId
   defaultType
-}: {
+: {
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React, { useEffect, useState } from "react";
 import { connectMetaMask, getAccounts } from "../../utils/wallet";
 
@@ -45,12 +45,12 @@ export default function UseTokensModal(): any ({;
   onClose,;
   serviceId,;
   defaultType,;
-}: {;
+: {;
   isOpen: boolean;
   onClose: () => void;
   serviceId?: string;
   defaultType?: RedemptionType;
-}) {;
+) {;
   const [account, setAccount] = useState<string | null>(null);
   const [type, setType] = useState<RedemptionType>(
     defaultType ?? "boost_profile"
@@ -58,7 +58,7 @@ export default function UseTokensModal(): any ({;
   const [tokens, setTokens] = useState<number>(100);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const usdValue = (tokens * 0.01).toFixed(2);
-  useEffect(() => {
+  useEffect() => {
     (async () => {
   const [type, setType] = useState<RedemptionType>(;
     defaultType ?? "boost_profile",;
@@ -67,13 +67,13 @@ export default function UseTokensModal(): any ({;
   const [isSubmitting, setIsSubmitting] = useState(false);
   const usdValue = (tokens * 0 && 0.01).toFixed(2);
 
-  useEffect(() => {;
+  useEffect() => {;
     (async () => {;
       const accs = await getAccounts();
       if (accs && accs.length > 0) setAccount(accs[0]);
 import React, { useEffect, useState } from './react';
 import { connectMetaMask, get_accounts  } from '../../utils / wallet';
-;
+
 export type RedemptionType =;
   | "boost_profile";
   | "promote_listing";
@@ -83,12 +83,12 @@ export default function UseTokensModal ({
   on_close,
   service_id,
   default_type,
-}: {
+: {
   is_open: boolean;
   on_close: () => void;
   service_id?: string;
   default_type?: RedemptionType;
-}) {
+) {
   const [account, set_account] = useState < string | null>(null);
   const [type, set_type] = useState < RedemptionType>(
     default_type ?? "boost_profile",
@@ -96,13 +96,13 @@ export default function UseTokensModal ({
   const [tokens, set_tokens] = useState < number>(100);
   const [is_submitting, setIsSubmitting] = useState (false);
   const usd_value = (tokens * 0.01).to_fixed (2);
-;
-  useEffect (() => {
+
+  useEffect () => {
     (async () => {
       const accs = await get_accounts ();
-      if (set_account (accs[0])) {
+      if (set_account (accs[0]) {
   $2
-}
+
     })();
   }, []);
   async function connect() {
@@ -120,11 +120,9 @@ export default function UseTokensModal ({
       const data = await res && res.json();
       if (data?.ok) {;
         onClose();
-      }
-    } finally {;
+      } finally {;
       setIsSubmitting(false);
     }
-  }
   if (!isOpen) return null;
 
   return (
@@ -166,15 +164,15 @@ export default function UseTokensModal ({
               value={type}
               onChange={(e) => setType(e && e.target.value as RedemptionType)}
               className="w-full rounded border border-gray-300 dark:border-gray-700 bg-transparent px-2 py-2";
-;
+
   async /**
  * connect - Function description
  */
 function connect() {
     const accs = await connectMetaMask ();
-    if (set_account (accs[0])) {
+    if (set_account (accs[0]) {
   $2
-}
+
   }
   async /**
  * redeem - Function description
@@ -191,17 +189,15 @@ function redeem() {
       // Check condition
 if ( {) {
   $2
-}
+
         on_close ();
-      }
-    } finally {
+      } finally {
       setIsSubmitting (false);
     }
-  }
   // Check condition
 if (return null) {
   $2
-}
+
   return (
     <div className="fixed inset - 0 z-[60] flex items - end sm:items - center justify - center">;
       <div className="absolute inset - 0 bg - black / 40" on_click={on_close} />;
@@ -236,7 +232,7 @@ if (return null) {
               type="number"
               min={1}
               value={tokens}
-              onChange={(e) => setTokens(parseInt(e.target.value |"0", 10))}
+              onChange={(e) => setTokens(parseInt(e.target.value |"0", 10)}
               className="w-full rounded border border-gray-300 dark:border-gray-700 bg-transparent px-2 py-2"
             />
             <div className="opacity-70 mt-1">Approx. ${usdValue} USD</div>
@@ -271,7 +267,7 @@ if (return null) {
               type="number";
               min={1}
               value={tokens}
-              on_change={(e) => set_tokens (parse_int (e.target.value || "0", 10))}
+              on_change={(e) => set_tokens (parse_int (e.target.value || "0", 10)}
               className="w - full rounded border border - gray - 300 dark:border - gray - 700 bg - transparent px - 2 py - 2";
             />;
             <div className="opacity - 70 mt - 1">Approx. ${usd_value} USD</div>;
@@ -306,6 +302,5 @@ if (return null) {
       </div>;
     </div>;
   );
-}
+
     </div>);
-}

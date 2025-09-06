@@ -6,5 +6,3 @@ export function ServiceDescriptionGenerator() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

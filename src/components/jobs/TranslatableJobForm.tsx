@@ -30,7 +30,7 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
   const { supportedLanguages, currentLanguage } = useLanguage()
   const [activeTab, setActiveTab] = useState<SupportedLanguage>(currentLanguage)
   // Form fields with translations
-  const [title, setTitle] = useState<Record<SupportedLanguage, string>>({
+  const [title, setTitle] = useState<Record<SupportedLanguage, string>({
     en: ""
     es: ""
     fr: ""
@@ -43,11 +43,11 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
     let content = ''
         content = title[lang]
         sourceLanguage = lang
-        break } else if (field === 'description' && description[lang]) {
+        break } else if (field = = 'description' && description[lang]) {
         content = description[lang]
         sourceLanguage = lang
         break
-      } else if (field === 'requirements' && requirements[lang]) {
+      } else if (field = = 'requirements' && requirements[lang]) {
         content = requirements[lang]
         sourceLanguage = lang
         break
@@ -70,13 +70,10 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
         variant: "destructive"
       })
     }
-  }
   // Ensure all translations are available;
   const ensureAllTranslations = async () => {
     const promises = []
 
-}
     const promises = [];
-}
+
   );
-}

@@ -14,20 +14,19 @@ import { useMessaging } from "@/context/MessagingContext",;
 import { TalentProfile } from "@/types/talent",;
 import { toast } from "@/components/ui/use-toast",;
 import { useNavigate } from "react-router-dom",;
-;
+
 export interface MessageTalentModalProps {;
   talent:TalentProfile,;
   isOpen:boolean,;
   onClose:() => void,;
   jobTitle?:string;
-}
-;
+
 export function MessageTalentModal({;
   talent,;
   isOpen,;
   onClose,;
   jobTitle;
-} MessageTalentModalProps) {;
+ MessageTalentModalProps) {;
   const { createConversation } = useMessaging(),;
   const navigate = useNavigate(),;
   const [message, setMessage] = useState(;
@@ -36,9 +35,8 @@ export function MessageTalentModal({;
       :`Hi ${talent.full_name}, I'm interested in your profile and would like to discuss a potential opportunity.`;
   ),;
   const [isSubmitting, setIsSubmitting] = useState(false),;
-  ;
   const handleSendMessage = async () => {;
-    if (!message.trim()) {;
+    if (!message.trim() {;
       toast({;
         title:"Message required",;
         description:"Please enter a message before sending.",;
@@ -49,14 +47,12 @@ export function MessageTalentModal({;
     ;
     try {;
       setIsSubmitting(true),;
-      ;
       // Create context data for the conversation;
       const contextData = {;
         title:jobTitle || `Discussion with ${talent.full_name}`,;
         description:talent.bio || talent.professional_title || "",;
         image_url:talent.profile_picture_url || "";
       },;
-      ;
       // Create conversation with this talent;
       await createConversation(;
         talent.user_id,;
@@ -65,13 +61,10 @@ export function MessageTalentModal({;
         talent.id,;
         contextData;
       ),;
-      ;
       toast({;
         title:"Message sent",;
         description:`Your message has been sent to ${talent.full_name}.`}),;
-      ;
       onClose(),;
-      ;
       // Navigate to messages inbox;
       navigate("/messages"),;
     } catch (error) {;
@@ -83,9 +76,8 @@ export function MessageTalentModal({;
       }),;
     } finally {;
       setIsSubmitting(false),;
-    }
-  },;
-;
+    },;
+
   return (;
     <Dialog open={isOpen} onOpenChange={onClose}>;
       <DialogContent className="sm:max-w-md bg-zion-blue border-zion-purple/20">;
@@ -106,7 +98,6 @@ export function MessageTalentModal({;
             )}
           </DialogDescription>;
         </DialogHeader>;
-        ;
         <div className="space-y-4">;
           <div>;
             <label className="block text-sm font-medium text-zion-slate mb-1">;
@@ -121,7 +112,6 @@ export function MessageTalentModal({;
             />;
           </div>;
         </div>;
-        ;
         <DialogFooter className="gap-2 sm:gap-0">;
           <Button;
             type="button";
@@ -147,54 +137,53 @@ export function MessageTalentModal({;
 isOpen: boolean;
 onClose: () => void;
 jobTitle?: string 
-}export function MessageTalentModal ({
+export function MessageTalentModal ({
   talent;
 isOpen;
 onClose;
 jobTitle 
-}: MessageTalentModalProps) {
+: MessageTalentModalProps) {
   const {
   createConversation 
-}= useMessaging ();
+= useMessaging ();
 const navigate = useNavigate ();
 const [message, setMessage] = useState (jobTitle ? `Hi $ {
   talent.full name 
-}, I'd like to invite you to discuss a project: $ {
+, I'd like to invite you to discuss a project: $ {
   jobTitle 
-}` : `Hi $ {
+` : `Hi $ {
   talent.full name 
-}, I'm interested in your profile and would like to discuss a potential opportunity.`);
+, I'm interested in your profile and would like to discuss a potential opportunity.`);
 const [isSubmitting, setIsSubmitting] = useState (false);
-if (!message.trim () ) {
+if (!message.trim () {
   toast ({
   return;
-}//Create context data for the conversation const contextData = {
+//Create context data for the conversation const contextData = {
   title: jobTitle || `Discussion with $ {
   talent.full name 
-}`;
-//Create conversation with this talent await createConversation (talent.user id;
+`;
+/Create conversation with this talent await createConversation (talent.user id;
 message;
 jobTitle ? 'job' : 'talent';
 talent.id;
 contextData);
-//Navigate to messages inbox 
-}finally {
+/Navigate to messages inbox 
+finally {
   setIsSubmitting (false) 
-}
-};
+
+;
 return (<Dialog open= {
   isOpen 
-}onOpenChange= {
+onOpenChange= {
   onClose 
-}> <DialogContent className="sm:max-w-md bg-zion-blue border-zion-purple/20" > <DialogHeader> <DialogTitle className="text-white flex items-center gap-3" > <Avatar className="h-8 w-8 border border-zion-purple/20" > <AvatarImage src= {
+> <DialogContent className="sm:max-w-md bg-zion-blue border-zion-purple/20" > <DialogHeader> <DialogTitle className="text-white flex items-center gap-3" > <Avatar className="h-8 w-8 border border-zion-purple/20" > <AvatarImage src= {
   talent.profile picture url 
-}alt= {
+alt= {
   talent.full name 
-}/> <AvatarFallback className="bg-zion-blue-dark text-white" > {
+/> <AvatarFallback className="bg-zion-blue-dark text-white" > {
   talent.full name.charAt (0) .toUpperCase () 
-}talent.full name 
-}</DialogTitle> <DialogDescription className="text-zion-slate" > Send a direct message to start a conversation.) 
-}</DialogDescription> </DialogHeader> <div className="space-y-4" > <div> <label className="block text-sm font-medium text-zion-slate mb-1" > Message </label> <Textarea /> </div> </div> <DialogFooter className="gap-2 sm:gap-0" > <Button > Cancel </Button> <Button > {
+talent.full name 
+</DialogTitle> <DialogDescription className="text-zion-slate" > Send a direct message to start a conversation.) 
+</DialogDescription> </DialogHeader> <div className="space-y-4" > <div> <label className="block text-sm font-medium text-zion-slate mb-1" > Message </label> <Textarea /> </div> </div> <DialogFooter className="gap-2 sm:gap-0" > <Button > Cancel </Button> <Button > {
   isSubmitting ? 'Sending...' : 'Send Message' 
-}</Button> </DialogFooter> </DialogContent> </Dialog>) 
-}
+</Button> </DialogFooter> </DialogContent> </Dialog>) 

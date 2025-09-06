@@ -8,7 +8,7 @@ import {
   Popover
   PopoverContent
   PopoverTrigger
-} from '@/components/ui/popover'
+ from '@/components/ui/popover'
 import { cn } from '@/lib/utils'
 import { QuoteFormData } from '@/types/quotes'
 
@@ -34,7 +34,7 @@ import {;
   Popover,;
   PopoverContent,;
   PopoverTrigger,;
-} from '@/components/ui/popover';
+ from '@/components/ui/popover';
 import { cn } from '@/lib/utils';
 import { QuoteFormData } from '@/types/quotes';
 interface TimelineStepProps {;
@@ -52,7 +52,7 @@ export function TimelineStep(): any ({ formData, updateFormData }: TimelineStepP
           <div className='flex items-center space-x-4'>;
             <div
               className={`flex-1 p-4 rounded-lg border-2 cursor-pointer transition-colors ${
-                formData && formData.timeline === 'fixed'
+                formData && formData.timeline = = 'fixed'
                   ? 'bg-zion-purple/20 border-zion-purple'
                   : 'bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50'
               }`}
@@ -64,7 +64,7 @@ export function TimelineStep(): any ({ formData, updateFormData }: TimelineStepP
             </div>
             <div
               className={`flex-1 p-4 rounded-lg border-2 cursor-pointer transition-colors ${
-                formData && formData.timeline === 'flexible'
+                formData && formData.timeline = = 'flexible'
                   ? 'bg-zion-purple/20 border-zion-purple'
                   : 'bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50'
               }`}
@@ -76,7 +76,7 @@ export function TimelineStep(): any ({ formData, updateFormData }: TimelineStepP
               </p>
             </div>
           </div>
-          {formData.timeline === 'fixed' && (
+          {formData.timeline = = 'fixed' && (
             <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mt-6'>
               <div>
                 <Label className='block mb-2 text-zion-slate-light'>
@@ -92,15 +92,14 @@ export function TimelineStep(): any ({ formData, updateFormData }: TimelineStepP
                       )}                    >
                       <CalendarIcon className='mr-2 h-4 w-4' />
                       {formData.startDate ? (
-                        format(formData.startDate, 'PPP')
-                      ) : (
+                        format(formData.startDate, 'PPP') : (
                         <span>Pick a date</span>
                 I'm flexible on the timing;
               </p>;
             </div>;
           </div>;
 
-          {formData && formData.timeline === 'fixed' && (;
+          {formData && formData.timeline = = 'fixed' && (;
             <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mt-6'>;
               <div>;
                 <Label className='block mb-2 text-zion-slate-light'>;
@@ -148,8 +147,7 @@ export function TimelineStep(): any ({ formData, updateFormData }: TimelineStepP
                       )}                    >
                       <CalendarIcon className='mr-2 h-4 w-4' />
                       {formData.endDate ? (
-                        format(formData.endDate, 'PPP')
-                      ) : (
+                        format(formData.endDate, 'PPP') : (
                         <span>Pick a date</span>
 
                     />;
@@ -187,7 +185,7 @@ export function TimelineStep(): any ({ formData, updateFormData }: TimelineStepP
                       initialFocus
                       className='p-3 pointer-events-auto'
                       disabled={date =>
-                        date < (formData.startDate |new Date())
+                        date < (formData.startDate |new Date()
                       }                    />
                   </PopoverContent>
                 </Popover>
@@ -198,7 +196,7 @@ export function TimelineStep(): any ({ formData, updateFormData }: TimelineStepP
       </div>
     </div>
   )
-}
+
                       }                    />;
                   </PopoverContent>;
                 </Popover>;
@@ -209,10 +207,8 @@ export function TimelineStep(): any ({ formData, updateFormData }: TimelineStepP
       </div>;
     </div>;
   );
-}
 
             </div>)}
         </div>;
       </div>;
     </div>);
-}

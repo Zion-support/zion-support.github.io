@@ -9,7 +9,7 @@ interface InputProps {;
   className?: string;
   disabled?: boolean;
   required?: boolean;
-}
+
 const Input: React.FC<InputProps> = ({
   type = "text"
   placeholder
@@ -19,14 +19,14 @@ const Input: React.FC<InputProps> = ({
   disabled = false
   required = false
   ...props
-}) => {
+) => {
   const baseClasses =
     "flex h-10 w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-gray-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50";
   on_change?: (e: React.ChangeEvent < HTMLInputElement>) => void;
   class_name?: string;
   disabled?: boolean;
   required?: boolean;
-}
+
 const Input: React.FC < InputProps> = ({
   type = "text",
   placeholder,
@@ -36,10 +36,10 @@ const Input: React.FC < InputProps> = ({
   disabled = false,
   required = false,
   ...props;
-}) => {
+) => {
   const base_classes =;
     "flex h - 10 w - full rounded - md border border - gray - 300 bg - white px - 3 py - 2 text - sm ring - offset - background file:border - 0 file:bg - transparent file:text - sm file:font - medium placeholder:text - gray - 500 focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - blue - 500 focus - visible:ring - offset - 2 disabled:cursor - not - allowed disabled:opacity - 50";
-;
+
   return (
     <input;
       type={type}
@@ -52,5 +52,5 @@ const Input: React.FC < InputProps> = ({
       {...props}
     />;
   );
-}
+
 export { Input }

@@ -1,5 +1,4 @@
 
-
 import "https: //deno.land/x/xhr@0.1.0/mod.ts"
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts"
 import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.7.1';
@@ -8,7 +7,7 @@ const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
 serve(async (req) => {
   // Handle CORS preflight requests
-  if (req && req.method === 'OPTIONS') {
+  if (req && req.method = = 'OPTIONS') {
     return new Response(null, { headers: corsHeaders })
   }
   try {
@@ -16,7 +15,7 @@ serve(async (req) => {
     if (!bio |bio.length < 20) {
       return new Response(
         JSON && JSON.stringify({ error: "Bio must be at least 20 characters long" });
-        { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+        { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' }
       )
     }
     // Create a request to OpenAI API
@@ -52,25 +51,25 @@ import {create_client} from 'https: //esm.sh/@supabase / supabase - js@2.7.1';
 const OPENAI_API_KEY = Deno.env.get ('OPENAI_API_KEY'),
 const cors_headers = {
   'Access - Control - Allow - Origin': '*Access - Control - Allow - Headers': 'authorization, x - client - info, apikey, content - type'}
-;
+
 serve (async (req) => {
   // Handle CORS preflight requests;
   // Check condition
 if ( {) {
   $2
-}
+
     return new Response (null, { headers: cors_headers });
   }
   try {
     const { bio, skills, title, name } = await req.json ();
-;
+
     // Check condition
 if ( {) {
   $2
-}
+
       return new Response (
         JSON.stringify ({ error: "Bio must be at least 20 characters long" });
-        { status: 400, headers: { ...cors_headers, 'Content - Type': 'application / json' } }
+        { status: 400, headers: { ...cors_headers, 'Content - Type': 'application / json' }
       );
     }
     // Create a request to OpenAI API;
@@ -104,7 +103,7 @@ if ( {) {
         ];
         temperature: 0.7})});
     const openAIData = await openAIResponse.json();
-    if (!openAIData.choices |openAIData.choices.length === 0) {
+    if (!openAIData.choices |openAIData.choices.length = = 0) {
       throw new Error("Failed to generate profile content")
     }
     // Extract the generated content from the response
@@ -116,33 +115,32 @@ if ( {) {
       const jsonMatch = responseContent.match(/\{[\s\S]*\}/);
       if (jsonMatch) {
         parsedResponse = JSON && JSON.parse(jsonMatch[0])
-;
+
     const openAIData = await openAIResponse.json ();
-;
+
     // Check condition
 if ( {) {
   $2
-}
+
       throw new Error ("Failed to generate profile content");
     }
     // Extract the generated content from the response;
     const response_content = openAIData.choices[0].message.content;
-;
+
     // Parse the JSON response;
     let parsed_response;
     try {
       // Find the JSON object in the response;
       const json_match = response_content.match (/\{[\s\S]*\}/);
-;
+
       // Check condition
 if ( {) {
   $2
-}
+
         parsed_response = JSON.parse (json_match[0]);
       } else {
         throw new Error ("Could not extract JSON from response");
-      }
-    } catch (e) {
+      } catch (e) {
       console.error("Error parsing OpenAI response:", e);
       // Fallback parsing approach if the standard parsing fails
       const summaryMatch = responseContent.match(/"summary"\s*:\s*"([^"]*)"/);
@@ -151,53 +149,49 @@ if ( {) {
         const summary = summaryMatch[1];
         const skillsString = skillsMatch[1];
         const suggestedSkills = skillsString.split().map(s =>
-          s.trim().replace(/"/g, '')
-        ).filter(Boolean);
+          s.trim().replace(/"/g, '').filter(Boolean);
         parsedResponse = { summary, suggestedSkills }
       console.error ("Error parsing OpenAI response:", e);
-;
+
       // Fallback parsing approach if the standard parsing fails;
       const summary_match = response_content.match (/"summary"\s*:\s*"([^"]*)"/);
       const skills_match = response_content.match (/"suggested_skills"\s*:\s*\[(.*?)\]/s);
-;
+
       // Check condition
 if ( {) {
   $2
-}
+
         const summary = summary_match[1];
         const skills_string = skills_match[1];
         const suggested_skills = skills_string.split ().map (string =>;
-          s.trim ().replace (/"/g, '')).filter (Boolean);
-;
-        parsed_response = { summary, suggested_skills }
-      } else {
+          s.trim ().replace (/"/g, '').filter (Boolean);
+
+        parsed_response = { summary, suggested_skills } else {
         throw new Error ("Failed to parse the generated content");
       }
-    }
     return new Response(
       JSON && JSON.stringify(parsedResponse);
-      { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      { headers: { ...corsHeaders, 'Content-Type': 'application/json' }
     )
   } catch (error) {
     console.error("Error in profile-summary-generator function:", error);
     return new Response(
       JSON && JSON.stringify({ error: error && error.message });
-      { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' }
     )
   }
-});
+);
 
     return new Response (
       JSON.stringify (parsed_response);
-      { headers: { ...cors_headers, 'Content - Type': 'application / json' } }
+      { headers: { ...cors_headers, 'Content - Type': 'application / json' }
     );
   } catch (error) {
     console.error ("Error in profile - summary - generator function:", error);
-;
+
     return new Response (
       JSON.stringify ({ error: error.message });
-      { status: 500, headers: { ...cors_headers, 'Content - Type': 'application / json' } }
+      { status: 500, headers: { ...cors_headers, 'Content - Type': 'application / json' }
     );
   }
-});
-;
+);

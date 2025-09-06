@@ -161,6 +161,5 @@ const About = ({ className }) => {
       </div>
     </Layout>
   );
-};
 
 export default About;

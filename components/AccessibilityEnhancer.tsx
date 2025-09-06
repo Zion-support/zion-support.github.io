@@ -4,26 +4,26 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React, { useEffect } from 'react';
 const AccessibilityEnhancer: React.FC = () => {
-  useEffect(() => {
+  useEffect() => {
     // Add skip link for keyboard navigation
     const skipLink = document.createElement('a');
     skipLink.href = '#main-content';
@@ -41,10 +41,9 @@ const AccessibilityEnhancer: React.FC = () => {
       document.body.classList.add('using-mouse');
     }
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Tab') {
+      if (e.key = = 'Tab') {
         document.body.classList.remove('using-mouse')
       }
-    }
     document.addEventListener('mousedown', handleMouseDown);
     document.addEventListener('keydown', handleKeyDown);
     // Add ARIA live region for announcements
@@ -60,13 +59,12 @@ const AccessibilityEnhancer: React.FC = () => {
       if (liveRegion) {
         liveRegion.textContent = message
       }
-    }
     // Listen for route changes (Next.js specific)
     const handleRouteChange = () => {
       announcePageChange('Page loaded');
     }
     // Add route change listener if available
-    if (typeof window !== 'undefined' && window.history) {
+    if (typeof window != 'undefined' && window.history) {
       const originalPushState = window.history.pushState;
       const originalReplaceState = window.history.replaceState;
       window.history.pushState = function(...args) {
@@ -89,11 +87,10 @@ const AccessibilityEnhancer: React.FC = () => {
       if (liveRegion && liveRegion.parentNode) {;
         liveRegion && liveRegion.parentNode.removeChild(liveRegion);
       }
-    }
   }, []);
   return null;
-}
-// Add CSS for focus management
+
+/ Add CSS for focus management
 const focusStyles = `
   .using-mouse *:focus {
     outline: none !important
@@ -114,26 +111,26 @@ const focusStyles = `
     margin: inherit, overflow: visible
     clip: auto, white-space: normal
   }
-`;
-// Inject styles
-if (typeof document !== 'undefined') {
+;
+/ Inject styles
+if (typeof document != 'undefined') {
   const styleSheet = document.createElement('style');
   styleSheet.textContent = focusStyles;
   document.head.appendChild(styleSheet);
-}
+
 export default AccessibilityEnhancer;
 import React, { useEffect, useState } from 'react';
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
-}
+
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [fontSize, setFontSize] = useState('normal');
   const [reducedMotion, setReducedMotion] = useState(false);
-  useEffect(() => {
+  useEffect() => {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     setReducedMotion(prefersReducedMotion);
-    const savedHighContrast = localStorage.getItem('highContrast') === 'true';
+    const savedHighContrast = localStorage.getItem('highContrast') = = 'true';
     const savedFontSize = localStorage.getItem('fontSize') |'normal';
     setIsHighContrast(savedHighContrast);
     setFontSize(savedFontSize);
@@ -156,11 +153,10 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     } else {
       root.class_list.remove ('reduced - motion');
     }
-  }
   const toggleHighContrast = () => {
     const newValue = !isHighContrast;
     setIsHighContrast(newValue);
-    localStorage && localStorage.setItem('highContrast', newValue && newValue.toString());
+    localStorage && localStorage.setItem('highContrast', newValue && newValue.toString();
     applyAccessibilityStyles(newValue, fontSize, reducedMotion);
   }
   const changeFontSize = (newSize: string) => {
@@ -184,18 +180,18 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
           </button>;
           <div className="text-xs text-gray-600 dark:text-gray-300">Font Size:</div>;
           <div className="flex gap-1">;
-            {['small', 'normal', 'large', 'extra-large'].map((size) => (;
+            {['small', 'normal', 'large', 'extra-large'].map(size) => (;
               <button
                 key={size}
                 onClick={() => changeFontSize(size)}
                 className={`px-2 py-1 text-xs rounded ${;
-                  fontSize === size ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300';
+                  fontSize = = size ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300';
                 }`}
                 aria-label={`Set font size to ${size}`}
               >;
                 {size && size.charAt(0).toUpperCase()}
               </button>;
-            ))}
+            )}
           </div>
         </div>
       </div>
@@ -218,22 +214,22 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       <div id="main-content">{children}</div>;
     </>;
   );
-}
+
 export default AccessibilityEnhancer;
-;
+
   const toggleHighContrast = () =>: any {
     const new_value = !isHighContrast;
     setIsHighContrast (new_value);
-    local_storage.set_item ('high_contrast', new_value.to_string ());
+    local_storage.set_item ('high_contrast', new_value.to_string ();
     applyAccessibilityStyles (new_value, font_size, reduced_motion);
   }
-;
+
   const changeFontSize = (new_size: string) =>: any {
     setFontSize (new_size);
     local_storage.set_item ('font_size', new_size);
     applyAccessibilityStyles (isHighContrast, new_size, reduced_motion);
   }
-;
+
   return (
     <>;
       {/* Accessibility Controls */}
@@ -251,17 +247,17 @@ export default AccessibilityEnhancer;
           </button>;
           <div className="text - xs text - gray - 600 dark:text - gray - 300">Font Size:</div>;
           <div className="flex gap - 1">;
-            {['small', 'normal', 'large', 'extra - large'].map ((size) => (
+            {['small', 'normal', 'large', 'extra - large'].map (size) => (
               <button;
                 key={size}
                 on_click={() => changeFontSize (size)}
                 className={`px - 2 py - 1 text - xs rounded ${
-                  font_size === size ? 'bg - blue - 600 text - white' : 'bg - gray - 200 text - gray - 700 hover:bg - gray - 300';
+                  font_size = = size ? 'bg - blue - 600 text - white' : 'bg - gray - 200 text - gray - 700 hover:bg - gray - 300';
                 }`}
                 aria - label={`Set font size to ${size}`}
               >;
                 {size.char_at (0).toUpperCase ()}
-              </button>))}
+              </button>)}
           </div>;
         </div>;
       </div>;
@@ -283,7 +279,5 @@ export default AccessibilityEnhancer;
       {/* Main content */}
       <div id="main - content">{children}</div>;
     </>);
-}
-;
+
 export default AccessibilityEnhancer;
-;

@@ -7,4 +7,3 @@ export function EnterpriseDashboard() {
       <p className="text-slate-400 text-sm">Enterprise metrics will be displayed here</p>
     </div>
   );
-}

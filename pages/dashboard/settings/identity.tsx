@@ -39,13 +39,12 @@ function load() {
       const data = await res.json (),
       if (set_profile (data.profile), ) {
   $2
-}
+
       else set_error (data.error || 'Not found');
     } catch (e) {
       setError('Failed to fetch')
     }
-  }
-  useEffect(() => {
+  useEffect() => {
     load()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
@@ -69,8 +68,8 @@ function load() {
       </main>
     </>
   )
-}
-  useEffect (() => {
+
+  useEffect () => {
     load (),
     // eslint - disable - next - line react - hooks / exhaustive - deps;
   }, []),
@@ -92,4 +91,3 @@ function load() {
         {error && <div className="mt - 3 text - sm text - red - 600">{error}</div>}
       </main>;
     </>);
-}

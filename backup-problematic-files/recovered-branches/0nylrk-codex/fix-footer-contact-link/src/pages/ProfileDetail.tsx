@@ -20,9 +20,9 @@ import { ;
   Mail,;
   Phone,;
   Globe;
-} from "lucide-react",;
+ from "lucide-react",;
 import { HireNowCTA } from "@/components/profile/HireNowCTA",;
-;
+
 export default function ProfileDetail() {;
   // useParams is typed as `any` in this environment due to missing type;
   // definitions, so avoid passing a type argument to prevent TS2347.;
@@ -30,8 +30,8 @@ export default function ProfileDetail() {;
   const [profileData, setProfileData] = useState<any>(null),;
   const [isLoading, setIsLoading] = useState(true),;
   const [error, setError] = useState<string | null>(null),;
-;
-  useEffect(() => {;
+
+  useEffect() => {;
     const fetchProfile = async () => {;
       setIsLoading(true),;
       setError(null),;
@@ -40,22 +40,22 @@ export default function ProfileDetail() {;
           setError("Profile ID is missing."),;
           return,;
         }
-;
+
         const { data, error } = await supabase;
           .from("talent_profiles");
           .select("*");
           .eq("id", profileId);
           .single(),;
-;
+
         if (error) {;
           throw new Error(error.message),;
         }
-;
+
         if (!data) {;
           setError("Profile not found."),;
           return,;
         }
-;
+
         setProfileData(data),;
       } catch (err:any) {;
         setError(err.message || "Failed to fetch profile."),;
@@ -65,12 +65,11 @@ export default function ProfileDetail() {;
           variant:"destructive"}),;
       } finally {;
         setIsLoading(false),;
-      }
-    },;
-;
+      },;
+
     fetchProfile(),;
   }, [profileId]),;
-;
+
   if (isLoading) {;
     return (;
       <div className="min-h-screen flex items-center justify-center">;
@@ -78,7 +77,7 @@ export default function ProfileDetail() {;
       </div>;
     ),;
   }
-;
+
   if (error) {;
     return (;
       <div className="min-h-screen flex items-center justify-center">;
@@ -86,7 +85,7 @@ export default function ProfileDetail() {;
       </div>;
     ),;
   }
-;
+
   if (!profileData) {;
     return (;
       <div className="min-h-screen flex items-center justify-center">;
@@ -94,7 +93,7 @@ export default function ProfileDetail() {;
       </div>;
     ),;
   }
-;
+
   return (;
     <>;
       <SEO;
@@ -150,7 +149,7 @@ export default function ProfileDetail() {;
                 </div>;
               </CardContent>;
             </Card>;
-;
+
             {/* About Section */}
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">;
               <CardHeader>;
@@ -160,7 +159,7 @@ export default function ProfileDetail() {;
                 <p className="text-zion-slate-light">{profileData.bio || "No bio provided."}</p>;
               </CardContent>;
             </Card>;
-;
+
             {/* Skills Section */}
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">;
               <CardHeader>;
@@ -168,13 +167,13 @@ export default function ProfileDetail() {;
               </CardHeader>;
               <CardContent>;
                 <div className="flex flex-wrap gap-2">;
-                  {profileData.skills?.map((skill:string, index:number) => (;
+                  {profileData.skills?.map(skill:string, index:number) => (;
                     <Badge key={index} className="bg-zion-blue-light text-zion-slate-light border-none">{skill}</Badge>;
-                  )) || <p className="text-zion-slate-light">No skills provided.</p>}
+                  ) || <p className="text-zion-slate-light">No skills provided.</p>}
                 </div>;
               </CardContent>;
             </Card>;
-;
+
             {/* Experience Section */}
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">;
               <CardHeader>;
@@ -182,19 +181,19 @@ export default function ProfileDetail() {;
               </CardHeader>;
               <CardContent>;
                 {profileData.experience ? (;
-                  profileData.experience.map((exp:any, index:number) => (;
+                  profileData.experience.map(exp:any, index:number) => (;
                     <div key={index} className="mb-4">;
                       <h4 className="font-bold text-white">{exp.title}</h4>;
                       <p className="text-zion-cyan">{exp.company}</p>;
                       <p className="text-sm text-zion-slate-light">{exp.start_date} - {exp.end_date || "Present"}</p>;
                       <p className="text-zion-slate-light">{exp.description}</p>;
                     </div>;
-                  ));
+                  );
                 ) :(;
                   <p className="text-zion-slate-light">No experience provided.</p>;                )}
               </CardContent>;
             </Card>;
-;
+
             {/* Portfolio Section */}
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">;
               <CardHeader>;
@@ -203,7 +202,7 @@ export default function ProfileDetail() {;
               <CardContent>;
                 {profileData.portfolio_links ? (;
                   <div className="flex flex-col gap-3">;
-                    {profileData.portfolio_links.map((link:any, index:number) => (;
+                    {profileData.portfolio_links.map(link:any, index:number) => (;
                       <a;
                         key={index}
                         href={link.url}
@@ -214,23 +213,23 @@ export default function ProfileDetail() {;
                         <LinkIcon className="h-4 w-4" />;
                         {link.title || link.url}
                       </a>;
-                    ))}
+                    )}
                   </div>;
                 ) :(;
                   <p className="text-zion-slate-light">No portfolio links provided.</p>;                )}
               </CardContent>;
             </Card>;
           </div>;
-;
+
           {/* Sidebar with HireNowCTA */}
           <div className="col-span-4 lg:col-span-1">;
             <HireNowCTA;
-              talentProfile={{;
+              talentProfile={;
                 id:profileData?.id || '',;
                 full_name:profileData?.full_name || '',;
                 professional_title:profileData?.professional_title || '',;
                 hourly_rate:profileData?.hourly_rate || 0;
-              }}
+              }
             />;
             {/* Contact Information */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mt-6">;
@@ -257,7 +256,7 @@ export default function ProfileDetail() {;
                   </div>;                )}
               </div>;
             </div>;
-;
+
             {/* Social Links */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mt-6">;
               <h3 className="text-xl font-bold mb-4">Social</h3>;
@@ -300,11 +299,11 @@ Phone;
 Globe export default function ProfileDetail () {
   //useParams is typed as `any` in this environment due to missing type //definitions, so avoid passing a type argument to prevent TS2347. const {
   profileId 
-}= useParams ();
+= useParams ();
 const [profileData, setProfileData] = useState<any> (null);
 const [isLoading, setIsLoading] = useState (true);
 const [error, setError] = useState<string | null> (null);
-useEffect ( () => {
+useEffect () => {
   const fetchProfile = async () => {
   setIsLoading (true);
 setError (null);
@@ -312,37 +311,35 @@ try {
   if (!profileId) {
   const {
   data, error 
-}= await supabase .from ("talent profiles") .select ("*") .eq ("id", profileId) if (error) {
+= await supabase .from ("talent profiles") .select ("*") .eq ("id", profileId) if (error) {
   throw new Error (error.message) 
-}if (!data) {
-  
-}setProfileData (data) 
-}catch (err: any) {
-  
-}finally {
+if (!data) {
+
+setProfileData (data) 
+catch (err: any) {
+
+finally {
   setIsLoading (false) 
-}
-};
-}, [profileId]);
+
+;
+, [profileId]);
 <p>Error: {
   error 
-}</p> </div>) 
-}return (<> <SEO) : (<AvatarFallback> {
+</p> </div>) 
+return (<> <SEO) : (<AvatarFallback> {
   profileData.full name?.charAt (0) 
-}</AvatarFallback>) 
-}</Avatar> <div> </div> </div> </CardHeader> <CardContent> $ {
+</AvatarFallback>) 
+</Avatar> <div></div> </div> </CardHeader> <CardContent> $ {
   profileData.hourly rate 
-}<span className="text-zion-slate-light font-normal" >/hr</span> </div>) 
-}</div> </CardContent> </Card> <CardHeader> <CardTitle className="text-xl font-bold text-white" >About Me</CardTitle> </CardHeader> <CardContent> <CardHeader> <CardTitle className="text-xl font-bold text-white" >Skills</CardTitle> </CardHeader> <CardContent> </div> </CardContent> </Card> <CardHeader> <CardTitle className="text-xl font-bold text-white" >Experience</CardTitle> </CardHeader> <CardContent> </div>) ) ) : (<p className="text-zion-slate-light" >No experience provided.</p>) 
-}</CardContent> </Card> <CardHeader> <CardTitle className="text-xl font-bold text-white" >Portfolio</CardTitle> </CardHeader> <CardContent>) ) 
-}</div>) : (<p className="text-zion-slate-light" >No portfolio links provided.</p>) 
-}</CardContent> </Card> </div> <HireNowCTA talentProfile= {
-  {
+<span className="text-zion-slate-light font-normal" >/hr</span> </div>) 
+</div> </CardContent> </Card> <CardHeader> <CardTitle className="text-xl font-bold text-white" >About Me</CardTitle> </CardHeader> <CardContent> <CardHeader> <CardTitle className="text-xl font-bold text-white" >Skills</CardTitle> </CardHeader> <CardContent></div> </CardContent> </Card> <CardHeader> <CardTitle className="text-xl font-bold text-white" >Experience</CardTitle> </CardHeader> <CardContent></div>) ) : (<p className="text-zion-slate-light" >No experience provided.</p>) 
+</CardContent> </Card> <CardHeader> <CardTitle className="text-xl font-bold text-white" >Portfolio</CardTitle> </CardHeader> <CardContent>) 
+</div>) : (<p className="text-zion-slate-light" >No portfolio links provided.</p>) 
+</CardContent> </Card> </div> <HireNowCTA talentProfile= {
   id: profileData?.id || '', full name: profileData?.full name || '', professional title: profileData?.professional title || '', hourly rate: profileData?.hourly rate || 0 
-}
-}/> Website </Link> </div>) 
-}</div> </div> GitHub </Link>) 
-}Twitter </Link>) 
-}LinkedIn </Link>) 
-}</div> </div> </div> </div> </div> <Footer /> </>) 
-}
+
+/> Website </Link> </div>) 
+</div> </div> GitHub </Link>) 
+Twitter </Link>) 
+LinkedIn </Link>) 
+</div> </div> </div> </div> </div> <Footer /> </>) 

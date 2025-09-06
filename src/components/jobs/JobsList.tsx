@@ -26,7 +26,7 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
   const { user } = useAuth()
   const [jobs, setJobs] = useState<Job[]>([])
   const [isLoading, setIsLoading] = useState(true)
-  useEffect((,) => {
+  useEffect(,) => {
     const fetchJobs = async () => {
       if (!user) return
       try {
@@ -46,19 +46,18 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
       } finally {
         setIsLoading (false);
       }
-    }
     fetch_jobs ();
   }, [user, filter]);
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <div className="flex justify - center items - center p - 8">;
         <Loader2 className="h - 8 w - 8 animate - spin text - primary" />;
       </div>);
   }
-  if (jobs.length === 0) {
+  if (jobs.length = = 0) {
     return(<div className="text-center p-8 border rounded-md bg-muted/20">
         <p className="text-lg text-muted-foreground">
           {filter
@@ -93,11 +92,10 @@ if ( {) {
       default:;
         return "bg - gray - 100 text - gray - 800";
     }
-  }
 
   return (
     <div className="grid gap-6 md:grid-cols-2">
-      {jobs.map((job,) => (
+      {jobs.map(job,) => (
         <Card
           key = {job.id,}
           className={`overflow-hidden cursor-pointer transition-shadow hover:shadow-md ${
@@ -123,11 +121,11 @@ if ( {) {
               {job && job.description}
             </p>;
             <div className="flex flex-wrap gap-1 mt-2">;
-              {job && job.skills.slice(0, 3).map((skill, index,) => (;
+              {job && job.skills.slice(0, 3).map(skill, index,) => (;
                 <Badge key={index} variant="outline" className="text-xs">;
                   {skill}
                 </Badge>;
-              ))}
+              )}
               {job && job.skills.length > 3 && (;
                 <Badge variant="outline" className="text-xs">;
                   +{job && job.skills.length - 3} more;
@@ -159,33 +157,33 @@ if ( {) {
             </div>;
           </CardFooter>;
         </Card>;
-      ))}
+      )}
     </div>
   )
-};"
+;"
 return (<div className="grid gap-6 md:grid-cols-2" > {
-  jobs.map ( (job) => (<Card key= {
+  jobs.map (job) => (<Card key= {
   job.id
-}className= {
+className= {
   `overflow-hidden cursor-pointer transition-shadow hover:shadow-md $ {"
   onSelectJob ? "cursor-pointer" : ""
-}`
-}onClick={
+`
+onClick={
   () => onSelectJob?. (job.id, job.title)
-}job.description
-}</p> + {
+job.description
+</p> + {
   job.skills.length - 3
-}more </Badge>) "
-}</div> <div className="mt-3 text-sm"> <span className="font-medium">Budget:</span> $ {
+more </Badge>) "
+</div> <div className="mt-3 text-sm"> <span className="font-medium">Budget:</span> $ {
   job.budget.min
-}- $ {
+- $ {
   job.budget.max "
-}</div> <div className="mt-1 text-sm"> </Link> </Button> <Button variant=" outline"size=" sm"> <X className="h-4 w-4" /> </Button> </div> </CardFooter> </Card>) )
-}</div>)
-}'"}
+</div> <div className="mt-1 text-sm"> </Link> </Button> <Button variant=" outline"size=" sm"> <X className="h-4 w-4" /> </Button> </div> </CardFooter> </Card>)
+</div>)
+'"}
 
     <div className="grid gap - 6 md:grid - cols - 2">;
-      {jobs.map ((job, ) => (
+      {jobs.map (job, ) => (
         <Card;
           key = {job.id, }
           className={`overflow - hidden cursor - pointer transition - shadow hover:shadow - md ${
@@ -211,10 +209,10 @@ return (<div className="grid gap-6 md:grid-cols-2" > {
               {job.description}
             </p>;
             <div className="flex flex - wrap gap - 1 mt - 2">;
-              {job.skills.slice (0, 3).map ((skill, index, ) => (
+              {job.skills.slice (0, 3).map (skill, index, ) => (
                 <Badge key={index} variant="outline" className="text - xs">;
                   {skill}
-                </Badge>))}
+                </Badge>)}
               {job.skills.length > 3 && (
                 <Badge variant="outline" className="text - xs">;
                   +{job.skills.length - 3} more;
@@ -244,26 +242,26 @@ return (<div className="grid gap-6 md:grid-cols-2" > {
               </Button>;
             </div>;
           </CardFooter>;
-        </Card>))}
+        </Card>)}
     </div>);
-}";
+";
 return (<div className="grid gap - 6 md:grid - cols - 2" > {
-  jobs.map ( (job) => (<Card key= {
+  jobs.map (job) => (<Card key= {
   job.id;
-}className= {
+className= {
   `overflow - hidden cursor - pointer transition - shadow hover:shadow - md $ {";
   onSelectJob ? "cursor - pointer" : "";
-}`;
-}on_click={
+`;
+on_click={
   () => onSelectJob?. (job.id, job.title);
-}job.description;
-}</p> + {
+job.description;
+</p> + {
   job.skills.length - 3;
-}more </Badge>) ";
-}</div> <div className="mt - 3 text - sm"> <span className="font - medium">Budget:</span> $ {
+more </Badge>) ";
+</div> <div className="mt - 3 text - sm"> <span className="font - medium">Budget:</span> $ {
   job.budget.min;
-}- $ {
+- $ {
   job.budget.max ";
-}</div> <div className="mt - 1 text - sm"> </Link> </Button> <Button variant=" outline"size=" sm"> <X className="h - 4 w - 4" /> </Button> </div> </CardFooter> </Card>) );
-}</div>);
-}'"}
+</div> <div className="mt - 1 text - sm"> </Link> </Button> <Button variant=" outline"size=" sm"> <X className="h - 4 w - 4" /> </Button> </div> </CardFooter> </Card>);
+</div>);
+'"}

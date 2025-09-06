@@ -13,7 +13,7 @@ export default function HelpCenterPage() {
       <HelpCenter />
     </>
   )
-}
+
 import React from './react';
 import HelpCenter from "@/components / support / HelpCenter";
 import { SEO } from '@/components / SEO';
@@ -30,4 +30,3 @@ function HelpCenterPage() {
       />;
       <HelpCenter />;
     </>);
-}

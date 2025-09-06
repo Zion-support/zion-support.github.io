@@ -3,18 +3,17 @@ import { motion, AnimatePresence } from 'framer-motion',
 import { 
   Menu, X, ChevronDown, Search, User,
   Settings, LogOut, Bell, Globe, Zap
-} from 'lucide-react',
+ from 'lucide-react',
 import Link from 'next/link',
 interface EnhancedNavigationProps {
   className?: string
-}
 
 const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({ className = '' }) => {
   const [isOpen, setIsOpen] = useState(false),
   const [isScrolled, setIsScrolled] = useState(false),
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
 
-  useEffect(() => {
+  useEffect() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20)
     },
@@ -94,9 +93,9 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({ className = '' 
         <div className=&quot;flex items-center justify-between h-20&quot;>
           {/* Logo */}
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
+            initial={ opacity: 0, x: -20 }
+            animate={ opacity: 1, x: 0 }
+            transition={ duration: 0.5 }
             className=&quot;flex items-center space-x-3&quot;          >
             <Link href=&quot;/&quot; className=&quot;flex items-center space-x-3 group&quot;>
               <div className=&quot;relative&quot;>
@@ -116,12 +115,12 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({ className = '' 
 
           {/* Desktop Navigation */}
           <div className=&quot;hidden lg:flex items-center space-x-8&quot;>
-            {navigationItems.map((item, index) => (
+            {navigationItems.map(item, index) => (
               <motion.div
                 key={item.name}
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial={ opacity: 0, y: -20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.5, delay: index * 0.1 }
                 className=&quot;relative&quot;
                 onMouseEnter={() => item.hasDropdown && setActiveDropdown(item.name)}
                 onMouseLeave={() => setActiveDropdown(null)}
@@ -130,27 +129,27 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({ className = '' 
                   <div className=&quot;relative&quot;>
                     <button className=&quot;flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2&quot;>                      <span>{item.name}</span>
                       <ChevronDown className={_`w-4 h-4 transition-transform duration-300 ${
-                        activeDropdown === item.name ? 'rotate-180' : ''}`} />
+                        activeDropdown = = item.name ? 'rotate-180' : ''}`} />
                     </button>
-                    
+
                     <AnimatePresence>
-                      {_activeDropdown === item.name && (
+                      {_activeDropdown = = item.name && (
                         <motion.div
-                          initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                          animate={{ opacity: 1, y: 0, scale: 1 }}
-                          exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                          transition={{ duration: 0.2 }}
+                          initial={ opacity: 0, y: 10, scale: 0.95 }
+                          animate={ opacity: 1, y: 0, scale: 1 }
+                          exit={ opacity: 0, y: 10, scale: 0.95 }
+                          transition={ duration: 0.2 }
                           className=&quot;absolute top-full left-0 mt-2 w-64 bg-black/90 backdrop-blur-xl border border-cyan-500/20 rounded-xl shadow-2xl shadow-cyan-500/20 overflow-hidden&quot;
                         >
                           <div className=&quot;p-2&quot;>
-                            {item.dropdownItems?.map((dropdownItem) => (
+                            {item.dropdownItems?.map(dropdownItem) => (
                               <Link
                                 key={dropdownItem.name}
                                 href={dropdownItem.href}
                                 className=&quot;block px-4 py-3 text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300&quot;
                               >
                                 {dropdownItem.name}
-                              </a>                            ))}
+                              </a>                            )}
                           </div>
                         </motion.div>
                       )}
@@ -164,25 +163,25 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({ className = '' 
                     {item.name}
                   </a>                )}
               </motion.div>
-            ))}
+            )}
           </div>;
-;
+
           {/* Right side actions */}
           <div className=&quot;hidden lg:flex items-center space-x-4&quot;>
             {/* Search */}
             <motion.button
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: 0.6 }}
+              initial={ opacity: 0, scale: 0.8 }
+              animate={ opacity: 1, scale: 1 }
+              transition={ duration: 0.5, delay: 0.6 }
               className=&quot;p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300&quot;            >
               <Search className=&quot;w-5 h-5&quot; />
             </motion.button>
 
             {_/* Notifications */}
             <motion.button
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: 0.7 }}
+              initial={ opacity: 0, scale: 0.8 }
+              animate={ opacity: 1, scale: 1 }
+              transition={ duration: 0.5, delay: 0.7 }
               className=&quot;p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300 relative&quot;            >
               <Bell className=&quot;w-5 h-5&quot; />
               <div className=&quot;absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full animate-pulse&quot; />
@@ -190,9 +189,9 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({ className = '' 
 
             {_/* CTA Button */}
             <motion.div
-              initial={_{ opacity: 0, _scale: 0.8}}
-              animate={_{ opacity: 1, _scale: 1}}
-              transition={_{ duration: 0.5, _delay: 0.8}}
+              initial={_{ opacity: 0, _scale: 0.8}
+              animate={_{ opacity: 1, _scale: 1}
+              transition={_{ duration: 0.5, _delay: 0.8}
             >
               <Link
                 href=&quot;/contact&quot;
@@ -205,9 +204,9 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({ className = '' 
 
           {_/* Mobile menu button */}
           <motion.button
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.9 }}
+            initial={ opacity: 0, scale: 0.8 }
+            animate={ opacity: 1, scale: 1 }
+            transition={ duration: 0.5, delay: 0.9 }
             onClick={() => setIsOpen(!isOpen)}
             className=&quot;lg:hidden p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300&quot;
           >
@@ -219,10 +218,10 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({ className = '' 
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
+            initial={ opacity: 0, height: 0 }
+            animate={ opacity: 1, height: 'auto' }
+            exit={ opacity: 0, height: 0 }
+            transition={ duration: 0.3 }
             className=&quot;lg:hidden bg-black/95 backdrop-blur-xl border-t border-cyan-500/20&quot;
           >
             <div className=&quot;px-4 py-6 space-y-4&quot;>
@@ -236,7 +235,7 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({ className = '' 
               </div>
 
               {/* Navigation Items */}
-              {navigationItems.map((item) => (
+              {navigationItems.map(item) => (
                 <div key={item.name} className=&quot;space-y-2&quot;>
                   <Link
                     href={item.href}
@@ -245,10 +244,10 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({ className = '' 
                   >
                     {item.name}
                   </a>
-                  
+
                   {item.hasDropdown && item.dropdownItems && (
                     <div className=&quot;ml-4 space-y-1&quot;>
-                      {item.dropdownItems.map((dropdownItem) => (
+                      {item.dropdownItems.map(dropdownItem) => (
                         <Link
                           key={dropdownItem.name}
                           href={dropdownItem.href}
@@ -256,12 +255,12 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({ className = '' 
                           className=&quot;block text-gray-400 hover:text-cyan-400 transition-colors duration-300 py-1 text-sm&quot;
                         >
                           {dropdownItem.name}
-                        </a>                      ))}
+                        </a>                      )}
                     </div>
                   )}
                 </div>;
-              ))}
-;
+              )}
+
               {/* Contact Info */}
               <div className=&quot;pt-4 border-t border-cyan-500/20&quot;>
                 <div className=&quot;space-y-2 text-sm text-gray-400&quot;>
@@ -290,6 +289,6 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({ className = '' 
       </AnimatePresence>
     </nav>
   )
-},
+,
 
 export default EnhancedNavigation,

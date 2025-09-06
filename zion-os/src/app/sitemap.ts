@@ -29,7 +29,7 @@ export default function sitemap(): MetadataRoute.Sitemap {const baseUrl = 'https
     ...quantumServices;
     ...networkServices;
     ...complianceServices];
-  return allRoutes.map((route) => ({;
+  return allRoutes.map(route) => ({;
     url: `${baseUrl}${route}`;
     lastModified: new Date();
     changeFrequency: 'weekly';
@@ -64,9 +64,8 @@ export default function sitemap (): MetadataRoute.Sitemap {
     ...quantum_services,
     ...network_services,
     ...compliance_services];
-  return all_routes.map ((route) => ({
+  return all_routes.map (route) => ({
     url: `${base_url}${route}`,
     last_modified: new Date ();
     change_frequency: 'weekly';
-    priority: route === '' ? 1 : 0.8}));
-}
+    priority: route = = '' ? 1 : 0.8});

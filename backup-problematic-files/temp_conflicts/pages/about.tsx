@@ -4,10 +4,10 @@ import { motion } from 'framer-motion',;
 import { ;
   Brain, Shield, Rocket, Cpu, Database, Atom, Users, Award, ;
   Globe, Target, Star, CheckCircle, TrendingUp, Lightbulb;
-} from 'lucide-react',;
+ from 'lucide-react',;
 import EnhancedNavigation from '../components/EnhancedNavigation',;
 import EnhancedFooter from '../components/EnhancedFooter',;
-;
+
 export default function AboutPage() {;
   const values = [;
     {;
@@ -31,7 +31,7 @@ export default function AboutPage() {;
       description:"Solutions that address real-world challenges across industries and borders";
     }
   ],;
-;
+
   const milestones = [;
     {;
       year:"2025",;
@@ -54,7 +54,7 @@ export default function AboutPage() {;
       description:"Zion Tech Group established with vision for autonomous innovation";
     }
   ],;
-;
+
   const team = [;
     {;
       name:"Dr. Sarah Chen",;
@@ -77,7 +77,7 @@ export default function AboutPage() {;
       expertise:"Emerging Technologies, Strategic Innovation, R&D";
     }
   ],;
-;
+
   return (;
     <>;
       <Head>;
@@ -89,17 +89,17 @@ export default function AboutPage() {;
         <meta property="og:type" content="website" />;
         <meta property="og:url" content="https://ziontechgroup.com/about" />;
       </Head>;
-;
+
       <EnhancedNavigation />;
-;
+
       <main className="min-h-screen bg-slate-900 text-white">;
         {/* Hero Section */}
         <section className="pt-32 pb-20 px-6">;
           <div className="max-w-7xl mx-auto text-center">;
             <motion.div;
-              initial={{ opacity:0, y:20 }}
-              animate={{ opacity:1, y:0 }}
-              transition={{ duration:0.8 }}
+              initial={ opacity:0, y:20 }
+              animate={ opacity:1, y:0 }
+              transition={ duration:0.8 }
             >;
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">;
                 About Zion Tech Group;
@@ -111,16 +111,16 @@ export default function AboutPage() {;
             </motion.div>;
           </div>;
         </section>;
-;
+
         {/* Mission & Vision */}
         <section className="py-20 px-6 bg-slate-800/50">;
           <div className="max-w-7xl mx-auto">;
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">;
               <motion.div;
-                initial={{ opacity:0, x:-20 }}
-                whileInView={{ opacity:1, x:0 }}
-                transition={{ duration:0.8 }}
-                viewport={{ once:true }}
+                initial={ opacity:0, x:-20 }
+                whileInView={ opacity:1, x:0 }
+                transition={ duration:0.8 }
+                viewport={ once:true }
               >;
                 <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">;
                   Our Mission;
@@ -135,12 +135,12 @@ export default function AboutPage() {;
                   but collaborates with them as intelligent partners in innovation.;
                 </p>;
               </motion.div>;
-;
+
               <motion.div;
-                initial={{ opacity:0, x:20 }}
-                whileInView={{ opacity:1, x:0 }}
-                transition={{ duration:0.8 }}
-                viewport={{ once:true }}
+                initial={ opacity:0, x:20 }
+                whileInView={ opacity:1, x:0 }
+                transition={ duration:0.8 }
+                viewport={ once:true }
                 className="relative";
               >;
                 <div className="relative z-10">;
@@ -163,15 +163,15 @@ export default function AboutPage() {;
             </div>;
           </div>;
         </section>;
-;
+
         {/* Values */}
         <section className="py-20 px-6">;
           <div className="max-w-7xl mx-auto">;
             <motion.div;
-              initial={{ opacity:0, y:20 }}
-              whileInView={{ opacity:1, y:0 }}
-              transition={{ duration:0.8 }}
-              viewport={{ once:true }}
+              initial={ opacity:0, y:20 }
+              whileInView={ opacity:1, y:0 }
+              transition={ duration:0.8 }
+              viewport={ once:true }
               className="text-center mb-16";
             >;
               <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">;
@@ -181,15 +181,15 @@ export default function AboutPage() {;
                 The principles that guide our innovation and shape our culture;
               </p>;
             </motion.div>;
-;
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-              {values.map((value, index) => (;
+              {values.map(value, index) => (;
                 <motion.div;
                   key={value.title}
-                  initial={{ opacity:0, y:20 }}
-                  whileInView={{ opacity:1, y:0 }}
-                  transition={{ duration:0.6, delay:index * 0.1 }}
-                  viewport={{ once:true }}
+                  initial={ opacity:0, y:20 }
+                  whileInView={ opacity:1, y:0 }
+                  transition={ duration:0.6, delay:index * 0.1 }
+                  viewport={ once:true }
                   className="group";
                 >;
                   <div className="p-6 rounded-2xl bg-slate-800/50 border border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:bg-slate-800/70">;
@@ -200,19 +200,19 @@ export default function AboutPage() {;
                     <p className="text-white/70 leading-relaxed">{value.description}</p>;
                   </div>;
                 </motion.div>;
-              ))}
+              )}
             </div>;
           </div>;
         </section>;
-;
+
         {/* Milestones */}
         <section className="py-20 px-6 bg-slate-800/50">;
           <div className="max-w-7xl mx-auto">;
             <motion.div;
-              initial={{ opacity:0, y:20 }}
-              whileInView={{ opacity:1, y:0 }}
-              transition={{ duration:0.8 }}
-              viewport={{ once:true }}
+              initial={ opacity:0, y:20 }
+              whileInView={ opacity:1, y:0 }
+              transition={ duration:0.8 }
+              viewport={ once:true }
               className="text-center mb-16";
             >;
               <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">;
@@ -222,17 +222,17 @@ export default function AboutPage() {;
                 Key milestones in our mission to revolutionize autonomous technology;
               </p>;
             </motion.div>;
-;
+
             <div className="space-y-8">;
-              {milestones.map((milestone, index) => (;
+              {milestones.map(milestone, index) => (;
                 <motion.div;
                   key={milestone.year}
-                  initial={{ opacity:0, x:index % 2 === 0 ? -20 :20 }}
-                  whileInView={{ opacity:1, x:0 }}
-                  transition={{ duration:0.8, delay:index * 0.2 }}
-                  viewport={{ once:true }}
+                  initial={ opacity:0, x:index % 2 = = 0 ? -20 :20 }
+                  whileInView={ opacity:1, x:0 }
+                  transition={ duration:0.8, delay:index * 0.2 }
+                  viewport={ once:true }
                   className={`flex flex-col lg:flex-row items-center gap-8 ${;
-                    index % 2 === 0 ? 'lg:flex-row' :'lg:flex-row-reverse';
+                    index % 2 = = 0 ? 'lg:flex-row' :'lg:flex-row-reverse';
                   }`}
                 >;
                   <div className="lg:w-1/2">;
@@ -253,19 +253,19 @@ export default function AboutPage() {;
                     </div>;
                   </div>;
                 </motion.div>;
-              ))}
+              )}
             </div>;
           </div>;
         </section>;
-;
+
         {/* Team */}
         <section className="py-20 px-6">;
           <div className="max-w-7xl mx-auto">;
             <motion.div;
-              initial={{ opacity:0, y:20 }}
-              whileInView={{ opacity:1, y:0 }}
-              transition={{ duration:0.8 }}
-              viewport={{ once:true }}
+              initial={ opacity:0, y:20 }
+              whileInView={ opacity:1, y:0 }
+              transition={ duration:0.8 }
+              viewport={ once:true }
               className="text-center mb-16";
             >;
               <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">;
@@ -275,15 +275,15 @@ export default function AboutPage() {;
                 Visionary leaders driving innovation and shaping the future of autonomous technology;
               </p>;
             </motion.div>;
-;
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-              {team.map((member, index) => (;
+              {team.map(member, index) => (;
                 <motion.div;
                   key={member.name}
-                  initial={{ opacity:0, y:20 }}
-                  whileInView={{ opacity:1, y:0 }}
-                  transition={{ duration:0.6, delay:index * 0.1 }}
-                  viewport={{ once:true }}
+                  initial={ opacity:0, y:20 }
+                  whileInView={ opacity:1, y:0 }
+                  transition={ duration:0.6, delay:index * 0.1 }
+                  viewport={ once:true }
                   className="group";
                 >;
                   <div className="p-6 rounded-2xl bg-slate-800/50 border border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:bg-slate-800/70">;
@@ -295,19 +295,19 @@ export default function AboutPage() {;
                     <p className="text-white/70 leading-relaxed text-center">{member.expertise}</p>;
                   </div>;
                 </motion.div>;
-              ))}
+              )}
             </div>;
           </div>;
         </section>;
-;
+
         {/* CTA Section */}
         <section className="py-20 px-6 bg-gradient-to-r from-blue-600/20 to-cyan-600/20">;
           <div className="max-w-4xl mx-auto text-center">;
             <motion.div;
-              initial={{ opacity:0, y:20 }}
-              whileInView={{ opacity:1, y:0 }}
-              transition={{ duration:0.8 }}
-              viewport={{ once:true }}
+              initial={ opacity:0, y:20 }
+              whileInView={ opacity:1, y:0 }
+              transition={ duration:0.8 }
+              viewport={ once:true }
             >;
               <h2 className="text-4xl font-bold mb-6 text-white">;
                 Join Us in Shaping the Future;
@@ -334,8 +334,7 @@ export default function AboutPage() {;
           </div>;
         </section>;
       </main>;
-;
+
       <EnhancedFooter />;
     </>;
   );
-}

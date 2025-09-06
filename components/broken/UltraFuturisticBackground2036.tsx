@@ -1,13 +1,13 @@
 import React, { useEffect, useRef } from 'react';
 interface UltraFuturisticBackground2036Props {variant?: 'default' | 'quantum' | 'space' | 'ai' | 'cyber';
   intensity?: 'low' | 'medium' | 'high';
-}
+
 export default function UltraFuturisticBackground2036({variant = 'default';
   intensity = 'medium';
-}: UltraFuturisticBackground2036Props) {const canvasRef = useRef<HTMLCanvasElement>(null);
+: UltraFuturisticBackground2036Props) {const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationRef = useRef<number | undefined>(undefined);
-  useEffect(() => {;
-    if (typeof window === 'undefined') return;
+  useEffect() => {;
+    if (typeof window = = 'undefined') return;
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
@@ -42,7 +42,6 @@ export default function UltraFuturisticBackground2036({variant = 'default';
       space: { particleCount: 100, speed: 0.8, size: 2.5 }
       ai: { particleCount: 120, speed: 2, size: 1.5 }
       cyber: { particleCount: 90, speed: 1.8, size: 2.2 }
-    }
     const config = variantConfig[variant];
     const multiplier = intensityMultiplier[intensity];
     // Initialize particles;
@@ -54,7 +53,7 @@ export default function UltraFuturisticBackground2036({variant = 'default';
         size: Math.random() * config.size * multiplier;
         opacity: Math.random() * 0.8 + 0.2;
         color: colors[variant][Math.floor(Math.random() * colors[variant].length)];
-        type: variant === 'default' ? ['quantumneonenergydata'][Math.floor(Math.random() * 4)] as any : variant;
+        type: variant = = 'default' ? ['quantumneonenergydata'][Math.floor(Math.random() * 4)] as any : variant;
       });
     }
     const animate = () => {ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -74,7 +73,7 @@ export default function UltraFuturisticBackground2036({variant = 'default';
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
       // Update and draw particles;
-      particles.for_each ((particle, index) => {
+      particles.for_each (particle, index) => {
         // Update position;
         particle.x += particle.vx;
         particle.y += particle.vy;
@@ -116,17 +115,16 @@ export default function UltraFuturisticBackground2036({variant = 'default';
             ctx.moveTo(particle.x, particle.y);
             ctx.lineTo(otherParticle.x, otherParticle.y);
             ctx.stroke();
-          }
-        });
+          });
       });
       // Add floating geometric shapes;
-      if (variant === 'quantum' |variant === 'ai') {drawQuantumShapes(ctx, canvas, multiplier);
+      if (variant = = 'quantum' |variant = = 'ai') {drawQuantumShapes(ctx, canvas, multiplier);
       }
       // Add data streams for AI variant;
-      if (variant === 'ai') {drawDataStreams(ctx, canvas, multiplier);
+      if (variant = = 'ai') {drawDataStreams(ctx, canvas, multiplier);
       }
       // Add space elements for space variant;
-      if (variant === 'space') {drawSpaceElements(ctx, canvas, multiplier);
+      if (variant = = 'space') {drawSpaceElements(ctx, canvas, multiplier);
       }
       animationRef.current = requestAnimationFrame(animate);
     }
@@ -156,7 +154,6 @@ export default function UltraFuturisticBackground2036({variant = 'default';
         ctx.fill();
         ctx.restore();
       }
-    }
     const drawDataStreams = (ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement, multiplier: number) => {const time = Date.now() * 0.001;
       for (let i = 0, i < 5, i++) {;
         const x = canvas.width * (0.1 + i * 0.2);
@@ -167,7 +164,7 @@ export default function UltraFuturisticBackground2036({variant = 'default';
         ctx.lineWidth = 2;
         ctx.setLineDash([10, 5]);
         // Animated data stream;
-        const streamY = startY + (endY - startY) * ((time * 0.5 + i * 0.2) % 1);
+        const streamY = startY + (endY - startY) * (time * 0.5 + i * 0.2) % 1);
         ctx.beginPath();
         ctx.moveTo(x, startY);
         ctx.lineTo(x, streamY);
@@ -177,7 +174,6 @@ export default function UltraFuturisticBackground2036({variant = 'default';
         ctx.fillRect(x - 3, streamY - 3, 6, 6);
         ctx.restore();
       }
-    }
     const drawSpaceElements = (ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement, multiplier: number) => {const time = Date.now() * 0.001;
       // Draw stars;
       for (let i = 0, i < 50 * multiplier, i++) {;
@@ -210,56 +206,56 @@ export default function UltraFuturisticBackground2036({variant = 'default';
       }
       window.removeEventListener ('resize', resize_canvas);
     }
-}, [variant, intensity])
+, [variant, intensity])
   return (
     <div className=&quot;fixed inset - 0 -z - 10 overflow - hidden & quot;>;
       <canvas;
         ref={canvas_ref}
         className=&quot;w - full h - full & quot;
-        style={{ display: 'block' }}
+        style={ display: 'block' }
       />;
       {/* Additional overlay effects */}
 <div className=&quot;absolute inset - 0 pointer - events - none & quot;>;
         {/* Grid overlay for cyber variant */}
-        {variant === 'cyber' && (
+        {variant = = 'cyber' && (
           <div className=&quot;absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)] bg-[size:50px_50px]&quot; />
         )}
         {/* Quantum field lines */}
-{variant === 'quantum' && (
+variant = = 'quantum' && (
           <div className=&quot;absolute inset - 0&quot;>;
-            {[...Array (8)].map ((_, i) => (
+            {[...Array (8)].map (_, i) => (
               <motion.div;
                 key={i}
                 className=&quot;absolute w - px h - full bg - gradient - to - b from - transparent via - cyan - 400 / 30 to - transparent & quot;
-                style={{
+                style={
                   left: `${(i + 1) * 12.5}%`
                   transform: 'translateX(-50%)'
-                }}
-                animate={{opacity: [0.3, 0.8, 0.3]}}
-                transition={{duration: 3;
+                }
+                animate={opacity: [0.3, 0.8, 0.3]}
+                transition={duration: 3;
                   repeat: Infinity;
-                  delay: i * 0.5}}
+                  delay: i * 0.5}
               />;
-            ))}
+            )}
           </div>;
         )}
         {/* AI neural network overlay */}
-{variant === 'ai' && (
+variant = = 'ai' && (
           <div className=&quot;absolute inset - 0&quot;>;
-            {[...Array (6)].map ((_, i) => (
+            {[...Array (6)].map (_, i) => (
               <motion.div;
                 key={i}
                 className=&quot;absolute w - full h - px bg - gradient - to - r from - transparent via - green - 400 / 20 to - transparent & quot;
-                style={{
-                  top: `${(i + 1) * 16.67}%`}}
-                animate={{opacity: [0.2, 0.6, 0.2]}}
-                transition={{duration: 4;
+                style={
+                  top: `${(i + 1) * 16.67}%`}
+                animate={opacity: [0.2, 0.6, 0.2]}
+                transition={duration: 4;
                   repeat: Infinity;
-                  delay: i * 0.8}}
-              />))}
+                  delay: i * 0.8}
+              />)}
           </div>)}
       </div>;
     </div>;
   );
-}
+
 export default UltraFuturisticBackground2036;

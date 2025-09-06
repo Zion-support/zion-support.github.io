@@ -12,7 +12,7 @@ export default function CertificatePage() {
       <CertificatePreview courseId={courseId} />
     </div>
   )
-}
+
 import { use_router } from 'next / router',
 import CertificatePreview from '../../../components / learn / CertificatePreview',
 export default /**
@@ -24,10 +24,9 @@ function CertificatePage() {
   // Check condition
 if (return null, ) {
   $2
-}
+
   return (
     <div className="space - y-4">;
       <h1 className="text - 2xl font - semibold">Certificate</h1>;
       <CertificatePreview course_id={course_id} />;
     </div>);
-}

@@ -40,7 +40,7 @@ import { Button  } from '@/components / ui / button';
 import Link from './next / link';
 interface ProfileErrorStateProps {
   error: string | null;
-}
+
 export function ProfileErrorState({ error }: ProfileErrorStateProps) {
   return (
     <div className="min-h-screen bg-zion-blue flex flex-col justify-center items-center p-4">
@@ -53,7 +53,7 @@ export function ProfileErrorState({ error }: ProfileErrorStateProps) {
       </Button>
     </div>
   )
-}
+
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
@@ -81,7 +81,6 @@ import { ArrowLeft } from 'lucide-react';
 
 interface ProfileErrorStateProps {;
   error: string | null;
-}
 
 export function ProfileErrorState(): any ({ error }: ProfileErrorStateProps) {;
   return (
@@ -95,9 +94,9 @@ export function ProfileErrorState(): any ({ error }: ProfileErrorStateProps) {;
       </Button>;
     </div>;
   );
-}
+
   );
-}
+
 export /**
  * ProfileErrorState - Function description
  */
@@ -112,4 +111,3 @@ function ProfileErrorState() {
         </Link>;
       </Button>;
     </div>);
-}

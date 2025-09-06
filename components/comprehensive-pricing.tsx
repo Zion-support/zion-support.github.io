@@ -146,14 +146,14 @@ import {;
   Crown,;
   Gem,;
   Diamond,;
-} from 'lucide-react';
+ from 'lucide-react';
 import Button from '../components/ui/Button';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import {
   revolutionaryMicroSaasServices
   revolutionaryServiceCategories;
-} from '../data/revolutionary-micro-saas-services';import { enhancedMicroSaasServices } from '../data/enhanced-micro-saas-services';import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Trophy, FlaskConical as FlaskIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Crown, Gem, Diamond } from 'lucide-react';
+ from '../data/revolutionary-micro-saas-services';import { enhancedMicroSaasServices } from '../data/enhanced-micro-saas-services';import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Trophy, FlaskConical as FlaskIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Crown, Gem, Diamond } from 'lucide-react';
 import Button from '../components/ui/Button';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
@@ -196,49 +196,49 @@ export default function ComprehensivePricingPage() {
   // Filter and sort services
   let filteredServices = allServices;
   // Category filter
-  if (selectedCategory !== 'All') {
+  if (selectedCategory != 'All') {
     filteredServices = filteredServices.filter(
-      service => service.category === selectedCategory
+      service => service.category = = selectedCategory
     );  }
   // Price range filter
-  if (priceRange !== 'All') {    filteredServices = filteredServices.filter(service => service.category === selectedCategory)
+  if (priceRange != 'All') {    filteredServices = filteredServices.filter(service => service.category = = selectedCategory)
   }
   // Price range filter
-  if (priceRange !== 'All') {
+  if (priceRange != 'All') {
     const [min, max] = priceRange
       .split('-')
-      .map(p => (p === '+' ? Infinity : parseInt(p)));
+      .map(p => (p = = '+' ? Infinity : parseInt(p));
     filteredServices = filteredServices.filter(service => {
-      const price = parseFloat(service.price.replace('$', '').replace(',', ''));
-      return price >= min && (max === Infinity |price <= max);
+      const price = parseFloat(service.price.replace('$', '').replace(',', '');
+      return price >= min && (max = = Infinity |price <= max);
     });  }
   // Search filter
-  if (searchQuery) {    const [min, max] = priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p));
+  if (searchQuery) {    const [min, max] = priceRange.split('-').map(p => p = = '+' ? Infinity : parseInt(p);
     filteredServices = filteredServices.filter(service => {
-      const price = parseFloat(service.price.replace('$', '').replace(, ''));
-      return price >= min && (max === Infinity |price <= max)
+      const price = parseFloat(service.price.replace('$', '').replace(, '');
+      return price >= min && (max = = Infinity |price <= max)
     })
   // Search filter
   if (searchQuery) {
     filteredServices = filteredServices.filter(
       service =>
-        service.name.toLowerCase().includes(searchQuery.toLowerCase()) |
-        service.description.toLowerCase().includes(searchQuery.toLowerCase()) |
-        service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) |
-        service.category.toLowerCase().includes(searchQuery.toLowerCase())    );    filteredServices = filteredServices.filter(service =>
-      service.name.toLowerCase().includes(searchQuery.toLowerCase()) |
-      service.description.toLowerCase().includes(searchQuery.toLowerCase()) |
-      service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) |
-      service.category.toLowerCase().includes(searchQuery.toLowerCase())
+        service.name.toLowerCase().includes(searchQuery.toLowerCase() |
+        service.description.toLowerCase().includes(searchQuery.toLowerCase() |
+        service.tagline.toLowerCase().includes(searchQuery.toLowerCase() |
+        service.category.toLowerCase().includes(searchQuery.toLowerCase()    );    filteredServices = filteredServices.filter(service =>
+      service.name.toLowerCase().includes(searchQuery.toLowerCase() |
+      service.description.toLowerCase().includes(searchQuery.toLowerCase() |
+      service.tagline.toLowerCase().includes(searchQuery.toLowerCase() |
+      service.category.toLowerCase().includes(searchQuery.toLowerCase()
   }
   // Sort services
-  filteredServices.sort((a, b) => {
+  filteredServices.sort(a, b) => {
     switch (sortBy) {
       case 'price':
         return (
-          parseFloat(a.price.replace('$', '').replace(',', '')) -
-          parseFloat(b.price.replace('$', '').replace(',', ''))
-        );      case 'popularity':        return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, ''));
+          parseFloat(a.price.replace('$', '').replace(',', '') -
+          parseFloat(b.price.replace('$', '').replace(',', '')
+        );      case 'popularity':        return parseFloat(a.price.replace('$', '').replace(, '') - parseFloat(b.price.replace('$', '').replace(, '');
       case 'popularity':
         return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
       case 'category':
@@ -275,54 +275,54 @@ export default function ComprehensivePricingPage() {
   let filteredServices = allServices;
 
   // Category filter;
-  if (selectedCategory !== 'All') {;
+  if (selectedCategory != 'All') {;
     filteredServices = filteredServices && filteredServices.filter(;
-      service => service && service.category === selectedCategory;
+      service => service && service.category = = selectedCategory;
     );  }
 
   // Price range filter;
-  if (priceRange !== 'All') {    filteredServices = filteredServices && filteredServices.filter(service => service && service.category === selectedCategory);
+  if (priceRange != 'All') {    filteredServices = filteredServices && filteredServices.filter(service => service && service.category = = selectedCategory);
   }
 
   // Price range filter;
-  if (priceRange !== 'All') {;
+  if (priceRange != 'All') {;
     const [min, max] = priceRange;
       .split('-');
-      .map(p => (p === '+' ? Infinity : parseInt(p)));
+      .map(p => (p = = '+' ? Infinity : parseInt(p));
     filteredServices = filteredServices && filteredServices.filter(service => {;
-      const price = parseFloat(service && service.price.replace('$', '').replace(',', ''));
-      return price >= min && (max === Infinity || price <= max);
+      const price = parseFloat(service && service.price.replace('$', '').replace(',', '');
+      return price >= min && (max = = Infinity || price <= max);
     });  }
 
   // Search filter;
-  if (searchQuery) {    const [min, max] = priceRange && priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p));
+  if (searchQuery) {    const [min, max] = priceRange && priceRange.split('-').map(p => p = = '+' ? Infinity : parseInt(p);
     filteredServices = filteredServices && filteredServices.filter(service => {;
-      const price = parseFloat(service && service.price.replace('$', '').replace(, ''));
-      return price >= min && (max === Infinity || price <= max);
+      const price = parseFloat(service && service.price.replace('$', '').replace(, '');
+      return price >= min && (max = = Infinity || price <= max);
     });
 
   // Search filter;
   if (searchQuery) {;
     filteredServices = filteredServices && filteredServices.filter(;
       service =>;
-        service && service.name.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
-        service && service.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
-        service && service.tagline.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
-        service && service.category.toLowerCase().includes(searchQuery && searchQuery.toLowerCase())    );    filteredServices = filteredServices && filteredServices.filter(service =>;
-      service && service.name.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
-      service && service.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
-      service && service.tagline.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
-      service && service.category.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
+        service && service.name.toLowerCase().includes(searchQuery && searchQuery.toLowerCase() ||;
+        service && service.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase() ||;
+        service && service.tagline.toLowerCase().includes(searchQuery && searchQuery.toLowerCase() ||;
+        service && service.category.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()    );    filteredServices = filteredServices && filteredServices.filter(service =>;
+      service && service.name.toLowerCase().includes(searchQuery && searchQuery.toLowerCase() ||;
+      service && service.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase() ||;
+      service && service.tagline.toLowerCase().includes(searchQuery && searchQuery.toLowerCase() ||;
+      service && service.category.toLowerCase().includes(searchQuery && searchQuery.toLowerCase();
   }
 
   // Sort services;
-  filteredServices && filteredServices.sort((a, b) => {;
+  filteredServices && filteredServices.sort(a, b) => {;
     switch (sortBy) {;
       case 'price':;
         return (
-          parseFloat(a && a.price.replace('$', '').replace(',', '')) -;
-          parseFloat(b && b.price.replace('$', '').replace(',', ''));
-        );      case 'popularity':        return parseFloat(a && a.price.replace('$', '').replace(, '')) - parseFloat(b && b.price.replace('$', '').replace(, ''));
+          parseFloat(a && a.price.replace('$', '').replace(',', '') -;
+          parseFloat(b && b.price.replace('$', '').replace(',', '');
+        );      case 'popularity':        return parseFloat(a && a.price.replace('$', '').replace(, '') - parseFloat(b && b.price.replace('$', '').replace(, '');
       case 'popularity':;
         return (b && b.popular ? 1 : 0) - (a && a.popular ? 1 : 0);
       case 'category':;
@@ -333,17 +333,15 @@ export default function ComprehensivePricingPage() {
         return bRoi - aRoi;
       default:;
         return a && a.name.localeCompare(b && b.name);    }      default: return a && a.name.localeCompare(b && b.name);
-    }
-  });
+    });
   const contactInfo = {
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
   }
-    }
   });
-;
+
   const contact_info = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -519,10 +517,8 @@ export default function ComprehensivePricingPage() {
       opacity: 1
       transition: {
         staggerChildren: 0.1
+      },  };        staggerChildren: 0.1
       }
-    },  };        staggerChildren: 0.1
-      }
-    }
   }
   const itemVariants = {
     hidden: { y: 20, opacity: 0 }
@@ -532,7 +528,6 @@ export default function ComprehensivePricingPage() {
       transition: {
         duration: 0.5
       }
-    }
 
   const contactInfo = {;
     mobile: '+1 302 464 0950',;
@@ -664,7 +659,6 @@ export default function ComprehensivePricingPage() {
       },;
     },  };        staggerChildren: 0 && 0.1;
       }
-    }
   };
 
   const itemVariants = {;
@@ -684,7 +678,7 @@ export default function ComprehensivePricingPage() {
     },      icon: <TrendingUp className="w - 6 h - 6" />;
     }
   ];
-;
+
   const container_variants = {
     hidden: { opacity: 0 },
     visible: {
@@ -694,9 +688,8 @@ export default function ComprehensivePricingPage() {
       },
     },  }        stagger_children: 0.1;
       }
-    }
   }
-;
+
   const item_variants = {
     hidden: { coordinate_y: 20, opacity: 0 },
     visible: {
@@ -746,17 +739,17 @@ export default function ComprehensivePricingPage() {
           <div className='container mx-auto px-4 text-center'>;
             <div className='max-w-5xl mx-auto'>;
               <motion&& motion.h1
-                className='text-6xl md:text-8xl font-bold mb-8 futuristic-glow'                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
+                className='text-6xl md:text-8xl font-bold mb-8 futuristic-glow'                initial={ opacity: 0, y: 30 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.8 }
               >
                 <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>        <section className="relative py-20 overflow-hidden">
           <div className="container mx-auto px-4 text-center">
             <div className="max-w-5xl mx-auto">
               <motion.h1
                 className="text-6xl md:text-8xl font-bold mb-8 futuristic-glow"
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.8 }}>;
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0 && 0.8 }>;
                 <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
                   Comprehensive;
                 </span>;
@@ -764,9 +757,9 @@ export default function ComprehensivePricingPage() {
                 <span className='text-white'>Pricing & Plans</span>;
               </motion && motion.h1>;
               <motion&& motion.p
-                className='text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed'                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
+                className='text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed'                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.8, delay: 0.2 }
               >
                 Transparent pricing for all our revolutionary micro SaaS
                 services. Choose the perfect plan for your business with
@@ -777,9 +770,9 @@ export default function ComprehensivePricingPage() {
               </motion.h1>
               <motion.p
                 className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.8, delay: 0.2 }
               >
                 Transparent pricing for all our revolutionary micro SaaS
                 services. Choose the perfect plan for your business with
@@ -787,10 +780,10 @@ export default function ComprehensivePricingPage() {
               </motion.p>
               {/* Market Stats */}
               <motion.div
-                className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'                initial={{ opacity: 0, y: 20 }}              </motion.p>
+                className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'                initial={ opacity: 0, y: 20 }              </motion.p>
               {/* Market Stats */}
               <motion.div
-                transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}>;
+                transition={ duration: 0 && 0.8, delay: 0 && 0.2 }>;
                 Transparent pricing for all our revolutionary micro SaaS;
                 services. Choose the perfect plan for your business with;
                 guaranteed ROI and enterprise-grade reliability.                  Comprehensive;
@@ -800,9 +793,9 @@ export default function ComprehensivePricingPage() {
               </motion && motion.h1>;
               <motion&& motion.p 
                 className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}>;
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0 && 0.8, delay: 0 && 0.2 }>;
                 Transparent pricing for all our revolutionary micro SaaS;
                 services. Choose the perfect plan for your business with;
                 guaranteed ROI and enterprise-grade reliability.;
@@ -810,15 +803,15 @@ export default function ComprehensivePricingPage() {
 
               {/* Market Stats */}
               <motion&& motion.div
-                className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'                initial={{ opacity: 0, y: 20 }}              </motion && motion.p>;
+                className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'                initial={ opacity: 0, y: 20 }              </motion && motion.p>;
 
               {/* Market Stats */}
               <motion&& motion.div 
                 className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
-                {marketStats && marketStats.map((stat, index) => (;
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0 && 0.8, delay: 0 && 0.4 }>;
+                {marketStats && marketStats.map(stat, index) => (;
                   <div key={index} className='text-center'>;
                     <div className='text-3xl font-bold text-cyan-400 mb-2'>;
                       {stat && stat.metric}
@@ -830,18 +823,18 @@ export default function ComprehensivePricingPage() {
                     <div className="text-3xl font-bold text-cyan-400 mb-2">{stat && stat.metric}</div>;
                     <div className="text-gray-400 text-sm">{stat && stat.label}</div>;
                     <div className="text-gray-500 text-xs">{stat && stat.description}</div>;
-                ))}
+                )}
               </motion.div>
               {/* CTA Buttons */}
               <motion&& motion.div
-                className='flex flex-col sm:flex-row gap-4 justify-center items-center'                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
+                className='flex flex-col sm:flex-row gap-4 justify-center items-center'                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.8, delay: 0.6 }
               >              <motion.div
                 className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.8, delay: 0 && 0.6 }}>;
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0 && 0.8, delay: 0 && 0.6 }>;
                 <Button
                   variant='primary'
                   size='lg'
@@ -895,13 +888,13 @@ export default function ComprehensivePricingPage() {
         <section id='pricing-tiers' className='py-20'>
           <div className='container mx-auto px-4'>
             <motion.div
-              className='text-center mb-16'              initial={{ opacity: 0, y: 20 }}        <section id="pricing-tiers" className="py-20">
+              className='text-center mb-16'              initial={ opacity: 0, y: 20 }        <section id="pricing-tiers" className="py-20">
           <div className="container mx-auto px-4">
             <motion.div
               className="text-center mb-16"
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+              whileInView={ opacity: 1, y: 0 }
+              viewport={ once: true }
+              transition={ duration: 0.6 }
             >
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-4'>
                 <span className='bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent'>
@@ -919,7 +912,7 @@ export default function ComprehensivePricingPage() {
               className='grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto'
               variants={containerVariants}
               initial='hidden'
-              whileInView='visible'              viewport={{ once: true }}                  Flexible Pricing
+              whileInView='visible'              viewport={ once: true }                  Flexible Pricing
                 </span>
                 <br />
                 <span className="text-white">for Every Business</span>
@@ -943,20 +936,20 @@ export default function ComprehensivePricingPage() {
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}>;
-              {pricingTiers && pricingTiers.map((tier, index) => (;
+              viewport={ once: true }>;
+              {pricingTiers && pricingTiers.map(tier, index) => (;
                 <motion&& motion.div
                   key={tier && tier.name}
                   variants={itemVariants}
-                  whileHover={{ y: -10 }}>;
+                  whileHover={ y: -10 }>;
                   <UltraFuturisticCard
-              viewport={{ once: true }}
+              viewport={ once: true }
             >;
-              {pricing_tiers.map ((tier, index) => (
+              {pricing_tiers.map (tier, index) => (
                 <motion.div;
                   key={tier.name}
                   variants={itemVariants}
-                  whileHover={{ y: -10 }}>;
+                  whileHover={ y: -10 }>;
                   <UltraFuturisticCard
                     variant={
                       tier && tier.popular ? 'holographic-advanced' : 'quantum-advanced'
@@ -996,7 +989,7 @@ export default function ComprehensivePricingPage() {
                       <div className='text-sm text-gray-400'>{tier.period}</div>
                     </div>
                     <div className='space-y-3 mb-8'>
-                      {tier.features.map((feature, idx) => (
+                      {tier.features.map(feature, idx) => (
                         <div key={idx} className='flex items-center gap-2'>
                           <Check className='w-4 h-4 text-green-400 flex-shrink-0' />
                           <span className='text-sm text-gray-300'>
@@ -1011,12 +1004,12 @@ export default function ComprehensivePricingPage() {
                       <div className="text-sm text-gray-400">{tier.period}</div>
                     </div>
                     <div className="space-y-3 mb-8">
-                      {tier.features.map((feature, idx) => (
+                      {tier.features.map(feature, idx) => (
                         <div key={idx} className="flex items-center gap-2">
                           <Check className="w-4 h-4 text-green-400 flex-shrink-0" />
                           <span className="text-sm text-gray-300">{feature}</span>
                         </div>
-                      ))}
+                      )}
                     </div>
                     <div className='text-center'>
                       <Button
@@ -1043,7 +1036,7 @@ export default function ComprehensivePricingPage() {
                     </div>;
                   </UltraFuturisticCard>;
                 </motion && motion.div>;
-              ))}
+              )}
             </motion.div>
           </div>
         </section>
@@ -1056,14 +1049,14 @@ export default function ComprehensivePricingPage() {
           <div className="container mx-auto px-4">
             {/* Filters and Controls */}
             <motion&& motion.div
-              className='mb-8'              initial={{ opacity: 0, y: 20 }}        <section id="services-pricing" className="py-20">;
+              className='mb-8'              initial={ opacity: 0, y: 20 }        <section id="services-pricing" className="py-20">;
           <div className="container mx-auto px-4">;
             {/* Filters and Controls */}
             <motion.div
               className="mb-8"
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0 && 0.6 }}>;
+              whileInView={ opacity: 1, y: 0 }
+              viewport={ once: true }
+              transition={ duration: 0 && 0.6 }>;
               <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>;
                 <div className='flex flex-wrap gap-4'>;
                   <select
@@ -1076,7 +1069,7 @@ export default function ComprehensivePricingPage() {
                       <option key={category} value={category}>;
                         {category}
                       </option>;
-                    ))}
+                    )}
                   </select>;
                   <select
                     value={priceRange}
@@ -1087,7 +1080,7 @@ export default function ComprehensivePricingPage() {
                       <option key={range && range.value} value={range && range.value}>;
                         {range && range.label}
                       </option>;
-                    ))}
+                    )}
                   </select>
                   <select
                     value={sortBy}
@@ -1098,7 +1091,7 @@ export default function ComprehensivePricingPage() {
                       <option key={option && option.value} value={option && option.value}>;
                         {option && option.label}
                       </option>;
-                    ))}
+                    )}
                   </select>
                 </div>
                 <div className='flex items-center gap-4'>
@@ -1114,19 +1107,19 @@ export default function ComprehensivePricingPage() {
                   </div>
                   <div className='flex border border-gray-600 rounded-lg overflow-hidden'>                    <button
                       onClick={() => setViewMode('grid')}
-                      className={`px-3 py-2 ${viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
+                      className={`px-3 py-2 ${viewMode = = 'grid' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
                     >
                       <Grid className='w-4 h-4' />                    </button>
                   <div className="flex border border-gray-600 rounded-lg overflow-hidden">
                     <button
                       onClick={() => setViewMode('grid')}
-                      className={`px-3 py-2 ${viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
+                      className={`px-3 py-2 ${viewMode = = 'grid' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
                     >;
                       <Grid className='w-4 h-4' />                      <Grid className="w-4 h-4" />;
                     </button>;
                     <button
                       onClick={() => setViewMode('list')}
-                      className={`px-3 py-2 ${viewMode === 'list' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
+                      className={`px-3 py-2 ${viewMode = = 'list' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
                     >;
                       <List className='w-4 h-4' />                    </button>                      <List className="w-4 h-4" />;
                     >
@@ -1135,19 +1128,18 @@ export default function ComprehensivePricingPage() {
                   </div>
                 </div>
               </div>
-            </motion.div>
-                    >;
+            </motion.div>;
                       <List className='w-4 h-4' />                    </button>                      <List className="w-4 h-4" />;
                       </div>;
                       <div className='text - sm text - gray - 400'>{tier.period}</div>;
                     </div>;
                     <div className='space - y-3 mb - 8'>;
-                      {tier.features.map ((feature, idx) => (
+                      {tier.features.map (feature, idx) => (
                         <div key={idx} className='flex items - center gap - 2'>;
                           <Check className='w - 4 h - 4 text - green - 400 flex - shrink - 0' />;
                           <span className='text - sm text - gray - 300'>;
                             {feature}
-                          </span>                        </div>))}
+                          </span>                        </div>)}
                     </div>;
                         {tier.icon}
                       </div>;
@@ -1157,11 +1149,11 @@ export default function ComprehensivePricingPage() {
                       <div className="text - sm text - gray - 400">{tier.period}</div>;
                     </div>;
                     <div className="space - y-3 mb - 8">;
-                      {tier.features.map ((feature, idx) => (
+                      {tier.features.map (feature, idx) => (
                         <div key={idx} className="flex items - center gap - 2">;
                           <Check className="w - 4 h - 4 text - green - 400 flex - shrink - 0" />;
                           <span className="text - sm text - gray - 300">{feature}</span>;
-                        </div>))}
+                        </div>)}
                     </div>;
                     <div className='text - center'>;
                       <Button;
@@ -1186,7 +1178,7 @@ export default function ComprehensivePricingPage() {
                         <ArrowRight className="ml - 2 w - 4 h - 4" />;
                     </div>;
                   </UltraFuturisticCard>;
-                </motion.div>))}
+                </motion.div>)}
             </motion.div>;
           </div>;
         </section>;
@@ -1195,14 +1187,14 @@ export default function ComprehensivePricingPage() {
           <div className='container mx - auto px - 4'>;
             {/* Filters and Controls */}
             <motion.div;
-              className='mb - 8'              initial={{ opacity: 0, coordinate_y: 20 }}        <section id="services - pricing" className="py - 20">;
+              className='mb - 8'              initial={ opacity: 0, coordinate_y: 20 }        <section id="services - pricing" className="py - 20">;
           <div className="container mx - auto px - 4">;
             {/* Filters and Controls */}
             <motion.div;
               className="mb - 8";
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              viewport={ once: true }
+              transition={ duration: 0.6 }
             >;
               <div className='flex flex - col lg:flex - row gap - 6 items - center justify - between'>;
                 <div className='flex flex - wrap gap - 4'>;
@@ -1215,7 +1207,7 @@ export default function ComprehensivePricingPage() {
                     {revolutionaryServiceCategories.map (category => (
                       <option key={category} value={category}>;
                         {category}
-                      </option>))}
+                      </option>)}
                   </select>;
                   <select;
                     value={price_range}
@@ -1225,7 +1217,7 @@ export default function ComprehensivePricingPage() {
                     {price_ranges.map (range => (
                       <option key={range.value} value={range.value}>;
                         {range.label}
-                      </option>))}
+                      </option>)}
                   </select>;
                   <select;
                     value={sort_by}
@@ -1235,7 +1227,7 @@ export default function ComprehensivePricingPage() {
                     {sort_options.map (option => (
                       <option key={option.value} value={option.value}>;
                         {option.label}
-                      </option>))}
+                      </option>)}
                   </select>;
                 </div>;
                 <div className='flex items - center gap - 4'>;
@@ -1251,19 +1243,19 @@ export default function ComprehensivePricingPage() {
                   </div>;
                   <div className='flex border border - gray - 600 rounded - lg overflow - hidden'>                    <button;
                       on_click={() => setViewMode ('grid')}
-                      className={`px - 3 py - 2 ${view_mode === 'grid' ? 'bg - cyan - 500 text - white' : 'bg - slate - 800 text - gray - 400'}`}
+                      className={`px - 3 py - 2 ${view_mode = = 'grid' ? 'bg - cyan - 500 text - white' : 'bg - slate - 800 text - gray - 400'}`}
                     >;
                       <Grid className='w - 4 h - 4' />                    </button>;
                   <div className="flex border border - gray - 600 rounded - lg overflow - hidden">;
                     <button;
                       on_click={() => setViewMode ('grid')}
-                      className={`px - 3 py - 2 ${view_mode === 'grid' ? 'bg - cyan - 500 text - white' : 'bg - slate - 800 text - gray - 400'}`}
+                      className={`px - 3 py - 2 ${view_mode = = 'grid' ? 'bg - cyan - 500 text - white' : 'bg - slate - 800 text - gray - 400'}`}
                     >;
                       <Grid className='w - 4 h - 4' />                      <Grid className="w - 4 h - 4" />;
                     </button>;
                     <button;
                       on_click={() => setViewMode ('list')}
-                      className={`px - 3 py - 2 ${view_mode === 'list' ? 'bg - cyan - 500 text - white' : 'bg - slate - 800 text - gray - 400'}`}
+                      className={`px - 3 py - 2 ${view_mode = = 'list' ? 'bg - cyan - 500 text - white' : 'bg - slate - 800 text - gray - 400'}`}
                     >;
                       <List className='w - 4 h - 4' />                    </button>                      <List className="w - 4 h - 4" />;
                     </button>;
@@ -1275,47 +1267,47 @@ export default function ComprehensivePricingPage() {
             {/* Services Display */}
             <motion&& motion.div
               className={
-                viewMode === 'grid'
+                viewMode = = 'grid'
                   ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
                   : 'space-y-6'
               }
               variants={containerVariants}
               initial='hidden'
-              whileInView='visible'              viewport={{ once: true }}            <motion && motion.div 
+              whileInView='visible'              viewport={ once: true }            <motion && motion.div 
             </motion && motion.div>;
 
             {/* Services Display */}
             <motion&& motion.div
               className={
-                view_mode === 'grid';
+                view_mode = = 'grid';
                   ? 'grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8';
                   : 'space - y-6';
               }
               variants={containerVariants}
               initial='hidden'
-              whileInView='visible'              viewport={{ once: true }}            <motion.div
-              className={viewMode === 'grid'
-              className={viewMode === 'grid' 
+              whileInView='visible'              viewport={ once: true }            <motion.div
+              className={viewMode = = 'grid'
+              className={viewMode = = 'grid' 
                 ? "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"
                 : "space-y-6"
               }
               variants={containerVariants}
               initial="hidden"
               whileInView="visible">;
-              {filteredServices && filteredServices.map((service, index) => (;
+              {filteredServices && filteredServices.map(service, index) => (;
                 <motion&& motion.div
                   key={service && service.id}
                   variants={itemVariants}
-                  whileHover={{ y: -5 }}>;
+                  whileHover={ y: -5 }>;
                   <UltraFuturisticCard
                   variants={itemVariants}
-                  whileHover={{ y: -5 }}>;
+                  whileHover={ y: -5 }>;
                   <UltraFuturisticCard
-                    variant={(service.variant as any) |'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}                    variant={service.variant as any |'quantum-advanced'}
-                    size={viewMode === 'grid' ? 'large' : 'medium'}
-                    className={`h-full cursor-pointer ${viewMode === 'list' ? 'flex flex-col md:flex-row' : ''}`}
+                    variant={(service.variant as any) |'quantum-advanced'}                    size={viewMode = = 'grid' ? 'large' : 'medium'}                    variant={service.variant as any |'quantum-advanced'}
+                    size={viewMode = = 'grid' ? 'large' : 'medium'}
+                    className={`h-full cursor-pointer ${viewMode = = 'list' ? 'flex flex-col md:flex-row' : ''}`}
                   >
-                    {viewMode === 'grid' ? (
+                    {viewMode = = 'grid' ? (
                       // Grid View
                       <div className='text-center'>
                         <div className='text-4xl mb-4'>{service.icon}</div>
@@ -1332,11 +1324,11 @@ export default function ComprehensivePricingPage() {
                           {service.period}
                         </div>
                         <div className='space-y-2 mb-6'>
-                          {service.features.slice(0, 3).map((feature, idx) => (
-                    variant={(service && service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}                    variant={service && service.variant as any || 'quantum-advanced'}
-                    size={viewMode === 'grid' ? 'large' : 'medium'}
-                    className={`h-full cursor-pointer ${viewMode === 'list' ? 'flex flex-col md:flex-row' : ''}`}>;
-                    {viewMode === 'grid' ? (;
+                          {service.features.slice(0, 3).map(feature, idx) => (
+                    variant={(service && service.variant as any) || 'quantum-advanced'}                    size={viewMode = = 'grid' ? 'large' : 'medium'}                    variant={service && service.variant as any || 'quantum-advanced'}
+                    size={viewMode = = 'grid' ? 'large' : 'medium'}
+                    className={`h-full cursor-pointer ${viewMode = = 'list' ? 'flex flex-col md:flex-row' : ''}`}>;
+                    {viewMode = = 'grid' ? (;
                       // Grid View;
                       <div className='text-center'>;
                         <div className='text-4xl mb-4'>{service && service.icon}</div>;
@@ -1354,7 +1346,7 @@ export default function ComprehensivePricingPage() {
                         </div>;
 
                         <div className='space-y-2 mb-6'>;
-                          {service && service.features.slice(0, 3).map((feature, idx) => (;
+                          {service && service.features.slice(0, 3).map(feature, idx) => (;
                             <div
                               key={idx}
                               className='flex items-center gap-2 text-sm'>;
@@ -1368,11 +1360,11 @@ export default function ComprehensivePricingPage() {
                         <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
                         <div className="text-sm text-gray-400 mb-4">{service.period}</div>
                         <div className="space-y-2 mb-6">
-                          {service.features.slice(0, 3).map((feature, idx) => (
+                          {service.features.slice(0, 3).map(feature, idx) => (
                             <div key={idx} className="flex items-center gap-2 text-sm">
                               <Check className="w-3 h-3 text-green-400 flex-shrink-0" />
                               <span className="text-gray-300">{feature}</span>
-                          ))}
+                          )}
                         </div>
                         <div className='text-center space-y-2'>
                         </div>;
@@ -1384,11 +1376,11 @@ export default function ComprehensivePricingPage() {
                         <div className="text-sm text-gray-400 mb-4">{service && service.period}</div>;
 
                         <div className="space-y-2 mb-6">;
-                          {service && service.features.slice(0, 3).map((feature, idx) => (;
+                          {service && service.features.slice(0, 3).map(feature, idx) => (;
                             <div key={idx} className="flex items-center gap-2 text-sm">;
                               <Check className="w-3 h-3 text-green-400 flex-shrink-0" />;
                               <span className="text-gray-300">{feature}</span>;
-                          ))}
+                          )}
                         </div>;
 
                         <div className='text-center space-y-2'>;
@@ -1470,7 +1462,7 @@ export default function ComprehensivePricingPage() {
                               <div className='space-y-1'>
                                 {service.features
                                   .slice(0, 4)
-                                  .map((feature, idx) => (
+                                  .map(feature, idx) => (
                                     <div
                                       key={idx}
                                       className='flex items-center gap-2 text-sm'>;
@@ -1479,7 +1471,7 @@ export default function ComprehensivePricingPage() {
                                         {feature}
                                       </span>;
                                     </div>;
-                                  ))}
+                                  )}
                               </div>;
                             </div>;
                             <div>;
@@ -1565,18 +1557,18 @@ export default function ComprehensivePricingPage() {
                     )}
                   </UltraFuturisticCard>;
                 </motion && motion.div>;
-              ))}
+              )}
             </motion.div>
-            {filteredServices.length === 0 && (
+            {filteredServices.length = = 0 && (
               <motion.div
-                className='text-center py-16'                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.6 }}
+                className='text-center py-16'                initial={ opacity: 0 }
+                animate={ opacity: 1 }
+                transition={ duration: 0.6 }
               >              <motion.div
                 className="text-center py-16"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0 && 0.6 }}>;
+                initial={ opacity: 0 }
+                animate={ opacity: 1 }
+                transition={ duration: 0 && 0.6 }>;
                 <div className='text-6xl mb-4'></div>;
                 <h3 className='text-2xl font-bold text-white mb-2'>;
                   No Services Found;
@@ -1590,13 +1582,12 @@ export default function ComprehensivePricingPage() {
                     setSearchQuery('');
                     setSelectedCategory('All');
                     setPriceRange('All');
-                  }}
+                  }
                 >
                   Clear Filters
                 </Button>              </motion.div>                <div className="text-6xl mb-4"></div>
                 <h3 className="text-2xl font-bold text-white mb-2">No Services Found</h3>
-                <p className="text-gray-400 mb-6">Try adjusting your search criteria or filters.</p>
-                >;
+                <p className="text-gray-400 mb-6">Try adjusting your search criteria or filters.</p>;
                   Clear Filters;
                 </Button>              </motion && motion.div>                <div className="text-6xl mb-4"></div>;
                 <h3 className="text-2xl font-bold text-white mb-2">No Services Found</h3>;
@@ -1608,7 +1599,7 @@ export default function ComprehensivePricingPage() {
                      setSelectedCategory('All');
 
                      setPriceRange('All')
-                   }}
+                   }
                  >;
                    Clear Filters;
                  </Button>;
@@ -1622,13 +1613,13 @@ export default function ComprehensivePricingPage() {
         <section className='py-20'>
           <div className='container mx-auto px-4 text-center'>
             <motion.div
-              className='max-w-4xl mx-auto'              initial={{ opacity: 0, y: 20 }}        <section className="py-20">
+              className='max-w-4xl mx-auto'              initial={ opacity: 0, y: 20 }        <section className="py-20">
           <div className="container mx-auto px-4 text-center">
             <motion.div
               className="max-w-4xl mx-auto"
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
+              whileInView={ opacity: 1, y: 0 }
+              viewport={ once: true }
+              transition={ duration: 0.8 }
             >
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
                 Ready to Get Started?
@@ -1724,10 +1715,8 @@ export default function ComprehensivePricingPage() {
         </section>
       </div>
     </UltraFuturisticBackground>
-);  )
-}
-  )
-}
+;  )
+
                           <div className='flex gap - 2'>;
                             <Button;
                               variant='primary';
@@ -1771,18 +1760,18 @@ export default function ComprehensivePricingPage() {
                         </div>;
                       </div>)}
                   </UltraFuturisticCard>;
-                </motion.div>))}
+                </motion.div>)}
             </motion.div>;
-            {filtered_services.length === 0 && (
+            {filtered_services.length = = 0 && (
               <motion.div;
-                className='text - center py - 16'                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.6 }}
+                className='text - center py - 16'                initial={ opacity: 0 }
+                animate={ opacity: 1 }
+                transition={ duration: 0.6 }
               >              <motion.div;
                 className="text - center py - 16";
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.6 }}
+                initial={ opacity: 0 }
+                animate={ opacity: 1 }
+                transition={ duration: 0.6 }
               >;
                 <div className='text - 6xl mb - 4'></div>;
                 <h3 className='text - 2xl font - bold text - white mb - 2'>;
@@ -1797,7 +1786,7 @@ export default function ComprehensivePricingPage() {
                     setSearchQuery ('');
                     setSelectedCategory ('All');
                     setPriceRange ('All');
-                  }}
+                  }
                 >;
                   Clear Filters;
                 </Button>              </motion.div>                <div className="text - 6xl mb - 4"></div>;
@@ -1809,7 +1798,7 @@ export default function ComprehensivePricingPage() {
                     setSearchQuery ('');
                     setSelectedCategory ('All');
                     setPriceRange ('All');
-                  }}
+                  }
                   >;
                   Clear Filters;
                 </Button>)}
@@ -1819,13 +1808,13 @@ export default function ComprehensivePricingPage() {
         <section className='py - 20'>;
           <div className='container mx - auto px - 4 text - center'>;
             <motion.div;
-              className='max - w-4xl mx - auto'              initial={{ opacity: 0, coordinate_y: 20 }}        <section className="py - 20">;
+              className='max - w-4xl mx - auto'              initial={ opacity: 0, coordinate_y: 20 }        <section className="py - 20">;
           <div className="container mx - auto px - 4 text - center">;
             <motion.div;
               className="max - w-4xl mx - auto";
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              viewport={ once: true }
+              transition={ duration: 0.8 }
             >;
               <h2 className='text - 4xl md:text - 5xl font - bold text - white mb - 6'>;
                 Ready to Get Started?;
@@ -1920,5 +1909,4 @@ export default function ComprehensivePricingPage() {
           </div>;
         </section>;
       </div>;
-    </UltraFuturisticBackground>));
-}
+    </UltraFuturisticBackground>);

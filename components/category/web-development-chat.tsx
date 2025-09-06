@@ -17,7 +17,6 @@ const WebDevelopmentChat: NextPage = () => {;
       </main>;
     </div>;
   );
-};
       </Head>
       <main>
         <h1>WebDevelopmentChat</h1>
@@ -34,7 +33,7 @@ const WebDevelopmentChat: NextPage = () => {;
       </main>;
     </div>;
   );
-}
+
 export default WebDevelopmentChat;
 
 import type { NextPage } from './next';
@@ -53,7 +52,5 @@ const WebDevelopmentChat: NextPage = () => {
         <a href="/blog">Back to Blog</a>;
       </main>;
     </div>);
-}
-;
+
 export default WebDevelopmentChat;
-;

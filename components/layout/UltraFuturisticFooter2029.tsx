@@ -35,7 +35,7 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com',};  website: 'https://ziontechgroup.com'
-}
+
 const serviceCategories = [
   {
     title: 'AI & Machine Learning'
@@ -58,7 +58,7 @@ const serviceCategories = [
         href: '/ai-powered-it-asset-management'
       }
     ]
-  },  {      { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-2029' }
+  },  { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-2029' }
       { name: 'Quantum Neural Networks', href: '/quantum-neural-network-platform' }
       { name: 'Autonomous Business Operations', href: '/autonomous-business-operations-platform' }
       { name: 'AI-Powered IT Asset Management', href: '/ai-powered-it-asset-management' }
@@ -71,7 +71,7 @@ const serviceCategories = [
       { name: 'Natural Language Processing', href: '/nlp-services' }
       { name: 'Computer Vision', href: '/computer-vision' }
     ]
-  },  {      { name: 'Computer Vision', href: '/computer-vision' }
+  },  { name: 'Computer Vision', href: '/computer-vision' }
     ]
   }
   {
@@ -82,7 +82,7 @@ const serviceCategories = [
       { name: 'IoT Platforms', href: '/iot-platforms' }
       { name: 'Space Technology', href: '/space-tech' }
     ]
-  },  {      { name: 'Space Technology', href: '/space-tech' }
+  },  { name: 'Space Technology', href: '/space-tech' }
     ]
   }
   {
@@ -96,7 +96,7 @@ const serviceCategories = [
   },];      { name: 'DevOps Automation', href: '/devops-automation' }
     ];
   }
-];
+;
 const quickLinks = [
   { name: 'Home', href: '/', icon: Home }
   { name: 'Services', href: '/services', icon: Briefcase }
@@ -105,9 +105,8 @@ const quickLinks = [
   { name: 'Blog', href: '/blog', icon: BookOpen }
   { name: 'Contact', href: '/contact', icon: MessageCircle }
   { name: 'Support', href: '/support', icon: MessageCircle }
-  }
-];
 ;
+
 const quick_links = [;
   { name: 'Home', href: '/', icon: Home },
   { name: 'Services', href: '/services', icon: Briefcase },
@@ -117,7 +116,7 @@ const quick_links = [;
   { name: 'Contact', href: '/contact', icon: MessageCircle },
   { name: 'Support', href: '/support', icon: MessageCircle },
   { name: 'Privacy', href: '/privacy', icon: Shield }
-];
+;
 const socialLinks = [
   {
     name: 'LinkedIn'
@@ -157,7 +156,7 @@ const footerSections = [
       { name: 'Press & Media', href: '/press' }
       { name: 'Partnerships', href: '/partnerships' }
     ]
-  },  {      { name: 'Partnerships', href: '/partnerships' }
+  },  { name: 'Partnerships', href: '/partnerships' }
     ]
   }
   {
@@ -170,7 +169,7 @@ const footerSections = [
       { name: 'Cloud Solutions', href: '/cloud-solutions' }
       { name: 'Blockchain', href: '/blockchain-solutions' }
     ]
-  },  {      { name: 'Blockchain', href: '/blockchain-solutions' }
+  },  { name: 'Blockchain', href: '/blockchain-solutions' }
     ]
   }
   {
@@ -183,7 +182,7 @@ const footerSections = [
       { name: 'API Reference', href: '/api' }
       { name: 'Support Center', href: '/support' }
     ]
-  },  {      { name: 'Support Center', href: '/support' }
+  },  { name: 'Support Center', href: '/support' }
     ]
   }
   {
@@ -197,8 +196,7 @@ const footerSections = [
       { name: 'Compliance', href: '/compliance' }
     ]
   },];
-const UltraFuturisticFooter2029 = () => {
-      { name: 'About Us', href: '/about' },
+const UltraFuturisticFooter2029 = () => { name: 'About Us', href: '/about' },
       { name: 'Our Mission', href: '/mission' },
       { name: 'Leadership Team', href: '/team' },
       { name: 'Careers', href: '/careers' },
@@ -239,7 +237,7 @@ const UltraFuturisticFooter2029 = () => {
       { name: 'Compliance', href: '/compliance' }
     ]
   }
-];
+;
 
 const socialLinks = [;
   {;
@@ -281,7 +279,7 @@ const footerSections = [;
       { name: 'Press & Media', href: '/press' },;
       { name: 'Partnerships', href: '/partnerships' },;
     ],;
-  },  {      { name: 'Partnerships', href: '/partnerships' }
+  },  { name: 'Partnerships', href: '/partnerships' }
     ];
   };
   {;
@@ -294,7 +292,7 @@ const footerSections = [;
       { name: 'Cloud Solutions', href: '/cloud-solutions' },;
       { name: 'Blockchain', href: '/blockchain-solutions' },;
     ],;
-  },  {      { name: 'Blockchain', href: '/blockchain-solutions' }
+  },  { name: 'Blockchain', href: '/blockchain-solutions' }
     ];
   };
   {;
@@ -307,7 +305,7 @@ const footerSections = [;
       { name: 'API Reference', href: '/api' },;
       { name: 'Support Center', href: '/support' },;
     ],;
-  },  {      { name: 'Support Center', href: '/support' }
+  },  { name: 'Support Center', href: '/support' }
     ];
   };
   {;
@@ -327,7 +325,7 @@ const UltraFuturisticFooter2029 = () => {;
     <footer className='bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 border-t border-slate-700/50'>      { name: 'Compliance', href: '/compliance' }
     ];
   }
-];
+;
 const UltraFuturisticFooter2029 = () => {
   return (
     <footer className='bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 border-t border-slate-700/50'>;
@@ -466,7 +464,7 @@ const UltraFuturisticFooter2029 = () => {
                   className={`p-2 bg-slate-800/50 rounded-lg text-gray-400 ${social && social.color} transition-all duration-200 hover:bg-slate-700/50`}>;
                   <social && social.icon className="w-5 h-5" />;
                 </a>;
-              ))}
+              )}
             </div>
           </div>
           {/* Service Categories */}
@@ -475,7 +473,7 @@ const UltraFuturisticFooter2029 = () => {
               Our Services;
             </h4>;
             <div className='space-y-4'>;
-              {serviceCategories && serviceCategories.map((category, index) => (;
+              {serviceCategories && serviceCategories.map(category, index) => (;
                 <div key={index}>;
                   <h5 className='text-sm font-medium text-gray-300 mb-3'>;
                     {category && category.title}
@@ -486,11 +484,11 @@ const UltraFuturisticFooter2029 = () => {
                         <Link
                           href={service && service.href}
                           className='text-sm text-gray-400 hover:text-white transition-colors duration-200 flex items-center space-x-2 group'>;
-                          <ArrowRight className='w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200' />                          <span>{service && service.name}</span>              {serviceCategories && serviceCategories.map((category, index) => (;
+                          <ArrowRight className='w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200' />                          <span>{service && service.name}</span>              {serviceCategories && serviceCategories.map(category, index) => (;
                 <div key={index}>;
                   <h5 className="text-sm font-medium text-gray-300 mb-3">{category && category.title}</h5>;
                   <ul className="space-y-2">;
-                    {category && category.services.map((service) => (;
+                    {category && category.services.map(service) => (;
                       <li key={service && service.name}>;
                         <Link
                           href={service && service.href}
@@ -499,10 +497,10 @@ const UltraFuturisticFooter2029 = () => {
                           <span>{service && service.name}</span>;
                         </Link>;
                       </li>;
-                    ))}
+                    )}
                   </ul>;
                 </div>;
-              ))}
+              )}
             </div>
           </div>
           {/* Quick Links */}
@@ -523,7 +521,7 @@ const UltraFuturisticFooter2029 = () => {
                   <link && link.icon className="w-4 h-4" />;
                   <span>{link && link.name}</span>;
                 </Link>;
-              ))}
+              )}
             </div>
           </div>
           {/* Footer Sections */}
@@ -543,7 +541,7 @@ const UltraFuturisticFooter2029 = () => {
                           className='text-sm text-gray-400 hover:text-white transition-colors duration-200'>                <div key={section && section.title}>;
                   <h5 className="text-sm font-medium text-gray-300 mb-3">{section && section.title}</h5>;
                   <ul className="space-y-2">;
-                    {section && section.links.map((link) => (;
+                    {section && section.links.map(link) => (;
                       <li key={link && link.name}>;
                         <Link
                           href={link && link.href}
@@ -557,10 +555,10 @@ const UltraFuturisticFooter2029 = () => {
                           {link.name}
                         </Link>
                       </li>
-                    ))}
+                    )}
                   </ul>;
                 </div>;
-              ))}
+              )}
             </div>
           </div>
         </div>
@@ -689,24 +687,19 @@ const UltraFuturisticFooter2029 = () => {
       </div>;
     </footer>;
   );
-};
 
 export default UltraFuturisticFooter2029;  );
-}
+
 export default UltraFuturisticFooter2029;  )
-}
-};
+
+;
 
 export default UltraFuturisticFooter2029;  );
-};
 
 export default UltraFuturisticFooter2029;
 
     </footer>);
-}
-;
+
 export default UltraFuturisticFooter2029);
-}
-;
+
 export default UltraFuturisticFooter2029;
-;

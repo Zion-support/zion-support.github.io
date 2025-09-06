@@ -14,7 +14,7 @@ interface PostFormValues {
   categoryId: ForumCategory
 
   tags: string
-}
+
 export default function CreatePostPage() {
 
   const navigate = useNavigate();
@@ -30,7 +30,7 @@ export default function CreatePostPage() {
       // Here we would normally save to the database
       // For now, we'll just simulate a successful post creation
       // Parse tags into an array
-      const tagsArray = values.tags.split(",").map(tag => tag.trim());
+      const tagsArray = values.tags.split(",").map(tag => tag.trim();
       toast({
         title: "Post created"
         description: "Your post has been published successfully"
@@ -44,7 +44,6 @@ export default function CreatePostPage() {
         variant: "destructive"
       })
     }
-  }
 
   return (
     <AppLayout>
@@ -66,7 +65,7 @@ export default function CreatePostPage() {
       </div>
     </AppLayout>
   )
-}
+
 import { useState, useEffect } from './react';
 import { Link, use_navigate, useSearchParams } from './react-router-dom';
 import { AppLayout } from '@/layout / AppLayout';
@@ -80,7 +79,7 @@ interface PostFormValues {
   content: string,
   category_id: ForumCategory,
   tags: string;
-}
+
 export default /**
  * CreatePostPage - Function description
  */
@@ -88,26 +87,26 @@ function CreatePostPage() {
   const navigate = use_navigate ();
   const { toast } = use_toast ();
   const [search_params] = useSearchParams ();
-;
+
   // Get category from URL query params if available;
   const initial_category = search_params.get ("category") as ForumCategory | null;
-;
+
   const initial_values: Partial < PostFormValues> = {
     category_id: initial_category || "project - help";
   }
-;
+
   const handle_submit = async (values: PostFormValues) => {
     try {
       // Here we would normally save to the database;
       // For now, we'll just simulate a successful post creation;
       // Parse tags into an array;
-      const tags_array = values.tags.split (", ").map (tag => tag.trim ());
-;
+      const tags_array = values.tags.split (", ").map (tag => tag.trim ();
+
       toast ({
         title: "Post created",
         description: "Your post has been published successfully";
       });
-;
+
       // Redirect to the forum category;
       navigate (`/community / category/${values.category_id}`);
     } catch (error) {
@@ -117,8 +116,7 @@ function CreatePostPage() {
         variant: "destructive";
       });
     }
-  }
-;
+
   return (
     <AppLayout>;
       <SEO;
@@ -138,4 +136,3 @@ function CreatePostPage() {
         <PostForm initial_values={initial_values} on_submit={handle_submit} />;
       </div>;
     </AppLayout>);
-}

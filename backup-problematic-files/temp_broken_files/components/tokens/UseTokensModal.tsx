@@ -11,14 +11,14 @@ export default function UseTokensModal({
   onClose: () => void,
   serviceId?: string,
   defaultType?: RedemptionType
-}) {
+) {
   const [account, setAccount] = useState<string | null>(null),
   const [type, setType] = useState<RedemptionType>(defaultType ?? 'boost_profile'),
   const [tokens, setTokens] = useState<number>(100),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const usdValue = (tokens * 0.01).toFixed(2),
 
-  useEffect(() => {
+  useEffect() => {
     (async () => {
       const accs = await getAccounts(),
       if (accs && accs.length > 0) setAccount(accs[0])
@@ -40,10 +40,9 @@ export default function UseTokensModal({
       const data = await res.json(),
       if (data?.ok) {
         onClose()
-      }
-    } finally {
+      } finally {
       setIsSubmitting(false)
-    }  }
+    }
 
   if (!isOpen) return null,
 
@@ -69,7 +68,7 @@ export default function UseTokensModal({
 
           <div className=&quot;text-sm&quot;>
             <div className=&quot;mb-1&quot;>Amount (ZION)</div>
-            <input type=&quot;number&quot; min={1} value={tokens} onChange={(e) => setTokens(parseInt(e.target.value || '0', 10))} className=&quot;w-full rounded border border-gray-300 dark:border-gray-700 bg-transparent px-2 py-2&quot; />
+            <input type=&quot;number&quot; min={1} value={tokens} onChange={(e) => setTokens(parseInt(e.target.value || '0', 10)} className=&quot;w-full rounded border border-gray-300 dark:border-gray-700 bg-transparent px-2 py-2&quot; />
             <div className=&quot;opacity-70 mt-1&quot;>Approx. ${usdValue} USD</div>
           </div>
 

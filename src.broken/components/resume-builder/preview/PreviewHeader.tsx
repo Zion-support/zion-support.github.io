@@ -6,5 +6,3 @@ export function PreviewHeader() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

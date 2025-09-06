@@ -6,5 +6,3 @@ export function TemplateSaveForm() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

@@ -4,22 +4,21 @@ import { Link, useLocation } from "react-router-dom",;
 import { Home, Search, BriefcaseIcon, MessageSquare, User, MessageCircle } from "lucide-react",;
 import { cn } from "@/lib/utils",;
 import { useAuth } from "@/hooks/useAuth",;
-;
+
 interface MobileBottomNavProps {;
   unreadCount?:number,;
-}
-;
+
 export function MobileBottomNav({ unreadCount = 0 } MobileBottomNavProps) {;
   const location = useLocation(),;
   const { user } = useAuth(),;
   const isAuthenticated = !!user,;
-;
+
   const navItems = [;
     {;
       name:"Home",;
       href:"/",;
       icon:Home,;
-      matches:(path:string) => path === "/";
+      matches:(path:string) => path = = "/";
     },;
     {;
       name:"Browse",;
@@ -49,12 +48,12 @@ export function MobileBottomNav({ unreadCount = 0 } MobileBottomNavProps) {;
       authRequired:true;
     }
   ],;
-;
+
   // Filter items based on auth status;
   const visibleItems = navItems.filter(item => ;
     !item.authRequired || (item.authRequired && isAuthenticated);
   ),;
-;
+
   return (;
     <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-zion-blue-dark/95 backdrop-blur-md border-t border-zion-purple/20">;
       <div className="flex justify-around items-center h-16">;
@@ -79,56 +78,55 @@ export function MobileBottomNav({ unreadCount = 0 } MobileBottomNavProps) {;
             </div>;
             <span className="text-xs font-medium">{item.name}</span>;
           </Link>;
-        ))}
+        )}
       </div>;
     </nav>;
   ),;}
  interface MobileBottomNavProps {
   unreadCount?: number 
-}export function MobileBottomNav ({
+export function MobileBottomNav ({
   unreadCount = 0 
-}: MobileBottomNavProps) {
+: MobileBottomNavProps) {
   const location = useLocation ();
 const {
   user 
-}= useAuth ();
+= useAuth ();
 const isAuthenticated = !!user;
 const navItems = [ {
   name: "Home";
 href: "/";
 icon: Home;
-matches: (path: string) => path === "/" 
-};
-{
+matches: (path: string) => path = = "/" 
+;
+
   name: "Browse";
 href: "/talent";
 icon: Search;
 matches: (path: string) => path.startsWith ("/talent") || path.startsWith ("/categories") || path.startsWith ("/marketplace") 
-};
-{
+;
+
   name: "Community";
 href: "/community";
 icon: MessageCircle;
 matches: (path: string) => path.startsWith ("/community") || path.startsWith ("/forum") 
-};
-{
+;
+
   name: "Messages";
 href: "/messages";
 icon: MessageSquare;
 matches: (path: string) => path.startsWith ("/messages") || path.startsWith ("/inbox");
 badge: unreadCount;
 authRequired: true 
-};
-{
+;
+
   name: "Dashboard";
 href: "/dashboard";
 icon: User;
 matches: (path: string) => path.startsWith ("/dashboard");
 authRequired: true 
-}];
+];
 return ({
   item.badge > 9 ? '9+' : item.badge 
-}</span>) 
-}</div> </Link>) ) 
-}</div> </nav>) 
-}
+</span>) 
+</div> </Link>) 
+</div> </nav>) 

@@ -7,30 +7,26 @@ function toSlug(_name: string): string {_return name
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/(^-|-$)+/g, "")
     .slice(0, 64)
-}
 
 function ensureDir(dirPath: string) {
-  if (!fs.existsSync(dirPath)) {
+  if (!fs.existsSync(dirPath) {
     fs.mkdirSync(dirPath, { recursive: true })
   }
-}
 
 function writeTextFile(filePath: string, content: string) {
-  ensureDir(path.dirname(filePath)),
+  ensureDir(path.dirname(filePath),
   fs.writeFileSync(filePath, content, "utf8")
-}
 
 function nowIso(): string {
   return new Date().toISOString()
-}
 
 export async function performDeploy(input: DeployInput): Promise<DeployResult> {
   const version = "Zion OS v1.0"
   const logs: DeployLogEntry[] = []
   const assets: GeneratedAsset[] = []
   const configPath = path.join(baseDir, "config.json"),
-  writeTextFile(configPath, JSON.stringify({ ...input, instanceSlug, version, createdAt: nowIso() }, null, 2)),
-  logs.push({ timestamp: nowIso(), level: "info", action: "save_config", details: { configPath } }),
+  writeTextFile(configPath, JSON.stringify({ ...input, instanceSlug, version, createdAt: nowIso() }, null, 2),
+  logs.push({ timestamp: nowIso(), level: "info", action: "save_config", details: { configPath }),
   assets.push({ kind: "config", path: configPath, description: "Deployment config" }),
 
   // 1. Initialize ZionGPT
@@ -58,8 +54,7 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
           createdAt: nowIso()},
         null,
         2
-      )
-    ),
+      ),
     assets.push({ kind: "config", path: daoConfigPath, description: "DAO configuration" }),
     logs.push({ timestamp: nowIso(), level: "info", action: "dao_configured" })
   }
@@ -73,8 +68,7 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
         {_symbol: "ZION$", _decimals: 18, _enabled: input.tokenActivation, _stakingEnabled: input.modules.token, _escrowEnabled: true, _createdAt: nowIso()},
         null,
         2
-      )
-    ),
+      ),
     assets.push({ kind: "config", path: tokenConfigPath, description: "Token configuration" }),
     logs.push({ timestamp: nowIso(), level: "info", action: "token_configured" })
   }
@@ -137,8 +131,7 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
         scheduledAt: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString()},
       null,
       2
-    )
-  ),
+    ),
   assets.push({ kind: "event", path: summitEventPath, description: "Launch stream scheduled" }),
 
   // 4. Activate Public Pages (record intent)
@@ -151,27 +144,26 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
           "/about", _"/manifesto", _"/constitution", _"/partners", _"/academy", _"/marketplace", _"/dao", _defaultNationRoute]},
       null,
       2
-    )
-  ),
+    ),
   assets.push({ kind: "config", path: pagesActivationPath, description: "Public pages activation record" }),
 
   // Optional modules markers
   const optionalModules = Object.entries(input.modules)
-    .filter(([key, val]) => val && ["globalMap", "franchiseOnboarding", "referralAmbassadors", "grantPortal", "trailer", "bookStore"].includes(key))
-    .map(([key]) => key),
+    .filter([key, val]) => val && ["globalMap", "franchiseOnboarding", "referralAmbassadors", "grantPortal", "trailer", "bookStore"].includes(key)
+    .map([key]) => key),
 
   if (optionalModules.length > 0) {
     const optionalPath = path.join(baseDir, "optional-modules.json"),
-    writeTextFile(optionalPath, JSON.stringify({ enabled: optionalModules }, null, 2)),
+    writeTextFile(optionalPath, JSON.stringify({ enabled: optionalModules }, null, 2),
     assets.push({ kind: "config", path: optionalPath, description: "Enabled optional modules" })
   }
 
   const summary = `Initialized ${input.instanceName} (${instanceSlug}) with modules: ${Object.entries(input.modules)
-    .filter(([ v]) => v)
-    .map(([k]) => k)
+    .filter([ v]) => v)
+    .map([k]) => k)
     .join(", ")}.`,
 
-  logs.push({ timestamp: nowIso(), level: "info", action: "deploy_complete", details: { instanceSlug } }),
+  logs.push({ timestamp: nowIso(), level: "info", action: "deploy_complete", details: { instanceSlug }),
 
   return {
     success: true,
@@ -181,4 +173,3 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
     logs,
     summary,
     version}
-}

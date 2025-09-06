@@ -34,7 +34,7 @@ import { real2027Q1Additions } from '../data/real-2027-q1-additions';
 import { newSaasItAiServices2025 } from '../data/new-saas-it-ai-services-2025';
 import fs from 'fs';
 import path from 'path';
-;
+
 type Service = typeof enhancedRealMicroSaasServices[number];
 function getAllServices():Service[] {;
 	return enhancedRealMicroSaasServices;
@@ -70,30 +70,27 @@ function getAllServices():Service[] {;
 		.concat(real2026Q4NewServices as unknown as Service[]);
 		.concat(real2027Q1Additions as unknown as Service[]);
 		.concat(newSaasItAiServices2025 as unknown as Service[]);
-}
-;
+
 function toSlug(value:string):string {;
 	return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-}
-;
+
 function getExistingRootPageSlugs():Set<string> {;
 	const pagesDir = path.join(process.cwd(), 'pages');
 	const entries = fs.readdirSync(pagesDir, { withFileTypes:true });
 	const reserved = new Set<string>(['apireports', 'services']);
 	const slugs = new Set<string>();
 	for (const entry of entries) {;
-		if (entry.name.startsWith('_')) continue;
-		if (reserved.has(entry.name)) continue;
+		if (entry.name.startsWith('_') continue;
+		if (reserved.has(entry.name) continue;
 		// Files at root;
-		if (entry.isFile()) {;
+		if (entry.isFile() {;
 			const m = entry.name.match(/^(.*)\.(tsx|ts|jsx|js)$/);
 			if (m) {;
 				const base = m[1];
-				if (base !== 'index' && base !== '404' && base !== '500' && base !== '[slug]') {;
+				if (base != 'index' && base != '404' && base != '500' && base != '[slug]') {;
 					slugs.add(base);
 				}function toSlug(value: string): string {
   return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-}
 
 function getExistingRootPageSlugs(): Set<string> {
 	const pagesDir = path.join(process.cwd(), 'pages'),
@@ -101,52 +98,46 @@ function getExistingRootPageSlugs(): Set<string> {
 	const reserved = new Set<string>(['apireportsservices']),
 	const slugs = new Set<string>(),
 	for (const entry of entries) {;
-		if (entry.name.startsWith('_')) continue,
-		if (reserved.has(entry.name)) continue,
+		if (entry.name.startsWith('_') continue,
+		if (reserved.has(entry.name) continue,
 		// Files at root;
-		if (entry.isFile()) {;
+		if (entry.isFile() {;
 			const m = entry.name.match(/^(.*)\.(tsx|ts|jsx|js)$/),
 			if (m) {;
 				const base = m[1],
-				if (base !== 'index' && base !== '404' && base !== '500' && base !== '[slug]') {;
+				if (base != 'index' && base != '404' && base != '500' && base != '[slug]') {;
 					slugs.add(base);
 			}
-		}
 		// Directories at root (folder routes);
-		if (entry.isDirectory()) {;
+		if (entry.isDirectory() {;
 			slugs.add(entry.name);
 		}
-	}
 	return slugs;
-}
-;
+
 export async function getStaticPaths() {;
 	const services = getAllServices();
 	const slugs = new Set<string>();
 	for (const s of services) {;
-		if (s.id) slugs.add(toSlug(s.id));
-		else if (s.name) slugs.add(toSlug(s.name));
+		if (s.id) slugs.add(toSlug(s.id);
+		else if (s.name) slugs.add(toSlug(s.name);
 	}
 	const existing = getExistingRootPageSlugs();
-	const filtered = Array.from(slugs).filter((slug) => !existing.has(slug));
+	const filtered = Array.from(slugs).filter(slug) => !existing.has(slug);
 	return {;
-		paths:filtered.map((slug) => ({ params:{ slug } })),;
+		paths:filtered.map(slug) => ({ params:{ slug }),;
 		fallback:false;
 	};
-}
-;
-export async function getStaticProps({ params } { params:{ slug:string } }) {;
+
+export async function getStaticProps({ params } { params:{ slug:string }) {;
 	const services = getAllServices();
 	const incomingSlug = (params?.slug || '').replace(/^\/+|\/+$/g, '');
-	let service:Service | undefined = services.find((s) => toSlug(s.id || '') === incomingSlug || toSlug(s.name || '') === incomingSlug);
+	let service:Service | undefined = services.find(s) => toSlug(s.id || '') = = incomingSlug || toSlug(s.name || '') = = incomingSlug);
 	if (!service) {;
 		return { notFound:true };
 	}
 	return {;
-		props:{ service }
-	};
-}
-;
+		props:{ service };
+
 export default function RootServiceDetailPage({ service } { service:Service }) {;
 	const canonical = `https://ziontechgroup.com/${toSlug(service.id || service.name || '')}`;
 	return (;
@@ -157,7 +148,7 @@ export default function RootServiceDetailPage({ service } { service:Service }) {
 				<link rel="canonical" href={canonical} />;
 				<script;
 					type="application/ld+json";
-					dangerouslySetInnerHTML={{;
+					dangerouslySetInnerHTML={;
 						__html:JSON.stringify(;
 							{;
 								"@context":"https://schema.org",;
@@ -175,15 +166,14 @@ export default function RootServiceDetailPage({ service } { service:Service }) {
 									price:(service.price || '').replace(/[^0-9.]/g, ''),;
 									priceCurrency:"USD",;
 									availability:"https://schema.org/InStock";
-								}
-							},;
+								},;
 							null,;
 							2;
 							);
-						}}
+						}
 				/>;
 			</Head>;
-;
+
 			<div className="container mx-auto px-4 py-16">;
 				<div className="text-center mb-10">;
 					<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-4">;
@@ -191,36 +181,36 @@ export default function RootServiceDetailPage({ service } { service:Service }) {
 					</h1>;
 					<p className="text-gray-300 text-lg max-w-3xl mx-auto">{service.tagline || service.description}</p>;
 				</div>;
-;
+
 				<div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">;
 					<div className="lg:col-span-2 space-y-6">;
 						<Card className="p-6 bg-black/40 border border-gray-700/50">;
 							<h2 className="text-white text-xl font-semibold mb-3">Overview</h2>;
 							<p className="text-gray-300 leading-relaxed">{service.description}</p>;
 						</Card>;
-;
+
 						<Card className="p-6 bg-black/40 border border-gray-700/50">;
 							<h3 className="text-white text-lg font-semibold mb-4">Key Features</h3>;
 							<ul className="space-y-2 text-gray-300">;
-								{(service.features || []).slice(0, 12).map((f:string) => (;
+								{(service.features || []).slice(0, 12).map(f:string) => (;
 									<li key={f} className="flex items-start gap-2">;
 										<Check className="w-4 h-4 mt-0.5 text-emerald-400" />;
 										<span>{f}</span>;
 									</li>;
-								))}
+								)}
 							</ul>;
 						</Card>;
-;
+
 						<Card className="p-6 bg-black/40 border border-gray-700/50">;
 							<h3 className="text-white text-lg font-semibold mb-4">Integrations</h3>;
 							<div className="flex flex-wrap gap-2">;
-								{(service.integrations || []).slice(0, 12).map((i:string) => (;
+								{(service.integrations || []).slice(0, 12).map(i:string) => (;
 									<span key={i} className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-200">{i}</span>;
-								))}
+								)}
 							</div>;
 						</Card>;
 					</div>;
-;
+
 					<div className="space-y-6">;
 						<Card className="p-6 bg-black/40 border border-gray-700/50">;
 							<div className="text-3xl font-bold text-white">{service.price} <span className="text-base text-gray-400">{service.period}</span></div>;
@@ -240,7 +230,7 @@ export default function RootServiceDetailPage({ service } { service:Service }) {
 								<Button href="/contact" className="w-full">Talk to Sales</Button>;
 							</div>;
 						</Card>;
-;
+
 						<Card className="p-6 bg-black/40 border border-gray-700/50">;
 							<h3 className="text-white text-lg font-semibold mb-3">Learn More</h3>;
 							<a href={service.link || canonical} className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">;
@@ -252,10 +242,10 @@ export default function RootServiceDetailPage({ service } { service:Service }) {
 			</div>;
 		</UltraFuturisticBackground>;
 	);
-}
+
 export default function RootServiceDetailPage({ service }: { service: Service }) {
   const canonical = `https://ziontechgroup.com/${toSlug(service.id || service.name || '')}`;
-  
+
   return (
     <UltraFuturisticBackground variant="quantum" intensity="high">
       <Head>
@@ -264,7 +254,7 @@ export default function RootServiceDetailPage({ service }: { service: Service })
         <link rel="canonical" href={canonical} />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
+          dangerouslySetInnerHTML={
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Service",
@@ -281,9 +271,8 @@ export default function RootServiceDetailPage({ service }: { service: Service })
                 price: (service.price || '').replace(/[^0-9.]/g, ''),
                 priceCurrency: "USD",
                 availability: "https://schema.org/InStock"
-              }
-            }, null, 2)
-          }}
+              }, null, 2)
+          }
         />
       </Head>
 
@@ -298,20 +287,20 @@ export default function RootServiceDetailPage({ service }: { service: Service })
 						<Card className="p-6 bg-black/40 border border-gray-700/50">
 							<h3 className="text-white text-lg font-semibold mb-4">Key Features</h3>
 							<ul className="space-y-2 text-gray-300">
-								{(service.features || []).slice(0, 12).map((f: string) => (
+								{(service.features || []).slice(0, 12).map(f: string) => (
 									<li key={f} className="flex items-start gap-2">
 										<Check className="w-4 h-4 mt-0.5 text-emerald-400" />
 										<span>{f}</span>
-									</li>								))}
+									</li>								)}
 							</ul>
 						</Card>
 
 						<Card className="p-6 bg-black/40 border border-gray-700/50">
 							<h3 className="text-white text-lg font-semibold mb-4">Integrations</h3>
 							<div className="flex flex-wrap gap-2">
-								{(service.integrations || []).slice(0, 12).map((i: string) => (
+								{(service.integrations || []).slice(0, 12).map(i: string) => (
 									<span key={i} className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-200">{i}</span>
-								))}							</div>
+								)}							</div>
 						</Card>
 					</div>
 
@@ -349,4 +338,3 @@ export default function RootServiceDetailPage({ service }: { service: Service })
 			</div>
 		</UltraFuturisticBackground>
 	);
-;

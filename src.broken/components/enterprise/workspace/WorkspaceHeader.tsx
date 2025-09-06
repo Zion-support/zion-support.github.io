@@ -6,5 +6,3 @@ export function WorkspaceHeader() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

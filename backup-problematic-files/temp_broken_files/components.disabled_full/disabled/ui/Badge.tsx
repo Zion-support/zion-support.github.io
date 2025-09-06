@@ -2,7 +2,6 @@ import React from 'react';
 
 interface BadgeProps {
   className?: string;
-}
 
 const Badge: React.FC<BadgeProps> = ({ className }) => {
   return (
@@ -11,6 +10,5 @@ const Badge: React.FC<BadgeProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default Badge;

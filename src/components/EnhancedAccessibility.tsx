@@ -2,7 +2,6 @@ import React from 'react';
 
 interface EnhancedAccessibilityProps {
   position: string;
-}
 
 export function EnhancedAccessibility(props: EnhancedAccessibilityProps) {
   return (
@@ -12,4 +11,3 @@ export function EnhancedAccessibility(props: EnhancedAccessibilityProps) {
       </button>
     </div>
   );
-}

@@ -1,16 +1,14 @@
 import { cn } from "@/lib/utils",;
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
-;
+
 interface ChatMessageProps {;
   role:'user' | 'assistant',;
   message:string,;
   timestamp?:Date,;
   key?:string | number;
-}
-;
+
 export function ChatMessage({ role, message, timestamp } ChatMessageProps) {;
-  const isUser = role === 'user',;
-  ;
+  const isUser = role = = 'user',;
   return (;
     <div className={cn(;
       "flex items-start gap-2",;
@@ -30,7 +28,6 @@ export function ChatMessage({ role, message, timestamp } ChatMessageProps) {;
         )}
         {!isUser && <AvatarFallback className="bg-zion-cyan/20 text-white">AI</AvatarFallback>}
       </Avatar>;
-      ;
       <div className={cn(;
         "max-w-[80%] px-4 py-2 rounded-lg",;
         isUser ;
@@ -50,18 +47,17 @@ export function ChatMessage({ role, message, timestamp } ChatMessageProps) {;
 message: string;
 timestamp?: Date;
 key?: string | number 
-}export function ChatMessage ({
+export function ChatMessage ({
   role, message, timestamp 
-}: ChatMessageProps) {
-  const isUser = role === 'user';
+: ChatMessageProps) {
+  const isUser = role = = 'user';
 return (<div className= {
   cn ("flex items-start gap-2";
 isUser ? "flex-row-reverse" : "flex-row") 
-}> <Avatar className= {
+> <Avatar className= {
   cn ("h-8 w-8 border";
 isUser ? "border-zion-purple/20" : "border-zion-cyan/20") 
-}> {
+> {
   isUser ? (<AvatarFallback className="bg-zion-purple/20 text-white" >U</AvatarFallback> https://placehold.co/32x32?text=AI"alt=" AI Assistant" />) 
-}</div>) 
-}</div> </div>) 
-}
+</div>) 
+</div> </div>) 

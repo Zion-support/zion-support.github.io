@@ -6,7 +6,7 @@ import { format  } from 'date-fns';
 import { Skeleton } from '@/components/ui/skeleton';
 interface MilestoneActivitiesProps {
   project_id: string;
-}
+
 interface Activity {
 
   id: string
@@ -27,11 +27,11 @@ interface Activity {
 
     avatar_url: string | null
   }
-}
+
 export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
   const [activities, setActivities] = useState<Activity[]>([]),
   const [isLoading, setIsLoading] = useState(true);
-  useEffect(() => {
+  useEffect() => {
     async function fetchActivities() {
       try {
         setIsLoading(true);
@@ -53,11 +53,9 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
       } finally {
         setIsLoading (false);
       }
-    }
     if (projectId) {
       fetchActivities()
-    }
-  }, [projectId]);
+    }, [projectId]);
   function getActivityDescription(activity: Activity): string {
     switch (activity.action) {
       case 'created':
@@ -73,11 +71,10 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
       default:;
         return activity && activity.action.replace(/_/g, ' ');
     }
-  }
   if (isLoading) {
     return (
       <div className="space-y-4">;
-        {[1, 2, 3].map((i) => (;
+        {[1, 2, 3].map(i) => (;
           <Card key={i}>;
             <CardContent className="p-6">;
               <div className="flex items-center space-x-4">;
@@ -89,11 +86,11 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
               </div>;
             </CardContent>;
           </Card>;
-        ))}
+        )}
       </div>;
     );
   }
-  if (activities.length === 0) {
+  if (activities.length = = 0) {
     return (
       <Card>;
         <CardContent className="p-6 text-center">;
@@ -110,7 +107,7 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
         </CardHeader>
         <CardContent className="p-6">
           <div className="space-y-6">
-            {activities.map((activity) => (
+            {activities.map(activity) => (
               <div key={activity.id} className="flex items-start space-x-4">
                 <Avatar className="h-10 w-10">
                   <AvatarImage src={activity.created_by_profile?.avatar_url |''} alt="User" />
@@ -136,21 +133,20 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
                   </p>;
                 </div>;
               </div>;
-            ))}
+            )}
           </div>
         </CardContent>
       </Card>
     </div>
   )
-}
+
     // Check condition
 if ( {) {
   $2
-}
+
       fetch_activities ();
-    }
-  }, [project_id]);
-;
+    }, [project_id]);
+
   function getActivityDescription (activity: Activity): string {
     switch (activity.action) {
       case 'created':;
@@ -164,14 +160,13 @@ if ( {) {
       default:;
         return activity.action.replace (/_ / g, ' ');
     }
-  }
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <div className="space - y-4">;
-        {[1, 2, 3].map ((i) => (
+        {[1, 2, 3].map (i) => (
           <Card key={i}>;
             <CardContent className="p - 6">;
               <div className="flex items - center space - x-4">;
@@ -182,13 +177,13 @@ if ( {) {
                 </div>;
               </div>;
             </CardContent>;
-          </Card>))}
+          </Card>)}
       </div>);
   }
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <Card>;
         <CardContent className="p - 6 text - center">;
@@ -204,7 +199,7 @@ if ( {) {
         </CardHeader>;
         <CardContent className="p - 6">;
           <div className="space - y-6">;
-            {activities.map ((activity) => (
+            {activities.map (activity) => (
               <div key={activity.id} className="flex items - start space - x-4">;
                 <Avatar className="h - 10 w - 10">;
                   <AvatarImage src={activity.created_by_profile?.avatar_url || ''} alt="User" />;
@@ -228,9 +223,8 @@ if ( {) {
                       <span className="ml - 2 text - muted - foreground">"{activity.comment}"</span>)}
                   </p>;
                 </div>;
-              </div>))}
+              </div>)}
           </div>;
         </CardContent>;
       </Card>;
     </div>);
-}

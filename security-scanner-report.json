@@ -1,4 +1,4 @@
-{
+
   "timestamp": "2025-09-06T04:54:57.277Z",
   "totalDuration": 1254,
   "results": {
@@ -46,8 +46,7 @@
         "Consider implementing authentication system",
         "Add user registration and login functionality"
       ]
-    }
-  },
+    },
   "summary": {
     "dependenciesAudited": false,
     "codeScanned": true,
@@ -55,4 +54,3 @@
     "cspConfigured": true,
     "authChecked": true
   }
-}

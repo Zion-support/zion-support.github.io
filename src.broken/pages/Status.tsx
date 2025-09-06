@@ -6,5 +6,3 @@ export function Status() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

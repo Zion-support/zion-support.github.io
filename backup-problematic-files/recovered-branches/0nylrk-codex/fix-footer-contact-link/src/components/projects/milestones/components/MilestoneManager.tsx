@@ -4,7 +4,7 @@ import { MilestonesList } from '../MilestonesList',;
 import { PaymentSummary } from '../PaymentSummary',;
 import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones',;
 import { toast } from "sonner",;
-;
+
 interface MilestoneManagerProps {;
   projectId:string,;
   milestones:Milestone[],;
@@ -19,8 +19,7 @@ interface MilestoneManagerProps {;
   onDeleteMilestone:(id:string) => Promise<boolean>,;
   onUploadDeliverable:(id:string, file:File) => Promise<any>,;
   refetch:() => Promise<void>;
-}
-;
+
 export function MilestoneManager({;
   projectId,;
   milestones,;
@@ -35,7 +34,7 @@ export function MilestoneManager({;
   onDeleteMilestone,;
   onUploadDeliverable,;
   refetch;
-} MilestoneManagerProps) {;
+ MilestoneManagerProps) {;
   const handleMilestoneApproved = async (milestoneId:string) => {;
     try {;
       await onUpdateStatus(milestoneId, "completed" as MilestoneStatus),;
@@ -44,9 +43,7 @@ export function MilestoneManager({;
     } catch (error) {;
       console.error("Error approving milestone:", error),;
       toast.error("Failed to approve milestone"),;
-    }
-  },;
-  ;
+    },;
   const handleMilestoneRejected = async (milestoneId:string) => {;
     try {;
       await onUpdateStatus(milestoneId, "rejected" as MilestoneStatus),;
@@ -55,9 +52,8 @@ export function MilestoneManager({;
     } catch (error) {;
       console.error("Error rejecting milestone:", error),;
       toast.error("Failed to reject milestone"),;
-    }
-  },;
-;
+    },;
+
   return (;
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">;
       <div className="lg:col-span-2">;
@@ -96,43 +92,40 @@ onUpdateStatus: (id: string, status: MilestoneStatus, comment?: string) => Promi
 onDeleteMilestone: (id: string) => Promise<boolean>;
 onUploadDeliverable: (id: string, file: File) => Promise<any>;
 refetch: () => Promise<void> 
-}projectId, milestones, activities, isLoading, isClient, isTalent, paymentTerms, isSubmitting, onCreateMilestone, onUpdateStatus, onDeleteMilestone, onUploadDeliverable, refetch 
-}: MilestoneManagerProps) {
+projectId, milestones, activities, isLoading, isClient, isTalent, paymentTerms, isSubmitting, onCreateMilestone, onUpdateStatus, onDeleteMilestone, onUploadDeliverable, refetch 
+: MilestoneManagerProps) {
   const handleMilestoneApproved = async (milestoneId: string) => {
   try {
-  
-}
-};
+
+;
 const handleMilestoneRejected = async (milestoneId: string) => {
   try {
-  
-}
-};
+
+;
 grid grid-cols-1 lg:grid-cols-3 gap-6"> <div className=" lg:col-span-2" > <MilestonesList milestones= {
   milestones 
-}activities= {
+activities= {
   activities 
-}isLoading= {
+isLoading= {
   isLoading 
-}isClient= {
+isClient= {
   isClient 
-}onCreateMilestone= {
+onCreateMilestone= {
   onCreateMilestone 
-}onUpdateStatus= {
+onUpdateStatus= {
   onUpdateStatus 
-}onDeleteMilestone= {
+onDeleteMilestone= {
   onDeleteMilestone 
-}onUploadDeliverable= {
+onUploadDeliverable= {
   onUploadDeliverable 
-}isSubmitting= {
+isSubmitting= {
   isSubmitting 
-}onApprove= {
+onApprove= {
   isClient ? handleMilestoneApproved : undefined 
-}onReject= {
+onReject= {
   isClient ? handleMilestoneRejected : undefined 
-}/> </div> <div> <PaymentSummary milestones= {
+/> </div> <div> <PaymentSummary milestones= {
   milestones 
-}paymentTerms= {
+paymentTerms= {
   paymentTerms 
-}/> </div> </div>) 
-}
+/> </div> </div>) 

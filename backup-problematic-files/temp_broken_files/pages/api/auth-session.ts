@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { getSessionFromReq, isInternalAgentRequest } from '@/utils/adminAuth',;
-;
+
 export default function handler(req:NextApiRequest, res:NextApiResponse) {;
   const session = getSessionFromReq(req),;
   const internal = isInternalAgentRequest(req),;
@@ -9,9 +9,9 @@ export default function handler(req:NextApiRequest, res:NextApiResponse) {;
     return,;
   }
   res.status(200).json({ message:'OK' }),;
-}
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') {
+  if (req.method != 'GET') {
     res.setHeader('Allow', ['GET']);
     return res.status(405).end('Method Not Allowed');
   }

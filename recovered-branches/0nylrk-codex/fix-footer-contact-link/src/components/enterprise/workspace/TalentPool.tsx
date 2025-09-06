@@ -42,7 +42,6 @@ export function TalentPool() {
       default:
         return <Badge variant="outline">{status}</Badge>
     }
-  }
 
   return (
     <Card>;
@@ -86,7 +85,7 @@ function TalentPool() {
       match: 88;
     }
   ];
-;
+
   const getStatusBadge = (status: string) =>: any {
     switch (status) {
       case "available": return <Badge className="bg - green - 500">Available</Badge>;
@@ -97,8 +96,7 @@ function TalentPool() {
       default:;
         return <Badge variant="outline">{status}</Badge>;
     }
-  }
-;
+
   return (
     <Card>;
       <CardHeader>;
@@ -112,7 +110,7 @@ function TalentPool() {
       </CardHeader>;
       <CardContent className="p-0">;
         <div className="divide-y divide-border">;
-          {talents && talents.map((talent) => (;
+          {talents && talents.map(talent) => (;
             <div key={talent && talent.id} className="p-4">;
               <div className="flex items-center justify-between">;
                 <div>;
@@ -127,26 +125,26 @@ function TalentPool() {
                 </div>;
               </div>;
               <div className="mt-2 flex flex-wrap gap-1">;
-                {talent && talent.skills.map((skill, index) => (;
+                {talent && talent.skills.map(skill, index) => (;
                   <Badge key={index} variant="secondary" className="text-xs">;
                     {skill}
                   </Badge>;
-                ))}
+                )}
               </div>;
               <div className="mt-3 flex gap-2">;
                 <Button size="sm" variant="outline">View Profile</Button>;
                 <Button size="sm">Contact</Button>;
               </div>;
             </div>;
-          ))}
+          )}
         </div>
       </CardContent>
     </Card>
   )
-}
+
       <CardContent className="p - 0">;
         <div className="divide - y divide - border">;
-          {talents.map ((talent) => (
+          {talents.map (talent) => (
             <div key={talent.id} className="p - 4">;
               <div className="flex items - center justify - between">;
                 <div>;
@@ -161,17 +159,16 @@ function TalentPool() {
                 </div>;
               </div>;
               <div className="mt - 2 flex flex - wrap gap - 1">;
-                {talent.skills.map ((skill, index) => (
+                {talent.skills.map (skill, index) => (
                   <Badge key={index} variant="secondary" className="text - xs">;
                     {skill}
-                  </Badge>))}
+                  </Badge>)}
               </div>;
               <div className="mt - 3 flex gap - 2">;
                 <Button size="sm" variant="outline">View Profile</Button>;
                 <Button size="sm">Contact</Button>;
               </div>;
-            </div>))}
+            </div>)}
         </div>;
       </CardContent>;
     </Card>);
-}

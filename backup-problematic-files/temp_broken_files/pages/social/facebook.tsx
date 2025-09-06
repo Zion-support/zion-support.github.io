@@ -1,12 +1,11 @@
 import React, { useEffect } from 'react',;
 import Head from 'next/head',;
-;
+
 export default function FacebookRedirect() {;
-	useEffect(() => {;
-		if (typeof window !== 'undefined') {;
+	useEffect() => {;
+		if (typeof window != 'undefined') {;
 			window.location.replace('https://facebook.com/ziontechgroup');
-		}
-	}, []),;
+		}, []),;
 	return (;
 		<>;
 			<Head>;
@@ -22,4 +21,3 @@ export default function FacebookRedirect() {;
 			</div>;
 		</>;
 	); return (<> <Head> <title>Facebook | Zion Tech Group</title> Continue to Facebook </Link> </div> </>) 
-}

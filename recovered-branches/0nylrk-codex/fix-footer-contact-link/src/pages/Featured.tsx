@@ -25,7 +25,7 @@ export default function Featured() {
       <Footer />
     </>
   )
-}
+
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
 import { FeaturedListingsSection } from '@/components / FeaturedListingsSection';
@@ -54,4 +54,3 @@ function Featured() {
       </div>;
       <Footer />;
     </>);
-}

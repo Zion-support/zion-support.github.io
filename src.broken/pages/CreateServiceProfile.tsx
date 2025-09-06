@@ -6,5 +6,3 @@ export function CreateServiceProfile() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

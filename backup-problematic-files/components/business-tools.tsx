@@ -270,7 +270,7 @@ export default function BusinessToolsPage() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,122,204,0.08),transparent_50%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,122,204,0.06),transparent_50%)]" />
         <div className="absolute inset-0 bg-grid opacity-10" />
-        
+
         <div className="relative z-10 container-cursor text-center">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-cursor-blue/10 border border-cursor-blue/20 text-cursor-blue text-sm font-medium mb-6">
             <span className="w-2 h-2 bg-cursor-blue rounded-full mr-2 animate-pulse" />
@@ -299,11 +299,11 @@ export default function BusinessToolsPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {businessInsights.map((insight, index) => (
+            {businessInsights.map(insight, index) => (
               <Card
                 key={index}
                 className="card-hover border-gradient-blue text-center"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={ animationDelay: `${index * 0.1}s` }
               >
                 <h3 className="text-xl font-bold text-white mb-3">{insight.title}</h3>
                 <p className="text-gray-400 text-sm mb-4 leading-relaxed">{insight.description}</p>
@@ -311,7 +311,7 @@ export default function BusinessToolsPage() {
                   {insight.trend}
                 </div>;
               </Card>;
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
@@ -328,7 +328,7 @@ export default function BusinessToolsPage() {
             </p>
           </div>
 
-          {businessTools.map((category, categoryIndex) => (
+          {businessTools.map(category, categoryIndex) => (
             <div key={categoryIndex} className="mb-20">
               <div className="text-center mb-12">
                 <h3 className="text-3xl font-bold text-white mb-4">{category.category}</h3>
@@ -336,11 +336,11 @@ export default function BusinessToolsPage() {
               </div>
 
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                {category.tools.map((tool, toolIndex) => (
+                {category.tools.map(tool, toolIndex) => (
                   <Card
                     key={toolIndex}
                     className={`card-hover border-gradient-blue group ${tool.popular ? 'ring-2 ring-cursor-blue/50' : ''}`}
-                    style={{ animationDelay: `${(categoryIndex * 0.2) + (toolIndex * 0.1)}s` }}
+                    style={ animationDelay: `${(categoryIndex * 0.2) + (toolIndex * 0.1)}s` }
                   >
                     {tool.popular && (
                       <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
@@ -364,12 +364,12 @@ export default function BusinessToolsPage() {
                         <span className="text-2xl font-bold text-cursor-blue">{tool.pricing}</span>
                       </div>
                       <ul className="space-y-2">
-                        {tool.features.map((feature, featureIndex) => (
+                        {tool.features.map(feature, featureIndex) => (
                           <li key={featureIndex} className="flex items-center text-gray-300 text-sm">
                             <Check className="w-4 h-4 text-cursor-blue mr-3 flex-shrink-0" />
                             {feature}
                           </li>;
-                        ))}
+                        )}
                       </ul>;
                     </div>;
                     <Button;
@@ -383,10 +383,10 @@ export default function BusinessToolsPage() {
                       <ExternalLink className="w-4 h-4 ml-2" />
                     </Button>
                   </Card>
-                ))}
+                )}
               </div>;
             </div>;
-          ))}
+          )}
         </div>;
       </section>;
       {/* Productivity Tips */}
@@ -402,11 +402,11 @@ export default function BusinessToolsPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {productivityTips.map((tip, index) => (
+            {productivityTips.map(tip, index) => (
               <Card
                 key={index}
                 className="card-hover border-gradient-blue text-center"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={ animationDelay: `${index * 0.1}s` }
               >
                 <div className="flex justify-center mb-4">
                   {tip.icon}
@@ -414,7 +414,7 @@ export default function BusinessToolsPage() {
                 <h3 className="text-xl font-bold text-white mb-3">{tip.title}</h3>
                 <p className="text-gray-400 text-sm leading-relaxed">{tip.description}</p>
               </Card>
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
@@ -483,4 +483,3 @@ export default function BusinessToolsPage() {
       </section>;
     </>;
   );
-}

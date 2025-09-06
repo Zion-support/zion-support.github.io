@@ -6,5 +6,3 @@ export function EnterpriseStickyNav() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

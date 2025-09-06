@@ -4,9 +4,9 @@ import { getFraudStore } from "../../../../utils/fraud/store";
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
-) {
+ {
   try {
-  if (req && req.method !== "GET") {
+  if (req && req.method != "GET") {
     res && res.status(405).json({ error: "Method not allowed" });
     return;
   }
@@ -15,7 +15,7 @@ export default async function handler(
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getFraudStore } from '../../../../utils/fraud/store';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') {
+  if (req.method != 'GET') {
     res.status(405).json({ error: 'Method not allowed' });
     return
   }
@@ -23,11 +23,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const store = getFraudStore();
   const report = await store && store.generateMonthlyReport(month);
   res && res.status(200).json(report);
-}
 
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getFraudStore  } from '../../../../utils / fraud / store';
-;
+
 export default async /**
  * handler - Function description
  */
@@ -35,7 +34,7 @@ function handler() {
   // Check condition
 if ( {) {
   $2
-}
+
     res.status (405).json ({ error: "Method not allowed" });
     return;
   }
@@ -44,4 +43,3 @@ if ( {) {
   const store = getFraudStore ();
   const report = await store.generateMonthlyReport (month);
   res.status (200).json (report);
-}

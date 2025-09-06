@@ -11,7 +11,7 @@ import {
   CardDescription
   CardHeader
   CardTitle
-} from '@/components/ui/card'
+ from '@/components/ui/card'
 import { Button } from '@/components/ui/button'; import { Gift, ArrowRight, ExternalLink } from 'lucide-react'
   Dialog
   DialogContent
@@ -19,14 +19,14 @@ import { Button } from '@/components/ui/button'; import { Gift, ArrowRight, Exte
   DialogHeader
   DialogTitle
   DialogTrigger
-} from '@/components/ui/dialog'
+ from '@/components/ui/dialog'
 type RewardOption = {
   id: string
 title: string
 description: string
 cost: number;'
 type: 'credit' | 'feature' | 'course'
-}
+
 const REWARD_OPTIONS: RewardOption[] = [;
   {
     id: 'premium-week'
@@ -50,7 +50,7 @@ const REWARD_OPTIONS: RewardOption[] = [;
     cost: 100
     type: 'credit'
   }
-]
+
 export function RedeemTokensCard() {
   const { wallet, spendTokens } = useWallet()
   const [open, setOpen] = useState(false)
@@ -68,7 +68,7 @@ import {;
   CardDescription,;
   CardHeader,;
   CardTitle,;
-} from '@/components/ui/card';
+ from '@/components/ui/card';
 import { Button } from '@/components/ui/button';import { Gift, ArrowRight, ExternalLink } from 'lucide-react';
 import {;
   Dialog,;
@@ -77,7 +77,7 @@ import {;
   DialogHeader,;
   DialogTitle,;
   DialogTrigger,;
-} from '@/components/ui/dialog';
+ from '@/components/ui/dialog';
 
 type RewardOption = {;
   id: string;
@@ -85,7 +85,6 @@ title: string;
 description: string;
 cost: number;';
 type: 'credit' | 'feature' | 'course' ;
-};
 
 const REWARD_OPTIONS: RewardOption[] = [;
   {;
@@ -110,7 +109,6 @@ const REWARD_OPTIONS: RewardOption[] = [;
     cost: 100,;
     type: 'credit',;
   },;
-];
 
 export function RedeemTokensCard() {;
   const { wallet, spendTokens } = useWallet();
@@ -172,7 +170,7 @@ export function RedeemTokensCard() {;
                     </Button>
                   </div>
                 </div>
-              ))}
+              )}
             </div>;
             <div className='flex justify-between'>;
               <Button
@@ -191,7 +189,7 @@ export function RedeemTokensCard() {;
       </CardContent>
     </Card>
   )
-}
+
               >;
                 Close;
               </Button>;
@@ -204,7 +202,5 @@ export function RedeemTokensCard() {;
       </CardContent>;
     </Card>;
   );
-}
 
     </Card>);
-}

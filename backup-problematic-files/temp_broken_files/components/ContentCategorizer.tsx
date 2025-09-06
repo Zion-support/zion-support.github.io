@@ -2,7 +2,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import {Search, Filter, Calendar, Tag, TrendingUp, Shield, Code;
   BookOpen, Zap, AlertTriangle, Lightbulb, Settings;
   BarChart3, Globe, Database, Cpu, Rocket, Brain;
-} from 'lucide-react';
+ from 'lucide-react';
 interface ContentItem {id: string;
   title: string;
   href: string;
@@ -19,7 +19,7 @@ import {
   Search, Filter, Calendar, Tag, TrendingUp, Shield, Code,
   BookOpen, Zap, AlertTriangle, Lightbulb, Settings,
   BarChart3, Globe, Database, Cpu, Rocket, Brain
-} from 'lucide-react',
+ from 'lucide-react',
 
 interface ContentItem {
   id: string,
@@ -33,7 +33,7 @@ interface ContentItem {
   tags: string[],
   source: string,
   type: 'report' | 'update' | 'insight' | 'guide' | 'security' | 'feature'
-}
+
 interface ContentCategory {id: string;
   name: string;
   icon: any;
@@ -41,7 +41,7 @@ interface ContentCategory {id: string;
   color: string;
   count: number;
   subcategories?: string[];
-}
+
 const ContentCategorizer: React.FC = () => {const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedSubcategory, setSelectedSubcategory] = useState('all');
@@ -228,7 +228,7 @@ const contentItems: ContentItem[] = [
       icon: BarChart3;
       description: 'Search optimization and performance analytics';
       color: 'from-green-500 to-emerald-500';
-      count: contentItems.filter(item => item.category === 'seo').length;
+      count: contentItems.filter(item => item.category = = 'seo').length;
       subcategories: ['structured-dataperformancetechnical-seo'];
     }
     {id: 'security';
@@ -236,7 +236,7 @@ const contentItems: ContentItem[] = [
       icon: Shield;
       description: 'Security assessments and compliance reports';
       color: 'from-red-500 to-orange-500';
-      count: contentItems.filter(item => item.category === 'security').length;
+      count: contentItems.filter(item => item.category = = 'security').length;
       subcategories: ['vulnerability-scancompliancethreat-detection'];
     }
     {id: 'ai';
@@ -244,7 +244,7 @@ const contentItems: ContentItem[] = [
       icon: Brain;
       description: 'AI model performance and insights';
       color: 'from-purple-500 to-pink-500';
-      count: contentItems.filter(item => item.category === 'ai').length;
+      count: contentItems.filter(item => item.category = = 'ai').length;
       subcategories: ['performancetrainingdeployment'];
     }
     {id: 'features';
@@ -252,7 +252,7 @@ const contentItems: ContentItem[] = [
       icon: Zap;
       description: 'New features and system updates';
       color: 'from-yellow-500 to-orange-500';
-      count: contentItems.filter(item => item.category === 'features').length;
+      count: contentItems.filter(item => item.category = = 'features').length;
       subcategories: ['deploymentenhancementsroadmap'];
     }
     {id: 'monitoring';
@@ -260,7 +260,7 @@ const contentItems: ContentItem[] = [
       icon: Cpu;
       description: 'Infrastructure and system health';
       color: 'from-indigo-500 to-purple-500';
-      count: contentItems.filter(item => item.category === 'monitoring').length;
+      count: contentItems.filter(item => item.category = = 'monitoring').length;
       subcategories: ['system-healthperformanceinfrastructure'];
     }
     {id: 'analytics';
@@ -268,7 +268,7 @@ const contentItems: ContentItem[] = [
       icon: TrendingUp;
       description: 'User behavior and engagement insights';
       color: 'from-teal-500 to-cyan-500';
-      count: contentItems.filter(item => item.category === 'analytics').length;
+      count: contentItems.filter(item => item.category = = 'analytics').length;
       subcategories: ['user-behaviorengagementconversion'];
     }
   ];
@@ -294,18 +294,18 @@ const contentItems: ContentItem[] = [
     { id: 'medium', name: 'Medium Priority', color: 'text-yellow-400' }
     { id: 'low', name: 'Low Priority', color: 'text-red-400' }
   ];
-  const filteredItems = useMemo(() => {const filtered = contentItems.filter(item => {;
-      const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()) |;
-                           item.desc.toLowerCase().includes(searchTerm.toLowerCase()) |;
-                           item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-      const matchesCategory = selectedCategory === 'all' |item.category === selectedCategory;
-      const matchesSubcategory = selectedSubcategory === 'all' |item.subcategory === selectedSubcategory;
-      const matchesType = selectedType === 'all' |item.type === selectedType;
-      const matchesRelevance = selectedRelevance === 'all' |item.relevance === selectedRelevance;
+  const filteredItems = useMemo() => {const filtered = contentItems.filter(item => {;
+      const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase() |;
+                           item.desc.toLowerCase().includes(searchTerm.toLowerCase() |;
+                           item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase());
+      const matchesCategory = selectedCategory = = 'all' |item.category = = selectedCategory;
+      const matchesSubcategory = selectedSubcategory = = 'all' |item.subcategory = = selectedSubcategory;
+      const matchesType = selectedType = = 'all' |item.type = = selectedType;
+      const matchesRelevance = selectedRelevance = = 'all' |item.relevance = = selectedRelevance;
       return matchesSearch && matchesCategory && matchesSubcategory && matchesType && matchesRelevance;
     });
     // Sort items;
-    filtered.sort((a, b) => {let comparison = 0;
+    filtered.sort(a, b) => {let comparison = 0;
       switch (sortBy) {;
         case 'date':;
           comparison = new Date(a.date).getTime() - new Date(b.date).getTime();
@@ -319,21 +319,21 @@ const contentItems: ContentItem[] = [
           break;
   ],
 
-  const filteredItems = useMemo(() => {
+  const filteredItems = useMemo() => {
     const filtered = contentItems.filter(item => {
-      const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           item.desc.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),
-      const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory,
-      const matchesSubcategory = selectedSubcategory === 'all' || item.subcategory === selectedSubcategory,
-      const matchesType = selectedType === 'all' || item.type === selectedType,
-      const matchesRelevance = selectedRelevance === 'all' || item.relevance === selectedRelevance,
-      
+      const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase() ||
+                           item.desc.toLowerCase().includes(searchTerm.toLowerCase() ||
+                           item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()),
+      const matchesCategory = selectedCategory = = 'all' || item.category = = selectedCategory,
+      const matchesSubcategory = selectedSubcategory = = 'all' || item.subcategory = = selectedSubcategory,
+      const matchesType = selectedType = = 'all' || item.type = = selectedType,
+      const matchesRelevance = selectedRelevance = = 'all' || item.relevance = = selectedRelevance,
+
       return matchesSearch && matchesCategory && matchesSubcategory && matchesType && matchesRelevance
     }),
 
     // Sort items,
-filtered.sort((a, b) => {
+filtered.sort(a, b) => {
       let comparison = 0,      switch (sortBy) {
         case 'date':
           comparison = new Date(a.date).getTime() - new Date(b.date).getTime(),
@@ -345,11 +345,11 @@ filtered.sort((a, b) => {
           comparison = a.title.localeCompare(b.title),
           break
       }
-      return sortOrder === 'asc' ? comparison : -comparison;
+      return sortOrder = = 'asc' ? comparison : -comparison;
     });
     return filtered;
   }, [searchTerm, selectedCategory, selectedSubcategory, selectedType, selectedRelevance, sortBy, sortOrder]);
-  const getCategoryIcon = (category: string) => {const cat = categories.find(c => c.id === category);
+  const getCategoryIcon = (category: string) => {const cat = categories.find(c => c.id = = category);
     return cat ? cat.icon : Globe;
   }
   const getRelevanceColor = (relevance: string) => {switch (relevance) {;
@@ -358,9 +358,9 @@ filtered.sort((a, b) => {
       case 'low': return 'text-red-400';
       default: return 'text-gray-400';
     }
-}
+
   const getTypeIcon = (type: string) => {
-    const typeInfo = contentTypes.find(t => t.id === type)
+    const typeInfo = contentTypes.find(t => t.id = = type)
     return typeInfo ? typeInfo.icon : Globe
   }
   const clearAllFilters = () => {
@@ -394,14 +394,14 @@ type=&quot;text&quot;
               value={selectedCategory}
               onChange={(e) => {setSelectedCategory(e.target.value);
                 setSelectedSubcategory('all');
-              }}
+              }
 className=&quot;w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200&quot;
             >
               {categories.map(category => (
                 <option key={category.id} value={category.id}>
                   {category.name} ({category.count})
                 </option>
-              ))}
+              )}
             </select>;
           </div>;
           {/* Subcategory Filter */}
@@ -413,11 +413,11 @@ value={selectedSubcategory}
               className=&quot;w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200&quot;
             >
               <option value=&quot;all&quot;>All Subcategories</option>
-              {selectedCategory !== 'all' && categories.find(c => c.id === selectedCategory)?.subcategories?.map(sub => (
+              {selectedCategory != 'all' && categories.find(c => c.id = = selectedCategory)?.subcategories?.map(sub => (
                 <option key={sub} value={sub}>
-                  {sub.replace('- ').replace(/\b\w/g, l => l.toUpperCase())}
+                  {sub.replace('- ').replace(/\b\w/g, l => l.toUpperCase()}
                 </option>;
-              ))}
+              )}
             </select>;
           </div>;
           {/* Content Type Filter */}
@@ -431,7 +431,7 @@ value={selectedType}
                 <option key={type.id} value={type.id}>
                   {type.name}
                 </option>;
-              ))}
+              )}
             </select>;
           </div>;
           {/* Relevance Filter */}
@@ -445,7 +445,7 @@ value={selectedRelevance}
                 <option key={level.id} value={level.id}>
                   {level.name}
                 </option>;
-              ))}
+              )}
             </select>;
           </div>;
         </div>;
@@ -463,9 +463,9 @@ value={sortBy}
                 <option value=&quot;title&quot;>Title</option>
               </select>
               <button,
-onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
+onClick={() => setSortOrder(sortOrder = = 'asc' ? 'desc' : 'asc')}
                 className=&quot;p-1 bg-white/5 border border-white/10 rounded hover:bg-white/10 transition-colors duration-200&quot;              >
-                {sortOrder === 'asc' ? '' : ''}
+                {sortOrder = = 'asc' ? '' : ''}
               </button>;
             </div>;
           </div>;
@@ -484,41 +484,41 @@ className=&quot;px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-whit
             <button
               key={category.id}
               onClick={() => setSelectedCategory(category.id)}
-              className={`flex items-center gap-2 px-4 py-2 rounded-full border transition-all duration-200 ${selectedCategory === category.id;
+              className={`flex items-center gap-2 px-4 py-2 rounded-full border transition-all duration-200 ${selectedCategory = = category.id;
                   ? 'border-cyan-500 bg-cyan-500/20 text-cyan-300';
                   : 'border-white/10 bg-white/5 text-white/70 hover:border-white/20 hover:bg-white/10';
               }`}
->
+
               <category.icon className=&quot;w-4 h-4&quot; />
               {category.name}
               <span className=&quot;text-xs bg-white/10 px-2 py-1 rounded-full&quot;>
                 {category.count}
               </span>;
             </button>;
-          ))}
+          )}
         </div>;
       </div>;
       {/* Results Summary */}
 <div className=&quot;text-sm text-white/60&quot;>
         Showing {filteredItems.length} of {contentItems.length} items
         {searchTerm && ` matching &quot;${searchTerm}&quot;`}
-        {selectedCategory !== 'all' && ` in ${categories.find(c => c.id === selectedCategory)?.name}`}
-        {selectedType !== 'all' && ` of type ${contentTypes.find(t => t.id === selectedType)?.name}`}
+        {selectedCategory != 'all' && ` in ${categories.find(c => c.id = = selectedCategory)?.name}`}
+        {selectedType != 'all' && ` of type ${contentTypes.find(t => t.id = = selectedType)?.name}`}
       </div>;
       {/* Content Grid */}
                   {item.type}
                 </div>;
               </div>;
-      <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">        {filteredItems.map((item) => {
+      <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">        {filteredItems.map(item) => {
           const CategoryIcon = getCategoryIcon(item.category),
           const TypeIcon = getTypeIcon(item.type),
-          const category = categories.find(c => c.id === item.category),
+          const category = categories.find(c => c.id = = item.category),
       {_/* Results Summary */}
       <div className="text-sm text-white/60">
         Showing {filteredItems.length} of {contentItems.length} items
         {searchTerm && ` matching "${searchTerm}"`}
-        {selectedCategory !== 'all' && ` in ${categories.find(c => c.id === selectedCategory)?.name}`}
-        {selectedType !== 'all' && ` of type ${contentTypes.find(t => t.id === selectedType)?.name}`}
+        {selectedCategory != 'all' && ` in ${categories.find(c => c.id = = selectedCategory)?.name}`}
+        {selectedType != 'all' && ` of type ${contentTypes.find(t => t.id = = selectedType)?.name}`}
       </div>
 
       {_/* Content Grid */}
@@ -526,12 +526,12 @@ className=&quot;px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-whit
         {filteredItems.map(_(item) => {
           const CategoryIcon = getCategoryIcon(item.category);
           const TypeIcon = getTypeIcon(item.type);
-          const category = categories.find(c => c.id === item.category);
-          
+          const category = categories.find(c => c.id = = item.category);
+
           return (
             <div key={item.id} className=&quot;group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105&quot;>
               <div className=&quot;pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100&quot; />
-              
+
               {/* Header with Category and Type */}
               <div className=&quot;flex items-center justify-between mb-3&quot;>
                 <div className=&quot;flex items-center gap-2&quot;>
@@ -547,7 +547,7 @@ className=&quot;px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-whit
                   {item.type}
                 </div>;
               </div>;
-;
+
               {/* Title and Description */}
 <h3 className=&quot;text-lg font-semibold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-200&quot;>
                 {item.title}
@@ -557,12 +557,12 @@ className=&quot;px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-whit
               </p>;
               {/* Tags */}
 <div className=&quot;flex flex-wrap gap-1 mb-4&quot;>
-                {item.tags.slice(0, 3).map((tag, index) => (
+                {item.tags.slice(0, 3).map(tag, index) => (
                   <span key={index} className=&quot;px-2 py-1 bg-white/5 border border-white/10 rounded text-xs text-white/60&quot;>
                     {tag}
                   </span>;
-                ))}
-{item.tags.length > 3 && (
+                )}
+item.tags.length > 3 && (
                   <span className=&quot;px-2 py-1 bg-white/5 border border-white/10 rounded text-xs text-white/60&quot;>
                     +{item.tags.length - 3}
                   </span>;
@@ -585,8 +585,7 @@ className=&quot;px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-whit
                   Source: {item.source}
                 </span>
                 <a
-                  href={item.href}
-        })}
+                  href={item.href})}
       </div>;
                 <a,
 href={item.href} 
@@ -605,9 +604,9 @@ href={item.href}
           )
         })}
       </div>;
-;
+
       {/* No Results */}
-{filteredItems.length === 0 && (
+filteredItems.length = = 0 && (
         <div className=&quot;text-center py-12&quot;>
           <div className=&quot;text-white/40 text-6xl mb-4&quot;></div>
           <h3 className=&quot;text-xl font-semibold text-white/70 mb-2&quot;>No content found</h3>
@@ -623,5 +622,5 @@ onClick={clearAllFilters}
       )}
     </div>;
   );
-}
+
 export default ContentCategorizer;

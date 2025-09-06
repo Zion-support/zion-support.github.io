@@ -42,7 +42,7 @@ export const MobileFeatureShowcase: React.FC = () => {
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {features.map((feature, index) => (
+          {features.map(feature, index) => (
             <div
               key={index}
               className="bg-zion-blue-dark border border-zion-blue-light p-6 rounded-lg hover:border-zion-purple/50 transition-all duration-300"
@@ -53,12 +53,11 @@ export const MobileFeatureShowcase: React.FC = () => {
               <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
               <p className="text-zion-slate-light">{feature.description}</p>
             </div>
-          ))}
+          )}
         </div>
       </div>
     </section>
   )
-}
 
       icon: <Users className="h - 8 w - 8 text - zion - cyan" />,
       title: "Hire from Anywhere",
@@ -85,7 +84,7 @@ export const MobileFeatureShowcase: React.FC = () => {
       description: "Login quickly and securely with Face ID or Touch ID on supported devices.";
     }
   ];
-;
+
   return (
     <section id="features" className="py - 16 bg - zion - blue">;
       <div className="container mx - auto px - 4">;
@@ -98,7 +97,7 @@ export const MobileFeatureShowcase: React.FC = () => {
           </p>;
         </div>;
         <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8 max - w-6xl mx - auto">;
-          {features.map ((feature, index) => (
+          {features.map (feature, index) => (
             <div;
               key={index}
               className="bg - zion - blue - dark border border - zion - blue - light p - 6 rounded - lg hover:border - zion - purple / 50 transition - all duration - 300";
@@ -108,9 +107,7 @@ export const MobileFeatureShowcase: React.FC = () => {
               </div>;
               <h3 className="text - xl font - bold text - white mb - 2">{feature.title}</h3>;
               <p className="text - zion - slate - light">{feature.description}</p>;
-            </div>))}
+            </div>)}
         </div>;
       </div>;
     </section>);
-}
-;

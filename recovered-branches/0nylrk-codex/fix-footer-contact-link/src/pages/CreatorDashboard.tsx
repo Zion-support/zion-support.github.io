@@ -52,7 +52,7 @@ export default function CreatorDashboard() {
       <SidebarTrigger />
     </SidebarProvider>
   )
-}
+
             </div>;
           </main>;
           <Footer />;
@@ -61,6 +61,5 @@ export default function CreatorDashboard() {
       <SidebarTrigger />;
     </SidebarProvider>;
   );
-}
+
     </SidebarProvider>);
-}

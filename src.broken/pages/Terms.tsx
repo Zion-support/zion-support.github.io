@@ -6,5 +6,3 @@ export function Terms() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

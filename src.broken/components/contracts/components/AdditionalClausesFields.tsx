@@ -6,5 +6,3 @@ export function AdditionalClausesFields() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

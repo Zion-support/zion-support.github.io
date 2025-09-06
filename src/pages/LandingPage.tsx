@@ -37,7 +37,7 @@ import {;
   Sparkles,;
   BarChart3,;
   Smartphone,;
-} from 'lucide-react';
+ from 'lucide-react';
 
 export default function LandingPage() {;
   const { t } = useTranslation();
@@ -88,7 +88,7 @@ export default /**
 function LandingPage() {
   const { t } = use_translation ();
   const { isRTL } = use_language ();
-;
+
   // Tools and features showcase;
   const tools_features = [;
     {
@@ -129,7 +129,7 @@ function LandingPage() {
       link: '/mobile - launch',
     },
   ];
-;
+
   return (
     <div className='min-h-screen bg-zion-blue text-white'>;
       <SEO
@@ -152,7 +152,7 @@ function LandingPage() {
           </div>
           <div
             className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto ${isRTL ? 'rtl' : ''}`}>;
-            {toolsFeatures && toolsFeatures.map((feature, index) => (;
+            {toolsFeatures && toolsFeatures.map(feature, index) => (;
               <Link
                 key={index}
                 href={feature && feature.link}
@@ -177,8 +177,8 @@ function LandingPage() {
                   <span>{t("general && general.explore")}</span>;
                   <ArrowRight className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4`} />;
               </Link>;
-            ))}
-            ))}
+            )}
+            )}
           </div>
         </div>
       </section>
@@ -239,20 +239,18 @@ function LandingPage() {
       <FloatingCTA />;
     </div>;
   );
-}
-      
+
       {/* Add social share section to encourage users to spread the word */}
       <SocialShareSection />
-      
+
       <WaitlistSection />
       <FloatingCTA />
     </div>
   );
-}
+
       {/* Add social share section to encourage users to spread the word */}
       <SocialShareSection />;
       {/* Add social share section to encourage users to spread the word */}
       <SocialShareSection />;
       <FloatingCTA />;
     </div>);
-}

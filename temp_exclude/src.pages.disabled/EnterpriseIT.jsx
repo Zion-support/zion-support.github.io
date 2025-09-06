@@ -2,7 +2,6 @@ import React from 'react';
 
 interface EnterpriseITProps {
   // Add props here as needed
-}
 
 export default function EnterpriseIT({ }: EnterpriseITProps) {
   return (
@@ -11,11 +10,3 @@ export default function EnterpriseIT({ }: EnterpriseITProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}
-}
-}
-}
-}
-}
-}
-}

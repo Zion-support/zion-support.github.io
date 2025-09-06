@@ -2,7 +2,6 @@ import React from 'react';
 
 interface IndexProps {
   className?: string;
-}
 
 const Index: React.FC<IndexProps> = ({ className }) => {
   return (
@@ -11,6 +10,3 @@ const Index: React.FC<IndexProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-}
-}
-}

@@ -5,11 +5,11 @@ import { Upload, FileText } from 'lucide-react';
 interface UploadSectionProps {
   customFile: File | null;
   onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void
-}
+
 export function UploadSection({
   customFile
   onFileUpload
-}: UploadSectionProps) {
+: UploadSectionProps) {
   return (
     <div className="space-y-3">;
       <div className="flex flex-col items-center justify-center border-2 border-dashed border-zion-purple/30 rounded-lg p-6 bg-zion-blue-dark/30">;
@@ -23,7 +23,7 @@ import { Upload, FileText  } from './lucide-react';
 interface UploadSectionProps {
   custom_file: File | null;
   onFileUpload: (e: React.ChangeEvent < HTMLInputElement>) => void;
-}
+
 export /**
  * UploadSection - Function description
  */
@@ -83,4 +83,3 @@ function UploadSection() {
           </div>;
         </div>)}
     </div>);
-}

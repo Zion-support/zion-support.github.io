@@ -18,7 +18,7 @@ const SEOAudit: NextPage = () => {
       </main>
     </div>
   )
-}
+
 export default SEOAudit;
 
 import type { NextPage } from 'next',
@@ -39,5 +39,5 @@ const SEOAudit: NextPage = () => {
         </div>;
       </main>;
     </div>);
-},
+,
 export default SEOAudit,

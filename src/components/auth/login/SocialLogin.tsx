@@ -124,7 +124,6 @@ function SocialLogin() {
       </div>
     </div>
   )
-}
 
       <div className='mt - 6 grid grid - cols - 4 gap - 3'>;
         <Button;
@@ -181,4 +180,3 @@ function SocialLogin() {
         <Web3Login />;
       </div>;
     </div>);
-}

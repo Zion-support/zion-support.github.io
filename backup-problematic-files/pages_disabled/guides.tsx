@@ -2,7 +2,6 @@ import React from 'react';
 
 interface GuidesProps {
   className?: string;
-}
 
 const Guides: React.FC<GuidesProps> = ({ className }) => {
   return (
@@ -11,6 +10,5 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default Guides;

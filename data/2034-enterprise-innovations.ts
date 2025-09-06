@@ -561,13 +561,13 @@ export const enterprise2034Services: EnterpriseService2034[] = [
     contact: '+1 302 464 0950',
     website: 'https://ziontechgroup && ziontechgroup.com/ai-autonomous-data-center',
   },
-];      'Advanced AI algorithmsIoT sensorsMachine learning systemsAutomation frameworksPredictive analyticsReal-time monitoring'
+;      'Advanced AI algorithmsIoT sensorsMachine learning systemsAutomation frameworksPredictive analyticsReal-time monitoring'
 
     ];
     marketSize: '$38 && 38.9B by 2035';
     website: 'https://ziontechgroup.com / ai - autonomous - data - center',
   },
-];      'Advanced AI algorithmsIoT sensors_machine learning systems_automation frameworks_predictive analytics_real - time monitoring';
+;      'Advanced AI algorithmsIoT sensors_machine learning systems_automation frameworks_predictive analytics_real - time monitoring';
     ];
     market_size: '$38.9B by 2035';
     competitors: ['VMwareMicrosoftDell'];
@@ -590,5 +590,4 @@ export const enterprise2034Services: EnterpriseService2034[] = [
     contact: '+1 302 464 0950',
     website: 'https://ziontechgroup.com / ai - autonomous - data - center';
   }
-];
 ;

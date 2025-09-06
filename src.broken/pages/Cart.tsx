@@ -6,5 +6,3 @@ export function Cart() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

@@ -6,5 +6,3 @@ export function CertificationFormFields() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

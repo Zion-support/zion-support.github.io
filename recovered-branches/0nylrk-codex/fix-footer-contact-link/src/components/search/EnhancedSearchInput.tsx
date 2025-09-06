@@ -11,43 +11,42 @@ interface EnhancedSearchInputProps {
 
   placeholder?: string;
   searchSuggestions: SearchSuggestion[];
-}
+
 export function EnhancedSearchInput({
   value;
 
   onChange
   placeholder = "Search..."
   searchSuggestions
-}: EnhancedSearchInputProps) {
+: EnhancedSearchInputProps) {
   const [isFocused, setIsFocused] = useState(false);
   const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]>([]);
   const inputRef = useRef<HTMLInputElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   // Filter suggestions based on input value
-  useEffect(() => {
+  useEffect() => {
     if (!value) {
       // Show recent searches when input is empty
-      setFilteredSuggestions(searchSuggestions.filter(s => s.type === 'recent'));
+      setFilteredSuggestions(searchSuggestions.filter(s => s.type = = 'recent');
       return
     }
     const filtered = searchSuggestions.filter(suggestion =>
-      suggestion.text.toLowerCase().includes(value.toLowerCase())
+      suggestion.text.toLowerCase().includes(value.toLowerCase()
     );
     // Sort suggestions to prioritize those that start with the search term
-    filtered.sort((a, b) => {
-      const aStartsWith = a.text.toLowerCase().startsWith(value.toLowerCase()) ? -1 : 0;
-      const bStartsWith = b.text.toLowerCase().startsWith(value.toLowerCase()) ? -1 : 0;
+    filtered.sort(a, b) => {
+      const aStartsWith = a.text.toLowerCase().startsWith(value.toLowerCase() ? -1 : 0;
+      const bStartsWith = b.text.toLowerCase().startsWith(value.toLowerCase() ? -1 : 0;
       return aStartsWith - bStartsWith
     });
-    setFilteredSuggestions(filtered.slice(0, 8)), // Limit to 8 suggestions
+    setFilteredSuggestions(filtered.slice(0, 8), // Limit to 8 suggestions
   }, [value, searchSuggestions]);
   // Handle clicks outside the component to close suggestions
-  useEffect(() => {
+  useEffect() => {
     function handleClickOutside(event: MouseEvent) {
-      if (containerRef.current && !containerRef.current.contains(event.target as Node)) {
+      if (containerRef.current && !containerRef.current.contains(event.target as Node) {
         setIsFocused(false)
       }
-    }
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside)
   }, []);
@@ -89,7 +88,7 @@ export function EnhancedSearchInput({
       />
     </div>
   )
-}
+
 import React, { useState, useEffect, useRef } from './react';
 import { Search, X } from './lucide-react';
 import { Input } from '@/components / ui / input';
@@ -100,7 +99,7 @@ interface EnhancedSearchInputProps {
   on_change: (value: string) => void,
   placeholder?: string;
   search_suggestions: SearchSuggestion[];
-}
+
 export /**
  * EnhancedSearchInput - Function description
  */
@@ -109,52 +108,51 @@ function EnhancedSearchInput() {
   const [filtered_suggestions, setFilteredSuggestions] = useState < SearchSuggestion[]>([]);
   const input_ref = useRef < HTMLInputElement>(null);
   const container_ref = useRef < HTMLDivElement>(null);
-;
+
   // Filter suggestions based on input value;
-  useEffect (() => {
+  useEffect () => {
     // Check condition
 if ( {) {
   $2
-}
+
       // Show recent searches when input is empty;
-      setFilteredSuggestions (search_suggestions.filter (string => s.type === 'recent'));
+      setFilteredSuggestions (search_suggestions.filter (string => s.type = = 'recent');
       return;
     }
     const filtered = search_suggestions.filter (suggestion =>;
-      suggestion.text.toLowerCase ().includes (value.toLowerCase ()));
-;
+      suggestion.text.toLowerCase ().includes (value.toLowerCase ());
+
     // Sort suggestions to prioritize those that start with the search term;
-    filtered.sort ((a, b) => {
-      const aStartsWith = a.text.toLowerCase ().starts_with (value.toLowerCase ()) ? -1 : 0;
-      const bStartsWith = b.text.toLowerCase ().starts_with (value.toLowerCase ()) ? -1 : 0;
+    filtered.sort (a, b) => {
+      const aStartsWith = a.text.toLowerCase ().starts_with (value.toLowerCase () ? -1 : 0;
+      const bStartsWith = b.text.toLowerCase ().starts_with (value.toLowerCase () ? -1 : 0;
       return aStartsWith - bStartsWith;
     });
-;
-    setFilteredSuggestions (filtered.slice (0, 8)), // Limit to 8 suggestions;
+
+    setFilteredSuggestions (filtered.slice (0, 8), // Limit to 8 suggestions;
   }, [value, search_suggestions]);
-;
+
   // Handle clicks outside the component to close suggestions;
-  useEffect (() => {
+  useEffect () => {
     /**
  * handleClickOutside - Function description
  */
 function handleClickOutside() {
       if () {) {
   $2
-}
+
         setIsFocused (false);
       }
-    }
     document.addEventListener ("mousedown", handleClickOutside);
     return () => document.removeEventListener ("mousedown", handleClickOutside);
   }, []);
-;
+
   const handleSelectSuggestion = (suggestion: string) =>: any {
     on_change (suggestion);
     setIsFocused (false),
     input_ref.current?.blur ();
   }
-;
+
   return (
     <div className="relative w - full" ref={container_ref}>;
       <div className="relative">;
@@ -185,4 +183,3 @@ function handleClickOutside() {
         visible={is_focused}
       />;
     </div>);
-}

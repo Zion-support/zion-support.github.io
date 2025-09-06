@@ -6,5 +6,3 @@ export function BillingHeader() {;
       <p>Component placeholder - needs implementation</p>;
     </div>;
   );
-}
-;

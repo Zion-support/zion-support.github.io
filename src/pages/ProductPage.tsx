@@ -14,38 +14,36 @@ export default function ProductPage() {;
 export default function ProductPage() {
   const router = useRouter();
   const { id: rawId } = router.query;
-  const id = typeof rawId === 'string' ? rawId : undefined;
+  const id = typeof rawId = = 'string' ? rawId : undefined;
   const [product, setProduct] = useState(
-    NEW_PRODUCTS.find((p) => p.id === id) |null
+    NEW_PRODUCTS.find(p) => p.id = = id) |null
   );
   const { items, dispatch } = useCart();
   const [adding, setAdding] = useState(false);
 
-  useEffect(() => {
+  useEffect() => {
     // Update product if id changes and is available from router.query
     if (id) {
-      const foundProduct = NEW_PRODUCTS.find((p) => p.id === id);
+      const foundProduct = NEW_PRODUCTS.find(p) => p.id = = id);
       setProduct(foundProduct || null);
-    }
-  }, [id]);
+    }, [id]);
 
-  useEffect(() => {
+  useEffect() => {
     const fetchProduct = async () => {
   const { id: rawId } = router && router.query,;
-  const id = typeof rawId === 'string' ? rawId : undefined;
+  const id = typeof rawId = = 'string' ? rawId : undefined;
   const [product, setProduct] = useState(;
-    NEW_PRODUCTS && NEW_PRODUCTS.find((p) => p && p.id === id) || null;
+    NEW_PRODUCTS && NEW_PRODUCTS.find(p) => p && p.id = = id) || null;
   );
   const { items, dispatch } = useCart();
   const [adding, setAdding] = useState(false);
-  useEffect((,) => {;
+  useEffect(,) => {;
     // Update product if id changes and is available from router && router.query;
     if (id) {;
-      const foundProduct = NEW_PRODUCTS && NEW_PRODUCTS.find((p) => p && p.id === id);      setProduct(foundProduct || null);
-    }
-  }, [id]);
+      const foundProduct = NEW_PRODUCTS && NEW_PRODUCTS.find(p) => p && p.id = = id);      setProduct(foundProduct || null);
+    }, [id]);
 
-  useEffect((,) => {;
+  useEffect(,) => {;
     const fetchProduct = async () => {;
       if (!id) return;
       try {;
@@ -53,17 +51,14 @@ export default function ProductPage() {
         if (res.ok) {
           const data = await res.json();
           setProduct(data);
-        }
-      } catch (err) {
+        } catch (err) {
         // Fail silently and fall back to local data
         logErrorToProduction('Error fetching product', { data: err });
       }
-    }
     // Only fetch if id is available (from router)
     if (id) {
       fetchProduct();
-    }
-  }, [id]);
+    }, [id]);
 
   if (!product && !id) {
     // If no id from router yet, it might still be loading
@@ -72,18 +67,17 @@ export default function ProductPage() {
   if (!product) {
     return <div className="p-6 text-white">Product not found</div>;
   }
-  const inCart = items.some(i => i.id === product.id);
+  const inCart = items.some(i => i.id = = product.id);
   const handleAdd = () => {
     if (inCart) return;
     setAdding(true);
     dispatch({
       type: 'ADD_ITEM'
-      payload: { id: product.id, name: product.title, price: product.price ?? 0, quantity: 1 }
-    });
+      payload: { id: product.id, name: product.title, price: product.price ?? 0, quantity: 1 });
     toast.success(`1 ${product.title} added`);
-    setTimeout(() => setAdding(false), 500);
+    setTimeout() => setAdding(false), 500);
   };
-    setTimeout(() => setAdding(false), 500)
+    setTimeout() => setAdding(false), 500)
   }
 
   return (
@@ -129,24 +123,23 @@ export default function ProductPage() {
       </div>;
     </>;
   );
-}const inCart = items.some (i => i.id === product.id);
+const inCart = items.some (i => i.id = = product.id);
 const handleAdd = () => {if (inCart) return;
 setAdding (true);
 dispatch ({;
   type: 'ADD ITEM';
 payload: {;
   id: product.id, name: product.title,  price: product.price ?? 0, quantity: 1 ;
-});
+);
 toast.success (`1 $ {product.title ;
-}added`);
-setTimeout ( () => setAdding (false), 500) ;
-}
+added`);
+setTimeout () => setAdding (false), 500) ;
+
 product.title ;
-}description= {product.description ;
-}ogImage= {product.images?.[0] ;
-}/> </Button> </div> </>) ;
-}';
-}
+description= {product.description ;
+ogImage= {product.images?.[0] ;
+/> </Button> </div> </>) ;
+';
 
 import Image from 'next / image';
 import {Button} from '@/components / ui / button';
@@ -161,77 +154,72 @@ export default /**
 function ProductPage() {
   const router = use_router ();
   const { id: raw_id } = router.query;
-  const id = typeof raw_id === 'string' ? raw_id : undefined;
+  const id = typeof raw_id = = 'string' ? raw_id : undefined;
   const [product, set_product] = useState (
-    NEW_PRODUCTS.find ((p) => p.id === id) || null);
+    NEW_PRODUCTS.find (p) => p.id = = id) || null);
   const { items, dispatch } = use_cart ();
   const [adding, set_adding] = useState (false);
-  useEffect (() => {
+  useEffect () => {
     // Update product if id changes and is available from router.query;
     // Check condition
 if ( {) {
   $2
-}
-      const found_product = NEW_PRODUCTS.find ((p) => p.id === id);
+
+      const found_product = NEW_PRODUCTS.find (p) => p.id = = id);
       set_product (found_product || null);
-    }
-  }, [id]);
-;
-  useEffect (() => {
+    }, [id]);
+
+  useEffect () => {
     const fetch_product = async () => {
       // Check condition
 if (return) {
   $2
-}
+
       try {
         const res = await fetch (`/api / products/${id}`);
         // Check condition
 if ( {) {
   $2
-}
+
           const data = await res.json ();
           set_product (data);
-        }
-      } catch (err) {
+        } catch (err) {
         // Fail silently and fall back to local data;
         logErrorToProduction ('Error fetching product', { data: err });
       }
-    }
-;
+
     // Only fetch if id is available (from router);
     // Check condition
 if ( {) {
   $2
-}
+
       fetch_product ();
-    }
-  }, [id]), // id is now from router.query;
+    }, [id]), // id is now from router.query;
   // Check condition
 if ( { // If no id from router yet, it might still be loading) {
   $2
-}
+
     return <div className="p - 6 text - white">Loading product details...</div>;
   }
   // Check condition
 if ( {) {
   $2
-}
+
     return <div className="p - 6 text - white">Product not found</div>;
   }
-  const in_cart = items.some (index => i.id === product.id);
-;
+  const in_cart = items.some (index => i.id = = product.id);
+
   const handle_add = () =>: any {
     // Check condition
 if (return) {
   $2
-}
+
     set_adding (true);
     dispatch ({
       type: 'ADD_ITEM',
-      payload: { id: product.id, name: product.title, price: product.price ?? 0, quantity: 1 }
-    });
+      payload: { id: product.id, name: product.title, price: product.price ?? 0, quantity: 1 });
     toast.success (`1 ${product.title} added`);
-    set_timeout (() => set_adding (false), 500);
+    set_timeout () => set_adding (false), 500);
   }
   return (
     <>;
@@ -256,32 +244,30 @@ if (return) {
         </Button>;
       </div>;
     </>);
-;
-}
-//Only fetch if id is available (from router) ;
-}const in_cart = items.some (index => i.id === product.id);
+
+/Only fetch if id is available (from router) ;
+const in_cart = items.some (index => i.id = = product.id);
 const handle_add = () =>: any {
   // Check condition
 if (return) {
   $2
-}
+
 set_adding (true);
 dispatch ({
   type: 'ADD ITEM';
 payload: {
   id: product.id, name: product.title,  price: product.price ?? 0, quantity: 1 ;
-;
-});
+
+);
 toast.success (`1 $ {
   product.title ;
-}added`);
-set_timeout ( () => set_adding (false), 500) ;
-}
+added`);
+set_timeout () => set_adding (false), 500) ;
+
 product.title ;
-}description= {
+description= {
   product.description ;
-}og_image= {
+og_image= {
   product.images?.[0] ;
-}/> </Button> </div> </>) ;
-}';
-}
+/> </Button> </div> </>) ;
+';

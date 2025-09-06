@@ -3,7 +3,7 @@ export default function InternationalProposals() {
 
   const [items, setItems] = useState<any[]>([])
   const [loading, setLoading] = useState(true)
-  useEffect(() => {
+  useEffect() => {
     (async () => {
       const res = await fetch('/api/proposals/list')
       const data = await res.json()
@@ -18,14 +18,14 @@ export default function InternationalProposals() {
     setItems(data.proposals |[])
 
 import React, { useEffect, useState } from 'react',
-;
+
 export default /**
  * InternationalProposals - Function description
  */
 function InternationalProposals() {
   const [items, set_items] = useState < any[]>([]),
   const [loading, set_loading] = useState (true),
-  useEffect (() => {
+  useEffect () => {
     (async () => {
       const res = await fetch ('/api / proposals / list'),
       const data = await res.json (),
@@ -49,7 +49,7 @@ function update_status() {
         <div>Loading</div>
       ) : (
         <div className="grid gap-4">
-          {items.map((p) => (
+          {items.map(p) => (
             <div key={p.id} className="border rounded p-4">
               <div className="flex items-center justify-between">
                 <div>
@@ -70,16 +70,16 @@ function update_status() {
                 <button onClick={() => updateStatus(p.id, 'Rejected')} className="px-2 py-1 border rounded">Mark Rejected</button>
               </div>
             </div>
-          ))}
+          )}
           {!items.length && <div className="opacity-70">No proposals yet.</div>}
         </div>
       )}
     </div>
   )
-}
+
         <div > Loading</div>) : (
         <div className="grid gap - 4">;
-          {items.map ((p) => (
+          {items.map (p) => (
             <div key={p.id} className="border rounded p - 4">;
               <div className="flex items - center justify - between">;
                 <div>;
@@ -99,8 +99,7 @@ function update_status() {
                 <button on_click={() => update_status (p.id, 'Accepted')} className="px - 2 py - 1 border rounded">Mark Accepted</button>;
                 <button on_click={() => update_status (p.id, 'Rejected')} className="px - 2 py - 1 border rounded">Mark Rejected</button>;
               </div>;
-            </div>))}
+            </div>)}
           {!items.length && <div className="opacity - 70">No proposals yet.</div>}
         </div>)}
     </div>);
-}

@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react',;
-;
+
 export type QuoteRequest = {;
   id:string,;
   name:string,;
@@ -13,8 +13,8 @@ export type QuoteRequest = {;
   status:'new' | 'in_review' | 'replied' | 'archived',;
   createdAt:string,;
   updatedAt:string;
-},;
-;
+,;
+
 export default function AdminQuotesPage() {;
   const [data, setData] = useState<QuoteRequest[]>([]),;
   const [q, setQ] = useState(''),;
@@ -23,8 +23,8 @@ export default function AdminQuotesPage() {;
   const [dateFrom, setDateFrom] = useState(''),;
   const [dateTo, setDateTo] = useState(''),;
   const [loading, setLoading] = useState(true),;
-;
-  useEffect(() => {;
+
+  useEffect() => {;
     (async () => {;
       setLoading(true),;
       const res = await fetch('/api/requests/list'),;
@@ -33,25 +33,25 @@ export default function AdminQuotesPage() {;
       setLoading(false),;
     })(),;
   }, []),;
-;
-  const filtered = useMemo(() => {;
-    return data.filter((r) => {;
-      if (status !== 'all' && r.status !== status) return false,;
-      if (talent !== 'all' && r.talentSlug !== talent) return false,;
+
+  const filtered = useMemo() => {;
+    return data.filter(r) => {;
+      if (status != 'all' && r.status != status) return false,;
+      if (talent != 'all' && r.talentSlug != talent) return false,;
       if (q) {;
         const hay = `${r.name} ${r.email} ${r.description} ${r.aiSummary}`.toLowerCase(),;
-        if (!hay.includes(q.toLowerCase())) return false,;
+        if (!hay.includes(q.toLowerCase()) return false,;
       }
-      if (dateFrom && new Date(r.createdAt) < new Date(dateFrom)) return false,;
-      if (dateTo && new Date(r.createdAt) > new Date(dateTo)) return false,;
+      if (dateFrom && new Date(r.createdAt) < new Date(dateFrom) return false,;
+      if (dateTo && new Date(r.createdAt) > new Date(dateTo) return false,;
       return true,;
     }),;
   }, [data, q, status, talent, dateFrom, dateTo]),;
-;
+
   const exportCsv = () => {;
     const header = ['idname','emailbudget','timelinetalentSlug','aiTypestatus','createdAt'],;
     const rows = filtered.map(r => [r.id,r.name,r.email,r.budget,r.timeline,r.talentSlug||'',r.aiType,r.status,r.createdAt]),;
-    const csv = [header.join(), ...rows.map(r => r.map(v => `"${String(v).replace(/"/g,'""')}"`).join())].join('\n'),;
+    const csv = [header.join(), ...rows.map(r => r.map(v => `"${String(v).replace(/"/g,'""')}"`).join()].join('\n'),;
     const blob = new Blob([csv], { type:'text/csv' }),;
     const url = URL.createObjectURL(blob),;
     const a = document.createElement('a'),;
@@ -60,12 +60,12 @@ export default function AdminQuotesPage() {;
     a.click(),;
     URL.revokeObjectURL(url),;
   },;
-;
+
   const changeStatus = async (id:string, status:QuoteRequest['status']) => {;
     await fetch('/api/requests/status', { method:'POST', headers:{ 'Content-Type':'application/json' }, body:JSON.stringify({ id, status }) }),;
-    setData(prev => prev.map(r => r.id === id ? { ...r, status, updatedAt:new Date().toISOString() } r)),;
+    setData(prev => prev.map(r => r.id = = id ? { ...r, status, updatedAt:new Date().toISOString() } r),;
   },;
-;
+
   return (;
     <div className="space-y-6">;
       <div className="flex items-center justify-between">;
@@ -94,7 +94,7 @@ export default function AdminQuotesPage() {;
           <option value="lena-mueller">Lena Mller</option>;
         </select>;
       </div>;
-;
+
       {loading ? (;
         <div>Loading</div>;
       ) :(;
@@ -134,11 +134,10 @@ export default function AdminQuotesPage() {;
                     </div>;
                   </td>;
                 </tr>;
-              ))}
+              )}
             </tbody>;
           </table>;
         </div>;
       )}
     </div>;
   ),;
-}

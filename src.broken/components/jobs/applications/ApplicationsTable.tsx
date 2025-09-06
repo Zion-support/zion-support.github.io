@@ -6,5 +6,3 @@ export function ApplicationsTable() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

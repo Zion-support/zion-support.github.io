@@ -21,7 +21,7 @@ import {
 import { Alert, AlertDescription } from "@/components/ui/alert",
 import { Link, useNavigate } from "react-router-dom",
 import { LoadingOverlay } from "@/components/LoadingOverlay",
-// Form validation schema
+/ Form validation schema
 const loginSchema = z.object({
   email: z.string().email("Please enter a valid email").min(1, "Email is required"),
   password: z.string().min(6, "Password must be at least 6 characters")}),
@@ -34,12 +34,12 @@ export function LoginForm() {
   const [searchParams] = useSearchParams(),
   const [showPassword, setShowPassword] = useState(false),
   const [isSubmitting, setIsSubmitting] = useState(false),
-  
+
   const form = useForm<LoginFormValues>({
     resolver: zodResolver(loginSchema),
     defaultValues: {
       email: "",
-      password: ""}}),
+      password: ""}),
 
   const onSubmit = async (data: LoginFormValues) => {
     if (isSubmitting) return,
@@ -60,8 +60,7 @@ export function LoginForm() {
       toast.error("Unable to login. Please try again.")
     } finally {
       setIsSubmitting(false)
-    }
-  },
+    },
 
   return (
     <Form {...form}>
@@ -90,7 +89,7 @@ import {;
 import { Alert, AlertDescription } from "@/components/ui/alert",;
 import { Link, useNavigate } from "react-router-dom",;
 import { LoadingOverlay } from "@/components/LoadingOverlay",;
-// Form validation schema;
+/ Form validation schema;
 const loginSchema = z.object({;
   email: z.string().email("Please enter a valid email").min(1, "Email is required"),;
   password: z.string().min(6, "Password must be at least 6 characters")}),;
@@ -105,7 +104,7 @@ export function LoginForm() {;
     resolver: zodResolver(loginSchema),;
     defaultValues: {;
       email: "",;
-      password: ""}}),;
+      password: ""}),;
   const onSubmit = async (data: LoginFormValues) => {;
     if (isSubmitting) return,;
     try {;
@@ -124,8 +123,7 @@ export function LoginForm() {;
       toast.error("Unable to login. Please try again.");
     } finally {;
       setIsSubmitting(false);
-    }
-  };
+    };
   return (;
     <Form {...form}>;
       {form.formState.errors.root && (;
@@ -138,8 +136,7 @@ export function LoginForm() {;
           const firstError = Object.keys(errors)[0] as keyof LoginFormValues;
           if (firstError) {;
             form.setFocus(firstError);
-          }
-        })}
+          })}
         className="space-y-6"
         autoComplete="off" // Disable browser autofill
       >
@@ -226,5 +223,3 @@ export function LoginForm() {;
       <LoadingOverlay visible={isLoading || isSubmitting} />
     </Form>
   )
-}
-;

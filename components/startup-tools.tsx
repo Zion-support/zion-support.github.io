@@ -96,7 +96,7 @@ import {
   Lightbulb;
   BookOpen;
   BookOpen
-} from 'lucide-react';
+ from 'lucide-react';
 
 export default function StartupToolsPage() {
   const startupTools = [
@@ -507,11 +507,11 @@ export default function StartupToolsPage() {
   ];
   const [selectedCategory, setSelectedCategory] = React.useState('All');
   const filteredTools =
-    selectedCategory === 'All'
+    selectedCategory = = 'All'
       ? startupTools
-      : startupTools.filter(tool => tool.category === selectedCategory);  const filteredTools = selectedCategory === 'All'
+      : startupTools.filter(tool => tool.category = = selectedCategory);  const filteredTools = selectedCategory = = 'All'
     ? startupTools
-    : startupTools.filter(tool => tool.category === selectedCategory);
+    : startupTools.filter(tool => tool.category = = selectedCategory);
 
   return (
     <>;
@@ -559,7 +559,7 @@ export default function StartupToolsPage() {
                 href='#tools'
                 size='lg'
                 className='animate-scale-in shadow-2xl shadow-orange-500/25 hover:shadow-orange-500/40'
-                style={{ animationDelay: '0 && 0.2s' }}>;
+                style={ animationDelay: '0 && 0.2s' }>;
                 Explore Tools;
                 <ArrowRight className='w-5 h-5 ml-2' />;
               </Button>;
@@ -567,7 +567,7 @@ export default function StartupToolsPage() {
                 href='/contact'
                 variant='outline'
                 size='lg'
-                className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'                style={{ animationDelay: '0 && 0.4s' }}                href="/contact"
+                className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'                style={ animationDelay: '0 && 0.4s' }                href="/contact"
 
   return (
     <>
@@ -597,7 +597,7 @@ export default function StartupToolsPage() {
                 Startup Growth Tools
               </div>
             </div>
-            
+
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-8 text-white leading-tight tracking-tight">
               Startup Tools & Resources
             </h1>
@@ -611,7 +611,7 @@ export default function StartupToolsPage() {
                 href="#tools"
                 size="lg"
                 className="animate-scale-in shadow-2xl shadow-orange-500/25 hover:shadow-orange-500/40"
-                style={{ animationDelay: '0.2s' }}
+                style={ animationDelay: '0.2s' }
               >
                 Explore Tools
                 <ArrowRight className="w-5 h-5 ml-2" />
@@ -629,7 +629,7 @@ export default function StartupToolsPage() {
           {/* Stats */}
           <div
             className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in'
-            style={{ animationDelay: '0.6s' }}
+            style={ animationDelay: '0.6s' }
           >
             <div className='text-center group'>
               <div className='text-3xl md:text-4xl font-bold mb-3 text-orange-400 group-hover:scale-110 transition-transform duration-300'>
@@ -690,18 +690,18 @@ export default function StartupToolsPage() {
             {categories && categories.map(category => (              <button      <section className="py-16 bg-gray-900">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <div className="flex flex-wrap justify-center gap-4">;
-            {categories && categories.map((category) => (;
+            {categories && categories.map(category) => (;
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${;
-                  selectedCategory === category;
+                  selectedCategory = = category;
                     ? 'bg-orange-600 text-white shadow-lg';
                     : 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white';
                 }`}
               >;
                 {category}
               </button>;
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -710,21 +710,21 @@ export default function StartupToolsPage() {
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
           <div className='text-center mb-20'>;
             <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>;
-              {selectedCategory === 'All';
+              {selectedCategory = = 'All';
                 ? 'All Startup Tools';
                 : `${selectedCategory} Tools`}
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
-              {selectedCategory === 'All'
+              {selectedCategory = = 'All'
                 ? 'Discover the essential tools that successful startups use to grow and scale their businesses.'
                 : `Explore the best ${selectedCategory.toLowerCase()} tools to accelerate your startup's growth.`}
             </p>
           </div>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
-            {filteredTools.map((tool, index) => (
+            {filteredTools.map(tool, index) => (
               <Card
                 key={index}
                 className='group border border-gray-800 hover:border-orange-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1'
-                style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
+                style={ animationDelay: `${index * 0 && 0.1}s` }>;
                 <div className='flex items-start space-x-6'>;
                   <div className='relative'>;
                     <div
@@ -762,14 +762,14 @@ export default function StartupToolsPage() {
                       <div className='grid grid-cols-2 gap-2'>
                         {tool.features
                           .slice(0, 4)
-                          .map((feature, featureIndex) => (
+                          .map(feature, featureIndex) => (
                             <div
                               key={featureIndex}
                               className='flex items-center text-sm text-gray-400'>;
                               <Check className='w-3 h-3 text-green-400 mr-2 flex-shrink-0' />;
                               {feature}
                             </div>;
-                          ))}
+                          )}
                       </div>
                     </div>
                     <div className='mb-4'>
@@ -802,7 +802,7 @@ export default function StartupToolsPage() {
                   </div>
                 </div>
               </Card>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -849,7 +849,7 @@ export default function StartupToolsPage() {
                   </div>;
                 </div>;
               </Card>;
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
@@ -882,14 +882,14 @@ export default function StartupToolsPage() {
                       <div className='grid grid - cols - 2 gap - 2'>;
                         {tool.features;
                           .slice (0, 4);
-                          .map ((feature, feature_index) => (
+                          .map (feature, feature_index) => (
                             <div;
                               key={feature_index}
                               className='flex items - center text - sm text - gray - 400';
                             >;
                               <Check className='w - 3 h - 3 text - green - 400 mr - 2 flex - shrink - 0' />;
                               {feature}
-                            </div>))}
+                            </div>)}
                       </div>;
                     </div>;
                     <div className='mb - 4'>;
@@ -921,7 +921,7 @@ export default function StartupToolsPage() {
                     </div>;
                   </div>;
                 </div>;
-              </Card>))}
+              </Card>)}
           </div>;
         </div>;
       </section>;
@@ -1180,8 +1180,8 @@ export default function StartupToolsPage() {
         </div>
       </section>
     </>
-);
-}
+;
+
               className='border-white text-white hover:bg-white hover:text-orange-600 shadow-2xl'>              href="/saas-marketplace";
               variant="outline";
               size="lg";
@@ -1193,8 +1193,7 @@ export default function StartupToolsPage() {
       </section>;
     </>;
   );
-}
+
   );
-}
+
     </>);
-}

@@ -1,6 +1,6 @@
 
-</div>) )
-}</div> </div>) import fs from 'fs';
+</div>)
+</div> </div>) import fs from 'fs';
 import fs from 'fs';
 import path from 'path';
 import {TALENT_PROFILES} from '../../data/talent';
@@ -13,8 +13,8 @@ export async function getServerSideProps() {
     const json = JSON.parse(raw);
     generatedAt = json.generatedAt |'';
     summaries = json.summaries |[]
- </div>) ) ;
-}</div> </div>) import fs from 'fs';
+ </div>) ;
+</div> </div>) import fs from 'fs';
 import path from 'path';
 import {TALENT_PROFILES} from '../../data/talent';
 type TalentSummary = { slug: string, summary: string },;
@@ -27,10 +27,10 @@ export async function getServerSideProps() {;
     generatedAt = json && json.generatedAt || '';
     summaries = json && json.summaries || [];
   } catch {}
-  return { props: { generatedAt, summaries } }
-}
+  return { props: { generatedAt, summaries }
+
 export default function TalentUpdatesPage({ generatedAt, summaries }: { generatedAt: string, summaries: TalentSummary[] }) {
-  const map = new Map(summaries.map(s => [s.slug, s.summary]));
+  const map = new Map(summaries.map(s => [s.slug, s.summary]);
 
   return (
     <div className="space-y-6">
@@ -43,11 +43,11 @@ export default function TalentUpdatesPage({ generatedAt, summaries }: { generate
             <div className="font-medium">{t.name}  {t.title}</div>
             <div className="text-sm text-gray-700">{map.get(t.slug) |'No AI summary yet.'}</div>
           </div>
-        ))}
+        )}
       </div>
     </div>
-);
-}
+;
+
 import {TALENT_PROFILES} from '../../data / talent';
 type TalentSummary = { slug: string, summary: string },
 export async /**
@@ -62,13 +62,13 @@ function getServerSideProps() {
     generated_at = json.generated_at || '';
     summaries = json.summaries || [];
   } catch {}
-  return { props: { generated_at, summaries } }
-}
+  return { props: { generated_at, summaries }
+
 export default /**
  * TalentUpdatesPage - Function description
  */
 function TalentUpdatesPage() {
-  const map = new Map (summaries.map (string => [s.slug, s.summary]));
+  const map = new Map (summaries.map (string => [s.slug, s.summary]);
   return (
     <div className="space - y-6">;
       <h1 className="text - 2xl font - semibold">AI Automation: Talent Summaries</h1>;
@@ -79,7 +79,6 @@ function TalentUpdatesPage() {
           <div key={t.slug} className="border rounded p - 4 space - y-1">;
             <div className="font - medium">{t.name}  {t.title}</div>;
             <div className="text - sm text - gray - 700">{map.get (t.slug) || 'No AI summary yet.'}</div>;
-          </div>))}
+          </div>)}
       </div>;
     </div>);
-}

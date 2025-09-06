@@ -1,9 +1,9 @@
 export const generateId = (prefix: string = 'id'): string => {
   return `${prefix}-${Math.random().toString(36).substr(2, 9)}`
-},
+,
 
 export const announceToScreenReader = (message: string): void => {
-  if (typeof window === 'undefined') return,
+  if (typeof window = = 'undefined') return,
 
   const announcement = document.createElement('div')
   announcement.setAttribute('aria-livepolite'),
@@ -14,12 +14,12 @@ export const announceToScreenReader = (message: string): void => {
   document.body.appendChild(announcement),
 
   // Remove after announcement
-  setTimeout(() => {
+  setTimeout() => {
     document.body.removeChild(announcement)
   }, 1000)
-},
+,
 
-export const trapFocus = (elemen: t: HTMLElement): (() => void) => {
+export const trapFocus = (elemen: t: HTMLElement): () => void) => {
   const focusableElements = element.querySelectorAll(
     'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
   ),
@@ -30,19 +30,17 @@ export const trapFocus = (elemen: t: HTMLElement): (() => void) => {
   ] as HTMLElement,
 
   const handleTabKey = (e: KeyboardEvent) => {
-    if (e.key !== 'Tab') return,
+    if (e.key != 'Tab') return,
 
     if (e.shiftKey) {
-      if (document.activeElement === firstElement) {
+      if (document.activeElement = = firstElement) {
         lastElement.focus(),
         e.preventDefault()
-      }
-    } else {
-      if (document.activeElement === lastElement) {
+      } else {
+      if (document.activeElement = = lastElement) {
         firstElement.focus(),
         e.preventDefault()
       }
-    }
   },
 
   element.addEventListener('keydown', handleTabKey),
@@ -53,7 +51,7 @@ export const trapFocus = (elemen: t: HTMLElement): (() => void) => {
   return () => {
     element.removeEventListener('keydown', handleTabKey)
   }
-},
+,
 
 export const getContrastRatio = (color1: string, color2: string): number => {
   const getLuminance = (color: string): number => {
@@ -64,7 +62,7 @@ export const getContrastRatio = (color1: string, color2: string): number => {
       const val = parseInt(c) / 255
       return val <= 0.03928
         ? val / 12.92
-        : Math.pow((val + 0.055) / 1.055, 2.4)
+        : Math.pow(val + 0.055) / 1.055, 2.4)
     }),
 
     return 0.2126 * r + 0.7152 * g + 0.0722 * b
@@ -77,11 +75,11 @@ export const getContrastRatio = (color1: string, color2: string): number => {
   const darkest = Math.min(lum1, lum2),
 
   return (brightest + 0.05) / (darkest + 0.05)
-},
+,
 
 export const isHighContrast = (color1: string, color2: string): boolean => {
   return getContrastRatio(color1, color2) >= 4.5
-},
+,
 
 export const validateAriaLabel = (element: HTMLElement): boolean => {
   const hasAriaLabel = element.hasAttribute('aria-label')
@@ -89,12 +87,12 @@ export const validateAriaLabel = (element: HTMLElement): boolean => {
   const hasVisibleText = element.textContent?.trim().length > 0
 
   return hasAriaLabel || hasAriaLabelledBy || hasVisibleText
-},
+,
 
 export const getFocusableElements = (containe: r: HTMLElement): HTMLElement[] => {
   const focusableSelectors = [
 
-},
+,
 
 export const isElementInViewport = (element: HTMLElement): boolean => {
   const rect = element.getBoundingClientRect()
@@ -104,20 +102,19 @@ export const isElementInViewport = (element: HTMLElement): boolean => {
     rect.bottom <=
       (window.innerHeight || document.documentElement.clientHeight) &&
     rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-  )
-},
+,
 
 export const scrollToElement = (
   elemen: t: HTMLElement,
   behavio: r: ScrollBehavior = 'smooth'
-): void => {
+: void => {
   element.scrollIntoView({ behavior, block: 'start' })
-},
+,
 
 export const createSkipLink = (
   targetI: d: string,
   tex: t: string = 'Skip to main content'
-): HTMLElement => {
+: HTMLElement => {
   const skipLink = document.createElement('a')
   skipLink.href = `#${targetId}`,
   skipLink.textContent = text,
@@ -130,9 +127,8 @@ export const createSkipLink = (
     if (target) {
       target.focus(),
       scrollToElement(target)
-    }
-  }),
+    }),
 
   return skipLink
-},
-export const _generateId = (prefix: string = 'id'): string = > {_return `${prefix}-${_Math.random().toString(36).substr(2, _9)}`}; export const _announceToScreenReader = (message: string): void = > {_if (typeof window = = = 'undefined') return; const _announcement = document.createElement('div'); announcement.setAttribute('aria-live', _'polite'); announcement.setAttribute('aria-atomic', _'true'); announcement.className = 'sr-only'; announcement.textContent = message; document.body.appendChild(announcement); // Remove after announcement setTimeout(() = > { document.body.removeChild(announcement)}, 1000)}; export const _trapFocus = (element: HTMLElement): (() = > void) = > {_const _focusableElements = element.querySelectorAll( 'button, _[href], _input, _select, _textarea, _[tabindex]: not([tabindex = "-1"])' ); const _firstElement = focusableElements[0] as HTMLElement; const _lastElement = focusableElements[focusableElements.length - 1] as HTMLElement; const _handleTabKey = (e: KeyboardEvent) = > { if (e.key ! = = 'Tab') return; if (e.shiftKey) { if (document.activeElement = = = firstElement) { lastElement.focus(); e.preventDefault()} } else {_if (document.activeElement = = = lastElement) { firstElement.focus(); e.preventDefault()} } }; element.addEventListener('keydown', handleTabKey); // Focus first element firstElement?.focus(); return () = > {_element.removeEventListener('keydown', _handleTabKey)}}; export const _getContrastRatio = (color1: string, color2: string): number = > {_const _getLuminance = (color: string): number = > { const _rgb = color.match(/\d+/g); if (!rgb) return 0; const [r, _g, _b] = rgb.map(c = > { const _val = parseInt(c) / 255; return val < = 0.03928 ? val / 12.92: Math.pow((val + 0.055) / 1.055, _2.4)}); return 0.2126 * r + 0.7152 * g + 0.0722 * b}; const _lum1 = getLuminance(color1); const _lum2 = getLuminance(color2); const _brightest = Math.max(lum1, lum2); const _darkest = Math.min(lum1, lum2); return (brightest + 0.05) / (darkest + 0.05)}; export const _isHighContrast = (color1: string, color2: string): boolean = > {_return getContrastRatio(color1, _color2) > = 4.5}; export const _validateAriaLabel = (element: HTMLElement): boolean = > {_const _hasAriaLabel = element.hasAttribute('aria-label'); const _hasAriaLabelledBy = element.hasAttribute('aria-labelledby'); const _hasVisibleText = element.textContent?.trim().length > 0; return hasAriaLabel || hasAriaLabelledBy || hasVisibleText}; export const _getFocusableElements = (container: HTMLElement): HTMLElement[] = > {_const _focusableSelectors = [ 'button: not([disabled])' 'input: not([disabled])' 'select: not([disabled])' 'textarea: not([disabled])' 'a[href]' '[tabindex]: not([tabindex = "-1"])' ].join(', _'); return Array.from(container.querySelectorAll(focusableSelectors)) as HTMLElement[]}; export const _isElementInViewport = (element: HTMLElement): boolean = > {_const _rect = element.getBoundingClientRect(); return ( rect.top > = 0 && rect.left > = 0 && rect.bottom < = (window.innerHeight || document.documentElement.clientHeight) && rect.right < = (window.innerWidth || document.documentElement.clientWidth) )}; export const _scrollToElement = (element: HTMLElement, behavior: ScrollBehavior = 'smooth'): void = > {_element.scrollIntoView({ behavior, _block: 'start'})}; export const _createSkipLink = (targetId: string, text: string = 'Skip to main content'): HTMLElement = > {_const _skipLink = document.createElement('a'); skipLink.href = `#${targetId}`; skipLink.textContent = text; skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50'; skipLink.addEventListener('click', (e) = > {_e.preventDefault(); const _target = document.getElementById(targetId); if (target) { target.focus(); scrollToElement(target)} }); return skipLink};
+,
+export const _generateId = (prefix: string = 'id'): string = > {_return `${prefix}-${_Math.random().toString(36).substr(2, _9)}`}; export const _announceToScreenReader = (message: string): void = > {_if (typeof window = = 'undefined') return; const _announcement = document.createElement('div'); announcement.setAttribute('aria-live', _'polite'); announcement.setAttribute('aria-atomic', _'true'); announcement.className = 'sr-only'; announcement.textContent = message; document.body.appendChild(announcement); // Remove after announcement setTimeout() = > { document.body.removeChild(announcement)}, 1000)}; export const _trapFocus = (element: HTMLElement): () = > void) = > {_const _focusableElements = element.querySelectorAll( 'button, _[href], _input, _select, _textarea, _[tabindex]: not([tabindex = "-1"])' ); const _firstElement = focusableElements[0] as HTMLElement; const _lastElement = focusableElements[focusableElements.length - 1] as HTMLElement; const _handleTabKey = (e: KeyboardEvent) = > { if (e.key ! = 'Tab') return; if (e.shiftKey) { if (document.activeElement = = firstElement) { lastElement.focus(); e.preventDefault()} else {_if (document.activeElement = = lastElement) { firstElement.focus(); e.preventDefault()} }; element.addEventListener('keydown', handleTabKey); // Focus first element firstElement?.focus(); return () = > {_element.removeEventListener('keydown', _handleTabKey)}; export const _getContrastRatio = (color1: string, color2: string): number = > {_const _getLuminance = (color: string): number = > { const _rgb = color.match(/\d+/g); if (!rgb) return 0; const [r, _g, _b] = rgb.map(c = > { const _val = parseInt(c) / 255; return val < = 0.03928 ? val / 12.92: Math.pow(val + 0.055) / 1.055, _2.4)}); return 0.2126 * r + 0.7152 * g + 0.0722 * b}; const _lum1 = getLuminance(color1); const _lum2 = getLuminance(color2); const _brightest = Math.max(lum1, lum2); const _darkest = Math.min(lum1, lum2); return (brightest + 0.05) / (darkest + 0.05)}; export const _isHighContrast = (color1: string, color2: string): boolean = > {_return getContrastRatio(color1, _color2) > = 4.5}; export const _validateAriaLabel = (element: HTMLElement): boolean = > {_const _hasAriaLabel = element.hasAttribute('aria-label'); const _hasAriaLabelledBy = element.hasAttribute('aria-labelledby'); const _hasVisibleText = element.textContent?.trim().length > 0; return hasAriaLabel || hasAriaLabelledBy || hasVisibleText}; export const _getFocusableElements = (container: HTMLElement): HTMLElement[] = > {_const _focusableSelectors = [ 'button: not([disabled])' 'input: not([disabled])' 'select: not([disabled])' 'textarea: not([disabled])' 'a[href]' '[tabindex]: not([tabindex = "-1"])' ].join(', _'); return Array.from(container.querySelectorAll(focusableSelectors) as HTMLElement[]}; export const _isElementInViewport = (element: HTMLElement): boolean = > {_const _rect = element.getBoundingClientRect(); return ( rect.top > = 0 && rect.left > = 0 && rect.bottom < = (window.innerHeight || document.documentElement.clientHeight) && rect.right < = (window.innerWidth || document.documentElement.clientWidth)}; export const _scrollToElement = (element: HTMLElement, behavior: ScrollBehavior = 'smooth'): void = > {_element.scrollIntoView({ behavior, _block: 'start'})}; export const _createSkipLink = (targetId: string, text: string = 'Skip to main content'): HTMLElement = > {_const _skipLink = document.createElement('a'); skipLink.href = `#${targetId}`; skipLink.textContent = text; skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50'; skipLink.addEventListener('click', (e) = > {_e.preventDefault(); const _target = document.getElementById(targetId); if (target) { target.focus(); scrollToElement(target)}); return skipLink};

@@ -72,7 +72,7 @@ function ApiMockContractTestingPage() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com',  }
-;
+
   const ad_items = [;
     {
       title: ' API Mock & Contract Testing Platform',
@@ -89,7 +89,7 @@ function ApiMockContractTestingPage() {
       contact_info,
     },
   ];
-;
+
   const tiers = [;
     {
       name: 'Starter',
@@ -106,7 +106,7 @@ function ApiMockContractTestingPage() {
       price: 'Custom',
       items: ['SAML / SSO', 'RBAC', 'Private cloud / VPC', 'Premium support'],
     },  ];
-;
+
   return (
     <Layout>;
       <Head>;
@@ -145,7 +145,7 @@ function ApiMockContractTestingPage() {
                       key={i}
                       className='flex items-start gap-2 w-4 h-4 mt-0 && 0.5 text-emerald-400'>;
                       <Check /> <span>{i}</span>;
-                    </li>                  ))}
+                    </li>                  )}
                 </ul>;
               </div>;
           </div>
@@ -171,7 +171,7 @@ function ApiMockContractTestingPage() {
               >
                 Book a Demo
               </a>            </div>
-            ))}
+            )}
           </div>
 
           <div className="mt-8 max-w-3xl mx-auto bg-black/20 backdrop-blur-xl rounded-2xl p-6 border border-cyan-500/30">
@@ -187,7 +187,7 @@ function ApiMockContractTestingPage() {
         </div>
       </div>
     </Layout>
-);
+;
                 Book a Demo;
               </a>            </div>;
           </div>;
@@ -196,7 +196,5 @@ function ApiMockContractTestingPage() {
     </Layout>;
   );
   )
-}
 
     </Layout>);
-;

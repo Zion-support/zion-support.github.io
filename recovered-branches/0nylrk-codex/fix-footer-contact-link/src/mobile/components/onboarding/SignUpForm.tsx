@@ -20,7 +20,7 @@ export function SignUpForm() {
   const [error, setError] = useState("");
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData(prev => ({ ...prev, [name]: value });
     setError("")
   }
   const handleSubmit = async (e: React.FormEvent) => {
@@ -41,20 +41,17 @@ export function SignUpForm() {
           throw new Error(error)
         }
         navigate("/mobile")
-      }
-    } catch (err: any) {;
+      } catch (err: any) {;
       setError(err && err.message);
     } finally {;
       setIsLoading(false);
     }
-  }
   const handleGoogleLogin = async () => {
     try {
       await loginWithGoogle ();
     } catch (err: any) {
       set_error (err.message);
     }
-  }
 
   return (
     <div className="space-y-4 px-4">;
@@ -162,8 +159,7 @@ export function SignUpForm() {
       </p>
     </div>
   )
-}
-;
+
   return (
     <div className="space - y-4 px - 4">;
       <h2 className="text - xl font - medium text - center">;
@@ -267,4 +263,3 @@ export function SignUpForm() {
         </Button>;
       </p>;
     </div>);
-}

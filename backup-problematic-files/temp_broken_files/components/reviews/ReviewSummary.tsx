@@ -3,7 +3,7 @@ import type { ReviewsSummary } from '../../types/reviews',
 import StarRating from './StarRating',
 type Props = {
   summary: ReviewsSummary
-},
+,
 
 const ReviewSummary: React.FC<Props> = ({ summary }) => {
   return (
@@ -11,7 +11,7 @@ const ReviewSummary: React.FC<Props> = ({ summary }) => {
       <div>
         <div className=&quot;flex items-center gap-3&quot;>
           <span className=&quot;text-2xl font-semibold&quot;>{summary.averageRating.toFixed(1)}</span>
-          <StarRating value={Math.round(summary.averageRating)} onChange={() => {}} readOnly />
+          <StarRating value={Math.round(summary.averageRating)} onChange={() => {} readOnly />
         </div>
         <div className=&quot;text-sm text-gray-600 mt-1&quot;>
           <span className=&quot;mr-3&quot;>{summary.totalReviews} reviews</span>
@@ -19,6 +19,6 @@ const ReviewSummary: React.FC<Props> = ({ summary }) => {
       </div>
     </div>
   )
-},
+,
 
 export default ReviewSummary,

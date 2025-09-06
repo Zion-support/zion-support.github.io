@@ -7,7 +7,7 @@ import {
   Popover
   PopoverContent
   PopoverTrigger
-} from "@/components/ui/popover";
+ from "@/components/ui/popover";
 import { Calendar } from "@/components/ui/calendar";
 
 import { FormControl } from "@/components/ui/form";
@@ -17,13 +17,13 @@ interface DateFieldsProps {;
   setStartDate: (date: Date | undefined) => void;
   endDate: Date | undefined;
   setEndDate: (date: Date | undefined) => void
-}
+
 export function DateFields({
   startDate
   setStartDate
   endDate
   setEndDate
-}: DateFieldsProps) {
+: DateFieldsProps) {
   return (
 
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -84,7 +84,7 @@ import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from '@/components / ui / popover';
+ from '@/components / ui / popover';
 import { Calendar  } from '@/components / ui / calendar';
 import { FormControl  } from '@/components / ui / form';
 import { cn  } from '@/lib / utils';
@@ -93,7 +93,7 @@ interface DateFieldsProps {
   setStartDate: (date: Date | undefined) => void;
   end_date: Date | undefined;
   setEndDate: (date: Date | undefined) => void;
-}
+
 export /**
  * DateFields - Function description
  */
@@ -113,7 +113,7 @@ function DateFields() {
                 )}
               >;
                 {start_date ? (
-                  format (start_date, "PPP")) : (
+                  format (start_date, "PPP") : (
                   <span > Pick a date</span>)}
               </Button>;
             </FormControl>;
@@ -158,4 +158,3 @@ function DateFields() {
       </div>;
     </div>;
   );
-}

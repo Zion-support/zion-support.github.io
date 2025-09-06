@@ -6,5 +6,3 @@ export function ListingCard() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

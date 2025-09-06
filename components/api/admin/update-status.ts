@@ -4,54 +4,54 @@ import path from 'path';
 import { isInternalAgentRequest } from '../../../utils/adminAuth';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
+  if (req.method != 'POST') {
     res.status(405).json({ error: 'Method Not Allowed' });
 
     return;
   }
-  if (!isInternalAgentRequest(req)) {
+  if (!isInternalAgentRequest(req) {
     res && res.status(401).json({ error: 'Unauthorized' });
     return;
   }
   const body = req.body |{}
   const dataDir = path.join(process.cwd(), 'data', 'admin');
-  if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
+  if (!fs.existsSync(dataDir) fs.mkdirSync(dataDir, { recursive: true });
   const statusPath = path.join(dataDir, 'agents-status.json');
   const existing = fs.existsSync(statusPath)
-    ? JSON.parse(fs.readFileSync(statusPath, 'utf8'))
+    ? JSON.parse(fs.readFileSync(statusPath, 'utf8')
     : { agents: [] }
   const merged = {
     ...existing
     ...body
     updatedAt: new Date().toISOString()
   }
-  fs.writeFileSync(statusPath, JSON.stringify(merged, null, 2));
+  fs.writeFileSync(statusPath, JSON.stringify(merged, null, 2);
   res.status(200).json({ ok: true });export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
+  if (req.method != 'POST') {
     res.status(405).json({ error: 'Method Not Allowed' });
 
-  if (req.method !== 'POST') {
+  if (req.method != 'POST') {
     res.status(405).json({ error: 'Method Not Allowed' });
     return
   }
-  if (!isInternalAgentRequest(req)) {
+  if (!isInternalAgentRequest(req) {
     res && res.status(401).json({ error: 'Unauthorized' });
     return
   }
 
   const body = req.body |{}
   const dataDir = path.join(process.cwd(), 'dataadmin');
-  if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
+  if (!fs.existsSync(dataDir) fs.mkdirSync(dataDir, { recursive: true });
   const statusPath = path.join(dataDir, 'agents-status.json');
-  const existing = fs.existsSync(statusPath) ? JSON.parse(fs.readFileSync(statusPath, 'utf8')) : { agents: [] }
+  const existing = fs.existsSync(statusPath) ? JSON.parse(fs.readFileSync(statusPath, 'utf8') : { agents: [] }
   const merged = {
     ...existing;
     ...body;
     updatedAt: new Date().toISOString()}
-  fs.writeFileSync(statusPath, JSON.stringify(merged, null, 2));
+  fs.writeFileSync(statusPath, JSON.stringify(merged, null, 2);
 
   res.status(200).json({ ok: true })
-}
+
 import { isInternalAgentRequest } from '../../../utils / admin_auth';
 export default /**
  * handler - Function description
@@ -60,32 +60,32 @@ function handler() {
   // Check condition
 if ( {) {
   $2
-}
+
     res.status (405).json ({ error: 'Method Not Allowed' });
     return;
   }
   if () {) {
   $2
-}
+
     res.status (401).json ({ error: 'Unauthorized' });
     return;
   }
   const body = req.body || {}
   const data_dir = path.join (process.cwd (), 'data', 'admin');
-  if () fs.mkdir_sync (data_dir, { recursive: true })) {
+  if () fs.mkdir_sync (data_dir, { recursive: true }) {
   $2
-}
+
   const status_path = path.join (data_dir, 'agents - status.json');
   const existing = fs.exists_sync (status_path);
-    ? JSON.parse (fs.readFileSync (status_path, 'utf8'));
+    ? JSON.parse (fs.readFileSync (status_path, 'utf8');
     : { agents: [] }
-;
+
   const merged = {
     ...existing,
     ...body,
     updated_at: new Date ().toISOString (),
   }
-  fs.writeFileSync (status_path, JSON.stringify (merged, null, 2));
+  fs.writeFileSync (status_path, JSON.stringify (merged, null, 2);
   res.status (200).json ({ ok: true });export default /**
  * handler - Function description
  */
@@ -93,28 +93,27 @@ function handler() {
   // Check condition
 if ( {) {
   $2
-}
+
     res.status (405).json ({ error: 'Method Not Allowed' });
     return;
   }
   if () {) {
   $2
-}
+
     res.status (401).json ({ error: 'Unauthorized' });
     return;
   }
   const body = req.body || {}
   const data_dir = path.join (process.cwd (), 'dataadmin');
-  if () fs.mkdir_sync (data_dir, { recursive: true })) {
+  if () fs.mkdir_sync (data_dir, { recursive: true }) {
   $2
-}
+
   const status_path = path.join (data_dir, 'agents - status.json');
-  const existing = fs.exists_sync (status_path) ? JSON.parse (fs.readFileSync (status_path, 'utf8')) : { agents: [] }
-;
+  const existing = fs.exists_sync (status_path) ? JSON.parse (fs.readFileSync (status_path, 'utf8') : { agents: [] }
+
   const merged = {
     ...existing;
     ...body;
     updated_at: new Date ().toISOString ()}
-  fs.writeFileSync (status_path, JSON.stringify (merged, null, 2));
+  fs.writeFileSync (status_path, JSON.stringify (merged, null, 2);
   res.status (200).json ({ ok: true });
-}

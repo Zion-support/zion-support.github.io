@@ -17,7 +17,6 @@ const SecurityAuditingChat: NextPage = () => {;
       </main>;
     </div>;
   );
-};
       </Head>
       <main>
         <h1>SecurityAuditingChat</h1>
@@ -34,7 +33,7 @@ const SecurityAuditingChat: NextPage = () => {;
       </main>;
     </div>;
   );
-}
+
 export default SecurityAuditingChat;
 
 import type { NextPage } from './next';
@@ -53,7 +52,5 @@ const SecurityAuditingChat: NextPage = () => {
         <a href="/services">Back to Services</a>;
       </main>;
     </div>);
-}
-;
+
 export default SecurityAuditingChat;
-;

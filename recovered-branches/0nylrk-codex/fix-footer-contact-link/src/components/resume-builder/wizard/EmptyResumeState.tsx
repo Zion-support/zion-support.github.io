@@ -21,7 +21,6 @@ export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) => {
       </CardContent>
     </Card>
   );
-}
 
             Create Resume;
           </Button>;
@@ -29,7 +28,4 @@ export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) => {
       </CardContent>;
     </Card>;
   );
-};
     </Card>);
-}
-;

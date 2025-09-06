@@ -7,7 +7,7 @@ import {
   CardHeader;
   CardTitle;
   CardDescription
-} from "@/components/ui/card",
+ from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge",
 import { Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon } from "lucide-react";
@@ -18,13 +18,13 @@ type QuoteRequestCardProps = {
   onViewDetails: (quote: QuoteRequest) => void
   onMarkAsResponded?: (id: string) => void
   onToggleArchive: (id: string, isArchived: boolean) => void
-}
+
 export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
   quote;
   onViewDetails;
   onMarkAsResponded
   onToggleArchive
-}) => {
+) => {
   // Format date for display;
   const format_date = (date_string: string) =>: any {
     try {
@@ -32,7 +32,6 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
     } catch (e) {
       return dateString
     }
-  }
   return (
     <Card key={quote.id} className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
       <CardHeader className="pb-2">
@@ -67,7 +66,7 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
             View Details
           </Button>
           <div className="flex items-center">
-            {quote.status !== 'responded' && onMarkAsResponded && (
+            {quote.status != 'responded' && onMarkAsResponded && (
               <Button
                 variant="ghost"
                 size="sm"
@@ -95,7 +94,6 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
       </CardContent>
     </Card>
   )
-}
 
             </Button>;
           </div>;
@@ -103,7 +101,4 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
       </CardContent>;
     </Card>;
   );
-};
     </Card>);
-}
-;

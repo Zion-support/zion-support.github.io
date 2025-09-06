@@ -48,7 +48,7 @@ import {;
   Video,;
   User,;
   XCircle} from "lucide-react",;
-;
+
 function ProjectDetailsContent() {;
   // useParams may be untyped in this environment, so avoid passing a;
   // type argument and cast the result instead to prevent TS2347 errors.;
@@ -56,25 +56,20 @@ function ProjectDetailsContent() {;
   const { user } = useAuth(),;
   const navigate = useNavigate(),;
   const { getProjectById, updateProjectStatus } = useProjects(),;
-  ;
   const [project, setProject] = useState<Project | null>(null),;
   const [isLoading, setIsLoading] = useState(true),;
   const [notes, setNotes] = useState<any[]>([]),;
   const [newNote, setNewNote] = useState(""),;
   const [isSubmittingNote, setIsSubmittingNote] = useState(false),;
   const [activeTab, setActiveTab] = useState("details"),;
-  ;
   // Load project data;
-  useEffect(() => {;
+  useEffect() => {;
     async function loadProject() {;
       if (!projectId) return,;
-      ;
       setIsLoading(true),;
       const projectData = await getProjectById(projectId),;
-      ;
       if (projectData) {;
         setProject(projectData),;
-        ;
         // Now fetch notes;
         fetchProjectNotes(projectId),;
       } else {;
@@ -90,7 +85,6 @@ function ProjectDetailsContent() {;
     ;
     loadProject(),;
   }, [projectId]),;
-  ;
   const fetchProjectNotes = async (projectId:string) => {;
     try {;
       const { data, error } = await supabase;
@@ -101,20 +95,14 @@ function ProjectDetailsContent() {;
         `);
         .eq("project_id", projectId);
         .order("created_at", { ascending:false }),;
-      ;
       if (error) throw error,;
-      ;
       setNotes(data || []),;
     } catch (err) {;
       console.error("Error fetching project notes:", err),;
-    }
-  },;
-  ;
+    },;
   const handleSubmitNote = async () => {;
     if (!newNote.trim() || !project || !user) return,;
-    ;
     setIsSubmittingNote(true),;
-    ;
     try {;
       const { data, error } = await supabase;
         .from("project_notes");
@@ -123,13 +111,10 @@ function ProjectDetailsContent() {;
           user_id:user.id,;
           content:newNote});
         .select(),;
-      ;
       if (error) throw error,;
-      ;
       // Refresh notes;
       fetchProjectNotes(project.id),;
       setNewNote(""),;
-      ;
       toast({;
         title:"Note added",;
         description:"Your note has been added to the project."}),;
@@ -141,28 +126,21 @@ function ProjectDetailsContent() {;
         variant:"destructive"}),;
     } finally {;
       setIsSubmittingNote(false),;
-    }
-  },;
-  ;
+    },;
   const handleStatusChange = async (newStatus:ProjectStatus) => {;
     if (!project) return,;
-    ;
     const success = await updateProjectStatus(project.id, newStatus),;
-    ;
     if (success) {;
       setProject({;
         ...project,;
         status:newStatus}),;
-      ;
       // If offer was accepted, show a special toast;
-      if (newStatus === "offer_accepted") {;
+      if (newStatus = = "offer_accepted") {;
         toast({;
           title:"Offer Accepted! ",;
           description:"The project is now in progress. Congratulations!"}),;
       }
-    }
   },;
-  ;
   const getStatusBadge = (status:ProjectStatus) => {;
     switch (status) {;
       case "offer_sent":return <Badge variant="outline">Offer Sent</Badge>,;
@@ -178,9 +156,7 @@ function ProjectDetailsContent() {;
         return <Badge variant="destructive">Canceled</Badge>,;
       default:;
         return <Badge variant="outline">{status}</Badge>,;
-    }
-  },;
-  ;
+    },;
   if (isLoading) {;
     return (;
       <div className="container mx-auto py-8">;
@@ -214,18 +190,16 @@ function ProjectDetailsContent() {;
   }
   ;
   // Check if user is either the client or the talent;
-  const isClient = user?.id === project.client_id,;
-  const isTalent = user?.id === project.talent_id,;
-  ;
+  const isClient = user?.id = = project.client_id,;
+  const isTalent = user?.id = = project.talent_id,;
   if (!isClient && !isTalent) {;
     navigate("/unauthorized"),;
     return null,;
   }
   ;
-  const isOfferPending = project.status === "offer_sent",;
+  const isOfferPending = project.status = = "offer_sent",;
   const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status),;
   const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status),;
-  ;
   return (;
     <>;
       <SEO ;
@@ -245,7 +219,6 @@ function ProjectDetailsContent() {;
                 </span>;
               </div>;
             </div>;
-            ;
             {/* Action Buttons Based on Role and Status */}
             <div className="space-x-2">;
               {isTalent && isOfferPending && (;
@@ -272,14 +245,13 @@ function ProjectDetailsContent() {;
                       </AlertDialogFooter>;
                     </AlertDialogContent>;
                   </AlertDialog>;
-                  ;
                   <Button variant="outline" onClick={() => handleStatusChange("changes_requested")}>;
                     <MessageSquare className="mr-2 h-4 w-4" /> Request Changes;
                   </Button>;
                 </>;
               )}
               ;
-              {(isClient || isTalent) && project.status === "in_progress" && (;
+              {(isClient || isTalent) && project.status = = "in_progress" && (;
                 <AlertDialog>;
                   <AlertDialogTrigger asChild>;
                     <Button variant="default">;
@@ -311,7 +283,7 @@ function ProjectDetailsContent() {;
                   </Link>;
                 </Button>;
               )}
-;
+
               {isActiveProject && (;
                 <Button variant="outline" asChild>;
                   <Link to={`/project/${project.id}/room`}>;
@@ -331,7 +303,6 @@ function ProjectDetailsContent() {;
             </div>;
           </div>;
         </div>;
-        ;
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
           <div className="order-2 lg:order-1 lg:col-span-2">;
             <Tabs defaultValue="details" value={activeTab} onValueChange={setActiveTab}>;
@@ -340,11 +311,10 @@ function ProjectDetailsContent() {;
                 <TabsTrigger value="timeline">Timeline</TabsTrigger>;
                 <TabsTrigger value="documents">Documents</TabsTrigger>;
                 <TabsTrigger value="notes">Shared Notes</TabsTrigger>;
-                {project.status === "completed" && (;
+                {project.status = = "completed" && (;
                   <TabsTrigger value="reviews">Reviews</TabsTrigger>;
                 )}
               </TabsList>;
-              ;
               <TabsContent value="details">;
                 <Card>;
                   <CardHeader>;
@@ -361,14 +331,12 @@ function ProjectDetailsContent() {;
                           <p className="whitespace-pre-wrap">{project.scope_summary}</p>;
                         </div>;
                       </div>;
-                      ;
                       <div>;
                         <h3 className="font-semibold mb-2">Payment Terms</h3>;
                         <Badge variant="outline" className="capitalize">;
                           {project.payment_terms} Payment;
                         </Badge>;
                       </div>;
-                      ;
                       <div>;
                         <h3 className="font-semibold mb-2">Job Details</h3>;
                         <div className="bg-muted/30 p-4 rounded-md">;
@@ -379,7 +347,6 @@ function ProjectDetailsContent() {;
                   </CardContent>;
                 </Card>;
               </TabsContent>;
-              ;
               <TabsContent value="timeline">;
                 <Card>;
                   <CardHeader>;
@@ -397,7 +364,6 @@ function ProjectDetailsContent() {;
                           <p>{format(new Date(project.start_date), "PPP")}</p>;
                         </div>;
                       </div>;
-                      ;
                       <div className="flex items-start gap-3 p-3 bg-muted/30 rounded-md">;
                         <Clock className="h-5 w-5 text-primary mt-0.5" />;
                         <div>;
@@ -411,7 +377,6 @@ function ProjectDetailsContent() {;
                   </CardContent>;
                 </Card>;
               </TabsContent>;
-              ;
               <TabsContent value="documents">;
                 <Card>;
                   <CardHeader>;
@@ -450,7 +415,6 @@ function ProjectDetailsContent() {;
                   </CardContent>;
                 </Card>;
               </TabsContent>;
-              ;
               <TabsContent value="notes">;
                 <Card>;
                   <CardHeader>;
@@ -463,7 +427,7 @@ function ProjectDetailsContent() {;
                     <div className="space-y-4">;
                       <div className="space-y-4 max-h-[400px] overflow-y-auto mb-4">;
                         {notes.length > 0 ? (;
-                          notes.map((note) => (;
+                          notes.map(note) => (;
                             <div key={note.id} className="bg-muted/30 p-3 rounded-md">;
                               <div className="flex items-center gap-2 mb-2">;
                                 <Avatar className="h-6 w-6">;
@@ -485,7 +449,7 @@ function ProjectDetailsContent() {;
                               </div>;
                               <p className="text-sm whitespace-pre-wrap">{note.content}</p>;
                             </div>;
-                          ));
+                          );
                         ) :(;
                           <div className="text-center py-8">;
                             <MessageSquare className="h-8 w-8 text-muted-foreground mx-auto mb-2" />;
@@ -495,7 +459,6 @@ function ProjectDetailsContent() {;
                           </div>;
                         )}
                       </div>;
-                      ;
                       {isOfferAccepted && (;
                         <div>;
                           <Textarea;
@@ -516,13 +479,11 @@ function ProjectDetailsContent() {;
                   </CardContent>;
                 </Card>;
               </TabsContent>;
-              ;
               <TabsContent value="reviews">;
                 <ProjectReviewSection project={project} />;
               </TabsContent>;
             </Tabs>;
           </div>;
-          ;
           <div className="order-1 lg:order-2 lg:col-span-1">;
             <Card>;
               <CardHeader>;
@@ -560,7 +521,6 @@ function ProjectDetailsContent() {;
                       )}
                     </div>;
                   </div>;
-                  ;
                   <div className="flex items-start gap-4">;
                     <Avatar className="h-10 w-10">;
                       {project.client_profile?.avatar_url ? (;
@@ -591,7 +551,6 @@ function ProjectDetailsContent() {;
                 </div>;
               </CardContent>;
             </Card>;
-            ;
             {/* Project Status Card */}
             <Card className="mt-6">;
               <CardHeader>;
@@ -603,14 +562,12 @@ function ProjectDetailsContent() {;
                     <span className="text-sm font-medium">Current Status:</span>;
                     <div>{getStatusBadge(project.status)}</div>;
                   </div>;
-                  ;
                   <div className="flex justify-between items-center">;
                     <span className="text-sm font-medium">Creation Date:</span>;
                     <span className="text-sm">;
                       {format(new Date(project.created_at), "PPP")}
                     </span>;
                   </div>;
-                  ;
                   <div className="flex justify-between items-center">;
                     <span className="text-sm font-medium">Start Date:</span>;
                     <span className="text-sm">;
@@ -619,9 +576,8 @@ function ProjectDetailsContent() {;
                   </div>;
                 </div>;
               </CardContent>;
-              ;
               {/* Conditional Footer Based on Status */}
-              {project.status === "changes_requested" && isClient && (;
+              {project.status = = "changes_requested" && isClient && (;
                 <CardFooter className="flex-col items-start gap-2 border-t pt-6">;
                   <p className="text-sm text-amber-600 flex items-center gap-1">;
                     <AlertCircle className="h-4 w-4" /> The talent has requested changes to this offer.;
@@ -636,7 +592,7 @@ function ProjectDetailsContent() {;
                 </CardFooter>;
               )}
               ;
-              {project.status === "offer_sent" && isClient && (;
+              {project.status = = "offer_sent" && isClient && (;
                 <CardFooter className="flex-col items-start gap-2 border-t pt-6">;
                   <p className="text-sm text-muted-foreground">;
                     Waiting for the talent to accept your offer.;
@@ -644,7 +600,7 @@ function ProjectDetailsContent() {;
                 </CardFooter>;
               )}
               ;
-              {project.status === "completed" && (;
+              {project.status = = "completed" && (;
                 <CardFooter className="flex-col items-start gap-2 border-t pt-6">;
                   <p className="text-sm text-green-600 flex items-center gap-1">;
                     <CheckCircle2 className="h-4 w-4" /> This project has been completed.;
@@ -652,7 +608,7 @@ function ProjectDetailsContent() {;
                 </CardFooter>;
               )}
               ;
-              {project.status === "canceled" && (;
+              {project.status = = "canceled" && (;
                 <CardFooter className="flex-col items-start gap-2 border-t pt-6">;
                   <p className="text-sm text-red-600 flex items-center gap-1">;
                     <XCircle className="h-4 w-4" /> This project has been canceled.;
@@ -666,15 +622,14 @@ function ProjectDetailsContent() {;
       <Footer />;
     </>;
   ),;
-}
-;
+
 export default function ProjectDetails() {;
   return (;
     <ProtectedRoute>;
       <ProjectDetailsContent />;
     </ProtectedRoute>;
   ),;
-} import {
+ import {
   Card;
 CardContent;
 CardDescription;
@@ -703,25 +658,25 @@ Layers;
 MessageSquare;
 Video;
 User;
-//useParams may be untyped in this environment, so avoid passing a //type argument and cast the result instead to prevent TS2347 errors. //Load project data if (projectData) {
+/useParams may be untyped in this environment, so avoid passing a //type argument and cast the result instead to prevent TS2347 errors. //Load project data if (projectData) {
   setProject (projectData);
-//Now fetch notes 
-}setIsLoading (false) 
-}loadProject () 
-}, [projectId]);
-.select (`*;
+/Now fetch notes 
+setIsLoading (false) 
+loadProject () 
+, [projectId]);
+select (`*;
 created by profile:profiles!user id (display name, avatar url) `) 
-}
-};
+
+;
 const handleSubmitNote = async () => {
   if (!newNote.trim () || !project || !user) return;
 try {
   if (error) throw error;
-//Refresh notes 
-}finally {
+/Refresh notes 
+finally {
   setIsSubmittingNote (false) 
-}
-};
+
+;
 const handleStatusChange = async (newStatus: ProjectStatus) => {
   if (!project) return;
 const success = await updateProjectStatus (project.id, newStatus);
@@ -729,13 +684,11 @@ if (success) {
   setProject ({
   ...project;
 status: newStatus 
-});
-//If offer was accepted, show a special toast if (newStatus === "offer accepted") {
+);
+/If offer was accepted, show a special toast if (newStatus = = "offer accepted") {
   toast ({
-  
-}
-}
-};
+
+;
 case "offer accepted": return <Badge className="bg-green-100 text-green-800">Offer Accepted</Badge>;
 case "changes requested": return <Badge variant="secondary">Changes Requested</Badge>;
 case "in progress": return <Badge className="bg-blue-100 text-blue-800">In Progress</Badge>;
@@ -743,75 +696,75 @@ case "completed": return <Badge variant="default">Completed</Badge>;
 case "canceled": return <Badge variant="destructive">Canceled</Badge>;
 default: return <Badge variant="outline"> {
   status 
-}</Badge> 
-}
-};
+</Badge> 
+
+;
 <p>Loading project details...</p> </div> </div> </div> <Card> <CardContent className="flex flex-col items-center justify-center py-10" > <AlertCircle className="h-10 w-10 text-muted-foreground mb-4" /> <h2 className="text-xl font-bold mb-2" >Project Not Found</h2> <p className="text-muted-foreground mb-4" > The project you're looking for doesn't exist or you don't have access to it. </p> <Button onClick= {
   () => navigate ("/dashboard") 
-}> Return to Dashboard </Button> </CardContent> </Card> </div>) 
-}//Check if user is either the client or the talent container mx-auto px-4 py-8"> <div className=" mb-6"> <div className=" flex flex-col md:flex-row justify-between md:items-center gap-4 mb-2"> <div> </span> </div> </div> <AlertDialog> <AlertDialogTrigger asChild> <Button variant=" default"> <CheckCircle2 className=" mr-2 h-4 w-4"/> Accept Offer </Button> </AlertDialogTrigger> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Accept Project Offer?</AlertDialogTitle> <AlertDialogDescription> By accepting this offer, you agree to the project terms and timeline. This will initiate the contract and start the project. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Cancel</AlertDialogCancel> <AlertDialogAction onClick= {
+> Return to Dashboard </Button> </CardContent> </Card> </div>) 
+//Check if user is either the client or the talent container mx-auto px-4 py-8"> <div className=" mb-6"> <div className=" flex flex-col md:flex-row justify-between md:items-center gap-4 mb-2"> <div></span> </div> </div> <AlertDialog> <AlertDialogTrigger asChild> <Button variant=" default"> <CheckCircle2 className=" mr-2 h-4 w-4"/> Accept Offer </Button> </AlertDialogTrigger> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Accept Project Offer?</AlertDialogTitle> <AlertDialogDescription> By accepting this offer, you agree to the project terms and timeline. This will initiate the contract and start the project. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Cancel</AlertDialogCancel> <AlertDialogAction onClick= {
   () => handleStatusChange (" offer accepted") 
-}> Accept Offer </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </Button> </>) 
-}<AlertDialogTrigger asChild> <Button variant=" default"> <CheckCircle2 className=" mr-2 h-4 w-4"/> Mark as Completed </Button> </AlertDialogTrigger> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Mark Project as Completed?</AlertDialogTitle> <AlertDialogDescription> This will finalize the project and mark it as complete. Make sure all deliverables have been provided and approved. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Cancel</AlertDialogCancel> <AlertDialogAction onClick= {
+> Accept Offer </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </Button> </>) 
+<AlertDialogTrigger asChild> <Button variant=" default"> <CheckCircle2 className=" mr-2 h-4 w-4"/> Mark as Completed </Button> </AlertDialogTrigger> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Mark Project as Completed?</AlertDialogTitle> <AlertDialogDescription> This will finalize the project and mark it as complete. Make sure all deliverables have been provided and approved. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Cancel</AlertDialogCancel> <AlertDialogAction onClick= {
   () => handleStatusChange (" completed") 
-}> Mark as Completed </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog>) 
-}<Link to= {
+> Mark as Completed </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog>) 
+<Link to= {
   `/project/$ {
   project.id 
-}/milestones` 
-}> <Layers className=" mr-2 h-4 w-4"/> Milestones </Link> </Button>) 
-}<Link to= {
+/milestones` 
+> <Layers className=" mr-2 h-4 w-4"/> Milestones </Link> </Button>) 
+<Link to= {
   `/project/$ {
   project.id 
-}/room` 
-}> <Video className=" mr-2 h-4 w-4"/> Project Room </Link> </Button>) 
-}> <MessageSquare className=" mr-2 h-4 w-4"/> Message </Button>) 
-}</div> </div> </div>) 
-}</TabsList> <TabsContent value=" details"> <Card> <CardHeader> <CardTitle>Project Scope</CardTitle> <CardDescription> Project details and expectations </CardDescription> </CardHeader> <CardContent> <div className=" space-y-4"> <div> </div> </div> <div> </Badge> </div> <div> </div> </div> </div> </CardContent> </Card> </TabsContent> <TabsContent value=" timeline"> <Card> <CardHeader> <CardTitle>Project Timeline</CardTitle> <CardDescription> Key dates and milestones </CardDescription> </CardHeader> <CardContent> <div className=" space-y-4"> <div className=" flex items-start gap-3 p-3 bg-muted/30 rounded-md"> <Calendar className=" h-5 w-5 text-primary mt-0.5"/> <div> </div> </div> <div className=" flex items-start gap-3 p-3 bg-muted/30 rounded-md"> <Clock className=" h-5 w-5 text-primary mt-0.5"/> <div> </div> </div> </div> </div> </CardContent> </Card> </TabsContent> <TabsContent value=" documents"> <Card> <CardHeader> <CardTitle>Project Documents</CardTitle> <CardDescription> Agreements and relevant files </CardDescription> </CardHeader> <CardContent> <div> <h3 className=" font-semibold">Project Agreement</h3> <p className=" text-sm text-muted-foreground"> Uploaded when project was created </p> </div> </div> <Button variant=" outline"size=" sm"asChild> <a href= {
+/room` 
+> <Video className=" mr-2 h-4 w-4"/> Project Room </Link> </Button>) 
+> <MessageSquare className=" mr-2 h-4 w-4"/> Message </Button>) 
+</div> </div> </div>) 
+</TabsList> <TabsContent value=" details"> <Card> <CardHeader> <CardTitle>Project Scope</CardTitle> <CardDescription> Project details and expectations </CardDescription> </CardHeader> <CardContent> <div className=" space-y-4"> <div></div> </div> <div></Badge> </div> <div></div> </div> </div> </CardContent> </Card> </TabsContent> <TabsContent value=" timeline"> <Card> <CardHeader> <CardTitle>Project Timeline</CardTitle> <CardDescription> Key dates and milestones </CardDescription> </CardHeader> <CardContent> <div className=" space-y-4"> <div className=" flex items-start gap-3 p-3 bg-muted/30 rounded-md"> <Calendar className=" h-5 w-5 text-primary mt-0.5"/> <div></div> </div> <div className=" flex items-start gap-3 p-3 bg-muted/30 rounded-md"> <Clock className=" h-5 w-5 text-primary mt-0.5"/> <div></div> </div> </div> </div> </CardContent> </Card> </TabsContent> <TabsContent value=" documents"> <Card> <CardHeader> <CardTitle>Project Documents</CardTitle> <CardDescription> Agreements and relevant files </CardDescription> </CardHeader> <CardContent> <div> <h3 className=" font-semibold">Project Agreement</h3> <p className=" text-sm text-muted-foreground"> Uploaded when project was created </p> </div> </div> <Button variant=" outline"size=" sm"asChild> <a href= {
   project.agreement url 
-}target=" blank"rel=" noopener noreferrer"> View </Link> </Button> </div>) : (<div className=" text-center py-8"> <FileText className=" h-10 w-10 text-muted-foreground mx-auto mb-2"/> <h3 className=" font-semibold">No Documents Yet</h3> <p className=" text-sm text-muted-foreground"> No documents have been uploaded to this project. </p> </div>) 
-}</CardContent> </Card> </TabsContent> <TabsContent value=" notes"> <Card> <CardHeader> <CardTitle>Project Notes</CardTitle> <CardDescription> Shared notes and updates </CardDescription> </CardHeader> <CardContent> <img src= {
+target=" blank"rel=" noopener noreferrer"> View </Link> </Button> </div>) : (<div className=" text-center py-8"> <FileText className=" h-10 w-10 text-muted-foreground mx-auto mb-2"/> <h3 className=" font-semibold">No Documents Yet</h3> <p className=" text-sm text-muted-foreground"> No documents have been uploaded to this project. </p> </div>) 
+</CardContent> </Card> </TabsContent> <TabsContent value=" notes"> <Card> <CardHeader> <CardTitle>Project Notes</CardTitle> <CardDescription> Shared notes and updates </CardDescription> </CardHeader> <CardContent> <img src= {
   note.created by profile.avatar url 
-}alt= {
+alt= {
   note.created by profile.display name 
-}/>) : (<User className=" h-4 w-4"/>) 
-}</Avatar> </div>) ) ) : (<div className=" text-center py-8"> <MessageSquare className=" h-8 w-8 text-muted-foreground mx-auto mb-2"/> <p className=" text-muted-foreground"> No notes yet. Add the first note to this project. </p> </div>) 
-}</div> {
+/>) : (<User className=" h-4 w-4"/>) 
+</Avatar> </div>) ) : (<div className=" text-center py-8"> <MessageSquare className=" h-8 w-8 text-muted-foreground mx-auto mb-2"/> <p className=" text-muted-foreground"> No notes yet. Add the first note to this project. </p> </div>) 
+</div> {
   isOfferAccepted && (<div> <Textarea placeholder=" Add a note or update to the project..."value= {
   newNote 
-}/> <Button onClick= {
+/> <Button onClick= {
   handleSubmitNote 
-}disabled= {
+disabled= {
   !newNote.trim () || isSubmittingNote 
-}> </Button> </div>) 
-}</div> </CardContent> </Card> </TabsContent> </TabsContent> </Tabs> </div> <div className=" order-1 lg:order-2 lg:col-span-1"> <Card> <CardHeader> <CardTitle>Project Participants</CardTitle> </CardHeader> <CardContent> <img src= {
+> </Button> </div>) 
+</div> </CardContent> </Card> </TabsContent> </TabsContent> </Tabs> </div> <div className=" order-1 lg:order-2 lg:col-span-1"> <Card> <CardHeader> <CardTitle>Project Participants</CardTitle> </CardHeader> <CardContent> <img src= {
   project.talent profile.profile picture url 
-}alt= {
+alt= {
   project.talent profile.full name 
-}/>) : (<User className=" h-6 w-6"/>) 
-}</Avatar> <div> onClick= {
+/>) : (<User className=" h-6 w-6"/>) 
+</Avatar> <div> onClick= {
   () => navigate (`/messages?talentId=$ {
   project.talent id 
-}`) 
-}> <MessageSquare className=" mr-1 h-3 w-3"/> Message </Button>) 
-}</div> </div> <img src= {
+`) 
+> <MessageSquare className=" mr-1 h-3 w-3"/> Message </Button>) 
+</div> </div> <img src= {
   project.client profile.avatar url 
-}alt= {
+alt= {
   project.client profile.display name 
-}/>) : (<User className=" h-6 w-6"/>) 
-}</Avatar> <div> onClick= {
+/>) : (<User className=" h-6 w-6"/>) 
+</Avatar> <div> onClick= {
   () => navigate (`/messages?clientId=$ {
   project.client id 
-}`) 
-}> <MessageSquare className=" mr-1 h-3 w-3"/> Message </Button>) 
-}</div> </div> </div> </CardContent> </Card> <CardHeader> <CardTitle>Project Status</CardTitle> </CardHeader> <CardContent> </span> </div> </div> </CardContent> </p> <Button variant=" outline"onClick= {
+`) 
+> <MessageSquare className=" mr-1 h-3 w-3"/> Message </Button>) 
+</div> </div> </div> </CardContent> </Card> <CardHeader> <CardTitle>Project Status</CardTitle> </CardHeader> <CardContent></span> </div> </div> </CardContent> </p> <Button variant=" outline"onClick= {
   () => navigate (`/messages?talentId=$ {
   project.talent id 
-}`) 
-}className=" w-full"> <MessageSquare className=" mr-2 h-4 w-4" /> Discuss Changes </Button> </CardFooter>) 
-}Waiting for the talent to accept your offer. </p> </CardFooter>) 
-}</p> </CardFooter>) 
-}</p> </CardFooter>) 
-}</Card> </div> </div> </main> <Footer /> </>) 
-}export default function ProjectDetails () {
+`) 
+className=" w-full"> <MessageSquare className=" mr-2 h-4 w-4" /> Discuss Changes </Button> </CardFooter>) 
+Waiting for the talent to accept your offer. </p> </CardFooter>) 
+</p> </CardFooter>) 
+</p> </CardFooter>) 
+</Card> </div> </div> </main> <Footer /> </>) 
+export default function ProjectDetails () {
   return (<ProtectedRoute> <ProjectDetailsContent /> </ProtectedRoute> 

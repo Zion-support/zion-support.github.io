@@ -4,7 +4,6 @@ import Footer from './Footer';
 
 interface LayoutProps {
   children: ReactNode;
-}
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
@@ -13,6 +12,5 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <main className="flex-1">{children}</main>
       <Footer />    </div>
   );
-};
 
 export default Layout;

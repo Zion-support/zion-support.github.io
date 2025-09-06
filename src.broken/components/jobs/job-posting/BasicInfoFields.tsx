@@ -6,5 +6,3 @@ export function BasicInfoFields() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

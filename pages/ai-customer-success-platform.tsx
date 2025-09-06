@@ -23,9 +23,9 @@ export default function AICustomerSuccessPlatform() {
 			canonical="https: //ziontechgroup.com/ai-customer-success-platform"
 		/>
 	)
-}
+
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',
-;
+
 export default /**
  * AICustomerSuccessPlatform - Function description
  */
@@ -50,4 +50,3 @@ return (
     industries={["SaaS", "Fintech", "Media", "Ecommerce"]}
     canonical="https: //ziontechgroup.com / ai - customer - success - platform";
   />);
-}

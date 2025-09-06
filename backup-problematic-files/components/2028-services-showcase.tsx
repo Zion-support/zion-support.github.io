@@ -7,7 +7,7 @@ import {;
   DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles,;
   Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale,;
   Building, Factory, Camera, Video, Music, Gamepad2;
-} from 'lucide-react',;
+ from 'lucide-react',;
 import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028',;
 import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028',;
 import { futuristic2028Services } from '../data/2028-futuristic-innovations',;
@@ -17,7 +17,7 @@ const contactInfo = {;
   email: 'kleber@ziontechgroup.com',;
   address: '364 E Main St STE 1008 Middletown DE 19709',;
   website: 'https://ziontechgroup.com';
-},;
+,;
 const serviceCategories = [;
   {;
     title: ' 2028 Futuristic Innovations',;
@@ -31,37 +31,37 @@ const serviceCategories = [;
     description: 'Intelligent urban solutions',;
     icon: Building,;
     color: 'from-blue-600 to-cyan-600',;
-    services: emergingTech2028Services.filter(s => s.category.includes('Smart City') || s.category.includes('Infrastructure')).slice(0, 4);
+    services: emergingTech2028Services.filter(s => s.category.includes('Smart City') || s.category.includes('Infrastructure').slice(0, 4);
   },;
   {;
     title: ' Quantum & Advanced Tech',;
     description: 'Quantum computing and beyond',;
     icon: Atom,;
     color: 'from-indigo-600 to-blue-600',;
-    services: futuristic2028Services.filter(s => s.category.includes('Quantum')).slice(0, 4);
+    services: futuristic2028Services.filter(s => s.category.includes('Quantum').slice(0, 4);
   },;
   {;
     title: ' AI & Machine Learning',;
     description: 'Next-generation AI solutions',;
     icon: Brain,;
     color: 'from-emerald-600 to-teal-600',;
-    services: emergingTech2028Services.filter(s => s.category.includes('AI')).slice(0, 4);
+    services: emergingTech2028Services.filter(s => s.category.includes('AI').slice(0, 4);
   },;
   {;
     title: ' Blockchain & Web3',;
     description: 'Decentralized solutions',;
     icon: Globe,;
     color: 'from-orange-600 to-red-600',;
-    services: emergingTech2028Services.filter(s => s.category.includes('Blockchain')).slice(0, 4);
+    services: emergingTech2028Services.filter(s => s.category.includes('Blockchain').slice(0, 4);
   },;
   {;
     title: ' Autonomous & Mobility',;
     description: 'Self-driving and mobility solutions',;
     icon: Car,;
     color: 'from-red-600 to-pink-600',;
-    services: futuristic2028Services.filter(s => s.category.includes('Autonomous')).slice(0, 4);
+    services: futuristic2028Services.filter(s => s.category.includes('Autonomous').slice(0, 4);
   }
-],;
+,;
 export default function ServicesShowcase2028() {;
   return (;
     <>;
@@ -86,9 +86,9 @@ export default function ServicesShowcase2028() {;
         </div>;
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
           <motion.div;
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
             className="space-y-8"
           >
             <div className="inline-flex items-center space-x-2 bg-purple-900/30 border border-purple-500/30 rounded-full px-6 py-3 text-purple-300 text-sm">
@@ -161,13 +161,13 @@ export default function ServicesShowcase2028() {;
             </p>;
           </div>;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {serviceCategories.map((category, index) => (;
+            {serviceCategories.map(category, index) => (;
               <motion.div;
                 key={category.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, y: 30 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.6, delay: index * 0.1 }
+                viewport={ once: true }
                 className="group relative";
               >;
                 <div className="relative p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl hover:border-purple-500/60 transition-all duration-300 hover:transform hover:scale-105">;
@@ -179,12 +179,12 @@ export default function ServicesShowcase2028() {;
                     <h3 className="text-2xl font-bold text-white mb-3">{category.title}</h3>;
                     <p className="text-purple-300 mb-6">{category.description}</p>;
                     <div className="space-y-3 mb-6">;
-                      {category.services.slice(0, 3).map((service) => (;
+                      {category.services.slice(0, 3).map(service) => (;
                         <div key={service.id} className="flex items-center space-x-3">;
                           <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />;
                           <span className="text-purple-200 text-sm">{service.name}</span>;
                         </div>;
-                      ))}
+                      )}
                     </div>;
                     <Link;
                       href={`/services#${category.title.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}
@@ -196,7 +196,7 @@ export default function ServicesShowcase2028() {;
                   </div>
                 </div>
               </motion.div>
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
@@ -212,13 +212,13 @@ export default function ServicesShowcase2028() {;
             </p>;
           </div>;
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
-            {futuristic2028Services.slice(0, 6).map((service, index) => (;
+            {futuristic2028Services.slice(0, 6).map(service, index) => (;
               <motion.div;
                 key={service.id}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, x: index % 2 = = 0 ? -30 : 30 }
+                whileInView={ opacity: 1, x: 0 }
+                transition={ duration: 0.6, delay: index * 0.1 }
+                viewport={ once: true }
                 className="group relative";
               >;
                 <div className="relative p-8 bg-black/40 backdrop-blur-sm border border-purple-500/30 rounded-2xl hover:border-purple-500/60 transition-all duration-300 hover:transform hover:scale-105">;
@@ -261,7 +261,7 @@ export default function ServicesShowcase2028() {;
                   </div>
                 </div>
               </motion.div>
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
@@ -278,10 +278,10 @@ export default function ServicesShowcase2028() {;
           </div>;
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
             <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.6 }
+              viewport={ once: true }
               className="text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl";
             >;
               <TrendingUp className="w-16 h-16 text-green-400 mx-auto mb-6" />;
@@ -294,10 +294,10 @@ export default function ServicesShowcase2028() {;
               <div className="text-purple-300">Average Annual Growth</div>;
             </motion.div>;
             <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.6, delay: 0.2 }
+              viewport={ once: true }
               className="text-center p-8 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border border-blue-500/30 rounded-2xl";
             >;
               <DollarSign className="w-16 h-16 text-blue-400 mx-auto mb-6" />;
@@ -310,10 +310,10 @@ export default function ServicesShowcase2028() {;
               <div className="text-blue-300">Total Addressable Market</div>;
             </motion.div>;
             <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.6, delay: 0.4 }
+              viewport={ once: true }
               className="text-center p-8 bg-gradient-to-br from-pink-900/20 to-rose-900/20 border border-pink-500/30 rounded-2xl";
             >;
               <Shield className="w-16 h-16 text-pink-400 mx-auto mb-6" />;
@@ -332,10 +332,10 @@ export default function ServicesShowcase2028() {;
       <section className="py-20 bg-gradient-to-r from-purple-900/30 to-blue-900/30">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
           <motion.div;
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
             className="space-y-8"
           >
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
@@ -384,4 +384,3 @@ export default function ServicesShowcase2028() {;
       <UltraFuturisticFooter2028 />
     </>
   )
-}

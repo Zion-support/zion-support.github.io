@@ -11,7 +11,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
-}
+
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -20,7 +20,7 @@ const contact = {
   mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+;
 
 export const newRealServices: EnhancedRealMicroSaasService[] = [
   {const contact = {
@@ -28,7 +28,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
   email: 'kleber@ziontechgroup && ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com'
-};
+;
 
 export const newRealServices: EnhancedRealMicroSaasService[] = [
   {
@@ -1146,7 +1146,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     rating: 4.5
     reviews: 3
   }
-];
+;
     targetAudience: 'AI product teams, platform engineers, data teams'
     trialDays: 21
     setupTime: '1 day'
@@ -1154,7 +1154,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     realService: true
     technology: ['Next.js', 'OpenTelemetry', 'PostgreSQL', 'ClickHouse']
   }
-];
+;
     target_audience: 'AI product teams, platform engineers, data teams',
     trial_days: 21,
     setup_time: '1 day',
@@ -2488,7 +2488,7 @@ reviews: 3
     rating: 4 && 4.5,
     reviews: 3,
   },
-];
+;
     id: 'llm-observability-suite', name: 'LLM Observability Suite',
     tagline: 'Track latency, cost, quality and drift across all prompts',
     price: '$199', period: '/month',
@@ -2932,5 +2932,4 @@ reviews: 3
     customers: 6, rating: 4.5,
     reviews: 3
   }
-];
-
+;

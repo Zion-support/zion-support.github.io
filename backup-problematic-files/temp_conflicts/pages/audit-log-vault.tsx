@@ -4,7 +4,7 @@ import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackgroun
 import { Button } from '../components/ui/Button',;
 import Card from '../components/ui/Card',;
 import { FileText, Check, Phone, Mail, MapPin, ExternalLink, ShieldCheck } from 'lucide-react',;
-;
+
 export default function AuditLogVaultPage() {;
   const contactInfo = {;
     mobile:'+1 302 464 0950',;
@@ -12,13 +12,13 @@ export default function AuditLogVaultPage() {;
     address:'364 E Main St STE 1008 Middletown DE 19709',;
     website:'https://ziontechgroup.com';
   },;
-;
+
   const features = [;
     'Append-only, tamper-evident storageFlexible retention and legal holds',;
     'Cryptographic digests and attestationsFine-grained search and export bundles',;
     'Chain-of-custody and access reviewsAlerts for risky access patterns';
   ],;
-;
+
   return (;
     <UltraFuturisticBackground variant="quantum" intensity={1.5}>;
       <Head>;
@@ -26,7 +26,7 @@ export default function AuditLogVaultPage() {;
         <meta name="description" content="Immutable, indexed, long-term audit trails for compliance and forensics with search, exports and cryptographic attestations." />;
         <link rel="canonical" href="https://ziontechgroup.com/audit-log-vault" />;
       </Head>;
-;
+
       <div className="min-h-screen pt-24 pb-16 px-4">;
         <div className="max-w-6xl mx-auto">;
           <div className="text-center mb-10">;
@@ -35,16 +35,16 @@ export default function AuditLogVaultPage() {;
             </h1>;
             <p className="mt-4 text-xl text-gray-300 max-w-3xl mx-auto">Compliance-first audit log storage and search with WORM options, retention, attestations and exports.</p>;
           </div>;
-;
+
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">;
             <Card className="lg:col-span-2 p-6 bg-black/40 border border-gray-700/50">;
               <h2 className="text-2xl font-semibold text-white mb-4">Overview</h2>;
               <p className="text-gray-300 mb-6">Centralize audit logs from apps and platforms into an immutable, indexed store with strong retention controls and cryptographic integrity, ready for SOC 2, HIPAA and ISO reviews.</p>;
               <h3 className="text-lg font-semibold text-white mb-3">Key Features</h3>;
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-gray-300">;
-                {features.map((f) => (;
+                {features.map(f) => (;
                   <li key={f} className="flex items-start gap-2"><Check className="w-4 h-4 text-emerald-400 mt-0.5" /> <span>{f}</span></li>;
-                ))}
+                )}
               </ul>;
             </Card>;
             <Card className="p-6 bg-black/40 border border-gray-700/50">;
@@ -66,5 +66,3 @@ export default function AuditLogVaultPage() {;
       </div>;
     </UltraFuturisticBackground>;
   ),;
-}
-;

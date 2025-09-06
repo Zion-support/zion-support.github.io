@@ -6,5 +6,3 @@ export function ITSupportPage() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

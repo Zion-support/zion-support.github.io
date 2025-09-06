@@ -2,7 +2,6 @@ import React from 'react';
 
 interface TutorialsProps {
   className?: string;
-}
 
 const Tutorials: React.FC<TutorialsProps> = ({ className }) => {
   return (
@@ -11,6 +10,5 @@ const Tutorials: React.FC<TutorialsProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default Tutorials;

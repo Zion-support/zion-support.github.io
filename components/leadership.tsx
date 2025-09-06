@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React from 'react';
 import Head from 'next/head';
 export default function LeadershipPage() {
@@ -126,7 +126,7 @@ function LeadershipPage() {
 			</div>
 		</div>
 	)
-}
+
     </div>);	return (
   <div className="min - h-screen pt - 24 pb - 20 px - 4 sm:px - 6 lg:px - 8">;
   <Head>;
@@ -150,4 +150,3 @@ function LeadershipPage() {
     <div className="mt - 10 text - slate - 300">Contact: <a className="text - cyan - 400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a>  <a className="text - cyan - 400" href="tel:+13024640950">+1 302 464 0950</a></div>;
   </div>;
   </div>),
-}

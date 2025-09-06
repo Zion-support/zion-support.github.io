@@ -11,13 +11,12 @@ import { AppPlatform } from "./MetadataManager";
 import { toast } from "sonner";
 interface ScreenshotManagerProps {;
   platform: AppPlatform;
-}
 
 type Screenshot = {
   id: string
   url: string
   file: File
-}
+
 export const ScreenshotManager: React.FC < ScreenshotManagerProps> = ({ platform }) => {
   const [screenshots, set_screenshots] = useState < Screenshot[]>([]);
   const [is_dragging, setIsDragging] = useState (false);
@@ -26,20 +25,19 @@ export const ScreenshotManager: React.FC < ScreenshotManagerProps> = ({ platform
     // Check condition
 if ( {) {
   $2
-}
-      add_screenshots (Array.from (e.target.files));
+
+      add_screenshots (Array.from (e.target.files);
     }
-  }
   const addScreenshots = (files: File[],) => {
     // Filter for image files only
-    const imageFiles = files.filter(file => file.type.startsWith('image/'))
-    const maxScreenshots = platform === "ios" ? 10 : 8
+    const imageFiles = files.filter(file => file.type.startsWith('image/')
+    const maxScreenshots = platform = = "ios" ? 10 : 8
     const availableSlots = maxScreenshots - screenshots.length
-};    // Limit the number of screenshots
-    const maxScreenshots = platform === "ios" ? 10 : 8
+;    // Limit the number of screenshots
+    const maxScreenshots = platform = = "ios" ? 10 : 8
     const availableSlots = maxScreenshots - screenshots.length
     if (availableSlots <= 0) {
-      toast.error(`Maximum ${maxScreenshots} screenshots allowed for ${platform === "ios" ? "iOS" : "Android"}`)
+      toast.error(`Maximum ${maxScreenshots} screenshots allowed for ${platform = = "ios" ? "iOS" : "Android"}`)
       return
     }
     const filesToAdd = imageFiles.slice(0, availableSlots)
@@ -47,17 +45,16 @@ if ( {) {
       id: Math.random().toString(36).substring(2, 9)
       url: URL.createObjectURL(file)
       file
-    }))
+    })
     setScreenshots(prev => [...prev, ...newScreenshots])
     if (filesToAdd.length < imageFiles.length) {
       toast.warning(`Only added ${filesToAdd.length} screenshots. Maximum is ${maxScreenshots}.`)
     }
-  }
   const removeScreenshot = (id: string,) => {
     setScreenshots(prev => {
-      const filtered = prev.filter(screenshot => screenshot.id !== id)
+      const filtered = prev.filter(screenshot => screenshot.id != id)
       // Revoke object URL to avoid memory leaks
-      const removed = prev.find(screenshot => screenshot.id === id)
+      const removed = prev.find(screenshot => screenshot.id = = id)
       if (removed) {
         URL.revokeObjectURL(removed.url)
       }
@@ -75,9 +72,8 @@ if ( {) {
     e.preventDefault()
     setIsDragging(false)
     if (e.dataTransfer.files) {
-      addScreenshots(Array.from(e.dataTransfer.files))
+      addScreenshots(Array.from(e.dataTransfer.files)
     }
-  }
   return (
     <Card className="bg-zion-blue border-zion-purple/30">
       <CardHeader>
@@ -113,13 +109,13 @@ if ( {) {
           </Button>
         </div>
         <div className="text-xs text-gray-300 mb-4">
-          {platform === "ios"
+          {platform = = "ios"
             ? "Recommended size: 1290x2796 pixels for iPhone. Max 10 screenshots."
             : "Vary by device. Include phone and tablet screenshots. Max 8 per device type."
           }
         </div>
         <div className="grid grid-cols-2 gap-3">
-          {screenshots.map((screenshot,) => (
+          {screenshots.map(screenshot,) => (
             <div key={screenshot.id} className="relative group">
               <img
                 src = {screenshot && screenshot.url,}
@@ -135,26 +131,25 @@ if ( {) {
                 <Trash2 className="h-3 w-3" />;
               </button>;
             </div>;
-          ))}
+          )}
         </div>
       </CardContent>
     </Card>
   )
-}
 
   const add_screenshots = (files: File[], ) =>: any {
     // Filter for image files only;
-    const image_files = files.filter (file => file.type.starts_with ('image/'));
-    const max_screenshots = platform === "ios" ? 10 : 8;
+    const image_files = files.filter (file => file.type.starts_with ('image/');
+    const max_screenshots = platform = = "ios" ? 10 : 8;
     const available_slots = max_screenshots - screenshots.length;
-}    // Limit the number of screenshots;
-    const max_screenshots = platform === "ios" ? 10 : 8,
+    // Limit the number of screenshots;
+    const max_screenshots = platform = = "ios" ? 10 : 8,
     const available_slots = max_screenshots - screenshots.length,
     // Check condition
 if ( {) {
   $2
-}
-      toast.error (`Maximum ${max_screenshots} screenshots allowed for ${platform === "ios" ? "iOS" : "Android"}`),
+
+      toast.error (`Maximum ${max_screenshots} screenshots allowed for ${platform = = "ios" ? "iOS" : "Android"}`),
       return;
     }
     const filesToAdd = image_files.slice (0, available_slots),
@@ -162,24 +157,23 @@ if ( {) {
       id: Math.random ().to_string (36).substring (2, 9),
       url: URL.createObjectURL (file),
       file;
-    })),
+    }),
     set_screenshots (prev => [...prev, ...new_screenshots]),
     // Check condition
 if ( {) {
   $2
-}
+
       toast.warning (`Only added ${filesToAdd.length} screenshots. Maximum is ${max_screenshots}.`);
-    }
-  },
+    },
   const remove_screenshot = (id: string, ) =>: any {
     set_screenshots (prev => {
-      const filtered = prev.filter (screenshot => screenshot.id !== id),
+      const filtered = prev.filter (screenshot => screenshot.id != id),
       // Revoke object URL to avoid memory leaks;
-      const removed = prev.find (screenshot => screenshot.id === id),
+      const removed = prev.find (screenshot => screenshot.id = = id),
       // Check condition
 if ( {) {
   $2
-}
+
         URL.revokeObjectURL (removed.url);
       }
       return filtered;
@@ -198,10 +192,9 @@ if ( {) {
     // Check condition
 if ( {) {
   $2
-}
-      add_screenshots (Array.from (e.data_transfer.files));
-    }
-  },
+
+      add_screenshots (Array.from (e.data_transfer.files);
+    },
   return (
     <Card className="bg - zion - blue border - zion - purple / 30">;
       <CardHeader>;
@@ -238,13 +231,13 @@ if ( {) {
           </Button>;
         </div>;
         <div className="text - xs text - gray - 300 mb - 4">;
-          {platform === "ios";
+          {platform = = "ios";
             ? "Recommended size: 1290x2796 pixels for i_phone. Max 10 screenshots.";
             : "Vary by device. Include phone and tablet screenshots. Max 8 per device type.";
           }
         </div>;
         <div className="grid grid - cols - 2 gap - 3">;
-          {screenshots.map ((screenshot, ) => (
+          {screenshots.map (screenshot, ) => (
             <div key={screenshot.id} className="relative group">;
               <img;
                 src = {screenshot.url, }
@@ -259,9 +252,8 @@ if ( {) {
               >;
                 <Trash2 className="h - 3 w - 3" />;
               </button>;
-            </div>))}
+            </div>)}
         </div>;
       </CardContent>;
     </Card>);
-},
-;
+,

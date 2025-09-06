@@ -8,7 +8,6 @@ export type EmptyStateProps = {
   icon?: React.ReactNode;
   primaryAction?: { label: string; href: string };
   secondaryAction?: { label: string; href: string };
-};
 
 export default function EmptyState({
   title,
@@ -16,7 +15,7 @@ export default function EmptyState({
   icon,
   primaryAction,
   secondaryAction,
-}: EmptyStateProps) {
+: EmptyStateProps) {
   return (
     <div className="w-full border border-dashed border-gray-300 dark:border-gray-700 rounded-lg p-6 text-center flex flex-col items-center gap-3">
       <div className="text-3xl opacity-70">{icon ?? ""}</div>
@@ -44,4 +43,3 @@ export default function EmptyState({
       )}
     </div>
   );
-}

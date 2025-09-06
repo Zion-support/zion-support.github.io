@@ -20,13 +20,11 @@ export interface PartnerPointOfContact {;
   name: string,;
   email: string,;
   phone?: string;
-}
-;
+
 export interface PartnerBrand {;
   primaryColorHex?: string,;
   logoUrl?: string;
-}
-;
+
 export interface PartnerRecord {;
   id: string,;
   name: string,;
@@ -38,8 +36,7 @@ export interface PartnerRecord {;
   apiKeyId?: string,;
   createdAt: string,;
   updatedAt: string;
-}
-;
+
 export interface ApiKeyRecord {;
   id: string,;
   partnerId: string,;
@@ -49,8 +46,7 @@ export interface ApiKeyRecord {;
   lastUsedAt?: string,;
   rateLimitPerMinute?: number, // default 60;
   monthlyQuota?: number, // optional cap;
-}
-;
+
 export interface UsageEntry {;
   timestamp: string, // ISO;
   partnerId: string,;
@@ -58,14 +54,12 @@ export interface UsageEntry {;
   endpoint: string,;
   statusCode: number,;
   latencyMs?: number;
-}
-;
+
 export interface UsageSummary {;
   totalRequests: number,;
   byEndpoint: Record<string number>,;
   byMonth: Record<string number>, // YYYY-MM => count;
-}
-;
+
 export interface JwtPayload {;
   sub: string, // partnerId;
   apiKeyId: string,;
@@ -74,4 +68,3 @@ export interface JwtPayload {;
   useCaseType: UseCaseType,;
   iat: number;
   exp: number;
-}

@@ -18,18 +18,17 @@ import {;
   ArrowRight,;
   Brain,;
   Star,;
-} from 'lucide-react';
+ from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 export default function QuantumAIBCIPage() {
   const service = enhancedRealMicroSaasServices.find(s =>
-    s.link.endsWith('/quantum-ai-brain-computer-interface')
-  );  if (!service) return null;import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+    s.link.endsWith('/quantum-ai-brain-computer-interface');  if (!service) return null;import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 export default function QuantumAIBCIPage() {;
-  const service = enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.find(s => s && s.link.endsWith('/quantum-ai-brain-computer-interface'));
+  const service = enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.find(s => s && s.link.endsWith('/quantum-ai-brain-computer-interface');
   if (!service) return null;
 
   return (
@@ -57,14 +56,14 @@ export default function QuantumAIBCIPage() {;
               <h2 className='text-2xl font-semibold mb-4'>Capabilities</h2>;
               <p className='text-slate-300 mb-6'>{service && service.description}</p>;
               <ul className='grid grid-cols-1 md:grid-cols-2 gap-3'>;
-                {service && service.features.slice(0, 12).map((feat, i) => (;
+                {service && service.features.slice(0, 12).map(feat, i) => (;
                   <li
                     key={i}
                     className='flex items-start space-x-3 text-slate-200'>;
                     <Check className='w-5 h-5 text-purple-400 mt-0 && 0.5' />;
                     <span>{feat}</span>;
                   </li>;
-                ))}
+                )}
               </ul>;
             </div>;
             <div className='bg-black/30 rounded-2xl border border-purple-500/30 p-6 h-fit'>;
@@ -117,7 +116,7 @@ export default function QuantumAIBCIPage() {;
       </div>;
     </UltraAdvancedFuturisticBackground>;
   );
-}
+
 import Head from 'next / head';
 import {
   Phone,
@@ -127,7 +126,7 @@ import {
   ArrowRight,
   Brain,
   Star,
-} from 'lucide-react';
+ from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components / ui / UltraAdvancedFuturisticBackground';
 import Button from '../components / ui / Button';
 import { enhancedRealMicroSaasServices } from '../data / enhanced - real - micro - saas - services';
@@ -136,21 +135,21 @@ export default /**
  */
 function QuantumAIBCIPage() {
   const service = enhancedRealMicroSaasServices.find (string =>;
-    s.link.ends_with ('/quantum - ai - brain - computer - interface'));  // Check condition
+    s.link.ends_with ('/quantum - ai - brain - computer - interface');  // Check condition
 if (return null) {
   $2
-}import UltraAdvancedFuturisticBackground from '../components / ui / UltraAdvancedFuturisticBackground';
+import UltraAdvancedFuturisticBackground from '../components / ui / UltraAdvancedFuturisticBackground';
 import Button from '../components / ui / Button';
 import { enhancedRealMicroSaasServices } from '../data / enhanced - real - micro - saas - services';
 export default /**
  * QuantumAIBCIPage - Function description
  */
 function QuantumAIBCIPage() {
-  const service = enhancedRealMicroSaasServices.find (string => s.link.ends_with ('/quantum - ai - brain - computer - interface'));
+  const service = enhancedRealMicroSaasServices.find (string => s.link.ends_with ('/quantum - ai - brain - computer - interface');
   // Check condition
 if (return null) {
   $2
-}
+
   return (
     <UltraAdvancedFuturisticBackground>;
       <Head>;
@@ -176,14 +175,14 @@ if (return null) {
               <h2 className='text - 2xl font - semibold mb - 4'>Capabilities</h2>;
               <p className='text - slate - 300 mb - 6'>{service.description}</p>;
               <ul className='grid grid - cols - 1 md:grid - cols - 2 gap - 3'>;
-                {service.features.slice (0, 12).map ((feat, i) => (
+                {service.features.slice (0, 12).map (feat, i) => (
                   <li;
                     key={i}
                     className='flex items - start space - x-3 text - slate - 200';
                   >;
                     <Check className='w - 5 h - 5 text - purple - 400 mt - 0.5' />;
                     <span>{feat}</span>;
-                  </li>))}
+                  </li>)}
               </ul>;
             </div>;
             <div className='bg - black / 30 rounded - 2xl border border - purple - 500 / 30 p - 6 h - fit'>;
@@ -236,4 +235,3 @@ if (return null) {
         </div>;
       </div>;
     </UltraAdvancedFuturisticBackground>);
-}

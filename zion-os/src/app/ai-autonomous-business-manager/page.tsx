@@ -272,4 +272,3 @@ export default function AIBusinessManagerPage() {return (;
         </section>;
       </div>;
     </div>);
-}

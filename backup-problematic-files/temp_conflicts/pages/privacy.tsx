@@ -4,13 +4,13 @@ import { motion } from 'framer-motion',;
 import { ;
   Shield, Eye, Lock, Database, Users, Globe,;
   CheckCircle, AlertTriangle, Info;
-} from 'lucide-react',;
+ from 'lucide-react',;
 import EnhancedNavigation from '../components/EnhancedNavigation',;
 import EnhancedFooter from '../components/EnhancedFooter',;
-;
+
 export default function PrivacyPage() {;
   const lastUpdated = 'January 15, 2025',;
-;
+
   const sections = [;
     {;
       title:'Information We Collect',;
@@ -67,7 +67,7 @@ export default function PrivacyPage() {;
       ];
     }
   ],;
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">;
       <Head>;
@@ -78,16 +78,16 @@ export default function PrivacyPage() {;
         <meta name="twitter:card" content="summary_large_image" />;
         <link rel="canonical" href="https://ziontechgroup.com/privacy" />;
       </Head>;
-;
+
       <EnhancedNavigation />;
-;
+
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-6">;
         <div className="max-w-6xl mx-auto text-center">;
           <motion.div;
-            initial={{ opacity:0, y:30 }}
-            animate={{ opacity:1, y:0 }}
-            transition={{ duration:0.8 }}
+            initial={ opacity:0, y:30 }
+            animate={ opacity:1, y:0 }
+            transition={ duration:0.8 }
           >;
             <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6">;
               <Shield className="w-10 h-10 text-white" />;
@@ -104,15 +104,15 @@ export default function PrivacyPage() {;
           </motion.div>;
         </div>;
       </section>;
-;
+
       {/* Introduction */}
       <section className="py-20 px-6">;
         <div className="max-w-4xl mx-auto">;
           <motion.div;
-            initial={{ opacity:0, y:20 }}
-            whileInView={{ opacity:1, y:0 }}
-            transition={{ duration:0.8 }}
-            viewport={{ once:true }}
+            initial={ opacity:0, y:20 }
+            whileInView={ opacity:1, y:0 }
+            transition={ duration:0.8 }
+            viewport={ once:true }
             className="bg-gray-800/30 backdrop-blur-xl rounded-2xl p-8 border border-gray-700/50";
           >;
             <h2 className="text-3xl font-bold text-white mb-6">Our Commitment to Privacy</h2>;
@@ -130,18 +130,18 @@ export default function PrivacyPage() {;
           </motion.div>;
         </div>;
       </section>;
-;
+
       {/* Policy Sections */}
       <section className="py-20 px-6">;
         <div className="max-w-6xl mx-auto">;
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
-            {sections.map((section, index) => (;
+            {sections.map(section, index) => (;
               <motion.div;
                 key={section.title}
-                initial={{ opacity:0, y:20 }}
-                whileInView={{ opacity:1, y:0 }}
-                transition={{ duration:0.6, delay:index * 0.1 }}
-                viewport={{ once:true }}
+                initial={ opacity:0, y:20 }
+                whileInView={ opacity:1, y:0 }
+                transition={ duration:0.6, delay:index * 0.1 }
+                viewport={ once:true }
                 className="bg-gray-800/30 backdrop-blur-xl rounded-xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300";
               >;
                 <div className="flex items-center space-x-3 mb-4">;
@@ -151,27 +151,27 @@ export default function PrivacyPage() {;
                   <h3 className="text-xl font-bold text-white">{section.title}</h3>;
                 </div>;
                 <ul className="space-y-2">;
-                  {section.content.map((item, itemIndex) => (;
+                  {section.content.map(item, itemIndex) => (;
                     <li key={itemIndex} className="flex items-start space-x-3">;
                       <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0 mt-0.5" />;
                       <span className="text-gray-300 text-sm">{item}</span>;
                     </li>;
-                  ))}
+                  )}
                 </ul>;
               </motion.div>;
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Additional Information */}
       <section className="py-20 px-6 bg-gradient-to-r from-gray-900/50 to-gray-800/50">;
         <div className="max-w-4xl mx-auto">;
           <motion.div;
-            initial={{ opacity:0, y:20 }}
-            whileInView={{ opacity:1, y:0 }}
-            transition={{ duration:0.8 }}
-            viewport={{ once:true }}
+            initial={ opacity:0, y:20 }
+            whileInView={ opacity:1, y:0 }
+            transition={ duration:0.8 }
+            viewport={ once:true }
             className="space-y-8";
           >;
             <div className="bg-gray-800/30 backdrop-blur-xl rounded-xl p-6 border border-gray-700/50">;
@@ -190,7 +190,7 @@ export default function PrivacyPage() {;
                 <li> Third-party cookies from trusted partners</li>;
               </ul>;
             </div>;
-;
+
             <div className="bg-gray-800/30 backdrop-blur-xl rounded-xl p-6 border border-gray-700/50">;
               <h3 className="text-2xl font-bold text-white mb-4 flex items-center">;
                 <Globe className="w-6 h-6 text-cyan-400 mr-3" />;
@@ -207,7 +207,7 @@ export default function PrivacyPage() {;
                 <li> Regular compliance assessments</li>;
               </ul>;
             </div>;
-;
+
             <div className="bg-gray-800/30 backdrop-blur-xl rounded-xl p-6 border border-gray-700/50">;
               <h3 className="text-2xl font-bold text-white mb-4 flex items-center">;
                 <Shield className="w-6 h-6 text-green-400 mr-3" />;
@@ -221,15 +221,15 @@ export default function PrivacyPage() {;
           </motion.div>;
         </div>;
       </section>;
-;
+
       {/* Contact Information */}
       <section className="py-20 px-6">;
         <div className="max-w-4xl mx-auto text-center">;
           <motion.div;
-            initial={{ opacity:0, y:20 }}
-            whileInView={{ opacity:1, y:0 }}
-            transition={{ duration:0.8 }}
-            viewport={{ once:true }}
+            initial={ opacity:0, y:20 }
+            whileInView={ opacity:1, y:0 }
+            transition={ duration:0.8 }
+            viewport={ once:true }
           >;
             <h2 className="text-4xl font-bold text-white mb-6">Questions About Privacy?</h2>;
             <p className="text-xl text-gray-300 mb-8">;
@@ -260,8 +260,7 @@ export default function PrivacyPage() {;
           </motion.div>;
         </div>;
       </section>;
-;
+
       <EnhancedFooter />;
     </div>;
   ),;
-}

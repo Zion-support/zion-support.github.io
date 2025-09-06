@@ -18,7 +18,7 @@ const InstagramContentScheduler: NextPage = () => {
       </main>
     </div>
   )
-}
+
 export default InstagramContentScheduler;
 
 import type { NextPage } from 'next',
@@ -39,5 +39,5 @@ const InstagramContentScheduler: NextPage = () => {
         <Link href="/services">Back to Services</Link>;
       </main>;
     </div>);
-},
+,
 export default InstagramContentScheduler,

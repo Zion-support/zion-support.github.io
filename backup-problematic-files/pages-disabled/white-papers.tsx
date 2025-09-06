@@ -2,7 +2,6 @@ import React from 'react';
 
 interface White-papersProps {
   className?: string;
-}
 
 const White-papers: React.FC<White-papersProps> = ({ className }) => {
   return (
@@ -11,6 +10,5 @@ const White-papers: React.FC<White-papersProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default White-papers;

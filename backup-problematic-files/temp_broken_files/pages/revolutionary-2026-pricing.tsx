@@ -7,84 +7,84 @@ import { ;
   ArrowRight, Rocket, Brain, Zap, Shield, Atom, Sparkles, ;
   Target, Satellite, Globe, Cpu, Lock, Palette, Layers,;
   Phone, Mail, MapPin, ExternalLink, Filter, Grid, List;
-} from 'lucide-react',;
+ from 'lucide-react',;
 import { innovative2026MicroSaasServicesV2 } from '../data/innovative-2026-micro-saas-v2',;
 import { emergingTech2026ServicesV2 } from '../data/emerging-tech-2026-v2',;
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',;
 import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026',;
-;
+
 export default function Revolutionary2026Pricing() {;
   const [selectedCategory, setSelectedCategory] = useState<string>('all'),;
   const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all'),;
   const [sortBy, setSortBy] = useState<string>('price-low'),;
-;
+
   // Combine all 2026 services;
   const all2026Services = [;
     ...innovative2026MicroSaasServicesV2,;
     ...emergingTech2026ServicesV2;
   ],;
-;
+
   // Filter services based on category and price;
-  const filteredServices = useMemo(() => {;
+  const filteredServices = useMemo() => {;
     let filtered = all2026Services,;
-;
+
     // Category filter;
-    if (selectedCategory !== 'all') {;
+    if (selectedCategory != 'all') {;
       filtered = filtered.filter(service => {;
-        if (selectedCategory === 'ai') {;
+        if (selectedCategory = = 'ai') {;
           return service.category.includes('AI') || service.category.includes('Machine Learning'),;
-        } else if (selectedCategory === 'quantum') {;
+        } else if (selectedCategory = = 'quantum') {;
           return service.category.includes('Quantum') || service.category.includes('Space'),;
-        } else if (selectedCategory === 'emerging') {;
+        } else if (selectedCategory = = 'emerging') {;
           return service.category.includes('Emerging') || service.category.includes('Technology'),;
-        } else if (selectedCategory === 'enterprise') {;
+        } else if (selectedCategory = = 'enterprise') {;
           return service.category.includes('Enterprise') || service.category.includes('Business'),;
         }
         return true,;
       }),;
     }
-;
+
     // Price filter;
-    if (selectedPriceRange !== 'all') {;
+    if (selectedPriceRange != 'all') {;
       filtered = filtered.filter(service => {;
-        const price = parseFloat(service.price.replace(/[^0-9.]/g, '')),;
-        if (selectedPriceRange === 'low') return price < 1000,;
-        if (selectedPriceRange === 'medium') return price >= 1000 && price < 5000,;
-        if (selectedPriceRange === 'high') return price >= 5000 && price < 20000,;
-        if (selectedPriceRange === 'premium') return price >= 20000,;
+        const price = parseFloat(service.price.replace(/[^0-9.]/g, ''),;
+        if (selectedPriceRange = = 'low') return price < 1000,;
+        if (selectedPriceRange = = 'medium') return price >= 1000 && price < 5000,;
+        if (selectedPriceRange = = 'high') return price >= 5000 && price < 20000,;
+        if (selectedPriceRange = = 'premium') return price >= 20000,;
         return true,;
       }),;
     }
-;
+
     // Sort services;
-    filtered.sort((a, b) => {;
-      if (sortBy === 'price-low') {;
-        const priceA = parseFloat(a.price.replace(/[^0-9.]/g, '')) || 0,;
-        const priceB = parseFloat(b.price.replace(/[^0-9.]/g, '')) || 0,;
+    filtered.sort(a, b) => {;
+      if (sortBy = = 'price-low') {;
+        const priceA = parseFloat(a.price.replace(/[^0-9.]/g, '') || 0,;
+        const priceB = parseFloat(b.price.replace(/[^0-9.]/g, '') || 0,;
         return priceA - priceB,;
       }
-      if (sortBy === 'price-high') {;
-        const priceA = parseFloat(a.price.replace(/[^0-9.]/g, '')) || 0,;
-        const priceB = parseFloat(b.price.replace(/[^0-9.]/g, '')) || 0,;
+      if (sortBy = = 'price-high') {;
+        const priceA = parseFloat(a.price.replace(/[^0-9.]/g, '') || 0,;
+        const priceB = parseFloat(b.price.replace(/[^0-9.]/g, '') || 0,;
         return priceB - priceA,;
       }
-      if (sortBy === 'rating') return b.rating - a.rating,;
-      if (sortBy === 'popularity') return b.customers - a.customers,;
-      if (sortBy === 'name') return a.name.localeCompare(b.name),;
+      if (sortBy = = 'rating') return b.rating - a.rating,;
+      if (sortBy = = 'popularity') return b.customers - a.customers,;
+      if (sortBy = = 'name') return a.name.localeCompare(b.name),;
       return 0,;
     }),;
-;
+
     return filtered,;
   }, [selectedCategory, selectedPriceRange, sortBy, all2026Services]),;
-;
+
   const categories = [;
     { id:'all', name:'All Services', icon:'', count:all2026Services.length },;
-    { id:'ai', name:'AI & Machine Learning', icon:'', count:all2026Services.filter(s => s.category.includes('AI')).length },;
-    { id:'quantum', name:'Quantum & Space', icon:'', count:all2026Services.filter(s => s.category.includes('Quantum') || s.category.includes('Space')).length },;
-    { id:'emerging', name:'Emerging Technologies', icon:'', count:all2026Services.filter(s => s.category.includes('Emerging') || s.category.includes('Technology')).length },;
-    { id:'enterprise', name:'Enterprise Solutions', icon:'', count:all2026Services.filter(s => s.category.includes('Enterprise') || s.category.includes('Business')).length }
+    { id:'ai', name:'AI & Machine Learning', icon:'', count:all2026Services.filter(s => s.category.includes('AI').length },;
+    { id:'quantum', name:'Quantum & Space', icon:'', count:all2026Services.filter(s => s.category.includes('Quantum') || s.category.includes('Space').length },;
+    { id:'emerging', name:'Emerging Technologies', icon:'', count:all2026Services.filter(s => s.category.includes('Emerging') || s.category.includes('Technology').length },;
+    { id:'enterprise', name:'Enterprise Solutions', icon:'', count:all2026Services.filter(s => s.category.includes('Enterprise') || s.category.includes('Business').length }
   ],;
-;
+
   const priceRanges = [;
     { id:'all', name:'All Prices', range:'All' },;
     { id:'low', name:'Under $1K/month', range:'Under $1K' },;
@@ -92,7 +92,7 @@ export default function Revolutionary2026Pricing() {;
     { id:'high', name:'$5K - $20K/month', range:'$5K - $20K' },;
     { id:'premium', name:'$20K+/month', range:'$20K+' }
   ],;
-;
+
   const sortOptions = [;
     { id:'price-low', name:'Price Low to High' },;
     { id:'price-high', name:'Price High to Low' },;
@@ -100,26 +100,26 @@ export default function Revolutionary2026Pricing() {;
     { id:'popularity', name:'Most Popular' },;
     { id:'name', name:'Name A-Z' }
   ],;
-;
+
   const contactInfo = {;
     mobile:'+1 302 464 0950',;
     email:'kleber@ziontechgroup.com',;
     address:'364 E Main St STE 1008 Middletown DE 19709',;
     website:'https://ziontechgroup.com';
   },;
-;
+
   // Calculate pricing statistics;
   const pricingStats = {;
     totalServices:all2026Services.length,;
-    averagePrice:all2026Services.reduce((acc, service) => {;
-      const price = parseFloat(service.price.replace(/[^0-9.]/g, '')) || 0,;
+    averagePrice:all2026Services.reduce(acc, service) => {;
+      const price = parseFloat(service.price.replace(/[^0-9.]/g, '') || 0,;
       return acc + price,;
     }, 0) / all2026Services.length,;
-    lowestPrice:Math.min(...all2026Services.map(s => parseFloat(s.price.replace(/[^0-9.]/g, '')) || 0)),;
-    highestPrice:Math.max(...all2026Services.map(s => parseFloat(s.price.replace(/[^0-9.]/g, '')) || 0)),;
+    lowestPrice:Math.min(...all2026Services.map(s => parseFloat(s.price.replace(/[^0-9.]/g, '') || 0),;
+    highestPrice:Math.max(...all2026Services.map(s => parseFloat(s.price.replace(/[^0-9.]/g, '') || 0),;
     popularServices:all2026Services.filter(s => s.popular).length;
   },;
-;
+
   return (;
     <UltraAdvancedFuturisticBackground ;
       intensity="extreme" ;
@@ -141,19 +141,19 @@ export default function Revolutionary2026Pricing() {;
           <meta property="og:type" content="website" />;
           <link rel="canonical" href="https://ziontechgroup.com/revolutionary-2026-pricing" />;
         </Head>;
-;
+
         {/* Enhanced Navigation */}
         <EnhancedNavigation2026 />;
-;
+
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">;
           <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 via-transparent to-cyan-900/20"></div>;
           <div className="max-w-7xl mx-auto relative z-10">;
             <motion.div;
-              initial={{ opacity:0, y:20 }}
-              whileInView={{ opacity:1, y:0 }}
-              transition={{ duration:0.6 }}
-              viewport={{ once:true }}
+              initial={ opacity:0, y:20 }
+              whileInView={ opacity:1, y:0 }
+              transition={ duration:0.6 }
+              viewport={ once:true }
               className="text-center mb-16";
             >;
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">;
@@ -165,7 +165,6 @@ export default function Revolutionary2026Pricing() {;
                 Transparent, competitive pricing for our cutting-edge AI, quantum computing, and emerging technology solutions. ;
                 Get maximum ROI with our revolutionary services.;
               </p>;
-              ;
               {/* Pricing Statistics */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">;
                 <div className="bg-black/40 backdrop-blur-xl border border-purple-500/20 rounded-xl p-4">;
@@ -186,13 +185,13 @@ export default function Revolutionary2026Pricing() {;
                 </div>;
               </div>;
             </motion.div>;
-;
+
             {/* Contact Information */}
             <motion.div;
-              initial={{ opacity:0, y:20 }}
-              whileInView={{ opacity:1, y:0 }}
-              transition={{ duration:0.6, delay:0.2 }}
-              viewport={{ once:true }}
+              initial={ opacity:0, y:20 }
+              whileInView={ opacity:1, y:0 }
+              transition={ duration:0.6, delay:0.2 }
+              viewport={ once:true }
               className="bg-black/40 backdrop-blur-xl border border-purple-500/20 rounded-2xl p-6 max-w-2xl mx-auto";
             >;
               <h3 className="text-xl font-bold text-white mb-4 text-center">Need Custom Pricing?</h3>;
@@ -213,7 +212,7 @@ export default function Revolutionary2026Pricing() {;
             </motion.div>;
           </div>;
         </section>;
-;
+
         {/* Filters */}
         <section className="py-8 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">;
@@ -221,36 +220,36 @@ export default function Revolutionary2026Pricing() {;
               <div className="flex flex-col lg:flex-row gap-6">;
                 {/* Category Filter */}
                 <div className="flex flex-wrap gap-2">;
-                  {categories.map((category) => (;
+                  {categories.map(category) => (;
                     <button;
                       key={category.id}
                       onClick={() => setSelectedCategory(category.id)}
                       className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${;
-                        selectedCategory === category.id;
+                        selectedCategory = = category.id;
                           ? 'bg-purple-600 text-white';
                           :'bg-black/40 text-gray-300 hover:bg-black/60 hover:text-white';
                       }`}
                     >;
                       {category.icon} {category.name} ({category.count});
-                    </button>;                  ))}
+                    </button>;                  )}
                 </div>;
-;
+
                 {/* Price Range Filter */}
                 <div className="flex flex-wrap gap-2">;
-                  {priceRanges.map((range) => (;
+                  {priceRanges.map(range) => (;
                     <button;
                       key={range.id}
                       onClick={() => setSelectedPriceRange(range.id)}
                       className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${;
-                        selectedPriceRange === range.id;
+                        selectedPriceRange = = range.id;
                           ? 'bg-blue-600 text-white';
                           :'bg-black/40 text-gray-300 hover:bg-black/60 hover:text-white';
                       }`}
                     >;                      {range.name}
                     </button>;
-                  ))}
+                  )}
                 </div>;
-;
+
                 {/* Sort Options */}
                 <div className="flex items-center space-x-4">;
                   <select;
@@ -258,17 +257,17 @@ export default function Revolutionary2026Pricing() {;
                     onChange={(e) => setSortBy(e.target.value)}
                     className="px-3 py-2 bg-black/60 border border-purple-500/30 rounded-lg text-white text-sm focus:outline-none focus:border-purple-500/60";
                   >;
-                    {sortOptions.map((option) => (;
+                    {sortOptions.map(option) => (;
                       <option key={option.id} value={option.id}>;                        {option.name}
                       </option>;
-                    ))}
+                    )}
                   </select>;
                 </div>;
               </div>;
             </div>;
           </div>;
         </section>;
-;
+
         {/* Services Pricing Grid */}
         <section className="py-12 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">;
@@ -280,13 +279,13 @@ export default function Revolutionary2026Pricing() {;
                 Compare pricing and features to find the perfect solution for your business;
               </p>;
             </div>;
-;
+
             <AnimatePresence mode="wait">;
-              {filteredServices.length === 0 ? (;
+              {filteredServices.length = = 0 ? (;
                 <motion.div;
-                  initial={{ opacity:0 }}
-                  animate={{ opacity:1 }}
-                  exit={{ opacity:0 }}
+                  initial={ opacity:0 }
+                  animate={ opacity:1 }
+                  exit={ opacity:0 }
                   className="text-center py-20";
                 >;
                   <div className="text-gray-400 text-xl">;
@@ -297,17 +296,17 @@ export default function Revolutionary2026Pricing() {;
                 </motion.div>;
               ) :(;
                 <motion.div;
-                  initial={{ opacity:0 }}
-                  animate={{ opacity:1 }}
-                  exit={{ opacity:0 }}
+                  initial={ opacity:0 }
+                  animate={ opacity:1 }
+                  exit={ opacity:0 }
                   className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3";
                 >;
-                  {filteredServices.map((service, index) => (;
+                  {filteredServices.map(service, index) => (;
                     <motion.div;
                       key={service.id}
-                      initial={{ opacity:0, y:20 }}
-                      animate={{ opacity:1, y:0 }}
-                      transition={{ duration:0.5, delay:index * 0.1 }}
+                      initial={ opacity:0, y:20 }
+                      animate={ opacity:1, y:0 }
+                      transition={ duration:0.5, delay:index * 0.1 }
                       className="group relative";
                     >;
                       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>;
@@ -321,7 +320,6 @@ export default function Revolutionary2026Pricing() {;
                             {service.name}
                           </h3>;
                           <p className="text-purple-300 text-sm mb-4">{service.tagline}</p>;
-                          ;
                           {/* Pricing */}
                           <div className="mb-6">;
                             <div className="text-4xl font-bold text-white mb-2">;
@@ -333,7 +331,7 @@ export default function Revolutionary2026Pricing() {;
                             </div>;
                           </div>;
                         </div>;
-;
+
                         {/* Features */}
                         <div className="mb-6">;
                           <h4 className="text-white font-semibold mb-3 flex items-center">;
@@ -341,14 +339,14 @@ export default function Revolutionary2026Pricing() {;
                             Key Features;
                           </h4>;
                           <ul className="space-y-2">;
-                            {service.features.slice(0, 6).map((feature, idx) => (;
+                            {service.features.slice(0, 6).map(feature, idx) => (;
                               <li key={idx} className="flex items-start space-x-2 text-sm text-gray-300">;
                                 <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />;
                                 <span>{feature}</span>;
-                              </li>;                            ))}
+                              </li>;                            )}
                           </ul>;
                         </div>;
-;
+
                         {/* Service Info */}
                         <div className="grid grid-cols-2 gap-4 text-sm mb-6">;
                           <div>;
@@ -371,7 +369,7 @@ export default function Revolutionary2026Pricing() {;
                             <div className="text-white">{service.setupTime}</div>;
                           </div>;
                         </div>;
-;
+
                         {/* ROI and Market Info */}
                         <div className="mb-6 p-3 bg-purple-900/20 rounded-lg">;
                           <div className="text-sm text-purple-300 mb-2">;
@@ -380,7 +378,7 @@ export default function Revolutionary2026Pricing() {;
                           <div className="text-xs text-gray-400">;                            <strong>Market:</strong> {service.marketSize} | <strong>Growth:</strong> {service.growthRate}
                           </div>;
                         </div>;
-;
+
                         {/* Action Buttons */}
                         <div className="flex flex-col gap-3">;
                           <Link;
@@ -398,7 +396,7 @@ export default function Revolutionary2026Pricing() {;
                             Contact Sales;
                           </a>;
                         </div>;
-;
+
                         {/* Badges */}
                         <div className="absolute top-4 right-4 flex flex-col gap-2">;
                           {service.popular && (;
@@ -413,21 +411,21 @@ export default function Revolutionary2026Pricing() {;
                         </div>;
                       </div>;
                     </motion.div>;
-                  ))}
+                  )}
                 </motion.div>;
               )}
             </AnimatePresence>;
           </div>;
         </section>;
-;
+
         {/* Pricing Comparison */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-6xl mx-auto">;
             <motion.div;
-              initial={{ opacity:0, y:20 }}
-              whileInView={{ opacity:1, y:0 }}
-              transition={{ duration:0.6 }}
-              viewport={{ once:true }}
+              initial={ opacity:0, y:20 }
+              whileInView={ opacity:1, y:0 }
+              transition={ duration:0.6 }
+              viewport={ once:true }
               className="text-center mb-16";
             >;
               <h2 className="text-4xl font-bold text-white mb-6">;
@@ -437,14 +435,14 @@ export default function Revolutionary2026Pricing() {;
                 Our revolutionary 2026 services offer unmatched value, cutting-edge technology, and proven ROI;
               </p>;
             </motion.div>;
-;
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
               {/* Value Proposition */}
               <motion.div;
-                initial={{ opacity:0, y:20 }}
-                whileInView={{ opacity:1, y:0 }}
-                transition={{ duration:0.6, delay:0.1 }}
-                viewport={{ once:true }}
+                initial={ opacity:0, y:20 }
+                whileInView={ opacity:1, y:0 }
+                transition={ duration:0.6, delay:0.1 }
+                viewport={ once:true }
                 className="text-center";
               >;
                 <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-6">;
@@ -456,13 +454,13 @@ export default function Revolutionary2026Pricing() {;
                   making them the smartest investment for your business.;
                 </p>;
               </motion.div>;
-;
+
               {/* Technology */}
               <motion.div;
-                initial={{ opacity:0, y:20 }}
-                whileInView={{ opacity:1, y:0 }}
-                transition={{ duration:0.6, delay:0.2 }}
-                viewport={{ once:true }}
+                initial={ opacity:0, y:20 }
+                whileInView={ opacity:1, y:0 }
+                transition={ duration:0.6, delay:0.2 }
+                viewport={ once:true }
                 className="text-center";
               >;
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-6">;
@@ -474,13 +472,13 @@ export default function Revolutionary2026Pricing() {;
                   Stay ahead of the competition with our innovative solutions.;
                 </p>;
               </motion.div>;
-;
+
               {/* Support */}
               <motion.div;
-                initial={{ opacity:0, y:20 }}
-                whileInView={{ opacity:1, y:0 }}
-                transition={{ duration:0.6, delay:0.3 }}
-                viewport={{ once:true }}
+                initial={ opacity:0, y:20 }
+                whileInView={ opacity:1, y:0 }
+                transition={ duration:0.6, delay:0.3 }
+                viewport={ once:true }
                 className="text-center";
               >;
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-6">;
@@ -495,15 +493,15 @@ export default function Revolutionary2026Pricing() {;
             </div>;
           </div>;
         </section>;
-;
+
         {/* Call to Action */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-4xl mx-auto text-center">;
             <motion.div;
-              initial={{ opacity:0, y:20 }}
-              whileInView={{ opacity:1, y:0 }}
-              transition={{ duration:0.6 }}
-              viewport={{ once:true }}
+              initial={ opacity:0, y:20 }
+              whileInView={ opacity:1, y:0 }
+              transition={ duration:0.6 }
+              viewport={ once:true }
               className="bg-gradient-to-r from-purple-900/40 to-cyan-900/40 backdrop-blur-xl border border-purple-500/20 rounded-2xl p-12";
             >;
               <h2 className="text-4xl font-bold text-white mb-6">;
@@ -538,64 +536,63 @@ export default function Revolutionary2026Pricing() {;
         </section>;
       </div>;
     </UltraAdvancedFuturisticBackground>;
-  ),; //Category filter if (selectedCategory !== 'all') {
+  ),; //Category filter if (selectedCategory != 'all') {
   filtered = filtered.filter (service => {
-  if (selectedCategory === 'ai') {
+  if (selectedCategory = = 'ai') {
   return filtered;
-}, [selectedCategory, selectedPriceRange, sortBy, all2026Services]);
-lowestPrice: Math.min (...all2026Services.map (s => parseFloat (s.price.replace (/[^0-9.]/g, '') ) || 0) );
-highestPrice: Math.max (...all2026Services.map (s => parseFloat (s.price.replace (/[^0-9.]/g, '') ) || 0) );
+, [selectedCategory, selectedPriceRange, sortBy, all2026Services]);
+lowestPrice: Math.min (...all2026Services.map (s => parseFloat (s.price.replace (/[^0-9.]/g, '') || 0);
+highestPrice: Math.max (...all2026Services.map (s => parseFloat (s.price.replace (/[^0-9.]/g, '') || 0);
 popularServices: all2026Services.filter (s => s.popular) .length 
-};
+;
 return (<UltraAdvancedFuturisticBackground > <div className="min-h-screen" > <Head> <title>Revolutionary 2026 Pricing - Zion Tech Group | Competitive AI, Quantum & Emerging Tech Pricing</title> <meta name="description" content="Discover competitive pricing for Zion Tech Group's revolutionary 2026 services: AI, quantum computing, emerging technologies, and enterprise solutions. Contact: +1 302 464 0950" /> <meta name="keywords" content="2026 pricing, AI services pricing, quantum computing pricing, emerging technologies pricing, enterprise solutions pricing, Zion Tech Group" /> <meta name="author" content="Zion Tech Group" /> <meta property="og:title" content="Revolutionary 2026 Pricing - Zion Tech Group" /> <meta property="og:description" content="Competitive pricing for cutting-edge AI, quantum computing, and emerging technology services" /> <meta property="og:url" content="https://ziontechgroup.com/revolutionary-2026-pricing" /> <meta property="og:type" content="website" /> <link rel="canonical" href="https://ziontechgroup.com/revolutionary-2026-pricing" /> </Head> {
   /* Enhanced Navigation */ 
-}<EnhancedNavigation2026 /> > <h1 className="text-5xl md:text-6xl font-bold text-white mb-6" > <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent" > Revolutionary 2026 Pricing </span> </h1> <p className="text-gray-300 text-xl max-w-4xl mx-auto leading-relaxed mb-8" > Transparent, competitive pricing for our cutting-edge AI, quantum computing, and emerging technology solutions. Get maximum ROI with our revolutionary services. </p> </div> </div> </motion.div> {
+<EnhancedNavigation2026 /><h1 className="text-5xl md:text-6xl font-bold text-white mb-6" > <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent" > Revolutionary 2026 Pricing </span> </h1> <p className="text-gray-300 text-xl max-w-4xl mx-auto leading-relaxed mb-8" > Transparent, competitive pricing for our cutting-edge AI, quantum computing, and emerging technology solutions. Get maximum ROI with our revolutionary services. </p> </div> </div> </motion.div> {
   /* Contact Information */ 
-}<motion.div </div> </div> </motion.div> </div> </section> key= {
+<motion.div </div> </div> </motion.div> </div> </section> key= {
   category.id 
-}onClick= {
+onClick= {
   () => setSelectedCategory (category.id) 
-}className= {
+className= {
   `px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 $ {
-  selectedCategory === category.id ? 'bg-purple-600 text-white' : 'bg-black/40 text-gray-300 hover:bg-black/60 hover:text-white' 
-}` 
-}> {
+  selectedCategory = = category.id ? 'bg-purple-600 text-white' : 'bg-black/40 text-gray-300 hover:bg-black/60 hover:text-white' 
+` 
+> {
   category.icon 
-}{
+{
   category.name 
-}({
+({
   category.count 
-}) </button>) ) 
-}</div> key= {
+) </button>) 
+</div> key= {
   range.id 
-}onClick= {
+onClick= {
   () => setSelectedPriceRange (range.id) 
-}className= {
+className= {
   `px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 $ {
-  selectedPriceRange === range.id ? 'bg-blue-600 text-white' : 'bg-black/40 text-gray-300 hover:bg-black/60 hover:text-white' 
-}` 
-}> {
+  selectedPriceRange = = range.id ? 'bg-blue-600 text-white' : 'bg-black/40 text-gray-300 hover:bg-black/60 hover:text-white' 
+` 
+> {
   range.name 
-}</button>) ) 
-}</div> > {
-  sortOptions.map ( (option) => (<option key= {
+</button>) 
+</div>{
+  sortOptions.map (option) => (<option key= {
   option.id 
-}value= {
+value= {
   option.id 
-}> {
+> {
   option.name 
-}</option>) ) 
-}</select> </div> </div> </div> </div> </section> </h2> <p className="text-gray-400" > Compare pricing and features to find the perfect solution for your business </p> </div> > <div className="text-gray-400 text-xl" > No services found matching your criteria. <br /> Try adjusting your filters. </div> </motion.div> > {
-  filteredServices.map ( (service, index) => (<motion.div key= {
+</option>) 
+</select> </div> </div> </div> </div> </section> </h2> <p className="text-gray-400" > Compare pricing and features to find the perfect solution for your business </p> </div><div className="text-gray-400 text-xl" > No services found matching your criteria. <br /> Try adjusting your filters. </div> </motion.div>{
+  filteredServices.map (service, index) => (<motion.div key= {
   service.id 
-}</div> </div> </div> </li>) ) 
-}</ul> </div> > Learn More <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" /> </Link> <a > <Phone className="w-4 h-4 mr-2" /> Contact Sales </Link> </div> CUSTOM </div>) 
-}</div> </div> </motion.div>) ) 
-}</motion.div>) 
-}</AnimatePresence> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" > Why Choose Zion Tech Group? </h2> <p className="text-gray-300 text-xl max-w-3xl mx-auto" > Our revolutionary 2026 services offer unmatched value, cutting-edge technology, and proven ROI </p> </motion.div> > <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-6" > <DollarSign className="w-8 h-8 text-white" /> </div> <h3 className="text-xl font-bold text-white mb-4" >Unmatched Value</h3> <p className="text-gray-300" > Get enterprise-grade technology at competitive prices. Our services deliver 1000%+ ROI;
+</div> </div> </div> </li>) 
+</ul> </div>Learn More <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" /> </Link> <a > <Phone className="w-4 h-4 mr-2" /> Contact Sales </Link> </div> CUSTOM </div>) 
+</div> </div> </motion.div>) 
+</motion.div>) 
+</AnimatePresence> </div> </section><h2 className="text-4xl font-bold text-white mb-6" > Why Choose Zion Tech Group? </h2> <p className="text-gray-300 text-xl max-w-3xl mx-auto" > Our revolutionary 2026 services offer unmatched value, cutting-edge technology, and proven ROI </p> </motion.div><div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-6" > <DollarSign className="w-8 h-8 text-white" /> </div> <h3 className="text-xl font-bold text-white mb-4" >Unmatched Value</h3> <p className="text-gray-300" > Get enterprise-grade technology at competitive prices. Our services deliver 1000%+ ROI;
 making them the smartest investment for your business. </p> </motion.div> {
   /* Technology */ 
-}<motion.div > <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-6" > <Rocket className="w-8 h-8 text-white" /> </div> <h3 className="text-xl font-bold text-white mb-4" >Cutting-Edge Technology</h3> <p className="text-gray-300" > Access the latest AI, quantum computing, and emerging technologies before they become mainstream. Stay ahead of the competition with our innovative solutions. </p> </motion.div> {
+<motion.div > <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-6" > <Rocket className="w-8 h-8 text-white" /> </div> <h3 className="text-xl font-bold text-white mb-4" >Cutting-Edge Technology</h3> <p className="text-gray-300" > Access the latest AI, quantum computing, and emerging technologies before they become mainstream. Stay ahead of the competition with our innovative solutions. </p> </motion.div> {
   /* Support */ 
-}<motion.div > <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-6" > <Users className="w-8 h-8 text-white" /> </div> <h3 className="text-xl font-bold text-white mb-4" >Expert Support</h3> <p className="text-gray-300" > Get dedicated support from our team of experts. We're here to ensure your success with implementation, training, and ongoing optimization. </p> </motion.div> </div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-gray-300 text-xl mb-8 leading-relaxed" > Get started with our revolutionary 2026 services today. Contact us for custom pricing and discover how we can accelerate your business growth. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <a > <Mail className="w-5 h-5 mr-2" /> Get Custom Quote </Link> </div> </div> </motion.div> </div> </section> </div> </UltraAdvancedFuturisticBackground>) 
-}
+<motion.div > <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-6" > <Users className="w-8 h-8 text-white" /> </div> <h3 className="text-xl font-bold text-white mb-4" >Expert Support</h3> <p className="text-gray-300" > Get dedicated support from our team of experts. We're here to ensure your success with implementation, training, and ongoing optimization. </p> </motion.div> </div> </div> </section><h2 className="text-4xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-gray-300 text-xl mb-8 leading-relaxed" > Get started with our revolutionary 2026 services today. Contact us for custom pricing and discover how we can accelerate your business growth. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <a > <Mail className="w-5 h-5 mr-2" /> Get Custom Quote </Link> </div> </div> </motion.div> </div> </section> </div> </UltraAdvancedFuturisticBackground>) 

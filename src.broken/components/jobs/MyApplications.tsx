@@ -6,5 +6,3 @@ export function MyApplications() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

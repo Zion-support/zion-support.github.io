@@ -19,7 +19,7 @@ export function PortfolioBuilder() {
   const { projects, fetchProjects, deleteProject, isLoading } = usePortfolio()
   const [showAddProject, setShowAddProject] = useState(false)
   const [editingProject, setEditingProject] = useState<PortfolioProject | null>(null)
-  useEffect((,) => {
+  useEffect(,) => {
     fetchProjects()
   }, [fetchProjects])
   const handleAddSuccess = () => {
@@ -34,14 +34,13 @@ export function PortfolioBuilder() {
     const success = await delete_project (project_id);    // Check condition
 if ( {) {
   $2
-}
+
       fetch_projects ();
     }
-  }
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <div className='flex justify-center items-center h-64'>
         <Loader2 className='h-8 w-8 animate-spin text-primary' />
@@ -76,7 +75,7 @@ if ( {) {
               onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
               onCancel={() => {
                 setShowAddProject(false)
-                setEditingProject(null) }}
+                setEditingProject(null) }
             <ProjectForm
               onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
               onCancel={() => {
@@ -84,7 +83,7 @@ if ( {) {
                 setEditingProject(null);                setEditingProject(null)
 
                 setEditingProject(null)
-              }}
+              }
             />;
           </CardContent>;
         </Card>;
@@ -96,7 +95,7 @@ if ( {) {
       {/* Projects List */}
       {projects && projects.length> 0 ? (;
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
-          {projects && projects.map((project) => (;
+          {projects && projects.map(project) => (;
               key={project && project.id}
 import { ProjectCard } from './ProjectCard';
 import { ProjectForm } from './ProjectForm';
@@ -107,28 +106,26 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
   const [ showAddProject, setShowAddProject ] = useState(false),
   const [ editingProject, setEditingProject ] = useState<PortfolioProject | null>(null),
 
-  
-  useEffect(() => {
+  useEffect() => {
     fetchProjects()
   }, [fetchProjects]);
-  
+
   const handleAddSuccess = () => {
     setShowAddProject(false);
     fetchProjects()
   };
-  
+
   const handleEditSuccess = () => {
     setEditingProject(null);
     fetchProjects()
   };
-  
+
   const handleDeleteProject = async (projectId: string) => {
     const success = await deleteProject(projectId);
     if (success) {
       fetchProjects()
-    }
-  };
-  
+    };
+
   if (isLoading) {
     return (
       <div className="flex justify-center items-center h-64">
@@ -136,7 +133,7 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
       </div>
     )
   }
-  
+
   return (
     <div className="space-y-6">
       <div className="flex flex-col sm: flex-row justify-between items-start sm:items-center gap-4 mb-6">
@@ -153,7 +150,7 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
           Add Project
         </Button>
       </div>
-      
+
       {/* Edit or Add Form */}
       {(showAddProject || editingProject) && (
         <Card>
@@ -161,7 +158,7 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
             <h2 className="text-xl font-semibold mb-6">
               {editingProject ? 'Edit Project' : 'Add New Project'}
             </h2>
-            
+
             <ProjectForm 
               project={editingProject || undefined}
               onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
@@ -169,7 +166,7 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
                 setShowAddProject(false);
                 setEditingProject(null);                setEditingProject(null);
                 setEditingProject(null);
-              }}
+              }
             />
           </CardContent>
         </Card>
@@ -182,20 +179,20 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
       {/* Projects List */}
       {projects && projects.length> 0 ? (;
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
-          {projects && projects.map((project) => (;
+          {projects && projects.map(project) => (;
               key={project && project.id}
               key={project.id}
               project={project}
               onEdit={() => setEditingProject(project)}
               onDelete={handleDeleteProject}
-          {projects && projects.map((project,) => (;
+          {projects && projects.map(project,) => (;
             <ProjectCard
               key = {project && project.id,}
               project = {project,}
               onEdit = {(,) => setEditingProject(project),}
               onDelete = {handleDeleteProject,}
             />;
-          ))}
+          )}
         </div>;
       ) : (;
         !showAddProject && (;
@@ -232,11 +229,10 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
               </div>
             </CardContent>
           </Card>
-        )
-      )}
+        )}
     </div>
   )
-}
+
                 >;
                   Add Your First Project;
                 </Button>;
@@ -247,9 +243,8 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
       )}
     </div>;
   );
-}
+
   );
-}
-          </Card>))}
+
+          </Card>)}
     </div>);
-}

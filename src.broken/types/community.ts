@@ -1,4 +1,4 @@
-// Type definitions for community,;
+/ Type definitions for community,;
 interface community {;
   // TODO: Add proper type definitions;
-},;
+,;

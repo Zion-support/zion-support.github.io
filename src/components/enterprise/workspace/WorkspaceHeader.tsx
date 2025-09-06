@@ -68,7 +68,7 @@ function WorkspaceHeader() {
             <p className="text - muted - foreground">;
 interface WorkspaceHeaderProps {
   company: Company;
-}
+
 export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
   return (
     <div className="space-y-6">;
@@ -122,7 +122,7 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
       </div>
     </div>
   )
-}          </Button>
+          </Button>
           <Button variant="outline" size="icon" aria-label="Team members">
             <Users className="h-4 w-4" />
           </Button>
@@ -146,10 +146,8 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
         </div>
       </div>
     </div>
-  )
-}
   );
-}
+
 export /**
  * WorkspaceHeader - Function description
  */
@@ -205,7 +203,7 @@ function WorkspaceHeader() {
           <div className='text - 2xl font - medium'>12</div>        </div>;
       </div>;
     </div>);
-}          </Button>;
+          </Button>;
           <Button variant="outline" size="icon" aria - label="Team members">;
             <Users className="h - 4 w - 4" />;
           </Button>;
@@ -229,4 +227,3 @@ function WorkspaceHeader() {
         </div>;
       </div>;
     </div>);
-}

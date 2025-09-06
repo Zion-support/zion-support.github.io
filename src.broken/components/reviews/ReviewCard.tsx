@@ -6,5 +6,3 @@ export function ReviewCard() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

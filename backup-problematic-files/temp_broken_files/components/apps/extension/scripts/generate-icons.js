@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+!/usr/bin/env node
 import { mkdirSync, existsSync } from 'node: fs',
 import { resolve } from 'node: path',
 import sharp from 'sharp',
@@ -6,7 +6,7 @@ const root = new URL('.',
 import.meta.url).pathname,
 const svgPath = resolve(root, '../assets/zion.svg'),
 const outDir = resolve(root, '../public/icons'),
-if (!existsSync(outDir)) mkdirSync(outDir, { recursive: true }),
+if (!existsSync(outDir) mkdirSync(outDir, { recursive: true }),
 
 const sizes = [16, 32, 48, 128],
 
@@ -19,7 +19,7 @@ for (const size of sizes) {
 const _root = new window.URL('.', import.meta.url).pathname;
 const _svgPath = resolve(root, '../assets/zion.svg');
 const _outDir = resolve(root, '../public/icons');
-if (!existsSync(outDir)) mkdirSync(outDir, {_recursive: true});
+if (!existsSync(outDir) mkdirSync(outDir, {_recursive: true});
 
 const _sizes = [16, 32, 48, 128];
 

@@ -308,4 +308,3 @@ function AIBusinessIntelligencePage() {
         </section>;
       </div>;
     </div>);
-}

@@ -4,12 +4,12 @@ import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-service
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
-}
+
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com',
-};
+;
 
 export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   {
@@ -2111,7 +2111,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.6,
     reviews: 6,
   },
-];	{
+;	{
 		id: 'ai-email-responder';
 		name: 'AI Email Responder'
 		tagline: 'Autonomous email triage, drafting, and follow-ups for sales and support';
@@ -3099,7 +3099,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		rating: 4.6
 		reviews: 6
 	}
-];
+;
 
   id: 'ai - email - responder';
   name: 'AI Email Responder',
@@ -3136,8 +3136,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   customers: 48;
   rating: 4.7,
   reviews: 12;
-}
-{
+
   id: 'mobile - survey - studio';
   name: 'Mobile Survey Studio',
   tagline: 'Adaptive, mobile - first surveys with branching logic and analytics';
@@ -3173,8 +3172,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   customers: 22;
   rating: 4.6,
   reviews: 9;
-}
-{
+
   id: 'niche - productivity - planner';
   name: 'Niche Productivity Planner',
   tagline: 'Industry - specific planners with templates, rituals, and benchmarks';
@@ -3210,8 +3208,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   customers: 18;
   rating: 4.5,
   reviews: 7;
-}
-{
+
   id: 'event - management - dashboard';
   name: 'Event Management Dashboard',
   tagline: 'Tickets, scheduling, comms, and post - event analytics';
@@ -3247,8 +3244,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   customers: 31;
   rating: 4.7,
   reviews: 11;
-}
-{
+
   id: 'affiliate - tracking - suite';
   name: 'Affiliate Tracking Suite',
   tagline: 'Links, attribution, commission rules, and payouts';
@@ -3282,8 +3278,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   customers: 12;
   rating: 4.5,
   reviews: 5;
-}
-{
+
   id: 'smb - analytics - lite';
   name: 'SMB Analytics Lite',
   tagline: 'Traffic, funnels, and conversions without complexity';
@@ -3317,8 +3312,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   customers: 40;
   rating: 4.6,
   reviews: 8;
-}
-{
+
   id: 'it - helpdesk - portal';
   name: 'IT Helpdesk Portal',
   tagline: 'Tickets, knowledge base, SLAs, and client portal';
@@ -3352,8 +3346,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   customers: 16;
   rating: 4.7,
   reviews: 6;
-}
-{
+
   id: 'ecommerce - returns - manager';
   name: 'Ecommerce Returns Manager';
   tagline: 'Customer - friendly returns with labels and status tracking';
@@ -3387,8 +3380,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   customers: 14;
   rating: 4.6,
   reviews: 5;
-}
-{
+
   id: 'automated - email - followups';
   name: 'Automated Email Followups';
   tagline: 'No - lead - left - behind sequences across inboxes';
@@ -3422,8 +3414,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   customers: 28;
   rating: 4.5,
   reviews: 8;
-}
-{
+
   id: 'podcast - transcription - service';
   name: 'Podcast Transcription Service',
   tagline: 'Accurate transcripts, chapters, and SEO blog exports';
@@ -3457,8 +3448,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   customers: 20;
   rating: 4.6,
   reviews: 6;
-}
-{
+
   id: 'ai - seo - content - optimizer';
   name: 'AI SEO Content Optimizer';
   tagline: 'Live on - page audits and SEO - aware rewrites';
@@ -3492,8 +3482,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   customers: 33;
   rating: 4.7,
   reviews: 10;
-}
-{
+
   id: 'social - scheduler - ai';
   name: 'Social Scheduler AI',
   tagline: 'Auto - generate, schedule, and repurpose posts cross - platform';
@@ -3527,8 +3516,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   customers: 26;
   rating: 4.5,
   reviews: 7;
-}
-{
+
   id: 'lead - enrichment - api';
   name: 'Lead Enrichment API',
   tagline: 'Company, role, and social signals from an email / domain';
@@ -3562,8 +3550,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   customers: 9;
   rating: 4.4,
   reviews: 4;
-}
-{
+
   id: 'consent - management - cmp';
   name: 'Consent Management CMP',
   tagline: 'GDPR / CCPA consent banners, preferences, and audit logs';
@@ -3597,8 +3584,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   customers: 37;
   rating: 4.7,
   reviews: 10;
-}
-{
+
   id: 'cookie - scanner - pro';
   name: 'Cookie Scanner Pro';
   tagline: 'Auto - detects cookies + trackers and updates your policy';
@@ -3632,8 +3618,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   customers: 19;
   rating: 4.5,
   reviews: 5;
-}
-{
+
   id: 'statuspage - sla - tracker';
   name: 'StatusPage SLA Tracker';
   tagline: 'Track uptime / incidents and publish SLA reports';
@@ -3667,8 +3652,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   customers: 11;
   rating: 4.4,
   reviews: 3;
-}
-{
+
   id: 'agentic - lead - qualifier';
   name: 'Agentic Lead Qualifier';
   tagline: 'Website chat agent that pre - qualifies and routes leads';
@@ -3702,8 +3686,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   customers: 23;
   rating: 4.6,
   reviews: 7;
-}
-{
+
   id: 'gdpr - dsar - portal - lite';
   name: 'GDPR DSAR Portal Lite',
   tagline: 'Accept, verify, export, and fulfill data subject requests';
@@ -3737,8 +3720,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   customers: 10;
   rating: 4.5,
   reviews: 4;
-}
-{
+
   id: 'feature - flag - auditor';
   name: 'Feature Flag Auditor';
   tagline: 'Flag hygiene checks and end - of - life automation';
@@ -3772,8 +3754,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   customers: 8;
   rating: 4.4,
   reviews: 3;
-}
-{
+
   id: 'postgres - index - advisor - pro';
   name: 'Postgres Index Advisor Pro';
   tagline: 'Index recommendations and controlled PR rollouts';
@@ -3807,8 +3788,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   customers: 15;
   rating: 4.6,
   reviews: 5;
-}
-{
+
   id: 's3 - lifecycle - optimizer';
   name: 'S3 Lifecycle Optimizer';
   tagline: 'Move objects between storage classes to cut costs';
@@ -3842,8 +3822,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   customers: 17;
   rating: 4.5,
   reviews: 4;
-}
-{
+
   id: 'pii - discovery - scanner';
   name: 'PII Discovery Scanner';
   tagline: 'Scan buckets and DBs for PII / PHI with evidence exports';
@@ -3877,8 +3856,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   customers: 13;
   rating: 4.6,
   reviews: 5;
-}
-{
+
   id: 'api - breaking - change - watcher';
   name: 'API Breaking Change Watcher';
   tagline: 'Schema diffs with CI gates and notifications';
@@ -3912,8 +3890,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   customers: 12;
   rating: 4.5,
   reviews: 3;
-}
-{
+
   id: 'synthetic - journey - monitor';
   name: 'Synthetic Journey Monitor';
   tagline: 'Record and replay user flows with SLO alerts';
@@ -3947,8 +3924,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   customers: 21;
   rating: 4.5,
   reviews: 6;
-}
-{
+
   id: 'iam - permission - analyzer';
   name: 'IAM Permission Analyzer';
   tagline: 'Detect over - privileged access and propose least - privilege policies';
@@ -3982,8 +3958,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   customers: 9;
   rating: 4.6,
   reviews: 3;
-}
-{
+
   id: 'warehouse - cost - optimizer';
   name: 'Data Warehouse Cost Optimizer';
   tagline: 'Right - size warehouses and schedule off - peak workloads';
@@ -4017,8 +3992,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   customers: 7;
   rating: 4.5,
   reviews: 3;
-}
-{
+
   id: 'email - warmup - monitor';
   name: 'Email Warmup & Reputation Monitor';
   tagline: 'Track sender reputation and run inbox placement tests';
@@ -4052,8 +4026,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   customers: 16;
   rating: 4.5,
   reviews: 4;
-}
-{
+
   id: 'ai - meeting - to - ticket';
   name: 'AI MeetingtoTicket Copilot';
   tagline: 'Turn meeting action items into Jira / GitHub tickets';
@@ -4087,6 +4060,3 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   customers: 24;
   rating: 4.6,
   reviews: 6;
-}
-];
-;

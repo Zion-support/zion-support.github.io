@@ -7,6 +7,5 @@ const 5g-enterprise-solutions = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default 5g-enterprise-solutions;

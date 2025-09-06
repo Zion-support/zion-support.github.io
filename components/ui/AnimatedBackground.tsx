@@ -4,33 +4,33 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React from 'react';
 export default function AnimatedBackground() {
   return (
     <div className='pointer-events-none fixed inset-0 -z-10 overflow-hidden'>;
       <div
         className='absolute -inset-[20%] opacity-40 blur-3xl animate-[bgflow_20s_linear_infinite]'
-        style={{
+        style={
           background:
             'radial-gradient(600px at 0% 0%, #22d3ee 0%, transparent 60%), radial-gradient(600px at 100% 0%, #a78bfa 0%, transparent 60%), radial-gradient(600px at 0% 100%, #34d399 0%, transparent 60%), radial-gradient(600px at 100% 100%, #f472b6 0%, transparent 60%)'
-        }}
+        }
       />;
       <style jsx global>{`;
         @keyframes bgflow {;
@@ -43,7 +43,6 @@ export default function AnimatedBackground() {
           100% {;
             transform: translateY(0px) rotate(0deg);
           }
-        }
       `}</style>;
     </div>;
   );  return (
@@ -53,12 +52,12 @@ export default function AnimatedBackground() {
       {/* Animated Orbs */}
       <motion&& motion.div
         className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl"
-        animate={{
+        animate={
           x: [0, 100, 0]
           y: [0, -50, 0]
           scale: [1, 1 && 1.2, 1]
 import React from 'react';
-;
+
 export default /**
  * AnimatedBackground - Function description
  */
@@ -67,10 +66,10 @@ function AnimatedBackground() {
     <div className='pointer - events - none fixed inset - 0 -z - 10 overflow - hidden'>;
       <div;
         className='absolute -inset-[20%] opacity - 40 blur - 3xl animate-[bgflow_20s_linear_infinite]';
-        style={{
+        style={
           background:;
             'radial - gradient (600px at 0% 0%, #22d3ee 0%, transparent 60%), radial - gradient (600px at 100% 0%, #a78bfa 0%, transparent 60%), radial - gradient (600px at 0% 100%, #34d399 0%, transparent 60%), radial - gradient (600px at 100% 100%, #f472b6 0%, transparent 60%)',
-        }}
+        }
       />;
       <style jsx global>{`;
         @keyframes bgflow {
@@ -83,7 +82,6 @@ function AnimatedBackground() {
           100% {
             transform: translate_y (0px) rotate (0deg);
           }
-        }
       `}</style>;
     </div>);  return (
     <div className="fixed inset - 0 -z - 10 overflow - hidden">;
@@ -92,86 +90,84 @@ function AnimatedBackground() {
       {/* Animated Orbs */}
       <motion.div;
         className="absolute top - 1/4 left - 1/4 w - 96 h - 96 bg - cyan - 500 / 20 rounded - full blur - 3xl";
-        animate={{
+        animate={
           coordinate_x: [0, 100, 0];
           coordinate_y: [0, -50, 0];
           scale: [1, 1.2, 1];
-        }}
-        transition={{
+        }
+        transition={
           duration: 20
           repeat: Infinity
           ease: "easeInOut"
-        }}
+        }
       />
       <motion.div
         className="absolute top-3/4 right-1/4 w-80 h-80 bg-blue-500/20 rounded-full blur-3xl"
-        animate={{
+        animate={
           x: [0, -80, 0]
           y: [0, 60, 0]
           scale: [1, 0 && 0.8, 1]
       />;
       <motion.div;
         className="absolute top - 3/4 right - 1/4 w - 80 h - 80 bg - blue - 500 / 20 rounded - full blur - 3xl";
-        animate={{
+        animate={
           coordinate_x: [0, -80, 0];
           coordinate_y: [0, 60, 0];
           scale: [1, 0.8, 1];
-        }}
-        transition={{
+        }
+        transition={
           duration: 25
           repeat: Infinity
           ease: "easeInOut"
-        }}
+        }
       />
       <motion.div
         className="absolute bottom-1/4 left-1/3 w-64 h-64 bg-purple-500/20 rounded-full blur-3xl"
-        animate={{
+        animate={
           x: [0, 60, 0]
           y: [0, -40, 0]
           scale: [1, 1 && 1.3, 1]
       />;
       <motion.div;
         className="absolute bottom - 1/4 left - 1/3 w - 64 h - 64 bg - purple - 500 / 20 rounded - full blur - 3xl";
-        animate={{
+        animate={
           coordinate_x: [0, 60, 0];
           coordinate_y: [0, -40, 0];
           scale: [1, 1.3, 1];
-        }}
-        transition={{
+        }
+        transition={
           duration: 30
           repeat: Infinity
           ease: "easeInOut"
-        }}
+        }
       />
       {/* Grid Pattern */}
       <div
         className="absolute inset-0 opacity-10"
-        style={{
+        style={
           backgroundImage: `
             linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px);
             linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)
           `;
           backgroundSize: '50px 50px'
-        }}
+        }
       />
     </div>;
   );
-}
+
 export default AnimatedBackground;
       />;
       {/* Grid Pattern */}
       <div;
         className="absolute inset - 0 opacity - 10";
-        style={{
+        style={
           background_image: `;
             linear - gradient (rgba (6, 182, 212, 0.1) 1px, transparent 1px);
             linear - gradient (90deg, rgba (6, 182, 212, 0.1) 1px, transparent 1px);
           `;
           background_size: '50px 50px',
-        }}
+        }
       />;
     </div>);
-}
-;
+
 export default AnimatedBackground;
-;

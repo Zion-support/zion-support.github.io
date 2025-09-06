@@ -6,5 +6,3 @@ export function TeamStats() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

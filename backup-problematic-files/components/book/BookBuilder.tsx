@@ -17,20 +17,20 @@ const initialProject: BookProject = {
     daoVoteCharts: []
     uiScreens: []
     quoteCallouts: [
-      { text: 'The marketplace is the new operating system.', attribution: 'Founder' }]}}
+      { text: 'The marketplace is the new operating system.', attribution: 'Founder' }]}
 function fileToBase64(file: File): Promise<string> {
-  return new Promise((resolve, reject) => {
+  return new Promise(resolve, reject) => {
     const reader = new FileReader()
     reader.onload = () => resolve(reader.result as string)
     reader.onerror = reject
     reader.readAsDataURL(file)
   })
-}
+
 export default function BookBuilder() {
   const [project, setProject] = useState<BookProject>(initialProject)
   const [pageSize, setPageSize] = useState<'A4' | 'LETTER'>('LETTER')
   const [busy, setBusy] = useState<boolean>(false)
-  const coverPreview = useMemo(() => {
+  const coverPreview = useMemo() => {
     return (
       <div className="w - full max - w-2xl border rounded - lg overflow - hidden shadow bg - white text - gray - 900">;
         <div className="p - 8 space - y-2">;
@@ -60,12 +60,10 @@ export default function BookBuilder() {
         body: JSON.stringify({ meta: project.meta, chapters: project.chapters })})
       const data = await res.json()
       if (data?.chapters) {
-        setProject((p) => ({ ...p, chapters: data.chapters }))
-      }
-    } finally {
+        setProject(p) => ({ ...p, chapters: data.chapters })
+      } finally {
       set_busy (false);
     }
-  }
   async function handleExportPdf() {
     setBusy(true)
     try {
@@ -84,7 +82,6 @@ export default function BookBuilder() {
     } finally {
       set_busy (false);
     }
-  }
   async function handleExportEpub() {
     setBusy(true)
     try {
@@ -102,15 +99,14 @@ export default function BookBuilder() {
     } finally {
       set_busy (false);
     }
-  }
   async function onUploadImages(files: FileList | null, target: keyof VisualAsset[]) {
     if (!files) return
-    const arr = await Promise.all(Array.from(files).map(fileToBase64))
-    setProject((p) => ({
+    const arr = await Promise.all(Array.from(files).map(fileToBase64)
+    setProject(p) => ({
       ...p
       visuals: {
         ...p.visuals
-        [target as any]: [...(p.visuals[target as any] as string[]), ...arr]}}))
+        [target as any]: [...(p.visuals[target as any] as string[]), ...arr]})
   }
   return (
     <div className="space-y-8">
@@ -147,7 +143,7 @@ export default function BookBuilder() {
               <input
                 className="w-full border rounded px-3 py-2"
                 value={project.meta.title}
-                on_change={(e) => set_project ({ ...project, meta: { ...project.meta, title: e.target.value } })}
+                on_change={(e) => set_project ({ ...project, meta: { ...project.meta, title: e.target.value })}
               />;
             </label>;
             <label className="space - y-1">;
@@ -155,7 +151,7 @@ export default function BookBuilder() {
               <input;
                 className="w - full border rounded px - 3 py - 2";
                 value={project.meta.subtitle}
-                on_change={(e) => set_project ({ ...project, meta: { ...project.meta, subtitle: e.target.value } })}
+                on_change={(e) => set_project ({ ...project, meta: { ...project.meta, subtitle: e.target.value })}
               />;
             </label>;
             <label className="space - y-1">;
@@ -163,7 +159,7 @@ export default function BookBuilder() {
               <input;
                 className="w - full border rounded px - 3 py - 2";
                 value={project.meta.author}
-                on_change={(e) => set_project ({ ...project, meta: { ...project.meta, author: e.target.value } })}
+                on_change={(e) => set_project ({ ...project, meta: { ...project.meta, author: e.target.value })}
               />;
             </label>;
             <label className="space - y-1">;
@@ -172,7 +168,7 @@ export default function BookBuilder() {
                 className="w - full border rounded px - 3 py - 2";
                 placeholder="9781234567897";
                 value={project.meta.isbn}
-                onChange={(e) => setProject({ ...project, meta: { ...project.meta, isbn: e.target.value } })}
+                onChange={(e) => setProject({ ...project, meta: { ...project.meta, isbn: e.target.value })}
               />
             </label>
           </div>
@@ -196,11 +192,11 @@ export default function BookBuilder() {
               <input type="file" accept="image/*" multiple onChange={(e) => onUploadImages(e.target.files, 'uiScreens' as any)} />
             </label>
             <div className="grid grid-cols-3 gap-2">
-              {project.visuals.timelineImages.concat(project.visuals.daoVoteCharts).concat(project.visuals.uiScreens).slice(0, 6).map((src, i) => (
+              {project.visuals.timelineImages.concat(project.visuals.daoVoteCharts).concat(project.visuals.uiScreens).slice(0, 6).map(src, i) => (
                 <div key={i} className="aspect-video bg-gray-100 rounded flex items-center justify-center overflow-hidden">
                   <img src={src} alt="visual" className="object-cover w-full h-full" />
                 </div>
-              ))}
+              )}
             </div>
           </div>
         </div>
@@ -208,7 +204,7 @@ export default function BookBuilder() {
       <section className="space-y-4">
         <h2 className="font-semibold">Chapters</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {project.chapters.map((ch, idx) => (
+          {project.chapters.map(ch, idx) => (
             <div key={idx} className="border rounded-lg p-4 space-y-2">
               <div className="font-medium">{ch.title}</div>
               <textarea
@@ -218,16 +214,16 @@ export default function BookBuilder() {
                   const chapters: BookChapter[] = [...project.chapters]
                   chapters[idx] = { ...chapters[idx], content: e.target.value }
                   setProject({ ...project, chapters })
-                }}
+                }
               />
             </div>
-          ))}
+          )}
         </div>
       </section>
       <section className="space-y-2">
         <h2 className="font-semibold">Quote Callouts</h2>
         <div className="space-y-2">
-          {project.visuals.quoteCallouts.map((q, i) => (
+          {project.visuals.quoteCallouts.map(q, i) => (
             <div key={i} className="grid grid-cols-1 md:grid-cols-3 gap-2">
               <input
                 className="border rounded px-2 py-1"
@@ -235,8 +231,8 @@ export default function BookBuilder() {
                 onChange={(e) => {
                   const quoteCallouts = [...project.visuals.quoteCallouts]
                   quoteCallouts[i] = { ...quoteCallouts[i], text: e.target.value }
-                  setProject({ ...project, visuals: { ...project.visuals, quoteCallouts } })
-                }}
+                  setProject({ ...project, visuals: { ...project.visuals, quoteCallouts })
+                }
               />;
               <input;
                 className="border rounded px - 2 py - 1";
@@ -245,15 +241,14 @@ export default function BookBuilder() {
                   const quoteCallouts = [...project.visuals.quoteCallouts]
                   quoteCallouts[i] = { ...quoteCallouts[i], attribution: e.target.value }
 
-                  setProject({ ...project, visuals: { ...project.visuals, quoteCallouts } })
-                }}
+                  setProject({ ...project, visuals: { ...project.visuals, quoteCallouts })
+                }
                 placeholder="Attribution"
               />
               <div />
             </div>
-          ))}
+          )}
         </div>
       </section>
     </div>
   )
-}

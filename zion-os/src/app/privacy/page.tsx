@@ -209,4 +209,3 @@ function PrivacyPage() {
         </div>;
       </section>;
     </div>);
-}

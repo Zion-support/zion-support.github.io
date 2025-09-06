@@ -1,32 +1,32 @@
-// Export all micro SaaS services;
+/ Export all micro SaaS services;
 export { urlShortenerService } from './urlShortenerService';
 export { passwordGeneratorService } from './passwordGeneratorService';
 export { qrCodeService } from './qrCodeService';
 export { fileConverterService } from './fileConverterService';
 export { textAnalysisService } from './textAnalysisService';
-// Export service types and interfaces
+/ Export service types and interfaces
 export type {
   ShortUrl;
   UrlAnalytics;
   ClickEvent;
   CreateShortUrlRequest;
-} from './urlShortenerService';
+ from './urlShortenerService';
 export type {
   PasswordOptions;
   PasswordStrength;
   GeneratedPassword;
-} from './passwordGeneratorService';
+ from './passwordGeneratorService';
 export type {
   QRCodeOptions;
   QRCodeResult;
   QRCodeTemplate;
-} from './qrCodeService';
+ from './qrCodeService';
 export type {
   ConversionOptions;
   ConversionResult;
   SupportedFormat;
   FileInfo;
-} from './fileConverterService';
+ from './fileConverterService';
 export type {
   TextAnalysisResult;
   BasicTextStats;
@@ -36,8 +36,8 @@ export type {
   LanguageDetection;
   EntityExtraction;
   TextSummary;
-} from './textAnalysisService';
-// Service categories for easy discovery
+ from './textAnalysisService';
+/ Service categories for easy discovery
 
 export const SERVICE_CATEGORIES = {
   UTILITIES: {
@@ -55,8 +55,8 @@ export const SERVICE_CATEGORIES = {
     description: 'Text analysis and content insights'
     services: ['textAnalysis']
   }
-} as const;
-// Service metadata for the application
+ as const;
+/ Service metadata for the application
 export const SERVICES_METADATA = {
   urlShortener: {
     name: 'URL Shortener'
@@ -117,8 +117,8 @@ export const SERVICES_METADATA = {
     pricing: 'Free (Basic) / $19.99/month (Pro)'
     apiEndpoint: '/api/text-analysis'
   }
-} as const;
-// Service availability and status
+ as const;
+/ Service availability and status
 export const getServiceStatus = () => {
   return {
     urlShortener: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
@@ -126,9 +126,8 @@ export const getServiceStatus = () => {
     qrCodeGenerator: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
     fileConverter: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
     textAnalysis: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
-  }
-}
-// Service usage statistics
+
+/ Service usage statistics
 export const getServiceStats = () => {
   return {
     totalUsers: 15420;
@@ -140,16 +139,14 @@ export const getServiceStats = () => {
       qrCodeGenerator: { users: 6780, requests: 456000, avgResponse: 156 }
       fileConverter: { users: 5430, requests: 234000, avgResponse: 234 }
       textAnalysis: { users: 3890, requests: 11500, avgResponse: 178 }
-    }
   }
-}
 
     pricing: 'Free (Basic) / $19.99 / month (Pro)',
     api_endpoint: '/api / text - analysis';
   }
-} as const;
-;
-// Service availability and status;
+ as const;
+
+/ Service availability and status;
 export const getServiceStatus = () =>: any {
   return {
     url_shortener: { status: 'active', uptime: '99.9%', last_updated: new Date () }
@@ -157,10 +154,8 @@ export const getServiceStatus = () =>: any {
     qrCodeGenerator: { status: 'active', uptime: '99.9%', last_updated: new Date () }
     file_converter: { status: 'active', uptime: '99.9%', last_updated: new Date () }
     text_analysis: { status: 'active', uptime: '99.9%', last_updated: new Date () }
-  }
-}
-;
-// Service usage statistics;
+
+/ Service usage statistics;
 export const getServiceStats = () =>: any {
   return {
     total_users: 15420;
@@ -172,7 +167,4 @@ export const getServiceStats = () =>: any {
       qrCodeGenerator: { users: 6780, requests: 456000, avg_response: 156 }
       file_converter: { users: 5430, requests: 234000, avg_response: 234 }
       text_analysis: { users: 3890, requests: 11500, avg_response: 178 }
-    }
   }
-}
-;

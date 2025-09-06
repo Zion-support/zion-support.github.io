@@ -1,16 +1,16 @@
 
-// Security middleware
+/ Security middleware
 import { NextResponse } from 'next/server';
 import { getSecurityHeaders } from '../utils/security-headers';
 export function securityMiddleware(request) {
   const response = NextResponse.next();
   // Add security headers
   const headers = getSecurityHeaders();
-  headers && headers.forEach(({ key, value }) => {
+  headers && headers.forEach({ key, value }) => {
     response && response.headers.set(key, value);
   });
   // Add HSTS header for HTTPS
-  if (request.nextUrl.protocol === 'https:') {
+  if (request.nextUrl.protocol = = 'https:') {
     response.headers.set(
       'Strict-Transport-Security'
       'max-age=31536000; includeSubDomains; preload'
@@ -25,33 +25,32 @@ export function securityHeaders(req, res, next) {
     'Referrer-Policy': 'strict-origin-when-cross-origin'
     'Permissions-Policy': 'camera=(), microphone=(), geolocation=()'
     'Strict-Transport-Security': 'max-age=31536000; includeSubDomains'
-  }).forEach(([key, value]) => {
+  }).forEach([key, value]) => {
     res && res.setHeader(key, value);
   });
   next();
-}
-}
-// Security middleware;
+
+/ Security middleware;
 import { NextResponse } from 'next / server';
 import { getSecurityHeaders } from '../utils / security - headers';
-;
+
 export /**
  * security_middleware - Function description
  */
 function security_middleware() {
   const response = NextResponse.next ();
-;
+
   // Add security headers;
   const headers = getSecurityHeaders ();
-  headers.for_each (({ key, value }) => {
+  headers.for_each ({ key, value }) => {
     response.headers.set (key, value);
   });
-;
+
   // Add HSTS header for HTTPS;
   // Check condition
 if ( {) {
   $2
-}
+
     response.headers.set (
       'Strict - Transport - Security',
       'max - age = 31536000; includeSubDomains; preload');
@@ -68,9 +67,8 @@ function security_headers() {
     'Referrer - Policy': 'strict - origin - when - cross - origin',
     'Permissions - Policy': 'camera=(), microphone=(), geolocation=()',
     'Strict - Transport - Security': 'max - age = 31536000; includeSubDomains';
-  }).for_each (([key, value]) => {
+  }).for_each ([key, value]) => {
     res.set_header (key, value);
   });
-;
+
   next ();
-}

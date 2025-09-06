@@ -6,14 +6,14 @@ import {
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield,
   Microscope, DollarSign, Home, Users, Briefcase,
   BookOpen, MessageCircle 
-} from 'lucide-react',
+ from 'lucide-react',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-},
+,
 const _serviceCategories = [
   {_title: 'AI & Machine Learning 2026', _icon: Brain, _color: 'from-purple-600 to-pink-600', _description: 'Next-generation AI solutions', _services: [
       { name: 'AI Consciousness Simulation', _href: '/ai-consciousness-simulation-platform', _description: 'Simulate human consciousness', _price: '$4, _999/month'},
@@ -57,7 +57,7 @@ const _serviceCategories = [
       {_name: 'AI Business Intelligence', _href: '/autonomous-business-intelligence-network', _description: 'Self-evolving BI', _price: '$1, _299/month'}
     ]
   }
-],
+,
 
 const companyLinks = [
   { name: 'Home', href: '/', icon: Home },
@@ -70,14 +70,14 @@ const companyLinks = [
   { name: 'Blog & Resources', href: '/blog', icon: BookOpen },
   { name: 'Careers', href: '/careers', icon: Users },
   { name: 'Contact', href: '/contact', icon: MessageCircle }
-],
+,
 
 const UltraAdvancedNavigation2026 = () => {
   const [isOpen, setIsOpen] = useState(false),
   const [isScrolled, setIsScrolled] = useState(false),
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
 
-  useEffect(() => {
+  useEffect() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20)
     },
@@ -148,26 +148,26 @@ const UltraAdvancedNavigation2026 = () => {
 
             {/* Desktop Navigation */}
             <div className=&quot;hidden lg:flex items-center space-x-8&quot;>
-              {navigationItems.map((item) => (
+              {navigationItems.map(item) => (
                 <div key={item.name} className=&quot;relative group&quot;>
                   <button
-                    onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)}
+                    onClick={() => setActiveDropdown(activeDropdown = = item.name ? null : item.name)}
                     className=&quot;flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2&quot;
                   >
                     <item.icon className=&quot;w-5 h-5&quot; />
                     <span className=&quot;font-medium&quot;>{item.name}</span>
                     <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                      activeDropdown === item.name ? 'rotate-180' : ''
+                      activeDropdown = = item.name ? 'rotate-180' : ''
                     }`} />                  </button>
 
                   {_/* Dropdown Menu */}
                   <AnimatePresence>
-                    {activeDropdown === item.name && (
+                    {activeDropdown = = item.name && (
                       <motion.div
-                        initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                        animate={{ opacity: 1, y: 0, scale: 1 }}
-                        exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                        transition={{ duration: 0.2 }}
+                        initial={ opacity: 0, y: 10, scale: 0.95 }
+                        animate={ opacity: 1, y: 0, scale: 1 }
+                        exit={ opacity: 0, y: 10, scale: 0.95 }
+                        transition={ duration: 0.2 }
                         className=&quot;absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-xl border border-purple-500/20 rounded-2xl shadow-2xl overflow-hidden&quot;
                       >
                         <div className=&quot;p-4&quot;>
@@ -180,9 +180,9 @@ const UltraAdvancedNavigation2026 = () => {
                               <p className=&quot;text-gray-400 text-sm&quot;>{item.description}</p>
                             </div>
                           </div>
-                          
+
                           <div className=&quot;space-y-2&quot;>
-                            {item.subItems.map((subItem) => (
+                            {item.subItems.map(subItem) => (
                               <Link
                                 key={subItem.name}
                                 href={subItem.href}
@@ -195,9 +195,8 @@ const UltraAdvancedNavigation2026 = () => {
                                 <div className=&quot;text-gray-400 text-sm group-hover:text-gray-300 transition-colors duration-200&quot;>
                                   {subItem.description}                                </div>
                               </a>
-                            ))}
+                            )}
                           </div>;
-                          ;
                           <Link;
                             href={item.href}
                             className=&quot;block w-full mt-4 p-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200&quot;
@@ -209,8 +208,8 @@ const UltraAdvancedNavigation2026 = () => {
                     )}
                   </AnimatePresence>;
                 </div>;
-              ))}
-;
+              )}
+
               {/* Quick Links */}
               <div className=&quot;flex items-center space-x-6&quot;>
                 <Link href=&quot;/services&quot; className=&quot;text-gray-300 hover:text-white transition-colors duration-200 font-medium&quot;>                  All Services
@@ -251,18 +250,18 @@ const UltraAdvancedNavigation2026 = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
+            initial={ opacity: 0 }
+            animate={ opacity: 1 }
+            exit={ opacity: 0 }
+            transition={ duration: 0.2 }
             className=&quot;fixed inset-0 bg-black/80 backdrop-blur-sm z-40 lg:hidden&quot;
             onClick={() => setIsOpen(false)}
           >
             <motion.div
-              initial={{ x: '100%' }}
-              animate={{ x: 0 }}
-              exit={{ x: '100%' }}
-              transition={{ duration: 0.3, ease: 'easeOut' }}
+              initial={ x: '100%' }
+              animate={ x: 0 }
+              exit={ x: '100%' }
+              transition={ duration: 0.3, ease: 'easeOut' }
               className=&quot;absolute right-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-purple-500/20 p-6 overflow-y-auto&quot;
               onClick={(e) => e.stopPropagation()}
             >;
@@ -282,7 +281,7 @@ const UltraAdvancedNavigation2026 = () => {
 
               {/* Mobile Navigation Items */}
               <div className=&quot;space-y-4&quot;>
-                {navigationItems.map((item) => (
+                {navigationItems.map(item) => (
                   <div key={item.name} className=&quot;border-b border-gray-700/50 pb-4&quot;>
                     <Link
                       href={item.href}
@@ -294,10 +293,10 @@ const UltraAdvancedNavigation2026 = () => {
                       </div>
                       <span className=&quot;font-medium&quot;>{item.name}</span>
                     </a>
-                    
+
                     {/* Mobile Sub-items */}
                     <div className=&quot;mt-3 ml-11 space-y-2&quot;>
-                      {item.subItems.slice(0, 3).map((subItem) => (
+                      {item.subItems.slice(0, 3).map(subItem) => (
                         <Link
                           key={subItem.name}
                           href={subItem.href}
@@ -305,11 +304,11 @@ const UltraAdvancedNavigation2026 = () => {
                           onClick={() => setIsOpen(false)}
                         >;
                           {subItem.name}
-                        </a>                      ))}
+                        </a>                      )}
                     </div>
                   </div>
-                ))}
-;
+                )}
+
                 {/* Quick Links */}
                 <div className=&quot;space-y-3 pt-4&quot;>
                   <Link
@@ -362,10 +361,9 @@ const UltraAdvancedNavigation2026 = () => {
           </motion.div>
         )}
       </AnimatePresence>;
-;
+
       {/* Spacer for fixed navigation */}
       <div className=&quot;h-20&quot;></div>    </>
   )
-}
-;
+
 export default UltraAdvancedNavigation2026,

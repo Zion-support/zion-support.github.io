@@ -7,11 +7,11 @@ const AllTheProviders = ({ children }: { children: React.ReactNode }) => {
       {children}
     </ThemeProvider>
   );
-}
+
 const customRender = (
   ui: React.ReactElement
   options?: Omit<RenderOptions, 'wrapper'>
-) => render(ui, { wrapper: AllTheProviders, ...options });
+ => render(ui, { wrapper: AllTheProviders, ...options });
 export * from '@testing-library/react';
 export { customRender as render }
 export const mockNextRouter = () => ({
@@ -31,7 +31,7 @@ export const mockNextRouter = () => ({
   defaultLocale: 'en'
   domainLocales: []
   isPreview: false
-});
+);
 export const createMockProps = (overrides = {}) => ({
   ...overrides
-});
+);

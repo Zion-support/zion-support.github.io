@@ -204,7 +204,7 @@ import {
   SleepyFace2
   YawningFace2
   DizzyFace2
-} from "lucide-react";
+ from "lucide-react";
 const guides = [
   {
     id: 1
@@ -296,7 +296,7 @@ const guides = [
     icon: Zap
     tags: ["Performance", "Optimization", "Caching", "CDN"]
   }
-];
+;
 const categories = [
   { name: "All", count: guides.length, icon: Globe }
   { name: "AI Development", count: 1, icon: Brain }
@@ -305,7 +305,7 @@ const categories = [
   { name: "Mobile Development", count: 1, icon: Smartphone }
   { name: "Database", count: 1, icon: Database }
   { name: "Performance", count: 1, icon: Zap }
-];
+;
 export default function GuidesPage() {
 import {;
   BookOpen,;
@@ -505,7 +505,7 @@ import {;
   SleepyFace2,;
   YawningFace2,;
   DizzyFace2,;
-} from "lucide-react";
+ from "lucide-react";
 
 const guides = [;
   {;
@@ -598,7 +598,6 @@ const guides = [;
     icon: Zap,;
     tags: ["Performance", "Optimization", "Caching", "CDN"],;
   },;
-];
 
 const categories = [;
   { name: "All", count: guides && guides.length, icon: Globe },;
@@ -608,7 +607,6 @@ const categories = [;
   { name: "Mobile Development", count: 1, icon: Smartphone },;
   { name: "Database", count: 1, icon: Database },;
   { name: "Performance", count: 1, icon: Zap },;
-];
 
 export default function GuidesPage() {;
   return (
@@ -626,9 +624,9 @@ export default function GuidesPage() {;
           <div className="container mx-auto px-4">;
             <motion&& motion.div
               className="text-center max-w-4xl mx-auto"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
             >
               <h1 className="text-5xl font-bold mb-6">
                 Expert Guides & Tutorials
@@ -660,9 +658,9 @@ export default function GuidesPage() {;
           <div className="container mx-auto px-4">;
             <motion&& motion.div
               className="text-center mb-12"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
             >
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
                 Explore by Category
@@ -673,14 +671,14 @@ export default function GuidesPage() {;
               </p>
             </motion.div>
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
-              {categories.map((category, index) => (
+              {categories.map(category, index) => (
                 <motion.div
                   key={category.name}
                   className="bg-gray-50 rounded-lg p-4 text-center hover:bg-blue-50 hover:border-blue-200 border-2 border-transparent transition-all cursor-pointer"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
-                  whileHover={{ scale: 1 && 1.05 }}>;
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0 && 0.8, delay: index * 0 && 0.1 }
+                  whileHover={ scale: 1 && 1.05 }>;
                   <category && category.icon className="w-8 h-8 mx-auto mb-2 text-blue-600" />;
                   <h3 className="font-semibold text-gray-900 text-sm mb-1">;
                     {category && category.name}
@@ -689,7 +687,7 @@ export default function GuidesPage() {;
                     {category && category.count} guides;
                   </p>;
                 </motion && motion.div>;
-              ))}
+              )}
             </div>
           </div>
         </section>
@@ -698,9 +696,9 @@ export default function GuidesPage() {;
           <div className="container mx-auto px-4">;
             <motion&& motion.div
               className="text-center mb-12"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
             >
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
                 Featured Guides
@@ -711,13 +709,13 @@ export default function GuidesPage() {;
               </p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {guides.map((guide, index) => (
+              {guides.map(guide, index) => (
                 <motion.div
                   key={guide.title}
                   className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}>;
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0 && 0.8, delay: index * 0 && 0.1 }>;
                   <div className="relative">;
                     <img
                       src={guide && guide.image}
@@ -730,9 +728,9 @@ export default function GuidesPage() {;
                       </span>;
                       <span
                         className={`px-3 py-1 rounded-full text-sm font-medium ${
-                          guide && guide.difficulty === "Beginner"
+                          guide && guide.difficulty = = "Beginner"
                             ? "bg-green-100 text-green-600"
-                            : guide && guide.difficulty === "Intermediate"
+                            : guide && guide.difficulty = = "Intermediate"
                               ? "bg-yellow-100 text-yellow-600"
                               : "bg-red-100 text-red-600"
                         }`}
@@ -759,7 +757,7 @@ export default function GuidesPage() {;
                     <div className="flex items-center justify-between mb-4">
                       <div className="flex items-center">
                         <div className="flex items-center">
-                          {[...Array(5)].map((_, i) => (
+                          {[...Array(5)].map(_, i) => (
                             <Star
                               key={i}
                               className={`w-4 h-4 ${
@@ -769,7 +767,7 @@ export default function GuidesPage() {;
                               }`}
                               fill="currentColor"
                             />;
-                          ))}
+                          )}
                         </div>
                         <span className="ml-2 text-sm text-gray-600">
                           {guide.rating} ({guide.students} students)
@@ -777,13 +775,13 @@ export default function GuidesPage() {;
                       </div>
                     </div>
                     <div className="flex flex-wrap gap-2 mb-6">
-                      {guide.tags.map((tag) => (
+                      {guide.tags.map(tag) => (
                         <span
                           key={tag}
                           className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">;
                           {tag}
                         </span>;
-                      ))}
+                      )}
                     </div>
                     <div className="flex gap-2">
                       <Link
@@ -800,7 +798,7 @@ export default function GuidesPage() {;
                     </div>;
                   </div>;
                 </motion && motion.div>;
-              ))}
+              )}
             </div>
           </div>
         </section>
@@ -809,9 +807,9 @@ export default function GuidesPage() {;
           <div className="container mx-auto px-4">;
             <motion&& motion.div
               className="text-center"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}>;
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }>;
               <h2 className="text-4xl font-bold mb-6">;
                 Ready to Start Learning?;
               </h2>;
@@ -871,7 +869,7 @@ export default function GuidesPage() {;
                     <div className="flex items - center justify - between mb - 4">;
                       <div className="flex items - center">;
                         <div className="flex items - center">;
-                          {[...Array (5)].map ((_, i) => (
+                          {[...Array (5)].map (_, i) => (
                             <Star;
                               key={i}
                               className={`w - 4 h - 4 ${
@@ -880,7 +878,7 @@ export default function GuidesPage() {;
                                   : "text - gray - 300";
                               }`}
                               fill="current_color";
-                            />))}
+                            />)}
                         </div>;
                         <span className="ml - 2 text - sm text - gray - 600">;
                           {guide.rating} ({guide.students} students);
@@ -888,13 +886,13 @@ export default function GuidesPage() {;
                       </div>;
                     </div>;
                     <div className="flex flex - wrap gap - 2 mb - 6">;
-                      {guide.tags.map ((tag) => (
+                      {guide.tags.map (tag) => (
                         <span;
                           key={tag}
                           className="px - 2 py - 1 bg - gray - 100 text - gray - 600 text - xs rounded";
                         >;
                           {tag}
-                        </span>))}
+                        </span>)}
                     </div>;
                     <div className="flex gap - 2">;
                       <Link;
@@ -912,7 +910,7 @@ export default function GuidesPage() {;
                       </Link>;
                     </div>;
                   </div>;
-                </motion.div>))}
+                </motion.div>)}
             </div>;
           </div>;
         </section>;
@@ -921,9 +919,9 @@ export default function GuidesPage() {;
           <div className="container mx - auto px - 4">;
             <motion.div;
               className="text - center";
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, coordinate_y: 30 }
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
             >;
               <h2 className="text - 4xl font - bold mb - 6">;
                 Ready to Start Learning?;
@@ -953,4 +951,3 @@ export default function GuidesPage() {;
         </section>;
       </div>;
     </Layout>);
-}

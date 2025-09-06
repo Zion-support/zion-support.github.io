@@ -6,7 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',
 import { Loader2, Sparkles, Check } from 'lucide-react',;
 import { Badge } from '@/components/ui/badge',;
 import { format, parseISO } from 'date-fns',;
-;
+
 interface MilestoneSuggestionsProps {;
   projectName:string,;
   scopeSummary:string,;
@@ -14,8 +14,7 @@ interface MilestoneSuggestionsProps {;
   endDate?:Date,;
   projectType:string,;
   onMilestonesGenerated?:(milestones:GeneratedMilestone[]) => void;
-}
-;
+
 export function MilestoneSuggestions({;
   projectName,;
   scopeSummary,;
@@ -23,10 +22,10 @@ export function MilestoneSuggestions({;
   endDate,;
   projectType,;
   onMilestonesGenerated;
-} MilestoneSuggestionsProps) {;
+ MilestoneSuggestionsProps) {;
   const { generateMilestones, generatedMilestones, isGenerating } = useMilestoneGenerator(),;
   const [showSuggestions, setShowSuggestions] = useState(false),;
-;
+
   const handleGenerateMilestones = async () => {;
     const input:MilestoneInput = {;
       scope:`${projectName} ${scopeSummary}`,;
@@ -34,25 +33,22 @@ export function MilestoneSuggestions({;
       endDate:endDate ? endDate.toISOString() :null,;
       projectType:projectType || "Other";
     },;
-;
+
     const milestones = await generateMilestones(input),;
-    ;
     if (milestones.length > 0) {;
       setShowSuggestions(true),;
       if (onMilestonesGenerated) {;
         onMilestonesGenerated(milestones),;
       }
-    }
   },;
-;
+
   const formatDate = (dateString:string) => {;
     try {;
       return format(parseISO(dateString), 'MMM dd, yyyy'),;
     } catch (error) {;
       return dateString,;
-    }
-  },;
-;
+    },;
+
   return (;
     <div className="space-y-4">;
       {!showSuggestions && (;
@@ -74,7 +70,7 @@ export function MilestoneSuggestions({;
             </>;          )}
         </Button>;
       )}
-;
+
       {showSuggestions && generatedMilestones.length > 0 && (;
         <Card>;
           <CardHeader className="pb-3">;
@@ -85,7 +81,7 @@ export function MilestoneSuggestions({;
           </CardHeader>;
           <CardContent>;
             <div className="space-y-3">;
-              {generatedMilestones.map((milestone, index) => (;
+              {generatedMilestones.map(milestone, index) => (;
                 <div key={index} className="p-3 border rounded-lg bg-muted/10">;
                   <div className="flex items-center justify-between mb-1">;
                     <div className="font-medium flex items-center">;
@@ -103,8 +99,8 @@ export function MilestoneSuggestions({;
                     <span>Estimated:{milestone.estimatedHours} hours</span>;
                   </div>;
                 </div>;
-              ))}
-;
+              )}
+
               <div className="flex items-center justify-center mt-4 text-sm text-muted-foreground">;
                 <Check className="h-4 w-4 mr-1 text-green-500" />;
                 These milestones will be added to your contract;
@@ -118,19 +114,16 @@ export function MilestoneSuggestions({;
   const input: MilestoneInput = {
   scope: `$ {
   projectName 
-}: $ {
+: $ {
   scopeSummary 
-}`;
+`;
 startDate: startDate.toISOString ();
 endDate: endDate ? endDate.toISOString () : null;
-}
-};
 <Button variant="outline" onClick= {
   handleGenerateMilestones 
-}> {
+> {
   isGenerating ? (<> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Generating milestones... </>) : (<> <Sparkles className="mr-2 h-4 w-4" /> Suggest Project Milestones with AI </>) 
-}</Button>) 
-}AI-Suggested Milestones </CardTitle> </CardHeader> <CardContent> </div> </div>) ) 
-}<div className="flex items-center justify-center mt-4 text-sm text-muted-foreground" > <Check className="h-4 w-4 mr-1 text-green-500" /> These milestones will be added to your contract </div> </div> </CardContent> </Card>) 
-}</div>) 
-}
+</Button>) 
+AI-Suggested Milestones </CardTitle> </CardHeader> <CardContent></div> </div>) 
+<div className="flex items-center justify-center mt-4 text-sm text-muted-foreground" > <Check className="h-4 w-4 mr-1 text-green-500" /> These milestones will be added to your contract </div> </div> </CardContent> </Card>) 
+</div>) 

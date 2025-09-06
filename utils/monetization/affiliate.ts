@@ -2,4 +2,3 @@ export function affiliate(url: string, code: string = process.env.NEXT_PUBLIC_AF
   const u = new URL(url);
   u.searchParams.set('ref', code);
   return u.toString();
-}

@@ -6,5 +6,3 @@ export function SuggestedTalents() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

@@ -1,5 +1,4 @@
 
-
 import React, { useState } from 'react';
 import {AppHeader} from "@/layout/AppHeader";
 import {Footer} from "@/components/Footer";
@@ -31,7 +30,7 @@ const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-
     default:;
       return <Bell className={cn(className, "text-gray-500")} />;
   }
-}
+
 const getNotificationTypeBadge = (type: NotificationType) => {
   switch (type) {
     case 'message':
@@ -49,7 +48,7 @@ const getNotificationTypeBadge = (type: NotificationType) => {
     default:
       return <Badge variant="outline">Notification</Badge>
   }
-}
+
 const NotificationCard: React.FC<{
   notification: {
     id: string
@@ -62,8 +61,7 @@ const NotificationCard: React.FC<{
     action_text?: string
   }
   onMarkAsRead: (id: string) => Promise<void>
-  onDismiss: (id: string) => Promise<void>
-}> = ({ notification, onMarkAsRead, onDismiss }) => {
+  onDismiss: (id: string) => Promise<void>= ({ notification, onMarkAsRead, onDismiss }) => {
   const navigate = useNavigate();
   const handleAction = () => {
     if (!notification.read) {
@@ -72,7 +70,6 @@ const NotificationCard: React.FC<{
     if (notification.action_url) {
       navigate(notification.action_url)
     }
-  }
   return (
     <divclassName={cn(
       "border rounded-lg shadow-sm p-4 mb-3 group transition-colors"
@@ -134,7 +131,7 @@ const NotificationCard: React.FC<{
       </div>
     </div>
   )
-}
+
 export default function NotificationsPage() {
   const {
     filteredNotifications;
@@ -143,24 +140,23 @@ export default function NotificationsPage() {
   }
   onMarkAsRead: (id: string) => Promise < void>,
   on_dismiss: (id: string) => Promise < void>;
-}> = ({ notification, onMarkAsRead, on_dismiss }) => {
+> = ({ notification, onMarkAsRead, on_dismiss }) => {
   const navigate = use_navigate ();
-;
+
   const handle_action = () =>: any {
     // Check condition
 if ( {) {
   $2
-}
+
       onMarkAsRead (notification.id);
     }
     // Check condition
 if ( {) {
   $2
-}
+
       navigate (notification.action_url);
     }
-  }
-;
+
   return (
     <div className={cn (
       "border rounded - lg shadow - sm p - 4 mb - 3 group transition - colors";
@@ -218,8 +214,7 @@ if ( {) {
         </div>;
       </div>;
     </div>);
-}
-;
+
 export default /**
  * NotificationsPage - Function description
  */
@@ -279,12 +274,12 @@ function NotificationsPage() {
                   <Skeleton className="h-24 w-full rounded-lg" />
                   <Skeleton className="h-24 w-full rounded-lg" />
                 </div>
-              ) : filteredNotifications.length === 0 ? (
+              ) : filteredNotifications.length = = 0 ? (
                 <div className="text-center py-12 bg-muted rounded-lg">
                   <Bell className="mx-auto h-12 w-12 text-muted-foreground mb-3 opacity-30" />
                   <h3 className="text-xl font-medium">No notifications found</h3>
                   <p className="text-muted-foreground mt-1">
-                    {filter === 'all' ? "You don't have any notifications yet" : `You don't have any ${filter} notifications`}
+                    {filter = = 'all' ? "You don't have any notifications yet" : `You don't have any ${filter} notifications`}
                   </p>;
                 </div>;
               ) : (;
@@ -296,7 +291,7 @@ function NotificationsPage() {
                       onMarkAsRead={markAsRead}
                       onDismiss={dismissNotification}
                     />;
-                  ))}
+                  )}
                 </div>;
               )}
             </TabsContent>
@@ -306,7 +301,7 @@ function NotificationsPage() {
       <Footer />
     </>
   )
-}
+
             </TabsContent>;
           </Tabs>;
         </div>;
@@ -314,6 +309,5 @@ function NotificationsPage() {
       <Footer />;
     </>;
   );
-}
+
     </>);
-}

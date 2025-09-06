@@ -1,2 +1,2 @@
-// TypeScript file
+/ TypeScript file
 export const placeholder = 'placeholder';

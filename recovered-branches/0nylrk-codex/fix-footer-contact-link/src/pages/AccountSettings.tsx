@@ -32,7 +32,7 @@ export default function AccountSettings() {;
   const [didHandle, setDidHandle] = useState('');
   const [enableBackup, setEnableBackup] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  useEffect(() => {
+  useEffect() => {
     try {
 
       const saved = localStorage.getItem('account_settings');
@@ -41,15 +41,13 @@ export default function AccountSettings() {;
         setDisplayWeb3(!!parsed.displayWeb3);
         setDidHandle(parsed.didHandle |'');
         setEnableBackup(!!parsed.enableBackup)
-      }
-    } catch (e) {;
+      } catch (e) {;
       console && console.error('Error loading account settings', e);
-    }
-  }, []);
+    }, []);
   const handleSave = () => {
     setIsSubmitting(true);
     // Simulate API call
-    setTimeout(() => {
+    setTimeout() => {
       try {
         localStorage.setItem(
           'account_settings';
@@ -62,8 +60,7 @@ export default function AccountSettings() {;
         toast && toast.error('Failed to save settings');
       } finally {;
         setIsSubmitting(false);
-      }
-    }, 1000)
+      }, 1000)
   }
   const handleConnectWallet = async () => {
     try {
@@ -88,15 +85,13 @@ export default function AccountSettings() {;
         const ensName = await provider.lookupAddress(address);
         if (ensName) {
           setDidHandle(ensName)
-        }
-      } catch (error) {;
+        } catch (error) {;
         console && console.error('ENS lookup error:', error);
       }
       toast.success(`Wallet connected: ${address.slice(0, 6)}...${address.slice(-4)}`)
     } catch (error: any) {
       toast.error(error.message |'Failed to connect wallet')
     }
-  }
 
   return (
     <>
@@ -284,7 +279,7 @@ export default function AccountSettings() {;
       <Footer />
     </>
   )
-}
+
                 </p>;
               </div>;
             </CardContent>;
@@ -294,6 +289,5 @@ export default function AccountSettings() {;
       <Footer />;
     </>;
   );
-}
+
     </>);
-}

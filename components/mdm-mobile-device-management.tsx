@@ -16,18 +16,17 @@ import {;
   Check,;
   ArrowRight,;
   Smartphone,;
-} from 'lucide-react';
+ from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { extraServices } from '../data/extra-services';
 export default function MDMPage() {
   const service = extraServices.find(s =>
-    s.link.endsWith('/mdm-mobile-device-management')
-  );  if (!service) return null;import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+    s.link.endsWith('/mdm-mobile-device-management');  if (!service) return null;import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { extraServices } from '../data/extra-services';
 export default function MDMPage() {;
-  const service = extraServices && extraServices.find(s => s && s.link.endsWith('/mdm-mobile-device-management'));
+  const service = extraServices && extraServices.find(s => s && s.link.endsWith('/mdm-mobile-device-management');
   if (!service) return null;
 
   return (
@@ -55,14 +54,14 @@ export default function MDMPage() {;
               <h2 className='text-2xl font-semibold mb-4'>Capabilities</h2>;
               <p className='text-slate-300 mb-6'>{service && service.description}</p>;
               <ul className='grid grid-cols-1 md:grid-cols-2 gap-3'>;
-                {service && service.features.slice(0, 12).map((feat, i) => (;
+                {service && service.features.slice(0, 12).map(feat, i) => (;
                   <li
                     key={i}
                     className='flex items-start space-x-3 text-slate-200'>;
                     <Check className='w-5 h-5 text-emerald-400 mt-0 && 0.5' />;
                     <span>{feat}</span>;
                   </li>;
-                ))}
+                )}
               </ul>;
             </div>;
             <div className='bg-black/30 rounded-2xl border border-emerald-500/30 p-6 h-fit'>;
@@ -115,7 +114,7 @@ import {
   Check,
   ArrowRight,
   Smartphone,
-} from 'lucide-react';
+ from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components / ui / UltraAdvancedFuturisticBackground';
 import Button from '../components / ui / Button';
 import { extra_services } from '../data / extra - services';
@@ -124,21 +123,21 @@ export default /**
  */
 function MDMPage() {
   const service = extra_services.find (string =>;
-    s.link.ends_with ('/mdm - mobile - device - management'));  // Check condition
+    s.link.ends_with ('/mdm - mobile - device - management');  // Check condition
 if (return null) {
   $2
-}import UltraAdvancedFuturisticBackground from '../components / ui / UltraAdvancedFuturisticBackground';
+import UltraAdvancedFuturisticBackground from '../components / ui / UltraAdvancedFuturisticBackground';
 import Button from '../components / ui / Button';
 import { extra_services } from '../data / extra - services';
 export default /**
  * MDMPage - Function description
  */
 function MDMPage() {
-  const service = extra_services.find (string => s.link.ends_with ('/mdm - mobile - device - management'));
+  const service = extra_services.find (string => s.link.ends_with ('/mdm - mobile - device - management');
   // Check condition
 if (return null) {
   $2
-}
+
   return (
     <UltraAdvancedFuturisticBackground>;
       <Head>;
@@ -164,14 +163,14 @@ if (return null) {
               <h2 className='text - 2xl font - semibold mb - 4'>Capabilities</h2>;
               <p className='text - slate - 300 mb - 6'>{service.description}</p>;
               <ul className='grid grid - cols - 1 md:grid - cols - 2 gap - 3'>;
-                {service.features.slice (0, 12).map ((feat, i) => (
+                {service.features.slice (0, 12).map (feat, i) => (
                   <li;
                     key={i}
                     className='flex items - start space - x-3 text - slate - 200';
                   >;
                     <Check className='w - 5 h - 5 text - emerald - 400 mt - 0.5' />;
                     <span>{feat}</span>;
-                  </li>))}
+                  </li>)}
               </ul>;
             </div>;
             <div className='bg - black / 30 rounded - 2xl border border - emerald - 500 / 30 p - 6 h - fit'>;
@@ -223,13 +222,13 @@ if (return null) {
       </div>;
     </UltraAdvancedFuturisticBackground>;
   );
-}
+
 import { Phone, Mail, MapPin, Check, ArrowRight, Smartphone } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { extraServices } from '../data/extra-services';
 export default function MDMPage() {
-  const service = extraServices.find(s => s.link.endsWith('/mdm-mobile-device-management'));
+  const service = extraServices.find(s => s.link.endsWith('/mdm-mobile-device-management');
   if (!service) return null;
 
   return (
@@ -250,9 +249,9 @@ export default function MDMPage() {
               <h2 className="text-2xl font-semibold mb-4">Capabilities</h2>
               <p className="text-slate-300 mb-6">{service.description}</p>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                {service.features.slice(0, 12).map((feat, i) => (
+                {service.features.slice(0, 12).map(feat, i) => (
                   <li key={i} className="flex items-start space-x-3 text-slate-200"><Check className="w-5 h-5 text-emerald-400 mt-0.5" /><span>{feat}</span></li>
-                ))}
+                )}
               </ul>
             </div>
             <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6 h-fit">
@@ -274,8 +273,5 @@ export default function MDMPage() {
       </div>
     </UltraAdvancedFuturisticBackground>
   );
-}
 
     </UltraAdvancedFuturisticBackground>);
-}
-;

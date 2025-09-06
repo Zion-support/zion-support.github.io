@@ -6,5 +6,3 @@ export function InputFields() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

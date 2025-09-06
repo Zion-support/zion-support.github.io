@@ -6,5 +6,3 @@ export function HireRequestForm() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

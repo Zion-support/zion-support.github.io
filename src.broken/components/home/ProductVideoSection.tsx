@@ -6,5 +6,3 @@ export function ProductVideoSection() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

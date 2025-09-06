@@ -6,5 +6,3 @@ export function ApiDocsHub() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

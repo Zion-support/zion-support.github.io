@@ -17,7 +17,7 @@ export function AnalyticsSummary() {
         .select('count')
         .eq('event_typepage_view')
         .single();
-      if (pageViewsError && pageViewsError.code !== 'PGRST116') throw pageViewsError;
+      if (pageViewsError && pageViewsError.code != 'PGRST116') throw pageViewsError;
       // Get unique visitors (by counting distinct user IDs)
       const { data: uniqueVisitorsData, error: uniqueVisitorsError } = await supabase
         .from('analytics_events')
@@ -33,7 +33,7 @@ export function AnalyticsSummary() {
         .select('count')
         .eq('event_typeconversion')
         .single();
-      if (conversionsError && conversionsError.code !== 'PGRST116') throw conversionsError;
+      if (conversionsError && conversionsError.code != 'PGRST116') throw conversionsError;
       // Get most recent event to calculate "last updated"
       const { data: lastEventData, error: lastEventError } = await supabase
         .from('analytics_events')
@@ -41,18 +41,17 @@ export function AnalyticsSummary() {
         .order('created_at', { ascending: false })
         .limit(1)
         .single();
-      if (lastEventError && lastEventError.code !== 'PGRST116') throw lastEventError;
+      if (lastEventError && lastEventError.code != 'PGRST116') throw lastEventError;
       return {
         totalPageViews: pageViewsData?.count |0
         uniqueVisitors: uniqueUserIds.size |0
         conversions: conversionsData?.count |0
         lastUpdated: lastEventData?.created_at ? new Date(lastEventData.created_at) : null}
-    }
     refetchInterval: 300000, // Refetch every 5 minutes
   });
   // Calculate conversion rate
   const conversionRate = stats && stats.totalPageViews > 0
-    ? ((stats.conversions / stats.totalPageViews) * 100).toFixed(2)
+    ? (stats.conversions / stats.totalPageViews) * 100).toFixed(2)
     : '0.00';
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
@@ -92,13 +91,13 @@ export function AnalyticsSummary() {
       />;
     </div>;
   );
-}
+
 interface StatCardProps {
   title: string
   value: React.ReactNode
 
   icon: React.ReactNode
-}
+
 function StatCard({ title, value, icon }: StatCardProps) {
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light">;
@@ -119,13 +118,12 @@ function StatCard({ title, value, icon }: StatCardProps) {
       </CardContent>
     </Card>
   )
-}
+
             </h4>;
           </div>;
         </div>;
       </CardContent>;
     </Card>;
   );
-}
+
     </Card>);
-}

@@ -1,23 +1,23 @@
 import * as React from "react",;
 import { ChevronLeft, ChevronRight } from "lucide-react",;
 import { DayPicker } from "react-day-picker",;
-;
+
 import { cn } from "@/lib/utils",;
 import { buttonVariants } from "@/components/ui/button",;
-;
+
 export type CalendarProps = React.ComponentProps<typeof DayPicker>,;
-;
+
 function Calendar({;
   className,;
   classNames,;
   showOutsideDays = true,;
   ...props;
-} CalendarProps) {;
+ CalendarProps) {;
   return (;
     <DayPicker;
       showOutsideDays={showOutsideDays}
       className={cn("p-3", className)}
-      classNames={{;
+      classNames={;
         months:"flex flex-col sm:flex-row space-y-4 sm:space-x-4 sm:space-y-0",;
         month:"space-y-4",;
         caption:"flex justify-center pt-1 relative items-center",;
@@ -49,22 +49,22 @@ function Calendar({;
         day_range_middle:;
           "aria-selected:bg-accent aria-selected:text-accent-foreground",;
         day_hidden:"invisible",;
-        ...classNames}}
-      components={{;
+        ...classNames}
+      components={;
         IconLeft:({ ..._props }) => <ChevronLeft className="h-4 w-4" />,;
-        IconRight:({ ..._props }) => <ChevronRight className="h-4 w-4" />}}
+        IconRight:({ ..._props }) => <ChevronRight className="h-4 w-4" />}
       {...props}
     />;
   ),;
-}
+
 Calendar.displayName = "Calendar",;
-;
+
 export { Calendar },; export type CalendarProps = React.ComponentProps<typeof DayPicker>;
   className, classNames, showOutsideDays = true, ...props 
-}: CalendarProps) {
+: CalendarProps) {
   return (<DayPicker showOutsideDays= {
   showOutsideDays 
-});
+);
 nav button previous: "absolute left-1";
 nav button next: "absolute right-1";
 table: "w-full border-collapse space-y-1";
@@ -80,7 +80,6 @@ day outside: "day-outside text-muted-foreground opacity-50 aria-selected:bg-acce
 day disabled: "text-muted-foreground opacity-50";
 day range middle: "aria-selected:bg-accent aria-selected:text-accent-foreground";
 day hidden: "invisible";
-...classNames 
-}
-}/>) 
-}
+..classNames 
+
+/>) 

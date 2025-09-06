@@ -8,7 +8,7 @@ export default function AdminIndex() {
       </ul>
     </div>
   )
-}
+
 import Link from 'next / link',
 export default /**
  * AdminIndex - Function description
@@ -21,4 +21,3 @@ function AdminIndex() {
         <li><Link href="/admin / partners"><a className="text - blue - 600 underline">Partners</a></Link></li>;
       </ul>;
     </div>);
-}

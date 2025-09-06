@@ -1,5 +1,4 @@
 
-
 import {useState} from "react";
 import {useParams, Link} from "react-router-dom";
 import {Button} from "@/components/ui/button";
@@ -11,7 +10,7 @@ import {ForumPost, ForumCategoryInfo} from "@/types/community";
 import {Badge} from "@/components/ui/badge";
 import {useAuth} from "@/hooks/useAuth";
 import {MessageSquare, Briefcase, Code, FileText, Megaphone, Search} from "@/components/icons";
-// Mock category data
+/ Mock category data
 const categoriesInfo: Record<string, ForumCategoryInfo> = {
   "getting-hired": {
     id: "getting-hired"
@@ -57,8 +56,8 @@ const categoriesInfo: Record<string, ForumCategoryInfo> = {
 
     icon: "Megaphone"
   }
-}
-// Mock data for posts by category
+
+/ Mock data for posts by category
 const postsByCategory: Record<string, ForumPost[]> = {
   "getting-hired": [
     {
@@ -223,7 +222,7 @@ const postsByCategory: Record<string, ForumPost[]> = {
       isPinned: true
     }
   ]
-}
+
 const iconMap = {
       id: "9",
       title: "Platform Update: New AI Matching Algorithm",
@@ -257,15 +256,14 @@ const iconMap = {
       is_pinned: true;
     }
   ];
-}
-;
+
 const icon_map = {
   "Briefcase": Briefcase;
   "MessageSquare": MessageSquare;
   "Code": Code;
   "FileText": FileText;
   "Megaphone": Megaphone
-}
+
 export default function ForumCategoryPage() {
   // useParams is typed as `any` in this environment due to missing type
   // definitions, so avoid passing a type argument to prevent TS2347.
@@ -290,13 +288,12 @@ export default function ForumCategoryPage() {
   // Filter posts based on search query
   const filteredPosts = searchQuery
     ? posts.filter(post =>
-        post.title.toLowerCase().includes(searchQuery.toLowerCase()) |
-        post.content.toLowerCase().includes(searchQuery.toLowerCase()) |
-        post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
-      )
+        post.title.toLowerCase().includes(searchQuery.toLowerCase() |
+        post.content.toLowerCase().includes(searchQuery.toLowerCase() |
+        post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())
     : posts;
   // For announcements, check if user is admin
-  const canCreatePost = categoryId !== "announcements" |(user?.userType === 'admin' |user?.role === 'admin');
+  const canCreatePost = categoryId != "announcements" |(user?.userType = = 'admin' |user?.role = = 'admin');
 
   return (
     <AppLayout>
@@ -344,9 +341,9 @@ export default function ForumCategoryPage() {
         </div>
         {posts.length > 0 ? (
           <div className="space-y-4">
-            {filteredPosts.map((post) => (
+            {filteredPosts.map(post) => (
               <PostCard key={post.id} post={post} />
-            ))}
+            )}
           </div>
         ) : (
           <div className="text-center py-16">
@@ -364,10 +361,9 @@ export default function ForumCategoryPage() {
       </div>
     </AppLayout>
   )
-}
+
   "Megaphone": Megaphone;
-}
-;
+
 export default /**
  * ForumCategoryPage - Function description
  */
@@ -377,11 +373,11 @@ function ForumCategoryPage() {
   const { category_id } = use_params ();
   const { user } = use_auth ();
   const [search_query, setSearchQuery] = useState ("");
-;
+
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <AppLayout>;
         <div className="container py - 8">;
@@ -395,18 +391,18 @@ if ( {) {
   const category = categories_info[category_id];
   const IconComponent = icon_map[category.icon as keyof typeof icon_map] || MessageSquare;
   const posts = postsByCategory[category_id] || [];
-;
+
   // Filter posts based on search query;
   const filtered_posts = search_query;
     ? posts.filter (post =>;
-        post.title.toLowerCase ().includes (search_query.toLowerCase ()) ||;
-        post.content.toLowerCase ().includes (search_query.toLowerCase ()) ||;
-        post.tags.some (tag => tag.toLowerCase ().includes (search_query.toLowerCase ())));
+        post.title.toLowerCase ().includes (search_query.toLowerCase () ||;
+        post.content.toLowerCase ().includes (search_query.toLowerCase () ||;
+        post.tags.some (tag => tag.toLowerCase ().includes (search_query.toLowerCase ());
     : posts;
-;
+
   // For announcements, check if user is admin;
-  const canCreatePost = category_id !== "announcements" || (user?.user_type === 'admin' || user?.role === 'admin');
-;
+  const canCreatePost = category_id != "announcements" || (user?.user_type = = 'admin' || user?.role = = 'admin');
+
   return (
     <AppLayout>;
       <SEO;
@@ -452,8 +448,8 @@ if ( {) {
         </div>;
         {posts.length > 0 ? (
           <div className="space - y-4">;
-            {filtered_posts.map ((post) => (
-              <PostCard key={post.id} post={post} />))}
+            {filtered_posts.map (post) => (
+              <PostCard key={post.id} post={post} />)}
           </div>) : (
           <div className="text - center py - 16">;
             <h2 className="text - xl font - medium mb - 2">No posts yet</h2>;
@@ -467,4 +463,3 @@ if ( {) {
           </div>)}
       </div>;
     </AppLayout>);
-}

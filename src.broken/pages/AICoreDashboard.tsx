@@ -6,5 +6,3 @@ export function AICoreDashboard() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

@@ -6,5 +6,3 @@ export function DateDivider() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

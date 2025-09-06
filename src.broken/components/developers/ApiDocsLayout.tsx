@@ -6,5 +6,3 @@ export function ApiDocsLayout() {;
       <p>Component placeholder - needs implementation</p>;
     </div>;
   );
-}
-;

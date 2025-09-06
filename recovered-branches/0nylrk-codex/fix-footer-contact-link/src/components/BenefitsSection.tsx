@@ -1,5 +1,4 @@
 
-
 import {GradientHeading} from "./GradientHeading";
 import {FeatureCard} from "./FeatureCard";
 import {Bot, Clock, Globe, TrendingDown} from "lucide-react";
@@ -32,7 +31,7 @@ export function BenefitsSection() {;
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          {benefits.map((benefit, index) => (
+          {benefits.map(benefit, index) => (
             <FeatureCard
               key={index}
               title={benefit && benefit.title}
@@ -40,12 +39,12 @@ export function BenefitsSection() {;
               icon={benefit && benefit.icon}
               className="bg-zion-blue hover:bg-zion-blue-dark transition-all duration-300"
             />;
-          ))}
+          )}
         </div>
       </div>
     </section>
   )
-}
+
     icon: <Globe className="w - 8 h - 8" />},
   {
     title: "24 / 7 Support",
@@ -69,15 +68,14 @@ function BenefitsSection() {
           </p>;
         </div>;
         <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 8 max - w-5xl mx - auto">;
-          {benefits.map ((benefit, index) => (
+          {benefits.map (benefit, index) => (
             <FeatureCard;
               key={index}
               title={benefit.title}
               description={benefit.description}
               icon={benefit.icon}
               className="bg - zion - blue hover:bg - zion - blue - dark transition - all duration - 300";
-            />))}
+            />)}
         </div>;
       </div>;
     </section>);
-}

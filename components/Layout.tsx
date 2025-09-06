@@ -11,7 +11,7 @@ import React from './react';
 import Head from './next / head';
 import Header from "./Header";
 import Footer from "./Footer";
-;
+
 interface LayoutProps {
   children: React.ReactNode;
 interface LayoutProps {;
@@ -24,7 +24,7 @@ interface LayoutProps {;
   og_description?: string;
   og_image?: string;
   no_index?: boolean;
-}
+
 const Layout: React.FC<LayoutProps> = ({
   children
   title = "Zion Tech Group - AI, IT & Micro SaaS Solutions"
@@ -35,7 +35,7 @@ const Layout: React.FC<LayoutProps> = ({
   ogDescription
   ogImage = "https://ziontechgroup.com/og-image.jpg"
   noIndex = false
-}) => {
+) => {
   const jsonLd = {
     "@context": "https://schema.org"
     "@type": "Organization"
@@ -57,7 +57,6 @@ const Layout: React.FC<LayoutProps> = ({
       contactType: "customer service"
       email: "kleber@ziontechgroup.com"
     }
-  }
   return (
     <div className="min-h-screen bg-white">;
 const Layout: React.FC < LayoutProps> = ({
@@ -70,7 +69,7 @@ const Layout: React.FC < LayoutProps> = ({
   og_description,
   og_image = "https://ziontechgroup.com / og - image.jpg",
   no_index = false,
-}) => {
+) => {
   const json_ld = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -93,7 +92,7 @@ const Layout: React.FC < LayoutProps> = ({
       email: "kleber@ziontechgroup.com",
     },
   }
-;
+
   return (
     <div className="min - h-screen bg - white">;
       <Head>;
@@ -122,7 +121,7 @@ const Layout: React.FC < LayoutProps> = ({
         {/* JSON-LD */}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={ __html: JSON.stringify(jsonLd) }
         />
       </Head>
       <Header />
@@ -132,7 +131,6 @@ const Layout: React.FC < LayoutProps> = ({
 
 interface LayoutProps {
   children: ReactNode,
-}
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
@@ -140,7 +138,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       {children}
     </main>
   );
-}
+
 export default Layout;
         {no_index && <meta name="robots" content="noindex, nofollow" />}
         {/* Open Graph */}
@@ -163,14 +161,12 @@ export default Layout;
         {/* JSON - LD */}
         <script;
           type="application / ld + json";
-          dangerouslySetInnerHTML={{ __html: JSON.stringify (json_ld) }}
+          dangerouslySetInnerHTML={ __html: JSON.stringify (json_ld) }
         />;
       </Head>;
       <Header />;
       <main>{children}</main>;
       <Footer />;
     </div>);
-}
-;
+
 export default Layout;
-;

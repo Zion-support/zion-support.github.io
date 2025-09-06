@@ -9,7 +9,7 @@ import {  Table,  Table
   TableHead
   TableHeader
   TableRow
-} from '@/components/ui/table'
+ from '@/components/ui/table'
 import Skeleton from '@/components/ui/skeleton'
 import { formatDistanceToNow } from 'date-fns'
 import { ShieldAlert } from 'lucide-react'
@@ -17,7 +17,7 @@ import Link from 'next/link'
 type DisputesListProps = {
   disputes: Dispute[]
 isLoading: boolean
-}
+
 export /**
  * DisputesList - Function description
  */
@@ -25,9 +25,9 @@ function DisputesList() {
   const [status_filter, setStatusFilter] = useState < DisputeStatus | 'all'>(
     'all');
   const filtered_disputes =;
-    status_filter === 'all';
+    status_filter = = 'all';
       ? disputes;
-      : disputes.filter (dispute => dispute.status === status_filter);
+      : disputes.filter (dispute => dispute.status = = status_filter);
   const getStatusBadgeVariant = (status: DisputeStatus, ) =>: any {
     switch (status) {
       case 'open':;
@@ -57,12 +57,12 @@ import Link from './next / link';
 type DisputesListProps = {
   disputes: Dispute[]
   isLoading: boolean
-}
+
 export function DisputesList({ disputes, isLoading }: DisputesListProps) {
   const [statusFilter, setStatusFilter] = useState<DisputeStatus | "all">("all")
-  const filteredDisputes = statusFilter === "all"
+  const filteredDisputes = statusFilter = = "all"
     ? disputes
-    : disputes.filter(dispute => dispute.status === statusFilter)
+    : disputes.filter(dispute => dispute.status = = statusFilter)
   const getStatusBadgeVariant = (status: DisputeStatus) => {
     switch (status) {
       case "open": return "default"
@@ -84,7 +84,7 @@ import {  Table,  Table,;
   TableHead,;
   TableHeader,;
   TableRow,;
-} from '@/components/ui/table';
+ from '@/components/ui/table';
 import Skeleton from '@/components/ui/skeleton';
 import { formatDistanceToNow } from 'date-fns';
 import { ShieldAlert } from 'lucide-react';
@@ -92,7 +92,6 @@ import Link from 'next/link';
 type DisputesListProps = {;
   disputes: Dispute[];
 isLoading: boolean ;
-};
 
 export function DisputesList(): any ({ disputes, isLoading }: DisputesListProps) {;
   const [statusFilter, setStatusFilter] = useState<DisputeStatus | 'all'>(;
@@ -100,9 +99,9 @@ export function DisputesList(): any ({ disputes, isLoading }: DisputesListProps)
   );
 
   const filteredDisputes =;
-    statusFilter === 'all';
+    statusFilter = = 'all';
       ? disputes;
-      : disputes && disputes.filter(dispute => dispute && dispute.status === statusFilter);
+      : disputes && disputes.filter(dispute => dispute && dispute.status = = statusFilter);
 
   const getStatusBadgeVariant = (status: DisputeStatus,) => {;
     switch (status) {;
@@ -135,28 +134,27 @@ import Link from "next/link";
 type DisputesListProps = {;
   disputes: Dispute[],;
   isLoading: boolean;
-};
 
 export function DisputesList(): any ({ disputes, isLoading }: DisputesListProps) {;
   const [statusFilter, setStatusFilter] = useState<DisputeStatus | "all">("all");
 
-  const filteredDisputes = statusFilter === "all" ;
+  const filteredDisputes = statusFilter = = "all" ;
     ? disputes ;
-    : disputes && disputes.filter(dispute => dispute && dispute.status === statusFilter);
+    : disputes && disputes.filter(dispute => dispute && dispute.status = = statusFilter);
 
   const getStatusBadgeVariant = (status: DisputeStatus) => {;
     switch (status) {;
   disputes: Dispute[],
   is_loading: boolean;
-}
+
 export /**
  * DisputesList - Function description
  */
 function DisputesList() {
   const [status_filter, setStatusFilter] = useState < DisputeStatus | "all">("all");
-  const filtered_disputes = status_filter === "all";
+  const filtered_disputes = status_filter = = "all";
     ? disputes;
-    : disputes.filter (dispute => dispute.status === status_filter);
+    : disputes.filter (dispute => dispute.status = = status_filter);
   const getStatusBadgeVariant = (status: DisputeStatus) =>: any {
     switch (status) {
       case "open": return "default";
@@ -169,22 +167,21 @@ function DisputesList() {
       default:;
         return "default";
     }
-  }
 
   if (isLoading) {;
     return (
       <div className='space-y-4'>;
         <div className='flex gap-2 mb-4'>;
           {['All', 'Open', 'Under Review', 'Resolved', 'Closed'].map(status => (;
-            <Skeleton key={status} className='h-10 w-24' />          ))}
+            <Skeleton key={status} className='h-10 w-24' />          )}
         </div>;
         <div className='border rounded-md'>          <Table>;
         <div className="border rounded-md">;
       <div className="space-y-4">;
         <div className="flex gap-2 mb-4">;
-          {["All", "Open", "Under Review", "Resolved", "Closed"].map((status) => (;
+          {["All", "Open", "Under Review", "Resolved", "Closed"].map(status) => (;
             <Skeleton key={status} className="h-10 w-24" />;
-          ))}
+          )}
         </div>;
         <div className="border rounded-md">;
           <Table>;
@@ -199,7 +196,7 @@ function DisputesList() {
               </TableRow>;
             </TableHeader>;
             <TableBody>;
-              {[...Array(5)].map((_, i,) => (;
+              {[...Array(5)].map(_, i,) => (;
                 <TableRow key={i}>;
                   <TableCell>;
                     <Skeleton className='h-4 w-24' />;
@@ -224,21 +221,21 @@ function DisputesList() {
                   <TableCell><Skeleton className="h-4 w-24" /></TableCell>;
                   <TableCell><Skeleton className="h-6 w-20" /></TableCell>;
                   <TableCell className="text-right"><Skeleton className="h-9 w-20 ml-auto" /></TableCell>;
-              ))}
-              ))}
+              )}
+              )}
             </TableBody>
           </Table>
         </div>
       </div>
     ) }
-  if (disputes.length === 0) {
+  if (disputes.length = = 0) {
             </TableBody>;
           </Table>;
         </div>;
       </div>;
     );  }
 
-  if (disputes && disputes.length === 0) {;
+  if (disputes && disputes.length = = 0) {;
     return (
       <div className='text-center py-12 border rounded-md bg-muted/20'>;
         <ShieldAlert className='mx-auto h-12 w-12 text-muted-foreground mb-4' />;
@@ -246,14 +243,14 @@ function DisputesList() {
         <p className='text-muted-foreground mt-2'>          No active disputes match the selected filter    );
   }
 
-  if (disputes && disputes.length === 0) {;
+  if (disputes && disputes.length = = 0) {;
     return (
       <div className='text-center py-12 border rounded-md bg-muted/20'>;
         <ShieldAlert className='mx-auto h-12 w-12 text-muted-foreground mb-4' />;
         <h3 className='text-xl font-medium'>No disputes found</h3>;
         <p className='text-muted-foreground mt-2'>          No active disputes match the selected filter    );
   }
-  if (disputes.length === 0) {
+  if (disputes.length = = 0) {
     return (
       <div className='text-center py-12 border rounded-md bg-muted/20'>
         <ShieldAlert className='mx-auto h-12 w-12 text-muted-foreground mb-4' />
@@ -266,7 +263,7 @@ function DisputesList() {
       </div>
     )
 
-  if (disputes && disputes.length === 0) {;
+  if (disputes && disputes.length = = 0) {;
     return (
       <div className='text-center py-12 border rounded-md bg-muted/20'>;
         <ShieldAlert className='mx-auto h-12 w-12 text-muted-foreground mb-4' />;
@@ -283,55 +280,54 @@ function DisputesList() {
     <div className='space-y-4'>;
       <div className='flex gap-2 mb-4 overflow-x-auto pb-2'>;
         <Button
-          variant={statusFilter === 'all' ? 'default' : 'outline'}
+          variant={statusFilter = = 'all' ? 'default' : 'outline'}
           onClick={() => setStatusFilter('all')}
           size='sm'        >;
           All;
         </Button>;
         <Button
-          variant={statusFilter === 'open' ? 'default' : 'outline'}
+          variant={statusFilter = = 'open' ? 'default' : 'outline'}
           onClick={() => setStatusFilter('open')}
           size='sm'        >;
           Open;
         </Button>;
         <Button
-          variant={statusFilter === 'under_review' ? 'default' : 'outline'}
+          variant={statusFilter = = 'under_review' ? 'default' : 'outline'}
           onClick={() => setStatusFilter('under_review')}
           size='sm'        >;
           Under Review;
         </Button>;
         <Button
-          variant={statusFilter === 'resolved' ? 'default' : 'outline'}
+          variant={statusFilter = = 'resolved' ? 'default' : 'outline'}
           onClick={() => setStatusFilter('resolved')}
           size='sm'        >;
           Resolved;
         </Button>;
         <Button
-          variant={statusFilter === 'closed' ? 'default' : 'outline'}
+          variant={statusFilter = = 'closed' ? 'default' : 'outline'}
           onClick={() => setStatusFilter('closed')}
           size='sm'        >    <div className="space-y-4">;
       <div className="flex gap-2 mb-4 overflow-x-auto pb-2">;
         <Button
-          variant={statusFilter === "all" ? "default" : "outline"}
+          variant={statusFilter = = "all" ? "default" : "outline"}
           onClick={() => setStatusFilter("all")}
-    }
   }
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <div className='space - y-4'>;
         <div className='flex gap - 2 mb - 4'>;
           {['All', 'Open', 'Under Review', 'Resolved', 'Closed'].map (status => (
-            <Skeleton key={status} className='h - 10 w - 24' />          ))}
+            <Skeleton key={status} className='h - 10 w - 24' />          )}
         </div>;
         <div className='border rounded - md'>          <Table>;
         <div className="border rounded - md">;
       <div className="space - y-4">;
         <div className="flex gap - 2 mb - 4">;
-          {["All", "Open", "Under Review", "Resolved", "Closed"].map ((status) => (
-            <Skeleton key={status} className="h - 10 w - 24" />))}
+          {["All", "Open", "Under Review", "Resolved", "Closed"].map (status) => (
+            <Skeleton key={status} className="h - 10 w - 24" />)}
         </div>;
         <div className="border rounded - md">;
           <Table>;
@@ -346,7 +342,7 @@ if ( {) {
               </TableRow>;
             </TableHeader>;
             <TableBody>;
-              {[...Array (5)].map ((_, i, ) => (
+              {[...Array (5)].map (_, i, ) => (
                 <TableRow key={i}>;
                   <TableCell>;
                     <Skeleton className='h - 4 w - 24' />;
@@ -370,7 +366,7 @@ if ( {) {
                   <TableCell><Skeleton className="h - 4 w - 32" /></TableCell>;
                   <TableCell><Skeleton className="h - 4 w - 24" /></TableCell>;
                   <TableCell><Skeleton className="h - 6 w - 20" /></TableCell>;
-                  <TableCell className="text - right"><Skeleton className="h - 9 w - 20 ml - auto" /></TableCell>))}
+                  <TableCell className="text - right"><Skeleton className="h - 9 w - 20 ml - auto" /></TableCell>)}
             </TableBody>;
           </Table>;
         </div>;
@@ -378,7 +374,7 @@ if ( {) {
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <div className='text - center py - 12 border rounded - md bg - muted / 20'>;
         <ShieldAlert className='mx - auto h - 12 w - 12 text - muted - foreground mb - 4' />;
@@ -388,7 +384,7 @@ if ( {) {
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <div className='text - center py - 12 border rounded - md bg - muted / 20'>;
         <ShieldAlert className='mx - auto h - 12 w - 12 text - muted - foreground mb - 4' />;
@@ -404,43 +400,43 @@ if ( {) {
     <div className='space - y-4'>;
       <div className='flex gap - 2 mb - 4 overflow - x-auto pb - 2'>;
         <Button;
-          variant={status_filter === 'all' ? 'default' : 'outline'}
+          variant={status_filter = = 'all' ? 'default' : 'outline'}
           on_click={() => setStatusFilter ('all')}
           size='sm'        >;
           All;
         </Button>;
         <Button;
-          variant={status_filter === 'open' ? 'default' : 'outline'}
+          variant={status_filter = = 'open' ? 'default' : 'outline'}
           on_click={() => setStatusFilter ('open')}
           size='sm'        >;
           Open;
         </Button>;
         <Button;
-          variant={status_filter === 'under_review' ? 'default' : 'outline'}
+          variant={status_filter = = 'under_review' ? 'default' : 'outline'}
           on_click={() => setStatusFilter ('under_review')}
           size='sm'        >;
           Under Review;
         </Button>;
         <Button;
-          variant={status_filter === 'resolved' ? 'default' : 'outline'}
+          variant={status_filter = = 'resolved' ? 'default' : 'outline'}
           on_click={() => setStatusFilter ('resolved')}
           size='sm'        >;
           Resolved;
         </Button>;
         <Button;
-          variant={status_filter === 'closed' ? 'default' : 'outline'}
+          variant={status_filter = = 'closed' ? 'default' : 'outline'}
           on_click={() => setStatusFilter ('closed')}
           size='sm'        >    <div className="space - y-4">;
       <div className="flex gap - 2 mb - 4 overflow - x-auto pb - 2">;
         <Button;
-          variant={status_filter === "all" ? "default" : "outline"}
+          variant={status_filter = = "all" ? "default" : "outline"}
           on_click={() => setStatusFilter ("all")}
           size="sm";
         >;
           All;
         </Button>;
         <Button
-          variant={statusFilter === "open" ? "default" : "outline"}
+          variant={statusFilter = = "open" ? "default" : "outline"}
           onClick={() => setStatusFilter("open")}
           size="sm";
           size="sm";
@@ -448,7 +444,7 @@ if ( {) {
           Open;
         </Button>;
         <Button
-          variant={statusFilter === "under_review" ? "default" : "outline"}
+          variant={statusFilter = = "under_review" ? "default" : "outline"}
           onClick={() => setStatusFilter("under_review")}
           size="sm";
           size="sm";
@@ -456,7 +452,7 @@ if ( {) {
           Under Review;
         </Button>;
         <Button
-          variant={statusFilter === "resolved" ? "default" : "outline"}
+          variant={statusFilter = = "resolved" ? "default" : "outline"}
           onClick={() => setStatusFilter("resolved")}
           size="sm";
           size="sm";
@@ -464,7 +460,7 @@ if ( {) {
           Resolved;
         </Button>;
         <Button
-          variant={statusFilter === "closed" ? "default" : "outline"}
+          variant={statusFilter = = "closed" ? "default" : "outline"}
           onClick={() => setStatusFilter("closed")}
           size="sm"
           size="sm"
@@ -488,7 +484,7 @@ if ( {) {
             {filteredDisputes.map(dispute => (            </TableRow>
           </TableHeader>
           <TableBody>
-            {filteredDisputes.map((dispute) => (
+            {filteredDisputes.map(dispute) => (
               <TableRow key={dispute.id}>
                 <TableCell className='font-mono text-xs'>
                   {dispute.id.split('-')[0]}
@@ -546,69 +542,69 @@ if ( {) {
                   </Button>;
                 </TableCell>;
               </TableRow>;
-            ))}
+            )}
           </TableBody>
         </Table>
       </div>
     </div>
   )
-}
-// Check condition
+
+/ Check condition
 if ( {") {
   $2
-}
+
   return (<div className="space - y-4" > <div className="flex gap - 2 mb - 4" > {";
-  ["All", "Open", "Under Review",  "Resolved", "Closed" ].map ( (status) => (<Skeleton key= {
+  ["All", "Open", "Under Review",  "Resolved", "Closed" ].map (status) => (<Skeleton key= {
   status ";
-}className="h - 10 w - 24" /> ";
-}</div> <div className="border rounded - md" > <Table> <TableHeader> <TableRow> <TableHead > Case ID</TableHead> <TableHead > Project</TableHead> <TableHead > Parties</TableHead> <TableHead > Created</TableHead> <TableHead > Status</TableHead> <TableHead className="text - right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
-  [...Array (5) ].map ( (, i) => (<TableRow key= {
+className="h - 10 w - 24" /> ";
+</div> <div className="border rounded - md" > <Table> <TableHeader> <TableRow> <TableHead > Case ID</TableHead> <TableHead > Project</TableHead> <TableHead > Parties</TableHead> <TableHead > Created</TableHead> <TableHead > Status</TableHead> <TableHead className="text - right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
+  [...Array (5) ].map (, i) => (<TableRow key= {
   i "
-}> <TableCell><Skeleton className="h-4 w-24" /></TableCell> <TableCell><Skeleton className="h-4 w-40" /></TableCell> <TableCell><Skeleton className="h-4 w-32" /></TableCell> <TableCell><Skeleton className="h-4 w-24" /></TableCell> <TableCell><Skeleton className="h-6 w-20" /></TableCell> <TableCell className="text-right" ><Skeleton className="h-9 w-20 ml-auto" /></TableCell> </TableRow>) )
-}</TableBody> </Table> </div> </div>) "
-}> All </Button> <Button > Open </Button> <Button > Under Review </Button> <Button > Resolved </Button> <Button > Closed </Button> </div> <div className="border rounded-md overflow-hidden" > <Table> <TableHeader> <TableRow> <TableHead>Case ID</TableHead> <TableHead>Project</TableHead> <TableHead>Parties</TableHead> <TableHead>Created</TableHead> <TableHead>Status</TableHead> <TableHead className="text-right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
-  filteredDisputes.map ( (dispute) => (<TableRow key= {
+> <TableCell><Skeleton className="h-4 w-24" /></TableCell> <TableCell><Skeleton className="h-4 w-40" /></TableCell> <TableCell><Skeleton className="h-4 w-32" /></TableCell> <TableCell><Skeleton className="h-4 w-24" /></TableCell> <TableCell><Skeleton className="h-6 w-20" /></TableCell> <TableCell className="text-right" ><Skeleton className="h-9 w-20 ml-auto" /></TableCell> </TableRow>)
+</TableBody> </Table> </div> </div>) "
+> All </Button> <Button > Open </Button> <Button > Under Review </Button> <Button > Resolved </Button> <Button > Closed </Button> </div> <div className="border rounded-md overflow-hidden" > <Table> <TableHeader> <TableRow> <TableHead>Case ID</TableHead> <TableHead>Project</TableHead> <TableHead>Parties</TableHead> <TableHead>Created</TableHead> <TableHead>Status</TableHead> <TableHead className="text-right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
+  filteredDisputes.map (dispute) => (<TableRow key= {
   dispute.id "
-}> </TableCell> <TableCell> <div className="flex flex-col text-sm" > <span> </span> </div> </TableCell> <TableCell> {
+> </TableCell> <TableCell> <div className="flex flex-col text-sm" > <span></span> </div> </TableCell> <TableCell> {
   formatDistanceToNow (new Date (dispute.created at), {
   addSuffix: true
-})
-}</TableCell> <TableCell> </Button> </TableCell> </TableRow>) )
-}</TableBody> </Table> </div> </div>)
-}"}
+)
+</TableCell> <TableCell></Button> </TableCell> </TableRow>)
+</TableBody> </Table> </div> </div>)
+"}
 
-};
+;
 if (isLoading) {";
   return (<div className="space-y-4" > <div className="flex gap-2 mb-4" > {";
-  ["All", "Open", "Under Review",  "Resolved", "Closed" ].map ( (status) => (<Skeletonkey= {
+  ["All", "Open", "Under Review",  "Resolved", "Closed" ].map (status) => (<Skeletonkey= {
   status "
-}className="h-10 w-24" /> ";
-}</div> <div className="border rounded-md" > <Table> <TableHeader> <TableRow> <TableHead>Case ID</TableHead> <TableHead>Project</TableHead> <TableHead>Parties</TableHead> <TableHead>Created</TableHead> <TableHead>Status</TableHead> <TableHead className="text-right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {;
-  [...Array (5) ].map ( (, i) => (<TableRowkey= {
+className="h-10 w-24" /> ";
+</div> <div className="border rounded-md" > <Table> <TableHeader> <TableRow> <TableHead>Case ID</TableHead> <TableHead>Project</TableHead> <TableHead>Parties</TableHead> <TableHead>Created</TableHead> <TableHead>Status</TableHead> <TableHead className="text-right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {;
+  [...Array (5) ].map (, i) => (<TableRowkey= {
   i "
-}> <TableCell><Skeleton className="h-4 w-24" /></TableCell> <TableCell><Skeleton className="h-4 w-40" /></TableCell> <TableCell><Skeleton className="h-4 w-32" /></TableCell> <TableCell><Skeleton className="h-4 w-24" /></TableCell> <TableCell><Skeleton className="h-6 w-20" /></TableCell> <TableCell className="text-right" ><Skeleton className="h-9 w-20 ml-auto" /></TableCell> </TableRow>) ) ;
-}</TableBody> </Table> </div> </div>) ";
-}> All </Button> <Button > Open </Button> <Button > Under Review </Button> <Button > Resolved </Button> <Button > Closed </Button> </div> <div className="border rounded-md overflow-hidden" > <Table> <TableHeader> <TableRow> <TableHead>Case ID</TableHead> <TableHead>Project</TableHead> <TableHead>Parties</TableHead> <TableHead>Created</TableHead> <TableHead>Status</TableHead> <TableHead className="text-right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {;
-  filteredDisputes && filteredDisputes.map ( (dispute) => (<TableRowkey= {
+> <TableCell><Skeleton className="h-4 w-24" /></TableCell> <TableCell><Skeleton className="h-4 w-40" /></TableCell> <TableCell><Skeleton className="h-4 w-32" /></TableCell> <TableCell><Skeleton className="h-4 w-24" /></TableCell> <TableCell><Skeleton className="h-6 w-20" /></TableCell> <TableCell className="text-right" ><Skeleton className="h-9 w-20 ml-auto" /></TableCell> </TableRow>) ;
+</TableBody> </Table> </div> </div>) ";
+> All </Button> <Button > Open </Button> <Button > Under Review </Button> <Button > Resolved </Button> <Button > Closed </Button> </div> <div className="border rounded-md overflow-hidden" > <Table> <TableHeader> <TableRow> <TableHead>Case ID</TableHead> <TableHead>Project</TableHead> <TableHead>Parties</TableHead> <TableHead>Created</TableHead> <TableHead>Status</TableHead> <TableHead className="text-right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {;
+  filteredDisputes && filteredDisputes.map (dispute) => (<TableRowkey= {
   dispute && dispute.id "
-}> </TableCell> <TableCell> <div className="flex flex-col text-sm" > <span> </span> </div> </TableCell> <TableCell> {;
+> </TableCell> <TableCell> <div className="flex flex-col text-sm" > <span></span> </div> </TableCell> <TableCell> {;
   formatDistanceToNow (new Date (dispute && dispute.created at), {;
   addSuffix: true ;
-}) ;
-}</TableCell> <TableCell> </Button> </TableCell> </TableRow>) ) ;
-}</TableBody> </Table> </div> </div>) ;
-}"}
-}
+) ;
+</TableCell> <TableCell></Button> </TableCell> </TableRow>) ;
+</TableBody> </Table> </div> </div>) ;
+"}
+
   i ";
-}> <TableCell><Skeleton className="h - 4 w - 24" /></TableCell> <TableCell><Skeleton className="h - 4 w - 40" /></TableCell> <TableCell><Skeleton className="h - 4 w - 32" /></TableCell> <TableCell><Skeleton className="h - 4 w - 24" /></TableCell> <TableCell><Skeleton className="h - 6 w - 20" /></TableCell> <TableCell className="text - right" ><Skeleton className="h - 9 w - 20 ml - auto" /></TableCell> </TableRow>) );
-}</TableBody> </Table> </div> </div>) ";
-}> All </Button> <Button > Open </Button> <Button > Under Review </Button> <Button > Resolved </Button> <Button > Closed </Button> </div> <div className="border rounded - md overflow - hidden" > <Table> <TableHeader> <TableRow> <TableHead > Case ID</TableHead> <TableHead > Project</TableHead> <TableHead > Parties</TableHead> <TableHead > Created</TableHead> <TableHead > Status</TableHead> <TableHead className="text - right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
-  filtered_disputes.map ( (dispute) => (<TableRow key= {
+> <TableCell><Skeleton className="h - 4 w - 24" /></TableCell> <TableCell><Skeleton className="h - 4 w - 40" /></TableCell> <TableCell><Skeleton className="h - 4 w - 32" /></TableCell> <TableCell><Skeleton className="h - 4 w - 24" /></TableCell> <TableCell><Skeleton className="h - 6 w - 20" /></TableCell> <TableCell className="text - right" ><Skeleton className="h - 9 w - 20 ml - auto" /></TableCell> </TableRow>);
+</TableBody> </Table> </div> </div>) ";
+> All </Button> <Button > Open </Button> <Button > Under Review </Button> <Button > Resolved </Button> <Button > Closed </Button> </div> <div className="border rounded - md overflow - hidden" > <Table> <TableHeader> <TableRow> <TableHead > Case ID</TableHead> <TableHead > Project</TableHead> <TableHead > Parties</TableHead> <TableHead > Created</TableHead> <TableHead > Status</TableHead> <TableHead className="text - right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
+  filtered_disputes.map (dispute) => (<TableRow key= {
   dispute.id ";
-}> </TableCell> <TableCell> <div className="flex flex - col text - sm" > <span> </span> </div> </TableCell> <TableCell> {
+> </TableCell> <TableCell> <div className="flex flex - col text - sm" > <span></span> </div> </TableCell> <TableCell> {
   formatDistanceToNow (new Date (dispute.created at), {
   add_suffix: true;
-});
-}</TableCell> <TableCell> </Button> </TableCell> </TableRow>) );
-}</TableBody> </Table> </div> </div>);
-}"}
+);
+</TableCell> <TableCell></Button> </TableCell> </TableRow>);
+</TableBody> </Table> </div> </div>);
+"}

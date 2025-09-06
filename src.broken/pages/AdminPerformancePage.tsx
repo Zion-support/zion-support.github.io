@@ -6,5 +6,3 @@ export function AdminPerformancePage() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

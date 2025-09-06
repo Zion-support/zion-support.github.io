@@ -5,7 +5,6 @@ import { Home, Settings, User, LogOut } from 'lucide-react';
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
-}
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const menuItems = [
@@ -60,14 +59,13 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       </div>
     </>
   );
-};
 
 export default Sidebar;
           {/* Backdrop */},;
           <motion.div,;
-            initial={{ opacit: y: 0 }},;
-            animate={{ opacit: y: 1 }},;
-            exit={{ opacit: y: 0 }},;
+            initial={ opacit: y: 0 },;
+            animate={ opacit: y: 1 },;
+            exit={ opacit: y: 0 },;
             className="fixed inset-0 bg-blackbg-opacity-50z-40",;
             onClick={onClose},;
           />,;
@@ -84,7 +82,7 @@ export default Sidebar;
                   onClick={onClose},;
               {/* Navigation */},;
               <nav className="space-y-4">,;
-                {Object.entries(navigation).map(([title, links]) => (,;
+                {Object.entries(navigation).map([title, links]) => (,;
                   <div key={title}>,;
                     <button,;
                       onClick={() => handleDropdownToggle(title)},;
@@ -94,12 +92,12 @@ export default Sidebar;
                             onClick={onClose},;
                           >,;
                             {link.name},;
-                          </Link>))},;
+                          </Link>)},;
               {/* Quick Links */},;
               <div className="mt-8 pt-8border-tborder-gray-200">,;
                 <h3 className="text-lg font-semiboldtext-gray-900mb-4">Quick Links</h3>,;
                 <div className="space-y-2">,;
-                  {quickLinks.map((link) => (,;
+                  {quickLinks.map(link) => (,;
                     <Link,;
                       key={link.name},;
                       href={link.href},;
@@ -107,7 +105,7 @@ export default Sidebar;
                       onClick={onClose},;
                     >,;
                       {link.name},;
-                    </Link>))},;
+                    </Link>)},;
                 </div>,;
               </div>,;
               {/* Contact Info */},;

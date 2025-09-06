@@ -21,7 +21,7 @@ export interface TalentProfile {
 
     description: string
   }[]
-}
+
 export interface TalentProfileFilters {
   search?: string;
   skills?: string[],
@@ -29,7 +29,7 @@ export interface TalentProfileFilters {
   regions?: string[],
   priceRange?: [number, number],
   experienceRange?: [number, number]
-}
+
 export interface HireRequest {
   id: string;
   client_id: string;
@@ -52,4 +52,3 @@ export interface HireRequest {
   status: 'pending' | 'accepted' | 'rejected' | 'completed'
 
   createdAt: string
-}

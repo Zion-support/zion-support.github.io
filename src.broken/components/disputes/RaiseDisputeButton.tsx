@@ -6,5 +6,3 @@ export function RaiseDisputeButton() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

@@ -5,4 +5,3 @@ import { VerifiedBadge } from './VerifiedBadge',;
 export function ProfileBadges({ profile }: { profile?: KycProfile | null }) {;
   const labels = getBadgeLabels(profile || undefined);
   return <VerifiedBadge labels={labels} />;
-}

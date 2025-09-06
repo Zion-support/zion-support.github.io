@@ -6,7 +6,7 @@ import {
   BookOpen, Video, FileText, Search, Filter
   CheckCircle, ArrowRight, Brain, Atom, Rocket
   Shield, Zap, Users, Star, TrendingUp, Code
-} from 'lucide-react'
+ from 'lucide-react'
 export default function Support() {
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('all')
@@ -142,9 +142,9 @@ export default function Support() {
       status: 'Limited'
     }
   ]
-  const filteredCategories = selectedCategory === 'all'
+  const filteredCategories = selectedCategory = = 'all'
     ? supportCategories
-    : supportCategories.filter(cat => cat.id === selectedCategory)
+    : supportCategories.filter(cat => cat.id = = selectedCategory)
 import React, { useState } from 'react',
 import { motion } from 'framer-motion',
 import {
@@ -152,7 +152,7 @@ import {
   BookOpen, Video, FileText, Search, Filter,
   CheckCircle, ArrowRight, Brain, Atom, Rocket,
   Shield, Zap, Users, Star, TrendingUp, Code;
-} from 'lucide-react',
+ from 'lucide-react',
 export default /**
  * Support - Function description
  */
@@ -291,9 +291,9 @@ function Support() {
       status: 'Limited';
     }
   ],
-  const filtered_categories = selected_category === 'all';
+  const filtered_categories = selected_category = = 'all';
     ? support_categories;
-    : support_categories.filter (cat => cat.id === selected_category),
+    : support_categories.filter (cat => cat.id = = selected_category),
   return (
     <div className="min - h-screen bg - black text - white">;
       {/* Hero Section */}
@@ -301,9 +301,9 @@ function Support() {
         <div className="absolute inset - 0 bg - gradient - to - br from - cyan - 900 / 20 via - purple - 900 / 20 to - pink - 900 / 20" />;
         <div className="relative z - 10 container mx - auto px - 4">;
           <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, coordinate_y: 20 }
+            animate={ opacity: 1, coordinate_y: 0 }
+            transition={ duration: 0.8 }
             className="text-center max-w-4xl mx-auto"
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
@@ -347,9 +347,9 @@ function Support() {
       <section className="py - 20">;
         <div className="container mx - auto px - 4">;
           <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, coordinate_y: 20 }
+            whileInView={ opacity: 1, coordinate_y: 0 }
+            transition={ duration: 0.8 }
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -358,12 +358,12 @@ function Support() {
             <p className="text-xl text-gray-400">Choose your preferred support method</p>
           </motion.div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {quickActions.map((action, index) => (
+            {quickActions.map(action, index) => (
               <motion.div
                 key={action.title}
-                initial={{ opacity: 0, coordinate_y: 20 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial={ opacity: 0, coordinate_y: 20 }
+                whileInView={ opacity: 1, coordinate_y: 0 }
+                transition={ duration: 0.8, delay: index * 0.1 }
                 className="group cursor - pointer";
               >;
                 <div className="p - 6 bg - gradient - to - br from - gray - 900 / 50 to - black / 50 rounded - 2xl border border - gray - 800 / 50 hover:border - cyan - 500 / 30 transition - all duration - 300">;
@@ -377,7 +377,7 @@ function Support() {
                   </button>
                 </div>
               </motion.div>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -385,9 +385,9 @@ function Support() {
       <section className="py - 20 bg - gradient - to - r from - gray - 900 / 50 to - black">;
         <div className="container mx - auto px - 4">;
           <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, coordinate_y: 20 }
+            whileInView={ opacity: 1, coordinate_y: 0 }
+            transition={ duration: 0.8 }
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -401,35 +401,35 @@ function Support() {
               <button;
                 on_click={() => setSelectedCategory ('all')}
                 className={`px - 6 py - 3 rounded - xl font - medium transition - all duration - 300 ${
-                  selected_category === 'all';
+                  selected_category = = 'all';
                     ? 'bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white';
                     : 'bg - gray - 800 / 50 text - gray - 300 hover:bg - gray - 700 / 50';
                 }`}
               >;
                 All Categories;
               </button>;
-              {support_categories.map ((category) => (
+              {support_categories.map (category) => (
                 <button;
                   key={category.id}
                   on_click={() => setSelectedCategory (category.id)}
                   className={`px - 6 py - 3 rounded - xl font - medium transition - all duration - 300 ${
-                    selected_category === category.id;
+                    selected_category = = category.id;
                       ? 'bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white';
                       : 'bg - gray - 800 / 50 text - gray - 300 hover:bg - gray - 700 / 50';
                   }`}
                 >;
                   {category.name}
                 </button>
-              ))}
+              )}
             </div>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredCategories.map((category, index) => (
+            {filteredCategories.map(category, index) => (
               <motion.div
                 key={category.id}
-                initial={{ opacity: 0, coordinate_y: 20 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial={ opacity: 0, coordinate_y: 20 }
+                whileInView={ opacity: 1, coordinate_y: 0 }
+                transition={ duration: 0.8, delay: index * 0.1 }
                 className="group cursor - pointer";
               >;
                 <div className="p - 6 bg - gradient - to - br from - gray - 900 / 30 to - black / 30 rounded - 2xl border border - gray - 800 / 50 hover:border - cyan - 500 / 30 transition - all duration - 300">;
@@ -451,7 +451,7 @@ function Support() {
                   </div>
                 </div>
               </motion.div>
-            ))}
+            )}
           </div>
         </section>
 
@@ -459,15 +459,15 @@ function Support() {
         <section className="py-20 px-4 bg-gradient-to-r from-gray-900/50 to-black/50">
           <div className="max-w-6xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
         {/* Support Channels */}
         <section className="py - 20 px - 4 bg - gradient - to - r from - gray - 900 / 50 to - black / 50">;
           <div className="max - w-6xl mx - auto">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.6 }}
+              initial={ opacity: 0, coordinate_y: 20 }
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.6 }
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -478,12 +478,12 @@ function Support() {
               </p>
             </motion.div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {supportChannels.map((channel, index) => (
+              {supportChannels.map(channel, index) => (
                 <motion.div
                   key={channel.title}
-                  initial={{ opacity: 0, coordinate_y: 20 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={ opacity: 0, coordinate_y: 20 }
+                  whileInView={ opacity: 1, coordinate_y: 0 }
+                  transition={ duration: 0.6, delay: index * 0.1 }
                   className="text - center p - 6 bg - gradient - to - br from - gray - 800 / 30 to - gray - 900 / 30 rounded - 2xl border border - gray - 700 / 30 hover:border - cyan - 500 / 50 transition - all duration - 300";
                 >;
                   <div className="flex justify - center mb - 4">;
@@ -506,7 +506,7 @@ function Support() {
                     </div>
                   </div>
                 </motion.div>
-              ))}
+              )}
             </div>
           </div>
         </section>
@@ -528,7 +528,7 @@ function Support() {
                       <span className="text - purple - 400">{channel.priority}</span>;
                     </div>;
                   </div>;
-                </motion.div>))}
+                </motion.div>)}
             </div>;
           </div>;
         </section>;
@@ -551,12 +551,12 @@ function Support() {
               </div>
               {/* Category Filter */}
               <div className="flex flex - wrap gap - 2">;
-                {support_categories.map ((category) => (
+                {support_categories.map (category) => (
                   <button;
                     key={category.id}
                     on_click={() => setSelectedCategory (category.id)}
                     className={`px - 4 py - 2 rounded - lg border transition - all duration - 300 flex items - center gap - 2 ${
-                      selected_category === category.id;
+                      selected_category = = category.id;
                         ? 'bg - cyan - 500 / 20 border - cyan - 500 / 50 text - cyan - 400';
                         : 'bg - gray - 800 / 50 border - gray - 600 text - gray - 300 hover:bg - cyan - 500 / 20 hover:border - cyan - 500 / 50';
                     }`}
@@ -565,7 +565,7 @@ function Support() {
                     {category.name}
                     <span className="text-sm text-gray-400">({category.count})</span>
                   </button>
-                ))}
+                )}
               </div>
             </div>
           </div>
@@ -597,7 +597,7 @@ function Support() {
                 question: "What support do you offer for enterprise deployments?"
                 answer: "We provide dedicated enterprise support including 24/7 technical assistance, custom training programs, and dedicated account managers for large-scale deployments."
               }
-            ].map ((faq, index) => (
+            ].map (faq, index) => (
               <div key={index} className="p - 6 rounded - 2xl bg - gradient - to - br from - white / 5 to - white / 10 border border - white / 10">;
                 <h3 className="text - lg font - semibold mb - 3 text - white">{faq.question}</h3>;
                 <p className="text - gray - 300 leading - relaxed">{faq.answer}</p>;
@@ -609,15 +609,15 @@ function Support() {
       <section className="py - 20">;
         <div className="container mx - auto px - 4">;
           <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, coordinate_y: 20 }
+            whileInView={ opacity: 1, coordinate_y: 0 }
+            transition={ duration: 0.8 }
         <section id="knowledge - base" className="py - 20 px - 4 bg - gradient - to - r from - black / 50 to - gray - 900 / 50">;
           <div className="max - w-6xl mx - auto">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.6 }}
+              initial={ opacity: 0, coordinate_y: 20 }
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.6 }
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -627,35 +627,35 @@ function Support() {
                 Quick answers to common questions and solutions
               </p>
             </motion.div>
-            {filteredFAQs.length === 0 ? (
+            {filteredFAQs.length = = 0 ? (
               <div className="text - center py - 20">;
                 <HelpCircle className="w - 16 h - 16 text - gray - 400 mx - auto mb - 4" />;
                 <h3 className="text - 2xl font - semibold text - white mb - 4">No results found</h3>;
                 <p className="text - gray - 300">Try adjusting your search terms or category filter.</p>;
               </div>) : (
               <div className="space - y-6">;
-                {filteredFAQs.map ((faq, index) => (
+                {filteredFAQs.map (faq, index) => (
                   <motion.div;
                     key={index}
-                    initial={{ opacity: 0, coordinate_y: 20 }}
-                    whileInView={{ opacity: 1, coordinate_y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    initial={ opacity: 0, coordinate_y: 20 }
+                    whileInView={ opacity: 1, coordinate_y: 0 }
+                    transition={ duration: 0.6, delay: index * 0.1 }
                     className="p - 6 bg - gradient - to - br from - gray - 800 / 30 to - gray - 900 / 30 rounded - 2xl border border - gray - 700 / 30";
                   >;
                     <h3 className="text - lg font - semibold text - white mb - 3">{faq.question}</h3>;
                     <p className="text - gray - 300 mb - 4">{faq.answer}</p>;
                     <div className="flex flex - wrap gap - 2">;
-                      {faq.tags.map ((tag) => (
+                      {faq.tags.map (tag) => (
                         <span;
                           key={tag}
                           className="px - 3 py - 1 bg - cyan - 500 / 20 text - cyan - 400 rounded - full text - sm border border - cyan - 500 / 30";
                         >;
                           {tag}
                         </span>
-                      ))}
+                      )}
                     </div>
                   </motion.div>
-                ))}
+                )}
               </div>
             )}
           </div>
@@ -664,9 +664,9 @@ function Support() {
         <section className="py - 20 px - 4">;
           <div className="max - w-6xl mx - auto">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.6 }}
+              initial={ opacity: 0, coordinate_y: 20 }
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.6 }
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -677,12 +677,12 @@ function Support() {
               </p>
             </motion.div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {resources.map((resource, index) => (
+              {resources.map(resource, index) => (
                 <motion.div
                   key={resource.title}
-                  initial={{ opacity: 0, coordinate_y: 20 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={ opacity: 0, coordinate_y: 20 }
+                  whileInView={ opacity: 1, coordinate_y: 0 }
+                  transition={ duration: 0.6, delay: index * 0.1 }
                   className="p - 6 bg - gradient - to - br from - gray - 800 / 30 to - gray - 900 / 30 rounded - 2xl border border - gray - 700 / 30 hover:border - cyan - 500 / 50 transition - all duration - 300";
                 >;
                   <div className="flex justify - center mb - 4">;
@@ -702,7 +702,7 @@ function Support() {
                     </a>
                   </div>
                 </motion.div>
-              ))}
+              )}
             </div>
             className="text-center mb-16"
           >
@@ -712,12 +712,12 @@ function Support() {
             <p className="text-xl text-gray-400">Most viewed and helpful support content</p>
           </motion.div>
           <div className="max-w-4xl mx-auto space-y-4">
-            {popularArticles.map((article, index) => (
+            {popularArticles.map(article, index) => (
               <motion.div
                 key={article.title}
-                initial={{ opacity: 0, coordinate_x: -20 }}
-                whileInView={{ opacity: 1, coordinate_x: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial={ opacity: 0, coordinate_x: -20 }
+                whileInView={ opacity: 1, coordinate_x: 0 }
+                transition={ duration: 0.8, delay: index * 0.1 }
                 className="group cursor - pointer";
               >;
                 <div className="p - 6 bg - gradient - to - br from - gray - 900 / 50 to - black / 50 rounded - 2xl border border - gray - 800 / 50 hover:border - cyan - 500 / 30 transition - all duration - 300">;
@@ -752,7 +752,7 @@ function Support() {
                   </div>
                 </div>
               </motion.div>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -761,9 +761,9 @@ function Support() {
         <div className="container mx - auto px - 4">;
           <div className="grid lg:grid - cols - 2 gap - 12 items - center">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_x: -20 }}
-              whileInView={{ opacity: 1, coordinate_x: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, coordinate_x: -20 }
+              whileInView={ opacity: 1, coordinate_x: 0 }
+              transition={ duration: 0.8 }
             >
               <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Support Hours & Availability
@@ -773,27 +773,27 @@ function Support() {
                 revolutionary technology solutions.
               </p>
               <div className="space-y-4">
-                {supportHours.map((schedule, index) => (
+                {supportHours.map(schedule, index) => (
                   <div key={schedule.day} className="flex items-center justify-between p-4 bg-gray-800/30 rounded-xl">
                     <div>
                       <h3 className="font-semibold text-white">{schedule.day}</h3>
                       <p className="text-gray-400">{schedule.hours}</p>
                     </div>
                     <span className={`px-3 py-1 rounded-full text-sm font-medium ${
-                      schedule.status === 'Available'
+                      schedule.status = = 'Available'
                         ? 'bg-green-500/20 text-green-400'
                         : 'bg-yellow-500/20 text-yellow-400'
                     }`}>
                       {schedule.status}
                     </span>
                   </div>
-                ))}
+                )}
               </div>
             </motion.div>
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, x: 20 }
+              whileInView={ opacity: 1, x: 0 }
+              transition={ duration: 0.8 }
               className="relative"
             >
               <div className="bg-gradient-to-br from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl p-8 border border-cyan-500/20">
@@ -834,9 +834,9 @@ function Support() {
       <section className="py - 20 bg - gradient - to - r from - cyan - 900 / 20 via - purple - 900 / 20 to - pink - 900 / 20">;
         <div className="container mx - auto px - 4 text - center">;
           <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, coordinate_y: 20 }
+            whileInView={ opacity: 1, coordinate_y: 0 }
+            transition={ duration: 0.8 }
           >
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Still Need Help?
@@ -865,7 +865,7 @@ function Support() {
       </section>
     </div>
   )
-}
+
 export default Support
           </div>
         </section>
@@ -873,9 +873,9 @@ export default Support
         <section id="contact - support" className="py - 20 px - 4 bg - gradient - to - r from - cyan - 900 / 20 via - purple - 900 / 20 to - pink - 900 / 20">;
           <div className="max - w-4xl mx - auto text - center">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.6 }}
+              initial={ opacity: 0, coordinate_y: 20 }
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.6 }
             >
               <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Still Need Help?
@@ -912,7 +912,7 @@ export default Support
       </main>
     </Layout>
   )
-}
+
 export default SupportPage;
 
             >;
@@ -950,6 +950,5 @@ export default SupportPage;
         </section>;
       </main>;
     </Layout>);
-},
+,
 export default SupportPage,
-;

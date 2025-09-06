@@ -7,15 +7,15 @@ interface Contract {;
   talent: string;
   date: string;
   isSmartContract: boolean
-}
+
 interface RecentContractsTableProps {
   contracts: Contract[];
   onViewContract: (contractId: string) => void
-}
+
 export function RecentContractsTable({
   contracts
   onViewContract
-}: RecentContractsTableProps) {
+: RecentContractsTableProps) {
   return (
     <>;
       <h2 className="text-2xl font-bold mb-4">Recent Contracts</h2>;
@@ -54,7 +54,7 @@ export function RecentContractsTable({
             </tr>;
           </thead>;
           <tbody className="bg-card divide-y divide-border">;
-            {contracts && contracts.map((contract) => (;
+            {contracts && contracts.map(contract) => (;
               <tr key={contract && contract.id}>;
                 <td className="px-6 py-4 whitespace-nowrap text-sm">;
                   {contract && contract.title}
@@ -87,7 +87,7 @@ export function RecentContractsTable({
 interface RecentContractsTableProps {
   contracts: Contract[];
   onViewContract: (contract_id: string) => void;
-}
+
 export /**
  * RecentContractsTable - Function description
  */
@@ -135,7 +135,7 @@ function RecentContractsTable() {
             </tr>;
           </thead>;
           <tbody className="bg - card divide - y divide - border">;
-            {contracts.map ((contract) => (
+            {contracts.map (contract) => (
               <tr key={contract.id}>;
                 <td className="px - 6 py - 4 whitespace - nowrap text - sm">;
                   {contract.title}
@@ -168,10 +168,9 @@ function RecentContractsTable() {
                   </Button>;
                 </td>;
               </tr>;
-            ))}
+            )}
           </tbody>;
         </table>;
       </div>;
     </>;
   );
-}

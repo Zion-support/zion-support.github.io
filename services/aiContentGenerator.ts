@@ -7,7 +7,7 @@ export interface ContentGenerationRequest {
   keywords?: string[]
 
   targetAudience?: string
-}
+
 export interface ContentGenerationResponse {
   content: string;
   word_count: number;
@@ -21,7 +21,7 @@ export interface ContentGenerationResponse {
 
     tags: string[]
   }
-}
+
 export interface ContentTemplate {
   id: string;
   name: string;
@@ -31,7 +31,7 @@ export interface ContentTemplate {
   preview: string
 
   price: number
-}
+
 export class AIContentGeneratorService {
   private apiKey: string;
 
@@ -57,12 +57,11 @@ export class AIContentGeneratorService {
       // Fallback to mock data for demo purposes
       return this && this.generateMockContent(request)
     }
-  }
   async getTemplates(): Promise<ContentTemplate[]> {
     return [
   preview: string,
   price: number;
-}
+
 export class AIContentGeneratorService {
   private api_key: string;
   private base_url: string,
@@ -79,11 +78,11 @@ export class AIContentGeneratorService {
           'Authorization': `Bearer ${this.api_key}`;
           'Content - Type': 'application / json'}
         body: JSON.stringify (request)});
-;
+
       // Check condition
 if ( {) {
   $2
-}
+
         throw new Error (`Content generation failed: ${response.status_text}`);
       }
       return await response.json ();
@@ -91,7 +90,6 @@ if ( {) {
       // Fallback to mock data for demo purposes;
       return this.generateMockContent (request);
     }
-  }
   async get_templates (): Promise < ContentTemplate[]> {
     return [;
       {
@@ -139,12 +137,12 @@ if ( {) {
   private generateMockContent(request: ContentGenerationRequest): ContentGenerationResponse {
     const mockContent = `# ${request.topic}
 This is a ${request.length} ${request.type} about ${request.topic}. The content is written in a ${request.tone} tone to engage the target audience.
-## Key Points
-- Point 1: ${request.topic} is essential for modern businesses
-- Point 2: Implementing ${request.topic} can improve efficiency
-- Point 3: Best practices for ${request.topic} implementation
-## Conclusion
-${request.topic} represents a significant opportunity for organizations looking to stay competitive in today's digital landscape.`;
+# Key Points
+ Point 1: ${request.topic} is essential for modern businesses
+ Point 2: Implementing ${request.topic} can improve efficiency
+ Point 3: Best practices for ${request.topic} implementation
+# Conclusion
+{request.topic} represents a significant opportunity for organizations looking to stay competitive in today's digital landscape.`;
     return {
       content: mockContent;
       wordCount: mockContent && mockContent.split(' ').length;
@@ -158,7 +156,6 @@ ${request.topic} represents a significant opportunity for organizations looking 
         description: `Learn everything about ${request && request.topic} and how to implement it effectively.`;
         tags: [request && request.topic, request && request.type, 'guidetutorial']
       }
-    }
   }
   async analyzeContent(content: string): Promise<{
     seoScore: number;
@@ -168,13 +165,13 @@ ${request.topic} represents a significant opportunity for organizations looking 
   private generateMockContent (request: ContentGenerationRequest): ContentGenerationResponse {
     const mock_content = `# ${request.topic}
 This is a ${request.length} ${request.type} about ${request.topic}. The content is written in a ${request.tone} tone to engage the target audience.;
-## Key Points;
-- Point 1: ${request.topic} is essential for modern businesses;
-- Point 2: Implementing ${request.topic} can improve efficiency;
-- Point 3: Best practices for ${request.topic} implementation;
-## Conclusion;
-${request.topic} represents a significant opportunity for organizations looking to stay competitive in today's digital landscape.`;
-;
+# Key Points;
+ Point 1: ${request.topic} is essential for modern businesses;
+ Point 2: Implementing ${request.topic} can improve efficiency;
+ Point 3: Best practices for ${request.topic} implementation;
+# Conclusion;
+{request.topic} represents a significant opportunity for organizations looking to stay competitive in today's digital landscape.`;
+
     return {
       content: mock_content;
       word_count: mock_content.split (' ').length;
@@ -188,7 +185,6 @@ ${request.topic} represents a significant opportunity for organizations looking 
         description: `Learn everything about ${request.topic} and how to implement it effectively.`;
         tags: [request.topic, request.type, 'guidetutorial'];
       }
-    }
   }
   async analyze_content (content: string): Promise<{
     seo_score: number;
@@ -217,10 +213,9 @@ ${request.topic} represents a significant opportunity for organizations looking 
         'seo': 1.8,
         'marketing': 1.5;
       }
-    }
   }
-}
-// Pricing tiers for the AI Content Generator
+
+/ Pricing tiers for the AI Content Generator
 export const AI_CONTENT_PRICING = {
   starter: {
     name: 'Starter';
@@ -246,5 +241,3 @@ export const AI_CONTENT_PRICING = {
       'Unlimited content generationsCustom templatesAdvanced analyticsDedicated supportHighest qualityWhite-label optionsCustom integrationsSLA guarantee'
     ]
   }
-}
-

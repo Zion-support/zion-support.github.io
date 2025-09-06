@@ -3,7 +3,6 @@ import React from 'react';
 
 interface Network-security-assessmentProps {
   className?: string;
-}
 
 const Network-security-assessment: React.FC<Network-security-assessmentProps> = ({ className }) => {
   return (
@@ -12,6 +11,3 @@ const Network-security-assessment: React.FC<Network-security-assessmentProps> = 
       <p>This component is under development.</p>
     </div>
   );
-}
-}
-}

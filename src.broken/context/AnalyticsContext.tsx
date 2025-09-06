@@ -6,5 +6,3 @@ export function AnalyticsContext() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

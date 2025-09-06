@@ -9,12 +9,12 @@ interface EmptyFraudStateProps {
 interface EmptyFraudStateProps {;
   hasFilters: boolean,;
   onResetFilters: () => void;
-}
+
 export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
   hasFilters
   onResetFilters
 
-},) => {
+,) => {
   return (
     <div className="text-center py-12">;
       <ShieldAlert className="mx-auto h-12 w-12 text-muted-foreground mb-4" />;
@@ -29,8 +29,8 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
       )}
     </div>
   )
-}
-'"
+
+"
 import React from "react"
 import {Button} from "@/components/ui/button"
 import {ShieldAlert} from 'lucide-react'
@@ -38,15 +38,14 @@ interface EmptyFraudStateProps {
 
   hasFilters: boolean
   onResetFilters: () => void
-}
+
 export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
   hasFilters
   onResetFilters
-}) => {
+) => {
     </div>;
   );
-};
-'";
+";
 
 import React from "react";
 import {Button} from "@/components/ui/button";
@@ -55,12 +54,11 @@ import {ShieldAlert} from 'lucide-react';
 interface EmptyFraudStateProps {;
   hasFilters: boolean,;
   onResetFilters: () => void;
-}
 
 export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({ ;
   hasFilters,;
   onResetFilters ;
-}) => {;
+) => {;
   return (
     <div className="text-center py-12">;
       <ShieldAlert className="mx-auto h-12 w-12 text-muted-foreground mb-4" />;
@@ -75,9 +73,8 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({ ;
       )}
     </div>
   )
-}
 
-};
+;
     <div className="text - center py - 12">;
       <ShieldAlert className="mx - auto h - 12 w - 12 text - muted - foreground mb - 4" />;
       <h3 className="text - lg font - medium">No fraud flags found</h3>;
@@ -89,4 +86,3 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({ ;
       {has_filters && (
         <Button variant="outline" on_click={onResetFilters}>Clear Filters</Button>)}
     </div>);
-}

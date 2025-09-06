@@ -1,7 +1,6 @@
 interface BreadcrumbItem {
   name: string;
   url: string;
-}
 
 export function getBreadcrumbsForPath(path: string): BreadcrumbItem[] {
   const segments = path.split('/').filter(Boolean);
@@ -10,13 +9,13 @@ export function getBreadcrumbsForPath(path: string): BreadcrumbItem[] {
   ];
 
   let currentPath = '';
-  segments.forEach((segment, index) => {
+  segments.forEach(segment, index) => {
     currentPath += `/${segment}`;
     const name = segment
       .split('-')
-      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1)
       .join(' ');
-    
+
     breadcrumbs.push({
       name,
       url: currentPath
@@ -24,4 +23,3 @@ export function getBreadcrumbsForPath(path: string): BreadcrumbItem[] {
   });
 
   return breadcrumbs;
-}

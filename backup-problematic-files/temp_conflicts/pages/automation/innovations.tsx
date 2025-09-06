@@ -1,7 +1,7 @@
 import type { NextPage } from 'next',;
 import Head from 'next/head',;
 import Link from 'next/link',;
-;
+
 const Innovations:NextPage = () => {;
   const functions = [;
     {;
@@ -110,7 +110,7 @@ const Innovations:NextPage = () => {;
       desc:'Updates README.md badges to reflect the latest automation status.';
     }
   ],;
-;
+
   return (;
     <div>;
       <Head>;
@@ -127,7 +127,7 @@ const Innovations:NextPage = () => {;
               <p className="text-gray-600 mb-4">{f.desc}</p>;
               <a href={`/.netlify/functions/${f.id}`} className="inline-block px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700">Run now</a>;
             </div>;
-          ))}
+          )}
         </div>;
         <div className="mt-8">;
           <Link href="/">;
@@ -137,6 +137,6 @@ const Innovations:NextPage = () => {;
       </main>;
     </div>;
   );
-},;
-;
+,;
+
 export default Innovations,

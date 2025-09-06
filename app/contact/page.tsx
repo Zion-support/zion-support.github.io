@@ -1,7 +1,7 @@
 export const metadata = { 
   title: 'Contact | Zion Tech Group',
   description: 'Get in touch with Zion Tech Group for AI, micro SaaS, and IT services. We reply within one business day.',
-};
+;
 
 export default function ContactPage() {
   return (
@@ -11,7 +11,7 @@ export default function ContactPage() {
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h1>
           <p className="text-xl text-gray-600">We reply within one business day</p>
         </div>
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div className="space-y-8">
             <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-sm">
@@ -50,7 +50,7 @@ export default function ContactPage() {
                 </div>
               </div>
             </div>
-            
+
             <div className="bg-blue-50 border border-blue-200 rounded-xl p-6">
               <h3 className="font-semibold text-blue-900 mb-2">Quick Response</h3>
               <p className="text-blue-800 text-sm">
@@ -58,7 +58,7 @@ export default function ContactPage() {
               </p>
             </div>
           </div>
-          
+
           <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-sm">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Send us a Message</h2>
             <form className="space-y-6">
@@ -88,7 +88,7 @@ export default function ContactPage() {
                   />
                 </div>
               </div>
-              
+
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                   Email
@@ -101,7 +101,7 @@ export default function ContactPage() {
                   required
                 />
               </div>
-              
+
               <div>
                 <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
                   Service Interest
@@ -118,7 +118,7 @@ export default function ContactPage() {
                   <option value="consulting">General Consulting</option>
                 </select>
               </div>
-              
+
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                   Message
@@ -132,7 +132,7 @@ export default function ContactPage() {
                   required
                 ></textarea>
               </div>
-              
+
               <button
                 type="submit"
                 className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
@@ -142,7 +142,7 @@ export default function ContactPage() {
             </form>
           </div>
         </div>
-        
+
         <div className="mt-12 text-center">
           <p className="text-gray-600 mb-4">Or visit our main website for more information</p>
           <a
@@ -155,7 +155,7 @@ export default function ContactPage() {
       </div>
     </div>
   );
-}
+
 export const metadata = { title: 'Contact | Zion Tech Group', description: 'Get in touch with Zion Tech Group for AI, micro SaaS, and IT services. We reply within one business day.', } export default /**
  * ContactPage - Function description
  */

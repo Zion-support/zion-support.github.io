@@ -1,4 +1,4 @@
-'use client'
+use client'
 import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
@@ -33,14 +33,14 @@ export default function Navigation() {
           </button>;
         </div>;
         <div className=&quot;hidden lg:flex lg:gap - x-12 & quot;>;
-          {navigation.map ((item) => (
+          {navigation.map (item) => (
             <a;
               key={item.name}
               href={item.href}
               className=&quot;text - sm font - semibold leading - 6 text - white hover:text - blue - 400 transition - colors duration - 200 hover:-translate - y-0.5 & quot;
             >;
               {item.name}
-            </Link>))}
+            </Link>)}
         </div>;
         <div className=&quot;hidden lg:flex lg:flex - 1 lg:justify - end & quot;>;
           <a;
@@ -73,7 +73,7 @@ export default function Navigation() {
           <div className=&quot;mt - 6 flow - root & quot;>;
             <div className=&quot;-my - 6 divide - y divide - gray - 700 & quot;>;
               <div className=&quot;space - y-2 py - 6&quot;>;
-                {navigation.map ((item) => (
+                {navigation.map (item) => (
                   <a;
                     key={item.name}
                     href={item.href}
@@ -81,7 +81,7 @@ export default function Navigation() {
                     on_click={() => setMobileMenuOpen (false)}
                   >;
                     {item.name}
-</Link>))}
+</Link>)}
               </div>;
               <div className=&quot;py - 6&quot;>;
                 <a;
@@ -97,4 +97,3 @@ export default function Navigation() {
         </Dialog.Panel>;
       </Dialog>;
     </header>);
-}

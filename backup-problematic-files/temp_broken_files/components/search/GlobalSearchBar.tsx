@@ -6,7 +6,7 @@ export default function GlobalSearchBar() {
   const [suggestions, setSuggestions] = useState<string[]>([]),
   const [open, setOpen] = useState(false),
   const controller = useRef<AbortController | null>(null),
-  useEffect_(() => {
+  useEffect_() => {
     if (!query) {
       setSuggestions([]),
       return
@@ -19,29 +19,28 @@ export default function GlobalSearchBar() {
         const j = await r.json(),
         setSuggestions(j.suggestions || []),
         setOpen(true)
-      } catch {}
-    },
+      } catch {},
     const id = setTimeout(run, 150),
     return () => clearTimeout(id)
   }, [query]),
 
   const onSubmit = (e?: React.FormEvent) => {
     e?.preventDefault(),
-    if (!query.trim()) return,
-    fetch('/api/telemetry/search', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ q: query }) }).catch(() => {}),
+    if (!query.trim() return,
+    fetch('/api/telemetry/search', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ q: query }) }).catch() => {}),
     router.push(`/search?q=${encodeURIComponent(query)}`),
     setOpen(false)
   },
 
   const startVoice = () => {
-    if (typeof window === 'undefined') return,
+    if (typeof window = = 'undefined') return,
     const Speech: any = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition,
     if (!Speech) return,
     const rec = new Speech(),
     rec.lang = 'en-US',
     rec.onresult = (e: any) => {
       const transcript = e.results?.[0]?.[0]?.transcript || '',
-      if (transcript) setQuery((q) => (q ? q + ' ' + transcript : transcript))
+      if (transcript) setQuery(q) => (q ? q + ' ' + transcript : transcript)
     },
     rec.start()
   },
@@ -63,20 +62,20 @@ value={query}
       {open && suggestions.length > 0 && (
         <div className=&quot;absolute z-50 mt-1 w-full rounded-md border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 shadow-lg&quot;>
           <ul className=&quot;max-h-64 overflow-auto py-1 text-sm&quot;>
-            {suggestions.map((s, i) => (
+            {suggestions.map(s, i) => (
               <li key={i}>
                 <button,
 type=&quot;button&quot;
                   onClick={() => {
                     setQuery(s),
                     setOpen(false),
-                    router.push(`/search?q=${encodeURIComponent(s)}`)                  }}
+                    router.push(`/search?q=${encodeURIComponent(s)}`)                  }
                   className=&quot;w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800&quot;
                 >
                   {s}
                 </button>;
               </li>;
-            ))}
+            )}
           </ul>;
         </div>;
       )}

@@ -1,4 +1,4 @@
-"use client";
+use client";
 import { useState } from "react";
 interface MicroSAASService {id: string;
   name: string;
@@ -12,7 +12,7 @@ interface MicroSAASService {id: string;
   benefits: string[];
   integrations: string[];
   deployment: string;
-}
+
 const microSAASServices: MicroSAASService[] = [;
   {id: "marketplace-platform-pro";
     name: "Digital Marketplace Platform Pro";
@@ -284,10 +284,10 @@ const microSAASServices: MicroSAASService[] = [;
     ];
     deployment: "Enterprise cloud with compliance features";
   }
-];
+;
 export default function MicroSAASPage() {return (;
     <div className="space-y-8">;
-"use client",
+use client",
 import { useState  } from './react';,
 interface MicroSAASService {
   id: string,
@@ -302,7 +302,7 @@ interface MicroSAASService {
   benefits: string[],
   integrations: string[],
   deployment: string;
-}
+
 const microSAASServices: MicroSAASService[] = [;
   {
     id: "marketplace - platform - pro",
@@ -580,7 +580,7 @@ const microSAASServices: MicroSAASService[] = [;
     ],
     deployment: "Enterprise cloud with compliance features";
   }
-],
+,
 export default /**
  * MicroSAASPage - Function description
  */
@@ -613,44 +613,44 @@ function MicroSAASPage() {
             <div>;
               <h3 className="font - semibold mb - 3 text - blue - 400">Target Markets</h3>;
               <div className="grid grid - cols - 1 sm:grid - cols - 2 gap - 2">;
-                {service.target_market.map ((market, index) => (
+                {service.target_market.map (market, index) => (
                   <div key={index} className="flex items - center gap - 2 text - sm">;
                     <span className="text - green - 400"></span>;
                     <span>{market}</span>;
-                  </div>))}
+                  </div>)}
               </div>;
             </div>;
             {/* Features */}
             <div>;
               <h3 className="font - semibold mb - 3 text - purple - 400">Key Features</h3>;
               <div className="grid grid - cols - 1 gap - 2">;
-                {service.features.map ((feature, index) => (
+                {service.features.map (feature, index) => (
                   <div key={index} className="flex items - center gap - 2 text - sm">;
                     <span className="text - blue - 400"></span>;
                     <span>{feature}</span>;
-                  </div>))}
+                  </div>)}
               </div>;
             </div>;
             {/* Benefits */}
             <div>;
               <h3 className="font - semibold mb - 3 text - green - 400">Business Benefits</h3>;
               <div className="grid grid - cols - 1 gap - 2">;
-                {service.benefits.map ((benefit, index) => (
+                {service.benefits.map (benefit, index) => (
                   <div key={index} className="flex items - center gap - 2 text - sm">;
                     <span className="text - yellow - 400"></span>;
                     <span>{benefit}</span>;
-                  </div>))}
+                  </div>)}
               </div>;
             </div>;
             {/* Integrations */}
             <div>;
               <h3 className="font - semibold mb - 3 text - orange - 400">Integrations</h3>;
               <div className="grid grid - cols - 1 sm:grid - cols - 2 gap - 2">;
-                {service.integrations.map ((integration, index) => (
+                {service.integrations.map (integration, index) => (
                   <div key={index} className="flex items - center gap - 2 text - sm">;
                     <span className="text - purple - 400"></span>;
                     <span>{integration}</span>;
-                  </div>))}
+                  </div>)}
               </div>;
             </div>;
             {/* Deployment */}
@@ -673,7 +673,7 @@ function MicroSAASPage() {
                 Learn More;
               </a>;
             </div>;
-          </div>))}
+          </div>)}
       </div>;
       {/* SAAS Capabilities Overview */}
       <div className="space - y-6">;
@@ -733,4 +733,3 @@ function MicroSAASPage() {
         </a>;
       </div>;
     </div>);
-}

@@ -14,7 +14,7 @@ interface TalentCardFooterProps {
   onViewProfile: (id: string) => void
 
   onRequestHire?: (profile: TalentProfile) => void
-}
+
 export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: TalentCardFooterProps) {
   const [isHireModalOpen, setIsHireModalOpen] = useState(false);
   const { userDetails } = useAuthStatus();
@@ -39,7 +39,6 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
       // Open hire modal directly if no handler provided;
       setIsHireModalOpen (true);
     }
-  }
   // Handle view profile
   const handleViewProfile = (e: React.MouseEvent) => {
     e.stopPropagation()
@@ -49,7 +48,6 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
     if (onViewProfile) {
       onViewProfile(profile.id |'')
     }
-  }
 
   return (
     <>;
@@ -98,23 +96,21 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
       />
     </>
   )
-}
-;
+
   // Handle view profile;
   const handleViewProfile = (e: React.MouseEvent) =>: any {
     e.stop_propagation (),
     // Navigate to the talent profile page;
     navigate (`/talent/${profile.id || ''}`);
-;
+
     // Also call the onViewProfile callback if provided;
     // Check condition
 if ( {) {
   $2
-}
+
       onViewProfile (profile.id || '');
     }
-  }
-;
+
   return (
     <>;
       <div className="mt - 4 pt - 4 border - t border - zion - blue - light flex items - center justify - between">;
@@ -159,4 +155,3 @@ if ( {) {
         user_details={user_profile}
       />;
     </>);
-}

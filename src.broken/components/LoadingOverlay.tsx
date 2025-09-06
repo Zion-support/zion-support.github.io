@@ -2,7 +2,6 @@ import React from 'react',;
 import { Loader2 } from 'lucide-react',;
 export interface LoadingOverlayProps {;
   visible?: boolean;
-}
 
 export const LoadingOverlay: React.FC<LoadingOverlayProps> = ({ visible = false }) => {
   if (!visible) return null,
@@ -11,6 +10,6 @@ export const LoadingOverlay: React.FC<LoadingOverlayProps> = ({ visible = false 
       <Loader2 className="h-8 w-8 animate-spin text-white" />
     </div>
   )
-},
+,
 
 export default LoadingOverlay,

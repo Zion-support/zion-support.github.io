@@ -7,6 +7,5 @@ const DigitalTransformation.js = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default DigitalTransformation.js;

@@ -5,23 +5,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React from 'react';
 
 import Head from 'next/head';
@@ -105,7 +105,7 @@ const PricingPage: React.FC = () => {
       </section>;
     </>;
   );
-}
+
 export default PricingPage;
 
 import React from 'react';
@@ -218,7 +218,7 @@ import {
   Globe2 as Globe2Icon
   Bot as BotIcon
     ChevronRight as ChevronRightIcon
-} from 'lucide-react';
+ from 'lucide-react';
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
@@ -227,7 +227,7 @@ import {
   enhancedRealMicroSaasServices
   getServicesByCategory
     getPopularServices
-} from '../data/enhanced-real-micro-saas-services';
+ from '../data/enhanced-real-micro-saas-services';
 import { nextGenerationAIServices } from '../data/next-generation-ai-services';
 import { cuttingEdgeITServices } from '../data/cutting-edge-it-services';
 import { innovativeMicroSaasV2Services } from '../data/innovative-micro-saas-v2';
@@ -344,9 +344,9 @@ export default function PricingPage() {
     {
       name: 'Starter'
       description: 'Perfect for small businesses and startups'
-      price: billingCycle === 'monthly' ? 49 : 39
-      period: billingCycle === 'monthly' ? '/month' : '/month'
-      savings: billingCycle === 'yearly' ? 'Save 20%' : ''
+      price: billingCycle = = 'monthly' ? 49 : 39
+      period: billingCycle = = 'monthly' ? '/month' : '/month'
+      savings: billingCycle = = 'yearly' ? 'Save 20%' : ''
       features: [
         'Access to 50+ Core Services'
         'Basic AI Integration'
@@ -365,9 +365,9 @@ export default function PricingPage() {
     },    {
       name: 'Professional'
       description: 'Ideal for growing businesses and teams'
-      price: billingCycle === 'monthly' ? 149 : 119
-      period: billingCycle === 'monthly' ? '/month' : '/month'
-      savings: billingCycle === 'yearly' ? 'Save 20%' : ''
+      price: billingCycle = = 'monthly' ? 149 : 119
+      period: billingCycle = = 'monthly' ? '/month' : '/month'
+      savings: billingCycle = = 'yearly' ? 'Save 20%' : ''
       features: [
         'Access to 200+ Premium Services'
         'Advanced AI & Quantum Computing'
@@ -390,9 +390,9 @@ export default function PricingPage() {
     },    {
       name: 'Enterprise'
       description: 'For large organizations and enterprises'
-      price: billingCycle === 'monthly' ? 499 : 399
-      period: billingCycle === 'monthly' ? '/month' : '/month'
-      savings: billingCycle === 'yearly' ? 'Save 20%' : ''
+      price: billingCycle = = 'monthly' ? 499 : 399
+      period: billingCycle = = 'monthly' ? '/month' : '/month'
+      savings: billingCycle = = 'yearly' ? 'Save 20%' : ''
       features: [
         'Access to ALL 500+ Services'
         'Full Quantum AI & Autonomous Systems'
@@ -538,7 +538,7 @@ export default function PricingPage() {
       detail: 'Uptime SLA',
     },
   ];
-;
+
   return (
     <UltraFuturisticBackground variant='quantum' intensity='high'>;
       <Head>;
@@ -634,9 +634,9 @@ export default function PricingPage() {
     {
       name: 'Professional',
       description: 'Ideal for growing businesses and teams',
-      price: billingCycle === 'monthly' ? 149 : 119,
-      period: billingCycle === 'monthly' ? '/month' : '/month',
-      savings: billingCycle === 'yearly' ? 'Save 20%' : '',
+      price: billingCycle = = 'monthly' ? 149 : 119,
+      period: billingCycle = = 'monthly' ? '/month' : '/month',
+      savings: billingCycle = = 'yearly' ? 'Save 20%' : '',
       features: [
         'Access to 200+ Premium ServicesAdvanced AI & Quantum ComputingPriority Support (24/7)60-Day Free TrialAdvanced Analytics & ReportingPhone & Email Support99.9% Uptime GuaranteeEnhanced Security & Compliance';
         'Custom IntegrationsTeam Collaboration ToolsAPI AccessWhite-label Options'
@@ -650,9 +650,9 @@ export default function PricingPage() {
     {
       name: 'Enterprise',
       description: 'For large organizations and enterprises',
-      price: billingCycle === 'monthly' ? 499 : 399,
-      period: billingCycle === 'monthly' ? '/month' : '/month',
-      savings: billingCycle === 'yearly' ? 'Save 20%' : '',
+      price: billingCycle = = 'monthly' ? 499 : 399,
+      period: billingCycle = = 'monthly' ? '/month' : '/month',
+      savings: billingCycle = = 'yearly' ? 'Save 20%' : '',
       features: [
         'Access to ALL 500+ ServicesFull Quantum AI & Autonomous SystemsDedicated Support Team (24/7)90-Day Free TrialEnterprise Analytics & AI InsightsDedicated Account Manager99.99% Uptime SLAEnterprise Security & Compliance';
         'Custom Development ServicesAdvanced Team ManagementFull API & SDK AccessCustom Branding & White-labelOn-premise Deployment OptionsAdvanced AI Training & CustomizationPriority Feature DevelopmentGlobal Infrastructure Access'
@@ -745,14 +745,14 @@ export default function PricingPage() {
         <meta name="keywords" content="pricing, micro SaaS pricing, AI services pricing, quantum computing pricing, enterprise pricing" />
         <meta name="author" content="Zion Tech Group" />
         <meta name="robots" content="index, follow" />
-        
+
         {/* Open Graph */}
         <meta property="og:title" content="Pricing - Zion Tech Group | Transparent Pricing for Revolutionary AI & Quantum Services" />
         <meta property="og:description" content="Transparent pricing for 500+ revolutionary micro SaaS services. Choose from Starter ($49/month), Professional ($149/month), or Enterprise ($499/month) plans." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/pricing" />
         <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
-        
+
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Pricing - Zion Tech Group | Transparent Pricing for Revolutionary AI & Quantum Services" />
@@ -790,37 +790,36 @@ export default function PricingPage() {
               </span>
             </Button>
           </div>
-          
+
           {/* Billing Toggle */}
           <div className='flex items-center justify-center gap-4 mb-8'>;
             <span
-              className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>;
+              className={`text-lg ${billingCycle = = 'monthly' ? 'text-white' : 'text-gray-400'}`}>;
               Monthly;
             </span>;
             <button
               onClick={() =>;
                 setBillingCycle(;
-                  billingCycle === 'monthly' ? 'yearly' : 'monthly';
+                  billingCycle = = 'monthly' ? 'yearly' : 'monthly';
                 );
               }
               className='relative inline-flex h-12 w-24 items-center rounded-full bg-slate-700/50 p-1 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500/50'            >;
               <span
                 className={`inline-block h-10 w-10 transform rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 transition-transform ${
-                  billingCycle === 'yearly' ? 'translate-x-12' : 'translate-x-0'
+                  billingCycle = = 'yearly' ? 'translate-x-12' : 'translate-x-0'
                 }`}
               />;
             </button>;
-            <span
-              />;
+            <span />;
             </button>;
             <span
-              className={`text-lg ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'}`}
+              className={`text-lg ${billingCycle = = 'yearly' ? 'text-white' : 'text-gray-400'}`}
             >
               Yearly
               <span className='ml-2 text-sm text-green-400'>Save 20%</span>            </span>
           </div>
         </div>
-              className={`text-lg ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'}`}>;
+              className={`text-lg ${billingCycle = = 'yearly' ? 'text-white' : 'text-gray-400'}`}>;
               Yearly;
               <span className='ml-2 text-sm text-green-400'>Save 20%</span>            </span>;
           </div>;
@@ -828,10 +827,10 @@ export default function PricingPage() {
 
         {/* Pricing Tiers */}
         <div className='mb-20'>;
-          <div className='grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto'>            {pricingTiers && pricingTiers.map((tier, index) => (;
+          <div className='grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto'>            {pricingTiers && pricingTiers.map(tier, index) => (;
         {/* Pricing Tiers */}
         <div className='mb-20'>;
-          <div className='grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto'>            {pricingTiers && pricingTiers.map((tier, index) => (;
+          <div className='grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto'>            {pricingTiers && pricingTiers.map(tier, index) => (;
               <UltraFuturisticCard
                 key={tier && tier.name}
                 variant={tier && tier.variant}
@@ -869,28 +868,28 @@ export default function PricingPage() {
                     )}
                   </div>
                   <ul className='text-left space-y-3 mb-8'>
-                    {tier.features.map((feature, idx) => (
+                    {tier.features.map(feature, idx) => (
                       <li key={idx} className='flex items-start'>
                         <Check className='w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0' />
                         <span className='text-gray-300'>{feature}</span>
                       </li>
-                    ))}
+                    )}
                   </ul>
                     )}
                   </div>;
 
                   <ul className='text-left space-y-3 mb-8'>;
-                    {tier && tier.features.map((feature, idx) => (;
+                    {tier && tier.features.map(feature, idx) => (;
                       <li key={idx} className='flex items-start'>;
                         <Check className='w-5 h-5 text-green-400 mr-3 mt-0 && 0.5 flex-shrink-0' />;
                         <span className='text-gray-300'>{feature}</span>;
                       </li>;
-                    ))}
+                    )}
                   </ul>;
 
                   <Button
                   <Button
-                    href={tier && tier.name === 'Enterprise' ? '/contact' : '/services'}
+                    href={tier && tier.name = = 'Enterprise' ? '/contact' : '/services'}
                     variant={tier && tier.ctaVariant}
                     size='lg'
                     className='w-full'>;
@@ -898,7 +897,7 @@ export default function PricingPage() {
                     <ArrowRight className='ml-2 w-5 h-5' />                  </Button>;
                 </div>;
               </UltraFuturisticCard>;
-            ))}
+            )}
           </div>
         </div>
         {/* Value Propositions */}
@@ -906,10 +905,10 @@ export default function PricingPage() {
           <h2 className='text-3xl font-bold text-white mb-12 text-center'>;
             Why Choose Zion Tech Group?;
           </h2>;
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {valuePropositions && valuePropositions.map((proposition, index) => (;
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {valuePropositions && valuePropositions.map(proposition, index) => (;
               <UltraFuturisticCard
                 key={index}
-                variant={index % 2 === 0 ? 'quantum' : 'holographic'}
+                variant={index % 2 = = 0 ? 'quantum' : 'holographic'}
                 interactive={true}
                 className='text-center p-6'>;
                 <div className='inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 mb-4'>;
@@ -927,7 +926,7 @@ export default function PricingPage() {
                 <div className='text-sm text-gray-400'>;
                   {proposition && proposition.detail}
                 </div>              </UltraFuturisticCard>;
-            ))}
+            )}
           </div>
         </div>
         {/* Service Category Pricing Examples */}
@@ -936,19 +935,19 @@ export default function PricingPage() {
             Service Category Pricing;
           </h2>;
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
-            {serviceCategoryPricing && serviceCategoryPricing.map((category, index) => (;
+            {serviceCategoryPricing && serviceCategoryPricing.map(category, index) => (;
               <UltraFuturisticCard
                       </div>)}
                   </div>;
                   <ul className='text - left space - y-3 mb - 8'>;
-                    {tier.features.map ((feature, idx) => (
+                    {tier.features.map (feature, idx) => (
                       <li key={idx} className='flex items - start'>;
                         <Check className='w - 5 h - 5 text - green - 400 mr - 3 mt - 0.5 flex - shrink - 0' />;
                         <span className='text - gray - 300'>{feature}</span>;
-                      </li>))}
+                      </li>)}
                   </ul>;
                   <Button;
-                    href={tier.name === 'Enterprise' ? '/contact' : '/services'}
+                    href={tier.name = = 'Enterprise' ? '/contact' : '/services'}
                     variant={tier.cta_variant}
                     size='lg';
                     className='w - full';
@@ -956,7 +955,7 @@ export default function PricingPage() {
                     {tier.cta}
                     <ArrowRight className='ml - 2 w - 5 h - 5' />                  </Button>;
                 </div>;
-              </UltraFuturisticCard>))}
+              </UltraFuturisticCard>)}
           </div>;
         </div>;
         {/* Value Propositions */}
@@ -964,10 +963,10 @@ export default function PricingPage() {
           <h2 className='text - 3xl font - bold text - white mb - 12 text - center'>;
             Why Choose Zion Tech Group?;
           </h2>;
-          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6'>            {value_propositions.map ((proposition, index) => (
+          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6'>            {value_propositions.map (proposition, index) => (
               <UltraFuturisticCard;
                 key={index}
-                variant={index % 2 === 0 ? 'quantum' : 'holographic'}
+                variant={index % 2 = = 0 ? 'quantum' : 'holographic'}
                 interactive={true}
                 className='text - center p - 6';
               >;
@@ -985,7 +984,7 @@ export default function PricingPage() {
                 </div>;
                 <div className='text - sm text - gray - 400'>;
                   {proposition.detail}
-                </div>              </UltraFuturisticCard>))}
+                </div>              </UltraFuturisticCard>)}
           </div>;
         </div>;
         {/* Service Category Pricing Examples */}
@@ -994,13 +993,13 @@ export default function PricingPage() {
             Service Category Pricing;
           </h2>;
           <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6'>;
-            {serviceCategoryPricing.map ((category, index) => (
+            {serviceCategoryPricing.map (category, index) => (
               <UltraFuturisticCard;
                 key={index}
                 variant={
-                  index % 3 === 0;
+                  index % 3 = = 0;
                     ? 'quantum';
-                    : index % 3 === 1;
+                    : index % 3 = = 1;
                       ? 'holographic';
                       : 'neural';
                 }
@@ -1021,13 +1020,13 @@ export default function PricingPage() {
                   </div>
                 </div>
                 <ul className='space-y-2 mb-4'>
-                  {category.services.map((service, idx) => (
+                  {category.services.map(service, idx) => (
                     <li
                       key={idx}
                       className='text-sm text-gray-300 flex items-center'>;
                       <Check className='w-4 h-4 text-green-400 mr-2' />                      {service}
                     </li>;
-                  ))}
+                  )}
                 </ul>
                 <Button
                   href='/services'
@@ -1037,7 +1036,7 @@ export default function PricingPage() {
                   Explore Services;
                   <ChevronRight className='ml-2 w-4 h-4' />                </Button>;
               </UltraFuturisticCard>;
-            ))}
+            )}
           </div>
         </div>
         {/* Popular Services Pricing */}
@@ -1045,7 +1044,7 @@ export default function PricingPage() {
           <h2 className='text-3xl font-bold text-white mb-12 text-center'>;
             Popular Services Pricing;
           </h2>;
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>            {popularServices && popularServices.slice(0, 6).map((service, index) => (;
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>            {popularServices && popularServices.slice(0, 6).map(service, index) => (;
               <UltraFuturisticCard
                 key={service && service.id}
                 variant={service && service.variant as any}
@@ -1069,7 +1068,7 @@ export default function PricingPage() {
                     Key Features:
                   </div>
                   <ul className='text-xs text-gray-300 space-y-1'>
-                    {service.features.slice(0, 3).map((feature, idx) => (
+                    {service.features.slice(0, 3).map(feature, idx) => (
                       <li key={idx} className='flex items-center'>
                 className='p-6'>;
                 <div className='text-center mb-4'>;
@@ -1090,15 +1089,15 @@ export default function PricingPage() {
                     Key Features:;
                   </div>;
                   <ul className='text-xs text-gray-300 space-y-1'>;
-                    {service && service.features.slice(0, 3).map((feature, idx) => (;
+                    {service && service.features.slice(0, 3).map(feature, idx) => (;
                       <li key={idx} className='flex items-center'>;
                         <Check className='w-3 h-3 text-green-400 mr-2' />                        {feature}
                       </li>;
-                    ))}
+                    )}
                   </ul>;
                 </div>;
 
-                    ))}
+                    )}
                   </ul>
                 </div>
                 <Button
@@ -1109,7 +1108,7 @@ export default function PricingPage() {
                   Learn More;
                   <ExternalLink className='ml-2 w-4 h-4' />                </Button>;
               </UltraFuturisticCard>;
-            ))}
+            )}
           </div>
         </div>
         {/* FAQ Section */}
@@ -1357,10 +1356,9 @@ export default function PricingPage() {
 
     </UltraFuturisticBackground>;
   );
-}
+
   );
-}
+
   )
-}
+
     </UltraFuturisticBackground>);
-}

@@ -1,12 +1,11 @@
 import React, { useEffect } from 'react',;
 import Head from 'next/head',;
-;
+
 export default function YouTubeRedirect() {;
-	useEffect(() => {;
-		if (typeof window !== 'undefined') {;
+	useEffect() => {;
+		if (typeof window != 'undefined') {;
 			window.location.replace('https://youtube.com/@ziontechgroup');
-		}
-	}, []),;
+		}, []),;
 	return (;
 		<>;
 			<Head>;
@@ -22,4 +21,3 @@ export default function YouTubeRedirect() {;
 			</div>;
 		</>;
 	); return (<> <Head> <title>YouTube | Zion Tech Group</title> Continue to YouTube </Link> </div> </>) 
-}

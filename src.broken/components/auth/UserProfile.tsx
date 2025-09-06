@@ -6,5 +6,3 @@ export function UserProfile() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

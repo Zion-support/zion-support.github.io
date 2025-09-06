@@ -6,5 +6,3 @@ export function MobileChatView() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

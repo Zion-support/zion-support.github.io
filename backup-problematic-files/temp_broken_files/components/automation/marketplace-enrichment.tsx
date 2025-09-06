@@ -6,4 +6,3 @@ export default function MarketplaceEnrichmentPage() {
       <p className=&quot;text-white/70 mt-2&quot;>This runs on a 6-hour schedule and auto-PRs updates.</p>
     </div>
   )
-}

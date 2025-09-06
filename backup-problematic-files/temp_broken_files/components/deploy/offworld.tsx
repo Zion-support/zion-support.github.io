@@ -20,7 +20,7 @@ export default function OffworldDeploy() {
     } catch (e: any) {
       setError(e.message),
       setStatus('')
-    }  }
+    }
 
   return (
     <div className=&quot;min-h-screen p-8&quot;>

@@ -6,5 +6,3 @@ export function TranslationManager() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

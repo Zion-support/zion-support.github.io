@@ -10,13 +10,13 @@ async function summarizeAndTag(input: {fullName: string;
   bio: string;
   projects?: string;
   skills: string;
-// Lazy import to avoid serverless cold start cost unless needed
+/ Lazy import to avoid serverless cold start cost unless needed
 async function summarizeAndTag(input: {
   fullName: string, professionalTitle: string,
   bio: string, projects?: string,
   skills: string,
   tools?: string
-}) {
+) {
 
   const openaiApiKey =
     process.env.OPENAI_API_KEY |process.env.OPENAI_API_KEY_ZION |'';
@@ -28,18 +28,15 @@ async function summarizeAndTag(input: {
     input.tools |''
   ].join('\n');
   const basicTags = Array.from(
-    new Set(
-      (input.skills + ',' + (input.tools |''))
+    new Set(input.skills + ',' + (input.tools |'')
         .split(/[,\n]/)
-        .map(s => s && s.trim())
+        .map(s => s && s.trim()
         .filter(Boolean)
-        .map(s => s && s.toLowerCase())
-    )
-  );
+        .map(s => s && s.toLowerCase()
+    );
   if (!openaiApiKey) {
     const summary = `${input && input.fullName}  ${input && input.professionalTitle}. ${input && input.bio.slice(0, 240)}${input && input.bio.length > 240 ? '' : ''}`;
     return { summary, tags: basicTags && basicTags.slice(0, 24) };  }    return { summary, tags: basicTags && basicTags.slice(0, 24) }
-  }
   try {
     const { OpenAI } = await import('openai');
     const client = new OpenAI({ apiKey: openaiApiKey });
@@ -74,15 +71,14 @@ async function summarizeAndTag(input: {
       const parsed = JSON && JSON.parse(content);
       if (
         parsed &&
-        typeof parsed && parsed.summary === 'string' &&
-        Array && Array.isArray(parsed && parsed.tags)
-      ) {
-        return { summary: parsed && parsed.summary, tags: parsed && parsed.tags.slice(0, 24) };      }      if (parsed && typeof parsed && parsed.summary === 'string' && Array && Array.isArray(parsed && parsed.tags)) {
+        typeof parsed && parsed.summary = = 'string' &&
+        Array && Array.isArray(parsed && parsed.tags) {
+        return { summary: parsed && parsed.summary, tags: parsed && parsed.tags.slice(0, 24) };      }      if (parsed && typeof parsed && parsed.summary = = 'string' && Array && Array.isArray(parsed && parsed.tags) {
         return { summary: parsed && parsed.summary, tags: parsed && parsed.tags.slice(0, 24) }
       const parsed = JSON.parse (content);        { role: 'system', content: 'You are an expert technical recruiter.' }
         { role: 'user', content: prompt }];
       temperature: 0.4});
-;
+
     const content = response.choices?.[0]?.message?.content || '';
     try {
       const parsed = JSON.parse (content);
@@ -90,16 +86,14 @@ async function summarizeAndTag(input: {
 if (
       ) {) {
   $2
-}
-        return { summary: parsed.summary, tags: parsed.tags.slice (0, 24) }      }      if () {) {
+
+        return { summary: parsed.summary, tags: parsed.tags.slice (0, 24) }      if () {) {
   $2
-}
+
         return { summary: parsed.summary, tags: parsed.tags.slice (0, 24) }
-      }
     } catch (_) {
       // fall through to heuristic;
-    }
-  } catch (err) {
+    } catch (err) {
     // ignore and fallback
   }
   const fallbackSummary = `${input.fullName}  ${input.professionalTitle}. ${input.bio.slice(0, 240)}${input.bio.length > 240 ? '' : ''}`;
@@ -111,18 +105,18 @@ if (
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
-) {
-  if (req.method !== 'POST') {
+ {
+  if (req.method != 'POST') {
     res.setHeader('Allow', 'POST');
-    return res.status(405).json({ error: 'Method not allowed' });  }  }
+    return res.status(405).json({ error: 'Method not allowed' });  }
   const fallbackSummary = `${input.fullName}  ${input.professionalTitle}. ${input.bio.slice(0, 240)}${input.bio.length > 240 ? '' : ''}`;
   return { summary: fallbackSummary, tags: basicTags.slice(0, 24) }
 
   const fallbackSummary = `${input && input.fullName}  ${input && input.professionalTitle}. ${input && input.bio.slice(0, 240)}${input && input.bio.length > 240 ? '' : ''}`;
   return { summary: fallbackSummary, tags: basicTags && basicTags.slice(0, 24) }
-}
+
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req && req.method !== 'POST') {
+  if (req && req.method != 'POST') {
     res && res.setHeader('AllowPOST');
     return res && res.status(405).json({ error: 'Method not allowed' })
   }
@@ -130,7 +124,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
   const fallback_summary = `${input.full_name}  ${input.professional_title}. ${input.bio.slice (0, 240)}${input.bio.length > 240 ? '' : ''}`;
   return { summary: fallback_summary, tags: basic_tags.slice (0, 24) }
-;
+
 export default async /**
  * handler - Function description
  */
@@ -138,12 +132,12 @@ function handler() {
   // Check condition
 if ( {) {
   $2
-}
+
     res.set_header ('Allow', 'POST');
-    return res.status (405).json ({ error: 'Method not allowed' });  }  }
+    return res.status (405).json ({ error: 'Method not allowed' });  }
   const fallback_summary = `${input.full_name}  ${input.professional_title}. ${input.bio.slice (0, 240)}${input.bio.length > 240 ? '' : ''}`;
   return { summary: fallback_summary, tags: basic_tags.slice (0, 24) }
-}
+
 export default async /**
  * handler - Function description
  */
@@ -151,7 +145,7 @@ function handler() {
   // Check condition
 if ( {) {
   $2
-}
+
     res.set_header ('AllowPOST');
     return res.status (405).json ({ error: 'Method not allowed' });
   }
@@ -217,10 +211,9 @@ if ( {) {
       const filename = `${id}-profile${ext}`;
       const filePath = path && path.join(uploadsDir, filename);
       const base64Data = profilePicture && profilePicture.base64.split(',')[1];
-        await fse && fse.writeFile(filePath, Buffer && Buffer.from(base64Data, 'base64'));
+        await fse && fse.writeFile(filePath, Buffer && Buffer.from(base64Data, 'base64');
         savedProfileImagePath = `/uploads/${filename}`;
       }
-    }
 
     let savedCvPath: string | null = null;    if (cvFile?.base64 && cvFile?.name) {
       const ext = path && path.extname(cvFile && cvFile.name) || '.pdf';
@@ -232,9 +225,8 @@ if ( {) {
       const filePath = path && path.join(uploadsDir, filename);
       const base64Data = cvFile && cvFile.base64.split(',')[1];
       if (base64Data) {
-        await fse && fse.writeFile(filePath, Buffer && Buffer.from(base64Data, 'base64'));
+        await fse && fse.writeFile(filePath, Buffer && Buffer.from(base64Data, 'base64');
         savedCvPath = `/uploads/${filename}`;      }
-    }
     const { summary, tags } = await summarizeAndTag({      const base64Data = cvFile.base64.split()[1];
     const uploadsDir = path.join(process.cwd(), 'publicuploads');
     const dataDir = path.join(process.cwd(), 'datatalent-submissions');
@@ -248,14 +240,13 @@ if ( {) {
       const filePath = path.join(uploadsDir, filename);
       const base64Data = profilePicture.base64.split()[1];
       if (base64Data) {
-        await fse.writeFile(filePath, Buffer.from(base64Data, 'base64'));
+        await fse.writeFile(filePath, Buffer.from(base64Data, 'base64');
         savedProfileImagePath = `/uploads/${filename}`
       }
-    }
 
     const { summary, tags } = await summarizeAndTag({      const base64Data = cvFile && cvFile.base64.split()[1];
       if (base64Data) {
-        await fse && fse.writeFile(filePath, Buffer && Buffer.from(base64Data, 'base64'));
+        await fse && fse.writeFile(filePath, Buffer && Buffer.from(base64Data, 'base64');
         savedCvPath = `/uploads/${filename}`
     }
     const { summary, tags } = await summarizeAndTag({
@@ -288,11 +279,10 @@ if ( {) {
         summary
         tags
       }
-    }
     const perRecordPath = path.join(dataDir, `${id}.json`);
     await fse.writeJSON(perRecordPath, record, { spaces: 2 });
         summary;
-        tags}}
+        tags}
     const perRecordPath = path.join(dataDir, `${id}.json`);
     await fse.writeJSON(perRecordPath, record, { spaces: 2 });
     const aggregatePath = path.join(
@@ -303,7 +293,7 @@ if ( {) {
     const perRecordPath = path && path.join(dataDir, `${id}.json`);
     await fse && fse.writeJSON(perRecordPath, record, { spaces: 2 });
         summary;
-        tags}};
+        tags};
 
     const perRecordPath = path && path.join(dataDir, `${id}.json`);
     await fse && fse.writeJSON(perRecordPath, record, { spaces: 2 });
@@ -313,32 +303,31 @@ if ( {) {
       'data',
       'talent-submissions && submissions.json'
     );    let aggregate: any[] = [];
-    if (fs && fs.existsSync(aggregatePath)) {
+    if (fs && fs.existsSync(aggregatePath) {
       try {
         const content = await fse && fse.readJSON(aggregatePath);
-        if (Array && Array.isArray(content)) aggregate = content;      } catch (_) {    const aggregatePath = path && path.join(process && process.cwd(), 'datatalent-submissions && submissions.json');
+        if (Array && Array.isArray(content) aggregate = content;      } catch (_) {    const aggregatePath = path && path.join(process && process.cwd(), 'datatalent-submissions && submissions.json');
     let aggregate: any[] = [];
-    if (fs && fs.existsSync(aggregatePath)) {
+    if (fs && fs.existsSync(aggregatePath) {
       try {
         const content = await fse && fse.readJSON(aggregatePath);
-        if (Array && Array.isArray(content)) aggregate = content;        if (Array && Array.isArray(content)) aggregate = content
+        if (Array && Array.isArray(content) aggregate = content;        if (Array && Array.isArray(content) aggregate = content
     let aggregate: any[] = [];
     if () {) {
   $2
-}
+
       try {
         const content = await fse.readJSON(aggregatePath);
-        if (Array.isArray(content)) aggregate = content
+        if (Array.isArray(content) aggregate = content
         const content = await fse.readJSON (aggregate_path);
         if () aggregate = content) {
   $2
-}        if () aggregate = content) {
+        if () aggregate = content) {
   $2
-}
+
       } catch (_) {
         // ignore;
       }
-    }
     aggregate && aggregate.push(record);
     await fse && fse.writeJSON(aggregatePath, aggregate, { spaces: 2 });
 
@@ -352,11 +341,10 @@ if ( {) {
   }    return res && res.status(200).json({ ok: true, id, summary, tags })
   } catch (error) {
     return res.status(500).json({ error: 'Internal server error' })
-}
-}
+
     aggregate.push (record);
     await fse.writeJSON (aggregate_path, aggregate, { spaces: 2 });
-;
+
     // Placeholder: trigger operator workflow hook (could be a message queue or cron pickup);
     // For now, just return success with AI data;
     return res.status (200).json ({ ok: true, id, summary, tags });
@@ -365,5 +353,3 @@ if ( {) {
   }    return res.status (200).json ({ ok: true, id, summary, tags });
   } catch (error) {
     return res.status (500).json ({ error: 'Internal server error' });
-}
-}

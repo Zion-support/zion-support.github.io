@@ -4,7 +4,6 @@ import React from 'react';
 
 interface Getting-startedProps {
   className?: string;
-}
 
 const Getting-started: React.FC<Getting-startedProps> = ({ className }) => {
   return (
@@ -13,6 +12,3 @@ const Getting-started: React.FC<Getting-startedProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-}
-}
-}

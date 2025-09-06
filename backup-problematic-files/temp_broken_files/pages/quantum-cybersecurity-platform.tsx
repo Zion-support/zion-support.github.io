@@ -1,7 +1,7 @@
 import React from 'react',;
 import Head from 'next/head',;
 import Button from '../components/ui/Button',;
-;
+
 export default function QuantumCybersecurityPlatform() {;
   return (;
     <>;
@@ -21,9 +21,9 @@ export default function QuantumCybersecurityPlatform() {;
               'Post-quantum cryptography integrationQuantum key distribution options',;
               'Advanced anomaly and threat detectionSecurity analytics and incident workflows',;
               'Compliance and reportingFrom $4,999/mo';
-            ].map((f) => (;
+            ].map(f) => (;
               <div key={f} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 text-gray-200">{f}</div>;
-            ))}
+            )}
           </section>;
           <div className="text-center">;
             <Button href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">Contact Security Team</Button>;
@@ -32,6 +32,5 @@ export default function QuantumCybersecurityPlatform() {;
       </div>;
     </>;
   ),; <Head> <title>Quantum Cybersecurity Platform | Zion Tech Group</title> <meta name="description" content="Next-gen quantum-resistant cybersecurity solutions for enterprise workloads." /> <link rel="canonical" href="https://ziontechgroup.com/quantum-cybersecurity-platform" /> </Head> </header> <section className="grid grid-cols-1 md:grid-cols-3 gap-6" > {
-  [) ) 
-}</section> <div className="text-center" > <Button href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white" >Contact Security Team</Button> </div> </div> </div> </>) 
-}
+  [) 
+</section> <div className="text-center" > <Button href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white" >Contact Security Team</Button> </div> </div> </div> </>) 

@@ -6,5 +6,3 @@ export function FeedbackAnalytics() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

@@ -6,7 +6,6 @@ interface EnhancedSEOProps {
   keywords: string;
   type: string;
   url: string;
-}
 
 export function EnhancedSEO(props: EnhancedSEOProps) {
   return (
@@ -20,4 +19,3 @@ export function EnhancedSEO(props: EnhancedSEOProps) {
       <meta property="og:description" content={props.description} />
     </>
   );
-}

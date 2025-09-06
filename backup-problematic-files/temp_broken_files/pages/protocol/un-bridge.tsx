@@ -1,5 +1,5 @@
 import React, { useState } from 'react',;
-;
+
 export default function UNBridge() {;
   const [form, setForm] = useState({;
     title:'Zion DAO x Digital Labor Initiative',;
@@ -13,12 +13,12 @@ export default function UNBridge() {;
   const [loading, setLoading] = useState(false),;
   const [result, setResult] = useState<any>(null),;
   const [translated, setTranslated] = useState<string>(''),;
-;
+
   const onChange = (e:React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
     const { name, value } = e.target,;
-    setForm((f) => ({ ...f, [name]:value })),;
+    setForm(f) => ({ ...f, [name]:value }),;
   },;
-;
+
   async function generate() {;
     setLoading(true),;
     try {;
@@ -27,12 +27,11 @@ export default function UNBridge() {;
         headers:{ 'Content-Type':'application/json' },;
         body:JSON.stringify({;
           ...form,;
-          supportingMultiverses:form.supportingMultiverses.split().map((s) => s.trim()).filter(Boolean)})}),;
+          supportingMultiverses:form.supportingMultiverses.split().map(s) => s.trim().filter(Boolean)})}),;
       const data = await res.json(),;
       setResult(data),;
     } finally { setLoading(false), }
-  }
-;
+
   async function translate(targetLanguage:string) {;
     if (!result?.markdown) return,;
     setLoading(true),;
@@ -44,8 +43,7 @@ export default function UNBridge() {;
       const data = await res.json(),;
       setTranslated(data.translated),;
     } finally { setLoading(false), }
-  }
-;
+
   async function exportArtifacts() {;
     if (!result?.meta?.id) return,;
     setLoading(true),;
@@ -57,11 +55,10 @@ export default function UNBridge() {;
       // Refresh meta;
       const list = await fetch('/api/proposals/list'),;
       const { proposals } = await list.json(),;
-      const updated = proposals.find((p:any) => p.id === result.meta.id),;
-      setResult((r:any) => ({ ...r, meta:updated })),;
+      const updated = proposals.find(p:any) => p.id = = result.meta.id),;
+      setResult(r:any) => ({ ...r, meta:updated }),;
     } finally { setLoading(false), }
-  }
-;
+
   async function submit(channels:string[]) {;
     if (!result?.meta?.id) return,;
     setLoading(true),;
@@ -71,10 +68,9 @@ export default function UNBridge() {;
         headers:{ 'Content-Type':'application/json' },;
         body:JSON.stringify({ id:result.meta.id, channels })}),;
       const data = await res.json(),;
-      setResult((r:any) => ({ ...r, meta:data.meta })),;
+      setResult(r:any) => ({ ...r, meta:data.meta }),;
     } finally { setLoading(false), }
-  }
-;
+
   return (;
     <div className="space-y-6">;
       <h1 className="text-2xl font-semibold">Global Outreach:UN Bridge</h1>;
@@ -155,14 +151,13 @@ export default function UNBridge() {;
       </div>;
     </div>;
   ),; <option>Workforce Dev</option> <option>AI Ethics</option> <option>Digital ID</option> <option>Education</option> </select> </label>) 
-}{
+{
   result.meta.artifacts?.ipfsCid && (<div>IPFS CID: {
   result.meta.artifacts.ipfsCid 
-}</div>) 
-}{
+</div>) 
+{
   result.meta.artifacts?.signature && (<div>Signature: {
   result.meta.artifacts.signature.slice (0, 30) 
-}</div>) 
-}</div>) 
-}</div> </div> </div>) 
-}
+</div>) 
+</div>) 
+</div> </div> </div>) 

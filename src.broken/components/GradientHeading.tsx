@@ -6,5 +6,3 @@ export function GradientHeading() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

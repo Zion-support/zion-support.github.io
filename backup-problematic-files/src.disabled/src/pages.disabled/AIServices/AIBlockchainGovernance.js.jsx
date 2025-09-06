@@ -7,6 +7,5 @@ const AIBlockchainGovernance.js = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default AIBlockchainGovernance.js;

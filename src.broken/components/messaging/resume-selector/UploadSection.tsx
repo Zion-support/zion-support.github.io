@@ -6,5 +6,3 @@ export function UploadSection() {;
       <p>Component placeholder - needs implementation</p>;
     </div>;
   );
-}
-;

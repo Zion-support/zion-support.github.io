@@ -10,14 +10,14 @@ import {
   Target, Microscope, Cpu, Database, Cloud, Lock,
   Home, Building, DollarSign, FileText, MessageSquare, MessageCircle, Newspaper, Handshake, LifeBuoy, Activity,
   ShoppingCart, UserCheck, BarChart, Palette, Video, LockIcon, GlobeIcon, CpuIcon
-} from 'lucide-react',
+ from 'lucide-react',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-},
+,
 const _serviceCategories = [
   {_title: ' Revolutionary AI Services', _icon: Brain, _services: [
       { name: 'AI Business Intelligence Pro', _href: '/ai-business-intelligence-pro', _price: '$299/month'},
@@ -47,7 +47,7 @@ const _serviceCategories = [
       {_name: 'Legal Document Automation', _href: '/legal-document-automation', _price: '$399/month'}
     ]
   }
-],
+,
 
 const quickLinks = [
   { name: 'Home', href: '/', icon: Home },
@@ -58,7 +58,7 @@ const quickLinks = [
   { name: 'Case Studies', href: '/case-studies', icon: FileText },
   { name: 'Blog', href: '/blog', icon: MessageSquare },
   { name: 'Contact', href: '/contact', icon: MessageCircle }
-],
+,
 
 const companyLinks = [
   { name: 'About Us', href: '/about', icon: Users },
@@ -67,7 +67,7 @@ const companyLinks = [
   { name: 'Partners', href: '/partners', icon: Handshake },
   { name: 'Support', href: '/support', icon: LifeBuoy },
   { name: 'Status', href: '/status', icon: Activity }
-],
+,
 
 const socialLinks = [
   { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
@@ -75,18 +75,18 @@ const socialLinks = [
   { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },
   { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube },
   { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter }
-],
+,
 
 const certifications = [
   'ISO 27001 CertifiedSOC 2 Type II CompliantGDPR CompliantHIPAA CompliantPCI DSS Level 1FedRAMP AuthorizedQuantum Security CertifiedAI Ethics Compliant'
-],
+,
 
 const stats = [
   { label: 'Happy Customers', value: '50K+', icon: Users },
   { label: 'Services Delivered', value: '200+', icon: Rocket },
   { label: 'Countries Served', value: '45+', icon: Globe },
   { label: 'Success Rate', value: '99.9%', icon: CheckCircle }
-],
+,
 
 export default function UltraFuturisticFooter2034() {
   return (
@@ -104,10 +104,10 @@ export default function UltraFuturisticFooter2034() {
             {/* Company Info */}
             <div className=&quot;lg:col-span-1&quot;>
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.6 }
+                viewport={ once: true }
                 className=&quot;space-y-6&quot;              >
                 <div className=&quot;flex items-center space-x-3&quot;>
                   <div className=&quot;relative&quot;>
@@ -123,7 +123,7 @@ export default function UltraFuturisticFooter2034() {
                     <p className=&quot;text-sm text-gray-400&quot;>Future Technology Solutions</p>
                   </div>
                 </div>
-                
+
                 <p className=&quot;text-gray-300 leading-relaxed&quot;>
                   Leading provider of cutting-edge AI, quantum computing, and emerging technology solutions. 
                   Empowering businesses with innovative tools for the future.
@@ -131,21 +131,21 @@ export default function UltraFuturisticFooter2034() {
 
                 {/* Stats */}
                 <div className=&quot;grid grid-cols-2 gap-4&quot;>
-                  {stats.map((stat, index) => (
+                  {stats.map(stat, index) => (
                     <motion.div
                       key={stat.label}
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
-                      viewport={{ once: true }}
+                      initial={ opacity: 0, scale: 0.8 }
+                      whileInView={ opacity: 1, scale: 1 }
+                      transition={ duration: 0.5, delay: index * 0.1 }
+                      viewport={ once: true }
                       className=&quot;text-center p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10&quot;
                     >
                       <stat.icon className=&quot;w-6 h-6 text-cyan-400 mx-auto mb-2&quot; />
                       <div className=&quot;text-lg font-bold text-white&quot;>{stat.value}</div>
                       <div className=&quot;text-xs text-gray-400&quot;>{stat.label}</div>                    </motion.div>
-                  ))}
+                  )}
                 </div>;
-;
+
                 {/* Contact Info */}
                 <div className=&quot;space-y-3&quot;>
                   <div className=&quot;flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors&quot;>
@@ -166,21 +166,21 @@ export default function UltraFuturisticFooter2034() {
             {/* Services */}
             <div className=&quot;lg:col-span-2&quot;>
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.6, delay: 0.2 }
+                viewport={ once: true }
                 className=&quot;space-y-8&quot;
               >
                 <h3 className=&quot;text-xl font-bold text-white mb-6&quot;>Our Services</h3>
                 <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-8&quot;>
-                  {serviceCategories.map((category, index) => (
+                  {serviceCategories.map(category, index) => (
                     <motion.div
                       key={category.title}
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
-                      viewport={{ once: true }}
+                      initial={ opacity: 0, x: -20 }
+                      whileInView={ opacity: 1, x: 0 }
+                      transition={ duration: 0.5, delay: index * 0.1 }
+                      viewport={ once: true }
                       className=&quot;space-y-4&quot;
                     >
                       <div className=&quot;flex items-center space-x-2&quot;>
@@ -188,7 +188,7 @@ export default function UltraFuturisticFooter2034() {
                         <h4 className=&quot;font-semibold text-white&quot;>{category.title}</h4>
                       </div>
                       <div className=&quot;space-y-2&quot;>
-                        {category.services.map((service) => (
+                        {category.services.map(service) => (
                           <Link
                             key={service.name}
                             href={service.href}
@@ -200,27 +200,27 @@ export default function UltraFuturisticFooter2034() {
                             <span className=&quot;text-xs text-gray-500 group-hover:text-cyan-400 transition-colors&quot;>
                               {service.price}                            </span>
                           </a>
-                        ))}
+                        )}
                       </div>;
                     </motion.div>;
-                  ))}
+                  )}
                 </div>;
               </motion.div>;
             </div>;
-;
+
             {/* Quick Links & Social */}
             <div className=&quot;lg:col-span-1&quot;>
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.6, delay: 0.4 }
+                viewport={ once: true }
                 className=&quot;space-y-8&quot;              >
                 {_/* Quick Links */}
                 <div>
                   <h4 className=&quot;text-lg font-semibold text-white mb-4&quot;>Quick Links</h4>
                   <div className=&quot;space-y-2&quot;>
-                    {quickLinks.map((link) => (
+                    {quickLinks.map(link) => (
                       <Link
                         key={link.name}
                         href={link.href}
@@ -228,7 +228,7 @@ export default function UltraFuturisticFooter2034() {
                       >
                         <link.icon className=&quot;w-4 h-4 group-hover:scale-110 transition-transform&quot; />
                         <span className=&quot;text-sm&quot;>{link.name}</span>
-                      </a>                    ))}
+                      </a>                    )}
                   </div>
                 </div>
 
@@ -236,7 +236,7 @@ export default function UltraFuturisticFooter2034() {
                 <div>
                   <h4 className=&quot;text-lg font-semibold text-white mb-4&quot;>Company</h4>
                   <div className=&quot;space-y-2&quot;>
-                    {companyLinks.map((link) => (
+                    {companyLinks.map(link) => (
                       <Link
                         key={link.name}
                         href={link.href}
@@ -244,7 +244,7 @@ export default function UltraFuturisticFooter2034() {
                       >
                         <link.icon className=&quot;w-4 h-4 group-hover:scale-110 transition-transform&quot; />
                         <span className=&quot;text-sm&quot;>{link.name}</span>
-                      </a>                    ))}
+                      </a>                    )}
                   </div>
                 </div>
 
@@ -252,7 +252,7 @@ export default function UltraFuturisticFooter2034() {
                 <div>
                   <h4 className=&quot;text-lg font-semibold text-white mb-4&quot;>Follow Us</h4>
                   <div className=&quot;flex space-x-4&quot;>
-                    {socialLinks.map((social) => (
+                    {socialLinks.map(social) => (
                       <Link
                         key={social.name}
                         href={social.href}
@@ -261,7 +261,7 @@ export default function UltraFuturisticFooter2034() {
                         className=&quot;w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center text-white hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-110&quot;                      >
                         <social.icon className=&quot;w-5 h-5&quot; />
                       </a>
-                    ))}
+                    )}
                   </div>
                 </div>
               </motion.div>
@@ -270,30 +270,30 @@ export default function UltraFuturisticFooter2034() {
 
           {_/* Certifications */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 20 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.6, delay: 0.6 }
+            viewport={ once: true }
             className=&quot;mt-16 pt-8 border-t border-white/10&quot;
           >
             <h4 className=&quot;text-lg font-semibold text-white mb-6 text-center&quot;>Certifications & Compliance</h4>
             <div className=&quot;grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4&quot;>
-              {certifications.map((cert, index) => (
+              {certifications.map(cert, index) => (
                 <motion.div
                   key={cert}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, scale: 0.8 }
+                  whileInView={ opacity: 1, scale: 1 }
+                  transition={ duration: 0.5, delay: index * 0.1 }
+                  viewport={ once: true }
                   className=&quot;flex items-center justify-center p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-200&quot;
                 >
                   <CheckCircle className=&quot;w-4 h-4 text-green-400 mr-2&quot; />
                   <span className=&quot;text-xs text-gray-300 text-center&quot;>{cert}</span>                </motion.div>
-              ))}
+              )}
             </div>;
           </motion.div>;
         </div>;
-;
+
         {/* Bottom Bar */}
         <div className="border-t border-white/10 bg-black/50 backdrop-blur-sm">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-6">
@@ -310,7 +310,7 @@ export default function UltraFuturisticFooter2034() {
                 <Link href=&quot;/privacy&quot; className=&quot;hover:text-cyan-400 transition-colors&quot;>Privacy Policy</a>
                 <Link href=&quot;/terms&quot; className=&quot;hover:text-cyan-400 transition-colors&quot;>Terms of Service</a>
               </div>
-              
+
               <div className=&quot;flex items-center space-x-2 text-gray-400&quot;>
                 <Heart className=&quot;w-4 h-4 text-red-400&quot; />
                 <span className=&quot;text-sm&quot;>Made with  for the future</span>

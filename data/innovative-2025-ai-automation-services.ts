@@ -545,11 +545,11 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
     marketSize: '$18B customer intelligence market', growthRate: '280% annual growth',
     variant: 'ai-analytics',
     contactInfo: {
-      
+
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    
+
     },
     realImplementation: true,
     implementationDetails: 'Full ML platform with real-time data processing, advanced predictive models, comprehensive analytics, and enterprise-grade security.',
@@ -583,11 +583,11 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
     marketSize: '$12B AI development tools market', growthRate: '350% annual growth',
     variant: 'ai-development',
     contactInfo: {
-      
+
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    
+
     },
     realImplementation: true,
     implementationDetails: 'Full autonomous development platform with AI code generation, automated testing, security scanning, and deployment automation.',
@@ -621,11 +621,11 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
     marketSize: '$22B algorithmic trading market', growthRate: '320% annual growth',
     variant: 'ai-finance',
     contactInfo: {
-      
+
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    
+
     },
     realImplementation: true,
     implementationDetails: 'Full autonomous trading platform with advanced AI algorithms, real-time market data, risk management, and compliance tools.',
@@ -675,5 +675,4 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
     rating: 4.9,
     reviews: 28;
   }
-];
 ;

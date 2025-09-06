@@ -1,12 +1,10 @@
-// UseWallet utility
+/ UseWallet utility
 export const UseWallet = () => {
   // Implementation here
   return null;
-};
 
 interface UseWalletProps {
   // Add props here as needed
-}
 
 export default function UseWallet({ }: UseWalletProps) {
   return (
@@ -15,7 +13,3 @@ export default function UseWallet({ }: UseWalletProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}
-}
-}
-}

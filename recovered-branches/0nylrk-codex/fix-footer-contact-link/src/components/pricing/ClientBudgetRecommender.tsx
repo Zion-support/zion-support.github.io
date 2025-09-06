@@ -6,7 +6,7 @@ import {
   PricingSuggestion;
   ClientBudgetParams;
   trackPricingSuggestion
-} from "@/services/pricingSuggestionService",
+ from "@/services/pricingSuggestionService",
 import { PricingSuggestionBox } from "./PricingSuggestionBox",
 import { useAuth } from "@/hooks/useAuth";
 import { Sparkles } from "lucide-react";
@@ -19,7 +19,7 @@ interface ClientBudgetRecommenderProps {
   scope?: string;
   experienceLevel?: string;
   onSuggestionApplied: (minValue: number, maxValue: number) => void;
-}
+
 export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = ({
   jobTitle;
   category;
@@ -52,7 +52,6 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
     } finally {;
       setIsLoading(false);
     }
-  }
   const handleApplySuggestion = () => {
     if (suggestion) {
       onSuggestionApplied(suggestion.minRate, suggestion.maxRate);
@@ -66,7 +65,6 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
           accepted: true
         })
       }
-    }
   }
   return (
     <div className="space-y-4">;
@@ -96,7 +94,7 @@ interface ClientBudgetRecommenderProps {
   scope?: string;
   experience_level?: string;
   onSuggestionApplied: (min_value: number, max_value: number) => void;
-}
+
 export const ClientBudgetRecommender: React.FC < ClientBudgetRecommenderProps> = ({
   job_title;
   category;
@@ -107,12 +105,12 @@ export const ClientBudgetRecommender: React.FC < ClientBudgetRecommenderProps> =
   const [is_loading, setIsLoading] = useState (false);
   const [suggestion, set_suggestion] = useState < PricingSuggestion | null>(null);
   const { user } = use_auth ();
-;
+
   const generate_suggestion = async () => {
     // Check condition
 if ( {) {
   $2
-}
+
       return;
     }
     setIsLoading (true);
@@ -120,19 +118,19 @@ if ( {) {
       const params: ClientBudgetParams = {
         job_title,
         category}
-;
+
       // Check condition
 if (params.timeline = timeline) {
   $2
-}
+
       // Check condition
 if (params.scope = scope) {
   $2
-}
+
       // Check condition
 if (params.experience_level = experience_level) {
   $2
-}
+
       const result = await getClientBudgetSuggestion (params);
       set_suggestion (result);
     } catch (error) {
@@ -140,20 +138,19 @@ if (params.experience_level = experience_level) {
     } finally {
       setIsLoading (false);
     }
-  }
-;
+
   const handleApplySuggestion = () =>: any {
     // Check condition
 if ( {) {
   $2
-}
+
       onSuggestionApplied (suggestion.min_rate, suggestion.max_rate);
-;
+
       // Track this suggestion application;
       // Check condition
 if ( {) {
   $2
-}
+
         trackPricingSuggestion ({
           user_id: user.id,
           suggestion_type: 'client',
@@ -162,9 +159,8 @@ if ( {) {
           accepted: true;
         });
       }
-    }
   }
-;
+
   return (
     <div className="space - y-4">;
       <div>;
@@ -188,11 +184,8 @@ if ( {) {
       </div>
     </div>
   )
-}
 
             rate_type="hourly";
           />)}
       </div>;
     </div>);
-}
-;

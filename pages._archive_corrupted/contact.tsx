@@ -1,13 +1,13 @@
-const SEO = dynamic(() => import(\'../src/components/SEO\'), { \"ssr\": false })
-const PageTransition = dynamic(() => import(\'../src/components/PageTransition\'), { \"ssr\": false })
+const SEO = dynamic() => import(\'../src/components/SEO\'), { \"ssr\": false })
+const PageTransition = dynamic() => import(\'../src/components/PageTransition\'), { \"ssr\": false })
 const \"ContactPage\": React.FC = () => {
 import React from 'react'
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-const SEO = dynamic(() => import(\'../src/components/SEO\'), { \"ssr\": false })
-const PageTransition = dynamic(() => import(\'../src/components/PageTransition\'), { \"ssr\": false })
+const SEO = dynamic() => import(\'../src/components/SEO\'), { \"ssr\": false })
+const PageTransition = dynamic() => import(\'../src/components/PageTransition\'), { \"ssr\": false })
 const \"ContactPage\": React.FC = () => {
 
 class ErrorBoundary extends React.Component {
@@ -15,25 +15,25 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
-const SEO = dynamic(() => import(\'../src/components/SEO\'), { \"ssr\": false });
-const PageTransition = dynamic(() => import(\'../src/components/PageTransition\'), { \"ssr\": false });
+
+const SEO = dynamic() => import(\'../src/components/SEO\'), { \"ssr\": false });
+const PageTransition = dynamic() => import(\'../src/components/PageTransition\'), { \"ssr\": false });
 const \"ContactPage\": React.FC = () => {;
 import React from 'react';
 import dynamic from 'next/dynamic';
@@ -49,12 +49,12 @@ import {
   Send,
   MessageCircle,
   Globe
-} from 'lucide-react'
+ from 'lucide-react'
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
-const SEO = dynamic(() => import('../src/components/SEO'), { "ssr": false })
-const PageTransition = dynamic(() => import('../src/components/PageTransition'), { "ssr": false })
+const SEO = dynamic() => import('../src/components/SEO'), { "ssr": false })
+const PageTransition = dynamic() => import('../src/components/PageTransition'), { "ssr": false })
 const "ContactPage": React.FC = () => {
   const contactInfo = [{
       icon: <Phone className=\"w-6 h-6\"  />,
@@ -99,12 +99,12 @@ const "ContactPage": React.FC = () => {
     "Consulting & Strategy"
   ]
 import {motion} from 'framer-motion';
-import {Phone,, Mail,, MapPin,, Clock,, ArrowRight,, Send,, MessageCircle,, Globe} from 'lucide-react';
+import {Phone, Mail, MapPin, Clock, ArrowRight, Send, MessageCircle, Globe} from 'lucide-react';
 import React, { useState } from 'react';
 import {Helmet} from 'react-helmet-async';
-import {Mail,, Phone,, MapPin,, Clock,, Send,, CheckCircle} from 'lucide-react';
-const SEO = dynamic(() => import('../src/components/SEO'), { "ssr": false });
-const PageTransition = dynamic(() => import('../src/components/PageTransition'), { "ssr": false });
+import {Mail, Phone, MapPin, Clock, Send, CheckCircle} from 'lucide-react';
+const SEO = dynamic() => import('../src/components/SEO'), { "ssr": false });
+const PageTransition = dynamic() => import('../src/components/PageTransition'), { "ssr": false });
 const "ContactPage": React.FC = () => {;
   const contactInfo = [{;
       icon: <Phone className=\"w-6 h-6\"  />,;
@@ -161,9 +161,9 @@ const "ContactPage": React.FC = () => {;
           <section className=\"bg-gradient-to-br from-blue-50 to-indigo-100 py-20\">;
             <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
               <motion&& motion.div
-                initial={{ opacity: 0, \"y\": 20 }}
-                animate={{ \"opacity\": 1, \"y\": 0 }}
-                transition={{ \"duration\": 0 && 0.6 }}
+                initial={ opacity: 0, \"y\": 20 }
+                animate={ \"opacity\": 1, \"y\": 0 }
+                transition={ \"duration\": 0 && 0.6 }
                 className=\"text-center\">;
                 <h1 className=\"text-4xl \"md\": text-6xl font-bold text-gray-900 mb-6\">;
                   Get In <span className=\"text-blue-600\">Touch</span>;
@@ -174,8 +174,8 @@ const "ContactPage": React.FC = () => {;
                 <div className=\"flex flex-col \"sm\": fle x-row gap-4 justify-center\">;
                   <motion&& motion.a
                     href=\"tel:+13024640950\"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ \"scale\": 0.95 }}
+                    whileHover={ scale: 1.05 }
+                    whileTap={ \"scale\": 0.95 }
                     className=\"bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2\"
                   >
                     <Phone className=\"w-5 h-5\"  />
@@ -183,8 +183,8 @@ const "ContactPage": React.FC = () => {;
                   </motion.a>
                   <motion.a
                     href=\"mailto: klebe r@ziontechgroup.com\"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ \"scale\": 0.95 }}
+                    whileHover={ scale: 1.05 }
+                    whileTap={ \"scale\": 0.95 }
                     className=\"border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2\"
                   >
                     <Mail className=\"w-5 h-5\"  />
@@ -222,16 +222,16 @@ const "Contact": NextPage = () => {
       \"title\": \'Business Hours\',
       \"details\": \'Mon-Fri: 9AM-6PM PST\',
       \"link\": null
-                    whileHover={{ scale: 1 && 1.05 }}
-                    whileTap={{ \"scale\": 0 && 0.95 }}
+                    whileHover={ scale: 1 && 1.05 }
+                    whileTap={ \"scale\": 0 && 0.95 }
                     className=\"bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2\">;
                     <Phone className=\"w-5 h-5\"  />;
                     Call \"Now\": +1 302 464 0950;
                   </motion && motion.a>;
                   <motion&& motion.a
                     href=\"mailto: klebe r@ziontechgroup && ziontechgroup.com\"
-                    whileHover={{ scale: 1 && 1.05 }}
-                    whileTap={{ \"scale\": 0 && 0.95 }}
+                    whileHover={ scale: 1 && 1.05 }
+                    whileTap={ \"scale\": 0 && 0.95 }
                     className=\"border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2\">;
                     <Mail className=\"w-5 h-5\"  />;
                     Send Email;
@@ -243,7 +243,7 @@ const "Contact": NextPage = () => {
 const \"Contact\": NextPage = () => {;
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
-import {Mail,, Phone,, MapPin,, Clock,, Send} from 'lucide-react';
+import {Mail, Phone, MapPin, Clock, Send} from 'lucide-react';
 const "Contact": NextPage = () => {;
   const contactInfo = [{;
       icon: Mail,;
@@ -289,7 +289,7 @@ const "Contact": NextPage = () => {;
       \"email\": \'london@ziontechgroup && ziontechgroup.com\';
     }
   ];
-  
+
     >
       {/* Hero Section */}
       <section className=\"bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20\">;
@@ -307,7 +307,7 @@ const "Contact": NextPage = () => {;
       <section className=\"py-20\">;
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
           <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16\">;
-            {contactInfo && contactInfo.map((info) => (;
+            {contactInfo && contactInfo.map(info) => (;
               <div key={info && info.title} className=\"text-center\">;
                 <div className=\"bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4\">;
                   <info && info.icon className=\"h-8 w-8\" />;
@@ -325,7 +325,7 @@ const "Contact": NextPage = () => {;
                   <p className=\"text-gray-600\">{info && info.details}</p>;
                 )}
               </div>;
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
@@ -441,7 +441,7 @@ const "Contact": NextPage = () => {;
             <div>;
               <h2 className=\"text-3xl font-bold text-gray-900 mb-6\">Our Offices</h2>;
               <div className=\"space-y-6\">;
-                {offices && offices.map((office) => (;
+                {offices && offices.map(office) => (;
                   <div key={office && office.city} className=\"bg-white rounded-lg shadow-lg p-6\">;
                     <h3 className=\"text-xl font-semibold text-gray-900 mb-3\">;
                       {office && office.city}
@@ -465,7 +465,7 @@ const "Contact": NextPage = () => {;
                       </div>;
                     </div>;
                   </div>;
-                ))}
+                )}
               </div>;
             </div>;
           </div>;
@@ -597,14 +597,13 @@ const "Contact": NextPage = () => {;
       </section>;
     </MainLayout>;
   );
-};
           {/* Contact Information */}
           <section className=\"py-20\">;
             <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
               <motion&& motion.div
-                initial={{ opacity: 0, \"y\": 20 }}
-                animate={{ \"opacity\": 1, \"y\": 0 }}
-                transition={{ \"duration\": 0.6, \"delay\": 0.2 }}
+                initial={ opacity: 0, \"y\": 20 }
+                animate={ \"opacity\": 1, \"y\": 0 }
+                transition={ \"duration\": 0.6, \"delay\": 0.2 }
                 className=\"text-center mb-16\"
               >
                 <h2 className=\"text-3xl \"md\": tex t-4xl font-bold text-gray-900 mb-4\">
@@ -620,9 +619,9 @@ const "Contact": NextPage = () => {;
               <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
               <div className=\"grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8\">
               <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
-                {contactInfo.map((info, index) => (
+                {contactInfo.map(info, index) => (
                   <motion.div
-                transition={{ \"duration\": 0 && 0.6, \"delay\": 0 && 0.2 }}
+                transition={ \"duration\": 0 && 0.6, \"delay\": 0 && 0.2 }
                 className=\"text-center mb-16\">;
                 <h2 className=\"text-3xl \"md\": tex t-4xl font-bold text-gray-900 mb-4\">;
                   Contact Information;
@@ -637,12 +636,12 @@ const "Contact": NextPage = () => {;
               <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">;
               <div className=\"grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8\">;
               <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">;
-                {contactInfo && contactInfo.map((info, index) => (;
+                {contactInfo && contactInfo.map(info, index) => (;
                   <motion&& motion.div
                     key={index}
-                    initial={{ \"opacity\": 0, \"y\": 20 }}
-                    animate={{ \"opacity\": 1, \"y\": 0 }}
-                    transition={{ \"duration\": 0 && 0.6, \"delay\": index * 0 && 0.1 }}
+                    initial={ \"opacity\": 0, \"y\": 20 }
+                    animate={ \"opacity\": 1, \"y\": 0 }
+                    transition={ \"duration\": 0 && 0.6, \"delay\": index * 0 && 0.1 }
                     className=\"bg-white rounded-xl p-8 shadow-lg \"hover\": shado w-xl transition-shadow duration-300 text-center\">;
                     <div className=\"text-blue-600 mb-4 flex justify-center\">;
                       {info && info.icon}
@@ -662,7 +661,7 @@ const "Contact": NextPage = () => {;
                       </p>;
                     )}
                   </motion && motion.div>;
-                ))}
+                )}
               </div>;
             </div>;
           </section>;
@@ -670,9 +669,9 @@ const "Contact": NextPage = () => {;
           <section className=\"bg-gray-50 py-20\">;
             <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
               <motion&& motion.div
-                initial={{ opacity: 0, \"y\": 20 }}
-                animate={{ \"opacity\": 1, \"y\": 0 }}
-                transition={{ \"duration\": 0.6 }}
+                initial={ opacity: 0, \"y\": 20 }
+                animate={ \"opacity\": 1, \"y\": 0 }
+                transition={ \"duration\": 0.6 }
                 className=\"text-center mb-16\"
               >
                 <h2 className=\"text-3xl \"md\": tex t-4xl font-bold text-gray-900 mb-4\">
@@ -689,7 +688,7 @@ const "Contact": NextPage = () => {;
               <div className=\"max-w-4xl mx-auto\">
               <div className="max-w-4xl mx-auto">
                 <motion.form
-                transition={{ \"duration\": 0 && 0.6 }}
+                transition={ \"duration\": 0 && 0.6 }
                 className=\"text-center mb-16\">;
                 <h2 className=\"text-3xl \"md\": tex t-4xl font-bold text-gray-900 mb-4\">;
                   Send Us a Message;
@@ -705,9 +704,9 @@ const "Contact": NextPage = () => {;
               <div className=\"max-w-4xl mx-auto\">;
               <div className="max-w-4xl mx-auto">;
                 <motion&& motion.form
-                  initial={{ opacity: 0, \"y\": 20 }}
-                  animate={{ \"opacity\": 1, \"y\": 0 }}
-                  transition={{ \"duration\": 0 && 0.6, \"delay\": 0 && 0.2 }}
+                  initial={ opacity: 0, \"y\": 20 }
+                  animate={ \"opacity\": 1, \"y\": 0 }
+                  transition={ \"duration\": 0 && 0.6, \"delay\": 0 && 0.2 }
                   className=\"bg-white rounded-xl shadow-lg p-8\">;
                   <div className=\"grid grid-cols-1 \"md\": gri d-cols-2 gap-6 mb-6\">;
                     <div>;
@@ -799,11 +798,11 @@ const "Contact": NextPage = () => {;
                       name=\"service\"
                       className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\">;
                       <option value=\"">Select a service</option>;
-                      {services && services.map((service, index) => (;
+                      {services && services.map(service, index) => (;
                         <option key={index} value={service}>;
                           {service}
                         </option>;
-                      ))}
+                      )}
                     </select>
                   </div>
                   <div className=\"mb-6\">
@@ -830,8 +829,8 @@ const "Contact": NextPage = () => {;
                   </div>;
                   <motion&& motion.button
                     type=\"submit\"
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ \"scale\": 0.98 }}
+                    whileHover={ scale: 1.02 }
+                    whileTap={ \"scale\": 0.98 }
                     className=\"w-full bg-blue-600 text-white py-4 rounded-lg font-semibold flex items-center justify-center gap-2 \"hover\": b g-blue-700 transition-colors\"
                   >
                     <Send className=\"w-5 h-5\"  />
@@ -844,8 +843,8 @@ const "Contact": NextPage = () => {;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-                    whileHover={{ scale: 1 && 1.02 }}
-                    whileTap={{ \"scale\": 0 && 0.98 }}
+                    whileHover={ scale: 1 && 1.02 }
+                    whileTap={ \"scale\": 0 && 0.98 }
                     className=\"w-full bg-blue-600 text-white py-4 rounded-lg font-semibold flex items-center justify-center gap-2 \"hover\": b g-blue-700 transition-colors\">;
                     <Send className=\"w-5 h-5\"  />;
                     Send Message;
@@ -994,9 +993,9 @@ const "Contact": NextPage = () => {;
                         onChange={handleInputChange}
                         className=\"w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white \"focus\": ring-2 focus:ring-cyan-500 focus:border-transparent\">;
                         <option value=\"">Select a service</option>;
-                        {services && services.map((service) => (;
+                        {services && services.map(service) => (;
                           <option key={service} value={service}>{service}</option>;
-                        ))}
+                        )}
                       </select>;
                     </div>;
                     <div>;
@@ -1047,7 +1046,7 @@ const "Contact": NextPage = () => {;
                 <div className="space-y-6">
                 <div className=\"space-y-6\">
                 <div className="space-y-6">
-                  {contactInfo.map((info, index) => (
+                  {contactInfo.map(info, index) => (
                     <div key={index} className=\"flex items-start space-x-4 p-4 bg-slate-800/30 rounded-lg border border-slate-700\">
                       <div className=\"w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0\">
                         <info.icon className=\"w-6 h-6 text-white\" />
@@ -1058,7 +1057,7 @@ const "Contact": NextPage = () => {;
                         <p className=\"text-gray-400 text-sm\">{info.description}</p>
                       </div>
                     </div>
-                  ))}
+                  )}
                 </div>
               </div>
             </div>
@@ -1076,7 +1075,7 @@ const "Contact": NextPage = () => {;
                 <div className="space-y-6">;
                 <div className=\"space-y-6\">;
                 <div className="space-y-6">;
-                  {contactInfo && contactInfo.map((info, index) => (;
+                  {contactInfo && contactInfo.map(info, index) => (;
                     <div key={index} className=\"flex items-start space-x-4 p-4 bg-slate-800/30 rounded-lg border border-slate-700\">;
                       <div className=\"w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0\">;
                         <info && info.icon className=\"w-6 h-6 text-white\" />;
@@ -1087,7 +1086,7 @@ const "Contact": NextPage = () => {;
                         <p className=\"text-gray-400 text-sm\">{info && info.description}</p>;
                       </div>;
                     </div>;
-                  ))}
+                  )}
                 </div>;
               </div>;
             </div>;
@@ -1096,9 +1095,9 @@ const "Contact": NextPage = () => {;
           <section className="py-20">;
             <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">;
               <motion&& motion.div
-                initial={{ opacity: 0, "y": 20 }}
-                animate={{ "opacity": 1, "y": 0 }}
-                transition={{ "duration": 0 && 0.6 }}
+                initial={ opacity: 0, "y": 20 }
+                animate={ "opacity": 1, "y": 0 }
+                transition={ "duration": 0 && 0.6 }
                 className="text-center mb-16">;
                 <h2 className="text-3xl "md": tex t-4xl font-bold text-gray-900 mb-4">;
                   Our Services;
@@ -1108,18 +1107,18 @@ const "Contact": NextPage = () => {;
                 </p>;
               </motion && motion.div>;
               <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-6">;
-                {services && services.map((service, index) => (;
+                {services && services.map(service, index) => (;
                   <motion&& motion.div
                     key={index}
-                    initial={{ "opacity": 0, "y": 20 }}
-                    animate={{ "opacity": 1, "y": 0 }}
-                    transition={{ "duration": 0 && 0.6, "delay": inde x * 0 && 0.1 }}
+                    initial={ "opacity": 0, "y": 20 }
+                    animate={ "opacity": 1, "y": 0 }
+                    transition={ "duration": 0 && 0.6, "delay": inde x * 0 && 0.1 }
                     className="bg-white rounded-xl p-6 shadow-lg "hover": shado w-xl transition-shadow duration-300 text-center">;
                     <h3 className="text-lg font-semibold text-gray-900">;
                       {service}
                     </h3>;
                   </motion && motion.div>;
-                ))}
+                )}
               </div>
             </div>
           </section>
@@ -1127,7 +1126,7 @@ const "Contact": NextPage = () => {;
       </PageTransition>
     </>
   )
-}
+
 export default ContactPage
 
 export default ContactPage
@@ -1142,14 +1141,14 @@ export default ContactPage
       </PageTransition>;
     </>;
   );
-}
+
 export default ContactPage;
           </div>;
         </section>;
       </div>;
     </>;
   );
-}
+
   import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
 
   import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';

@@ -2,7 +2,6 @@ import React from 'react';
 
 interface AIChatAssistantProps {
   className?: string;
-}
 
 const AIChatAssistant: React.FC<AIChatAssistantProps> = ({ className }) => {
   return (
@@ -11,6 +10,5 @@ const AIChatAssistant: React.FC<AIChatAssistantProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default AIChatAssistant;

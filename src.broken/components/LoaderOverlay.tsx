@@ -6,5 +6,3 @@ export function LoaderOverlay() {;
       <p>Component placeholder - needs implementation</p>;
     </div>;
   );
-}
-;

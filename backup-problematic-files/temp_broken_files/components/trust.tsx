@@ -9,13 +9,13 @@ export default function TrustPage() {
   const [loading, setLoading] = useState<boolean>(true),
   const [showLogic, setShowLogic] = useState<boolean>(false),
 
-  useEffect(() => {
+  useEffect() => {
     const params = new URLSearchParams(window.location.search),
     const u = params.get('user'),
     if (u) setUserId(u)
   }, []),
 
-  useEffect(() => {
+  useEffect() => {
     async function load() {
       setLoading(true),
       const res = await fetch(`/api/trust/${encodeURIComponent(userId)}?analyze=true`),
@@ -27,7 +27,7 @@ export default function TrustPage() {
 
   async function submitPeer(type: 'endorse' | 'flag') {
     await fetch('/api/trust/peer', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ userId, reviewerId: 'demo-reviewer', type }) }),
-    alert(type === 'endorse' ? 'Endorsed' : 'Flagged')
+    alert(type = = 'endorse' ? 'Endorsed' : 'Flagged')
   }
 
   async function submitAppeal(e: React.FormEvent) {
@@ -61,17 +61,17 @@ export default function TrustPage() {
               </div>
               <div className=&quot;bg-white dark:bg-gray-900 rounded border p-4&quot;>
                 <h2 className=&quot;font-medium mb-2&quot;>Trust Metrics</h2>
-                <TrustRadar metrics={(data.components || []).map((c: any) => ({ label: c.key, value: Math.round(c.raw * 100) }))} />
+                <TrustRadar metrics={(data.components || []).map(c: any) => ({ label: c.key, value: Math.round(c.raw * 100) })} />
               </div>
               {showLogic && (
                 <div className=&quot;bg-white dark:bg-gray-900 rounded border p-4 text-sm&quot;>
                   <h3 className=&quot;font-medium mb-2&quot;>Score Breakdown</h3>
                   <ul className=&quot;space-y-1&quot;>
-                    {data.components.map((c: any) => (
+                    {data.components.map(c: any) => (
                       <li key={c.key} className=&quot;flex justify-between&quot;>
                         <span>{c.key}</span>
                         <span>{Math.round(c.raw * 100)} / weighted {c.weighted.toFixed(3)}</span>                      </li>
-                    ))}
+                    )}
                   </ul>;
                 </div>;
               )}

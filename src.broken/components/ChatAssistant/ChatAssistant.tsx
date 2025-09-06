@@ -6,5 +6,3 @@ export function ErrorBoundary() {;
       <p>Component placeholder - needs implementation</p>;
     </div>;
   );
-}
-;

@@ -1,4 +1,4 @@
-/** @type {import('next').NextConfig} */
+** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true
   compress: true
@@ -11,14 +11,14 @@ const nextConfig = {
   },
   pageExtensions: ["tsx", "ts", "jsx", "js"],
   trailingSlash: true,
-  
+
   // Performance optimizations
   experimental: {
     scrollRestoration: true,
     optimizeCss: true,
     optimizePackageImports: ['lucide-react', '@radix-ui/react-icons', 'framer-motion']
   },
-  
+
   // Image optimization
   page_extensions: ["tsx", "ts", "jsx", "js"],
   trailing_slash: true,
@@ -101,7 +101,6 @@ const nextConfig = {
         poll: 1000,
         aggregate_timeout: 300,
       }
-    }
 
           "**/node_modules/**"
           "**/.git/**"
@@ -140,8 +139,6 @@ const nextConfig = {
         poll: 1000
         aggregateTimeout: 300
       }
-
-    }
     // Exclude apps directory from compilation
     config.module.rules.push({
       test: /\.(ts|tsx|js|jsx)$/
@@ -175,7 +172,7 @@ const nextConfig = {
       }
     ];
   }
-}
+
 export default nextConfig;
     // Exclude apps directory from compilation;
     config.module.rules.push ({
@@ -183,7 +180,7 @@ export default nextConfig;
       include: /apps\//,
       use: "ignore - loader",
     });
-;
+
     return config;
   },
   async headers () {
@@ -211,7 +208,5 @@ export default nextConfig;
       },
     ];
   },
-}
-;
+
 export default next_config;
-;

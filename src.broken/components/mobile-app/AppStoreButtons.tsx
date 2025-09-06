@@ -6,5 +6,3 @@ export function AppStoreButtons() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

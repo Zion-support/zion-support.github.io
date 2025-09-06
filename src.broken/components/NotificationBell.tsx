@@ -6,5 +6,3 @@ export function NotificationBell() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

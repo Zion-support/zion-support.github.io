@@ -7,7 +7,7 @@ import {
   CardFooter
   CardHeader
   CardTitle
-} from '@/components/ui/card'
+ from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import Link from 'next/link'
@@ -24,7 +24,7 @@ import { useTranslation } from 'react-i18next'
   Code
   Building
   Clock
-} from 'lucide-react'
+ from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 interface FeatureCTAsProps {
@@ -202,7 +202,7 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {
           </p>
         </div>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-          {features.map((feature, index) => (
+          {features.map(feature, index) => (
 import React from 'react';
 import {;
   Card,;
@@ -211,7 +211,7 @@ import {;
   CardFooter,;
   CardHeader,;
   CardTitle,;
-} from '@/components/ui/card';
+ from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
@@ -229,7 +229,7 @@ import {;
   Code,;
   Building,;
   Clock,;
-} from 'lucide-react';
+ from 'lucide-react';
 import { cn } from '@/lib/utils';
 interface FeatureCTAsProps {;
   className?: string;
@@ -408,7 +408,7 @@ export function FeatureCTAs(): any ({ className, style }: FeatureCTAsProps) {;
         </div>;
 
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
-          {features && features.map((feature, index) => (;
+          {features && features.map(feature, index) => (;
             <Card
               key={index}
               className='overflow-hidden transition-all duration-300 hover:shadow-lg hover:border-primary/50'>;
@@ -441,7 +441,7 @@ export function FeatureCTAs(): any ({ className, style }: FeatureCTAsProps) {;
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {features.map((feature, index) => (
+          {features.map(feature, index) => (
             <Card key={index} className="overflow-hidden transition-all duration-300 hover:shadow-lg hover:border-primary/50">
               <CardHeader className="pb-2">
                 <div className="flex justify-between items-start">
@@ -476,7 +476,7 @@ export function FeatureCTAs(): any ({ className, style }: FeatureCTAsProps) {;
                     href = {feature && feature.link,}
                     aria-label={`${t('general && general.explore')} ${t(`features.${feature && feature.key}`)}`}
                     className='cursor-pointer'
-                    {...(feature.key === 'ai_talent_matching' && {
+                    {...(feature.key = = 'ai_talent_matching' && {
                       'data-testid': 'explore-ai-talent-matching-cta'
                     })}
                   >
@@ -487,31 +487,31 @@ export function FeatureCTAs(): any ({ className, style }: FeatureCTAsProps) {;
                     href={feature && feature.link}
                     aria-label={`${t('general && general.explore')} ${t(`features.${feature && feature.key}`)}`}
                     className="cursor-pointer"
-                    {...(feature && feature.key === 'ai_talent_matching' && { "data-testid": "explore-ai-talent-matching-cta" })}>;
+                    {...(feature && feature.key = = 'ai_talent_matching' && { "data-testid": "explore-ai-talent-matching-cta" })}>;
                     <span>{t('general && general.explore')} {t(`features.${feature && feature.key}`)}</span>;
                     <ArrowRight className="h-4 w-4" />;
                   </Link>;
                 </Button>;
               </CardFooter>;
             </Card>;
-          ))}
+          )}
         </div>;
       </div>;
     </section>;
   );  );
-          ))}
+          )}
         </div>
       </div>
     </section>
   );  )
-}
+
         </div>;
       </div>;
     </section>;
   );  );
-}
+
   )
-}
+
 import React from 'react';
 import {
   Card,
@@ -520,7 +520,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from '@/components / ui / card';
+ from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
 import { Badge } from '@/components / ui / badge';
 import Link from 'next / link';
@@ -537,7 +537,7 @@ import { use_translation } from 'react - i18next';
   Code,
   Building,
   Clock,
-} from 'lucide-react';
+ from 'lucide-react';
 import { cn } from '@/lib / utils';
 interface FeatureCTAsProps {
   class_name?: string;
@@ -704,7 +704,7 @@ function FeatureCTAs() {
           </p>;
         </div>;
         <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6'>;
-          {features.map ((feature, index) => (
+          {features.map (feature, index) => (
             <Card;
               key={index}
               className='overflow - hidden transition - all duration - 300 hover:shadow - lg hover:border - primary / 50';
@@ -736,7 +736,7 @@ function FeatureCTAs() {
           </p>;
         </div>;
         <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
-          {features.map ((feature, index) => (
+          {features.map (feature, index) => (
             <Card key={index} className="overflow - hidden transition - all duration - 300 hover:shadow - lg hover:border - primary / 50">;
               <CardHeader className="pb - 2">;
                 <div className="flex justify - between items - start">;
@@ -768,7 +768,7 @@ function FeatureCTAs() {
                     href = {feature.link, }
                     aria - label={`${t ('general.explore')} ${t (`features.${feature.key}`)}`}
                     className='cursor - pointer';
-                    {...(feature.key === 'ai_talent_matching' && {
+                    {...(feature.key = = 'ai_talent_matching' && {
                       'data - testid': 'explore - ai - talent - matching - cta',
                     })}
                   >;
@@ -779,15 +779,14 @@ function FeatureCTAs() {
                     href={feature.link}
                     aria - label={`${t ('general.explore')} ${t (`features.${feature.key}`)}`}
                     className="cursor - pointer";
-                    {...(feature.key === 'ai_talent_matching' && { "data - testid": "explore - ai - talent - matching - cta" })}
+                    {...(feature.key = = 'ai_talent_matching' && { "data - testid": "explore - ai - talent - matching - cta" })}
                   >;
                     <span>{t ('general.explore')} {t (`features.${feature.key}`)}</span>;
                     <ArrowRight className="h - 4 w - 4" />;
                   </Link>;
                 </Button>;
               </CardFooter>;
-            </Card>))}
+            </Card>)}
         </div>;
       </div>;
-    </section>));
-}
+    </section>);

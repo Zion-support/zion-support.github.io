@@ -6,5 +6,3 @@ export function ProjectCard() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

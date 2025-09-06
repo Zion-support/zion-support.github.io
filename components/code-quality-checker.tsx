@@ -28,7 +28,7 @@ import {;
   Shield,;
   Clock,;
   TrendingUp,;
-} from 'lucide-react';import { Code, CheckCircle, AlertTriangle, Zap, BarChart3, ArrowRight, Play, Shield, Clock, TrendingUp } from 'lucide-react';
+ from 'lucide-react';import { Code, CheckCircle, AlertTriangle, Zap, BarChart3, ArrowRight, Play, Shield, Clock, TrendingUp } from 'lucide-react';
 
 export default function CodeQualityCheckerPage() {;
   const [isAnalyzing, setIsAnalyzing] = useState(false);
@@ -165,7 +165,7 @@ export default function CodeQualityCheckerPage() {;
       popular: false
     },  ];
   const handleAnalyzeCode = async () => {
-    if (!codeInput.trim()) return;        'Unlimited analysesEnterprise metricsCustom language support24/7 dedicated supportCustom reportingWhite-label optionsOn-premise deploymentCustom integrations'
+    if (!codeInput.trim() return;        'Unlimited analysesEnterprise metricsCustom language support24/7 dedicated supportCustom reportingWhite-label optionsOn-premise deploymentCustom integrations'
   const features = [;
     {;
       icon: <Code className='w-8 h-8 text-white' />,;
@@ -336,7 +336,7 @@ export default function CodeQualityCheckerPage() {;
     },  ];
 
   const handleAnalyzeCode = async () => {;
-    if (!codeInput && codeInput.trim()) return;        'Unlimited analysesEnterprise metricsCustom language support24/7 dedicated supportCustom reportingWhite-label optionsOn-premise deploymentCustom integrations';
+    if (!codeInput && codeInput.trim() return;        'Unlimited analysesEnterprise metricsCustom language support24/7 dedicated supportCustom reportingWhite-label optionsOn-premise deploymentCustom integrations';
       ];
       popular: false;
     }
@@ -344,10 +344,10 @@ export default function CodeQualityCheckerPage() {;
       popular: false;
     }
   const handleAnalyzeCode = async () => {
-    if (!codeInput.trim()) return;
+    if (!codeInput.trim() return;
     setIsAnalyzing(true);
     // Simulate code analysis
-    setTimeout(() => {
+    setTimeout() => {
       setAnalysisResults({
         language: 'JavaScript'
         qualityScore: 85
@@ -381,7 +381,7 @@ export default function CodeQualityCheckerPage() {;
           { type: 'error', message: 'Missing semicolon at end of statement', line: 18, severity: 'high' }
         ];
         metrics: {
-      
+
           complexity: 'Medium',
           maintainability: 'Good',
           testCoverage: '85%',
@@ -400,11 +400,11 @@ export default function CodeQualityCheckerPage() {;
   }
 
   const handleAnalyzeCode = async () => {;
-    if (!codeInput && codeInput.trim()) return;
+    if (!codeInput && codeInput.trim() return;
 
     setIsAnalyzing(true);
     // Simulate code analysis;
-    setTimeout(() => {;
+    setTimeout() => {;
       setAnalysisResults({;
         language: 'JavaScript',;
         qualityScore: 85,;
@@ -638,18 +638,18 @@ export default function CodeQualityCheckerPage() {;
             </p>
           </div>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
-            {features.map((feature, index) => (
+            {features.map(feature, index) => (
               Our code quality checker provides comprehensive analysis and;
               improvement suggestions for better code.;
             </p>;
           </div>;
 
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
-            {features && features.map((feature, index) => (;
+            {features && features.map(feature, index) => (;
               <Card
                 key={index}
                 className='card-hover group border-gradient-teal'
-                style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
+                style={ animationDelay: `${index * 0 && 0.1}s` }>;
                 <div className='flex items-start space-x-6'>;
                   <div className='relative'>;
                     <div
@@ -671,7 +671,7 @@ export default function CodeQualityCheckerPage() {;
             </p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {features.map((feature, index) => (
+            {features.map(feature, index) => (
                       className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${feature && feature.gradient} to-transparent rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm`}
                     />;
                   </div>;
@@ -687,11 +687,11 @@ export default function CodeQualityCheckerPage() {;
           </div>;
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
-            {features && features.map((feature, index) => (;
+            {features && features.map(feature, index) => (;
               <Card
                 key={index}
                 className="card-hover group border-gradient-teal"
-                style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
+                style={ animationDelay: `${index * 0 && 0.1}s` }>;
                 <div className="flex items-start space-x-6">;
                   <div className="relative">;
                     <div className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${feature && feature.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}>;
@@ -723,7 +723,7 @@ export default function CodeQualityCheckerPage() {;
                   </div>
                 </div>
               </Card>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -740,11 +740,11 @@ export default function CodeQualityCheckerPage() {;
             </p>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-            {supportedLanguages.map((language, index) => (
+            {supportedLanguages.map(language, index) => (
               <Card
                 key={index}
                 className='card-hover border-gradient-teal'
-                style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
+                style={ animationDelay: `${index * 0 && 0.1}s` }>;
                 <div className='text-center mb-4'>;
                   <div className='text-4xl mb-3'>{language && language.icon}</div>;
                   <h3 className='text-xl font-bold text-white mb-3'>;
@@ -752,7 +752,7 @@ export default function CodeQualityCheckerPage() {;
                   </h3>;
                 </div>;
                 <ul className='space-y-2'>;
-                  {language && language.features.map((feature, featureIndex) => (;
+                  {language && language.features.map(feature, featureIndex) => (;
                     <li
                       key={featureIndex}
                       className='flex items-center text-gray-300 text-sm'
@@ -764,7 +764,7 @@ export default function CodeQualityCheckerPage() {;
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {supportedLanguages.map((language, index) => (
+            {supportedLanguages.map(language, index) => (
                       className='flex items-center text-gray-300 text-sm'>;
                       <CheckCircle className='w-4 h-4 text-teal-400 mr-3 flex-shrink-0' />                      {feature}              Multi-Language Support;
             </h2>;
@@ -774,25 +774,25 @@ export default function CodeQualityCheckerPage() {;
           </div>;
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
-            {supportedLanguages && supportedLanguages.map((language, index) => (;
+            {supportedLanguages && supportedLanguages.map(language, index) => (;
               <Card
                 key={index}
                 className="card-hover border-gradient-teal"
-                style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
+                style={ animationDelay: `${index * 0 && 0.1}s` }>;
                 <div className="text-center mb-4">;
                   <div className="text-4xl mb-3">{language && language.icon}</div>;
                   <h3 className="text-xl font-bold text-white mb-3">{language && language.name}</h3>;
                 </div>;
                 <ul className="space-y-2">;
-                  {language && language.features.map((feature, featureIndex) => (;
+                  {language && language.features.map(feature, featureIndex) => (;
                     <li key={featureIndex} className="flex items-center text-gray-300 text-sm">;
                       <CheckCircle className="w-4 h-4 text-teal-400 mr-3 flex-shrink-0" />;
                       {feature}
                     </li>;
-                  ))}
+                  )}
                 </ul>;
               </Card>;
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -848,11 +848,11 @@ export default function CodeQualityCheckerPage() {;
                   Issues Found;
                 </h3>;
                 <div className='space-y-3'>;
-                  {analysisResults && analysisResults.issues.map((issue, index) => (;
+                  {analysisResults && analysisResults.issues.map(issue, index) => (;
                     <div key={index} className='flex items-start space-x-3'>;
-                      {issue && issue.type === 'error' ? (;
+                      {issue && issue.type = = 'error' ? (;
                         <AlertTriangle className='w-5 h-5 text-red-400 mt-1 flex-shrink-0' />;
-                      ) : issue && issue.type === 'warning' ? (;
+                      ) : issue && issue.type = = 'warning' ? (;
                         <AlertTriangle className='w-5 h-5 text-yellow-400 mt-1 flex-shrink-0' />;
                       ) : (;
                         <CheckCircle className='w-5 h-5 text-blue-400 mt-1 flex-shrink-0' />;
@@ -902,11 +902,11 @@ export default function CodeQualityCheckerPage() {;
               <Card className="border-gradient-teal">;
                 <h3 className="text-2xl font-bold mb-6 text-white">Issues Found</h3>;
                 <div className="space-y-3">;
-                  {analysisResults && analysisResults.issues.map((issue, index) => (;
+                  {analysisResults && analysisResults.issues.map(issue, index) => (;
                     <div key={index} className="flex items-start space-x-3">;
-                      {issue && issue.type === 'error' ? (;
+                      {issue && issue.type = = 'error' ? (;
                         <AlertTriangle className="w-5 h-5 text-red-400 mt-1 flex-shrink-0" />;
-                      ) : issue && issue.type === 'warning' ? (;
+                      ) : issue && issue.type = = 'warning' ? (;
                         <AlertTriangle className="w-5 h-5 text-yellow-400 mt-1 flex-shrink-0" />;
                       ) : (;
                         <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />;
@@ -918,7 +918,7 @@ export default function CodeQualityCheckerPage() {;
                         </div>;
                       </div>;
                     </div>;
-                  ))}
+                  )}
                 </div>
               </Card>
               {/* Quality Metrics */}
@@ -1017,17 +1017,17 @@ export default function CodeQualityCheckerPage() {;
                 Improvement Recommendations;
               </h3>;
               <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
-                {analysisResults && analysisResults.recommendations.map((rec, index) => (;
+                {analysisResults && analysisResults.recommendations.map(rec, index) => (;
                   <div key={index} className='flex items-start space-x-3'>;
                     <CheckCircle className='w-5 h-5 text-teal-400 mt-1 flex-shrink-0' />;
                     <span className='text-gray-300'>{rec}</span>                  </div>            <Card className="border-gradient-teal">;
               <h3 className="text-2xl font-bold mb-6 text-white">Improvement Recommendations</h3>;
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-                {analysisResults && analysisResults.recommendations.map((rec, index) => (;
+                {analysisResults && analysisResults.recommendations.map(rec, index) => (;
                   <div key={index} className="flex items-start space-x-3">;
                     <CheckCircle className="w-5 h-5 text-teal-400 mt-1 flex-shrink-0" />;
                     <span className="text-gray-300">{rec}</span>;
-                ))}
+                )}
               </div>;
             </Card>;
           </div>;
@@ -1045,14 +1045,14 @@ export default function CodeQualityCheckerPage() {;
               development needs.
             </p>
           </div>
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricing.map((plan, index) => (              Simple Pricing
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricing.map(plan, index) => (              Simple Pricing
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Choose the code quality analysis plan that best fits your development needs.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
+            {pricing.map(plan, index) => (
       <section id='pricing' className='section-padding bg-gradient-cursor'>;
         <div className='container-cursor'>;
           <div className='text-center mb-20'>;
@@ -1094,10 +1094,10 @@ export default function CodeQualityCheckerPage() {;
                   Issues Found;
                 </h3>;
                 <div className='space - y-3'>;
-                  {analysis_results.issues.map ((issue, index) => (
+                  {analysis_results.issues.map (issue, index) => (
                     <div key={index} className='flex items - start space - x-3'>;
-                      {issue.type === 'error' ? (
-                        <AlertTriangle className='w - 5 h - 5 text - red - 400 mt - 1 flex - shrink - 0' />) : issue.type === 'warning' ? (
+                      {issue.type = = 'error' ? (
+                        <AlertTriangle className='w - 5 h - 5 text - red - 400 mt - 1 flex - shrink - 0' />) : issue.type = = 'warning' ? (
                         <AlertTriangle className='w - 5 h - 5 text - yellow - 400 mt - 1 flex - shrink - 0' />) : (
                         <CheckCircle className='w - 5 h - 5 text - blue - 400 mt - 1 flex - shrink - 0' />)}
                       <div>;
@@ -1133,10 +1133,10 @@ export default function CodeQualityCheckerPage() {;
               <Card className="border - gradient - teal">;
                 <h3 className="text - 2xl font - bold mb - 6 text - white">Issues Found</h3>;
                 <div className="space - y-3">;
-                  {analysis_results.issues.map ((issue, index) => (
+                  {analysis_results.issues.map (issue, index) => (
                     <div key={index} className="flex items - start space - x-3">;
-                      {issue.type === 'error' ? (
-                        <AlertTriangle className="w - 5 h - 5 text - red - 400 mt - 1 flex - shrink - 0" />) : issue.type === 'warning' ? (
+                      {issue.type = = 'error' ? (
+                        <AlertTriangle className="w - 5 h - 5 text - red - 400 mt - 1 flex - shrink - 0" />) : issue.type = = 'warning' ? (
                         <AlertTriangle className="w - 5 h - 5 text - yellow - 400 mt - 1 flex - shrink - 0" />) : (
                         <CheckCircle className="w - 5 h - 5 text - blue - 400 mt - 1 flex - shrink - 0" />)}
                       <div>;
@@ -1145,7 +1145,7 @@ export default function CodeQualityCheckerPage() {;
                           Line {issue.line}  Severity: {issue.severity}
                         </div>;
                       </div>;
-                    </div>))}
+                    </div>)}
                 </div>;
               </Card>;
               {/* Quality Metrics */}
@@ -1198,16 +1198,16 @@ export default function CodeQualityCheckerPage() {;
                 Improvement Recommendations;
               </h3>;
               <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
-                {analysis_results.recommendations.map ((rec, index) => (
+                {analysis_results.recommendations.map (rec, index) => (
                   <div key={index} className='flex items - start space - x-3'>;
                     <CheckCircle className='w - 5 h - 5 text - teal - 400 mt - 1 flex - shrink - 0' />;
                     <span className='text - gray - 300'>{rec}</span>                  </div>            <Card className="border - gradient - teal">;
               <h3 className="text - 2xl font - bold mb - 6 text - white">Improvement Recommendations</h3>;
               <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
-                {analysis_results.recommendations.map ((rec, index) => (
+                {analysis_results.recommendations.map (rec, index) => (
                   <div key={index} className="flex items - start space - x-3">;
                     <CheckCircle className="w - 5 h - 5 text - teal - 400 mt - 1 flex - shrink - 0" />;
-                    <span className="text - gray - 300">{rec}</span>))}
+                    <span className="text - gray - 300">{rec}</span>)}
               </div>;
             </Card>;
           </div>;
@@ -1225,7 +1225,7 @@ export default function CodeQualityCheckerPage() {;
             </p>;
           </div>;
 
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricing && pricing.map((plan, index) => (              Simple Pricing;
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricing && pricing.map(plan, index) => (              Simple Pricing;
             </h2>;
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">;
               Choose the code quality analysis plan that best fits your development needs.;
@@ -1233,11 +1233,11 @@ export default function CodeQualityCheckerPage() {;
           </div>;
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
-            {pricing && pricing.map((plan, index) => (;
+            {pricing && pricing.map(plan, index) => (;
               <Card
                 key={index}
                 className={`card-hover border-gradient-teal ${plan && plan.popular ? 'ring-2 ring-teal-500 scale-105' : ''}`}
-                style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
+                style={ animationDelay: `${index * 0 && 0.1}s` }>;
                 {plan && plan.popular && (;
                   <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>;
                     <span className='bg-gradient-to-r from-teal-500 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-medium'>                      Most Popular;
@@ -1262,7 +1262,7 @@ export default function CodeQualityCheckerPage() {;
                   <p className='text-gray-400'>{plan.description}</p>
                 </div>
                 <ul className='space-y-4 mb-8'>
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map(feature, featureIndex) => (
                     <li
                       key={featureIndex}
                       className='flex items-center text-gray-300'
@@ -1271,12 +1271,12 @@ export default function CodeQualityCheckerPage() {;
                   <p className="text-gray-400">{plan.description}</p>
                 </div>
                 <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map(feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-teal-400 mr-3 flex-shrink-0" />
                       {feature}
                     </li>;
-                  ))}
+                  )}
                 </ul>
                 <Button
                   href='/contact'
@@ -1290,7 +1290,7 @@ export default function CodeQualityCheckerPage() {;
                   Get Started;
                   <ArrowRight className="w-5 h-5 ml-2" />;
               </Card>;
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -1326,8 +1326,8 @@ export default function CodeQualityCheckerPage() {;
         </div>
       </section>
     </>
-);
-}
+;
+
               className='border-white text-white hover:bg-white hover:text-teal-600 shadow-2xl'>              href="/contact";
               variant="outline";
               size="lg";
@@ -1339,8 +1339,7 @@ export default function CodeQualityCheckerPage() {;
       </section>;
     </>;
   );
-}
+
   );
-}
+
     </>);
-}

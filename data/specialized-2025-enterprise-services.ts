@@ -4,28 +4,27 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import { ServiceVariant } from '../types/service-variants';
 
-
 import { ServiceVariant } from '../types / service - variants';
-;
+
   id: string;
   name: string;
   tagline: string;
@@ -78,7 +77,7 @@ const contact = {
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
-}
+
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -87,7 +86,7 @@ const contact = {
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com'
   website: 'https://ziontechgroup.com'
-};
+;
 
 export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
   // Advanced AI & Consciousness Services
@@ -741,7 +740,7 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
     marketAdvantage:
       'Advanced predictive analytics platform with custom ML model development'
   }
-];
+;
 export default specializedEnterpriseServices;    id: 'quantum-machine-learning-platform';
     benefits: [;
       '60% decision accuracy improvement',
@@ -760,8 +759,8 @@ export default specializedEnterpriseServices;    id: 'quantum-machine-learning-p
     market_advantage:;
       'Advanced predictive analytics platform with custom ML model development',
   },
-];
 ;
+
 export default specializedEnterpriseServices;    id: 'quantum - machine - learning - platform';
     name: 'Quantum Machine Learning Platform';
     tagline: 'Quantum - enhanced machine learning and optimization';
@@ -1049,9 +1048,7 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
     ];
     market_advantage: 'Advanced predictive analytics platform with custom ML model development';
   }
-];
+;
 export default specializedEnterpriseServices;
 
-;
 export default specializedEnterpriseServices;
-;

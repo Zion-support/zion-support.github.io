@@ -2,16 +2,15 @@
 import React, { useState } from "react";
 import { Control, UseFormSetValue } from "react-hook-form";
 import {
-import React from 'react';
-};import {;
-} import {
+import React from 'react';import {;
+ import {
   FormField;
   FormItem;
   FormLabel;
   FormControl;
   FormDescription;
   FormMessage
-} from "@/components/ui/form",
+ from "@/components/ui/form",
 import { Input } from "@/components/ui/input",
 import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommender";
 import { Card, CardContent } from "@/components/ui/card";
@@ -24,7 +23,7 @@ interface RateOptimizationSectionProps {
   location?: string
 
   rateType: "hourly" | "fixed"
-}
+
 export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = ({
 
   control
@@ -33,12 +32,12 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
   yearsExperience
   location
   rateType
-},) => {
+,) => {
   const handleSuggestionApplied = (rate: number,) => {
     setValue("hourlyRate", rate)
   }
   FormMessage;
-} from "@/components/ui/form";
+ from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommender";
 import { Card, CardContent } from "@/components/ui/card";
@@ -49,7 +48,6 @@ interface RateOptimizationSectionProps {;
   yearsExperience: number,;
   location?: string;
   rateType: "hourly" | "fixed";
-}
 
 export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = ({;
   control;
@@ -58,7 +56,7 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
   yearsExperience;
   location,;
   rateType;
-},) => {;
+,) => {;
   const handleSuggestionApplied = (rate: number,) => {;
     setValue("hourlyRate", rate);
   };
@@ -70,7 +68,7 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
         name="hourlyRate"
         render={({ field }: { field: any },) => (;
           <FormItem>;
-            <FormLabel>Your {rateType === "hourly" ? "Hourly Rate" : "Fixed Rate"} ($USD)</FormLabel>;
+            <FormLabel>Your {rateType = = "hourly" ? "Hourly Rate" : "Fixed Rate"} ($USD)</FormLabel>;
             <FormControl>;
               <Input
                 type="number"
@@ -99,10 +97,8 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
       </Card>
     </div>
   )
-}
-"}
-}
 
+}
 
           </FormItem>)}
       />;
@@ -118,6 +114,5 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
         </CardContent>;
       </Card>;
     </div>);
-}
-"},
-}
+
+},

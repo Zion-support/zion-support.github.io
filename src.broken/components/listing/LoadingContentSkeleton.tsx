@@ -6,5 +6,3 @@ export function LoadingContentSkeleton() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

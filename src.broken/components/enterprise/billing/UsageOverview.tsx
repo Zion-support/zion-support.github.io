@@ -6,5 +6,3 @@ export function UsageOverview() {;
       <p>Component placeholder - needs implementation</p>;
     </div>;
   );
-}
-;

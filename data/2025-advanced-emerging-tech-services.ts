@@ -46,7 +46,6 @@ export const advancedEmergingTechServices2025 = [
           'Dedicated support team'
         ]
       }
-    }
     category: 'Space Technology'
     tags: [
       'Space Mining'
@@ -121,7 +120,6 @@ export const advancedEmergingTechServices2025 = [
           'Dedicated support team'
         ]
       }
-    }
     category: 'Quantum Bio-Computing'
     tags: [
       'Quantum Computing'
@@ -196,7 +194,6 @@ export const advancedEmergingTechServices2025 = [
           'Dedicated support team'
         ]
       }
-    }
     category: 'Brain-Computer Interface'
     tags: [
       'Neural Interface'
@@ -271,7 +268,6 @@ export const advancedEmergingTechServices2025 = [
           'Dedicated support team'
         ]
       }
-    }
     category: 'Quantum Energy'
     tags: [
       'Fusion Power'
@@ -346,7 +342,6 @@ export const advancedEmergingTechServices2025 = [
           'Dedicated support team'
         ]
       }
-    }
     category: 'Autonomous Vehicles'
     tags: [
       'Autonomous Vehicles'
@@ -375,7 +370,6 @@ export const advancedEmergingTechServices2025 = [
       'Automotive companies, transportation firms, logistics companies, government agencies'
     competitiveAdvantage:
       'Advanced AI navigation with 99.8% accuracy, comprehensive safety systems, and extensive vehicle system integration'
-  }
   },
   {
     id: 'quantum-materials-discovery-platform'
@@ -422,7 +416,6 @@ export const advancedEmergingTechServices2025 = [
           'Dedicated support team'
         ]
       }
-    }
     category: 'Quantum Materials'
     tags: [
       'Quantum Computing'
@@ -497,7 +490,6 @@ export const advancedEmergingTechServices2025 = [
           'Dedicated support team'
         ]
       }
-    }
     category: 'Quantum Robotics'
     tags: [
       'Quantum Computing'
@@ -572,7 +564,6 @@ export const advancedEmergingTechServices2025 = [
           'Dedicated support team'
         ]
       }
-    }
     category: 'Quantum Internet Security'
     tags: [
       'Quantum Internet'
@@ -647,7 +638,6 @@ export const advancedEmergingTechServices2025 = [
           'Dedicated support team'
         ]
       }
-    }
     category: 'Quantum Logistics'
     tags: [
       'Quantum Computing'
@@ -722,7 +712,6 @@ export const advancedEmergingTechServices2025 = [
           'Dedicated support team'
         ]
       }
-    }
     category: 'Quantum Metaverse'
     tags: ['Quantum Computing', 'Metaverse', 'Virtual Reality', 'AI Graphics']
     website: 'https://ziontechgroup.com/quantum-metaverse-pro'
@@ -751,7 +740,7 @@ export const advancedEmergingTechServices2025 = [
     competitiveAdvantage:
       'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration'
   }
-];      phone: '+1 302 464 0950';
+;      phone: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com'
     }
     marketSize: '$6.8B'
@@ -760,7 +749,7 @@ export const advancedEmergingTechServices2025 = [
     targetAudience: 'Gaming companies, virtual reality firms, entertainment companies, technology startups';
     competitiveAdvantage: 'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration'
   }
-];
+;
 
     market_size: '$6.8B',
     target_audience:;
@@ -768,12 +757,11 @@ export const advancedEmergingTechServices2025 = [
     competitive_advantage:;
       'Industry - first quantum - enhanced metaverse, advanced AI world generation, and comprehensive VR / AR system integration',
   },
-];      phone: '+1 302 464 0950';
+;      phone: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
     }
     market_size: '$6.8B',
     target_audience: 'Gaming companies, virtual reality firms, entertainment companies, technology startups';
     competitive_advantage: 'Industry - first quantum - enhanced metaverse, advanced AI world generation, and comprehensive VR / AR system integration';
   }
-];
 ;

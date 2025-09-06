@@ -12,7 +12,7 @@ export default function ThemeToggle(): JSX.Element {
       variant="ghost"
       size="icon"
     >
-      {mode === "dark" ? (
+      {mode = = "dark" ? (
         <Sun className="h-5 w-5" />
       ) : (
         <Moon className="h-5 w-5" />
@@ -33,7 +33,7 @@ export default function ThemeToggle(): JSX.Element {;
       variant="ghost";
       size="icon";
     >;
-      {mode === "dark" ? (;
+      {mode = = "dark" ? (;
         <Sun className="h-5 w-5" />;
       ) : (;
         <Moon className="h-5 w-5" />;
@@ -41,5 +41,3 @@ export default function ThemeToggle(): JSX.Element {;
       <span className="sr-only">Toggle theme</span>;
     </Button>;
   );
-}
-;

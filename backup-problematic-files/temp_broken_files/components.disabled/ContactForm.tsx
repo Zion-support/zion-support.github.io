@@ -2,7 +2,6 @@ import React from 'react';
 
 interface ContactFormProps {
   className?: string;
-}
 
 const ContactForm: React.FC<ContactFormProps> = ({ className }) => {
   return (
@@ -11,6 +10,5 @@ const ContactForm: React.FC<ContactFormProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default ContactForm;

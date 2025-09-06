@@ -6,5 +6,3 @@ export function ProductGallery() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

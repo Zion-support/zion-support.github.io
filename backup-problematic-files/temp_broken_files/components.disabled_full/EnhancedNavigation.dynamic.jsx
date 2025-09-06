@@ -7,6 +7,5 @@ const EnhancedNavigation.dynamic = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default EnhancedNavigation.dynamic;

@@ -1,4 +1,4 @@
-"use client";
+use client";
 import { useState, useEffect } from "react";
 interface Feature {id: string;
   title: string;
@@ -7,7 +7,7 @@ interface Feature {id: string;
   color: string;
   details: string[];
   demo?: string;
-}
+
 const features: Feature[] = [;
   {id: "marketplace";
     title: "Marketplace & Jobs";
@@ -60,10 +60,10 @@ const features: Feature[] = [;
       "Cross-chain bridges";
     ];
   }
-];
+;
 export function FeatureShowcase() {const [activeFeature, setActiveFeature] = useState<string | null>(null);
   const [isVisible, setIsVisible] = useState(false);
-  useEffect(() => {;
+  useEffect() => {;
     setIsVisible(true);
   }, []);
   const getColorClasses = (color: string) => {const colorMap = {;
@@ -90,15 +90,15 @@ export function FeatureShowcase() {const [activeFeature, setActiveFeature] = use
         <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 12 items - center">;
           {/* Feature Cards */}
           <div className="space - y-6">;
-            {features.map ((feature, index) => (
+            {features.map (feature, index) => (
               <div;
                 key={feature.id}
-                className={`card cursor-pointer transform transition-all duration-300 hover:scale-105 ${activeFeature === feature.id;
+                className={`card cursor-pointer transform transition-all duration-300 hover:scale-105 ${activeFeature = = feature.id;
                     ? `ring-2 ring-${feature.color}-500/50 bg-white/10`;
                     : 'hover:bg-white/10';
                 } ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}
-                style={{ transitionDelay: `${index * 100}ms` }}
-                onClick={() => setActiveFeature(activeFeature === feature.id ? null : feature.id)}
+                style={ transitionDelay: `${index * 100}ms` }
+                onClick={() => setActiveFeature(activeFeature = = feature.id ? null : feature.id)}
               >;
                 <div className="flex items - start space - x-4">;
                   <div className={`w - 12 h - 12 bg - gradient - to - r ${getColorClasses (feature.color)} rounded - lg flex items - center justify - center text - white flex - shrink - 0`}>;
@@ -111,30 +111,30 @@ export function FeatureShowcase() {const [activeFeature, setActiveFeature] = use
                     <p className="text - gray - 400 mb - 3">;
                       {feature.description}
                     </p>;
-                    {active_feature === feature.id && (
+                    {active_feature = = feature.id && (
                       <div className="space - y-2 animate - fade - in">;
-                        {feature.details.map ((detail, idx) => (
+                        {feature.details.map (detail, idx) => (
                           <div key={idx} className="flex items - center space - x-2 text - sm text - gray - 300">;
                             <div className={`w - 1.5 h - 1.5 bg-${feature.color}-500 rounded - full`}></div>;
                             <span>{detail}</span>;
-                          </div>))}
+                          </div>)}
                       </div>)}
                   </div>;
-                  <div className={`transform transition-transform duration-300 ${activeFeature === feature.id ? 'rotate-180' : 'rotate-0';
+                  <div className={`transform transition-transform duration-300 ${activeFeature = = feature.id ? 'rotate-180' : 'rotate-0';
                   }`}>;
                     <svg className="w - 5 h - 5 text - gray - 400" fill="none" stroke="current_color" view_box="0 0 24 24">;
                       <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M19 9l - 7 7 - 7-7" />;
                     </svg>;
                   </div>;
                 </div>;
-              </div>))}
+              </div>)}
           </div>;
           {/* Interactive Demo Area */}
           <div className="relative">;
             <div className="card bg - gradient - to - br from - blue - 600 / 20 to - purple - 600 / 20 border - blue - 500 / 30 p - 8">;
               <div className="text - center mb - 6">;
                 <h3 className="text - 2xl font - bold mb - 2 text - white">;
-                  {active_feature ? features.find (function => f.id === active_feature)?.title : 'Select a Feature'}
+                  {active_feature ? features.find (function => f.id = = active_feature)?.title : 'Select a Feature'}
                 </h3>;
                 <p className="text - gray - 300">;
                   {active_feature;
@@ -148,11 +148,11 @@ export function FeatureShowcase() {const [activeFeature, setActiveFeature] = use
                   <div className="bg - black / 30 rounded - lg p - 4 border border - white / 10">;
                     <h4 className="font - semibold text - white mb - 3">Key Benefits</h4>;
                     <div className="grid grid - cols - 1 sm:grid - cols - 2 gap - 3">;
-                      {features.find (function => f.id === active_feature)?.details.map ((detail, idx) => (
+                      {features.find (function => f.id = = active_feature)?.details.map (detail, idx) => (
                         <div key={idx} className="flex items - center space - x-2 text - sm">;
                           <div className="w - 2 h - 2 bg - green - 500 rounded - full"></div>;
                           <span className="text - gray - 300">{detail}</span>;
-                        </div>))}
+                        </div>)}
                     </div>;
                   </div>;
                   <div className="bg - black / 30 rounded - lg p - 4 border border - white / 10">;
@@ -172,7 +172,7 @@ export function FeatureShowcase() {const [activeFeature, setActiveFeature] = use
                     </div>;
                   </div>;
                   <button className="w - full btn - primary">;
-                    Try {features.find (function => f.id === active_feature)?.title} Demo;
+                    Try {features.find (function => f.id = = active_feature)?.title} Demo;
                   </button>;
                 </div>) : (
                 <div className="text - center py - 12">;
@@ -190,4 +190,3 @@ export function FeatureShowcase() {const [activeFeature, setActiveFeature] = use
         </div>;
       </div>;
     </section>);
-}

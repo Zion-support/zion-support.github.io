@@ -3,10 +3,9 @@ import { useState, useCallback } from 'react',;
 import { checkSignupPatterns } from '@/services/fraud/signupCheck',;
 import { supabase } from '@/integrations/supabase/client',;
 import { toast } from '@/hooks/use-toast',;
-;
+
 export function useFraudPreventionSignup() {;
   const [isCheckingFraud, setIsCheckingFraud] = useState(false),;
-  ;
   // Get the user's IP address (in a real app, you'd do this server-side);
   const getIP = async ():Promise<string | undefined> => {;
     try {;
@@ -16,21 +15,16 @@ export function useFraudPreventionSignup() {;
     } catch (error) {;
       console.error('Error getting IP:', error),;
       return undefined,;
-    }
-  },;
-  ;
+    },;
   // Check if the signup attempt might be fraudulent;
   const checkFraudBeforeSignup = useCallback(async (email:string):Promise<boolean> => {;
     setIsCheckingFraud(true),;
     try {;
       const ipAddress = await getIP(),;
-      ;
       // Check for suspicious patterns;
       const fraudCheck = await checkSignupPatterns(email, ipAddress),;
-      ;
       if (fraudCheck.isSuspicious) {;
         // // // console.log('Suspicious signup detected:', fraudCheck.reasons),;
-        ;
         // Create a fraud flag for admin review;
         const { error } = await supabase.from('fraud_flags').insert({;
           user_email:email,;
@@ -43,7 +37,6 @@ export function useFraudPreventionSignup() {;
           timestamp:new Date().toISOString(),;
           status:'pending';
         }),;
-        ;
         if (error) {;
           console.error('Error creating fraud flag:', error),;
         }
@@ -53,7 +46,7 @@ export function useFraudPreventionSignup() {;
         if (fraudCheck.reasons.some(r => ;
           r.includes('Multiple accounts') || ;
           r.includes('suspicious email domain');
-        )) {;
+        ) {;
           toast({;
             title:"Signup blocked",;
             description:"This signup attempt has been flagged for security reasons. Please contact support if you believe this is an error.",;
@@ -73,26 +66,23 @@ export function useFraudPreventionSignup() {;
       return true,;
     } finally {;
       setIsCheckingFraud(false),;
-    }
-  }, []),;
-  ;
+    }, []),;
   return {;
     isCheckingFraud,;
     checkFraudBeforeSignup},;
-} //Get the user's IP address (in a real app, you'd do this server-side) const getIP = async () : Promise<string | undefined> => {
+ //Get the user's IP address (in a real app, you'd do this server-side) const getIP = async () : Promise<string | undefined> => {
   try {
   error 
-}= await supabase.from ('fraud flags') .insert ({
+= await supabase.from ('fraud flags') .insert ({
   user email: email, content type: 'signup', content id: email, //Using email as content ID for signup attempts content excerpt: `Signup attempt for $ {
   email 
-}`;
+`;
 severity: 'suspicious';
 reason: fraudCheck.reasons.join ();
 ip address: ipAddress;
 timestamp: new Date () .toISOString ();
 status: 'pending' 
-});
-//Depending on how strict we want to be, we could block the signup //If the check is very suspicious, block the signup if (fraudCheck.reasons.some (r => r.includes ('Multiple accounts') || r.includes ('suspicious email domain') return false;
-}//Otherwise, allow but flag for review return true;
-}// No suspicious patterns found 
-}
+);
+/Depending on how strict we want to be, we could block the signup //If the check is very suspicious, block the signup if (fraudCheck.reasons.some (r => r.includes ('Multiple accounts') || r.includes ('suspicious email domain') return false;
+//Otherwise, allow but flag for review return true;
+// No suspicious patterns found 

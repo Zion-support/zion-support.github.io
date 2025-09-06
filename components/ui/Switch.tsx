@@ -6,20 +6,20 @@ interface SwitchProps {;
   onCheckedChange?: (checked: boolean) => void;
   disabled?: boolean;
   class_name?: string;
-}
+
 const Switch: React.FC<SwitchProps> = ({
   checked = false
   onCheckedChange
   disabled = false
   className = ""
-}) => {
+) => {
 
 const Switch: React.FC<SwitchProps> = ({;
   checked = false,;
   onCheckedChange,;
   disabled = false,;
   className = "",;
-}) => {;
+) => {;
   return (
     <button;
       type="button";
@@ -38,5 +38,5 @@ const Switch: React.FC<SwitchProps> = ({;
       />;
     </button>;
   );
-}
+
 export { Switch }

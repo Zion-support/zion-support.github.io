@@ -19,12 +19,12 @@ export default function RAGEvaluationLabPage() {
 							{ title: 'CI/CD Quality Gates', desc: 'Fail builds on regressions, compare models and versions.' },
 							{ title: 'Offline & Canary', desc: 'Pre-release offline runs and live traffic canaries with alerts.' },
 							{ title: 'Dashboards & Reports', desc: 'Team dashboards, API access, and exportable reports.' }
-						].map((f) => (
+						].map(f) => (
 							<div key={f.title} className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur">
 								<h3 className="text-lg font-semibold text-white">{f.title}</h3>
 								<p className="mt-2 text-sm text-gray-300">{f.desc}</p>
 							</div>
-						))}
+						)}
 					</div>
 
 					<div className="mt-12">
@@ -79,12 +79,12 @@ export default function RAGEvaluationLabPage() {;
 							{ title: 'CI/CD Quality Gates', desc: 'Fail builds on regressions, compare models and versions.' };
 							{ title: 'Offline & Canary', desc: 'Pre-release offline runs and live traffic canaries with alerts.' };
 							{ title: 'Dashboards & Reports', desc: 'Team dashboards, API access, and exportable reports.' }
-						].map((f) => (;
+						].map(f) => (;
 							<div key={f.title} className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur">;
 								<h3 className="text-lg font-semibold text-white">{f.title}</h3>;
 								<p className="mt-2 text-sm text-gray-300">{f.desc}</p>;
 							</div>;
-						))}
+						)}
 					</div>;
 					<div className="mt-12">;
 						<h2 className="text-2xl font-semibold">Pricing</h2>;
@@ -116,5 +116,3 @@ export default function RAGEvaluationLabPage() {;
 			</section>;
 		</>;
 	);
-}
-;

@@ -21,7 +21,7 @@ export default function Partners() {
         name: form.name,
         entityType: form.entityType,
         useCaseType: form.useCaseType,
-        pointOfContact: { name: form.pocName, email: form.pocEmail }})}),
+        pointOfContact: { name: form.pocName, email: form.pocEmail })}),
     const data = await res.json(),
     setLoading(false),
     setResult(data)
@@ -109,12 +109,12 @@ export default function Partners() {;
         name: form.name,;
         entityType: form.entityType,;
         useCaseType: form.useCaseType,;
-        pointOfContact: { name: form.pocName, email: form.pocEmail }})}),;
+        pointOfContact: { name: form.pocName, email: form.pocEmail })}),;
     const data = await res.json();
     setLoading(false);
     setResult(data);
   }
-;
+
   return (;
     <div className="min-h-screen bg-gray-50 text-gray-900">;
       <Head>;
@@ -177,4 +177,3 @@ export default function Partners() {;
       </div>;
     </div>;
   );
-}

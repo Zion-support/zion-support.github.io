@@ -6,5 +6,3 @@ export function select() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

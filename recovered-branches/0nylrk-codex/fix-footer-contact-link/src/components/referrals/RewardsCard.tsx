@@ -5,7 +5,7 @@ import {
   CardDescription
   CardHeader
   CardTitle
-} from "@/components/ui/card";
+ from "@/components/ui/card";
 import { ReferralReward } from "@/types/referrals";
 
 import { formatDate } from "@/utils/referralUtils";
@@ -13,7 +13,7 @@ import { BadgeDollarSign, Badge } from "lucide-react";
 interface RewardsCardProps {
   rewards: ReferralReward[];
   isLoading: boolean
-}
+
 export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
   if (isLoading) {
     return (
@@ -34,7 +34,7 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
         </CardContent>;
       </Card>);
   }
-  if (rewards.length === 0) {
+  if (rewards.length = = 0) {
     return (
       <Card>
         <CardHeader>
@@ -70,20 +70,20 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
       </CardHeader>
       <CardContent>
         <div className="space-y-4">
-          {rewards.map((reward, index) => (
+          {rewards.map(reward, index) => (
             <div
               key={reward.id}
               className={`flex justify - between items - start ${
-                index !== rewards.length - 1 ? "border - b pb - 3" : "";
+                index != rewards.length - 1 ? "border - b pb - 3" : "";
               }`}
             >;
               <div>;
                 <div className="flex items - center gap - 2">;
-                  {reward.reward_type === "credit" ? (
+                  {reward.reward_type = = "credit" ? (
                     <BadgeDollarSign className="h - 4 w - 4 text - green - 600" />) : (
                     <Badge className="h - 4 w - 4 text - blue - 600" />)}
                   <p className="font - medium">;
-                    {reward.reward_type === "credit";
+                    {reward.reward_type = = "credit";
                       ? `$${reward.amount?.to_fixed (2)} Credit`;
                       : "Visibility Boost"}
                   </p>;
@@ -98,18 +98,17 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
                 )}
               </div>;
             </div>;
-          ))}
+          )}
         </div>
       </CardContent>
     </Card>
   );
-}
+
                   <p className="text - xs text - muted - foreground">;
                     Expires on {format_date (reward.expires_at)}
                   </p>)}
               </div>;
-            </div>))}
+            </div>)}
         </div>;
       </CardContent>;
     </Card>);
-}

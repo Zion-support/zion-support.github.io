@@ -5,9 +5,9 @@ import {
   ArrowRight, Play, Users, TrendingUp, Brain, Shield, Rocket, Globe, Lock, Cpu, Database, Cloud, BarChart3,
   Atom, Target, Zap, Infinity, Sparkles, Star, Eye, Heart, Code, Palette, Layers, ChevronRight, ChevronLeft,
   Phone, Mail, MapPin, Clock, Award, CheckCircle, Zap as ZapIcon, Brain as BrainIcon, Atom as AtomIcon
-} from 'lucide-react',
+ from 'lucide-react',
 
-// Import our new revolutionary services,
+/ Import our new revolutionary services,
 import { revolutionary2043AdvancedServices } from '../data/revolutionary-2043-advanced-services',
 import { revolutionary2044InnovativeServices } from '../data/revolutionary-2044-innovative-services',
 const Homepage2043: React.FC = () => {
@@ -15,25 +15,24 @@ const Homepage2043: React.FC = () => {
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0),
   const [currentTestimonialIndex, setCurrentTestimonialIndex] = useState(0),
   const [isHovered, setIsHovered] = useState(false),
-  
-  useEffect(() => {
+
+  useEffect() => {
     setIsVisible(true),
-    
+
     // Auto-rotate featured services,
-const serviceInterval = setInterval(() => {
-      setCurrentServiceIndex((prev) => (prev + 1) % 6)
+const serviceInterval = setInterval() => {
+      setCurrentServiceIndex(prev) => (prev + 1) % 6)
     }, 4000),
-    
+
     // Auto-rotate testimonials,
-const testimonialInterval = setInterval(() => {
-      setCurrentTestimonialIndex((prev) => (prev + 1) % 3)
+const testimonialInterval = setInterval() => {
+      setCurrentTestimonialIndex(prev) => (prev + 1) % 3)
     }, 6000),
-    
+
     return () => {
       clearInterval(serviceInterval),
       clearInterval(testimonialInterval)
-    }
-  }, []),
+    }, []),
 
   // Combine all revolutionary services,
 const allRevolutionaryServices = [...revolutionary2043AdvancedServices, ...revolutionary2044InnovativeServices],
@@ -126,24 +125,24 @@ const featuredServices = allRevolutionaryServices.slice(0, 6),
     }
   ],
 
-  const handleGetStarted = useCallback(() => {
+  const handleGetStarted = useCallback() => {
     window.location.href = '/revolutionary-2040-2041-pricing-showcase'
   }, []),
 
-  const handleWatchDemo = useCallback(() => {
+  const handleWatchDemo = useCallback() => {
     window.location.href = '/services'
   }, []),
 
-  const handleContact = useCallback(() => {
+  const handleContact = useCallback() => {
     window.location.href = '/contact'
   }, []),
 
   const nextService = () => {
-    setCurrentServiceIndex((prev) => (prev + 1) % featuredServices.length)
+    setCurrentServiceIndex(prev) => (prev + 1) % featuredServices.length)
   },
 
   const prevService = () => {
-    setCurrentServiceIndex((prev) => (prev - 1 + featuredServices.length) % featuredServices.length)
+    setCurrentServiceIndex(prev) => (prev - 1 + featuredServices.length) % featuredServices.length)
   },
 
   return (
@@ -160,44 +159,44 @@ className=&quot;min-h-screen flex items-center justify-center px-4 relative over
             <div className=&quot;absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse&quot;></div>
             <div className=&quot;absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000&quot;></div>
             <div className=&quot;absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 rounded-full blur-3xl animate-pulse delay-500&quot;></div>
-            
+
             {/* Enhanced animated particles */}
             <div className=&quot;absolute inset-0&quot;>
-              {[...Array(20)].map((_, i) => (
+              {[...Array(20)].map(_, i) => (
                 <motion.div,
 key={i}
                   className=&quot;absolute w-2 h-2 bg-cyan-400/40 rounded-full&quot;
-                  animate={{
+                  animate={
                     x: [0, 150, 0],
                     y: [0, -150, 0],
                     opacity: [0, 1, 0],
-                    scale: [0, 1.5, 0]}}
-                  transition={{
+                    scale: [0, 1.5, 0]}
+                  transition={
                     duration: 8 + i * 0.3,
                     repeat: Infinity as any,
                     delay: i * 0.2,
                     ease: &quot;easeInOut&quot
-                  }}
-                  style={{                    left: `${Math.random() * 100}%`,
-                    top: `${Math.random() * 100}%`}}
+                  }
+                  style={                    left: `${Math.random() * 100}%`,
+                    top: `${Math.random() * 100}%`}
                 />
-              ))}
+              )}
             </div>;
-;
+
             {/* Enhanced grid pattern */}
             <div className=&quot;absolute inset-0 opacity-20&quot;>
-              <div className=&quot;absolute inset-0&quot; style={{
+              <div className=&quot;absolute inset-0&quot; style={
                 backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0)`,
                 backgroundSize: '50px 50px'
-              }}></div>
+              }></div>
             </div>
           </div>
 
           {/* Hero Content */}
           <div className=&quot;text-center max-w-6xl mx-auto relative z-10&quot;>            <motion.div,
-initial={_{ opacity: 0, y: 30}}
-              animate={_{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30}}
-              transition={_{ duration: 0.8}}
+initial={_{ opacity: 0, y: 30}
+              animate={_{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30}
+              transition={_{ duration: 0.8}
             >
               {/* Enhanced Badge */}
               <div className=&quot;inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-6 backdrop-blur-sm&quot;>
@@ -224,17 +223,17 @@ id=&quot;hero-heading&quot;
               {/* Enhanced CTA Buttons */}
               <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center items-center mb-12&quot;>
                 <motion.button,
-whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+whileHover={ scale: 1.05 }
+                  whileTap={ scale: 0.95 }
                   onClick={handleGetStarted}
                   className=&quot;px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-full text-lg flex items-center gap-2 hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-xl&quot;                >
                   Get Started Today
                   <ArrowRight className=&quot;w-5 h-5&quot; />
                 </motion.button>
-                
+
                 <motion.button,
-whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+whileHover={ scale: 1.05 }
+                  whileTap={ scale: 0.95 }
                   onClick={handleWatchDemo}
                   className=&quot;px-8 py-4 bg-transparent border-2 border-cyan-500/50 text-cyan-300 font-semibold rounded-full text-lg flex items-center gap-2 hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 backdrop-blur-sm&quot;                >
                   <Play className=&quot;w-5 h-5&quot; />
@@ -244,12 +243,12 @@ whileHover={{ scale: 1.05 }}
 
               {/* Enhanced Stats */}
               <div className=&quot;grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto&quot;>
-                {stats.map((stat, index) => (
+                {stats.map(stat, index) => (
                   <motion.div,
 key={stat.label}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    initial={ opacity: 0, y: 20 }
+                    animate={ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }
+                    transition={ duration: 0.6, delay: index * 0.1 }
                     className=&quot;text-center&quot;
                   >
                     <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r ${stat.color} mb-3`}>
@@ -257,20 +256,20 @@ key={stat.label}
                     </div>
                     <div className=&quot;text-3xl font-bold text-white mb-1&quot;>{stat.number}</div>
                     <div className=&quot;text-gray-400 text-sm&quot;>{stat.label}</div>                  </motion.div>
-                ))}
+                )}
               </div>;
             </motion.div>;
           </div>;
         </section>;
-;
+
         {/* Enhanced Features Section */}
         <section className=&quot;py-20 px-4 relative&quot;>
           <div className=&quot;max-w-7xl mx-auto&quot;>
             <motion.div,
-initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
               className=&quot;text-center mb-16&quot;            >
               <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-6&quot;>
                 Revolutionary Technology
@@ -285,27 +284,27 @@ that are transforming industries and reshaping the future.
             </motion.div>
 
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
-              {features.map((feature, index) => (                <motion.div,
+              {features.map(feature, index) => (                <motion.div,
 key={feature.title}
-                  initial={_{ opacity: 0, y: 30}}
-                  whileInView={_{ opacity: 1, y: 0}}
-                  transition={_{ duration: 0.6, delay: index * 0.1}}
-                  viewport={_{ once: true}}
-                  whileHover={_{ y: -10, scale: 1.02}}
+                  initial={_{ opacity: 0, y: 30}
+                  whileInView={_{ opacity: 1, y: 0}
+                  transition={_{ duration: 0.6, delay: index * 0.1}
+                  viewport={_{ once: true}
+                  whileHover={_{ y: -10, scale: 1.02}
                   className={_`group relative p-8 rounded-2xl ${feature.gradient} border border-white/10 backdrop-blur-sm hover:border-white/20 transition-all duration-300`}
                 >
                   <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r ${feature.color} mb-6 group-hover:scale-110 transition-transform duration-300`}>
                     <feature.icon className=&quot;w-8 h-8 text-white&quot; />
                   </div>
-                  
+
                   <h3 className=&quot;text-2xl font-bold text-white mb-4 group-hover:text-cyan-300 transition-colors duration-300&quot;>
                     {feature.title}
                   </h3>
-                  
+
                   <p className=&quot;text-gray-300 mb-6 leading-relaxed&quot;>
                     {feature.description}
                   </p>
-                  
+
                   <a,
 href={feature.href}
                     className=&quot;inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group-hover:gap-3 transition-all duration-300&quot;                  >
@@ -313,19 +312,19 @@ href={feature.href}
                     <ChevronRight className=&quot;w-4 h-4 ml-1 group-hover:ml-2 transition-all duration-300&quot; />
                   </a>
                 </motion.div>
-              ))}
+              )}
             </div>;
           </div>;
         </section>;
-;
+
         {/* Enhanced Featured Services Section */}
         <section className=&quot;py-20 px-4 relative bg-gradient-to-b from-black/50 to-black/80&quot;>
           <div className=&quot;max-w-7xl mx-auto&quot;>
             <motion.div,
-initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
               className=&quot;text-center mb-16&quot;            >
               <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-6&quot;>
                 Featured
@@ -345,10 +344,10 @@ that are setting new standards in technology.
                 <AnimatePresence mode=&quot;wait&quot;>
                   <motion.div,
 key={currentServiceIndex}
-                    initial={{ opacity: 0, x: 100 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -100 }}
-                    transition={{ duration: 0.5 }}
+                    initial={ opacity: 0, x: 100 }
+                    animate={ opacity: 1, x: 0 }
+                    exit={ opacity: 0, x: -100 }
+                    transition={ duration: 0.5 }
                     className=&quot;p-12 text-center&quot;
                   >
                     <div className=&quot;text-6xl mb-6&quot;>{featuredServices[currentServiceIndex]?.icon}</div>
@@ -377,7 +376,7 @@ onClick={prevService}
                   className=&quot;absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 flex items-center justify-center text-white transition-all duration-300 backdrop-blur-sm&quot;                >
                   <ChevronLeft className=&quot;w-6 h-6&quot; />
                 </button>
-                
+
                 <button,
 onClick={nextService}
                   className=&quot;absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 flex items-center justify-center text-white transition-all duration-300 backdrop-blur-sm&quot;                >
@@ -386,29 +385,29 @@ onClick={nextService}
 
                 {/* Service Indicators */}
                 <div className=&quot;absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2&quot;>
-                  {featuredServices.map((_, index) => (
+                  {featuredServices.map(_, index) => (
                     <button                      key={index}
                       onClick={_() => setCurrentServiceIndex(index)}
                       className={_`w-3 h-3 rounded-full transition-all duration-300 ${
-                        index === currentServiceIndex 
+                        index = = currentServiceIndex 
                           ? 'bg-cyan-400 w-8' 
                           : 'bg-white/30 hover:bg-white/50'}`}
                     />
-                  ))}
+                  )}
                 </div>;
               </div>;
             </div>;
           </div>;
         </section>;
-;
+
         {/* Enhanced Testimonials Section */}
         <section className=&quot;py-20 px-4 relative&quot;>
           <div className=&quot;max-w-7xl mx-auto&quot;>
             <motion.div,
-initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
               className=&quot;text-center mb-16&quot;            >
               <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-6&quot;>
                 What Our
@@ -426,17 +425,17 @@ are transforming industries and driving innovation.
               <AnimatePresence mode=&quot;wait&quot;>
                 <motion.div,
 key={currentTestimonialIndex}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -30 }}
-                  transition={{ duration: 0.5 }}
+                  initial={ opacity: 0, y: 30 }
+                  animate={ opacity: 1, y: 0 }
+                  exit={ opacity: 0, y: -30 }
+                  transition={ duration: 0.5 }
                   className=&quot;text-center max-w-4xl mx-auto&quot;
                 >
                   <div className=&quot;text-8xl mb-6&quot;></div>
                   <blockquote className=&quot;text-2xl text-white mb-8 leading-relaxed italic&quot;>
                     &quot;{testimonials[currentTestimonialIndex].content}&quot;
                   </blockquote>
-                  
+
                   <div className=&quot;flex items-center justify-center gap-4 mb-6&quot;>
                     <div className=&quot;text-4xl&quot;>{testimonials[currentTestimonialIndex].avatar}</div>
                     <div>
@@ -447,37 +446,37 @@ key={currentTestimonialIndex}
                         {testimonials[currentTestimonialIndex].role} at {testimonials[currentTestimonialIndex].company}                      </div>
                     </div>
                   </div>
-                  
+
                   <div className=&quot;flex justify-center gap-1&quot;>
-                    {[...Array(testimonials[currentTestimonialIndex].rating)].map((_, i) => (
-                      <Star key={i} className=&quot;w-6 h-6 text-yellow-400 fill-current&quot; />                    ))}
+                    {[...Array(testimonials[currentTestimonialIndex].rating)].map(_, i) => (
+                      <Star key={i} className=&quot;w-6 h-6 text-yellow-400 fill-current&quot; />                    )}
                   </div>
                 </motion.div>
               </AnimatePresence>
 
               {/* Testimonial Indicators */}
               <div className=&quot;flex justify-center gap-2 mt-8&quot;>
-                {testimonials.map((_, index) => (
+                {testimonials.map(_, index) => (
                   <button                    key={index}
                     onClick={_() => setCurrentTestimonialIndex(index)}
                     className={_`w-3 h-3 rounded-full transition-all duration-300 ${
-                      index === currentTestimonialIndex 
+                      index = = currentTestimonialIndex 
                         ? 'bg-emerald-400 w-8' 
                         : 'bg-white/30 hover:bg-white/50'}`}
                   />
-                ))}
+                )}
               </div>;
             </div>;
           </div>;
         </section>;
-;
+
         {/* Enhanced CTA Section */}
         <section className=&quot;py-20 px-4 relative&quot;>
           <div className=&quot;max-w-6xl mx-auto text-center&quot;>            <motion.div,
-initial={_{ opacity: 0, y: 30}}
-              whileInView={_{ opacity: 1, y: 0}}
-              transition={_{ duration: 0.8}}
-              viewport={_{ once: true}}
+initial={_{ opacity: 0, y: 30}
+              whileInView={_{ opacity: 1, y: 0}
+              transition={_{ duration: 0.8}
+              viewport={_{ once: true}
             >
               <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-6&quot;>
                 Ready to Experience the
@@ -485,7 +484,7 @@ initial={_{ opacity: 0, y: 30}}
                   Future of AI?
                 </span>
               </h2>
-              
+
               <p className=&quot;text-xl text-gray-300 mb-12 max-w-3xl mx-auto&quot;>
                 Join thousands of organizations already transforming their operations,
 with our revolutionary AI consciousness and quantum computing platforms.
@@ -493,17 +492,17 @@ with our revolutionary AI consciousness and quantum computing platforms.
 
               <div className=&quot;flex flex-col sm:flex-row gap-6 justify-center items-center&quot;>
                 <motion.button,
-whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+whileHover={ scale: 1.05 }
+                  whileTap={ scale: 0.95 }
                   onClick={handleGetStarted}
                   className=&quot;px-10 py-5 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-full text-xl flex items-center gap-3 hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-xl&quot;                >
                   Start Your Journey
                   <ArrowRight className=&quot;w-6 h-6&quot; />
                 </motion.button>
-                
+
                 <motion.button,
-whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+whileHover={ scale: 1.05 }
+                  whileTap={ scale: 0.95 }
                   onClick={handleContact}
                   className=&quot;px-10 py-5 bg-transparent border-2 border-cyan-500/50 text-cyan-300 font-semibold rounded-full text-xl flex items-center gap-3 hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 backdrop-blur-sm&quot;                >
                   <Phone className=&quot;w-6 h-6&quot; />
@@ -523,7 +522,7 @@ whileHover={{ scale: 1.05 }}
                   <h3 className=&quot;text-xl font-semibold text-white mb-2&quot;>Call Us</h3>
                   <p className=&quot;text-cyan-400&quot;>+1 302 464 0950</p>
                 </div>
-                
+
                 <div className=&quot;text-center&quot;>
                   <div className=&quot;inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 mb-4&quot;>
                     <Mail className=&quot;w-8 h-8 text-white&quot; />
@@ -531,7 +530,7 @@ whileHover={{ scale: 1.05 }}
                   <h3 className=&quot;text-xl font-semibold text-white mb-2&quot;>Email Us</h3>
                   <p className=&quot;text-cyan-400&quot;>kleber@ziontechgroup.com</p>
                 </div>
-                
+
                 <div className=&quot;text-center&quot;>
                   <div className=&quot;inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 mb-4&quot;>
                     <MapPin className=&quot;w-8 h-8 text-white&quot; />
@@ -546,95 +545,83 @@ whileHover={{ scale: 1.05 }}
       </main>
     </Layout>
   )
-},
+,
 
 export default Homepage2043,  Math.random () * 100 
-}%`;
+%`;
 top: `$ {
   Math.random () * 100 
-}%` 
-}
-}/>) ) 
-}</div> <motion.div initial= {
-  {
+%` 
+
+/>) 
+</div> <motion.div initial= {
   opacity: 0, y: 30 
-}
-}animate= {
-  {
+
+animate= {
   opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 
-}
-}transition= {
-  {
+
+transition= {
   duration: 0.8 
-}
-}> Revolutionary 2043 Technology </div> {
+
+> Revolutionary 2043 Technology </div> {
   /* Main Heading */ 
-}<h1 id="hero-heading" className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-white via-cyan-200 to-blue-300 bg-clip-text text-transparent leading-tight" > The Future of <span className="block bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent" > AI Consciousness </span> is Here </h1> Experience the world's most advanced AI consciousness platforms, quantum computing solutions;
-and autonomous systems that redefine what's possible in technology. </p> > Get Started Today <ArrowRight className="w-5 h-5" /> </motion.button> <motion.button > <Play className="w-5 h-5" /> Watch Demo </motion.button> </div> </motion.div>) ) 
-}</div> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Revolutionary Technology <span className="block bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent" > Solutions </span> </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Discover cutting-edge AI consciousness, quantum computing, and autonomous systems that are transforming industries and reshaping the future. </p> </motion.div> <motion.div key= {
+<h1 id="hero-heading" className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-white via-cyan-200 to-blue-300 bg-clip-text text-transparent leading-tight" > The Future of <span className="block bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent" > AI Consciousness </span> is Here </h1> Experience the world's most advanced AI consciousness platforms, quantum computing solutions;
+and autonomous systems that redefine what's possible in technology. </p>Get Started Today <ArrowRight className="w-5 h-5" /> </motion.button> <motion.button > <Play className="w-5 h-5" /> Watch Demo </motion.button> </div> </motion.div>) 
+</div> </motion.div> </div> </section><h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Revolutionary Technology <span className="block bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent" > Solutions </span> </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Discover cutting-edge AI consciousness, quantum computing, and autonomous systems that are transforming industries and reshaping the future. </p> </motion.div> <motion.div key= {
   feature.title 
-}initial= {
-  {
+initial= {
   opacity: 0, y: 30 
-}
-}whileInView= {
-  {
+
+whileInView= {
   opacity: 1, y: 0 
-}
-}transition= {
-  {
+
+transition= {
   duration: 0.6, delay: index * 0.1 
-}
-}viewport= {
-  {
+
+viewport= {
   once: true 
-}
-}whileHover= {
-  {
+
+whileHover= {
   y: -10, scale: 1.02 
-}
-}className= {
+
+className= {
   `group relative p-8 rounded-2xl $ {
   feature.gradient 
-}border border-white/10 backdrop-blur-sm hover:border-white/20 transition-all duration-300` 
-}> > Learn More <ChevronRight className="w-4 h-4 ml-1 group-hover:ml-2 transition-all duration-300" /> </a> </motion.div>) ) 
-}</div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Featured <span className="block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent" > Revolutionary Services </span> </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Experience our most advanced AI consciousness and quantum computing platforms that are setting new standards in technology. </p> </motion.div> > Get Started <ArrowRight className="w-5 h-5 ml-2" /> </a> </motion.div> </AnimatePresence> {
+border border-white/10 backdrop-blur-sm hover:border-white/20 transition-all duration-300` 
+>Learn More <ChevronRight className="w-4 h-4 ml-1 group-hover:ml-2 transition-all duration-300" /> </a> </motion.div>) 
+</div> </div> </section><h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Featured <span className="block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent" > Revolutionary Services </span> </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Experience our most advanced AI consciousness and quantum computing platforms that are setting new standards in technology. </p> </motion.div>Get Started <ArrowRight className="w-5 h-5 ml-2" /> </a> </motion.div> </AnimatePresence> {
   /* Navigation Controls */ 
-}<button > <ChevronLeft className="w-6 h-6" /> </button> <button > <ChevronRight className="w-6 h-6" /> </button> key= {
+<button > <ChevronLeft className="w-6 h-6" /> </button> <button > <ChevronRight className="w-6 h-6" /> </button> key= {
   index 
-}onClick= {
+onClick= {
   () => setCurrentServiceIndex (index) 
-}className= {
+className= {
   `w-3 h-3 rounded-full transition-all duration-300 $ {
-  index === currentServiceIndex ? 'bg-cyan-400 w-8' : 'bg-white/30 hover:bg-white/50' 
-}` 
-}/>) ) 
-}</div> </div> </div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > What Our <span className="block bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent" > Clients Say </span> </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Discover how our revolutionary AI consciousness and quantum computing platforms are transforming industries and driving innovation. </p> </motion.div> <div className="relative" > <AnimatePresence mode="wait" > <motion.div </div> </div> </div>) ) 
-}</div> </motion.div> </AnimatePresence> key= {
+  index = = currentServiceIndex ? 'bg-cyan-400 w-8' : 'bg-white/30 hover:bg-white/50' 
+` 
+/>) 
+</div> </div> </div> </div> </section><h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > What Our <span className="block bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent" > Clients Say </span> </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Discover how our revolutionary AI consciousness and quantum computing platforms are transforming industries and driving innovation. </p> </motion.div> <div className="relative" > <AnimatePresence mode="wait" > <motion.div </div> </div> </div>) 
+</div> </motion.div> </AnimatePresence> key= {
   index 
-}onClick= {
+onClick= {
   () => setCurrentTestimonialIndex (index) 
-}className= {
+className= {
   `w-3 h-3 rounded-full transition-all duration-300 $ {
-  index === currentTestimonialIndex ? 'bg-emerald-400 w-8' : 'bg-white/30 hover:bg-white/50' 
-}` 
-}/>) ) 
-}</div> </div> </div> </section> <motion.div initial= {
-  {
+  index = = currentTestimonialIndex ? 'bg-emerald-400 w-8' : 'bg-white/30 hover:bg-white/50' 
+` 
+/>) 
+</div> </div> </div> </section> <motion.div initial= {
   opacity: 0, y: 30 
-}
-}whileInView= {
-  {
+
+whileInView= {
   opacity: 1, y: 0 
-}
-}transition= {
-  {
+
+transition= {
   duration: 0.8 
-}
-}viewport= {
-  {
+
+viewport= {
   once: true 
-}
-}> <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Ready to Experience the <span className="block bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent" > Future of AI? </span> </h2> <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto" > Join thousands of organizations already transforming their operations with our revolutionary AI consciousness and quantum computing platforms. </p> <div className="flex flex-col sm:flex-row gap-6 justify-center items-center" > <motion.button > Start Your Journey <ArrowRight className="w-6 h-6" /> </motion.button> <motion.button > <Phone className="w-6 h-6" /> Contact Us </motion.button> </div> <div className="text-center"> <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 mb-4"> <Phone className="w-8 h-8 text-white" /> text-xl font-semibold text-white mb-2">Call Us</h3> <p className=" text-cyan-400">+1 302 464 0950</p> </div> <div className=" text-center"> <div className=" inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 mb-4"> <Mail className=" w-8 h-8 text-white"/> </div> <h3 className=" text-xl font-semibold text-white mb-2">Email Us</h3> <p className=" text-cyan-400">kleber@ziontechgroup.com</p> </div> <div className=" text-center"> <div className=" inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 mb-4"> <MapPin className=" w-8 h-8 text-white"/> </div> <h3 className=" text-xl font-semibold text-white mb-2">Visit Us</h3> <p className=" text-cyan-400" >364 E Main St STE 1008<br />Middletown DE 19709</p> </div> </div> </motion.div> </div> </section> </main> </Layout>) 
-};
+
+> <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Ready to Experience the <span className="block bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent" > Future of AI? </span> </h2> <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto" > Join thousands of organizations already transforming their operations with our revolutionary AI consciousness and quantum computing platforms. </p> <div className="flex flex-col sm:flex-row gap-6 justify-center items-center" > <motion.button > Start Your Journey <ArrowRight className="w-6 h-6" /> </motion.button> <motion.button > <Phone className="w-6 h-6" /> Contact Us </motion.button> </div> <div className="text-center"> <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 mb-4"> <Phone className="w-8 h-8 text-white" /> text-xl font-semibold text-white mb-2">Call Us</h3> <p className=" text-cyan-400">+1 302 464 0950</p> </div> <div className=" text-center"> <div className=" inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 mb-4"> <Mail className=" w-8 h-8 text-white"/> </div> <h3 className=" text-xl font-semibold text-white mb-2">Email Us</h3> <p className=" text-cyan-400">kleber@ziontechgroup.com</p> </div> <div className=" text-center"> <div className=" inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 mb-4"> <MapPin className=" w-8 h-8 text-white"/> </div> <h3 className=" text-xl font-semibold text-white mb-2">Visit Us</h3> <p className=" text-cyan-400" >364 E Main St STE 1008<br />Middletown DE 19709</p> </div> </div> </motion.div> </div> </section> </main> </Layout>) 
+;
 export default Homepage2043;

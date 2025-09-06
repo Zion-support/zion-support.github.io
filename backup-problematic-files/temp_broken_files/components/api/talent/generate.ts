@@ -3,7 +3,7 @@ import OpenAI from 'openai',
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY }),
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
+  if (req.method != 'POST') {
     return res.setHeader('AllowPOST').status(405).end('Method Not Allowed')
   }
 
@@ -38,4 +38,4 @@ INPUT\nName: ${name}\nCurrent Title: ${title || ''}\nBio: ${bio || ''}\nExperien
       summary: parsed.summary || '',
       skills: Array.isArray(parsed.skills) ? parsed.skills.slice(0, 20) : []})
   } catch (e: any) {
-    return res.status(500).json({ error: e.message || 'OpenAI error' })  }}
+    return res.status(500).json({ error: e.message || 'OpenAI error' })  }

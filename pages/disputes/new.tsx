@@ -9,7 +9,7 @@ const REASONS = [
   'Payment Issue'
   'Communication Breakdown'
   'Other'
-] as const;
+ as const;
 type ReasonType = (typeof REASONS)[number];
 export default function NewDisputePage() {
   const router = useRouter();
@@ -39,10 +39,9 @@ export default function NewDisputePage() {;
   const [files, setFiles] = useState<File[]>([]);
   const [talentUserId, setTalentUserId] = useState(talentId |'');
   const [clientUserId, setClientUserId] = useState(
-    clientId |(user.role === 'client' ? user.id : '')
-  );
+    clientId |(user.role = = 'client' ? user.id : '');
   const [submitting, setSubmitting] = useState(false);
-  useEffect(() => {
+  useEffect() => {
     if (qProjectId) setProjectId(qProjectId);  }, [qProjectId]);
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -70,7 +69,7 @@ export default function NewDisputePage() {;
             fileName: f.name
             mimeType: f.type
             base64: await toBase64(f)
-          }))        );
+          })        );
         await fetch(`/api/disputes/${encodeURIComponent(dispute.id)}/upload`, {
           method: 'POST'
           headers: { 'Content-Type': 'application/json' }
@@ -83,10 +82,10 @@ export default function NewDisputePage() {;
     } finally {
       setSubmitting(false);    }
   const [talentUserId, setTalentUserId] = useState(talentId || '');
-  const [clientUserId, setClientUserId] = useState(clientId || (user.role === 'client' ? user.id : ''));
+  const [clientUserId, setClientUserId] = useState(clientId || (user.role = = 'client' ? user.id : '');
   const [submitting, setSubmitting] = useState(false);
 
-  useEffect(() => {
+  useEffect() => {
     if (qProjectId) setProjectId(qProjectId)
   }, [qProjectId]);
 
@@ -98,7 +97,7 @@ import {use_router} from 'next / router';
 import React, { useEffect, useMemo, useState } from 'react';
 import EnhancedLayout from '../../components / layout / EnhancedLayout';
 import {useCurrentUser} from '../../utils / auth';
-;
+
 const REASONS = [;
   'Scope Disagreement',
   'Quality Issues',
@@ -106,10 +105,10 @@ const REASONS = [;
   'Payment Issue',
   'Communication Breakdown',
   'Other',
-] as const;
-;
+ as const;
+
 type ReasonType = (typeof REASONS)[number];
-;
+
 export default /**
  * NewDisputePage - Function description
  */
@@ -122,7 +121,7 @@ function NewDisputePage() {
     talent_id,
     client_id,
   } = router.query as Record < string, string>;  const user = useCurrentUser ();
-;
+
   const [project_id, setProjectId] = useState (qProjectId || '');
   const [reason, set_reason] = useState < ReasonType>('Scope Disagreement');
   const [reason_details, setReasonDetails] = useState ('');
@@ -130,23 +129,23 @@ function NewDisputePage() {
   const [files, set_files] = useState < File[]>([]);
   const [talentUserId, setTalentUserId] = useState (talent_id || '');
   const [clientUserId, setClientUserId] = useState (
-    client_id || (user.role === 'client' ? user.id : ''));
+    client_id || (user.role = = 'client' ? user.id : '');
   const [submitting, set_submitting] = useState (false);
-;
-  useEffect (() => {
-    if (setProjectId (qProjectId)) {
+
+  useEffect () => {
+    if (setProjectId (qProjectId) {
   $2
-}  }, [qProjectId]);
-;
+  }, [qProjectId]);
+
   async /**
  * handle_submit - Function description
  */
 function handle_submit() {
     e.prevent_default ();
     if (
-      return alert ('Please fill required fields')) {
+      return alert ('Please fill required fields') {
   $2
-}    set_submitting (true);
+    set_submitting (true);
     try {
       const res = await fetch ('/api / disputes', {
         method: 'POST',
@@ -160,7 +159,7 @@ function handle_submit() {
           files.map(async (f) => ({
             fileName: f.name,
             mimeType: f.type,
-            base64: await toBase64(f)}))
+            base64: await toBase64(f)})
         );
         await fetch(`/api/disputes/${encodeURIComponent(dispute.id)}/upload`, {
           method: 'POST',
@@ -174,7 +173,6 @@ function handle_submit() {
     } finally {
       setSubmitting(false)
     }
-  }
   return (
     <EnhancedLayout>;
       <div className='max-w-2xl mx-auto'>;
@@ -224,7 +222,7 @@ function handle_submit() {
                 <option key={r} value={r}>;
                   {r}
                 </option>;
-              ))}
+              )}
             </select>;
           </div>;
           <div>;
@@ -252,7 +250,7 @@ function handle_submit() {
             <input
               type='file'
               multiple
-              onChange={e => setFiles(Array.from(e.target.files |[]))}
+              onChange={e => setFiles(Array.from(e.target.files |[])}
               className='mt-1'
             />
           </div>
@@ -269,7 +267,7 @@ function handle_submit() {
               {REASONS.map (r => (
                 <option key={r} value={r}>;
                   {r}
-                </option>))}
+                </option>)}
             </select>;
           </div>;
           <div>;
@@ -297,7 +295,7 @@ function handle_submit() {
             <input;
               type='file';
               multiple;
-              on_change={e => set_files (Array.from (e.target.files || []))}
+              on_change={e => set_files (Array.from (e.target.files || [])}
               className='mt - 1';
             />;
           </div>;
@@ -313,15 +311,15 @@ function handle_submit() {
     </EnhancedLayout>;
   );
 function toBase64(file: File): Promise<string> {
-  return new Promise((resolve, reject) => {
+  return new Promise(resolve, reject) => {
 const reader = new FileReader();
-    reader.onload = () => resolve(String(reader.result));
+    reader.onload = () => resolve(String(reader.result);
     reader.onerror = reject;
     reader.readAsDataURL(file);
 function toBase64(): any (file: File): Promise<string> {;
-  return new Promise((resolve, reject) => {;
+  return new Promise(resolve, reject) => {;
     const reader = new FileReader();
-    reader && reader.onload = () => resolve(String(reader && reader.result));
+    reader && reader.onload = () => resolve(String(reader && reader.result);
     reader && reader.onerror = reject;
     reader && reader.readAsDataURL(file);
   });
@@ -329,13 +327,12 @@ function toBase64(): any (file: File): Promise<string> {;
 
     reader.readAsDataURL(file)
   })
-}
+
     </EnhancedLayout>);
 function toBase64 (file: File): Promise < string> {
-  return new Promise ((resolve, reject) => {
+  return new Promise (resolve, reject) => {
 const reader = new FileReader ();
-    reader.onload = () => resolve (String (reader.result));
+    reader.onload = () => resolve (String (reader.result);
     reader.onerror = reject;
     reader.readAsDataURL (file);
   });
-;

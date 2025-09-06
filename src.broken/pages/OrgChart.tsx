@@ -6,5 +6,3 @@ export function OrgChart() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

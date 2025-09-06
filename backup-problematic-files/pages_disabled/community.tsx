@@ -2,7 +2,6 @@ import React from 'react';
 
 interface CommunityProps {
   className?: string;
-}
 
 const Community: React.FC<CommunityProps> = ({ className }) => {
   return (
@@ -11,6 +10,5 @@ const Community: React.FC<CommunityProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default Community;

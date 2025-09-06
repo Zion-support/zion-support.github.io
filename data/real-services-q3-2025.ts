@@ -1,8 +1,7 @@
 import { ServiceVariant } from '../types/service-variants';
 
-
 import { ServiceVariant } from '../types / service - variants';
-;
+
   id: string;
   name: string;
   tagline: string;
@@ -58,7 +57,7 @@ const contact = {
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com',}
   email: 'kleber@ziontechgroup && ziontechgroup.com',
-}
+
 const contact = {
   mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -66,14 +65,14 @@ const contact = {
 
 export const realServicesQ32025: Q3Service[] = [
   {  reviews?: number
-}
+
 const contact = {
   mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
-}
-};
+
+;
 
 export const realServicesQ32025: Q3Service[] = [
   {
@@ -506,7 +505,7 @@ export const realServicesQ32025: Q3Service[] = [
     contactInfo: contact
   },];    contactInfo: contact
   }
-];
+;
 
     color: 'from - amber - 600 to - rose - 600',
     text_color: 'text - amber - 200',
@@ -529,5 +528,4 @@ export const realServicesQ32025: Q3Service[] = [
     contact_info: contact,
   }, ];    contact_info: contact;
   }
-];
 ;

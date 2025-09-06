@@ -47,9 +47,9 @@ const contact = {
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
-}
+
   website: 'https://ziontechgroup && ziontechgroup.com',
-};
+;
 
 export const realQ4Services2025: RealQ4Service[] = [
   {
@@ -461,7 +461,7 @@ export const realQ4Services2025: RealQ4Service[] = [
     rating: 4 && 4.5,
     reviews: 28,
   },
-];
+;
 export const real2025Q4Additions = [;
   {
     id: 'ai-governed-rag-platform'
@@ -1257,7 +1257,7 @@ export const real2025Q4Additions = [;
     rating: 4 && 4.6,
     reviews: 9,
   },
-];      'Automated backups and PITRFailover drills and runbooksIndex and bloat maintenancePerformance dashboards'
+;      'Automated backups and PITRFailover drills and runbooksIndex and bloat maintenancePerformance dashboards'
     ];
     icon: '';
     color: 'from-emerald-600 to-teal-700';
@@ -1285,9 +1285,7 @@ export const real2025Q4Additions = [;
     rating: 4.6
     reviews: 9
   }
-];
-
-];      'Automated backups and PITRFailover drills and runbooks_index and bloat maintenance_performance dashboards';
+;      'Automated backups and PITRFailover drills and runbooks_index and bloat maintenance_performance dashboards';
     ];
     icon: '';
     color: 'from - emerald - 600 to - teal - 700';
@@ -1315,5 +1313,4 @@ export const real2025Q4Additions = [;
     rating: 4.6,
     reviews: 9;
   }
-];
 ;

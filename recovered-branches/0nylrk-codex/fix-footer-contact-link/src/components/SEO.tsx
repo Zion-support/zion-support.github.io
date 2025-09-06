@@ -14,7 +14,7 @@ interface SEOProps {;
   og_url?: string;
   canonical?: string;
   noindex?: boolean;
-}
+
 export function SEO({
   title;
   description;
@@ -51,6 +51,5 @@ export function SEO({
       {noindex && <meta name="robots" content="noindex" />}
     </Helmet>
   )
-}
+
     </Helmet>);
-}

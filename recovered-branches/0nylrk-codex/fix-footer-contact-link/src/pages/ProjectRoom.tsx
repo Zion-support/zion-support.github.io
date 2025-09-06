@@ -4,23 +4,22 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
 
 import React, { useState } from 'react';
 import { useParams  } from 'react-router-dom';
@@ -47,7 +46,7 @@ export default function ProjectRoom() {
     isVideoEnabled?: boolean;
     isScreenSharing?: boolean;
     isHost?: boolean
-  }>>([
+  }>([
     {
 
       id: 'user-1'
@@ -73,7 +72,7 @@ export default function ProjectRoom() {;
     isVideoEnabled?: boolean
     isScreenSharing?: boolean
     isHost?: boolean
-  }>>([;
+  }>([;
     {;
       id: 'user-1',;
       name: 'You',;
@@ -89,10 +88,9 @@ export default function ProjectRoom() {;
       description: "Others can join with the project room link";
     });
     // Switch to video tab if not already there;
-    if (activeTab !== 'video') {;
+    if (activeTab != 'video') {;
       setActiveTab('video');
     }
-  }
   const endVideoCall = () => {
     setIsInCall(false);
     toast.info("Video call ended", {
@@ -107,11 +105,10 @@ export default function ProjectRoom() {;
       { id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true }
     ];
     const randomUser = mockUsers[Math.floor(Math.random() * mockUsers.length)];
-    if (!callParticipants.find(p => p.id === randomUser.id)) {
+    if (!callParticipants.find(p => p.id = = randomUser.id) {
       setCallParticipants(prev => [...prev, randomUser]);
       toast(`${randomUser && randomUser.name} joined the call`);
     }
-  }
 
   return (
     <>;
@@ -272,7 +269,7 @@ export default function ProjectRoom() {;
       <Footer />
     </>
   )
-}
+
                 </div>;
               </CardContent>;
             </Card>;
@@ -310,6 +307,5 @@ export default function ProjectRoom() {;
       <Footer />;
     </>;
   );
-}
+
     </>);
-}

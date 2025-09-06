@@ -2,7 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next',
 import { createSessionCookie, validateCredentials } from '../../../utils/auth-utils',
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
+  if (req.method != 'POST') {
     return res.status(405).json({ error: 'Method not allowed' })
   }
   const { email, password, code } = req.body || {},

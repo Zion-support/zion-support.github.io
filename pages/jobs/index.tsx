@@ -6,8 +6,8 @@ import InteractiveSearch from '../../components/ui/InteractiveSearch';
 export default function JobsListPage() {
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    const t = setTimeout(() => setLoading(false), 500);
+  useEffect() => {
+    const t = setTimeout() => setLoading(false), 500);
     return () => clearTimeout(t);
   }, []);
   const jobs = [
@@ -26,8 +26,8 @@ export default function JobsListPage() {
 
 export default function JobsListPage() {;
   const [loading, setLoading] = useState(true);
-  useEffect(() => {;
-    const t = setTimeout(() => setLoading(false), 500);
+  useEffect() => {;
+    const t = setTimeout() => setLoading(false), 500);
     return () => clearTimeout(t);
   }, []);
 
@@ -54,11 +54,11 @@ export default /**
  */
 function JobsListPage() {
   const [loading, set_loading] = useState (true);
-  useEffect (() => {
-    const t = set_timeout (() => set_loading (false), 500);
+  useEffect () => {
+    const t = set_timeout () => set_loading (false), 500);
     return () => clear_timeout (t);
   }, []);
-;
+
   const jobs = [;
     {
       slug: 'senior - ai - engineer',
@@ -73,7 +73,7 @@ function JobsListPage() {
       description: 'Design pipelines for training / inference at scale.',
     },
   ];
-;
+
   return (
     <div className='space-y-4'>;
       <InteractiveSearch placeholder='Search jobs, keywords, or companies...' />;
@@ -91,19 +91,19 @@ function JobsListPage() {
                   footer={<span className='text-blue-600'>View Job </span>}
                 />              </a>;
             </Link>;
-          ))}
+          )}
         </div>;
       )}
     </div>;
   );
-          ))}
+          )}
         </div>;
       )}
     </div>
-);
+;
     </div>
   )
-}
+
     <div className='space - y-4'>;
       <InteractiveSearch placeholder='Search jobs, keywords, or companies...' />;
       {loading ? (
@@ -118,7 +118,6 @@ function JobsListPage() {
                   description={j.description}
                   footer={<span className='text - blue - 600'>View Job </span>}
                 />              </a>;
-            </Link>))}
+            </Link>)}
         </div>)}
     </div>);
-;

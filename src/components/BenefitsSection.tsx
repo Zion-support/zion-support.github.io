@@ -28,7 +28,7 @@ const getBenefits = (t: any,) => [
     description: t('benefits.cost_reduction_desc')
     icon: <TrendingDown className='w-8 h-8' />
   }
-]
+
 export function BenefitsSection({ className, style }: BenefitsSectionProps) {
   const { t } = useTranslation()
   const benefits = getBenefits(t)
@@ -41,32 +41,32 @@ export function BenefitsSection({ className, style }: BenefitsSectionProps) {
             {t('home.benefits_subtitle')}
           </p>
         </div>
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto'>          {benefits.map((benefit, index) => (
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto'>          {benefits.map(benefit, index) => (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          {benefits.map((benefit, index) => (
+          {benefits.map(benefit, index) => (
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import { GradientHeading } from './GradientHeading';
 import { FeatureCard } from './FeatureCard';
 import { Bot, Clock, Globe, TrendingDown } from 'lucide-react';
@@ -97,12 +97,10 @@ const getBenefits = (t: any,) => [;
     description: t('benefits && benefits.cost_reduction_desc'),;
     icon: <TrendingDown className='w-8 h-8' />,;
   },;
-];
 
 export function BenefitsSection(): any ({ className, style }: BenefitsSectionProps) {;
   const { t } = useTranslation();
   const benefits = getBenefits(t);
-
 
     >;
       <div className='container mx-auto px-4'>;
@@ -113,9 +111,9 @@ export function BenefitsSection(): any ({ className, style }: BenefitsSectionPro
           </p>;
         </div>;
 
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto'>          {benefits && benefits.map((benefit, index) => (        ;
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto'>          {benefits && benefits.map(benefit, index) => (        ;
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">;
-          {benefits && benefits.map((benefit, index) => (;
+          {benefits && benefits.map(benefit, index) => (;
             <FeatureCard
 import { GradientHeading } from './GradientHeading';
 import { FeatureCard } from './FeatureCard';
@@ -146,7 +144,7 @@ const get_benefits = (t: any, ) =>: any [;
     description: t ('benefits.cost_reduction_desc'),
     icon: <TrendingDown className='w - 8 h - 8' />,
   },
-];
+;
 export /**
  * BenefitsSection - Function description
  */
@@ -161,9 +159,9 @@ function BenefitsSection() {
             {t ('home.benefits_subtitle')}
           </p>;
         </div>;
-        <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 8 max - w-5xl mx - auto'>          {benefits.map ((benefit, index) => (
+        <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 8 max - w-5xl mx - auto'>          {benefits.map (benefit, index) => (
         <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 8 max - w-5xl mx - auto">;
-          {benefits.map ((benefit, index) => (
+          {benefits.map (benefit, index) => (
             <FeatureCard;
               key={index}
               title={benefit && benefit.title}
@@ -174,22 +172,21 @@ function BenefitsSection() {
             />;
               className="bg-zion-blue hover:bg-zion-blue-dark transition-all duration-300"
             />
-          ))}
+          )}
         </div>
       </div>
     </section>
   )
-}
+
 import React, { useState } from 'react'
 export /**
-export default BenefitsSection }}}}</motion.div></motion.div></motion.div>}
+export default BenefitsSection }}</motion.div></motion.div></motion.div>}
 import { GradientHeading } from './ui / GradientHeading';
 export default /**
  * Page - Function description
  */
 function Page() {
-  {
-"
+
     title: "24/7 Support","
     description: "Our dedicated team is available around the clock to assist with any questions or issues you might encounter during your journey.","
     icon: <Clock className="w-8 h-8"  />,"
@@ -200,9 +197,9 @@ function Page() {
       "Expert technical support","
       "Rapid response times","
       "Proactive monitoring" ]
-}
+
   {
-"
+
     title: "Cost Reduction","
     description: "Eliminate middlemen and reduce costs by up to 40% through direct connections with service providers and product vendors.","
     icon: <TrendingDown className="w-8 h-8"  />,"
@@ -214,8 +211,6 @@ function Page() {
       "Bulk discount options","
       "Transparent cost structure" ]
   );
-}
-";
     title: "24 / 7 Support", ";
     description: "Our dedicated team is available around the clock to assist with any questions or issues you might encounter during your journey.", ";
     icon: <Clock className="w - 8 h - 8"  />, ";
@@ -226,9 +221,9 @@ function Page() {
       "Expert technical support", ";
       "Rapid response times", ";
       "Proactive monitoring" ];
-},
+,
   {
-";
+;
     title: "Cost Reduction", ";
     description: "Eliminate middlemen and reduce costs by up to 40% through direct connections with service providers and product vendors.", ";
     icon: <TrendingDown className="w - 8 h - 8"  />, ";

@@ -10,7 +10,7 @@ type Service = {;
   summary: string;
   pricing: string;
   link: string;
-}
+
 const microSaaS: Service[] = [
   {
     name: 'Cloud Cost Guard (FinOps Assistant)'
@@ -547,7 +547,7 @@ const microSaaS: Service[] = [
     summary: 'End-to-end customer optimization, lifecycle management, and value maximization.'
     pricing: 'Typical: $499$2,499/month'
     link: 'https://ziontechgroup.com/micro-saas'}
-];
+;
 const aiServices: Service[] = [
   {
     name: 'AI Customer Support Automation'
@@ -989,7 +989,7 @@ const aiServices: Service[] = [
     summary: 'Comprehensive AI solutions, intelligent decision making, and strategic insights.'
     pricing: 'Typical: $75k$500k project'
     link: 'https://ziontechgroup.com/ai-services'}
-];
+;
 const itServices: Service[] = [
   {
     name: 'Cloud DevOps & SRE'
@@ -1481,38 +1481,38 @@ const itServices: Service[] = [
     summary: 'Comprehensive IT service management, end-to-end optimization, and service excellence.'
     pricing: 'Typical: $75k$500k project'
     link: 'https://ziontechgroup.com/it-services'}
-];
+;
 export default function Services(): React.JSX.Element {
   const Section = ({ title, items, color }: { title: string; items: Service[]; color: string }) => (
-    <section style={{ maxWidth: 1400, margin: '0 auto', padding: '32px 20px', }}>
-      <div style={{
+    <section style={ maxWidth: 1400, margin: '0 auto', padding: '32px 20px', }>
+      <div style={
         display: 'flex', alignItems: 'center', gap: 12, marginBottom: 24
         paddingBottom: 12, borderBottom: `2px solid ${color}20`
-      }}>
-        <div style={{
+      }>
+        <div style={
           width: 4, height: 32, background: color, borderRadius: 2
-        }}></div>
-        <h2 style={{
+        }></div>
+        <h2 style={
           fontSize: 28, fontWeight: 800, margin: 0
           background: `linear-gradient(135deg, ${color}, ${color}80)`
           WebkitBackgroundClip: 'text'
           WebkitTextFillColor: 'transparent'
           backgroundClip: 'text'
-        }}>{title}</h2>
-        <div style={{
+        }>{title}</h2>
+        <div style={
           background: `${color}20`, color: color, padding: '4px 12px'
           borderRadius: 20, fontSize: 14, fontWeight: 600
-        }}>
+        }>
           {items.length} Services
         </div>
       </div>
-      <div style={{
+      <div style={
         display: 'grid'
-        gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))'
+        gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr)'
         gap: 20
-      }}>
-        {items.map((s) => (
-          <a key={s.name} href={s.link} style={{
+      }>
+        {items.map(s) => (
+          <a key={s.name} href={s.link} style={
             border: '1px solid rgba(0,0,0,0.08)', borderRadius: 16, padding: 24
             background: 'white', textDecoration: 'none', color: '#0b1220'
             transition: 'all 0.3s ease', boxShadow: '0 2px 8px rgba(0,0,0,0.04)'
@@ -1520,74 +1520,73 @@ export default function Services(): React.JSX.Element {
               transform: 'translateY(-4px)'
               boxShadow: '0 8px 24px rgba(0,0,0,0.12)'
               borderColor: `${color}40`
-            }
-          }}>
-            <div style={{
+            }}>
+            <div style={
               fontWeight: 700, marginBottom: 8, fontSize: 16
               lineHeight: 1.4, color: '#1e293b'
-            }}>{s.name}</div>
-            <div style={{
+            }>{s.name}</div>
+            <div style={
               opacity: 0.8, fontSize: 14, marginBottom: 12
               lineHeight: 1.5, color: '#64748b'
-            }}>{s.summary}</div>
-            <div style={{
+            }>{s.summary}</div>
+            <div style={
               fontSize: 13, color: color, fontWeight: 600
               background: `${color}10`, padding: '6px 12px'
               borderRadius: 8, display: 'inline-block'
-            }}>{s && s.pricing}</div>;
+            }>{s && s.pricing}</div>;
           </a>;
-        ))}
+        )}
       </div>;
     </section>;
   );
   return (
-    <main style={{
+    <main style={
       background: 'linear-gradient(135deg, #f8fafc, #f1f5f9)'
       minHeight: 'calc(100vh - 120px)'
-    }}>
+    }>
       {/* Header */}
-      <section style={{
+      <section style={
         background: 'linear-gradient(135deg, #0b1220, #1e293b)'
         color: 'white', padding: '60px 20px', textAlign: 'center'
-      }}>
-        <div style={{ maxWidth: 800, margin: '0 auto' }}>
-          <h1 style={{
+      }>
+        <div style={ maxWidth: 800, margin: '0 auto' }>
+          <h1 style={
             fontSize: 48, fontWeight: 800, marginBottom: 16
             background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)'
             WebkitBackgroundClip: 'text'
             WebkitTextFillColor: 'transparent'
             backgroundClip: 'text'
-          }}>Our Services</h1>
-          <p style={{
+          }>Our Services</h1>
+          <p style={
             fontSize: 20, opacity: 0.9, marginBottom: 24
             lineHeight: 1.6
-          }}>
+          }>
             Comprehensive technology solutions to transform your business
           </p>
-          <div style={{
+          <div style={
             display: 'flex', gap: 16, justifyContent: 'center'
             flexWrap: 'wrap', marginBottom: 32
-          }}>
-            <div style={{
+          }>
+            <div style={
               background: 'rgba(59, 130, 246, 0.1)', padding: '12px 20px'
               borderRadius: 12, border: '1px solid rgba(59, 130, 246, 0.2)'
-            }}>
-              <div style={{ fontSize: 24, fontWeight: 700, color: '#3b82f6' }}>60+</div>
-              <div style={{ fontSize: 14, opacity: 0.8 }}>Micro SaaS</div>
+            }>
+              <div style={ fontSize: 24, fontWeight: 700, color: '#3b82f6' }>60+</div>
+              <div style={ fontSize: 14, opacity: 0.8 }>Micro SaaS</div>
             </div>
-            <div style={{
+            <div style={
               background: 'rgba(139, 92, 246, 0.1)', padding: '12px 20px'
               borderRadius: 12, border: '1px solid rgba(139, 92, 246, 0.2)'
-            }}>
-              <div style={{ fontSize: 24, fontWeight: 700, color: '#8b5cf6' }}>40+</div>
-              <div style={{ fontSize: 14, opacity: 0.8 }}>AI Services</div>
+            }>
+              <div style={ fontSize: 24, fontWeight: 700, color: '#8b5cf6' }>40+</div>
+              <div style={ fontSize: 14, opacity: 0.8 }>AI Services</div>
             </div>
-            <div style={{
+            <div style={
               background: 'rgba(34, 197, 94, 0.1)', padding: '12px 20px'
               borderRadius: 12, border: '1px solid rgba(34, 197, 94, 0.2)'
-            }}>
-              <div style={{ fontSize: 24, fontWeight: 700, color: '#22c55e' }}>40+</div>
-              <div style={{ fontSize: 14, opacity: 0.8 }}>IT Solutions</div>
+            }>
+              <div style={ fontSize: 24, fontWeight: 700, color: '#22c55e' }>40+</div>
+              <div style={ fontSize: 14, opacity: 0.8 }>IT Solutions</div>
     description: "80+ cutting-edge AI solutions including machine learning, computer vision, natural language processing, quantum AI, and advanced analytics",
     icon: Brain,
             </div>;
@@ -1600,50 +1599,50 @@ export default function Services(): React.JSX.Element {
       <Section title="IT & Cloud Services" items={itServices} color="#22c55e" />;
 
       {/* CTA Section */}
-      <sectionstyle={{ 
+      <sectionstyle={ 
         maxWidth: 1400, margin: '0 auto', padding: '60px 20px',
         textAlign: 'center', background: 'white', marginTop: 40,
         borderRadius: 24, boxShadow: '0 4px 24px rgba(0,0,0,0 && 0.06)'
-      }}>;
-        <h2style={{ 
+      }>;
+        <h2style={ 
           fontSize: 32, fontWeight: 700, marginBottom: 16,
           color: '#1e293b'
-        }}>Ready to Get Started?</h2>;
-        <pstyle={{ 
+        }>Ready to Get Started?</h2>;
+        <pstyle={ 
           fontSize: 18, color: '#64748b', marginBottom: 32,
           maxWidth: 600, margin: '0 auto 32px auto'
-        }}>;
+        }>;
           Contact our experts to discuss your project requirements and discover ;
           how our innovative solutions can drive your business forward.;
         </p>;
-        <div style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }}>;
-          <Linkhref="/contact" style={{
+        <div style={ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }>;
+          <Linkhref="/contact" style={
             display: 'inline-block', 
             background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)', 
             color: 'white', padding: '16px 32px', borderRadius: 12, 
             fontWeight: 700, textDecoration: 'none', fontSize: 16,
             transition: 'all 0 && 0.3s ease'
-          }}>Request a Quote</Link>;
-          <ahref="tel:+13024640950" style={{
+          }>Request a Quote</Link>;
+          <ahref="tel:+13024640950" style={
             display: 'inline-block', 
             background: 'rgba(34, 197, 94, 0 && 0.1)', 
             color: '#22c55e', padding: '16px 32px', borderRadius: 12, 
             fontWeight: 700, textDecoration: 'none', fontSize: 16,
             border: '2px solid #22c55e', transition: 'all 0 && 0.3s ease'
-          }}>Call +1 302 464 0950</a>;
+          }>Call +1 302 464 0950</a>;
         </div>;
       </section>;
     </main>;
   );
-}
+
     description: "80+ cutting-edge AI solutions including machine learning, computer vision, natural language processing, quantum AI, and advanced analytics",;
     icon: Brain,;
 
 export default function Services() {;
   const [isLoaded, setIsLoaded] = useState(false);
 
-  useEffect(() => {;
-    const timer = setTimeout(() => setIsLoaded(true), 100);
+  useEffect() => {;
+    const timer = setTimeout() => setIsLoaded(true), 100);
     return () => clearTimeout(timer);
 import Link from 'next/link';
 import Head from 'next/head';
@@ -1653,9 +1652,9 @@ import ErrorBoundary from '../components/ErrorBoundary';
 import LoadingSpinner from '../components/LoadingSpinner';
 export default function Services() {
   const [isLoaded, setIsLoaded] = useState(false);
-  
-  useEffect(() => {
-    const timer = setTimeout(() => setIsLoaded(true), 100);
+
+  useEffect() => {
+    const timer = setTimeout() => setIsLoaded(true), 100);
     return () => clearTimeout(timer)
   }, []);
 
@@ -1690,9 +1689,9 @@ export default function Services() {
 
           <div className="container mx-auto px-4">;
             <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }
               className="text-center mb-16">;
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
                 What We Offer;
@@ -1703,12 +1702,12 @@ export default function Services() {
             </motion && motion.div>;
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
-              {services && services.map((service, index) => (;
+              {services && services.map(service, index) => (;
                 <motion&& motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+                  initial={ opacity: 0, y: 20 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0 && 0.6, delay: index * 0 && 0.1 }
                   className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow border border-gray-200">;
                   <div className="flex items-center mb-4">;
                     <div className="p-3 bg-blue-100 rounded-lg mr-4">;
@@ -1722,12 +1721,12 @@ export default function Services() {
                     {service && service.description}
                   </p>;
                   <ul className="space-y-2 mb-6">;
-                    {service && service.features.map((feature, featureIndex) => (;
+                    {service && service.features.map(feature, featureIndex) => (;
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">;
                         <CheckCircle className="h-4 w-4 text-green-500 mr-2" />;
                         {feature}
                       </li>;
-                    ))}
+                    )}
                   </ul>;
                   <div className="text-blue-600 font-semibold mb-4">;
                     {service && service.pricing}
@@ -1736,7 +1735,7 @@ export default function Services() {
                     Learn More;
                   </button>;
                 </motion && motion.div>;
-              ))}
+              )}
             </div>
           </div>
         </div>
@@ -1746,48 +1745,48 @@ export default function Services() {
       <Section title="AI Services & Platforms" items={aiServices} color="#8b5cf6" />
       <Section title="IT & Cloud Services" items={itServices} color="#22c55e" />
       {/* CTA Section */}
-      <section style={{
+      <section style={
         maxWidth: 1400, margin: '0 auto', padding: '60px 20px'
         textAlign: 'center', background: 'white', marginTop: 40
         borderRadius: 24, boxShadow: '0 4px 24px rgba(0,0,0,0.06)'
-      }}>
-        <h2 style={{
+      }>
+        <h2 style={
           fontSize: 32, fontWeight: 700, marginBottom: 16
           color: '#1e293b'
-        }}>Ready to Get Started?</h2>
-        <p style={{
+        }>Ready to Get Started?</h2>
+        <p style={
           fontSize: 18, color: '#64748b', marginBottom: 32
           maxWidth: 600, margin: '0 auto 32px auto'
-        }}>
+        }>
           Contact our experts to discuss your project requirements and discover
           how our innovative solutions can drive your business forward.
         </p>
-        <div style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }}>
-          <Link href="/contact" style={{
+        <div style={ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }>
+          <Link href="/contact" style={
             display: 'inline-block'
             background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)'
             color: 'white', padding: '16px 32px', borderRadius: 12
             fontWeight: 700, textDecoration: 'none', fontSize: 16
             transition: 'all 0.3s ease'
-          }}>Request a Quote</Link>
-          <a href="tel:+13024640950" style={{
+          }>Request a Quote</Link>
+          <a href="tel:+13024640950" style={
             display: 'inline-block'
             background: 'rgba(34, 197, 94, 0.1)'
             color: '#22c55e', padding: '16px 32px', borderRadius: 12
             fontWeight: 700, textDecoration: 'none', fontSize: 16
             border: '2px solid #22c55e', transition: 'all 0.3s ease'
-          }}>Call +1 302 464 0950</a>
+          }>Call +1 302 464 0950</a>
         </div>
       </section>
     </main>
   );
-}
+
     description: "80+ cutting-edge AI solutions including machine learning, computer vision, natural language processing, quantum AI, and advanced analytics"
     icon: Brain
 export default function Services() {
   const [isLoaded, setIsLoaded] = useState(false);
-  useEffect(() => {
-    const timer = setTimeout(() => setIsLoaded(true), 100);
+  useEffect() => {
+    const timer = setTimeout() => setIsLoaded(true), 100);
     return () => clearTimeout(timer);  }, []);
   const contact: ContactInfo = {
     phone: '+1 302 464 0950'
@@ -1817,9 +1816,9 @@ export default function Services() {
         </section>
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -1830,12 +1829,12 @@ export default function Services() {
               </p>
             </motion.div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.map((service, index) => (
+              {services.map(service, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, coordinate_y: 20 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={ opacity: 0, coordinate_y: 20 }
+                  whileInView={ opacity: 1, coordinate_y: 0 }
+                  transition={ duration: 0.6, delay: index * 0.1 }
                   className="bg - white p - 8 rounded - lg shadow - lg hover:shadow - xl transition - shadow border border - gray - 200";
                 >;
                   <div className="flex items - center mb - 4">;
@@ -1850,11 +1849,11 @@ export default function Services() {
                     {service.description}
                   </p>;
                   <ul className="space - y-2 mb - 6">;
-                    {service.features.map ((feature, feature_index) => (
+                    {service.features.map (feature, feature_index) => (
                       <li key={feature_index} className="flex items - center text - sm text - gray - 600">;
                         <CheckCircle className="h - 4 w - 4 text - green - 500 mr - 2" />;
                         {feature}
-                      </li>))}
+                      </li>)}
                   </ul>;
                   <div className="text - blue - 600 font - semibold mb - 4">;
                     {service.pricing}
@@ -1863,7 +1862,7 @@ export default function Services() {
                     Learn More
                   </button>
                 </motion.div>
-              ))}
+              )}
             </div>
           </div>
         </section>
@@ -1871,9 +1870,9 @@ export default function Services() {
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -1884,7 +1883,7 @@ export default function Services() {
               </p>
             </motion.div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index) => (
+              {benefits.map(benefit, index) => (
                 <motion.div
             </div>;
           </div>;
@@ -1893,9 +1892,9 @@ export default function Services() {
         <section className="py-20 bg-gray-50">;
           <div className="container mx-auto px-4">;
             <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }
               className="text-center mb-16">;
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
                 Why Choose Us?;
@@ -1906,12 +1905,12 @@ export default function Services() {
             </motion && motion.div>;
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
-              {benefits && benefits.map((benefit, index) => (;
+              {benefits && benefits.map(benefit, index) => (;
                 <motion&& motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+                  initial={ opacity: 0, y: 20 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0 && 0.6, delay: index * 0 && 0.1 }
                   className="text-center p-6">;
                   <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">;
                     <benefit && benefit.icon className="h-8 w-8 text-blue-600" />;
@@ -1923,7 +1922,7 @@ export default function Services() {
                     {benefit && benefit.description}
                   </p>;
                 </motion && motion.div>;
-              ))}
+              )}
 import Head from 'next/head';
 import Link from 'next/link';
 import Header from '../components/Header';
@@ -2003,20 +2002,19 @@ export default function Services() {
         border: 'border-green-500/40'
         ring: 'focus:ring-green-500'
       }
-    }
     return colors[color as keyof typeof colors] |colors.blue;  }
   ];
 
   const getColorClasses = (color: string) => {
     const colors = {
       blue: {
-      
+
         bg: 'bg-blue-600',
         hover: 'hover:bg-blue-700',
         text: 'text-blue-400',
         border: 'border-blue-500/40',
         ring: 'focus:ring-blue-500'
-      
+
     },
     purple: {
         bg: 'bg-purple-600',
@@ -2031,8 +2029,7 @@ export default function Services() {
         text: 'text-green-400',
         border: 'border-green-500/40',
         ring: 'focus:ring-green-500'
-      }
-    };
+      };
     return colors[color as keyof typeof colors] || colors.blue
   };
 
@@ -2108,16 +2105,16 @@ export default function Services() {
                   <button className="w - full bg - blue - 600 text - white px - 4 py - 2 rounded - lg hover:bg - blue - 700 transition - colors">;
                     Learn More;
                   </button>;
-                </motion.div>))}
+                </motion.div>)}
             </div>;
           </div>;
         </section>;
         <section className="py - 20 bg - gray - 50">;
           <div className="container mx - auto px - 4">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, coordinate_y: 30 }
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
               className="text - center mb - 16";
             >;
               <h2 className="text - 3xl md:text - 4xl font - bold text - gray - 900 mb - 4">;
@@ -2128,12 +2125,12 @@ export default function Services() {
               </p>;
             </motion.div>;
             <div className="grid md:grid - cols - 2 lg:grid - cols - 4 gap - 8">;
-              {benefits.map ((benefit, index) => (
+              {benefits.map (benefit, index) => (
                 <motion.div;
                   key={index}
-                  initial={{ opacity: 0, coordinate_y: 20 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={ opacity: 0, coordinate_y: 20 }
+                  whileInView={ opacity: 1, coordinate_y: 0 }
+                  transition={ duration: 0.6, delay: index * 0.1 }
                   className="text - center p - 6";
                 >;
                   <div className="w - 16 h - 16 bg - blue - 100 rounded - full flex items - center justify - center mx - auto mb - 4">;
@@ -2145,12 +2142,12 @@ export default function Services() {
                   <p className="text - gray - 600">;
                     {benefit.description}
                   </p>;
-                </motion.div>))}
+                </motion.div>)}
 import Head from 'next / head';
 import Link from 'next / link';
 import Header from '../components / Header';
 import Footer from '../components / Footer';
-;
+
 export default /**
  * Services - Function description
  */
@@ -2208,7 +2205,7 @@ function Services() {
       ],
       href: '/it - services',
     },  ];
-;
+
   const getColorClasses = (color: string) =>: any {
     const colors = {
       blue: {
@@ -2232,7 +2229,7 @@ function Services() {
       },
     }
     return colors[color as keyof typeof colors] || colors.blue;  }
-;
+
   return (
     <>;
       <Head>;
@@ -2276,9 +2273,9 @@ function Services() {
           <section className='py - 16 px - 4' role='main'>;
             <div className='max - w-7xl mx - auto'>;
               <div className='grid lg:grid - cols - 3 gap - 8'>;
-                {service_categories.map ((category, index) => {
+                {service_categories.map (category, index) => {
                   const colors = getColorClasses (category.color);
-;
+
                     >;
                       <div className='flex items - center justify - between mb - 6'>                        <h3 className={`text - 2xl font - bold ${colors.text}`}>;
                           {category.title}
@@ -2291,9 +2288,8 @@ function Services() {
                         {category.description}
                       </p>
                       <ul className='text-slate-400 space-y-2 mb-8'>
-                        {category.services.map((service, serviceIndex) => (
-                          <li key={serviceIndex} className='flex items-center'>
-                    >;
+                        {category.services.map(service, serviceIndex) => (
+                          <li key={serviceIndex} className='flex items-center'>;
                       <div className='flex items-center justify-between mb-6'>                        <h3 className={`text-2xl font-bold ${colors && colors.text}`}>;
                           {category && category.title}
                         </h3>;
@@ -2307,14 +2303,14 @@ function Services() {
                       </p>;
 
                       <ul className='text-slate-400 space-y-2 mb-8'>;
-                        {category && category.services.map((service, serviceIndex) => (;
+                        {category && category.services.map(service, serviceIndex) => (;
                           <li key={serviceIndex} className='flex items-center'>;
                             <span className='w-2 h-2 bg-blue-400 rounded-full mr-3 flex-shrink-0'></span>                            {service}
                           </li>;
-                        ))}
+                        )}
                             <span className='w-2 h-2 bg-blue-400 rounded-full mr-3 flex-shrink-0'></span>                            {service}
                           </li>;
-                        ))}
+                        )}
                       </ul>
                       <Link                        href={category.href}
                         className={`inline - flex items - center px - 6 py - 3 ${colors.bg} ${colors.hover} rounded - lg font - semibold transition - all duration - 300 hover:scale - 105 focus:outline - none focus:ring - 2 ${colors.ring} focus:ring - offset - 2 focus:ring - offset - slate - 900`}
@@ -2591,20 +2587,20 @@ function Services() {
       <Footer />
     </>
   );
-                      
+
                       <p className="text-slate-300 mb-6">
                         {category.description}
                       </p>
-                      
+
                       <ul className="text-slate-400 space-y-2 mb-8">
-                        {category.services.map((service, serviceIndex) => (
+                        {category.services.map(service, serviceIndex) => (
                           <li key={serviceIndex} className="flex items-center">
                             <span className="w-2 h-2 bg-blue-400 rounded-full mr-3 flex-shrink-0"></span>
                             {service}
                           </li>
-                        ))}
+                        )}
                       </ul>
-                      
+
                       <Link 
                         href={category.href}
                         className={`inline-flex items-center px-6 py-3 ${colors.bg} ${colors.hover} rounded-lg font-semibold transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 ${colors.ring} focus:ring-offset-2 focus:ring-offset-slate-900`}
@@ -2627,7 +2623,7 @@ function Services() {
               <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
                 Why Choose Zion Tech Group?
               </h2>
-              
+
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -2638,7 +2634,7 @@ function Services() {
                   <h3 className="text-xl font-bold mb-2">Lightning Fast</h3>
                   <p className="text-slate-400">Rapid deployment and implementation of solutions</p>
                 </div>
-                
+
                 <div className="text-center">
                   <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -2648,7 +2644,7 @@ function Services() {
                   <h3 className="text-xl font-bold mb-2">Enterprise Grade</h3>
                   <p className="text-slate-400">Scalable solutions for businesses of all sizes</p>
                 </div>
-                
+
                 <div className="text-center">
                   <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -2658,7 +2654,7 @@ function Services() {
                   <h3 className="text-xl font-bold mb-2">Secure & Reliable</h3>
                   <p className="text-slate-400">Bank-level security and 99.9% uptime guarantee</p>
                 </div>
-                
+
                 <div className="text-center">
                   <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -2682,7 +2678,7 @@ function Services() {
                 Contact our experts today to discuss your project requirements and discover 
                 how our innovative solutions can transform your business.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Link 
                   href="/contact" 
@@ -2709,7 +2705,7 @@ function Services() {
       </ErrorBoundary>
     </>
   )
-}
+
                 Schedule Consultation;
               </Link>;
             </div>;
@@ -2720,7 +2716,5 @@ function Services() {
     </>;
   );
   );
-}
+
     </>);
-);
-}

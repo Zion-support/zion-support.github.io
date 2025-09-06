@@ -46,7 +46,6 @@ export const advancedITServices2025 = [
           'Dedicated support team'
         ]
       }
-    }
     category: 'Cloud Infrastructure'
     tags: [
       'Quantum Computing'
@@ -121,7 +120,6 @@ export const advancedITServices2025 = [
           'Dedicated support'
         ]
       }
-    }
     category: 'Edge Computing'
     tags: ['AI', 'Edge Computing', 'IoT', 'Distributed Computing']
     website: 'https://ziontechgroup.com/edge-computing-ai'
@@ -195,7 +193,6 @@ export const advancedITServices2025 = [
           'Dedicated SOC team'
         ]
       }
-    }
     category: 'Cybersecurity'
     tags: [
       'Zero Trust'
@@ -270,7 +267,6 @@ export const advancedITServices2025 = [
           'Dedicated support'
         ]
       }
-    }
     category: 'Blockchain'
     tags: ['Blockchain', 'Smart Contracts', 'Enterprise', 'Compliance']
     website: 'https://ziontechgroup.com/enterprise-blockchain-pro'
@@ -344,7 +340,6 @@ export const advancedITServices2025 = [
           'Dedicated support'
         ]
       }
-    }
     category: 'DevOps'
     tags: ['AI', 'DevOps', 'CI/CD', 'Automation']
     website: 'https://ziontechgroup.com/devops-ai-pro'
@@ -435,7 +430,6 @@ export const advancedITServices2025 = [
           'Dedicated support'
         ]
       }
-    }
     category: 'Quantum Networking'
     tags: [
       'Quantum Computing'
@@ -510,7 +504,6 @@ export const advancedITServices2025 = [
           'Dedicated support'
         ]
       }
-    }
     category: 'IT Operations'
     tags: [
       'AI'
@@ -585,7 +578,6 @@ export const advancedITServices2025 = [
           'Dedicated support'
         ]
       }
-    }
     category: 'Data Center'
     tags: [
       'Quantum Computing'
@@ -660,7 +652,6 @@ export const advancedITServices2025 = [
           'Dedicated support'
         ]
       }
-    }
     category: 'Quantum Cybersecurity'
     tags: [
       'Quantum Computing'
@@ -735,7 +726,6 @@ export const advancedITServices2025 = [
           'Dedicated support'
         ]
       }
-    }
     category: 'Cloud Migration'
     tags: ['Quantum Computing', 'Cloud Migration', 'AI', 'Zero Downtime']
     website: 'https://ziontechgroup.com/quantum-migration-pro'
@@ -764,7 +754,7 @@ export const advancedITServices2025 = [
     competitiveAdvantage:
       'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration'
   }
-];      phone: '+1 302 464 0950';
+;      phone: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com'
     }
     marketSize: '$15.7B'
@@ -773,7 +763,7 @@ export const advancedITServices2025 = [
     targetAudience: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms';
     competitiveAdvantage: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration'
   }
-];
+;
 
     market_size: '$15.7B',
     target_audience:;
@@ -781,12 +771,11 @@ export const advancedITServices2025 = [
     competitive_advantage:;
       'Industry - first quantum - enhanced migration platform, zero - downtime migration, and comprehensive cloud platform integration',
   },
-];      phone: '+1 302 464 0950';
+;      phone: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
     }
     market_size: '$15.7B',
     target_audience: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms';
     competitive_advantage: 'Industry - first quantum - enhanced migration platform, zero - downtime migration, and comprehensive cloud platform integration';
   }
-];
 ;

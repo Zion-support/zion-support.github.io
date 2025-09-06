@@ -33,28 +33,28 @@ export default function InnovativeServicesPage() {;
   // Filter and sort services;
   let filteredServices = innovativeMicroSaasServices,;
   // Category filter;
-  if (selectedCategory !== 'All') {;
+  if (selectedCategory != 'All') {;
     filteredServices = getInnovativeServicesByCategory(selectedCategory);
   }
-;
+
   // Price range filter;
-  if (priceRange !== 'All') {;
-    const [min, max] = priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p)),;
+  if (priceRange != 'All') {;
+    const [min, max] = priceRange.split('-').map(p => p = = '+' ? Infinity : parseInt(p),;
     filteredServices = getInnovativeServicesByPriceRange(min, max);
   }
-;
+
   // Search filter;
   if (searchQuery) {;
     filteredServices = filteredServices.filter(service =>;
-      service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-      service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-      service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-      service.category.toLowerCase().includes(searchQuery.toLowerCase());
+      service.name.toLowerCase().includes(searchQuery.toLowerCase() ||;
+      service.description.toLowerCase().includes(searchQuery.toLowerCase() ||;
+      service.tagline.toLowerCase().includes(searchQuery.toLowerCase() ||;
+      service.category.toLowerCase().includes(searchQuery.toLowerCase();
     );
   }
-;
+
   // Sort services;
-  filteredServices.sort((a, b) => {;
+  filteredServices.sort(a, b) => {;
     switch (sortBy) {;
       case 'price':;
         return a.price.monthly - b.price.monthly,;
@@ -74,7 +74,6 @@ export default function InnovativeServicesPage() {;
           const bLevel = b.innovationLevel.split(' - ')[0],;
           return (innovationOrder[aLevel as keyof typeof innovationOrder] || 0) - (innovationOrder[bLevel as keyof typeof innovationOrder] || 0);
         }
-    }
   }),
 
   const contactInfo = {
@@ -183,11 +182,11 @@ export default function InnovativeServicesPage() {;
                       className="px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     >
                       <option value="All">All Categories</option>
-                      {categories.map((category) => (
+                      {categories.map(category) => (
                         <option key={category.name} value={category.name}>
                           {category.name} ({category.count})
                         </option>
-                      ))}
+                      )}
                     </select>;
                   </div>;
                   {/* Price Range Filter */}
@@ -197,11 +196,11 @@ export default function InnovativeServicesPage() {;
                       onChange={(e) => setPriceRange(e.target.value)}
                       className="px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     >
-                      {priceRanges.map((range) => (
+                      {priceRanges.map(range) => (
                         <option key={range.value} value={range.value}>
                           {range.label}
                         </option>;
-                      ))}
+                      )}
                     </select>;
                   </div>;
                   {/* Sort Options */}
@@ -211,11 +210,11 @@ export default function InnovativeServicesPage() {;
                       onChange={(e) => setSortBy(e.target.value)}
                       className="px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     >
-                      {sortOptions.map((option) => (
+                      {sortOptions.map(option) => (
                         <option key={option.value} value={option.value}>
                           {option.value}
                         </option>;
-                      ))}
+                      )}
                     </select>;
                   </div>;
                   {/* View Mode Toggle */}
@@ -224,7 +223,7 @@ export default function InnovativeServicesPage() {;
                       <button
                         onClick={() => setViewMode('grid')}
                         className={`px-3 py-2 rounded-lg transition-all ${;
-                          viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'text-gray-400 hover:text-white';
+                          viewMode = = 'grid' ? 'bg-cyan-500 text-white' : 'text-gray-400 hover:text-white';
                         }`}
                       >
                         <Grid className="w-5 h-5" />
@@ -232,7 +231,7 @@ export default function InnovativeServicesPage() {;
                       <button
                         onClick={() => setViewMode('list')}
                         className={`px-3 py-2 rounded-lg transition-all ${;
-                          viewMode === 'list' ? 'bg-cyan-500 text-white' : 'text-gray-400 hover:text-white';
+                          viewMode = = 'list' ? 'bg-cyan-500 text-white' : 'text-gray-400 hover:text-white';
                         }`}
                       >
                         <List className="w-5 h-5" />
@@ -247,15 +246,15 @@ export default function InnovativeServicesPage() {;
           {/* Services Grid/List */}
           <section className="px-4 sm:px-6 lg:px-8 mb-20">
             <div className="max-w-7xl mx-auto">
-              {filteredServices.length === 0 ? (
+              {filteredServices.length = = 0 ? (
                 <div className="text-center py-20">
                   <div className="text-6xl mb-4"></div>
                   <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
                   <p className="text-gray-400">Try adjusting your search criteria or filters</p>
                 </div>
               ) : (
-                <div className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}>
-                  {filteredServices.map((service) => (
+                <div className={viewMode = = 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}>
+                  {filteredServices.map(service) => (
                     <QuantumHolographicCard key={service.id} className="group">
                       <div className="p-6">
                         {/* Service Header */}
@@ -307,12 +306,12 @@ export default function InnovativeServicesPage() {;
                         <div className="mb-6">
                           <h4 className="text-sm font-semibold text-white mb-3">Key Features</h4>
                           <div className="space-y-2">
-                            {service.features.slice(0, 3).map((feature, index) => (
+                            {service.features.slice(0, 3).map(feature, index) => (
                               <div key={index} className="flex items-center space-x-2">
                                 <Check className="w-4 h-4 text-green-400 flex-shrink-0" />
                                 <span className="text-xs text-gray-300">{feature}</span>
                               </div>
-                            ))}
+                            )}
                             {service.features.length > 3 && (
                               <div className="text-xs text-cyan-400 text-center pt-2">
                                 +{service.features.length - 3} more features
@@ -358,7 +357,7 @@ export default function InnovativeServicesPage() {;
                         </div>
                       </div>
                     </QuantumHolographicCard>
-                  ))}
+                  )}
                 </div>;
               )}
             </div>;
@@ -403,4 +402,3 @@ export default function InnovativeServicesPage() {;
       </QuantumHolographicBackground>
     </>
   )
-}

@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -30,7 +30,6 @@ import Link from 'next/link';';
 import { motion } from 'framer-motion';
 import { Settings, Code, Zap, Users, ArrowRight, CheckCircle, Clock, Target, Wrench } from 'lucide-react';
 import Layout from "../../components/Layout";";
-
 
 const features = [;
   {}
@@ -57,14 +56,14 @@ const features = [;
     icon: Users,;
     benefits: ['24/7 Support, 'Regular Updates', 'Performance Monitoring', 'Bug Fixes']',;
   }
-;];
+];
 const technologies = [;
   { category: 'Frontend, techs: ['_React, 'Next && Next.js', 'Vue && Vue.js', 'Angular', 'TypeScript'] },',;
   { category: 'Backend, techs: ['Node && Node.js, 'Python', 'Java', 'C#', 'Go'] },',;
   { category: 'Database, techs: ['PostgreSQL, 'MongoDB', 'MySQL', 'Redis', 'Elasticsearch'] },',;
   { category: 'Cloud, techs: ['AWS, 'Azure', 'Google Cloud', 'Docker', 'Kubernetes'] },',;
   { category: 'Mobile, techs: ['_React Native, 'Flutter', 'iOS', 'Android', 'PWA'] }',;
-;];
+];
 const process = [;
   { step: 'Discovery, description: 'Understanding your requirements and business goals' },',;
   { step: 'Planning, description: 'Creating detailed project roadmap and architecture' },',;
@@ -72,13 +71,13 @@ const process = [;
   { step: 'Testing, description: 'Comprehensive testing and quality assurance' },',;
   { step: 'Deployment, description: 'Smooth deployment and go-live support' },',;
   { step: 'Maintenance, description: 'Ongoing support and continuous improvement' }',;
-;];
+];
 const stats = [;
   { number: '150+, label: 'Custom Projects' },',;
   { number: '98%, label: 'Client Satisfaction' },',;
   { number: 'On Time, label: 'Delivery Rate' },',;
   { number: '5+, label: 'Years Experience' }',;
-;];
+];
 export default function CustomDevelopmentPage() {;
   return (
     <Layout)
@@ -94,9 +93,9 @@ export default function CustomDevelopmentPage() {;
           </div>;
           <div className="container mx-auto px-4 relative z-10">";
             <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }
               className="text-center max-w-4xl mx-auto"">;
               <div className="flex items-center justify-center mb-6">";
                 <Settings className="w-16 h-16 text-purple-400 mr-4" />";
@@ -129,17 +128,17 @@ export default function CustomDevelopmentPage() {;
         <section className="py-16 bg-white">";
           <div className="container mx-auto px-4">";
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">";
-              {stats.map((stat, index) => (,
+              {stats.map(stat, index) => (,
                 <motion.div}),
                   key={stat.label}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0 && 0.8, delay: index * 0 && 0.1 }
                   className="text-center"">;
                   <div className="text-4xl md:text-5xl font-bold text-purple-600 mb-2">{stat && stat.number}</div>";
                   <div className="text-gray-600 font-medium">{stat && stat.label}</div>";
                 </motion && motion.div>;
-              ))}
+              )}
             </div>,;
           </div>;
         </section>;
@@ -147,9 +146,9 @@ export default function CustomDevelopmentPage() {;
         <section className="py-20 bg-gray-50">";
           <div className="container mx-auto px-4">";
             <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
@@ -160,12 +159,12 @@ export default function CustomDevelopmentPage() {;
               </p>;
             </motion && motion.div>;
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">";
-              {features && features.map((feature, index) => (,;
+              {features && features.map(feature, index) => (,;
                 <motion&& motion.div}),
                   key={feature && feature.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.8, delay: index * 0 && 0.2 }}
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0 && 0.8, delay: index * 0 && 0.2 }
                   className="bg-white rounded-2xl shadow-xl p-8"">;
                   <div className="flex items-center mb-6">";
                     <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-xl flex items-center justify-center mr-4">";
@@ -177,15 +176,15 @@ export default function CustomDevelopmentPage() {;
                     </div>;
                   </div>;
                   <ul className="space-y-3">";
-                    {feature && feature.benefits.map((benefit, benefitIndex) => (,;
+                    {feature && feature.benefits.map(benefit, benefitIndex) => (,;
                       <li key={benefitIndex} className="flex items-center text-gray-600">";
                         <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />";
                         {benefit}
                       </li>,;
-                    ))}
+                    )}
                   </ul>,;
                 </motion && motion.div>;
-              ))}
+              )}
             </div>,;
           </div>;
         </section>;
@@ -193,9 +192,9 @@ export default function CustomDevelopmentPage() {;
         <section className="py-20 bg-white">";
           <div className="container mx-auto px-4">";
             <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
@@ -206,25 +205,25 @@ export default function CustomDevelopmentPage() {;
               </p>;
             </motion && motion.div>;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
-              {technologies && technologies.map((category, index) => (,;
+              {technologies && technologies.map(category, index) => (,;
                 <motion&& motion.div}),
                   key={category && category.category}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0 && 0.8, delay: index * 0 && 0.1 }
                   className="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-xl p-6"">;
                   <h3 className="text-xl font-bold text-gray-900 mb-4">{category && category.category}</h3>";
                   <div className="flex flex-wrap gap-2">";
-                    {category && category.techs.map((tech, techIndex) => (,;
+                    {category && category.techs.map(tech, techIndex) => (,;
                       <span}),
                         key={techIndex}
                         className="px-3 py-1 bg-white text-gray-700 rounded-full text-sm font-medium shadow-sm"">;
                         {tech}
                       </span>,;
-                    ))}
+                    )}
                   </div>,;
                 </motion && motion.div>;
-              ))}
+              )}
             </div>,;
           </div>;
         </section>;
@@ -232,9 +231,9 @@ export default function CustomDevelopmentPage() {;
         <section className="py-20 bg-gray-50">";
           <div className="container mx-auto px-4">";
             <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
@@ -245,12 +244,12 @@ export default function CustomDevelopmentPage() {;
               </p>;
             </motion && motion.div>;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
-              {process && process.map((step, index) => (,;
+              {process && process.map(step, index) => (,;
                 <motion&& motion.div}),
                   key={step && step.step}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }
                   className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300""
                 >;
                   <div className="flex items-center mb-4">";
@@ -261,7 +260,7 @@ export default function CustomDevelopmentPage() {;
                   </div>;
                   <p className="text-gray-600">{step && step.description}</p>";
                 </motion && motion.div>;
-              ))}
+              )}
             </div>,;
           </div>;
         </section>;
@@ -269,9 +268,9 @@ export default function CustomDevelopmentPage() {;
         <section className="py-20 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">";
           <div className="container mx-auto px-4 text-center">";
             <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
             >,
               <h2 className="text-4xl md:text-5xl font-bold mb-6">";
                 Ready to Build Something Custom?;

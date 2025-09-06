@@ -7,7 +7,7 @@ import { Card, CardContent } from "@/components/ui/card",
 import { Separator } from "@/components/ui/separator",
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip",
 import { useAuth } from "@/hooks/useAuth";
-// useRouter replaces the old useLocation hook from react-router
+/ useRouter replaces the old useLocation hook from react-router
 
   AlertDialog
   AlertDialogAction
@@ -24,13 +24,12 @@ interface TemplateListProps {
   onSelect: (template: ContractTemplate,) => void
   onEdit: (template: ContractTemplate,) => void
 
-}
 export function TemplateList({
   templates;
   isLoading;
   onSelect;
   onEdit
-}: TemplateListProps) {
+: TemplateListProps) {
 
   const [templateToDelete, setTemplateToDelete] = useState<string | null>(null)
   const { deleteTemplate, setDefaultTemplate } = useContractTemplates()
@@ -43,11 +42,10 @@ export function TemplateList({
     // Check condition
 if ( {) {
   $2
-}
+
       await delete_template.mutate_async (templateToDelete);
       setTemplateToDelete (null);
     }
-  }
   const handleSetDefault = async (templateId: string,) => {
     if (!user) {
       const currentPath = router.asPath
@@ -56,7 +54,7 @@ if ( {) {
     }
     await setDefaultTemplate.mutate_async (template_id);
   }
-// useRouter replaces the old useLocation hook from react-router;
+/ useRouter replaces the old useLocation hook from react-router;
 import { useRouter } from 'next/router';
 import {;
   AlertDialog;
@@ -75,7 +73,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { useAuth } from "@/hooks/useAuth";
-// useRouter replaces the old useLocation hook from react-router;
+/ useRouter replaces the old useLocation hook from react-router;
 import { useRouter } from 'next/router';
 import {;
   AlertDialog,;
@@ -92,14 +90,13 @@ interface TemplateListProps {;
   isLoading: boolean,;
   onSelect: (template: ContractTemplate,) => void,;
   onEdit: (template: ContractTemplate,) => void;
-}
 
 export function TemplateList(): any ({;
   templates;
   isLoading;
   onSelect;
   onEdit;
-}: TemplateListProps) {;
+: TemplateListProps) {;
   const [templateToDelete, setTemplateToDelete] = useState<string | null>(null);
   const { deleteTemplate, setDefaultTemplate } = useContractTemplates();
   const { user } = useAuth();
@@ -113,8 +110,7 @@ export function TemplateList(): any ({;
     if (templateToDelete) {;
       await deleteTemplate && deleteTemplate.mutateAsync(templateToDelete);
       setTemplateToDelete(null);
-    }
-  };
+    };
 
   const handleSetDefault = async (templateId: string,) => {;
     if (!user) {;
@@ -142,7 +138,7 @@ export function TemplateList(): any ({;
   }
   return (
     <div className="space-y-3">;
-      {templates && templates.map((template,) => (;
+      {templates && templates.map(template,) => (;
         <Card key={template && template.id} className={template && template.is_default ? "border-zion-purple" : ""}>;
           <CardContent className="p-4">;
             <div className="flex items-center justify-between">;
@@ -211,7 +207,7 @@ export function TemplateList(): any ({;
             </Button>
           </CardContent>
         </Card>
-      ))}
+      )}
       <AlertDialog open={!!templateToDelete} onOpenChange={() => setTemplateToDelete(null)}>
         <AlertDialogContent>
           <AlertDialogHeader>
@@ -233,42 +229,42 @@ export function TemplateList(): any ({;
       </AlertDialog>
     </div>
   )
-}
+
 const handleSetDefault = async (templateId: string) => {
   if (!user) {
   const currentPath = router.asPath
 router.push (`/auth/login?returnTo=$ {
   encodeURIComponent (currentPath)
-}`)
+`)
 return
-}await setDefaultTemplate.mutateAsync (templateId)
-}
+await setDefaultTemplate.mutateAsync (templateId)
+
 <CardContent className="p-4"> <div className="flex items-center justify-between"> <div className="space-y-1"> <div className="flex items-center gap-2"> <h3 className="font-medium"> {
   template.title
-}</h3> {"
+</h3> {"
   template.is default && (<span className="bg-zion-purple/10 text-zion-purple text-xs px-2 py-0.5 rounded-full">Default</span>) "
-}</div> <p className="text-xs text-muted-foreground"> Last updated: {
+</div> <p className="text-xs text-muted-foreground"> Last updated: {
   new Date (template.updated at) .toLocaleDateString () "
-}</p> </div> <div className="flex items-center gap-2" > <Button > <Edit className="h-4 w-4" /> </Button> {"
+</p> </div> <div className="flex items-center gap-2" > <Button > <Edit className="h-4 w-4" /> </Button> {"
   !template.is default ? (<TooltipProvider> <Tooltip> <TooltipTrigger asChild> <Button variant="ghost" size="icon" onClick={
   () => handleSetDefault (template.id) "
-}aria-label="Set as default" > <Star className="h-4 w-4" /> </Button> </TooltipTrigger> {
+aria-label="Set as default" > <Star className="h-4 w-4" /> </Button> </TooltipTrigger> {
   !user && (<TooltipContent> Please log in to use this feature </TooltipContent>) "
-}</Tooltip> </TooltipProvider>) : (<Button variant="ghost" size="icon" disabled aria-label="Default template"> <StarOff className="h-4 w-4" /> </Button>) "
-}<Button > <Trash className="h-4 w-4 text-destructive" /> </Button> </div> </div> <Separator className="my-3" /> <Button className="w-full" > Use This Template </Button> </CardContent> </Card>) )
-}<AlertDialog open= {
+</Tooltip> </TooltipProvider>) : (<Button variant="ghost" size="icon" disabled aria-label="Default template"> <StarOff className="h-4 w-4" /> </Button>) "
+<Button > <Trash className="h-4 w-4 text-destructive" /> </Button> </div> </div> <Separator className="my-3" /> <Button className="w-full" > Use This Template </Button> </CardContent> </Card>)
+<AlertDialog open= {
   !!templateToDelete
-}onOpenChange= {
+onOpenChange= {
   () => setTemplateToDelete (null) "
-}> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Delete Template</AlertDialogTitle> <AlertDialogDescription> Are you sure you want to delete this template? This action cannot be undone. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Cancel</AlertDialogCancel> <AlertDialogAction className="bg-destructive text-destructive-foreground hover:bg-destructive/90" onClick={
+> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Delete Template</AlertDialogTitle> <AlertDialogDescription> Are you sure you want to delete this template? This action cannot be undone. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Cancel</AlertDialogCancel> <AlertDialogAction className="bg-destructive text-destructive-foreground hover:bg-destructive/90" onClick={
   handleDeleteConfirm
-}> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </div>)
-}'"}
+> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </div>)
+'"}
 
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <div className="flex justify - center items - center py - 8">;
         <Loader2 className="h - 8 w - 8 animate - spin text - zion - purple" />;
@@ -277,7 +273,7 @@ if ( {) {
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <div className="text - center py - 8">;
         <p className="text - muted - foreground">No templates found.</p>;
@@ -286,7 +282,7 @@ if ( {) {
   }
   return (
     <div className="space - y-3">;
-      {templates.map ((template, ) => (
+      {templates.map (template, ) => (
         <Card key={template.id} className={template.is_default ? "border - zion - purple" : ""}>;
           <CardContent className="p - 4">;
             <div className="flex items - center justify - between">;
@@ -350,7 +346,7 @@ if ( {) {
               Use This Template;
             </Button>;
           </CardContent>;
-        </Card>))}
+        </Card>)}
       <AlertDialog open={!!templateToDelete} onOpenChange={() => setTemplateToDelete (null)}>;
         <AlertDialogContent>;
           <AlertDialogHeader>;
@@ -371,37 +367,37 @@ if ( {) {
         </AlertDialogContent>;
       </AlertDialog>;
     </div>);
-}
+
 const handleSetDefault = async (template_id: string) => {
   // Check condition
 if ( {) {
   $2
-}
+
   const current_path = router.as_path;
 router.push (`/auth / login?return_to=$ {
   encodeURIComponent (current_path);
-}`);
+`);
 return;
-}await setDefaultTemplate.mutate_async (template_id);
-}
+await setDefaultTemplate.mutate_async (template_id);
+
 <CardContent className="p - 4"> <div className="flex items - center justify - between"> <div className="space - y-1"> <div className="flex items - center gap - 2"> <h3 className="font - medium"> {
   template.title;
-}</h3> {";
+</h3> {";
   template.is default && (<span className="bg - zion - purple / 10 text - zion - purple text - xs px - 2 py - 0.5 rounded - full">Default</span>) ";
-}</div> <p className="text - xs text - muted - foreground"> Last updated: {
+</div> <p className="text - xs text - muted - foreground"> Last updated: {
   new Date (template.updated at) .toLocaleDateString () ";
-}</p> </div> <div className="flex items - center gap - 2" > <Button > <Edit className="h - 4 w - 4" /> </Button> {";
+</p> </div> <div className="flex items - center gap - 2" > <Button > <Edit className="h - 4 w - 4" /> </Button> {";
   !template.is default ? (<TooltipProvider> <Tooltip> <TooltipTrigger as_child> <Button variant="ghost" size="icon" on_click={
   () => handleSetDefault (template.id) ";
-}aria - label="Set as default" > <Star className="h - 4 w - 4" /> </Button> </TooltipTrigger> {
+aria - label="Set as default" > <Star className="h - 4 w - 4" /> </Button> </TooltipTrigger> {
   !user && (<TooltipContent> Please log in to use this feature </TooltipContent>) ";
-}</Tooltip> </TooltipProvider>) : (<Button variant="ghost" size="icon" disabled aria - label="Default template"> <StarOff className="h - 4 w - 4" /> </Button>) ";
-}<Button > <Trash className="h - 4 w - 4 text - destructive" /> </Button> </div> </div> <Separator className="my - 3" /> <Button className="w - full" > Use This Template </Button> </CardContent> </Card>) );
-}<AlertDialog open= {
+</Tooltip> </TooltipProvider>) : (<Button variant="ghost" size="icon" disabled aria - label="Default template"> <StarOff className="h - 4 w - 4" /> </Button>) ";
+<Button > <Trash className="h - 4 w - 4 text - destructive" /> </Button> </div> </div> <Separator className="my - 3" /> <Button className="w - full" > Use This Template </Button> </CardContent> </Card>);
+<AlertDialog open= {
   !!templateToDelete;
-}onOpenChange= {
+onOpenChange= {
   () => setTemplateToDelete (null) ";
-}> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle > Delete Template</AlertDialogTitle> <AlertDialogDescription> Are you sure you want to delete this template? This action cannot be undone. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel > Cancel</AlertDialogCancel> <AlertDialogAction className="bg - destructive text - destructive - foreground hover:bg - destructive / 90" on_click={
+> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle > Delete Template</AlertDialogTitle> <AlertDialogDescription> Are you sure you want to delete this template? This action cannot be undone. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel > Cancel</AlertDialogCancel> <AlertDialogAction className="bg - destructive text - destructive - foreground hover:bg - destructive / 90" on_click={
   handleDeleteConfirm;
-}> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </div>);
-}'"}
+> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </div>);
+'"}

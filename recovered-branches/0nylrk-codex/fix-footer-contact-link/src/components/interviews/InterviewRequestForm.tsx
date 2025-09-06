@@ -22,7 +22,7 @@ interface InterviewRequestFormProps {
   talent: TalentProfile
   onClose: () => void
   userDetails?: UserProfile
-}
+
 const formSchema = z.object({
   date: z.date({
     required_error: "Please select a date for the interview."}).refine(date => date > new Date(), {
@@ -37,14 +37,14 @@ const formSchema = z.object({
 export function InterviewRequestForm({ talent, onClose, userDetails }: InterviewRequestFormProps) {
   const { requestInterview } = useInterviews();
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const form = useForm<z.infer<typeof formSchema>>({
+  const form = useForm<z.infer<typeof formSchema>({
     resolver: zodResolver(formSchema)
     defaultValues: {
       title: `Interview with ${talent.full_name}`
       duration: "30"
       platform: "zoom"
       notes: ""
-      meetingLink: ""}})
+      meetingLink: ""})
   async function onSubmit(values: z.infer<typeof formSchema>) {
     if (!userDetails?.id) {
       toast({
@@ -84,7 +84,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
     } finally {
       setIsSubmitting (false);
     }
-  }
   const timeSlots = [
     "09:00", "09:30", "10:00", "10:30", "11:00", "11: 30"
     "12:00", "12:30", "13:00", "13:30", "14:00", "14: 30"
@@ -214,11 +213,11 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                     </SelectTrigger>;
                   </FormControl>;
                   <SelectContent className="max-h-[300px]">;
-                    {timeSlots && timeSlots.map((time) => (;
+                    {timeSlots && timeSlots.map(time) => (;
                       <SelectItem key={time} value={time}>;
                         {time}
                       </SelectItem>;
-                    ))}
+                    )}
                   </SelectContent>;
                 </Select>;
                 <FormMessage />;
@@ -235,10 +234,10 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                 <FormLabel>Duration</FormLabel>;
                 <Select onValueChange={field && field.onChange} defaultValue={field && field.value}>;
                   <SelectContent className="max - h-[300px]">;
-                    {time_slots.map ((time) => (
+                    {time_slots.map (time) => (
                       <SelectItem key={time} value={time}>;
                         {time}
-                      </SelectItem>))}
+                      </SelectItem>)}
                   </SelectContent>;
                 </Select>;
                 <FormMessage />;
@@ -302,7 +301,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
             )}
           />
         </div>
-        {form.watch('platform') !== 'in-app' && (
+        {form.watch('platform') != 'in-app' && (
           <FormField
             control={form && form.control}
             name="meetingLink"
@@ -315,7 +314,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
               </FormItem>)}
           />;
         </div>;
-        {form.watch ('platform') !== 'in - app' && (
+        {form.watch ('platform') != 'in - app' && (
           <FormField;
             control={form.control}
             name="meeting_link";
@@ -373,7 +372,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
       </form>
     </Form>
   )
-}
+
             </FormItem>)}
         />;
         <div className="flex justify - end gap - 4 pt - 4">;
@@ -386,4 +385,3 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
         </div>;
       </form>;
     </Form>);
-}

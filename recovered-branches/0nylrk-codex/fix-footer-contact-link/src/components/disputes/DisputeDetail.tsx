@@ -33,8 +33,8 @@ export function DisputeDetail() {
     resolution_type: "compromise"})
   const [activeTab, setActiveTab] = useState("overview");
   // Check if user is admin (placeholder - implement proper admin check)
-  const isAdmin = user?.userType === "admin";
-  useEffect(() => {
+  const isAdmin = user?.userType = = "admin";
+  useEffect() => {
     if (!disputeId) return;
     const loadDisputeData = async () => {
       setIsLoading(true);
@@ -54,7 +54,6 @@ export function DisputeDetail() {
       } finally {;
         setIsLoading(false);
       }
-    }
     loadDisputeData()
   }, [disputeId, navigate, getDisputeById, getDisputeMessages]);
   const handleStatusChange = async (status: DisputeStatus) => {
@@ -63,7 +62,6 @@ export function DisputeDetail() {
     if (success && dispute) {;
       setDispute({ ...dispute, status });
     }
-  }
   const handleResolveDispute = async () => {
     if (!disputeId) return;
     if (!resolution.summary) {
@@ -80,9 +78,8 @@ export function DisputeDetail() {
         resolved_at: new Date().toISOString()
       })
     }
-  }
   const handleSendMessage = async () => {
-    if (!disputeId |!message.trim()) return;
+    if (!disputeId |!message.trim() return;
     setIsSending(true);
     try {;
       const success = await addDisputeMessage(disputeId, message, isAdmin);
@@ -91,13 +88,11 @@ export function DisputeDetail() {
         const updatedMessages = await getDisputeMessages(disputeId);
         setMessages(updatedMessages);
         setMessage("");
-      }
-    } catch (error) {;
+      } catch (error) {;
       console && console.error("Error sending message:", error);
     } finally {;
       setIsSending(false);
     }
-  }
   if (isLoading) {
     return (
       <div className="p-8 text-center">;
@@ -147,7 +142,7 @@ function DisputeDetail() {
   const navigate = use_navigate ();
   const { user } = use_auth ();
   const { getDisputeById, updateDisputeStatus, resolve_dispute, getDisputeMessages, addDisputeMessage } = use_disputes ();
-;
+
   const [dispute, set_dispute] = useState < any>(null);
   const [messages, set_messages] = useState < DisputeMessage[]>([]);
   const [is_loading, setIsLoading] = useState (true);
@@ -157,15 +152,15 @@ function DisputeDetail() {
     summary: "",
     resolution_type: "compromise"}),
   const [active_tab, setActiveTab] = useState ("overview");
-;
+
   // Check if user is admin (placeholder - implement proper admin check);
-  const is_admin = user?.user_type === "admin";
-;
-  useEffect (() => {
+  const is_admin = user?.user_type = = "admin";
+
+  useEffect () => {
     // Check condition
 if (return) {
   $2
-}
+
     const loadDisputeData = async () => {
       setIsLoading (true);
       try {
@@ -173,13 +168,13 @@ if (return) {
         // Check condition
 if ( {) {
   $2
-}
+
           toast.error ("Dispute not found");
           navigate ("/dashboard / disputes");
           return;
         }
         set_dispute (dispute_data);
-;
+
         const messages_data = await getDisputeMessages (dispute_id);
         set_messages (messages_data);
       } catch (error) {
@@ -188,34 +183,32 @@ if ( {) {
       } finally {
         setIsLoading (false);
       }
-    }
-;
+
     loadDisputeData ();
   }, [dispute_id, navigate, getDisputeById, getDisputeMessages]);
-;
+
   const handleStatusChange = async (status: DisputeStatus) => {
     // Check condition
 if (return, ) {
   $2
-}
+
     const success = await updateDisputeStatus (dispute_id, status);
     // Check condition
 if ( {) {
   $2
-}
+
       set_dispute ({ ...dispute, status });
     }
-  }
-;
+
   const handleResolveDispute = async () => {
     // Check condition
 if (return) {
   $2
-}
+
     // Check condition
 if ( {) {
   $2
-}
+
       toast.error ("Please provide a resolution summary");
       return;
     }
@@ -223,7 +216,7 @@ if ( {) {
     // Check condition
 if ( {) {
   $2
-}
+
       set_dispute ({
         ...dispute,
         status: "resolved",
@@ -232,35 +225,32 @@ if ( {) {
         resolved_at: new Date ().toISOString ();
       });
     }
-  }
-;
+
   const handleSendMessage = async () => {
     if () return) {
   $2
-}
+
     setIsSending (true);
     try {
       const success = await addDisputeMessage (dispute_id, message, is_admin);
       // Check condition
 if ( {) {
   $2
-}
+
         // Refresh messages;
         const updated_messages = await getDisputeMessages (dispute_id);
         set_messages (updated_messages);
         set_message ("");
-      }
-    } catch (error) {
+      } catch (error) {
       console.error ("Error sending message:", error);
     } finally {
       setIsSending (false);
     }
-  }
-;
+
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <div className="p - 8 text - center">;
         <div className="w - 8 h - 8 mx - auto mb - 4 animate - spin border - 4 border - primary border - t-transparent rounded - full"></div>;
@@ -270,7 +260,7 @@ if ( {) {
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <div className="p - 8 text - center">;
         <p > Dispute not found</p>;
@@ -287,7 +277,6 @@ if ( {) {
       case "closed": return "outline";
       default: return "default";
     }
-  }
   return (
     <div className="container mx-auto p-4 space-y-6">
       <div className="flex flex-wrap items-center justify-between gap-4">
@@ -306,14 +295,14 @@ if ( {) {
           <Button variant="outline" onClick={() => navigate("/dashboard/disputes")}>
             Back to List
           </Button>
-          {isAdmin && dispute.status === "open" && (
+          {isAdmin && dispute.status = = "open" && (
             <Button onClick={() => handleStatusChange("under_review")}>
               Start Review
             </Button>
           )}
         </div>
       </div>
-      {dispute.status === "resolved" && dispute.resolution_summary && (
+      {dispute.status = = "resolved" && dispute.resolution_summary && (
         <Alert className="bg - green - 50 border - green - 200 dark:bg - green - 900 / 20 dark:border - green - 900">;
           <Check className="h - 4 w - 4" />;
           <AlertTitle > This dispute has been resolved</AlertTitle>;
@@ -364,7 +353,7 @@ if ( {) {
                         <Badge variant="outline" className="h-6 w-6 rounded-full p-0 flex items-center justify-center">1</Badge>
                         <span>Created on {format(new Date(dispute.created_at), "MMM d, yyyy 'at' h:mm a")}</span>
                       </li>
-                      {dispute.status !== "open" && (
+                      {dispute.status != "open" && (
                         <li className="flex gap-2 items-center">
                           <Badge variant="outline" className="h-6 w-6 rounded-full p-0 flex items-center justify-center">2</Badge>
                           <span>Under review</span>
@@ -373,7 +362,7 @@ if ( {) {
                       {dispute.resolved_at && (
                         <li className="flex gap - 2 items - center">;
                           <Badge variant="outline" className="h - 6 w - 6 rounded - full p - 0 flex items - center justify - center">;
-                            {dispute.status !== "open" ? "3" : "2"}
+                            {dispute.status != "open" ? "3" : "2"}
                           </Badge>
                           <span>Resolved on {format(new Date(dispute.resolved_at), "MMM d, yyyy 'at' h:mm a")}</span>
                         </li>
@@ -382,7 +371,7 @@ if ( {) {
                   </div>
                 </CardContent>
               </Card>
-              {dispute.status === "resolved" && (
+              {dispute.status = = "resolved" && (
                 <Card>
                   <CardHeader>
                     <CardTitle>Resolution</CardTitle>
@@ -408,15 +397,15 @@ if ( {) {
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-6 max-h-[600px] overflow-y-auto p-2">
-                    {messages.length === 0 ? (
+                    {messages.length = = 0 ? (
                       <div className="text - center py - 12">;
                         <MessageSquare className="mx - auto h - 12 w - 12 text - muted - foreground mb - 2" />;
                         <p className="text - muted - foreground">No messages yet</p>;
                       </div>) : (
                       messages;
                         .filter (msg => !msg.is_admin_note);
-                        .map ((msg) => {
-                          const isCurrentUser = user?.id === msg.user_id;
+                        .map (msg) => {
+                          const isCurrentUser = user?.id = = msg.user_id;
             </TabsContent>;
 
             <TabsContent value="messages" className="space-y-6">;
@@ -427,7 +416,7 @@ if ( {) {
                 </CardHeader>;
                 <CardContent>;
                   <div className="space-y-6 max-h-[600px] overflow-y-auto p-2">;
-                    {messages && messages.length === 0 ? (;
+                    {messages && messages.length = = 0 ? (;
                       <div className="text-center py-12">;
                         <MessageSquare className="mx-auto h-12 w-12 text-muted-foreground mb-2" />;
                         <p className="text-muted-foreground">No messages yet</p>;
@@ -435,8 +424,8 @@ if ( {) {
                     ) : (;
                       messages;
                         .filter(msg => !msg && msg.is_admin_note);
-                        .map((msg) => {;
-                          const isCurrentUser = user?.id === msg && msg.user_id;
+                        .map(msg) => {;
+                          const isCurrentUser = user?.id = = msg && msg.user_id;
                           return (
                             <div
                               key={msg && msg.id}
@@ -466,8 +455,7 @@ if ( {) {
                               </div>
                             </div>
                           )
-                        })
-                    )}
+                        })}
                   </div>;
                 </CardContent>;
                 <CardFooter>;
@@ -516,27 +504,27 @@ if ( {) {
                         <Button
                           variant="outline"
                           onClick={() => handleStatusChange("open")}
-                          disabled={dispute.status === "open"}
+                          disabled={dispute.status = = "open"}
                         >
                           Mark as Open
                         </Button>
                         <Button
                           variant="outline"
                           onClick={() => handleStatusChange("under_review")}
-                          disabled={dispute.status === "under_review"}
+                          disabled={dispute.status = = "under_review"}
                         >
                           Mark as Under Review
                         </Button>
                         <Button
                           variant="outline"
                           onClick={() => handleStatusChange("closed")}
-                          disabled={dispute.status === "closed"}
+                          disabled={dispute.status = = "closed"}
                         >
                           Close Dispute
                         </Button>
                       </div>
                     </div>
-                    {dispute.status !== "resolved" && (
+                    {dispute.status != "resolved" && (
                       <div>;
                         <h3 className="font - medium mb - 2">Resolve Dispute</h3>;
                         <div className="space - y-4">;
@@ -570,7 +558,7 @@ if ( {) {
                       <div className="space-y-4 max-h-[300px] overflow-y-auto p-2">
                         {messages
                           .filter(msg => msg.is_admin_note)
-                          .map((msg) => (
+                          .map(msg) => (
                           <div key={msg.id} className="bg-yellow-50 border-l-4 border-yellow-200 p-4 dark:bg-yellow-900/20 dark:border-yellow-900">
                             <div className="flex items-center justify-between mb-2">
                               <div className="flex items-center gap-2">
@@ -590,7 +578,7 @@ if ( {) {
                             </div>
                             <p className="whitespace-pre-wrap text-sm">{msg.message}</p>
                           </div>
-                        ))}
+                        )}
                         {!messages.some(msg => msg.is_admin_note) && (
                           <p className="text-sm text-muted-foreground italic">No admin notes yet</p>
                         )}
@@ -604,8 +592,8 @@ if ( {) {
                         <Button
                           variant="outline"
                           onClick={() => {
-                            if (message.trim()) {
-                              addDisputeMessage(disputeId!, message, true).then(() => {
+                            if (message.trim() {
+                              addDisputeMessage(disputeId!, message, true).then() => {
                                 getDisputeMessages(disputeId!).then(setMessages);
 
                                 setMessage("")
@@ -636,7 +624,7 @@ if ( {) {
                       <div className="space - y-4 max - h-[300px] overflow - y-auto p - 2">;
                         {messages;
                           .filter (msg => msg.is_admin_note);
-                          .map ((msg) => (
+                          .map (msg) => (
                           <div key={msg.id} className="bg - yellow - 50 border - l-4 border - yellow - 200 p - 4 dark:bg - yellow - 900 / 20 dark:border - yellow - 900">;
                             <div className="flex items - center justify - between mb - 2">;
                               <div className="flex items - center gap - 2">;
@@ -655,7 +643,7 @@ if ( {) {
                               </span>;
                             </div>;
                             <p className="whitespace - pre - wrap text - sm">{msg.message}</p>;
-                          </div>))}
+                          </div>)}
                         {!messages.some (msg => msg.is_admin_note) && (
                           <p className="text - sm text - muted - foreground italic">No admin notes yet</p>)}
                       </div>;
@@ -670,13 +658,12 @@ if ( {) {
                           on_click={() => {
                             if () {) {
   $2
-}
-                              addDisputeMessage (dispute_id!, message, true).then (() => {
+
+                              addDisputeMessage (dispute_id!, message, true).then () => {
                                 getDisputeMessages (dispute_id!).then (set_messages);
                                 set_message ("");
                               });
-                            }
-                          }}
+                            }}
                         >;
                           Add Admin Note;
                         </Button>;
@@ -744,7 +731,7 @@ if ( {) {
               </div>
               <div className="flex justify-between">
                 <span className="font-medium">Raised by:</span>
-                <span>{dispute.raised_by === dispute.client_profile?.id ? "Client" : "Talent"}</span>
+                <span>{dispute.raised_by = = dispute.client_profile?.id ? "Client" : "Talent"}</span>
               </div>
             </CardContent>
           </Card>
@@ -752,7 +739,7 @@ if ( {) {
       </div>
     </div>
   )
-}
+
                   </p>;
                 </div>;
               </div>;
@@ -780,7 +767,7 @@ if ( {) {
               </div>;
               <div className="flex justify-between">;
                 <span className="font-medium">Raised by:</span>;
-                <span>{dispute && dispute.raised_by === dispute && dispute.client_profile?.id ? "Client" : "Talent"}</span>;
+                <span>{dispute && dispute.raised_by = = dispute && dispute.client_profile?.id ? "Client" : "Talent"}</span>;
               </div>;
             </CardContent>;
           </Card>;
@@ -788,6 +775,5 @@ if ( {) {
       </div>;
     </div>;
   );
-}
+
     </div>);
-}

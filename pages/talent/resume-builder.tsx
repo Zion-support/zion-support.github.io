@@ -24,7 +24,7 @@ const ResumeBuilder: NextPage = () => {
 
   const operatorToken = process.env.NEXT_PUBLIC_OPERATOR_TOKEN;
 
-  const generateSummaryPrompt = useMemo(() => (
+  const generateSummaryPrompt = useMemo() => (
     `Create a professional resume summary for a ${role.toLowerCase()} with ${experienceYears} years of experience in ${skills}. Tone: ${tone}.\n\nReturn markdown only.`
   ), [role, experienceYears, skills, tone])
   const improveSectionPrompt = (sectionName: string, content: string) => (
@@ -46,7 +46,7 @@ const ResumeBuilder: NextPage = () => {
             <input value={role} onChange={e => setRole(e.target.value)} className="mt-1 w-full rounded-md border p-2" />
           </label>
           <label className="text-sm">Years of Experience
-            <input type="number" value={experienceYears} onChange={e => setExperienceYears(Number(e.target.value))} className="mt-1 w-full rounded-md border p-2" />
+            <input type="number" value={experienceYears} onChange={e => setExperienceYears(Number(e.target.value)} className="mt-1 w-full rounded-md border p-2" />
           </label>
           <label className="text-sm sm:col-span-2">Key Skills
             <input value={skills} onChange={e => setSkills(e.target.value)} className="mt-1 w-full rounded-md border p-2" />
@@ -107,7 +107,7 @@ const ResumeBuilder: NextPage = () => {
       </section>
     </div>
   )
-}
+
 export default ResumeBuilder;
 
 import type { NextPage } from 'next',
@@ -123,7 +123,7 @@ const ResumeBuilder: NextPage = () => {
   const [experience, set_experience] = useState (''),
   const [skills_text, setSkillsText] = useState (''),
   const operator_token = process.env.NEXT_PUBLIC_OPERATOR_TOKEN,
-  const generateSummaryPrompt = useMemo (() => (
+  const generateSummaryPrompt = useMemo () => (
     `Create a professional resume summary for a ${role.toLowerCase ()} with ${experience_years} years of experience in ${skills}. Tone: ${tone}.\n\n_return markdown only.`), [role, experience_years, skills, tone]),
   const improveSectionPrompt = (section_name: string, content: string) =>: any (
     `Improve the following resume ${section_name} to be professional, concise, and results - focused. Keep markdown formatting.\n\n${content}`),
@@ -140,7 +140,7 @@ const ResumeBuilder: NextPage = () => {
             <input value={role} on_change={e => set_role (e.target.value)} className="mt - 1 w - full rounded - md border p - 2" />;
           </label>;
           <label className="text - sm">Years of Experience;
-            <input type="number" value={experience_years} on_change={e => setExperienceYears (Number (e.target.value))} className="mt - 1 w - full rounded - md border p - 2" />;
+            <input type="number" value={experience_years} on_change={e => setExperienceYears (Number (e.target.value)} className="mt - 1 w - full rounded - md border p - 2" />;
           </label>;
           <label className="text - sm sm:col - span - 2">Key Skills;
             <input value={skills} on_change={e => set_skills (e.target.value)} className="mt - 1 w - full rounded - md border p - 2" />;
@@ -199,5 +199,5 @@ const ResumeBuilder: NextPage = () => {
         <textarea value={skills_text} on_change={e => setSkillsText (e.target.value)} rows={6} className="w - full rounded - md border p - 3" />;
       </section>;
     </div>);
-},
+,
 export default ResumeBuilder,

@@ -1,4 +1,4 @@
-:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/workspace/WorkspaceHeader && WorkspaceHeader.tsx;
+recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/workspace/WorkspaceHeader && WorkspaceHeader.tsx;
 
 import React from "react";
 import {Button} from "@/components/ui/button";
@@ -7,7 +7,7 @@ import {Bell, Users, Settings} from "lucide-react";
 
 interface WorkspaceHeaderProps {;
   company: Company;
-}
+
 export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
   return (
     <div className="space-y-6">
@@ -55,15 +55,15 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
       </div>
     </div>
   )
-}
-:recovered - branches / 0nylrk - codex / fix - footer - contact - link / src / components / enterprise / workspace / WorkspaceHeader.tsx;
+
+recovered - branches / 0nylrk - codex / fix - footer - contact - link / src / components / enterprise / workspace / WorkspaceHeader.tsx;
 import React from './react';
 import { Button } from '@/components / ui / button';
 import { type, Company } from './CompanyDashboard';
 import { Bell, Users, Settings } from './lucide-react';
 interface WorkspaceHeaderProps {
   company: Company;
-}
+
 export /**
  * WorkspaceHeader - Function description
  */
@@ -113,4 +113,3 @@ function WorkspaceHeader() {
         </div>;
       </div>;
     </div>);
-}

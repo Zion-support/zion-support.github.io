@@ -6,5 +6,3 @@ export function TalentCardAvailability() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

@@ -2,7 +2,7 @@ export const metadata = {;
   title:'Careers - Zion Tech Group',;
   description:'Join our team of AI innovators and help shape the future of autonomous business operations and digital economies.',;
   keywords:'careers, jobs, Zion Tech Group, AI jobs, technology careers, quantum computing jobs'},;
-;
+
 export default function CareersPage() {;
   const openPositions = [;
     {;
@@ -41,7 +41,7 @@ export default function CareersPage() {;
       requirements:[;
         '5+ years experience in cybersecurityExpertise in threat detection and prevention',;
         'Knowledge of AI security and adversarial attacksRelevant certifications (CISSP, CEH, etc.)']}],;
-;
+
   const benefits = [;
     {;
       title:'Remote First',;
@@ -67,7 +67,7 @@ export default function CareersPage() {;
       title:'Health & Wellness',;
       description:'Comprehensive health coverage and wellness programs.',;
       icon:''}],;
-;
+
   return (;
     <div className="space-y-16">;
       {/* Hero Section */}
@@ -81,12 +81,12 @@ export default function CareersPage() {;
           in artificial intelligence, quantum computing, and blockchain technology.;
         </p>;
       </section>;
-;
+
       {/* Open Positions */}
       <section className="py-16">;
         <h2 className="text-3xl font-bold text-center mb-12">Open Positions</h2>;
         <div className="space-y-6">;
-          {openPositions.map((position, index) => (;
+          {openPositions.map(position, index) => (;
             <div key={index} className="p-6 rounded-lg border border-white/10 hover:border-white/20 transition-all duration-200">;
               <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 mb-4">;
                 <div>;
@@ -107,7 +107,7 @@ export default function CareersPage() {;
               <div>;
                 <h4 className="font-semibold mb-2">Requirements:</h4>;
                 <ul className="list-disc list-inside space-y-1 text-sm opacity-70">;
-                  {position.requirements.map((req, reqIndex) => (;
+                  {position.requirements.map(req, reqIndex) => (;
                     <li key={reqIndex}>{req}</li>;      <section className="text-center py-16">
         <h1 className="text-4xl md:text-6xl font-bold mb-6">Join Our Team</h1>
         <p className="text-xl md:text-2xl opacity-80 mb-8 max-w-3xl mx-auto">
@@ -122,7 +122,7 @@ in artificial intelligence, quantum computing, and blockchain technology.       
       <section className="py-16">
         <h2 className="text-3xl font-bold text-center mb-12">Open Positions</h2>
         <div className="space-y-6">
-          {openPositions.map((position, index) => (_<div key={index} className="p-6 rounded-lg border border-white/10 hover:border-white/20 transition-all duration-200">              <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 mb-4">
+          {openPositions.map(position, index) => (_<div key={index} className="p-6 rounded-lg border border-white/10 hover:border-white/20 transition-all duration-200">              <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 mb-4">
                 <div>
                   <h3 className="text-xl font-semibold mb-2">{position.title}</h3>
                   <div className="flex flex-wrap gap-4 text-sm opacity-70">
@@ -140,29 +140,29 @@ in artificial intelligence, quantum computing, and blockchain technology.       
               <div>
                 <h4 className="font-semibold mb-2">Requirements:</h4>
                 <ul className="list-disc list-inside space-y-1 text-sm opacity-70">
-                  {position.requirements.map((req, reqIndex) => (
+                  {position.requirements.map(req, reqIndex) => (
                     <li key={reqIndex}>{req}</li>
-                  ))}
+                  )}
                 </ul>;
               </div>;
-            </div>;          ))}
+            </div>;          )}
         </div>;
       </section>;
-;
+
       {/* Benefits */}
       <section className="py-16">;
         <h2 className="text-3xl font-bold text-center mb-12">Why Work With Us</h2>;
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-          {benefits.map((benefit, index) => (;
+          {benefits.map(benefit, index) => (;
             <div key={index} className="text-center p-6">;
               <div className="text-4xl mb-4">{benefit.icon}</div>;
               <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>;
               <p className="opacity-80 text-sm">{benefit.description}</p>;
             </div>;
-          ))}
+          )}
         </div>;
       </section>;
-;
+
       {/* Company Culture */}
       <section className="py-16">;
         <h2 className="text-3xl font-bold text-center mb-12">Our Culture</h2>;
@@ -191,7 +191,7 @@ in artificial intelligence, quantum computing, and blockchain technology.       
           </div>;
         </div>;
       </section>;
-;
+
       {/* CTA Section */}
       <section className="text-center py-16">;
         <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Make a Difference?</h2>;
@@ -232,4 +232,3 @@ in artificial intelligence, quantum computing, and blockchain technology.       
       </section>
     </div>
   );
-}

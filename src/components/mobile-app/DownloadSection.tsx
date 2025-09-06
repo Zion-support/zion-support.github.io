@@ -1,5 +1,4 @@
 
-}
 import React from './react';
 import { QrCodeIcon } from 'lucide-react'import { AppStoreButtons  } from './AppStoreButtons';
 import { log_info } from '@/utils / production_logger';
@@ -19,7 +18,7 @@ export const DownloadSection: React.FC = () => {
               </p>
               <AppStoreButtons
                 className="mb-8"
-};
+;
 import React from "react";
 import { QrCodeIcon } from 'lucide-react'import { AppStoreButtons } from "./AppStoreButtons";
 import { logInfo } from '@/utils/productionLogger';
@@ -63,9 +62,3 @@ export const DownloadSection: React.FC = () => {;
         </div>;
       </div>;
     </section>);
-}
-"
-
-"
-
-";

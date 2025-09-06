@@ -22,7 +22,7 @@ export default function OffworldConsole() {
 
   async function syncProfile() {
     setStatus('Pinning profile...'),
-    const res = await fetch('/api/offworld/ipfs?action=json', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ profile: { name, skills: skills.split().map(s => s.trim()) } }) }),
+    const res = await fetch('/api/offworld/ipfs?action=json', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ profile: { name, skills: skills.split().map(s => s.trim() }) }),
     const data = await res.json(),
     setStatus(res.ok ? `Profile CID: ${data.cid}` : 'Profile pin failed')
   }

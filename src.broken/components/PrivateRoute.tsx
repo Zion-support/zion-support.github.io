@@ -6,5 +6,3 @@ export function PrivateRoute() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

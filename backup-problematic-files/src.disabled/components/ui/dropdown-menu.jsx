@@ -7,6 +7,5 @@ const Dropdown-menu = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default Dropdown-menu;

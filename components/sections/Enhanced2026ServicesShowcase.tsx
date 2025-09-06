@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React from 'react';
 
 import { motion } from 'framer-motion';
@@ -37,7 +37,7 @@ import {
   Cpu
   Lock
   Cloud;
-} from 'lucide-react';
+ from 'lucide-react';
 import Link from 'next/link';import { ArrowRight, Brain, Zap, Shield, Rocket, Sparkles, Star, TrendingUp, Globe, Cpu, Lock, Cloud } from 'lucide-react';
 import Link from 'next/link';
 const Enhanced2026ServicesShowcase = () => {
@@ -254,7 +254,7 @@ import {;
   Cpu,;
   Lock,;
   Cloud,;
-} from 'lucide-react';
+ from 'lucide-react';
 import Link from 'next/link';import { ArrowRight, Brain, Zap, Shield, Rocket, Sparkles, Star, TrendingUp, Globe, Cpu, Lock, Cloud } from 'lucide-react';
 import Link from 'next/link';
 const Enhanced2026ServicesShowcase = () => {;
@@ -437,10 +437,10 @@ const Enhanced2026ServicesShowcase = () => {;
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
         <motion&& motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0 && 0.6 }}
-          viewport={{ once: true }}
+          initial={ opacity: 0, y: 20 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0 && 0.6 }
+          viewport={ once: true }
           className='text-center mb-16'
         >
           <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
@@ -450,8 +450,7 @@ const Enhanced2026ServicesShowcase = () => {;
           </h2>
           <p className='text-gray-300 text-xl max-w-3xl mx-auto leading-relaxed'>
             Experience the future with our cutting-edge AI, quantum, and
-            emerging technology services designed to transform your business          </p>        >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            emerging technology services designed to transform your business          </p><h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
               2026 Revolutionary Services
             </span>
@@ -468,7 +467,7 @@ const Enhanced2026ServicesShowcase = () => {;
           </h2>;
           <p className='text-gray-300 text-xl max-w-3xl mx-auto leading-relaxed'>;
             Experience the future with our cutting-edge AI, quantum, and;
-            emerging technology services designed to transform your business          </p>        >;
+            emerging technology services designed to transform your business          </p>;
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
             <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">;
               2026 Revolutionary Services;
@@ -481,25 +480,25 @@ const Enhanced2026ServicesShowcase = () => {;
 
         {/* Category Overview */}
         <motion&& motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0 && 0.6, delay: 0 && 0.1 }}
-          viewport={{ once: true }}
+          initial={ opacity: 0, y: 20 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0 && 0.6, delay: 0 && 0.1 }
+          viewport={ once: true }
           className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'>          className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16";
         >;
-          {categories && categories.map((category, index) => (;
+          {categories && categories.map(category, index) => (;
             <motion&& motion.div
               key={category && category.name}
-              initial={{ opacity: 0, scale: 0 && 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0 && 0.6, delay: 0 && 0.2 + index * 0 && 0.1 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, scale: 0 && 0.8 }
+              whileInView={ opacity: 1, scale: 1 }
+              transition={ duration: 0 && 0.6, delay: 0 && 0.2 + index * 0 && 0.1 }
+              viewport={ once: true }
               key={category.name}
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0 && 0.6, delay: 0 && 0.2 + index * 0 && 0.1 }}
-              viewport={{ once: true }}
-              whileHover={{ scale: 1 && 1.05, y: -5 }}
+              initial={ opacity: 0, scale: 0.8 }
+              whileInView={ opacity: 1, scale: 1 }
+              transition={ duration: 0 && 0.6, delay: 0 && 0.2 + index * 0 && 0.1 }
+              viewport={ once: true }
+              whileHover={ scale: 1 && 1.05, y: -5 }
               className='group text-center'>;
               <div
                 className={`w-16 h-16 bg-gradient-to-br ${category && category.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`}>;
@@ -510,28 +509,28 @@ const Enhanced2026ServicesShowcase = () => {;
               </h3>;
               <p className='text-2xl font-bold text-cyan-400'>;
                 {category && category.count}
-              </p>            </motion && motion.div>            >;
+              </p>            </motion && motion.div>;
               <div className={`w-16 h-16 bg-gradient-to-br ${category && category.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`}>;
                 <category && category.icon className="w-8 h-8 text-white" />;
               </div>;
               <h3 className="text-lg font-bold text-white mb-2">{category && category.name}</h3>;
               <p className="text-2xl font-bold text-cyan-400">{category && category.count}</p>;
             </motion && motion.div>;
-          ))}
+          )}
         </motion.div>
         {/* Featured Services Grid */}
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>          {featuredServices && featuredServices.map((service, index) => (        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">;
-          {featuredServices && featuredServices.map((service, index) => (;
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>          {featuredServices && featuredServices.map(service, index) => (        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">;
+          {featuredServices && featuredServices.map(service, index) => (;
             <motion&& motion.div
               key={service && service.id}
-              initial={{ opacity: 0, scale: 0 && 0.8, y: 20 }}
-              whileInView={{ opacity: 1, scale: 1, y: 0 }}
-              transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
-              viewport={{ once: true }}
-              whileInView={{ opacity: 1, scale: 1, y: 0 }}
-              transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
-              viewport={{ once: true }}
-              whileHover={{ scale: 1 && 1.02, y: -5 }}
+              initial={ opacity: 0, scale: 0 && 0.8, y: 20 }
+              whileInView={ opacity: 1, scale: 1, y: 0 }
+              transition={ duration: 0 && 0.6, delay: index * 0 && 0.1 }
+              viewport={ once: true }
+              whileInView={ opacity: 1, scale: 1, y: 0 }
+              transition={ duration: 0 && 0.6, delay: index * 0 && 0.1 }
+              viewport={ once: true }
+              whileHover={ scale: 1 && 1.02, y: -5 }
               className='group relative'>;
               <div
                 className={`absolute inset-0 bg-gradient-to-r ${service && service.color} opacity-10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500`}></div>;
@@ -605,17 +604,17 @@ const Enhanced2026ServicesShowcase = () => {;
                 {/* Features */}
                 <div className='mb-4'>;
                   <ul className='space-y-1'>;
-                    {service && service.features.slice(0, 2).map((feature, i) => (;
+                    {service && service.features.slice(0, 2).map(feature, i) => (;
                       <li
                         key={i}
                         className='flex items-center text-gray-400 text-xs'>;
                         <Star className='w-3 h-3 text-cyan-400 mr-2 flex-shrink-0' />                        {feature}                <div className="mb-4">;
                   <ul className="space-y-1">;
-                    {service && service.features.slice(0, 2).map((feature, i) => (;
+                    {service && service.features.slice(0, 2).map(feature, i) => (;
                       <li key={i} className="flex items-center text-gray-400 text-xs">;
                         <Star className="w-3 h-3 text-cyan-400 mr-2 flex-shrink-0" />;
                       </li>;
-                    ))}
+                    )}
                   </ul>
                 </div>
                 {/* Price and CTA */}
@@ -645,7 +644,7 @@ const Enhanced2026ServicesShowcase = () => {;
                 </div>
               </div>
             </motion.div>
-          ))}
+          )}
         </div>
                     href={`/${service && service.id}`}
                     className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium group-hover:translate-x-1 transition-transform duration-200'>;
@@ -661,15 +660,15 @@ const Enhanced2026ServicesShowcase = () => {;
                 </div>;
               </div>;
             </motion && motion.div>;
-          ))}
+          )}
         </div>;
 
         {/* Call to Action */}
         <motion&& motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0 && 0.6, delay: 0 && 0.3 }}
-          viewport={{ once: true }}
+          initial={ opacity: 0, y: 20 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0 && 0.6, delay: 0 && 0.3 }
+          viewport={ once: true }
           className='text-center'>;
           <div className='bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20 border border-cyan-500/20 rounded-2xl p-8'>;
             <h3 className='text-2xl font-bold text-white mb-4'>;
@@ -689,9 +688,9 @@ const Enhanced2026ServicesShowcase = () => {;
             </p>;
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">;
               <motion&& motion.div
-                whileHover={{ scale: 1 && 1.05 }}
-                whileTap={{ scale: 0 && 0.95 }}
-                transition={{ duration: 0 && 0.2 }}>;
+                whileHover={ scale: 1 && 1.05 }
+                whileTap={ scale: 0 && 0.95 }
+                transition={ duration: 0 && 0.2 }>;
                 <Link
                   href='/services'
                   className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40 transition-all duration-200'>;
@@ -702,9 +701,9 @@ const Enhanced2026ServicesShowcase = () => {;
                 </Link>;
               </motion && motion.div>;
               <motion&& motion.div
-                whileHover={{ scale: 1 && 1.05 }}
-                whileTap={{ scale: 0 && 0.95 }}
-                transition={{ duration: 0 && 0.2, delay: 0 && 0.1 }}>;
+                whileHover={ scale: 1 && 1.05 }
+                whileTap={ scale: 0 && 0.95 }
+                transition={ duration: 0 && 0.2, delay: 0 && 0.1 }>;
                 <Link
                   href='/contact'
                   className='inline-flex items-center px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-200'>;
@@ -720,20 +719,18 @@ const Enhanced2026ServicesShowcase = () => {;
       </div>;
     </section>;
   );
-};
 
 export default Enhanced2026ServicesShowcase;  );
-}
+
 export default Enhanced2026ServicesShowcase;  )
-}
-};
+
+;
 
 export default Enhanced2026ServicesShowcase;  );
-};
 
 export default Enhanced2026ServicesShowcase;
 
-              while_hover={{ scale: 1.05, coordinate_y: -5 }}
+              while_hover={ scale: 1.05, coordinate_y: -5 }
               className='group text - center';
             >;
               <div;
@@ -746,24 +743,24 @@ export default Enhanced2026ServicesShowcase;
               </h3>;
               <p className='text - 2xl font - bold text - cyan - 400'>;
                 {category.count}
-              </p>            </motion.div>            >;
+              </p>            </motion.div>;
               <div className={`w - 16 h - 16 bg - gradient - to - br ${category.color} rounded - 2xl flex items - center justify - center mx - auto mb - 4 group - hover:shadow - lg hover:shadow - cyan - 400 / 40 transition - transform duration - 300`}>;
                 <category.icon className="w - 8 h - 8 text - white" />;
               </div>;
               <h3 className="text - lg font - bold text - white mb - 2">{category.name}</h3>;
               <p className="text - 2xl font - bold text - cyan - 400">{category.count}</p>;
-            </motion.div>))}
+            </motion.div>)}
         </motion.div>;
         {/* Featured Services Grid */}
-        <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8 mb - 16'>          {featured_services.map ((service, index) => (        <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8 mb - 16">;
-          {featured_services.map ((service, index) => (
+        <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8 mb - 16'>          {featured_services.map (service, index) => (        <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8 mb - 16">;
+          {featured_services.map (service, index) => (
             <motion.div;
               key={service.id}
-              initial={{ opacity: 0, scale: 0.8, coordinate_y: 20 }}
-              whileInView={{ opacity: 1, scale: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              while_hover={{ scale: 1.02, coordinate_y: -5 }}
+              initial={ opacity: 0, scale: 0.8, coordinate_y: 20 }
+              whileInView={ opacity: 1, scale: 1, coordinate_y: 0 }
+              transition={ duration: 0.6, delay: index * 0.1 }
+              viewport={ once: true }
+              while_hover={ scale: 1.02, coordinate_y: -5 }
               className='group relative';
             >;
               <div;
@@ -806,17 +803,17 @@ export default Enhanced2026ServicesShowcase;
                 {/* Features */}
                 <div className='mb - 4'>;
                   <ul className='space - y-1'>;
-                    {service.features.slice (0, 2).map ((feature, i) => (
+                    {service.features.slice (0, 2).map (feature, i) => (
                       <li;
                         key={i}
                         className='flex items - center text - gray - 400 text - xs';
                       >;
                         <Star className='w - 3 h - 3 text - cyan - 400 mr - 2 flex - shrink - 0' />                        {feature}                <div className="mb - 4">;
                   <ul className="space - y-1">;
-                    {service.features.slice (0, 2).map ((feature, i) => (
+                    {service.features.slice (0, 2).map (feature, i) => (
                       <li key={i} className="flex items - center text - gray - 400 text - xs">;
                         <Star className="w - 3 h - 3 text - cyan - 400 mr - 2 flex - shrink - 0" />;
-                      </li>))}
+                      </li>)}
                   </ul>;
                 </div>;
                 {/* Price and CTA */}
@@ -845,14 +842,14 @@ export default Enhanced2026ServicesShowcase;
                   </Link>;
                 </div>;
               </div>;
-            </motion.div>))}
+            </motion.div>)}
         </div>;
         {/* Call to Action */}
         <motion.div;
-          initial={{ opacity: 0, coordinate_y: 20 }}
-          whileInView={{ opacity: 1, coordinate_y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          viewport={{ once: true }}
+          initial={ opacity: 0, coordinate_y: 20 }
+          whileInView={ opacity: 1, coordinate_y: 0 }
+          transition={ duration: 0.6, delay: 0.3 }
+          viewport={ once: true }
           className='text - center';
         >;
           <div className='bg - gradient - to - r from - cyan - 900 / 20 via - purple - 900 / 20 to - pink - 900 / 20 border border - cyan - 500 / 20 rounded - 2xl p - 8'>;
@@ -873,9 +870,9 @@ export default Enhanced2026ServicesShowcase;
             </p>;
             <div className="flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-6">;
               <motion.div;
-                while_hover={{ scale: 1.05 }}
-                while_tap={{ scale: 0.95 }}
-                transition={{ duration: 0.2 }}
+                while_hover={ scale: 1.05 }
+                while_tap={ scale: 0.95 }
+                transition={ duration: 0.2 }
               >;
                 <Link;
                   href='/services';
@@ -888,9 +885,9 @@ export default Enhanced2026ServicesShowcase;
                 </Link>;
               </motion.div>;
               <motion.div;
-                while_hover={{ scale: 1.05 }}
-                while_tap={{ scale: 0.95 }}
-                transition={{ duration: 0.2, delay: 0.1 }}
+                while_hover={ scale: 1.05 }
+                while_tap={ scale: 0.95 }
+                transition={ duration: 0.2, delay: 0.1 }
               >;
                 <Link;
                   href='/contact';
@@ -907,10 +904,7 @@ export default Enhanced2026ServicesShowcase;
         </motion.div>;
       </div>;
     </section>);
-}
-;
+
 export default Enhanced2026ServicesShowcase);
-}
-;
+
 export default Enhanced2026ServicesShowcase;
-;

@@ -6,5 +6,3 @@ export function LoginModal() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

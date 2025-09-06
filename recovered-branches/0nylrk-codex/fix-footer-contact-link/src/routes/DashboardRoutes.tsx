@@ -196,7 +196,7 @@ const DashboardRoutes = () => {
       />
     </Routes>
   )
-}
+
         element={
           <ProtectedRoute>;
             <ContractBuilder />;
@@ -205,14 +205,11 @@ const DashboardRoutes = () => {
       />;
     </Routes>;
   );
-};
 
 export default DashboardRoutes;
 
         }
       />;
     </Routes>);
-}
-;
+
 export default DashboardRoutes;
-;

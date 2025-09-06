@@ -2,7 +2,6 @@ import React from 'react';
 
 interface AIAutonomousBusinessOperationsPlatformProps {
   className?: string;
-}
 
 const AIAutonomousBusinessOperationsPlatform: React.FC<AIAutonomousBusinessOperationsPlatformProps> = ({ className }) => {
   return (
@@ -11,6 +10,5 @@ const AIAutonomousBusinessOperationsPlatform: React.FC<AIAutonomousBusinessOpera
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default AIAutonomousBusinessOperationsPlatform;

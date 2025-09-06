@@ -4,7 +4,7 @@ import {
   Phone, Mail, MapPin, Globe, 
   Clock, ChevronDown, ChevronUp,
   MessageCircle, Calendar, Star
-} from 'lucide-react',
+ from 'lucide-react',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
@@ -13,13 +13,13 @@ const contactInfo = {
   website: 'https://ziontechgroup.com',
   hours: 'Mon-Fri: 9AM-6PM EST',
   rating: '4.9/5 (200+ Reviews)'
-},
+,
 
 const quickActions = [
   { name: 'Get Quote', href: '/quote', icon: <MessageCircle className="w-4 h-4" /> },
   { name: 'Book Demo', href: '/demo', icon: <Calendar className="w-4 h-4" /> },
   { name: 'Live Chat', href: '/chat', icon: <MessageCircle className="w-4 h-4" /> }
-],
+,
 
 export default function TopContactBar() {
   const [isExpanded, setIsExpanded] = useState(false),
@@ -42,7 +42,7 @@ import {;
   Phone, Mail, MapPin, Globe,;
   Clock, ChevronDown, ChevronUp,;
   MessageCircle, Calendar, Star;
-} from 'lucide-react',;
+ from 'lucide-react',;
 const contactInfo = {;
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup.com',;
@@ -50,12 +50,12 @@ const contactInfo = {;
   website: 'https://ziontechgroup.com',;
   hours: 'Mon-Fri: 9AM-6PM EST',;
   rating: '4.9/5 (200+ Reviews)';
-},;
+,;
 const quickActions = [;
   { name: 'Get Quote', href: '/quote', icon: <MessageCircle className="w-4 h-4" /> },;
   { name: 'Book Demo', href: '/demo', icon: <Calendar className="w-4 h-4" /> },;
   { name: 'Live Chat', href: '/chat', icon: <MessageCircle className="w-4 h-4" /> }
-],;
+,;
 export default function TopContactBar() {;
   const [isExpanded, setIsExpanded] = useState(false);
   return (;
@@ -114,7 +114,7 @@ export default function TopContactBar() {;
             <div className="flex items-center space-x-4">
               {/* Quick Actions */}
               <div className="hidden sm:flex items-center space-x-2">
-                {quickActions.map((action) => (
+                {quickActions.map(action) => (
                   <a
                     key={action.name}
                     href={action.href}
@@ -123,7 +123,7 @@ export default function TopContactBar() {;
                     {action.icon}
                     <span>{action.name}</span>;
                   </a>;
-                ))}
+                )}
               </div>;
               {/* Expand/Collapse Button */}
               <button;
@@ -145,10 +145,10 @@ export default function TopContactBar() {;
       <AnimatePresence>;
         {isExpanded && (;
           <motion.div;
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
+            initial={ opacity: 0, height: 0 }
+            animate={ opacity: 1, height: 'auto' }
+            exit={ opacity: 0, height: 0 }
+            transition={ duration: 0.3 }
             className="bg-gray-900/95 backdrop-blur-md border-b border-cyan-500/30 overflow-hidden"
           >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
@@ -210,7 +210,7 @@ export default function TopContactBar() {;
                     <span>Quick Actions</span>
                   </h3>
                   <div className="space-y-3">
-                    {quickActions.map((action) => (
+                    {quickActions.map(action) => (
                       <a
                         key={action.name}
                         href={action.href}
@@ -221,7 +221,7 @@ export default function TopContactBar() {;
                         </div>
                         <span className="font-medium">{action.name}</span>
                       </a>
-                    ))}
+                    )}
                   </div>;
                 </div>;
                 {/* Company Highlights */}
@@ -278,5 +278,3 @@ export default function TopContactBar() {;
       </AnimatePresence>;
     </div>;
   );
-}
-;

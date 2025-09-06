@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React from 'react';
 import Head from "next/head";
 import {ReactNode} from "react";
@@ -34,7 +34,6 @@ type ModernLayoutProps = {;
   keywords?: string;
   canonical?: string;
 
-}
 const ModernLayout = ({
 const ModernLayout = ({;
   children;
@@ -43,8 +42,8 @@ const ModernLayout = ({;
   keywords = "AI services, IT solutions, micro SaaS, digital transformation, cloud computing, cybersecurity";
   canonical;
 
-}: ModernLayoutProps) => {
-}: ModernLayoutProps) =>: any {
+: ModernLayoutProps) => {
+: ModernLayoutProps) =>: any {
   return (
     <>;
       <Head>;
@@ -74,7 +73,7 @@ const ModernLayout = ({;
       </div>
 </>
   );
-}
+
         <meta name="viewport" content="width = device - width, initial - scale = 1" />;
         <meta name="author" content="Zion Tech Group" />;
         <meta name="robots" content="index, follow" />;
@@ -97,6 +96,5 @@ const ModernLayout = ({;
         {children}
       </div>;
 </>),
-}
-;
+
 export default ModernLayout;

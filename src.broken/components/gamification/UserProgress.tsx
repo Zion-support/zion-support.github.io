@@ -6,5 +6,3 @@ export function UserProgress() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

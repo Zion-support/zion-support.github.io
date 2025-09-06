@@ -1,6 +1,6 @@
 import React from 'react',;
 import Head from 'next/head',;
-;
+
 export default function AICustomerService() {;
   return (;
     <>;
@@ -17,8 +17,8 @@ export default function AICustomerService() {;
       </div>;
     </>;
   );
-}
-;import Head from 'next/head';
+
+import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 
 const AICustomerService: React.FC = () => {
@@ -38,4 +38,3 @@ const AICustomerService: React.FC = () => {
       </div>
     </>
   )
-}

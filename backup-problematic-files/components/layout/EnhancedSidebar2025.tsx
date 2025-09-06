@@ -10,7 +10,7 @@ import {;
   ArrowRight, Search, Menu, X as CloseIcon,;
   Target, BookOpen, Truck, BarChart3,;
   Sparkles, Eye, Lightbulb, Palette, Code;
-} from 'lucide-react',;
+ from 'lucide-react',;
 interface SidebarItem {;
   name: string,;
   href: string,;
@@ -20,14 +20,13 @@ interface SidebarItem {;
   badge?: string,;
   isNew?: boolean,;
   isHot?: boolean;
-}
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-},
+,
 
 const sidebarItems: SidebarItem[] = [
   {
@@ -216,7 +215,7 @@ const sidebarItems: SidebarItem[] = [
       { name: 'Status Page', href: '/status', description: 'Service status' }
     ];
   }
-],
+,
 
 const resources = [
   { name: 'Documentation', href: '/docs', icon: <FileText className="w-4 h-4" /> },
@@ -225,16 +224,14 @@ const resources = [
   { name: 'Blog & News', href: '/blog', icon: <FileText className="w-4 h-4" /> },
   { name: 'Training & Certification', href: '/training', icon: <Award className="w-4 h-4" /> },
   { name: 'Community Forum', href: '/community', icon: <Users className="w-4 h-4" /> }
-],
-
+,
 
 const supportLinks = [
   { name: 'Contact Support', href: '/support', description: 'Get help from our team' },
   { name: 'Documentation', href: '/docs', description: 'Technical guides' },
   { name: 'API Reference', href: '/api-documentation', description: 'Developer documentation' },
   { name: 'Status Page', href: '/status', description: 'Service status' },
-  { name: 'Training', href: '/training', description: 'Learn our platforms' },
-],;
+  { name: 'Training', href: '/training', description: 'Learn our platforms' },;
 const resources = [;
   { name: 'Documentation', href: '/docs', icon: <FileText className="w-4 h-4" /> },;
   { name: 'API Reference', href: '/api-documentation', icon: <Settings className="w-4 h-4" /> },;
@@ -242,7 +239,7 @@ const resources = [;
   { name: 'Blog & News', href: '/blog', icon: <FileText className="w-4 h-4" /> },;
   { name: 'Training & Certification', href: '/training', icon: <Award className="w-4 h-4" /> },;
   { name: 'Community Forum', href: '/community', icon: <Users className="w-4 h-4" /> }
-],;
+,;
 const supportLinks = [;
   { name: 'Contact Support', href: '/support', description: 'Get help from our team' },;
   { name: 'Documentation', href: '/docs', description: 'Technical guides' },;
@@ -250,10 +247,10 @@ const supportLinks = [;
   { name: 'Status Page', href: '/status', description: 'Service status' },;
   { name: 'Training', href: '/training', description: 'Learn our platforms' },;
   { name: 'Community', href: '/community', description: 'Connect with users' }
-],;
+,;
   const toggleSection = (title: string) => {;
     const newExpanded = new Set(expandedSections),;
-    if (newExpanded.has(title)) {;
+    if (newExpanded.has(title) {;
       newExpanded.delete(title);
     } else {;
       newExpanded.add(title);
@@ -262,15 +259,15 @@ const supportLinks = [;
   },;
   const filteredServices = sidebarItems.flatMap(item =>;
     item.children?.filter(child =>;
-      child.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-      child.description?.toLowerCase().includes(searchQuery.toLowerCase());
+      child.name.toLowerCase().includes(searchQuery.toLowerCase() ||;
+      child.description?.toLowerCase().includes(searchQuery.toLowerCase();
     ) || [];
   ),;
   return (;
     <motion.aside;
-      initial={{ x: -300, opacity: 0 }}
-      animate={{ x: 0, opacity: 1 }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
+      initial={ x: -300, opacity: 0 }
+      animate={ x: 0, opacity: 1 }
+      transition={ duration: 0.5, ease: "easeOut" }
       className="fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-r border-cyan-500/20 shadow-2xl shadow-cyan-500/20 z-40 overflow-y-auto scrollbar-thin scrollbar-thumb-cyan-500/50 scrollbar-track-transparent"
     >
       {/* Header */}
@@ -309,7 +306,7 @@ const supportLinks = [;
 
       {/* Navigation Sections */}
       <div className="p-4 space-y-2">
-        {sidebarSections.map((section) => (
+        {sidebarSections.map(section) => (
           <div key={section.title} className="space-y-1">
             <button
               onClick={() => toggleSection(section.title)}
@@ -335,10 +332,10 @@ const supportLinks = [;
             <AnimatePresence>;
               {expandedSections.has(section.title) && (;
                 <motion.div;
-                  initial={{ opacity: 0, height: 0 }}
-                  animate={{ opacity: 1, height: 'auto' }}
-                  exit={{ opacity: 0, height: 0 }}
-                  transition={{ duration: 0.2 }}
+                  initial={ opacity: 0, height: 0 }
+                  animate={ opacity: 1, height: 'auto' }
+                  exit={ opacity: 0, height: 0 }
+                  transition={ duration: 0.2 }
                   className="ml-8 space-y-1"
                 >
                   <CloseIcon className="w-5 h-5" />
@@ -356,14 +353,14 @@ const supportLinks = [;
                   className="w-full pl-10 pr-4 py-2 bg-gray-800/50 border border-gray-700/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50"
                 />
               </div>
-              
+
               {/* Search Results */}
               {searchQuery && (
                 <div className="mt-4 space-y-2">
                   <h4 className="text-sm font-medium text-gray-300">Search Results</h4>
                   {filteredServices.length > 0 ? (
                     <div className="space-y-1">
-                      {filteredServices.slice(0, 5).map((service) => (
+                      {filteredServices.slice(0, 5).map(service) => (
                         <Link
                           key={service.name}
                           href={service.href}
@@ -377,7 +374,7 @@ const supportLinks = [;
                             {service.description}
                           </div>
                         </a>
-                      ))}
+                      )}
                       {filteredServices.length > 5 && (
                         <div className="text-xs text-cyan-400 text-center">
                           +{filteredServices.length - 5} more results
@@ -425,18 +422,18 @@ const supportLinks = [;
                 <span>Company Stats</span>
               </h3>
               <div className="grid grid-cols-2 gap-4">
-                {stats.map((stat, index) => (
+                {stats.map(stat, index) => (
                   <motion.div
                     key={stat.label}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.3, delay: index * 0.1 }}
+                    initial={ opacity: 0, scale: 0.8 }
+                    animate={ opacity: 1, scale: 1 }
+                    transition={ duration: 0.3, delay: index * 0.1 }
                     className="text-center p-3 bg-gray-800/30 rounded-lg border border-gray-700/30"
                   >
                     <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
                     <div className="text-xs text-gray-400">{stat.label}</div>
                   </motion.div>
-                ))}
+                )}
               </div>;
             </div>;
             {/* Quick Links */}
@@ -446,7 +443,7 @@ const supportLinks = [;
                 <span>Quick Links</span>
               </h3>
               <div className="space-y-2">
-                {quickLinks.map((link) => (
+                {quickLinks.map(link) => (
                   <Link
                     key={link.name}
                     href={link.href}
@@ -460,7 +457,7 @@ const supportLinks = [;
                       {link.name}
                     </span>
                   </a>
-                ))}
+                )}
               </div>;
             </div>;
             {/* Service Categories */}
@@ -470,7 +467,7 @@ const supportLinks = [;
                 <span>Service Categories</span>
               </h3>
               <div className="space-y-2">
-                {sidebarItems.map((item) => (
+                {sidebarItems.map(item) => (
                   <div key={item.name}>
                     <button
                       onClick={() => toggleCategory(item.name)}
@@ -486,20 +483,20 @@ const supportLinks = [;
                       </div>;
                       <ChevronRight;
                         className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${;
-                          expandedCategory === item.name ? 'rotate-90' : '';
+                          expandedCategory = = item.name ? 'rotate-90' : '';
                         }`} ;
                       />;
                     </button>;
                     <AnimatePresence>;
-                      {expandedCategory === item.name && (;
+                      {expandedCategory = = item.name && (;
                         <motion.div;
-                          initial={{ opacity: 0, height: 0 }}
-                          animate={{ opacity: 1, height: 'auto' }}
-                          exit={{ opacity: 0, height: 0 }}
-                          transition={{ duration: 0.2 }}
+                          initial={ opacity: 0, height: 0 }
+                          animate={ opacity: 1, height: 'auto' }
+                          exit={ opacity: 0, height: 0 }
+                          transition={ duration: 0.2 }
                           className="ml-8 mt-2 space-y-1"
                         >
-                          {item.children?.map((child) => (
+                          {item.children?.map(child) => (
                             <Link
                               key={child.name}
                               href={child.href}
@@ -515,12 +512,12 @@ const supportLinks = [;
                                 </span>;
                               )}
                             </a>
-                          ))}
+                          )}
                         </motion.div>;
                       )}
                     </AnimatePresence>;
                   </div>;
-                ))}
+                )}
               </div>;
             </div>;
             {/* Quick Links */}
@@ -595,6 +592,6 @@ const supportLinks = [;
       <div className="absolute bottom-1/4 left-4 w-1 h-1 bg-purple-400 rounded-full animate-pulse delay-2000"></div>
     </motion.aside>
   )
-},
+,
 
 export default EnhancedSidebar2025,

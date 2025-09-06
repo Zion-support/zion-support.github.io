@@ -14,13 +14,13 @@ import {
   Mail,
   MapPin,
   ArrowUpRight
-} from 'lucide-react',
+ from 'lucide-react',
 import Head from 'next/head',// Import our enhanced components,
 import EnhancedNavigation from './layout/EnhancedNavigation',
 import EnhancedServiceCard from './ui/EnhancedServiceCard',
 import PerformanceMonitor from './PerformanceMonitor',
 import UltraFuturisticBackground from './ui/UltraFuturisticBackground',
-// Import service data,
+/ Import service data,
 import { revolutionary2044AdvancedMicroSaas } from '../data/revolutionary-2044-advanced-micro-saas',
 import { revolutionary2044ITServices } from '../data/revolutionary-2044-it-services',
 import { revolutionary2044AIServices } from '../data/revolutionary-2044-ai-services',
@@ -36,32 +36,31 @@ const EnhancedHomepage: React.FC = () => {
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0),
   const [colorScheme, setColorScheme] = useState<'cyber' | 'quantum' | 'neon' | 'holographic'>('cyber'),
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false),
-  
-  useEffect(() => {
+
+  useEffect() => {
     setIsVisible(true),
-    
+
     // Auto-rotate featured services,
-const interval = setInterval(() => {
-      setCurrentServiceIndex((prev) => (prev + 1) % 6)
+const interval = setInterval() => {
+      setCurrentServiceIndex(prev) => (prev + 1) % 6)
     }, 6000),
-    
+
     // Track mouse movement for parallax effects,
 const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY })
     },
-    
+
     // Show performance monitor after 5 seconds,
-const performanceTimer = setTimeout(() => {
+const performanceTimer = setTimeout() => {
       setShowPerformanceMonitor(true)
     }, 5000),    
     window.addEventListener('mousemove', handleMouseMove),
-    
+
     return () => {
       clearInterval(interval),
       clearTimeout(performanceTimer),
       window.removeEventListener('mousemove', handleMouseMove)
-    }
-  }, []),
+    }, []),
   // Combine all revolutionary services,
 const allRevolutionaryServices = [
     ...revolutionary2044AdvancedMicroSaas,
@@ -76,10 +75,10 @@ const allRevolutionaryServices = [
 
   // Filter services by category,
 const getFilteredServices = () => {
-    if (selectedCategory === 'all') return allRevolutionaryServices,
+    if (selectedCategory = = 'all') return allRevolutionaryServices,
     return allRevolutionaryServices.filter(service => 
-      service.category.toLowerCase().includes(selectedCategory.toLowerCase()) ||
-      (service as any).type?.toLowerCase().includes(selectedCategory.toLowerCase())
+      service.category.toLowerCase().includes(selectedCategory.toLowerCase() ||
+      (service as any).type?.toLowerCase().includes(selectedCategory.toLowerCase()
     )
   },
 
@@ -98,7 +97,6 @@ const featuredServices = allRevolutionaryServices.slice(0, 6),
 const containerVariants = {hidden: { opacity: 0},
     visible: {opacity: 1, transition: {
         duration: 0.8, staggerChildren: 0.1}
-    }
   },
 
   const itemVariants = {
@@ -109,7 +107,7 @@ const containerVariants = {hidden: { opacity: 0},
       transition: {
         duration: 0.6,
         ease: &quot;easeOut&quot; as const
-      }    }
+      }
   },
 
   const heroVariants = {
@@ -120,7 +118,7 @@ const containerVariants = {hidden: { opacity: 0},
       transition: {
         duration: 1,
         ease: &quot;easeOut&quot; as const
-      }    }
+      }
   },
 
   const floatingVariants = {
@@ -129,16 +127,15 @@ const containerVariants = {hidden: { opacity: 0},
       transition: {
         duration: 3,
         ease: &quot;easeInOut&quot; as const
-      }    }
+      }
   },
 
   const handleCategoryChange = (categoryId: string) => {
     setSelectedCategory(categoryId),
-    const category = categories.find(cat => cat.id === categoryId),
+    const category = categories.find(cat => cat.id = = categoryId),
     if (category) {
       setColorScheme(category.scheme)
-    }
-  },
+    },
   return (_<>
       <Head>
         <title>Zion Tech Group - Revolutionary 2045 Technology Solutions</title>
@@ -149,13 +146,13 @@ const containerVariants = {hidden: { opacity: 0},
         <meta property=&quot;og:url&quot; content=&quot;https://ziontechgroup.com&quot; />
         <meta property=&quot;og:type&quot; content=&quot;website&quot; />
         <link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com&quot; />
-        
+
         {/* Performance and SEO Meta Tags */}
         <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, viewport-fit=cover&quot; />
         <meta name=&quot;theme-color&quot; content=&quot;#00d4ff&quot; />
         <meta name=&quot;robots&quot; content=&quot;index, follow&quot; />
         <meta name=&quot;author&quot; content=&quot;Zion Tech Group&quot; />
-        
+
         {/* Preload critical resources */}
         <link rel=&quot;preload&quot; href=&quot;/fonts/inter-var.woff2&quot; as=&quot;font&quot; type=&quot;font/woff2&quot; crossOrigin=&quot;anonymous&quot; />
         <link rel=&quot;dns-prefetch&quot; href=&quot;//fonts.googleapis.com&quot; />
@@ -164,7 +161,7 @@ const containerVariants = {hidden: { opacity: 0},
       {_/* Enhanced Navigation */}
       <EnhancedNavigation />
 
-      <UltraFuturisticBackground variant={colorScheme === 'cyber' ? 'cyberpunk' : colorScheme === 'quantum' ? 'quantum' : colorScheme === 'neon' ? 'neural' : 'holographic'} intensity=&quot;high&quot;>
+      <UltraFuturisticBackground variant={colorScheme = = 'cyber' ? 'cyberpunk' : colorScheme = = 'quantum' ? 'quantum' : colorScheme = = 'neon' ? 'neural' : 'holographic'} intensity=&quot;high&quot;>
         {/* Hero Section */}
         <motion.section,
 className=&quot;relative min-h-screen flex items-center justify-center px-4 lg:px-8 pt-20&quot;
@@ -179,7 +176,7 @@ className=&quot;text-5xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-r from
               variants={itemVariants}            >
               Zion Tech Group
             </motion.h1>
-            
+
             <motion.p,
 className=&quot;text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed&quot;
               variants={itemVariants}            >
@@ -193,18 +190,18 @@ className=&quot;flex flex-col sm:flex-row gap-4 justify-center items-center mb-1
               <Link href=&quot;/services&quot;>
                 <motion.button,
 className=&quot;px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-xl text-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl&quot;
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}                >
+                  whileHover={ scale: 1.05 }
+                  whileTap={ scale: 0.95 }                >
                   Explore Services
                   <ArrowRight className=&quot;inline-block ml-2 w-5 h-5&quot; />
                 </motion.button>
               </a>
-              
+
               <Link href=&quot;/quote&quot;>
                 <motion.button,
 className=&quot;px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-bold rounded-xl text-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105&quot;
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}                >
+                  whileHover={ scale: 1.05 }
+                  whileTap={ scale: 0.95 }                >
                   Get Quote
                   <ArrowUpRight className=&quot;inline-block ml-2 w-5 h-5&quot; />
                 </motion.button>
@@ -237,20 +234,20 @@ className=&quot;absolute top-20 left-10 text-cyan-400/20&quot;
             animate=&quot;animate&quot;          >
             <Atom className=&quot;w-8 h-8&quot; />
           </motion.div>
-          
+
           <motion.div,
 className=&quot;absolute top-40 right-20 text-blue-400/20&quot;
             variants={floatingVariants}
             animate=&quot;animate&quot;
-            style={{ animationDelay: '1s' }}          >
+            style={ animationDelay: '1s' }          >
             <Brain className=&quot;w-6 h-6&quot; />
           </motion.div>
-          
+
           <motion.div,
 className=&quot;absolute bottom-40 left-20 text-purple-400/20&quot;
             variants={floatingVariants}
             animate=&quot;animate&quot;
-            style={{ animationDelay: '2s' }}          >
+            style={ animationDelay: '2s' }          >
             <Rocket className=&quot;w-7 h-7&quot; />
           </motion.div>
         </motion.section>
@@ -267,23 +264,23 @@ className=&quot;text-3xl md:text-4xl font-bold text-center text-white mb-12&quot
               variants={itemVariants}            >
               Explore Our Revolutionary Services
             </motion.h2>
-            
+
             <motion.div,
 className=&quot;flex flex-wrap justify-center gap-4 mb-12&quot;
               variants={itemVariants}            >
-              {categories.map((category) => (_<motion.button,
+              {categories.map(category) => (_<motion.button,
 key={category.id}
                   onClick={_() => handleCategoryChange(category.id)}
                   className={_`px-6 py-3 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 ${
-                    selectedCategory === category.id
+                    selectedCategory = = category.id
                       ? 'bg-gradient-to-r ' + category.color + ' text-white shadow-2xl'
                       : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-600'}`}
-                  whileHover={_{ scale: 1.05}}
-                  whileTap={_{ scale: 0.95}}
+                  whileHover={_{ scale: 1.05}
+                  whileTap={_{ scale: 0.95}
                 >
                   <category.icon className=&quot;inline-block w-5 h-5 mr-2&quot; />
                   {category.name}                </motion.button>
-              ))}
+              )}
             </motion.div>
           </div>
         </motion.section>
@@ -306,7 +303,7 @@ key={service.id}
                   description={service.description}
                   category={service.category}
                   type={(service as any).type || service.category}
-                  features={service.features?.map(f => ({ name:f, description:f }))}
+                  features={service.features?.map(f => ({ name:f, description:f })}
                   slug={(service as any).slug || service.id}
                   index={index}
                   isPopular={Math.random() > 0.7}
@@ -319,7 +316,7 @@ key={service.id}
                   description={service.description}
                   category={service.category}
                   type={_(service as any).type || service.category}
-                  features={service.features?.map(f => ({ name: f, description: f}))}
+                  features={service.features?.map(f => ({ name: f, description: f})}
                   slug={_(service as any).slug || service.id}
                   index={index}
                   isPopular={Math.random() > 0.7}
@@ -329,9 +326,9 @@ key={service.id}
                   estimatedDelivery="2-4 weeks"
                   technologies={_['AI', _'Cloud', _'Security', _'Automation']}
                 />
-              ))}
+              )}
             </motion.div>
-            
+
             {getFilteredServices().length > 12 && (
               <motion.div,
 className=&quot;text-center mt-12&quot;
@@ -340,8 +337,8 @@ className=&quot;text-center mt-12&quot;
                 <Link href=&quot;/services&quot;>
                   <motion.button,
 className=&quot;px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-bold rounded-xl text-lg hover:bg-cyan-400 hover:text-black transition-all duration-300&quot;
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}                  >
+                    whileHover={ scale: 1.05 }
+                    whileTap={ scale: 0.95 }                  >
                     View All Services
                     <ArrowRight className=&quot;inline-block ml-2 w-5 h-5&quot; />
                   </motion.button>
@@ -363,46 +360,46 @@ className=&quot;text-3xl md:text-4xl font-bold text-center text-white mb-12&quot
               variants={itemVariants}            >
               Featured Revolutionary Services
             </motion.h2>
-            
+
             <motion.div,
 className=&quot;bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8&quot;
               variants={itemVariants}            >
               <AnimatePresence mode=&quot;wait&quot;>
                 <motion.div,
 key={currentServiceIndex}
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -20 }}
-                  transition={{ duration: 0.5 }}
+                  initial={ opacity: 0, x: 20 }
+                  animate={ opacity: 1, x: 0 }
+                  exit={ opacity: 0, x: -20 }
+                  transition={ duration: 0.5 }
                   className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-8 items-center&quot;
                 >
                   <div>
                     <h3 className=&quot;text-2xl font-bold text-white mb-4&quot;>
                       {featuredServices[currentServiceIndex]?.name}
                     </h3>
-                    
+
                     <p className=&quot;text-gray-300 mb-6 leading-relaxed&quot;>
                       {featuredServices[currentServiceIndex]?.description}
                     </p>
-                    
+
                     <div className=&quot;flex flex-wrap gap-4 mb-6&quot;>
-                      {featuredServices[currentServiceIndex]?.features?.slice(0, 3).map((feature, idx) => (
+                      {featuredServices[currentServiceIndex]?.features?.slice(0, 3).map(feature, idx) => (
                         <span key={idx} className=&quot;text-xs text-gray-400 bg-gray-800/50 px-3 py-1 rounded-full border border-gray-600&quot;>
                           {feature}                        </span>
-                      ))}
+                      )}
                     </div>
-                    
+
                     <Link href={_`/services/${(featuredServices[currentServiceIndex] as any)?.slug || featuredServices[currentServiceIndex]?.id}`}>
                       <motion.button,
 className=&quot;px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300&quot;
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}                      >
+                        whileHover={ scale: 1.05 }
+                        whileTap={ scale: 0.95 }                      >
                         Learn More
                         <ArrowRight className=&quot;inline-block ml-2 w-4 h-4&quot; />
                       </motion.button>
                     </a>
                   </div>
-                  
+
                   <div className=&quot;relative&quot;>
                     <div className=&quot;w-full h-64 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-xl border border-cyan-500/30 flex items-center justify-center&quot;>
                       <div className=&quot;text-center&quot;>
@@ -431,32 +428,32 @@ className=&quot;text-3xl md:text-4xl font-bold text-white mb-6&quot;
               variants={itemVariants}            >
               Ready to Transform Your Business?
             </motion.h2>
-            
+
             <motion.p,
 className=&quot;text-xl text-gray-300 mb-8&quot;
               variants={itemVariants}            >
               Join the future of technology with Zion Tech Group's revolutionary solutions. 
               Get started today and experience the power of AI consciousness and quantum computing.
             </motion.p>
-            
+
             <motion.div,
 className=&quot;flex flex-col sm:flex-row gap-4 justify-center items-center&quot;
               variants={itemVariants}            >
               <Link href=&quot;/quote&quot;>
                 <motion.button,
 className=&quot;px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-xl text-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105&quot;
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}                >
+                  whileHover={ scale: 1.05 }
+                  whileTap={ scale: 0.95 }                >
                   Get Started Today
                   <ArrowRight className=&quot;inline-block ml-2 w-5 h-5&quot; />
                 </motion.button>
               </a>
-              
+
               <Link href=&quot;/contact&quot;>
                 <motion.button,
 className=&quot;px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-bold rounded-xl text-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105&quot;
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}                >
+                  whileHover={ scale: 1.05 }
+                  whileTap={ scale: 0.95 }                >
                   Contact Us
                   <Phone className=&quot;inline-block ml-2 w-5 h-5&quot; />
                 </motion.button>
@@ -474,6 +471,6 @@ className=&quot;px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-bold round
       </AnimatePresence>
     </>
   )
-},
+,
 
 export default EnhancedHomepage,

@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import LoadingSpinner from "./LoadingSpinner";
@@ -41,7 +41,7 @@ interface LazyImageProps {;
   style?: React && React.CSSProperties;
   onLoad?: () => void;
   onError?: () => void;
-}
+
 export default function LazyImage({
   src
   alt
@@ -57,20 +57,18 @@ export default function LazyImage({
   style
   onLoad
   onError
-}: LazyImageProps) {
+: LazyImageProps) {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);
   const imgRef = useRef<HTMLDivElement>(null);
-  useEffect(() => {
+  useEffect() => {
     if (priority) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
+    const observer = new IntersectionObserver([entry]) => {
         if (entry.isIntersecting) {
           setIsInView(true);
           observer && observer.disconnect();
         }
-      }
       {
         threshold: 0.1
         rootMargin: "50px"
@@ -114,7 +112,7 @@ export default function LazyImage({
   style?: React.CSSProperties;
   on_load?: () => void;
   on_error?: () => void;
-}
+
 export default /**
  * LazyImage - Function description
  */
@@ -123,51 +121,49 @@ function LazyImage() {
   const [isInView, setIsInView] = useState (priority);
   const [has_error, setHasError] = useState (false);
   const img_ref = useRef < HTMLDivElement>(null);
-;
-  useEffect (() => {
+
+  useEffect () => {
     // Check condition
 if (return) {
   $2
-}
-    const observer = new IntersectionObserver (
-      ([entry]) => {
+
+    const observer = new IntersectionObserver ([entry]) => {
         // Check condition
 if ( {) {
   $2
-}
+
           setIsInView (true);
           observer.disconnect ();
-        }
-      },
+        },
       {
         threshold: 0.1,
         root_margin: "50px",
       },
     );
-;
+
     // Check condition
 if ( {) {
   $2
-}
+
       observer.observe (img_ref.current);
     }
     return () => observer.disconnect ();
   }, [priority]);
-;
+
   const handle_load = () =>: any {
     setIsLoaded (true);
     on_load?.();
   }
-;
+
   const handle_error = () =>: any {
     setHasError (true);
     on_error?.();
   }
-;
+
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <div;
         ref={img_ref}
@@ -207,4 +203,3 @@ if ( {) {
       )}
     </div>;
   );
-}

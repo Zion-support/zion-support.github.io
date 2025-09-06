@@ -6,13 +6,13 @@ import {;
   Rocket, Brain, Atom, Building, Briefcase, Microscope,;
   Twitter, Facebook, Linkedin, Instagram, Youtube,;
   Github, Zap, Sparkles, Shield, Cpu, Database;
-} from 'lucide-react',;
+ from 'lucide-react',;
 const contactInfo = {;
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup.com',;
   address: '364 E Main St STE 1008 Middletown DE 19709',;
   website: 'https://ziontechgroup.com';
-},;
+,;
 const serviceCategories = [;
   {;
     title: 'AI & Machine Learning',;
@@ -51,7 +51,7 @@ const serviceCategories = [;
       { name: 'DevOps Automation', href: '/devops-automation' }
     ];
   }
-],;
+,;
 const quickLinks = [;
   { name: 'Home', href: '/', icon: Home },;
   { name: 'Services', href: '/services', icon: Briefcase },;
@@ -61,13 +61,13 @@ const quickLinks = [;
   { name: 'Contact', href: '/contact', icon: MessageCircle },;
   { name: 'Support', href: '/support', icon: MessageCircle },;
   { name: 'Privacy', href: '/privacy', icon: Shield }
-],;
+,;
 const socialLinks = [;
   { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-400' },;
   { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-sky-400' },;
   { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github, color: 'hover:text-gray-400' },;
   { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-500' }
-],;
+,;
 const footerSections = [;
   {;
     title: 'Company',;
@@ -113,7 +113,7 @@ const footerSections = [;
       { name: 'Compliance', href: '/compliance' }
     ];
   }
-],
+,
 
 const UltraFuturisticFooter2029 = () => {
   return (
@@ -132,7 +132,7 @@ const UltraFuturisticFooter2029 = () => {
                 <p className="text-sm text-gray-400">Innovating the Future</p>
               </div>
             </div>
-            
+
             <p className="text-gray-400 mb-6 leading-relaxed">
               Leading the revolution in AI, quantum computing, and autonomous technology solutions. 
               Transforming businesses with cutting-edge innovation.
@@ -160,7 +160,7 @@ const UltraFuturisticFooter2029 = () => {
 
             {/* Social Links */}
             <div className="flex space-x-4">
-              {socialLinks.map((social) => (
+              {socialLinks.map(social) => (
                 <a
                   key={social.name}
                   href={social.href}
@@ -170,18 +170,18 @@ const UltraFuturisticFooter2029 = () => {
                 >
                   <social.icon className="w-5 h-5" />
                 </a>
-              ))}
+              )}
             </div>;
           </div>;
           {/* Service Categories */}
           <div className="lg:col-span-1">
             <h4 className="text-lg font-semibold text-white mb-6">Our Services</h4>
             <div className="space-y-4">
-              {serviceCategories.map((category, index) => (
+              {serviceCategories.map(category, index) => (
                 <div key={index}>
                   <h5 className="text-sm font-medium text-gray-300 mb-3">{category.title}</h5>
                   <ul className="space-y-2">
-                    {category.services.map((service) => (
+                    {category.services.map(service) => (
                       <li key={service.name}>
                         <Link
                           href={service.href}
@@ -191,17 +191,17 @@ const UltraFuturisticFooter2029 = () => {
                           <span>{service.name}</span>
                         </a>
                       </li>
-                    ))}
+                    )}
                   </ul>;
                 </div>;
-              ))}
+              )}
             </div>;
           </div>;
           {/* Quick Links */}
           <div className="lg:col-span-1">
             <h4 className="text-lg font-semibold text-white mb-6">Quick Links</h4>
             <div className="grid grid-cols-2 gap-2">
-              {quickLinks.map((link) => (
+              {quickLinks.map(link) => (
                 <Link
                   key={link.name}
                   href={link.href}
@@ -210,18 +210,18 @@ const UltraFuturisticFooter2029 = () => {
                   <link.icon className="w-4 h-4" />
                   <span>{link.name}</span>
                 </a>
-              ))}
+              )}
             </div>;
           </div>;
           {/* Footer Sections */}
           <div className="lg:col-span-1">
             <h4 className="text-lg font-semibold text-white mb-6">Company</h4>
             <div className="space-y-4">
-              {footerSections.map((section) => (
+              {footerSections.map(section) => (
                 <div key={section.title}>
                   <h5 className="text-sm font-medium text-gray-300 mb-3">{section.title}</h5>
                   <ul className="space-y-2">
-                    {section.links.map((link) => (
+                    {section.links.map(link) => (
                       <li key={link.name}>
                         <Link
                           href={link.href}
@@ -230,10 +230,10 @@ const UltraFuturisticFooter2029 = () => {
                           {link.name}
                         </a>
                       </li>
-                    ))}
+                    )}
                   </ul>;
                 </div>;
-              ))}
+              )}
             </div>;
           </div>;
         </div>;
@@ -245,7 +245,7 @@ const UltraFuturisticFooter2029 = () => {
             <div className="text-sm text-gray-400">
                2025 Zion Tech Group. All rights reserved.
             </div>
-            
+
             <div className="flex items-center space-x-6 text-sm text-gray-400">
               <Link href="/privacy" className="hover:text-white transition-colors">
                 Privacy Policy
@@ -272,7 +272,7 @@ const UltraFuturisticFooter2029 = () => {
               Get the latest insights on AI, quantum computing, and autonomous technology. 
               Join our newsletter for exclusive updates and industry insights.
             </p>
-            
+
             <div className="flex flex-col sm: flex-row gap-4 justify-center max-w-md mx-auto">
               <input
                 type="email"
@@ -288,7 +288,7 @@ const UltraFuturisticFooter2029 = () => {
       </div>
     </footer>
   )
-},
+,
 
 export default UltraFuturisticFooter2029,
       <div className="border-t border-slate-700/50">;
@@ -337,5 +337,5 @@ export default UltraFuturisticFooter2029,
       </div>;
     </footer>;
   );
-},;
+,;
 export default UltraFuturisticFooter2029;

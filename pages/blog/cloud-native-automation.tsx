@@ -220,7 +220,7 @@ export default function CloudNativeAutomation() {
       </div>
     </>
   )
-}
+
 import Head from 'next / head',
 import Link from 'next / link',
 import React from 'react',
@@ -441,4 +441,3 @@ function CloudNativeAutomation() {
         </main>;
       </div>;
     </>);
-}

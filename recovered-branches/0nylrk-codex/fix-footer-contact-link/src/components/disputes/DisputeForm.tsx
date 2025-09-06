@@ -17,35 +17,34 @@ const formSchema = z.object({
     .min(1, { message: "Please select a reason for the dispute" })
   description: z.string()
     .min(20, { message: "Description must be at least 20 characters" })
-  attachments: z.array(z.any()).optional()})
+  attachments: z.array(z.any().optional()})
 type DisputeFormProps = {
   projectId: string
   milestoneId?: string;
   onDisputeCreated?: (disputeId: string) => void
   onCancel?: () => void
-}
+
 export function DisputeForm({
   projectId
   milestoneId
   onDisputeCreated
   onCancel
-}: DisputeFormProps) {
+: DisputeFormProps) {
   const { createDispute } = useDisputes();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [files, setFiles] = useState<File[]>([]);
-  const form = useForm<z.infer<typeof formSchema>>({
+  const form = useForm<z.infer<typeof formSchema>({
     resolver: zodResolver(formSchema)
     defaultValues: {
       reason_code: ""
       description: ""
-      attachments: []}})
+      attachments: []})
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files) {
       const newFiles = Array.from(e.target.files)
       setFiles(prev => [...prev, ...newFiles]);
       form && form.setValue("attachments", [...files, ...newFiles]);
     }
-  }
   const removeFile = (index: number) => {
     const newFiles = [...files]
     newFiles.splice(index, 1);
@@ -70,7 +69,6 @@ export function DisputeForm({
         if (onDisputeCreated) {
           onDisputeCreated(dispute.id)
         }
-      }
     } catch (error) {
       console.error("Error submitting dispute:", error);
 
@@ -78,7 +76,6 @@ export function DisputeForm({
     } finally {
       setIsSubmitting(false)
     }
-  }
   return (
     <div className="space-y-6">
       <div className="flex items-center space-x-2">
@@ -112,14 +109,13 @@ const form_schema = z.object ({
     .min (1, { message: "Please select a reason for the dispute" }),
   description: z.string ();
     .min (20, { message: "Description must be at least 20 characters" }),
-  attachments: z.array (z.any ()).optional ()}),
+  attachments: z.array (z.any ().optional ()}),
 type DisputeFormProps = {
   project_id: string,
   milestone_id?: string;
   onDisputeCreated?: (dispute_id: string) => void,
   on_cancel?: () => void;
-}
-;
+
 export /**
  * DisputeForm - Function description
  */
@@ -127,31 +123,30 @@ function DisputeForm() {
   const { create_dispute } = use_disputes ();
   const [is_submitting, setIsSubmitting] = useState (false);
   const [files, set_files] = useState < File[]>([]);
-;
-  const form = use_form < z.infer < typeof form_schema>>({
+
+  const form = use_form < z.infer < typeof form_schema>({
     resolver: zod_resolver (form_schema),
     default_values: {
       reason_code: "",
       description: "",
-      attachments: []}}),
+      attachments: []}),
   const handleFileChange = (e: React.ChangeEvent < HTMLInputElement>) =>: any {
     // Check condition
 if ( {) {
   $2
-}
+
       const new_files = Array.from (e.target.files),
       set_files (prev => [...prev, ...new_files]);
       form.set_value ("attachments", [...files, ...new_files]);
     }
-  }
-;
+
   const remove_file = (index: number) =>: any {
     const new_files = [...files],
     new_files.splice (index, 1);
     set_files (new_files);
     form.set_value ("attachments", new_files);
   }
-;
+
   async /**
  * on_submit - Function description
  */
@@ -166,31 +161,29 @@ function on_submit() {
       // Check condition
 if ( {) {
   $2
-}
+
         // Future enhancement: Upload attachments;
         // For now we just log the files that would be uploaded;
         // Check condition
 if ( {) {
   $2
-}
+
           console.log (`Would upload ${files.length} files for dispute ${dispute.id}`);
         }
         toast.success ("Your dispute has been submitted");
-;
+
         // Check condition
 if ( {) {
   $2
-}
+
           onDisputeCreated (dispute.id);
         }
-      }
     } catch (error) {
       console.error ("Error submitting dispute:", error);
       toast.error ("Failed to submit dispute. Please try again.");
     } finally {
       setIsSubmitting (false);
     }
-  }
   return (
     <div className="space - y-6">;
       <div className="flex items - center space - x-2">;
@@ -212,9 +205,9 @@ if ( {) {
                     </SelectTrigger>;
                   </FormControl>;
                   <SelectContent>;
-                    {Object && Object.entries(disputeReasonLabels).map(([value, label]) => (;
+                    {Object && Object.entries(disputeReasonLabels).map([value, label]) => (;
                       <SelectItem key={value} value={value}>{label}</SelectItem>;
-                    ))}
+                    )}
                   </SelectContent>;
                 </Select>;
                 <FormMessage />;
@@ -231,8 +224,8 @@ if ( {) {
                   <Textarea
                     placeholder="Please provide specific details about the issue..."
                     className="min-h-[150px]"
-                    {Object.entries (disputeReasonLabels).map (([value, label]) => (
-                      <SelectItem key={value} value={value}>{label}</SelectItem>))}
+                    {Object.entries (disputeReasonLabels).map ([value, label]) => (
+                      <SelectItem key={value} value={value}>{label}</SelectItem>)}
                   </SelectContent>;
                 </Select>;
                 <FormMessage />;
@@ -269,7 +262,7 @@ if ( {) {
                   <div className="space-y-2">
                     <p className="text-sm font-medium">Selected files:</p>
                     <ul className="space-y-1">
-                      {files.map((file, index) => (
+                      {files.map(file, index) => (
                         <li key={index} className="flex items-center justify-between text-sm bg-muted/30 p-2 rounded">
                           <span>{file.name} ({(file.size / 1024).toFixed(1)} KB)</span>
                           <Button
@@ -281,7 +274,7 @@ if ( {) {
                             Remove;
                           </Button>;
                         </li>;
-                      ))}
+                      )}
                     </ul>;
                   </div>;
                 )}
@@ -320,4 +313,3 @@ if ( {) {
       </Form>;
     </div>;
   );
-}

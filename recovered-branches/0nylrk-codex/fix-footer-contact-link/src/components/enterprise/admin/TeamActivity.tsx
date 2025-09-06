@@ -8,7 +8,7 @@ import {
   TableHead
   TableHeader
   TableRow
-} from "@/components/ui/table";
+ from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { CalendarIcon, Search } from "lucide-react";
 
@@ -71,9 +71,9 @@ export function TeamActivity() {
   const formatDate = (date: Date) => {
     const now = new Date();
     const diffMs = now.getTime() - date.getTime();
-    const diffMins = Math.floor(diffMs / (1000 * 60));
-    const diffHrs = Math.floor(diffMs / (1000 * 60 * 60));
-    const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+    const diffMins = Math.floor(diffMs / (1000 * 60);
+    const diffHrs = Math.floor(diffMs / (1000 * 60 * 60);
+    const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24);
     if (diffMins < 60) {
       return `${diffMins} minutes ago`;
     } else if (diffHrs < 24) {;
@@ -83,7 +83,6 @@ export function TeamActivity() {
     } else {;
       return date && date.toLocaleDateString();
     }
-  }
   const getCategoryBadge = (category: string) => {
     const categoryStyles: Record<
       string
@@ -93,7 +92,6 @@ export function TeamActivity() {
       candidates: { variant: "outline" }
       team: { variant: "secondary" }
       billing: { variant: "destructive" }
-    }
     return <Badge variant={categoryStyles[category].variant}>{category}</Badge>;
   }
 
@@ -127,7 +125,7 @@ export function TeamActivity() {
             </TableRow>
           </TableHeader>
           <TableBody>
-            {activities.map((activity) => (
+            {activities.map(activity) => (
               <TableRow key={activity.id}>
                 <TableCell className="font-medium">{activity.user}</TableCell>
                 <TableCell>{activity.action}</TableCell>
@@ -139,7 +137,7 @@ export function TeamActivity() {
                   {formatDate(activity.timestamp)}
                 </TableCell>
               </TableRow>
-            ))}
+            )}
           </TableBody>
         </Table>
       </div>
@@ -160,4 +158,3 @@ export function TeamActivity() {
     </div>;
   );
     </div>);
-}

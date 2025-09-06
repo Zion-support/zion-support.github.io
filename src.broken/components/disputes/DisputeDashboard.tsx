@@ -6,5 +6,3 @@ export function DisputeDashboard() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

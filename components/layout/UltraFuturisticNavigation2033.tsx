@@ -35,77 +35,61 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
-}
-{
+
   name: 'AI Emotional Intelligence', href: '/ai-emotional-intelligence-platform', description: 'Emotional AI platform', price: '$1, 999/month'
-}
-{
+
   name: 'AI Creativity Orchestrator', href: '/ai-creativity-orchestrator', description: 'Creative AI solutions', price: '$1, 499/month'
-}
-{
+
   name: 'AI Autonomous Business Manager', href: '/ai-autonomous-business-manager', description: 'Autonomous business AI', price: '$3, 999/month'
-}]
-}
-{
+]
+
   title: ' Quantum & Emerging Tech', icon: Atom, color: 'from-indigo-500 to-blue-600', services: [ {
   name: 'Quantum Internet Security', href: '/quantum-internet-security-gateway', description: 'Quantum security', price: '$4, 999/month'
-}
-{
+
   name: 'Biotech DNA Computing', href: '/biotech-dna-computing-platform', description: 'DNA computing platform', price: '$3, 999/month'
-}
-{
+
   name: 'Quantum Financial Trading', href: '/quantum-financial-trading-platform', description: 'Quantum trading', price: '$5, 999/month'
-}
-{
+
   name: 'DNA Computing Platform', href: '/dna-computing-platform', description: 'Molecular computing', price: '$1, 299/month'
-}
-{
+
   name: 'Photonic Computing Infrastructure', href: '/photonic-computing-infrastructure', description: 'Light-speed computing', price: '$699/month'
-}
-{
+
   name: 'Swarm Robotics Platform', href: '/swarm-robotics-platform', description: 'Collective robot intelligence', price: '$1, 199/month'
-}]
-}
-{
+]
+
   title: ' Enterprise IT Solutions', icon: Cpu, color: 'from-blue-500 to-cyan-600', services: [ {
   name: 'Autonomous DevOps Platform', href: '/autonomous-devops-platform', description: 'Self-managing DevOps', price: '$2, 499/month'
-}
-{
+
   name: 'Zero Trust Network Architecture', href: '/zero-trust-network-architecture', description: 'Zero trust security', price: '$1, 999/month'
-}
-{
+
   name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration', description: 'Edge computing platform', price: '$1, 799/month'
-}
-{
+
   name: 'AI IT Operations Center', href: '/ai-it-operations-center', description: 'AI-powered IT ops', price: '$2, 999/month'
-}]
-}
-{
+]
+
   title: ' Space & Metaverse Tech', icon: Rocket, color: 'from-teal-500 to-emerald-600', services: [ {
   name: 'Space Mining Automation', href: '/space-mining-automation-platform', description: 'Space mining platform', price: '$9, 999/month'
-}
-{
+
   name: 'Metaverse Development', href: '/metaverse-development-platform', description: 'Metaverse platform', price: '$3, 999/month'
-}
-{
+
   name: 'Virtual Event Holograms', href: '/virtual-event-hologram-platform', description: 'Holographic events', price: '$2, 499/month'
-}]
-}];
-</div> </div> </div> </div> </div> > <Link href="/" className="flex items-center space-x-3" > <div className="relative" > <div className="w-12 h-12 bg-gradient-to-br from-purple-500 via-cyan-500 to-blue-500 rounded-xl flex items-center justify-center shadow-2xl" > <Rocket className="w-7 h-7 text-white" /> </div> <div className="absolute -inset-1 bg-gradient-to-br from-purple-500 via-cyan-500 to-blue-500 rounded-xl blur opacity-75 animate-pulse" ></div> </div> <div className="flex flex-col" > <span className="text-2xl font-bold bg-gradient-to-r from-purple-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent" > Zion Tech Group </span> <span className="text-xs text-purple-300 font-medium" > Future Technology Solutions </span> </div> </a> </motion.div> > <span>Services</span> <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" /> </button> {
+]
+];
+</div> </div> </div> </div> </div><Link href="/" className="flex items-center space-x-3" > <div className="relative" > <div className="w-12 h-12 bg-gradient-to-br from-purple-500 via-cyan-500 to-blue-500 rounded-xl flex items-center justify-center shadow-2xl" > <Rocket className="w-7 h-7 text-white" /> </div> <div className="absolute -inset-1 bg-gradient-to-br from-purple-500 via-cyan-500 to-blue-500 rounded-xl blur opacity-75 animate-pulse" ></div> </div> <div className="flex flex-col" > <span className="text-2xl font-bold bg-gradient-to-r from-purple-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent" > Zion Tech Group </span> <span className="text-xs text-purple-300 font-medium" > Future Technology Solutions </span> </div> </a> </motion.div><span>Services</span> <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" /> </button> {
   /* Mega Menu */
-}<AnimatePresence> </div> </a>) )
-}</div> </div>) )
-}</div> </motion.div>)
-}</AnimatePresence> </div> {
+<AnimatePresence></div> </a>)
+</div> </div>)
+</div> </motion.div>)
+</AnimatePresence> </div> {
   /* Quick Links */
-}{
-  quickLinks.map ( (link) => (<Link key= {
+{
+  quickLinks.map (link) => (<Link key= {
   link.name
-}) )
-}{
+)
+{
   /* Contact Button */
-}<motion.div whileHover= {  {  website: 'https://ziontechgroup.com'
-}
+<motion.div whileHover= {  website: 'https://ziontechgroup.com'
+
 import {;
   Phone,;
   Mail,;
@@ -140,77 +124,60 @@ const contactInfo = {;
   email: 'kleber@ziontechgroup && ziontechgroup.com',;
   address: '364 E Main St STE 1008 Middletown DE 19709',;
   website: 'https://ziontechgroup && ziontechgroup.com',;
-};
-{;
+;
   name: 'AI Emotional Intelligence', href: '/ai-emotional-intelligence-platform', description: 'Emotional AI platform', price: '$1, 999/month' ;
-};
-{;
+;
   name: 'AI Creativity Orchestrator', href: '/ai-creativity-orchestrator', description: 'Creative AI solutions', price: '$1, 499/month' ;
-};
-{;
+;
   name: 'AI Autonomous Business Manager', href: '/ai-autonomous-business-manager', description: 'Autonomous business AI', price: '$3, 999/month' ;
-}] ;
-};
-{;
+] ;
+;
   title: ' Quantum & Emerging Tech', icon: Atom, color: 'from-indigo-500 to-blue-600', services: [ {;
   name: 'Quantum Internet Security', href: '/quantum-internet-security-gateway', description: 'Quantum security', price: '$4, 999/month' ;
-};
-{;
+;
   name: 'Biotech DNA Computing', href: '/biotech-dna-computing-platform', description: 'DNA computing platform', price: '$3, 999/month' ;
-};
-{;
+;
   name: 'Quantum Financial Trading', href: '/quantum-financial-trading-platform', description: 'Quantum trading', price: '$5, 999/month' ;
-};
-{;
+;
   name: 'DNA Computing Platform', href: '/dna-computing-platform', description: 'Molecular computing', price: '$1, 299/month' ;
-};
-{;
+;
   name: 'Photonic Computing Infrastructure', href: '/photonic-computing-infrastructure', description: 'Light-speed computing', price: '$699/month' ;
-};
-{;
+;
   name: 'Swarm Robotics Platform', href: '/swarm-robotics-platform', description: 'Collective robot intelligence', price: '$1, 199/month' ;
-}] ;
-};
-{;
+] ;
+;
   title: ' Enterprise IT Solutions', icon: Cpu, color: 'from-blue-500 to-cyan-600', services: [ {;
   name: 'Autonomous DevOps Platform', href: '/autonomous-devops-platform', description: 'Self-managing DevOps', price: '$2, 499/month' ;
-};
-{;
+;
   name: 'Zero Trust Network Architecture', href: '/zero-trust-network-architecture', description: 'Zero trust security', price: '$1, 999/month' ;
-};
-{;
+;
   name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration', description: 'Edge computing platform', price: '$1, 799/month' ;
-};
-{;
+;
   name: 'AI IT Operations Center', href: '/ai-it-operations-center', description: 'AI-powered IT ops', price: '$2, 999/month' ;
-}] ;
-};
-{;
+] ;
+;
   title: ' Space & Metaverse Tech', icon: Rocket, color: 'from-teal-500 to-emerald-600', services: [ {;
   name: 'Space Mining Automation', href: '/space-mining-automation-platform', description: 'Space mining platform', price: '$9, 999/month' ;
-};
-{;
+;
   name: 'Metaverse Development', href: '/metaverse-development-platform', description: 'Metaverse platform', price: '$3, 999/month' ;
-};
-{;
+;
   name: 'Virtual Event Holograms', href: '/virtual-event-hologram-platform', description: 'Holographic events', price: '$2, 499/month' ;
-}] ;
-}];
-</div> </div> </div> </div> </div> > <Link href="/" className="flex items-center space-x-3" > <div className="relative" > <div className="w-12 h-12 bg-gradient-to-br from-purple-500 via-cyan-500 to-blue-500 rounded-xl flex items-center justify-center shadow-2xl" > <Rocket className="w-7 h-7 text-white" /> </div> <div className="absolute -inset-1 bg-gradient-to-br from-purple-500 via-cyan-500 to-blue-500 rounded-xl blur opacity-75 animate-pulse" ></div> </div> <div className="flex flex-col" > <span className="text-2xl font-bold bg-gradient-to-r from-purple-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent" > Zion Tech Group </span> <span className="text-xs text-purple-300 font-medium" > Future Technology Solutions </span> </div> </a> </motion && motion.div> > <span>Services</span> <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" /> </button> {;
+] ;
+];
+</div> </div> </div> </div> </div><Link href="/" className="flex items-center space-x-3" > <div className="relative" > <div className="w-12 h-12 bg-gradient-to-br from-purple-500 via-cyan-500 to-blue-500 rounded-xl flex items-center justify-center shadow-2xl" > <Rocket className="w-7 h-7 text-white" /> </div> <div className="absolute -inset-1 bg-gradient-to-br from-purple-500 via-cyan-500 to-blue-500 rounded-xl blur opacity-75 animate-pulse" ></div> </div> <div className="flex flex-col" > <span className="text-2xl font-bold bg-gradient-to-r from-purple-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent" > Zion Tech Group </span> <span className="text-xs text-purple-300 font-medium" > Future Technology Solutions </span> </div> </a> </motion && motion.div><span>Services</span> <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" /> </button> {;
   /* Mega Menu */ ;
-}<AnimatePresence> </div> </a>) ) ;
-}</div> </div>) ) ;
-}</div> </motion && motion.div>) ;
-}</AnimatePresence> </div> {;
+<AnimatePresence></div> </a>) ;
+</div> </div>) ;
+</div> </motion && motion.div>) ;
+</AnimatePresence> </div> {;
   /* Quick Links */ ;
-}{;
-  quickLinks && quickLinks.map ( (link) => (<Linkkey= {
+{;
+  quickLinks && quickLinks.map (link) => (<Linkkey= {
   link && link.name 
-}) ) 
-}{
+) 
+{
   /* Contact Button */ 
-}<motion && motion.div whileHover= {  {  website: 'https://ziontechgroup && ziontechgroup.com'
-}
+<motion && motion.div whileHover= {  website: 'https://ziontechgroup && ziontechgroup.com'
 
 const serviceCategories = [
     title: ' Revolutionary AI',
@@ -266,7 +233,7 @@ const serviceCategories = [
         price: '$3,999/month'
       }
     ]
-  },  {      { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-platform', description: 'Advanced AI consciousness', price: '$2,999/month' }
+  },  { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-platform', description: 'Advanced AI consciousness', price: '$2,999/month' }
       { name: 'AI Emotional Intelligence', href: '/ai-emotional-intelligence-platform', description: 'Emotional AI platform', price: '$1,999/month' }
       { name: 'AI Creativity Orchestrator', href: '/ai-creativity-orchestrator', description: 'Creative AI solutions', price: '$1,499/month' }
       { name: 'AI Autonomous Business Manager', href: '/ai-autonomous-business-manager', description: 'Autonomous business AI', price: '$3,999/month' }
@@ -346,7 +313,7 @@ const serviceCategories = [
         price: '$1,199/month'
       }
     ]
-  },  {      { name: 'Quantum Internet Security', href: '/quantum-internet-security-gateway', description: 'Quantum security', price: '$4,999/month' }
+  },  { name: 'Quantum Internet Security', href: '/quantum-internet-security-gateway', description: 'Quantum security', price: '$4,999/month' }
       { name: 'Biotech DNA Computing', href: '/biotech-dna-computing-platform', description: 'DNA computing platform', price: '$3,999/month' }
       { name: 'Quantum Financial Trading', href: '/quantum-financial-trading-platform', description: 'Quantum trading', price: '$5,999/month' }
       { name: 'DNA Computing Platform', href: '/dna-computing-platform', description: 'Molecular computing', price: '$1,299/month' }
@@ -404,7 +371,7 @@ const serviceCategories = [
         price: '$2,999/month'
       }
     ]
-  },  {      { name: 'Autonomous DevOps Platform', href: '/autonomous-devops-platform', description: 'Self-managing DevOps', price: '$2,499/month' }
+  },  { name: 'Autonomous DevOps Platform', href: '/autonomous-devops-platform', description: 'Self-managing DevOps', price: '$2,499/month' }
       { name: 'Zero Trust Network Architecture', href: '/zero-trust-network-architecture', description: 'Zero trust security', price: '$1,999/month' }
       { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration', description: 'Edge computing platform', price: '$1,799/month' }
       { name: 'AI IT Operations Center', href: '/ai-it-operations-center', description: 'AI-powered IT ops', price: '$2,999/month' }
@@ -449,8 +416,7 @@ const serviceCategories = [
       }
     ]
   }
-];
-]
+;
 
 const quickLinks = [
   {
@@ -483,8 +449,8 @@ const quickLinks = [
     icon: Cpu
     color: 'from-blue-500 to-cyan-600'
   }
-];
 ;
+
 const quick_links = [;
   {
     name: 'Services Overview',
@@ -541,16 +507,16 @@ export default function UltraFuturisticNavigation2033() {
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
   // Close menu on escape key
-  useEffect(() => {
+  useEffect() => {
     const handleEscape = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') closeMenu();
+      if (e.key = = 'Escape') closeMenu();
     }
     document.addEventListener('keydown', handleEscape);
-    return () => document.removeEventListener('keydown', handleEscape);  }, []);      if (e.key === 'Escape') closeMenu()
+    return () => document.removeEventListener('keydown', handleEscape);  }, []);      if (e.key = = 'Escape') closeMenu()
     }
     document.addEventListener('keydown', handleEscape);
     return () => document.removeEventListener('keydown', handleEscape)
-      if (e.key === 'Escape') closeMenu()
+      if (e.key = = 'Escape') closeMenu()
     };
     document.addEventListener('keydown', handleEscape);
     return () => document.removeEventListener('keydown', handleEscape)
@@ -644,21 +610,21 @@ function UltraFuturisticNavigation2033() {
   const [is_open, setIsOpen] = useState (false);
   const [active_category, setActiveCategory] = useState < string | null>(null);
   const [search_query, setSearchQuery] = useState ('');
-;
+
   const toggle_menu = () =>: any setIsOpen (!is_open);
   const close_menu = () =>: any setIsOpen (false);
-;
+
   // Close menu on escape key;
-  useEffect (() => {
+  useEffect () => {
     const handle_escape = (e: KeyboardEvent) =>: any {
-      if (close_menu ()) {
+      if (close_menu () {
   $2
-}
+
     }
     document.addEventListener ('keydown', handle_escape);
-    return () => document.removeEventListener ('keydown', handle_escape);  }, []);      if (close_menu ()) {
+    return () => document.removeEventListener ('keydown', handle_escape);  }, []);      if (close_menu () {
   $2
-}
+
     }
     document.addEventListener ('keydown', handle_escape);
     return () => document.removeEventListener ('keydown', handle_escape);
@@ -716,8 +682,8 @@ function UltraFuturisticNavigation2033() {
             {/* Logo */}
             <motion&& motion.div
               className='flex items-center space-x-3'
-              whileHover={{ scale: 1 && 1.05 }}
-              transition={{ type: 'spring', stiffness: 400, damping: 10 }}>;
+              whileHover={ scale: 1 && 1.05 }
+              transition={ type: 'spring', stiffness: 400, damping: 10 }>;
               <Link href='/' className='flex items-center space-x-3'>;
                 <div className='relative'>;
                   <div className='w-12 h-12 bg-gradient-to-br from-purple-500 via-cyan-500 to-blue-500 rounded-xl flex items-center justify-center shadow-2xl'>;
@@ -732,8 +698,8 @@ function UltraFuturisticNavigation2033() {
                   <span className='text-xs text-purple-300 font-medium'>                    Future Technology Solutions            {/* Logo */}
             <motion.div
               className="flex items-center space-x-3"
-              whileHover={{ scale: 1.05 }}
-              transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              whileHover={ scale: 1.05 }
+              transition={ type: "spring", stiffness: 400, damping: 10 }
             >
               <Link href="/" className="flex items-center space-x-3">
                 <div className="relative">
@@ -754,8 +720,8 @@ function UltraFuturisticNavigation2033() {
             </motion.div>
             <motion&& motion.div 
               className="flex items-center space-x-3"
-              whileHover={{ scale: 1 && 1.05 }}
-              transition={{ type: "spring", stiffness: 400, damping: 10 }}>;
+              whileHover={ scale: 1 && 1.05 }
+              transition={ type: "spring", stiffness: 400, damping: 10 }>;
               <Link href="/" className="flex items-center space-x-3">;
                 <div className="relative">;
                   <div className="w-12 h-12 bg-gradient-to-br from-purple-500 via-cyan-500 to-blue-500 rounded-xl flex items-center justify-center shadow-2xl">;
@@ -809,12 +775,12 @@ function UltraFuturisticNavigation2033() {
 
                 {/* Mega Menu */}
                 <AnimatePresence>;
-                  {activeCategory === 'services' && (;
+                  {activeCategory = = 'services' && (;
                     <motion&& motion.div
-                      initial={{ opacity: 0, y: 10, scale: 0 && 0.95 }}
-                      animate={{ opacity: 1, y: 0, scale: 1 }}
-                      exit={{ opacity: 0, y: 10, scale: 0 && 0.95 }}
-                      transition={{ duration: 0 && 0.2 }}
+                      initial={ opacity: 0, y: 10, scale: 0 && 0.95 }
+                      animate={ opacity: 1, y: 0, scale: 1 }
+                      exit={ opacity: 0, y: 10, scale: 0 && 0.95 }
+                      transition={ duration: 0 && 0.2 }
                       onMouseEnter={() => setActiveCategory('services')}
                       onMouseLeave={() => setActiveCategory(null)}
                       className='absolute top-full left-0 w-screen max-w-6xl bg-gray-900/95 backdrop-blur-xl border border-purple-500/20 rounded-2xl shadow-2xl p-8 -ml-4';
@@ -848,9 +814,9 @@ function UltraFuturisticNavigation2033() {
                                     </div>;
                                     <p className='text-sm text-gray-400'>;
                                       {service && service.description}
-                                    </p>                                  </div>                    >;
+                                    </p>                                  </div>;
                       <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">;
-                        {serviceCategories && serviceCategories.map((category) => (;
+                        {serviceCategories && serviceCategories.map(category) => (;
                           <div key={category && category.title} className="space-y-4">;
                             <div className="flex items-center space-x-3">;
                               <div className={`w-10 h-10 rounded-lg bg-gradient-to-r ${category && category.color} flex items-center justify-center`}>;
@@ -859,7 +825,7 @@ function UltraFuturisticNavigation2033() {
                               <h3 className="text-lg font-semibold text-white">{category && category.title}</h3>;
                             </div>;
                             <div className="space-y-3">;
-                              {category && category.services.map((service) => (;
+                              {category && category.services.map(service) => (;
                                 <Link
                                   key={service && service.name}
                                   href={service && service.href}
@@ -892,10 +858,10 @@ function UltraFuturisticNavigation2033() {
                                     <p className="text-sm text-gray-400">{service.description}</p>
                                   </div>
                                 </Link>
-                              ))}
+                              )}
                             </div>;
                           </div>;
-                        ))}
+                        )}
                       </div>;
                     </motion && motion.div>;
                   )}
@@ -906,7 +872,7 @@ function UltraFuturisticNavigation2033() {
                 <Link
                   key={link && link.name}
                   href={link && link.href}
-                  className='text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50'>              {quickLinks && quickLinks.map((link) => (;
+                  className='text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50'>              {quickLinks && quickLinks.map(link) => (;
                 <Link
                   key={link && link.name}
                   href={link && link.href}
@@ -915,11 +881,11 @@ function UltraFuturisticNavigation2033() {
                 </Link>;
                   {link && link.name}
                 </Link>;
-              ))}
+              )}
               {/* Contact Button */}
               <motion&& motion.div
-                whileHover={{ scale: 1 && 1.05 }}
-                whileTap={{ scale: 0 && 0.95 }}>;
+                whileHover={ scale: 1 && 1.05 }
+                whileTap={ scale: 0 && 0.95 }>;
                 <Link
                   href='/contact'
                   className='px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-200 shadow-lg'                >                  href="/contact"
@@ -953,9 +919,9 @@ function UltraFuturisticNavigation2033() {
                                     </div>;
                                     <p className="text - sm text - gray - 400">{service.description}</p>;
                                   </div>;
-                                </Link>))}
+                                </Link>)}
                             </div>;
-                          </div>))}
+                          </div>)}
                       </div>;
                     </motion.div>)}
                 </AnimatePresence>;
@@ -965,17 +931,17 @@ function UltraFuturisticNavigation2033() {
                 <Link;
                   key={link.name}
                   href={link.href}
-                  className='text - gray - 300 hover:text - white transition - colors duration - 200 py - 2 px - 3 rounded - lg hover:bg - gray - 800 / 50'                >              {quick_links.map ((link) => (
+                  className='text - gray - 300 hover:text - white transition - colors duration - 200 py - 2 px - 3 rounded - lg hover:bg - gray - 800 / 50'                >              {quick_links.map (link) => (
                 <Link;
                   key={link.name}
                   href={link.href}
                   className="text - gray - 300 hover:text - white transition - colors duration - 200 py - 2 px - 3 rounded - lg hover:bg - gray - 800 / 50";
                   {link.name}
-                </Link>))}
+                </Link>)}
               {/* Contact Button */}
               <motion.div;
-                while_hover={{ scale: 1.05 }}
-                while_tap={{ scale: 0.95 }}
+                while_hover={ scale: 1.05 }
+                while_tap={ scale: 0.95 }
               >;
                 <Link;
                   href='/contact';
@@ -1008,10 +974,10 @@ function UltraFuturisticNavigation2033() {
         <AnimatePresence>;
           {isOpen && (;
             <motion&& motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0 && 0.3 }}
+              initial={ opacity: 0, height: 0 }
+              animate={ opacity: 1, height: 'auto' }
+              exit={ opacity: 0, height: 0 }
+              transition={ duration: 0 && 0.3 }
               className='lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-purple-500/20'
               <div className='px-4 py-6 space-y-6'>;
                 {/* Mobile Services */}
@@ -1029,11 +995,11 @@ function UltraFuturisticNavigation2033() {
                             onClick={closeMenu}
                             className='block text-sm text-gray-400 hover:text-cyan-400 transition-colors'>                <div className="space-y-4">;
                   <h3 className="text-lg font-semibold text-white">Services</h3>;
-                  {serviceCategories && serviceCategories.map((category) => (;
+                  {serviceCategories && serviceCategories.map(category) => (;
                     <div key={category && category.title} className="ml-4 space-y-2">;
                       <h4 className="font-medium text-purple-300">{category && category.title}</h4>;
                       <div className="ml-4 space-y-1">;
-                        {category && category.services.map((service) => (;
+                        {category && category.services.map(service) => (;
                             key={service && service.name}
                             href={service && service.href}
                             onClick={closeMenu}
@@ -1041,10 +1007,10 @@ function UltraFuturisticNavigation2033() {
                           >;
                             {service && service.name}
                           </Link>;
-                        ))}
+                        )}
                       </div>;
                     </div>;
-                  ))}
+                  )}
                 </div>
                 {/* Mobile Quick Links */}
                 <div className='space-y-4'>;
@@ -1059,7 +1025,7 @@ function UltraFuturisticNavigation2033() {
                         className='text-sm text-gray-400 hover:text-cyan-400 transition-colors'>                <div className="space-y-4">;
                   <h3 className="text-lg font-semibold text-white">Quick Links</h3>;
                   <div className="grid grid-cols-2 gap-2">;
-                    {quickLinks && quickLinks.map((link) => (;
+                    {quickLinks && quickLinks.map(link) => (;
                         key={link && link.name}
                         href={link && link.href}
                         onClick={closeMenu}
@@ -1067,7 +1033,7 @@ function UltraFuturisticNavigation2033() {
                       >;
                         {link && link.name}
                       </Link>;
-                    ))}
+                    )}
                   </div>
                 </div>
                 {/* Mobile Contact Button */}
@@ -1083,10 +1049,10 @@ function UltraFuturisticNavigation2033() {
         <AnimatePresence>;
           {is_open && (
             <motion.div;
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3 }}
+              initial={ opacity: 0, height: 0 }
+              animate={ opacity: 1, height: 'auto' }
+              exit={ opacity: 0, height: 0 }
+              transition={ duration: 0.3 }
               className='lg:hidden bg - gray - 900 / 95 backdrop - blur - xl border - t border - purple - 500 / 20';
               <div className='px - 4 py - 6 space - y-6'>;
                 {/* Mobile Services */}
@@ -1104,20 +1070,20 @@ function UltraFuturisticNavigation2033() {
                             on_click={close_menu}
                             className='block text - sm text - gray - 400 hover:text - cyan - 400 transition - colors'                          >                <div className="space - y-4">;
                   <h3 className="text - lg font - semibold text - white">Services</h3>;
-                  {service_categories.map ((category) => (
+                  {service_categories.map (category) => (
                     <div key={category.title} className="ml - 4 space - y-2">;
                       <h4 className="font - medium text - purple - 300">{category.title}</h4>;
                       <div className="ml - 4 space - y-1">;
-                        {category.services.map ((service) => (
+                        {category.services.map (service) => (
                             key={service.name}
                             href={service.href}
                             on_click={close_menu}
                             className='block text - sm text - gray - 400 hover:text - cyan - 400 transition - colors'                            className="block text - sm text - gray - 400 hover:text - cyan - 400 transition - colors";
                           >;
                             {service.name}
-                          </Link>))}
+                          </Link>)}
                       </div>;
-                    </div>))}
+                    </div>)}
                 </div>;
                 {/* Mobile Quick Links */}
                 <div className='space - y-4'>;
@@ -1132,14 +1098,14 @@ function UltraFuturisticNavigation2033() {
                         className='text - sm text - gray - 400 hover:text - cyan - 400 transition - colors'                      >                <div className="space - y-4">;
                   <h3 className="text - lg font - semibold text - white">Quick Links</h3>;
                   <div className="grid grid - cols - 2 gap - 2">;
-                    {quick_links.map ((link) => (
+                    {quick_links.map (link) => (
                         key={link.name}
                         href={link.href}
                         on_click={close_menu}
                         className='text - sm text - gray - 400 hover:text - cyan - 400 transition - colors'                        className="text - sm text - gray - 400 hover:text - cyan - 400 transition - colors";
                       >;
                         {link.name}
-                      </Link>))}
+                      </Link>)}
                   </div>;
                 </div>;
                 {/* Mobile Contact Button */}
@@ -1161,31 +1127,29 @@ function UltraFuturisticNavigation2033() {
         </AnimatePresence>
       </nav>
     </>
-);
-}whileTap= {
-  {
+;
+whileTap= {
   scale: 0.95
-}> <Link href="/contact" className="px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-200 shadow-lg" > Get Started </a> </motion.div> </div> </button> </div> </div> </div> {
+> <Link href="/contact" className="px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-200 shadow-lg" > Get Started </a> </motion.div> </div> </button> </div> </div> </div> {
   /* Mobile Menu */
-}<AnimatePresence>) )
-}</div> </div>) )
-}</div>) )
-}</div> </div> > Get Started </a> </div> </div> </motion.div>)
-}</AnimatePresence> </nav> </>) }
+<AnimatePresence>)
+</div> </div>)
+</div>)
+</div> </div>Get Started </a> </div> </div> </motion.div>)
+</AnimatePresence> </nav> </>) }
   );
-}
+
             </motion.div>)}
         </AnimatePresence>;
       </nav>;
     </>);
-;
-}while_tap= {
-  {
+
+while_tap= {
   scale: 0.95;
-}> <Link href="/contact" className="px - 6 py - 3 bg - gradient - to - r from - purple - 600 to - cyan - 600 text - white font - medium rounded - lg hover:from - purple - 700 hover:to - cyan - 700 transition - all duration - 200 shadow - lg" > Get Started </a> </motion.div> </div> </button> </div> </div> </div> {
+> <Link href="/contact" className="px - 6 py - 3 bg - gradient - to - r from - purple - 600 to - cyan - 600 text - white font - medium rounded - lg hover:from - purple - 700 hover:to - cyan - 700 transition - all duration - 200 shadow - lg" > Get Started </a> </motion.div> </div> </button> </div> </div> </div> {
   /* Mobile Menu */;
-}<AnimatePresence>) );
-}</div> </div>) );
-}</div>) );
-}</div> </div> > Get Started </a> </div> </div> </motion.div>);
-}</AnimatePresence> </nav> </>) }
+<AnimatePresence>);
+</div> </div>);
+</div>);
+</div> </div>Get Started </a> </div> </div> </motion.div>);
+</AnimatePresence> </nav> </>) }

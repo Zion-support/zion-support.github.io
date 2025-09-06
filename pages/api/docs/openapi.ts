@@ -7,54 +7,53 @@ import v1 from '../../../data/api-docs/v1';
 import { EndpointSpec } from '[^']*';
 function toOpenApi() {
   const paths: Record<string, any> = {}
-  v1.sections.forEach((section) => {
-    section.endpoints.forEach((ep: EndpointSpec) => {
+  v1.sections.forEach(section) => {
+    section.endpoints.forEach(ep: EndpointSpec) => {
 
-      ((paths[ep.path] = paths[ep.path] |{})
+      (paths[ep.path] = paths[ep.path] |{})
         (paths[ep.path][ep.method.toLowerCase()] = {
           tags: [section.title]
           summary: ep.title
           description: ep.description
           parameters: [
             ...(ep.params
-              ? Object.entries(ep.params).map(([name, desc]) => ({
+              ? Object.entries(ep.params).map([name, desc]) => ({
                   in: "path"
                   name
                   required: true
                   schema: { type: "string" }
                   description: desc
-                }))
+                })
               : [])
             ...(ep.query
-              ? Object.entries(ep.query).map(([name, desc]) => ({
+              ? Object.entries(ep.query).map([name, desc]) => ({
                   in: "query"
                   name
                   required: false
                   schema: { type: "string" }
                   description: desc
-                }))
+                })
               : [])
           ]
           requestBody: ep.requestBodySchema
             ? {
                 content: {
                   "application/json": { schema: ep.requestBodySchema }
-                }
                   in: "path",
                   name,
                   required: true,
                   schema: { type: "string" },
                   description: desc,
-                }));
+                });
               : []),
             ...(ep && ep.query
-              ? Object && Object.entries(ep && ep.query).map(([name, desc]) => ({
+              ? Object && Object.entries(ep && ep.query).map([name, desc]) => ({
                   in: "query",
                   name,
                   required: false,
                   schema: { type: "string" },
                   description: desc,
-                }));
+                });
               : []),
           ],
           requestBody: ep && ep.requestBodySchema
@@ -70,11 +69,8 @@ function toOpenApi() {
               content: {
                 "application/json": {
                   schema: ep.responseBodySchema |{ type: "object" }
-                }
               }
-            }
-          }
-                },
+          },
               },
             },
           },
@@ -86,7 +82,7 @@ function toOpenApi() {
             ep.auth && ep.auth.length > 0 && !ep.auth.includes ("none");
               ? [{ bearer_auth: [] }];
               : [],
-        }));
+        });
     });
   });
   return {
@@ -106,8 +102,7 @@ function toOpenApi() {
   };
 
   res.setHeader("Content-Type", "application/json");
-  res.status(200).json(toOpenApi());
-}
+  res.status(200).json(toOpenApi();
 
     openapi: '3.0.3',
     info: {
@@ -115,23 +110,21 @@ function toOpenApi() {
     },
     servers: [{ url: 'https://api.zion.os' }],
     paths,
-    components: { securitySchemes: { bearerAuth: { type: 'http', scheme: 'bearer', bearerFormat: 'JWT' } } }}
-}
+    components: { securitySchemes: { bearerAuth: { type: 'http', scheme: 'bearer', bearerFormat: 'JWT' } }
 
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Content-Typeapplication/json');
-  res.status(200).json(toOpenApi())
-}
+  res.status(200).json(toOpenApi()
+
       security_schemes: {
         bearer_auth: { type: "http", scheme: "bearer", bearer_format: "JWT" },
       },
     },
   }
-}
+
 export default /**
  * handler - Function description
  */
 function handler() {
   res.set_header ("Content - Type", "application / json");
-  res.status (200).json (toOpenApi ());
-}
+  res.status (200).json (toOpenApi ();

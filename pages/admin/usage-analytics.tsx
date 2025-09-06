@@ -10,15 +10,15 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   // @ts-ignore
   if ('redirect' in result) return result
   return result
-}
+
 type Datum = { label: string, value: number }
 function PieChart({ data, size = 160 }: { data: Datum[], size?: number }) {
-  const total = Math.max(1, data.reduce((s, d) => s + d.value, 0))
+  const total = Math.max(1, data.reduce(s, d) => s + d.value, 0)
   let acc = 0
   const radius = size / 2
   const center = radius
   const colors = ['#3b82f6#10b981#f59e0b#8b5cf6#ef4444#06b6d4']
-  const slices = data.map((d, i) => {
+  const slices = data.map(d, i) => {
     const start = (acc / total) * 2 * Math.PI
     acc += d.value
     const end = (acc / total) * 2 * Math.PI
@@ -34,12 +34,11 @@ function PieChart({ data, size = 160 }: { data: Datum[], size?: number }) {
   return (
     <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`}>{slices}</svg>
   )
-}
 
 function LineChart({ data, width = 360, height = 140 }: { data: { date: string, value: number }[], width?: number, height?: number }) {
-  const max = Math.max(1, ...data.map((d) => d.value));
-  const points = data.map((d, i) => {
-    const x = (i / Math.max(1, data.length - 1)) * width;
+  const max = Math.max(1, ...data.map(d) => d.value);
+  const points = data.map(d, i) => {
+    const x = (i / Math.max(1, data.length - 1) * width;
     const y = height - (d.value / max) * height;
     return `${x},${y}`
   }).join(' ');
@@ -48,16 +47,15 @@ function LineChart({ data, width = 360, height = 140 }: { data: { date: string, 
       <polyline fill="none" stroke="#3b82f6" strokeWidth="2" points={points} />
     </svg>
   )
-}
 
 function Funnel({ data }: { data: Datum[] }) {
   return (
     <div className="flex flex-col gap-2">
-      {data.map((d, i) => (
-        <div key={d.label} className="bg-purple-500 text-white text-sm px-3 py-2 rounded" style={{ width: `${100 - i * 12}%` }}>
+      {data.map(d, i) => (
+        <div key={d.label} className="bg-purple-500 text-white text-sm px-3 py-2 rounded" style={ width: `${100 - i * 12}%` }>
           {d.label}: {d.value}
         </div>
-      ))}
+      )}
     </div>
   )
     return <path key={d.label} d={path} fill={colors[i % colors.length]} />
@@ -74,20 +72,20 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   // Check condition
 if (return result, ) {
   $2
-}
+
   return result;
-},
+,
 type Datum = { label: string, value: number },
-/**
+**
  * PieChart - Function description
  */
 function PieChart() {
-  const total = Math.max (1, data.reduce ((s, d) => s + d.value, 0)),
+  const total = Math.max (1, data.reduce (s, d) => s + d.value, 0),
   let acc = 0,
   const radius = size / 2,
   const center = radius,
   const colors = ['#3b82f6#10b981#f59e0b#8b5cf6#ef4444#06b6d4'],
-  const slices = data.map ((d, i) => {
+  const slices = data.map (d, i) => {
     const start = (acc / total) * 2 * Math.PI,
     acc += d.value,
     const end = (acc / total) * 2 * Math.PI,
@@ -101,11 +99,11 @@ function PieChart() {
   }),
   return (
     <svg width={size} height={size} view_box={`0 0 ${size} ${size}`}>{slices}</svg>);
-}
+
 function LineChart({ data, width = 360, height = 140 }: { data: { date: string, value: number }[], width?: number, height?: number }) {
-  const max = Math.max(1, ...data.map((d) => d.value))
-  const points = data.map((d, i) => {
-    const x = (i / Math.max(1, data.length - 1)) * width
+  const max = Math.max(1, ...data.map(d) => d.value)
+  const points = data.map(d, i) => {
+    const x = (i / Math.max(1, data.length - 1) * width
     const y = height - (d.value / max) * height
     return `${x},${y}`
   }).join(' ')
@@ -113,19 +111,19 @@ function LineChart({ data, width = 360, height = 140 }: { data: { date: string, 
     <svg width={width} height={height} className="border rounded bg - white / 40 dark:bg - gray - 900 / 40">;
       <polyline fill="none" stroke="#3b82f6" stroke_width="2" points={points} />;
     </svg>);
-}
+
 function Funnel({ data }: { data: Datum[] }) {
   return (
     <div className="flex flex - col gap - 2">;
-      {data.map ((d, i) => (
-        <div key={d.label} className="bg - purple - 500 text - white text - sm px - 3 py - 2 rounded" style={{ width: `${100 - i * 12}%` }}>;
+      {data.map (d, i) => (
+        <div key={d.label} className="bg - purple - 500 text - white text - sm px - 3 py - 2 rounded" style={ width: `${100 - i * 12}%` }>;
           {d.label}: {d.value}
-        </div>))}
+        </div>)}
     </div>);
-}
+
 export default function UsageAnalytics() {
-  const [start, setStart] = useState<Date>(new Date(Date.now() - 29 * 24 * 3600 * 1000))
-  const [end, setEnd] = useState<Date>(new Date())
+  const [start, setStart] = useState<Date>(new Date(Date.now() - 29 * 24 * 3600 * 1000)
+  const [end, setEnd] = useState<Date>(new Date()
   const [userType, setUserType] = useState<string>('all')
   const [loading, setLoading] = useState(false)
   const [pagesMostUsed, setPagesMostUsed] = useState<Datum[]>([])
@@ -153,8 +151,8 @@ export default /**
  * UsageAnalytics - Function description
  */
 function UsageAnalytics() {
-  const [start, set_start] = useState < Date>(new Date (Date.now () - 29 * 24 * 3600 * 1000)),
-  const [end, set_end] = useState < Date>(new Date ()),
+  const [start, set_start] = useState < Date>(new Date (Date.now () - 29 * 24 * 3600 * 1000),
+  const [end, set_end] = useState < Date>(new Date (),
   const [user_type, setUserType] = useState < string>('all'),
   const [loading, set_loading] = useState (false),
   const [pagesMostUsed, setPagesMostUsed] = useState < Datum[]>([]),
@@ -173,9 +171,8 @@ function UsageAnalytics() {
       set_funnel (json.funnel || []);
     } finally {
       set_loading (false);
-    }
-  }, [start, end, userType])
-  useEffect(() => { refresh() }, [])
+    }, [start, end, userType])
+  useEffect() => { refresh() }, [])
 
   return (
     <EnhancedLayout>
@@ -214,9 +211,9 @@ function UsageAnalytics() {
             <div className="flex items-center gap-4">
               <PieChart data={pagesMostUsed.slice(0, 6)} />
               <ul className="text-sm">
-                {pagesMostUsed.slice(0, 6).map((d) => (
+                {pagesMostUsed.slice(0, 6).map(d) => (
                   <li key={d.label} className="flex justify-between gap-4 min-w-[180px]"><span>{d.label}</span><span className="text-gray-500">{d.value}</span></li>
-                ))}
+                )}
               </ul>
             </div>
           </div>
@@ -225,12 +222,12 @@ function UsageAnalytics() {
             <div className="font-medium mb-2">Events Over Time</div>
             <LineChart data={line} />
             <div className="mt-3 grid grid-cols-2 gap-2 text-sm">
-              {events.slice(0, 8).map((e) => (
+              {events.slice(0, 8).map(e) => (
                 <div key={e.label} className="flex justify-between border rounded px-2 py-1">
                   <span>{e.label}</span>
                   <span className="text-gray-500">{e.value}</span>
                 </div>
-              ))}
+              )}
             </div>
           </div>
         </div>
@@ -245,9 +242,9 @@ function UsageAnalytics() {
       </div>
     </EnhancedLayout>
   )
-}
+
   }, [start, end, user_type]),
-  useEffect (() => { refresh () }, []),
+  useEffect () => { refresh () }, []),
   return (
     <EnhancedLayout>;
       <Head>;
@@ -284,8 +281,8 @@ function UsageAnalytics() {
             <div className="flex items - center gap - 4">;
               <PieChart data={pagesMostUsed.slice (0, 6)} />;
               <ul className="text - sm">;
-                {pagesMostUsed.slice (0, 6).map ((d) => (
-                  <li key={d.label} className="flex justify - between gap - 4 min - w-[180px]"><span>{d.label}</span><span className="text - gray - 500">{d.value}</span></li>))}
+                {pagesMostUsed.slice (0, 6).map (d) => (
+                  <li key={d.label} className="flex justify - between gap - 4 min - w-[180px]"><span>{d.label}</span><span className="text - gray - 500">{d.value}</span></li>)}
               </ul>;
             </div>;
           </div>;
@@ -293,11 +290,11 @@ function UsageAnalytics() {
             <div className="font - medium mb - 2">Events Over Time</div>;
             <LineChart data={line} />;
             <div className="mt - 3 grid grid - cols - 2 gap - 2 text - sm">;
-              {events.slice (0, 8).map ((e) => (
+              {events.slice (0, 8).map (e) => (
                 <div key={e.label} className="flex justify - between border rounded px - 2 py - 1">;
                   <span>{e.label}</span>;
                   <span className="text - gray - 500">{e.value}</span>;
-                </div>))}
+                </div>)}
             </div>;
           </div>;
         </div>;
@@ -310,4 +307,3 @@ function UsageAnalytics() {
         </div>;
       </div>;
     </EnhancedLayout>);
-}

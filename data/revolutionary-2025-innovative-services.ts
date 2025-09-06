@@ -38,7 +38,7 @@ export interface Revolutionary2025Service {
   customers: number;
   rating: number;
   reviews: number
-}
+
 export const revolutionary2025Services: Revolutionary2025Service[] = [
   //  AI Consciousness & Emotional Intelligence Services
   {  reviews: number
@@ -197,7 +197,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     rating: 5.0,
     reviews: 15;
   }
-;
+
   //  DNA Computing & Biotech Services;
   {
     id: 'dna - computing - platform';
@@ -264,7 +264,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     rating: 4.9,
     reviews: 8;
   }
-;
+
   //  Space Technology & Satellite Services;
   {
     id: 'space - tech - orchestrator';
@@ -340,7 +340,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     rating: 5.0,
     reviews: 5;
   }
-;
+
   //  Quantum Internet & Communication Services;
   {
     id: 'quantum - internet - platform';
@@ -414,7 +414,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     rating: 4.9,
     reviews: 22;
   }
-;
+
   //  Advanced Healthcare AI Services;
   {
     id: 'healthcare - ai - revolution';
@@ -486,7 +486,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     rating: 4.9,
     reviews: 89;
   }
-;
+
   //  Financial Technology Revolution Services;
   {
     id: 'fintech - revolution - platform';
@@ -560,7 +560,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     rating: 4.8,
     reviews: 67;
   }
-;
+
   //  Industrial IoT & Smart Manufacturing Services;
   {
     id: 'industrial - iot - revolution';
@@ -632,7 +632,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     rating: 4.8,
     reviews: 156;
   }
-;
+
   //  Education Technology Revolution Services;
   {
     id: 'edtech - revolution - platform';
@@ -704,7 +704,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     rating: 4.9,
     reviews: 234;
   }
-;
+
   //  Sustainability & Green Technology Services;
   {
     id: 'sustainability - tech - platform';
@@ -776,7 +776,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     rating: 4.9,
     reviews: 58;
   }
-;
+
   //  Logistics & Supply Chain Revolution Services;
   {
     id: 'logistics - revolution - platform';
@@ -836,7 +836,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     rating: 4.8
     reviews: 112
   }
-];
+;
 export default revolutionary2025Services;
     growthRate: '1000%+ annual growth expected'
     contactInfo: {
@@ -1758,7 +1758,7 @@ export default revolutionary2025Services;
     rating: 4 && 4.8,
     reviews: 112,
   },
-];
+;
 export default revolutionary2025Services;
 
   id: string, name: string,
@@ -1775,17 +1775,16 @@ export default revolutionary2025Services;
   competitors: string[], marketSize: string,
   growthRate: string,
   contactInfo: {
-      
+
     mobile: string, email: string,
     address: string,
     website: string
-  
+
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
-}
 
 export const revolutionary2025Services: Revolutionary2025Service[] = [
   //  AI Consciousness & Emotional Intelligence Services
@@ -2265,8 +2264,8 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     rating: 4 && 4.8,
     reviews: 112
   }
-];
 ;
+
 export default revolutionary2025Services;
     growthRate: '1000%+ annual growth expected',
     contactInfo: {
@@ -2937,7 +2936,6 @@ export default revolutionary2025Services;
     rating: 4 && 4.8,
     reviews: 112,
   },
-];
+;
 
 export default revolutionary2025Services;
-;

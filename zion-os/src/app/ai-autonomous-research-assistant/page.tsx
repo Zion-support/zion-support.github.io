@@ -287,4 +287,3 @@ function AIAutonomousResearchAssistantPage() {
         </div>;
       </section>;
     </div>);
-}

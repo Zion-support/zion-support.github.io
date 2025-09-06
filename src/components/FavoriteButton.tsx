@@ -11,7 +11,7 @@ import {
   TooltipContent
   TooltipProvider
   TooltipTrigger
-} from '@/components/ui/tooltip'
+ from '@/components/ui/tooltip'
 
 interface FavoriteButtonProps {;
   itemId: string;
@@ -49,7 +49,7 @@ import {
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from '@/components / ui / tooltip';
+ from '@/components / ui / tooltip';
 interface FavoriteButtonProps {
   item_id: string;
   class_name?: string;
@@ -64,7 +64,7 @@ function FavoriteButton() {
     e.stop_propagation ();    // Check condition
 if ( {) {
   $2
-}
+
       setLoginOpen (true);
       return;
     }
@@ -109,31 +109,30 @@ if ( {) {
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
   )
-}
+
       // Add to favorites`
-      // console.log(`Added ${itemType} ${itemId} to favorites`)}  }
+      // console.log(`Added ${itemType} ${itemId} to favorites`)}
   return ()
     <button
       onClick = {handleToggleFavorite}`
       className={`absolute top-2 right-2 p-2 rounded-full transition-all duration-300 ${isFavorited'
           ? 'bg-red-500 hover:bg-red-600 text-white''
           : 'bg-zion-blue-dark/80 hover:bg-zion-cyan text-white'`
-} ${className}`}
+ ${className}`}
       aria-label={isFavorited ? 'Remove from favorites' : 'Add to favorites'}
     >
       <Heart`
         className={`w-4 h-4 transition-all duration-300 ${
           isFavorited ? 'fill-current' : ''`
-}`}
+`}
       />    </button>
   )};`
 className: {`w-4 h-4 transition-all duration-300 ${
           isFavorited ? 'fill-current' : '';`
-}`}
+`}
       />
     </button>;) }
-'`
-}
+`
 
           <TooltipTrigger as_child>;
             <button;
@@ -157,27 +156,26 @@ className: {`w-4 h-4 transition-all duration-300 ${
       </TooltipProvider>;
       <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
     </>);
-}
+
       // Add to favorites`;
-      // console.log (`Added ${item_type} ${item_id} to favorites`)}  }
+      // console.log (`Added ${item_type} ${item_id} to favorites`)}
   return ();
     <button;
       on_click = {handleToggleFavorite}`;
       className={`absolute top - 2 right - 2 p - 2 rounded - full transition - all duration - 300 ${is_favorited';
           ? 'bg - red - 500 hover:bg - red - 600 text - white'';
           : 'bg - zion - blue - dark / 80 hover:bg - zion - cyan text - white'`;
-} ${class_name}`}
+ ${class_name}`}
       aria - label={is_favorited ? 'Remove from favorites' : 'Add to favorites'}
     >;
       <Heart`;
         className={`w - 4 h - 4 transition - all duration - 300 ${
           is_favorited ? 'fill - current' : ''`;
-}`}
+`}
       />    </button>)}`;
 class_name: {`w - 4 h - 4 transition - all duration - 300 ${
           is_favorited ? 'fill - current' : '';`;
-}`}
+`}
       />;
     </button>) }
-'`;
-}
+`;

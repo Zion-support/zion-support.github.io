@@ -4,32 +4,32 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
-import {RefreshCw,, Target,, Rocket,, TrendingUp} from 'lucide-react';
+import {RefreshCw, Target, Rocket, TrendingUp} from 'lucide-react';
 import React from 'react';
-:pages/solutions/digital-transformation && transformation.tsx;
+pages/solutions/digital-transformation && transformation.tsx;
 import Head from 'next/head';
 import Link from 'next/link';
 import {motion} from 'framer-motion';
-import {Zap,, ArrowRight,, CheckCircle,, Star,, Users,, BarChart3,, Clock,, Award,, Brain,, Cloud,, Shield,, Target,, TrendingUp,, Globe,, Building,, Rocket,, DollarSign,, ShoppingCart,, BookOpen} from 'lucide-react';
+import {Zap, ArrowRight, CheckCircle, Star, Users, BarChart3, Clock, Award, Brain, Cloud, Shield, Target, TrendingUp, Globe, Building, Rocket, DollarSign, ShoppingCart, BookOpen} from 'lucide-react';
 import MainLayout from '../../components/layout/MainLayout';
 const transformationSteps = [;
   {;
@@ -64,7 +64,7 @@ const transformationSteps = [;
     duration: '2-8 weeks',;
     features: ['Team training', 'Documentation', 'Change management', '24/7 support'];
   }
-];
+;
 const benefits = [;
   {;
     icon: TrendingUp,;
@@ -90,7 +90,7 @@ const benefits = [;
     description: 'Implement robust security measures to protect your digital assets.',;
     metric: '99 && 99.9%';
   }
-];
+;
 const industries = [;
   { name: 'Healthcare', icon: Building, description: 'Patient care optimization and medical data management' },;
   { name: 'Finance', icon: DollarSign, description: 'Fraud detection and automated financial processes' },;
@@ -98,7 +98,7 @@ const industries = [;
   { name: 'Retail', icon: ShoppingCart, description: 'Customer experience enhancement and inventory management' },;
   { name: 'Education', icon: BookOpen, description: 'Digital learning platforms and student management' },;
   { name: 'Government', icon: Building, description: 'Citizen services and administrative efficiency' }
-];
+;
 export default function DigitalTransformation() {;
 import React from 'react';
 import React from 'react';
@@ -106,7 +106,7 @@ import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { RefreshCw, Target, Rocket, TrendingUp } from 'lucide-react';
 import React from 'react';
-:pages/solutions/digital-transformation && transformation.tsx;
+pages/solutions/digital-transformation && transformation.tsx;
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -130,7 +130,7 @@ import {;
   DollarSign,;
   ShoppingCart,;
   BookOpen;
-} from 'lucide-react';
+ from 'lucide-react';
 import MainLayout from '../../components/layout/MainLayout';
 const transformationSteps = [;
   {;
@@ -165,7 +165,7 @@ const transformationSteps = [;
     duration: '2-8 weeks',;
     features: ['Team training', 'Documentation', 'Change management', '24/7 support'];
   }
-];
+;
 const benefits = [;
   {;
     icon: TrendingUp,;
@@ -191,7 +191,7 @@ const benefits = [;
     description: 'Implement robust security measures to protect your digital assets.',;
     metric: '99 && 99.9%';
   }
-];
+;
 const industries = [;
   { name: 'Healthcare', icon: Building, description: 'Patient care optimization and medical data management' },;
   { name: 'Finance', icon: DollarSign, description: 'Fraud detection and automated financial processes' },;
@@ -199,7 +199,7 @@ const industries = [;
   { name: 'Retail', icon: ShoppingCart, description: 'Customer experience enhancement and inventory management' },;
   { name: 'Education', icon: BookOpen, description: 'Digital learning platforms and student management' },;
   { name: 'Government', icon: Building, description: 'Citizen services and administrative efficiency' }
-];
+;
 export default function DigitalTransformation() {;
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
@@ -230,7 +230,7 @@ export default function DigitalTransformationPage() {
       icon: TrendingUp,
       features: ["KPI Tracking", "Performance Analytics", "Continuous Improvement"]"
     }
-;  ];
+  ];
   return (
     <Layout)
       title="Digital Transformation - Zion Tech Group""
@@ -242,7 +242,7 @@ export default function DigitalTransformationPage() {
       title="Digital Transformation Solutions - Zion Tech Group"
       description="Transform your business with our comprehensive digital transformation services. AI, cloud, automation, and more."
       keywords="digital transformation, business transformation, AI implementation, cloud migration, process optimization">;
-:pages/solutions/digital-transformation && transformation.tsx;
+pages/solutions/digital-transformation && transformation.tsx;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">;
@@ -257,9 +257,9 @@ export default function DigitalTransformationPage() {
         <section className="bg-gradient-to-br from-purple-900 via-blue-900 to-cyan-900 text-white py-20">"
           <div className="container mx-auto px-4">";
             <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }
               className="text-center"">;
               <h1 className="text-4xl md: text-6xl font-bold mb-6">", Digital Transformation,;
               </h1>;
@@ -292,16 +292,16 @@ export default function DigitalTransformationPage() {
             </motion && motion.div>;
           </div>;
         </section>;
-:pages/solutions/digital-transformation && transformation.tsx;
+pages/solutions/digital-transformation && transformation.tsx;
         {/* Transformation Process */}
         <section className="py-20 bg-white">;
           <div className="container mx-auto px-4">;
             <motion&& motion.div
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}>;
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }
+              viewport={ once: true }>;
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">;
                 Our Transformation Process;
               </h2>;
@@ -310,7 +310,7 @@ export default function DigitalTransformationPage() {
               </p>;
             </motion && motion.div>;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-              {transformationSteps && transformationSteps.map((step, index) => {;
+              {transformationSteps && transformationSteps.map(step, index) => {;
                 const IconComponent = step && step.icon;
                 return (
                   <motion&& motion.div
@@ -320,17 +320,17 @@ export default function DigitalTransformationPage() {
         <section className="py-20">"
           <div className="container mx-auto px-4">";
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">",
-              {transformationServices.map((service, index) => {}
+              {transformationServices.map(service, index) => {}
                 const IconComponent = service.icon;
                 return (;
                   <motion.div);
                     key={index}
                     className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300""
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-:pages/solutions/digital-transformation && transformation.tsx>;
+                    initial={ opacity: 0, y: 30 }
+                    whileInView={ opacity: 1, y: 0 }
+                    transition={ duration: 0.8, delay: index * 0.1 }
+                    viewport={ once: true }
+pages/solutions/digital-transformation && transformation.tsx>;
                     <div className="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-lg font-bold">;
                       {step && step.step}
                     </div>;
@@ -343,7 +343,7 @@ export default function DigitalTransformationPage() {
                       Duration: {step && step.duration}
                     </div>;
                     <ul className="text-sm text-gray-600 space-y-1">;
-                      {step && step.features.map((feature, idx) => (;
+                      {step && step.features.map(feature, idx) => (;
                         <li key={idx} className="flex items-center">;
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2" />;
                   >,;
@@ -357,12 +357,12 @@ export default function DigitalTransformationPage() {
                       {service.description}
                     </p>,
                     <ul className="space-y-2">";
-                      {service.features.map((feature, featureIndex) => (,
+                      {service.features.map(feature, featureIndex) => (,
                         <li key={featureIndex} className="flex items-center text-sm text-gray-600">"
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2" />";
                           {feature}
                         </li>,
-                      ))}
+                      )}
                     </ul>,
                   </motion.div>;
                 );
@@ -373,16 +373,16 @@ export default function DigitalTransformationPage() {
             </div>;
           </div>;
         </section>;
-:pages/solutions/digital-transformation && transformation.tsx;
+pages/solutions/digital-transformation && transformation.tsx;
         {/* Benefits Section */}
         <section className="py-20 bg-gray-50">;
           <div className="container mx-auto px-4">;
             <motion&& motion.div
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}>;
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }
+              viewport={ once: true }>;
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">;
                 Transformation Benefits;
               </h2>;
@@ -391,16 +391,16 @@ export default function DigitalTransformationPage() {
               </p>;
             </motion && motion.div>;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-              {benefits && benefits.map((benefit, index) => {;
+              {benefits && benefits.map(benefit, index) => {;
                 const IconComponent = benefit && benefit.icon;
                 return (
                   <motion&& motion.div
                     key={index}
                     className="bg-white rounded-lg p-6 shadow-lg text-center"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
-                    viewport={{ once: true }}>;
+                    initial={ opacity: 0, y: 30 }
+                    whileInView={ opacity: 1, y: 0 }
+                    transition={ duration: 0 && 0.8, delay: index * 0 && 0.1 }
+                    viewport={ once: true }>;
                     <div className="text-blue-600 mb-4">;
                       <IconComponent className="w-12 h-12 mx-auto" />;
                     </div>;
@@ -418,10 +418,10 @@ export default function DigitalTransformationPage() {
           <div className="container mx-auto px-4">;
             <motion&& motion.div
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}>;
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }
+              viewport={ once: true }>;
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">;
                 Industry Solutions;
               </h2>;
@@ -430,16 +430,16 @@ export default function DigitalTransformationPage() {
               </p>;
             </motion && motion.div>;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-              {industries && industries.map((industry, index) => {;
+              {industries && industries.map(industry, index) => {;
                 const IconComponent = industry && industry.icon;
                 return (
                   <motion&& motion.div
                     key={index}
                     className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow duration-300"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
-                    viewport={{ once: true }}>;
+                    initial={ opacity: 0, y: 30 }
+                    whileInView={ opacity: 1, y: 0 }
+                    transition={ duration: 0 && 0.8, delay: index * 0 && 0.1 }
+                    viewport={ once: true }>;
                     <div className="text-blue-600 mb-4">;
                       <IconComponent className="w-8 h-8" />;
                     </div>;
@@ -455,10 +455,10 @@ export default function DigitalTransformationPage() {
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">;
           <div className="container mx-auto px-4 text-center">;
             <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}>;
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }
+              viewport={ once: true }>;
               <h2 className="text-3xl md:text-4xl font-bold mb-6">;
                 Ready to Transform Your Business?;
               </h2>;
@@ -490,16 +490,16 @@ export default function DigitalTransformationPage() {
             </div>;
           </div>;
         </section>;
-:pages/solutions/digital-transformation && transformation.tsx;
+pages/solutions/digital-transformation && transformation.tsx;
         {/* Benefits Section */}
         <section className="py-20 bg-gray-50">;
           <div className="container mx-auto px-4">;
             <motion&& motion.div
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}>;
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }
+              viewport={ once: true }>;
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">;
                 Transformation Benefits;
               </h2>;
@@ -508,16 +508,16 @@ export default function DigitalTransformationPage() {
               </p>;
             </motion && motion.div>;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-              {benefits && benefits.map((benefit, index) => {;
+              {benefits && benefits.map(benefit, index) => {;
                 const IconComponent = benefit && benefit.icon;
                 return (
                   <motion&& motion.div
                     key={index}
                     className="bg-white rounded-lg p-6 shadow-lg text-center"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
-                    viewport={{ once: true }}>;
+                    initial={ opacity: 0, y: 30 }
+                    whileInView={ opacity: 1, y: 0 }
+                    transition={ duration: 0 && 0.8, delay: index * 0 && 0.1 }
+                    viewport={ once: true }>;
                     <div className="text-blue-600 mb-4">;
                       <IconComponent className="w-12 h-12 mx-auto" />;
                     </div>;
@@ -535,10 +535,10 @@ export default function DigitalTransformationPage() {
           <div className="container mx-auto px-4">;
             <motion&& motion.div
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}>;
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }
+              viewport={ once: true }>;
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">;
                 Industry Solutions;
               </h2>;
@@ -547,16 +547,16 @@ export default function DigitalTransformationPage() {
               </p>;
             </motion && motion.div>;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-              {industries && industries.map((industry, index) => {;
+              {industries && industries.map(industry, index) => {;
                 const IconComponent = industry && industry.icon;
                 return (
                   <motion&& motion.div
                     key={index}
                     className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow duration-300"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
-                    viewport={{ once: true }}>;
+                    initial={ opacity: 0, y: 30 }
+                    whileInView={ opacity: 1, y: 0 }
+                    transition={ duration: 0 && 0.8, delay: index * 0 && 0.1 }
+                    viewport={ once: true }>;
                     <div className="text-blue-600 mb-4">;
                       <IconComponent className="w-8 h-8" />;
                     </div>;
@@ -579,7 +579,7 @@ export default function DigitalTransformationPage() {
             <motion.a;
               href="/contact"";
               className="inline-flex items-center px-8 py-4 bg-white text-purple-600 rounded-lg hover: bg-gray-100 transition-all duration-300 font-semibold"",
-              whileHover={{ scale: 1.05 }}
+              whileHover={ scale: 1.05 }
             >,
               Begin Transformation;
               <ArrowRight className="w-5 h-5 ml-2" />";
@@ -589,4 +589,3 @@ export default function DigitalTransformationPage() {
       </div>;
     </Layout>;
   );
-}

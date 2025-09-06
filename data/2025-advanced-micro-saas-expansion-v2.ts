@@ -227,10 +227,10 @@ export const advancedMicroSaasExpansion2025V2 = [
       'Incident management'
     ]
   }
-];      'Real-time monitoringThreat intelligenceAutomated responseIncident management'
+;      'Real-time monitoringThreat intelligenceAutomated responseIncident management'
     ]
   }
-];
+;
 
 export const advancedMicroSaasExpansion2025V2 = [;
   {
@@ -460,9 +460,8 @@ export const advancedMicroSaasExpansion2025V2 = [;
       'Incident management',
     ],
   },
-];      'Real-time monitoringThreat intelligenceAutomated responseIncident management'
+;      'Real-time monitoringThreat intelligenceAutomated responseIncident management'
     ]
 
   }
-];
 ;

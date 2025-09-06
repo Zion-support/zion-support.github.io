@@ -1,12 +1,10 @@
-// Security.spec utility
+/ Security.spec utility
 export const Security.spec = () => {
   // Implementation here
   return null;
-};
 
 interface Security.specProps {
   // Add props here as needed
-}
 
 export default function Security.spec({ }: Security.specProps) {
   return (
@@ -15,7 +13,3 @@ export default function Security.spec({ }: Security.specProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}
-}
-}
-}

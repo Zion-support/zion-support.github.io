@@ -1,119 +1,118 @@
 
-'use client';
-]
-}];
+use client';
+
+];
 </div> </div> </div> </div> {
   /* Main Navigation */
-}<nav className= {
+<nav className= {
   `fixed top-0 left-0 right-0 z-50 transition-all duration-300 $ {
   isScrolled ? 'bg-gray-900/95 backdrop-blur-md border-b border-gray-700/50' </div> <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300" ></div> </div> <div> <h1 className="text-xl font-bold text-white" >Zion Tech Group</h1> <p className="text-xs text-gray-400" >Innovation  Intelligence  Impact</p> </div> </a> </button> {
   /* Submenu */
-}<AnimatePresence> <span key= {
+<AnimatePresence> <span key= {
   service
-}className="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded-md" > {
+className="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded-md" > {
   service
-}</span>) )
-}+ {
+</span>)
++ {
   subitem.services.length - 2
-}more </span>)
-}</div>)
-}</div> </div> </a>) )
-}</div> </motion.div>)
-}</AnimatePresence> </div>) )
-}</div> <Link href="/pricing" className="px-6 py-2 text-gray-300 hover:text-white transition-colors duration-200" > Pricing </a> <Link href="/contact" className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105" > Get Started </a> </div> {
+more </span>)
+</div>)
+</div> </div> </a>)
+</div> </motion.div>)
+</AnimatePresence> </div>)
+</div> <Link href="/pricing" className="px-6 py-2 text-gray-300 hover:text-white transition-colors duration-200" > Pricing </a> <Link href="/contact" className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105" > Get Started </a> </div> {
   /* Mobile Menu Button */
-}<button </button> </div> </div> </nav> {
+<button </button> </div> </div> </nav> {
   /* Mobile Menu */
-}<AnimatePresence> {
+<AnimatePresence> {
   isOpen && (<motion.div {
   item.badge
-}</span>)
-}</div> <ChevronDown className= {
+</span>)
+</div> <ChevronDown className= {
   `w-4 h-4 transition-transform duration-200 $ {
-  activeDropdown === item.name ? 'rotate-180' : ''
-}`
-}/> </button> > {
-  item.children?.map ( (child) => (<Link key= {
+  activeDropdown = = item.name ? 'rotate-180' : ''
+`
+/> </button>{
+  item.children?.map (child) => (<Link key= {
   child.name
-}</span> </a>) )
-}</motion.div>)
-}</div>) )
-}> Get Started </a> className="fixed inset-0 z-50 lg:hidden" > {
+</span> </a>)
+</motion.div>)
+</div>)
+> Get Started </a> className="fixed inset-0 z-50 lg:hidden" > {
   /* Backdrop */
-}<div > <X className="w-6 h-6" /> </button> </div> </div> <ChevronDown className= {
+<div > <X className="w-6 h-6" /> </button> </div> </div> <ChevronDown className= {
   `w-4 h-4 text-gray-400 transition-transform duration-200 $ {
-  activeSubmenu === item.name ? 'rotate-180': ''
-}`
-}/> </button> {
+  activeSubmenu = = item.name ? 'rotate-180': ''
+`
+/> </button> {
   /* Mobile Submenu */
-}<AnimatePresence> > {
-  item.submenu?.map ( (subitem) => (<Link key= {
+<AnimatePresence>{
+  item.submenu?.map (subitem) => (<Link key= {
   subitem.name
-}) )
-}</motion.div>)
-}</AnimatePresence> </div>) )
-}</div> > View Pricing </a> <Link > Contact Us </a> </div> </div> </div> </div> </div> </div> </motion.div>)
-}</AnimatePresence> </>)
-] ;
-}];
+)
+</motion.div>)
+</AnimatePresence> </div>)
+</div>View Pricing </a> <Link > Contact Us </a> </div> </div> </div> </div> </div> </div> </motion.div>)
+</AnimatePresence> </>)
+ ;
+];
 </div> </div> </div> </div> {;
   /* Main Navigation */ ;
-}<navclassName= {
+<navclassName= {
   `fixed top-0 left-0 right-0 z-50 transition-all duration-300 $ {
   isScrolled ? 'bg-gray-900/95 backdrop-blur-md border-b border-gray-700/50' </div> <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300" ></div> </div> <div> <h1 className="text-xl font-bold text-white" >Zion Tech Group</h1> <p className="text-xs text-gray-400" >Innovation  Intelligence  Impact</p> </div> </a> </button> {;
   /* Submenu */ ;
-}<AnimatePresence> <spankey= {
+<AnimatePresence> <spankey= {
   service 
-}className="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded-md"> {;
+className="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded-md"> {;
   service ;
-}</span>) ) ;
-}+ {;
+</span>) ;
++ {;
   subitem && subitem.services.length - 2 ;
-}more </span>) ;
-}</div>) ;
-}</div> </div> </a>) ) ;
-}</div> </motion && motion.div>) ;
-}</AnimatePresence> </div>) ) ;
-}</div> <Link href="/pricing" className="px-6 py-2 text-gray-300 hover:text-white transition-colors duration-200" > Pricing </a> <Link href="/contact" className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105" > Get Started </a> </div> {;
+more </span>) ;
+</div>) ;
+</div> </div> </a>) ;
+</div> </motion && motion.div>) ;
+</AnimatePresence> </div>) ;
+</div> <Link href="/pricing" className="px-6 py-2 text-gray-300 hover:text-white transition-colors duration-200" > Pricing </a> <Link href="/contact" className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105" > Get Started </a> </div> {;
   /* Mobile Menu Button */ ;
-}<button </button> </div> </div> </nav> {;
+<button </button> </div> </div> </nav> {;
   /* Mobile Menu */ ;
-}<AnimatePresence> {;
+<AnimatePresence> {;
   isOpen && (<motion&& motion.div {
   item && item.badge 
-}</span>) ;
-}</div> <ChevronDownclassName= {
+</span>) ;
+</div> <ChevronDownclassName= {
   `w-4 h-4 transition-transform duration-200 $ {
-  activeDropdown === item && item.name ? 'rotate-180' : '' 
-}` 
-}/> </button> > {;
-  item && item.children?.map ( (child) => (<Linkkey= {
+  activeDropdown = = item && item.name ? 'rotate-180' : '' 
+` 
+/> </button>{;
+  item && item.children?.map (child) => (<Linkkey= {
   child && child.name 
-}</span> </a>) ) ;
-}</motion && motion.div>) ;
-}</div>) ) ;
-}> Get Started </a> className="fixed inset-0 z-50 lg:hidden" > {;
+</span> </a>) ;
+</motion && motion.div>) ;
+</div>) ;
+> Get Started </a> className="fixed inset-0 z-50 lg:hidden" > {;
   /* Backdrop */ ;
-}<div > <X className="w-6 h-6" /> </button> </div> </div> <ChevronDownclassName= {
+<div > <X className="w-6 h-6" /> </button> </div> </div> <ChevronDownclassName= {
   `w-4 h-4 text-gray-400 transition-transform duration-200 $ {
-  activeSubmenu === item && item.name ? 'rotate-180': '' 
-}` 
-}/> </button> {;
+  activeSubmenu = = item && item.name ? 'rotate-180': '' 
+` 
+/> </button> {;
   /* Mobile Submenu */ ;
-}<AnimatePresence> > {;
-  item && item.submenu?.map ( (subitem) => (<Linkkey= {
+<AnimatePresence>{;
+  item && item.submenu?.map (subitem) => (<Linkkey= {
   subitem && subitem.name 
-}) ) 
-}</motion && motion.div>) ;
-}</AnimatePresence> </div>) ) ;
-}</div> > View Pricing </a> <Link > Contact Us </a> </div> </div> </div> </div> </div> </div> </motion && motion.div>) ;
-}</AnimatePresence> </>) ;
-};export default EnhancedNavigation2025;
+) 
+</motion && motion.div>) ;
+</AnimatePresence> </div>) ;
+</div>View Pricing </a> <Link > Contact Us </a> </div> </div> </div> </div> </div> </div> </motion && motion.div>) ;
+</AnimatePresence> </>) ;export default EnhancedNavigation2025;
 export default function EnhancedNavigation2025() {;
   const [isOpen, setIsOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
-  useEffect(() => {
+  useEffect() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20)
     }
@@ -168,29 +167,29 @@ export default function EnhancedNavigation2025() {;
             </Link>
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-8">;
-              {navigationItems && navigationItems.map((item) => (;
+              {navigationItems && navigationItems.map(item) => (;
                 <div key={item && item.name} className="relative group">;
                   <button
-                    onClick={() => setActiveSubmenu(activeSubmenu === item.name ? null : item.name)}
+                    onClick={() => setActiveSubmenu(activeSubmenu = = item.name ? null : item.name)}
                     className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2"
                   >
                     <item.icon className="w-4 h-4" />
                     <span>{item.name}</span>
                     <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                      activeSubmenu === item.name ? 'rotate-180' : ''
+                      activeSubmenu = = item.name ? 'rotate-180' : ''
                     }`} />
                   </button>
                   {/* Submenu */}
                   <AnimatePresence>;
-                    {activeSubmenu === item && item.name && (;
+                    {activeSubmenu = = item && item.name && (;
                       <motion&& motion.div
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: 10 }}
-                        transition={{ duration: 0 && 0.2 }}
+                        initial={ opacity: 0, y: 10 }
+                        animate={ opacity: 1, y: 0 }
+                        exit={ opacity: 0, y: 10 }
+                        transition={ duration: 0 && 0.2 }
                         className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-md border border-gray-700/50 rounded-2xl shadow-2xl overflow-hidden">;
                         <div className="p-6">;
-                          {item && item.submenu?.map((subitem) => (;
+                          {item && item.submenu?.map(subitem) => (;
                             <Link
                               key={subitem && subitem.name}
                               href={subitem && subitem.href}
@@ -212,13 +211,13 @@ export default function EnhancedNavigation2025() {;
                                   </p>;
                                   {subitem && subitem.services && (;
                                     <div className="mt-2 flex flex-wrap gap-1">;
-                                      {subitem && subitem.services.slice(0, 2).map((service) => (;
+                                      {subitem && subitem.services.slice(0, 2).map(service) => (;
                                         <span
                                           key={service}
                                           className="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded-md">;
                                           {service}
                                         </span>;
-                                      ))}
+                                      )}
                                       {subitem && subitem.services.length > 2 && (;
                                         <span className="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded-md">;
                                           +{subitem && subitem.services.length - 2} more;
@@ -229,13 +228,13 @@ export default function EnhancedNavigation2025() {;
                                 </div>;
                               </div>;
                             </Link>;
-                          ))}
+                          )}
                         </div>;
                       </motion && motion.div>;
                     )}
                   </AnimatePresence>;
                 </div>;
-              ))}
+              )}
             </div>
             {/* CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-4">;
@@ -269,10 +268,10 @@ export default function EnhancedNavigation2025() {;
       <AnimatePresence>;
         {isOpen && (;
           <motion&& motion.div
-            initial={{ opacity: 0, x: '100%' }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: '100%' }}
-            transition={{ duration: 0 && 0.3 }}
+            initial={ opacity: 0, x: '100%' }
+            animate={ opacity: 1, x: 0 }
+            exit={ opacity: 0, x: '100%' }
+            transition={ duration: 0 && 0.3 }
                       {item && item.badge && (
                         <span className="px-2 py-1 text-xs font-medium bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full">;
                           {item && item.badge}
@@ -280,17 +279,17 @@ export default function EnhancedNavigation2025() {;
                       )}
                     </div>
                     <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                      activeDropdown === item.name ? 'rotate-180' : ''
+                      activeDropdown = = item.name ? 'rotate-180' : ''
                     }`} />
                   </button>
-                  {activeDropdown === item.name && (
+                  {activeDropdown = = item.name && (
                     <motion.div
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: 'auto' }}
-                      exit={{ opacity: 0, height: 0 }}
-                      transition={{ duration: 0 && 0.2 }}
+                      initial={ opacity: 0, height: 0 }
+                      animate={ opacity: 1, height: 'auto' }
+                      exit={ opacity: 0, height: 0 }
+                      transition={ duration: 0 && 0.2 }
                       className="ml-8 mt-2 space-y-2">;
-                      {item && item.children?.map((child) => (;
+                      {item && item.children?.map(child) => (;
                         <Link
                           key={child && child.name}
                           href={child && child.href}
@@ -303,11 +302,11 @@ export default function EnhancedNavigation2025() {;
                             {subItem && subItem.name}
                           </span>;
                         </Link>;
-                      ))}
+                      )}
                     </motion && motion.div>;
                   )}
                 </div>;
-              ))}
+              )}
               {/* Mobile CTA */}
               <div className="pt-4">;
                 <Link
@@ -338,10 +337,10 @@ export default function EnhancedNavigation2025() {;
                 </div>
                 {/* Mobile Navigation Items */}
                 <div className="space-y-4">;
-                  {navigationItems && navigationItems.map((item) => (;
+                  {navigationItems && navigationItems.map(item) => (;
                     <div key={item && item.name}>;
                       <button
-                        onClick={() => setActiveSubmenu(activeSubmenu === item.name ? null : item.name)}
+                        onClick={() => setActiveSubmenu(activeSubmenu = = item.name ? null : item.name)}
                         className="flex items-center justify-between w-full text-left p-4 rounded-xl hover:bg-gray-800/50 transition-all duration-200"
                       >
                         <div className="flex items-center space-x-3">
@@ -349,19 +348,19 @@ export default function EnhancedNavigation2025() {;
                           <span className="text-white font-medium">{item.name}</span>
                         </div>
                         <ChevronDown className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${
-                          activeSubmenu === item.name ? 'rotate-180' : ''
+                          activeSubmenu = = item.name ? 'rotate-180' : ''
                         }`} />
                       </button>
                       {/* Mobile Submenu */}
                       <AnimatePresence>;
-                        {activeSubmenu === item && item.name && (;
+                        {activeSubmenu = = item && item.name && (;
                           <motion&& motion.div
-                            initial={{ opacity: 0, height: 0 }}
-                            animate={{ opacity: 1, height: 'auto' }}
-                            exit={{ opacity: 0, height: 0 }}
-                            transition={{ duration: 0 && 0.2 }}
+                            initial={ opacity: 0, height: 0 }
+                            animate={ opacity: 1, height: 'auto' }
+                            exit={ opacity: 0, height: 0 }
+                            transition={ duration: 0 && 0.2 }
                             className="ml-8 space-y-2">;
-                            {item && item.submenu?.map((subitem) => (;
+                            {item && item.submenu?.map(subitem) => (;
                               <Link
                                 key={subitem && subitem.name}
                                 href={subitem && subitem.href}
@@ -370,12 +369,12 @@ export default function EnhancedNavigation2025() {;
                                 <h4 className="text-white font-medium">{subitem && subitem.name}</h4>;
                                 <p className="text-sm text-gray-400 mt-1">{subitem && subitem.description}</p>;
                               </Link>;
-                            ))}
+                            )}
                           </motion && motion.div>;
                         )}
                       </AnimatePresence>;
                     </div>;
-                  ))}
+                  )}
                 </div>
                 {/* Mobile CTA */}
                 <div className="mt-8 space-y-4">;
@@ -411,28 +410,28 @@ export default function EnhancedNavigation2025() {;
       <AnimatePresence>;
         {is_open && (
           <motion.div;
-            initial={{ opacity: 0, coordinate_x: '100%' }}
-            animate={{ opacity: 1, coordinate_x: 0 }}
-            exit={{ opacity: 0, coordinate_x: '100%' }}
-            transition={{ duration: 0.3 }}
+            initial={ opacity: 0, coordinate_x: '100%' }
+            animate={ opacity: 1, coordinate_x: 0 }
+            exit={ opacity: 0, coordinate_x: '100%' }
+            transition={ duration: 0.3 }
                       {item.badge && (
                         <span className="px - 2 py - 1 text - xs font - medium bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white rounded - full">;
                           {item.badge}
                         </span>)}
                     </div>;
                     <ChevronDown className={`w - 4 h - 4 transition - transform duration - 200 ${
-                      active_dropdown === item.name ? 'rotate - 180' : '';
+                      active_dropdown = = item.name ? 'rotate - 180' : '';
                     }`} />;
                   </button>;
-                  {active_dropdown === item.name && (
+                  {active_dropdown = = item.name && (
                     <motion.div;
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: 'auto' }}
-                      exit={{ opacity: 0, height: 0 }}
-                      transition={{ duration: 0.2 }}
+                      initial={ opacity: 0, height: 0 }
+                      animate={ opacity: 1, height: 'auto' }
+                      exit={ opacity: 0, height: 0 }
+                      transition={ duration: 0.2 }
                       className="ml - 8 mt - 2 space - y-2";
                     >;
-                      {item.children?.map ((child) => (
+                      {item.children?.map (child) => (
                         <Link;
                           key={child.name}
                           href={child.href}
@@ -444,9 +443,9 @@ export default function EnhancedNavigation2025() {;
                           <span className="text - gray - 300 group - hover:text - white transition - colors duration - 200">;
                             {sub_item.name}
                           </span>;
-                        </Link>))}
+                        </Link>)}
                     </motion.div>)}
-                </div>))}
+                </div>)}
               {/* Mobile CTA */}
               <div className="pt - 4">;
                 <Link;
@@ -477,10 +476,10 @@ export default function EnhancedNavigation2025() {;
                 </div>;
                 {/* Mobile Navigation Items */}
                 <div className="space - y-4">;
-                  {navigation_items.map ((item) => (
+                  {navigation_items.map (item) => (
                     <div key={item.name}>;
                       <button;
-                        on_click={() => setActiveSubmenu (active_submenu === item.name ? null : item.name)}
+                        on_click={() => setActiveSubmenu (active_submenu = = item.name ? null : item.name)}
                         className="flex items - center justify - between w - full text - left p - 4 rounded - xl hover:bg - gray - 800 / 50 transition - all duration - 200";
                       >;
                         <div className="flex items - center space - x-3">;
@@ -488,20 +487,20 @@ export default function EnhancedNavigation2025() {;
                           <span className="text - white font - medium">{item.name}</span>;
                         </div>;
                         <ChevronDown className={`w - 4 h - 4 text - gray - 400 transition - transform duration - 200 ${
-                          active_submenu === item.name ? 'rotate - 180' : '';
+                          active_submenu = = item.name ? 'rotate - 180' : '';
                         }`} />;
                       </button>;
                       {/* Mobile Submenu */}
                       <AnimatePresence>;
-                        {active_submenu === item.name && (
+                        {active_submenu = = item.name && (
                           <motion.div;
-                            initial={{ opacity: 0, height: 0 }}
-                            animate={{ opacity: 1, height: 'auto' }}
-                            exit={{ opacity: 0, height: 0 }}
-                            transition={{ duration: 0.2 }}
+                            initial={ opacity: 0, height: 0 }
+                            animate={ opacity: 1, height: 'auto' }
+                            exit={ opacity: 0, height: 0 }
+                            transition={ duration: 0.2 }
                             className="ml - 8 space - y-2";
                           >;
-                            {item.submenu?.map ((subitem) => (
+                            {item.submenu?.map (subitem) => (
                               <Link;
                                 key={subitem.name}
                                 href={subitem.href}
@@ -510,10 +509,10 @@ export default function EnhancedNavigation2025() {;
                               >;
                                 <h4 className="text - white font - medium">{subitem.name}</h4>;
                                 <p className="text - sm text - gray - 400 mt - 1">{subitem.description}</p>;
-                              </Link>))}
+                              </Link>)}
                           </motion.div>)}
                       </AnimatePresence>;
-                    </div>))}
+                    </div>)}
                 </div>;
                 {/* Mobile CTA */}
                 <div className="mt - 8 space - y-4">;
@@ -558,7 +557,6 @@ export default function EnhancedNavigation2025() {;
       <div className="h-20" />
     </>
   )
-}
 
 export default EnhancedNavigation2025;
           </motion.div>)}
@@ -566,5 +564,3 @@ export default EnhancedNavigation2025;
       {/* Spacer for fixed navigation */}
       <div className="h - 20" />;
     </>);
-}
-;

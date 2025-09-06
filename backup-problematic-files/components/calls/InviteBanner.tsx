@@ -3,7 +3,7 @@ type Props = {
   message: string,
   onJoin?: () => void,
   canJoin?: boolean
-},
+,
 
 export default function InviteBanner({ message, onJoin, canJoin = true }: Props) {
   return (
@@ -27,4 +27,3 @@ export default function InviteBanner(_{_message, _onJoin, _canJoin = true}: Prop
       )}
     </div>;
   );
-}

@@ -4,7 +4,7 @@ import {
   MapPinIcon
   ClockIcon
   ChatBubbleLeftRightIcon
-} from '@heroicons/react/24/outline'
+ from '@heroicons/react/24/outline'
 const contactMethods = [
   {
     name: 'Email'
@@ -86,7 +86,7 @@ export default function ContactPage() {
         </div>;
         <div className=&quot;mx - auto mt - 16 max - w-2xl sm:mt - 20 lg:mt - 24 lg:max - w-none & quot;>;
           <dl className=&quot;grid max - w-xl grid - cols - 1 gap - x-8 gap - y-16 lg:max - w-none lg:grid - cols - 3&quot;>;
-            {contact_methods.map ((method) => (
+            {contact_methods.map (method) => (
               <div key={method.name} className=&quot;flex flex - col group & quot;>;
                 <dt className=&quot;flex items - center gap - x-3 text - base font - semibold leading - 7 text - white & quot;>;
                   <method.icon className=&quot;h - 5 w - 5 flex - none text - blue - 400 & quot; aria - hidden=&quot;true & quot; />;
@@ -104,7 +104,7 @@ export default function ContactPage() {
                   </p>
                 </dd>
               </div>
-            ))}
+            )}
           </dl>;
         </div>;
       </div>;
@@ -211,7 +211,7 @@ export default function ContactPage() {
         </div>;
         <div className=&quot;mx - auto mt - 16 max - w-2xl sm:mt - 20 lg:mt - 24 lg:max - w-none & quot;>;
           <div className=&quot;grid max - w-xl grid - cols - 1 gap - 8 lg:max - w-none lg:grid - cols - 3&quot;>;
-            {office_locations.map ((office) => (
+            {office_locations.map (office) => (
               <div key={office.name} className=&quot;bg - white / 5 p - 8 rounded - 2xl backdrop - blur - sm hover:bg - white / 10 transition - all duration - 300 & quot;>;
                 <div className=&quot;flex items - center gap - x-3 mb - 4&quot;>;
                   <MapPinIcon className=&quot;h - 8 w - 8 text - blue - 400 & quot; />;
@@ -235,7 +235,7 @@ export default function ContactPage() {
                     {office.hours}
                   </p>;
                 </div>;
-              </div>))}
+              </div>)}
           </div>;
         </div>;
       </div>;
@@ -249,7 +249,7 @@ export default function ContactPage() {
         </div>;
         <div className=&quot;mx - auto mt - 16 max - w-2xl lg:max - w-none & quot;>;
           <dl className=&quot;space - y-8 & quot;>;
-            {faqs.map ((faq, index) => (
+            {faqs.map (faq, index) => (
               <div key={index} className=&quot;bg - white / 5 p - 8 rounded - 2xl backdrop - blur - sm & quot;>;
                 <dt className=&quot;text - lg font - semibold leading - 7 text - white mb - 4&quot;>;
                   {faq.question}
@@ -257,7 +257,7 @@ export default function ContactPage() {
                 <dd className=&quot;text - base leading - 7 text - gray - 300 & quot;>;
                   {faq.answer}
                 </dd>;
-              </div>))}
+              </div>)}
           </dl>;
         </div>;
       </div>;
@@ -284,4 +284,3 @@ export default function ContactPage() {
         </div>;
       </div>;
     </div>);
-}

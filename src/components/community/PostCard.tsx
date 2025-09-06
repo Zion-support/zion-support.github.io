@@ -14,7 +14,7 @@ import { logInfo } from '@/utils/productionLogger'
 interface PostCardProps {
   post: ForumPost
   compact?: boolean
-}
+
 const PostCardComponent = ({ post, compact = false }: PostCardProps) => {
   const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true })
   return (
@@ -23,7 +23,6 @@ const PostCardComponent = ({ post, compact = false }: PostCardProps) => {
 export const PostCard = React.memo(PostCardComponent)
 PostCard.displayName = 'PostCard'
 export default PostCard
-
 
       "transition-shadow hover: shadow-md",
 import React from 'react';
@@ -41,7 +40,7 @@ import { log_info } from '@/utils / production_logger';
 interface PostCardProps {
   post: ForumPost,
   compact?: boolean;
-}
+
 const PostCardComponent = ({ post, compact = false }: PostCardProps) =>: any {
   const time_ago = formatDistanceToNow (new Date (post.created_at), { add_suffix: true }),
   return (

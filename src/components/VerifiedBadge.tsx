@@ -7,7 +7,7 @@ import {
   TooltipContent
   TooltipProvider
   TooltipTrigger
-} from '@/components/ui/tooltip'
+ from '@/components/ui/tooltip'
 interface VerifiedBadgeProps {
   verified: boolean
   size?: 'sm' | 'md' | 'lg'
@@ -17,7 +17,7 @@ export function VerifiedBadge({
   verified
   size = 'sm'
   label = 'Verified talent'
-}: VerifiedBadgeProps) {
+: VerifiedBadgeProps) {
   if (!verified) return null
   const sizeClasses = {
     sm: 'h-3.5 w-3.5'
@@ -30,7 +30,7 @@ import {
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from '@/components / ui / tooltip';
+ from '@/components / ui / tooltip';
 interface VerifiedBadgeProps {
   verified: boolean;
   size?: 'sm' | 'md' | 'lg';
@@ -43,7 +43,7 @@ function VerifiedBadge() {
   // Check condition
 if (return null) {
   $2
-}
+
   const size_classes = {
     sm: 'h - 3.5 w - 3.5',
     md: 'h - 4 w - 4',
@@ -55,7 +55,7 @@ interface VerifiedBadgeProps {
   size?: 'sm' | 'md' | 'lg'
   /** Optional tooltip label to display */
   label?: string
-}
+
 export function VerifiedBadge({ verified, size = 'sm', label = 'Verified talent' }: VerifiedBadgeProps) {
   if (!verified) return null
   const sizeClasses = {
@@ -78,7 +78,7 @@ export function VerifiedBadge({ verified, size = 'sm', label = 'Verified talent'
       </Tooltip>
     </TooltipProvider>
   )
-}
+
 import React from 'react';
 import { CheckCircle } from 'lucide-react';
 import {;
@@ -86,7 +86,7 @@ import {;
   TooltipContent,;
   TooltipProvider,;
   TooltipTrigger,;
-} from '@/components/ui/tooltip';
+ from '@/components/ui/tooltip';
 interface VerifiedBadgeProps {;
   verified: boolean;
   size?: 'sm' | 'md' | 'lg';
@@ -97,7 +97,7 @@ export function VerifiedBadge(): any ({;
   verified,;
   size = 'sm',;
   label = 'Verified talent',;
-}: VerifiedBadgeProps) {;
+: VerifiedBadgeProps) {;
   if (!verified) return null;
 
   const sizeClasses = {;
@@ -115,7 +115,6 @@ interface VerifiedBadgeProps {;
   size?: 'sm' | 'md' | 'lg';
   /** Optional tooltip label to display */;
   label?: string;
-}
 
 export function VerifiedBadge(): any ({ verified, size = 'sm', label = 'Verified talent' }: VerifiedBadgeProps) {;
   if (!verified) return null;
@@ -145,8 +144,7 @@ export function VerifiedBadge(): any ({ verified, size = 'sm', label = 'Verified
       </Tooltip>;
     </TooltipProvider>;
   );
-}
+
   );
-}
+
     </TooltipProvider>);
-}

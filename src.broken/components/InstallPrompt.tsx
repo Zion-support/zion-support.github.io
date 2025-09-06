@@ -6,5 +6,3 @@ export function InstallPrompt() {;
       <p>Component placeholder - needs implementation</p>;
     </div>;
   );
-}
-;

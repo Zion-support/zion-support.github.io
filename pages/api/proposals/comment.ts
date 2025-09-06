@@ -10,17 +10,17 @@ async function ensure() {
   } catch {
     await fs && fs.writeJson(FILE_PATH, { comments: [] }, { spaces: 2 });
   }
-}
+
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
-) {
+ {
   await ensure();
-  if (req && req.method === "GET") {
+  if (req && req.method = = "GET") {
     const data = await fs && fs.readJson(FILE_PATH);
     return res && res.status(200).json(data);
   }
-  if (req.method === "POST") {
+  if (req.method = = "POST") {
     const body = req.body |{}
     const data = await fs.readJson(FILE_PATH);
     const comment = {
@@ -37,7 +37,7 @@ export default async function handler(
 
   }
   res.status(405).json({ error: "Method not allowed" });
-}
+
       id: Date.now().toString(), proposalId: body.proposalId,
       region: body.region || 'Global', author: body.author || 'anon',
       text: body.text || '',
@@ -47,7 +47,7 @@ export default async function handler(
     return res.status(201).json(comment)
   }
   res.status(405).json({ error: 'Method not allowed' })
-}
+
 import type { NextApiRequest, NextApiResponse } from './next';
 import fs from './fs - extra';
 import path from './path';
@@ -62,7 +62,7 @@ function ensure() {
   } catch {
     await fs.write_json (FILE_PATH, { comments: [] }, { spaces: 2 });
   }
-}
+
 export default async /**
  * handler - Function description
  */
@@ -71,14 +71,14 @@ function handler() {
   // Check condition
 if ( {) {
   $2
-}
+
     const data = await fs.read_json (FILE_PATH);
     return res.status (200).json (data);
   }
   // Check condition
 if ( {) {
   $2
-}
+
     const body = req.body || {}
     const data = await fs.read_json (FILE_PATH);
     const comment = {
@@ -94,4 +94,3 @@ if ( {) {
     return res.status (201).json (comment);
   }
   res.status (405).json ({ error: "Method not allowed" });
-}

@@ -9,11 +9,10 @@ interface UltraFuturistic2029ServiceShowcaseProps {;
   title?: string,;
   subtitle?: string,;
   maxServices?: number;
-}
 
 const categoryColors: { [key: string]: string } = {
   'AI & Consciousness': 'from-purple-600 to-pink-600Quantum & Neuroscience': 'from-indigo-600 to-purple-600Space Colonization': 'from-red-600 to-orange-600Space Mining': 'from-yellow-600 to-orange-600Space Architecture': 'from-green-600 to-teal-600Space Energy': 'from-yellow-500 to-orange-500AI & Business': 'from-blue-600 to-cyan-600Quantum & Time': 'from-green-600 to-emerald-600AI & Augmented Reality': 'from-orange-600 to-red-600'
-},
+,
 
 const categoryIcons: { [key: string]: any } = {
   'AI & Consciousness': Brain,
@@ -25,24 +24,24 @@ const categoryIcons: { [key: string]: any } = {
   'AI & Business': Database,
   'Quantum & Time': Timer,
   'AI & Augmented Reality': Eye
-},
+,
 
 const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceShowcaseProps> = ({
   services,
   title = "2029 Ultra-Futuristic Innovations",
   subtitle = "Experience the future of technology with our revolutionary services",
   maxServices = 12
-}) => {
+) => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all'),
   const [sortBy, setSortBy] = useState<'innovation' | 'price' | 'rating'>('innovation'),
 
   // Get unique categories
-  const categories = ['all', ...Array.from(new Set(services.map(service => service.category)))],
+  const categories = ['all', ...Array.from(new Set(services.map(service => service.category))],
 
   // Filter and sort services
   const filteredServices = services
-    .filter(service => selectedCategory === 'all' || service.category === selectedCategory)
-    .sort((a, b) => {
+    .filter(service => selectedCategory = = 'all' || service.category = = selectedCategory)
+    .sort(a, b) => {
       switch (sortBy) {
         case 'innovation':
           // Default to 'Advanced' if innovationLevel is not available
@@ -51,12 +50,11 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
           const innovationOrder = { 'Revolutionary': 4, 'Breakthrough': 3, 'Advanced': 2, 'Emerging': 1 },
           return (innovationOrder[bLevel] || 0) - (innovationOrder[aLevel] || 0),
         case 'price':
-          return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, '')),
+          return parseFloat(a.price.replace(/[^0-9.]/g, '') - parseFloat(b.price.replace(/[^0-9.]/g, ''),
         case 'rating':
           return b.rating - a.rating,
         default: return 0
-      }
-    });
+      });
     .slice(0, maxServices),;
   const containerVariants = {;
     hidden: { opacity: 0 },;
@@ -65,7 +63,6 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
       transition: {;
         staggerChildren: 0.1;
       }
-    }
   },
 
   const itemVariants = {
@@ -77,7 +74,6 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
         duration: 0.6,
         ease: "easeOut" as const
       }
-    }
   },
 
   return (
@@ -92,23 +88,23 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div;
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          initial={ opacity: 0, y: 30 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0.8 }
           className="text-center mb-16"
         >
           <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.1 }}
+            initial={ opacity: 0, y: 20 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8, delay: 0.1 }
             className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-6"
           >
             {title}
           </motion.h2>;
           <motion.p;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={ opacity: 0, y: 20 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8, delay: 0.2 }
             className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
           >
             {subtitle}
@@ -116,28 +112,28 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
         </motion.div>;
         {/* Filters and Controls */}
         <motion.div;
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
+          initial={ opacity: 0, y: 20 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0.6, delay: 0.3 }
           className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-12"
         >
           {/* Category Filter */}
           <div className="flex items-center space-x-2">
             <span className="text-gray-300 text-sm font-medium">Filter by:</span>
             <div className="flex flex-wrap gap-2">
-              {categories.map((category) => (
+              {categories.map(category) => (
                 <button
                   key={category}
                   onClick={() => setSelectedCategory(category)}
                   className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${;
-                    selectedCategory === category;
+                    selectedCategory = = category;
                       ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg';
                       : 'bg-gray-900/50 text-gray-300 hover:bg-purple-900/30 border border-gray-700 hover:border-purple-500/50';
                   }`}
                 >;
-                  {category === 'all' ? 'All Categories' : category}
+                  {category = = 'all' ? 'All Categories' : category}
                 </button>;
-              ))}
+              )}
             </div>;
           </div>;
           {/* Sort Options */}
@@ -160,10 +156,10 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={ once: true }
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
-          {filteredServices.map((service, index) => (
+          {filteredServices.map(service, index) => (
             <motion.div
               key={service.id}
               variants={itemVariants}
@@ -174,13 +170,13 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
                 className="h-full transform group-hover:shadow-xl hover:shadow-cyan-500/30 transition-transform duration-300"
               />
             </motion.div>
-          ))}
+          )}
         </motion.div>;
         {/* Call to Action */}
         <motion.div;
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          initial={ opacity: 0, y: 30 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0.8, delay: 0.4 }
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-purple-900/20 to-pink-900/20 border border-purple-500/30 rounded-2xl p-8 backdrop-blur-sm">
@@ -209,23 +205,23 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
 
         {/* Innovation Stats */}
         <motion.div;
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
+          initial={ opacity: 0, y: 30 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0.8, delay: 0.5 }
           className="mt-20"
         >
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
-              { label: 'Revolutionary Services', value: services.filter(s => s.innovationLevel === 'Revolutionary').length, icon: Rocket, color: 'from-purple-500 to-pink-500' },
-              { label: 'Patent Pending', value: services.filter(s => s.patentStatus === 'Patent Pending').length, icon: Shield, color: 'from-blue-500 to-cyan-500' },
-              { label: 'Total Customers', value: services.reduce((sum, s) => sum + s.customers, 0), icon: Star, color: 'from-yellow-500 to-orange-500' },
-              { label: 'Average Rating', value: (services.reduce((sum, s) => sum + s.rating, 0) / services.length).toFixed(1), icon: TrendingUp, color: 'from-green-500 to-teal-500' }
-            ].map((stat, index) => (;
+              { label: 'Revolutionary Services', value: services.filter(s => s.innovationLevel = = 'Revolutionary').length, icon: Rocket, color: 'from-purple-500 to-pink-500' },
+              { label: 'Patent Pending', value: services.filter(s => s.patentStatus = = 'Patent Pending').length, icon: Shield, color: 'from-blue-500 to-cyan-500' },
+              { label: 'Total Customers', value: services.reduce(sum, s) => sum + s.customers, 0), icon: Star, color: 'from-yellow-500 to-orange-500' },
+              { label: 'Average Rating', value: (services.reduce(sum, s) => sum + s.rating, 0) / services.length).toFixed(1), icon: TrendingUp, color: 'from-green-500 to-teal-500' }
+            ].map(stat, index) => (;
               <motion.div;
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.6, delay: index * 0.1 }
                 className="text-center"
               >
                 <div className={`w-16 h-16 bg-gradient-to-br ${stat.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}>
@@ -234,11 +230,11 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
                 <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
                 <div className="text-gray-400">{stat.label}</div>
               </motion.div>
-            ))}
+            )}
           </div>;
         </motion.div>;
       </div>;
     </section>;
   );
-},;
+,;
 export default UltraFuturistic2029ServiceShowcase;

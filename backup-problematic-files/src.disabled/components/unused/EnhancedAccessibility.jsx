@@ -7,6 +7,5 @@ const EnhancedAccessibility = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default EnhancedAccessibility;

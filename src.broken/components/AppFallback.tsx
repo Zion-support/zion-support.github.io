@@ -6,5 +6,3 @@ export function AppFallback() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

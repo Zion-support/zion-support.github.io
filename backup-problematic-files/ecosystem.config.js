@@ -79,8 +79,7 @@ module.exports = {;
       log_file:'./logs/performance-combined.log',;
       time:true;
     }
-  ];
-};      env: {
+  ];      env: {
         NODE_ENV: 'production'
       },
       error_file: './logs/performance-error.log',
@@ -89,4 +88,4 @@ module.exports = {;
       time: true
     }
   ]
-},
+,

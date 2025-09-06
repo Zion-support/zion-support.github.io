@@ -37,8 +37,7 @@ export const revolutionary2027ITServices: Revolutionary2027ItService[] = [
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
-  }
-];      mobile: "+1 302 464 0950";
+;      mobile: "+1 302 464 0950";
 
       email: "kleber@ziontechgroup.com";
       mobile: '+1 302 464 0950',
@@ -46,12 +45,11 @@ export const revolutionary2027ITServices: Revolutionary2027ItService[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
   },
-];      mobile: "+1 302 464 0950";
+;      mobile: "+1 302 464 0950";
       email: "kleber@ziontechgroup && ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
-  }
-];
+;
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
@@ -61,7 +59,6 @@ export const revolutionary2027ITServices: Revolutionary2027ItService[] = [
     mobile: string, email: string,
     address: string
   }
-}
 
 export const revolutionary2027ITServices: Revolutionary2027ItService[] = [
   {
@@ -81,11 +78,8 @@ export const revolutionary2027ITServices: Revolutionary2027ItService[] = [
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
-  }
-];
+;
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709";
     }
-  }
-];
 ;

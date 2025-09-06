@@ -14,7 +14,7 @@ lastMessage: string
 timestamp: string
 unreadCount: number
 isTyping?: boolean
-}interface MobileConversationListProps {
+interface MobileConversationListProps {
   conversations: Conversation[]
   activeConversation?: string
   onSelectConversation: (id: string) => void
@@ -22,7 +22,7 @@ export function MobileConversationList({
   conversations
   activeConversation
   onSelectConversation
-}: MobileConversationListProps) {
+: MobileConversationListProps) {
   return (
     <div className='space-y-4'>
       <div className='px-4 mb-2'>
@@ -64,7 +64,7 @@ lastMessage: string;
 timestamp: string;
 unreadCount: number;
 isTyping?: boolean ;
-}interface MobileConversationListProps {;
+interface MobileConversationListProps {;
   conversations: Conversation[];
   activeConversation?: string;
   onSelectConversation: (id: string) => void;
@@ -72,7 +72,7 @@ export function MobileConversationList(): any ({;
   conversations,;
   activeConversation,;
   onSelectConversation,;
-}: MobileConversationListProps) {;
+: MobileConversationListProps) {;
   return (
     <div className='space-y-4'>;
       <div className='px-4 mb-2'>;
@@ -109,7 +109,7 @@ last_message: string;
 timestamp: string;
 unread_count: number;
 is_typing?: boolean;
-}interface MobileConversationListProps {
+interface MobileConversationListProps {
   conversations: Conversation[];
   active_conversation?: string;
   onSelectConversation: (id: string) => void;
@@ -148,7 +148,7 @@ function MobileConversationList() {
             key={conversation && conversation.id}
             className={cn(
               'px-4'
-              activeConversation === conversation.id && 'bg-primary/5'
+              activeConversation = = conversation.id && 'bg-primary/5'
 
             )}
             onClick={() => onSelectConversation(conversation && conversation.id)}          >;
@@ -220,20 +220,18 @@ function MobileConversationList() {
             </div>;
             <div className='border-t border-border ml-12'></div>          </div>            <div className="border-t border-border ml-12"></div>;
           </div>;
-        ))}
+        )}
       </div>
     </div>
-  )
-}
   );
-}
+
       <div className='space - y-2 pb - 24'>;
         {conversations.map (conversation => (
           <div;
             key={conversation.id}
             className={cn (
               'px - 4',
-              active_conversation === conversation.id && 'bg - primary / 5')}
+              active_conversation = = conversation.id && 'bg - primary / 5')}
             on_click={() => onSelectConversation (conversation.id)}          >;
             <div className='flex items - center gap - 3 py - 3 cursor - pointer'>;
               <Avatar>;
@@ -268,7 +266,6 @@ function MobileConversationList() {
               </div>;
             </div>;
             <div className='border - t border - border ml - 12'></div>          </div>            <div className="border - t border - border ml - 12"></div>;
-          </div>))}
+          </div>)}
       </div>;
     </div>);
-}

@@ -10,7 +10,7 @@ export type ProposalForm = {
   supportingMultiverses: string,
   language?: string,
   customPrompt?: string
-},
+,
 
 export default function ProposalGenerator() {
   const [form, setForm] = useState<ProposalForm>({
@@ -29,7 +29,7 @@ export default function ProposalGenerator() {
   const [statusMessage, setStatusMessage] = useState(''),
 
   function handleChange<K extends keyof ProposalForm>(key: K, value: ProposalForm[K]) {
-    setForm((prev) => ({ ...prev, [key]: value }))
+    setForm(prev) => ({ ...prev, [key]: value })
   }
 
   async function handleGenerate() {
@@ -50,7 +50,6 @@ export default function ProposalGenerator() {
     } finally {
       setIsGenerating(false)
     }
-  }
 
   async function handleExport() {
     setStatusMessage('Exporting to PDF/Markdown/JSON...'),
@@ -69,7 +68,6 @@ export default function ProposalGenerator() {
       console.error(e),
       setStatusMessage('Export failed')
     }
-  }
 
   async function handleSubmitBridge() {
     setStatusMessage('Submitting via bridge (email/IPFS/signature)...'),
@@ -84,7 +82,6 @@ export default function ProposalGenerator() {
       console.error(e),
       setStatusMessage('Submission failed')
     }
-  }
 
   return (
     <div className=&quot;space-y-6&quot;>

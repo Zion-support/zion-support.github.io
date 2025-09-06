@@ -7,10 +7,10 @@ interface ChatMessageProps {
 
   timestamp?: Date;
   key?: string | number;
-}
+
 export function ChatMessage({ role, message, timestamp }: ChatMessageProps) {
 
-  const isUser = role === 'user';
+  const isUser = role = = 'user';
   return (
     <divclassName={cn(
       "flex items-start gap-2"
@@ -53,13 +53,13 @@ interface ChatMessageProps {
   message: string,
   timestamp?: Date;
   key?: string | number;
-}
+
 export /**
  * ChatMessage - Function description
  */
 function ChatMessage() {
-  const is_user = role === 'user';
-;
+  const is_user = role = = 'user';
+
   return (
     <div className={cn (
       "flex items - start gap - 2";
@@ -87,4 +87,3 @@ function ChatMessage() {
           </div>)}
       </div>;
     </div>);
-}

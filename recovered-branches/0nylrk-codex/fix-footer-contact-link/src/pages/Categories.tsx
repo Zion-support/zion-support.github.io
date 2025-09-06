@@ -25,7 +25,7 @@ export default function Categories() {
       <Footer />
     </>
   )
-}
+
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
 import { CategoriesSection } from '@/components / CategoriesSection';
@@ -54,4 +54,3 @@ function Categories() {
       </div>;
       <Footer />;
     </>);
-}

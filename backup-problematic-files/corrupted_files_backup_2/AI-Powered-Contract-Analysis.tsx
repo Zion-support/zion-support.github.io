@@ -2,7 +2,6 @@ import React from 'react';
 
 interface AI-Powered-Contract-AnalysisProps {
   className?: string;
-}
 
 const AI-Powered-Contract-Analysis: React.FC<AI-Powered-Contract-AnalysisProps> = ({ className }) => {
   return (
@@ -11,6 +10,5 @@ const AI-Powered-Contract-Analysis: React.FC<AI-Powered-Contract-AnalysisProps> 
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default AI-Powered-Contract-Analysis;

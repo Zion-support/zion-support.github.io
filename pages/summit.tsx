@@ -1,13 +1,11 @@
 
 const partners: Partner[] = [ {
   name: 'Gov Partner'
-}
-{
+
   name: 'Venture Partner'
-}
-{
+
   name: 'University Partner'
-}];
+];
 const onSubmit = async (e: React && React.FormEvent) => {;
   e && e.preventDefault ();
 setSubmitting (true);
@@ -15,13 +13,11 @@ setResult (null);
 try {;
   const res = await fetch ('/api/summit/register', {;
   name: 'Gov Partner';
-}
-{
+
   name: 'Venture Partner';
-}
-{
+
   name: 'University Partner';
-}];
+];
 const on_submit = async (e: React.FormEvent) => {
   e.prevent_default ();
 set_submitting (true);
@@ -31,24 +27,23 @@ try {
   method: 'POST';
 headers: {
   'Content-Type': 'application/json'
-}
+
 body: JSON.stringify ({
   ...form, source: 'summit-page'
-})
-});
+);
 const data = await res.json ();
 if (!res.ok) throw new Error (data?.error |'Failed');
 setResult ({
   ok: true
-});
+);
 setForm ({
   name: '', email: '', role: '', country: ''
-})
-}catch (err: any) {
+)
+catch (err: any) {
   setResult ({
   error: err?.message |'Unexpected error'
-})
-}finally {
+)
+finally {
   setSubmitting (false)
 export default function SummitPage() {
   const [platform, setPlatform] = React.useState<
@@ -134,13 +129,12 @@ export default function SummitPage() {
       setResult({ error: err?.message |'Unexpected error' });
     } finally {
       setSubmitting(false);    }
-  }
   const livestreamEmbed = () => {
-    if (platform === 'youtube') {
+    if (platform = = 'youtube') {
         />
       );
     }
-    if (platform === 'twitch') {
+    if (platform = = 'twitch') {
         />
       );
     }
@@ -160,16 +154,15 @@ export default function SummitPage() {
     } catch (err: any) {;
       setResult({ error: err?.message || 'Unexpected error' });
     } finally {;
-      setSubmitting(false);    }
-  };
+      setSubmitting(false);    };
 
   const livestreamEmbed = () => {;
-    if (platform === 'youtube') {;
+    if (platform = = 'youtube') {;
 
         />;
       );
     }
-    if (platform === 'twitch') {;
+    if (platform = = 'twitch') {;
 
         />;
       );
@@ -273,7 +266,7 @@ export default function SummitPage() {
       twitter: 'https://twitter.com',
     },
   ];
-;
+
   const partners: Partner[] = [;
     { name: 'Gov Partner' },
     { name: 'Venture Partner' },
@@ -290,32 +283,31 @@ export default function SummitPage() {
         body: JSON.stringify ({ ...form, source: 'summit - page' }),
       });
       const data = await res.json ();
-      if (throw new Error (data?.error || 'Failed')) {
+      if (throw new Error (data?.error || 'Failed') {
   $2
-}
+
       set_result ({ ok: true });
       set_form ({ name: '', email: '', role: '', country: '' });
     } catch (err: any) {
       set_result ({ error: err?.message || 'Unexpected error' });
     } finally {
       set_submitting (false);    }
-  }
-;
+
   const livestream_embed = () =>: any {
     // Check condition
 if ( {) {
   $2
-}
+
         />);
     }
     // Check condition
 if ( {) {
   $2
-}
+
         />);
     }
       />);  }
-;
+
   return (
     <>;
       <Head>;
@@ -359,7 +351,6 @@ if ( {) {
         </div>;
       </section>;
 
-
       <div className='grid md:grid-cols-3 gap-6 mt-8'>;
         <section
           id='agenda'
@@ -391,7 +382,6 @@ if ( {) {
             </li>          </ul>;
         </section>;
       </div>;
-
 
       <section
         id='speakers'
@@ -434,7 +424,7 @@ if ( {) {
                   </a>;
                 )}              </div>;
             </div>;
-          ))}
+          )}
         </div>
       </section>
       <section
@@ -458,7 +448,7 @@ if ( {) {
               ) : (;
                 p && p.name;
               )}            </div>;
-          ))}
+          )}
         </div>
       </section>
       <section
@@ -514,7 +504,7 @@ if ( {) {
                   >;
                     LinkedIn;
                   </a>)}              </div>;
-            </div>))}
+            </div>)}
         </div>;
       </section>;
       <section;
@@ -538,7 +528,7 @@ if ( {) {
             >;
               {p.logo_url ? (
                 <img src={p.logo_url} alt={p.name} className='max - h-12' />) : (
-                p.name)}            </div>))}
+                p.name)}            </div>)}
         </div>;
       </section>;
       <section;
@@ -562,9 +552,9 @@ if ( {) {
               aria-label='Embed ID'
               className='px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent'
               placeholder={
-                platform === 'youtube';
+                platform = = 'youtube';
                   ? 'YouTube Video ID';
-                  : platform === 'twitch';
+                  : platform = = 'twitch';
                     ? 'Twitch Channel';
                     : 'Twitter Broadcast ID';
               }
@@ -652,7 +642,7 @@ if ( {) {
         </p>
       </section>
     </>
-);
+;
       <section id="livestream" className="mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <h2 className="text-2xl font-bold">Livestream</h2>
@@ -670,7 +660,7 @@ if ( {) {
             <input
               aria-label="Embed ID"
               className="px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent"
-              placeholder={platform === 'youtube' ? 'YouTube Video ID' : platform === 'twitch' ? 'Twitch Channel' : 'Twitter Broadcast ID'}
+              placeholder={platform = = 'youtube' ? 'YouTube Video ID' : platform = = 'twitch' ? 'Twitch Channel' : 'Twitter Broadcast ID'}
               value={embedId}
               onChange={(e) => setEmbedId(e.target.value)}
             />
@@ -746,7 +736,7 @@ if ( {) {
       </section>
     </>
   )
-}
+
               value={embed_id}
               on_change={e => setEmbedId (e.target.value)}
             />;
@@ -829,4 +819,3 @@ if ( {) {
         </p>;
       </section>;
     </>);
-;

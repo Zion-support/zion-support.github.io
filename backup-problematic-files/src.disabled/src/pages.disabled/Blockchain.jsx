@@ -7,6 +7,5 @@ const Blockchain = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default Blockchain;

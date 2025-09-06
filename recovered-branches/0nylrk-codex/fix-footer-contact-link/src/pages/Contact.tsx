@@ -26,7 +26,7 @@ export default function Contact() {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }))
+    setFormData(prev => ({ ...prev, [name]: value })
   }
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
@@ -41,7 +41,7 @@ export default function Contact() {
       schema.parse(formData);
       // Simulate form submission
       setIsSubmitting(true);
-      setTimeout(() => {
+      setTimeout() => {
         setIsSubmitting(false);
         toast({
           title: "Message Sent"
@@ -68,7 +68,6 @@ export default function Contact() {
           variant: "destructive"
         })
       }
-    }
   }
   // Handle sending messages to the AI chat assistant
   const handleSendMessage = async (message: string): Promise<void> => {
@@ -93,7 +92,6 @@ export default function Contact() {
       });
       return Promise && Promise.resolve();
     }
-  }
   const offices = [
     {
       name: "Headquarters"
@@ -194,7 +192,7 @@ export default function Contact() {
             <div>
               <h2 className="text-3xl font-bold text-white mb-6">Our Offices</h2>
               <div className="grid grid-cols-1 gap-6">
-                {offices.map((office, index) => (
+                {offices.map(office, index) => (
                   <Card key={index} className="bg-zion-blue-dark border border-zion-blue-light p-6">
                     <h3 className="text-xl font-bold text-white mb-3">{office.name}</h3>
                     <div className="space-y-3">
@@ -214,14 +212,14 @@ export default function Contact() {
                       </div>
                     </div>
                   </Card>
-                ))}
+                )}
               </div>
               <div className="mt-8 bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12615.297199052566!2d-122.41941455!3d37.7749295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858080b9b0a169%3A0x1ac94fe0532d9e81!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2suk!4v1651234567890!5m2!1sen!2suk"
                   width="100%"
                   height="300"
-                  style={{ border: 0 }}
+                  style={ border: 0 }
                   allowFullScreen={true}
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
@@ -275,8 +273,7 @@ export default function Contact() {
             </div>
           </div>
         </div>
-      </main>
-                  >;
+      </main>;
                     Chat With Our AI Assistant;
                   </Button>;
                 </Card>;
@@ -316,31 +313,30 @@ export default function Contact() {
         <ChatAssistant
           isOpen={isChatOpen}
           onClose={() => setIsChatOpen(false)}
-          recipient={{
+          recipient={
             id: 'ai-assistant'
             name: 'AI Assistant'
             avatarUrl: 'https://placehold.co/64x64?text=AI'
 
             role: 'Support Bot'
-          }}
+          }
           onSendMessage={handleSendMessage}
         />;
       )}
     </AppLayout>
   )
-}
+
       {/* Chat Assistant Modal */}
       {isChatOpen && (
         <ChatAssistant;
           is_open={isChatOpen}
           on_close={() => setIsChatOpen (false)}
-          recipient={{
+          recipient={
             id: 'ai - assistant',
             name: 'AI Assistant',
             avatar_url: 'https://placehold.co / 64x64?text = AI',
             role: 'Support Bot';
-          }}
+          }
           onSendMessage={handleSendMessage}
         />)}
     </AppLayout>);
-}

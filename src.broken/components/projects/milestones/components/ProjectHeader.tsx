@@ -6,5 +6,3 @@ export function ProjectHeader() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

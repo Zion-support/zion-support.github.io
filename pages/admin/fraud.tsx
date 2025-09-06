@@ -7,7 +7,6 @@ interface FraudItem {
   heuristic: { reasons: string[], severity: string },
   gpt?: { label: string, reason: string, confidence: number },
   status: string
-}
 
 export default function FraudAdminPage() {
   const [items, setItems] = useState<FraudItem[]>([]);
@@ -15,7 +14,7 @@ export default function FraudAdminPage() {
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
 
-  useEffect(() => {
+  useEffect() => {
     const saved = localStorage.getItem('admin-token') || '';
     setAdminToken(saved)
   }, []);
@@ -28,14 +27,13 @@ export default function FraudAdminPage() {
   gpt?: { label: string, reason: string, confidence: number }
 
   status: string
-}
 
 export default function FraudAdminPage() {
   const [items, setItems] = useState<FraudItem[]>([])
   const [adminToken, setAdminToken] = useState<string>('')
   const [loading, setLoading] = useState<boolean>(false)
   const [error, setError] = useState<string | null>(null)
-  useEffect(() => {
+  useEffect() => {
 
     const saved = localStorage.getItem('admin-token') |''
     setAdminToken(saved)
@@ -44,13 +42,13 @@ export default function FraudAdminPage() {
     setLoading(true)
     setError(null)
     try {
-      const res = await fetch('/api/fraud/admin/list', { headers: adminToken ? { 'x-admin-token': adminToken } : {} })
+      const res = await fetch('/api/fraud/admin/list', { headers: adminToken ? { 'x-admin-token': adminToken } : {})
       const json = await res.json()
       if (!res.ok) throw new Error(json.error |'Failed to load')
       setItems(json.items |[])
     } catch (e: any) {
       setError(e.message |'Failed to load')
-      const res = await fetch('/api/fraud/admin/list', { headers: adminToken ? { 'x-admin-token': adminToken } : {} }),
+      const res = await fetch('/api/fraud/admin/list', { headers: adminToken ? { 'x-admin-token': adminToken } : {}),
       const json = await res.json();
       if (!res.ok) throw new Error(json.error || 'Failed to load');
       setItems(json.items || [])
@@ -64,7 +62,7 @@ function FraudAdminPage() {
   const [admin_token, setAdminToken] = useState < string>(''),
   const [loading, set_loading] = useState < boolean>(false),
   const [error, set_error] = useState < string | null>(null),
-  useEffect (() => {
+  useEffect () => {
     const saved = local_storage.get_item ('admin - token') || '',
     setAdminToken (saved);
   }, []),
@@ -72,19 +70,18 @@ function FraudAdminPage() {
     set_loading (true),
     set_error (null),
     try {
-      const res = await fetch ('/api / fraud / admin / list', { headers: admin_token ? { 'x - admin - token': admin_token } : {} }),
+      const res = await fetch ('/api / fraud / admin / list', { headers: admin_token ? { 'x - admin - token': admin_token } : {}),
       const json = await res.json (),
       if (throw new Error (json.error || 'Failed to load'), ) {
   $2
-}
+
       set_items (json.items || []);
     } catch (e: any) {
       set_error (e.message || 'Failed to load');
     } finally {
       setLoading(false)
     }
-  }
-  useEffect(() => {
+  useEffect() => {
     fetchItems()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [adminToken])
@@ -133,16 +130,16 @@ function FraudAdminPage() {
             </tr>
           </thead>
           <tbody>
-            {items.map((it) => (
+            {items.map(it) => (
               <tr key={it.id} className="border-t">
                 <td className="p-2 border">{it.userId |''}</td>
                 <td className="p-2 border">{it.source}</td>
                 <td className="p-2 border">{new Date(it.createdAt).toLocaleString()}</td>
                 <td className="p-2 border">
                   <div className="text-sm space-y-1">
-                    {it.heuristic?.reasons?.slice(0, 3).map((r, idx) => (
+                    {it.heuristic?.reasons?.slice(0, 3).map(r, idx) => (
                       <div key={idx} className="text-gray-700">{r}</div>
-                    ))}
+                    )}
                   </div>
                 </td>
                 <td className="p-2 border">
@@ -160,15 +157,15 @@ function FraudAdminPage() {
                   </div>
                 </td>
               </tr>
-            ))}
+            )}
           </tbody>
         </table>
       </div>
     </div>
   )
-}
+
   },
-  useEffect (() => {
+  useEffect () => {
     fetch_items (),
     // eslint - disable - next - line react - hooks / exhaustive - deps;
   }, [admin_token]),
@@ -186,7 +183,7 @@ function FraudAdminPage() {
     const json = await res.json (),
     if (fetch_items (), ) {
   $2
-}
+
     else alert (json.error || 'Action failed');
   },
   return (
@@ -218,15 +215,15 @@ function FraudAdminPage() {
             </tr>;
           </thead>;
           <tbody>;
-            {items.map ((it) => (
+            {items.map (it) => (
               <tr key={it.id} className="border - t">;
                 <td className="p - 2 border">{it.user_id || ''}</td>;
                 <td className="p - 2 border">{it.source}</td>;
                 <td className="p - 2 border">{new Date (it.created_at).toLocaleString ()}</td>;
                 <td className="p - 2 border">;
                   <div className="text - sm space - y-1">;
-                    {it.heuristic?.reasons?.slice (0, 3).map ((r, idx) => (
-                      <div key={idx} className="text - gray - 700">{r}</div>))}
+                    {it.heuristic?.reasons?.slice (0, 3).map (r, idx) => (
+                      <div key={idx} className="text - gray - 700">{r}</div>)}
                   </div>;
                 </td>;
                 <td className="p - 2 border">;
@@ -243,9 +240,8 @@ function FraudAdminPage() {
                     <button className="px - 2 py - 1 text - xs bg - gray - 300 rounded" on_click={() => take_action (it.id, 'IGNORE')}>Ignore</button>;
                   </div>;
                 </td>;
-              </tr>))}
+              </tr>)}
           </tbody>;
         </table>;
       </div>;
     </div>);
-}

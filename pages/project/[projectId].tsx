@@ -15,7 +15,7 @@ export default function ProjectPage() {
     // For talent view demo, swap role and provide slug
     // "x-demo-user-role": "talent"
     // "x-demo-talent-slug": "ava-chen"} as Record<string, string>
-  useEffect(() => {
+  useEffect() => {
     async function load() {
       if (!projectId) return
       try {
@@ -43,7 +43,7 @@ function ProjectPage() {
     // For talent view demo, swap role and provide slug;
     // "x - demo - user - role": "talent",
     // "x - demo - talent - slug": "ava - chen"} as Record < string, string>,
-  useEffect (() => {
+  useEffect () => {
     async /**
  * load - Function description
  */
@@ -51,21 +51,20 @@ function load() {
       // Check condition
 if (return, ) {
   $2
-}
+
       try {
         set_loading (true),
         const res = await fetch (`/api / marketplace / projects?id=${project_id}`, { headers }),
         const json = await res.json (),
         if (throw new Error (json.error || "Failed to load project"), ) {
   $2
-}
+
         set_project (json.project);
       } catch (e: any) {
         set_error (e.message);
       } finally {
         set_loading (false);
       }
-    }
     load()
   }, [projectId])
   const [showFeedback, setShowFeedback] = useState(false)
@@ -80,7 +79,6 @@ if (return, ) {
       setNote("")
       setShowFeedback(true)
     }
-  }
   async function markCompleted() {
     const res = await fetch(`/api/marketplace/projects`, {
       method: "PATCH"
@@ -92,7 +90,6 @@ if (return, ) {
 
       setShowFeedback(true)
     }
-  }
   return (
     <div className="max - w-4xl mx - auto p - 6 space - y-6">;
       {loading && <div > Loading</div>}
@@ -101,7 +98,7 @@ if (return, ) {
         <div className="space - y-6">;
           <div className="flex items - center gap - 3">;
             <h1 className="text - 2xl font - semibold">Project Kickoff</h1>;
-            <span className={`px - 2 py - 0.5 rounded text - xs ${project.status === "ACTIVE" ? "bg - emerald - 100 text - emerald - 700" : "bg - gray - 200"}`}>;
+            <span className={`px - 2 py - 0.5 rounded text - xs ${project.status = = "ACTIVE" ? "bg - emerald - 100 text - emerald - 700" : "bg - gray - 200"}`}>;
               {project.status}
             </span>
           </div>
@@ -118,14 +115,14 @@ if (return, ) {
             <h2 className="font-medium mb-2">Timeline</h2>
             <ul className="list-disc pl-6 space-y-1 text-sm">
               {project.timeline?.length ? (
-                project.timeline.map ((m: any) => (
+                project.timeline.map (m: any) => (
                   <li key={m.id}>;
                     <span className="font - medium">{m.title}</span>;
                     {m.dueDateIso && <span>  due {new Date (m.dueDateIso).toLocaleDateString ()}</span>}
                     {m.amount_usd && <span>  ${m.amount_usd}</span>}
                     {m.status && <span>  {m.status}</span>}
                   </li>
-                ))
+                )
               ) : (
                 <li>No timeline defined</li>
               )}
@@ -135,7 +132,7 @@ if (return, ) {
             <h2 className="font-medium mb-2">Documents</h2>
             <ul className="list-disc pl-6 space-y-1 text-sm">
               {project.documents?.length ? (
-                project.documents.map ((d: any) => (
+                project.documents.map (d: any) => (
                   <li key={d.id}>;
                     {d.url ? (
                       <a href={d.url} className="text-indigo-600 underline" target="_blank" rel="noreferrer">{d.name}</a>
@@ -144,7 +141,7 @@ if (return, ) {
                     )}
                     <span className="text-gray-500">  uploaded {new Date(d.uploadedAtIso).toLocaleString()}</span>
                   </li>
-                ))
+                )
               ) : (
                 <li>No documents</li>
               )}
@@ -154,12 +151,12 @@ if (return, ) {
             <h2 className="font-medium">Shared notes/messages</h2>
             <div className="space-y-2">
               {project.notes?.length ? (
-                project.notes.map((n: any) => (
+                project.notes.map(n: any) => (
                   <div key={n.id} className="text-sm">
                     <span className="font-medium">{n.authorRole}</span>: {n.content}
                     <span className="text-gray-500">  {new Date(n.createdAtIso).toLocaleString()}</span>
                   </div>
-                ))
+                )
               ) : (
                 <div className="text-sm text-gray-600">No notes yet.</div>
               )}
@@ -170,7 +167,7 @@ if (return, ) {
             </div>
           </section>
           <div className="flex justify-end">
-            {project.status !== "COMPLETED" && (
+            {project.status != "COMPLETED" && (
               <button onClick={markCompleted} className="px-4 py-2 rounded bg-emerald-600 text-white">Mark as Completed</button>
             )}
           </div>
@@ -179,16 +176,16 @@ if (return, ) {
       <FeedbackModal
         isOpen={showFeedback}
         onClose={() => setShowFeedback(false)}
-        defaultContext={{ actionType: 'chatbot_use', metadata: { projectId } }}
+        defaultContext={ actionType: 'chatbot_use', metadata: { projectId }}
         userHeaders={headers}
       />
     </div>
   )
-}
+
                       <a href={d.url} className="text - indigo - 600 underline" target="_blank" rel="noreferrer">{d.name}</a>) : (
                       <span>{d.name}</span>)}
                     <span className="text - gray - 500">  uploaded {new Date (d.uploadedAtIso).toLocaleString ()}</span>;
-                  </li>))) : (
+                  </li>)) : (
                 <li > No documents</li>)}
             </ul>;
           </section>;
@@ -196,11 +193,11 @@ if (return, ) {
             <h2 className="font - medium">Shared notes / messages</h2>;
             <div className="space - y-2">;
               {project.notes?.length ? (
-                project.notes.map ((number: any) => (
+                project.notes.map (number: any) => (
                   <div key={n.id} className="text - sm">;
                     <span className="font - medium">{n.author_role}</span>: {n.content}
                     <span className="text - gray - 500">  {new Date (n.createdAtIso).toLocaleString ()}</span>;
-                  </div>))) : (
+                  </div>)) : (
                 <div className="text - sm text - gray - 600">No notes yet.</div>)}
             </div>;
             <div className="flex gap - 2">;
@@ -209,15 +206,14 @@ if (return, ) {
             </div>;
           </section>;
           <div className="flex justify - end">;
-            {project.status !== "COMPLETED" && (
+            {project.status != "COMPLETED" && (
               <button on_click={mark_completed} className="px - 4 py - 2 rounded bg - emerald - 600 text - white">Mark as Completed</button>)}
           </div>;
         </div>)}
       <FeedbackModal;
         is_open={show_feedback}
         on_close={() => setShowFeedback (false)}
-        default_context={{ action_type: 'chatbot_use', metadata: { project_id } }}
+        default_context={ action_type: 'chatbot_use', metadata: { project_id }}
         user_headers={headers}
       />;
     </div>);
-}

@@ -1,7 +1,7 @@
 import React from 'react',;
 import SEO from '../components/SEO',;
 import Link from 'next/link',;
-;
+
 export default function RAGEvaluationLabPage() {;
 	return (;
 		<>;
@@ -20,14 +20,14 @@ export default function RAGEvaluationLabPage() {;
 							{ title:'CI/CD Quality Gates', desc:'Fail builds on regressions, compare models and versions.' },;
 							{ title:'Offline & Canary', desc:'Pre-release offline runs and live traffic canaries with alerts.' },;
 							{ title:'Dashboards & Reports', desc:'Team dashboards, API access, and exportable reports.' }
-						].map((f) => (;
+						].map(f) => (;
 							<div key={f.title} className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur">;
 								<h3 className="text-lg font-semibold text-white">{f.title}</h3>;
 								<p className="mt-2 text-sm text-gray-300">{f.desc}</p>;
 							</div>;
-						))}
+						)}
 					</div>;
-;
+
 					<div className="mt-12">;
 						<h2 className="text-2xl font-semibold">Pricing</h2>;
 						<div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">;
@@ -49,7 +49,7 @@ export default function RAGEvaluationLabPage() {;
 						</div>;
 						<p className="mt-4 text-sm text-gray-400">Market references:<a className="underline hover:text-cyan-300" href="https://humanloop.com" target="_blank" rel="noreferrer">Humanloop</a>, <a className="underline hover:text-cyan-300" href="https://arize.com" target="_blank" rel="noreferrer">Arize</a>, <a className="underline hover:text-cyan-300" href="https://promptfoo.dev" target="_blank" rel="noreferrer">promptfoo</a>.</p>;
 					</div>;
-;
+
 					<div className="mt-12 flex flex-wrap items-center gap-4">;
 						<Link href="/contact" className="px-5 py-3 rounded-lg bg-cyan-400 text-black font-semibold">Start Evaluating</Link>;
 						<a href="mailto:kleber@ziontechgroup.com" className="px-5 py-3 rounded-lg border border-white/20">Email:kleber@ziontechgroup.com</a>;
@@ -59,4 +59,3 @@ export default function RAGEvaluationLabPage() {;
 			</section>;
 		</>;
 	);
-}

@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React from 'react';
 import Head from 'next / head';
 import {Phone, Mail, MapPin, Check, ArrowRight, Eye} from 'lucide-react';
@@ -37,7 +37,7 @@ export default function WCAGScannerPage() {;
     s && s.link.endsWith('/wcag-accessibility-scanner');
   );  if (!service) return null;import { Star } from 'lucide-react';
 export default function WCAGScannerPage() {;
-  const service = extraServices && extraServices.find(s => s && s.link.endsWith('/wcag-accessibility-scanner'));
+  const service = extraServices && extraServices.find(s => s && s.link.endsWith('/wcag-accessibility-scanner');
   if (!service) return null;
 
   return (
@@ -65,14 +65,14 @@ export default function WCAGScannerPage() {;
               <h2 className='text-2xl font-semibold mb-4'>Capabilities</h2>;
               <p className='text-slate-300 mb-6'>{service && service.description}</p>;
               <ul className='grid grid-cols-1 md:grid-cols-2 gap-3'>;
-                {service && service.features.slice(0, 12).map((feat, i) => (;
+                {service && service.features.slice(0, 12).map(feat, i) => (;
                   <li
                     key={i}
                     className='flex items-start space-x-3 text-slate-200'>;
                     <Check className='w-5 h-5 text-blue-400 mt-0 && 0.5' />;
                     <span>{feat}</span>;
                   </li>;
-                ))}
+                )}
               </ul>;
             </div>;
             <div className='bg-black/30 rounded-2xl border border-blue-500/30 p-6 h-fit'>;
@@ -120,25 +120,25 @@ export default function WCAGScannerPage() {;
 import UltraAdvancedFuturisticBackground from '../components / ui / UltraAdvancedFuturisticBackground';
 import Button from '../components / ui / Button';
 import { extra_services } from '../data / extra - services';
-;
+
 export default /**
  * WCAGScannerPage - Function description
  */
 function WCAGScannerPage() {
   const service = extra_services.find (string =>;
-    s.link.ends_with ('/wcag - accessibility - scanner'));  // Check condition
+    s.link.ends_with ('/wcag - accessibility - scanner');  // Check condition
 if (return null) {
   $2
-}import { Star } from 'lucide-react';
+import { Star } from 'lucide-react';
 export default /**
  * WCAGScannerPage - Function description
  */
 function WCAGScannerPage() {
-  const service = extra_services.find (string => s.link.ends_with ('/wcag - accessibility - scanner'));
+  const service = extra_services.find (string => s.link.ends_with ('/wcag - accessibility - scanner');
   // Check condition
 if (return null) {
   $2
-}
+
   return (
     <UltraAdvancedFuturisticBackground>;
       <Head>;
@@ -164,14 +164,14 @@ if (return null) {
               <h2 className='text - 2xl font - semibold mb - 4'>Capabilities</h2>;
               <p className='text - slate - 300 mb - 6'>{service.description}</p>;
               <ul className='grid grid - cols - 1 md:grid - cols - 2 gap - 3'>;
-                {service.features.slice (0, 12).map ((feat, i) => (
+                {service.features.slice (0, 12).map (feat, i) => (
                   <li;
                     key={i}
                     className='flex items - start space - x-3 text - slate - 200';
                   >;
                     <Check className='w - 5 h - 5 text - blue - 400 mt - 0.5' />;
                     <span>{feat}</span>;
-                  </li>))}
+                  </li>)}
               </ul>;
             </div>;
             <div className='bg - black / 30 rounded - 2xl border border - blue - 500 / 30 p - 6 h - fit'>;
@@ -223,10 +223,10 @@ if (return null) {
       </div>;
     </UltraAdvancedFuturisticBackground>;
   );
-}
+
 import { Star } from 'lucide-react';
 export default function WCAGScannerPage() {
-  const service = extraServices.find(s => s.link.endsWith('/wcag-accessibility-scanner'));
+  const service = extraServices.find(s => s.link.endsWith('/wcag-accessibility-scanner');
   if (!service) return null;
 
   return (
@@ -247,9 +247,9 @@ export default function WCAGScannerPage() {
               <h2 className="text-2xl font-semibold mb-4">Capabilities</h2>
               <p className="text-slate-300 mb-6">{service.description}</p>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                {service.features.slice(0, 12).map((feat, i) => (
+                {service.features.slice(0, 12).map(feat, i) => (
                   <li key={i} className="flex items-start space-x-3 text-slate-200"><Check className="w-5 h-5 text-blue-400 mt-0.5" /><span>{feat}</span></li>
-                ))}
+                )}
               </ul>
             </div>
             <div className="bg-black/30 rounded-2xl border border-blue-500/30 p-6 h-fit">
@@ -271,8 +271,5 @@ export default function WCAGScannerPage() {
       </div>
     </UltraAdvancedFuturisticBackground>
   );
-}
 
     </UltraAdvancedFuturisticBackground>);
-}
-;

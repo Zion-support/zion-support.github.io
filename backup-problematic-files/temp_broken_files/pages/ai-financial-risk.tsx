@@ -3,15 +3,15 @@ import { DollarSign, Check, Phone, Mail, MapPin } from 'lucide-react',;
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',;
 import Button from '../components/ui/Button',;
 import { innovativeAIServices } from '../data/innovative-ai-services',;
-;
+
 export default function AIFinancialRiskPage() {;
-  const service = innovativeAIServices.find(s => (s.link || '').endsWith('/ai-financial-risk')),;
+  const service = innovativeAIServices.find(s => (s.link || '').endsWith('/ai-financial-risk'),;
   const contactInfo = {;
     mobile:'+1 302 464 0950',;
     email:'kleber@ziontechgroup.com',;
     address:'364 E Main St STE 1008 Middletown DE 19709';
   },;
-;
+
   return (;
     <UltraAdvancedFuturisticBackground>;
       <NextHead>;
@@ -32,9 +32,9 @@ export default function AIFinancialRiskPage() {;
               <h2 className="text-2xl font-semibold mb-4">Capabilities</h2>;
               <p className="text-slate-300 mb-6">{service?.description || 'Credit risk, market risk, model validation, and anti-fraud analytics powered by ML.'}</p>;
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">;
-                {(service?.features?.slice(0, 12) || ['Credit/market riskAnomaly detection', 'Explainable AIStress testing', 'Model governanceReal-time alerts']).map((feat, i) => (;
+                {(service?.features?.slice(0, 12) || ['Credit/market riskAnomaly detection', 'Explainable AIStress testing', 'Model governanceReal-time alerts']).map(feat, i) => (;
                   <li key={i} className="flex items-start space-x-3 text-slate-200"><Check className="w-5 h-5 text-cyan-400 mt-0.5" /><span>{feat}</span></li>;
-                ))}
+                )}
               </ul>;
             </div>;
             <div className="bg-black/30 rounded-2xl border border-cyan-500/30 p-6 h-fit">;
@@ -55,7 +55,7 @@ export default function AIFinancialRiskPage() {;
       </div>;
     </UltraAdvancedFuturisticBackground>;
   ),;}
-;
+
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
@@ -133,6 +133,5 @@ const AIFinancialRisk: React.FC = () => {
       </main>
     </Layout>
   );
-};
 
 export default AIFinancialRisk;

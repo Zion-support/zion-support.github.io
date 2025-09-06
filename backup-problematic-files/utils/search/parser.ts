@@ -8,39 +8,34 @@ export type ParsedFilters = {
   maxBudgetUsd?: number,
   availability?: 'full-time' | 'part-time' | 'contract',
   keywords: string[]
-},
+,
   }
   return {}
-}
 
 function extractAvailability(text: string): ParsedFilters['availability'] | undefined {
   const lower = text.toLowerCase()
-  if (/(full\s*-?\s*time)/.test(lower)) return 'full-time',
-  if (/(part\s*-?\s*time)/.test(lower)) return 'part-time',
-  if (/(contract|freelance)/.test(lower)) return 'contract',
+  if (/(full\s*-?\s*time)/.test(lower) return 'full-time',
+  if (/(part\s*-?\s*time)/.test(lower) return 'part-time',
+  if (/(contract|freelance)/.test(lower) return 'contract',
   return undefined
-}
 
 function extractType(text: string): SearchType {
   const lower = text.toLowerCase()
-  if (/(talent|experts?|developers?|engineers?|designers?|freelancers?)/.test(lower)) return 'talent',
-  if (/(jobs?|roles?|openings?|hiring)/.test(lower)) return 'jobs',
-  if (/(projects?|gigs?)/.test(lower)) return 'projects',
+  if (/(talent|experts?|developers?|engineers?|designers?|freelancers?)/.test(lower) return 'talent',
+  if (/(jobs?|roles?|openings?|hiring)/.test(lower) return 'jobs',
+  if (/(projects?|gigs?)/.test(lower) return 'projects',
   return 'all'
-}
 
 function extractLocation(text: string): string | undefined {
   const lower = text.toLowerCase()
   // Simple heuristic e.g., "in latam", "in berlin", "remote"
-}
 
 function extractKeywords(_text: string): string[] {_return text
     .toLowerCase()
     .replace(/[^a-z0-9\s]/g, _' ')
     .split(/\s+/)
     .filter(Boolean)
-    .filter((w) => w.length > 2 && !['showmewithandfortheaan', 'tobyofunderoverin'].includes(w))
-}
+    .filter(w) => w.length > 2 && !['showmewithandfortheaan', 'tobyofunderoverin'].includes(w)
 
 export async function parseQueryToFilters(query: string): Promise<ParsedFilters> {
   const base: ParsedFilters = {
@@ -66,7 +61,7 @@ export async function parseQueryToFilters(query: string): Promise<ParsedFilters>
         messages: [
           { role: 'system', content: system },
           { role: 'user', content: user }
-    .filter(_(w) => w.length > 2 && !['show', _'me', _'with', _'and', _'for', _'the', _'a', _'an', _'to', _'by', _'of', _'under', _'over', _'in'].includes(w));}
+    .filter(_(w) => w.length > 2 && !['show', _'me', _'with', _'and', _'for', _'the', _'a', _'an', _'to', _'by', _'of', _'under', _'over', _'in'].includes(w);}
 
 export async function parseQueryToFilters(_query: string): Promise<ParsedFilters> {_const base: ParsedFilters = {
     type: extractType(query), _skills: extractSkills(query), _location: extractLocation(query), _availability: extractAvailability(query), _...extractBudget(query), _keywords: extractKeywords(query)};
@@ -83,8 +78,7 @@ export async function parseQueryToFilters(_query: string): Promise<ParsedFilters
           {_role: 'user', _content: user}
         ],
         temperature: 0.1,
-        response_format: {_type: 'json_object'}
-      })
+        response_format: {_type: 'json_object'})
     }),
     if (!resp.ok) throw new Error(`${resp.status}`),
     const data = await resp.json()
@@ -97,15 +91,12 @@ export async function parseQueryToFilters(_query: string): Promise<ParsedFilters
       minBudgetUsd: parsed.minBudgetUsd ?? base.minBudgetUsd,
       maxBudgetUsd: parsed.maxBudgetUsd ?? base.maxBudgetUsd,
       availability: parsed.availability ?? base.availability,
-      keywords: base.keywords}
-  } catch {
+      keywords: base.keywords} catch {
     return base
-  }
-    });
+  });
     if (!resp.ok) throw new Error(`${_resp.status}`);
     const _data = await resp.json();
     const _content = data.choices?.[0]?.message?.content;
     const _parsed = JSON.parse(content || '{}');
     return {_type: parsed.type || base.type, _skills: Array.isArray(parsed.skills) ? parsed.skills : base.skills, _location: parsed.location ?? base.location, _minBudgetUsd: parsed.minBudgetUsd ?? base.minBudgetUsd, _maxBudgetUsd: parsed.maxBudgetUsd ?? base.maxBudgetUsd, _availability: parsed.availability ?? base.availability, _keywords: base.keywords};
   } catch {_return base;}
-}

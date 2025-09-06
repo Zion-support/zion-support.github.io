@@ -35,7 +35,7 @@ import {;
   Shield,;
   Phone,;
   Mail,;
-} from 'lucide-react';import { innovative2026MicroSaasServicesV4 } from '../data/innovative-2026-micro-saas-v4';
+ from 'lucide-react';import { innovative2026MicroSaasServicesV4 } from '../data/innovative-2026-micro-saas-v4';
 import { emergingTech2026ServicesV4 } from '../data/emerging-tech-2026-services-v4';
 import { enterpriseIT2026ServicesV4 } from '../data/enterprise-it-2026-services-v4';
 import UltraAdvancedFuturisticBackground2026 from '../components/ui/UltraAdvancedFuturisticBackground2026';
@@ -68,10 +68,10 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
     { id: 'rating', name: 'Rating' }
     { id: 'popularity', name: 'Popularity' },  ];
   // Filter and sort services
-  const filteredServices = useMemo(() => {
+  const filteredServices = useMemo() => {
     let filtered = allServices;
     // Category filter
-    if (selectedCategory !== 'all') {
+    if (selectedCategory != 'all') {
       filtered = filtered.filter(service => {
         switch (selectedCategory) {
           case 'ai':
@@ -86,15 +86,13 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
             return (
               service.category?.includes('Emerging') |
               service.category?.includes('Neuromorphic') |
-              service.category?.includes('Synthetic')
-            );
+              service.category?.includes('Synthetic');
           default: return true
-        }
-      });    }
+        });    }
     // Price range filter
-    if (selectedPriceRange !== 'all') {
+    if (selectedPriceRange != 'all') {
       filtered = filtered.filter(service => {
-        const price = parseInt(service.price.replace(/[^0-9]/g, ''));
+        const price = parseInt(service.price.replace(/[^0-9]/g, '');
         switch (selectedPriceRange) {
           case 'low':
 
@@ -129,11 +127,11 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
     { id: 'popularity', name: 'Popularity' },  ];
 
   // Filter and sort services;
-  const filteredServices = useMemo(() => {;
+  const filteredServices = useMemo() => {;
     let filtered = allServices;
 
     // Category filter;
-    if (selectedCategory !== 'all') {;
+    if (selectedCategory != 'all') {;
       filtered = filtered && filtered.filter(service => {;
         switch (selectedCategory) {;
           case 'ai':;
@@ -151,13 +149,12 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
               service && service.category?.includes('Synthetic');
             );
           default: return true,;
-        }
-      });    }
+        });    }
 
     // Price range filter;
-    if (selectedPriceRange !== 'all') {;
+    if (selectedPriceRange != 'all') {;
       filtered = filtered && filtered.filter(service => {;
-        const price = parseInt(service && service.price.replace(/[^0-9]/g, ''));
+        const price = parseInt(service && service.price.replace(/[^0-9]/g, '');
         switch (selectedPriceRange) {;
           case 'low':;
             return price < 500;
@@ -166,24 +163,23 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
           case 'high':;
             return price > 1000;
           default: return true
-        }
-      });    }
+        });    }
     // Search filter
     if (searchTerm) {
       filtered = filtered.filter(
         service =>
-          service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
+          service.name.toLowerCase().includes(searchTerm.toLowerCase() |
           service.description
             .toLowerCase()
-            .includes(searchTerm.toLowerCase()) |
-          service.category.toLowerCase().includes(searchTerm.toLowerCase())
+            .includes(searchTerm.toLowerCase() |
+          service.category.toLowerCase().includes(searchTerm.toLowerCase()
       );    }
     // Sort
-    filtered.sort((a, b) => {
+    filtered.sort(a, b) => {
       switch (sortBy) {
         case 'price':
-          const priceA = parseInt(a.price.replace(/[^0-9]/g, ''));
-          const priceB = parseInt(b.price.replace(/[^0-9]/g, ''));
+          const priceA = parseInt(a.price.replace(/[^0-9]/g, '');
+          const priceB = parseInt(b.price.replace(/[^0-9]/g, '');
           return priceA - priceB;
         case 'rating':
   Search,
@@ -201,12 +197,12 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
   Shield,
   Phone,
   Mail,
-} from 'lucide-react';import { innovative2026MicroSaasServicesV4 } from '../data / innovative - 2026 - micro - saas - v4';
+ from 'lucide-react';import { innovative2026MicroSaasServicesV4 } from '../data / innovative - 2026 - micro - saas - v4';
 import { emergingTech2026ServicesV4 } from '../data / emerging - tech - 2026 - services - v4';
 import { enterpriseIT2026ServicesV4 } from '../data / enterprise - it - 2026 - services - v4';
 import UltraAdvancedFuturisticBackground2026 from '../components / ui / UltraAdvancedFuturisticBackground2026';
 import UltraAdvancedNavigation2026 from '../components / layout / UltraAdvancedNavigation2026';
-;
+
   const categories = [;
     { id: 'all', name: 'All Services', icon: '', count: all_services.length },
     { id: 'ai', name: 'AI Services', icon: '', count: ai_count },
@@ -224,28 +220,28 @@ import UltraAdvancedNavigation2026 from '../components / layout / UltraAdvancedN
       icon: '',
       count: emergingTechCount,
     },  ];
-;
+
   const price_ranges = [;
     { id: 'all', name: 'All Prices', range: 'All' },
     { id: 'low', name: 'Under $500', range: 'Under $500' },
     { id: 'medium', name: '$500 - $1, 000', range: '$500 - $1, 000' },
     { id: 'high', name: 'Over $1, 000', range: 'Over $1, 000' },  ];
-;
+
   const sort_options = [;
     { id: 'name', name: 'Name' },
     { id: 'price', name: 'Price' },
     { id: 'rating', name: 'Rating' },
     { id: 'popularity', name: 'Popularity' },  ];
-;
+
   // Filter and sort services;
-  const filtered_services = useMemo (() => {
+  const filtered_services = useMemo () => {
     let filtered = all_services;
-;
+
     // Category filter;
     // Check condition
 if ( {) {
   $2
-}
+
       filtered = filtered.filter (service => {
         switch (selected_category) {
           case 'ai':;
@@ -260,17 +256,16 @@ if ( {) {
             return (
               service.category?.includes ('Emerging') ||;
               service.category?.includes ('Neuromorphic') ||;
-              service.category?.includes ('Synthetic'));
+              service.category?.includes ('Synthetic');
           default: return true,
-        }
-      });    }
+        });    }
     // Price range filter;
     // Check condition
 if ( {) {
   $2
-}
+
       filtered = filtered.filter (service => {
-        const price = parse_int (service.price.replace (/[^0 - 9]/g, ''));
+        const price = parse_int (service.price.replace (/[^0 - 9]/g, '');
         switch (selectedPriceRange) {
           case 'low':;
             return price < 500;
@@ -279,26 +274,25 @@ if ( {) {
           case 'high':;
             return price > 1000;
           default: return true,
-        }
-      });    }
+        });    }
     // Search filter;
     // Check condition
 if ( {) {
   $2
-}
+
       filtered = filtered.filter (
         service =>;
-          service.name.toLowerCase ().includes (search_term.toLowerCase ()) ||;
+          service.name.toLowerCase ().includes (search_term.toLowerCase () ||;
           service.description;
             .toLowerCase ();
-            .includes (search_term.toLowerCase ()) ||;
-          service.category.toLowerCase ().includes (search_term.toLowerCase ()));    }
+            .includes (search_term.toLowerCase () ||;
+          service.category.toLowerCase ().includes (search_term.toLowerCase ());    }
     // Sort;
-    filtered.sort ((a, b) => {
+    filtered.sort (a, b) => {
       switch (sort_by) {
         case 'price':;
-          const price_a = parse_int (a.price.replace (/[^0 - 9]/g, ''));
-          const price_b = parse_int (b.price.replace (/[^0 - 9]/g, ''));
+          const price_a = parse_int (a.price.replace (/[^0 - 9]/g, '');
+          const price_b = parse_int (b.price.replace (/[^0 - 9]/g, '');
           return price_a - price_b;
         case 'rating':;
           return b.rating - a.rating;
@@ -306,34 +300,32 @@ if ( {) {
           return b.customers - a.customers;
         default: return a.name.localeCompare(b.name)
           default: return true,;
-        }
-      });    }
+        });    }
 
     // Search filter;
     if (searchTerm) {;
       filtered = filtered && filtered.filter(;
         service =>;
-          service && service.name.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
+          service && service.name.toLowerCase().includes(searchTerm && searchTerm.toLowerCase() ||;
           service && service.description;
             .toLowerCase();
-            .includes(searchTerm && searchTerm.toLowerCase()) ||;
-          service && service.category.toLowerCase().includes(searchTerm && searchTerm.toLowerCase());
+            .includes(searchTerm && searchTerm.toLowerCase() ||;
+          service && service.category.toLowerCase().includes(searchTerm && searchTerm.toLowerCase();
       );    }
 
     // Sort;
-    filtered && filtered.sort((a, b) => {;
+    filtered && filtered.sort(a, b) => {;
       switch (sortBy) {;
         case 'price':;
-          const priceA = parseInt(a && a.price.replace(/[^0-9]/g, ''));
-          const priceB = parseInt(b && b.price.replace(/[^0-9]/g, ''));
+          const priceA = parseInt(a && a.price.replace(/[^0-9]/g, '');
+          const priceB = parseInt(b && b.price.replace(/[^0-9]/g, '');
           return priceA - priceB;
         case 'rating':;
           return b && b.rating - a && a.rating;
         case 'popularity':;
           return b && b.customers - a && a.customers;
         default: return a && a.name.localeCompare(b && b.name),;
-      }
-    });
+      });
     return filtered;  }, [allServices, selectedCategory, selectedPriceRange, searchTerm, sortBy]);
   const containerVariants = {
     hidden: { opacity: 0 }
@@ -341,15 +333,13 @@ if ( {) {
       opacity: 1
       transition: {
         staggerChildren: 0.1
-      }
-    },  }
+      },  }
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
         staggerChildren: 0.1
       }
-    }
   };
 
   const itemVariants = {
@@ -359,8 +349,7 @@ if ( {) {
       opacity: 1
       transition: {
         duration: 0.5
-      }
-    },  }
+      },  }
 
   const containerVariants = {;
     hidden: { opacity: 0 },;
@@ -425,9 +414,9 @@ if ( {) {
         {/* Hero Section */}
         <section className='relative py-20 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-7xl mx-auto text-center'>            <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className='mb-8'
             >
               <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6'>
@@ -440,9 +429,9 @@ if ( {) {
                 next-generation innovation.              </p>
             </motion.div>
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8, delay: 0.2 }
               className='flex flex-wrap justify-center gap-4 mb-12'
             >
               <div className='bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-sm border border-blue-500/30 rounded-full px-6 py-3'>
@@ -465,7 +454,7 @@ if ( {) {
                   Future-Proof
                 </span>              </div>
             </motion.div>
-              transition={{ duration: 0 && 0.8 }}
+              transition={ duration: 0 && 0.8 }
               className='mb-8'>;
               <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6'>;
                 2026 Innovative Services;
@@ -478,9 +467,9 @@ if ( {) {
             </motion && motion.div>;
 
             <motion&& motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8, delay: 0 && 0.2 }
               className='flex flex-wrap justify-center gap-4 mb-12'>;
               <div className='bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-sm border border-blue-500/30 rounded-full px-6 py-3'>;
                 <span className='text-blue-400 font-semibold'>;
@@ -505,9 +494,9 @@ if ( {) {
 
             {/* Search and Filters */}
             <motion&& motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8, delay: 0 && 0.4 }
               className='max-w-4xl mx-auto'>;
               <div className='relative mb-8'>;
                 <Search className='absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />;
@@ -524,7 +513,7 @@ if ( {) {
                     key={category.id}
                     onClick={() => setSelectedCategory(category.id)}
                     className={`px-6 py-3 rounded-full backdrop-blur-sm border transition-all duration-300 ${
-                      selectedCategory === category.id
+                      selectedCategory = = category.id
                         ? 'bg-gradient-to-r from-blue-600/30 to-purple-600/30 border-blue-500/50 text-blue-300'
                         : 'bg-gray-900/30 border-gray-700/50 text-gray-300 hover:bg-gray-800/50'
                   onChange={e => setSearchTerm(e && e.target.value)}
@@ -537,7 +526,7 @@ if ( {) {
                     key={category && category.id}
                     onClick={() => setSelectedCategory(category && category.id)}
                     className={`px-6 py-3 rounded-full backdrop-blur-sm border transition-all duration-300 ${;
-                      selectedCategory === category && category.id;
+                      selectedCategory = = category && category.id;
                         ? 'bg-gradient-to-r from-blue-600/30 to-purple-600/30 border-blue-500/50 text-blue-300';
                         : 'bg-gray-900/30 border-gray-700/50 text-gray-300 hover:bg-gray-800/50';
                     }`}
@@ -547,16 +536,16 @@ if ( {) {
               </div>
               <div className='flex flex-wrap gap-4 justify-center'>
                 {priceRanges.map(range => (                  <button
-                ))}
+                )}
               </div>
 
               <div className="flex flex-wrap gap-4 justify-center">
-                {priceRanges.map((range) => (
+                {priceRanges.map(range) => (
                   <button
                     key={range.id}
                     onClick={() => setSelectedPriceRange(range.id)}
                     className={`px-4 py-2 rounded-lg backdrop-blur-sm border transition-all duration-300 ${
-                      selectedPriceRange === range.id
+                      selectedPriceRange = = range.id
                         ? 'bg-gradient-to-r from-green-600/30 to-emerald-600/30 border-green-500/50 text-green-300'
                         : 'bg-gray-900/30 border-gray-700/50 text-gray-300 hover:bg-gray-800/50'
               </div>;
@@ -566,14 +555,14 @@ if ( {) {
                     key={range && range.id}
                     onClick={() => setSelectedPriceRange(range && range.id)}
                     className={`px-4 py-2 rounded-lg backdrop-blur-sm border transition-all duration-300 ${;
-                      selectedPriceRange === range && range.id;
+                      selectedPriceRange = = range && range.id;
                         ? 'bg-gradient-to-r from-green-600/30 to-emerald-600/30 border-green-500/50 text-green-300';
                         : 'bg-gray-900/30 border-gray-700/50 text-gray-300 hover:bg-gray-800/50';
                     }`}
                   >;
                     {range && range.name}
                   </button>;
-                ))}
+                )}
               </div>
             </motion.div>
           </div>
@@ -707,7 +696,7 @@ if ( {) {
                         <div className='space-y-1'>;
                           {service && service.features;
                             .slice(0, 3);
-                            .map((feature, index) => (;
+                            .map(feature, index) => (;
                               <div
                                 key={index}
                                 className='flex items-center space-x-2'>;
@@ -716,7 +705,7 @@ if ( {) {
                                   {feature}
                                 </span>;
                               </div>;
-                            ))}
+                            )}
                           {service && service.features.length > 3 && (;
                             <span className='text-gray-500 text-xs'>;
                               +{service && service.features.length - 3} more features;
@@ -762,7 +751,7 @@ if ( {) {
                         </button>
                       </Link>
                     </div>
-              ))}
+              )}
             </motion.div>
 
                       {/* CTA Button */}
@@ -778,12 +767,12 @@ if ( {) {
                     {/* Hover Effect Overlay */}
                     <div className='absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl' />                  </div>;
                 </motion && motion.div>;
-              ))}
+              )}
             </motion.div>
-            {filteredServices.length === 0 && (
+            {filteredServices.length = = 0 && (
               <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+                initial={ opacity: 0 }
+                animate={ opacity: 1 }
                 className='text-center py-16'>;
                 <div className='text-gray-400 text-xl mb-4'>;
                   No services found matching your criteria;
@@ -793,7 +782,7 @@ if ( {) {
                     setSelectedCategory('all');
                     setSelectedPriceRange('all');
 
-                  }}
+                  }
                   className='bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300'                >;
                   Clear Filters;
                 </button>;
@@ -809,10 +798,10 @@ if ( {) {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
                 Ready to Transform Your Business?
@@ -847,9 +836,9 @@ if ( {) {
         </section>
       </div>
     </>
-);
+;
   )
-}
+
                         </div>;
                       </div>;
                       <div className='flex items - center justify - between mb - 4'>;
@@ -873,7 +862,7 @@ if ( {) {
                         <div className='space - y-1'>;
                           {service.features;
                             .slice (0, 3);
-                            .map ((feature, index) => (
+                            .map (feature, index) => (
                               <div;
                                 key={index}
                                 className='flex items - center space - x-2';
@@ -882,7 +871,7 @@ if ( {) {
                                 <span className='text - gray - 300 text - xs'>;
                                   {feature}
                                 </span>;
-                              </div>))}
+                              </div>)}
                           {service.features.length > 3 && (
                             <span className='text - gray - 500 text - xs'>;
                               +{service.features.length - 3} more features;
@@ -907,12 +896,12 @@ if ( {) {
                     </div>;
                     {/* Hover Effect Overlay */}
                     <div className='absolute inset - 0 bg - gradient - to - t from - black / 60 via - transparent to - transparent opacity - 0 group - hover:opacity - 100 transition - opacity duration - 300 rounded - 2xl' />                  </div>;
-                </motion.div>))}
+                </motion.div>)}
             </motion.div>;
-            {filtered_services.length === 0 && (
+            {filtered_services.length = = 0 && (
               <motion.div;
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+                initial={ opacity: 0 }
+                animate={ opacity: 1 }
                 className='text - center py - 16';
               >;
                 <div className='text - gray - 400 text - xl mb - 4'>;
@@ -922,7 +911,7 @@ if ( {) {
                     setSearchTerm ('');
                     setSelectedCategory ('all');
                     setSelectedPriceRange ('all');
-                  }}
+                  }
                   className='bg - gradient - to - r from - blue - 600 to - purple - 600 text - white px - 6 py - 3 rounded - xl hover:from - blue - 700 hover:to - purple - 700 transition - all duration - 300'                >;
                   Clear Filters;
                 </button>;
@@ -932,10 +921,10 @@ if ( {) {
         {/* Contact Section */}
         <section className='py - 20 px - 4 sm:px - 6 lg:px - 8'>;
           <div className='max - w-4xl mx - auto text - center'>            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, coordinate_y: 30 }
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >;
               <h2 className='text - 4xl md:text - 5xl font - bold text - white mb - 6'>;
                 Ready to Transform Your Business?;
@@ -970,4 +959,3 @@ if ( {) {
         </section>;
       </div>;
     </>);
-;

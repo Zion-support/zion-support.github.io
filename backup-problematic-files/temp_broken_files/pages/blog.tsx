@@ -1,7 +1,7 @@
 import React, { useState } from 'react',;
 import Head from 'next/head',;
 import Layout from '../components/layout/Layout',;
-;
+
 export default function BlogPage() {;
 	return (;
 		<Layout>;
@@ -15,4 +15,4 @@ export default function BlogPage() {;
 			</section>;
 		</Layout>;
 	),;
-} <Layout> <Head> <title>Blog | Zion Tech Group</title> <link rel="canonical" href="https://ziontechgroup.com/blog" /> </Head> 
+ <Layout> <Head> <title>Blog | Zion Tech Group</title> <link rel="canonical" href="https://ziontechgroup.com/blog" /> </Head> 

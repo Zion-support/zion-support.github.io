@@ -7,8 +7,7 @@ interface ButtonProps {;
   onClick?: () => void,;
   type?: 'button' | 'submit' | 'reset',;
   disabled?: boolean;
-}
-;
+
 export default function Button({;
   children,;
   variant = 'primary',;
@@ -17,7 +16,7 @@ export default function Button({;
   onClick,;
   type = 'button',;
   disabled = false;
-}: ButtonProps) {;
+: ButtonProps) {;
   const baseClasses = 'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 focus: outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-900',;
   const variantClasses = {;
     primary: 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:from-cyan-600 hover:to-purple-600 focus:ring-cyan-500',;
@@ -41,4 +40,3 @@ export default function Button({;
       {children}
     </button>;
   );
-}

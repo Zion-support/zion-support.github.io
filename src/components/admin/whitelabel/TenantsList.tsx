@@ -21,16 +21,11 @@ import { format  } from 'date-fns';
 export function TenantsList() {
   const [tenants, setTenants] = useState<WhitelabelTenant[]>([]);
   const [isLoading, setIsLoading] = useState(true);
-  useEffect(() => {
+  useEffect() => {
     loadTenants()
   }, []),
-
 
         .order('created_at', { ascending: false })
         .order('created_at', { ascending: false }),;
 
-}
-}
         .order ('created_at', { ascending: false }),
-}
-}

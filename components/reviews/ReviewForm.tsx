@@ -1,8 +1,8 @@
 
 </div> <div> <label className="block text-sm font-medium mb-2" >Your Review</label> <textarea required /> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <button > {
   submitting ? 'Submitting...' : 'Submit Review'
-}</button> </form>)
-}
+</button> </form>)
+
 type Props = {
   initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;};import React, { useState } from 'react';
 import StarRating from './StarRating';
@@ -14,9 +14,8 @@ export type ReviewFormValues = {
   text: string
 </div> <div> <label className="block text - sm font - medium mb - 2" >Your Review</label> <textarea required /> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <button > {
   submitting ? 'Submitting...' : 'Submit Review';
-}</button> </form>);
-}
-;
+</button> </form>);
+
 type Props = {
   initial: Pick < ReviewFormValues, 'project_id' | 'from_role' | 'from_id'>;}import React, { useState } from 'react';
 import StarRating from './StarRating';
@@ -33,7 +32,7 @@ export type ReviewFormValues = {
     wouldWorkWithAgain?: boolean
   }
   anonymous?: boolean
-}
+
 type Props = {
   initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>
 const ReviewForm: React.FC<Props> = ({ initial }) => {
@@ -43,27 +42,26 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
  </div> <div> <label className="block text-sm font-medium mb-2" >Your Review</label> <textarea required /> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <button > {;
   submitting ? 'Submitting...' : 'Submit Review' ;
-}</button> </form>) ;
-};
+</button> </form>) ;
 
 type Props = {;
   initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;};import React, { useState } from 'react';
@@ -81,7 +79,6 @@ export type ReviewFormValues = {;
     wouldWorkWithAgain?: boolean;
   };
   anonymous?: boolean;
-};
 
 type Props = {;
   initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;
@@ -116,8 +113,7 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {;
             qualityOfWork
             timeliness
             wouldWorkWithAgain
-          }
-        })
+          })
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error |'Failed to submit');
@@ -126,7 +122,6 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {;
       setMessage(err && err.message);
     } finally {;
       setSubmitting(false);    }
-  }
   return (
     <form onSubmit={handleSubmit} className='space-y-6'>
       <div>
@@ -142,15 +137,14 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {;
           anonymous;
           categories: {
       const data = await res.json ();
-      if (throw new Error (data.error || 'Failed to submit')) {
+      if (throw new Error (data.error || 'Failed to submit') {
   $2
-}
+
       set_message ('Review submitted! Pending admin approval.');
     } catch (err: any) {
       set_message (err.message);
     } finally {
       set_submitting (false);    }
-  }
   return (
     <form on_submit={handle_submit} className='space - y-6'>;
       <div>;
@@ -161,7 +155,7 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {;
             communication;
             qualityOfWork;
             timeliness;
-            wouldWorkWithAgain}})});
+            wouldWorkWithAgain})});
       const data = await res.json();
       if (!res.ok) throw new Error(data.error |'Failed to submit');
       setMessage('Review submitted! Pending admin approval.')
@@ -177,7 +171,6 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {;
     } finally {;
       setSubmitting(false);
     }
-  }
   return (
     <form onSubmit={handleSubmit} className='space-y-6'>
       <div>
@@ -236,7 +229,6 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {;
               onChange={v => setCommunication(v)}
       set_submitting (false);
     }
-  }
   return (
     <form on_submit={handle_submit} className='space - y-6'>;
       <div>;
@@ -338,12 +330,11 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {;
       {message && <p className='text-sm'>{message}</p>}
     </form>;
   );
-}
+
 export default ReviewForm;    </form>
   )
-}
-export default ReviewForm;
 
+export default ReviewForm;
 
       <div className="flex items-center gap-3">
         <input id="anonymous" type="checkbox" checked={anonymous} onChange={(e) => setAnonymous(e.target.checked)} />
@@ -401,16 +392,13 @@ export default ReviewForm;
       {message && <p className="text-sm">{message}</p>}
     </form>
   )
-};
+;
 
 export default ReviewForm;
       </button>;
       {message && <p className='text - sm'>{message}</p>}
     </form>);
-}
-;
+
 export default ReviewForm;    </form>);
-}
-;
+
 export default ReviewForm;
-;

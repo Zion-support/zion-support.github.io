@@ -7,6 +7,5 @@ const Cookies.js = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default Cookies.js;

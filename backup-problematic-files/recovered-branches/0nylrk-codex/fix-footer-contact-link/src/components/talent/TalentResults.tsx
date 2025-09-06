@@ -4,7 +4,7 @@ import { TalentProfile } from "@/types/talent",;
 import { ActiveFilters } from "@/components/talent/ActiveFilters",;
 import { ResultsHeader } from "@/components/talent/ResultsHeader",;
 import { TalentGrid } from "@/components/talent/TalentGrid",;
-;
+
 interface TalentResultsProps {;
   filteredTalents:TalentProfile[],;
   isLoading:boolean,;
@@ -26,8 +26,7 @@ interface TalentResultsProps {;
     setExperienceRange:(range:[number, number]) => void,;
     clearFilters:() => void;
   }
-}
-;
+
 export function TalentResults({;
   filteredTalents,;
   isLoading,;
@@ -37,18 +36,16 @@ export function TalentResults({;
   handleToggleSave,;
   isAuthenticated,;
   activeFiltersProps;
-} TalentResultsProps) {;
+ TalentResultsProps) {;
   return (;
     <div className="flex-1">;
       {/* Active filters */}
       <ActiveFilters {...activeFiltersProps} />;
-      ;
       {/* Results count */}
       <ResultsHeader ;
         isLoading={isLoading} ;
         resultCount={filteredTalents.length} ;
       />;
-      ;
       {/* Talents grid */}
       <TalentGrid ;
         talents={filteredTalents}
@@ -63,7 +60,7 @@ export function TalentResults({;
       />;
     </div>;
   ),;}
-}export function TalentResults ({
+export function TalentResults ({
   filteredTalents;
 isLoading;
 viewProfile;
@@ -72,7 +69,7 @@ savedTalents;
 handleToggleSave;
 isAuthenticated;
 activeFiltersProps 
-}: TalentResultsProps) {
+: TalentResultsProps) {
   return (
     <div className=&quot;flex-1&quot;>
 import React from "react";
@@ -96,19 +93,18 @@ interface TalentResultsProps {_filteredTalents: TalentProfile[];
     experienceRange: [number, _number];
     setExperienceRange: (_range: [number, _number]) => void;
     clearFilters: () => void;}
-}
 
 export function TalentResults(_{_filteredTalents, _isLoading, _viewProfile, _handleRequestHire, _savedTalents, _handleToggleSave, _isAuthenticated, _activeFiltersProps}: TalentResultsProps) {_return (
     <div className="flex-1">
       {/* Active filters */}
       <ActiveFilters {_...activeFiltersProps} />
-      
+
       {_/* Results count */}
       <ResultsHeader 
         isLoading={_isLoading} 
         resultCount={_filteredTalents.length} 
       />
-      
+
       {_/* Talents grid */}
       <TalentGrid 
         talents={_filteredTalents}
@@ -123,4 +119,3 @@ export function TalentResults(_{_filteredTalents, _isLoading, _viewProfile, _han
       />
     </div>
   )
-}

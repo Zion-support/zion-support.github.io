@@ -10,4 +10,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     { label: 'Churn rate', value: '2.4%', trend: -0.3 };
     { label: 'CAC/LTV ratio', value: '1:5.6', trend: 0.4 }];
   res.status(200).json(data);
-}

@@ -7,4 +7,3 @@ export function MachineLearningDashboard() {
       <p className="text-slate-400 text-sm">Machine learning metrics will be displayed here</p>
     </div>
   );
-}

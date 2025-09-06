@@ -3,11 +3,11 @@ import Link from \'next/link\'; import Head from \'next/head\'; export default f
 import React from 'react';
 interface MarketplaceProps {
   // Add props here as needed
-}
+
 export default function Marketplace({ }: MarketplaceProps) {
 interface MarketplaceProps {;
   // Add props here as needed;
-}
+
 export default function Marketplace(): any ({ }: MarketplaceProps) {;
   return (
     <div>;
@@ -15,7 +15,3 @@ export default function Marketplace(): any ({ }: MarketplaceProps) {;
       <p>This component is currently under development.</p>;
     </div>;
   );
-}
-}
-
-

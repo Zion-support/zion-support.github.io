@@ -7,6 +7,5 @@ const Quantum-neural-network-platform = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default Quantum-neural-network-platform;

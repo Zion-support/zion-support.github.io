@@ -6,5 +6,3 @@ export function HowItWorksSection() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

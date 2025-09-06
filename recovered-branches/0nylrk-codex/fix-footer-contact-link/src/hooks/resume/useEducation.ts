@@ -38,7 +38,6 @@ export function useEducation() {
     } finally {
       setIsLoading(false)
     }
-  }
   const updateEducation = async (eduId: string, education: Education): Promise<boolean> => {
     if (!user) {
       setError('You must be logged in to update education')
@@ -68,7 +67,6 @@ export function useEducation() {
     } finally {
       setIsLoading(false)
     }
-  }
   const deleteEducation = async (eduId: string): Promise<boolean> => {
     if (!user) {
       setError('You must be logged in to delete education')
@@ -88,7 +86,6 @@ export function useEducation() {
     } finally {
       setIsLoading(false)
     }
-  }
   return {
     isLoading;
     error;
@@ -108,18 +105,18 @@ function use_education() {
   const { user } = use_auth ();
   const [is_loading, setIsLoading] = useState (false);
   const [error, set_error] = useState < string | null>(null);
-;
+
   const add_education = async (resume_id: string, education: Education): Promise < boolean> => {
     // Check condition
 if ( {) {
   $2
-}
+
       set_error ('You must be logged in to add education'),
       return false;
     }
     setIsLoading (true);
     set_error (null);
-;
+
     try {
       const { error } = await supabase;
         .from ('education');
@@ -135,30 +132,29 @@ if ( {) {
           institution_logo_url: education.institution_logo_url,
           location: education.location;
         });
-;
+
       // Check condition
 if (throw error) {
   $2
-}
+
       return showSuccessToast ("Education added", "Your education has been added to your resume");
     } catch (e: any) {
       return handleResumeError (e, 'Could not add education');
     } finally {
       setIsLoading (false);
     }
-  }
-;
+
   const update_education = async (edu_id: string, education: Education): Promise < boolean> => {
     // Check condition
 if ( {) {
   $2
-}
+
       set_error ('You must be logged in to update education'),
       return false;
     }
     setIsLoading (true);
     set_error (null);
-;
+
     try {
       const { error } = await supabase;
         .from ('education');
@@ -174,48 +170,46 @@ if ( {) {
           location: education.location;
         });
         .eq ('id', edu_id);
-;
+
       // Check condition
 if (throw error) {
   $2
-}
+
       return showSuccessToast ("Education updated", "Your education has been updated");
     } catch (e: any) {
       return handleResumeError (e, 'Could not update education');
     } finally {
       setIsLoading (false);
     }
-  }
-;
+
   const delete_education = async (edu_id: string): Promise < boolean> => {
     // Check condition
 if ( {) {
   $2
-}
+
       set_error ('You must be logged in to delete education'),
       return false;
     }
     setIsLoading (true);
     set_error (null);
-;
+
     try {
       const { error } = await supabase;
         .from ('education');
         .delete ();
         .eq ('id', edu_id);
-;
+
       // Check condition
 if (throw error) {
   $2
-}
+
       return showSuccessToast ("Education deleted", "Your education has been removed from your resume");
     } catch (e: any) {
       return handleResumeError (e, 'Could not delete education');
     } finally {
       setIsLoading (false);
     }
-  }
-;
+
   return {
     is_loading;
     error;
@@ -223,4 +217,3 @@ if (throw error) {
     update_education;
     delete_education;
   }
-}

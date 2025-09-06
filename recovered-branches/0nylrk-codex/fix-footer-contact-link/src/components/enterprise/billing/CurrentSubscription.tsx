@@ -17,7 +17,6 @@ export function CurrentSubscription() {
       used: 32
       total: 50
     }
-  }
 
   return (
     <Card>
@@ -75,7 +74,7 @@ export function CurrentSubscription() {
       </CardFooter>
     </Card>
   )
-}
+
             </div>;
           </div>;
         </div>;
@@ -86,10 +85,9 @@ export function CurrentSubscription() {
       </CardFooter>;
     </Card>;
   );
-}
+
       <CardFooter className="flex justify - between">;
         <Button variant="outline">Change Plan</Button>;
         <Button variant="destructive">Cancel Subscription</Button>;
       </CardFooter>;
     </Card>);
-}

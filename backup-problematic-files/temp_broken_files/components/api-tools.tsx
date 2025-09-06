@@ -19,7 +19,7 @@ import {
   BookOpen,
   Github,
   Terminal
-} from 'lucide-react',
+ from 'lucide-react',
 export default function ApiToolsPage() {const apiTools = [
     {
       icon: <Code className=&quot;w-8 h-8 text-white&quot; />,
@@ -201,9 +201,9 @@ export default function ApiToolsPage() {const apiTools = [
 
   const categories = ['AllDevelopmentDataLocationSecurityIntegrationAI/MLAnalytics'],
   const [selectedCategory, setSelectedCategory] = React.useState('All'),
-  const filteredTools = selectedCategory === 'All' 
+  const filteredTools = selectedCategory = = 'All' 
     ? apiTools 
-    : apiTools.filter(tool => tool.category === selectedCategory),
+    : apiTools.filter(tool => tool.category = = selectedCategory),
 
   return (
     <>
@@ -230,29 +230,29 @@ export default function ApiToolsPage() {const apiTools = [
           <p className=&quot;text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed&quot;>
             Build faster, scale better, and deliver more with our comprehensive collection of developer APIs. Each tool is designed for performance, reliability, and ease of integration.
           </p>
-          
+
           <div className=&quot;flex flex-wrap justify-center gap-4 mb-8&quot;>
-            {categories.map((category) => (
+            {categories.map(category) => (
               <button                key={category}
                 onClick={_() => setSelectedCategory(category)}
                 className={_`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
-                  selectedCategory === category
+                  selectedCategory = = category
                     ? 'bg-indigo-600 text-white shadow-lg'
                     : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 hover:text-white'}`}
               >
                 {category}
               </button>;
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* API Tools Grid */}
       <section className=&quot;py-24 bg-gray-900&quot;>
         <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
           <div className=&quot;text-center mb-20&quot;>
             <h2 className=&quot;text-3xl sm:text-4xl font-bold mb-6 text-white&quot;>
-              {selectedCategory === 'All' ? 'All API Tools' : `${selectedCategory} APIs`}
+              {selectedCategory = = 'All' ? 'All API Tools' : `${selectedCategory} APIs`}
             </h2>
             <p className=&quot;text-xl text-gray-400 max-w-3xl mx-auto&quot;>
               {filteredTools.length} APIs available. Each tool is production-ready with comprehensive documentation, SDKs, and support.
@@ -260,11 +260,11 @@ export default function ApiToolsPage() {const apiTools = [
           </div>
 
           <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-8&quot;>
-            {filteredTools.map((tool, index) => (
+            {filteredTools.map(tool, index) => (
               <Card,
 key={index}
                 className=&quot;group border border-gray-800 hover:border-indigo-500/30 transition-all duration-300&quot;
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={ animationDelay: `${index * 0.1}s` }
               >
                 <div className=&quot;flex items-start space-x-6&quot;>
                   <div className=&quot;relative&quot;>
@@ -272,7 +272,7 @@ key={index}
                       {tool.icon}                    </div>
                     <div className={_`absolute -inset-2 bg-gradient-to-r from-transparent via-${tool.gradient} to-transparent rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm`} />
                   </div>
-                  
+
                   <div className=&quot;flex-1&quot;>
                     <div className=&quot;flex items-center justify-between mb-3&quot;>
                       <h3 className=&quot;text-2xl font-bold text-white group-hover:text-indigo-400 transition-colors duration-300&quot;>
@@ -287,11 +287,11 @@ key={index}
                           {tool.status}                        </span>
                       </div>
                     </div>
-                    
+
                     <p className=&quot;text-gray-400 leading-relaxed mb-6&quot;>
                       {tool.description}
                     </p>
-                    
+
                     <div className=&quot;grid grid-cols-3 gap-4 mb-6&quot;>
                       <div className=&quot;text-center p-3 bg-gray-800/50 rounded-lg&quot;>
                         <div className=&quot;text-lg font-bold text-indigo-400&quot;>{tool.users}</div>
@@ -308,11 +308,11 @@ key={index}
                     </div>
 
                     <ul className=&quot;space-y-2 mb-6&quot;>
-                      {tool.features.slice(0, 3).map((feature, featureIndex) => (
+                      {tool.features.slice(0, 3).map(feature, featureIndex) => (
                         <li key={featureIndex} className=&quot;flex items-center text-gray-300 text-sm&quot;>
                           <CheckCircle className=&quot;w-4 h-4 text-green-400 mr-2 flex-shrink-0&quot; />
                           {feature}                        </li>
-                      ))}
+                      )}
                     </ul>
 
                     <div className=&quot;flex flex-wrap gap-3&quot;>
@@ -344,11 +344,11 @@ href={tool.github}
                   </div>
                 </div>
               </Card>
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Developer Resources */}
       <section className=&quot;py-24 bg-gray-800&quot;>
         <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>

@@ -12,7 +12,7 @@ interface OnboardingStatus {
   inviteSent: boolean
 
   responseReceived: boolean
-}
+
 export function useOnboardingStatus() {
   const { user } = useAuth();
   const [status, setStatus] = useState<OnboardingStatus>({
@@ -26,7 +26,7 @@ export function useOnboardingStatus() {
 
     responseReceived: false
   });
-  useEffect(() => {
+  useEffect() => {
 
     const fetchOnboardingStatus = async () => {
       if (!user) return;
@@ -51,16 +51,14 @@ export function useOnboardingStatus() {
             inviteSent: data.talent_invited |false
             responseReceived: data.quote_received |false
           })
-        }
-      } catch (err) {;
+        } catch (err) {;
         console && console.error("Error in onboarding status hook:", err);
       }
-    }
     fetchOnboardingStatus()
   }, [user]);
 
   return status
-}
+
 import { useState, useEffect } from './react';
 import { use_auth } from './use_auth';
 import { supabase } from '@/integrations / supabase / client';
@@ -72,7 +70,7 @@ interface OnboardingStatus {
   job_posted: boolean,
   invite_sent: boolean,
   response_received: boolean;
-}
+
 export /**
  * useOnboardingStatus - Function description
  */
@@ -87,13 +85,13 @@ function useOnboardingStatus() {
     invite_sent: false,
     response_received: false;
   });
-;
-  useEffect (() => {
+
+  useEffect () => {
     const fetchOnboardingStatus = async () => {
       // Check condition
 if (return) {
   $2
-}
+
       try {
         // Get user onboarding progress from database;
         const { data, error } = await supabase;
@@ -101,18 +99,18 @@ if (return) {
           .select ('*');
           .eq ('user_id', user.id);
           .single ();
-;
+
         // Check condition
 if ( {) {
   $2
-}
+
           console.error ("Error fetching onboarding status:", error);
           return;
         }
         // Check condition
 if ( {) {
   $2
-}
+
           set_status ({
             profile_completed: data.profile_completed || false,
             skills_added: data.skills_added || false,
@@ -122,14 +120,11 @@ if ( {) {
             invite_sent: data.talent_invited || false,
             response_received: data.quote_received || false;
           });
-        }
-      } catch (err) {
+        } catch (err) {
         console.error ("Error in onboarding status hook:", err);
       }
-    }
-;
+
     fetchOnboardingStatus ();
   }, [user]);
-;
+
   return status;
-}

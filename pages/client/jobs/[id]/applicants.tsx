@@ -3,7 +3,7 @@ import useSWR from 'swr';
 import { TALENT_PROFILES  } from '../../../../data/talent';
 import Link from 'next/link';
 
-const fetcher = (url: string) => fetch(url).then(r => r.json());
+const fetcher = (url: string) => fetch(url).then(r => r.json();
 export default function JobApplicantsPage() {
   const router = useRouter()
   const { id } = router.query;
@@ -31,11 +31,11 @@ export default function JobApplicantsPage() {;
       </div>;
       {job && <p className='text-sm text-gray-600'>For job: {job && job.title}</p>}
       <div className='grid gap-3'>;
-        {applications && applications.length === 0 && (;
+        {applications && applications.length = = 0 && (;
           <p className='text-sm text-gray-500'>No applicants yet.</p>;
         )}
         {applications.map(a => {
-          const talent = TALENT_PROFILES.find(t => t.slug === a.talentSlug);
+          const talent = TALENT_PROFILES.find(t => t.slug = = a.talentSlug);
             >
               <div className='flex items-center justify-between'>
 
@@ -54,7 +54,7 @@ export default function JobApplicantsPage() {;
         })}
       </div>
     </div>
-);
+;
     <div className="space-y-4">
       <div className="flex items-center justify-between">
         <h1 className="text-2xl font-semibold">Applicants</h1>
@@ -62,9 +62,9 @@ export default function JobApplicantsPage() {;
       </div>
       {job && <p className="text-sm text-gray-600">For job: {job.title}</p>}
       <div className="grid gap-3">
-        {applications.length === 0 && <p className="text-sm text-gray-500">No applicants yet.</p>}
-        {applications.map((a) => {
-          const talent = TALENT_PROFILES.find((t) => t.slug === a.talentSlug);
+        {applications.length = = 0 && <p className="text-sm text-gray-500">No applicants yet.</p>}
+        {applications.map(a) => {
+          const talent = TALENT_PROFILES.find(t) => t.slug = = a.talentSlug);
           return (
             <div key={a.id} className="border rounded p-4 bg-white dark:bg-gray-900">
               <div className="flex items-center justify-between">
@@ -80,7 +80,6 @@ export default function JobApplicantsPage() {;
       </div>
     </div>
   )
-}
+
       </div>;
     </div>);
-;

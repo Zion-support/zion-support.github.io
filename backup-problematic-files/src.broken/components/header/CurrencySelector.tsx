@@ -7,15 +7,15 @@ import {;
   DropdownMenuTrigger} from '@/components/ui/dropdown-menu',;
 import { useCurrency, SupportedCurrency } from '@/context/CurrencyContext',;
 import { DollarSign } from 'lucide-react',;
-;
+
 const SUPPORTED:{ code:SupportedCurrency, symbol:string }[] = [;
   { code:'USD', symbol:'$' },;
   { code:'EUR', symbol:'' },;
   { code:'GBP', symbol:'' }],;
-;
+
 export function CurrencySelector() {;
   const { currency, setCurrency } = useCurrency(),;
-;
+
   return (;
     <DropdownMenu>;
       <DropdownMenuTrigger asChild>;
@@ -28,27 +28,26 @@ export function CurrencySelector() {;
         {SUPPORTED.map(c => (;
           <DropdownMenuItem;
             key={c.code}
-            className={`cursor-pointer ${currency.code === c.code ? 'bg-zion-purple/20 text-zion-cyan' :'text-white hover:bg-zion-purple/10'}`}
+            className={`cursor-pointer ${currency.code = = c.code ? 'bg-zion-purple/20 text-zion-cyan' :'text-white hover:bg-zion-purple/10'}`}
             onClick={() => setCurrency(c.code)}
           >;
             {c.symbol} {c.code}
           </DropdownMenuItem>;
-        ))}
+        )}
       </DropdownMenuContent>;
     </DropdownMenu>;
   ),;}
  return (<DropdownMenu> <DropdownMenuTrigger asChild> <Button variant="ghost" size="icon" className="text-white hover:bg-zion-purple/10" > <DollarSign className="h-5 w-5" /> <span className="sr-only" >Select currency</span> </Button> </DropdownMenuTrigger> <DropdownMenuItem key= {
   c.code 
-}className= {
+className= {
   `cursor-pointer $ {
-  currency.code === c.code ? 'bg-zion-purple/20 text-zion-cyan' : 'text-white hover:bg-zion-purple/10' 
-}` 
-}onClick= {
+  currency.code = = c.code ? 'bg-zion-purple/20 text-zion-cyan' : 'text-white hover:bg-zion-purple/10' 
+` 
+onClick= {
   () => setCurrency (c.code) 
-}> {
+> {
   c.symbol 
-}{
+{
   c.code 
-}</DropdownMenuItem>) ) 
-}</DropdownMenuContent> </DropdownMenu>) 
-}
+</DropdownMenuItem>) 
+</DropdownMenuContent> </DropdownMenu>) 

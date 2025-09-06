@@ -657,10 +657,10 @@ export const real2036AIServices = [
       'Safety systems'
     ]
   }
-];      'Autonomous vehiclesFleet managementTraffic optimizationSafety systems'
+;      'Autonomous vehiclesFleet managementTraffic optimizationSafety systems'
     ]
   }
-];
+;
 
 export const real2036AIServices = [;
   {
@@ -992,8 +992,7 @@ export const real2036AIServices = [;
       'Safety systems',
     ],
   },
-];      'Autonomous vehicles_fleet management_traffic optimization_safety systems';
+;      'Autonomous vehicles_fleet management_traffic optimization_safety systems';
     ];
   }
-];
 ;

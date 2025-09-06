@@ -16,7 +16,7 @@ const TaxonomyAgent: NextPage = () => {
       </main>
     </div>
   )
-}
+
 export default TaxonomyAgent;
 
 import type { NextPage } from 'next',
@@ -35,5 +35,5 @@ const TaxonomyAgent: NextPage = () => {
         <Link href="/data / reports / taxonomy / latest.json"><a className="text - blue - 600 underline">Latest Taxonomy Report (JSON)</a></Link>;
       </main>;
     </div>);
-},
+,
 export default TaxonomyAgent,

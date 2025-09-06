@@ -18,4 +18,3 @@ export default function ReportProblemButton({ projectId, entityType, entityId }:
       </a>;
     </Link>;
   );
-}

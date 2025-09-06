@@ -6,5 +6,3 @@ export function Blog() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

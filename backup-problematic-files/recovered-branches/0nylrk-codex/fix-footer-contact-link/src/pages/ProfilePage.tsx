@@ -19,8 +19,8 @@ import { ;
   Twitter, ;
   Linkedin,;
   CheckCircle2;
-} from "lucide-react",;
-;
+ from "lucide-react",;
+
 export default function ProfilePage() {;
   // useParams may be untyped in this environment, so avoid passing a;
   // type argument and cast the result instead to prevent TS2347 errors.;
@@ -28,8 +28,8 @@ export default function ProfilePage() {;
   const [profileData, setProfileData] = useState<any>(null),;
   const [isLoading, setIsLoading] = useState(true),;
   const [isError, setIsError] = useState(false),;
-;
-  useEffect(() => {;
+
+  useEffect() => {;
     const fetchProfile = async () => {;
       setIsLoading(true),;
       setIsError(false),;
@@ -39,11 +39,11 @@ export default function ProfilePage() {;
           .select("*");
           .eq("id", profileId);
           .single(),;
-;
+
         if (error) {;
           throw error,;
         }
-;
+
         setProfileData(data),;
       } catch (error) {;
         console.error("Error fetching profile:", error),;
@@ -54,14 +54,12 @@ export default function ProfilePage() {;
           variant:"destructive"}),;
       } finally {;
         setIsLoading(false),;
-      }
-    },;
-;
+      },;
+
     if (profileId) {;
       fetchProfile(),;
-    }
-  }, [profileId]),;
-;
+    }, [profileId]),;
+
   if (isLoading) {;
     return (;
       <div className="min-h-screen flex items-center justify-center">;
@@ -69,7 +67,7 @@ export default function ProfilePage() {;
       </div>;
     ),;
   }
-;
+
   if (isError || !profileData) {;
     return (;
       <div className="min-h-screen flex items-center justify-center">;
@@ -77,7 +75,7 @@ export default function ProfilePage() {;
       </div>;
     ),;
   }
-;
+
   return (;
     <>;
       <SEO;
@@ -106,7 +104,6 @@ export default function ProfilePage() {;
                       <CheckCircle2 className="w-5 h-5 text-zion-cyan" />;
                     </div>;                  )}
                 </div>;
-                ;
                 {/* Main Info */}
                 <div className="flex-1">;
                   <div className="flex justify-between items-start">;
@@ -116,7 +113,6 @@ export default function ProfilePage() {;
                     </div>;
                     {/* Add Save/Unsave Button Here */}
                   </div>;
-                  ;
                   {/* Location & Availability */}
                   <div className="mt-2 flex flex-wrap gap-3 text-sm">;
                     {profileData.location && (;
@@ -133,31 +129,28 @@ export default function ProfilePage() {;
                   </div>;
                 </div>;
               </div>;
-              ;
               {/* Skills */}
               {profileData.skills && profileData.skills.length > 0 && (;
                 <div className="mt-4">;
                   <h4 className="text-lg font-bold text-white mb-2">Skills</h4>;
                   <div className="flex flex-wrap gap-2">;
-                    {profileData.skills.map((skill, index) => (;
+                    {profileData.skills.map(skill, index) => (;
                       <Badge key={index} variant="secondary">{skill}</Badge>;
-                    ))}
+                    )}
                   </div>;
                 </div>;              )}
             </div>;
-            ;
             {/* Bio Section */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">;
               <h2 className="text-xl font-bold text-white mb-3">About Me</h2>;
               <p className="text-zion-slate-light">{profileData.bio || "No bio provided."}</p>;
             </div>;
-            ;
             {/* Portfolio Section */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">;
               <h2 className="text-xl font-bold text-white mb-3">Portfolio</h2>;
               <div className="space-y-3">;
                 {profileData.portfolio_links && profileData.portfolio_links.length > 0 ? (;
-                  profileData.portfolio_links.map((link, index) => (;
+                  profileData.portfolio_links.map(link, index) => (;
                     <a;
                       key={index}
                       href={link}
@@ -168,18 +161,16 @@ export default function ProfilePage() {;
                       <LinkIcon className="h-4 w-4 mr-2" />;
                       {link}
                     </a>;
-                  ));
+                  );
                 ) :(;
                   <p className="text-zion-slate-light">No portfolio links provided.</p>;                )}
               </div>;
             </div>;
-            ;
             {/* Experience Section */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">;
               <h2 className="text-xl font-bold text-white mb-3">Experience</h2>;
               <p className="text-zion-slate-light">{profileData.experience || "No experience provided."}</p>;
             </div>;
-            ;
             {/* Social Links */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">;
               <h2 className="text-xl font-bold text-white mb-3">Connect</h2>;
@@ -216,16 +207,15 @@ export default function ProfilePage() {;
               </div>;
             </div>;
           </div>;
-        ;
           {/* Sidebar with HireNowCTA */}
           <div className="col-span-12 lg:col-span-4 space-y-6">;
             <HireNowCTA;
-              talentProfile={{;
+              talentProfile={;
                 id:profileData?.id || '',;
                 full_name:profileData?.full_name || '',;
                 professional_title:profileData?.professional_title || '',;
                 hourly_rate:profileData?.hourly_rate || 0;
-              }}
+              }
             />;
             {/* Placeholder for other sidebar elements */}
           </div>;
@@ -242,45 +232,43 @@ Github;
 Twitter;
 Linkedin;
 CheckCircle2 //useParams may be untyped in this environment, so avoid passing a //type argument and cast the result instead to prevent TS2347 errors. .from ("talent profiles") .select ("*") .eq ("id", profileId) .single ();
-}finally {
+finally {
   setIsLoading (false) 
-}
-};
+
+;
 if (profileId) {
   fetchProfile () 
-}
-}, [profileId]);
+
+, [profileId]);
 if (isLoading) {
   return (<div className="min-h-screen flex items-center justify-center" > <span className="loading loading-ring loading-lg" ></span> </div>) 
-}if (isError || !profileData) {
+if (isError || !profileData) {
   return (<div className="min-h-screen flex items-center justify-center" > <p className="text-red-500" >Failed to load profile.</p> </div>) 
-}profileData.full name?.charAt (0) 
-}</AvatarFallback>) 
-}</Avatar> </div>) 
-}</div> </div> {
+profileData.full name?.charAt (0) 
+</AvatarFallback>) 
+</Avatar> </div>) 
+</div> </div> {
   /* Add Save/Unsave Button Here */ 
-}</div> <span> {
+</div> <span> {
   profileData.availability 
-}</span> </div>) 
-}</div> </div> </div>) ) 
-}</div> </div>) 
-}</div>) ) ) : (<p className="text-zion-slate-light" >No portfolio links provided.</p>) 
-}</div> </div> <a href= {
+</span> </div>) 
+</div> </div> </div>) 
+</div> </div>) 
+</div>) ) : (<p className="text-zion-slate-light" >No portfolio links provided.</p>) 
+</div> </div> <a href= {
   profileData.github link 
-}target="blank" rel="noopener noreferrer" className="text-zion-cyan hover:text-white transition-colors" > <Github className="h-6 w-6" /> </Link>) 
-}{
+target="blank" rel="noopener noreferrer" className="text-zion-cyan hover:text-white transition-colors" > <Github className="h-6 w-6" /> </Link>) 
+{
   profileData.twitter link && (<a href= {
   profileData.twitter link 
-}target="blank" rel="noopener noreferrer" className="text-zion-cyan hover:text-white transition-colors" > <Twitter className="h-6 w-6" /> </Link>) 
-}{
+target="blank" rel="noopener noreferrer" className="text-zion-cyan hover:text-white transition-colors" > <Twitter className="h-6 w-6" /> </Link>) 
+{
   profileData.linkedin link && (<a href= {
   profileData.linkedin link 
-}target="blank" rel="noopener noreferrer" className="text-zion-cyan hover:text-white transition-colors" > <Linkedin className="h-6 w-6" /> </Link>) 
-}</div> </div> </div> <HireNowCTA talentProfile= {
-  {
+target="blank" rel="noopener noreferrer" className="text-zion-cyan hover:text-white transition-colors" > <Linkedin className="h-6 w-6" /> </Link>) 
+</div> </div> </div> <HireNowCTA talentProfile= {
   id: profileData?.id || '', full name: profileData?.full name || '', professional title: profileData?.professional title || '', hourly rate: profileData?.hourly rate || 0 
-}
-}/> {
+
+/> {
   /* Placeholder for other sidebar elements */ 
-}</div> </div> </div> <Footer /> </>) 
-}
+</div> </div> </div> <Footer /> </>) 

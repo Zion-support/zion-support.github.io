@@ -5,13 +5,11 @@ async function getFile(owner, repo, path, token) {;
     headers: {;
       'Authorization': `token ${token}`,;
       'Accept': 'application/vnd.github+json';
-    }
-  }),;
-  if (resp.status === 404) return null,;
+    }),;
+  if (resp.status = = 404) return null,;
   if (!resp.ok) throw new Error(`GitHub getFile HTTP ${resp.status}`),;
   return resp.json();
-}
-;
+
 async function upsertFile({ owner, repo, path, content, message, token }) {;
   if (!token || !owner || !repo) throw new Error('Missing GitHub credentials'),;
   const existing = await getFile(owner, repo, path, token),;
@@ -33,6 +31,5 @@ async function upsertFile({ owner, repo, path, content, message, token }) {;
     throw new Error(`GitHub upsertFile HTTP ${resp.status}: ${text}`);
   }
   return resp.json();
-}
-;
+
 module.exports = { upsertFile },;

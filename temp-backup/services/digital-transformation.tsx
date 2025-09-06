@@ -3,11 +3,11 @@ import Link from \'next/link\'; import Head from \'next/head\'; export default f
 import React from 'react';
 interface DigitaltransformationProps {
   // Add props here as needed
-}
+
 export default function Digitaltransformation({ }: DigitaltransformationProps) {
 interface DigitaltransformationProps {;
   // Add props here as needed;
-}
+
 export default function Digitaltransformation(): any ({ }: DigitaltransformationProps) {;
   return (
     <div>;
@@ -15,7 +15,3 @@ export default function Digitaltransformation(): any ({ }: Digitaltransformation
       <p>This component is currently under development.</p>;
     </div>;
   );
-}
-}
-
-

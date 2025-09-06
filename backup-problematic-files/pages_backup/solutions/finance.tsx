@@ -42,7 +42,7 @@ import {
   Database, 
   CheckCircle, 
   ArrowRight 
-} from 'lucide-react';
+ from 'lucide-react';
 
 const features = [
   {
@@ -75,7 +75,7 @@ const features = [
     title: 'Audit Trail',
     description: 'Complete transaction and activity audit trails'
   }
-;];
+];
 const solutions = [;
   'Digital Banking Platforms',',
   'Payment Processing Systems',',
@@ -87,7 +87,7 @@ const solutions = [;
   'Insurance Technology',',
   'Cryptocurrency Solutions',',
   'Financial Mobile Applications'';
-;];
+];
 export default function FinanceSolutionsPage() {
   return (;
     <Layout );
@@ -135,7 +135,7 @@ export default function FinanceSolutionsPage() {
               </p>;
             </div>;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
-              {features.map((feature, index) => (,
+              {features.map(feature, index) => (,
                 <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover:border-blue-500 transition-colors">"
                   <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-6">";
                     <feature.icon className="w-6 h-6 text-white" />";
@@ -150,13 +150,13 @@ const benefits = [
   'Better risk management capabilities',
   'Reduced operational costs',
   'Faster transaction processing'
-];
+;
 export default function FinanceSolutions() {
     title: 'User Management',
     description: 'Secure user management with role-based access control',
     benefits: ['User provisioning', 'Role management', 'Access control', 'Audit logs']
   }
-];
+;
 
 export default function FinanceSolutionsPage() {
   return (
@@ -207,7 +207,7 @@ export default function FinanceSolutionsPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
+              {features.map(feature, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
                     <feature.icon className="w-6 h-6 text-blue-600" />
@@ -219,7 +219,7 @@ export default function FinanceSolutionsPage() {
                     {feature.description}
                   </p>
                 </div>
-              ))}
+              )}
             </div>,
           </div>;
         </section>;
@@ -231,12 +231,12 @@ export default function FinanceSolutionsPage() {
                 Our Financial Services Solutions;
               </h2>;
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">";
-                {solutions.map((solution, index) => (,
+                {solutions.map(solution, index) => (,
                   <div key={index} className="flex items-center space-x-3">"
                     <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />";
                     <span className="text-gray-300 text-lg">{solution}</span>"
                   </div>;
-                ))}
+                )}
               </div>,
             </div>;
           </div>;
@@ -317,12 +317,12 @@ export default function FinanceSolutionsPage() {
                   enhance security, and improve customer experiences.
                 </p>
                 <ul className="space-y-4">
-                  {benefits.map((benefit, index) => (
+                  {benefits.map(benefit, index) => (
                     <li key={index} className="flex items-start">
                       <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" />
                       <span className="text-gray-700">{benefit}</span>
                     </li>
-                  ))}
+                  )}
                 </ul>
               </div>
               <div className="bg-gradient-to-r from-blue-600 to-green-700 p-8 rounded-xl text-white">
@@ -339,15 +339,15 @@ export default function FinanceSolutionsPage() {
                   <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                   <p className="text-gray-600 mb-4">{feature.description}</p>
                   <div className="space-y-2">
-                    {feature.benefits.map((benefit, benefitIndex) => (
+                    {feature.benefits.map(benefit, benefitIndex) => (
                       <div key={benefitIndex} className="flex items-center text-sm text-gray-600">
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
                         {benefit}
                       </div>
-                    ))}
+                    )}
                   </div>
                 </motion.div>
-              ))}
+              )}
             </div>
           </div>
         </section>
@@ -378,6 +378,5 @@ export default function FinanceSolutionsPage() {
     </>
     </>
   );
-};
 
 export default Finance;

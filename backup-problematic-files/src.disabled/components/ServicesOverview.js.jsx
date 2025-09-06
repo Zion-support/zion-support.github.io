@@ -7,6 +7,5 @@ const ServicesOverview.js = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default ServicesOverview.js;

@@ -7,8 +7,8 @@ it('renders category card with link to slug', () => {
       <CategoryCard title="Test Category" slug="test-category" />
     </MemoryRouter>
   );
-  expect(screen.getByText('Test Category')).toBeInTheDocument();
-});
+  expect(screen.getByText('Test Category').toBeInTheDocument();
+);
 import {render, screen} from '@testing - library / react';
 import {MemoryRouter} from 'react-router-dom';
 import {CategoryCard} from '@/components / CategoryCard';
@@ -19,7 +19,7 @@ it ('renders category card with link to slug', () => {
     </MemoryRouter>);
   const link = screen.getByRole ('link', { name: /test category / i });
   expect (link).toHaveAttribute ('href / category / test - category');
-});
+);
 it ('normalizes slug with special characters', () => {
       <CategoryCard title='R & D Tools!' description='desc' icon='*' />;
   const link = screen.getByRole ('link', { name: /r & d tools!/i });

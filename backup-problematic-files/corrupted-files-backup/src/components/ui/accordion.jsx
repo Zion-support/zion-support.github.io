@@ -7,6 +7,5 @@ const Accordion = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default Accordion;

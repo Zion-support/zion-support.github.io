@@ -6,14 +6,12 @@ export function readJsonFile(filePath: string) {
   } catch (error) {
     return null;
   }
-}
 
 export function writeJsonFile(filePath: string, data: any) {
   try {
     const fs = require('fs');
-    fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+    fs.writeFileSync(filePath, JSON.stringify(data, null, 2);
     return true;
   } catch (error) {
     return false;
   }
-}

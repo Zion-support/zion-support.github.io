@@ -3,7 +3,7 @@ import React from "react",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 import { Badge } from "@/components/ui/badge",;
-;
+
 export function CurrentSubscription() {;
   // Mock subscription data;
   const subscription = {;
@@ -16,9 +16,8 @@ export function CurrentSubscription() {;
     teamSeats:{;
       used:32,;
       total:50;
-    }
-  },;
-;
+    },;
+
   return (;
     <Card>;
       <CardHeader>;
@@ -57,7 +56,6 @@ export function CurrentSubscription() {;
             </p>;
           </div>;
         </div>;
-        ;
         <div className="rounded-lg bg-muted p-4 mt-4">;
           <div className="space-y-2">;
             <div className="flex items-center justify-between">;
@@ -86,7 +84,6 @@ amount: "$1, 999.00";
 teamSeats: {
   used: 32;
 total: 50 
-}
-};
+
+;
 flex items-center justify-between"> <CardTitle>Current Subscription</CardTitle> <Badge variant=" outline"className=" bg-green-500 text-white">Active</Badge> </div> <CardDescription>Your subscription details and plan information</CardDescription> </CardHeader> </p> </div> </div> <div className=" rounded-lg bg-muted p-4 mt-4"> <div className=" space-y-2"> <div className=" flex items-center justify-between"> <div className=" text-sm font-medium">Annual discount applied</div> <div className=" text-sm font-medium text-green-600">Save 20%</div> </div> <div className=" text-xs text-muted-foreground"> You're saving $4, 797.60 per year with annual billing. </div> </div> </div> </CardContent> <CardFooter className=" flex justify-between"> <Button variant=" outline">Change Plan</Button> <Button variant=" destructive" >Cancel Subscription</Button> </CardFooter> </Card>) 
-}

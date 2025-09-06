@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -56,7 +56,7 @@ const features = [;
     icon: Users,
     benefits: ['Technical Mentorship, 'Best Practices', 'Industry Insights', 'Ongoing Support']',
   }
-;];
+];
 
 const services = [;
   { title: 'MVP Development, description: 'Minimum viable product development in 2-4 weeks' },',
@@ -65,14 +65,14 @@ const services = [;
   { title: 'API Development, description: 'Robust APIs for your mobile and web applications' },',
   { title: 'Cloud Setup, description: 'Scalable cloud infrastructure from day one' },',
   { title: 'Growth Hacking, description: 'Technical solutions to accelerate user acquisition' }',
-;];
+];
 
 const stats = [;
   { number: '100+, label: 'Startups Helped' },',
   { number: '300+, label: 'Projects Delivered' },',
   { number: '300%, label: 'Average Growth' },',
   { number: '2-4, label: 'Weeks to MVP' }',
-;];
+];
 
 export default function StartupSolutionsPage() {
   return (;
@@ -91,9 +91,9 @@ export default function StartupSolutionsPage() {
 
           <div className="container mx-auto px-4 relative z-10">";
             <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="text-center max-w-4xl mx-auto""
             >;
               <div className="flex items-center justify-center mb-6">";
@@ -123,18 +123,18 @@ export default function StartupSolutionsPage() {
         <section className="py-16 bg-white">"
           <div className="container mx-auto px-4">";
             <div className="grid grid-cols-2 md: grid-cols-4 gap-8">",
-              {stats.map((stat, index) => (,
+              {stats.map(stat, index) => (,
                 <motion.div}),
                   key={stat.label}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }
                   className="text-center""
                 >;
                   <div className="text-4xl md:text-5xl font-bold text-green-600 mb-2">{stat.number}</div>"
                   <div className="text-gray-600 font-medium">{stat.label}</div>"
                 </motion.div>;
-              ))}
+              )}
             </div>,
           </div>;
         </section>;
@@ -143,9 +143,9 @@ export default function StartupSolutionsPage() {
         <section className="py-20 bg-gray-50">"
           <div className="container mx-auto px-4">";
             <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Startup <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-blue-600">Advantages</span>",
@@ -156,12 +156,12 @@ export default function StartupSolutionsPage() {
             </motion.div>;
 
             <div className="grid grid-cols-1 md: grid-cols-2 gap-8">",
-              {features.map((feature, index) => (,
+              {features.map(feature, index) => (,
                 <motion.div}),
                   key={feature.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.2 }}
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.2 }
                   className="bg-white rounded-2xl shadow-xl p-8""
                 >;
                   <div className="flex items-center mb-6">";
@@ -175,15 +175,15 @@ export default function StartupSolutionsPage() {
                   </div>;
 
                   <ul className="space-y-3">";
-                    {feature.benefits.map((benefit, benefitIndex) => (,
+                    {feature.benefits.map(benefit, benefitIndex) => (,
                       <li key={benefitIndex} className="flex items-center text-gray-600">"
                         <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />";
                         {benefit}
                       </li>,
-                    ))}
+                    )}
                   </ul>,
                 </motion.div>;
-              ))}
+              )}
             </div>,
           </div>;
         </section>;
@@ -192,9 +192,9 @@ export default function StartupSolutionsPage() {
         <section className="py-20 bg-white">"
           <div className="container mx-auto px-4">";
             <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-blue-600">Services</span>",
@@ -205,18 +205,18 @@ export default function StartupSolutionsPage() {
             </motion.div>;
 
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">",
-              {services.map((service, index) => (,
+              {services.map(service, index) => (,
                 <motion.div}),
                   key={service.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }
                   className="bg-gradient-to-br from-green-50 to-blue-50 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300""
                 >;
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>"
                   <p className="text-gray-600">{service.description}</p>"
                 </motion.div>;
-              ))}
+              )}
             </div>,
           </div>;
         </section>;
@@ -225,9 +225,9 @@ export default function StartupSolutionsPage() {
         <section className="py-20 bg-gradient-to-r from-green-600 to-blue-600 text-white">"
           <div className="container mx-auto px-4 text-center">";
             <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
             >,
               <h2 className="text-4xl md: text-5xl font-bold mb-6">", Ready to Launch Your Startup?,
               </h2>;
@@ -252,4 +252,3 @@ export default function StartupSolutionsPage() {
       </div>;
     </Layout>;
   );
-}

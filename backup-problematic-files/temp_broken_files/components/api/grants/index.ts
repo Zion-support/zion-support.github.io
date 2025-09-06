@@ -7,36 +7,33 @@ import type { CreateGrantPayload, GrantApplication } from '../../../types/grants
 const GRANTS_DIR = path.join(process.cwd(), 'datagrants'),
 
 function ensureDir() {
-  if (!fs.existsSync(GRANTS_DIR)) {
+  if (!fs.existsSync(GRANTS_DIR) {
     fs.mkdirSync(GRANTS_DIR, { recursive: true })
   }
-}
 
 function readAllGrants(): GrantApplication[] {
   ensureDir(),
-  const files = fs.readdirSync(GRANTS_DIR).filter((f) => f.endsWith('.json')),
-  return files.map((file) => {
+  const files = fs.readdirSync(GRANTS_DIR).filter(f) => f.endsWith('.json'),
+  return files.map(file) => {
     const full = path.join(GRANTS_DIR, file),
     const raw = fs.readFileSync(full, 'utf8'),
     return JSON.parse(raw) as GrantApplication
   })
-}
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method === 'GET') {
+  if (req.method = = 'GET') {
     const { status, sector, region, program } = req.query,
-    const list = readAllGrants().filter((g) => {
-      return (        (status ? g.status === status : true) &&
-        (sector ? g.sector === sector : true) &&
-        (region ? g.region === region : true) &&
-        (program ? g.program === program : true)
-      )
+    const list = readAllGrants().filter(g) => {
+      return (status ? g.status = = status : true) &&
+        (sector ? g.sector = = sector : true) &&
+        (region ? g.region = = region : true) &&
+        (program ? g.program = = program : true)
     }),
     res.status(200).json({ items: list }),
     return
   }
 
-  if (req.method === 'POST') {
+  if (req.method = = 'POST') {
     try {
       const payload = req.body as CreateGrantPayload,
       if (!payload || !payload.projectName || !payload.teamInfo || !payload.proposalSummary || !payload.timeline) {

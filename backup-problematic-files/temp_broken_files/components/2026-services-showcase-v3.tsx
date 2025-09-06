@@ -43,9 +43,9 @@ export default function ServicesShowcase2026V3() {
         <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div
-              initial={_{ opacity: 0, _y: 30}}
-              animate={_{ opacity: 1, _y: 0}}
-              transition={_{ duration: 0.8}}
+              initial={_{ opacity: 0, _y: 30}
+              animate={_{ opacity: 1, _y: 0}
+              transition={_{ duration: 0.8}
             >
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
                 Revolutionary 2026 Services
@@ -57,16 +57,16 @@ export default function ServicesShowcase2026V3() {
               <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
                 <motion.a
                   href="#services"
-                  whileHover={_{ scale: 1.05}}
-                  whileTap={_{ scale: 0.95}}
+                  whileHover={_{ scale: 1.05}
+                  whileTap={_{ scale: 0.95}
                   className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-xl shadow-lg shadow-purple-500/25 hover:shadow-xl hover:shadow-purple-500/40 transition-all duration-200"
                 >
                   Explore Services
                 </motion.a>
                 <motion.a
                   href={_`tel:${contactInfo.mobile}`}
-                  whileHover={_{ scale: 1.05}}
-                  whileTap={_{ scale: 0.95}}
+                  whileHover={_{ scale: 1.05}
+                  whileTap={_{ scale: 0.95}
                   className="px-8 py-4 border-2 border-purple-500/50 text-purple-400 font-semibold rounded-xl hover:bg-purple-500/10 transition-all duration-200"
                 >
                   Get Started
@@ -85,10 +85,10 @@ export default function ServicesShowcase2026V3() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={_{ opacity: 0, _y: 20}}
-              whileInView={_{ opacity: 1, _y: 0}}
-              transition={_{ duration: 0.6}}
-              viewport={_{ once: true}}
+              initial={_{ opacity: 0, _y: 20}
+              whileInView={_{ opacity: 1, _y: 0}
+              transition={_{ duration: 0.6}
+              viewport={_{ once: true}
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -98,21 +98,21 @@ export default function ServicesShowcase2026V3() {
               <p className="text-gray-300 text-xl mb-8 max-w-2xl mx-auto">
                 Join thousands of businesses already leveraging our revolutionary 2026 services to achieve unprecedented growth and innovation.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
                 <motion.a
                   href={_`tel:${contactInfo.mobile}`}
-                  whileHover={_{ scale: 1.05}}
-                  whileTap={_{ scale: 0.95}}
+                  whileHover={_{ scale: 1.05}
+                  whileTap={_{ scale: 0.95}
                   className="flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-xl shadow-lg shadow-purple-500/25 hover:shadow-xl hover:shadow-purple-500/40 transition-all duration-200"
                 >
                   <span>Call {_contactInfo.mobile}</span>
                 </motion.a>
-                
+
                 <motion.a
                   href={_`mailto:${contactInfo.email}`}
-                  whileHover={_{ scale: 1.05}}
-                  whileTap={_{ scale: 0.95}}
+                  whileHover={_{ scale: 1.05}
+                  whileTap={_{ scale: 0.95}
                   className="flex items-center space-x-2 px-8 py-4 border-2 border-purple-500/50 text-purple-400 font-semibold rounded-xl hover:bg-purple-500/10 transition-all duration-200"
                 >
                   <span>Email Us</span>

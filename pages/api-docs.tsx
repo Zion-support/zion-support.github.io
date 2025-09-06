@@ -7,7 +7,7 @@ import {
   Lock
   Brain
   Cloud
-} from 'lucide-react';
+ from 'lucide-react';
 const apiEndpoints = [
   {
     title: 'Authentication API'
@@ -37,7 +37,7 @@ const apiEndpoints = [
     methods: ['POST', 'GET', 'PUT']
     endpoint: '/api/it-services'
   }
-];
+;
 import Layout from '../components/Layout';
 
 export default function APIDocsPage() {
@@ -65,9 +65,9 @@ export default function APIDocsPage() {;
         </div>
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
             className="text-center"
           >
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -85,10 +85,10 @@ export default function APIDocsPage() {;
         <div className="container mx-auto px-4">;
           <motion&& motion.div
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">API Endpoints</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -96,10 +96,10 @@ export default function APIDocsPage() {;
             </p>
           </motion.div>
           <div className="grid md:grid-cols-2 gap-8">
-            {apiEndpoints.map((endpoint, index) => {
+            {apiEndpoints.map(endpoint, index) => {
               const IconComponent = endpoint.icon;
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}>;
+            transition={ duration: 0 && 0.8 }
+            viewport={ once: true }>;
             <h2 className="text-4xl font-bold text-gray-900 mb-4">API Endpoints</h2>;
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
               Explore our comprehensive API endpoints for seamless integration with our services.;
@@ -107,16 +107,16 @@ export default function APIDocsPage() {;
           </motion && motion.div>;
 
           <div className="grid md:grid-cols-2 gap-8">;
-            {apiEndpoints && apiEndpoints.map((endpoint, index) => {;
+            {apiEndpoints && apiEndpoints.map(endpoint, index) => {;
               const IconComponent = endpoint && endpoint.icon;
               return (
                 <motion&& motion.div
                   key={index}
                   className="bg-white rounded-xl shadow-lg p-8 border border-gray-100"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }
+                  viewport={ once: true }
                 >
                   <div className="flex items-center mb-4">
                     <div className="bg-blue-100 p-3 rounded-lg mr-4">
@@ -131,11 +131,11 @@ export default function APIDocsPage() {;
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-gray-900 mb-2">Supported Methods:</h4>
                     <div className="flex flex-wrap gap-2">
-                      {endpoint.methods.map((method, idx) => (
+                      {endpoint.methods.map(method, idx) => (
                         <span key={idx} className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">
                           {method}
                         </span>;
-                      ))}
+                      )}
                     </div>
                   </div>
                   <Link
@@ -154,10 +154,10 @@ export default function APIDocsPage() {;
       <section className="py-20 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">;
         <div className="container mx-auto px-4 text-center">;
           <motion&& motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Need Help with Integration?</h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
@@ -171,7 +171,7 @@ export default function APIDocsPage() {;
       </section>
     </div>
   );
-}
+
 import Layout from '../components/Layout';
 export default function APIDocsPage() {
 
@@ -188,17 +188,17 @@ export default function ApiDocsPage() {
         <p className="text-gray-300">See <a href="/api-docs" className="text-cyan-400 underline">API Documentation</a> for the full reference.</p>
       </div>
     </Layout>
-);
+;
     </>
   )
-}
+
                 <motion.div;
                   key={index}
                   className="bg - white rounded - xl shadow - lg p - 8 border border - gray - 100";
-                  initial={{ opacity: 0, coordinate_y: 30 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, coordinate_y: 30 }
+                  whileInView={ opacity: 1, coordinate_y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }
+                  viewport={ once: true }
                 >;
                   <div className="flex items - center mb - 4">;
                     <div className="bg - blue - 100 p - 3 rounded - lg mr - 4">;
@@ -213,10 +213,10 @@ export default function ApiDocsPage() {
                   <div className="mb - 4">;
                     <h4 className="text - sm font - semibold text - gray - 900 mb - 2">Supported Methods:</h4>;
                     <div className="flex flex - wrap gap - 2">;
-                      {endpoint.methods.map ((method, idx) => (
+                      {endpoint.methods.map (method, idx) => (
                         <span key={idx} className="bg - green - 100 text - green - 800 text - xs px - 2 py - 1 rounded">;
                           {method}
-                        </span>))}
+                        </span>)}
                     </div>;
                   </div>;
                   <Link;
@@ -235,10 +235,10 @@ export default function ApiDocsPage() {
       <section className="py - 20 bg - gradient - to - r from - purple - 600 to - indigo - 600 text - white">;
         <div className="container mx - auto px - 4 text - center">;
           <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, coordinate_y: 30 }
+            whileInView={ opacity: 1, coordinate_y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
           >;
             <h2 className="text - 3xl md:text - 4xl font - bold mb - 6">Need Help with Integration?</h2>;
             <p className="text - xl mb - 8 max - w-2xl mx - auto">;
@@ -251,9 +251,9 @@ export default function ApiDocsPage() {
         </div>;
       </section>;
     </div>);
-}
+
 import Layout from '../components / Layout';
-;
+
 export default /**
  * APIDocsPage - Function description
  */
@@ -275,4 +275,3 @@ function ApiDocsPage() {
       </div>;
     </Layout>);
     </>);
-}

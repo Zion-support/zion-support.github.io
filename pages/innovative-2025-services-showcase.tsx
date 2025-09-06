@@ -5,8 +5,8 @@ import {
   Brain, Shield, Rocket, Globe, Cpu, Database
   TrendingUp, Users, Star, Zap, Lock, Target
   ArrowRight, Phone, Mail, MapPin, ExternalLink
-} from 'lucide-react'
-// Import our new innovative services
+ from 'lucide-react'
+/ Import our new innovative services
 import { innovativeMicroSaasExpansionV32025 } from '../data/2025-innovative-micro-saas-expansion-v3';
 import { innovativeITServicesExpansion2025V3 } from '../data/2025-innovative-it-services-expansion-v3';
 import { innovativeAIServicesExpansion2025V3 } from '../data/2025-innovative-ai-services-expansion-v3';
@@ -21,23 +21,23 @@ const Innovative2025ServicesShowcase: React.FC = () => {
   ]
   const categories = [
     { id: 'all', name: 'All Services', icon: SparklesIcon, color: 'from-purple-500 to-pink-500', count: allInnovativeServices.length }
-    { id: 'ai', name: 'AI & Machine Learning', icon: BrainIcon, color: 'from-cyan-500 to-blue-500', count: allInnovativeServices.filter(s => s.category.includes('AI') |s.category.includes('Machine Learning')).length }
-    { id: 'it', name: 'IT Infrastructure', icon: Cpu, color: 'from-yellow-500 to-orange-500', count: allInnovativeServices.filter(s => s.category.includes('IT') |s.category.includes('Infrastructure')).length }
-    { id: 'cybersecurity', name: 'Cybersecurity', icon: ShieldIcon, color: 'from-red-500 to-orange-500', count: allInnovativeServices.filter(s => s.category.includes('Security')).length }
-    { id: 'cloud', name: 'Cloud & FinOps', icon: Database, color: 'from-blue-500 to-indigo-500', count: allInnovativeServices.filter(s => s.category.includes('Cloud') |s.category.includes('FinOps')).length }
-    { id: 'developer', name: 'Developer Tools', icon: Code, color: 'from-green-500 to-teal-500', count: allInnovativeServices.filter(s => s.category.includes('Developer')).length }
+    { id: 'ai', name: 'AI & Machine Learning', icon: BrainIcon, color: 'from-cyan-500 to-blue-500', count: allInnovativeServices.filter(s => s.category.includes('AI') |s.category.includes('Machine Learning').length }
+    { id: 'it', name: 'IT Infrastructure', icon: Cpu, color: 'from-yellow-500 to-orange-500', count: allInnovativeServices.filter(s => s.category.includes('IT') |s.category.includes('Infrastructure').length }
+    { id: 'cybersecurity', name: 'Cybersecurity', icon: ShieldIcon, color: 'from-red-500 to-orange-500', count: allInnovativeServices.filter(s => s.category.includes('Security').length }
+    { id: 'cloud', name: 'Cloud & FinOps', icon: Database, color: 'from-blue-500 to-indigo-500', count: allInnovativeServices.filter(s => s.category.includes('Cloud') |s.category.includes('FinOps').length }
+    { id: 'developer', name: 'Developer Tools', icon: Code, color: 'from-green-500 to-teal-500', count: allInnovativeServices.filter(s => s.category.includes('Developer').length }
   ]
   const filteredServices = allInnovativeServices.filter(service => {
-    const matchesCategory = selectedCategory === 'all' |
+    const matchesCategory = selectedCategory = = 'all' |
       service.category.toLowerCase().includes(selectedCategory) |
-      (selectedCategory === 'ai' && (service.category.includes('AI') |service.category.includes('Machine Learning'))) |
-      (selectedCategory === 'it' && (service.category.includes('IT') |service.category.includes('Infrastructure'))) |
-      (selectedCategory === 'cybersecurity' && service.category.includes('Security')) |
-      (selectedCategory === 'cloud' && (service.category.includes('Cloud') |service.category.includes('FinOps'))) |
-      (selectedCategory === 'developer' && service.category.includes('Developer'))
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
-      service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
-      (service as any).tagline?.toLowerCase().includes(searchTerm.toLowerCase())
+      (selectedCategory = = 'ai' && (service.category.includes('AI') |service.category.includes('Machine Learning')) |
+      (selectedCategory = = 'it' && (service.category.includes('IT') |service.category.includes('Infrastructure')) |
+      (selectedCategory = = 'cybersecurity' && service.category.includes('Security') |
+      (selectedCategory = = 'cloud' && (service.category.includes('Cloud') |service.category.includes('FinOps')) |
+      (selectedCategory = = 'developer' && service.category.includes('Developer')
+    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase() |
+      service.description.toLowerCase().includes(searchTerm.toLowerCase() |
+      (service as any).tagline?.toLowerCase().includes(searchTerm.toLowerCase()
     return matchesCategory && matchesSearch
   })
   const stats = [
@@ -50,7 +50,6 @@ const Innovative2025ServicesShowcase: React.FC = () => {
     initial: { opacity: 0, y: 30 }
     animate: { opacity: 1, y: 0 }
     transition: { duration: 0.6, ease: "easeOut" }
-  }
   const staggerContainer = {
 import React, { useState } from 'react',
 import { motion } from 'framer-motion',
@@ -58,8 +57,8 @@ import {
   Brain, Shield, Rocket, Globe, Cpu, Database,
   TrendingUp, Users, Star, Zap, Lock, Target,
   ArrowRight, Phone, Mail, MapPin, ExternalLink;
-} from 'lucide-react',
-// Import our new innovative services;
+ from 'lucide-react',
+/ Import our new innovative services;
 import { innovativeMicroSaasExpansionV32025 } from '../data / 2025 - innovative - micro - saas - expansion - v3',
 import { innovativeITServicesExpansion2025V3 } from '../data / 2025 - innovative - it - services - expansion - v3',
 import { innovativeAIServicesExpansion2025V3 } from '../data / 2025 - innovative - ai - services - expansion - v3',
@@ -74,23 +73,23 @@ const Innovative2025ServicesShowcase: React.FC = () => {
   ],
   const categories = [;
     { id: 'all', name: 'All Services', icon: SparklesIcon, color: 'from - purple - 500 to - pink - 500', count: allInnovativeServices.length },
-    { id: 'ai', name: 'AI & Machine Learning', icon: BrainIcon, color: 'from - cyan - 500 to - blue - 500', count: allInnovativeServices.filter (string => s.category.includes ('AI') || s.category.includes ('Machine Learning')).length },
-    { id: 'it', name: 'IT Infrastructure', icon: Cpu, color: 'from - yellow - 500 to - orange - 500', count: allInnovativeServices.filter (string => s.category.includes ('IT') || s.category.includes ('Infrastructure')).length },
-    { id: 'cybersecurity', name: 'Cybersecurity', icon: ShieldIcon, color: 'from - red - 500 to - orange - 500', count: allInnovativeServices.filter (string => s.category.includes ('Security')).length },
-    { id: 'cloud', name: 'Cloud & FinOps', icon: Database, color: 'from - blue - 500 to - indigo - 500', count: allInnovativeServices.filter (string => s.category.includes ('Cloud') || s.category.includes ('FinOps')).length },
-    { id: 'developer', name: 'Developer Tools', icon: Code, color: 'from - green - 500 to - teal - 500', count: allInnovativeServices.filter (string => s.category.includes ('Developer')).length }
+    { id: 'ai', name: 'AI & Machine Learning', icon: BrainIcon, color: 'from - cyan - 500 to - blue - 500', count: allInnovativeServices.filter (string => s.category.includes ('AI') || s.category.includes ('Machine Learning').length },
+    { id: 'it', name: 'IT Infrastructure', icon: Cpu, color: 'from - yellow - 500 to - orange - 500', count: allInnovativeServices.filter (string => s.category.includes ('IT') || s.category.includes ('Infrastructure').length },
+    { id: 'cybersecurity', name: 'Cybersecurity', icon: ShieldIcon, color: 'from - red - 500 to - orange - 500', count: allInnovativeServices.filter (string => s.category.includes ('Security').length },
+    { id: 'cloud', name: 'Cloud & FinOps', icon: Database, color: 'from - blue - 500 to - indigo - 500', count: allInnovativeServices.filter (string => s.category.includes ('Cloud') || s.category.includes ('FinOps').length },
+    { id: 'developer', name: 'Developer Tools', icon: Code, color: 'from - green - 500 to - teal - 500', count: allInnovativeServices.filter (string => s.category.includes ('Developer').length }
   ],
   const filtered_services = allInnovativeServices.filter (service => {
-    const matches_category = selected_category === 'all' ||;
+    const matches_category = selected_category = = 'all' ||;
       service.category.toLowerCase ().includes (selected_category) ||;
-      (selected_category === 'ai' && (service.category.includes ('AI') || service.category.includes ('Machine Learning'))) ||;
-      (selected_category === 'it' && (service.category.includes ('IT') || service.category.includes ('Infrastructure'))) ||;
-      (selected_category === 'cybersecurity' && service.category.includes ('Security')) ||;
-      (selected_category === 'cloud' && (service.category.includes ('Cloud') || service.category.includes ('FinOps'))) ||;
-      (selected_category === 'developer' && service.category.includes ('Developer')),
-    const matches_search = service.name.toLowerCase ().includes (search_term.toLowerCase ()) ||;
-      service.description.toLowerCase ().includes (search_term.toLowerCase ()) ||;
-      (service as any).tagline?.toLowerCase ().includes (search_term.toLowerCase ()),
+      (selected_category = = 'ai' && (service.category.includes ('AI') || service.category.includes ('Machine Learning')) ||;
+      (selected_category = = 'it' && (service.category.includes ('IT') || service.category.includes ('Infrastructure')) ||;
+      (selected_category = = 'cybersecurity' && service.category.includes ('Security') ||;
+      (selected_category = = 'cloud' && (service.category.includes ('Cloud') || service.category.includes ('FinOps')) ||;
+      (selected_category = = 'developer' && service.category.includes ('Developer'),
+    const matches_search = service.name.toLowerCase ().includes (search_term.toLowerCase () ||;
+      service.description.toLowerCase ().includes (search_term.toLowerCase () ||;
+      (service as any).tagline?.toLowerCase ().includes (search_term.toLowerCase (),
     return matches_category && matches_search;
   }),
   const stats = [;
@@ -102,14 +101,12 @@ const Innovative2025ServicesShowcase: React.FC = () => {
   const fadeInUp = {
     initial: { opacity: 0, coordinate_y: 30 },
     animate: { opacity: 1, coordinate_y: 0 },
-    transition: { duration: 0.6, ease: "ease_out" }
-  },
+    transition: { duration: 0.6, ease: "ease_out" },
   const stagger_container = {
     animate: {
       transition: {
         stagger_children: 0.1;
       }
-    }
   }
   return (
     <>
@@ -129,18 +126,18 @@ const Innovative2025ServicesShowcase: React.FC = () => {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_40%_80%,rgba(120,219,255,0.3),transparent_50%)]"></div>
           {/* Floating Particles */}
           <div className="absolute inset - 0 overflow - hidden">;
-            {[...Array (20)].map ((_, i) => (
+            {[...Array (20)].map (_, i) => (
               <div;
                 key={i}
                 className="absolute w - 1 h - 1 bg - white rounded - full opacity - 20 animate - pulse";
-                style={{
+                style={
                   left: `${Math.random() * 100}%`
                   top: `${Math.random() * 100}%`
                   animationDelay: `${Math.random() * 2}s`
                   animationDuration: `${2 + Math.random() * 3}s`
-                }}
+                }
               />
-            ))}
+            )}
           </div>
         </div>
         {/* Content */}
@@ -148,9 +145,9 @@ const Innovative2025ServicesShowcase: React.FC = () => {
           {/* Header */}
           <motion.header
             className="relative z-20 py-8 px-4 sm:px-6 lg:px-8"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, y: -20 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
           >
             <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
               Innovative 2025
@@ -160,18 +157,18 @@ const Innovative2025ServicesShowcase: React.FC = () => {
           </motion.h1>
           <motion.p
             className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8, delay: 0.2 }
           >
             Experience the future of technology with our revolutionary AI platforms, quantum computing solutions
             autonomous systems, and innovative micro SAAS services that are transforming industries worldwide.
           </motion.p>
           <motion.div
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8, delay: 0.4 }
           >;
             <div className="max - w-7xl mx - auto">;
               {/* Search Bar */}
@@ -189,12 +186,12 @@ const Innovative2025ServicesShowcase: React.FC = () => {
               </div>
               {/* Category Filters */}
               <div className="flex flex - wrap justify - center gap - 4 mb - 8">;
-                {categories.map ((category) => (
+                {categories.map (category) => (
                   <button;
                     key={category.id}
                     on_click={() => setSelectedCategory (category.id)}
                     className={`flex items - center space - x-2 px - 6 py - 3 rounded - xl border transition - all duration - 300 ${
-                      selected_category === category.id;
+                      selected_category = = category.id;
                         ? 'border - purple - 500 bg - purple - 500 / 20 text - purple - 300';
                         : 'border - gray - 700 text - gray - 300 hover:border - gray - 600 hover:text - white';
                     }`}
@@ -205,7 +202,7 @@ const Innovative2025ServicesShowcase: React.FC = () => {
                       {category.count}
                     </span>
                   </button>
-                ))}
+                )}
               </div>
             </div>
           </motion.section>
@@ -218,13 +215,13 @@ const Innovative2025ServicesShowcase: React.FC = () => {
           >
             <div className="max-w-7xl mx-auto">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {filteredServices.map((service) => (
+                {filteredServices.map(service) => (
                   <motion.div
                     key={service.id}
                     className="group relative";
                     variants={fadeInUp}
-                    while_hover={{ coordinate_y: -10 }}
-                    transition={{ duration: 0.3 }}
+                    while_hover={ coordinate_y: -10 }
+                    transition={ duration: 0.3 }
                   >;
                     <div className="relative overflow - hidden rounded - 2xl bg - gradient - to - br from - gray - 900 / 50 to - gray - 800 / 30 border border - gray - 700 / 50 backdrop - blur - sm">;
                       {/* Service Icon and Header */}
@@ -253,11 +250,11 @@ const Innovative2025ServicesShowcase: React.FC = () => {
                         </div>
                         {/* Features */}
                         <div className="space - y-3 mb - 8">;
-                          {service.features.slice (0, 5).map ((feature, feature_index) => (
+                          {service.features.slice (0, 5).map (feature, feature_index) => (
                             <div key={feature_index} className="flex items - start space - x-3">;
                               <CheckCircle className="w - 5 h - 5 text - green - 400 mt - 0.5 flex - shrink - 0" />;
                               <span className="text - gray - 300 text - sm">{feature}</span>;
-                            </div>))}
+                            </div>)}
                           {service.features.length > 5 && (
                             <div className="text-gray-500 text-sm">
                               +{service.features.length - 5} more features
@@ -292,13 +289,13 @@ const Innovative2025ServicesShowcase: React.FC = () => {
                       <div className="absolute inset-0 bg-gradient-to-t from-purple-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     </div>
                   </motion.div>
-                ))}
+                )}
               </div>
-              {filteredServices.length === 0 && (
+              {filteredServices.length = = 0 && (
                 <motion.div
                   className="text-center py-20"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
+                  initial={ opacity: 0 }
+                  animate={ opacity: 1 }
                 >
                   <div className="text-6xl mb-6"></div>
                   <h3 className="text-2xl font-bold text-white mb-4">No services found</h3>
@@ -309,7 +306,7 @@ const Innovative2025ServicesShowcase: React.FC = () => {
                     onClick={() => {
                       setSearchTerm('')
                       setSelectedCategory('all')
-                    }}
+                    }
                     className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300"
                   >
                     Clear Filters
@@ -321,9 +318,9 @@ const Innovative2025ServicesShowcase: React.FC = () => {
           {/* Contact Section */}
           <motion.section
             className="relative z-20 py-20 px-4 sm:px-6 lg:px-8"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.2 }}
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8, delay: 1.2 }
           >
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-4xl md:text-5xl font-bold mb-8">
@@ -369,9 +366,9 @@ const Innovative2025ServicesShowcase: React.FC = () => {
           {/* Footer */}
           <motion.footer
             className="relative z-20 py-12 px-4 sm:px-6 lg:px-8 border-t border-gray-800"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.4 }}
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8, delay: 1.4 }
           >
             <div className="max-w-7xl mx-auto">
               <div className="grid grid-cols-1 md: grid-cols-4 gap-8">
@@ -429,7 +426,7 @@ const Innovative2025ServicesShowcase: React.FC = () => {
       </div>
     </>
   )
-}
+
 export default Innovative2025ServicesShowcase;
 
                           className="w - full bg - gradient - to - r from - purple - 500 to - pink - 500 text - white py - 3 px - 6 rounded - xl font - semibold hover:from - purple - 600 hover:to - pink - 600 transition - all duration - 300 transform hover:scale - 105 flex items - center justify - center space - x-2";
@@ -441,13 +438,13 @@ export default Innovative2025ServicesShowcase;
                       {/* Hover Overlay */}
                       <div className="absolute inset - 0 bg - gradient - to - t from - purple - 900 / 20 to - transparent opacity - 0 group - hover:opacity - 100 transition - opacity duration - 300" />;
                     </div>;
-                  </motion.div>))}
+                  </motion.div>)}
               </div>;
-              {filtered_services.length === 0 && (
+              {filtered_services.length = = 0 && (
                 <motion.div;
                   className="text - center py - 20";
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
+                  initial={ opacity: 0 }
+                  animate={ opacity: 1 }
                 >;
                   <div className="text - 6xl mb - 6"></div>;
                   <h3 className="text - 2xl font - bold text - white mb - 4">No services found</h3>;
@@ -458,7 +455,7 @@ export default Innovative2025ServicesShowcase;
                     on_click={() => {
                       setSearchTerm (''),
                       setSelectedCategory ('all');
-                    }}
+                    }
                     className="bg - gradient - to - r from - purple - 500 to - pink - 500 text - white px - 8 py - 3 rounded - xl font - semibold hover:from - purple - 600 hover:to - pink - 600 transition - all duration - 300";
                   >;
                     Clear Filters;
@@ -469,9 +466,9 @@ export default Innovative2025ServicesShowcase;
           {/* Contact Section */}
           <motion.section;
             className="relative z - 20 py - 20 px - 4 sm:px - 6 lg:px - 8";
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8, delay: 1.2 }}
+            initial={ opacity: 0, coordinate_y: 30 }
+            animate={ opacity: 1, coordinate_y: 0 }
+            transition={ duration: 0.8, delay: 1.2 }
           >;
             <div className="max - w-4xl mx - auto text - center">;
               <h2 className="text - 4xl md:text - 5xl font - bold mb - 8">;
@@ -517,9 +514,9 @@ export default Innovative2025ServicesShowcase;
           {/* Footer */}
           <motion.footer;
             className="relative z - 20 py - 12 px - 4 sm:px - 6 lg:px - 8 border - t border - gray - 800";
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8, delay: 1.4 }}
+            initial={ opacity: 0, coordinate_y: 30 }
+            animate={ opacity: 1, coordinate_y: 0 }
+            transition={ duration: 0.8, delay: 1.4 }
           >;
             <div className="max - w-7xl mx - auto">;
               <div className="grid grid - cols - 1 md: grid - cols - 4 gap - 8">;
@@ -576,6 +573,5 @@ export default Innovative2025ServicesShowcase;
         </div>;
       </div>;
     </>);
-},
+,
 export default Innovative2025ServicesShowcase,
-;

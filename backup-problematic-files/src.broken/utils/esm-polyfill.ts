@@ -1,19 +1,18 @@
-/**;
+**;
  * ESM Polyfill for Next.js 15 + React 19 build compatibility;
  * Fixes "Module not found:ESM packages need to be imported" errors;
  */;
-;
-// Force proper ESM resolution for problematic packages;
-if (typeof window === 'undefined') {;
+
+/ Force proper ESM resolution for problematic packages;
+if (typeof window = = 'undefined') {;
   // Server-side polyfill;
   try {;
     // Ensure lodash modules are properly resolved to lodash-es;
     const Module = eval('require')('module'),;
     const originalResolveFilename = Module._resolveFilename,;
-    ;
     Module._resolveFilename = function (request:string, parent:any, isMain:boolean, options:any) {;
       // Map lodash imports to lodash-es;
-      if (request.startsWith('lodash/')) {;
+      if (request.startsWith('lodash/') {;
         const lodashModule = request.replace('lodash/lodash-es/'),;
         try {;
           return originalResolveFilename.call(this, lodashModule, parent, isMain, options),;
@@ -21,16 +20,14 @@ if (typeof window === 'undefined') {;
           // Fallback to original if lodash-es module doesn't exist;
           return originalResolveFilename.call(this, request, parent, isMain, options),;
         }
-      }
       ;
       // Map lodash to lodash-es;
-      if (request === 'lodash') {;
+      if (request = = 'lodash') {;
         try {;
           return originalResolveFilename.call(this, 'lodash-es', parent, isMain, options),;
         } catch (e) {;
           return originalResolveFilename.call(this, request, parent, isMain, options),;
         }
-      }
       ;
       return originalResolveFilename.call(this, request, parent, isMain, options),;
     },;
@@ -39,50 +36,45 @@ if (typeof window === 'undefined') {;
     const errorMessage = error instanceof Error ? error.message :'Unknown error',;
     console.debug('ESM polyfill:Unable to patch Module._resolveFilename:', errorMessage),;
   }
-}
-;
-// Client-side compatibility fixes;
-if (typeof window !== 'undefined') {;
+
+/ Client-side compatibility fixes;
+if (typeof window != 'undefined') {;
   // Ensure proper module resolution for dynamic imports;
   const globalObj = window as any,;
   const originalImport = globalObj.require,;
   if (originalImport) {;
     globalObj.require = function(id:string) {;
       // Map lodash imports to lodash-es for client-side;
-      if (id.startsWith('lodash/')) {;
+      if (id.startsWith('lodash/') {;
         const esmModule = id.replace('lodash/lodash-es/'),;
         try {;
           return originalImport(esmModule),;
         } catch (e) {;
           return originalImport(id),;
         }
-      }
       ;
-      if (id === 'lodash') {;
+      if (id = = 'lodash') {;
         try {;
           return originalImport('lodash-es'),;
         } catch (e) {;
           return originalImport(id),;
         }
-      }
       ;
       return originalImport(id),;
     },;  }
-}
-;
-// Export empty object to satisfy module requirements;
+
+/ Export empty object to satisfy module requirements;
 export {},
-/** * ESM Polyfill for Next.js 15 + React 19 build compatibility * Fixes "Module not found: ESM packages need to be imported" errors */ //Force proper ESM resolution for problematic packages if (typeof window === 'undefined') {
+** * ESM Polyfill for Next.js 15 + React 19 build compatibility * Fixes "Module not found: ESM packages need to be imported" errors */ //Force proper ESM resolution for problematic packages if (typeof window = = 'undefined') {
   //Server-side polyfill try {
   //Ensure lodash modules are properly resolved to lodash-es Module. resolveFilename = function (request: string, parent: unknown, isMain: boolean, options: unknown) {
-  //Map lodash imports to lodash-es if (request.startsWith ('lodash/') ) {
+  //Map lodash imports to lodash-es if (request.startsWith ('lodash/') {
   if (originalImport) {
   globalObj.require = function (id: string) {
-  //Map lodash imports to lodash-es for client-side if (id.startsWith ('lodash/') ) {
-  
-}return originalImport (id) 
-}
-}
-}// Export empty object to satisfy module requirements export {
-  
-};
+  //Map lodash imports to lodash-es for client-side if (id.startsWith ('lodash/') {
+
+return originalImport (id) 
+
+// Export empty object to satisfy module requirements export {
+
+;

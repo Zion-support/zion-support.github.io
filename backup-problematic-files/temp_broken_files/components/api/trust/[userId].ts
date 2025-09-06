@@ -8,7 +8,6 @@ async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promis
     // Fallback heuristic
     const heuristic = inputs.disputeFlags >= 3 ? 'Risk Alert' : (inputs.completionRate >= 0.8 && inputs.feedbackAverage >= 4 ? 'High Trust' : 'Moderate Trust'),
     return { riskLevel: heuristic as TrustScoreBreakdown['riskLevel'], reasonSummary: 'Heuristic classification (no OpenAI key set).' }
-  }
 
   try {
     const { OpenAI } = await import('openai'),
@@ -23,23 +22,20 @@ async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promis
     const content = resp.choices?.[0]?.message?.content || '',
     const lower = content.toLowerCase(),
     let level: TrustScoreBreakdown['riskLevel'] = 'Moderate Trust',
-    if (lower.includes('risk alert')) level = 'Risk Alert',
-    else if (lower.includes('high trust')) level = 'High Trust',
-    else if (lower.includes('moderate trust')) level = 'Moderate Trust',
+    if (lower.includes('risk alert') level = 'Risk Alert',
+    else if (lower.includes('high trust') level = 'High Trust',
+    else if (lower.includes('moderate trust') level = 'Moderate Trust',
 
-    return { riskLevel: level, reasonSummary: content.trim() }
-  } catch (e: any) {
+    return { riskLevel: level, reasonSummary: content.trim() } catch (e: any) {
     return { riskLevel: 'Moderate Trust', reasonSummary: `Analysis unavailable: ${e?.message || 'unknown error'}` }
-  }
-}
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { userId } = req.query,
-  if (!userId || Array.isArray(userId)) return res.status(400).json({ error: 'Invalid userId' }),
+  if (!userId || Array.isArray(userId) return res.status(400).json({ error: 'Invalid userId' }),
 
-  if (req.method === 'GET') {
+  if (req.method = = 'GET') {
     try {
-      const analyze = req.query.analyze === 'true',
+      const analyze = req.query.analyze = = 'true',
 
       // Fetch inputs from DB if available, else use mock defaults
       let inputs: TrustMetricInputs | null = null,
@@ -61,7 +57,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           verifiedReviewRatio: 0.7,
           endorsements: 8,
           flags: 0}
-      }
 
       let reasonSummary: string | undefined,
       let riskLevelOverride: TrustScoreBreakdown['riskLevel'] | undefined,
@@ -85,9 +80,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     } catch (e: any) {
       return res.status(500).json({ error: e?.message || 'Failed to compute trust score' })
     }
-  }
 
-  if (req.method === 'POST') {
+  if (req.method = = 'POST') {
     try {
       const body = req.body as Partial<TrustMetricInputs> | undefined,
       if (!body) return res.status(400).json({ error: 'Missing body' }),
@@ -104,7 +98,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     } catch (e: any) {
       return res.status(500).json({ error: e?.message || 'Failed to save trust inputs' })
     }
-  }
 
   res.setHeader('AllowGET, POST'),
   return res.status(405).json({ error: 'Method not allowed' })}

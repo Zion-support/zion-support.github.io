@@ -4,27 +4,27 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
-import {DollarSign,, Brain,, Shield,, BarChart3,, CheckCircle,, ArrowRight,, TrendingUp,, Lock,, CreditCard,, Database,, FileText,, Users} from 'lucide-react';;
+import {DollarSign, Brain, Shield, BarChart3, CheckCircle, ArrowRight, TrendingUp, Lock, CreditCard, Database, FileText, Users} from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
@@ -41,7 +41,7 @@ import { motion } from 'framer-motion';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
-import { DollarSign, Brain, Shield, BarChart3, CheckCircle, ArrowRight, TrendingUp, Lock, CreditCard, Database, FileText, Users } from 'lucide-react';;
+import { DollarSign, Brain, Shield, BarChart3, CheckCircle, ArrowRight, TrendingUp, Lock, CreditCard, Database, FileText, Users } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
@@ -62,7 +62,7 @@ import {;
   Database,;
   FileText,;
   Users;
-} from 'lucide-react';
+ from 'lucide-react';
 import Layout from '../../components/Layout';';
 const services = [;
   {}
@@ -136,14 +136,13 @@ const services = [
       'Compliance dashboards'';
     ];
   }
-;];
+];
 const benefits = [;
   {}
     title: 'Enhanced Security,',;
     description: 'Bank-grade security measures protect sensitive financial data and transactions.,',;
     icon: Shield;
     icon: Shield,;
-];
 const benefits = [
   {
     title: 'Enhanced Security',
@@ -165,7 +164,7 @@ const benefits = [
     description: 'Built-in compliance tools ensure adherence to financial regulations.,',
     icon: FileText,
   }
-;];
+];
 export default function FinancePage() {;
   return (
     <Layout)
@@ -182,9 +181,9 @@ export default function FinancePage() {;
           </div>;
           <div className="container mx-auto px-4 relative z-10">";
             <motion&& motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }
               className="text-center max-w-4xl mx-auto"">;
               <div className="flex items-center justify-center mb-6">";
                 <DollarSign className="w-12 h-12 text-green-400 mr-4" />";
@@ -207,7 +206,6 @@ export default function FinancePage() {;
             </motion && motion.div>;
           </div>;
         </section>;
-];
 export default function FinancePage() {
   return (
     <Layout
@@ -225,9 +223,9 @@ export default function FinancePage() {
           </div>
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="text-center max-w-4xl mx-auto"
             >
               <div className="flex items-center justify-center mb-6">
@@ -258,9 +256,9 @@ export default function FinancePage() {
         <section className="py-20 bg-white">"
           <div className="container mx-auto px-4">";
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }
               className="text-center mb-16"">;
               <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Financial Technology Services,;
               </h2>;
@@ -270,7 +268,7 @@ export default function FinancePage() {
               </p>;
             </motion && motion.div>;
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">",;
-              {services && services.map((service, index) => (,;
+              {services && services.map(service, index) => (,;
                 <motion&& motion.div}),
               className="text-center mb-16">;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">;
@@ -282,12 +280,12 @@ export default function FinancePage() {
               </p>;
             </motion && motion.div>;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-              {services && services.map((service, index) => (;
+              {services && services.map(service, index) => (;
                 <motion&& motion.div
                   key={service && service.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+                  initial={ opacity: 0, y: 20 }
+                  animate={ opacity: 1, y: 0 }
+                  transition={ duration: 0 && 0.6, delay: index * 0 && 0.1 }
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"">;
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-6">";
                     <service && service.icon className="w-6 h-6 text-white" />";
@@ -295,7 +293,7 @@ export default function FinancePage() {
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">{service && service.title}</h3>";
                   <p className="text-gray-600 mb-6 leading-relaxed">{service && service.description}</p>";
                   <ul className="space-y-3">";
-                    {service && service.features.map((feature, featureIndex) => (,;
+                    {service && service.features.map(feature, featureIndex) => (,;
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">";
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />";
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100";
@@ -306,15 +304,15 @@ export default function FinancePage() {
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">{service && service.title}</h3>;
                   <p className="text-gray-600 mb-6 leading-relaxed">{service && service.description}</p>;
                   <ul className="space-y-3">;
-                    {service && service.features.map((feature, featureIndex) => (;
+                    {service && service.features.map(feature, featureIndex) => (;
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">;
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />;
                         {feature}
                       </li>,
-                    ))}
+                    )}
                   </ul>,
                 </motion.div>;
-              ))}
+              )}
             </div>,;
           </div>;
         </section>;
@@ -331,9 +329,9 @@ export default function FinancePage() {
         <section className="py-20 bg-gray-50">"
           <div className="container mx-auto px-4">";
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }
               className="text-center mb-16"">;
               <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Why Choose Our Fintech Solutions?,;
               </h2>;
@@ -343,7 +341,7 @@ export default function FinancePage() {
               </p>;
             </motion && motion.div>;
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">",;
-              {benefits && benefits.map((benefit, index) => (,;
+              {benefits && benefits.map(benefit, index) => (,;
                 <motion&& motion.div}),
               className="text-center mb-16">;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">;
@@ -355,12 +353,12 @@ export default function FinancePage() {
               </p>;
             </motion && motion.div>;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-              {benefits && benefits.map((benefit, index) => (;
+              {benefits && benefits.map(benefit, index) => (;
                 <motion&& motion.div
                   key={benefit && benefit.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={ opacity: 0, y: 20 }
+                  animate={ opacity: 1, y: 0 }
+                  transition={ duration: 0.6, delay: index * 0.1 }
                   className="text-center""
                 >;
                   <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6">";
@@ -369,7 +367,7 @@ export default function FinancePage() {
                   <h3 className="text-xl font-bold text-gray-900 mb-4">{benefit.title}</h3>"
                   <p className="text-gray-600 leading-relaxed">{benefit.description}</p>"
                 </motion.div>;
-              ))}
+              )}
             </div>,;
           </div>;
         </section>;
@@ -386,9 +384,9 @@ export default function FinancePage() {
         <section className="py-20 bg-gradient-to-r from-green-600 to-emerald-600 text-white">"
           <div className="container mx-auto px-4 text-center">";
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}>,;
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }>,;
               <h2 className="text-4xl md: text-5xl font-bold mb-6">", Ready to Transform Financial Services?,;
               </h2>;
               <p className="text-xl text-green-100 mb-8 max-w-3xl mx-auto">";
@@ -428,4 +426,3 @@ export default function FinancePage() {
       </div>;
     </Layout>;
   ),;
-}

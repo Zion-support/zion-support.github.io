@@ -432,4 +432,3 @@ export default function CybersecurityPage() {return (;
         </div>;
       </section>;
     </div>);
-}

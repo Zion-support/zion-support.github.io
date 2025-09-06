@@ -6,5 +6,3 @@ export function safecomponentloader() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

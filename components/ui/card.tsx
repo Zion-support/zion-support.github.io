@@ -3,7 +3,6 @@ import React from 'react';
 interface CardProps {
   children: React.ReactNode;
   className?: string;
-}
 
 export function Card({ children, className = '' }: CardProps) {
   return (
@@ -11,7 +10,6 @@ export function Card({ children, className = '' }: CardProps) {
       {children}
     </div>
   );
-}
 
 export function CardHeader({ children, className = '' }: CardProps) {
   return (
@@ -19,7 +17,6 @@ export function CardHeader({ children, className = '' }: CardProps) {
       {children}
     </div>
   );
-}
 
 export function CardTitle({ children, className = '' }: CardProps) {
   return (
@@ -27,7 +24,6 @@ export function CardTitle({ children, className = '' }: CardProps) {
       {children}
     </h3>
   );
-}
 
 export function CardDescription({ children, className = '' }: CardProps) {
   return (
@@ -35,7 +31,6 @@ export function CardDescription({ children, className = '' }: CardProps) {
       {children}
     </p>
   );
-}
 
 export function CardContent({ children, className = '' }: CardProps) {
   return (
@@ -43,4 +38,3 @@ export function CardContent({ children, className = '' }: CardProps) {
       {children}
     </div>
   );
-}

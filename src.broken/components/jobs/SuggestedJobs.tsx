@@ -6,5 +6,3 @@ export function SuggestedJobs() {;
       <p>Component placeholder - needs implementation</p>;
     </div>;
   );
-}
-;

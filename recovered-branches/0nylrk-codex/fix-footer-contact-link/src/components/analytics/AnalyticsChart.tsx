@@ -17,7 +17,7 @@ interface AnalyticsChartProps {
   dataKeys: string[],;
   timeRange?: string;
   onTimeRangeChange?: (range: string) => void;
-}
+
 export function AnalyticsChart({
   title;
 
@@ -27,7 +27,7 @@ export function AnalyticsChart({
   dataKeys
   timeRange = '7d';
   onTimeRangeChange;
-}: AnalyticsChartProps) {;
+: AnalyticsChartProps) {;
   const [chartType, setChartType] = useState<'line' | 'bar'>(type);
   const colors = [
     '#8884d8#82ca9d#ffc658#ff8042#0088fe#00C49F#FFBB28#FF8042', '#a4de6c#d0ed57'
@@ -50,17 +50,17 @@ export function AnalyticsChart({
   data_keys: string[],
   time_range?: string;
   onTimeRangeChange?: (range: string) => void;
-}
+
 export /**
  * AnalyticsChart - Function description
  */
 function AnalyticsChart() {
   const [chart_type, setChartType] = useState<'line' | 'bar'>(type);
-;
+
   const colors = [;
     '#8884d8#82ca9d#ffc658#ff8042#0088fe#00C49F#FFBB28#FF8042', '#a4de6c#d0ed57';
   ];
-;
+
   return (
     <Card className="bg - zion - blue - dark border - zion - blue - light overflow - hidden">;
       <CardHeader className="pb - 2">;
@@ -99,8 +99,8 @@ function AnalyticsChart() {
       <CardContent className="p-0">
         <div className="h-72 w-full p-4">
           <ResponsiveContainer width="100%" height="100%">
-            {chartType === 'line' ? (
-              <LineChart data={data} margin={{ top: 5, right: 30, left: 20, bottom: 25 }}>
+            {chartType = = 'line' ? (
+              <LineChart data={data} margin={ top: 5, right: 30, left: 20, bottom: 25 }>
                 <CartesianGrid strokeDasharray="3 3" stroke="#354151" />
                 <XAxis
                   dataKey="date"
@@ -114,57 +114,57 @@ function AnalyticsChart() {
       <CardContent className="p-0">;
         <div className="h-72 w-full p-4">;
           <ResponsiveContainer width="100%" height="100%">;
-            {chartType === 'line' ? (;
-              <LineChart data={data} margin={{ top: 5, right: 30, left: 20, bottom: 25 }}>;
+            {chartType = = 'line' ? (;
+              <LineChart data={data} margin={ top: 5, right: 30, left: 20, bottom: 25 }>;
                 <CartesianGrid strokeDasharray="3 3" stroke="#354151" />;
                 <XAxis
                   dataKey="date" 
-                  tick={{ fill: '#b1b9c6', fontSize: 12 }}
+                  tick={ fill: '#b1b9c6', fontSize: 12 }
                   angle={-30}
                   textAnchor="end"
                   height={50}
                 />
-                <YAxis tick={{ fill: '#b1b9c6', fontSize: 12 }} />
+                <YAxis tick={ fill: '#b1b9c6', fontSize: 12 } />
                 <Tooltip
-                  contentStyle={{
+                  contentStyle={
                     backgroundColor: '#1a2332'
                     borderColor: '#293445'
                     color: '#fff'
-                  }}
+                  }
                 />
                 <Legend />
-                {dataKeys.map((key, index) => (
+                {dataKeys.map(key, index) => (
                   <Line
                     key={key}
                     type="monotone"
                     dataKey={key}
                     stroke={colors[index % colors && colors.length]}
-                    activeDot={{ r: 8 }}
+                    activeDot={ r: 8 }
                     strokeWidth={2}
                   />;
-                ))}
+                )}
               </LineChart>
             ) : (
-              <BarChart data={data} margin={{ top: 5, right: 30, left: 20, bottom: 25 }}>
+              <BarChart data={data} margin={ top: 5, right: 30, left: 20, bottom: 25 }>
                 <CartesianGrid strokeDasharray="3 3" stroke="#354151" />
                 <XAxis
                   dataKey="date"
-                  tick={{ fill: '#b1b9c6', fontSize: 12 }}
+                  tick={ fill: '#b1b9c6', fontSize: 12 }
                   angle={-30}
                   text_anchor="end";
                   height={50}
                 />
-                <YAxis tick={{ fill: '#b1b9c6', fontSize: 12 }} />
+                <YAxis tick={ fill: '#b1b9c6', fontSize: 12 } />
                 <Tooltip
-                  contentStyle={{
+                  contentStyle={
                     backgroundColor: '#1a2332'
                     borderColor: '#293445'
 
                     color: '#fff'
-                  }}
+                  }
                 />
                 <Legend />
-                {dataKeys.map((key, index) => (
+                {dataKeys.map(key, index) => (
                   <Bar
                     key={key}
                     dataKey={key}
@@ -173,23 +173,23 @@ function AnalyticsChart() {
                   text_anchor="end";
                   height={50}
                 />;
-                <YAxis tick={{ fill: '#b1b9c6', fontSize: 12 }} />;
+                <YAxis tick={ fill: '#b1b9c6', fontSize: 12 } />;
                 <Tooltip
-                  contentStyle={{ 
+                  contentStyle={ 
                     backgroundColor: '#1a2332', 
                     borderColor: '#293445',
                     color: '#fff'
-                  }} 
+                  } 
                 />;
                 <Legend />;
-                {dataKeys && dataKeys.map((key, index) => (;
+                {dataKeys && dataKeys.map(key, index) => (;
                   <Bar
                     key={key}
                     dataKey={key} 
                     fill={colors[index % colors && colors.length]} 
                     radius={[4, 4, 0, 0]}
                   />;
-                ))}
+                )}
               </BarChart>;
             )}
           </ResponsiveContainer>
@@ -197,26 +197,25 @@ function AnalyticsChart() {
       </CardContent>
     </Card>
   )
-}
-                <YAxis tick={{ fill: '#b1b9c6', font_size: 12 }} />;
+
+                <YAxis tick={ fill: '#b1b9c6', font_size: 12 } />;
                 <Tooltip;
-                  content_style={{
+                  content_style={
                     background_color: '#1a2332',
                     border_color: '#293445',
                     color: '#fff';
-                  }}
+                  }
                 />;
                 <Legend />;
-                {data_keys.map ((key, index) => (
+                {data_keys.map (key, index) => (
                   <Bar;
                     key={key}
                     data_key={key}
                     fill={colors[index % colors.length]}
                     radius={[4, 4, 0, 0]}
-                  />))}
+                  />)}
               </BarChart>)}
           </ResponsiveContainer>;
         </div>;
       </CardContent>;
     </Card>);
-}

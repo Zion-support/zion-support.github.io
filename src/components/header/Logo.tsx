@@ -29,7 +29,7 @@ function Logo() {
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <Link href="/" className="flex items - center">;
         <img src={logoToUse} alt={`${brand_name} Logo`} className="h - 8" width={32} height={32} />;
@@ -69,7 +69,7 @@ if ( {) {
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <Link href='/' className='flex items - center'>;
         <img;
@@ -93,7 +93,7 @@ if ( {) {
       />
     </Link>
   )
-}
+
         />;
       </Link>);
   }
@@ -107,4 +107,3 @@ if ( {) {
         height={32}
       />;
     </Link>);
-}

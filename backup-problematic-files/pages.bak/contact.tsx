@@ -4,7 +4,6 @@ import React from 'react';
 
 interface ContactProps {
   className?: string;
-}
 
 const Contact: React.FC<ContactProps> = ({ className }) => {
   return (
@@ -13,6 +12,3 @@ const Contact: React.FC<ContactProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-}
-}
-}

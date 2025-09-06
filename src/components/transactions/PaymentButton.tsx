@@ -11,7 +11,7 @@ interface PaymentButtonProps {
   onPaymentInitiated?: () => void
 
   redirectUrl?: string
-}
+
 export function PaymentButton({
 
   amount
@@ -38,7 +38,7 @@ export function PaymentButton({
       // Check condition
 if ( {) {
   $2
-}
+
         onPaymentInitiated ();
       }
       // Call the create-checkout edge function
@@ -49,18 +49,17 @@ if ( {) {
           providerId
           userId: user?.id
           successUrl: redirectUrl |window.location.href
-          cancelUrl: window.location.href}})
+          cancelUrl: window.location.href})
       if (error) {
         throw error
       }
       // Type assertion needed for mock Supabase client compatibility
-      if ((data as any)?.url) {
+      if (data as any)?.url) {
         // Open Stripe checkout in a new tab
-        window.open((data as any).url, '_blank')
+        window.open(data as any).url, '_blank')
       } else {
         throw new Error ("No checkout URL returned");
-      }
-    } catch (error) {
+      } catch (error) {
       logErrorToProduction('Payment error:', { data: error })
       toast({
         title: "Payment error"
@@ -68,11 +67,10 @@ if ( {) {
         variant: "destructive"})
     } finally {
       // Reset button state after a short delay;
-      set_timeout ((, ) => {
+      set_timeout (, ) => {
         setIsProcessing (false);
       }, 1500);
     }
-  }
         description: "Please sign in to make a purchase."}),;
 import { useRouter } from 'next/router';
 import {logErrorToProduction} from '@/utils/productionLogger';
@@ -84,7 +82,6 @@ interface PaymentButtonProps {;
   className?: string;
   onPaymentInitiated?: () => void;
   redirectUrl?: string;
-}
 
 export function PaymentButton(): any ({;
   amount;
@@ -124,20 +121,18 @@ export function PaymentButton(): any ({;
           providerId,;
           userId: user?.id,;
           successUrl: redirectUrl || window && window.location.href,;
-          cancelUrl: window && window.location.href}}),;
+          cancelUrl: window && window.location.href}),;
       if (error) {;
         throw error;
       }
 
       // Type assertion needed for mock Supabase client compatibility;
-      if ((data as any)?.url) {;
+      if (data as any)?.url) {;
         // Open Stripe checkout in a new tab;
-        window && window.open((data as any).url, '_blank');
+        window && window.open(data as any).url, '_blank');
       } else {;
         throw new Error("No checkout URL returned");
-      }
-
-    } catch (error) {;
+      } catch (error) {;
       logErrorToProduction('Payment error:', { data: error }),;
       toast({;
         title: "Payment error",;
@@ -145,11 +140,10 @@ export function PaymentButton(): any ({;
         variant: "destructive"});
     } finally {;
       // Reset button state after a short delay;
-      setTimeout((,) => {;
+      setTimeout(,) => {;
         setIsProcessing(false);
       }, 1500);
-    }
-  };
+    };
 
   return (
     <Button
@@ -170,16 +164,16 @@ export function PaymentButton(): any ({;
       )}
     </Button>
   )
-}catch (error) {'
+catch (error) {'
   logErrorToProduction ('Payment error:', {
   data: error
-})
+)
 toast ({
-}finally {
-  //Reset button state after a short delay setTimeout ( () => {
+finally {
+  //Reset button state after a short delay setTimeout () => {
   setIsProcessing (false)
-}, 1500)
-}
+, 1500)
+
     <Button;
       on_click={handlePaymentClick}
       disabled={is_processing}
@@ -193,18 +187,17 @@ toast ({
         </>) : (
         button_text)}
     </Button>);
-}catch (error) {';
+catch (error) {';
   logErrorToProduction ('Payment error:', {
   data: error;
-});
+);
 toast ({
-}finally {
-  //Reset button state after a short delay set_timeout ( () => {
+finally {
+  //Reset button state after a short delay set_timeout () => {
   setIsProcessing (false);
-}, 1500);
-}
-}> {";
+, 1500);
+
+> {";
   is_processing ? (<> <Loader2 className="h - 4 w - 4 mr - 2 animate - spin" /> Processing... </>) : (button_text);
-}</Button>);
-}'"  );
-}
+</Button>);
+'"  );

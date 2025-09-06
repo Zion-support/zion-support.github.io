@@ -10,7 +10,7 @@ import { Badge } from "@/components/ui/badge",;
 import { Skeleton } from "@/components/ui/skeleton",;
 import { ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle } from "lucide-react",;
 import { formatDistanceToNow } from "date-fns",;
-;
+
 interface Transaction {;
   id:string,;
   user_id:string,;
@@ -30,18 +30,15 @@ interface Transaction {;
   service?:{;
     title?:string,;
   },;
-}
-;
+
 export function TransactionHistory() {;
   const { user } = useAuth(),;
   const { toast } = useToast(),;
   const [filter, setFilter] = useState<'all' | 'pending' | 'completed' | 'escrow'>('all'),;
-  ;
   const { data:transactions, isLoading, error, refetch } = useQuery({;
     queryKey:['transactions', user?.id, filter],;
     queryFn:async () => {;
       if (!user) return [],;
-      ;
       // Build the query based on filters;
       let query = supabase;
         .from('transactions');
@@ -51,36 +48,29 @@ export function TransactionHistory() {;
           service:services(title);
         `);
         .or(`user_id.eq.${user.id},provider_id.eq.${user.id}`),;
-      ;
-      if (filter === 'pending') {;
+      if (filter = = 'pending') {;
         query = query.eq('statuspending'),;
-      } else if (filter === 'completed') {;
+      } else if (filter = = 'completed') {;
         query = query.eq('statuscompleted'),;
-      } else if (filter === 'escrow') {;
+      } else if (filter = = 'escrow') {;
         query = query.eq('in_escrow', true),;
       }
       ;
       query = query.order('created_at', { ascending:false }),;
-      ;
       const { data, error } = await query,;
-      ;
       if (error) throw error,;
       return data as Transaction[],;
     },;
     enabled:!!user}),;
-;
+
   const handleManageTransaction = async (transactionId:string, action:'release' | 'refund' | 'cancel') => {;
     try {;
       const { data, error } = await supabase.functions.invoke('manage-transaction', {;
-        body:{ transactionId, action }
-      }),;
-      ;
+        body:{ transactionId, action }),;
       if (error) throw error,;
-      ;
       toast({;
         title:"Success",;
         description:data.message || "Transaction updated successfully"}),;
-      ;
       refetch(),;
     } catch (error) {;
       console.error("Error managing transaction:", error),;
@@ -88,9 +78,7 @@ export function TransactionHistory() {;
         title:"Error",;
         description:error.message || "Failed to update transaction",;
         variant:"destructive"}),;
-    }
-  },;
-  ;
+    },;
   const getStatusBadge = (status:string, inEscrow:boolean) => {;
     switch(status) {;
       case 'pending':;
@@ -127,16 +115,14 @@ export function TransactionHistory() {;
             <AlertCircle className="w-3 h-3 mr-1" /> Unknown;
           </Badge>;
         );
-    }
-  },;
-  ;
+    },;
   const formatCurrency = (amount:number, currency:string) => {;
     return new Intl.NumberFormat('en-US', {;
       style:'currency',;
       currency:currency.toUpperCase();
     }).format(amount),;
   },;
-;
+
   if (error) {;
     return (;
       <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light">;
@@ -152,51 +138,49 @@ export function TransactionHistory() {;
       </div>;
     ),;
   }
-;
+
   return (;
     <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light overflow-hidden">;
       <div className="p-6">;
         <div className="flex items-center justify-between mb-6">;
           <h2 className="text-2xl font-bold text-white">Transaction History</h2>;
-          ;
           <div className="flex space-x-2">;
             <Button ;
               size="sm" ;
-              variant={filter === 'all' ? 'default' :'outline'} ;
+              variant={filter = = 'all' ? 'default' :'outline'} ;
               onClick={() => setFilter('all')}
-              className={filter === 'all' ? 'bg-zion-purple text-white' :'text-zion-slate-light'}
+              className={filter = = 'all' ? 'bg-zion-purple text-white' :'text-zion-slate-light'}
             >;
               All;
             </Button>;
             <Button ;
               size="sm" ;
-              variant={filter === 'pending' ? 'default' :'outline'} ;
+              variant={filter = = 'pending' ? 'default' :'outline'} ;
               onClick={() => setFilter('pending')}
-              className={filter === 'pending' ? 'bg-zion-purple text-white' :'text-zion-slate-light'}
+              className={filter = = 'pending' ? 'bg-zion-purple text-white' :'text-zion-slate-light'}
             >;
               Pending;
             </Button>;
             <Button ;
               size="sm" ;
-              variant={filter === 'completed' ? 'default' :'outline'} ;
+              variant={filter = = 'completed' ? 'default' :'outline'} ;
               onClick={() => setFilter('completed')}
-              className={filter === 'completed' ? 'bg-zion-purple text-white' :'text-zion-slate-light'}
+              className={filter = = 'completed' ? 'bg-zion-purple text-white' :'text-zion-slate-light'}
             >;
               Completed;
             </Button>;
             <Button ;
               size="sm" ;
-              variant={filter === 'escrow' ? 'default' :'outline'} ;
+              variant={filter = = 'escrow' ? 'default' :'outline'} ;
               onClick={() => setFilter('escrow')}
-              className={filter === 'escrow' ? 'bg-zion-purple text-white' :'text-zion-slate-light'}
+              className={filter = = 'escrow' ? 'bg-zion-purple text-white' :'text-zion-slate-light'}
             >;
               Escrow;
             </Button>;
           </div>;
         </div>;
-        ;
         {isLoading ? (;
-          Array(3).fill(0).map((_, i) => (;
+          Array(3).fill(0).map(_, i) => (;
             <div key={i} className="mb-4">;
               <Card className="bg-zion-blue-dark border-zion-blue-light">;
                 <CardHeader className="pb-2">;
@@ -215,21 +199,20 @@ export function TransactionHistory() {;
                 </CardFooter>;
               </Card>;
             </div>;
-          ));
+          );
         ) :transactions && transactions.length > 0 ? (;
           <div className="space-y-4">;
-            {transactions.map((transaction) => {;
-              const isClient = user?.id === transaction.user_id,;
-              const isPending = transaction.status === 'pending',;
+            {transactions.map(transaction) => {;
+              const isClient = user?.id = = transaction.user_id,;
+              const isPending = transaction.status = = 'pending',;
               const isInEscrow = transaction.in_escrow,;
               const canRelease = !isClient && isPending && isInEscrow,;
               const canCancel = isClient && isPending,;
-              const canRefund = isClient && transaction.status === 'completed',;
-              ;
+              const canRefund = isClient && transaction.status = = 'completed',;
               const counterpartyName = isClient ;
                 ? transaction.provider?.display_name || 'Service Provider' ;
                 :'Client',;
-;
+
               return (;
                 <Card key={transaction.id} className="bg-zion-blue-dark border-zion-blue-light overflow-hidden">;
                   <CardHeader className="pb-3">;
@@ -246,7 +229,6 @@ export function TransactionHistory() {;
                           )}
                         </CardDescription>;
                       </div>;
-                      ;
                       {getStatusBadge(transaction.status, transaction.in_escrow)}
                     </div>;
                   </CardHeader>;
@@ -257,7 +239,6 @@ export function TransactionHistory() {;
                         {formatCurrency(transaction.amount, transaction.currency)}
                       </span>;
                     </div>;
-                    ;
                     <div className="flex justify-between items-center text-sm">;
                       <span className="text-zion-slate-light">Date:</span>;
                       <span className="text-zion-slate-light">;
@@ -265,7 +246,6 @@ export function TransactionHistory() {;
                         ({formatDistanceToNow(new Date(transaction.created_at), { addSuffix:true })});
                       </span>;
                     </div>;
-                    ;
                     {(transaction.completed_at || transaction.refunded_at || transaction.cancelled_at) && (;
                       <div className="flex justify-between items-center text-sm mt-1">;
                         <span className="text-zion-slate-light">;
@@ -277,28 +257,28 @@ export function TransactionHistory() {;
                             transaction.completed_at || ;
                             transaction.refunded_at || ;
                             transaction.cancelled_at!;}
-}export function TransactionHistory () {
+export function TransactionHistory () {
   const {
   user 
-}= useAuth ();
+= useAuth ();
 const {
   toast 
-}= useToast ();
+= useToast ();
 const [filter, setFilter] = useState<'all' | 'pending' | 'completed' | 'escrow'> ('all');
 const {
   data: transactions, isLoading, error, refetch 
-}= useQuery ({
+= useQuery ({
   queryKey: ['transactions', user?.id, filter];
 queryFn: async () => {
   if (!user) return [];
 return data as Transaction[] 
-};
+;
 enabled: !!user 
-});
+);
 if (error) throw error;
 refetch () 
-}catch (error) {
-  
+catch (error) {
+
   const { data: transactions, isLoading, error, refetch } = useQuery({
     queryKey: ['transactions', user?.id, filter],
     queryFn: async () => {
@@ -320,15 +300,14 @@ interface Transaction {_id: string;
   provider?: {
     display_name?: string;};
   service?: {_title?: string;};
-}
 
 export function TransactionHistory() {_const { user} = useAuth();
   const {_toast} = useToast();
   const [filter, setFilter] = useState<'all' | 'pending' | 'completed' | 'escrow'>('all');
-  
+
   const {_data: transactions, _isLoading, _error, _refetch} = useQuery(_{_queryKey: ['transactions', _user?.id, _filter], _queryFn: async () => {
       if (!user) return [];
-      
+
       // Build the query based on filters
       let _query = supabase
         .from('transactions')
@@ -336,17 +315,17 @@ export function TransactionHistory() {_const { user} = useAuth();
           *, _provider:profiles!provider_id(display_name), _service:services(title)
         `)
         .or(`user_id.eq.${user.id},provider_id.eq.${user.id}`),
-      
-      if (filter === 'pending') {
+
+      if (filter = = 'pending') {
         query = query.eq('statuspending')
-      } else if (filter === 'completed') {
+      } else if (filter = = 'completed') {
         query = query.eq('statuscompleted')
-      } else if (filter === 'escrow') {
+      } else if (filter = = 'escrow') {
         query = query.eq('in_escrow', true)
       }
-      
+
       query = query.order('created_at', { ascending: false }),
-      
+
       const { data, error } = await query,      
       if (error) throw error,
       return data as Transaction[]
@@ -356,10 +335,9 @@ export function TransactionHistory() {_const { user} = useAuth();
   const handleManageTransaction = async (transactionId: string, action: 'release' | 'refund' | 'cancel') => {
     try {
       const { data, error } = await supabase.functions.invoke('manage-transaction', {
-        body: { transactionId, action }
-      }),      
+        body: { transactionId, action }),      
       if (error) throw error,
-      
+
       toast({
         title: "Success",
         description: data.message || "Transaction updated successfully"}),      
@@ -370,13 +348,12 @@ export function TransactionHistory() {_const { user} = useAuth();
         title: "Error",
         description: error.message || "Failed to update transaction",
         variant: "destructive"})      toast({_title: "Success", _description: data.message || "Transaction updated successfully"});
-      
+
       refetch();
     } catch (error) {_toast({
         title: "Error", _description: error.message || "Failed to update transaction", _variant: "destructive"});
-    }
-  },
-  
+    },
+
   const _getStatusBadge = (_status: string, _inEscrow: boolean) => {_switch(status) {
       case 'pending':
         return inEscrow ? (
@@ -412,9 +389,8 @@ export function TransactionHistory() {_const { user} = useAuth();
             <AlertCircle className=&quot;w-3 h-3 mr-1&quot; /> Unknown
           </Badge>
         )
-    }
-  },
-  
+    },
+
   const formatCurrency = (amount: number, currency: string) => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
@@ -445,37 +421,37 @@ export function TransactionHistory() {_const { user} = useAuth();
           <div className=&quot;flex space-x-2&quot;>
             <Button 
               size=&quot;sm&quot; 
-              variant={filter === 'all' ? 'default' : 'outline'} 
+              variant={filter = = 'all' ? 'default' : 'outline'} 
               onClick={() => setFilter('all')}
-              className={filter === 'all' ? 'bg-zion-purple text-white' : 'text-zion-slate-light'}            >
+              className={filter = = 'all' ? 'bg-zion-purple text-white' : 'text-zion-slate-light'}            >
               All
             </Button>
             <Button 
               size=&quot;sm&quot; 
-              variant={filter === 'pending' ? 'default' : 'outline'} 
+              variant={filter = = 'pending' ? 'default' : 'outline'} 
               onClick={() => setFilter('pending')}
-              className={filter === 'pending' ? 'bg-zion-purple text-white' : 'text-zion-slate-light'}            >
+              className={filter = = 'pending' ? 'bg-zion-purple text-white' : 'text-zion-slate-light'}            >
               Pending
             </Button>
             <Button 
               size=&quot;sm&quot; 
-              variant={filter === 'completed' ? 'default' : 'outline'} 
+              variant={filter = = 'completed' ? 'default' : 'outline'} 
               onClick={() => setFilter('completed')}
-              className={filter === 'completed' ? 'bg-zion-purple text-white' : 'text-zion-slate-light'}            >
+              className={filter = = 'completed' ? 'bg-zion-purple text-white' : 'text-zion-slate-light'}            >
               Completed
             </Button>
             <Button 
               size=&quot;sm&quot; 
-              variant={filter === 'escrow' ? 'default' : 'outline'} 
+              variant={filter = = 'escrow' ? 'default' : 'outline'} 
               onClick={() => setFilter('escrow')}
-              className={filter === 'escrow' ? 'bg-zion-purple text-white' : 'text-zion-slate-light'}            >
+              className={filter = = 'escrow' ? 'bg-zion-purple text-white' : 'text-zion-slate-light'}            >
               Escrow
             </Button>
           </div>
         </div>
-        
+
         {isLoading ? (
-          Array(3).fill(0).map((_, i) => (
+          Array(3).fill(0).map(_, i) => (
             <div key={i} className=&quot;mb-4&quot;>
               <Card className=&quot;bg-zion-blue-dark border-zion-blue-light&quot;>
                 <CardHeader className=&quot;pb-2&quot;>
@@ -493,16 +469,16 @@ export function TransactionHistory() {_const { user} = useAuth();
                 </CardFooter>
               </Card>
             </div>
-          ))
+          )
         ) : transactions && transactions.length > 0 ? (
           <div className=&quot;space-y-4&quot;>
-            {transactions.map((transaction) => {
-              const isClient = user?.id === transaction.user_id,
-              const isPending = transaction.status === 'pending',
+            {transactions.map(transaction) => {
+              const isClient = user?.id = = transaction.user_id,
+              const isPending = transaction.status = = 'pending',
               const isInEscrow = transaction.in_escrow,
               const canRelease = !isClient && isPending && isInEscrow,
               const canCancel = isClient && isPending,
-              const canRefund = isClient && transaction.status === 'completed',              
+              const canRefund = isClient && transaction.status = = 'completed',              
               const _counterpartyName = isClient 
                 ? transaction.provider?.display_name || 'Service Provider' 
                 : 'Client',
@@ -522,7 +498,7 @@ export function TransactionHistory() {_const { user} = useAuth();
                           )}
                         </CardDescription>
                       </div>
-                      
+
                       {_getStatusBadge(transaction.status, _transaction.in_escrow)}
                     </div>
                   </CardHeader>
@@ -533,7 +509,7 @@ export function TransactionHistory() {_const { user} = useAuth();
                         {formatCurrency(transaction.amount, transaction.currency)}
                       </span>
                     </div>
-                    
+
                     <div className=&quot;flex justify-between items-center text-sm&quot;>
                       <span className=&quot;text-zion-slate-light&quot;>Date:</span>
                       <span className=&quot;text-zion-slate-light&quot;>
@@ -541,7 +517,7 @@ export function TransactionHistory() {_const { user} = useAuth();
                         ({formatDistanceToNow(new Date(transaction.created_at) { addSuffix: true })})
                       </span>
                     </div>
-                    
+
                     {(transaction.completed_at || transaction.refunded_at || transaction.cancelled_at) && (
                       <div className=&quot;flex justify-between items-center text-sm mt-1&quot;>
                         <span className=&quot;text-zion-slate-light&quot;>
@@ -600,7 +576,7 @@ export function TransactionHistory() {_const { user} = useAuth();
             </div>;
             <h3 className="text-xl font-medium text-white mb-2">No transactions found</h3>;
             <p className="text-zion-slate-light max-w-md mx-auto">;
-              {filter !== 'all' ;
+              {filter != 'all' ;
                 ? `You don't have any ${filter} transactions. Try changing the filter or make a new transaction.`;
                 :"You haven't made any transactions yet. Once you make a payment or receive one, it will appear here."}
             </p>;
@@ -609,7 +585,7 @@ export function TransactionHistory() {_const { user} = useAuth();
       </div>;
     </div>;
   ),;}
-};
+;
 const getStatusBadge = (status: string, inEscrow: boolean) => {
   switch (status) {
   case 'pending': return inEscrow ? (<Badge variant="outline" className="bg-yellow-500/20 text-yellow-500 border-yellow-500" > <Clock className="w-3 h-3 mr-1" /> In Escrow </Badge>) : (<Badge variant="outline" className="bg-blue-500/20 text-blue-500 border-blue-500" > <Clock className="w-3 h-3 mr-1" /> Pending </Badge>);
@@ -617,22 +593,20 @@ case 'completed': return (<Badge variant="outline" className="bg-green-500/20 te
 case 'refunded': return (<Badge variant="outline" className="bg-purple-500/20 text-purple-500 border-purple-500" > <RefreshCcw className="w-3 h-3 mr-1" /> Refunded </Badge>);
 case 'cancelled': return (<Badge variant="outline" className="bg-red-500/20 text-red-500 border-red-500" > <XCircle className="w-3 h-3 mr-1" /> Cancelled </Badge>);
 default: return (<Badge variant="outline" className="bg-gray-500/20 text-gray-500 border-gray-500" > <AlertCircle className="w-3 h-3 mr-1" /> Unknown </Badge> Try Again </Button> </div> </div>) 
-}<div className="flex space-x-2" > <Button > All </Button> <Button > Pending </Button> <Button > Completed </Button> <Button > Escrow </Button> </div> </div> </CardHeader> <CardContent> <div className="flex justify-between mb-2" > <Skeleton className="h-5 w-1/3 bg-zion-blue-light" /> <Skeleton className="h-5 w-1/4 bg-zion-blue-light" /> </div> <Skeleton className="h-4 w-2/3 bg-zion-blue-light" /> </CardContent> <CardFooter> <Skeleton className="h-9 w-28 bg-zion-blue-light rounded-md" /> </CardFooter> </Card> </div>) ) const counterpartyName = isClient ? transaction.provider?.display name || 'Service Provider' : 'Client';
+<div className="flex space-x-2" > <Button > All </Button> <Button > Pending </Button> <Button > Completed </Button> <Button > Escrow </Button> </div> </div> </CardHeader> <CardContent> <div className="flex justify-between mb-2" > <Skeleton className="h-5 w-1/3 bg-zion-blue-light" /> <Skeleton className="h-5 w-1/4 bg-zion-blue-light" /> </div> <Skeleton className="h-4 w-2/3 bg-zion-blue-light" /> </CardContent> <CardFooter> <Skeleton className="h-9 w-28 bg-zion-blue-light rounded-md" /> </CardFooter> </Card> </div>) const counterpartyName = isClient ? transaction.provider?.display name || 'Service Provider' : 'Client';
 return (<Card key= {
   transaction.id 
-}className="bg-zion-blue-dark border-zion-blue-light overflow-hidden" > <CardHeader className="pb-3" > <div className="flex justify-between items-start" > <div>) : (<span>Payment from <span className="text-zion-cyan" >Client</span></span>) 
-}</CardDescription> </div> {
+className="bg-zion-blue-dark border-zion-blue-light overflow-hidden" > <CardHeader className="pb-3" > <div className="flex justify-between items-start" > <div>) : (<span>Payment from <span className="text-zion-cyan" >Client</span></span>) 
+</CardDescription> </div> {
   getStatusBadge (transaction.status, transaction.in escrow) 
-}</div> </CardHeader> transaction.completed at || transaction.refunded at || transaction.cancelled at!) .toLocaleDateString () 
-}</span> </div>) 
-}</CardContent> > <CheckCircle2 className="mr-1 h-4 w-4" /> Release Funds </Button>) 
-}> <RefreshCcw className="mr-1 h-4 w-4" /> Request Refund </Button>) 
-}> <XCircle className="mr-1 h-4 w-4" /> Cancel </Button>) 
-}</CardFooter> </Card>) 
-}) 
-}</div>) : (<div className="text-center py-12 border border-dashed border-zion-blue-light rounded-lg" > <div className="mx-auto w-16 h-16 bg-zion-blue-light/30 rounded-full flex items-center justify-center mb-4" > <ArrowRight className="h-8 w-8 text-zion-slate-light" /> <ArrowLeft className="h-8 w-8 text-zion-slate-light -ml-4" /> </div> ? `You don't have any $ {
+</div> </CardHeader> transaction.completed at || transaction.refunded at || transaction.cancelled at!) .toLocaleDateString () 
+</span> </div>) 
+</CardContent><CheckCircle2 className="mr-1 h-4 w-4" /> Release Funds </Button>) 
+> <RefreshCcw className="mr-1 h-4 w-4" /> Request Refund </Button>) 
+> <XCircle className="mr-1 h-4 w-4" /> Cancel </Button>) 
+</CardFooter> </Card>) 
+</div>) : (<div className="text-center py-12 border border-dashed border-zion-blue-light rounded-lg" > <div className="mx-auto w-16 h-16 bg-zion-blue-light/30 rounded-full flex items-center justify-center mb-4" > <ArrowRight className="h-8 w-8 text-zion-slate-light" /> <ArrowLeft className="h-8 w-8 text-zion-slate-light -ml-4" /> </div> ? `You don't have any $ {
   filter 
-}transactions. Try changing the filter or make a new transaction.` : "You haven't made any transactions yet. Once you make a payment or receive one, it will appear here." 
-}</p> </div>) 
-}</div> </div>) 
-}
+transactions. Try changing the filter or make a new transaction.` : "You haven't made any transactions yet. Once you make a payment or receive one, it will appear here." 
+</p> </div>) 
+</div> </div>) 

@@ -1,8 +1,8 @@
 import fs from 'fs',;
 import path from 'path',;
-;
+
 type RouteInfo = { path:string, lastModified:string },;
-;
+
 export async function getServerSideProps() {;
   const file = path.join(process.cwd(), 'datasite-map.json'),;
   let routes:RouteInfo[] = [],;
@@ -13,9 +13,8 @@ export async function getServerSideProps() {;
     routes = json.routes || [],;
     generatedAt = json.generatedAt || '',;
   } catch {}
-  return { props:{ routes, generatedAt } },;
-}
-;
+  return { props:{ routes, generatedAt },;
+
 export default function SiteMapIntelPage({ routes, generatedAt } { routes:RouteInfo[], generatedAt:string }) {;
   return (;
     <div className="space-y-6">;
@@ -35,10 +34,9 @@ export default function SiteMapIntelPage({ routes, generatedAt } { routes:RouteI
                 <td className="p-2">{r.path}</td>;
                 <td className="p-2">{new Date(r.lastModified).toLocaleString()}</td>;
               </tr>;
-            ))}
+            )}
           </tbody>;
         </table>;
       </div>;
     </div>;
   ),;
-}

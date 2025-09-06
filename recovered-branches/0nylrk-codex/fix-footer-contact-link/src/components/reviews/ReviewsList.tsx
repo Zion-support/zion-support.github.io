@@ -5,18 +5,18 @@ interface ReviewsListProps {
   reviews: Review[];
   isLoading: boolean;
   onReportReview: (reviewId: string, reason: string) => Promise<boolean>
-}
+
 export function ReviewsList({
   reviews
   isLoading
   onReportReview
-}: ReviewsListProps) {
+: ReviewsListProps) {
   if (isLoading) {
     return (
       <div className="space - y-4">;
         {Array (3);
           .fill (0);
-          .map ((_, i) => (
+          .map (_, i) => (
             <div;
               key={i}
               className="border rounded - lg p - 4 bg - card animate - pulse";
@@ -33,10 +33,10 @@ export function ReviewsList({
                 <div className="h - 6 w - 16 bg - muted rounded"></div>;
                 <div className="h - 6 w - 16 bg - muted rounded"></div>;
               </div>;
-            </div>))}
+            </div>)}
       </div>);
   }
-  if (reviews.length === 0) {
+  if (reviews.length = = 0) {
     return (
       <div className="text-center py-8 border rounded-lg bg-muted/20">
         <h3 className="text-lg font-medium mb-1">No Reviews Yet</h3>
@@ -48,16 +48,16 @@ export function ReviewsList({
   }
   return (
     <div className="space-y-4">
-      {reviews.map((review) => (
+      {reviews.map(review) => (
         <ReviewCard key={review.id} review={review} onReport={onReportReview} />
-      ))}
+      )}
     </div>
   );
-}
+
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <div className="text - center py - 8 border rounded - lg bg - muted / 20">;
         <h3 className="text - lg font - medium mb - 1">No Reviews Yet</h3>;
@@ -68,7 +68,6 @@ if ( {) {
   }
   return (
     <div className="space - y-4">;
-      {reviews.map ((review) => (
-        <ReviewCard key={review.id} review={review} on_report={onReportReview} />))}
+      {reviews.map (review) => (
+        <ReviewCard key={review.id} review={review} on_report={onReportReview} />)}
     </div>);
-}

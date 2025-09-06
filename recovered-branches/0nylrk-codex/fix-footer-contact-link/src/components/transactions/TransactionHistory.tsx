@@ -31,7 +31,7 @@ interface Transaction {
   service?: {
     title?: string
   }
-}
+
 export function TransactionHistory() {
   const { user } = useAuth();
   const { toast } = useToast();
@@ -52,11 +52,11 @@ export function TransactionHistory() {
           service:services(title)
         `)
         .or(`user_id.eq.${user.id},provider_id.eq.${user.id}`);
-      if (filter === 'pending') {
+      if (filter = = 'pending') {
         query = query.eq('statuspending')
-      } else if (filter === 'completed') {
+      } else if (filter = = 'completed') {
         query = query.eq('statuscompleted')
-      } else if (filter === 'escrow') {
+      } else if (filter = = 'escrow') {
         query = query.eq('in_escrow', true)
       }
       query = query.order('created_at', { ascending: false })
@@ -68,8 +68,7 @@ export function TransactionHistory() {
   const handleManageTransaction = async (transactionId: string, action: 'release' | 'refund' | 'cancel') => {
     try {
       const { data, error } = await supabase.functions.invoke ('manage - transaction', {
-        body: { transaction_id, action }
-      });
+        body: { transaction_id, action });
       if (error) throw error;
       toast({
         title: "Success"
@@ -82,7 +81,6 @@ export function TransactionHistory() {
         description: error.message |"Failed to update transaction"
         variant: "destructive"})
     }
-  }
   const getStatusBadge = (status: string, inEscrow: boolean) => {
     switch(status) {
       case 'pending':
@@ -120,7 +118,6 @@ export function TransactionHistory() {
           </Badge>
         )
     }
-  }
   const formatCurrency = (amount: number, currency: string) => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency'
@@ -150,40 +147,40 @@ export function TransactionHistory() {
           <div className="flex space-x-2">
             <Button
               size="sm"
-              variant={filter === 'all' ? 'default' : 'outline'}
+              variant={filter = = 'all' ? 'default' : 'outline'}
               onClick={() => setFilter('all')}
-              className={filter === 'all' ? 'bg-zion-purple text-white' : 'text-zion-slate-light'}
+              className={filter = = 'all' ? 'bg-zion-purple text-white' : 'text-zion-slate-light'}
             >
               All
             </Button>
             <Button
               size="sm"
-              variant={filter === 'pending' ? 'default' : 'outline'}
+              variant={filter = = 'pending' ? 'default' : 'outline'}
               onClick={() => setFilter('pending')}
-              className={filter === 'pending' ? 'bg-zion-purple text-white' : 'text-zion-slate-light'}
+              className={filter = = 'pending' ? 'bg-zion-purple text-white' : 'text-zion-slate-light'}
             >
               Pending
             </Button>
             <Button
               size="sm"
-              variant={filter === 'completed' ? 'default' : 'outline'}
+              variant={filter = = 'completed' ? 'default' : 'outline'}
               onClick={() => setFilter('completed')}
-              className={filter === 'completed' ? 'bg-zion-purple text-white' : 'text-zion-slate-light'}
+              className={filter = = 'completed' ? 'bg-zion-purple text-white' : 'text-zion-slate-light'}
             >
               Completed
             </Button>
             <Button
               size="sm"
-              variant={filter === 'escrow' ? 'default' : 'outline'}
+              variant={filter = = 'escrow' ? 'default' : 'outline'}
               onClick={() => setFilter('escrow')}
-              className={filter === 'escrow' ? 'bg-zion-purple text-white' : 'text-zion-slate-light'}
+              className={filter = = 'escrow' ? 'bg-zion-purple text-white' : 'text-zion-slate-light'}
             >
               Escrow
             </Button>
           </div>
         </div>
         {isLoading ? (
-          Array(3).fill(0).map((_, i) => (
+          Array(3).fill(0).map(_, i) => (
             <div key={i} className="mb-4">
               <Card className="bg-zion-blue-dark border-zion-blue-light">
                 <CardHeader className="pb-2">
@@ -202,16 +199,16 @@ export function TransactionHistory() {
                 </CardFooter>
               </Card>
             </div>
-          ))
+          )
         ) : transactions && transactions.length > 0 ? (
           <div className="space-y-4">
-            {transactions.map((transaction) => {
-              const isClient = user?.id === transaction.user_id;
-              const isPending = transaction.status === 'pending';
+            {transactions.map(transaction) => {
+              const isClient = user?.id = = transaction.user_id;
+              const isPending = transaction.status = = 'pending';
               const isInEscrow = transaction.in_escrow;
               const canRelease = !isClient && isPending && isInEscrow;
               const canCancel = isClient && isPending;
-              const canRefund = isClient && transaction.status === 'completed';
+              const canRefund = isClient && transaction.status = = 'completed';
               const counterpartyName = isClient
                 ? transaction.provider?.display_name |'Service Provider'
                 : 'Client';
@@ -308,7 +305,7 @@ export function TransactionHistory() {
             </div>
             <h3 className="text-xl font-medium text-white mb-2">No transactions found</h3>
             <p className="text-zion-slate-light max-w-md mx-auto">
-              {filter !== 'all'
+              {filter != 'all'
                 ? `You don't have any ${filter} transactions. Try changing the filter or make a new transaction.`
                 : "You haven't made any transactions yet. Once you make a payment or receive one, it will appear here."}
             </p>;
@@ -317,12 +314,11 @@ export function TransactionHistory() {
       </div>
     </div>
   )
-}
-;
+
       // Check condition
 if (throw error) {
   $2
-}
+
       toast ({
         title: "Success",
         description: data.message || "Transaction updated successfully"}),
@@ -334,8 +330,7 @@ if (throw error) {
         description: error.message || "Failed to update transaction",
         variant: "destructive"});
     }
-  }
-;
+
   const getStatusBadge = (status: string, in_escrow: boolean) =>: any {
     switch (status) {
       case 'pending':;
@@ -367,19 +362,18 @@ if (throw error) {
             <AlertCircle className="w - 3 h - 3 mr - 1" /> Unknown;
           </Badge>);
     }
-  }
-;
+
   const format_currency = (amount: number, currency: string) =>: any {
     return new Intl.NumberFormat ('en - US', {
       style: 'currency',
       currency: currency.toUpperCase ();
     }).format (amount);
   }
-;
+
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <div className="bg - zion - blue - dark p - 6 rounded - lg border border - zion - blue - light">;
         <div className="text - center text - zion - slate - light">;
@@ -401,40 +395,40 @@ if ( {) {
           <div className="flex space - x-2">;
             <Button;
               size="sm";
-              variant={filter === 'all' ? 'default' : 'outline'}
+              variant={filter = = 'all' ? 'default' : 'outline'}
               on_click={() => set_filter ('all')}
-              className={filter === 'all' ? 'bg - zion - purple text - white' : 'text - zion - slate - light'}
+              className={filter = = 'all' ? 'bg - zion - purple text - white' : 'text - zion - slate - light'}
             >;
               All;
             </Button>;
             <Button;
               size="sm";
-              variant={filter === 'pending' ? 'default' : 'outline'}
+              variant={filter = = 'pending' ? 'default' : 'outline'}
               on_click={() => set_filter ('pending')}
-              className={filter === 'pending' ? 'bg - zion - purple text - white' : 'text - zion - slate - light'}
+              className={filter = = 'pending' ? 'bg - zion - purple text - white' : 'text - zion - slate - light'}
             >;
               Pending;
             </Button>;
             <Button;
               size="sm";
-              variant={filter === 'completed' ? 'default' : 'outline'}
+              variant={filter = = 'completed' ? 'default' : 'outline'}
               on_click={() => set_filter ('completed')}
-              className={filter === 'completed' ? 'bg - zion - purple text - white' : 'text - zion - slate - light'}
+              className={filter = = 'completed' ? 'bg - zion - purple text - white' : 'text - zion - slate - light'}
             >;
               Completed;
             </Button>;
             <Button;
               size="sm";
-              variant={filter === 'escrow' ? 'default' : 'outline'}
+              variant={filter = = 'escrow' ? 'default' : 'outline'}
               on_click={() => set_filter ('escrow')}
-              className={filter === 'escrow' ? 'bg - zion - purple text - white' : 'text - zion - slate - light'}
+              className={filter = = 'escrow' ? 'bg - zion - purple text - white' : 'text - zion - slate - light'}
             >;
               Escrow;
             </Button>;
           </div>;
         </div>;
         {is_loading ? (
-          Array (3).fill (0).map ((_, i) => (
+          Array (3).fill (0).map (_, i) => (
             <div key={i} className="mb - 4">;
               <Card className="bg - zion - blue - dark border - zion - blue - light">;
                 <CardHeader className="pb - 2">;
@@ -452,20 +446,20 @@ if ( {) {
                   <Skeleton className="h - 9 w - 28 bg - zion - blue - light rounded - md" />;
                 </CardFooter>;
               </Card>;
-            </div>))) : transactions && transactions.length > 0 ? (
+            </div>)) : transactions && transactions.length > 0 ? (
           <div className="space - y-4">;
-            {transactions.map ((transaction) => {
-              const is_client = user?.id === transaction.user_id;
-              const is_pending = transaction.status === 'pending';
+            {transactions.map (transaction) => {
+              const is_client = user?.id = = transaction.user_id;
+              const is_pending = transaction.status = = 'pending';
               const isInEscrow = transaction.in_escrow;
               const can_release = !is_client && is_pending && isInEscrow;
               const can_cancel = is_client && is_pending;
-              const can_refund = is_client && transaction.status === 'completed';
-;
+              const can_refund = is_client && transaction.status = = 'completed';
+
               const counterparty_name = is_client;
                 ? transaction.provider?.display_name || 'Service Provider';
                 : 'Client';
-;
+
               return (
                 <Card key={transaction.id} className="bg - zion - blue - dark border - zion - blue - light overflow - hidden">;
                   <CardHeader className="pb - 3">;
@@ -549,11 +543,10 @@ if ( {) {
             </div>;
             <h3 className="text - xl font - medium text - white mb - 2">No transactions found</h3>;
             <p className="text - zion - slate - light max - w-md mx - auto">;
-              {filter !== 'all';
+              {filter != 'all';
                 ? `You don't have any ${filter} transactions. Try changing the filter or make a new transaction.`;
                 : "You haven't made any transactions yet. Once you make a payment or receive one, it will appear here."}
             </p>;
           </div>)}
       </div>;
     </div>);
-}

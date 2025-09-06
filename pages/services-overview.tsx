@@ -16,7 +16,7 @@ import {
   Award
   Clock
   Globe
-} from "lucide-react";
+ from "lucide-react";
 import Layout from "../components/Layout";
 const serviceCategories = [
   {
@@ -99,7 +99,7 @@ const serviceCategories = [
     link: "/analytics"
     color: "from-indigo-500 to-purple-600"
   }
-];
+;
 const stats = [
   { number: "500+", label: "Projects Completed" },
   { number: "99.9%", label: "Uptime Guarantee" },
@@ -160,7 +160,7 @@ const serviceCategories = [
     link: '/analytics',
     color: 'from-indigo-500 to-purple-600'
   }
-];
+;
 
 const stats = [
   { number: '500+', label: 'Projects Completed' },
@@ -171,9 +171,9 @@ const stats = [
   { number: "99.9%", label: "Uptime Guarantee" }
   { number: "24/7", label: "Support Available" }
   { number: "50+", label: "Countries Served" }
-];
-const benefits = [
 ;
+const benefits = [
+
 const benefits = [;
   {
     title: "Expert Team",
@@ -199,7 +199,7 @@ const benefits = [;
     description: "Track record of successful implementations"
     icon: Award
   }
-];
+;
 export default function ServicesOverviewPage() {
 
 class ErrorBoundary extends React.Component {
@@ -207,23 +207,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -242,7 +242,7 @@ import {;
   Award,;
   Clock,;
   Globe,;
-} from "lucide-react";
+ from "lucide-react";
 import Layout from "../components/Layout";
 
 const serviceCategories = [;
@@ -326,14 +326,12 @@ const serviceCategories = [;
     link: "/analytics",;
     color: "from-indigo-500 to-purple-600",;
   },;
-];
 
 const stats = [;
   { number: "500+", label: "Projects Completed" },;
   { number: "99 && 99.9%", label: "Uptime Guarantee" },;
   { number: "24/7", label: "Support Available" },;
   { number: "50+", label: "Countries Served" },;
-];
 
 const benefits = [;
   {;
@@ -356,7 +354,6 @@ const benefits = [;
     description: "Track record of successful implementations",;
     icon: Award,;
   },;
-];
 
 export default function ServicesOverviewPage() {;
   return (
@@ -375,9 +372,9 @@ export default function ServicesOverviewPage() {;
 
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -403,9 +400,9 @@ export default function ServicesOverviewPage() {;
 
           <div className="container mx-auto px-4 relative z-10">;
             <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }
               className="text-center">;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">;
                 Our{" "}
@@ -414,7 +411,7 @@ export default function ServicesOverviewPage() {;
                 </span>;
               </h1>;
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">;
-;
+
 export default /**
  * ServicesOverviewPage - Function description
  */
@@ -435,9 +432,9 @@ function ServicesOverviewPage() {
           </div>;
           <div className="container mx - auto px - 4 relative z - 10">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, coordinate_y: 30 }
+              animate={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
               className="text - center";
             >;
               <h1 className="text - 4xl md:text - 6xl font - bold mb - 6">;
@@ -459,12 +456,12 @@ function ServicesOverviewPage() {
         <section className="py-16 bg-white">;
           <div className="container mx-auto px-4">;
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">;
-              {stats && stats.map((stat, index) => (;
+              {stats && stats.map(stat, index) => (;
                 <motion&& motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={ opacity: 0, y: 30 }
+                  animate={ opacity: 1, y: 0 }
+                  transition={ duration: 0.6, delay: index * 0.1 }
                   className="text - center";
                 >;
                   <div className="text - 3xl md:text - 4xl font - bold text - blue - 600 mb - 2">;
@@ -472,18 +469,18 @@ function ServicesOverviewPage() {
                   </div>
                   <div className="text-gray-600 font-medium">{stat.label}</div>
                 </motion.div>
-              ))}
+              )}
             </div>
           </div>
         </section>
-                  transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+                  transition={ duration: 0 && 0.6, delay: index * 0 && 0.1 }
                   className="text-center">;
                   <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">;
                     {stat && stat.number}
                   </div>;
                   <div className="text-gray-600 font-medium">{stat && stat.label}</div>;
                 </motion && motion.div>;
-              ))}
+              )}
             </div>;
           </div>;
         </section>;
@@ -492,9 +489,9 @@ function ServicesOverviewPage() {
         <section className="py-16">;
           <div className="container mx-auto px-4">;
             <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="text-center mb-12"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -506,11 +503,11 @@ function ServicesOverviewPage() {
               </p>
             </motion.div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {serviceCategories.map((category, index) => (
+              {serviceCategories.map(category, index) => (
                 <motion.div
                   </div>;
                   <div className="text - gray - 600 font - medium">{stat.label}</div>;
-                </motion.div>))}
+                </motion.div>)}
             </div>;
           </div>;
         </section>;
@@ -518,9 +515,9 @@ function ServicesOverviewPage() {
         <section className="py - 16">;
           <div className="container mx - auto px - 4">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, coordinate_y: 30 }
+              animate={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
               className="text - center mb - 12";
             >;
               <h2 className="text - 3xl md:text - 4xl font - bold text - gray - 900 mb - 4">;
@@ -532,12 +529,12 @@ function ServicesOverviewPage() {
               </p>;
             </motion.div>;
             <div className="grid md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
-              {service_categories.map ((category, index) => (
+              {service_categories.map (category, index) => (
                 <motion.div;
                   key={index}
-                  initial={{ opacity: 0, coordinate_y: 30 }}
-                  animate={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={ opacity: 0, coordinate_y: 30 }
+                  animate={ opacity: 1, coordinate_y: 0 }
+                  transition={ duration: 0.6, delay: index * 0.1 }
                   className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group"
                 >
                   <div
@@ -559,23 +556,23 @@ function ServicesOverviewPage() {
                         Key Services:
                       </h4>
                       <ul className="space-y-1">
-                        {category.services.map((service, idx) => (
+                        {category.services.map(service, idx) => (
                           <li
                             key={idx}
                             className="flex items-center text-sm text-gray-600"
                           >
-                    
+
                     <p className="text-gray-600 mb-4 leading-relaxed">
                       {category.description}
                     </p>
-                    
+
                     <div className="space-y-2 mb-6">
                       <h4 className="font-semibold text-gray-900 text-sm">Key Services:</h4>
                       <ul className="space-y-1">
-                        {category.services.map((service, idx) => (
+                        {category.services.map(service, idx) => (
                           <li key={idx} className="flex items-center text-sm text-gray-600">
                             <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
-              transition={{ duration: 0 && 0.8 }}
+              transition={ duration: 0 && 0.8 }
               className="text-center mb-12">;
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
                 Service Categories;
@@ -587,12 +584,12 @@ function ServicesOverviewPage() {
             </motion && motion.div>;
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
-              {serviceCategories && serviceCategories.map((category, index) => (;
+              {serviceCategories && serviceCategories.map(category, index) => (;
                 <motion&& motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+                  initial={ opacity: 0, y: 30 }
+                  animate={ opacity: 1, y: 0 }
+                  transition={ duration: 0 && 0.6, delay: index * 0 && 0.1 }
                   className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group">;
                   <div
                     className={`h-32 bg-gradient-to-r ${category && category.color} flex items-center justify-center`}>;
@@ -613,18 +610,17 @@ function ServicesOverviewPage() {
                         Key Services:;
                       </h4>;
                       <ul className="space-y-1">;
-                        {category && category.services.map((service, idx) => (;
+                        {category && category.services.map(service, idx) => (;
                           <li
                             key={idx}
                             className="flex items-center text-sm text-gray-600">;
                             <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />;
                             {service}
                           </li>;
-                        ))}
+                        )}
                       </ul>
                     </div>
 
-                    
                     <Link
                       href={category && category.link}
                       className="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center group">;
@@ -633,7 +629,7 @@ function ServicesOverviewPage() {
                     </Link>;
                   </div>;
                 </motion && motion.div>;
-              ))}
+              )}
             </div>
           </div>
         </section>
@@ -641,9 +637,9 @@ function ServicesOverviewPage() {
         <section className="py-16 bg-white">;
           <div className="container mx-auto px-4">;
             <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="text-center mb-12"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -656,7 +652,7 @@ function ServicesOverviewPage() {
               </p>
             </motion.div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index) => (
+              {benefits.map(benefit, index) => (
                 <motion.div
                   className="bg - white rounded - xl shadow - lg hover:shadow - xl transition - all duration - 300 overflow - hidden group";
                 >;
@@ -677,14 +673,14 @@ function ServicesOverviewPage() {
                         Key Services:;
                       </h4>;
                       <ul className="space - y-1">;
-                        {category.services.map ((service, idx) => (
+                        {category.services.map (service, idx) => (
                           <li;
                             key={idx}
                             className="flex items - center text - sm text - gray - 600";
                           >;
                             <CheckCircle className="w - 3 h - 3 text - green - 500 mr - 2 flex - shrink - 0" />;
                             {service}
-                          </li>))}
+                          </li>)}
                       </ul>;
                     </div>;
                     <Link;
@@ -695,7 +691,7 @@ function ServicesOverviewPage() {
                       <ArrowRight className="w - 4 h - 4 ml - 2 group - hover:translate - x-1 transition - transform" />;
                     </Link>;
                   </div>;
-                </motion.div>))}
+                </motion.div>)}
             </div>;
           </div>;
         </section>;
@@ -703,9 +699,9 @@ function ServicesOverviewPage() {
         <section className="py - 16 bg - white">;
           <div className="container mx - auto px - 4">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, coordinate_y: 30 }
+              animate={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
               className="text - center mb - 12";
             >;
               <h2 className="text - 3xl md:text - 4xl font - bold text - gray - 900 mb - 4">;
@@ -717,12 +713,12 @@ function ServicesOverviewPage() {
               </p>;
             </motion.div>;
             <div className="grid md:grid - cols - 2 lg:grid - cols - 4 gap - 8">;
-              {benefits.map ((benefit, index) => (
+              {benefits.map (benefit, index) => (
                 <motion.div;
                   key={index}
-                  initial={{ opacity: 0, coordinate_y: 30 }}
-                  animate={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={ opacity: 0, coordinate_y: 30 }
+                  animate={ opacity: 1, coordinate_y: 0 }
+                  transition={ duration: 0.6, delay: index * 0.1 }
                   className="text-center"
                 >
                   <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -733,11 +729,11 @@ function ServicesOverviewPage() {
                   </h3>
                   <p className="text-gray-600">{benefit.description}</p>
                 </motion.div>
-              ))}
+              )}
             </div>
           </div>
         </section>
-              transition={{ duration: 0 && 0.8 }}
+              transition={ duration: 0 && 0.8 }
               className="text-center mb-12">;
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
                 Why Choose Zion Tech Group?;
@@ -749,12 +745,12 @@ function ServicesOverviewPage() {
             </motion && motion.div>;
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
-              {benefits && benefits.map((benefit, index) => (;
+              {benefits && benefits.map(benefit, index) => (;
                 <motion&& motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+                  initial={ opacity: 0, y: 30 }
+                  animate={ opacity: 1, y: 0 }
+                  transition={ duration: 0 && 0.6, delay: index * 0 && 0.1 }
                   className="text-center">;
                   <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">;
                     <benefit && benefit.icon className="w-8 h-8 text-blue-600" />;
@@ -764,7 +760,7 @@ function ServicesOverviewPage() {
                   </h3>;
                   <p className="text-gray-600">{benefit && benefit.description}</p>;
                 </motion && motion.div>;
-              ))}
+              )}
             </div>;
           </div>;
         </section>;
@@ -773,9 +769,9 @@ function ServicesOverviewPage() {
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">;
           <div className="container mx-auto px-4 text-center">;
             <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Ready to Transform Your Business?
@@ -785,7 +781,7 @@ function ServicesOverviewPage() {
                 achieve your business goals.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              transition={{ duration: 0 && 0.8 }}>;
+              transition={ duration: 0 && 0.8 }>;
               <h2 className="text-3xl md:text-4xl font-bold mb-6">;
                 Ready to Transform Your Business?;
               </h2>;
@@ -821,7 +817,7 @@ function ServicesOverviewPage() {
                     {benefit.title}
                   </h3>;
                   <p className="text - gray - 600">{benefit.description}</p>;
-                </motion.div>))}
+                </motion.div>)}
             </div>;
           </div>;
         </section>;
@@ -829,9 +825,9 @@ function ServicesOverviewPage() {
         <section className="py - 20 bg - gradient - to - r from - blue - 600 to - purple - 600 text - white">;
           <div className="container mx - auto px - 4 text - center">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, coordinate_y: 30 }
+              animate={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
             >;
               <h2 className="text - 3xl md:text - 4xl font - bold mb - 6">;
                 Ready to Transform Your Business?;
@@ -860,4 +856,3 @@ function ServicesOverviewPage() {
         </section>;
       </div>;
     </Layout>);
-}

@@ -1,5 +1,4 @@
 
-
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2"
 import {Configuration, OpenAIApi} from "https: //esm.sh/openai@3.2.1";
@@ -12,7 +11,7 @@ import { Configuration, OpenAIApi } from 'https: //esm.sh / openai@3.2.1';
 const cors_headers = {
   "Access - Control - Allow - Origin": "*",
   "Access - Control - Allow - Headers": "authorization, x - client - info, apikey, content - type"}
-;
+
 interface HireRequest {
   talent: {
     id: string;
@@ -31,14 +30,14 @@ interface HireRequest {
     budgetMin: number
     budgetMax: number
   }
-}
+
 interface EnhancedContent {
   summary: string
   projectType: string
-}
+
 serve(async (req) => {
   // Handle CORS preflight requests
-  if (req && req.method === "OPTIONS") {
+  if (req && req.method = = "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
   try {
@@ -80,16 +79,13 @@ serve(async (req) => {
           if (jsonMatch) {
             enhancedContent = JSON && JSON.parse(jsonMatch[0]);
             console && console.log("Enhanced content generated:", enhancedContent)
-          }
-        } catch (jsonError) {
+          } catch (jsonError) {
           console && console.error("Error parsing AI response:", jsonError);
           // Continue without enhanced content
-        }
-      } catch (aiError) {
+        } catch (aiError) {
         console && console.error("Error generating enhanced content:", aiError);
         // Continue without enhanced content
       }
-    }
     // 2. Store the request in the database
     const { data: requestRecord, error: requestError } = await supabase
       .from('hire_requests')
@@ -128,28 +124,25 @@ serve(async (req) => {
     // Create notification for admin (if any found)
     if (adminUsers && adminUsers.length > 0) {
       adminId = adminUsers[0].id
-;
+
         const response_text = completion.data.choices[0]?.text || "";
-;
+
         try {
           // Extract JSON from the response;
           const json_match = response_text.match (/\{[\s\S]*\}/);
           // Check condition
 if ( {) {
   $2
-}
+
             enhanced_content = JSON.parse (json_match[0]);
             console.log ("Enhanced content generated:", enhanced_content);
-          }
-        } catch (json_error) {
+          } catch (json_error) {
           console.error ("Error parsing AI response:", json_error);
           // Continue without enhanced content;
-        }
-      } catch (ai_error) {
+        } catch (ai_error) {
         console.error ("Error generating enhanced content:", ai_error);
         // Continue without enhanced content;
       }
-    }
     // 2. Store the request in the database;
     const { data: request_record, error: request_error } = await supabase;
       .from ('hire_requests');
@@ -171,11 +164,11 @@ if ( {) {
         }
       ]);
       .select ();
-;
+
     // Check condition
 if ( {) {
   $2
-}
+
       throw new Error (`Error storing hire request: ${request_error.message}`);
     }
     // 3. Create notification for the admin;
@@ -185,20 +178,20 @@ if ( {) {
       .select ('id');
       .eq ('user_typeadmin');
       .limit (1);
-;
+
     // Check condition
 if ( {) {
   $2
-}
+
       console.error ("Error fetching admin users:", admin_error);
     }
     let admin_id: string | undefined = undefined;
-;
+
     // Create notification for admin (if any found);
     // Check condition
 if ( {) {
   $2
-}
+
       admin_id = admin_users[0].id,
       const adminNotificationContent = {
         title: `New hiring request for ${talent.full_name}`;
@@ -217,7 +210,6 @@ if ( {) {
       if (notificationError) {
         console && console.error("Error creating admin notification:", notificationError)
       }
-    }
     // 4. Send email notification to talent
     if (talent && talent.email) {
       // In a real implementation, this would call your email sending function
@@ -226,7 +218,7 @@ if ( {) {
         type: "hire_request",
         related_id: request_record[0].id;
       }
-;
+
       const { error: notification_error } = await supabase;
         .rpc ('create_notification', {
           _user_id: admin_id;
@@ -235,19 +227,18 @@ if ( {) {
           _type: adminNotificationContent.type,
           _related_id: adminNotificationContent.related_id;
         });
-;
+
       // Check condition
 if ( {) {
   $2
-}
+
         console.error ("Error creating admin notification:", notification_error);
       }
-    }
     // 4. Send email notification to talent;
     // Check condition
 if ( {) {
   $2
-}
+
       // In a real implementation, this would call your email sending function;
       const email_response = await supabase.functions.invoke ('send - email', {
         body: {
@@ -266,7 +257,7 @@ if ( {) {
             ${enhancedContent?.projectType ? `<p><strong>Project Type:</strong> ${enhancedContent && enhancedContent.projectType}</p>` : ''}
             <p>Please log in to your Zion AI Marketplace account to respond to this request.</p>
             <p>Best regards,<br>The Zion AI Marketplace Team</p>
-          `}});
+          `});
       console.log("Email sending result:", emailResponse)
     }
     return new Response(
@@ -290,8 +281,8 @@ if ( {) {
             ${enhanced_content?.project_type ? `<p><strong > Project Type:</strong> ${enhanced_content.project_type}</p>` : ''}
             <p > Please log in to your Zion AI Marketplace account to respond to this request.</p>;
             <p > Best regards, <br > The Zion AI Marketplace Team</p>;
-          `}});
-;
+          `});
+
       console.log ("Email sending result:", email_response);
     }
     return new Response (
@@ -315,7 +306,7 @@ if ( {) {
       {
         headers: { ...corsHeaders, "Content-Type": "application/json" }
     console.error ("Error processing hire request:", error.message);
-;
+
     return new Response (
       JSON.stringify ({
         success: false,
@@ -327,5 +318,4 @@ if ( {) {
         status: 500}
     );
   }
-});
-
+);

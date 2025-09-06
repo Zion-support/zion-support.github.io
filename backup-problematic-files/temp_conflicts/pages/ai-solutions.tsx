@@ -1,7 +1,7 @@
 import React from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
-;
+
 export default function AISolutionsPage() {;
   const aiSolutions = [;
     {;
@@ -59,7 +59,7 @@ export default function AISolutionsPage() {;
       complexity:'Intermediate';
     }
   ],;
-;
+
   const useCases = [;
     {;
       industry:'Manufacturing',;
@@ -82,11 +82,11 @@ export default function AISolutionsPage() {;
       icon:'';
     }
   ],;
-;
+
   const technologies = [;
     'TensorFlowPyTorch', 'Scikit-learnOpenAI GPT', 'BERTYOLO', 'KerasPandas';
   ],;
-;
+
   return (;
     <>;
       <Head>;
@@ -96,7 +96,6 @@ export default function AISolutionsPage() {;
         <meta property="og:description" content="Advanced AI solutions for machine learning, natural language processing, computer vision, and autonomous systems." />;
         <meta name="twitter:card" content="summary_large_image" />;
       </Head>;
-      ;
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">;
         <main className="container mx-auto px-6 py-12">;
           <section className="text-center mb-16">;
@@ -107,13 +106,13 @@ export default function AISolutionsPage() {;
               Cutting-edge artificial intelligence solutions that transform businesses and drive innovation;
             </p>;
           </section>;
-;
+
           <section className="mx-auto max-w-7xl">;
             {/* AI Solutions Grid */}
             <div className="mb-16">;
               <h2 className="text-3xl font-bold mb-8 text-center text-cyan-400">Our AI Solutions</h2>;
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
-                {aiSolutions.map((solution, index) => (;
+                {aiSolutions.map(solution, index) => (;
                   <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300">;
                     <div className="text-4xl mb-4">{solution.icon}</div>;
                     <div className="flex items-center gap-2 mb-3">;
@@ -123,12 +122,12 @@ export default function AISolutionsPage() {;
                     <h3 className="text-xl font-bold mb-3 text-white">{solution.title}</h3>;
                     <p className="text-white/70 mb-4">{solution.description}</p>;
                     <ul className="space-y-1 mb-4">;
-                      {solution.features.map((feature, featureIndex) => (;
+                      {solution.features.map(feature, featureIndex) => (;
                         <li key={featureIndex} className="text-sm text-white/60 flex items-center">;
                           <span className="text-cyan-400 mr-2"></span>;
                           {feature}
                         </li>;
-                      ))}
+                      )}
                     </ul>;
                     <Link ;
                       href={`/services#${solution.id}`}
@@ -137,47 +136,47 @@ export default function AISolutionsPage() {;
                       Learn More <span className="ml-1"></span>;
                     </Link>;
                   </div>;
-                ))}
+                )}
               </div>;
             </div>;
-;
+
             {/* Industry Use Cases */}
             <div className="mb-16">;
               <h2 className="text-3xl font-bold mb-8 text-center text-fuchsia-400">Industry Applications</h2>;
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">;
-                {useCases.map((useCase, index) => (;
+                {useCases.map(useCase, index) => (;
                   <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 text-center">;
                     <div className="text-4xl mb-4">{useCase.icon}</div>;
                     <h3 className="text-xl font-bold mb-4 text-white">{useCase.industry}</h3>;
                     <ul className="space-y-2">;
-                      {useCase.solutions.map((solution, solutionIndex) => (;
+                      {useCase.solutions.map(solution, solutionIndex) => (;
                         <li key={solutionIndex} className="text-sm text-white/70">;
                           {solution}
                         </li>;
-                      ))}
+                      )}
                     </ul>;
                   </div>;
-                ))}
+                )}
               </div>;
             </div>;
-;
+
             {/* Technologies */}
             <div className="mb-16">;
               <h2 className="text-3xl font-bold mb-8 text-center text-green-400">Technologies We Use</h2>;
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8">;
                 <div className="flex flex-wrap justify-center gap-4">;
-                  {technologies.map((tech, index) => (;
+                  {technologies.map(tech, index) => (;
                     <span ;
                       key={index}
                       className="px-4 py-2 bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 text-white rounded-lg border border-white/20";
                     >;
                       {tech}
                     </span>;
-                  ))}
+                  )}
                 </div>;
               </div>;
             </div>;
-;
+
             {/* Success Stories */}
             <div className="mb-16">;
               <h2 className="text-3xl font-bold mb-8 text-center text-blue-400">AI Success Stories</h2>;
@@ -208,7 +207,7 @@ export default function AISolutionsPage() {;
                 </div>;
               </div>;
             </div>;
-;
+
             {/* Call to Action */}
             <div className="bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 backdrop-blur-xl rounded-2xl p-8 text-center">;
               <h2 className="text-3xl font-bold mb-4 text-white">Ready to Harness the Power of AI?</h2>;
@@ -235,4 +234,3 @@ export default function AISolutionsPage() {;
       </div>;
     </>;
   );
-}

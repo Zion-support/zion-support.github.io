@@ -1,43 +1,41 @@
 import { useMemo, useState } from 'react',;
 import { motion, AnimatePresence } from 'framer-motion',;
-;
+
 interface FileData {;
   name:string,;
   type:string,;
   size:number,;
   base64:string, // data URL;
-}
-;
+
 interface OnboardingFormData {;
   fullName:string,;
   professionalTitle:string,;
   profilePicture?:FileData | null,;
-;
+
   bio:string,;
   projects:string,;
   yearsOfExperience:string, // keep as string for input, convert on submit;
-;
+
   skills:string,;
   tools:string,;
-;
+
   availability:'Full-time' | 'Part-time' | 'Project-based' | '',;
   timezone:string,;
   hourlyRate?:string,;
   portfolioLinks?:string,;
   cvFile?:FileData | null;
-}
-;
+
 const steps = [;
   'Basic InfoExperience',;
   'Skills & TechAvailability'] as const,;
-;
+
 type StepKey = typeof steps[number],;
-;
+
 const containerVariants = {;
   initial:{ opacity:0, y:16 },;
   animate:{ opacity:1, y:0 },;
-  exit:{ opacity:0, y:-16 }},;
-;
+  exit:{ opacity:0, y:-16 },;
+
 function useInitialFormState():OnboardingFormData {;
   return {;
     fullName:'',;
@@ -53,11 +51,10 @@ function useInitialFormState():OnboardingFormData {;
     hourlyRate:'',;
     portfolioLinks:'',;
     cvFile:null},;
-}
-;
+
 async function fileToBase64(file:File):Promise<FileData> {;
   const toBase64 = (fileInner:File) =>;
-    new Promise<string>((resolve, reject) => {;
+    new Promise<string>(resolve, reject) => {;
       const reader = new FileReader(),;
       reader.readAsDataURL(fileInner),;
       reader.onload = () => resolve(reader.result as string),;
@@ -69,48 +66,47 @@ async function fileToBase64(file:File):Promise<FileData> {;
     type:file.type,;
     size:file.size,;
     base64},;
-}
-;
+
 export default function TalentOnboardingPage() {;
   const [stepIndex, setStepIndex] = useState(0),;
   const [formData, setFormData] = useState<OnboardingFormData>(useInitialFormState),;
   const [submitting, setSubmitting] = useState(false),;
   const [submitted, setSubmitted] = useState(false),;
   const [errorMessage, setErrorMessage] = useState<string | null>(null),;
-;
+
   const currentStep:StepKey = steps[stepIndex],;
-  const progressPercent = useMemo(() => ((stepIndex + 1) / steps.length) * 100, [stepIndex]),;
-;
+  const progressPercent = useMemo() => (stepIndex + 1) / steps.length) * 100, [stepIndex]),;
+
   function nextStep() {;
     if (stepIndex < steps.length - 1) setStepIndex(stepIndex + 1),;
   }
   function prevStep() {;
     if (stepIndex > 0) setStepIndex(stepIndex - 1),;
   }
-;
+
   function update<K extends keyof OnboardingFormData>(key:K, value:OnboardingFormData[K]) {;
-    setFormData((prev) => ({ ...prev, [key]:value })),;
+    setFormData(prev) => ({ ...prev, [key]:value }),;
   }
-;
+
   function requiredMissingForStep():string | null {;
-    if (currentStep === 'Basic Info') {;
-      if (!formData.fullName.trim()) return 'Full Name is required.',;
-      if (!formData.professionalTitle.trim()) return 'Professional Title is required.',;
+    if (currentStep = = 'Basic Info') {;
+      if (!formData.fullName.trim() return 'Full Name is required.',;
+      if (!formData.professionalTitle.trim() return 'Professional Title is required.',;
     }
-    if (currentStep === 'Experience') {;
-      if (!formData.bio.trim()) return 'Short Bio is required.',;
-      if (!formData.yearsOfExperience.trim()) return 'Years of Experience is required.',;
+    if (currentStep = = 'Experience') {;
+      if (!formData.bio.trim() return 'Short Bio is required.',;
+      if (!formData.yearsOfExperience.trim() return 'Years of Experience is required.',;
     }
-    if (currentStep === 'Skills & Tech') {;
-      if (!formData.skills.trim()) return 'Please list at least one skill.',;
+    if (currentStep = = 'Skills & Tech') {;
+      if (!formData.skills.trim() return 'Please list at least one skill.',;
     }
-    if (currentStep === 'Availability') {;
+    if (currentStep = = 'Availability') {;
       if (!formData.availability) return 'Please select your current availability.',;
-      if (!formData.timezone.trim()) return 'Preferred Timezone is required.',;
+      if (!formData.timezone.trim() return 'Preferred Timezone is required.',;
     }
     return null,;
   }
-;
+
   async function handleSubmit() {;
     const missing = requiredMissingForStep(),;
     if (missing) {;
@@ -131,8 +127,7 @@ export default function TalentOnboardingPage() {;
     } finally {;
       setSubmitting(false),;
     }
-  }
-;
+
   if (submitted) {;
     return (;
       <div className="min-h-screen bg-high-contrast-primary text-high-contrast flex items-center justify-center p-6">;
@@ -145,7 +140,7 @@ export default function TalentOnboardingPage() {;
       </div>;
     );
   }
-;
+
   return (;
     <div className="min-h-screen bg-high-contrast-primary text-high-contrast flex items-center justify-center p-4 md:p-8">;
       <div className="w-full max-w-3xl">;
@@ -153,21 +148,21 @@ export default function TalentOnboardingPage() {;
           <h1 className="text-2xl md:text-3xl font-semibold">Zion AI Marketplace:Talent Onboarding</h1>;
           <p className="text-high-contrast-muted mt-1">Create your public profile in a few quick steps.</p>;
         </div>;
-;
+
         <div className="w-full h-2 bg-[var(--border-secondary)] rounded-full overflow-hidden mb-6">;
-          <div className="h-full bg-[var(--text-accent)] transition-all duration-500" style={{ width:`${progressPercent}%` }} />;
+          <div className="h-full bg-[var(--text-accent)] transition-all duration-500" style={ width:`${progressPercent}%` } />;
         </div>;
-;
+
         {errorMessage && (;
           <div className="mb-4 rounded-lg border border-[var(--border-error)] text-high-contrast-error px-4 py-3 bg-[rgba(239,68,68,0.1)]">;
             {errorMessage}
           </div>;
         )}
-;
+
         <div className="bg-glass/60 rounded-2xl p-6 md:p-8 shadow-xl border border-[var(--border-primary)]">;
           <AnimatePresence mode="wait">;
-            {currentStep === 'Basic Info' && (;
-              <motion.div key="step-basic" variants={containerVariants} initial="initial" animate="animate" exit="exit" transition={{ duration:0.3 }}>;
+            {currentStep = = 'Basic Info' && (;
+              <motion.div key="step-basic" variants={containerVariants} initial="initial" animate="animate" exit="exit" transition={ duration:0.3 }>;
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">;
                   <FloatingInput;
                     id="fullName";
@@ -196,9 +191,9 @@ export default function TalentOnboardingPage() {;
                 </div>;
               </motion.div>;
             )}
-;
-            {currentStep === 'Experience' && (;
-              <motion.div key="step-experience" variants={containerVariants} initial="initial" animate="animate" exit="exit" transition={{ duration:0.3 }}>;
+
+            {currentStep = = 'Experience' && (;
+              <motion.div key="step-experience" variants={containerVariants} initial="initial" animate="animate" exit="exit" transition={ duration:0.3 }>;
                 <div className="grid grid-cols-1 gap-4 md:gap-6">;
                   <FloatingTextarea;
                     id="bio";
@@ -226,9 +221,9 @@ export default function TalentOnboardingPage() {;
                 </div>;
               </motion.div>;
             )}
-;
-            {currentStep === 'Skills & Tech' && (;
-              <motion.div key="step-skills" variants={containerVariants} initial="initial" animate="animate" exit="exit" transition={{ duration:0.3 }}>;
+
+            {currentStep = = 'Skills & Tech' && (;
+              <motion.div key="step-skills" variants={containerVariants} initial="initial" animate="animate" exit="exit" transition={ duration:0.3 }>;
                 <div className="grid grid-cols-1 gap-4 md:gap-6">;
                   <FloatingInput;
                     id="skills";
@@ -248,9 +243,9 @@ export default function TalentOnboardingPage() {;
                 </div>;
               </motion.div>;
             )}
-;
-            {currentStep === 'Availability' && (;
-              <motion.div key="step-availability" variants={containerVariants} initial="initial" animate="animate" exit="exit" transition={{ duration:0.3 }}>;
+
+            {currentStep = = 'Availability' && (;
+              <motion.div key="step-availability" variants={containerVariants} initial="initial" animate="animate" exit="exit" transition={ duration:0.3 }>;
                 <div className="grid grid-cols-1 gap-4 md:gap-6">;
                   <div>;
                     <label htmlFor="availability" className="block text-sm mb-2 text-high-contrast-secondary">Current Availability</label>;
@@ -266,7 +261,7 @@ export default function TalentOnboardingPage() {;
                       <option value="Project-based">Project-based</option>;
                     </select>;
                   </div>;
-;
+
                   <FloatingInput;
                     id="timezone";
                     label="Preferred Timezone";
@@ -275,7 +270,7 @@ export default function TalentOnboardingPage() {;
                     onChange={(v) => update('timezone', v)}
                     required;
                   />;
-;
+
                   <FloatingInput;
                     id="hourlyRate";
                     label="Hourly Rate (optional)";
@@ -284,7 +279,7 @@ export default function TalentOnboardingPage() {;
                     value={formData.hourlyRate || ''}
                     onChange={(v) => update('hourlyRate', v)}
                   />;
-;
+
                   <FloatingInput;
                     id="portfolioLinks";
                     label="Portfolio Links (optional)";
@@ -292,7 +287,7 @@ export default function TalentOnboardingPage() {;
                     value={formData.portfolioLinks || ''}
                     onChange={(v) => update('portfolioLinks', v)}
                   />;
-;
+
                   <FileUpload;
                     id="cvFile";
                     label="Upload CV (optional)";
@@ -304,17 +299,17 @@ export default function TalentOnboardingPage() {;
               </motion.div>;
             )}
           </AnimatePresence>;
-;
+
           <div className="mt-8 flex items-center justify-between">;
             <button;
               type="button";
               className="px-4 py-2 rounded-lg border border-[var(--border-secondary)] text-high-contrast-secondary hover:bg-high-contrast-tertiary/60 transition-colors";
               onClick={prevStep}
-              disabled={stepIndex === 0}
+              disabled={stepIndex = = 0}
             >;
               Back;
             </button>;
-;
+
             {stepIndex < steps.length - 1 ? (;
               <button;
                 type="button";
@@ -327,7 +322,7 @@ export default function TalentOnboardingPage() {;
                   }
                   setErrorMessage(null),;
                   nextStep(),;
-                }}
+                }
               >;
                 Next;
               </button>;
@@ -346,8 +341,7 @@ export default function TalentOnboardingPage() {;
       </div>;
     </div>;
   ),;
-}
-;
+
 function FloatingInput(props:{;
   id:string,;
   label:string,;
@@ -357,7 +351,7 @@ function FloatingInput(props:{;
   type?:string,;
   min?:number,;
   required?:boolean;
-}) {;
+) {;
   const { id, label, value, onChange, placeholder, type = 'text', min, required } = props,;
   return (;
     <div className="relative">;
@@ -377,8 +371,7 @@ function FloatingInput(props:{;
       </label>;
     </div>;
   ),;
-}
-;
+
 function FloatingTextarea(props:{;
   id:string,;
   label:string,;
@@ -386,7 +379,7 @@ function FloatingTextarea(props:{;
   onChange:(value:string) => void,;
   placeholder?:string,;
   required?:boolean;
-}) {;
+) {;
   const { id, label, value, onChange, placeholder, required } = props,;
   return (;
     <div className="relative">;
@@ -405,18 +398,17 @@ function FloatingTextarea(props:{;
       </label>;
     </div>;
   ),;
-}
-;
+
 function FileUpload(props:{;
   id:string,;
   label:string,;
   accept?:string,;
   fileData:FileData | null | undefined,;
   onFileChange:(file:FileData | null) => void;
-}) {;
+) {;
   const { id, label, accept, fileData, onFileChange } = props,;
   const [localError, setLocalError] = useState<string | null>(null),;
-;
+
   return (;
     <div>;
       <label htmlFor={id} className="block text-sm mb-2 text-high-contrast-secondary">{label}</label>;
@@ -437,15 +429,13 @@ function FileUpload(props:{;
             setLocalError(null),;
           } catch (err) {;
             setLocalError('Failed to read file.'),;
-          }
-        }}
+          }}
       />;
       {fileData && (;
-        <p className="mt-2 text-xs text-high-contrast-muted">Selected:{fileData.name} ({Math.round((fileData.size / 1024) * 10) / 10} KB)</p>;
+        <p className="mt-2 text-xs text-high-contrast-muted">Selected:{fileData.name} ({Math.round(fileData.size / 1024) * 10) / 10} KB)</p>;
       )}
       {localError && (;
         <p className="mt-1 text-xs text-high-contrast-error">{localError}</p>;
       )}
     </div>;
   ),;
-}

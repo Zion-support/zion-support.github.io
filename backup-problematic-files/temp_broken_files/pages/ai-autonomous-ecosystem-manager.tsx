@@ -1,6 +1,6 @@
 import React from 'react',;
 import ServiceLanding from '../components/sections/ServiceLanding',;
-;
+
 export default function AIAutonomousEcosystemManager() {;
 	return (;
 		<ServiceLanding;
@@ -100,6 +100,5 @@ const AIAutonomousEcosystemManager: React.FC = () => {
       </main>
     </Layout>
   );
-};
 
 export default AIAutonomousEcosystemManager;

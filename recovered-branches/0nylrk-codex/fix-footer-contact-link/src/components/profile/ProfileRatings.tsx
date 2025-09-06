@@ -10,19 +10,17 @@ interface ProfileRatingsProps {
   userId: string;
   averageRating?: number;
   ratingCount?: number;
-}
 
 export function ProfileRatings({
   userId
   averageRating = 0
   ratingCount = 0
-}: ProfileRatingsProps) {
+: ProfileRatingsProps) {
   const { reviews, isLoading, fetchUserReviews, reportReview } = useReviews();
   const [ratingDistribution, setRatingDistribution] = useState<
-    Record<number, number>
-  >({});
+    Record<number, number>({});
   // Calculate rating distribution
-  useEffect(() => {
+  useEffect() => {
     if (reviews.length > 0) {
       const distribution: Record<number, number> = {
         1: 0
@@ -31,25 +29,21 @@ export function ProfileRatings({
         4: 0
         5: 0
       }
-      reviews.forEach((review) => {
+      reviews.forEach(review) => {
         if (review.rating >= 1 && review.rating <= 5) {
           distribution[review.rating] = (distribution[review.rating] |0) + 1;
-        }
-      });
+        });
       setRatingDistribution(distribution);
-    }
-  }, [reviews]);
+    }, [reviews]);
   // Fetch reviews when component mounts
-  useEffect(() => {
-        }
-      });
-;
+  useEffect() => {
+        });
+
       setRatingDistribution (distribution);
-    }
-  }, [reviews]);
+    }, [reviews]);
 
   // Fetch reviews when component mounts;
-  useEffect(() => {;
+  useEffect() => {;
     fetchUserReviews(userId);
   }, [userId]);
 
@@ -81,14 +75,14 @@ export function ProfileRatings({
             </TabsContent>
             <TabsContent value="positive">
               <ReviewsList
-                reviews={reviews && reviews.filter((r) => r && r.rating >= 4)}
+                reviews={reviews && reviews.filter(r) => r && r.rating >= 4)}
                 isLoading={isLoading}
                 onReportReview={reportReview}
               />
             </TabsContent>
             <TabsContent value="critical">
               <ReviewsList
-                reviews={reviews && reviews.filter((r) => r && r.rating < 4)}
+                reviews={reviews && reviews.filter(r) => r && r.rating < 4)}
                 isLoading={isLoading}
                 onReportReview={reportReview}
               />
@@ -98,7 +92,7 @@ export function ProfileRatings({
       </div>
     </div>
   );
-}
+
               />;
             </TabsContent>;
           </Tabs>;
@@ -106,6 +100,5 @@ export function ProfileRatings({
       </div>;
     </div>;
   );
-}
+
     </div>);
-}

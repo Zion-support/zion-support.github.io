@@ -18,7 +18,7 @@ interface Milestone {
   paymentStatus: "paid" | "pending" | "overdue"
 
   amount: string
-}
+
 interface ProjectViewProps {
   project: {
 
@@ -37,7 +37,7 @@ interface ProjectViewProps {
     description: string
   }
   milestones: Milestone[]
-}
+
 export function MobileProjectView({ project, milestones }: ProjectViewProps) {
 
   const navigate = useNavigate();
@@ -128,12 +128,12 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
       <section>
         <h2 className="text-lg font-medium mb-4">Milestones</h2>
         <div className="space-y-3">
-          {milestones.map((milestone) => (
+          {milestones.map(milestone) => (
             <Card key={milestone.id}>
               <CardContent className="p-4">
                 <div className="flex justify-between items-start mb-2">
                   <div className="flex items-center gap-2">
-                    {milestone.status === "completed" ? (
+                    {milestone.status = = "completed" ? (
                       <CheckCircle className="h-5 w-5 text-green-500" />
                     ) : (
                       <div className="h-5 w-5 rounded-full border-2 border-muted-foreground"></div>
@@ -142,8 +142,8 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
                   </div>
                   <Badge
                     variant={
-                      milestone.paymentStatus === "paid" ? "default" :
-                      milestone.paymentStatus === "overdue" ? "destructive" : "outline"
+                      milestone.paymentStatus = = "paid" ? "default" :
+                      milestone.paymentStatus = = "overdue" ? "destructive" : "outline"
                     }
                   >
                     {milestone.paymentStatus}
@@ -172,12 +172,12 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
                 </div>
               </CardContent>
             </Card>
-          ))}
+          )}
         </div>
       </section>
     </div>
   )
-}
+
       name: string,
       avatar?: string;
     }
@@ -189,29 +189,29 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
     description: string;
   }
   milestones: Milestone[];
-}
+
 export /**
  * MobileProjectView - Function description
  */
 function MobileProjectView() {
   const navigate = use_navigate ();
-;
+
   const startProjectCall = () =>: any {
     const room_id = `project-${project.id}`;
     toast.success ("Starting project call", {
       description: "Initializing video connection...";
     });
-;
+
     navigate (`/call/${room_id}`);
   }
-;
+
   const message_client = () =>: any {
     toast.info ("Opening message thread with client", {
       description: `Messaging ${project.client.name}...`;
     });
     // Navigate to messaging with this client;
   }
-;
+
   return (
     <div className="space - y-6 px - 4 pb - 24">;
       <Card>;
@@ -285,20 +285,20 @@ function MobileProjectView() {
       <section>;
         <h2 className="text - lg font - medium mb - 4">Milestones</h2>;
         <div className="space - y-3">;
-          {milestones.map ((milestone) => (
+          {milestones.map (milestone) => (
             <Card key={milestone.id}>;
               <CardContent className="p - 4">;
                 <div className="flex justify - between items - start mb - 2">;
                   <div className="flex items - center gap - 2">;
-                    {milestone.status === "completed" ? (
+                    {milestone.status = = "completed" ? (
                       <CheckCircle className="h - 5 w - 5 text - green - 500" />) : (
                       <div className="h - 5 w - 5 rounded - full border - 2 border - muted - foreground"></div>)}
                     <h3 className="font - medium">{milestone.title}</h3>;
                   </div>;
                   <Badge;
                     variant={
-                      milestone.payment_status === "paid" ? "default" :;
-                      milestone.payment_status === "overdue" ? "destructive" : "outline";
+                      milestone.payment_status = = "paid" ? "default" :;
+                      milestone.payment_status = = "overdue" ? "destructive" : "outline";
                     }
                   >;
                     {milestone.payment_status}
@@ -326,8 +326,7 @@ function MobileProjectView() {
                   </Button>;
                 </div>;
               </CardContent>;
-            </Card>))}
+            </Card>)}
         </div>;
       </section>;
     </div>);
-}

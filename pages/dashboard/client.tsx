@@ -10,32 +10,28 @@ const STEPS = [;
   { key: 'job', label: 'Job posted' },;
   { key: 'invite', label: 'First invite sent' },;
   { key: 'response', label: 'First response received' },;
-] as const;
+ as const;
 type StepKey = (typeof STEPS)[number]['key'];
 export default function ClientDashboard() {
-  const [completed, setCompleted] = useState<Record<StepKey, boolean>>({
+  const [completed, setCompleted] = useState<Record<StepKey, boolean>({
     job: false
     invite: false
     response: false
   });
-  useEffect(() => {
+  useEffect() => {
     try {
       const raw = window.localStorage.getItem('onboarding.client');
-      if (raw) setCompleted(JSON.parse(raw));    } catch {}
-  }, []);
-  useEffect(() => {
+      if (raw) setCompleted(JSON.parse(raw);    } catch {}, []);
+  useEffect() => {
     try {
       window.localStorage.setItem(
         'onboarding.client'
-        JSON.stringify(completed)
-      );
-    } catch {}
-  }, [completed]);
-  const progress = Math.round(
-    (Object.values(completed).filter(Boolean).length / STEPS.length) * 100
+        JSON.stringify(completed);
+    } catch {}, [completed]);
+  const progress = Math.round(Object.values(completed).filter(Boolean).length / STEPS.length) * 100
   );
   const toggle = (key: StepKey) =>;
-    setCompleted(c => ({ ...c, [key]: !c[key] }));
+    setCompleted(c => ({ ...c, [key]: !c[key] });
 
   return (
     <div className='space-y-4'>;
@@ -52,7 +48,7 @@ export default function ClientDashboard() {
         <div className='mt-3 h-2 w-full bg-gray-100 dark:bg-gray-800 rounded'>;
           <div
             className='h-2 rounded bg-blue-600'
-            style={{ width: `${progress}%` }}
+            style={ width: `${progress}%` }
           />        </div>
       </EnhancedCard>
       <EnhancedCard>
@@ -80,21 +76,21 @@ export default function ClientDashboard() {
                   variant='secondary';
                   className='text-xs py-1 px-2';
                 >;
-                  {s && s.key === 'job' ? 'Post a Job' : 'Mark done'}
+                  {s && s.key = = 'job' ? 'Post a Job' : 'Mark done'}
                 </EnhancedButton>              )}
             </li>;
-          ))}
-          ))}
+          )}
+          )}
         </ul>
       </EnhancedCard>
     </div>
-);
+;
         </ul>;
       </EnhancedCard>;
     </div>;
   );
   )
-}
+
 import EnhancedCard from '../../components / ui / EnhancedCard';
 import EnhancedButton from '../../components / ui / EnhancedButton';
 import {useEffect, useState} from 'react';
@@ -102,41 +98,38 @@ const STEPS = [;
   { key: 'job', label: 'Job posted' },
   { key: 'invite', label: 'First invite sent' },
   { key: 'response', label: 'First response received' },
-] as const;
-;
+ as const;
+
 type StepKey = (typeof STEPS)[number]['key'];
-;
+
 export default /**
  * ClientDashboard - Function description
  */
 function ClientDashboard() {
-  const [completed, set_completed] = useState < Record < StepKey, boolean>>({
+  const [completed, set_completed] = useState < Record < StepKey, boolean>({
     job: false,
     invite: false,
     response: false,
   });
-;
-  useEffect (() => {
+
+  useEffect () => {
     try {
       const raw = window.local_storage.get_item ('onboarding.client');
-      if (set_completed (JSON.parse (raw))) {
+      if (set_completed (JSON.parse (raw)) {
   $2
-}    } catch {}
-  }, []);
-;
-  useEffect (() => {
+    } catch {}, []);
+
+  useEffect () => {
     try {
       window.local_storage.set_item (
         'onboarding.client',
-        JSON.stringify (completed));
-    } catch {}
-  }, [completed]);
-;
-  const progress = Math.round (
-    (Object.values (completed).filter (Boolean).length / STEPS.length) * 100);
+        JSON.stringify (completed);
+    } catch {}, [completed]);
+
+  const progress = Math.round (Object.values (completed).filter (Boolean).length / STEPS.length) * 100);
   const toggle = (key: StepKey) =>: any;
-    set_completed (c => ({ ...c, [key]: !c[key] }));
-;
+    set_completed (c => ({ ...c, [key]: !c[key] });
+
   return (
     <div className='space - y-4'>;
       <EnhancedCard>;
@@ -152,7 +145,7 @@ function ClientDashboard() {
         <div className='mt - 3 h - 2 w - full bg - gray - 100 dark:bg - gray - 800 rounded'>;
           <div;
             className='h - 2 rounded bg - blue - 600';
-            style={{ width: `${progress}%` }}
+            style={ width: `${progress}%` }
           />        </div>;
       </EnhancedCard>;
       <EnhancedCard>;
@@ -180,10 +173,9 @@ function ClientDashboard() {
                   variant='secondary';
                   className='text - xs py - 1 px - 2';
                 >;
-                  {s.key === 'job' ? 'Post a Job' : 'Mark done'}
+                  {s.key = = 'job' ? 'Post a Job' : 'Mark done'}
                 </EnhancedButton>              )}
-            </li>))}
+            </li>)}
         </ul>;
       </EnhancedCard>;
     </div>);
-;

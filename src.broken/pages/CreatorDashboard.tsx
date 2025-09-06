@@ -6,5 +6,3 @@ export function CreatorDashboard() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

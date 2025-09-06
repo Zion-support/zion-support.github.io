@@ -13,7 +13,7 @@ export default function JSONFormatterPage() {
   const [compactMode, setCompactMode] = useState(false),
   const [showLineNumbers, setShowLineNumbers] = useState(true),
   const formatJSON = () => {
-    if (!inputJson.trim()) {
+    if (!inputJson.trim() {
       setFormattedJson(''),
       setIsValid(true),
       setErrorMessage(''),
@@ -25,7 +25,7 @@ export default function JSONFormatterPage() {
       const formatted = compactMode 
         ? JSON.stringify(parsed)
         : JSON.stringify(parsed, null, indentSize),
-      
+
       setFormattedJson(formatted),
       setIsValid(true),
       setErrorMessage('')
@@ -33,12 +33,11 @@ export default function JSONFormatterPage() {
       setIsValid(false),
       setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON'),
       setFormattedJson('')
-    }
-  },
+    },
 
   const minifyJSON = () => {
-    if (!inputJson.trim()) return,
-    
+    if (!inputJson.trim() return,
+
     try {
       const parsed = JSON.parse(inputJson),
       const minified = JSON.stringify(parsed),
@@ -48,11 +47,10 @@ export default function JSONFormatterPage() {
     } catch (error) {
       setIsValid(false),
       setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON')
-    }
-  },
+    },
 
   const validateJSON = () => {
-    if (!inputJson.trim()) {
+    if (!inputJson.trim() {
       setIsValid(true),
       setErrorMessage(''),
       return
@@ -65,8 +63,7 @@ export default function JSONFormatterPage() {
     } catch (error) {
       setIsValid(false),
       setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON')
-    }
-  },
+    },
 
   const clearAll = () => {
     setInputJson(''),
@@ -115,7 +112,7 @@ export default function JSONFormatterPage() {
       "active": true,
       "lastLogin": "2024-01-15T10:30:00Z"
     },    
-    setInputJson(JSON.stringify(sample, null, 2)),
+    setInputJson(JSON.stringify(sample, null, 2),
     setFormattedJson(''),
     setIsValid(true),
     setErrorMessage('')
@@ -123,7 +120,7 @@ export default function JSONFormatterPage() {
 
   const getLineNumbers = (text: string) => {
     const lines = text.split('\n'),
-    return lines.map((_, index) => index + 1).join('\n')
+    return lines.map(_, index) => index + 1).join('\n')
   },
   return (_<>
       <Head>
@@ -169,14 +166,14 @@ export default function JSONFormatterPage() {
                   <label className=&quot;text-sm text-gray-300&quot;>Indent:</label>
                   <select,
 value={indentSize}
-                    onChange={(e) => setIndentSize(Number(e.target.value))}
+                    onChange={(e) => setIndentSize(Number(e.target.value)}
                     className=&quot;px-3 py-2 bg-gray-700 border border-gray-600 rounded text-white text-sm focus:outline-none focus:ring-2 focus:ring-teal-500&quot;                  >
                     <option value={2}>2 spaces</option>
                     <option value={4}>4 spaces</option>
                     <option value={8}>8 spaces</option>
                   </select>
                 </div>
-                
+
                 <div className=&quot;flex items-center space-x-2&quot;>
                   <input,
 type=&quot;checkbox&quot;
@@ -186,7 +183,7 @@ type=&quot;checkbox&quot;
                     className=&quot;w-4 h-4 text-teal-600 bg-gray-700 border-gray-600 rounded focus:ring-teal-500&quot;                  />
                   <label htmlFor=&quot;compactMode&quot; className=&quot;text-sm text-gray-300&quot;>Compact mode</label>
                 </div>
-                
+
                 <div className=&quot;flex items-center space-x-2&quot;>
                   <input,
 type=&quot;checkbox&quot;
@@ -343,7 +340,7 @@ onClick={() => downloadJSON(formattedJson, 'formatted.json')}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Features */}
       <section className=&quot;py-20 bg-gray-800&quot;>
         <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>

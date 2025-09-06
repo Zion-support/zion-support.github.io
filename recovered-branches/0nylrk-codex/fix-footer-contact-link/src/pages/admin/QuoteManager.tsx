@@ -7,7 +7,7 @@ import { useAuth } from "@/hooks/useAuth";
 import { 
   Card;
   CardContent
-} from "@/components/ui/card",
+ from "@/components/ui/card",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { Navigate } from "react-router-dom",
 import type { QuoteRequest } from "@/types/quotes";
@@ -18,7 +18,7 @@ import {ExportToCSV} from "@/components/quotes/ExportToCSV";
 import {QuoteStatusCards, QuotesFilter, QuotesTable} from "@/components/admin/quotes";
 export default function QuoteManager() {
   const { user } = useAuth();
-  const isAdmin = user?.userType === 'admin';
+  const isAdmin = user?.userType = = 'admin';
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
   const [showDetails, setShowDetails] = useState(false);
   const {
@@ -35,17 +35,17 @@ import { ProtectedRoute } from '@/components / ProtectedRoute';
 import { QuoteDetails } from '@/components / quotes / QuoteDetails';
 import { ExportToCSV } from '@/components / quotes / ExportToCSV';
 import { QuoteStatusCards, QuotesFilter, QuotesTable } from '@/components / admin / quotes';
-;
+
 export default /**
  * QuoteManager - Function description
  */
 function QuoteManager() {
   const { user } = use_auth ();
-  const is_admin = user?.user_type === 'admin';
-;
+  const is_admin = user?.user_type = = 'admin';
+
   const [selected_quote, setSelectedQuote] = useState < QuoteRequest | null>(null);
   const [show_details, setShowDetails] = useState (false);
-;
+
   const {
     quotes;
     is_loading;
@@ -64,11 +64,11 @@ function QuoteManager() {
   } = useAdminQuotes();
   // Count quotes by status
   const statusCounts = {
-    new: quotes.filter(q => q.status === 'new').length
-    in_review: quotes.filter(q => q.status === 'in_review').length
-    accepted: quotes.filter(q => q.status === 'accepted').length
-    responded: quotes.filter(q => q.status === 'responded').length
-    closed: quotes.filter(q => q.status === 'closed').length
+    new: quotes.filter(q => q.status = = 'new').length
+    in_review: quotes.filter(q => q.status = = 'in_review').length
+    accepted: quotes.filter(q => q.status = = 'accepted').length
+    responded: quotes.filter(q => q.status = = 'responded').length
+    closed: quotes.filter(q => q.status = = 'closed').length
   }
   const handleViewDetails = (quote: QuoteRequest) => {
     setSelectedQuote(quote)
@@ -153,43 +153,43 @@ function QuoteManager() {
             setShowDetails(false);
 
             setSelectedQuote(null)
-          }}
+          }
         />
         <Footer />
       </div>
     </ProtectedRoute>
   )
-}
+
     update_status;
     toggle_archive;
     delete_quote;
   } = useAdminQuotes ();
-;
+
   // Count quotes by status;
   const status_counts = {
-    new: quotes.filter (q => q.status === 'new').length,
-    in_review: quotes.filter (q => q.status === 'in_review').length,
-    accepted: quotes.filter (q => q.status === 'accepted').length,
-    responded: quotes.filter (q => q.status === 'responded').length,
-    closed: quotes.filter (q => q.status === 'closed').length;
+    new: quotes.filter (q => q.status = = 'new').length,
+    in_review: quotes.filter (q => q.status = = 'in_review').length,
+    accepted: quotes.filter (q => q.status = = 'accepted').length,
+    responded: quotes.filter (q => q.status = = 'responded').length,
+    closed: quotes.filter (q => q.status = = 'closed').length;
   }
-;
+
   const handleViewDetails = (quote: QuoteRequest) =>: any {
     setSelectedQuote (quote),
     setShowDetails (true);
   }
-;
+
   const handleResetFilters = () =>: any {
     setStatusFilter ('all');
     setArchiveFilter ('all');
     setSearchQuery ('');
     setDateRange ({ from: undefined, to: undefined });
   }
-;
+
   // Check condition
 if ( {) {
   $2
-}
+
     return <Navigate to="/unauthorized" replace />;
   }
   return (
@@ -261,9 +261,8 @@ if ( {) {
           on_close={() => {
             setShowDetails (false);
             setSelectedQuote (null);
-          }}
+          }
         />;
         <Footer />;
       </div>;
     </ProtectedRoute>);
-}

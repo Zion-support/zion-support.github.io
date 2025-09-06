@@ -3,11 +3,11 @@ import Head from \'next/head\'; import Link from \'next/link\'; export default f
 import React from 'react';
 interface MobilesurveysProps {
   // Add props here as needed
-}
+
 export default function Mobilesurveys({ }: MobilesurveysProps) {
 interface MobilesurveysProps {;
   // Add props here as needed;
-}
+
 export default function Mobilesurveys(): any ({ }: MobilesurveysProps) {;
   return (
     <div>;
@@ -15,7 +15,3 @@ export default function Mobilesurveys(): any ({ }: MobilesurveysProps) {;
       <p>This component is currently under development.</p>;
     </div>;
   );
-}
-}
-
-

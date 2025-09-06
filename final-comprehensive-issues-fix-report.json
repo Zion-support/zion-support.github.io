@@ -1,4 +1,4 @@
-{
+
   "timestamp": "2025-09-06T09:29:45.529Z",
   "filesFixed": 4,
   "errors": 0,
@@ -8,4 +8,3 @@
     "pages/api/generate-service-description.ts",
     "pages/api/integrations/disconnect.ts"
   ]
-}

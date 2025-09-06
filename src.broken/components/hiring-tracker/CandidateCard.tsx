@@ -6,5 +6,3 @@ export function CandidateCard() {;
       <p>Component placeholder - needs implementation</p>;
     </div>;
   );
-}
-;

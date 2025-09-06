@@ -30,8 +30,7 @@ export default function ServiceCard({ service, onSelect }) {;
   const handleClick = () => {;
     if (onSelect) {;
       onSelect(service.id);
-    }
-  },;
+    },;
   const handleSave = (e) => {;
     e.stopPropagation(),;
     if (!user) {;
@@ -39,12 +38,12 @@ export default function ServiceCard({ service, onSelect }) {;
       navigate(`/login?next=${encodeURIComponent(location.pathname + location.search)}`),;
       return;
     }
-    dispatch(addToWishlist({ id: service.id, type: 'service', data: service })),;
+    dispatch(addToWishlist({ id: service.id, type: 'service', data: service }),;
     fetch(`${getApiUrl()}/wishlist`, {;
       method: 'POST',;
       headers: { 'Content-Type': 'application/json' };
       body: JSON.stringify({ id: service.id, type: 'service' });
-    }).catch(() => {});
+    }).catch() => {});
   };
   return (;
     <div;
@@ -62,5 +61,3 @@ export default function ServiceCard({ service, onSelect }) {;
       <h3 className="text-white font-medium">{service.title}</h3>
     </div>
   )
-}
-;

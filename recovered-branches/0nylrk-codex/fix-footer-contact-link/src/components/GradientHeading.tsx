@@ -6,7 +6,7 @@ interface GradientHeadingProps {
   children: React.ReactNode
   className?: string;
   level?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
-}
+
 export function GradientHeading({ children, className, level = "h2" }: GradientHeadingProps) {
   const Tag = level;
   return (
@@ -19,20 +19,20 @@ export function GradientHeading({ children, className, level = "h2" }: GradientH
       {children}
     </Tag>
   )
-}
+
 import { cn } from '@/lib / utils';
 import React from './react';
 interface GradientHeadingProps {
   children: React.ReactNode,
   class_name?: string;
   level?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
-}
+
 export /**
  * GradientHeading - Function description
  */
 function GradientHeading() {
   const Tag = level;
-;
+
   return (
     <Tag;
       className={cn (
@@ -41,4 +41,3 @@ function GradientHeading() {
     >;
       {children}
     </Tag>);
-}

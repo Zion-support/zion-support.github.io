@@ -18,8 +18,8 @@ import { ;
   TrendingUp,;
   Shield,;
   Globe;
-} from 'lucide-react',;
-;
+ from 'lucide-react',;
+
 export default function AIBusinessToolsPage() {;
   const aiTools = [;
     {;
@@ -183,14 +183,14 @@ export default function AIBusinessToolsPage() {;
       bestFor:'SEO specialists, content marketers, businesses';
     }
   ],;
-;
+
   const categories = ['AllAI Assistant', 'AI ArtAI Writing', 'AI VideoAI Copywriting', 'AI SEO'],;
   const [selectedCategory, setSelectedCategory] = React.useState('All'),;
-;
-  const filteredTools = selectedCategory === 'All' ;
+
+  const filteredTools = selectedCategory = = 'All' ;
     ? aiTools ;
-    :aiTools.filter(tool => tool.category === selectedCategory),;
-;
+    :aiTools.filter(tool => tool.category = = selectedCategory),;
+
   return (;
     <>;
       <Head>;
@@ -200,7 +200,7 @@ export default function AIBusinessToolsPage() {;
         <meta property="og:description" content="Expert-curated selection of AI-powered business tools and SaaS services." />;
         <meta name="twitter:card" content="summary_large_image" />;
       </Head>;
-;
+
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">;
         <div className="absolute inset-0">;
@@ -208,9 +208,9 @@ export default function AIBusinessToolsPage() {;
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(34,197,94,0.08),transparent_50%)]" />;
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(168,85,247,0.06),transparent_50%)]" />;
         </div>;
-;
+
         <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20" />;
-;
+
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
           <div className="mb-20 animate-fade-in">;
             <div className="mb-8">;
@@ -219,7 +219,6 @@ export default function AIBusinessToolsPage() {;
                 AI-Powered Business Solutions;
               </div>;
             </div>;
-            ;
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-8 text-white leading-tight tracking-tight">;
               AI Business Tools;
             </h1>;
@@ -227,13 +226,13 @@ export default function AIBusinessToolsPage() {;
               Transform your business with cutting-edge AI tools. ;
               Expert-curated selection of the best AI-powered SaaS services for modern enterprises.;
             </p>;
-;
+
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20">;
               <Button;
                 href="#tools";
                 size="lg";
                 className="animate-scale-in shadow-2xl shadow-green-500/25 hover:shadow-green-500/40";
-                style={{ animationDelay:'0.2s' }}
+                style={ animationDelay:'0.2s' }
               >;
                 Explore AI Tools;
                 <ArrowRight className="w-5 h-5 ml-2" />;
@@ -243,15 +242,15 @@ export default function AIBusinessToolsPage() {;
                 variant="outline";
                 size="lg";
                 className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5";
-                style={{ animationDelay:'0.4s' }}
+                style={ animationDelay:'0.4s' }
               >;
                 Get AI Consultation;
               </Button>;
             </div>;
           </div>;
-;
+
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in" style={{ animationDelay:'0.6s' }}>;
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in" style={ animationDelay:'0.6s' }>;
             <div className="text-center group">;
               <div className="text-3xl md:text-4xl font-bold mb-3 text-green-400 group-hover:scale-110 transition-transform duration-300">;
                 {aiTools.length}+;
@@ -279,49 +278,49 @@ export default function AIBusinessToolsPage() {;
           </div>;
         </div>;
       </section>;
-;
+
       {/* Category Filter */}
       <section className="py-16 bg-gray-900">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <div className="flex flex-wrap justify-center gap-4">;
-            {categories.map((category) => (;
+            {categories.map(category) => (;
               <button;
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${;
-                  selectedCategory === category;
+                  selectedCategory = = category;
                     ? 'bg-green-600 text-white shadow-lg';
                     :'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white';
                 }`}
               >;
                 {category}
               </button>;
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Tools Grid */}
       <section id="tools" className="py-24 bg-black">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <div className="text-center mb-20">;
             <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">;
-              {selectedCategory === 'All' ? 'All AI Tools' :`${selectedCategory} Tools`}
+              {selectedCategory = = 'All' ? 'All AI Tools' :`${selectedCategory} Tools`}
             </h2>;
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">;
-              {selectedCategory === 'All' ;
+              {selectedCategory = = 'All' ;
                 ? 'Discover the most powerful AI tools that are transforming how businesses operate and create content.';
                 :`Explore the best ${selectedCategory.toLowerCase()} tools to enhance your business capabilities.`;
               }
             </p>;
           </div>;
-;
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
-            {filteredTools.map((tool, index) => (;
+            {filteredTools.map(tool, index) => (;
               <Card;
                 key={index}
                 className="group border border-gray-800 hover:border-green-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1";
-                style={{ animationDelay:`${index * 0.1}s` }}
+                style={ animationDelay:`${index * 0.1}s` }
               >;
                 <div className="flex items-start space-x-6">;
                   <div className="relative">;
@@ -339,34 +338,33 @@ export default function AIBusinessToolsPage() {;
                         <span className="text-sm text-gray-300">{tool.rating}</span>;
                       </div>;
                     </div>;
-                    ;
                     <div className="flex items-center space-x-4 mb-3 text-sm text-gray-400">;
                       <span className="px-2 py-1 bg-gray-800 rounded-full">{tool.category}</span>;
                       <span>{tool.users} users</span>;
                       <span className="text-green-400">{tool.pricing}</span>;
                     </div>;
-;
+
                     <p className="text-gray-400 leading-relaxed mb-4">;
                       {tool.description}
                     </p>;
-;
+
                     <div className="mb-4">;
                       <h4 className="text-sm font-semibold text-gray-300 mb-2">Key Features:</h4>;
                       <div className="grid grid-cols-2 gap-2">;
-                        {tool.features.slice(0, 4).map((feature, featureIndex) => (;
+                        {tool.features.slice(0, 4).map(feature, featureIndex) => (;
                           <div key={featureIndex} className="flex items-center text-sm text-gray-400">;
                             <Check className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />;
                             {feature}
                           </div>;
-                        ))}
+                        )}
                       </div>;
                     </div>;
-;
+
                     <div className="mb-4">;
                       <h4 className="text-sm font-semibold text-gray-300 mb-2">Best For:</h4>;
                       <p className="text-sm text-gray-400">{tool.bestFor}</p>;
                     </div>;
-;
+
                     <div className="flex items-center justify-between">;
                       <Button;
                         href={tool.website}
@@ -377,7 +375,6 @@ export default function AIBusinessToolsPage() {;
                         Visit Website;
                         <ExternalLink className="w-4 h-4 ml-2" />;
                       </Button>;
-                      ;
                       <div className="text-right">;
                         <div className="text-xs text-gray-500 mb-1">Use Case:</div>;
                         <div className="text-sm text-gray-300 max-w-xs">{tool.useCase}</div>;
@@ -386,11 +383,11 @@ export default function AIBusinessToolsPage() {;
                   </div>;
                 </div>;
               </Card>;
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* AI Benefits Section */}
       <section className="py-24 bg-gray-900">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
@@ -402,7 +399,7 @@ export default function AIBusinessToolsPage() {;
               AI-powered tools are revolutionizing how businesses operate, create content, and serve customers.;
             </p>;
           </div>;
-;
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
             <Card className="text-center">;
               <div className="w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-blue-500 to-indigo-600">;
@@ -413,7 +410,7 @@ export default function AIBusinessToolsPage() {;
                 AI tools can automate repetitive tasks, generate content, and provide insights that would take humans hours or days to complete.;
               </p>;
             </Card>;
-;
+
             <Card className="text-center">;
               <div className="w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-green-500 to-emerald-600">;
                 <TrendingUp className="w-8 h-8 text-white" />;
@@ -423,7 +420,7 @@ export default function AIBusinessToolsPage() {;
                 AI analytics provide deep insights into customer behavior, market trends, and business performance for better decision-making.;
               </p>;
             </Card>;
-;
+
             <Card className="text-center">;
               <div className="w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-purple-500 to-pink-600">;
                 <Users className="w-8 h-8 text-white" />;
@@ -436,7 +433,7 @@ export default function AIBusinessToolsPage() {;
           </div>;
         </div>;
       </section>;
-;
+
       {/* CTA Section */}
       <section className="py-24 bg-gradient-to-r from-green-600 to-green-700 relative overflow-hidden">;
         <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10" />;
@@ -470,4 +467,3 @@ export default function AIBusinessToolsPage() {;
       </section>;
     </>;
   );
-}

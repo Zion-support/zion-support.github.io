@@ -7,7 +7,7 @@ interface ProfileBadgeProps {
   type: BadgeType
   className?: string;  type: BadgeType
   className?: string
-}
+
 export function ProfileBadge({ type, className }: ProfileBadgeProps) {
   const badgeConfig = {
     verified: {
@@ -29,7 +29,6 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
       text: 'Top Rated'
       colors: 'bg-purple-500/20 text-purple-400'
     }
-  }
   const { icon: Icon, text, colors } = badgeConfig[type]
     >
       <Icon className='w-3 h-3' />
@@ -38,17 +37,17 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
     </div>
   )
   type, className
-}: ProfileBadgeProps) {
+: ProfileBadgeProps) {
   const badgeConfig = {
   verified: {
   const {
   icon: Icon,  text, colors
-}= badgeConfig[type]
-}> <Icon className="w-3 h-3" /> <span> {
+= badgeConfig[type]
+> <Icon className="w-3 h-3" /> <span> {
   text
-}</span>
-}'"  )
-}
+</span>
+'"  )
+
 import React from 'react';
 import { BadgeCheck, Star, Clock, Award } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -57,7 +56,6 @@ interface ProfileBadgeProps {;
   type: BadgeType;
   className?: string;  type: BadgeType,;
   className?: string;
-}
 
 export function ProfileBadge(): any ({ type, className }: ProfileBadgeProps) {;
   const badgeConfig = {;
@@ -84,7 +82,6 @@ export function ProfileBadge(): any ({ type, className }: ProfileBadgeProps) {;
 
   const { icon: Icon, text, colors } = badgeConfig[type];
 
-
     >;
       <Icon className='w-3 h-3' />;
       <span>{text}</span>;
@@ -92,17 +89,17 @@ export function ProfileBadge(): any ({ type, className }: ProfileBadgeProps) {;
   );
 
   type, className ;
-}: ProfileBadgeProps) {;
+: ProfileBadgeProps) {;
   const badgeConfig = {;
   verified: {;
   const {;
   icon: Icon,  text, colors ;
-}= badgeConfig[type];
+= badgeConfig[type];
 
-}> <Icon className="w-3 h-3" /> <span> {;
+> <Icon className="w-3 h-3" /> <span> {;
   text ;
-}</span> ;
-}'"  );
+</span> ;
+'"  );
 
 export function ProfileBadge({ type, className }: ProfileBadgeProps) {
   const badgeConfig = {
@@ -121,11 +118,9 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
     "top-rated": {
       icon: Award,
       text: "Top Rated",
-      colors: "bg-purple-500/20 text-purple-400"}},
-
+      colors: "bg-purple-500/20 text-purple-400"},
 
   const { icon: Icon, text, colors  } = badgeConfig[type],
-
 
   return (
     <div className = {cn(
@@ -137,7 +132,7 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
       <span>{text}</span>
     </div>
   )
-}
+
 import React from 'react';
 import { BadgeCheck, Star, Clock, Award } from 'lucide-react';
 import { cn } from '@/lib / utils';
@@ -146,7 +141,7 @@ interface ProfileBadgeProps {
   type: BadgeType;
   class_name?: string;  type: BadgeType,
   class_name?: string;
-}
+
 export /**
  * ProfileBadge - Function description
  */
@@ -178,14 +173,13 @@ function ProfileBadge() {
       <span>{text}</span>;
     </div>);
   type, class_name;
-}: ProfileBadgeProps) {
+: ProfileBadgeProps) {
   const badge_config = {
   verified: {
   const {
   icon: Icon,  text, colors;
-}= badge_config[type];
-}> <Icon className="w - 3 h - 3" /> <span> {
+= badge_config[type];
+> <Icon className="w - 3 h - 3" /> <span> {
   text;
-}</span>;
-}'"  );
-}
+</span>;
+'"  );

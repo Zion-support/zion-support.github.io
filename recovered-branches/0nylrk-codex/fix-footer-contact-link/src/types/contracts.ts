@@ -9,4 +9,3 @@ export interface ContractTemplate {
   created_at: string
 
   updated_at: string
-}

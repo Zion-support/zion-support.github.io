@@ -6,5 +6,3 @@ export function ScoreBadge() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

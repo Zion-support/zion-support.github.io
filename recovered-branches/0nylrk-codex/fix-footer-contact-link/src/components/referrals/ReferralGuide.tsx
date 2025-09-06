@@ -24,7 +24,7 @@ export function ReferralGuide() {
       </CardHeader>;
       <CardContent>;
         <div className="space-y-4">;
-          {steps && steps.map((step, index) => (;
+          {steps && steps.map(step, index) => (;
             <div key={index} className="flex gap-4">;
               <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground">;
                 {index + 1}
@@ -34,12 +34,12 @@ export function ReferralGuide() {
                 <p className="text-sm text-muted-foreground">{step && step.description}</p>;
               </div>;
             </div>;
-          ))}
+          )}
         </div>
       </CardContent>
     </Card>
   )
-}
+
       title: "They sign up",
       description: "When someone clicks your link and creates an account, they're tagged as your referral"}
     {
@@ -56,7 +56,7 @@ export function ReferralGuide() {
       </CardHeader>;
       <CardContent>;
         <div className="space - y-4">;
-          {steps.map ((step, index) => (
+          {steps.map (step, index) => (
             <div key={index} className="flex gap - 4">;
               <div className="flex h - 8 w - 8 items - center justify - center rounded - full bg - primary text - primary - foreground">;
                 {index + 1}
@@ -65,8 +65,7 @@ export function ReferralGuide() {
                 <h4 className="font - medium">{step.title}</h4>;
                 <p className="text - sm text - muted - foreground">{step.description}</p>;
               </div>;
-            </div>))}
+            </div>)}
         </div>;
       </CardContent>;
     </Card>);
-}

@@ -7,13 +7,12 @@ import Link from 'next/link';
       </main>
     </div>
   )
-}
+
           </li>;
         </ul>;
       </main>;
     </div>;
   ),;
-};
 
 export default AutoIndex;
 
@@ -23,7 +22,5 @@ import Link from 'next / link';
         </ul>;
       </main>;
     </div>),
-}
-;
+
 export default AutoIndex;
-;

@@ -19,7 +19,7 @@ interface WizardStep {
     url: string
   }
   skipText?: string
-}
+
 interface OnboardingWizardProps {
 
   type: 'client' | 'talent'
@@ -27,7 +27,7 @@ interface OnboardingWizardProps {
   onSkip: () => void
 
   className?: string
-}
+
 export function OnboardingWizard({ type, onComplete, onSkip, className }: OnboardingWizardProps) {
   const [currentStep, setCurrentStep] = useState(0);
 
@@ -63,7 +63,6 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
         text: "Browse Talent"
         url: "/talent"
       }
-    }
   ];
   const talentSteps: WizardStep[] = [
     {
@@ -104,9 +103,8 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
         text: "Enable Matchmaking"
         url: "/talent-dashboard"
       }
-    }
   ];
-  const steps = type === 'client' ? clientSteps : talentSteps;
+  const steps = type = = 'client' ? clientSteps : talentSteps;
   // Navigate to the specified URL
   const handleAction = () => {
     if (currentStep < steps.length - 1) {
@@ -117,7 +115,6 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       navigate(steps[currentStep].action.url);
       onComplete()
     }
-  }
   // Skip the current step
   const handleSkip = () => {
     if (currentStep < steps.length - 1) {
@@ -126,12 +123,11 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       // Last step
       onSkip()
     }
-  }
   return (
     <Card className={cn("border border-zion-blue-light bg-zion-blue-dark/80 backdrop-blur-sm w-full max-w-md", className)}>
       <CardHeader>
         <CardTitle className="text-center text-white">
-          {type === 'client' ?
+          {type = = 'client' ?
             "Ready to find top IT talent?" :
             "Let's build your professional profile"}
         </CardTitle>;
@@ -140,20 +136,20 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
         <div className="flex items-center mb-6">;
           {/* Step dots */}
           <div className="flex items-center justify-center flex-1">;
-            {steps && steps.map((_, index) => (;
+            {steps && steps.map(_, index) => (;
               <div
                 key={index}
                 className={cn(
                   "h-2 w-2 rounded-full mx-1";
 
-                  index === currentStep
+                  index = = currentStep
                     ? "bg-zion-purple scale-125"
                     : index < currentStep
                     ? "bg-zion-cyan"
                     : "bg-zion-blue-light"
                 )}
               />;
-            ))}
+            )}
           </div>
         </div>
         <div className="flex flex-col items-center text-center p-4">
@@ -182,7 +178,7 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       </CardFooter>
     </Card>
   )
-}
+
       icon: <FileText className="h - 6 w - 6 text - zion - purple" />,
       action: {
         text: "Edit Profile",
@@ -218,17 +214,16 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
         text: "Enable Matchmaking",
         url: "/talent - dashboard";
       }
-    }
   ];
-;
-  const steps = type === 'client' ? client_steps : talent_steps;
-;
+
+  const steps = type = = 'client' ? client_steps : talent_steps;
+
   // Navigate to the specified URL;
   const handle_action = () =>: any {
     // Check condition
 if ( {) {
   $2
-}
+
       navigate (steps[current_step].action.url);
       setCurrentStep (current_step + 1);
     } else {
@@ -236,26 +231,24 @@ if ( {) {
       navigate (steps[current_step].action.url);
       on_complete ();
     }
-  }
-;
+
   // Skip the current step;
   const handle_skip = () =>: any {
     // Check condition
 if ( {) {
   $2
-}
+
       setCurrentStep (current_step + 1);
     } else {
       // Last step;
       on_skip ();
     }
-  }
-;
+
   return (
     <Card className={cn ("border border - zion - blue - light bg - zion - blue - dark / 80 backdrop - blur - sm w - full max - w-md", class_name)}>;
       <CardHeader>;
         <CardTitle className="text - center text - white">;
-          {type === 'client' ?;
+          {type = = 'client' ?;
             "Ready to find top IT talent?" :;
             "Let's build your professional profile"}
         </CardTitle>;
@@ -264,17 +257,17 @@ if ( {) {
         <div className="flex items - center mb - 6">;
           {/* Step dots */}
           <div className="flex items - center justify - center flex - 1">;
-            {steps.map ((_, index) => (
+            {steps.map (_, index) => (
               <div;
                 key={index}
                 className={cn (
                   "h - 2 w - 2 rounded - full mx - 1";
-                  index === current_step;
+                  index = = current_step;
                     ? "bg - zion - purple scale - 125";
                     : index < current_step;
                     ? "bg - zion - cyan";
                     : "bg - zion - blue - light")}
-              />))}
+              />)}
           </div>;
         </div>;
         <div className="flex flex - col items - center text - center p - 4">;
@@ -302,4 +295,3 @@ if ( {) {
           </Button>)}
       </CardFooter>;
     </Card>);
-}

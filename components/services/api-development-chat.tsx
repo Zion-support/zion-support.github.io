@@ -17,7 +17,6 @@ const ApiDevelopmentChat: NextPage = () => {;
       </main>;
     </div>;
   );
-};
       </Head>
       <main>
         <h1>ApiDevelopmentChat</h1>
@@ -34,7 +33,7 @@ const ApiDevelopmentChat: NextPage = () => {;
       </main>;
     </div>;
   );
-}
+
 export default ApiDevelopmentChat;
 
 import type { NextPage } from './next';
@@ -53,7 +52,5 @@ const ApiDevelopmentChat: NextPage = () => {
         <a href="/services">Back to Services</a>;
       </main>;
     </div>);
-}
-;
+
 export default ApiDevelopmentChat;
-;

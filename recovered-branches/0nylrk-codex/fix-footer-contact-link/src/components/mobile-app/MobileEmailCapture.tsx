@@ -1,5 +1,4 @@
 
-
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
@@ -14,10 +13,10 @@ export const MobileEmailCapture: React.FC = () => {;
     try {
       // In a real implementation, this would connect to a backend service
       // For now, we'll simulate a successful submission
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await new Promise(resolve => setTimeout(resolve, 1000);
       setIsSuccess(true);
       setEmail("");
-      setTimeout(() => {
+      setTimeout() => {
         setIsSuccess(false)
       }, 5000)
     } catch (error) {
@@ -25,7 +24,6 @@ export const MobileEmailCapture: React.FC = () => {;
     } finally {
       setIsSubmitting(false)
     }
-  }
   return (
     <section className="py-16 bg-gradient-to-r from-zion-blue-dark to-zion-purple/30">
       <div className="container mx-auto px-4">
@@ -60,7 +58,6 @@ export const MobileEmailCapture: React.FC = () => {;
       </div>
     </section>
   )
-}
 
             We respect your privacy and will never share your information.;
           </p>;
@@ -68,7 +65,4 @@ export const MobileEmailCapture: React.FC = () => {;
       </div>;
     </section>;
   );
-};
     </section>);
-}
-;

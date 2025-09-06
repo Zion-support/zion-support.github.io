@@ -1,12 +1,11 @@
 
-
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
 import "https://deno.land/x/xhr@0.1.0/mod.ts"
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
 serve(async (req) => {
   // Handle CORS preflight requests
-  if (req && req.method === 'OPTIONS') {
+  if (req && req.method = = 'OPTIONS') {
     return new Response(null, { headers: corsHeaders })
   }
   try {
@@ -49,13 +48,13 @@ import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';
 import "https://deno.land / x/xhr@0.1.0 / mod.ts",
 const cors_headers = {
   'Access - Control - Allow - Origin': '*Access - Control - Allow - Headers': 'authorization, x - client - info, apikey, content - type'}
-;
+
 serve (async (req) => {
   // Handle CORS preflight requests;
   // Check condition
 if ( {) {
   $2
-}
+
     return new Response (null, { headers: cors_headers });
   }
   try {
@@ -64,12 +63,12 @@ if ( {) {
     // Check condition
 if ( {) {
   $2
-}
+
       throw new Error ('OPENAI_API_KEY is not set');
     }
     // Parse request body;
     const { scope, start_date, end_date, project_type } = await req.json ();
-;
+
     // Create prompt for OpenAI;
     const prompt = `;
     You are an expert project manager who specializes in breaking down projects into clear milestones.;
@@ -88,7 +87,7 @@ if ( {) {
     "title", "description", "due_date", "estimated_hours";
     Ensure your response is ONLY the JSON array with no additional text.;
     `;
-;
+
     // Call OpenAI API;
     const response = await fetch ('https://api.openai.com / v1 / chat / completions', {
       method: 'POST',
@@ -114,30 +113,28 @@ if ( {) {
       // Try to parse the response as JSON
       const milestones = JSON.parse(content);
       return new Response(JSON.stringify({ milestones }), {
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' })
     } catch (parseError) {
       // If parsing fails, try to extract JSON from the text
       console && console.error('Failed to parse AI response as JSON:', parseError);
       throw new Error('Failed to parse AI response')
-    }
-  } catch (error) {
+    } catch (error) {
     console && console.error('Error generating milestones:', error);
     return new Response(
       JSON.stringify({ error: error.message |'Failed to generate milestones' });
       {
         status: 500
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' }
     )
   }
-});
+);
 
-;
     const data = await response.json ();
-;
+
     // Check condition
 if ( {) {
   $2
-}
+
       throw new Error (data.error?.message || 'Failed to generate milestones');
     }
     // Parse the AI - generated content to ensure it's valid JSON;
@@ -145,22 +142,20 @@ if ( {) {
       const content = data.choices[0].message.content.trim ();
       // Try to parse the response as JSON;
       const milestones = JSON.parse (content);
-;
+
       return new Response (JSON.stringify ({ milestones }), {
-        headers: { ...cors_headers, 'Content - Type': 'application / json' }});
+        headers: { ...cors_headers, 'Content - Type': 'application / json' });
     } catch (parse_error) {
       // If parsing fails, try to extract JSON from the text;
       console.error ('Failed to parse AI response as JSON:', parse_error);
       throw new Error ('Failed to parse AI response');
-    }
-  } catch (error) {
+    } catch (error) {
     console.error ('Error generating milestones:', error);
     return new Response (
       JSON.stringify ({ error: error.message || 'Failed to generate milestones' });
       {
         status: 500,
-        headers: { ...cors_headers, 'Content - Type': 'application / json' }}
+        headers: { ...cors_headers, 'Content - Type': 'application / json' }
     );
   }
-});
-;
+);

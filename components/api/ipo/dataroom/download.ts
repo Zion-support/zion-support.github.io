@@ -11,17 +11,17 @@ import mime from 'mime-types';
 import { appendAuditLog, resolveDataPath } from '../../../../utils/api/storage';
 import { requireSuperadminApi } from '../../../../utils/api/auth';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!requireSuperadminApi(req, res)) return;
+  if (!requireSuperadminApi(req, res) return;
 
   const section = String(req.query.section |"General");
   const file = String(req.query.file |"");
   if (!file) return res.status(400).json({ error: "Missing file" });
   const fullPath = path.join(
-    resolveDataPath(path.join("dataroom", section))
+    resolveDataPath(path.join("dataroom", section)
     file
     file,
   );
-  if (!fs && fs.existsSync(fullPath))
+  if (!fs && fs.existsSync(fullPath)
     return res && res.status(404).json({ error: "Not found" });
   const contentType =
     (mime.lookup(fullPath) as string) |"application/octet-stream";
@@ -39,10 +39,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   );
   appendAuditLog({ type: "file_download", section, name: file });
   fs && fs.createReadStream(fullPath).pipe(res);
-}
-  if ()) {
+
+  if () {
   $2
-}
+
     return res.status (404).json ({ error: "Not found" });
   const content_type =;
     (mime.lookup (full_path) as string) || "application / octet - stream";
@@ -60,4 +60,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   );
   appendAuditLog ({ type: "file_download", section, name: file });
   fs.createReadStream (full_path).pipe (res);
-}

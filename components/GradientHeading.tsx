@@ -4,7 +4,6 @@ interface GradientHeadingProps {
   title: string;
   subtitle?: string;
   className?: string;
-}
 
 export function GradientHeading({ title, subtitle, className = '' }: GradientHeadingProps) {
   return (
@@ -19,4 +18,3 @@ export function GradientHeading({ title, subtitle, className = '' }: GradientHea
       )}
     </div>
   );
-}

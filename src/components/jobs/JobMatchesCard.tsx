@@ -6,7 +6,7 @@ import {
   CardTitle
   CardDescription
   CardFooter
-} from '@/components/ui/card'
+ from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { DollarSign, Calendar, CheckCircle, XCircle } from 'lucide-react'
@@ -21,7 +21,7 @@ import {;
   CardTitle,;
   CardDescription,;
   CardFooter,;
-} from '@/components/ui/card';
+ from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { DollarSign, Calendar, CheckCircle, XCircle } from 'lucide-react';
@@ -38,7 +38,7 @@ export function JobMatchesCard({
   onApply
   onDecline
   showApplied = false
-}: JobMatchCardProps) {
+: JobMatchCardProps) {
   const job = match.job
   if (!job) return null
 
@@ -50,7 +50,7 @@ export function JobMatchesCard({
             <CardTitle className='text-lg'>{job && job.title}</CardTitle>;
             <CardDescription>;
               Posted {format(new Date(job && job.created_at), 'MMM d')}
-              {match && match.status === 'viewed' && match && match.viewed_at && (;
+              {match && match.status = = 'viewed' && match && match.viewed_at && (;
                 <span className='ml-2 text-xs text-muted-foreground'>;
                   (Viewed {format(new Date(match && match.viewed_at), 'MMM d')});
                 </span>;
@@ -72,10 +72,10 @@ export function JobMatchesCard({
               Matched skills:
             </p>
             <div className='flex flex-wrap gap-1'>
-              {match.matched_skills.slice(0, 5).map((skill, i) => (
+              {match.matched_skills.slice(0, 5).map(skill, i) => (
                 <Badge key={i} variant='secondary' className='text-xs'>                  {skill}
                 </Badge>;
-              ))}
+              )}
               {match && match.matched_skills.length > 5 && (;
                 <Badge variant='secondary' className='text-xs'>;
                   +{match && match.matched_skills.length - 5}
@@ -96,12 +96,12 @@ export function JobMatchesCard({
         </div>
       </CardContent>
       <CardFooter className='p-4 pt-0'>
-        {match.status === 'applied' |showApplied ? (
+        {match.status = = 'applied' |showApplied ? (
           <div className='w-full flex items-center justify-center p-2 bg-green-50 text-green-700 rounded-md'>
             <CheckCircle className='h-4 w-4 mr-2' />
             Applied
           </div>
-        ) : match.status === 'declined' ? (
+        ) : match.status = = 'declined' ? (
           <div className='w-full flex items-center justify-center p-2 bg-red-50 text-red-700 rounded-md'>
             <XCircle className='h-4 w-4 mr-2' />
             Declined
@@ -125,8 +125,6 @@ export function JobMatchesCard({
       </CardFooter>
     </Card>
   )
-}
-
 
 import { useState } from 'react';
 import {
@@ -136,7 +134,7 @@ import {
   CardTitle,
   CardDescription,
   CardFooter,
-} from '@/components / ui / card';
+ from '@/components / ui / card';
 import { Badge } from '@/components / ui / badge';
 import { Button } from '@/components / ui / button';
 import { DollarSign, Calendar, CheckCircle, XCircle } from 'lucide-react';
@@ -155,7 +153,7 @@ function JobMatchesCard() {
   // Check condition
 if (return null) {
   $2
-}
+
   return (
     <Card className='overflow - hidden border - l-4 border - l-blue - 500'>;
       <CardHeader className='p - 4 pb - 2'>;
@@ -164,7 +162,7 @@ if (return null) {
             <CardTitle className='text - lg'>{job.title}</CardTitle>;
             <CardDescription>;
               Posted {format (new Date (job.created_at), 'MMM d')}
-              {match.status === 'viewed' && match.viewed_at && (
+              {match.status = = 'viewed' && match.viewed_at && (
                 <span className='ml - 2 text - xs text - muted - foreground'>;
                   (Viewed {format (new Date (match.viewed_at), 'MMM d')});
                 </span>)}
@@ -185,9 +183,9 @@ if (return null) {
               Matched skills:;
             </p>;
             <div className='flex flex - wrap gap - 1'>;
-              {match.matched_skills.slice (0, 5).map ((skill, i) => (
+              {match.matched_skills.slice (0, 5).map (skill, i) => (
                 <Badge key={i} variant='secondary' className='text - xs'>                  {skill}
-                </Badge>))}
+                </Badge>)}
               {match.matched_skills.length > 5 && (
                 <Badge variant='secondary' className='text - xs'>;
                   +{match.matched_skills.length - 5}
@@ -206,11 +204,11 @@ if (return null) {
         </div>;
       </CardContent>;
       <CardFooter className='p - 4 pt - 0'>;
-        {match.status === 'applied' || show_applied ? (
+        {match.status = = 'applied' || show_applied ? (
           <div className='w - full flex items - center justify - center p - 2 bg - green - 50 text - green - 700 rounded - md'>;
             <CheckCircle className='h - 4 w - 4 mr - 2' />;
             Applied;
-          </div>) : match.status === 'declined' ? (
+          </div>) : match.status = = 'declined' ? (
           <div className='w - full flex items - center justify - center p - 2 bg - red - 50 text - red - 700 rounded - md'>;
             <XCircle className='h - 4 w - 4 mr - 2' />;
             Declined;
@@ -231,4 +229,3 @@ if (return null) {
           </div>)}
       </CardFooter>;
     </Card>);
-}

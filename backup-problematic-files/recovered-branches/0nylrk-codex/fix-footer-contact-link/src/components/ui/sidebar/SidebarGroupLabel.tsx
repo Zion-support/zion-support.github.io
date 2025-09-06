@@ -1,12 +1,11 @@
 
 import React from "react",;
 import { cn } from "@/lib/utils",;
-;
+
 interface SidebarGroupLabelProps extends React.HTMLAttributes<HTMLDivElement> {;
   className?:string,;
   children?:React.ReactNode,;
-}
-;
+
 export function SidebarGroupLabel({ className, children, ...props } SidebarGroupLabelProps) {;
   return (;
     <div ;
@@ -19,9 +18,8 @@ export function SidebarGroupLabel({ className, children, ...props } SidebarGroup
  interface SidebarGroupLabelProps extends React.HTMLAttributes<HTMLDivElement> {
   className?: string;
 children?: React.ReactNode 
-}className, children, ...props 
-}: SidebarGroupLabelProps) {
+className, children, ...props 
+: SidebarGroupLabelProps) {
   return (<div > {
   children 
-}</div>) 
-}
+</div>) 

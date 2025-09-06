@@ -6,5 +6,3 @@ export function ApiReference() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

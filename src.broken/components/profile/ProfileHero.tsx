@@ -6,5 +6,3 @@ export function ProfileHero() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

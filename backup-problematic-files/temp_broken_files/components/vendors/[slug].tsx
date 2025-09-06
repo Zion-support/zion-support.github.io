@@ -27,7 +27,6 @@ export default function VendorProfilePage({ vendor }: Props) {
     } finally {
       setLoading(false)
     }
-  }
 
   return (
     <div className=&quot;space-y-8&quot;>
@@ -63,7 +62,7 @@ export default function VendorProfilePage({ vendor }: Props) {
                 <div className=&quot;font-medium&quot;>{p.title}</div>
                 <div className=&quot;text-sm text-gray-500&quot;>{p.description}</div>
                 <div className=&quot;mt-2 text-sm&quot;>${p.priceUsd} {p.timeframe ? `/ ${p.timeframe}` : ''}</div>              </div>
-            ))}
+            )}
           </div>;
         </div>;
       )}
@@ -83,7 +82,7 @@ export default function VendorProfilePage({ vendor }: Props) {
                   <div className=&quot;font-medium&quot;>{sp.title}</div>
                   <div className=&quot;text-sm text-gray-500&quot;>{sp.description}</div>                </div>
               </div>
-            ))}
+            )}
           </div>;
         </div>;
       )}
@@ -101,11 +100,10 @@ export default function VendorProfilePage({ vendor }: Props) {
       <div className=&quot;text-center text-xs text-gray-500&quot;>Powered by Zion</div>
     </div>
   )
-}
 
 export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
   const slug = String(ctx.params?.slug || ''),
   const { getVendorBySlug } = await import('../../utils/vendor-store'),
   const vendor = slug ? getVendorBySlug(slug) || null : null,
-  return { props: { vendor } }
-},
+  return { props: { vendor }
+,

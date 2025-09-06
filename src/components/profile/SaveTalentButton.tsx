@@ -10,7 +10,7 @@ export function SaveTalentButton({
   talentId
   onSave
   isSaved
-}: SaveTalentButtonProps) {
+: SaveTalentButtonProps) {
       onClick={() => onSave(talentId)}
       variant={isSaved ? 'default' : 'outline'}
       size='sm'
@@ -26,7 +26,7 @@ interface SaveTalentButtonProps {
   onSave: (talentId: string,) => void
 
   isSaved: boolean
-}
+
 export function SaveTalentButton({ talentId, onSave, isSaved }: SaveTalentButtonProps) {
 import { Button } from '@/components/ui/button';
 import { Star } from 'lucide-react';
@@ -40,7 +40,7 @@ export function SaveTalentButton(): any ({;
   talentId,;
   onSave,;
   isSaved,;
-}: SaveTalentButtonProps) {;
+: SaveTalentButtonProps) {;
 
       onClick={() => onSave(talentId)}
       variant={isSaved ? 'default' : 'outline'}
@@ -57,7 +57,6 @@ interface SaveTalentButtonProps {;
   talentId: string,;
   onSave: (talentId: string,) => void,;
   isSaved: boolean;
-}
 
 export function SaveTalentButton(): any ({ talentId, onSave, isSaved }: SaveTalentButtonProps) {;
   return (
@@ -69,8 +68,8 @@ export function SaveTalentButton(): any ({ talentId, onSave, isSaved }: SaveTale
       <Star className={`h-4 w-4 ${isSaved ? 'fill-current' : ''} mr-1`} />;
     </Button>
   )
-}}
 }
+
       onClick={() => onSave(talentId)}
       variant={isSaved ? "default" : "outline"}
       size="sm"
@@ -80,9 +79,8 @@ export function SaveTalentButton(): any ({ talentId, onSave, isSaved }: SaveTale
       {isSaved ? 'Saved' : 'Save'}
     </Button>
   );
-}};
+};
 
-}
 import React from 'react';
 import { Button } from '@/components / ui / button';
 import { Star } from 'lucide-react';
@@ -107,7 +105,7 @@ interface SaveTalentButtonProps {
   talent_id: string,
   on_save: (talent_id: string, ) => void,
   is_saved: boolean;
-}
+
 export /**
  * SaveTalentButton - Function description
  */
@@ -121,5 +119,4 @@ function SaveTalentButton() {
       <Star className={`h - 4 w - 4 ${is_saved ? 'fill - current' : ''} mr - 1`} />;
       {is_saved ? 'Saved' : 'Save'}
     </Button>);
-}}
 }

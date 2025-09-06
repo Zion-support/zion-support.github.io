@@ -4,7 +4,6 @@ import React from 'react';
 
 interface Green-itProps {
   className?: string;
-}
 
 const Green-it: React.FC<Green-itProps> = ({ className }) => {
   return (
@@ -13,6 +12,3 @@ const Green-it: React.FC<Green-itProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-}
-}
-}

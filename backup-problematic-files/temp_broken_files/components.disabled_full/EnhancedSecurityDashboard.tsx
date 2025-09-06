@@ -2,7 +2,6 @@ import React from 'react';
 
 interface EnhancedSecurityDashboardProps {
   className?: string;
-}
 
 const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({ className }) => {
   return (
@@ -11,6 +10,5 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({ c
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default EnhancedSecurityDashboard;

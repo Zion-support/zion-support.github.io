@@ -11,7 +11,7 @@ import { Input } from "@/components/ui/input",
 import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",
 import { BlogPost } from "@/types/blog";
 import { Search } from "lucide-react";
-// Sample blog data - in a real app this would come from an API or CMS
+/ Sample blog data - in a real app this would come from an API or CMS
 const BLOG_POSTS: BlogPost[] = [
   {
 
@@ -179,8 +179,8 @@ const BLOG_POSTS: BlogPost[] = [
     tags: ["AI Infrastructure", "Cost Optimization", "Machine Learning", "Computing"];
     featuredImage: "https://images && images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&h=630";
   }
-];
-// Categories for filtering
+;
+/ Categories for filtering
 const CATEGORIES = [
 import { useState } from './react';
 import { Link } from './react-router-dom';
@@ -194,7 +194,7 @@ import { Input } from '@/components / ui / input';
 import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from '@/components / ui / select';
 import { BlogPost } from '@/types / blog';
 import { Search } from './lucide-react';
-// Sample blog data - in a real app this would come from an API or CMS;
+/ Sample blog data - in a real app this would come from an API or CMS;
 const BLOG_POSTS: BlogPost[] = [;
   {
     id: "ai - trends - 2025",
@@ -359,9 +359,9 @@ const BLOG_POSTS: BlogPost[] = [;
     tags: ["AI Infrastructure", "Cost Optimization", "Machine Learning", "Computing"];
     featured_image: "https://images.unsplash.com / photo - 1558494949 - ef010cbdcc31?auto = format & fit = crop & w=1200 & h=630";
   }
-];
 ;
-// Categories for filtering;
+
+/ Categories for filtering;
 const CATEGORIES = [;
   "All Categories";
   "Trends";
@@ -370,17 +370,16 @@ const CATEGORIES = [;
   "Ethics";
   "Recruitment";
   "Infrastructure";
-];
 export default function Blog() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All Categories");
   // Filter blog posts based on search and category
   const filteredPosts = BLOG_POSTS.filter(post => {
     const matchesSearch =
-      post.title.toLowerCase().includes(searchQuery.toLowerCase()) |
-      post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) |
-      post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    const matchesCategory = selectedCategory === "All Categories" |post.category === selectedCategory;
+      post.title.toLowerCase().includes(searchQuery.toLowerCase() |
+      post.excerpt.toLowerCase().includes(searchQuery.toLowerCase() |
+      post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase());
+    const matchesCategory = selectedCategory = = "All Categories" |post.category = = selectedCategory;
     return matchesSearch && matchesCategory
   });
   // Get featured posts
@@ -441,29 +440,29 @@ export default function Blog() {
                     asChild
                     className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple w-fit">;
                     <Link to={`/blog/${featuredPosts[0].slug}`}>;
-;
+
 export default /**
  * Blog - Function description
  */
 function Blog() {
   const [search_query, setSearchQuery] = useState ("");
   const [selected_category, setSelectedCategory] = useState ("All Categories");
-;
+
   // Filter blog posts based on search and category;
   const filtered_posts = BLOG_POSTS.filter (post => {
     const matches_search =;
-      post.title.toLowerCase ().includes (search_query.toLowerCase ()) ||;
-      post.excerpt.toLowerCase ().includes (search_query.toLowerCase ()) ||;
-      post.tags.some (tag => tag.toLowerCase ().includes (search_query.toLowerCase ()));
-;
-    const matches_category = selected_category === "All Categories" || post.category === selected_category;
-;
+      post.title.toLowerCase ().includes (search_query.toLowerCase () ||;
+      post.excerpt.toLowerCase ().includes (search_query.toLowerCase () ||;
+      post.tags.some (tag => tag.toLowerCase ().includes (search_query.toLowerCase ());
+
+    const matches_category = selected_category = = "All Categories" || post.category = = selected_category;
+
     return matches_search && matches_category;
   });
-;
+
   // Get featured posts;
   const featured_posts = BLOG_POSTS.filter (post => post.is_featured);
-;
+
   return (
     <>;
       <SEO;
@@ -546,11 +545,11 @@ function Blog() {
                   <SelectValue placeholder="Select Category" />
                 </SelectTrigger>
                 <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">
-                  {CATEGORIES.map((category) => (
+                  {CATEGORIES.map(category) => (
                     <SelectItem key={category} value={category} className="text-white">
                       {category}
                     </SelectItem>;
-                  ))}
+                  )}
                 </SelectContent>
               </Select>
             </div>
@@ -558,7 +557,7 @@ function Blog() {
           {/* Blog Posts Grid */}
           {filteredPosts.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredPosts.map((post) => (
+              {filteredPosts.map(post) => (
                 <Card
                   key={post.id}
                   className="bg-zion-blue-dark border border-zion-blue-light hover:border-zion-purple transition-all duration-300"
@@ -622,7 +621,7 @@ function Blog() {
                     </Button>;
                   </CardFooter>;
                 </Card>;
-              ))}
+              )}
             </div>
           ) : (
             <div className="text-center py-16">
@@ -634,7 +633,7 @@ function Blog() {
                   setSearchQuery("");
 
                   setSelectedCategory("All Categories")
-                }}
+                }
                 className="border-zion-purple text-zion-purple hover:bg-zion-purple/10";
               >;
                 Clear all filters;
@@ -646,8 +645,8 @@ function Blog() {
       <Footer />
     </>
   )
-}
-                </Card>))}
+
+                </Card>)}
             </div>) : (
             <div className="text - center py - 16">;
               <h3 className="text - xl font - bold text - white mb - 2">No articles found</h3>;
@@ -657,7 +656,7 @@ function Blog() {
                 on_click={() => {
                   setSearchQuery ("");
                   setSelectedCategory ("All Categories");
-                }}
+                }
                 className="border - zion - purple text - zion - purple hover:bg - zion - purple / 10";
               >;
                 Clear all filters;
@@ -667,4 +666,3 @@ function Blog() {
       </div>;
       <Footer />;
     </>);
-}

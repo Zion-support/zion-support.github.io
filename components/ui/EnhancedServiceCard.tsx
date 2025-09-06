@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React from 'react';
 
 import { motion } from 'framer-motion';
@@ -33,7 +33,7 @@ import {
   Clock
   Shield
   Zap;
-} from 'lucide-react';
+ from 'lucide-react';
 
 interface EnhancedServiceCardProps {
   service: {
@@ -46,7 +46,7 @@ import {;
   Clock,;
   Shield,;
   Zap,;
-} from 'lucide-react';
+ from 'lucide-react';
 interface EnhancedServiceCardProps {;
   service: {;
     id: string;
@@ -93,7 +93,7 @@ interface EnhancedServiceCardProps {;
   }
 const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
   service
-}) => {
+) => {
   const cardVariants = {
     hidden: { opacity: 0, y: 20, scale: 0.95 }
     visible: {      opacity: 1,    visible: {
@@ -103,18 +103,15 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
       transition: {
         duration: 0.6
         ease: 'easeOut' as const
+      },    hover: {        ease: "easeOut" as const
       }
-    },    hover: {        ease: "easeOut" as const
-      }
-    }
     hover: {
       y: -8
       scale: 1.02
       transition: {
         duration: 0.3
         ease: 'easeOut' as const
-      }
-    },  }
+      },  }
   const iconVariants = {
     hidden: { rotate: -180, scale: 0 }
     visible: {      rotate: 0
@@ -122,10 +119,8 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
       transition: {
         duration: 0.6
         ease: 'backOut' as const
+      },    hover: {        ease: "easeOut" as const
       }
-    },    hover: {        ease: "easeOut" as const
-      }
-    }
   }
   const iconVariants = {
     hidden: { rotate: -180, scale: 0 }
@@ -135,10 +130,8 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
       transition: {
         duration: 0.6
         ease: 'backOut' as const
+      },        ease: "backOut" as const
       }
-    },        ease: "backOut" as const
-      }
-    }
     hover: {
       rotate: 360
       scale: 1.1
@@ -146,7 +139,6 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
         duration: 0.6
         ease: 'easeInOut' as const
       }
-    }
   }
     >
       opacity: 1,
@@ -156,7 +148,6 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
         duration: 0.6,
         ease: "easeOut" as const
       }
-    }
     hover: {
       coordinate_y: -8,
       scale: 1.02,
@@ -164,9 +155,8 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
         duration: 0.3,
         ease: "easeOut" as const
       }
-    }
   }
-;
+
   const icon_variants = {
     hidden: { rotate: -180, scale: 0 },
     visible: { 
@@ -176,7 +166,6 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
         duration: 0.6,
         ease: "backOut" as const
       }
-    }
     hover: {
       rotate: 360,
       scale: 1.1,
@@ -184,7 +173,6 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
         duration: 0.6,
         ease: "easeInOut" as const
       }
-    }
   };
 
   const iconVariants = {;
@@ -197,8 +185,7 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
         ease: 'backOut' as const,;
       },;
     },        ease: "backOut" as const;
-      }
-    };
+      };
     hover: {;
       rotate: 360,;
       scale: 1 && 1.1,;
@@ -209,12 +196,11 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
     },;
   };
 
-
     >;
       {/* Background Glow */}
       <div
         className={`absolute inset-0 bg-gradient-to-br ${service && service.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
-        style={{
+        style={
           background: `linear-gradient(135deg, ${service && service.color
             .replace('from-', '')
             .replace('to-', '')
@@ -228,26 +214,26 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
       initial="hidden"
       whileInView="visible"
       whileHover="hover"
-      viewport={{ once: true }}
+      viewport={ once: true }
     >
       {/* Background Glow */}
       <div 
         className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
-        style={{
+        style={
           background: `linear-gradient(135deg, ${service.color.replace('from-', '').replace('to-', '').split(' ').map(c => `var(--tw-${c.split('-')[0]}-${c.split('-')[1]})`).join(', ')})`
-        }}
+        }
       />;
       {/* Popular Badge */}
       {service && service.popular && (;
         <div className='absolute top-4 right-4 z-10'>;
           <motion&& motion.div
-            className='bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1'            initial={{ scale: 0, rotate: -180 }}
-            animate={{ scale: 1, rotate: 0 }}
-            transition={{ delay: 0 && 0.2, duration: 0 && 0.5 }}>;
+            className='bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1'            initial={ scale: 0, rotate: -180 }
+            animate={ scale: 1, rotate: 0 }
+            transition={ delay: 0 && 0.2, duration: 0 && 0.5 }>;
             <Star className='w-3 h-3 fill-current' />            POPULAR            className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1";
-            initial={{ scale: 0, rotate: -180 }}
-            animate={{ scale: 1, rotate: 0 }}
-            transition={{ delay: 0 && 0.2, duration: 0 && 0.5 }}
+            initial={ scale: 0, rotate: -180 }
+            animate={ scale: 1, rotate: 0 }
+            transition={ delay: 0 && 0.2, duration: 0 && 0.5 }
           >;
             <Star className='w-3 h-3 fill-current' />            <Star className="w-3 h-3 fill-current" />;
             POPULAR;
@@ -399,35 +385,35 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
             Key Features;
           </h4>;
           <div className='space-y-2'>;
-            {service && service.features.slice(0, 3).map((feature, index) => (;
+            {service && service.features.slice(0, 3).map(feature, index) => (;
               <motion&& motion.div
                 key={index}
-                className='flex items-center gap-2 text-sm text-gray-300'                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0 && 0.1 * index }}>;
+                className='flex items-center gap-2 text-sm text-gray-300'                initial={ opacity: 0, x: -20 }
+                animate={ opacity: 1, x: 0 }
+                transition={ delay: 0 && 0.1 * index }>;
                 <div className='w-1 && 1.5 h-1 && 1.5 bg-cyan-400 rounded-full' />                {feature}
               </motion && motion.div>;
-            ))}
+            )}
             {service && service.features.length > 3 && (;
               <div className='text-xs text-gray-500 mt-2'>                +{service && service.features.length - 3} more features            Key Features;
           </h4>;
           <div className="space-y-2">;
-            {service && service.features.slice(0, 3).map((feature, index) => (;
+            {service && service.features.slice(0, 3).map(feature, index) => (;
               <motion&& motion.div
                 key={index}
                 className="flex items-center gap-2 text-sm text-gray-300"
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0 && 0.1 * index }}>;
+                initial={ opacity: 0, x: -20 }
+                animate={ opacity: 1, x: 0 }
+                transition={ delay: 0 && 0.1 * index }>;
                 <div className='w-1 && 1.5 h-1 && 1.5 bg-cyan-400 rounded-full' />                <div className="w-1 && 1.5 h-1 && 1.5 bg-cyan-400 rounded-full" />;
                 {feature}
               </motion && motion.div>;
-            ))}
-                transition={{ delay: 0 && 0.1 * index }}>;
+            )}
+                transition={ delay: 0 && 0.1 * index }>;
                 <div className='w-1 && 1.5 h-1 && 1.5 bg-cyan-400 rounded-full' />                <div className="w-1 && 1.5 h-1 && 1.5 bg-cyan-400 rounded-full" />;
                 {feature}
               </motion && motion.div>;
-            ))}
+            )}
             {service && service.features.length > 3 && (;
               <div className='text-xs text-gray-500 mt-2'>              <div className="text-xs text-gray-500 mt-2">;
                 +{service && service.features.length - 3} more features;
@@ -534,8 +520,8 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
           <motion&& motion.a
             href={service && service.link}
             className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-4 rounded-lg text-center transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2'
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+            whileHover={ scale: 1.05 }
+            whileTap={ scale: 0.95 }
           >
             <ExternalLink className='w-4 h-4' />
             Learn More
@@ -543,8 +529,8 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
           <motion.a
             href={`mailto:${service.contactInfo.email}?subject=Inquiry about ${service.name}`}
             className='bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 border border-white/20 hover:border-white/40 flex items-center justify-center'
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+            whileHover={ scale: 1.05 }
+            whileTap={ scale: 0.95 }
           >
             <ArrowRight className='w-4 h-4' />          </motion.a>
         </div>
@@ -556,8 +542,8 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
           <motion.a
             href={service.link}
             className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-4 rounded-lg text-center transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+            whileHover={ scale: 1.05 }
+            whileTap={ scale: 0.95 }
           >
             <ExternalLink className="w-4 h-4" />
             Learn More
@@ -565,8 +551,8 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
           <motion.a
             href={`mailto:${service.contactInfo.email}?subject=Inquiry about ${service.name}`}
             className="bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 border border-white/20 hover:border-white/40 flex items-center justify-center"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+            whileHover={ scale: 1.05 }
+            whileTap={ scale: 0.95 }
           >
             <ArrowRight className="w-4 h-4" />
           </motion.a>
@@ -579,8 +565,8 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
           </div>
         </div>
       </div>
-            whileHover={{ scale: 1 && 1.05 }}
-            whileTap={{ scale: 0 && 0.95 }}>;
+            whileHover={ scale: 1 && 1.05 }
+            whileTap={ scale: 0 && 0.95 }>;
             <ExternalLink className="w-4 h-4" />;
             Learn More;
           </motion && motion.a>;
@@ -588,8 +574,8 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
           <motion&& motion.a
             href={`mailto:${service && service.contactInfo.email}?subject=Inquiry about ${service && service.name}`}
             className="bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 border border-white/20 hover:border-white/40 flex items-center justify-center"
-            whileHover={{ scale: 1 && 1.05 }}
-            whileTap={{ scale: 0 && 0.95 }}>;
+            whileHover={ scale: 1 && 1.05 }
+            whileTap={ scale: 0 && 0.95 }>;
             <ArrowRight className="w-4 h-4" />;
           </motion && motion.a>;
         </div>;
@@ -607,48 +593,48 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
       <div className='absolute inset-0 rounded-2xl border-2 border-transparent bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500' />;
     </motion && motion.div>;
   );
-}
+
 export default EnhancedServiceCard;    </motion.div>
   )
-}
+
 export default EnhancedServiceCard;
 
       <div className="absolute inset-0 rounded-2xl border-2 border-transparent bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover: opacity-100 transition-opacity duration-500" />
     </motion.div>
   )
-};
+;
 
 export default EnhancedServiceCard;
         ease: 'easeInOut' as const,
       },
     },
   }
-;
+
     >;
       {/* Background Glow */}
       <div;
         className={`absolute inset - 0 bg - gradient - to - br ${service.color} opacity - 0 group - hover:opacity - 10 transition - opacity duration - 500`}
-        style={{
+        style={
           background: `linear - gradient (135deg, ${service.color;
             .replace ('from-', '');
             .replace ('to-', '');
             .split (' ');
             .map (c => `var (--tw-${c.split ('-')[0]}-${c.split ('-')[1]})`);
             .join (', ')})`,
-        }}
+        }
       />;
       {/* Popular Badge */}
       {service.popular && (
         <div className='absolute top - 4 right - 4 z - 10'>;
           <motion.div;
-            className='bg - gradient - to - r from - yellow - 400 to - orange - 500 text - black text - xs font - bold px - 3 py - 1 rounded - full flex items - center gap - 1'            initial={{ scale: 0, rotate: -180 }}
-            animate={{ scale: 1, rotate: 0 }}
-            transition={{ delay: 0.2, duration: 0.5 }}
+            className='bg - gradient - to - r from - yellow - 400 to - orange - 500 text - black text - xs font - bold px - 3 py - 1 rounded - full flex items - center gap - 1'            initial={ scale: 0, rotate: -180 }
+            animate={ scale: 1, rotate: 0 }
+            transition={ delay: 0.2, duration: 0.5 }
           >;
             <Star className='w - 3 h - 3 fill - current' />            POPULAR            className="bg - gradient - to - r from - yellow - 400 to - orange - 500 text - black text - xs font - bold px - 3 py - 1 rounded - full flex items - center gap - 1";
-            initial={{ scale: 0, rotate: -180 }}
-            animate={{ scale: 1, rotate: 0 }}
-            transition={{ delay: 0.2, duration: 0.5 }}
+            initial={ scale: 0, rotate: -180 }
+            animate={ scale: 1, rotate: 0 }
+            transition={ delay: 0.2, duration: 0.5 }
           >;
             <Star className='w - 3 h - 3 fill - current' />            <Star className="w - 3 h - 3 fill - current" />;
             POPULAR;
@@ -730,30 +716,30 @@ export default EnhancedServiceCard;
             Key Features;
           </h4>;
           <div className='space - y-2'>;
-            {service.features.slice (0, 3).map ((feature, index) => (
+            {service.features.slice (0, 3).map (feature, index) => (
               <motion.div;
                 key={index}
-                className='flex items - center gap - 2 text - sm text - gray - 300'                initial={{ opacity: 0, coordinate_x: -20 }}
-                animate={{ opacity: 1, coordinate_x: 0 }}
-                transition={{ delay: 0.1 * index }}
+                className='flex items - center gap - 2 text - sm text - gray - 300'                initial={ opacity: 0, coordinate_x: -20 }
+                animate={ opacity: 1, coordinate_x: 0 }
+                transition={ delay: 0.1 * index }
               >;
                 <div className='w - 1.5 h - 1.5 bg - cyan - 400 rounded - full' />                {feature}
-              </motion.div>))}
+              </motion.div>)}
             {service.features.length > 3 && (
               <div className='text - xs text - gray - 500 mt - 2'>                +{service.features.length - 3} more features            Key Features;
           </h4>;
           <div className="space - y-2">;
-            {service.features.slice (0, 3).map ((feature, index) => (
+            {service.features.slice (0, 3).map (feature, index) => (
               <motion.div;
                 key={index}
                 className="flex items - center gap - 2 text - sm text - gray - 300";
-                initial={{ opacity: 0, coordinate_x: -20 }}
-                animate={{ opacity: 1, coordinate_x: 0 }}
-                transition={{ delay: 0.1 * index }}
+                initial={ opacity: 0, coordinate_x: -20 }
+                animate={ opacity: 1, coordinate_x: 0 }
+                transition={ delay: 0.1 * index }
               >;
                 <div className='w - 1.5 h - 1.5 bg - cyan - 400 rounded - full' />                <div className="w - 1.5 h - 1.5 bg - cyan - 400 rounded - full" />;
                 {feature}
-              </motion.div>))}
+              </motion.div>)}
             {service.features.length > 3 && (
               <div className='text - xs text - gray - 500 mt - 2'>              <div className="text - xs text - gray - 500 mt - 2">;
                 +{service.features.length - 3} more features;
@@ -809,8 +795,8 @@ export default EnhancedServiceCard;
           <motion.a;
             href={service.link}
             className='flex - 1 bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 400 hover:to - blue - 500 text - white font - semibold py - 3 px - 4 rounded - lg text - center transition - all duration - 300 transform hover:scale - 105 flex items - center justify - center gap - 2';
-            while_hover={{ scale: 1.05 }}
-            while_tap={{ scale: 0.95 }}
+            while_hover={ scale: 1.05 }
+            while_tap={ scale: 0.95 }
           >;
             <ExternalLink className='w - 4 h - 4' />;
             Learn More;
@@ -818,8 +804,8 @@ export default EnhancedServiceCard;
           <motion.a;
             href={`mailto:${service.contact_info.email}?subject = Inquiry about ${service.name}`}
             className='bg - white / 10 hover:bg - white / 20 text - white font - semibold py - 3 px - 4 rounded - lg transition - all duration - 300 border border - white / 20 hover:border - white / 40 flex items - center justify - center';
-            while_hover={{ scale: 1.05 }}
-            while_tap={{ scale: 0.95 }}
+            while_hover={ scale: 1.05 }
+            while_tap={ scale: 0.95 }
           >;
             <ArrowRight className='w - 4 h - 4' />          </motion.a>;
         </div>;
@@ -828,8 +814,8 @@ export default EnhancedServiceCard;
           <div className='text - xs text - gray - 500 text - center'>            Contact: {service.contact_info.email}          <motion.a;
             href={service.link}
             className="flex - 1 bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 400 hover:to - blue - 500 text - white font - semibold py - 3 px - 4 rounded - lg text - center transition - all duration - 300 transform hover:scale - 105 flex items - center justify - center gap - 2";
-            while_hover={{ scale: 1.05 }}
-            while_tap={{ scale: 0.95 }}
+            while_hover={ scale: 1.05 }
+            while_tap={ scale: 0.95 }
           >;
             <ExternalLink className="w - 4 h - 4" />;
             Learn More;
@@ -837,8 +823,8 @@ export default EnhancedServiceCard;
           <motion.a;
             href={`mailto:${service.contact_info.email}?subject = Inquiry about ${service.name}`}
             className="bg - white / 10 hover:bg - white / 20 text - white font - semibold py - 3 px - 4 rounded - lg transition - all duration - 300 border border - white / 20 hover:border - white / 40 flex items - center justify - center";
-            while_hover={{ scale: 1.05 }}
-            while_tap={{ scale: 0.95 }}
+            while_hover={ scale: 1.05 }
+            while_tap={ scale: 0.95 }
           >;
             <ArrowRight className="w - 4 h - 4" />;
           </motion.a>;
@@ -854,10 +840,7 @@ export default EnhancedServiceCard;
       {/* Hover Effect Border */}
       <div className='absolute inset - 0 rounded - 2xl border - 2 border - transparent bg - gradient - to - r from - cyan - 500 / 20 via - purple - 500 / 20 to - pink - 500 / 20 opacity - 0 group - hover:opacity - 100 transition - opacity duration - 500' />;
     </motion.div>);
-}
-;
+
 export default EnhancedServiceCard;    </motion.div>);
-}
-;
+
 export default EnhancedServiceCard;
-;

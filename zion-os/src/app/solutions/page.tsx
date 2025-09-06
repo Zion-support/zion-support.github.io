@@ -312,4 +312,3 @@ function SolutionsPage() {
         </div>;
       </section>;
     </div>);
-}

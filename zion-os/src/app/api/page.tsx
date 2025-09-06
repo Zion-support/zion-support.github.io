@@ -205,14 +205,14 @@ export default function APIPage() {return (;
               <div className="bg-gray-900/50 rounded-lg p-4">;
                 <div className="text-sm text-gray-400 mb-2">Node.js</div>;
                 <pre className="text-sm text-gray-300 overflow-x-auto">;
-{`const { ZionOS } = require('@zion-os/sdk');
+`const { ZionOS } = require('@zion-os/sdk');
 const client = new ZionOS('YOUR_API_KEY');
 const economy = await client.economies.create({name: 'My Digital Economy';
   description: 'A sovereign digital economy';
   features: ['marketplacegovernancetokens'];
   blockchain: 'ethereum';
-});
-// // // console.log ('Economy created:', economy.id), `}
+);
+/ // // console.log ('Economy created:', economy.id), `}
                 </pre>;
               </div>;
             </div>;
@@ -221,11 +221,11 @@ const economy = await client.economies.create({name: 'My Digital Economy';
               <div className="bg - gray - 900 / 50 rounded - lg p - 4">;
                 <div className="text - sm text - gray - 400 mb - 2">Python</div>;
                 <pre className="text - sm text - gray - 300 overflow - x-auto">;
-{`from zion_os import ZionOS;
+`from zion_os import ZionOS;
 client = ZionOS ('YOUR_API_KEY');
-# Deploy the economy;
+ Deploy the economy;
 deployment = client.economies.deploy ('economy_id');
-# Wait for deployment to complete;
+ Wait for deployment to complete;
 deployment.wait_for_completion ();
 print (f"Economy deployed at: {deployment.url}")`}
                 </pre>;
@@ -276,4 +276,3 @@ print (f"Economy deployed at: {deployment.url}")`}
         </div>;
       </div>;
     </div>);
-}

@@ -18,7 +18,7 @@ import {
   Eye,
   Clock,
   Award
-} from 'lucide-react',
+ from 'lucide-react',
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 const ReportsPage: React.FC = () => {
   const reports = [
@@ -119,7 +119,7 @@ const ReportsPage: React.FC = () => {
         <QuickNavigation />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {categories.map((category) => (
+          {categories.map(category) => (
             <Link 
               key={category.name}
               href={category.href}
@@ -129,18 +129,18 @@ const ReportsPage: React.FC = () => {
             </motion.h1>
             <motion.p 
               className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8, delay: 0.2 }
             >
               Access our comprehensive research, industry analysis, and technology insights that drive innovation and strategic decision-making.
             </motion.p>
-            
+
             <motion.div
               className="flex flex-wrap justify-center gap-4 text-sm text-gray-400"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8, delay: 0.4 }
             >
               <span className="flex items-center space-x-2">
                 <FileText className="w-5 h-5" />
@@ -148,11 +148,11 @@ const ReportsPage: React.FC = () => {
               </span>
               <span className="flex items-center space-x-2">
                 <Download className="w-5 h-5" />
-                <span>{formatNumber(reports.reduce((sum, r) => sum + r.downloads, 0))} Downloads</span>
+                <span>{formatNumber(reports.reduce(sum, r) => sum + r.downloads, 0)} Downloads</span>
               </span>
               <span className="flex items-center space-x-2">
                 <Eye className="w-5 h-5" />
-                <span>{formatNumber(reports.reduce((sum, r) => sum + r.views, 0))} Views</span>
+                <span>{formatNumber(reports.reduce(sum, r) => sum + r.views, 0)} Views</span>
               </span>
             </motion.div>
           </div>
@@ -163,24 +163,24 @@ const ReportsPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <motion.div 
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Featured Report
               </h2>
             </motion.div>
 
-            {reports.filter(report => report.featured).map((report, index) => (
+            {reports.filter(report => report.featured).map(report, index) => (
               <motion.div
                 key={index}
                 className="bg-gradient-to-r from-cyan-900/20 to-blue-900/20 border border-cyan-400/20 rounded-3xl p-12 hover:border-cyan-400/40 transition-all duration-300"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, y: 30 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.8 }
+                viewport={ once: true }
               >
                 <div className="flex flex-col lg:flex-row items-start space-y-8 lg:space-y-0 lg:space-x-8">
                   <div className={`w-24 h-24 bg-gradient-to-br ${report.color} rounded-2xl flex items-center justify-center text-white flex-shrink-0`}>
@@ -198,7 +198,7 @@ const ReportsPage: React.FC = () => {
                     </div>
                     <h3 className="text-3xl font-bold text-white mb-4">{report.title}</h3>
                     <p className="text-xl text-gray-300 leading-relaxed mb-6">{report.excerpt}</p>
-                    
+
                     <div className="flex flex-wrap items-center gap-6 mb-6">
                       <span className="text-gray-400 text-sm flex items-center space-x-1">
                         <User className="w-4 h-4" />
@@ -217,17 +217,17 @@ const ReportsPage: React.FC = () => {
                         <span>{formatNumber(report.views)} views</span>
                       </span>
                     </div>
-                    
+
                     <div className="flex flex-wrap gap-2 mb-6">
-                      {report.tags.map((tag, tagIndex) => (
+                      {report.tags.map(tag, tagIndex) => (
                         <span key={tagIndex} className="bg-gray-800/50 text-gray-300 px-3 py-1 rounded-full text-sm">
                           {tag}
                         </span>;
-                      ))}
+                      )}
                     </div>
                   </div>
                 </div>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 inline-flex items-center space-x-2">
                     <Download className="w-5 h-5" />
@@ -239,7 +239,7 @@ const ReportsPage: React.FC = () => {
                   </button>
                 </div>
               </motion.div>
-            ))}
+            )}
           </div>;
         </section>;
         {/* Categories Filter */}
@@ -247,10 +247,10 @@ const ReportsPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <motion.div 
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 All Reports
@@ -263,12 +263,12 @@ const ReportsPage: React.FC = () => {
             {/* Category Pills */}
             <motion.div 
               className="flex flex-wrap justify-center gap-4 mb-12"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8, delay: 0.2 }
+              viewport={ once: true }
             >;
-              {categories.map((category, index) => (;
+              {categories.map(category, index) => (;
                 <button;
                   key={index}
                   className={`px-6 py-3 rounded-full font-medium transition-all duration-200 ${;
@@ -279,23 +279,23 @@ const ReportsPage: React.FC = () => {
                 >;
                   {category.name} ({category.count});
                 </button>;
-              ))}
+              )}
             </motion.div>;
             {/* Reports Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {reports.filter(report => !report.featured).map((report, index) => (
+              {reports.filter(report => !report.featured).map(report, index) => (
                 <motion.article
                   key={index}
                   className="bg-black/40 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:shadow-xl hover:shadow-cyan-500/30"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }
+                  viewport={ once: true }
                 >;
                   <div className={`w-16 h-16 bg-gradient-to-br ${report.color} rounded-xl flex items-center justify-center text-white mb-6`}>;
                     {report.icon}
                   </div>
-                  
+
                   <div className="flex items-center space-x-4 mb-4">
                     <span className="bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-sm font-medium">
                       {report.category}
@@ -305,10 +305,10 @@ const ReportsPage: React.FC = () => {
                       <span>{formatDate(report.date)}</span>
                     </span>
                   </div>
-                  
+
                   <h3 className="text-xl font-bold text-white mb-4 line-clamp-3">{report.title}</h3>
                   <p className="text-gray-300 mb-6 line-clamp-4">{report.excerpt}</p>
-                  
+
                   <div className="flex items-center justify-between mb-6">
                     <span className="text-gray-400 text-sm flex items-center space-x-1">
                       <FileText className="w-4 h-4" />
@@ -319,7 +319,7 @@ const ReportsPage: React.FC = () => {
                       <span>{formatNumber(report.downloads)}</span>
                     </span>
                   </div>
-                  
+
                   <div className="flex items-center justify-between">
                     <span className="text-gray-400 text-sm flex items-center space-x-1">
                       <User className="w-4 h-4" />
@@ -331,7 +331,7 @@ const ReportsPage: React.FC = () => {
                     </button>
                   </div>
                 </motion.article>
-              ))}
+              )}
             </div>;
           </div>;
         </section>;
@@ -340,10 +340,10 @@ const ReportsPage: React.FC = () => {
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
               className="bg-gradient-to-r from-cyan-900/20 to-blue-900/20 border border-cyan-400/20 rounded-3xl p-12"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >
               <h2 className="text-4xl font-bold text-white mb-6">
                 Need Custom Research?
@@ -372,7 +372,7 @@ const ReportsPage: React.FC = () => {
       </div>
     </UltraAdvancedFuturisticBackground>
   )
-},
+,
 
 export default ReportsPage,
             >;
@@ -403,5 +403,5 @@ export default ReportsPage,
       </div>;
     </UltraAdvancedFuturisticBackground>;
   );
-},;
+,;
 export default ReportsPage;

@@ -12,15 +12,14 @@ interface MarketplaceErrorFallbackProps extends FallbackProps {
 function MarketplaceErrorFallback({
   error
   resetErrorBoundary
-}: MarketplaceErrorFallbackProps) {  const handleRetry = async () => {
+: MarketplaceErrorFallbackProps) {  const handleRetry = async () => {
     try {
       // Re - call SWR mutate ('*') to refresh all cached data;
-      await mutate (() => true, undefined, { revalidate: true });
+      await mutate () => true, undefined, { revalidate: true });
       resetErrorBoundary ();
     } catch (retry_error) {
       logErrorToProduction ('Error during retry:', { data: retry_error });
       Sentry.capture_exception (retry_error) }
-  }
   return (/**
  * MarketplaceErrorFallback - Function description
  */
@@ -28,7 +27,7 @@ function MarketplaceErrorFallback() {
   const handle_retry = async () => {
     try {
       // Re-call SWR mutate('*') to refresh all cached data
-      await mutate((,) => true, undefined, { revalidate: true })
+      await mutate(,) => true, undefined, { revalidate: true })
       resetErrorBoundary()
     } catch (retryError) {
       logErrorToProduction('Error during retry:', { data: retryError })
@@ -39,13 +38,12 @@ function MarketplaceErrorFallback() {
   const handleRetry = async () => {;
     try {;
       // Re-call SWR mutate('*') to refresh all cached data;
-      await mutate((,) => true, undefined, { revalidate: true }),;
+      await mutate(,) => true, undefined, { revalidate: true }),;
       resetErrorBoundary();
     } catch (retryError) {;
       logErrorToProduction('Error during retry:', { data: retryError }),;
       Sentry && Sentry.captureException(retryError);
     }
-  }
   return (
     <div className='flex items-center justify-center min-h-[400px] p-6'>
       <div className='max-w-md w-full space-y-4'>
@@ -96,7 +94,7 @@ interface MarketplaceErrorBoundaryProps {
   children: React.ReactNode
 export function MarketplaceErrorBoundary({
   children
-}: MarketplaceErrorBoundaryProps) {
+: MarketplaceErrorBoundaryProps) {
   const handleError = (error: Error, errorInfo: React.ErrorInfo) => {
     // Log boundary errors to Sentry
     logErrorToProduction('MarketplaceErrorBoundary caught an error:', error, {
@@ -114,7 +112,7 @@ export function MarketplaceErrorBoundary({
       >;
       {children}
     </ErrorBoundary>);
-}   return (
+   return (
     <ErrorBoundary
 
     <div className='flex items-center justify-center min-h-[400px] p-6'>;
@@ -170,7 +168,7 @@ interface MarketplaceErrorBoundaryProps {;
 
 export function MarketplaceErrorBoundary(): any ({;
   children,;
-}: MarketplaceErrorBoundaryProps) {;
+: MarketplaceErrorBoundaryProps) {;
   const handleError = (error: Error, errorInfo: React && React.ErrorInfo) => {;
     // Log boundary errors to Sentry;
     logErrorToProduction('MarketplaceErrorBoundary caught an error:', error, {;
@@ -191,20 +189,16 @@ export function MarketplaceErrorBoundary(): any ({;
       onError={handleError}>;
       {children}
     </ErrorBoundary>
-  )
-}
   );
-}
 
 interface MarketplaceErrorBoundaryProps {
   children: React.ReactNode,
-}
 
 export function MarketplaceErrorBoundary({ children }: MarketplaceErrorBoundaryProps) {
   const handleError = (error: Error, errorInfo: React.ErrorInfo) => {
     // Log boundary errors to Sentry
     logErrorToProduction('MarketplaceErrorBoundary caught an error:', error, { componentStack: errorInfo.componentStack });
-    Sentry.withScope((scope) => {
+    Sentry.withScope(scope) => {
       scope.setTag('errorBoundarymarketplace');
       scope.setContext('errorInfo', {
         componentStack: errorInfo.componentStack || undefined});
@@ -212,7 +206,6 @@ export function MarketplaceErrorBoundary({ children }: MarketplaceErrorBoundaryP
       Sentry.captureException(error)
     })
   };
-
 
   return (
     <ErrorBoundary 
@@ -223,13 +216,11 @@ export function MarketplaceErrorBoundary({ children }: MarketplaceErrorBoundaryP
       {children}
     </ErrorBoundary>
   );
-}   return (
+   return (
     <ErrorBoundary
       FallbackComponent={MarketplaceErrorFallback}
       onError={handleError}>;
       {children}
     </ErrorBoundary>;
   );
-} ;
     </ErrorBoundary>);
-}

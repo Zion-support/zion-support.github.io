@@ -7,6 +7,5 @@ const EnterpriseTestimonials.js = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default EnterpriseTestimonials.js;

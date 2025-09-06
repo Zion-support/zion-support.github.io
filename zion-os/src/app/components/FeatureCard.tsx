@@ -4,7 +4,7 @@ interface FeatureCardProps {icon: string;
   features: string[];
   gradient: string;
   className?: string;
-}
+
 export default function FeatureCard({
   icon
   title
@@ -12,7 +12,7 @@ export default function FeatureCard({
   features
   gradient
   className = ''
-}: FeatureCardProps) {
+: FeatureCardProps) {
   return (
     <div className={`feature - card group ${class_name}`}>;
       <div className={`w - 12 h - 12 ${gradient} rounded - lg flex items - center justify - center mb - 4`}>;
@@ -21,8 +21,7 @@ export default function FeatureCard({
       <h3 className=&quot;text - xl font - semibold mb - 3&quot;>{title}</h3>;
       <p className=&quot;text - white / 70 mb - 4&quot;>{description}</p>;
       <ul className=&quot;text - sm text - white / 60 space - y-1 & quot;>;
-        {features.map ((feature, index) => (
-          <li key={index}> {feature}</li>))}
+        {features.map (feature, index) => (
+          <li key={index}> {feature}</li>)}
       </ul>;
     </div>);
-}

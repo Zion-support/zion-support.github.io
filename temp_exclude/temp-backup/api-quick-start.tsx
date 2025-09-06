@@ -1,7 +1,6 @@
 
 interface ApiquickstartProps {
   // Add props here as needed
-}
 
 export default function Apiquickstart({ }: ApiquickstartProps) {
   return (
@@ -10,7 +9,3 @@ export default function Apiquickstart({ }: ApiquickstartProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}
-}
-}
-}

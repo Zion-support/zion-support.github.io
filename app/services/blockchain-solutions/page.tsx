@@ -1,7 +1,7 @@
 export const metadata = { 
   title: 'Blockchain Solutions | Zion Tech Group',
   description: 'Comprehensive blockchain development services including DeFi, NFTs, smart contracts, and Web3 applications.'
-}; 
+; 
 
 export default function BlockchainSolutionsPage() { 
   return ( 
@@ -125,7 +125,6 @@ export default function BlockchainSolutionsPage() {
       </section>
     </div>
   ); 
-} 
 
 function BlockchainServiceCard({ title, description, features, price, icon }: { 
   title: string; 
@@ -133,23 +132,22 @@ function BlockchainServiceCard({ title, description, features, price, icon }: {
   features: string[]; 
   price: string;
   icon: string;
-}) { 
+) { 
   return ( 
     <div className="border border-gray-200 rounded-xl p-6 hover:border-orange-300 hover:shadow-lg transition-all duration-200 bg-white">
       <div className="text-4xl mb-4">{icon}</div>
       <h3 className="text-xl font-bold text-gray-900 mb-3">{title}</h3>
       <p className="text-gray-600 mb-4 leading-relaxed">{description}</p>
       <ul className="text-gray-600 space-y-2 mb-4">
-        {features.map((feature) => (
+        {features.map(feature) => (
           <li key={feature} className="flex items-center">
             <span className="text-orange-500 mr-2"></span> {feature}
           </li>
-        ))}
+        )}
       </ul>
       <div className="text-lg font-semibold text-orange-600">{price}</div>
     </div>
   ); 
-} 
 
 function SpecializedBlockchainCard({ title, description, features, price, icon }: { 
   title: string; 
@@ -157,38 +155,36 @@ function SpecializedBlockchainCard({ title, description, features, price, icon }
   features: string[]; 
   price: string;
   icon: string;
-}) { 
+) { 
   return ( 
     <div className="border border-gray-200 rounded-xl p-8 hover:border-purple-300 hover:shadow-lg transition-all duration-200 bg-white">
       <div className="text-5xl mb-4">{icon}</div>
       <h3 className="text-2xl font-bold text-gray-900 mb-3">{title}</h3>
       <p className="text-gray-600 mb-4 leading-relaxed">{description}</p>
       <ul className="text-gray-600 space-y-2 mb-6">
-        {features.map((feature) => (
+        {features.map(feature) => (
           <li key={feature} className="flex items-center">
             <span className="text-purple-500 mr-2"></span> {feature}
           </li>
-        ))}
+        )}
       </ul>
       <div className="text-xl font-semibold text-purple-600">{price}</div>
     </div>
   ); 
-} 
 
 function TechStackCard({ title, details }: { title: string; details: string[] }) { 
   return ( 
     <div className="border border-gray-200 rounded-xl p-6 bg-gray-50">
       <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
       <ul className="text-gray-600 space-y-2">
-        {details.map((detail) => (
+        {details.map(detail) => (
           <li key={detail} className="flex items-center">
             <span className="text-orange-500 mr-2"></span> {detail}
           </li>
-        ))}
+        )}
       </ul>
     </div>
   ); 
-} 
 
 function Pricing() { 
   return ( 
@@ -216,25 +212,24 @@ function Pricing() {
       </div>
     </div>
   ); 
-} 
 
 function Plan({ name, price, duration, features }: { 
   name: string; 
   price: string; 
   duration: string;
   features: string[]; 
-}) { 
+) { 
   return ( 
     <div className="border border-gray-200 rounded-xl p-8 bg-white hover:border-orange-300 hover:shadow-lg transition-all duration-200">
       <h4 className="text-2xl font-bold text-gray-900 mb-2">{name}</h4>
       <div className="text-3xl font-bold text-orange-600 mb-2">{price}</div>
       <div className="text-gray-600 mb-6">{duration}</div>
       <ul className="text-gray-600 space-y-3">
-        {features.map((feature) => (
+        {features.map(feature) => (
           <li key={feature} className="flex items-center">
             <span className="text-orange-500 mr-2"></span> {feature}
           </li>
-        ))}
+        )}
       </ul>
       <a 
         href="tel:+13024640950" 
@@ -244,7 +239,6 @@ function Plan({ name, price, duration, features }: {
       </a>
     </div>
   ); 
-} 
 
 function ContactSection() {
   return (
@@ -275,4 +269,3 @@ function ContactSection() {
       </div>
     </div>
   );
-}

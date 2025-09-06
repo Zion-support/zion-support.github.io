@@ -4,7 +4,6 @@ import React from 'react';
 
 interface Ai-developmentProps {
   className?: string;
-}
 
 const Ai-development: React.FC<Ai-developmentProps> = ({ className }) => {
   return (
@@ -13,6 +12,3 @@ const Ai-development: React.FC<Ai-developmentProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-}
-}
-}

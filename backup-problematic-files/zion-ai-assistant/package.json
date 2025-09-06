@@ -1,4 +1,4 @@
-{
+
   "name": "zion-ai-assistant",
   "version": "0.1.0",
   "private": true,
@@ -23,4 +23,3 @@
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.5.4"
   }
-}

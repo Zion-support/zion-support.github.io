@@ -332,4 +332,3 @@ function ResearchPage() {
         </div>;
       </section>;
     </div>);
-}

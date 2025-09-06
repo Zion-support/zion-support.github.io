@@ -11,7 +11,7 @@ export default function FeedbackModal({;
   defaultContext?: FeedbackContext,;
   defaultKind?: 'general' | 'bug' | 'feature',;
   userHeaders?: Record<string string>;
-}) {;
+) {;
   const [rating, setRating] = useState<number>(0),;
   const [hover, setHover] = useState<number>(0),;
   const [kind, setKind] = useState<'general' | 'bug' | 'feature'>(defaultKind),;
@@ -25,7 +25,7 @@ export default function FeedbackModal({;
       await fetch('/api/feedback', {;
         method: 'POST',;
         headers: { 'Content-Type': 'application/json', ...(userHeaders || {}) };
-        body: JSON.stringify({ rating, comment, kind, context: defaultContext || {} })});
+        body: JSON.stringify({ rating, comment, kind, context: defaultContext || {})});
     } catch {}
     setLoading(false);
     onClose(true);
@@ -45,7 +45,7 @@ export default function FeedbackModal({;
               className={(hover >= n || rating >= n) ? 'text-yellow-500' : 'text-gray-300'}
               aria-label={`${n} stars`}
             ></button>;
-          ))}
+          )}
         </div>
         <div className="text-sm">
           <label className="block mb-1">Optional comment</label>
@@ -54,9 +54,9 @@ export default function FeedbackModal({;
         <div className="text-sm">
           <label className="block mb-1">Also</label>
           <div className="flex gap-3">
-            <label className="inline-flex items-center gap-1"><input type="radio" checked={kind==='general'} onChange={()=>setKind('general')} />General</label>
-            <label className="inline-flex items-center gap-1"><input type="radio" checked={kind==='bug'} onChange={()=>setKind('bug')} />Report a bug</label>
-            <label className="inline-flex items-center gap-1"><input type="radio" checked={kind==='feature'} onChange={()=>setKind('feature')} />Suggest a feature</label>
+            <label className="inline-flex items-center gap-1"><input type="radio" checked={kind= ='general'} onChange={()=>setKind('general')} />General</label>
+            <label className="inline-flex items-center gap-1"><input type="radio" checked={kind= ='bug'} onChange={()=>setKind('bug')} />Report a bug</label>
+            <label className="inline-flex items-center gap-1"><input type="radio" checked={kind= ='feature'} onChange={()=>setKind('feature')} />Suggest a feature</label>
           </div>
         </div>
         <div className="flex justify-end gap-2">
@@ -66,4 +66,3 @@ export default function FeedbackModal({;
       </div>
     </div>
   )
-}

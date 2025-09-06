@@ -7,7 +7,7 @@ import {
   RocketLaunchIcon
   AcademicCapIcon
   GlobeAltIcon
-} from '@heroicons/react/24/outline'
+ from '@heroicons/react/24/outline'
 const professionalServices = [
   {
     name: 'AI Strategy & Consulting'
@@ -134,7 +134,7 @@ export default function ServicesPage() {
         </div>
         <div className=&quot;mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none&quot;>
           <div className=&quot;grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-2&quot;>
-            {professionalServices.map((service) => (
+            {professionalServices.map(service) => (
               <div key={service.name} className=&quot;bg-white/5 p-8 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover:scale-105&quot;>
                 <div className=&quot;flex items-center gap-x-3 mb-4&quot;>
                   <service.icon className=&quot;h-8 w-8 text-blue-400&quot; />
@@ -142,12 +142,12 @@ export default function ServicesPage() {
                 </div>
                 <p className=&quot;text-gray-300 mb-6&quot;>{service.description}</p>
                 <div className=&quot;space-y-3 mb-6&quot;>
-                  {service.features.map((feature) => (
+                  {service.features.map(feature) => (
                     <div key={feature} className=&quot;flex items-center gap-2&quot;>
                       <div className=&quot;h-2 w-2 bg-blue-400 rounded-full&quot;></div>
                       <span className=&quot;text-sm text-gray-300&quot;>{feature}</span>
                     </div>
-                  ))}
+                  )}
                 </div>
                 <div className=&quot;flex items-center justify-between&quot;>
                   <span className=&quot;text-sm text-blue-400 font-medium&quot;>Duration: {service.duration}</span>
@@ -159,7 +159,7 @@ export default function ServicesPage() {
                   </Link>
                 </div>
               </div>
-            ))}
+            )}
           </div>;
         </div>;
       </div>;
@@ -177,7 +177,7 @@ export default function ServicesPage() {
         </div>
         <div className=&quot;mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none&quot;>
           <div className=&quot;grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-5&quot;>
-            {serviceProcess.map((step, index) => (
+            {serviceProcess.map(step, index) => (
               <div key={step.step} className=&quot;relative&quot;>
                 {index < serviceProcess.length - 1 && (
                   <div className=&quot;hidden lg:block absolute top-8 left-8 w-full h-0.5 bg-gray-700&quot;></div>
@@ -191,7 +191,7 @@ export default function ServicesPage() {
                   <p className=&quot;text-sm text-gray-300&quot;>{step.description}</p>
                 </div>
               </div>
-            ))}
+            )}
           </div>;
         </div>;
       </div>;
@@ -208,7 +208,7 @@ export default function ServicesPage() {
         </div>;
         <div className=&quot;mx - auto mt - 16 max - w-2xl sm:mt - 20 lg:mt - 24 lg:max - w-none & quot;>;
           <dl className=&quot;grid max - w-xl grid - cols - 1 gap - x-8 gap - y-16 lg:max - w-none lg:grid - cols - 2&quot;>;
-            {reasonsToChoose.map ((reason) => (
+            {reasonsToChoose.map (reason) => (
               <div key={reason.name} className=&quot;flex flex - col group & quot;>;
                 <dt className=&quot;flex items - center gap - x-3 text - base font - semibold leading - 7 text - white & quot;>;
                   <reason.icon className=&quot;h - 5 w - 5 flex - none text - blue - 400 & quot; aria - hidden=&quot;true & quot; />;
@@ -217,7 +217,7 @@ export default function ServicesPage() {
                 <dd className=&quot;mt - 4 flex flex - auto flex - col text - base leading - 7 text - gray - 300 & quot;>;
                   <p className=&quot;flex - auto & quot;>{reason.description}</p>;
                 </dd>;
-              </div>))}
+              </div>)}
           </dl>;
         </div>;
       </div>;
@@ -244,4 +244,3 @@ export default function ServicesPage() {
         </div>;
       </div>;
     </div>);
-}

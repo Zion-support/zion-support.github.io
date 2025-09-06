@@ -6,5 +6,3 @@ export function ApplicationActions() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

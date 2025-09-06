@@ -14,15 +14,13 @@ interface SearchResult {;
     starter?: string,;
     enterprise?: string;
   }
-}
-;
+
 interface SearchProps {;
   onSearch: (query: string) => void,;
   onResultSelect: (result: SearchResult) => void,;
   placeholder?: string,;
   className?: string,;
   showFilters?: boolean;
-}
 
 const EnhancedSearch: React.FC<SearchProps> = ({
   onSearch,
@@ -30,7 +28,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
   placeholder = "Search revolutionary services...",
   className = "",
   showFilters = true
-}) => {
+) => {
   const [query, setQuery] = useState(''),
   const [isSearching, setIsSearching] = useState(false),
   const [showResults, setShowResults] = useState(false),
@@ -52,8 +50,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
       slug: '/ai-consciousness-evolution-platform-2045',
       relevance: 95,
       features: ['Emotional IntelligenceSelf-AwarenessConsciousness Evolution'],
-      pricing: { starter: '$999/month', enterprise: 'Contact Sales' }
-    },;
+      pricing: { starter: '$999/month', enterprise: 'Contact Sales' },;
     {;
       id: '2',;
       name: 'Quantum AI Hybrid Computing',;
@@ -63,8 +60,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
       slug: '/quantum-ai-hybrid-computing',;
       relevance: 92,;
       features: ['Quantum SupremacyAI IntegrationHybrid Computing'],;
-      pricing: { starter: '$1,499/month', enterprise: 'Contact Sales' }
-    },;
+      pricing: { starter: '$1,499/month', enterprise: 'Contact Sales' },;
     {;
       id: '3',;
       name: 'Quantum Cybersecurity Intelligence',;
@@ -75,7 +71,6 @@ const EnhancedSearch: React.FC<SearchProps> = ({
       relevance: 88,;
       features: ['Quantum ResistanceThreat PredictionAI Security'],;
       pricing: { starter: '$799/month', enterprise: 'Contact Sales' }
-    }
   ],;
   const categories = [;
     { id: 'ai', name: 'AI & ML', icon: Brain, color: 'from-purple-500 to-pink-500' },;
@@ -86,29 +81,29 @@ const EnhancedSearch: React.FC<SearchProps> = ({
   // Debounced search function;
   const debouncedSearch = useCallback(;
     useMemo(;
-      () => debounce((searchQuery: string) => {;
+      () => debounce(searchQuery: string) => {;
         if (searchQuery.trim().length < 2) {;
           setResults([]),;
           setShowResults(false),;
           return;
         }
-;
+
         setIsSearching(true),;
         // Simulate API call delay;
-        setTimeout(() => {;
+        setTimeout() => {;
           const filteredResults = mockSearchResults.filter(result => {;
-            const matchesQuery = result.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-                               result.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-                               result.category.toLowerCase().includes(searchQuery.toLowerCase()),;
-            const matchesFilters = selectedFilters.length === 0 ||;
+            const matchesQuery = result.name.toLowerCase().includes(searchQuery.toLowerCase() ||;
+                               result.description.toLowerCase().includes(searchQuery.toLowerCase() ||;
+                               result.category.toLowerCase().includes(searchQuery.toLowerCase(),;
+            const matchesFilters = selectedFilters.length = = 0 ||;
                                  selectedFilters.some(filter =>;
-                                   result.category.toLowerCase().includes(filter.toLowerCase()) ||;
-                                   result.type.toLowerCase().includes(filter.toLowerCase());
+                                   result.category.toLowerCase().includes(filter.toLowerCase() ||;
+                                   result.type.toLowerCase().includes(filter.toLowerCase();
                                  ),;
             return matchesQuery && matchesFilters;
           }),;
           // Sort by relevance;
-          const sortedResults = filteredResults.sort((a, b) => b.relevance - a.relevance),;
+          const sortedResults = filteredResults.sort(a, b) => b.relevance - a.relevance),;
           setResults(sortedResults),;
           setShowResults(true),;
           setIsSearching(false);
@@ -118,61 +113,57 @@ const EnhancedSearch: React.FC<SearchProps> = ({
     ),;
     [selectedFilters];
   ),;
-  useEffect(() => {;
+  useEffect() => {;
     debouncedSearch(query);
   }, [query, debouncedSearch]),;
   // Handle search input change;
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {;
     const value = e.target.value,;
     setQuery(value),;
-    if (value.trim().length === 0) {;
+    if (value.trim().length = = 0) {;
       setShowResults(false),;
       setResults([]);
-    }
-  }, [suggestions, selectedIndex, query, handleSearch]),;
+    }, [suggestions, selectedIndex, query, handleSearch]),;
   // Close search on outside click;
-  useEffect(() => {;
+  useEffect() => {;
     const handleClickOutside = (event: MouseEvent) => {;
-      if (searchRef.current && !searchRef.current.contains(event.target as Node)) {;
+      if (searchRef.current && !searchRef.current.contains(event.target as Node) {;
         setIsOpen(false);
-      }
-    },;
+      },;
   // Handle search submission;
   const handleSearch = (e: React.FormEvent) => {;
     e.preventDefault(),;
-    if (query.trim()) {;
+    if (query.trim() {;
       onSearch(query),;
       addToSearchHistory(query),;
       setShowResults(false);
-    }
-  }, [router, handleSearch]),;
+    }, [router, handleSearch]),;
   // Handle quick action click;
-  const handleQuickAction = useCallback((action: string) => {;
+  const handleQuickAction = useCallback(action: string) => {;
     router.push(action),;
     setIsOpen(false);
   }, [router]),;
   // Add search to history;
   const addToSearchHistory = (searchTerm: string) => {;
-    const newHistory = [searchTerm, ...searchHistory.filter(item => item !== searchTerm)].slice(0, 5),;
+    const newHistory = [searchTerm, ...searchHistory.filter(item => item != searchTerm)].slice(0, 5),;
     setSearchHistory(newHistory),;
-    localStorage.setItem('zion-search-history', JSON.stringify(newHistory));
+    localStorage.setItem('zion-search-history', JSON.stringify(newHistory);
   },;
   // Load search history from localStorage;
-  useEffect(() => {;
+  useEffect() => {;
     const savedHistory = localStorage.getItem('zion-search-history'),;
     if (savedHistory) {;
       try {;
-        setSearchHistory(JSON.parse(savedHistory));
+        setSearchHistory(JSON.parse(savedHistory);
       } catch (error) {;
         console.error('Failed to parse search history:', error);
       }
-    }
   }, []),;
   // Handle filter toggle;
   const toggleFilter = (filterId: string) => {;
     setSelectedFilters(prev =>;
       prev.includes(filterId);
-        ? prev.filter(id => id !== filterId);
+        ? prev.filter(id => id != filterId);
         : [...prev, filterId];
     );
   },;
@@ -212,7 +203,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
               <X className="w-4 h-4" />
             </button>
           )}
-;
+
           {/* Search Button */}
           <button
             type="submit"
@@ -227,10 +218,10 @@ const EnhancedSearch: React.FC<SearchProps> = ({
       <AnimatePresence>;
         {showResults && (;
           <motion.div;
-            initial={{ opacity: 0, y: -10, scale: 0.95 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: -10, scale: 0.95 }}
-            transition={{ duration: 0.2 }}
+            initial={ opacity: 0, y: -10, scale: 0.95 }
+            animate={ opacity: 1, y: 0, scale: 1 }
+            exit={ opacity: 0, y: -10, scale: 0.95 }
+            transition={ duration: 0.2 }
             className="absolute top-full left-0 right-0 mt-2 bg-gray-900/95 backdrop-blur-md border border-gray-700 rounded-xl shadow-2xl z-50 max-h-96 overflow-y-auto";
           >;
             {/* Filters */}
@@ -241,7 +232,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
                   <span className="text-sm font-medium text-gray-300">Filter by Category</span>;
                 </div>;
                 <div className="flex flex-wrap gap-2">;
-                  {categories.map((category) => (;
+                  {categories.map(category) => (;
                     <button;
                       key={category.id}
                       onClick={() => toggleFilter(category.id)}
@@ -269,16 +260,16 @@ const EnhancedSearch: React.FC<SearchProps> = ({
                 <AnimatePresence>;
                   {showSuggestions && suggestions.length > 0 && (;
                     <motion.div;
-                      initial={{ opacity: 0, y: -10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -10 }}
+                      initial={ opacity: 0, y: -10 }
+                      animate={ opacity: 1, y: 0 }
+                      exit={ opacity: 0, y: -10 }
                       className="absolute top-full left-0 right-0 mt-2 bg-gray-900 border border-gray-700 rounded-xl shadow-2xl overflow-hidden z-10";
                     >;
                       {/* Quick Actions */}
                       <div className="p-4 border-b border-gray-700">;
                         <h3 className="text-sm font-medium text-gray-400 mb-3">Quick Actions</h3>;
                         <div className="grid grid-cols-2 gap-2">;
-                          {quickActions.map((action) => (;
+                          {quickActions.map(action) => (;
                             <button;
                               key={action.name}
                               onClick={() => handleQuickAction(action.action)}
@@ -287,12 +278,12 @@ const EnhancedSearch: React.FC<SearchProps> = ({
                               {action.icon}
                               <span>{action.name}</span>;
                             </button>;
-                          ))}
+                          )}
                         </div>;
                       </div>;
                       {/* Suggestions */}
                       <div className="max-h-64 overflow-y-auto">;
-                        {suggestions.map((suggestion) => (;
+                        {suggestions.map(suggestion) => (;
                           <button;
                             key={suggestion.id}
                             onClick={() => handleSuggestionClick(suggestion)}
@@ -309,14 +300,14 @@ const EnhancedSearch: React.FC<SearchProps> = ({
                             </div>;
                             <ArrowRight className="w-4 h-4 text-gray-400" />;
                           </button>;
-                        ))}
+                        )}
                       </div>;
                     </motion.div>;
                   )}
                 </AnimatePresence>;
               </div>;
             )}
-;
+
             {/* Search Results */}
             <div className="p-4">;
               {isSearching ? (;
@@ -326,10 +317,10 @@ const EnhancedSearch: React.FC<SearchProps> = ({
                 </div>;
               ) : results.length > 0 ? (;
                 <div className="space-y-3">;
-                  {results.map((result) => (;
+                  {results.map(result) => (;
                     <motion.div;
                       key={result.id}
-                      whileHover={{ scale: 1.02 }}
+                      whileHover={ scale: 1.02 }
                       className="p-3 bg-gray-800/50 rounded-lg cursor-pointer hover:bg-gray-700/50 transition-all duration-300 border border-transparent hover:border-cyan-400/30";
                       onClick={() => handleResultSelect(result)}
                     >;
@@ -354,7 +345,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
                         </div>;
                       </div>;
                     </motion.div>;
-                  ))}
+                  )}
                 </div>
               ) : query.trim().length > 0 ? (
                 <div className="text-center py-8">
@@ -371,7 +362,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
                         <span className="text-sm font-medium text-gray-300">Recent Searches</span>;
                       </div>;
                       <div className="flex flex-wrap gap-2">;
-                        {searchHistory.map((term, index) => (;
+                        {searchHistory.map(term, index) => (;
                           <button;
                             key={index}
                             onClick={() => setQuery(term)}
@@ -379,11 +370,11 @@ const EnhancedSearch: React.FC<SearchProps> = ({
                           >;
                             {term}
                           </button>;
-                        ))}
+                        )}
                       </div>;
                     </div>;
                   )}
-;
+
                   {/* Popular Searches */}
                   <div>;
                     <div className="flex items-center gap-2 mb-3">;
@@ -391,7 +382,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
                       <span className="text-sm font-medium text-gray-300">Popular Searches</span>;
                     </div>;
                     <div className="flex flex-wrap gap-2">;
-                      {popularSearches.map((term, index) => (;
+                      {popularSearches.map(term, index) => (;
                         <button;
                           key={index}
                           onClick={() => setQuery(term)}
@@ -399,7 +390,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
                         >;
                           {term}
                         </button>;
-                      ))}
+                      )}
                     </div>;
                   </div>;
                 </div>;
@@ -410,17 +401,16 @@ const EnhancedSearch: React.FC<SearchProps> = ({
       </AnimatePresence>;
     </div>;
   );
-},;
-// Debounce utility function;
+,;
+/ Debounce utility function;
 function debounce<T extends (...args: any[]) => any>(;
   func: T,;
   wait: number;
-): (...args: Parameters<T>) => void {;
+: (...args: Parameters<T>) => void {;
   let timeout: NodeJS.Timeout,;
   return (...args: Parameters<T>) => {;
     clearTimeout(timeout),;
-    timeout = setTimeout(() => func(...args), wait);
+    timeout = setTimeout() => func(...args), wait);
   }
-}
-;
+
 export default EnhancedSearch;

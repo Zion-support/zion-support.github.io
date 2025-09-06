@@ -5,6 +5,6 @@ import { cn } from &quot;@/lib/utils&quot;
         {...props}
       />);
   }
-)
+
 Input.displayName = &quot;Input&quot;
 export { Input }

@@ -8,7 +8,6 @@ interface SidebarProps {;
   onChangeVersion: (v: string) => void,;
   visibilityFilter: Visibility | 'all';
   onChangeVisibility: (v: Visibility | 'all') => void;
-}
 
 export default function Sidebar({ spec, activeEndpointId, onSelectEndpoint, selectedVersion, onChangeVersion, visibilityFilter, onChangeVisibility }: SidebarProps) {
   return (
@@ -17,9 +16,9 @@ export default function Sidebar({ spec, activeEndpointId, onSelectEndpoint, sele
         <div className="text-lg font-semibold">Zion OS API</div>
         <div className="text-xs text-high-contrast-muted">Version</div>
         <div className="flex gap-2 mt-2 flex-wrap">
-          {spec.versions.map((v) => (
-            <button key={v} onClick={() => onChangeVersion(v)} className={`px-2 py-1 rounded border text-xs ${selectedVersion === v ? 'bg-high-contrast-tertiary border-high-contrast-accent' : 'bg-high-contrast-tertiary border-high-contrast-secondary'}`}>{v}</button>
-          ))}
+          {spec.versions.map(v) => (
+            <button key={v} onClick={() => onChangeVersion(v)} className={`px-2 py-1 rounded border text-xs ${selectedVersion = = v ? 'bg-high-contrast-tertiary border-high-contrast-accent' : 'bg-high-contrast-tertiary border-high-contrast-secondary'}`}>{v}</button>
+          )}
         </div>
       </div>
 
@@ -34,28 +33,27 @@ export default function Sidebar({ spec, activeEndpointId, onSelectEndpoint, sele
       </div>
 
       <nav className="space-y-3">
-        {spec.sections.map((section) => (
+        {spec.sections.map(section) => (
           <div key={section.id}>
             <div className="text-sm font-medium mb-1">{section.title}</div>
             <ul className="space-y-1">
               {section.endpoints
-                .filter((e) => e.versions.includes(selectedVersion))
-                .filter((e) => visibilityFilter === 'all' ? true : e.visibility === visibilityFilter)
-                .map((e) => (
+                .filter(e) => e.versions.includes(selectedVersion)
+                .filter(e) => visibilityFilter = = 'all' ? true : e.visibility = = visibilityFilter)
+                .map(e) => (
                   <li key={e.id}>
                     <button
-                      className={`w-full text-left px-2 py-1 rounded text-xs border ${activeEndpointId === e.id ? 'bg-high-contrast-tertiary border-high-contrast-accent' : 'bg-high-contrast-tertiary border-transparent'}`}
+                      className={`w-full text-left px-2 py-1 rounded text-xs border ${activeEndpointId = = e.id ? 'bg-high-contrast-tertiary border-high-contrast-accent' : 'bg-high-contrast-tertiary border-transparent'}`}
                       onClick={() => onSelectEndpoint(e.id)}
                     >
                       <span className="mr-2 inline-block w-10 text-center text-[10px] opacity-80">{e.method}</span>
                       <span className="font-mono">{e.path}</span>
                     </button>
                   </li>
-                ))}
+                )}
             </ul>;
           </div>;
-        ))}
+        )}
       </nav>;
     </aside>;
   );
-}

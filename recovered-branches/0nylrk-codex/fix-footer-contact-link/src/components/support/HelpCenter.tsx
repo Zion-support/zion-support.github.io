@@ -14,7 +14,7 @@ export default function HelpCenter() {
   const [searchQuery, setSearchQuery] = useState("");
 
   const handleCategorySelect = (categoryId: string) => {
-    (setSelectedCategory(categoryId), setSelectedArticle(null));
+    (setSelectedCategory(categoryId), setSelectedArticle(null);
   }
   const handleArticleSelect = (articleId: string) => {
     setSelectedArticle(articleId);
@@ -276,7 +276,7 @@ export default function HelpCenter() {
       </div>
     </AppLayout>
   );
-}
+
                     </p>;
                   </div>;
                 </div>;
@@ -355,6 +355,5 @@ export default function HelpCenter() {
       </div>;
     </AppLayout>;
   );
-}
+
     </AppLayout>);
-}

@@ -6,5 +6,3 @@ export function ContentGenerator() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

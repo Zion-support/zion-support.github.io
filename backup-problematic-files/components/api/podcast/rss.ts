@@ -5,20 +5,19 @@ const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json'),;
 const RSS_PATH = path.join(process.cwd(), 'publicpodcast.xml'),;
 function ensureStorage() {;
   const dir = path.dirname(EPISODES_PATH),;
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true }),;
-  if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]utf8');
-}
+  if (!fs.existsSync(dir) fs.mkdirSync(dir, { recursive: true }),;
+  if (!fs.existsSync(EPISODES_PATH) fs.writeFileSync(EPISODES_PATH, '[]utf8');
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' }),
+  if (req.method != 'POST') return res.status(405).json({ error: 'Method not allowed' }),
   ensureStorage(),
 
   const siteUrl = process.env.SITE_URL || 'http: //localhost:3000',
-  const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[],
+  const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8') as any[],
 
   const items = episodes
-    .filter((e) => e.audio?.mp3Url)
-    .map((e) => {
+    .filter(e) => e.audio?.mp3Url)
+    .map(e) => {
       const pubDate = new Date(e.createdAt).toUTCString(),
       const audioUrl = `${siteUrl}${e.audio.mp3Url}`,
       return `
@@ -41,15 +40,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     <language>en-us</language>
     <itunes:author>Zion</itunes:author>
     <description>Zion interviews builders, founders, and contributors.</description>
-;
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' }),;
+  if (req.method != 'POST') return res.status(405).json({ error: 'Method not allowed' }),;
   ensureStorage(),;
   const siteUrl = process.env.SITE_URL || 'http: //localhost:3000',;
-  const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[],;
+  const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8') as any[],;
   const items = episodes;
-    .filter((e) => e.audio?.mp3Url);
-    .map((e) => {;
+    .filter(e) => e.audio?.mp3Url);
+    .map(e) => {;
       const pubDate = new Date(e.createdAt).toUTCString(),;
       const audioUrl = `${siteUrl}${e.audio.mp3Url}`,;
       return `;
@@ -76,4 +75,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 </rss>`;
   fs.writeFileSync(RSS_PATH, xml, 'utf8');
   return res.status(200).json({ ok: true, path: '/podcast.xml' });
-}

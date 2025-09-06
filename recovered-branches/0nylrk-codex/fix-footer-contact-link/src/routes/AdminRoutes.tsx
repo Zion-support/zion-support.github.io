@@ -2,7 +2,7 @@
 import {Fragment} from "react";
 import {Route, Routes} from "react-router-dom";
 import {ProtectedRoute} from "@/components/ProtectedRoute";
-// Admin Pages
+/ Admin Pages
 import QuoteManager from "@/pages/admin/QuoteManager",
 import ReviewsModeration from "@/pages/admin/ReviewsModeration",
 import WhitelabelManager from "@/pages/admin/WhitelabelManager",
@@ -90,13 +90,13 @@ const AdminRoutes = () => {
       />
     </Routes>
   )
-}
+
 export default AdminRoutes;
 
 import { Fragment } from './react';
 import { Route, Routes } from './react-router-dom';
 import { ProtectedRoute } from '@/components / ProtectedRoute';
-// Admin Pages;
+/ Admin Pages;
 import QuoteManager from "@/pages / admin / QuoteManager";
 import ReviewsModeration from "@/pages / admin / ReviewsModeration";
 import WhitelabelManager from "@/pages / admin / WhitelabelManager";
@@ -182,7 +182,5 @@ const AdminRoutes = () =>: any {
         }
       />;
     </Routes>);
-}
-;
+
 export default AdminRoutes;
-;

@@ -6,5 +6,3 @@ export function LandingPage() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

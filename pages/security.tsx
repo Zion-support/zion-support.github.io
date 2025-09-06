@@ -41,13 +41,13 @@ const securityFeatures = [
     icon: AlertTriangle
     details: ['24/7 incident response', 'Security team on standby', 'Rapid containment', 'Post-incident analysis']
   }
-];
+;
 const securityStats = [
   { number: '99.9%', label: 'Uptime Guarantee' }
   { number: '24/7', label: 'Security Monitoring' }
   { number: '0', label: 'Security Breaches' }
   { number: '100%', label: 'Data Encryption' }
-];
+;
 export default function SecurityPage() {
 
   return (
@@ -65,9 +65,9 @@ export default function SecurityPage() {
           </div>
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -83,12 +83,12 @@ export default function SecurityPage() {
         <section className="py-16 bg-white">;
           <div className="container mx-auto px-4">;
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">;
-              {securityStats && securityStats.map((stat, index) => (;
+              {securityStats && securityStats.map(stat, index) => (;
                 <motion&& motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+                  initial={ opacity: 0, y: 30 }
+                  animate={ opacity: 1, y: 0 }
+                  transition={ duration: 0 && 0.6, delay: index * 0 && 0.1 }
                   className="text-center">;
                   <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">;
                     {stat && stat.number}
@@ -97,7 +97,7 @@ export default function SecurityPage() {
                     {stat && stat.label}
                   </div>;
                 </motion && motion.div>;
-              ))}
+              )}
             </div>
           </div>
         </section>
@@ -105,9 +105,9 @@ export default function SecurityPage() {
         <section className="py-16">;
           <div className="container mx-auto px-4">;
             <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="text-center mb-12"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -118,12 +118,12 @@ export default function SecurityPage() {
               </p>
             </motion.div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {securityFeatures.map((feature, index) => (
+              {securityFeatures.map(feature, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, coordinate_y: 30 }}
-                  animate={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={ opacity: 0, coordinate_y: 30 }
+                  animate={ opacity: 1, coordinate_y: 0 }
+                  transition={ duration: 0.6, delay: index * 0.1 }
                   className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6"
                 >
                   <div className="flex items-center mb-4">
@@ -138,16 +138,16 @@ export default function SecurityPage() {
                   <div className="space-y-2">
                     <h4 className="font-semibold text-gray-900 text-sm">Key Features:</h4>
                     <ul className="space-y-1">
-                      {feature.details.map((detail, idx) => (
+                      {feature.details.map(detail, idx) => (
                         <li key={idx} className="flex items-center text-sm text-gray-600">
                           <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
                           {detail}
                         </li>;
-                      ))}
+                      )}
                     </ul>;
                   </div>;
                 </motion && motion.div>;
-              ))}
+              )}
             </div>
           </div>
         </section>
@@ -155,9 +155,9 @@ export default function SecurityPage() {
         <section className="py-16 bg-white">;
           <div className="container mx-auto px-4">;
             <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="text-center mb-12"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -208,9 +208,9 @@ export default function SecurityPage() {
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">;
           <div className="container mx-auto px-4 text-center">;
             <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}>;
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }>;
               <h2 className="text-3xl md:text-4xl font-bold mb-6">;
                 Questions About Our Security?;
               </h2>;
@@ -248,22 +248,18 @@ export default function SecurityPage() {
       </div>;
     </Layout>;
   );
-}
+
   );
   );
-}  )
-}
-)
-}
   )
-}
+
         {/* CTA Section */}
         <section className="py - 20 bg - gradient - to - r from - blue - 600 to - purple - 600 text - white">;
           <div className="container mx - auto px - 4 text - center">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, coordinate_y: 30 }
+              animate={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
             >;
               <h2 className="text - 3xl md:text - 4xl font - bold mb - 6">;
                 Questions About Our Security?;
@@ -290,7 +286,4 @@ export default function SecurityPage() {
         </section>;
       </div>;
     </Layout>);
-}  );
-}
-);
-}
+  );

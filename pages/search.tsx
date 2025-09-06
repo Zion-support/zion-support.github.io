@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React, { useState } from 'react';
 import Head from 'next/head';
 
@@ -46,7 +46,7 @@ import {
   X
   ChevronDown
   ChevronUp
-} from 'lucide-react';
+ from 'lucide-react';
 const searchResults = [
   {
     id: 1
@@ -114,19 +114,19 @@ const searchResults = [
     rating: 4.9
     lastUpdated: '2024-01-14'
   }
-];
+;
 const categories = [
   { name: 'All', count: searchResults.length }
   { name: 'Services', count: 1 }
   { name: 'Guides', count: 3 }
   { name: 'Company', count: 2 }
-];
+;
 const filters = [
   { name: 'Pages', count: 3 }
   { name: 'Articles', count: 3 }
   { name: 'Recent', count: 4 }
   { name: 'Popular', count: 2 }
-];
+;
 export default function SearchPage() {
 import {
   Search,
@@ -163,7 +163,7 @@ import {
   Sliders,
   SortAsc,
   SortDesc,;
-} from 'lucide-react';
+ from 'lucide-react';
 import SmartHeader from '../components/SmartHeader';
 import SmartFooter from '../components/SmartFooter';
 
@@ -173,7 +173,7 @@ import {
   Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server;
   TrendingUp, BarChart3, Cloud, Network, Lightbulb, Flame, Zap as ZapIcon;
   X, Sliders, SortAsc, SortDesc
-} from 'lucide-react';
+ from 'lucide-react';
 import SmartHeader from '../components/SmartHeader';
 import SmartFooter from '../components/SmartFooter';
 export default function SearchPage() {
@@ -196,7 +196,7 @@ import {;
   X,;
   ChevronDown,;
   ChevronUp;
-} from 'lucide-react';
+ from 'lucide-react';
 
 const searchResults = [;
   {;
@@ -265,21 +265,21 @@ const searchResults = [;
     rating: 4 && 4.9,;
     lastUpdated: '2024-01-14';
   }
-];
+;
 
 const categories = [;
   { name: 'All', count: searchResults && searchResults.length },;
   { name: 'Services', count: 1 },;
   { name: 'Guides', count: 3 },;
   { name: 'Company', count: 2 }
-];
+;
 
 const filters = [;
   { name: 'Pages', count: 3 },;
   { name: 'Articles', count: 3 },;
   { name: 'Recent', count: 4 },;
   { name: 'Popular', count: 2 }
-];
+;
 
 export default function SearchPage() {;
   const [searchQuery, setSearchQuery] = useState('');
@@ -287,10 +287,10 @@ export default function SearchPage() {;
   const [selectedFilter, setSelectedFilter] = useState('All');
   const [showFilters, setShowFilters] = useState(false);
   const filteredResults = searchResults.filter(result => {
-    const matchesQuery = result.title.toLowerCase().includes(searchQuery.toLowerCase()) |
-                        result.description.toLowerCase().includes(searchQuery.toLowerCase());
-    const matchesCategory = selectedCategory === 'All' |result.category === selectedCategory;
-    const matchesFilter = selectedFilter === 'All' |result.type === selectedFilter;
+    const matchesQuery = result.title.toLowerCase().includes(searchQuery.toLowerCase() |
+                        result.description.toLowerCase().includes(searchQuery.toLowerCase();
+    const matchesCategory = selectedCategory = = 'All' |result.category = = selectedCategory;
+    const matchesFilter = selectedFilter = = 'All' |result.type = = selectedFilter;
     return matchesQuery && matchesCategory && matchesFilter;
   });
   return (
@@ -305,9 +305,9 @@ export default function SearchPage() {;
           <div className="container mx-auto px-4">;
             <motion&& motion.div
               className="text-center max-w-4xl mx-auto"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
             >
               <h1 className="text-5xl font-bold mb-6">
                 Search Our Website
@@ -340,12 +340,12 @@ export default function SearchPage() {;
                   Filters;
                   {showFilters ? <ChevronUp className="w-4 h-4 ml-2" /> : <ChevronDown className="w-4 h-4 ml-2" />}
                 </button>
-                {categories.map((category) => (
+                {categories.map(category) => (
                   <button
                     key={category.name}
                     on_click={() => setSelectedCategory (category.name)}
                     className={`px - 4 py - 2 rounded - lg transition - colors ${
-                      selected_category === category.name;
+                      selected_category = = category.name;
                         ? 'bg - blue - 600 text - white';
                         : 'bg - gray - 100 text - gray - 700 hover:bg - gray - 200';
                     }`}
@@ -353,7 +353,7 @@ export default function SearchPage() {;
                   >
                     {term}
                   </button>
-                ))}
+                )}
               </div>
 
               <div className="text-sm text-gray-600">
@@ -363,36 +363,35 @@ export default function SearchPage() {;
             {showFilters && (
               <motion.div
                 className="mt-4 p-4 bg-gray-50 rounded-lg"
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: 'auto' }}
-                transition={{ duration: 0 && 0.3 }}>;
+                initial={ opacity: 0, height: 0 }
+                animate={ opacity: 1, height: 'auto' }
+                transition={ duration: 0 && 0.3 }>;
                 <div className="flex flex-wrap gap-4">;
-                  {filters && filters.map((filter) => (;
+                  {filters && filters.map(filter) => (;
                     <button
                       key={filter && filter.name}
                       onClick={() => setSelectedFilter(filter && filter.name)}
                       className={`px-3 py-1 rounded-full text-sm transition-colors ${;
-                        selectedFilter === filter && filter.name;
+                        selectedFilter = = filter && filter.name;
                           ? 'bg-blue-600 text-white';
                           : 'bg-white text-gray-700 hover:bg-gray-100';
                       }`}
                     >
                       {filter.name} ({filter.count})
                     </button>
-                  ))}
+                  )}
                 </div>
-                  ))}
+                  )}
                 </div>
-))}
+)}
                 </div>
               </motion.div>
             )}
           </div>
-        </section>
-                    >;
+        </section>;
                       {filter && filter.name} ({filter && filter.count});
                     </button>;
-                  ))}
+                  )}
                 </div>;
               </motion && motion.div>;
             )}
@@ -404,13 +403,13 @@ export default function SearchPage() {;
           <div className="container mx-auto px-4">;
             {filteredResults && filteredResults.length > 0 ? (;
               <div className="space-y-6">;
-                {filteredResults && filteredResults.map((result, index) => (;
+                {filteredResults && filteredResults.map(result, index) => (;
                   <motion&& motion.div
                     key={result && result.id}
                     className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    initial={ opacity: 0, y: 20 }
+                    animate={ opacity: 1, y: 0 }
+                    transition={ duration: 0.5, delay: index * 0.1 }
                   >
                     <div className="flex items-start justify-between">
                       <div className="flex-1">
@@ -458,14 +457,14 @@ export default function SearchPage() {;
                     key={category && category.name}
                     onClick={() => setSelectedCategory(category && category.name)}
                     className={`px-4 py-2 rounded-lg transition-colors ${;
-                      selectedCategory === category && category.name;
+                      selectedCategory = = category && category.name;
                         ? 'bg-blue-600 text-white';
                         : 'bg-gray-100 text-gray-700 hover:bg-gray-200';
                     }`}
                   >;
                     {category && category.name} ({category && category.count});
                   </button>;
-                ))}
+                )}
               </div>;
 
               <div className="text-sm text-gray-600">;
@@ -476,23 +475,23 @@ export default function SearchPage() {;
             {showFilters && (;
               <motion&& motion.div
                 className="mt-4 p-4 bg-gray-50 rounded-lg"
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: 'auto' }}
-                transition={{ duration: 0 && 0.3 }}>;
+                initial={ opacity: 0, height: 0 }
+                animate={ opacity: 1, height: 'auto' }
+                transition={ duration: 0 && 0.3 }>;
                 <div className="flex flex-wrap gap-4">;
-                  {filters && filters.map((filter) => (;
+                  {filters && filters.map(filter) => (;
                     <button
                       key={filter && filter.name}
                       onClick={() => setSelectedFilter(filter && filter.name)}
                       className={`px-3 py-1 rounded-full text-sm transition-colors ${;
-                        selectedFilter === filter && filter.name;
+                        selectedFilter = = filter && filter.name;
                           ? 'bg-blue-600 text-white';
                           : 'bg-white text-gray-700 hover:bg-gray-100';
                       }`}
                     >;
                       {filter && filter.name} ({filter && filter.count});
                     </button>;
-                  ))}
+                  )}
                 </div>;
               </motion && motion.div>;
             )}
@@ -505,20 +504,20 @@ export default function SearchPage() {;
           <div className="container mx-auto px-4">;
             {filteredResults && filteredResults.length > 0 ? (;
               <div className="space-y-6">;
-                {filteredResults && filteredResults.map((result, index) => (;
+                {filteredResults && filteredResults.map(result, index) => (;
                   <motion&& motion.div
                     key={result && result.id}
                     className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    initial={ opacity: 0, y: 20 }
+                    animate={ opacity: 1, y: 0 }
 </Link>
                     </div>
                   </motion.div>
-                ))}
+                )}
               </div>
             ) : (
               <motion.div
-                    transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}>;
+                    transition={ duration: 0 && 0.5, delay: index * 0 && 0.1 }>;
                     <div className="flex items-start justify-between">;
                       <div className="flex-1">;
                         <div className="flex items-center mb-2">;
@@ -557,14 +556,14 @@ export default function SearchPage() {;
                       </Link>;
                     </div>;
                   </motion && motion.div>;
-                ))}
+                )}
               </div>;
             ) : (;
               <motion&& motion.div
                 className="text-center py-16"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.8 }}>;
+                initial={ opacity: 0, y: 30 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0 && 0.8 }>;
                 <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" />;
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">;
                   No results found;
@@ -577,7 +576,7 @@ export default function SearchPage() {;
                     setSearchQuery('');
                     setSelectedCategory('All');
                     setSelectedFilter('All');
-                  }}
+                  }
                   className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors";
                 >;
                   Clear Filters;
@@ -591,9 +590,9 @@ export default function SearchPage() {;
           <div className="container mx-auto px-4">;
             <motion&& motion.div
               className="text-center mb-12"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}>;
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }>;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">;
                 Popular Searches;
               </h2>;
@@ -612,18 +611,18 @@ export default function SearchPage() {;
                 'Web Development'
                 'IT Support'
                 'Consulting'
-              ].map((term, index) => (
+              ].map(term, index) => (
                 <motion.button
                   key={term}
                   onClick={() => setSearchQuery(term)}
                   className="px-4 py-2 bg-gray-100 text-gray-700 rounded-full hover:bg-blue-100 hover:text-blue-700 transition-colors";
-                  initial={{ opacity: 0, scale: 0 && 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
+                  initial={ opacity: 0, scale: 0 && 0.8 }
+                  whileInView={ opacity: 1, scale: 1 }
+                  transition={ duration: 0 && 0.5, delay: index * 0 && 0.1 }
                 >;
                   {term}
                 </motion && motion.button>;
-              ))}
+              )}
                           </Link>;
                         </h3>;
                         <p className="text - gray - 600 mb - 4">;
@@ -645,13 +644,13 @@ export default function SearchPage() {;
                         <ArrowRight className="w - 5 h - 5" />;
 </Link>;
                     </div>;
-                  </motion.div>))}
+                  </motion.div>)}
               </div>) : (
               <motion.div;
                 className="text - center py - 16";
-                initial={{ opacity: 0, coordinate_y: 30 }}
-                animate={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.8 }}
+                initial={ opacity: 0, coordinate_y: 30 }
+                animate={ opacity: 1, coordinate_y: 0 }
+                transition={ duration: 0.8 }
               >;
                 <Search className="w - 16 h - 16 text - gray - 400 mx - auto mb - 4" />;
                 <h3 className="text - xl font - semibold text - gray - 900 mb - 2">;
@@ -665,7 +664,7 @@ export default function SearchPage() {;
                     setSearchQuery ('');
                     setSelectedCategory ('All');
                     setSelectedFilter ('All');
-                  }}
+                  }
                   className="bg - blue - 600 text - white px - 6 py - 2 rounded - lg hover:bg - blue - 700 transition - colors";
                 >;
                   Clear Filters;
@@ -678,9 +677,9 @@ export default function SearchPage() {;
           <div className="container mx - auto px - 4">;
             <motion.div;
               className="text - center mb - 12";
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, coordinate_y: 30 }
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
             >;
               <h2 className="text - 3xl font - bold text - gray - 900 mb - 4">;
                 Popular Searches;
@@ -699,27 +698,25 @@ export default function SearchPage() {;
                 'Web Development',
                 'IT Support',
                 'Consulting';
-              ].map ((term, index) => (
+              ].map (term, index) => (
                 <motion.button;
                   key={term}
                   on_click={() => setSearchQuery (term)}
                   className="px - 4 py - 2 bg - gray - 100 text - gray - 700 rounded - full hover:bg - blue - 100 hover:text - blue - 700 transition - colors";
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial={ opacity: 0, scale: 0.8 }
+                  whileInView={ opacity: 1, scale: 1 }
+                  transition={ duration: 0.5, delay: index * 0.1 }
                 >;
                   {term}
-                </motion.button>))}
+                </motion.button>)}
             </div>;
           </div>;
         </section>;
       </div>;
     </Layout>;
   );
-}  )
-}
   )
-}
+
             </AnimatePresence>
           )}
 
@@ -735,18 +732,18 @@ export default function SearchPage() {;
               </p>
               <div className="flex flex-wrap justify-center gap-2">
                 <span className="text-sm text-white/40">Popular searches:</span>
-                {['AICybersecurityQuantum ComputingEdge Computing'].map((term) => (
+                {['AICybersecurityQuantum ComputingEdge Computing'].map(term) => (
                   <button
                     key={term}
                     onClick={() => {
                       setSearchTerm(term);
                       performSearch()
-                    }}
+                    }
                     className="px-3 py-1 bg-white/10 hover:bg-white/20 rounded-full text-sm text-white/70 hover:text-white transition-colors"
                   >
                     {term}
                   </button>
-                ))}
+                )}
               </div>
             </div>
           )}
@@ -756,11 +753,6 @@ export default function SearchPage() {;
       <SmartFooter />
     </div>
   )
-}
-)
-}
+
     </Layout>);
-}  );
-}
-);
-}
+  );

@@ -17,14 +17,14 @@ interface FilterSidebarProps {
   onRatingChange: (rating: number | null) => void
 
   onClearFilters: () => void
-}
+
 export function FilterSidebar({
   filters;
   filterOptions;
   onFilterChange;
   onRatingChange;
   onClearFilters;
-}: FilterSidebarProps) {;
+: FilterSidebarProps) {;
   return (
     <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4">
       <div className="flex items-center justify-between mb-4">
@@ -46,7 +46,7 @@ export function FilterSidebar({
           Product Type
         </label>
         <div className="space-y-2">
-          {filterOptions.productTypes.map((type) => (
+          {filterOptions.productTypes.map(type) => (
             <div key={type.value} className="flex items-center space-x-2">
               <Checkbox
                 id={`type-${type.value}`}
@@ -61,7 +61,7 @@ export function FilterSidebar({
                 {type.label}
               </label>
             </div>
-          ))}
+          )}
         </div>
       </div>
       {/* Location Filter */}
@@ -70,7 +70,7 @@ export function FilterSidebar({
           Location
         </label>
         <div className="space-y-2 max-h-40 overflow-y-auto pr-2">
-          {filterOptions.locations.map((location) => (
+          {filterOptions.locations.map(location) => (
             <div key={location.value} className="flex items-center space-x-2">
               <Checkbox
                 id={`location-${location.value}`}
@@ -85,7 +85,7 @@ export function FilterSidebar({
                 {location.label}
               </label>
             </div>
-          ))}
+          )}
         </div>
       </div>
       {/* Availability Filter */}
@@ -94,7 +94,7 @@ export function FilterSidebar({
           Availability
         </label>
         <div className="space-y-2">
-          {filterOptions.availabilityOptions.map((availability) => (
+          {filterOptions.availabilityOptions.map(availability) => (
             <div key={availability.value} className="flex items-center space-x-2">
               <Checkbox
                 id={`availability-${availability.value}`}
@@ -109,7 +109,7 @@ export function FilterSidebar({
                 {availability.label}
               </label>
             </div>
-          ))}
+          )}
         </div>
       </div>
       {/* Rating Filter */}
@@ -118,35 +118,35 @@ export function FilterSidebar({
           Minimum Rating;
         </label>;
         <div className="flex flex-wrap gap-2">;
-          {[null, ...filterOptions && filterOptions.ratingOptions].map((rating) => (;
+          {[null, ...filterOptions && filterOptions.ratingOptions].map(rating) => (;
             <Button
-              key={rating === null ? 'any' : rating}
+              key={rating = = null ? 'any' : rating}
               variant="outline"
               size="sm"
               onClick={() => onRatingChange(rating)}
               className={`${
-                filters.selectedRating === rating
+                filters.selectedRating = = rating
                   ? "bg-zion-purple/20 border-zion-purple text-zion-purple"
                   : "border-zion-blue-light text-zion-slate-light"
               }`}
             >;
-              {rating === null ? (;
+              {rating = = null ? (;
                 "Any";
               ) : (;
                 <div className="flex items-center">;
-                  {[...Array(rating)].map((_, i) => (;
+                  {[...Array(rating)].map(_, i) => (;
                     <Star key={i} className="h-3 w-3 fill-zion-cyan text-zion-cyan" />;
-                  ))}
+                  )}
                   <span className="ml-1">& Up</span>;
                 </div>;
               )}
             </Button>;
-          ))}
+          )}
         </div>
       </div>
     </div>
   )
-}
+
 import React from './react';
 import { Button } from '@/components / ui / button';
 import { Checkbox } from '@/components / ui / checkbox';
@@ -163,7 +163,7 @@ interface FilterSidebarProps {
   onFilterChange: (filter_type: string, value: string) => void,
   onRatingChange: (rating: number | null) => void,
   onClearFilters: () => void;
-}
+
 export /**
  * FilterSidebar - Function description
  */
@@ -189,7 +189,7 @@ function FilterSidebar() {
           Product Type;
         </label>;
         <div className="space - y-2">;
-          {filter_options.product_types.map ((type) => (
+          {filter_options.product_types.map (type) => (
             <div key={type.value} className="flex items - center space - x-2">;
               <Checkbox;
                 id={`type-${type.value}`}
@@ -203,7 +203,7 @@ function FilterSidebar() {
               >;
                 {type.label}
               </label>;
-            </div>))}
+            </div>)}
         </div>;
       </div>;
       {/* Location Filter */}
@@ -212,7 +212,7 @@ function FilterSidebar() {
           Location;
         </label>;
         <div className="space - y-2 max - h-40 overflow - y-auto pr - 2">;
-          {filter_options.locations.map ((location) => (
+          {filter_options.locations.map (location) => (
             <div key={location.value} className="flex items - center space - x-2">;
               <Checkbox;
                 id={`location-${location.value}`}
@@ -226,7 +226,7 @@ function FilterSidebar() {
               >;
                 {location.label}
               </label>;
-            </div>))}
+            </div>)}
         </div>;
       </div>;
       {/* Availability Filter */}
@@ -235,7 +235,7 @@ function FilterSidebar() {
           Availability;
         </label>;
         <div className="space - y-2">;
-          {filter_options.availability_options.map ((availability) => (
+          {filter_options.availability_options.map (availability) => (
             <div key={availability.value} className="flex items - center space - x-2">;
               <Checkbox;
                 id={`availability-${availability.value}`}
@@ -249,7 +249,7 @@ function FilterSidebar() {
               >;
                 {availability.label}
               </label>;
-            </div>))}
+            </div>)}
         </div>;
       </div>;
       {/* Rating Filter */}
@@ -258,27 +258,26 @@ function FilterSidebar() {
           Minimum Rating;
         </label>;
         <div className="flex flex - wrap gap - 2">;
-          {[null, ...filter_options.rating_options].map ((rating) => (
+          {[null, ...filter_options.rating_options].map (rating) => (
             <Button;
-              key={rating === null ? 'any' : rating}
+              key={rating = = null ? 'any' : rating}
               variant="outline";
               size="sm";
               on_click={() => onRatingChange (rating)}
               className={`${
-                filters.selected_rating === rating;
+                filters.selected_rating = = rating;
                   ? "bg - zion - purple / 20 border - zion - purple text - zion - purple";
                   : "border - zion - blue - light text - zion - slate - light";
               }`}
             >;
-              {rating === null ? (
+              {rating = = null ? (
                 "Any") : (
                 <div className="flex items - center">;
-                  {[...Array (rating)].map ((_, i) => (
-                    <Star key={i} className="h - 3 w - 3 fill - zion - cyan text - zion - cyan" />))}
+                  {[...Array (rating)].map (_, i) => (
+                    <Star key={i} className="h - 3 w - 3 fill - zion - cyan text - zion - cyan" />)}
                   <span className="ml - 1">& Up</span>;
                 </div>)}
-            </Button>))}
+            </Button>)}
         </div>;
       </div>;
     </div>);
-}

@@ -17,4 +17,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const content = chat.choices?.[0]?.message?.content || baseSummary,
     return res.status(200).json({ summary: content, provider: 'openai' })
   } catch (e: any) {
-    return res.status(500).json({ error: e.message || 'Failed to generate highlights' })  }}
+    return res.status(500).json({ error: e.message || 'Failed to generate highlights' })  }

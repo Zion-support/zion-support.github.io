@@ -7,7 +7,7 @@ import ForumPostPage from "../pages/ForumPostPage",;
 import CreatePostPage from "../pages/CreatePostPage",;
 import EditPostPage from "../pages/EditPostPage",;
 import CommunityProfilePage from "../pages/CommunityProfilePage",;
-;
+
 const CommunityRoutes = () => {;
   return (;
     <Routes>;
@@ -17,7 +17,6 @@ const CommunityRoutes = () => {;
       <Route path="/community/category/:categoryId" element={<ForumCategoryPage />} />;
       <Route path="/community/post/:postId" element={<ForumPostPage />} />;
       <Route path="/community/profile/:userId" element={<CommunityProfilePage />} />;
-      ;
       {/* Protected routes */}
       <Route;
         path="/community/create";
@@ -37,24 +36,24 @@ const CommunityRoutes = () => {;
       />;
     </Routes>;
   ),;
-},;
-;export default CommunityRoutes,
+,;
+export default CommunityRoutes,
  const CommunityRoutes = () => {
   return (<Routes> {
   /* Public routes */ 
-}<Route path="/community" element= {
+<Route path="/community" element= {
   <CommunityPage /> 
-}/> <Route path="/forum" element= {
+/> <Route path="/forum" element= {
   <CommunityPage /> 
-}/> <Route path="/community/category/:categoryId" element= {
+/> <Route path="/community/category/:categoryId" element= {
   <ForumCategoryPage /> 
-}/> <Route path="/community/post/:postId" element= {
+/> <Route path="/community/post/:postId" element= {
   <ForumPostPage /> 
-}/> <Route path="/community/profile/:userId" element= {
+/> <Route path="/community/profile/:userId" element= {
   <CommunityProfilePage /> 
-}/> /* Protected routes */ 
-}<Route <CreatePostPage /> </ProtectedRoute> 
-}/> <Route <EditPostPage /> </ProtectedRoute> 
-}/> </Routes>) 
-};
+/> /* Protected routes */ 
+<Route <CreatePostPage /> </ProtectedRoute> 
+/> <Route <EditPostPage /> </ProtectedRoute> 
+/> </Routes>) 
+;
 export default CommunityRoutes;

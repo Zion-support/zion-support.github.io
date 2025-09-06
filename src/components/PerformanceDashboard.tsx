@@ -7,7 +7,7 @@ export function PerformanceDashboard() {
       <p className="text-slate-400 text-sm">Performance metrics will be displayed here</p>
     </div>
   );
-}
+
   id: string;
   title: string;
   description: string;
@@ -89,7 +89,6 @@ const PerformanceDashboard: React.FC = () => {
       default:;
         return <AlertCircle className='h - 4 w - 4 text - gray - 500' />;
     }
-  }
   const getImpactColor = (impact: string, ) =>: any {
     switch (impact) {
       case 'high':;
@@ -101,7 +100,6 @@ const PerformanceDashboard: React.FC = () => {
       default:;
         return 'bg - gray - 100 text - gray - 800';
     }
-  }
   const getCategoryIcon = (category: string, ) =>: any {
     switch (category) {
       case 'performance':;
@@ -115,9 +113,8 @@ const PerformanceDashboard: React.FC = () => {
       default:;
         return <CheckCircle className='h - 4 w - 4' />;
     }
-  }
   const completed_improvements = improvements.filter (
-    imp => imp.status === 'completed');
+    imp => imp.status = = 'completed');
   return (
     <div className='space-y-6 p-6'>
       <div className='flex items-center justify-between'>
@@ -272,7 +269,7 @@ const PerformanceDashboard: React.FC = () => {
                   </p>;
                 </div>;
               </div>;
-            ))}
+            )}
           </div>
         </CardContent>
       </Card>
@@ -297,7 +294,7 @@ const PerformanceDashboard: React.FC = () => {
       </div>
     </div>
   )
-}
+
 export default PerformanceDashboard
 export default PerformanceDashboard
 export default PerformanceDashboard
@@ -310,7 +307,6 @@ export default PerformanceDashboard
       </div>;
     </div>;
   );
-};
 
 export default PerformanceDashboard;
 export default PerformanceDashboard, ;
@@ -340,7 +336,7 @@ export default PerformanceDashboard, ;
                     {improvement.description}
                   </p>;
                 </div>;
-              </div>))}
+              </div>)}
           </div>;
         </CardContent>;
       </Card>;
@@ -364,7 +360,7 @@ export default PerformanceDashboard, ;
         </Button>;
       </div>;
     </div>);
-}
+
 export default PerformanceDashboard;
 export default PerformanceDashboard,
 export default PerformanceDashboard,

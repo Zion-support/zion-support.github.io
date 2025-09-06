@@ -3,11 +3,11 @@ import Link from \'next/link\'; import Head from \'next/head\'; export default f
 import React from 'react';
 interface IotedgeProps {
   // Add props here as needed
-}
+
 export default function Iotedge({ }: IotedgeProps) {
 interface IotedgeProps {;
   // Add props here as needed;
-}
+
 export default function Iotedge(): any ({ }: IotedgeProps) {;
   return (
     <div>;
@@ -15,7 +15,3 @@ export default function Iotedge(): any ({ }: IotedgeProps) {;
       <p>This component is currently under development.</p>;
     </div>;
   );
-}
-}
-
-

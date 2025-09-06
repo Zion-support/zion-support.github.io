@@ -113,7 +113,7 @@ export default function About() {
       <Footer />
     </>
   )
-}
+
                   We maintain the highest standards of integrity, transparency, and ethical practices in everything we do.;
                 </p>;
               </div>;
@@ -124,6 +124,5 @@ export default function About() {
       <Footer />;
     </>;
   );
-}
+
     </>);
-}

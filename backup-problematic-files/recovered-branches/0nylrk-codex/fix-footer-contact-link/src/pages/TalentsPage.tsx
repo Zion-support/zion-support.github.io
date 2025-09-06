@@ -1,7 +1,7 @@
 import { DynamicListingPage } from "@/components/DynamicListingPage",;
 import { ProductListing } from "@/types/listings",;
-;
-// Sample talent listings;
+
+/ Sample talent listings;
 const TALENT_LISTINGS:ProductListing[] = [;
   {;
     id:"talent-1",;
@@ -103,8 +103,8 @@ const TALENT_LISTINGS:ProductListing[] = [;
     aiScore:94,;
     rating:4.9,;
     reviewCount:21}],;
-;
-// Filter options specific to talents;
+
+/ Filter options specific to talents;
 const TALENT_FILTERS = [;
   { label:'Engineering', value:'engineering' },;
   { label:'Data Science', value:'data-science' },;
@@ -112,7 +112,7 @@ const TALENT_FILTERS = [;
   { label:'Security', value:'security' },;
   { label:'Development', value:'development' },;
   { label:'Consulting', value:'consulting' }],;
-;
+
 export default function TalentsPage() {;
   return (;
     <DynamicListingPage ;
@@ -121,19 +121,17 @@ export default function TalentsPage() {;
       categorySlug="talents";
       listings={TALENT_LISTINGS}
       categoryFilters={TALENT_FILTERS}
-      initialPrice={{ min:100, max:200 }}
+      initialPrice={ min:100, max:200 }
     />;
   ),; rating: 4.9;
 reviewCount: 21 
-}];
-//Filter options specific to talents export default function TalentsPage () {
+];
+/Filter options specific to talents export default function TalentsPage () {
   return (<DynamicListingPage listings= {
   TALENT LISTINGS 
-}categoryFilters= {
+categoryFilters= {
   TALENT FILTERS 
-}initialPrice= {
-  {
+initialPrice= {
   min: 100, max: 200 
-}
-}/>) 
-}
+
+/>) 

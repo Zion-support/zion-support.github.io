@@ -2,7 +2,6 @@ import React from 'react';
 
 interface AddToCart.testProps {
   className?: string;
-}
 
 const AddToCart.test: React.FC<AddToCart.testProps> = ({ className }) => {
   return (
@@ -11,6 +10,3 @@ const AddToCart.test: React.FC<AddToCart.testProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-}
-}
-}

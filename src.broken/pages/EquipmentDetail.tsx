@@ -6,5 +6,3 @@ export function EquipmentDetail() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

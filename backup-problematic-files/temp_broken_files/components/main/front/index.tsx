@@ -9,7 +9,7 @@ export default function MainFrontIndex() {
   const progressX = useSpring(scrollYProgress, { stiffness: 90, damping: 20, mass: 0.2 }),
   const [showToTop, setShowToTop] = useState(false),
   const [mobileOpen, setMobileOpen] = useState(false),
-  useEffect(() => {
+  useEffect() => {
     const onScroll = () => setShowToTop(window.scrollY > 400),
     window.addEventListener('scroll', onScroll, { passive: true } as any),
     onScroll(),
@@ -26,7 +26,7 @@ export default function MainFrontIndex() {
         <meta property=&quot;og:image&quot; content=&quot;/og-image.png&quot; />
       </Head>
       {/* Scroll progress bar */}
-      <motion.div style={{ scaleX: progressX }} className=&quot;fixed inset-x-0 top-0 z-40 h-0.5 origin-left bg-gradient-to-r from-fuchsia-400 via-violet-400 to-cyan-400&quot; />
+      <motion.div style={ scaleX: progressX } className=&quot;fixed inset-x-0 top-0 z-40 h-0.5 origin-left bg-gradient-to-r from-fuchsia-400 via-violet-400 to-cyan-400&quot; />
       {/* Animated Background */}
       <div aria-hidden className=&quot;pointer-events-none absolute inset-0 -z-10&quot;>
         {/* Aurora orbs */}
@@ -85,16 +85,16 @@ export default function MainFrontIndex() {
         {/* Mobile overlay menu */}
         {mobileOpen && (
           <motion.div,
-initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+initial={ opacity: 0 }
+            animate={ opacity: 1 }
+            exit={ opacity: 0 }
             className=&quot;fixed inset-0 z-40 bg-slate-950/80 backdrop-blur&quot;
             onClick={() => setMobileOpen(false)}
           >
             <motion.div,
-initial={{ y: -20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.2 }}
+initial={ y: -20, opacity: 0 }
+              animate={ y: 0, opacity: 1 }
+              transition={ duration: 0.2 }
               className=&quot;mx-auto mt-20 w-[92%] max-w-md rounded-2xl border border-white/10 bg-white/5 p-6 text-white shadow-xl&quot;
               onClick={(e) => e.stopPropagation()}
             >
@@ -119,15 +119,13 @@ initial={{ y: -20, opacity: 0 }}
                   ['Cases#cases'],
                   ['Reports#reports'],
                   ['Docs#roadmap'],
-                  ['Automations/automation']].map(([label, href]) => (
-                  (href as string).startsWith('#') ? (
+                  ['Automations/automation']].map([label, href]) => (href as string).startsWith('#') ? (
                     <a key={label as string} href={href as string} onClick={() => setMobileOpen(false)} className=&quot;rounded-lg border border-white/10 bg-white/5 px-3 py-2 hover:bg-white/10&quot;>{label as string}</a>
                   ) : (
                     <Link key={label as string} href={href as string}>
                       <a onClick={() => setMobileOpen(false)} className=&quot;rounded-lg border border-white/10 bg-white/5 px-3 py-2 hover:bg-white/10&quot;>{label as string}</a>
                     </a>
-                  )
-                ))}
+                  ))}
               </div>
               <div className=&quot;mt-4 flex justify-end&quot;>
                 <Link href=&quot;/automation&quot;><a onClick={() => setMobileOpen(false)} className=&quot;rounded-lg bg-gradient-to-r from-fuchsia-500 to-cyan-500 px-4 py-2 text-sm font-semibold&quot;>Launch Hub</a></a>              </div>
@@ -135,13 +133,13 @@ initial={{ y: -20, opacity: 0 }}
           </motion.div>
         )}
       </header>;
-;
+
       {/* Hero */}
       <div role=&quot;main&quot; className=&quot;relative z-10&quot;>
         <motion.section,
-initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+initial={ opacity: 0, y: 20 }
+          animate={ opacity: 1, y: 0 }
+          transition={ duration: 0.6 }
           className=&quot;mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24&quot;        >
           <div className=&quot;text-center&quot;>
             <div className=&quot;mx-auto inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-white/70 backdrop-blur-md&quot;>
@@ -204,7 +202,7 @@ initial={{ opacity: 0, y: 20 }}
                 ['24/7Autonomous'],
                 ['MainDirect Sync'],
                 ['0 OpsCloudNative'],
-                ['SafetyGuardrails']].map(([k,v]) => (
+                ['SafetyGuardrails']].map([k,v]) => (
                 <div key={k} className="glow-card rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-left">
                   <div className="text-lg font-bold text-white">{k}</div>
                   <div className="text-xs text-white/70">{v}</div>            {_/* Live metrics strip */}
@@ -215,9 +213,9 @@ initial={{ opacity: 0, y: 20 }}
                   <div className="text-lg font-bold text-white">{k}</div>
                   <div className="text-xs text-white/70">{v}</div>
                 </div>
-              ))}
+              )}
             </div>;
-;
+
             {/* Futuristic marquee */}
             <div className=&quot;relative mx-auto mt-8 max-w-5xl overflow-hidden&quot;>
               <div className=&quot;pointer-events-none absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-slate-950/90 to-transparent&quot; />
@@ -225,7 +223,7 @@ initial={{ opacity: 0, y: 20 }}
               <div className=&quot;marquee&quot;>
                 <div className=&quot;marquee_track&quot;>
                   {[
-                    'Autonomous AgentsRepo Sync to MainZeroOps CloudSafety GuardrailsA11y + PerformanceObservabilitySEO AutomationDesign Evolution'].flatMap((label) => [label, label]).map((label, idx) => (
+                    'Autonomous AgentsRepo Sync to MainZeroOps CloudSafety GuardrailsA11y + PerformanceObservabilitySEO AutomationDesign Evolution'].flatMap(label) => [label, label]).map(label, idx) => (
                     <span key={`${label}-${idx}`} className="mx-3 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1 text-xs text-white/80 backdrop-blur">
                       <span className="h-1.5 w-1.5 rounded-full bg-cyan-400" /> {label}            {_/* Futuristic marquee */}
             <div className="relative mx-auto mt-8 max-w-5xl overflow-hidden">
@@ -238,11 +236,11 @@ initial={{ opacity: 0, y: 20 }}
                     <span key={`${label}-${idx}`} className="mx-3 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1 text-xs text-white/80 backdrop-blur">
                       <span className="h-1.5 w-1.5 rounded-full bg-cyan-400" /> {label}
                     </span>;
-                  ))}
+                  )}
                 </div>;
               </div>;
             </div>;
-;
+
             {/* Quick Links */}
             <div className=&quot;mx-auto mt-8 flex max-w-3xl flex-wrap justify-center gap-2&quot;>
               {[
@@ -250,10 +248,10 @@ initial={{ opacity: 0, y: 20 }}
                 ['SEO Audit/reports/seo'],
                 ['AI Trends/reports/ai-trends'],
                 ['Newsroom/newsroom'],
-                ['Site Health/site-health']].map(([label, href]) => (
+                ['Site Health/site-health']].map([label, href]) => (
                 <Link key={label as string} href={href as string}>
                   <a className=&quot;rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-xs text-white/80 backdrop-blur hover:bg-white/10&quot;>{label as string}</a>
-                </a>              ))}
+                </a>              )}
             </div>
           </div>
         </motion.section>
@@ -261,10 +259,10 @@ initial={{ opacity: 0, y: 20 }}
                  {_/* Showcase */}
          <motion.section,
 id=&quot;showcase&quot;
-           initial={{ opacity: 0, y: 24 }}
-           whileInView={{ opacity: 1, y: 0 }}
-           viewport={{ once: true, amount: 0.2 }}
-           transition={{ duration: 0.5 }}
+           initial={ opacity: 0, y: 24 }
+           whileInView={ opacity: 1, y: 0 }
+           viewport={ once: true, amount: 0.2 }
+           transition={ duration: 0.5 }
            className=&quot;mx-auto max-w-7xl px-6 pb-14&quot;         >
            <h2 className=&quot;text-center text-2xl font-bold tracking-wide text-white/90&quot;>Showcase: Features, Capabilities, Benefits</h2>
            <p className=&quot;mx-auto mt-2 max-w-3xl text-center text-sm text-white/70&quot;>Jump into highlighted areas of the platform. Every card links to a deep section or dedicated page.</p>
@@ -352,7 +350,7 @@ id=&quot;showcase&quot;
               ['#casesCases'],
               ['#reportsReports'],
               ['#guardrailsGuardrails'],
-              ['#roadmapDocs']].map(([href, label]) => (
+              ['#roadmapDocs']].map([href, label]) => (
               <a key={href} href={href} className="block rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/75 backdrop-blur-md hover:border-cyan-400/40 hover:text-white">                {label}
         {_/* Auto-Promoted Features (auto-generated) */}
         <section className="mx-auto max-w-7xl px-6 pb-16">
@@ -375,17 +373,17 @@ id=&quot;showcase&quot;
               <a key={href} href={href} className="block rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/75 backdrop-blur-md hover:border-cyan-400/40 hover:text-white">
                 {label}
               </a>;
-            ))}
+            )}
           </nav>
         </aside>
 
         {_/* Engines: Alternative Automation Runtimes */}
         <motion.section,
 id=&quot;engines&quot;
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5 }}
+          initial={ opacity: 0, y: 24 }
+          whileInView={ opacity: 1, y: 0 }
+          viewport={ once: true, amount: 0.2 }
+          transition={ duration: 0.5 }
           className=&quot;mx-auto max-w-7xl px-6 pb-14&quot;        >
           <h2 className=&quot;text-center text-2xl font-bold tracking-wide text-white/90&quot;>Autonomous Engines (Beyond GitHub Actions)</h2>
 
@@ -507,10 +505,10 @@ href=&quot;/.netlify/functions/autonomous-master-orchestrator&quot;
         {_/* Autonomous Innovations */}
         <motion.section,
 id=&quot;innovations&quot;
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5 }}
+          initial={ opacity: 0, y: 24 }
+          whileInView={ opacity: 1, y: 0 }
+          viewport={ once: true, amount: 0.2 }
+          transition={ duration: 0.5 }
           className=&quot;mx-auto max-w-7xl px-6 pb-14&quot;        >
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Autonomous Innovations</h2>
           <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">New intelligent cloud automations running 24/7  no human intervention required.</p>
@@ -541,16 +539,16 @@ id=&quot;innovations&quot;
           <div className=&quot;mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3&quot;>
             {[ 
               { title: 'Automation Guardian (10m)', desc: 'Monitors and auto-heals automations, commits fixes safely.', href: '/.netlify/functions/automation-guardian-runner' },
-              { title: 'Components Docs Runner (30m)', desc: 'Regenerates components/docs indexes and README, then pushes.', href: '/.netlify/functions/components-docs-runner' }].map((tool) => (
+              { title: 'Components Docs Runner (30m)', desc: 'Regenerates components/docs indexes and README, then pushes.', href: '/.netlify/functions/components-docs-runner' }].map(tool) => (
               <a key={tool.title} href={tool.href} className=&quot;group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover&quot;>
                 <div className=&quot;pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100&quot; />
                 <h3 className=&quot;text-lg font-semibold&quot;>{tool.title}</h3>
                 <p className=&quot;mt-1 text-sm text-white/75&quot;>{tool.desc}</p>
                 <div className=&quot;mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90&quot;>Open <span aria-hidden></span></div>              </a>
-            ))}
+            )}
           </div>;
         </section>;
-;
+
         {/* Command Center */}
         <section id=&quot;command-center&quot; className=&quot;mx-auto max-w-7xl px-6 pb-14&quot;>
           <h2 className=&quot;text-center text-2xl font-bold tracking-wide text-white/90&quot;>Command Center</h2>
@@ -564,7 +562,7 @@ id=&quot;innovations&quot;
               { title: 'Cloud Automations', desc: 'Netlify scheduled functions powering jobs 24/7.', href: '/automation' },
               { title: 'Docs', desc: 'Technical notes and guides for the platform.', href: '/reports/seo', external: true },
               { title: 'AI Changelog', desc: 'Summarized autonomous changes and highlights.', href: '/newsroom', external: true }
-            ].map((card) => (
+            ].map(card) => (
               <article key={card.title} className=&quot;group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 holo tilt-on-hover&quot;>
                 <div className=&quot;pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100&quot; />
                 <h3 className=&quot;text-lg font-semibold&quot;>{card.title}</h3>
@@ -596,17 +594,17 @@ id=&quot;innovations&quot;
                   <Link href={card.href as string}><a className="mt-3 inline-block text-sm text-cyan-300 hover:text-cyan-200 underline">Open</a></Link>
                 )}
               </article>;
-            ))}
+            )}
           </div>
         </section>
 
         {_/* Netlify Automations */}
         <motion.section,
 id=&quot;netlify-automations&quot;
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5 }}
+          initial={ opacity: 0, y: 24 }
+          whileInView={ opacity: 1, y: 0 }
+          viewport={ once: true, amount: 0.2 }
+          transition={ duration: 0.5 }
           className=&quot;mx-auto max-w-7xl px-6 pb-14&quot;
         >
           <h2 className=&quot;text-center text-2xl font-bold tracking-wide text-white/90&quot;>Netlify Automations</h2>
@@ -625,7 +623,7 @@ id=&quot;netlify-automations&quot;
               { label: 'Dependency AutoUpgrade', desc: 'Safely bumps deps and verifies a clean build.', href: '/.netlify/functions/deps-auto-upgrade-runner' },
               { label: 'Autonomous Meta Orchestrator', desc: 'Invents and triggers cloud automations, syncs changes.', href: '/.netlify/functions/autonomous-meta-orchestrator' },
               { label: 'Trigger All & Commit', desc: 'Invokes all functions and triggers a build or commit.', href: '/.netlify/functions/trigger-all-and-commit' }
-            ].map((f) => (
+            ].map(f) => (
               <a key={f.label} href={f.href} target="blank" rel="noopener noreferrer" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">                <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
                 <div className="text-lg font-semibold">{f.label}</div>
                 <div className="mt-1 text-sm text-white/75">{f.desc}</div>
@@ -636,10 +634,10 @@ id=&quot;netlify-automations&quot;
                 <div className=&quot;mt-1 text-sm text-white/75&quot;>{f.desc}</div>
                 <div className=&quot;mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90&quot;>Trigger <span aria-hidden></span></div>
               </a>
-            ))}
+            )}
           </div>;
         </motion.section>;
-;
+
         {/* New Cloud Automations */}
         <section className=&quot;mx-auto max-w-7xl px-6 pb-14&quot;>
           <h3 className=&quot;text-center text-xl font-bold tracking-wide text-white/90&quot;>New Cloud Automations</h3>
@@ -661,10 +659,10 @@ id=&quot;netlify-automations&quot;
 
         {_/* Feature Spotlight */}
         <motion.section,
-initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5 }}
+initial={ opacity: 0, y: 24 }
+          whileInView={ opacity: 1, y: 0 }
+          viewport={ once: true, amount: 0.2 }
+          transition={ duration: 0.5 }
           className=&quot;mx-auto max-w-7xl px-6 pb-14&quot;
         >
           <h2 className=&quot;text-center text-2xl font-bold tracking-wide text-white/90&quot;>Feature Spotlight</h2>
@@ -676,7 +674,7 @@ initial={{ opacity: 0, y: 24 }}
               { Icon: Gauge, title: 'Site Health', desc: 'A11y, performance, and link integrity', href: '/site-health' },
               { Icon: Globe, title: 'AI Trends Radar', desc: 'Signals that inspire new automations', href: '/reports/ai-trends' },
               { Icon: GitBranch, title: 'Main Sync', desc: 'Safe, incremental diffs shipped continuously', href: '/automation' },
-              { Icon: ShieldCheck, title: 'Guardrails', desc: 'Defenseindepth quality gates', href: '/site-health' }].map(({ Icon, title, desc, href }) => (
+              { Icon: ShieldCheck, title: 'Guardrails', desc: 'Defenseindepth quality gates', href: '/site-health' }].map({ Icon, title, desc, href }) => (
               <Link key={title} href={href}>
                 <a className=&quot;group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo&quot;>
                   <div className=&quot;pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100&quot; />
@@ -687,7 +685,7 @@ initial={{ opacity: 0, y: 24 }}
                   <p className=&quot;mt-1 text-sm text-white/75&quot;>{desc}</p>
                   <div className=&quot;mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90&quot;>Open <span aria-hidden></span></div>                </a>
               </a>
-            ))}
+            )}
           </div>
         </motion.section>
 
@@ -723,10 +721,10 @@ initial={{ opacity: 0, y: 24 }}
 
         {_/* Outcome Benefits */}
         <motion.section,
-initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5 }}
+initial={ opacity: 0, y: 24 }
+          whileInView={ opacity: 1, y: 0 }
+          viewport={ once: true, amount: 0.2 }
+          transition={ duration: 0.5 }
           className=&quot;mx-auto max-w-7xl px-6 pb-14&quot;
         >
           <h2 className=&quot;text-center text-2xl font-bold tracking-wide text-white/90&quot;>OutcomeFocused Benefits</h2>
@@ -738,23 +736,23 @@ initial={{ opacity: 0, y: 24 }}
               { label: 'Reduce engineering toil', desc: 'Automated upgrades, refactors, and maintenance', href: '/automation' },
               { label: 'Ship faster with confidence', desc: 'Small safe diffs synced to main', href: '/automation' },
               { label: 'Stay compliant & accessible', desc: 'Policy guardrails and WCAG checks', href: '/site-health' },
-              { label: 'Learn from market signals', desc: 'AI + cloud trends to guide strategy', href: '/reports/ai-trends' }].map((b) => (
+              { label: 'Learn from market signals', desc: 'AI + cloud trends to guide strategy', href: '/reports/ai-trends' }].map(b) => (
               <Link key={b.label} href={b.href}>
                 <a className=&quot;group flex items-start gap-3 rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl hover:border-fuchsia-400/30&quot;>
                   <span className=&quot;mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 shadow-[00_12px_rgba(52,211,153,0.9)]&quot; />
                   <span className=&quot;text-sm text-white/80&quot;><span className=&quot;font-semibold text-white&quot;>{b.label}</span>  {b.desc} <span className=&quot;ml-1 text-cyan-300/90&quot;></span></span>                </a>
               </a>
-            ))}
+            )}
           </div>
         </motion.section>
 
         {_/* Suites */}
         <motion.section,
 id=&quot;suites&quot;
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5 }}
+          initial={ opacity: 0, y: 24 }
+          whileInView={ opacity: 1, y: 0 }
+          viewport={ once: true, amount: 0.2 }
+          transition={ duration: 0.5 }
           className=&quot;mx-auto max-w-7xl px-6 pb-14&quot;
         >
           <h2 className=&quot;text-center text-2xl font-bold tracking-wide text-white/90&quot;>Automation Suites</h2>
@@ -768,26 +766,25 @@ id=&quot;suites&quot;
               { title: 'Live Workflows', desc: 'Observe pipelines running 24/7', href: '/site-health', external: true },
               { title: 'Site Health', desc: 'A11y, performance, link checks dashboards', href: '/site-health' },
               { title: 'AI SEO Auditor', desc: 'Continuous onsite audits with safe proposed diffs', href: '/reports/seo' },
-              { title: 'AI Trends Radar', desc: 'Signal scanning to inspire new factories', href: '/reports/ai-trends' }].map((suite) => (
+              { title: 'AI Trends Radar', desc: 'Signal scanning to inspire new factories', href: '/reports/ai-trends' }].map(suite) => (
               <article key={suite.title} className=&quot;group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo&quot;>
                 <div className=&quot;pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100&quot; />
                 <h3 className=&quot;text-lg font-semibold&quot;>{suite.title}</h3>
                 <p className=&quot;mt-1 text-sm text-white/75&quot;>{suite.desc}</p>
                 {suite.href && (                  suite.external ? (
                     <a href={suite.href} target="blank" rel="noopener noreferrer" className="mt-3 inline-block text-sm text-cyan-300 hover:text-cyan-200 underline">Open</a>                  ) : (
-                    <Link href={suite.href}><a className=&quot;mt-3 inline-block text-sm text-cyan-300 hover:text-cyan-200 underline&quot;>Open</a></a>                  )
-                )}
+                    <Link href={suite.href}><a className=&quot;mt-3 inline-block text-sm text-cyan-300 hover:text-cyan-200 underline&quot;>Open</a></a>                  )}
               </article>;
-            ))}
+            )}
           </div>
         </motion.section>
 
         {_/* Superpowers */}
         <motion.section,
-initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5 }}
+initial={ opacity: 0, y: 24 }
+          whileInView={ opacity: 1, y: 0 }
+          viewport={ once: true, amount: 0.2 }
+          transition={ duration: 0.5 }
           className=&quot;mx-auto max-w-7xl px-6 pb-14&quot;
         >
           <h2 className=&quot;text-center text-2xl font-bold tracking-wide text-white/90&quot;>Superpowers</h2>
@@ -795,22 +792,22 @@ initial={{ opacity: 0, y: 24 }}
             {[
               { Icon: Rocket, title: 'Generative Factories', desc: 'Spins up domainspecific automation factories that build for you.' },
               { Icon: ShieldCheck, title: 'Safety by Design', desc: 'Layered validations  type checks, builds, a11y, links, and more.' },
-              { Icon: GitBranch, title: 'Main Sync', desc: 'Small, reviewable edits committed and pushed continuously.' }].map(({ Icon, title, desc }) => (
+              { Icon: GitBranch, title: 'Main Sync', desc: 'Small, reviewable edits committed and pushed continuously.' }].map({ Icon, title, desc }) => (
               <article key={title} className=&quot;group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover&quot;>
                 <div className=&quot;pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100&quot; />
                 <Icon className=&quot;h-6 w-6 text-cyan-300&quot; />
                 <h3 className=&quot;mt-3 text-lg font-semibold&quot;>{title}</h3>
                 <p className=&quot;mt-1 text-sm text-white/75&quot;>{desc}</p>              </article>
-            ))}
+            )}
           </div>
         </motion.section>
 
         {_/* Get Started */}
         <motion.section,
-initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5 }}
+initial={ opacity: 0, y: 24 }
+          whileInView={ opacity: 1, y: 0 }
+          viewport={ once: true, amount: 0.2 }
+          transition={ duration: 0.5 }
           className=&quot;mx-auto max-w-7xl px-6 pb-14&quot;        >
           <h2 className=&quot;text-center text-2xl font-bold tracking-wide text-white/90&quot;>Get Started in Minutes</h2>
           <div className=&quot;mx-auto mt-6 grid max-w-5xl grid-cols-1 gap-5 md:grid-cols-4&quot;>
@@ -848,10 +845,10 @@ initial={{ opacity: 0, y: 24 }}
         {_/* Features */}
         <motion.section,
 id=&quot;features&quot;
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5 }}
+          initial={ opacity: 0, y: 24 }
+          whileInView={ opacity: 1, y: 0 }
+          viewport={ once: true, amount: 0.2 }
+          transition={ duration: 0.5 }
           className=&quot;mx-auto max-w-7xl px-6 pb-14&quot;
         >
           <h2 className=&quot;text-center text-2xl font-bold tracking-wide text-white/90&quot;>Features</h2>
@@ -889,7 +886,7 @@ id=&quot;features&quot;
               { Icon: LineChart, title: 'Experimentation', desc: 'Automate A/B setups and monitor telemetry automatically.', href: '/automation' },
               { Icon: Palette, title: 'Design Tokens & Theming', desc: 'Enforce consistent theming, spacing, and motion.', href: '/newsroom' },
               { Icon: Gauge, title: 'Image Pipeline', desc: 'Optimize and transform media assets automatically.', href: '/site-health' }
-            ].map(({ Icon, title, desc, href }) => (
+            ].map({ Icon, title, desc, href }) => (
               <Link key={title} href={href}>
                 <a className=&quot;group glow-card relative block overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-md hover:border-cyan-400/30 tilt-on-hover neon-ring&quot;>
                   <div className=&quot;pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100&quot; />
@@ -900,16 +897,16 @@ id=&quot;features&quot;
                   <p className=&quot;mt-2 text-sm text-white/75&quot;>{desc}</p>
                   <div className=&quot;mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90&quot;>Learn more <Link2 className=&quot;h-3.5 w-3.5&quot; /></div>                </a>
               </a>
-            ))}
+            )}
           </div>
         </motion.section>
 
         {_/* Outcomes */}
         <motion.section,
-initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5 }}
+initial={ opacity: 0, y: 24 }
+          whileInView={ opacity: 1, y: 0 }
+          viewport={ once: true, amount: 0.2 }
+          transition={ duration: 0.5 }
           className=&quot;mx-auto max-w-7xl px-6 pb-14&quot;        >
           <h2 className=&quot;text-center text-2xl font-bold tracking-wide text-white/90&quot;>Outcomes</h2>
           <p className=&quot;mx-auto mt-2 max-w-3xl text-center text-sm text-white/70&quot;>
@@ -929,13 +926,13 @@ initial={{ opacity: 0, y: 24 }}
                   { label: 'Better content curation', href: '/newsroom' },
                   { label: 'Operational visibility', href: '/site-health' },
                   { label: 'Experiment velocity', href: '/automation' }]
-                  .flatMap((item) => [item, item])
-                  .map((item, idx) => (
+                  .flatMap(item) => [item, item])
+                  .map(item, idx) => (
                     <Link key={`${item.label}-${idx}`} href={item.href}>
                       <a className=&quot;mx-3 my-2 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs text-white/80 backdrop-blur hover:bg-white/10&quot;>
                         <span className=&quot;h-1.5 w-1.5 rounded-full bg-cyan-400&quot; /> {item.label}                      </a>
                     </a>
-                  ))}
+                  )}
               </div>
             </div>
           </div>
@@ -944,10 +941,10 @@ initial={{ opacity: 0, y: 24 }}
         {_/* Feature Map */}
         <motion.section,
 id=&quot;feature-map&quot;
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5 }}
+          initial={ opacity: 0, y: 24 }
+          whileInView={ opacity: 1, y: 0 }
+          viewport={ once: true, amount: 0.2 }
+          transition={ duration: 0.5 }
           className=&quot;mx-auto max-w-7xl px-6 pb-14&quot;        >
           <h2 className=&quot;text-center text-2xl font-bold tracking-wide text-white/90&quot;>Feature Map</h2>
           <p className=&quot;mx-auto mt-2 max-w-3xl text-center text-sm text-white/70&quot;>
@@ -966,7 +963,7 @@ id=&quot;feature-map&quot;
               { label: 'Deep Indexing', desc: 'Smart linking & PRs', href: '/newsroom' },
               { label: 'Live Dashboards', desc: 'Impact at a glance', href: '/site-health' },
               { label: 'Health Monitors', desc: 'A11y, perf, links', href: '/site-health' },
-              { label: 'Docs & Guides', desc: 'Technical notes', href: '/reports/seo', external: true }].map((item) => (
+              { label: 'Docs & Guides', desc: 'Technical notes', href: '/reports/seo', external: true }].map(item) => (
               item.external ? (
                 <a key={item.label} href={item.href as string} target="blank" rel="noopener noreferrer" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">                  <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
                   <div className="text-base font-semibold">{item.label}</div>
@@ -986,8 +983,7 @@ id=&quot;feature-map&quot;
                     <div className=&quot;mt-1 text-sm text-white/75&quot;>{item.desc}</div>
                     <div className=&quot;mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90&quot;>Open <span aria-hidden></span></div>                  </a>
                 </a>
-              )
-            ))}
+              ))}
           </div>
         </motion.section>
 
@@ -1011,15 +1007,15 @@ id=&quot;feature-map&quot;
   </div>
 </section>
 
-/* AUTO:FRONTINDEX_DIRECTORY_END */}
+* AUTO:FRONTINDEX_DIRECTORY_END */}
 
         {_/* Platform Modules */}
         <motion.section,
 id=&quot;modules&quot;
-           initial={{ opacity: 0, y: 24 }}
-           whileInView={{ opacity: 1, y: 0 }}
-           viewport={{ once: true, amount: 0.2 }}
-           transition={{ duration: 0.5 }}
+           initial={ opacity: 0, y: 24 }
+           whileInView={ opacity: 1, y: 0 }
+           viewport={ once: true, amount: 0.2 }
+           transition={ duration: 0.5 }
            className=&quot;mx-auto max-w-7xl px-6 pb-16&quot;
          >
            <h2 className=&quot;text-center text-2xl font-bold tracking-wide text-white/90&quot;>Platform Modules</h2>
@@ -1033,7 +1029,7 @@ id=&quot;modules&quot;
               { Icon: Layers, title: 'Workflow Composer', desc: 'Chain factories into higherorder systems.', href: '/automation' },
               { Icon: GitBranch, title: 'Main Sync Engine', desc: 'Small, reviewable edits merged continuously.', href: '/automation' },
               { Icon: Cpu, title: 'ZeroOps Runtime', desc: 'Cloudnative execution with no servers to manage.', href: '/automation' },
-              { Icon: BarChart3, title: 'Impact Analytics', desc: 'Track outcomes and ROI from automations.', href: '/site-health' }].map(({ Icon, title, desc, href }) => (
+              { Icon: BarChart3, title: 'Impact Analytics', desc: 'Track outcomes and ROI from automations.', href: '/site-health' }].map({ Icon, title, desc, href }) => (
               <Link key={title} href={href}>
                 <a className=&quot;group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover neon-ring&quot;>
                   <div className=&quot;pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100&quot; />
@@ -1044,16 +1040,16 @@ id=&quot;modules&quot;
                   <p className=&quot;mt-2 text-sm text-white/75&quot;>{desc}</p>
                   <div className=&quot;mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90&quot;>Open <Link2 className=&quot;h-3.5 w-3.5&quot; /></div>                </a>
               </a>
-            ))}
+            )}
           </div>
         </motion.section>
 
         {_/* Neural Feature Matrix */}
         <motion.section,
-initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5 }}
+initial={ opacity: 0, y: 24 }
+          whileInView={ opacity: 1, y: 0 }
+          viewport={ once: true, amount: 0.2 }
+          transition={ duration: 0.5 }
           className=&quot;mx-auto max-w-7xl px-6 pb-14&quot;
         >
           <h2 className=&quot;text-center text-2xl font-bold tracking-wide text-white/90&quot;>Neural Feature Matrix</h2>
@@ -1076,7 +1072,7 @@ initial={{ opacity: 0, y: 24 }}
               { label: 'AI Changelog', desc: 'Summarized updates', href: '/newsroom', external: true },
                              { label: 'Cloud Automations', desc: 'Netlify scheduled functions', href: '/automation' },
                { label: 'Roadmap & Issues', desc: &quot;What's next&quot;, href: '//issues', external: true }
-            ].map((item) => (
+            ].map(item) => (
               item.external ? (
                 <a key={item.label} href={item.href as string} target="blank" rel="noopener noreferrer" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover neon-ring">                  <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
                   <div className="text-base font-semibold">{item.label}</div>
@@ -1096,17 +1092,16 @@ initial={{ opacity: 0, y: 24 }}
                     <div className=&quot;mt-1 text-sm text-white/75&quot;>{item.desc}</div>
                     <div className=&quot;mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90&quot;>Open <span aria-hidden></span></div>                  </a>
                 </a>
-              )
-            ))}
+              ))}
           </div>
         </motion.section>
 
         {_/* Extended Feature Directory */}
         <motion.section,
-initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5 }}
+initial={ opacity: 0, y: 24 }
+          whileInView={ opacity: 1, y: 0 }
+          viewport={ once: true, amount: 0.2 }
+          transition={ duration: 0.5 }
           className=&quot;mx-auto max-w-7xl px-6 pb-14&quot;
         >
           <h2 className=&quot;text-center text-2xl font-bold tracking-wide text-white/90&quot;>Extended Feature Directory</h2>
@@ -1121,7 +1116,7 @@ initial={{ opacity: 0, y: 24 }}
               { Icon: Layers, title: 'Factories Library', desc: 'Composable building blocks for new automations.', href: '/automation' },
               { Icon: Activity, title: 'Health Monitors', desc: 'A11y, links, and performance monitored 24/7.', href: '/site-health' },
               { Icon: Cpu, title: 'Zero-Ops Runtime', desc: 'Fully managed cloud execution with no servers.', href: '/automation' },
-              { Icon: Globe, title: 'Intelligence Signals', desc: 'AI + cloud trend tracking fueling new ideas.', href: '/reports/ai-trends' }].map(({ Icon, title, desc, href, external }) => (
+              { Icon: Globe, title: 'Intelligence Signals', desc: 'AI + cloud trend tracking fueling new ideas.', href: '/reports/ai-trends' }].map({ Icon, title, desc, href, external }) => (
               external ? (
                 <a key={title} href={href as string} target="blank" rel="noopener noreferrer" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover neon-ring">                  <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
                   <div className="flex items-center gap-3"><Icon className="h-5 w-5 text-cyan-300" /><h3 className="text-lg font-semibold">{title}</h3></div>
@@ -1141,17 +1136,16 @@ initial={{ opacity: 0, y: 24 }}
                     <p className=&quot;mt-1 text-sm text-white/75&quot;>{desc}</p>
                     <div className=&quot;mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90&quot;>Open <span aria-hidden></span></div>                  </a>
                 </a>
-              )
-            ))}
+              ))}
           </div>
         </motion.section>
 
         {_/* Capability Deep Links */}
         <motion.section,
-initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5 }}
+initial={ opacity: 0, y: 24 }
+          whileInView={ opacity: 1, y: 0 }
+          viewport={ once: true, amount: 0.2 }
+          transition={ duration: 0.5 }
           className=&quot;mx-auto max-w-7xl px-6 pb-16&quot;
         >
           <h2 className=&quot;text-center text-2xl font-bold tracking-wide text-white/90&quot;>Capability Deep Links</h2>
@@ -1165,8 +1159,7 @@ initial={{ opacity: 0, y: 24 }}
               ['NewsroomCurated updates and product evolution highlights/newsroom'],
               ['Live PipelinesObserve CI pipelines, logs, and artifacts/site-health'],
               ['DocumentationTechnical notes, guides, and changelog/reports/seo'],
-              ['AI ChangelogSummarized autonomous changes and highlights/newsroom']].map(([label, desc, href]) => (
-              (href as string).startsWith('http') ? (
+              ['AI ChangelogSummarized autonomous changes and highlights/newsroom']].map([label, desc, href]) => (href as string).startsWith('http') ? (
                 <a key={label as string} href={href as string} target="blank" rel="noopener noreferrer" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 backdrop-blur-xl hover:border-fuchsia-400/30">                  <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-violet-400/10 to-cyan-400/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
                   <div className="text-base font-semibold">{label as string}</div>
                   <div className="mt-1 text-sm text-white/75">{desc as string}</div>
@@ -1185,18 +1178,17 @@ initial={{ opacity: 0, y: 24 }}
                     <div className=&quot;mt-1 text-sm text-white/75&quot;>{desc as string}</div>
                     <div className=&quot;mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90&quot;>Open <span aria-hidden></span></div>                  </a>
                 </a>
-              )
-            ))}
+              ))}
           </div>
         </motion.section>
 
         {_/* Use Cases */}
         <motion.section,
 id=&quot;use-cases&quot;
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5 }}
+          initial={ opacity: 0, y: 24 }
+          whileInView={ opacity: 1, y: 0 }
+          viewport={ once: true, amount: 0.2 }
+          transition={ duration: 0.5 }
           className=&quot;mx-auto max-w-7xl px-6 pb-14&quot;
         >
           <h2 className=&quot;text-center text-2xl font-bold tracking-wide text-white/90&quot;>Use Cases</h2>
@@ -1207,21 +1199,21 @@ id=&quot;use-cases&quot;
               { title: 'Content Curator', desc: 'Surfaces and promotes highvalue content with links and metadata.' },
               { title: 'Performance Tuner', desc: 'Optimizes bundles, images, and scripts for faster loads.' },
               { title: 'A11y Guardian', desc: 'Catches and fixes accessibility issues before they ship.' },
-              { title: 'Growth Experiments', desc: 'Spins up microexperiments and measures impact automatically.' }].map((u) => (
+              { title: 'Growth Experiments', desc: 'Spins up microexperiments and measures impact automatically.' }].map(u) => (
               <article key={u.title} className=&quot;group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-fuchsia-400/30&quot;>
                 <div className=&quot;pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-violet-400/10 to-cyan-400/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100&quot; />
                 <h3 className=&quot;text-lg font-semibold&quot;>{u.title}</h3>
                 <p className=&quot;mt-1 text-sm text-white/75&quot;>{u.desc}</p>              </article>
-            ))}
+            )}
           </div>
         </motion.section>
 
         {_/* Stats */}
         <motion.section,
-initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5 }}
+initial={ opacity: 0, y: 24 }
+          whileInView={ opacity: 1, y: 0 }
+          viewport={ once: true, amount: 0.2 }
+          transition={ duration: 0.5 }
           className=&quot;mx-auto max-w-7xl px-6 pb-14&quot;
         >
           <div className=&quot;neon-divider mx-auto mb-8 h-px w-full max-w-5xl&quot; />
@@ -1233,7 +1225,7 @@ initial={{ opacity: 0, y: 24 }}
               { label: 'Automated Edits', value: '3,500+', href: '/automation' },
               { label: 'Uptime', value: '99.95%', href: '/site-health' },
               { label: 'A11y Checks', value: '20k+', href: '/site-health' },
-              { label: 'SEO Fixes', value: '4.2k+', href: '/reports/seo' }].map((item) => (
+              { label: 'SEO Fixes', value: '4.2k+', href: '/reports/seo' }].map(item) => (
               item.external ? (
                 <a key={item.label} href={item.href as string} target="blank" rel="noopener noreferrer" className="rounded-2xl border border-white/10 bg-white/5 p-5 text-center backdrop-blur hover:border-cyan-400/30">
                   <div className="text-2xl font-extrabold tracking-tight">{item.value}</div>
@@ -1243,10 +1235,10 @@ initial={{ opacity: 0, y: 24 }}
                   <a className=&quot;rounded-2xl border border-white/10 bg-white/5 p-5 text-center backdrop-blur hover:border-cyan-400/30&quot;>
                     <div className=&quot;text-2xl font-extrabold tracking-tight&quot;>{item.value}</div>
                     <div className=&quot;mt-1 text-xs text-white/70&quot;>{item.label}</div>
-          initial={_{ opacity: 0, y: 24}}
-          whileInView={_{ opacity: 1, y: 0}}
-          viewport={_{ once: true, amount: 0.2}}
-          transition={_{ duration: 0.5}}
+          initial={_{ opacity: 0, y: 24}
+          whileInView={_{ opacity: 1, y: 0}
+          viewport={_{ once: true, amount: 0.2}
+          transition={_{ duration: 0.5}
           className="mx-auto max-w-7xl px-6 pb-14"
         >
           <div className="neon-divider mx-auto mb-8 h-px w-full max-w-5xl" />
@@ -1271,18 +1263,17 @@ initial={{ opacity: 0, y: 24 }}
                     <div className="mt-1 text-xs text-white/70">{item.label}</div>
                   </a>
                 </a>
-              )
-            ))}
+              ))}
           </div>
         </motion.section>
 
         {_/* Capabilities */}
         <motion.section,
 id=&quot;capabilities&quot;
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5 }}
+          initial={ opacity: 0, y: 24 }
+          whileInView={ opacity: 1, y: 0 }
+          viewport={ once: true, amount: 0.2 }
+          transition={ duration: 0.5 }
           className=&quot;mx-auto max-w-7xl px-6 pb-14&quot;
         >
           <h2 className=&quot;text-center text-2xl font-bold tracking-wide text-white/90&quot;>Capabilities</h2>
@@ -1301,7 +1292,7 @@ id=&quot;capabilities&quot;
               { Icon: Search, title: 'Broken Link Defender', desc: 'Continuously scans and fixes link integrity issues.', href: '/site-health' },
               { Icon: LineChart, title: 'Experimentation', desc: 'Automate A/B setups and monitor telemetry automatically.', href: '/automation' },
               { Icon: Palette, title: 'Design Tokens & Theming', desc: 'Enforce consistent theming, spacing, and motion.', href: '/newsroom' },
-              { Icon: Gauge, title: 'Image Pipeline', desc: 'Optimize and transform media assets automatically.', href: '/site-health' }].map(({ Icon, title, desc, href }) => (
+              { Icon: Gauge, title: 'Image Pipeline', desc: 'Optimize and transform media assets automatically.', href: '/site-health' }].map({ Icon, title, desc, href }) => (
               <Link key={title} href={href}>
                 <a className=&quot;relative block overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30&quot;>
                   <div className=&quot;absolute right-0 top-0 h-24 w-24 rounded-bl-[4rem] bg-cyan-400/10 blur-2xl&quot; />
@@ -1311,16 +1302,16 @@ id=&quot;capabilities&quot;
                   </div>
                   <p className=&quot;mt-1 text-sm text-white/75&quot;>{desc}</p>                </a>
               </a>
-            ))}
+            )}
           </div>
         </motion.section>
 
         {_/* Why Zion */}
         <motion.section,
-initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5 }}
+initial={ opacity: 0, y: 24 }
+          whileInView={ opacity: 1, y: 0 }
+          viewport={ once: true, amount: 0.2 }
+          transition={ duration: 0.5 }
           className=&quot;mx-auto max-w-7xl px-6 pb-14&quot;
         >
           <h2 className=&quot;text-center text-2xl font-bold tracking-wide text-white/90&quot;>Why Zion</h2>
@@ -1328,14 +1319,14 @@ initial={{ opacity: 0, y: 24 }}
             {[
               ['SpeedContinuous delivery to main with safe, incremental changes.'],
               ['SafetyConservative edits and guardrails keep production stable.'],
-              ['ScaleAutomatically generates new factories as your needs grow.']].map(([icon, title, desc]) => (
+              ['ScaleAutomatically generates new factories as your needs grow.']].map([icon, title, desc]) => (
               <div key={title as string} className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur">
                 <div className="text-2xl">{icon as string}</div>
                 <div className="mt-2 text-base font-semibold">{title as string}</div>
-                <div className="mt-1 text-sm text-white/75">{desc as string}</div>          initial={_{ opacity: 0, y: 24}}
-          whileInView={_{ opacity: 1, y: 0}}
-          viewport={_{ once: true, amount: 0.2}}
-          transition={_{ duration: 0.5}}
+                <div className="mt-1 text-sm text-white/75">{desc as string}</div>          initial={_{ opacity: 0, y: 24}
+          whileInView={_{ opacity: 1, y: 0}
+          viewport={_{ once: true, amount: 0.2}
+          transition={_{ duration: 0.5}
           className="mx-auto max-w-7xl px-6 pb-14"
         >
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Why Zion</h2>
@@ -1347,17 +1338,17 @@ initial={{ opacity: 0, y: 24 }}
                 <div className="mt-2 text-base font-semibold">{title as string}</div>
                 <div className="mt-1 text-sm text-white/75">{desc as string}</div>
               </div>
-            ))}
+            )}
           </div>
         </motion.section>
 
         {_/* Value Pillars */}
         <motion.section,
 id=&quot;pillars&quot;
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5 }}
+          initial={ opacity: 0, y: 24 }
+          whileInView={ opacity: 1, y: 0 }
+          viewport={ once: true, amount: 0.2 }
+          transition={ duration: 0.5 }
           className=&quot;mx-auto max-w-7xl px-6 pb-14&quot;
         >
           <h2 className=&quot;text-center text-2xl font-bold tracking-wide text-white/90&quot;>Value Pillars</h2>
@@ -1367,7 +1358,7 @@ id=&quot;pillars&quot;
               { Icon: ShieldCheck, title: 'Security & Safety', desc: 'Guardrails, policy, and quality gates.', href: '/site-health' },
               { Icon: Rocket, title: 'Speed & Momentum', desc: 'Small diffs shipped continuously.', href: '/automation' },
               { Icon: Gauge, title: 'Quality & Reliability', desc: 'A11y, performance, and link integrity.', href: '/site-health' },
-              { Icon: Layers, title: 'Scale & Composability', desc: 'Factories chained into higherorder workflows.', href: '/automation' }].map(({ Icon, title, desc, href }) => (
+              { Icon: Layers, title: 'Scale & Composability', desc: 'Factories chained into higherorder workflows.', href: '/automation' }].map({ Icon, title, desc, href }) => (
               <Link key={title} href={href}>
                 <a className=&quot;group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo&quot;>
                   <div className=&quot;pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100&quot; />
@@ -1377,17 +1368,17 @@ id=&quot;pillars&quot;
                   </div>
                   <p className=&quot;mt-1 text-sm text-white/75&quot;>{desc}</p>                </a>
               </a>
-            ))}
+            )}
           </div>
         </motion.section>
 
         {_/* Benefits */}
         <motion.section,
 id=&quot;benefits&quot;
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5 }}
+          initial={ opacity: 0, y: 24 }
+          whileInView={ opacity: 1, y: 0 }
+          viewport={ once: true, amount: 0.2 }
+          transition={ duration: 0.5 }
           className=&quot;mx-auto max-w-7xl px-6 pb-20&quot;
         >
           <h2 className=&quot;text-center text-2xl font-bold tracking-wide text-white/90&quot;>Benefits</h2>
@@ -1405,12 +1396,12 @@ id=&quot;benefits&quot;
                   { label: 'Transparent artifacts', href: '/site-health' },
                   { label: 'Guardrails & policy', href: '/site-health' },
                   { label: 'Faster iteration loops', href: '/newsroom' },
-                  { label: 'Lower operational toil', href: '/automation' }].flatMap((i) => [i, i]).map((i, idx) => (
+                  { label: 'Lower operational toil', href: '/automation' }].flatMap(i) => [i, i]).map(i, idx) => (
                   <Link key={`${i.label}-${idx}`} href={i.href}>
                     <a className=&quot;mx-3 my-2 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs text-white/80 backdrop-blur hover:bg-white/10&quot;>
                       <span className=&quot;h-1.5 w-1.5 rounded-full bg-emerald-400&quot; /> {i.label}                    </a>
                   </a>
-                ))}
+                )}
               </div>
             </div>
           </div>
@@ -1418,7 +1409,7 @@ id=&quot;benefits&quot;
             {[
               '24/7 progress without human interventionRapid feedback loop with safe, incremental editsContinuous delivery directly to main branchFewer regressions via layered checks and reportsHigher velocity with automated maintenanceReduced costs via zeroops and automated QAConsistent design language and UX qualityTransparent artifacts and live workflow logs',
               'Faster experiment velocity with measurable impactImproved search visibility via continuous SEOHappier users thanks to performance & a11y winsLower operational risk through guardrailsImproved discoverability via deep indexing and SEOHappier engineers with less toil and more creationConfident shipping through automated guardrailsPredictable quality gates and SLOs upheld automatically',
-              'Auditability for compliance with full traceabilityHappier teams: less toil, more product valueAutomated dependency upgrades and security scansClear analytics and downloadable artifacts for every runComposable factories accelerate new initiatives'].map((b) => (
+              'Auditability for compliance with full traceabilityHappier teams: less toil, more product valueAutomated dependency upgrades and security scansClear analytics and downloadable artifacts for every runComposable factories accelerate new initiatives'].map(b) => (
               <div key={b} className="flex items-start gap-3 rounded-xl border border-white/10 bg-white/5 p-4 backdrop-blur-md">
                 <span className="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 shadow-[00_12px_rgba(52,211,153,0.9)]" />
                 <span className="text-sm text-white/80">{b}</span>          <div className="mx-auto mt-6 max-w-4xl grid grid-cols-1 gap-3 md:grid-cols-2">
@@ -1428,16 +1419,16 @@ id=&quot;benefits&quot;
                 <span className="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 shadow-[00_12px_rgba(52,211,153,0.9)]" />
                 <span className="text-sm text-white/80">{b}</span>
               </div>
-            ))}
+            )}
           </div>
         </motion.section>
 
         {_/* Benefits in Practice */}
         <motion.section,
-initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5 }}
+initial={ opacity: 0, y: 24 }
+          whileInView={ opacity: 1, y: 0 }
+          viewport={ once: true, amount: 0.2 }
+          transition={ duration: 0.5 }
           className=&quot;mx-auto max-w-7xl px-6 pb-16&quot;
         >
           <h2 className=&quot;text-center text-2xl font-bold tracking-wide text-white/90&quot;>Benefits in Practice</h2>
@@ -1449,7 +1440,7 @@ initial={{ opacity: 0, y: 24 }}
               { label: 'Main branch delivery', desc: 'Small, safe diffs merged continuously', href: '/site-health', external: true },
               { label: 'Fewer regressions', desc: 'Layered checks catch issues early', href: '/site-health' },
               { label: 'Increased reach', desc: 'Continuous SEO improvements', href: '/reports/seo' },
-              { label: 'Strategic insights', desc: 'AI + cloud trend tracking', href: '/reports/ai-trends' }].map((b) => (
+              { label: 'Strategic insights', desc: 'AI + cloud trend tracking', href: '/reports/ai-trends' }].map(b) => (
               b.external ? (
                 <a key={b.label} href={b.href as string} target="blank" rel="noopener noreferrer" className="group flex items-start gap-3 rounded-xl border border-white/10 bg-white/5 p-4 backdrop-blur-md hover:border-cyan-400/30">
                   <span className="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 shadow-[00_12px_rgba(52,211,153,0.9)]" />
@@ -1459,10 +1450,10 @@ initial={{ opacity: 0, y: 24 }}
                   <a className=&quot;group flex items-start gap-3 rounded-xl border border-white/10 bg-white/5 p-4 backdrop-blur-md hover:border-cyan-400/30&quot;>
                     <span className=&quot;mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 shadow-[00_12px_rgba(52,211,153,0.9)]&quot; />
                     <span className=&quot;text-sm text-white/80&quot;><span className=&quot;font-semibold text-white&quot;>{b.label}</span>  {b.desc} <span className=&quot;ml-1 text-cyan-300/90&quot;></span></span>
-          initial={_{ opacity: 0, y: 24}}
-          whileInView={_{ opacity: 1, y: 0}}
-          viewport={_{ once: true, amount: 0.2}}
-          transition={_{ duration: 0.5}}
+          initial={_{ opacity: 0, y: 24}
+          whileInView={_{ opacity: 1, y: 0}
+          viewport={_{ once: true, amount: 0.2}
+          transition={_{ duration: 0.5}
           className="mx-auto max-w-7xl px-6 pb-16"
         >
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Benefits in Practice</h2>
@@ -1487,11 +1478,10 @@ initial={{ opacity: 0, y: 24 }}
                     <span className="text-sm text-white/80"><span className="font-semibold text-white">{b.label}</span>  {b.desc} <span className="ml-1 text-cyan-300/90"></span></span>
                   </a>
                 </a>
-              )
-            ))}
+              ))}
           </div>;
         </motion.section>;
-;
+
         {/* Tailored Value by Team */}
         <section className=&quot;mx-auto max-w-7xl px-6 pb-16&quot;>
           <h2 className=&quot;text-center text-2xl font-bold tracking-wide text-white/90&quot;>Tailored Value by Team</h2>
@@ -1500,7 +1490,7 @@ initial={{ opacity: 0, y: 24 }}
               { title: 'Developers', desc: 'Code quality, refactors, upgrades, reliability', href: '/automation' },
               { title: 'Product', desc: 'Faster UX improvements, experiments, insights', href: '/newsroom' },
               { title: 'Marketing', desc: 'SEO automation, content curation, reach', href: '/reports/seo' },
-              { title: 'Operations', desc: 'A11y, performance, and linkhealth dashboards', href: '/site-health' }].map((card) => (
+              { title: 'Operations', desc: 'A11y, performance, and linkhealth dashboards', href: '/site-health' }].map(card) => (
               <Link key={card.title} href={card.href}>
                 <a className=&quot;group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30&quot;>
                   <div className=&quot;pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100&quot; />
@@ -1508,17 +1498,17 @@ initial={{ opacity: 0, y: 24 }}
                   <p className=&quot;mt-1 text-sm text-white/75&quot;>{card.desc}</p>
                   <div className=&quot;mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90&quot;>Open <Link2 className=&quot;h-3.5 w-3.5&quot; /></div>                </a>
               </a>
-            ))}
+            )}
           </div>
         </section>
 
         {_/* Ecosystem & Integrations */}
         <motion.section,
 id=&quot;reports&quot;
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5 }}
+          initial={ opacity: 0, y: 24 }
+          whileInView={ opacity: 1, y: 0 }
+          viewport={ once: true, amount: 0.2 }
+          transition={ duration: 0.5 }
           className=&quot;mx-auto max-w-7xl px-6 pb-14&quot;        >
           <h2 className=&quot;text-center text-2xl font-bold tracking-wide text-white/90&quot;>Ecosystem & Integrations</h2>
           <div className=&quot;mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4&quot;>
@@ -1561,10 +1551,10 @@ id=&quot;reports&quot;
         {_/* Quality Gates & Guardrails */}
         <motion.section,
 id=&quot;guardrails&quot;
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5 }}
+          initial={ opacity: 0, y: 24 }
+          whileInView={ opacity: 1, y: 0 }
+          viewport={ once: true, amount: 0.2 }
+          transition={ duration: 0.5 }
           className=&quot;mx-auto max-w-7xl px-6 pb-16&quot;
         >
           <h2 className=&quot;text-center text-2xl font-bold tracking-wide text-white/90&quot;>Quality Gates & Guardrails</h2>
@@ -1573,38 +1563,38 @@ id=&quot;guardrails&quot;
               { title: 'Accessibility', desc: 'Automated checks and fixes for WCAG compliance.', href: '/site-health' },
               { title: 'Link Integrity', desc: 'Broken links detected before release.', href: '/site-health' },
               { title: 'Performance', desc: 'Budgets enforced and improved continuously.', href: '/site-health' },
-              { title: 'Safe Diffs', desc: 'Conservative, reviewable changes synced to main.', href: '/automation' }].map((g) => (
+              { title: 'Safe Diffs', desc: 'Conservative, reviewable changes synced to main.', href: '/automation' }].map(g) => (
               <Link key={g.title} href={g.href}>
                 <a className=&quot;group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-fuchsia-400/30&quot;>
                   <div className=&quot;pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-violet-400/10 to-cyan-400/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100&quot; />
                   <h3 className=&quot;text-lg font-semibold&quot;>{g.title}</h3>
                   <p className=&quot;mt-1 text-sm text-white/75&quot;>{g.desc}</p>                </a>
               </a>
-            ))}
+            )}
           </div>
         </motion.section>
 
         {_/* Tech */}
         <motion.section,
-initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5 }}
+initial={ opacity: 0, y: 24 }
+          whileInView={ opacity: 1, y: 0 }
+          viewport={ once: true, amount: 0.2 }
+          transition={ duration: 0.5 }
           className=&quot;mx-auto max-w-7xl px-6 pb-16&quot;        >
           <div className="rounded-2xl border border-white/10 bg-white/5 p-6 text-center backdrop-blur-md">
             <p className="text-white/70">Powered by modern cloud and AI tooling</p>
             <div className="mt-4 flex flex-wrap items-center justify-center gap-6">
-              {['Next.jsTypeScriptTailwindFramer MotionSupabaseNetlify'].map((t) => (
+              {['Next.jsTypeScriptTailwindFramer MotionSupabaseNetlify'].map(t) => (
                 <span key={t} className="rounded-lg border border-white/10 bg-white/5 px-3 py-1 text-sm text-white/80 shadow-[inset0_0_0_1px_rgba(255,255,255,0.06)] glow-pulse">                  {t}
               {_['Next.js', _'TypeScript', _'Tailwind', _'Framer Motion', _'Supabase', _'Netlify'].map(_(t) => (
                 <span key={t} className="rounded-lg border border-white/10 bg-white/5 px-3 py-1 text-sm text-white/80 shadow-[inset0_0_0_1px_rgba(255,255,255,0.06)] glow-pulse">
                   {t}
                 </span>;
-              ))}
+              )}
             </div>;
           </div>;
         </motion.section>;
-;
+
         {/* Quick Start */}
         <section className=&quot;mx-auto max-w-7xl px-6 pb-20&quot;>
           <h2 className=&quot;text-center text-2xl font-bold tracking-wide text-white/90&quot;>Quick Start</h2>
@@ -1613,22 +1603,22 @@ initial={{ opacity: 0, y: 24 }}
               ['ExploreBrowse live automations/automation'],
               ['AuditCheck site health/site-health'],
               ['OptimizeRun the SEO auditor/reports/seo'],
-              ['LearnFollow AI trends/reports/ai-trends']].map(([title, desc, href]) => (
+              ['LearnFollow AI trends/reports/ai-trends']].map([title, desc, href]) => (
               <Link key={title as string} href={href as string}>
                 <a className=&quot;rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 text-left backdrop-blur-xl hover:border-cyan-400/30&quot;>
                   <div className=&quot;text-sm font-semibold text-white&quot;>{title as string}</div>
                   <div className=&quot;mt-1 text-xs text-white/70&quot;>{desc as string}</div>                </a>
               </a>
-            ))}
+            )}
           </div>
         </section>
 
         {_/* CTA */}
         <motion.section,
-initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5 }}
+initial={ opacity: 0, y: 24 }
+          whileInView={ opacity: 1, y: 0 }
+          viewport={ once: true, amount: 0.2 }
+          transition={ duration: 0.5 }
           className=&quot;mx-auto max-w-7xl px-6 pb-24&quot;        >
           <div className=&quot;animated-border relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-fuchsia-600/20 via-violet-600/20 to-cyan-600/20 p-8 text-center backdrop-blur-xl&quot;>
             <h3 className=&quot;text-2xl font-bold&quot;>Ready to build with autonomous cloud agents?</h3>
@@ -1788,9 +1778,9 @@ initial={{ opacity: 0, y: 24 }}
             </a>
           </div>
         </section>
-{_/* AUTO-GENERATED: FRONTFUTURIZER_END */}
+_/* AUTO-GENERATED: FRONTFUTURIZER_END */}
 
-{/* Footer */}
+/* Footer */}
         <footer className=&quot;mx-auto max-w-7xl px-6 pb-16&quot;>
           <div className=&quot;rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur&quot;>
             <div className=&quot;flex flex-col items-center justify-between gap-4 md:flex-row&quot;>
@@ -1809,10 +1799,10 @@ initial={{ opacity: 0, y: 24 }}
         {_/* AI Agents Gallery */}
         <motion.section,
 id=&quot;agents&quot;
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5 }}
+          initial={ opacity: 0, y: 24 }
+          whileInView={ opacity: 1, y: 0 }
+          viewport={ once: true, amount: 0.2 }
+          transition={ duration: 0.5 }
           className=&quot;mx-auto max-w-7xl px-6 pb-14&quot;
         >
           <h2 className=&quot;text-center text-2xl font-bold tracking-wide text-white/90&quot;>AI Agents Gallery</h2>
@@ -1824,7 +1814,7 @@ id=&quot;agents&quot;
               { Icon: Palette, title: 'Design Beautifier', desc: 'Evolves UI with cohesive, futuristic patterns.', href: '/newsroom' },
               { Icon: Gauge, title: 'Performance Tuner', desc: 'Optimizes bundles and runtime for speed.', href: '/site-health' },
               { Icon: Layers, title: 'Factory Composer', desc: 'Chains automations into higherorder workflows.', href: '/automation' },
-              { Icon: GitBranch, title: 'Main Sync', desc: 'Ships small, safe diffs to main continuously.', href: '/automation' }].map(({ Icon, title, desc, href }) => (
+              { Icon: GitBranch, title: 'Main Sync', desc: 'Ships small, safe diffs to main continuously.', href: '/automation' }].map({ Icon, title, desc, href }) => (
               <Link key={title} href={href}>
                 <a className=&quot;group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo&quot;>
                   <div className=&quot;pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100&quot; />
@@ -1835,17 +1825,17 @@ id=&quot;agents&quot;
                   <p className=&quot;mt-1 text-sm text-white/75&quot;>{desc}</p>
                   <div className=&quot;mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90&quot;>Open <span aria-hidden></span></div>                </a>
               </a>
-            ))}
+            )}
           </div>
         </motion.section>
 
         {_/* Capabilities Matrix */}
         <motion.section,
 id=&quot;capability-matrix&quot;
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5 }}
+          initial={ opacity: 0, y: 24 }
+          whileInView={ opacity: 1, y: 0 }
+          viewport={ once: true, amount: 0.2 }
+          transition={ duration: 0.5 }
           className=&quot;mx-auto max-w-7xl px-6 pb-16&quot;
         >
           <h2 className=&quot;text-center text-2xl font-bold tracking-wide text-white/90&quot;>Capabilities Matrix</h2>
@@ -1863,7 +1853,7 @@ id=&quot;capability-matrix&quot;
               { title: 'Analytics', desc: 'Outcomes & insights', href: '/site-health' },
               { title: 'Link Integrity', desc: 'Broken link healing', href: '/site-health' },
               { title: 'Factory Composer', desc: 'Higherorder workflows', href: '/automation' },
-              { title: 'Docs & Changelog', desc: 'Technical notes & AI log', href: '/reports/seo', external: true }].map((item) => (
+              { title: 'Docs & Changelog', desc: 'Technical notes & AI log', href: '/reports/seo', external: true }].map(item) => (
               item.external ? (
                 <a key={item.title} href={item.href as string} target="blank" rel="noopener noreferrer" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">                  <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
                   <div className="text-base font-semibold">{item.title}</div>
@@ -1883,18 +1873,17 @@ id=&quot;capability-matrix&quot;
                     <div className=&quot;mt-1 text-sm text-white/75&quot;>{item.desc}</div>
                     <div className=&quot;mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90&quot;>Open <span aria-hidden></span></div>                  </a>
                 </a>
-              )
-            ))}
+              ))}
           </div>
         </motion.section>
 
         {_/* Benefits Directory */}
         <motion.section,
 id=&quot;benefits-directory&quot;
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5 }}
+          initial={ opacity: 0, y: 24 }
+          whileInView={ opacity: 1, y: 0 }
+          viewport={ once: true, amount: 0.2 }
+          transition={ duration: 0.5 }
           className=&quot;mx-auto max-w-7xl px-6 pb-16&quot;
         >
           <h2 className=&quot;text-center text-2xl font-bold tracking-wide text-white/90&quot;>Benefits Directory</h2>
@@ -1906,7 +1895,7 @@ id=&quot;benefits-directory&quot;
               { label: 'ZeroOps CloudNative', desc: 'No servers to babysit', href: '/automation' },
               { label: 'Layered Quality Checks', desc: 'Guardrails & audits', href: '/site-health' },
               { label: 'Faster Iteration Loops', desc: 'Shorten ideatoimpact', href: '/newsroom' },
-              { label: 'SEO Visibility Gains', desc: 'Continuous improvements', href: '/reports/seo' }].map((b) => (
+              { label: 'SEO Visibility Gains', desc: 'Continuous improvements', href: '/reports/seo' }].map(b) => (
               <Link key={b.label} href={b.href}>
                 <a className=&quot;group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover&quot;>
                   <div className=&quot;pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100&quot; />
@@ -1917,7 +1906,7 @@ id=&quot;benefits-directory&quot;
                   <p className=&quot;mt-1 text-sm text-white/75&quot;>{b.desc}</p>
                   <div className=&quot;mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90&quot;>Explore <span aria-hidden></span></div>                </a>
               </a>
-            ))}
+            )}
           </div>
         </motion.section>
 
@@ -1938,14 +1927,14 @@ id=&quot;benefits-directory&quot;
             <a href="https://github.com/Zion-Holdings/zion.app/tree/main/docs" target="blank" rel="noopener noreferrer" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl tilt-on-hover holo neon-ring"><div className="text-base font-semibold">Docs & Guides</div><div className="mt-1 text-sm text-white/75">Technical notes</div></a>          </div>
         </section>
  {_/* AUTO-GENERATED: FRONTADS_END */}
- 
+
         {_/* Feature Highlights (new) */}
         <motion.section,
 id=&quot;feature-highlights&quot;
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5 }}
+          initial={ opacity: 0, y: 24 }
+          whileInView={ opacity: 1, y: 0 }
+          viewport={ once: true, amount: 0.2 }
+          transition={ duration: 0.5 }
           className=&quot;mx-auto max-w-7xl px-6 pb-14&quot;
         >
           <h2 className=&quot;text-center text-2xl font-bold tracking-wide text-white/90&quot;>Feature Highlights</h2>
@@ -1957,21 +1946,21 @@ id=&quot;feature-highlights&quot;
               { title: 'Site Health', desc: 'A11y, performance and link integrity.', href: '/site-health' },
               { title: 'Automation Hub', desc: 'Factories, agents and live workflows.', href: '/automation' },
               { title: 'Newsroom', desc: 'Autonomous updates and product evolution.', href: '/newsroom' },
-              { title: 'Front Systems Hub', desc: 'Futuristic templates, effects and layouts.', href: '/main/front' }].map((card) => (
+              { title: 'Front Systems Hub', desc: 'Futuristic templates, effects and layouts.', href: '/main/front' }].map(card) => (
               <a key={card.title} href={card.href} className=&quot;group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo&quot;>
                 <div className=&quot;pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100&quot; />
                 <h3 className=&quot;text-lg font-semibold&quot;>{card.title}</h3>
                 <p className=&quot;mt-1 text-sm text-white/75&quot;>{card.desc}</p>
                 <div className=&quot;mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90&quot;>Open <span aria-hidden></span></div>              </a>
-            ))}
+            )}
           </div>;
         </motion.section>;
-;
+
         {/* Reports */}
         <section id=&quot;reports&quot; className=&quot;mx-auto max-w-7xl px-6 pb-16&quot;>
           {/* existing reports content */}
         </section>;
-;
+
         {/* New Intelligent Automations */}
         <section id=&quot;automations&quot; className=&quot;mx-auto max-w-7xl px-6 pb-20&quot;>
           <h2 className=&quot;text-2xl font-bold tracking-wide text-white/90 text-center&quot;>New Intelligent Automations</h2>
@@ -1980,14 +1969,14 @@ id=&quot;feature-highlights&quot;
               { title: 'SEO Audit Runner', href: '/.netlify/functions/seo-audit-runner' },
               { title: 'AI Trends Radar', href: '/.netlify/functions/ai-trends-radar-runner' },
               { title: 'Front Index Directory Builder', href: '/.netlify/functions/front-index-directory-builder' },
-              { title: 'Revenue Ideas Promoter', href: '/.netlify/functions/revenue-ideas-promoter' }].map((tool) => (
+              { title: 'Revenue Ideas Promoter', href: '/.netlify/functions/revenue-ideas-promoter' }].map(tool) => (
               <a key={tool.title} href={tool.href} className=&quot;rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/80 hover:border-cyan-400/30 hover:text-white transition-colors&quot;>
                 <div className=&quot;text-base font-semibold text-white&quot;>{tool.title}</div>
                 <div className=&quot;mt-1 text-xs text-white/70&quot;>Open </div>              </a>
-            ))}
+            )}
           </div>;
         </section>;
-;
+
       </div>;
       {/* Back to top */}
       {showToTop && (
@@ -2000,9 +1989,8 @@ onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
       )}
     </div>
   )
-}
 
-/* AUTO-GENERATED: FRONTACTIONS_START */
+* AUTO-GENERATED: FRONTACTIONS_START */
 <section className="mx-auto max-w-7xl px-6 pb-14">
   <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">GitHub Actions  Live Automations</h2>
   <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Cloudnative workflows that maintain, heal, and evolve the repo automatically.</p>
@@ -2080,4 +2068,4 @@ onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                 <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden></span></div>              </a>
   </div>
 </section>
-/* AUTO-GENERATED: FRONTACTIONS_END */
+* AUTO-GENERATED: FRONTACTIONS_END */

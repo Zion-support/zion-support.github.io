@@ -83,12 +83,11 @@ export default function CategoryDetail() {
       description: "Enterprise AI integrations and services"
       icon: <Briefcase className="w-6 h-6" />
     }
-  }
-  useEffect(() => {
+  useEffect() => {
     setIsLoading(true);
     // Find the category data based on slug
     const currentCategory = categoryData[slug as keyof typeof categoryData] |{
-      title: slug?.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ') |"Category"
+      title: slug?.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1).join(' ') |"Category"
       description: "Explore our collection in this category"
       icon: <Bot className="w-6 h-6" />
     }
@@ -96,11 +95,10 @@ export default function CategoryDetail() {
     // Filter listings by category
     const categoryTitle = currentCategory.title;
     const filteredListings = MARKETPLACE_LISTINGS.filter(listing =>
-      listing.category.toLowerCase() === categoryTitle.toLowerCase()
-    );
+      listing.category.toLowerCase() = = categoryTitle.toLowerCase();
     // If we don't have real listings for this category, generate placeholder listings
     const listingsToShow = filteredListings.length > 0 ? filteredListings :
-      Array(4).fill(null).map((_, index) => ({
+      Array(4).fill(null).map(_, index) => ({
         id: `${slug}-${index}`
         title: `${currentCategory.title} Product ${index + 1}`
         description: `A great ${currentCategory.title.toLowerCase()} solution for your needs.`
@@ -117,13 +115,13 @@ export default function CategoryDetail() {
         createdAt: new Date().toISOString()
         rating: Math.floor(Math.random() * 5) + 1
         reviewCount: Math.floor(Math.random() * 100)
-      }));
+      });
     setListings(listingsToShow);
     setIsLoading(false);
   }, [slug]);
   // Handle requesting a quote
   const handleRequestQuote = (listingId: string) => {
-    const listing = listings.find(item => item.id === listingId)
+    const listing = listings.find(item => item.id = = listingId)
     if (listing) {
       toast({
         title: "Quote Requested"
@@ -162,7 +160,7 @@ function CategoryDetail() {
     description: "",
     icon: <Bot className="w - 6 h - 6" />;
   });
-;
+
   // Map of category slugs to their display data;
   const category_data = {
     'services': {
@@ -225,28 +223,27 @@ function CategoryDetail() {
       description: "Enterprise AI integrations and services",
       icon: <Briefcase className="w - 6 h - 6" />;
     }
-  }
-;
-  useEffect (() => {
+
+  useEffect () => {
     setIsLoading (true);
-;
+
     // Find the category data based on slug;
     const current_category = category_data[slug as keyof typeof category_data] || {
-      title: slug?.split ('-').map (word => word.char_at (0).toUpperCase () + word.slice (1)).join (' ') || "Category",
+      title: slug?.split ('-').map (word => word.char_at (0).toUpperCase () + word.slice (1).join (' ') || "Category",
       description: "Explore our collection in this category",
       icon: <Bot className="w - 6 h - 6" />;
     }
-;
+
     set_category (current_category);
-;
+
     // Filter listings by category;
     const category_title = current_category.title;
     const filtered_listings = MARKETPLACE_LISTINGS.filter (listing =>;
-      listing.category.toLowerCase () === category_title.toLowerCase ());
-;
+      listing.category.toLowerCase () = = category_title.toLowerCase ();
+
     // If we don't have real listings for this category, generate placeholder listings;
     const listingsToShow = filtered_listings.length > 0 ? filtered_listings :;
-      Array (4).fill (null).map ((_, index) => ({
+      Array (4).fill (null).map (_, index) => ({
         id: `${slug}-${index}`,
         title: `${current_category.title} Product ${index + 1}`,
         description: `A great ${current_category.title.toLowerCase ()} solution for your needs.`,
@@ -263,24 +260,24 @@ function CategoryDetail() {
         created_at: new Date ().toISOString (),
         rating: Math.floor (Math.random () * 5) + 1,
         review_count: Math.floor (Math.random () * 100);
-      }));
-;
+      });
+
     set_listings (listingsToShow);
     setIsLoading (false);
   }, [slug]);
-;
+
   // Handle requesting a quote;
   const handleRequestQuote = (listing_id: string) =>: any {
-    const listing = listings.find (item => item.id === listing_id),
+    const listing = listings.find (item => item.id = = listing_id),
     // Check condition
 if ( {) {
   $2
-}
+
       toast ({
         title: "Quote Requested",
         description: `Your quote request for ${listing.title} has been sent.`;
       });
-;
+
       // Navigate to the quote request page with the listing information;
       navigate ("/request - quote", {
         state: {
@@ -291,10 +288,8 @@ if ( {) {
             category: listing.category,
             image: listing.images?.[0];
           }
-        }
       });
     }
-  }
 
   return (
     <>
@@ -325,13 +320,13 @@ if ( {) {
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {listings.map((listing) => (
+              {listings.map(listing) => (
                 <ProductListingCard
                   key={listing.id}
                   listing={listing}
                   onRequestQuote={handleRequestQuote}
                 />
-              ))}
+              )}
             </div>;
           )}
         </div>
@@ -339,7 +334,7 @@ if ( {) {
       <Footer />
     </>
   )
-}
+
             </p>;
           </div>;
           {is_loading ? (
@@ -347,15 +342,14 @@ if ( {) {
               <div className="animate - spin rounded - full h - 12 w - 12 border - t-2 border - b-2 border - zion - purple"></div>;
             </div>) : (
             <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 xl:grid - cols - 4 gap - 6">;
-              {listings.map ((listing) => (
+              {listings.map (listing) => (
                 <ProductListingCard;
                   key={listing.id}
                   listing={listing}
                   onRequestQuote={handleRequestQuote}
-                />))}
+                />)}
             </div>)}
         </div>;
       </div>;
       <Footer />;
     </>);
-}

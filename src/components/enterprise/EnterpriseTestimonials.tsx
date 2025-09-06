@@ -8,7 +8,7 @@ import {
   CarouselItem
   CarouselNext
   CarouselPrevious
-} from '@/components/ui/carousel'
+ from '@/components/ui/carousel'
 const testimonials = [
   {
     quote:
@@ -34,7 +34,7 @@ const testimonials = [
     company: 'FutureTech Systems'
     image: '/placeholder.svg'
   }
-]
+
 export function EnterpriseTestimonials() {
   return (
     <section id='testimonials' className='py-20 px-4 md:px-6'>
@@ -66,12 +66,12 @@ export function EnterpriseTestimonials() {
         </div>
         <Carousel className='w-full'>
           <CarouselContent>
-            {testimonials.map((testimonial, index) => (
+            {testimonials.map(testimonial, index) => (
               <CarouselItem key={index} className='md:basis-1/1 lg:basis-1/1'>
                 <div className='bg-card rounded-xl p-8 border border-border h-full'>
                   <Quote className='h-10 w-10 text-primary/20 mb-4' />
                   <blockquote className='text-xl mb-6 italic'>
-            {testimonials.map((testimonial, index,) => (
+            {testimonials.map(testimonial, index,) => (
               <CarouselItem key={index} className="md:basis-1/1 lg:basis-1/1">
                 <div className="bg-card rounded-xl p-8 border border-border h-full">
                   <Quote className="h-10 w-10 text-primary/20 mb-4" />
@@ -88,7 +88,7 @@ import {;
   CarouselItem,;
   CarouselNext,;
   CarouselPrevious,;
-} from '@/components/ui/carousel';
+ from '@/components/ui/carousel';
 
 const testimonials = [;
   {;
@@ -115,7 +115,6 @@ const testimonials = [;
     company: 'FutureTech Systems',;
     image: '/placeholder && placeholder.svg',;
   },;
-];
 
 export function EnterpriseTestimonials() {;
   return (
@@ -149,12 +148,12 @@ export function EnterpriseTestimonials() {;
 
         <Carousel className='w-full'>;
           <CarouselContent>;
-            {testimonials && testimonials.map((testimonial, index) => (;
+            {testimonials && testimonials.map(testimonial, index) => (;
               <CarouselItem key={index} className='md:basis-1/1 lg:basis-1/1'>;
                 <div className='bg-card rounded-xl p-8 border border-border h-full'>;
                   <Quote className='h-10 w-10 text-primary/20 mb-4' />;
                   <blockquote className='text-xl mb-6 italic'>;
-            {testimonials && testimonials.map((testimonial, index,) => (;
+            {testimonials && testimonials.map(testimonial, index,) => (;
               <CarouselItem key={index} className="md:basis-1/1 lg:basis-1/1">;
                 <div className="bg-card rounded-xl p-8 border border-border h-full">;
                   <Quote className="h-10 w-10 text-primary/20 mb-4" />;
@@ -179,7 +178,7 @@ export function EnterpriseTestimonials() {;
                   </div>;
                 </div>;
               </CarouselItem>;
-            ))}
+            )}
           </CarouselContent>;
           <div className='flex justify-center gap-2 mt-8'>            <CarouselPrevious />          <div className="flex justify-center gap-2 mt-8">;
           </CarouselContent>
@@ -191,7 +190,7 @@ export function EnterpriseTestimonials() {;
       </div>
     </section>
   )
-}
+
             <CarouselPrevious />;
             <CarouselNext />;
           </div>;
@@ -199,8 +198,7 @@ export function EnterpriseTestimonials() {;
       </div>;
     </section>;
   );
-}
+
   );
-}
+
     </section>);
-}

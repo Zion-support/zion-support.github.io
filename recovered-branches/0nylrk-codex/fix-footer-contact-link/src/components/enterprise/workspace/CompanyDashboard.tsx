@@ -22,10 +22,10 @@ export interface Company {;
   teamLimit: number;
   billingCycle: string;
   workspaceUrl: string
-}
+
 interface CompanyDashboardProps {
   company: Company;
-}
+
 export function CompanyDashboard({ company }: CompanyDashboardProps) {
   return (
     <div className="container mx-auto max-w-7xl py-8 px-4 md:px-6">
@@ -55,4 +55,3 @@ export function CompanyDashboard({ company }: CompanyDashboardProps) {
     </div>;
   );
     </div>);
-}

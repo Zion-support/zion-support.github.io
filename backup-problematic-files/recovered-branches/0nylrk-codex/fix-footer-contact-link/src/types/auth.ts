@@ -13,7 +13,7 @@ export interface UserDetails {;
   bio?:string,;
   createdAt?:string,;
   updatedAt?:string,;}
-;
+
 export interface UserProfile {;
   id?:string,;
   displayName?:string,;
@@ -29,9 +29,8 @@ export interface UserProfile {;
   role?:string,;
   permissions?:string[],;
   companyId?:string;
-}
-;
-// Update AuthContextType definition to match implementation;
+
+/ Update AuthContextType definition to match implementation;
 export interface AuthContextType {;
   user:UserDetails | null,;
   isLoading:boolean,;
@@ -48,5 +47,3 @@ export interface AuthContextType {;
   signIn?:(email:string, password:string) => Promise<{ error:any }>,;
   signOut?:() => Promise<void>,;
   signUp?:(email:string, password:string, userData?:Partial<UserDetails>) => Promise<{ error:any }>,;
-} 
-}

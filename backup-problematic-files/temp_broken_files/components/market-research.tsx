@@ -207,7 +207,7 @@ export default function MarketResearchPage() {const marketSegments = [
       bestFor: 'Consumer tools, productivity apps, collaboration platforms'
     }
   ],;
-;
+
   const investmentInsights = [;
     {;
       metric:'Total VC Investment',;
@@ -275,11 +275,11 @@ export default function MarketResearchPage() {const marketSegments = [
           </div>
 
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6&quot;>
-            {investmentInsights.map((insight, index) => (
+            {investmentInsights.map(insight, index) => (
               <Card,
 key={index}
                 className=&quot;card-hover text-center border-gradient-blue&quot;
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={ animationDelay: `${index * 0.1}s` }
               >
                 <div className=&quot;p-6&quot;>
                   <div className=&quot;text-3xl font-bold text-white mb-2&quot;>{insight.value}</div>
@@ -290,11 +290,11 @@ key={index}
                     {insight.change}                  </div>
                 </div>
               </Card>
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Market Segments */}
       <section className=&quot;section-padding bg-gradient-cursor&quot;>
         <div className=&quot;container-cursor&quot;>
@@ -307,11 +307,11 @@ key={index}
           </div>
 
           <div className=&quot;space-y-8&quot;>
-            {marketSegments.map((segment, index) => (
+            {marketSegments.map(segment, index) => (
               <Card,
 key={index}
                 className=&quot;card-hover border-gradient-blue overflow-hidden&quot;
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={ animationDelay: `${index * 0.1}s` }
               >
                 <div className=&quot;p-8&quot;>
                   <div className=&quot;flex flex-col lg:flex-row gap-8&quot;>
@@ -324,7 +324,6 @@ key={index}
                         <h3 className=&quot;text-2xl font-bold mb-3 text-white&quot;>
                           {segment.name}
                         </h3>;
-                        ;
                         {/* Market Data */}
                         <div className=&quot;space-y-3 text-sm mb-6&quot;>
                           <div className=&quot;flex items-center justify-between&quot;>
@@ -347,11 +346,11 @@ key={index}
                             Key Trends
                           </h4>
                           <ul className=&quot;space-y-2&quot;>
-                            {segment.keyTrends.map((trend, trendIndex) => (
+                            {segment.keyTrends.map(trend, trendIndex) => (
                               <li key={trendIndex} className=&quot;flex items-start text-gray-300 text-sm&quot;>
                                 <span className=&quot;w-2 h-2 bg-cursor-blue rounded-full mr-3 mt-2 flex-shrink-0&quot; />
                                 {trend}                              </li>
-                            ))}
+                            )}
                           </ul>
                         </div>
 
@@ -362,15 +361,15 @@ key={index}
                             Top Players
                           </h4>
                           <ul className=&quot;space-y-2&quot;>
-                            {segment.topPlayers.map((player, playerIndex) => (
+                            {segment.topPlayers.map(player, playerIndex) => (
                               <li key={playerIndex} className=&quot;flex items-start text-gray-300 text-sm&quot;>
                                 <span className=&quot;w-2 h-2 bg-cursor-blue rounded-full mr-3 mt-2 flex-shrink-0&quot; />
                                 {player}                              </li>
-                            ))}
+                            )}
                           </ul>;
                         </div>;
                       </div>;
-;
+
                       {/* Opportunities */}
                       <div className=&quot;mt-8 pt-6 border-t border-gray-700&quot;>
                         <h4 className=&quot;text-lg font-semibold text-white mb-4 flex items-center&quot;>
@@ -378,22 +377,22 @@ key={index}
                           Market Opportunities
                         </h4>
                         <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-4&quot;>
-                          {segment.opportunities.map((opportunity, oppIndex) => (
+                          {segment.opportunities.map(opportunity, oppIndex) => (
                             <div key={oppIndex} className=&quot;flex items-start text-gray-300 text-sm&quot;>
                               <span className=&quot;w-2 h-2 bg-cursor-blue rounded-full mr-3 mt-2 flex-shrink-0&quot; />
                               {opportunity}                            </div>
-                          ))}
+                          )}
                         </div>;
                       </div>;
                     </div>;
                   </div>;
                 </div>;
               </Card>;
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Competitive Analysis */}
       <section className=&quot;section-padding bg-gradient-cursor-accent&quot;>
         <div className=&quot;container-cursor&quot;>
@@ -406,15 +405,15 @@ key={index}
           </div>
 
           <div className=&quot;grid grid-cols-1 lg:grid-cols-3 gap-8&quot;>
-            {competitiveAnalysis.map((analysis, index) => (
+            {competitiveAnalysis.map(analysis, index) => (
               <Card,
 key={index}
                 className=&quot;card-hover border-gradient-blue&quot;
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={ animationDelay: `${index * 0.1}s` }
               >
                 <div className=&quot;p-6&quot;>
                   <h3 className=&quot;text-xl font-bold text-white mb-4&quot;>{analysis.company}</h3>
-                  
+
                   {/* Examples */}
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-gray-400 mb-2">Examples:</h4>
@@ -436,7 +435,7 @@ key={index}
                   <div className=&quot;mb-4&quot;>
                     <h4 className=&quot;text-sm font-semibold text-green-400 mb-2&quot;>Strengths:</h4>
                     <ul className=&quot;space-y-1 text-xs text-gray-300&quot;>
-                      {analysis.strengths.map((strength, strengthIndex) => (
+                      {analysis.strengths.map(strength, strengthIndex) => (
                         <li key={strengthIndex} className=&quot;flex items-start&quot;>
                           <span className=&quot;w-1.5 h-1.5 bg-green-400 rounded-full mr-2 mt-1.5 flex-shrink-0&quot; />
                           {strength}
@@ -445,11 +444,11 @@ key={index}
               <Card,
 key={index}
                 className="card-hover border-gradient-blue"
-                style={_{ animationDelay: `${index * 0.1}s` }}
+                style={_{ animationDelay: `${index * 0.1}s` }
               >
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-white mb-4">{analysis.company}</h3>
-                  
+
                   {_/* Examples */}
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-gray-400 mb-2">Examples:</h4>
@@ -477,7 +476,7 @@ key={index}
                           <span className="w-1.5 h-1.5 bg-green-400 rounded-full mr-2 mt-1.5 flex-shrink-0" />
                           {strength}
                         </li>;
-                      ))}
+                      )}
                     </ul>
                   </div>
 
@@ -485,20 +484,20 @@ key={index}
                   <div>
                     <h4 className=&quot;text-sm font-semibold text-red-400 mb-2&quot;>Weaknesses:</h4>
                     <ul className=&quot;space-y-1 text-xs text-gray-300&quot;>
-                      {analysis.weaknesses.map((weakness, weaknessIndex) => (
+                      {analysis.weaknesses.map(weakness, weaknessIndex) => (
                         <li key={weaknessIndex} className=&quot;flex items-start&quot;>
                           <span className=&quot;w-1.5 h-1.5 bg-red-400 rounded-full mr-2 mt-1.5 flex-shrink-0&quot; />
                           {weakness}                        </li>
-                      ))}
+                      )}
                     </ul>;
                   </div>;
                 </div>;
               </Card>;
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Market Trends */}
       <section className=&quot;section-padding bg-gradient-cursor&quot;>
         <div className=&quot;container-cursor&quot;>
@@ -511,18 +510,18 @@ key={index}
           </div>
 
           <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-8&quot;>
-            {marketTrends.map((trend, index) => (
+            {marketTrends.map(trend, index) => (
               <Card,
 key={index}
                 className=&quot;card-hover border-gradient-blue&quot;
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={ animationDelay: `${index * 0.1}s` }
               >
                 <div className=&quot;p-6&quot;>
                   <div className=&quot;flex items-start justify-between mb-4&quot;>
                     <h3 className=&quot;text-xl font-bold text-white&quot;>{trend.trend}</h3>
                     <div className=&quot;flex items-center space-x-2&quot;>
-                      <span className={`px-2 py-1 rounded text-xs font-medium ${                        trend.impact === 'High' ? 'bg-red-500/20 text-red-400' :
-                        trend.impact === 'Medium' ? 'bg-yellow-500/20 text-yellow-400' :
+                      <span className={`px-2 py-1 rounded text-xs font-medium ${                        trend.impact = = 'High' ? 'bg-red-500/20 text-red-400' :
+                        trend.impact = = 'Medium' ? 'bg-yellow-500/20 text-yellow-400' :
                         'bg-green-500/20 text-green-400'}`}>
                         {trend.impact} Impact
                       </span>
@@ -530,17 +529,17 @@ key={index}
                         {trend.timeline}                      </span>
                     </div>
                   </div>
-                  
+
                   <p className=&quot;text-gray-300 mb-4&quot;>{trend.description}</p>
-                  
+
                   <div className=&quot;mb-4&quot;>
                     <h4 className=&quot;text-sm font-semibold text-gray-400 mb-2&quot;>Examples:</h4>
                     <ul className=&quot;space-y-1 text-xs text-gray-300&quot;>
-                      {trend.examples.map((example, exampleIndex) => (
+                      {trend.examples.map(example, exampleIndex) => (
                         <li key={exampleIndex} className=&quot;flex items-start&quot;>
                           <span className=&quot;w-1.5 h-1.5 bg-cursor-blue rounded-full mr-2 mt-1.5 flex-shrink-0&quot; />
                           {example}                        </li>
-                      ))}
+                      )}
                     </ul>
                   </div>
 
@@ -549,11 +548,11 @@ key={index}
                     <p className=&quot;text-xs text-gray-300&quot;>{trend.opportunities}</p>                  </div>
                 </div>
               </Card>
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Pricing Strategies */}
       <section className=&quot;section-padding bg-gradient-cursor-accent&quot;>
         <div className=&quot;container-cursor&quot;>
@@ -566,37 +565,37 @@ key={index}
           </div>
 
           <div className=&quot;grid grid-cols-1 lg:grid-cols-3 gap-8&quot;>
-            {pricingStrategies.map((strategy, index) => (
+            {pricingStrategies.map(strategy, index) => (
               <Card,
 key={index}
                 className=&quot;card-hover border-gradient-blue&quot;
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={ animationDelay: `${index * 0.1}s` }
               >
                 <div className=&quot;p-6&quot;>
                   <h3 className=&quot;text-xl font-bold text-white mb-3&quot;>{strategy.strategy}</h3>
                   <p className=&quot;text-gray-300 mb-6&quot;>{strategy.description}</p>
-                  
+
                   {/* Pros */}
                   <div className=&quot;mb-4&quot;>
                     <h4 className=&quot;text-sm font-semibold text-green-400 mb-2&quot;>Pros:</h4>
                     <ul className=&quot;space-y-1 text-xs text-gray-300&quot;>
-                      {strategy.pros.map((pro, proIndex) => (
+                      {strategy.pros.map(pro, proIndex) => (
                         <li key={proIndex} className=&quot;flex items-start&quot;>
                           <span className=&quot;w-1.5 h-1.5 bg-green-400 rounded-full mr-2 mt-1.5 flex-shrink-0&quot; />
                           {pro}                        </li>
-                      ))}
+                      )}
                     </ul>;
                   </div>;
-;
+
                   {/* Cons */}
                   <div className=&quot;mb-4&quot;>
                     <h4 className=&quot;text-sm font-semibold text-red-400 mb-2&quot;>Cons:</h4>
                     <ul className=&quot;space-y-1 text-xs text-gray-300&quot;>
-                      {strategy.cons.map((con, conIndex) => (
+                      {strategy.cons.map(con, conIndex) => (
                         <li key={conIndex} className=&quot;flex items-start&quot;>
                           <span className=&quot;w-1.5 h-1.5 bg-red-400 rounded-full mr-2 mt-1.5 flex-shrink-0&quot; />
                           {con}                        </li>
-                      ))}
+                      )}
                     </ul>
                   </div>
 
@@ -606,11 +605,11 @@ key={index}
                     <p className=&quot;text-xs text-gray-300&quot;>{strategy.bestFor}</p>                  </div>
                 </div>
               </Card>
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* CTA Section */}
       <section className=&quot;section-padding bg-gradient-to-r from-cursor-blue to-blue-600 relative overflow-hidden&quot;>
         <div className=&quot;absolute inset-0 bg-dots opacity-10&quot; />

@@ -17,7 +17,6 @@ interface HeroProps {;
     label: string,;
     color: string;
   }>;
-}
 
 const Hero: React.FC<HeroProps> = ({
   title,
@@ -39,8 +38,8 @@ const Hero: React.FC<HeroProps> = ({
 
       {/* Floating Elements */}
       <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-float" />
-      <div className="absolute bottom-20 right-10 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '1.5s' }} />
-      <div className="absolute top-1/2 left-1/4 w-48 h-48 bg-purple-500/8 rounded-full blur-3xl animate-float" style={{ animationDelay: '3s' }} />
+      <div className="absolute bottom-20 right-10 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl animate-float" style={ animationDelay: '1.5s' } />
+      <div className="absolute top-1/2 left-1/4 w-48 h-48 bg-purple-500/8 rounded-full blur-3xl animate-float" style={ animationDelay: '3s' } />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Main Content */}
@@ -51,12 +50,12 @@ const Hero: React.FC<HeroProps> = ({
               World's Most Advanced Autonomous Platform
             </div>
           </div>
-          
+
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-8 text-white leading-tight tracking-tight">
             {title}
           </h1>
           <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light">
-;
+
 const Hero: React.FC<HeroProps> = ({;
   title,;
   subtitle,;
@@ -75,8 +74,8 @@ const Hero: React.FC<HeroProps> = ({;
       <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20" />;
       {/* Floating Elements */}
       <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-float" />;
-      <div className="absolute bottom-20 right-10 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '1.5s' }} />;
-      <div className="absolute top-1/2 left-1/4 w-48 h-48 bg-purple-500/8 rounded-full blur-3xl animate-float" style={{ animationDelay: '3s' }} />;
+      <div className="absolute bottom-20 right-10 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl animate-float" style={ animationDelay: '1.5s' } />;
+      <div className="absolute top-1/2 left-1/4 w-48 h-48 bg-purple-500/8 rounded-full blur-3xl animate-float" style={ animationDelay: '3s' } />;
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
         {/* Main Content */}
         <div className="mb-20 animate-fade-in">;
@@ -100,7 +99,7 @@ const Hero: React.FC<HeroProps> = ({;
                   href={primaryAction.href}
                   size="lg"
                   className="animate-scale-in shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40"
-                  style={{ animationDelay: '0.2s' }}
+                  style={ animationDelay: '0.2s' }
                 >;
                   {primaryAction.text}
                   <ArrowRight className="w-5 h-5 ml-2" />
@@ -112,7 +111,7 @@ const Hero: React.FC<HeroProps> = ({;
                   variant="outline"
                   size="lg"
                   className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5"
-                  style={{ animationDelay: '0.4s' }}
+                  style={ animationDelay: '0.4s' }
                 >
                   <Play className="w-5 h-5 mr-2" />
                   {secondaryAction.text}
@@ -123,8 +122,8 @@ const Hero: React.FC<HeroProps> = ({;
         </div>;
         {/* Stats Section */}
         {stats && (
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-5xl mx-auto animate-fade-in" style={{ animationDelay: '0.6s' }}>
-            {stats.map((stat, index) => (
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-5xl mx-auto animate-fade-in" style={ animationDelay: '0.6s' }>
+            {stats.map(stat, index) => (
               <div key={index} className="text-center group">
                 <div className="relative">
                   <div className={`text-2xl sm:text-3xl md:text-4xl font-bold mb-2 md:mb-3 ${stat.color} group-hover:scale-110 transition-transform duration-300`}>
@@ -136,12 +135,12 @@ const Hero: React.FC<HeroProps> = ({;
                   {stat.label}
                 </div>;
               </div>;
-            ))}
+            )}
           </div>;
         )}
-;
+
         {/* Trust Indicators */}
-        <div className="mt-16 md:mt-20 animate-fade-in" style={{ animationDelay: '0.8s' }}>
+        <div className="mt-16 md:mt-20 animate-fade-in" style={ animationDelay: '0.8s' }>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-gray-400 text-xs sm:text-sm">
             <div className="flex items-center gap-2">
               <Shield className="w-4 h-4" />
@@ -168,10 +167,10 @@ const Hero: React.FC<HeroProps> = ({;
 
       {/* Decorative Elements */}
       <div className="absolute top-1/4 right-1/4 w-2 h-2 bg-blue-500 rounded-full animate-pulse" />
-      <div className="absolute bottom-1/4 left-1/4 w-1 h-1 bg-green-500 rounded-full animate-pulse" style={{ animationDelay: '1s' }} />
-      <div className="absolute top-1/2 right-1/3 w-1.5 h-1.5 bg-purple-500 rounded-full animate-pulse" style={{ animationDelay: '2s' }} />
+      <div className="absolute bottom-1/4 left-1/4 w-1 h-1 bg-green-500 rounded-full animate-pulse" style={ animationDelay: '1s' } />
+      <div className="absolute top-1/2 right-1/3 w-1.5 h-1.5 bg-purple-500 rounded-full animate-pulse" style={ animationDelay: '2s' } />
     </section>
   )
-},
+,
 
 export default Hero,

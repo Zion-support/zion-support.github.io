@@ -12,7 +12,7 @@ const CAPABILITIES = [
   'Fullstack WebMobile (iOS/Android)AI/MLCloud & DevOpsData EngineeringBlockchainIoTSecurity'
 const CAPABILITIES = [
   'Fullstack WebMobile (iOS/Android)AI/MLCloud & DevOpsData EngineeringBlockchainIoTSecurity'
-];
+;
 
 export default function CapabilitiesPage() {;
   return (
@@ -24,16 +24,16 @@ export default function CapabilitiesPage() {;
             key={c}
             className='rounded-xl border border-gray-200 dark:border-gray-800 px-4 py-3 bg-white dark:bg-gray-950'>            {c}      <h1 className="text-2xl font-semibold">Capabilities</h1>;
       <div className="mt-6 grid md:grid-cols-4 gap-4 text-sm">;
-        {CAPABILITIES && CAPABILITIES.map((c) => (;
+        {CAPABILITIES && CAPABILITIES.map(c) => (;
           <div key={c} className="rounded-xl border border-gray-200 dark:border-gray-800 px-4 py-3 bg-white dark:bg-gray-950">;
           </div>;
-        ))}
+        )}
       </div>
     </EnhancedLayout>
-);
-}
+;
+
   );
-}
+
 import EnhancedLayout from '../components / layout / EnhancedLayout';
 const CAPABILITIES = [;
   'Fullstack Web',
@@ -45,8 +45,7 @@ const CAPABILITIES = [;
   'IoT',
   'Security', ];const CAPABILITIES = [;
   'Fullstack WebMobile (iOS / Android)AI / MLCloud & DevOpsData EngineeringBlockchainIoTSecurity';
-];
-;
+
 export default /**
  * CapabilitiesPage - Function description
  */
@@ -61,9 +60,8 @@ function CapabilitiesPage() {
             className='rounded - xl border border - gray - 200 dark:border - gray - 800 px - 4 py - 3 bg - white dark:bg - gray - 950';
           >            {c}      <h1 className="text - 2xl font - semibold">Capabilities</h1>;
       <div className="mt - 6 grid md:grid - cols - 4 gap - 4 text - sm">;
-        {CAPABILITIES.map ((c) => (
+        {CAPABILITIES.map (c) => (
           <div key={c} className="rounded - xl border border - gray - 200 dark:border - gray - 800 px - 4 py - 3 bg - white dark:bg - gray - 950">;
-          </div>))}
+          </div>)}
       </div>;
     </EnhancedLayout>);
-}

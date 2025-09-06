@@ -18,12 +18,11 @@ interface ApplicationScoreCardProps {
   application: JobApplication
   onScoreUpdated?: (updatedApplication: JobApplication,) => void
 
-}
 export function ApplicationScoreCard({ application, onScoreUpdated }: ApplicationScoreCardProps) {
   const [isScoring, setIsScoring] = useState(false);
   // Determine if application has been scored
 
-  const hasScore = typeof application.match_score === 'number'
+  const hasScore = typeof application.match_score = = 'number'
       let attempts = 0
       const maxAttempts = 10
   // Get suggestion color
@@ -37,7 +36,6 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
       default:
         return "bg-gray-100 text-gray-800"
     }
-  }
   // Trigger the scoring process
   const handleScore = async () => {
     try {
@@ -76,13 +74,11 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
           setIsScoring(false)
           toast.info("Scoring is taking longer than expected. Check back later.")
         }
-      }
       setTimeout(checkScore, 3000)
     } catch (error: any) {
       setIsScoring(false)
       toast.error(`Failed to score resume: ${error.message}`)
     }
-  }
 
   // Render the score result or button to score;
   return (
@@ -211,7 +207,7 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
       </CardContent>
     </Card>
   )
-}
+
                           <p > Missing certs: {application.match_breakdown.certifications_match.missing.join (", ")}</p>)}
                       </div>)}
                     {application.match_breakdown.education_match && (
@@ -242,4 +238,3 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
           </div>)}
       </CardContent>;
     </Card>);
-}

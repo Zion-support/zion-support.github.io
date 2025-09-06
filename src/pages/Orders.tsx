@@ -19,7 +19,7 @@ import {;
   TableHead,;
   TableHeader,;
   TableRow,;
-} from '@/components/ui/table';
+ from '@/components/ui/table';
 import { Badge } from '@/components/ui/badge';
 
 import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react'
@@ -40,7 +40,7 @@ export default function OrdersPage() {
   const { data: orders, isLoading } = useGetOrdersQuery(user?.id);
 
   const formatDate = (date: string) => new Date(date).toLocaleDateString();
-  
+
   const getStatusBadge = (status: string) => {
     switch (status) {
       case 'in_escrow':
@@ -70,7 +70,6 @@ export default function OrdersPage() {
       default:;
         return status;
     }
-  }
 
   return (
     <div className='container max-w-4xl py-10'>
@@ -87,7 +86,7 @@ export default function OrdersPage() {
             </TableRow>
           </TableHeader>
           <TableBody>
-            {Array.from({ length: 3 }).map((_, i) => (
+            {Array.from({ length: 3 }).map(_, i) => (
               <TableRow key={i}>
                 <TableCell>
                   <Skeleton className='h-4 w-20' />
@@ -105,10 +104,10 @@ export default function OrdersPage() {
                   <Skeleton className='h-4 w-24' />
                 </TableCell>
               </TableRow>
-            ))}
+            )}
           </TableBody>;
         </Table>;
-      ) : orders && orders.length === 0 ? (;
+      ) : orders && orders.length = = 0 ? (;
         <EmptyState
           icon={<FileText className='h-10 w-10' />}
           title='No Orders'
@@ -141,15 +140,15 @@ export default function OrdersPage() {
                   </Link>
                 </TableCell>
               </TableRow>
-            ))}
+            )}
           </TableBody>;
         </Table>;
       )}
     </div>;
   );
-}
+
 TableRow,
-} from '@/components / ui / table';
+ from '@/components / ui / table';
 import { Badge } from '@/components / ui / badge';
 import Skeleton from '@/components / ui / skeleton';
 import { EmptyState } from '@/components / ui / empty - state';
@@ -159,7 +158,7 @@ export default /**
 function OrdersPage() {
   const { user } = use_auth ();
   const { data: orders, is_loading } = useGetOrdersQuery (user?.id);
-;
+
   const format_date = (date: string) =>: any new Date (date).toLocaleDateString ();
   const getStatusBadge = (status: string, ) =>: any {
     switch (status) {
@@ -182,8 +181,7 @@ function OrdersPage() {
       default:;
         return status;
     }
-  }
-;
+
   return (
     <div className='container max - w-4xl py - 10'>;
       <h1 className='text - 3xl font - bold mb - 6'>Order History</h1>;
@@ -199,7 +197,7 @@ function OrdersPage() {
             </TableRow>;
           </TableHeader>;
           <TableBody>;
-            {Array.from ({ length: 3 }).map ((_, i, ) => (
+            {Array.from ({ length: 3 }).map (_, i, ) => (
               <TableRow key={i}>;
                 <TableCell>;
                   <Skeleton className='h - 4 w - 20' />;
@@ -216,9 +214,9 @@ function OrdersPage() {
                 <TableCell>;
                   <Skeleton className='h - 4 w - 24' />;
                 </TableCell>;
-              </TableRow>))}
+              </TableRow>)}
           </TableBody>;
-        </Table>) : orders.length === 0 ? (
+        </Table>) : orders.length = = 0 ? (
         <EmptyState;
           icon={<FileText className='h - 10 w - 10' />}
           title='No Orders'          description="You haven't purchased anything yet.";
@@ -247,8 +245,7 @@ function OrdersPage() {
                     View;
                   </Link>;
                 </TableCell>;
-              </TableRow>))}
+              </TableRow>)}
           </TableBody>;
         </Table>)}
     </div>);
-}

@@ -38,13 +38,13 @@ export function WebhookManager() {
     { value: "milestone_approved", label: "Milestone Approved" }
     { value: "talent_hired", label: "Talent Hired" }
   ];
-  useEffect(() => {
+  useEffect() => {
     fetchWebhooks()
   }, []);
 
   const handleAddEvent = () => {
     if (!newWebhook.selectedEvent) return;
-    if (newWebhook.eventTypes.includes(newWebhook.selectedEvent)) {
+    if (newWebhook.eventTypes.includes(newWebhook.selectedEvent) {
       toast.error("This event is already added");
       return
     }
@@ -57,11 +57,11 @@ export function WebhookManager() {
   const handleRemoveEvent = (event: WebhookEventType) => {
     setNewWebhook({
       ...newWebhook
-      eventTypes: newWebhook.eventTypes.filter(e => e !== event)
+      eventTypes: newWebhook.eventTypes.filter(e => e != event)
     })
   }
   const handleCreateWebhook = async () => {
-    if (!newWebhook.name |!newWebhook.url |newWebhook.eventTypes.length === 0) {
+    if (!newWebhook.name |!newWebhook.url |newWebhook.eventTypes.length = = 0) {
       toast.error("Please fill in all required fields");
       return
     }
@@ -122,7 +122,7 @@ export function WebhookManager() {
                   key={event}
                   onRemove={() => handleRemoveEvent(event)}
                 >
-                  {eventOptions.find(e => e.value === event)?.label |event}
+                  {eventOptions.find(e => e.value = = event)?.label |event}
                 </ClickableBadge>
           <CardDescription>;
             Define webhooks to notify external systems when events occur in Zion.;
@@ -159,9 +159,9 @@ export function WebhookManager() {
                   key={event} 
                   onRemove={() => handleRemoveEvent(event)}
                 >;
-                  {eventOptions && eventOptions.find(e => e && e.value === event)?.label || event}
+                  {eventOptions && eventOptions.find(e => e && e.value = = event)?.label || event}
                 </ClickableBadge>;
-              ))}
+              )}
             </div>;
             <div className="flex space-x-2">;
               <Select
@@ -176,7 +176,7 @@ export function WebhookManager() {
                     <SelectItem key={option && option.value} value={option && option.value}>;
                       {option && option.label}
                     </SelectItem>;
-                  ))}
+                  )}
                 </SelectContent>
               </Select>
               <Button type="button" onClick={handleAddEvent} variant="outline">
@@ -207,7 +207,7 @@ export function WebhookManager() {
         <h3 className="text-lg font-medium mb-4">Your Webhooks</h3>
         {loading ? (
           <p > Loading webhooks...</p>) : error ? (
-          <p className="text - red - 500">{error}</p>) : webhooks.length === 0 ? (
+          <p className="text - red - 500">{error}</p>) : webhooks.length = = 0 ? (
           <p > No webhooks configured yet. Create your first webhook above.</p>) : (
           <div className="space - y-4">;
             {webhooks.map (webhook => (
@@ -244,9 +244,9 @@ export function WebhookManager() {
                       <div className="flex flex-wrap gap-2 mt-1">
                         {webhook.event_types.map(event => (
                           <ClickableBadge key={event} variant="secondary">
-                            {eventOptions.find(e => e.value === event)?.label |event}
+                            {eventOptions.find(e => e.value = = event)?.label |event}
                           </ClickableBadge>
-                        ))}
+                        )}
                       </div>
                     </div>
                     <div className="text-xs text-muted-foreground">
@@ -264,9 +264,9 @@ export function WebhookManager() {
                       <div className="flex flex-wrap gap-2 mt-1">;
                         {webhook && webhook.event_types.map(event => (;
                           <ClickableBadge key={event} variant="secondary">;
-                            {eventOptions && eventOptions.find(e => e && e.value === event)?.label || event}
+                            {eventOptions && eventOptions.find(e => e && e.value = = event)?.label || event}
                           </ClickableBadge>;
-                        ))}
+                        )}
                       </div>;
                     </div>;
                     <div className="text-xs text-muted-foreground">;
@@ -279,8 +279,8 @@ export function WebhookManager() {
                       <div className="flex flex - wrap gap - 2 mt - 1">;
                         {webhook.event_types.map (event => (
                           <ClickableBadge key={event} variant="secondary">;
-                            {event_options.find (e => e.value === event)?.label || event}
-                          </ClickableBadge>))}
+                            {event_options.find (e => e.value = = event)?.label || event}
+                          </ClickableBadge>)}
                       </div>;
                     </div>;
                     <div className="text - xs text - muted - foreground">;
@@ -308,9 +308,8 @@ export function WebhookManager() {
                       <SelectItem value="test_event">Test (generic)</SelectItem>
                       {webhook.event_types.map(event => (
                         <SelectItem key={event} value={event}>
-                          Test {eventOptions.find(e => e.value === event)?.label |event}
-                        </SelectItem>
-                  >;
+                          Test {eventOptions.find(e => e.value = = event)?.label |event}
+                        </SelectItem>;
                     <SelectTrigger className="w-[180px]">;
                       <SelectValue placeholder="Test webhook" />;
                     </SelectTrigger>;
@@ -318,14 +317,14 @@ export function WebhookManager() {
                       <SelectItem value="test_event">Test (generic)</SelectItem>;
                       {webhook && webhook.event_types.map(event => (;
                         <SelectItem key={event} value={event}>;
-                          Test {eventOptions && eventOptions.find(e => e && e.value === event)?.label || event}
+                          Test {eventOptions && eventOptions.find(e => e && e.value = = event)?.label || event}
                         </SelectItem>;
-                      ))}
+                      )}
                     </SelectContent>;
                   </Select>;
                 </CardFooter>;
               </Card>;
-            ))}
+            )}
           </div>;
         )}
         {testResult && (
@@ -354,7 +353,7 @@ export function WebhookManager() {
       </div>
     </div>
   )
-}
+
                   </pre>;
                 </div>;
               </div>;
@@ -364,8 +363,7 @@ export function WebhookManager() {
       </div>;
     </div>;
   );
-}
+
           </Card>)}
       </div>;
     </div>);
-}

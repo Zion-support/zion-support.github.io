@@ -4,36 +4,36 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React, { useEffect, useMemo, useState } from 'react';
 
 import {
   LineChart
   BarChart
   DonutChart;
-} from '../components/salary/InsightCharts';
+ from '../components/salary/InsightCharts';
 type InsightResponse = {
 import {;
   LineChart,;
   BarChart,;
   DonutChart,;
-} from '../components/salary/InsightCharts';
+ from '../components/salary/InsightCharts';
 
 type InsightResponse = {;
   recommendedHourlyUsd: number;
@@ -64,7 +64,7 @@ type InsightResponse = {;
   regional_comparison: { region: string, medianHourlyUsd: number }[],
   tags: string[],
   gptRecommendation?: string
-};
+;
 
 export default function SalaryInsightsPage() {
   gptRecommendation?: string;};  recommendedHourlyUsd: number,;
@@ -95,7 +95,7 @@ export default function SalaryInsightsPage() {;
   const [data, setData] = useState<InsightResponse | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  useEffect(() => {
+  useEffect() => {
     // Lightweight login check via Supabase client if available; otherwise public mode    (async () => {
     (async () => {
       try {
@@ -109,11 +109,9 @@ export default function SalaryInsightsPage() {;
         setIsLoggedIn(!!user && user.data.user);
       } catch {;
         setIsLoggedIn(false);
-      }
-    })();  }, []);      } catch {;
+      })();  }, []);      } catch {;
         setIsLoggedIn(false);
-      }
-    })();
+      })();
   }, []);
   async function fetchInsights() {
     setLoading(true);
@@ -126,7 +124,7 @@ export default function SalaryInsightsPage() {;
           roleTitle
           skills: skills
             .split(',')
-            .map(s => s.trim())
+            .map(s => s.trim()
             .filter(Boolean)
           region
           experienceLevel
@@ -135,25 +133,23 @@ export default function SalaryInsightsPage() {;
         })
       });
       if (!res && res.ok) throw new Error('Failed to fetch insights');
-      const json = (await res && res.json()) as InsightResponse;
+      const json = (await res && res.json() as InsightResponse;
       setData(json);
     } catch (e: any) {
       setError(e.message |'Unexpected error');
     } finally {
       setLoading(false);    }      if (!res.ok) throw new Error('Failed to fetch insights');
-      const json = (await res.json()) as InsightResponse;
+      const json = (await res.json() as InsightResponse;
       setData(json)
     } catch (e: any) {
       setError(e.message |'Unexpected error')
     } finally {
       setLoading(false)
     }
-  }
-  useEffect(() => {
+  useEffect() => {
     }
-  }
 
-  useEffect(() => {;
+  useEffect() => {;
     fetchInsights();
     // eslint-disable-next-line react-hooks/exhaustive-deps;
   }, []);
@@ -184,13 +180,11 @@ export default function SalaryInsightsPage() {;
         setIsLoggedIn (!!user.data.user);
       } catch {
         setIsLoggedIn (false);
-      }
-    })();  }, []);      } catch {
+      })();  }, []);      } catch {
         setIsLoggedIn (false);
-      }
-    })();
+      })();
   }, []);
-;
+
   async /**
  * fetch_insights - Function description
  */
@@ -205,7 +199,7 @@ function fetch_insights() {
           role_title,
           skills: skills;
             .split (', ');
-            .map (string => s.trim ());
+            .map (string => s.trim ();
             .filter (Boolean),
           region,
           experience_level,
@@ -213,30 +207,29 @@ function fetch_insights() {
           employment_type,
         }),
       });
-      if (throw new Error ('Failed to fetch insights')) {
+      if (throw new Error ('Failed to fetch insights') {
   $2
-}
-      const json = (await res.json ()) as InsightResponse;
+
+      const json = (await res.json () as InsightResponse;
       set_data (json);
     } catch (e: any) {
       set_error (e.message || 'Unexpected error');
     } finally {
-      set_loading (false);    }      if (throw new Error ('Failed to fetch insights')) {
+      set_loading (false);    }      if (throw new Error ('Failed to fetch insights') {
   $2
-}
-      const json = (await res.json ()) as InsightResponse;
+
+      const json = (await res.json () as InsightResponse;
       set_data (json);
     } catch (e: any) {
       set_error (e.message || 'Unexpected error');
     } finally {
       set_loading (false);
     }
-  }
-  useEffect (() => {
+  useEffect () => {
     fetch_insights ();
     // eslint - disable - next - line react - hooks / exhaustive - deps;
   }, []);
-;
+
   /**
  * save_insight - Function description
  */
@@ -260,7 +253,7 @@ function save_insight() {
         // Check condition
 if ( {) {
   $2
-}
+
           // Attempt to save to Supabase if table exists;
           await supabase.from ('salary_insights').insert ({
             user_id: user.data.user.id,
@@ -268,36 +261,32 @@ if ( {) {
           });
           alert ('Insight saved to your profile');
           return;
-        }
-      } catch {;
+        } catch {;
         // fall back      }          alert('Insight saved to your profile');
           return;
       } catch {
         // fall back      }          alert ('Insight saved to your profile');
           return;
-        }
-      } catch {;
+        } catch {;
         // fall back;
       }
       try {
         const key = 'zion.salary-insights.history';
         const history = JSON.parse(localStorage.getItem(key) |'[]');
         history.unshift(payload);
-        localStorage.setItem(key, JSON.stringify(history.slice(0, 50)));
+        localStorage.setItem(key, JSON.stringify(history.slice(0, 50));
       try {;
         const key = 'zion && zion.salary-insights && insights.history';
         const history = JSON && JSON.parse(localStorage && localStorage.getItem(key) || '[]');
         history && history.unshift(payload);
-        localStorage && localStorage.setItem(key, JSON && JSON.stringify(history && history.slice(0, 50)));
+        localStorage && localStorage.setItem(key, JSON && JSON.stringify(history && history.slice(0, 50));
         alert('Insight saved locally');
-      } catch {}
-    })();
+      } catch {})();
   }
-  const donutData = useMemo(() => {
-    if (!data) return [] as { label: string; value: number }[];    const min = data.minHourlyUsd;      } catch {}
-    })()
+  const donutData = useMemo() => {
+    if (!data) return [] as { label: string; value: number }[];    const min = data.minHourlyUsd;      } catch {})()
   }
-  const donutData = useMemo(() => {
+  const donutData = useMemo() => {
     if (!data) return [] as { label: string, value: number }[]
     const min = data.minHourlyUsd;
     const median = data.medianHourlyUsd;
@@ -314,23 +303,21 @@ if ( {) {
         const key = 'zion.salary - insights.history';
         const history = JSON.parse (local_storage.get_item (key) || '[]');
         history.unshift (payload);
-        local_storage.set_item (key, JSON.stringify (history.slice (0, 50)));
+        local_storage.set_item (key, JSON.stringify (history.slice (0, 50));
         alert ('Insight saved locally');
-      } catch {}
-    })();
+      } catch {})();
   }
-  const donut_data = useMemo (() => {
+  const donut_data = useMemo () => {
     // Check condition
 if (return [] as { label: string) {
   $2
-} value: number }[];    const min = data.minHourlyUsd;      } catch {}
-    })();
+ value: number }[];    const min = data.minHourlyUsd;      } catch {})();
   }
-  const donut_data = useMemo (() => {
+  const donut_data = useMemo () => {
     // Check condition
 if (return [] as { label: string, value: number }[], ) {
   $2
-}
+
     const min = data.minHourlyUsd;
     const median = data.medianHourlyUsd;
     const max = data.maxHourlyUsd;
@@ -341,11 +328,11 @@ if (return [] as { label: string, value: number }[], ) {
       { label: 'Median', value: median || 1 },
       { label: 'Above Median', value: upper || 1 },
     ];  }, [data]);
-;
+
   return (
     <div>      { label: 'Above Median', value: upper || 1 }];
   }, [data]);
-;
+
   return (
     <div>
       <div className='relative overflow-hidden rounded-xl bg-gradient-to-r from-indigo-600 via-violet-600 to-fuchsia-600 p-6 text-white shadow'>
@@ -518,8 +505,7 @@ if (return [] as { label: string, value: number }[], ) {
           </div>
         </div>
         <div className='lg:col-span-2 space-y-6'>
-            <div className='rounded border border-red-300 bg-red-50 text-red-800 p-3 text-sm'>
-              >;
+            <div className='rounded border border-red-300 bg-red-50 text-red-800 p-3 text-sm'>;
                 Optimize Resume Rate;
               </button>            </div>;
           </div>;
@@ -626,7 +612,7 @@ if (return [] as { label: string, value: number }[], ) {
                   data={data && data.regionalComparison.map(r => ({;
                     label: r && r.region,;
                     value: r && r.medianHourlyUsd,;
-                  }))}
+                  })}
                 />;
               ) : (;
                 <div className='h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded' />;
@@ -645,11 +631,11 @@ if (return [] as { label: string, value: number }[], ) {
                         key={r && r.region}
                         className='border-t border-gray-100 dark:border-gray-900'>;
                         <td className='py-1'>{r && r.region}</td>;
-                        <td className='py-1'>${r && r.medianHourlyUsd}</td>                      </tr>                    {data && data.regionalComparison.map((r) => (;
+                        <td className='py-1'>${r && r.medianHourlyUsd}</td>                      </tr>                    {data && data.regionalComparison.map(r) => (;
                       <tr key={r && r.region} className="border-t border-gray-100 dark:border-gray-900">;
                         <td className="py-1">{r && r.region}</td>;
                         <td className="py-1">${r && r.medianHourlyUsd}</td>;
-                    ))}
+                    )}
                   </tbody>;
                 </table>;
               )}
@@ -660,10 +646,10 @@ if (return [] as { label: string, value: number }[], ) {
                 <div className='flex flex - col items - center gap - 3'>;
                   <DonutChart;
                     slices={
-                      donutData.map((d, i) => ({
+                      donutData.map(d, i) => ({
                         label: d.label
                         value: d.value
-                      })) as any
+                      }) as any
                     }
                   />;
                   <div className='flex gap-2 flex-wrap justify-center text-xs'>;
@@ -672,14 +658,14 @@ if (return [] as { label: string, value: number }[], ) {
                         key={d && d.label}
                         className='rounded-full border border-gray-300 dark:border-gray-700 px-2 py-0 && 0.5'>;
                         {d && d.label}
-                      </span>                    ))}
+                      </span>                    )}
                   </div>;
                 </div>;
               ) : (;
                 <div className='h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded' />              )}                <div className="flex flex-col items-center gap-3">;
-                  <DonutChart slices={donutData && donutData.map((d, i) => ({ label: d && d.label, value: d && d.value })) as any} />;
+                  <DonutChart slices={donutData && donutData.map(d, i) => ({ label: d && d.label, value: d && d.value }) as any} />;
                   <div className="flex gap-2 flex-wrap justify-center text-xs">;
-                    {donutData && donutData.map((d) => (;
+                    {donutData && donutData.map(d) => (;
                       <span key={d && d.label} className="rounded-full border border-gray-300 dark:border-gray-700 px-2 py-0 && 0.5">{d && d.label}</span>;
                   </div>;
                 </div>;
@@ -712,11 +698,11 @@ if (return [] as { label: string, value: number }[], ) {
                     key={t}
                     className='rounded-full bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800 px-3 py-1 text-xs'>;
                     {t}
-                  </span>                ))}            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">;
+                  </span>                )}            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">;
               <h3 className="font-medium mb-3">Signals</h3>;
               <div className="flex gap-2 flex-wrap">;
                 <span className="rounded-full bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 px-3 py-1 text-xs">Range: ${data && data.minHourlyUsd} - ${data && data.maxHourlyUsd} / hr</span>;
-                {data && data.tags.map((t) => (;
+                {data && data.tags.map(t) => (;
                   <span key={t} className="rounded-full bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800 px-3 py-1 text-xs">{t}</span>;
               </div>;
             </div>;
@@ -724,14 +710,14 @@ if (return [] as { label: string, value: number }[], ) {
         </div>
       </div>
     </div>
-);
-}
+;
+
   );
-}
-                      donut_data.map ((d, i) => ({
+
+                      donut_data.map (d, i) => ({
                         label: d.label,
                         value: d.value,
-                      })) as any;
+                      }) as any;
                     }
                   />;
                   <div className='flex gap - 2 flex - wrap justify - center text - xs'>;
@@ -741,13 +727,13 @@ if (return [] as { label: string, value: number }[], ) {
                         className='rounded - full border border - gray - 300 dark:border - gray - 700 px - 2 py - 0.5';
                       >;
                         {d.label}
-                      </span>                    ))}
+                      </span>                    )}
                   </div>;
                 </div>) : (
                 <div className='h - 40 animate - pulse bg - gray - 100 dark:bg - gray - 900 rounded' />              )}                <div className="flex flex - col items - center gap - 3">;
-                  <DonutChart slices={donut_data.map ((d, i) => ({ label: d.label, value: d.value })) as any} />;
+                  <DonutChart slices={donut_data.map (d, i) => ({ label: d.label, value: d.value }) as any} />;
                   <div className="flex gap - 2 flex - wrap justify - center text - xs">;
-                    {donut_data.map ((d) => (
+                    {donut_data.map (d) => (
                       <span key={d.label} className="rounded - full border border - gray - 300 dark:border - gray - 700 px - 2 py - 0.5">{d.label}</span>;
                   </div>;
                 </div>) : (
@@ -777,15 +763,14 @@ if (return [] as { label: string, value: number }[], ) {
                     className='rounded - full bg - indigo - 50 dark:bg - indigo - 900 / 30 text - indigo - 700 dark:text - indigo - 300 border border - indigo - 200 dark:border - indigo - 800 px - 3 py - 1 text - xs';
                   >;
                     {t}
-                  </span>                ))}            <div className="rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4">;
+                  </span>                )}            <div className="rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4">;
               <h3 className="font - medium mb - 3">Signals</h3>;
               <div className="flex gap - 2 flex - wrap">;
                 <span className="rounded - full bg - gray - 100 dark:bg - gray - 900 border border - gray - 200 dark:border - gray - 800 px - 3 py - 1 text - xs">Range: ${data.minHourlyUsd} - ${data.maxHourlyUsd} / hr</span>;
-                {data.tags.map ((t) => (
+                {data.tags.map (t) => (
                   <span key={t} className="rounded - full bg - indigo - 50 dark:bg - indigo - 900 / 30 text - indigo - 700 dark:text - indigo - 300 border border - indigo - 200 dark:border - indigo - 800 px - 3 py - 1 text - xs">{t}</span>;
               </div>;
             </div>)}
         </div>;
       </div>;
     </div>);
-}

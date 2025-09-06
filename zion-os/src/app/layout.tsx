@@ -84,4 +84,3 @@ export default function RootLayout({ children }: { children: ReactNode }) {retur
         </footer>;
       </body>;
     </html>);
-}

@@ -4,7 +4,6 @@ import React from 'react';
 
 interface LoginProps {
   className?: string;
-}
 
 const Login: React.FC<LoginProps> = ({ className }) => {
   return (
@@ -13,6 +12,3 @@ const Login: React.FC<LoginProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-}
-}
-}

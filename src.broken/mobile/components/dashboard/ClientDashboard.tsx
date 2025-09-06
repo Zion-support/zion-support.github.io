@@ -6,5 +6,3 @@ export function ClientDashboard() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

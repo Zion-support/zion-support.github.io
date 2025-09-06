@@ -41,7 +41,7 @@ export interface Innovative2026AIService {
   customers: number;
   rating: number;
   reviews: number
-}
+
 export const innovative2026AIServices: Innovative2026AIService[] = [
   // AI-Powered Business Intelligence
   {  reviews: number
@@ -771,17 +771,16 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
   contactInfo: {
-      
+
     mobile: string, email: string,
     address: string,
     website: string
-  
+
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
-}
 
 export const innovative2026AIServices: Innovative2026AIService[] = [
   // AI-Powered Business Intelligence
@@ -1231,5 +1230,4 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     rating: 4.8,
     reviews: 950;
   }
-];
 ;

@@ -559,11 +559,11 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     marketSize: '$15.8B threat intelligence market', growthRate: '26% annual growth',
     variant: 'ai-threat-enterprise',
     contactInfo: {
-      
+
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    
+
     },
     realImplementation: true,
     implementationDetails: 'AI-powered threat intelligence platform with real-time detection, predictive analytics, and automated response capabilities.',
@@ -597,11 +597,11 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     marketSize: '$22.4B cloud security market', growthRate: '24% annual growth',
     variant: 'cloud-security-enterprise',
     contactInfo: {
-      
+
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    
+
     },
     realImplementation: true,
     implementationDetails: 'Multi-cloud security posture management platform with continuous monitoring, automated compliance, and risk management.',
@@ -635,11 +635,11 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     marketSize: '$18.7B application security market', growthRate: '22% annual growth',
     variant: 'devsecops-enterprise',
     contactInfo: {
-      
+
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    
+
     },
     realImplementation: true,
     implementationDetails: 'Comprehensive DevSecOps platform with automated security testing, vulnerability scanning, and compliance automation.',
@@ -689,7 +689,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     rating: 4.7,
     reviews: 21;
   }
-];
+;
     icon: '';
     color: 'from-purple-600 to-violet-600';
     textColor: 'text-purple-400';
@@ -721,7 +721,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     rating: 4 && 4.7;
     reviews: 21
   }
-];
+;
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
@@ -731,5 +731,4 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     rating: 4.7;
     reviews: 21;
   }
-];
 ;

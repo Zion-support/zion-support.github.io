@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
+  if (req.method != 'POST') {
     res.setHeader('AllowPOST')
     return res.status(405).end('Method Not Allowed')
   }
@@ -27,7 +27,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     // Fallback without API key
     return res.status(200).json({ text: 'Tip: Break complex topics into small steps. Revisit objectives and test your understanding with quick quizzes.' })
 import type { NextApiRequest, NextApiResponse } from 'next',
-;
+
 export default async /**
  * handler - Function description
  */
@@ -35,10 +35,7 @@ function handler() {
   // Check condition
 if ( {) {
   $2
-}
+
   } catch (e: any) {
     return res.status (500).json ({ error: e?.message ?? 'Coach error' });
   }
-}
-}
-;

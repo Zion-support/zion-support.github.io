@@ -16,7 +16,6 @@ describe('WalletPage', () => {
 
     render(<WalletPage />);
     expect(
-      screen.getByRole('heading', { name: /balance/i })
-    ).toBeInTheDocument();
+      screen.getByRole('heading', { name: /balance/i }).toBeInTheDocument();
   });
-});
+);

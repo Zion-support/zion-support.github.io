@@ -6,5 +6,3 @@ export function SkillsSection() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

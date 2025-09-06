@@ -9,7 +9,7 @@ import {
   Search, Star, DollarSign, CheckCircle;
   ArrowRight, Rocket, Phone, Mail, MapPin, Grid, List;
   ChevronDown, Sparkles
-} from 'lucide-react'
+ from 'lucide-react'
 import { ultimate2026Services } from '../data/ultimate-2026-services';
 import { revolutionary2026Innovations } from '../data/revolutionary-2026-innovations';
 export default function Ultimate2026ServicesShowcase() {
@@ -31,17 +31,13 @@ export default function Ultimate2026ServicesShowcase() {
   ]
   // Dynamic category counts
   const aiCount = allServices.filter(service =>
-    service.category?.includes('AI') |service.category?.includes('Machine Learning')
-  ).length
+    service.category?.includes('AI') |service.category?.includes('Machine Learning').length
   const quantumCount = allServices.filter(service =>
-    service.category?.includes('Quantum') |service.category?.includes('Space')
-  ).length
+    service.category?.includes('Quantum') |service.category?.includes('Space').length
   const enterpriseCount = allServices.filter(service =>
-    service.category?.includes('Enterprise') |service.category?.includes('IT')
-  ).length
+    service.category?.includes('Enterprise') |service.category?.includes('IT').length
   const emergingCount = allServices.filter(service =>
-    service.category?.includes('Emerging') |service.category?.includes('Innovation')
-  ).length
+    service.category?.includes('Emerging') |service.category?.includes('Innovation').length
   const categories = [
     { id: 'all', name: 'All Services', icon: '', count: allServices.length }
     { id: 'ai', name: 'AI & Machine Learning', icon: '', count: aiCount }
@@ -57,21 +53,21 @@ export default function Ultimate2026ServicesShowcase() {
     { id: 'enterprise', name: 'Custom pricing', range: 'Custom' }
   ]
   // Filter and sort services
-  const filteredServices = useMemo(() => {
+  const filteredServices = useMemo() => {
     let filtered = allServices.filter(service => {
-      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
-                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
-                           service.category.toLowerCase().includes(searchTerm.toLowerCase())
-      const matchesCategory = selectedCategory === 'all' |
-        (selectedCategory === 'ai' && service.category.includes('AI')) |
-        (selectedCategory === 'quantum' && (service.category.includes('Quantum') |service.category.includes('Space'))) |
-        (selectedCategory === 'enterprise' && (service.category.includes('Enterprise') |service.category.includes('IT'))) |
-        (selectedCategory === 'emerging' && (service.category.includes('Emerging') |service.category.includes('Innovation')))
-      const matchesPrice = selectedPriceRange === 'all' |
-        (selectedPriceRange === 'low' && service.price !== 'Custom pricing' && parseInt(service.price.replace(/[^0-9]/g, '')) < 1000) |
-        (selectedPriceRange === 'medium' && service.price !== 'Custom pricing' && parseInt(service.price.replace(/[^0-9]/g, '')) >= 1000 && parseInt(service.price.replace(/[^0-9]/g, '')) <= 5000) |
-        (selectedPriceRange === 'high' && service.price !== 'Custom pricing' && parseInt(service.price.replace(/[^0-9]/g, '')) > 5000) |
-        (selectedPriceRange === 'enterprise' && service.price === 'Custom pricing')
+      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase() |
+                           service.description.toLowerCase().includes(searchTerm.toLowerCase() |
+                           service.category.toLowerCase().includes(searchTerm.toLowerCase()
+      const matchesCategory = selectedCategory = = 'all' |
+        (selectedCategory = = 'ai' && service.category.includes('AI') |
+        (selectedCategory = = 'quantum' && (service.category.includes('Quantum') |service.category.includes('Space')) |
+        (selectedCategory = = 'enterprise' && (service.category.includes('Enterprise') |service.category.includes('IT')) |
+        (selectedCategory = = 'emerging' && (service.category.includes('Emerging') |service.category.includes('Innovation'))
+      const matchesPrice = selectedPriceRange = = 'all' |
+        (selectedPriceRange = = 'low' && service.price != 'Custom pricing' && parseInt(service.price.replace(/[^0-9]/g, '') < 1000) |
+        (selectedPriceRange = = 'medium' && service.price != 'Custom pricing' && parseInt(service.price.replace(/[^0-9]/g, '') >= 1000 && parseInt(service.price.replace(/[^0-9]/g, '') <= 5000) |
+        (selectedPriceRange = = 'high' && service.price != 'Custom pricing' && parseInt(service.price.replace(/[^0-9]/g, '') > 5000) |
+        (selectedPriceRange = = 'enterprise' && service.price = = 'Custom pricing')
       return matchesSearch && matchesCategory && matchesPrice
     })
     { id: 'all', name: 'All Prices', range: 'All' },
@@ -87,23 +83,23 @@ export default function Ultimate2026ServicesShowcase() {
   ];
 
   // Filter and sort services
-  const filteredServices = useMemo(() => {
+  const filteredServices = useMemo() => {
     const filtered = allServices.filter(service => {
-      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.category.toLowerCase().includes(searchTerm.toLowerCase());
+      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase() ||
+                           service.description.toLowerCase().includes(searchTerm.toLowerCase() ||
+                           service.category.toLowerCase().includes(searchTerm.toLowerCase();
 
-      const matchesCategory = selectedCategory === 'all' ||
-        (selectedCategory === 'ai' && service.category.includes('AI')) ||
-        (selectedCategory === 'quantum' && (service.category.includes('Quantum') || service.category.includes('Space'))) ||
-        (selectedCategory === 'enterprise' && (service.category.includes('Enterprise') || service.category.includes('IT'))) ||
-        (selectedCategory === 'emerging' && (service.category.includes('Emerging') || service.category.includes('Innovation')));
+      const matchesCategory = selectedCategory = = 'all' ||
+        (selectedCategory = = 'ai' && service.category.includes('AI') ||
+        (selectedCategory = = 'quantum' && (service.category.includes('Quantum') || service.category.includes('Space')) ||
+        (selectedCategory = = 'enterprise' && (service.category.includes('Enterprise') || service.category.includes('IT')) ||
+        (selectedCategory = = 'emerging' && (service.category.includes('Emerging') || service.category.includes('Innovation'));
 
-      const matchesPrice = selectedPriceRange === 'all' ||
-        (selectedPriceRange === 'low' && service.price !== 'Custom pricing' && parseInt(service.price.replace(/[^0-9]/g, '')) < 1000) ||
-        (selectedPriceRange === 'medium' && service.price !== 'Custom pricing' && parseInt(service.price.replace(/[^0-9]/g, '')) >= 1000 && parseInt(service.price.replace(/[^0-9]/g, '')) <= 5000) ||
-        (selectedPriceRange === 'high' && service.price !== 'Custom pricing' && parseInt(service.price.replace(/[^0-9]/g, '')) > 5000) ||
-        (selectedPriceRange === 'enterprise' && service.price === 'Custom pricing');
+      const matchesPrice = selectedPriceRange = = 'all' ||
+        (selectedPriceRange = = 'low' && service.price != 'Custom pricing' && parseInt(service.price.replace(/[^0-9]/g, '') < 1000) ||
+        (selectedPriceRange = = 'medium' && service.price != 'Custom pricing' && parseInt(service.price.replace(/[^0-9]/g, '') >= 1000 && parseInt(service.price.replace(/[^0-9]/g, '') <= 5000) ||
+        (selectedPriceRange = = 'high' && service.price != 'Custom pricing' && parseInt(service.price.replace(/[^0-9]/g, '') > 5000) ||
+        (selectedPriceRange = = 'enterprise' && service.price = = 'Custom pricing');
 
       return matchesSearch && matchesCategory && matchesPrice
     });
@@ -111,25 +107,25 @@ export default function Ultimate2026ServicesShowcase() {
     // Sort services
     switch (sortBy) {
       case 'name':
-        filtered.sort((a, b) => a.name.localeCompare(b.name))
+        filtered.sort(a, b) => a.name.localeCompare(b.name)
         break
       case 'price':
-        filtered.sort((a, b) => {
-          const priceA = a.price === 'Custom pricing' ? 999999 : parseInt(a.price.replace(/[^0-9]/g, ''))
-          const priceB = b.price === 'Custom pricing' ? 999999 : parseInt(b.price.replace(/[^0-9]/g, ''))
+        filtered.sort(a, b) => {
+          const priceA = a.price = = 'Custom pricing' ? 999999 : parseInt(a.price.replace(/[^0-9]/g, '')
+          const priceB = b.price = = 'Custom pricing' ? 999999 : parseInt(b.price.replace(/[^0-9]/g, '')
           return priceA - priceB
         })
         break
-          const priceA = a.price === 'Custom pricing' ? 999999 : parseInt(a.price.replace(/[^0-9]/g, ''));
-          const priceB = b.price === 'Custom pricing' ? 999999 : parseInt(b.price.replace(/[^0-9]/g, ''));
+          const priceA = a.price = = 'Custom pricing' ? 999999 : parseInt(a.price.replace(/[^0-9]/g, '');
+          const priceB = b.price = = 'Custom pricing' ? 999999 : parseInt(b.price.replace(/[^0-9]/g, '');
           return priceA - priceB
         });
         break;
       case 'popularity':
-        filtered.sort((a, b) => (b.popular ? 1 : 0) - (a.popular ? 1 : 0))
+        filtered.sort(a, b) => (b.popular ? 1 : 0) - (a.popular ? 1 : 0)
         break
       case 'rating':
-        filtered.sort((a, b) => b.rating - a.rating)
+        filtered.sort(a, b) => b.rating - a.rating)
         break
       default: break
     }
@@ -150,40 +146,40 @@ export default function Ultimate2026ServicesShowcase() {
       </Head>
   ],
   // Filter and sort services;
-  const filtered_services = useMemo (() => {
+  const filtered_services = useMemo () => {
     let filtered = all_services.filter (service => {
-      const matches_search = service.name.toLowerCase ().includes (search_term.toLowerCase ()) ||;
-                          service.description.toLowerCase ().includes (search_term.toLowerCase ()) ||;
-                          service.category.toLowerCase ().includes (search_term.toLowerCase ()),
-      const matches_category = selected_category === 'all' ||;
-        (selected_category === 'ai' && service.category.includes ('AI')) ||;
-        (selected_category === 'quantum' && (service.category.includes ('Quantum') || service.category.includes ('Space'))) ||;
-        (selected_category === 'enterprise' && (service.category.includes ('Enterprise') || service.category.includes ('IT'))) ||;
-        (selected_category === 'emerging' && (service.category.includes ('Emerging') || service.category.includes ('Innovation'))),
-      const matches_price = selectedPriceRange === 'all' ||;
-        (selectedPriceRange === 'low' && service.price !== 'Custom pricing' && parse_int (service.price.replace (/[^0 - 9]/g, '')) < 1000) ||;
-        (selectedPriceRange === 'medium' && service.price !== 'Custom pricing' && parse_int (service.price.replace (/[^0 - 9]/g, '')) >= 1000 && parse_int (service.price.replace (/[^0 - 9]/g, '')) <= 5000) ||;
-        (selectedPriceRange === 'high' && service.price !== 'Custom pricing' && parse_int (service.price.replace (/[^0 - 9]/g, '')) > 5000) ||;
-        (selectedPriceRange === 'enterprise' && service.price === 'Custom pricing'),
+      const matches_search = service.name.toLowerCase ().includes (search_term.toLowerCase () ||;
+                          service.description.toLowerCase ().includes (search_term.toLowerCase () ||;
+                          service.category.toLowerCase ().includes (search_term.toLowerCase (),
+      const matches_category = selected_category = = 'all' ||;
+        (selected_category = = 'ai' && service.category.includes ('AI') ||;
+        (selected_category = = 'quantum' && (service.category.includes ('Quantum') || service.category.includes ('Space')) ||;
+        (selected_category = = 'enterprise' && (service.category.includes ('Enterprise') || service.category.includes ('IT')) ||;
+        (selected_category = = 'emerging' && (service.category.includes ('Emerging') || service.category.includes ('Innovation')),
+      const matches_price = selectedPriceRange = = 'all' ||;
+        (selectedPriceRange = = 'low' && service.price != 'Custom pricing' && parse_int (service.price.replace (/[^0 - 9]/g, '') < 1000) ||;
+        (selectedPriceRange = = 'medium' && service.price != 'Custom pricing' && parse_int (service.price.replace (/[^0 - 9]/g, '') >= 1000 && parse_int (service.price.replace (/[^0 - 9]/g, '') <= 5000) ||;
+        (selectedPriceRange = = 'high' && service.price != 'Custom pricing' && parse_int (service.price.replace (/[^0 - 9]/g, '') > 5000) ||;
+        (selectedPriceRange = = 'enterprise' && service.price = = 'Custom pricing'),
       return matches_search && matches_category && matches_price;
     }),
     // Sort services;
     switch (sort_by) {
       case 'name':;
-        filtered.sort ((a, b) => a.name.locale_compare (b.name)),
+        filtered.sort (a, b) => a.name.locale_compare (b.name),
         break,
       case 'price':;
-        filtered.sort ((a, b) => {
-          const price_a = a.price === 'Custom pricing' ? 999999 : parse_int (a.price.replace (/[^0 - 9]/g, '')),
-          const price_b = b.price === 'Custom pricing' ? 999999 : parse_int (b.price.replace (/[^0 - 9]/g, '')),
+        filtered.sort (a, b) => {
+          const price_a = a.price = = 'Custom pricing' ? 999999 : parse_int (a.price.replace (/[^0 - 9]/g, ''),
+          const price_b = b.price = = 'Custom pricing' ? 999999 : parse_int (b.price.replace (/[^0 - 9]/g, ''),
           return price_a - price_b;
         }),
         break,
       case 'popularity':;
-        filtered.sort ((a, b) => (b.popular ? 1 : 0) - (a.popular ? 1 : 0)),
+        filtered.sort (a, b) => (b.popular ? 1 : 0) - (a.popular ? 1 : 0),
         break,
       case 'rating':;
-        filtered.sort ((a, b) => b.rating - a.rating),
+        filtered.sort (a, b) => b.rating - a.rating),
         break,
       default: break;
     }
@@ -212,9 +208,9 @@ export default function Ultimate2026ServicesShowcase() {
         </div>
         <div className="relative z-10 text-center px-6 max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
           >
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
               Ultimate 2026
@@ -290,9 +286,9 @@ export default function Ultimate2026ServicesShowcase() {
       <section className="py-20 bg-gray-900">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }} className="text-center mb-16">
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 } className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Featured <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Revolutionary Services</span>
             </h2>
@@ -301,12 +297,12 @@ export default function Ultimate2026ServicesShowcase() {
             </p>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredServices.map((service, index) => (
+            {featuredServices.map(service, index) => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }} className="group relative">
+                initial={ opacity: 0, y: 30 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.8, delay: index * 0.1 } className="group relative">
                 <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-800 to-gray-900 p-8 border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 transform hover:scale-105">
                   <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="relative z-10">
@@ -349,7 +345,7 @@ export default function Ultimate2026ServicesShowcase() {
                   </div>
                 </div>
               </motion.div>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -357,9 +353,9 @@ export default function Ultimate2026ServicesShowcase() {
       <section id="services" className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }} className="text-center mb-16">
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 } className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               All <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Revolutionary Services</span>
             </h2>
@@ -392,11 +388,11 @@ export default function Ultimate2026ServicesShowcase() {
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)} className="appearance-none bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all">
-                  {categories.map((category) => (
+                  {categories.map(category) => (
                     <option key={category.id} value={category.id}>
                       {category.name} ({category.count})
                     </option>
-                  ))}
+                  )}
                 </select>
                 <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4 pointer-events-none" />
               </div>
@@ -405,11 +401,11 @@ export default function Ultimate2026ServicesShowcase() {
                 <select;
                   value={selectedPriceRange}
                   onChange={(e) => setSelectedPriceRange(e.target.value)} className="appearance-none bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all">
-                  {priceRanges.map((range) => (
+                  {priceRanges.map(range) => (
                     <option key={range.id} value={range.id}>
                       {range.name}
                     </option>
-                  ))}
+                  )}
                 </select>
                 <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4 pointer-events-none" />
               </div>
@@ -429,13 +425,13 @@ export default function Ultimate2026ServicesShowcase() {
               <div className="flex bg-gray-800 border border-gray-700 rounded-lg p-1">
                 <button
                   onClick={() => setViewMode('grid')}
-                  className={`p-2 rounded ${viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'text-gray-400 hover:text-white'}`}
+                  className={`p-2 rounded ${viewMode = = 'grid' ? 'bg-cyan-500 text-white' : 'text-gray-400 hover:text-white'}`}
                 >
                   <Grid className="w-4 h-4" />
                 </button>
                 <button
                   onClick={() => setViewMode('list')}
-                  className={`p-2 rounded ${viewMode === 'list' ? 'bg-cyan-500 text-white' : 'text-gray-400 hover:text-white'}`}
+                  className={`p-2 rounded ${viewMode = = 'list' ? 'bg-cyan-500 text-white' : 'text-gray-400 hover:text-white'}`}
                 >
                   <List className="w-4 h-4" />
                 </button>
@@ -443,16 +439,16 @@ export default function Ultimate2026ServicesShowcase() {
             </div>
           </div>
           {/* Services Grid/List */}
-          <div className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}>
-            {filteredServices.map((service, index) => (
+          <div className={viewMode = = 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}>
+            {filteredServices.map(service, index) => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, coordinate_y: 30 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.05 }}
-                className={viewMode === 'grid' ? 'group relative' : 'group relative bg-gray-800 rounded-2xl p-6 border border-gray-700 hover:border-cyan-500/50 transition-all duration-300'}
+                initial={ opacity: 0, coordinate_y: 30 }
+                whileInView={ opacity: 1, coordinate_y: 0 }
+                transition={ duration: 0.8, delay: index * 0.05 }
+                className={viewMode = = 'grid' ? 'group relative' : 'group relative bg-gray-800 rounded-2xl p-6 border border-gray-700 hover:border-cyan-500/50 transition-all duration-300'}
               >
-                {viewMode === 'grid' ? (
+                {viewMode = = 'grid' ? (
                   <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-800 to-gray-900 p-8 border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 transform hover:scale-105">
                     <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     <div className="relative z-10">
@@ -547,12 +543,12 @@ export default function Ultimate2026ServicesShowcase() {
                   </div>
                 )}
               </motion.div>
-            ))}
+            )}
           </div>
-          {filteredServices.length === 0 && (
+          {filteredServices.length = = 0 && (
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }} className="text-center py-20">
+              initial={ opacity: 0 }
+              animate={ opacity: 1 } className="text-center py-20">
               <div className="text-6xl mb-4"></div>
               <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
               <p className="text-gray-400">Try adjusting your search criteria or filters</p>
@@ -564,9 +560,9 @@ export default function Ultimate2026ServicesShowcase() {
       <section className="py-20 bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600">
         <div className="max-w-4xl mx-auto text-center px-6">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Business with 2026 Innovations?
@@ -669,7 +665,7 @@ export default function Ultimate2026ServicesShowcase() {
       </section>
     </>
   )
-}
+
           >;
             <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">;
               Ready to Transform Your Business with 2026 Innovations?;
@@ -769,4 +765,3 @@ export default function Ultimate2026ServicesShowcase() {
         </div>;
       </section>;
     </>);
-}

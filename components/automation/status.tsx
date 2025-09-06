@@ -1,15 +1,15 @@
 
 </div>) : (<div className="text-sm text-gray-500" >No status available yet.</div>)
  </div>) : (<div className="text-sm text-gray-500" >No status available yet.</div>) ;
-}</div>) import { useEffect, useState } from 'react';
+</div>) import { useEffect, useState } from 'react';
 
 export default function AutomationStatusPage() {;
   const [status, setStatus] = useState<{ runAt?: string, ok?: boolean } | null>(null);
-  useEffect(() => {
+  useEffect() => {
     fetch('/automation/status.json')
-      .then((r) => r.json())
-      .then((j) => setStatus(j))
-      .catch(() => setStatus(null))
+      .then(r) => r.json()
+      .then(j) => setStatus(j)
+      .catch() => setStatus(null)
   }, []);
   return (
     <div className="space-y-4">
@@ -24,23 +24,23 @@ export default function AutomationStatusPage() {;
         <div className="text-sm text-gray-500">No status available yet.</div>
       )}
     </div>
-);
-}
+;
+
 </div>) : (<div className="text - sm text - gray - 500" >No status available yet.</div>);
-}</div>) import { useEffect, useState } from 'react';
+</div>) import { useEffect, useState } from 'react';
 export default /**
  * AutomationStatusPage - Function description
  */
 function AutomationStatusPage() {
   const [status, set_status] = useState<{ run_at?: string, ok?: boolean } | null>(null);
-;
-  useEffect (() => {
+
+  useEffect () => {
     fetch ('/automation / status.json');
-      .then ((r) => r.json ());
-      .then ((j) => set_status (j));
-      .catch (() => set_status (null));
+      .then (r) => r.json ();
+      .then (j) => set_status (j);
+      .catch () => set_status (null);
   }, []);
-;
+
   return (
     <div className="space - y-4">;
       <h1 className="text - xl font - semibold">Autonomous Automation Status</h1>;
@@ -52,4 +52,3 @@ function AutomationStatusPage() {
         </div>) : (
         <div className="text - sm text - gray - 500">No status available yet.</div>)}
     </div>);
-}

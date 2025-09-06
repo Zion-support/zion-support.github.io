@@ -2,7 +2,6 @@ import React from 'react';
 
 interface SecurityEnhancerProps {
   className?: string;
-}
 
 const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ className }) => {
   return (
@@ -11,6 +10,5 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default SecurityEnhancer;

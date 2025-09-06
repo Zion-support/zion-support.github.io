@@ -43,7 +43,7 @@ const ContentRoutes = () => {
       <Route path="/sitemap-page" element={<SitemapPage />} />
     </Routes>
   )
-}
+
 export default ContentRoutes;
 
 import { Fragment } from './react';
@@ -88,7 +88,5 @@ const ContentRoutes = () =>: any {
       {/* Sitemap Page */}
       <Route path="/sitemap - page" element={<SitemapPage />} />;
     </Routes>);
-}
-;
+
 export default ContentRoutes;
-;

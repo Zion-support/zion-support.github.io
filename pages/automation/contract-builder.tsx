@@ -24,21 +24,20 @@ export default function ContractBuilderPage() {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [contract, setContract] = useState<string>('')
-  useEffect(() => {
+  useEffect() => {
     if (!router.isReady) return
     const { talent, project } = router.query as { talent?: string, project?: string }
-    if (talent && !talentName) setTalentName(decodeURIComponent(talent))
-    if (project && !projectName) setProjectName(decodeURIComponent(project))
+    if (talent && !talentName) setTalentName(decodeURIComponent(talent)
+    if (project && !projectName) setProjectName(decodeURIComponent(project)
   }, [router.isReady, router.query, talentName, projectName])
-  const canSubmit = useMemo(() => {
+  const canSubmit = useMemo() => {
     return (
       talentName.trim().length > 0 &&
       projectName.trim().length > 0 &&
       scopeSummary.trim().length > 0 &&
       !!startDate &&
       !!endDate &&
-      (paymentType === 'hourly' ? hourlyRate > 0 : fixedAmount > 0)
-    )
+      (paymentType = = 'hourly' ? hourlyRate > 0 : fixedAmount > 0)
   }, [talentName, projectName, scopeSummary, startDate, endDate, paymentType, hourlyRate, fixedAmount])
   async function submitForm(event: React.FormEvent) {
     event.preventDefault()
@@ -54,12 +53,12 @@ export default function ContractBuilderPage() {
         startDate: startDate?.toISOString().slice(0, 10)
         endDate: endDate?.toISOString().slice(0, 10)
         payment:
-          paymentType === 'hourly'
+          paymentType = = 'hourly'
             ? {
                 type: 'hourly'
                 currency
                 hourlyRate
-                weeklyHourCap: typeof weeklyHourCap === 'number' ? weeklyHourCap : undefined
+                weeklyHourCap: typeof weeklyHourCap = = 'number' ? weeklyHourCap : undefined
                 paymentSchedule}
             : {
                 type: 'fixed'
@@ -78,10 +77,10 @@ export default function ContractBuilderPage() {
           'Content-Type': 'application/json'}
         body: JSON.stringify(body)})
       if (!res.ok) {
-        const data = await res.json().catch(() => ({}))
+        const data = await res.json().catch() => ({})
         throw new Error(data?.error |`Request failed: ${res.status}`)
       }
-      const data = (await res.json()) as { contract: string }
+      const data = (await res.json() as { contract: string }
       setContract(data.contract)
     } catch (e: any) {
       setError(e?.message |'Failed to generate contract')
@@ -113,27 +112,27 @@ function ContractBuilderPage() {
   const [loading, set_loading] = useState (false),
   const [error, set_error] = useState < string | null>(null),
   const [contract, set_contract] = useState < string>(''),
-  useEffect (() => {
+  useEffect () => {
     // Check condition
 if (return, ) {
   $2
-}
+
     const { talent, project } = router.query as { talent?: string, project?: string },
-    if (setTalentName (decodeURIComponent (talent)), ) {
+    if (setTalentName (decodeURIComponent (talent), ) {
   $2
-}
-    if (setProjectName (decodeURIComponent (project))) {
+
+    if (setProjectName (decodeURIComponent (project)) {
   $2
-}
+
   }, [router.is_ready, router.query, talent_name, project_name]),
-  const can_submit = useMemo (() => {
+  const can_submit = useMemo () => {
     return (
       talent_name.trim ().length > 0 &&;
       project_name.trim ().length > 0 &&;
       scope_summary.trim ().length > 0 &&;
       !!start_date &&;
       !!end_date &&;
-      (payment_type === 'hourly' ? hourly_rate > 0 : fixed_amount > 0));
+      (payment_type = = 'hourly' ? hourly_rate > 0 : fixed_amount > 0);
   }, [talent_name, project_name, scope_summary, start_date, end_date, payment_type, hourly_rate, fixed_amount]),
   async /**
  * submit_form - Function description
@@ -143,7 +142,7 @@ function submit_form() {
     // Check condition
 if (return, ) {
   $2
-}
+
     set_loading (true),
     set_error (null),
     set_contract (''),
@@ -155,12 +154,12 @@ if (return, ) {
         start_date: start_date?.toISOString ().slice (0, 10),
         end_date: end_date?.toISOString ().slice (0, 10),
         payment:;
-          payment_type === 'hourly';
+          payment_type = = 'hourly';
             ? {
                 type: 'hourly',
                 currency,
                 hourly_rate,
-                weeklyHourCap: typeof weeklyHourCap === 'number' ? weeklyHourCap : undefined,
+                weeklyHourCap: typeof weeklyHourCap = = 'number' ? weeklyHourCap : undefined,
                 payment_schedule}
             : {
                 type: 'fixed',
@@ -181,18 +180,17 @@ if (return, ) {
       // Check condition
 if ( {) {
   $2
-}
-        const data = await res.json ().catch (() => ({})),
+
+        const data = await res.json ().catch () => ({}),
         throw new Error (data?.error || `Request failed: ${res.status}`);
       }
-      const data = (await res.json ()) as { contract: string },
+      const data = (await res.json () as { contract: string },
       set_contract (data.contract);
     } catch (e: any) {
       set_error (e?.message || 'Failed to generate contract');
     } finally {
       set_loading (false);
     }
-  }
   function copyToClipboard() {
     if (!contract) return
     void navigator.clipboard.writeText(contract)
@@ -240,21 +238,21 @@ if ( {) {
           <label className="block text-sm font-medium mb-2">Payment terms</label>
           <div className="flex items-center gap-4 mb-4">
             <label className="inline-flex items-center gap-2">
-              <input type="radio" name="pay" checked={paymentType === 'hourly'} onChange={() => setPaymentType('hourly')} /> Hourly
+              <input type="radio" name="pay" checked={paymentType = = 'hourly'} onChange={() => setPaymentType('hourly')} /> Hourly
             </label>
             <label className="inline-flex items-center gap-2">
-              <input type="radio" name="pay" checked={paymentType === 'fixed'} onChange={() => setPaymentType('fixed')} /> Fixed
+              <input type="radio" name="pay" checked={paymentType = = 'fixed'} onChange={() => setPaymentType('fixed')} /> Fixed
             </label>
           </div>
-          {paymentType === 'hourly' ? (
+          {paymentType = = 'hourly' ? (
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div>
                 <label className="block text-sm font-medium mb-1">Hourly rate</label>
-                <input type="number" className="w-full input input-bordered" value={hourlyRate} onChange={(e) => setHourlyRate(Number(e.target.value))} />
+                <input type="number" className="w-full input input-bordered" value={hourlyRate} onChange={(e) => setHourlyRate(Number(e.target.value)} />
               </div>
               <div>
                 <label className="block text-sm font-medium mb-1">Weekly hour cap (optional)</label>
-                <input type="number" className="w-full input input-bordered" value={weeklyHourCap} onChange={(e) => setWeeklyHourCap(e.target.value === '' ? '' : Number(e.target.value))} />
+                <input type="number" className="w-full input input-bordered" value={weeklyHourCap} onChange={(e) => setWeeklyHourCap(e.target.value = = '' ? '' : Number(e.target.value)} />
               </div>
               <div>
                 <label className="block text-sm font-medium mb-1">Payment schedule</label>
@@ -265,7 +263,7 @@ if ( {) {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div>
                 <label className="block text-sm font-medium mb-1">Total amount</label>
-                <input type="number" className="w-full input input-bordered" value={fixedAmount} onChange={(e) => setFixedAmount(Number(e.target.value))} />
+                <input type="number" className="w-full input input-bordered" value={fixedAmount} onChange={(e) => setFixedAmount(Number(e.target.value)} />
               </div>
               <div className="md:col-span-2">
                 <label className="block text-sm font-medium mb-1">Milestone summary (optional)</label>
@@ -295,7 +293,7 @@ if ( {) {
         </div>
         <div>
           <label className="block text-sm font-medium mb-1">Included revision rounds</label>
-          <input type="number" className="w-full input input-bordered" value={revisionRounds} onChange={(e) => setRevisionRounds(Number(e.target.value))} />
+          <input type="number" className="w-full input input-bordered" value={revisionRounds} onChange={(e) => setRevisionRounds(Number(e.target.value)} />
         </div>
         <div className="md:col-span-2 flex items-center gap-3">
           <button type="submit" className="btn btn-primary" disabled={!canSubmit |loading}>
@@ -320,8 +318,7 @@ if ( {) {
       )}
     </div>
   )
-}
+
           </article>;
         </div>)}
     </div>);
-}

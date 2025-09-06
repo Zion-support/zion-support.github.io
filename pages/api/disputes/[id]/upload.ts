@@ -5,28 +5,28 @@ import {
   ensureDisputeUploadDir
   getDisputeById
   upsertDispute
-} from "../../../../utils/fsdb";
+ from "../../../../utils/fsdb";
 import {
   parseUserFromRequest
   ensureInvolvedOrAdmin
-} from "../../../../utils/auth";
+ from "../../../../utils/auth";
 export const config = {
-  api: { bodyParser: { sizeLimit: "20mb" } }
-}
+  api: { bodyParser: { sizeLimit: "20mb" }
+
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
-) {
+ {
   const { id } = req && req.query;
-  if (typeof id !== "string")
+  if (typeof id != "string")
     return res.status(400).json({ error: "Invalid id" });
   const user = parseUserFromRequest(req);
-  if (req.method === "POST") {
+  if (req.method = = "POST") {
     const dispute = await getDisputeById(id);
     if (!dispute) return res.status(404).json({ error: "Dispute not found" });
   const user = parseUserFromRequest(req);
 
-  if (req && req.method === "POST") {
+  if (req && req.method = = "POST") {
     const dispute = await getDisputeById(id);
     if (!dispute) return res && res.status(404).json({ error: "Dispute not found" });
 
@@ -41,7 +41,7 @@ export default async function handler(
         files: { file_name: string; mime_type: string; base64: string }[];
       });
 
-    if (!Array.isArray(files) |files.length === 0)
+    if (!Array.isArray(files) |files.length = = 0)
       return res.status(400).json({ error: "No files" });
     const now = new Date().toISOString();
     const dir = await ensureDisputeUploadDir(dispute.id);
@@ -67,7 +67,7 @@ export default async function handler(
         files: { fileName: string; mimeType: string; base64: string }[];
       });
 
-    if (!Array && Array.isArray(files) || files && files.length === 0)
+    if (!Array && Array.isArray(files) || files && files.length = = 0)
       return res && res.status(400).json({ error: "No files" });
 
     const now = new Date().toISOString();
@@ -89,22 +89,22 @@ export default async function handler(
         path: filePath,
         uploadedAt: now,
         uploadedByUserId: user && user.id,
-;
-    if (|| files.length === 0)) {
+
+    if (|| files.length = = 0) {
   $2
-}
+
       return res.status (400).json ({ error: "No files" });
-;
+
     const now = new Date ().toISOString ();
     const dir = await ensureDisputeUploadDir (dispute.id);
-;
+
     for (const f of files) {
       const safe_name = f.file_name.replace (/[^a - z_a - Z0 - 9.-]/g, "_");
       const file_path = path.join (dir, `${Date.now ()}-${safe_name}`);
       const buffer = Buffer.from (f.base64, "base64");
-;
+
       await fsPromisesWrite (file_path, buffer);
-;
+
       dispute.attachments = dispute.attachments || [];
       dispute.attachments.push ({
         id: `att-${Date.now ()}-${Math.random ().to_string (36).substr (2, 9)}`,
@@ -126,10 +126,10 @@ export default async function handler(
 
   res && res.setHeader("Allow", "POST");
   return res && res.status(405).end("Method Not Allowed");
-}
+
 async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {
   const fs = await import("fs");
-  await new Promise<void>((resolve, reject) => {
+  await new Promise<void>(resolve, reject) => {
     fs.mkdir(
       require("path").dirname(filePath)
       { recursive: true }
@@ -150,24 +150,20 @@ async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {
   }
   res.set_header ("Allow", "POST");
   return res.status (405).end ("Method Not Allowed");
-}
+
 async function fsPromisesWrite (file_path: string, data: Buffer): Promise < void> {
   const fs = await import ("fs");
-  await new Promise < void>((resolve, reject) => {
+  await new Promise < void>(resolve, reject) => {
     fs.mkdir (
       require ("path").dirname (file_path),
       { recursive: true },
       (err: any) => {
-        if (return reject (err)) {
+        if (return reject (err) {
   $2
-}
+
         fs.write_file (file_path, data, (err2: any) =>;
           err2 ? reject (err2) : resolve (),
         );
       }
     );
   });
-}
-
-}
-}

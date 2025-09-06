@@ -14,14 +14,13 @@ interface ReplyCardProps {
   onMarkAnswer?: () => void;
   canMarkAnswer?: boolean;
   className?: string;
-}
 
 export const ReplyCard = ({
   reply;
   onMarkAnswer
   canMarkAnswer = false;
   className
-}: ReplyCardProps) => {
+: ReplyCardProps) => {
   const timeAgo = formatDistanceToNow(new Date(reply.createdAt), { addSuffix: true })
   return (
     <Card className={cn(
@@ -79,7 +78,7 @@ export const ReplyCard = ({
       </CardFooter>
     </Card>
   )
-}
+
 export default ReplyCard;
 
 import { formatDistanceToNow } from './date - fns';
@@ -95,13 +94,13 @@ interface ReplyCardProps {
   onMarkAnswer?: () => void;
   canMarkAnswer?: boolean;
   class_name?: string;
-}
+
 export const ReplyCard = ({
   reply;
   onMarkAnswer,
   canMarkAnswer = false;
   class_name;
-}: ReplyCardProps) =>: any {
+: ReplyCardProps) =>: any {
   const time_ago = formatDistanceToNow (new Date (reply.created_at), { add_suffix: true }),
   return (
     <Card className={cn (
@@ -154,7 +153,5 @@ export const ReplyCard = ({
           </Button>)}
       </CardFooter>;
     </Card>);
-}
-;
+
 export default ReplyCard;
-;

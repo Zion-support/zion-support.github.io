@@ -3,7 +3,6 @@ import React from 'react';
 
 interface Cloud-migrationProps {
   className?: string;
-}
 
 const Cloud-migration: React.FC<Cloud-migrationProps> = ({ className }) => {
   return (
@@ -12,6 +11,3 @@ const Cloud-migration: React.FC<Cloud-migrationProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-}
-}
-}

@@ -4,32 +4,32 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 interface AnalyticsProps {
   tracking_id?: string;
-}
+
 const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) => {
-  useEffect(() => {
+  useEffect() => {
     // Google Analytics 4
-    if (typeof window !== 'undefined' && trackingId) {
+    if (typeof window != 'undefined' && trackingId) {
       // Load gtag script
       const script = document.createElement('script');
       script.async = true;
@@ -41,7 +41,7 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
         window.dataLayer.push(args)
       }
       window && window.gtag = gtag;
-      gtag('js', new Date());
+      gtag('js', new Date();
       gtag('config', trackingId, {
         page_title: document.title
         page_location: window.location.href
@@ -66,14 +66,12 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
       return () => {
         window.removeEventListener('popstate', handleRouteChange);
       }
-    }
   }, [trackingId]);
   // Track custom events
   const trackEvent = (eventName: string, parameters?: Record<string, any>) => {
-    if (typeof window !== 'undefined' && window.gtag) {
+    if (typeof window != 'undefined' && window.gtag) {
       window.gtag('event', eventName, parameters);
     }
-  }
   // Track button clicks
   const trackButtonClick = (buttonName: string, location?: string) => {
     trackEvent('button_click', {
@@ -97,21 +95,21 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
     });
   }
   // Expose tracking functions globally for use in other components
-  if (typeof window !== 'undefined') {
+  if (typeof window != 'undefined') {
     (window as any).trackEvent = trackEvent;
 const Analytics: React.FC < AnalyticsProps> = ({ tracking_id = 'G - XXXXXXXXXX' }) => {
-  useEffect (() => {
+  useEffect () => {
     // Google Analytics 4;
     // Check condition
 if ( {) {
   $2
-}
+
       // Load gtag script;
       const script = document.create_element ('script');
       script.async = true;
       script.src = `https://www.googletagmanager.com / gtag / js?id=${tracking_id}`;
       document.head.append_child (script);
-;
+
       // Initialize gtag;
       window.data_layer = window.data_layer || [];
       /**
@@ -121,12 +119,12 @@ function gtag() {
         window.data_layer.push (args),
       }
       window.gtag = gtag;
-      gtag ('js', new Date ());
+      gtag ('js', new Date ();
       gtag ('config', tracking_id, {
         page_title: document.title,
         page_location: window.location.href,
       });
-;
+
       // Track page views;
       const trackPageView = () =>: any {
         gtag ('event', 'page_view', {
@@ -135,35 +133,33 @@ function gtag() {
           page_path: window.location.pathname,
         });
       }
-;
+
       // Track page view on load;
       trackPageView ();
-;
+
       // Track page view on route change (for SPA behavior);
       const handleRouteChange = () =>: any {
         trackPageView ();
       }
-;
+
       // Listen for popstate events (back / forward navigation);
       window.addEventListener ('popstate', handleRouteChange);
-;
+
       // Cleanup;
       return () => {
         window.removeEventListener ('popstate', handleRouteChange);
       }
-    }
   }, [tracking_id]);
-;
+
   // Track custom events;
   const track_event = (event_name: string, parameters?: Record < string, any>) =>: any {
     // Check condition
 if ( {) {
   $2
-}
+
       window.gtag ('event', event_name, parameters);
     }
-  }
-;
+
   // Track button clicks;
   const trackButtonClick = (button_name: string, location?: string) =>: any {
     track_event ('button_click', {
@@ -171,7 +167,7 @@ if ( {) {
       location: location || window.location.pathname,
     });
   }
-;
+
   // Track form submissions;
   const trackFormSubmission = (form_name: string) =>: any {
     track_event ('form_submit', {
@@ -179,7 +175,7 @@ if ( {) {
       page_location: window.location.href,
     });
   }
-;
+
   // Track external link clicks;
   const trackExternalLink = (url: string, link_text: string) =>: any {
     track_event ('external_link_click', {
@@ -188,12 +184,12 @@ if ( {) {
       page_location: window.location.href,
     });
   }
-;
+
   // Expose tracking functions globally for use in other components;
   // Check condition
 if ( {) {
   $2
-}
+
     (window as any).track_event = track_event;
     (window as any).trackButtonClick = trackButtonClick;
     (window as any).trackFormSubmission = trackFormSubmission;
@@ -202,7 +198,7 @@ if ( {) {
   return (
     <Head>;
       <script
-        dangerouslySetInnerHTML={{
+        dangerouslySetInnerHTML={
           __html: `
             // Performance monitoring
             if ('performance' in window) {
@@ -223,14 +219,13 @@ if ( {) {
                         value: Math && Math.round(loadTime),
                       })
                     }
-                  }
                 }, 0)
               })
             }
           `
-        }}
+        }
       />;
     </Head>;
   );
-}
+
 export default Analytics;

@@ -6,5 +6,3 @@ export function tooltip() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

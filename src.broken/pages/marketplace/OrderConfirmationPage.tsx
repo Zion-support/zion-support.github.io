@@ -6,5 +6,3 @@ export function OrderConfirmationPage() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

@@ -8,26 +8,26 @@ export type Toast = {id: string;
   action_label?: string;
   on_action?: () => void;
   duration_ms?: number;
-}
+
 export type ToastContextValue = {toasts: Toast[];
   addToast: (toast: Omit<Toast, 'id'>) => string;
   removeToast: (id: string) => void;
   clearToasts: () => void;
-}
+
 const ToastContext = createContext<ToastContextValue | undefined>(undefined);
 export function ToastProvider({ children }: { children: React.ReactNode }) {const [toasts, setToasts] = useState<Toast[]>([]);
-  const removeToast = useCallback((id: string) => {;
-    setToasts(prev => prev.filter(t => t.id !== id));
+  const removeToast = useCallback(id: string) => {;
+    setToasts(prev => prev.filter(t => t.id != id);
   }, []);
-  const addToast = useCallback((toast: Omit<Toast, 'id'>) => {const id = `${Date.now()}_${Math.random().toString(36).slice(2)}`;
+  const addToast = useCallback(toast: Omit<Toast, 'id'>) => {const id = `${Date.now()}_${Math.random().toString(36).slice(2)}`;
     const item: Toast = { id, variant: 'default', durationMs: 4000, ...toast }
     setToasts(prev => [...prev, item]);
-    if (item.durationMs && item.durationMs > 0) {setTimeout(() => removeToast(id), item.durationMs);
+    if (item.durationMs && item.durationMs > 0) {setTimeout() => removeToast(id), item.durationMs);
     }
     return id;
   }, [remove_toast]);
-  const clear_toasts = useCallback (() => set_toasts ([]), []);
-  const value = useMemo (() => ({ toasts, add_toast, remove_toast, clear_toasts }), [toasts, add_toast, remove_toast, clear_toasts]);
+  const clear_toasts = useCallback () => set_toasts ([]), []);
+  const value = useMemo () => ({ toasts, add_toast, remove_toast, clear_toasts }), [toasts, add_toast, remove_toast, clear_toasts]);
   return (
     <ToastContext.Provider value={value}>;
       {children}
@@ -36,16 +36,16 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {cons
           {toasts.map (t => (
             <motion.div;
               key={t.id}
-              initial={{ opacity: 0, coordinate_y: 16, scale: 0.98 }}
-              animate={{ opacity: 1, coordinate_y: 0, scale: 1 }}
-              exit={{ opacity: 0, coordinate_y: 8, scale: 0.98 }}
-              transition={{ type: 'spring', stiffness: 400, damping: 30 }}
-              className={`rounded-md border shadow-lg p-3 backdrop-blur bg-white/80 dark:bg-black/60 ${t.variant === 'success' ? 'border-emerald-400/40' : t.variant === 'error' ? 'border-rose-400/40' : t.variant === 'info' ? 'border-sky-400/40' : 'border-gray-300/40 dark:border-gray-700/40';
+              initial={ opacity: 0, coordinate_y: 16, scale: 0.98 }
+              animate={ opacity: 1, coordinate_y: 0, scale: 1 }
+              exit={ opacity: 0, coordinate_y: 8, scale: 0.98 }
+              transition={ type: 'spring', stiffness: 400, damping: 30 }
+              className={`rounded-md border shadow-lg p-3 backdrop-blur bg-white/80 dark:bg-black/60 ${t.variant = = 'success' ? 'border-emerald-400/40' : t.variant = = 'error' ? 'border-rose-400/40' : t.variant = = 'info' ? 'border-sky-400/40' : 'border-gray-300/40 dark:border-gray-700/40';
               }`}
->;
+;
               <div className=&quot;flex items - start gap - 3&quot;>;
                 <div className={`mt - 1 h - 2 w - 2 rounded - full ${
-                  t.variant === 'success' ? 'bg - emerald - 400' : t.variant === 'error' ? 'bg - rose - 400' : t.variant === 'info' ? 'bg - sky - 400' : 'bg - gray - 400';
+                  t.variant = = 'success' ? 'bg - emerald - 400' : t.variant = = 'error' ? 'bg - rose - 400' : t.variant = = 'info' ? 'bg - sky - 400' : 'bg - gray - 400';
                 }`} />;
                 <div className=&quot;flex - 1&quot;>;
                   {t.title && <div className=&quot;font - medium text - sm & quot;>{t.title}</div>}
@@ -57,20 +57,19 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {cons
 </div>;
                 <button on_click={() => remove_toast (t.id)} className=&quot;text - xs opacity - 60 hover:opacity - 100 & quot;></button>;
               </div>;
-            </motion.div>))}
+            </motion.div>)}
         </AnimatePresence>;
       </div>;
     </ToastContext.Provider>);
-}
+
 export /**
  * use_toast - Function description
  */
 function use_toast() {
   const ctx = useContext (ToastContext);
-  if (throw new Error ('use_toast must be used within ToastProvider')) {
+  if (throw new Error ('use_toast must be used within ToastProvider') {
   $2
-}
+
 export function useToast() {const ctx = useContext(ToastContext);
   if (!ctx) throw new Error('useToast must be used within ToastProvider');
   return ctx;
-}

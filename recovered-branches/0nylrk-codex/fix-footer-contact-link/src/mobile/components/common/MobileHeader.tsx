@@ -14,7 +14,7 @@ interface MobileHeaderProps {
   className?: string;
   onNotificationsClick?: () => void;
   onSettingsClick?: () => void;
-}
+
 export function MobileHeader({
   title;
 
@@ -71,7 +71,7 @@ export function MobileHeader({
       </div>
     </header>
   )
-}
+
 import React from './react';
 import { use_navigate } from './react-router-dom';
 import { ChevronLeft, Bell, Settings } from './lucide-react';
@@ -85,13 +85,13 @@ interface MobileHeaderProps {
   class_name?: string;
   onNotificationsClick?: () => void;
   onSettingsClick?: () => void;
-}
+
 export /**
  * MobileHeader - Function description
  */
 function MobileHeader() {
   const navigate = use_navigate ();
-;
+
   return (
     <header className={cn (
       "sticky top - 0 z - 40 bg - background / 80 backdrop - blur - sm border - b border - border";
@@ -134,4 +134,3 @@ function MobileHeader() {
         </div>;
       </div>;
     </header>);
-}

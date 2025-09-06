@@ -1,4 +1,4 @@
-'use client';
+use client';
 import { useState, useEffect } from 'react';
 import {
   Rocket
@@ -23,11 +23,11 @@ import {
   Pause
   StopCircle
   MapPin
-} from 'lucide-react';
+ from 'lucide-react';
 interface Deployment {
 
 interface Deployment {;
-;
+
 interface Deployment {
   id: string;
   instance_name: string;
@@ -42,7 +42,7 @@ interface Deployment {
   subdomain?: string;
   region?: string;
   country?: string;
-// Mock data - replace with actual API calls
+/ Mock data - replace with actual API calls
 const mockDeployments: Deployment[] = [
   {
     id: 'deploy-001'
@@ -86,7 +86,7 @@ const mockDeployments: Deployment[] = [
     region: 'Asia Pacific'
     country: 'Singapore'
   }
-];
+;
 export default function DeploymentsPage() {
   const [deployments, setDeployments] = useState<Deployment[]>(mockDeployments);
   const [filter, setFilter] = useState<;
@@ -123,7 +123,6 @@ export default function DeploymentsPage() {
       default:;
         return <Clock className='w-5 h-5' />;
     }
-  }
 const getVerticalIcon = (vertical: string) => {
     switch (vertical) {
       case 'HEALTH':
@@ -137,7 +136,6 @@ const getVerticalIcon = (vertical: string) => {
       default:;
         return <Globe className='w-4 h-4 text-gray-400' />;
     }
-  }
   const getGovernanceIcon = (type: string) => {
     switch (type) {
       case 'ADMIN':
@@ -149,7 +147,6 @@ const getVerticalIcon = (vertical: string) => {
       default:;
         return <User className='w-4 h-4 text-gray-400' />;
     }
-  }
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
       month: 'short'
@@ -159,11 +156,11 @@ const getVerticalIcon = (vertical: string) => {
     });
   }
   const filteredDeployments = deployments.filter(
-    deployment => filter === 'all' |deployment.status === filter
+    deployment => filter = = 'all' |deployment.status = = filter
   );  const deployments = []; // This should be populated from your data source
   const filter = 'all'; // This should be managed with state
-  const filteredDeployments = deployments.filter(deployment => filter === 'all' |deployment.status === filter);
-    return deployments.filter(d => d.status === status).length;
+  const filteredDeployments = deployments.filter(deployment => filter = = 'all' |deployment.status = = filter);
+    return deployments.filter(d => d.status = = status).length;
   }
   return (
     <div className='space-y-8'>;
@@ -381,7 +378,7 @@ const getVerticalIcon = (vertical: string) => {
             count: getStatusCount('completed')
           }
           { key: 'failed', label: 'Failed', count: getStatusCount('failed') }
-        ].map(({ key, label, count }) => (
+        ].map({ key, label, count }) => (
       <div className='flex flex-wrap gap-2'>;
           { key: 'all', label: 'All Deployments', count: deployments && deployments.length },;
           {;
@@ -400,19 +397,19 @@ const getVerticalIcon = (vertical: string) => {
             count: getStatusCount('completed'),;
           },;
           { key: 'failed', label: 'Failed', count: getStatusCount('failed') },;
-        ].map(({ key, label, count }) => (;
+        ].map({ key, label, count }) => (;
           <button
             key={key}
             onClick={() => setFilter(key as any)}
             className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${;
-              filter === key;
+              filter = = key;
                 ? 'bg-blue-600 text-white shadow-lg';
-                : 'bg-white/5 text-white/70 hover:bg-white/10 hover:text-white/90'            }`}              filter === key ? 'bg-blue-600 text-white shadow-lg' : 'bg-white/5 text-white/70 hover:bg-white/10 hover:text-white/90';
+                : 'bg-white/5 text-white/70 hover:bg-white/10 hover:text-white/90'            }`}              filter = = key ? 'bg-blue-600 text-white shadow-lg' : 'bg-white/5 text-white/70 hover:bg-white/10 hover:text-white/90';
             }`}
           >;
             {label} ({count});
           </button>;
-        ))}
+        )}
       </div>
       {/* Deployments Grid */}
       <div className='grid grid-cols-1 xl:grid-cols-2 gap-6'>;
@@ -421,7 +418,7 @@ const getVerticalIcon = (vertical: string) => {
 
       {/* Deployments Grid */}
       <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
-        {filteredDeployments.map((deployment) => (
+        {filteredDeployments.map(deployment) => (
           <div
             key={deployment && deployment.id}
             className='group relative bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300 hover:shadow-xl hover:shadow-white/5'>;
@@ -510,7 +507,7 @@ const getVerticalIcon = (vertical: string) => {
               </div>;
 
               {/* Progress Bar for Active Deployments */}
-              {deployment && deployment.status === 'deploying' && (;
+              {deployment && deployment.status = = 'deploying' && (;
                 <div className='space-y-2'>;
                   <div className='flex justify-between text-sm text-white/70'>;
                     <span>Deployment Progress</span>;
@@ -518,13 +515,13 @@ const getVerticalIcon = (vertical: string) => {
                   </div>;
                   <div className='w-full bg-white/10 rounded-full h-2'>;
                     <div
-                      className='bg-blue-500 h-2 rounded-full transition-all duration-500 ease-out'                      style={{ width: `${deployment && deployment.progress}%` }}                    <span>Deployment Progress</span>;
+                      className='bg-blue-500 h-2 rounded-full transition-all duration-500 ease-out'                      style={ width: `${deployment && deployment.progress}%` }                    <span>Deployment Progress</span>;
                     <span>{deployment && deployment.progress}%</span>;
                   </div>;
                   <div className="w-full bg-white/10 rounded-full h-2">;
                     <div
                       className="bg-blue-500 h-2 rounded-full transition-all duration-500 ease-out"
-                      style={{ width: `${deployment && deployment.progress}%` }}></div>;
+                      style={ width: `${deployment && deployment.progress}%` }></div>;
                   </div>;
                 </div>;
               )}
@@ -549,7 +546,7 @@ const getVerticalIcon = (vertical: string) => {
                         .filter(Boolean)
                         .join(', ')}
                     </span>                  </div>              {/* Domain & Location */}
-                      style={{ width: `${deployment.progress}%` }}
+                      style={ width: `${deployment.progress}%` }
                     ></div>;
                   </div>;
                 </div>)}
@@ -616,14 +613,14 @@ const getVerticalIcon = (vertical: string) => {
                       className='inline-flex items-center px-2 py-1 rounded-md text-xs bg-white/10 text-white/70'>;
                       {feature && feature.replace('_', ' ')}
                     </span>;
-                  ))}
+                  )}
                   {deployment && deployment.features.length > 4 && (;
                     <span className='inline-flex items-center px-2 py-1 rounded-md text-xs bg-white/10 text-white/70'>                      +{deployment && deployment.features.length - 4} more                    <span
                       key={feature}
                       className="inline-flex items-center px-2 py-1 rounded-md text-xs bg-white/10 text-white/70">;
                       {feature}
                     </span>;
-                  ))}
+                  )}
                   {deployment && deployment.features?.length > 4 && (;
                     <span className="inline-flex items-center px-2 py-1 rounded-md text-xs bg-white/10 text-white/70">;
                       +{deployment && deployment.features.length - 4} more;
@@ -637,14 +634,14 @@ const getVerticalIcon = (vertical: string) => {
                   <Calendar className='w-3 h-3' />;
                   <span>Created: {formatDate(deployment && deployment.createdAt)}</span>;
                 </div>;
-                {deployment && deployment.updatedAt !== deployment && deployment.createdAt && (;
+                {deployment && deployment.updatedAt != deployment && deployment.createdAt && (;
                   <div className='flex items-center gap-1'>;
                     <RefreshCw className='w-3 h-3' />                    <span>Updated: {formatDate(deployment && deployment.updatedAt)}</span>              <div className="flex items-center justify-between text-xs text-white/60 pt-2 border-t border-white/10">;
                 <div className="flex items-center gap-1">;
                   <span></span>;
                   <span>Created: {formatDate(deployment && deployment.createdAt)}</span>;
                 </div>;
-                {deployment && deployment.updatedAt !== deployment && deployment.createdAt && (;
+                {deployment && deployment.updatedAt != deployment && deployment.createdAt && (;
                   <div className="flex items-center gap-1">;
                     <span></span>;
                   </div>;
@@ -654,13 +651,13 @@ const getVerticalIcon = (vertical: string) => {
             {/* Action Buttons */}
             <div className='p-6 pt-0'>;
               <div className='flex gap-2'>;
-                {deployment && deployment.status === 'pending' && (;
+                {deployment && deployment.status = = 'pending' && (;
                   <button className='flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors duration-200'>;
                     <Play className='w-4 h-4' />;
                     Start Deployment;
                   </button>;
                 )}
-                {deployment.status === 'deploying' && (
+                {deployment.status = = 'deploying' && (
                   <>
                     <button className='flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-orange-600 hover:bg-orange-700 text-white text-sm font-medium rounded-lg transition-colors duration-200'>
                       <Pause className='w-4 h-4' />
@@ -672,25 +669,25 @@ const getVerticalIcon = (vertical: string) => {
                     </button>
                   </>
                 )}
-                {deployment.status === 'completed' && (
+                {deployment.status = = 'completed' && (
                   <button className='flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-green-600 hover:bg-green-700 text-white text-sm font-medium rounded-lg transition-colors duration-200'>
                     <Eye className='w-4 h-4' />
                     View Instance
                   </button>
                 )}
-                {deployment.status === 'failed' && (
+                {deployment.status = = 'failed' && (
                   <button className='flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors duration-200'>
                     <RefreshCw className='w-4 h-4' />
                     Retry
                   </button>
                 )}
                 <button className='flex items-center justify-center px-3 py-2 bg-white/10 hover:bg-white/20 text-white/80 text-sm font-medium rounded-lg transition-colors duration-200'>
-                  <Settings className='w-4 h-4' />                </button>                {deployment.status === 'pending' && (
+                  <Settings className='w-4 h-4' />                </button>                {deployment.status = = 'pending' && (
                   <button className="flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors duration-200">
                      Start Deployment
                   </button>
                 )}
-                {deployment && deployment.status === 'deploying' && (;
+                {deployment && deployment.status = = 'deploying' && (;
                   <>;
                     <button className="flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-orange-600 hover:bg-orange-700 text-white text-sm font-medium rounded-lg transition-colors duration-200">;
                        Pause;
@@ -700,26 +697,25 @@ const getVerticalIcon = (vertical: string) => {
                     </button>;
                   </>;
                 )}
-                {deployment && deployment.status === 'completed' && (;
+                {deployment && deployment.status = = 'completed' && (;
                   <button className="flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-green-600 hover:bg-green-700 text-white text-sm font-medium rounded-lg transition-colors duration-200">;
                      View Instance;
                   </button>;
                 )}
-                {deployment && deployment.status === 'failed' && (;
+                {deployment && deployment.status = = 'failed' && (;
                   <button className="flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors duration-200">;
                      Retry;
                   </button>;
                 )}
                 <button className="flex items-center justify-center px-3 py-2 bg-white/10 hover:bg-white/20 text-white/80 text-sm font-medium rounded-lg transition-colors duration-200">;
-                  ;
                 </button>;
               </div>;
             </div>;
           </div>;
-        ))}
+        )}
       </div>
       {/* Empty State */}
-      {filteredDeployments && filteredDeployments.length === 0 && (;
+      {filteredDeployments && filteredDeployments.length = = 0 && (;
         <div className='text-center py-16'>;
           <div className='w-16 h-16 mx-auto mb-4 p-4 bg-white/10 rounded-full'>;
             <Rocket className='w-8 h-8 text-white/40' />;
@@ -728,11 +724,11 @@ const getVerticalIcon = (vertical: string) => {
             No deployments found;
           </h3>;
           <p className='text-white/40 mb-6'>;
-            {filter === 'all';
+            {filter = = 'all';
               ? 'Start by creating your first Zion ecosystem deployment';
               : `No deployments with status "${filter}" found`}
           </p>;
-          {filter === 'all' && (;
+          {filter = = 'all' && (;
             <a
               href='/admin/os-deploy'
               className='inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-200'>;
@@ -740,7 +736,7 @@ const getVerticalIcon = (vertical: string) => {
             </a>;
           )}
         </div>          </div>
-                {deployment.status === 'deploying' && (
+                {deployment.status = = 'deploying' && (
                   <>;
                     <button className="flex - 1 flex items - center justify - center gap - 2 px - 3 py - 2 bg - orange - 600 hover:bg - orange - 700 text - white text - sm font - medium rounded - lg transition - colors duration - 200">;
                        Pause;
@@ -749,41 +745,40 @@ const getVerticalIcon = (vertical: string) => {
                        Stop;
                     </button>;
                   </>)}
-                {deployment.status === 'completed' && (
+                {deployment.status = = 'completed' && (
                   <button className="flex - 1 flex items - center justify - center gap - 2 px - 3 py - 2 bg - green - 600 hover:bg - green - 700 text - white text - sm font - medium rounded - lg transition - colors duration - 200">;
                      View Instance;
                   </button>)}
-                {deployment.status === 'failed' && (
+                {deployment.status = = 'failed' && (
                   <button className="flex - 1 flex items - center justify - center gap - 2 px - 3 py - 2 bg - blue - 600 hover:bg - blue - 700 text - white text - sm font - medium rounded - lg transition - colors duration - 200">;
                      Retry;
                   </button>)}
                 <button className="flex items - center justify - center px - 3 py - 2 bg - white / 10 hover:bg - white / 20 text - white / 80 text - sm font - medium rounded - lg transition - colors duration - 200">;
-                  ;
                 </button>;
               </div>;
             </div>;
-          </div>))}
+          </div>)}
       </div>;
       {/* Empty State */}
-      {filteredDeployments.length === 0 && (
+      {filteredDeployments.length = = 0 && (
         <div className="text-center py-16">
           <div className="w-16 h-16 mx-auto mb-4 p-4 bg-white/10 rounded-full">
             <Rocket className="w-8 h-8 text-white/40" />
           </div>
           <h3 className="text-lg font-medium text-white/60 mb-2">No deployments found</h3>
           <p className="text-white/40 mb-6">
-            {filter === 'all'
+            {filter = = 'all'
               ? 'Start by creating your first Zion ecosystem deployment'
               : `No deployments with status "${filter}" found`
         </div>          </div>;
           <h3 className="text-lg font-medium text-white/60 mb-2">No deployments found</h3>;
           <p className="text-white/40 mb-6">;
-            {filter === 'all' ;
+            {filter = = 'all' ;
               ? 'Start by creating your first Zion ecosystem deployment' ;
               : `No deployments with status "${filter}" found`;
             }
           </p>;
-          {filter === 'all' && (;
+          {filter = = 'all' && (;
             <a
               href="/admin/os-deploy"
               className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-200">;
@@ -811,7 +806,7 @@ const getVerticalIcon = (vertical: string) => {
               </tr>;
             </thead>;
             <tbody className="divide-y divide-white/10">;
-              {filteredDeployments && filteredDeployments.map((deployment) => (;
+              {filteredDeployments && filteredDeployments.map(deployment) => (;
                 <tr key={deployment && deployment.id} className="hover:bg-white/5">;
                   <td className="px-6 py-4 whitespace-nowrap">;
                     <div className="text-sm font-medium text-white">{deployment && deployment.name}</div>;
@@ -831,8 +826,8 @@ const getVerticalIcon = (vertical: string) => {
                     <button className="text-red-400 hover:text-red-300">Stop</button>;
                   </td>;
                 </tr>;
-              ))}
-      {filtered_deployments.length === 0 && (
+              )}
+      {filtered_deployments.length = = 0 && (
         <div className='text - center py - 16'>;
           <div className='w - 16 h - 16 mx - auto mb - 4 p - 4 bg - white / 10 rounded - full'>;
             <Rocket className='w - 8 h - 8 text - white / 40' />;
@@ -841,11 +836,11 @@ const getVerticalIcon = (vertical: string) => {
             No deployments found;
           </h3>;
           <p className='text - white / 40 mb - 6'>;
-            {filter === 'all';
+            {filter = = 'all';
               ? 'Start by creating your first Zion ecosystem deployment';
               : `No deployments with status "${filter}" found`}
           </p>;
-          {filter === 'all' && (
+          {filter = = 'all' && (
             <a;
               href='/admin / os - deploy';
               className='inline - flex items - center gap - 2 px - 6 py - 3 bg - blue - 600 hover:bg - blue - 700 text - white font - medium rounded - lg transition - colors duration - 200';
@@ -855,12 +850,12 @@ const getVerticalIcon = (vertical: string) => {
         </div>          </div>;
           <h3 className="text - lg font - medium text - white / 60 mb - 2">No deployments found</h3>;
           <p className="text - white / 40 mb - 6">;
-            {filter === 'all';
+            {filter = = 'all';
               ? 'Start by creating your first Zion ecosystem deployment';
               : `No deployments with status "${filter}" found`;
             }
           </p>;
-          {filter === 'all' && (
+          {filter = = 'all' && (
             <a;
               href="/admin / os - deploy";
               className="inline - flex items - center gap - 2 px - 6 py - 3 bg - blue - 600 hover:bg - blue - 700 text - white font - medium rounded - lg transition - colors duration - 200";
@@ -888,7 +883,7 @@ const getVerticalIcon = (vertical: string) => {
               </tr>;
             </thead>;
             <tbody className="divide - y divide - white / 10">;
-              {filtered_deployments.map ((deployment) => (
+              {filtered_deployments.map (deployment) => (
                 <tr key={deployment.id} className="hover:bg - white / 5">;
                   <td className="px - 6 py - 4 whitespace - nowrap">;
                     <div className="text - sm font - medium text - white">{deployment.name}</div>;
@@ -907,7 +902,7 @@ const getVerticalIcon = (vertical: string) => {
                     <button className="text - green - 400 hover:text - green - 300 mr - 4">Deploy</button>;
                     <button className="text - red - 400 hover:text - red - 300">Stop</button>;
                   </td>;
-                </tr>))}
+                </tr>)}
             </tbody>;
           </table>;
         </div>;
@@ -916,7 +911,6 @@ const getVerticalIcon = (vertical: string) => {
   );      )}
     </div>;
   );
-}
-    </div>))}
+
+    </div>)}
     </div>);
-}

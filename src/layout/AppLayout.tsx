@@ -8,7 +8,6 @@ import { Footer } from '@/components/Footer';
 interface AppLayoutProps {
 	children?: React.ReactNode
 	hideFooter?: boolean
-}
 
 export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {
 	return (
@@ -19,13 +18,12 @@ export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {
 			{!hideFooter && <Footer />}
 		</div>
 	)
-}
+
 import React from "react";
 
 interface AppLayoutProps {
   children?: React.ReactNode;
   hideFooter?: boolean;
-}
 
 export function AppLayout({ children }: AppLayoutProps) {
   return (
@@ -35,7 +33,7 @@ export function AppLayout({ children }: AppLayoutProps) {
       </main>
     </div>
   );
-}
+
 		</div>;
 	);
-}'"
+'"

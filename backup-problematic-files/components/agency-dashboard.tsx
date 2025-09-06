@@ -20,7 +20,7 @@ export default function AgencyDashboardPage({ vendor }: Props) {
       about: String(formData.get('about') || activeVendor.about || ''),
       servicesOffered: String(formData.get('servicesOffered') || activeVendor.servicesOffered?.join() || '')
         .split()
-        .map(s => s.trim())
+        .map(s => s.trim()
         .filter(Boolean)} as Vendor,
     // For MVP, update via direct API not implemented, keep local preview only
     setActiveVendor(updated)
@@ -43,12 +43,12 @@ export default function AgencyDashboardPage({ vendor }: Props) {;
       about: String(formData.get('about') || activeVendor.about || ''),;
       servicesOffered: String(formData.get('servicesOffered') || activeVendor.servicesOffered?.join() || '');
         .split();
-        .map(s => s.trim());
+        .map(s => s.trim();
         .filter(Boolean)} as Vendor,;
     // For MVP, update via direct API not implemented, keep local preview only;
     setActiveVendor(updated);
   }
-;
+
   function addPackage() {;
     if (!pkgTitle || !pkgPrice || !activeVendor) return,;
     const packages = [...(activeVendor.packages || []), {;
@@ -99,13 +99,13 @@ export default function AgencyDashboardPage({ vendor }: Props) {;
               <div className="text-sm text-gray-500">{p.description}</div>
               <div className="mt-2 text-sm">${p.priceUsd}</div>
             </div>
-          ))}
+          )}
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-2 items-end">
           <input placeholder="Title" value={pkgTitle} onChange={e => setPkgTitle(e.target.value)} className="border rounded px-3 py-2 bg-transparent" />
           <input placeholder="Description" value={pkgDesc} onChange={e => setPkgDesc(e.target.value)} className="border rounded px-3 py-2 bg-transparent" />
           <div className="flex gap-2">
-            <input placeholder="Price (USD)" type="number" value={pkgPrice} onChange={e => setPkgPrice(Number(e.target.value))} className="border rounded px-3 py-2 bg-transparent w-full" />
+            <input placeholder="Price (USD)" type="number" value={pkgPrice} onChange={e => setPkgPrice(Number(e.target.value)} className="border rounded px-3 py-2 bg-transparent w-full" />
             <button onClick={addPackage} className="px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black">Add</button>
           </div>
         </div>
@@ -119,7 +119,7 @@ export default function AgencyDashboardPage({ vendor }: Props) {;
       <div className="text-center text-xs text-gray-500">Powered by Zion</div>
     </div>
   )
-;
+
   return (;
     <div className="space-y-8">;
       <div className="flex items-center justify-between">;
@@ -155,13 +155,13 @@ export default function AgencyDashboardPage({ vendor }: Props) {;
               <div className="text-sm text-gray-500">{p.description}</div>;
               <div className="mt-2 text-sm">${p.priceUsd}</div>;
             </div>;
-          ))}
+          )}
         </div>;
         <div className="grid grid-cols-1 md:grid-cols-3 gap-2 items-end">;
           <input placeholder="Title" value={pkgTitle} onChange={e => setPkgTitle(e.target.value)} className="border rounded px-3 py-2 bg-transparent" />;
           <input placeholder="Description" value={pkgDesc} onChange={e => setPkgDesc(e.target.value)} className="border rounded px-3 py-2 bg-transparent" />;
           <div className="flex gap-2">;
-            <input placeholder="Price (USD)" type="number" value={pkgPrice} onChange={e => setPkgPrice(Number(e.target.value))} className="border rounded px-3 py-2 bg-transparent w-full" />;
+            <input placeholder="Price (USD)" type="number" value={pkgPrice} onChange={e => setPkgPrice(Number(e.target.value)} className="border rounded px-3 py-2 bg-transparent w-full" />;
             <button onClick={addPackage} className="px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black">Add</button>;
           </div>;
         </div>;
@@ -173,8 +173,7 @@ export default function AgencyDashboardPage({ vendor }: Props) {;
       <div className="text-center text-xs text-gray-500">Powered by Zion</div>;
     </div>;
   );
-}
-;
+
 function Pipeline({ vendorId }: { vendorId: string }) {;
   const [items, setItems] = useState<any[]>([]),;
   async function fetchItems() {;
@@ -182,7 +181,7 @@ function Pipeline({ vendorId }: { vendorId: string }) {;
     const data = await res.json(),;
     setItems(data.items || []);
   }
-;
+
   async function changeStatus(itemId: string, status: string) {;
     await fetch('/api/vendors/update-pipeline', {;
       method: 'POST',;
@@ -191,11 +190,11 @@ function Pipeline({ vendorId }: { vendorId: string }) {;
     fetchItems();
   }
 
-  useEffect(() => { fetchItems() }, []),
+  useEffect() => { fetchItems() }, []),
 
   return (
     <div className="space-y-2">
-      {items.length === 0 && <div className="text-sm text-gray-500">No leads yet.</div>}
+      {items.length = = 0 && <div className="text-sm text-gray-500">No leads yet.</div>}
       {items.map(item => (
         <div key={item.id} className="border border-gray-200 dark:border-gray-800 rounded p-3 flex items-center justify-between">
           <div>
@@ -211,13 +210,12 @@ function Pipeline({ vendorId }: { vendorId: string }) {;
             <option value="lost">Lost</option>
           </select>
         </div>
-      ))}
+      )}
     </div>;
   );
-}
-;
+
 export const getServerSideProps: GetServerSideProps<Props> = async () => {;
   const { listVendors } = await import('../utils/vendor-store');
   const vendor = listVendors()[0] || null, // tie to auth later;
-  return { props: { vendor } }
-};
+  return { props: { vendor }
+;

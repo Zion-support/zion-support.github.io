@@ -6,5 +6,3 @@ export function accordion() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

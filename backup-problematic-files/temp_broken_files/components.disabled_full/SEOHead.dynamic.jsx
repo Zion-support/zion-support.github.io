@@ -7,6 +7,5 @@ const SEOHead.dynamic = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default SEOHead.dynamic;

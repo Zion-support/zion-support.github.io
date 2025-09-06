@@ -48,7 +48,6 @@ export const cuttingEdgeMicroSaasServices2025 = [
           '24/7 support'
         ]
       }
-    }
     category: 'Customer Success'
     tags: [
       'Customer Success'
@@ -143,7 +142,6 @@ export const cuttingEdgeMicroSaasServices2025 = [
           '24/7 support'
         ]
       }
-    }
     category: 'Supply Chain'
     tags: [
       'Supply Chain'
@@ -241,7 +239,6 @@ export const cuttingEdgeMicroSaasServices2025 = [
           '24/7 support'
         ]
       }
-    }
     category: 'Identity Verification'
     tags: [
       'Identity Verification'
@@ -341,7 +338,6 @@ export const cuttingEdgeMicroSaasServices2025 = [
           '24/7 support'
         ]
       }
-    }
     category: 'HR Analytics'
     tags: [
       'HR Analytics'
@@ -440,7 +436,6 @@ export const cuttingEdgeMicroSaasServices2025 = [
           '24/7 support'
         ]
       }
-    }
     category: 'Financial Risk Management'
     tags: [
       'Risk Management'
@@ -493,7 +488,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
       'Risk Management Standards'
     ]
   }
-];      'Portfolio risk assessmentInvestment strategy optimizationRegulatory compliance reportingRisk model developmentPerformance analysis and attribution'
+;      'Portfolio risk assessmentInvestment strategy optimizationRegulatory compliance reportingRisk model developmentPerformance analysis and attribution'
     id: 'customer-success-ai-pro', name: 'Customer Success AI Pro',
     description: 'Intelligent customer success platform that uses AI to predict customer churn, optimize engagement strategies, and maximize customer lifetime value through predictive analytics.',
     features: [
@@ -526,11 +521,9 @@ export const cuttingEdgeMicroSaasServices2025 = [
       'Risk Management Standards',
     ],
   },
-];      'Portfolio risk assessmentInvestment strategy optimizationRegulatory compliance reportingRisk model developmentPerformance analysis and attribution'
+;      'Portfolio risk assessmentInvestment strategy optimizationRegulatory compliance reportingRisk model developmentPerformance analysis and attribution'
     ];
     integrations: ['Bloomberg TerminalReuters EikonTrading PlatformsRisk Management SystemsFinancial Data Providers'];
     compliance: ['Basel IIISolvency IIDodd - FrankFinancial RegulationsRisk Management Standards'];
   }
-];
-
 ;

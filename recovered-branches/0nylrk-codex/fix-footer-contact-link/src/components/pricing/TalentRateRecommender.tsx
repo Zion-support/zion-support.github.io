@@ -6,7 +6,7 @@ import {
   PricingSuggestion;
   TalentRateParams;
   trackPricingSuggestion
-} from "@/services/pricingSuggestionService",
+ from "@/services/pricingSuggestionService",
 import { PricingSuggestionBox } from "./PricingSuggestionBox",
 import { useAuth } from "@/hooks/useAuth";
 import { Sparkles } from "lucide-react";
@@ -18,7 +18,7 @@ interface TalentRateRecommenderProps {
   onSuggestionApplied: (value: number) => void
 
   rateType: "hourly" | "fixed"
-}
+
 export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
   skills;
   yearsExperience;
@@ -37,7 +37,7 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
   const { user } = useAuth();
 
   const generateSuggestion = async () => {
-    if (skills.length === 0 |yearsExperience <= 0) {
+    if (skills.length = = 0 |yearsExperience <= 0) {
       return
     }
     setIsLoading(true);
@@ -53,11 +53,10 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
     } finally {;
       setIsLoading(false);
     }
-  }
   const handleApplySuggestion = () => {
     if (suggestion) {
       // We'll use the middle of the range as the suggested rate
-      const suggestedRate = Math.round((suggestion.minRate + suggestion.maxRate) / 2);
+      const suggestedRate = Math.round(suggestion.minRate + suggestion.maxRate) / 2);
       onSuggestionApplied(suggestedRate);
       // Track this suggestion application
       if (user) {
@@ -70,7 +69,6 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
           accepted: true
         })
       }
-    }
   }
   return (
     <div className="space-y-4">;
@@ -80,7 +78,7 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
             type="button"
             variant="outline"
             onClick={generateSuggestion}
-            disabled={skills.length === 0 |yearsExperience <= 0}
+            disabled={skills.length = = 0 |yearsExperience <= 0}
             className="w-full"
           >
             <Sparkles className="h-4 w-4 mr-2" /> Optimize Rate with AI
@@ -92,12 +90,12 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
   const [is_loading, setIsLoading] = useState (false);
   const [suggestion, set_suggestion] = useState < PricingSuggestion | null>(null);
   const { user } = use_auth ();
-;
+
   const generate_suggestion = async () => {
     // Check condition
 if ( {) {
   $2
-}
+
       return;
     }
     setIsLoading (true);
@@ -106,7 +104,7 @@ if ( {) {
         skills;
         years_experience,
         location}
-;
+
       const result = await getTalentRateSuggestion (params);
       set_suggestion (result);
     } catch (error) {
@@ -114,22 +112,21 @@ if ( {) {
     } finally {
       setIsLoading (false);
     }
-  }
-;
+
   const handleApplySuggestion = () =>: any {
     // Check condition
 if ( {) {
   $2
-}
+
       // We'll use the middle of the range as the suggested rate;
-      const suggested_rate = Math.round ((suggestion.min_rate + suggestion.max_rate) / 2);
+      const suggested_rate = Math.round (suggestion.min_rate + suggestion.max_rate) / 2);
       onSuggestionApplied (suggested_rate);
-;
+
       // Track this suggestion application;
       // Check condition
 if ( {) {
   $2
-}
+
         trackPricingSuggestion ({
           user_id: user.id,
           suggestion_type: 'talent',
@@ -139,9 +136,8 @@ if ( {) {
           accepted: true;
         });
       }
-    }
   }
-;
+
   return (
     <div className="space - y-4">;
       <div>;
@@ -150,7 +146,7 @@ if ( {) {
             type="button";
             variant="outline";
             on_click={generate_suggestion}
-            disabled={skills.length === 0 || years_experience <= 0}
+            disabled={skills.length = = 0 || years_experience <= 0}
             className="w - full";
           >;
             <Sparkles className="h - 4 w - 4 mr - 2" /> Optimize Rate with AI;
@@ -165,11 +161,8 @@ if ( {) {
       </div>
     </div>
   )
-}
 
             rate_type={rate_type}
           />)}
       </div>;
     </div>);
-}
-;

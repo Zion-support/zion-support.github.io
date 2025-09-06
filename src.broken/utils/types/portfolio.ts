@@ -3,7 +3,7 @@ export type ProjectMedia = {
   pdfUrl?: string,
   githubUrl?: string,
   demoUrl?: string
-},
+,
 
 export type Project = {
   id: string,
@@ -11,7 +11,7 @@ export type Project = {
   description: string,
   technologies: string[],
   media: ProjectMedia
-},
+,
 
 export type WorkExperience = {
   id: string,
@@ -22,7 +22,7 @@ export type WorkExperience = {
   description: string,
   bulletPoints: string[],
   logoUrl?: string
-},
+,
 
 export type EducationItem = {
   id: string,
@@ -32,7 +32,7 @@ export type EducationItem = {
   endDate: string, // ISO or YYYY-MM
   details?: string,
   logoUrl?: string
-},
+,
 
 export type ResumeVersion = {
   id: string,
@@ -47,13 +47,13 @@ export type ResumeVersion = {
   workHistory: WorkExperience[],
   education: EducationItem[],
   projects: Project[]
-},
+,
 
 export type TalentPortfolio = {
   talentSlug?: string,
   versions: ResumeVersion[],
   activeVersionId?: string
-},
+,
 
 export type AiAssistAction =
   | 'improve-summary'
@@ -64,26 +64,26 @@ export type AiAssistRequest = {
   action: AiAssistAction,
   text?: string,
   context?: Record<string unknown>
-},
+,
 
 export type AiAssistResponse = {
   ok: boolean,
   result?: string | string[],
   error?: string
-},
+,
 export type ProjectMedia = {;
   imageUrl?: string,;
   pdfUrl?: string,;
   githubUrl?: string,;
   demoUrl?: string;
-},;
+,;
 export type Project = {;
   id: string,;
   title: string,;
   description: string,;
   technologies: string[],;
   media: ProjectMedia;
-},;
+,;
 export type WorkExperience = {;
   id: string,;
   company: string,;
@@ -93,7 +93,7 @@ export type WorkExperience = {;
   description: string,;
   bulletPoints: string[],;
   logoUrl?: string;
-},;
+,;
 export type EducationItem = {;
   id: string,;
   school: string,;
@@ -102,7 +102,7 @@ export type EducationItem = {;
   endDate: string, // ISO or YYYY-MM;
   details?: string,;
   logoUrl?: string;
-},;
+,;
 export type ResumeVersion = {;
   id: string,;
   name: string, // e.g., "AI Engineer", "Cloud DevOps";
@@ -116,12 +116,12 @@ export type ResumeVersion = {;
   workHistory: WorkExperience[],;
   education: EducationItem[],;
   projects: Project[];
-},;
+,;
 export type TalentPortfolio = {;
   talentSlug?: string,;
   versions: ResumeVersion[],;
   activeVersionId?: string;
-},;
+,;
 export type AiAssistAction =;
   | 'improve-summary';
   | 'format-description';
@@ -130,9 +130,8 @@ export type AiAssistRequest = {;
   action: AiAssistAction,;
   text?: string,;
   context?: Record<string unknown>;
-},;
+,;
 export type AiAssistResponse = {;
   ok: boolean,;
   result?: string | string[],;
   error?: string;
-};

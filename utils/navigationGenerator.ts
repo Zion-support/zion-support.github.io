@@ -546,24 +546,23 @@ export class NavigationGenerator {private services: NavigationItem[] = [];
       // Check condition
 if ( {) {
   $2
-}
+
         if () {) {
   $2
-}
+
           category_map.set (service.category, []);
         }
         category_map.get (service.category)!.push (service);
-      }
-    });
+      });
     // Create category objects;
-    this.categories = Array.from(categoryMap.entries()).map(([name, services]) => ({id: name.toLowerCase().replace(/\s+/g, '-');
+    this.categories = Array.from(categoryMap.entries().map([name, services]) => ({id: name.toLowerCase().replace(/\s+/g, '-');
       name;
       slug: name.toLowerCase().replace(/\s+/g, '-');
       icon: this.getCategoryIcon(name);
       serviceCount: services.length;
       services: services.map(s => s.id);
       priority: this.getCategoryPriority(name);
-    }));
+    });
     // Add additional categories for pages;
     this.categories.push(;
       {id: 'company';
@@ -701,9 +700,8 @@ if ( {) {
       default:;
         return this.generateDefaultSidebar ();
     }
-  }
   private generateServiceSidebar(serviceId?: string): NavigationItem[] {if (!serviceId) return this.generateDefaultSidebar();
-    const service = this.services.find(s => s.id === serviceId);
+    const service = this.services.find(s => s.id = = serviceId);
     if (!service) return this.generateDefaultSidebar();
     return [;
       {;
@@ -731,9 +729,9 @@ if ( {) {
     ];
   }
   private generateCategorySidebar(categoryId?: string): NavigationItem[] {if (!categoryId) return this.generateDefaultSidebar();
-    const category = this.categories.find(c => c.id === categoryId);
+    const category = this.categories.find(c => c.id = = categoryId);
     if (!category) return this.generateDefaultSidebar();
-    const categoryServices = this.services.filter(s => s.category === category.name);
+    const categoryServices = this.services.filter(s => s.category = = category.name);
     return [;
       {;
         id: 'category-overview';
@@ -746,7 +744,7 @@ if ( {) {
         href: service.href;
         status: service.status;
         priority: service.priority |10;
-      }));
+      });
     ];
   }
   private generateDashboardSidebar(): NavigationItem[] {return [;
@@ -819,5 +817,3 @@ if ( {) {
         }
       ];
     }
-  }
-}

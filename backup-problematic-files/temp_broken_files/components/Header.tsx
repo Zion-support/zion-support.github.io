@@ -25,7 +25,7 @@ import {
   Home,
   Globe,
   BarChart3
-} from 'lucide-react';
+ from 'lucide-react';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
@@ -164,7 +164,7 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex space-x-8">
-            {navigation.map((item) => (
+            {navigation.map(item) => (
               <Link
                 key={item.name}
                 href={item.href}
@@ -172,7 +172,7 @@ const Header = () => {
               >
                 {item.name}
               </Link>
-            ))}
+            )}
           </div>
 
           {/* CTA Button */}
@@ -198,13 +198,13 @@ const Header = () => {
         <AnimatePresence>
           {isMenuOpen && (
             <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
+              initial={ opacity: 0, height: 0 }
+              animate={ opacity: 1, height: 'auto' }
+              exit={ opacity: 0, height: 0 }
               className="lg:hidden"
             >
               <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-50 rounded-lg mt-2">
-                {navigation.map((item) => (
+                {navigation.map(item) => (
                   <Link
                     key={item.name}
                     href={item.href}
@@ -213,7 +213,7 @@ const Header = () => {
                   >
                     {item.name}
                   </Link>
-                ))}
+                )}
                 <Link
                   href="/contact"
                   onClick={closeMenu}
@@ -228,6 +228,5 @@ const Header = () => {
       </nav>
     </header>
   );
-};
 
 export default Header;

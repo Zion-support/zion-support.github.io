@@ -7,6 +7,5 @@ const AdvancedBusinessIntelligence.js = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default AdvancedBusinessIntelligence.js;

@@ -6,5 +6,3 @@ export function InteractiveMap() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

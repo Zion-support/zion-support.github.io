@@ -1,5 +1,4 @@
 import React from 'react';
-,;
 export export export default function safe-image()   {,;
   return (;
     <div>;

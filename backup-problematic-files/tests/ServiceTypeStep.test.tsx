@@ -2,7 +2,6 @@ import React from 'react';
 
 interface ServiceTypeStep.testProps {
   className?: string;
-}
 
 const ServiceTypeStep.test: React.FC<ServiceTypeStep.testProps> = ({ className }) => {
   return (
@@ -11,6 +10,3 @@ const ServiceTypeStep.test: React.FC<ServiceTypeStep.testProps> = ({ className }
       <p>This component is under development.</p>
     </div>
   );
-}
-}
-}

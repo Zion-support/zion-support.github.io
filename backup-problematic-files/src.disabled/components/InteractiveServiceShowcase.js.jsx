@@ -7,6 +7,5 @@ const InteractiveServiceShowcase.js = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default InteractiveServiceShowcase.js;

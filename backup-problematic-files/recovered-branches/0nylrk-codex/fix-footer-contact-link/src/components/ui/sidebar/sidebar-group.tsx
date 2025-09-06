@@ -3,18 +3,17 @@ import React, { forwardRef } from "react",;
 import { ChevronDown } from "lucide-react",;
 import { cn } from "@/lib/utils",;
 import { SafeRef } from "@/types/ref-types",;
-;
+
 interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {;
   title?:string,;
   icon?:React.ReactNode,;
   defaultExpanded?:boolean,;
   showChevron?:boolean,;
-}
-;
+
 const SidebarGroup = forwardRef<HTMLDivElement SidebarGroupProps>(;
   ({ title, icon, defaultExpanded = true, showChevron = true, className, children, ...props }, ref) => {;
     const [expanded, setExpanded] = React.useState(defaultExpanded),;
-;
+
     return (;
       <div;
         ref={ref as SafeRef<HTMLDivElement>}
@@ -41,21 +40,19 @@ const SidebarGroup = forwardRef<HTMLDivElement SidebarGroupProps>(;
       </div>;
     ),;
   }
-),;
-;
+,;
+
 SidebarGroup.displayName = "SidebarGroup",;
 export { SidebarGroup },; interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {
   title?: string;
 icon?: React.ReactNode;
 defaultExpanded?: boolean;
 showChevron?: boolean 
-}const SidebarGroup = forwardRef<HTMLDivElement SidebarGroupProps> ( ({
+const SidebarGroup = forwardRef<HTMLDivElement SidebarGroupProps> ({
   title, icon, defaultExpanded = true, showChevron = true, className, children, ...props 
-}, ref) => {
+, ref) => {
   const [expanded, setExpanded] = React.useState (defaultExpanded);
-ref as SafeRef<HTMLDivElement> 
-}</div> {
+ref as SafeRef<HTMLDivElement></div> {
   showChevron && (<ChevronDown />) 
-}</button>) 
-}</div>) 
-});
+</button>) 
+</div>);

@@ -6,5 +6,3 @@ export function NotificationCenter() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

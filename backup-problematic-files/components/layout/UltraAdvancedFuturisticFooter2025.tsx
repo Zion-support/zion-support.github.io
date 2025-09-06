@@ -5,7 +5,7 @@ import {;
   Twitter, Linkedin, Github,;
   ArrowUp, Crown, Zap, Brain, Rocket,;
   Shield, Users, BookOpen, Briefcase, Atom;
-} from 'lucide-react',;
+ from 'lucide-react',;
 import Link from 'next/link',;
 import { AnimatePresence } from 'framer-motion',;
 interface FooterLink {;
@@ -13,13 +13,11 @@ interface FooterLink {;
   href: string,;
   description?: string,;
   external?: boolean;
-}
-;
+
 interface FooterSection {;
   title: string,;
   links: FooterLink[];
-}
-;
+
 const footerSections: FooterSection[] = [;
   {;
     title: 'Services',;
@@ -75,13 +73,13 @@ const footerSections: FooterSection[] = [;
       { label: 'Education', href: '/education-technology-solutions', description: 'EdTech solutions' }
     ];
   }
-],
+,
 
 const socialLinks = [
   { icon: <Linkedin className="w-5 h-5" />, href: 'https://linkedin.com/company/ziontechgroup', label: 'LinkedIn', external: true },
   { icon: <Twitter className="w-5 h-5" />, href: 'https://twitter.com/ziontechgroup', label: 'Twitter', external: true },
   { icon: <Github className="w-5 h-5" />, href: 'https://github.com/ziontechgroup', label: 'GitHub', external: true }
-],;
+,;
 const quickLinks = [;
   { name: 'About Us', href: '/about', icon: <Users className="w-4 h-4" /> },;
   { name: 'Contact', href: '/contact', icon: <Phone className="w-4 h-4" /> },;
@@ -89,7 +87,7 @@ const quickLinks = [;
   { name: 'Documentation', href: '/docs', icon: <FileText className="w-4 h-4" /> },;
   { name: 'API Reference', href: '/api', icon: <Code className="w-4 h-4" /> },;
   { name: 'Status', href: '/status', icon: <TrendingUp className="w-4 h-4" /> }
-],
+,
 
 const UltraAdvancedFuturisticFooter2025: React.FC = () => {
   const scrollToTop = () => {
@@ -103,8 +101,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
         { label: 'AI & Machine Learning', href: '/ai-services' },
         { label: 'Quantum Computing', href: '/quantum-computing' },
         { label: 'Space Technology', href: '/space-tech' },
-        { label: 'Cybersecurity', href: '/cybersecurity' },
-],;
+        { label: 'Cybersecurity', href: '/cybersecurity' },;
 const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
   const scrollToTop = () => {;
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -164,7 +161,6 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
       transition: {;
         staggerChildren: 0.1;
       }
-    }
   },;
   const itemVariants = {;
     hidden: { y: 20, opacity: 0 },;
@@ -174,7 +170,6 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
       transition: {;
         duration: 0.5;
       }
-    }
   },
 
   return (
@@ -182,28 +177,28 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
       {/* Animated Background Elements */}
       <div className="absolute inset-0 -z-10">
         {/* Quantum Particle Field */}
-        {[...Array(30)].map((_, i) => (;
+        {[...Array(30)].map(_, i) => (;
           <motion.div;
             key={i}
             className="absolute w-1 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full"
-            animate={{
+            animate={
               x: [0, Math.random() * 1000, 0],
               y: [0, Math.random() * 1000, 0],
               opacity: [0, 0.6, 0],
-              scale: [0, 1, 0]}}
-            transition={{
+              scale: [0, 1, 0]}
+            transition={
               duration: 15 + Math.random() * 10,
               repeat: -1,
               delay: Math.random() * 8,
               ease: "easeInOut"
-            }}
-            style={{;
+            }
+            style={;
               left: `${Math.random() * 100}%`,;
               top: `${Math.random() * 100}%`;
-            }}
+            }
           />;
-        ))}
-;
+        )}
+
         {/* Gradient Overlays */}
         <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-purple-900/20 to-transparent"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-900/20 to-gray-900"></div>
@@ -216,7 +211,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={ once: true }
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12"
           >
             {/* Company Info */}
@@ -235,12 +230,12 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
                   <p className="text-sm text-gray-400">Future Technology Solutions</p>
                 </div>
               </div>
-              
+
               <p className="text-gray-300 mb-6 leading-relaxed">
                 Pioneering the future with revolutionary AI consciousness, quantum computing, 
                 and autonomous systems. Transforming businesses through next-generation technology.
               </p>
-              
+
               <p className="text-gray-300 leading-relaxed mb-6 max-w-md">
                 Leading provider of innovative technology solutions, specializing in AI, automation, and future-ready services. 
                 We help businesses transform and thrive in the digital age.
@@ -270,17 +265,17 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
             </motion.div>
 
             {/* Footer Sections */}
-            {footerSections.map((section, index) => (
+            {footerSections.map(section, index) => (
               <motion.div key={section.title} variants={itemVariants}>
                 <h4 className="text-lg font-semibold text-white mb-6 flex items-center space-x-2">
-                  {section.title === 'Services' && <Briefcase className="w-5 h-5 text-cyan-400" />}
-                  {section.title === 'Solutions' && <Zap className="w-5 h-5 text-purple-400" />}
-                  {section.title === 'Company' && <Users className="w-5 h-5 text-pink-400" />}
-                  {section.title === 'Resources' && <BookOpen className="w-5 h-5 text-blue-400" />}
+                  {section.title = = 'Services' && <Briefcase className="w-5 h-5 text-cyan-400" />}
+                  {section.title = = 'Solutions' && <Zap className="w-5 h-5 text-purple-400" />}
+                  {section.title = = 'Company' && <Users className="w-5 h-5 text-pink-400" />}
+                  {section.title = = 'Resources' && <BookOpen className="w-5 h-5 text-blue-400" />}
                   <span>{section.title}</span>
                 </h4>
                 <ul className="space-y-3">
-                  {section.items.map((item) => (
+                  {section.items.map(item) => (
                     <li key={item.label}>
                       <Link
                         href={item.href}
@@ -289,36 +284,36 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
                         {item.label}
                       </a>
                     </li>
-                  ))}
+                  )}
                 </ul>;
               </motion.div>;
-            ))}
+            )}
           </motion.div>;
           {/* Social Links & Newsletter */}
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 20 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.6 }
+            viewport={ once: true }
             className="mt-16 pt-12 border-t border-gray-800/50"
           >
             <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
               {/* Social Links */}
               <div className="flex items-center space-x-6">
                 <span className="text-gray-400 font-medium">Follow Us:</span>
-                {socialLinks.map((social) => (
+                {socialLinks.map(social) => (
                   <motion.a
                     key={social.label}
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-10 h-10 bg-gray-800/50 hover:bg-gradient-to-r hover:from-cyan-500 hover:to-purple-500 rounded-xl flex items-center justify-center text-gray-300 hover:text-white transition-all duration-200 hover:scale-110"
-                    whileHover={{ y: -2 }}
-                    whileTap={{ scale: 0.95 }}
+                    whileHover={ y: -2 }
+                    whileTap={ scale: 0.95 }
                   >
                     <social.icon className="w-5 h-5" />
                   </motion.a>
-                ))}
+                )}
               </div>;
               {/* Newsletter Signup */}
               <div className="flex-1 max-w-md">
@@ -334,8 +329,8 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
                   />
                   <motion.button
                     className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-200"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
+                    whileHover={ scale: 1.05 }
+                    whileTap={ scale: 0.95 }
                   >;
                     Subscribe;
                   </motion.button>;
@@ -346,10 +341,10 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
         </div>;
         {/* Bottom Bar */}
         <motion.div;
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+          initial={ opacity: 0 }
+          whileInView={ opacity: 1 }
+          transition={ duration: 0.6 }
+          viewport={ once: true }
           className="border-t border-gray-800/50 bg-gray-900/50 backdrop-blur-xl"
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
@@ -363,7 +358,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
                   Terms of Service
                 </a>
               </div>
-              
+
               <div className="flex items-center space-x-4 text-gray-400 text-sm">
                 <span>Powered by</span>
                 <div className="flex items-center space-x-2">
@@ -390,16 +385,16 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
       <motion.button;
         onClick={scrollToTop}
         className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full shadow-2xl hover:shadow-purple-500/25 transition-all duration-200 z-50"
-        whileHover={{ scale: 1.1, y: -2 }}
-        whileTap={{ scale: 0.9 }}
-        initial={{ opacity: 0, scale: 0 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.3, delay: 1 }}
+        whileHover={ scale: 1.1, y: -2 }
+        whileTap={ scale: 0.9 }
+        initial={ opacity: 0, scale: 0 }
+        animate={ opacity: 1, scale: 1 }
+        transition={ duration: 0.3, delay: 1 }
       >
         <ArrowUp className="w-6 h-6 mx-auto" />
       </motion.button>
     </footer>
   )
-},
+,
 
 export default UltraAdvancedFuturisticFooter2025,

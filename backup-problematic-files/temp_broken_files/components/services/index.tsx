@@ -26,7 +26,7 @@ const mapLocalToServiceItem = (item: any): ServiceItem => ({
   provider: 'Zion Provider',
   priceRangeUSD: item.priceRangeUSD,
   categories: [item.category],
-  rating: Math.round((3.8 + Math.random() * 1.2) * 10) / 10}),
+  rating: Math.round(3.8 + Math.random() * 1.2) * 10) / 10}),
 
 const ServicesPage: NextPage = () => {
   const [services, setServices] = React.useState<ServiceItem[]>([]),
@@ -61,25 +61,25 @@ const categoryAliases: Record<string string> = {
     const mapped = categoryAliases[rawCat] || (categories.includes(rawCat) ? rawCat : 'Developer Tools'),
     byCategory[mapped].push(s)  }
 
-  React.useEffect_(() => {const next = services.filter(_(s) => {
+  React.useEffect_() => {const next = services.filter(_(s) => {
       // Category,
-if (filters.categories.length > 0 && !s.categories.some((c) => filters.categories.includes(c))) return false,
+if (filters.categories.length > 0 && !s.categories.some(c) => filters.categories.includes(c)) return false,
       // Price,
 const min = s.priceFromUSD ?? s.priceRangeUSD?.[0],
       const max = s.priceRangeUSD?.[1] ?? s.priceFromUSD,
-      if (filters.priceMin !== undefined && (min === undefined || max === undefined ? true : max < filters.priceMin)) return false,
-      if (filters.priceMax !== undefined && (min === undefined ? true : min > filters.priceMax)) return false,
+      if (filters.priceMin != undefined && (min = = undefined || max = = undefined ? true : max < filters.priceMin) return false,
+      if (filters.priceMax != undefined && (min = = undefined ? true : min > filters.priceMax) return false,
       // Rating,
-if (filters.ratingMin !== undefined && (s.rating ?? 0) < filters.ratingMin) return false,
+if (filters.ratingMin != undefined && (s.rating ?? 0) < filters.ratingMin) return false,
       // Delivery time (not available in data, simulate pass-through)
       return true
     }),
     setFiltered(next)
   }, [filters, services]),
 
-  const availableCategories = React.useMemo(() => {
+  const availableCategories = React.useMemo() => {
     const set = new Set<string>(),
-    services.forEach((s) => s.categories.forEach((c) => set.add(c))),
+    services.forEach(s) => s.categories.forEach(c) => set.add(c)),
     return Array.from(set)
   }, [services]),
 
@@ -93,9 +93,8 @@ if (filters.ratingMin !== undefined && (s.rating ?? 0) < filters.ratingMin) retu
         budgetRange: values.budgetRange,
         email: values.email})}),
     if (!res.ok) {
-      const err = await res.json().catch(() => ({})),
-      throw new Error(err?.message || 'Failed to submit')    }
-  },
+      const err = await res.json().catch() => ({}),
+      throw new Error(err?.message || 'Failed to submit')    },
 
   return (
     <UltraFuturisticBackground variant=&quot;quantum&quot; intensity={1.5}>      <Head>
@@ -112,8 +111,8 @@ if (filters.ratingMin !== undefined && (s.rating ?? 0) < filters.ratingMin) retu
               <div className=&quot;text-sm text-white/70&quot;>{filtered.length} results</div>
             </div>
             <div className=&quot;grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5&quot;>
-              {filtered.map((service) => (
-                <EnhancedMarketplaceCard key={service.slug || service.id} service={service} onRequestQuote={handleRequestQuote} />              ))}
+              {filtered.map(service) => (
+                <EnhancedMarketplaceCard key={service.slug || service.id} service={service} onRequestQuote={handleRequestQuote} />              )}
             </div>
           </div>
         </div>
@@ -127,6 +126,6 @@ open={modalOpen}
       />
     </div>
   )
-},
+,
 
 export default ServicesPage,

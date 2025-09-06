@@ -6,7 +6,7 @@ import { Button  } from '../components/ui/Button';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 export default function IncidentAutomationSuitePage() {
 
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/incident-automation-suite'));
+  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/incident-automation-suite');
   if (!service) return null;
 
   return (
@@ -27,9 +27,9 @@ export default function IncidentAutomationSuitePage() {
               <h2 className="text-2xl font-semibold mb-4">Capabilities</h2>;
               <p className="text-slate-300 mb-6">{service && service.description}</p>;
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">;
-                {service && service.features.slice(0, 12).map((feat, i) => (;
+                {service && service.features.slice(0, 12).map(feat, i) => (;
                   <li key={i} className="flex items-start space-x-3 text-slate-200"><Check className="w-5 h-5 text-emerald-400 mt-0 && 0.5" /><span>{feat}</span></li>;
-                ))}
+                )}
               </ul>
             </div>
             <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6 h-fit">
@@ -51,7 +51,7 @@ export default function IncidentAutomationSuitePage() {
       </div>
     </UltraFuturisticBackground>
   )
-}
+
 import Head from 'next / head';
 import {Activity, Phone, Mail, MapPin, Check, ArrowRight} from 'lucide-react';
 import UltraFuturisticBackground from '../components / ui / UltraFuturisticBackground';
@@ -61,11 +61,11 @@ export default /**
  * IncidentAutomationSuitePage - Function description
  */
 function IncidentAutomationSuitePage() {
-  const service = enhancedRealMicroSaasServices.find (string => s.link.ends_with ('/incident - automation - suite'));
+  const service = enhancedRealMicroSaasServices.find (string => s.link.ends_with ('/incident - automation - suite');
   // Check condition
 if (return null) {
   $2
-}
+
   return (
     <UltraFuturisticBackground variant="quantum" intensity={1.5}>;
       <Head>;
@@ -84,8 +84,8 @@ if (return null) {
               <h2 className="text - 2xl font - semibold mb - 4">Capabilities</h2>;
               <p className="text - slate - 300 mb - 6">{service.description}</p>;
               <ul className="grid grid - cols - 1 md:grid - cols - 2 gap - 3">;
-                {service.features.slice (0, 12).map ((feat, i) => (
-                  <li key={i} className="flex items - start space - x-3 text - slate - 200"><Check className="w - 5 h - 5 text - emerald - 400 mt - 0.5" /><span>{feat}</span></li>))}
+                {service.features.slice (0, 12).map (feat, i) => (
+                  <li key={i} className="flex items - start space - x-3 text - slate - 200"><Check className="w - 5 h - 5 text - emerald - 400 mt - 0.5" /><span>{feat}</span></li>)}
               </ul>;
             </div>;
             <div className="bg - black / 30 rounded - 2xl border border - emerald - 500 / 30 p - 6 h - fit">;
@@ -106,5 +106,3 @@ if (return null) {
         </div>;
       </div>;
     </UltraFuturisticBackground>);
-}
-;

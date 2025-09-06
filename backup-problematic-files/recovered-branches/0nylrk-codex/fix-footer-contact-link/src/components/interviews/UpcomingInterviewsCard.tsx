@@ -8,41 +8,38 @@ import { format, isPast, parseISO } from "date-fns",;
 import { Link } from "react-router-dom",;
 import { Calendar, Clock, Video } from "lucide-react",;
 import { Avatar } from "@/components/ui/avatar",;
-;
+
 export function UpcomingInterviewsCard() {;
   const { fetchInterviews } = useInterviews(),;
   const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),;
   const [isLoading, setIsLoading] = useState(true),;
-;
-  useEffect(() => {;
+
+  useEffect() => {;
     const loadInterviews = async () => {;
       setIsLoading(true),;
       try {;
         const interviews = await fetchInterviews(),;
         const now = new Date(),;
-        ;
         // Filter for confirmed interviews in the future;
         const upcoming = interviews;
           .filter(interview => ;
-            interview.status === 'confirmed' && ;
-            !isPast(parseISO(interview.scheduled_date));
+            interview.status = = 'confirmed' && ;
+            !isPast(parseISO(interview.scheduled_date);
           );
-          .sort((a, b) => ;
+          .sort(a, b) => ;
             parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime();
           );
           .slice(0, 3), // Take only the next 3 interviews;
-        ;
         setUpcomingInterviews(upcoming),;
       } catch (error) {;
         console.error("Error loading upcoming interviews:", error),;
       } finally {;
         setIsLoading(false),;
-      }
-    },;
-;
+      },;
+
     loadInterviews(),;
   }, []),;
-;
+
   if (isLoading) {;
     return (;
       <Card className="bg-zion-blue-dark/40 border-zion-blue-light">;
@@ -62,14 +59,14 @@ export function UpcomingInterviewsCard() {;
                   <div className="h-3 w-1/2 bg-zion-blue-light/30 rounded"></div>;
                 </div>;
               </div>;
-            ))}
+            )}
           </div>;
         </CardContent>;
       </Card>;
     ),;
   }
-;
-  if (upcomingInterviews.length === 0) {;
+
+  if (upcomingInterviews.length = = 0) {;
     return (;
       <Card className="bg-zion-blue-dark/40 border-zion-blue-light">;
         <CardHeader>;
@@ -90,7 +87,7 @@ export function UpcomingInterviewsCard() {;
       </Card>;
     ),;
   }
-;
+
   return (;
     <Card className="bg-zion-blue-dark/40 border-zion-blue-light">;
       <CardHeader>;
@@ -105,13 +102,11 @@ export function UpcomingInterviewsCard() {;
             const interviewDate = parseISO(interview.scheduled_date),;
             const formattedDate = format(interviewDate, 'EEE, MMM d'),;
             const formattedTime = format(interviewDate, 'h:mm a'),;
-            ;
             // Determine if interview is happening soon (within 30 minutes);
             const now = new Date(),;
             const isStartingSoon = ;
               interviewDate.getTime() - now.getTime() < 30 * 60 * 1000 &&;
               interviewDate.getTime() > now.getTime(),;
-            ;
             return (;
               <div key={interview.id} className="flex items-center gap-3">;
                 <Avatar className="h-10 w-10 bg-zion-purple/10">;
@@ -146,7 +141,6 @@ export function UpcomingInterviewsCard() {;
             ),;
           })}
         </div>;
-        ;
         <div className="mt-4 pt-3 border-t border-zion-blue-light/40">;
           <Button asChild size="sm" variant="outline" className="w-full">;
             <Link to="/interviews">;
@@ -159,29 +153,27 @@ export function UpcomingInterviewsCard() {;
   ),; export function UpcomingInterviewsCard () {
   const {
   fetchInterviews 
-}= useInterviews ();
+= useInterviews ();
 const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]> ([]);
 const [isLoading, setIsLoading] = useState (true);
-useEffect ( () => {
+useEffect () => {
   const loadInterviews = async () => {
   setIsLoading (true);
 try {
   const interviews = await fetchInterviews ();
 const now = new Date ();
-}finally {
+finally {
   setIsLoading (false) 
-}
-};
-}, []);
-<CardHeader> <CardTitle className="text-lg flex items-center" > <Video className="h-5 w-5 mr-2 text-zion-purple" /> Upcoming Interviews </CardTitle> </CardHeader> <CardContent> </div> </div>) ) 
-}</div> </CardContent> </Card>) 
-}<CardHeader> <CardTitle className="text-lg flex items-center" > <Video className="h-5 w-5 mr-2 text-zion-purple" /> Upcoming Interviews </CardTitle> </CardHeader> <CardContent> <div className="text-center py-6" > <Calendar className="h-10 w-10 mx-auto mb-2 text-muted-foreground" /> <p className="text-sm text-muted-foreground" >No upcoming interviews scheduled</p> <Button asChild className="mt-4" variant="outline" size="sm" > <Link to="/interviews" >Schedule Interview</Link> </Button> </div> </CardContent> </Card> return (<Card className="bg-zion-blue-dark/40 border-zion-blue-light" > <CardHeader> <CardTitle className="text-lg flex items-center" > <Video className="h-5 w-5 mr-2 text-zion-purple" /> Upcoming Interviews </CardTitle> </CardHeader> <CardContent> interviewDate.getTime () - now.getTime () < 30 * 60 * 1000 && interviewDate.getTime () > now.getTime ();
+
+;
+, []);
+<CardHeader> <CardTitle className="text-lg flex items-center" > <Video className="h-5 w-5 mr-2 text-zion-purple" /> Upcoming Interviews </CardTitle> </CardHeader> <CardContent></div> </div>) 
+</div> </CardContent> </Card>) 
+<CardHeader> <CardTitle className="text-lg flex items-center" > <Video className="h-5 w-5 mr-2 text-zion-purple" /> Upcoming Interviews </CardTitle> </CardHeader> <CardContent> <div className="text-center py-6" > <Calendar className="h-10 w-10 mx-auto mb-2 text-muted-foreground" /> <p className="text-sm text-muted-foreground" >No upcoming interviews scheduled</p> <Button asChild className="mt-4" variant="outline" size="sm" > <Link to="/interviews" >Schedule Interview</Link> </Button> </div> </CardContent> </Card> return (<Card className="bg-zion-blue-dark/40 border-zion-blue-light" > <CardHeader> <CardTitle className="text-lg flex items-center" > <Video className="h-5 w-5 mr-2 text-zion-purple" /> Upcoming Interviews </CardTitle> </CardHeader> <CardContent> interviewDate.getTime () - now.getTime () < 30 * 60 * 1000 && interviewDate.getTime () > now.getTime ();
 return (<img src= {
   interview.client avatar || interview.talent avatar 
-}alt= {
+alt= {
   interview.client name || interview.talent name 
-}/>) : (Soon </span>) 
-}</div> </div> </div> </div>) 
-}) 
-}</div> <div className="mt-4 pt-3 border-t border-zion-blue-light/40" > <Button asChild size="sm" variant="outline" className="w-full" > <Link to="/interviews" > View All Interviews </Link> </Button> </div> </CardContent> </Card>) 
-}
+/>) : (Soon </span>) 
+</div> </div> </div> </div>) 
+</div> <div className="mt-4 pt-3 border-t border-zion-blue-light/40" > <Button asChild size="sm" variant="outline" className="w-full" > <Link to="/interviews" > View All Interviews </Link> </Button> </div> </CardContent> </Card>) 

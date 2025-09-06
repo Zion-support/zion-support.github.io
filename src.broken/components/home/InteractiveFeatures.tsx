@@ -6,5 +6,3 @@ export function InteractiveFeatures() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

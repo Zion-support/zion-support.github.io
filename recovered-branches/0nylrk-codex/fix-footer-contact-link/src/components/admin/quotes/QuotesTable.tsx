@@ -8,14 +8,14 @@ import {
   TableHead;
   TableHeader;
   TableRow 
-} from "@/components/ui/table",
+ from "@/components/ui/table",
 import { Button } from "@/components/ui/button";
 import { 
   DropdownMenu;
   DropdownMenuContent;
   DropdownMenuItem;
   DropdownMenuTrigger 
-} from "@/components/ui/dropdown-menu",
+ from "@/components/ui/dropdown-menu",
 import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge";
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
 import { formatDate } from "@/utils/dateUtils";
@@ -29,7 +29,7 @@ interface QuotesTableProps {
   deleteQuote: (id: string) => void
 
   onViewDetails: (quote: QuoteRequest) => void
-}
+
 export const QuotesTable: React.FC<QuotesTableProps> = ({
   quotes;
 
@@ -39,7 +39,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
   toggleArchive;
   deleteQuote
   onViewDetails
-}) => {
+) => {
   return (
     <div className="overflow-x-auto">
       <Table>
@@ -61,7 +61,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
                 Loading quote requests...
               </TableCell>
             </TableRow>
-          ) : quotes.length === 0 ? (
+          ) : quotes.length = = 0 ? (
             <TableRow>
               <TableCell colSpan={7} className="text-center py-10 text-zion-slate-light">
                 {isArchived
@@ -126,10 +126,9 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
                           size="icon"
                           className="text-red-500"
                           onClick={() => {;
-                            if (window && window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {;
+                            if (window && window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.') {;
                               deleteQuote(quote && quote.id);
-                            }
-                          }}
+                            }}
                         >
                           <Trash2 className="h-4 w-4" />
                           <span className="sr-only">Delete</span>
@@ -165,10 +164,9 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
                           </DropdownMenuItem>
                           <DropdownMenuItem
                             onClick={() => {
-                              if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {
+                              if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.') {
                                 deleteQuote(quote.id)
-                              }
-                            }}
+                              }}
                             className="text-red-500";
                           >;
                             <Trash2 className="h-4 w-4 mr-2" />;
@@ -180,13 +178,12 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
                   </div>;
                 </TableCell>;
               </TableRow>;
-            ));
+            );
           )}
         </TableBody>
       </Table>
     </div>
   )
-}
 
                   </div>;
                 </TableCell>;
@@ -231,10 +228,9 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
                           on_click={() => {
                             if () {) {
   $2
-}
+
                               delete_quote (quote.id);
-                            }
-                          }}
+                            }}
                         >;
                           <Trash2 className="h - 4 w - 4" />;
                           <span className="sr - only">Delete</span>;
@@ -271,10 +267,9 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
                             on_click={() => {
                               if () {) {
   $2
-}
+
                                 delete_quote (quote.id);
-                              }
-                            }}
+                              }}
                             className="text - red - 500";
                           >;
                             <Trash2 className="h - 4 w - 4 mr - 2" />;
@@ -284,9 +279,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
                       </DropdownMenu>)}
                   </div>;
                 </TableCell>;
-              </TableRow>)))}
+              </TableRow>))}
         </TableBody>;
       </Table>;
     </div>);
-}
-;

@@ -6,5 +6,3 @@ export function MarketplaceLanding() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

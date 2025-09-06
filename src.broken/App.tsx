@@ -19,25 +19,25 @@ import {
   CommunityRoutes,
   DeveloperRoutes,
   SellerRoutes
-} from './routes',
-const Home = React.lazy(() => import('./pages/Home')),
-const AIMatcherPage = React.lazy(() => import('./pages/AIMatcher')),
-const TalentDirectory = React.lazy(() => import('./pages/TalentDirectory')),
-const TalentsPage = React.lazy(() => import('./pages/TalentsPage')),
-const ServicesPage = React.lazy(() => import('./pages/ServicesPage')),
-const EquipmentPage = React.lazy(() => import('./pages/EquipmentPage')),
-const Analytics = React.lazy(() => import('./pages/Analytics')),
-const MobileLaunchPage = React.lazy(() => import('./pages/MobileLaunchPage')),
-const CommunityPage = React.lazy(() => import('./pages/CommunityPage')),
-const Categories = React.lazy(() => import('./pages/Categories')),
-const Login = React.lazy(() => import('./pages/Login')),
-const Signup = React.lazy(() => import('./pages/Signup')),
-const ITOnsiteServicesPage = React.lazy(() => import('./pages/ITOnsiteServicesPage')),
-const OpenAppRedirect = React.lazy(() => import('./pages/OpenAppRedirect')),
-const ContactPage = React.lazy(() => import('./pages/Contact')),
-const AIServicesPage = React.lazy(() => import('./pages/AIServicesPage')),
-const ITServicesPage = React.lazy(() => import('./pages/ITServicesPage')),
-const MicroSAASServicesPage = React.lazy(() => import('./pages/MicroSAASServicesPage')),
+ from './routes',
+const Home = React.lazy() => import('./pages/Home'),
+const AIMatcherPage = React.lazy() => import('./pages/AIMatcher'),
+const TalentDirectory = React.lazy() => import('./pages/TalentDirectory'),
+const TalentsPage = React.lazy() => import('./pages/TalentsPage'),
+const ServicesPage = React.lazy() => import('./pages/ServicesPage'),
+const EquipmentPage = React.lazy() => import('./pages/EquipmentPage'),
+const Analytics = React.lazy() => import('./pages/Analytics'),
+const MobileLaunchPage = React.lazy() => import('./pages/MobileLaunchPage'),
+const CommunityPage = React.lazy() => import('./pages/CommunityPage'),
+const Categories = React.lazy() => import('./pages/Categories'),
+const Login = React.lazy() => import('./pages/Login'),
+const Signup = React.lazy() => import('./pages/Signup'),
+const ITOnsiteServicesPage = React.lazy() => import('./pages/ITOnsiteServicesPage'),
+const OpenAppRedirect = React.lazy() => import('./pages/OpenAppRedirect'),
+const ContactPage = React.lazy() => import('./pages/Contact'),
+const AIServicesPage = React.lazy() => import('./pages/AIServicesPage'),
+const ITServicesPage = React.lazy() => import('./pages/ITServicesPage'),
+const MicroSAASServicesPage = React.lazy() => import('./pages/MicroSAASServicesPage'),
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
@@ -65,9 +65,9 @@ const App = () => {
       <ThemeProvider>
         <Suspense fallback={<div className="p-4 text-center">Loading...</div>}>
           <Routes>
-            {baseRoutes.map(({ path, element }) => (
+            {baseRoutes.map({ path, element }) => (
               <Route key={path} path={path} element={element} />
-            ))}
+            )}
             <Route path="/auth/*" element={<AuthRoutes />} />
             <Route path="/dashboard/*" element={<DashboardRoutes />} />
             <Route path="/marketplace/*" element={<MarketplaceRoutes />} />
@@ -88,7 +88,7 @@ const App = () => {
       </ThemeProvider>
     </WhitelabelProvider>
   )
-},
+,
 
 export default App,
 import React, { Suspense } from 'react',;
@@ -112,25 +112,25 @@ import {;
   CommunityRoutes,;
   DeveloperRoutes,;
   SellerRoutes;
-} from './routes',;
-const Home = React.lazy(() => import('./pages/Home')),;
-const AIMatcherPage = React.lazy(() => import('./pages/AIMatcher')),;
-const TalentDirectory = React.lazy(() => import('./pages/TalentDirectory')),;
-const TalentsPage = React.lazy(() => import('./pages/TalentsPage')),;
-const ServicesPage = React.lazy(() => import('./pages/ServicesPage')),;
-const EquipmentPage = React.lazy(() => import('./pages/EquipmentPage')),;
-const Analytics = React.lazy(() => import('./pages/Analytics')),;
-const MobileLaunchPage = React.lazy(() => import('./pages/MobileLaunchPage')),;
-const CommunityPage = React.lazy(() => import('./pages/CommunityPage')),;
-const Categories = React.lazy(() => import('./pages/Categories')),;
-const Login = React.lazy(() => import('./pages/Login')),;
-const Signup = React.lazy(() => import('./pages/Signup')),;
-const ITOnsiteServicesPage = React.lazy(() => import('./pages/ITOnsiteServicesPage')),;
-const OpenAppRedirect = React.lazy(() => import('./pages/OpenAppRedirect')),;
-const ContactPage = React.lazy(() => import('./pages/Contact')),;
-const AIServicesPage = React.lazy(() => import('./pages/AIServicesPage')),;
-const ITServicesPage = React.lazy(() => import('./pages/ITServicesPage')),;
-const MicroSAASServicesPage = React.lazy(() => import('./pages/MicroSAASServicesPage')),;
+ from './routes',;
+const Home = React.lazy() => import('./pages/Home'),;
+const AIMatcherPage = React.lazy() => import('./pages/AIMatcher'),;
+const TalentDirectory = React.lazy() => import('./pages/TalentDirectory'),;
+const TalentsPage = React.lazy() => import('./pages/TalentsPage'),;
+const ServicesPage = React.lazy() => import('./pages/ServicesPage'),;
+const EquipmentPage = React.lazy() => import('./pages/EquipmentPage'),;
+const Analytics = React.lazy() => import('./pages/Analytics'),;
+const MobileLaunchPage = React.lazy() => import('./pages/MobileLaunchPage'),;
+const CommunityPage = React.lazy() => import('./pages/CommunityPage'),;
+const Categories = React.lazy() => import('./pages/Categories'),;
+const Login = React.lazy() => import('./pages/Login'),;
+const Signup = React.lazy() => import('./pages/Signup'),;
+const ITOnsiteServicesPage = React.lazy() => import('./pages/ITOnsiteServicesPage'),;
+const OpenAppRedirect = React.lazy() => import('./pages/OpenAppRedirect'),;
+const ContactPage = React.lazy() => import('./pages/Contact'),;
+const AIServicesPage = React.lazy() => import('./pages/AIServicesPage'),;
+const ITServicesPage = React.lazy() => import('./pages/ITServicesPage'),;
+const MicroSAASServicesPage = React.lazy() => import('./pages/MicroSAASServicesPage'),;
 const baseRoutes = [;
   { path: '/', element: <Home /> },;
   { path: '/match', element: <AIMatcherPage /> },;
@@ -156,9 +156,9 @@ const App = () => {;
       <ThemeProvider>;
         <Suspense fallback={<div className="p-4 text-center">Loading...</div>}>;
           <Routes>;
-            {baseRoutes.map(({ path, element }) => (;
+            {baseRoutes.map({ path, element }) => (;
               <Route key={path} path={path} element={element} />;
-            ))}
+            )}
             <Route path="/auth/*" element={<AuthRoutes />} />;
             <Route path="/dashboard/*" element={<DashboardRoutes />} />;
             <Route path="/marketplace/*" element={<MarketplaceRoutes />} />;
@@ -179,5 +179,5 @@ const App = () => {;
       </ThemeProvider>;
     </WhitelabelProvider>;
   );
-},;
+,;
 export default App;

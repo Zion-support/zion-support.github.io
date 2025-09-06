@@ -5,24 +5,24 @@ import { z } from "zod",
 import { useNavigate } from "react-router-dom",
 import { 
   Form, FormControl, FormField, FormItem, FormLabel, FormMessage 
-} from "@/components/ui/form",
+ from "@/components/ui/form",
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
 import { Button } from "@/components/ui/button",
 import { 
   Select, SelectContent, SelectItem, SelectTrigger, SelectValue 
-} from "@/components/ui/select",
+ from "@/components/ui/select",
 import { AspectRatio } from "@/components/ui/aspect-ratio",
 import { Separator } from "@/components/ui/separator";
 import { toast } from "@/components/ui/use-toast";
 import { 
   User, Briefcase, Star, Calendar, Globe, DollarSign, FileText, Link, Upload, ArrowRight, ArrowLeft;
   Trash2, Plus, CheckCircle2
-} from "lucide-react",
+ from "lucide-react",
 import { useAuth } from "@/hooks/useAuth",
 import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer";
 import { supabase } from "@/integrations/supabase/client";
-// Define the form schema with validation
+/ Define the form schema with validation
 
 const talentSchema = z.object({
   // Step 1: Basic Info
@@ -36,8 +36,7 @@ const talentSchema = z.object({
     keyProjects: z.array(
       z.object({
         title: z.string().min(2, "Project title is required");
-        description: z.string().min(10, "Project description is required")})
-    ).min(1, "Add at least one key project");
+        description: z.string().min(10, "Project description is required")}).min(1, "Add at least one key project");
     yearsOfExperience: z.string().min(1, "Years of experience is required")});
   // Step 3: Skills & Tech Stack
   skills: z.object({
@@ -50,8 +49,7 @@ const talentSchema = z.object({
     hourlyRate: z.string().optional()
     portfolioLinks: z.array(
       z.object({
-        url: z.string().url("Must be a valid URL").min(5, "URL is required")})
-    ).optional().default([]);
+        url: z.string().url("Must be a valid URL").min(5, "URL is required")}).optional().default([]);
     cv: z.any().optional()})})
 type TalentFormValues = z.infer<typeof talentSchema>;
 export function TalentOnboardingForm() {
@@ -83,7 +81,7 @@ export function TalentOnboardingForm() {
         timezone: ""
         hourlyRate: ""
         portfolioLinks: [{ url: "" }]
-        cv: undefined}}
+        cv: undefined}
     mode: "onChange"})
   const { fields: projectFields, append: appendProject, remove: removeProject } =
     useFieldArray({
@@ -117,7 +115,7 @@ export function TalentOnboardingForm() {
       throw new Error("Failed to upload CV")
     }
     // Get the public URL
-    const { data: { publicUrl } } = supabase.storage
+    const { data: { publicUrl } = supabase.storage
       .from('resumes')
       .getPublicUrl(fileName);
     return publicUrl
@@ -143,7 +141,7 @@ import { User, Briefcase, Star, Calendar, Globe, DollarSign, FileText, Link, Upl
 import { use_auth } from '@/hooks / use_auth';
 import { useTalentProfileEnhancer } from '@/hooks / useTalentProfileEnhancer';
 import { supabase } from '@/integrations / supabase / client';
-// Define the form schema with validation;
+/ Define the form schema with validation;
 const talent_schema = z.object ({
   // Step 1: Basic Info;
   basic_info: z.object ({
@@ -156,9 +154,9 @@ const talent_schema = z.object ({
     key_projects: z.array (
       z.object ({
         title: z.string ().min (2, "Project title is required");
-        description: z.string ().min (10, "Project description is required")})).min (1, "Add at least one key project");
+        description: z.string ().min (10, "Project description is required")}).min (1, "Add at least one key project");
     yearsOfExperience: z.string ().min (1, "Years of experience is required")});
-;
+
   // Step 3: Skills & Tech Stack;
   skills: z.object ({
     skills_list: z.string ().min (2, "Add at least one skill");
@@ -170,10 +168,10 @@ const talent_schema = z.object ({
     hourly_rate: z.string ().optional (),
     portfolio_links: z.array (
       z.object ({
-        url: z.string ().url ("Must be a valid URL").min (5, "URL is required")})).optional ().default ([]);
+        url: z.string ().url ("Must be a valid URL").min (5, "URL is required")}).optional ().default ([]);
     cv: z.any ().optional ()})}),
 type TalentFormValues = z.infer < typeof talent_schema>;
-;
+
 export /**
  * TalentOnboardingForm - Function description
  */
@@ -185,11 +183,11 @@ function TalentOnboardingForm() {
   const [cvFileName, setCvFileName] = useState < string | null>(null);
   const [is_submitting, setIsSubmitting] = useState (false);
   const [showSuccessScreen, setShowSuccessScreen] = useState (false);
-;
+
   const { enhance_profile, is_generating } = useTalentProfileEnhancer ();
-;
+
   const total_steps = 4;
-;
+
   const form = use_form < TalentFormValues>({
     resolver: zod_resolver (talent_schema),
     default_values: {
@@ -209,7 +207,7 @@ function TalentOnboardingForm() {
         timezone: "",
         hourly_rate: "",
         portfolio_links: [{ url: "" }],
-        cv: undefined}},
+        cv: undefined},
     mode: "on_change"}),
   const { fields: project_fields, append: append_project, remove: remove_project } =;
     useFieldArray ({
@@ -225,41 +223,40 @@ function TalentOnboardingForm() {
     // Check condition
 if (return) {
   $2
-}
+
     // Preview the image;
     const reader = new FileReader (),
     reader.onloadend = () => {
       setProfilePictureUrl (reader.result as string);
     }
     reader.readAsDataURL (file);
-;
+
     // Store the file in the form data;
     form.set_value ("basic_info.profile_picture", file);
   }
-;
+
   // Handle CV upload;
   const handleCvUpload = async (file: File) => {
     const file_name = `cv-${user?.id}-${Date.now ()}`;
     const { error: cv_error } = await supabase.storage;
       .from ('resumes');
       .upload (file_name, file);
-;
+
     // Check condition
 if ( {) {
   $2
-}
+
       console.error ("Error uploading CV:", cv_error);
       throw new Error ("Failed to upload CV");
     }
     // Get the public URL;
-    const { data: { public_url } } = supabase.storage;
+    const { data: { public_url } = supabase.storage;
       .from ('resumes');
       .getPublicUrl (file_name);
-;
+
     return public_url;
   }
-;
+
   // Rest of the file remains unchanged...;
   // [Previous implementation continues...];
   return null;
-}

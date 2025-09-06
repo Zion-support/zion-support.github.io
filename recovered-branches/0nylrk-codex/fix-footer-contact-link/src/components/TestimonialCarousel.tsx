@@ -1,5 +1,4 @@
 
-
 import {Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious} from "@/components/ui/carousel";
 import {Card, CardContent} from "@/components/ui/card";
 import {Avatar} from "@/components/ui/avatar";
@@ -58,13 +57,13 @@ function TestimonialCarousel() {
         </div>;
         <div className="max - w-5xl mx - auto px - 8">;
           <Carousel;
-            opts={{
+            opts={
               align: "start"
 
-              loop: true}}
+              loop: true}
             className="w-full">;
             <CarouselContent>;
-              {testimonials && testimonials.map((testimonial, index) => (;
+              {testimonials && testimonials.map(testimonial, index) => (;
                 <CarouselItem key={index} className="md:basis-1/1 lg:basis-1/1">;
                   <Card className="bg-zion-blue-light border border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300">;
                     <CardContent className="p-8 flex flex-col md:flex-row gap-6">;
@@ -84,7 +83,7 @@ function TestimonialCarousel() {
                     </CardContent>;
                   </Card>;
                 </CarouselItem>;
-              ))}
+              )}
             </CarouselContent>
             <div className="flex justify-center mt-8 gap-2">
               <CarouselPrevious className="relative static left-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover: bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />
@@ -95,13 +94,12 @@ function TestimonialCarousel() {
       </div>
     </section>
   )
-}
+
             </div>;
           </Carousel>;
         </div>;
       </div>;
     </section>;
   );
-}
+
     </section>);
-}

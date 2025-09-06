@@ -5,14 +5,14 @@ import { ;
   Brain, Shield, Rocket, Cpu, Database, Atom, Users, ;
   Award, ExternalLink, Github, Globe, Zap, Star, CheckCircle,;
   TrendingUp, BarChart3, Cloud, Network, Filter, Search, Building;
-} from 'lucide-react',;
+ from 'lucide-react',;
 import EnhancedNavigation from '../components/EnhancedNavigation',;
 import EnhancedFooter from '../components/EnhancedFooter',;
-;
+
 export default function PortfolioPage() {;
   const [selectedCategory, setSelectedCategory] = useState('all'),;
   const [searchTerm, setSearchTerm] = useState(''),;
-;
+
   const categories = [;
     { id:'all', name:'All Projects', icon:Globe },;
     { id:'ai', name:'AI & Machine Learning', icon:Brain },;
@@ -22,7 +22,7 @@ export default function PortfolioPage() {;
     { id:'edge', name:'Edge Computing', icon:Cpu },;
     { id:'enterprise', name:'Enterprise Solutions', icon:Building }
   ],;
-;
+
   const projects = [;
     {;
       id:1,;
@@ -103,22 +103,22 @@ export default function PortfolioPage() {;
       featured:false;
     }
   ],;
-;
+
   const filteredProjects = projects.filter(project => {;
-    const matchesCategory = selectedCategory === 'all' || project.category === selectedCategory,;
-    const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         project.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         project.client.toLowerCase().includes(searchTerm.toLowerCase()),;
+    const matchesCategory = selectedCategory = = 'all' || project.category = = selectedCategory,;
+    const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCase() ||;
+                         project.description.toLowerCase().includes(searchTerm.toLowerCase() ||;
+                         project.client.toLowerCase().includes(searchTerm.toLowerCase(),;
     return matchesCategory && matchesSearch,;
   }),;
-;
+
   const stats = [;
     { number:'100+', label:'Projects Delivered', icon:CheckCircle },;
     { number:'50+', label:'Enterprise Clients', icon:Users },;
     { number:'99.9%', label:'Client Satisfaction', icon:Star },;
     { number:'$500M+', label:'Value Delivered', icon:TrendingUp }
   ],;
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">;
       <Head>;
@@ -129,16 +129,16 @@ export default function PortfolioPage() {;
         <meta property="og:description" content="Explore our innovative projects and success stories across cutting-edge technologies." />;
         <link rel="canonical" href="https://ziontechgroup.com/portfolio" />;
       </Head>;
-;
+
       <EnhancedNavigation />;
-;
+
       {/* Hero Section */}
       <section className="relative pt-32 pb-16 px-6">;
         <div className="max-w-6xl mx-auto text-center">;
           <motion.div;
-            initial={{ opacity:0, y:30 }}
-            animate={{ opacity:1, y:0 }}
-            transition={{ duration:0.8 }}
+            initial={ opacity:0, y:30 }
+            animate={ opacity:1, y:0 }
+            transition={ duration:0.8 }
           >;
             <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">;
               Our Portfolio;
@@ -150,17 +150,17 @@ export default function PortfolioPage() {;
           </motion.div>;
         </div>;
       </section>;
-;
+
       {/* Stats Section */}
       <section className="py-16 px-6">;
         <div className="max-w-6xl mx-auto">;
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">;
-            {stats.map((stat, index) => (;
+            {stats.map(stat, index) => (;
               <motion.div;
                 key={stat.label}
-                initial={{ opacity:0, y:20 }}
-                animate={{ opacity:1, y:0 }}
-                transition={{ duration:0.6, delay:index * 0.1 }}
+                initial={ opacity:0, y:20 }
+                animate={ opacity:1, y:0 }
+                transition={ duration:0.6, delay:index * 0.1 }
                 className="text-center";
               >;
                 <div className="flex justify-center mb-3">;
@@ -171,23 +171,23 @@ export default function PortfolioPage() {;
                 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>;
                 <div className="text-white/70">{stat.label}</div>;
               </motion.div>;
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Filters and Search */}
       <section className="py-8 px-6">;
         <div className="max-w-6xl mx-auto">;
           <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">;
             {/* Category Filters */}
             <div className="flex flex-wrap gap-3">;
-              {categories.map((category) => (;
+              {categories.map(category) => (;
                 <button;
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
                   className={`flex items-center space-x-2 px-4 py-2 rounded-full border transition-all duration-300 ${;
-                    selectedCategory === category.id;
+                    selectedCategory = = category.id;
                       ? 'bg-blue-600 border-blue-500 text-white';
                       :'border-white/20 text-white/70 hover:border-white/40 hover:text-white';
                   }`}
@@ -195,9 +195,9 @@ export default function PortfolioPage() {;
                   <category.icon className="w-4 h-4" />;
                   <span>{category.name}</span>;
                 </button>;
-              ))}
+              )}
             </div>;
-;
+
             {/* Search */}
             <div className="relative">;
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-white/50" />;
@@ -212,25 +212,25 @@ export default function PortfolioPage() {;
           </div>;
         </div>;
       </section>;
-;
+
       {/* Projects Grid */}
       <section className="py-16 px-6">;
         <div className="max-w-7xl mx-auto">;
           <AnimatePresence mode="wait">;
             <motion.div;
               key={`${selectedCategory}-${searchTerm}`}
-              initial={{ opacity:0, y:20 }}
-              animate={{ opacity:1, y:0 }}
-              exit={{ opacity:0, y:-20 }}
-              transition={{ duration:0.3 }}
+              initial={ opacity:0, y:20 }
+              animate={ opacity:1, y:0 }
+              exit={ opacity:0, y:-20 }
+              transition={ duration:0.3 }
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8";
             >;
-              {filteredProjects.map((project, index) => (;
+              {filteredProjects.map(project, index) => (;
                 <motion.div;
                   key={project.id}
-                  initial={{ opacity:0, y:30 }}
-                  animate={{ opacity:1, y:0 }}
-                  transition={{ duration:0.6, delay:index * 0.1 }}
+                  initial={ opacity:0, y:30 }
+                  animate={ opacity:1, y:0 }
+                  transition={ duration:0.6, delay:index * 0.1 }
                   className={`bg-slate-800/50 backdrop-blur-xl rounded-2xl border border-white/10 overflow-hidden hover:border-white/20 transition-all duration-300 ${;
                     project.featured ? 'ring-2 ring-blue-500/50' :'';
                   }`}
@@ -246,46 +246,46 @@ export default function PortfolioPage() {;
                       </div>;
                     )}
                   </div>;
-;
+
                   {/* Project Content */}
                   <div className="p-6">;
                     <div className="mb-4">;
                       <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>;
                       <p className="text-cyan-400 text-sm font-medium">{project.client}</p>;
                     </div>;
-;
+
                     <p className="text-white/70 text-sm leading-relaxed mb-4">;
                       {project.description}
                     </p>;
-;
+
                     {/* Technologies */}
                     <div className="mb-4">;
                       <h4 className="text-white font-medium mb-2 text-sm">Technologies</h4>;
                       <div className="flex flex-wrap gap-2">;
-                        {project.technologies.map((tech) => (;
+                        {project.technologies.map(tech) => (;
                           <span;
                             key={tech}
                             className="px-2 py-1 bg-white/10 rounded-lg text-xs text-white/80";
                           >;
                             {tech}
                           </span>;
-                        ))}
+                        )}
                       </div>;
                     </div>;
-;
+
                     {/* Results */}
                     <div className="mb-6">;
                       <h4 className="text-white font-medium mb-2 text-sm">Key Results</h4>;
                       <ul className="space-y-1">;
-                        {project.results.map((result, idx) => (;
+                        {project.results.map(result, idx) => (;
                           <li key={idx} className="flex items-center space-x-2 text-sm text-white/70">;
                             <CheckCircle className="w-3 h-3 text-green-400 flex-shrink-0" />;
                             <span>{result}</span>;
                           </li>;
-                        ))}
+                        )}
                       </ul>;
                     </div>;
-;
+
                     {/* Project Links */}
                     <div className="flex space-x-3">;
                       <a;
@@ -304,14 +304,14 @@ export default function PortfolioPage() {;
                     </div>;
                   </div>;
                 </motion.div>;
-              ))}
+              )}
             </motion.div>;
           </AnimatePresence>;
-;
-          {filteredProjects.length === 0 && (;
+
+          {filteredProjects.length = = 0 && (;
             <motion.div;
-              initial={{ opacity:0 }}
-              animate={{ opacity:1 }}
+              initial={ opacity:0 }
+              animate={ opacity:1 }
               className="text-center py-16";
             >;
               <div className="w-16 h-16 rounded-full bg-white/10 mx-auto mb-4 flex items-center justify-center">;
@@ -323,14 +323,14 @@ export default function PortfolioPage() {;
           )}
         </div>;
       </section>;
-;
+
       {/* CTA Section */}
       <section className="py-16 px-6">;
         <div className="max-w-4xl mx-auto text-center">;
           <motion.div;
-            initial={{ opacity:0, y:30 }}
-            animate={{ opacity:1, y:0 }}
-            transition={{ duration:0.8 }}
+            initial={ opacity:0, y:30 }
+            animate={ opacity:1, y:0 }
+            transition={ duration:0.8 }
             className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-xl rounded-3xl border border-blue-500/30 p-12";
           >;
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">;
@@ -357,8 +357,7 @@ export default function PortfolioPage() {;
           </motion.div>;
         </div>;
       </section>;
-;
+
       <EnhancedFooter />;
     </div>;
   );
-}

@@ -6,5 +6,3 @@ export function NationDashboard() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

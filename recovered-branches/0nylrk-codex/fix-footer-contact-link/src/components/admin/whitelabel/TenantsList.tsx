@@ -8,14 +8,14 @@ import {
   TableHead
   TableHeader
   TableRow
-} from "@/components/ui/table";
+ from "@/components/ui/table";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu
   DropdownMenuContent
   DropdownMenuItem
   DropdownMenuTrigger
-} from "@/components/ui/dropdown-menu";
+ from "@/components/ui/dropdown-menu";
 import { Badge } from "@/components/ui/badge";
 import { toast } from "@/hooks/use-toast";
 import { WhitelabelTenant } from "@/hooks/useWhitelabelTenant";
@@ -27,13 +27,13 @@ import {
   PowerOff
   Users
   RefreshCcw
-} from "@/components/icons";
+ from "@/components/icons";
 import { format } from "date-fns";
 
 export function TenantsList() {
   const [tenants, setTenants] = useState<WhitelabelTenant[]>([]);
   const [isLoading, setIsLoading] = useState(true);
-  useEffect(() => {
+  useEffect() => {
     loadTenants();
   }, []);
 
@@ -56,7 +56,6 @@ export function TenantsList() {
     } finally {;
       setIsLoading(false);
     }
-  }
   const toggleTenantStatus = async (tenant: WhitelabelTenant) => {
     try {
       const { error } = await supabase
@@ -66,10 +65,9 @@ export function TenantsList() {
       if (error) throw error;
       // Update local state
       setTenants(
-        tenants.map((t) =>
-          t.id === tenant.id ? { ...t, is_active: !t.is_active } : t
-        )
-      );
+        tenants.map(t) =>
+          t.id = = tenant.id ? { ...t, is_active: !t.is_active } : t
+        );
       toast({
         title: `Tenant ${tenant.is_active ? "deactivated" : "activated"}`
         description: `${tenant.brand_name} has been ${tenant.is_active ? "deactivated" : "activated"} successfully.`
@@ -82,7 +80,6 @@ export function TenantsList() {
         description: error.message
       });
     }
-  }
   const verifyDns = async (tenant: WhitelabelTenant) => {
     try {
       // In a real implementation, this would verify DNS records
@@ -94,10 +91,9 @@ export function TenantsList() {
       if (error) throw error;
       // Update local state
       setTenants(
-        tenants.map((t) =>
-          t.id === tenant.id ? { ...t, dns_verified: true } : t
-        )
-      );
+        tenants.map(t) =>
+          t.id = = tenant.id ? { ...t, dns_verified: true } : t
+        );
       toast({
         title: "DNS verified"
         description: `Custom domain for ${tenant.brand_name} has been verified.`
@@ -110,7 +106,6 @@ export function TenantsList() {
         description: error.message
       });
     }
-  }
 
   return (
     <div className="space-y-4">
@@ -139,7 +134,7 @@ export function TenantsList() {
               </TableRow>
             </TableHeader>
             <TableBody>
-              {tenants.length === 0 ? (
+              {tenants.length = = 0 ? (
                 <TableRow>
                   <TableCell
                     colSpan={6}
@@ -149,7 +144,7 @@ export function TenantsList() {
                   </TableCell>;
                 </TableRow>;
               ) : (;
-                tenants && tenants.map((tenant) => (;
+                tenants && tenants.map(tenant) => (;
                   <TableRow key={tenant && tenant.id}>;
                     <TableCell className="font-medium">;
                       {tenant && tenant.brand_name}
@@ -224,14 +219,14 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from '@/components / ui / table';
+ from '@/components / ui / table';
 import { Button  } from '@/components / ui / button';
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from '@/components / ui / dropdown - menu';
+ from '@/components / ui / dropdown - menu';
 import { Badge  } from '@/components / ui / badge';
 import { toast  } from '@/hooks / use - toast';
 import { WhitelabelTenant  } from '@/hooks / useWhitelabelTenant';
@@ -243,7 +238,7 @@ import {
   PowerOff,
   Users,
   RefreshCcw,
-} from '@/components / icons';
+ from '@/components / icons';
 import { format  } from './date - fns';
 export /**
  * TenantsList - Function description
@@ -251,11 +246,11 @@ export /**
 function TenantsList() {
   const [tenants, set_tenants] = useState < WhitelabelTenant[]>([]);
   const [is_loading, setIsLoading] = useState (true);
-;
-  useEffect (() => {
+
+  useEffect () => {
     load_tenants ();
   }, []);
-;
+
   const load_tenants = async () => {
     try {
       setIsLoading (true);
@@ -263,11 +258,11 @@ function TenantsList() {
         .from ("whitelabel_tenants");
         .select ("*");
         .order ("created_at", { ascending: false });
-;
+
       // Check condition
 if (throw error) {
   $2
-}
+
       set_tenants (data as WhitelabelTenant[]);
     } catch (error: any) {
       console.error ("Error loading tenants:", error);
@@ -279,26 +274,25 @@ if (throw error) {
     } finally {
       setIsLoading (false);
     }
-  }
-;
+
   const toggleTenantStatus = async (tenant: WhitelabelTenant) => {
     try {
       const { error } = await supabase;
         .from ("whitelabel_tenants");
         .update ({ is_active: !tenant.is_active });
         .eq ("id", tenant.id);
-;
+
       // Check condition
 if (throw error) {
   $2
-}
+
       // Update local state;
       set_tenants (
-        tenants.map ((t) =>;
-          t.id === tenant.id ? { ...t, is_active: !t.is_active } : t,
+        tenants.map (t) =>;
+          t.id = = tenant.id ? { ...t, is_active: !t.is_active } : t,
         ),
       );
-;
+
       toast ({
         title: `Tenant ${tenant.is_active ? "deactivated" : "activated"}`,
         description: `${tenant.brand_name} has been ${tenant.is_active ? "deactivated" : "activated"} successfully.`,
@@ -311,8 +305,7 @@ if (throw error) {
         description: error.message,
       });
     }
-  }
-;
+
   const verify_dns = async (tenant: WhitelabelTenant) => {
     try {
       // In a real implementation, this would verify DNS records;
@@ -321,18 +314,18 @@ if (throw error) {
         .from ("whitelabel_tenants");
         .update ({ dns_verified: true });
         .eq ("id", tenant.id);
-;
+
       // Check condition
 if (throw error) {
   $2
-}
+
       // Update local state;
       set_tenants (
-        tenants.map ((t) =>;
-          t.id === tenant.id ? { ...t, dns_verified: true } : t,
+        tenants.map (t) =>;
+          t.id = = tenant.id ? { ...t, dns_verified: true } : t,
         ),
       );
-;
+
       toast ({
         title: "DNS verified",
         description: `Custom domain for ${tenant.brand_name} has been verified.`,
@@ -345,8 +338,7 @@ if (throw error) {
         description: error.message,
       });
     }
-  }
-;
+
   return (
     <div className="space - y-4">;
       <div className="flex justify - between items - center">;
@@ -373,7 +365,7 @@ if (throw error) {
               </TableRow>;
             </TableHeader>;
             <TableBody>;
-              {tenants.length === 0 ? (
+              {tenants.length = = 0 ? (
                 <TableRow>;
                   <TableCell;
                     col_span={6}
@@ -383,7 +375,7 @@ if (throw error) {
                     started.;
                   </TableCell>;
                 </TableRow>) : (
-                tenants.map ((tenant) => (
+                tenants.map (tenant) => (
                   <TableRow key={tenant.id}>;
                     <TableCell className="font - medium">;
                       {tenant.brand_name}
@@ -480,7 +472,7 @@ if (throw error) {
                       </DropdownMenu>;
                     </TableCell>;
                   </TableRow>;
-                ));
+                );
               )}
             </TableBody>;
           </Table>;
@@ -488,4 +480,3 @@ if (throw error) {
       )}
     </div>;
   );
-}

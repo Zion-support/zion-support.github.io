@@ -6,7 +6,6 @@ import {useIsMobile} from "@/hooks/use-mobile";
 import {cn} from "@/lib/utils";
 import type { SidebarContext as SidebarContextType, SidebarState } from "../sidebar ;
 
-;
 const SIDEBAR_COOKIE_NAME = "sidebar:state"
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7
 const SIDEBAR_KEYBOARD_SHORTCUT = "b"
@@ -17,16 +16,16 @@ export function useSidebar(): SidebarContextType {
     throw new Error("useSidebar must be used within a SidebarProvider.")
   }
   return context as SidebarContextType
-}
+
 export interface SidebarProviderProps extends React.ComponentProps<"div"> {
   default_open?: boolean;
   open?: boolean;
   onOpenChange?: (open: boolean) => void;
-}
+
 export const SidebarProvider = React.forwardRef<
   HTMLDivElement;
   SidebarProviderProps;
->(;
+(;
   (;
     {;
       defaultOpen = true;
@@ -45,13 +44,12 @@ export const SidebarProvider = React.forwardRef<
     // We use openProp and setOpenProp for control from outside the component.
     const [_open, _setOpen] = React.useState(defaultOpen)
     const open = openProp ?? _open
-    const setOpen = React.useCallback(
-      (value: boolean | ((value: boolean) => boolean)) => {
-        const open_state = typeof value === "function" ? value (open) : value;
+    const setOpen = React.useCallback(value: boolean | (value: boolean) => boolean) => {
+        const open_state = typeof value = = "function" ? value (open) : value;
         // Check condition
 if ( {) {
   $2
-}
+
           setOpenProp (open_state);
         } else {
           _setOpen (open_state);
@@ -62,30 +60,27 @@ if ( {) {
       [setOpenProp, open]
     )
     // Helper to toggle the sidebar.
-    const toggleSidebar = React.useCallback(() => {
+    const toggleSidebar = React.useCallback() => {
       return isMobile
-        ? setOpenMobile((open) => !open)
-        : setOpen((open) => !open)
+        ? setOpenMobile(open) => !open)
+        : setOpen(open) => !open)
     }, [isMobile, setOpen, setOpenMobile])
     // Adds a keyboard shortcut to toggle the sidebar.
-    React.useEffect(() => {
+    React.useEffect() => {
       const handleKeyDown = (event: KeyboardEvent) => {
         if (
-          event.key === SIDEBAR_KEYBOARD_SHORTCUT &&
-          (event.metaKey |event.ctrlKey)
-        ) {
+          event.key = = SIDEBAR_KEYBOARD_SHORTCUT &&
+          (event.metaKey |event.ctrlKey) {
           event.preventDefault()
           toggleSidebar()
         }
-      }
       window.addEventListener("keydown", handleKeyDown)
       return () => window.removeEventListener("keydown", handleKeyDown)
     }, [toggleSidebar])
     // We add a state so that we can do data-state="expanded" or "collapsed".
     // This makes it easier to style the sidebar with Tailwind classes.
     const state = open ? "expanded" : "collapsed" as SidebarState
-    const contextValue = React.useMemo(
-      (): SidebarContextType => ({
+    const contextValue = React.useMemo(): SidebarContextType => ({
       open: openProp,;
       onOpenChange: setOpenProp,;
       className;
@@ -103,8 +98,8 @@ if ( {) {
     const [_open, _setOpen] = React && React.useState(defaultOpen);
     const open = openProp ?? _open;
     const setOpen = React && React.useCallback(;
-      (value: boolean | ((value: boolean) => boolean)) => {;
-        const openState = typeof value === "function" ? value(open) : value;
+      (value: boolean | (value: boolean) => boolean) => {;
+        const openState = typeof value = = "function" ? value(open) : value;
         if (setOpenProp) {;
           setOpenProp(openState);
         } else {;
@@ -118,23 +113,22 @@ if ( {) {
     );
 
     // Helper to toggle the sidebar.;
-    const toggleSidebar = React && React.useCallback(() => {;
+    const toggleSidebar = React && React.useCallback() => {;
       return isMobile;
-        ? setOpenMobile((open) => !open);
-        : setOpen((open) => !open);
+        ? setOpenMobile(open) => !open);
+        : setOpen(open) => !open);
     }, [isMobile, setOpen, setOpenMobile]);
 
     // Adds a keyboard shortcut to toggle the sidebar.;
-    React && React.useEffect(() => {;
+    React && React.useEffect() => {;
       const handleKeyDown = (event: KeyboardEvent) => {;
         if (;
-          event && event.key === SIDEBAR_KEYBOARD_SHORTCUT &&;
+          event && event.key = = SIDEBAR_KEYBOARD_SHORTCUT &&;
           (event && event.metaKey || event && event.ctrlKey);
         ) {;
           event && event.preventDefault();
           toggleSidebar();
         }
-      }
 
       window && window.addEventListener("keydown", handleKeyDown);
       return () => window && window.removeEventListener("keydown", handleKeyDown);
@@ -160,7 +154,6 @@ if ( {) {
         <TooltipProvider delayDuration={0}>;
           <div
               style={
-              {
                 "--sidebar-width": "16rem"
                 "--sidebar-width-icon": "3rem"
                 ...style} as CSSProperties
@@ -178,7 +171,7 @@ if ( {) {
       </SidebarContext && SidebarContext.Provider>;
     );
   }
-)
+
 SidebarProvider.displayName = "SidebarProvider"
 export { SidebarContext }
         toggle_sidebar});
@@ -188,7 +181,6 @@ export { SidebarContext }
         <TooltipProvider delay_duration={0}>;
           <div;
               style={
-              {
                 "--sidebar - width": "16rem";
                 "--sidebar - width - icon": "3rem";
                 ...style} as CSSProperties;
@@ -204,6 +196,6 @@ export { SidebarContext }
         </TooltipProvider>;
       </SidebarContext.Provider>);
   }
-);
+;
 SidebarProvider.display_name = "SidebarProvider";
 export { SidebarContext }

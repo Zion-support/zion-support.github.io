@@ -14,7 +14,7 @@ import {
   Video,
   MessageSquare,
   Building
-} from 'lucide-react';
+ from 'lucide-react';
 
 const timeSlots = [
   { time: "9:00 AM", available: true, type: "Video Call" },
@@ -32,7 +32,7 @@ const timeSlots = [
   { time: "4:00 PM", available: false, type: "Phone Call" },
   { time: "4:30 PM", available: true, type: "Video Call" },
   { time: "5:00 PM", available: true, type: "Phone Call" }
-];
+;
 
 const consultationTypes = [
   {
@@ -59,7 +59,7 @@ const consultationTypes = [
     icon: Users,
     features: ["Business analysis", "Digital strategy planning", "ROI projections", "Implementation roadmap"]
   }
-];
+;
 
 const teamMembers = [
   {
@@ -90,7 +90,7 @@ const teamMembers = [
     image: "/images/team/david-kim.jpg",
     available: true
   }
-];
+;
 
 export default function CalendarPage() {
   return (
@@ -105,9 +105,9 @@ export default function CalendarPage() {
       <section className="relative py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, y: 20 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
             className="text-center"
           >
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
@@ -138,9 +138,9 @@ export default function CalendarPage() {
       <section className="py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, y: 20 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Choose Your Consultation Type</h2>
@@ -149,14 +149,14 @@ export default function CalendarPage() {
             </p>
           </motion.div>
           <div className="grid md:grid-cols-3 gap-8">
-            {consultationTypes.map((type, index) => (
+            {consultationTypes.map(type, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.8, delay: index * 0.1 }
                 className={`rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow ${
-                  index === 0 ? 'bg-gradient-to-br from-blue-600 to-purple-600 text-white' : 'bg-white'
+                  index = = 0 ? 'bg-gradient-to-br from-blue-600 to-purple-600 text-white' : 'bg-white'
                 }`}
               >
                 <div className="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center mb-4">
@@ -169,18 +169,18 @@ export default function CalendarPage() {
                   <span className="text-2xl font-bold">{type.price}</span>
                 </div>
                 <ul className="space-y-2 mb-6">
-                  {type.features.map((feature, featureIndex) => (
+                  {type.features.map(feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-sm">
                       <CheckCircle className="w-4 h-4 mr-2" />
                       {feature}
                     </li>
-                  ))}
+                  )}
                 </ul>
                 <button className="w-full bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors">
                   Book Now
                 </button>
               </motion.div>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -189,9 +189,9 @@ export default function CalendarPage() {
       <section className="py-20 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, y: 20 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Meet Our Experts</h2>
@@ -200,12 +200,12 @@ export default function CalendarPage() {
             </p>
           </motion.div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {teamMembers.map((member, index) => (
+            {teamMembers.map(member, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.8, delay: index * 0.1 }
                 className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow text-center"
               >
                 <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full mx-auto mb-4 flex items-center justify-center">
@@ -222,7 +222,7 @@ export default function CalendarPage() {
                   {member.available ? 'Available' : 'Unavailable'}
                 </div>
               </motion.div>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -231,9 +231,9 @@ export default function CalendarPage() {
       <section className="py-20 px-4 bg-white">
         <div className="max-w-4xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, y: 20 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Available Time Slots</h2>
@@ -242,12 +242,12 @@ export default function CalendarPage() {
             </p>
           </motion.div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-            {timeSlots.map((slot, index) => (
+            {timeSlots.map(slot, index) => (
               <motion.button
                 key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8, delay: index * 0.05 }}
+                initial={ opacity: 0, scale: 0.8 }
+                whileInView={ opacity: 1, scale: 1 }
+                transition={ duration: 0.8, delay: index * 0.05 }
                 disabled={!slot.available}
                 className={`p-4 rounded-lg text-center transition-all ${
                   slot.available
@@ -261,7 +261,7 @@ export default function CalendarPage() {
                   <CheckCircle className="w-5 h-5 mx-auto mt-2" />
                 )}
               </motion.button>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -271,9 +271,9 @@ export default function CalendarPage() {
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12">
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, x: -20 }
+              whileInView={ opacity: 1, x: 0 }
+              transition={ duration: 0.8 }
             >
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Need Immediate Assistance?</h2>
               <p className="text-lg text-gray-600 mb-8">
@@ -304,9 +304,9 @@ export default function CalendarPage() {
               </div>
             </motion.div>
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, x: 20 }
+              whileInView={ opacity: 1, x: 0 }
+              transition={ duration: 0.8 }
               className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl p-8 text-white"
             >
               <h3 className="text-2xl font-bold mb-6">Quick Contact</h3>
@@ -351,9 +351,9 @@ export default function CalendarPage() {
       <section className="py-20 px-4 bg-white">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, y: 20 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
               Ready to Get Started?
@@ -381,4 +381,3 @@ export default function CalendarPage() {
       </section>
     </div>
   );
-}

@@ -6,5 +6,3 @@ export function AIMatcher() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

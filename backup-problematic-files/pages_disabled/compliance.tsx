@@ -2,7 +2,6 @@ import React from 'react';
 
 interface ComplianceProps {
   className?: string;
-}
 
 const Compliance: React.FC<ComplianceProps> = ({ className }) => {
   return (
@@ -11,6 +10,5 @@ const Compliance: React.FC<ComplianceProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default Compliance;

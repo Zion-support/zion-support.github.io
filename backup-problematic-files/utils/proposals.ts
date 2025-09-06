@@ -7,4 +7,3 @@ export type ProposalIndexItem = {;
   type: string,;
   status: ProposalStatus,;
   createdAt: string;
-};

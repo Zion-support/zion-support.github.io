@@ -21,7 +21,7 @@ interface AIEnhancementButtonProps {;
   onEnhanced: (enhancedContent: string) => void,;
   buttonText?: string;
   className?: string;
-}
+
 export function AIEnhancementButton({
   currentContent;
   enhancementType;
@@ -30,7 +30,7 @@ export function AIEnhancementButton({
 
   buttonText = "Enhance with AI";
   className;
-}: AIEnhancementButtonProps) {;
+: AIEnhancementButtonProps) {;
   const { enhanceContent, isEnhancing } = useResumeEnhancer();
   const [error, setError] = useState<string | null>(null);
   const handleEnhance = async () => {
@@ -47,7 +47,6 @@ export function AIEnhancementButton({
     if (enhancedContent) {
       onEnhanced(enhancedContent)
     }
-  }
 
   return (
     <Button
@@ -65,7 +64,7 @@ export function AIEnhancementButton({
       <span className="text-xs">{buttonText}</span>
     </Button>
   )
-}
+
 import {useResumeEnhancer} from '@/hooks / useResumeEnhancer';
 interface AIEnhancementButtonProps {
   current_content: string,
@@ -74,19 +73,19 @@ interface AIEnhancementButtonProps {
   on_enhanced: (enhanced_content: string) => void,
   button_text?: string;
   class_name?: string;
-}
+
 export /**
  * AIEnhancementButton - Function description
  */
 function AIEnhancementButton() {
   const { enhance_content, is_enhancing } = useResumeEnhancer ();
   const [error, set_error] = useState < string | null>(null);
-;
+
   const handle_enhance = async () => {
     // Check condition
 if (.length < 10) {) {
   $2
-}
+
       set_error ('Please enter at least some basic content before enhancing');
       return;
     }
@@ -95,15 +94,14 @@ if (.length < 10) {) {
       current_content;
       enhancement_type;
       context);
-;
+
     // Check condition
 if ( {) {
   $2
-}
+
       on_enhanced (enhanced_content);
     }
-  }
-;
+
   return (
     <Button;
       type="button";
@@ -118,4 +116,3 @@ if ( {) {
         <Sparkles className="h - 3 w - 3" />)}
       <span className="text - xs">{button_text}</span>;
     </Button>);
-}

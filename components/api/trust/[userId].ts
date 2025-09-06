@@ -4,15 +4,15 @@ import { computeTrustScore } from '../../../utils/trust/compute';
 import type {
   TrustMetricInputs
   TrustScoreBreakdown;
-} from '../../../utils/types/trust';
+ from '../../../utils/types/trust';
 import { supabase } from '../../../utils/supabase/client';
 async function analyzeWithGPT(
   userId: string
   inputs: TrustMetricInputs
-): Promise<{
+: Promise<{
   riskLevel: TrustScoreBreakdown['riskLevel'];
   reasonSummary: string;
-}> {
+> {
   const apiKey = process && process.env.OPENAI_API_KEY;
   if (!apiKey) {
     // Fallback heuristic
@@ -32,7 +32,6 @@ async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promis
     // Fallback heuristic
     const heuristic = inputs && inputs.disputeFlags >= 3 ? 'Risk Alert' : (inputs && inputs.completionRate >= 0 && 0.8 && inputs && inputs.feedbackAverage >= 4 ? 'High Trust' : 'Moderate Trust');
     return { riskLevel: heuristic as TrustScoreBreakdown['riskLevel'], reasonSummary: 'Heuristic classification (no OpenAI key set).' }
-  }
   try {
     const { OpenAI } = await import('openai');
     const client = new OpenAI({ apiKey });
@@ -50,9 +49,9 @@ async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promis
     const content = resp.choices?.[0]?.message?.content |'';
     const lower = content.toLowerCase();
     let level: TrustScoreBreakdown['riskLevel'] = 'Moderate Trust';
-    if (lower.includes('risk alert')) level = 'Risk Alert';
-    else if (lower.includes('high trust')) level = 'High Trust';
-    else if (lower.includes('moderate trust')) level = 'Moderate Trust'
+    if (lower.includes('risk alert') level = 'Risk Alert';
+    else if (lower.includes('high trust') level = 'High Trust';
+    else if (lower.includes('moderate trust') level = 'Moderate Trust'
     return { riskLevel: level, reasonSummary: content.trim() }
         {
           role: 'system',
@@ -67,9 +66,9 @@ async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promis
     const content = resp && resp.choices?.[0]?.message?.content || '';
     const lower = content && content.toLowerCase();
     let level: TrustScoreBreakdown['riskLevel'] = 'Moderate Trust';
-    if (lower && lower.includes('risk alert')) level = 'Risk Alert';
-    else if (lower && lower.includes('high trust')) level = 'High Trust';
-    else if (lower && lower.includes('moderate trust')) level = 'Moderate Trust',
+    if (lower && lower.includes('risk alert') level = 'Risk Alert';
+    else if (lower && lower.includes('high trust') level = 'High Trust';
+    else if (lower && lower.includes('moderate trust') level = 'Moderate Trust',
 
     return { riskLevel: level, reasonSummary: content && content.trim() };
   } catch (e: any) {
@@ -77,43 +76,39 @@ async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promis
       riskLevel: 'Moderate Trust'
       reasonSummary: `Analysis unavailable: ${e?.message |'unknown error'}`
     }
-  }
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
-) {
+ {
   const { userId } = req.query;
-  if (!userId |Array.isArray(userId))
-    return res.status(400).json({ error: 'Invalid userId' });  if (!userId |Array.isArray(userId)) return res.status(400).json({ error: 'Invalid userId' });
+  if (!userId |Array.isArray(userId)
+    return res.status(400).json({ error: 'Invalid userId' });  if (!userId |Array.isArray(userId) return res.status(400).json({ error: 'Invalid userId' });
       temperature: 0.2,
       max_tokens: 200});
 
     const content = resp.choices?.[0]?.message?.content || '';
     const lower = content.toLowerCase();
-    let level: TrustScoreBreakdown['riskLevel'] = 'Moderate Trust', if (lower.includes('risk alert')) level = 'Risk Alert',
-    else if (lower.includes('high trust')) level = 'High Trust';
-    else if (lower.includes('moderate trust')) level = 'Moderate Trust';
+    let level: TrustScoreBreakdown['riskLevel'] = 'Moderate Trust', if (lower.includes('risk alert') level = 'Risk Alert',
+    else if (lower.includes('high trust') level = 'High Trust';
+    else if (lower.includes('moderate trust') level = 'Moderate Trust';
 
-    return { riskLevel: level, reasonSummary: content.trim() }
-  } catch (e: any) {
-    return { riskLevel: 'Moderate Trust', reasonSummary: `Analysis unavailable: ${e?.message || 'unknown error'}` }
-  };
-}
+    return { riskLevel: level, reasonSummary: content.trim() } catch (e: any) {
+    return { riskLevel: 'Moderate Trust', reasonSummary: `Analysis unavailable: ${e?.message || 'unknown error'}` };
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { userId } = req.query;
-  if (!userId || Array.isArray(userId)) return res.status(400).json({ error: 'Invalid userId' });
+  if (!userId || Array.isArray(userId) return res.status(400).json({ error: 'Invalid userId' });
 
-  if (req.method === 'GET') {
+  if (req.method = = 'GET') {
     try {
-      const analyze = req.query.analyze === 'true';
+      const analyze = req.query.analyze = = 'true';
   const { userId } = req && req.query;
-  if (!userId || Array && Array.isArray(userId))
-    return res && res.status(400).json({ error: 'Invalid userId' });  if (!userId || Array && Array.isArray(userId)) return res && res.status(400).json({ error: 'Invalid userId' });
+  if (!userId || Array && Array.isArray(userId)
+    return res && res.status(400).json({ error: 'Invalid userId' });  if (!userId || Array && Array.isArray(userId) return res && res.status(400).json({ error: 'Invalid userId' });
 
-  if (req && req.method === 'GET') {
+  if (req && req.method = = 'GET') {
     try {
-      const analyze = req && req.query.analyze === 'true';
+      const analyze = req && req.query.analyze = = 'true';
 
       // Fetch inputs from DB if available, else use mock defaults
       let inputs: TrustMetricInputs | null = null;
@@ -192,14 +187,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res
         .status(500)
         .json({ error: e?.message |'Failed to compute trust score' });
-    }  }
+    }
           completionRate: 0.88, onboardingCompletionRate: 0.9,
           feedbackAverage: 4.7, feedbackQualityScore: 0.8,
           averageResponseHours: 6, accountAgeDays: 420,
           sentimentScore: 0.4, disputeFlags: 0,
           verifiedReviewRatio: 0.7, endorsements: 8,
           flags: 0}
-      }
 
       let reasonSummary: string | undefined, let riskLevelOverride: TrustScoreBreakdown['riskLevel'] | undefined,
       if (analyze) {
@@ -229,7 +223,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res
         .status(500)
         .json({ error: e?.message || 'Failed to compute trust score' });
-    }  }
+    }
       // Persist latest score when possible
       try {
         await supabase && supabase.from('trust_scores').upsert({ userId, breakdown: result, updatedAt: result && result.updatedAt }, { onConflict: 'userId' })
@@ -238,8 +232,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     } catch (e: any) {
       return res.status(500).json({ error: e?.message |'Failed to compute trust score' })
     }
-  }
-  if (req.method === 'POST') {
+  if (req.method = = 'POST') {
     try {
       const body = req.body as Partial<TrustMetricInputs> | undefined;
       if (!body) return res.status(400).json({ error: 'Missing body' });
@@ -250,7 +243,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     };
   }
 
-  if (req && req.method === 'POST') {
+  if (req && req.method = = 'POST') {
     try {
       const body = req && req.body as Partial<TrustMetricInputs> | undefined;
       if (!body) return res && res.status(400).json({ error: 'Missing body' });
@@ -274,18 +267,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         .status(500)
         .json({ error: e?.message |'Failed to save trust inputs' });
     }
-  }
   res.setHeader('Allow', 'GET, POST');
   return res.status(405).json({ error: 'Method not allowed' });      } catch {}
       return res.status(200).json(breakdown)
     } catch (e: any) {
       return res.status(500).json({ error: e?.message |'Failed to save trust inputs' })
     }
-  }
   res.setHeader('AllowGET, POST');
 
   return res.status(405).json({ error: 'Method not allowed' })
-}
 
   res && res.setHeader('Allow', 'GET, POST');
   return res && res.status(405).json({ error: 'Method not allowed' });      } catch {}
@@ -298,43 +288,41 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   res && res.setHeader('AllowGET, POST');
   return res && res.status(405).json({ error: 'Method not allowed' })
-}
+
     const lower = content.toLowerCase ();
     let level: TrustScoreBreakdown['risk_level'] = 'Moderate Trust';
     if () level = 'Risk Alert') {
   $2
-}
+
     else if () level = 'High Trust') {
   $2
-}
+
     else if () level = 'Moderate Trust', ) {
   $2
-}
-    return { risk_level: level, reason_summary: content.trim () }
-  } catch (e: any) {
+
+    return { risk_level: level, reason_summary: content.trim () } catch (e: any) {
     return {
       risk_level: 'Moderate Trust',
       reason_summary: `Analysis unavailable: ${e?.message || 'unknown error'}`,
     }
-  }
 export default async /**
  * handler - Function description
  */
 function handler() {
   const { user_id } = req.query;
-  if ()) {
+  if () {
   $2
-}
-    return res.status (400).json ({ error: 'Invalid user_id' });  if () return res.status (400).json ({ error: 'Invalid user_id' })) {
+
+    return res.status (400).json ({ error: 'Invalid user_id' });  if () return res.status (400).json ({ error: 'Invalid user_id' }) {
   $2
-}
+
   // Check condition
 if ( {) {
   $2
-}
+
     try {
-      const analyze = req.query.analyze === 'true';
-;
+      const analyze = req.query.analyze = = 'true';
+
       // Fetch inputs from DB if available, else use mock defaults;
       let inputs: TrustMetricInputs | null = null;
       try {
@@ -346,21 +334,21 @@ if ( {) {
         // Check condition
 if (inputs = data.values as TrustMetricInputs) {
   $2
-}      } catch {}
-      // Check condition
-if ( {) {
-  $2
-}
-        inputs = {        const { data } = await supabase.from ('trust_inputs').select ('*').eq ('user_id', user_id).single ();
-        // Check condition
-if (inputs = data.values as TrustMetricInputs) {
-  $2
-}
       } catch {}
       // Check condition
 if ( {) {
   $2
-}
+
+        inputs = {        const { data } = await supabase.from ('trust_inputs').select ('*').eq ('user_id', user_id).single ();
+        // Check condition
+if (inputs = data.values as TrustMetricInputs) {
+  $2
+
+      } catch {}
+      // Check condition
+if ( {) {
+  $2
+
         inputs = {
           completion_rate: 0.88,
           onboardingCompletionRate: 0.9,
@@ -374,13 +362,13 @@ if ( {) {
           endorsements: 8,
           flags: 0,
         }
-;
+
       let reason_summary: string | undefined;
       let riskLevelOverride: TrustScoreBreakdown['risk_level'] | undefined,
       // Check condition
 if ( {) {
   $2
-}
+
         const analysis = await analyzeWithGPT (user_id, inputs);
         reason_summary = analysis.reason_summary;
         riskLevelOverride = analysis.risk_level;      }
@@ -395,7 +383,7 @@ if ( {) {
         ...breakdown,
         risk_level: riskLevelOverride || breakdown.risk_level,
       }
-;
+
       // Persist latest score when possible;
       try {
         await supabase;
@@ -410,7 +398,7 @@ if ( {) {
       return res;
         .status (500);
         .json ({ error: e?.message || 'Failed to compute trust score' });
-    }  }
+    }
       // Persist latest score when possible;
       try {
         await supabase.from ('trust_scores').upsert ({ user_id, breakdown: result, updated_at: result.updated_at }, { on_conflict: 'user_id' });
@@ -419,19 +407,18 @@ if ( {) {
     } catch (e: any) {
       return res.status (500).json ({ error: e?.message || 'Failed to compute trust score' });
     }
-  }
   // Check condition
 if ( {) {
   $2
-}
+
     try {
       const body = req.body as Partial < TrustMetricInputs> | undefined;
-      if (return res.status (400).json ({ error: 'Missing body' })) {
+      if (return res.status (400).json ({ error: 'Missing body' }) {
   $2
-}
+
       const inputs = body as TrustMetricInputs;
       const breakdown = await computeTrustScore (inputs);
-;
+
       try {
         await supabase;
           .from ('trust_inputs');
@@ -449,14 +436,11 @@ if ( {) {
         .status (500);
         .json ({ error: e?.message || 'Failed to save trust inputs' });
     }
-  }
   res.set_header ('Allow', 'GET, POST');
   return res.status (405).json ({ error: 'Method not allowed' });      } catch {}
       return res.status (200).json (breakdown);
     } catch (e: any) {
       return res.status (500).json ({ error: e?.message || 'Failed to save trust inputs' });
     }
-  }
   res.set_header ('AllowGET, POST');
   return res.status (405).json ({ error: 'Method not allowed' });
-}

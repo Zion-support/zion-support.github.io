@@ -4,40 +4,39 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 export default function LinkedInRedirect() {
 
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
+  useEffect() => {
+    if (typeof window != 'undefined') {
       window.location.replace(
         'https://www.linkedin.com/company/zion-tech-group'
 
 export default function LinkedInRedirect() {;
-  useEffect(() => {;
-    if (typeof window !== 'undefined') {;
+  useEffect() => {;
+    if (typeof window != 'undefined') {;
       window && window.location.replace(;
         'https://www && www.linkedin.com/company/zion-tech-group';
       );
-    }
-  }, []);
+    }, []);
   return (
     <>;
       <Head>;
@@ -62,21 +61,20 @@ export default function LinkedInRedirect() {;
     </>;
   );
 import Head from 'next / head';
-;
+
 export default /**
  * LinkedInRedirect - Function description
  */
 function LinkedInRedirect() {
-  useEffect (() => {
+  useEffect () => {
     // Check condition
 if ( {) {
   $2
-}
+
       window.location.replace (
         'https://www.linkedin.com / company / zion - tech - group');
-    }
-  }, []);
-;
+    }, []);
+
   return (
     <>;
       <Head>;
@@ -100,4 +98,3 @@ if ( {) {
         </a>;
       </div>;
     </>);
-;

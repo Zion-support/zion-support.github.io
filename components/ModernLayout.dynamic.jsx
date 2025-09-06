@@ -5,5 +5,5 @@ const ModernLayout.dynamic = () => {
       <h1>ModernLayout.dynamic</h1>
     </div>
   );
-}
+
 export default ModernLayout.dynamic;

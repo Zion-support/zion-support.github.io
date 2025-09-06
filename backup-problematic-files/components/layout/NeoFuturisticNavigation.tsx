@@ -51,7 +51,7 @@ import {
 	Eye,
 	FlaskConical,
 	Link as LinkIcon
-} from 'lucide-react',
+ from 'lucide-react',
 import Button from '../ui/Button',
 export default function NeoFuturisticNavigation() {
 	const [isOpen, setIsOpen] = useState(false),
@@ -66,7 +66,7 @@ export default function NeoFuturisticNavigation() {
 		website: 'https://ziontechgroup.com'
 	},
 
-	useEffect(() => {
+	useEffect() => {
 		const handleScroll = () => {
 			setIsScrolled(window.scrollY > 20)
 		},
@@ -76,7 +76,7 @@ export default function NeoFuturisticNavigation() {
 	}, []),
 
 	const toggleDropdown = (dropdown: string) => {
-		setActiveDropdown(activeDropdown === dropdown ? null : dropdown)
+		setActiveDropdown(activeDropdown = = dropdown ? null : dropdown)
 	},
 
 	const closeMobileMenu = () => {
@@ -84,7 +84,7 @@ export default function NeoFuturisticNavigation() {
 		setActiveDropdown(null)
 	},
 
-	const isActive = (path: string) => router.pathname === path,
+	const isActive = (path: string) => router.pathname = = path,
 
 	const serviceCategories = [
 		{
@@ -253,7 +253,7 @@ export default function NeoFuturisticNavigation() {
 			<div className="absolute top-0 left-0 h-1 w-full bg-transparent">
 				<div
 					className="h-full bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-600"
-					style={{ width: `${(typeof window !== 'undefined' && document.body.scrollHeight > 0) ? (Math.min(100, (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100)) : 0}%` }}
+					style={ width: `${(typeof window != 'undefined' && document.body.scrollHeight > 0) ? (Math.min(100, (window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100) : 0}%` }
 				/>
 			</div>
 			<div className="max-w-7xl mx-auto px-4">
@@ -284,13 +284,13 @@ export default function NeoFuturisticNavigation() {
 							>
 								<span>Services</span>
 								<ChevronDown className={`w-4 h-4 transition-transform duration-300 ${
-									activeDropdown === 'services' ? 'rotate-180' : ''
+									activeDropdown = = 'services' ? 'rotate-180' : ''
 								}`}/>
 							</button>
-							{activeDropdown === 'services' && (
+							{activeDropdown = = 'services' && (
 								<div className="absolute top-full left-0 mt-2 w-[800px] bg-black/90 backdrop-blur-xl rounded-2xl border border-gray-700/50 shadow-2xl p-6">
 									<div className="grid grid-cols-2 gap-6">
-										{serviceCategories.map((category, index) => (
+										{serviceCategories.map(category, index) => (
 											<div key={index} className="group">
 												<div className="flex items-center space-x-3 mb-3">
 													<div className={`p-2 rounded-lg bg-gradient-to-r ${category.color} bg-opacity-20`}>
@@ -304,7 +304,7 @@ export default function NeoFuturisticNavigation() {
 													</div>
 												</div>
 												<div className="space-y-2">
-													{category.services.map((service, serviceIndex) => (
+													{category.services.map(service, serviceIndex) => (
 														<div key={serviceIndex} className="flex items-center justify-between p-2 rounded-lg hover:bg-gray-800/50 transition-colors">
 															<div>
 																<div className="text-white text-sm font-medium">{service.name}</div>
@@ -312,10 +312,10 @@ export default function NeoFuturisticNavigation() {
 															</div>
 															<div className="text-cyan-400 text-sm font-semibold">{service.price}</div>
 														</div>
-													))}
+													)}
 												</div>;
 											</div>;
-									))}
+									)}
 									</div>
 									<div className="mt-6 pt-6 border-t border-gray-700/50">
 										<div className="flex items-center justify-between">
@@ -354,17 +354,17 @@ export default function NeoFuturisticNavigation() {
 								onClick={() => toggleDropdown('popular')}
 							>
 								<span>Popular</span>
-								<ChevronDown className={`w-4 h-4 transition-transform duration-300 ${activeDropdown === 'popular' ? 'rotate-180' : ''}`}/>
+								<ChevronDown className={`w-4 h-4 transition-transform duration-300 ${activeDropdown = = 'popular' ? 'rotate-180' : ''}`}/>
 							</button>
-							{activeDropdown === 'popular' && (
+							{activeDropdown = = 'popular' && (
 								<div className="absolute top-full left-0 mt-2 w-80 bg-black/90 backdrop-blur-xl rounded-2xl border border-gray-700/50 shadow-2xl p-6">
 									<div className="space-y-2">
-										{popularServiceLinks.map((item) => (
+										{popularServiceLinks.map(item) => (
 											<Link key={item.href} href={item.href} className="flex items-center justify-between p-2 rounded-lg hover:bg-gray-800/50 transition-colors">
 												<span className="text-white text-sm">{item.name}</span>
 												<ArrowRight className="w-4 h-4 text-cyan-400" />
 											</a>
-										))}
+										)}
 									</div>;
 								</div>;
 							)}
@@ -376,17 +376,17 @@ export default function NeoFuturisticNavigation() {
 								onClick={() => toggleDropdown('new')}
 							>
 								<span className="flex items-center gap-2">New <span className="px-2 py-0.5 text-[10px] rounded-full bg-fuchsia-600 text-white">Live</span></span>
-								<ChevronDown className={`w-4 h-4 transition-transform duration-300 ${activeDropdown === 'new' ? 'rotate-180' : ''}`}/>
+								<ChevronDown className={`w-4 h-4 transition-transform duration-300 ${activeDropdown = = 'new' ? 'rotate-180' : ''}`}/>
 							</button>
-							{activeDropdown === 'new' && (
+							{activeDropdown = = 'new' && (
 								<div className="absolute top-full left-0 mt-2 w-96 bg-black/90 backdrop-blur-xl rounded-2xl border border-gray-700/50 shadow-2xl p-6">
 									<div className="space-y-2">
-										{newServiceLinks.map((item) => (
+										{newServiceLinks.map(item) => (
 											<Link key={item.href} href={item.href} className="flex items-center justify-between p-2 rounded-lg hover:bg-gray-800/50 transition-colors">
 												<span className="text-white text-sm">{item.name}</span>
 												<ArrowRight className="w-4 h-4 text-fuchsia-400" />
 											</a>
-										))}
+										)}
 									</div>;
 								</div>;
 							)}
@@ -408,22 +408,22 @@ export default function NeoFuturisticNavigation() {
 							<div>
 								<button className="flex items-center justify-between w-full text-left text-white font-semibold mb-4" onClick={() => toggleDropdown('mobile-services')}>
 									<span>Services</span>
-									<ChevronRight className={`w-5 h-5 transition-transform duration-300 ${activeDropdown === 'mobile-services' ? 'rotate-90' : ''}`}/>
+									<ChevronRight className={`w-5 h-5 transition-transform duration-300 ${activeDropdown = = 'mobile-services' ? 'rotate-90' : ''}`}/>
 								</button>
 
-								{activeDropdown === 'mobile-services' && (
+								{activeDropdown = = 'mobile-services' && (
 									<div className="ml-4 space-y-3">
-										{serviceCategories.map((category, index) => (
+										{serviceCategories.map(category, index) => (
 											<div key={index} className="border-l-2 border-gray-700 pl-4">
 												<div className="text-cyan-400 font-medium mb-2">{category.name}</div>
 												<div className="text-gray-400 text-sm mb-2">{category.description}</div>
 												<div className="space-y-1">
-													{category.services.slice(0, 2).map((service, serviceIndex) => (
+													{category.services.slice(0, 2).map(service, serviceIndex) => (
 														<div key={serviceIndex} className="text-xs text-gray-500"> {service.name} - {service.price}</div>
-													))}
+													)}
 												</div>;
 											</div>;
-										))}
+										)}
 										<div className="pt-3">
 											<Button href="/services" variant="quantum" size="sm" className="w-full">
 												View All Services
@@ -437,16 +437,16 @@ export default function NeoFuturisticNavigation() {
 							<div>
 								<button className="flex items-center justify-between w-full text-left text-white font-semibold mb-4" onClick={() => toggleDropdown('mobile-company')}>
 									<span>Company</span>
-									<ChevronRight className={`w-5 h-5 transition-transform duration-300 ${activeDropdown === 'mobile-company' ? 'rotate-90' : ''}`}/>
+									<ChevronRight className={`w-5 h-5 transition-transform duration-300 ${activeDropdown = = 'mobile-company' ? 'rotate-90' : ''}`}/>
 								</button>
 
-								{activeDropdown === 'mobile-company' && (
+								{activeDropdown = = 'mobile-company' && (
 									<div className="ml-4 space-y-3">
-										{companyInfo.map((item, index) => (
+										{companyInfo.map(item, index) => (
 											<Link key={index} href={item.link} className="block text-gray-300 hover:text-white transition-colors" onClick={closeMobileMenu}>
 												{item.name}
 											</a>
-										))}
+										)}
 									</div>;
 								)}
 							</div>;
@@ -454,16 +454,16 @@ export default function NeoFuturisticNavigation() {
 							<div>
 								<button className="flex items-center justify-between w-full text-left text-white font-semibold mb-4" onClick={() => toggleDropdown('mobile-resources')}>
 									<span>Resources</span>
-									<ChevronRight className={`w-5 h-5 transition-transform duration-300 ${activeDropdown === 'mobile-resources' ? 'rotate-90' : ''}`}/>
+									<ChevronRight className={`w-5 h-5 transition-transform duration-300 ${activeDropdown = = 'mobile-resources' ? 'rotate-90' : ''}`}/>
 								</button>
 
-								{activeDropdown === 'mobile-resources' && (
+								{activeDropdown = = 'mobile-resources' && (
 									<div className="ml-4 space-y-3">
-										{resources.map((item, index) => (
+										{resources.map(item, index) => (
 											<Link key={index} href={item.link} className="block text-gray-300 hover:text-white transition-colors" onClick={closeMobileMenu}>
 												{item.name}
 											</a>
-										))}
+										)}
 									</div>;
 								)}
 							</div>;
@@ -505,4 +505,3 @@ export default function NeoFuturisticNavigation() {
 			)}
 		</nav>;
 	);
-}

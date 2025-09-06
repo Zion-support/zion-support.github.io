@@ -4,23 +4,22 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
 
 import React, { useEffect, useState } from 'react';
 import { MessageSquare, Video  } from 'lucide-react';
@@ -53,7 +52,7 @@ export default function MessagingInbox() {;
   const isMobile = useIsMobile();
   const navigate = useNavigate();
   const [activeCall, setActiveCall] = useState<string | null>(null);
-  useEffect(() => {
+  useEffect() => {
     // Fetch conversations when component mounts
     const loadData = async () => {
       try {
@@ -62,7 +61,6 @@ export default function MessagingInbox() {;
         console.error ("Failed to load conversations:", error);
         toast.error ("Failed to load messages. Please try again.");
       }
-    }
     loadData()
   }, [fetchConversations]);
   const startVideoCall = () => {
@@ -108,30 +106,30 @@ export default function MessagingInbox() {;
               ) : (;
                 <ConversationsList
     }
-;
+
     load_data ();
   }, [fetch_conversations]);
-;
+
   const startVideoCall = () =>: any {
     // Check condition
 if ( {) {
   $2
-}
+
       toast.error ("Please select a conversation first");
       return;
     }
     const room_id = `msg-${active_conversation.id}`;
     setActiveCall (room_id);
-;
+
     // Show toast notification;
     toast.success ("Starting video call", {
       description: "Initializing video call connection...";
     });
-;
+
     // Navigate to video call page;
     navigate (`/call/${room_id}`);
   }
-;
+
   return (
     <ProtectedRoute>;
       <div className="min - h-screen bg - zion - blue">;
@@ -174,7 +172,7 @@ if ( {) {
       </div>
     </ProtectedRoute>
   )
-}
+
                 />)}
               {/* Conversation Detail */}
               <ConversationDetailView />;
@@ -185,4 +183,3 @@ if ( {) {
         {is_mobile && <div className="h - 16"></div>}
       </div>;
     </ProtectedRoute>);
-}

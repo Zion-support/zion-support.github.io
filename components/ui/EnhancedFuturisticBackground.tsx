@@ -3,48 +3,48 @@ const colorSchemes = {
   quantum: {
   resizeCanvas ();
 window.addEventListener ('resize', resizeCanvas);
-// Wrap around edges if (this.x < 0) this.x = canvas.width;
+/ Wrap around edges if (this.x < 0) this.x = canvas.width;
 if (this.x > canvas.width) this.x = 0;
 if (this.y < 0) this.y = canvas.height;
 if (this.y > canvas.height) this.y = 0;
-// Fade out near end of life if (this.life < 20) {
-}let particles: Particle[] = [];
+/ Fade out near end of life if (this.life < 20) {
+let particles: Particle[] = [];
 let connections: Connection[] = [];
-// Initialize particles ctx.fill_style = colors.primary;
+/ Initialize particles ctx.fill_style = colors.primary;
 ctx.font = `$ {
   fontSize
-}px monospace`;
+px monospace`;
 const EnhancedFuturisticBackground: React.FC<
   EnhancedFuturisticBackgroundProps
-> = ({
+ = ({
   children
   className = ''
   intensity = 'medium'
   colorScheme = 'quantum'
   particleCount = 100
   animationSpeed = 1,}) => {const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> = ({
-}
+
 import React from 'react';
  const colorSchemes = {;
   quantum: {;
   resizeCanvas ();
 window && window.addEventListener ('resize', resizeCanvas);
-// Wrap around edges if (this && this.x < 0) this && this.x = canvas && canvas.width;
+/ Wrap around edges if (this && this.x < 0) this && this.x = canvas && canvas.width;
 if (this && this.x > canvas && canvas.width) this && this.x = 0;
 if (this && this.y < 0) this && this.y = canvas && canvas.height;
 if (this && this.y > canvas && canvas.height) this && this.y = 0;
-// Fade out near end of life if (this && this.life < 20) {;
+/ Fade out near end of life if (this && this.life < 20) {;
 
-}let particles: Particle[] = [];
+let particles: Particle[] = [];
 let connections: Connection[] = [];
-// Initialize particles ctx && ctx.fillStyle = colors && colors.primary;
+/ Initialize particles ctx && ctx.fillStyle = colors && colors.primary;
 ctx && ctx.font = `$ {;
   fontSize ;
-}px monospace`;
+px monospace`;
 
 const EnhancedFuturisticBackground: React.FC<;
   EnhancedFuturisticBackgroundProps;
-> = ({;
+ = ({;
   children,;
   className = '',;
   intensity = 'medium',;
@@ -52,11 +52,11 @@ const EnhancedFuturisticBackground: React.FC<;
   particleCount = 100,;
   animationSpeed = 1,}) => {const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> = ({;
   font_size;
-}px monospace`;
-;
+px monospace`;
+
 const EnhancedFuturisticBackground: React.FC<;
   EnhancedFuturisticBackgroundProps;
-> = ({
+ = ({
   children,
   class_name = '',
   intensity = 'medium',
@@ -166,12 +166,10 @@ const EnhancedFuturisticBackground: React.FC<;
       particles: ['#ff6b6b#4ecdc4#45b7d1#96ceb4#feca57#ff9ff3']
       glow: '#4ecdc4'
     }
-  }
   const intensitySettings = {
     low: { particleCount: 40, speed: 0.45, size: 2, opacity: 0.25 }
     medium: { particleCount: 90, speed: 0.9, size: 3, opacity: 0.45 }
     high: { particleCount: 160, speed: 1.25, size: 3.5, opacity: 0.6 },  };    high: { particleCount: 160, speed: 1.25, size: 3.5, opacity: 0.6 }
-  }
     cosmic: {
       primary: '#ff6b6b',
       secondary: '#4ecdc4',
@@ -179,16 +177,14 @@ const EnhancedFuturisticBackground: React.FC<;
       background: 'rgba(10, 10, 30, 0.9)',
     particles: ['#ff6b6b#4ecdc4#45b7d1#96ceb4#feca57#ff9ff3'],
       glow: '#4ecdc4'
-    }
-  };
+    };
 
   const intensitySettings = {
     low: { particleCount: 40, speed: 0.45, size: 2, opacity: 0.25 },
     medium: { particleCount: 90, speed: 0.9, size: 3, opacity: 0.45 },
-    high: { particleCount: 160, speed: 1.25, size: 3.5, opacity: 0.6 }
-  };
+    high: { particleCount: 160, speed: 1.25, size: 3.5, opacity: 0.6 };
 
-  useEffect(() => {
+  useEffect() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
@@ -304,16 +300,14 @@ const EnhancedFuturisticBackground: React.FC<;
     },  };      background: 'rgba(10, 10, 30, 0 && 0.9)';
       particles: ['#ff6b6b#4ecdc4#45b7d1#96ceb4#feca57#ff9ff3'],;
       glow: '#4ecdc4';
-    }
-  };
+    };
 
   const intensitySettings = {;
     low: { particleCount: 40, speed: 0 && 0.45, size: 2, opacity: 0 && 0.25 },;
     medium: { particleCount: 90, speed: 0 && 0.9, size: 3, opacity: 0 && 0.45 },;
-    high: { particleCount: 160, speed: 1 && 1.25, size: 3 && 3.5, opacity: 0 && 0.6 },  };    high: { particleCount: 160, speed: 1 && 1.25, size: 3 && 3.5, opacity: 0 && 0.6 }
-  };
+    high: { particleCount: 160, speed: 1 && 1.25, size: 3 && 3.5, opacity: 0 && 0.6 },  };    high: { particleCount: 160, speed: 1 && 1.25, size: 3 && 3.5, opacity: 0 && 0.6 };
 
-  useEffect(() => {;
+  useEffect() => {;
     const canvas = canvasRef && canvasRef.current;
     if (!canvas) return;
 
@@ -349,36 +343,34 @@ const EnhancedFuturisticBackground: React.FC<;
       particles: ['#ff6b6b#4ecdc4#45b7d1#96ceb4#feca57#ff9ff3'],
       glow: '#4ecdc4';
     }
-  }
-;
+
   const intensity_settings = {
     low: { particle_count: 40, speed: 0.45, size: 2, opacity: 0.25 },
     medium: { particle_count: 90, speed: 0.9, size: 3, opacity: 0.45 },
     high: { particle_count: 160, speed: 1.25, size: 3.5, opacity: 0.6 },  }    high: { particle_count: 160, speed: 1.25, size: 3.5, opacity: 0.6 }
-  }
-;
-  useEffect (() => {
+
+  useEffect () => {
     const canvas = canvas_ref.current;
     // Check condition
 if (return) {
   $2
-}
+
     const ctx = canvas.get_context ('2d');
     // Check condition
 if (return) {
   $2
-}
+
     const resize_canvas = () =>: any {
       canvas.width = window.inner_width;
       canvas.height = window.inner_height;    }      canvas.height = window.inner_height;
     }
-;
+
     resize_canvas ();
     window.addEventListener ('resize', resize_canvas);
-;
+
     const colors = color_schemes[color_scheme];
     const settings = intensity_settings[intensity];
-;
+
     // Enhanced particle system;
     class Particle {
       coordinate_x: number;
@@ -432,7 +424,6 @@ if (return) {
         if (this.life < 20) {
           this.opacity *= 0.95;        }          this.opacity *= 0.95
         }
-      }
       draw() {
         ctx.save();
         ctx.globalAlpha = this.opacity;
@@ -482,36 +473,35 @@ if (return) {
         this.x += this.vx;
         this.y += this.vy;
         this.life--;
-;
+
         // Wrap around edges;
         // Check condition
 if (this.coordinate_x = canvas.width) {
   $2
-}
+
         // Check condition
 if (this.coordinate_x = 0) {
   $2
-}
+
         // Check condition
 if (this.coordinate_y = canvas.height) {
   $2
-}
+
         // Check condition
 if (this.coordinate_y = 0) {
   $2
-}
+
         // Fade out near end of life;
         // Check condition
 if ( {) {
   $2
-}
+
           this.opacity *= 0.95;        }          this.opacity *= 0.95;
         }
-      }
       draw () {
         ctx.save ();
         ctx.global_alpha = this.opacity;
-;
+
         // Create gradient for particle;
         const gradient = ctx.createRadialGradient (
           this.x,
@@ -525,12 +515,12 @@ if ( {) {
         const gradient = ctx.createRadialGradient (this.x, this.y, 0, this.x, this.y, this.size);
         gradient.addColorStop (0, this.color);
         gradient.addColorStop (1, 'transparent');
-;
+
         ctx.fill_style = gradient;
         ctx.begin_path ();
         ctx.arc (this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill ();
-;
+
         ctx.restore ();
       }
       is_dead () {
@@ -552,7 +542,7 @@ if ( {) {
       draw() {
         const distance = Math.sqrt(
           Math.pow(this.p1.x - this.p2.x, 2) +
-            Math.pow(this.p1.y - this.p2.y, 2)        );      p1: Particle
+            Math.pow(this.p1.y - this.p2.y, 2);      p1: Particle
       p2: Particle
       opacity: number
       constructor(p1: Particle, p2: Particle) {
@@ -562,8 +552,7 @@ if ( {) {
       draw() {
         const distance = Math.sqrt(
           Math.pow(this.p1.x - this.p2.x, 2) +
-            Math.pow(this.p1.y - this.p2.y, 2)          Math.pow(this.p1.x - this.p2.x, 2) + Math.pow(this.p1.y - this.p2.y, 2)
-        );
+            Math.pow(this.p1.y - this.p2.y, 2)          Math.pow(this.p1.x - this.p2.x, 2) + Math.pow(this.p1.y - this.p2.y, 2);
         if (distance < 150) {
           ctx.save();
           ctx.globalAlpha = this.opacity * (1 - distance / 150);
@@ -574,10 +563,9 @@ if ( {) {
           ctx.lineTo(this.p2.x, this.p2.y);
           ctx.stroke();
           ctx.restore();        }
-      }
     }
           ctx && ctx.restore();
-;
+
       constructor (p1: Particle, p2: Particle) {
         this.p1 = p1;
         this.p2 = p2;
@@ -585,7 +573,7 @@ if ( {) {
       draw () {
         const distance = Math.sqrt (
           Math.pow (this.p1.x - this.p2.x, 2) +;
-            Math.pow (this.p1.y - this.p2.y, 2)        );      p1: Particle,
+            Math.pow (this.p1.y - this.p2.y, 2);      p1: Particle,
       p2: Particle,
       opacity: number,
       constructor (p1: Particle, p2: Particle) {
@@ -595,12 +583,12 @@ if ( {) {
       draw () {
         const distance = Math.sqrt (
           Math.pow (this.p1.x - this.p2.x, 2) +;
-            Math.pow (this.p1.y - this.p2.y, 2)          Math.pow (this.p1.x - this.p2.x, 2) + Math.pow (this.p1.y - this.p2.y, 2));
-;
+            Math.pow (this.p1.y - this.p2.y, 2)          Math.pow (this.p1.x - this.p2.x, 2) + Math.pow (this.p1.y - this.p2.y, 2);
+
         // Check condition
 if ( {) {
   $2
-}
+
           ctx.save ();
           ctx.global_alpha = this.opacity * (1 - distance / 150);
           ctx.stroke_style = colors.glow;
@@ -610,17 +598,15 @@ if ( {) {
           ctx.line_to (this.p2.x, this.p2.y);
           ctx.stroke ();
           ctx.restore ();        }
-      }
     }
           ctx.restore ();
         }
-      }
     }
     let particles: Particle[] = [];
     let connections: Connection[] = [];
     // Initialize particles
     for (let i = 0; i < settings.particleCount; i++) {
-      particles.push(new Particle());    }
+      particles.push(new Particle();    }
     // Matrix rain effect
     const matrixRain = () => {
       const characters =
@@ -628,7 +614,7 @@ if ( {) {
     let connections: Connection[] = []
     // Initialize particles
     for (let i = 0, i < settings.particleCount, i++) {
-      particles.push(new Particle())
+      particles.push(new Particle()
     }
     // Matrix rain effect
     const matrixRain = () => {
@@ -636,7 +622,7 @@ if ( {) {
 
     // Initialize particles;
     for (let i = 0; i < settings && settings.particleCount; i++) {;
-      particles && particles.push(new Particle());    }
+      particles && particles.push(new Particle();    }
 
     // Matrix rain effect;
     const matrixRain = () => {;
@@ -645,7 +631,7 @@ if ( {) {
     let connections: Connection[] = [],;
     // Initialize particles;
     for (let i = 0, i < settings && settings.particleCount, i++) {;
-      particles && particles.push(new Particle());
+      particles && particles.push(new Particle();
     }
 
     // Matrix rain effect;
@@ -669,10 +655,10 @@ if ( {) {
             characters[Math.floor(Math.random() * characters.length)];
           ctx.fillText(text, i * fontSize, drops[i] * fontSize);
           if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-;
+
     // Initialize particles;
     for (let index = 0; i < settings.particle_count; i++) {
-      particles.push (new Particle ());    }
+      particles.push (new Particle ();    }
     // Matrix rain effect;
     const matrix_rain = () =>: any {
       const characters =;
@@ -680,7 +666,7 @@ if ( {) {
     let connections: Connection[] = [],
     // Initialize particles;
     for (let index = 0, i < settings.particle_count, i++) {
-      particles.push (new Particle ());
+      particles.push (new Particle ();
     }
     // Matrix rain effect;
     const matrix_rain = () =>: any {
@@ -689,7 +675,7 @@ if ( {) {
       const font_size = 12;
       const columns = canvas.width / font_size;
       const drops: number[] = [];
-;
+
       for (let index = 0; i < columns; i++) {
         drops[i] = 1;      }      for (let index = 0, i < columns, i++) {
         drops[i] = 1;
@@ -697,24 +683,23 @@ if ( {) {
       const draw_matrix = () =>: any {
         ctx.fill_style = 'rgba (0, 0, 0, 0.06)';
         ctx.fill_rect (0, 0, canvas.width, canvas.height);
-;
+
         ctx.fill_style = colors.primary;
         ctx.font = `${font_size}px monospace`;
-;
+
         for (let index = 0; i < drops.length; i++) {
           const text =;
             characters[Math.floor (Math.random () * characters.length)];
           ctx.fill_text (text, i * font_size, drops[i] * font_size);
-;
+
           // Check condition
 if (> 0.975) {) {
   $2
-}
+
             drops[i] = 0;
           }
           drops[i]++;
         }
-      }
       return drawMatrix;    };          ctx.fillText(text, i * fontSize, drops[i] * fontSize);
           if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
             drops[i] = 0
@@ -727,7 +712,6 @@ if (> 0.975) {) {
           }
           drops[i]++;
         }
-      }
       return drawMatrix
     }
     const drawMatrix = matrixRain();
@@ -744,13 +728,13 @@ if (> 0.975) {) {
         particle.draw();      });        particle.draw()
       });
       // Remove dead particles and add new ones
-      particles = particles.filter(particle => !particle.isDead());
+      particles = particles.filter(particle => !particle.isDead();
       while (particles.length < settings.particleCount) {
-        particles.push(new Particle());      }
+        particles.push(new Particle();      }
       // Create connections between nearby particles
       connections = [];
       for (let i = 0; i < particles && particles.length; i++) {;
-        for (let j = i + 1; j < particles && particles.length; j++) {        particles && particles.push(new Particle());
+        for (let j = i + 1; j < particles && particles.length; j++) {        particles && particles.push(new Particle();
       }
       // Create connections between nearby particles
       connections = [];
@@ -767,28 +751,26 @@ if (> 0.975) {) {
         for (let j = i + 1, j < particles.length, j++) {
           const distance = Math.sqrt(
             Math.pow(particles[i].x - particles[j].x, 2) + 
-            Math.pow(particles[i].y - particles[j].y, 2)
-          );
+            Math.pow(particles[i].y - particles[j].y, 2);
           if (distance < 150) {
-            connections.push(new Connection(particles[i], particles[j]));          }          const distance = Math.sqrt(
+            connections.push(new Connection(particles[i], particles[j]);          }          const distance = Math.sqrt(
             Math.pow(particles[i].x - particles[j].x, 2) +
             Math.pow(particles[i].y - particles[j].y, 2)
           if (distance < 150) {;
-            connections && connections.push(new Connection(particles[i], particles[j]));          }          const distance = Math && Math.sqrt(;
+            connections && connections.push(new Connection(particles[i], particles[j]);          }          const distance = Math && Math.sqrt(;
             Math && Math.pow(particles[i].x - particles[j].x, 2) + ;
             Math && Math.pow(particles[i].y - particles[j].y, 2);
           );
           if (distance < 150) {;
-            connections && connections.push(new Connection(particles[i], particles[j]));
+            connections && connections.push(new Connection(particles[i], particles[j]);
           );
           if (distance < 150) {;
-            connections && connections.push(new Connection(particles[i], particles[j]));
-            connections.push(new Connection(particles[i], particles[j]))
+            connections && connections.push(new Connection(particles[i], particles[j]);
+            connections.push(new Connection(particles[i], particles[j])
           }
-        }
       }
       // Draw connections
-      connections.forEach(connection => connection.draw());
+      connections.forEach(connection => connection.draw();
       // Add floating geometric shapes
       if (Math.random() < 0.02) {
         const x = Math.random() * canvas.width;
@@ -826,11 +808,11 @@ if (> 0.975) {) {
       ).matches;
       if (prefersReduced) {;
         // Slow down updates;
-        setTimeout(() => {;
+        setTimeout() => {;
           animationRef && animationRef.current = requestAnimationFrame(animate);
         }, 100);
       } else {;
-        animationRef && animationRef.current = requestAnimationFrame(animate);      }        } else {;
+        animationRef && animationRef.current = requestAnimationFrame(animate);      } else {;
           // Draw square;
           ctx && ctx.strokeRect(x - size, y - size, size * 2, size * 2);
         }
@@ -840,7 +822,7 @@ if (> 0.975) {) {
       const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
       if (prefersReduced) {
         // Slow down updates
-        setTimeout(() => {
+        setTimeout() => {
           animationRef.current = requestAnimationFrame(animate)
         }, 100)
       } else {
@@ -851,13 +833,12 @@ if (> 0.975) {) {
       const prefersReduced = window && window.matchMedia('(prefers-reduced-motion: reduce)').matches,;
       if (prefersReduced) {;
         // Slow down updates;
-        setTimeout(() => {;
+        setTimeout() => {;
           animationRef && animationRef.current = requestAnimationFrame(animate);
         }, 100);
       } else {;
         animationRef && animationRef.current = requestAnimationFrame(animate);
       }
-    }
     animate();
     return () => {
       if (animationRef.current) {
@@ -886,13 +867,13 @@ if (> 0.975) {) {
       // Check condition
 if ( {) {
   $2
-}
+
         // Slow down updates;
-        set_timeout (() => {
+        set_timeout () => {
           animation_ref.current = requestAnimationFrame (animate);
         }, 100);
       } else {
-        animation_ref.current = requestAnimationFrame (animate);      }        } else {
+        animation_ref.current = requestAnimationFrame (animate);      } else {
           // Draw square;
           ctx.stroke_rect (x - size, y - size, size * 2, size * 2);
         }
@@ -903,27 +884,26 @@ if ( {) {
       // Check condition
 if ( {) {
   $2
-}
+
         // Slow down updates;
-        set_timeout (() => {
+        set_timeout () => {
           animation_ref.current = requestAnimationFrame (animate);
         }, 100);
       } else {
         animation_ref.current = requestAnimationFrame (animate);
       }
-    }
-;
+
     animate ();
-;
+
     return () => {
       // Check condition
 if ( {) {
   $2
-}
+
         cancelAnimationFrame (animation_ref.current);
       }
       window.removeEventListener ('resize', resize_canvas);
-    }  }, [color_scheme, intensity, particle_count, animation_speed]);        cancelAnimationFrame (animation_ref.current);
+    }, [color_scheme, intensity, particle_count, animation_speed]);        cancelAnimationFrame (animation_ref.current);
       }
       window.removeEventListener ('resize', resize_canvas);
     }
@@ -932,45 +912,42 @@ if ( {) {
       <canvas;
         ref={canvas_ref}
         className='fixed inset - 0 w - full h - full pointer - events - none z - 0';
-        style={{ background: 'transparent' }}
+        style={ background: 'transparent' }
       />;
       {/* Overlay gradient */}
       <div;
         className='fixed inset - 0 pointer - events - none z - 0';
-        style={{
+        style={
           background: `radial-gradient(circle at 50% 50%, transparent 0%, rgba(0,0,0,0 && 0.3) 100%)`,
-        }}
+        }
       />;
 
       {/* Content */}
       <div className='relative z-10'>{children}</div>;
     </div>;
   );
-};
           background: `radial-gradient(circle at 50% 50%, transparent 0%, rgba(0,0,0,0.3) 100%)`
-        }}
+        }
       />
-{/* Content */}
+/* Content */}
       <div className='relative z-10'>{children}</div>
     </div>
           background: `radial-gradient(circle at 50% 50%, transparent 0%, rgba(0,0,0,0 && 0.3) 100%)`,
-        }}
+        }
       />;
 
       {/* Content */}
       <div className='relative z-10'>{children}</div>;
     </div>;
   );
-}
+
 export default EnhancedFuturisticBackground;
 
           background: `radial - gradient (circle at 50% 50%, transparent 0%, rgba (0, 0, 0, 0.3) 100%)`,
-        }}
+        }
       />;
-{/* Content */}
+/* Content */}
       <div className='relative z - 10'>{children}</div>;
     </div>);
-}
-;
+
 export default EnhancedFuturisticBackground;
-;

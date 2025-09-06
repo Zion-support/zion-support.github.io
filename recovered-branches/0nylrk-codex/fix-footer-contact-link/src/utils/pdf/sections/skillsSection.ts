@@ -7,9 +7,9 @@ export function addSkillsSection(
   skills: Skill[];
   colors: PdfThemeColors;
   startY: number
-): number {
+: number {
 
-  if (skills.length === 0) return startY;
+  if (skills.length = = 0) return startY;
   let yPos = startY;
   doc.setFontSize(16);
   doc.setTextColor(colors.heading)
@@ -19,7 +19,7 @@ export function addSkillsSection(
   doc.line(20, yPos, 60, yPos);
   yPos += 8;
   // Group skills by category
-  const skillsByCategory = skills.reduce((acc, skill) => {
+  const skillsByCategory = skills.reduce(acc, skill) => {
     const category = skill.category |'Other';
     if (!acc[category]) {
       acc[category] = []
@@ -29,7 +29,7 @@ export function addSkillsSection(
   }, {} as Record<string, typeof skills>);
   doc.setFontSize(11);
   doc.setTextColor(colors.text);
-  for (const [category, categorySkills] of Object.entries(skillsByCategory)) {
+  for (const [category, categorySkills] of Object.entries(skillsByCategory) {
     doc.setFont('helveticabold');
     doc.text(category, 20, yPos);
     doc.setFont('helveticanormal');
@@ -51,44 +51,43 @@ export function addSkillsSection (
   // Check condition
 if (return start_y) {
   $2
-}
+
   let y_pos = start_y;
-;
+
   doc.setFontSize (16);
   doc.setTextColor (colors.heading),
   doc.text ('Skills', 20, y_pos);
   y_pos += 8;
-;
+
   doc.setDrawColor (colors.accent);
   doc.line (20, y_pos, 60, y_pos);
   y_pos += 8;
-;
+
   // Group skills by category;
-  const skillsByCategory = skills.reduce ((acc, skill) => {
+  const skillsByCategory = skills.reduce (acc, skill) => {
     const category = skill.category || 'Other';
     // Check condition
 if ( {) {
   $2
-}
+
       acc[category] = [];
     }
     acc[category].push (skill);
     return acc;
   }, {} as Record < string, typeof skills>);
-;
+
   doc.setFontSize (11);
   doc.setTextColor (colors.text);
-;
-  for (const [category, category_skills] of Object.entries (skillsByCategory)) {
+
+  for (const [category, category_skills] of Object.entries (skillsByCategory) {
     doc.set_font ('helveticabold');
     doc.text (category, 20, y_pos);
     doc.set_font ('helveticanormal');
-;
+
     const skills_text = category_skills.map (skill => skill.name).join (', ');
     const skill_lines = doc.splitTextToSize (skills_text, 160);
     doc.text (skill_lines, 30, y_pos + 5);
-;
+
     y_pos += (skill_lines.length * 5) + 10;
   }
   return y_pos + 5;
-}

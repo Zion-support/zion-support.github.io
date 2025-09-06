@@ -7,6 +7,5 @@ const CommunityPage = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default CommunityPage;

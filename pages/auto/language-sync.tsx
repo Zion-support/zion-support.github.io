@@ -21,7 +21,7 @@ const LanguageSync: NextPage = () => {
       </main>
     </div>
   )
-}
+
 export default LanguageSync;
 
 import type { NextPage } from 'next',
@@ -45,5 +45,5 @@ const LanguageSync: NextPage = () => {
         </div>;
       </main>;
     </div>);
-},
+,
 export default LanguageSync,

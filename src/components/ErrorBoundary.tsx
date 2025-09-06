@@ -3,12 +3,12 @@ import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
   children: ReactNode;
-}
+
 interface State {
   hasError: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
-}
+
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
@@ -51,7 +51,7 @@ class ErrorBoundary extends Component<Props, State> {
                 Try Again
               </button>
             </div>
-            {process.env.NODE_ENV === 'development' && this.state.error && (
+            {process.env.NODE_ENV = = 'development' && this.state.error && (
               <details className="mt-4 p-4 bg-gray-100 rounded-lg">
                 <summary className="cursor-pointer text-sm font-medium text-gray-700">
                   Error Details (Development)
@@ -68,10 +68,9 @@ class ErrorBoundary extends Component<Props, State> {
     }
     return this.props.children
   }
-}
 
 export default ErrorBoundary;
     return this.props.children;
   }
-}
+
 export default ErrorBoundary;

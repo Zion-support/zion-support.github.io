@@ -10,7 +10,6 @@ interface UltraAdvancedFuturisticBackground2026Props {
   enableNeuralNetworks?: boolean,
   enableMultidimensional?: boolean,
   children?: React.ReactNode
-}
 
 const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBackground2026Props> = ({
   intensity = 'high',
@@ -22,11 +21,11 @@ const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBac
   enableNeuralNetworks = true,
   enableMultidimensional = true,
   children
-}) => {
+) => {
   const canvasRef = useRef<HTMLCanvasElement>(null),
   const containerRef = useRef<HTMLDivElement>(null),
 
-  useEffect(() => {
+  useEffect() => {
     const canvas = canvasRef.current,
     if (!canvas) return,
 
@@ -44,8 +43,7 @@ const resizeCanvas = () => {
         const rect = containerRef.current.getBoundingClientRect(),
         canvas.width = rect.width,
         canvas.height = rect.height
-      }
-    },
+      },
     resizeCanvas(),
     window.addEventListener('resize', resizeCanvas),
 
@@ -100,7 +98,6 @@ this.alpha = this.life / this.maxLife
         ctx.fill(),
         ctx.restore()
       }
-    }
 
     // Neural network node class,
 class NeuralNode {
@@ -120,7 +117,7 @@ class NeuralNode {
 
       update() {
         this.activation += (Math.random() - 0.5) * 0.1,
-        this.activation = Math.max(0, Math.min(1, this.activation)),
+        this.activation = Math.max(0, Math.min(1, this.activation),
         this.pulse = Math.sin(Date.now() * 0.001 + this.x * 0.01) * 0.5 + 0.5
       }
 
@@ -135,19 +132,16 @@ class NeuralNode {
         // Draw connections,
 this.connections.forEach(connection => {
           const distance = Math.sqrt(
-            Math.pow(this.x - connection.x, 2) + Math.pow(this.y - connection.y, 2)
-          ),
+            Math.pow(this.x - connection.x, 2) + Math.pow(this.y - connection.y, 2),
           if (distance < 150) {
             ctx.strokeStyle = `rgba(0, 255, 255, ${0.3 * this.activation * connection.activation})`,
             ctx.lineWidth = 1,
             ctx.beginPath(),
             ctx.moveTo(this.x, this.y),
             ctx.lineTo(connection.x, connection.y),
-            ctx.stroke()          }
-        }),
+            ctx.stroke()          }),
         ctx.restore()
       }
-    }
 
     // Quantum field class,
 class QuantumField {
@@ -172,20 +166,19 @@ class QuantumField {
       draw() {
         ctx.save(),
         ctx.globalAlpha = 0.1,
-        
+
         for (let i = 0, i < 3, i++) {
           const waveRadius = this.radius + Math.sin(this.phase + i * Math.PI / 3) * 20,
           const alpha = this.intensity * (1 - i / 3),
-          
+
           ctx.strokeStyle = `rgba(0, 255, 255, ${alpha})`,
           ctx.lineWidth = 2,
           ctx.beginPath(),
           ctx.arc(this.x, this.y, waveRadius, 0, Math.PI * 2),
           ctx.stroke()        }
-        
+
         ctx.restore()
       }
-    }
 
     // Holographic layer class,
 class HolographicLayer {
@@ -220,14 +213,13 @@ class HolographicLayer {
         ctx.strokeStyle = this.color,
         ctx.lineWidth = 1,
         ctx.setLineDash([5, 5]),
-        
+
         ctx.beginPath(),
         ctx.rect(-this.width / 2, -this.height / 2, this.width, this.height),
         ctx.stroke(),
-        
+
         ctx.restore()
       }
-    }
 
     // Get color based on scheme,
 function getColorSchemeColor(): string {
@@ -238,7 +230,7 @@ function getColorSchemeColor(): string {
         'holographic': ['#ff00ff#00ffff#ffff00#ff8000'],
         'multidimensional': ['#8000ff#00ff80#ff8000#0080ff']
       },
-      
+
       const schemeColors = colors[colorScheme] || colors['neural-network'],
       return schemeColors[Math.floor(Math.random() * schemeColors.length)]
     }
@@ -248,7 +240,7 @@ for (let i = 0, i < particleCount, i++) {
       particles.push(new Particle(
         Math.random() * canvas.width,
         Math.random() * canvas.height
-      ))
+      )
     }
 
     // Initialize neural network,
@@ -257,14 +249,13 @@ if (enableNeuralNetworks) {
         neuralNodes.push(new NeuralNode(
           Math.random() * canvas.width,
           Math.random() * canvas.height
-        ))
+        )
       }
       // Create connections,
 neuralNodes.forEach(node => {neuralNodes.forEach(otherNode => {
-          if (node !== otherNode && Math.random() < 0.3) {
+          if (node != otherNode && Math.random() < 0.3) {
             node.connections.push(otherNode)
-          }
-        })
+          })
       })
     }
 
@@ -274,16 +265,14 @@ if (enableQuantumEffects) {
         quantumFields.push(new QuantumField(
           Math.random() * canvas.width,
           Math.random() * canvas.height
-        ))
+        )
       }
-    }
 
     // Initialize holographic layers,
 if (enableHolographic) {
       for (let i = 0, i < 5, i++) {
-        holographicLayers.push(new HolographicLayer())
+        holographicLayers.push(new HolographicLayer()
       }
-    }
 
     // Animation loop,
 const animate = () => {
@@ -294,7 +283,7 @@ const gradient = ctx.createRadialGradient(
         canvas.width / 2, canvas.height / 2, 0,
         canvas.width / 2, canvas.height / 2, Math.max(canvas.width, canvas.height) / 2
       ),
-      
+
       const bgColors = {
         'neural-network': ['rgba(0, 0, 20, 0.8)rgba(0, 20, 40, 0.6)rgba(20, 0, 40, 0.4)'],
         'quantum-field': ['rgba(0, 20, 0, 0.8)rgba(20, 40, 0, 0.6)rgba(40, 0, 20, 0.4)'],
@@ -302,7 +291,7 @@ const gradient = ctx.createRadialGradient(
         'holographic': ['rgba(40, 0, 40, 0.8)rgba(0, 40, 40, 0.6)rgba(40, 40, 0, 0.4)'],
         'multidimensional': ['rgba(20, 0, 40, 0.8)rgba(0, 40, 20, 0.6)rgba(40, 20, 0, 0.4)']
       },
-      
+
       const currentBgColors = bgColors[colorScheme] || bgColors['neural-network'],
       gradient.addColorStop(0, currentBgColors[0]),
       gradient.addColorStop(0.5, currentBgColors[1]),
@@ -335,7 +324,7 @@ if (enableNeuralNetworks) {
       }
 
       // Update and draw particles,
-particles.forEach((particle, index) => {
+particles.forEach(particle, index) => {
         particle.update(),
         particle.draw(),
         // Remove dead particles and create new ones,
@@ -344,16 +333,14 @@ if (particle.life <= 0) {
             Math.random() * canvas.width,
             Math.random() * canvas.height
           )
-        }
-      }),
+        }),
       // Draw particle connections,
-if (intensity === 'extreme' || intensity === 'high') {particles.forEach(_(particle, i) => {
+if (intensity = = 'extreme' || intensity = = 'high') {particles.forEach(_(particle, i) => {
           particles.slice(i + 1).forEach(otherParticle => {
             const distance = Math.sqrt(
               Math.pow(particle.x - otherParticle.x, 2) + 
-              Math.pow(particle.y - otherParticle.y, 2)
-            ),
-            
+              Math.pow(particle.y - otherParticle.y, 2),
+
             if (distance < 100) {
               ctx.save(),
               ctx.globalAlpha = (100 - distance) / 100 * 0.3,
@@ -364,8 +351,7 @@ if (intensity === 'extreme' || intensity === 'high') {particles.forEach(_(partic
               ctx.lineTo(otherParticle.x, otherParticle.y),
               ctx.stroke(),
               ctx.restore()
-            }
-          })
+            })
         })      }
 
       animationFrameId = requestAnimationFrame(animate)
@@ -376,50 +362,49 @@ if (intensity === 'extreme' || intensity === 'high') {particles.forEach(_(partic
     return () => {
       window.removeEventListener('resize', resizeCanvas),
       cancelAnimationFrame(animationFrameId)
-    }
-  }, [intensity, colorScheme, particleCount, animationSpeed, enableHolographic, enableQuantumEffects, enableNeuralNetworks, enableMultidimensional]),
+    }, [intensity, colorScheme, particleCount, animationSpeed, enableHolographic, enableQuantumEffects, enableNeuralNetworks, enableMultidimensional]),
 
   return (
     <div ref={containerRef} className=&quot;fixed inset-0 w-full h-full overflow-hidden&quot;>
       <canvas,
 ref={canvasRef}
         className=&quot;absolute inset-0 w-full h-full&quot;
-        style={{ zIndex: -1 }}
+        style={ zIndex: -1 }
       />
-      
+
       {/* Additional visual effects */}
       {enableMultidimensional && (
         <div className=&quot;absolute inset-0 pointer-events-none&quot;>          <motion.div,
 className=&quot;absolute top-1/4 left-1/4 w-64 h-64 border border-cyan-400/20 rounded-full&quot;
-            animate={{
+            animate={
               scale: [1, 1.2, 1],
               rotate: [0, 180, 360],
               opacity: [0.1, 0.3, 0.1]
-            }}
-            transition={{
+            }
+            transition={
               duration: 8,
               repeat: Infinity,
               ease: &quot;easeInOut&quot
-            }}
+            }
           />
           <motion.div,
 className=&quot;absolute bottom-1/4 right-1/4 w-96 h-96 border border-purple-400/20 rounded-full&quot;
-            animate={{
+            animate={
               scale: [1.2, 1, 1.2],
               rotate: [360, 180, 0],
               opacity: [0.1, 0.3, 0.1]
-            }}
-            transition={{
+            }
+            transition={
               duration: 10,
               repeat: Infinity,
               ease: &quot;easeInOut&quot
-            }}          />
+            }          />
         </div>
       )}
       ;
       {children}
     </div>
   )
-},
+,
 
 export default UltraAdvancedFuturisticBackground2026,

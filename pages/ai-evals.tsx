@@ -32,17 +32,17 @@ export default function AIEvalsPage() {
 					</div>
 				</div>
 				<div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-16">
-					{plans.map((p) => (
+					{plans.map(p) => (
 						<div key={p.name} className="bg-black/30 border border-gray-700/50 rounded-2xl p-6">
 							<h3 className="text-2xl font-bold text-white mb-2">{p.name}</h3>
 							<div className="text-cyan-400 font-semibold mb-4">{p.price}</div>
 							<ul className="space-y-2 text-gray-300 text-sm">
-								{p.items.map((i) => (
+								{p.items.map(i) => (
 									<li key={i} className="flex items-start gap-2 w-4 h-4 mt-0.5 text-emerald-400"><Check /> <span>{i}</span></li>
-								))}
+								)}
 							</ul>
 						</div>
-					))}
+					)}
 				</div>
 				<div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
 					<div className="bg-black/20 border border-gray-700/50 rounded-2xl p-6">
@@ -74,12 +74,12 @@ export default function AIEvalsPage() {
 			</div>
 		</QuantumHolographicMatrixBackground>
 	)
-}
+
 import React from 'react',
 import Head from 'next / head',
 import QuantumHolographicMatrixBackground from '../components / ui / QuantumHolographicMatrixBackground',
 import { Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react',
-;
+
 export default /**
  * AIEvalsPage - Function description
  */
@@ -89,7 +89,7 @@ const contact_info = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com';
-},
+,
 const plans = [;
   { name: 'Startup', price: '$149 / month', items: ['5K eval calls_latency / Cost tracking_toxicity / PII checksCSV export'] },
   { name: 'Growth', price: '$499 / month', items: ['50K eval calls_custom metrics (BLEU / ROUGE / F1)CI evals via APISlack alerts'] },
@@ -111,15 +111,15 @@ return (
     </div>;
     </div>;
     <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6 max - w-6xl mx - auto mb - 16">;
-    {plans.map ((p) => (
+    {plans.map (p) => (
       <div key={p.name} className="bg - black / 30 border border - gray - 700 / 50 rounded - 2xl p - 6">;
       <h3 className="text - 2xl font - bold text - white mb - 2">{p.name}</h3>;
       <div className="text - cyan - 400 font - semibold mb - 4">{p.price}</div>;
       <ul className="space - y-2 text - gray - 300 text - sm">;
-        {p.items.map ((i) => (
-        <li key={i} className="flex items - start gap - 2 w - 4 h - 4 mt - 0.5 text - emerald - 400"><Check /> <span>{i}</span></li>))}
+        {p.items.map (i) => (
+        <li key={i} className="flex items - start gap - 2 w - 4 h - 4 mt - 0.5 text - emerald - 400"><Check /> <span>{i}</span></li>)}
         </ul>;
-      </div>))}
+      </div>)}
     </div>;
     <div className="max - w-5xl mx - auto grid grid - cols - 1 md:grid - cols - 3 gap - 6">;
     <div className="bg - black / 20 border border - gray - 700 / 50 rounded - 2xl p - 6">;
@@ -150,4 +150,3 @@ return (
     </div>;
   </div>;
   </QuantumHolographicMatrixBackground>);
-}

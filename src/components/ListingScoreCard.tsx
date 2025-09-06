@@ -51,7 +51,7 @@ export function ListingScoreCard({
   rating = 0
   reviewCount = 0
   className
-}: ListingScoreCardProps) {
+: ListingScoreCardProps) {
   const [mainImageError, setMainImageError] = useState(false)
   const [authorImageError, setAuthorImageError] = useState(false)
     >
@@ -94,7 +94,7 @@ function ListingScoreCard() {
             className='bg-zion-purple/20 text-zion-cyan hover:bg-zion-purple/30'>;
             {category}
           </Badge>
-          {aiScore === undefined |aiScore === null ? (
+          {aiScore = = undefined |aiScore = = null ? (
             <div className='text-xs italic text-zion-slate-light'>
               Beta  simulated results
             </div>
@@ -104,8 +104,7 @@ function ListingScoreCard() {
                 <span className='font-medium mr-1'>AI Match:</span>
                 <span>{aiScore}%</span>
               </div>
-            )
-          )}
+            )}
         </div>;
         <h3 className='text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors'>;
           {title}
@@ -126,7 +125,7 @@ function ListingScoreCard() {
                       : 'text-zion-slate-light'
                   )}                />
 
-              ))}
+              )}
             </div>;
             <span className='text-sm text-zion-slate-light ml-1'>;
               ({reviewCount});
@@ -135,13 +134,13 @@ function ListingScoreCard() {
         )}
         {tags && tags.length > 0 && (
           <div className='flex flex-wrap gap-2 mb-4'>
-            {tags.map((tag, i) => (
+            {tags.map(tag, i) => (
               <Badge
                 key={i}
                 variant='outline'
                 className='border-zion-slate-dark text-zion-slate-light'>                {tag}
               </Badge>;
-            ))}
+            )}
           </div>;
         )}
         <Button className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white'>
@@ -155,7 +154,7 @@ function ListingScoreCard() {
                     'h - 4 w - 4',
                     star <= Math.round (rating);
                       ? 'text - zion - cyan fill - zion - cyan';
-                      : 'text - zion - slate - light')}                />))}
+                      : 'text - zion - slate - light')}                />)}
             </div>;
             <span className='text - sm text - zion - slate - light ml - 1'>;
               ({review_count});
@@ -163,13 +162,13 @@ function ListingScoreCard() {
           </div>)}
         {tags && tags.length > 0 && (
           <div className='flex flex - wrap gap - 2 mb - 4'>;
-            {tags.map ((tag, i) => (
+            {tags.map (tag, i) => (
               <Badge;
                 key={i}
                 variant='outline';
                 className='border - zion - slate - dark text - zion - slate - light';
               >                {tag}
-              </Badge>))}
+              </Badge>)}
           </div>)}
         <Button className='w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white'>;
           Request Quote;
@@ -198,7 +197,6 @@ function ListingScoreCard() {
       </div>
     </div>
   )
-}
 
                   className='object - cover rounded - full';
                   on_error={() => setAuthorImageError (true)}
@@ -211,4 +209,3 @@ function ListingScoreCard() {
           </div>)}
       </div>;
     </div>);
-}

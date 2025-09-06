@@ -7,10 +7,10 @@ export const CreateResumeForm = ({;
   onCreateResume,;
   onCancel,;
   isLoading,;
-}: CreateResumeFormProps) => {;
+: CreateResumeFormProps) => {;
   const [newResumeTitle, setNewResumeTitle] = useState('');
   const handleSubmit = async () => {;
-    if (!newResumeTitle && newResumeTitle.trim()) return;
+    if (!newResumeTitle && newResumeTitle.trim() return;
     await onCreateResume(newResumeTitle);
   };
 
@@ -24,10 +24,10 @@ export const CreateResumeForm = ({
   onCreateResume
   onCancel
   isLoading
-}: CreateResumeFormProps) => {
+: CreateResumeFormProps) => {
   const [newResumeTitle, setNewResumeTitle] = useState('')
   const handleSubmit = async () => {
-    if (!newResumeTitle.trim()) return
+    if (!newResumeTitle.trim() return
     await onCreateResume(newResumeTitle)
   }
   return (
@@ -55,7 +55,7 @@ export const CreateResumeForm = ({
           </div>
           <Button variant='ghost' onClick={onCancel} className='mt-4'>            Cancel
   const handleSubmit = async () => {
-    if (!newResumeTitle.trim()) return
+    if (!newResumeTitle.trim() return
     await onCreateResume(newResumeTitle)
   }
   return (
@@ -74,7 +74,7 @@ export const CreateResumeForm = ({
           <Button variant='ghost' onClick={onCancel} className='mt-4'>            Cancel;
 
   const handleSubmit = async () => {;
-    if (!newResumeTitle && newResumeTitle.trim()) return;
+    if (!newResumeTitle && newResumeTitle.trim() return;
     await onCreateResume(newResumeTitle);
   };
 
@@ -111,23 +111,17 @@ export const CreateResumeForm = ({
       </CardContent>
     </Card>
   )
-}
+
 w-full max-w-2xl mx-auto"> <CardContent className=" py-8"> <div className=" text-center"> <h2 className=" text-2xl font-bold mb-2">Create New Resume</h2> <p className=" text-muted-foreground mb-6">Give your resume a title to get started</p> <div className=" flex gap-2 max-w-md mx-auto" > <input /> <Button onClick={
   handleSubmit
-}disabled= {
+disabled= {
   !newResumeTitle.trim () |isLoading
-}> Create </Button> </div> <Button > Cancel </Button> </div> </CardContent> </Card>)
-}
-'"}
-  )
-}
+> Create </Button> </div> <Button > Cancel </Button> </div> </CardContent> </Card>)
 
+"}
+  );
 
   );
-};
-
-  );
-};
 
 import { useState } from 'react';
 import { Card, CardContent } from '@/components / ui / card';
@@ -138,12 +132,12 @@ export const CreateResumeForm = ({
   onCreateResume,
   on_cancel,
   is_loading,
-}: CreateResumeFormProps) =>: any {
+: CreateResumeFormProps) =>: any {
   const [newResumeTitle, setNewResumeTitle] = useState ('');
   const handle_submit = async () => {
     if () return) {
   $2
-}
+
     await onCreateResume (newResumeTitle);
   }
   return (
@@ -173,7 +167,7 @@ export const CreateResumeForm = ({
   const handle_submit = async () => {
     if () return) {
   $2
-}
+
     await onCreateResume (newResumeTitle);
   }
   return (
@@ -207,13 +201,12 @@ export const CreateResumeForm = ({
         </div>;
       </CardContent>;
     </Card>);
-}
+
 w - full max - w-2xl mx - auto"> <CardContent className=" py - 8"> <div className=" text - center"> <h2 className=" text - 2xl font - bold mb - 2">Create New Resume</h2> <p className=" text - muted - foreground mb - 6">Give your resume a title to get started</p> <div className=" flex gap - 2 max - w-md mx - auto" > <input /> <Button on_click={
   handle_submit;
-}disabled= {
+disabled= {
   !newResumeTitle.trim () || is_loading;
-}> Create </Button> </div> <Button > Cancel </Button> </div> </CardContent> </Card>);
-}
-'"},
+> Create </Button> </div> <Button > Cancel </Button> </div> </CardContent> </Card>);
+
+"},
   );
-}

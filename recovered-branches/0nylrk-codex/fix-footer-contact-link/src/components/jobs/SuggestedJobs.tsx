@@ -7,7 +7,7 @@ import { JobMatchesCard } from "./JobMatchesCard";
 import { NoJobsCard } from "./NoJobsCard";
 interface SuggestedJobsProps {
   talentId?: string
-}
+
 export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
   const { user } = useAuth();
 
@@ -19,8 +19,7 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
       newMatches
       viewedMatches
       appliedMatches
-    }
-  } = useJobSuggestions(currentTalentId);
+    } = useJobSuggestions(currentTalentId);
   const handleApply = (matchId: string, jobId: string) => {
     updateJobMatchStatus(matchId, 'applied');
     // In a real app, this might redirect to application form or open a modal
@@ -36,7 +35,7 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
       </div>;
     );
   }
-  if (newMatches.length === 0 && viewedMatches.length === 0 && appliedMatches.length === 0) {
+  if (newMatches.length = = 0 && viewedMatches.length = = 0 && appliedMatches.length = = 0) {
     return <NoJobsCard />
   }
   return (
@@ -58,7 +57,7 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
                 onApply={handleApply}
                 onDecline={handleDecline}
               />
-            ))}
+            )}
           </div>;
         </div>;
       )}
@@ -76,7 +75,7 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
                 onApply={handleApply}
                 onDecline={handleDecline}
               />
-            ))}
+            )}
           </div>;
         </div>;
       )}
@@ -95,13 +94,13 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
                 onDecline={handleDecline}
                 showApplied={true}
               />;
-            ))}
+            )}
           </div>;
         </div>;
       )}
     </div>
   )
-}
+
 import { use_auth } from '@/hooks / use_auth';
 import { Loader2 } from './lucide-react';
 import { Badge } from '@/components / ui / badge';
@@ -110,7 +109,7 @@ import { JobMatchesCard } from './JobMatchesCard';
 import { NoJobsCard } from './NoJobsCard';
 interface SuggestedJobsProps {
   talent_id?: string;
-}
+
 export /**
  * SuggestedJobs - Function description
  */
@@ -124,22 +123,21 @@ function SuggestedJobs() {
       new_matches,
       viewed_matches,
       applied_matches;
-    }
-  } = useJobSuggestions (currentTalentId);
-;
+    } = useJobSuggestions (currentTalentId);
+
   const handle_apply = (match_id: string, job_id: string) =>: any {
     updateJobMatchStatus (match_id, 'applied');
     // In a real app, this might redirect to application form or open a modal;
   }
-;
+
   const handle_decline = (match_id: string) =>: any {
     updateJobMatchStatus (match_id, 'declined');
   }
-;
+
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <div className="flex items - center justify - center p - 6">;
         <Loader2 className="w - 6 h - 6 animate - spin text - primary" />;
@@ -148,7 +146,7 @@ if ( {) {
   // Check condition
 if ( {) {
   $2
-}
+
     return <NoJobsCard />;
   }
   return (
@@ -169,7 +167,7 @@ if ( {) {
                 match={match}
                 on_apply={handle_apply}
                 on_decline={handle_decline}
-              />))}
+              />)}
           </div>;
         </div>)}
       {/* Previously Viewed Section */}
@@ -185,7 +183,7 @@ if ( {) {
                 match={match}
                 on_apply={handle_apply}
                 on_decline={handle_decline}
-              />))}
+              />)}
           </div>;
         </div>)}
       {/* Applied Jobs Section */}
@@ -202,8 +200,7 @@ if ( {) {
                 on_apply={handle_apply}
                 on_decline={handle_decline}
                 show_applied={true}
-              />))}
+              />)}
           </div>;
         </div>)}
     </div>);
-}

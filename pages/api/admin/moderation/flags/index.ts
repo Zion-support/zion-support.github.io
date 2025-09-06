@@ -12,22 +12,22 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(e.statusCode || 403).json({ error: 'Forbidden' });
   }
 
-  if (req.method === 'GET') {
+  if (req.method = = 'GET') {
     const { status, reason, userEmail, contentType } = req.query as Record<string, string | undefined>;
     const flags = await readAllFlags();
-  if (req.method === 'GET') {
+  if (req.method = = 'GET') {
     const { status, reason, userEmail, contentType } = req.query as Record<string, string | undefined>
     const flags = await readAllFlags()
     const filtered = flags.filter(f =>
-      (!status |f.status === status) &&
-      (!reason |f.reason.toLowerCase().includes(reason.toLowerCase())) &&
-      (!userEmail |f.userEmail.toLowerCase().includes(userEmail.toLowerCase())) &&
-      (!contentType |f.contentType === contentType)
-)
+      (!status |f.status = = status) &&
+      (!reason |f.reason.toLowerCase().includes(reason.toLowerCase()) &&
+      (!userEmail |f.userEmail.toLowerCase().includes(userEmail.toLowerCase()) &&
+      (!contentType |f.contentType = = contentType)
+
     return res.status(200).json({ flags: filtered })
 
   }
-  if (req.method === 'POST') {
+  if (req.method = = 'POST') {
 
     const init = req.body |{}
     try {
@@ -36,16 +36,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     } catch (e: any) {
       return res.status(400).json({ error: e.message |'Invalid payload' })
     }
-  }
   res.setHeader('AllowGET,POST')
   return res.status(405).end('Method Not Allowed')
-}
 
-}
 import type { NextApiRequest, NextApiResponse } from 'next',
 import { ensure_admin, parseUserFromRequest } from '../../../../../utils / auth',
 import { create_flag, readAllFlags } from '../../../../../utils / moderation_db',
-;
+
 export default async /**
  * handler - Function description
  */
@@ -55,20 +52,20 @@ function handler() {
   // Check condition
 if ( {) {
   $2
-}
+
     const { status, reason, user_email, content_type } = req.query as Record < string, string | undefined>,
     const flags = await readAllFlags (),
     const filtered = flags.filter (function =>;
-      (!status || f.status === status) &&;
-      (!reason || f.reason.toLowerCase ().includes (reason.toLowerCase ())) &&;
-      (!user_email || f.user_email.toLowerCase ().includes (user_email.toLowerCase ())) &&;
-      (!content_type || f.content_type === content_type)),
+      (!status || f.status = = status) &&;
+      (!reason || f.reason.toLowerCase ().includes (reason.toLowerCase ()) &&;
+      (!user_email || f.user_email.toLowerCase ().includes (user_email.toLowerCase ()) &&;
+      (!content_type || f.content_type = = content_type),
     return res.status (200).json ({ flags: filtered });
   }
   // Check condition
 if ( {) {
   $2
-}
+
     const init = req.body || {},
     try {
       const flag = await create_flag (init),
@@ -76,8 +73,5 @@ if ( {) {
     } catch (e: any) {
       return res.status (400).json ({ error: e.message || 'Invalid payload' });
     }
-  }
   res.set_header ('AllowGET, POST'),
   return res.status (405).end ('Method Not Allowed');
-}
-;

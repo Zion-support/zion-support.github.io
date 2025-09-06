@@ -3,7 +3,7 @@ import React from "react",;
 import { cn } from "@/lib/utils",;
 import { Button } from "@/components/ui/button",;
 import { Link } from "react-router-dom",;
-;
+
 interface EmptyStateProps {;
   icon:React.ReactNode,;
   title:string,;
@@ -19,8 +19,7 @@ interface EmptyStateProps {;
     onClick?:() => void;
   },;
   className?:string,;
-}
-;
+
 export function EmptyState({;
   icon,;
   title,;
@@ -40,7 +39,7 @@ export function EmptyState({;
       </div>;
       <h3 className="text-2xl font-semibold text-white mb-3">{title}</h3>;
       <p className="text-zion-slate text-lg mb-8 max-w-md">{description}</p>;
-;
+
       <div className="flex flex-col sm:flex-row gap-4">;
         {action && (;
           action.href ? (;
@@ -57,7 +56,7 @@ export function EmptyState({;
             </Button>;
           );
         )}
-;
+
         {secondaryAction && (;
           secondaryAction.href ? (;
             <Button asChild variant="outline" size="lg" className="border-zion-blue-light hover:bg-zion-blue-light">;
@@ -85,23 +84,22 @@ action?: {
   text: string;
 href?: string;
 onClick?: () => void 
-};
+;
 secondaryAction?: {
   text: string;
 href?: string;
 onClick?: () => void 
-};
+;
 className?: string 
-}export function EmptyState ({
+export function EmptyState ({
   icon, title, description, action, secondaryAction, className 
-}: EmptyStateProps) {
+: EmptyStateProps) {
   return (<div className= {
   cn (> {
   action.text 
-}</Button>) ) 
-}{
+</Button>) 
+{
   secondaryAction && (secondaryAction.href ? (> {
   secondaryAction.text 
-}</Button>) ) 
-}</div> </div>) 
-}
+</Button>) 
+</div> </div>) 

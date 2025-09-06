@@ -16,7 +16,7 @@ export function MobileResumeBuilder() {
       <BottomNavigation />
     </div>
   )
-}
+
 import React from './react';
 import { MobileHeader } from '../components / common / MobileHeader';
 import { BottomNavigation } from '../components / common / BottomNavigation';
@@ -36,4 +36,3 @@ function MobileResumeBuilder() {
       </main>;
       <BottomNavigation />;
     </div>);
-}

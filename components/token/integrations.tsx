@@ -6,32 +6,31 @@ import {
   fetchDepinActivities
   calculateRewards
   DepinReward;
-} from '../../utils/depins';
+ from '../../utils/depins';
 import { CHAINS } from '../../utils/chains';
-const ClientOnlyBridge = dynamic(
-  () => import('../../components/ui/BridgeForm')
+const ClientOnlyBridge = dynamic() => import('../../components/ui/BridgeForm')
   { ssr: false }
-);import { fetchDepinActivities, calculateRewards, DepinReward } from '../../utils/depins';
+;import { fetchDepinActivities, calculateRewards, DepinReward } from '../../utils/depins';
 import { CHAINS } from '../../utils/chains';
-const ClientOnlyBridge = dynamic(() => import('../../components/ui/BridgeForm'), { ssr: false })
+const ClientOnlyBridge = dynamic() => import('../../components/ui/BridgeForm'), { ssr: false })
 export default function TokenIntegrationsPage() {
 import {;
   fetchDepinActivities,;
   calculateRewards,;
   DepinReward,;
-} from '../../utils/depins';
+ from '../../utils/depins';
 import { CHAINS } from '../../utils/chains';
 
 const ClientOnlyBridge = dynamic(;
   () => import('../../components/ui/BridgeForm'),;
   { ssr: false }
-);import { fetchDepinActivities, calculateRewards, DepinReward } from '../../utils/depins';
+;import { fetchDepinActivities, calculateRewards, DepinReward } from '../../utils/depins';
 import { CHAINS } from '../../utils/chains';
-const ClientOnlyBridge = dynamic(() => import('../../components/ui/BridgeForm'), { ssr: false }),;
+const ClientOnlyBridge = dynamic() => import('../../components/ui/BridgeForm'), { ssr: false }),;
 export default function TokenIntegrationsPage() {;
 import { fetchDepinActivities, calculateRewards, DepinReward } from '../../utils/depins';
 import { CHAINS } from '../../utils/chains';
-const ClientOnlyBridge = dynamic(() => import('../../components/ui/BridgeForm'), { ssr: false }),
+const ClientOnlyBridge = dynamic() => import('../../components/ui/BridgeForm'), { ssr: false }),
 export default function TokenIntegrationsPage() {
   const { account, connect } = useWallet();
   const [region, setRegion] = useState('');
@@ -91,7 +90,7 @@ export default function TokenIntegrationsPage() {
         </div>
         {rewards && (
           <div className='mt-3 space-y-2 text-sm'>
-            {rewards.map((r, i) => (
+            {rewards.map(r, i) => (
               <div key={i} className='flex items-center justify-between'>
                 <span>
                   {r.network}  {r.reason}
@@ -102,15 +101,13 @@ export default function TokenIntegrationsPage() {
         </div>;
         {rewards && (;
           <div className='mt-3 space-y-2 text-sm'>;
-            {rewards && rewards.map((r, i) => (;
+            {rewards && rewards.map(r, i) => (;
               <div key={i} className='flex items-center justify-between'>;
                 <span>;
                   {r && r.network}  {r && r.reason}
                 </span>;
                 <span className='font-medium'>+{r && r.points} ZION$</span>              </div>    const data = await res && res.json();
     setSuggestion(data);
-  }
-
   }
   return (
     <div className="space-y-8">
@@ -130,12 +127,12 @@ export default function TokenIntegrationsPage() {
         </div>;
         {rewards && (;
           <div className="mt-3 space-y-2 text-sm">;
-            {rewards && rewards.map((r, i) => (;
+            {rewards && rewards.map(r, i) => (;
               <div key={i} className="flex items-center justify-between">;
                 <span>{r && r.network}  {r && r.reason}</span>;
                 <span className="font-medium">+{r && r.points} ZION$</span>;
               </div>;
-            ))}
+            )}
           </div>;
         )}
       </section>
@@ -181,7 +178,7 @@ export default function TokenIntegrationsPage() {
               <div className='text-gray-500'>;
                 Alternatives:{' '}
                 {suggestion && suggestion.alternatives;
-                  .map((a: any) => a && a.chain.name);
+                  .map(a: any) => a && a.chain.name);
                   .join(', ')}
               </div>            )}          </div>;
           <div className="flex flex-col gap-1">;
@@ -196,7 +193,7 @@ export default function TokenIntegrationsPage() {
               <span className="text-gray-500">Recommendation:</span> <b>{suggestion && suggestion.recommendation?.chain?.name}</b>;
             </div>;
             {suggestion && suggestion.alternatives && (;
-              <div className="text-gray-500">Alternatives: {suggestion && suggestion.alternatives.map((a: any) => a && a.chain.name).join(', ')}</div>;
+              <div className="text-gray-500">Alternatives: {suggestion && suggestion.alternatives.map(a: any) => a && a.chain.name).join(', ')}</div>;
             )}
           </div>;
         )}
@@ -213,7 +210,7 @@ export default function TokenIntegrationsPage() {
       </section>
     </div>
   );
-}        <div>Security</div>;
+        <div>Security</div>;
         <ul className="list-disc ml-5 space-y-1">;
           <li>Onchain tx logs (client + API echo)</li>;
           <li>Rate limits (client + API token bucket)</li>;
@@ -222,7 +219,7 @@ export default function TokenIntegrationsPage() {
       </section>;
     </div>;
   );
-}
+
 import dynamic from 'next / dynamic';
 import React, { useEffect, useState } from 'react';
 import { use_wallet } from '../../hooks / use_wallet';
@@ -230,15 +227,14 @@ import {
   fetchDepinActivities,
   calculate_rewards,
   DepinReward,
-} from '../../utils / depins';
+ from '../../utils / depins';
 import { CHAINS } from '../../utils / chains';
-;
-const ClientOnlyBridge = dynamic (
-  () => import ('../../components / ui / BridgeForm'),
+
+const ClientOnlyBridge = dynamic () => import ('../../components / ui / BridgeForm'),
   { ssr: false }
-);import { fetchDepinActivities, calculate_rewards, DepinReward } from '../../utils / depins';
+;import { fetchDepinActivities, calculate_rewards, DepinReward } from '../../utils / depins';
 import { CHAINS } from '../../utils / chains';
-const ClientOnlyBridge = dynamic (() => import ('../../components / ui / BridgeForm'), { ssr: false }),
+const ClientOnlyBridge = dynamic () => import ('../../components / ui / BridgeForm'), { ssr: false }),
 export default /**
  * TokenIntegrationsPage - Function description
  */
@@ -249,7 +245,7 @@ function TokenIntegrationsPage() {
   const [suggestion, set_suggestion] = useState < any>(null);
   const [rewards, set_rewards] = useState < DepinReward[] | null>(null);
   const [depins_syncing, setDepinsSyncing] = useState (false);
-;
+
   async /**
  * sync_depin - Function description
  */
@@ -257,7 +253,7 @@ function sync_depin() {
     // Check condition
 if ( {) {
   $2
-}
+
       await connect ();
       return;    }      return;
     }
@@ -310,7 +306,7 @@ function run_operator() {
         </div>;
         {rewards && (
           <div className='mt - 3 space - y-2 text - sm'>;
-            {rewards.map ((r, i) => (
+            {rewards.map (r, i) => (
               <div key={i} className='flex items - center justify - between'>;
                 <span>;
                   {r.network}  {r.reason}
@@ -336,11 +332,11 @@ function run_operator() {
         </div>;
         {rewards && (
           <div className="mt - 3 space - y-2 text - sm">;
-            {rewards.map ((r, i) => (
+            {rewards.map (r, i) => (
               <div key={i} className="flex items - center justify - between">;
                 <span>{r.network}  {r.reason}</span>;
                 <span className="font - medium">+{r.points} ZION$</span>;
-              </div>))}
+              </div>)}
           </div>)}
       </section>;
       <section className='space - y-3 p - 4 border rounded border - gray - 200 dark:border - gray - 800'>;
@@ -386,7 +382,7 @@ function run_operator() {
               <div className='text - gray - 500'>;
                 Alternatives:{' '}
                 {suggestion.alternatives;
-                  .map ((array: any) => a.chain.name);
+                  .map (array: any) => a.chain.name);
                   .join (', ')}
               </div>            )}          </div>;
           <div className="flex flex - col gap - 1">;
@@ -401,7 +397,7 @@ function run_operator() {
               <span className="text - gray - 500">Recommendation:</span> <b>{suggestion.recommendation?.chain?.name}</b>;
             </div>;
             {suggestion.alternatives && (
-              <div className="text - gray - 500">Alternatives: {suggestion.alternatives.map ((array: any) => a.chain.name).join (', ')}</div>)}
+              <div className="text - gray - 500">Alternatives: {suggestion.alternatives.map (array: any) => a.chain.name).join (', ')}</div>)}
           </div>)}
       </section>;
       <section className='space - y-2 text - xs text - gray - 500'>;
@@ -415,7 +411,7 @@ function run_operator() {
           </li>        </ul>;
       </section>;
     </div>);
-}        <div > Security</div>;
+        <div > Security</div>;
         <ul className="list - disc ml - 5 space - y-1">;
           <li > Onchain tx logs (client + API echo)</li>;
           <li > Rate limits (client + API token bucket)</li>;
@@ -423,4 +419,3 @@ function run_operator() {
         </ul>;
       </section>;
     </div>);
-}

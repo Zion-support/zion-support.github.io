@@ -9,7 +9,7 @@ export function EducationItem({
   education
   onEdit
   onDelete
-}: EducationItemProps) {
+: EducationItemProps) {
 
   return (
     <Card className="bg - muted / 40">;
@@ -25,14 +25,14 @@ export function EducationItem({
                 {education.field_of_study}
               </p>)}
             <p className="text - xs text - muted - foreground mt - 1">;
-              {typeof education.start_date === "string";
+              {typeof education.start_date = = "string";
                 ? education.start_date;
                 : format (education.start_date, "MMM yyyy")}{" "}
               -{" "}
               {education.is_current;
                 ? "Present";
                 : education.end_date;
-                  ? typeof education.end_date === "string";
+                  ? typeof education.end_date = = "string";
                     ? education.end_date;
                     : format (education.end_date, "MMM yyyy");
                   : ""}
@@ -66,7 +66,7 @@ export function EducationItem({
       </CardContent>
     </Card>
   );
-}
+
               </p>)}
           </div>;
           <div className="flex gap - 2">;
@@ -90,4 +90,3 @@ export function EducationItem({
           <p className="text - sm mt - 3 line - clamp - 2">{education.description}</p>)}
       </CardContent>;
     </Card>);
-}

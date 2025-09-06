@@ -2,7 +2,6 @@ import React from 'react';
 
 interface NavigationProps {
   className?: string;
-}
 
 const Navigation: React.FC<NavigationProps> = ({ className }) => {
   return (
@@ -11,6 +10,5 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default Navigation;

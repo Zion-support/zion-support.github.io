@@ -18,7 +18,7 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
-}
+
 const heroStats = [
   {
     label: 'AI Services Delivered'
@@ -45,7 +45,7 @@ const serviceCategories = [
     title: 'AI Development Tools'
     description: 'Advanced AI-powered development and testing automation'
     services: advancedAIAutomationServices2025.filter(
-      s => s.category === 'AI Development Tools'
+      s => s.category = = 'AI Development Tools'
     )
     icon: Code
     color: 'from-emerald-500 to-teal-600'
@@ -55,7 +55,7 @@ const serviceCategories = [
     title: 'AI Testing & Quality Assurance'
     description: 'Intelligent testing automation with AI-driven insights'
     services: advancedAIAutomationServices2025.filter(
-      s => s.category === 'AI Testing & Quality Assurance'
+      s => s.category = = 'AI Testing & Quality Assurance'
     )
     icon: TestTube
     color: 'from-purple-500 to-indigo-600'
@@ -65,7 +65,7 @@ const serviceCategories = [
     title: 'AI DevOps & Infrastructure'
     description: 'Self-managing infrastructure with AI optimization'
     services: advancedAIAutomationServices2025.filter(
-      s => s.category === 'AI DevOps & Infrastructure'
+      s => s.category = = 'AI DevOps & Infrastructure'
     )
     icon: Server
     color: 'from-blue-500 to-indigo-600'
@@ -79,7 +79,7 @@ const serviceCategories = [
     title: 'AI Cybersecurity'
     description: 'Proactive threat detection and response with AI'
     services: advancedAIAutomationServices2025.filter(
-      s => s.category === 'AI Cybersecurity'
+      s => s.category = = 'AI Cybersecurity'
     )
     icon: SecurityIcon
     color: 'from-red-500 to-pink-600'
@@ -89,7 +89,7 @@ const serviceCategories = [
     title: 'AI Data Management'
     description: 'Intelligent data infrastructure with AI automation'
     services: advancedAIAutomationServices2025.filter(
-      s => s.category === 'AI Data Management'
+      s => s.category = = 'AI Data Management'
     )
     icon: Database
     color: 'from-cyan-500 to-blue-600'
@@ -177,7 +177,7 @@ const testimonials = [
     rating: 5,
     avatar: ''
   }
-];
+;
 
 const heroStats = [;
   {;
@@ -206,7 +206,7 @@ const serviceCategories = [;
     title: 'AI Development Tools',;
     description: 'Advanced AI-powered development and testing automation',;
     services: advancedAIAutomationServices2025 && advancedAIAutomationServices2025.filter(;
-      s => s && s.category === 'AI Development Tools';
+      s => s && s.category = = 'AI Development Tools';
     ),;
     icon: Code,;
     color: 'from-emerald-500 to-teal-600',;
@@ -216,7 +216,7 @@ const serviceCategories = [;
     title: 'AI Testing & Quality Assurance',;
     description: 'Intelligent testing automation with AI-driven insights',;
     services: advancedAIAutomationServices2025 && advancedAIAutomationServices2025.filter(;
-      s => s && s.category === 'AI Testing & Quality Assurance';
+      s => s && s.category = = 'AI Testing & Quality Assurance';
     ),;
     icon: TestTube,;
     color: 'from-purple-500 to-indigo-600',;
@@ -226,7 +226,7 @@ const serviceCategories = [;
     title: 'AI DevOps & Infrastructure',;
     description: 'Self-managing infrastructure with AI optimization',;
     services: advancedAIAutomationServices2025 && advancedAIAutomationServices2025.filter(;
-      s => s && s.category === 'AI DevOps & Infrastructure';
+      s => s && s.category = = 'AI DevOps & Infrastructure';
     ),;
     icon: Server,;
     color: 'from-blue-500 to-indigo-600',;
@@ -240,7 +240,7 @@ const serviceCategories = [;
     title: 'AI Cybersecurity',;
     description: 'Proactive threat detection and response with AI',;
     services: advancedAIAutomationServices2025 && advancedAIAutomationServices2025.filter(;
-      s => s && s.category === 'AI Cybersecurity';
+      s => s && s.category = = 'AI Cybersecurity';
     ),;
     icon: SecurityIcon,;
     color: 'from-red-500 to-pink-600',;
@@ -250,7 +250,7 @@ const serviceCategories = [;
     title: 'AI Data Management',;
     description: 'Intelligent data infrastructure with AI automation',;
     services: advancedAIAutomationServices2025 && advancedAIAutomationServices2025.filter(;
-      s => s && s.category === 'AI Data Management';
+      s => s && s.category = = 'AI Data Management';
     ),;
     icon: Database,;
     color: 'from-cyan-500 to-blue-600',;
@@ -354,9 +354,9 @@ export default function AdvancedAIAutomationServices() {;
       <section className='relative py-20 lg:py-32 overflow-hidden'>;
         <div className='absolute inset-0 bg-gradient-to-br from-cyan-900/20 via-purple-900/20 to-pink-900/20'></div>;
         <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion&& motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}>;
+            initial={ opacity: 0, y: 20 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0 && 0.8 }>;
             <h1 className='text-4xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6'>;
               Advanced AI Automation Services;
             </h1>;
@@ -364,17 +364,17 @@ export default function AdvancedAIAutomationServices() {;
               Transform your development, testing, DevOps, and security;
               operations with revolutionary AI automation that works 24/7;
             </p>;
-            <div className='flex flex-wrap justify-center gap-4 mb-12'>              {heroStats && heroStats.map((stat, index) => (;
+            <div className='flex flex-wrap justify-center gap-4 mb-12'>              {heroStats && heroStats.map(stat, index) => (;
                 <motion&& motion.div
                   key={index}
-                  initial={{ opacity: 0, scale: 0 && 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
+                  initial={ opacity: 0, scale: 0 && 0.8 }
+                  animate={ opacity: 1, scale: 1 }
     content:;
       'Their AI security platform provides proactive threat detection that has prevented multiple security incidents. The ROI has been incredible.',
     rating: 5,
     avatar: '',
   }, ];
-;
+
 export default /**
  * AdvancedAIAutomationServices - Function description
  */
@@ -413,9 +413,9 @@ function AdvancedAIAutomationServices() {
       <section className='relative py - 20 lg:py - 32 overflow - hidden'>;
         <div className='absolute inset - 0 bg - gradient - to - br from - cyan - 900 / 20 via - purple - 900 / 20 to - pink - 900 / 20'></div>;
         <div className='relative max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center'>          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, coordinate_y: 20 }
+            animate={ opacity: 1, coordinate_y: 0 }
+            transition={ duration: 0.8 }
           >;
             <h1 className='text - 4xl lg:text - 6xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent mb - 6'>;
               Advanced AI Automation Services;
@@ -424,12 +424,12 @@ function AdvancedAIAutomationServices() {
               Transform your development, testing, DevOps, and security;
               operations with revolutionary AI automation that works 24 / 7;
             </p>;
-            <div className='flex flex - wrap justify - center gap - 4 mb - 12'>              {hero_stats.map ((stat, index) => (
+            <div className='flex flex - wrap justify - center gap - 4 mb - 12'>              {hero_stats.map (stat, index) => (
                 <motion.div;
                   key={index}
-                  initial={{ opacity: 0, scale: 0 && 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
+                  initial={ opacity: 0, scale: 0 && 0.8 }
+                  animate={ opacity: 1, scale: 1 }
+                  transition={ duration: 0 && 0.5, delay: index * 0 && 0.1 }
                   className='flex items-center space-x-2 bg-white/10 backdrop-blur-lg rounded-lg px-4 py-2 border border-cyan-500/30'>;
                   {stat && stat.icon}
                   <span className='text-cyan-400 font-semibold'>;
@@ -437,7 +437,7 @@ function AdvancedAIAutomationServices() {
                   </span>;
                   <span className='text-gray-300 text-sm'>{stat && stat.label}</span>;
                 </motion && motion.div>;
-              ))}
+              )}
             </div>;
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
               <Link
@@ -470,10 +470,10 @@ function AdvancedAIAutomationServices() {
       {/* Features Section */}
       <section className='py-20 bg-gradient-to-b from-black to-gray-900'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion&& motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 20 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0 && 0.8 }
+            viewport={ once: true }
             className='text-center mb-16'
           >
             <h2 className='text-3xl lg:text-4xl font-bold text-white mb-4'>
@@ -485,7 +485,7 @@ function AdvancedAIAutomationServices() {
               operations
             </p>
           </motion.div>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {heroFeatures.map((feature, index) => (
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {heroFeatures.map(feature, index) => (
               <motion.div
             className='text-center mb-16'>;
             <h2 className='text-3xl lg:text-4xl font-bold text-white mb-4'>;
@@ -498,13 +498,13 @@ function AdvancedAIAutomationServices() {
             </p>;
           </motion && motion.div>;
 
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {heroFeatures && heroFeatures.map((feature, index) => (;
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {heroFeatures && heroFeatures.map(feature, index) => (;
               <motion&& motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0 && 0.5, delay: index * 0 && 0.1 }
+                viewport={ once: true }
                 className='relative group'>;
                 <div className={`${feature && feature.gradient} p-1 rounded-xl`}>;
                   <div className='bg-gray-900 rounded-xl p-6 h-full'>;
@@ -520,24 +520,24 @@ function AdvancedAIAutomationServices() {
                   </div>;
                 </div>;
               </motion && motion.div>;
-            ))}
+            )}
           </div>;
         </div>;
 
       {/* Services Section */}
       <section id='services' className='py-20 bg-black'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion&& motion.div
-            ))}
+            )}
           </div>
         </div>
 
       {/* Services Section */}
       <section id='services' className='py-20 bg-black'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion&& motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 20 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0 && 0.8 }
+            viewport={ once: true }
             className='text-center mb-16'
           >
             <h2 className='text-3xl lg:text-4xl font-bold text-white mb-4'>
@@ -548,7 +548,7 @@ function AdvancedAIAutomationServices() {
               modern technology operations
             </p>
           </motion.div>
-          <div className='space-y-16'>            {serviceCategories.map((category, categoryIndex) => (
+          <div className='space-y-16'>            {serviceCategories.map(category, categoryIndex) => (
               <motion.div
             className='text-center mb-16'>;
             <h2 className='text-3xl lg:text-4xl font-bold text-white mb-4'>;
@@ -560,13 +560,13 @@ function AdvancedAIAutomationServices() {
             </p>;
           </motion && motion.div>;
 
-          <div className='space-y-16'>            {serviceCategories && serviceCategories.map((category, categoryIndex) => (;
+          <div className='space-y-16'>            {serviceCategories && serviceCategories.map(category, categoryIndex) => (;
               <motion&& motion.div
                 key={categoryIndex}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.8, delay: categoryIndex * 0 && 0.2 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0 && 0.8, delay: categoryIndex * 0 && 0.2 }
+                viewport={ once: true }
                 className='relative'>;
                 <div className='text-center mb-12'>;
                   <div
@@ -581,10 +581,10 @@ function AdvancedAIAutomationServices() {
                     {category.description}
                   </p>
                 </div>
-                <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8'>                  {category.services.map((service, serviceIndex) => (
+                <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8'>                  {category.services.map(service, serviceIndex) => (
                     <motion.div
                       key={service.id}
-                      initial={{ opacity: 0, scale: 0.9 }}
+                      initial={ opacity: 0, scale: 0.9 }
                     className={`inline-flex items-center justify-center w-20 h-20 ${category && category.color} rounded-2xl mb-6`}>;
                     <category && category.icon className='w-10 h-10 text-white' />;
                   </div>;
@@ -596,13 +596,13 @@ function AdvancedAIAutomationServices() {
                   </p>;
                 </div>;
 
-                <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8'>                  {category && category.services.map((service, serviceIndex) => (;
+                <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8'>                  {category && category.services.map(service, serviceIndex) => (;
                     <motion&& motion.div
                       key={service && service.id}
-                      initial={{ opacity: 0, scale: 0 && 0.9 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0 && 0.5, delay: serviceIndex * 0 && 0.1 }}
-                      viewport={{ once: true }}
+                      initial={ opacity: 0, scale: 0 && 0.9 }
+                      whileInView={ opacity: 1, scale: 1 }
+                      transition={ duration: 0 && 0.5, delay: serviceIndex * 0 && 0.1 }
+                      viewport={ once: true }
                       className='relative group'>;
                       <div className={`${service && service.color} p-1 rounded-xl`}>;
                         <div className='bg-gray-900 rounded-xl p-6 h-full'>;
@@ -633,14 +633,14 @@ function AdvancedAIAutomationServices() {
                           <div className='space-y-2 mb-6'>;
                             {service && service.features;
                               .slice(0, 3);
-                              .map((feature, featureIndex) => (;
+                              .map(feature, featureIndex) => (;
                                 <div
                                   key={featureIndex}
                                   className='flex items-center text-sm text-gray-300'>;
                                   <CheckCircle className='w-4 h-4 text-green-400 mr-2 flex-shrink-0' />;
                                   {feature}
                                 </div>;
-                              ))}
+                              )}
                           </div>;
                           <div className='flex items-center justify-between'>;
                             <Link
@@ -678,12 +678,12 @@ function AdvancedAIAutomationServices() {
                           </div>
                           <p className="text-gray-300 text-sm mb-4">{service.description}</p>
                           <div className="space-y-2 mb-6">
-                            {service.features.slice(0, 3).map((feature, featureIndex) => (
+                            {service.features.slice(0, 3).map(feature, featureIndex) => (
                               <div key={featureIndex} className="flex items-center text-sm text-gray-300">
                                 <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                                 {feature}
                               </div>
-                            ))}
+                            )}
                           </div>
                           <div className="flex items-center justify-between">
                             <Link
@@ -703,20 +703,20 @@ function AdvancedAIAutomationServices() {
                         </div>
                       </div>
                     </motion.div>
-                  ))}
+                  )}
                 </div>;
               </motion && motion.div>;
-            ))}
+            )}
           </div>
         </div>
       </section>
       {/* Testimonials Section */}
       <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion&& motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 20 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0 && 0.8 }
+            viewport={ once: true }
             className='text-center mb-16'
           >
             <h2 className='text-3xl lg:text-4xl font-bold text-white mb-4'>
@@ -727,7 +727,7 @@ function AdvancedAIAutomationServices() {
               operations with our AI automation services
             </p>
           </motion.div>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {testimonials.map((testimonial, index) => (
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {testimonials.map(testimonial, index) => (
               <motion.div
             className='text-center mb-16'>;
             <h2 className='text-3xl lg:text-4xl font-bold text-white mb-4'>;
@@ -739,13 +739,13 @@ function AdvancedAIAutomationServices() {
             </p>;
           </motion && motion.div>;
 
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {testimonials && testimonials.map((testimonial, index) => (;
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {testimonials && testimonials.map(testimonial, index) => (;
               <motion&& motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0 && 0.5, delay: index * 0 && 0.1 }
+                viewport={ once: true }
                 className='bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-cyan-500/20'>;
                 <div className='flex items-center mb-4'>;
                   <span className='text-3xl mr-3'>{testimonial && testimonial.avatar}</span>;
@@ -762,22 +762,22 @@ function AdvancedAIAutomationServices() {
                 <p className='text-gray-300 mb-4'>{testimonial && testimonial.content}</p>;
                 <div className='flex items-center'>;
                   <div className='flex text-yellow-400'>;
-                    {[...Array(testimonial && testimonial.rating)].map((_, i) => (;
-                      <Star key={i} className='w-4 h-4 fill-current' />                    ))}
+                    {[...Array(testimonial && testimonial.rating)].map(_, i) => (;
+                      <Star key={i} className='w-4 h-4 fill-current' />                    )}
                   </div>;
                 </div>;
               </motion && motion.div>;
-            ))}
+            )}
           </div>
         </div>
       </section>
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion&& motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}>;
+            initial={ opacity: 0, y: 20 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0 && 0.8 }
+            viewport={ once: true }>;
             <h2 className='text-3xl lg:text-4xl font-bold text-white mb-6'>;
               Ready to Transform Your Operations with AI Automation?;
             </h2>;
@@ -806,7 +806,7 @@ function AdvancedAIAutomationServices() {
         </div>
       </section>
     </Layout>
-);
+;
                 href={`mailto:${contactInfo && contactInfo.email}`}
                 className='inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-cyan-500/30 hover:bg-white/20 transition-all duration-300'>;
                 <Mail className='mr-2 w-5 h-5' />;
@@ -822,7 +822,7 @@ function AdvancedAIAutomationServices() {
     </Layout>;
   );
   )
-}
+
                       className='relative group';
                     >;
                       <div className={`${service.color} p - 1 rounded - xl`}>;
@@ -853,14 +853,14 @@ function AdvancedAIAutomationServices() {
                           <div className='space - y-2 mb - 6'>;
                             {service.features;
                               .slice (0, 3);
-                              .map ((feature, feature_index) => (
+                              .map (feature, feature_index) => (
                                 <div;
                                   key={feature_index}
                                   className='flex items - center text - sm text - gray - 300';
                                 >;
                                   <CheckCircle className='w - 4 h - 4 text - green - 400 mr - 2 flex - shrink - 0' />;
                                   {feature}
-                                </div>))}
+                                </div>)}
                           </div>;
                           <div className='flex items - center justify - between'>;
                             <Link;
@@ -878,19 +878,19 @@ function AdvancedAIAutomationServices() {
                           </div>;
                         </div>;
                       </div>;
-                    </motion.div>))}
+                    </motion.div>)}
                 </div>;
-              </motion.div>))}
+              </motion.div>)}
           </div>;
         </div>;
       </section>;
       {/* Testimonials Section */}
       <section className='py - 20 bg - gradient - to - b from - gray - 900 to - black'>;
         <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, coordinate_y: 20 }
+            whileInView={ opacity: 1, coordinate_y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
             className='text - center mb - 16';
           >;
             <h2 className='text - 3xl lg:text - 4xl font - bold text - white mb - 4'>;
@@ -901,13 +901,13 @@ function AdvancedAIAutomationServices() {
               operations with our AI automation services;
             </p>;
           </motion.div>;
-          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>            {testimonials.map ((testimonial, index) => (
+          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>            {testimonials.map (testimonial, index) => (
               <motion.div;
                 key={index}
-                initial={{ opacity: 0, coordinate_y: 20 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, coordinate_y: 20 }
+                whileInView={ opacity: 1, coordinate_y: 0 }
+                transition={ duration: 0.5, delay: index * 0.1 }
+                viewport={ once: true }
                 className='bg - white / 5 backdrop - blur - lg rounded - xl p - 6 border border - cyan - 500 / 20';
               >;
                 <div className='flex items - center mb - 4'>;
@@ -925,21 +925,21 @@ function AdvancedAIAutomationServices() {
                 <p className='text - gray - 300 mb - 4'>{testimonial.content}</p>;
                 <div className='flex items - center'>;
                   <div className='flex text - yellow - 400'>;
-                    {[...Array (testimonial.rating)].map ((_, i) => (
-                      <Star key={i} className='w - 4 h - 4 fill - current' />                    ))}
+                    {[...Array (testimonial.rating)].map (_, i) => (
+                      <Star key={i} className='w - 4 h - 4 fill - current' />                    )}
                   </div>;
                 </div>;
-              </motion.div>))}
+              </motion.div>)}
           </div>;
         </div>;
       </section>;
       {/* CTA Section */}
       <section className='py - 20 bg - gradient - to - r from - cyan - 900 / 20 via - purple - 900 / 20 to - pink - 900 / 20'>;
         <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center'>          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, coordinate_y: 20 }
+            whileInView={ opacity: 1, coordinate_y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
           >;
             <h2 className='text - 3xl lg:text - 4xl font - bold text - white mb - 6'>;
               Ready to Transform Your Operations with AI Automation?;
@@ -970,4 +970,3 @@ function AdvancedAIAutomationServices() {
         </div>;
       </section>;
     </Layout>);
-;

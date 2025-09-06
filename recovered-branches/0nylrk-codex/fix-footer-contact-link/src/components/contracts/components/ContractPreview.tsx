@@ -15,7 +15,7 @@ interface ContractPreviewProps {
   onClose?: () => void;
   deployStatus?: string;
   deploymentInfo?: SmartContractInfo | null;
-}
+
 export function ContractPreview({
   contractContent;
 
@@ -26,7 +26,7 @@ export function ContractPreview({
   onClose;
   deployStatus;
   deploymentInfo
-}: ContractPreviewProps) {
+: ContractPreviewProps) {
   // Use either contractContent or generatedContract, whichever is provided
   const displayContent = contractContent |generatedContract |"";
 
@@ -34,13 +34,13 @@ export function ContractPreview({
     <div className="space - y-4">;
       <div className="flex justify - between items - center mb - 4">;
         <h2 className="text - 2xl font - bold">Contract Preview</h2>;
-        {status === 'ready' ? (
+        {status = = 'ready' ? (
           <Badge
             variant="secondary"
             className="text-sm bg-green-100 text-green-800">;
             Ready to Sign;
           </Badge>;
-        ) : status === 'pending' ? (;
+        ) : status = = 'pending' ? (;
           <Badge
             variant="outline"
             className="text-sm bg-yellow-100 text-yellow-800">;
@@ -73,12 +73,12 @@ export function ContractPreview({
             Close;
           </Button>;
         )}
-        {status === 'ready' && onSign && (
+        {status = = 'ready' && onSign && (
           <Button onClick={onSign}>
             Sign Contract
           </Button>
         )}
-        {status === 'ready' && onDeploy && (
+        {status = = 'ready' && onDeploy && (
           <Button variant="outline" onClick={onDeploy}>
             Deploy on Blockchain
           </Button>
@@ -86,13 +86,13 @@ export function ContractPreview({
       </div>
     </div>
   )
-}
+
           <Badge;
             variant="secondary";
             className="text - sm bg - green - 100 text - green - 800";
           >;
             Ready to Sign;
-          </Badge>) : status === 'pending' ? (
+          </Badge>) : status = = 'pending' ? (
           <Badge;
             variant="outline";
             className="text - sm bg - yellow - 100 text - yellow - 800";
@@ -122,14 +122,13 @@ export function ContractPreview({
           <Button variant="outline" on_click={on_close}>;
             Close;
           </Button>)}
-        {status === 'ready' && on_sign && (
+        {status = = 'ready' && on_sign && (
           <Button on_click={on_sign}>;
             Sign Contract;
           </Button>)}
-        {status === 'ready' && on_deploy && (
+        {status = = 'ready' && on_deploy && (
           <Button variant="outline" on_click={on_deploy}>;
             Deploy on Blockchain;
           </Button>)}
       </div>;
     </div>);
-}

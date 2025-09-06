@@ -43,7 +43,7 @@ function GreenIT() {
       description: "Solutions for leveraging on - site renewable generation or virtual power purchase agreements to offset carbon footprint.",
       icon: Leaf}
   ];
-;
+
   return (
     <AppLayout>
       <SEO
@@ -92,7 +92,7 @@ function GreenIT() {
             <div className="mb-16">
               <h2 className="text-2xl font-bold text-white mb-8">Our Green IT Solutions</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {greenITSolutions.map((solution, index) => (
+                {greenITSolutions.map(solution, index) => (
                   <div key={index} className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 hover:border-zion-purple transition-colors">
                     <div className="flex justify-center mb-4">
                       <solution.icon className="h-12 w-12 text-zion-cyan" />
@@ -100,7 +100,7 @@ function GreenIT() {
                     <h3 className="text-white font-medium text-xl text-center mb-3">{solution.title}</h3>
                     <p className="text-zion-slate-light text-center">{solution.description}</p>
                   </div>
-                ))}
+                )}
               </div>
             </div>
             <div className="mb-16">
@@ -140,7 +140,7 @@ function GreenIT() {
       </main>
     </AppLayout>
   )
-}
+
                       Explore Green IT Solutions;
                     </Button>;
                   </div>;
@@ -159,7 +159,7 @@ function GreenIT() {
               <h2 className="text-2xl font-bold text-white mb-8">Our Green IT Solutions</h2>;
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
-                {greenITSolutions && greenITSolutions.map((solution, index) => (;
+                {greenITSolutions && greenITSolutions.map(solution, index) => (;
                   <div key={index} className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 hover:border-zion-purple transition-colors">;
                     <div className="flex justify-center mb-4">;
                       <solution && solution.icon className="h-12 w-12 text-zion-cyan" />;
@@ -167,7 +167,7 @@ function GreenIT() {
                     <h3 className="text-white font-medium text-xl text-center mb-3">{solution && solution.title}</h3>;
                     <p className="text-zion-slate-light text-center">{solution && solution.description}</p>;
                   </div>;
-                ))}
+                )}
               </div>;
             </div>;
 
@@ -211,6 +211,5 @@ function GreenIT() {
       </main>;
     </AppLayout>;
   );
-}
+
     </AppLayout>);
-}

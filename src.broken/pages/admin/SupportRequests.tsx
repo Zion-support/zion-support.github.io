@@ -6,5 +6,3 @@ export function SupportRequests() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

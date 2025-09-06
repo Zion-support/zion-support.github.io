@@ -11,7 +11,7 @@ interface LazyLoadProps {
 
   loadingComponent?: ReactNode;
   className?: string;
-}
+
 export function LazyLoad({
 
   height = "200px";
@@ -22,14 +22,12 @@ export function LazyLoad({
   const [isVisible, setIsVisible] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
+  useEffect() => {
+    const observer = new IntersectionObserver(entries) => {
         if (entries[0].isIntersecting) {
           setIsVisible(true);
           observer && observer.disconnect();
         }
-      }
       {
         root_margin: "200px", // Start loading when element is within 200px of viewport;
         threshold: 0.1}
@@ -41,23 +39,21 @@ export function LazyLoad({
       // Check condition
 if ( {) {
   $2
-}
+
         observer.unobserve (container_ref.current);
       }
-    }
   }, []);
-  useEffect(() => {
+  useEffect() => {
     if (isVisible) {
       // Simulate loading delay (remove in production)
-      const timer = setTimeout(() => {
+      const timer = setTimeout() => {
         setIsLoaded(true)
       }, 500);
       return () => clearTimeout(timer)
-    }
-  }, [isVisible]);
+    }, [isVisible]);
   const defaultLoadingComponent = (
     <Skeleton
-      style={{ height, width }}
+      style={ height, width }
       className="rounded-md bg-zion-blue-light/20"
     />;
   );
@@ -80,28 +76,26 @@ if ( {) {
       )}
     </div>
   )
-}
-;
-  useEffect (() => {
+
+  useEffect () => {
     // Check condition
 if ( {) {
   $2
-}
+
       // Simulate loading delay (remove in production);
-      const timer = set_timeout (() => {
+      const timer = set_timeout () => {
         setIsLoaded (true);
       }, 500);
-;
+
       return () => clear_timeout (timer);
-    }
-  }, [is_visible]);
-;
+    }, [is_visible]);
+
   const defaultLoadingComponent = (
     <Skeleton;
-      style={{ height, width }}
+      style={ height, width }
       className="rounded - md bg - zion - blue - light / 20";
     />);
-;
+
   return (
     <div;
       ref={container_ref}
@@ -116,4 +110,3 @@ if ( {) {
         </>) : (
         loading_component || defaultLoadingComponent)}
     </div>);
-}

@@ -14,7 +14,7 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
-}
+
 const serviceCategories = [
   {
     title: 'AI & Consciousness'
@@ -63,7 +63,7 @@ const serviceCategories = [
     bgColor: 'from-teal-900/20 to-emerald-900/20'
     borderColor: 'border-teal-500/30'
   }
-]
+
     color: 'from-indigo-500 to-blue-600',
     bgColor: 'from-indigo-900/20 to-blue-900/20',
     borderColor: 'border-indigo-500/30'
@@ -86,7 +86,7 @@ const serviceCategories = [
     bgColor: 'from-teal-900/20 to-emerald-900/20',
     borderColor: 'border-teal-500/30'
   }
-];
+;
 
 export default function CuttingEdgeServices2025() {
   return (
@@ -108,9 +108,9 @@ export default function CuttingEdgeServices2025() {
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
           >
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
               <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
@@ -125,8 +125,8 @@ export default function CuttingEdgeServices2025() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <motion.a
                 href="/contact"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={ scale: 1.05 }
+                whileTap={ scale: 0.95 }
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 shadow-lg hover:shadow-xl"
               >
                 Get Started Today
@@ -134,8 +134,8 @@ export default function CuttingEdgeServices2025() {
               </motion.a>
               <motion.a
                 href="tel:+13024640950"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={ scale: 1.05 }
+                whileTap={ scale: 0.95 }
                 className="inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300"
               >
                 <Phone className="mr-2 w-5 h-5" />
@@ -150,18 +150,18 @@ export default function CuttingEdgeServices2025() {
       <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
       {/* Service Categories */}
       <section className="py - 20 bg - gradient - to - b from - gray - 900 to - black">;
         <div className="max - w-7xl mx - auto px - 6">;
           <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, coordinate_y: 30 }
+            whileInView={ opacity: 1, coordinate_y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">
@@ -173,7 +173,7 @@ export default function CuttingEdgeServices2025() {
             </p>
           </motion.div>
           <div className="space-y-16">
-            {serviceCategories.map((category, index) => (
+            {serviceCategories.map(category, index) => (
               <motion.div
             className="text - center mb - 16";
           >;
@@ -186,13 +186,13 @@ export default function CuttingEdgeServices2025() {
             </p>;
           </motion.div>;
           <div className="space - y-16">;
-            {service_categories.map ((category, index) => (
+            {service_categories.map (category, index) => (
               <motion.div;
                 key={category.title}
-                initial={{ opacity: 0, coordinate_y: 30 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, coordinate_y: 30 }
+                whileInView={ opacity: 1, coordinate_y: 0 }
+                transition={ duration: 0.8, delay: index * 0.1 }
+                viewport={ once: true }
               >
                 <div className="text-center mb-12">
                   <div className={`inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-r ${category.color} p-5 mb-6`}>
@@ -202,23 +202,23 @@ export default function CuttingEdgeServices2025() {
                   <p className="text-xl text-gray-300 max-w-2xl mx-auto">{category.description}</p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {category.services.map((service, serviceIndex) => (
+                  {category.services.map(service, serviceIndex) => (
                     <motion.div
                       key={service.id}
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: serviceIndex * 0.1 }}
-                      viewport={{ once: true }}
+                      initial={ opacity: 0, y: 20 }
+                      whileInView={ opacity: 1, y: 0 }
+                      transition={ duration: 0.6, delay: serviceIndex * 0.1 }
+                      viewport={ once: true }
                       className="group"
                     >
                       <div className={`bg-gradient-to-br ${category.bgColor} p-8 rounded-2xl border ${category.borderColor} hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105`}>
                         <div className="flex items-start justify-between mb-4">
                           <h4 className="text-xl font-semibold text-white group-hover:text-cyan-400 transition-colors">
                       key={service.id}
-                      initial={{ opacity: 0, coordinate_y: 20 }}
-                      whileInView={{ opacity: 1, coordinate_y: 0 }}
-                      transition={{ duration: 0.6, delay: service_index * 0.1 }}
-                      viewport={{ once: true }}
+                      initial={ opacity: 0, coordinate_y: 20 }
+                      whileInView={ opacity: 1, coordinate_y: 0 }
+                      transition={ duration: 0.6, delay: service_index * 0.1 }
+                      viewport={ once: true }
                       className="group";
                     >;
                       <div className={`bg - gradient - to - br ${category.bg_color} p - 8 rounded - 2xl border ${category.border_color} hover:border - cyan - 500 / 50 transition - all duration - 300 hover:transform hover:scale - 105`}>;
@@ -237,12 +237,12 @@ export default function CuttingEdgeServices2025() {
                         <div className="mb-6">
                           <h5 className="text-white font-semibold mb-3">Key Features:</h5>
                           <div className="space-y-2">
-                            {service.features.slice(0, 4).map((feature, featureIndex) => (
+                            {service.features.slice(0, 4).map(feature, featureIndex) => (
                               <div key={featureIndex} className="flex items-center space-x-3 text-sm">
                                 <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
                                 <span className="text-gray-300">{feature}</span>
                               </div>
-                            ))}
+                            )}
                           </div>
                         </div>
                         <div className="mb-6">
@@ -273,10 +273,10 @@ export default function CuttingEdgeServices2025() {
                         </div>
                       </div>
                     </motion.div>
-                  ))}
+                  )}
                 </div>
               </motion.div>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -285,18 +285,18 @@ export default function CuttingEdgeServices2025() {
       <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
       {/* Pricing Comparison */}
       <section className="py - 20 bg - black">;
         <div className="max - w-7xl mx - auto px - 6">;
           <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, coordinate_y: 30 }
+            whileInView={ opacity: 1, coordinate_y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
@@ -308,7 +308,7 @@ export default function CuttingEdgeServices2025() {
             </p>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {['StarterProfessionalEnterprise'].map((plan, index) => (
+            {['StarterProfessionalEnterprise'].map(plan, index) => (
               <motion.div
             className="text - center mb - 16";
           >;
@@ -321,13 +321,13 @@ export default function CuttingEdgeServices2025() {
             </p>;
           </motion.div>;
           <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">;
-            {['StarterProfessionalEnterprise'].map ((plan, index) => (
+            {['StarterProfessionalEnterprise'].map (plan, index) => (
               <motion.div;
                 key={plan}
-                initial={{ opacity: 0, coordinate_y: 30 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, coordinate_y: 30 }
+                whileInView={ opacity: 1, coordinate_y: 0 }
+                transition={ duration: 0.8, delay: index * 0.1 }
+                viewport={ once: true }
                 className="group"
               >
                 <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-8 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
@@ -338,21 +338,21 @@ export default function CuttingEdgeServices2025() {
                 <div className="bg - gradient - to - br from - gray - 800 / 50 to - gray - 900 / 50 p - 8 rounded - 2xl border border - gray - 700 / 50 hover:border - cyan - 500 / 50 transition - all duration - 300 hover:transform hover:scale - 105">;
                   <h3 className="text - 2xl font - bold text - white mb - 4">{plan}</h3>;
                   <div className="space - y-4 mb - 8">;
-                    {plan === 'Starter' && (
+                    {plan = = 'Starter' && (
                       <>
                         <div className="text-sm text-gray-400">Perfect for small businesses and startups</div>
                         <div className="text-sm text-gray-400">Basic features and standard support</div>
                         <div className="text-sm text-gray-400">Email support included</div>
                       </>
                     )}
-                    {plan === 'Professional' && (
+                    {plan = = 'Professional' && (
                       <>
                         <div className="text-sm text-gray-400">Ideal for growing businesses</div>
                         <div className="text-sm text-gray-400">Advanced features and priority support</div>
                         <div className="text-sm text-gray-400">Custom configurations available</div>
                       </>
                     )}
-                    {plan === 'Enterprise' && (
+                    {plan = = 'Enterprise' && (
                       <>
                         <div className="text-sm text-gray-400">For large enterprises and organizations</div>
                         <div className="text-sm text-gray-400">Full platform access and custom development</div>
@@ -363,7 +363,7 @@ export default function CuttingEdgeServices2025() {
 
                   <div className="text-center mb-8">
                     <div className="text-4xl font-bold text-cyan-400 mb-2">
-                      {plan === 'Starter' ? 'From $149' : plan === 'Professional' ? 'From $499' : 'From $999'}
+                      {plan = = 'Starter' ? 'From $149' : plan = = 'Professional' ? 'From $499' : 'From $999'}
                     </div>
                     <div className="text-gray-400">per month</div>
                   </div>
@@ -376,7 +376,7 @@ export default function CuttingEdgeServices2025() {
                   </a>
                 </div>
               </motion.div>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -385,18 +385,18 @@ export default function CuttingEdgeServices2025() {
       <section className="py-20 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
         <div className="max-w-4xl mx-auto text-center px-6">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
       {/* Contact Section */}
       <section className="py - 20 bg - gradient - to - r from - cyan - 900 / 20 to - blue - 900 / 20">;
         <div className="max - w-4xl mx - auto text - center px - 6">;
           <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, coordinate_y: 30 }
+            whileInView={ opacity: 1, coordinate_y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">
               Ready to Experience the Future?
@@ -425,8 +425,8 @@ export default function CuttingEdgeServices2025() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <motion.a
                 href="/contact"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={ scale: 1.05 }
+                whileTap={ scale: 0.95 }
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 shadow-lg hover:shadow-xl"
               >
                 Get Started Today
@@ -434,8 +434,8 @@ export default function CuttingEdgeServices2025() {
               </motion.a>
               <motion.a
                 href="tel:+13024640950"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={ scale: 1.05 }
+                whileTap={ scale: 0.95 }
                 className="inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-xl hover: bg-cyan-500 hover:text-white transition-all duration-300"
               >
                 <Phone className="mr-2 w-5 h-5" />
@@ -447,7 +447,7 @@ export default function CuttingEdgeServices2025() {
       </section>
     </Layout>
   )
-}
+
           >;
             <h2 className="text - 4xl md:text - 5xl font - bold mb - 6 bg - gradient - to - r from - cyan - 400 to - blue - 600 bg - clip - text text - transparent">;
               Ready to Experience the Future?;
@@ -476,8 +476,8 @@ export default function CuttingEdgeServices2025() {
             <div className="flex flex - col sm:flex - row gap - 4 justify - center items - center">;
               <motion.a;
                 href="/contact";
-                while_hover={{ scale: 1.05 }}
-                while_tap={{ scale: 0.95 }}
+                while_hover={ scale: 1.05 }
+                while_tap={ scale: 0.95 }
                 className="inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - semibold rounded - xl hover:from - cyan - 400 hover:to - blue - 500 transition - all duration - 300 shadow - lg hover:shadow - xl";
               >;
                 Get Started Today;
@@ -485,8 +485,8 @@ export default function CuttingEdgeServices2025() {
               </motion.a>;
               <motion.a;
                 href="tel:+13024640950";
-                while_hover={{ scale: 1.05 }}
-                while_tap={{ scale: 0.95 }}
+                while_hover={ scale: 1.05 }
+                while_tap={ scale: 0.95 }
                 className="inline - flex items - center px - 8 py - 4 border - 2 border - cyan - 500 text - cyan - 400 font - semibold rounded - xl hover: bg - cyan - 500 hover:text - white transition - all duration - 300";
               >;
                 <Phone className="mr - 2 w - 5 h - 5" />;
@@ -497,4 +497,3 @@ export default function CuttingEdgeServices2025() {
         </div>;
       </section>;
     </Layout>);
-}

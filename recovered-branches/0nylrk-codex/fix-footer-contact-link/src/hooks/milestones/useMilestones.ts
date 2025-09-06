@@ -1,5 +1,4 @@
 
-
 import {useState} from 'react';
 import {useLoadMilestones} from './useLoadMilestones';
 import {useCreateMilestone} from './useCreateMilestone';
@@ -33,5 +32,3 @@ export const useMilestones = (projectId?: string) => {
     uploadDeliverable: handleUploadDeliverable
     refetch
   }
-}
-

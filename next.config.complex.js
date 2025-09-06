@@ -1,4 +1,4 @@
-/** @type {import('next').NextConfig} */;
+** @type {import('next').NextConfig} */;
 const nextConfig = {reactStrictMode: true;
   compress: true;
   poweredByHeader: false;
@@ -21,5 +21,5 @@ const nextConfig = {reactStrictMode: true;
   generateEtags: true;
   // Dist directory;
   distDir: '.next';
-}
+
 module.exports = nextConfig;

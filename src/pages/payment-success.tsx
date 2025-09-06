@@ -25,23 +25,23 @@ export default function PaymentSuccess() {
           >
             {t('errors.go_to_dashboard')}
           </Button>
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { useRouter } from 'next/router'; // Changed from useNavigate;
@@ -114,10 +114,8 @@ export default function PaymentSuccess() {;
         </div>
       </div>
     </div>
-  )
-}
   );
-}
+
 import React from 'react';
 import { Button } from '@/components / ui / button';
 import { use_router } from 'next / router'; // Changed from use_navigate;
@@ -180,4 +178,3 @@ function PaymentSuccess() {
         </div>;
       </div>;
     </div>);
-}

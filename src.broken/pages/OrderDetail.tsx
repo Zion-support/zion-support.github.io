@@ -6,5 +6,3 @@ export function OrderDetail() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

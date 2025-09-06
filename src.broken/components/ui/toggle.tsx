@@ -6,5 +6,3 @@ export function toggle() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

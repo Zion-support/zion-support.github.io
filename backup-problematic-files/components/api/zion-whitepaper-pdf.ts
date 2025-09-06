@@ -8,11 +8,10 @@ function writeSection(doc: PDFDocument, title: string, content: string) {;
   doc.fontSize(11).fillColor('#222222').text(content, {;
     width: 480,;
     align: 'left'});
-}
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const editionParam = (req.query.edition as string) || 'full',
-  const edition = editionParam === 'investor' || editionParam === 'developer' ? editionParam : 'full',
+  const edition = editionParam = = 'investor' || editionParam = = 'developer' ? editionParam : 'full',
 
   res.setHeader('Content-Typeapplication/pdf'),
   res.setHeader('Content-Disposition', `attachment, filename="zion-protocol-${edition}.pdf"`),
@@ -34,17 +33,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   doc.fontSize(9).fillColor('#666666').text(OPERATOR_PROMPT, { width: 480 }),
 
   const sections = getWhitepaperSections(edition as any),
-  sections.forEach((s) => writeSection(doc, s.title, s.contentMd)),
+  sections.forEach(s) => writeSection(doc, s.title, s.contentMd),
 
   // End
   doc.addPage(),
   doc.fontSize(10).fillColor('#444444').text(' Zion Protocol. This document is provided for informational purposes and does not constitute financial advice.'),
 
   doc.end()
-;
+
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   const editionParam = (req.query.edition as string) || 'full',;
-  const edition = editionParam === 'investor' || editionParam === 'developer' ? editionParam : 'full',;
+  const edition = editionParam = = 'investor' || editionParam = = 'developer' ? editionParam : 'full',;
   res.setHeader('Content-Typeapplication/pdf'),;
   res.setHeader('Content-Disposition', `attachment, filename="zion-protocol-${edition}.pdf"`),;
   const doc = new (PDFDocument as any)({ autoFirstPage: false }),;
@@ -61,9 +60,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   doc.moveDown(0.5),;
   doc.fontSize(9).fillColor('#666666').text(OPERATOR_PROMPT, { width: 480 }),;
   const sections = getWhitepaperSections(edition as any),;
-  sections.forEach((s) => writeSection(doc, s.title, s.contentMd)),;
+  sections.forEach(s) => writeSection(doc, s.title, s.contentMd),;
   // End;
   doc.addPage();
   doc.fontSize(10).fillColor('#444444').text(' Zion Protocol. This document is provided for informational purposes and does not constitute financial advice.');
   doc.end();
-}

@@ -47,23 +47,21 @@ function ApplicationStatusTrackerContent() {;
       </div>
     </>
   )
-}
+
 export default function ApplicationStatusTracker() {
   return (
     <ProtectedRoute>
       <ApplicationStatusTrackerContent />
     </ProtectedRoute>
-  )
-}
   );
-}
+
 import { SEO } from '@/components / SEO';
 import { ApplicationsTracker } from '@/components / jobs / applications';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components / ui / card';
 import { Briefcase, Inbox } from 'lucide-react';
 import { ProtectedRoute } from '@/components / ProtectedRoute';
 import { useIsMobile } from '@/hooks / use - mobile';
-/**
+**
  * ApplicationStatusTrackerContent - Function description
  */
 function ApplicationStatusTrackerContent() {
@@ -101,7 +99,7 @@ function ApplicationStatusTrackerContent() {
         </div>;
       </div>;
     </>);
-}
+
 export default /**
  * ApplicationStatusTracker - Function description
  */
@@ -110,4 +108,3 @@ function ApplicationStatusTracker() {
     <ProtectedRoute>;
       <ApplicationStatusTrackerContent />;
     </ProtectedRoute>);
-}

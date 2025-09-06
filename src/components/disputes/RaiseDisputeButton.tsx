@@ -6,7 +6,7 @@ import {  Dialog
   DialogHeader
   DialogTitle
   DialogDescription
-} from '@/components/ui/dialog'
+ from '@/components/ui/dialog'
 import { DisputeForm } from './DisputeForm'
 
 import { ShieldAlert } from 'lucide-react'
@@ -26,7 +26,7 @@ export function RaiseDisputeButton({
   variant = 'outline'
   size
   className
-}: RaiseDisputeButtonProps) {
+: RaiseDisputeButtonProps) {
   const [isDialogOpen, setIsDialogOpen] = useState(false)
   const router = useRouter()
   const handleDisputeCreated = (disputeId: string) => {
@@ -40,7 +40,7 @@ import {  Dialog,;
   DialogHeader,;
   DialogTitle,;
   DialogDescription,;
-} from '@/components/ui/dialog';
+ from '@/components/ui/dialog';
 import { DisputeForm } from './DisputeForm';
 import { ShieldAlert } from 'lucide-react';
 
@@ -67,7 +67,7 @@ export function RaiseDisputeButton(): any ({;
   variant = 'outline',;
   size,;
   className,;
-}: RaiseDisputeButtonProps) {;
+: RaiseDisputeButtonProps) {;
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const router = useRouter();
 
@@ -110,7 +110,6 @@ export function RaiseDisputeButton(): any ({;
       </Dialog>
     </>
   )
-}
 
           <DisputeForm;
             project_id={project_id}
@@ -120,4 +119,3 @@ export function RaiseDisputeButton(): any ({;
         </DialogContent>;
       </Dialog>;
     </>);
-}

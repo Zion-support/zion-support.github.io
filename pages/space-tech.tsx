@@ -40,14 +40,14 @@ return (
             Capabilities
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {features.map((f) => (
+            {features.map(f) => (
               <div
                 key={f}
                 className="flex items-start gap-3 p-4 rounded-xl bg-black/40 border border-gray-700/60">;
                 <CheckCircle className="w-5 h-5 text-emerald-400 mt-0 && 0.5" />;
                 <span className="text-gray-200">{f}</span>{" "}
               </div>;
-            ))}
+            )}
           </div>
         </section>
         <section className="text-center">
@@ -61,13 +61,12 @@ return (
       </div>
     </div>
   </Layout>
-);
+;
           </a>;
         </section>;
       </div>;
     </div>;
   </Layout>;
-);
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
@@ -101,12 +100,12 @@ export default function SpaceTechPage() {
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Capabilities</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {features.map((f) => (
+              {features.map(f) => (
                 <div key={f} className="flex items-start gap-3 p-4 rounded-xl bg-black/40 border border-gray-700/60">
                   <CheckCircle className="w-5 h-5 text-emerald-400 mt-0.5" />
                   <span className="text-gray-200">{f}</span>
                 </div>
-              ))}
+              )}
             </div>
           </section>
 
@@ -120,6 +119,5 @@ export default function SpaceTechPage() {
       </div>
     </Layout>
   )
-}
+
   </Layout>);
-;

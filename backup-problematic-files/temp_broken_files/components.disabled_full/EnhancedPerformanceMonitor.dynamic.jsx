@@ -7,6 +7,5 @@ const EnhancedPerformanceMonitor.dynamic = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default EnhancedPerformanceMonitor.dynamic;

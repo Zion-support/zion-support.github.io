@@ -2,23 +2,23 @@
 import { supabase } from "@/integrations/supabase/client",;
 import { toast } from "@/hooks/use-toast",;
 import type { UserProfile } from "@/types/auth",;
-;
+
 export const useProfileManagement = (setIsLoading:(loading:boolean) => void) => {;
   const updateProfile = async (data:Partial<UserProfile>) => {;
     try {;
       setIsLoading(true),;
-;
+
       if (!data.id) {;
         return { error:"User ID is required" },;
       }
-;
+
       // Update user metadata;
       const { error:authError } = await supabase.auth.updateUser({;
         data:{;
           display_name:data.displayName,;
           user_type:data.userType,;
-          headline:data.headline}}),;
-;
+          headline:data.headline}),;
+
       if (authError) {;
         toast({;
           title:"Profile update failed",;
@@ -26,7 +26,7 @@ export const useProfileManagement = (setIsLoading:(loading:boolean) => void) => 
           variant:"destructive"}),;
         return { error:authError },;
       }
-;
+
       // Update profiles table;
       const { error:profileError } = await supabase;
         .from("profiles");
@@ -39,7 +39,7 @@ export const useProfileManagement = (setIsLoading:(loading:boolean) => void) => 
           profile_complete:data.profileComplete,;
           updated_at:new Date().toISOString()});
         .eq("id", data.id),;
-;
+
       if (profileError) {;
         toast({;
           title:"Profile update failed",;
@@ -47,11 +47,11 @@ export const useProfileManagement = (setIsLoading:(loading:boolean) => void) => 
           variant:"destructive"}),;
         return { error:profileError },;
       }
-;
+
       toast({;
         title:"Profile updated",;
         description:"Your profile has been updated successfully."}),;
-;
+
       return { success:true },;
     } catch (error:any) {;
       console.error("Profile update error:", error),;
@@ -62,52 +62,50 @@ export const useProfileManagement = (setIsLoading:(loading:boolean) => void) => 
       return { error },;
     } finally {;
       setIsLoading(false),;
-    }
-  },;
-;
+    },;
+
   return { updateProfile },;
-},; export const useProfileManagement = (setIsLoading: (loading: boolean) => void) => {
+,; export const useProfileManagement = (setIsLoading: (loading: boolean) => void) => {
   const updateProfile = async (data: Partial<UserProfile>) => {
   setIsLoading (true);
 if (!data.id) {
-  
-}//Update user metadata const {
+
+//Update user metadata const {
   error: authError 
-}= await supabase.auth.updateUser ({
+= await supabase.auth.updateUser ({
   data: {
   display name: data.displayName;
 user type: data.userType;
 headline: data.headline 
-}
-});
+
+);
 if (authError) {
   toast ({
   title: "Profile update failed";
 description: authError.message;
-}// Update profiles table const {
+// Update profiles table const {
   error: profileError 
-}= await supabase .from ("profiles") .update ({
+= await supabase .from ("profiles") .update ({
   display name: data.displayName;
 user type: data.userType;
 bio: data.bio;
 headline: data.headline;
 avatar url: data.avatarUrl || data.avatar url;
 profile complete: data.profileComplete;
-updated at: new Date () .toISOString () 
-}) if (profileError) {
+updated at: new Date () .toISOString () if (profileError) {
   toast ({
   title: "Profile update failed";
 description: profileError.message;
 return {
   success: true 
-}
-}catch (error: any) {
-  
-}finally {
+
+catch (error: any) {
+
+finally {
   setIsLoading (false) 
-}
-};
+
+;
 return {
   updateProfile 
-}
-};
+
+;

@@ -7,7 +7,7 @@ import {;
   CheckCircle, ArrowRight, Rocket, Brain, Atom, Globe,;
   Zap, Sparkles, Shield, Target, Cpu, Database, Cloud,;
   Lock, ShieldCheck, Eye, Heart, Share2, Download, Phone, Mail, MapPin;
-} from 'lucide-react',;
+ from 'lucide-react',;
 import { cuttingEdge2027Innovations } from '../data/2027-cutting-edge-innovations',;
 import { practicalMicroSaas2027 } from '../data/2027-practical-micro-saas',;
 import UltraFuturisticNavigation2027 from '../components/layout/UltraFuturisticNavigation2027',;
@@ -29,46 +29,45 @@ export default function ServicesShowcase2027() {;
   ],;
   // Filter services based on search and category;
   const filteredServices = allServices.filter(service => {;
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         service.category.toLowerCase().includes(searchTerm.toLowerCase()),;
-    const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory),;
-    const matchesPrice = selectedPriceRange === 'all' ||;
-                        (selectedPriceRange === 'low' && parseInt(service.price.replace(/[^0-9]/g, '')) < 1000) ||;
-                        (selectedPriceRange === 'medium' && parseInt(service.price.replace(/[^0-9]/g, '')) >= 1000 && parseInt(service.price.replace(/[^0-9]/g, '')) < 10000) ||;
-                        (selectedPriceRange === 'high' && parseInt(service.price.replace(/[^0-9]/g, '')) >= 10000),;
+    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase() ||;
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase() ||;
+                         service.category.toLowerCase().includes(searchTerm.toLowerCase(),;
+    const matchesCategory = selectedCategory = = 'all' || service.category.includes(selectedCategory),;
+    const matchesPrice = selectedPriceRange = = 'all' ||;
+                        (selectedPriceRange = = 'low' && parseInt(service.price.replace(/[^0-9]/g, '') < 1000) ||;
+                        (selectedPriceRange = = 'medium' && parseInt(service.price.replace(/[^0-9]/g, '') >= 1000 && parseInt(service.price.replace(/[^0-9]/g, '') < 10000) ||;
+                        (selectedPriceRange = = 'high' && parseInt(service.price.replace(/[^0-9]/g, '') >= 10000),;
     return matchesSearch && matchesCategory && matchesPrice;
   }),;
   // Sort services;
-  const sortedServices = [...filteredServices].sort((a, b) => {;
+  const sortedServices = [...filteredServices].sort(a, b) => {;
     switch (sortBy) {;
       case 'name':;
         return a.name.localeCompare(b.name),;
       case 'price':;
-        return parseInt(a.price.replace(/[^0-9]/g, '')) - parseInt(b.price.replace(/[^0-9]/g, '')),;
+        return parseInt(a.price.replace(/[^0-9]/g, '') - parseInt(b.price.replace(/[^0-9]/g, ''),;
       case 'roi':;
-        return parseInt(a.roi.replace(/[^0-9]/g, '')) - parseInt(b.roi.replace(/[^0-9]/g, '')),;
+        return parseInt(a.roi.replace(/[^0-9]/g, '') - parseInt(b.roi.replace(/[^0-9]/g, ''),;
       default: return 0;
-    }
-  }),;
+    }),;
   const categories = [;
     { id: 'all', name: 'All Services', icon: '', count: allServices.length },;
-    { id: 'AI Consciousness Evolution', name: 'AI Consciousness', icon: '', count: allServices.filter(s => s.category.includes('AI Consciousness')).length },;
-    { id: 'Quantum Consciousness', name: 'Quantum Consciousness', icon: '', count: allServices.filter(s => s.category.includes('Quantum Consciousness')).length },;
-    { id: 'AI Civilization', name: 'AI Civilization', icon: '', count: allServices.filter(s => s.category.includes('AI Civilization')).length },;
-    { id: 'Quantum Time', name: 'Quantum Time', icon: '', count: allServices.filter(s => s.category.includes('Quantum Time')).length },;
-    { id: 'AI Multiverse', name: 'AI Multiverse', icon: '', count: allServices.filter(s => s.category.includes('AI Multiverse')).length },;
-    { id: 'Customer Success Automation', name: 'Customer Success', icon: '', count: allServices.filter(s => s.category.includes('Customer Success')).length },;
-    { id: 'Content Marketing Automation', name: 'Content Marketing', icon: '', count: allServices.filter(s => s.category.includes('Content Marketing')).length },;
-    { id: 'Inventory Management', name: 'Inventory Management', icon: '', count: allServices.filter(s => s.category.includes('Inventory Management')).length },;
-    { id: 'HR Automation', name: 'HR Automation', icon: '', count: allServices.filter(s => s.category.includes('HR Automation')).length },;
-    { id: 'Financial Automation', name: 'Financial Automation', icon: '', count: allServices.filter(s => s.category.includes('Financial Automation')).length }
+    { id: 'AI Consciousness Evolution', name: 'AI Consciousness', icon: '', count: allServices.filter(s => s.category.includes('AI Consciousness').length },;
+    { id: 'Quantum Consciousness', name: 'Quantum Consciousness', icon: '', count: allServices.filter(s => s.category.includes('Quantum Consciousness').length },;
+    { id: 'AI Civilization', name: 'AI Civilization', icon: '', count: allServices.filter(s => s.category.includes('AI Civilization').length },;
+    { id: 'Quantum Time', name: 'Quantum Time', icon: '', count: allServices.filter(s => s.category.includes('Quantum Time').length },;
+    { id: 'AI Multiverse', name: 'AI Multiverse', icon: '', count: allServices.filter(s => s.category.includes('AI Multiverse').length },;
+    { id: 'Customer Success Automation', name: 'Customer Success', icon: '', count: allServices.filter(s => s.category.includes('Customer Success').length },;
+    { id: 'Content Marketing Automation', name: 'Content Marketing', icon: '', count: allServices.filter(s => s.category.includes('Content Marketing').length },;
+    { id: 'Inventory Management', name: 'Inventory Management', icon: '', count: allServices.filter(s => s.category.includes('Inventory Management').length },;
+    { id: 'HR Automation', name: 'HR Automation', icon: '', count: allServices.filter(s => s.category.includes('HR Automation').length },;
+    { id: 'Financial Automation', name: 'Financial Automation', icon: '', count: allServices.filter(s => s.category.includes('Financial Automation').length }
   ],;
   const priceRanges = [;
     { id: 'all', name: 'All Prices', count: allServices.length },;
-    { id: 'low', name: 'Under $1K/month', count: allServices.filter(s => parseInt(s.price.replace(/[^0-9]/g, '')) < 1000).length },;
-    { id: 'medium', name: '$1K - $10K/month', count: allServices.filter(s => parseInt(s.price.replace(/[^0-9]/g, '')) >= 1000 && parseInt(s.price.replace(/[^0-9]/g, '')) < 10000).length },;
-    { id: 'high', name: '$10K+/month', count: allServices.filter(s => parseInt(s.price.replace(/[^0-9]/g, '')) >= 10000).length }
+    { id: 'low', name: 'Under $1K/month', count: allServices.filter(s => parseInt(s.price.replace(/[^0-9]/g, '') < 1000).length },;
+    { id: 'medium', name: '$1K - $10K/month', count: allServices.filter(s => parseInt(s.price.replace(/[^0-9]/g, '') >= 1000 && parseInt(s.price.replace(/[^0-9]/g, '') < 10000).length },;
+    { id: 'high', name: '$10K+/month', count: allServices.filter(s => parseInt(s.price.replace(/[^0-9]/g, '') >= 10000).length }
   ],;
   const contactInfo = {;
     mobile: '+1 302 464 0950',;
@@ -98,9 +97,9 @@ export default function ServicesShowcase2027() {;
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto text-center">;
           <motion.div;
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
           >;
             <h1 className="text-5xl md:text-7xl font-bold mb-6">;
               <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">;
@@ -185,11 +184,11 @@ export default function ServicesShowcase2027() {;
                   onChange={(e) => setSelectedCategory(e.target.value)}
                   className="w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white focus:outline-none focus:border-cyan-400";
                 >;
-                  {categories.map((category) => (;
+                  {categories.map(category) => (;
                     <option key={category.id} value={category.id}>;
                       {category.icon} {category.name} ({category.count});
                     </option>;
-                  ))}
+                  )}
                 </select>;
               </div>;
               {/* Price Range Filter */}
@@ -200,11 +199,11 @@ export default function ServicesShowcase2027() {;
                   onChange={(e) => setSelectedPriceRange(e.target.value)}
                   className="w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white focus:outline-none focus:border-cyan-400";
                 >;
-                  {priceRanges.map((range) => (;
+                  {priceRanges.map(range) => (;
                     <option key={range.id} value={range.id}>;
                       {range.name} ({range.count});
                     </option>;
-                  ))}
+                  )}
                 </select>;
               </div>;
               {/* Sort By */}
@@ -229,13 +228,13 @@ export default function ServicesShowcase2027() {;
         <div className="max-w-7xl mx-auto">;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             <AnimatePresence>;
-              {sortedServices.map((service, index) => (;
+              {sortedServices.map(service, index) => (;
                 <motion.div;
                   key={service.id}
-                  initial={{ opacity: 0, y: 30, scale: 0.9 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  exit={{ opacity: 0, y: -30, scale: 0.9 }}
+                  initial={ opacity: 0, y: 30, scale: 0.9 }
+                  animate={ opacity: 1, y: 0, scale: 1 }
+                  transition={ duration: 0.5, delay: index * 0.1 }
+                  exit={ opacity: 0, y: -30, scale: 0.9 }
                   className="group";
                 >;
                   <div className="bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-6 h-full hover:border-cyan-400/50 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-2xl shadow-cyan-500/20">;
@@ -260,12 +259,12 @@ export default function ServicesShowcase2027() {;
                     <div className="mb-6">;
                       <h4 className="text-cyan-400 font-semibold mb-3">Key Features:</h4>;
                       <div className="space-y-2">;
-                        {service.features.slice(0, 3).map((feature, idx) => (;
+                        {service.features.slice(0, 3).map(feature, idx) => (;
                           <div key={idx} className="flex items-center space-x-2">;
                             <CheckCircle className="w-4 h-4 text-green-400" />;
                             <span className="text-gray-300 text-sm">{feature}</span>;
                           </div>;
-                        ))}
+                        )}
                         {service.features.length > 3 && (;
                           <div className="text-cyan-400 text-sm">;
                             +{service.features.length - 3} more features;
@@ -302,14 +301,14 @@ export default function ServicesShowcase2027() {;
                     </div>;
                   </div>;
                 </motion.div>;
-              ))}
+              )}
             </AnimatePresence>;
           </div>;
           {/* No Results */}
-          {sortedServices.length === 0 && (;
+          {sortedServices.length = = 0 && (;
             <motion.div;
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
+              initial={ opacity: 0 }
+              animate={ opacity: 1 }
               className="text-center py-20";
             >;
               <div className="text-6xl mb-4"></div>;
@@ -320,7 +319,7 @@ export default function ServicesShowcase2027() {;
                   setSearchTerm('');
                   setSelectedCategory('all');
                   setSelectedPriceRange('all');
-                }}
+                }
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300";
               >;
                 Clear Filters;
@@ -339,7 +338,7 @@ export default function ServicesShowcase2027() {;
             <p className="text-cyan-300 mb-8 text-lg">
               Contact our team to discuss how our 2027 services can revolutionize your operations and drive unprecedented growth.
             </p>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <div className="flex items-center justify-center space-x-3">
                 <Phone className="w-5 h-5 text-cyan-400" />
@@ -385,7 +384,7 @@ export default function ServicesShowcase2027() {;
             </h3>
             <p className="text-cyan-300">2027 Innovation Hub</p>
           </div>
-          
+
           <div className="text-cyan-300 text-sm">
             <p>&copy, 2027 Zion Tech Group. All rights reserved.</p>
             <p className="mt-2">
@@ -466,4 +465,3 @@ export default function ServicesShowcase2027() {;
       </footer>;
     </UltraFuturisticMatrixBackground2027>;
   );
-}

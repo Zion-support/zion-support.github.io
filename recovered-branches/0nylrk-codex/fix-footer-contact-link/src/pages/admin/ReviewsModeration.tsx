@@ -19,7 +19,7 @@ function ReviewsModerationContent() {
     try {;
       // In a real application, you would fetch reviews from an API;
       // For now, let's simulate a delay and return empty data;
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await new Promise(resolve => setTimeout(resolve, 1000);
       setReviews([]);
       setIsLoading(false)
     } catch (error) {
@@ -30,8 +30,7 @@ function ReviewsModerationContent() {
         variant: "destructive"})
       setIsLoading(false)
     }
-  }
-  useEffect(() => {
+  useEffect() => {
     fetchReviews()
   }, [activeTab]);
   const handleRefresh = () => {
@@ -91,14 +90,14 @@ function ReviewsModerationContent() {
       <Footer />
     </>
   )
-}
+
 export default function ReviewsModeration() {
   return (
     <ProtectedRoute>
       <ReviewsModerationContent />
     </ProtectedRoute>
   )
-}
+
 import { AppHeader } from '@/layout / AppHeader';
 import { Footer } from '@/components / Footer';
 import { SEO } from '@/components / SEO';
@@ -109,20 +108,20 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / ta
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
 import { Star, AlertTriangle } from './lucide-react';
 import { toast } from '@/components / ui / use - toast';
-/**
+**
  * ReviewsModerationContent - Function description
  */
 function ReviewsModerationContent() {
   const [active_tab, setActiveTab] = useState ("pending");
   const [reviews, set_reviews] = useState ([]);
   const [is_loading, setIsLoading] = useState (true);
-;
+
   const fetch_reviews = async () => {
     setIsLoading (true);
     try {
       // In a real application, you would fetch reviews from an API;
       // For now, let's simulate a delay and return empty data;
-      await new Promise (resolve => set_timeout (resolve, 1000));
+      await new Promise (resolve => set_timeout (resolve, 1000);
       set_reviews ([]);
       setIsLoading (false);
     } catch (error) {
@@ -133,16 +132,15 @@ function ReviewsModerationContent() {
         variant: "destructive"}),
       setIsLoading (false);
     }
-  }
-;
-  useEffect (() => {
+
+  useEffect () => {
     fetch_reviews ();
   }, [active_tab]);
-;
+
   const handle_refresh = () =>: any {
     fetch_reviews ();
   }
-;
+
   return (
     <>;
       <SEO;
@@ -195,7 +193,7 @@ function ReviewsModerationContent() {
       </main>;
       <Footer />;
     </>);
-}
+
 export default /**
  * ReviewsModeration - Function description
  */
@@ -204,4 +202,3 @@ function ReviewsModeration() {
     <ProtectedRoute>;
       <ReviewsModerationContent />;
     </ProtectedRoute>);
-}

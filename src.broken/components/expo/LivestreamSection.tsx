@@ -6,5 +6,3 @@ export function LivestreamSection() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

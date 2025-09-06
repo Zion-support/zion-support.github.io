@@ -21,7 +21,7 @@ function ProfileProjects() {
           >    <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">
       <h3 className="text-xl font-bold text-white mb-4">Projects</h3>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {projects.map((project,) => (
+        {projects.map(project,) => (
           <Card key={project.id} className="bg-zion-blue border-zion-blue-light overflow-hidden hover:border-zion-purple/40 transition-colors duration-300">
             {project.imageUrl ? (
               <AspectRatio ratio={16 / 9}>
@@ -46,7 +46,7 @@ export function ProfileProjects(): any ({ projects }: ProfileProjectsProps) {;
       <h3 className="text-xl font-bold text-white mb-4">Projects</h3>;
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">;
-        {projects && projects.map((project,) => (;
+        {projects && projects.map(project,) => (;
           <Card key={project && project.id} className="bg-zion-blue border-zion-blue-light overflow-hidden hover:border-zion-purple/40 transition-colors duration-300">;
             {project && project.imageUrl ? (;
               <AspectRatio ratio={16 / 9}>;
@@ -68,12 +68,12 @@ export function ProfileProjects(): any ({ projects }: ProfileProjectsProps) {;
               </p>
               {project.tags && project.tags.length > 0 && (
                 <div className='flex flex-wrap gap-1 mb-2'>
-                  {project.tags.map((tag, i) => (
+                  {project.tags.map(tag, i) => (
                     <Badge
                       key={i}
                       variant='outline'
                       className='text-xs border-zion-slate-dark text-zion-slate-light'>                      {tag}                    <Badge key={i} variant="outline" className="text-xs border-zion-slate-dark text-zion-slate-light">;
-        {projects && projects.map((project) => (;
+        {projects && projects.map(project) => (;
           <Card key={project && project.id} className="bg-zion-blue border-zion-blue-light overflow-hidden hover:border-zion-purple/40 transition-colors duration-300">;
             {project && project.imageUrl ? (;
               <AspectRatio ratio={16/9}>;
@@ -94,7 +94,7 @@ export function ProfileProjects(): any ({ projects }: ProfileProjectsProps) {;
               <p className="text-zion-slate text-sm mb-3 line-clamp-2">{project.description}</p>
               {project.tags && project.tags.length > 0 && (
                 <div className="flex flex-wrap gap-1 mb-2">
-                  {project.tags.map((tag, i) => (
+                  {project.tags.map(tag, i) => (
                     <Badge key={i} variant="outline" className="text-xs border-zion-slate-dark text-zion-slate-light">
 
             <CardContent className="p-4">;
@@ -103,11 +103,11 @@ export function ProfileProjects(): any ({ projects }: ProfileProjectsProps) {;
 
               {project && project.tags && project && project.tags.length > 0 && (;
                 <div className="flex flex-wrap gap-1 mb-2">;
-                  {project && project.tags.map((tag, i) => (;
+                  {project && project.tags.map(tag, i) => (;
                     <Badge key={i} variant="outline" className="text-xs border-zion-slate-dark text-zion-slate-light">;
                       {tag}
                     </Badge>;
-                  ))}
+                  )}
                 </div>;
               )}
               <div className='text-xs text-zion-slate-light mt-2'>                {project.date}
@@ -116,13 +116,11 @@ export function ProfileProjects(): any ({ projects }: ProfileProjectsProps) {;
               </div>
             </CardContent>
           </Card>
-        ))}
+        )}
       </div>
     </div>
-  )
-}
   );
-}
+
     <div className='bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 mb - 8'>;
       <h3 className='text - xl font - bold text - white mb - 4'>Projects</h3>;
       <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 4'>;
@@ -133,7 +131,7 @@ export function ProfileProjects(): any ({ projects }: ProfileProjectsProps) {;
           >    <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 mb - 8">;
       <h3 className="text - xl font - bold text - white mb - 4">Projects</h3>;
       <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 4">;
-        {projects.map ((project, ) => (
+        {projects.map (project, ) => (
           <Card key={project.id} className="bg - zion - blue border - zion - blue - light overflow - hidden hover:border - zion - purple / 40 transition - colors duration - 300">;
             {project.image_url ? (
               <AspectRatio ratio={16 / 9}>;
@@ -153,13 +151,13 @@ export function ProfileProjects(): any ({ projects }: ProfileProjectsProps) {;
               </p>;
               {project.tags && project.tags.length > 0 && (
                 <div className='flex flex - wrap gap - 1 mb - 2'>;
-                  {project.tags.map ((tag, i) => (
+                  {project.tags.map (tag, i) => (
                     <Badge;
                       key={i}
                       variant='outline';
                       className='text - xs border - zion - slate - dark text - zion - slate - light';
                     >                      {tag}                    <Badge key={i} variant="outline" className="text - xs border - zion - slate - dark text - zion - slate - light">;
-        {projects.map ((project) => (
+        {projects.map (project) => (
           <Card key={project.id} className="bg - zion - blue border - zion - blue - light overflow - hidden hover:border - zion - purple / 40 transition - colors duration - 300">;
             {project.image_url ? (
               <AspectRatio ratio={16 / 9}>;
@@ -178,17 +176,16 @@ export function ProfileProjects(): any ({ projects }: ProfileProjectsProps) {;
               <p className="text - zion - slate text - sm mb - 3 line - clamp - 2">{project.description}</p>;
               {project.tags && project.tags.length > 0 && (
                 <div className="flex flex - wrap gap - 1 mb - 2">;
-                  {project.tags.map ((tag, i) => (
+                  {project.tags.map (tag, i) => (
                     <Badge key={i} variant="outline" className="text - xs border - zion - slate - dark text - zion - slate - light">;
                       {tag}
-                    </Badge>))}
+                    </Badge>)}
                 </div>)}
               <div className='text - xs text - zion - slate - light mt - 2'>                {project.date}
               <div className="text - xs text - zion - slate - light mt - 2">;
                 {project.date}
               </div>;
             </CardContent>;
-          </Card>))}
+          </Card>)}
       </div>;
     </div>);
-}

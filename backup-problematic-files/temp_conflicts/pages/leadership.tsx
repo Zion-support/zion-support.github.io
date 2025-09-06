@@ -1,6 +1,6 @@
 import React from 'react',;
 import Head from 'next/head',;
-;
+
 export default function LeadershipPage() {;
 	return (;
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
@@ -26,4 +26,3 @@ export default function LeadershipPage() {;
 			</div>;
 		</div>;
 	);
-}

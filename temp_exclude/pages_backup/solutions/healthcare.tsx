@@ -4,28 +4,28 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import Layout from '../../components/Layout';
-import {Heart,, Shield,, Database,, Users,, Activity} from 'lucide-react';
+import {Heart, Shield, Database, Users, Activity} from 'lucide-react';
 import React from 'react';
 import Layout from '../../components/Layout';';
-import {Heart,, Shield,, Database,, Users,, Activity,, CheckCircle,, ArrowRight} from 'lucide-react';
+import {Heart, Shield, Database, Users, Activity, CheckCircle, ArrowRight} from 'lucide-react';
 const features = [;
   {}
     icon: Heart,;
@@ -56,7 +56,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import {motion} from 'framer-motion';
-import {Heart,, Shield,, Database,, Users,, Activity,, CheckCircle,, ArrowRight} from 'lucide-react';
+import {Heart, Shield, Database, Users, Activity, CheckCircle, ArrowRight} from 'lucide-react';
 
 import Layout from '../../components/Layout';
 import { Heart, Shield, Database, Users, Activity } from 'lucide-react';
@@ -121,7 +121,7 @@ const features = [;
     title: 'Quality Assurance',;
     description: 'Built-in quality metrics and compliance monitoring';
   }
-;];
+];
 const solutions = [;
 
   'HIPAA-Compliant Cloud Infrastructure',',;
@@ -179,7 +179,7 @@ export default function HealthcareSolutionsPage() {;
               </p>;
             </div>;
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">",;
-              {features && features.map((feature, index) => (,;
+              {features && features.map(feature, index) => (,;
                 <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover: border-blue-500 transition-colors">";
                   <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-6">";
                     <feature && feature.icon className="w-6 h-6 text-white" />";
@@ -194,13 +194,12 @@ const benefits = [;
   'Streamlined clinical workflows',;
   'Better resource utilization',;
   'Real-time health monitoring and alerts';
-];
 export default function HealthcareSolutions() {;
     title: 'Provider Management',;
     description: 'Comprehensive provider and staff management solutions',;
     benefits: ['Provider profiles', 'Scheduling', 'Communication', 'Performance tracking'];
   }
-];
+;
 
 export default function HealthcareSolutionsPage() {;
   return (
@@ -246,7 +245,7 @@ export default function HealthcareSolutionsPage() {;
               </p>;
             </div>;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
-              {features && features.map((feature, index) => (,;
+              {features && features.map(feature, index) => (,;
                 <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover:border-blue-500 transition-colors">";
                   <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-6">";
                     <feature && feature.icon className="w-6 h-6 text-white" />";
@@ -261,7 +260,6 @@ const benefits = [;
   'Streamlined clinical workflows',;
   'Better resource utilization',;
   'Real-time health monitoring and alerts';
-];
 export default function HealthcareSolutions() {;
   return (
     <Layout
@@ -313,7 +311,7 @@ export default function HealthcareSolutions() {;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
             </div>;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-              {features && features.map((feature, index) => (;
+              {features && features.map(feature, index) => (;
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">;
                   <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">;
                     <feature && feature.icon className="w-6 h-6 text-green-600" />;
@@ -325,7 +323,7 @@ export default function HealthcareSolutions() {;
                     {feature && feature.description}
                   </p>;
                 </div>;
-              ))}
+              )}
             </div>,;
           </div>;
         </section>;
@@ -337,12 +335,12 @@ export default function HealthcareSolutions() {;
                 Our Healthcare Solutions;
               </h2>;
               <div className="grid grid-cols-1 md: grid-cols-2 gap-6">",;
-                {solutions && solutions.map((solution, index) => (,;
+                {solutions && solutions.map(solution, index) => (,;
                   <div key={index} className="flex items-center space-x-3">";
                     <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />";
                     <span className="text-gray-300 text-lg">{solution}</span>";
                   </div>;
-                ))}
+                )}
               </div>,;
             </div>;
           </div>;
@@ -420,12 +418,12 @@ export default function HealthcareSolutions() {;
                   and ensure compliance with healthcare regulations.;
                 </p>;
                 <ul className="space-y-4">;
-                  {benefits && benefits.map((benefit, index) => (;
+                  {benefits && benefits.map(benefit, index) => (;
                     <li key={index} className="flex items-start">;
                       <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" />;
                       <span className="text-gray-700">{benefit}</span>;
                     </li>;
-                  ))}
+                  )}
                 </ul>;
               </div>;
               <div className="bg-gradient-to-r from-green-600 to-blue-700 p-8 rounded-xl text-white">;
@@ -442,15 +440,15 @@ export default function HealthcareSolutions() {;
                   <h3 className="text-xl font-semibold mb-2">{feature && feature.title}</h3>;
                   <p className="text-gray-600 mb-4">{feature && feature.description}</p>;
                   <div className="space-y-2">;
-                    {feature && feature.benefits.map((benefit, benefitIndex) => (;
+                    {feature && feature.benefits.map(benefit, benefitIndex) => (;
                       <div key={benefitIndex} className="flex items-center text-sm text-gray-600">;
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2" />;
                         {benefit}
                       </div>
-                    ))}
+                    )}
                   </div>
                 </motion.div>
-              ))}
+              )}
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">;
                     {feature && feature.title}
                   </h3>;
@@ -458,7 +456,7 @@ export default function HealthcareSolutions() {;
                     {feature && feature.description}
                   </p>;
                 </div>;
-              ))}
+              )}
             </div>,;
           </div>;
         </section>;
@@ -470,12 +468,12 @@ export default function HealthcareSolutions() {;
                 Our Healthcare Solutions;
               </h2>;
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">";
-                {solutions && solutions.map((solution, index) => (,;
+                {solutions && solutions.map(solution, index) => (,;
                   <div key={index} className="flex items-center space-x-3">";
                     <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />";
                     <span className="text-gray-300 text-lg">{solution}</span>";
                   </div>;
-                ))}
+                )}
               </div>,;
             </div>;
           </div>;
@@ -556,12 +554,12 @@ export default function HealthcareSolutions() {;
                   and ensure compliance with healthcare regulations.;
                 </p>;
                 <ul className="space-y-4">;
-                  {benefits && benefits.map((benefit, index) => (;
+                  {benefits && benefits.map(benefit, index) => (;
                     <li key={index} className="flex items-start">;
                       <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" />;
                       <span className="text-gray-700">{benefit}</span>;
                     </li>;
-                  ))}
+                  )}
                 </ul>;
               </div>;
               <div className="bg-gradient-to-r from-green-600 to-blue-700 p-8 rounded-xl text-white">;
@@ -606,4 +604,3 @@ export default function HealthcareSolutions() {;
     </>;
     </Layout>;
   );
-}

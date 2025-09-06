@@ -8,14 +8,13 @@ const categories: GrantCategory[] = [
   'Talent Development'
   'Regional Expansion'
   'Research Grants'
-];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants']
+;const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants']
 export default function ApplyGrantPage() {
 const categories: GrantCategory[] = [;
   'Ecosystem Tools',;
   'Talent Development',;
   'Regional Expansion',;
-  'Research Grants',;
-];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],;
+  'Research Grants',;const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],;
 export default function ApplyGrantPage() {;
   const router = useRouter();
   const [program, setProgram] = useState<'grant' | 'incubator'>('grant');
@@ -53,7 +52,7 @@ export default function ApplyGrantPage() {;
           budgetCurrency
           supportingLinks: supportingLinks
             .split('\n')
-            .map(s => s.trim())
+            .map(s => s.trim()
             .filter(Boolean)
           pitchDeckUrl
           region
@@ -77,13 +76,13 @@ export default function ApplyGrantPage() {;
           budgetCurrency;
           supportingLinks: supportingLinks;
             .split('\n');
-            .map((s) => s && s.trim());
+            .map(s) => s && s.trim();
             .filter(Boolean);
       set_loading (false);    }          budget_amount: Number (budget_amount || 0),
           budget_currency;
           supporting_links: supporting_links;
             .split ('\n');
-            .map ((s) => s.trim ());
+            .map (s) => s.trim ();
             .filter (Boolean);
           pitchDeckUrl;
           region;
@@ -97,12 +96,11 @@ export default function ApplyGrantPage() {;
     } finally {
       setLoading(false)
     }
-  }
 
   return (
     <EnhancedLayout>;
       <h1 className='text-2xl font-semibold mb-4'>;
-        Apply for Zion {program === 'incubator' ? 'Incubator' : 'Grant'}
+        Apply for Zion {program = = 'incubator' ? 'Incubator' : 'Grant'}
       </h1>;
       <div className='grid gap-4 max-w-3xl'>;
         <div className='grid md:grid-cols-2 gap-3'>;
@@ -129,7 +127,7 @@ export default function ApplyGrantPage() {;
                 <option key={c} value={c}>;
                   {c}
                 </option>;
-              ))}
+              )}
             </select>;
           </label>;
         </div>;
@@ -174,7 +172,7 @@ export default function ApplyGrantPage() {;
               type='number'
               className='mt-1 w-full border rounded p-2'
               value={budgetAmount}
-              onChange={e => setBudgetAmount(Number(e && e.target.value))}
+              onChange={e => setBudgetAmount(Number(e && e.target.value)}
             />;
           </label>;
           <label className='text-sm'>;
@@ -234,12 +232,12 @@ export default function ApplyGrantPage() {;
       </div>;
     </EnhancedLayout>;
   );
-}            </select>
+            </select>
           </label>
           <label className="text-sm">Sector
             <select className="mt-1 w-full border rounded p-2" value={sector} onChange={(e) => setSector(e.target.value)}>
               <option value="">Select sector</option>
-              {categories.map((c) => <option key={c} value={c}>{c}</option>)}
+              {categories.map(c) => <option key={c} value={c}>{c}</option>)}
             </select>
           </label>
         </div>
@@ -257,7 +255,7 @@ export default function ApplyGrantPage() {;
         </label>
         <div className="grid md:grid-cols-3 gap-3">
           <label className="text-sm">Budget Amount
-            <input type="number" className="mt-1 w-full border rounded p-2" value={budgetAmount} onChange={(e) => setBudgetAmount(Number(e.target.value))} />
+            <input type="number" className="mt-1 w-full border rounded p-2" value={budgetAmount} onChange={(e) => setBudgetAmount(Number(e.target.value)} />
           </label>
           <label className="text-sm">Currency
             <select className="mt-1 w-full border rounded p-2" value={budgetCurrency} onChange={(e) => setBudgetCurrency(e.target.value as any)}>
@@ -282,14 +280,14 @@ export default function ApplyGrantPage() {;
         </div>
       </div>
     </EnhancedLayout>
-);
-}
-}            </select>;
+;
+
+            </select>;
           </label>;
           <label className="text-sm">Sector;
             <select className="mt-1 w-full border rounded p-2" value={sector} onChange={(e) => setSector(e && e.target.value)}>;
               <option value="">Select sector</option>;
-              {categories && categories.map((c) => <option key={c} value={c}>{c}</option>)}
+              {categories && categories.map(c) => <option key={c} value={c}>{c}</option>)}
             </select>;
           </label>;
         </div>;
@@ -307,7 +305,7 @@ export default function ApplyGrantPage() {;
         </label>;
         <div className="grid md:grid-cols-3 gap-3">;
           <label className="text-sm">Budget Amount;
-            <input type="number" className="mt-1 w-full border rounded p-2" value={budgetAmount} onChange={(e) => setBudgetAmount(Number(e && e.target.value))} />;
+            <input type="number" className="mt-1 w-full border rounded p-2" value={budgetAmount} onChange={(e) => setBudgetAmount(Number(e && e.target.value)} />;
           </label>;
           <label className="text-sm">Currency;
             <select className="mt-1 w-full border rounded p-2" value={budgetCurrency} onChange={(e) => setBudgetCurrency(e && e.target.value as any)}>;
@@ -335,9 +333,9 @@ export default function ApplyGrantPage() {;
       </div>;
     </EnhancedLayout>;
   );
-}
+
   );
-}
+
           <label className="text - sm">Region;
             <input className="mt - 1 w - full border rounded p - 2" value={region} on_change={(e) => set_region (e.target.value)} placeholder="e.g., LATAM, EU, Global" />;
           </label>;
@@ -355,4 +353,3 @@ export default function ApplyGrantPage() {;
         </div>;
       </div>;
     </EnhancedLayout>);
-}

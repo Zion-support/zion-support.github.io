@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next',;
-;
+
 interface PasswordStrengthResult {;
   password:string,;
   strength:'very-weak' | 'weak' | 'medium' | 'strong' | 'very-strong',;
@@ -15,20 +15,19 @@ interface PasswordStrengthResult {;
     entropy:number;
   },;
   suggestions:string[];
-}
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<PasswordStrengthResult | { error: string }>
-) {
-  if (req.method !== 'POST') {
+ {
+  if (req.method != 'POST') {
     return res.status(405).json({ error: 'Method not allowed' })
   }
 
   try {
     const { password } = req.body,
 
-    if (!password || typeof password !== 'string') {
+    if (!password || typeof password != 'string') {
       return res.status(400).json({ error: 'Password is required' })
     }
 
@@ -38,18 +37,17 @@ export default async function handler(
     const hasLowercase = /[a-z]/.test(password),
     const hasNumbers = /\d/.test(password),
     const hasSymbols = /[!@#$%^&*()_+\-=\[\]{},':"\\|,.<>\/?]/.test(password),
-    
+
     // Check for common patterns
     const commonPatterns = [
       '123abcqwepasswordadminusertest123456', 'password123admin123qwertyasdf'
     ],
-    const hasCommonPatterns = commonPatterns.some(pattern =>       password.toLowerCase().includes(pattern)
-    ),
+    const hasCommonPatterns = commonPatterns.some(pattern =>       password.toLowerCase().includes(pattern),
 
     // Calculate entropy (simplified)
     const charsetSize = (hasUppercase ? 26 : 0) + (hasLowercase ? 26 : 0) + 
                        (hasNumbers ? 10 : 0) + (hasSymbols ? 32 : 0),
-    const entropy = charsetSize > 0 ? Math.log2(Math.pow(charsetSize, length)) : 0,
+    const entropy = charsetSize > 0 ? Math.log2(Math.pow(charsetSize, length) : 0,
 
     // Calculate score
     let score = 0,
@@ -97,7 +95,7 @@ export default async function handler(
     const result: PasswordStrengthResult = {
       password,
       strength,
-      score: Math.max(0, Math.min(100, score)),
+      score: Math.max(0, Math.min(100, score),
       feedback,
       details: {
         length,
@@ -112,4 +110,4 @@ export default async function handler(
     res.status(200).json(result)
   } catch (error) {
     console.error('Password strength check error:', error),
-    res.status(500).json({ error: 'Internal server error' })  }}
+    res.status(500).json({ error: 'Internal server error' })  }

@@ -34,7 +34,7 @@ export default function VideoCall() {;
     isVideoEnabled?: boolean;
     isScreenSharing?: boolean;
     is_host?: boolean;
-  }>>([;
+  }>([;
     {
       id: 'user-1'
       name: 'You'
@@ -45,7 +45,7 @@ export default function VideoCall() {;
   const handleJoinCall = () => {
     setIsJoining(true);
     // Simulate connection delay;
-    setTimeout(() => {;
+    setTimeout() => {;
       setHasJoined(true);
       setIsJoining(false);
       toast.success("Call joined", {
@@ -59,7 +59,7 @@ export default function VideoCall() {;
       description: "You have left the meeting";
     });
     // Navigate back after a short delay
-    setTimeout(() => {
+    setTimeout() => {
       navigate(-1)
     }, 1500)
   }
@@ -71,11 +71,10 @@ export default function VideoCall() {;
       { id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true }
     ];
     const randomUser = mockUsers[Math.floor(Math.random() * mockUsers.length)];
-    if (!participants.find(p => p.id === randomUser.id)) {
+    if (!participants.find(p => p.id = = randomUser.id) {
       setParticipants(prev => [...prev, randomUser]);
       toast(`${randomUser && randomUser.name} joined the call`);
     }
-  }
 
   return (
     <>
@@ -113,18 +112,18 @@ export default function VideoCall() {;
       <Footer />
     </>
   )
-}
+
       id: 'user - 1',
       name: 'You',
       isVideoEnabled: true,
       is_muted: false;
     }
   ]);
-;
+
   const handleJoinCall = () =>: any {
     setIsJoining (true);
     // Simulate connection delay;
-    set_timeout (() => {
+    set_timeout () => {
       setHasJoined (true);
       setIsJoining (false);
       toast.success ("Call joined", {
@@ -132,19 +131,19 @@ export default function VideoCall() {;
       });
     }, 1500);
   }
-;
+
   const handleLeaveCall = () =>: any {
     setHasJoined (false);
     toast.info ("Call ended", {
       description: "You have left the meeting";
     });
-;
+
     // Navigate back after a short delay;
-    set_timeout (() => {
+    set_timeout () => {
       navigate (-1);
     }, 1500);
   }
-;
+
   const simulateUserJoining = () =>: any {
     // This is just for demo purposes - in a real app, this would be handled by the video call service;
     const mock_users = [;
@@ -152,17 +151,16 @@ export default function VideoCall() {;
       { id: 'user - 3', name: 'Taylor Kim', isVideoEnabled: false, is_muted: true },
       { id: 'user - 4', name: 'Jordan Smith', isVideoEnabled: true, is_muted: false, isScreenSharing: true }
     ];
-;
+
     const random_user = mock_users[Math.floor (Math.random () * mock_users.length)];
-;
+
     if () {) {
   $2
-}
+
       set_participants (prev => [...prev, random_user]);
       toast (`${random_user.name} joined the call`);
     }
-  }
-;
+
   return (
     <>;
       <SEO title={`Video Call - Room ${room_id}`} description="Zion video call" />;
@@ -197,4 +195,3 @@ export default function VideoCall() {;
       </main>;
       <Footer />;
     </>);
-}

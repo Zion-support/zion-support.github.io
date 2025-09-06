@@ -13,7 +13,6 @@ interface TalentCardFooterProps {
   onViewProfile: (id: string,) => void
   onRequestHire?: (profile: TalentProfile,) => void
 
-}
 export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: TalentCardFooterProps) {
 
   const [isHireModalOpen, setIsHireModalOpen] = useState(false)
@@ -44,7 +43,6 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
       // Open hire modal directly if no handler provided
       setIsHireModalOpen(true)
     }
-  }
   // Handle view profile
   const handleViewProfile = (e: React.MouseEvent,) => {
     e.stopPropagation()
@@ -54,14 +52,12 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
     if (onViewProfile) {
       onViewProfile(profile.id |'')
     }
-  }
 import React from 'react';
 import { useRouter } from 'next/router';
 interface TalentCardFooterProps {;
   profile: TalentProfile,;
   onViewProfile: (id: string,) => void,;
   onRequestHire?: (profile: TalentProfile,) => void;
-}
 
 export function TalentCardFooter(): any ({ profile, onViewProfile, onRequestHire }: TalentCardFooterProps) {;
   const [isHireModalOpen, setIsHireModalOpen] = useState(false);
@@ -95,8 +91,7 @@ export function TalentCardFooter(): any ({ profile, onViewProfile, onRequestHire
     } else {;
       // Open hire modal directly if no handler provided;
       setIsHireModalOpen(true);
-    }
-  },;
+    },;
 
   // Handle view profile;
   const handleViewProfile = (e: React && React.MouseEvent,) => {;
@@ -108,8 +103,7 @@ export function TalentCardFooter(): any ({ profile, onViewProfile, onRequestHire
     // Also call the onViewProfile callback if provided;
     if (onViewProfile) {;
       onViewProfile(profile && profile.id || '');
-    }
-  },;
+    },;
 
   return (
     <>;
@@ -158,14 +152,13 @@ export function TalentCardFooter(): any ({ profile, onViewProfile, onRequestHire
       />
     </>
   )
-}
 
 import { use_router } from 'next / router';
 interface TalentCardFooterProps {
   profile: TalentProfile,
   onViewProfile: (id: string, ) => void,
   onRequestHire?: (profile: TalentProfile, ) => void;
-}
+
 export /**
  * TalentCardFooter - Function description
  */
@@ -195,13 +188,12 @@ function TalentCardFooter() {
     // Check condition
 if ( {) {
   $2
-}
+
       onRequestHire (profile);
     } else {
       // Open hire modal directly if no handler provided;
       setIsHireModalOpen (true);
-    }
-  },
+    },
   // Handle view profile;
   const handleViewProfile = (e: React.MouseEvent, ) =>: any {
     e.stop_propagation (),
@@ -211,10 +203,9 @@ if ( {) {
     // Check condition
 if ( {) {
   $2
-}
+
       onViewProfile (profile.id || '');
-    }
-  },
+    },
   return (
     <>;
       <div className="mt - 4 pt - 4 border - t border - zion - blue - light flex items - center justify - between">;
@@ -259,4 +250,3 @@ if ( {) {
         user_details = {user_profile, }
       />;
     </>);
-}

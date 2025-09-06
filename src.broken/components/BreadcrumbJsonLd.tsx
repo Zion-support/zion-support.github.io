@@ -6,5 +6,3 @@ export function BreadcrumbJsonLd() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

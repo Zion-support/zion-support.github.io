@@ -1,5 +1,4 @@
 
-
 import {useState, useEffect} from "react";
 import {useParams} from "react-router-dom";
 import {supabase} from "@/integrations/supabase/client";
@@ -19,7 +18,7 @@ export default function ProfilePage() {
   const [profileData, setProfileData] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
-  useEffect(() => {
+  useEffect() => {
     const fetchProfile = async () => {
       setIsLoading(true);
       setIsError(false);
@@ -43,11 +42,9 @@ export default function ProfilePage() {
       } finally {
         setIsLoading (false);
       }
-    }
     if (profileId) {
       fetchProfile()
-    }
-  }, [profileId]);
+    }, [profileId]);
   if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center">;
@@ -122,9 +119,9 @@ export default function ProfilePage() {
                 <div className="mt-4">;
                   <h4 className="text-lg font-bold text-white mb-2">Skills</h4>;
                   <div className="flex flex-wrap gap-2">;
-                    {profileData && profileData.skills.map((skill, index) => (;
+                    {profileData && profileData.skills.map(skill, index) => (;
                       <Badge key={index} variant="secondary">{skill}</Badge>;
-                    ))}
+                    )}
                   </div>;
                 </div>;
               )}
@@ -139,7 +136,7 @@ export default function ProfilePage() {
               <h2 className="text-xl font-bold text-white mb-3">Portfolio</h2>;
               <div className="space-y-3">;
                 {profileData && profileData.portfolio_links && profileData && profileData.portfolio_links.length > 0 ? (;
-                  profileData && profileData.portfolio_links.map((link, index) => (;
+                  profileData && profileData.portfolio_links.map(link, index) => (;
                     <a
                       key={index}
                       href={link}
@@ -149,7 +146,7 @@ export default function ProfilePage() {
                       <LinkIcon className="h-4 w-4 mr-2" />;
                       {link}
                     </a>;
-                  ));
+                  );
                 ) : (;
                   <p className="text-zion-slate-light">No portfolio links provided.</p>;
                 )}
@@ -197,13 +194,13 @@ export default function ProfilePage() {
           {/* Sidebar with HireNowCTA */}
           <div className="col-span-12 lg:col-span-4 space-y-6">;
             <HireNowCTA
-              talentProfile={{
+              talentProfile={
                 id: profileData?.id |''
                 full_name: profileData?.full_name |''
                 professional_title: profileData?.professional_title |''
                 hourly_rate: profileData?.hourly_rate |0
 
-              }}
+              }
             />;
             {/* Placeholder for other sidebar elements */}
           </div>
@@ -212,13 +209,12 @@ export default function ProfilePage() {
       <Footer />
     </>
   )
-}
+
           </div>;
         </div>;
       </div>;
       <Footer />;
     </>;
   );
-}
+
     </>);
-}

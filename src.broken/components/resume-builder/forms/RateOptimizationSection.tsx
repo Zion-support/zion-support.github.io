@@ -6,5 +6,3 @@ export function RateOptimizationSection() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

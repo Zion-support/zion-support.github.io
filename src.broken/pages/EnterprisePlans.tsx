@@ -6,5 +6,3 @@ export function EnterprisePlans() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

@@ -191,11 +191,11 @@ export default function CaseStudyPage() {
               <h2 className="text-3xl font-bold text-white mb-6">Technologies Used</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                  {['ChatbotsNatural Language ProcessingTicket RoutingSentiment Analysis'].map((tech) => (
+                  {['ChatbotsNatural Language ProcessingTicket RoutingSentiment Analysis'].map(tech) => (
                     <div key={tech} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
                       <span className="text-green-400 font-semibold">{tech}</span>
                     </div>
-                  ))}
+                  )}
                 </div>
               </div>
             </section>
@@ -264,7 +264,7 @@ export default function CaseStudyPage() {
       </div>
     </>
   )
-}
+
             <section className="mb - 16">;
               <h2 className="text - 3xl font - bold text - white mb - 6">Company Overview</h2>;
               <div className="bg - white / 10 backdrop - blur - xl rounded - 2xl p - 8 border border - white / 20">;
@@ -410,10 +410,10 @@ export default function CaseStudyPage() {
               <h2 className="text - 3xl font - bold text - white mb - 6">Technologies Used</h2>;
               <div className="bg - white / 10 backdrop - blur - xl rounded - 2xl p - 8 border border - white / 20">;
                 <div className="grid grid - cols - 2 md:grid - cols - 4 gap - 4">;
-                  {['ChatbotsNatural Language ProcessingTicket RoutingSentiment Analysis'].map ((tech) => (
+                  {['ChatbotsNatural Language ProcessingTicket RoutingSentiment Analysis'].map (tech) => (
                     <div key={tech} className="bg - white / 5 rounded - lg p - 4 text - center border border - white / 10">;
                       <span className="text - green - 400 font - semibold">{tech}</span>;
-                    </div>))}
+                    </div>)}
                 </div>;
               </div>;
             </section>;
@@ -481,4 +481,3 @@ export default function CaseStudyPage() {
         </main>;
       </div>;
     </>);
-}

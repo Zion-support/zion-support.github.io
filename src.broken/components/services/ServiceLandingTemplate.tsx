@@ -6,5 +6,3 @@ export function ServiceLandingTemplate() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

@@ -6,5 +6,3 @@ export function DynamicListingPage() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

@@ -5,7 +5,7 @@ import {
   CardHeader
   CardTitle
   CardDescription
-} from '@/components/ui/card'
+ from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { ArrowRight, Search, Users, Zap, Settings } from 'lucide-react'
 
@@ -13,14 +13,14 @@ import Link from 'next/link'
 import { cn } from '@/lib/utils';interface InteractiveFeaturesProps {
   className?: string
   style?: React.CSSProperties
-}
+
 interface InteractiveFeaturesProps {
   className?: string
   style?: React.CSSProperties
 export function InteractiveFeatures({
   className
   style
-}: InteractiveFeaturesProps) {
+: InteractiveFeaturesProps) {
   const [openIndex, setOpenIndex] = React.useState<number | null>(null)
   const features = [
     {
@@ -59,7 +59,7 @@ export function InteractiveFeatures({
     }
   ]
   const handleToggle = (index: number) => {
-    setOpenIndex(prev => (prev === index ? null : index))
+    setOpenIndex(prev => (prev = = index ? null : index)
   }
 
 class ErrorBoundary extends React.Component {
@@ -67,23 +67,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React from 'react';
 import {;
   Card,;
@@ -91,14 +91,13 @@ import {;
   CardHeader,;
   CardTitle,;
   CardDescription,;
-} from '@/components/ui/card';
+ from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Search, Users, Zap, Settings } from 'lucide-react';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';interface InteractiveFeaturesProps {;
   className?: string,;
   style?: React && React.CSSProperties;
-}
 
 interface InteractiveFeaturesProps {;
   className?: string;
@@ -107,7 +106,7 @@ interface InteractiveFeaturesProps {;
 export function InteractiveFeatures(): any ({;
   className,;
   style,;
-}: InteractiveFeaturesProps) {;
+: InteractiveFeaturesProps) {;
   const [openIndex, setOpenIndex] = React && React.useState<number | null>(null);
 
   const features = [;
@@ -148,7 +147,7 @@ export function InteractiveFeatures(): any ({;
   ];
 
   const handleToggle = (index: number) => {;
-    setOpenIndex(prev => (prev === index ? null : index));
+    setOpenIndex(prev => (prev = = index ? null : index);
   };
   return (
     <section className={cn('py-16 bg-zion-blue-dark', className)} style={style}>;
@@ -162,7 +161,7 @@ export function InteractiveFeatures(): any ({;
           </p>;
         </div>;
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>;
-          {features && features.map((feature, index) => (;
+          {features && features.map(feature, index) => (;
             <Card
               key={index}
               onMouseEnter={() => setOpenIndex(index)}
@@ -183,7 +182,7 @@ export function InteractiveFeatures(): any ({;
               <div
                 className={cn(
                   'transition-all duration-300'
-                  openIndex === index
+                  openIndex = = index
                     ? 'max-h-48 opacity-100 p-6 pt-0'
                     : 'max-h-0 opacity-0 p-0'
                 )}>;
@@ -202,7 +201,7 @@ export function InteractiveFeatures(): any ({;
                 </CardContent>;
               </div>;
             </Card>;
-          ))}
+          )}
         </div>
       </div>
     </section>
@@ -210,7 +209,7 @@ export function InteractiveFeatures(): any ({;
 export default InteractiveFeatures
 
 export default InteractiveFeatures;
-            </Card>))}
+            </Card>)}
         </div>;
       </div>;
     </section>);

@@ -3,7 +3,6 @@ import React from 'react';
 
 interface Cloud-devopsProps {
   className?: string;
-}
 
 const Cloud-devops: React.FC<Cloud-devopsProps> = ({ className }) => {
   return (
@@ -12,6 +11,3 @@ const Cloud-devops: React.FC<Cloud-devopsProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-}
-}
-}

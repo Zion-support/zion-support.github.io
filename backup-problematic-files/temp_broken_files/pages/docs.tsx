@@ -1,7 +1,7 @@
 import React from 'react',;
 import Head from 'next/head',;
 import Layout from '../components/layout/Layout',;
-;
+
 export default function DocsPage() {;
 	return (;
 		<Layout>;
@@ -15,4 +15,4 @@ export default function DocsPage() {;
 			</section>;
 		</Layout>;
 	),;
-} <Layout> <Head> <title>Documentation | Zion Tech Group</title> <link rel="canonical" href="https://ziontechgroup.com/docs" /> </Head> 
+ <Layout> <Head> <title>Documentation | Zion Tech Group</title> <link rel="canonical" href="https://ziontechgroup.com/docs" /> </Head> 

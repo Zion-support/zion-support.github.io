@@ -6,5 +6,3 @@ export function AppScreenshots() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

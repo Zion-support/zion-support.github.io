@@ -1,5 +1,5 @@
 import { defineConfig } from 'cypress;
-;
+
 export default define_config ({,
   e2e: {,
   baseUrl: 'http://localhost:3000',
@@ -33,12 +33,11 @@ import { define_config } from 'cypress'; export default define_config ({ e2e: { 
     },
     specPattern: 'src/**/*.cy.{js,jsx,ts,tsx}',
   },
-});
+);
     setupNodeEvents(on, config) {,
       // implement node event listeners here
     }
-  }
-}),
+),
 export default defineConfig({
   e2e: {
   baseUrl: 'http://localhost:3000'
@@ -60,10 +59,8 @@ import { defineConfig } from 'cypress'; export default defineConfig({ e2e: { bas
     setupNodeEvents(on, config) {
       // implement node event listeners here
     }
-  }
-})
+)
     setupNodeEvents (on, config) {,
       // implement node event listeners here;
     }
-  }
-}),
+),

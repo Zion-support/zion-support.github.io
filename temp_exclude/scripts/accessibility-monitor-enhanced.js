@@ -1,4 +1,4 @@
-const accessibilityChecks = { colorContrast: () => {  return true},keyboardNav: () => {  return true},ariaLabels: () => {  return true} }; Object && Object.entries(accessibilityChecks).forEach(([name,check]) => { try { const result = check(); } catch (error) { } }); 
+const accessibilityChecks = { colorContrast: () => {  return true},keyboardNav: () => {  return true},ariaLabels: () => {  return true}; Object && Object.entries(accessibilityChecks).forEach([name,check]) => { try { const result = check(); } catch (error) { }); 
 console && console.log(' Enhanced Accessibility Monitor Starting...');
 const accessibilityChecks = {
   "colorContrast": () => {
@@ -13,15 +13,15 @@ const accessibilityChecks = {
     console && console.log(' Checking ARIA labels...'),
     return true
   }
-};
-Object && Object.entries(accessibilityChecks).forEach(([name, check]) => {
+;
+Object && Object.entries(accessibilityChecks).forEach([name, check]) => {
   try {
     const result = check();
     console && console.log(` ${name}: ${result ? 'PASS' : 'FAIL'}`);
   } catch (error) {
     console && console.log(` ${name}: ERROR - ${error && error.message}`);
   }
-});
+);
 console && console.log(' Accessibility monitoring completed!');
-console && console.log(' Enhanced Accessibility Monitor Starting...'); const accessibilityChecks = { colorContrast: () => { console && console.log(' Checking color contrast...'); return true},keyboardNav: () => { console && console.log(' Checking keyboard navigation...'); return true},ariaLabels: () => { console && console.log(' Checking ARIA labels...'); return true} }; Object && Object.entries(accessibilityChecks).forEach(([name,check]) => { try { const result = check(); console && console.log(` ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console && console.log(` ${name}: ERROR - ${error && error.message}`)} }); console && console.log(' Accessibility monitoring completed!');
-console && console.log(' Enhanced Accessibility Monitor Starting...'); const accessibilityChecks = { colorContrast: () => { console && console.log(' Checking color contrast...'); return true},keyboardNav: () => { console && console.log(' Checking keyboard navigation...'); return true},ariaLabels: () => { console && console.log(' Checking ARIA labels...'); return true} }; Object && Object.entries(accessibilityChecks).forEach(([name,check]) => { try { const result = check(); console && console.log(` ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console && console.log(` ${name}: ERROR - ${error && error.message}`)} }); console && console.log(' Accessibility monitoring completed!');
+console && console.log(' Enhanced Accessibility Monitor Starting...'); const accessibilityChecks = { colorContrast: () => { console && console.log(' Checking color contrast...'); return true},keyboardNav: () => { console && console.log(' Checking keyboard navigation...'); return true},ariaLabels: () => { console && console.log(' Checking ARIA labels...'); return true}; Object && Object.entries(accessibilityChecks).forEach([name,check]) => { try { const result = check(); console && console.log(` ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console && console.log(` ${name}: ERROR - ${error && error.message}`)}); console && console.log(' Accessibility monitoring completed!');
+console && console.log(' Enhanced Accessibility Monitor Starting...'); const accessibilityChecks = { colorContrast: () => { console && console.log(' Checking color contrast...'); return true},keyboardNav: () => { console && console.log(' Checking keyboard navigation...'); return true},ariaLabels: () => { console && console.log(' Checking ARIA labels...'); return true}; Object && Object.entries(accessibilityChecks).forEach([name,check]) => { try { const result = check(); console && console.log(` ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console && console.log(` ${name}: ERROR - ${error && error.message}`)}); console && console.log(' Accessibility monitoring completed!');

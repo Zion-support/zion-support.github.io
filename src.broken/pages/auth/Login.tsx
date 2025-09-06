@@ -5,23 +5,20 @@ import * as auth from '@/services/auth',;
 interface LoginFields {;
   email: string,;
   password: string;
-}
-;
+
 export default function Login() {;
   const navigate = useNavigate(),;
   const { register, handleSubmit } = useForm<LoginFields>(),;
   const onSubmit = async (data: LoginFields) => {;
     try {;
       const res = await auth.login(data.email, data.password);
-      if (res.status === 200) {;
+      if (res.status = = 200) {;
         navigate('/dashboard');
       } else if (res.status >= 400 && res.status < 500) {;
         toast.error(res.data?.error || 'Login failed');
-      }
-    } catch (err: any) {;
+      } catch (err: any) {;
       toast.error(err.message || 'Login failed');
-    }
-  },
+    },
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
@@ -36,5 +33,3 @@ export default function Login() {;
       <button type="submit">Login</button>
     </form>
   )
-}
-;

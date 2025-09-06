@@ -6,5 +6,3 @@ export function HelpCenterPage() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

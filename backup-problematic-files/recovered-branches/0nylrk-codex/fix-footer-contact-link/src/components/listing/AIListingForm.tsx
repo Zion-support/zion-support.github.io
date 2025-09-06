@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
 import { Textarea } from "@/components/ui/textarea",;
 import { Sparkles } from "lucide-react",;
-;
+
 interface AIListingFormProps {;
   onSubmit:(formData:{;
     title:string,;
@@ -20,15 +20,14 @@ interface AIListingFormProps {;
     keyFeatures?:string,;
     targetAudience?:string;
   },;
-}
-;
-export function AIListingForm({ onSubmit, isLoading, initialValues = {} } AIListingFormProps) {;
+
+export function AIListingForm({ onSubmit, isLoading, initialValues = {} AIListingFormProps) {;
   const { toast } = useToast(),;
   const [title, setTitle] = useState(initialValues.title || ""),;
   const [category, setCategory] = useState(initialValues.category || ""),;
   const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures || ""),;
   const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || ""),;
-;
+
   const handleSubmit = () => {;
     if (!title || !category) {;
       toast({;
@@ -38,7 +37,7 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} } AIList
       }),;
       return,;
     }
-;
+
     onSubmit({;
       title,;
       category,;
@@ -46,7 +45,7 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} } AIList
       targetAudience;
     }),;
   },;
-;
+
   return (;
     <div className="space-y-4">;
       <div className="space-y-2">;
@@ -94,16 +93,15 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} } AIList
 category: string;
 keyFeatures: string;
 targetAudience: string 
-}) => void;
+) => void;
 isLoading: boolean;
 initialValues?: {
   title?: string;
 category?: string;
 keyFeatures?: string;
 targetAudience?: string 
-}
 
-export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AIListingFormProps) {
+export function AIListingForm({ onSubmit, isLoading, initialValues = {}: AIListingFormProps) {
   const { toast } = useToast(),
   const [title, setTitle] = useState(initialValues.title || ""),
   const [category, setCategory] = useState(initialValues.category || ""),
@@ -120,9 +118,8 @@ interface AIListingFormProps {_onSubmit: (_formData: {
     category?: string;
     keyFeatures?: string;
     targetAudience?: string;};
-}
 
-export function AIListingForm(_{_onSubmit, _isLoading, _initialValues = {} }: AIListingFormProps) {_const { toast} = useToast();
+export function AIListingForm(_{_onSubmit, _isLoading, _initialValues = {}: AIListingFormProps) {_const { toast} = useToast();
   const [title, setTitle] = useState(initialValues.title || "");
   const [category, setCategory] = useState(initialValues.category || "");
   const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures || "");
@@ -205,13 +202,11 @@ export function AIListingForm(_{_onSubmit, _isLoading, _initialValues = {} }: AI
     </div>;
   ),;}export function AIListingForm ({
   onSubmit, isLoading, initialValues = {
-  
-}
-}: AIListingFormProps) {
+
+: AIListingFormProps) {
   if (!title || !category) {
   toast ({
   return;
-}/> </div> <div className="space-y-2" > <label htmlFor="category" className="text-sm font-medium text-zion-slate-light" >Category</label> <Input /> </div> <div className="space-y-2" > <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light" >Key Features (Optional) </label> <Textarea /> </div> <div className="space-y-2" > <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light" >Target Audience (Optional) </label> <Input > {
+/> </div> <div className="space-y-2" > <label htmlFor="category" className="text-sm font-medium text-zion-slate-light" >Category</label> <Input /> </div> <div className="space-y-2" > <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light" >Key Features (Optional) </label> <Textarea /> </div> <div className="space-y-2" > <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light" >Target Audience (Optional) </label> <Input > {
   isLoading ? (<>Generating Optimized Content...</>) : (<> <Sparkles className="h-4 w-4 mr-2" /> Generate Optimized Content </>) 
-}</Button> </div>) 
-}
+</Button> </div>) 

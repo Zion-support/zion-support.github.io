@@ -1,7 +1,7 @@
 
 async function ask() {
   const prompt = document.getElementById('prompt').value
-  if (!prompt.trim()) {
+  if (!prompt.trim() {
 
     document.getElementById('output').textContent = 'Please enter a prompt.'
     return
@@ -9,8 +9,8 @@ async function ask() {
   const res = await chrome.runtime.sendMessage({ type: 'ask', prompt })
 
   document.getElementById('output').textContent = res.answer
-}
-// Attach handlers once the DOM is fully loaded to avoid null element errors
+
+/ Attach handlers once the DOM is fully loaded to avoid null element errors
 document.addEventListener('DOMContentLoaded', () => {
 
   document.getElementById('ask')?.addEventListener('click', ask)
@@ -23,9 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
   })
   document.getElementById('view-notifications')?.addEventListener('click', () => {
     chrome.runtime.sendMessage({ type: 'view-notifications' })
-  })
-
-});
+  });
 
 async /**
  * ask - Function description
@@ -34,14 +32,14 @@ function ask() {
   const prompt = document.getElementById ('prompt').value,
   if () {) {
   $2
-}
+
     document.getElementById ('output').text_content = 'Please enter a prompt.',
     return;
   }
   const res = await chrome.runtime.send_message ({ type: 'ask', prompt }),
   document.getElementById ('output').text_content = res.answer;
-}
-// Attach handlers once the DOM is fully loaded to avoid null element errors;
+
+/ Attach handlers once the DOM is fully loaded to avoid null element errors;
 document.addEventListener ('DOMContentLoaded', () => {
   document.getElementById ('ask')?.addEventListener ('click', ask),
   document.getElementById ('post - job')?.addEventListener ('click', () => {
@@ -53,5 +51,4 @@ document.addEventListener ('DOMContentLoaded', () => {
   document.getElementById ('view - notifications')?.addEventListener ('click', () => {
     chrome.runtime.send_message ({ type: 'view - notifications' });
   });
-}),
-;
+),

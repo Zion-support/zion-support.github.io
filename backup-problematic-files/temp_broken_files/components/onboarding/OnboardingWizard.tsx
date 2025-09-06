@@ -5,9 +5,9 @@ export default function OnboardingWizard() {const { user, completeOnboarding, se
   const {addToast} = useToast()
   const [step, setStep] = useState(0)
 
-  const isClient = user?.role === 'client'
+  const isClient = user?.role = = 'client'
 
-  const steps = useMemo_(() => {if (isClient) {
+  const steps = useMemo_() => {if (isClient) {
       return [
         { title: 'Ready to find top IT talent?', content: (
           <div className=&quot;space-y-4&quot;>            <p>Post a role or import your job brief to get started.</p>
@@ -29,7 +29,7 @@ export default function OnboardingWizard() {const { user, completeOnboarding, se
           <div className="flex flex-wrap gap-2">
             {['AILLMNext.jsPythonDevOpsSecurity'].map(s => (
               <button key={s} className="px-3 py-1 rounded-full border hover:bg-gray-50 dark:hover:bg-white/5">{s}</button>
-            ))}
+            )}
           </div>
           <div className="flex gap-3">
             {['full-timepart-timecontract'].map(a => (
@@ -44,12 +44,12 @@ export default function OnboardingWizard() {const { user, completeOnboarding, se
           <div className="flex flex-wrap gap-2">
             {['AI', _'LLM', _'Next.js', _'Python', _'DevOps', _'Security'].map(s => (
               <button key={s} className="px-3 py-1 rounded-full border hover:bg-gray-50 dark:hover:bg-white/5">{s}</button>
-            ))}
+            )}
           </div>
           <div className="flex gap-3">
             {_['full-time', _'part-time', _'contract'].map(a => (
               <button key={a} className="px-3 py-1 rounded-full border hover:bg-gray-50 dark:hover:bg-white/5 capitalize">{a}</button>
-            ))}
+            )}
           </div>
         </div>
       ) },
@@ -75,11 +75,11 @@ return (
       </div>
       <div className=&quot;mt-4 text-sm&quot;>{steps[step]?.content}</div>
       <div className=&quot;mt-4 flex items-center justify-between&quot;>
-        <button disabled={step === 0} onClick={() => setStep(s => Math.max(0, s - 1))} className=&quot;px-3 py-2 rounded-md border disabled:opacity-40&quot;>Back</button>
+        <button disabled={step = = 0} onClick={() => setStep(s => Math.max(0, s - 1)} className=&quot;px-3 py-2 rounded-md border disabled:opacity-40&quot;>Back</button>
         {step < steps.length - 1 ? (
-          <button onClick={() => setStep(s => Math.min(steps.length - 1, s + 1))} className=&quot;px-3 py-2 rounded-md border&quot;>Next</button>
+          <button onClick={() => setStep(s => Math.min(steps.length - 1, s + 1)} className=&quot;px-3 py-2 rounded-md border&quot;>Next</button>
         ) : (
-          <button onClick={() => { completeOnboarding(), addToast({ title: 'Onboarding completed', description: 'You can revisit anytime from Settings.', variant: 'success' }) }} className="px-3 py-2 rounded-md border">Finish</button>  return (_<div className="mb-6 rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40">
+          <button onClick={() => { completeOnboarding(), addToast({ title: 'Onboarding completed', description: 'You can revisit anytime from Settings.', variant: 'success' }) } className="px-3 py-2 rounded-md border">Finish</button>  return (_<div className="mb-6 rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40">
       <div className="flex items-center justify-between">
         <div>
           <div className="text-xs uppercase tracking-wide opacity-70 mb-1">Onboarding</div>
@@ -89,9 +89,9 @@ return (
       </div>
       <div className="mt-4 text-sm">{steps[step]?.content}</div>
       <div className="mt-4 flex items-center justify-between">
-        <button disabled={step === 0} onClick={_() => setStep(s => Math.max(0, s - 1))} className="px-3 py-2 rounded-md border disabled:opacity-40">Back</button>
-        {step < steps.length - 1 ? (_<button onClick={() => setStep(s => Math.min(steps.length - 1, s + 1))} className="px-3 py-2 rounded-md border">Next</button>
-        ) : (_<button onClick={_() => { completeOnboarding(); addToast({ title: 'Onboarding completed', description: 'You can revisit anytime from Settings.', variant: 'success'}) }} className="px-3 py-2 rounded-md border">Finish</button>
+        <button disabled={step = = 0} onClick={_() => setStep(s => Math.max(0, s - 1)} className="px-3 py-2 rounded-md border disabled:opacity-40">Back</button>
+        {step < steps.length - 1 ? (_<button onClick={() => setStep(s => Math.min(steps.length - 1, s + 1)} className="px-3 py-2 rounded-md border">Next</button>
+        ) : (_<button onClick={_() => { completeOnboarding(); addToast({ title: 'Onboarding completed', description: 'You can revisit anytime from Settings.', variant: 'success'}) } className="px-3 py-2 rounded-md border">Finish</button>
         )}
       </div>;
     </div>;

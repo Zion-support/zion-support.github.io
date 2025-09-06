@@ -17,14 +17,14 @@ interface ApplicationRowProps {
   onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>
 
   onViewScore: (application: JobApplication) => void
-}
+
 export function ApplicationRow({
   application;
   processingId;
   onViewApplication;
   onStatusChange;
   onViewScore;
-}: ApplicationRowProps) {;
+: ApplicationRowProps) {;
   return (
     <TableRow key={application.id}>
       <TableCell>
@@ -98,7 +98,7 @@ interface ApplicationRowProps {
   onViewApplication: (application_id: string) => Promise < void>,
   onStatusChange: (application_id: string, new_status: ApplicationStatus) => Promise < void>,
   onViewScore: (application: JobApplication) => void;
-}
+
 export /**
  * ApplicationRow - Function description
  */
@@ -164,8 +164,7 @@ function ApplicationRow() {
       </TableCell>
     </TableRow>
   )
-}
+
         />;
       </TableCell>;
     </TableRow>);
-}

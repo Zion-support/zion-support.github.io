@@ -13,18 +13,16 @@ export interface TreeNode {;
   type: "folder" | "file",;
   exists?: boolean,;
   children?: TreeNode[];
-}
-;
+
 interface TreeProps {;
   nodes: TreeNode[],;
   onDeploy?: (path: string) => void;
-}
 
 function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, onDeploy?: (path: string) => void }) {
   const [open, setOpen] = useState<boolean>(false),
 
   const hasChildren = Array.isArray(node.children) && node.children.length > 0,
-  const toggle = () => setOpen((v) => !v),
+  const toggle = () => setOpen(v) => !v),
 
   const copyPath = async () => {
     await navigator.clipboard.writeText(node.path)
@@ -64,13 +62,13 @@ function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, on
       </div>
       {hasChildren && open && (
         <div className="ml-4 border-l pl-2">
-          {node.children!.map((child) => (
+          {node.children!.map(child) => (
             <NodeItem key={child.path} node={child} depth={depth + 1} onDeploy={onDeploy} />
-;
+
 function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, onDeploy?: (path: string) => void }) {;
   const [open, setOpen] = useState<boolean>(false),;
   const hasChildren = Array.isArray(node.children) && node.children.length > 0,;
-  const toggle = () => setOpen((v) => !v),;
+  const toggle = () => setOpen(v) => !v),;
   const copyPath = async () => {;
     await navigator.clipboard.writeText(node.path);
   },;
@@ -106,23 +104,21 @@ function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, on
       </div>;
       {hasChildren && open && (;
         <div className="ml-4 border-l pl-2">;
-          {node.children!.map((child) => (;
+          {node.children!.map(child) => (;
             <NodeItem key={child.path} node={child} depth={depth + 1} onDeploy={onDeploy} />;
-          ))}
+          )}
         </div>;
       )}
     </div>;
   );
-}
-;
+
 export function Tree({ nodes, onDeploy }: TreeProps) {;
   return (;
     <div className="w-full">;
-      {nodes.map((n) => (;
+      {nodes.map(n) => (;
         <NodeItem key={n.path} node={n} depth={0} onDeploy={onDeploy} />;
-      ))}
+      )}
     </div>;
   );
-}
-;
+
 export default Tree;

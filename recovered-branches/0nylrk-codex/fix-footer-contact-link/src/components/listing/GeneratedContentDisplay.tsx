@@ -10,7 +10,7 @@ import {
   CardFooter
   CardHeader
   CardTitle
-} from "@/components/ui/card";
+ from "@/components/ui/card";
 
 interface GeneratedContent {;
   description: string;
@@ -26,7 +26,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from '@/components / ui / card';
+ from '@/components / ui / card';
 interface GeneratedContent {
   description: string;
   tags: string[];
@@ -37,16 +37,15 @@ interface GeneratedContent {
   }
   keyPoints: string[];
 
-}
 interface GeneratedContentDisplayProps {
 interface GeneratedContentDisplayProps {;
   content: GeneratedContent;
   onApply: () => void
-}
+
 export function GeneratedContentDisplay({
   content
   onApply
-}: GeneratedContentDisplayProps) {
+: GeneratedContentDisplayProps) {
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">
       <CardHeader>
@@ -64,13 +63,13 @@ export function GeneratedContentDisplay({
             Tags
           </h3>
           <div className="flex flex-wrap gap-2">
-            {content.tags.map((tag, index) => (
+            {content.tags.map(tag, index) => (
               <Badge
                 key={index}
                 className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">;
                 {tag}
               </Badge>;
-            ))}
+            )}
           </div>
         </div>
         <div>
@@ -87,11 +86,11 @@ export function GeneratedContentDisplay({
             Key Selling Points
           </h3>
           <ul className="list-disc pl-5 text-white space-y-1">
-            {content.keyPoints.map((point, index) => (
+            {content.keyPoints.map(point, index) => (
               <li key={index}>{point}</li>
-            ))}
+            )}
   on_apply: () => void;
-}
+
 export /**
  * GeneratedContentDisplay - Function description
  */
@@ -113,13 +112,13 @@ function GeneratedContentDisplay() {
             Tags;
           </h3>;
           <div className="flex flex - wrap gap - 2">;
-            {content.tags.map ((tag, index) => (
+            {content.tags.map (tag, index) => (
               <Badge;
                 key={index}
                 className="bg - zion - purple / 20 text - zion - purple hover:bg - zion - purple / 30";
               >;
                 {tag}
-              </Badge>))}
+              </Badge>)}
           </div>;
         </div>;
         <div>;
@@ -136,8 +135,8 @@ function GeneratedContentDisplay() {
             Key Selling Points;
           </h3>;
           <ul className="list - disc pl - 5 text - white space - y-1">;
-            {content.key_points.map ((point, index) => (
-              <li key={index}>{point}</li>))}
+            {content.key_points.map (point, index) => (
+              <li key={index}>{point}</li>)}
           </ul>;
         </div>;
       </CardContent>;
@@ -151,4 +150,3 @@ function GeneratedContentDisplay() {
       </CardFooter>;
     </Card>;
   );
-}

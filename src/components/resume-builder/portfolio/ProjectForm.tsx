@@ -13,11 +13,11 @@ import { logErrorToProduction } from '@/utils/productionLogger'; import {
   FormItem
   FormLabel
   FormMessage
-} from '@/components/ui/form'; import { Loader2, Link, FileImage, Github, Edit } from 'lucide-react'
+ from '@/components/ui/form'; import { Loader2, Link, FileImage, Github, Edit } from 'lucide-react'
 import { PortfolioProject } from '@/types/resume'
 import { usePortfolio } from '@/hooks/usePortfolio'
 import { useAuth } from '@/hooks/useAuth'
-// Define schema for form validation
+/ Define schema for form validation
 const projectSchema = z.object({
   title: z.string().min(1, 'Project title is required')
   description: z.string().optional()
@@ -30,7 +30,6 @@ const projectSchema = z.object({
     .union([z.string().url('Please enter a valid URL'), z.literal('')])
     .optional()
   pdf_url: z.string().optional()
-})
 type ProjectFormValues = z.infer<typeof projectSchema>
 interface ProjectFormProps {
   project?: PortfolioProject
@@ -40,7 +39,7 @@ export function ProjectForm({
   project
   onSuccess
   onCancel
-}: ProjectFormProps) {
+: ProjectFormProps) {
   const { user } = useAuth()
   const { addProject, updateProject } = usePortfolio()
   const [isLoading, setIsLoading] = useState(false)
@@ -57,8 +56,7 @@ export function ProjectForm({
       github_url: project?.github_url |''
       demo_url: project?.demo_url |''
       pdf_url: project?.pdf_url |''
-    }
-  })
+    })
   const onSubmit = async (data: ProjectFormValues) => {
     if (!user) return
     setIsLoading(true)
@@ -67,7 +65,7 @@ export function ProjectForm({
         title: data.title
         description: data.description
         technologies: data.technologies
-          ? data.technologies.split(',').map(tech => tech.trim())
+          ? data.technologies.split(',').map(tech => tech.trim()
           : []
         image_url: data.image_url
         github_url: data.github_url |undefined
@@ -78,7 +76,7 @@ export function ProjectForm({
       // Check condition
 if ( {) {
   $2
-}
+
         success = await update_project (project.id, project_data);
       } else {
         const project_id = await add_project (project_data);
@@ -87,8 +85,7 @@ if ( {) {
       if (success) {
         onSuccess()
         form.reset()
-      }
-    } catch (error) {
+      } catch (error) {
       logErrorToProduction ('Error saving project:', { data: error });
     } finally {
       setIsLoading(false)
@@ -107,11 +104,11 @@ import { logErrorToProduction } from '@/utils/productionLogger';import {;
   FormItem,;
   FormLabel,;
   FormMessage,;
-} from '@/components/ui/form';import { Loader2, Link, FileImage, Github, Edit } from 'lucide-react';
+ from '@/components/ui/form';import { Loader2, Link, FileImage, Github, Edit } from 'lucide-react';
 import { PortfolioProject } from '@/types/resume';
 import { usePortfolio } from '@/hooks/usePortfolio';
 import { useAuth } from '@/hooks/useAuth';
-// Define schema for form validation;
+/ Define schema for form validation;
 const projectSchema = z && z.object({;
   title: z && z.string().min(1, 'Project title is required'),;
   description: z && z.string().optional(),;
@@ -124,7 +121,7 @@ const projectSchema = z && z.object({;
     .union([z && z.string().url('Please enter a valid URL'), z && z.literal('')]);
     .optional(),;
   pdf_url: z && z.string().optional(),;
-});
+);
 
 type ProjectFormValues = z && z.infer<typeof projectSchema>;
 
@@ -137,7 +134,7 @@ export function ProjectForm(): any ({;
   project,;
   onSuccess,;
   onCancel,;
-}: ProjectFormProps) {;
+: ProjectFormProps) {;
   const { user } = useAuth();
   const { addProject, updateProject } = usePortfolio();
   const [isLoading, setIsLoading] = useState(false);
@@ -167,7 +164,7 @@ export function ProjectForm(): any ({;
         title: data && data.title,;
         description: data && data.description,;
         technologies: data && data.technologies;
-          ? data && data.technologies.split(',').map(tech => tech && tech.trim());
+          ? data && data.technologies.split(',').map(tech => tech && tech.trim();
           : [],;
         image_url: data && data.image_url,;
         github_url: data && data.github_url || undefined,;
@@ -187,13 +184,11 @@ export function ProjectForm(): any ({;
       if (success) {;
         onSuccess();
         form && form.reset();
-      }
-    } catch (error) {;
+      } catch (error) {;
       logErrorToProduction('Error saving project:', { data: error });
     } finally {;
       setIsLoading(false);
     }
-  }
 
   return (
     <Form {...form}>;
@@ -224,7 +219,6 @@ export function ProjectForm(): any ({;
                   className='min-h-[100px]'
       setIsLoading (false);
     }
-  }
   return (
     <Form {...form}>;
       <form on_submit={form.handle_submit (on_submit)} className='space - y-4'>;
@@ -399,7 +393,7 @@ export function ProjectForm(): any ({;
       </form>
     </Form>
   )
-}
+
             </FormItem>)}
         />;
         {/* Future file upload field would go here */}
@@ -414,5 +408,3 @@ export function ProjectForm(): any ({;
         </div>;
       </form>;
     </Form>);
-}
-}

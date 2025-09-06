@@ -78,4 +78,3 @@ function AIPoweredDevOpsPlatformPage() {
         canonical='https: //ziontechgroup.com / ai - powered - devops - platform';
       />;
     </>);
-;

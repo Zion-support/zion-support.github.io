@@ -1,4 +1,4 @@
-'use client'
+use client'
 import React, { useEffect, useState } from 'react'
 import {supabase} from '@/utils/supabase/client'
 import {Button} from '@/components/ui/button'
@@ -10,19 +10,18 @@ import type {
   User as SupabaseUser
   AuthChangeEvent
   Session
-} from '@supabase/supabase-js'
+ from '@supabase/supabase-js'
 interface UserProfileProps {
   onUserChange?: (user: SupabaseUser | null) => void
 export default function UserProfile({ onUserChange }: UserProfileProps) {
   const [user, setUser] = useState<SupabaseUser | null>(null)
   const [loading, setLoading] = useState(true)
   const router = useRouter()
-  useEffect(() =></SupabaseUser> {
+  useEffect() =></SupabaseUser> {
     // Get initial session
     const getInitialSession = async () => {
       const {
-        data: { session }
-      } = await supabase.auth.getSession()
+        data: { session } = await supabase.auth.getSession()
       setUser(session?.user ?? null)
       setLoading(false)
       onUserChange?.(session?.user ?? null)
@@ -30,9 +29,7 @@ export default function UserProfile({ onUserChange }: UserProfileProps) {
     getInitialSession ();
     // Listen for auth changes;
     const {
-      data: { subscription }
-    } = supabase.auth.onAuthStateChange(
-      (event: AuthChangeEvent, session: Session | null) => {
+      data: { subscription } = supabase.auth.onAuthStateChange(event: AuthChangeEvent, session: Session | null) => {
         setUser(session?.user ?? null)
         setLoading(false)
         onUserChange?.(session?.user ?? null)
@@ -49,7 +46,7 @@ export default function UserProfile({ onUserChange }: UserProfileProps) {
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <Card className='w - full max - w-sm'>;
         <CardContent className='p - 6'>;
@@ -115,7 +112,7 @@ if ( {) {
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <Card className='w - full max - w-sm'>;
         <CardHeader>;

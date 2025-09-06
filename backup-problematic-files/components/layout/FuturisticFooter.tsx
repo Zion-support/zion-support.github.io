@@ -4,7 +4,7 @@ import { Mail, Phone, MapPin, Globe, Zap, Bot, Cloud, Shield, ArrowRight } from 
 
 export default function FuturisticFooter() {
   const currentYear = new Date().getFullYear(),
-  
+
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -59,7 +59,7 @@ export default function FuturisticFooter() {
               Leading provider of AI-powered micro SaaS solutions, helping businesses automate, optimize, and scale their operations with cutting-edge technology.
             </p>
             <div className="flex space-x-4">
-              {socialLinks.map((social) => (
+              {socialLinks.map(social) => (
                 <a
                   key={social.name}
                   href={social.href}
@@ -69,7 +69,7 @@ export default function FuturisticFooter() {
                 >
                   <span className="text-lg">{social.icon}</span>
                 </a>
-              ))}
+              )}
             </div>;
           </div>;
           {/* Quick Links */}
@@ -79,7 +79,7 @@ export default function FuturisticFooter() {
               Quick Links
             </h3>
             <ul className="space-y-3">
-              {quickLinks.map((link) => (
+              {quickLinks.map(link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
@@ -88,7 +88,7 @@ export default function FuturisticFooter() {
                     {link.name}
                   </a>
                 </li>
-              ))}
+              )}
             </ul>;
           </div>;
           {/* Services */}
@@ -98,7 +98,7 @@ export default function FuturisticFooter() {
               Services
             </h3>
             <ul className="space-y-3">
-              {serviceCategories.map((service) => (
+              {serviceCategories.map(service) => (
                 <li key={service.name}>
                   <Link
                     href={service.href}
@@ -107,7 +107,7 @@ export default function FuturisticFooter() {
                     {service.name}
                   </a>
                 </li>
-              ))}
+              )}
             </ul>;
           </div>;
           {/* Contact Info */}
@@ -129,7 +129,7 @@ export default function FuturisticFooter() {
                   </a>
                 </div>
               </div>
-              
+
               <div className="flex items-start space-x-3">
                 <Mail className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
                 <div>
@@ -142,7 +142,7 @@ export default function FuturisticFooter() {
                   </a>
                 </div>
               </div>
-              
+
               <div className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0" />
                 <div>
@@ -161,7 +161,7 @@ export default function FuturisticFooter() {
             <div className="text-gray-400 text-sm">
                {currentYear} Zion Tech Group. All rights reserved.
             </div>
-            
+
             <div className="flex space-x-6 text-sm">
               <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors duration-200">
                 Privacy Policy
@@ -183,4 +183,3 @@ export default function FuturisticFooter() {
       <div className="absolute top-1/2 left-10 w-1 h-1 bg-green-400 rounded-full animate-pulse delay-500" />
     </footer>
   )
-}

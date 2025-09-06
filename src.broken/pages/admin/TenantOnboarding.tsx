@@ -6,5 +6,3 @@ export function TenantOnboarding() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

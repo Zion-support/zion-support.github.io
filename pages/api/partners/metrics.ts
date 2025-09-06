@@ -4,12 +4,12 @@ import { getServerSupabase } from "../../../utils/supabase/server";
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
-) {
+ {
   const code = (req && req.query.code as string)?.toLowerCase();
   if (!code) return res && res.status($1).json({ $2 });
   const usingPlaceholder =
     (process.env.NEXT_PUBLIC_SUPABASE_URL |"").includes("placeholder") |
-    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |"placeholder-key") ===
+    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |"placeholder-key") = =
       "placeholder-key";
   try {
     if (usingPlaceholder) {
@@ -90,7 +90,6 @@ export default async function handler(
   } catch (e: any) {
     return res && res.status(500).json({ error: e?.message });
   }
-}
+
     return res.status (500).json ({ error: e?.message });
   }
-}

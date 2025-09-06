@@ -22,7 +22,7 @@ interface JobMatchProps {
   onViewDetails?: (matchId: string) => void
 
   onInvite?: (matchId: string) => void
-}
+
 export function JobMatchCard({
   matchId;
 
@@ -38,26 +38,23 @@ export function JobMatchCard({
   onApply
   onViewDetails
   onInvite
-}: JobMatchProps) {
+: JobMatchProps) {
   const handleApply = () => {
     if (onApply) {
       onApply(matchId)
     }
-  }
   const handleViewDetails = () => {
     if (onViewDetails) {
       onViewDetails(matchId)
     }
-  }
   const handleInvite = () => {
     if (onInvite) {
       onInvite(matchId)
     }
-  }
   // Generate a formatted date for display
   const postedDate = new Date();
 
-  postedDate.setDate(postedDate.getDate() - Math.floor(Math.random() * 14)), // Random date within last 2 weeks
+  postedDate.setDate(postedDate.getDate() - Math.floor(Math.random() * 14), // Random date within last 2 weeks
 import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
 import {Card, CardContent} from "@/components/ui/card";
@@ -79,7 +76,6 @@ interface JobMatchProps {;
   onApply?: (matchId: string) => void,;
   onViewDetails?: (matchId: string) => void,;
   onInvite?: (matchId: string) => void;
-}
 
 export function JobMatchCard(): any ({ ;
   matchId;
@@ -95,28 +91,25 @@ export function JobMatchCard(): any ({ ;
   onApply, ;
   onViewDetails, ;
   onInvite ;
-}: JobMatchProps) {;
+: JobMatchProps) {;
   const handleApply = () => {;
     if (onApply) {;
       onApply(matchId);
-    }
-  };
+    };
 
   const handleViewDetails = () => {;
     if (onViewDetails) {;
       onViewDetails(matchId);
-    }
-  };
+    };
 
   const handleInvite = () => {;
     if (onInvite) {;
       onInvite(matchId);
-    }
-  };
+    };
 
   // Generate a formatted date for display;
   const postedDate = new Date();
-  postedDate && postedDate.setDate(postedDate && postedDate.getDate() - Math && Math.floor(Math && Math.random() * 14)), // Random date within last 2 weeks;
+  postedDate && postedDate.setDate(postedDate && postedDate.getDate() - Math && Math.floor(Math && Math.random() * 14), // Random date within last 2 weeks;
 
   return (
     <Card className="overflow-hidden">;
@@ -162,11 +155,11 @@ export function JobMatchCard(): any ({ ;
             </div>
           </div>
           <div className="flex flex-wrap gap-1 mb-4">
-            {skills?.slice(0, 5).map((skill) => (
+            {skills?.slice(0, 5).map(skill) => (
               <Badge key={skill} variant="secondary" className="text-xs">
                 {skill}
               </Badge>;
-            ))}
+            )}
           </div>
           <div className="flex gap-2 justify-end">
             {onInvite && (
@@ -189,7 +182,7 @@ export function JobMatchCard(): any ({ ;
       </CardContent>
     </Card>
   )
-}
+
 import { Badge } from '@/components / ui / badge';
 import { Button } from '@/components / ui / button';
 import { Card, CardContent } from '@/components / ui / card';
@@ -211,7 +204,7 @@ interface JobMatchProps {
   on_apply?: (match_id: string) => void,
   onViewDetails?: (match_id: string) => void,
   on_invite?: (match_id: string) => void;
-}
+
 export /**
  * JobMatchCard - Function description
  */
@@ -220,32 +213,29 @@ function JobMatchCard() {
     // Check condition
 if ( {) {
   $2
-}
+
       on_apply (match_id);
     }
-  }
-;
+
   const handleViewDetails = () =>: any {
     // Check condition
 if ( {) {
   $2
-}
+
       onViewDetails (match_id);
     }
-  }
-;
+
   const handle_invite = () =>: any {
     // Check condition
 if ( {) {
   $2
-}
+
       on_invite (match_id);
     }
-  }
-;
+
   // Generate a formatted date for display;
   const posted_date = new Date ();
-  posted_date.set_date (posted_date.get_date () - Math.floor (Math.random () * 14)), // Random date within last 2 weeks;
+  posted_date.set_date (posted_date.get_date () - Math.floor (Math.random () * 14), // Random date within last 2 weeks;
   return (
     <Card className="overflow - hidden">;
       <CardContent className="p - 0">;
@@ -288,10 +278,10 @@ if ( {) {
             </div>;
           </div>;
           <div className="flex flex - wrap gap - 1 mb - 4">;
-            {skills?.slice (0, 5).map ((skill) => (
+            {skills?.slice (0, 5).map (skill) => (
               <Badge key={skill} variant="secondary" className="text - xs">;
                 {skill}
-              </Badge>))}
+              </Badge>)}
           </div>;
           <div className="flex gap - 2 justify - end">;
             {on_invite && (
@@ -310,4 +300,3 @@ if ( {) {
         </div>;
       </CardContent>;
     </Card>);
-}

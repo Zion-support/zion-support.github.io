@@ -6,5 +6,3 @@ export function steps() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

@@ -232,7 +232,7 @@ export default function Careers() {
           <div className="mb-24">
             <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Benefits</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index) => (
+              {benefits.map(benefit, index) => (
                 <div key={index} className="bg-zion-blue-dark p-8 rounded-lg border border-zion-blue-light">
                   <div className="bg-zion-blue inline-flex p-4 rounded-full mb-4">
                     {benefit.icon}
@@ -240,7 +240,7 @@ export default function Careers() {
                   <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
                   <p className="text-zion-slate-light">{benefit.description}</p>
                 </div>
-              ))}
+              )}
             </div>
           </div>
           <div className="mb-24">
@@ -252,9 +252,9 @@ export default function Careers() {
                 <TabsTrigger value="marketing" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">Marketing</TabsTrigger>
                 <TabsTrigger value="operations" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">Operations</TabsTrigger>
               </TabsList>
-              {Object.entries(jobs).map(([department, jobList]) => (
+              {Object.entries(jobs).map([department, jobList]) => (
                 <TabsContent key={department} value={department} className="space-y-6">
-                  {jobList.map((job, index) => (
+                  {jobList.map(job, index) => (
                     <Card key={index} className="bg-zion-blue-dark border border-zion-blue-light hover:border-zion-purple transition-colors">
                       <CardContent className="p-6">
                         <div className="flex flex-col md:flex-row md:items-center md:justify-between">
@@ -278,9 +278,9 @@ export default function Careers() {
                         </div>;
                       </CardContent>;
                     </Card>;
-                  ))}
+                  )}
                 </TabsContent>;
-              ))}
+              )}
             </Tabs>
           </div>
           <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md: p-12 text-center">
@@ -297,7 +297,7 @@ export default function Careers() {
       </main>
     </AppLayout>
   )
-}
+
               Send General Application;
             </Button>;
           </div>;
@@ -305,6 +305,5 @@ export default function Careers() {
       </main>;
     </AppLayout>;
   );
-}
+
     </AppLayout>);
-}

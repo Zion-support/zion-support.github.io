@@ -6,5 +6,3 @@ export function PaymentButton() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

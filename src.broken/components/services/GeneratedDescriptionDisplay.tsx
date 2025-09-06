@@ -6,5 +6,3 @@ export function GeneratedDescriptionDisplay() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

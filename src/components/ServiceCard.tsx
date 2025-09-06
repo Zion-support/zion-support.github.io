@@ -8,7 +8,6 @@ interface ServiceCardProps {
   features: string[];
   isActive?: boolean;
   onMouseEnter?: () => void;
-}
 
 const ServiceCard: React.FC<ServiceCardProps> = ({
   title,
@@ -17,7 +16,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   features,
   isActive = false,
   onMouseEnter,
-}) => {
+) => {
   return (
     <Card
       className={`cursor-pointer ${
@@ -29,15 +28,14 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
       <h3 className="text-2xl font-semibold text-white mb-4">{title}</h3>
       <p className="text-gray-300 mb-4">{description}</p>
       <ul className="space-y-2">
-        {features.map((feature, index) => (
+        {features.map(feature, index) => (
           <li key={index} className="text-sm text-gray-400 flex items-center">
             <span className="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
             {feature}
           </li>
-        ))}
+        )}
       </ul>
     </Card>
   );
-};
 
 export default ServiceCard;

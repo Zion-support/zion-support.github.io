@@ -4,7 +4,6 @@ interface LabelProps {
   children: React.ReactNode;
   htmlFor?: string;
   className?: string;
-}
 
 export function Label({ children, htmlFor, className = '' }: LabelProps) {
   return (
@@ -15,4 +14,3 @@ export function Label({ children, htmlFor, className = '' }: LabelProps) {
       {children}
     </label>
   );
-}

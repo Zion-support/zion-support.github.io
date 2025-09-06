@@ -7,6 +7,5 @@ const NextGenInnovativeServices = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default NextGenInnovativeServices;

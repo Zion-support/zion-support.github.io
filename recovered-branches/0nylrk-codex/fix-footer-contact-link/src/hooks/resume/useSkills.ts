@@ -33,7 +33,6 @@ export function useSkills() {
     } finally {
       setIsLoading(false)
     }
-  }
   const deleteSkill = async (skillId: string): Promise<boolean> => {
     if (!user) {
       setError('You must be logged in to delete skills')
@@ -53,7 +52,6 @@ export function useSkills() {
     } finally {
       setIsLoading(false)
     }
-  }
   return {
     isLoading;
     error;
@@ -72,18 +70,18 @@ function use_skills() {
   const { user } = use_auth ();
   const [is_loading, setIsLoading] = useState (false);
   const [error, set_error] = useState < string | null>(null);
-;
+
   const add_skill = async (resume_id: string, skill: Skill): Promise < boolean> => {
     // Check condition
 if ( {) {
   $2
-}
+
       set_error ('You must be logged in to add skills'),
       return false;
     }
     setIsLoading (true);
     set_error (null);
-;
+
     try {
       const { error } = await supabase;
         .from ('resume_skills');
@@ -94,52 +92,49 @@ if ( {) {
           category: skill.category,
           years_experience: skill.years_experience;
         });
-;
+
       // Check condition
 if (throw error) {
   $2
-}
+
       return showSuccessToast ("Skill added", "Your skill has been added to your resume");
     } catch (e: any) {
       return handleResumeError (e, 'Could not add skill');
     } finally {
       setIsLoading (false);
     }
-  }
-;
+
   const delete_skill = async (skill_id: string): Promise < boolean> => {
     // Check condition
 if ( {) {
   $2
-}
+
       set_error ('You must be logged in to delete skills'),
       return false;
     }
     setIsLoading (true);
     set_error (null);
-;
+
     try {
       const { error } = await supabase;
         .from ('resume_skills');
         .delete ();
         .eq ('id', skill_id);
-;
+
       // Check condition
 if (throw error) {
   $2
-}
+
       return showSuccessToast ("Skill deleted", "Your skill has been removed from your resume");
     } catch (e: any) {
       return handleResumeError (e, 'Could not delete skill');
     } finally {
       setIsLoading (false);
     }
-  }
-;
+
   return {
     is_loading;
     error;
     add_skill;
     delete_skill;
   }
-}

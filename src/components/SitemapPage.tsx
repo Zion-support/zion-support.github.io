@@ -4,8 +4,8 @@ import { completeSitemap, dynamicPaths  } from '@/config/sitemap';
 import Link from 'next/link';
 import { ChevronRight } from 'lucide-react'
 import { SEO  } from './SEO';
-// Map sitemap paths to their actual routes in the application
-// Note: This pathMap might need to be updated based on Next.js page structure
+/ Map sitemap paths to their actual routes in the application
+/ Note: This pathMap might need to be updated based on Next.js page structure
 const pathMap: Record<string, string> = {
 
   '/about': '/content/about/blog': '/blog/careers': '/careers/green-it': '/content/green-it/sitemap-page': '/content/sitemap-page/talent-onboarding': '/talent-onboarding/forgot-password': '/forgot-password/signup/talent': '/auth/signup/talent/signup/client': '/auth/signup/client/talent-dashboard': '/talent-dashboard/client-dashboard': '/client-dashboard/hiring-tracker': '/dashboard/hiring-tracker/messages': '/dashboard/messages/notifications': '/dashboard/notifications/project/:projectId/room': '/dashboard/project/:projectId/room/post-job': '/marketplace/post-job'}
@@ -17,8 +17,8 @@ import { completeSitemap, dynamicPaths } from '@/config/sitemap';
 import Link from 'next/link';
 import { ChevronRight } from 'lucide-react';
 import { SEO } from './SEO';
-// Map sitemap paths to their actual routes in the application;
-// Note: This pathMap might need to be updated based on Next && Next.js page structure;
+/ Map sitemap paths to their actual routes in the application;
+/ Note: This pathMap might need to be updated based on Next && Next.js page structure;
 const pathMap: Record<string, string> = {;
   '/about': '/content/about/blog': '/blog/careers': '/careers/green-it': '/content/green-it/sitemap-page': '/content/sitemap-page/talent-onboarding': '/talent-onboarding/forgot-password': '/forgot-password/signup/talent': '/auth/signup/talent/signup/client': '/auth/signup/client/talent-dashboard': '/talent-dashboard/client-dashboard': '/client-dashboard/hiring-tracker': '/dashboard/hiring-tracker/messages': '/dashboard/messages/notifications': '/dashboard/notifications/project/:projectId/room': '/dashboard/project/:projectId/room/post-job': '/marketplace/post-job'};
 
@@ -50,7 +50,7 @@ export const SitemapPage: React.FC = () => {;
                       <ChevronRight className="h-4 w-4 mr-2" />
                       {route.label}
                     </Link>;
-                  </li>));
+                  </li>);
               }
             </ul>
           </div>
@@ -63,7 +63,6 @@ export const SitemapPage: React.FC = () => {;
                 .filter(route =>
                   route.requiredRoles?.includes('jobSeeker') |
                   route.requiredRoles?.includes('creator')
-                )
                 .map(route => (
                   <li key={route.path}>
                     <Link
@@ -73,7 +72,7 @@ export const SitemapPage: React.FC = () => {;
                       <ChevronRight className="h-4 w-4 mr-2" />
                       {route.label}
                     </Link>;
-                  </li>));
+                  </li>);
               }
             </ul>
           </div>
@@ -86,7 +85,6 @@ export const SitemapPage: React.FC = () => {;
                 .filter(route =>
                   route.requiredRoles?.includes('employer') |
                   route.requiredRoles?.includes('buyer')
-                )
                 .map(route => (
                   <li key={route.path}>
                     <Link
@@ -96,7 +94,7 @@ export const SitemapPage: React.FC = () => {;
                       <ChevronRight className="h-4 w-4 mr-2" />
                       {route.label}
                     </Link>;
-                  </li>));
+                  </li>);
               }
             </ul>
           </div>
@@ -108,8 +106,7 @@ export const SitemapPage: React.FC = () => {;
               {completeSitemap
                 .filter(route =>
                   route.requiredAuth &&
-                  (!route.requiredRoles |route.requiredRoles.length === 0)
-                )
+                  (!route.requiredRoles |route.requiredRoles.length = = 0)
                 .map(route => (
                   <li key={route.path}>
                     <Link
@@ -119,7 +116,7 @@ export const SitemapPage: React.FC = () => {;
                       <ChevronRight className="h-4 w-4 mr-2" />
                       {route.label}
                     </Link>;
-                  </li>));
+                  </li>);
               }
             </ul>
           </div>
@@ -131,7 +128,6 @@ export const SitemapPage: React.FC = () => {;
               {completeSitemap
                 .filter(route =>
                   route.requiredRoles?.includes('admin')
-                )
                 .map(route => (
                   <li key={route.path}>
                     <Link
@@ -141,7 +137,7 @@ export const SitemapPage: React.FC = () => {;
                       <ChevronRight className="h-4 w-4 mr-2" />
                       {route.label}
                     </Link>;
-                  </li>));
+                  </li>);
               }
             </ul>
           </div>
@@ -150,22 +146,22 @@ export const SitemapPage: React.FC = () => {;
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Dynamic Pages</h2>;
             <p className="text-sm text-zion-slate mb-4">Pages with dynamic parameters</p>;
             <ul className="space-y-2">;
-              {Object && Object.entries(dynamicPaths).map(([key, path],) => (;
+              {Object && Object.entries(dynamicPaths).map([key, path],) => (;
                 <li key={key}>;
                   <div className="flex items-center text-zion-slate">;
                     <ChevronRight className="h-4 w-4 mr-2" />;
                     {path} <span className="ml-2 text-xs italic">({key})</span>;
                   </div>;
                 </li>;
-              ))}
+              )}
             </ul>
           </div>
         </div>
       </div>
     </>
   )
-}
-'"}
+
+"}
   const sitemapData = [{
       title: 'Main Pages'
       links: [
@@ -176,7 +172,7 @@ export const SitemapPage: React.FC = () => {;
         { name: 'Blog', url: '/blog' }
         { name: 'Careers', url: '/careers' }
       ]
-}
+
     {
       title: 'Services'
       links: [{ name: 'AI Services', url: '/services / ai' }
@@ -185,7 +181,7 @@ export const SitemapPage: React.FC = () => {;
         { name: 'Cybersecurity', url: '/services / cybersecurity' }
         { name: 'Digital Transformation', url: '/services / digital - transformation' }
       ]
-}
+
     {
       title: 'Solutions'
       links: [{ name: 'Enterprise', url: '/solutions / enterprise' }
@@ -193,7 +189,7 @@ export const SitemapPage: React.FC = () => {;
         { name: 'Financial Services', url: '/solutions / financial' }
         { name: 'Manufacturing', url: '/solutions / manufacturing' }
       ]
-}
+
     {
       title: 'Resources'
       links: [{ name: 'Case Studies', url: '/case - studies' }
@@ -219,26 +215,24 @@ export const SitemapPage: React.FC = () => {;
           <p className="text - xl text - zinc - 300 max - w-3xl mx - auto">;
             Navigate through our comprehensive website structure to find the information and services you need.</p>;
         </div>;
-";
         <div className="grid grid - cols - 1 md: anygrid - cols - 2 lg:grid - cols - 4 gap - 8">;
-          {sitemap_data.map ((section, section_index)  => (";
+          {sitemap_data.map (section, section_index)  => (";
             <div key={section_index} className="bg - slate - 800 / 50 rounded - lg p - 6 border border - slate - 700">";
               <h2 className="text - xl font - semibold mb - 4 text - cyan - 400">;
                 {section.title}
               </h2>;
               <ul className="space - y - 2">;
-                {section.links.map ((link, link_index) => (<li key={link_index}>;
+                {section.links.map (link, link_index) => (<li key={link_index}>;
                     <a;
                       href={link.url}
                       className="text - zinc - 300 hover:text - cyan - 400 transition - colors duration - 200 block py - 1">;
                       {link.name}
                     </a>
                     </a>;
-                  </li>) ) }
+                  </li>) }
               </ul>;
-            </div>) ) }
+            </div>) }
         </div>;
-";
         <div className="mt - 16 text - center">";
           <p className="text - zinc - 400">;
             Can't find what you're looking for?{' '}";
@@ -250,13 +244,11 @@ export const SitemapPage: React.FC = () => {;
         </div>
       </div>
     </div>;) }
-'"
-}
+"
 
             for assistance.;
           </p>;
         </div>;
       </div>;
     </div>) }
-'";
-};
+";

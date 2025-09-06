@@ -6,5 +6,3 @@ export function separator() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

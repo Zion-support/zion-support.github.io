@@ -6,5 +6,3 @@ export function SitemapPage() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

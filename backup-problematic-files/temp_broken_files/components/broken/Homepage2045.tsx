@@ -5,20 +5,20 @@ import {
   ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket,
   Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart,
   Phone, Mail, MapPin, Search, Grid, List, Atom, Target, Sparkles
-} from 'lucide-react',
+ from 'lucide-react',
 import Link from 'next/link',
-// Import our new innovative services,
+/ Import our new innovative services,
 import { innovative2040FuturisticServices } from '../data/innovative-2040-futuristic-services',
 import { innovative2040ITServices } from '../data/innovative-2040-it-services',
 import { revolutionary2043AdvancedServices } from '../data/revolutionary-2043-advanced-services',
 import { revolutionary2044FuturisticServices } from '../data/revolutionary-2044-futuristic-services',
-// Loading fallback component,
+/ Loading fallback component,
 const LoadingFallback = () => (
   <div className=&quot;min-h-screen flex items-center justify-center bg-gray-900&quot;>
     <motion.div,
-initial={{ opacity: 0, scale: 0.5 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.5 }}
+initial={ opacity: 0, scale: 0.5 }
+      animate={ opacity: 1, scale: 1 }
+      transition={ duration: 0.5 }
       className=&quot;text-center&quot;    >
       <div className=&quot;relative&quot;>
         <Loader2 className=&quot;w-16 h-16 text-cyan-400 animate-spin mx-auto mb-4&quot; />
@@ -28,15 +28,15 @@ initial={{ opacity: 0, scale: 0.5 }}
       <p className=&quot;text-sm text-gray-500&quot;>Preparing your futuristic digital transformation journey</p>
     </motion.div>
   </div>
-),
+,
 
 const Homepage2045: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true),
   const [isVisible, setIsVisible] = useState(false),
   const [activeSection, setActiveSection] = useState('hero'),
-  useEffect_(() => {
+  useEffect_() => {
     // Simulate content loading with better timing,
-const timer = setTimeout(() => {
+const timer = setTimeout() => {
       setIsLoading(false),
       setIsVisible(true)
     }, 800),
@@ -44,40 +44,35 @@ const timer = setTimeout(() => {
   }, []),
 
   // Intersection Observer for better performance,
-useEffect_(() => {if (typeof window !== 'undefined' && 'IntersectionObserver' in window) {
+useEffect_() => {if (typeof window != 'undefined' && 'IntersectionObserver' in window) {
       const observer = new (window as any).IntersectionObserver(_(entries: unknown[]) => {
           entries.forEach(_(entry) => {
             if (entry.isIntersecting) {
               setActiveSection(entry.target.id)
-            }
-          })
+            })
         },
         { threshold: 0.3, rootMargin: '-100px' }
       ),
 
       const sections = document.querySelectorAll('section[id]'),
-      sections.forEach((section) => observer.observe(section)),
+      sections.forEach(section) => observer.observe(section),
       return () => observer.disconnect()
-    }
-  }, []),
+    }, []),
 
   const fadeInUp = {
     initial: { opacity: 0, y: 60 },
     animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.6, ease: "easeOut" }
-  }  };
+    transition: { duration: 0.6, ease: "easeOut" }  };
 
   const staggerContainer = {animate: {
       transition: {
         staggerChildren: 0.1, delayChildren: 0.2}
-    }
   },
 
   const backgroundVariants = {
     initial: { opacity: 0, scale: 0.8 },
     animate: { opacity: 1, scale: 1 },
-    transition: { duration: 1.2, ease: "easeOut" }
-  }  };
+    transition: { duration: 1.2, ease: "easeOut" }  };
 
   const getColorClasses = (index: number) => {
     const colors = [
@@ -106,63 +101,63 @@ useEffect_(() => {if (typeof window !== 'undefined' && 'IntersectionObserver' in
           <div className=&quot;absolute inset-0 pointer-events-none&quot;>
             <motion.div,
 className=&quot;absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-lg&quot;
-              animate={{
+              animate={
                 rotate: [0, 360],
                 scale: [1, 1.1, 1],
-                opacity: [0.3, 0.6, 0.3]}}
-              transition={{
+                opacity: [0.3, 0.6, 0.3]}
+              transition={
                 duration: 8,
                 repeat: Infinity,
                 ease: &quot;easeInOut&quot
-              }}
+              }
             />
             <motion.div,
 className=&quot;absolute top-40 right-32 w-24 h-24 border border-purple-400/20 rounded-full&quot;
-              animate={{
+              animate={
                 rotate: [360, 0],
                 scale: [1, 1.2, 1],
-                opacity: [0.3, 0.7, 0.3]}}
-              transition={{
+                opacity: [0.3, 0.7, 0.3]}
+              transition={
                 duration: 6,
                 repeat: Infinity,
                 ease: &quot;easeInOut&quot
-              }}
+              }
             />
             <motion.div,
 className=&quot;absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45&quot;
-              animate={{
+              animate={
                 rotate: [45, 405],
                 scale: [1, 1.15, 1],
-                opacity: [0.3, 0.5, 0.3]}}
-              transition={{
+                opacity: [0.3, 0.5, 0.3]}
+              transition={
                 duration: 10,
                 repeat: Infinity,
                 ease: &quot;easeInOut&quot
-              }}
+              }
             />;
           </div>;
-;
+
           {/* Hero Content */}
           <div className=&quot;relative z-10 text-center max-w-6xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
             <motion.div,
-initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className=&quot;mb-8&quot;
             >
               <motion.h1,
-initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
+initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.8, delay: 0.2 }
                 className=&quot;text-5xl md:text-7xl font-bold mb-6&quot;              >
                 <span className=&quot;bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent&quot;>
                   Future of Technology
                 </span>
               </motion.h1>
               <motion.p,
-initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
+initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.8, delay: 0.4 }
                 className=&quot;text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto&quot;              >
                 Transform your business with Zion Tech Group's revolutionary AI services, quantum computing, and cutting-edge emerging technologies. Leading the future of technology innovation.
               </motion.p>
@@ -170,9 +165,9 @@ initial={{ opacity: 0, y: 20 }}
 
             {_/* CTA Buttons */}
             <motion.div,
-initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
+initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8, delay: 0.6 }
               className=&quot;flex flex-col sm:flex-row gap-4 justify-center items-center&quot;            >
               <Link,
 href=&quot;/contact&quot;
@@ -190,9 +185,9 @@ href=&quot;/services&quot;
 
             {_/* Stats */}
             <motion.div,
-initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
+initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8, delay: 0.8 }
               className=&quot;mt-16 grid grid-cols-1 md:grid-cols-3 gap-8&quot;            >
               <div className=&quot;text-center&quot;>
                 <div className=&quot;text-3xl md:text-4xl font-bold text-cyan-400 mb-2&quot;>500+</div>
@@ -214,10 +209,10 @@ initial={{ opacity: 0, y: 20 }}
         <section id=&quot;featured-services&quot; className=&quot;py-20 relative&quot;>
           <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
             <motion.div,
-initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
               className=&quot;text-center mb-16&quot;            >
               <h2 className=&quot;text-4xl md:text-5xl font-bold mb-6&quot;>
                 <span className=&quot;bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent&quot;>
@@ -274,13 +269,13 @@ initial={{ opacity: 0, y: 30 }}
                   color: &quot;from-yellow-400 to-orange-500&quot;,
                   href: &quot;/emerging-tech&quot
                 }
-              ].map((service, index) => (
+              ].map(service, index) => (
                 <motion.div,
 key={service.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.6, delay: index * 0.1 }
+                  viewport={ once: true }
                   className=&quot;group&quot;
                 >
                   <Link href={service.href}>
@@ -296,19 +291,19 @@ key={service.title}
                     </div>
                   </a>
                 </motion.div>
-              ))}
+              )}
             </div>;
           </div>;
         </section>;
-;
+
         {/* Latest Innovations Section */}
         <section id=&quot;latest-innovations&quot; className=&quot;py-20 relative bg-gray-900/30&quot;>
           <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
             <motion.div,
-initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
               className=&quot;text-center mb-16&quot;            >
               <h2 className=&quot;text-4xl md:text-5xl font-bold mb-6&quot;>
                 <span className=&quot;bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent&quot;>
@@ -322,13 +317,13 @@ initial={{ opacity: 0, y: 30 }}
 
             {/* Featured New Services */}
             <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-8&quot;>
-              {revolutionary2043AdvancedServices.slice(0, 4).map((service, index) => (
+              {revolutionary2043AdvancedServices.slice(0, 4).map(service, index) => (
                 <motion.div,
 key={service.id}
-                  initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, x: index % 2 = = 0 ? -30 : 30 }
+                  whileInView={ opacity: 1, x: 0 }
+                  transition={ duration: 0.6, delay: index * 0.1 }
+                  viewport={ once: true }
                   className=&quot;group&quot;
                 >
                   <Link href={service.link}>
@@ -353,15 +348,15 @@ key={service.id}
                     </div>
                   </a>
                 </motion.div>
-              ))}
+              )}
             </div>
 
             {_/* View All Services CTA */}
             <motion.div,
-initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.6 }
+              viewport={ once: true }
               className=&quot;text-center mt-12&quot;            >
               <Link,
 href=&quot;/services&quot;
@@ -377,10 +372,10 @@ href=&quot;/services&quot;
         {/* Contact CTA Section */}
         <section id=&quot;contact-cta&quot; className=&quot;py-20 relative&quot;>
           <div className=&quot;max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center&quot;>            <motion.div,
-initial={_{ opacity: 0, y: 30}}
-              whileInView={_{ opacity: 1, y: 0}}
-              transition={_{ duration: 0.8}}
-              viewport={_{ once: true}}
+initial={_{ opacity: 0, y: 30}
+              whileInView={_{ opacity: 1, y: 0}
+              transition={_{ duration: 0.8}
+              viewport={_{ once: true}
             >
               <h2 className="text-4xl md: text-5xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">                  Ready to Transform?
@@ -409,39 +404,33 @@ href=&quot;tel:+1 302 464 0950&quot;
       </div>
     </Layout>
   )
-},
+,
 
 export default Homepage2045,  animate: {
   transition: {
   staggerChildren: 0.1, delayChildren: 0.2 
-}
-}
-};
-};
+
+;
   /* CTA Buttons */ 
-}<motion.div > <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105" > Get Started </a> <Link href="/services" className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105" > Explore Services </a> </motion.div> {
+<motion.div > <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105" > Get Started </a> <Link href="/services" className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105" > Explore Services </a> </motion.div> {
   /* Stats */ 
-}<motion.div > <div className="text-center" > <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2" >500+</div> <div className="text-gray-400" >Innovative Services</div> </div> <div className="text-center" > <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2" >4.9/5</div> <div className="text-gray-400" >Customer Rating</div> </div> <div className="text-center" > <div className="text-3xl md:text-4xl font-bold text-pink-400 mb-2" >1000+</div> <div className="text-gray-400" >Happy Clients</div> </div> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold mb-6" > <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent" > Revolutionary Services </span> </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Discover our cutting-edge solutions that are transforming industries and pushing the boundaries of what's possible with technology. </p> </motion.div> </div> </div> </a> </motion.div>) ) 
-}</div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold mb-6" > <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent" > Latest Innovations </span> </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Explore our newest revolutionary services that are setting new standards in technology innovation. </p> </motion.div> New </span>) 
-}</div> </div> <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors" > <span className="mr-2 text-sm" >Learn More</span> <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" /> </div> </div> </div> </a> </motion.div>) ) 
-}</div> {
+<motion.div > <div className="text-center" > <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2" >500+</div> <div className="text-gray-400" >Innovative Services</div> </div> <div className="text-center" > <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2" >4.9/5</div> <div className="text-gray-400" >Customer Rating</div> </div> <div className="text-center" > <div className="text-3xl md:text-4xl font-bold text-pink-400 mb-2" >1000+</div> <div className="text-gray-400" >Happy Clients</div> </div> </motion.div> </div> </section><h2 className="text-4xl md:text-5xl font-bold mb-6" > <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent" > Revolutionary Services </span> </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Discover our cutting-edge solutions that are transforming industries and pushing the boundaries of what's possible with technology. </p> </motion.div> </div> </div> </a> </motion.div>) 
+</div> </div> </section><h2 className="text-4xl md:text-5xl font-bold mb-6" > <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent" > Latest Innovations </span> </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Explore our newest revolutionary services that are setting new standards in technology innovation. </p> </motion.div> New </span>) 
+</div> </div> <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors" > <span className="mr-2 text-sm" >Learn More</span> <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" /> </div> </div> </div> </a> </motion.div>) 
+</div> {
   /* View All Services CTA */ 
-}<motion.div > <Link href="/services" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105" > View All Services <ArrowRight className="ml-2 w-5 h-5" /> </a> </motion.div> </div> </section> <motion.div initial= {
-  {
+<motion.div > <Link href="/services" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105" > View All Services <ArrowRight className="ml-2 w-5 h-5" /> </a> </motion.div> </div> </section> <motion.div initial= {
   opacity: 0, y: 30 
-}
-}whileInView= {
-  {
+
+whileInView= {
   opacity: 1, y: 0 
-}
-}transition= {
-  {
+
+transition= {
   duration: 0.8 
-}
-}viewport= {
-  {
+
+viewport= {
   once: true 
-}
-}> Ready to Transform? </span> </h2> <p className="text-xl text-gray-300 mb-8" > Let's discuss how our revolutionary technology solutions can drive your business into the future. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105" > Get Started </a> <a href="tel:+1 302 464 0950" className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105" > Call Now </a> </div> </motion.div> </div> </section> </div> </Layout>) 
-};
+
+> Ready to Transform? </span> </h2> <p className="text-xl text-gray-300 mb-8" > Let's discuss how our revolutionary technology solutions can drive your business into the future. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105" > Get Started </a> <a href="tel:+1 302 464 0950" className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105" > Call Now </a> </div> </motion.div> </div> </section> </div> </Layout>) 
+;
 export default Homepage2045;

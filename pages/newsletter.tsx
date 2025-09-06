@@ -18,9 +18,9 @@ import {
   TrendingUp,
   Award,
   Clock,
-} from "lucide-react";
+ from "lucide-react";
   Clock
-} from 'lucide-react';
+ from 'lucide-react';
 
 const benefits = [
   {
@@ -29,8 +29,8 @@ const benefits = [
       "Get access to exclusive white papers, case studies, and industry insights."
     icon: FileText
   }
-} from './lucide-react';
-;
+ from './lucide-react';
+
 const benefits = [;
   {
     title: "Exclusive Content",
@@ -73,7 +73,7 @@ const benefits = [;
       "Stay updated with the latest trends and developments in technology."
     icon: TrendingUp
   }
-];
+;
 const testimonials = [
   {
     name: "Sarah Johnson",
@@ -96,7 +96,7 @@ const testimonials = [
       "The technical deep-dives and case studies have been incredibly helpful for my projects."
     rating: 5
   }
-];
+;
 export default function NewsletterPage() {
   const [email, setEmail] = useState("");
     name: 'Sarah Johnson',
@@ -116,7 +116,7 @@ export default function NewsletterPage() {
     content: 'The technical deep-dives and case studies have been incredibly helpful for my projects.',
     rating: 5
   }
-];
+;
 
 export default function NewsletterPage() {
   const [email, setEmail] = useState('');
@@ -149,7 +149,6 @@ const benefits = [;
       "Stay updated with the latest trends and developments in technology.",;
     icon: TrendingUp,;
   },;
-];
 
 const testimonials = [;
   {;
@@ -173,7 +172,6 @@ const testimonials = [;
       "The technical deep-dives and case studies have been incredibly helpful for my projects.",;
     rating: 5,;
   },;
-];
 
 export default function NewsletterPage() {;
   const [email, setEmail] = useState("");
@@ -185,10 +183,10 @@ export default function NewsletterPage() {;
     setIsLoading(true);
 
     // Simulate API call;
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+    await new Promise(resolve) => setTimeout(resolve, 2000);
 
     // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+    await new Promise(resolve) => setTimeout(resolve, 2000);
     setIsSubscribed(true);
     setIsLoading(false);
   }
@@ -217,9 +215,9 @@ export default function NewsletterPage() {;
           <div className="container mx-auto px-4">;
             <motion&& motion.div
               className="text-center max-w-4xl mx-auto"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
             >
               <h1 className="text-5xl font-bold mb-6">
                 Stay Ahead with Our Newsletter
@@ -232,7 +230,7 @@ export default function NewsletterPage() {;
               {!isSubscribed ? (
                 <form onSubmit={handleSubmit} className="max-w-md mx-auto">
                   <div className="flex flex-col sm:flex-row gap-4">
-              transition={{ duration: 0 && 0.8 }}>;
+              transition={ duration: 0 && 0.8 }>;
               <h1 className="text-5xl font-bold mb-6">;
                 Stay Ahead with Our Newsletter;
               </h1>;
@@ -273,9 +271,9 @@ export default function NewsletterPage() {;
               ) : (;
                 <motion&& motion.div
                   className="bg-green-500 text-white px-8 py-4 rounded-lg inline-flex items-center"
-                  initial={{ opacity: 0, scale: 0 && 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0 && 0.5 }}>;
+                  initial={ opacity: 0, scale: 0 && 0.8 }
+                  animate={ opacity: 1, scale: 1 }
+                  transition={ duration: 0 && 0.5 }>;
                   <CheckCircle className="w-6 h-6 mr-2" />;
                   Successfully subscribed! Welcome to our community.;
                 </motion && motion.div>;
@@ -288,9 +286,9 @@ export default function NewsletterPage() {;
           <div className="container mx-auto px-4">;
             <motion&& motion.div
               className="text-center mb-12"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
             >
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
                 What You'll Get
@@ -301,7 +299,7 @@ export default function NewsletterPage() {;
               </p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index) => (
+              {benefits.map(benefit, index) => (
                 <motion.div
     content:;
       "The newsletter has been invaluable for staying ahead of industry trends. The insights are always relevant and actionable.",
@@ -321,8 +319,8 @@ export default function NewsletterPage() {;
       "The technical deep - dives and case studies have been incredibly helpful for my projects.",
     rating: 5,
   },
-];
 ;
+
 export default /**
  * NewsletterPage - Function description
  */
@@ -330,18 +328,18 @@ function NewsletterPage() {
   const [email, set_email] = useState ("");
   const [is_subscribed, setIsSubscribed] = useState (false);
   const [is_loading, setIsLoading] = useState (false);
-;
+
   const handle_submit = async (e) => {
     e.prevent_default ();
     setIsLoading (true);
-;
+
     // Simulate API call;
-    await new Promise ((resolve) => set_timeout (resolve, 2000));
-;
+    await new Promise (resolve) => set_timeout (resolve, 2000);
+
     setIsSubscribed (true);
     setIsLoading (false);
   }
-;
+
   return (
     <Layout>;
       <Head>;
@@ -357,9 +355,9 @@ function NewsletterPage() {
           <div className="container mx - auto px - 4">;
             <motion.div;
               className="text - center max - w-4xl mx - auto";
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, coordinate_y: 30 }
+              animate={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
             >;
               <h1 className="text - 5xl font - bold mb - 6">;
                 Stay Ahead with Our Newsletter;
@@ -398,9 +396,9 @@ function NewsletterPage() {
                 </form>) : (
                 <motion.div;
                   className="bg - green - 500 text - white px - 8 py - 4 rounded - lg inline - flex items - center";
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5 }}
+                  initial={ opacity: 0, scale: 0.8 }
+                  animate={ opacity: 1, scale: 1 }
+                  transition={ duration: 0.5 }
                 >;
                   <CheckCircle className="w - 6 h - 6 mr - 2" />;
                   Successfully subscribed! Welcome to our community.;
@@ -413,9 +411,9 @@ function NewsletterPage() {
           <div className="container mx - auto px - 4">;
             <motion.div;
               className="text - center mb - 12";
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, coordinate_y: 30 }
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
             >;
               <h2 className="text - 3xl font - bold text - gray - 900 mb - 4">;
                 What You'll Get;
@@ -426,13 +424,13 @@ function NewsletterPage() {
               </p>;
             </motion.div>;
             <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8">;
-              {benefits.map ((benefit, index) => (
+              {benefits.map (benefit, index) => (
                 <motion.div;
                   key={benefit.title}
                   className="text - center";
-                  initial={{ opacity: 0, coordinate_y: 30 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  initial={ opacity: 0, coordinate_y: 30 }
+                  whileInView={ opacity: 1, coordinate_y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }
                 >;
                   <div className="bg - blue - 100 w - 16 h - 16 rounded - full flex items - center justify - center mx - auto mb - 4">;
                     <benefit.icon className="w - 8 h - 8 text - blue - 600" />;
@@ -442,11 +440,11 @@ function NewsletterPage() {
                   </h3>
                   <p className="text-gray-600">{benefit.description}</p>
                 </motion.div>
-              ))}
+              )}
             </div>
           </div>
         </section>
-              transition={{ duration: 0 && 0.8 }}>;
+              transition={ duration: 0 && 0.8 }>;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">;
                 What You'll Get;
               </h2>;
@@ -457,13 +455,13 @@ function NewsletterPage() {
             </motion && motion.div>;
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-              {benefits && benefits.map((benefit, index) => (;
+              {benefits && benefits.map(benefit, index) => (;
                 <motion&& motion.div
                   key={benefit && benefit.title}
                   className="text-center"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}>;
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0 && 0.8, delay: index * 0 && 0.1 }>;
                   <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">;
                     <benefit && benefit.icon className="w-8 h-8 text-blue-600" />;
                   </div>;
@@ -472,7 +470,7 @@ function NewsletterPage() {
                   </h3>;
                   <p className="text-gray-600">{benefit && benefit.description}</p>;
                 </motion && motion.div>;
-              ))}
+              )}
             </div>;
           </div>;
         </section>;
@@ -483,9 +481,9 @@ function NewsletterPage() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">;
               <motion&& motion.div
                 className="text-center"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0 }}
+                initial={ opacity: 0, y: 30 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.8, delay: 0 }
               >
                 <div className="text-4xl font-bold text-blue-600 mb-2">
                   10K+
@@ -493,7 +491,7 @@ function NewsletterPage() {
                 <div className="text-gray-600">Subscribers</div>
               </motion.div>
               <motion.div
-                transition={{ duration: 0 && 0.8, delay: 0 }}>;
+                transition={ duration: 0 && 0.8, delay: 0 }>;
                 <div className="text-4xl font-bold text-blue-600 mb-2">;
                   10K+;
                 </div>;
@@ -501,17 +499,17 @@ function NewsletterPage() {
               </motion && motion.div>;
               <motion&& motion.div
                 className="text-center"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.8, delay: 0 && 0.1 }}>;
+                initial={ opacity: 0, y: 30 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0 && 0.8, delay: 0 && 0.1 }>;
                 <div className="text-4xl font-bold text-blue-600 mb-2">98%</div>;
                 <div className="text-gray-600">Open Rate</div>;
               </motion && motion.div>;
               <motion&& motion.div
                 className="text-center"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
+                initial={ opacity: 0, y: 30 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.8, delay: 0.2 }
               >
                 <div className="text-4xl font-bold text-blue-600 mb-2">
                   Weekly
@@ -520,9 +518,9 @@ function NewsletterPage() {
               </motion.div>
               <motion.div
                 className="text-center"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.3 }}
+                initial={ opacity: 0, y: 30 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.8, delay: 0.3 }
               >
                 <div className="text-4xl font-bold text-blue-600 mb-2">4.9</div>
                 <div className="text-gray-600">Rating</div>
@@ -530,7 +528,7 @@ function NewsletterPage() {
             </div>
           </div>
         </section>
-                transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}>;
+                transition={ duration: 0 && 0.8, delay: 0 && 0.2 }>;
                 <div className="text-4xl font-bold text-blue-600 mb-2">;
                   Weekly;
                 </div>;
@@ -538,9 +536,9 @@ function NewsletterPage() {
               </motion && motion.div>;
               <motion&& motion.div
                 className="text-center"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.8, delay: 0 && 0.3 }}>;
+                initial={ opacity: 0, y: 30 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0 && 0.8, delay: 0 && 0.3 }>;
                 <div className="text-4xl font-bold text-blue-600 mb-2">4 && 4.9</div>;
                 <div className="text-gray-600">Rating</div>;
               </motion && motion.div>;
@@ -553,9 +551,9 @@ function NewsletterPage() {
           <div className="container mx-auto px-4">;
             <motion&& motion.div
               className="text-center mb-12"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
             >
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
                 What Our Subscribers Say
@@ -566,11 +564,11 @@ function NewsletterPage() {
               </p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
+              {testimonials.map(testimonial, index) => (
                 <motion.div
                   </h3>;
                   <p className="text - gray - 600">{benefit.description}</p>;
-                </motion.div>))}
+                </motion.div>)}
             </div>;
           </div>;
         </section>;
@@ -580,9 +578,9 @@ function NewsletterPage() {
             <div className="grid grid - cols - 2 md:grid - cols - 4 gap - 8">;
               <motion.div;
                 className="text - center";
-                initial={{ opacity: 0, coordinate_y: 30 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.8, delay: 0 }}
+                initial={ opacity: 0, coordinate_y: 30 }
+                whileInView={ opacity: 1, coordinate_y: 0 }
+                transition={ duration: 0.8, delay: 0 }
               >;
                 <div className="text - 4xl font - bold text - blue - 600 mb - 2">;
                   10K+;
@@ -591,18 +589,18 @@ function NewsletterPage() {
               </motion.div>;
               <motion.div;
                 className="text - center";
-                initial={{ opacity: 0, coordinate_y: 30 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.8, delay: 0.1 }}
+                initial={ opacity: 0, coordinate_y: 30 }
+                whileInView={ opacity: 1, coordinate_y: 0 }
+                transition={ duration: 0.8, delay: 0.1 }
               >;
                 <div className="text - 4xl font - bold text - blue - 600 mb - 2">98%</div>;
                 <div className="text - gray - 600">Open Rate</div>;
               </motion.div>;
               <motion.div;
                 className="text - center";
-                initial={{ opacity: 0, coordinate_y: 30 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
+                initial={ opacity: 0, coordinate_y: 30 }
+                whileInView={ opacity: 1, coordinate_y: 0 }
+                transition={ duration: 0.8, delay: 0.2 }
               >;
                 <div className="text - 4xl font - bold text - blue - 600 mb - 2">;
                   Weekly;
@@ -611,9 +609,9 @@ function NewsletterPage() {
               </motion.div>;
               <motion.div;
                 className="text - center";
-                initial={{ opacity: 0, coordinate_y: 30 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.8, delay: 0.3 }}
+                initial={ opacity: 0, coordinate_y: 30 }
+                whileInView={ opacity: 1, coordinate_y: 0 }
+                transition={ duration: 0.8, delay: 0.3 }
               >;
                 <div className="text - 4xl font - bold text - blue - 600 mb - 2">4.9</div>;
                 <div className="text - gray - 600">Rating</div>;
@@ -626,9 +624,9 @@ function NewsletterPage() {
           <div className="container mx - auto px - 4">;
             <motion.div;
               className="text - center mb - 12";
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, coordinate_y: 30 }
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
             >;
               <h2 className="text - 3xl font - bold text - gray - 900 mb - 4">;
                 What Our Subscribers Say;
@@ -639,21 +637,21 @@ function NewsletterPage() {
               </p>;
             </motion.div>;
             <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">;
-              {testimonials.map ((testimonial, index) => (
+              {testimonials.map (testimonial, index) => (
                 <motion.div;
                   key={testimonial.name}
                   className="bg - gray - 50 rounded - lg p - 6";
-                  initial={{ opacity: 0, coordinate_y: 30 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  initial={ opacity: 0, coordinate_y: 30 }
+                  whileInView={ opacity: 1, coordinate_y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }
                 >
                   <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
+                    {[...Array(testimonial.rating)].map(_, i) => (
                       <Star
                         key={i}
                         className="w-4 h-4 text-yellow-400 fill-current"
                       />
-              transition={{ duration: 0 && 0.8 }}>;
+              transition={ duration: 0 && 0.8 }>;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">;
                 What Our Subscribers Say;
               </h2>;
@@ -664,20 +662,20 @@ function NewsletterPage() {
             </motion && motion.div>;
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
-              {testimonials && testimonials.map((testimonial, index) => (;
+              {testimonials && testimonials.map(testimonial, index) => (;
                 <motion&& motion.div
                   key={testimonial && testimonial.name}
                   className="bg-gray-50 rounded-lg p-6"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}>;
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0 && 0.8, delay: index * 0 && 0.1 }>;
                   <div className="flex items-center mb-4">;
-                    {[...Array(testimonial && testimonial.rating)].map((_, i) => (;
+                    {[...Array(testimonial && testimonial.rating)].map(_, i) => (;
                       <Star
                         key={i}
                         className="w-4 h-4 text-yellow-400 fill-current"
                       />;
-                    ))}
+                    )}
                   </div>;
                   <p className="text-gray-600 mb-4 italic">;
                     "{testimonial && testimonial.content}";
@@ -691,7 +689,7 @@ function NewsletterPage() {
                     </div>;
                   </div>;
                 </motion && motion.div>;
-              ))}
+              )}
             </div>
           </div>
         </section>
@@ -700,9 +698,9 @@ function NewsletterPage() {
           <div className="container mx-auto px-4">;
             <motion&& motion.div
               className="text-center max-w-4xl mx-auto"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
             >
               <h2 className="text-4xl font-bold mb-6">
                 Ready to Join Our Community?
@@ -715,7 +713,7 @@ function NewsletterPage() {
               {!isSubscribed && (
                 <form onSubmit={handleSubmit} className="max-w-md mx-auto">
                   <div className="flex flex-col sm:flex-row gap-4">
-              transition={{ duration: 0 && 0.8 }}>;
+              transition={ duration: 0 && 0.8 }>;
               <h2 className="text-4xl font-bold mb-6">;
                 Ready to Join Our Community?;
               </h2>;
@@ -774,11 +772,9 @@ function NewsletterPage() {
       </div>;
     </Layout>;
   );
-}
-}
+
             </motion.div>;
           </div>;
         </section>;
       </div>;
     </Layout>);
-}

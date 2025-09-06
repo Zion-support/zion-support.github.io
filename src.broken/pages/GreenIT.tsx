@@ -6,5 +6,3 @@ export function GreenIT() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

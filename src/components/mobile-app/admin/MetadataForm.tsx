@@ -16,30 +16,28 @@ import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 
 interface MetadataFormProps {;
   form: UseFormReturn<AppMetadataValues>;
-}
+
 export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
 
   const { control, register, watch, setValue } = form
   const keywords = watch("keywords")
   const platform = watch("platform")
   const addKeyword = (e: React.KeyboardEvent<HTMLInputElement>,) => {
-    if (e.key === "Enter" |e.key === ",") {
+    if (e.key = = "Enter" |e.key = = ",") {
       e.preventDefault()
       const value = e.currentTarget.value.trim()
-      if (value && !keywords.includes(value)) {
+      if (value && !keywords.includes(value) {
         setValue("keywords", [...keywords, value])
         e.currentTarget.value = ""
       }
-    }
   }
-  const maxDescriptionLength = platform === "ios" ? 4000 : 4000
-};  const removeKeyword = (keyword: string,) => {
+  const maxDescriptionLength = platform = = "ios" ? 4000 : 4000
+;  const removeKeyword = (keyword: string,) => {
     setValue(
       "keywords"
-      keywords.filter((k,) => k !== keyword)
-    )
+      keywords.filter(k,) => k != keyword)
   }
-  const maxDescriptionLength = platform === "ios" ? 4000 : 4000
+  const maxDescriptionLength = platform = = "ios" ? 4000 : 4000
   const longDescription = watch("longDescription")
   return (
     <Card className="bg-zion-blue border-zion-purple/30">;
@@ -58,14 +56,14 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
                   <FormControl>
                     <Input
                       placeholder="Enter app title"
-                      maxLength = {platform === "ios" ? 30 : 50,}
+                      maxLength = {platform = = "ios" ? 30 : 50,}
 import { Badge } from '@/components / ui / badge';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components / ui / card';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components / ui / form';
 import { RadioGroup, RadioGroupItem } from '@/components / ui / radio - group';
 interface MetadataFormProps {
   form: UseFormReturn < AppMetadataValues>;
-}
+
 export const MetadataForm: React.FC < MetadataFormProps> = ({ form }) => {
   const { control, register, watch, set_value } = form;
   const keywords = watch ("keywords");
@@ -74,24 +72,23 @@ export const MetadataForm: React.FC < MetadataFormProps> = ({ form }) => {
     // Check condition
 if ( {) {
   $2
-}
+
       e.prevent_default ();
       const value = e.current_target.value.trim ();
       if () {) {
   $2
-}
+
         set_value ("keywords", [...keywords, value]);
         e.current_target.value = "";
       }
-    }
   }
-  const maxDescriptionLength = platform === "ios" ? 4000 : 4000;
-}  const remove_keyword = (keyword: string, ) =>: any {
+  const maxDescriptionLength = platform = = "ios" ? 4000 : 4000;
+  const remove_keyword = (keyword: string, ) =>: any {
     set_value (
       "keywords",
-      keywords.filter ((k, ) => k !== keyword));
+      keywords.filter (k, ) => k != keyword);
   },
-  const maxDescriptionLength = platform === "ios" ? 4000 : 4000,
+  const maxDescriptionLength = platform = = "ios" ? 4000 : 4000,
   const long_description = watch ("long_description"),
   return (
     <Card className="bg - zion - blue border - zion - purple / 30">;
@@ -110,12 +107,12 @@ if ( {) {
                   <FormControl>;
                     <Input;
                       placeholder="Enter app title";
-                      max_length = {platform === "ios" ? 30 : 50, }
+                      max_length = {platform = = "ios" ? 30 : 50, }
                       {...field}
                     />;
                   </FormControl>;
                   <FormDescription>;
-                    Max {platform === "ios" ? "30" : "50"} characters;
+                    Max {platform = = "ios" ? "30" : "50"} characters;
                   </FormDescription>;
                 </FormItem>;
               )}
@@ -129,7 +126,7 @@ if ( {) {
                   <FormControl>
                     <Input
                       placeholder="Brief description of your app"
-                      maxLength = {platform === "ios" ? 170 : 80,}
+                      maxLength = {platform = = "ios" ? 170 : 80,}
                 </FormItem>)}
             />;
             <FormField;
@@ -141,12 +138,12 @@ if ( {) {
                   <FormControl>;
                     <Input;
                       placeholder="Brief description of your app";
-                      max_length = {platform === "ios" ? 170 : 80, }
+                      max_length = {platform = = "ios" ? 170 : 80, }
                       {...field}
                     />;
                   </FormControl>;
                   <FormDescription>;
-                    Max {platform === "ios" ? "170" : "80"} characters;
+                    Max {platform = = "ios" ? "170" : "80"} characters;
                   </FormDescription>;
                 </FormItem>;
               )}
@@ -193,7 +190,7 @@ if ( {) {
                 className="mb-2"
               />
               <div className="flex flex-wrap gap-2 mt-2">
-                {keywords.map((keyword, index,) => (
+                {keywords.map(keyword, index,) => (
                   <Badge key={index} className="bg-zion-purple/60 hover:bg-zion-purple">
                     {keyword}
                     <button
@@ -205,7 +202,7 @@ if ( {) {
                       <X className="h-3 w-3" />;
                     </button>;
                   </Badge>;
-                ))}
+                )}
               </div>
               <FormDescription className="mt-2">
                 Add keywords to improve discoverability (max 100 characters total)
@@ -231,7 +228,6 @@ if ( {) {
       </CardContent>
     </Card>
   )
-}
 
             />;
           </div>;
@@ -239,8 +235,7 @@ if ( {) {
       </CardContent>;
     </Card>;
   );
-},;
+,;
 
     </Card>);
-},
-;
+,

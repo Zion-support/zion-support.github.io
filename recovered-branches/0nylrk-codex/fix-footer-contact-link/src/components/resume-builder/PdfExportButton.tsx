@@ -10,7 +10,7 @@ import { DropdownMenu;
   DropdownMenuRadioGroup;
   DropdownMenuRadioItem;
   DropdownMenuCheckboxItem } from '@/components/ui/dropdown-menu';
-// Use the centralized icon wrapper to avoid missing icon issues
+/ Use the centralized icon wrapper to avoid missing icon issues
 import { FileText, ChevronDown, Loader2, Download  } from '@/components/icons';
 import { Resume  } from '@/types/resume';
 import { exportResumeToPDF, ExportOptions  } from '@/utils/pdfExport';
@@ -18,7 +18,7 @@ import { toast  } from '@/hooks/use-toast';
 import { FontFamily } from '@/utils/pdf/fontConfig';
 interface PdfExportButtonProps {
   resume: Resume
-}
+
 export function PdfExportButton({ resume }: PdfExportButtonProps) {
   const [isExporting, setIsExporting] = useState(false);
   const [theme, setTheme] = useState<'light' | 'dark'>('light'),
@@ -59,7 +59,6 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {
     } finally {
       setIsExporting(false)
     }
-  }
 
   return (
     <DropdownMenu>
@@ -108,11 +107,11 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {
       </DropdownMenuContent>
     </DropdownMenu>
   )
-}
+
 import {useState} from 'react';
 import {Button} from '@/components / ui / button';
 import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, DropdownMenuSeparator, DropdownMenuLabel, DropdownMenuRadioGroup, DropdownMenuRadioItem, DropdownMenuCheckboxItem} from '@/components / ui / dropdown - menu';
-// Use the centralized icon wrapper to avoid missing icon issues;
+/ Use the centralized icon wrapper to avoid missing icon issues;
 import {FileText, ChevronDown, Loader2, Download} from '@/components / icons';
 import {Resume} from '@/types / resume';
 import {exportResumeToPDF, ExportOptions} from '@/utils / pdf_export';
@@ -120,7 +119,7 @@ import {toast} from '@/hooks / use - toast';
 import {FontFamily} from '@/utils / pdf / font_config';
 interface PdfExportButtonProps {
   resume: Resume;
-}
+
 export /**
  * PdfExportButton - Function description
  */
@@ -129,14 +128,14 @@ function PdfExportButton() {
   const [theme, set_theme] = useState<'light' | 'dark'>('light');
   const [include_portfolio, setIncludePortfolio] = useState (true);
   const [font_family, setFontFamily] = useState < FontFamily>('default');
-;
+
   const handle_export = async () => {
     // Check condition
 if (return) {
   $2
-}
+
     setIsExporting (true);
-;
+
     try {
       const options: ExportOptions = {
         theme;
@@ -144,9 +143,9 @@ if (return) {
         max_projects: 3,
         font_family;
       }
-;
+
       const pdf_blob = await exportResumeToPDF (resume, options);
-;
+
       // Create download link and trigger download;
       const url = URL.createObjectURL (pdf_blob);
       const link = document.create_element ('a');
@@ -154,11 +153,11 @@ if (return) {
       link.download = `${resume.basic_info.title || 'Resume'}.pdf`;
       document.body.append_child (link);
       link.click ();
-;
+
       // Clean up;
       document.body.remove_child (link);
       URL.revokeObjectURL (url);
-;
+
       toast ({
         title: "Success!",
         description: "Your resume has been downloaded as a PDF."});
@@ -172,8 +171,7 @@ if (return) {
     } finally {
       setIsExporting (false);
     }
-  }
-;
+
   return (
     <DropdownMenu>;
       <DropdownMenuTrigger as_child>;
@@ -219,4 +217,3 @@ if (return) {
         </DropdownMenuItem>;
       </DropdownMenuContent>;
     </DropdownMenu>);
-}

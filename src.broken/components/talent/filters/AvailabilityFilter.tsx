@@ -6,5 +6,3 @@ export function AvailabilityFilter() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

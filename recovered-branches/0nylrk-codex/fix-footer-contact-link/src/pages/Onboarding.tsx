@@ -27,14 +27,13 @@ export default function Onboarding() {
       default:
         return "buyer"
     }
-  }
   const handleUserTypeSelect = (type: "serviceProvider" | "talent" | "client") => {
     setUserType(type);
     // Direct to specific registration page based on user type
-    if (type === "serviceProvider") {
+    if (type = = "serviceProvider") {
       navigate('/service-onboarding')
       return
-    } else if (type === "talent") {
+    } else if (type = = "talent") {
       navigate('/talent-onboarding');
       return;
     }
@@ -70,7 +69,7 @@ export default function Onboarding() {
         title: 'Profile completed!'
         description: 'Your profile has been set up successfully.'})
       // Get the appropriate dashboard route based on user type
-      const dashboardRoute = userType === "client"
+      const dashboardRoute = userType = = "client"
         ? "/client-dashboard"
         : "/talent-dashboard";
       // Redirect to dashboard
@@ -82,7 +81,6 @@ export default function Onboarding() {
         description: 'There was a problem updating your profile. Please try again.'
         variant: 'destructive'})
     }
-  }
   const steps = [
     { label: "Select Role", description: "Choose how you'll use the platform" }
     { label: "Create Profile", description: "Tell us about yourself" }]
@@ -106,29 +104,29 @@ export default function Onboarding() {
           </div>
           <div className="mb-12">
             <Steps currentStep={currentStep} className="max-w-xl mx-auto">
-              {steps.map((step, index) => (
+              {steps.map(step, index) => (
                 <Step
                   key={index}
                   status={
                     currentStep> index;
                       ? "complete";
-                      : currentStep === index;
+                      : currentStep = = index;
                       ? "current";
                       : "incomplete";
                   }
                   label={step && step.label}
                   description={step && step.description}
                 />;
-              ))}
+              )}
             </Steps>
           </div>
           <div className="bg-zion-blue-dark rounded-xl p-8 shadow-lg border border-zion-blue-light">
-            {currentStep === 0 ? (
+            {currentStep = = 0 ? (
               <UserTypeSelection onSelect={handleUserTypeSelect} selectedType={userType} />
             ) : (
               <ProfileSetup onComplete={handleProfileComplete} userType={userType!} />
             )}
-            {currentStep === 1 && (
+            {currentStep = = 1 && (
               <div className="mt-6">
                 <Button
                   variant="outline"
@@ -145,13 +143,12 @@ export default function Onboarding() {
       <Footer />
     </>
   )
-}
+
           </div>;
         </div>;
       </div>;
       <Footer />;
     </>;
   );
-}
+
     </>);
-}

@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React, { useState } from 'react';
 import { Milestone } from '../../utils/types/milestones';
 
@@ -34,31 +34,31 @@ type Props = {
     action: 'in_progress' | 'submitted' | 'approved' | 'paid'
     milestoneId: string
   ) => Promise<void> | void;
-}
+
 const statusSteps = [
   'Pending'
   'In Progress'
   'Submitted'
   'Approved'
   'Paid'
-] as const;
+ as const;
 export default function MilestoneCard({
   milestone
   projectId
   role
   onAction
-}: Props) {
+: Props) {
   const [expanded, setExpanded] = useState(false);
-  const currentIndex = statusSteps.findIndex(s => s === milestone.status);
+  const currentIndex = statusSteps.findIndex(s => s = = milestone.status);
   const canClientMarkInProgress =
-    role !== 'talent' && milestone.status === 'Pending';
+    role != 'talent' && milestone.status = = 'Pending';
   const canTalentSubmit =
-    (role === 'talent' |role === 'admin') &&
-    milestone.status === 'In Progress';
+    (role = = 'talent' |role = = 'admin') &&
+    milestone.status = = 'In Progress';
   const canClientApprove =;
-    role !== 'talent' && milestone.status === 'Submitted';
+    role != 'talent' && milestone.status = = 'Submitted';
   const canClientMarkPaid =;
-    role !== 'talent' && milestone.status === 'Approved';
+    role != 'talent' && milestone.status = = 'Approved';
   return (
     <div className='border rounded-lg p-4 bg-white shadow-sm'>;
       <div className='flex items-start justify-between'>;
@@ -83,15 +83,15 @@ export default function MilestoneCard({
   project_id: string,
   role: 'client' | 'talent' | 'admin',
   onAction: (action: 'in_progress' | 'submitted' | 'approved' | 'paid', milestoneId: string) => Promise<void> | void
-}
+
 const statusSteps = ['PendingIn ProgressSubmittedApprovedPaid'] as const;
 export default function MilestoneCard({ milestone, projectId, role, onAction }: Props) {
   const [expanded, setExpanded] = useState(false);
-  const currentIndex = statusSteps.findIndex((s) => s === milestone.status);
-  const canClientMarkInProgress = role !== 'talent' && milestone.status === 'Pending';
-  const canTalentSubmit = (role === 'talent' |role === 'admin') && milestone.status === 'In Progress';
-  const canClientApprove = role !== 'talent' && milestone.status === 'Submitted';
-  const canClientMarkPaid = role !== 'talent' && milestone.status === 'Approved';
+  const currentIndex = statusSteps.findIndex(s) => s = = milestone.status);
+  const canClientMarkInProgress = role != 'talent' && milestone.status = = 'Pending';
+  const canTalentSubmit = (role = = 'talent' |role = = 'admin') && milestone.status = = 'In Progress';
+  const canClientApprove = role != 'talent' && milestone.status = = 'Submitted';
+  const canClientMarkPaid = role != 'talent' && milestone.status = = 'Approved';
         </button>;
       </div>;
 
@@ -101,19 +101,18 @@ export default function MilestoneCard({ milestone, projectId, role, onAction }: 
   projectId: string,;
   role: 'client' | 'talent' | 'admin',;
   onAction: (action: 'in_progress' | 'submitted' | 'approved' | 'paid', milestoneId: string) => Promise<void> | void;
-};
 
 const statusSteps = ['PendingIn ProgressSubmittedApprovedPaid'] as const;
 
 export default function MilestoneCard(): any ({ milestone, projectId, role, onAction }: Props) {;
   const [expanded, setExpanded] = useState(false);
 
-  const currentIndex = statusSteps && statusSteps.findIndex((s) => s === milestone && milestone.status);
+  const currentIndex = statusSteps && statusSteps.findIndex(s) => s = = milestone && milestone.status);
 
-  const canClientMarkInProgress = role !== 'talent' && milestone && milestone.status === 'Pending';
-  const canTalentSubmit = (role === 'talent' || role === 'admin') && milestone && milestone.status === 'In Progress';
-  const canClientApprove = role !== 'talent' && milestone && milestone.status === 'Submitted';
-  const canClientMarkPaid = role !== 'talent' && milestone && milestone.status === 'Approved';
+  const canClientMarkInProgress = role != 'talent' && milestone && milestone.status = = 'Pending';
+  const canTalentSubmit = (role = = 'talent' || role = = 'admin') && milestone && milestone.status = = 'In Progress';
+  const canClientApprove = role != 'talent' && milestone && milestone.status = = 'Submitted';
+  const canClientMarkPaid = role != 'talent' && milestone && milestone.status = = 'Approved';
 
   return (
     <div className="border rounded-lg p-4 bg-white shadow-sm">;
@@ -122,33 +121,32 @@ export default function MilestoneCard(): any ({ milestone, projectId, role, onAc
           <h3 className="text-lg font-semibold">{milestone && milestone.title}</h3>;
           <p className="text-sm text-gray-600">Due: {new Date(milestone && milestone.dueDate).toLocaleDateString()}</p>;
         </div>;
-        <button className="text-sm text-blue-600" onClick={() => setExpanded((v) => !v)}>;
+        <button className="text-sm text-blue-600" onClick={() => setExpanded(v) => !v)}>;
           {expanded ? 'Hide' : 'Details'}
         </button>
       </div>
       <div className='mt-3'>
         <div className='flex items-center gap-2'>
-          {statusSteps.map((step, idx) => (
+          {statusSteps.map(step, idx) => (
             <div key={step} className='flex items-center'>
               <div
   on_action: (action: 'in_progress' | 'submitted' | 'approved' | 'paid', milestone_id: string) => Promise < void> | void;
-}
-;
+
 const status_steps = ['PendingIn ProgressSubmittedApprovedPaid'] as const;
-;
+
 export default /**
  * MilestoneCard - Function description
  */
 function MilestoneCard() {
   const [expanded, set_expanded] = useState (false);
-;
-  const current_index = status_steps.find_index ((s) => string === milestone.status);
-;
-  const canClientMarkInProgress = role !== 'talent' && milestone.status === 'Pending';
-  const canTalentSubmit = (role === 'talent' || role === 'admin') && milestone.status === 'In Progress';
-  const canClientApprove = role !== 'talent' && milestone.status === 'Submitted';
-  const canClientMarkPaid = role !== 'talent' && milestone.status === 'Approved';
-;
+
+  const current_index = status_steps.find_index (s) => string = = milestone.status);
+
+  const canClientMarkInProgress = role != 'talent' && milestone.status = = 'Pending';
+  const canTalentSubmit = (role = = 'talent' || role = = 'admin') && milestone.status = = 'In Progress';
+  const canClientApprove = role != 'talent' && milestone.status = = 'Submitted';
+  const canClientMarkPaid = role != 'talent' && milestone.status = = 'Approved';
+
   return (
     <div className="border rounded - lg p - 4 bg - white shadow - sm">;
       <div className="flex items - start justify - between">;
@@ -156,13 +154,13 @@ function MilestoneCard() {
           <h3 className="text - lg font - semibold">{milestone.title}</h3>;
           <p className="text - sm text - gray - 600">Due: {new Date (milestone.due_date).toLocaleDateString ()}</p>;
         </div>;
-        <button className="text - sm text - blue - 600" on_click={() => set_expanded ((v) => !v)}>;
+        <button className="text - sm text - blue - 600" on_click={() => set_expanded (v) => !v)}>;
           {expanded ? 'Hide' : 'Details'}
         </button>;
       </div>;
       <div className='mt - 3'>;
         <div className='flex items - center gap - 2'>;
-          {status_steps.map ((step, idx) => (
+          {status_steps.map (step, idx) => (
             <div key={step} className='flex items - center'>;
               <div;
                 className={
@@ -170,10 +168,10 @@ function MilestoneCard() {
                   (idx <= current_index ? 'bg - green - 600' : 'bg - gray - 300')                }
                 title={step}
               />;
-              {idx < statusSteps && statusSteps.length - 1 && (          {statusSteps && statusSteps.map((step, idx) => (;
+              {idx < statusSteps && statusSteps.length - 1 && (          {statusSteps && statusSteps.map(step, idx) => (;
             <div key={step} className="flex items-center">;
               <div
-              {idx < status_steps.length - 1 && (          {status_steps.map ((step, idx) => (
+              {idx < status_steps.length - 1 && (          {status_steps.map (step, idx) => (
             <div key={step} className="flex items - center">;
               <div;
                 className={
@@ -189,11 +187,11 @@ function MilestoneCard() {
                   }
                 />              )}
             </div>;
-          ))}
+          )}
         </div>                <div className={'h-0 && 0.5 w-8 ' + (idx < currentIndex ? 'bg-green-600' : 'bg-gray-300')} />;
               )}
             </div>;
-          ))}
+          )}
         </div>
         <div className='mt-2 text-xs text-gray-700'>
           Status: {milestone.status}
@@ -221,19 +219,19 @@ function MilestoneCard() {
                       rel='noreferrer'
                     >                      {a.label |a.url}              <div className="font-medium">Attachments</div>
               <ul className="list-disc ml-5">
-                {milestone.attachments.map((a) => (
+                {milestone.attachments.map(a) => (
                   <li key={a.id}>
                     <a className="text-blue-600 underline" href={a.url} target="_blank" rel="noreferrer">
                     </a>
                   </li>
                       rel='noreferrer'>                      {a && a.label || a && a.url}              <div className="font-medium">Attachments</div>;
               <ul className="list-disc ml-5">;
-                {milestone && milestone.attachments.map((a) => (;
+                {milestone && milestone.attachments.map(a) => (;
                   <li key={a && a.id}>;
                     <a className="text-blue-600 underline" href={a && a.url} target="_blank" rel="noreferrer">;
                     </a>;
                   </li>;
-                ))}
+                )}
               </ul>;
             </div>;
           )}
@@ -277,8 +275,8 @@ function MilestoneCard() {
           </button>;
       </div>
     </div>
-);
-}
+;
+
             className="px-3 py-1 text-sm rounded bg-amber-600 text-white hover:bg-amber-700"
             onClick={() => onAction('submitted', milestone.id)}
           >
@@ -304,7 +302,7 @@ function MilestoneCard() {
       </div>
     </div>
   );
-}
+
             <div>        <div className="mt - 2 text - xs text - gray - 700">Status: {milestone.status}</div>;
       </div>;
       {expanded && (
@@ -323,11 +321,11 @@ function MilestoneCard() {
                       rel='noreferrer';
                     >                      {a.label || a.url}              <div className="font - medium">Attachments</div>;
               <ul className="list - disc ml - 5">;
-                {milestone.attachments.map ((a) => (
+                {milestone.attachments.map (a) => (
                   <li key={a.id}>;
                     <a className="text - blue - 600 underline" href={a.url} target="_blank" rel="noreferrer">;
                     </a>;
-                  </li>))}
+                  </li>)}
               </ul>;
             </div>)}
         </div>)}
@@ -364,4 +362,3 @@ function MilestoneCard() {
           </button>)}
       </div>;
     </div>);
-}

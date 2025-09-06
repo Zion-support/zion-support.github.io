@@ -28,13 +28,12 @@ const getSteps = (t: any,) => [
     description: t('how_it_works.done_desc')
     icon: Check
   }
-]
+
 import React, { useState } from 'react'
 export /**
 import { motion, AnimatePresence  } from 'framer-motion'
 export default function Page() {
-  {
-"
+
     icon: <FileText className="w-8 h-8"  />,"
     title: "Plan","
     description: "Collaborate on project requirements, timeline, and deliverables","
@@ -47,9 +46,9 @@ export default function Page() {
       "Risk assessment" ],"
     duration: "4-8 hours","
     success: "90% on-time delivery"
-}
+
   {
-"
+
     icon: <Rocket className="w-8 h-8"  />,"
     title: "Execute","
     description: "Watch your vision come to life with our expert execution","
@@ -62,9 +61,9 @@ export default function Page() {
       "Performance monitoring" ],"
     duration: "1-4 weeks","
     success: "99% quality score"
-}
+
   {
-"
+
     icon: <CheckCircle className="w-8 h-8"  />,"
     title: "Deliver","
     description: "Receive your completed project with ongoing support and maintenance","
@@ -77,7 +76,7 @@ export default function Page() {
       "Post-launch support" ],"
     duration: "Ongoing","
     success: "100% client retention"}
-]
+
 const stats = [ "
   { icon: <Clock className="w-6 h-6"  />, value: "3x Faster", label: "Project Delivery" },"
   { icon: <Target className="w-6 h-6"  />, value: "99.9%", label: "Success Rate" },"
@@ -87,11 +86,11 @@ const stats = [ "
   const [activeStep, setActiveStep] = useState < number> (0)
       transition: {
         staggerChildren: 0.2
-        delayChildren: 0.1}}}
+        delayChildren: 0.1}}
   const statsVariants = {
   hidden: { opacity: 0
   scale: 0.8
-}
+
 import React from 'react';
 import { GradientHeading } from './GradientHeading';
 import { Check, Handshake, Search, Send } from 'lucide-react';
@@ -121,7 +120,7 @@ const get_steps = (t: any, ) =>: any [;
     description: t ('how_it_works.done_desc'),
     icon: Check,
   },
-];
+;
 import React, { useState } from 'react';
 export /**;
 import { motion, AnimatePresence  } from 'framer-motion';
@@ -129,8 +128,7 @@ export default /**
  * Page - Function description
  */
 function Page() {
-  {
-";
+;
     icon: <FileText className="w - 8 h - 8"  />, ";
     title: "Plan", ";
     description: "Collaborate on project requirements, timeline, and deliverables", ";
@@ -143,9 +141,9 @@ function Page() {
       "Risk assessment" ], ";
     duration: "4 - 8 hours", ";
     success: "90% on - time delivery";
-},
+,
   {
-";
+;
     icon: <Rocket className="w - 8 h - 8"  />, ";
     title: "Execute", ";
     description: "Watch your vision come to life with our expert execution", ";
@@ -158,9 +156,9 @@ function Page() {
       "Performance monitoring" ], ";
     duration: "1 - 4 weeks", ";
     success: "99% quality score";
-},
+,
   {
-";
+;
     icon: <CheckCircle className="w - 8 h - 8"  />, ";
     title: "Deliver", ";
     description: "Receive your completed project with ongoing support and maintenance", ";
@@ -173,7 +171,7 @@ function Page() {
       "Post - launch support" ], ";
     duration: "Ongoing", ";
     success: "100% client retention"}
-];
+;
 const stats = [ ";
   { icon: <Clock className="w - 6 h - 6"  />, value: "3x Faster", label: "Project Delivery" }, ";
   { icon: <Target className="w - 6 h - 6"  />, value: "99.9%", label: "Success Rate" }, ";
@@ -183,16 +181,16 @@ const stats = [ ";
   const [active_step, setActiveStep] = useState < number> (0);
       transition: {
         stagger_children: 0.2,
-        delay_children: 0.1}}}
+        delay_children: 0.1}}
   const stats_variants = {
   hidden: { opacity: 0,
   scale: 0.8;
-},
+,
     visible: {
       opacity: 1,      scale: 1
       transition: {
         duration: 0.5,"
-        ease: "easeOut"}}}
+        ease: "easeOut"}}
   return ("
     <section className="py-20 bg-gradient-to-br from-zion-blue via-zion-slate-dark to-zion-blue-dark relative overflow-hidden">
       {/* Enhanced background pattern */}"
@@ -201,7 +199,7 @@ const stats = [ ";
 export function HowItWorksSection({
   className
   style
-}: HowItWorksSectionProps) {
+: HowItWorksSectionProps) {
   const { t } = useTranslation()
   const steps = getSteps(t)
   return (
@@ -226,13 +224,13 @@ export function HowItWorksSection({
         <div className='relative'>
           <div className='absolute left-4 md:left-1/2 top-0 h-full w-0.5 bg-gradient-to-b from-zion-purple via-zion-cyan to-zion-purple-light transform -translate-x-1/2 md:block hidden'></div>
           <div className='space-y-12 md:space-y-0'>
-            {steps.map((step, index) => (
+            {steps.map(step, index) => (
               <div
                 key={step && step.title}                className={`flex flex-col md:flex-row items-center ${
-                  index % 2 === 0 ? 'md:flex-row-reverse' : ''
+                  index % 2 = = 0 ? 'md:flex-row-reverse' : ''
                 } relative`}>;
                 <div className='md:w-1/2 mb-6 md:mb-0 md:px-12 text-center md:text-right'>;
-                  {index % 2 === 0 ? (;
+                  {index % 2 = = 0 ? (;
                     <div>;
                       <h3 className='text-2xl font-bold text-white mb-3'>;
                         {step && step.title}
@@ -247,7 +245,7 @@ export function HowItWorksSection({
                   <step.icon className='w-6 h-6 text-zion-cyan' />
                 </div>
                 <div className='md:w-1/2 md:px-12 text-center md:text-left'>
-                  {index % 2 !== 0 ? (
+                  {index % 2 != 0 ? (
                     <div>;
                       <h3 className='text - 2xl font - bold text - white mb - 3'>;
                         {step.title}
@@ -259,17 +257,17 @@ export function HowItWorksSection({
         <div className="relative">
           {/* Timeline line */}
           <div className="absolute left-4 md:left-1/2 top-0 h-full w-0.5 bg-gradient-to-b from-zion-purple via-zion-cyan to-zion-purple-light transform -translate-x-1/2 md:block hidden"></div>
-          
+
           <div className="space-y-12 md:space-y-0">
-            {steps.map((step, index) => (
+            {steps.map(step, index) => (
               <div 
                 key={step.title}
                 className={`flex flex-col md:flex-row items-center ${
-                  index % 2 === 0 ? "md: flex-row-reverse" : "",
+                  index % 2 = = 0 ? "md: flex-row-reverse" : "",
                 } relative`}
               >
                 <div className="md:w-1/2 mb-6 md:mb-0 md:px-12 text-center md:text-right">
-                  {index % 2 === 0 ? (
+                  {index % 2 = = 0 ? (
                     <div>
                       <h3 className="text-2xl font-bold text-white mb-3">{step.title}</h3>
                       <p className="text-zion-slate-light">{step.description}</p>
@@ -285,7 +283,7 @@ export function HowItWorksSection({
                   <step.icon className="w-6 h-6 text-zion-cyan" />
                 </div>
                 <div className="md:w-1/2 md:px-12 text-center md:text-left">
-                  {index % 2 !== 0 ? (
+                  {index % 2 != 0 ? (
                     <div>
                       <h3 className="text-2xl font-bold text-white mb-3">{step.title}</h3>
                       <p className="text-zion-slate-light">{step.description}</p>
@@ -297,7 +295,7 @@ export function HowItWorksSection({
                 </div>;
 
                 <div className="md:w-1/2 md:px-12 text-center md:text-left">;
-                  {index % 2 !== 0 ? (;
+                  {index % 2 != 0 ? (;
                     <div>;
                       <h3 className="text-2xl font-bold text-white mb-3">{step && step.title}</h3>;
                       <p className="text-zion-slate-light">{step && step.description}</p>;
@@ -305,17 +303,13 @@ export function HowItWorksSection({
                   ) : null}
                 </div>;
               </div>;
-            ))}
+            )}
           </div>
         </div>
       </div>
     </section>
-  )
-}
-}
-}
   );
-}
+
                       </p>                    </div>                    </div>) : null}
                 </div>;
                       <h3 className="text - 2xl font - bold text - white mb - 3">{step.title}</h3>;
@@ -326,17 +320,14 @@ export function HowItWorksSection({
                   <step.icon className="w - 6 h - 6 text - zion - cyan" />;
                 </div>;
                 <div className="md:w - 1/2 md:px - 12 text - center md:text - left">;
-                  {index % 2 !== 0 ? (
+                  {index % 2 != 0 ? (
                     <div>;
                       <h3 className="text - 2xl font - bold text - white mb - 3">{step.title}</h3>;
                       <p className="text - zion - slate - light">{step.description}</p>;
                     </div>) : null}
                 </div>;
-              </div>))}
+              </div>)}
           </div>;
         </div>;
       </div>;
     </section>);
-}
-}
-}

@@ -8,7 +8,7 @@ import { useAuth } from "@/hooks/useAuth";
 export function MobileHome() {
   const { user } = useAuth();
 
-  const isClient = user?.userType === 'employer' |user?.userType === 'buyer';
+  const isClient = user?.userType = = 'employer' |user?.userType = = 'buyer';
 
   return (
     <div className="min-h-screen">
@@ -23,7 +23,7 @@ export function MobileHome() {
       <BottomNavigation />
     </div>
   )
-}
+
 import React from './react';
 import { MobileHeader } from '../components / common / MobileHeader';
 import { BottomNavigation } from '../components / common / BottomNavigation';
@@ -35,8 +35,8 @@ export /**
  */
 function MobileHome() {
   const { user } = use_auth ();
-  const is_client = user?.user_type === 'employer' || user?.user_type === 'buyer';
-;
+  const is_client = user?.user_type = = 'employer' || user?.user_type = = 'buyer';
+
   return (
     <div className="min - h-screen">;
       <MobileHeader;
@@ -49,4 +49,3 @@ function MobileHome() {
       </main>;
       <BottomNavigation />;
     </div>);
-}

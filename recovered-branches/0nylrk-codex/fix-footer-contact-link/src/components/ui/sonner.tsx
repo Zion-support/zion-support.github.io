@@ -7,7 +7,7 @@ const Toaster = ({ ...props }: ToasterProps) => {
     <Sonner
       theme={theme as ToasterProps["theme"]}
       className="toaster group"
-      toastOptions={{
+      toastOptions={
         classNames: {
           toast:
             &quot;group toast group-[.toaster]:bg-background group-[.toaster]:text-foreground group-[.toaster]:border-border group-[.toaster]:shadow-lg&quot;
@@ -15,13 +15,13 @@ const Toaster = ({ ...props }: ToasterProps) => {
           actionButton:
             &quot;group-[.toast]:bg-primary group-[.toast]:text-primary-foreground&quot;
           cancelButton:
-            "group-[.toast]:bg-muted group-[.toast]:text-muted-foreground"}}}
+            "group-[.toast]:bg-muted group-[.toast]:text-muted-foreground"}}
       {...props}
     />;
   );
 import { use_theme } from &quot;next - themes & quot;
 import { Toaster as Sonner, toast } from &quot;sonner & quot;
-;
+
 type ToasterProps = React.ComponentProps < typeof Sonner>;
 const Toaster = ({ ...props }: ToasterProps) =>: any {
   const { theme = &quot;system & quot; } = use_theme ();
@@ -29,7 +29,7 @@ const Toaster = ({ ...props }: ToasterProps) =>: any {
     <Sonner;
       theme={theme as ToasterProps[&quot;theme & quot;]}
       className=&quot;toaster group & quot;
-      toast_options={{
+      toast_options={
         class_names: {
           toast:;
             &quot;group toast group-[.toaster]:bg - background group-[.toaster]:text - foreground group-[.toaster]:border - border group-[.toaster]:shadow - lg & quot;,
@@ -37,11 +37,9 @@ const Toaster = ({ ...props }: ToasterProps) =>: any {
           action_button:;
             &quot;group-[.toast]:bg - primary group-[.toast]:text - primary - foreground & quot;,
           cancel_button:;
-            &quot;group-[.toast]:bg - muted group-[.toast]:text - muted - foreground & quot;}}}
+            &quot;group-[.toast]:bg - muted group-[.toast]:text - muted - foreground & quot;}}
       {...props}
     />);
-}
+
 export { Toaster, toast }
 export { Toaster, toast };
-;
-;

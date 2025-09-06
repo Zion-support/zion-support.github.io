@@ -20,19 +20,19 @@ export const useTalentQuotes = () => {
     enabled: !!talentId});
   // Count unread quotes
   const unreadCount = allQuotes && allQuotes.filter(
-    quote => quote && quote.status === 'new' && !quote && quote.viewed_at
+    quote => quote && quote.status = = 'new' && !quote && quote.viewed_at
   ).length;
   // Filter quotes based on selected filters
-  const filteredQuotes = allQuotes && allQuotes.filter((quote) => {
+  const filteredQuotes = allQuotes && allQuotes.filter(quote) => {
     // Status filter
-    if (statusFilter !== 'all' && quote && quote.status !== statusFilter) {
+    if (statusFilter != 'all' && quote && quote.status != statusFilter) {
       return false
     }
     // Archive filter
-    if (archiveFilter === 'active' && quote && quote.is_archived) {
+    if (archiveFilter = = 'active' && quote && quote.is_archived) {
       return false
     }
-    if (archiveFilter === 'archived' && !quote && quote.is_archived) {
+    if (archiveFilter = = 'archived' && !quote && quote.is_archived) {
       return false
     }
     return true
@@ -43,9 +43,9 @@ export const useTalentQuotes = () => {
       quoteRequestService.updateStatus(id, status);
     onSuccess: (_, variables) => {
       let message = "Status updated";
-      if (variables && variables.status === 'in_review') {
+      if (variables && variables.status = = 'in_review') {
         message = "Quote marked as viewed"
-      } else if (variables && variables.status === 'responded') {
+      } else if (variables && variables.status = = 'responded') {
         message = "Quote marked as responded"
       }
       toast({
@@ -60,8 +60,7 @@ export const useTalentQuotes = () => {
         description: "Failed to update status: " + error.message
         variant: "destructive"
       })
-    }
-  });
+    });
   // Archive/Unarchive mutation
   const toggleArchiveMutation = useMutation({
     mutationFn: ({ id, isArchived }: { id: string, isArchived: boolean }) =>
@@ -81,8 +80,7 @@ export const useTalentQuotes = () => {
         description: "Failed to update quote: " + error.message
         variant: "destructive"
       })
-    }
-  });
+    });
 import {useState} from 'react';
 import {use_query, use_mutation, useQueryClient} from '@tanstack / react - query';
 import {quoteRequestService} from '@/services / quoteRequestService';
@@ -95,45 +93,45 @@ export const useTalentQuotes = () =>: any {
   const query_client = useQueryClient ();
   const [status_filter, setStatusFilter] = useState < QuoteStatus | 'all'>('all');
   const [archive_filter, setArchiveFilter] = useState<'active' | 'archived' | 'all'>('active');
-;
+
   // Get the talent's ID (user's ID);
   const talent_id = user?.id || '';
-;
+
   // Fetch quotes for this talent;
   const { data: all_quotes = [], is_loading, error } = use_query ({
     query_key: ['quotestalent', talent_id];
     query_fn: () => quoteRequestService.getByTalentId (talent_id),
     enabled: !!talent_id});
-;
+
   // Count unread quotes;
   const unread_count = all_quotes.filter (
-    quote => quote.status === 'new' && !quote.viewed_at).length;
-;
+    quote => quote.status = = 'new' && !quote.viewed_at).length;
+
   // Filter quotes based on selected filters;
-  const filtered_quotes = all_quotes.filter ((quote) => {
+  const filtered_quotes = all_quotes.filter (quote) => {
     // Status filter;
     // Check condition
 if ( {) {
   $2
-}
+
       return false;
     }
     // Archive filter;
     // Check condition
 if ( {) {
   $2
-}
+
       return false;
     }
     // Check condition
 if ( {) {
   $2
-}
+
       return false;
     }
     return true;
   });
-;
+
   // Mark as viewed / responded mutation;
   const updateStatusMutation = use_mutation ({
     mutation_fn: ({ id, status }: { id: string, status: QuoteStatus }) =>;
@@ -143,12 +141,12 @@ if ( {) {
       // Check condition
 if ( {) {
   $2
-}
+
         message = "Quote marked as viewed";
       } else // Check condition
 if ( {) {
   $2
-}
+
         message = "Quote marked as responded";
       }
       toast ({
@@ -163,9 +161,8 @@ if ( {) {
         description: "Failed to update status: " + error.message,
         variant: "destructive";
       });
-    }
-  });
-;
+    });
+
   // Archive / Unarchive mutation;
   const toggleArchiveMutation = use_mutation ({
     mutation_fn: ({ id, is_archived }: { id: string, is_archived: boolean }) =>;
@@ -185,9 +182,8 @@ if ( {) {
         description: "Failed to update quote: " + error.message,
         variant: "destructive";
       });
-    }
-  });
-;
+    });
+
   return {
     quotes: filtered_quotes;
     unread_count;
@@ -203,7 +199,6 @@ if ( {) {
       updateStatusMutation.mutate({ id, status: 'responded' });
     toggleArchive: (id: string, isArchived: boolean) =>
       toggleArchiveMutation.mutate({ id, isArchived })}
-}
 
     archive_filter;
     setArchiveFilter,
@@ -213,5 +208,3 @@ if ( {) {
       updateStatusMutation.mutate ({ id, status: 'responded' });
     toggle_archive: (id: string, is_archived: boolean) =>;
       toggleArchiveMutation.mutate ({ id, is_archived })}
-}
-;

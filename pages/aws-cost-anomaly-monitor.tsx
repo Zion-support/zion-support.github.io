@@ -17,9 +17,9 @@ export default function AwsCostAnomalyMonitorPage() {
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">AWS Cost Anomaly Monitor</h1>
           <p className="text-slate-300">Continuous anomaly detection with budget guardrails, Slack alerts, root-cause hints, and savings recommendations.</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {[ 'Anomaly detection & budgetsSlack triage workflowsService/tag breakdownsMonthly savings report' ].map((f) => (
+            {[ 'Anomaly detection & budgetsSlack triage workflowsService/tag breakdownsMonthly savings report' ].map(f) => (
               <div key={f} className="p-4 rounded-xl bg-black/40 border border-cyan-500/30 text-slate-200">{f}</div>
-            ))}
+            )}
           </div>
           <div className="flex gap-3">
             <a href="/contact" className="px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-600 to-blue-700 text-white">Start from $199/mo</a>
@@ -29,7 +29,7 @@ export default function AwsCostAnomalyMonitorPage() {
       </div>
     </Layout>
   )
-}
+
 import React from 'react',
 import Head from 'next / head',
 import Layout from '../components / layout / Layout',
@@ -49,8 +49,8 @@ function AwsCostAnomalyMonitorPage() {
           <h1 className="text - 4xl md:text - 6xl font - bold bg - gradient - to - r from - cyan - 400 to - blue - 500 bg - clip - text text - transparent">AWS Cost Anomaly Monitor</h1>;
           <p className="text - slate - 300">Continuous anomaly detection with budget guardrails, Slack alerts, root - cause hints, and savings recommendations.</p>;
           <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
-            {[ 'Anomaly detection & budgets_slack triage workflows_service / tag breakdowns_monthly savings report' ].map ((f) => (
-              <div key={f} className="p - 4 rounded - xl bg - black / 40 border border - cyan - 500 / 30 text - slate - 200">{f}</div>))}
+            {[ 'Anomaly detection & budgets_slack triage workflows_service / tag breakdowns_monthly savings report' ].map (f) => (
+              <div key={f} className="p - 4 rounded - xl bg - black / 40 border border - cyan - 500 / 30 text - slate - 200">{f}</div>)}
           </div>;
           <div className="flex gap - 3">;
             <a href="/contact" className="px - 6 py - 3 rounded - xl bg - gradient - to - r from - cyan - 600 to - blue - 700 text - white">Start from $199 / mo</a>;
@@ -59,4 +59,3 @@ function AwsCostAnomalyMonitorPage() {
         </div>;
       </div>;
     </Layout>);
-}

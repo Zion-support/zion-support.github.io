@@ -6,5 +6,3 @@ export function TalentResults() {;
       <p>Component placeholder - needs implementation</p>;
     </div>;
   );
-}
-;

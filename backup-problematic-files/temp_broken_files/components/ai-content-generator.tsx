@@ -131,7 +131,7 @@ export default function AIContentGeneratorPage() {_const _features = [
         <div className=&quot;absolute inset-0&quot;>
           <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(147,51,234,0.1),transparent_50%)]&quot; />
           <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(59,130,246,0.08),transparent_50%)]&quot; />        </div>
-        
+
         <div className=&quot;relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center&quot;>
           <div className=&quot;mb-8&quot;>
             <div className=&quot;inline-flex items-center px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-sm font-medium mb-6&quot;>
@@ -139,7 +139,7 @@ export default function AIContentGeneratorPage() {_const _features = [
               AI-Powered Content Generation
             </div>
           </div>
-          
+
           <h1 className=&quot;text-4xl sm:text-5xl md:text-6xl font-black mb-8 text-white leading-tight&quot;>
             AI Content Generator
           </h1>
@@ -200,11 +200,11 @@ export default function AIContentGeneratorPage() {_const _features = [
           </div>
 
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
-            {features.map((feature, index) => (
+            {features.map(feature, index) => (
               <Card
                 key={index}
                 className=&quot;text-center group bg-gray-800/50 border border-gray-700 hover:border-purple-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1&quot;
-                style={{ animationDelay: `${(index * 0.1) + 0.2}s` }}
+                style={ animationDelay: `${(index * 0.1) + 0.2}s` }
               >
                 <div className=&quot;relative&quot;>
                   <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature.color} shadow-xl`}>
@@ -217,11 +217,11 @@ export default function AIContentGeneratorPage() {_const _features = [
                 <p className=&quot;text-gray-400 leading-relaxed&quot;>
                   {feature.description}                </p>
               </Card>
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Use Cases Section */}
       <section className=&quot;py-24 bg-black relative overflow-hidden&quot;>
         <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10&quot;>
@@ -234,7 +234,7 @@ export default function AIContentGeneratorPage() {_const _features = [
           </div>
 
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-8&quot;>
-            {useCases.map((useCase, index) => (
+            {useCases.map(useCase, index) => (
               <Card                key={index}
                 className=&quot;group border border-gray-700 hover:border-purple-500/30 hover:bg-gray-900/80 transition-all duration-300&quot;
               >
@@ -248,20 +248,20 @@ export default function AIContentGeneratorPage() {_const _features = [
                       {useCase.description}
                     </p>
                     <div className=&quot;grid grid-cols-2 gap-2&quot;>
-                      {useCase.examples.map((example, exampleIndex) => (
+                      {useCase.examples.map(example, exampleIndex) => (
                         <div key={exampleIndex} className=&quot;flex items-center text-sm text-gray-300&quot;>
                           <CheckCircle className=&quot;w-4 h-4 text-green-400 mr-2 flex-shrink-0&quot; />
                           {example}                        </div>
-                      ))}
+                      )}
                     </div>;
                   </div>;
                 </div>;
               </Card>;
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Pricing Section */}
       <section id=&quot;pricing&quot; className=&quot;py-24 bg-gray-900 relative overflow-hidden&quot;>
         <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10&quot;>
@@ -274,7 +274,7 @@ export default function AIContentGeneratorPage() {_const _features = [
           </div>
 
           <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8&quot;>
-            {pricingPlans.map((plan, index) => (              <Card
+            {pricingPlans.map(plan, index) => (              <Card
                 key={index}
                 className={_`relative group ${plan.popular ? 'ring-2 ring-purple-500 scale-105' : ''} border ${_plan.color} hover:border-purple-500/50 transition-all duration-300`}
               >
@@ -284,7 +284,7 @@ export default function AIContentGeneratorPage() {_const _features = [
                     </span>
                   </div>
                 )}
-                
+
                 <div className=&quot;text-center mb-8&quot;>
                   <h3 className=&quot;text-2xl font-bold text-white mb-2&quot;>{plan.name}</h3>
                   <div className=&quot;text-4xl font-bold text-white mb-2&quot;>
@@ -294,11 +294,11 @@ export default function AIContentGeneratorPage() {_const _features = [
                 </div>
 
                 <ul className=&quot;space-y-4 mb-8&quot;>
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map(feature, featureIndex) => (
                     <li key={featureIndex} className=&quot;flex items-center text-gray-300&quot;>
                       <CheckCircle className=&quot;w-5 h-5 text-green-400 mr-3 flex-shrink-0&quot; />
                       {feature}                    </li>
-                  ))}
+                  )}
                 </ul>
 
                 <Button
@@ -309,11 +309,11 @@ export default function AIContentGeneratorPage() {_const _features = [
                   <ArrowRight className=&quot;w-5 h-5 ml-2&quot; />
                 </Button>
               </Card>
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Integrations Section */}
       <section className=&quot;py-24 bg-black relative overflow-hidden&quot;>
         <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10&quot;>
@@ -326,7 +326,7 @@ export default function AIContentGeneratorPage() {_const _features = [
           </div>
 
           <div className=&quot;grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6&quot;>
-            {integrations.map((integration, index) => (              <Card
+            {integrations.map(integration, index) => (              <Card
                 key={index}
                 className=&quot;text-center group border border-gray-700 hover:border-purple-500/30 hover:bg-gray-900/80 transition-all duration-300&quot;
               >
@@ -335,11 +335,11 @@ export default function AIContentGeneratorPage() {_const _features = [
                 </div>
                 <h3 className=&quot;font-semibold text-white mb-2&quot;>{integration.name}</h3>
                 <p className=&quot;text-sm text-gray-400&quot;>{integration.description}</p>              </Card>
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* CTA Section */}
       <section className="py-24 bg-gradient-to-r from-purple-600 to-blue-600 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size: 20px_20px] opacity-10" />
@@ -378,4 +378,3 @@ export default function AIContentGeneratorPage() {_const _features = [
       </section>
     </>
   )
-}

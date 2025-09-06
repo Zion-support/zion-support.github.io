@@ -16,7 +16,6 @@ const Revolutionary2027Hero = () => {
   const containerVariants = {hidden: { opacity: 0},
     visible: {opacity: 1, transition: {
         staggerChildren: 0.1}
-    }
   },
 
   const itemVariants = {
@@ -27,7 +26,7 @@ const Revolutionary2027Hero = () => {
       transition: {
         duration: 0.8,
         ease: &quot;easeOut&quot; as const
-      }    }
+      }
   },
 
   return (
@@ -36,7 +35,7 @@ const Revolutionary2027Hero = () => {
       <div className=&quot;absolute inset-0 bg-[radial-gradient(circleat_30%20%,rgba(139,92,246,0.15),transparent50%)]&quot;></div>
       <div className=&quot;absolute inset-0 bg-[radial-gradient(circleat_70%80%,rgba(0,255,255,0.1),transparent50%)]&quot;></div>
       <div className=&quot;absolute inset-0 bg-[radial-gradient(circleat_50%50%,rgba(236,72,153,0.08),transparent50%)]&quot;></div>
-      
+
       {/* Animated Grid Pattern */}
       <div className=&quot;absolute inset-0 opacity-20&quot;>
         <div className=&quot;absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.1)1px,transparent1px),linear-gradient(90deg,rgba(139,92,246,0.1)1px,transparent1px)] bg-[size:50px50px]&quot;></div>      </div>
@@ -46,19 +45,19 @@ const Revolutionary2027Hero = () => {
         <motion.div,
 key={index}
           className={`absolute ${item.position} text-purple-400/30`}
-          animate={{
+          animate={
             y: [0, -20, 0],
-            rotate: [0, 5, -5, 0]}}
-          transition={{
+            rotate: [0, 5, -5, 0]}
+          transition={
             duration: 4,
             delay: item.delay,
             repeat: Infinity,
             ease: &quot;easeInOut&quot
-          }}        >
+          }        >
           <item.icon className=&quot;w-8 h-8&quot; />
         </motion.div>
-      ))}
-;
+      )}
+
       {/* Main Content */}
       <div className=&quot;relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center&quot;>
         <motion.div,
@@ -99,7 +98,7 @@ variants={containerVariants}
               <h3 className=&quot;text-lg font-semibold text-white mb-2&quot;>Quantum AI</h3>
               <p className=&quot;text-gray-300 text-sm&quot;>Consciousness simulation and neural computing</p>
             </div>
-            
+
             <div className=&quot;bg-gradient-to-br from-cyan-900/30 to-cyan-800/30 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-6&quot;>
               <div className=&quot;w-12 h-12 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-xl flex items-center justify-center mx-auto mb-4&quot;>
                 <Rocket className=&quot;w-6 h-6 text-white&quot; />
@@ -107,7 +106,7 @@ variants={containerVariants}
               <h3 className=&quot;text-lg font-semibold text-white mb-2&quot;>Space Tech</h3>
               <p className=&quot;text-gray-300 text-sm&quot;>Autonomous mining and debris management</p>
             </div>
-            
+
             <div className=&quot;bg-gradient-to-br from-pink-900/30 to-pink-800/30 backdrop-blur-xl border border-pink-500/30 rounded-2xl p-6&quot;>
               <div className=&quot;w-12 h-12 bg-gradient-to-br from-pink-500 to-pink-600 rounded-xl flex items-center justify-center mx-auto mb-4&quot;>
                 <TestTube className=&quot;w-6 h-6 text-white&quot; />
@@ -125,7 +124,7 @@ href=&quot;https://ziontechgroup.com/services&quot;
               <span>Explore Services</span>
               <ArrowRight className=&quot;w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-1&quot; />
             </a>
-            
+
             <a,
 href=&quot;tel:+13024640950&quot;
               className=&quot;group inline-flex items-center space-x-3 bg-gradient-to-r from-gray-700 to-gray-800 text-white px-8 py-4 rounded-2xl font-semibold text-lg transform transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl border border-gray-600/50&quot;
@@ -159,43 +158,43 @@ href=&quot;tel:+13024640950&quot;
       {_/* Scroll Indicator */}
       <motion.div,
 className=&quot;absolute bottom-8 left-1/2 transform -translate-x-1/2&quot;
-        animate={{
-          y: [0, 10, 0]}}
-        transition={{
+        animate={
+          y: [0, 10, 0]}
+        transition={
           duration: 2,
           repeat: Infinity,
           ease: &quot;easeInOut&quot
-        }}      >
+        }      >
         <div className=&quot;w-6 h-10 border-2 border-purple-400/50 rounded-full flex justify-center&quot;>
           <motion.div,
 className=&quot;w-1 h-3 bg-gradient-to-b from-cyan-400 to-purple-400 rounded-full mt-2&quot;
-            animate={{
-              y: [0, 12, 0]}}
-            transition={{
+            animate={
+              y: [0, 12, 0]}
+            transition={
               duration: 2,
               repeat: Infinity,
               ease: &quot;easeInOut&quot
-            }}          />
+            }          />
         </div>
       </motion.div>
 
       {/* Particle Effects */}
       <div className=&quot;absolute inset-0 pointer-events-none&quot;>
-        {[...Array(20)].map((_, i) => (
+        {[...Array(20)].map(_, i) => (
           <motion.div,
 key={i}
             className=&quot;absolute w-1 h-1 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full&quot;
-            style={{              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`}}
+            style={              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`}
             animate={_{
-              y: [0, _-100], opacity: [0, 1, 0]}}
+              y: [0, _-100], opacity: [0, 1, 0]}
             transition={_{
-              duration: 3 + Math.random() * 2, repeat: Infinity, delay: Math.random() * 2}}
+              duration: 3 + Math.random() * 2, repeat: Infinity, delay: Math.random() * 2}
           />
-        ))}
+        )}
       </div>
     </section>
   )
-},
+,
 
 export default Revolutionary2027Hero,

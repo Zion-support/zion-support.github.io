@@ -6,5 +6,3 @@ export function UpcomingInterviewsCard() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

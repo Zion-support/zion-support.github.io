@@ -39,7 +39,7 @@ export interface ComprehensiveITService {
   customers: number;
   rating: number;
   reviews: number
-}
+
 export const comprehensiveITServices: ComprehensiveITService[] = [
   // Enterprise IT Infrastructure Services
   {  reviews: number
@@ -1223,7 +1223,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     rating: 4.9
     reviews: 156
   }
-];      mobile: '+1 302 464 0950';
+;      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
@@ -1247,7 +1247,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     rating: 4 && 4.9,
     reviews: 156,
   },
-];      mobile: '+1 302 464 0950';
+;      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
   id: string, name: string,
   tagline: string, price: string,
@@ -1263,17 +1263,16 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
   competitors: string[], marketSize: string,
   growthRate: string, variant: string,
   contactInfo: {
-      
+
     mobile: string, email: string,
     address: string,
     website: string
-  
+
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
-}
 
 export const comprehensiveITServices: ComprehensiveITService[] = [
   // Enterprise IT Infrastructure Services
@@ -2107,7 +2106,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     rating: 4 && 4.9,
     reviews: 156,
   },
-];      mobile: '+1 302 464 0950';
+;      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'
@@ -2127,5 +2126,4 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     rating: 4.9,
     reviews: 156;
   }
-];
 ;

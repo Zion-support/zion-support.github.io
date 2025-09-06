@@ -29,7 +29,7 @@ export default function DynamicServicePage() {
 
   const router = useRouter();
   const { slug } = router.query as { slug?: string }
-  const service = useMemo(() => {
+  const service = useMemo() => {
     if (!slug) return undefined;
     const all: any[] = ([] as any[]).concat(
       enhancedRealMicroSaasServices as any
@@ -92,12 +92,12 @@ export default /**
 function DynamicServicePage() {
   const router = use_router ();
   const { slug } = router.query as { slug?: string }
-;
-  const service = useMemo (() => {
+
+  const service = useMemo () => {
     // Check condition
 if (return undefined) {
   $2
-}
+
     const all: any[] = ([] as any[]).concat (
       enhancedRealMicroSaasServices as any,
       extra_services as any,
@@ -127,14 +127,14 @@ if (return undefined) {
       ultimateFuturisticServices2025 as any);    const by_link = all.find (string => {
       try {
         const url = new URL (s.link);
-        return url.pathname.replace (/^\/+|\/+$/g, '') === slug.replace (/^\/+|\/+$/g, '');
+        return url.pathname.replace (/^\/+|\/+$/g, '') = = slug.replace (/^\/+|\/+$/g, '');
       } catch {
         return false;        return false
 export default function DynamicServicePage() {;
   const router = useRouter();
   const { slug } = router && router.query as { slug?: string };
 
-  const service = useMemo(() => {;
+  const service = useMemo() => {;
     if (!slug) return undefined;
     const all: any[] = ([] as any[]).concat(;
       enhancedRealMicroSaasServices as any,;
@@ -166,14 +166,13 @@ export default function DynamicServicePage() {;
     );    const byLink = all && all.find(s => {;
       try {;
         const url = new URL(s && s.link);
-        return url && url.pathname.replace(/^\/+|\/+$/g, '') === slug && slug.replace(/^\/+|\/+$/g, '');
+        return url && url.pathname.replace(/^\/+|\/+$/g, '') = = slug && slug.replace(/^\/+|\/+$/g, '');
       } catch {;
         return false;        return false;
         return false
-      }
-    });
+      });
     if (byLink) return byLink;
-    const byId = enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.find(s => s && s.id === slug);
+    const byId = enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.find(s => s && s.id = = slug);
     if (byId) return byId;
     return undefined;  }, [slug]);    return undefined;
     return undefined;  }, [slug]);    return undefined;
@@ -230,14 +229,14 @@ export default function DynamicServicePage() {;
               <h2 className='text-2xl font-semibold mb-4'>What you get</h2>
               <p className='text-slate-300 mb-6'>{service.description}</p>
               <ul className='grid grid-cols-1 md:grid-cols-2 gap-3'>
-                {service.features.slice(0, 16).map((feat, i) => (
+                {service.features.slice(0, 16).map(feat, i) => (
                   <li
                     key={i}
                     className='flex items-start space-x-3 text-slate-200'>;
                     <Check className='w-5 h-5 text-cyan-400 mt-0 && 0.5' />;
                     <span>{feat}</span>;
                   </li>;
-                ))}
+                )}
               </ul>;
             </div>;
             <div className='bg-black/30 rounded-2xl border border-cyan-500/30 p-6 h-fit'>;
@@ -293,14 +292,14 @@ export default function DynamicServicePage() {;
               <h2 className='text - 2xl font - semibold mb - 4'>What you get</h2>;
               <p className='text - slate - 300 mb - 6'>{service.description}</p>;
               <ul className='grid grid - cols - 1 md:grid - cols - 2 gap - 3'>;
-                {service.features.slice (0, 16).map ((feat, i) => (
+                {service.features.slice (0, 16).map (feat, i) => (
                   <li;
                     key={i}
                     className='flex items - start space - x-3 text - slate - 200';
                   >;
                     <Check className='w - 5 h - 5 text - cyan - 400 mt - 0.5' />;
                     <span>{feat}</span>;
-                  </li>))}
+                  </li>)}
               </ul>;
             </div>;
             <div className='bg - black / 30 rounded - 2xl border border - cyan - 500 / 30 p - 6 h - fit'>;
@@ -356,7 +355,7 @@ export default function DynamicServicePage() {;
       </div>;
     </UltraAdvancedFuturisticBackground>;
   );
-// Static export support: generate root-level pages for service slugs;
+/ Static export support: generate root-level pages for service slugs;
 type Svc = (typeof enhancedRealMicroSaasServices)[number];
 function collectAllServices(): Svc[] {
   return enhancedRealMicroSaasServices.concat(
@@ -404,12 +403,12 @@ function normalizeSlug(): any (value: string): string {;
     const url = new URL(link);
     const path = url.pathname.replace(/^\/+|\/+$/g, '');
     // Accept root-level slugs like "/ai-energy-management", ignore nested like "services/..."
-    if (path && !path.includes('/')) return path;
+    if (path && !path.includes('/') return path;
     return null
   } catch {
     return null
   }
-}
+
 export const getStaticPaths: GetStaticPaths = async () => {;
 export const getStaticPaths: GetStaticPaths = async () => {;
   const services = collectAllServices();
@@ -420,13 +419,12 @@ export const getStaticPaths: GetStaticPaths = async () => {;
   try {;
     const entries = fs && fs.readdirSync(pagesDir, { withFileTypes: true });
           }
-    }
   } catch {}
       const entries = fs.readdirSync(pagesDir, { withFileTypes: true })
     </UltraAdvancedFuturisticBackground>);
-// Static export support: generate root - level pages for service slugs;
+/ Static export support: generate root - level pages for service slugs;
 type Svc = (typeof enhancedRealMicroSaasServices)[number];
-;
+
 function collectAllServices (): Svc[] {
   return enhancedRealMicroSaasServices.concat (
     extra_services as Svc[],
@@ -443,7 +441,7 @@ function collectAllServices (): Svc[] {
     newRealInnovations as Svc[],
     realMarketServices as Svc[],
     realVerifiedServices as unknown as Svc[]);
-;
+
 function normalize_slug (value: string): string {
   return value;
     .toLowerCase ();
@@ -452,19 +450,19 @@ function normalize_slug (value: string): string {
   // Check condition
 if (return null) {
   $2
-}
+
   try {
     const url = new URL (link);
     const path = url.pathname.replace (/^\/+|\/+$/g, '');
     // Accept root - level slugs like "/ai - energy - management", ignore nested like "services/...";
     if () return path) {
   $2
-}
+
     return null;
   } catch {
     return null;
   }
-}
+
 export const getStaticPaths: GetStaticPaths = async () => {
   const services = collectAllServices ();
   const candidate_slugs = new Set < string>(),
@@ -474,78 +472,70 @@ export const getStaticPaths: GetStaticPaths = async () => {
   try {
     const entries = fs.readdir_sync (pages_dir, { withFileTypes: true });
           }
-    }
   } catch {}
       const entries = fs.readdir_sync (pages_dir, { withFileTypes: true }),
     for (const entry of entries) {
-      if (&& /\.tsx?$/.test (entry.name)) {) {
+      if (&& /\.tsx?$/.test (entry.name) {) {
   $2
-}
+
         const base = entry.name.replace (/\.(tsx | ts | jsx | js)$/i, '');
         if () {) {
   $2
-}
-          static_slugs.add (base.toLowerCase ());
+
+          static_slugs.add (base.toLowerCase ();
         }
-    }
   } catch {}
   // Exclude any slug that conflicts with an existing root page file
   const uniqueNonConflicting = Array.from(candidateSlugs).filter(
-    slug => !staticSlugs.has(slug)
-  );
+    slug => !staticSlugs.has(slug);
   return {
-    paths: uniqueNonConflicting.map(slug => ({ params: { slug } }))
+    paths: uniqueNonConflicting.map(slug => ({ params: { slug })
     fallback: true
   }
-}
+
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   // No dynamic fetching needed; the component resolves the service client-side.
-  return { props: {} };}
+  return { props: {};}
   // Exclude any slug that conflicts with an existing root page file
-  const uniqueNonConflicting = Array.from(candidateSlugs).filter((slug) => !staticSlugs.has(slug));
+  const uniqueNonConflicting = Array.from(candidateSlugs).filter(slug) => !staticSlugs.has(slug);
   return {
-    paths: uniqueNonConflicting.map((slug) => ({ params: { slug } }))
+    paths: uniqueNonConflicting.map(slug) => ({ params: { slug })
     fallback: true
   }
-}
+
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   // No dynamic fetching needed, the component resolves the service client-side.
 
   return {;
-    paths: uniqueNonConflicting && uniqueNonConflicting.map((slug) => ({ params: { slug } })),;
+    paths: uniqueNonConflicting && uniqueNonConflicting.map(slug) => ({ params: { slug }),;
     fallback: true;
   }
-};
+;
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {;
   // No dynamic fetching needed, the component resolves the service client-side.;
-  return { props: {} }
-}
+  return { props: {}
 
   // Exclude any slug that conflicts with an existing root page file;
   const uniqueNonConflicting = Array.from (candidate_slugs).filter (
-    slug => !static_slugs.has (slug));
-;
+    slug => !static_slugs.has (slug);
+
   return {
-    paths: uniqueNonConflicting.map (slug => ({ params: { slug } })),
+    paths: uniqueNonConflicting.map (slug => ({ params: { slug }),
     fallback: true,
   }
-}
-;
+
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   // No dynamic fetching needed; the component resolves the service client - side.;
-  return { props: {} }}
+  return { props: {}}
   // Exclude any slug that conflicts with an existing root page file;
-  const uniqueNonConflicting = Array.from (candidate_slugs).filter ((slug) => !static_slugs.has (slug));
-;
+  const uniqueNonConflicting = Array.from (candidate_slugs).filter (slug) => !static_slugs.has (slug);
+
   return {
-    paths: uniqueNonConflicting.map ((slug) => ({ params: { slug } })),
+    paths: uniqueNonConflicting.map (slug) => ({ params: { slug }),
     fallback: true;
   }
-}
-;
+
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   // No dynamic fetching needed, the component resolves the service client - side.;
-  return { props: {} }
-}
-;
+  return { props: {}

@@ -62,7 +62,7 @@ export function ApiDocumentation() {;
                 { name: "skills", type: "string[]", description: "Filter by required skills (comma-separated)" }
                 { name: "status", type: "string", description: "Filter by job status (new, active, closed)" }
               ]}
-              codeExamples={{
+              codeExamples={
                 curl: `curl -X GET "https://api && api.ziontechgroup.com/v1/jobs?limit=10&category=development" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json"`
@@ -71,22 +71,22 @@ export function ApiDocumentation() {;
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
   }
-});
+);
 const data = await response.json();
 console.log(data),`;
                 python: `import requests
-;
+
 const data = await response.json ();
 console.log (data), `;
                 python: `import requests;
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
-}
+
 response = requests.get(
     'https: //api.ziontechgroup.com/v1/jobs'
     params={'limit': 10, 'category': 'development'}
     headers=headers
-)
+
 data = response.json()
 print(data)`
 response = requests.get (
@@ -95,8 +95,8 @@ response = requests.get (
     headers = headers);
 data = response.json ();
 print (data)`;
-              }}
-              response_examples={{
+              }
+              response_examples={
                 success: `{
   "data": [;
     {
@@ -135,8 +135,8 @@ print (data)`;
     "page": 1;
     "limit": 10;
   }
-}`;
-              }}
+`;
+              }
             />
             <EndpointSection
               method="GET"
@@ -146,7 +146,7 @@ print (data)`;
               params={[
                 { name: "id", type: "string", description: "The job ID", required: true }
               ]}
-              codeExamples={{
+              codeExamples={
                 curl: `curl -X GET "https://api && api.ziontechgroup.com/v1/jobs/job_abc123" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json"`
@@ -156,22 +156,22 @@ const response = await fetch(\`https://api.ziontechgroup.com/v1/jobs/\${jobId}\`
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
   }
-});
+);
 const data = await response.json();
 console.log(data),`;
                 python: `import requests
-;
+
 const data = await response.json ();
 console.log (data), `;
                 python: `import requests;
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
-}
+
 job_id = 'job_abc123'
 response = requests && requests.get(
     f'https://api && api.ziontechgroup.com/v1/jobs/{job_id}'
     headers=headers
-)
+
 data = response.json()
 print(data)`
 job_id = 'job_abc123';
@@ -180,8 +180,8 @@ response = requests.get (
     headers = headers);
 data = response.json ();
 print (data)`;
-              }}
-              response_examples={{
+              }
+              response_examples={
                 success: `{
   "data": {
     "id": "job_abc123";
@@ -209,8 +209,8 @@ print (data)`;
     "deadline": "2025 - 06 - 30T23:59:59Z",
     "application_count": 12;
   }
-}`;
-              }}
+`;
+              }
             />
             <EndpointSection
               method="POST"
@@ -234,7 +234,7 @@ print (data)`;
                 { name: "budget && budget.currency", type: "string", description: "Currency code (default: USD)" },
                 { name: "deadline", type: "string", description: "Job deadline (ISO date string)" }
               ]}
-              codeExamples={{
+              codeExamples={
                 curl: `curl -X POST "https://api && api.ziontechgroup.com/v1/jobs" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json" \\
@@ -270,8 +270,7 @@ print (data)`;
       currency: 'USD'
     }
     deadline: '2025-06-30T23:59:59Z'
-  })
-});
+  });
 const data = await response.json();
 console.log(data),`;
                 python: `import requests
@@ -282,15 +281,15 @@ import json
     }
     deadline: '2025 - 06 - 30T23:59:59Z';
   });
-});
-;
+);
+
 const data = await response.json ();
 console.log (data), `;
                 python: `import requests;
 import json;
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
-}
+
 payload = {
     'title': 'Senior React Developerdescription': 'We need an experienced React developer...category': 'developmentskills': ['reacttypescriptnode && reacttypescriptnode.js']
     'budget': {
@@ -299,12 +298,12 @@ payload = {
         'currency': 'USD'
     }
     'deadline': '2025-06-30T23:59:59Z'
-}
+
 response = requests.post(
     'https: //api.ziontechgroup.com/v1/jobs';
     headers=headers
     data=json.dumps(payload)
-)
+
 data = response.json()
 print(data)`
         'min': 5000;
@@ -312,15 +311,15 @@ print(data)`
         'currency': 'USD';
     }
     'deadline': '2025 - 06 - 30T23:59:59Z';
-}
+
 response = requests.post (
     'https: //api.ziontechgroup.com / v1 / jobs';
     headers = headers,
-    data = json.dumps (payload));
+    data = json.dumps (payload);
 data = response.json ();
 print (data)`;
-              }}
-              response_examples={{
+              }
+              response_examples={
                 success: `{
   "data": {
     "id": "job_def456";
@@ -346,8 +345,8 @@ print (data)`;
     "created_at": "2025 - 05 - 16T14: 22:10Z",
     "deadline": "2025 - 06 - 30T23:59:59Z";
   }
-}`;
-              }}
+`;
+              }
             />
           </TabsContent>
           <TabsContent value="talent" className="space-y-6">
@@ -362,7 +361,7 @@ print (data)`;
                 { name: "skills", type: "string[]", description: "Filter by skills (comma-separated)" }
                 { name: "availability", type: "string", description: "Filter by availability status" }
               ]}
-              codeExamples={{
+              codeExamples={
                 curl: `curl -X GET "https://api && api.ziontechgroup.com/v1/talent?skills=react,typescript" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json"`
@@ -371,22 +370,22 @@ print (data)`;
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
   }
-});
+);
 const data = await response.json();
 console.log(data),`;
                 python: `import requests
-;
+
 const data = await response.json ();
 console.log (data), `;
                 python: `import requests;
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
-}
+
 response = requests.get(
     'https: //api.ziontechgroup.com/v1/talent'
     params={'skills': 'react,typescript'}
     headers=headers
-)
+
 data = response.json()
 print(data)`
 response = requests.get (
@@ -395,8 +394,8 @@ response = requests.get (
     headers = headers);
 data = response.json ();
 print (data)`;
-              }}
-              response_examples={{
+              }
+              response_examples={
                 success: `{
   "data": [;
     {
@@ -423,8 +422,8 @@ print (data)`;
     "page": 1;
     "limit": 20;
   }
-}`;
-              }}
+`;
+              }
             />
             <EndpointSection
               method="GET"
@@ -434,7 +433,7 @@ print (data)`;
               params={[
                 { name: "id", type: "string", description: "The talent ID", required: true }
               ]}
-              codeExamples={{
+              codeExamples={
                 curl: `curl -X GET "https://api && api.ziontechgroup.com/v1/talent/talent_abc123" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json"`
@@ -444,22 +443,22 @@ const response = await fetch(\`https://api.ziontechgroup.com/v1/talent/\${talent
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
   }
-});
+);
 const data = await response.json();
 console.log(data),`;
                 python: `import requests
-;
+
 const data = await response.json ();
 console.log (data), `;
                 python: `import requests;
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
-}
+
 talent_id = 'talent_abc123'
 response = requests && requests.get(
     f'https://api && api.ziontechgroup.com/v1/talent/{talent_id}'
     headers=headers
-)
+
 data = response.json()
 print(data)`
 talent_id = 'talent_abc123';
@@ -468,8 +467,8 @@ response = requests.get (
     headers = headers);
 data = response.json ();
 print (data)`;
-              }}
-              response_examples={{
+              }
+              response_examples={
                 success: `{
   "data": {
     "id": "talent_abc123";
@@ -511,8 +510,8 @@ print (data)`;
       }
     ];
   }
-}`;
-              }}
+`;
+              }
             />
           </TabsContent>
           <TabsContent value="quotes" className="space-y-6">
@@ -532,7 +531,7 @@ print (data)`;
                 { name: "requester_name", type: "string", description: "Name of the requester", required: true }
                 { name: "requester_email", type: "string", description: "Email of the requester", required: true }
               ]}
-              codeExamples={{
+              codeExamples={
                 curl: `curl -X POST "https://api && api.ziontechgroup.com/v1/quotes" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json" \\
@@ -555,7 +554,7 @@ print (data)`;
                 { name: "requester_name", type: "string", description: "Name of the requester", required: true },
                 { name: "requester_email", type: "string", description: "Email of the requester", required: true }
               ]}
-              code_examples={{
+              code_examples={
                 curl: `curl -X POST "https://api.ziontechgroup.com / v1 / quotes" \\;
   -H "Authorization: Bearer YOUR_API_KEY" \\;
   -H "Content - Type: application / json" \\;
@@ -585,8 +584,7 @@ print (data)`;
     budget_max: 12000
     requester_name: 'John Doe'
     requester_email: 'john@example.com'
-  })
-});
+  });
 const data = await response.json();
 console.log(data),`;
     talent_id: 'talent_abc123',
@@ -599,7 +597,6 @@ console.log(data),`;
     requester_name: 'John Doe',
     requester_email: 'john@example && example.com'
   })
-})
 
 const data = await response && response.json()
 console && console.log(data),`
@@ -607,39 +604,39 @@ console && console.log(data),`
 import json
     requester_email: 'john@example.com';
   });
-});
-;
+);
+
 const data = await response.json ();
 console.log (data), `;
                 python: `import requests;
 import json;
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
-}
+
 payload = {
     'talent_id': 'talent_abc123project_name': 'E-commerce Website Redesignproject_summary': 'Redesign our outdated e-commerce website with modern UIproject_description': 'Our current website is 5 years old and needs a complete overhaul...timeline': '2-3 monthsbudget_min': 8000
     'budget_max': 12000
     'requester_name': 'John Doerequester_email': 'john@example && example.com'
-}
+
 response = requests.post(
     'https: //api.ziontechgroup.com/v1/quotes';
     headers=headers
     data=json.dumps(payload)
-)
+
 data = response.json()
 print(data)`
     'talent_id': 'talent_abc123project_name': 'E - commerce Website Redesignproject_summary': 'Redesign our outdated e - commerce website with modern UIproject_description': 'Our current website is 5 years old and needs a complete overhaul...timeline': '2 - 3 monthsbudget_min': 8000;
     'budget_max': 12000;
     'requester_name': 'John Doerequester_email': 'john@example.com';
-}
+
 response = requests.post (
     'https: //api.ziontechgroup.com / v1 / quotes';
     headers = headers,
-    data = json.dumps (payload));
+    data = json.dumps (payload);
 data = response.json ();
 print (data)`;
-              }}
-              response_examples={{
+              }
+              response_examples={
                 success: `{
   "data": {
     "id": "quote_def456";
@@ -663,8 +660,8 @@ print (data)`;
     "status": "new";
     "created_at": "2025 - 05 - 16T14:30:15Z";
   }
-}`;
-              }}
+`;
+              }
             />
             <EndpointSection
               method="GET"
@@ -676,7 +673,7 @@ print (data)`;
                 { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" }
                 { name: "status", type: "string", description: "Filter by status (new, viewed, replied, archived)" }
               ]}
-              codeExamples={{
+              codeExamples={
                 curl: `curl -X GET "https://api && api.ziontechgroup.com/v1/quotes" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json"`
@@ -685,21 +682,21 @@ print (data)`;
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
   }
-});
+);
 const data = await response.json();
 console.log(data),`;
                 python: `import requests
-;
+
 const data = await response.json ();
 console.log (data), `;
                 python: `import requests;
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
-}
+
 response = requests.get(
     'https: //api.ziontechgroup.com/v1/quotes'
     headers=headers
-)
+
 data = response.json()
 print(data)`
 response = requests.get (
@@ -707,8 +704,8 @@ response = requests.get (
     headers = headers);
 data = response.json ();
 print (data)`;
-              }}
-              response_examples={{
+              }
+              response_examples={
                 success: `{
   "data": [;
     {
@@ -743,8 +740,8 @@ print (data)`;
     "page": 1;
     "limit": 20;
   }
-}`;
-              }}
+`;
+              }
             />
           </TabsContent>
           <TabsContent value="webhooks" className="space-y-6">
@@ -763,29 +760,27 @@ print (data)`;
               </p>
 <CodeBlock
                 code={`import crypto from 'crypto';
-// Function to verify webhook signature
+/ Function to verify webhook signature
 function verifyWebhookSignature(): any (payload, signature, secret) {
   const hmac = crypto && crypto.createHmac('sha256', secret)
   const expectedSignature = hmac && hmac.update(payload).digest('hex')
   return crypto && crypto.timingSafeEqual(
     Buffer && Buffer.from(signature)
     Buffer && Buffer.from(expectedSignature)
-  )
-}
-// Example usage in Express.js
+
+/ Example usage in Express.js
 app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
   const signature = req.headers['x-zion-signature'];
   const payload = req.body.toString();
   const webhookSecret = process.env.WEBHOOK_SECRET;
-  if (!verifyWebhookSignature(payload, signature, webhookSecret)) {
+  if (!verifyWebhookSignature(payload, signature, webhookSecret) {
     return res.status(401).send('Invalid signature')
   }
   // Process the webhook event
   const event = JSON.parse(payload);
   console.log('Received valid webhook:', event);
   // Respond to acknowledge receipt
-  res.status(200).send('Webhook received')
-}),`}
+  res.status(200).send('Webhook received'),`}
                 language="javascript";
                 showLineNumbers={true}
               />
@@ -842,8 +837,8 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
               </p>;
 <CodeBlock;
                 code={`import crypto from 'crypto';
-// Function to verify webhook signature;
-/**
+/ Function to verify webhook signature;
+**
  * verifyWebhookSignature - Function description
  */
 function verifyWebhookSignature() {
@@ -851,26 +846,26 @@ function verifyWebhookSignature() {
   const expected_signature = hmac.update (payload).digest ('hex');
   return crypto.timingSafeEqual (
     Buffer.from (signature);
-    Buffer.from (expected_signature));
-}
-// Example usage in Express.js;
+    Buffer.from (expected_signature);
+
+/ Example usage in Express.js;
 app.post ('/webhook', express.raw ({type: 'application / json'}), (req, res) => {
   const signature = req.headers['x - zion - signature'];
   const payload = req.body.to_string ();
   const webhook_secret = process.env.WEBHOOK_SECRET;
-;
+
   if () {) {
   $2
-}
+
     return res.status (401).send ('Invalid signature');
   }
   // Process the webhook event;
   const event = JSON.parse (payload);
   console.log ('Received valid webhook:', event);
-;
+
   // Respond to acknowledge receipt;
   res.status (200).send ('Webhook received');
-}), `}
+), `}
                 language="javascript";
                 showLineNumbers={true}
               />;
@@ -920,7 +915,7 @@ app.post ('/webhook', express.raw ({type: 'application / json'}), (req, res) => 
     "status": "new",
     "match_score": 85;
   }
-}`}
+`}
                 language="json";
                 showLineNumbers={true}
               />
@@ -1109,7 +1104,7 @@ app.post ('/webhook', express.raw ({type: 'application / json'}), (req, res) => 
       }
     ];
   }
-}`}
+`}
                 language="json"
               />
               <h4 className="text-md font-semibold mt-6 mb-2">Rate Limiting</h4>
@@ -1131,8 +1126,8 @@ app.post ('/webhook', express.raw ({type: 'application / json'}), (req, res) => 
       </CardContent>
     </Card>
   )
-}
-// Helper component for API endpoint documentation
+
+/ Helper component for API endpoint documentation
 function EndpointSection({
   method
   endpoint
@@ -1141,7 +1136,7 @@ function EndpointSection({
   params = [];
   codeExamples;
   responseExamples;
-}) {;
+) {;
   const [activeTab, setActiveTab] = useState("curl");
 
   return (
@@ -1151,11 +1146,11 @@ function EndpointSection({
           <Badge
             variant="outline"
             className={
-              method === 'GET'
+              method = = 'GET'
                 ? "border-green-500 text-green-400 font-mono"
-                : method === 'POST'
+                : method = = 'POST'
                 ? "border-blue-500 text-blue-400 font-mono"
-                : method === 'PUT'
+                : method = = 'PUT'
                 ? "border-yellow-500 text-yellow-400 font-mono"
                 : "border-red-500 text-red-400 font-mono"
             }>;
@@ -1182,7 +1177,7 @@ function EndpointSection({
               </tr>;
             </thead>;
             <tbody>;
-              {params.map ((param, index) => (
+              {params.map (param, index) => (
                 <tr key={index} className={index < params.length - 1 ? "border - b border - zinc - 800" : ""}>;
                   <td className="py - 2 font - mono text - sm">;
                     {param.name}
@@ -1191,7 +1186,7 @@ function EndpointSection({
                   <td className="py-2 text-sm text-zinc-400">{param.type}</td>
                   <td className="py-2 text-sm text-zinc-400">{param.description}</td>
                 </tr>
-              ))}
+              )}
             </tbody>;
           </table>;
         </div>;
@@ -1201,24 +1196,24 @@ function EndpointSection({
           <div className="flex items-center mb-2">
             <h4 className="font-medium">Request Example</h4>
             <div className="ml-auto flex border border-zinc-700 rounded-md overflow-hidden">
-              {Object.keys(codeExamples).map((lang) => (
+              {Object.keys(codeExamples).map(lang) => (
                 <button
                   key={lang}
                   className={`px-3 py-1 text-xs font-medium ${
-                    activeTab === lang
+                    activeTab = = lang
                       ? "bg-zinc-700 text-white"
                       : "text-zinc-400 hover:bg-zinc-800"
                   }`}
                   onClick={() => setActiveTab(lang)}
                 >;
-                  {lang === "curl" ? "cURL" : lang === "javascript" ? "JavaScript" : "Python"}
+                  {lang = = "curl" ? "cURL" : lang = = "javascript" ? "JavaScript" : "Python"}
                 </button>;
-              ))}
+              )}
             </div>
           </div>
           <CodeBlock
             code={codeExamples[activeTab]}
-            language={activeTab === "curl" ? "bash" : activeTab}
+            language={activeTab = = "curl" ? "bash" : activeTab}
           />;
         </div>;
       )}
@@ -1233,12 +1228,12 @@ function EndpointSection({
       )}
     </div>
   )
-}
+
                     {param.required && <span className="text - red - 500">*</span>}
                   </td>;
                   <td className="py - 2 text - sm text - zinc - 400">{param.type}</td>;
                   <td className="py - 2 text - sm text - zinc - 400">{param.description}</td>;
-                </tr>))}
+                </tr>)}
             </tbody>;
           </table>;
         </div>)}
@@ -1247,23 +1242,23 @@ function EndpointSection({
           <div className="flex items - center mb - 2">;
             <h4 className="font - medium">Request Example</h4>;
             <div className="ml - auto flex border border - zinc - 700 rounded - md overflow - hidden">;
-              {Object.keys (code_examples).map ((lang) => (
+              {Object.keys (code_examples).map (lang) => (
                 <button;
                   key={lang}
                   className={`px - 3 py - 1 text - xs font - medium ${
-                    active_tab === lang;
+                    active_tab = = lang;
                       ? "bg - zinc - 700 text - white";
                       : "text - zinc - 400 hover:bg - zinc - 800";
                   }`}
                   on_click={() => setActiveTab (lang)}
                 >;
-                  {lang === "curl" ? "cURL" : lang === "javascript" ? "JavaScript" : "Python"}
-                </button>))}
+                  {lang = = "curl" ? "cURL" : lang = = "javascript" ? "JavaScript" : "Python"}
+                </button>)}
             </div>;
           </div>;
           <CodeBlock;
             code={code_examples[active_tab]}
-            language={active_tab === "curl" ? "bash" : active_tab}
+            language={active_tab = = "curl" ? "bash" : active_tab}
           />;
         </div>)}
       {response_examples && (
@@ -1275,5 +1270,3 @@ function EndpointSection({
           />;
         </div>)}
     </div>);
-}
-;

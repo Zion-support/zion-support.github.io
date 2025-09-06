@@ -3,7 +3,6 @@ import React from 'react';
 
 interface Mobile-surveysProps {
   className?: string;
-}
 
 const Mobile-surveys: React.FC<Mobile-surveysProps> = ({ className }) => {
   return (
@@ -12,6 +11,3 @@ const Mobile-surveys: React.FC<Mobile-surveysProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-}
-}
-}

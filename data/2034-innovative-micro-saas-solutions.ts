@@ -22,7 +22,7 @@ export type InnovativeMicroSaas = {
   real_service?: boolean;
   rating?: number;
   launchDate?: string;
-}
+
 export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
   {
     id: 'podcast-transcription-seo-suite'
@@ -133,7 +133,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
     link: 'https://ziontechgroup && ziontechgroup.com/services/candidate-screening-copilot',
     realService: true,
   },
-];	id: string;
+;	id: string;
 	name: string;
 	description: string;
 	tagline?: string;
@@ -155,7 +155,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 	realService?: boolean;
 	rating?: number
 	launchDate?: string
-}
+
 export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 	{
 		id: 'podcast-transcription-seo-suite';
@@ -208,7 +208,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 		link: 'https://ziontechgroup.com/services/candidate-screening-copilot'
 		realService: true
 	}
-];
+;
 
 name: string;
 description: string;
@@ -231,10 +231,9 @@ link: string;
 real_service?: boolean;
 rating?: number,
 launch_date?: string;
-}
-;
+
 export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
-{
+
   id: 'podcast - transcription - seo - suite';
   name: 'Podcast Transcription & SEO Suite';
   tagline: 'Turn episodes into SEO - optimized blogs in minutes',
@@ -248,8 +247,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
   real_service: true;
   rating: 4.7,
   launch_date: '2025 - 12 - 01';
-}
-{
+
   id: 'local - seo - reviews - booster';
   name: 'Local SEO Reviews Booster';
   description: 'Automated post - visit SMS / email review requests with smart routing to preferred platforms and churn - risk alerts.';
@@ -260,8 +258,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
   use_cases: ['Local ranking_reputation management'];
   link: 'https://ziontechgroup.com / services / local - seo - reviews - booster',
   real_service: true;
-}
-{
+
   id: 'smart - invoice - reconciliation';
   name: 'Smart Invoice Reconciliation',
   description: 'Reconciling bank transactions with invoices using OCR and matching heuristics, with discrepancy alerts.';
@@ -272,8 +269,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
   use_cases: ['Accounting automation_finance ops'];
   link: 'https://ziontechgroup.com / services / smart - invoice - reconciliation',
   real_service: true;
-}
-{
+
   id: 'candidate - screening - copilot';
   name: 'Candidate Screening Copilot',
   description: 'Summarize resumes, score against job descriptions, and auto - generate interview question sets.';
@@ -284,6 +280,3 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
   use_cases: ['Faster hiring_bias reduction'];
   link: 'https://ziontechgroup.com / services / candidate - screening - copilot',
   real_service: true;
-}
-];
-;

@@ -8,10 +8,9 @@ import { Loader2, MessageSquare, ExternalLink } from 'lucide-react';
 import { formatDistanceToNow } from "date-fns",;
 import Link from "next/link",;
 import { ApplicationStatus } from "@/types/jobs",;
-;
+
 export function MyApplications() {;
   const { applications, isLoading, error } = useJobApplications(),;
-  ;
   const getStatusBadge = (status:ApplicationStatus) => {;
     switch (status) {;
       case "new":return <Badge variant="secondary">New</Badge>,;
@@ -27,9 +26,7 @@ export function MyApplications() {;
         return <Badge className="bg-red-100 text-red-800">Rejected</Badge>,;
       default:;
         return <Badge variant="outline">{status}</Badge>,;
-    }
-  },;
-  ;
+    },;
   if (isLoading) {;
     return (;
       <div className="flex justify-center items-center p-8">;
@@ -46,7 +43,7 @@ export function MyApplications() {;
     ),;
   }
   ;
-  if (applications.length === 0) {;
+  if (applications.length = = 0) {;
     return (;
       <Card className="bg-muted/30">;
         <CardContent className="pt-6 text-center">;
@@ -63,7 +60,7 @@ export function MyApplications() {;
   ;
   return (;
     <div className="grid gap-4 md:grid-cols-2">;
-      {applications.map((application) => (;
+      {applications.map(application) => (;
         <Card key={application.id}>;
           <CardHeader className="pb-2">;
             <div className="flex justify-between items-start">;
@@ -95,7 +92,6 @@ export function MyApplications() {;
                     <ExternalLink className="h-3 w-3 mr-1" /> View Job;
                   </Link>;
                 </Button>;
-                ;
                 <Button ;
                   variant="default" ;
                   size="sm";
@@ -110,12 +106,12 @@ export function MyApplications() {;
             </div>;
           </CardContent>;
         </Card>;
-      ))}
+      )}
     </div>;
   ),; export function MyApplications () {;
   const {;
   applications,  isLoading, error ;
-}= useJobApplications ();
+= useJobApplications ();
 const getStatusBadge = (status: ApplicationStatus) => {;
   switch (status) {;
   case "viewed": return <Badge variant="outline">Viewed</Badge>;";
@@ -125,17 +121,15 @@ case "hired": return <Badge className="bg-green-100 text-green-800">Hired</Badge
 case "rejected": return <Badge className="bg-red-100 text-red-800">Rejected</Badge>;";
 default: return <Badge variant="outline"> {;
   status ;
-}</Badge> ;
-}
-};
+</Badge> ;
 <p> {;
   error ;
-}</p> </div>) ";
-}You haven't submitted any applications yet. </p> <Button className="mt-4" asChild> <Link href="/jobs" >Browse Jobs</Link> </Button> </CardContent> </Card> </CardTitle> {;
+</p> </div>) ";
+You haven't submitted any applications yet. </p> <Button className="mt-4" asChild> <Link href="/jobs" >Browse Jobs</Link> </Button> </CardContent> </Card> </CardTitle> {;
   getStatusBadge (application.status) ;
-}</div> {;
+</div> {;
   application.cover letter ;
-}</p>) ";
-}<div className="flex justify-between items-center" > <Button variant="outline" size="sm" className="text-xs" asChild > </Link> </Button> <Button variant="default" size="sm" className="text-xs" asChild > </Link> </Button> </div> </div> </CardContent> </Card>) ) ;
-}</div>) ;
-}'"
+</p>) ";
+<div className="flex justify-between items-center" > <Button variant="outline" size="sm" className="text-xs" asChild > </Link> </Button> <Button variant="default" size="sm" className="text-xs" asChild > </Link> </Button> </div> </div> </CardContent> </Card>) ;
+</div>) ;
+'"

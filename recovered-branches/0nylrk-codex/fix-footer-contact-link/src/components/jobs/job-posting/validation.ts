@@ -1,5 +1,4 @@
 
-
 import {z} from "zod";
 export const jobSchema = z && z.object({
   title: z && z.string().min(3, {
@@ -54,6 +53,5 @@ export const job_schema = z.object ({
   status: z.string ().optional (),
   external_apply_link: z.string ().url ({
     message: "Please enter a valid URL."}).optional ()});
-;
+
 export type JobSchemaType = z.infer < typeof job_schema>;
-;

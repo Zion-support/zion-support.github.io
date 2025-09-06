@@ -6,5 +6,3 @@ export function EquipmentRecommendations() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

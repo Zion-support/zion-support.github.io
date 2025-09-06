@@ -5,28 +5,28 @@ import SimpleDoughnutChart from '../../components/charts/SimpleDoughnutChart',;
 import { KpiBadge } from '../../components/ui/InteractiveStats',;
 import { exportCsv, exportSvgAsPng } from '../../utils/exporters',;
 import useRole from '../../hooks/useRole',;
-;
+
 export default function AdminAnalyticsPage() {;
   const [data, setData] = useState<any>(null),;
   const { role, loading } = useRole(),;
-;
-  useEffect(() => {;
-    fetch('/api/analytics/admin').then(r => r.json()).then(setData).catch(() => setData(null)),;
+
+  useEffect() => {;
+    fetch('/api/analytics/admin').then(r => r.json().then(setData).catch() => setData(null),;
   }, []),;
-;
+
   if (loading) return <div>Loading...</div>,;
-  if (role !== 'admin') return <div>Unauthorized</div>,;
-;
+  if (role != 'admin') return <div>Unauthorized</div>,;
+
   const totals = data?.totals || {},;
   const geo = data?.geo || [],;
   const topCategories = data?.topCategories || [],;
-;
-  const lineSeries = useMemo(() => [{ label:'Jobs Filled', points:Array.from({ length:12 }, (_, i) => ({ x:i + 1, y:Math.round(Math.random() * 10) })) }], []),;
-;
+
+  const lineSeries = useMemo() => [{ label:'Jobs Filled', points:Array.from({ length:12 }, (_, i) => ({ x:i + 1, y:Math.round(Math.random() * 10) }) }], []),;
+
   return (;
     <div className="space-y-6">;
       <h1 className="text-2xl font-semibold">Admin Analytics</h1>;
-;
+
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">;
         <KpiBadge label="Total Users" value={totals.totalUsers ?? 0} />;
         <KpiBadge label="Talents" value={totals.totalTalents ?? 0} tone="info" />;
@@ -37,7 +37,7 @@ export default function AdminAnalyticsPage() {;
         <KpiBadge label="Quotes Sent" value={totals.quotesSent ?? 0} />;
         <KpiBadge label="Quotes Accepted" value={totals.quotesAccepted ?? 0} tone="success" />;
       </div>;
-;
+
       <div className="grid md:grid-cols-2 gap-6">;
         <div className="rounded-2xl border border-black/5 dark:border-white/10 p-4">;
           <h2 className="font-semibold mb-2">Jobs Filled Over Time</h2>;
@@ -54,12 +54,12 @@ export default function AdminAnalyticsPage() {;
           <SimpleBarChart data={topCategories} onExportCsv={(rows) => exportCsv('admin-top-categories.csv', rows)} />;
         </div>;
       </div>;
-;
+
       <div className="grid md:grid-cols-2 gap-6">;
         <div className="rounded-2xl border border-black/5 dark:border-white/10 p-4">;
           <h2 className="font-semibold mb-2">Referral Conversions</h2>;
           <SimpleDoughnutChart;
-            data={[{ label:'Converted', value:data?.referralConversions || 0 }, { label:'Others', value:Math.max((totals.totalUsers || 0) - (data?.referralConversions || 0), 0) }]}
+            data={[{ label:'Converted', value:data?.referralConversions || 0 }, { label:'Others', value:Math.max(totals.totalUsers || 0) - (data?.referralConversions || 0), 0) }]}
             onExportCsv={(rows) => exportCsv('admin-referrals.csv', rows)}
             onExportPng={(svg) => exportSvgAsPng('admin-referrals.png', svg)}
           />;
@@ -67,15 +67,14 @@ export default function AdminAnalyticsPage() {;
         <div className="rounded-2xl border border-black/5 dark:border-white/10 p-4">;
           <h2 className="font-semibold mb-2">Geo Heat Grid (Users)</h2>;
           <div className="grid grid-cols-2 md:grid-cols-3 gap-2">;
-            {geo.map((g:any) => (;
+            {geo.map(g:any) => (;
               <div key={g.label} className="rounded p-2 bg-gray-100 dark:bg-gray-800 flex justify-between text-xs">;
                 <span>{g.label}</span>;
                 <span>{g.value}</span>;
               </div>;
-            ))}
+            )}
           </div>;
         </div>;
       </div>;
     </div>;
   ),;
-}

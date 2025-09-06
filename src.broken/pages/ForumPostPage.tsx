@@ -6,5 +6,3 @@ export function ForumPostPage() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

@@ -6,5 +6,3 @@ export function FeaturesGuideSection() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

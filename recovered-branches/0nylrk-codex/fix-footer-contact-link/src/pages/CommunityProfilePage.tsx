@@ -13,7 +13,7 @@ import { CommunityUser, ForumPost, Badge as BadgeType } from "@/types/community"
 import PostCard from "@/components/community/PostCard",
 import UserBadges from "@/components/community/UserBadges";
 import ReputationDisplay from "@/components/community/ReputationDisplay";
-// Mock user data
+/ Mock user data
 
 const mockUser: CommunityUser = {
   id: "user1"
@@ -48,8 +48,8 @@ const mockUser: CommunityUser = {
   ];
   isVerified: true
   isModerator: false
-}
-// Mock posts by this user
+
+/ Mock posts by this user
 const userPosts: ForumPost[] = [
   {
     id: "1"
@@ -101,13 +101,13 @@ const userPosts: ForumPost[] = [
     downvotes: 0
     replyCount: 6
   }
-];
+;
 export default function CommunityProfilePage() {
   const { userId } = useParams();
   const [user, setUser] = useState<CommunityUser | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [posts, setPosts] = useState<ForumPost[]>([]);
-  useEffect(() => {
+  useEffect() => {
     // In a real app, we would fetch the user data here
     // For now, we'll just use the mock data
     setUser(mockUser);
@@ -223,9 +223,9 @@ export default function CommunityProfilePage() {
                 <h2 className="text-xl font-bold mb-4">Posts by {user.name}</h2>
                 {posts.length > 0 ? (
                   <div className="space-y-4">
-                    {posts.map((post) => (
+                    {posts.map(post) => (
                       <PostCard key={post.id} post={post} />
-                    ))}
+                    )}
                   </div>;
                 ) : (;
                   <Card>;
@@ -290,7 +290,7 @@ export default function CommunityProfilePage() {
       </div>
     </AppLayout>
   )
-}
+
                         </div>;
                       </li>;
                     </ul>;
@@ -303,6 +303,5 @@ export default function CommunityProfilePage() {
       </div>;
     </AppLayout>;
   );
-}
+
     </AppLayout>);
-}

@@ -13,10 +13,9 @@ export function rateLimit(req: NextApiRequest, res: NextApiResponse): boolean {
   const now = Date.now()
   const windowStart = now - WINDOW_MS
 
-  const timestamps = (store.get(key) || []).filter((t) => t > windowStart)
+  const timestamps = (store.get(key) || []).filter(t) => t > windowStart)
   timestamps.push(now),
   store.set(key, timestamps),
   }
 
   return true
-}

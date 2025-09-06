@@ -7,6 +7,5 @@ const AIResearchAssistant.js = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default AIResearchAssistant.js;

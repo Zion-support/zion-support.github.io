@@ -48,7 +48,6 @@ export const cuttingEdgeITServices2025 = [
           '24/7 support'
         ]
       }
-    }
     category: 'Quantum IT'
     tags: [
       'Quantum Computing'
@@ -143,7 +142,6 @@ export const cuttingEdgeITServices2025 = [
           '24/7 support'
         ]
       }
-    }
     category: 'Edge Computing'
     tags: [
       'Edge Computing'
@@ -241,7 +239,6 @@ export const cuttingEdgeITServices2025 = [
           '24/7 support'
         ]
       }
-    }
     category: 'Cybersecurity'
     tags: [
       'Zero Trust'
@@ -336,7 +333,6 @@ export const cuttingEdgeITServices2025 = [
           '24/7 support'
         ]
       }
-    }
     category: 'Blockchain'
     tags: [
       'Blockchain'
@@ -434,7 +430,6 @@ export const cuttingEdgeITServices2025 = [
           '24/7 support'
         ]
       }
-    }
     category: 'DevOps'
     tags: ['AI DevOps', 'Automation', 'CI/CD', 'Monitoring', 'Performance']
     website: 'https://ziontechgroup.com/ai-powered-devops-platform'
@@ -485,7 +480,7 @@ export const cuttingEdgeITServices2025 = [
       'Quality Assurance Protocols'
     ]
   }
-];      'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation'
+;      'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation'
     id: 'quantum-cloud-infrastructure-platform', name: 'Quantum Cloud Infrastructure Platform',
     description: 'Next-generation cloud infrastructure that leverages quantum computing principles for enhanced security, performance, and scalability across distributed systems.',
     features: [
@@ -519,11 +514,9 @@ export const cuttingEdgeITServices2025 = [
       'Quality Assurance Protocols',
     ],
   },
-];      'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation'
+;      'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation'
     ];
     integrations: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'];
     compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols'];
   }
-];
-
 ;

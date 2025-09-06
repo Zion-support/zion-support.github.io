@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import Image from 'next/image';
 import { Loader2 } from 'lucide-react'
 import { useState } from 'react';
@@ -29,7 +29,7 @@ interface YoutubeEmbedProps {
   videoId: string
   title: string
   poster: string
-}
+
 interface YoutubeEmbedProps {
   videoId: string
   title: string
@@ -38,7 +38,7 @@ export default function YoutubeEmbed({
   videoId
   title
   poster
-}: YoutubeEmbedProps) {
+: YoutubeEmbedProps) {
   const [loaded, setLoaded] = useState(false)
   const src = `https://www.youtube.com/embed/${videoId}?mute=1&controls=1`
 
@@ -62,7 +62,6 @@ interface YoutubeEmbedProps {
   video_id: string,
   title: string,
   poster: string;
-}
 
 export default function YoutubeEmbed({ videoId, title, poster }: YoutubeEmbedProps) {
 
@@ -89,7 +88,7 @@ export default function YoutubeEmbed({ videoId, title, poster }: YoutubeEmbedPro
       />
     </div>
   )
-}        loading="lazy"
+        loading="lazy"
         onLoad = {() => setLoaded(true),}
         allow="accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture";
         loading="lazy";
@@ -99,10 +98,8 @@ export default function YoutubeEmbed({ videoId, title, poster }: YoutubeEmbedPro
         allowFullScreen
       />
     </div>
-  )
-}
   );
-}
+
 interface YoutubeEmbedProps {
   video_id: string;
   title: string;
@@ -138,7 +135,7 @@ function YoutubeEmbed() {
         allow='accelerometer; autoplay; clipboard - write; encrypted - media; gyroscope; picture - in - picture'        allowFullScreen;
       />;
     </div>);
-}        loading="lazy";
+        loading="lazy";
         on_load = {() => set_loaded (true), }
         allow="accelerometer, autoplay, clipboard - write, encrypted - media, gyroscope, picture - in - picture";
         loading="lazy";
@@ -147,4 +144,3 @@ function YoutubeEmbed() {
         allowFullScreen;
       />;
     </div>);
-}

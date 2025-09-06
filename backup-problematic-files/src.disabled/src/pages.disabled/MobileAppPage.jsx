@@ -7,6 +7,5 @@ const MobileAppPage = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default MobileAppPage;

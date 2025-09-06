@@ -3,13 +3,13 @@ import Link from 'next/link',;
 import { Cpu, Gauge, GitBranch, Rocket, ShieldCheck, Zap, Activity, Globe, Layers, BarChart3, Search, Link2, Palette, LineChart } from 'lucide-react',;
 import { motion, useScroll, useSpring } from 'framer-motion',;
 import { useEffect, useState } from 'react',;
-;
+
 export default function MainFrontIndex() {;
   const { scrollYProgress } = useScroll(),;
   const progressX = useSpring(scrollYProgress, { stiffness:90, damping:20, mass:0.2 }),;
   const [showToTop, setShowToTop] = useState(false),;
   const [mobileOpen, setMobileOpen] = useState(false),;
-  useEffect(() => {;
+  useEffect() => {;
     const onScroll = () => setShowToTop(window.scrollY > 400),;
     window.addEventListener('scroll', onScroll, { passive:true } as any),;
     onScroll(),;
@@ -27,7 +27,7 @@ export default function MainFrontIndex() {;
         <meta property="og:image" content="/og-image.png" />;
       </Head>;
       {/* Scroll progress bar */}
-      <motion.div style={{ scaleX:progressX }} className="fixed inset-x-0 top-0 z-40 h-0.5 origin-left bg-gradient-to-r from-fuchsia-400 via-violet-400 to-cyan-400" />;
+      <motion.div style={ scaleX:progressX } className="fixed inset-x-0 top-0 z-40 h-0.5 origin-left bg-gradient-to-r from-fuchsia-400 via-violet-400 to-cyan-400" />;
       {/* Animated Background */}
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">;
         {/* Aurora orbs */}
@@ -57,7 +57,7 @@ export default function MainFrontIndex() {;
         <div className="absolute inset-0 beams-layer beams--45" />;
         <div className="pointer-events-none absolute inset-0 beams opacity-[0.06]" />;
       </div>;
-;
+
       {/* Header */}
       <header className="sticky top-0 z-30 backdrop-blur supports-[backdrop-filter]:bg-slate-950/55 border-b border-white/10">;
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">;
@@ -87,16 +87,16 @@ export default function MainFrontIndex() {;
         {/* Mobile overlay menu */}
         {mobileOpen && (;
           <motion.div;
-            initial={{ opacity:0 }}
-            animate={{ opacity:1 }}
-            exit={{ opacity:0 }}
+            initial={ opacity:0 }
+            animate={ opacity:1 }
+            exit={ opacity:0 }
             className="fixed inset-0 z-40 bg-slate-950/80 backdrop-blur";
             onClick={() => setMobileOpen(false)}
           >;
             <motion.div;
-              initial={{ y:-20, opacity:0 }}
-              animate={{ y:0, opacity:1 }}
-              transition={{ duration:0.2 }}
+              initial={ y:-20, opacity:0 }
+              animate={ y:0, opacity:1 }
+              transition={ duration:0.2 }
               className="mx-auto mt-20 w-[92%] max-w-md rounded-2xl border border-white/10 bg-white/5 p-6 text-white shadow-xl";
               onClick={(e) => e.stopPropagation()}
             >;
@@ -121,7 +121,7 @@ export default function MainFrontIndex() {;
                   ['Cases#cases'],;
                   ['Reports#reports'],;
                   ['Docs#roadmap'],;
-                  ['Automations/automation']].map(([label, href]) => (;
+                  ['Automations/automation']].map([label, href]) => (;
                   (href as string).startsWith('#') ? (;
                     <a key={label as string} href={href as string} onClick={() => setMobileOpen(false)} className="rounded-lg border border-white/10 bg-white/5 px-3 py-2 hover:bg-white/10">{label as string}</a>;
                   ) :(;
@@ -129,7 +129,7 @@ export default function MainFrontIndex() {;
                       <a onClick={() => setMobileOpen(false)} className="rounded-lg border border-white/10 bg-white/5 px-3 py-2 hover:bg-white/10">{label as string}</a>;
                     </Link>;
                   );
-                ))}
+                )}
               </div>;
               <div className="mt-4 flex justify-end">;
                 <Link href="/automation"><a onClick={() => setMobileOpen(false)} className="rounded-lg bg-gradient-to-r from-fuchsia-500 to-cyan-500 px-4 py-2 text-sm font-semibold">Launch Hub</a></Link>;
@@ -138,13 +138,13 @@ export default function MainFrontIndex() {;
           </motion.div>;
         )}
       </header>;
-;
+
       {/* Hero */}
       <div role="main" className="relative z-10">;
         <motion.section;
-          initial={{ opacity:0, y:20 }}
-          animate={{ opacity:1, y:0 }}
-          transition={{ duration:0.6 }}
+          initial={ opacity:0, y:20 }
+          animate={ opacity:1, y:0 }
+          transition={ duration:0.6 }
           className="mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24";
         >;
           <div className="text-center">;
@@ -171,7 +171,7 @@ export default function MainFrontIndex() {;
               <Link href="/automation"><a className="rounded-xl bg-gradient-to-r from-fuchsia-500 to-cyan-500 px-6 py-3 font-semibold shadow-[0_0_30px_rgba(34,211,238,0.35)] hover:shadow-[0_0_40px_rgba(34,211,238,0.6)] transition-shadow">Explore Automations</a></Link>;
               <Link href="/automation"><a className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10">View Cloud Automations</a></Link>;
             </div>;
-;
+
             {/* Cloud Automations Spotlight */}
             <div className="mx-auto mt-6 max-w-5xl text-left">;
               <div className="mb-2 text-xs uppercase tracking-wide text-white/60">Cloud Automations (live)</div>;
@@ -188,21 +188,21 @@ export default function MainFrontIndex() {;
                 <a className="glow-card rounded-lg border border-white/10 bg-white/5 px-4 py-3 hover:bg-white/10" href="https://github.com/Zion-Holdings/zion.app/actions/workflows/repo-radar-knowledge.yml" target="_blank" rel="noopener">Repo Radar & Knowledge </a>;
               </div>;
             </div>;
-;
+
             {/* Live metrics strip */}
             <div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-4">;
               {[;
                 ['24/7Autonomous'],;
                 ['MainDirect Sync'],;
                 ['0 OpsCloudNative'],;
-                ['SafetyGuardrails']].map(([k,v]) => (;
+                ['SafetyGuardrails']].map([k,v]) => (;
                 <div key={k} className="glow-card rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-left">;
                   <div className="text-lg font-bold text-white">{k}</div>;
                   <div className="text-xs text-white/70">{v}</div>;
                 </div>;
-              ))}
+              )}
             </div>;
-;
+
             {/* Futuristic marquee */}
             <div className="relative mx-auto mt-8 max-w-5xl overflow-hidden">;
               <div className="pointer-events-none absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-slate-950/90 to-transparent" />;
@@ -213,15 +213,15 @@ export default function MainFrontIndex() {;
                     'Autonomous AgentsRepo Sync to Main',;
                     'ZeroOps CloudSafety Guardrails',;
                     'A11y + PerformanceObservability',;
-                    'SEO AutomationDesign Evolution'].flatMap((label) => [label, label]).map((label, idx) => (;
+                    'SEO AutomationDesign Evolution'].flatMap(label) => [label, label]).map(label, idx) => (;
                     <span key={`${label}-${idx}`} className="mx-3 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1 text-xs text-white/80 backdrop-blur">;
                       <span className="h-1.5 w-1.5 rounded-full bg-cyan-400" /> {label}
                     </span>;
-                  ))}
+                  )}
                 </div>;
               </div>;
             </div>;
-;
+
             {/* Quick Links */}
             <div className="mx-auto mt-8 flex max-w-3xl flex-wrap justify-center gap-2">;
               {[;
@@ -229,28 +229,28 @@ export default function MainFrontIndex() {;
                 ['SEO Audit/reports/seo'],;
                 ['AI Trends/reports/ai-trends'],;
                 ['Newsroom/newsroom'],;
-                ['Site Health/site-health']].map(([label, href]) => (;
+                ['Site Health/site-health']].map([label, href]) => (;
                 <Link key={label as string} href={href as string}>;
                   <a className="rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-xs text-white/80 backdrop-blur hover:bg-white/10">{label as string}</a>;
                 </Link>;
-              ))}
+              )}
             </div>;
           </div>;
         </motion.section>;
-;
+
                  {/* Showcase */}
          <motion.section;
            id="showcase";
-           initial={{ opacity:0, y:24 }}
-           whileInView={{ opacity:1, y:0 }}
-           viewport={{ once:true, amount:0.2 }}
-           transition={{ duration:0.5 }}
+           initial={ opacity:0, y:24 }
+           whileInView={ opacity:1, y:0 }
+           viewport={ once:true, amount:0.2 }
+           transition={ duration:0.5 }
            className="mx-auto max-w-7xl px-6 pb-14";
          >;
            <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Showcase:Features, Capabilities, Benefits</h2>;
            <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Jump into highlighted areas of the platform. Every card links to a deep section or dedicated page.</p>;
            <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">;
-;
+
             <Link href="#features">;
               <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">;
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />;
@@ -301,7 +301,7 @@ export default function MainFrontIndex() {;
             </Link>;
           </div>;
         </motion.section>;
-;
+
         {/* Auto-Promoted Features (auto-generated) */}
         <section className="mx-auto max-w-7xl px-6 pb-16">;
           <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">;
@@ -314,7 +314,7 @@ export default function MainFrontIndex() {;
             <a href="/newsroom" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo"><div className="text-base font-semibold">AI Changelog</div><div className="mt-1 text-sm text-white/75">Summarized updates</div><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden></span></div></a>;
           </div>;
         </section>;
-;
+
         {/* Floating Quick-Nav Dock */}
         <aside className="fixed left-4 top-1/2 z-30 -translate-y-1/2 block">;
           <nav aria-label="Quick section navigation" className="space-y-2">;
@@ -333,27 +333,27 @@ export default function MainFrontIndex() {;
               ['#casesCases'],;
               ['#reportsReports'],;
               ['#guardrailsGuardrails'],;
-              ['#roadmapDocs']].map(([href, label]) => (;
+              ['#roadmapDocs']].map([href, label]) => (;
               <a key={href} href={href} className="block rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/75 backdrop-blur-md hover:border-cyan-400/40 hover:text-white">;
                 {label}
               </a>;
-            ))}
+            )}
           </nav>;
         </aside>;
-;
+
         {/* Engines:Alternative Automation Runtimes */}
         <motion.section;
           id="engines";
-          initial={{ opacity:0, y:24 }}
-          whileInView={{ opacity:1, y:0 }}
-          viewport={{ once:true, amount:0.2 }}
-          transition={{ duration:0.5 }}
+          initial={ opacity:0, y:24 }
+          whileInView={ opacity:1, y:0 }
+          viewport={ once:true, amount:0.2 }
+          transition={ duration:0.5 }
           className="mx-auto max-w-7xl px-6 pb-14";
         >;
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Autonomous Engines (Beyond GitHub Actions)</h2>;
-;
+
           <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">We run outside GitHub Actions using scheduled cloud functions and orchestrators. Explore the engines below.</p>;
-;
+
                     <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">;
              <a;
                href="/.netlify/functions/front-enhancer";
@@ -384,7 +384,7 @@ export default function MainFrontIndex() {;
                <div className="mt-3 text-xs text-cyan-300/90">Open Automation Hub </div>;
              </a>;
            </div>;
-;
+
           <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">;
             <a href="/.netlify/functions/internal-link-graph-runner" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">;
               <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />;
@@ -428,7 +428,7 @@ export default function MainFrontIndex() {;
               <p className="mt-1 text-sm text-white/75">Highfrequency repo sync to push autonomous changes quickly.</p>;
               <div className="mt-3 text-xs text-cyan-300/90">Run now </div>;
             </a>;
-;
+
             <a;
               href="/.netlify/functions/content-freshness-runner";
               className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover";
@@ -438,7 +438,7 @@ export default function MainFrontIndex() {;
               <p className="mt-1 text-sm text-white/75">Scores pages and docs by last update, commits freshness reports.</p>;
               <div className="mt-3 text-xs text-cyan-300/90">Open </div>;
             </a>;
-;
+
             <a;
               href="/.netlify/functions/docs-link-audit-runner";
               className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover";
@@ -448,7 +448,7 @@ export default function MainFrontIndex() {;
               <p className="mt-1 text-sm text-white/75">Scans docs for broken relative links and commits a CSV report.</p>;
               <div className="mt-3 text-xs text-cyan-300/90">Open </div>;
             </a>;
-;
+
             <a;
               href="/.netlify/functions/image-dimension-audit-runner";
               className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover";
@@ -469,14 +469,14 @@ export default function MainFrontIndex() {;
             </a>;
           </div>;
         </motion.section>;
-;
+
         {/* Autonomous Innovations */}
         <motion.section;
           id="innovations";
-          initial={{ opacity:0, y:24 }}
-          whileInView={{ opacity:1, y:0 }}
-          viewport={{ once:true, amount:0.2 }}
-          transition={{ duration:0.5 }}
+          initial={ opacity:0, y:24 }
+          whileInView={ opacity:1, y:0 }
+          viewport={ once:true, amount:0.2 }
+          transition={ duration:0.5 }
           className="mx-auto max-w-7xl px-6 pb-14";
         >;
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Autonomous Innovations</h2>;
@@ -502,24 +502,24 @@ export default function MainFrontIndex() {;
             </a>;
           </div>;
         </motion.section>;
-;
+
         {/* Autonomous Cloud Runners */}
         <section id="cloud-runners" className="mx-auto max-w-7xl px-6 pb-14">;
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Autonomous Cloud Runners</h2>;
           <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">;
             {[ ;
               { title:'Automation Guardian (10m)', desc:'Monitors and auto-heals automations, commits fixes safely.', href:'/.netlify/functions/automation-guardian-runner' },;
-              { title:'Components Docs Runner (30m)', desc:'Regenerates components/docs indexes and README, then pushes.', href:'/.netlify/functions/components-docs-runner' }].map((tool) => (;
+              { title:'Components Docs Runner (30m)', desc:'Regenerates components/docs indexes and README, then pushes.', href:'/.netlify/functions/components-docs-runner' }].map(tool) => (;
               <a key={tool.title} href={tool.href} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">;
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />;
                 <h3 className="text-lg font-semibold">{tool.title}</h3>;
                 <p className="mt-1 text-sm text-white/75">{tool.desc}</p>;
                 <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden></span></div>;
               </a>;
-            ))}
+            )}
           </div>;
         </section>;
-;
+
         {/* Command Center */}
         <section id="command-center" className="mx-auto max-w-7xl px-6 pb-14">;
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Command Center</h2>;
@@ -533,7 +533,7 @@ export default function MainFrontIndex() {;
               { title:'Cloud Automations', desc:'Netlify scheduled functions powering jobs 24/7.', href:'/automation' },;
               { title:'Docs', desc:'Technical notes and guides for the platform.', href:'/reports/seo', external:true },;
               { title:'AI Changelog', desc:'Summarized autonomous changes and highlights.', href:'/newsroom', external:true }
-            ].map((card) => (;
+            ].map(card) => (;
               <article key={card.title} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 holo tilt-on-hover">;
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />;
                 <h3 className="text-lg font-semibold">{card.title}</h3>;
@@ -544,17 +544,17 @@ export default function MainFrontIndex() {;
                   <Link href={card.href as string}><a className="mt-3 inline-block text-sm text-cyan-300 hover:text-cyan-200 underline">Open</a></Link>;
                 )}
               </article>;
-            ))}
+            )}
           </div>;
         </section>;
-;
+
         {/* Netlify Automations */}
         <motion.section;
           id="netlify-automations";
-          initial={{ opacity:0, y:24 }}
-          whileInView={{ opacity:1, y:0 }}
-          viewport={{ once:true, amount:0.2 }}
-          transition={{ duration:0.5 }}
+          initial={ opacity:0, y:24 }
+          whileInView={ opacity:1, y:0 }
+          viewport={ once:true, amount:0.2 }
+          transition={ duration:0.5 }
           className="mx-auto max-w-7xl px-6 pb-14";
         >;
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Netlify Automations</h2>;
@@ -573,17 +573,17 @@ export default function MainFrontIndex() {;
               { label:'Dependency AutoUpgrade', desc:'Safely bumps deps and verifies a clean build.', href:'/.netlify/functions/deps-auto-upgrade-runner' },;
               { label:'Autonomous Meta Orchestrator', desc:'Invents and triggers cloud automations, syncs changes.', href:'/.netlify/functions/autonomous-meta-orchestrator' },;
               { label:'Trigger All & Commit', desc:'Invokes all functions and triggers a build or commit.', href:'/.netlify/functions/trigger-all-and-commit' }
-            ].map((f) => (;
+            ].map(f) => (;
               <a key={f.label} href={f.href} target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">;
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />;
                 <div className="text-lg font-semibold">{f.label}</div>;
                 <div className="mt-1 text-sm text-white/75">{f.desc}</div>;
                 <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Trigger <span aria-hidden></span></div>;
               </a>;
-            ))}
+            )}
           </div>;
         </motion.section>;
-;
+
         {/* New Cloud Automations */}
         <section className="mx-auto max-w-7xl px-6 pb-14">;
           <h3 className="text-center text-xl font-bold tracking-wide text-white/90">New Cloud Automations</h3>;
@@ -594,7 +594,7 @@ export default function MainFrontIndex() {;
               <div className="mt-1 text-sm text-white/75">Finds stale pages/components/docs and publishes a report.</div>;
               <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Trigger <span aria-hidden></span></div>;
             </a>;
-;
+
             <a href="/.netlify/functions/autonomous-invention-orchestrator" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">;
               <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />;
               <div className="text-lg font-semibold">Autonomous Invention Orchestrator</div>;
@@ -603,13 +603,13 @@ export default function MainFrontIndex() {;
             </a>;
           </div>;
         </section>;
-;
+
         {/* Feature Spotlight */}
         <motion.section;
-          initial={{ opacity:0, y:24 }}
-          whileInView={{ opacity:1, y:0 }}
-          viewport={{ once:true, amount:0.2 }}
-          transition={{ duration:0.5 }}
+          initial={ opacity:0, y:24 }
+          whileInView={ opacity:1, y:0 }
+          viewport={ once:true, amount:0.2 }
+          transition={ duration:0.5 }
           className="mx-auto max-w-7xl px-6 pb-14";
         >;
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Feature Spotlight</h2>;
@@ -621,7 +621,7 @@ export default function MainFrontIndex() {;
               { Icon:Gauge, title:'Site Health', desc:'A11y, performance, and link integrity', href:'/site-health' },;
               { Icon:Globe, title:'AI Trends Radar', desc:'Signals that inspire new automations', href:'/reports/ai-trends' },;
               { Icon:GitBranch, title:'Main Sync', desc:'Safe, incremental diffs shipped continuously', href:'/automation' },;
-              { Icon:ShieldCheck, title:'Guardrails', desc:'Defenseindepth quality gates', href:'/site-health' }].map(({ Icon, title, desc, href }) => (;
+              { Icon:ShieldCheck, title:'Guardrails', desc:'Defenseindepth quality gates', href:'/site-health' }].map({ Icon, title, desc, href }) => (;
               <Link key={title} href={href}>;
                 <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">;
                   <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />;
@@ -633,10 +633,10 @@ export default function MainFrontIndex() {;
                   <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden></span></div>;
                 </a>;
               </Link>;
-            ))}
+            )}
           </div>;
         </motion.section>;
-;
+
         {/* AUTO-GENERATED:FRONT_ADS_START */}
         <section className="mx-auto max-w-7xl px-6 pb-16">;
           <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-fuchsia-600/10 via-violet-600/10 to-cyan-600/10 p-6 backdrop-blur-xl">;
@@ -654,13 +654,13 @@ export default function MainFrontIndex() {;
           </div>;
         </section>;
         {/* AUTO-GENERATED:FRONT_ADS_END */}
-;
+
         {/* Outcome Benefits */}
         <motion.section;
-          initial={{ opacity:0, y:24 }}
-          whileInView={{ opacity:1, y:0 }}
-          viewport={{ once:true, amount:0.2 }}
-          transition={{ duration:0.5 }}
+          initial={ opacity:0, y:24 }
+          whileInView={ opacity:1, y:0 }
+          viewport={ once:true, amount:0.2 }
+          transition={ duration:0.5 }
           className="mx-auto max-w-7xl px-6 pb-14";
         >;
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">OutcomeFocused Benefits</h2>;
@@ -672,24 +672,24 @@ export default function MainFrontIndex() {;
               { label:'Reduce engineering toil', desc:'Automated upgrades, refactors, and maintenance', href:'/automation' },;
               { label:'Ship faster with confidence', desc:'Small safe diffs synced to main', href:'/automation' },;
               { label:'Stay compliant & accessible', desc:'Policy guardrails and WCAG checks', href:'/site-health' },;
-              { label:'Learn from market signals', desc:'AI + cloud trends to guide strategy', href:'/reports/ai-trends' }].map((b) => (;
+              { label:'Learn from market signals', desc:'AI + cloud trends to guide strategy', href:'/reports/ai-trends' }].map(b) => (;
               <Link key={b.label} href={b.href}>;
                 <a className="group flex items-start gap-3 rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl hover:border-fuchsia-400/30">;
                   <span className="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]" />;
                   <span className="text-sm text-white/80"><span className="font-semibold text-white">{b.label}</span>  {b.desc} <span className="ml-1 text-cyan-300/90"></span></span>;
                 </a>;
               </Link>;
-            ))}
+            )}
           </div>;
         </motion.section>;
-;
+
         {/* Suites */}
         <motion.section;
           id="suites";
-          initial={{ opacity:0, y:24 }}
-          whileInView={{ opacity:1, y:0 }}
-          viewport={{ once:true, amount:0.2 }}
-          transition={{ duration:0.5 }}
+          initial={ opacity:0, y:24 }
+          whileInView={ opacity:1, y:0 }
+          viewport={ once:true, amount:0.2 }
+          transition={ duration:0.5 }
           className="mx-auto max-w-7xl px-6 pb-14";
         >;
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Automation Suites</h2>;
@@ -703,7 +703,7 @@ export default function MainFrontIndex() {;
               { title:'Live Workflows', desc:'Observe pipelines running 24/7', href:'/site-health', external:true },;
               { title:'Site Health', desc:'A11y, performance, link checks dashboards', href:'/site-health' },;
               { title:'AI SEO Auditor', desc:'Continuous onsite audits with safe proposed diffs', href:'/reports/seo' },;
-              { title:'AI Trends Radar', desc:'Signal scanning to inspire new factories', href:'/reports/ai-trends' }].map((suite) => (;
+              { title:'AI Trends Radar', desc:'Signal scanning to inspire new factories', href:'/reports/ai-trends' }].map(suite) => (;
               <article key={suite.title} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">;
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />;
                 <h3 className="text-lg font-semibold">{suite.title}</h3>;
@@ -716,16 +716,16 @@ export default function MainFrontIndex() {;
                   );
                 )}
               </article>;
-            ))}
+            )}
           </div>;
         </motion.section>;
-;
+
         {/* Superpowers */}
         <motion.section;
-          initial={{ opacity:0, y:24 }}
-          whileInView={{ opacity:1, y:0 }}
-          viewport={{ once:true, amount:0.2 }}
-          transition={{ duration:0.5 }}
+          initial={ opacity:0, y:24 }
+          whileInView={ opacity:1, y:0 }
+          viewport={ once:true, amount:0.2 }
+          transition={ duration:0.5 }
           className="mx-auto max-w-7xl px-6 pb-14";
         >;
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Superpowers</h2>;
@@ -733,23 +733,23 @@ export default function MainFrontIndex() {;
             {[;
               { Icon:Rocket, title:'Generative Factories', desc:'Spins up domainspecific automation factories that build for you.' },;
               { Icon:ShieldCheck, title:'Safety by Design', desc:'Layered validations  type checks, builds, a11y, links, and more.' },;
-              { Icon:GitBranch, title:'Main Sync', desc:'Small, reviewable edits committed and pushed continuously.' }].map(({ Icon, title, desc }) => (;
+              { Icon:GitBranch, title:'Main Sync', desc:'Small, reviewable edits committed and pushed continuously.' }].map({ Icon, title, desc }) => (;
               <article key={title} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">;
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />;
                 <Icon className="h-6 w-6 text-cyan-300" />;
                 <h3 className="mt-3 text-lg font-semibold">{title}</h3>;
                 <p className="mt-1 text-sm text-white/75">{desc}</p>;
               </article>;
-            ))}
+            )}
           </div>;
         </motion.section>;
-;
+
         {/* Get Started */}
         <motion.section;
-          initial={{ opacity:0, y:24 }}
-          whileInView={{ opacity:1, y:0 }}
-          viewport={{ once:true, amount:0.2 }}
-          transition={{ duration:0.5 }}
+          initial={ opacity:0, y:24 }
+          whileInView={ opacity:1, y:0 }
+          viewport={ once:true, amount:0.2 }
+          transition={ duration:0.5 }
           className="mx-auto max-w-7xl px-6 pb-14";
         >;
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Get Started in Minutes</h2>;
@@ -784,14 +784,14 @@ export default function MainFrontIndex() {;
             </Link>;
           </div>;
         </motion.section>;
-;
+
         {/* Features */}
         <motion.section;
           id="features";
-          initial={{ opacity:0, y:24 }}
-          whileInView={{ opacity:1, y:0 }}
-          viewport={{ once:true, amount:0.2 }}
-          transition={{ duration:0.5 }}
+          initial={ opacity:0, y:24 }
+          whileInView={ opacity:1, y:0 }
+          viewport={ once:true, amount:0.2 }
+          transition={ duration:0.5 }
           className="mx-auto max-w-7xl px-6 pb-14";
         >;
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Features</h2>;
@@ -829,7 +829,7 @@ export default function MainFrontIndex() {;
               { Icon:LineChart, title:'Experimentation', desc:'Automate A/B setups and monitor telemetry automatically.', href:'/automation' },;
               { Icon:Palette, title:'Design Tokens & Theming', desc:'Enforce consistent theming, spacing, and motion.', href:'/newsroom' },;
               { Icon:Gauge, title:'Image Pipeline', desc:'Optimize and transform media assets automatically.', href:'/site-health' }
-            ].map(({ Icon, title, desc, href }) => (;
+            ].map({ Icon, title, desc, href }) => (;
               <Link key={title} href={href}>;
                 <a className="group glow-card relative block overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-md hover:border-cyan-400/30 tilt-on-hover neon-ring">;
                   <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />;
@@ -841,16 +841,16 @@ export default function MainFrontIndex() {;
                   <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Learn more <Link2 className="h-3.5 w-3.5" /></div>;
                 </a>;
               </Link>;
-            ))}
+            )}
           </div>;
         </motion.section>;
-;
+
         {/* Outcomes */}
         <motion.section;
-          initial={{ opacity:0, y:24 }}
-          whileInView={{ opacity:1, y:0 }}
-          viewport={{ once:true, amount:0.2 }}
-          transition={{ duration:0.5 }}
+          initial={ opacity:0, y:24 }
+          whileInView={ opacity:1, y:0 }
+          viewport={ once:true, amount:0.2 }
+          transition={ duration:0.5 }
           className="mx-auto max-w-7xl px-6 pb-14";
         >;
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Outcomes</h2>;
@@ -871,26 +871,26 @@ export default function MainFrontIndex() {;
                   { label:'Better content curation', href:'/newsroom' },;
                   { label:'Operational visibility', href:'/site-health' },;
                   { label:'Experiment velocity', href:'/automation' }];
-                  .flatMap((item) => [item, item]);
-                  .map((item, idx) => (;
+                  .flatMap(item) => [item, item]);
+                  .map(item, idx) => (;
                     <Link key={`${item.label}-${idx}`} href={item.href}>;
                       <a className="mx-3 my-2 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs text-white/80 backdrop-blur hover:bg-white/10">;
                         <span className="h-1.5 w-1.5 rounded-full bg-cyan-400" /> {item.label}
                       </a>;
                     </Link>;
-                  ))}
+                  )}
               </div>;
             </div>;
           </div>;
         </motion.section>;
-;
+
         {/* Feature Map */}
         <motion.section;
           id="feature-map";
-          initial={{ opacity:0, y:24 }}
-          whileInView={{ opacity:1, y:0 }}
-          viewport={{ once:true, amount:0.2 }}
-          transition={{ duration:0.5 }}
+          initial={ opacity:0, y:24 }
+          whileInView={ opacity:1, y:0 }
+          viewport={ once:true, amount:0.2 }
+          transition={ duration:0.5 }
           className="mx-auto max-w-7xl px-6 pb-14";
         >;
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Feature Map</h2>;
@@ -910,7 +910,7 @@ export default function MainFrontIndex() {;
               { label:'Deep Indexing', desc:'Smart linking & PRs', href:'/newsroom' },;
               { label:'Live Dashboards', desc:'Impact at a glance', href:'/site-health' },;
               { label:'Health Monitors', desc:'A11y, perf, links', href:'/site-health' },;
-              { label:'Docs & Guides', desc:'Technical notes', href:'/reports/seo', external:true }].map((item) => (;
+              { label:'Docs & Guides', desc:'Technical notes', href:'/reports/seo', external:true }].map(item) => (;
               item.external ? (;
                 <a key={item.label} href={item.href as string} target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">;
                   <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />;
@@ -928,13 +928,13 @@ export default function MainFrontIndex() {;
                   </a>;
                 </Link>;
               );
-            ))}
+            )}
           </div>;
         </motion.section>;
-;
+
         {/* AUTO:catalog injection for automated advertising */}
         {/* AUTO:FRONT_INDEX_DIRECTORY_START */;
-;
+
 <section id="auto-catalog" className="mx-auto max-w-7xl px-6 pb-16">;
   <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Autonomous Catalog</h2>;
   <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Autodiscovered features, capabilities, and resources. Kept fresh by inrepo Node tools.</p>;
@@ -949,19 +949,19 @@ export default function MainFrontIndex() {;
           <a href="/newsroom" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover neon-ring"><div className="text-base font-semibold">AI Changelog</div><div className="mt-1 text-sm text-white/75">Summarized autonomous changes</div><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden></span></div></a>;
           <a href="/site-health" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover neon-ring"><div className="text-base font-semibold">Live Pipelines</div><div className="mt-1 text-sm text-white/75">CI logs & artifacts 24/7</div><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden></span></div></a>;
           <a href="https://ziontechgroup.com" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover neon-ring"><div className="text-base font-semibold">Zion Cloud</div><div className="mt-1 text-sm text-white/75">Deployments and cloud platform</div><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden></span></div></a>;
-;
+
   </div>;
 </section>;
-;
-/* AUTO:FRONT_INDEX_DIRECTORY_END */}
-;
+
+* AUTO:FRONT_INDEX_DIRECTORY_END */}
+
         {/* Platform Modules */}
         <motion.section;
            id="modules";
-           initial={{ opacity:0, y:24 }}
-           whileInView={{ opacity:1, y:0 }}
-           viewport={{ once:true, amount:0.2 }}
-           transition={{ duration:0.5 }}
+           initial={ opacity:0, y:24 }
+           whileInView={ opacity:1, y:0 }
+           viewport={ once:true, amount:0.2 }
+           transition={ duration:0.5 }
            className="mx-auto max-w-7xl px-6 pb-16";
          >;
            <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Platform Modules</h2>;
@@ -975,7 +975,7 @@ export default function MainFrontIndex() {;
               { Icon:Layers, title:'Workflow Composer', desc:'Chain factories into higherorder systems.', href:'/automation' },;
               { Icon:GitBranch, title:'Main Sync Engine', desc:'Small, reviewable edits merged continuously.', href:'/automation' },;
               { Icon:Cpu, title:'ZeroOps Runtime', desc:'Cloudnative execution with no servers to manage.', href:'/automation' },;
-              { Icon:BarChart3, title:'Impact Analytics', desc:'Track outcomes and ROI from automations.', href:'/site-health' }].map(({ Icon, title, desc, href }) => (;
+              { Icon:BarChart3, title:'Impact Analytics', desc:'Track outcomes and ROI from automations.', href:'/site-health' }].map({ Icon, title, desc, href }) => (;
               <Link key={title} href={href}>;
                 <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover neon-ring">;
                   <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />;
@@ -987,16 +987,16 @@ export default function MainFrontIndex() {;
                   <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <Link2 className="h-3.5 w-3.5" /></div>;
                 </a>;
               </Link>;
-            ))}
+            )}
           </div>;
         </motion.section>;
-;
+
         {/* Neural Feature Matrix */}
         <motion.section;
-          initial={{ opacity:0, y:24 }}
-          whileInView={{ opacity:1, y:0 }}
-          viewport={{ once:true, amount:0.2 }}
-          transition={{ duration:0.5 }}
+          initial={ opacity:0, y:24 }
+          whileInView={ opacity:1, y:0 }
+          viewport={ once:true, amount:0.2 }
+          transition={ duration:0.5 }
           className="mx-auto max-w-7xl px-6 pb-14";
         >;
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Neural Feature Matrix</h2>;
@@ -1019,7 +1019,7 @@ export default function MainFrontIndex() {;
               { label:'AI Changelog', desc:'Summarized updates', href:'/newsroom', external:true },;
                              { label:'Cloud Automations', desc:'Netlify scheduled functions', href:'/automation' },;
                { label:'Roadmap & Issues', desc:"What's next", href:'//issues', external:true }
-            ].map((item) => (;
+            ].map(item) => (;
               item.external ? (;
                 <a key={item.label} href={item.href as string} target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover neon-ring">;
                   <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />;
@@ -1037,16 +1037,16 @@ export default function MainFrontIndex() {;
                   </a>;
                 </Link>;
               );
-            ))}
+            )}
           </div>;
         </motion.section>;
-;
+
         {/* Extended Feature Directory */}
         <motion.section;
-          initial={{ opacity:0, y:24 }}
-          whileInView={{ opacity:1, y:0 }}
-          viewport={{ once:true, amount:0.2 }}
-          transition={{ duration:0.5 }}
+          initial={ opacity:0, y:24 }
+          whileInView={ opacity:1, y:0 }
+          viewport={ once:true, amount:0.2 }
+          transition={ duration:0.5 }
           className="mx-auto max-w-7xl px-6 pb-14";
         >;
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Extended Feature Directory</h2>;
@@ -1061,7 +1061,7 @@ export default function MainFrontIndex() {;
               { Icon:Layers, title:'Factories Library', desc:'Composable building blocks for new automations.', href:'/automation' },;
               { Icon:Activity, title:'Health Monitors', desc:'A11y, links, and performance monitored 24/7.', href:'/site-health' },;
               { Icon:Cpu, title:'Zero-Ops Runtime', desc:'Fully managed cloud execution with no servers.', href:'/automation' },;
-              { Icon:Globe, title:'Intelligence Signals', desc:'AI + cloud trend tracking fueling new ideas.', href:'/reports/ai-trends' }].map(({ Icon, title, desc, href, external }) => (;
+              { Icon:Globe, title:'Intelligence Signals', desc:'AI + cloud trend tracking fueling new ideas.', href:'/reports/ai-trends' }].map({ Icon, title, desc, href, external }) => (;
               external ? (;
                 <a key={title} href={href as string} target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover neon-ring">;
                   <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />;
@@ -1079,16 +1079,16 @@ export default function MainFrontIndex() {;
                   </a>;
                 </Link>;
               );
-            ))}
+            )}
           </div>;
         </motion.section>;
-;
+
         {/* Capability Deep Links */}
         <motion.section;
-          initial={{ opacity:0, y:24 }}
-          whileInView={{ opacity:1, y:0 }}
-          viewport={{ once:true, amount:0.2 }}
-          transition={{ duration:0.5 }}
+          initial={ opacity:0, y:24 }
+          whileInView={ opacity:1, y:0 }
+          viewport={ once:true, amount:0.2 }
+          transition={ duration:0.5 }
           className="mx-auto max-w-7xl px-6 pb-16";
         >;
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Capability Deep Links</h2>;
@@ -1102,7 +1102,7 @@ export default function MainFrontIndex() {;
               ['NewsroomCurated updates and product evolution highlights', '/newsroom'],;
               ['Live PipelinesObserve CI pipelines, logs, and artifacts', '/site-health'],;
               ['DocumentationTechnical notes, guides, and changelog', '/reports/seo'],;
-              ['AI ChangelogSummarized autonomous changes and highlights', '/newsroom']].map(([label, desc, href]) => (;
+              ['AI ChangelogSummarized autonomous changes and highlights', '/newsroom']].map([label, desc, href]) => (;
               (href as string).startsWith('http') ? (;
                 <a key={label as string} href={href as string} target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 backdrop-blur-xl hover:border-fuchsia-400/30">;
                   <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-violet-400/10 to-cyan-400/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />;
@@ -1120,17 +1120,17 @@ export default function MainFrontIndex() {;
                   </a>;
                 </Link>;
               );
-            ))}
+            )}
           </div>;
         </motion.section>;
-;
+
         {/* Use Cases */}
         <motion.section;
           id="use-cases";
-          initial={{ opacity:0, y:24 }}
-          whileInView={{ opacity:1, y:0 }}
-          viewport={{ once:true, amount:0.2 }}
-          transition={{ duration:0.5 }}
+          initial={ opacity:0, y:24 }
+          whileInView={ opacity:1, y:0 }
+          viewport={ once:true, amount:0.2 }
+          transition={ duration:0.5 }
           className="mx-auto max-w-7xl px-6 pb-14";
         >;
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Use Cases</h2>;
@@ -1141,22 +1141,22 @@ export default function MainFrontIndex() {;
               { title:'Content Curator', desc:'Surfaces and promotes highvalue content with links and metadata.' },;
               { title:'Performance Tuner', desc:'Optimizes bundles, images, and scripts for faster loads.' },;
               { title:'A11y Guardian', desc:'Catches and fixes accessibility issues before they ship.' },;
-              { title:'Growth Experiments', desc:'Spins up microexperiments and measures impact automatically.' }].map((u) => (;
+              { title:'Growth Experiments', desc:'Spins up microexperiments and measures impact automatically.' }].map(u) => (;
               <article key={u.title} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-fuchsia-400/30">;
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-violet-400/10 to-cyan-400/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />;
                 <h3 className="text-lg font-semibold">{u.title}</h3>;
                 <p className="mt-1 text-sm text-white/75">{u.desc}</p>;
               </article>;
-            ))}
+            )}
           </div>;
         </motion.section>;
-;
+
         {/* Stats */}
         <motion.section;
-          initial={{ opacity:0, y:24 }}
-          whileInView={{ opacity:1, y:0 }}
-          viewport={{ once:true, amount:0.2 }}
-          transition={{ duration:0.5 }}
+          initial={ opacity:0, y:24 }
+          whileInView={ opacity:1, y:0 }
+          viewport={ once:true, amount:0.2 }
+          transition={ duration:0.5 }
           className="mx-auto max-w-7xl px-6 pb-14";
         >;
           <div className="neon-divider mx-auto mb-8 h-px w-full max-w-5xl" />;
@@ -1168,7 +1168,7 @@ export default function MainFrontIndex() {;
               { label:'Automated Edits', value:'3,500+', href:'/automation' },;
               { label:'Uptime', value:'99.95%', href:'/site-health' },;
               { label:'A11y Checks', value:'20k+', href:'/site-health' },;
-              { label:'SEO Fixes', value:'4.2k+', href:'/reports/seo' }].map((item) => (;
+              { label:'SEO Fixes', value:'4.2k+', href:'/reports/seo' }].map(item) => (;
               item.external ? (;
                 <a key={item.label} href={item.href as string} target="_blank" rel="noopener" className="rounded-2xl border border-white/10 bg-white/5 p-5 text-center backdrop-blur hover:border-cyan-400/30">;
                   <div className="text-2xl font-extrabold tracking-tight">{item.value}</div>;
@@ -1182,17 +1182,17 @@ export default function MainFrontIndex() {;
                   </a>;
                 </Link>;
               );
-            ))}
+            )}
           </div>;
         </motion.section>;
-;
+
         {/* Capabilities */}
         <motion.section;
           id="capabilities";
-          initial={{ opacity:0, y:24 }}
-          whileInView={{ opacity:1, y:0 }}
-          viewport={{ once:true, amount:0.2 }}
-          transition={{ duration:0.5 }}
+          initial={ opacity:0, y:24 }
+          whileInView={ opacity:1, y:0 }
+          viewport={ once:true, amount:0.2 }
+          transition={ duration:0.5 }
           className="mx-auto max-w-7xl px-6 pb-14";
         >;
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Capabilities</h2>;
@@ -1211,7 +1211,7 @@ export default function MainFrontIndex() {;
               { Icon:Search, title:'Broken Link Defender', desc:'Continuously scans and fixes link integrity issues.', href:'/site-health' },;
               { Icon:LineChart, title:'Experimentation', desc:'Automate A/B setups and monitor telemetry automatically.', href:'/automation' },;
               { Icon:Palette, title:'Design Tokens & Theming', desc:'Enforce consistent theming, spacing, and motion.', href:'/newsroom' },;
-              { Icon:Gauge, title:'Image Pipeline', desc:'Optimize and transform media assets automatically.', href:'/site-health' }].map(({ Icon, title, desc, href }) => (;
+              { Icon:Gauge, title:'Image Pipeline', desc:'Optimize and transform media assets automatically.', href:'/site-health' }].map({ Icon, title, desc, href }) => (;
               <Link key={title} href={href}>;
                 <a className="relative block overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">;
                   <div className="absolute right-0 top-0 h-24 w-24 rounded-bl-[4rem] bg-cyan-400/10 blur-2xl" />;
@@ -1222,16 +1222,16 @@ export default function MainFrontIndex() {;
                   <p className="mt-1 text-sm text-white/75">{desc}</p>;
                 </a>;
               </Link>;
-            ))}
+            )}
           </div>;
         </motion.section>;
-;
+
         {/* Why Zion */}
         <motion.section;
-          initial={{ opacity:0, y:24 }}
-          whileInView={{ opacity:1, y:0 }}
-          viewport={{ once:true, amount:0.2 }}
-          transition={{ duration:0.5 }}
+          initial={ opacity:0, y:24 }
+          whileInView={ opacity:1, y:0 }
+          viewport={ once:true, amount:0.2 }
+          transition={ duration:0.5 }
           className="mx-auto max-w-7xl px-6 pb-14";
         >;
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Why Zion</h2>;
@@ -1239,23 +1239,23 @@ export default function MainFrontIndex() {;
             {[;
               ['Speed', 'Continuous delivery to main with safe, incremental changes.'],;
               ['Safety', 'Conservative edits and guardrails keep production stable.'],;
-              ['Scale', 'Automatically generates new factories as your needs grow.']].map(([icon, title, desc]) => (;
+              ['Scale', 'Automatically generates new factories as your needs grow.']].map([icon, title, desc]) => (;
               <div key={title as string} className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur">;
                 <div className="text-2xl">{icon as string}</div>;
                 <div className="mt-2 text-base font-semibold">{title as string}</div>;
                 <div className="mt-1 text-sm text-white/75">{desc as string}</div>;
               </div>;
-            ))}
+            )}
           </div>;
         </motion.section>;
-;
+
         {/* Value Pillars */}
         <motion.section;
           id="pillars";
-          initial={{ opacity:0, y:24 }}
-          whileInView={{ opacity:1, y:0 }}
-          viewport={{ once:true, amount:0.2 }}
-          transition={{ duration:0.5 }}
+          initial={ opacity:0, y:24 }
+          whileInView={ opacity:1, y:0 }
+          viewport={ once:true, amount:0.2 }
+          transition={ duration:0.5 }
           className="mx-auto max-w-7xl px-6 pb-14";
         >;
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Value Pillars</h2>;
@@ -1265,7 +1265,7 @@ export default function MainFrontIndex() {;
               { Icon:ShieldCheck, title:'Security & Safety', desc:'Guardrails, policy, and quality gates.', href:'/site-health' },;
               { Icon:Rocket, title:'Speed & Momentum', desc:'Small diffs shipped continuously.', href:'/automation' },;
               { Icon:Gauge, title:'Quality & Reliability', desc:'A11y, performance, and link integrity.', href:'/site-health' },;
-              { Icon:Layers, title:'Scale & Composability', desc:'Factories chained into higherorder workflows.', href:'/automation' }].map(({ Icon, title, desc, href }) => (;
+              { Icon:Layers, title:'Scale & Composability', desc:'Factories chained into higherorder workflows.', href:'/automation' }].map({ Icon, title, desc, href }) => (;
               <Link key={title} href={href}>;
                 <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">;
                   <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />;
@@ -1276,17 +1276,17 @@ export default function MainFrontIndex() {;
                   <p className="mt-1 text-sm text-white/75">{desc}</p>;
                 </a>;
               </Link>;
-            ))}
+            )}
           </div>;
         </motion.section>;
-;
+
         {/* Benefits */}
         <motion.section;
           id="benefits";
-          initial={{ opacity:0, y:24 }}
-          whileInView={{ opacity:1, y:0 }}
-          viewport={{ once:true, amount:0.2 }}
-          transition={{ duration:0.5 }}
+          initial={ opacity:0, y:24 }
+          whileInView={ opacity:1, y:0 }
+          viewport={ once:true, amount:0.2 }
+          transition={ duration:0.5 }
           className="mx-auto max-w-7xl px-6 pb-20";
         >;
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Benefits</h2>;
@@ -1304,13 +1304,13 @@ export default function MainFrontIndex() {;
                   { label:'Transparent artifacts', href:'/site-health' },;
                   { label:'Guardrails & policy', href:'/site-health' },;
                   { label:'Faster iteration loops', href:'/newsroom' },;
-                  { label:'Lower operational toil', href:'/automation' }].flatMap((i) => [i, i]).map((i, idx) => (;
+                  { label:'Lower operational toil', href:'/automation' }].flatMap(i) => [i, i]).map(i, idx) => (;
                   <Link key={`${i.label}-${idx}`} href={i.href}>;
                     <a className="mx-3 my-2 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs text-white/80 backdrop-blur hover:bg-white/10">;
                       <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" /> {i.label}
                     </a>;
                   </Link>;
-                ))}
+                )}
               </div>;
             </div>;
           </div>;
@@ -1326,21 +1326,21 @@ export default function MainFrontIndex() {;
               'Confident shipping through automated guardrailsPredictable quality gates and SLOs upheld automatically',;
               'Auditability for compliance with full traceabilityHappier teams:less toil, more product value',;
               'Automated dependency upgrades and security scansClear analytics and downloadable artifacts for every run',;
-              'Composable factories accelerate new initiatives'].map((b) => (;
+              'Composable factories accelerate new initiatives'].map(b) => (;
               <div key={b} className="flex items-start gap-3 rounded-xl border border-white/10 bg-white/5 p-4 backdrop-blur-md">;
                 <span className="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]" />;
                 <span className="text-sm text-white/80">{b}</span>;
               </div>;
-            ))}
+            )}
           </div>;
         </motion.section>;
-;
+
         {/* Benefits in Practice */}
         <motion.section;
-          initial={{ opacity:0, y:24 }}
-          whileInView={{ opacity:1, y:0 }}
-          viewport={{ once:true, amount:0.2 }}
-          transition={{ duration:0.5 }}
+          initial={ opacity:0, y:24 }
+          whileInView={ opacity:1, y:0 }
+          viewport={ once:true, amount:0.2 }
+          transition={ duration:0.5 }
           className="mx-auto max-w-7xl px-6 pb-16";
         >;
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Benefits in Practice</h2>;
@@ -1352,7 +1352,7 @@ export default function MainFrontIndex() {;
               { label:'Main branch delivery', desc:'Small, safe diffs merged continuously', href:'/site-health', external:true },;
               { label:'Fewer regressions', desc:'Layered checks catch issues early', href:'/site-health' },;
               { label:'Increased reach', desc:'Continuous SEO improvements', href:'/reports/seo' },;
-              { label:'Strategic insights', desc:'AI + cloud trend tracking', href:'/reports/ai-trends' }].map((b) => (;
+              { label:'Strategic insights', desc:'AI + cloud trend tracking', href:'/reports/ai-trends' }].map(b) => (;
               b.external ? (;
                 <a key={b.label} href={b.href as string} target="_blank" rel="noopener" className="group flex items-start gap-3 rounded-xl border border-white/10 bg-white/5 p-4 backdrop-blur-md hover:border-cyan-400/30">;
                   <span className="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]" />;
@@ -1366,10 +1366,10 @@ export default function MainFrontIndex() {;
                   </a>;
                 </Link>;
               );
-            ))}
+            )}
           </div>;
         </motion.section>;
-;
+
         {/* Tailored Value by Team */}
         <section className="mx-auto max-w-7xl px-6 pb-16">;
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Tailored Value by Team</h2>;
@@ -1378,7 +1378,7 @@ export default function MainFrontIndex() {;
               { title:'Developers', desc:'Code quality, refactors, upgrades, reliability', href:'/automation' },;
               { title:'Product', desc:'Faster UX improvements, experiments, insights', href:'/newsroom' },;
               { title:'Marketing', desc:'SEO automation, content curation, reach', href:'/reports/seo' },;
-              { title:'Operations', desc:'A11y, performance, and linkhealth dashboards', href:'/site-health' }].map((card) => (;
+              { title:'Operations', desc:'A11y, performance, and linkhealth dashboards', href:'/site-health' }].map(card) => (;
               <Link key={card.title} href={card.href}>;
                 <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">;
                   <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />;
@@ -1387,17 +1387,17 @@ export default function MainFrontIndex() {;
                   <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <Link2 className="h-3.5 w-3.5" /></div>;
                 </a>;
               </Link>;
-            ))}
+            )}
           </div>;
         </section>;
-;
+
         {/* Ecosystem & Integrations */}
         <motion.section;
           id="reports";
-          initial={{ opacity:0, y:24 }}
-          whileInView={{ opacity:1, y:0 }}
-          viewport={{ once:true, amount:0.2 }}
-          transition={{ duration:0.5 }}
+          initial={ opacity:0, y:24 }
+          whileInView={ opacity:1, y:0 }
+          viewport={ once:true, amount:0.2 }
+          transition={ duration:0.5 }
           className="mx-auto max-w-7xl px-6 pb-14";
         >;
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Ecosystem & Integrations</h2>;
@@ -1440,14 +1440,14 @@ export default function MainFrontIndex() {;
             </a>;
           </div>;
         </motion.section>;
-;
+
         {/* Quality Gates & Guardrails */}
         <motion.section;
           id="guardrails";
-          initial={{ opacity:0, y:24 }}
-          whileInView={{ opacity:1, y:0 }}
-          viewport={{ once:true, amount:0.2 }}
-          transition={{ duration:0.5 }}
+          initial={ opacity:0, y:24 }
+          whileInView={ opacity:1, y:0 }
+          viewport={ once:true, amount:0.2 }
+          transition={ duration:0.5 }
           className="mx-auto max-w-7xl px-6 pb-16";
         >;
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Quality Gates & Guardrails</h2>;
@@ -1456,7 +1456,7 @@ export default function MainFrontIndex() {;
               { title:'Accessibility', desc:'Automated checks and fixes for WCAG compliance.', href:'/site-health' },;
               { title:'Link Integrity', desc:'Broken links detected before release.', href:'/site-health' },;
               { title:'Performance', desc:'Budgets enforced and improved continuously.', href:'/site-health' },;
-              { title:'Safe Diffs', desc:'Conservative, reviewable changes synced to main.', href:'/automation' }].map((g) => (;
+              { title:'Safe Diffs', desc:'Conservative, reviewable changes synced to main.', href:'/automation' }].map(g) => (;
               <Link key={g.title} href={g.href}>;
                 <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-fuchsia-400/30">;
                   <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-violet-400/10 to-cyan-400/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />;
@@ -1464,30 +1464,30 @@ export default function MainFrontIndex() {;
                   <p className="mt-1 text-sm text-white/75">{g.desc}</p>;
                 </a>;
               </Link>;
-            ))}
+            )}
           </div>;
         </motion.section>;
-;
+
         {/* Tech */}
         <motion.section;
-          initial={{ opacity:0, y:24 }}
-          whileInView={{ opacity:1, y:0 }}
-          viewport={{ once:true, amount:0.2 }}
-          transition={{ duration:0.5 }}
+          initial={ opacity:0, y:24 }
+          whileInView={ opacity:1, y:0 }
+          viewport={ once:true, amount:0.2 }
+          transition={ duration:0.5 }
           className="mx-auto max-w-7xl px-6 pb-16";
         >;
           <div className="rounded-2xl border border-white/10 bg-white/5 p-6 text-center backdrop-blur-md">;
             <p className="text-white/70">Powered by modern cloud and AI tooling</p>;
             <div className="mt-4 flex flex-wrap items-center justify-center gap-6">;
-              {['Next.jsTypeScript','TailwindFramer Motion','SupabaseNetlify'].map((t) => (;
+              {['Next.jsTypeScript','TailwindFramer Motion','SupabaseNetlify'].map(t) => (;
                 <span key={t} className="rounded-lg border border-white/10 bg-white/5 px-3 py-1 text-sm text-white/80 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.06)] glow-pulse">;
                   {t}
                 </span>;
-              ))}
+              )}
             </div>;
           </div>;
         </motion.section>;
-;
+
         {/* Quick Start */}
         <section className="mx-auto max-w-7xl px-6 pb-20">;
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Quick Start</h2>;
@@ -1496,23 +1496,23 @@ export default function MainFrontIndex() {;
               ['ExploreBrowse live automations', '/automation'],;
               ['AuditCheck site health', '/site-health'],;
               ['OptimizeRun the SEO auditor', '/reports/seo'],;
-              ['LearnFollow AI trends', '/reports/ai-trends']].map(([title, desc, href]) => (;
+              ['LearnFollow AI trends', '/reports/ai-trends']].map([title, desc, href]) => (;
               <Link key={title as string} href={href as string}>;
                 <a className="rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 text-left backdrop-blur-xl hover:border-cyan-400/30">;
                   <div className="text-sm font-semibold text-white">{title as string}</div>;
                   <div className="mt-1 text-xs text-white/70">{desc as string}</div>;
                 </a>;
               </Link>;
-            ))}
+            )}
           </div>;
         </section>;
-;
+
         {/* CTA */}
         <motion.section;
-          initial={{ opacity:0, y:24 }}
-          whileInView={{ opacity:1, y:0 }}
-          viewport={{ once:true, amount:0.2 }}
-          transition={{ duration:0.5 }}
+          initial={ opacity:0, y:24 }
+          whileInView={ opacity:1, y:0 }
+          viewport={ once:true, amount:0.2 }
+          transition={ duration:0.5 }
           className="mx-auto max-w-7xl px-6 pb-24";
         >;
           <div className="animated-border relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-fuchsia-600/20 via-violet-600/20 to-cyan-600/20 p-8 text-center backdrop-blur-xl">;
@@ -1524,9 +1524,9 @@ export default function MainFrontIndex() {;
             </div>;
           </div>;
         </motion.section>;
-;
+
         {/* AUTO-GENERATED:FRONT_FUTURIZER_START */}
-;
+
         <section id="front-futurizer" className="mx-auto max-w-7xl px-6 pb-20">;
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Explore More  Features, Capabilities, Benefits</h2>;
           <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">A quick portal to the most impactful areas across Zion. Every tile and list item links to a live hub, report, or doc.</p>;
@@ -1538,17 +1538,17 @@ export default function MainFrontIndex() {;
               <span className="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 glow-pulse" />;
               <span className="text-sm text-white/80">Selfimproving autonomous agents</span>;
             </li>;
-;
+
             <li className="flex items-start gap-2">;
               <span className="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 glow-pulse" />;
               <span className="text-sm text-white/80">Repo sync to main with safe diffs</span>;
             </li>;
-;
+
             <li className="flex items-start gap-2">;
               <span className="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 glow-pulse" />;
               <span className="text-sm text-white/80">Zeroops, cloudnative runtime</span>;
             </li>;
-;
+
             <li className="flex items-start gap-2">;
               <span className="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 glow-pulse" />;
               <span className="text-sm text-white/80">Defenseindepth guardrails</span>;
@@ -1562,17 +1562,17 @@ export default function MainFrontIndex() {;
               <span className="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 glow-pulse" />;
               <span className="text-sm text-white/80">Code quality and refactors</span>;
             </li>;
-;
+
             <li className="flex items-start gap-2">;
               <span className="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 glow-pulse" />;
               <span className="text-sm text-white/80">A11y and performance tuning</span>;
             </li>;
-;
+
             <li className="flex items-start gap-2">;
               <span className="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 glow-pulse" />;
               <span className="text-sm text-white/80">Content curation and SEO</span>;
             </li>;
-;
+
             <li className="flex items-start gap-2">;
               <span className="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 glow-pulse" />;
               <span className="text-sm text-white/80">Observability and analytics</span>;
@@ -1586,17 +1586,17 @@ export default function MainFrontIndex() {;
               <span className="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 glow-pulse" />;
               <span className="text-sm text-white/80">24/7 progress without manual ops</span>;
             </li>;
-;
+
             <li className="flex items-start gap-2">;
               <span className="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 glow-pulse" />;
               <span className="text-sm text-white/80">Faster feedback with small edits</span>;
             </li>;
-;
+
             <li className="flex items-start gap-2">;
               <span className="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 glow-pulse" />;
               <span className="text-sm text-white/80">Higher confidence via layered checks</span>;
             </li>;
-;
+
             <li className="flex items-start gap-2">;
               <span className="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 glow-pulse" />;
               <span className="text-sm text-white/80">Links to hubs, reports, and docs</span>;
@@ -1605,7 +1605,7 @@ export default function MainFrontIndex() {;
             </div>;
           </div>;
           <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">;
-;
+
             <Link key="Automation Hub" href="/automation">;
               <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">;
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />;
@@ -1614,7 +1614,7 @@ export default function MainFrontIndex() {;
                 <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden></span></div>;
               </a>;
             </Link>;
-;
+
             <Link key="Site Health" href="/site-health">;
               <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">;
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />;
@@ -1623,7 +1623,7 @@ export default function MainFrontIndex() {;
                 <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden></span></div>;
               </a>;
             </Link>;
-;
+
             <Link key="SEO Audit" href="/reports/seo">;
               <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">;
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />;
@@ -1632,7 +1632,7 @@ export default function MainFrontIndex() {;
                 <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden></span></div>;
               </a>;
             </Link>;
-;
+
             <Link key="AI Trends" href="/reports/ai-trends">;
               <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">;
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />;
@@ -1641,7 +1641,7 @@ export default function MainFrontIndex() {;
                 <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden></span></div>;
               </a>;
             </Link>;
-;
+
             <Link key="Newsroom" href="/newsroom">;
               <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">;
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />;
@@ -1650,21 +1650,21 @@ export default function MainFrontIndex() {;
                 <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden></span></div>;
               </a>;
             </Link>;
-;
+
             <a key="Documentation" href="/reports/seo" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">;
               <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />;
               <div className="text-base font-semibold">Documentation</div>;
               <div className="mt-1 text-sm text-white/75">Technical notes and guides</div>;
               <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden></span></div>;
             </a>;
-;
+
             <a key="AI Changelog" href="/newsroom" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">;
               <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />;
               <div className="text-base font-semibold">AI Changelog</div>;
               <div className="mt-1 text-sm text-white/75">Summarized autonomous changes and highlights</div>;
               <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden></span></div>;
             </a>;
-;
+
             <a key="Live Pipelines" href="/site-health" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">;
               <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />;
               <div className="text-base font-semibold">Live Pipelines</div>;
@@ -1673,9 +1673,9 @@ export default function MainFrontIndex() {;
             </a>;
           </div>;
         </section>;
-{/* AUTO-GENERATED:FRONT_FUTURIZER_END */}
-;
-{/* Footer */}
+/* AUTO-GENERATED:FRONT_FUTURIZER_END */}
+
+/* Footer */}
         <footer className="mx-auto max-w-7xl px-6 pb-16">;
           <div className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur">;
             <div className="flex flex-col items-center justify-between gap-4 md:flex-row">;
@@ -1691,14 +1691,14 @@ export default function MainFrontIndex() {;
             </div>;
           </div>;
         </footer>;
-;
+
         {/* AI Agents Gallery */}
         <motion.section;
           id="agents";
-          initial={{ opacity:0, y:24 }}
-          whileInView={{ opacity:1, y:0 }}
-          viewport={{ once:true, amount:0.2 }}
-          transition={{ duration:0.5 }}
+          initial={ opacity:0, y:24 }
+          whileInView={ opacity:1, y:0 }
+          viewport={ once:true, amount:0.2 }
+          transition={ duration:0.5 }
           className="mx-auto max-w-7xl px-6 pb-14";
         >;
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">AI Agents Gallery</h2>;
@@ -1710,7 +1710,7 @@ export default function MainFrontIndex() {;
               { Icon:Palette, title:'Design Beautifier', desc:'Evolves UI with cohesive, futuristic patterns.', href:'/newsroom' },;
               { Icon:Gauge, title:'Performance Tuner', desc:'Optimizes bundles and runtime for speed.', href:'/site-health' },;
               { Icon:Layers, title:'Factory Composer', desc:'Chains automations into higherorder workflows.', href:'/automation' },;
-              { Icon:GitBranch, title:'Main Sync', desc:'Ships small, safe diffs to main continuously.', href:'/automation' }].map(({ Icon, title, desc, href }) => (;
+              { Icon:GitBranch, title:'Main Sync', desc:'Ships small, safe diffs to main continuously.', href:'/automation' }].map({ Icon, title, desc, href }) => (;
               <Link key={title} href={href}>;
                 <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">;
                   <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />;
@@ -1722,17 +1722,17 @@ export default function MainFrontIndex() {;
                   <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden></span></div>;
                 </a>;
               </Link>;
-            ))}
+            )}
           </div>;
         </motion.section>;
-;
+
         {/* Capabilities Matrix */}
         <motion.section;
           id="capability-matrix";
-          initial={{ opacity:0, y:24 }}
-          whileInView={{ opacity:1, y:0 }}
-          viewport={{ once:true, amount:0.2 }}
-          transition={{ duration:0.5 }}
+          initial={ opacity:0, y:24 }
+          whileInView={ opacity:1, y:0 }
+          viewport={ once:true, amount:0.2 }
+          transition={ duration:0.5 }
           className="mx-auto max-w-7xl px-6 pb-16";
         >;
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Capabilities Matrix</h2>;
@@ -1750,7 +1750,7 @@ export default function MainFrontIndex() {;
               { title:'Analytics', desc:'Outcomes & insights', href:'/site-health' },;
               { title:'Link Integrity', desc:'Broken link healing', href:'/site-health' },;
               { title:'Factory Composer', desc:'Higherorder workflows', href:'/automation' },;
-              { title:'Docs & Changelog', desc:'Technical notes & AI log', href:'/reports/seo', external:true }].map((item) => (;
+              { title:'Docs & Changelog', desc:'Technical notes & AI log', href:'/reports/seo', external:true }].map(item) => (;
               item.external ? (;
                 <a key={item.title} href={item.href as string} target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">;
                   <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />;
@@ -1768,17 +1768,17 @@ export default function MainFrontIndex() {;
                   </a>;
                 </Link>;
               );
-            ))}
+            )}
           </div>;
         </motion.section>;
-;
+
         {/* Benefits Directory */}
         <motion.section;
           id="benefits-directory";
-          initial={{ opacity:0, y:24 }}
-          whileInView={{ opacity:1, y:0 }}
-          viewport={{ once:true, amount:0.2 }}
-          transition={{ duration:0.5 }}
+          initial={ opacity:0, y:24 }
+          whileInView={ opacity:1, y:0 }
+          viewport={ once:true, amount:0.2 }
+          transition={ duration:0.5 }
           className="mx-auto max-w-7xl px-6 pb-16";
         >;
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Benefits Directory</h2>;
@@ -1790,7 +1790,7 @@ export default function MainFrontIndex() {;
               { label:'ZeroOps CloudNative', desc:'No servers to babysit', href:'/automation' },;
               { label:'Layered Quality Checks', desc:'Guardrails & audits', href:'/site-health' },;
               { label:'Faster Iteration Loops', desc:'Shorten ideatoimpact', href:'/newsroom' },;
-              { label:'SEO Visibility Gains', desc:'Continuous improvements', href:'/reports/seo' }].map((b) => (;
+              { label:'SEO Visibility Gains', desc:'Continuous improvements', href:'/reports/seo' }].map(b) => (;
               <Link key={b.label} href={b.href}>;
                 <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">;
                   <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />;
@@ -1802,12 +1802,12 @@ export default function MainFrontIndex() {;
                   <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Explore <span aria-hidden></span></div>;
                 </a>;
               </Link>;
-            ))}
+            )}
           </div>;
         </motion.section>;
-;
+
         {/* AUTO-GENERATED:FRONT_ADS_START */}
-;
+
         <section id="auto-ads" className="mx-auto max-w-7xl px-6 pb-16">;
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Autoadvertised Highlights</h2>;
           <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">;
@@ -1828,10 +1828,10 @@ export default function MainFrontIndex() {;
         {/* Feature Highlights (new) */}
         <motion.section;
           id="feature-highlights";
-          initial={{ opacity:0, y:24 }}
-          whileInView={{ opacity:1, y:0 }}
-          viewport={{ once:true, amount:0.2 }}
-          transition={{ duration:0.5 }}
+          initial={ opacity:0, y:24 }
+          whileInView={ opacity:1, y:0 }
+          viewport={ once:true, amount:0.2 }
+          transition={ duration:0.5 }
           className="mx-auto max-w-7xl px-6 pb-14";
         >;
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Feature Highlights</h2>;
@@ -1843,22 +1843,22 @@ export default function MainFrontIndex() {;
               { title:'Site Health', desc:'A11y, performance and link integrity.', href:'/site-health' },;
               { title:'Automation Hub', desc:'Factories, agents and live workflows.', href:'/automation' },;
               { title:'Newsroom', desc:'Autonomous updates and product evolution.', href:'/newsroom' },;
-              { title:'Front Systems Hub', desc:'Futuristic templates, effects and layouts.', href:'/main/front' }].map((card) => (;
+              { title:'Front Systems Hub', desc:'Futuristic templates, effects and layouts.', href:'/main/front' }].map(card) => (;
               <a key={card.title} href={card.href} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">;
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />;
                 <h3 className="text-lg font-semibold">{card.title}</h3>;
                 <p className="mt-1 text-sm text-white/75">{card.desc}</p>;
                 <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden></span></div>;
               </a>;
-            ))}
+            )}
           </div>;
         </motion.section>;
-;
+
         {/* Reports */}
         <section id="reports" className="mx-auto max-w-7xl px-6 pb-16">;
           {/* existing reports content */}
         </section>;
-;
+
         {/* New Intelligent Automations */}
         <section id="automations" className="mx-auto max-w-7xl px-6 pb-20">;
           <h2 className="text-2xl font-bold tracking-wide text-white/90 text-center">New Intelligent Automations</h2>;
@@ -1867,15 +1867,15 @@ export default function MainFrontIndex() {;
               { title:'SEO Audit Runner', href:'/.netlify/functions/seo-audit-runner' },;
               { title:'AI Trends Radar', href:'/.netlify/functions/ai-trends-radar-runner' },;
               { title:'Front Index Directory Builder', href:'/.netlify/functions/front-index-directory-builder' },;
-              { title:'Revenue Ideas Promoter', href:'/.netlify/functions/revenue-ideas-promoter' }].map((tool) => (;
+              { title:'Revenue Ideas Promoter', href:'/.netlify/functions/revenue-ideas-promoter' }].map(tool) => (;
               <a key={tool.title} href={tool.href} className="rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/80 hover:border-cyan-400/30 hover:text-white transition-colors">;
                 <div className="text-base font-semibold text-white">{tool.title}</div>;
                 <div className="mt-1 text-xs text-white/70">Open </div>;
               </a>;
-            ))}
+            )}
           </div>;
         </section>;
-;
+
       </div>;
       {/* Back to top */}
       {showToTop && (;
@@ -1889,9 +1889,8 @@ export default function MainFrontIndex() {;
       )}
     </div>;
   ),;
-}
-;
-/* AUTO-GENERATED:FRONT_ACTIONS_START */;
+
+* AUTO-GENERATED:FRONT_ACTIONS_START */;
 <section className="mx-auto max-w-7xl px-6 pb-14">;
   <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">GitHub Actions  Live Automations</h2>;
   <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Cloudnative workflows that maintain, heal, and evolve the repo automatically.</p>;
@@ -1970,4 +1969,4 @@ export default function MainFrontIndex() {;
               </a>;
   </div>;
 </section>;
-/* AUTO-GENERATED:FRONT_ACTIONS_END */;
+* AUTO-GENERATED:FRONT_ACTIONS_END */;

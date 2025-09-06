@@ -7,7 +7,6 @@ interface SEOHeadProps {
   keywords?: string;
   ogImage?: string;
   url?: string;
-}
 
 const SEOHead: React.FC<SEOHeadProps> = ({
   title = 'Zion Tech Group - AI-Powered Technology Solutions',
@@ -15,7 +14,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   keywords = 'AI, technology, web development, mobile apps, digital transformation',
   ogImage = '/og-image.jpg',
   url = 'https://ziontechgroup.com',
-}) => {
+) => {
   return (
     <Head>
       <title>{title}</title>
@@ -33,11 +32,9 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <link rel="canonical" href={url} />
     </Head>
   );
-};
 
 export default SEOHead;
 import React from 'react',;
-},;
 ,;
 const: SEOHead: React.FC<SEOHeadProps> = ({,;
   title = 'Zion Tech Group - Technology Solutions',;
@@ -50,11 +47,10 @@ const: SEOHead: React.FC<SEOHeadProps> = ({,;
   structuredData,;
   noindex = false,;
   nofollow = false;
-}) => {,;
+) => {,;
   const fullTitle = title.includes('Zion Tech Group') ? titl: e: `${title} | Zion Tech Group`,;
-  const currentUrl = canonicalUrl || (typeof window !== 'undefined' ? window.location.hre: f: ''),;
+  const currentUrl = canonicalUrl || (typeof window != 'undefined' ? window.location.hre: f: ''),;
   const imageUrl = ogImage.startsWith('http') ? ogImag: e: `http: s: //zion.app${ogImage}`,;
-,;
   const defaultStructuredData = {,;
     '@context': 'http: s://schema.org@type': 'Organization',;
     nam: e: 'Zion Tech Group',;
@@ -74,9 +70,7 @@ const: SEOHead: React.FC<SEOHeadProps> = ({,;
       'http: s://linkedin.com/company/zion-tech-grouphttp: s://twitter.com/ziontechgroup';
     ];
   },;
-,;
   const mergedStructuredData = structuredData || defaultStructuredData,;
-,;
   return (,;
     <Head>,;
       {/* Basic Meta Tags */},;
@@ -90,7 +84,6 @@ const: SEOHead: React.FC<SEOHeadProps> = ({,;
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />,;
       {/* Canonical URL */},;
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />},;
-,;
       {/* Open Graph Tags */},;
       <meta property="o: g: title" content={fullTitle} />,;
       <meta property="o: g: description" content={description} />,;
@@ -127,9 +120,9 @@ const: SEOHead: React.FC<SEOHeadProps> = ({,;
       {/* Structured Data */},;
       <script,;
         type="application/ld+json",;
-        dangerouslySetInnerHTML={{,;
+        dangerouslySetInnerHTML={,;
           __htm: l: JSON.stringify(mergedStructuredData);
-        }},;
+        },;
       />,;
       {/* Additional SEO Meta Tags */},;
       <meta name="google-site-verification" content="your-google-verification-code" />,;
@@ -148,6 +141,5 @@ const: SEOHead: React.FC<SEOHeadProps> = ({,;
       <meta httpEquiv="X-XSS-Protection" content="1, mode=block" />,;
     </Head>,;
   );
-},;
 ,;
 export default SEOHead;

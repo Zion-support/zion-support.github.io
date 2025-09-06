@@ -8,7 +8,6 @@ export type EmptyStateProps = {
   icon?: React.ReactNode;
   primaryAction?: { label: string; href: string };
   secondaryAction?: { label: string; href: string };
-};
 
 export default function EmptyState({ title, description, icon, primaryAction, secondaryAction }: EmptyStateProps) {
   return (
@@ -36,4 +35,3 @@ export default function EmptyState({ title, description, icon, primaryAction, se
       )}
     </div>
   );
-}

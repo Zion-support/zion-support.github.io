@@ -1,14 +1,13 @@
-/**;
-* Helper script to update icon imports across the codebase;
-*;
-* Usage: * 1. Run: node scripts / update - icon - imports.js;
-* 2. This will find and replace lucide-react icon imports with imports from our custom icons package;
-*/;
+**;
+ Helper script to update icon imports across the codebase;
+ Usage: * 1. Run: node scripts / update - icon - imports.js;
+ 2. This will find and replace lucide-react icon imports with imports from our custom icons package;
+/;
 const fs = require ('fs'),
 const path = require ('path'),
 const glob = require ('glob'),
-// Helper to replace imports in a file;
-/**
+/ Helper to replace imports in a file;
+**
  * Helper script to update icon imports across the codebase
  *
  * Usage: * 1. Run: node scripts/update-icon-imports.js
@@ -18,7 +17,7 @@ const glob = require ('glob'),
 const fs = require('fs')
 const path = require('path')
 const glob = require('glob')
-// Helper to replace imports in a file
+/ Helper to replace imports in a file
 function updateIconImportsInFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8')
@@ -28,7 +27,7 @@ function updateIconImportsInFile(filePath) {
       'import {$1} from "@/components/icons"'
     )
     // Only write if changes were made
-    if (content !== updatedContent) {
+    if (content != updatedContent) {
       fs.writeFileSync(filePath, updatedContent, 'utf8')
       console.log(` Updated imports in ${filePath}`)
 
@@ -41,15 +40,15 @@ function updateIconImportsInFile(filePath) {
 
     return false
   }
-}
-// Find all TypeScript/JavaScript/JSX/TSX files
+
+/ Find all TypeScript/JavaScript/JSX/TSX files
 
 const files = glob.sync('src/**/*.{js,jsx,ts,tsx}')
 let updatedFiles = 0
 files.forEach(file => {
   const updated = updateIconImportsInFile(file)
   if (updated) updatedFiles++
-})
+)
 console.log(`\n Updated icon imports in ${updatedFiles} files`)
 console.log(`\n Make sure to run 'npm install glob' if needed to support this script`);
 
@@ -66,7 +65,7 @@ function updateIconImportsInFile() {
     // Check condition
 if ( {) {
   $2
-}
+
       fs.writeFileSync (file_path, updated_content, 'utf8'),
       console.log (` Updated imports in ${file_path}`),
       return true;
@@ -76,8 +75,8 @@ if ( {) {
     console.error (` Error processing ${file_path}:`, err),
     return false;
   }
-}
-// Find all TypeScript / JavaScript / JSX / TSX files;
+
+/ Find all TypeScript / JavaScript / JSX / TSX files;
 const files = glob.sync ('src/**/*.{js, jsx, ts, tsx}'),
 let updated_files = 0,
 files.for_each (file => {
@@ -85,8 +84,7 @@ files.for_each (file => {
   // Check condition
 if (updated_files++) {
   $2
-}
-}),
+
+),
 console.log (`\n Updated icon imports in ${updated_files} files`),
 console.log (`\n Make sure to run 'npm install glob' if needed to support this script`),
-;

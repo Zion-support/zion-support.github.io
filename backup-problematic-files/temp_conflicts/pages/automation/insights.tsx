@@ -1,15 +1,15 @@
 import { useEffect, useState } from 'react',;
 import Head from 'next/head',;
-;
+
 export default function AutomationInsightsPage() {;
   const [intel, setIntel] = useState<any>(null),;
   const [talentMd, setTalentMd] = useState<string>(''),;
-;
-  useEffect(() => {;
-    fetch('/data/automation/market-intel.json').then((r) => r.json()).then(setIntel).catch(() => {}),;
-    fetch('/data/automation/talent-highlights.md').then((r) => r.text()).then(setTalentMd).catch(() => {}),;
+
+  useEffect() => {;
+    fetch('/data/automation/market-intel.json').then(r) => r.json().then(setIntel).catch() => {}),;
+    fetch('/data/automation/talent-highlights.md').then(r) => r.text().then(setTalentMd).catch() => {}),;
   }, []),;
-;
+
   return (;
     <div>;
       <Head><title>Automation Insights  Zion</title></Head>;
@@ -24,23 +24,23 @@ export default function AutomationInsightsPage() {;
             <div className="mt-3">;
               <h3 className="font-medium">Top Keywords</h3>;
               <ul className="list-disc list-inside">;
-                {Object.entries(intel.insights.keywordCounts).map(([k, v]:any) => (;
+                {Object.entries(intel.insights.keywordCounts).map([k, v]:any) => (;
                   <li key={k}>{k} {v as any}</li>;
-                ))}
+                )}
               </ul>;
             </div>;
             <div className="mt-4">;
               <h3 className="font-medium">Top Languages</h3>;
               <ul className="list-disc list-inside">;
-                {intel.insights.topLanguages.map((l:any) => (;
+                {intel.insights.topLanguages.map(l:any) => (;
                   <li key={l.lang}>{l.lang} {l.count}</li>;
-                ))}
+                )}
               </ul>;
             </div>;
           </div>;
         )}
       </section>;
-;
+
       <section id="talent" className="mb-8">;
         <h2 className="font-medium">Talent Highlights</h2>;
         {!talentMd ? (;
@@ -51,4 +51,3 @@ export default function AutomationInsightsPage() {;
       </section>;
     </div>;
   ),;
-}

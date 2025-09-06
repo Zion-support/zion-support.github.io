@@ -2,7 +2,6 @@ import React from 'react';
 
 interface IndustryProps {
   className?: string;
-}
 
 const Industry: React.FC<IndustryProps> = ({ className }) => {
   return (
@@ -11,6 +10,5 @@ const Industry: React.FC<IndustryProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default Industry;

@@ -6,5 +6,3 @@ export function GlobalErrorHandler() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

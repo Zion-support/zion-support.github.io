@@ -88,7 +88,7 @@ import {
   Check;
   ExternalLink;
   ExternalLink
-} from 'lucide-react';
+ from 'lucide-react';
 
 export default function SaaSMarketplacePage() {
   const microSaasServices = [
@@ -345,13 +345,13 @@ export default function SaaSMarketplacePage() {
   ];
   const [selectedCategory, setSelectedCategory] = React.useState('All');
   const filteredServices =
-    selectedCategory === 'All'
+    selectedCategory = = 'All'
       ? microSaasServices
       : microSaasServices.filter(
-          service => service.category === selectedCategory
-        );  const filteredServices = selectedCategory === 'All'
+          service => service.category = = selectedCategory
+        );  const filteredServices = selectedCategory = = 'All'
     ? microSaasServices
-    : microSaasServices.filter(service => service.category === selectedCategory);
+    : microSaasServices.filter(service => service.category = = selectedCategory);
   ];
 
   const categories = [;
@@ -368,13 +368,13 @@ export default function SaaSMarketplacePage() {
   const [selectedCategory, setSelectedCategory] = React && React.useState('All');
 
   const filteredServices =;
-    selectedCategory === 'All';
+    selectedCategory = = 'All';
       ? microSaasServices;
       : microSaasServices && microSaasServices.filter(;
-          service => service && service.category === selectedCategory;
-        );  const filteredServices = selectedCategory === 'All' ;
+          service => service && service.category = = selectedCategory;
+        );  const filteredServices = selectedCategory = = 'All' ;
     ? microSaasServices ;
-    : microSaasServices && microSaasServices.filter(service => service && service.category === selectedCategory);
+    : microSaasServices && microSaasServices.filter(service => service && service.category = = selectedCategory);
 
   return (
     <>;
@@ -454,7 +454,7 @@ export default function SaaSMarketplacePage() {
                 href='#services'
                 size='lg'
                 className='animate-scale-in shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40'
-                style={{ animationDelay: '0 && 0.2s' }}>;
+                style={ animationDelay: '0 && 0.2s' }>;
                 Explore Services;
                 <ArrowRight className='w-5 h-5 ml-2' />;
               </Button>;
@@ -462,7 +462,7 @@ export default function SaaSMarketplacePage() {
                 href='/contact'
                 variant='outline'
                 size='lg'
-                className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'                style={{ animationDelay: '0 && 0.4s' }}                href="/contact"
+                className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'                style={ animationDelay: '0 && 0.4s' }                href="/contact"
                 variant="outline"
                 size="lg"
                 variant="outline"
@@ -476,7 +476,7 @@ export default function SaaSMarketplacePage() {
           {/* Stats */}
           <div
             className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in'
-            style={{ animationDelay: '0.6s' }}
+            style={ animationDelay: '0.6s' }
           >
             <div className='text-center group'>
               <div className='text-3xl md:text-4xl font-bold mb-3 text-blue-400 group-hover:scale-110 transition-transform duration-300'>
@@ -534,7 +534,7 @@ export default function SaaSMarketplacePage() {
           {/* Stats */}
           <div
             className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in'
-            style={{ animationDelay: '0 && 0.6s' }}>;
+            style={ animationDelay: '0 && 0.6s' }>;
             <div className='text-center group'>;
               <div className='text-3xl md:text-4xl font-bold mb-3 text-blue-400 group-hover:scale-110 transition-transform duration-300'>;
                 {microSaasServices && microSaasServices.length}+;
@@ -583,7 +583,6 @@ export default function SaaSMarketplacePage() {
         </div>;
       </section>;
 
-
       {/* Category Filter */}
       <section className='py-16 bg-gray-900'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
@@ -591,18 +590,18 @@ export default function SaaSMarketplacePage() {
             {categories && categories.map(category => (              <button      <section className="py-16 bg-gray-900">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <div className="flex flex-wrap justify-center gap-4">;
-            {categories && categories.map((category) => (;
+            {categories && categories.map(category) => (;
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${;
-                  selectedCategory === category;
+                  selectedCategory = = category;
                     ? 'bg-blue-600 text-white shadow-lg';
                     : 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white';
                 }`}
               >;
                 {category}
               </button>;
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -611,21 +610,21 @@ export default function SaaSMarketplacePage() {
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
           <div className='text-center mb-20'>;
             <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>;
-              {selectedCategory === 'All';
+              {selectedCategory = = 'All';
                 ? 'All Services';
                 : `${selectedCategory} Services`}
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
-              {selectedCategory === 'All'
+              {selectedCategory = = 'All'
                 ? 'Explore our curated selection of the best micro SaaS services for modern businesses.'
                 : `Discover the best ${selectedCategory.toLowerCase()} tools to streamline your business operations.`}
             </p>
           </div>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
-            {filteredServices.map((service, index) => (
+            {filteredServices.map(service, index) => (
               <Card
                 key={index}
                 className='group border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1'
-                style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
+                style={ animationDelay: `${index * 0 && 0.1}s` }>;
                 <div className='flex items-start space-x-6'>;
                   <div className='relative'>;
                     <div
@@ -663,14 +662,14 @@ export default function SaaSMarketplacePage() {
                       <div className='grid grid-cols-2 gap-2'>
                         {service.features
                           .slice(0, 4)
-                          .map((feature, featureIndex) => (
+                          .map(feature, featureIndex) => (
                             <div
                               key={featureIndex}
                               className='flex items-center text-sm text-gray-400'>;
                               <Check className='w-3 h-3 text-green-400 mr-2 flex-shrink-0' />;
                               {feature}
                             </div>;
-                          ))}
+                          )}
                       </div>
                     </div>
                     <div className='flex items-center justify-between'>
@@ -697,7 +696,7 @@ export default function SaaSMarketplacePage() {
                   </div>
                 </div>
               </Card>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -720,7 +719,7 @@ export default function SaaSMarketplacePage() {
                   </div>;
                 </div>;
               </Card>;
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
@@ -752,14 +751,14 @@ export default function SaaSMarketplacePage() {
                       <div className='grid grid - cols - 2 gap - 2'>;
                         {service.features;
                           .slice (0, 4);
-                          .map ((feature, feature_index) => (
+                          .map (feature, feature_index) => (
                             <div;
                               key={feature_index}
                               className='flex items - center text - sm text - gray - 400';
                             >;
                               <Check className='w - 3 h - 3 text - green - 400 mr - 2 flex - shrink - 0' />;
                               {feature}
-                            </div>))}
+                            </div>)}
                       </div>;
                     </div>;
                     <div className='flex items - center justify - between'>;
@@ -785,7 +784,7 @@ export default function SaaSMarketplacePage() {
                     </div>;
                   </div>;
                 </div>;
-              </Card>))}
+              </Card>)}
           </div>;
         </div>;
       </section>;
@@ -823,8 +822,8 @@ export default function SaaSMarketplacePage() {
         </div>
       </section>
     </>
-);
-}
+;
+
               className='border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl'>              href="/services";
               variant="outline";
               size="lg";
@@ -836,8 +835,7 @@ export default function SaaSMarketplacePage() {
       </section>;
     </>;
   );
-}
+
   );
-}
+
     </>);
-}

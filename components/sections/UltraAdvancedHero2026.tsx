@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React from 'react';
 import { motion  } from 'framer-motion';
 import Link from 'next/link';
@@ -51,7 +51,7 @@ import {;
   Phone,;
   Mail,;
   MapPin,;
-} from 'lucide-react';
+ from 'lucide-react';
 import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services';
 import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech-services';
 import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';
@@ -90,7 +90,7 @@ import {
   Phone,
   Mail,
   MapPin,
-} from 'lucide-react';
+ from 'lucide-react';
 import { aiAutonomousServices2026 } from '../../data / 2026 - ai - autonomous - services';
 import { quantumSpaceTechServices2026 } from '../../data / 2026 - quantum - space - tech - services';
 import { metaverseDigitalRealityServices2026 } from '../../data / 2026 - metaverse - digital - reality - services';
@@ -102,7 +102,7 @@ function UltraAdvancedHero2026() {
     aiAutonomousServices2026.length +;
     quantumSpaceTechServices2026.length +;
     metaverseDigitalRealityServices2026.length;
-;
+
   const contact_info = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -114,23 +114,21 @@ export default /**
  */
 function UltraAdvancedHero2026() {
   const total_services = aiAutonomousServices2026.length + quantumSpaceTechServices2026.length + metaverseDigitalRealityServices2026.length;
-;
+
   const contact_info = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709';
   }
-;
+
   const container_variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1
       transition: {
         staggerChildren: 0.1
+      },  };        staggerChildren: 0.1
       }
-    },  };        staggerChildren: 0.1
-      }
-    }
   }
   const itemVariants = {
     hidden: { opacity: 0, y: 30 }
@@ -140,7 +138,6 @@ function UltraAdvancedHero2026() {
       transition: {
         duration: 0.8
       }
-    }
   }
   return (
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>;
@@ -647,216 +644,206 @@ function UltraAdvancedHero2026() {
       {/* Floating Elements */}
       <div className='absolute inset-0 pointer-events-none'>;
         <motion&& motion.div
-          animate={{
+          animate={
             y: [0, -20, 0]
             rotate: [0, 5, 0]
-          }}
-          transition={{
+          }
+          transition={
             duration: 6
             repeat: Infinity
             ease: 'easeInOut'
-          }}
+          }
           className='absolute top-20 right-20 text-6xl opacity-20'
         >
-          
+
         </motion.div>
         <motion.div
-          animate={{
+          animate={
             y: [0, 20, 0]
             rotate: [0, -5, 0]
           className='absolute top - 20 right - 20 text - 6xl opacity - 20';
         >;
-          ;
         </motion.div>;
         <motion.div;
-          animate={{
+          animate={
             coordinate_y: [0, 20, 0],
             rotate: [0, -5, 0],
-          }}
-          transition={{
+          }
+          transition={
             duration: 8
             repeat: Infinity
             ease: 'easeInOut'
-          }}
+          }
           className='absolute bottom-20 left-20 text-6xl opacity-20'
         >
-          
+
         </motion.div>
         <motion.div
-          animate={{
+          animate={
             y: [0, -15, 0]
             rotate: [0, 3, 0]
           className='absolute bottom - 20 left - 20 text - 6xl opacity - 20';
         >;
-          ;
         </motion.div>;
         <motion.div;
-          animate={{
+          animate={
             coordinate_y: [0, -15, 0],
             rotate: [0, 3, 0],
-          }}
-          transition={{
+          }
+          transition={
             duration: 7
             repeat: Infinity
             ease: 'easeInOut'
-          }}
+          }
           className='absolute top-1/3 left-10 text-5xl opacity-20'
         >
-          
+
         </motion.div>
         <motion.div
-          animate={{
+          animate={
             y: [0, 15, 0]
             rotate: [0, -3, 0]
           className='absolute top - 1/3 left - 10 text - 5xl opacity - 20';
         >;
-          ;
         </motion.div>;
         <motion.div;
-          animate={{
+          animate={
             coordinate_y: [0, 15, 0],
             rotate: [0, -3, 0],
-          }}
-          transition={{
+          }
+          transition={
             duration: 9
             repeat: Infinity
             ease: 'easeInOut'
-          }}
+          }
           className='absolute bottom-1/3 right-10 text-5xl opacity-20'        >        <motion.div
-          animate={{
+          animate={
             y: [0, -20, 0];
           className='absolute bottom-1/3 right-10 text-5xl opacity-20'>        <motion&& motion.div
-          animate={{ 
+          animate={ 
             y: [0, -20, 0]
             rotate: [0, 5, 0]
-          }}
-          transition={{
+          }
+          transition={
             duration: 6
             repeat: Infinity
             ease: "easeInOut"
-          }}
+          }
           className="absolute top-20 right-20 text-6xl opacity-20"
         >
-          
+
         </motion.div>
         <motion.div
-          animate={{
+          animate={
             y: [0, 20, 0];
             rotate: [0, -5, 0]
-          }}
-          transition={{
+          }
+          transition={
             duration: 8
             repeat: Infinity
             ease: "easeInOut"
-          }}
+          }
           className="absolute bottom-20 left-20 text-6xl opacity-20"
         >
-          
+
         </motion.div>
         <motion.div
-          animate={{
+          animate={
             y: [0, -15, 0];
             rotate: [0, 3, 0]
-          }}
-          transition={{
+          }
+          transition={
             duration: 7
             repeat: Infinity
             ease: "easeInOut"
-          }}
+          }
           className="absolute top-1/3 left-10 text-5xl opacity-20"
         >
-          
+
         </motion.div>
         <motion.div
-          animate={{
+          animate={
             y: [0, 15, 0];
             rotate: [0, -3, 0]
-          }}
-          transition={{
+          }
+          transition={
             duration: 9
             repeat: Infinity
 
             ease: "easeInOut"
-          }}
+          }
           className="absolute bottom-1/3 right-10 text-5xl opacity-20">;
-          ;
         </motion && motion.div>;
       </div>;
     </section>;
   );  );
           className="absolute bottom-1/3 right-10 text-5xl opacity-20"
         >
-          
+
         </motion.div>
       </div>
     </section>
-);  )
-}
+;  )
+
           className="absolute bottom-1/3 right-10 text-5xl opacity-20">;
-          ;
         </motion && motion.div>;
       </div>;
     </section>;
   );  );
-}
+
   )
-}
+
           className='absolute bottom - 1/3 right - 10 text - 5xl opacity - 20'        >        <motion.div;
-          animate={{
+          animate={
             coordinate_y: [0, -20, 0];
             rotate: [0, 5, 0];
-          }}
-          transition={{
+          }
+          transition={
             duration: 6,
             repeat: Infinity,
             ease: "easeInOut";
-          }}
+          }
           className="absolute top - 20 right - 20 text - 6xl opacity - 20";
         >;
-          ;
         </motion.div>;
         <motion.div;
-          animate={{
+          animate={
             coordinate_y: [0, 20, 0];
             rotate: [0, -5, 0];
-          }}
-          transition={{
+          }
+          transition={
             duration: 8,
             repeat: Infinity,
             ease: "easeInOut";
-          }}
+          }
           className="absolute bottom - 20 left - 20 text - 6xl opacity - 20";
         >;
-          ;
         </motion.div>;
         <motion.div;
-          animate={{
+          animate={
             coordinate_y: [0, -15, 0];
             rotate: [0, 3, 0];
-          }}
-          transition={{
+          }
+          transition={
             duration: 7,
             repeat: Infinity,
             ease: "easeInOut";
-          }}
+          }
           className="absolute top - 1/3 left - 10 text - 5xl opacity - 20";
         >;
-          ;
         </motion.div>;
         <motion.div;
-          animate={{
+          animate={
             coordinate_y: [0, 15, 0];
             rotate: [0, -3, 0];
-          }}
-          transition={{
+          }
+          transition={
             duration: 9,
             repeat: Infinity,
             ease: "easeInOut";
-          }}
+          }
           className="absolute bottom - 1/3 right - 10 text - 5xl opacity - 20";
         >;
-          ;
         </motion.div>;
       </div>;
-    </section>));
-}
+    </section>);

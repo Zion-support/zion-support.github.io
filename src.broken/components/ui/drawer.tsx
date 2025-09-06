@@ -6,5 +6,3 @@ export function drawer() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

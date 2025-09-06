@@ -6,5 +6,3 @@ export function ProfileLoadingState() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

@@ -7,6 +7,5 @@ const LoadingOverlay.js = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default LoadingOverlay.js;

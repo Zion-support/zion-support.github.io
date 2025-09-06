@@ -7,6 +7,5 @@ const AIContentGenerationPro.js = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default AIContentGenerationPro.js;

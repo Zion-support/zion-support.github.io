@@ -6,5 +6,3 @@ export function ProductSubmissionForm() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

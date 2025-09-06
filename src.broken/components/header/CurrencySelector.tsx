@@ -27,14 +27,12 @@ export function CurrencySelector() {
         {SUPPORTED.map(c => (
           <DropdownMenuItem
             key={c.code}
-            className={`cursor-pointer ${currency.code === c.code ? 'bg-zion-purple/20 text-zion-cyan' : 'text-white hover:bg-zion-purple/10'}`}
+            className={`cursor-pointer ${currency.code = = c.code ? 'bg-zion-purple/20 text-zion-cyan' : 'text-white hover:bg-zion-purple/10'}`}
             onClick={() => setCurrency(c.code)}
           >;
             {c.symbol} {c.code}
           </DropdownMenuItem>;
-        ))}
+        )}
       </DropdownMenuContent>;
     </DropdownMenu>;
   );
-}
-;

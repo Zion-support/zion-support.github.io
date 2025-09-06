@@ -4,22 +4,21 @@ import { supabase } from "@/integrations/supabase/client",;
 import { useAuth } from "@/hooks/useAuth",;
 import { Dispute, DisputeMessage, DisputeAttachment, DisputeStatus } from "@/types/disputes",;
 import { toast } from "sonner",;
-;
+
 export function useDisputes() {;
   const { user } = useAuth(),;
   const [disputes, setDisputes] = useState<Dispute[]>([]),;
   const [isLoading, setIsLoading] = useState(true),;
   const [error, setError] = useState<string | null>(null),;
-;
+
   const fetchDisputes = async () => {;
     if (!user) {;
       setIsLoading(false),;
       return,;
     }
-;
+
     try {;
       setIsLoading(true),;
-      ;
       const { data, error:fetchError } = await supabase;
         .from("disputes");
         .select(`;
@@ -31,24 +30,20 @@ export function useDisputes() {;
             talent_id,;
             job:jobs(title);
           ),;
-          client_profile:projects!projects_client_id_fkey(client_profile:profiles!projects_client_id_fkey(display_name, avatar_url)),;
-          talent_profile:projects!projects_talent_id_fkey(talent_profile:profiles!projects_talent_id_fkey(display_name, avatar_url));
+          client_profile:projects!projects_client_id_fkey(client_profile:profiles!projects_client_id_fkey(display_name, avatar_url),;
+          talent_profile:projects!projects_talent_id_fkey(talent_profile:profiles!projects_talent_id_fkey(display_name, avatar_url);
         `);
         .order("created_at", { ascending:false }),;
-      ;
       if (fetchError) throw fetchError,;
-      ;
       // Transform data if needed;
-      const transformedData = data.map((dispute:any) => ({;
+      const transformedData = data.map(dispute:any) => ({;
         ...dispute,;
         client_profile:dispute.client_profile?.client_profile,;
         talent_profile:dispute.talent_profile?.talent_profile,;
         project:{;
           ...dispute.project,;
           title:dispute.project?.job?.title || 'Untitled Project';
-        }
-      })),;
-      ;
+        }),;
       setDisputes(transformedData as Dispute[]),;
       setError(null),;
     } catch (err:any) {;
@@ -57,9 +52,8 @@ export function useDisputes() {;
       toast.error("Failed to fetch disputes");
     } finally {;
       setIsLoading(false),;
-    }
-  },;
-;
+    },;
+
   const getDisputeById = async (disputeId:string):Promise<Dispute | null> => {;
     try {;
       const { data, error } = await supabase;
@@ -73,14 +67,12 @@ export function useDisputes() {;
             talent_id,;
             job:jobs(title);
           ),;
-          client_profile:projects!projects_client_id_fkey(client_profile:profiles!projects_client_id_fkey(display_name, avatar_url)),;
-          talent_profile:projects!projects_talent_id_fkey(talent_profile:profiles!projects_talent_id_fkey(display_name, avatar_url));
+          client_profile:projects!projects_client_id_fkey(client_profile:profiles!projects_client_id_fkey(display_name, avatar_url),;
+          talent_profile:projects!projects_talent_id_fkey(talent_profile:profiles!projects_talent_id_fkey(display_name, avatar_url);
         `);
         .eq("id", disputeId);
         .single(),;
-      ;
       if (error) throw error,;
-      ;
       return {;
         ...data,;
         client_profile:data.client_profile?.client_profile,;
@@ -88,15 +80,13 @@ export function useDisputes() {;
         project:{;
           ...data.project,;
           title:data.project?.job?.title || 'Untitled Project';
-        }
-      } as Dispute,;
+        } as Dispute,;
     } catch (err:any) {;
       console.error("Error fetching dispute:", err),;
       toast.error("Failed to fetch dispute details"),;
       return null,;
-    }
-  },;
-;
+    },;
+
   const createDispute = async (disputeData:{ ;
     project_id:string,;
     milestone_id?:string,;
@@ -107,7 +97,7 @@ export function useDisputes() {;
       toast.error("You must be logged in to create a dispute"),;
       return null,;
     }
-;
+
     try {;
       const { data, error } = await supabase;
         .from("disputes");
@@ -117,45 +107,38 @@ export function useDisputes() {;
         });
         .select();
         .single(),;
-;
+
       if (error) throw error,;
-      ;
       toast.success("Dispute submitted successfully"),;
       fetchDisputes(), // Refresh the list;
-      ;
       return data as Dispute,;
     } catch (err:any) {;
       console.error("Error creating dispute:", err),;
       toast.error("Failed to submit dispute"),;
       return null,;
-    }
-  },;
-;
+    },;
+
   const updateDisputeStatus = async (disputeId:string, status:DisputeStatus):Promise<boolean> => {;
     try {;
       const { error } = await supabase;
         .from("disputes");
         .update({ status });
         .eq("id", disputeId),;
-      ;
       if (error) throw error,;
-      ;
       // Update local state;
       setDisputes(prevDisputes => ;
         prevDisputes.map(dispute => ;
-          dispute.id === disputeId ? { ...dispute, status } dispute;
+          dispute.id = = disputeId ? { ...dispute, status } dispute;
         );
       ),;
-      ;
       toast.success(`Dispute status updated to ${status}`),;
       return true,;
     } catch (err:any) {;
       console.error("Error updating dispute status:", err),;
       toast.error("Failed to update dispute status"),;
       return false,;
-    }
-  },;
-;
+    },;
+
   const resolveDispute = async (;
     disputeId:string, ;
     resolution:{ summary:string, resolution_type:string }
@@ -170,13 +153,11 @@ export function useDisputes() {;
           resolution_type:resolution.resolution_type;
         });
         .eq("id", disputeId),;
-      ;
       if (error) throw error,;
-      ;
       // Update local state;
       setDisputes(prevDisputes => ;
         prevDisputes.map(dispute => ;
-          dispute.id === disputeId ;
+          dispute.id = = disputeId ;
             ? { ;
                 ...dispute, ;
                 status:'resolved', ;
@@ -186,16 +167,14 @@ export function useDisputes() {;
               } dispute;
         );
       ),;
-      ;
       toast.success("Dispute resolved successfully"),;
       return true,;
     } catch (err:any) {;
       console.error("Error resolving dispute:", err),;
       toast.error("Failed to resolve dispute"),;
       return false,;
-    }
-  },;
-;
+    },;
+
   const getDisputeMessages = async (disputeId:string):Promise<DisputeMessage[]> => {;
     try {;
       const { data, error } = await supabase;
@@ -206,23 +185,20 @@ export function useDisputes() {;
         `);
         .eq("dispute_id", disputeId);
         .order("created_at", { ascending:true }),;
-      ;
       if (error) throw error,;
-      ;
       return data as DisputeMessage[],;
     } catch (err:any) {;
       console.error("Error fetching dispute messages:", err),;
       toast.error("Failed to fetch messages"),;
       return [],;
-    }
-  },;
-;
+    },;
+
   const addDisputeMessage = async (disputeId:string, message:string, isAdminNote = false):Promise<boolean> => {;
     if (!user) {;
       toast.error("You must be logged in to send a message"),;
       return false,;
     }
-;
+
     try {;
       const { error } = await supabase;
         .from("dispute_messages");
@@ -232,25 +208,21 @@ export function useDisputes() {;
           message,;
           is_admin_note:isAdminNote;
         }),;
-      ;
       if (error) throw error,;
-      ;
       toast.success("Message sent successfully"),;
       return true,;
     } catch (err:any) {;
       console.error("Error sending message:", err),;
       toast.error("Failed to send message"),;
       return false,;
-    }
-  },;
-;
+    },;
+
   // Fetch disputes when component mounts or user changes;
-  useEffect(() => {;
+  useEffect() => {;
     if (user) {;
       fetchDisputes(),;
-    }
-  }, [user]),;
-;
+    }, [user]),;
+
   return {;
     disputes,;
     isLoading,;
@@ -265,7 +237,7 @@ export function useDisputes() {;
   },; export function useDisputes () {
   const {
   user 
-}= useAuth ();
+= useAuth ();
 const [disputes, setDisputes] = useState<Dispute[]> ([]);
 const [isLoading, setIsLoading] = useState (true);
 const [error, setError] = useState<string | null> (null);
@@ -273,93 +245,83 @@ const fetchDisputes = async () => {
   if (!user) {
   setIsLoading (false);
 return 
-}try {
+try {
   setIsLoading (true);
 const {
   data, error: fetchError 
-}= await supabase .from ("disputes") project: projects (scope summary;
+= await supabase .from ("disputes") project: projects (scope summary;
 job id;
 client id;
 talent id;
-job:jobs (title) );
-client profile:projects!projects client id fkey (client profile:profiles!projects client id fkey (display name, avatar url) );
-talent profile:projects!projects talent id fkey (talent profile:profiles!projects talent id fkey (display name, avatar url) ) `) //Transform data if needed 
-}finally {
+job:jobs (title);
+client profile:projects!projects client id fkey (client profile:profiles!projects client id fkey (display name, avatar url);
+talent profile:projects!projects talent id fkey (talent profile:profiles!projects talent id fkey (display name, avatar url) `) //Transform data if needed 
+finally {
   setIsLoading (false) 
-}
-};
+
+;
 const getDisputeById = async (disputeId: string) : Promise<Dispute | null> => {
   try {
   const {
   data, error 
-}= await supabase .from ("disputes") project: projects (scope summary;
+= await supabase .from ("disputes") project: projects (scope summary;
 job id;
 client id;
 talent id;
-job:jobs (title) );
-client profile:projects!projects client id fkey (client profile:profiles!projects client id fkey (display name, avatar url) );
-talent profile:projects!projects talent id fkey (talent profile:profiles!projects talent id fkey (display name, avatar url) ) `) if (error) throw error;
-}
-};
+job:jobs (title);
+client profile:projects!projects client id fkey (client profile:profiles!projects client id fkey (display name, avatar url);
+talent profile:projects!projects talent id fkey (talent profile:profiles!projects talent id fkey (display name, avatar url) `) if (error) throw error;
 const createDispute = async (disputeData: {
   project id: string;
 milestone id?: string;
 reason code: string;
 description: string 
-}) : Promise<Dispute | null> => {
+) : Promise<Dispute | null> => {
   if (!user) {
-  
-}try {
+
+try {
   const {
   data, error 
-}= await supabase .from ("disputes") .insert ({
+= await supabase .from ("disputes") .insert ({
   ...disputeData;
 raised by: user.id 
-}) if (error) throw error;
-}
-};
+) if (error) throw error;
 const updateDisputeStatus = async (disputeId: string, status: DisputeStatus) : Promise<boolean> => {
   try {
   const {
   error 
-}= await supabase .from ("disputes") .update ({
+= await supabase .from ("disputes") .update ({
   status 
-}) //Update local state setDisputes (prevDisputes => prevDisputes.map (dispute => dispute.id === disputeId ? {
+) //Update local state setDisputes (prevDisputes => prevDisputes.map (dispute => dispute.id = = disputeId ? {
   ...dispute, status 
-}: dispute) );
-}
-};
-//Update local state setDisputes (prevDisputes => prevDisputes.map (dispute => dispute.id === disputeId ? {
+: dispute);
+/Update local state setDisputes (prevDisputes => prevDisputes.map (dispute => dispute.id = = disputeId ? {
   ...dispute, status: 'resolved', resolved at: new Date () .toISOString (), resolution summary: resolution.summary, resolution type: resolution.resolution type as any 
-}: dispute) );
-}
-};
+: dispute);
 const getDisputeMessages = async (disputeId: string) : Promise<DisputeMessage[]> => {
   try {
   const {
   data, error 
-}= await supabase .from ("dispute messages") user profile:profiles!dispute messages user id fkey (display name, avatar url) `) 
-}
-};
+= await supabase .from ("dispute messages") user profile:profiles!dispute messages user id fkey (display name, avatar url) `) 
+
+;
 const addDisputeMessage = async (disputeId: string, message: string, isAdminNote = false) : Promise<boolean> => {
   if (!user) {
-  
-}try {
+
+try {
   const {
   error 
-}= await supabase .from ("dispute messages") .insert ({
+= await supabase .from ("dispute messages") .insert ({
   dispute id: disputeId;
 user id: user.id;
 message;
 is admin note: isAdminNote 
-});
-}
-};
-// Fetch disputes when component mounts or user changes useEffect ( () => {
+);
+/ Fetch disputes when component mounts or user changes useEffect () => {
   if (user) {
   fetchDisputes () 
-}
-}, [user]);
+
+, [user]);
 return {
   disputes;
 isLoading;
@@ -371,5 +333,3 @@ updateDisputeStatus;
 resolveDispute;
 getDisputeMessages;
 addDisputeMessage 
-}
-}

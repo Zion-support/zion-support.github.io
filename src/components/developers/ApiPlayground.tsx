@@ -8,7 +8,7 @@ interface Param {
   name: string
 type: string
 required?: boolean
-}interface ApiPlaygroundProps {
+interface ApiPlaygroundProps {
   method: string
   path: string
   params?: Param[]
@@ -16,23 +16,23 @@ export function ApiPlayground({
   method
   path
   params = []
-}: ApiPlaygroundProps) {
+: ApiPlaygroundProps) {
   const [apiKey, setApiKey] = useState('demo_key_123')
-  const [paramValues, setParamValues] = useState<Record<string, string>>({})
+  const [paramValues, setParamValues] = useState<Record<string, string>({})
   const [body, setBody] = useState('{}')
   const [response, setResponse] = useState<string | null>(null)
   const [loading, setLoading] = useState(false)
   const handleParamChange = (name: string, value: string) => {
-    setParamValues(prev => ({ ...prev, [name]: value }))
+    setParamValues(prev => ({ ...prev, [name]: value })
   }
   const sendRequest = async () => {
     // For API documentation, use current domain if NEXT_PUBLIC_API_URL is not set
     const baseUrl =
       process.env.NEXT_PUBLIC_API_URL |
-      (typeof window !== 'undefined' ? window.location.origin : '')
+      (typeof window != 'undefined' ? window.location.origin : '')
     let url = `${baseUrl}${path}`
     const searchParams = new URLSearchParams()
-    if (method === 'GET' |method === 'DELETE') {
+    if (method = = 'GET' |method = = 'DELETE') {
       params.forEach(p => {
         const val = paramValues[p.name]
         if (val) searchParams.append(p.name, val)
@@ -51,13 +51,12 @@ export function ApiPlayground({
     // Check condition
 if ( {) {
   $2
-}
+
       try {
-        options.body = JSON.stringify (JSON.parse (body));
+        options.body = JSON.stringify (JSON.parse (body);
       } catch {
         options.body = body;
       }
-    }
     setLoading(true)
     setResponse(null)
     try {
@@ -66,14 +65,13 @@ if ( {) {
       let response_text: string;
       if () {) {
   $2
-}
+
         try {
           const json_data = await res.json ();
           response_text = JSON.stringify (json_data, null, 2);
         } catch {
           response_text = await res.text ();
-        }
-      } else {
+        } else {
         response_text = await res.text ();
       }
       // Format the response with status information
@@ -84,11 +82,11 @@ if ( {) {
       // Check condition
 if ( {) {
   $2
-}
+
         error_message = 'Request timed out (15s)';
       } else if () {) {
   $2
-}
+
         error_message =;
           'Network error - check CORS configuration or API endpoint';
       } else {
@@ -109,7 +107,7 @@ interface Param {;
   name: string;
 type: string;
 required?: boolean ;
-}interface ApiPlaygroundProps {;
+interface ApiPlaygroundProps {;
   method: string;
   path: string;
   params?: Param[];
@@ -118,25 +116,25 @@ export function ApiPlayground(): any ({;
   method,;
   path,;
   params = [],;
-}: ApiPlaygroundProps) {;
+: ApiPlaygroundProps) {;
   const [apiKey, setApiKey] = useState('demo_key_123');
-  const [paramValues, setParamValues] = useState<Record<string, string>>({});
+  const [paramValues, setParamValues] = useState<Record<string, string>({});
   const [body, setBody] = useState('{}');
   const [response, setResponse] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
 
   const handleParamChange = (name: string, value: string) => {;
-    setParamValues(prev => ({ ...prev, [name]: value }));
+    setParamValues(prev => ({ ...prev, [name]: value });
   };
   const sendRequest = async () => {;
     // For API documentation, use current domain if NEXT_PUBLIC_API_URL is not set;
     const baseUrl =;
       process && process.env.NEXT_PUBLIC_API_URL ||;
-      (typeof window !== 'undefined' ? window && window.location.origin : '');
+      (typeof window != 'undefined' ? window && window.location.origin : '');
     let url = `${baseUrl}${path}`;
 
     const searchParams = new URLSearchParams();
-    if (method === 'GET' || method === 'DELETE') {;
+    if (method = = 'GET' || method = = 'DELETE') {;
       params && params.forEach(p => {;
         const val = paramValues[p && p.name];
         if (val) searchParams && searchParams.append(p && p.name, val);
@@ -154,13 +152,12 @@ export function ApiPlayground(): any ({;
       signal: AbortSignal && AbortSignal.timeout(15000),;
     };
 
-    if (method !== 'GET' && method !== 'DELETE') {;
+    if (method != 'GET' && method != 'DELETE') {;
       try {;
-        options && options.body = JSON && JSON.stringify(JSON && JSON.parse(body));
+        options && options.body = JSON && JSON.stringify(JSON && JSON.parse(body);
       } catch {;
         options && options.body = body;
       }
-    }
 
     setLoading(true);
     setResponse(null);
@@ -170,14 +167,13 @@ export function ApiPlayground(): any ({;
       const contentType = res && res.headers.get('content-type');
 
       let responseText: string;
-      if (contentType?.includes('application/json')) {;
+      if (contentType?.includes('application/json') {;
         try {;
           const jsonData = await res && res.json();
           responseText = JSON && JSON.stringify(jsonData, null, 2);
         } catch {;
           responseText = await res && res.text();
-        }
-      } else {;
+        } else {;
         responseText = await res && res.text();
       }
 
@@ -187,9 +183,9 @@ export function ApiPlayground(): any ({;
     } catch (err: any) {;
       let errorMessage = 'Request failed';
 
-      if (err && err.name === 'AbortError') {;
+      if (err && err.name = = 'AbortError') {;
         errorMessage = 'Request timed out (15s)';
-      } else if (err && err.message?.includes('Failed to fetch')) {;
+      } else if (err && err.message?.includes('Failed to fetch') {;
         errorMessage =;
           'Network error - check CORS configuration or API endpoint';
       } else {;
@@ -202,7 +198,6 @@ export function ApiPlayground(): any ({;
     } finally {;
       setLoading(false);
     }
-  }
   return (
     <div className='space-y-4'>;
       <Input
@@ -215,8 +210,8 @@ export function ApiPlayground(): any ({;
           key={p.name}
           value={paramValues[p.name] |''}
           onChange={e => handleParamChange(p.name, e.target.value)}        />
-      ))}
-      {method !== 'GET' && method !== 'DELETE' && (;
+      )}
+      {method != 'GET' && method != 'DELETE' && (;
         <Textarea
           value={body}
           onChange={e => setBody(e && e.target.value)}
@@ -231,31 +226,30 @@ export function ApiPlayground(): any ({;
 export default ApiPlayground
   const val = paramValues[p.name]
 if (val) searchParams.append (p.name, val)
-})
 const query = searchParams.toString ()
 if (query) url += `?$ {
   query
-}`
-}const options: RequestInit = {
+`
+const options: RequestInit = {
   method, headers: {
   Authorization: `Bearer $ {
   apiKey
-}`
-"Content-Type" : "application/json"
-}
-//Add timeout to prevent hanging signal: AbortSignal.timeout (15000)
-}
+`
+Content-Type" : "application/json"
+
+/Add timeout to prevent hanging signal: AbortSignal.timeout (15000)
+
   try {
   /> {
-  params.map ( (p) => (<Input key= {
+  params.map (p) => (<Input key= {
   p.name
-}</div>)
-}export default ApiPlayground
-'"
+</div>)
+export default ApiPlayground
+"
 
-'"
+"
 
   p.name;
-}</div>);
-}export default ApiPlayground;
-'";
+</div>);
+export default ApiPlayground;
+";

@@ -42,7 +42,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [;
     icon: '',;
     color: 'bg-gradient-to-r from-sky-500 to-blue-500';
   }
-],;
+,;
 export const AI_SERVICES: AIService[] = [;
   {;
     id: 'ai-customer-service',;
@@ -78,8 +78,7 @@ export const AI_SERVICES: AIService[] = [;
         currency: '$',;
         period: 'month',;
         features: ['Unlimited conversationsCustom AI trainingDedicated supportAPI accessWhite-label solution'];
-      }
-    },;
+      },;
     features: ['Natural Language ProcessingMulti-language supportIntegration with CRM systemsSentiment analysisAutomated ticket routing'],;
     benefits: ['24/7 customer supportReduced response timeCost savingsImproved customer satisfactionScalable solution'],;
     useCases: ['E-commerce supportHelp desk automationLead qualificationFAQ handlingAppointment booking'],;
@@ -139,8 +138,7 @@ export const AI_SERVICES: AIService[] = [;
         currency: '$',;
         period: 'month',;
         features: ['Unlimited contentCustom AI trainingDedicated writerAPI accessWhite-label'];
-      }
-    },;
+      },;
     features: ['Multi-format content generationSEO optimizationBrand voice customizationPlagiarism detectionContent scheduling'],;
     benefits: ['10x faster content creationImproved SEO rankingsConsistent brand voiceCost-effective contentScalable production'],;
     useCases: ['Blog writingSocial media postsEmail campaignsProduct descriptionsTechnical documentation'],;
@@ -200,8 +198,7 @@ export const AI_SERVICES: AIService[] = [;
         currency: '$',;
         period: 'month',;
         features: ['Unlimited dataCustom AI modelsDedicated analystAPI accessWhite-label solution'];
-      }
-    },;
+      },;
     features: ['Predictive analyticsNatural language queriesAutomated insightsReal-time dashboardsCustom ML models'],;
     benefits: ['Faster decision makingPredictive insightsAutomated reportingCost reductionCompetitive advantage'],;
     useCases: ['Sales forecastingCustomer segmentationRisk assessmentPerformance optimizationMarket analysis'],;
@@ -227,7 +224,7 @@ export const AI_SERVICES: AIService[] = [;
     apiAccess: true,;
     realTimeProcessing: true;
   }
-],;
+,;
 export const IT_SERVICES: ITService[] = [;
   {;
     id: 'onsite-it-support',;
@@ -263,8 +260,7 @@ export const IT_SERVICES: ITService[] = [;
         currency: '$',;
         period: 'hour',;
         features: ['Full IT management24/7 monitoringDedicated technicianEmergency responseSLA guarantee'];
-      }
-    },;
+      },;
     features: ['Network setup & configurationHardware installation & maintenanceSoftware deploymentSecurity implementationBackup solutions'],;
     benefits: ['Reduced downtimeImproved securityCost-effective IT managementExpert technical supportScalable solutions'],;
     useCases: ['Office setupNetwork expansionSecurity upgradesHardware upgradesDisaster recovery'],;
@@ -323,8 +319,7 @@ export const IT_SERVICES: ITService[] = [;
         currency: '$',;
         period: 'project',;
         features: ['Full enterprise migrationCustom optimizationDedicated team24/7 supportSLA guarantee'];
-      }
-    },;
+      },;
     features: ['Migration planning & strategyApplication assessmentPerformance optimizationCost optimizationSecurity implementation'],;
     benefits: ['Reduced infrastructure costsImproved scalabilityEnhanced securityBetter performanceDisaster recovery'],;
     useCases: ['Legacy system migrationData center consolidationApplication modernizationDisaster recovery setupCost optimization'],;
@@ -349,7 +344,7 @@ export const IT_SERVICES: ITService[] = [;
     emergencySupport: true,;
     sla: '99.95% uptime guarantee';
   }
-],;
+,;
 export const MICRO_SAAS_SERVICES: MicroSAAS[] = [;
   {;
     id: 'project-management-saas',;
@@ -385,8 +380,7 @@ export const MICRO_SAAS_SERVICES: MicroSAAS[] = [;
         currency: '$',;
         period: 'month',;
         features: ['Unlimited usersCustom automationDedicated supportAPI accessWhite-label'];
-      }
-    },;
+      },;
     features: ['AI-powered task automationReal-time collaborationProgress trackingResource managementTime tracking'],;
     benefits: ['Improved productivityBetter team coordinationReduced project delaysCost savingsData-driven insights'],;
     useCases: ['Software developmentMarketing campaignsEvent planningProduct launchesClient projects'],;
@@ -446,8 +440,7 @@ export const MICRO_SAAS_SERVICES: MicroSAAS[] = [;
         currency: '$',;
         period: 'month',;
         features: ['Unlimited usersCustom AI modelsDedicated supportAPI accessWhite-label'];
-      }
-    },;
+      },;
     features: ['AI-powered lead scoringAutomated follow-upsSales forecastingPipeline managementCustomer insights'],;
     benefits: ['Increased salesBetter customer relationshipsAutomated workflowsData-driven decisionsImproved efficiency'],;
     useCases: ['Sales managementCustomer supportLead generationAccount managementSales forecasting'],;
@@ -507,8 +500,7 @@ export const MICRO_SAAS_SERVICES: MicroSAAS[] = [;
         currency: '$',;
         period: 'month',;
         features: ['Unlimited employeesCustom AI modelsDedicated supportAPI accessWhite-label'];
-      }
-    },;
+      },;
     features: ['AI-powered recruitmentEmployee onboardingPerformance managementTime trackingBenefits administration'],;
     benefits: ['Faster hiringBetter employee retentionImproved performanceCompliance automationCost savings'],;
     useCases: ['RecruitmentEmployee managementPerformance reviewsTime trackingBenefits management'],;
@@ -534,7 +526,7 @@ export const MICRO_SAAS_SERVICES: MicroSAAS[] = [;
     backupFrequency: 'Daily',;
     uptime: 99.9;
   }
-],;
+,;
 export const CYBERSECURITY_SERVICES: ITService[] = [;
   {;
     id: 'security-audit',;
@@ -570,8 +562,7 @@ export const CYBERSECURITY_SERVICES: ITService[] = [;
         currency: '$',;
         period: 'audit',;
         features: ['Comprehensive security auditCustom testing scenariosDedicated team24/7 supportOngoing monitoring'];
-      }
-    },;
+      },;
     features: ['Vulnerability assessmentPenetration testingCompliance verificationSecurity reportingRemediation guidance'],;
     benefits: ['Identify security gapsMeet compliance requirementsReduce security risksImprove security postureProtect customer data'],;
     useCases: ['Security complianceRisk assessmentIncident responseSecurity trainingCompliance audits'],;
@@ -596,7 +587,7 @@ export const CYBERSECURITY_SERVICES: ITService[] = [;
     emergencySupport: true,;
     sla: '99.99% security guarantee';
   }
-],;
+,;
 export const DATA_ANALYTICS_SERVICES: AIService[] = [;
   {;
     id: 'business-intelligence',;
@@ -632,8 +623,7 @@ export const DATA_ANALYTICS_SERVICES: AIService[] = [;
         currency: '$',;
         period: 'month',;
         features: ['Unlimited dataCustom AI modelsDedicated analystAPI accessWhite-label solution'];
-      }
-    },;
+      },;
     features: ['Real-time dashboardsPredictive analyticsAutomated reportingData visualizationCustom AI models'],;
     benefits: ['Faster insightsPredictive capabilitiesAutomated reportingBetter decisionsCompetitive advantage'],;
     useCases: ['Sales analyticsCustomer insightsOperational efficiencyFinancial analysisMarket research'],;
@@ -659,7 +649,7 @@ export const DATA_ANALYTICS_SERVICES: AIService[] = [;
     apiAccess: true,;
     realTimeProcessing: true;
   }
-],;
+,;
 export const CLOUD_SOLUTIONS: ITService[] = [;
   {;
     id: 'devops-automation',;
@@ -695,8 +685,7 @@ export const CLOUD_SOLUTIONS: ITService[] = [;
         currency: '$',;
         period: 'month',;
         features: ['Custom automationDedicated team24/7 monitoringAPI accessWhite-label solution'];
-      }
-    },;
+      },;
     features: ['CI/CD pipeline automationInfrastructure as codeMonitoring & alertingAuto-scalingSecurity scanning'],;
     benefits: ['Faster deploymentsReduced errorsBetter scalabilityCost optimizationImproved security'],;
     useCases: ['Software deploymentInfrastructure managementApplication monitoringSecurity automationPerformance optimization'],;
@@ -721,7 +710,7 @@ export const CLOUD_SOLUTIONS: ITService[] = [;
     emergencySupport: true,;
     sla: '99.9% uptime guarantee';
   }
-],;
+,;
 export const ALL_SERVICES = [;
   ...AI_SERVICES,;
   ...IT_SERVICES,;
@@ -729,4 +718,3 @@ export const ALL_SERVICES = [;
   ...CYBERSECURITY_SERVICES,;
   ...DATA_ANALYTICS_SERVICES;
   ...CLOUD_SOLUTIONS;
-];

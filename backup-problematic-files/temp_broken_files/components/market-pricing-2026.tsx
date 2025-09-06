@@ -20,22 +20,22 @@ const allServices = [
 
   // Filter services based on selection,
 const filteredServices = allServices.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory),
-    const matchesPrice = priceRange === 'all' || 
-      (priceRange === 'budget' && parseFloat(service.price.replace(/[^0-9.]/g, '')) < 5000) ||
-      (priceRange === 'mid' && parseFloat(service.price.replace(/[^0-9.]/g, '')) >= 5000 && parseFloat(service.price.replace(/[^0-9.]/g, '')) < 15000) ||
-      (priceRange === 'premium' && parseFloat(service.price.replace(/[^0-9.]/g, '')) >= 15000),
+    const matchesCategory = selectedCategory = = 'all' || service.category.includes(selectedCategory),
+    const matchesPrice = priceRange = = 'all' || 
+      (priceRange = = 'budget' && parseFloat(service.price.replace(/[^0-9.]/g, '') < 5000) ||
+      (priceRange = = 'mid' && parseFloat(service.price.replace(/[^0-9.]/g, '') >= 5000 && parseFloat(service.price.replace(/[^0-9.]/g, '') < 15000) ||
+      (priceRange = = 'premium' && parseFloat(service.price.replace(/[^0-9.]/g, '') >= 15000),
     return matchesCategory && matchesPrice
   }),
 
   const categories = [
     { id: 'all', name: 'All Categories', icon: BarChart3, count: allServices.length },
-    { id: 'AI', name: 'AI & Machine Learning', icon: Brain, count: allServices.filter(s => s.category.includes('AI')).length },
-    { id: 'Quantum', name: 'Quantum Computing', icon: Atom, count: allServices.filter(s => s.category.includes('Quantum')).length },
-    { id: 'Emerging', name: 'Emerging Technology', icon: Sparkles, count: allServices.filter(s => s.category.includes('Emerging')).length },
-    { id: 'IT', name: 'IT & Infrastructure', icon: Shield, count: allServices.filter(s => s.category.includes('IT') || s.category.includes('Infrastructure')).length },
-    { id: 'Autonomous', name: 'Autonomous Systems', icon: Target, count: allServices.filter(s => s.category.includes('Autonomous')).length },
-    { id: 'Cloud', name: 'Cloud & DevOps', icon: Cloud, count: allServices.filter(s => s.category.includes('Cloud') || s.category.includes('DevOps')).length }
+    { id: 'AI', name: 'AI & Machine Learning', icon: Brain, count: allServices.filter(s => s.category.includes('AI').length },
+    { id: 'Quantum', name: 'Quantum Computing', icon: Atom, count: allServices.filter(s => s.category.includes('Quantum').length },
+    { id: 'Emerging', name: 'Emerging Technology', icon: Sparkles, count: allServices.filter(s => s.category.includes('Emerging').length },
+    { id: 'IT', name: 'IT & Infrastructure', icon: Shield, count: allServices.filter(s => s.category.includes('IT') || s.category.includes('Infrastructure').length },
+    { id: 'Autonomous', name: 'Autonomous Systems', icon: Target, count: allServices.filter(s => s.category.includes('Autonomous').length },
+    { id: 'Cloud', name: 'Cloud & DevOps', icon: Cloud, count: allServices.filter(s => s.category.includes('Cloud') || s.category.includes('DevOps').length }
   ],
 
   const priceRanges = [
@@ -55,11 +55,11 @@ const filteredServices = allServices.filter(service => {
   // Calculate pricing statistics,
 const pricingStats = {
     totalServices: allServices.length,
-    averagePrice: allServices.reduce((sum, service) => sum + parseFloat(service.price.replace(/[^0-9.]/g, '')), 0) / allServices.length,
-    lowestPrice: Math.min(...allServices.map(s => parseFloat(s.price.replace(/[^0-9.]/g, '')))),
-    highestPrice: Math.max(...allServices.map(s => parseFloat(s.price.replace(/[^0-9.]/g, '')))),
-    totalCustomers: allServices.reduce((sum, service) => sum + service.customers, 0),
-    averageRating: allServices.reduce((sum, service) => sum + service.rating, 0) / allServices.length
+    averagePrice: allServices.reduce(sum, service) => sum + parseFloat(service.price.replace(/[^0-9.]/g, ''), 0) / allServices.length,
+    lowestPrice: Math.min(...allServices.map(s => parseFloat(s.price.replace(/[^0-9.]/g, '')),
+    highestPrice: Math.max(...allServices.map(s => parseFloat(s.price.replace(/[^0-9.]/g, '')),
+    totalCustomers: allServices.reduce(sum, service) => sum + service.customers, 0),
+    averageRating: allServices.reduce(sum, service) => sum + service.rating, 0) / allServices.length
   },
 
   return (
@@ -90,9 +90,9 @@ intensity=&quot;extreme&quot;
         {/* Hero Section */}
         <section className=&quot;relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8&quot;>
           <div className=&quot;max-w-7xl mx-auto text-center&quot;>            <motion.div,
-initial={_{ opacity: 0, y: 30}}
-              animate={_{ opacity: 1, y: 0}}
-              transition={_{ duration: 0.8}}
+initial={_{ opacity: 0, y: 30}
+              animate={_{ opacity: 1, y: 0}
+              transition={_{ duration: 0.8}
             >
               <h1 className=&quot;text-5xl md:text-7xl font-bold mb-6&quot;>
                 <span className=&quot;bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent&quot;>
@@ -103,7 +103,7 @@ initial={_{ opacity: 0, y: 30}}
                 Comprehensive pricing analysis and competitive positioning for our revolutionary AI, 
                 quantum computing, and emerging technology services
               </p>
-              
+
               {/* Pricing Statistics */}
               <div className=&quot;grid grid-cols-2 md:grid-cols-5 gap-6 mb-12&quot;>
                 <div className=&quot;text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/50 backdrop-blur-sm&quot;>
@@ -143,7 +143,7 @@ initial={_{ opacity: 0, y: 30}}
 key={category.id}
                         onClick={_() => setSelectedCategory(category.id)}
                         className={_`p-3 rounded-xl text-sm font-medium transition-all duration-300 ${
-                          selectedCategory === category.id
+                          selectedCategory = = category.id
                             ? 'bg-cyan-500 text-black'
                             : 'bg-gray-700/50 text-gray-300 hover:bg-gray-600/50'}`}
                       >
@@ -152,7 +152,7 @@ key={category.id}
                           <span>{category.name}</span>
                         </div>
                         <div className=&quot;text-xs mt-1 opacity-75&quot;>({category.count})</div>                      </button>
-                    ))}
+                    )}
                   </div>
                 </div>
 
@@ -164,28 +164,28 @@ key={category.id}
 key={range.id}
                         onClick={_() => setPriceRange(range.id)}
                         className={_`w-full p-3 rounded-xl text-left transition-all duration-300 ${
-                          priceRange === range.id
+                          priceRange = = range.id
                             ? 'bg-cyan-500 text-black'
                             : 'bg-gray-700/50 text-gray-300 hover:bg-gray-600/50'}`}
                       >
                         <div className=&quot;font-medium&quot;>{range.name}</div>
                         <div className=&quot;text-xs opacity-75&quot;>{range.range}</div>                      </button>
-                    ))}
+                    )}
                   </div>;
                 </div>;
               </div>;
             </div>;
           </div>;
         </section>;
-;
+
         {/* Market Analysis Section */}
         <section className=&quot;relative z-10 py-16 px-4 sm:px-6 lg:px-8&quot;>
           <div className=&quot;max-w-7xl mx-auto&quot;>
             <motion.div,
-initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
+initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              viewport={ once: true }
+              transition={ duration: 0.8 }
               className=&quot;text-center mb-12&quot;            >
               <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Market Analysis & Competitive Positioning</h2>
               <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
@@ -197,10 +197,10 @@ in the rapidly evolving technology landscape
             {/* Market Insights Grid */}
             <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8 mb-16&quot;>
               <motion.div,
-initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.1 }}
+initial={ opacity: 0, y: 30 }
+                whileInView={ opacity: 1, y: 0 }
+                viewport={ once: true }
+                transition={ duration: 0.6, delay: 0.1 }
                 className=&quot;bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm&quot;              >
                 <div className=&quot;text-4xl mb-4&quot;></div>
                 <h3 className=&quot;text-xl font-bold text-white mb-3&quot;>Competitive Pricing</h3>
@@ -215,10 +215,10 @@ while providing superior features and ROI
               </motion.div>
 
               <motion.div,
-initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+initial={ opacity: 0, y: 30 }
+                whileInView={ opacity: 1, y: 0 }
+                viewport={ once: true }
+                transition={ duration: 0.6, delay: 0.2 }
                 className=&quot;bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm&quot;              >
                 <div className=&quot;text-4xl mb-4&quot;></div>
                 <h3 className=&quot;text-xl font-bold text-white mb-3&quot;>ROI Guarantee</h3>
@@ -233,10 +233,10 @@ exceptional returns on their investment
               </motion.div>
 
               <motion.div,
-initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.3 }}
+initial={ opacity: 0, y: 30 }
+                whileInView={ opacity: 1, y: 0 }
+                viewport={ once: true }
+                transition={ duration: 0.6, delay: 0.3 }
                 className=&quot;bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm&quot;              >
                 <div className=&quot;text-4xl mb-4&quot;></div>
                 <h3 className=&quot;text-xl font-bold text-white mb-3&quot;>Future-Proof Technology</h3>
@@ -257,10 +257,10 @@ relevant and competitive for years to come
         <section className=&quot;relative z-10 py-16 px-4 sm:px-6 lg:px-8&quot;>
           <div className=&quot;max-w-7xl mx-auto&quot;>
             <motion.div,
-initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
+initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              viewport={ once: true }
+              transition={ duration: 0.8 }
               className=&quot;text-center mb-12&quot;
             >
               <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Service Pricing & Features</h2>
@@ -270,12 +270,12 @@ initial={{ opacity: 0, y: 30 }}
             </motion.div>
 
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
-              {filteredServices.map((service, index) => (
+              {filteredServices.map(service, index) => (
                 <motion.div,
 key={service.id}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={ opacity: 0, y: 30 }
+                  animate={ opacity: 1, y: 0 }
+                  transition={ duration: 0.6, delay: index * 0.1 }
                   className=&quot;group&quot;
                 >
                   <div className=&quot;bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105&quot;>
@@ -287,17 +287,17 @@ key={service.id}
                         </span>
                       )}
                     </div>;
-;
+
                     {/* Service Title */}
                     <h3 className=&quot;text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300&quot;>
                       {service.name}
                     </h3>;
-;
+
                     {/* Tagline */}
                     <p className=&quot;text-gray-300 text-sm mb-4&quot;>
                       {service.tagline}
                     </p>;
-;
+
                     {/* Pricing Section */}
                     <div className=&quot;bg-gray-700/30 rounded-xl p-4 mb-4&quot;>
                       <div className=&quot;text-center&quot;>
@@ -315,7 +315,7 @@ key={service.id}
                         {service.marketPosition}
                       </p>;
                     </div>;
-;
+
                     {/* ROI & Customers */}
                     <div className=&quot;grid grid-cols-2 gap-4 mb-4&quot;>
                       <div className=&quot;text-center p-3 bg-gray-700/30 rounded-lg&quot;>
@@ -334,23 +334,23 @@ key={service.id}
                     <div className=&quot;mb-4&quot;>
                       <h4 className=&quot;text-white font-semibold mb-2 text-sm&quot;>Key Features</h4>
                       <ul className=&quot;space-y-1&quot;>
-                        {service.features.slice(0, 3).map((feature, idx) => (
+                        {service.features.slice(0, 3).map(feature, idx) => (
                           <li key={idx} className=&quot;text-gray-400 text-xs flex items-center&quot;>
                             <Zap className=&quot;w-3 h-3 text-cyan-400 mr-2 flex-shrink-0&quot; />
                             {feature}                          </li>
-                        ))}
+                        )}
                       </ul>;
                     </div>;
-;
+
                     {/* Technology Stack */}
                     <div className=&quot;mb-4&quot;>
                       <h4 className=&quot;text-white font-semibold mb-2 text-sm&quot;>Technology</h4>
                       <div className=&quot;flex flex-wrap gap-1&quot;>
-                        {service.technology.slice(0, 3).map((tech, idx) => (
+                        {service.technology.slice(0, 3).map(tech, idx) => (
                           <span key={idx} className=&quot;text-xs text-gray-500 bg-gray-700/50 px-2 py-1 rounded&quot;>
                             {tech}
                           </span>;
-                        ))}
+                        )}
                         {service.technology.length > 3 && (
                           <span className=&quot;text-xs text-gray-500 bg-gray-700/50 px-2 py-1 rounded&quot;>                            +{service.technology.length - 3} more
                           </span>
@@ -366,14 +366,14 @@ href={service.link}
                     </a>
                   </div>
                 </motion.div>
-              ))}
+              )}
             </div>
 
             {_/* No Results */}
-            {filteredServices.length === 0 && (
+            {filteredServices.length = = 0 && (
               <motion.div,
-initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+initial={ opacity: 0 }
+                animate={ opacity: 1 }
                 className=&quot;text-center py-16&quot;              >
                 <div className=&quot;text-6xl mb-4&quot;></div>
                 <h3 className=&quot;text-2xl font-bold text-white mb-2&quot;>No services found</h3>
@@ -382,22 +382,22 @@ initial={{ opacity: 0 }}
             )}
           </div>;
         </section>;
-;
+
         {/* Contact Section */}
         <section className=&quot;relative z-10 py-20 px-4 sm:px-6 lg:px-8&quot;>
           <div className=&quot;max-w-4xl mx-auto text-center&quot;>
             <motion.div,
-initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
+initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              viewport={ once: true }
+              transition={ duration: 0.8 }
               className=&quot;bg-gradient-to-r from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50 backdrop-blur-sm&quot;            >
               <h2 className=&quot;text-3xl font-bold text-white mb-6&quot;>Ready to Get Started?</h2>
               <p className=&quot;text-xl text-gray-300 mb-8&quot;>
                 Contact our team to discuss pricing, implementation, and how our revolutionary 2026 services,
 can transform your business with exceptional ROI
               </p>
-              
+
               <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6 mb-8&quot;>
                 <div className=&quot;flex items-center justify-center space-x-3 text-cyan-300&quot;>
                   <span className=&quot;text-2xl&quot;></span>

@@ -7,6 +7,5 @@ const UltraFuturisticBackground2034.js = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default UltraFuturisticBackground2034.js;

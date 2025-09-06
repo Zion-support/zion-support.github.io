@@ -17,7 +17,7 @@ export function BackToDirectoryButton() {
       </Button>
     </div>
   );
-}
+
 import React from './react';
 import { Button  } from '@/components / ui / button';
 import { Link  } from './react-router-dom';
@@ -38,4 +38,3 @@ function BackToDirectoryButton() {
         </Link>;
       </Button>;
     </div>);
-}

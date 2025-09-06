@@ -2,7 +2,6 @@ import React from 'react';
 
 interface CloudProps {
   className?: string;
-}
 
 const Cloud: React.FC<CloudProps> = ({ className }) => {
   return (
@@ -11,6 +10,5 @@ const Cloud: React.FC<CloudProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default Cloud;

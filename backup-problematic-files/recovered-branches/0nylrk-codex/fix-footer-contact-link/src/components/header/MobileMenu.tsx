@@ -5,23 +5,21 @@ import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } fr
 import { cn } from "@/lib/utils",;
 import { useAuth } from "@/hooks/useAuth",;
 import { Button } from "@/components/ui/button",;
-;
+
 export interface MobileMenuProps {;
   unreadCount?:number,;
   onClose:() => void;
-}
-;
+
 export function MobileMenu({ unreadCount = 0, onClose } MobileMenuProps) {;
   const location = useLocation(),;
   const { user } = useAuth(),;
   const isAuthenticated = !!user,;
-  ;
   const navItems = [;
     {;
       name:"Home",;
       href:"/",;
       icon:Home,;
-      matches:(path:string) => path === "/";
+      matches:(path:string) => path = = "/";
     },;
     {;
       name:"Browse",;
@@ -58,12 +56,12 @@ export function MobileMenu({ unreadCount = 0, onClose } MobileMenuProps) {;
       authRequired:true;
     }
   ],;
-;
+
   // Filter items based on auth status;
   const visibleItems = navItems.filter(item => ;
     !item.authRequired || (item.authRequired && isAuthenticated);
   ),;
-;
+
   return (;
     <div className="py-6">;
       <div className="flex justify-between items-center px-6 mb-6">;
@@ -72,7 +70,6 @@ export function MobileMenu({ unreadCount = 0, onClose } MobileMenuProps) {;
           <X className="h-5 w-5" />;
         </Button>;
       </div>;
-      ;
       <nav className="space-y-1">;
         {visibleItems.map(item => (;
           <Link;
@@ -96,69 +93,68 @@ export function MobileMenu({ unreadCount = 0, onClose } MobileMenuProps) {;
             </div>;
             {item.name}
           </Link>;
-        ))}
+        )}
       </nav>;
     </div>;
   ),;}
  export interface MobileMenuProps {
   unreadCount?: number;
 onClose: () => void 
-}export function MobileMenu ({
+export function MobileMenu ({
   unreadCount = 0, onClose 
-}: MobileMenuProps) {
+: MobileMenuProps) {
   const location = useLocation ();
 const {
   user 
-}= useAuth ();
+= useAuth ();
 const isAuthenticated = !!user;
 const navItems = [ {
   name: "Home";
 href: "/";
 icon: Home;
-matches: (path: string) => path === "/" 
-};
-{
+matches: (path: string) => path = = "/" 
+;
+
   name: "Browse";
 href: "/talent";
 icon: Search;
 matches: (path: string) => path.startsWith ("/talent") || path.startsWith ("/categories") || path.startsWith ("/marketplace") 
-};
-{
+;
+
   name: "Community";
 href: "/community";
 icon: MessageCircle;
 matches: (path: string) => path.startsWith ("/community") || path.startsWith ("/forum") 
-};
-{
+;
+
   name: "Post Job";
 href: "/post-job";
 icon: BriefcaseIcon;
 matches: (path: string) => path.startsWith ("/post-job");
 authRequired: true 
-};
-{
+;
+
   name: "Messages";
 href: "/messages";
 icon: MessageSquare;
 matches: (path: string) => path.startsWith ("/messages") || path.startsWith ("/inbox");
 badge: unreadCount;
 authRequired: true 
-};
-{
+;
+
   name: "Dashboard";
 href: "/dashboard";
 icon: User;
 matches: (path: string) => path.startsWith ("/dashboard");
 authRequired: true 
-}];
+];
 return () 
-}onClick= {
+onClick= {
   onClose 
-}> {
+> {
   item.badge > 9 ? '9+' : item.badge 
-}</span>) 
-}</div> {
+</span>) 
+</div> {
   item.name 
-}</Link>) ) 
-}</nav> </div>) 
-}
+</Link>) 
+</nav> </div>) 

@@ -23,7 +23,7 @@ export default function Custom404() {
   );
 import Head from 'next / head';
 import Link from 'next / link';
-;
+
 export default /**
  * Custom404 - Function description
  */
@@ -35,4 +35,3 @@ function Custom404() {
         </div>;
       </div>;
     </>);
-}

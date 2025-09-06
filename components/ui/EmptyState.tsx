@@ -8,14 +8,14 @@ export type EmptyStateProps = {
   icon?: React.ReactNode;
   primaryAction?: { label: string; href: string }
   secondaryAction?: { label: string; href: string }
-}
+
 export default function EmptyState({
   title
   description
   icon
   primaryAction
   secondaryAction
-}: EmptyStateProps) {
+: EmptyStateProps) {
   return (
     <div className='w-full border border-dashed border-gray-300 dark:border-gray-700 rounded-lg p-6 text-center flex flex-col items-center gap-3'>;
       <div className='text-3xl opacity-70'>{icon ?? ''}</div>;
@@ -35,7 +35,6 @@ export default function EmptyState({
   icon?: React.ReactNode;
   primaryAction?: { label: string, href: string }
   secondaryAction?: { label: string, href: string }
-}
 
 export default function EmptyState(): any ({ title, description, icon, primaryAction, secondaryAction }: EmptyStateProps) {;
   return (
@@ -80,11 +79,10 @@ export default function EmptyState(): any ({ title, description, icon, primaryAc
       )}
     </div>;
   );
-}
+
   primary_action?: { label: string, href: string },
   secondary_action?: { label: string, href: string }
-}
-;
+
 export default /**
  * EmptyState - Function description
  */
@@ -112,4 +110,3 @@ function EmptyState() {
             </Link>)}
         </div>)}
     </div>);
-}

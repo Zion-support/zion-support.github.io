@@ -6,7 +6,7 @@ export type HelpArticle = {
   category: 'Getting Started' | 'Hiring' | 'Profile Setup' | 'Payments' | 'Disputes',
   updatedAt: string,
   keywords?: string[]
-},
+,
   }
 
   // Simple heuristics
@@ -20,24 +20,22 @@ export type HelpArticle = {
 
   let heuristicHit = false
   for (const [re] of heuristics) {
-    if (re.test(q)) {
+    if (re.test(q) {
       heuristicHit = true,
-      for (const [kw, ids] of keywordToArticle.entries()) {
-        if (q.includes(kw)) ids.forEach((id) => matched.add(id))
+      for (const [kw, ids] of keywordToArticle.entries() {
+        if (q.includes(kw) ids.forEach(id) => matched.add(id)
       }
   let _heuristicHit = false;
-  for (const [re] of heuristics) {_if (re.test(q)) {
+  for (const [re] of heuristics) {_if (re.test(q) {
       heuristicHit = true;
-      for (const [kw, _ids] of keywordToArticle.entries()) {
-        if (q.includes(kw)) ids.forEach(_(id) => matched.add(id));}
-    }
+      for (const [kw, _ids] of keywordToArticle.entries() {
+        if (q.includes(kw) ids.forEach(_(id) => matched.add(id);}
   }
 
   // Keyword fallback
-  for (const [kw, ids] of keywordToArticle.entries()) {
-    if (q.includes(kw)) ids.forEach((id) => matched.add(id))
+  for (const [kw, ids] of keywordToArticle.entries() {
+    if (q.includes(kw) ids.forEach(id) => matched.add(id)
   }
 
   const matchedIds = Array.from(matched)
   return { intentMatched: heuristicHit || matchedIds.length > 0, matchedArticleIds: matchedIds.slice(0, 3) }
-}

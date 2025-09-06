@@ -6,5 +6,3 @@ export function InvoiceHistory() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

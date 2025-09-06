@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react',;
 import Head from 'next/head',;
-;
+
 export default function AccountSettingsPage() {;
   const [user, setUser] = useState<{ address:string, chain:'evm' | 'sol' } | null>(null),;
   const [displayWeb3, setDisplayWeb3] = useState<boolean>(false),;
@@ -12,19 +12,19 @@ export default function AccountSettingsPage() {;
   const [backupCid, setBackupCid] = useState(''),;
   const [restoreCid, setRestoreCid] = useState(''),;
   const [status, setStatus] = useState<string | null>(null),;
-;
-  useEffect(() => {;
-    const saved = typeof window !== 'undefined' ? window.localStorage.getItem('zion-web3-user') :null,;
-    if (saved) setUser(JSON.parse(saved)),;
-    const pref = typeof window !== 'undefined' ? window.localStorage.getItem('zion-web3-display') :null,;
-    setDisplayWeb3(pref === 'true'),;
+
+  useEffect() => {;
+    const saved = typeof window != 'undefined' ? window.localStorage.getItem('zion-web3-user') :null,;
+    if (saved) setUser(JSON.parse(saved),;
+    const pref = typeof window != 'undefined' ? window.localStorage.getItem('zion-web3-display') :null,;
+    setDisplayWeb3(pref = = 'true'),;
   }, []),;
-;
+
   const saveDisplayPref = (val:boolean) => {;
     setDisplayWeb3(val),;
-    if (typeof window !== 'undefined') window.localStorage.setItem('zion-web3-display', String(val)),;
+    if (typeof window != 'undefined') window.localStorage.setItem('zion-web3-display', String(val),;
   },;
-;
+
   const linkDID = async () => {;
     if (!user) return,;
     setLinking(true),;
@@ -37,19 +37,18 @@ export default function AccountSettingsPage() {;
       // Sign message with connected wallet if possible (best effort);
       let signature:string | null = null,;
       try {;
-        if (user.chain === 'evm' && (window as any).ethereum) {;
+        if (user.chain = = 'evm' && (window as any).ethereum) {;
           const ethers = await import('ethers'),;
-          const provider = new ethers.providers.Web3Provider((window as any).ethereum),;
+          const provider = new ethers.providers.Web3Provider(window as any).ethereum),;
           const signer = provider.getSigner(),;
           signature = await signer.signMessage(msg);
-        } else if (user.chain === 'sol' && (window as any).solana?.isPhantom) {;
+        } else if (user.chain = = 'sol' && (window as any).solana?.isPhantom) {;
           const enc = new TextEncoder().encode(msg),;
           const { signature:sig } = await (window as any).solana.signMessage(enc, 'utf8'),;
-          const bs58 = (await import('bs58')).default,;
+          const bs58 = (await import('bs58').default,;
           signature = bs58.encode(sig),;
-        }
-      } catch {}
-;
+        } catch {}
+
       const res = await fetch('/api/did/link', {;
         method:'POST',;
         headers:{ 'Content-Type':'application/json' },;
@@ -60,9 +59,8 @@ export default function AccountSettingsPage() {;
       setStatus(e?.message || 'Linking failed');
     } finally {;
       setLinking(false),;
-    }
-  },;
-;
+    },;
+
   const doBackup = async () => {;
     setStatus(null),;
     try {;
@@ -83,9 +81,8 @@ export default function AccountSettingsPage() {;
       setStatus('Backup saved to decentralized storage'),;
     } catch (e:any) {;
       setStatus(e?.message || 'Backup failed');
-    }
-  },;
-;
+    },;
+
   const doRestore = async () => {;
     setStatus(null),;
     try {;
@@ -104,9 +101,8 @@ export default function AccountSettingsPage() {;
       setStatus('Profile restored from backup'),;
     } catch (e:any) {;
       setStatus(e?.message || 'Restore failed');
-    }
-  },;
-;
+    },;
+
   return (;
     <>;
       <Head>;
@@ -129,7 +125,7 @@ export default function AccountSettingsPage() {;
             </label>;
           </div>;
         </section>;
-;
+
         <section className="rounded-xl border p-5">;
           <h2 className="font-semibold mb-2">Link Web3 identities</h2>;
           <div className="grid grid-cols-1 gap-3">;
@@ -140,7 +136,7 @@ export default function AccountSettingsPage() {;
             <button onClick={linkDID} disabled={linking} className="rounded-md bg-black text-white dark:bg-white dark:text-black px-4 py-2">{linking ? 'Linking' :'Link & Verify'}</button>;
           </div>;
         </section>;
-;
+
         <section className="rounded-xl border p-5">;
           <h2 className="font-semibold mb-2">Decentralized Backup</h2>;
           <p className="text-sm text-gray-500 mb-3">Back up talent profiles, resume, and project reviews to IPFS/Arweave (via Web3.Storage). Opt-in only.</p>;
@@ -153,7 +149,7 @@ export default function AccountSettingsPage() {;
             <button onClick={doRestore} className="rounded-md border px-4 py-2">Restore profile</button>;
           </div>;
         </section>;
-;
+
         {status && <div className="text-sm text-gray-600">{status}</div>}
       </div>;
     </>;
@@ -161,13 +157,12 @@ export default function AccountSettingsPage() {;
   const profile = {
   user, preferences: {
   displayWeb3 
-};
+;
 did: {
   ens, lens, ceramic, farcaster 
-};
+;
 resume: {
-  
-};
+
+;
 projects: [];
 return (<> <Head> <title>Account Settings  Zion</title> </Head> <div className="max-w-3xl mx-auto space-y-8" > <section className="rounded-xl border p-5" > <h1 className="text-xl font-semibold mb-2" >Account</h1> <p className="text-sm text-gray-500" >Manage your Web3 identity and backups. Email is optional when using wallets.</p> <div className="mt-4 flex items-center justify-between" > <div> <div className="text-sm font-medium" >Display Web3 identity</div> <div className="text-xs text-gray-500" >Show ENS/Lens name instead of email</div> </div> </span> </label> </div> </section> </div> </>) 
-}

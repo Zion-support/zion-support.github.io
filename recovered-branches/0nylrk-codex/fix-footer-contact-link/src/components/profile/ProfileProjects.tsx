@@ -6,13 +6,13 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { FileText } from "lucide-react";
 interface ProfileProjectsProps {
   projects: ProfileProject[];
-}
+
 export function ProfileProjects({ projects }: ProfileProjectsProps) {
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">
       <h3 className="text-xl font-bold text-white mb-4">Projects</h3>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {projects.map((project) => (
+        {projects.map(project) => (
           <Card
             key={project.id}
             className="bg - zion - blue border - zion - blue - light overflow - hidden hover:border - zion - purple / 40 transition - colors duration - 300";
@@ -37,7 +37,7 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
               </p>
               {project.tags && project.tags.length > 0 && (
                 <div className="flex flex - wrap gap - 1 mb - 2">;
-                  {project.tags.map ((tag, i) => (
+                  {project.tags.map (tag, i) => (
                     <Badge;
                       key={i}
                       variant="outline"
@@ -45,7 +45,7 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
                     >
                       {tag}
                     </Badge>;
-                  ))}
+                  )}
                 </div>;
               )}
               <div className="text-xs text-zion-slate-light mt-2">
@@ -53,22 +53,21 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
               </div>
             </CardContent>
           </Card>
-        ))}
+        )}
       </div>
     </div>
   );
-}
+
                       variant="outline";
                       className="text - xs border - zion - slate - dark text - zion - slate - light";
                     >;
                       {tag}
-                    </Badge>))}
+                    </Badge>)}
                 </div>)}
               <div className="text - xs text - zion - slate - light mt - 2">;
                 {project.date}
               </div>;
             </CardContent>;
-          </Card>))}
+          </Card>)}
       </div>;
     </div>);
-}

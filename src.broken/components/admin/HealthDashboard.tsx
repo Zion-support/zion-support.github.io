@@ -6,5 +6,3 @@ export function HealthDashboard() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

@@ -24,13 +24,13 @@ import {;
   GlobeIcon as GlobeIcon2, CpuIcon as CpuIcon2,;
   Handshake, LifeBuoy, Activity,;
   Linkedin, Twitter, Facebook, Instagram, Youtube, Github;
-} from 'lucide-react',;
+ from 'lucide-react',;
 const contactInfo = {;
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup.com',;
   address: '364 E Main St STE 1008 Middletown DE 19709',;
   website: 'https://ziontechgroup.com';
-},;
+,;
 const serviceCategories = [;
   {;
     title: ' Revolutionary AI Services',;
@@ -104,7 +104,7 @@ const serviceCategories = [;
       { name: 'Holographic Event Platform', href: '/holographic-event-platform', description: 'Immersive holographic experiences', price: '$2,999/month' }
     ];
   }
-],;
+,;
 const quickLinks = [;
   { name: 'Home', href: '/', icon: Home },;
   { name: 'Services', href: '/services', icon: Briefcase },;
@@ -114,7 +114,7 @@ const quickLinks = [;
   { name: 'Case Studies', href: '/case-studies', icon: FileText },;
   { name: 'Blog', href: '/blog', icon: MessageCircle },;
   { name: 'Contact', href: '/contact', icon: MessageCircle }
-],;
+,;
 const companyLinks = [;
   { name: 'About Us', href: '/about', icon: Users },;
   { name: 'Careers', href: '/careers', icon: Briefcase },;
@@ -122,22 +122,22 @@ const companyLinks = [;
   { name: 'Partners', href: '/partners', icon: Handshake },;
   { name: 'Support', href: '/support', icon: LifeBuoy },;
   { name: 'Status', href: '/status', icon: Activity }
-],;
+,;
 const socialLinks = [;
   { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },;
   { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },;
   { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },;
   { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube },;
   { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter }
-],;
+,;
 const certifications = [;
   'ISO 27001 CertifiedSOC 2 Type II CompliantGDPR CompliantHIPAA CompliantPCI DSS Level 1FedRAMP AuthorizedQuantum Security CertifiedAI Ethics Compliant';
-],;
+,;
 export default function UltraFuturisticNavigation2034() {;
   const [isOpen, setIsOpen] = useState(false),;
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null),;
   const [isScrolled, setIsScrolled] = useState(false),;
-  useEffect(() => {;
+  useEffect() => {;
     const handleScroll = () => {;
       setIsScrolled(window.scrollY > 50);
     },;
@@ -145,7 +145,7 @@ export default function UltraFuturisticNavigation2034() {;
     return () => window.removeEventListener('scroll', handleScroll);
   }, []),;
   const toggleDropdown = (category: string) => {;
-    setActiveDropdown(activeDropdown === category ? null : category);
+    setActiveDropdown(activeDropdown = = category ? null : category);
   };
   const closeDropdown = () => {;
     setActiveDropdown(null);
@@ -198,9 +198,9 @@ export default function UltraFuturisticNavigation2034() {;
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <motion.div;
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5 }}
+              initial={ opacity: 0, x: -20 }
+              animate={ opacity: 1, x: 0 }
+              transition={ duration: 0.5 }
               className="flex items-center space-x-3"
             >
               <div className="relative">
@@ -219,7 +219,7 @@ export default function UltraFuturisticNavigation2034() {;
 
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-8">
-              {quickLinks.map((link) => (
+              {quickLinks.map(link) => (
                 <Link
                   key={link.name}
                   href={link.href}
@@ -227,8 +227,8 @@ export default function UltraFuturisticNavigation2034() {;
                 >
                   {link.name}
                 </a>
-              ))}
-;
+              )}
+
               {/* Services Dropdown */}
               <div className="relative group">
                 <button className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium">
@@ -237,7 +237,7 @@ export default function UltraFuturisticNavigation2034() {;
                 </button>
                 <div className="absolute top-full left-0 w-96 bg-black/95 backdrop-blur-xl border border-cyan-500/20 rounded-xl p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                   <div className="grid grid-cols-2 gap-4">
-                    {serviceCategories.slice(0, 4).map((category) => (
+                    {serviceCategories.slice(0, 4).map(category) => (
                       <div key={category.title} className="p-3 rounded-lg hover:bg-cyan-500/10 transition-colors">
                         <div className="flex items-center space-x-2 mb-2">
                           <category.icon className="w-5 h-5 text-cyan-400" />
@@ -245,7 +245,7 @@ export default function UltraFuturisticNavigation2034() {;
                         </div>
                         <p className="text-xs text-gray-400 mb-2">{category.description}</p>
                         <div className="space-y-1">
-                          {category.services.slice(0, 2).map((service) => (
+                          {category.services.slice(0, 2).map(service) => (
                             <Link
                               key={service.name}
                               href={service.href}
@@ -253,10 +253,10 @@ export default function UltraFuturisticNavigation2034() {;
                             >
                               {service.name}
                             </a>
-                          ))}
+                          )}
                         </div>;
                       </div>;
-                    ))}
+                    )}
                   </div>
                   <div className="mt-4 pt-4 border-t border-cyan-500/20">
                     <Link
@@ -295,14 +295,14 @@ export default function UltraFuturisticNavigation2034() {;
         <AnimatePresence>;
           {isOpen && (;
             <motion.div;
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3 }}
+              initial={ opacity: 0, height: 0 }
+              animate={ opacity: 1, height: 'auto' }
+              exit={ opacity: 0, height: 0 }
+              transition={ duration: 0.3 }
               className="lg:hidden bg-black/95 backdrop-blur-xl border-t border-cyan-500/20"
             >
               <div className="px-4 py-6 space-y-4">
-                {quickLinks.map((link) => (
+                {quickLinks.map(link) => (
                   <Link
                     key={link.name}
                     href={link.href}
@@ -311,10 +311,10 @@ export default function UltraFuturisticNavigation2034() {;
                   >
                     {link.name}
                   </a>
-                ))}
-;
+                )}
+
                 {/* Mobile Services Accordion */}
-                {serviceCategories.map((category) => (
+                {serviceCategories.map(category) => (
                   <div key={category.title} className="border-b border-cyan-500/20 pb-4">
                     <button
                       onClick={() => toggleDropdown(category.title)}
@@ -322,19 +322,19 @@ export default function UltraFuturisticNavigation2034() {;
                     >
                       <span>{category.title}</span>
                       <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                        activeDropdown === category.title ? 'rotate-180' : ''
+                        activeDropdown = = category.title ? 'rotate-180' : ''
                       }`} />
                     </button>
                     <AnimatePresence>
-                      {activeDropdown === category.title && (
+                      {activeDropdown = = category.title && (
                         <motion.div
-                          initial={{ opacity: 0, height: 0 }}
-                          animate={{ opacity: 1, height: 'auto' }}
-                          exit={{ opacity: 0, height: 0 }}
-                          transition={{ duration: 0.2 }}
+                          initial={ opacity: 0, height: 0 }
+                          animate={ opacity: 1, height: 'auto' }
+                          exit={ opacity: 0, height: 0 }
+                          transition={ duration: 0.2 }
                           className="mt-3 ml-4 space-y-2"
                         >
-                          {category.services.map((service) => (
+                          {category.services.map(service) => (
                             <Link
                               key={service.name}
                               href={service.href}
@@ -343,13 +343,13 @@ export default function UltraFuturisticNavigation2034() {;
                             >
                               {service.name}
                             </a>
-                          ))}
+                          )}
                         </motion.div>;
                       )}
                     </AnimatePresence>;
                   </div>;
-                ))}
-                
+                )}
+
                 <Link
                   href="/contact"
                   onClick={() => setIsOpen(false)}
@@ -366,4 +366,3 @@ export default function UltraFuturisticNavigation2034() {;
       <div className="h-20"></div>
     </>
   )
-}

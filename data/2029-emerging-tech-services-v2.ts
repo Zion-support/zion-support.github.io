@@ -145,7 +145,6 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [
       website: 'https://ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
-  }
     id: 'biotech-dna-computing-platform'
     name: 'Biotech DNA Computing Platform'
     description:
@@ -254,7 +253,6 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [
       website: 'https://ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
-  }
     id: 'quantum-financial-trading-platform'
     name: 'Quantum Financial Trading Platform'
     description:
@@ -338,7 +336,6 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [
       website: 'https://ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
-  }
     id: 'quantum-creativity-studio'
     name: 'Quantum Creativity Studio'
     description:
@@ -403,8 +400,7 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [
       website: 'https://ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
-  }
-];      'Graphic designContent creationProduct designMarketing materialsCreative agenciesIndividual artists'
+;      'Graphic designContent creationProduct designMarketing materialsCreative agenciesIndividual artists'
 
     ];
     marketSize: '$18 && 18.9B by 2029';
@@ -442,8 +438,7 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [
 
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
-  }
-];
+;
   id: string, name: string,
   description: string, category: string[],
   price: string, features: string[],
@@ -466,7 +461,6 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [
     website: string,
     address: string
   }
-}
 
 export const emergingTechServices2029V2: EmergingTechService2029V2[] = [
   {
@@ -723,8 +717,7 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  };
+    };
   {
     id: 'quantum-creativity-studio', name: 'Quantum Creativity Studio',
     description: 'Innovative quantum-enhanced creativity platform that uses quantum algorithms to generate unique artistic content, design solutions, and creative concepts that push the boundaries of human imagination.',
@@ -814,6 +807,4 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709';
     }
-  }
-];
 ;

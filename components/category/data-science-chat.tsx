@@ -17,7 +17,6 @@ const DataScienceChat: NextPage = () => {;
       </main>;
     </div>;
   );
-};
       </Head>
       <main>
         <h1>DataScienceChat</h1>
@@ -34,7 +33,7 @@ const DataScienceChat: NextPage = () => {;
       </main>;
     </div>;
   );
-}
+
 export default DataScienceChat;
 
 import type { NextPage } from './next';
@@ -53,7 +52,5 @@ const DataScienceChat: NextPage = () => {
         <a href="/blog">Back to Blog</a>;
       </main>;
     </div>);
-}
-;
+
 export default DataScienceChat;
-;

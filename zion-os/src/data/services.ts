@@ -20,7 +20,7 @@ export interface Service {id: string;
     phone: string;
     address: string;
   }
-}
+
 export const services: Service[] = [;
   // AI Services;
   {id: 'ai-code-assistant';
@@ -51,7 +51,6 @@ export const services: Service[] = [;
       phone: '+1 302 464 0950';
       address: '364 E Main St STE 1008 Middletown DE 19709';
     }
-  }
   {id: 'ai-content-generator';
     name: 'ContentForge AI';
     category: 'AI Services';
@@ -78,7 +77,6 @@ export const services: Service[] = [;
       phone: '+1 302 464 0950';
       address: '364 E Main St STE 1008 Middletown DE 19709';
     }
-  }
   {id: 'ai-data-analytics';
     name: 'InsightAI Analytics';
     category: 'AI Services';
@@ -105,7 +103,6 @@ export const services: Service[] = [;
       phone: '+1 302 464 0950';
       address: '364 E Main St STE 1008 Middletown DE 19709';
     }
-  }
   // IT Services;
   {id: 'managed-it-services';
     name: 'ZionTech Managed IT';
@@ -133,7 +130,6 @@ export const services: Service[] = [;
       phone: '+1 302 464 0950';
       address: '364 E Main St STE 1008 Middletown DE 19709';
     }
-  }
   {id: 'cybersecurity-audit';
     name: 'SecureShield Audit';
     category: 'IT Services';
@@ -160,7 +156,6 @@ export const services: Service[] = [;
       phone: '+1 302 464 0950';
       address: '364 E Main St STE 1008 Middletown DE 19709';
     }
-  }
   // Micro SAAS;
   {id: 'invoice-automation';
     name: 'InvoiceFlow Pro';
@@ -188,7 +183,6 @@ export const services: Service[] = [;
       phone: '+1 302 464 0950';
       address: '364 E Main St STE 1008 Middletown DE 19709';
     }
-  }
   {id: 'project-management';
     name: 'TaskMaster Pro';
     category: 'Micro SAAS';
@@ -215,7 +209,6 @@ export const services: Service[] = [;
       phone: '+1 302 464 0950';
       address: '364 E Main St STE 1008 Middletown DE 19709';
     }
-  }
   // Blockchain Services;
   {id: 'smart-contract-audit';
     name: 'BlockAudit Pro';
@@ -243,7 +236,6 @@ export const services: Service[] = [;
       phone: '+1 302 464 0950';
       address: '364 E Main St STE 1008 Middletown DE 19709';
     }
-  }
   // IoT & Edge Computing;
   {id: 'iot-monitoring';
     name: 'IoT Sentinel';
@@ -271,7 +263,6 @@ export const services: Service[] = [;
       phone: '+1 302 464 0950';
       address: '364 E Main St STE 1008 Middletown DE 19709';
     }
-  }
   // Cloud & DevOps;
   {id: 'devops-automation';
     name: 'DevOps Flow';
@@ -299,7 +290,6 @@ export const services: Service[] = [;
       phone: '+1 302 464 0950';
       address: '364 E Main St STE 1008 Middletown DE 19709';
     }
-  }
   // Data & Analytics;
   {id: 'data-warehouse';
     name: 'DataVault Enterprise';
@@ -327,11 +317,9 @@ export const services: Service[] = [;
       phone: '+1 302 464 0950';
       address: '364 E Main St STE 1008 Middletown DE 19709';
     }
-  }
-];
-export const getServicesByCategory = (category: Service['category']) => {return services.filter(service => service.category === category);
-}
-export const getServiceById = (id: string) => {return services.find(service => service.id === id);
-}
-export const getCategories = () => {return Array.from(new Set(services.map(service => service.category)));
-}
+;
+export const getServicesByCategory = (category: Service['category']) => {return services.filter(service => service.category = = category);
+
+export const getServiceById = (id: string) => {return services.find(service => service.id = = id);
+
+export const getCategories = () => {return Array.from(new Set(services.map(service => service.category));

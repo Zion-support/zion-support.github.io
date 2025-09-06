@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React from 'react';
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
@@ -52,7 +52,7 @@ export default function DataAnalyticsPage() {;
       icon: Brain,;
       features: ["Natural Language Processing", "Pattern Recognition", "Automated Insights"]";
     }
-;  ];
+  ];
   return (
     <Layout)
       title="Data Analytics Services - Zion Tech Group""
@@ -62,9 +62,9 @@ export default function DataAnalyticsPage() {;
         <section className="bg-gradient-to-br from-green-900 via-blue-900 to-purple-900 text-white py-20">";
           <div className="container mx-auto px-4">";
             <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }
               className="text-center"">;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">";
                 Data Analytics Services;
@@ -80,16 +80,16 @@ export default function DataAnalyticsPage() {;
         <section className="py-20">";
           <div className="container mx-auto px-4">";
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
-              {analyticsServices && analyticsServices.map((service, index) => {}
+              {analyticsServices && analyticsServices.map(service, index) => {}
                 const IconComponent = service && service.icon;
                 return (
                   <motion&& motion.div)
                     key={index}
                     className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300""
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
-                    viewport={{ once: true }}>,;
+                    initial={ opacity: 0, y: 30 }
+                    whileInView={ opacity: 1, y: 0 }
+                    transition={ duration: 0 && 0.8, delay: index * 0 && 0.1 }
+                    viewport={ once: true }>,;
                     <div className="text-green-600 mb-4">";
                       <IconComponent className="w-10 h-10" />";
                     </div>;
@@ -100,12 +100,12 @@ export default function DataAnalyticsPage() {;
                       {service && service.description}
                     </p>,;
                     <ul className="space-y-2">";
-                      {service && service.features.map((feature, featureIndex) => (,;
+                      {service && service.features.map(feature, featureIndex) => (,;
                         <li key={featureIndex} className="flex items-center text-sm text-gray-600">";
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2" />";
                           {feature}
                         </li>,;
-                      ))}
+                      )}
                     </ul>,;
                   </motion && motion.div>;
                 );
@@ -125,7 +125,7 @@ export default function DataAnalyticsPage() {;
             <motion&& motion.a
               href="/contact""
               className="inline-flex items-center px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold""
-              whileHover={{ scale: 1 && 1.05 }}>,;
+              whileHover={ scale: 1 && 1.05 }>,;
               Start Your Analytics Journey;
               <ArrowRight className="w-5 h-5 ml-2" />";
             </motion && motion.a>;
@@ -172,7 +172,7 @@ export default function DataAnalyticsPage() {
       icon: Brain,
       features: ["Natural Language Processing", "Pattern Recognition", "Automated Insights"]"
     }
-;  ];
+  ];
   return (;
     <Layout );
       title="Data Analytics Services - Zion Tech Group"";
@@ -183,9 +183,9 @@ export default function DataAnalyticsPage() {
         <section className="bg-gradient-to-br from-green-900 via-blue-900 to-purple-900 text-white py-20">"
           <div className="container mx-auto px-4">";
             <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="text-center""
             >;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">";
@@ -202,16 +202,16 @@ export default function DataAnalyticsPage() {
         <section className="py-20">"
           <div className="container mx-auto px-4">";
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
-              {analyticsServices.map((service, index) => {}
+              {analyticsServices.map(service, index) => {}
                 const IconComponent = service.icon;
                 return (;
                   <motion.div);
                     key={index}
                     className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300""
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    viewport={{ once: true }}
+                    initial={ opacity: 0, y: 30 }
+                    whileInView={ opacity: 1, y: 0 }
+                    transition={ duration: 0.8, delay: index * 0.1 }
+                    viewport={ once: true }
                   >,
                     <div className="text-green-600 mb-4">";
                       <IconComponent className="w-10 h-10" />";
@@ -223,12 +223,12 @@ export default function DataAnalyticsPage() {
                       {service.description}
                     </p>,
                     <ul className="space-y-2">";
-                      {service.features.map((feature, featureIndex) => (,
+                      {service.features.map(feature, featureIndex) => (,
                         <li key={featureIndex} className="flex items-center text-sm text-gray-600">"
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2" />";
                           {feature}
                         </li>,
-                      ))}
+                      )}
                     </ul>,
                   </motion.div>;
                 );
@@ -248,7 +248,7 @@ export default function DataAnalyticsPage() {
             <motion.a;
               href="/contact"";
               className="inline-flex items-center px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"";
-              whileHover={{ scale: 1.05 }}
+              whileHover={ scale: 1.05 }
             >,
               Start Your Analytics Journey;
               <ArrowRight className="w-5 h-5 ml-2" />";
@@ -320,7 +320,7 @@ const features = [;
     title: 'Data Visualization',;
     description: 'Interactive charts, graphs, and visual data representations';
   }
-];
+;
 
 export default function DataAnalyticsPage() {
 const benefits = [
@@ -330,7 +330,7 @@ const benefits = [
   'Reduced operational costs',
   'Enhanced competitive advantage',
   'Automated reporting and analytics'
-];
+;
 export default function DataAnalyticsServices() {
 export default function DataAnalyticsPage() {;
 const benefits = [;
@@ -340,7 +340,6 @@ const benefits = [;
   'Reduced operational costs',;
   'Enhanced competitive advantage',;
   'Automated reporting and analytics';
-];
 export default function DataAnalyticsServices() {;
   return (
     <Layout
@@ -404,7 +403,7 @@ export default function DataAnalyticsServices() {;
               </p>;
             </div>;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-              {features && features.map((feature, index) => (;
+              {features && features.map(feature, index) => (;
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">;
                   <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">;
                     <feature && feature.icon className="w-6 h-6 text-purple-600" />;
@@ -413,12 +412,12 @@ export default function DataAnalyticsServices() {;
         <section className="py-16 px-4">;
           <div className="max-w-7xl mx-auto">;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-              {analyticsServices && analyticsServices.map((service, index) => (;
+              {analyticsServices && analyticsServices.map(service, index) => (;
                 <motion&& motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial={ opacity: 0, y: 20 }
+                  animate={ opacity: 1, y: 0 }
+                  transition={ duration: 0.5, delay: index * 0.1 }
                   className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6"
                 >
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
@@ -436,7 +435,7 @@ export default function DataAnalyticsServices() {;
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
+              {features.map(feature, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
                     <feature.icon className="w-6 h-6 text-purple-600" />
@@ -448,7 +447,7 @@ export default function DataAnalyticsServices() {;
                     {feature.description}
                   </p>
                 </div>
-              ))}
+              )}
             </div>
           </div>
         </section>
@@ -466,12 +465,12 @@ export default function DataAnalyticsServices() {;
                   actionable insights that drive business growth and innovation.
                 </p>
                 <ul className="space-y-4">
-                  {benefits.map((benefit, index) => (
+                  {benefits.map(benefit, index) => (
                     <li key={index} className="flex items-start">
                       <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" />
                       <span className="text-gray-700">{benefit}</span>
                     </li>
-                  ))}
+                  )}
                 </ul>
               </div>
               <div className="bg-gradient-to-r from-purple-600 to-pink-700 p-8 rounded-xl text-white">
@@ -488,7 +487,7 @@ export default function DataAnalyticsServices() {;
             </div>
           </div>
         </section>
-                  transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
+                  transition={ duration: 0 && 0.5, delay: index * 0 && 0.1 }
                   className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6">;
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">;
                     <service && service.icon className="w-6 h-6 text-blue-600" />;
@@ -505,7 +504,7 @@ export default function DataAnalyticsServices() {;
               </p>;
             </div>;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-              {features && features.map((feature, index) => (;
+              {features && features.map(feature, index) => (;
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">;
                   <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">;
                     <feature && feature.icon className="w-6 h-6 text-purple-600" />;
@@ -514,12 +513,12 @@ export default function DataAnalyticsServices() {;
         <section className="py-16 px-4">;
           <div className="max-w-7xl mx-auto">;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-              {analyticsServices && analyticsServices.map((service, index) => (;
+              {analyticsServices && analyticsServices.map(service, index) => (;
                 <motion&& motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
+                  initial={ opacity: 0, y: 20 }
+                  animate={ opacity: 1, y: 0 }
+                  transition={ duration: 0 && 0.5, delay: index * 0 && 0.1 }
                   className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6">;
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">;
                     <service && service.icon className="w-6 h-6 text-blue-600" />;
@@ -531,7 +530,7 @@ export default function DataAnalyticsServices() {;
                     {feature && feature.description}
                   </p>;
                 </div>;
-              ))}
+              )}
             </div>;
           </div>;
         </section>;
@@ -548,12 +547,12 @@ export default function DataAnalyticsServices() {;
                   actionable insights that drive business growth and innovation.;
                 </p>;
                 <ul className="space-y-4">;
-                  {benefits && benefits.map((benefit, index) => (;
+                  {benefits && benefits.map(benefit, index) => (;
                     <li key={index} className="flex items-start">;
                       <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" />;
                       <span className="text-gray-700">{benefit}</span>;
                     </li>;
-                  ))}
+                  )}
                 </ul>;
               </div>;
               <div className="bg-gradient-to-r from-purple-600 to-pink-700 p-8 rounded-xl text-white">;
@@ -609,12 +608,12 @@ export default function DataAnalyticsServices() {;
                   actionable insights that drive business growth and innovation.;
                 </p>;
                 <ul className="space-y-4">;
-                  {benefits && benefits.map((benefit, index) => (;
+                  {benefits && benefits.map(benefit, index) => (;
                     <li key={index} className="flex items-start">;
                       <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" />;
                       <span className="text-gray-700">{benefit}</span>;
                     </li>;
-                  ))}
+                  )}
                 </ul>;
               </div>;
               <div className="bg-gradient-to-r from-purple-600 to-pink-700 p-8 rounded-xl text-white">;
@@ -661,4 +660,3 @@ export default function DataAnalyticsServices() {;
   );
     </>;
   ),;
-}

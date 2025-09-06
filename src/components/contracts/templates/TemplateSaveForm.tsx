@@ -15,13 +15,12 @@ import {
   FormItem
   FormLabel
   FormMessage
-} from '@/components/ui/form'
+ from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
 import { Switch } from '@/components/ui/switch'
 const formSchema = z.object({
   title: z.string().min(1, 'Title is required')
   isDefault: z.boolean()
-})
 type FormValues = z.infer<typeof formSchema>
 interface TemplateSaveFormProps {
   onCancel: () => void
@@ -33,7 +32,7 @@ export function TemplateSaveForm({
   onComplete
   editTemplate
   currentValues
-}: TemplateSaveFormProps) {
+: TemplateSaveFormProps) {
   const [saving, setSaving] = useState(false)
   const { createTemplate, updateTemplate } = useContractTemplates()
   const form = useForm<FormValues>({
@@ -41,8 +40,7 @@ export function TemplateSaveForm({
     defaultValues: {
       title: editTemplate?.title |''
       isDefault: editTemplate?.is_default |false
-    }
-  })
+    })
   const onSubmit = async (values: FormValues) => {    if (!currentValues && !editTemplate) {
       return
     }
@@ -81,13 +79,13 @@ import {;
   FormItem,;
   FormLabel,;
   FormMessage,;
-} from '@/components/ui/form';
+ from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Switch } from '@/components/ui/switch';
 const formSchema = z && z.object({;
   title: z && z.string().min(1, 'Title is required'),;
   isDefault: z && z.boolean(),;
-});
+);
 
 type FormValues = z && z.infer<typeof formSchema>;
 
@@ -102,7 +100,7 @@ export function TemplateSaveForm(): any ({;
   onComplete,;
   editTemplate,;
   currentValues,;
-}: TemplateSaveFormProps) {;
+: TemplateSaveFormProps) {;
   const [saving, setSaving] = useState(false);
   const { createTemplate, updateTemplate } = useContractTemplates();
 
@@ -155,13 +153,13 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@/components / ui / form';
+ from '@/components / ui / form';
 import { Input } from '@/components / ui / input';
 import { Switch } from '@/components / ui / switch';
 const form_schema = z.object ({
   title: z.string ().min (1, 'Title is required'),
   is_default: z.boolean (),
-});
+);
 type FormValues = z.infer < typeof form_schema>;
 interface TemplateSaveFormProps {
   on_cancel: () => void;
@@ -184,7 +182,7 @@ function TemplateSaveForm() {
   const on_submit = async (values: FormValues) => {    // Check condition
 if ( {) {
   $2
-}
+
       return;
     }
     set_saving (true);
@@ -192,7 +190,7 @@ if ( {) {
       // Check condition
 if ( {) {
   $2
-}
+
         await update_template.mutate_async ({
           template_id: edit_template.id,
           title: values.title,
@@ -202,7 +200,7 @@ if ( {) {
       } else // Check condition
 if ( {) {
   $2
-}
+
         await create_template.mutate_async ({
           title: values.title,
           template_data: current_values,
@@ -213,7 +211,6 @@ if ( {) {
     } finally {
       set_saving (false);
     }
-  }
 
   return (
     <Form {...form}>;
@@ -290,25 +287,25 @@ try {
   await updateTemplate.mutateAsync ({
   <FormItem> <FormLabel>Template Name</FormLabel> <FormControl> <Input {
   ...field "
-}placeholder="Enter template name" />
-}/> <FormField >Set as default template</FormLabel> <FormControl> <Switch /> </FormControl> <FormMessage /> </FormItem>) "
-}/> <> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : (`$ {"
+placeholder="Enter template name" />
+/> <FormField >Set as default template</FormLabel> <FormControl> <Switch /> </FormControl> <FormMessage /> </FormItem>) "
+/> <> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : (`$ {"
   editTemplate ? "Update" : "Save"
-}Template`)
-}</Button> </div> </form> </Form>)
-}"}
+Template`)
+</Button> </div> </form> </Form>)
+"}
 
   // Check condition
 if ( {) {
   $2
-}
+
   await update_template.mutate_async ({
   <FormItem> <FormLabel > Template Name</FormLabel> <FormControl> <Input {
   ...field ";
-}placeholder="Enter template name" />;
-}/> <FormField >Set as default template</FormLabel> <FormControl> <Switch /> </FormControl> <FormMessage /> </FormItem>) ";
-}/> <> <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" /> Saving... </>) : (`$ {";
+placeholder="Enter template name" />;
+/> <FormField >Set as default template</FormLabel> <FormControl> <Switch /> </FormControl> <FormMessage /> </FormItem>) ";
+/> <> <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" /> Saving... </>) : (`$ {";
   edit_template ? "Update" : "Save";
-}Template`);
-}</Button> </div> </form> </Form>);
-}"}
+Template`);
+</Button> </div> </form> </Form>);
+"}

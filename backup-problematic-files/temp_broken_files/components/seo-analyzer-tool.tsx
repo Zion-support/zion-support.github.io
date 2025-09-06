@@ -103,10 +103,10 @@ export default function SEOAnalyzerToolPage() {
   ],
 
   const handleAnalyzeSEO = async () => {
-    if (!url.trim()) return,    
+    if (!url.trim() return,    
     setIsAnalyzing(true),
     // Simulate SEO analysis,
-setTimeout_(() => {
+setTimeout_() => {
       setAnalysisResults({
         url: url, overallScore: 78, onPageScore: 82, technicalScore: 75, contentScore: 80, mobileScore: 85, issues: [
           { type: 'error', message: 'Missing meta description', priority: 'high'},
@@ -153,7 +153,7 @@ setTimeout_(() => {
             Analyze your website's SEO performance with our comprehensive tool. Get detailed insights, 
             keyword research, and optimization recommendations to improve your search rankings and drive more organic traffic.
           </p>
-          
+
           {/* URL Input */}
           <div className=&quot;max-w-2xl mx-auto mb-8&quot;>
             <div className=&quot;flex flex-col sm:flex-row gap-4&quot;>
@@ -217,11 +217,11 @@ href=&quot;/contact&quot;
           </div>
 
           <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-8&quot;>
-            {features.map((feature, index) => (
+            {features.map(feature, index) => (
               <Card,
 key={index}
                 className=&quot;card-hover group border-gradient-green&quot;
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={ animationDelay: `${index * 0.1}s` }
               >
                 <div className=&quot;flex items-start space-x-6&quot;>
                   <div className=&quot;relative&quot;>
@@ -238,11 +238,11 @@ key={index}
                   </div>
                 </div>
               </Card>
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* SEO Factors Section */}
       <section className=&quot;section-padding bg-gradient-cursor&quot;>
         <div className=&quot;container-cursor&quot;>
@@ -255,29 +255,29 @@ key={index}
           </div>
 
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-8&quot;>
-            {seoFactors.map((category, index) => (
+            {seoFactors.map(category, index) => (
               <Card,
 key={index}
                 className=&quot;card-hover border-gradient-green&quot;
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={ animationDelay: `${index * 0.1}s` }
               >
                 <div className=&quot;flex items-center mb-6&quot;>
                   <div className=&quot;text-3xl mr-4&quot;>{category.icon}</div>
                   <h3 className={`text-xl font-bold ${category.color}`}>{category.category}</h3>
                 </div>
                 <ul className=&quot;space-y-3&quot;>
-                  {category.factors.map((factor, factorIndex) => (
+                  {category.factors.map(factor, factorIndex) => (
                     <li key={factorIndex} className=&quot;flex items-center text-gray-300&quot;>
                       <CheckCircle className=&quot;w-4 h-4 text-green-400 mr-3 flex-shrink-0&quot; />
                       {factor}                    </li>
-                  ))}
+                  )}
                 </ul>;
               </Card>;
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Demo Analysis Results */}
       {analysisResults && (
         <section className=&quot;section-padding bg-gradient-cursor-accent&quot;>
@@ -289,7 +289,7 @@ key={index}
                 Here's a sample analysis of a website. Get comprehensive insights for your own website.
               </p>
             </div>
-            
+
             <div className=&quot;grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8&quot;>
               {/* Overall Score */}
               <Card className=&quot;border-gradient-green text-center&quot;>
@@ -335,10 +335,10 @@ d=&quot;M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -3
               <Card className=&quot;border-gradient-green&quot;>
                 <h3 className=&quot;text-2xl font-bold mb-6 text-white&quot;>Issues Found</h3>
                 <div className=&quot;space-y-3&quot;>
-                  {analysisResults.issues.map((issue, index) => (
+                  {analysisResults.issues.map(issue, index) => (
                     <div key={index} className=&quot;flex items-start space-x-3&quot;>
-                      {issue.type === 'error' ? (
-                        <AlertTriangle className=&quot;w-5 h-5 text-red-400 mt-1 flex-shrink-0&quot; />                      ) : issue.type === 'warning' ? (
+                      {issue.type = = 'error' ? (
+                        <AlertTriangle className=&quot;w-5 h-5 text-red-400 mt-1 flex-shrink-0&quot; />                      ) : issue.type = = 'warning' ? (
                         <AlertTriangle className=&quot;w-5 h-5 text-yellow-400 mt-1 flex-shrink-0&quot; />
                       ) : (
                         <CheckCircle className=&quot;w-5 h-5 text-blue-400 mt-1 flex-shrink-0&quot; />
@@ -347,28 +347,28 @@ d=&quot;M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -3
                         <span className=&quot;text-gray-300&quot;>{issue.message}</span>
                         <div className=&quot;text-xs text-gray-500 mt-1&quot;>Priority: {issue.priority}</div>                      </div>
                     </div>
-                  ))}
+                  )}
                 </div>;
               </Card>;
             </div>;
-;
+
             {/* Recommendations and Keywords */}
             <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-8&quot;>
               <Card className=&quot;border-gradient-green&quot;>
                 <h3 className=&quot;text-2xl font-bold mb-6 text-white&quot;>Optimization Recommendations</h3>
                 <div className=&quot;space-y-3&quot;>
-                  {analysisResults.recommendations.map((rec, index) => (
+                  {analysisResults.recommendations.map(rec, index) => (
                     <div key={index} className=&quot;flex items-start space-x-3&quot;>
                       <CheckCircle className=&quot;w-5 h-5 text-green-400 mt-1 flex-shrink-0&quot; />
                       <span className=&quot;text-gray-300&quot;>{rec}</span>                    </div>
-                  ))}
+                  )}
                 </div>
               </Card>
 
               <Card className=&quot;border-gradient-green&quot;>
                 <h3 className=&quot;text-2xl font-bold mb-6 text-white&quot;>Keyword Opportunities</h3>
                 <div className=&quot;space-y-4&quot;>
-                  {analysisResults.keywords.map((keyword, index) => (
+                  {analysisResults.keywords.map(keyword, index) => (
                     <div key={index} className=&quot;border-b border-gray-700 pb-3 last:border-b-0&quot;>
                       <div className=&quot;flex justify-between items-center mb-2&quot;>
                         <span className=&quot;font-semibold text-white&quot;>{keyword.keyword}</span>
@@ -376,21 +376,21 @@ d=&quot;M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -3
                       </div>
                       <div className=&quot;flex justify-between items-center&quot;>
                         <span className=&quot;text-sm text-gray-400&quot;>Difficulty: {keyword.difficulty}</span>
-                        <span className={`px-2 py-1 rounded text-xs ${                          keyword.difficulty === 'low' ? 'bg-green-500/20 text-green-400' :
-                          keyword.difficulty === 'medium' ? 'bg-yellow-500/20 text-yellow-400' :
+                        <span className={`px-2 py-1 rounded text-xs ${                          keyword.difficulty = = 'low' ? 'bg-green-500/20 text-green-400' :
+                          keyword.difficulty = = 'medium' ? 'bg-yellow-500/20 text-yellow-400' :
                           'bg-red-500/20 text-red-400'}`}>
                           {keyword.difficulty}
                         </span>;
                       </div>;
                     </div>;
-                  ))}
+                  )}
                 </div>;
               </Card>;
             </div>;
           </div>;
         </section>;
       )}
-;
+
       {/* Pricing Section */}
       <section id=&quot;pricing&quot; className=&quot;section-padding bg-gradient-cursor&quot;>
         <div className=&quot;container-cursor&quot;>
@@ -403,10 +403,10 @@ d=&quot;M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -3
           </div>
 
           <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8&quot;>
-            {pricing.map((plan, index) => (              <Card,
+            {pricing.map(plan, index) => (              <Card,
 key={index}
                 className={_`card-hover border-gradient-green ${plan.popular ? 'ring-2 ring-green-500 scale-105' : ''}`}
-                style={_{ animationDelay: `${index * 0.1}s` }}
+                style={_{ animationDelay: `${index * 0.1}s` }
               >
                 {plan.popular && (
                   <div className=&quot;absolute -top-4 left-1/2 transform -translate-x-1/2&quot;>
@@ -414,7 +414,7 @@ key={index}
                     </span>
                   </div>
                 )}
-                
+
                 <div className=&quot;text-center mb-8&quot;>
                   <h3 className=&quot;text-2xl font-bold text-white mb-4&quot;>{plan.name}</h3>
                   <div className=&quot;mb-6&quot;>
@@ -425,11 +425,11 @@ key={index}
                 </div>
 
                 <ul className=&quot;space-y-4 mb-8&quot;>
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map(feature, featureIndex) => (
                     <li key={featureIndex} className=&quot;flex items-center text-gray-300&quot;>
                       <CheckCircle className=&quot;w-5 h-5 text-green-400 mr-3 flex-shrink-0&quot; />
                       {feature}                    </li>
-                  ))}
+                  )}
                 </ul>
 
                 <Button,
@@ -440,11 +440,11 @@ href=&quot;/contact&quot;
                   <ArrowRight className=&quot;w-5 h-5 ml-2&quot; />
                 </Button>
               </Card>
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* CTA Section */}
       <section className="section-padding bg-gradient-to-r from-green-600 to-emerald-700 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)1px,transparent1px)] bg-[size: 20px20px] opacity-10" />

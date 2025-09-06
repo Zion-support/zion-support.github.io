@@ -1,7 +1,7 @@
 
 import Head from 'next/head',;
 import Link from 'next/link',;
-;
+
 const TheRiseOfEdgeComputingInIotApplicationsChat = () => {;
   return (;
     <div>;
@@ -9,7 +9,6 @@ const TheRiseOfEdgeComputingInIotApplicationsChat = () => {;
         <title>TheRiseOfEdgeComputingInIotApplicationsChat - Zion Tech Solutions</title>;
         <meta name="description" content="TheRiseOfEdgeComputingInIotApplicationsChat blog post" />;
       </Head>;
-      ;
       <main>;
         <h1>TheRiseOfEdgeComputingInIotApplicationsChat</h1>;
         <p>Blog content coming soon...</p>;
@@ -17,6 +16,6 @@ const TheRiseOfEdgeComputingInIotApplicationsChat = () => {;
       </main>;
     </div>;
   ),;
-},;
-;
+,;
+
 export default TheRiseOfEdgeComputingInIotApplicationsChat,

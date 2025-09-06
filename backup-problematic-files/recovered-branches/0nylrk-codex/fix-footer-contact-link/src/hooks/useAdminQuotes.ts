@@ -4,7 +4,7 @@ import { quoteRequestService } from '@/services/quoteRequestService',;
 import type { QuoteRequest, QuoteStatus } from '@/types/quotes',;
 import { useToast } from '@/components/ui/use-toast',;
 import type { DateRange } from '@/types/dateRange',;
-;
+
 export const useAdminQuotes = () => {;
   const { toast } = useToast(),;
   const queryClient = useQueryClient(),;
@@ -12,25 +12,25 @@ export const useAdminQuotes = () => {;
   const [archiveFilter, setArchiveFilter] = useState<'active' | 'archived' | 'all'>('active'),;
   const [searchQuery, setSearchQuery] = useState(''),;
   const [dateRange, setDateRange] = useState<DateRange | undefined>(undefined),;
-;
+
   // Fetch all quote requests;
   const { data:allQuotes = [], isLoading, error } = useQuery({;
     queryKey:['quotesadmin'],;
     queryFn:() => quoteRequestService.getAll(),;
     enabled:true}),;
-;
+
   // Filter quotes based on selected filters;
-  const filteredQuotes = allQuotes.filter((quote) => {;
+  const filteredQuotes = allQuotes.filter(quote) => {;
     // Status filter;
-    if (statusFilter !== 'all' && quote.status !== statusFilter) {;
+    if (statusFilter != 'all' && quote.status != statusFilter) {;
       return false,;
     }
     ;
     // Archive filter;
-    if (archiveFilter === 'active' && quote.is_archived) {;
+    if (archiveFilter = = 'active' && quote.is_archived) {;
       return false,;
     }
-    if (archiveFilter === 'archived' && !quote.is_archived) {;
+    if (archiveFilter = = 'archived' && !quote.is_archived) {;
       return false,;
     }
     ;
@@ -41,11 +41,10 @@ export const useAdminQuotes = () => {;
         !quote.requester_name.toLowerCase().includes(query) &&;
         !quote.project_name.toLowerCase().includes(query) &&;
         !quote.project_summary.toLowerCase().includes(query) &&;
-        !(quote.talent_name && quote.talent_name.toLowerCase().includes(query));
+        !(quote.talent_name && quote.talent_name.toLowerCase().includes(query);
       ) {;
         return false,;
       }
-    }
     ;
     // Date range filter;
     if (dateRange?.from) {;
@@ -53,7 +52,6 @@ export const useAdminQuotes = () => {;
       if (createdAt < dateRange.from) {;
         return false,;
       }
-    }
     ;
     if (dateRange?.to) {;
       const createdAt = new Date(quote.created_at),;
@@ -62,11 +60,10 @@ export const useAdminQuotes = () => {;
       if (createdAt > endDate) {;
         return false,;
       }
-    }
     ;
     return true,;
   }),;
-;
+
   // Update quote status mutation;
   const updateStatusMutation = useMutation({;
     mutationFn:({ id, status } { id:string, status:QuoteStatus }) => ;
@@ -84,9 +81,8 @@ export const useAdminQuotes = () => {;
         description:"Failed to update status:" + error.message,;
         variant:"destructive";
       }),;
-    }
-  }),;
-;
+    }),;
+
   // Archive/Unarchive mutation;
   const toggleArchiveMutation = useMutation({;
     mutationFn:({ id, isArchived } { id:string, isArchived:boolean }) => ;
@@ -106,9 +102,8 @@ export const useAdminQuotes = () => {;
         description:"Failed to update quote:" + error.message,;
         variant:"destructive";
       }),;
-    }
-  }),;
-;
+    }),;
+
   // Delete mutation;
   const deleteMutation = useMutation({;
     mutationFn:(id:string) => quoteRequestService.delete(id),;
@@ -125,9 +120,8 @@ export const useAdminQuotes = () => {;
         description:"Failed to delete quote:" + error.message,;
         variant:"destructive";
       }),;
-    }
-  }),;
-;
+    }),;
+
   return {;
     quotes:filteredQuotes,;
     isLoading,;
@@ -145,21 +139,20 @@ export const useAdminQuotes = () => {;
     toggleArchive:(id:string, isArchived:boolean) => ;
       toggleArchiveMutation.mutate({ id, isArchived }),;
     deleteQuote:(id:string) => deleteMutation.mutate(id)},;},
- //Filter quotes based on selected filters const filteredQuotes = allQuotes.filter ( (quote) => {
-  //Status filter if (statusFilter !== 'all' && quote.status !== statusFilter) {
-  if (!quote.requester name.toLowerCase () .includes (query) && !quote.project name.toLowerCase () .includes (query) && !quote.project summary.toLowerCase () .includes (query) && ! (quote.talent name && quote.talent name.toLowerCase () .includes (query) ) ) {
-  
-}return true;
-});
-//Update quote status mutation 
-}
-});
-//Archive/Unarchive mutation 
-}
-});
-// Delete mutation const deleteMutation = useMutation ({
+ //Filter quotes based on selected filters const filteredQuotes = allQuotes.filter (quote) => {
+  //Status filter if (statusFilter != 'all' && quote.status != statusFilter) {
+  if (!quote.requester name.toLowerCase () .includes (query) && !quote.project name.toLowerCase () .includes (query) && !quote.project summary.toLowerCase () .includes (query) && ! (quote.talent name && quote.talent name.toLowerCase () .includes (query) ) {
+
+return true;
+);
+/Update quote status mutation 
+
+);
+/Archive/Unarchive mutation 
+
+);
+/ Delete mutation const deleteMutation = useMutation ({
   mutationFn: (id: string) => quoteRequestService.delete (id), onSuccess: () => {
   toast ({
-  
-}
-});
+
+);

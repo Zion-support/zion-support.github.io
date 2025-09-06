@@ -7,7 +7,7 @@ import {
   Phone, Mail, MapPin, ExternalLink, Search, Filter,
   Grid, List, ChevronDown, ChevronUp, Sparkles,
   Crown, Award, Target, Globe, Cpu, Database
-} from 'lucide-react',
+ from 'lucide-react',
 import UltraAdvancedFuturisticMatrixBackground from '../components/ui/UltraAdvancedFuturisticMatrixBackground',
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard',
 import { nextGenerationAIServices } from '../data/next-generation-ai-services',
@@ -62,41 +62,41 @@ const allServices = [
     { id: 'popularity', name: 'Popularity' }
   ],
   // Filter and sort services,
-const filteredServices = React.useMemo_(() => {let filtered = allServices.filter(service => {
-      const matchesCategory = selectedCategory === 'all' || 
-        (selectedCategory === 'next-gen-ai' && nextGenerationAIServices.includes(service)) ||
-        (selectedCategory === 'cutting-edge-it' && cuttingEdgeITServices.includes(service)) ||
-        (selectedCategory === 'innovative-saas' && innovativeMicroSaasV2Services.includes(service)) ||
-        (selectedCategory === 'quantum-space' && quantumSpaceServices.includes(service)) ||
-        (selectedCategory === 'enterprise' && enterpriseITServices.includes(service)),
-      
-      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           (service.tagline && service.tagline.toLowerCase().includes(searchTerm.toLowerCase())),
-      
+const filteredServices = React.useMemo_() => {let filtered = allServices.filter(service => {
+      const matchesCategory = selectedCategory = = 'all' || 
+        (selectedCategory = = 'next-gen-ai' && nextGenerationAIServices.includes(service) ||
+        (selectedCategory = = 'cutting-edge-it' && cuttingEdgeITServices.includes(service) ||
+        (selectedCategory = = 'innovative-saas' && innovativeMicroSaasV2Services.includes(service) ||
+        (selectedCategory = = 'quantum-space' && quantumSpaceServices.includes(service) ||
+        (selectedCategory = = 'enterprise' && enterpriseITServices.includes(service),
+
+      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase() ||
+                           service.description.toLowerCase().includes(searchTerm.toLowerCase() ||
+                           service.category.toLowerCase().includes(searchTerm.toLowerCase() ||
+                           (service.tagline && service.tagline.toLowerCase().includes(searchTerm.toLowerCase()),
+
       return matchesCategory && matchesSearch
     }),
 
     // Sort services,
 switch (sortBy) {
       case 'name':
-        filtered.sort((a, b) => a.name.localeCompare(b.name)),
+        filtered.sort(a, b) => a.name.localeCompare(b.name),
         break,
       case 'price-low':
-        filtered.sort((a, b) => parseFloat(a.price.replace(/[$]/g, '')) - parseFloat(b.price.replace(/[$]/g, ''))),
+        filtered.sort(a, b) => parseFloat(a.price.replace(/[$]/g, '') - parseFloat(b.price.replace(/[$]/g, '')),
         break,
       case 'price-high':
-        filtered.sort((a, b) => parseFloat(b.price.replace(/[$]/g, '')) - parseFloat(a.price.replace(/[$]/g, ''))),
+        filtered.sort(a, b) => parseFloat(b.price.replace(/[$]/g, '') - parseFloat(a.price.replace(/[$]/g, '')),
         break,
       case 'rating':
-        filtered.sort((a, b) => (b.rating || 0) - (a.rating || 0)),
+        filtered.sort(a, b) => (b.rating || 0) - (a.rating || 0),
         break,
       case 'customers':
-        filtered.sort((a, b) => (b.customers || 0) - (a.customers || 0)),
+        filtered.sort(a, b) => (b.customers || 0) - (a.customers || 0),
         break,
       case 'popularity':
-        filtered.sort((a, b) => (b.popular ? 1 : 0) - (a.popular ? 1 : 0)),
+        filtered.sort(a, b) => (b.popular ? 1 : 0) - (a.popular ? 1 : 0),
         break,
       default: break
     }
@@ -106,7 +106,6 @@ switch (sortBy) {
   const containerVariants = {hidden: { opacity: 0},
     visible: {opacity: 1, transition: {
         staggerChildren: 0.1, delayChildren: 0.2}
-    }
   },
 
   const itemVariants = {
@@ -117,7 +116,7 @@ switch (sortBy) {
       transition: {
         duration: 0.6,
         ease: &quot;easeOut&quot; as const
-      }    }
+      }
   },
 
   const featuredServices = [
@@ -158,9 +157,9 @@ switch (sortBy) {
         {/* Hero Section */}
         <section className=&quot;relative z-10 pt-20 pb-16 px-4 sm:px-6 lg:px-8&quot;>
           <div className=&quot;max-w-7xl mx-auto text-center&quot;>            <motion.div,
-initial={_{ opacity: 0, y: 30}}
-              animate={_{ opacity: 1, y: 0}}
-              transition={_{ duration: 0.8}}
+initial={_{ opacity: 0, y: 30}
+              animate={_{ opacity: 1, y: 0}
+              transition={_{ duration: 0.8}
             >
               <h1 className=&quot;text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6&quot;>
                 Enhanced Services Showcase
@@ -170,7 +169,7 @@ initial={_{ opacity: 0, y: 30}}
               </p>
               <p className=&quot;text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto&quot;>
                 From next-generation AI to cutting-edge infrastructure, discover solutions that deliver 1000% ROI and transform your business.              </p>
-              
+
               <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center mb-16&quot;>
                 <div className=&quot;flex items-center justify-center space-x-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full px-6 py-3 border border-cyan-500/30&quot;>
                   <Users className=&quot;w-5 h-5 text-cyan-400&quot; />
@@ -193,10 +192,10 @@ initial={_{ opacity: 0, y: 30}}
         <section className=&quot;py-16 px-4 sm:px-6 lg:px-8&quot;>
           <div className=&quot;max-w-7xl mx-auto&quot;>
             <motion.div,
-initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.6 }
+              viewport={ once: true }
               className=&quot;text-center mb-16&quot;            >
               <h2 className=&quot;text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent mb-6&quot;>
                 Featured Service Categories
@@ -207,13 +206,13 @@ initial={{ opacity: 0, y: 20 }}
             </motion.div>
 
             <div className=&quot;grid grid-cols-1 lg:grid-cols-3 gap-8&quot;>
-              {featuredServices.map((category, index) => (
+              {featuredServices.map(category, index) => (
                 <motion.div,
 key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.2 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.6, delay: index * 0.2 }
+                  viewport={ once: true }
                   className=&quot;relative&quot;
                 >
                   <div className={`bg-gradient-to-br ${category.color} p-8 rounded-2xl text-white relative overflow-hidden`}>
@@ -221,9 +220,9 @@ key={index}
                     <div className=&quot;relative z-10&quot;>
                       <h3 className=&quot;text-2xl font-bold mb-4&quot;>{category.title}</h3>
                       <p className=&quot;text-lg mb-6 opacity-90&quot;>{category.description}</p>
-                      
+
                       <div className=&quot;space-y-3&quot;>
-                        {category.services.map((service, serviceIndex) => (
+                        {category.services.map(service, serviceIndex) => (
                           <div key={serviceIndex} className=&quot;flex items-center space-x-3 bg-white/10 rounded-lg p-3&quot;>
                             <span className=&quot;text-2xl&quot;>{service.icon}</span>
                             <div className=&quot;flex-1&quot;>
@@ -231,9 +230,9 @@ key={index}
                               <div className=&quot;text-sm opacity-80&quot;>{service.price}{service.period}</div>                            </div>
                             <ArrowRight className=&quot;w-4 h-4&quot; />
                           </div>
-                        ))}
+                        )}
                       </div>
-                      
+
                       <Button,
 href={`#${category.title.toLowerCase().replace(/\s+/g, '-')}`}
                         variant=&quot;secondary&quot;
@@ -243,7 +242,7 @@ href={`#${category.title.toLowerCase().replace(/\s+/g, '-')}`}
                     </div>
                   </div>
                 </motion.div>
-              ))}
+              )}
             </div>
           </div>
         </section>
@@ -277,7 +276,7 @@ value={selectedCategory}
                       <option key={category.id} value={category.id}>
                         {category.name} ({category.count})
                       </option>
-                    ))}
+                    )}
                   </select>
                 </div>
 
@@ -292,7 +291,7 @@ value={sortBy}
                       <option key={option.id} value={option.id}>
                         {option.name}
                       </option>;
-                    ))}
+                    )}
                   </select>
                 </div>
 
@@ -302,7 +301,7 @@ value={sortBy}
                     <button,
 onClick={_() => setViewMode('grid')}
                       className={_`p-2 rounded-md transition-colors ${
-                        viewMode === 'grid' 
+                        viewMode = = 'grid' 
                           ? 'bg-cyan-500 text-white' 
                           : 'text-gray-400 hover:text-white'}`}
                     >
@@ -311,7 +310,7 @@ onClick={_() => setViewMode('grid')}
                     <button,
 onClick={_() => setViewMode('list')}
                       className={_`p-2 rounded-md transition-colors ${
-                        viewMode === 'list' 
+                        viewMode = = 'list' 
                           ? 'bg-cyan-500 text-white' 
                           : 'text-gray-400 hover:text-white'}`}
                     >
@@ -331,16 +330,16 @@ onClick={_() => setViewMode('list')}
 variants={containerVariants}
               initial=&quot;hidden&quot;
               animate=&quot;visible"
-              className={viewMode === 'grid'                 ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
+              className={viewMode = = 'grid'                 ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
                 : 'space-y-6'}
             >
               {filteredServices.map(_(service, index) => (
                 <motion.div,
 key={service.id}
                   variants={itemVariants}
-                  className={viewMode === 'grid' ? '' : 'bg-gray-800/60 border border-gray-700 rounded-2xl p-6'}
+                  className={viewMode = = 'grid' ? '' : 'bg-gray-800/60 border border-gray-700 rounded-2xl p-6'}
                 >
-                  {viewMode === 'grid' ? (
+                  {viewMode = = 'grid' ? (
                     <div className="bg-gray-800/60 border border-gray-700 rounded-2xl p-6 hover:border-cyan-500/40 transition-colors h-full">
                       <div className="flex items-center justify-between mb-4">
                         <div className="flex items-center space-x-2">
@@ -404,7 +403,7 @@ href="/contact&quot;
                           {service.icon}
                         </div>
                       </div>
-                      
+
                       <div className="flex-1 min-w-0">
                         <div className="flex items-start justify-between">
                           <div>
@@ -460,10 +459,10 @@ href="/contact&quot;
                     </div>
                   )}
                 </motion.div>;
-              ))}
+              )}
             </motion.div>
 
-            {filteredServices.length === 0 && (_<div className="text-center py-16">
+            {filteredServices.length = = 0 && (_<div className="text-center py-16">
                 <div className="text-6xl mb-4"></div>
                 <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
                 <p className="text-gray-400 mb-6">Try adjusting your search criteria or browse all categories</p>
@@ -472,7 +471,7 @@ href="#&quot;
                   onClick={() => {
                     setSearchTerm(''),
                     setSelectedCategory('all')
-                  }}
+                  }
                   variant=&quot;primary"                >
                   View All Services
                 </Button>
@@ -485,10 +484,10 @@ href="#&quot;
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div,
-initial={_{ opacity: 0, y: 30}}
-              whileInView={_{ opacity: 1, y: 0}}
-              transition={_{ duration: 0.8}}
-              viewport={_{ once: true}}
+initial={_{ opacity: 0, y: 30}
+              whileInView={_{ opacity: 1, y: 0}
+              transition={_{ duration: 0.8}
+              viewport={_{ once: true}
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Transform Your Business?
@@ -496,7 +495,7 @@ initial={_{ opacity: 0, y: 30}}
               <p className="text-xl text-gray-300 mb-8">
                 Join thousands of companies achieving breakthrough results with our revolutionary services
               </p>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 <div className="flex items-center justify-center space-x-3">
                   <Phone className="w-6 h-6 text-cyan-400" />
@@ -538,9 +537,8 @@ href="/pricing&quot;
       </div>
     </UltraAdvancedFuturisticMatrixBackground>
   )
-}
 
-// Button component (if not imported)
+/ Button component (if not imported)
 const Button = ({ 
   href,
   variant = 'primary',
@@ -548,21 +546,21 @@ const Button = ({
   className = '',
   children,
   onClick 
-}: {
+: {
   href?: string,
   variant?: 'primary' | 'secondary',
   size?: 'sm' | 'md' | 'lg',
   className?: string,
   children: React.ReactNode,
   onClick?: () => void
-}) => {
+) => {
   const baseClasses = 'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 focus: outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900',
-  
+
   const variantClasses = {
     primary: 'bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white shadow-lg hover:shadow-xl focus:ring-cyan-500',
     secondary: 'bg-gray-700 hover:bg-gray-600 text-white border border-gray-600 hover:border-gray-500 focus:ring-gray-500'
   },
-  
+
   const sizeClasses = {
     sm: 'px-4 py-2 text-sm',
     md: 'px-6 py-3 text-base',
@@ -575,10 +573,10 @@ const Button = ({
   className?: string;
   children: React.ReactNode;
   onClick?: () => void}) => {const baseClasses = 'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900';
-  
+
   const variantClasses = {
     primary: 'bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white shadow-lg hover:shadow-xl focus:ring-cyan-500', secondary: 'bg-gray-700 hover:bg-gray-600 text-white border border-gray-600 hover:border-gray-500 focus:ring-gray-500'};
-  
+
   const sizeClasses = {sm: 'px-4 py-2 text-sm', md: 'px-6 py-3 text-base', lg: 'px-8 py-4 text-lg'};
 
   const classes = `${baseClasses} ${variantClasses[variant" ${sizeClasses[size" ${className}`;
@@ -589,10 +587,10 @@ const Button = ({
       </a>
     )
   }
-;
+
   return (;
     <button onClick={onClick} className={classes}>;
       {children}
     </button>
   )
-},
+,

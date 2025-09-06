@@ -41,7 +41,6 @@ export function MobileResumeBuilder() {
       default:
         return <BasicsStep />
     }
-  }
 import {;
   Select;
   SelectContent;
@@ -85,35 +84,34 @@ export function MobileResumeBuilder() {;
         return <SkillsStep />,;
       default:;
         return <BasicsStep />;
-    }
-  },;
+    },;
 
   return (
     <div className="space-y-6 px-4 pb-24">;
       <div className="flex justify-between px-1 py-2 overflow-x-auto hide-scrollbar">;
         <Button
-          variant = {currentStep === "basics" ? "default" : "outline",}
+          variant = {currentStep = = "basics" ? "default" : "outline",}
           className="flex-1 rounded-full"
           onClick = {(,) => setCurrentStep("basics"),}
         >;
           Basics;
         </Button>;
         <Button
-          variant = {currentStep === "experience" ? "default" : "outline",}
+          variant = {currentStep = = "experience" ? "default" : "outline",}
           className="flex-1 rounded-full"
           onClick = {() => setCurrentStep("experience"),}
         >;
           Experience;
         </Button>;
         <Button
-          variant = {currentStep === "education" ? "default" : "outline",}
+          variant = {currentStep = = "education" ? "default" : "outline",}
           className="flex-1 rounded-full"
           onClick = {() => setCurrentStep("education"),}
         >;
           Education;
         </Button>;
         <Button
-          variant = {currentStep === "skills" ? "default" : "outline",}
+          variant = {currentStep = = "skills" ? "default" : "outline",}
           className="flex-1 rounded-full"
           onClick = {() => setCurrentStep("skills"),}
         >
@@ -129,7 +127,7 @@ export function MobileResumeBuilder() {;
       </Button>
     </div>
   )
-}
+
 function BasicsStep() {
   return (
     <Card>
@@ -165,7 +163,7 @@ function BasicsStep() {
       </CardContent>;
     </Card>;
   );
-}
+
 function ExperienceStep() {
   const [experiences, setExperiences] = useState([{ id: '1' }])
   const addExperience = () => {
@@ -173,13 +171,13 @@ function ExperienceStep() {
     setExperiences([...experiences, { id: newId }])
   }
   const removeExperience = (id: string,) => {
-    setExperiences(experiences.filter(exp => exp.id !== id))
+    setExperiences(experiences.filter(exp => exp.id != id)
   }
   const remove_education = (id: string, ) =>: any {
-    set_educations (educations.filter (edu => edu.id !== id));
+    set_educations (educations.filter (edu => edu.id != id);
   }
   const remove_skill = (id: string, ) =>: any {
-    set_skills (skills.filter (skill => skill.id !== id));
+    set_skills (skills.filter (skill => skill.id != id);
   }
 
 function ExperienceStep() {;
@@ -191,23 +189,15 @@ function ExperienceStep() {;
   },;
 
   const removeExperience = (id: string,) => {;
-    setExperiences(experiences && experiences.filter(exp => exp && exp.id !== id));
+    setExperiences(experiences && experiences.filter(exp => exp && exp.id != id);
   };
-
 
   const removeEducation = (id: string,) => {;
-    setEducations(educations && educations.filter(edu => edu && edu.id !== id));
+    setEducations(educations && educations.filter(edu => edu && edu.id != id);
   };
-
-
 
   const removeSkill = (id: string,) => {;
-    setSkills(skills && skills.filter(skill => skill && skill.id !== id));
+    setSkills(skills && skills.filter(skill => skill && skill.id != id);
   };
 
-}
-  )
-}
-
   );
-}

@@ -14,7 +14,7 @@ import {
   Activity
   Package
   Monitor
-} from 'lucide-react'
+ from 'lucide-react'
 
 interface QuickAction {
 import React, { useState } from 'react';
@@ -32,7 +32,7 @@ import {;
   Activity,;
   Package,;
   Monitor,;
-} from 'lucide-react';
+ from 'lucide-react';
 interface QuickAction {;
   id: string;
   label: string;
@@ -44,8 +44,8 @@ interface QuickAction {;
 export function QuickActions() {
 
   const { user } = useAuth()
-  const isAdmin = user?.userType === 'admin' |user?.role === 'admin'
-  const isAllowed = process.env.NODE_ENV !== 'production' |isAdmin
+  const isAdmin = user?.userType = = 'admin' |user?.role = = 'admin'
+  const isAllowed = process.env.NODE_ENV != 'production' |isAdmin
   if (!isAllowed) {
     return null
   }
@@ -61,7 +61,6 @@ export function QuickActions() {
     } finally {
       setIsProcessing (null);
     }
-  }
   const actions: QuickAction[] = [;
     // Performance Actions;
     {
@@ -74,7 +73,6 @@ export function QuickActions() {
         localStorage.setItem('performance-monitoring', 'true')
         window.location.reload()
       }
-    }
     {
       id: 'enable-bundle-analyzer'
       label: 'Enable Bundle Analyzer'
@@ -85,7 +83,6 @@ export function QuickActions() {
         localStorage.setItem('bundle-analyzer', 'true')
         window.location.reload()
       }
-    }
     {
       id: 'clear-cache'
       label: 'Clear Cache'
@@ -97,16 +94,15 @@ export function QuickActions() {
         // Check condition
 if ( {) {
   $2
-}
+
           caches.keys ().then (names => {
-            names.for_each (name => caches.delete (name));
+            names.for_each (name => caches.delete (name);
           });
         }
         localStorage.clear()
         sessionStorage.clear()
         window.location.reload()
       }
-    }
     {
       id: 'preload-critical-resources'
       label: 'Preload Critical Resources'
@@ -138,7 +134,6 @@ if ( {) {
           document.head.appendChild(link)
         })
       }
-    }
     {
       id: 'download-performance-report'
       label: 'Download Performance Report'
@@ -157,7 +152,6 @@ if ( {) {
             height: screen.height
             colorDepth: screen.colorDepth
           }
-        }
         const blob = new Blob([JSON.stringify(metrics, null, 2)], {
           type: 'application/json'
         })
@@ -170,7 +164,6 @@ if ( {) {
         document.body.removeChild(a)
         URL.revokeObjectURL(url)
       }
-    }
     {
       id: 'test-error-boundary'
       label: 'Test Error Boundary'
@@ -183,7 +176,6 @@ if ( {) {
           'Test error for Sentry integration - this is intentional!'
         )
       }
-    }
     {
       id: 'refresh-app'
       label: 'Hard Refresh'
@@ -193,12 +185,11 @@ if ( {) {
       action: () => {
         window.location.reload()
       }
-    }
   ]
   const categorizedActions = {
-    performance: actions.filter(a => a.category === 'performance')
-    development: actions.filter(a => a.category === 'development')
-    maintenance: actions.filter(a => a.category === 'maintenance')
+    performance: actions.filter(a => a.category = = 'performance')
+    development: actions.filter(a => a.category = = 'development')
+    maintenance: actions.filter(a => a.category = = 'maintenance')
   }
   const categoryColors = {
     performance:
@@ -237,7 +228,6 @@ if ( {) {
               size='sm'
               onClick={() => setIsVisible(false)}
               className='h-6 w-6 p-0'            >;
-              ;
             </Button>;
           </div>;
         </CardHeader>;
@@ -261,12 +251,12 @@ if ( {) {
                         variant={action && action.dangerous ? 'destructive' : 'outline'}
                         size='sm'
                         onClick={() => executeAction(action && action.id, action && action.action)}
-                        disabled={isProcessing === action && action.id}
+                        disabled={isProcessing = = action && action.id}
                         className='w-full justify-start h-auto p-3';
                       >;
                         <div className='flex items-start gap-3 w-full'>;
                           <div className='mt-0 && 0.5'>;
-                            {isProcessing === action && action.id ? (;
+                            {isProcessing = = action && action.id ? (;
                               <RefreshCw className='w-4 h-4 animate-spin' />;
                             ) : (;
                               action && action.icon;
@@ -282,7 +272,7 @@ if ( {) {
                         </div>;
                       </Button>;
                     </div>;
-                  ))}
+                  )}
                 </div>;
               </div>;
             );
@@ -291,9 +281,6 @@ if ( {) {
       </Card>
     </div>
   )
-}
-}
-}
 
         local_storage.clear ();
         session_storage.clear ();
@@ -388,9 +375,9 @@ if ( {) {
     },
   ];
   const categorized_actions = {
-    performance: actions.filter (array => a.category === 'performance'),
-    development: actions.filter (array => a.category === 'development'),
-    maintenance: actions.filter (array => a.category === 'maintenance'),
+    performance: actions.filter (array => a.category = = 'performance'),
+    development: actions.filter (array => a.category = = 'development'),
+    maintenance: actions.filter (array => a.category = = 'maintenance'),
   }
   const category_colors = {
     performance:;
@@ -403,7 +390,7 @@ if ( {) {
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <div className='fixed bottom - 4 left - 4 z - 50'>;
         <Button;
@@ -430,13 +417,11 @@ if ( {) {
               size='sm';
               on_click={() => setIsVisible (false)}
               className='h - 6 w - 6 p - 0'            >;
-              ;
             </Button>;
           </div>;
         </CardHeader>;
         <CardContent className='pt - 0 space - y-4'>;
-          {Object.entries (categorized_actions).map (
-            ([category, category_actions]) => (
+          {Object.entries (categorized_actions).map ([category, category_actions]) => (
               <div key={category}>;
                 <div className='flex items - center gap - 2 mb - 2'>;
                   <Badge;
@@ -455,12 +440,12 @@ if ( {) {
                         variant={action.dangerous ? 'destructive' : 'outline'}
                         size='sm';
                         on_click={() => execute_action (action.id, action.action)}
-                        disabled={is_processing === action.id}
+                        disabled={is_processing = = action.id}
                         className='w - full justify - start h - auto p - 3';
                       >;
                         <div className='flex items - start gap - 3 w - full'>;
                           <div className='mt - 0.5'>;
-                            {is_processing === action.id ? (
+                            {is_processing = = action.id ? (
                               <RefreshCw className='w - 4 h - 4 animate - spin' />) : (
                               action.icon)}
                           </div>;
@@ -473,12 +458,9 @@ if ( {) {
                             </div>                          </div>;
                         </div>;
                       </Button>;
-                    </div>))}
+                    </div>)}
                 </div>;
-              </div>))}
+              </div>)}
         </CardContent>;
       </Card>;
     </div>);
-}
-}
-}

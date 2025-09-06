@@ -16,13 +16,12 @@ interface EnhancedHero2026Props {
     itSolutions: number,
     microSaas: number,
     revolutionaryServices: number
-  }}
+  }
 
 export default function EnhancedHero2026(_{contactInfo, serviceStats}: EnhancedHero2026Props) {const containerVariants = {
     hidden: { opacity: 0},
     visible: {opacity: 1, transition: {
         staggerChildren: 0.2}
-    }
   },
 
   const itemVariants = {
@@ -33,7 +32,7 @@ export default function EnhancedHero2026(_{contactInfo, serviceStats}: EnhancedH
       transition: {
         duration: 0.8,
         ease: &quot;easeOut&quot; as const
-      }    }
+      }
   },
 
   const statsVariants = {
@@ -44,7 +43,7 @@ export default function EnhancedHero2026(_{contactInfo, serviceStats}: EnhancedH
       transition: {
         duration: 0.6,
         ease: &quot;easeOut&quot; as const
-      }    }
+      }
   },
 
   return (
@@ -53,28 +52,28 @@ export default function EnhancedHero2026(_{contactInfo, serviceStats}: EnhancedH
       <div className=&quot;absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900&quot; />
       <div className=&quot;absolute inset-0 bg-[radial-gradient(circleat_20%80%,rgba(120,119,198,0.4),transparent50%)]&quot; />
       <div className=&quot;absolute inset-0 bg-[radial-gradient(circleat_80%20%,rgba(120,119,198,0.4),transparent50%)]&quot; />
-      
+
       {/* Floating Elements */}
       <div className=&quot;absolute inset-0 pointer-events-none&quot;>
-        {Array.from({ length: 20 }).map((_, i) => (
+        {Array.from({ length: 20 }).map(_, i) => (
           <motion.div,
 key={i}
             className=&quot;absolute w-2 h-2 bg-cyan-400/30 rounded-full&quot;
-            style={{
+            style={
               left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`}}
-            animate={{
+              top: `${Math.random() * 100}%`}
+            animate={
               y: [0, -30, 0],
               opacity: [0.3, 0.8, 0.3],
               scale: [1, 1.5, 1]
-            }}
-            transition={{
+            }
+            transition={
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
               ease: &quot;easeInOut&quot;,
               delay: Math.random() * 2
-            }}          />
-        ))}
+            }          />
+        )}
       </div>
 
       <div className=&quot;relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center&quot;>
@@ -90,7 +89,7 @@ variants={containerVariants}
               <Star className=&quot;w-5 h-5 text-yellow-400&quot; />
               <span className=&quot;text-cyan-400 font-semibold&quot;>2026 Innovation Leader</span>
               <TrendingUp className=&quot;w-5 h-5 text-green-400&quot; />            </div>
-            
+
             <h1 className=&quot;text-5xl md:text-7xl lg:text-8xl font-bold leading-tight&quot;>
               <span className=&quot;bg-gradient-to-r from-white via-cyan-400 to-purple-400 bg-clip-text text-transparent&quot;>
                 Future-Ready
@@ -100,7 +99,7 @@ variants={containerVariants}
                 Solutions
               </span>
             </h1>
-            
+
             <p className=&quot;text-xl md:text-2xl lg:text-3xl text-gray-300 max-w-4xl mx-auto leading-relaxed&quot;>
               Transform your business with our revolutionary AI, Quantum, and IT infrastructure services. 
               <span className=&quot;text-cyan-400 font-semibold&quot;> 1000+ cutting-edge solutions</span> delivering unprecedented ROI.
@@ -122,7 +121,7 @@ variants={itemVariants}
               <motion.div,
 key={stat.label}
                 variants={statsVariants}
-                whileHover={{ scale: 1.05, y: -5 }}
+                whileHover={ scale: 1.05, y: -5 }
                 className=&quot;group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-4 hover:border-slate-600/50 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300&quot;
               >
                 <div className={`w-12 h-12 bg-gradient-to-r ${stat.color} rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300`}>
@@ -134,9 +133,9 @@ key={stat.label}
                 <div className=&quot;text-xs text-gray-400 leading-tight&quot;>
                   {stat.label}                </div>
               </motion.div>
-            ))}
+            )}
           </motion.div>;
-;
+
           {/* Enhanced CTA Section */}
           <motion.div variants={itemVariants} className=&quot;space-y-6&quot;>
             <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center items-center&quot;>              <Button,
@@ -151,7 +150,7 @@ href=&quot;/services&quot;
                 </span>
                 <ArrowRight className=&quot;ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform&quot; />
               </Button>
-              
+
               <Button,
 href=&quot;/contact&quot; 
                 variant=&quot;secondary&quot;

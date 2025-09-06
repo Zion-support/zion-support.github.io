@@ -7,7 +7,7 @@ const UiUxDesignChat: NextPage = () => {
         <title>UiUxDesignChat - Zion Tech Solutions</title>
         <meta name=&quot;description&quot; content=&quot;UiUxDesignChat service&quot; />
       </Head>
-      
+
       <main>
         <h1>UiUxDesignChat</h1>
         <p>Service details coming soon...</p>
@@ -15,5 +15,5 @@ const UiUxDesignChat: NextPage = () => {
       </main>
     </div>
   )
-},
+,
 export default UiUxDesignChat,

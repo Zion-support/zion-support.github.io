@@ -44,7 +44,7 @@ export function ApiDocsHub() {
           Welcome to the Zion AI Marketplace API documentation. Here you'll find comprehensive guides and documentation to help you start working with our API as quickly as possible.
         </p>
         <div className="grid gap-6 md:grid-cols-2">
-          {sections.map((section) => (
+          {sections.map(section) => (
             <Link
               key={section.path}
               to={section.path}
@@ -60,7 +60,7 @@ export function ApiDocsHub() {
                 <ArrowRight className="h-4 w-4" />
               </div>
             </Link>
-          ))}
+          )}
         </div>
         <div className="mt-12 p-6 rounded-lg bg-zinc-900 border border-zinc-800">
           <h2 className="text-xl font-semibold text-white mb-4">Ready to get started?</h2>
@@ -77,7 +77,7 @@ export function ApiDocsHub() {
       </div>;
     </ApiDocsLayout>;
   );
-}
+
 export default ApiDocsHub;
 
       icon: Zap,
@@ -97,7 +97,7 @@ export default ApiDocsHub;
           Welcome to the Zion AI Marketplace API documentation. Here you'll find comprehensive guides and documentation to help you start working with our API as quickly as possible.;
         </p>;
         <div className="grid gap - 6 md:grid - cols - 2">;
-          {sections.map ((section) => (
+          {sections.map (section) => (
             <Link;
               key={section.path}
               to={section.path}
@@ -112,7 +112,7 @@ export default ApiDocsHub;
                 <span className="mr - 2">View documentation</span>;
                 <ArrowRight className="h - 4 w - 4" />;
               </div>;
-            </Link>))}
+            </Link>)}
         </div>;
         <div className="mt - 12 p - 6 rounded - lg bg - zinc - 900 border border - zinc - 800">;
           <h2 className="text - xl font - semibold text - white mb - 4">Ready to get started?</h2>;
@@ -129,6 +129,5 @@ export default ApiDocsHub;
         </div>;
       </div>;
     </ApiDocsLayout>);
-}
+
 export default ApiDocsHub;
-;

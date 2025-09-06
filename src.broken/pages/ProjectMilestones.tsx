@@ -6,5 +6,3 @@ export function ProjectMilestones() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

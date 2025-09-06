@@ -19,7 +19,7 @@ const formSchema = z.object({
 type FormData = z.infer<typeof formSchema>;
 interface ServiceDescriptionFormProps {
   onDescriptionGenerated: (description: string) => void;
-}
+
 export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescriptionFormProps) {
   const { toast } = useToast();
   const [isLoading, setIsLoading] = useState(false);
@@ -28,7 +28,7 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
     defaultValues: {
       title: ""
       keyFeatures: ""
-      targetAudience: ""}})
+      targetAudience: ""})
   const handleSubmit = async (data: FormData) => {
     setIsLoading(true)
     try {
@@ -37,8 +37,7 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
           title: data.title
           keyFeatures: data.keyFeatures
           targetAudience: data.targetAudience
-        }
-      });
+        });
       if (error) {
         throw new Error(error.message)
       }
@@ -60,7 +59,6 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
     } finally {
       setIsLoading(false)
     }
-  }
 
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">;
@@ -76,13 +74,13 @@ export /**
 function ServiceDescriptionForm() {
   const { toast } = use_toast ();
   const [is_loading, setIsLoading] = useState (false);
-;
+
   const form = use_form < FormData>({
     resolver: zod_resolver (form_schema),
     default_values: {
       title: "",
       key_features: "",
-      target_audience: ""}}),
+      target_audience: ""}),
   const handle_submit = async (data: FormData) => {
     setIsLoading (true),
     try {
@@ -91,23 +89,22 @@ function ServiceDescriptionForm() {
           title: data.title,
           key_features: data.key_features,
           target_audience: data.target_audience;
-        }
-      });
-;
+        });
+
       // Check condition
 if ( {) {
   $2
-}
+
         throw new Error (error.message);
       }
       // Check condition
 if ( {) {
   $2
-}
+
         throw new Error (response.error);
       }
       onDescriptionGenerated (response.description);
-;
+
       toast ({
         title: "Description Generated",
         description: "Your professional service description has been created.";
@@ -122,8 +119,7 @@ if ( {) {
     } finally {
       setIsLoading (false);
     }
-  }
-;
+
   return (
     <Card className="border border - zion - blue - light bg - zion - blue - dark">;
       <CardHeader>;
@@ -213,13 +209,12 @@ if ( {) {
       </CardContent>
     </Card>
   )
-}
+
             </Button>;
           </form>;
         </Form>;
       </CardContent>;
     </Card>;
   );
-}
+
     </Card>);
-}

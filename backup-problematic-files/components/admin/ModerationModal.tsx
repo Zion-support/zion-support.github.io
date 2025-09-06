@@ -4,7 +4,7 @@ export type ModerationModalProps = {
   flag: any | null,
   onClose: () => void,
   onAction: (action: 'approve' | 'remove' | 'warn' | 'ban', adminNotes?: string) => Promise<void>
-},
+,
 
 export default function ModerationModal({ flag, onClose, onAction }: ModerationModalProps) {
   const [adminNotes, setAdminNotes] = useState(''),
@@ -42,15 +42,15 @@ export default function ModerationModal({ flag, onClose, onAction }: ModerationM
           <div className="grid grid-cols-3 gap-4">
             <div className="p-3 border rounded">
               <div className="text-gray-500">Toxicity</div>
-              <div className="font-semibold">{Math.round((flag.aiScores?.toxicity || 0) * 100)}%</div>
+              <div className="font-semibold">{Math.round(flag.aiScores?.toxicity || 0) * 100)}%</div>
             </div>
             <div className="p-3 border rounded">
               <div className="text-gray-500">NSFW</div>
-              <div className="font-semibold">{Math.round((flag.aiScores?.nsfw || 0) * 100)}%</div>
+              <div className="font-semibold">{Math.round(flag.aiScores?.nsfw || 0) * 100)}%</div>
             </div>
             <div className="p-3 border rounded">
               <div className="text-gray-500">Scam</div>
-              <div className="font-semibold">{Math.round((flag.aiScores?.scam || 0) * 100)}%</div>
+              <div className="font-semibold">{Math.round(flag.aiScores?.scam || 0) * 100)}%</div>
             </div>
           </div>
           <div>
@@ -67,4 +67,3 @@ export default function ModerationModal({ flag, onClose, onAction }: ModerationM
       </div>
     </div>
   )
-}

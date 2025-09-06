@@ -1,11 +1,11 @@
-// Jest setup file for testing environment
+/ Jest setup file for testing environment
 import '@testing-library/jest-dom';
-// Mock global objects that might not be available in test environment
-global.ResizeObserver = jest.fn().mockImplementation(() => ({
+/ Mock global objects that might not be available in test environment
+global.ResizeObserver = jest.fn().mockImplementation() => ({
   observe: jest.fn()
   unobserve: jest.fn()
-  disconnect: jest.fn(),}));}));
-// Mock window.matchMedia
+  disconnect: jest.fn(),});});
+/ Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
   writable: true
   value: jest.fn().mockImplementation(query => ({
@@ -17,13 +17,13 @@ Object.defineProperty(window, 'matchMedia', {
     addEventListener: jest.fn()
     removeEventListener: jest.fn()
     dispatchEvent: jest.fn()
-  }))
-global && global.ResizeObserver = jest && jest.fn().mockImplementation(() => ({
+  })
+global && global.ResizeObserver = jest && jest.fn().mockImplementation() => ({
   observe: jest && jest.fn(),
   unobserve: jest && jest.fn(),
-  disconnect: jest && jest.fn(),}));}));
+  disconnect: jest && jest.fn(),});});
 
-// Mock window.matchMedia
+/ Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
   value: jest && jest.fn().mockImplementation(query => ({
@@ -35,16 +35,16 @@ Object.defineProperty(window, 'matchMedia', {
     addEventListener: jest && jest.fn(),
     removeEventListener: jest && jest.fn(),
     dispatchEvent: jest && jest.fn(),
-// Jest setup file for testing environment;
+/ Jest setup file for testing environment;
 import '@testing - library / jest - dom';
-;
-// Mock global objects that might not be available in test environment;
-global.ResizeObserver = jest.fn ().mock_implementation (() => ({
+
+/ Mock global objects that might not be available in test environment;
+global.ResizeObserver = jest.fn ().mock_implementation () => ({
   observe: jest.fn (),
   unobserve: jest.fn (),
-  disconnect: jest.fn (), }));}));
-;
-// Mock window.match_media;
+  disconnect: jest.fn (), });});
+
+/ Mock window.match_media;
 Object.define_property (window, 'match_media', {
   writable: true,
   value: jest.fn ().mock_implementation (query => ({
@@ -56,78 +56,75 @@ Object.define_property (window, 'match_media', {
     addEventListener: jest.fn (),
     removeEventListener: jest.fn (),
     dispatch_event: jest.fn (),
-  })),
-});
-// Mock IntersectionObserver
-global.IntersectionObserver = jest.fn().mockImplementation(() => ({
+  }),
+);
+/ Mock IntersectionObserver
+global.IntersectionObserver = jest.fn().mockImplementation() => ({
   observe: jest.fn()
   unobserve: jest.fn()
-  disconnect: jest.fn()
-}));
-// Mock console methods to reduce noise in tests
+  disconnect: jest.fn());
+/ Mock console methods to reduce noise in tests
 const originalConsoleError = console.error;
 const originalConsoleWarn = console.warn;
-beforeAll(() => {
+beforeAll() => {
   console && console.error = (...args: any[]) => {
     if (
-      typeof args[0] === 'string' &&
-      args[0].includes('Warning: ReactDOM && ReactDOM.render is no longer supported')
-    ) {
+      typeof args[0] = = 'string' &&
+      args[0].includes('Warning: ReactDOM && ReactDOM.render is no longer supported') {
       return;
     }
     originalConsoleError.call(console, ...args);
   }
   console.warn = (...args: any[]) => {
     if (
-      typeof args[0] === 'string' &&
-      args[0].includes('Warning: ReactDOM && ReactDOM.render is no longer supported')
-    ) {
+      typeof args[0] = = 'string' &&
+      args[0].includes('Warning: ReactDOM && ReactDOM.render is no longer supported') {
       return;
     }
     originalConsoleWarn.call(console, ...args);
   }
-});
-afterAll(() => {
+);
+afterAll() => {
   console && console.error = originalConsoleError;
   console && console.warn = originalConsoleWarn;
-});
-;
-// Mock IntersectionObserver;
-global.IntersectionObserver = jest.fn ().mock_implementation (() => ({
+);
+
+/ Mock IntersectionObserver;
+global.IntersectionObserver = jest.fn ().mock_implementation () => ({
   observe: jest.fn (),
   unobserve: jest.fn (),
   disconnect: jest.fn (),
-}));
-;
-// Mock console methods to reduce noise in tests;
+);
+
+/ Mock console methods to reduce noise in tests;
 const originalConsoleError = console.error;
 const originalConsoleWarn = console.warn;
-;
-before_all (() => {
+
+before_all () => {
   console.error = (...args: any[]) => {
     // Check condition
 if (
     ) {) {
   $2
-}
+
       return;
     }
     originalConsoleError.call (console, ...args);
   }
-;
+
   console.warn = (...args: any[]) => {
     // Check condition
 if (
     ) {) {
   $2
-}
+
       return;
     }
     originalConsoleWarn.call (console, ...args);
   }
-});
-;
-after_all (() => {
+);
+
+after_all () => {
   console.error = originalConsoleError;
   console.warn = originalConsoleWarn;
-});
+);

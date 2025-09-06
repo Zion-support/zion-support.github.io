@@ -20,7 +20,7 @@ interface ReferralStatsProps {
 
   stats: ReferralStatsType
   isLoading: boolean
-}
+
 export /**
  * ReferralStats - Function description
  */
@@ -53,7 +53,7 @@ function ReferralStats() {
 
   return (
     <div className='grid gap-4 md:grid-cols-2 lg:grid-cols-4'>;
-      {statCards && statCards.map((card, i) => (        <Card key={i}>;
+      {statCards && statCards.map(card, i) => (        <Card key={i}>;
           <CardHeader className='flex flex-row items-center justify-between space-y-0 pb-2'>;
             <CardTitle className='text-sm font-medium'>{card && card.title}</CardTitle>            {card && card.icon}
           </CardHeader>;
@@ -62,7 +62,7 @@ function ReferralStats() {
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">;
             <CardTitle className="text-sm font-medium">{card && card.title}</CardTitle>;
     <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">;
-      {statCards && statCards.map((card, i) => (;
+      {statCards && statCards.map(card, i) => (;
         <Card key={i}>;
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">;
             <CardTitle className="text-sm font-medium">{card && card.title}</CardTitle>;
@@ -83,8 +83,6 @@ function ReferralStats() {
                 <p className="text-xs text-muted-foreground">{card && card.description}</p>;
     </div>
   )
-}
-}
 
 export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
   const statCards = [
@@ -112,7 +110,7 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
 
   return (
     <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-      {statCards.map((card, i) => (
+      {statCards.map(card, i) => (
         <Card key={i}>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">{card.title}</CardTitle>
@@ -129,10 +127,10 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
             )}
           </CardContent>
         </Card>
-      ))}
+      )}
     </div>
   );
-}
+
       title: 'Total Referrals',
       icon: <Share className='h - 5 w - 5 text - muted - foreground' />,
       description: "People you've invited",
@@ -158,7 +156,7 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
   ];
   return (
     <div className='grid gap - 4 md:grid - cols - 2 lg:grid - cols - 4'>;
-      {stat_cards.map ((card, i) => (        <Card key={i}>;
+      {stat_cards.map (card, i) => (        <Card key={i}>;
           <CardHeader className='flex flex - row items - center justify - between space - y-0 pb - 2'>;
             <CardTitle className='text - sm font - medium'>{card.title}</CardTitle>            {card.icon}
           </CardHeader>;
@@ -167,7 +165,7 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
           <CardHeader className="flex flex - row items - center justify - between space - y-0 pb - 2">;
             <CardTitle className="text - sm font - medium">{card.title}</CardTitle>;
     <div className="grid gap - 4 md:grid - cols - 2 lg:grid - cols - 4">;
-      {stat_cards.map ((card, i) => (
+      {stat_cards.map (card, i) => (
         <Card key={i}>;
           <CardHeader className="flex flex - row items - center justify - between space - y-0 pb - 2">;
             <CardTitle className="text - sm font - medium">{card.title}</CardTitle>;
@@ -185,6 +183,5 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
                 <div className="text - 2xl font - bold">{card.value}</div>;
                 <p className="text - xs text - muted - foreground">{card.description}</p>)}
           </CardContent>;
-        </Card>))}
+        </Card>)}
     </div>);
-}

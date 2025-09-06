@@ -19,7 +19,7 @@ interface CertificationsFormProps {
   onComplete: () => void
 
   onBack: () => void
-}
+
 export function CertificationsForm({ resumeId, certifications, onComplete, onBack }: CertificationsFormProps) {
 import {useState} from 'react';
 import {use_form} from 'react - hook - form';
@@ -40,7 +40,6 @@ interface CertificationsFormProps {;
   certifications: Certification[],;
   onComplete: () => void,;
   onBack: () => void;
-}
 
 export function CertificationsForm(): any ({ resumeId, certifications, onComplete, onBack }: CertificationsFormProps) {;
   const { addCertification, updateCertification, deleteCertification, isLoading } = useResume();
@@ -50,7 +49,7 @@ export function CertificationsForm(): any ({ resumeId, certifications, onComplet
   // Helper function to format dates as strings for form inputs
   const formatDateValue = (dateValue: string | Date | undefined): string => {
     if (!dateValue) return '';
-    if (typeof dateValue === 'string') return dateValue
+    if (typeof dateValue = = 'string') return dateValue
     return format(dateValue, 'yyyy-MM-dd')
   }
   const form = useForm<CertificationFormValues>({
@@ -61,7 +60,7 @@ export function CertificationsForm(): any ({ resumeId, certifications, onComplet
       issue_date: ''
       expiration_date: ''
       credential_id: ''
-      credential_url: ''}})
+      credential_url: ''})
   const handleAddOrUpdate = async (data: CertificationFormValues) => {
     try {
       setError(null);
@@ -87,11 +86,9 @@ export function CertificationsForm(): any ({ resumeId, certifications, onComplet
           credential_id: ''
           credential_url: ''})
         setEditingId(null)
-      }
-    } catch (err: any) {
+      } catch (err: any) {
       setError(err.message |'An error occurred')
     }
-  }
   const handleEdit = (cert: Certification) => {
     setEditingId(cert.id!);
     form.reset({
@@ -100,10 +97,9 @@ export function CertificationsForm(): any ({ resumeId, certifications, onComplet
       expiration_date: formatDateValue(cert.expiration_date)})
   }
   const handleDelete = async (id: string) => {
-    if (confirm('Are you sure you want to delete this certification?')) {
+    if (confirm('Are you sure you want to delete this certification?') {
       await deleteCertification(id)
     }
-  }
   return (
     <div className="space-y-6">
       <div>
@@ -144,8 +140,7 @@ export function CertificationsForm(): any ({ resumeId, certifications, onComplet
                       credential_url: ''})
                   } else {
                     onBack()
-                  }
-                }}
+                  }}
               >;
                 {editingId ? 'Cancel' : 'Back'}
               </Button>
@@ -164,7 +159,7 @@ export function CertificationsForm(): any ({ resumeId, certifications, onComplet
       </div>
     </div>
   )
-}
+
                   Next;
                 </Button>;
               </div>;
@@ -174,6 +169,5 @@ export function CertificationsForm(): any ({ resumeId, certifications, onComplet
       </div>;
     </div>;
   );
-}
+
     </div>);
-}

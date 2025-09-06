@@ -1,4 +1,4 @@
-{
+
   "healthCheck": {
     "interval": 30000,
     "endpoints": [
@@ -16,4 +16,3 @@
     "enabled": true,
     "logLevel": "error"
   }
-}

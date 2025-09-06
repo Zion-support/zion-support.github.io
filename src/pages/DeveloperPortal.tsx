@@ -9,7 +9,7 @@ import {
   LucideIcon
   Terminal
   Webhook
-} from 'lucide-react'
+ from 'lucide-react'
 import { ProtectedRoute } from '@/components/ProtectedRoute'
 import { ApiKeysManager } from '@/components/developers/ApiKeysManager'
 import { WebhooksManager } from '@/components/developers/WebhooksManager'
@@ -23,7 +23,7 @@ interface TabDefinition {
 export function DeveloperPortal() {
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState<string>("documentation"),
-  
+
   // Define the tabs
   const tabs: TabDefinition[] = [
     { id: 'documentation', label: 'Documentation', icon: BookOpen }
@@ -50,7 +50,7 @@ export function DeveloperPortal() {
             const Icon = tab.icon
                 onClick={() => setActiveTab(tab.id)}                className={`inline-flex items-center px-4 py-3 border-b-2 text-sm font-medium ${
 
-                  activeTab === tab.id
+                  activeTab = = tab.id
                     ? "text-white border-zion-purple"
                     : "text-zinc-500 border-transparent hover:text-zinc-400 hover:border-zinc-700"
 import { useState } from 'react';
@@ -63,7 +63,7 @@ import {
   LucideIcon,
   Terminal,
   Webhook,
-} from 'lucide-react';
+ from 'lucide-react';
 import { ProtectedRoute } from '@/components / ProtectedRoute';
 import { ApiKeysManager } from '@/components / developers / ApiKeysManager';
 import { WebhooksManager } from '@/components / developers / WebhooksManager';
@@ -103,7 +103,7 @@ function DeveloperPortal() {
           {tabs.map (tab => {
             const Icon = tab.icon;
                 on_click={() => setActiveTab (tab.id)}                className={`inline - flex items - center px - 4 py - 3 border - b-2 text - sm font - medium ${
-                  active_tab === tab.id;
+                  active_tab = = tab.id;
                     ? "text - white border - zion - purple";
                     : "text - zinc - 500 border - transparent hover:text - zinc - 400 hover:border - zinc - 700";
                 }`}
@@ -125,7 +125,7 @@ import {;
   LucideIcon,;
   Terminal,;
   Webhook,;
-} from 'lucide-react';
+ from 'lucide-react';
 import { ProtectedRoute } from '@/components/ProtectedRoute';
 import { ApiKeysManager } from '@/components/developers/ApiKeysManager';
 import { WebhooksManager } from '@/components/developers/WebhooksManager';
@@ -167,7 +167,7 @@ export function DeveloperPortal() {;
             const Icon = tab && tab.icon;
 
                 onClick={() => setActiveTab(tab && tab.id)}                className={`inline-flex items-center px-4 py-3 border-b-2 text-sm font-medium ${;
-                  activeTab === tab && tab.id;
+                  activeTab = = tab && tab.id;
                     ? "text-white border-zion-purple";
                     : "text-zinc-500 border-transparent hover:text-zinc-400 hover:border-zinc-700";
                 }`}
@@ -183,10 +183,10 @@ export function DeveloperPortal() {;
 
       {/* Tab content */}
       <div>;
-        {activeTab === 'documentation' && <ApiDocumentation />}
-        {activeTab === 'api-keys' && <ApiKeysManager />}
-        {activeTab === 'webhooks' && <WebhooksManager />}
-        {activeTab === 'logs' && <ApiLogs />}
+        {activeTab = = 'documentation' && <ApiDocumentation />}
+        {activeTab = = 'api-keys' && <ApiKeysManager />}
+        {activeTab = = 'webhooks' && <WebhooksManager />}
+        {activeTab = = 'logs' && <ApiLogs />}
       </div>
     </div>
   )
@@ -200,37 +200,34 @@ export function DeveloperPortal() {;
       </div>
       {/* Tab content */}
       <div>;
-        {activeTab === "documentation" && <ApiDocumentation />}
-        {activeTab === "api-keys" && <ApiKeysManager />}
-        {activeTab === "webhooks" && <WebhooksManager />}
-        {activeTab === "logs" && <ApiLogs />}
+        {activeTab = = "documentation" && <ApiDocumentation />}
+        {activeTab = = "api-keys" && <ApiKeysManager />}
+        {activeTab = = "webhooks" && <WebhooksManager />}
+        {activeTab = = "logs" && <ApiLogs />}
       </div>
     </div>
   )
-}
+
 export default function ProtectedDeveloperPortal() {
   return (
     <ProtectedRoute>
       <DeveloperPortal />
     </ProtectedRoute>
   )
-}
-}
-  )
-}
+
   );
-}
+
         </div>;
       </div>;
       {/* Tab content */}
       <div>;
-        {active_tab === "documentation" && <ApiDocumentation />}
-        {active_tab === "api - keys" && <ApiKeysManager />}
-        {active_tab === "webhooks" && <WebhooksManager />}
-        {active_tab === "logs" && <ApiLogs />}
+        {active_tab = = "documentation" && <ApiDocumentation />}
+        {active_tab = = "api - keys" && <ApiKeysManager />}
+        {active_tab = = "webhooks" && <WebhooksManager />}
+        {active_tab = = "logs" && <ApiLogs />}
       </div>;
     </div>);
-}
+
 export default /**
  * ProtectedDeveloperPortal - Function description
  */
@@ -239,7 +236,5 @@ function ProtectedDeveloperPortal() {
     <ProtectedRoute>;
       <DeveloperPortal />;
     </ProtectedRoute>);
-}
-}
+
   );
-}

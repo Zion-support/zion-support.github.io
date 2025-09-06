@@ -102,48 +102,48 @@ export default function ServicesShowcase2027() {;
   // Filter services based on search and category
   const filteredServices = allServices.filter(service => {
     const matchesSearch =
-      service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
-      service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
-      service.category.toLowerCase().includes(searchTerm.toLowerCase());
+      service.name.toLowerCase().includes(searchTerm.toLowerCase() |
+      service.description.toLowerCase().includes(searchTerm.toLowerCase() |
+      service.category.toLowerCase().includes(searchTerm.toLowerCase();
     const matchesCategory =
-      selectedCategory === 'all' |service.category.includes(selectedCategory);
+      selectedCategory = = 'all' |service.category.includes(selectedCategory);
     const matchesPrice =
-      selectedPriceRange === 'all' |
-      (selectedPriceRange === 'low' &&
-        parseInt(service.price.replace(/[^0-9]/g, '')) < 1000) |
-      (selectedPriceRange === 'medium' &&
-        parseInt(service.price.replace(/[^0-9]/g, '')) >= 1000 &&
-        parseInt(service.price.replace(/[^0-9]/g, '')) < 10000) |
-      (selectedPriceRange === 'high' &&
-        parseInt(service.price.replace(/[^0-9]/g, '')) >= 10000);
-    return matchesSearch && matchesCategory && matchesPrice;  });    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
-                         service.category.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === 'all' |service.category.includes(selectedCategory);
-    const matchesPrice = selectedPriceRange === 'all' |
-                        (selectedPriceRange === 'low' && parseInt(service.price.replace(/[^0-9]/g, '')) < 1000) |
-                        (selectedPriceRange === 'medium' && parseInt(service.price.replace(/[^0-9]/g, '')) >= 1000 && parseInt(service.price.replace(/[^0-9]/g, '')) < 10000) |
-                        (selectedPriceRange === 'high' && parseInt(service.price.replace(/[^0-9]/g, '')) >= 10000);
+      selectedPriceRange = = 'all' |
+      (selectedPriceRange = = 'low' &&
+        parseInt(service.price.replace(/[^0-9]/g, '') < 1000) |
+      (selectedPriceRange = = 'medium' &&
+        parseInt(service.price.replace(/[^0-9]/g, '') >= 1000 &&
+        parseInt(service.price.replace(/[^0-9]/g, '') < 10000) |
+      (selectedPriceRange = = 'high' &&
+        parseInt(service.price.replace(/[^0-9]/g, '') >= 10000);
+    return matchesSearch && matchesCategory && matchesPrice;  });    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase() |
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase() |
+                         service.category.toLowerCase().includes(searchTerm.toLowerCase();
+    const matchesCategory = selectedCategory = = 'all' |service.category.includes(selectedCategory);
+    const matchesPrice = selectedPriceRange = = 'all' |
+                        (selectedPriceRange = = 'low' && parseInt(service.price.replace(/[^0-9]/g, '') < 1000) |
+                        (selectedPriceRange = = 'medium' && parseInt(service.price.replace(/[^0-9]/g, '') >= 1000 && parseInt(service.price.replace(/[^0-9]/g, '') < 10000) |
+                        (selectedPriceRange = = 'high' && parseInt(service.price.replace(/[^0-9]/g, '') >= 10000);
     return matchesSearch && matchesCategory && matchesPrice
   // Sort services
-  const sortedServices = [...filteredServices].sort((a, b) => {
+  const sortedServices = [...filteredServices].sort(a, b) => {
     switch (sortBy) {
       case 'name':
         return a.name.localeCompare(b.name);
       case 'price':
         return (
-          parseInt(a && a.price.replace(/[^0-9]/g, '')) -;
-          parseInt(b && b.price.replace(/[^0-9]/g, ''));
+          parseInt(a && a.price.replace(/[^0-9]/g, '') -;
+          parseInt(b && b.price.replace(/[^0-9]/g, '');
         );
       case 'roi':;
         return (
-          parseInt(a && a.roi.replace(/[^0-9]/g, '')) -;
-          parseInt(b && b.roi.replace(/[^0-9]/g, ''));
+          parseInt(a && a.roi.replace(/[^0-9]/g, '') -;
+          parseInt(b && b.roi.replace(/[^0-9]/g, '');
         );
       default:;
-        return 0;    }        return parseInt(a && a.price.replace(/[^0-9]/g, '')) - parseInt(b && b.price.replace(/[^0-9]/g, ''));
+        return 0;    }        return parseInt(a && a.price.replace(/[^0-9]/g, '') - parseInt(b && b.price.replace(/[^0-9]/g, '');
       case 'roi':;
-        return parseInt(a && a.roi.replace(/[^0-9]/g, '')) - parseInt(b && b.roi.replace(/[^0-9]/g, ''));
+        return parseInt(a && a.roi.replace(/[^0-9]/g, '') - parseInt(b && b.roi.replace(/[^0-9]/g, '');
       default: return 0;
   });
   const categories = [
@@ -152,7 +152,7 @@ export default function ServicesShowcase2027() {;
       id: 'AI Consciousness Evolution'
       name: 'AI Consciousness'
       icon: ''
-      count: allServices.filter(s => s.category.includes('AI Consciousness'))
+      count: allServices.filter(s => s.category.includes('AI Consciousness')
         .length
     }
     {
@@ -160,42 +160,41 @@ export default function ServicesShowcase2027() {;
       name: 'Quantum Consciousness'
       icon: ''
       count: allServices.filter(s =>
-        s.category.includes('Quantum Consciousness')
-      ).length
+        s.category.includes('Quantum Consciousness').length
     }
     {
       id: 'AI Civilization'
       name: 'AI Civilization'
       icon: ''
-      count: allServices.filter(s => s.category.includes('AI Civilization'))
+      count: allServices.filter(s => s.category.includes('AI Civilization')
         .length
     }
     {
       id: 'Quantum Time'
       name: 'Quantum Time'
       icon: ''
-      count: allServices.filter(s => s.category.includes('Quantum Time'))
+      count: allServices.filter(s => s.category.includes('Quantum Time')
         .length
     }
     {
       id: 'AI Multiverse'
       name: 'AI Multiverse'
       icon: ''
-      count: allServices.filter(s => s.category.includes('AI Multiverse'))
+      count: allServices.filter(s => s.category.includes('AI Multiverse')
         .length
     }
     {
       id: 'Customer Success Automation'
       name: 'Customer Success'
       icon: ''
-      count: allServices.filter(s => s.category.includes('Customer Success'))
+      count: allServices.filter(s => s.category.includes('Customer Success')
         .length
     }
     {
       id: 'Content Marketing Automation'
       name: 'Content Marketing'
       icon: ''
-      count: allServices.filter(s => s.category.includes('Content Marketing'))
+      count: allServices.filter(s => s.category.includes('Content Marketing')
         .length
     }
     {
@@ -203,14 +202,13 @@ export default function ServicesShowcase2027() {;
       name: 'Inventory Management'
       icon: ''
       count: allServices.filter(s =>
-        s.category.includes('Inventory Management')
-      ).length
+        s.category.includes('Inventory Management').length
     }
     {
       id: 'HR Automation'
       name: 'HR Automation'
       icon: ''
-      count: allServices.filter(s => s.category.includes('HR Automation'))
+      count: allServices.filter(s => s.category.includes('HR Automation')
         .length
     }
     {
@@ -218,27 +216,26 @@ export default function ServicesShowcase2027() {;
       name: 'Financial Automation'
       icon: ''
       count: allServices.filter(s =>
-        s.category.includes('Financial Automation')
-      ).length
+        s.category.includes('Financial Automation').length
     },  ];
   const priceRanges = [
-    { id: 'all', name: 'All Prices', count: allServices.length },    { id: 'AI Consciousness Evolution', name: 'AI Consciousness', icon: '', count: allServices.filter(s => s.category.includes('AI Consciousness')).length }
-    { id: 'Quantum Consciousness', name: 'Quantum Consciousness', icon: '', count: allServices.filter(s => s.category.includes('Quantum Consciousness')).length }
-    { id: 'AI Civilization', name: 'AI Civilization', icon: '', count: allServices.filter(s => s.category.includes('AI Civilization')).length }
-    { id: 'Quantum Time', name: 'Quantum Time', icon: '', count: allServices.filter(s => s.category.includes('Quantum Time')).length }
-    { id: 'AI Multiverse', name: 'AI Multiverse', icon: '', count: allServices.filter(s => s.category.includes('AI Multiverse')).length }
-    { id: 'Customer Success Automation', name: 'Customer Success', icon: '', count: allServices.filter(s => s.category.includes('Customer Success')).length }
-    { id: 'Content Marketing Automation', name: 'Content Marketing', icon: '', count: allServices.filter(s => s.category.includes('Content Marketing')).length }
-    { id: 'Inventory Management', name: 'Inventory Management', icon: '', count: allServices.filter(s => s.category.includes('Inventory Management')).length }
-    { id: 'HR Automation', name: 'HR Automation', icon: '', count: allServices.filter(s => s.category.includes('HR Automation')).length }
-    { id: 'Financial Automation', name: 'Financial Automation', icon: '', count: allServices.filter(s => s.category.includes('Financial Automation')).length }
+    { id: 'all', name: 'All Prices', count: allServices.length },    { id: 'AI Consciousness Evolution', name: 'AI Consciousness', icon: '', count: allServices.filter(s => s.category.includes('AI Consciousness').length }
+    { id: 'Quantum Consciousness', name: 'Quantum Consciousness', icon: '', count: allServices.filter(s => s.category.includes('Quantum Consciousness').length }
+    { id: 'AI Civilization', name: 'AI Civilization', icon: '', count: allServices.filter(s => s.category.includes('AI Civilization').length }
+    { id: 'Quantum Time', name: 'Quantum Time', icon: '', count: allServices.filter(s => s.category.includes('Quantum Time').length }
+    { id: 'AI Multiverse', name: 'AI Multiverse', icon: '', count: allServices.filter(s => s.category.includes('AI Multiverse').length }
+    { id: 'Customer Success Automation', name: 'Customer Success', icon: '', count: allServices.filter(s => s.category.includes('Customer Success').length }
+    { id: 'Content Marketing Automation', name: 'Content Marketing', icon: '', count: allServices.filter(s => s.category.includes('Content Marketing').length }
+    { id: 'Inventory Management', name: 'Inventory Management', icon: '', count: allServices.filter(s => s.category.includes('Inventory Management').length }
+    { id: 'HR Automation', name: 'HR Automation', icon: '', count: allServices.filter(s => s.category.includes('HR Automation').length }
+    { id: 'Financial Automation', name: 'Financial Automation', icon: '', count: allServices.filter(s => s.category.includes('Financial Automation').length }
   const priceRanges = [
     { id: 'all', name: 'All Prices', count: allServices.length }
     {
       id: 'low'
       name: 'Under $1K/month'
       count: allServices.filter(
-        s => parseInt(s.price.replace(/[^0-9]/g, '')) < 1000
+        s => parseInt(s.price.replace(/[^0-9]/g, '') < 1000
       ).length
     }
     {
@@ -246,31 +243,30 @@ export default function ServicesShowcase2027() {;
       name: '$1K - $10K/month'
       count: allServices.filter(
         s =>
-          parseInt(s.price.replace(/[^0-9]/g, '')) >= 1000 &&
-          parseInt(s.price.replace(/[^0-9]/g, '')) < 10000
+          parseInt(s.price.replace(/[^0-9]/g, '') >= 1000 &&
+          parseInt(s.price.replace(/[^0-9]/g, '') < 10000
       ).length
     }
     {
       id: 'high'
       name: '$10K+/month'
       count: allServices.filter(
-        s => parseInt(s.price.replace(/[^0-9]/g, '')) >= 10000
+        s => parseInt(s.price.replace(/[^0-9]/g, '') >= 10000
       ).length
-    },  ];    { id: 'low', name: 'Under $1K/month', count: allServices.filter(s => parseInt(s.price.replace(/[^0-9]/g, '')) < 1000).length }
-    { id: 'medium', name: '$1K - $10K/month', count: allServices.filter(s => parseInt(s.price.replace(/[^0-9]/g, '')) >= 1000 && parseInt(s.price.replace(/[^0-9]/g, '')) < 10000).length }
-    { id: 'high', name: '$10K+/month', count: allServices.filter(s => parseInt(s.price.replace(/[^0-9]/g, '')) >= 10000).length }
+    },  ];    { id: 'low', name: 'Under $1K/month', count: allServices.filter(s => parseInt(s.price.replace(/[^0-9]/g, '') < 1000).length }
+    { id: 'medium', name: '$1K - $10K/month', count: allServices.filter(s => parseInt(s.price.replace(/[^0-9]/g, '') >= 1000 && parseInt(s.price.replace(/[^0-9]/g, '') < 10000).length }
+    { id: 'high', name: '$10K+/month', count: allServices.filter(s => parseInt(s.price.replace(/[^0-9]/g, '') >= 10000).length }
   ];
   const contactInfo = {
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
-  }
   };
 
   return (
   ];
-;
+
   const contact_info = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -346,7 +342,7 @@ export default function ServicesShowcase2027() {;
         {/* Twitter */}
     website: 'https://ziontechgroup.com',  }    website: 'https://ziontechgroup.com';
   }
-;
+
   return (
     <UltraFuturisticMatrixBackground2027>;
       <Head>;
@@ -412,9 +408,9 @@ export default function ServicesShowcase2027() {;
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
           >
             <h1 className='text-5xl md:text-7xl font-bold mb-6'>
               <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
@@ -486,7 +482,7 @@ export default function ServicesShowcase2027() {;
                 <div className="text-green-300">Rating</div>
               </div>
             </div>
-            transition={{ duration: 0 && 0.8 }}>;
+            transition={ duration: 0 && 0.8 }>;
             <h1 className='text-5xl md:text-7xl font-bold mb-6'>;
               <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
                 2027 Services Showcase;
@@ -650,11 +646,11 @@ export default function ServicesShowcase2027() {;
                   onChange={(e) => setSelectedCategory(e && e.target.value)}
                   className="w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white focus:outline-none focus:border-cyan-400";
                 >;
-                  {categories && categories.map((category) => (;
+                  {categories && categories.map(category) => (;
                     <option key={category && category.id} value={category && category.id}>;
                       {category && category.icon} {category && category.name} ({category && category.count});
                     </option>;
-                  ))}
+                  )}
                 </select>
               </div>
               {/* Price Range Filter */}
@@ -672,11 +668,11 @@ export default function ServicesShowcase2027() {;
                   onChange={(e) => setSelectedPriceRange(e && e.target.value)}
                   className="w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white focus:outline-none focus:border-cyan-400";
                 >;
-                  {priceRanges && priceRanges.map((range) => (;
+                  {priceRanges && priceRanges.map(range) => (;
                     <option key={range && range.id} value={range && range.id}>;
                       {range && range.name} ({range && range.count});
                     </option>;
-                  ))}
+                  )}
                 </select>
               </div>
               {/* Sort By */}
@@ -708,8 +704,7 @@ export default function ServicesShowcase2027() {;
             </div>
           </div>
         </div>
-      </section>
-                >;
+      </section>;
                   <option value="name">Name</option>;
                   <option value="price">Price</option>;
                   <option value="roi">ROI</option>;
@@ -727,13 +722,13 @@ export default function ServicesShowcase2027() {;
         <div className="max-w-7xl mx-auto">;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             <AnimatePresence>;
-              {sortedServices && sortedServices.map((service, index) => (;
+              {sortedServices && sortedServices.map(service, index) => (;
                 <motion&& motion.div
                   key={service && service.id}
-                  initial={{ opacity: 0, y: 30, scale: 0 && 0.9 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
-                  transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
-                  exit={{ opacity: 0, y: -30, scale: 0 && 0.9 }}
+                  initial={ opacity: 0, y: 30, scale: 0 && 0.9 }
+                  animate={ opacity: 1, y: 0, scale: 1 }
+                  transition={ duration: 0 && 0.5, delay: index * 0 && 0.1 }
+                  exit={ opacity: 0, y: -30, scale: 0 && 0.9 }
                   className='group'>;
                   <div className='bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-6 h-full hover:border-cyan-400/50 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-2xl shadow-cyan-500/20'>;
                     {/* Service Header */}
@@ -756,7 +751,7 @@ export default function ServicesShowcase2027() {;
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <AnimatePresence>
-              {sortedServices.map((service, index) => (
+              {sortedServices.map(service, index) => (
                 <motion.div
       {/* Services Grid */}
       <section className='px - 4 sm:px - 6 lg:px - 8 mb - 20'>;
@@ -765,13 +760,13 @@ export default function ServicesShowcase2027() {;
         <div className="max - w-7xl mx - auto">;
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
             <AnimatePresence>;
-              {sorted_services.map ((service, index) => (
+              {sorted_services.map (service, index) => (
                 <motion.div;
                   key={service.id}
-                  initial={{ opacity: 0, coordinate_y: 30, scale: 0.9 }}
-                  animate={{ opacity: 1, coordinate_y: 0, scale: 1 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  exit={{ opacity: 0, y: -30, scale: 0.9 }}
+                  initial={ opacity: 0, coordinate_y: 30, scale: 0.9 }
+                  animate={ opacity: 1, coordinate_y: 0, scale: 1 }
+                  transition={ duration: 0.5, delay: index * 0.1 }
+                  exit={ opacity: 0, y: -30, scale: 0.9 }
                   className="group"
                 >
                   <div className="bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-6 h-full hover:border-cyan-400/50 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-2xl shadow-cyan-500/20">
@@ -819,7 +814,7 @@ export default function ServicesShowcase2027() {;
                         Key Features:;
                       </h4>;
                       <div className='space-y-2'>;
-                        {service && service.features.slice(0, 3).map((feature, idx) => (;
+                        {service && service.features.slice(0, 3).map(feature, idx) => (;
                           <div
                             key={idx}
                             className='flex items-center space-x-2'>;
@@ -828,14 +823,14 @@ export default function ServicesShowcase2027() {;
                               {feature}
                             </span>;
                           </div>;
-                        ))}
+                        )}
                         {service && service.features.length > 3 && (;
-                          <div className='text-cyan-400 text-sm'>                            +{service && service.features.length - 3} more features                        {service && service.features.slice(0, 3).map((feature, idx) => (;
+                          <div className='text-cyan-400 text-sm'>                            +{service && service.features.length - 3} more features                        {service && service.features.slice(0, 3).map(feature, idx) => (;
                           <div key={idx} className="flex items-center space-x-2">;
                             <CheckCircle className="w-4 h-4 text-green-400" />;
                             <span className="text-gray-300 text-sm">{feature}</span>;
                           </div>;
-                        ))}
+                        )}
                         {service && service.features.length > 3 && (;
                           <div className="text-cyan-400 text-sm">;
                             +{service && service.features.length - 3} more features;
@@ -897,14 +892,14 @@ export default function ServicesShowcase2027() {;
                     </div>;
                   </div>;
                 </motion && motion.div>;
-              ))}
+              )}
             </AnimatePresence>
           </div>
           {/* No Results */}
-          {sortedServices && sortedServices.length === 0 && (;
+          {sortedServices && sortedServices.length = = 0 && (;
             <motion&& motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
+              initial={ opacity: 0 }
+              animate={ opacity: 1 }
               className='text-center py-20'>;
               <div className='text-6xl mb-4'></div>;
               <h3 className='text-2xl font-bold text-white mb-2'>;
@@ -917,7 +912,7 @@ export default function ServicesShowcase2027() {;
                   setSearchTerm('');
                   setSelectedCategory('all');
                   setSelectedPriceRange('all');
-                }}
+                }
                 className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'              >              className="text-center py-20";
             >;
               <div className="text-6xl mb-4"></div>;
@@ -927,10 +922,10 @@ export default function ServicesShowcase2027() {;
                   setSearchTerm('');
                   setSelectedCategory('all');
                   setSelectedPriceRange('all');
-                }}
+                }
                 className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'                  setSelectedPriceRange('all')
 
-                }}
+                }
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300";
               >;
                 Clear Filters;
@@ -1106,8 +1101,8 @@ export default function ServicesShowcase2027() {;
         </div>
       </footer>
     </UltraFuturisticMatrixBackground2027>
-);  )
-}
+;  )
+
               <Link href="/contact" className="hover: text-cyan-400 transition-colors duration-300">Contact Us</Link>;
                     </p>;
                     {/* Price */}
@@ -1123,7 +1118,7 @@ export default function ServicesShowcase2027() {;
                         Key Features:;
                       </h4>;
                       <div className='space - y-2'>;
-                        {service.features.slice (0, 3).map ((feature, idx) => (
+                        {service.features.slice (0, 3).map (feature, idx) => (
                           <div;
                             key={idx}
                             className='flex items - center space - x-2';
@@ -1132,13 +1127,13 @@ export default function ServicesShowcase2027() {;
                             <span className='text - gray - 300 text - sm'>;
                               {feature}
                             </span>;
-                          </div>))}
+                          </div>)}
                         {service.features.length > 3 && (
-                          <div className='text - cyan - 400 text - sm'>                            +{service.features.length - 3} more features                        {service.features.slice (0, 3).map ((feature, idx) => (
+                          <div className='text - cyan - 400 text - sm'>                            +{service.features.length - 3} more features                        {service.features.slice (0, 3).map (feature, idx) => (
                           <div key={idx} className="flex items - center space - x-2">;
                             <CheckCircle className="w - 4 h - 4 text - green - 400" />;
                             <span className="text - gray - 300 text - sm">{feature}</span>;
-                          </div>))}
+                          </div>)}
                         {service.features.length > 3 && (
                           <div className="text - cyan - 400 text - sm">;
                             +{service.features.length - 3} more features;
@@ -1188,14 +1183,14 @@ export default function ServicesShowcase2027() {;
                       </span>;
                     </div>;
                   </div>;
-                </motion.div>))}
+                </motion.div>)}
             </AnimatePresence>;
           </div>;
           {/* No Results */}
-          {sorted_services.length === 0 && (
+          {sorted_services.length = = 0 && (
             <motion.div;
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
+              initial={ opacity: 0 }
+              animate={ opacity: 1 }
               className='text - center py - 20';
             >;
               <div className='text - 6xl mb - 4'></div>;
@@ -1209,7 +1204,7 @@ export default function ServicesShowcase2027() {;
                   setSearchTerm ('');
                   setSelectedCategory ('all');
                   setSelectedPriceRange ('all');
-                }}
+                }
                 className='px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300'              >              className="text - center py - 20";
             >;
               <div className="text - 6xl mb - 4"></div>;
@@ -1219,9 +1214,9 @@ export default function ServicesShowcase2027() {;
                   setSearchTerm ('');
                   setSelectedCategory ('all');
                   setSelectedPriceRange ('all');
-                }}
+                }
                 className='px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300'                  setSelectedPriceRange ('all');
-                }}
+                }
                 className="px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300";
               >;
                 Clear Filters;
@@ -1354,8 +1349,7 @@ export default function ServicesShowcase2027() {;
       </footer>;
     </UltraFuturisticMatrixBackground2027>;
   );  );
-}
+
   )
-}
-    </UltraFuturisticMatrixBackground2027>));
-}
+
+    </UltraFuturisticMatrixBackground2027>);

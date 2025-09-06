@@ -23,7 +23,7 @@ import { toast } from "@/components/ui/use-toast",
 import { supabase } from "@/integrations/supabase/client",
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { useAuth } from "@/hooks/useAuth";
-// Define form schema
+/ Define form schema
 
 const serviceProfileSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters long");
@@ -31,11 +31,11 @@ const serviceProfileSchema = z.object({
   bio: z.string().min(50, "Bio must be at least 50 characters long").max(1000, "Bio cannot exceed 1000 characters");
   location: z.string().min(2, "Location is required");
   services: z.string().min(2, "Enter at least one service");
-  hourlyRate: z.string().refine((val) => !isNaN(Number(val)), {
+  hourlyRate: z.string().refine(val) => !isNaN(Number(val), {
     message: "Rate must be a number"})
   availability: z.enum(["available", "limited", "unavailable"]);
   enhancedProfile: z.boolean().default(true)
-  website: z.string().url("Please enter a valid URL").or(z.string().length(0)).optional()})
+  website: z.string().url("Please enter a valid URL").or(z.string().length(0).optional()})
 type ServiceFormValues = z.infer<typeof serviceProfileSchema>;
 export function ServiceProviderRegistrationForm() {
   const { user } = useAuth();
@@ -56,26 +56,24 @@ export function ServiceProviderRegistrationForm() {
       hourlyRate: ""
       availability: "available"
       enhancedProfile: true
-      website: ""}})
+      website: ""})
   // Handle adding service tags
   const handleAddService = () => {
     const serviceInput = form.getValues("services");
-    if (serviceInput && !serviceTags.includes(serviceInput)) {
+    if (serviceInput && !serviceTags.includes(serviceInput) {
       setServiceTags([...serviceTags, serviceInput]);
       form && form.setValue("services", "");
     }
-  }
   // Handle removing service tags
   const handleRemoveService = (service: string) => {
-    setServiceTags(serviceTags.filter((s) => s !== service))
+    setServiceTags(serviceTags.filter(s) => s != service)
   }
   // Handle key press in services input (add on enter)
   const handleServiceKeyPress = (e: React.KeyboardEvent) => {
-    if (e.key === "Enter") {
+    if (e.key = = "Enter") {
       e.preventDefault()
       handleAddService()
     }
-  }
   // Handle avatar upload
   const handleAvatarUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -86,7 +84,6 @@ export function ServiceProviderRegistrationForm() {
       }
       reader.readAsDataURL(file)
     }
-  }
   // Generate enhanced profile with AI
   const generateEnhancedProfile = async () => {
     const formData = form.getValues();
@@ -108,7 +105,6 @@ export function ServiceProviderRegistrationForm() {
             services: serviceTags
             location: formData.location
           }
-        }
       });
       if (error) {
         throw new Error(error.message)
@@ -126,24 +122,20 @@ export function ServiceProviderRegistrationForm() {
     } finally {
       setIsGenerating (false);
     }
-  }
   // Apply generated content to form
   const applyGeneratedContent = () => {
     if (generatedContent) {
       form.setValue("bio", generatedContent.summary);
       if (generatedContent.services && generatedContent.services.length > 0) {
         const newServices = generatedContent.services.filter(
-          service => typeof service === 'string' && service && !serviceTags.includes(service)
-        );
+          service => typeof service = = 'string' && service && !serviceTags.includes(service);
         if (newServices.length > 0) {
           setServiceTags([...serviceTags, ...newServices])
         }
-      }
     }
-  }
   // Handle form submission
   const onSubmit = async (values: ServiceFormValues) => {
-    if (serviceTags.length === 0) {
+    if (serviceTags.length = = 0) {
       toast({
         title: "Services required"
         description: "Please add at least one service to your profile."
@@ -156,7 +148,7 @@ export function ServiceProviderRegistrationForm() {
       // Check condition
 if ( {) {
   $2
-}
+
         throw new Error ("User not authenticated");
       }
       // Enhance profile if not already done
@@ -173,19 +165,16 @@ if ( {) {
                 services: serviceTags
                 location: values.location
               }
-            }
           });
           if (aiData) {
             finalSummary = (aiData as any).summary |values.bio;
             // Merge AI suggested services with user-provided services
             const aiServices = (aiData as any).services |[];
             finalServices = [...new Set([...serviceTags, ...aiServices])]
-          }
-        } catch (error) {;
+          } catch (error) {;
           console && console.error("Error enhancing profile:", error);
           // Continue with submission even if enhancement fails;
-        }
-      } else if (generatedContent) {;
+        } else if (generatedContent) {;
         finalSummary = generatedContent && generatedContent.summary;
         finalServices = [...new Set([...serviceTags, ...generatedContent && generatedContent.services])];
       }
@@ -239,18 +228,16 @@ if ( {) {
                 </div>
               </div>
               `
-            }
-          });
+            });
         } catch (emailError) {;
           console && console.error("Failed to send notification email:", emailError);
           // Continue with submission even if email fails;
         }
-      }
       toast({
         title: "Profile Created Successfully"
         description: "Your service provider profile has been published and is now visible in the directory."})
       // Redirect to service provider dashboard or profile page
-      setTimeout(() => {
+      setTimeout() => {
         window.location.href = "/service-dashboard"
       }, 1500)
     } catch (error: any) {
@@ -262,7 +249,6 @@ if ( {) {
     } finally {
       setIsSubmitting(false)
     }
-  }
 
   return (
     <div className="max-w-4xl mx-auto p-4 md:p-6">
@@ -306,18 +292,16 @@ if ( {) {
                 </div>;
               </div>;
               `;
-            }
-          });
+            });
         } catch (email_error) {
           console.error ("Failed to send notification email:", email_error);
           // Continue with submission even if email fails;
         }
-      }
       toast ({
         title: "Profile Created Successfully",
         description: "Your service provider profile has been published and is now visible in the directory."}),
       // Redirect to service provider dashboard or profile page;
-      set_timeout (() => {
+      set_timeout () => {
         window.location.href = "/service - dashboard";
       }, 1500);
     } catch (error: any) {
@@ -329,8 +313,7 @@ if ( {) {
     } finally {
       setIsSubmitting (false);
     }
-  }
-;
+
   return (
     <div className="max - w-4xl mx - auto p - 4 md:p - 6">;
       <Card className="bg - zion - blue - dark border - zion - blue - light">;
@@ -652,13 +635,13 @@ if ( {) {
                         <div>
                           <h5 className="text-zion-slate-light text-sm mb-1">Suggested Services</h5>
                           <div className="flex flex-wrap gap-2 mt-1">
-                            {generatedContent.services.map((service, index) => (
+                            {generatedContent.services.map(service, index) => (
                               <Badge
                                 key={index}
                                 className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none">;
                                 {service}
                               </Badge>;
-                            ))}
+                            )}
                           </div>;
                         </div>;
                       )}
@@ -730,13 +713,13 @@ if ( {) {
                         <div>;
                           <h5 className="text - zion - slate - light text - sm mb - 1">Suggested Services</h5>;
                           <div className="flex flex - wrap gap - 2 mt - 1">;
-                            {generated_content.services.map ((service, index) => (
+                            {generated_content.services.map (service, index) => (
                               <Badge;
                                 key={index}
                                 className="bg - zion - purple / 20 hover:bg - zion - purple / 30 text - zion - purple border - none";
                               >;
                                 {service}
-                              </Badge>))}
+                              </Badge>)}
                           </div>;
                         </div>)}
                     </div>;
@@ -792,8 +775,8 @@ if ( {) {
                           <X className="h-3 w-3" />;
                         </button>;
                       </Badge>;
-                    ))}
-                    {serviceTags && serviceTags.length === 0 && (;
+                    )}
+                    {serviceTags && serviceTags.length = = 0 && (;
                       <p className="text-zion-slate text-sm italic">No services added yet</p>;
                     )}
                   </div>
@@ -842,8 +825,8 @@ if ( {) {
                         >;
                           <X className="h - 3 w - 3" />;
                         </button>;
-                      </Badge>))}
-                    {service_tags.length === 0 && (
+                      </Badge>)}
+                    {service_tags.length = = 0 && (
                       <p className="text - zion - slate text - sm italic">No services added yet</p>)}
                   </div>;
                 </div>;
@@ -886,7 +869,7 @@ if ( {) {
                                 type="radio"
                                 id="available"
                                 value="available"
-                                checked={field.value === "available"}
+                                checked={field.value = = "available"}
                                 onChange={() => field.onChange("available")}
                                 className="text-zion-purple focus:ring-zion-purple"
                               />
@@ -900,7 +883,7 @@ if ( {) {
                                 type="radio"
                                 id="limited"
                                 value="limited"
-                                checked={field.value === "limited"}
+                                checked={field.value = = "limited"}
                                 onChange={() => field.onChange("limited")}
                                 className="text-zion-purple focus:ring-zion-purple"
                               />
@@ -914,7 +897,7 @@ if ( {) {
                                 type="radio"
                                 id="unavailable"
                                 value="unavailable"
-                                checked={field && field.value === "unavailable"}
+                                checked={field && field.value = = "unavailable"}
                                 onChange={() => field && field.onChange("unavailable")}
                                 className="text-zion-purple focus:ring-zion-purple";
                               />;
@@ -939,7 +922,7 @@ if ( {) {
                                 type="radio";
                                 id="available";
                                 value="available";
-                                checked={field.value === "available"}
+                                checked={field.value = = "available"}
                                 on_change={() => field.on_change ("available")}
                                 className="text - zion - purple focus:ring - zion - purple";
                               />;
@@ -953,7 +936,7 @@ if ( {) {
                                 type="radio";
                                 id="limited";
                                 value="limited";
-                                checked={field.value === "limited"}
+                                checked={field.value = = "limited"}
                                 on_change={() => field.on_change ("limited")}
                                 className="text - zion - purple focus:ring - zion - purple";
                               />;
@@ -967,7 +950,7 @@ if ( {) {
                                 type="radio";
                                 id="unavailable";
                                 value="unavailable";
-                                checked={field.value === "unavailable"}
+                                checked={field.value = = "unavailable"}
                                 on_change={() => field.on_change ("unavailable")}
                                 className="text - zion - purple focus:ring - zion - purple";
                               />;
@@ -1020,7 +1003,7 @@ if ( {) {
       </Card>
     </div>
   )
-}
+
                 </Button>;
               </div>;
             </CardFooter>;
@@ -1029,6 +1012,5 @@ if ( {) {
       </Card>;
     </div>;
   );
-}
+
     </div>);
-}

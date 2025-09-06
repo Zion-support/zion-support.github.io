@@ -4,7 +4,7 @@ import { Mail, Phone, MapPin, Globe, Zap, Bot, Cloud, Shield, ArrowRight } from 
 
 export default function FuturisticFooter() {
   const currentYear = new Date().getFullYear(),
-  
+
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -58,7 +58,7 @@ export default function FuturisticFooter() {
               Leading provider of AI-powered micro SaaS solutions, helping businesses automate, optimize, and scale their operations with cutting-edge technology.
             </p>
             <div className=&quot;flex space-x-4&quot;>
-              {socialLinks.map((social) => (
+              {socialLinks.map(social) => (
                 <a
                   key={social.name}
                   href={social.href}
@@ -67,7 +67,7 @@ export default function FuturisticFooter() {
                   className=&quot;w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/40&quot;
                 >
                   <span className=&quot;text-lg&quot;>{social.icon}</span>                </a>
-              ))}
+              )}
             </div>
           </div>
 
@@ -78,7 +78,7 @@ export default function FuturisticFooter() {
               Quick Links
             </h3>
             <ul className=&quot;space-y-3&quot;>
-              {quickLinks.map((link) => (
+              {quickLinks.map(link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
@@ -86,7 +86,7 @@ export default function FuturisticFooter() {
                   >
                     {link.name}
                   </a>                </li>
-              ))}
+              )}
             </ul>
           </div>
 
@@ -97,7 +97,7 @@ export default function FuturisticFooter() {
               Services
             </h3>
             <ul className=&quot;space-y-3&quot;>
-              {serviceCategories.map((service) => (
+              {serviceCategories.map(service) => (
                 <li key={service.name}>
                   <Link
                     href={service.href}
@@ -105,7 +105,7 @@ export default function FuturisticFooter() {
                   >
                     {service.name}
                   </a>                </li>
-              ))}
+              )}
             </ul>
           </div>
 
@@ -127,7 +127,7 @@ export default function FuturisticFooter() {
                   </a>
                 </div>
               </div>
-              
+
               <div className=&quot;flex items-start space-x-3&quot;>
                 <Mail className=&quot;w-5 h-5 text-green-400 mt-1 flex-shrink-0&quot; />
                 <div>
@@ -139,7 +139,7 @@ export default function FuturisticFooter() {
                   </a>
                 </div>
               </div>
-              
+
               <div className=&quot;flex items-start space-x-3&quot;>
                 <MapPin className=&quot;w-5 h-5 text-purple-400 mt-1 flex-shrink-0&quot; />
                 <div>
@@ -157,7 +157,7 @@ export default function FuturisticFooter() {
           <div className=&quot;flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0&quot;>
             <div className=&quot;text-gray-400 text-sm&quot;>
                {currentYear} Zion Tech Group. All rights reserved.            </div>
-            
+
             <div className=&quot;flex space-x-6 text-sm&quot;>
               <Link href=&quot;/privacy&quot; className=&quot;text-gray-400 hover:text-white transition-colors duration-200&quot;>
                 Privacy Policy

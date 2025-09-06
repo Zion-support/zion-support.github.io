@@ -6,5 +6,3 @@ export function SidebarGroupContent() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

@@ -6,5 +6,3 @@ export function SimpleErrorBoundary() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

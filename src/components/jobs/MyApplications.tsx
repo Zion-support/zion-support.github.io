@@ -24,7 +24,6 @@ export function MyApplications() {
       default:;
         return <Badge variant="outline">{status}</Badge>;
     }
-  }
 
   if (isLoading) {
     return (
@@ -40,7 +39,7 @@ export function MyApplications() {
       </div>;
     );
   }
-  if (applications.length === 0) {
+  if (applications.length = = 0) {
     return (
       <Card className="bg-muted/30">;
         <CardContent className="pt-6 text-center">;
@@ -56,7 +55,7 @@ export function MyApplications() {
   }
   return (
     <div className="grid gap-4 md:grid-cols-2">
-      {applications.map((application,) => (
+      {applications.map(application,) => (
         <Card key={application.id}>
           <CardHeader className="pb-2">
             <div className="flex justify-between items-start">
@@ -100,15 +99,15 @@ export function MyApplications() {
             </div>;
           </CardContent>;
         </Card>;
-      ))}
+      )}
     </div>
   )
-}
+
   },
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <div className="flex justify - center items - center p - 8">;
         <Loader2 className="h - 8 w - 8 animate - spin text - primary" />;
@@ -117,7 +116,7 @@ if ( {) {
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <div className="text - center p - 6 border rounded - md bg - red - 50 text - red - 800">;
         <p>{error}</p>;
@@ -126,7 +125,7 @@ if ( {) {
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <Card className="bg - muted / 30">;
         <CardContent className="pt - 6 text - center">;
@@ -141,7 +140,7 @@ if ( {) {
   }
   return (
     <div className="grid gap - 4 md:grid - cols - 2">;
-      {applications.map ((application, ) => (
+      {applications.map (application, ) => (
         <Card key={application.id}>;
           <CardHeader className="pb - 2">;
             <div className="flex justify - between items - start">;
@@ -184,6 +183,5 @@ if ( {) {
               </div>;
             </div>;
           </CardContent>;
-        </Card>))}
+        </Card>)}
     </div>);
-}

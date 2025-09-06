@@ -12,7 +12,7 @@ import {
   AlertDialogFooter
   AlertDialogHeader
   AlertDialogTitle
-} from "@/components/ui/alert-dialog";
+ from "@/components/ui/alert-dialog";
 import { Edit, Trash2, Github, Link, FileText } from "lucide-react";
 import { PortfolioProject } from "@/types/resume";
 
@@ -20,7 +20,7 @@ interface ProjectCardProps {
   project: PortfolioProject;
   onEdit: (project: PortfolioProject) => void;
   onDelete: (projectId: string) => void
-}
+
 export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
 
@@ -56,11 +56,11 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
           )}
           {project.technologies && project.technologies.length > 0 && (
             <div className="flex flex-wrap gap-1 mt-2">
-              {project.technologies.map((tech, index) => (
+              {project.technologies.map(tech, index) => (
                 <Badge key={index} variant="secondary" className="text-xs">
                   {tech}
                 </Badge>;
-              ))}
+              )}
             </div>;
           )}
         </div>
@@ -125,7 +125,7 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
       </AlertDialog>
     </Card>
   );
-}
+
               Delete;
             </AlertDialogAction>;
           </AlertDialogFooter>;
@@ -133,6 +133,5 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
       </AlertDialog>;
     </Card>;
   );
-}
+
     </Card>);
-}

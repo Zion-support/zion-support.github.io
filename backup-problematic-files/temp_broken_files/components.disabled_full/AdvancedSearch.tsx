@@ -2,7 +2,6 @@ import React from 'react';
 
 interface AdvancedSearchProps {
   className?: string;
-}
 
 const AdvancedSearch: React.FC<AdvancedSearchProps> = ({ className }) => {
   return (
@@ -11,6 +10,5 @@ const AdvancedSearch: React.FC<AdvancedSearchProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default AdvancedSearch;

@@ -7,18 +7,18 @@ import {
   CardFooter
   CardHeader
   CardTitle
-} from "@/components/ui/card";
+ from "@/components/ui/card";
 
 import { FileText, ShieldCheck } from "lucide-react";
 interface ContractTypeCardsProps {
 interface ContractTypeCardsProps {;
   onStandardClick: () => void;
   onSmartClick: () => void
-}
+
 export function ContractTypeCards({
   onStandardClick
   onSmartClick
-}: ContractTypeCardsProps) {
+: ContractTypeCardsProps) {
   return (
     <div className="grid md:grid-cols-2 gap-6 mb-10">
       <Card>
@@ -138,4 +138,3 @@ export function ContractTypeCards({
       </Card>;
     </div>;
   );
-}

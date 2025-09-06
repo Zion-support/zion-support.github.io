@@ -3,13 +3,12 @@ import { useState, useEffect } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Resume } from '@/types/resume',;
 import { useAuth } from '@/hooks/useAuth',;
-;
+
 export function useResumeList() {;
   const { user } = useAuth(),;
   const [isLoading, setIsLoading] = useState(false),;
   const [error, setError] = useState<string | null>(null),;
   const [resumes, setResumes] = useState<Resume[]>([]),;
-  ;
   const fetchResumes = async () => {;
     if (!user) {;
       setError('You must be logged in to access resumes'),;
@@ -18,7 +17,6 @@ export function useResumeList() {;
     ;
     setIsLoading(true),;
     setError(null),;
-    ;
     try {;
       // Fetch resume list with basic info for the current user;
       const { data:resumeData, error:resumeError } = await supabase;
@@ -27,10 +25,8 @@ export function useResumeList() {;
         .eq('user_id', user.id);
         .order('is_active', { ascending:false });
         .order('created_at', { ascending:false }),;
-      ;
       if (resumeError) throw resumeError,;
-      ;
-      if (!resumeData || resumeData.length === 0) {;
+      if (!resumeData || resumeData.length = = 0) {;
         setResumes([]),;
         return [],;
       }
@@ -50,8 +46,7 @@ export function useResumeList() {;
         skills:[],;
         certifications:[],;
         is_active:resume.is_active;
-      })),;
-      ;
+      }),;
       setResumes(transformedResumes),;
       return transformedResumes,;
     } catch (e:any) {;
@@ -60,36 +55,31 @@ export function useResumeList() {;
       return [],;
     } finally {;
       setIsLoading(false),;
-    }
-  },;
-  ;
+    },;
   // Fetch resumes when the component mounts;
-  useEffect(() => {;
+  useEffect() => {;
     if (user) {;
       fetchResumes(),;
-    }
-  }, [user]),;
-  ;
+    }, [user]),;
   return {;
     isLoading,;
     error,;
     resumes,;
     fetchResumes;
   },;
-} setIsLoading (true);
+ setIsLoading (true);
 setError (null);
 try {
   // Fetch resume list with basic info for the current user const {
   data: resumeData, error: resumeError 
-}= await supabase .from ('talent resumes') .select ('*') .eq ('user id', user.id) if (resumeError) throw resumeError;
-// Transform data to match Resume type const transformedResumes: Resume[] = resumeData.map (resume => ({
+= await supabase .from ('talent resumes') .select ('*') .eq ('user id', user.id) if (resumeError) throw resumeError;
+/ Transform data to match Resume type const transformedResumes: Resume[] = resumeData.map (resume => ({
   id: resume.id, user id: resume.user id, basic info: {
   id: resume.id, title: resume.title, headline: resume.headline, summary: resume.summary 
-};
+;
 work experience: [];
 education: [];
 skills: [];
 certifications: [];
 is active: resume.is active 
-}) );
-}
+);

@@ -7,6 +7,5 @@ const ProfilePage = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default ProfilePage;

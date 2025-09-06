@@ -24,7 +24,7 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {;
     ...real2036ITServices,;
     ...real2036AIServices,  ];
 
-  const categories = [...new Set(allServices && allServices.map(service => service && service.category))],;
+  const categories = [...new Set(allServices && allServices.map(service => service && service.category)],;
 
   return (
     <Layout>;
@@ -39,25 +39,25 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {;
           <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-blue-500/20 to-purple-500/20 animate-pulse'></div>;
           <div className='relative z-10 max-w-7xl mx-auto text-center'>;
             <motion&& motion.h1
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
+              initial={ opacity: 0, y: 50 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }
               className='text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent'>;
               2036 Services Showcase;
             </motion && motion.h1>;
             <motion&& motion.p
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8, delay: 0 && 0.2 }
               className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>;
               Experience the future of technology with our revolutionary;
               portfolio of AI, Quantum Computing, Space Technology, and;
               cutting-edge IT solutions;
             </motion && motion.p>;
             <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8, delay: 0.4 }
               className='flex flex-col sm:flex-row gap-4 justify-center'
             >
               <button className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg'>
@@ -68,7 +68,7 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {;
             </motion.div>
           </div>
         </section>
-              transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
+              transition={ duration: 0 && 0.8, delay: 0 && 0.4 }
               className='flex flex-col sm:flex-row gap-4 justify-center'>;
               <button className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg'>;
                 Get Started Today;
@@ -84,9 +84,9 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {;
         <section className='py-16 px-4'>;
           <div className='max-w-7xl mx-auto'>;
             <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className='text-center mb-16'
             >
               <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>
@@ -97,7 +97,7 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {;
                 innovative technology domains, designed to transform businesses
                 and drive the future forward.              </p>
             </motion.div>
-              transition={{ duration: 0 && 0.8 }}
+              transition={ duration: 0 && 0.8 }
               className='text-center mb-16'>;
               <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>;
                 Revolutionary Service Categories;
@@ -109,12 +109,12 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {;
             </motion && motion.div>;
 
             {/* Category Cards */}
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>              {categories && categories.map((category, index) => (;
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>              {categories && categories.map(category, index) => (;
                 <motion&& motion.div
                   key={category}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0 && 0.8, delay: index * 0 && 0.1 }
                   className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-400 transition-all duration-300 hover:transform hover:scale-105'>;
                   <h3 className='text-2xl font-bold mb-4 text-cyan-400'>;
                     {category}
@@ -122,7 +122,7 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {;
                   <p className='text-gray-300 mb-4'>;
                     {;
                       allServices && allServices.filter(;
-                        service => service && service.category === category;
+                        service => service && service.category = = category;
                       ).length;
                     }{' '}
                     innovative services;
@@ -133,17 +133,17 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {;
                       $;
                       {Math && Math.min(;
                         ...allServices;
-                          .filter(service => service && service.category === category);
-                          .map(s => parseInt(s && s.price.replace(/[^0-9]/g, '')));
+                          .filter(service => service && service.category = = category);
+                          .map(s => parseInt(s && s.price.replace(/[^0-9]/g, ''));
                       )}                    </span>;
                   </div>;
                 </motion && motion.div>;
             </div>
             {/* Featured Services */}
             <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className='text-center mb-16'
             >
               <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>
@@ -152,14 +152,14 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {;
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
                 Discover our most innovative and game-changing services that are
                 reshaping industries and defining the future of technology.              </p>
-              ))}
+              )}
             </div>
 
             {/* Featured Services */}
             <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -169,7 +169,7 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {;
                 Discover our most innovative and game-changing services that are reshaping industries and defining the future of technology.
               </p>
             </motion.div>
-              transition={{ duration: 0 && 0.8 }}
+              transition={ duration: 0 && 0.8 }
               className='text-center mb-16'>;
               <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>;
                 Featured Revolutionary Services;
@@ -184,12 +184,12 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {;
               {allServices;
                 .filter(service => service && service.popular);
                 .slice(0, 6);
-                .map((service, index) => (;
+                .map(service, index) => (;
                   <motion&& motion.div
                     key={service && service.id}
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
+                    initial={ opacity: 0, y: 30 }
+                    whileInView={ opacity: 1, y: 0 }
+                    transition={ duration: 0 && 0.8, delay: index * 0 && 0.1 }
                     className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-400 transition-all duration-300 hover:transform hover:scale-105 group'>;
                     <div className='flex items-center justify-between mb-4'>;
                       <span className='text-4xl'>{service && service.icon}</span>;
@@ -220,26 +220,26 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {;
                       </span>;
                     </div>;
                     <div className='space-y-2 mb-4'>;
-                      {service && service.features.slice(0, 3).map((feature, idx) => (;
+                      {service && service.features.slice(0, 3).map(feature, idx) => (;
                         <div
                           key={idx}
                           className='flex items-center text-sm text-gray-300'>;
                           <span className='text-cyan-400 mr-2'></span>;
                           {feature}
                         </div>;
-                      ))}
+                      )}
                     </div>;
                     <button className='w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105'>;
                       Learn More;
                     </button>;
                   </motion && motion.div>;
-                ))}
+                )}
             </div>
             {/* All Services Section */}
             <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className='text-center mb-16'
             >
               <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>
@@ -249,7 +249,7 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {;
                 Explore our entire collection of {allServices.length} innovative
                 services across all technology domains.              </p>
             </motion.div>
-              transition={{ duration: 0 && 0.8 }}
+              transition={ duration: 0 && 0.8 }
               className='text-center mb-16'>;
               <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>;
                 Complete Service Portfolio;
@@ -260,27 +260,27 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {;
             </motion && motion.div>;
 
             {/* Services by Category */}
-            {categories && categories.map((category, categoryIndex) => (;
+            {categories && categories.map(category, categoryIndex) => (;
               <motion&& motion.div
                 key={category}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.8, delay: categoryIndex * 0 && 0.2 }}
+                initial={ opacity: 0, y: 30 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0 && 0.8, delay: categoryIndex * 0 && 0.2 }
                 className='mb-16'>;
                 <h3 className='text-3xl font-bold mb-8 text-center text-cyan-400'>;
                   {category}
                 </h3>;
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>                  {allServices;
-                    .filter(service => service && service.category === category);
-                    .map((service, serviceIndex) => (;
+                    .filter(service => service && service.category = = category);
+                    .map(service, serviceIndex) => (;
                       <motion&& motion.div
                         key={service && service.id}
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{
+                        initial={ opacity: 0, y: 20 }
+                        whileInView={ opacity: 1, y: 0 }
+                        transition={
                           duration: 0.6
                           delay: serviceIndex * 0.1
-                        }}
+                        }
                         className='bg-gradient-to-br from-gray-800/30 to-gray-900/30 backdrop-blur-sm border border-gray-700 rounded-lg p-4 hover:border-cyan-400 transition-all duration-300 hover:transform hover:scale-105'>;
                         <div className='flex items-center justify-between mb-3'>;
                           <span className='text-2xl'>{service && service.icon}</span>;
@@ -304,26 +304,26 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {;
                           </span>;
                         </div>;
                         <div className='space-y-1 mb-3'>;
-                          {service && service.features.slice(0, 2).map((feature, idx) => (;
+                          {service && service.features.slice(0, 2).map(feature, idx) => (;
                             <div
                               key={idx}
                               className='flex items-center text-xs text-gray-300'>;
                               <span className='text-cyan-400 mr-2'></span>                              {feature}
                             </div>;
-                          ))}
+                          )}
                         </div>;
                         <button className='w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-3 rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 text-sm'>                          View Details;
                         </button>;
                       </motion && motion.div>;
-                    ))}
+                    )}
                 </div>;
               </motion && motion.div>;
-            ))}
+            )}
             {/* Call to Action */}
             <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className='text-center py-16 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-2xl border border-cyan-400/20'
             >
               <h2 className='text-4xl font-bold mb-6 text-white'>
@@ -346,8 +346,8 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {;
       </div>
     </Layout>
   )
-}
-              transition={{ duration: 0 && 0.8 }}
+
+              transition={ duration: 0 && 0.8 }
               className='text-center py-16 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-2xl border border-cyan-400/20'>;
               <h2 className='text-4xl font-bold mb-6 text-white'>;
                 Ready to Transform Your Business?;
@@ -369,7 +369,6 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {;
       </div>;
     </Layout>;
   ),;
-};
 
 export default ComprehensiveServicesShowcase2036;
 
@@ -377,8 +376,8 @@ export default ComprehensiveServicesShowcase2036;
     ...real2036InnovativeServices,
     ...real2036ITServices,
     ...real2036AIServices,  ];
-;
-  const categories = [...new Set (all_services.map (service => service.category))],
+
+  const categories = [...new Set (all_services.map (service => service.category)],
   return (
     <Layout>;
       <SEO;
@@ -392,17 +391,17 @@ export default ComprehensiveServicesShowcase2036;
           <div className='absolute inset - 0 bg - gradient - to - r from - cyan - 500 / 20 via - blue - 500 / 20 to - purple - 500 / 20 animate - pulse'></div>;
           <div className='relative z - 10 max - w-7xl mx - auto text - center'>;
             <motion.h1;
-              initial={{ opacity: 0, coordinate_y: 50 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, coordinate_y: 50 }
+              animate={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
               className='text - 5xl md:text - 7xl font - bold mb - 6 bg - gradient - to - r from - cyan - 400 via - blue - 500 to - purple - 600 bg - clip - text text - transparent';
             >;
               2036 Services Showcase;
             </motion.h1>;
             <motion.p;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial={ opacity: 0, coordinate_y: 30 }
+              animate={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8, delay: 0.2 }
               className='text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto';
             >;
               Experience the future of technology with our revolutionary;
@@ -410,9 +409,9 @@ export default ComprehensiveServicesShowcase2036;
               cutting - edge IT solutions;
             </motion.p>;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              initial={ opacity: 0, coordinate_y: 30 }
+              animate={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8, delay: 0.4 }
               className='flex flex - col sm:flex - row gap - 4 justify - center';
             >;
               <button className='px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - semibold rounded - lg hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 transform hover:scale - 105 shadow - lg'>;
@@ -427,9 +426,9 @@ export default ComprehensiveServicesShowcase2036;
         <section className='py - 16 px - 4'>;
           <div className='max - w-7xl mx - auto'>;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, coordinate_y: 30 }
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
               className='text - center mb - 16';
             >;
               <h2 className='text - 4xl md:text - 5xl font - bold mb - 6 bg - gradient - to - r from - cyan - 400 to - blue - 500 bg - clip - text text - transparent'>;
@@ -441,12 +440,12 @@ export default ComprehensiveServicesShowcase2036;
                 and drive the future forward.              </p>;
             </motion.div>;
             {/* Category Cards */}
-            <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8 mb - 16'>              {categories.map ((category, index) => (
+            <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8 mb - 16'>              {categories.map (category, index) => (
                 <motion.div;
                   key={category}
-                  initial={{ opacity: 0, coordinate_y: 30 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  initial={ opacity: 0, coordinate_y: 30 }
+                  whileInView={ opacity: 1, coordinate_y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }
                   className='bg - gradient - to - br from - gray - 800 / 50 to - gray - 900 / 50 backdrop - blur - sm border border - gray - 700 rounded - xl p - 6 hover:border - cyan - 400 transition - all duration - 300 hover:transform hover:scale - 105';
                 >;
                   <h3 className='text - 2xl font - bold mb - 4 text - cyan - 400'>;
@@ -455,7 +454,7 @@ export default ComprehensiveServicesShowcase2036;
                   <p className='text - gray - 300 mb - 4'>;
                     {
                       all_services.filter (
-                        service => service.category === category).length;
+                        service => service.category = = category).length;
                     }{' '}
                     innovative services;
                   </p>;
@@ -465,16 +464,16 @@ export default ComprehensiveServicesShowcase2036;
                       $;
                       {Math.min (
                         ...all_services;
-                          .filter (service => service.category === category);
-                          .map (string => parse_int (s.price.replace (/[^0 - 9]/g, ''))))}                    </span>;
+                          .filter (service => service.category = = category);
+                          .map (string => parse_int (s.price.replace (/[^0 - 9]/g, ''))}                    </span>;
                   </div>;
-                </motion.div>))}
+                </motion.div>)}
             </div>;
             {/* Featured Services */}
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, coordinate_y: 30 }
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
               className='text - center mb - 16';
             >;
               <h2 className='text - 4xl md:text - 5xl font - bold mb - 6 bg - gradient - to - r from - cyan - 400 to - blue - 500 bg - clip - text text - transparent'>;
@@ -489,12 +488,12 @@ export default ComprehensiveServicesShowcase2036;
               {all_services;
                 .filter (service => service.popular);
                 .slice (0, 6);
-                .map ((service, index) => (
+                .map (service, index) => (
                   <motion.div;
                     key={service.id}
-                    initial={{ opacity: 0, coordinate_y: 30 }}
-                    whileInView={{ opacity: 1, coordinate_y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
+                    initial={ opacity: 0, coordinate_y: 30 }
+                    whileInView={ opacity: 1, coordinate_y: 0 }
+                    transition={ duration: 0.8, delay: index * 0.1 }
                     className='bg - gradient - to - br from - gray - 800 / 50 to - gray - 900 / 50 backdrop - blur - sm border border - gray - 700 rounded - xl p - 6 hover:border - cyan - 400 transition - all duration - 300 hover:transform hover:scale - 105 group';
                   >;
                     <div className='flex items - center justify - between mb - 4'>;
@@ -525,25 +524,25 @@ export default ComprehensiveServicesShowcase2036;
                       </span>;
                     </div>;
                     <div className='space - y-2 mb - 4'>;
-                      {service.features.slice (0, 3).map ((feature, idx) => (
+                      {service.features.slice (0, 3).map (feature, idx) => (
                         <div;
                           key={idx}
                           className='flex items - center text - sm text - gray - 300';
                         >;
                           <span className='text - cyan - 400 mr - 2'></span>;
                           {feature}
-                        </div>))}
+                        </div>)}
                     </div>;
                     <button className='w - full bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white py - 2 px - 4 rounded - lg hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 transform hover:scale - 105'>;
                       Learn More;
                     </button>;
-                  </motion.div>))}
+                  </motion.div>)}
             </div>;
             {/* All Services Section */}
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, coordinate_y: 30 }
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
               className='text - center mb - 16';
             >;
               <h2 className='text - 4xl md:text - 5xl font - bold mb - 6 bg - gradient - to - r from - cyan - 400 to - blue - 500 bg - clip - text text - transparent'>;
@@ -554,28 +553,28 @@ export default ComprehensiveServicesShowcase2036;
                 services across all technology domains.              </p>;
             </motion.div>;
             {/* Services by Category */}
-            {categories.map ((category, category_index) => (
+            {categories.map (category, category_index) => (
               <motion.div;
                 key={category}
-                initial={{ opacity: 0, coordinate_y: 30 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.8, delay: category_index * 0.2 }}
+                initial={ opacity: 0, coordinate_y: 30 }
+                whileInView={ opacity: 1, coordinate_y: 0 }
+                transition={ duration: 0.8, delay: category_index * 0.2 }
                 className='mb - 16';
               >;
                 <h3 className='text - 3xl font - bold mb - 8 text - center text - cyan - 400'>;
                   {category}
                 </h3>;
                 <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6'>                  {all_services;
-                    .filter (service => service.category === category);
-                    .map ((service, service_index) => (
+                    .filter (service => service.category = = category);
+                    .map (service, service_index) => (
                       <motion.div;
                         key={service.id}
-                        initial={{ opacity: 0, coordinate_y: 20 }}
-                        whileInView={{ opacity: 1, coordinate_y: 0 }}
-                        transition={{
+                        initial={ opacity: 0, coordinate_y: 20 }
+                        whileInView={ opacity: 1, coordinate_y: 0 }
+                        transition={
                           duration: 0.6,
                           delay: service_index * 0.1,
-                        }}
+                        }
                         className='bg - gradient - to - br from - gray - 800 / 30 to - gray - 900 / 30 backdrop - blur - sm border border - gray - 700 rounded - lg p - 4 hover:border - cyan - 400 transition - all duration - 300 hover:transform hover:scale - 105';
                       >;
                         <div className='flex items - center justify - between mb - 3'>;
@@ -599,24 +598,24 @@ export default ComprehensiveServicesShowcase2036;
                           </span>;
                         </div>;
                         <div className='space - y-1 mb - 3'>;
-                          {service.features.slice (0, 2).map ((feature, idx) => (
+                          {service.features.slice (0, 2).map (feature, idx) => (
                             <div;
                               key={idx}
                               className='flex items - center text - xs text - gray - 300';
                             >;
                               <span className='text - cyan - 400 mr - 2'></span>                              {feature}
-                            </div>))}
+                            </div>)}
                         </div>;
                         <button className='w - full bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white py - 2 px - 3 rounded - lg hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 text - sm'>                          View Details;
                         </button>;
-                      </motion.div>))}
+                      </motion.div>)}
                 </div>;
-              </motion.div>))}
+              </motion.div>)}
             {/* Call to Action */}
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, coordinate_y: 30 }
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
               className='text - center py - 16 bg - gradient - to - r from - cyan - 500 / 10 via - blue - 500 / 10 to - purple - 500 / 10 rounded - 2xl border border - cyan - 400 / 20';
             >;
               <h2 className='text - 4xl font - bold mb - 6 text - white'>;
@@ -638,7 +637,5 @@ export default ComprehensiveServicesShowcase2036;
         </section>;
       </div>;
     </Layout>),
-}
-;
+
 export default ComprehensiveServicesShowcase2036;
-;

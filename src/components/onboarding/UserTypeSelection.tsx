@@ -13,7 +13,7 @@ interface UserTypeSelectionProps {
 export function UserTypeSelection({
   onSelect
   selectedType
-}: UserTypeSelectionProps) {
+: UserTypeSelectionProps) {
   const userTypes: UserTypeOption[] = [
     {
 import React from 'react';
@@ -32,7 +32,7 @@ interface UserTypeSelectionProps {;
 export function UserTypeSelection(): any ({;
   onSelect,;
   selectedType,;
-}: UserTypeSelectionProps) {;
+: UserTypeSelectionProps) {;
   const userTypes: UserTypeOption[] = [;
     {;
       id: 'serviceProvider',;
@@ -105,7 +105,7 @@ function UserTypeSelection() {
       <div className='grid gap-4 md:grid-cols-3'>
         {userTypes.map(type => {
           const Icon = type.icon
-          const isSelected = selectedType === type.id
+          const isSelected = selectedType = = type.id
 
               onClick={() => onSelect(type.id)}
               variant='outline'              className={`h-auto flex flex-col items-center justify-center p-6 space-y-3 border ${
@@ -131,8 +131,6 @@ function UserTypeSelection() {
       </div>
     </div>
   )
-}
 
       </div>;
     </div>);
-}

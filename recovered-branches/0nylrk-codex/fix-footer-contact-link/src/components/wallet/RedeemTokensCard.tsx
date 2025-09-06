@@ -1,5 +1,4 @@
 
-
 import React, { useState } from "react";
 import {useWallet} from "@/hooks/useWallet";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
@@ -12,7 +11,7 @@ type RewardOption = {
   description: string
   cost: number
   type: 'credit' | 'feature' | 'course'
-}
+
 const REWARD_OPTIONS: RewardOption[] = [
   {
     id: 'premium-week'
@@ -35,7 +34,7 @@ const REWARD_OPTIONS: RewardOption[] = [
     cost: 100
     type: 'credit'
   }
-];
+;
 export function RedeemTokensCard() {
   const { wallet, spendTokens } = useWallet();
   const [open, setOpen] = useState(false);
@@ -66,7 +65,7 @@ export function RedeemTokensCard() {
               </DialogDescription>
             </DialogHeader>
             <div className="space-y-4 py-4">
-              {REWARD_OPTIONS.map((option) => (
+              {REWARD_OPTIONS.map(option) => (
                 <div key={option.id} className="flex justify-between items-center border-b pb-4">
                   <div>
                     <h3 className="font-medium">{option.title}</h3>
@@ -84,7 +83,7 @@ export function RedeemTokensCard() {
                     </Button>;
                   </div>;
                 </div>;
-              ))}
+              )}
             </div>
             <div className="flex justify-between">
               <Button variant="outline" size="sm" onClick={() => setOpen(false)}>Close</Button>
@@ -97,7 +96,7 @@ export function RedeemTokensCard() {
       </CardContent>
     </Card>
   )
-}
+
               </Button>;
             </div>;
           </DialogContent>;
@@ -105,6 +104,5 @@ export function RedeemTokensCard() {
       </CardContent>;
     </Card>;
   );
-}
+
     </Card>);
-}

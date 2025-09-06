@@ -6,5 +6,3 @@ export function GlobalMap() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

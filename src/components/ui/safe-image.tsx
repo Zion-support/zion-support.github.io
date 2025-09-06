@@ -1,4 +1,4 @@
-'use client',
+use client',
 
 import Image from 'next/image';
 import { useState } from 'react';
@@ -29,11 +29,11 @@ export function SafeImage({
   priority = false
   sizes
   quality = 75
-}: SafeImageProps) {
+: SafeImageProps) {
   const [hasError, setHasError] = useState(false)
   const [currentSrc, setCurrentSrc] = useState(src)
   const handleError = () => {
-    if (!hasError && fallbackSrc && currentSrc !== fallbackSrc) {
+    if (!hasError && fallbackSrc && currentSrc != fallbackSrc) {
       setCurrentSrc(fallbackSrc)
       setHasError(true)
       // Try serving the image directly through our custom API route
@@ -71,11 +71,11 @@ export function SafeImage(): any ({;
   priority = false,;
   sizes,;
   quality = 75,;
-}: SafeImageProps) {;
+: SafeImageProps) {;
   const [hasError, setHasError] = useState(false);
   const [currentSrc, setCurrentSrc] = useState(src);
   const handleError = () => {;
-    if (!hasError && fallbackSrc && currentSrc !== fallbackSrc) {;
+    if (!hasError && fallbackSrc && currentSrc != fallbackSrc) {;
       setCurrentSrc(fallbackSrc);
       setHasError(true);
       // Try serving the image directly through our custom API route;
@@ -85,14 +85,13 @@ export function SafeImage(): any ({;
     } else if (!hasError) {;
       setHasError(true);
     }
-  }
 
   // If we have an error and no fallback, show a placeholder
-  if (hasError && (!fallbackSrc |currentSrc === fallbackSrc)) {
+  if (hasError && (!fallbackSrc |currentSrc = = fallbackSrc) {
         return (
       <div
         className={`flex items-center justify-center bg-gray-100 text-gray-400 ${className}`}
-        style={{ width, height }}
+        style={ width, height }
         role="img"
         aria-label = {alt,}
       >
@@ -113,7 +112,6 @@ export function SafeImage(): any ({;
     );
   }
 
-
     />;
   );        aria-label={alt}
       >;
@@ -121,7 +119,6 @@ export function SafeImage(): any ({;
       </div>;
     );
   }
-
 
     />;
   );  return (
@@ -137,10 +134,9 @@ export function SafeImage(): any ({;
       unoptimized = {hasError,}
     />
   )
-}
-} ;
-} ;
-} 
+
+ ;
+
   src: string,
   alt: string,
 interface SafeImageProps {
@@ -163,7 +159,7 @@ function SafeImage() {
     // Check condition
 if ( {) {
   $2
-}
+
       setCurrentSrc (fallback_src);
       setHasError (true);
       // Try serving the image directly through our custom API route;
@@ -173,18 +169,17 @@ if ( {) {
     } else // Check condition
 if ( {) {
   $2
-}
+
       setHasError (true);
     }
-  }
   // If we have an error and no fallback, show a placeholder;
   if () {) {
   $2
-}
+
         return (
       <div;
         className={`flex items - center justify - center bg - gray - 100 text - gray - 400 ${class_name}`}
-        style={{ width, height }}
+        style={ width, height }
         role="img";
         aria - label = {alt, }
       >;
@@ -207,4 +202,3 @@ if ( {) {
       // Add unoptimized as fallback for problematic images;
       unoptimized = {has_error, }
     />);
-}

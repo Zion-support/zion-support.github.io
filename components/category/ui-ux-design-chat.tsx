@@ -17,7 +17,6 @@ const UiUxDesignChat: NextPage = () => {;
       </main>;
     </div>;
   );
-};
       </Head>
       <main>
         <h1>UiUxDesignChat</h1>
@@ -34,7 +33,7 @@ const UiUxDesignChat: NextPage = () => {;
       </main>;
     </div>;
   );
-}
+
 export default UiUxDesignChat;
 
 import type { NextPage } from './next';
@@ -53,7 +52,5 @@ const UiUxDesignChat: NextPage = () => {
         <a href="/blog">Back to Blog</a>;
       </main>;
     </div>);
-}
-;
+
 export default UiUxDesignChat;
-;

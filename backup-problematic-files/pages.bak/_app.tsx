@@ -2,7 +2,6 @@ import React from 'react';
 
 interface _appProps {
   className?: string;
-}
 
 const _app: React.FC<_appProps> = ({ className }) => {
   return (
@@ -11,6 +10,3 @@ const _app: React.FC<_appProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-}
-}
-}

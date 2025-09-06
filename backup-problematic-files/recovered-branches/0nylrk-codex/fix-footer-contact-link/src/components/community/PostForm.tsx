@@ -7,7 +7,7 @@ import { ;
   CardFooter,;
   CardHeader,;
   CardTitle;
-} from "@/components/ui/card",;
+ from "@/components/ui/card",;
 import {;
   Form,;
   FormControl,;
@@ -15,49 +15,46 @@ import {;
   FormItem,;
   FormLabel,;
   FormMessage;
-} from "@/components/ui/form",;
+ from "@/components/ui/form",;
 import { Input } from "@/components/ui/input",;
 import { Button } from "@/components/ui/button",;
 import { Textarea } from "@/components/ui/textarea",;
 import { ForumCategory } from "@/types/community",;
-;
+
 interface PostFormValues {;
   title:string,;
   content:string,;
   categoryId:ForumCategory,;
   tags:string;}
-;
+
 interface PostFormProps {;
   initialValues?:Partial<PostFormValues>,;
   onSubmit:(values:PostFormValues) => void,;
   isEditing?:boolean;
-}
-;
+
 export const PostForm = ({;
   initialValues,;
   onSubmit,;
   isEditing = false;
-} PostFormProps) => {;
+ PostFormProps) => {;
   const form = useForm<PostFormValues>({;
     defaultValues:{;
       title:initialValues?.title || "",;
       content:initialValues?.content || "",;
       categoryId:initialValues?.categoryId || "project-help",;
       tags:initialValues?.tags || "";
-    }
-  }),;
-;
+    }),;
+
   const [isSubmitting, setIsSubmitting] = useState(false),;
-;
+
   const handleSubmit = async (values:PostFormValues) => {;
     setIsSubmitting(true),;
     try {;
       await onSubmit(values);
     } finally {;
       setIsSubmitting(false),;
-    }
-  },;
-;
+    },;
+
   return (;
     <Card>;
       <CardHeader>;
@@ -78,7 +75,6 @@ export const PostForm = ({;
                   <FormMessage />;
                 </FormItem>;              )}
             />;
-            ;
             <FormField;
               control={form.control}
               name="content";
@@ -95,7 +91,6 @@ export const PostForm = ({;
                   <FormMessage />;
                 </FormItem>;              )}
             />;
-            ;
             <FormField;
               control={form.control}
               name="categoryId";
@@ -116,7 +111,6 @@ export const PostForm = ({;
                   <FormMessage />;
                 </FormItem>;              )}
             />;
-            ;
             <FormField;
               control={form.control}
               name="tags";
@@ -133,7 +127,6 @@ export const PostForm = ({;
                 </FormItem>;
               )}
             />;
-            ;
             <Button type="submit" disabled={isSubmitting}>;
               {isSubmitting ? "Submitting..." :isEditing ? "Update Post" :"Create Post"}
             </Button>;
@@ -142,8 +135,8 @@ export const PostForm = ({;
       </CardContent>;
     </Card>;
   ),;
-},;
-;
+,;
+
 export default PostForm,; import {
   Card;
 CardContent;
@@ -160,19 +153,19 @@ FormMessage interface PostFormValues {
 content: string;
 categoryId: ForumCategory;
 tags: string 
-}interface PostFormProps {
+interface PostFormProps {
   initialValues?: Partial<PostFormValues>;
 onSubmit: (values: PostFormValues) => void;
 isEditing?: boolean 
-}initialValues, onSubmit, isEditing = false 
-}: PostFormProps) => {
+initialValues, onSubmit, isEditing = false 
+: PostFormProps) => {
   const form = useForm<PostFormValues> ({
   defaultValues: {
   const [isSubmitting, setIsSubmitting] = useState (false);
-return (<Card> <CardHeader> </FormControl> <FormMessage /> </FormItem>) 
-}/> <FormField <FormItem> <FormLabel>Content</FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) 
-}/> <FormField <FormItem> <FormLabel>Category</FormLabel> <FormControl> <select > <option value="getting-hired" >Getting Hired</option> <option value="project-help" >Project Help</option> <option value="ai-tools" >AI Tools Discussion</option> <option value="feedback" >Feedback & Feature Requests</option> </select> </FormControl> <FormMessage /> </FormItem>) 
-}/> <FormField <FormItem> <FormLabel>Tags (comma-separated) </FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) 
-}/> </Button> </form> </Form> </CardContent> </Card>) 
-};
+return (<Card> <CardHeader></FormControl> <FormMessage /> </FormItem>) 
+/> <FormField <FormItem> <FormLabel>Content</FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) 
+/> <FormField <FormItem> <FormLabel>Category</FormLabel> <FormControl> <select > <option value="getting-hired" >Getting Hired</option> <option value="project-help" >Project Help</option> <option value="ai-tools" >AI Tools Discussion</option> <option value="feedback" >Feedback & Feature Requests</option> </select> </FormControl> <FormMessage /> </FormItem>) 
+/> <FormField <FormItem> <FormLabel>Tags (comma-separated) </FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) 
+/> </Button> </form> </Form> </CardContent> </Card>) 
+;
 export default PostForm;

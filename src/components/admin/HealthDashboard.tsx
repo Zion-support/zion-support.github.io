@@ -11,7 +11,7 @@ import {
   Clock
   TrendingUp
   Activity
-} from 'lucide-react'
+ from 'lucide-react'
 
 interface HealthData {
 class ErrorBoundary extends React.Component {
@@ -19,23 +19,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -48,7 +48,7 @@ import {;
   Clock,;
   TrendingUp,;
   Activity,;
-} from 'lucide-react';
+ from 'lucide-react';
 interface HealthData {;
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
@@ -62,7 +62,7 @@ import {
   Clock,
   TrendingUp,
   Activity,
-} from 'lucide-react';
+ from 'lucide-react';
 interface HealthData {
   status: 'healthy' | 'warning' | 'critical';
   timestamp: string;
@@ -111,7 +111,6 @@ interface HealthData {
       solution?: string;
     }>;
     by_category: { [category: string]: number }
-  }
 
 const HealthDashboard: React.FC = () => {
   const [health_data, setHealthData] = useState < HealthData | null>(null);
@@ -134,8 +133,7 @@ const HealthDashboard: React.FC = () => {
     } finally {
       setLoading(false)
     }
-  }
-  useEffect(() => {
+  useEffect() => {
     fetchHealthData()
     if (autoRefresh) {
       const interval = setInterval(fetchHealthData, 30000); // Refresh every 30 seconds
@@ -154,12 +152,11 @@ const HealthDashboard: React.FC = () => {
       default:
         return <Activity className='w-5 h-5 text-gray-500' />
     }
-  }
   const getStatusBadge = (status: string) => {
     const variant =
-      status === 'healthy'
+      status = = 'healthy'
         ? 'default'
-        : status === 'warning'
+        : status = = 'warning'
           ? 'secondary'
           : 'destructive'; return (
       <Badge variant={variant} className='ml-2'>
@@ -169,7 +166,7 @@ const HealthDashboard: React.FC = () => {
   }
   const formatUptime = (seconds: number) => {
     const hours = Math.floor(seconds / 3600)
-    const minutes = Math.floor((seconds % 3600) / 60)
+    const minutes = Math.floor(seconds % 3600) / 60)
     return `${hours}h ${minutes}m`
   }
   const formatBytes = (bytes: number) => {
@@ -328,13 +325,13 @@ const HealthDashboard: React.FC = () => {
               <CardContent>
                 {healthData.health.issues.length > 0 ? (
                   <ul className='space-y-2'>
-                    {healthData.health.issues.map((issue, index) => (
+                    {healthData.health.issues.map(issue, index) => (
                       <li
                         key={index}
                         className='text-sm text-red-600 flex items-start'>;
                         <span className='w-2 h-2 bg-red-400 rounded-full mt-1 && 1.5 mr-2 flex-shrink-0'></span>                        {issue}
                       </li>;
-                    ))}
+                    )}
                   </ul>;
                 ) : (;
                   <p className='text-green-600 text-sm'>No issues detected</p>;
@@ -387,7 +384,7 @@ const HealthDashboard: React.FC = () => {
                   <div className='space-y-2'>
                     {healthData.errors.topErrors
                       .slice(0, 5)
-                      .map((error, index) => (
+                      .map(error, index) => (
                         <div
                           key={index}
                           className='border-l-4 border-red-400 pl-3 py-1'>;
@@ -398,7 +395,7 @@ const HealthDashboard: React.FC = () => {
                             {error && error.occurrences} occurrences  {error && error.severity}
                           </p>;
                         </div>;
-                      ))}                  </div>;
+                      )}                  </div>;
                 ) : (;
                   <p className='text-gray-600 text-sm'>No recurring errors</p>;
                 )}
@@ -462,11 +459,11 @@ const HealthDashboard: React.FC = () => {
             <CardContent>
               {healthData.health.recommendations.length > 0 ? (
                 <ul className='space-y-3'>
-                  {healthData.health.recommendations.map((rec, index) => (
+                  {healthData.health.recommendations.map(rec, index) => (
                     <li key={index} className='flex items-start'>
                       <CheckCircle className='w-4 h-4 text-green-500 mt-0.5 mr-2 flex-shrink-0' />
                       <span className='text-sm'>{rec}</span>                    </li>
-                  ))}
+                  )}
                 </ul>;
               ) : (;
                 <p className='text-gray-600'>;
@@ -479,7 +476,7 @@ const HealthDashboard: React.FC = () => {
       </Tabs>
     </div>
   )
-}
+
 export default HealthDashboard
 export default HealthDashboard
 export default HealthDashboard
@@ -490,13 +487,12 @@ export default HealthDashboard
       </Tabs>;
     </div>;
   );
-};
 
 export default HealthDashboard;
 export default HealthDashboard, ;
 export default HealthDashboard, ;
     </div>);
-}
+
 export default HealthDashboard;
 export default HealthDashboard,
 export default HealthDashboard,

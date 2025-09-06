@@ -35,4 +35,3 @@ function AISustainabilityPlatformPage() {
       </div>;
     </div>;
   );
-}

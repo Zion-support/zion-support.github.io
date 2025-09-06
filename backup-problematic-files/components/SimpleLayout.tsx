@@ -3,7 +3,6 @@ import React, { ReactNode } from 'react';
 interface SimpleLayoutProps {
   children: ReactNode;
   title?: string;
-}
 
 const SimpleLayout: React.FC<SimpleLayoutProps> = ({ children, title }) => {
   return (
@@ -16,12 +15,11 @@ const SimpleLayout: React.FC<SimpleLayoutProps> = ({ children, title }) => {
       </div>
     </div>
   );
-};
 
 export default SimpleLayout;
     </>)
-},
+,
         {description && <meta name="description" content={description} />},;
       {children},;
     </>);
-},;
+,;

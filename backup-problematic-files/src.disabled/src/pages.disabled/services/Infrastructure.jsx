@@ -7,6 +7,5 @@ const Infrastructure = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default Infrastructure;

@@ -1,5 +1,4 @@
 
-
 import {useState} from "react"
 import {logDebug, logErrorToProduction} from '@/utils/productionLogger'
 import {useToast} from "@/hooks/use-toast"
@@ -46,8 +45,7 @@ export function QuoteRequestForm() {
       email: ""
       phone: ""
       company: ""
-    }
-  })
+    })
   const updateFormData = (data: Partial<QuoteFormData>,) => {
     setFormData(prev => ({
       ...prev
@@ -98,16 +96,14 @@ export function QuoteRequestForm() {;
       email: "",;
       phone: "",;
       company: "";
-    }
-  });
+    });
 
   const updateFormData = (data: Partial<QuoteFormData>,) => {;
     setFormData(prev => ({;
       ...prev;
 
-}
   );
-}
+
 import { useState } from './react';
 import {log_debug, logErrorToProduction} from '@/utils / production_logger';
 import { use_toast } from '@/hooks / use - toast';
@@ -157,11 +153,9 @@ function QuoteRequestForm() {
       email: "",
       phone: "",
       company: "";
-    }
-  });
+    });
   const updateFormData = (data: Partial < QuoteFormData>, ) =>: any {
     setFormData (prev => ({
       ...prev;
-}
+
   );
-}

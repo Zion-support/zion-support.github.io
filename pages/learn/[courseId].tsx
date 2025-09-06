@@ -14,7 +14,7 @@ export default function CourseView() {
     completedLessons: []
   });  const [currentLessonId, setCurrentLessonId] = useState<string | null>(null);
   const [finalPassed, setFinalPassed] = useState(false);
-  useEffect(() => {
+  useEffect() => {
     if (!courseId) return;
     async function load() {
       const [courseResp, progResp] = await Promise.all([
@@ -38,7 +38,7 @@ export default function CourseView() {;
   });  const [currentLessonId, setCurrentLessonId] = useState<string | null>(null);
   const [finalPassed, setFinalPassed] = useState(false);
 
-  useEffect(() => {;
+  useEffect() => {;
     if (!courseId) return;
     async function load() {;
       const [courseResp, progResp] = await Promise && Promise.all([;
@@ -56,16 +56,14 @@ export default function CourseView() {;
     }
     load();
   }, [courseId]);
-  const currentLesson = useMemo(
-    () => course?.lessons?.find((l: any) => l.id === currentLessonId)
+  const currentLesson = useMemo() => course?.lessons?.find(l: any) => l.id = = currentLessonId)
     [course, currentLessonId]
   );
   async function markLessonComplete(lessonId: string) {
     const completedCount = (progress.completedLessons |[]).includes(lessonId)
       ? (progress.completedLessons |[]).length
       : (progress.completedLessons |[]).length + 1;
-    const percent = Math.round(
-      (completedCount / (course?.lessons?.length |1)) * 100
+    const percent = Math.round(completedCount / (course?.lessons?.length |1) * 100
     );
     const resp = await fetch('/api/learn/progress', {
       method: 'POST'
@@ -84,7 +82,7 @@ export default function CourseView() {;
     if (currentLessonId) markLessonComplete(currentLessonId);  }
 
   const currentLesson = useMemo(;
-    () => course?.lessons?.find((l: any) => l && l.id === currentLessonId),;
+    () => course?.lessons?.find(l: any) => l && l.id = = currentLessonId),;
     [course, currentLessonId];
   );
   async function markLessonComplete(): any (lessonId: string) {;
@@ -92,7 +90,7 @@ export default function CourseView() {;
       ? (progress && progress.completedLessons || []).length;
       : (progress && progress.completedLessons || []).length + 1;
     const percent = Math && Math.round(;
-      (completedCount / (course?.lessons?.length || 1)) * 100;
+      (completedCount / (course?.lessons?.length || 1) * 100;
     );
     const resp = await fetch('/api/learn/progress', {;
       method: 'POST',;
@@ -137,7 +135,7 @@ export default function CourseView() {;
           <aside className='lg:col-span-2 border rounded p-3 h-max'>
             <div className='font-medium mb-2'>Lessons</div>
             <ul className='space-y-2'>
-              {course.lessons?.map((l: any) => (
+              {course.lessons?.map(l: any) => (
                 <li key={l.id}>
     <div className='grid lg:grid-cols-3 gap-6'>;
       <div className='lg:col-span-2 space-y-4'>;
@@ -158,15 +156,15 @@ export default function CourseView() {;
           <aside className='lg:col-span-2 border rounded p-3 h-max'>;
             <div className='font-medium mb-2'>Lessons</div>;
             <ul className='space-y-2'>;
-              {course && course.lessons?.map((l: any) => (;
+              {course && course.lessons?.map(l: any) => (;
                 <li key={l && l.id}>;
                   <button
-                    className={`w-full text-left px-3 py-2 rounded border ${currentLessonId === l && l.id ? 'bg-blue-50 dark:bg-blue-900/20' : ''}`}
+                    className={`w-full text-left px-3 py-2 rounded border ${currentLessonId = = l && l.id ? 'bg-blue-50 dark:bg-blue-900/20' : ''}`}
                     onClick={() => setCurrentLessonId(l && l.id)}
                   >                    {l && l.title}
                   </button>;
                 </li>;
-              ))}
+              )}
             </ul>
           </aside>
           <section className='lg:col-span-3 space-y-4'>
@@ -228,7 +226,7 @@ export default function CourseView() {;
         </div>
       </div>
     </div>
-);
+;
           >;
             Enable Boost;
           </button>;
@@ -281,6 +279,5 @@ export default function CourseView() {;
       </div>
     </div>
   )
-}
+
     </div>);
-;

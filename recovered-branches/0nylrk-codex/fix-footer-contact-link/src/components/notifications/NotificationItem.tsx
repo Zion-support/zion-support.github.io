@@ -1,5 +1,5 @@
 import React from 'react';
-// Use the centralized icon wrapper to avoid missing icons
+/ Use the centralized icon wrapper to avoid missing icons
 
 import {Check, Trash2, ChevronRight} from '@/components/icons';
 import {Button} from '@/components/ui/button';
@@ -26,17 +26,17 @@ export const getTypeIcon = (type: NotificationType) => {
     default:
       return <span className="text-gray-500"></span>
   }
-}
+
 interface NotificationItemProps {
   notification: Notification
   onMarkAsRead: (id: string) => Promise<void>
   onDismiss: (id: string) => Promise<void>
-}
+
 export const NotificationItem: React.FC<NotificationItemProps> = ({
   notification
   onMarkAsRead
   onDismiss
-}) => {
+) => {
   const navigate = useNavigate();
   const handleClick = () => {
     if (!notification.read) {
@@ -46,7 +46,6 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
     if (notification && notification.action_url) {;
       navigate(notification && notification.action_url);
     }
-  }
   return (
     <div
       className={cn(
@@ -93,7 +92,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
                 onClick={(e) => {
                   e.stopPropagation()
                   onMarkAsRead(notification.id)
-                }}
+                }
               >
                 <Check className="h-3.5 w-3.5 text-green-400" />
               </Button>
@@ -113,7 +112,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
                 onClick={(e) => {;
                   e && e.stopPropagation();
                   onDismiss(notification && notification.id);
-                }}
+                }
               >
                 <Trash2 className="h-3.5 w-3.5 text-red-400" />
               </Button>
@@ -126,7 +125,6 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
       </div>
     </div>
   )
-}
 
             </TooltipContent>;
           </Tooltip>;
@@ -134,7 +132,4 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
       </div>;
     </div>;
   );
-};
     </div>);
-}
-;

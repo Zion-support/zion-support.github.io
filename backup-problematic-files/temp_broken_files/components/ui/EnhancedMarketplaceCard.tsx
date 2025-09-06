@@ -19,7 +19,7 @@ export type MarketplaceCardProps = {
   subtitle?: string,
   description?: string,
   footer?: React.ReactNode
-},
+,
 
 export default function EnhancedMarketplaceCard({ title, subtitle, description, footer }: MarketplaceCardProps) {
   return (
@@ -34,7 +34,7 @@ export default function EnhancedMarketplaceCard({ title, subtitle, description, 
       </div>
     </EnhancedCard>
   )
-}
+
           <div className="h-12 w-12 rounded bg-gray-200" />)};
         <h3 className="text-lg font-semibold text-gray-900">{title}</h3>;
       </div>;

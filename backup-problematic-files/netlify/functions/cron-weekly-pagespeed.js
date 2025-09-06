@@ -4,11 +4,10 @@ async function psi(url, strategy = 'mobile', key) {;
   endpoint.searchParams.set('url', url),;
   endpoint.searchParams.set('strategy', strategy),;
   if (key) endpoint.searchParams.set('key', key),;
-  const resp = await fetch(endpoint.toString()),;
+  const resp = await fetch(endpoint.toString(),;
   if (!resp.ok) throw new Error(`PSI HTTP ${resp.status}`),;
   return resp.json();
-}
-;
+
 exports.handler = async function() {;
   try {;
     const baseUrl = process.env.URL || process.env.DEPLOY_URL || '',;
@@ -24,8 +23,7 @@ exports.handler = async function() {;
       } catch (e) {;
         results.push({ url, error: e.message || String(e) });
       }
-    }
-;
+
     const owner = process.env.GITHUB_OWNER,;
     const repo = process.env.GITHUB_REPO,;
     const token = process.env.GITHUB_TOKEN,;
@@ -33,19 +31,17 @@ exports.handler = async function() {;
     if (owner && repo && token) {;
       await upsertFile({ owner, repo, path: 'data/reports/performance/weekly-pagespeed.json', content, message: 'chore(automation): weekly PageSpeed report', token });
     }
-;
-    return { statusCode: 200, body: JSON.stringify({ ok: true, pages: results.length }) }
-  } catch (e) {;
+
+    return { statusCode: 200, body: JSON.stringify({ ok: true, pages: results.length }) } catch (e) {;
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
-  }
-},;
+,;
 const { upsertFile } = require('./_lib/github');
 async function psi(url, strategy = 'mobile', key) {
   const endpoint = new URL('https: //www.googleapis.com/pagespeedonline/v5/runPagespeed');
   endpoint.searchParams.set('url', url);
   endpoint.searchParams.set('strategy', strategy);
   if (key) endpoint.searchParams.set('key', key);
-  const resp = await fetch(endpoint.toString());
+  const resp = await fetch(endpoint.toString();
   if (!resp.ok) throw new Error(`PSI HTTP ${resp.status}`);
 
   return resp.json();
@@ -63,7 +59,6 @@ exports.handler = async function () {
       } catch (e) {
         results.push({ url, error: e.message |String(e) });
       }
-    }
     const owner = process.env.GITHUB_OWNER;
     const repo = process.env.GITHUB_REPO;
     const token = process.env.GITHUB_TOKEN;
@@ -81,20 +76,18 @@ exports.handler = async function () {
     return {
       statusCode: 200
       body: JSON.stringify({ ok: true, pages: results.length })
-    }
-  } catch (e) {
+    } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
-  }
-};async function psi(url, strategy = 'mobile', key) {
+;async function psi(url, strategy = 'mobile', key) {
   const endpoint = new URL('https: //www.googleapis.com/pagespeedonline/v5/runPagespeed')
   endpoint.searchParams.set('url', url)
   endpoint.searchParams.set('strategy', strategy)
   if (key) endpoint.searchParams.set('key', key)
-  const resp = await fetch(endpoint.toString())
+  const resp = await fetch(endpoint.toString()
   if (!resp.ok) throw new Error(`PSI HTTP ${resp.status}`)
 
   return resp.json()
-}
+
 exports.handler = async function() {
   try {
 
@@ -112,7 +105,6 @@ exports.handler = async function() {
       } catch (e) {
         results.push({ url, error: e.message |String(e) })
       }
-    }
 
     const owner = process.env.GITHUB_OWNER
     const repo = process.env.GITHUB_REPO
@@ -122,10 +114,5 @@ exports.handler = async function() {
     if (owner && repo && token) {
       await upsertFile({ owner, repo, path: 'data/reports/performance/weekly-pagespeed.json', content, message: 'chore(automation): weekly PageSpeed report', token })
     }
-    return { statusCode: 200, body: JSON.stringify({ ok: true, pages: results.length }) }
-  } catch (e) {
+    return { statusCode: 200, body: JSON.stringify({ ok: true, pages: results.length }) } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
-  }
-
-}
-

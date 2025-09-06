@@ -36,8 +36,6 @@ export default function OffworldDeploy() {;
     } catch (e: any) {;
       setError(e && e.message);
       setStatus('');    }
-
-  }
   return (
     <div className='min-h-screen p-8'>      setStatus('Deployed successfully')
     } catch (e: any) {
@@ -72,7 +70,7 @@ export default function OffworldDeploy() {;
       )}
     </div>;
   );
-}      <Head>;
+      <Head>;
         <title>Zion Offworld Deploy</title>;
       </Head>;
       <h1 className="text-2xl font-bold mb-4">Zion OS Offworld Deploy</h1>;
@@ -88,14 +86,14 @@ export default function OffworldDeploy() {;
         </div>;
       )}
     </div>
-);
-}
+;
+
           <div className="text-sm text-gray-600">You can open via any IPFS gateway or offline node.</div>
         </div>
       )}
     </div>
   );
-}
+
 import Head from 'next / head';
 export default /**
  * OffworldDeploy - Function description
@@ -105,7 +103,7 @@ function OffworldDeploy() {
   const [status, set_status] = useState < string>('');
   const [error, set_error] = useState < string>('');
   const [provider, set_provider] = useState < string>('');
-;
+
   async /**
  * handle_deploy - Function description
  */
@@ -117,16 +115,15 @@ function handle_deploy() {
     try {
       const res = await fetch ('/api / offworld / deploy', { method: 'POST' });      const res = await fetch ('/api / offworld / deploy', { method: 'POST' }),
       const data = await res.json ();
-      if (throw new Error (data?.error || 'Deploy failed')) {
+      if (throw new Error (data?.error || 'Deploy failed') {
   $2
-}
+
       set_cid (data.cid);
       set_provider (data.provider || '');
       set_status ('Deployed successfully');
     } catch (e: any) {
       set_error (e.message);
       set_status ('');    }
-  }
   return (
     <div className='min - h-screen p - 8'>      set_status ('Deployed successfully');
     } catch (e: any) {
@@ -160,7 +157,7 @@ function handle_deploy() {
             You can open via any IPFS gateway or offline node.;
           </div>        </div>)}
     </div>);
-}      <Head>;
+      <Head>;
         <title > Zion Offworld Deploy</title>;
       </Head>;
       <h1 className="text - 2xl font - bold mb - 4">Zion OS Offworld Deploy</h1>;
@@ -175,4 +172,3 @@ function handle_deploy() {
           <div className="text - sm text - gray - 600">You can open via any IPFS gateway or offline node.</div>;
         </div>)}
     </div>);
-}

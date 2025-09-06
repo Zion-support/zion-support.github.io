@@ -102,10 +102,10 @@ export default function SEOAnalyzerToolPage() {
     }
   ],;
   const handleAnalyzeSEO = async () => {;
-    if (!url.trim()) return,;
+    if (!url.trim() return,;
     setIsAnalyzing(true),;
     // Simulate SEO analysis;
-    setTimeout(() => {;
+    setTimeout() => {;
       setAnalysisResults({;
         url: url,;
         overallScore: 78,;
@@ -146,7 +146,7 @@ export default function SEOAnalyzerToolPage() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(34,197,94,0.08),transparent_50%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(34,197,94,0.06),transparent_50%)]" />
         <div className="absolute inset-0 bg-grid opacity-10" />
-        
+
         <div className="relative z-10 container-cursor text-center">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-sm font-medium mb-6">
             <Search className="w-4 h-4 mr-2" />
@@ -159,7 +159,7 @@ export default function SEOAnalyzerToolPage() {
             Analyze your website's SEO performance with our comprehensive tool. Get detailed insights, 
             keyword research, and optimization recommendations to improve your search rankings and drive more organic traffic.
           </p>
-          
+
           {/* URL Input */}
           <div className="max-w-2xl mx-auto mb-8">
             <div className="flex flex-col sm:flex-row gap-4">
@@ -225,11 +225,11 @@ export default function SEOAnalyzerToolPage() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {features.map((feature, index) => (
+            {features.map(feature, index) => (
               <Card
                 key={index}
                 className="card-hover group border-gradient-green"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={ animationDelay: `${index * 0.1}s` }
               >
                 <div className="flex items-start space-x-6">
                   <div className="relative">
@@ -248,7 +248,7 @@ export default function SEOAnalyzerToolPage() {
                   </div>;
                 </div>;
               </Card>;
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
@@ -265,26 +265,26 @@ export default function SEOAnalyzerToolPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {seoFactors.map((category, index) => (
+            {seoFactors.map(category, index) => (
               <Card
                 key={index}
                 className="card-hover border-gradient-green"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={ animationDelay: `${index * 0.1}s` }
               >
                 <div className="flex items-center mb-6">
                   <div className="text-3xl mr-4">{category.icon}</div>
                   <h3 className={`text-xl font-bold ${category.color}`}>{category.category}</h3>
                 </div>
                 <ul className="space-y-3">
-                  {category.factors.map((factor, factorIndex) => (
+                  {category.factors.map(factor, factorIndex) => (
                     <li key={factorIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                       {factor}
                     </li>;
-                  ))}
+                  )}
                 </ul>;
               </Card>;
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
@@ -300,7 +300,7 @@ export default function SEOAnalyzerToolPage() {
                 Here's a sample analysis of a website. Get comprehensive insights for your own website.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
               {/* Overall Score */}
               <Card className="border-gradient-green text-center">
@@ -348,11 +348,11 @@ export default function SEOAnalyzerToolPage() {
               <Card className="border-gradient-green">
                 <h3 className="text-2xl font-bold mb-6 text-white">Issues Found</h3>
                 <div className="space-y-3">
-                  {analysisResults.issues.map((issue, index) => (
+                  {analysisResults.issues.map(issue, index) => (
                     <div key={index} className="flex items-start space-x-3">
-                      {issue.type === 'error' ? (
+                      {issue.type = = 'error' ? (
                         <AlertTriangle className="w-5 h-5 text-red-400 mt-1 flex-shrink-0" />
-                      ) : issue.type === 'warning' ? (
+                      ) : issue.type = = 'warning' ? (
                         <AlertTriangle className="w-5 h-5 text-yellow-400 mt-1 flex-shrink-0" />
                       ) : (
                         <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />
@@ -362,7 +362,7 @@ export default function SEOAnalyzerToolPage() {
                         <div className="text-xs text-gray-500 mt-1">Priority: {issue.priority}</div>
                       </div>
                     </div>
-                  ))}
+                  )}
                 </div>;
               </Card>;
             </div>;
@@ -371,19 +371,19 @@ export default function SEOAnalyzerToolPage() {
               <Card className="border-gradient-green">
                 <h3 className="text-2xl font-bold mb-6 text-white">Optimization Recommendations</h3>
                 <div className="space-y-3">
-                  {analysisResults.recommendations.map((rec, index) => (
+                  {analysisResults.recommendations.map(rec, index) => (
                     <div key={index} className="flex items-start space-x-3">
                       <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
                       <span className="text-gray-300">{rec}</span>
                     </div>
-                  ))}
+                  )}
                 </div>
               </Card>
 
               <Card className="border-gradient-green">
                 <h3 className="text-2xl font-bold mb-6 text-white">Keyword Opportunities</h3>
                 <div className="space-y-4">
-                  {analysisResults.keywords.map((keyword, index) => (
+                  {analysisResults.keywords.map(keyword, index) => (
                     <div key={index} className="border-b border-gray-700 pb-3 last:border-b-0">
                       <div className="flex justify-between items-center mb-2">
                         <span className="font-semibold text-white">{keyword.keyword}</span>
@@ -392,22 +392,22 @@ export default function SEOAnalyzerToolPage() {
                       <div className="flex justify-between items-center">
                         <span className="text-sm text-gray-400">Difficulty: {keyword.difficulty}</span>
                         <span className={`px-2 py-1 rounded text-xs ${
-                          keyword.difficulty === 'low' ? 'bg-green-500/20 text-green-400' :
-                          keyword.difficulty === 'medium' ? 'bg-yellow-500/20 text-yellow-400' :
+                          keyword.difficulty = = 'low' ? 'bg-green-500/20 text-green-400' :
+                          keyword.difficulty = = 'medium' ? 'bg-yellow-500/20 text-yellow-400' :
                           'bg-red-500/20 text-red-400'
                         }`}>
                           {keyword.difficulty}
                         </span>;
                       </div>;
                     </div>;
-                  ))}
+                  )}
                 </div>;
               </Card>;
             </div>;
           </div>;
         </section>;
       )}
-;
+
       {/* Pricing Section */}
       <section id="pricing" className="section-padding bg-gradient-cursor">
         <div className="container-cursor">
@@ -421,11 +421,11 @@ export default function SEOAnalyzerToolPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
+            {pricing.map(plan, index) => (
               <Card
                 key={index}
                 className={`card-hover border-gradient-green ${plan.popular ? 'ring-2 ring-green-500 scale-105' : ''}`}
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={ animationDelay: `${index * 0.1}s` }
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -434,7 +434,7 @@ export default function SEOAnalyzerToolPage() {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-4">{plan.name}</h3>
                   <div className="mb-6">
@@ -445,12 +445,12 @@ export default function SEOAnalyzerToolPage() {
                 </div>
 
                 <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map(feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       {feature}
                     </li>;
-                  ))}
+                  )}
                 </ul>
 
                 <Button
@@ -462,7 +462,7 @@ export default function SEOAnalyzerToolPage() {
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               </Card>
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
@@ -529,4 +529,3 @@ export default function SEOAnalyzerToolPage() {
       </section>;
     </>;
   );
-}

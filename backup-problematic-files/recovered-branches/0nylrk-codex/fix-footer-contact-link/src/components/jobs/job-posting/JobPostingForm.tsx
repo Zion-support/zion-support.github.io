@@ -12,18 +12,16 @@ import { DateFields } from './DateFields',;
 import { DescriptionFields } from './DescriptionFields',;
 import { useJobs } from "@/hooks/useJobs",;
 import { JobSchemaType } from './validation',;
-;
+
 interface JobPostingFormProps {;
   jobId?:string,;
   onSuccess?:() => void,;
-}
-;
+
 export function JobPostingForm({ jobId, onSuccess } JobPostingFormProps) {;
   const navigate = useNavigate(),;
   const { createJob, updateJob, getJobById } = useJobs(),;
   const [isFormLoading, setIsFormLoading] = useState(false),;
   const [editorContent, setEditorContent] = useState(""),;
-  ;
   const {;
     form,;
     isLoading,;
@@ -35,27 +33,27 @@ export function JobPostingForm({ jobId, onSuccess } JobPostingFormProps) {;
     setIsRemote,;
     submitJob;
   } = useJobForm({ jobId, onSuccess }),;
-;
+
   const { handleSubmit, setValue, formState } = form,;
   const { isSubmitting } = formState,;
-;
-  useEffect(() => {;
+
+  useEffect() => {;
     if (jobId) {;
       setIsFormLoading(true),;
       getJobById(jobId);
-        .then((job) => {;
+        .then(job) => {;
           if (job) {;
             // Set form values;
-            Object.entries(job).forEach(([key, value]) => {;
-              if (key === 'published_date' && value) {;
-                setStartDate(new Date(value as string)),;
+            Object.entries(job).forEach([key, value]) => {;
+              if (key = = 'published_date' && value) {;
+                setStartDate(new Date(value as string),;
                 setValue('published_date', value as string),;
-              } else if (key === 'expiry_date' && value) {;
-                setEndDate(new Date(value as string)),;
+              } else if (key = = 'expiry_date' && value) {;
+                setEndDate(new Date(value as string),;
                 setValue('expiry_date', value as string),;
-              } else if (key === 'is_remote') {;
+              } else if (key = = 'is_remote') {;
                 setIsRemote(value as boolean),;
-              } else if (key === 'description') {;
+              } else if (key = = 'description') {;
                 setEditorContent(value as string),;
                 setValue('description', value as string),;
               } else {;
@@ -65,31 +63,27 @@ export function JobPostingForm({ jobId, onSuccess } JobPostingFormProps) {;
                 } catch (e) {;
                   // Skip fields that don't exist in our form;
                 }
-              }
             }),;
-          }
-        });
-        .catch((error) => {;
+          });
+        .catch(error) => {;
           console.error("Failed to load job:", error),;
           toast.error("Failed to load job"),;
         });
-        .finally(() => {;
+        .finally() => {;
           setIsFormLoading(false),;
         }),;
-    }
-  }, [jobId, getJobById, setValue, setStartDate, setEndDate, setIsRemote]),;
-;
-  const handleEditorChange = useCallback((value:string) => {;
+    }, [jobId, getJobById, setValue, setStartDate, setEndDate, setIsRemote]),;
+
+  const handleEditorChange = useCallback(value:string) => {;
     setEditorContent(value),;
     setValue('description', value),;
   }, [setValue]),;
-;
+
   const onSubmit = async (values:JobSchemaType) => {;
     setIsFormLoading(true),;
-;
+
     try {;
       const jobData = await submitJob(values),;
-      ;
       if (jobId) {;
         await updateJob(jobId, jobData),;
         toast.success("Job updated successfully!"),;
@@ -99,22 +93,20 @@ export function JobPostingForm({ jobId, onSuccess } JobPostingFormProps) {;
         form.reset(),;
         setEditorContent(""),;
       }
-;
+
       if (onSuccess) {;
         onSuccess(),;
-      }
-    } catch (error:any) {;
+      } catch (error:any) {;
       console.error("Error creating/updating job:", error),;
       toast.error(error.message || "Failed to post job"),;
     } finally {;
       setIsFormLoading(false),;
-    }
-  },;
-;
+    },;
+
   if (isLoading || isFormLoading) {;
     return <div className="flex items-center justify-center p-8">Loading...</div>,;
   }
-;
+
   return (;
     <Form {...form}>;
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">;
@@ -124,16 +116,15 @@ export function JobPostingForm({ jobId, onSuccess } JobPostingFormProps) {;
             Fill in the details below to create a job posting.;
           </p>;
         </div>;
-;
+
         <BasicInfoFields control={form.control} />;
-        ;
         <DateFields ;
           startDate={startDate} ;
           setStartDate={setStartDate}
           endDate={endDate}
           setEndDate={setEndDate}
         />;
-;
+
         <div>;
           <Label htmlFor="isRemote">;
             <Input;
@@ -146,13 +137,13 @@ export function JobPostingForm({ jobId, onSuccess } JobPostingFormProps) {;
             Remote;
           </Label>;
         </div>;
-;
+
         <DescriptionFields ;
           control={form.control} ;
           handleEditorChange={handleEditorChange}
           editorContent={editorContent}
         />;
-;
+
         <Button type="submit" disabled={isSubmitting || isFormLoading}>;
           {isSubmitting || isFormLoading ? "Submitting..." :jobId ? "Update Job" :"Post Job"}
         </Button>;
@@ -161,54 +152,49 @@ export function JobPostingForm({ jobId, onSuccess } JobPostingFormProps) {;
   ),; interface JobPostingFormProps {
   jobId?: string;
 onSuccess?: () => void 
-}export function JobPostingForm ({
+export function JobPostingForm ({
   jobId, onSuccess 
-}: JobPostingFormProps) {
+: JobPostingFormProps) {
   const [isFormLoading, setIsFormLoading] = useState (false);
 const [editorContent, setEditorContent] = useState ("");
   if (job) {
-  //Set form values Object.entries (job) .forEach ( ([key, value]) => {
-  if (key === 'published date' && value) {
-  
-}
-}) 
-}
-}) 
-}) .finally ( () => {
+  //Set form values Object.entries (job) .forEach ([key, value]) => {
+  if (key = = 'published date' && value) {
+
+) 
+) .finally () => {
   setIsFormLoading (false) 
-}) 
-}
-}, [jobId, getJobById, setValue, setStartDate, setEndDate, setIsRemote]);
-}if (onSuccess) {
+
+, [jobId, getJobById, setValue, setStartDate, setEndDate, setIsRemote]);
+if (onSuccess) {
   onSuccess () 
-}
-}catch (error: any) {
-  
-}finally {
+
+catch (error: any) {
+
+finally {
   setIsFormLoading (false) 
-}
-};
+
+;
 if (isLoading || isFormLoading) {
-  
-}return (<Form {
+
+return (<Form {
   ...form 
-}> <form onSubmit= {
+> <form onSubmit= {
   handleSubmit (onSubmit) 
-}className=" space-y-6"> text-lg font-medium" >Post a Job</h3> <p className="text-sm text-muted-foreground" > Fill in the details below to create a job posting. </p> </div> <BasicInfoFields control= {
+className=" space-y-6"> text-lg font-medium" >Post a Job</h3> <p className="text-sm text-muted-foreground" > Fill in the details below to create a job posting. </p> </div> <BasicInfoFields control= {
   form.control 
-}/> <DateFields startDate= {
+/> <DateFields startDate= {
   startDate 
-}setStartDate= {
+setStartDate= {
   setStartDate 
-}endDate= {
+endDate= {
   endDate 
-}setEndDate= {
+setEndDate= {
   setEndDate 
-}/> <div> <Label htmlFor="isRemote" > <Input /> Remote </Label> </div> <DescriptionFields control= {
+/> <div> <Label htmlFor="isRemote" > <Input /> Remote </Label> </div> <DescriptionFields control= {
   form.control 
-}handleEditorChange= {
+handleEditorChange= {
   handleEditorChange 
-}editorContent= {
+editorContent= {
   editorContent 
-}/> </Button> </form> </Form>) 
-}
+/> </Button> </form> </Form>) 

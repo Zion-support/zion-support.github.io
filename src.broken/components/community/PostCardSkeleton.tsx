@@ -6,5 +6,3 @@ export function PostCardSkeleton() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

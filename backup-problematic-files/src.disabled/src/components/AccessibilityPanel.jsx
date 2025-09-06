@@ -7,6 +7,5 @@ const AccessibilityPanel = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default AccessibilityPanel;

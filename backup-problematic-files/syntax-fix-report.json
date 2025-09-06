@@ -1,4 +1,4 @@
-{
+
   "timestamp": "2025-09-06T00:33:39.754Z",
   "duration": "6853ms",
   "fixedFiles": 517,
@@ -524,7 +524,5 @@
   ],
   "errorDetails": []
   "errorDetails": []
-}
-}
-"errorDetails": []
-}
+
+errorDetails": []

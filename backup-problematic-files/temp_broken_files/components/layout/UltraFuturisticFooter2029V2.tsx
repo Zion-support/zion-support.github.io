@@ -12,14 +12,14 @@ import {
   Smartphone, BarChart3, Palette, Camera, Video,
   Music, Gamepad2, Heart, Leaf, Sun, Moon, Wind,
   Droplets, Mountain, Globe2, Bot, Crown, Infinity
-} from 'lucide-react',
+ from 'lucide-react',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-},
+,
 const serviceCategories = [
   {title: 'AI & Consciousness', icon: Brain, color: 'from-violet-600 via-purple-600 to-indigo-600', services: [
       { name: 'AI Consciousness Evolution', href: '/services/ai-consciousness-evolution-platform'},
@@ -49,7 +49,7 @@ const serviceCategories = [
       {name: 'Smart Financial Management', href: '/services/smart-financial-management-platform'}
     ]
   }
-],
+,
 
 const mainNavigation = [
   { name: 'Home', href: '/', icon: Home },
@@ -62,7 +62,7 @@ const mainNavigation = [
   { name: 'Innovations', href: '/innovations', icon: Sparkles },
   { name: 'About', href: '/about', icon: Users },
   { name: 'Contact', href: '/contact', icon: MessageCircle }
-],
+,
 
 const quickLinks = [
   { name: 'About Us', href: '/about', icon: Users },
@@ -71,7 +71,7 @@ const quickLinks = [
   { name: 'News', href: '/news', icon: TrendingUp },
   { name: 'Careers', href: '/careers', icon: GraduationCap },
   { name: 'Support', href: '/support', icon: MessageCircle }
-],
+,
 
 const resources = [
   { name: 'Documentation', href: '/docs', icon: BookOpen },
@@ -82,7 +82,7 @@ const resources = [
   { name: 'News', href: '/news', icon: TrendingUp },
   { name: 'Events', href: '/events', icon: Calendar },
   { name: 'Webinars', href: '/webinars', icon: Video }
-],
+,
 
 const company = [
   { name: 'About Us', href: '/about', icon: Users },
@@ -93,7 +93,7 @@ const company = [
   { name: 'Press', href: '/press', icon: BookOpen },
   { name: 'Legal', href: '/legal', icon: Shield },
   { name: 'Privacy', href: '/privacy', icon: ShieldCheck }
-],
+,
 
 const socialLinks = [
   { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-500' },
@@ -102,7 +102,7 @@ const socialLinks = [
   { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram, color: 'hover:text-pink-500' },
   { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-500' },
   { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github, color: 'hover:text-gray-400' }
-],
+,
 const footerSections = [
   {title: 'Services', links: [
       { name: 'AI & Machine Learning', href: '/services/ai-ml'},
@@ -140,7 +140,7 @@ const footerSections = [
       {name: 'Research', href: '/research'}
     ]
   }
-],
+,
 
 export default function UltraFuturisticFooter2029V2() {
   return (
@@ -150,10 +150,10 @@ export default function UltraFuturisticFooter2029V2() {
         <div className=&quot;grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-12&quot;>
           {/* Company Info */}
           <div className=&quot;lg:col-span-2 xl:col-span-1&quot;>            <motion.div,
-initial={_{ opacity: 0, y: 20}}
-              whileInView={_{ opacity: 1, y: 0}}
-              transition={_{ duration: 0.6}}
-              viewport={_{ once: true}}
+initial={_{ opacity: 0, y: 20}
+              whileInView={_{ opacity: 1, y: 0}
+              transition={_{ duration: 0.6}
+              viewport={_{ once: true}
             >
               <Link href=&quot;/&quot; className=&quot;flex items-center space-x-3 mb-6 group&quot;>
                 <div className=&quot;relative&quot;>
@@ -169,12 +169,12 @@ initial={_{ opacity: 0, y: 20}}
                   <p className=&quot;text-sm text-gray-400&quot;>Future Technology Solutions</p>
                 </div>
               </a>
-              
+
               <p className=&quot;text-gray-300 mb-6 leading-relaxed&quot;>
                 Leading the future with cutting-edge AI, quantum computing, space technology, and innovative micro SAAS solutions. 
                 Transforming businesses through next-generation technology.
               </p>
-              
+
               {/* Contact Info */}
               <div className=&quot;space-y-3&quot;>
                 <div className=&quot;flex items-center space-x-3 text-gray-300&quot;>
@@ -197,19 +197,19 @@ initial={_{ opacity: 0, y: 20}}
           </div>
 
           {_/* Service Categories */}
-          {footerSections.map((section, index) => (_<motion.div,
+          {footerSections.map(section, index) => (_<motion.div,
 key={section.title}
-              initial={_{ opacity: 0, y: 20}}
-              whileInView={_{ opacity: 1, y: 0}}
-              transition={_{ duration: 0.6, delay: index * 0.1}}
-              viewport={_{ once: true}}
+              initial={_{ opacity: 0, y: 20}
+              whileInView={_{ opacity: 1, y: 0}
+              transition={_{ duration: 0.6, delay: index * 0.1}
+              viewport={_{ once: true}
             >
               <h4 className=&quot;text-lg font-semibold text-white mb-6 flex items-center&quot;>
                 <div className=&quot;w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full mr-3&quot; />
                 {section.title}
               </h4>
               <ul className=&quot;space-y-3&quot;>
-                {section.links.map((link) => (
+                {section.links.map(link) => (
                   <li key={link.name}>
                     <Link,
 href={link.href}
@@ -218,30 +218,30 @@ href={link.href}
                       <ArrowRight className=&quot;w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300&quot; />
                       {link.name}
                     </a>                  </li>
-                ))}
+                )}
               </ul>;
             </motion.div>;
-          ))}
+          )}
         </div>
 
         {_/* Service Showcase */}
         <motion.div,
-initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          viewport={{ once: true }}
+initial={ opacity: 0, y: 20 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0.6, delay: 0.3 }
+          viewport={ once: true }
           className=&quot;mt-16 pt-12 border-t border-gray-800&quot;        >
           <h3 className=&quot;text-2xl font-bold text-white text-center mb-8&quot;>
             Featured 2029 Services
           </h3>
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6&quot;>
-            {serviceCategories.map((category, index) => (
+            {serviceCategories.map(category, index) => (
               <motion.div,
 key={category.title}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, scale: 0.9 }
+                whileInView={ opacity: 1, scale: 1 }
+                transition={ duration: 0.5, delay: index * 0.1 }
+                viewport={ once: true }
                 className=&quot;group&quot;
               >
                 <div className={`p-4 rounded-xl bg-gradient-to-br ${category.color} bg-opacity-10 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300`}>
@@ -252,7 +252,7 @@ key={category.title}
                     <h4 className=&quot;font-semibold text-white text-sm&quot;>{category.title}</h4>
                   </div>
                   <ul className=&quot;space-y-2&quot;>
-                    {category.services.slice(0, 3).map((service) => (
+                    {category.services.slice(0, 3).map(service) => (
                       <li key={service.name}>
                         <Link,
 href={service.href}
@@ -260,25 +260,25 @@ href={service.href}
                         >
                           {service.name}
                         </a>                      </li>
-                    ))}
+                    )}
                   </ul>;
                 </div>;
               </motion.div>;
-            ))}
+            )}
           </div>;
         </motion.div>;
       </div>;
-;
+
       {/* Bottom Footer */}
       <div className=&quot;border-t border-gray-800&quot;>
         <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8&quot;>
           <div className=&quot;flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0&quot;>
             {/* Copyright */}
             <motion.div,
-initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+initial={ opacity: 0, x: -20 }
+              whileInView={ opacity: 1, x: 0 }
+              transition={ duration: 0.6 }
+              viewport={ once: true }
               className=&quot;text-gray-400 text-sm&quot;            >
                2025 Zion Tech Group. All rights reserved. | 
               <Link href=&quot;/privacy&quot; className=&quot;hover:text-cyan-400 transition-colors duration-300 ml-2&quot;>Privacy Policy</a> | 
@@ -287,10 +287,10 @@ initial={{ opacity: 0, x: -20 }}
 
             {_/* Social Links */}
             <motion.div,
-initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+initial={ opacity: 0, x: 20 }
+              whileInView={ opacity: 1, x: 0 }
+              transition={ duration: 0.6 }
+              viewport={ once: true }
               className=&quot;flex items-center space-x-4&quot;            >
               {socialLinks.map(_(social) => (
                 <Link,
@@ -301,7 +301,7 @@ key={social.name}
                   className={`p-2 rounded-lg bg-gray-800/50 hover:bg-cyan-500/20 text-gray-400 ${social.color} transition-all duration-300 hover:scale-110`}                >
                   <social.icon className=&quot;w-4 h-4&quot; />
                 </a>
-              ))}
+              )}
             </motion.div>
           </div>
         </div>
@@ -309,10 +309,10 @@ key={social.name}
 
       {_/* Newsletter Signup */}
       <motion.div,
-initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.4 }}
-        viewport={{ once: true }}
+initial={ opacity: 0, y: 20 }
+        whileInView={ opacity: 1, y: 0 }
+        transition={ duration: 0.6, delay: 0.4 }
+        viewport={ once: true }
         className=&quot;bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border-t border-cyan-500/20&quot;      >
         <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8&quot;>
           <div className=&quot;text-center&quot;>

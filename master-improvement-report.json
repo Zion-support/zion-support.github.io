@@ -1,4 +1,4 @@
-{
+
   "timestamp": "2025-09-06T10:56:18.188Z",
   "totalDuration": 41894,
   "suitesRun": [
@@ -97,9 +97,7 @@
             "errors": [],
             "warnings": []
           }
-        }
-      }
-    },
+      },
     {
       "file": "performance-optimization-report.json",
       "data": {
@@ -17388,8 +17386,7 @@
             ]
           }
         ]
-      }
-    },
+      },
     {
       "file": "security-enhancement-report.json",
       "data": {
@@ -17425,8 +17422,7 @@
             ]
           }
         ]
-      }
-    },
+      },
     {
       "file": "accessibility-improvement-report.json",
       "data": {
@@ -17453,6 +17449,4 @@
           }
         ]
       }
-    }
   ]
-}

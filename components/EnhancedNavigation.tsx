@@ -7,7 +7,7 @@ const EnhancedNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  useEffect(() => {
+  useEffect() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     }
@@ -30,7 +30,7 @@ const EnhancedNavigation: React.FC = () => {
     { name: 'Contact', href: '/contact', icon: Phone, description: 'Get in touch with our experts' }
   ];
   const toggleDropdown = (dropdown: string) => {
-    setActiveDropdown(activeDropdown === dropdown ? null : dropdown)
+    setActiveDropdown(activeDropdown = = dropdown ? null : dropdown)
   }
   const closeAllDropdowns = () => {
     setActiveDropdown(null);
@@ -62,16 +62,16 @@ const EnhancedNavigation: React.FC = () => {
                 className="flex items-center space-x-1 text-white hover:text-blue-300 transition-colors"
               >
                 <span>Services</span>
-                <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === 'services' ? 'rotate-180' : ''}`} />
+                <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown = = 'services' ? 'rotate-180' : ''}`} />
               </button>
-              {activeDropdown === 'services' && (
+              {activeDropdown = = 'services' && (
                 <motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: 10 }}
+                  initial={ opacity: 0, y: 10 }
+                  animate={ opacity: 1, y: 0 }
+                  exit={ opacity: 0, y: 10 }
                   className="absolute top-full left-0 mt-2 w-96 bg-white rounded-xl shadow-2xl border border-gray-200 py-6">;
                   <div className="grid grid-cols-2 gap-4 px-6">;
-                    {services && services.map((service) => (;
+                    {services && services.map(service) => (;
                       <Link
                         key={service && service.name}
                         href={service && service.href}
@@ -87,7 +87,7 @@ const EnhancedNavigation: React.FC = () => {
                           </div>;
                         </div>;
                       </Link>;
-                    ))}
+                    )}
                   </div>;
                 </motion && motion.div>;
               )}
@@ -99,16 +99,16 @@ const EnhancedNavigation: React.FC = () => {
                 className="flex items-center space-x-1 text-white hover:text-blue-300 transition-colors"
               >
                 <span>Company</span>
-                <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === 'company' ? 'rotate-180' : ''}`} />
+                <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown = = 'company' ? 'rotate-180' : ''}`} />
               </button>
-              {activeDropdown === 'company' && (
+              {activeDropdown = = 'company' && (
                 <motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: 10 }}
+                  initial={ opacity: 0, y: 10 }
+                  animate={ opacity: 1, y: 0 }
+                  exit={ opacity: 0, y: 10 }
                   className="absolute top-full left-0 mt-2 w-80 bg-white rounded-xl shadow-2xl border border-gray-200 py-6">;
                   <div className="space-y-2 px-6">;
-                    {company && company.map((item) => (;
+                    {company && company.map(item) => (;
                       <Link
                         key={item && item.name}
                         href={item && item.href}
@@ -122,7 +122,7 @@ const EnhancedNavigation: React.FC = () => {
                           <p className="text-sm text-gray-600">{item && item.description}</p>;
                         </div>;
                       </Link>;
-                    ))}
+                    )}
                   </div>;
                 </motion && motion.div>;
               )}
@@ -146,16 +146,16 @@ const EnhancedNavigation: React.FC = () => {
         {/* Mobile Menu */}
         {isOpen && (;
           <motion&& motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
+            initial={ opacity: 0, height: 0 }
+            animate={ opacity: 1, height: 'auto' }
+            exit={ opacity: 0, height: 0 }
             className="lg:hidden bg-white rounded-xl shadow-2xl border border-gray-200 mt-2 py-6">;
             <div className="px-6 space-y-6">;
               {/* Mobile Services */}
               <div>;
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Services</h3>;
                 <div className="space-y-2">;
-                  {services && services.map((service) => (;
+                  {services && services.map(service) => (;
                     <Link
                       key={service && service.name}
                       href={service && service.href}
@@ -167,14 +167,14 @@ const EnhancedNavigation: React.FC = () => {
                         <p className="text-sm text-gray-600">{service && service.description}</p>;
                       </div>;
                     </Link>;
-                  ))}
+                  )}
                 </div>
               </div>
               {/* Mobile Company */}
               <div>;
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Company</h3>;
                 <div className="space-y-2">;
-                  {company && company.map((item) => (;
+                  {company && company.map(item) => (;
                     <Link
                       key={item && item.name}
                       href={item && item.href}
@@ -186,7 +186,7 @@ const EnhancedNavigation: React.FC = () => {
                         <p className="text-sm text-gray-600">{item && item.description}</p>;
                       </div>;
                     </Link>;
-                  ))}
+                  )}
                 </div>
               </div>
               {/* Mobile CTA */}
@@ -198,21 +198,21 @@ const EnhancedNavigation: React.FC = () => {
 import Link from 'next / link';
 import {motion} from 'framer-motion';
 import {Menu, X, ChevronDown, Globe, Brain, Shield, Rocket, Cpu, Database, Users, Award, BookOpen, Phone} from 'lucide-react';
-;
+
 const EnhancedNavigation: React.FC = () => {
   const [is_open, setIsOpen] = useState (false);
   const [is_scrolled, setIsScrolled] = useState (false);
   const [active_dropdown, setActiveDropdown] = useState < string | null>(null);
-;
-  useEffect (() => {
+
+  useEffect () => {
     const handle_scroll = () =>: any {
       setIsScrolled (window.scroll_y > 20);
     }
-;
+
     window.addEventListener ('scroll', handle_scroll);
     return () => window.removeEventListener ('scroll', handle_scroll);
   }, []);
-;
+
   const services = [;
     { name: 'All Solutions', href: '/comprehensive - 2025 - services - showcase', icon: Globe, description: 'Complete collection of innovative solutions' },
     { name: 'AI Business Intelligence', href: 'https://ziontechgroup.com / ai - business - intelligence', icon: Brain, description: 'AI - powered analytics and insights' },
@@ -221,7 +221,7 @@ const EnhancedNavigation: React.FC = () => {
     { name: 'Space Technology', href: 'https://ziontechgroup.com / space - technology', icon: Rocket, description: 'Space exploration and satellite tech' },
     { name: 'Pricing', href: '/pricing - 2025', icon: Award, description: 'Transparent pricing for all solutions' }
   ];
-;
+
   const company = [;
     { name: 'About Us', href: '/about', icon: Users, description: 'Learn about our mission and team' },
     { name: 'Our Work', href: '/portfolio', icon: Award, description: 'See our latest projects and achievements' },
@@ -229,16 +229,16 @@ const EnhancedNavigation: React.FC = () => {
     { name: 'Blog & Insights', href: '/blog', icon: BookOpen, description: 'Stay updated with industry trends' },
     { name: 'Contact', href: '/contact', icon: Phone, description: 'Get in touch with our experts' }
   ];
-;
+
   const toggle_dropdown = (dropdown: string) =>: any {
-    setActiveDropdown (active_dropdown === dropdown ? null : dropdown),
+    setActiveDropdown (active_dropdown = = dropdown ? null : dropdown),
   }
-;
+
   const closeAllDropdowns = () =>: any {
     setActiveDropdown (null);
     setIsOpen (false);
   }
-;
+
   return (
     <nav className={`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 300 ${
       is_scrolled;
@@ -265,17 +265,17 @@ const EnhancedNavigation: React.FC = () => {
                 className="flex items - center space - x-1 text - white hover:text - blue - 300 transition - colors";
               >;
                 <span > Services</span>;
-                <ChevronDown className={`w - 4 h - 4 transition - transform ${active_dropdown === 'services' ? 'rotate - 180' : ''}`} />;
+                <ChevronDown className={`w - 4 h - 4 transition - transform ${active_dropdown = = 'services' ? 'rotate - 180' : ''}`} />;
               </button>;
-              {active_dropdown === 'services' && (
+              {active_dropdown = = 'services' && (
                 <motion.div;
-                  initial={{ opacity: 0, coordinate_y: 10 }}
-                  animate={{ opacity: 1, coordinate_y: 0 }}
-                  exit={{ opacity: 0, coordinate_y: 10 }}
+                  initial={ opacity: 0, coordinate_y: 10 }
+                  animate={ opacity: 1, coordinate_y: 0 }
+                  exit={ opacity: 0, coordinate_y: 10 }
                   className="absolute top - full left - 0 mt - 2 w - 96 bg - white rounded - xl shadow - 2xl border border - gray - 200 py - 6";
                 >;
                   <div className="grid grid - cols - 2 gap - 4 px - 6">;
-                    {services.map ((service) => (
+                    {services.map (service) => (
                       <Link;
                         key={service.name}
                         href={service.href}
@@ -291,7 +291,7 @@ const EnhancedNavigation: React.FC = () => {
                             <p className="text - sm text - gray - 600">{service.description}</p>;
                           </div>;
                         </div>;
-                      </Link>))}
+                      </Link>)}
                   </div>;
                 </motion.div>)}
             </div>;
@@ -302,17 +302,17 @@ const EnhancedNavigation: React.FC = () => {
                 className="flex items - center space - x-1 text - white hover:text - blue - 300 transition - colors";
               >;
                 <span > Company</span>;
-                <ChevronDown className={`w - 4 h - 4 transition - transform ${active_dropdown === 'company' ? 'rotate - 180' : ''}`} />;
+                <ChevronDown className={`w - 4 h - 4 transition - transform ${active_dropdown = = 'company' ? 'rotate - 180' : ''}`} />;
               </button>;
-              {active_dropdown === 'company' && (
+              {active_dropdown = = 'company' && (
                 <motion.div;
-                  initial={{ opacity: 0, coordinate_y: 10 }}
-                  animate={{ opacity: 1, coordinate_y: 0 }}
-                  exit={{ opacity: 0, coordinate_y: 10 }}
+                  initial={ opacity: 0, coordinate_y: 10 }
+                  animate={ opacity: 1, coordinate_y: 0 }
+                  exit={ opacity: 0, coordinate_y: 10 }
                   className="absolute top - full left - 0 mt - 2 w - 80 bg - white rounded - xl shadow - 2xl border border - gray - 200 py - 6";
                 >;
                   <div className="space - y-2 px - 6">;
-                    {company.map ((item) => (
+                    {company.map (item) => (
                       <Link;
                         key={item.name}
                         href={item.href}
@@ -326,7 +326,7 @@ const EnhancedNavigation: React.FC = () => {
                           </h3>;
                           <p className="text - sm text - gray - 600">{item.description}</p>;
                         </div>;
-                      </Link>))}
+                      </Link>)}
                   </div>;
                 </motion.div>)}
             </div>;
@@ -349,9 +349,9 @@ const EnhancedNavigation: React.FC = () => {
         {/* Mobile Menu */}
         {is_open && (
           <motion.div;
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
+            initial={ opacity: 0, height: 0 }
+            animate={ opacity: 1, height: 'auto' }
+            exit={ opacity: 0, height: 0 }
             className="lg:hidden bg - white rounded - xl shadow - 2xl border border - gray - 200 mt - 2 py - 6";
           >;
             <div className="px - 6 space - y-6">;
@@ -359,7 +359,7 @@ const EnhancedNavigation: React.FC = () => {
               <div>;
                 <h3 className="text - lg font - semibold text - gray - 900 mb - 4">Services</h3>;
                 <div className="space - y-2">;
-                  {services.map ((service) => (
+                  {services.map (service) => (
                     <Link;
                       key={service.name}
                       href={service.href}
@@ -371,14 +371,14 @@ const EnhancedNavigation: React.FC = () => {
                         <h4 className="font - medium text - gray - 900">{service.name}</h4>;
                         <p className="text - sm text - gray - 600">{service.description}</p>;
                       </div>;
-                    </Link>))}
+                    </Link>)}
                 </div>;
               </div>;
               {/* Mobile Company */}
               <div>;
                 <h3 className="text - lg font - semibold text - gray - 900 mb - 4">Company</h3>;
                 <div className="space - y-2">;
-                  {company.map ((item) => (
+                  {company.map (item) => (
                     <Link;
                       key={item.name}
                       href={item.href}
@@ -390,7 +390,7 @@ const EnhancedNavigation: React.FC = () => {
                         <h4 className="font - medium text - gray - 900">{item.name}</h4>;
                         <p className="text - sm text - gray - 600">{item.description}</p>;
                       </div>;
-                    </Link>))}
+                    </Link>)}
                 </div>;
               </div>;
               {/* Mobile CTA */}
@@ -409,6 +409,5 @@ const EnhancedNavigation: React.FC = () => {
       </div>;
     </nav>;
   );
-}
-export default EnhancedNavigation;
 
+export default EnhancedNavigation;

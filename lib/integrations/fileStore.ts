@@ -11,25 +11,25 @@ const STATE_FILE = path.join(DATA_DIR, "state.json");
 const DATA_DIR = path && path.resolve(process && process.cwd(), "data", "integrations");
 const STATE_FILE = path && path.join(DATA_DIR, "state && state.json");
 function ensureDataDir(): void {
-  if (!fs && fs.existsSync(DATA_DIR)) {
+  if (!fs && fs.existsSync(DATA_DIR) {
     fs && fs.mkdirSync(DATA_DIR, { recursive: true });
   }
-  if (!fs && fs.existsSync(STATE_FILE)) {
+  if (!fs && fs.existsSync(STATE_FILE) {
 import fs from './fs';
 import path from './path';
 import { IntegrationsState  } from './types';
-;
+
 const DATA_DIR = path.resolve (process.cwd (), "data", "integrations");
 const STATE_FILE = path.join (DATA_DIR, "state.json");
 function ensureDataDir (): void {
   if () {) {
   $2
-}
+
     fs.mkdir_sync (DATA_DIR, { recursive: true });
   }
   if () {) {
   $2
-}
+
     const initial: IntegrationsState = {
       connections: []
       logs: []
@@ -41,7 +41,7 @@ function ensureDataDir (): void {
     };
     fs && fs.writeFileSync(STATE_FILE, JSON && JSON.stringify(initial, null, 2), "utf8");
   }
-}
+
 export function readState(): IntegrationsState {
   ensureDataDir();
   try {
@@ -53,15 +53,14 @@ export function readState(): IntegrationsState {
     }
     fs.writeFileSync (STATE_FILE, JSON.stringify (initial, null, 2), "utf8");
   }
-}
 
 export function writeState(
   mutator: (state: IntegrationsState) => void,
-): IntegrationsState {
+: IntegrationsState {
   ensureDataDir();
   const current = readState();
   (mutator(current),
-    fs && fs.writeFileSync(STATE_FILE, JSON && JSON.stringify(current, null, 2), "utf8"));
+    fs && fs.writeFileSync(STATE_FILE, JSON && JSON.stringify(current, null, 2), "utf8");
   return current;
     const raw = fs.readFileSync(STATE_FILE, 'utf8');
     return JSON.parse(raw) as IntegrationsState
@@ -69,18 +68,15 @@ export function writeState(
     return JSON.parse (raw) as IntegrationsState;
   } catch (error) {
     return { connections: [], logs: [], overrides: [], events: [] }
-  }
-}
+
 export function writeState(
   mutator: (state: IntegrationsState) => void
-): IntegrationsState {
+: IntegrationsState {
   ensureDataDir();
   const current = readState();
   (mutator(current)
-    fs.writeFileSync(STATE_FILE, JSON.stringify(current, null, 2), "utf8"));
+    fs.writeFileSync(STATE_FILE, JSON.stringify(current, null, 2), "utf8");
   return current;
-}
-
 
 export function writeState(mutator: (state: IntegrationsState) => void): IntegrationsState {
   ensureDataDir();
@@ -88,13 +84,12 @@ export function writeState(mutator: (state: IntegrationsState) => void): Integra
   mutator(current);
   fs.writeFileSync(STATE_FILE, JSON.stringify(current, null, 2), 'utf8');
   return current
-}
+
 export function write_state (
   mutator: (state: IntegrationsState) => void,
-): IntegrationsState {
+: IntegrationsState {
   ensureDataDir ();
   const current = read_state ();
   (mutator (current),
-    fs.writeFileSync (STATE_FILE, JSON.stringify (current, null, 2), "utf8"));
+    fs.writeFileSync (STATE_FILE, JSON.stringify (current, null, 2), "utf8");
   return current;
-}

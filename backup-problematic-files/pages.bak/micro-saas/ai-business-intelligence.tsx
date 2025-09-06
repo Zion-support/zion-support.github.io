@@ -4,7 +4,6 @@ import React from 'react';
 
 interface Ai-business-intelligenceProps {
   className?: string;
-}
 
 const Ai-business-intelligence: React.FC<Ai-business-intelligenceProps> = ({ className }) => {
   return (
@@ -13,6 +12,3 @@ const Ai-business-intelligence: React.FC<Ai-business-intelligenceProps> = ({ cla
       <p>This component is under development.</p>
     </div>
   );
-}
-}
-}

@@ -23,5 +23,3 @@ export function CookieBanner() {
       <Link to="/privacy-settings" className="underline text-white">Settings</Link>
     </CookieConsent>
   )
-}
-;

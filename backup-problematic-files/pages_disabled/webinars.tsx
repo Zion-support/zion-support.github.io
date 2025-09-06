@@ -2,7 +2,6 @@ import React from 'react';
 
 interface WebinarsProps {
   className?: string;
-}
 
 const Webinars: React.FC<WebinarsProps> = ({ className }) => {
   return (
@@ -11,6 +10,5 @@ const Webinars: React.FC<WebinarsProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default Webinars;

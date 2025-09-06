@@ -6,5 +6,3 @@ export function FeedbackWidget() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

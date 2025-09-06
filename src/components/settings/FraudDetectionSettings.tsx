@@ -50,7 +50,7 @@ export function FraudDetectionSettings() {
                 onCheckedChange={setMessageScanningEnabled}
               />
             </div>
-            
+
             <div className="flex items-center justify-between">
               <div>
                 <Label className="font-medium" htmlFor="activity-monitoring">
@@ -67,7 +67,7 @@ export function FraudDetectionSettings() {
                 onCheckedChange={setActivityMonitoringEnabled}
               />
             </div>
-            
+
             <div className="flex items-center justify-between">
               <div>
                 <Label className="font-medium" htmlFor="ai-analysis">
@@ -85,7 +85,7 @@ export function FraudDetectionSettings() {
               />
             </div>
           </div>
-          
+
           <Accordion type="single" collapsible className="w-full">
             <AccordionItem value="item-1">
               <AccordionTrigger className="text-sm font-medium">
@@ -110,7 +110,7 @@ export function FraudDetectionSettings() {
               </AccordionContent>
             </AccordionItem>
           </Accordion>
-          
+
           <div className="pt-2">
             <Button 
               onClick={handleSavePreferences}
@@ -124,6 +124,3 @@ export function FraudDetectionSettings() {
       </CardContent>
     </Card>
   )
-}
-}
-}

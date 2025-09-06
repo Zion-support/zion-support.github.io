@@ -34,7 +34,7 @@ export default function API() {
         <meta name="description" content="Comprehensive API documentation for Zion Tech Group services and integrations." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      
+
       <div className="min-h-screen bg-gray-50">
         {/* Header */}
         <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
@@ -82,13 +82,13 @@ export default function API() {
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">API Endpoints</h2>
             <div className="space-y-6">
-              {apiEndpoints.map((endpoint, index) => (
+              {apiEndpoints.map(endpoint, index) => (
                 <div key={index} className="bg-white rounded-lg shadow-md p-6">
                   <div className="flex items-center justify-between mb-4">
                     <h3 className={`text-xl font-semibold text-gray-900`}>{endpoint.name}</h3>
                     <span className={`px-3 py-1 rounded-full text-sm font-medium ${
-                      endpoint.method === 'GET' ? 'bg-green-100 text-green-800' :
-                      endpoint.method === 'POST' ? 'bg-blue-100 text-blue-800' :
+                      endpoint.method = = 'GET' ? 'bg-green-100 text-green-800' :
+                      endpoint.method = = 'POST' ? 'bg-blue-100 text-blue-800' :
                       'bg-gray-100 text-gray-800'
                     }`}>
                       {endpoint.method}
@@ -102,12 +102,12 @@ export default function API() {
                     <div>
                       <h4 className=font-semibold text-gray-900 mb-2">Parameters:</h4>
                       <ul className="text-sm text-gray-600>
-                        {endpoint.parameters.map((param, i) => (
+                        {endpoint.parameters.map(param, i) => (
                           <li key={i} className=flex items-center">
                             <span className="w-2 h-2 bg-blue-500 rounded-full mr-2></span>
                             {param}
                           </li>
-                        ))}
+                        )}
                       </ul>
                     </div>
                     <div>
@@ -115,7 +115,7 @@ export default function API() {
                     </div>
                   </div>
                 </div>
-              ))}
+              )}
             </div>
           </div>
         </div>

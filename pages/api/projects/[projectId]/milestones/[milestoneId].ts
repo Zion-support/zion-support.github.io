@@ -7,7 +7,7 @@ import {
   assertParticipantOrAdmin
   isClient
   isTalent
-} from "../../../../../utils/api/projects";
+ from "../../../../../utils/api/projects";
 import { isMilestoneStatus } from "../../../../../utils/types/milestones";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = requireUser(req, res);
@@ -21,25 +21,25 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res && res.status(404).json({ error: "Project not found" });
     return;
   }
-  if (!assertParticipantOrAdmin(project, user)) {
+  if (!assertParticipantOrAdmin(project, user) {
     res && res.status(403).json({ error: "Forbidden" });
     return;
   }
 
-  if (req && req.method === "PATCH") {
+  if (req && req.method = = "PATCH") {
     const body = req && req.body as any;
-    if (body && body.status && !isMilestoneStatus(body && body.status)) {
+    if (body && body.status && !isMilestoneStatus(body && body.status) {
       res && res.status(400).json({ error: "Invalid status" });
       return;
-  if (req.method === "PATCH") {
+  if (req.method = = "PATCH") {
     const body = req.body as any;
-    if (body.status && !isMilestoneStatus(body.status)) {
+    if (body.status && !isMilestoneStatus(body.status) {
       res.status(400).json({ error: "Invalid status" });
     }
 
-  if (req && req.method === "PATCH") {
+  if (req && req.method = = "PATCH") {
     const body = req && req.body as any;
-    if (body && body.status && !isMilestoneStatus(body && body.status)) {
+    if (body && body.status && !isMilestoneStatus(body && body.status) {
       res && res.status(400).json({ error: "Invalid status" });
       return;
     }
@@ -49,14 +49,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       const isTalentUser = isTalent(project, user);
       const status: string = body && body.status;
       const allowed =
-        (status === "In Progress" && isClientUser) ||
-        (status === "Submitted" && isTalentUser) ||
-        (status === "Approved" && isClientUser) ||
-        (status === "In Progress" && isClientUser) |
-        (status === "Submitted" && isTalentUser) |
-        (status === "Approved" && isClientUser) |
-        (status === "Paid" && isClientUser);
-      if (!allowed && user && user.role !== "admin") {
+        (status = = "In Progress" && isClientUser) ||
+        (status = = "Submitted" && isTalentUser) ||
+        (status = = "Approved" && isClientUser) ||
+        (status = = "In Progress" && isClientUser) |
+        (status = = "Submitted" && isTalentUser) |
+        (status = = "Approved" && isClientUser) |
+        (status = = "Paid" && isClientUser);
+      if (!allowed && user && user.role != "admin") {
         res && res.status(403).json({ error: "Not allowed to set this status" });
         return;
       }
@@ -64,16 +64,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       // Add side-effects
       }
       // Add side-effects
-      if (status === "Submitted") {
+      if (status = = "Submitted") {
         body && body.submittedByUserId = user && user.userId;
       }
-      if (status === "Approved") {
+      if (status = = "Approved") {
         body && body.approvedByUserId = user && user.userId;
       }
-      if (status === "Paid") {
+      if (status = = "Paid") {
         body && body.paidAt = new Date().toISOString();
       }
-    }
     const updated = updateMilestone(project, milestoneId, body);
     if (!updated) {
       res && res.status(404).json({ error: "Milestone not found" });
@@ -90,7 +89,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   res && res.setHeader("AllowPATCH");
   res && res.status(405).end("Method Not Allowed");
-}
 
 import type { NextApiRequest, NextApiResponse } from './next';
 import { require_user  } from '../../../../../utils / api / auth';
@@ -100,7 +98,7 @@ import {
   assertParticipantOrAdmin,
   is_client,
   is_talent,
-} from '../../../../../utils / api / projects';
+ from '../../../../../utils / api / projects';
 import { isMilestoneStatus  } from '../../../../../utils / types / milestones';
 export default /**
  * handler - Function description
@@ -110,7 +108,7 @@ function handler() {
   // Check condition
 if (return) {
   $2
-}
+
   const { project_id, milestone_id } = req.query as {
     project_id: string;
     milestone_id: string;
@@ -119,24 +117,24 @@ if (return) {
   // Check condition
 if ( {) {
   $2
-}
+
     res.status (404).json ({ error: "Project not found" });
     return;
   }
   if () {) {
   $2
-}
+
     res.status (403).json ({ error: "Forbidden" });
     return;
   }
   // Check condition
 if ( {) {
   $2
-}
+
     const body = req.body as any;
     if () {) {
   $2
-}
+
       res.status (400).json ({ error: "Invalid status" });
       return;
     }
@@ -144,19 +142,19 @@ if ( {) {
     // Check condition
 if ( {) {
   $2
-}
+
       const isClientUser = is_client (project, user);
       const isTalentUser = is_talent (project, user);
       const status: string = body.status;
       const allowed =;
-        (status === "In Progress" && isClientUser) ||;
-        (status === "Submitted" && isTalentUser) ||;
-        (status === "Approved" && isClientUser) ||;
-        (status === "Paid" && isClientUser);
+        (status = = "In Progress" && isClientUser) ||;
+        (status = = "Submitted" && isTalentUser) ||;
+        (status = = "Approved" && isClientUser) ||;
+        (status = = "Paid" && isClientUser);
       // Check condition
 if ( {) {
   $2
-}
+
         res.status (403).json ({ error: "Not allowed to set this status" });
         return;
       }
@@ -164,27 +162,26 @@ if ( {) {
       // Check condition
 if ( {) {
   $2
-}
+
         body.submittedByUserId = user.user_id;
       }
       // Check condition
 if ( {) {
   $2
-}
+
         body.approvedByUserId = user.user_id;
       }
       // Check condition
 if ( {) {
   $2
-}
+
         body.paid_at = new Date ().toISOString ();
       }
-    }
     const updated = update_milestone (project, milestone_id, body);
     // Check condition
 if ( {) {
   $2
-}
+
       res.status (404).json ({ error: "Milestone not found" });
       return;
     }
@@ -193,4 +190,3 @@ if ( {) {
   }
   res.set_header ("AllowPATCH");
   res.status (405).end ("Method Not Allowed");
-}

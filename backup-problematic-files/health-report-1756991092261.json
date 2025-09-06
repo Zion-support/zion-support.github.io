@@ -1,4 +1,4 @@
-{
+
   "status": "healthy",
   "checks": {
     "memory": {
@@ -23,8 +23,7 @@
     "database": {
       "status": "healthy",
       "message": "Database connection stable"
-    }
-  },
+    },
   "metrics": {
     "uptime": 0.010549682,
     "memory": {
@@ -36,4 +35,3 @@
     },
     "timestamp": "2025-09-04T13:04:52.258Z"
   }
-}

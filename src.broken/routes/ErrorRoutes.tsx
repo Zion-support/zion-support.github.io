@@ -6,5 +6,3 @@ export function ErrorRoutes() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

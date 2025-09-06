@@ -3,7 +3,6 @@ import Head from 'next/head',
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import Card from '../components/ui/Card';
 
-
 export default function ITAssetDiscoveryAgentPage() {
 import Head from 'next/head';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
@@ -53,7 +52,7 @@ export default function ITAssetDiscoveryAgentPage() {;
 import Head from 'next / head';
 import UltraFuturisticBackground from '../components / ui / UltraFuturisticBackground';
 import Card from '../components / ui / Card';
-;
+
 export default /**
  * ITAssetDiscoveryAgentPage - Function description
  */
@@ -174,7 +173,5 @@ export default function ITAssetDiscoveryAgentPage() {
 			</div>
 		</UltraFuturisticBackground>
 	)
-}
 
     </UltraFuturisticBackground>);
-;

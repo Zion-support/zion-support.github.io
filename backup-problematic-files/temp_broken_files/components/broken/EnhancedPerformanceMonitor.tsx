@@ -8,7 +8,7 @@ import {
   RefreshCw,
   BarChart3,
   Gauge
-} from 'lucide-react',
+ from 'lucide-react',
 
 interface PerformanceMetrics {
   fcp: number,
@@ -28,8 +28,7 @@ interface PerformanceMetrics {
     downlink: number,
     rtt: number
   }
-}
-;
+
 interface PerformanceRecommendation {;
   id:string,;
   title:string,;
@@ -38,7 +37,6 @@ interface PerformanceRecommendation {;
   impact:string,;
   solution:string,;
   category:'performance' | 'accessibility' | 'seo' | 'user-experience';
-}
 
 const EnhancedPerformanceMonitor: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false),
@@ -47,7 +45,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
   const [isMonitoring, setIsMonitoring] = useState(false),
   const [lastUpdate, setLastUpdate] = useState<Date | null>(null),
 
-  const generateRecommendations = useCallback((metrics: PerformanceMetrics): PerformanceRecommendation[] => {
+  const generateRecommendations = useCallback(metrics: PerformanceMetrics): PerformanceRecommendation[] => {
     const recs: PerformanceRecommendation[] = [],
     // FCP recommendations
     if (metrics.fcp > 2000) {
@@ -102,7 +100,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
     }
 
     // Network recommendations
-    if (metrics.networkInfo && metrics.networkInfo.effectiveType === 'slow-2g') {
+    if (metrics.networkInfo && metrics.networkInfo.effectiveType = = 'slow-2g') {
       recs.push({
         id: 'network-optimization',
         title: 'Network Performance Optimization',
@@ -120,33 +118,32 @@ const EnhancedPerformanceMonitor: React.FC = () => {
     try {
       setIsMonitoring(true),      
       // Wait for page to be fully loaded
-      if (document.readyState !== 'complete') {
+      if (document.readyState != 'complete') {
         await new Promise(resolve => {
           window.addEventListener('load', resolve, { once: true })
         })      }
 
       // Wait a bit more for any async operations
-      await new Promise(resolve => setTimeout(resolve, 1000)),
+      await new Promise(resolve => setTimeout(resolve, 1000),
 
       const navigation = window.window.window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,
       const paint = window.window.window.performance.getEntriesByType('paint'),
-      
-      const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
-      const lcp = await new Promise<number>((resolve) => {
+
+      const fcp = paint.find(entry => entry.name = = 'first-contentful-paint')?.startTime || 0,
+      const lcp = await new Promise<number>(resolve) => {
         if ('PerformanceObserver' in window) {
-          const observer = new PerformanceObserver((list) => {
+          const observer = new PerformanceObserver(list) => {
             const entries = list.getEntries(),
             const lastEntry = entries[entries.length - 1],
             resolve(lastEntry.startTime)
           }),
           observer.observe({ entryTypes: ['largest-contentful-paint'] }),
-          
+
           // Fallback timeout
-          setTimeout(() => resolve(0), 5000)
+          setTimeout() => resolve(0), 5000)
         } else {
           resolve(0)
-        }
-      }),
+        }),
 
       const metrics: PerformanceMetrics = {
         fcp,
@@ -161,14 +158,13 @@ const EnhancedPerformanceMonitor: React.FC = () => {
       },
 
       setMetrics(metrics),
-      setRecommendations(generateRecommendations(metrics)),
-      setLastUpdate(new Date())
+      setRecommendations(generateRecommendations(metrics),
+      setLastUpdate(new Date()
     } catch {
       // Performance measurement failed
     } finally {
       setIsMonitoring(false)
-    }
-  }, [generateRecommendations]),
+    }, [generateRecommendations]),
 
   const getPerformanceScore = (metrics: PerformanceMetrics): number => {
     let score = 100,    
@@ -176,7 +172,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
     if (metrics.lcp > 2500) score -= 25,
     if (metrics.cls > 0.1) score -= 15,
     if (metrics.ttfb > 600) score -= 20,
-    
+
     return Math.max(0, score)
   },
 
@@ -208,8 +204,8 @@ const EnhancedPerformanceMonitor: React.FC = () => {
   return (
     <motion.div
       className={_`bg-gray-900 rounded-lg border border-gray-700 overflow-hidden ${className}`}
-      initial={_{ opacity: 0, _y: 20}}
-      animate={_{ opacity: 1, _y: 0}}
+      initial={_{ opacity: 0, _y: 20}
+      animate={_{ opacity: 1, _y: 0}
     >
       {/* Header */}
       <div className=&quot;p-4 bg-gray-800/50 border-b border-gray-700&quot;>
@@ -292,7 +288,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
                   </div>
                 </div>
               )}
-;
+
               {/* Memory Usage */}
               {metrics?.memoryUsage && (
                 <div className=&quot;bg-gray-800 rounded-lg p-4 border border-gray-700&quot;>
@@ -312,14 +308,14 @@ const EnhancedPerformanceMonitor: React.FC = () => {
                     <div className=&quot;w-full bg-gray-700 rounded-full h-2&quot;>
                       <div 
                         className=&quot;bg-gradient-to-r from-cyan-500 to-blue-500 h-2 rounded-full transition-all duration-300&quot;
-                        style={{                           width: `${(metrics.memoryUsage.usedJSHeapSize / metrics.memoryUsage.totalJSHeapSize) * 100}%` 
-                        }}
+                        style={                           width: `${(metrics.memoryUsage.usedJSHeapSize / metrics.memoryUsage.totalJSHeapSize) * 100}%` 
+                        }
                       />;
                     </div>;
                   </div>;
                 </div>;
               )}
-;
+
               {/* Network Info */}
               {metrics?.networkInfo && (
                 <div className=&quot;bg-gray-800 rounded-lg p-4 border border-gray-700&quot;>
@@ -345,29 +341,29 @@ const EnhancedPerformanceMonitor: React.FC = () => {
                   </div>
                 </div>
               )}
-;
+
               {/* Recommendations */}
               {recommendations.length > 0 && (
                 <div className=&quot;bg-gray-800 rounded-lg p-4 border border-gray-700&quot;>
                   <h3 className=&quot;text-lg font-semibold text-white mb-3&quot;>Recommendations</h3>
                   <div className=&quot;space-y-3&quot;>
-                    {recommendations.map((rec) => (
+                    {recommendations.map(rec) => (
                       <div key={rec.id} className=&quot;border-l-4 border-cyan-500 pl-3&quot;>
                         <div className=&quot;flex items-start justify-between&quot;>
                           <h4 className=&quot;font-medium text-white text-sm&quot;>{rec.title}</h4>
-                          <span className={`text-xs px-2 py-1 rounded ${                            rec.priority === 'high' ? 'bg-red-500/20 text-red-400' :
-                            rec.priority === 'medium' ? 'bg-yellow-500/20 text-yellow-400' :
+                          <span className={`text-xs px-2 py-1 rounded ${                            rec.priority = = 'high' ? 'bg-red-500/20 text-red-400' :
+                            rec.priority = = 'medium' ? 'bg-yellow-500/20 text-yellow-400' :
                             'bg-green-500/20 text-green-400'}`}>
                             {_rec.priority}
                           </span>
                         </div>
                         <p className=&quot;text-gray-400 text-xs mt-1&quot;>{rec.description}</p>
                         <p className=&quot;text-cyan-400 text-xs mt-1&quot;>{rec.solution}</p>                      </div>
-                    ))}
+                    )}
                   </div>;
                 </div>;
               )}
-;
+
               {/* Action Buttons */}
               <div className=&quot;flex space-x-3&quot;>
                 <button
@@ -388,6 +384,6 @@ const EnhancedPerformanceMonitor: React.FC = () => {
       </AnimatePresence>
     </>
   )
-},
+,
 
 export default EnhancedPerformanceMonitor,

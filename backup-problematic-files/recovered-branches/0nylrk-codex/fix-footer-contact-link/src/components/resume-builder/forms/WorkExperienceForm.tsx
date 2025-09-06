@@ -20,8 +20,8 @@ import { useResume } from '@/hooks/useResume',;
 import { Alert, AlertDescription } from '@/components/ui/alert',;
 import { Card, CardContent } from '@/components/ui/card',;
 import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton',;
-;
-// Define schema for form validation;
+
+/ Define schema for form validation;
 const workExperienceSchema = z.object({;
   company_name:z.string().min(1, 'Company name is required'),;
   role_title:z.string().min(1, 'Job title is required'),;
@@ -30,28 +30,27 @@ const workExperienceSchema = z.object({;
   is_current:z.boolean().default(false),;
   description:z.string().optional(),;
   location:z.string().optional()}),;
-;
+
 type WorkExperienceFormValues = z.infer<typeof workExperienceSchema>,;
-;
+
 interface WorkExperienceFormProps {;
   resumeId:string,;
   workExperiences:WorkExperience[],;
   onComplete:() => void,;
   onBack:() => void;
-}
-;
+
 export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBack } WorkExperienceFormProps) {;
   const { addWorkExperience, updateWorkExperience, deleteWorkExperience, isLoading } = useResume(),;
   const [editingId, setEditingId] = useState<string | null>(null),;
   const [error, setError] = useState<string | null>(null),;
-;
+
   // Helper function to format dates to string;
   const formatDateValue = (dateValue:string | Date | undefined):string => {;
     if (!dateValue) return '',;
-    if (typeof dateValue === 'string') return dateValue,;
+    if (typeof dateValue = = 'string') return dateValue,;
     return format(dateValue, 'yyyy-MM-dd'),;
   },;
-;
+
   const form = useForm<WorkExperienceFormValues>({;
     resolver:zodResolver(workExperienceSchema),;
     defaultValues:{;
@@ -60,13 +59,13 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
       start_date:format(new Date(), 'yyyy-MM-dd'),;
       is_current:false,;
       description:'',;
-      location:''}}),;
-;
+      location:''}),;
+
   const handleAddOrUpdate = async (data:WorkExperienceFormValues) => {;
     try {;
       setError(null),;
       let success,;
-;
+
       const experienceData:WorkExperience = {;
         company_name:data.company_name, // Required field;
         role_title:data.role_title, // Required field;
@@ -75,13 +74,13 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
         is_current:data.is_current,;
         description:data.description,;
         location:data.location},;
-;
+
       if (editingId) {;
         success = await updateWorkExperience(editingId, experienceData),;
       } else {;
         success = await addWorkExperience(resumeId, experienceData),;
       }
-;
+
       if (success) {;
         form.reset({;
           company_name:'',;
@@ -90,12 +89,10 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
           is_current:false,;
           description:'',;
           location:''}),;
-        setEditingId(null),;      }
-    } catch (err:any) {;
+        setEditingId(null),;      } catch (err:any) {;
       setError(err.message || 'An error occurred');
-    }
-  },;
-;
+    },;
+
   const handleEdit = (work:WorkExperience) => {;
     setEditingId(work.id!),;
     form.reset({;
@@ -103,17 +100,16 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
       start_date:formatDateValue(work.start_date),;
       end_date:work.end_date && !work.is_current ? formatDateValue(work.end_date) :undefined}),;
   },;
-;
+
   const handleDelete = async (id:string) => {;
-    if (confirm('Are you sure you want to delete this work experience?')) {;
+    if (confirm('Are you sure you want to delete this work experience?') {;
       await deleteWorkExperience(id);
-    }
-  },;
-;
+    },;
+
   const handleEnhanceDescription = (enhancedContent:string) => {;
     form.setValue('description', enhancedContent),;
   },;
-;
+
   return (;
     <div className="space-y-6">;
       <div>;
@@ -122,11 +118,11 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
           Add your work history to showcase your professional experience.;
         </p>;
       </div>;
-;
+
       {workExperiences.length > 0 && (;
         <div className="space-y-4">;
           <h3 className="text-md font-medium">Added Experience</h3>;
-          {workExperiences.map((work) => (;
+          {workExperiences.map(work) => (;
             <Card key={work.id} className="bg-muted/40">;
               <CardContent className="pt-6">;
                 <div className="flex justify-between">;
@@ -134,13 +130,13 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                     <h4 className="font-medium">{work.role_title}</h4>;
                     <p className="text-sm text-muted-foreground">{work.company_name}</p>;
                     <p className="text-xs text-muted-foreground mt-1">;
-                      {typeof work.start_date === 'string' ;
+                      {typeof work.start_date = = 'string' ;
                         ? work.start_date ;
                         :format(work.start_date, 'MMM yyyy')} - {work.is_current ;
                         ? 'Present' ;
-                        :(work.end_date ? (typeof work.end_date === 'string' ;
+                        :(work.end_date ? (typeof work.end_date = = 'string' ;
                           ? work.end_date ;
-                          :format(work.end_date, 'MMM yyyy')) :'')}
+                          :format(work.end_date, 'MMM yyyy') :'')}
                     </p>;
                     {work.location && (;
                       <p className="text-xs text-muted-foreground">{work.location}</p>;
@@ -167,15 +163,15 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                   <p className="text-sm mt-3 line-clamp-2">{work.description}</p>;
                 )}
               </CardContent>;
-            </Card>;          ))}
+            </Card>;          )}
         </div>;
       )}
-;
+
       <div className="bg-muted/40 p-6 rounded-lg">;
         <h3 className="text-md font-medium mb-4">;
           {editingId ? 'Update Experience' :'Add Experience'}
         </h3>;
-;
+
         <Form {...form}>;
           <form onSubmit={form.handleSubmit(handleAddOrUpdate)} className="space-y-4">;
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
@@ -191,7 +187,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                     <FormMessage />;
                   </FormItem>;                )}
               />;
-;
+
               <FormField;
                 control={form.control}
                 name="role_title";
@@ -206,7 +202,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                 )}
               />;
             </div>;
-;
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
               <FormField;
                 control={form.control}
@@ -225,7 +221,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                   </FormItem>;
                 )}
               />;
-;
+
               <div className="space-y-4">;
                 <FormField;
                   control={form.control}
@@ -244,7 +240,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                     </FormItem>;
                   )}
                 />;
-;
+
                 {!form.watch('is_current') && (;
                   <FormField;
                     control={form.control}
@@ -265,7 +261,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                 )}
               </div>;
             </div>;
-;
+
             <FormField;
               control={form.control}
               name="location";
@@ -278,7 +274,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                   <FormMessage />;
                 </FormItem>;              )}
             />;
-;
+
             <FormField;
               control={form.control}
               name="description";
@@ -304,9 +300,9 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                 </FormItem>;
               )}
             />;
-;
+
             {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
-;
+
             <div className="flex justify-between pt-2">;
               <Button;
                 type="button";
@@ -323,18 +319,17 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                       location:''}),;
                   } else {;
                     onBack(),;
-                  }
-                }}
+                  }}
               >;
                 {editingId ? 'Cancel' :'Back'}
               </Button>;
-;
+
               <div className="flex gap-2">;
                 <Button type="submit" disabled={isLoading}>;
                   {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
                   {editingId ? 'Update' :'Add'} Experience;
                 </Button>;
-;
+
                 {!editingId && workExperiences.length > 0 && (;
                   <Button type="button" onClick={onComplete}>;
                     Next;
@@ -348,37 +343,35 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
     </div>;
   ),; type WorkExperienceFormValues = z.infer<typeof workExperienceSchema>;
 <div> <h2 className="text-xl font-semibold mb-2" >Work Experience</h2> <p className="text-muted-foreground" > Add your work history to showcase your professional experience. </p> </div> {
-  workExperiences.map ( (work) => (<Card key= {
+  workExperiences.map (work) => (<Card key= {
   work.id 
-}className="bg-muted/40" > <CardContent className="pt-6" > <div className="flex justify-between" > <div> ? work.start date : format (work.start date, 'MMM yyyy') 
-}- {
-  work.is current ? 'Present' : (work.end date ? (typeof work.end date === 'string' ? work.end date : format (work.end date, 'MMM yyyy') ) : '') 
-}</p>) 
-}</div> <div className="flex gap-2" > <Button > <Edit className="h-4 w-4" /> </Button> <Button > <Trash2 className="h-4 w-4" /> </Button> </div> </div>) 
-}</CardContent> </Card>) ) 
-}</div>) 
-}</FormControl> <FormMessage /> </FormItem>) 
-}/> <FormField </FormControl> <FormMessage /> </FormItem>) 
-}/> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormItem> <FormLabel>Start Date</FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) 
-}/> <div className="space-y-4" > <FormField <FormControl> <Checkbox checked= {
+className="bg-muted/40" > <CardContent className="pt-6" > <div className="flex justify-between" > <div> ? work.start date : format (work.start date, 'MMM yyyy') 
+- {
+  work.is current ? 'Present' : (work.end date ? (typeof work.end date = = 'string' ? work.end date : format (work.end date, 'MMM yyyy') : '') 
+</p>) 
+</div> <div className="flex gap-2" > <Button > <Edit className="h-4 w-4" /> </Button> <Button > <Trash2 className="h-4 w-4" /> </Button> </div> </div>) 
+</CardContent> </Card>) 
+</div>) 
+</FormControl> <FormMessage /> </FormItem>) 
+/> <FormField </FormControl> <FormMessage /> </FormItem>) 
+/> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormItem> <FormLabel>Start Date</FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) 
+/> <div className="space-y-4" > <FormField <FormControl> <Checkbox checked= {
   field.value 
-}onCheckedChange= {
+onCheckedChange= {
   field.onChange 
-}/> </FormControl> <div className="space-y-1 leading-none" > <FormLabel>I currently work here</FormLabel> </div> </FormItem>) 
-}/> {
+/> </FormControl> <div className="space-y-1 leading-none" > <FormLabel>I currently work here</FormLabel> </div> </FormItem>) 
+/> {
   !form.watch ('is current') && (<FormField control= {
   form.control 
-}<FormItem> <FormLabel>End Date</FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) 
-}/>) 
-}</div> </div> <FormField </FormControl> <FormMessage /> </FormItem>) 
-}/> <FormField <FormItem> <FormLabel className="flex justify-between" > <span>Job Description</span> <AIEnhancementButton /> </FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) 
-}/> <div className="flex justify-between pt-2" > <Button if (editingId) {
+<FormItem> <FormLabel>End Date</FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) 
+/>) 
+</div> </div> <FormField </FormControl> <FormMessage /> </FormItem>) 
+/> <FormField <FormItem> <FormLabel className="flex justify-between" > <span>Job Description</span> <AIEnhancementButton /> </FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) 
+/> <div className="flex justify-between pt-2" > <Button if (editingId) {
   setEditingId (null);
 form.reset ({
-  
-}
-}> {
+
+> {
   editingId ? 'Cancel': 'Back' 
-}</Button> Next </Button>) 
-}</div> </div> </form> </Form> </div> </div>) 
-}
+</Button> Next </Button>) 
+</div> </div> </form> </Form> </div> </div>) 

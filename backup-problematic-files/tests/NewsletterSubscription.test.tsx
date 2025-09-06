@@ -2,7 +2,6 @@ import React from 'react';
 
 interface NewsletterSubscription.testProps {
   className?: string;
-}
 
 const NewsletterSubscription.test: React.FC<NewsletterSubscription.testProps> = ({ className }) => {
   return (
@@ -11,6 +10,3 @@ const NewsletterSubscription.test: React.FC<NewsletterSubscription.testProps> = 
       <p>This component is under development.</p>
     </div>
   );
-}
-}
-}

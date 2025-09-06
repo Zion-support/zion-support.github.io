@@ -6,5 +6,3 @@ export function TalentRegistrationForm() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

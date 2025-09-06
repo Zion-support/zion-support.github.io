@@ -2,7 +2,6 @@ import React from 'react';
 
 interface TrainingProps {
   className?: string;
-}
 
 const Training: React.FC<TrainingProps> = ({ className }) => {
   return (
@@ -11,6 +10,5 @@ const Training: React.FC<TrainingProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default Training;

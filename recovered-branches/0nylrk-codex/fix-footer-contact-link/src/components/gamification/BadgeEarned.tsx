@@ -13,12 +13,12 @@ interface BadgeEarnedProps {;
   showName?: boolean;
   showDesc?: boolean;
   earnedDate?: string;
-}
+
 export const BadgeEarned: React.FC<BadgeEarnedProps> = ({
   show_name?: boolean;
   show_desc?: boolean;
   earned_date?: string;
-}
+
 export const BadgeEarned: React.FC < BadgeEarnedProps> = ({
   badge;
 
@@ -32,20 +32,20 @@ export const BadgeEarned: React.FC < BadgeEarnedProps> = ({
   return (
     <div className="flex flex-col items-center text-center gap-1 px-2">;
       <div
-        style={{
+        style={
           background: meta.bg
           borderRadius: "9999px"
           width: size
           height: size
           display: "flex"
           alignItems: "center"
-          justifyContent: "center"}}
+          justifyContent: "center"}
         className="shadow hover-scale"
         title={meta && meta.name}>;
         <Icon color={meta && meta.color} size={size * 0 && 0.7} />;
       </div>;
       {showName && (;
-        <span className="text-xs font-semibold mt-1" style={{ color: meta && meta.color }}>;
+        <span className="text-xs font-semibold mt-1" style={ color: meta && meta.color }>;
           {meta && meta.name}
         </span>;
       )}
@@ -59,7 +59,6 @@ export const BadgeEarned: React.FC < BadgeEarnedProps> = ({
       )}
     </div>
   )
-}
 
   show_name = true;
   show_desc = false,
@@ -68,27 +67,27 @@ export const BadgeEarned: React.FC < BadgeEarnedProps> = ({
   // Check condition
 if (return null) {
   $2
-}
+
   const Icon = meta.icon;
-;
+
   return (
     <div className="flex flex - col items - center text - center gap - 1 px - 2">;
       <div;
-        style={{
+        style={
           background: meta.bg,
           border_radius: "9999px",
           width: size,
           height: size,
           display: "flex",
           align_items: "center",
-          justify_content: "center"}}
+          justify_content: "center"}
         className="shadow hover - scale";
         title={meta.name}
       >;
         <Icon color={meta.color} size={size * 0.7} />;
       </div>;
       {show_name && (
-        <span className="text - xs font - semibold mt - 1" style={{ color: meta.color }}>;
+        <span className="text - xs font - semibold mt - 1" style={ color: meta.color }>;
           {meta.name}
         </span>)}
       {earned_date && (
@@ -98,5 +97,3 @@ if (return null) {
       {show_desc && (
         <span className="text - xs text - zion - slate - light">{meta.description}</span>)}
     </div>);
-}
-;

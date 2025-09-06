@@ -6,7 +6,7 @@ import {
   CardFooter
   CardHeader
   CardTitle
-} from "@/components/ui/card";
+ from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import {
   BarChart
@@ -14,7 +14,7 @@ import {
   LineChart
   TrendingUp
   Users
-} from "lucide-react";
+ from "lucide-react";
 export function PartnerDashboard() {
   // Placeholder data - would come from API in real implementation
   const stats = {
@@ -114,7 +114,7 @@ export function PartnerDashboard() {
       </Card>
     </div>
   );
-}
+
               Start sharing your referral links to earn rewards;
             </p>;
           </div>;
@@ -122,6 +122,5 @@ export function PartnerDashboard() {
       </Card>;
     </div>;
   );
-}
+
     </div>);
-}

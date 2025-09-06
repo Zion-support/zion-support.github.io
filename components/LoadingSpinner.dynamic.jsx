@@ -5,5 +5,5 @@ const LoadingSpinner.dynamic = () => {
       <h1>LoadingSpinner.dynamic</h1>
     </div>
   );
-}
+
 export default LoadingSpinner.dynamic;

@@ -8,7 +8,7 @@ export function ProfileLoadingState() {
       </div>
     </div>
   );
-}
+
 import React from './react';
 export /**
  * ProfileLoadingState - Function description
@@ -20,4 +20,3 @@ function ProfileLoadingState() {
         Loading profile...;
       </div>;
     </div>);
-}

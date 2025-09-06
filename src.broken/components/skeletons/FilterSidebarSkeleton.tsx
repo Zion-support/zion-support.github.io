@@ -6,5 +6,3 @@ export function FilterSidebarSkeleton() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

@@ -20,7 +20,6 @@ const Revolutionary2027Hero = () => {;
       transition: {;
         staggerChildren: 0.1;
       }
-    }
   },
 
   const itemVariants = {
@@ -32,7 +31,6 @@ const Revolutionary2027Hero = () => {;
         duration: 0.8,
         ease: "easeOut" as const
       }
-    }
   },
 
   return (
@@ -41,31 +39,31 @@ const Revolutionary2027Hero = () => {;
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(139,92,246,0.15),transparent_50%)]"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,255,255,0.1),transparent_50%)]"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(236,72,153,0.08),transparent_50%)]"></div>
-      
+
       {/* Animated Grid Pattern */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
       </div>
 
       {/* Floating Icons */}
-      {floatingIcons.map((item, index) => (;
+      {floatingIcons.map(item, index) => (;
         <motion.div;
           key={index}
           className={`absolute ${item.position} text-purple-400/30`}
-          animate={{;
+          animate={;
             y: [0, -20, 0],;
-            rotate: [0, 5, -5, 0]}}
-          transition={{
+            rotate: [0, 5, -5, 0]}
+          transition={
             duration: 4,
             delay: item.delay,
             repeat: Infinity,
             ease: "easeInOut"
-          }}
+          }
         >
           <item.icon className="w-8 h-8" />
         </motion.div>
-      ))}
-;
+      )}
+
       {/* Main Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
@@ -109,7 +107,7 @@ const Revolutionary2027Hero = () => {;
               <h3 className="text-lg font-semibold text-white mb-2">Quantum AI</h3>
               <p className="text-gray-300 text-sm">Consciousness simulation and neural computing</p>
             </div>
-            
+
             <div className="bg-gradient-to-br from-cyan-900/30 to-cyan-800/30 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-6">
               <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-xl flex items-center justify-center mx-auto mb-4">
                 <Rocket className="w-6 h-6 text-white" />
@@ -117,7 +115,7 @@ const Revolutionary2027Hero = () => {;
               <h3 className="text-lg font-semibold text-white mb-2">Space Tech</h3>
               <p className="text-gray-300 text-sm">Autonomous mining and debris management</p>
             </div>
-            
+
             <div className="bg-gradient-to-br from-pink-900/30 to-pink-800/30 backdrop-blur-xl border border-pink-500/30 rounded-2xl p-6">
               <div className="w-12 h-12 bg-gradient-to-br from-pink-500 to-pink-600 rounded-xl flex items-center justify-center mx-auto mb-4">
                 <TestTube className="w-6 h-6 text-white" />
@@ -136,7 +134,7 @@ const Revolutionary2027Hero = () => {;
               <span>Explore Services</span>
               <ArrowRight className="w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-1" />
             </a>
-            
+
             <a 
               href="tel:+13024640950"
               className="group inline-flex items-center space-x-3 bg-gradient-to-r from-gray-700 to-gray-800 text-white px-8 py-4 rounded-2xl font-semibold text-lg transform transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl border border-gray-600/50"
@@ -171,47 +169,47 @@ const Revolutionary2027Hero = () => {;
       {/* Scroll Indicator */}
       <motion.div
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-        animate={{
-          y: [0, 10, 0]}}
-        transition={{
+        animate={
+          y: [0, 10, 0]}
+        transition={
           duration: 2,
           repeat: Infinity,
           ease: "easeInOut"
-        }}
+        }
       >
         <div className="w-6 h-10 border-2 border-purple-400/50 rounded-full flex justify-center">
           <motion.div
             className="w-1 h-3 bg-gradient-to-b from-cyan-400 to-purple-400 rounded-full mt-2"
-            animate={{
-              y: [0, 12, 0]}}
-            transition={{
+            animate={
+              y: [0, 12, 0]}
+            transition={
               duration: 2,
               repeat: Infinity,
               ease: "easeInOut"
-            }}
+            }
           />;
         </div>;
       </motion.div>;
       {/* Particle Effects */}
       <div className="absolute inset-0 pointer-events-none">
-        {[...Array(20)].map((_, i) => (
+        {[...Array(20)].map(_, i) => (
           <motion.div
             key={i}
             className="absolute w-1 h-1 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full"
-            style={{
+            style={
               left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`}}
-            animate={{;
+              top: `${Math.random() * 100}%`}
+            animate={;
               y: [0, -100],;
-              opacity: [0, 1, 0]}}
-            transition={{;
+              opacity: [0, 1, 0]}
+            transition={;
               duration: 3 + Math.random() * 2,;
               repeat: Infinity,;
-              delay: Math.random() * 2}}
+              delay: Math.random() * 2}
           />;
-        ))}
+        )}
       </div>;
     </section>;
   );
-},;
+,;
 export default Revolutionary2027Hero;

@@ -6,8 +6,8 @@ const SYSTEM_PROMPT = `You are a policy and development proposal writer for glob
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
-) {
-  if (req.method !== "POST")
+ {
+  if (req.method != "POST")
     return res.status(405).json({ error: "Method not allowed" });
   try {
     const {
@@ -25,15 +25,15 @@ import type { NextApiRequest, NextApiResponse } from './next';
 import { OpenAI  } from './openai';
 import { create_proposal  } from '../../../utils / data / proposals';
 const SYSTEM_PROMPT = `You are a policy and development proposal writer for global institutions (UN, World Bank, ILO, etc.). Write clear, structured proposals with measurable outcomes, SDG alignment, implementation roadmap, governance, monitoring & evaluation, and risk mitigation.`;
-;
+
 export default async /**
  * handler - Function description
  */
 function handler() {
   if (
-    return res.status (405).json ({ error: "Method not allowed" })) {
+    return res.status (405).json ({ error: "Method not allowed" }) {
   $2
-}
+
   try {
     const {
       target_institution,
@@ -83,7 +83,7 @@ function handler() {
       .status(500)
       .json({ error: error?.message |"Failed to generate proposal" });
   }
-}
+
       language = 'en'
     } = req.body || {};
 
@@ -103,10 +103,10 @@ function handler() {
     const contentMarkdown = completion.choices?.[0]?.message?.content || '# Proposal Draft\n\nTBD';
 
     const meta = createProposal({
-;
+
     const content_markdown =;
       completion.choices?.[0]?.message?.content || "# Proposal Draft\n\nTBD";
-;
+
     const meta = create_proposal ({
       title,
       target_institution,
@@ -123,16 +123,15 @@ function handler() {
       .status(500)
       .json({ error: error?.message || "Failed to generate proposal" });
   }
-}
+
       supporting_multiverses,
       content_markdown,
       language,
     });
-;
+
     return res.status (200).json ({ meta, markdown: content_markdown });
   } catch (error: any) {
     return res;
       .status (500);
       .json ({ error: error?.message || "Failed to generate proposal" });
   }
-}

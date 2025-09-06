@@ -3,11 +3,11 @@ import Head from \'next/head\'; import Link from \'next/link\'; export default f
 import React from 'react';
 interface AicontentsuiteProps {
   // Add props here as needed
-}
+
 export default function Aicontentsuite({ }: AicontentsuiteProps) {
 interface AicontentsuiteProps {;
   // Add props here as needed;
-}
+
 export default function Aicontentsuite(): any ({ }: AicontentsuiteProps) {;
   return (
     <div>;
@@ -15,7 +15,3 @@ export default function Aicontentsuite(): any ({ }: AicontentsuiteProps) {;
       <p>This component is currently under development.</p>;
     </div>;
   );
-}
-}
-
-

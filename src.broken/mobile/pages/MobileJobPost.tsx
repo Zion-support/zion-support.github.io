@@ -6,5 +6,3 @@ export function MobileJobPost() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

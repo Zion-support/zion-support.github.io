@@ -133,7 +133,6 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
       website: 'https://ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
-  }
     id: 'quantum-cloud-infrastructure'
     name: 'Quantum Cloud Infrastructure'
     description:
@@ -243,7 +242,6 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
       website: 'https://ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
-  }
     id: 'ai-powered-enterprise-security'
     name: 'AI-Powered Enterprise Security'
     id: 'ai-powered-enterprise-security',
@@ -355,7 +353,6 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
       website: 'https://ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
-  }
     id: 'autonomous-it-operations-center'
     name: 'Autonomous IT Operations Center'
     description:
@@ -421,7 +418,6 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
       website: 'https://ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
-  }
       'Reduce operational costs by 85%',
       'Eliminate manual interventions',
       'Improve system performance',
@@ -677,7 +673,7 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
   },
-];      'Enterprise IT operationsData center managementApplication performance managementInfrastructure automationService desk automationIT service management'
+;      'Enterprise IT operationsData center managementApplication performance managementInfrastructure automationService desk automationIT service management'
 
     ];
     marketSize: '$28 && 28.9B by 2029';
@@ -689,8 +685,7 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
     compliance: ['SOC 2ISO 27001ITILCOBIT']
     scalability: 'Enterprise-grade, multi-tenant support';
     roi: '450% within 18 months'
-    deployment: 'Cloud-native, hybrid options';
-];      'Enterprise IT operations_data center management_application performance management_infrastructure automation_service desk automationIT service management';
+    deployment: 'Cloud-native, hybrid options';      'Enterprise IT operations_data center management_application performance management_infrastructure automation_service desk automationIT service management';
     ];
     market_size: '$28.9B by 2029';
     competitors: ['ServiceNowBMCMicro FocusIvanti'];
@@ -727,8 +722,7 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709'
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
-  }
-];
+;
     api: 'Operations management APIs', mobile: 'Mobile operations apps',
     security: 'Enterprise security, access controls',
     backup: 'Automated backup, disaster recovery',
@@ -745,6 +739,4 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709';
     }
-  }
-];
 ;

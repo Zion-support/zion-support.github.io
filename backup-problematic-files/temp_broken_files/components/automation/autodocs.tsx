@@ -6,4 +6,3 @@ export default function AutodocsPage() {
       <p className=&quot;text-white/70 mt-2&quot;>This runs daily and auto-PRs updates.</p>
     </div>
   )
-}

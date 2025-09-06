@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react',;
-;
+
 export default function InternationalProposals() {;
   const [items, setItems] = useState<any[]>([]),;
   const [loading, setLoading] = useState(true),;
-;
-  useEffect(() => {;
+
+  useEffect() => {;
     (async () => {;
       const res = await fetch('/api/proposals/list'),;
       const data = await res.json(),;
@@ -12,14 +12,14 @@ export default function InternationalProposals() {;
       setLoading(false),;
     })(),;
   }, []),;
-;
+
   async function updateStatus(id:string, status:string) {;
     await fetch('/api/proposals/status', { method:'POST', headers:{ 'Content-Type':'application/json' }, body:JSON.stringify({ id, status }) }),;
     const res = await fetch('/api/proposals/list'),;
     const data = await res.json(),;
     setItems(data.proposals || []),;
   }
-;
+
   return (;
     <div className="space-y-6">;
       <h1 className="text-2xl font-semibold">International Proposals</h1>;
@@ -27,7 +27,7 @@ export default function InternationalProposals() {;
         <div>Loading</div>;
       ) :(;
         <div className="grid gap-4">;
-          {items.map((p) => (;
+          {items.map(p) => (;
             <div key={p.id} className="border rounded p-4">;
               <div className="flex items-center justify-between">;
                 <div>;
@@ -48,14 +48,13 @@ export default function InternationalProposals() {;
                 <button onClick={() => updateStatus(p.id, 'Rejected')} className="px-2 py-1 border rounded">Mark Rejected</button>;
               </div>;
             </div>;
-          ))}
+          )}
           {!items.length && <div className="opacity-70">No proposals yet.</div>}
         </div>;
       )}
     </div>;
   ),; {
-  items.map ( (p) => (<div key= {
+  items.map (p) => (<div key= {
   p.id 
-}className="border rounded p-4" > <div className="flex items-center justify-between" > <div> </div>) 
-}</div>) 
-}
+className="border rounded p-4" > <div className="flex items-center justify-between" > <div></div>) 
+</div>) 

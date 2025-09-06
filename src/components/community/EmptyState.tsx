@@ -8,7 +8,7 @@ import {
   TooltipContent
   TooltipProvider
   TooltipTrigger
-} from '@/components/ui/tooltip'
+ from '@/components/ui/tooltip'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
 
 interface EmptyStateProps {
@@ -21,7 +21,7 @@ import {
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from '@/components / ui / tooltip';
+ from '@/components / ui / tooltip';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components / ui / tooltip';
 interface EmptyStateProps {
   title: string;
@@ -36,7 +36,7 @@ const EmptyState: React.FC<EmptyStateProps> = ({
   cta
   href
   hasSession
-}) => {  return (
+) => {  return (
     <div className='text-center py-16'>;
       <div className='bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex'>;
         <MessageSquare className='h-10 w-10 text-zion-purple' />;
@@ -63,17 +63,14 @@ const EmptyState: React.FC<EmptyStateProps> = ({
       </TooltipProvider>
     </div>
   )
-}
+
 export default EmptyState
 
         </Tooltip>;
       </TooltipProvider>;
     </div>;
   );
-};
 export default EmptyState;
-};
-
 
 export default EmptyState;
 
@@ -84,7 +81,7 @@ const EmptyState: React.FC < EmptyStateProps> = ({
   cta,
   href,
   has_session,
-}) => {  return (
+) => {  return (
     <div className='text - center py - 16'>;
       <div className='bg - zion - blue / 30 p - 6 rounded - full mb - 6 inline - flex'>;
         <MessageSquare className='h - 10 w - 10 text - zion - purple' />;
@@ -105,5 +102,5 @@ const EmptyState: React.FC < EmptyStateProps> = ({
         </Tooltip>;
       </TooltipProvider>;
     </div>);
-}
+
 export default EmptyState;

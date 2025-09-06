@@ -4,13 +4,12 @@ import { PortfolioProject } from '@/types/resume',;
 import { supabase } from '@/integrations/supabase/client',;
 import { useAuth } from '@/hooks/useAuth',;
 import { toast } from '@/hooks/use-toast',;
-;
+
 export function usePortfolio() {;
   const { user } = useAuth(),;
   const [isLoading, setIsLoading] = useState(false),;
   const [error, setError] = useState<string | null>(null),;
   const [projects, setProjects] = useState<PortfolioProject[]>([]),;
-  ;
   const fetchProjects = useCallback(async () => {;
     if (!user) {;
       setError('You must be logged in to access portfolio projects'),;
@@ -19,16 +18,13 @@ export function usePortfolio() {;
     ;
     setIsLoading(true),;
     setError(null),;
-    ;
     try {;
       const { data, error } = await supabase;
         .from('portfolio_projects');
         .select('*');
         .eq('user_id', user.id);
         .order('created_at', { ascending:false }),;
-      ;
       if (error) throw error,;
-      ;
       setProjects(data || []),;
       return data || [],;
     } catch (e:any) {;
@@ -37,9 +33,7 @@ export function usePortfolio() {;
       return [],;
     } finally {;
       setIsLoading(false),;
-    }
-  }, [user]),;
-  ;
+    }, [user]),;
   const addProject = async (project:PortfolioProject):Promise<string | null> => {;
     if (!user) {;
       setError('You must be logged in to add a portfolio project'),;
@@ -48,7 +42,6 @@ export function usePortfolio() {;
     ;
     setIsLoading(true),;
     setError(null),;
-    ;
     try {;
       const { data, error } = await supabase;
         .from('portfolio_projects');
@@ -64,14 +57,11 @@ export function usePortfolio() {;
         });
         .select('id');
         .single(),;
-      ;
       if (error) throw error,;
-      ;
       toast({;
         title:"Project added",;
         description:"Your project has been added to your portfolio";
       }),;
-      ;
       await fetchProjects(),;
       return data.id,;
     } catch (e:any) {;
@@ -84,9 +74,7 @@ export function usePortfolio() {;
       }),;
       return null,;
     } finally {;
-      setIsLoading(false),;    }
-  },;
-  ;
+      setIsLoading(false),;    },;
   const updateProject = async (projectId:string, project:PortfolioProject):Promise<boolean> => {;
     if (!user) {;
       setError('You must be logged in to update a portfolio project'),;
@@ -95,7 +83,6 @@ export function usePortfolio() {;
     ;
     setIsLoading(true),;
     setError(null),;
-    ;
     try {;
       const { error } = await supabase;
         .from('portfolio_projects');
@@ -110,14 +97,11 @@ export function usePortfolio() {;
         });
         .eq('id', projectId);
         .eq('user_id', user.id),;
-      ;
       if (error) throw error,;
-      ;
       toast({;
         title:"Project updated",;
         description:"Your portfolio project has been updated";
       }),;
-      ;
       await fetchProjects(),;
       return true,;
     } catch (e:any) {;
@@ -130,9 +114,7 @@ export function usePortfolio() {;
       }),;
       return false,;
     } finally {;
-      setIsLoading(false),;    }
-  },;
-  ;
+      setIsLoading(false),;    },;
   const deleteProject = async (projectId:string):Promise<boolean> => {;
     if (!user) {;
       setError('You must be logged in to delete a portfolio project'),;
@@ -141,22 +123,18 @@ export function usePortfolio() {;
     ;
     setIsLoading(true),;
     setError(null),;
-    ;
     try {;
       const { error } = await supabase;
         .from('portfolio_projects');
         .delete();
         .eq('id', projectId);
         .eq('user_id', user.id),;
-      ;
       if (error) throw error,;
-      ;
       toast({;
         title:"Project deleted",;
         description:"Your portfolio project has been deleted";
       }),;
-      ;
-      setProjects(projects.filter(p => p.id !== projectId)),;
+      setProjects(projects.filter(p => p.id != projectId),;
       return true,;
     } catch (e:any) {;
       console.error('Error deleting portfolio project:', e),;
@@ -169,9 +147,7 @@ export function usePortfolio() {;
       return false,;
     } finally {;
       setIsLoading(false),;
-    }
-  },;
-  ;
+    },;
   return {;
     isLoading,;
     error,;
@@ -186,75 +162,74 @@ setError (null);
 try {
   const {
   data, error 
-}= await supabase .from ('portfolio projects') .select ('*') .eq ('user id', user.id) if (error) throw error;
+= await supabase .from ('portfolio projects') .select ('*') .eq ('user id', user.id) if (error) throw error;
 setIsLoading (true);
 setError (null);
 try {
   const {
   data, error 
-}= await supabase .from ('portfolio projects') .insert ({
+= await supabase .from ('portfolio projects') .insert ({
   user id: user.id, title: project.title, description: project.description, technologies: project.technologies, image url: project.image url, github url: project.github url, demo url: project.demo url, pdf url: project.pdf url 
-}) .select ('id') .single ();
+) .select ('id') .single ();
 if (error) throw error;
 await fetchProjects ();
 return data.id 
-}catch (e: any) {
+catch (e: any) {
   console.error ('Error adding portfolio project:', e);
 setError (e.message);
 toast ({
   title: "Error";
 description: `Could not add project: $ {
   e.message 
-}`;
+`;
 variant: "destructive" 
-});
+);
 return null  variant: "destructive" 
-});
+);
 return null;
 setIsLoading (true);
 setError (null);
 try {
   const {
   error 
-}= await supabase .from ('portfolio projects') .update ({
+= await supabase .from ('portfolio projects') .update ({
   title: project.title, description: project.description, technologies: project.technologies, image url: project.image url, github url: project.github url, demo url: project.demo url, pdf url: project.pdf url 
-}) .eq ('id', projectId) .eq ('user id', user.id);
+) .eq ('id', projectId) .eq ('user id', user.id);
 if (error) throw error;
 await fetchProjects ();
 return true;
-}catch (e: any) {
+catch (e: any) {
   console.error ('Error updating portfolio project:', e);
 setError (e.message);
 toast ({
   title: "Error";
 description: `Could not update project: $ {
   e.message 
-}`;
+`;
 variant: "destructive" 
-});
+);
 return false  variant: "destructive" 
-});
+);
 return false;
 setIsLoading (true);
 setError (null);
 try {
   const {
   error 
-}= await supabase .from ('portfolio projects') .delete () .eq ('id', projectId) .eq ('user id', user.id);
+= await supabase .from ('portfolio projects') .delete () .eq ('id', projectId) .eq ('user id', user.id);
 if (error) throw error;
-setProjects (projects.filter (p => p.id !== projectId) );
+setProjects (projects.filter (p => p.id != projectId);
 return true;
-}catch (e: any) {
+catch (e: any) {
   console.error ('Error deleting portfolio project:', e);
 setError (e.message);
 toast ({
   title: "Error";
 description: `Could not delete project: $ {
   e.message 
-}`;
+`;
 variant: "destructive" 
-});
+);
 return false  variant: "destructive" 
-});
+);
 return false;
-}

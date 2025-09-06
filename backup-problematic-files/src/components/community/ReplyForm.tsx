@@ -9,26 +9,23 @@ import {;
   FormField,;
   FormItem,;
   FormMessage;
-} from "@/components/ui/form",;
+ from "@/components/ui/form",;
 import { Card, CardContent } from "@/components/ui/card",;
-;
+
 interface ReplyFormProps {;
   onSubmit:(content:string) => Promise<void>,;
   parentId?:string;}
-;
+
 interface ReplyFormValues {;
   content:string;
-}
-;
+
 export const ReplyForm = ({ onSubmit, parentId } ReplyFormProps) => {;
   const [isSubmitting, setIsSubmitting] = useState(false),;
-  ;
   const form = useForm<ReplyFormValues>({;
     defaultValues:{;
       content:"";
-    }
-  }),;
-;
+    }),;
+
   const handleSubmit = async (values:ReplyFormValues) => {;
     setIsSubmitting(true),;
     try {;
@@ -36,9 +33,8 @@ export const ReplyForm = ({ onSubmit, parentId } ReplyFormProps) => {;
       form.reset();
     } finally {;
       setIsSubmitting(false),;
-    }
-  },;
-;
+    },;
+
   return (;
     <Card>;
       <CardContent className="pt-6">;
@@ -69,8 +65,8 @@ export const ReplyForm = ({ onSubmit, parentId } ReplyFormProps) => {;
       </CardContent>;
     </Card>;
   ),;
-},;
-;
+,;
+
 export default ReplyForm,; import {;
   Form;
 FormControl;
@@ -79,15 +75,14 @@ FormItem;
 FormMessage interface ReplyFormProps {;
   onSubmit: (content: string) => Promise<void>;
 parentId?: string ;
-}interface ReplyFormValues {;
+interface ReplyFormValues {;
   content: string ;
-}export const ReplyForm = ({;
+export const ReplyForm = ({;
   onSubmit, parentId ;
-}: ReplyFormProps) => {;
+: ReplyFormProps) => {;
   const [isSubmitting, setIsSubmitting] = useState (false);
 defaultValues: {;
   ...field ;
-}/> </FormControl> <FormMessage /> </FormItem>) ;
-}/> </Button> </div> </form> </Form> </CardContent> </Card>) ;
-};
+/> </FormControl> <FormMessage /> </FormItem>) ;
+/> </Button> </div> </form> </Form> </CardContent> </Card>) ;
 export default ReplyForm;

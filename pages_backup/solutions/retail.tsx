@@ -41,7 +41,7 @@ import {
   Smartphone, 
   CheckCircle, 
   ArrowRight ;
-} from 'lucide-react';
+ from 'lucide-react';
 
 const features = [
   {
@@ -103,7 +103,7 @@ const features = [;
   },
   {
   }
-;];
+];
 const solutions = [;
   'E-commerce Platform Development',',;
   'Mobile Commerce Applications',',;
@@ -115,7 +115,7 @@ const solutions = [;
   'Personalization Engines',',;
   'Omnichannel Solutions',',;
   'Retail Mobile Applications'';
-;];
+];
 export default function RetailSolutionsPage() {;
   return (
     <Layout)
@@ -162,7 +162,7 @@ export default function RetailSolutionsPage() {;
               </p>;
             </div>;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
-              {features && features.map((feature, index) => (,;
+              {features && features.map(feature, index) => (,;
                 <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover:border-blue-500 transition-colors">";
                   <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-6">";
                     <feature && feature.icon className="w-6 h-6 text-white" />";
@@ -177,20 +177,19 @@ const benefits = [;
   'Enhanced data-driven decision making',;
   'Streamlined operations',;
   'Mobile-first customer engagement';
-];
 export default function RetailSolutions() {
     icon: Smartphone,
     title: 'Mobile Commerce',
     description: 'Mobile-optimized shopping experience'
   }
-];
+;
 
 export default function RetailSolutionsPage() {
     icon: ArrowRight,
     title: 'Omnichannel',
     description: 'Seamless integration across all sales channels'
   }
-;];
+];
 const solutions = [;
   'E-commerce Platform Development',',
   'Mobile Commerce Applications',',
@@ -202,7 +201,7 @@ const solutions = [;
   'Personalization Engines',',
   'Omnichannel Solutions',',
   'Retail Mobile Applications'';
-;];
+];
 export default function RetailSolutionsPage() {
   return (;
     <Layout );
@@ -250,7 +249,7 @@ export default function RetailSolutionsPage() {
               </p>;
             </div>;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
-              {features.map((feature, index) => (,
+              {features.map(feature, index) => (,
                 <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover:border-blue-500 transition-colors">"
                   <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-6">";
                     <feature.icon className="w-6 h-6 text-white" />";
@@ -265,7 +264,7 @@ const benefits = [
   'Enhanced data-driven decision making',
   'Streamlined operations',
   'Mobile-first customer engagement'
-];
+;
 export default function RetailSolutions() {
 export default function RetailSolutions() {;
   return (
@@ -312,12 +311,12 @@ export default function RetailSolutions() {;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
+              {features.map(feature, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
                     <feature.icon className="w-6 h-6 text-purple-600" />
                   </div>
-              ))}
+              )}
             </div>,;
           </div>;
         </section>;
@@ -329,12 +328,12 @@ export default function RetailSolutions() {;
                 Our Retail Solutions;
               </h2>;
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">";
-                {solutions && solutions.map((solution, index) => (,;
+                {solutions && solutions.map(solution, index) => (,;
                   <div key={index} className="flex items-center space-x-3">";
                     <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />";
                     <span className="text-gray-300 text-lg">{solution}</span>";
                   </div>;
-                ))}
+                )}
               </div>,;
             </div>;
           </div>;
@@ -415,12 +414,12 @@ export default function RetailSolutions() {;
                   and optimize operations across all channels.;
                 </p>;
                 <ul className="space-y-4">;
-                  {benefits && benefits.map((benefit, index) => (;
+                  {benefits && benefits.map(benefit, index) => (;
                     <li key={index} className="flex items-start">;
                       <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" />;
                       <span className="text-gray-700">{benefit}</span>;
                     </li>;
-                  ))}
+                  )}
                 </ul>
               </div>
               <div className="bg-gradient-to-r from-purple-600 to-pink-700 p-8 rounded-xl text-white">
@@ -437,7 +436,7 @@ export default function RetailSolutions() {;
                   <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                   <p className="text-gray-600">{feature.description}</p>
                 </motion.div>
-              ))}
+              )}
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
                   </h3>
@@ -445,7 +444,7 @@ export default function RetailSolutions() {;
                     {feature.description}
                   </p>
                 </div>
-              ))}
+              )}
             </div>,
           </div>;
         </section>;
@@ -457,12 +456,12 @@ export default function RetailSolutions() {;
                 Our Retail Solutions;
               </h2>;
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">";
-                {solutions.map((solution, index) => (,
+                {solutions.map(solution, index) => (,
                   <div key={index} className="flex items-center space-x-3">"
                     <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />";
                     <span className="text-gray-300 text-lg">{solution}</span>"
                   </div>;
-                ))}
+                )}
               </div>,
             </div>;
           </div>;
@@ -554,12 +553,12 @@ export default function RetailSolutions() {;
                   and optimize operations across all channels.
                 </p>
                 <ul className="space-y-4">
-                  {benefits.map((benefit, index) => (
+                  {benefits.map(benefit, index) => (
                     <li key={index} className="flex items-start">
                       <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" />
                       <span className="text-gray-700">{benefit}</span>
                     </li>
-                  ))}
+                  )}
                 </ul>
               </div>
               <div className="bg-gradient-to-r from-purple-600 to-pink-700 p-8 rounded-xl text-white">
@@ -631,4 +630,3 @@ export default function RetailSolutions() {;
   );
     </>;
   ),;
-}

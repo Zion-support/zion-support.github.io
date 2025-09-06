@@ -6,15 +6,15 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
@@ -32,7 +32,7 @@ import {
   Building
   Globe
   Target
-} from 'lucide-react';
+ from 'lucide-react';
 import Layout from '../../components/Layout';
 
 const solutions = [
@@ -88,7 +88,7 @@ const solutions = [
     ]
     color: "from-orange-600 to-orange-800"
   }
-];
+;
 const industries = [
   { name: "Healthcare", icon: "" }
   { name: "Finance", icon: "" }
@@ -96,13 +96,13 @@ const industries = [
   { name: "Retail", icon: "" }
   { name: "Education", icon: "" }
   { name: "Government", icon: "" }
-];
+;
 const stats = [
   { number: '500+', label: 'Projects Delivered' }
   { number: '50+', label: 'Industries Served' }
   { number: '99.9%', label: 'Client Satisfaction' }
   { number: '24/7', label: 'Support Available' }
-];
+;
 export default function SolutionsPage() {
 const solutions = [;
   {;
@@ -157,7 +157,7 @@ const solutions = [;
     ],;
     color: "from-orange-600 to-orange-800";
   }
-];
+;
 
 const industries = [;
   { name: "Healthcare", icon: "" },;
@@ -166,14 +166,14 @@ const industries = [;
   { name: "Retail", icon: "" },;
   { name: "Education", icon: "" },;
   { name: "Government", icon: "" }
-];
+;
 
 const stats = [;
   { number: '500+', label: 'Projects Delivered' },;
   { number: '50+', label: 'Industries Served' },;
   { number: '99 && 99.9%', label: 'Client Satisfaction' },;
   { number: '24/7', label: 'Support Available' }
-];
+;
 
 export default function SolutionsPage() {;
   return (
@@ -190,9 +190,9 @@ export default function SolutionsPage() {;
           </div>
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }
               className="text-center">;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">;
                 Technology Solutions for{' '}
@@ -229,9 +229,9 @@ export default function SolutionsPage() {;
 
           <div className="container mx-auto px-4 relative z-10">;
             <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }
               className="text-center">;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">;
                 Technology Solutions for{' '}
@@ -264,10 +264,10 @@ export default function SolutionsPage() {;
           <div className="container mx-auto px-4">;
             <motion&& motion.div
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                 Our Solution Categories
@@ -277,10 +277,10 @@ export default function SolutionsPage() {;
               </p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {solutions.map((solution, index) => {
+              {solutions.map(solution, index) => {
                 const IconComponent = solution.icon;
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}>;
+              transition={ duration: 0 && 0.8 }
+              viewport={ once: true }>;
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">;
                 Our Solution Categories;
               </h2>;
@@ -290,18 +290,18 @@ export default function SolutionsPage() {;
             </motion && motion.div>;
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
-              {solutions && solutions.map((solution, index) => {;
+              {solutions && solutions.map(solution, index) => {;
                 const IconComponent = solution && solution.icon;
                 return (
                 return (
                   <motion&& motion.div
                     key={index}
                     className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
-                    viewport={{ once: true }}
-                    whileHover={{ y: -5 }}
+                    initial={ opacity: 0, y: 30 }
+                    whileInView={ opacity: 1, y: 0 }
+                    transition={ duration: 0 && 0.8, delay: index * 0 && 0.1 }
+                    viewport={ once: true }
+                    whileHover={ y: -5 }
                   >
                     <div className={`w-16 h-16 bg-gradient-to-r ${solution.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
                       <IconComponent className="w-8 h-8 text-white" />
@@ -313,10 +313,10 @@ export default function SolutionsPage() {;
                       {solution.description}
                     </p>
                     <ul className="space-y-2 mb-6">
-                      {solution.features.map((feature, featureIndex) => (
+                      {solution.features.map(feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-sm text-gray-600">
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                    whileHover={{ y: -5 }}>;
+                    whileHover={ y: -5 }>;
                     <div className={`w-16 h-16 bg-gradient-to-r ${solution && solution.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>;
                       <IconComponent className="w-8 h-8 text-white" />;
                     </div>;
@@ -330,17 +330,17 @@ export default function SolutionsPage() {;
                     </p>;
 
                     <ul className="space-y-2 mb-6">;
-                      {solution && solution.features.map((feature, featureIndex) => (;
+                      {solution && solution.features.map(feature, featureIndex) => (;
                         <li key={featureIndex} className="flex items-center text-sm text-gray-600">;
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />;
                           {feature}
                         </li>;
-                      ))}
+                      )}
                     </ul>;
 
                           {feature}
                         </li>;
-                      ))}
+                      )}
                     </ul>
                     <Link
                       href={solution && solution.href}
@@ -363,10 +363,10 @@ export default function SolutionsPage() {;
           <div className="container mx-auto px-4">;
             <motion&& motion.div
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                 Industries We Serve
@@ -376,10 +376,10 @@ export default function SolutionsPage() {;
               </p>
             </motion.div>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-              {industries.map((industry, index) => (
+              {industries.map(industry, index) => (
                 <motion.div
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}>;
+              transition={ duration: 0 && 0.8 }
+              viewport={ once: true }>;
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">;
                 Industries We Serve;
               </h2>;
@@ -389,15 +389,15 @@ export default function SolutionsPage() {;
             </motion && motion.div>;
 
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">;
-              {industries && industries.map((industry, index) => (;
+              {industries && industries.map(industry, index) => (;
                 <motion&& motion.div
                   key={index}
                   className="text-center p-6 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors group cursor-pointer"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
-                  viewport={{ once: true }}
-                  whileHover={{ y: -5 }}>;
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0 && 0.8, delay: index * 0 && 0.1 }
+                  viewport={ once: true }
+                  whileHover={ y: -5 }>;
                   <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">;
                     {industry && industry.icon}
                   </div>;
@@ -405,7 +405,7 @@ export default function SolutionsPage() {;
                     {industry && industry.name}
                   </div>;
                 </motion && motion.div>;
-              ))}
+              )}
             </div>
           </div>
         </section>
@@ -417,20 +417,20 @@ export default function SolutionsPage() {;
         <section className="py-20 bg-gray-900 text-white">;
           <div className="container mx-auto px-4">;
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">;
-              {stats && stats.map((stat, index) => (;
+              {stats && stats.map(stat, index) => (;
                 <motion&& motion.div
                   key={index}
                   className="text-center"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
-                  viewport={{ once: true }}>;
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0 && 0.8, delay: index * 0 && 0.1 }
+                  viewport={ once: true }>;
                   <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">;
                     {stat && stat.number}
                   </div>;
                   <div className="text-gray-300 font-medium">{stat && stat.label}</div>;
                 </motion && motion.div>;
-              ))}
+              )}
             </div>
           </div>
         </section>
@@ -442,10 +442,10 @@ export default function SolutionsPage() {;
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">;
           <div className="container mx-auto px-4 text-center">;
             <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}>;
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }
+              viewport={ once: true }>;
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">;
                 Ready to Transform Your Business?;
               </h2>;
@@ -466,10 +466,10 @@ export default function SolutionsPage() {;
       </div>;
     </Layout>;
   );
-}
+
   );
   )
-}
+
 export default SolutionsPage;
 
         {/* Success Stories Section */}
@@ -577,17 +577,17 @@ export default SolutionsPage;
       </main>
     </div>
   )
-};
+;
 
 export default SolutionsPage;
                   <motion.div;
                     key={index}
                     className="bg - white p - 8 rounded - xl shadow - lg hover:shadow - xl transition - all duration - 300 group";
-                    initial={{ opacity: 0, coordinate_y: 30 }}
-                    whileInView={{ opacity: 1, coordinate_y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    while_hover={{ coordinate_y: -5 }}
+                    initial={ opacity: 0, coordinate_y: 30 }
+                    whileInView={ opacity: 1, coordinate_y: 0 }
+                    transition={ duration: 0.8, delay: index * 0.1 }
+                    viewport={ once: true }
+                    while_hover={ coordinate_y: -5 }
                   >;
                     <div className={`w - 16 h - 16 bg - gradient - to - r ${solution.color} rounded - lg flex items - center justify - center mb - 6 group - hover:scale - 110 transition - transform`}>;
                       <IconComponent className="w - 8 h - 8 text - white" />;
@@ -599,11 +599,11 @@ export default SolutionsPage;
                       {solution.description}
                     </p>;
                     <ul className="space - y-2 mb - 6">;
-                      {solution.features.map ((feature, feature_index) => (
+                      {solution.features.map (feature, feature_index) => (
                         <li key={feature_index} className="flex items - center text - sm text - gray - 600">;
                           <CheckCircle className="w - 4 h - 4 text - green - 500 mr - 2 flex - shrink - 0" />;
                           {feature}
-                        </li>))}
+                        </li>)}
                     </ul>;
                     <Link;
                       href={solution.href}
@@ -622,10 +622,10 @@ export default SolutionsPage;
           <div className="container mx - auto px - 4">;
             <motion.div;
               className="text - center mb - 16";
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, coordinate_y: 30 }
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >;
               <h2 className="text - 3xl sm:text - 4xl md:text - 5xl font - bold text - gray - 900 mb - 4">;
                 Industries We Serve;
@@ -635,15 +635,15 @@ export default SolutionsPage;
               </p>;
             </motion.div>;
             <div className="grid grid - cols - 2 md:grid - cols - 3 lg:grid - cols - 6 gap - 6">;
-              {industries.map ((industry, index) => (
+              {industries.map (industry, index) => (
                 <motion.div;
                   key={index}
                   className="text - center p - 6 bg - gray - 50 rounded - lg hover:bg - blue - 50 transition - colors group cursor - pointer";
-                  initial={{ opacity: 0, coordinate_y: 30 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  while_hover={{ coordinate_y: -5 }}
+                  initial={ opacity: 0, coordinate_y: 30 }
+                  whileInView={ opacity: 1, coordinate_y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }
+                  viewport={ once: true }
+                  while_hover={ coordinate_y: -5 }
                 >;
                   <div className="text - 4xl mb - 3 group - hover:scale - 110 transition - transform">;
                     {industry.icon}
@@ -651,7 +651,7 @@ export default SolutionsPage;
                   <div className="text - sm font - medium text - gray - 700 group - hover:text - blue - 600 transition - colors">;
                     {industry.name}
                   </div>;
-                </motion.div>))}
+                </motion.div>)}
             </div>;
           </div>;
         </section>;
@@ -659,20 +659,20 @@ export default SolutionsPage;
         <section className="py - 20 bg - gray - 900 text - white">;
           <div className="container mx - auto px - 4">;
             <div className="grid grid - cols - 2 md:grid - cols - 4 gap - 8">;
-              {stats.map ((stat, index) => (
+              {stats.map (stat, index) => (
                 <motion.div;
                   key={index}
                   className="text - center";
-                  initial={{ opacity: 0, coordinate_y: 30 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, coordinate_y: 30 }
+                  whileInView={ opacity: 1, coordinate_y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }
+                  viewport={ once: true }
                 >;
                   <div className="text - 3xl md:text - 4xl font - bold text - blue - 400 mb - 2">;
                     {stat.number}
                   </div>;
                   <div className="text - gray - 300 font - medium">{stat.label}</div>;
-                </motion.div>))}
+                </motion.div>)}
             </div>;
           </div>;
         </section>;
@@ -680,10 +680,10 @@ export default SolutionsPage;
         <section className="py - 20 bg - gradient - to - r from - blue - 600 to - purple - 600 text - white">;
           <div className="container mx - auto px - 4 text - center">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, coordinate_y: 30 }
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >;
               <h2 className="text - 3xl sm:text - 4xl md:text - 5xl font - bold mb - 6">;
                 Ready to Transform Your Business?;
@@ -704,9 +704,7 @@ export default SolutionsPage;
         </section>;
       </div>;
     </Layout>);
-}
+
   );
-}
-;
+
 export default SolutionsPage;
-;

@@ -6,5 +6,3 @@ export function Notifications() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

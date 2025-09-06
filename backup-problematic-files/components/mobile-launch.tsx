@@ -2,14 +2,13 @@ import Head from 'next/head',
 import { useEffect, useMemo, useState } from 'react',
 import EnhancedLayout from '../components/layout/EnhancedLayout',
 import Link from 'next/link',
-// Simple icons using inline SVG to avoid external assets
+/ Simple icons using inline SVG to avoid external assets
 function StarIcon({ className = 'w-5 h-5 text-yellow-500' }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
       <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.802 2.036a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.803-2.036a1 1 0 00-1.175 0l-2.803 2.036c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.88 8.72c-.783-.57-.38-1.81.588-1.81H6.93a1 1 0 00.95-.69l1.07-3.292z" />
     </svg>
   )
-}
 
 function AppleBadge({ href }: { href: string }) {
   return (
@@ -23,7 +22,6 @@ function AppleBadge({ href }: { href: string }) {
       </div>
     </a>
   )
-}
 
 function GoogleBadge({ href }: { href: string }) {
   return (
@@ -58,13 +56,12 @@ function GoogleBadge({ href }: { href: string }) {
       </div>
     </a>
   )
-}
 
 function SmartBanner({ iosUrl, androidUrl, deepLink }: { iosUrl: string, androidUrl: string, deepLink: string }) {
   const [visible, setVisible] = useState(false),
-  useEffect(() => {
-    if (typeof window === 'undefined') return,
-    const dismissed = localStorage.getItem('smartBannerDismissed') === '1',
+  useEffect() => {
+    if (typeof window = = 'undefined') return,
+    const dismissed = localStorage.getItem('smartBannerDismissed') = = '1',
     if (dismissed) return,
     const ua = navigator.userAgent || '',
     const isMobile = /iPhone|iPad|iPod|Android/i.test(ua),
@@ -72,7 +69,7 @@ function SmartBanner({ iosUrl, androidUrl, deepLink }: { iosUrl: string, android
   }, []),
 
   if (!visible) return null,
-  const isIOS = typeof navigator !== 'undefined' && /iPhone|iPad|iPod/i.test(navigator.userAgent),
+  const isIOS = typeof navigator != 'undefined' && /iPhone|iPad|iPod/i.test(navigator.userAgent),
   const storeUrl = isIOS ? iosUrl : androidUrl,
 
   return (
@@ -89,10 +86,10 @@ function SmartBanner({ iosUrl, androidUrl, deepLink }: { iosUrl: string, android
             <a href={storeUrl} target="_blank" rel="noopener noreferrer" className="text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700">Install</a>
             <button
               aria-label="Dismiss"
-              onClick={() => { localStorage.setItem('smartBannerDismissed1'), setVisible(false) }}
+              onClick={() => { localStorage.setItem('smartBannerDismissed1'), setVisible(false) }
               className="text-xs px-2 py-1 rounded-md hover: bg-gray-100 dark:hover:bg-gray-800"
             >
-              
+
             </button>
           </div>
         </div>
@@ -103,15 +100,14 @@ import Head from 'next/head',;
 import { useEffect, useMemo, useState } from 'react',;
 import EnhancedLayout from '../components/layout/EnhancedLayout',;
 import Link from 'next/link',;
-// Simple icons using inline SVG to avoid external assets;
+/ Simple icons using inline SVG to avoid external assets;
 function StarIcon({ className = 'w-5 h-5 text-yellow-500' }: { className?: string }) {;
   return (;
     <svg className={className} viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">;
       <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.802 2.036a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.803-2.036a1 1 0 00-1.175 0l-2.803 2.036c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.88 8.72c-.783-.57-.38-1.81.588-1.81H6.93a1 1 0 00.95-.69l1.07-3.292z" />;
     </svg>;
   );
-}
-;
+
 function AppleBadge({ href }: { href: string }) {;
   return (;
     <a href={href} target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-3 rounded-lg bg-black text-white px-4 py-2 shadow hover: opacity-90">;
@@ -124,8 +120,7 @@ function AppleBadge({ href }: { href: string }) {;
       </div>;
     </a>;
   );
-}
-;
+
 function GoogleBadge({ href }: { href: string }) {;
   return (;
     <a href={href} target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-3 rounded-lg bg-[#121212] text-white px-4 py-2 shadow hover: opacity-90">;
@@ -159,20 +154,19 @@ function GoogleBadge({ href }: { href: string }) {;
       </div>;
     </a>;
   );
-}
-;
+
 function SmartBanner({ iosUrl, androidUrl, deepLink }: { iosUrl: string, androidUrl: string, deepLink: string }) {;
   const [visible, setVisible] = useState(false),;
-  useEffect(() => {;
-    if (typeof window === 'undefined') return,;
-    const dismissed = localStorage.getItem('smartBannerDismissed') === '1',;
+  useEffect() => {;
+    if (typeof window = = 'undefined') return,;
+    const dismissed = localStorage.getItem('smartBannerDismissed') = = '1',;
     if (dismissed) return,;
     const ua = navigator.userAgent || '',;
     const isMobile = /iPhone|iPad|iPod|Android/i.test(ua),;
     if (isMobile) setVisible(true);
   }, []),;
   if (!visible) return null,;
-  const isIOS = typeof navigator !== 'undefined' && /iPhone|iPad|iPod/i.test(navigator.userAgent),;
+  const isIOS = typeof navigator != 'undefined' && /iPhone|iPad|iPod/i.test(navigator.userAgent),;
   const storeUrl = isIOS ? iosUrl : androidUrl,;
   return (;
     <div className="fixed inset-x-0 top-0 z-50">;
@@ -188,18 +182,16 @@ function SmartBanner({ iosUrl, androidUrl, deepLink }: { iosUrl: string, android
             <a href={storeUrl} target="_blank" rel="noopener noreferrer" className="text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700">Install</a>;
             <button;
               aria-label="Dismiss";
-              onClick={() => { localStorage.setItem('smartBannerDismissed1'), setVisible(false) }}
+              onClick={() => { localStorage.setItem('smartBannerDismissed1'), setVisible(false) }
               className="text-xs px-2 py-1 rounded-md hover: bg-gray-100 dark:hover:bg-gray-800";
             >;
-              ;
             </button>;
           </div>;
         </div>;
       </div>;
     </div>;
   );
-}
-;
+
 const IOS_APP_URL = process.env.NEXT_PUBLIC_IOS_APP_URL || 'https: //apps.apple.com/app/id0000000000',;
 const ANDROID_APP_URL = process.env.NEXT_PUBLIC_ANDROID_APP_URL || 'https://play.google.com/store/apps/details?id=com.zion.app',;
 const DEEP_LINK_URL = process.env.NEXT_PUBLIC_DEEP_LINK_URL || 'zion://open',;
@@ -214,12 +206,12 @@ export default function MobileLaunchPage() {;
   const [error, setError] = useState(''),;
   // Auto-rotate testimonial index;
   const [idx, setIdx] = useState(0),;
-  useEffect(() => {;
-    const t = setInterval(() => setIdx((i) => (i + 1) % testimonials.length), 4000),;
+  useEffect() => {;
+    const t = setInterval() => setIdx(i) => (i + 1) % testimonials.length), 4000),;
     return () => clearInterval(t);
   }, []),;
-  const qrHref = useMemo(() => {;
-    const target = SITE_BASE_URL ? `${SITE_BASE_URL}/download` : (typeof window !== 'undefined' ? `${window.location.origin}/download` : '/download'),;
+  const qrHref = useMemo() => {;
+    const target = SITE_BASE_URL ? `${SITE_BASE_URL}/download` : (typeof window != 'undefined' ? `${window.location.origin}/download` : '/download'),;
     const encoded = encodeURIComponent(target),;
     return `https://chart.googleapis.com/chart?cht=qr&chs=260x260&chl=${encoded}`;
   }, []),;
@@ -229,14 +221,13 @@ export default function MobileLaunchPage() {;
     setError(''),;
     try {;
       const res = await fetch('/api/subscribe', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email }) }),;
-      if (!res.ok) throw new Error(await res.text()),;
+      if (!res.ok) throw new Error(await res.text(),;
       setStatus('success');
       setEmail('');
     } catch (err: any) {;
       setStatus('error');
       setError(err?.message || 'Something went wrong.');
     }
-  }
 
   return (
     <EnhancedLayout>
@@ -316,22 +307,22 @@ export default function MobileLaunchPage() {;
       {/* Trust & Community */}
       <section className="mt-12">
         <div className="flex items-center gap-2">
-          {[...Array(5)].map((_, i) => (
+          {[...Array(5)].map(_, i) => (
             <StarIcon key={i} />
-          ))}
+          )}
           <span className="text-sm opacity-80">4.9 average rating</span>
         </div>
         <h2 className="mt-2 text-xl font-semibold">Why people love the Zion app</h2>
         <div className="relative mt-4 overflow-hidden">
-          <div className="flex transition-transform duration-700" style={{ transform: `translateX(-${idx * 100}%)`, width: `${testimonials.length * 100}%` }}>
-            {testimonials.map((t) => (
+          <div className="flex transition-transform duration-700" style={ transform: `translateX(-${idx * 100}%)`, width: `${testimonials.length * 100}%` }>
+            {testimonials.map(t) => (
               <div key={t.name} className="w-full md:w-1/3 flex-shrink-0 pr-4">
                 <div className="rounded-2xl border border-gray-200 dark:border-gray-800 p-5 bg-white dark:bg-gray-950 h-full">
                   <p className="text-sm">{t.quote}</p>
                   <div className="mt-3 text-xs opacity-80">{t.name}  {t.role}</div>
                 </div>
               </div>
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
@@ -350,14 +341,14 @@ export default function MobileLaunchPage() {;
           />
           <button
             type="submit"
-            disabled={status === 'loading'}
+            disabled={status = = 'loading'}
             className="rounded-lg bg-indigo-600 text-white px-5 py-2 font-medium hover:bg-indigo-500 disabled:opacity-60"
           >
-            {status === 'loading' ? 'Submitting' : 'Notify me'}
+            {status = = 'loading' ? 'Submitting' : 'Notify me'}
           </button>
         </form>
-        {status === 'success' && <div className="mt-2 text-sm text-emerald-600">Thanks! Youre on the list.</div>}
-        {status === 'error' && <div className="mt-2 text-sm text-rose-600">{error || 'Please try again later.'}</div>}
+        {status = = 'success' && <div className="mt-2 text-sm text-emerald-600">Thanks! Youre on the list.</div>}
+        {status = = 'error' && <div className="mt-2 text-sm text-rose-600">{error || 'Please try again later.'}</div>}
       </section>
 
       {/* Helper links */}
@@ -370,5 +361,3 @@ export default function MobileLaunchPage() {;
       </section>
     </EnhancedLayout>
   )
-}
-;

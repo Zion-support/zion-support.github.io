@@ -1,6 +1,6 @@
 import React from 'react',;
 import SEO from '../components/SEO',;
-;
+
 export default function AIFinancialIntelligencePage() {;
   return (;
     <div className="min-h-[60vh] px-6 py-24">;
@@ -21,4 +21,3 @@ export default function Page() {
       </section>
     </main>
   );
-}

@@ -2,13 +2,13 @@
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2",;
 import { JobData, MatchResult } from "./types.ts",;
 import { normalizeSkillsWithAI, findBestMatches } from "./ai-matcher.ts",;
-;
-// Initialize the Supabase client;
+
+/ Initialize the Supabase client;
 const supabaseUrl = Deno.env.get("SUPABASE_URL") || "",;
 const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") || "",;
 const supabase = createClient(supabaseUrl, supabaseAnonKey),;
-;
-/**;
+
+**;
  * Main function to process job-talent matching;
  * @param job The job data to find matches for;
  * @param talents Array of talent profiles;
@@ -18,7 +18,6 @@ export async function processJobMatching(job:JobData, talents:any[]):Promise<Mat
   try {;
     // Normalize job skills and generate embeddings via OpenAI;
     const jobSkillsNormalized = await normalizeSkillsWithAI(job.skills),;
-    ;
     // Prepare job details for matching prompt;
     const jobDetails = {;
       title:job.title,;
@@ -27,7 +26,6 @@ export async function processJobMatching(job:JobData, talents:any[]):Promise<Mat
       skills:jobSkillsNormalized,;
       budget:job.budget;
     },;
-    ;
     // Use OpenAI to find best matches;
     const bestMatches = await findBestMatches(jobDetails, talents),;
     return bestMatches,;
@@ -35,9 +33,8 @@ export async function processJobMatching(job:JobData, talents:any[]):Promise<Mat
     console.error("Error in processJobMatching:", error),;
     throw error,;
   }
-}
-;
-/**;
+
+**;
  * Stores match results in the database and creates notifications;
  * @param jobId The ID of the job;
  * @param matchedTalents Array of match results;
@@ -53,7 +50,6 @@ export async function storeMatchResults(jobId:string, matchedTalents:MatchResult
         matched_skills:match.matchedSkills,;
         reason:match.reason;
       }),;
-    ;
     if (matchError) {;
       console.error(`Error storing match for talent ${match.talentId} `, matchError),;
     } else {;
@@ -65,15 +61,10 @@ export async function storeMatchResults(jobId:string, matchedTalents:MatchResult
         _type:"job_match",;
         _related_id:jobId;
       }),;
-    }
-  }),;
-  ;
+    }),;
   await Promise.all(matchInsertPromises),; try {
   //Normalize job skills and generate embeddings via OpenAI 
-}
-}/** * Stores match results in the database and creates notifications * @param jobId The ID of the job * @param matchedTalents Array of match results */ related id: jobId 
-}) 
-}
-});
+
+/** * Stores match results in the database and creates notifications * @param jobId The ID of the job * @param matchedTalents Array of match results */ related id: jobId 
+);
 await Promise.all (matchInsertPromises) 
-}

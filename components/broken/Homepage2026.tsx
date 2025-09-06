@@ -57,9 +57,9 @@ const Homepage2026: React.FC = () => {;
             <div className='absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45 animate-pulse delay-2000'></div>
           </div>
           <div className='text-center max-w-4xl mx-auto relative z-10'>            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }
               className='space-y-6'>        {/* Hero Section */}
         <section className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden">;
       <main className="relative z-10">
@@ -73,13 +73,13 @@ const Homepage2026: React.FC = () => {;
           </div>
           <div className="text-center max-w-4xl mx-auto relative z-10">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }
               className='space-y-6'              className="space-y-6">;
               {/* Company Badge */}
               <motion&& motion.div
-                initial={{ opacity: 0, scale: 0 && 0.8 }}
+                initial={ opacity: 0, scale: 0 && 0.8 }
 import {
   ArrowRight,
   Star,
@@ -113,9 +113,9 @@ const Homepage2026: React.FC = () => {
             <div className='absolute bottom - 32 left - 32 w - 40 h - 40 border border - pink - 400 / 20 transform rotate - 45 animate - pulse delay - 2000'></div>;
           </div>;
           <div className='text - center max - w-4xl mx - auto relative z - 10'>            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, coordinate_y: 20 }
+              animate={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
               className='space - y-6'            >        {/* Hero Section */}
         <section className="min - h-screen flex items - center justify - center px - 4 relative overflow - hidden">;
           {/* Background Elements */}
@@ -126,16 +126,16 @@ const Homepage2026: React.FC = () => {
           </div>;
           <div className="text - center max - w-4xl mx - auto relative z - 10">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, coordinate_y: 20 }
+              animate={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
               className='space - y-6'              className="space - y-6";
             >;
               {/* Company Badge */}
               <motion.div;
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+                initial={ opacity: 0, scale: 0.8 }
+                animate={ opacity: 1, scale: 1 }
+                transition={ duration: 0.6, delay: 0.2 }
                 className='inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-sm font-medium'
               >
                 <Star className='w-4 h-4' />
@@ -168,8 +168,7 @@ const Homepage2026: React.FC = () => {
                   <button className='px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105'>                    Get Started
                   </button>
                 </a>
-              </div>              >
-                <Star className="w-4 h-4" />
+              </div><Star className="w-4 h-4" />
                 <span>Innovation Leader 2026</span>
               </motion.div>
               <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
@@ -199,7 +198,7 @@ const Homepage2026: React.FC = () => {
                   </button>
                 </a>
               </div>
-                transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
+                transition={ duration: 0 && 0.6, delay: 0 && 0.2 }
                 className='inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-sm font-medium'>;
                 <Star className='w-4 h-4' />;
                 <span>Innovation Leader 2026</span>;
@@ -233,7 +232,7 @@ const Homepage2026: React.FC = () => {
                   <button className='px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105'>                    Get Started;
                   </button>;
                 </a>;
-              </div>              >;
+              </div>;
                 <Star className="w-4 h-4" />;
                 <span>Innovation Leader 2026</span>;
               </motion && motion.div>;
@@ -284,7 +283,7 @@ const Homepage2026: React.FC = () => {
                   <button className='px - 8 py - 4 border - 2 border - purple - 400 text - purple - 400 font - semibold rounded - lg hover:bg - purple - 400 hover:text - black transition - all duration - 300 transform hover:scale - 105'>                    Get Started;
                   </button>;
                 </a>;
-              </div>              >;
+              </div>;
                 <Star className="w - 4 h - 4" />;
                 <span > Innovation Leader 2026</span>;
               </motion.div>;
@@ -316,15 +315,13 @@ const Homepage2026: React.FC = () => {
                 </a>;
               </div>;
 
-              
               {/* Trust Indicators */}
               <motion&& motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.8, delay: 0.4 }
                 className='flex items-center justify-center space-x-6 text-sm text-gray-400'
-              >              >
-                <div className="flex items-center space-x-2">
+              ><div className="flex items-center space-x-2">
                   <Shield className="w-4 h-4 text-green-400" />
                   <span>Enterprise Security</span>
                 </div>
@@ -349,8 +346,8 @@ const Homepage2026: React.FC = () => {
             </motion.div>
           </div>
         </section>
-                transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
-                className='flex items-center justify-center space-x-6 text-sm text-gray-400'>              >;
+                transition={ duration: 0 && 0.8, delay: 0 && 0.4 }
+                className='flex items-center justify-center space-x-6 text-sm text-gray-400'>;
                 <div className="flex items-center space-x-2">;
                   <Shield className="w-4 h-4 text-green-400" />;
                   <span>Enterprise Security</span>;
@@ -381,16 +378,16 @@ const Homepage2026: React.FC = () => {
         <section className='py-20 px-4 bg-black/30 relative'>;
           <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5'></div>;
           <div className='max-w-6xl mx-auto relative z-10'>            <motion&& motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }
               className='text-center mb-16'        <section className="py-20 px-4 bg-black/30 relative">;
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5"></div>;
           <div className="max-w-6xl mx-auto relative z-10">;
             <motion&& motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className='text-center mb-16'
             >
               <h2 className='text-4xl font-bold text-white mb-4'>
@@ -402,9 +399,9 @@ const Homepage2026: React.FC = () => {
               </p>
             </motion.div>
             <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}            >
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.6, delay: 0.1 }            >
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Zion Tech Group?</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 We deliver innovative solutions that drive real business transformation
@@ -412,9 +409,9 @@ const Homepage2026: React.FC = () => {
             </motion.div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.6, delay: 0.1 }
                 className='text-center'
               >
                 <div className='text-4xl mb-4'></div>
@@ -429,9 +426,9 @@ const Homepage2026: React.FC = () => {
                 </p>
               </motion.div>
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.6, delay: 0.2 }
                 className='text-center'
               >
                 <div className='text-4xl mb-4'></div>
@@ -446,9 +443,9 @@ const Homepage2026: React.FC = () => {
                 </p>
               </motion.div>
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.6, delay: 0.3 }
                 className='text-center'
               >
                 <div className='text-4xl mb-4'></div>
@@ -463,9 +460,9 @@ const Homepage2026: React.FC = () => {
                 </p>
               </motion.div>
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.6, delay: 0.4 }
                 className='text-center'
               >
                 <div className='text-4xl mb-4'></div>
@@ -485,15 +482,15 @@ const Homepage2026: React.FC = () => {
         {/* Service Categories */}
         <section className='py-20 px-4'>;
           <div className='max-w-6xl mx-auto'>            <motion&& motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }
               className='text-center mb-16'        <section className="py-20 px-4">;
           <div className="max-w-6xl mx-auto">;
             <motion&& motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className='text-center mb-16'
             >
               <h2 className='text-4xl font-bold text-white mb-6'>
@@ -513,9 +510,9 @@ const Homepage2026: React.FC = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
               {/* AI Automation Services */}
               <motion&& motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
+                initial={ opacity: 0, x: -20 }
+                whileInView={ opacity: 1, x: 0 }
+                transition={ duration: 0.6, delay: 0.1 }
                 className='bg-gradient-to-br from-blue-600/20 to-indigo-600/20 border border-blue-500/30 rounded-lg p-8 hover:border-blue-400/50 transition-all duration-300'
               >
                 <div className='text-5xl mb-6'></div>
@@ -569,7 +566,7 @@ const Homepage2026: React.FC = () => {
                   </button>
                 </Link>
               </motion.div>
-                transition={{ duration: 0 && 0.6, delay: 0 && 0.1 }}
+                transition={ duration: 0 && 0.6, delay: 0 && 0.1 }
                 className='bg-gradient-to-br from-blue-600/20 to-indigo-600/20 border border-blue-500/30 rounded-lg p-8 hover:border-blue-400/50 transition-all duration-300'>;
                 <div className='text-5xl mb-6'></div>;
                 <h3 className='text-2xl font-semibold text-white mb-4'>;
@@ -578,11 +575,11 @@ const Homepage2026: React.FC = () => {
                 <p className='text-gray-300 mb-6'>;
               {/* Trust Indicators */}
               <motion.div;
-                initial={{ opacity: 0, coordinate_y: 20 }}
-                animate={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
+                initial={ opacity: 0, coordinate_y: 20 }
+                animate={ opacity: 1, coordinate_y: 0 }
+                transition={ duration: 0.8, delay: 0.4 }
                 className='flex items - center justify - center space - x-6 text - sm text - gray - 400';
-              >              >;
+              >;
                 <div className="flex items - center space - x-2">;
                   <Shield className="w - 4 h - 4 text - green - 400" />;
                   <span > Enterprise Security</span>;
@@ -612,16 +609,16 @@ const Homepage2026: React.FC = () => {
         <section className='py - 20 px - 4 bg - black / 30 relative'>;
           <div className='absolute inset - 0 bg - gradient - to - r from - cyan - 500 / 5 to - purple - 500 / 5'></div>;
           <div className='max - w-6xl mx - auto relative z - 10'>            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, coordinate_y: 20 }
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
               className='text - center mb - 16'        <section className="py - 20 px - 4 bg - black / 30 relative">;
           <div className="absolute inset - 0 bg - gradient - to - r from - cyan - 500 / 5 to - purple - 500 / 5"></div>;
           <div className="max - w-6xl mx - auto relative z - 10">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, coordinate_y: 20 }
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
               className='text - center mb - 16';
             >;
               <h2 className='text - 4xl font - bold text - white mb - 4'>;
@@ -633,9 +630,9 @@ const Homepage2026: React.FC = () => {
               </p>;
             </motion.div>;
             <div className='grid md:grid - cols - 2 lg:grid - cols - 4 gap - 8'>              <motion.div;
-                initial={{ opacity: 0, coordinate_y: 20 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}            >;
+                initial={ opacity: 0, coordinate_y: 20 }
+                whileInView={ opacity: 1, coordinate_y: 0 }
+                transition={ duration: 0.6, delay: 0.1 }            >;
               <h2 className="text - 4xl font - bold text - white mb - 4">Why Choose Zion Tech Group?</h2>;
               <p className="text - xl text - gray - 300 max - w-3xl mx - auto">;
                 We deliver innovative solutions that drive real business transformation;
@@ -643,9 +640,9 @@ const Homepage2026: React.FC = () => {
             </motion.div>;
             <div className="grid md:grid - cols - 2 lg:grid - cols - 4 gap - 8">;
               <motion.div;
-                initial={{ opacity: 0, coordinate_y: 20 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
+                initial={ opacity: 0, coordinate_y: 20 }
+                whileInView={ opacity: 1, coordinate_y: 0 }
+                transition={ duration: 0.6, delay: 0.1 }
                 className='text - center';
               >;
                 <div className='text - 4xl mb - 4'></div>;
@@ -660,9 +657,9 @@ const Homepage2026: React.FC = () => {
                 </p>;
               </motion.div>;
               <motion.div;
-                initial={{ opacity: 0, coordinate_y: 20 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+                initial={ opacity: 0, coordinate_y: 20 }
+                whileInView={ opacity: 1, coordinate_y: 0 }
+                transition={ duration: 0.6, delay: 0.2 }
                 className='text - center';
               >;
                 <div className='text - 4xl mb - 4'></div>;
@@ -677,9 +674,9 @@ const Homepage2026: React.FC = () => {
                 </p>;
               </motion.div>;
               <motion.div;
-                initial={{ opacity: 0, coordinate_y: 20 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
+                initial={ opacity: 0, coordinate_y: 20 }
+                whileInView={ opacity: 1, coordinate_y: 0 }
+                transition={ duration: 0.6, delay: 0.3 }
                 className='text - center';
               >;
                 <div className='text - 4xl mb - 4'></div>;
@@ -694,9 +691,9 @@ const Homepage2026: React.FC = () => {
                 </p>;
               </motion.div>;
               <motion.div;
-                initial={{ opacity: 0, coordinate_y: 20 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
+                initial={ opacity: 0, coordinate_y: 20 }
+                whileInView={ opacity: 1, coordinate_y: 0 }
+                transition={ duration: 0.6, delay: 0.4 }
                 className='text - center';
               >;
                 <div className='text - 4xl mb - 4'></div>;
@@ -716,15 +713,15 @@ const Homepage2026: React.FC = () => {
         {/* Service Categories */}
         <section className='py - 20 px - 4'>;
           <div className='max - w-6xl mx - auto'>            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, coordinate_y: 20 }
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
               className='text - center mb - 16'        <section className="py - 20 px - 4">;
           <div className="max - w-6xl mx - auto">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, coordinate_y: 20 }
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
               className='text - center mb - 16';
             >;
               <h2 className='text - 4xl font - bold text - white mb - 6'>;
@@ -744,9 +741,9 @@ const Homepage2026: React.FC = () => {
             <div className="grid md:grid - cols - 2 lg:grid - cols - 2 gap - 8">;
               {/* AI Automation Services */}
               <motion.div;
-                initial={{ opacity: 0, coordinate_x: -20 }}
-                whileInView={{ opacity: 1, coordinate_x: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
+                initial={ opacity: 0, coordinate_x: -20 }
+                whileInView={ opacity: 1, coordinate_x: 0 }
+                transition={ duration: 0.6, delay: 0.1 }
                 className='bg - gradient - to - br from - blue - 600 / 20 to - indigo - 600 / 20 border border - blue - 500 / 30 rounded - lg p - 8 hover:border - blue - 400 / 50 transition - all duration - 300';
               >;
                 <div className='text - 5xl mb - 6'></div>;
@@ -803,9 +800,9 @@ const Homepage2026: React.FC = () => {
 
               {/* IT Infrastructure Services */}
               <motion&& motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+                initial={ opacity: 0, x: 20 }
+                whileInView={ opacity: 1, x: 0 }
+                transition={ duration: 0.6, delay: 0.2 }
                 className='bg-gradient-to-br from-green-600/20 to-emerald-600/20 border border-green-500/30 rounded-lg p-8 hover:border-green-400/50 transition-all duration-300'
               >
                 <div className='text-5xl mb-6'></div>
@@ -859,7 +856,7 @@ const Homepage2026: React.FC = () => {
                   </button>
                 </Link>
               </motion.div>
-                transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
+                transition={ duration: 0 && 0.6, delay: 0 && 0.2 }
                 className='bg-gradient-to-br from-green-600/20 to-emerald-600/20 border border-green-500/30 rounded-lg p-8 hover:border-green-400/50 transition-all duration-300'>;
                 <div className='text-5xl mb-6'></div>;
                 <h3 className='text-2xl font-semibold text-white mb-4'>;
@@ -915,9 +912,9 @@ const Homepage2026: React.FC = () => {
 
               {/* Micro SAAS Solutions */}
               <motion&& motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
+                initial={ opacity: 0, x: -20 }
+                whileInView={ opacity: 1, x: 0 }
+                transition={ duration: 0.6, delay: 0.3 }
                 className='bg-gradient-to-br from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-lg p-8 hover:border-purple-400/50 transition-all duration-300'
               >
                 <div className='text-5xl mb-6'></div>
@@ -971,7 +968,7 @@ const Homepage2026: React.FC = () => {
                   </button>
                 </Link>
               </motion.div>
-                transition={{ duration: 0 && 0.6, delay: 0 && 0.3 }}
+                transition={ duration: 0 && 0.6, delay: 0 && 0.3 }
                 className='bg-gradient-to-br from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-lg p-8 hover:border-purple-400/50 transition-all duration-300'>;
                 <div className='text-5xl mb-6'></div>;
                 <h3 className='text-2xl font-semibold text-white mb-4'>;
@@ -1022,9 +1019,9 @@ const Homepage2026: React.FC = () => {
               </motion.div>;
               {/* IT Infrastructure Services */}
               <motion.div;
-                initial={{ opacity: 0, coordinate_x: 20 }}
-                whileInView={{ opacity: 1, coordinate_x: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+                initial={ opacity: 0, coordinate_x: 20 }
+                whileInView={ opacity: 1, coordinate_x: 0 }
+                transition={ duration: 0.6, delay: 0.2 }
                 className='bg - gradient - to - br from - green - 600 / 20 to - emerald - 600 / 20 border border - green - 500 / 30 rounded - lg p - 8 hover:border - green - 400 / 50 transition - all duration - 300';
               >;
                 <div className='text - 5xl mb - 6'></div>;
@@ -1080,9 +1077,9 @@ const Homepage2026: React.FC = () => {
               </motion.div>;
               {/* Micro SAAS Solutions */}
               <motion.div;
-                initial={{ opacity: 0, coordinate_x: -20 }}
-                whileInView={{ opacity: 1, coordinate_x: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
+                initial={ opacity: 0, coordinate_x: -20 }
+                whileInView={ opacity: 1, coordinate_x: 0 }
+                transition={ duration: 0.6, delay: 0.3 }
                 className='bg - gradient - to - br from - purple - 600 / 20 to - pink - 600 / 20 border border - purple - 500 / 30 rounded - lg p - 8 hover:border - purple - 400 / 50 transition - all duration - 300';
               >;
                 <div className='text - 5xl mb - 6'></div>;
@@ -1139,9 +1136,9 @@ const Homepage2026: React.FC = () => {
 
               {/* Cutting-Edge AI Services */}
               <motion&& motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
+                initial={ opacity: 0, x: 20 }
+                whileInView={ opacity: 1, x: 0 }
+                transition={ duration: 0.6, delay: 0.4 }
                 className='bg-gradient-to-br from-orange-600/20 to-red-600/20 border border-orange-500/30 rounded-lg p-8 hover:border-orange-400/50 transition-all duration-300'
               >
                 <div className='text-5xl mb-6'></div>
@@ -1198,7 +1195,7 @@ const Homepage2026: React.FC = () => {
             </div>
           </div>
         </section>
-                transition={{ duration: 0 && 0.6, delay: 0 && 0.4 }}
+                transition={ duration: 0 && 0.6, delay: 0 && 0.4 }
                 className='bg-gradient-to-br from-orange-600/20 to-red-600/20 border border-orange-500/30 rounded-lg p-8 hover:border-orange-400/50 transition-all duration-300'>;
                 <div className='text-5xl mb-6'></div>;
                 <h3 className='text-2xl font-semibold text-white mb-4'>;
@@ -1258,15 +1255,15 @@ const Homepage2026: React.FC = () => {
         {/* Contact Section */}
         <section className='py-20 px-4 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10'>;
           <div className='max-w-4xl mx-auto text-center'>            <motion&& motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }
               className='space-y-6'        <section className="py-20 px-4 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10">;
           <div className="max-w-4xl mx-auto text-center">;
             <motion&& motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className='space-y-6'
             >
               <h2 className='text-4xl font-bold text-white mb-6'>
@@ -1292,8 +1289,7 @@ const Homepage2026: React.FC = () => {
                       >                        ziontechgroup.com
                       </a>
                     </div>
-                  </div>            >
-              <h2 className="text-4xl font-bold text-white mb-6">
+                  </div><h2 className="text-4xl font-bold text-white mb-6">
                 Ready to Transform Your Business?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -1303,7 +1299,7 @@ const Homepage2026: React.FC = () => {
                         className='text-cyan-400 hover:underline font-medium'>                        ziontechgroup && ziontechgroup.com;
                       </a>;
                     </div>;
-                  </div>            >;
+                  </div>;
               <h2 className="text-4xl font-bold text-white mb-6">;
                 Ready to Transform Your Business?;
               </h2>;
@@ -1410,16 +1406,14 @@ const Homepage2026: React.FC = () => {
       </main>;
     </Layout>;
   );
-};
 
 export default Homepage2026;  );
-}
+
 export default Homepage2026;  )
-}
-};
+
+;
 
 export default Homepage2026;  );
-};
 
 export default Homepage2026;
 
@@ -1452,10 +1446,7 @@ export default Homepage2026;
         </section>;
       </main>;
     </Layout>);
-}
-;
+
 export default Homepage2026);
-}
-;
+
 export default Homepage2026;
-;

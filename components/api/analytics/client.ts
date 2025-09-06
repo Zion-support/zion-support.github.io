@@ -4,7 +4,7 @@ import { createServerClient } from '../../../utils/supabase/server';
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
-) {  try {export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+ {  try {export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {;
     const supabase = createServerClient();
     const clientId = (req.query.clientId as string) |null
@@ -19,11 +19,11 @@ export default async function handler(
         .eq('client_id', clientId)
     ]);
     const jobs =
-      jobsR && jobsR.status === 'fulfilled' && jobsR && jobsR.value.data
+      jobsR && jobsR.status = = 'fulfilled' && jobsR && jobsR.value.data
         ? (jobsR && jobsR.value.data as any[])
         : [];
     const quotes =
-      quotesR && quotesR.status === 'fulfilled' && quotesR && quotesR.value.data
+      quotesR && quotesR.status = = 'fulfilled' && quotesR && quotesR.value.data
         ? (quotesR && quotesR.value.data as any[])
         : [];
     const jobsData = jobs.length
@@ -56,8 +56,8 @@ export default async function handler(
           { id: 21, job_id: 12, status: 'received', created_at: '2025-01-02' }
           { id: 22, job_id: 13, status: 'received', created_at: '2025-01-03' }
         ];
-    const jobs = jobsR.status === 'fulfilled' && jobsR.value.data ? jobsR.value.data as any[] : [];
-    const quotes = quotesR.status === 'fulfilled' && quotesR.value.data ? quotesR.value.data as any[] : [];
+    const jobs = jobsR.status = = 'fulfilled' && jobsR.value.data ? jobsR.value.data as any[] : [];
+    const quotes = quotesR.status = = 'fulfilled' && quotesR.value.data ? quotesR.value.data as any[] : [];
     const jobsData = jobs.length ? jobs : [
       { id: 11, client_id: 'c1', status: 'posted', posted_at: '2025-01-01' }
       { id: 12, client_id: 'c1', status: 'filled', posted_at: '2025-01-02', hired_at: '2025-01-05' }
@@ -67,17 +67,16 @@ export default async function handler(
       { id: 22, job_id: 13, status: 'received', created_at: '2025-01-03' }];
     const jobsPosted = jobsData.length;
     const quotesReceived = quotesData.length;
-    const filled = jobsData.filter(j => j.status === 'filled');
+    const filled = jobsData.filter(j => j.status = = 'filled');
     const timeToHireDays = filled.length
-      ? filled.reduce(
-          (acc, j) =>
+      ? filled.reduce(acc, j) =>
             acc +
-            (new Date(j.hired_at).getTime() - new Date(j.posted_at).getTime()) /
+            (new Date(j.hired_at).getTime() - new Date(j.posted_at).getTime() /
               (1000 * 60 * 60 * 24)
           0
         ) / filled.length
-    const jobs = jobsR && jobsR.status === 'fulfilled' && jobsR && jobsR.value.data ? jobsR && jobsR.value.data as any[] : [];
-    const quotes = quotesR && quotesR.status === 'fulfilled' && quotesR && quotesR.value.data ? quotesR && quotesR.value.data as any[] : [];
+    const jobs = jobsR && jobsR.status = = 'fulfilled' && jobsR && jobsR.value.data ? jobsR && jobsR.value.data as any[] : [];
+    const quotes = quotesR && quotesR.status = = 'fulfilled' && quotesR && quotesR.value.data ? quotesR && quotesR.value.data as any[] : [];
 
     const jobsData = jobs && jobs.length ? jobs : [
       { id: 11, client_id: 'c1', status: 'posted', posted_at: '2025-01-01' };
@@ -91,12 +90,11 @@ export default async function handler(
     const jobsPosted = jobsData && jobsData.length;
     const quotesReceived = quotesData && quotesData.length;
 
-    const filled = jobsData && jobsData.filter(j => j && j.status === 'filled');
+    const filled = jobsData && jobsData.filter(j => j && j.status = = 'filled');
     const timeToHireDays = filled && filled.length
-      ? filled && filled.reduce(
-          (acc, j) =>
+      ? filled && filled.reduce(acc, j) =>
             acc +
-            (new Date(j && j.hired_at).getTime() - new Date(j && j.posted_at).getTime()) /
+            (new Date(j && j.hired_at).getTime() - new Date(j && j.posted_at).getTime() /
               (1000 * 60 * 60 * 24),
           0
         ) / filled && filled.length
@@ -107,7 +105,7 @@ export default async function handler(
       { label: 'Post', value: jobsData.length }
       {
         label: 'Invite'
-        value: Math.max(shortlisted, Math.floor(jobsData.length * 0.8))
+        value: Math.max(shortlisted, Math.floor(jobsData.length * 0.8)
       }
       { label: 'Hire', value: filled.length }
     ];
@@ -162,7 +160,7 @@ export default async function handler(
 
         { label: 'Hire', value: 2 }]})
   }
-}
+
     res.status (200).json ({
       jobs_posted: 3,
       quotes_received: 2,
@@ -185,4 +183,3 @@ export default async function handler(
         { label: 'Invite', value: 2 }
         { label: 'Hire', value: 2 }]});
   }
-}

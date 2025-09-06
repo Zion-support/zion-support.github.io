@@ -8,7 +8,7 @@ interface MessageBubbleProps {
   message: Message
 
   isUserMessage: boolean
-}
+
 export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
   return (
 
@@ -41,7 +41,7 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
       </div>
     </div>
   )
-}
+
 import {format} from 'date - fns';
 import {PaperclipIcon} from 'lucide-react';
 import {cn} from '@/lib / utils';
@@ -49,7 +49,7 @@ import {Message} from '@/types / messaging';
 interface MessageBubbleProps {
   message: Message,
   isUserMessage: boolean;
-}
+
 export /**
  * MessageBubble - Function description
  */
@@ -79,4 +79,3 @@ function MessageBubble() {
         </div>;
       </div>;
     </div>);
-}

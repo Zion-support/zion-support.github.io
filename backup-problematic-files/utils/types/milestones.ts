@@ -12,14 +12,14 @@ export type MilestoneAttachment = {
   label?: string,
   uploadedByUserId: string,
   uploadedAt: string, // ISO date
-},
+,
 
 export type ProjectParticipantRole = 'client' | 'talent',
 
 export type ProjectParticipants = {
   clientUserId: string,
   talentUserId: string
-},
+,
 
 export type Project = {
   id: string,
@@ -28,13 +28,12 @@ export type Project = {
   milestones: Milestone[],
   createdAt: string,
   updatedAt: string
-},
+,
 
 export function isMilestoneStatus(_value: string): value is MilestoneStatus {_return (
-    value === 'Pending' ||
-    value === 'In Progress' ||
-    value === 'Submitted' ||
-    value === 'Approved' ||
-    value === 'Paid'
+    value = = 'Pending' ||
+    value = = 'In Progress' ||
+    value = = 'Submitted' ||
+    value = = 'Approved' ||
+    value = = 'Paid'
   )
-}

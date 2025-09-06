@@ -7,7 +7,6 @@ interface MainNavigationProps {
   isAdmin?: boolean;
   unreadCount?: number;
   className?: string;
-}
 
 export function MainNavigation(): any ({ isAdmin = false, unreadCount = 0, className }: MainNavigationProps) {;
   const { user } = useAuth();
@@ -17,7 +16,7 @@ export function MainNavigation(): any ({ isAdmin = false, unreadCount = 0, class
     {
       name: "Home"
       href: "/"
-      matches: (path: string) => path === "/"
+      matches: (path: string) => path = = "/"
     }
     {
       name: "Marketplace"
@@ -50,7 +49,7 @@ export function MainNavigation(): any ({ isAdmin = false, unreadCount = 0, class
     links.push({
       name: "Dashboard"
       href: "/dashboard"
-      matches: (path: string) => path === "/dashboard" |path === "/client-dashboard" |path === "/talent-dashboard"
+      matches: (path: string) => path = = "/dashboard" |path = = "/client-dashboard" |path = = "/talent-dashboard"
     })
   }
   // Add admin-only links
@@ -64,7 +63,7 @@ export function MainNavigation(): any ({ isAdmin = false, unreadCount = 0, class
   return (
     <nav className={cn("ml-6 hidden md:flex", className)}>;
       <ul className="flex items-center gap-1">;
-        {links && links.map((link) => (;
+        {links && links.map(link) => (;
           <li key={link && link.name}>;
             <Link
               to={link && link.href}
@@ -77,7 +76,7 @@ export function MainNavigation(): any ({ isAdmin = false, unreadCount = 0, class
               {link && link.name}
             </Link>;
           </li>;
-        ))}
+        )}
         {/* Messages link with unread counter */}
         {isAuthenticated && (;
           <li>;
@@ -85,7 +84,7 @@ export function MainNavigation(): any ({ isAdmin = false, unreadCount = 0, class
               to="/messages"
               className={cn(
                 "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative";
-                location.pathname === "/messages" |location.pathname === "/inbox"
+                location.pathname = = "/messages" |location.pathname = = "/inbox"
 
                   ? "bg-zion-purple/20 text-zion-cyan"
                   : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
@@ -103,7 +102,7 @@ export function MainNavigation(): any ({ isAdmin = false, unreadCount = 0, class
       </ul>
     </nav>
   )
-}
+
 import { Link, use_location } from './react-router-dom';
 import { cn } from '@/lib / utils';
 import { use_auth } from '@/hooks / use_auth';
@@ -112,7 +111,7 @@ interface MainNavigationProps {
   is_admin?: boolean;
   unread_count?: number;
   class_name?: string;
-}
+
 export /**
  * MainNavigation - Function description
  */
@@ -120,12 +119,12 @@ function MainNavigation() {
   const { user } = use_auth ();
   const is_authenticated = !!user;
   const location = use_location ();
-;
+
   const links = [;
     {
       name: "Home",
       href: "/",
-      matches: (path: string) => path === "/";
+      matches: (path: string) => path = = "/";
     }
     {
       name: "Marketplace",
@@ -153,23 +152,23 @@ function MainNavigation() {
       matches: (path: string) => path.starts_with ("/community") || path.starts_with ("/forum");
     }
   ];
-;
+
   // Add authenticated - only links;
   // Check condition
 if ( {) {
   $2
-}
+
     links.push ({
       name: "Dashboard",
       href: "/dashboard",
-      matches: (path: string) => path === "/dashboard" || path === "/client - dashboard" || path === "/talent - dashboard";
+      matches: (path: string) => path = = "/dashboard" || path = = "/client - dashboard" || path = = "/talent - dashboard";
     });
   }
   // Add admin - only links;
   // Check condition
 if ( {) {
   $2
-}
+
     links.push ({
       name: "Analytics",
       href: "/analytics",
@@ -179,7 +178,7 @@ if ( {) {
   return (
     <nav className={cn ("ml - 6 hidden md:flex", class_name)}>;
       <ul className="flex items - center gap - 1">;
-        {links.map ((link) => (
+        {links.map (link) => (
           <li key={link.name}>;
             <Link;
               to={link.href}
@@ -191,7 +190,7 @@ if ( {) {
             >;
               {link.name}
             </Link>;
-          </li>))}
+          </li>)}
         {/* Messages link with unread counter */}
         {is_authenticated && (
           <li>;
@@ -199,7 +198,7 @@ if ( {) {
               to="/messages";
               className={cn (
                 "inline - flex h - 9 items - center justify - center rounded - md px - 4 text - sm font - medium transition - colors relative";
-                location.pathname === "/messages" || location.pathname === "/inbox";
+                location.pathname = = "/messages" || location.pathname = = "/inbox";
                   ? "bg - zion - purple / 20 text - zion - cyan";
                   : "text - white hover:bg - zion - purple / 10 hover:text - zion - cyan")}
             >;
@@ -213,4 +212,3 @@ if ( {) {
           </li>)}
       </ul>;
     </nav>);
-}

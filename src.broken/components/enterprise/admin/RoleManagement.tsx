@@ -6,5 +6,3 @@ export function RoleManagement() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

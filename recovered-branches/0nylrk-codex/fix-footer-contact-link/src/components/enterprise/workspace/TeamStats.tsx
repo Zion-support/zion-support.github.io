@@ -6,7 +6,7 @@ import {
   CardDescription
   CardHeader
   CardTitle
-} from "@/components/ui/card";
+ from "@/components/ui/card";
 
 import { Progress } from "@/components/ui/progress";
 export function TeamStats() {;
@@ -61,4 +61,3 @@ export function TeamStats() {;
     </Card>;
   );
     </Card>);
-}

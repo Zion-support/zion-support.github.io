@@ -11,7 +11,7 @@ import {
   CardFooter
   CardHeader
   CardTitle
-} from '@/components/ui/card'
+ from '@/components/ui/card'
   Dialog
   DialogContent
   DialogDescription
@@ -19,7 +19,7 @@ import {
   DialogHeader
   DialogTitle
   DialogTrigger
-} from '@/components/ui/dialog'
+ from '@/components/ui/dialog'
 import { Input } from '@/components/ui/input'
 import { Checkbox } from '@/components/ui/checkbox'
 import { Label } from '@/components/ui/label'
@@ -27,12 +27,12 @@ import { Badge } from '@/components/ui/badge'
   Popover
   PopoverContent
   PopoverTrigger
-} from '@/components/ui/popover'
+ from '@/components/ui/popover'
   DropdownMenu
   DropdownMenuContent
   DropdownMenuItem
   DropdownMenuTrigger
-} from '@/components/ui/dropdown-menu'
+ from '@/components/ui/dropdown-menu'
   AlertDialog
   AlertDialogAction
   AlertDialogCancel
@@ -41,7 +41,7 @@ import { Badge } from '@/components/ui/badge'
   AlertDialogFooter
   AlertDialogHeader
   AlertDialogTitle
-} from '@/components/ui/alert-dialog'
+ from '@/components/ui/alert-dialog'
 import CodeBlock from './CodeBlock'
 export function ApiKeysManager() {
   const {
@@ -67,23 +67,23 @@ export function ApiKeysManager() {
   const [selectedScopes, setSelectedScopes] = useState<ApiKeyScope[]>([]),
 
   // Load keys on mount
-  useState(() => {
+  useState() => {
     fetchApiKeys()
 
   })
   const handleCreateKey = async () => {
-    if (keyName.trim() === '' |selectedScopes.length === 0) return
+    if (keyName.trim() = = '' |selectedScopes.length = = 0) return
     await createApiKey(keyName, selectedScopes)
     setShowCreateDialog(false)
     setKeyName('')
     setSelectedScopes([]) }
   const handleRegenerateKey = async (keyId: string) => {
     await regenerateApiKey(keyId)
-    setShowRegenerateConfirm(null);  useState(() => {
+    setShowRegenerateConfirm(null);  useState() => {
     fetchApiKeys()
   })
   const handleCreateKey = async () => {
-    if (keyName.trim() === "" |selectedScopes.length === 0) return
+    if (keyName.trim() = = "" |selectedScopes.length = = 0) return
     await createApiKey(keyName, selectedScopes)
     setShowCreateDialog(false)
     setKeyName("")
@@ -139,7 +139,7 @@ export function ApiKeysManager() {
   // Toggle a scope selection
   const toggleScope = (scope: ApiKeyScope) => {
     setSelectedScopes(prev =>
-      prev.includes(scope) ? prev.filter(s => s !== scope) : [...prev, scope]
+      prev.includes(scope) ? prev.filter(s => s != scope) : [...prev, scope]
     )
   }
   const getExampleCode = (key: string) => {    return `curl -X GET "https://api.ziontechgroup.com/v1/jobs" \\
@@ -168,7 +168,7 @@ export function ApiKeysManager() {
       <CardContent>
         <div className='flex justify-between items-center mb-6'>
           <p className='text-sm text-zinc-400'>
-            You have {keys.length} API {keys.length === 1 ? 'key' : 'keys'}
+            You have {keys.length} API {keys.length = = 1 ? 'key' : 'keys'}
           </p>
           <Dialog open={showCreateDialog} onOpenChange={setShowCreateDialog}>
             <DialogTrigger asChild>
@@ -207,7 +207,7 @@ import {;
   CardFooter,;
   CardHeader,;
   CardTitle,;
-} from '@/components/ui/card';
+ from '@/components/ui/card';
 import {;
   Dialog,;
   DialogContent,;
@@ -216,7 +216,7 @@ import {;
   DialogHeader,;
   DialogTitle,;
   DialogTrigger,;
-} from '@/components/ui/dialog';
+ from '@/components/ui/dialog';
 import { Input } from '@/components/ui/input';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Label } from '@/components/ui/label';
@@ -225,13 +225,13 @@ import {;
   Popover,;
   PopoverContent,;
   PopoverTrigger,;
-} from '@/components/ui/popover';
+ from '@/components/ui/popover';
 import {;
   DropdownMenu,;
   DropdownMenuContent,;
   DropdownMenuItem,;
   DropdownMenuTrigger,;
-} from '@/components/ui/dropdown-menu';
+ from '@/components/ui/dropdown-menu';
 import {;
   AlertDialog,;
   AlertDialogAction,;
@@ -241,7 +241,7 @@ import {;
   AlertDialogFooter,;
   AlertDialogHeader,;
   AlertDialogTitle,;
-} from '@/components/ui/alert-dialog';
+ from '@/components/ui/alert-dialog';
 
 import CodeBlock from './CodeBlock';
 export function ApiKeysManager() {;
@@ -269,11 +269,11 @@ export function ApiKeysManager() {;
   const [selectedScopes, setSelectedScopes] = useState<ApiKeyScope[]>([]);
 
   // Load keys on mount;
-  useState(() => {;
+  useState() => {;
     fetchApiKeys();
   });
   const handleCreateKey = async () => {;
-    if (keyName && keyName.trim() === '' || selectedScopes && selectedScopes.length === 0) return;
+    if (keyName && keyName.trim() = = '' || selectedScopes && selectedScopes.length = = 0) return;
 
     await createApiKey(keyName, selectedScopes);
     setShowCreateDialog(false);
@@ -282,12 +282,12 @@ export function ApiKeysManager() {;
 
   const handleRegenerateKey = async (keyId: string) => {;
     await regenerateApiKey(keyId);
-    setShowRegenerateConfirm(null);  useState(() => {;
+    setShowRegenerateConfirm(null);  useState() => {;
     fetchApiKeys();
   });
 
   const handleCreateKey = async () => {;
-    if (keyName && keyName.trim() === "" || selectedScopes && selectedScopes.length === 0) return;
+    if (keyName && keyName.trim() = = "" || selectedScopes && selectedScopes.length = = 0) return;
 
     await createApiKey(keyName, selectedScopes);
     setShowCreateDialog(false);
@@ -355,7 +355,7 @@ export function ApiKeysManager() {;
   // Toggle a scope selection;
   const toggleScope = (scope: ApiKeyScope) => {;
     setSelectedScopes(prev =>;
-      prev && prev.includes(scope) ? prev && prev.filter(s => s !== scope) : [...prev, scope];
+      prev && prev.includes(scope) ? prev && prev.filter(s => s != scope) : [...prev, scope];
     );
   };
 
@@ -388,7 +388,7 @@ export function ApiKeysManager() {;
       <CardContent>;
         <div className='flex justify-between items-center mb-6'>;
           <p className='text-sm text-zinc-400'>;
-            You have {keys && keys.length} API {keys && keys.length === 1 ? 'key' : 'keys'}
+            You have {keys && keys.length} API {keys && keys.length = = 1 ? 'key' : 'keys'}
           </p>;
 
           <Dialog open={showCreateDialog} onOpenChange={setShowCreateDialog}>;
@@ -423,7 +423,7 @@ export function ApiKeysManager() {;
                         className='flex items-center space-x-2'>;
                         <Checkbox
                           id={scope.value}                          checked={selectedScopes.includes(scope.value)}                  <div className="grid gap-2 pt-2">
-                    {scopeOptions.map((scope,) => (
+                    {scopeOptions.map(scope,) => (
                       <div key={scope.value} className="flex items-center space-x-2">
                         <Checkbox
                           id={scope.value}
@@ -453,7 +453,7 @@ export function ApiKeysManager() {;
                           <span className="block text-xs text-zinc-400 mt-1">{scope.description}</span>
                         </Label>
                       </div>
-                    ))}
+                    )}
                   </div>
                 </div>
               </div>
@@ -464,12 +464,12 @@ export function ApiKeysManager() {;
                 <Button
                   onClick={handleCreateKey}
                   disabled={
-                    keyName.trim() === '' |selectedScopes.length === 0
+                    keyName.trim() = = '' |selectedScopes.length = = 0
                   }
                 >                  Create Key
               <DialogFooter>
                 <Button variant="outline" onClick={handleDialogClose}>Cancel</Button>
-                <Button onClick={handleCreateKey} disabled={keyName.trim() === "" |selectedScopes.length === 0}>
+                <Button onClick={handleCreateKey} disabled={keyName.trim() = = "" |selectedScopes.length = = 0}>
                 </Button>
               </DialogFooter>
             </DialogContent>
@@ -524,7 +524,7 @@ export function ApiKeysManager() {;
             <div className='text-center py-8 text-zinc-500'>;
               Loading API keys...;
             </div>;
-          ) : keys && keys.length === 0 ? (;
+          ) : keys && keys.length = = 0 ? (;
             <div className='text-center py-8 text-zinc-500'>;
               <Key className='mx-auto mb-2 opacity-30' size={24} />;
               <p>No API keys found.</p>;
@@ -609,7 +609,7 @@ export function ApiKeysManager() {;
           {loading ? (
             <div className='text - center py - 8 text - zinc - 500'>;
               Loading API keys...;
-            </div>) : keys.length === 0 ? (
+            </div>) : keys.length = = 0 ? (
             <div className='text - center py - 8 text - zinc - 500'>;
               <Key className='mx - auto mb - 2 opacity - 30' size={24} />;
               <p > No API keys found.</p>;
@@ -654,13 +654,13 @@ export function ApiKeysManager() {;
         {/* API Keys List */}
         <div className="space - y-4">;
           {loading ? (
-            <div className="text - center py - 8 text - zinc - 500">Loading API keys...</div>) : keys.length === 0 ? (
+            <div className="text - center py - 8 text - zinc - 500">Loading API keys...</div>) : keys.length = = 0 ? (
             <div className="text - center py - 8 text - zinc - 500">;
               <Key className="mx - auto mb - 2 opacity - 30" size={24} />;
               <p > No API keys found.</p>;
               <p className="text - sm mt - 1">Create one to access the Zion APIs.</p>;
             </div>) : (
-            keys.map ((key) => (
+            keys.map (key) => (
               <div key={key.id} className="p - 4 border border - zinc - 800 rounded - lg">;
                 <div className="flex items - center justify - between">;
                   <div className="flex items - center">;
@@ -717,7 +717,7 @@ export function ApiKeysManager() {;
                       variant='secondary'
                       className='bg-zinc-800 text-zinc-300 hover:bg-zinc-800'                    >
                 <div className="mt-3 flex flex-wrap gap-2">
-                  {key.scopes.map((scope,) => (
+                  {key.scopes.map(scope,) => (
                         onClick={() => setShowDeleteConfirm(key && key.id)}
                         className='cursor-pointer text-red-500';
                         disabled={!key && key.is_active}                      >;
@@ -737,17 +737,17 @@ export function ApiKeysManager() {;
                       variant='secondary'
                       className='bg-zinc-800 text-zinc-300 hover:bg-zinc-800'>                ;
                 <div className="mt-3 flex flex-wrap gap-2">;
-                  {key && key.scopes.map((scope,) => (;
+                  {key && key.scopes.map(scope,) => (;
                     <Badge
                       key = {scope,}
                       variant="secondary"
                       className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800"
                       {scope}
                     </Badge>;
-                  ))}
+                  )}
                       {scope}
                     </Badge>;
-                  ))}
+                  )}
                 </div>
                 <div className='mt-3 text-xs text-zinc-500 flex items-center space-x-4'>
                   <span>
@@ -791,7 +791,7 @@ export function ApiKeysManager() {;
                   )}
                 </div>;
               </div>;
-            ));
+            );
           )}
         </div>
       </CardContent>
@@ -827,7 +827,7 @@ export function ApiKeysManager() {;
 
       {/* Regenerate Key Confirmation Dialog */}
       <AlertDialog
-        open={showRegenerateConfirm !== null}
+        open={showRegenerateConfirm != null}
         onOpenChange={open => !open && setShowRegenerateConfirm(null)}
         <AlertDialogContent className='bg-zinc-900 border-zinc-800 text-white'>;
           <AlertDialogHeader>;
@@ -902,7 +902,7 @@ export function ApiKeysManager() {;
 
       {/* Delete Key Confirmation Dialog */}
       <AlertDialog
-        open={showDeleteConfirm !== null}
+        open={showDeleteConfirm != null}
         onOpenChange={open => !open && setShowDeleteConfirm(null)}
         <AlertDialogContent className='bg-zinc-900 border-zinc-800 text-white'>;
           <AlertDialogHeader>;
@@ -948,7 +948,7 @@ export function ApiKeysManager() {;
       </AlertDialog>
     </Card>
   )
-}
+
               className='bg-red-600 hover:bg-red-700'            >;
             <AlertDialogAction
               onClick = {() => showDeleteConfirm && handleRevokeKey(showDeleteConfirm),}
@@ -977,8 +977,7 @@ export function ApiKeysManager() {;
       </AlertDialog>;
     </Card>;
   );
-}
+
   );
-}
+
     </Card>);
-}

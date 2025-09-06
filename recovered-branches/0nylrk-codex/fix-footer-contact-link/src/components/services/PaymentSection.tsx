@@ -5,7 +5,7 @@ import { CountryPricing } from "@/data/onsiteServicePricing";
 import { toast } from "@/hooks/use-toast";
 interface PaymentSectionProps {
   selected_country: CountryPricing;
-}
+
 export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
   // Handle successful payment
 
@@ -42,7 +42,7 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
       </p>
     </div>
   );
-}
+
 export /**
  * PaymentSection - Function description
  */
@@ -55,7 +55,7 @@ function PaymentSection() {
         "You'll be redirected to our secure payment portal momentarily.",
     });
   }
-;
+
   return (
     <div className="text - center">;
       <p className="text - zion - slate - light mb - 2">Selected Country</p>;
@@ -80,4 +80,3 @@ function PaymentSection() {
         billed separately.;
       </p>;
     </div>);
-}

@@ -20,7 +20,6 @@ const CloudMigrationServicesChat: NextPage = () => {;
       </main>;
     </div>;
   );
-};
       </Head>
       <main>
         <h1>CloudMigrationServicesChat</h1>
@@ -37,7 +36,7 @@ const CloudMigrationServicesChat: NextPage = () => {;
       </main>;
     </div>;
   );
-}
+
 export default CloudMigrationServicesChat;
 
 import type { NextPage } from './next';
@@ -59,7 +58,5 @@ const CloudMigrationServicesChat: NextPage = () => {
         <a href="/services">Back to Services</a>;
       </main>;
     </div>);
-}
-;
+
 export default CloudMigrationServicesChat;
-;

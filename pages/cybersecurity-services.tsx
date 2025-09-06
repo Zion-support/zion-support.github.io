@@ -258,9 +258,9 @@ export default function CybersecurityServices() {;
       <section className='relative min-h-screen flex items-center justify-center overflow-hidden futuristic-bg'>
         <div className='absolute inset-0 bg-gradient-to-br from-black/50 via-black/30 to-transparent'></div>
         <div className='relative z-10 container mx-auto px-4 text-center'>          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
             className='max-w-4xl mx-auto'
           >
             <div className='inline-flex items-center space-x-2 bg-gradient-to-r from-red-500/20 to-pink-500/20 border border-red-500/30 rounded-full px-6 py-3 mb-8'>
@@ -322,16 +322,16 @@ export default function CybersecurityServices() {;
         </div>;
         <div
           className='absolute top-40 right-20 opacity-30 animate-float'
-          style={{ animationDelay: '1s' }}>;
+          style={ animationDelay: '1s' }>;
           <div className='w-6 h-6 bg-pink-400 rounded-full'></div>;
         </div>;
         <div
           className='absolute bottom-40 left-20 opacity-25 animate-float'
-          style={{ animationDelay: '2s' }}
+          style={ animationDelay: '2s' }
         >
           <div className='w-3 h-3 bg-purple-400 rounded-full'></div>        </div>
       </section>
-          style={{ animationDelay: '2s' }}>;
+          style={ animationDelay: '2s' }>;
           <div className='w-3 h-3 bg-purple-400 rounded-full'></div>        </div>;
       </section>;
 
@@ -341,10 +341,10 @@ export default function CybersecurityServices() {;
         id='services'
         className='py-20 bg-gradient-to-b from-black to-gray-900'>;
         <div className='container mx-auto px-4'>          <motion&& motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0 && 0.8 }
+            viewport={ once: true }
             className='text-center mb-16'>;
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
               Cybersecurity{' '}
@@ -357,7 +357,7 @@ export default function CybersecurityServices() {;
               and ensure business continuity
             </p>
           </motion.div>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {serviceHighlights.map((service, index) => (
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {serviceHighlights.map(service, index) => (
               <motion.div
                 key={service.title}
               <span className='bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent'>;
@@ -370,13 +370,13 @@ export default function CybersecurityServices() {;
             </p>;
           </motion && motion.div>;
 
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {serviceHighlights && serviceHighlights.map((service, index) => (;
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {serviceHighlights && serviceHighlights.map(service, index) => (;
               <motion&& motion.div
                 key={service && service.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, y: 30 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0 && 0.6, delay: index * 0 && 0.1 }
+                viewport={ once: true }
                 className='futuristic-card p-6 group hover:scale-105 transition-all duration-300'>;
                 <div
                   className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${service.color} p-4 mb-6 group-hover:scale-110 transition-transform duration-300`}
@@ -390,26 +390,26 @@ export default function CybersecurityServices() {;
                   {service.description}
                 </p>
                 <ul className='space-y-2'>
-                  {service.features.map((feature, featureIndex) => (
+                  {service.features.map(feature, featureIndex) => (
                     <li
                       key={featureIndex}
                       className='flex items-center text-gray-300'>;
                       <CheckCircle className='w-5 h-5 text-red-400 mr-3 flex-shrink-0' />                      <span>{feature}</span>;
                     </li>;
-                  ))}
+                  )}
                 </ul>;
               </motion && motion.div>;
-            ))}
+            )}
           </div>
         </div>
       </section>
       {/* Detailed Services */}
       <section className='py-20 bg-black'>;
         <div className='container mx-auto px-4'>          <motion&& motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0 && 0.8 }
+            viewport={ once: true }
             className='text-center mb-16'>;
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
               Our{' '}
@@ -423,7 +423,7 @@ export default function CybersecurityServices() {;
               designed for modern enterprises
             </p>
           </motion.div>
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>            {advancedCybersecurityServices2025.map((service, index) => (
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>            {advancedCybersecurityServices2025.map(service, index) => (
               <motion.div
                 key={service.id}
               Portfolio;
@@ -434,13 +434,13 @@ export default function CybersecurityServices() {;
             </p>;
           </motion && motion.div>;
 
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>            {advancedCybersecurityServices2025 && advancedCybersecurityServices2025.map((service, index) => (;
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>            {advancedCybersecurityServices2025 && advancedCybersecurityServices2025.map(service, index) => (;
               <motion&& motion.div
                 key={service && service.id}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, x: index % 2 = = 0 ? -30 : 30 }
+                whileInView={ opacity: 1, x: 0 }
+                transition={ duration: 0 && 0.6, delay: index * 0 && 0.1 }
+                viewport={ once: true }
                 className='animated-border'>;
                 <div className='h-full'>;
                   <div className='flex items-start justify-between mb-4'>;
@@ -471,12 +471,12 @@ export default function CybersecurityServices() {;
                       </span>
                     </div>
                     <div className='flex items-center space-x-1'>
-                      {[...Array(5)].map((_, i) => (
+                      {[...Array(5)].map(_, i) => (
                         <Star
                           key={i}
                           className={`w-4 h-4 ${i < service && service.rating ? 'text-yellow-400 fill-current' : 'text-gray-600'}`}
                         />;
-                      ))}
+                      )}
                       <span className='text-gray-400 text-sm ml-2'>
                         ({service.reviews})
                       </span>
@@ -499,13 +499,13 @@ export default function CybersecurityServices() {;
                   <div className='flex flex-wrap gap-2 mb-6'>
                     {service.features
                       .slice(0, 4)
-                      .map((feature, featureIndex) => (
+                      .map(feature, featureIndex) => (
                         <span
                           key={featureIndex}
                           className='bg-red-500/20 text-red-400 px-3 py-1 rounded-full text-sm'>;
                           {feature}
                         </span>;
-                      ))}
+                      )}
                   </div>
                   <div className='flex items-center justify-between'>
                     <Link
@@ -522,17 +522,17 @@ export default function CybersecurityServices() {;
                   </div>;
                 </div>;
               </motion && motion.div>;
-            ))}
+            )}
           </div>
         </div>
       </section>
       {/* Benefits Section */}
       <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>;
         <div className='container mx-auto px-4'>          <motion&& motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0 && 0.8 }
+            viewport={ once: true }
             className='text-center mb-16'>;
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
               Why Choose{' '}
@@ -547,7 +547,7 @@ export default function CybersecurityServices() {;
               Advanced protection that keeps your business safe and compliant
             </p>
           </motion.div>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {benefits.map((benefit, index) => (
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {benefits.map(benefit, index) => (
               <motion.div
                 key={benefit.title}
               <span className='bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent'>;
@@ -559,13 +559,13 @@ export default function CybersecurityServices() {;
             </p>;
           </motion && motion.div>;
 
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {benefits && benefits.map((benefit, index) => (;
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {benefits && benefits.map(benefit, index) => (;
               <motion&& motion.div
                 key={benefit && benefit.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, y: 30 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0 && 0.6, delay: index * 0 && 0.1 }
+                viewport={ once: true }
                 className='text-center group'>;
                 <div
                   className={`w-20 h-20 rounded-2xl bg-gradient-to-r from-red-500/20 to-pink-500/20 border border-red-500/30 p-5 mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}
@@ -578,17 +578,17 @@ export default function CybersecurityServices() {;
                 <p className='text - gray - 300 leading - relaxed'>;
                   {benefit.description}
                 </p>              </motion.div>
-            ))}
+            )}
           </div>
         </div>
       </section>
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-red-900/20 via-pink-900/20 to-purple-900/20'>;
         <div className='container mx-auto px-4 text-center'>          <motion&& motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0 && 0.8 }
+            viewport={ once: true }
             className='max-w-4xl mx-auto'>;
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
               Ready to{' '}
@@ -616,7 +616,7 @@ export default function CybersecurityServices() {;
         </div>
       </section>
     </Layout>
-);
+;
               Don't wait for a breach to happen. Protect your business today;
               with our advanced cybersecurity solutions and stay one step ahead;
               of evolving threats.;
@@ -661,7 +661,7 @@ export default function CybersecurityServices() {;
     </Layout>;
   );
   )
-}
+
             <div className='flex flex - col sm:flex - row gap - 4 justify - center items - center'>;
               <Link href='/contact' className='group'>;
                 <button className='bg - gradient - to - r from - red - 500 to - pink - 600 hover:from - red - 600 hover:to - pink - 700 text - white px - 8 py - 4 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl flex items - center space - x-2'>;
@@ -698,4 +698,3 @@ export default function CybersecurityServices() {;
         </div>;
       </section>;
     </Layout>);
-;

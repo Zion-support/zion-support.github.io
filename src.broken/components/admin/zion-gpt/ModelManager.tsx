@@ -6,5 +6,3 @@ export function ModelManager() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

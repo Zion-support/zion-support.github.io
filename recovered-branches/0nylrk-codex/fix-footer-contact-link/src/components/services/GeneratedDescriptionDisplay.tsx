@@ -8,20 +8,19 @@ import {
   CardHeader
   CardTitle
   CardFooter
-} from "@/components/ui/card";
+ from "@/components/ui/card";
 
 import { Textarea } from "@/components/ui/textarea";
 import { Check, Pencil } from "lucide-react";
 interface GeneratedDescriptionDisplayProps {
   description: string;
   onSave: (editedDescription: string) => void
-}
 
 export function GeneratedDescriptionDisplay({
   description
   onSave
 
-}: GeneratedDescriptionDisplayProps) {
+: GeneratedDescriptionDisplayProps) {
   const { toast } = useToast();
   const [isEditing, setIsEditing] = useState(false);
   const [editedDescription, setEditedDescription] = useState(description);
@@ -66,13 +65,13 @@ import {
   CardHeader,
   CardTitle,
   CardFooter,
-} from '@/components / ui / card';
+ from '@/components / ui / card';
 import { Textarea  } from '@/components / ui / textarea';
 import { Check, Pencil  } from './lucide-react';
 interface GeneratedDescriptionDisplayProps {
   description: string;
   on_save: (edited_description: string) => void;
-}
+
 export /**
  * GeneratedDescriptionDisplay - Function description
  */
@@ -80,7 +79,7 @@ function GeneratedDescriptionDisplay() {
   const { toast } = use_toast ();
   const [is_editing, setIsEditing] = useState (false);
   const [edited_description, setEditedDescription] = useState (description);
-;
+
   const handle_save = () =>: any {
     on_save (edited_description);
     setIsEditing (false);
@@ -89,7 +88,7 @@ function GeneratedDescriptionDisplay() {
       description: "Your edited description has been saved.",
     });
   }
-;
+
   return (
     <Card className="border border - zion - blue - light bg - zion - blue - dark">;
       <CardHeader>;
@@ -137,7 +136,7 @@ function GeneratedDescriptionDisplay() {
       )}
     </Card>
   );
-}
+
         {is_editing ? (
           <Textarea;
             value={edited_description}
@@ -158,4 +157,3 @@ function GeneratedDescriptionDisplay() {
           </Button>;
         </CardFooter>)}
     </Card>);
-}

@@ -5,15 +5,15 @@ const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 const SYSTEM_PROMPT = `You are the Zion Assistant for the Zion AI Marketplace. Your job is to:
-- Greet users warmly and concisely
-- Answer FAQs accurately
-- Guide users through discovering features and how to get started
-- Ask brief clarifying questions when needed but minimize back-and-forth
-- Keep answers succinct, scannable, and actionable
+ Greet users warmly and concisely
+ Answer FAQs accurately
+ Guide users through discovering features and how to get started
+ Ask brief clarifying questions when needed but minimize back-and-forth
+ Keep answers succinct, scannable, and actionable
 Context about Zion AI Marketplace:
-- Zion is a marketplace to discover, evaluate, and integrate AI models, agents, and services
-- Users can browse categories, view product pages, compare features, and connect via APIs
-- Vendors can list their AI models/services with pricing, usage tiers, and documentation
+ Zion is a marketplace to discover, evaluate, and integrate AI models, agents, and services
+ Users can browse categories, view product pages, compare features, and connect via APIs
+ Vendors can list their AI models/services with pricing, usage tiers, and documentation
 Frequently asked questions to use as hints (do not claim as absolute truth if uncertain):
 1) What is Zion?   A marketplace to find and integrate AI models and services.
 2) How do I list my AI model or service?   Create a vendor account, submit product details, pricing, and docs for review.
@@ -21,33 +21,33 @@ Frequently asked questions to use as hints (do not claim as absolute truth if un
 4) How do I integrate APIs?   Each product page includes API docs and keysfollow Quickstart steps or SDKs when available.
 5) How do I get support?   Use in-app support, contact the vendor, or reach Zions support channel.
 Style:
-- Use bullets and short paragraphs3) How does pricing work?   Vendors set pricing, users may pay per-call, per-seat, or subscription. Zion may add marketplace fees.
+ Use bullets and short paragraphs3) How does pricing work?   Vendors set pricing, users may pay per-call, per-seat, or subscription. Zion may add marketplace fees.
 4) How do I integrate APIs?   Each product page includes API docs and keysfollow Quickstart steps or SDKs when available.
 5) How do I get support?   Use in-app support, contact the vendor, or reach Zions support channel.
 Style: - Use bullets and short paragraphs
-- Provide 2-3 next steps when guiding
-`,
+ Provide 2-3 next steps when guiding
+,
 
-- Provide 2-3 next steps when guiding
-`
+ Provide 2-3 next steps when guiding
+
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
-) {
+ {
     res && res.setHeader('Allow', 'POST');
     return res && res.status(405).json({ error: 'Method Not Allowed' });
 const openai = new OpenAI ({ api_key: process.env.OPENAI_API_KEY });
-;
+
 const SYSTEM_PROMPT = `You are the Zion Assistant for the Zion AI Marketplace. Your job is to:;
-- Greet users warmly and concisely;
-- Answer FAQs accurately;
-- Guide users through discovering features and how to get started;
-- Ask brief clarifying questions when needed but minimize back - and - forth;
-- Keep answers succinct, scannable, and actionable;
+ Greet users warmly and concisely;
+ Answer FAQs accurately;
+ Guide users through discovering features and how to get started;
+ Ask brief clarifying questions when needed but minimize back - and - forth;
+ Keep answers succinct, scannable, and actionable;
 Context about Zion AI Marketplace:;
-- Zion is a marketplace to discover, evaluate, and integrate AI models, agents, and services;
-- Users can browse categories, view product pages, compare features, and connect via APIs;
-- Vendors can list their AI models / services with pricing, usage tiers, and documentation;
+ Zion is a marketplace to discover, evaluate, and integrate AI models, agents, and services;
+ Users can browse categories, view product pages, compare features, and connect via APIs;
+ Vendors can list their AI models / services with pricing, usage tiers, and documentation;
 Frequently asked questions to use as hints (do not claim as absolute truth if uncertain):;
 1) What is Zion?   A marketplace to find and integrate AI models and services.;
 2) How do I list my AI model or service?   Create a vendor account, submit product details, pricing, and docs for review.;
@@ -55,12 +55,12 @@ Frequently asked questions to use as hints (do not claim as absolute truth if un
 4) How do I integrate APIs?   Each product page includes API docs and keysfollow Quickstart steps or SDKs when available.;
 5) How do I get support?   Use in - app support, contact the vendor, or reach Zions support channel.;
 Style:;
-- Use bullets and short paragraphs3) How does pricing work?   Vendors set pricing, users may pay per - call, per - seat, or subscription. Zion may add marketplace fees.;
+ Use bullets and short paragraphs3) How does pricing work?   Vendors set pricing, users may pay per - call, per - seat, or subscription. Zion may add marketplace fees.;
 4) How do I integrate APIs?   Each product page includes API docs and keysfollow Quickstart steps or SDKs when available.;
 5) How do I get support?   Use in - app support, contact the vendor, or reach Zions support channel.;
 Style: - Use bullets and short paragraphs;
-- Provide 2 - 3 next steps when guiding;
-`,
+ Provide 2 - 3 next steps when guiding;
+,
 export default async /**
  * handler - Function description
  */
@@ -93,22 +93,19 @@ function handler() {
 console.error('Assistant API error:', error?.message |error);
     return res.status(500).json({ error: 'Assistant request failed' });
   }    return res.status(500).json({ error: 'Assistant request failed' })
-  }
   };
-}
 
-;
     const prepared_messages = [;
       { role: 'system' as const, content: SYSTEM_PROMPT },
       ...(messages || []).slice (-20),
     ];
-;
+
     const completion = await openai.chat.completions.create ({
       model: 'gpt - 4o',
       temperature: 0.3,
       messages: prepared_messages,
     });
-;
+
     const message = completion.choices?.[0]?.message || {
       role: 'assistant',
       content: 'Sorry, I could not respond.',
@@ -119,4 +116,3 @@ console.error ('Assistant API error:', error?.message || error);
     return res.status (500).json ({ error: 'Assistant request failed' });
   }    return res.status (500).json ({ error: 'Assistant request failed' });
   }
-}

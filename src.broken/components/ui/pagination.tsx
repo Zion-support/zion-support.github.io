@@ -6,5 +6,3 @@ export function pagination() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

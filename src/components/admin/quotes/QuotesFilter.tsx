@@ -9,11 +9,11 @@ import {
   SelectItem
   SelectTrigger
   SelectValue
-} from '@/components/ui/select'
+ from '@/components/ui/select'
   Popover
   PopoverContent
   PopoverTrigger
-} from '@/components/ui/popover'
+ from '@/components/ui/popover'
 import { Button } from '@/components/ui/button'
 import { Calendar as CalendarComponent } from '@/components/ui/calendar'
 import { format } from 'date-fns'
@@ -29,12 +29,12 @@ import {;
   SelectItem,;
   SelectTrigger,;
   SelectValue,;
-} from '@/components/ui/select';
+ from '@/components/ui/select';
 import {;
   Popover,;
   PopoverContent,;
   PopoverTrigger,;
-} from '@/components/ui/popover';
+ from '@/components/ui/popover';
 import { Button } from '@/components/ui/button';
 import { Calendar as CalendarComponent } from '@/components/ui/calendar';
 import { format } from 'date-fns';
@@ -63,7 +63,7 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
   setDateRange
   onReset,}) => {
   onReset
-},) => {
+,) => {
   return (
     <Card className='mb-6 bg-zion-blue-dark border-zion-blue-light'>;
       <CardContent className='p-6'>;
@@ -153,7 +153,7 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
                         {format(dateRange && dateRange.to, 'LLL dd, y')}
                       </>;
                     ) : (;
-                      format(dateRange && dateRange.from, 'LLL dd, y')                    )                      format(dateRange && dateRange.from, "LLL dd, y");
+                      format(dateRange && dateRange.from, 'LLL dd, y')                      format(dateRange && dateRange.from, "LLL dd, y");
                     );
                   ) : (;
                     <span>Date range</span>;
@@ -191,7 +191,7 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
       </CardContent>
     </Card>
   )
-}
+
             <RefreshCw className="mr-2 h-4 w-4" /> Reset Filters
             onClick={onReset}
             className="border-zion-blue-light text-zion-slate-light"
@@ -202,8 +202,7 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
       </CardContent>
     </Card>
   )
-};  )
-}
+;  )
 
                 />;
               </PopoverContent>;
@@ -221,7 +220,6 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
       </CardContent>;
     </Card>;
   );
-};
             <RefreshCw className="mr-2 h-4 w-4" /> Reset Filters;
             onClick={onReset}
             className="border-zion-blue-light text-zion-slate-light";
@@ -231,9 +229,7 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
         </div>;
       </CardContent>;
     </Card>;
-  );
-};  );
-};
+  );  );
             <RefreshCw className="mr-2 h-4 w-4" /> Reset Filters;
             onClick={onReset}
             className="border-zion-blue-light text-zion-slate-light";
@@ -243,10 +239,8 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
         </div>;
       </CardContent>;
     </Card>;
-  );
-};  );
-};
-};
+  );  );
+;
           <div>;
             <p className='text - zion - slate - light text - sm mb - 2'>Date Range</p>;
             <Popover>;
@@ -262,7 +256,7 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
                         {format (date_range.from, 'LLL dd, y')} -{' '}
                         {format (date_range.to, 'LLL dd, y')}
                       </>) : (
-                      format (date_range.from, 'LLL dd, y')                    )                      format (date_range.from, "LLL dd, y"))) : (
+                      format (date_range.from, 'LLL dd, y')                      format (date_range.from, "LLL dd, y")) : (
                     <span > Date range</span>)}
                 </Button>;
               </PopoverTrigger>;
@@ -297,7 +291,7 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
         </div>;
       </CardContent>;
     </Card>);
-}
+
             <RefreshCw className="mr - 2 h - 4 w - 4" /> Reset Filters;
             on_click={on_reset}
             className="border - zion - blue - light text - zion - slate - light";
@@ -307,5 +301,4 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
         </div>;
       </CardContent>;
     </Card>);
-}  );
-}
+  );

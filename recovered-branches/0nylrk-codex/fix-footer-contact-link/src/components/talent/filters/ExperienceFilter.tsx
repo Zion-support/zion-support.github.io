@@ -9,7 +9,7 @@ export function ExperienceFilter({
   expanded
   toggleSection
   isMobileFilterOpen
-}: ExperienceFilterProps) {
+: ExperienceFilterProps) {
   const handleChange = (values: number[]) => {
     setExperienceRange([values[0], values[1]]);
   }
@@ -44,7 +44,7 @@ export function ExperienceFilter({
       )}
     </div>
   );
-}
+
 import { ChevronDown, ChevronUp  } from './lucide-react';
 import { Slider  } from '@/components / ui / slider';
 import { ExperienceFilterProps  } from '@/types / filters';
@@ -55,7 +55,7 @@ function ExperienceFilter() {
   const handle_change = (values: number[]) =>: any {
     setExperienceRange ([values[0], values[1]]);
   }
-;
+
   return (
     <div className="mb - 6 border - b border - zion - blue - light pb - 6">;
       <button;
@@ -83,4 +83,3 @@ function ExperienceFilter() {
           />;
         </div>)}
     </div>);
-}

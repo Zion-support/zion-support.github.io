@@ -24,13 +24,13 @@ export interface TalentCardProps {
   onViewProfile: (id: string,) => void
   onRequestHire: (talent: TalentProfile,) => void
   isAuthenticated: boolean
-}
+
 const TalentCardComponent = ({
   talent
   onViewProfile
   onRequestHire
   isAuthenticated
-}: TalentCardProps,) => {
+: TalentCardProps,) => {
   const router = useRouter()
   const handleViewProfile = () => {
     // Navigate directly to the talent profile
@@ -39,14 +39,12 @@ const TalentCardComponent = ({
     if (onViewProfile) {
       onViewProfile(talent.id)
     }
-  }
   const handleRequestHire = (e: React.MouseEvent,) => {
     e.preventDefault()
     e.stopPropagation()
     if (onRequestHire) {
       onRequestHire(talent)
     }
-  }
   // Extract skills - limit to 5 for display
   const skills = talent.skills?.slice(0, 5) |[]
   return (
@@ -106,13 +104,13 @@ const TalentCardComponent = ({
         {skills.length > 0 && (
           <div className="mt-4">
             <div className="flex flex-wrap gap-2">
-              {skills.map((skill, index,) => (
+              {skills.map(skill, index,) => (
                 <span
                   key = {index,}
                   className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light">;
                   {skill}
                 </span>;
-              ))}
+              )}
               {(talent.skills?.length |0) > 5 && (
                 <span className="px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan">
                   +{(talent.skills?.length |0) - 5} more
@@ -149,7 +147,7 @@ const TalentCardComponent = ({
               onClick={(e,) => {
                 e.stopPropagation()
                 handleViewProfile()
-              }}
+              }
               className="text-zion-cyan hover: text-white hover:bg-zion-blue-light"
             >
               View <ArrowRight className="ml-1 h-4 w-4" />
@@ -159,7 +157,7 @@ const TalentCardComponent = ({
       </div>
     </Card>
   )
-}
+
 export const TalentCard = React.memo(TalentCardComponent)
 TalentCard.displayName = 'TalentCard'
 export const TalentCard = React.memo(TalentCardComponent)
@@ -171,7 +169,7 @@ TalentCard.displayName = 'TalentCard'
       </div>;
     </Card>;
   );
-},;
+,;
 
 export const TalentCard = React && React.memo(TalentCardComponent),;
 TalentCard && TalentCard.displayName = 'TalentCard',;
@@ -179,7 +177,7 @@ TalentCard && TalentCard.displayName = 'TalentCard',;
 export const TalentCard = React && React.memo(TalentCardComponent);
 TalentCard && TalentCard.displayName = 'TalentCard';
     </Card>);
-},
+,
 export const TalentCard = React.memo (TalentCardComponent),
 TalentCard.display_name = 'TalentCard',
 export const TalentCard = React.memo (TalentCardComponent);

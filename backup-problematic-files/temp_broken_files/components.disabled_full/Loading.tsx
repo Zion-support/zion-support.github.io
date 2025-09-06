@@ -2,7 +2,6 @@ import React from 'react';
 
 interface LoadingProps {
   className?: string;
-}
 
 const Loading: React.FC<LoadingProps> = ({ className }) => {
   return (
@@ -11,6 +10,5 @@ const Loading: React.FC<LoadingProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default Loading;

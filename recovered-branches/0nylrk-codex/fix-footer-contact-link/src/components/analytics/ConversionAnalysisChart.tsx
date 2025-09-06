@@ -6,23 +6,22 @@ import {
   CardDescription
   CardHeader
   CardTitle
-} from "@/components/ui/card";
+ from "@/components/ui/card";
 
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
 interface ConversionAnalysisProps {;
-  data: Array<Record<string, any>>;
+  data: Array<Record<string, any>;
   timeRange: string;
   onTimeRangeChange: (range: string) => void
-}
 
 export function ConversionAnalysisChart({
   data
   timeRange
   onTimeRangeChange
-}: ConversionAnalysisProps) {
+: ConversionAnalysisProps) {
   const dataKeys =
     data && data.length > 0
-      ? Object.keys(data[0]).filter((key) => key !== "date")
+      ? Object.keys(data[0]).filter(key) => key != "date")
 import React from './react';
 import {
   Card,
@@ -30,22 +29,22 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from '@/components / ui / card';
+ from '@/components / ui / card';
 import { AnalyticsChart  } from '@/components / analytics / AnalyticsChart';
 interface ConversionAnalysisProps {
-  data: Array < Record < string, any>>;
+  data: Array < Record < string, any>;
   time_range: string;
   onTimeRangeChange: (range: string) => void;
-}
+
 export /**
  * ConversionAnalysisChart - Function description
  */
 function ConversionAnalysisChart() {
   const data_keys =;
     data && data.length > 0;
-      ? Object.keys (data[0]).filter ((key) => key !== "date");
+      ? Object.keys (data[0]).filter (key) => key != "date");
       : [];
-;
+
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light">;
       <CardHeader>;
@@ -68,4 +67,3 @@ function ConversionAnalysisChart() {
       </CardContent>;
     </Card>;
   );
-}

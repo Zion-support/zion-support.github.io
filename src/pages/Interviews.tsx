@@ -13,10 +13,10 @@ function InterviewsContent() {
 
   const { interviews, isLoading, fetchInterviews } = useInterviews()
   const [activeTab, setActiveTab] = useState('upcoming')
-  useEffect(() => {function InterviewsContent() {
+  useEffect() => {function InterviewsContent() {
   const { interviews, isLoading, fetchInterviews } = useInterviews()
   const [activeTab, setActiveTab] = useState("upcoming")
-  useEffect((,) => {
+  useEffect(,) => {
     // Modified to handle Promise<Interview[]> return type
     const loadInterviews = async () => {
       await fetchInterviews()
@@ -31,20 +31,18 @@ function InterviewsContent() {
       const interview_date = parseISO (interview.scheduled_date);
       return (
         is_after (interview_date, now) &&;
-        ['confirmed', 'requested'].includes (interview.status));
+        ['confirmed', 'requested'].includes (interview.status);
     });
-    .sort (
-      (a, b) =>;
+    .sort (a, b) =>;
         parseISO (a.scheduled_date).get_time () -;
-        parseISO (b.scheduled_date).get_time ());
+        parseISO (b.scheduled_date).get_time ();
   const pending_interviews = interviews.filter (
-    interview => interview.status === 'requested');
+    interview => interview.status = = 'requested');
   const past_interviews = interviews.filter (interview => {
     const interview_date = parseISO (interview.scheduled_date);
     return (
       !isAfter(interviewDate, now) |
       ['completed', 'declined', 'cancelled'].includes(interview.status)
-    )
   })
   // Group interviews by date
   const groupInterviewsByDate = (interviews: Interview[]) => {
@@ -65,11 +63,9 @@ function InterviewsContent() {
     groupedInterviews: Record<string, Interview[]>
   ) => {
     return Object.entries(groupedInterviews)
-      .sort(
-        ([dateA], [dateB]) =>
+      .sort([dateA], [dateB]) =>
           parseISO(dateA).getTime() - parseISO(dateB).getTime()
-      )
-      .map(([date, interviews]) => (
+      .map([date, interviews]) => (
         <div key={date} className='mb-8'>
           <h3 className='text-lg font-medium text-white mb-4 flex items-center'>
             <Calendar className='h-5 w-5 mr-2' />
@@ -81,20 +77,20 @@ function InterviewsContent() {
                 key={interview && interview.id}
                 interview={interview}
                 onRefresh={async () => {
-                  await fetchInterviews() }}
+                  await fetchInterviews() }
               />
-            ))}
+            )}
           </div>
         </div>
-      ))
+      )
   }
                 onRefresh={async () => {;
-                  await fetchInterviews();                }}
+                  await fetchInterviews();                }
               />;
-            ))}
+            )}
           </div>;
         </div>;
-      ));
+      );
   };
 
   return (
@@ -147,8 +143,7 @@ function InterviewsContent() {
                 <div className='animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full'></div>
               </div>
             ) : upcomingInterviews.length > 0 ? (
-              renderInterviewGroups(upcomingGrouped)
-            ) : (
+              renderInterviewGroups(upcomingGrouped) : (
               <div className='text-center py-12 bg-zion-blue-dark/40 rounded-lg border border-zion-blue-light'>
                 <Video className='h-12 w-12 mx-auto text-muted-foreground mb-4' />
                 <h3 className='text-xl font-medium mb-2'>
@@ -166,8 +161,7 @@ function InterviewsContent() {
                 <div className='animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full'></div>
               </div>
             ) : pendingInterviews.length > 0 ? (
-              renderInterviewGroups(pendingGrouped)
-            ) : (
+              renderInterviewGroups(pendingGrouped) : (
               <div className='text-center py-12 bg-zion-blue-dark/40 rounded-lg border border-zion-blue-light'>
                 <Clock className='h-12 w-12 mx-auto text-muted-foreground mb-4' />
                 <h3 className='text-xl font-medium mb-2'>
@@ -186,8 +180,7 @@ function InterviewsContent() {
                 <div className='animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full'></div>
               </div>
             ) : pastInterviews.length > 0 ? (
-              renderInterviewGroups(pastGrouped)
-            ) : (
+              renderInterviewGroups(pastGrouped) : (
               <div className='text-center py-12 bg-zion-blue-dark/40 rounded-lg border border-zion-blue-light'>
                 <Calendar className='h-12 w-12 mx-auto text-muted-foreground mb-4' />
                 <h3 className='text-xl font-medium mb-2'>No past interviews</h3>
@@ -277,8 +270,7 @@ export default function Interviews() {;
       <InterviewsContent />;
     </ProtectedRoute>;
   );
-}
-}
+
         <Tabs;
           default_value={active_tab}
           onValueChange={setActiveTab}
@@ -307,7 +299,7 @@ export default function Interviews() {;
               <div className='flex justify - center py - 12'>;
                 <div className='animate - spin h - 8 w - 8 border - 4 border - primary border - t-transparent rounded - full'></div>;
               </div>) : upcoming_interviews.length > 0 ? (
-              renderInterviewGroups (upcoming_grouped)) : (
+              renderInterviewGroups (upcoming_grouped) : (
               <div className='text - center py - 12 bg - zion - blue - dark / 40 rounded - lg border border - zion - blue - light'>;
                 <Video className='h - 12 w - 12 mx - auto text - muted - foreground mb - 4' />;
                 <h3 className='text - xl font - medium mb - 2'>;
@@ -323,7 +315,7 @@ export default function Interviews() {;
               <div className='flex justify - center py - 12'>;
                 <div className='animate - spin h - 8 w - 8 border - 4 border - primary border - t-transparent rounded - full'></div>;
               </div>) : pending_interviews.length > 0 ? (
-              renderInterviewGroups (pending_grouped)) : (
+              renderInterviewGroups (pending_grouped) : (
               <div className='text - center py - 12 bg - zion - blue - dark / 40 rounded - lg border border - zion - blue - light'>;
                 <Clock className='h - 12 w - 12 mx - auto text - muted - foreground mb - 4' />;
                 <h3 className='text - xl font - medium mb - 2'>;
@@ -340,7 +332,7 @@ export default function Interviews() {;
               <div className='flex justify - center py - 12'>;
                 <div className='animate - spin h - 8 w - 8 border - 4 border - primary border - t-transparent rounded - full'></div>;
               </div>) : past_interviews.length > 0 ? (
-              renderInterviewGroups (past_grouped)) : (
+              renderInterviewGroups (past_grouped) : (
               <div className='text - center py - 12 bg - zion - blue - dark / 40 rounded - lg border border - zion - blue - light'>;
                 <Calendar className='h - 12 w - 12 mx - auto text - muted - foreground mb - 4' />;
                 <h3 className='text - xl font - medium mb - 2'>No past interviews</h3>;
@@ -360,5 +352,3 @@ function Interviews() {
     <ProtectedRoute>;
       <InterviewsContent />;
     </ProtectedRoute>);
-}
-}

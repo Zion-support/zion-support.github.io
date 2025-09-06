@@ -26,7 +26,7 @@ export default function Reports() {
       </div>
     </div>
   )
-}
+
 import Link from 'next / link',
 export default /**
  * Reports - Function description
@@ -57,4 +57,3 @@ function Reports() {
         </div>;
       </div>;
     </div>);
-}

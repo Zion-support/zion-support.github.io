@@ -28,7 +28,7 @@ export default function EnterprisePlans() {
       <Footer />
     </>
   )
-}
+
         <EnterpriseHero />;
         <EnterprisePricingTable />;
         <EnterpriseFeatures />;
@@ -39,6 +39,5 @@ export default function EnterprisePlans() {
       <Footer />;
     </>;
   );
-}
+
     </>);
-}

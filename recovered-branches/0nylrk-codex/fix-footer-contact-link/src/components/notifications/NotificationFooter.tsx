@@ -4,11 +4,10 @@ import { Button  } from '@/components/ui/button';
 import { useNavigate } from 'react-router-dom';
 interface NotificationFooterProps {
   on_close: () => void;
-}
 
 export const NotificationFooter: React.FC<NotificationFooterProps> = ({
   onClose
-}) => {
+) => {
   const navigate = useNavigate();
   const handleViewAll = () => {
     onClose();
@@ -26,18 +25,17 @@ export const NotificationFooter: React.FC<NotificationFooterProps> = ({
       </Button>
     </div>
   );
-}
 
 export const NotificationFooter: React.FC < NotificationFooterProps> = ({
   on_close,
-}) => {
+) => {
   const navigate = use_navigate ();
-;
+
   const handleViewAll = () =>: any {
     on_close ();
     navigate ("/notifications");
   }
-;
+
   return (
     <div className="p - 3 text - center border - t border - zion - blue - light">;
       <Button;
@@ -49,5 +47,3 @@ export const NotificationFooter: React.FC < NotificationFooterProps> = ({
         View all notifications;
       </Button>;
     </div>);
-}
-;

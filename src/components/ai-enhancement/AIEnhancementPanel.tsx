@@ -6,7 +6,7 @@ import {
   CardHeader
   CardTitle
   CardFooter
-} from '@/components/ui/card'; import React, { useState } from 'react'
+ from '@/components/ui/card'; import React, { useState } from 'react'
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card'
 import { Textarea } from '@/components/ui/textarea'
 import { Button } from '@/components/ui/button'
@@ -14,7 +14,7 @@ import { Input } from '@/components/ui/input'
 import { Sparkles, Loader2, Copy, Check } from 'lucide-react'
   useAIContentEnhancer
   AIEnhancementOptions
-} from '@/hooks/useAIContentEnhancer'
+ from '@/hooks/useAIContentEnhancer'
 import React, { useState } from 'react';
 import {;
   Card,;
@@ -22,7 +22,7 @@ import {;
   CardHeader,;
   CardTitle,;
   CardFooter,;
-} from '@/components/ui/card';import React, { useState } from 'react';
+ from '@/components/ui/card';import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
@@ -31,7 +31,7 @@ import { Sparkles, Loader2, Copy, Check } from 'lucide-react';
 import {;
   useAIContentEnhancer,;
   AIEnhancementOptions,;
-} from '@/hooks/useAIContentEnhancer';
+ from '@/hooks/useAIContentEnhancer';
 
 interface AIEnhancementPanelProps {;
   title: string;
@@ -48,7 +48,7 @@ export function AIEnhancementPanel({
   onClose
   showInstructions = true
   initialContent = ''
-}: AIEnhancementPanelProps) {
+: AIEnhancementPanelProps) {
   const [options, setOptions] = useState<AIEnhancementOptions>({
     ...defaultOptions
     content: initialContent |defaultOptions.content
@@ -61,7 +61,6 @@ export function AIEnhancementPanel({
     if (result) {
       setGeneratedContent(result)
     }
-  }
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
     field: keyof AIEnhancementOptions
@@ -73,14 +72,14 @@ export function AIEnhancementPanel({
   }
   const handle_apply = () =>: any {
     on_apply (generated_content);
-    if (on_close ()) {
+    if (on_close () {
   $2
-}
+
   }
   const handle_copy = () =>: any {
     navigator.clipboard.write_text (generated_content);
     set_copied (true);
-    set_timeout (() => set_copied (false), 2000);
+    set_timeout () => set_copied (false), 2000);
   }
 
   initialContent?: string;
@@ -91,7 +90,7 @@ export function AIEnhancementPanel(): any ({;
   onClose,;
   showInstructions = true,;
   initialContent = '',;
-}: AIEnhancementPanelProps) {;
+: AIEnhancementPanelProps) {;
   const [options, setOptions] = useState<AIEnhancementOptions>({;
     ...defaultOptions,;
     content: initialContent || defaultOptions && defaultOptions.content,;
@@ -104,8 +103,7 @@ export function AIEnhancementPanel(): any ({;
     const result = await enhanceContent(options);
     if (result) {;
       setGeneratedContent(result);
-    }
-  };
+    };
 
   const handleInputChange = (;
     e: React && React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,;
@@ -125,7 +123,7 @@ export function AIEnhancementPanel(): any ({;
   const handleCopy = () => {;
     navigator && navigator.clipboard.writeText(generatedContent);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    setTimeout() => setCopied(false), 2000);
   };
   return (
     <Card className='w-full max-w-2xl mx-auto'>;
@@ -225,7 +223,6 @@ export function AIEnhancementPanel(): any ({;
       )}
     </Card>
   )
-}
 
     <Card className='w - full max - w-2xl mx - auto'>;
       <CardHeader>;
@@ -315,4 +312,3 @@ export function AIEnhancementPanel(): any ({;
           <Button on_click={handle_apply}>Apply to Form</Button>;
         </CardFooter>)}
     </Card>);
-}

@@ -92,10 +92,10 @@ export default function APITestingSuitePage() {
   ],
 
   const handleTestAPI = async () => {
-    if (!apiEndpoint.trim()) return,    
+    if (!apiEndpoint.trim() return,    
     setIsTesting(true),
     // Simulate API testing,
-setTimeout_(() => {
+setTimeout_() => {
       setTestResults({
         endpoint: apiEndpoint, status: 'success', responseTime: '245ms', statusCode: 200, tests: [
           { name: 'Response Time', status: 'pass', value: '245ms', threshold: '<500ms'},
@@ -139,7 +139,7 @@ setTimeout_(() => {
             Test, monitor, and optimize your APIs with our comprehensive testing suite. Functional, performance, 
             and security testing for REST, GraphQL, and SOAP APIs. Ensure your APIs are reliable, fast, and secure.
           </p>
-          
+
           {/* API Testing Form */}
           <div className=&quot;max-w-3xl mx-auto mb-8&quot;>
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-4 mb-4&quot;>
@@ -210,11 +210,11 @@ href=&quot;/contact&quot;
           </div>
 
           <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-8&quot;>
-            {features.map((feature, index) => (
+            {features.map(feature, index) => (
               <Card,
 key={index}
                 className=&quot;card-hover group border-gradient-indigo&quot;
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={ animationDelay: `${index * 0.1}s` }
               >
                 <div className=&quot;flex items-start space-x-6&quot;>
                   <div className=&quot;relative&quot;>
@@ -231,11 +231,11 @@ key={index}
                   </div>
                 </div>
               </Card>
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Test Types Section */}
       <section className=&quot;section-padding bg-gradient-cursor&quot;>
         <div className=&quot;container-cursor&quot;>
@@ -248,27 +248,27 @@ key={index}
           </div>
 
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-8&quot;>
-            {testTypes.map((type, index) => (
+            {testTypes.map(type, index) => (
               <Card,
 key={index}
                 className=&quot;card-hover border-gradient-indigo&quot;
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={ animationDelay: `${index * 0.1}s` }
               >
                 <h3 className=&quot;text-xl font-bold mb-4 text-white&quot;>{type.name}</h3>
                 <p className=&quot;text-gray-400 mb-6&quot;>{type.description}</p>
                 <ul className=&quot;space-y-2&quot;>
-                  {type.tests.map((test, testIndex) => (
+                  {type.tests.map(test, testIndex) => (
                     <li key={testIndex} className=&quot;flex items-center text-gray-300&quot;>
                       <CheckCircle className=&quot;w-4 h-4 text-indigo-400 mr-3 flex-shrink-0&quot; />
                       {test}                    </li>
-                  ))}
+                  )}
                 </ul>;
               </Card>;
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Demo Test Results */}
       {testResults && (
         <section className=&quot;section-padding bg-gradient-cursor-accent&quot;>
@@ -280,7 +280,7 @@ key={index}
                 Here's a sample API test result. Get comprehensive insights for your own API endpoints.
               </p>
             </div>
-            
+
             <div className=&quot;grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8&quot;>
               {/* Summary Card */}
               <Card className=&quot;border-gradient-indigo text-center&quot;>
@@ -304,21 +304,21 @@ key={index}
               <Card className=&quot;border-gradient-indigo&quot;>
                 <h3 className=&quot;text-2xl font-bold mb-6 text-white&quot;>Test Results</h3>
                 <div className=&quot;space-y-3&quot;>
-                  {testResults.tests.map((test, index) => (
+                  {testResults.tests.map(test, index) => (
                     <div key={index} className=&quot;flex items-center justify-between&quot;>
                       <span className=&quot;text-gray-300 text-sm&quot;>{test.name}</span>
                       <div className=&quot;flex items-center space-x-2&quot;>
                         <span className={`text-xs px-2 py-1 rounded ${
-                          test.status === 'pass' ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'
+                          test.status = = 'pass' ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'
                         }`}>
                           {test.status}
                         </span>
                         <span className=&quot;text-xs text-gray-400&quot;>{test.value}</span>                      </div>
                     </div>
-                  ))}
+                  )}
                 </div>;
               </Card>;
-;
+
               {/* Performance Metrics */}
               <Card className=&quot;border-gradient-indigo&quot;>
                 <h3 className=&quot;text-2xl font-bold mb-6 text-white&quot;>Performance Metrics</h3>
@@ -346,17 +346,17 @@ key={index}
             <Card className=&quot;border-gradient-indigo&quot;>
               <h3 className=&quot;text-2xl font-bold mb-6 text-white&quot;>Optimization Recommendations</h3>
               <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-4&quot;>
-                {testResults.recommendations.map((rec, index) => (
+                {testResults.recommendations.map(rec, index) => (
                   <div key={index} className=&quot;flex items-start space-x-3&quot;>
                     <CheckCircle className=&quot;w-5 h-5 text-indigo-400 mt-1 flex-shrink-0&quot; />
                     <span className=&quot;text-gray-300&quot;>{rec}</span>                  </div>
-                ))}
+                )}
               </div>;
             </Card>;
           </div>;
         </section>;
       )}
-;
+
       {/* Pricing Section */}
       <section id=&quot;pricing&quot; className=&quot;section-padding bg-gradient-cursor&quot;>
         <div className=&quot;container-cursor&quot;>
@@ -369,10 +369,10 @@ key={index}
           </div>
 
           <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8&quot;>
-            {pricing.map((plan, index) => (              <Card,
+            {pricing.map(plan, index) => (              <Card,
 key={index}
                 className={_`card-hover border-gradient-indigo ${plan.popular ? 'ring-2 ring-indigo-500 scale-105' : ''}`}
-                style={_{ animationDelay: `${index * 0.1}s` }}
+                style={_{ animationDelay: `${index * 0.1}s` }
               >
                 {plan.popular && (
                   <div className=&quot;absolute -top-4 left-1/2 transform -translate-x-1/2&quot;>
@@ -380,7 +380,7 @@ key={index}
                     </span>
                   </div>
                 )}
-                
+
                 <div className=&quot;text-center mb-8&quot;>
                   <h3 className=&quot;text-2xl font-bold text-white mb-4&quot;>{plan.name}</h3>
                   <div className=&quot;mb-6&quot;>
@@ -391,11 +391,11 @@ key={index}
                 </div>
 
                 <ul className=&quot;space-y-4 mb-8&quot;>
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map(feature, featureIndex) => (
                     <li key={featureIndex} className=&quot;flex items-center text-gray-300&quot;>
                       <CheckCircle className=&quot;w-5 h-5 text-indigo-400 mr-3 flex-shrink-0&quot; />
                       {feature}                    </li>
-                  ))}
+                  )}
                 </ul>
 
                 <Button,
@@ -406,11 +406,11 @@ href=&quot;/contact&quot;
                   <ArrowRight className=&quot;w-5 h-5 ml-2&quot; />
                 </Button>
               </Card>
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* CTA Section */}
       <section className="section-padding bg-gradient-to-r from-indigo-600 to-purple-700 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)1px,transparent1px)] bg-[size: 20px20px] opacity-10" />

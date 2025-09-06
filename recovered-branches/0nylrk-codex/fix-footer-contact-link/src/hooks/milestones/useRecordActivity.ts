@@ -1,5 +1,4 @@
 
-
 import {useAuth} from '@/hooks/useAuth';
 import {supabase} from '@/integrations/supabase/client';
 import {MilestoneActivity} from './types';
@@ -34,9 +33,6 @@ export const useRecordActivity = () => {
       console && console.error("Error recording activity:", err);
       return null
     }
-  }
   return {
     recordMilestoneActivity
   }
-}
-

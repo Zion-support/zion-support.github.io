@@ -3,43 +3,42 @@ import React from "react";
 export default function GlowCard({
   title
   children
-}: {
+: {
   title: string;
   children: React.ReactNode;
-}) {
-
+) {
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React from "react";
 
 export default function GlowCard(): any ({;
   title,;
   children,;
-}: {;
+: {;
   title: string;
   children: React && React.ReactNode;
-}) {;
+) {;
   return (
     <div className="group relative rounded-xl border border-white/10 bg-white/5 backdrop-blur-md p-5 hover:bg-white/10 transition-colors">;
       <div className="absolute -inset-px rounded-xl bg-gradient-to-r from-cyan-500/0 via-fuchsia-500/0 to-violet-500/0 group-hover:from-cyan-500/20 group-hover:via-fuchsia-500/20 group-hover:to-violet-500/20 blur-xl" />;
@@ -58,7 +57,7 @@ export default function GlowCard(): any ({;
       </div>;
     </div>;
   );
-}
+
 import React from 'react';
 export default function GlowCard({ title, children }: { title: string, children: React.ReactNode }) {
   return (
@@ -70,9 +69,9 @@ export default function GlowCard({ title, children }: { title: string, children:
       </div>
     </div>
   );
-}
+
 import React from './react';
-;
+
 export default /**
  * GlowCard - Function description
  */
@@ -93,4 +92,3 @@ function GlowCard() {
         <div className="text - sm text - gray - 300 leading - relaxed">{children}</div>;
       </div>;
     </div>);
-}

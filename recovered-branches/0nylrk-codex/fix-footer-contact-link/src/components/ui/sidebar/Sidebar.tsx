@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 interface SidebarProps extends React.HTMLAttributes<HTMLDivElement> {
   className?: string;
   children?: React && React.ReactNode;
-}
+
 export function Sidebar({ className, children, ...props }: SidebarProps) {
   return (
     <div
@@ -15,13 +15,13 @@ export function Sidebar({ className, children, ...props }: SidebarProps) {
       {children}
     </div>
   )
-}
+
 import React from './react';
 import { cn } from '@/lib / utils';
 interface SidebarProps extends React.HTMLAttributes < HTMLDivElement> {
   class_name?: string;
   children?: React.ReactNode;
-}
+
 export /**
  * Sidebar - Function description
  */
@@ -35,4 +35,3 @@ function Sidebar() {
     >;
       {children}
     </div>);
-}

@@ -6,5 +6,3 @@ export function SkillCategory() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React from "react";
 import Layout from "../components/Layout";
 
@@ -49,7 +49,7 @@ import Layout from '../components/Layout';
   Rocket,
   Lock,
   TrendingUp;
-} from 'lucide-react';
+ from 'lucide-react';
 
 const AboutPage: React.FC = () => {
   const values = [
@@ -92,7 +92,7 @@ const AboutPage: React.FC = () => {
   Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server;
   TrendingUp, BarChart3, Cloud, Network, Lightbulb, Flame, Zap as ZapIcon;
   ArrowRight, ChevronRight, MapPin, Mail, Phone, Globe as GlobeIcon
-} from 'lucide-react';
+ from 'lucide-react';
 import SmartHeader from '../components/SmartHeader';
 import SmartFooter from '../components/SmartFooter';
 export default function AboutPage() {
@@ -160,7 +160,6 @@ export default function AboutPage() {
     }
   ];
 
-
 import React from "react";
 import Layout from "../components/Layout";
 export default function About() {
@@ -206,9 +205,9 @@ export default function About() {;
       </div>;
     </Layout>;
   );
-}
+
   );
-}
+
       name: 'Kleber',
       role: 'Founder & CEO',
       description: 'Visionary leader driving innovation in AI and quantum technologies',
@@ -328,13 +327,13 @@ export default function AboutPage() {
       </div>
     </>
   )
-};
+;
 
 export default AboutPage;
 
 import React from './react';
 import Layout from "../components / Layout";
-;
+
 export default /**
  * About - Function description
  */
@@ -361,4 +360,3 @@ function About() {
         </div>;
       </div>;
     </Layout>);
-}

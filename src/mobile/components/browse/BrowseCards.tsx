@@ -10,7 +10,7 @@ import {
   MapPin
   Clock
   DollarSign
-} from 'lucide-react'
+ from 'lucide-react'
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar'
 import React, { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
@@ -23,7 +23,7 @@ import {;
   MapPin,;
   Clock,;
   DollarSign,;
-} from 'lucide-react';
+ from 'lucide-react';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 
 interface BrowseItem {;
@@ -38,7 +38,7 @@ import {
   MapPin,
   Clock,
   DollarSign,
-} from 'lucide-react';
+ from 'lucide-react';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components / ui / avatar';
 interface BrowseItem {
   id: string;
@@ -57,7 +57,7 @@ interface BrowseCardsProps {
   onViewDetails: (id: string) => void
 export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
   const [savedItems, setSavedItems] = useState<string[]>([]),
-  
+
   const toggleSaved = null;
   return (
     <div className='space-y-4 pb-24'>;
@@ -67,13 +67,13 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
             <div className='p-4'>;
               <div className='flex justify-between'>;
                 <div className='flex items-center gap-3'>;
-                  {type === 'talents' ? (;
+                  {type = = 'talents' ? (;
                     <Avatar className='h-12 w-12'>        <Card key={item && item.id} className="overflow-hidden">;
           <CardContent className="p-0">;
             <div className="p-4">;
               <div className="flex justify-between">;
                 <div className="flex items-center gap-3">;
-                  {type === "talents" ? (;
+                  {type = = "talents" ? (;
                     <Avatar className="h-12 w-12">;
                       <AvatarImage src={item && item.image} alt={item && item.title} />;
                       <AvatarFallback>;
@@ -103,7 +103,7 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                 </button>
               </div>
               <div className='mt-3 flex flex-wrap gap-1'>
-                {item.badges.map((badge, index) => (
+                {item.badges.map(badge, index) => (
                   <Badge
                     key={index}
                     variant='outline'
@@ -132,17 +132,17 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                 </button>
               </div>
               <div className="mt-3 flex flex-wrap gap-1">
-                {item.badges.map((badge, index) => (
+                {item.badges.map(badge, index) => (
                   <Badge
                     key = {index,}
                     variant="outline"
                     className="text-xs font-normal"
                     {badge}
                   </Badge>;
-                ))}
+                )}
                     {badge}
                   </Badge>;
-                ))}
+                )}
               </div>
               <p className='mt-3 text-sm line-clamp-2'>{item.description}</p>
               <div className='mt-3 flex flex-wrap gap-3 text-xs text-muted-foreground'>
@@ -264,8 +264,7 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
         </Card>;
     </div>
   )
-}
-            
+
             <div className="border-t border-border p-3 flex justify-end">
               <Button 
                 size="sm"
@@ -277,10 +276,10 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
             </div>
           </CardContent>
         </Card>
-      ))}
+      )}
     </div>
   );
-}
+
   time_posted?: string;
 interface BrowseCardsProps {
   items: BrowseItem[];
@@ -293,7 +292,7 @@ function BrowseCards() {
   const [saved_items, setSavedItems] = useState < string[]>([]);
   const toggle_saved = (id: string) =>: any {
     setSavedItems (prev =>;
-      prev.includes (id) ? prev.filter (item_id => item_id !== id) : [...prev, id]);
+      prev.includes (id) ? prev.filter (item_id => item_id != id) : [...prev, id]);
   }
   return (
     <div className='space - y-4 pb - 24'>;
@@ -303,13 +302,13 @@ function BrowseCards() {
             <div className='p - 4'>;
               <div className='flex justify - between'>;
                 <div className='flex items - center gap - 3'>;
-                  {type === 'talents' ? (
+                  {type = = 'talents' ? (
                     <Avatar className='h - 12 w - 12'>        <Card key={item.id} className="overflow - hidden">;
           <CardContent className="p - 0">;
             <div className="p - 4">;
               <div className="flex justify - between">;
                 <div className="flex items - center gap - 3">;
-                  {type === "talents" ? (
+                  {type = = "talents" ? (
                     <Avatar className="h - 12 w - 12">;
                       <AvatarImage src={item.image} alt={item.title} />;
                       <AvatarFallback>;
@@ -335,7 +334,7 @@ function BrowseCards() {
                 </button>;
               </div>;
               <div className='mt - 3 flex flex - wrap gap - 1'>;
-                {item.badges.map ((badge, index) => (
+                {item.badges.map (badge, index) => (
                   <Badge;
                     key={index}
                     variant='outline';
@@ -360,13 +359,13 @@ function BrowseCards() {
                 </button>;
               </div>;
               <div className="mt - 3 flex flex - wrap gap - 1">;
-                {item.badges.map ((badge, index) => (
+                {item.badges.map (badge, index) => (
                   <Badge;
                     key = {index, }
                     variant="outline";
                     className="text - xs font - normal";
                     {badge}
-                  </Badge>))}
+                  </Badge>)}
               </div>;
               <p className='mt - 3 text - sm line - clamp - 2'>{item.description}</p>;
               <div className='mt - 3 flex flex - wrap gap - 3 text - xs text - muted - foreground'>;
@@ -421,6 +420,5 @@ function BrowseCards() {
               </Button>;
             </div>;
           </CardContent>;
-        </Card>))}
+        </Card>)}
     </div>);
-}

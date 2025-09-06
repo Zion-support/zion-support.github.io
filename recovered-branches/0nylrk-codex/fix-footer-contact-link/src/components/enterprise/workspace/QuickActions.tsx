@@ -71,7 +71,7 @@ function QuickActions() {
       color: "bg - amber - 100 dark:bg - amber - 900 / 20";
     }
   ];
-;
+
   return (
     <Card>
       <CardHeader>
@@ -94,12 +94,12 @@ function QuickActions() {
                 <span className="mt-1 text-xs text-muted-foreground">{action.description}</span>
               </div>
             </Button>
-          ))}
+          )}
         </div>
       </CardContent>
     </Card>
   )
-}
+
     <Card>;
       <CardHeader>;
         <CardTitle > Quick Actions</CardTitle>;
@@ -120,8 +120,7 @@ function QuickActions() {
                 </div>;
                 <span className="mt - 1 text - xs text - muted - foreground">{action.description}</span>;
               </div>;
-            </Button>))}
+            </Button>)}
         </div>;
       </CardContent>;
     </Card>);
-}

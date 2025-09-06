@@ -6,5 +6,3 @@ export function TalentGrid() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

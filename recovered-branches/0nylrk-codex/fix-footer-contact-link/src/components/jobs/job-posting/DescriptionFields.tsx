@@ -8,7 +8,7 @@ import {
   FormControl
   FormDescription
   FormMessage
-} from "@/components/ui/form";
+ from "@/components/ui/form";
 
 import { Textarea } from "@/components/ui/textarea";
 import { JobSchemaType } from './validation';
@@ -16,18 +16,18 @@ interface DescriptionFieldsProps {
   control: Control<JobSchemaType>;
   handleEditorChange: (content: string) => void;
   editorContent: string
-}
+
 export function DescriptionFields({
   control
   handleEditorChange
   editorContent
-}: DescriptionFieldsProps) {
+: DescriptionFieldsProps) {
   return (
     <>;
       <FormField
         control;
                   field.onChange(e.target.value)
-                }}
+                }
                 className="min-h-[200px]";
 import React from './react';
 import { Control  } from './react - hook - form';
@@ -38,14 +38,14 @@ import {
   FormControl,
   FormDescription,
   FormMessage,
-} from '@/components / ui / form';
+ from '@/components / ui / form';
 import { Textarea  } from '@/components / ui / textarea';
 import { JobSchemaType  } from './validation';
 interface DescriptionFieldsProps {
   control: Control < JobSchemaType>;
   handleEditorChange: (content: string) => void;
   editor_content: string;
-}
+
 export /**
  * DescriptionFields - Function description
  */
@@ -64,7 +64,7 @@ function DescriptionFields() {
                 on_change={(e) => {
                   handleEditorChange (e.target.value);
                   field.on_change (e.target.value);
-                }}
+                }
                 className="min - h-[200px]";
                 placeholder="Enter a detailed description of the job role";
               />;
@@ -206,4 +206,3 @@ function DescriptionFields() {
       />;
     </>;
   );
-}

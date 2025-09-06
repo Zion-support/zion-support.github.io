@@ -6,5 +6,3 @@ export function GlobalServiceSection() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

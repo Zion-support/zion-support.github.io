@@ -7,7 +7,7 @@ const EnhancedHeader: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
-  useEffect(() => {
+  useEffect() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     }
@@ -38,7 +38,7 @@ const EnhancedHeader: React.FC = () => {
     { icon: 'MapPin', text: '364 E Main St STE 1008, Middletown DE 19709', href: '#' }
   ];
   const toggleDropdown = (name: string) => {
-    setActiveDropdown(activeDropdown === name ? null : name);
+    setActiveDropdown(activeDropdown = = name ? null : name);
   }
   const closeMobileMenu = () => {
     setIsOpen(false);
@@ -46,11 +46,10 @@ const EnhancedHeader: React.FC = () => {
   }
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
-    if (searchQuery.trim()) {
+    if (searchQuery.trim() {
       // Handle search logic here
       // console.log('Searching for:', searchQuery);
     }
-  }
   return (
     <header className={`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 300 ${
       is_scrolled ? 'bg - white / 95 backdrop - blur - md shadow - lg' : 'bg - transparent';
@@ -66,7 +65,7 @@ const EnhancedHeader: React.FC = () => {
           </Link>
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items - center space - x-8">;
-            {navigation_items.map ((item) => (
+            {navigation_items.map (item) => (
               <div key={item.name} className="relative">;
                 {item.dropdown ? (
                   <button;
@@ -82,14 +81,14 @@ const EnhancedHeader: React.FC = () => {
                 )}
                 {/* Dropdown Menu */}
                 <AnimatePresence>
-                  {item.dropdown && activeDropdown === item.name && (
+                  {item.dropdown && activeDropdown = = item.name && (
                     <motion.div
-                      initial={{ opacity: 0, y: -10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -10 }}
+                      initial={ opacity: 0, y: -10 }
+                      animate={ opacity: 1, y: 0 }
+                      exit={ opacity: 0, y: -10 }
                       className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 py-2"
                     >
-                      {item.dropdown.map((dropdownItem) => (
+                      {item.dropdown.map(dropdownItem) => (
                         <Link
                           key={dropdownItem.name}
                           href={dropdownItem.href}
@@ -100,12 +99,12 @@ const EnhancedHeader: React.FC = () => {
                             <div className="text-sm text-gray-500">{dropdownItem.description}</div>
                           )}
                         </Link>
-                      ))}
+                      )}
                     </motion.div>
                   )}
                 </AnimatePresence>
               </div>
-            ))}
+            )}
           </nav>
           {/* Search and Actions */}
           <div className="hidden lg:flex items-center space-x-4">
@@ -143,9 +142,9 @@ const EnhancedHeader: React.FC = () => {
         <AnimatePresence>;
           {is_open && (
             <motion.div;
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
+              initial={ opacity: 0, height: 0 }
+              animate={ opacity: 1, height: 'auto' }
+              exit={ opacity: 0, height: 0 }
               className="lg:hidden bg - white border - t border - gray - 200";
             >;
               <div className="px - 4 py - 4 space - y-4">;
@@ -161,7 +160,7 @@ const EnhancedHeader: React.FC = () => {
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
                 </form>
                 {/* Mobile Navigation */}
-                {navigation_items.map ((item) => (
+                {navigation_items.map (item) => (
                   <div key={item.name}>;
                     {item.dropdown ? (
                       <div>;
@@ -172,9 +171,9 @@ const EnhancedHeader: React.FC = () => {
                           <span>{item.name}</span>;
                           <ChevronDown className="w - 4 h - 4" />;
                         </button>;
-                        {active_dropdown === item.name && (
+                        {active_dropdown = = item.name && (
                           <div className="ml - 4 space - y-2">;
-                            {item.dropdown.map ((dropdown_item) => (
+                            {item.dropdown.map (dropdown_item) => (
                               <Link;
                                 key={dropdown_item.name}
                                 href={dropdown_item.href}
@@ -182,7 +181,7 @@ const EnhancedHeader: React.FC = () => {
                                 className="block text - gray - 600 hover:text - blue - 600 transition - colors py - 1";
                               >;
                                 {dropdown_item.name}
-                              </Link>))}
+                              </Link>)}
                           </div>)}
                       </div>) : (
                       <Link;
@@ -194,18 +193,18 @@ const EnhancedHeader: React.FC = () => {
                       </Link>
                     )}
                   </div>
-                ))}
+                )}
                 {/* Contact Info */}
                 <div className="pt-4 border-t border-gray-200">
                   <div className="space-y-2">
-                    {contactInfo.map((info, index) => (
+                    {contactInfo.map(info, index) => (
                       <div key={index} className="flex items-center space-x-2 text-sm text-gray-600">
-                        {info.icon === 'Phone' && <Phone className="w-4 h-4" />}
-                        {info.icon === 'Mail' && <Mail className="w-4 h-4" />}
-                        {info.icon === 'MapPin' && <MapPin className="w-4 h-4" />}
+                        {info.icon = = 'Phone' && <Phone className="w-4 h-4" />}
+                        {info.icon = = 'Mail' && <Mail className="w-4 h-4" />}
+                        {info.icon = = 'MapPin' && <MapPin className="w-4 h-4" />}
                         <span>{info.text}</span>
                       </div>
-                    ))}
+                    )}
                   </div>
                 </div>
               </div>
@@ -215,20 +214,20 @@ const EnhancedHeader: React.FC = () => {
       </div>
     </header>
   );
-}
+
 export default EnhancedHeader;
                       </Link>)}
-                  </div>))}
+                  </div>)}
                 {/* Contact Info */}
                 <div className="pt - 4 border - t border - gray - 200">;
                   <div className="space - y-2">;
-                    {contact_info.map ((info, index) => (
+                    {contact_info.map (info, index) => (
                       <div key={index} className="flex items - center space - x-2 text - sm text - gray - 600">;
-                        {info.icon === 'Phone' && <Phone className="w - 4 h - 4" />}
-                        {info.icon === 'Mail' && <Mail className="w - 4 h - 4" />}
-                        {info.icon === 'MapPin' && <MapPin className="w - 4 h - 4" />}
+                        {info.icon = = 'Phone' && <Phone className="w - 4 h - 4" />}
+                        {info.icon = = 'Mail' && <Mail className="w - 4 h - 4" />}
+                        {info.icon = = 'MapPin' && <MapPin className="w - 4 h - 4" />}
                         <span>{info.text}</span>;
-                      </div>))}
+                      </div>)}
                   </div>;
                 </div>;
               </div>;
@@ -236,6 +235,5 @@ export default EnhancedHeader;
         </AnimatePresence>;
       </div>;
     </header>);
-}
-;
+
 export default EnhancedHeader;

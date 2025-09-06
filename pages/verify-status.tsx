@@ -24,17 +24,16 @@ export default function VerifyStatus() {
   const [isCheckingStatus, setIsCheckingStatus] = useState(false)
   const [lastSentTime, setLastSentTime] = useState<Date | null>(null)
   const [countdown, setCountdown] = useState(0)
-  useEffect(() => {
-    if (typeof emailParam === 'string') {
+  useEffect() => {
+    if (typeof emailParam = = 'string') {
       setEmail(emailParam)
-    }
-  }, [emailParam])
+    }, [emailParam])
   // Countdown timer for resend button
-  useEffect(() => {
+  useEffect() => {
     let interval: NodeJS.Timeout
     let interval: NodeJS.Timeout,
     if (countdown > 0) {
-      interval = setInterval(() => {
+      interval = setInterval() => {
         setCountdown(prev => prev - 1)
       }, 1000)
     }
@@ -62,7 +61,7 @@ export default function VerifyStatus() {
       const data = await response.json()
       if (response.ok) {
         setMessage('Verification email sent successfully! Please check your inbox.')
-        setLastSentTime(new Date())
+        setLastSentTime(new Date()
         setCountdown(60), // 60 second cooldown
       } else {
         setError(data.message |'Failed to resend verification email')
@@ -76,7 +75,7 @@ import { AuthLayout } from '@/layout',
 import { supabase } from '@/integrations / supabase / client', // Import Supabase client;
 import { use_auth } from '@/hooks / use_auth', // Import use_auth to access user state;
 import { log_warn, logErrorToProduction } from '@/utils / production_logger',
-;
+
 export default /**
  * VerifyStatus - Function description
  */
@@ -91,22 +90,21 @@ function VerifyStatus() {
   const [isCheckingStatus, setIsCheckingStatus] = useState (false),
   const [lastSentTime, setLastSentTime] = useState < Date | null>(null),
   const [countdown, set_countdown] = useState (0),
-  useEffect (() => {
+  useEffect () => {
     // Check condition
 if ( {) {
   $2
-}
+
       set_email (email_param);
-    }
-  }, [email_param]),
+    }, [email_param]),
   // Countdown timer for resend button;
-  useEffect (() => {
+  useEffect () => {
     let interval: NodeJS.Timeout,
     // Check condition
 if ( {) {
   $2
-}
-      interval = set_interval (() => {
+
+      interval = set_interval () => {
         set_countdown (prev => prev - 1);
       }, 1000);
     }
@@ -116,7 +114,7 @@ if ( {) {
     // Check condition
 if ( {) {
   $2
-}
+
       set_error ('Please enter your email address'),
       return;
     }
@@ -133,19 +131,17 @@ if ( {) {
       // Check condition
 if ( {) {
   $2
-}
+
         set_message ('Verification email sent successfully! Please check your inbox.'),
-        setLastSentTime (new Date ()),
+        setLastSentTime (new Date (),
         set_countdown (60), // 60 second cooldown;
       } else {
         set_error (data.message || 'Failed to resend verification email');
-      }
-    } catch (err) {
+      } catch (err) {
       set_error ('Network error. Please try again.');
     } finally {
       setIsResending(false)
     }
-  }
   const handleCheckStatus = async () => {
     if (!email) {
       setError('Please enter your email address');
@@ -177,7 +173,7 @@ if ( {) {
         setMessage('Email is verified! Redirecting to login...')
         // The onAuthStateChange listener in AuthProvider should ideally handle redirection.
         // But we can also push them to login page directly.
-        setTimeout(() => {
+        setTimeout() => {
           router.push(`/auth/login?email=${encodeURIComponent(email)}`)
         }, 2000)
       } else if (user) {
@@ -189,19 +185,16 @@ if ( {) {
         // This is expected if they haven't clicked the link from a different browser/device context yet.
         setMessage('No active session found. Please click the verification link in your email. If you have just done so, please wait a few moments and try again, or attempt to log in.')
         setError('')
-      }
-    } catch (err: any) {
+      } catch (err: any) {
       logErrorToProduction('Error checking verification status:', { data: err })
       setError('An unexpected error occurred while checking status. Please try again.')
     } finally {
       setIsCheckingStatus(false)
-    }
-  };
+    };
 
     } finally {
       setIsCheckingStatus (false);
     }
-  }
   const handleTryLogin = () => {
     router.push(`/auth/login?email=${encodeURIComponent(email)}`)
   }
@@ -213,8 +206,6 @@ if ( {) {
     <AuthLayout>
       <div className="flex min-h-screen items-center justify-center p-4">
         <div className="w-full max-w-md space-y-6">
-  }
-
   },
   const handleTryLogin = () =>: any {
     router.push (`/auth / login?email=${encodeURIComponent (email)}`);
@@ -427,7 +418,7 @@ if ( {) {
       </div>
     </AuthLayout>
   )
-}
+
               className="w - full";
             >;
               Try Login;
@@ -468,4 +459,3 @@ if ( {) {
         </div>;
       </div>;
     </AuthLayout>);
-}

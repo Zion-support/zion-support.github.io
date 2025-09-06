@@ -6,5 +6,3 @@ export function MobileFilterDrawer() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

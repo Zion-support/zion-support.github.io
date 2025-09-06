@@ -6,5 +6,3 @@ export function ErrorResetOnRouteChange() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

@@ -17,14 +17,14 @@ export function ApiErrorCodes() {
       "error": "Budget minimum must be greater than 0"
     }
   ];
-}`;
+`;
   const rateLimitExample = `{
 
   const rateLimitExample = `{;
   "error": "rate_limit_exceeded";
   "message": "Rate limit exceeded. Try again in 30 seconds";
   "retry_after": 30;
-}`;
+`;
   const errorCodes = [
     {
       status: 400
@@ -148,7 +148,7 @@ export function ApiErrorCodes() {
               </tr>
             </thead>
             <tbody>
-              {errorCodes.map((error, index) => (
+              {errorCodes.map(error, index) => (
                 <tr key={error.code} className={index < errorCodes.length - 1 ? "border-b border-zinc-800" : ""}>
                   <td className="py-2 px-4 text-white">
                     <span className={`inline-block px-2 rounded text-xs font-medium ${
@@ -161,7 +161,7 @@ export function ApiErrorCodes() {
                   <td className="py-2 px-4 text-zinc-300">{error.message}</td>
                   <td className="py-2 px-4 text-zinc-400 text-sm">{error.details}</td>
                 </tr>
-              ))}
+              )}
             </tbody>
           </table>
         </div>
@@ -193,13 +193,13 @@ export function ApiErrorCodes() {
               </tr>
             </thead>
             <tbody>
-              {rateLimits.map((limit, index) => (
+              {rateLimits.map(limit, index) => (
                 <tr key={index} className={index < rateLimits.length - 1 ? "border-b border-zinc-800" : ""}>
                   <td className="py-2 px-4 text-white font-mono">{limit.endpoint}</td>
                   <td className="py-2 px-4 text-zinc-300">{limit.limit}</td>
                   <td className="py-2 px-4 text-zinc-400 text-sm">{limit.notes}</td>
                 </tr>
-              ))}
+              )}
             </tbody>
           </table>
         </div>
@@ -242,13 +242,13 @@ export function ApiErrorCodes() {
               </tr>;
             </thead>;
             <tbody>;
-              {rateLimits && rateLimits.map((limit, index) => (;
+              {rateLimits && rateLimits.map(limit, index) => (;
                 <tr key={index} className={index < rateLimits && rateLimits.length - 1 ? "border-b border-zinc-800" : ""}>;
                   <td className="py-2 px-4 text-white font-mono">{limit && limit.endpoint}</td>;
                   <td className="py-2 px-4 text-zinc-300">{limit && limit.limit}</td>;
                   <td className="py-2 px-4 text-zinc-400 text-sm">{limit && limit.notes}</td>;
                 </tr>;
-              ))}
+              )}
             </tbody>;
           </table>;
         </div>;
@@ -280,7 +280,7 @@ export function ApiErrorCodes() {
       </div>;
     </ApiDocsLayout>;
   );
-}
+
 export default ApiErrorCodes;
 
         <div className="overflow - x-auto mb - 8">;
@@ -293,12 +293,12 @@ export default ApiErrorCodes;
               </tr>;
             </thead>;
             <tbody>;
-              {rate_limits.map ((limit, index) => (
+              {rate_limits.map (limit, index) => (
                 <tr key={index} className={index < rate_limits.length - 1 ? "border - b border - zinc - 800" : ""}>;
                   <td className="py - 2 px - 4 text - white font - mono">{limit.endpoint}</td>;
                   <td className="py - 2 px - 4 text - zinc - 300">{limit.limit}</td>;
                   <td className="py - 2 px - 4 text - zinc - 400 text - sm">{limit.notes}</td>;
-                </tr>))}
+                </tr>)}
             </tbody>;
           </table>;
         </div>;
@@ -325,6 +325,5 @@ export default ApiErrorCodes;
         </p>;
       </div>;
     </ApiDocsLayout>);
-}
+
 export default ApiErrorCodes;
-;

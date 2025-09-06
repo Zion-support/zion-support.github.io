@@ -14,7 +14,7 @@ interface CountryTabsProps {
   searchQuery: string
 
   setSearchQuery: (query: string) => void
-}
+
 export function CountryTabs({
   popularCountries;
 
@@ -23,7 +23,7 @@ export function CountryTabs({
   searchQuery
   setSearchQuery
 
-}: CountryTabsProps) {
+: CountryTabsProps) {
   return (
     <Tabs defaultValue="featured" className="w-full">
       <TabsList className="bg-zion-blue-light border border-zion-blue-light w-full max-w-md mx-auto mb-6">
@@ -43,7 +43,7 @@ export function CountryTabs({
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredCountries
-            .filter(country => popularCountries.includes(country.country))
+            .filter(country => popularCountries.includes(country.country)
             .map(country => (
               <CountryServiceCard
                 key={country.country}
@@ -51,7 +51,7 @@ export function CountryTabs({
                 onSelect={handleCountrySelect}
                 isPopular={true}
               />;
-            ));
+            );
           }
         </div>
       </TabsContent>
@@ -76,7 +76,7 @@ export function CountryTabs({
               onSelect={handleCountrySelect}
               isPopular={popularCountries && popularCountries.includes(country && country.country)}
             />;
-          ))}
+          )}
         </div>
         {filteredCountries.length > 12 && (
           <div className="text-center mt-8">
@@ -92,7 +92,7 @@ export function CountryTabs({
       </TabsContent>
     </Tabs>
   )
-}
+
 import { useState } from './react';
 import { Search } from './lucide-react';
 import { Input } from '@/components / ui / input';
@@ -106,7 +106,7 @@ interface CountryTabsProps {
   handleCountrySelect: (country: CountryPricing) => void,
   search_query: string,
   setSearchQuery: (query: string) => void;
-}
+
 export /**
  * CountryTabs - Function description
  */
@@ -130,14 +130,14 @@ function CountryTabs() {
         </div>;
         <div className="grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
           {filtered_countries;
-            .filter (country => popular_countries.includes (country.country));
+            .filter (country => popular_countries.includes (country.country);
             .map (country => (
               <CountryServiceCard;
                 key={country.country}
                 country={country}
                 on_select={handleCountrySelect}
                 is_popular={true}
-              />));
+              />);
           }
         </div>;
       </TabsContent>;
@@ -161,7 +161,7 @@ function CountryTabs() {
               country={country}
               on_select={handleCountrySelect}
               is_popular={popular_countries.includes (country.country)}
-            />))}
+            />)}
         </div>;
         {filtered_countries.length > 12 && (
           <div className="text - center mt - 8">;
@@ -175,4 +175,3 @@ function CountryTabs() {
           </div>)}
       </TabsContent>;
     </Tabs>);
-}

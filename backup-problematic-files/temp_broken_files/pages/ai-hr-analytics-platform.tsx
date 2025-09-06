@@ -1,5 +1,5 @@
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',;
-;
+
 export default function AiHrAnalyticsPlatform() {;
 	return (;
 		<ServiceLanding;
@@ -100,6 +100,5 @@ const AIHrAnalyticsPlatform: React.FC = () => {
       </main>
     </Layout>
   );
-};
 
 export default AIHrAnalyticsPlatform;

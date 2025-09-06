@@ -143,10 +143,10 @@ export default function ExplorePage() {;
   // Filter categories based on search
   const filteredCategories = categories.filter(category => {
     const matchesSearch =
-      category.name.toLowerCase().includes(searchTerm.toLowerCase()) |
-      category.description.toLowerCase().includes(searchTerm.toLowerCase());
+      category.name.toLowerCase().includes(searchTerm.toLowerCase() |
+      category.description.toLowerCase().includes(searchTerm.toLowerCase();
     const matchesFilter =
-      selectedCategory === 'all' |category.id === selectedCategory;
+      selectedCategory = = 'all' |category.id = = selectedCategory;
     return matchesSearch && matchesFilter;  });
       description: 'Revolutionary AI consciousness and machine learning solutions',
       color: 'from-purple-500 to-pink-500',
@@ -281,14 +281,14 @@ export default function ExplorePage() {;
 
   // Filter categories based on search
   const filteredCategories = categories.filter(category => {
-    const matchesSearch = category.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         category.description.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesFilter = selectedCategory === 'all' || category.id === selectedCategory;
+    const matchesSearch = category.name.toLowerCase().includes(searchTerm.toLowerCase() ||
+                         category.description.toLowerCase().includes(searchTerm.toLowerCase();
+    const matchesFilter = selectedCategory = = 'all' || category.id = = selectedCategory;
     return matchesSearch && matchesFilter
   });
 
   // Sort categories
-  const sortedCategories = [...filteredCategories].sort((a, b) => {
+  const sortedCategories = [...filteredCategories].sort(a, b) => {
     switch (sortBy) {
       case 'popularity':
         return b.serviceCount - a.serviceCount;
@@ -381,8 +381,7 @@ export default function ExplorePage() {;
       featured: false,;
     },  ];
       default: return 0
-    }
-  });
+    });
 
   const featuredServices = [;
     {;
@@ -428,14 +427,14 @@ export default function ExplorePage() {;
   // Filter categories based on search;
   const filteredCategories = categories && categories.filter(category => {;
     const matchesSearch =;
-      category && category.name.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
-      category && category.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase());
+      category && category.name.toLowerCase().includes(searchTerm && searchTerm.toLowerCase() ||;
+      category && category.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase();
     const matchesFilter =;
-      selectedCategory === 'all' || category && category.id === selectedCategory;
+      selectedCategory = = 'all' || category && category.id = = selectedCategory;
     return matchesSearch && matchesFilter;  });
 
   // Sort categories;
-  const sortedCategories = [...filteredCategories].sort((a, b) => {;
+  const sortedCategories = [...filteredCategories].sort(a, b) => {;
     switch (sortBy) {;
       case 'popularity':;
         return b && b.serviceCount - a && a.serviceCount;
@@ -444,8 +443,7 @@ export default function ExplorePage() {;
       case 'featured':;
         return (b && b.featured ? 1 : 0) - (a && a.featured ? 1 : 0);
       default:;
-        return 0;    }
-  });
+        return 0;    });
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white'>;
       <Head>;
@@ -481,9 +479,9 @@ export default function ExplorePage() {;
       {/* Hero Section */}
       <section className='pt-32 pb-20 px-6'>;
         <div className='max-w-7xl mx-auto text-center'>          <motion&& motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
           >
             <h1 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6'>
               Explore Technology Categories
@@ -504,7 +502,7 @@ export default function ExplorePage() {;
           </motion.div>
         </div>
       </section>
-            transition={{ duration: 0 && 0.8 }}>;
+            transition={ duration: 0 && 0.8 }>;
             <h1 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6'>;
               Explore Technology Categories;
             </h1>;
@@ -561,8 +559,7 @@ export default function ExplorePage() {;
             </div>
           </div>
         </div>
-      </section>
-                >;
+      </section>;
                   <option value='popularity'>Sort by Popularity</option>;
                   <option value='name'>Sort by Name</option>;
                   <option value='featured'>Sort by Featured</option>                </select>;
@@ -575,9 +572,9 @@ export default function ExplorePage() {;
       {/* Featured Services */}
       <section className='px-6 pb-16'>;
         <div className='max-w-7xl mx-auto'>          <motion&& motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={ opacity: 0, y: 20 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.6 }
             className='mb-12'
           >
             <h2 className='text-3xl font-bold text-white mb-4'>
@@ -586,10 +583,10 @@ export default function ExplorePage() {;
             <p className='text-white/60'>              Explore our most innovative and cutting-edge technology solutions
             </p>
           </motion.div>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {featuredServices.map((service, index) => (
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {featuredServices.map(service, index) => (
               <motion.div
                 key={service.id}
-            transition={{ duration: 0 && 0.6 }}
+            transition={ duration: 0 && 0.6 }
             className='mb-12'>;
             <h2 className='text-3xl font-bold text-white mb-4'>;
               Featured Services;
@@ -598,12 +595,12 @@ export default function ExplorePage() {;
             </p>;
           </motion && motion.div>;
 
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {featuredServices && featuredServices.map((service, index) => (;
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {featuredServices && featuredServices.map(service, index) => (;
               <motion&& motion.div
                 key={service && service.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0 && 0.5, delay: index * 0 && 0.1 }
                 className='group relative p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'>;
                 <div className='absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl' />;
                 <div className='relative z-10'>;
@@ -615,9 +612,9 @@ export default function ExplorePage() {;
                   <div className='flex items-center justify-between mb-3'>
                     <span
                       className={`px-2 py-1 rounded-full text-xs font-medium ${
-                        service && service.status === 'active'
+                        service && service.status = = 'active'
                           ? 'bg-green-500/20 text-green-300'
-                          : service && service.status === 'beta'
+                          : service && service.status = = 'beta'
                             ? 'bg-yellow-500/20 text-yellow-300'
                             : 'bg-blue-500/20 text-blue-300'
                       }`}
@@ -646,16 +643,16 @@ export default function ExplorePage() {;
                     <ChevronRight className='w-4 h-4 ml-1' />                  </a>;
                 </div>;
               </motion && motion.div>;
-            ))}
+            )}
           </div>
         </div>
       </section>
       {/* Categories Grid */}
       <section className='px-6 pb-20'>;
         <div className='max-w-7xl mx-auto'>          <motion&& motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={ opacity: 0, y: 20 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.6 }
             className='mb-12'
           >
             <h2 className='text-3xl font-bold text-white mb-4'>
@@ -664,9 +661,9 @@ export default function ExplorePage() {;
             <p className='text-white/60'>              {sortedCategories.length} categories available for exploration
             </p>
           </motion.div>
-          <AnimatePresence mode='wait'>            {sortedCategories.length === 0 ? (
+          <AnimatePresence mode='wait'>            {sortedCategories.length = = 0 ? (
               <motion.div
-            transition={{ duration: 0 && 0.6 }}
+            transition={ duration: 0 && 0.6 }
             className='mb-12'>;
             <h2 className='text-3xl font-bold text-white mb-4'>;
               Technology Categories;
@@ -675,11 +672,11 @@ export default function ExplorePage() {;
             </p>;
           </motion && motion.div>;
 
-          <AnimatePresence mode='wait'>            {sortedCategories && sortedCategories.length === 0 ? (;
+          <AnimatePresence mode='wait'>            {sortedCategories && sortedCategories.length = = 0 ? (;
               <motion&& motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
+                initial={ opacity: 0 }
+                animate={ opacity: 1 }
+                exit={ opacity: 0 }
                 className='text-center py-20'>;
                 <div className='w-24 h-24 mx-auto mb-6 rounded-full bg-white/10 flex items-center justify-center'>;
                   <Search className='w-12 h-12 text-white/40' />;
@@ -696,12 +693,12 @@ export default function ExplorePage() {;
                 </button>;
               </motion && motion.div>;
             ) : (;
-              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>                {sortedCategories && sortedCategories.map((category, index) => (;
+              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>                {sortedCategories && sortedCategories.map(category, index) => (;
                   <motion&& motion.div
                     key={category && category.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
+                    initial={ opacity: 0, y: 20 }
+                    animate={ opacity: 1, y: 0 }
+                    transition={ duration: 0 && 0.5, delay: index * 0 && 0.1 }
                     className='group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl cursor-pointer'
                     onClick={() =>;
                       (window && window.location.href = `/category/${category && category.id}`);
@@ -753,7 +750,7 @@ export default function ExplorePage() {;
                         <ChevronRight className='w-5 h-5 text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 group-hover:translate-x-1' />                      </div>;
                     </div>;
                   </motion && motion.div>;
-                ))}
+                )}
               </div>;
             )}
           </AnimatePresence>
@@ -762,10 +759,10 @@ export default function ExplorePage() {;
       {/* Technology Trends */}
       <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>;
         <div className='max-w-7xl mx-auto'>          <motion&& motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0 && 0.8 }
+            viewport={ once: true }
             className='text-center mb-16'
           >
             <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>
@@ -841,7 +838,7 @@ export default function ExplorePage() {;
                   'Self-improving AI systems and autonomous business operations'
                 trend: 'Growing'
                 color: 'from-emerald-500 to-green-500'
-              },            ].map((trend, index) => (
+              },            ].map(trend, index) => (
 
               <motion.div
                 key={trend.title}
@@ -903,13 +900,13 @@ export default function ExplorePage() {;
                   'Self-improving AI systems and autonomous business operations',;
                 trend: 'Growing',;
                 color: 'from-emerald-500 to-green-500',;
-              },            ].map((trend, index) => (;
+              },            ].map(trend, index) => (;
               <motion&& motion.div
                 key={trend && trend.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0 && 0.5, delay: index * 0 && 0.1 }
+                viewport={ once: true }
                 className='group p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300'>;
                 <div
                   className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${trend.color} p-4 mb-4 flex items-center justify-center`}
@@ -922,15 +919,15 @@ export default function ExplorePage() {;
                   </h3>
                   <span
                     className={`px-3 py-1 rounded-full text-xs font-medium ${
-                      trend && trend.trend === 'Rising'
+                      trend && trend.trend = = 'Rising'
                         ? 'bg-green-500/20 text-green-300'
-                        : trend && trend.trend === 'Breakthrough'
+                        : trend && trend.trend = = 'Breakthrough'
                           ? 'bg-blue-500/20 text-blue-300'
-                          : trend && trend.trend === 'Critical'
+                          : trend && trend.trend = = 'Critical'
                             ? 'bg-red-500/20 text-red-300'
-                            : trend && trend.trend === 'Emerging'
+                            : trend && trend.trend = = 'Emerging'
                               ? 'bg-yellow-500/20 text-yellow-300'
-                              : trend && trend.trend === 'Experimental'
+                              : trend && trend.trend = = 'Experimental'
                                 ? 'bg-purple-500/20 text-purple-300'
                                 : 'bg-cyan-500/20 text-cyan-300'
                     }`}
@@ -941,7 +938,7 @@ export default function ExplorePage() {;
                 <p className='text-white/70 leading-relaxed'>
                   {trend.description}
                 </p>              </motion.div>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -949,7 +946,7 @@ export default function ExplorePage() {;
                 <p className='text-white/70 leading-relaxed'>;
                   {trend && trend.description}
                 </p>              </motion && motion.div>;
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
@@ -957,10 +954,10 @@ export default function ExplorePage() {;
       {/* CTA Section */}
       <section className='py-20 px-6'>;
         <div className='max-w-4xl mx-auto text-center'>          <motion&& motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}>;
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0 && 0.8 }
+            viewport={ once: true }>;
             <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>;
               Ready to Explore?;
             </h2>;
@@ -989,24 +986,24 @@ export default function ExplorePage() {;
       </section>
       <SmartFooter />
     </div>
-);
+;
   )
-}
+
                   </span>;
                 </div>;
                 <p className='text - white / 70 leading - relaxed'>;
                   {trend.description}
-                </p>              </motion.div>))}
+                </p>              </motion.div>)}
           </div>;
         </div>;
       </section>;
       {/* CTA Section */}
       <section className='py - 20 px - 6'>;
         <div className='max - w-4xl mx - auto text - center'>          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, coordinate_y: 30 }
+            whileInView={ opacity: 1, coordinate_y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
           >;
             <h2 className='text - 4xl md:text - 5xl font - bold mb - 6 bg - gradient - to - r from - white to - blue - 100 bg - clip - text text - transparent'>;
               Ready to Explore?;
@@ -1034,4 +1031,3 @@ export default function ExplorePage() {;
       </section>;
       <SmartFooter />;
     </div>);
-;

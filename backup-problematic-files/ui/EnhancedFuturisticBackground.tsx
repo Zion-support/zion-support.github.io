@@ -7,8 +7,7 @@ interface EnhancedFuturisticBackgroundProps {;
   colorScheme?: 'quantum' | 'cyberpunk' | 'holographic' | 'neural' | 'cosmic',;
   particleCount?: number,;
   animationSpeed?: number;
-}
-;
+
 const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> = ({;
   children,;
   className = '',;
@@ -16,7 +15,7 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
   colorScheme = 'quantum',;
   particleCount = 100,;
   animationSpeed = 1;
-}) => {;
+) => {;
   const canvasRef = useRef<HTMLCanvasElement>(null),;
   const animationRef = useRef<number | undefined>(undefined),;
   const colorSchemes = {;
@@ -59,14 +58,12 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
       background: 'rgba(10, 10, 30, 0.9)',;
       particles: ['#ff6b6b#4ecdc4#45b7d1#96ceb4#feca57#ff9ff3'],;
       glow: '#4ecdc4';
-    }
-  },;
+    },;
   const intensitySettings = {;
     low: { particleCount: 40, speed: 0.45, size: 2, opacity: 0.25 },;
     medium: { particleCount: 90, speed: 0.9, size: 3, opacity: 0.45 },;
-    high: { particleCount: 160, speed: 1.25, size: 3.5, opacity: 0.6 }
-  },;
-  useEffect(() => {;
+    high: { particleCount: 160, speed: 1.25, size: 3.5, opacity: 0.6 },;
+  useEffect() => {;
     const canvas = canvasRef.current,;
     if (!canvas) return,;
     const ctx = canvas.getContext('2d'),;
@@ -101,7 +98,7 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
         this.life = Math.random() * 100,;
         this.maxLife = 100;
       }
-;
+
       update() {;
         this.x += this.vx,;
         this.y += this.vy,;
@@ -115,8 +112,7 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
         if (this.life < 20) {;
           this.opacity *= 0.95;
         }
-      }
-;
+
       draw() {;
         ctx.save(),;
         ctx.globalAlpha = this.opacity,;
@@ -130,12 +126,11 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
         ctx.fill(),;
         ctx.restore();
       }
-;
+
       isDead() {;
         return this.life <= 0 || this.opacity < 0.01;
       }
-    }
-;
+
     // Connection lines between particles;
     class Connection {;
       p1: Particle,;
@@ -146,7 +141,7 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
         this.p2 = p2,;
         this.opacity = 0.1;
       }
-;
+
       draw() {;
         const distance = Math.sqrt(;
           Math.pow(this.p1.x - this.p2.x, 2) + Math.pow(this.p1.y - this.p2.y, 2);
@@ -162,16 +157,15 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
           ctx.stroke(),;
           ctx.restore();
         }
-      }
     }
-;
+
     let particles: Particle[] = [],;
     let connections: Connection[] = [],;
     // Initialize particles;
     for (let i = 0, i < settings.particleCount, i++) {;
-      particles.push(new Particle());
+      particles.push(new Particle();
     }
-;
+
     // Matrix rain effect;
     const matrixRain = () => {;
       const characters = '01',;
@@ -181,7 +175,7 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
       for (let i = 0, i < columns, i++) {;
         drops[i] = 1;
       }
-;
+
       const drawMatrix = () => {;
         ctx.fillStyle = 'rgba(0, 0, 0, 0.06)',;
         ctx.fillRect(0, 0, canvas.width, canvas.height),;
@@ -194,8 +188,7 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
             drops[i] = 0;
           }
           drops[i]++;
-        }
-      },;
+        },;
       return drawMatrix;
     },;
     const drawMatrix = matrixRain(),;
@@ -212,11 +205,11 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
         particle.draw();
       }),;
       // Remove dead particles and add new ones;
-      particles = particles.filter(particle => !particle.isDead()),;
+      particles = particles.filter(particle => !particle.isDead(),;
       while (particles.length < settings.particleCount) {;
-        particles.push(new Particle());
+        particles.push(new Particle();
       }
-;
+
       // Create connections between nearby particles;
       connections = [],;
       for (let i = 0, i < particles.length, i++) {;
@@ -226,13 +219,12 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
             Math.pow(particles[i].y - particles[j].y, 2);
           ),;
           if (distance < 150) {;
-            connections.push(new Connection(particles[i], particles[j]));
+            connections.push(new Connection(particles[i], particles[j]);
           }
-        }
       }
-;
+
       // Draw connections;
-      connections.forEach(connection => connection.draw()),;
+      connections.forEach(connection => connection.draw(),;
       // Add floating geometric shapes;
       if (Math.random() < 0.02) {;
         const x = Math.random() * canvas.width,;
@@ -254,42 +246,40 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
           // Draw square;
           ctx.strokeRect(x - size, y - size, size * 2, size * 2);
         }
-;
+
         ctx.restore();
       }
-;
+
       // Respect reduced motion;
       const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches,;
       if (prefersReduced) {;
         // Slow down updates;
-        setTimeout(() => {;
+        setTimeout() => {;
           animationRef.current = requestAnimationFrame(animate);
         }, 100);
       } else {;
         animationRef.current = requestAnimationFrame(animate);
-      }
-    },;
+      },;
     animate(),;
     return () => {;
       if (animationRef.current) {;
         cancelAnimationFrame(animationRef.current);
       }
       window.removeEventListener('resize', resizeCanvas);
-    }
-  }, [colorScheme, intensity, particleCount, animationSpeed]),;
+    }, [colorScheme, intensity, particleCount, animationSpeed]),;
   return (;
     <div className={`relative min-h-screen ${className}`}>;
       <canvas;
         ref={canvasRef}
         className="fixed inset-0 w-full h-full pointer-events-none z-0"
-        style={{ background: 'transparent' }}
+        style={ background: 'transparent' }
       />;
       {/* Overlay gradient */}
       <div 
         className="fixed inset-0 pointer-events-none z-0"
-        style={{
+        style={
           background: `radial-gradient(circle at 50% 50%, transparent 0%, rgba(0,0,0,0.3) 100%)`
-        }}
+        }
       />;
       {/* Content */}
       <div className="relative z-10">
@@ -297,5 +287,5 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
       </div>;
     </div>;
   );
-},;
+,;
 export default EnhancedFuturisticBackground;

@@ -15,7 +15,7 @@ interface PriceRange {
   min: number
 
   max: number
-}
+
 interface DynamicListingPageProps {
 
   title: string
@@ -25,7 +25,7 @@ interface DynamicListingPageProps {
   categoryFilters: { label: string, value: string }[]
 
   initialPrice?: PriceRange
-}
+
 export function DynamicListingPage({
   title;
   description;
@@ -34,7 +34,7 @@ export function DynamicListingPage({
   listings: allListings
   categoryFilters;
   initialPrice = { min: 0, max: 10000 }
-}: DynamicListingPageProps) {;
+: DynamicListingPageProps) {;
   const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -42,14 +42,13 @@ export function DynamicListingPage({
   const [isLoading, setIsLoading] = useState(false);
   const [priceRange, setPriceRange] = useState<PriceRange>(initialPrice);
   const [selectedRating, setSelectedRating] = useState<number | null>(null);
-  useEffect(() => {
-    const listingsWithPrice = allListings.filter(l => l.price !== null);
+  useEffect() => {
+    const listingsWithPrice = allListings.filter(l => l.price != null);
     if (listingsWithPrice.length > 0) {
-      const min = Math.min(...listingsWithPrice.map(l => l.price |0));
-      const max = Math.max(...listingsWithPrice.map(l => l.price |0));
+      const min = Math.min(...listingsWithPrice.map(l => l.price |0);
+      const max = Math.max(...listingsWithPrice.map(l => l.price |0);
       setPriceRange({ min, max })
-    }
-  }, [allListings]);
+    }, [allListings]);
   const [currentPriceFilter, setCurrentPriceFilter] = useState<[number, number]>([
     initialPrice.min;
     initialPrice.max
@@ -59,23 +58,23 @@ export function DynamicListingPage({
   }
   const filteredListings = allListings.filter(listing => {
     const matchesSearch = !searchQuery |
-      listing.title.toLowerCase().includes(searchQuery.toLowerCase()) |
-      listing.description.toLowerCase().includes(searchQuery.toLowerCase()) |
-      (listing.tags && listing.tags.some((tag: string) => tag.toLowerCase().includes(searchQuery.toLowerCase())))
-    const matchesCategory = selectedCategory === "all" |listing.category === selectedCategory;
-    const matchesPrice = listing.price === null |(
+      listing.title.toLowerCase().includes(searchQuery.toLowerCase() |
+      listing.description.toLowerCase().includes(searchQuery.toLowerCase() |
+      (listing.tags && listing.tags.some(tag: string) => tag.toLowerCase().includes(searchQuery.toLowerCase())
+    const matchesCategory = selectedCategory = = "all" |listing.category = = selectedCategory;
+    const matchesPrice = listing.price = = null |(
       listing.price >= currentPriceFilter[0] &&
       listing.price <= currentPriceFilter[1]
     );
     const matchesRating =
-      selectedRating === null |
-      (listing.rating !== undefined && listing.rating >= selectedRating);
+      selectedRating = = null |
+      (listing.rating != undefined && listing.rating >= selectedRating);
     return matchesSearch && matchesCategory && matchesPrice && matchesRating
   });
   const handleRequestQuote = (listingId: string) => {
     setIsLoading(true);
-    const listing = allListings.find(item => item.id === listingId);
-    setTimeout(() => {
+    const listing = allListings.find(item => item.id = = listingId);
+    setTimeout() => {
       setIsLoading(false)
       if (listing) {
         toast({
@@ -105,7 +104,7 @@ import { toast } from '@/hooks / use - toast';
 interface PriceRange {
   min: number,
   max: number;
-}
+
 interface DynamicListingPageProps {
   title: string,
   description: string,
@@ -113,7 +112,7 @@ interface DynamicListingPageProps {
   listings: ProductListing[],
   category_filters: { label: string, value: string }[],
   initial_price?: PriceRange;
-}
+
 export /**
  * DynamicListingPage - Function description
  */
@@ -124,64 +123,63 @@ function DynamicListingPage() {
   const [view, set_view] = useState < ListingView>("grid");
   const [is_loading, setIsLoading] = useState (false);
   const [price_range, setPriceRange] = useState < PriceRange>(initial_price);
-;
+
   const [selected_rating, setSelectedRating] = useState < number | null>(null);
-;
-  useEffect (() => {
-    const listingsWithPrice = all_listings.filter (l => l.price !== null);
+
+  useEffect () => {
+    const listingsWithPrice = all_listings.filter (l => l.price != null);
     // Check condition
 if ( {) {
   $2
-}
-      const min = Math.min (...listingsWithPrice.map (l => l.price || 0));
-      const max = Math.max (...listingsWithPrice.map (l => l.price || 0));
+
+      const min = Math.min (...listingsWithPrice.map (l => l.price || 0);
+      const max = Math.max (...listingsWithPrice.map (l => l.price || 0);
       setPriceRange ({ min, max });
-    }
-  }, [all_listings]);
-;
+    }, [all_listings]);
+
   const [currentPriceFilter, setCurrentPriceFilter] = useState<[number, number]>([;
     initial_price.min;
     initial_price.max;
   ]);
-;
+
   const handleSliderChange = (values: number[]) =>: any {
     setCurrentPriceFilter ([values[0], values[1]]);
   }
-;
+
   const filtered_listings = all_listings.filter (listing => {
     const matches_search = !search_query ||;
-      listing.title.toLowerCase ().includes (search_query.toLowerCase ()) ||;
-      listing.description.toLowerCase ().includes (search_query.toLowerCase ()) ||;
-      (listing.tags && listing.tags.some ((tag: string) => tag.toLowerCase ().includes (search_query.toLowerCase ()))),
-    const matches_category = selected_category === "all" || listing.category === selected_category;
-;
-    const matches_price = listing.price === null || (
+      listing.title.toLowerCase ().includes (search_query.toLowerCase () ||;
+      listing.description.toLowerCase ().includes (search_query.toLowerCase () ||;
+      (listing.tags && listing.tags.some (tag: string) => tag.toLowerCase ().includes (search_query.toLowerCase ()),
+    const matches_category = selected_category = = "all" || listing.category = = selected_category;
+
+    const matches_price = listing.price = = null || (
       listing.price >= currentPriceFilter[0] &&;
       listing.price <= currentPriceFilter[1]);
-;
+
     const matches_rating =;
-      selected_rating === null ||;
-      (listing.rating !== undefined && listing.rating >= selected_rating);
-;
+      selected_rating = = null ||;
+      (listing.rating != undefined && listing.rating >= selected_rating);
+
     return matches_search && matches_category && matches_price && matches_rating;
   });
-;
+
   const handleRequestQuote = (listing_id: string) =>: any {
     setIsLoading (true);
-;
-    const listing = all_listings.find (item => item.id === listing_id);
-;
-    set_timeout (() => {
+
+    const listing = all_listings.find (item => item.id = = listing_id);
+
+    set_timeout () => {
       setIsLoading (false),
       // Check condition
 if ( {) {
   $2
-}
+
         toast ({
           title: "Quote Requested",
           description: `Your quote request for ${listing.title} has been sent.`;
         });
-;
+
         navigate ("/request - quote", {
           state: {
             service_type: category_slug,
@@ -191,10 +189,8 @@ if ( {) {
               category: listing.category,
               image: listing.images?.[0];
             }
-          }
         });
-      }
-    }, 500)
+      }, 500)
   }
   return (
     <div className="min-h-screen bg-zion-blue py-12 px-4">;
@@ -220,18 +216,18 @@ if ( {) {
                   onValueChange={(value: string) => {
                     console.log("Category selected:", value);
                     setSelectedCategory(value)
-                  }}
+                  }
                 >;
                   <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">;
                     <SelectValue placeholder="Select Category" />;
                   </SelectTrigger>;
                   <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">;
                     <SelectItem value="all" className="text-white">All Categories</SelectItem>;
-                    {categoryFilters && categoryFilters.map((filter) => (;
+                    {categoryFilters && categoryFilters.map(filter) => (;
                       <SelectItem key={filter && filter.value} value={filter && filter.value} className="text-white">;
                         {filter && filter.label}
                       </SelectItem>;
-                    ))}
+                    )}
                   </SelectContent>
                 </Select>
               </div>
@@ -260,9 +256,9 @@ if ( {) {
                   Minimum Rating
                 </label>
                 <div className="flex flex-wrap gap-2">
-                  {[null, 3, 4, 5].map((rating) => (
+                  {[null, 3, 4, 5].map(rating) => (
                     <Button
-                      key={rating === null ? 'any' : rating}
+                      key={rating = = null ? 'any' : rating}
                       variant="outline"
                       size="sm"
                       onClick={() => {;
@@ -270,7 +266,7 @@ if ( {) {
                         setSelectedRating(rating);
     }, 500);
   }
-;
+
   return (
     <div className="min - h-screen bg - zion - blue py - 12 px - 4">;
       <div className="container mx - auto">;
@@ -295,17 +291,17 @@ if ( {) {
                   onValueChange={(value: string) => {
                     console.log ("Category selected:", value);
                     setSelectedCategory (value);
-                  }}
+                  }
                 >;
                   <SelectTrigger className="bg - zion - blue border border - zion - blue - light text - white">;
                     <SelectValue placeholder="Select Category" />;
                   </SelectTrigger>;
                   <SelectContent className="bg - zion - blue - dark border border - zion - blue - light">;
                     <SelectItem value="all" className="text - white">All Categories</SelectItem>;
-                    {category_filters.map ((filter) => (
+                    {category_filters.map (filter) => (
                       <SelectItem key={filter.value} value={filter.value} className="text - white">;
                         {filter.label}
-                      </SelectItem>))}
+                      </SelectItem>)}
                   </SelectContent>;
                 </Select>;
               </div>;
@@ -334,33 +330,33 @@ if ( {) {
                   Minimum Rating;
                 </label>;
                 <div className="flex flex - wrap gap - 2">;
-                  {[null, 3, 4, 5].map ((rating) => (
+                  {[null, 3, 4, 5].map (rating) => (
                     <Button;
-                      key={rating === null ? 'any' : rating}
+                      key={rating = = null ? 'any' : rating}
                       variant="outline";
                       size="sm";
                       on_click={() => {
                         console.log ("Rating selected:", rating);
                         setSelectedRating (rating);
-                      }}
+                      }
                       className={`${
-                        selectedRating === rating
+                        selectedRating = = rating
                           ? "bg-zion-purple/20 border-zion-purple text-zion-purple"
                           : "border-zion-blue-light text-zion-slate-light"
                       }`}
                     >;
-                      {rating === null ? (;
+                      {rating = = null ? (;
                         "Any";
                       ) : (;
                         <div className="flex items-center">;
-                          {[...Array(rating)].map((_, i) => (;
+                          {[...Array(rating)].map(_, i) => (;
                             <Star key={i} className="h-3 w-3 fill-zion-cyan text-zion-cyan" />;
-                          ))}
+                          )}
                           <span className="ml-1">& Up</span>;
                         </div>;
                       )}
                     </Button>;
-                  ))}
+                  )}
                 </div>
               </div>
               <Button
@@ -372,7 +368,7 @@ if ( {) {
                   setSelectedCategory("all")
                   setCurrentPriceFilter([priceRange.min, priceRange.max]);
                   setSelectedRating(null)
-                }}
+                }
               >
                 Reset Filters
               </Button>
@@ -382,8 +378,7 @@ if ( {) {
             <div className="bg-zion-blue-dark rounded-lg p-4 mb-6 border border-zion-blue-light">
               <div className="flex flex-col md:flex-row gap-4">
                 <div className="relative flex-grow">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
-              >;
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
                 Reset Filters;
               </Button>;
             </div>;
@@ -401,7 +396,7 @@ if ( {) {
                     onChange={(e: React && React.ChangeEvent<HTMLInputElement>) => {;
                       console && console.log("Search query:", e && e.target.value);
                       setSearchQuery(e && e.target.value);
-                    }}
+                    }
                     className="pl-10 bg-zion-blue border border-zion-blue-light text-white"
                   />
                 </div>
@@ -410,7 +405,7 @@ if ( {) {
                     variant="outline"
                     size="icon"
                     onClick={() => setView("grid")}
-                    className={`${view === "grid" ? "bg-zion-purple/20 border-zion-purple text-zion-purple" : "border-zion-blue-light text-zion-slate"}`}
+                    className={`${view = = "grid" ? "bg-zion-purple/20 border-zion-purple text-zion-purple" : "border-zion-blue-light text-zion-slate"}`}
                   >;
                     <LayoutGrid className="h-4 w-4" />;
                   </Button>;
@@ -418,7 +413,7 @@ if ( {) {
                     variant="outline"
                     size="icon"
                     onClick={() => setView("list")}
-                    className={`${view === "list" ? "bg-zion-purple/20 border-zion-purple text-zion-purple" : "border-zion-blue-light text-zion-slate"}`}
+                    className={`${view = = "list" ? "bg-zion-purple/20 border-zion-purple text-zion-purple" : "border-zion-blue-light text-zion-slate"}`}
                   >
                     <List className="h-4 w-4" />
                   </Button>
@@ -428,13 +423,13 @@ if ( {) {
             <div className="mb-6">
               <p className="text-zion-slate-light">
                 Showing {filteredListings.length} results
-                {selectedCategory !== "all" && ` in ${selectedCategory}`}
+                {selectedCategory != "all" && ` in ${selectedCategory}`}
                 {searchQuery && ` for "${searchQuery}"`}
               </p>
             </div>
             {isLoading ? (
-              <div className={`grid gap-6 ${view === "grid" ? "grid-cols-1 md:grid-cols-2" : "grid-cols-1"}`}>
-                {[1, 2, 3, 4].map((i) => (
+              <div className={`grid gap-6 ${view = = "grid" ? "grid-cols-1 md:grid-cols-2" : "grid-cols-1"}`}>
+                {[1, 2, 3, 4].map(i) => (
                   <div key={i} className="rounded-lg overflow-hidden border border-zion-blue-light">
                     <Skeleton className="h-48 w-full bg-zion-blue-light/20" />
                     <div className="p-4">
@@ -448,11 +443,11 @@ if ( {) {
                       </div>
                     </div>
                   </div>
-                ))}
+                )}
               </div>
             ) : filteredListings.length > 0 ? (
-              <div className={`grid gap-6 ${view === "grid" ? "grid-cols-1 md:grid-cols-2" : "grid-cols-1"}`}>
-                {filteredListings.map((listing) => (
+              <div className={`grid gap-6 ${view = = "grid" ? "grid-cols-1 md:grid-cols-2" : "grid-cols-1"}`}>
+                {filteredListings.map(listing) => (
                   <ProductListingCard
                     key={listing.id}
                   >;
@@ -465,14 +460,14 @@ if ( {) {
             <div className="mb-6">;
               <p className="text-zion-slate-light">;
                 Showing {filteredListings && filteredListings.length} results;
-                {selectedCategory !== "all" && ` in ${selectedCategory}`}
+                {selectedCategory != "all" && ` in ${selectedCategory}`}
                 {searchQuery && ` for "${searchQuery}"`}
               </p>;
             </div>;
 
             {isLoading ? (;
-              <div className={`grid gap-6 ${view === "grid" ? "grid-cols-1 md:grid-cols-2" : "grid-cols-1"}`}>;
-                {[1, 2, 3, 4].map((i) => (;
+              <div className={`grid gap-6 ${view = = "grid" ? "grid-cols-1 md:grid-cols-2" : "grid-cols-1"}`}>;
+                {[1, 2, 3, 4].map(i) => (;
                   <div key={i} className="rounded-lg overflow-hidden border border-zion-blue-light">;
                     <Skeleton className="h-48 w-full bg-zion-blue-light/20" />;
                     <div className="p-4">;
@@ -486,18 +481,18 @@ if ( {) {
                       </div>;
                     </div>;
                   </div>;
-                ))}
+                )}
               </div>;
             ) : filteredListings && filteredListings.length > 0 ? (;
-              <div className={`grid gap-6 ${view === "grid" ? "grid-cols-1 md:grid-cols-2" : "grid-cols-1"}`}>;
-                {filteredListings && filteredListings.map((listing) => (;
+              <div className={`grid gap-6 ${view = = "grid" ? "grid-cols-1 md:grid-cols-2" : "grid-cols-1"}`}>;
+                {filteredListings && filteredListings.map(listing) => (;
                   <ProductListingCard
                     key={listing && listing.id}
                     listing={listing}
                     view={view}
                     onRequestQuote={handleRequestQuote}
                   />;
-                ))}
+                )}
               </div>
             ) : (
               <div className="text-center py-20">
@@ -511,7 +506,7 @@ if ( {) {
                     setCurrentPriceFilter([priceRange.min, priceRange.max]);
 
                     setSelectedRating(null)
-                  }}
+                  }
                   className="border-zion-purple text-zion-purple hover:bg-zion-purple/10";
                 >;
                   Clear all filters;
@@ -523,7 +518,7 @@ if ( {) {
       </div>;
     </div>;
   );
-                  />))}
+                  />)}
               </div>) : (
               <div className="text - center py - 20">;
                 <h3 className="text - xl font - bold text - white mb - 2">No listings found</h3>;
@@ -535,7 +530,7 @@ if ( {) {
                     setSelectedCategory ("all");
                     setCurrentPriceFilter ([price_range.min, price_range.max]);
                     setSelectedRating (null);
-                  }}
+                  }
                   className="border - zion - purple text - zion - purple hover:bg - zion - purple / 10";
                 >;
                   Clear all filters;
@@ -545,4 +540,3 @@ if ( {) {
         </div>;
       </div>;
     </div>);
-}

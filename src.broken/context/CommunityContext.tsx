@@ -6,5 +6,3 @@ export function CommunityContext() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

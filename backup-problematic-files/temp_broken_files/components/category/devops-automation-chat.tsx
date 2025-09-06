@@ -7,7 +7,7 @@ const DevopsAutomationChat: NextPage = () => {
         <title>DevopsAutomationChat - Zion Tech Solutions</title>
         <meta name=&quot;description&quot; content=&quot;DevopsAutomationChat blog post&quot; />
       </Head>
-      
+
       <main>
         <h1>DevopsAutomationChat</h1>
         <p>Blog content coming soon...</p>
@@ -15,5 +15,5 @@ const DevopsAutomationChat: NextPage = () => {
       </main>
     </div>
   )
-},
+,
 export default DevopsAutomationChat,

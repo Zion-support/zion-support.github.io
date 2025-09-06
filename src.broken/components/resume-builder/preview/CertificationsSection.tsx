@@ -6,5 +6,3 @@ export function CertificationsSection() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

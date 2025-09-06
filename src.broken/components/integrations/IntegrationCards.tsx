@@ -6,5 +6,3 @@ export function IntegrationCards() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

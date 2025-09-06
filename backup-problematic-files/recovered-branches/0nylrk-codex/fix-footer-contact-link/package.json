@@ -1,4 +1,4 @@
-{
+
   "name": "project",
   "private": true,
   "version": "0.0.0",
@@ -82,4 +82,3 @@
     "@testing-library/jest-dom": "^6.1.2",
     "jsdom": "^24.0.0"
   }
-}

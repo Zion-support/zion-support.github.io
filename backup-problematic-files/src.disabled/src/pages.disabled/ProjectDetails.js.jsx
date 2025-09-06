@@ -7,6 +7,5 @@ const ProjectDetails.js = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default ProjectDetails.js;

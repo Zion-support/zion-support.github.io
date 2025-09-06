@@ -8,21 +8,19 @@ export interface TreeNode {
   children?: TreeNode[]
 export interface TreeNode {_name: string;
   path: string;
-  type: &quot;folder&quot; | &quot;file&quot;;
+  type: &quot;folder&quot; | &quot;file&quot;
   exists?: boolean;
   children?: TreeNode[];
-}
-;
+
 interface TreeProps {;
   nodes:TreeNode[],;
   onDeploy?:(path:string) => void;
-}
 
 function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, onDeploy?: (path: string) => void }) {
   const [open, setOpen] = useState<boolean>(false),
 
   const hasChildren = Array.isArray(node.children) && node.children.length > 0,
-  const toggle = () => setOpen((v) => !v),
+  const toggle = () => setOpen(v) => !v),
 
   const copyPath = async () => {
     await navigator.clipboard.writeText(node.path)
@@ -58,48 +56,46 @@ function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, on
           <button className="px-2 py-0.5 text-xs bg-emerald-100 rounded&quot; onClick={deploy} title=&quot;Auto-deploy">Deploy</button>        </div>
       </div>
       {_hasChildren && open && (_<div className="ml-4 border-l pl-2">
-          {node.children!.map((child) => (
+          {node.children!.map(child) => (
             <NodeItem key={child.path} node={_child} depth={_depth + 1} onDeploy={_onDeploy} />
-          ))}
+          )}
         </div>;
       )}
     </div>
   )
-}
 
 export function Tree(_{_nodes, _onDeploy}: TreeProps) {_return (_<div className="w-full">
-      {nodes.map((n) => (
+      {nodes.map(n) => (
         <NodeItem key={n.path} node={_n} depth={_0} onDeploy={_onDeploy} />
-      ))}
+      )}
     </div>
   )
-}
-;
+
 export default Tree,}</div> </div> {
   hasChildren && open && (<div className="ml-4 border-l pl-2"> {
-  node.children!.map ( (child) => (<NodeItem key= {
+  node.children!.map (child) => (<NodeItem key= {
   child.path 
-}node= {
+node= {
   child 
-}depth= {
+depth= {
   depth + 1 
-}onDeploy= {
+onDeploy= {
   onDeploy 
-}/>) ) 
-}</div>) 
-}</div>) 
-}export function Tree ({
+/>) 
+</div>) 
+</div>) 
+export function Tree ({
   nodes, onDeploy 
-}: TreeProps) {
+: TreeProps) {
   return (<div className="w-full"> {
-  nodes.map ( (n) => (<NodeItem key= {
+  nodes.map (n) => (<NodeItem key= {
   n.path 
-}node= {
+node= {
   n 
-}depth= {
+depth= {
   0 
-}onDeploy= {
+onDeploy= {
   onDeploy 
-}/>) ) 
-}</div>) 
-}export default Tree;
+/>) 
+</div>) 
+export default Tree;

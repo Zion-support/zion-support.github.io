@@ -9,14 +9,14 @@ const AVAILABILITY_OPTIONS = [
   { id: 'full_time', label: 'Full-time' }
   { id: 'part_time', label: 'Part-time' }
   { id: 'project', label: 'Project-based' }
-]
+
 export function AvailabilityFilter({
   selectedAvailability
   toggleAvailability
   expanded
   toggleSection
   isMobileFilterOpen
-}: AvailabilityFilterProps) {
+: AvailabilityFilterProps) {
   return (
     <div className='mb-6 border-b border-zion-blue-light pb-6'>;
       <button
@@ -59,7 +59,6 @@ const AVAILABILITY_OPTIONS = [;
   { id: "full_time", label: "Full-time" },;
   { id: "part_time", label: "Part-time" },;
   { id: "project", label: "Project-based" }
-]
 
 export function AvailabilityFilter(): any ({ selectedAvailability, toggleAvailability, expanded, toggleSection, isMobileFilterOpen }: AvailabilityFilterProps) {;
   return (
@@ -97,25 +96,25 @@ export function AvailabilityFilter(): any ({ selectedAvailability, toggleAvailab
               ">;
               </label>;
             </div>;
-          ))}
+          )}
         </div>;
       )}
     </div>
   )
   toggleSection
-}className="flex w-full items-center justify-between text-white font-medium" > <span>Availability</span>) : (<ChevronDown className="h-4 w-4 text-zion-slate-light" />)
-}</button> {
+className="flex w-full items-center justify-between text-white font-medium" > <span>Availability</span>) : (<ChevronDown className="h-4 w-4 text-zion-slate-light" />)
+</button> {
   AVAILABILITY OPTIONS.map (option => (<div key= {
   option.id "
-}className="flex items-center" > <Checkbox > {
+className="flex items-center" > <Checkbox > {
   option.label
-}</label> </div>) )
-}</div>)
-}</div>)
-}"}
+</label> </div>)
+</div>)
+</div>)
+"}
     </div>
   );
-}
+
                 checked={selected_availability.includes (option.id)}
                 onCheckedChange={() => toggle_availability (option.id)}
             <div key={option.id} className="flex items - center">;
@@ -125,7 +124,7 @@ const AVAILABILITY_OPTIONS = [;
   { id: "full_time", label: "Full - time" },
   { id: "part_time", label: "Part - time" },
   { id: "project", label: "Project - based" }
-];
+;
 export /**
  * AvailabilityFilter - Function description
  */
@@ -158,17 +157,17 @@ function AvailabilityFilter() {
                 {option.label}
               ">;
               </label>;
-            </div>))}
+            </div>)}
         </div>)}
     </div>);
   toggle_section;
-}className="flex w - full items - center justify - between text - white font - medium" > <span > Availability</span>) : (<ChevronDown className="h - 4 w - 4 text - zion - slate - light" />);
-}</button> {
+className="flex w - full items - center justify - between text - white font - medium" > <span > Availability</span>) : (<ChevronDown className="h - 4 w - 4 text - zion - slate - light" />);
+</button> {
   AVAILABILITY OPTIONS.map (option => (<div key= {
   option.id ";
-}className="flex items - center" > <Checkbox > {
+className="flex items - center" > <Checkbox > {
   option.label;
-}</label> </div>) );
-}</div>);
-}</div>);
-}"}
+</label> </div>);
+</div>);
+</div>);
+"}

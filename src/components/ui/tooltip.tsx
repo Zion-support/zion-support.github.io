@@ -3,7 +3,6 @@ import React, { createContext, useContext, useState } from 'react';
 interface TooltipContextType {
   showTooltip: (content: string, target: HTMLElement) => void;
   hideTooltip: () => void;
-}
 
 const TooltipContext = createContext<TooltipContextType | undefined>(undefined);
 
@@ -24,19 +23,18 @@ export function TooltipProvider({ children }: { children: React.ReactNode }) {
   };
 
   return (
-    <TooltipContext.Provider value={{ showTooltip, hideTooltip }}>
+    <TooltipContext.Provider value={ showTooltip, hideTooltip }>
       {children}
       {tooltip && (
         <div
           className="fixed z-50 px-2 py-1 text-sm text-white bg-gray-900 rounded shadow-lg"
-          style={{ left: tooltip.x, top: tooltip.y, transform: 'translateX(-50%)' }}
+          style={ left: tooltip.x, top: tooltip.y, transform: 'translateX(-50%)' }
         >
           {tooltip.content}
         </div>
       )}
     </TooltipContext.Provider>
   );
-}
 
 export function Tooltip({ children, content }: { children: React.ReactNode; content: string }) {
   const context = useContext(TooltipContext);
@@ -50,12 +48,9 @@ export function Tooltip({ children, content }: { children: React.ReactNode; cont
       {children}
     </div>
   );
-}
 
 export function TooltipTrigger({ children }: { children: React.ReactNode }) {
   return <>{children}</>;
-}
 
 export function TooltipContent({ children }: { children: React.ReactNode }) {
   return <>{children}</>;
-}

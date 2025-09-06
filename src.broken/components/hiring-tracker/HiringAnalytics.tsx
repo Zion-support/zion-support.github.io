@@ -6,5 +6,3 @@ export function HiringAnalytics() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

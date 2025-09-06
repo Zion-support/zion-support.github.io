@@ -44,7 +44,7 @@ import {
   Brain
   DollarSign
   Rocket
-} from 'lucide-react';
+ from 'lucide-react';
 const itServices = [{
     title: 'Cloud Infrastructure Management'
     description: 'Comprehensive cloud solutions including AWS, Azure, and Google Cloud Platform management.'
@@ -513,14 +513,14 @@ title: 'AI-Powered IT Operations (AIOps)'
     category: 'Disaster Recovery'
     popular: true
   }
-];
+;
 const technologies = [{ name: 'Cloud Platforms', icon: Cloud, description: 'AWS, Azure, GCP, DigitalOcean' }
   { name: 'Containerization', icon: Server, description: 'Docker, Kubernetes, OpenShift' }
   { name: 'Security Tools', icon: Shield, description: 'SIEM, WAF, IAM, Encryption' }
   { name: 'Monitoring', icon: BarChart3, description: 'Prometheus, Grafana, ELK Stack' }
   { name: 'Databases', icon: Database, description: 'PostgreSQL, MongoDB, Redis' }
   { name: 'Networking', icon: Network, description: 'Cisco, Fortinet, SD-WAN' }
-];
+;
 const benefits = [{
     icon: Clock
     title: 'Reduced Downtime'
@@ -545,7 +545,7 @@ const benefits = [{
     description: 'Flexible and scalable solutions'
     stat: 'Unlimited'
   }
-];
+;
 const supportLevels = [{
     name: 'Basic Support'
     description: 'Standard business hours support'
@@ -600,7 +600,7 @@ import {;
   Brain,;
   DollarSign,;
   Rocket;
-} from 'lucide-react';
+ from 'lucide-react';
 const itServices = [{;
     title: 'Cloud Infrastructure Management',;
     description: 'Comprehensive cloud solutions including AWS, Azure, and Google Cloud Platform management.',;
@@ -1069,14 +1069,14 @@ title: 'AI-Powered IT Operations (AIOps)',;
     category: 'Disaster Recovery',;
     popular: true;
   }
-];
+;
 const technologies = [{ name: 'Cloud Platforms', icon: Cloud, description: 'AWS, Azure, GCP, DigitalOcean' },;
   { name: 'Containerization', icon: Server, description: 'Docker, Kubernetes, OpenShift' },;
   { name: 'Security Tools', icon: Shield, description: 'SIEM, WAF, IAM, Encryption' },;
   { name: 'Monitoring', icon: BarChart3, description: 'Prometheus, Grafana, ELK Stack' },;
   { name: 'Databases', icon: Database, description: 'PostgreSQL, MongoDB, Redis' },;
   { name: 'Networking', icon: Network, description: 'Cisco, Fortinet, SD-WAN' }
-];
+;
 const benefits = [{;
     icon: Clock,;
     title: 'Reduced Downtime',;
@@ -1101,7 +1101,7 @@ const benefits = [{;
     description: 'Flexible and scalable solutions',;
     stat: 'Unlimited';
   }
-];
+;
 const supportLevels = [{;
     name: 'Basic Support',;
     description: 'Standard business hours support',;
@@ -1120,7 +1120,7 @@ const supportLevels = [{;
     features: ['Dedicated Team', 'SLA Guarantees', 'Custom Monitoring', 'Real-time Reports'],;
     pricing: 'Custom Pricing';
   }
-];
+;
 export default function ITServicesPage() {;
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
@@ -1580,14 +1580,14 @@ title: 'AI - Powered IT Operations (AIOps)',
     category: 'Disaster Recovery',
     popular: true;
   }
-];
+;
 const technologies = [{ name: 'Cloud Platforms', icon: Cloud, description: 'AWS, Azure, GCP, DigitalOcean' },
   { name: 'Containerization', icon: Server, description: 'Docker, Kubernetes, OpenShift' },
   { name: 'Security Tools', icon: Shield, description: 'SIEM, WAF, IAM, Encryption' },
   { name: 'Monitoring', icon: BarChart3, description: 'Prometheus, Grafana, ELK Stack' },
   { name: 'Databases', icon: Database, description: 'PostgreSQL, MongoDB, Redis' },
   { name: 'Networking', icon: Network, description: 'Cisco, Fortinet, SD - WAN' }
-];
+;
 const benefits = [{
     icon: Clock,
     title: 'Reduced Downtime',
@@ -1612,7 +1612,7 @@ const benefits = [{
     description: 'Flexible and scalable solutions',
     stat: 'Unlimited';
   }
-];
+;
 const support_levels = [{
     name: 'Basic Support',
     description: 'Standard business hours support',
@@ -1631,7 +1631,7 @@ const support_levels = [{
     features: ['Dedicated Team', 'SLA Guarantees', 'Custom Monitoring', 'Real - time Reports'],
     pricing: 'Custom Pricing';
   }
-];
+;
 export default /**
  * ITServicesPage - Function description
  */
@@ -1653,9 +1653,9 @@ function ITServicesPage() {
                   </div>;
                   <div className="container mx-auto px-4 relative z-10">;
                   <motion&& motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0 && 0.8 }
             className="text-center">;
 <div className="flex items-center justify-center mb-6">;
                   <Server className="h-16 w-16 text-green-400 mr-4" />;
@@ -1685,10 +1685,10 @@ function ITServicesPage() {
                   <div className="container mx-auto px-4">;
                   <motion&& motion.div
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}>;
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0 && 0.8 }
+            viewport={ once: true }>;
 <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">;
               Our IT Solutions;
             </h2>;
@@ -1697,7 +1697,7 @@ function ITServicesPage() {
             </p>;
                   </motion && motion.div>;
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {itServices && itServices.map((service, index) => {;
+            {itServices && itServices.map(service, index) => {;
               const IconComponent = service && service.icon;
               return (
                 <motion&& motion.div
@@ -1771,7 +1771,7 @@ import {
   BookOpen,
   Rocket,
   Laptop;
-} from 'lucide-react';
+ from 'lucide-react';
 import Layout from '../components/Layout';
 const itServices = [
   {
@@ -1787,7 +1787,7 @@ const itServices = [
     link: '/contact'
   }
 import Layout from '../components / Layout';
-;
+
 const it_services = [;
   {
     title: 'Cloud Infrastructure Management',
@@ -1852,7 +1852,7 @@ const it_services = [;
     marketPrice: '$2,500/month'
     link: '/contact'
   }
-];
+;
 const industries = [
   { name: 'Healthcare', icon: Shield, description: 'Secure and compliant IT solutions for healthcare organizations' }
   { name: 'Finance', icon: TrendingUp, description: 'Robust IT infrastructure for financial services' }
@@ -1860,14 +1860,13 @@ const industries = [
   { name: 'Retail', icon: ShoppingCart, description: 'E-commerce and retail technology solutions' }
   { name: 'Education', icon: GraduationCap, description: 'Educational technology and learning management systems' }
   { name: 'Government', icon: Globe, description: 'Secure government IT solutions and compliance' }
-]
 
 export default function ITServices() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('all');
-  useEffect(() => {
+  useEffect() => {
 
-    const timer = setTimeout(() => setIsLoaded(true), 100);
+    const timer = setTimeout() => setIsLoaded(true), 100);
     return () => clearTimeout(timer);  }, []);
   const contact: ContactInfo = {
     phone: '+1 302 464 0950'
@@ -2137,9 +2136,9 @@ export default function ITServices() {
     }
   ];
   const filteredServices =
-    selectedCategory === 'all'
+    selectedCategory = = 'all'
       ? services
-      : services.filter(service => service.category === selectedCategory);
+      : services.filter(service => service.category = = selectedCategory);
 
   return (
     <Layout>
@@ -2187,7 +2186,7 @@ export default function ITServices() {
                     key={category && category.id}
                     onClick={() => setSelectedCategory(category && category.id)}
                     className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${;
-                      selectedCategory === category && category.id;
+                      selectedCategory = = category && category.id;
                         ? 'bg-green-600 text-white';
                         : 'bg-slate-800 text-slate-300 hover:bg-slate-700';
               </div>
@@ -2197,10 +2196,10 @@ export default function ITServices() {
           <section className='py-16 px-4' role='main'>;
             <div className='max-w-7xl mx-auto'>;
               <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>;
-                {filteredServices && filteredServices.map((service, index) => (;
+                {filteredServices && filteredServices.map(service, index) => (;
                   <div                    key={service && service.id}
                     className={`p-6 bg-slate-900/60 rounded-xl border border-white/10 hover:border-green-500/40 transition-all duration-300 hover:scale-105 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-                    style={{ transitionDelay: `${index * 100}ms` }}
+                    style={ transitionDelay: `${index * 100}ms` }
                   >;
                     {service && service.popular && (;
                       <div className='absolute -top-2 -right-2 bg-green-600 text-white text-xs font-bold px-2 py-1 rounded-full'>;
@@ -2216,11 +2215,11 @@ export default function ITServices() {
                         Key Features:
                       </h4>
                       <ul className='text-slate-400 text-sm space-y-1'>
-                        {service.features.map((feature, featureIndex) => (
+                        {service.features.map(feature, featureIndex) => (
                           <li key={featureIndex} className='flex items-center'>
                             <span className='w-1.5 h-1.5 bg-green-400 rounded-full mr-2 flex-shrink-0'></span>                            {feature}
                           </li>
-                        ))}
+                        )}
                       </ul>
                     </div>
                     <div className='mb-4'>
@@ -2228,12 +2227,12 @@ export default function ITServices() {
                         Benefits:
                       </h4>
                       <div className='flex flex-wrap gap-1'>
-                        {service.benefits.map((benefit, benefitIndex) => (
+                        {service.benefits.map(benefit, benefitIndex) => (
                           <span
                             key={benefitIndex}
                             className='text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded'>                            {benefit}
                           </span>;
-                        ))}
+                        )}
                       </div>
                     </div>
                     <div className='flex items-center justify-between mb-4'>
@@ -2257,7 +2256,7 @@ export default function ITServices() {
 <div className="absolute inset-0">
                   <div className="absolute top-20 left-10 w-72 h-72 bg-green-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse">
                   </div>
-                ))}
+                )}
               </div>
             </div>
           </section>
@@ -2285,7 +2284,7 @@ export default function ITServices() {
                     <button className='w-full py-2 bg-green-600 hover:bg-green-700 rounded-lg font-semibold transition-colors'>                      Learn More;
                     </button>;
                   </div>;
-                ))}
+                )}
               </div>;
             </div>;
           </section>;
@@ -2422,10 +2421,10 @@ export default function ITServices() {
         <section className="py-16 px-4">;
           <div className="max-w-7xl mx-auto">;
             <motion&& motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }
+              viewport={ once: true }
               className="text-center mb-12"
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Our IT Services</h2>
@@ -2434,15 +2433,15 @@ export default function ITServices() {
               </p>
             </motion.div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {itServices.map((service, index) => (
+              {itServices.map(service, index) => (
                 <motion.div
                   key={index}
                   className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
-                  viewport={{ once: true }}
-whileHover={{ y: -5 }} ">
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0 && 0.8, delay: index * 0 && 0.1 }
+                  viewport={ once: true }
+whileHover={ y: -5 } ">
                   <div className="flex items-center justify-between mb-4">
                   <div className="text-green-600 group-hover:text-emerald-600 transition-colors">
                   <IconComponent className="w-10 h-10" />
@@ -2460,12 +2459,12 @@ whileHover={{ y: -5 }} ">
                   <div className="mb-4">
 <h4 className="font-semibold text-gray-900 mb-2 text-sm">Key "Features": </h4>
                   <ul className="space-y-1">
-                      {service.features.map((feature, featureIndex) => (
+                      {service.features.map(feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-xs text-gray-600">
 <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
                           {feature}
                         </li>;
-                      ))}
+                      )}
                     </ul>;
                   </div>;
                   <div className="mb-4">;
@@ -2488,24 +2487,24 @@ whileHover={{ y: -5 }} ">
                   <div className="container mx-auto px-4">;
                   <motion&& motion.div
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}>;
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0 && 0.8 }
+            viewport={ once: true }>;
 <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Technologies We Work With</h2>;
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">;
               We leverage cutting-edge technologies to deliver robust IT solutions.;
             </p>;
                   </motion && motion.div>;
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {technologies && technologies.map((tech, index) => {;
+            {technologies && technologies.map(tech, index) => {;
               const IconComponent = tech && tech.icon;
               return (
                 <motion&& motion.div
                   key={index}
 className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }} viewport={{ once: true }}">;
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 } transition={ duration: 0 && 0.8, delay: index * 0 && 0.1 } viewport={ once: true }">;
                   <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">;
                   <IconComponent className="w-8 h-8 text-green-600" />;
                   </div>;
@@ -2526,26 +2525,26 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                   <div className="container mx-auto px-4">;
                   <motion&& motion.div
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}>;
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0 && 0.8 }
+            viewport={ once: true }>;
 <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Why Choose Our IT Services?</h2>;
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">;
               Proven expertise and measurable results for your technology infrastructure.;
             </p>;
                   </motion && motion.div>;
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-            {benefits && benefits.map((benefit, index) => {;
+            {benefits && benefits.map(benefit, index) => {;
               const IconComponent = benefit && benefit.icon;
               return (
                 <motion&& motion.div
                   key={index}
                   className="text-center"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
-                  viewport={{ once: true }}>;
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0 && 0.8, delay: index * 0 && 0.1 }
+                  viewport={ once: true }>;
                   <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">;
                   <IconComponent className="w-8 h-8 text-green-600" />;
                   </div>;
@@ -2569,26 +2568,26 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                   <div className="container mx-auto px-4">;
                   <motion&& motion.div
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}>;
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0 && 0.8 }
+            viewport={ once: true }>;
 <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Support Levels</h2>;
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">;
               Choose the support level that best fits your business needs.;
             </p>;
                   </motion && motion.div>;
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
-            {supportLevels && supportLevels.map((level, index) => (;
+            {supportLevels && supportLevels.map(level, index) => (;
               <motion&& motion.div
                 key={index}
                 className={`p-8 rounded-xl shadow-lg ${
-                  index === 1 ? 'bg-green-50 border-2 border-green-200' : 'bg-white'
+                  index = = 1 ? 'bg-green-50 border-2 border-green-200' : 'bg-white'
                 }`}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, y: 30 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.8, delay: index * 0.1 }
+                viewport={ once: true }
               >
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">
                   {level.name}
@@ -2717,9 +2716,9 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
     }
   ];
 
-  const filteredServices = selectedCategory === 'all' 
+  const filteredServices = selectedCategory = = 'all' 
     ? services 
-    : services.filter(service => service.category === selectedCategory);
+    : services.filter(service => service.category = = selectedCategory);
 
   return (
     <>
@@ -2731,7 +2730,7 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href={`${contact.site}/it-services`} />
       </Head>
-      
+
       <ErrorBoundary level="page">
         <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
           {/* Hero Section */}
@@ -2758,13 +2757,13 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                     key={category.id}
                     on_click={() => setSelectedCategory (category.id)}
                     className={`px - 6 py - 3 rounded - lg font - semibold transition - all duration - 300 ${
-                      selected_category === category.id;
+                      selected_category = = category.id;
                         ? 'bg - green - 600 text - white';
                         : 'bg - slate - 800 text - slate - 300 hover:bg - slate - 700';
                     }`}
                   >;
                     {category.name} ({category.count});
-                  </button>))}
+                  </button>)}
               </div>;
             </div>;
           </section>;
@@ -2772,10 +2771,10 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
           <section className='py-16 px-4' role='main'>;
             <div className='max-w-7xl mx-auto'>;
               <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>;
-                {filteredServices && filteredServices.map((service, index) => (;
+                {filteredServices && filteredServices.map(service, index) => (;
                   <div                    key={service && service.id}
                     className={`p-6 bg-slate-900/60 rounded-xl border border-white/10 hover:border-green-500/40 transition-all duration-300 hover:scale-105 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-                    style={{ transitionDelay: `${index * 100}ms` }}
+                    style={ transitionDelay: `${index * 100}ms` }
                   >;
                     {service && service.popular && (;
                       <div className='absolute -top-2 -right-2 bg-green-600 text-white text-xs font-bold px-2 py-1 rounded-full'>;
@@ -2793,37 +2792,37 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                         Key Features:;
                       </h4>;
                       <ul className='text-slate-400 text-sm space-y-1'>;
-                        {service && service.features.map((feature, featureIndex) => (;
+                        {service && service.features.map(feature, featureIndex) => (;
                           <li key={featureIndex} className='flex items-center'>;
                             <span className='w-1 && 1.5 h-1 && 1.5 bg-green-400 rounded-full mr-2 flex-shrink-0'></span>                            {feature}
                           </li>;
           <section className="py-16 px-4" role="main">
             <div className="max-w-7xl mx-auto">
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {filteredServices.map((service, index) => (
+                {filteredServices.map(service, index) => (
                   <div 
                     key={service.id}
                     className={`p-6 bg-slate-900/60 rounded-xl border border-white/10 hover:border-green-500/40 transition-all duration-300 hover:scale-105 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-                    style={{ transitionDelay: `${index * 100}ms` }}
+                    style={ transitionDelay: `${index * 100}ms` }
                   >
                     {service.popular && (
                       <div className="absolute -top-2 -right-2 bg-green-600 text-white text-xs font-bold px-2 py-1 rounded-full">
                         Popular
                       </div>
                     )}
-                    
+
                     <h3 className="text-xl font-bold mb-3">{service.name}</h3>
                     <p className="text-slate-300 mb-4 text-sm">{service.description}</p>
-                    
+
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-green-400 mb-2">Key Features:</h4>
                       <ul className="text-slate-400 text-sm space-y-1">
-                        {service.features.map((feature, featureIndex) => (
+                        {service.features.map(feature, featureIndex) => (
                           <li key={featureIndex} className="flex items-center">
                             <span className="w-1.5 h-1.5 bg-green-400 rounded-full mr-2 flex-shrink-0"></span>
                             {feature}
                           </li>
-                        ))}
+                        )}
                       </ul>
                     </div>
 
@@ -2832,12 +2831,12 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                         Benefits:;
                       </h4>;
                       <div className='flex flex-wrap gap-1'>;
-                        {service && service.benefits.map((benefit, benefitIndex) => (;
+                        {service && service.benefits.map(benefit, benefitIndex) => (;
                           <span
                             key={benefitIndex}
                             className='text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded'>                            {benefit}
                           </span>;
-                        ))}
+                        )}
                       </div>;
                     </div>;
 
@@ -2853,7 +2852,7 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                     <button className='w-full py-2 bg-green-600 hover:bg-green-700 rounded-lg font-semibold transition-colors'>                      Learn More;
                     </button>;
                   </div>;
-                ))}
+                )}
               </div>
             </div>
           </section>
@@ -2893,11 +2892,11 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                   </p>
                 </div>
                   <ul className="space-y-3 mb-8">
-                  {level.features.map((feature, featureIndex) => (
+                  {level.features.map(feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-600">
                   <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
-                transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
-                viewport={{ once: true }}>;
+                transition={ duration: 0 && 0.8, delay: index * 0 && 0.1 }
+                viewport={ once: true }>;
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">;
                   {level && level.name}
                 </h3>;
@@ -2908,32 +2907,32 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                   {level && level.pricing}
                 </div>;
                   <ul className="space-y-3 mb-8">;
-                  {level && level.features.map((feature, featureIndex) => (;
+                  {level && level.features.map(feature, featureIndex) => (;
                     <li key={featureIndex} className="flex items-center text-gray-600">;
                   <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />;
                       {feature}
                     </li>;
-                  ))}
+                  )}
                 </ul>;
                   <Link
                   href="/contact"
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors inline-flex items-center justify-center ${
-                    index === 1
-? 'bg-green-600 hover: bg-green-700 text-white'
+                    index = = 1
+ 'bg-green-600 hover: bg-green-700 text-white'
                       : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
                   }`}>;
                   <span>Choose Plan</span>;
                   <ArrowRight className="w-4 h-4 ml-2" />;
                   </Link>;
                   </motion && motion.div>;
-            ))}
+            )}
           <section className='py - 16 px - 4' role='main'>;
             <div className='max - w-7xl mx - auto'>;
               <div className='grid md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>;
-                {filtered_services.map ((service, index) => (
+                {filtered_services.map (service, index) => (
                   <div                    key={service.id}
                     className={`p - 6 bg - slate - 900 / 60 rounded - xl border border - white / 10 hover:border - green - 500 / 40 transition - all duration - 300 hover:scale - 105 ${is_loaded ? 'opacity - 100 translate - y-0' : 'opacity - 0 translate - y-8'}`}
-                    style={{ transition_delay: `${index * 100}ms` }}
+                    style={ transition_delay: `${index * 100}ms` }
                   >;
                     {service.popular && (
                       <div className='absolute -top - 2 -right - 2 bg - green - 600 text - white text - xs font - bold px - 2 py - 1 rounded - full'>;
@@ -2948,10 +2947,10 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                         Key Features:;
                       </h4>;
                       <ul className='text - slate - 400 text - sm space - y-1'>;
-                        {service.features.map ((feature, feature_index) => (
+                        {service.features.map (feature, feature_index) => (
                           <li key={feature_index} className='flex items - center'>;
                             <span className='w - 1.5 h - 1.5 bg - green - 400 rounded - full mr - 2 flex - shrink - 0'></span>                            {feature}
-                          </li>))}
+                          </li>)}
                       </ul>;
                     </div>;
                     <div className='mb - 4'>;
@@ -2959,12 +2958,12 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                         Benefits:;
                       </h4>;
                       <div className='flex flex - wrap gap - 1'>;
-                        {service.benefits.map ((benefit, benefit_index) => (
+                        {service.benefits.map (benefit, benefit_index) => (
                           <span;
                             key={benefit_index}
                             className='text - xs bg - slate - 800 text - slate - 300 px - 2 py - 1 rounded';
                           >                            {benefit}
-                          </span>))}
+                          </span>)}
                       </div>;
                     </div>;
                     <div className='flex items - center justify - between mb - 4'>;
@@ -2977,7 +2976,7 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                     </div>;
                     <button className='w - full py - 2 bg - green - 600 hover:bg - green - 700 rounded - lg font - semibold transition - colors'>                      Learn More;
                     </button>;
-                  </div>))}
+                  </div>)}
               </div>;
             </div>;
           </section>;
@@ -3118,10 +3117,10 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
         <section className="py - 16 px - 4">;
           <div className="max - w-7xl mx - auto">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, coordinate_y: 20 }
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
               className="text - center mb - 12";
             >;
               <h2 className="text - 3xl md:text - 4xl font - bold mb - 4">Our IT Services</h2>;
@@ -3130,15 +3129,15 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
               </p>;
             </motion.div>;
             <div className="grid md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
-              {it_services.map ((service, index) => (
+              {it_services.map (service, index) => (
                 <motion.div;
                   key={index}
                   className="bg - white p - 6 rounded - lg shadow - lg hover:shadow - xl transition - shadow";
-                  initial={{ opacity: 0, coordinate_y: 30 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-while_hover={{ coordinate_y: -5 }} ">;
+                  initial={ opacity: 0, coordinate_y: 30 }
+                  whileInView={ opacity: 1, coordinate_y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }
+                  viewport={ once: true }
+while_hover={ coordinate_y: -5 } ">;
                   <div className="flex items - center justify - between mb - 4">;
                   <div className="text - green - 600 group - hover:text - emerald - 600 transition - colors">;
                   <IconComponent className="w - 10 h - 10" />;
@@ -3156,11 +3155,11 @@ while_hover={{ coordinate_y: -5 }} ">;
                   <div className="mb - 4">;
 <h4 className="font - semibold text - gray - 900 mb - 2 text - sm">Key "Features": </h4>;
                   <ul className="space - y-1">;
-                      {service.features.map ((feature, feature_index) => (
+                      {service.features.map (feature, feature_index) => (
                         <li key={feature_index} className="flex items - center text - xs text - gray - 600">;
 <CheckCircle className="w - 3 h - 3 text - green - 500 mr - 2 flex - shrink - 0" />;
                           {feature}
-                        </li>))}
+                        </li>)}
                     </ul>;
                   </div>;
                   <div className="mb - 4">;
@@ -3183,10 +3182,10 @@ while_hover={{ coordinate_y: -5 }} ">;
                   <div className="container mx - auto px - 4">;
                   <motion.div;
             className="text - center mb - 16";
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, coordinate_y: 30 }
+            whileInView={ opacity: 1, coordinate_y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
           >;
 <h2 className="text - 3xl sm:text - 4xl font - bold text - gray - 900 mb - 4">Technologies We Work With</h2>;
             <p className="text - lg text - gray - 600 max - w-2xl mx - auto">;
@@ -3194,14 +3193,14 @@ while_hover={{ coordinate_y: -5 }} ">;
             </p>;
                   </motion.div>;
                   <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
-            {technologies.map ((tech, index) => {
+            {technologies.map (tech, index) => {
               const IconComponent = tech.icon;
               return (
                 <motion.div;
                   key={index}
 className="text - center p - 6 rounded - lg hover:bg - gray - 50 transition - colors;
-                  initial={{ opacity: 0, coordinate_y: 30 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }} transition={{ duration: 0.8, delay: index * 0.1 }} viewport={{ once: true }}">;
+                  initial={ opacity: 0, coordinate_y: 30 }
+                  whileInView={ opacity: 1, coordinate_y: 0 } transition={ duration: 0.8, delay: index * 0.1 } viewport={ once: true }">;
                   <div className="bg - green - 100 w - 16 h - 16 rounded - full flex items - center justify - center mx - auto mb - 4">;
                   <IconComponent className="w - 8 h - 8 text - green - 600" />;
                   </div>;
@@ -3221,10 +3220,10 @@ className="text - center p - 6 rounded - lg hover:bg - gray - 50 transition - co
                   <div className="container mx - auto px - 4">;
                   <motion.div;
             className="text - center mb - 16";
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, coordinate_y: 30 }
+            whileInView={ opacity: 1, coordinate_y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
           >;
 <h2 className="text - 3xl sm:text - 4xl font - bold text - gray - 900 mb - 4">Why Choose Our IT Services?</h2>;
             <p className="text - lg text - gray - 600 max - w-2xl mx - auto">;
@@ -3232,16 +3231,16 @@ className="text - center p - 6 rounded - lg hover:bg - gray - 50 transition - co
             </p>;
                   </motion.div>;
                   <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8">;
-            {benefits.map ((benefit, index) => {
+            {benefits.map (benefit, index) => {
               const IconComponent = benefit.icon;
               return (
                 <motion.div;
                   key={index}
                   className="text - center";
-                  initial={{ opacity: 0, coordinate_y: 30 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, coordinate_y: 30 }
+                  whileInView={ opacity: 1, coordinate_y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }
+                  viewport={ once: true }
                 >;
                   <div className="bg - green - 100 w - 16 h - 16 rounded - full flex items - center justify - center mx - auto mb - 4">;
                   <IconComponent className="w - 8 h - 8 text - green - 600" />;
@@ -3265,10 +3264,10 @@ className="text - center p - 6 rounded - lg hover:bg - gray - 50 transition - co
                   <div className="container mx - auto px - 4">;
                   <motion.div;
             className="text - center mb - 16";
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, coordinate_y: 30 }
+            whileInView={ opacity: 1, coordinate_y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
           >;
 <h2 className="text - 3xl sm:text - 4xl font - bold text - gray - 900 mb - 4">Support Levels</h2>;
             <p className="text - lg text - gray - 600 max - w-2xl mx - auto">;
@@ -3276,16 +3275,16 @@ className="text - center p - 6 rounded - lg hover:bg - gray - 50 transition - co
             </p>;
                   </motion.div>;
                   <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">;
-            {support_levels.map ((level, index) => (
+            {support_levels.map (level, index) => (
               <motion.div;
                 key={index}
                 className={`p - 8 rounded - xl shadow - lg ${
-                  index === 1 ? 'bg - green - 50 border - 2 border - green - 200' : 'bg - white';
+                  index = = 1 ? 'bg - green - 50 border - 2 border - green - 200' : 'bg - white';
                 }`}
-                initial={{ opacity: 0, coordinate_y: 30 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, coordinate_y: 30 }
+                whileInView={ opacity: 1, coordinate_y: 0 }
+                transition={ duration: 0.8, delay: index * 0.1 }
+                viewport={ once: true }
               >;
                   <h3 className="text - 2xl font - bold text - gray - 900 mb - 2">;
                   {level.name}
@@ -3297,24 +3296,24 @@ className="text - center p - 6 rounded - lg hover:bg - gray - 50 transition - co
                   {level.pricing}
                 </div>;
                   <ul className="space - y-3 mb - 8">;
-                  {level.features.map ((feature, feature_index) => (
+                  {level.features.map (feature, feature_index) => (
                     <li key={feature_index} className="flex items - center text - gray - 600">;
                   <CheckCircle className="w - 5 h - 5 text - green - 500 mr - 3 flex - shrink - 0" />;
                       {feature}
-                    </li>))}
+                    </li>)}
                 </ul>;
                   <Link;
                   href="/contact";
                   className={`w - full py - 3 px - 6 rounded - lg font - semibold transition - colors inline - flex items - center justify - center ${
-                    index === 1;
-? 'bg - green - 600 hover: bg - green - 700 text - white';
+                    index = = 1;
+ 'bg - green - 600 hover: bg - green - 700 text - white';
                       : 'bg - gray - 100 hover:bg - gray - 200 text - gray - 900';
                   }`}
                 >;
                   <span > Choose Plan</span>;
                   <ArrowRight className="w - 4 h - 4 ml - 2" />;
                   </Link>;
-                  </motion.div>))}
+                  </motion.div>)}
           </div>;
                   </div>;
                   </section>;
@@ -3322,10 +3321,10 @@ className="text - center p - 6 rounded - lg hover:bg - gray - 50 transition - co
       <section className="py-20 bg-gradient-to-r from-green-600 to-emerald-600 text-white">;
 <div className="container mx-auto px-4 text-center">;
                   <motion&& motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}>;
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0 && 0.8 }
+            viewport={ once: true }>;
 <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Optimize Your IT Infrastructure?</h2>;
             <p className="text-xl mb-8 max-w-2xl mx-auto">;
               Let our expert team help you build a robust, secure, and scalable IT environment.;
@@ -3346,10 +3345,10 @@ className="text - center p - 6 rounded - lg hover:bg - gray - 50 transition - co
         <div className="container mx-auto px-4">;
           <motion&& motion.div
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}>;
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0 && 0.8 }
+            viewport={ once: true }>;
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
               Get Started with IT Services Today;
             </h2>;
@@ -3360,10 +3359,10 @@ className="text - center p - 6 rounded - lg hover:bg - gray - 50 transition - co
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">;
             <motion&& motion.div
               className="text-center p-6 bg-white rounded-lg shadow-lg"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8, delay: 0 && 0.1 }}
-              viewport={{ once: true }}>;
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8, delay: 0 && 0.1 }
+              viewport={ once: true }>;
               <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">;
                 <MessageSquare className="w-8 h-8 text-green-600" />;
               </div>;
@@ -3375,10 +3374,10 @@ className="text - center p - 6 rounded - lg hover:bg - gray - 50 transition - co
             </motion && motion.div>;
             <motion&& motion.div
               className="text-center p-6 bg-white rounded-lg shadow-lg"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
-              viewport={{ once: true }}>;
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8, delay: 0 && 0.2 }
+              viewport={ once: true }>;
               <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">;
                 <Mail className="w-8 h-8 text-green-600" />;
               </div>;
@@ -3390,10 +3389,10 @@ className="text - center p - 6 rounded - lg hover:bg - gray - 50 transition - co
             </motion && motion.div>;
             <motion&& motion.div
               className="text-center p-6 bg-white rounded-lg shadow-lg"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8, delay: 0.3 }
+              viewport={ once: true }
             >
               <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Building className="w-8 h-8 text-green-600" />
@@ -3408,10 +3407,10 @@ className="text - center p - 6 rounded - lg hover:bg - gray - 50 transition - co
           </div>
           <motion.div
             className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-8 text-white text-center"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
           >
             <h3 className="text-2xl font-bold mb-4">Ready to Get Started?</h3>
             <p className="text-lg mb-6">
@@ -3430,14 +3429,14 @@ className="text - center p - 6 rounded - lg hover:bg - gray - 50 transition - co
       </section>
                   </div>
   );
-}
+
           </section>
         </main>
       </ErrorBoundary>
     </>
   )
-              transition={{ duration: 0 && 0.8, delay: 0 && 0.3 }}
-              viewport={{ once: true }}>;
+              transition={ duration: 0 && 0.8, delay: 0 && 0.3 }
+              viewport={ once: true }>;
               <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">;
                 <Building className="w-8 h-8 text-green-600" />;
               </div>;
@@ -3451,10 +3450,10 @@ className="text - center p - 6 rounded - lg hover:bg - gray - 50 transition - co
           </div>;
           <motion&& motion.div
             className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-8 text-white text-center"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}>;
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0 && 0.8 }
+            viewport={ once: true }>;
             <h3 className="text-2xl font-bold mb-4">Ready to Get Started?</h3>;
             <p className="text-lg mb-6">;
               Join 500+ successful businesses that trust Zion Tech Group for their IT infrastructure needs. Let&apos;s build the perfect technology solution for your business.;
@@ -3472,22 +3471,20 @@ className="text - center p - 6 rounded - lg hover:bg - gray - 50 transition - co
       </section>;
                   </div>;
   );
-}
 
           </section>;
         </main>;
       </ErrorBoundary>;
     </>;
   );
-}
-}
+
       <section className="py - 20 bg - gradient - to - r from - green - 600 to - emerald - 600 text - white">;
 <div className="container mx - auto px - 4 text - center">;
                   <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, coordinate_y: 30 }
+            whileInView={ opacity: 1, coordinate_y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
           >;
 <h2 className="text - 3xl md:text - 4xl font - bold mb - 6">Ready to Optimize Your IT Infrastructure?</h2>;
             <p className="text - xl mb - 8 max - w-2xl mx - auto">;
@@ -3509,10 +3506,10 @@ className="text - center p - 6 rounded - lg hover:bg - gray - 50 transition - co
         <div className="container mx - auto px - 4">;
           <motion.div;
             className="text - center mb - 16";
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, coordinate_y: 30 }
+            whileInView={ opacity: 1, coordinate_y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
           >;
             <h2 className="text - 3xl md:text - 4xl font - bold text - gray - 900 mb - 4">;
               Get Started with IT Services Today;
@@ -3524,10 +3521,10 @@ className="text - center p - 6 rounded - lg hover:bg - gray - 50 transition - co
           <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8 mb - 12">;
             <motion.div;
               className="text - center p - 6 bg - white rounded - lg shadow - lg";
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, coordinate_y: 30 }
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8, delay: 0.1 }
+              viewport={ once: true }
             >;
               <div className="bg - green - 100 w - 16 h - 16 rounded - full flex items - center justify - center mx - auto mb - 4">;
                 <MessageSquare className="w - 8 h - 8 text - green - 600" />;
@@ -3540,10 +3537,10 @@ className="text - center p - 6 rounded - lg hover:bg - gray - 50 transition - co
             </motion.div>;
             <motion.div;
               className="text - center p - 6 bg - white rounded - lg shadow - lg";
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, coordinate_y: 30 }
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8, delay: 0.2 }
+              viewport={ once: true }
             >;
               <div className="bg - green - 100 w - 16 h - 16 rounded - full flex items - center justify - center mx - auto mb - 4">;
                 <Mail className="w - 8 h - 8 text - green - 600" />;
@@ -3556,10 +3553,10 @@ className="text - center p - 6 rounded - lg hover:bg - gray - 50 transition - co
             </motion.div>;
             <motion.div;
               className="text - center p - 6 bg - white rounded - lg shadow - lg";
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, coordinate_y: 30 }
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8, delay: 0.3 }
+              viewport={ once: true }
             >;
               <div className="bg - green - 100 w - 16 h - 16 rounded - full flex items - center justify - center mx - auto mb - 4">;
                 <Building className="w - 8 h - 8 text - green - 600" />;
@@ -3574,10 +3571,10 @@ className="text - center p - 6 rounded - lg hover:bg - gray - 50 transition - co
           </div>;
           <motion.div;
             className="bg - gradient - to - r from - green - 600 to - emerald - 600 rounded - 2xl p - 8 text - white text - center";
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, coordinate_y: 30 }
+            whileInView={ opacity: 1, coordinate_y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
           >;
             <h3 className="text - 2xl font - bold mb - 4">Ready to Get Started?</h3>;
             <p className="text - lg mb - 6">;
@@ -3595,10 +3592,8 @@ className="text - center p - 6 rounded - lg hover:bg - gray - 50 transition - co
         </div>;
       </section>;
                   </div>);
-}
+
           </section>;
         </main>;
       </ErrorBoundary>;
     </>);
-}
-}

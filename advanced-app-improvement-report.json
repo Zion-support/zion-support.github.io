@@ -1,4 +1,4 @@
-{
+
   "timestamp": "2025-09-06T10:42:44.767Z",
   "totalDuration": 17470,
   "successfulTasks": 3,
@@ -12,4 +12,3 @@
     "seoOptimization": false,
     "monitoringSetup": true
   }
-}

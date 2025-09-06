@@ -6,7 +6,7 @@ import {
   Trophy,
   BadgePlus,
   BadgeDollarSign,;
-} from 'lucide-react';
+ from 'lucide-react';
 
 import {
   LucideIcon
@@ -16,7 +16,7 @@ import {
   Trophy
   BadgePlus
   BadgeDollarSign
-} from 'lucide-react'
+ from 'lucide-react'
 export type BadgeKey =
   | 'first_listing'
   | 'top_contributor'
@@ -80,11 +80,11 @@ export const badge_list: BadgeMeta[] = [;
     color: '#22C55E', // Soft Green
     bg: '#F2FCE2', // Soft Green
   }
-]
+
 export const getBadgeMeta = (key: BadgeKey) =>
-  badgeList.find(b => b.key === key)
+  badgeList.find(b => b.key = = key)
 export const getBadgeMeta = (key: BadgeKey) =>
-  badgeList.find((b) => b.key === key)
+  badgeList.find(b) => b.key = = key)
 
     key: 'first_listing',
     name: 'First Listing',
@@ -133,10 +133,9 @@ export const getBadgeMeta = (key: BadgeKey) =>
     color: '#22C55E', // Soft Green;
     bg: '#F2FCE2', // Soft Green;
   },
-];
+;
 
 export const getBadgeMeta = (key: BadgeKey) =>
-  badgeList && badgeList.find(b => b && b.key === key);
+  badgeList && badgeList.find(b => b && b.key = = key);
 export const getBadgeMeta = (key: BadgeKey) =>
-  badgeList && badgeList.find((b) => b && b.key === key);
-
+  badgeList && badgeList.find(b) => b && b.key = = key);

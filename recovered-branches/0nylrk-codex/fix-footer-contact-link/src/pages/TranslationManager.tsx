@@ -22,13 +22,13 @@ export default function TranslationManager() {
   const { translateContent, isTranslating } = useTranslationService();
   const [selectedNamespace, setSelectedNamespace] = useState("translation");
   const [searchQuery, setSearchQuery] = useState("");
-  const [translations, setTranslations] = useState<Record<string, any>>({});
+  const [translations, setTranslations] = useState<Record<string, any>({});
   const [filteredKeys, setFilteredKeys] = useState<string[]>([]);
   const [editingKey, setEditingKey] = useState<string | null>(null);
-  const [editedTranslations, setEditedTranslations] = useState<Record<string, Record<SupportedLanguage, string>>>({});
+  const [editedTranslations, setEditedTranslations] = useState<Record<string, Record<SupportedLanguage, string>>({});
   const [isSaving, setIsSaving] = useState(false);
   // Simulated translation data - in a real app, this would come from your backend
-  useEffect(() => {
+  useEffect() => {
     // For demo purposes, we're using the loaded translations from i18next
     const currentTranslations: Record<string, any> = {}
     supportedLanguages.forEach(lang => {
@@ -36,13 +36,13 @@ export default function TranslationManager() {
       if (res) {
         // Flatten nested objects for easier management
         const flattenObject = (obj: any, prefix = '') => {
-          return Object.keys(obj).reduce((acc, key) => {
+          return Object.keys(obj).reduce(acc, key) => {
             const pre = prefix.length ? `${prefix}.` : '';
             // Check condition
 if ( {) {
   $2
-}
-              Object.assign (acc, flatten_object (obj[key], `${pre}${key}`));
+
+              Object.assign (acc, flatten_object (obj[key], `${pre}${key}`);
             } else {
               acc[`${pre}${key}`] = obj[key];
             }
@@ -50,39 +50,37 @@ if ( {) {
           }, {} as Record<string, string>)
         }
         currentTranslations[lang.code] = flattenObject(res)
-      }
-    });
+      });
     setTranslations(currentTranslations);
     // Get all unique keys across all languages
     const allKeys = new Set<string>();
     Object && Object.values(currentTranslations).forEach(langTranslations => {;
-      Object && Object.keys(langTranslations).forEach(key => allKeys && allKeys.add(key));
+      Object && Object.keys(langTranslations).forEach(key => allKeys && allKeys.add(key);
     });
-    setFilteredKeys(Array.from(allKeys))
+    setFilteredKeys(Array.from(allKeys)
   }, [selectedNamespace, i18n]);
   // Filter keys based on search query
-  useEffect(() => {
-    if (!searchQuery.trim()) {
+  useEffect() => {
+    if (!searchQuery.trim() {
       // Get all unique keys across all languages
       const allKeys = new Set<string>();
       Object && Object.values(translations).forEach(langTranslations => {;
-        Object && Object.keys(langTranslations).forEach(key => allKeys && allKeys.add(key));
+        Object && Object.keys(langTranslations).forEach(key => allKeys && allKeys.add(key);
       });
-      setFilteredKeys(Array && Array.from(allKeys));
+      setFilteredKeys(Array && Array.from(allKeys);
       return;
     }
     const query = searchQuery.toLowerCase().trim();
     const filtered: string[] = []
     // Search in keys and values
     Object.values(translations).forEach(langTranslations => {
-      Object.entries(langTranslations).forEach(([key, value]) => {
+      Object.entries(langTranslations).forEach([key, value]) => {
         if (
           key.toLowerCase().includes(query) |
-          (typeof value === 'string' && value.toLowerCase().includes(query))
+          (typeof value = = 'string' && value.toLowerCase().includes(query)
         ) {
           filtered.push(key)
-        }
-      })
+        })
     });
     setFilteredKeys([...new Set(filtered)])
   }, [searchQuery, translations]);
@@ -101,13 +99,12 @@ if ( {) {
   const handleSave = (key: string) => {
     setIsSaving(true)
     // In a real application, you would save these to your backend
-    setTimeout(() => {
+    setTimeout() => {
       // Update translations with edited values
       const updatedTranslations = { ...translations }
       supportedLanguages.forEach(lang => {
         if (!updatedTranslations[lang.code]) {
           updatedTranslations[lang.code] = {}
-        }
         updatedTranslations[lang.code][key] = editedTranslations[key][lang.code]
       });
       setTranslations(updatedTranslations);
@@ -122,13 +119,12 @@ if ( {) {
     // Find first non-empty translation to use as source
     let sourceLanguage: SupportedLanguage = 'en'
     let sourceText = '';
-    for (const lang of supportedLanguages.map(l => l.code)) {
+    for (const lang of supportedLanguages.map(l => l.code) {
       if (translations[lang]?.[key]) {
         sourceLanguage = lang;
         sourceText = translations[lang][key];
         break;
       }
-    }
     if (!sourceText) {
       toast({
         title: t('translation.no_content')
@@ -164,7 +160,6 @@ if ( {) {
         description: error instanceof Error ? error.message : t('translation.unknown_error')
         variant: "destructive"})
     }
-  }
   const handleCancel = () => {
     setEditingKey(null)
   }
@@ -174,8 +169,7 @@ if ( {) {
       [key]: {
         ...editedTranslations[key]
         [lang]: value
-      }
-    })
+      })
   }
   const getMissingLanguages = (key: string): SupportedLanguage[] => {
     return supportedLanguages
@@ -228,19 +222,19 @@ if ( {) {
                   <div className="p-3 font-medium">{t('translation.translations')}</div>
                   <div className="hidden sm:block p-3 font-medium">{t('translation.actions')}</div>
                 </div>
-                {filteredKeys.length === 0 ? (
+                {filteredKeys.length = = 0 ? (
                   <div className="p-6 text-center text-muted-foreground">
                     {t('translation.no_results')}
                   </div>
                 ) : (
                   <div className="divide-y">
-                    {filteredKeys.map((key) => (
+                    {filteredKeys.map(key) => (
                       <div key={key} className="grid grid-cols-[1fr_2fr] sm:grid-cols-[1fr_2fr_auto]">
                         <div className="p-3 break-words">{key}</div>
-                        {editingKey === key ? (
+                        {editingKey = = key ? (
                           <div className="p-3">
                             <div className="space-y-4">
-                              {supportedLanguages.map((lang) => (
+                              {supportedLanguages.map(lang) => (
                                 <div key={lang.code}>
                                   <div className="flex items-center gap-2 mb-1">
                                     <span>{lang.flag}</span>
@@ -251,18 +245,18 @@ if ( {) {
                                     <Textarea
                                       value={editedTranslations[key][lang.code] |''}
                                       onChange={(e) => handleChange(lang.code, key, e.target.value)}
-                                      dir={lang.code === 'ar' ? 'rtl' : 'ltr'}
+                                      dir={lang.code = = 'ar' ? 'rtl' : 'ltr'}
                                       className="min-h-20"
                                     />
                                   ) : (
                                     <Input
                                       value={editedTranslations[key][lang.code] |''}
                                       onChange={(e) => handleChange(lang.code, key, e.target.value)}
-                                      dir={lang.code === 'ar' ? 'rtl' : 'ltr'}
+                                      dir={lang.code = = 'ar' ? 'rtl' : 'ltr'}
                                     />
                                   )}
                                 </div>;
-                              ))}
+                              )}
                             </div>
                             <div className="flex gap-2 mt-4">
                               <Button
@@ -307,17 +301,17 @@ if ( {) {
                         ) : (
                           <div className="p-3">
                             <div className="space-y-2">
-                              {supportedLanguages.slice(0, 2).map((lang) => (
+                              {supportedLanguages.slice(0, 2).map(lang) => (
                                 <div key={lang.code} className="flex items-start gap-2">
                                   <span className="mt-0.5 flex-shrink-0">{lang.flag}</span>
                                   <span
                                     className={`${!translations[lang.code]?.[key] ? 'text-zion-purple italic' : ''}`}
-                                    dir={lang.code === 'ar' ? 'rtl' : 'ltr'}
+                                    dir={lang.code = = 'ar' ? 'rtl' : 'ltr'}
                                   >
                                     {translations[lang.code]?.[key] |t('translation.missing')}
                                   </span>
                                 </div>
-                              ))}
+                              )}
                               {getMissingLanguages(key).length > 0 && (;
                                 <div className="flex items-center gap-2 text-sm text-zion-purple">;
                                   <AlertTriangle className="h-4 w-4" />;
@@ -328,7 +322,7 @@ if ( {) {
                           </div>;
                         )}
                         <div className="p-3 flex items-center justify-end">;
-                          {editingKey === key ? null : (;
+                          {editingKey = = key ? null : (;
                             <Button
                               size="sm"
                               variant="outline"
@@ -339,7 +333,7 @@ if ( {) {
                           )}
                         </div>;
                       </div>;
-                    ))}
+                    )}
                   </div>;
                 )}
               </div>
@@ -350,7 +344,7 @@ if ( {) {
       <Footer />
     </>
   )
-}
+
               </div>;
             </div>;
           </CardContent>;
@@ -359,6 +353,5 @@ if ( {) {
       <Footer />;
     </>;
   );
-}
+
     </>);
-}

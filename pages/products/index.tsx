@@ -72,7 +72,7 @@ const products = [
     icon: Star
     popular: false
   }
-];
+;
 const categories = [
   'All'
   'AI & Analytics'
@@ -81,15 +81,15 @@ const categories = [
   'Automation'
   'Collaboration'
   'Data Management'
-];
+;
 const ProductsIndex: NextPage = () => {
   const [selectedCategory, setSelectedCategory] = React.useState('All');
   const [searchTerm, setSearchTerm] = React.useState('');
   const filteredProducts = products.filter(product => {
-    const matchesCategory = selectedCategory === 'All' |product.category === selectedCategory;
-    const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase()) |
-                         product.description.toLowerCase().includes(searchTerm.toLowerCase()) |
-                         product.category.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesCategory = selectedCategory = = 'All' |product.category = = selectedCategory;
+    const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase() |
+                         product.description.toLowerCase().includes(searchTerm.toLowerCase() |
+                         product.category.toLowerCase().includes(searchTerm.toLowerCase();
     return matchesCategory && matchesSearch;
   });
 
@@ -109,9 +109,9 @@ const Index: NextPage = () => {
           </div>
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -142,26 +142,26 @@ const Index: NextPage = () => {
               </div>
               {/* Category Filter */}
               <div className="flex flex-wrap gap-2 justify-center mb-8">;
-                {categories && categories.map((category) => (;
+                {categories && categories.map(category) => (;
                   <button
                     key={category}
                     onClick={() => setSelectedCategory(category)}
                     className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${;
-                      selectedCategory === category;
+                      selectedCategory = = category;
                         ? 'bg-blue-600 text-white';
                         : 'bg-gray-200 text-gray-700 hover:bg-gray-300';
                     }`}
                   >;
                     {category}
                   </button>;
-                ))}
+                )}
               </div>
               <div className="text-center">
                 <button
                   onClick={() => {;
                     setSearchTerm('');
                     setSelectedCategory('All');
-                  }}
+                  }
                   className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold"
                 >
                   Clear Filters
@@ -169,8 +169,7 @@ const Index: NextPage = () => {
               </div>
             </div>
           </div>
-        </section>
-                >;
+        </section>;
                   Clear Filters;
                 </button>;
               </div>;
@@ -182,12 +181,12 @@ const Index: NextPage = () => {
         <section className="py-16">;
           <div className="container mx-auto px-4">;
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
-              {filteredProducts && filteredProducts.map((product, index) => (;
+              {filteredProducts && filteredProducts.map(product, index) => (;
                 <motion&& motion.div
                   key={product && product.id}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+                  initial={ opacity: 0, y: 30 }
+                  animate={ opacity: 1, y: 0 }
+                  transition={ duration: 0 && 0.6, delay: index * 0 && 0.1 }
                   className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group">;
                   <div className="p-6">;
                     <div className="flex items-center mb-4">;
@@ -214,23 +213,23 @@ const Index: NextPage = () => {
                     <div className="space-y-2 mb-4">
                       <h4 className="font-semibold text-gray-900 text-sm">Key Features:</h4>
                       <ul className="space-y-1">
-                        {product.features.map((feature, idx) => (
+                        {product.features.map(feature, idx) => (
                           <li key={idx} className="flex items-center text-sm text-gray-600">
                             <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
                             {feature}
                           </li>
-                        ))}
+                        )}
                       </ul>
                     </div>
                     <div className="space-y-2 mb-6">
                       <h4 className="font-semibold text-gray-900 text-sm">Benefits:</h4>
                       <ul className="space-y-1">
-                        {product.benefits.map((benefit, idx) => (
+                        {product.benefits.map(benefit, idx) => (
                           <li key={idx} className="flex items-center text-sm text-gray-600">
                             <Star className="w-3 h-3 text-yellow-500 mr-2 flex-shrink-0" />
                             {benefit}
                           </li>
-                        ))}
+                        )}
                       </ul>
                     </div>
                     <div className="space-y-2 mb-6">
@@ -245,9 +244,9 @@ const Index: NextPage = () => {
                     </button>
                   </div>
                 </motion.div>
-              ))}
+              )}
             </div>
-            {filteredProducts.length === 0 && (
+            {filteredProducts.length = = 0 && (
               <div className="text-center py-12">
                 <div className="text-gray-400 mb-4">
                   <Search className="w-16 h-16 mx-auto" />
@@ -262,9 +261,9 @@ const Index: NextPage = () => {
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">;
           <div className="container mx-auto px-4 text-center">;
             <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}>;
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }>;
               <h2 className="text-3xl md:text-4xl font-bold mb-6">;
                 Ready to Transform Your Business?;
               </h2>;
@@ -295,33 +294,33 @@ export default ProductsIndex;
   );
         <meta name="description" content="Index page" />
       </Head>
-      
+
       <main>
         <h1>Index</h1>
         <p>This page is under construction.</p>
       </main>
     </div>
   );
-}
+
 export default ProductsIndex;
   )
-}
+
 export default Index;
 
   )
-};
+;
 
 export default Index;
         {/* Products Grid */}
         <section className="py - 16">;
           <div className="container mx - auto px - 4">;
             <div className="grid md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
-              {filtered_products.map ((product, index) => (
+              {filtered_products.map (product, index) => (
                 <motion.div;
                   key={product.id}
-                  initial={{ opacity: 0, coordinate_y: 30 }}
-                  animate={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={ opacity: 0, coordinate_y: 30 }
+                  animate={ opacity: 1, coordinate_y: 0 }
+                  transition={ duration: 0.6, delay: index * 0.1 }
                   className="bg - white rounded - xl shadow - lg hover:shadow - xl transition - all duration - 300 overflow - hidden group";
                 >;
                   <div className="p - 6">;
@@ -348,21 +347,21 @@ export default Index;
                     <div className="space - y-2 mb - 4">;
                       <h4 className="font - semibold text - gray - 900 text - sm">Key Features:</h4>;
                       <ul className="space - y-1">;
-                        {product.features.map ((feature, idx) => (
+                        {product.features.map (feature, idx) => (
                           <li key={idx} className="flex items - center text - sm text - gray - 600">;
                             <CheckCircle className="w - 3 h - 3 text - green - 500 mr - 2 flex - shrink - 0" />;
                             {feature}
-                          </li>))}
+                          </li>)}
                       </ul>;
                     </div>;
                     <div className="space - y-2 mb - 6">;
                       <h4 className="font - semibold text - gray - 900 text - sm">Benefits:</h4>;
                       <ul className="space - y-1">;
-                        {product.benefits.map ((benefit, idx) => (
+                        {product.benefits.map (benefit, idx) => (
                           <li key={idx} className="flex items - center text - sm text - gray - 600">;
                             <Star className="w - 3 h - 3 text - yellow - 500 mr - 2 flex - shrink - 0" />;
                             {benefit}
-                          </li>))}
+                          </li>)}
                       </ul>;
                     </div>;
                     <div className="space - y-2 mb - 6">;
@@ -376,9 +375,9 @@ export default Index;
                       <ArrowRight className="w - 4 h - 4 ml - 2 group - hover:translate - x-1 transition - transform" />;
                     </button>;
                   </div>;
-                </motion.div>))}
+                </motion.div>)}
             </div>;
-            {filtered_products.length === 0 && (
+            {filtered_products.length = = 0 && (
               <div className="text - center py - 12">;
                 <div className="text - gray - 400 mb - 4">;
                   <Search className="w - 16 h - 16 mx - auto" />;
@@ -392,9 +391,9 @@ export default Index;
         <section className="py - 20 bg - gradient - to - r from - blue - 600 to - purple - 600 text - white">;
           <div className="container mx - auto px - 4 text - center">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, coordinate_y: 30 }
+              animate={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
             >;
               <h2 className="text - 3xl md:text - 4xl font - bold mb - 6">;
                 Ready to Transform Your Business?;
@@ -419,10 +418,7 @@ export default Index;
         </section>;
       </div>;
     </Layout>);
-}
-;
+
 export default ProductsIndex);
-}
-;
+
 export default Index;
-;

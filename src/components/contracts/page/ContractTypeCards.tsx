@@ -7,7 +7,7 @@ import {
   CardFooter
   CardHeader
   CardTitle
-} from '@/components/ui/card'
+ from '@/components/ui/card'
 
 import { FileText, ShieldCheck } from 'lucide-react'
 interface ContractTypeCardsProps {
@@ -16,7 +16,7 @@ interface ContractTypeCardsProps {
 export function ContractTypeCards({
   onStandardClick
   onSmartClick
-}: ContractTypeCardsProps) {
+: ContractTypeCardsProps) {
   return (
     <div className='grid md:grid-cols-2 gap-6 mb-10'>
       <Card>
@@ -30,7 +30,7 @@ interface ContractTypeCardsProps {
   onStandardClick: () => void
 
   onSmartClick: () => void
-}
+
 export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTypeCardsProps) {
   return (
     <div className="grid md:grid-cols-2 gap-6 mb-10">
@@ -121,7 +121,7 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
       </Card>
     </div>
   )
-}
+
 import { Button } from '@/components/ui/button';
 import {;
   Card,;
@@ -130,7 +130,7 @@ import {;
   CardFooter,;
   CardHeader,;
   CardTitle,;
-} from '@/components/ui/card';
+ from '@/components/ui/card';
 import { FileText, ShieldCheck } from 'lucide-react';
 interface ContractTypeCardsProps {;
   onStandardClick: () => void;
@@ -139,7 +139,7 @@ interface ContractTypeCardsProps {;
 export function ContractTypeCards(): any ({;
   onStandardClick,;
   onSmartClick,;
-}: ContractTypeCardsProps) {;
+: ContractTypeCardsProps) {;
   return (
     <div className='grid md:grid-cols-2 gap-6 mb-10'>;
       <Card>;
@@ -152,7 +152,6 @@ export function ContractTypeCards(): any ({;
 interface ContractTypeCardsProps {;
   onStandardClick: () => void,;
   onSmartClick: () => void;
-}
 
 export function ContractTypeCards(): any ({ onStandardClick, onSmartClick }: ContractTypeCardsProps) {;
   return (
@@ -169,7 +168,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from '@/components / ui / card';
+ from '@/components / ui / card';
 import { FileText, ShieldCheck } from 'lucide-react';
 interface ContractTypeCardsProps {
   onStandardClick: () => void;
@@ -189,7 +188,7 @@ function ContractTypeCards() {
 interface ContractTypeCardsProps {
   onStandardClick: () => void,
   onSmartClick: () => void;
-}
+
 export /**
  * ContractTypeCards - Function description
  */
@@ -283,8 +282,7 @@ function ContractTypeCards() {
       </Card>;
     </div>;
   );
-}
+
   );
-}
+
     </div>);
-}

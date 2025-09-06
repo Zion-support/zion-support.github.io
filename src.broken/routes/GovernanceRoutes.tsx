@@ -6,5 +6,3 @@ export function GovernanceRoutes() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

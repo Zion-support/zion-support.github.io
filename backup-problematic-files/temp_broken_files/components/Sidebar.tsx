@@ -6,7 +6,6 @@ import { X, Building2, Home, Briefcase, Users, Mail, FileText, ChevronRight } fr
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
-}
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const navigationItems = [
@@ -23,18 +22,18 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         <>
           {/* Backdrop */}
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            initial={ opacity: 0 }
+            animate={ opacity: 1 }
+            exit={ opacity: 0 }
             className="fixed inset-0 bg-black bg-opacity-50 z-40"
             onClick={onClose}
           />
           {/* Sidebar */}
           <motion.div
-            initial={{ x: -300 }}
-            animate={{ x: 0 }}
-            exit={{ x: -300 }}
-            transition={{ type: 'spring', damping: 30, stiffness: 300 }}
+            initial={ x: -300 }
+            animate={ x: 0 }
+            exit={ x: -300 }
+            transition={ type: 'spring', damping: 30, stiffness: 300 }
             className="fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto"
           >
             <div className="p-6">
@@ -56,7 +55,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 
               {/* Navigation */}
               <nav className="space-y-2">
-                {navigationItems.map((item) => {
+                {navigationItems.map(item) => {
                   const Icon = item.icon;
                   return (
                     <Link
@@ -103,6 +102,5 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       )}
     </AnimatePresence>
   );
-};
 
 export default Sidebar;

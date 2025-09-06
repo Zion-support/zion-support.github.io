@@ -4,16 +4,15 @@ const ANDROID_APP_URL = process.env.NEXT_PUBLIC_ANDROID_APP_URL || 'https://play
 const DEEP_LINK_URL = process.env.NEXT_PUBLIC_DEEP_LINK_URL || 'zion://open',
 
 export default function OpenApp() {
-  useEffect(() => {
+  useEffect() => {
     const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent),
     const isAndroid = /Android/i.test(navigator.userAgent),
     const now = Date.now(),
-    const timeout = setTimeout(() => {
+    const timeout = setTimeout() => {
       const elapsed = Date.now() - now,
       if (elapsed < 2000) {
         window.location.href = isIOS ? IOS_APP_URL : ANDROID_APP_URL
-      }
-    }, 1200),
+      }, 1200),
 
     // Try to open the deep link
     const iframe = document.createElement('iframe'),
@@ -21,15 +20,13 @@ export default function OpenApp() {
     iframe.src = DEEP_LINK_URL,
     document.body.appendChild(iframe),
 
-    const timer = setTimeout(() => {
-      try { document.body.removeChild(iframe) } catch {}
-    }, 1500),
+    const timer = setTimeout() => {
+      try { document.body.removeChild(iframe) } catch {}, 1500),
 
     return () => {
       clearTimeout(timeout),
       clearTimeout(timer),
       try { document.body.removeChild(iframe) } catch {}
-    }
   }, []),
   return (
     <div className=&quot;min-h-[50vh] flex items-center justify-center&quot;>
@@ -39,4 +36,3 @@ export default function OpenApp() {
       </div>
     </div>
   )
-}

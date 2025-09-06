@@ -11,7 +11,7 @@ export function ExperienceFilter({
   expanded
   toggleSection
   isMobileFilterOpen
-}: ExperienceFilterProps) {
+: ExperienceFilterProps) {
   const handleChange = (values: number[]) => {
     setExperienceRange([values[0] |0, values[1] |15])
   }
@@ -21,7 +21,7 @@ export function ExperienceFilter(): any ({;
   expanded,;
   toggleSection,;
   isMobileFilterOpen,;
-}: ExperienceFilterProps) {;
+: ExperienceFilterProps) {;
   const handleChange = (values: number[]) => {;
     setExperienceRange([values[0] || 0, values[1] || 15]);
   };
@@ -120,14 +120,14 @@ export function ExperienceFilter(): any ({ experienceRange, setExperienceRange, 
       )}
     </div>
   )
-}
+
             className="mt-6"
           />
         </div>
       )}
     </div>
   );
-}
+
         <div className="mt - 6">;
           <div className="flex justify - between text - sm text - zion - slate - light mb - 2">;
             <span>{experience_range[0]} years</span>;
@@ -145,4 +145,3 @@ export function ExperienceFilter(): any ({ experienceRange, setExperienceRange, 
           />;
         </div>)}
     </div>);
-}

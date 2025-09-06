@@ -6,5 +6,3 @@ export function Marketplace() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

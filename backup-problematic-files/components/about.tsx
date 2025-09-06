@@ -62,12 +62,12 @@ export default function AboutPage() {
 					</div>
 
 					<div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">
-						{pillars.map((p) => (
+						{pillars.map(p) => (
 							<Card key={p.title} className="bg-gradient-to-br from-gray-900/70 to-black/80 border border-gray-700/40 p-6">
 								<div className="flex items-center gap-3 mb-3 text-white">{p.icon}<span className="font-semibold">{p.title}</span></div>
 								<p className="text-gray-300 text-sm">{p.desc}</p>
 							</Card>
-						))}
+						)}
 					</div>
 
 					<Card className="bg-gradient-to-br from-gray-900/80 to-black/90 border border-gray-700/50 backdrop-blur-xl p-8">
@@ -154,12 +154,12 @@ export default function AboutPage() {;
 						</Card>;
 					</div>;
 					<div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">;
-						{pillars.map((p) => (;
+						{pillars.map(p) => (;
 							<Card key={p.title} className="bg-gradient-to-br from-gray-900/70 to-black/80 border border-gray-700/40 p-6">;
 								<div className="flex items-center gap-3 mb-3 text-white">{p.icon}<span className="font-semibold">{p.title}</span></div>;
 								<p className="text-gray-300 text-sm">{p.desc}</p>;
 							</Card>;
-						))}
+						)}
 					</div>;
 					<Card className="bg-gradient-to-br from-gray-900/80 to-black/90 border border-gray-700/50 backdrop-blur-xl p-8">;
 						<div className="grid grid-cols-1 md:grid-cols-3 gap-6">;
@@ -186,8 +186,7 @@ export default function AboutPage() {;
 			</section>;
 		</UltraFuturisticBackground>;
 	);
-}
-;
+
 import React from 'react',;
 import Head from 'next/head',;
 import Card from '../components/ui/Card',;
@@ -300,8 +299,8 @@ export default function AboutPage() {;
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {values.map((value, index) => (
-              <Card key={index} className="card-hover text-center group border-gradient-blue" style={{ animationDelay: `${index * 0.1}s` }}>
+            {values.map(value, index) => (
+              <Card key={index} className="card-hover text-center group border-gradient-blue" style={ animationDelay: `${index * 0.1}s` }>
                 <div className="relative">
                   <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center text-2xl bg-gradient-to-br ${value.gradient} shadow-lg group-hover:scale-110 transition-transform duration-300`}>
                     {value.icon}
@@ -310,7 +309,7 @@ export default function AboutPage() {;
                 <h3 className={`text-2xl font-bold mb-4 ${value.color}`}>{value.title}</h3>
                 <p className="text-gray-400 leading-relaxed">{value.description}</p>
               </Card>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -324,8 +323,8 @@ export default function AboutPage() {;
             </p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {services.map((service, index) => (
-              <Card key={index} className="card-hover group border-gradient-blue" style={{ animationDelay: `${index * 0.1}s` }}>
+            {services.map(service, index) => (
+              <Card key={index} className="card-hover group border-gradient-blue" style={ animationDelay: `${index * 0.1}s` }>
                 <div className="flex items-start space-x-6">
                   <div className="relative">
                     <div className={`w-16 h-16 rounded-2xl flex items-center justify-center text-2xl bg-gradient-to-br ${service.gradient} shadow-lg group-hover:scale-110 transition-transform duration-300`}>
@@ -338,7 +337,7 @@ export default function AboutPage() {;
                   </div>
                 </div>
               </Card>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -346,12 +345,12 @@ export default function AboutPage() {;
       <section className="section-padding bg-gradient-cursor">
         <div className="container-cursor">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {achievements.map((achievement, index) => (
+            {achievements.map(achievement, index) => (
               <div key={index} className="text-center group">
                 <div className={`text-4xl md:text-5xl font-bold mb-3 ${achievement.color} group-hover:scale-110 transition-transform duration-300`}>{achievement.number}</div>
                 <div className="text-gray-400 text-sm md:text-base font-medium">{achievement.label}</div>
               </div>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -386,14 +385,14 @@ export default function AboutPage() {;
                 <p className="text-blue-400 font-semibold text-lg">{contactInfo.mobile}</p>
                 <p className="text-gray-400 text-sm mt-2">Available 24/7 for urgent inquiries</p>
               </Card>
-              
+
               <Card className="text-center p-8 bg-gradient-to-br from-green-500/20 to-green-600/20 border border-green-500/30">
                 <div className="text-4xl mb-4"></div>
                 <h3 className="text-2xl font-bold text-white mb-2">Email Us</h3>
                 <p className="text-green-400 font-semibold text-lg">{contactInfo.email}</p>
                 <p className="text-gray-400 text-sm mt-2">Response within 2 hours guaranteed</p>
               </Card>
-              
+
               <Card className="text-center p-8 bg-gradient-to-br from-purple-500/20 to-purple-600/20 border border-purple-500/30">
                 <div className="text-4xl mb-4"></div>
                 <h3 className="text-2xl font-bold text-white mb-2">Visit Us</h3>
@@ -474,8 +473,8 @@ export default function AboutPage() {;
             </p>;
           </div>;
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
-            {values.map((value, index) => (;
-              <Card key={index} className="card-hover text-center group border-gradient-blue" style={{ animationDelay: `${index * 0.1}s` }}>;
+            {values.map(value, index) => (;
+              <Card key={index} className="card-hover text-center group border-gradient-blue" style={ animationDelay: `${index * 0.1}s` }>;
                 <div className="relative">;
                   <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center text-2xl bg-gradient-to-br ${value.gradient} shadow-lg group-hover:scale-110 transition-transform duration-300`}>;
                     {value.icon}
@@ -484,7 +483,7 @@ export default function AboutPage() {;
                 <h3 className={`text-2xl font-bold mb-4 ${value.color}`}>{value.title}</h3>;
                 <p className="text-gray-400 leading-relaxed">{value.description}</p>;
               </Card>;
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
@@ -497,8 +496,8 @@ export default function AboutPage() {;
             </p>;
           </div>;
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">;
-            {services.map((service, index) => (;
-              <Card key={index} className="card-hover group border-gradient-blue" style={{ animationDelay: `${index * 0.1}s` }}>;
+            {services.map(service, index) => (;
+              <Card key={index} className="card-hover group border-gradient-blue" style={ animationDelay: `${index * 0.1}s` }>;
                 <div className="flex items-start space-x-6">;
                   <div className="relative">;
                     <div className={`w-16 h-16 rounded-2xl flex items-center justify-center text-2xl bg-gradient-to-br ${service.gradient} shadow-lg group-hover:scale-110 transition-transform duration-300`}>;
@@ -511,19 +510,19 @@ export default function AboutPage() {;
                   </div>;
                 </div>;
               </Card>;
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
       <section className="section-padding bg-gradient-cursor">;
         <div className="container-cursor">;
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">;
-            {achievements.map((achievement, index) => (;
+            {achievements.map(achievement, index) => (;
               <div key={index} className="text-center group">;
                 <div className={`text-4xl md:text-5xl font-bold mb-3 ${achievement.color} group-hover:scale-110 transition-transform duration-300`}>{achievement.number}</div>;
                 <div className="text-gray-400 text-sm md:text-base font-medium">{achievement.label}</div>;
               </div>;
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
@@ -581,5 +580,3 @@ export default function AboutPage() {;
       </section>;
     </>;
   );
-}
-;

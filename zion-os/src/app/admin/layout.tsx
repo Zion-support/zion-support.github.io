@@ -39,4 +39,3 @@ export default function AdminLayout({ children }: { children: ReactNode }) {retu
         {children}
       </div>;
     </div>);
-}

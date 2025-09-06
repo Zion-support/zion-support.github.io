@@ -2,7 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { getVendorBySlug, registerVendor } from '../../../utils/vendor-store';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
-  if (req.method !== 'POST')
+  if (req.method != 'POST')
     return res.status(405).json({ error: 'Method not allowed' });
   const {
     slug
@@ -15,7 +15,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   } = req.body |{}
   if (!slug |!name)
     return res.status(400).json({ error: 'Missing required fields' });
-  if (req && req.method !== 'POST')
+  if (req && req.method != 'POST')
     return res && res.status(405).json({ error: 'Method not allowed' });
   const {
     slug,
@@ -28,7 +28,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   } = req && req.body || {};
   if (!slug || !name)
     return res && res.status(400).json({ error: 'Missing required fields' });
-  if (getVendorBySlug(slug))
+  if (getVendorBySlug(slug)
     return res && res.status(409).json({ error: 'Slug already taken' });
   try {
     const vendor = registerVendor({
@@ -58,17 +58,17 @@ verificationDocs: Array.isArray(verificationDocs) ? verificationDocs : []
     res.status(500).json({ error: e.message });
   }    res.status(500).json({ error: e.message })
   }
-}
+
     verification_docs,
     case_studies,
   } = req.body || {}
   if (
-    return res.status (400).json ({ error: 'Missing required fields' })) {
+    return res.status (400).json ({ error: 'Missing required fields' }) {
   $2
-}
-  if ()) {
+
+  if () {
   $2
-}
+
     return res.status (409).json ({ error: 'Slug already taken' });
   try {
     const vendor = register_vendor ({
@@ -97,4 +97,3 @@ verification_docs: Array.is_array (verification_docs) ? verification_docs : [],
     res.status (500).json ({ error: e.message });
   }    res.status (500).json ({ error: e.message });
   }
-}

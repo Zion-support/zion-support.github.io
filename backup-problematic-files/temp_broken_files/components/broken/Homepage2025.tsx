@@ -2,25 +2,25 @@ import React, { useState, useEffect } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 import { 
   innovative2035MicroSaasServices 
-} from '../data/innovative-2035-micro-saas-services',
+ from '../data/innovative-2035-micro-saas-services',
 import { 
   innovative2035AIServices 
-} from '../data/innovative-2035-ai-services',
+ from '../data/innovative-2035-ai-services',
 import { 
   innovative2035ITServices 
-} from '../data/innovative-2035-it-services',
+ from '../data/innovative-2035-it-services',
 import { 
   innovativeRealMicroSaasServices2025 
-} from '../data/2025-innovative-real-micro-saas-services',
+ from '../data/2025-innovative-real-micro-saas-services',
 import { 
   innovativeAIServicesEnhanced2025 
-} from '../data/2025-innovative-ai-services-enhanced',
+ from '../data/2025-innovative-ai-services-enhanced',
 import { 
   innovativeITServicesEnhanced2025 
-} from '../data/2025-innovative-it-services-enhanced',
+ from '../data/2025-innovative-it-services-enhanced',
 import { 
   emergingTechServicesEnhanced2025 
-} from '../data/2025-emerging-tech-services-enhanced',
+ from '../data/2025-emerging-tech-services-enhanced',
 import { advancedAIAutomationServices } from '../data/2026-advanced-ai-automation-services',
 import { quantumCybersecurityServices } from '../data/2026-quantum-cybersecurity-services',
 import UltraFuturisticBackground2035 from './backgrounds/UltraFuturisticBackground2035',
@@ -37,10 +37,10 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
   const [isVisible, setIsVisible] = useState(false),
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false),
 
-  useEffect(() => {
+  useEffect() => {
     setIsVisible(true),
-    const interval = setInterval(() => {
-      setCurrentServiceIndex((prev) => (prev + 1) % innovativeRealMicroSaasServices2025.length)
+    const interval = setInterval() => {
+      setCurrentServiceIndex(prev) => (prev + 1) % innovativeRealMicroSaasServices2025.length)
     }, 5000),
     return () => clearInterval(interval)
   }, []),
@@ -50,8 +50,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' }),
       setActiveSection(sectionId),
-      setIsMobileMenuOpen(false)    }
-  },
+      setIsMobileMenuOpen(false)    },
 
   const allServices = [
     // New 2035 services (featured first)
@@ -88,22 +87,22 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
         <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
           <div className=&quot;flex justify-between items-center h-16&quot;>
             <motion.div,
-initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
+initial={ opacity: 0, x: -20 }
+              animate={ opacity: 1, x: 0 }
               className=&quot;flex items-center space-x-2&quot;            >
               Zion Tech Group
             </motion.h1>
             <motion.p,
-initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8, delay: 0.2 }
               className=&quot;text-2xl md:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed&quot;            >
               Pioneering the future of technology with revolutionary AI, Quantum Computing, Space Technology, and cutting-edge IT solutions that drive business transformation
             </motion.p>
             <motion.div,
-initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8, delay: 0.4 }
               className=&quot;flex flex-col sm:flex-row gap-6 justify-center mb-12&quot;            >
               <button className=&quot;px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-lg rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-cyan-500/25&quot;>
                 Get Started Today
@@ -112,12 +111,12 @@ initial={{ opacity: 0, y: 30 }}
                 Explore Services
               </button>
             </motion.div>
-            
+
             {_/* Contact Information */}
             <motion.div,
-initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
+initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8, delay: 0.6 }
               className=&quot;flex flex-col sm:flex-row gap-6 justify-center text-sm text-gray-400&quot;            >
               <div className=&quot;flex items-center gap-2&quot;>
                 <span className=&quot;w-2 h-2 bg-green-400 rounded-full animate-pulse&quot;></span>
@@ -139,9 +138,9 @@ initial={{ opacity: 0, y: 30 }}
         <section className=&quot;py-24 px-4&quot;>
           <div className=&quot;max-w-7xl mx-auto&quot;>
             <motion.div,
-initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className=&quot;text-center mb-20&quot;            >
               <h2 className=&quot;text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent&quot;>
                 Revolutionary Services Portfolio
@@ -153,14 +152,14 @@ initial={{ opacity: 0, y: 30 }}
 
             {/* Featured Services Grid */}
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16&quot;>
-              {featuredServices.map((service, index) => (                <motion.div,
+              {featuredServices.map(service, index) => (                <motion.div,
 key={service.id}
-                  initial={_{ opacity: 0, y: 30}}
-                  whileInView={_{ opacity: 1, y: 0}}
-                  transition={_{ duration: 0.8, delay: index * 0.1}}
+                  initial={_{ opacity: 0, y: 30}
+                  whileInView={_{ opacity: 1, y: 0}
+                  transition={_{ duration: 0.8, delay: index * 0.1}
                 >
                   <UltraFuturisticServiceCard2026,
-service={{
+service={
                       id: service.id,
                       name: service.name,
                       tagline: service.tagline,
@@ -171,17 +170,17 @@ service={{
                       popular: service.popular,
                       category: service.category,
                       icon: service.icon
-                    }}
+                    }
                     variant=&quot;ai&quot;                  />
                 </motion.div>
-              ))}
+              )}
             </div>
 
             {_/* Call to Action */}
             <motion.div,
-initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className=&quot;text-center&quot;            >
               <a,
 href=&quot;/comprehensive-services-showcase-2036&quot;
@@ -197,9 +196,9 @@ href=&quot;/comprehensive-services-showcase-2036&quot;
         <section className=&quot;py-24 px-4 bg-gradient-to-r from-gray-900/50 to-black/50&quot;>
           <div className=&quot;max-w-7xl mx-auto&quot;>
             <motion.div,
-initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className=&quot;text-center mb-20&quot;
             >
               <svg className=&quot;w-6 h-6&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;>
@@ -211,25 +210,25 @@ initial={{ opacity: 0, y: 30 }}
           <AnimatePresence>
             {isMobileMenuOpen && (
               <motion.div,
-initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: 'auto' }}
-                exit={{ opacity: 0, height: 0 }}
+initial={ opacity: 0, height: 0 }
+                animate={ opacity: 1, height: 'auto' }
+                exit={ opacity: 0, height: 0 }
                 className=&quot;lg:hidden border-t border-white/10&quot;
                 id=&quot;mobile-navigation&quot;
               >
                 <div className=&quot;py-4 space-y-2&quot;>
-                  {navigationSections.map((section) => (
+                  {navigationSections.map(section) => (
                     <button                      key={section.id}
                       onClick={_() => scrollToSection(section.id)}
                       className={_`flex items-center space-x-3 w-full text-left px-4 py-2 rounded-lg transition-all duration-300 ${
-                        activeSection === section.id
+                        activeSection = = section.id
                           ? 'bg-cyan-400/20 text-cyan-400'
                           : 'text-gray-300 hover:bg-white/10'}`}
                     >
                       <span>{section.icon}</span>
                       <span>{section.label}</span>
                     </button>
-                  ))}
+                  )}
                   <div className=&quot;pt-4 border-t border-white/10&quot;>
                     <a,
 href=&quot;tel:+13024640950&quot;
@@ -254,32 +253,32 @@ href=&quot;mailto:kleber@ziontechgroup.com&quot;
       </nav>;
       </>;
       )}
-;
+
       {/* Hero Section */}
       <section id=&quot;hero&quot; className=&quot;relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16&quot;>
         <div className=&quot;text-center z-10 max-w-6xl mx-auto&quot;>
           <motion.h1,
-initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
             className=&quot;text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6&quot;          >
             <span className=&quot;bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent&quot;>
               Future of Technology
             </span>
           </motion.h1>
-          
+
           <motion.p,
-initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8, delay: 0.2 }
             className=&quot;text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-5xl mx-auto leading-relaxed&quot;          >
             Revolutionary micro SAAS services, cutting-edge AI solutions, quantum cybersecurity, and emerging technologies that transform businesses and industries.
           </motion.p>
 
           <motion.div,
-initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8, delay: 0.4 }
             className=&quot;flex flex-col sm:flex-row gap-4 justify-center mb-16&quot;
           >
             <button,
@@ -297,34 +296,34 @@ href=&quot;https://ziontechgroup.com&quot;
 
           {_/* Floating Service Cards */}
           <motion.div,
-initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.6 }}
+initial={ opacity: 0, y: 50 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 1, delay: 0.6 }
             className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto&quot;          >
             {featuredServices.slice(0, 3).map(_(service, index) => (
               <motion.div,
 key={service.id}
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.8 + index * 0.2 }}
+                initial={ opacity: 0, y: 50 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.8, delay: 0.8 + index * 0.2 }
                 className=&quot;bg-black/40 backdrop-blur-xl border border-white/20 rounded-2xl p-6 hover:border-cyan-400/50 transition-all duration-300 transform hover:scale-105&quot;
               >
                 <div className=&quot;text-4xl mb-4&quot;>{service.icon}</div>
                 <h3 className=&quot;text-xl font-semibold text-white mb-2&quot;>{service.name}</h3>
                 <p className=&quot;text-gray-400 text-sm&quot;>{service.tagline}</p>
                 <div className=&quot;mt-4 text-cyan-400 font-bold&quot;>{service.price}{service.period}</div>              </motion.div>
-            ))}
+            )}
           </motion.div>;
         </div>;
       </section>;
-;
+
       {/* Services Section */}
       <section id=&quot;services&quot; className=&quot;py-20 px-4 sm:px-6 lg:px-8 relative&quot;>
         <div className=&quot;max-w-7xl mx-auto&quot;>
           <motion.div,
-initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
             className=&quot;text-center mb-16&quot;          >
             <h2 className=&quot;text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6&quot;>
               <span className=&quot;bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent&quot;>
@@ -337,30 +336,30 @@ initial={{ opacity: 0, y: 30 }}
           </motion.div>
 
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
-            {innovativeRealMicroSaasServices2025.slice(0, 9).map((service, index) => (              <motion.div,
+            {innovativeRealMicroSaasServices2025.slice(0, 9).map(service, index) => (              <motion.div,
 key={service.id}
-                initial={_{ opacity: 0, y: 50}}
-                whileInView={_{ opacity: 1, y: 0}}
-                transition={_{ duration: 0.8, delay: index * 0.1}}
-                viewport={_{ once: true}}
+                initial={_{ opacity: 0, y: 50}
+                whileInView={_{ opacity: 1, y: 0}
+                transition={_{ duration: 0.8, delay: index * 0.1}
+                viewport={_{ once: true}
               >
                 <UltraFuturisticServiceCard2026,
 service={service} 
                   variant=&quot;default&quot;
                   theme=&quot;quantum&quot;                />
               </motion.div>
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* AI Services Section */}
       <section id=&quot;ai&quot; className=&quot;py-20 px-4 sm:px-6 lg:px-8 relative bg-black/20&quot;>
         <div className=&quot;max-w-7xl mx-auto&quot;>
           <motion.div,
-initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
             className=&quot;text-center mb-16&quot;          >
             <h2 className=&quot;text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6&quot;>
               <span className=&quot;bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent&quot;>
@@ -373,30 +372,30 @@ initial={{ opacity: 0, y: 30 }}
           </motion.div>
 
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
-            {innovativeAIServicesEnhanced2025.slice(0, 9).map((service, index) => (              <motion.div,
+            {innovativeAIServicesEnhanced2025.slice(0, 9).map(service, index) => (              <motion.div,
 key={service.id}
-                initial={_{ opacity: 0, y: 50}}
-                whileInView={_{ opacity: 1, y: 0}}
-                transition={_{ duration: 0.8, delay: index * 0.1}}
-                viewport={_{ once: true}}
+                initial={_{ opacity: 0, y: 50}
+                whileInView={_{ opacity: 1, y: 0}
+                transition={_{ duration: 0.8, delay: index * 0.1}
+                viewport={_{ once: true}
               >
                 <UltraFuturisticServiceCard2026,
 service={service} 
                   variant=&quot;premium&quot;
                   theme=&quot;neon&quot;                />
               </motion.div>
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* AI Automation Services Section */}
       <section id=&quot;automation&quot; className=&quot;py-20 px-4 sm:px-6 lg:px-8 relative&quot;>
         <div className=&quot;max-w-7xl mx-auto&quot;>
           <motion.div,
-initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
             className=&quot;text-center mb-16&quot;          >
             <h2 className=&quot;text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6&quot;>
               <span className=&quot;bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent&quot;>
@@ -409,30 +408,30 @@ initial={{ opacity: 0, y: 30 }}
           </motion.div>
 
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
-            {advancedAIAutomationServices.map((service, index) => (              <motion.div,
+            {advancedAIAutomationServices.map(service, index) => (              <motion.div,
 key={service.id}
-                initial={_{ opacity: 0, y: 50}}
-                whileInView={_{ opacity: 1, y: 0}}
-                transition={_{ duration: 0.8, delay: index * 0.1}}
-                viewport={_{ once: true}}
+                initial={_{ opacity: 0, y: 50}
+                whileInView={_{ opacity: 1, y: 0}
+                transition={_{ duration: 0.8, delay: index * 0.1}
+                viewport={_{ once: true}
               >
                 <UltraFuturisticServiceCard2026,
 service={service} 
                   variant=&quot;enterprise&quot;
                   theme=&quot;holographic&quot;                />
               </motion.div>
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Quantum Cybersecurity Section */}
       <section id=&quot;quantum&quot; className=&quot;py-20 px-4 sm:px-6 lg:px-8 relative bg-black/20&quot;>
         <div className=&quot;max-w-7xl mx-auto&quot;>
           <motion.div,
-initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
             className=&quot;text-center mb-16&quot;          >
             <h2 className=&quot;text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6&quot;>
               <span className=&quot;bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent&quot;>
@@ -445,30 +444,30 @@ initial={{ opacity: 0, y: 30 }}
           </motion.div>
 
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
-            {quantumCybersecurityServices.map((service, index) => (              <motion.div,
+            {quantumCybersecurityServices.map(service, index) => (              <motion.div,
 key={service.id}
-                initial={_{ opacity: 0, y: 50}}
-                whileInView={_{ opacity: 1, y: 0}}
-                transition={_{ duration: 0.8, delay: index * 0.1}}
-                viewport={_{ once: true}}
+                initial={_{ opacity: 0, y: 50}
+                whileInView={_{ opacity: 1, y: 0}
+                transition={_{ duration: 0.8, delay: index * 0.1}
+                viewport={_{ once: true}
               >
                 <UltraFuturisticServiceCard2026,
 service={service} 
                   variant=&quot;premium&quot;
                   theme=&quot;cyberpunk&quot;                />
               </motion.div>
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* IT Solutions Section */}
       <section id=&quot;it&quot; className=&quot;py-20 px-4 sm:px-6 lg:px-8 relative&quot;>
         <div className=&quot;max-w-7xl mx-auto&quot;>
           <motion.div,
-initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
             className=&quot;text-center mb-16&quot;          >
             <h2 className=&quot;text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6&quot;>
               <span className=&quot;bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent&quot;>
@@ -481,30 +480,30 @@ initial={{ opacity: 0, y: 30 }}
           </motion.div>
 
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
-            {innovativeITServicesEnhanced2025.slice(0, 9).map((service, index) => (              <motion.div,
+            {innovativeITServicesEnhanced2025.slice(0, 9).map(service, index) => (              <motion.div,
 key={service.id}
-                initial={_{ opacity: 0, y: 50}}
-                whileInView={_{ opacity: 1, y: 0}}
-                transition={_{ duration: 0.8, delay: index * 0.1}}
-                viewport={_{ once: true}}
+                initial={_{ opacity: 0, y: 50}
+                whileInView={_{ opacity: 1, y: 0}
+                transition={_{ duration: 0.8, delay: index * 0.1}
+                viewport={_{ once: true}
               >
                 <UltraFuturisticServiceCard2026,
 service={service} 
                   variant=&quot;default&quot;
                   theme=&quot;quantum&quot;                />
               </motion.div>
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Emerging Technologies Section */}
       <section id=&quot;emerging&quot; className=&quot;py-20 px-4 sm:px-6 lg:px-8 relative bg-black/20&quot;>
         <div className=&quot;max-w-7xl mx-auto&quot;>
           <motion.div,
-initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
             className=&quot;text-center mb-16&quot;          >
             <h2 className=&quot;text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6&quot;>
               <span className=&quot;bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent&quot;>
@@ -517,30 +516,30 @@ initial={{ opacity: 0, y: 30 }}
           </motion.div>
 
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
-            {emergingTechServicesEnhanced2025.slice(0, 9).map((service, index) => (              <motion.div,
+            {emergingTechServicesEnhanced2025.slice(0, 9).map(service, index) => (              <motion.div,
 key={service.id}
-                initial={_{ opacity: 0, y: 50}}
-                whileInView={_{ opacity: 1, y: 0}}
-                transition={_{ duration: 0.8, delay: index * 0.1}}
-                viewport={_{ once: true}}
+                initial={_{ opacity: 0, y: 50}
+                whileInView={_{ opacity: 1, y: 0}
+                transition={_{ duration: 0.8, delay: index * 0.1}
+                viewport={_{ once: true}
               >
                 <UltraFuturisticServiceCard2026,
 service={service} 
                   variant=&quot;enterprise&quot;
                   theme=&quot;holographic&quot;                />
               </motion.div>
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Contact Section */}
       <section id=&quot;contact&quot; className=&quot;py-20 px-4 sm:px-6 lg:px-8 relative&quot;>
         <div className=&quot;max-w-4xl mx-auto text-center&quot;>          <motion.div,
-initial={_{ opacity: 0, y: 30}}
-            whileInView={_{ opacity: 1, y: 0}}
-            transition={_{ duration: 0.8}}
-            viewport={_{ once: true}}
+initial={_{ opacity: 0, y: 30}
+            whileInView={_{ opacity: 1, y: 0}
+            transition={_{ duration: 0.8}
+            viewport={_{ once: true}
           >
             <h2 className=&quot;text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6&quot;>
               <span className=&quot;bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent&quot;>
@@ -550,7 +549,7 @@ initial={_{ opacity: 0, y: 30}}
             <p className=&quot;text-xl text-gray-300 mb-8&quot;>
               Contact us today to learn how our innovative services can revolutionize your operations.
             </p>
-            
+
             <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8 mb-12&quot;>
               <div className=&quot;bg-black/40 backdrop-blur-xl border border-white/20 rounded-2xl p-6&quot;>
                 <div className=&quot;text-3xl mb-4&quot;></div>
@@ -575,7 +574,7 @@ initial={_{ opacity: 0, y: 30}}
                 </p>
               </div>
             </div>
-            
+
             <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>
               <a,
 href=&quot;https://ziontechgroup.com&quot;
@@ -641,9 +640,9 @@ href=&quot;mailto:kleber@ziontechgroup.com&quot;
         <section className=&quot;py-24 px-4&quot;>
           <div className=&quot;max-w-7xl mx-auto&quot;>
             <motion.div,
-initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className=&quot;text-center mb-20&quot;            >
               <h2 className=&quot;text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent&quot;>
                 Why Choose Zion Tech Group?
@@ -664,9 +663,9 @@ initial={{ opacity: 0, y: 30 }}
               ].map(_(feature, index) => (
                 <motion.div,
 key={feature.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }
                   className=&quot;text-center p-8&quot;
                 >
                   <div className=&quot;w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center text-4xl mb-6 mx-auto&quot;>
@@ -678,13 +677,12 @@ key={feature.title}
                   <p className=&quot;text-gray-300 leading-relaxed&quot;>
                     {feature.description}                  </p>
                 </motion.div>
-              ))}
+              )}
             </div>
           </div>
         </div>
       </footer>
     </UltraFuturisticBackground2035>
   )
-}
-;
+
 export default Homepage2025,

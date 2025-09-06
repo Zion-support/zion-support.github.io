@@ -3,7 +3,7 @@ export interface Branding {logoUrl?: string;
   primaryColor?: string;
   secondaryColor?: string;
   subdomain?: string;
-}
+
 export interface DeployModules {marketplace: boolean;
   gpt: boolean;
   academy: boolean;
@@ -22,7 +22,7 @@ export interface DeployModules {marketplace: boolean;
   grantPortal?: boolean;
   trailer?: boolean;
   bookStore?: boolean;
-}
+
 export interface DeployInput {instanceName: string;
   defaultLanguage: string;
   deploymentRegion: string;
@@ -31,16 +31,16 @@ export interface DeployInput {instanceName: string;
   branding: Branding;
   modules: DeployModules;
   requestedRoutes?: string[];
-}
+
 export interface DeployLogEntry {timestamp: string;
   level: "info" | "warn" | "error";
   action: string;
   details?: Record<string unknown> | string;
-}
+
 export interface GeneratedAsset {kind: "file" | "page" | "config" | "job" | "event";
   path: string;
   description?: string;
-}
+
 export interface DeployResult {success: boolean;
   instanceSlug: string;
   configPath: string;
@@ -48,7 +48,6 @@ export interface DeployResult {success: boolean;
   logs: DeployLogEntry[];
   summary: string;
   version: string;
-}
+
 export interface AccessControlConfig {allowedRoles: ("Founder" | "Superadmin" | "DAOMultisig")[];
   adminKeyConfigured: boolean;
-}

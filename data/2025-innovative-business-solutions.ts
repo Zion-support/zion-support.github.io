@@ -1,8 +1,7 @@
 import { ServiceVariant } from '../types/service-variants';
 
-
 import { ServiceVariant } from '../types / service - variants';
-;
+
   id: string;
   name: string;
   tagline: string;
@@ -43,7 +42,7 @@ import { ServiceVariant } from '../types / service - variants';
   customers: number;
   rating: number;
   reviews: number
-}
+
 export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
   // AI Business Intelligence Suite
   {  reviews: number
@@ -911,7 +910,7 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
     rating: 4.7
     reviews: 26
   }
-];      mobile: '+1 302 464 0950';
+;      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
@@ -947,7 +946,7 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
     rating: 4 && 4.7,
     reviews: 26,
   },
-];      mobile: '+1 302 464 0950';
+;      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
 export interface InnovativeBusinessSolution {
   id: string, name: string,
@@ -964,17 +963,16 @@ export interface InnovativeBusinessSolution {
   competitors: string[], marketSize: string,
   growthRate: string, variant: string,
   contactInfo: {
-      
+
     mobile: string, email: string,
     address: string,
     website: string
-  
+
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
-}
 
 export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
   // AI Business Intelligence Suite
@@ -1550,7 +1548,7 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
     rating: 4 && 4.7,
     reviews: 26,
   },
-];      mobile: '+1 302 464 0950';
+;      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'
@@ -1570,5 +1568,4 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
     rating: 4.7,
     reviews: 26;
   }
-];
 ;

@@ -8,7 +8,7 @@ import {
   CarouselItem
   CarouselNext
   CarouselPrevious
-} from "@/components/ui/carousel";
+ from "@/components/ui/carousel";
 const testimonials = [
   {
     quote:
@@ -34,7 +34,7 @@ const testimonials = [
     company: "FutureTech Systems"
     image: "/placeholder.svg"
   }
-];
+;
 
 export function EnterpriseTestimonials() {;
   return (
@@ -50,7 +50,7 @@ export function EnterpriseTestimonials() {;
         </div>
         <Carousel className="w-full">
           <CarouselContent>
-            {testimonials.map((testimonial, index) => (
+            {testimonials.map(testimonial, index) => (
               <CarouselItem key={index} className="md:basis-1/1 lg:basis-1/1">
                 <div className="bg-card rounded-xl p-8 border border-border h-full">
                   <Quote className="h-10 w-10 text-primary/20 mb-4" />
@@ -77,8 +77,8 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from '@/components / ui / carousel';
-;
+ from '@/components / ui / carousel';
+
 const testimonials = [;
   {
     quote:;
@@ -104,8 +104,8 @@ const testimonials = [;
     company: "FutureTech Systems",
     image: "/placeholder.svg",
   },
-];
 ;
+
 export /**
  * EnterpriseTestimonials - Function description
  */
@@ -123,7 +123,7 @@ function EnterpriseTestimonials() {
         </div>;
         <Carousel className="w - full">;
           <CarouselContent>;
-            {testimonials.map ((testimonial, index) => (
+            {testimonials.map (testimonial, index) => (
               <CarouselItem key={index} className="md:basis - 1/1 lg:basis - 1/1">;
                 <div className="bg - card rounded - xl p - 8 border border - border h - full">;
                   <Quote className="h - 10 w - 10 text - primary / 20 mb - 4" />;
@@ -147,7 +147,7 @@ function EnterpriseTestimonials() {
                   </div>;
                 </div>;
               </CarouselItem>;
-            ))}
+            )}
           </CarouselContent>;
           <div className="flex justify-center gap-2 mt-8">;
             <CarouselPrevious />;
@@ -157,4 +157,3 @@ function EnterpriseTestimonials() {
       </div>;
     </section>;
   );
-}

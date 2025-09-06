@@ -6,5 +6,3 @@ export function config() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

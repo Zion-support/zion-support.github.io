@@ -10,7 +10,7 @@ export default function VendorRegisterPage() {
     setMessage(null),
     const form = e.currentTarget,
     const formData = new FormData(form),
-    const payload = Object.fromEntries(formData.entries()),
+    const payload = Object.fromEntries(formData.entries(),
     try {
       const res = await fetch('/api/vendors/register', {
         method: 'POST',
@@ -20,13 +20,13 @@ export default function VendorRegisterPage() {
           name: String(payload.name),
           servicesOffered: String(payload.servicesOffered || '')
             .split()
-            .map(s => s.trim())
+            .map(s => s.trim()
             .filter(Boolean),
           teamSize: Number(payload.teamSize || 0),
           about: String(payload.about || ''),
           verificationDocs: String(payload.verificationDocs || '')
             .split()
-            .map(s => s.trim())
+            .map(s => s.trim()
             .filter(Boolean),
           caseStudies: []})}),
       const data = await res.json(),
@@ -38,7 +38,6 @@ export default function VendorRegisterPage() {
     } finally {
       setLoading(false)
     }
-  }
 
   return (
     <div className=&quot;max-w-2xl mx-auto space-y-6&quot;>

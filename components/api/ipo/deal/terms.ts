@@ -2,7 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJsonFile } from '../../../../utils/api/storage';
 import { requireSuperadminApi } from '../../../../utils/api/auth';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!requireSuperadminApi(req, res)) return;
+  if (!requireSuperadminApi(req, res) return;
 
   const terms = readJsonFile('deal/terms.json', {
     round: 'Series A'
@@ -13,7 +13,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     leadInvestor: 'TBD',
   });
   res && res.status(200).json(terms);export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!requireSuperadminApi(req, res)) return;
+  if (!requireSuperadminApi(req, res) return;
   const terms = readJsonFile('deal/terms.json', {
     round: 'Series A'
     target: '$10,000,000';
@@ -22,7 +22,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     leadInvestor: 'TBD'});
 
   res.status(200).json(terms)
-}
+
 import { readJsonFile } from '../../../../utils / api / storage';
 import { requireSuperadminApi } from '../../../../utils / api / auth';
 export default /**
@@ -31,7 +31,7 @@ export default /**
 function handler() {
   if () return) {
   $2
-}
+
   const terms = readJsonFile ('deal / terms.json', {
     round: 'Series A',
     target: '$10, 000, 000',
@@ -45,7 +45,7 @@ function handler() {
 function handler() {
   if () return) {
   $2
-}
+
   const terms = readJsonFile ('deal / terms.json', {
     round: 'Series A',
     target: '$10, 000, 000';
@@ -53,4 +53,3 @@ function handler() {
     discount: '20%',
     lead_investor: 'TBD'});
   res.status (200).json (terms);
-}

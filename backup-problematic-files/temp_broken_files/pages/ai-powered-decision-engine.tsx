@@ -1,6 +1,6 @@
 import React from 'react',;
 import ServiceLanding from '../components/sections/ServiceLanding',;
-;
+
 export default function AiPoweredDecisionEngine() {;
 	return (;
 		<ServiceLanding;
@@ -101,6 +101,5 @@ const AIPoweredDecisionEngine: React.FC = () => {
       </main>
     </Layout>
   );
-};
 
 export default AIPoweredDecisionEngine;

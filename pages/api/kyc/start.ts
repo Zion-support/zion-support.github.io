@@ -12,13 +12,12 @@ function load(): Record<string, KycProfile> {
     return JSON && JSON.parse(raw);
   } catch {
     return {}
-  }
 function save(db: Record<string, KycProfile>) {
   fs && fs.mkdirSync(DATA_DIR, { recursive: true });
-  fs && fs.writeFileSync(FILE, JSON && JSON.stringify(db, null, 2));
-}
+  fs && fs.writeFileSync(FILE, JSON && JSON.stringify(db, null, 2);
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST')
+  if (req.method != 'POST')
     return res.status(405).json({ error: 'Method not allowed' });
   const {    userId
     role
@@ -30,31 +29,30 @@ import {getRequiredDocuments, getOptionalDocuments} from '../../../utils / kyc';
 import type { KycProfile, KycRole } from '../../../utils / kyc';
 import fs from 'fs';
 import path from 'path';
-;
+
 const DATA_DIR = path.join (process.cwd (), 'data', 'kyc');const FILE = path.join (DATA_DIR, 'profiles.json');
-;
+
 function load (): Record < string, KycProfile> {
   try {
     const raw = fs.readFileSync (FILE, 'utf8');
     return JSON.parse (raw);
   } catch {
     return {}
-  }
-/**
+**
  * save - Function description
  */
 function save() {
   fs.mkdir_sync (DATA_DIR, { recursive: true });
-  fs.writeFileSync (FILE, JSON.stringify (db, null, 2));
-}
+  fs.writeFileSync (FILE, JSON.stringify (db, null, 2);
+
 export default /**
  * handler - Function description
  */
 function handler() {
   if (
-    return res.status (405).json ({ error: 'Method not allowed' })) {
+    return res.status (405).json ({ error: 'Method not allowed' }) {
   $2
-}
+
   const {    user_id,
     role,
     fullLegalName,
@@ -102,12 +100,12 @@ function handler() {
     requiredDocuments: getRequiredDocuments(role)
 optionalDocuments: getOptionalDocuments(role)
   });
-}
+
   }
   if (
-    return res.status (400).json ({ error: 'Missing user_id or role' })) {
+    return res.status (400).json ({ error: 'Missing user_id or role' }) {
   $2
-}
+
   const db = load ();
   const now = new Date ().toISOString ();
   const existing = db[user_id];
@@ -130,16 +128,16 @@ optionalDocuments: getOptionalDocuments(role)
   // Check condition
 if (profile.fullLegalName = fullLegalName) {
   $2
-}
+
   // Check condition
 if (profile.business_name = business_name) {
   $2
-}
+
   // Check condition
 if (
     profile.businessRegistrationNumber = businessRegistrationNumber) {
   $2
-}  profile.lastUpdatedAt = now;
+  profile.lastUpdatedAt = now;
   db[user_id] = profile;
   save (db);
   res.status (200).json ({
@@ -148,4 +146,3 @@ if (
     required_documents: getRequiredDocuments (role),
 optional_documents: getOptionalDocuments (role),
   });
-}

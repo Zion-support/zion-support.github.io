@@ -7,6 +7,5 @@ const AICodeGenerator.js = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default AICodeGenerator.js;

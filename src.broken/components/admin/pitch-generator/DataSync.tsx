@@ -6,5 +6,3 @@ export function DataSync() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

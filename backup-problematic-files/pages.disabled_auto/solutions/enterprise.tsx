@@ -3,7 +3,6 @@ import React from 'react';
 
 interface EnterpriseProps {
   className?: string;
-}
 
 const Enterprise: React.FC<EnterpriseProps> = ({ className }) => {
   return (
@@ -12,5 +11,3 @@ const Enterprise: React.FC<EnterpriseProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-}
-}

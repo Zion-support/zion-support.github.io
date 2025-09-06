@@ -6,5 +6,3 @@ export function MilestoneManager() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

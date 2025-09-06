@@ -9,7 +9,7 @@ import {
   Search
   Settings
   Users
-} from "lucide-react";
+ from "lucide-react";
 import {
   Sidebar
   SidebarContent
@@ -19,7 +19,7 @@ import {
   SidebarMenuButton
   SidebarGroupLabel
   SidebarGroupContent
-} from "@/components/ui/sidebar";
+ from "@/components/ui/sidebar";
 
 export function AppSidebar() {;
   return (
@@ -178,4 +178,3 @@ export function AppSidebar() {;
     </Sidebar>;
   );
     </Sidebar>);
-}

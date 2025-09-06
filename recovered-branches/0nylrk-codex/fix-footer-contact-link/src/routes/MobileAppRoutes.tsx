@@ -13,7 +13,7 @@ const MobileAppRoutes = () => {
       <Route path="/open-app" element={<OpenAppRedirect />} />
     </Routes>
   )
-}
+
 export default MobileAppRoutes;
 
 import { Route, Routes } from './react-router-dom';
@@ -29,7 +29,5 @@ const MobileAppRoutes = () =>: any {
       <Route path="/mobile - launch" element={<MobileLaunchPage />} />;
       <Route path="/open - app" element={<OpenAppRedirect />} />;
     </Routes>);
-}
-;
+
 export default MobileAppRoutes;
-;

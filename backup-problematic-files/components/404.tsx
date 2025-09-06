@@ -6,5 +6,3 @@ export default function NotFoundPage() {
       <p className="mt-2 text-gray-600 dark:text-gray-300">Sorry, we couldnt find that page.</p>
     </div>
   )
-}
-;

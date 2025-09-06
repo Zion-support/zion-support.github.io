@@ -21,24 +21,24 @@ export default function Revolutionary2030ServicesPage() {
         <meta name="keywords" content="2030 technology, AI consciousness, quantum computing, space mining, DNA computing, revolutionary services, Zion Tech Group" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
-        
+
         {_/* Open Graph */}
         <meta property="og:title" content="2030 Revolutionary Technology Services | Zion Tech Group" />
         <meta property="og:description" content="Experience the future of technology with our revolutionary 2030 services. From AI consciousness and quantum computing to space mining and DNA computing." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/2030-revolutionary-services" />
         <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
-        
+
         {_/* Twitter */}
         <meta name="twitter:card" content="summarylarge_image" />
         <meta name="twitter:title" content="2030 Revolutionary Technology Services | Zion Tech Group" />
         <meta name="twitter:description" content="Experience the future of technology with our revolutionary 2030 services. From AI consciousness and quantum computing to space mining and DNA computing." />
         <meta name="twitter:image" content="https://ziontechgroup.com/twitter-image.jpg" />
-        
+
         {_/* Additional Meta Tags */}
         <meta name="theme-color" content="#8b5cf6" />
         <link rel="canonical" href="https://ziontechgroup.com/2030-revolutionary-services" />
-        
+
         {_/* Structured Data */}
         <script,
 type="application/ld+json"
@@ -51,7 +51,7 @@ type="application/ld+json"
                 "https://github.com/Zion-Holdings"
               ]
             })
-          }}
+          }
         />
       </Head>
 
@@ -62,9 +62,9 @@ type="application/ld+json"
       <section className="py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div,
-initial={_{ opacity: 0, y: 30}}
-            animate={_{ opacity: 1, y: 0}}
-            transition={_{ duration: 0.8}}
+initial={_{ opacity: 0, y: 30}
+            animate={_{ opacity: 1, y: 0}
+            transition={_{ duration: 0.8}
             className="mb-8"
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 mb-6">
@@ -76,9 +76,9 @@ initial={_{ opacity: 0, y: 30}}
           </motion.div>
 
           <motion.h1,
-initial={_{ opacity: 0, y: 30}}
-            animate={_{ opacity: 1, y: 0}}
-            transition={_{ duration: 0.8, delay: 0.2}}
+initial={_{ opacity: 0, y: 30}
+            animate={_{ opacity: 1, y: 0}
+            transition={_{ duration: 0.8, delay: 0.2}
             className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-8 leading-tight"
           >
             <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -91,9 +91,9 @@ initial={_{ opacity: 0, y: 30}}
           </motion.h1>
 
           <motion.p,
-initial={_{ opacity: 0, y: 30}}
-            animate={_{ opacity: 1, y: 0}}
-            transition={_{ duration: 0.8, delay: 0.4}}
+initial={_{ opacity: 0, y: 30}
+            animate={_{ opacity: 1, y: 0}
+            transition={_{ duration: 0.8, delay: 0.4}
             className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed"
           >
             Experience the next generation of revolutionary technology services. From AI consciousness,
@@ -101,16 +101,16 @@ and quantum computing to space mining and DNA computing, we're building the futu
           </motion.p>
 
           <motion.div,
-initial={_{ opacity: 0, y: 30}}
-            animate={_{ opacity: 1, y: 0}}
-            transition={_{ duration: 0.8, delay: 0.6}}
+initial={_{ opacity: 0, y: 30}
+            animate={_{ opacity: 1, y: 0}
+            transition={_{ duration: 0.8, delay: 0.6}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 group">
               Schedule Consultation
               <ArrowRight className="w-5 h-5 ml-2 inline group-hover:translate-x-1 transition-transform" />
             </button>
-            
+
             <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-200">
               View Pricing
             </button>
@@ -122,10 +122,10 @@ initial={_{ opacity: 0, y: 30}}
       <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <motion.div,
-initial={_{ opacity: 0, y: 30}}
-            whileInView={_{ opacity: 1, y: 0}}
-            transition={_{ duration: 0.8}}
-            viewport={_{ once: true}}
+initial={_{ opacity: 0, y: 30}
+            whileInView={_{ opacity: 1, y: 0}
+            transition={_{ duration: 0.8}
+            viewport={_{ once: true}
             className="text-center mb-20"
           >
             <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -137,7 +137,7 @@ initial={_{ opacity: 0, y: 30}}
                 2030 Services
               </span>
             </h2>
-            
+
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Discover our comprehensive range of cutting-edge 2030 technology services that will,
 transform your business and propel you into the future.
@@ -149,11 +149,11 @@ transform your business and propel you into the future.
             {innovative2030Services.map(_(service, index) => (
               <motion.div,
 key={service.id}
-                initial={_{ opacity: 0, y: 30}}
-                whileInView={_{ opacity: 1, y: 0}}
-                transition={_{ duration: 0.6, delay: index * 0.1}}
-                viewport={_{ once: true}}
-                whileHover={_{ y: -5}}
+                initial={_{ opacity: 0, y: 30}
+                whileInView={_{ opacity: 1, y: 0}
+                transition={_{ duration: 0.6, delay: index * 0.1}
+                viewport={_{ once: true}
+                whileHover={_{ y: -5}
                 className="group cursor-pointer"
               >
                 <div className="p-8 rounded-3xl bg-gradient-to-br from-gray-900/60 to-gray-800/60 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 backdrop-blur-sm">
@@ -185,7 +185,7 @@ key={service.id}
                         <div className="w-2 h-2 bg-cyan-400 rounded-full" />
                         <span>{feature}</span>
                       </div>
-                    ))}
+                    )}
                   </div>
 
                   {_/* Service Details */}
@@ -221,15 +221,15 @@ key={service.id}
                   </div>
                 </div>
               </motion.div>
-            ))}
+            )}
           </div>
 
           {_/* Call to Action */}
           <motion.div,
-initial={_{ opacity: 0, y: 30}}
-            whileInView={_{ opacity: 1, y: 0}}
-            transition={_{ duration: 0.8}}
-            viewport={_{ once: true}}
+initial={_{ opacity: 0, y: 30}
+            whileInView={_{ opacity: 1, y: 0}
+            transition={_{ duration: 0.8}
+            viewport={_{ once: true}
             className="text-center"
           >
             <div className="p-12 rounded-3xl bg-gradient-to-br from-gray-900/60 to-gray-800/60 border border-cyan-500/20 backdrop-blur-sm">
@@ -257,10 +257,10 @@ initial={_{ opacity: 0, y: 30}}
       <section className="py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div,
-initial={_{ opacity: 0, y: 30}}
-            whileInView={_{ opacity: 1, y: 0}}
-            viewport={_{ once: true}}
-            transition={_{ duration: 0.8}}
+initial={_{ opacity: 0, y: 30}
+            whileInView={_{ opacity: 1, y: 0}
+            viewport={_{ once: true}
+            transition={_{ duration: 0.8}
           >
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Business with
@@ -272,7 +272,7 @@ initial={_{ opacity: 0, y: 30}}
               Contact our team of technology experts to discuss how our revolutionary 2030 services,
 can transform your business and propel you into the future.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
               <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200">
                 Schedule Consultation

@@ -6,5 +6,3 @@ export function NewPostDialog() {;
       <p>Component placeholder - needs implementation</p>;
     </div>;
   );
-}
-;

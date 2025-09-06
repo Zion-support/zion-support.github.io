@@ -18,8 +18,8 @@ interface ImageWithRetryProps extends Omit<ImageProps, 'src' | 'alt'> {
 
   /** CSS class for the retry button */
   retryClassName?: string;  retryClassName?: string
-}
-/**
+
+**
  * Image component that falls back to a placeholder and offers a retry button when the image fails to load.
  */
 export function ImageWithRetry({
@@ -29,7 +29,7 @@ export function ImageWithRetry({
   fallbackSrc = '/images/image-placeholder.svg'
   className
   retryClassName
-}: ImageWithRetryProps) {
+: ImageWithRetryProps) {
   const [currentSrc, setCurrentSrc] = useState(src)
   const [failed, setFailed] = useState(false)
   const handleError = () => {

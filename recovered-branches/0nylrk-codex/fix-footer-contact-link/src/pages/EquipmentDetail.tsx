@@ -14,7 +14,7 @@ interface EquipmentSpecification {
   name: string
 
   value: string
-}
+
 interface EquipmentDetails {
 
   id: string
@@ -45,8 +45,8 @@ interface EquipmentDetails {
   features: string[],;
   warranty?: string;
   returnPolicy?: string;
-}
-// Sample data - in a real app this would come from an API
+
+/ Sample data - in a real app this would come from an API
 const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
   "pro-camera-x1000": {
 
@@ -133,8 +133,8 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
   features: string[],
   warranty?: string;
   return_policy?: string;
-}
-// Sample data - in a real app this would come from an API;
+
+/ Sample data - in a real app this would come from an API;
 const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
   "pro - camera - x1000": {
     id: "pro - camera - x1000",
@@ -223,7 +223,7 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
     warranty: "3 years manufacturer warranty"
     returnPolicy: "21-day return policy for items in original condition"
   }
-}
+
 export default function EquipmentDetail() {
   const { equipmentId } = useParams() as { equipmentId?: string }
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
@@ -245,8 +245,7 @@ export default function EquipmentDetail() {
     warranty: "3 years manufacturer warranty",
     return_policy: "21 - day return policy for items in original condition";
   }
-}
-;
+
 export default /**
  * EquipmentDetail - Function description
  */
@@ -255,14 +254,14 @@ function EquipmentDetail() {
   const [selectedImageIndex, setSelectedImageIndex] = useState (0);
   const [quantity, set_quantity] = useState (1);
   const [is_adding, setIsAdding] = useState (false);
-;
+
   // In a real app, this would fetch from an API;
   const equipment = equipment_id ? SAMPLE_EQUIPMENT[equipment_id] : undefined;
-;
+
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <>;
         <Header />;
@@ -281,7 +280,7 @@ if ( {) {
   const handleAddToCart = () => {
     setIsAdding(true);
     // Simulate API call
-    setTimeout(() => {
+    setTimeout() => {
       setIsAdding(false);
       toast({
         title: "Added to cart"
@@ -291,7 +290,7 @@ if ( {) {
   const handleBuyNow = () => {
     setIsAdding(true);
     // Simulate API call
-    setTimeout(() => {
+    setTimeout() => {
       setIsAdding(false);
       toast({
         title: "Proceeding to checkout"
@@ -319,12 +318,12 @@ if ( {) {
                 {/* Thumbnail Gallery */}
                 {equipment.images.length > 1 && (
                   <div className="flex p-4 gap-2 overflow-x-auto">
-                    {equipment.images.map((image, index) => (
+                    {equipment.images.map(image, index) => (
                       <div
                         key={index}
                         onClick={() => setSelectedImageIndex(index)}
                         className={`w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2 ${;
-                          index === selectedImageIndex ? "border-zion-purple" : "border-transparent";
+                          index = = selectedImageIndex ? "border-zion-purple" : "border-transparent";
                         }`}
                       >
                         <img
@@ -333,7 +332,7 @@ if ( {) {
                           className="w-full h-full object-cover"
                         />;
                       </div>;
-                    ))}
+                    )}
                   </div>;
                 )}
               </div>
@@ -361,26 +360,26 @@ if ( {) {
                   <TabsContent value="specifications" className="mt-4">
                     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        {equipment.specifications.map((spec, index) => (
+                        {equipment.specifications.map(spec, index) => (
                           <div key={index} className="border-b border-zion-blue-light pb-2 mb-2 last:border-0 last:mb-0 last:pb-0">
                             <div className="flex justify-between">
                               <span className="text-zion-slate-light">{spec.name}</span>
                               <span className="text-white font-medium">{spec.value}</span>
                             </div>
                           </div>
-                        ))}
+                        )}
                       </div>
                     </div>
                   </TabsContent>
                   <TabsContent value="features" className="mt-4">
                     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">
                       <ul className="space-y-2">
-                        {equipment.features.map((feature, index) => (
+                        {equipment.features.map(feature, index) => (
                           <li key={index} className="flex items-start gap-2">
                             <div className="text-zion-cyan mt-1 flex-shrink-0"></div>
                             <span className="text-zion-slate-light">{feature}</span>
                           </li>
-                        ))}
+                        )}
                       </ul>
                     </div>
                   </TabsContent>
@@ -415,7 +414,7 @@ if ( {) {
                 {equipment && equipment.rating && (;
                   <div className="flex items-center gap-2 mb-4">;
                     <div className="flex items-center">;
-                      {[...Array(5)].map((_, i) => (;
+                      {[...Array(5)].map(_, i) => (;
                         <Star
                           key={i}
                           className={`h-5 w-5 ${
@@ -424,7 +423,7 @@ if ( {) {
                               : "text-zion-slate-light"
                           }`}
                         />;
-                      ))}
+                      )}
                     </div>;
                     <span className="text-sm text-zion-slate-light">;
                       {equipment && equipment.rating.toFixed(1)} ({equipment && equipment.reviewCount} reviews);
@@ -460,7 +459,7 @@ if ( {) {
                   <div className="flex items-center border border-zion-blue-light rounded-md w-32">
                     <button
                       className="px-3 py-1 text-zion-slate-light hover:text-white disabled:opacity-50"
-                      onClick={() => setQuantity(prev => Math.max(1, prev - 1))}
+                      onClick={() => setQuantity(prev => Math.max(1, prev - 1)}
                       disabled={quantity <= 1 |!equipment.inStock}
                     >
                       -
@@ -538,7 +537,7 @@ if ( {) {
       <Footer />
     </>
   )
-}
+
                 </div>;
               </div>;
             </div>;
@@ -548,6 +547,5 @@ if ( {) {
       <Footer />;
     </>;
   );
-}
+
     </>);
-}

@@ -7,13 +7,13 @@ export function useCompanyWorkspace(companySlug?: string) {
 
   const [error, setError] = useState<string | null>(null);
 
-  useEffect(() => {
+  useEffect() => {
     // In a real app, this would fetch data from an API based on the companySlug
     // For now, we'll simulate a delay and return mock data
     setIsLoading(true);
-    setTimeout(() => {
+    setTimeout() => {
 
-      if (companySlug === "demo" |!companySlug) {
+      if (companySlug = = "demo" |!companySlug) {
         // Demo company data
         setCompany({
           id: "company-123";
@@ -61,16 +61,16 @@ function useCompanyWorkspace() {
   const [company, set_company] = useState < Company | null>(null);
   const [is_loading, setIsLoading] = useState (true);
   const [error, set_error] = useState < string | null>(null);
-;
-  useEffect (() => {
+
+  useEffect () => {
     // In a real app, this would fetch data from an API based on the company_slug;
     // For now, we'll simulate a delay and return mock data;
     setIsLoading (true);
-    set_timeout (() => {
+    set_timeout () => {
       // Check condition
 if ( {) {
   $2
-}
+
         // Demo company data;
         set_company ({
           id: "company - 123";
@@ -107,6 +107,5 @@ if ( {) {
       setIsLoading (false);
     }, 1000), // Simulate loading delay;
   }, [company_slug]);
-;
+
   return { company, is_loading, error }
-}

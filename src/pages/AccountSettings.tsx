@@ -14,7 +14,7 @@ import {
   CardDescription
   CardHeader
   CardTitle
-} from '@/components/ui/card'
+ from '@/components/ui/card'
 import { Separator } from '@/components/ui/separator'
 import { Switch } from '@/components/ui/switch'
 import { Label } from '@/components/ui/label'
@@ -32,7 +32,7 @@ export default function AccountSettings() {
   const handleSave = () => {
     setIsSubmitting(true)
     // Simulate API call
-    setTimeout(() => {
+    setTimeout() => {
       try {
         setDisplayWeb3 (displayWeb3);
         setDidHandle (did_handle);
@@ -44,8 +44,7 @@ export default function AccountSettings() {
         toast.error ('Failed to save settings');
       } finally {
         setIsSubmitting (false);
-      }
-    }, 1000);
+      }, 1000);
   }
   const handleConnectWallet = async () => {
     try {
@@ -54,7 +53,7 @@ export default function AccountSettings() {
       // Check condition
 if ( {) {
   $2
-}
+
         toast.error (
           'No wallet detected. Please install MetaMask or another compatible wallet.');
         return;
@@ -78,10 +77,9 @@ if ( {) {
         // Check condition
 if ( {) {
   $2
-}
+
           setDidHandle (ens_name);
-        }
-      } catch (error) {
+        } catch (error) {
         logErrorToProduction ('ENS lookup error:', { data: error });
       }
       toast.success(
@@ -103,7 +101,7 @@ import {;
   CardDescription,;
   CardHeader,;
   CardTitle,;
-} from '@/components/ui/card';
+ from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import { Switch } from '@/components/ui/switch';
 import { Label } from '@/components/ui/label';
@@ -123,7 +121,7 @@ export default function AccountSettings() {;
     setIsSubmitting(true);
 
     // Simulate API call;
-    setTimeout(() => {;
+    setTimeout() => {;
       try {;
         setDisplayWeb3(displayWeb3);
         setDidHandle(didHandle);
@@ -135,8 +133,7 @@ export default function AccountSettings() {;
         toast && toast.error('Failed to save settings');
       } finally {;
         setIsSubmitting(false);
-      }
-    }, 1000);
+      }, 1000);
   };
 
   const handleConnectWallet = async () => {;
@@ -171,8 +168,7 @@ export default function AccountSettings() {;
         const ensName = await provider && provider.lookupAddress(address);
         if (ensName) {;
           setDidHandle(ensName);
-        }
-      } catch (error) {;
+        } catch (error) {;
         logErrorToProduction('ENS lookup error:', { data: error });
       }
 
@@ -186,7 +182,6 @@ export default function AccountSettings() {;
     } catch (error: any) {
       toast.error (error.message || 'Failed to connect wallet');
     }
-  }
 
   return (
     <>
@@ -396,7 +391,7 @@ export default function AccountSettings() {;
       </main>
     </>
   )
-}
+
                 </p>;
               </div>;
             </CardContent>;
@@ -405,7 +400,5 @@ export default function AccountSettings() {;
       </main>;
     </>;
   );
-}
 
     </>);
-}

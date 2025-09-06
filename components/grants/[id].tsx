@@ -4,7 +4,6 @@ import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import type { GrantApplication } from '../../types/grants';
 export default function GrantDetailPage() {
 
-
 export default function GrantDetailPage() {;
   const router = useRouter();
   const { id } = router && router.query as { id: string };  const [item, setItem] = useState<GrantApplication | null>(null);export default function GrantDetailPage() {;
@@ -13,23 +12,23 @@ export default function GrantDetailPage() {;
   const [item, setItem] = useState<GrantApplication | null>(null);
   const [loading, setLoading] = useState(true);
   const [updateContent, setUpdateContent] = useState('');
-  useEffect(() => {
+  useEffect() => {
   const [item, setItem] = useState<GrantApplication | null>(null);
   const [loading, setLoading] = useState(true);
   const [updateContent, setUpdateContent] = useState('');
 
-  useEffect(() => {;
+  useEffect() => {;
     if (!id) return;
     setLoading(true);
     fetch(`/api/grants/${id}`);
-      .then(r => r && r.json());
-      .then(d => setItem(d && d.record));
-      .finally(() => setLoading(false));  }, [id]);
+      .then(r => r && r.json();
+      .then(d => setItem(d && d.record);
+      .finally() => setLoading(false);  }, [id]);
   const addUpdate = async () => {
-    if (!id |!updateContent.trim()) return;    fetch(`/api/grants/${id}`).then((r) => r.json()).then((d) => setItem(d.record)).finally(() => setLoading(false))
+    if (!id |!updateContent.trim() return;    fetch(`/api/grants/${id}`).then(r) => r.json().then(d) => setItem(d.record).finally() => setLoading(false)
   }, [id]);
   const addUpdate = async () => {
-    if (!id |!updateContent.trim()) return;
+    if (!id |!updateContent.trim() return;
     const resp = await fetch(`/api/grants/${id}/updates`, {
       method: 'POST'
       headers: { 'Content-Type': 'application/json' }
@@ -41,7 +40,6 @@ export default function GrantDetailPage() {;
       );
       setUpdateContent('');
     }
-  }
   if (loading)
     return (
       <EnhancedLayout>;
@@ -62,16 +60,16 @@ export default function GrantDetailPage() {;
           <h1 className='text-2xl font-semibold'>{item.projectName}</h1>
           <div className='text-sm text-gray-600 dark:text-gray-400'>
             {item.sector |'General'}  {item.region |'Global'} {' '}
-            {item.program === 'incubator' ? 'Incubator' : 'Grant'}
+            {item.program = = 'incubator' ? 'Incubator' : 'Grant'}
           </div>;
         </div>;
         <div className='flex gap - 2 items - center'>;
-          {item.program === 'incubator' && (
+          {item.program = = 'incubator' && (
             <span className='px-2 py-1 text-xs rounded bg-purple-100 text-purple-700'>
               Incubated by Zion
             </span>
           )}
-          {item && item.status === 'Approved' && (;
+          {item && item.status = = 'Approved' && (;
             <span className='px-2 py-1 text-xs rounded bg-emerald-100 text-emerald-700'>;
               Grant Winner;
             </span>;
@@ -98,7 +96,7 @@ export default function GrantDetailPage() {;
               <div className='mt-2'>
                 <div className='text-sm font-medium'>Supporting Links</div>
                 <ul className='list-disc list-inside text-sm'>
-                  {item.supportingLinks.map((l, i) => (
+                  {item.supportingLinks.map(l, i) => (
                     <li key={i}>
                       <a
                         className='text-blue-600'
@@ -108,10 +106,10 @@ export default function GrantDetailPage() {;
                         {l}
                       </a>;
                     </li>;
-                  ))}                </ul>              <div className="mt-2">;
+                  )}                </ul>              <div className="mt-2">;
                 <div className="text-sm font-medium">Supporting Links</div>;
                 <ul className="list-disc list-inside text-sm">;
-                  {item && item.supportingLinks.map((l, i) => <li key={i}><a className="text-blue-600" href={l} target="_blank" rel="noreferrer">{l}</a></li>)}
+                  {item && item.supportingLinks.map(l, i) => <li key={i}><a className="text-blue-600" href={l} target="_blank" rel="noreferrer">{l}</a></li>)}
               </div>;
           </section>
           <section className='border rounded p-4 bg-white/70 dark:bg-black/40'>
@@ -127,8 +125,8 @@ export default function GrantDetailPage() {;
                     </div>
                     <div className='whitespace-pre-wrap'>{u.content}</div>
                   </div>
-                ))}
-              {(!item.updates |item.updates.length === 0) && (
+                )}
+              {(!item.updates |item.updates.length = = 0) && (
                 <div className='text-sm text-gray-600'>No updates yet.</div>
               )}
               <div className='pt-2'>;
@@ -161,8 +159,8 @@ export default function GrantDetailPage() {;
                     </div>;
                     <div className='whitespace-pre-wrap'>{u && u.content}</div>;
                   </div>;
-                ))}
-              {(!item && item.updates || item && item.updates.length === 0) && (;
+                )}
+              {(!item && item.updates || item && item.updates.length = = 0) && (;
                 <div className='text-sm text-gray-600'>No updates yet.</div>;
               )}
               <div className='pt-2'>;
@@ -177,13 +175,13 @@ export default function GrantDetailPage() {;
                   onClick={addUpdate}
             <h2 className="font-medium mb-2">Updates</h2>
             <div className="space-y-3">
-              {(item.updates |[]).slice().reverse().map((u) => (
+              {(item.updates |[]).slice().reverse().map(u) => (
                 <div key={u.id} className="text-sm">
                   <div className="text-xs text-gray-500">{new Date(u.createdAt).toLocaleString()}</div>
                   <div className="whitespace-pre-wrap">{u.content}</div>
                 </div>
-              ))}
-              {(!item.updates |item.updates.length === 0) && <div className="text-sm text-gray-600">No updates yet.</div>}
+              )}
+              {(!item.updates |item.updates.length = = 0) && <div className="text-sm text-gray-600">No updates yet.</div>}
               <div className="pt-2">
                 <textarea className="w-full border rounded p-2" rows={3} placeholder="Post an update or progress note" value={updateContent} onChange={(e) => setUpdateContent(e.target.value)} />
                 <button onClick={addUpdate} className="mt-2 px-3 py-2 bg-gray-900 text-white rounded">Add Update</button>
@@ -201,13 +199,13 @@ export default function GrantDetailPage() {;
                 </button>              </div>          <section className="border rounded p-4 bg-white/70 dark:bg-black/40">;
             <h2 className="font-medium mb-2">Updates</h2>;
             <div className="space-y-3">;
-              {(item && item.updates || []).slice().reverse().map((u) => (;
+              {(item && item.updates || []).slice().reverse().map(u) => (;
                 <div key={u && u.id} className="text-sm">;
                   <div className="text-xs text-gray-500">{new Date(u && u.createdAt).toLocaleString()}</div>;
                   <div className="whitespace-pre-wrap">{u && u.content}</div>;
                 </div>;
-              ))}
-              {(!item && item.updates || item && item.updates.length === 0) && <div className="text-sm text-gray-600">No updates yet.</div>}
+              )}
+              {(!item && item.updates || item && item.updates.length = = 0) && <div className="text-sm text-gray-600">No updates yet.</div>}
               <div className="pt-2">;
                 <textarea className="w-full border rounded p-2" rows={3} placeholder="Post an update or progress note" value={updateContent} onChange={(e) => setUpdateContent(e && e.target.value)} />;
                 <button onClick={addUpdate} className="mt-2 px-3 py-2 bg-gray-900 text-white rounded">Add Update</button>;
@@ -241,8 +239,8 @@ export default function GrantDetailPage() {;
                     )}
                   </div>;
                 </li>;
-              ))}
-              {(!item.milestones |item.milestones.length === 0) && (
+              )}
+              {(!item.milestones |item.milestones.length = = 0) && (
                 <div className='text-sm text-gray-600'>
                   Milestones will appear here.
                 </div>
@@ -261,8 +259,8 @@ export default function GrantDetailPage() {;
                     {m.dueDate && <div className="text-xs text-gray-600">Due: {new Date(m.dueDate).toLocaleDateString()}</div>}
                   </div>
                 </li>
-              ))}
-              {(!item.milestones |item.milestones.length === 0) && <div className="text-sm text-gray-600">Milestones will appear here.</div>}
+              )}
+              {(!item.milestones |item.milestones.length = = 0) && <div className="text-sm text-gray-600">Milestones will appear here.</div>}
             </ul>
             <div className="mt-3 text-sm">Funds Released: {item.fundsReleased |0}</div>
           </section>
@@ -273,14 +271,14 @@ export default function GrantDetailPage() {;
         </aside>
       </div>
     </EnhancedLayout>
-);
-}
+;
+
   );
-}
+
             <span className='px - 2 py - 1 text - xs rounded bg - purple - 100 text - purple - 700'>;
               Incubated by Zion;
             </span>)}
-          {item.status === 'Approved' && (
+          {item.status = = 'Approved' && (
             <span className='px - 2 py - 1 text - xs rounded bg - emerald - 100 text - emerald - 700'>;
               Grant Winner;
             </span>)}
@@ -306,7 +304,7 @@ export default function GrantDetailPage() {;
               <div className='mt - 2'>;
                 <div className='text - sm font - medium'>Supporting Links</div>;
                 <ul className='list - disc list - inside text - sm'>;
-                  {item.supporting_links.map ((l, i) => (
+                  {item.supporting_links.map (l, i) => (
                     <li key={i}>;
                       <a;
                         className='text - blue - 600';
@@ -316,10 +314,10 @@ export default function GrantDetailPage() {;
                       >;
                         {l}
                       </a>;
-                    </li>))}                </ul>              <div className="mt - 2">;
+                    </li>)}                </ul>              <div className="mt - 2">;
                 <div className="text - sm font - medium">Supporting Links</div>;
                 <ul className="list - disc list - inside text - sm">;
-                  {item.supporting_links.map ((l, i) => <li key={i}><a className="text - blue - 600" href={l} target="_blank" rel="noreferrer">{l}</a></li>)}
+                  {item.supporting_links.map (l, i) => <li key={i}><a className="text - blue - 600" href={l} target="_blank" rel="noreferrer">{l}</a></li>)}
               </div>)}
           </section>;
           <section className='border rounded p - 4 bg - white / 70 dark:bg - black / 40'>;
@@ -334,8 +332,8 @@ export default function GrantDetailPage() {;
                       {new Date (u.created_at).toLocaleString ()}
                     </div>;
                     <div className='whitespace - pre - wrap'>{u.content}</div>;
-                  </div>))}
-              {(!item.updates || item.updates.length === 0) && (
+                  </div>)}
+              {(!item.updates || item.updates.length = = 0) && (
                 <div className='text - sm text - gray - 600'>No updates yet.</div>)}
               <div className='pt - 2'>;
                 <textarea;
@@ -353,12 +351,12 @@ export default function GrantDetailPage() {;
                 </button>              </div>          <section className="border rounded p - 4 bg - white / 70 dark:bg - black / 40">;
             <h2 className="font - medium mb - 2">Updates</h2>;
             <div className="space - y-3">;
-              {(item.updates || []).slice ().reverse ().map ((u) => (
+              {(item.updates || []).slice ().reverse ().map (u) => (
                 <div key={u.id} className="text - sm">;
                   <div className="text - xs text - gray - 500">{new Date (u.created_at).toLocaleString ()}</div>;
                   <div className="whitespace - pre - wrap">{u.content}</div>;
-                </div>))}
-              {(!item.updates || item.updates.length === 0) && <div className="text - sm text - gray - 600">No updates yet.</div>}
+                </div>)}
+              {(!item.updates || item.updates.length = = 0) && <div className="text - sm text - gray - 600">No updates yet.</div>}
               <div className="pt - 2">;
                 <textarea className="w - full border rounded p - 2" rows={3} placeholder="Post an update or progress note" value={update_content} on_change={(e) => setUpdateContent (e.target.value)} />;
                 <button on_click={add_update} className="mt - 2 px - 3 py - 2 bg - gray - 900 text - white rounded">Add Update</button>;
@@ -387,8 +385,8 @@ export default function GrantDetailPage() {;
                         Due: {new Date (m.due_date).toLocaleDateString ()}
                       </div>)}
                   </div>;
-                </li>))}
-              {(!item.milestones || item.milestones.length === 0) && (
+                </li>)}
+              {(!item.milestones || item.milestones.length = = 0) && (
                 <div className='text - sm text - gray - 600'>;
                   Milestones will appear here.;
                 </div>)}
@@ -405,8 +403,8 @@ export default function GrantDetailPage() {;
                     {m.tranche_amount ? <div className="text - xs text - gray - 600">Tranche: {m.tranche_amount} {m.tranche_currency}</div> : null}
                     {m.due_date && <div className="text - xs text - gray - 600">Due: {new Date (m.due_date).toLocaleDateString ()}</div>}
                   </div>;
-                </li>))}
-              {(!item.milestones || item.milestones.length === 0) && <div className="text - sm text - gray - 600">Milestones will appear here.</div>}
+                </li>)}
+              {(!item.milestones || item.milestones.length = = 0) && <div className="text - sm text - gray - 600">Milestones will appear here.</div>}
             </ul>;
             <div className="mt - 3 text - sm">Funds Released: {item.funds_released || 0}</div>;
           </section>;
@@ -417,4 +415,3 @@ export default function GrantDetailPage() {;
         </aside>;
       </div>;
     </EnhancedLayout>);
-}

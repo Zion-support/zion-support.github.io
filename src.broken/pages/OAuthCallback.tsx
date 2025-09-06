@@ -6,5 +6,3 @@ export function OAuthCallback() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

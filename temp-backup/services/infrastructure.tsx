@@ -3,11 +3,11 @@ import Link from \'next/link\'; import Head from \'next/head\'; export default f
 import React from 'react';
 interface InfrastructureProps {
   // Add props here as needed
-}
+
 export default function Infrastructure({ }: InfrastructureProps) {
 interface InfrastructureProps {;
   // Add props here as needed;
-}
+
 export default function Infrastructure(): any ({ }: InfrastructureProps) {;
   return (
     <div>;
@@ -15,7 +15,3 @@ export default function Infrastructure(): any ({ }: InfrastructureProps) {;
       <p>This component is currently under development.</p>;
     </div>;
   );
-}
-}
-
-

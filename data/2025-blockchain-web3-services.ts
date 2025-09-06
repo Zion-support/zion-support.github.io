@@ -460,9 +460,9 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
     rating: 4 && 4.6,
     reviews: 18000,
   },
-];      'Social networkingContent creation and sharingCommunity buildingBrand marketingInfluencer monetizationDecentralized governance'
+;      'Social networkingContent creation and sharingCommunity buildingBrand marketingInfluencer monetizationDecentralized governance'
 
-];      'Social networking_content creation and sharing_community building_brand marketing_influencer monetization_decentralized governance';
+;      'Social networking_content creation and sharing_community building_brand marketing_influencer monetization_decentralized governance';
     ];
     integrations: ['MetaMask, WalletConnect, OpenSea, Custom Web3 wallets and platforms'],
     support: 'Community support, developer documentation, custom development services, and enterprise solutions.',
@@ -482,5 +482,4 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
     rating: 4.6,
     reviews: 18000;
   }
-];
 ;

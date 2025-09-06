@@ -1,4 +1,4 @@
-{
+
   "general": {
     "app_name": "March IA de Zion",
     "loading": "Chargement...",
@@ -16,7 +16,7 @@
     "saving": "Enregistrement...",
     "open_main_menu": "Ouvrir le menu principal",
     "toggle_mobile_menu": "Basculer le menu mobile",
-    "greeting_user": "Bonjour, {{name}} !",
+    "greeting_user": "Bonjour, {name} !",
     "status_page": "Page de statut",
     "check_status_page": "Vous pouvez essayer de rafrachir la page ou visiter notre"
   },
@@ -66,7 +66,7 @@
     "session_check_timed_out_message": "Nous n'avons pas pu vrifier votre session rapidement. Veuillez ressayer ou rafrachir la page.",
     "email_verification_required": "Vrification de l'e-mail requise",
     "email_needs_verification": "Votre adresse e-mail doit tre vrifie avant de vous connecter.",
-    "verification_email_sent": " E-mail de vrification envoy  {{email}}",
+    "verification_email_sent": " E-mail de vrification envoy  {email}",
     "resend_email": "Renvoyer l'e-mail",
     "check_status": "Vrifier le statut",
     "redirecting": "Redirection vers le statut de vrification dans 3 secondes...",
@@ -153,8 +153,8 @@
     "fr": "Franais",
     "pt": "Portugus",
     "ar": "",
-    "language_changed": "Langue change en {{language}}",
-    "switch_to_detected": "Passer en {{language}}?"
+    "language_changed": "Langue change en {language}",
+    "switch_to_detected": "Passer en {language}?"
   },
   "features": {
     "ai_talent_matching": "Correspondance de Talents IA",
@@ -220,7 +220,7 @@
     "actions": "Actions",
     "no_results": "Aucune cl de traduction correspondant  votre recherche",
     "missing": "Non traduit",
-    "missing_languages": "Manquant dans {{count}} langues",
+    "missing_languages": "Manquant dans {count} langues",
     "edit": "Modifier",
     "saved": "Sauvegard",
     "changes_saved": "Les modifications de traduction ont t sauvegardes"
@@ -321,4 +321,3 @@
   },
   "login": "Connexion",
   "signup": "S'inscrire"
-}

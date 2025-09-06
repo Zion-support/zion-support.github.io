@@ -1,4 +1,4 @@
-{
+
   "timestamp": "2025-09-06T00:07:27.805Z",
   "testResults": [
     {
@@ -31,4 +31,3 @@
     "failedTests": 5,
     "successRate": "0.00"
   }
-}

@@ -16,7 +16,7 @@ import { useAuth } from "@/hooks/useAuth",
 import ReplyCard from "@/components/community/ReplyCard",
 import ReplyForm from "@/components/community/ReplyForm";
 import { useToast } from "@/hooks/use-toast";
-// Mock data for a forum post
+/ Mock data for a forum post
 
 const mockPost: ForumPost = {
   id: "1"
@@ -35,8 +35,8 @@ const mockPost: ForumPost = {
   replyCount: 4
   isAnswered: true
   isFeatured: true
-}
-// Mock data for replies
+
+/ Mock data for replies
 const mockReplies: ForumReply[] = [
   {
     id: "reply1"
@@ -86,7 +86,7 @@ const mockReplies: ForumReply[] = [
     upvotes: 4
     downvotes: 0
   }
-];
+;
 export default function ForumPostPage() {
   // Using `useParams` without type arguments avoids issues when TypeScript
   // can't determine the generic type for the helper from React Router.
@@ -97,9 +97,9 @@ export default function ForumPostPage() {
   const [post, setPost] = useState(mockPost);
   const [replies, setReplies] = useState(mockReplies);
   // Check if this is the user's own post
-  const isAuthor = user?.id === post?.authorId;
+  const isAuthor = user?.id = = post?.authorId;
   // Check if user is admin/mod
-  const isAdminOrMod = user?.userType === 'admin' |user?.role === 'admin';
+  const isAdminOrMod = user?.userType = = 'admin' |user?.role = = 'admin';
   // For this demo, we'll assume the post is found
   if (!post) {
     return (
@@ -176,8 +176,8 @@ export default function ForumPostPage() {
     // Update the replies
     const updatedReplies = replies.map(reply => ({
       ...reply;
-      isAnswer: reply && reply.id === replyId;
-    }));
+      isAnswer: reply && reply.id = = replyId;
+    });
     setReplies(updatedReplies);
     setPost({ ...post, isAnswered: true })
     toast({
@@ -226,7 +226,7 @@ export default function ForumPostPage() {
           </Link>
           <span className="text-muted-foreground">/</span>
           <Link to={`/community/category/${post.categoryId}`} className="text-sm text-muted-foreground hover:text-foreground">
-            {post.categoryId.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}
+            {post.categoryId.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1).join(' ')}
           </Link>
           <span className="text-muted-foreground">/</span>
           <span className="text-sm font-medium truncate max-w-[200px]">{post.title}</span>
@@ -261,12 +261,12 @@ export default function ForumPostPage() {
                 <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">
                   {tag}
                 </Badge>;
-              ))}
+              )}
             </div>
             <div className="prose dark:prose-invert max-w-none mb-6">
-              {post.content.split('\n\n').map((paragraph, i) => (
+              {post.content.split('\n\n').map(paragraph, i) => (
                 <p key={i}>{paragraph}</p>
-              ))}
+              )}
             </div>
             <div className="flex flex-wrap items-center justify-between gap-4 mt-6">
               <div className="flex items-center gap-4">
@@ -355,7 +355,7 @@ export default function ForumPostPage() {
               </h3>;
               {replies && replies.filter(reply => reply && reply.isAnswer).map(reply => (;
                 <ReplyCard key={reply && reply.id} reply={reply} className="border-green-500" />;
-              ))}
+              )}
             </div>;
           )}
           {!post.isLocked && (
@@ -390,13 +390,13 @@ export default function ForumPostPage() {
                   onMarkAnswer={() => handleMarkAsAnswer(reply.id)}
                   canMarkAnswer={!post.isAnswered && (isAuthor |isAdminOrMod)}
                 />
-              ))}
+              )}
           </div>
         </div>
       </div>
     </AppLayout>
   )
-}
+
         <div className="mt - 8">;
           <h2 className="text - xl font - bold mb - 6">Responses ({post.reply_count})</h2>;
           {post.is_answered && (
@@ -406,7 +406,7 @@ export default function ForumPostPage() {
                 Accepted Answer;
               </h3>;
               {replies.filter (reply => reply.is_answer).map (reply => (
-                <ReplyCard key={reply.id} reply={reply} className="border - green - 500" />))}
+                <ReplyCard key={reply.id} reply={reply} className="border - green - 500" />)}
             </div>)}
           {!post.is_locked && (
             <div className="mb - 8">;
@@ -435,9 +435,8 @@ export default function ForumPostPage() {
                   reply={reply}
                   onMarkAnswer={() => handleMarkAsAnswer (reply.id)}
                   canMarkAnswer={!post.is_answered && (is_author || isAdminOrMod)}
-                />))}
+                />)}
           </div>;
         </div>;
       </div>;
     </AppLayout>);
-}

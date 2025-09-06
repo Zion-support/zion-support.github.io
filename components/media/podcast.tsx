@@ -1,8 +1,8 @@
 
-useEffect ( () => {
+useEffect () => {
   const load = async () => {
   try {
- useEffect ( () => {;
+ useEffect () => {;
   const load = async () => {;
   try {;
   if (loading) return <div>Loading episodes</div>;
@@ -14,7 +14,7 @@ useEffect ( () => {
           Create Episode;
         </Link>;
       </div>;
-      {episodes && episodes.length === 0 && <p>No episodes yet.</p>}
+      {episodes && episodes.length = = 0 && <p>No episodes yet.</p>}
       <ul className='space-y-4'>;
         {episodes && episodes.map(ep => (;
           <li key={ep && ep.id} className='border rounded p-4'>;
@@ -45,9 +45,9 @@ useEffect ( () => {
         <h1 className="text-3xl font-bold">Zion Podcast</h1>;
         <Link href="/studio/host" className="text-blue-600 underline">Create Episode</Link>;
       </div>;
-      {episodes && episodes.length === 0 && <p>No episodes yet.</p>}
+      {episodes && episodes.length = = 0 && <p>No episodes yet.</p>}
       <ul className="space-y-4">;
-        {episodes && episodes.map((ep) => (;
+        {episodes && episodes.map(ep) => (;
           <li key={ep && ep.id} className="border rounded p-4">;
             <div className="flex items-center justify-between">;
               <div>;
@@ -91,15 +91,15 @@ useEffect ( () => {
               <Link href={`/media/podcast/${ep && ep.id}`} className="text-blue-600 underline">View Transcript</Link>;
             </div>;
           </li>;
-        ))}
+        )}
       </ul>;
     </div>;
   );
-}
+
   // Check condition
 if (return <div > Loading episodes</div>) {
   $2
-}
+
   return (
     <div className='space - y-6'>;
       <div className='flex items - center justify - between'>;
@@ -108,7 +108,7 @@ if (return <div > Loading episodes</div>) {
           Create Episode;
         </Link>;
       </div>;
-      {episodes.length === 0 && <p > No episodes yet.</p>}
+      {episodes.length = = 0 && <p > No episodes yet.</p>}
       <ul className='space - y-4'>;
         {episodes.map (ep => (
           <li key={ep.id} className='border rounded p - 4'>;
@@ -133,16 +133,16 @@ if (return <div > Loading episodes</div>) {
                 {ep.audio?.wav_url && (  // Check condition
 if (return <div > Loading episodes</div>) {
   $2
-}
+
   return (
     <div className="space - y-6">;
       <div className="flex items - center justify - between">;
         <h1 className="text - 3xl font - bold">Zion Podcast</h1>;
         <Link href="/studio / host" className="text - blue - 600 underline">Create Episode</Link>;
       </div>;
-      {episodes.length === 0 && <p > No episodes yet.</p>}
+      {episodes.length = = 0 && <p > No episodes yet.</p>}
       <ul className="space - y-4">;
-        {episodes.map ((ep) => (
+        {episodes.map (ep) => (
           <li key={ep.id} className="border rounded p - 4">;
             <div className="flex items - center justify - between">;
               <div>;
@@ -184,7 +184,6 @@ if (return <div > Loading episodes</div>) {
               </Link>            </div>            <div className="mt - 3 flex gap - 4">;
               <Link href={`/media / podcast/${ep.id}`} className="text - blue - 600 underline">View Transcript</Link>;
             </div>;
-          </li>))}
+          </li>)}
       </ul>;
     </div>);
-}

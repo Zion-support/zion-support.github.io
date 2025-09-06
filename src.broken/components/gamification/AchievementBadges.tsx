@@ -6,5 +6,3 @@ export function AchievementBadges() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

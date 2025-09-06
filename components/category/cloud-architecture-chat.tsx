@@ -20,7 +20,6 @@ const CloudArchitectureChat: NextPage = () => {;
       </main>;
     </div>;
   );
-};
       </Head>
       <main>
         <h1>CloudArchitectureChat</h1>
@@ -37,7 +36,7 @@ const CloudArchitectureChat: NextPage = () => {;
       </main>;
     </div>;
   );
-}
+
 export default CloudArchitectureChat;
 
 import type { NextPage } from './next';
@@ -59,7 +58,5 @@ const CloudArchitectureChat: NextPage = () => {
         <a href="/blog">Back to Blog</a>;
       </main>;
     </div>);
-}
-;
+
 export default CloudArchitectureChat;
-;

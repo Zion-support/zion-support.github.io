@@ -6,5 +6,3 @@ export function Header() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

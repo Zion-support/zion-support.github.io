@@ -2,8 +2,8 @@
   descriptio: n: string,
   ur: l: string,
   typ: e: 'service' | 'page' | 'category'
-};
 ;
+
 const:SearchBar:React.FC = () => {;
 import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
@@ -13,7 +13,6 @@ interface SearchResult {
   description: string;
   url: string;
   type: 'service' | 'page' | 'category';
-}
 
 const SearchBar: React.FC = () => {
   const [query, setQuery] = useState('');
@@ -58,14 +57,13 @@ const SearchBar: React.FC = () => {
       typ: e: 'page'
     }
   ];
-;
+
   const handleSearch = async (searchQuer:y:string) => {;
-    if (!searchQuery.trim()) {;
+    if (!searchQuery.trim() {;
       setResults([]);
       setIsOpen(false);
       return
     };
-;
 
   // Mock search data - in a real app, this would come from an API
   const searchData: SearchResult[] = [
@@ -96,21 +94,21 @@ const SearchBar: React.FC = () => {
   ];
 
   const handleSearch = async (searchQuery: string) => {
-    if (!searchQuery.trim()) {
+    if (!searchQuery.trim() {
       setResults([]);
       return;
     }
 
     setIsLoading(true);
-    
+
     // Simulate API call delay
-    await new Promise(resolve => setTimeout(resolve, 300));
-    
+    await new Promise(resolve => setTimeout(resolve, 300);
+
     const filteredResults = searchData.filter(item =>
-      item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      item.description.toLowerCase().includes(searchQuery.toLowerCase())
+      item.title.toLowerCase().includes(searchQuery.toLowerCase() ||
+      item.description.toLowerCase().includes(searchQuery.toLowerCase()
     );
-    
+
     setResults(filteredResults);
     setIsLoading(false);
   };
@@ -125,12 +123,11 @@ const SearchBar: React.FC = () => {
     setIsOpen(true);
     if (query) {
       handleSearch(query);
-    }
-  };
+    };
 
   const handleBlur = () => {
     // Delay closing to allow clicking on results
-    setTimeout(() => setIsOpen(false), 200);
+    setTimeout() => setIsOpen(false), 200);
   };
 
   const handleResultClick = () => {
@@ -139,12 +136,11 @@ const SearchBar: React.FC = () => {
   };
 
   // Close dropdown when clicking outside
-  useEffect(() => {
+  useEffect() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
+      if (searchRef.current && !searchRef.current.contains(event.target as Node) {
         setIsOpen(false);
-      }
-    };
+      };
 
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
@@ -180,7 +176,7 @@ const SearchBar: React.FC = () => {
         <div className="absolute z-50 w-full mt-1 bg-white border border-gray-300 rounded-lg shadow-lg max-h-96 overflow-y-auto">
           {results.length > 0 ? (
             <div className="py-2">
-              {results.map((result, index) => (
+              {results.map(result, index) => (
                 <Link
                   key={index}
                   href={result.url}
@@ -190,8 +186,8 @@ const SearchBar: React.FC = () => {
                   <div className="flex items-start space-x-3">
                     <div className="flex-shrink-0">
                       <div className={`w-2 h-2 rounded-full ${
-                        result.type === 'service' ? 'bg-blue-500' :
-                        result.type === 'page' ? 'bg-green-500' : 'bg-purple-500'
+                        result.type = = 'service' ? 'bg-blue-500' :
+                        result.type = = 'page' ? 'bg-green-500' : 'bg-purple-500'
                       }`}></div>
                     </div>
                     <div className="flex-1 min-w-0">
@@ -204,7 +200,7 @@ const SearchBar: React.FC = () => {
                     </div>
                   </div>
                 </Link>
-              ))}
+              )}
             </div>
           ) : query && !isLoading ? (
             <div className="px-4 py-3 text-sm text-gray-500">
@@ -215,6 +211,5 @@ const SearchBar: React.FC = () => {
       )}
     </div>
   );
-};
 
 export default SearchBar;

@@ -52,20 +52,20 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
-}
+
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com',};
   website: 'https://ziontechgroup.com'
-};
+;
 
 export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
   {  mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup && ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com'
-};
+;
 
 export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
   {
@@ -490,7 +490,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     rating: 4 && 4.6,
     reviews: 89,
   },
-];      'AI-powered climate controlCrop growth monitoringEnvironmental optimizationReal-time controlPerformance analyticsIntegration capabilitiesCustom growing protocolsMulti-tier support';
+;      'AI-powered climate controlCrop growth monitoringEnvironmental optimizationReal-time controlPerformance analyticsIntegration capabilitiesCustom growing protocolsMulti-tier support';
     link: 'https://ziontechgroup.com/ai-powered-vertical-farming';
     marketPosition: 'Leading AI-powered vertical farming platform for climate control and crop optimization.'
     targetAudience: 'Vertical farming companies, Urban agriculture, Controlled environment agriculture, Food producers';
@@ -641,9 +641,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     rating: 4.6
     reviews: 89
   }
-];
-
-];      'AI - powered climate control_crop growth monitoring_environmental optimization_real - time control_performance analytics_integration capabilities_custom growing protocols_multi - tier support';
+;      'AI - powered climate control_crop growth monitoring_environmental optimization_real - time control_performance analytics_integration capabilities_custom growing protocols_multi - tier support';
       'Compliance management';
     ];
     popular: true;
@@ -673,5 +671,4 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     rating: 4.6,
     reviews: 89;
   }
-];
 ;

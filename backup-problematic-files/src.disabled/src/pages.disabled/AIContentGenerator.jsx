@@ -7,6 +7,5 @@ const AIContentGenerator = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default AIContentGenerator;

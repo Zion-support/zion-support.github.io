@@ -1,4 +1,4 @@
-// Stub talent data - placeholder for missing functionality
+/ Stub talent data - placeholder for missing functionality
 
 export const TALENT_PROFILES = [
   {
@@ -25,7 +25,6 @@ export const TALENT_PROFILES = [
     createdAt: new Date().toISOString()
     originalLanguage: 'en'
 translations: {}
-  }
     id: '1',
     slug: 'sample - talent',
     name: 'Sample Talent',
@@ -50,7 +49,4 @@ translations: {}
     originalLanguage: 'en',
     translations: {},
   },
-];
-
-];
 ;

@@ -9,4 +9,3 @@ export default function VerifyEmailPage() {
       <p className=&quot;mt-2 text-gray-600 dark:text-gray-300&quot;>Please verify your email to continue.</p>
     </div>
   )
-}

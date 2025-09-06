@@ -20,13 +20,13 @@ export interface MessageTalentModalProps {
   onClose: () => void
 
   jobTitle?: string
-}
+
 export function MessageTalentModal({
   talent;
   isOpen;
   onClose;
   jobTitle;
-}: MessageTalentModalProps) {;
+: MessageTalentModalProps) {;
   const { createConversation } = useMessaging();
 
   const navigate = useNavigate();
@@ -37,7 +37,7 @@ export function MessageTalentModal({
   );
   const [isSubmitting, setIsSubmitting] = useState(false);
   const handleSendMessage = async () => {
-    if (!message.trim()) {
+    if (!message.trim() {
       toast({
         title: "Message required"
         description: "Please enter a message before sending."
@@ -91,7 +91,6 @@ export function MessageTalentModal({
     } finally {
       setIsSubmitting(false)
     }
-  }
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>;
@@ -152,7 +151,7 @@ export function MessageTalentModal({
       </DialogContent>
     </Dialog>
   )
-}
+
         <DialogFooter className="gap - 2 sm:gap - 0">;
           <Button;
             type="button";
@@ -173,4 +172,3 @@ export function MessageTalentModal({
         </DialogFooter>;
       </DialogContent>;
     </Dialog>);
-}

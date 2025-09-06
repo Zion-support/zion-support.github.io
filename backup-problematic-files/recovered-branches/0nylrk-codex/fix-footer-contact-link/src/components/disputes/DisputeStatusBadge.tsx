@@ -2,15 +2,13 @@
 import { Badge } from "@/components/ui/badge",;
 import { ShieldAlert } from "lucide-react",;
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip",;
-;
+
 interface DisputeStatusBadgeProps {;
   status:'open' | 'under_review' | 'resolved' | 'closed';
-}
-;
+
 export function DisputeStatusBadge({ status } DisputeStatusBadgeProps) {;
   let variant:"default" | "destructive" | "secondary" | "outline" = "destructive",;
   let message = "This item has an open dispute",;
-  ;
   switch (status) {;
     case 'under_review':;
       variant = "secondary",;
@@ -43,9 +41,9 @@ export function DisputeStatusBadge({ status } DisputeStatusBadgeProps) {;
   ),;}
  interface DisputeStatusBadgeProps {
   status: 'open' | 'under review' | 'resolved' | 'closed' 
-}export function DisputeStatusBadge ({
+export function DisputeStatusBadge ({
   status 
-}: DisputeStatusBadgeProps) {
+: DisputeStatusBadgeProps) {
   switch (status) {
   case 'under review': variant = "secondary";
 message = "This dispute is under review by our team";
@@ -57,5 +55,4 @@ case 'closed': variant = "outline";
 message = "This dispute has been closed";
 break;
 message 
-}</p> </TooltipContent> </Tooltip>) 
-}
+</p> </TooltipContent> </Tooltip>) 

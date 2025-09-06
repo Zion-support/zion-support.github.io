@@ -5,7 +5,7 @@ type ChatMessage = {
   role: 'user' | 'assistant' | 'system'
   content: string
   timestamp?: number
-}
+
 function generateSessionId(): string {
 
 class ErrorBoundary extends React.Component {
@@ -13,41 +13,40 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
- useEffect ( () => {;
-  if (!isOpen && messages && messages.length === 0) {;
+
+ useEffect () => {;
+  if (!isOpen && messages && messages.length = = 0) {;
   //Seed greeting setMessages ([ import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { X } from 'lucide-react';
 type ChatMessage = {;
   role: 'user' | 'assistant' | 'system',;
   content: string,;
   timestamp?: number;
-};
 
 function generateSessionId(): any (): string {;
-  if (typeof window === 'undefined') return '';
+  if (typeof window = = 'undefined') return '';
   const existing = window && window.localStorage.getItem('zion_support_session_id');
   if (existing) return existing;
   const id = `sess_${Math && Math.random().toString(36).slice(2)}_${Date && Date.now()}`;
   window && window.localStorage.setItem('zion_support_session_id', id);
   return id;
-}
+
 export default function ChatWidget() {;
 export default function ChatWidget() {;
   const [isOpen, setIsOpen] = useState(false);
@@ -58,11 +57,11 @@ export default function ChatWidget() {;
   const [showEscalation, setShowEscalation] = useState(false);
   const sessionIdRef = useRef<string>('');
   const messagesEndRef = useRef<HTMLDivElement | null>(null);
-  useEffect(() => {
+  useEffect() => {
     sessionIdRef.current = generateSessionId();  }, []);    sessionIdRef.current = generateSessionId()
   }, []);
-  useEffect(() => {
-    if (!isOpen && messages.length === 0) {
+  useEffect() => {
+    if (!isOpen && messages.length = = 0) {
       // Seed greeting
       setMessages([
         {
@@ -70,19 +69,15 @@ export default function ChatWidget() {;
           content: 'Hi! How can I help you?'
           timestamp: Date.now()
         }
-      ]);    }
-  }, [isOpen, messages.length]);
-  useEffect(() => {        { role: 'assistant', content: 'Hi! How can I help you?', timestamp: Date.now() }])
-    }
-  }, [isOpen, messages.length]);
-  useEffect(() => {
+      ]);    }, [isOpen, messages.length]);
+  useEffect() => { role: 'assistant', content: 'Hi! How can I help you?', timestamp: Date.now() }])
+    }, [isOpen, messages.length]);
+  useEffect() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
-  const quickReplies = useMemo(
-    () => ['How do I hire?', 'How do I get matched?', 'Billing help'],    []    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
+  const quickReplies = useMemo() => ['How do I hire?', 'How do I get matched?', 'Billing help'],    []    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
   }, [messages]);
-  const quickReplies = useMemo(
-    () => ['How do I hire?How do I get matched?Billing help'];
+  const quickReplies = useMemo() => ['How do I hire?How do I get matched?Billing help'];
   );
   async function logEvent(eventType: string, payload: any) {
     try {
@@ -96,7 +91,6 @@ export default function ChatWidget() {;
         })
       });    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, eventType, payload })})
     } catch {}
-  }
   async function escalateSupport(reason: string) {
     try {
       await fetch('/api/support/escalate', {
@@ -111,7 +105,6 @@ export default function ChatWidget() {;
       setShowEscalation(true);    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })})
       setShowEscalation(true)
     } catch {}
-  }
   async function onSend(messageText?: string) {
     const text = (messageText ?? input).trim();
     if (!text) return;
@@ -124,7 +117,7 @@ export default function ChatWidget() {;
     setInput('');
     setIsLoading(true);
     await logEvent('message/user', { content: text });    const newUserMessage: ChatMessage = { role: 'user', content: text, timestamp: Date.now() }
-    setMessages((prev) => [...prev, newUserMessage]);
+    setMessages(prev) => [...prev, newUserMessage]);
     setInput('');
     setIsLoading(true);
     await logEvent('message/user', { content: text })
@@ -133,12 +126,12 @@ export default function ChatWidget() {;
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
           sessionId: sessionIdRef.current
-          messages: [...messages, newUserMessage].map(({ role, content }) => ({
+          messages: [...messages, newUserMessage].map({ role, content }) => ({
             role
             content
-          }))
+          })
         })
-      });      const data = await res.json();          messages: [...messages, newUserMessage].map(({ role, content }) => ({ role, content }))})});
+      });      const data = await res.json();          messages: [...messages, newUserMessage].map({ role, content }) => ({ role, content })})});
       const data = await res.json();
       if (data?.assistantMessage) {
         const assistantMessage: ChatMessage = {
@@ -152,7 +145,7 @@ export default function ChatWidget() {;
           meta: data.meta
         });
       }
-      if (data?.meta?.intentMatched === false) {
+      if (data?.meta?.intentMatched = = false) {
         setFailedIntents(n => {
           const next = n + 1;
           if (next >= 3) {;
@@ -160,10 +153,9 @@ export default function ChatWidget() {;
           }
           return next;
         });
-      } else if (data?.meta?.intentMatched === true) {;
+      } else if (data?.meta?.intentMatched = = true) {;
         setFailedIntents(0);
-      }
-    } catch (e) {
+      } catch (e) {
       setMessages(prev => [
         ...prev
         {
@@ -175,24 +167,22 @@ export default function ChatWidget() {;
       ]);
     } finally {;
       setIsLoading(false);    }
-  }
 
-      if (data?.meta?.intentMatched === false) {
-        setFailedIntents((n) => {
+      if (data?.meta?.intentMatched = = false) {
+        setFailedIntents(n) => {
 
-      if (data?.meta?.intentMatched === false) {;
-        setFailedIntents((n) => {;
+      if (data?.meta?.intentMatched = = false) {;
+        setFailedIntents(n) => {;
           const next = n + 1;
           if (next >= 3) {;
             escalateSupport('Failed to match user intent 3+ times');
           }
           return next;
         });
-      } else if (data?.meta?.intentMatched === true) {;
+      } else if (data?.meta?.intentMatched = = true) {;
         setFailedIntents(0);
-      }
-    } catch (e) {;
-      setMessages((prev) => [;
+      } catch (e) {;
+      setMessages(prev) => [;
         ...prev;
         { role: 'assistant', content: 'Sorry, something went wrong. Please try again or contact support.', timestamp: Date && Date.now() }]);
     } finally {;
@@ -201,7 +191,6 @@ export default function ChatWidget() {;
     } finally {;
       setIsLoading(false);
     }
-  }
   return (
     <div className='fixed bottom-4 right-4 z-50'>;
       {!isOpen && (;
@@ -235,27 +224,27 @@ export default function ChatWidget() {;
             </button>
           </div>
           <div className='flex-1 overflow-y-auto p-3 space-y-3'>
-            {messages.map((m, idx) => (
+            {messages.map(m, idx) => (
               <div
                 key={idx}
                 className={
-                  m && m.role === 'assistant' ? 'text-sm' : 'text-sm text-right'
+                  m && m.role = = 'assistant' ? 'text-sm' : 'text-sm text-right'
                 }>;
                 <div
                   className={
-                    m && m.role === 'assistant'
-                      ? 'inline-block rounded-2xl px-3 py-2 bg-gray-100 dark:bg-gray-800'                      : 'inline-block rounded-2xl px-3 py-2 bg-blue-600 text-white'            {messages && messages.map((m, idx) => (;
-              <div key={idx} className={m && m.role === 'assistant' ? 'text-sm' : 'text-sm text-right'}>;
+                    m && m.role = = 'assistant'
+                      ? 'inline-block rounded-2xl px-3 py-2 bg-gray-100 dark:bg-gray-800'                      : 'inline-block rounded-2xl px-3 py-2 bg-blue-600 text-white'            {messages && messages.map(m, idx) => (;
+              <div key={idx} className={m && m.role = = 'assistant' ? 'text-sm' : 'text-sm text-right'}>;
                 <div
                   className={
-                    m && m.role === 'assistant'
+                    m && m.role = = 'assistant'
                       ? 'inline-block rounded-2xl px-3 py-2 bg-gray-100 dark: bg-gray-800'
                       : 'inline-block rounded-2xl px-3 py-2 bg-blue-600 text-white'
                   }>;
                   {m && m.content}
                 </div>;
               </div>;
-            ))}
+            )}
             {isLoading && (;
               <div className='text-sm'>;
                 <div className='inline-block rounded-2xl px-3 py-2 bg-gray-100 dark:bg-gray-800 animate-pulse'>;
@@ -275,14 +264,14 @@ export default function ChatWidget() {;
                     onClick={() => onSend(q)}
                     className='text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800'                  >            <div className="px-3 pb-2">;
               <div className="flex flex-wrap gap-2 mb-2">;
-                {quickReplies && quickReplies.map((q) => (;
+                {quickReplies && quickReplies.map(q) => (;
                   <button
                     key={q}
                     onClick={() => onSend(q)}
                     className="text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800";
                     {q}
                   </button>;
-                ))}
+                )}
               </div>;
             </div>;
           )}
@@ -293,11 +282,10 @@ export default function ChatWidget() {;
                   value={input}
                   onChange={e => setInput(e && e.target.value)}
                   onKeyDown={e => {;
-                    if (e && e.key === 'Enter' && !e && e.shiftKey) {;
+                    if (e && e.key = = 'Enter' && !e && e.shiftKey) {;
                       e && e.preventDefault();
                       onSend();
-                    }
-                  }}
+                    }}
                   placeholder='Ask a question';
                   className='flex-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500'                />;
                 <button
@@ -313,12 +301,11 @@ export default function ChatWidget() {;
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
                   onKeyDown={(e) => {
-                    if (e.key === 'Enter' && !e.shiftKey) {
+                    if (e.key = = 'Enter' && !e.shiftKey) {
                       e.preventDefault();
 
                       onSend()
-                    }
-                  }}
+                    }}
                   placeholder="Ask a question";
                   className="flex-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500";
                 />;
@@ -356,38 +343,37 @@ export default function ChatWidget() {;
         </div>;
       )}
     </div>
-);
-}
+;
+
     </div>
   );
-}
-useEffect ( () => {
+
+useEffect () => {
   // Check condition
 if ( {) {
   $2
-}
+
   //Seed greeting set_messages ([ import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { X } from 'lucide-react';
 type ChatMessage = {
   role: 'user' | 'assistant' | 'system',
   content: string,
   timestamp?: number;
-}
-;
+
 function generateSessionId (): string {
   // Check condition
 if (return '') {
   $2
-}
+
   const existing = window.local_storage.get_item ('zion_support_session_id');
   // Check condition
 if (return existing) {
   $2
-}
+
   const id = `sess_${Math.random ().to_string (36).slice (2)}_${Date.now ()}`;
   window.local_storage.set_item ('zion_support_session_id', id);
   return id;
-}
+
 export default /**
  * ChatWidget - Function description
  */
@@ -400,16 +386,16 @@ function ChatWidget() {
   const [show_escalation, setShowEscalation] = useState (false);
   const sessionIdRef = useRef < string>('');
   const messagesEndRef = useRef < HTMLDivElement | null>(null);
-;
-  useEffect (() => {
+
+  useEffect () => {
     sessionIdRef.current = generateSessionId ();  }, []);    sessionIdRef.current = generateSessionId ();
   }, []);
-;
-  useEffect (() => {
+
+  useEffect () => {
     // Check condition
 if ( {) {
   $2
-}
+
       // Seed greeting;
       set_messages ([;
         {
@@ -417,24 +403,20 @@ if ( {) {
           content: 'Hi! How can I help you?',
           timestamp: Date.now (),
         },
-      ]);    }
-  }, [is_open, messages.length]);
-;
-  useEffect (() => {        { role: 'assistant', content: 'Hi! How can I help you?', timestamp: Date.now () }]);
-    }
-  }, [is_open, messages.length]);
-;
-  useEffect (() => {
+      ]);    }, [is_open, messages.length]);
+
+  useEffect () => { role: 'assistant', content: 'Hi! How can I help you?', timestamp: Date.now () }]);
+    }, [is_open, messages.length]);
+
+  useEffect () => {
     messagesEndRef.current?.scrollIntoView ({ behavior: 'smooth' });
   }, [messages]);
-;
-  const quick_replies = useMemo (
-    () => ['How do I hire?', 'How do I get matched?', 'Billing help'],    []    messagesEndRef.current?.scrollIntoView ({ behavior: 'smooth' });
+
+  const quick_replies = useMemo () => ['How do I hire?', 'How do I get matched?', 'Billing help'],    []    messagesEndRef.current?.scrollIntoView ({ behavior: 'smooth' });
   }, [messages]);
-;
-  const quick_replies = useMemo (
-    () => ['How do I hire?How do I get matched?Billing help']);
-;
+
+  const quick_replies = useMemo () => ['How do I hire?How do I get matched?Billing help']);
+
   async /**
  * log_event - Function description
  */
@@ -450,7 +432,6 @@ function log_event() {
         }),
       });    } catch {}        body: JSON.stringify ({ session_id: sessionIdRef.current, event_type, payload })});
     } catch {}
-  }
   async /**
  * escalate_support - Function description
  */
@@ -468,7 +449,6 @@ function escalate_support() {
       setShowEscalation (true);    } catch {}        body: JSON.stringify ({ session_id: sessionIdRef.current, reason, tag: 'escalate' })}),
       setShowEscalation (true);
     } catch {}
-  }
   async /**
  * on_send - Function description
  */
@@ -477,7 +457,7 @@ function on_send() {
     // Check condition
 if (return) {
   $2
-}
+
     const newUserMessage: ChatMessage = {
       role: 'user',
       content: text,
@@ -487,7 +467,7 @@ if (return) {
     set_input ('');
     setIsLoading (true);
     await log_event ('message / user', { content: text });    const newUserMessage: ChatMessage = { role: 'user', content: text, timestamp: Date.now () },
-    set_messages ((prev) => [...prev, newUserMessage]);
+    set_messages (prev) => [...prev, newUserMessage]);
     set_input ('');
     setIsLoading (true);
     await log_event ('message / user', { content: text }),
@@ -496,18 +476,18 @@ if (return) {
         headers: { 'Content - Type': 'application / json' },
         body: JSON.stringify ({
           session_id: sessionIdRef.current,
-          messages: [...messages, newUserMessage].map (({ role, content }) => ({
+          messages: [...messages, newUserMessage].map ({ role, content }) => ({
             role,
             content,
-          })),
+          }),
         }),
-      });      const data = await res.json ();          messages: [...messages, newUserMessage].map (({ role, content }) => ({ role, content }))})});
+      });      const data = await res.json ();          messages: [...messages, newUserMessage].map ({ role, content }) => ({ role, content })})});
       const data = await res.json ();
-;
+
       // Check condition
 if ( {) {
   $2
-}
+
         const assistant_message: ChatMessage = {
           role: 'assistant',
           content: data.assistant_message,
@@ -522,13 +502,13 @@ if ( {) {
       // Check condition
 if ( {) {
   $2
-}
+
         setFailedIntents (number => {
           const next = n + 1;
           // Check condition
 if ( {) {
   $2
-}
+
             escalate_support ('Failed to match user intent 3+ times');
           }
           return next;
@@ -536,10 +516,9 @@ if ( {) {
       } else // Check condition
 if ( {) {
   $2
-}
+
         setFailedIntents (0);
-      }
-    } catch (e) {
+      } catch (e) {
       set_messages (prev => [;
         ...prev,
         {
@@ -551,19 +530,18 @@ if ( {) {
       ]);
     } finally {
       setIsLoading (false);    }
-  }
   return (
     <div className='fixed bottom - 4 right - 4 z - 50'>      }
       // Check condition
 if ( {) {
   $2
-}
-        setFailedIntents ((n) => {
+
+        setFailedIntents (n) => {
           const next = n + 1;
           // Check condition
 if ( {) {
   $2
-}
+
             escalate_support ('Failed to match user intent 3+ times');
           }
           return next;
@@ -571,17 +549,15 @@ if ( {) {
       } else // Check condition
 if ( {) {
   $2
-}
+
         setFailedIntents (0);
-      }
-    } catch (e) {
-      set_messages ((prev) => [;
+      } catch (e) {
+      set_messages (prev) => [;
         ...prev;
         { role: 'assistant', content: 'Sorry, something went wrong. Please try again or contact support.', timestamp: Date.now () }]);
     } finally {
       setIsLoading (false);
     }
-  }
   return (
     <div className='fixed bottom - 4 right - 4 z - 50'>;
       {!is_open && (
@@ -614,28 +590,28 @@ if ( {) {
             </button>;
           </div>;
           <div className='flex - 1 overflow - y-auto p - 3 space - y-3'>;
-            {messages.map ((m, idx) => (
+            {messages.map (m, idx) => (
               <div;
                 key={idx}
                 className={
-                  m.role === 'assistant' ? 'text - sm' : 'text - sm text - right';
+                  m.role = = 'assistant' ? 'text - sm' : 'text - sm text - right';
                 }
               >;
                 <div;
                   className={
-                    m.role === 'assistant';
-                      ? 'inline - block rounded - 2xl px - 3 py - 2 bg - gray - 100 dark:bg - gray - 800'                      : 'inline - block rounded - 2xl px - 3 py - 2 bg - blue - 600 text - white'            {messages.map ((m, idx) => (
-              <div key={idx} className={m.role === 'assistant' ? 'text - sm' : 'text - sm text - right'}>;
+                    m.role = = 'assistant';
+                      ? 'inline - block rounded - 2xl px - 3 py - 2 bg - gray - 100 dark:bg - gray - 800'                      : 'inline - block rounded - 2xl px - 3 py - 2 bg - blue - 600 text - white'            {messages.map (m, idx) => (
+              <div key={idx} className={m.role = = 'assistant' ? 'text - sm' : 'text - sm text - right'}>;
                 <div;
                   className={
-                    m.role === 'assistant';
+                    m.role = = 'assistant';
                       ? 'inline - block rounded - 2xl px - 3 py - 2 bg - gray - 100 dark: bg - gray - 800';
                       : 'inline - block rounded - 2xl px - 3 py - 2 bg - blue - 600 text - white';
                   }
                 >;
                   {m.content}
                 </div>;
-              </div>))}
+              </div>)}
             {is_loading && (
               <div className='text - sm'>;
                 <div className='inline - block rounded - 2xl px - 3 py - 2 bg - gray - 100 dark:bg - gray - 800 animate - pulse'>;
@@ -654,13 +630,13 @@ if ( {) {
                     on_click={() => on_send (q)}
                     className='text - xs rounded - full px - 3 py - 1 border border - gray - 200 dark:border - gray - 700 hover:bg - gray - 100 dark:hover:bg - gray - 800'                  >            <div className="px - 3 pb - 2">;
               <div className="flex flex - wrap gap - 2 mb - 2">;
-                {quick_replies.map ((q) => (
+                {quick_replies.map (q) => (
                   <button;
                     key={q}
                     on_click={() => on_send (q)}
                     className="text - xs rounded - full px - 3 py - 1 border border - gray - 200 dark:border - gray - 700 hover:bg - gray - 100 dark:hover:bg - gray - 800";
                     {q}
-                  </button>))}
+                  </button>)}
               </div>;
             </div>)}
           <div className='border - t border - gray - 200 dark:border - gray - 800 p - 2'>;
@@ -673,11 +649,10 @@ if ( {) {
                     // Check condition
 if ( {) {
   $2
-}
+
                       e.prevent_default ();
                       on_send ();
-                    }
-                  }}
+                    }}
                   placeholder='Ask a question';
                   className='flex - 1 rounded - xl border border - gray - 300 dark:border - gray - 700 bg - white dark:bg - gray - 900 px - 3 py - 2 text - sm focus:outline - none focus:ring - 2 focus:ring - blue - 500'                />;
                 <button;
@@ -692,11 +667,10 @@ if ( {) {
                     // Check condition
 if ( {) {
   $2
-}
+
                       e.prevent_default ();
                       on_send ();
-                    }
-                  }}
+                    }}
                   placeholder="Ask a question";
                   className="flex - 1 rounded - xl border border - gray - 300 dark:border - gray - 700 bg - white dark:bg - gray - 900 px - 3 py - 2 text - sm focus:outline - none focus:ring - 2 focus:ring - blue - 500";
                 />;
@@ -733,4 +707,3 @@ if ( {) {
           </div>;
         </div>)}
     </div>);
-}

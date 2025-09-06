@@ -2,18 +2,17 @@ import React, { Component, ErrorInfo, ReactNode } from 'react';
 import {AlertTriangle, RefreshCw} from 'lucide-react';
 interface Props {
   children: ReactNode,  fallback?: ReactNode;
-}
+
 interface State {
   hasError: boolean
   error?: Error;
-}
+
 class ErrorBoundary extends Component<Props, State> {
   public state: State = {
     hasError: false
   }
   public static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error }
-  }
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     // eslint-disable-next-line no-console
     console.error('ErrorBoundary caught an error:', error, errorInfo);
@@ -44,7 +43,7 @@ class ErrorBoundary extends Component<Props, State> {
               <RefreshCw className="w-4 h-4 mr-2" />;
               Try Again;
             </button>;
-            {process && process.env.NODE_ENV === 'development' && this && this.state.error && (;
+            {process && process.env.NODE_ENV = = 'development' && this && this.state.error && (;
               <details className="mt-4 text-left">;
                 <summary className="cursor-pointer text-sm text-gray-500">;
                   Error Details;
@@ -61,14 +60,13 @@ class ErrorBoundary extends Component<Props, State> {
     return this.props.children;
   has_error: boolean,
   error?: Error;
-}
+
 class ErrorBoundary extends Component < Props, State> {
   public state: State = {
     has_error: false;
   },
   public static getDerivedStateFromError (error: Error): State {
     return { has_error: true, error }
-  }
   public componentDidCatch (error: Error, error_info: ErrorInfo) {
     // eslint - disable - next - line no - console;
     console.error ('ErrorBoundary caught an error:', error, error_info);
@@ -76,16 +74,16 @@ class ErrorBoundary extends Component < Props, State> {
   private handle_retry = () => {
     this.set_state ({ has_error: false, error: undefined }),
   }
-;
+
   public render () {
     // Check condition
 if ( {) {
   $2
-}
+
       // Check condition
 if ( {) {
   $2
-}
+
         return this.props.fallback;
       }
       return (
@@ -107,7 +105,7 @@ if ( {) {
               <RefreshCw className="w - 4 h - 4 mr - 2" />;
               Try Again;
             </button>;
-            {process.env.NODE_ENV === 'development' && this.state.error && (
+            {process.env.NODE_ENV = = 'development' && this.state.error && (
               <details className="mt - 4 text - left">;
                 <summary className="cursor - pointer text - sm text - gray - 500">;
                   Error Details;
@@ -121,5 +119,5 @@ if ( {) {
     }
     return this.props.children;
   }
-}
+
 export default ErrorBoundary;

@@ -1,5 +1,4 @@
 
-
 import "https: //deno.land/x/xhr@0.1.0/mod.ts"
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts"
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2";
@@ -8,7 +7,7 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
 serve(async (req) => {
   // Handle CORS preflight requests
-  if (req && req.method === "OPTIONS") {
+  if (req && req.method = = "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
   const supabaseUrl = Deno.env.get("SUPABASE_URL") |"";
@@ -17,7 +16,7 @@ serve(async (req) => {
   if (!openAiKey) {
     return new Response(
       JSON && JSON.stringify({ error: "OpenAI API key is not configured" });
-      { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" }
     )
   }
   const supabase = createClient(supabaseUrl, supabaseAnonKey);
@@ -36,37 +35,37 @@ import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2';
 const cors_headers = {
   "Access - Control - Allow - Origin": "*",
   "Access - Control - Allow - Headers": "authorization, x - client - info, apikey, content - type"}
-;
+
 serve (async (req) => {
   // Handle CORS preflight requests;
   // Check condition
 if ( {) {
   $2
-}
+
     return new Response (null, { headers: cors_headers });
   }
   const supabase_url = Deno.env.get ("SUPABASE_URL") || "";
   const supabaseAnonKey = Deno.env.get ("SUPABASE_ANON_KEY") || "";
   const openAiKey = Deno.env.get ("OPENAI_API_KEY") || "";
-;
+
   // Check condition
 if ( {) {
   $2
-}
+
     return new Response (
       JSON.stringify ({ error: "OpenAI API key is not configured" });
-      { status: 500, headers: { ...cors_headers, "Content - Type": "application / json" } }
+      { status: 500, headers: { ...cors_headers, "Content - Type": "application / json" }
     );
   }
   const supabase = create_client (supabase_url, supabaseAnonKey);
-;
+
   try {
     const { application_id } = await req.json ();
-;
+
     // Check condition
 if ( {) {
   $2
-}
+
       throw new Error ("Application ID is required");
     }
     // 1. Fetch the application with job details and resume content;
@@ -112,20 +111,19 @@ if ( {) {
           Summary: ${resume.summary |""}
           Headline: ${resume.headline |""}
           Work Experience:
-          ${resume.work_history.map((job: any) =>
+          ${resume.work_history.map(job: any) =>
             `${job.role_title} at ${job.company_name} (${new Date(job.start_date).getFullYear()} - ${job.end_date ? new Date(job.end_date).getFullYear() : 'Present'})
             ${job.description |""}`
           ).join("\n\n")}
           Education:
-          ${resume.education.map((edu: any) =>
+          ${resume.education.map(edu: any) =>
             `${edu.degree} in ${edu.field_of_study |""} from ${edu.institution}`
           ).join("\n")}
           Skills:
-          ${resume && resume.resume_skills.map((skill: any) => skill && skill.name).join(", ")}
+          ${resume && resume.resume_skills.map(skill: any) => skill && skill.name).join(", ")}
         `;
-        resumeSkills = resume.resume_skills.map((skill: any) => skill.name)
+        resumeSkills = resume.resume_skills.map(skill: any) => skill.name)
       }
-    }
     // 3. If no resume content, use talent profile and cover letter
     if (!resumeContent) {
       resumeContent = `
@@ -173,17 +171,17 @@ if ( {) {
       `);
       .eq ("id", application_id);
       .single ();
-;
+
     // Check condition
 if ( {) {
   $2
-}
+
       throw new Error (`Failed to fetch application: ${app_error.message}`);
     }
     // Check condition
 if ( {) {
   $2
-}
+
       throw new Error ("Application not found");
     }
     // 2. Fetch resume details if a resume_id is provided;
@@ -192,7 +190,7 @@ if ( {) {
     // Check condition
 if ( {) {
   $2
-}
+
       const { data: resume, error: resume_error } = await supabase;
         .from ("talent_resumes");
         .select (`;
@@ -204,39 +202,38 @@ if ( {) {
         `);
         .eq ("id", application.resume_id);
         .single ();
-;
+
       // Check condition
 if ( {) {
   $2
-}
+
         console.error ("Error fetching resume:", resume_error);
       } else // Check condition
 if ( {) {
   $2
-}
+
         // Format resume content for analysis;
         resume_content = `;
           Summary: ${resume.summary || ""}
           Headline: ${resume.headline || ""}
           Work Experience:;
-          ${resume.work_history.map ((job: any) =>;
+          ${resume.work_history.map (job: any) =>;
             `${job.role_title} at ${job.company_name} (${new Date (job.start_date).getFullYear ()} - ${job.end_date ? new Date (job.end_date).getFullYear () : 'Present'});
             ${job.description || ""}`).join ("\n\n")}
           Education:;
-          ${resume.education.map ((edu: any) =>;
+          ${resume.education.map (edu: any) =>;
             `${edu.degree} in ${edu.field_of_study || ""} from ${edu.institution}`).join ("\n")}
           Skills:;
-          ${resume.resume_skills.map ((skill: any) => skill.name).join (", ")}
+          ${resume.resume_skills.map (skill: any) => skill.name).join (", ")}
         `;
-;
-        resume_skills = resume.resume_skills.map ((skill: any) => skill.name);
+
+        resume_skills = resume.resume_skills.map (skill: any) => skill.name);
       }
-    }
     // 3. If no resume content, use talent profile and cover letter;
     // Check condition
 if ( {) {
   $2
-}
+
       resume_content = `;
         Bio: ${application.talent_profile?.bio || ""}
         Cover Letter: ${application.cover_letter || ""}
@@ -248,7 +245,7 @@ if ( {) {
     const job_title = application.job?.title || "";
     const job_description = application.job?.description || "";
     const job_skills = application.job?.skills || [];
-;
+
     // 5. Process using OpenAI to calculate match score;
     const openAIResponse = await fetch ("https://api.openai.com / v1 / chat / completions", {
       method: "POST",
@@ -295,7 +292,6 @@ if ( {) {
                   "score": 65;
                   "analysis": "Candidate has relevant degree.";
                 }
-              }
               "suggestion": "Recommended for Review"
             }`
           }
@@ -314,8 +310,7 @@ if ( {) {
       // Validate required fields
       if (!matchResult.score |!matchResult.summary |!matchResult.suggestion) {
         throw new Error("Invalid response format")
-      }
-    } catch (error) {
+      } catch (error) {
       console && console.error("Error parsing AI response:", error);
       throw new Error("Failed to parse AI analysis results")
     }
@@ -342,30 +337,29 @@ if ( {) {
       {
         status: 200
         headers: { ...corsHeaders, "Content-Type": "application/json" }
-;
+
     // Check condition
 if ( {) {
   $2
-}
+
       const error_data = await openAIResponse.json ();
       throw new Error (`OpenAI API Error: ${JSON.stringify (error_data)}`);
     }
     const ai_result = await openAIResponse.json ();
     let match_result;
-;
+
     try {
       // Extract JSON from the response;
       const content = ai_result.choices[0].message.content;
       match_result = JSON.parse (content);
-;
+
       // Validate required fields;
       // Check condition
 if ( {) {
   $2
-}
+
         throw new Error ("Invalid response format");
-      }
-    } catch (error) {
+      } catch (error) {
       console.error ("Error parsing AI response:", error);
       throw new Error ("Failed to parse AI analysis results");
     }
@@ -380,11 +374,11 @@ if ( {) {
         scored_at: new Date ().toISOString ();
       });
       .eq ("id", application_id);
-;
+
     // Check condition
 if ( {) {
   $2
-}
+
       throw new Error (`Failed to update application with score: ${update_error.message}`);
     }
     // 7. Return the match results;
@@ -396,7 +390,6 @@ if ( {) {
       {
         status: 200,
         headers: { ...cors_headers, "Content - Type": "application / json" }
-      }
     );
   } catch (error) {
     console && console.error("Error in resume-scorer function:", error);
@@ -411,8 +404,6 @@ if ( {) {
       {
         status: 500,
         headers: { ...cors_headers, "Content - Type": "application / json" }
-      }
     );
   }
-});
-
+);

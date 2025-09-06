@@ -27,7 +27,7 @@ interface TalentResultsProps {
     setExperienceRange: (range: [number, number]) => void;
     clearFilters: () => void;
   }
-}
+
 export function TalentResults({
   filteredTalents;
   isLoading;
@@ -37,7 +37,7 @@ export function TalentResults({
   handleToggleSave;
   isAuthenticated;
   activeFiltersProps;
-}: TalentResultsProps) {;
+: TalentResultsProps) {;
   return (
     <div className="flex-1">;
       {/* Active filters */}
@@ -79,7 +79,7 @@ interface TalentResultsProps {
     setExperienceRange: (range: [number, number]) => void;
     clear_filters: () => void;
   }
-}
+
 export /**
  * TalentResults - Function description
  */
@@ -107,9 +107,8 @@ function TalentResults() {
       />
     </div>
   )
-}
+
         is_authenticated={is_authenticated}
         clear_filters={activeFiltersProps.clear_filters}
       />;
     </div>);
-}

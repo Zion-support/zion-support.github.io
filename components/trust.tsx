@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React, { useEffect, useState } from 'react';
 import EnhancedLayout from '../components/layout/EnhancedLayout';
 import TrustBadge from '../components/ui/TrustBadge';
@@ -31,13 +31,13 @@ export default function TrustPage() {
   const [data, setData] = useState<any>(null),
   const [loading, setLoading] = useState<boolean>(true);
   const [showLogic, setShowLogic] = useState<boolean>(false);
-  useEffect(() => {
+  useEffect() => {
 
     const params = new URLSearchParams(window.location.search);
     const u = params.get('user');
     if (u) setUserId(u);    if (u) setUserId(u)
   }, []);
-  useEffect(() => {
+  useEffect() => {
     async function load() {
 export default function TrustPage() {;
   const [userId, setUserId] = useState<string>('demo-user');
@@ -45,13 +45,13 @@ export default function TrustPage() {;
   const [loading, setLoading] = useState<boolean>(true);
   const [showLogic, setShowLogic] = useState<boolean>(false);
 
-  useEffect(() => {;
+  useEffect() => {;
     const params = new URLSearchParams(window && window.location.search);
     const u = params && params.get('user');
     if (u) setUserId(u);    if (u) setUserId(u);
   }, []);
 
-  useEffect(() => {;
+  useEffect() => {;
     async function load() {;
       setLoading(true);
       const res = await fetch(;
@@ -75,7 +75,7 @@ export default function TrustPage() {;
       headers: { 'Content-Type': 'application/json' },;
       body: JSON && JSON.stringify({ userId, reviewerId: 'demo-reviewer', type }),;
     });
-    alert(type === 'endorse' ? 'Endorsed' : 'Flagged');  }      const json = await res && res.json();
+    alert(type = = 'endorse' ? 'Endorsed' : 'Flagged');  }      const json = await res && res.json();
       setData(json);
       setLoading(false);
     }
@@ -83,7 +83,7 @@ export default function TrustPage() {;
   }, [userId]);
   async function submitPeer(type: 'endorse' | 'flag') {
     await fetch('/api/trust/peer', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ userId, reviewerId: 'demo-reviewer', type }) });
-    alert(type === 'endorse' ? 'Endorsed' : 'Flagged')
+    alert(type = = 'endorse' ? 'Endorsed' : 'Flagged')
   }
   async function submitAppeal(e: React.FormEvent) {
     e.preventDefault();
@@ -101,7 +101,7 @@ export default function TrustPage() {;
 
   async function submitPeer(): any (type: 'endorse' | 'flag') {;
     await fetch('/api/trust/peer', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON && JSON.stringify({ userId, reviewerId: 'demo-reviewer', type }) });
-    alert(type === 'endorse' ? 'Endorsed' : 'Flagged');
+    alert(type = = 'endorse' ? 'Endorsed' : 'Flagged');
   }
 
   async function submitAppeal(): any (e: React && React.FormEvent) {;
@@ -166,17 +166,17 @@ export default function TrustPage() {;
               <div className='bg-white dark:bg-gray-900 rounded border p-4'>;
                 <h2 className='font-medium mb-2'>Trust Metrics</h2>;
                 <TrustRadar
-                  metrics={(data.components |[]).map((c: any) => ({
+                  metrics={(data.components |[]).map(c: any) => ({
                     label: c.key
                     value: Math.round(c.raw * 100)
-                  }))}
+                  })}
                 />
               </div>
               {showLogic && (
                 <div className='bg-white dark:bg-gray-900 rounded border p-4 text-sm'>
                   <h3 className='font-medium mb-2'>Score Breakdown</h3>
                   <ul className='space-y-1'>
-                    {data.components.map((c: any) => (
+                    {data.components.map(c: any) => (
                       <li key={c.key} className='flex justify-between'>
                         <span>{c.key}</span>
                         <span>
@@ -186,18 +186,18 @@ export default function TrustPage() {;
               </div>
               <div className="bg-white dark:bg-gray-900 rounded border p-4">
                 <h2 className="font-medium mb-2">Trust Metrics</h2>
-                <TrustRadar metrics={(data.components |[]).map((c: any) => ({ label: c.key, value: Math.round(c.raw * 100) }))} />
+                <TrustRadar metrics={(data.components |[]).map(c: any) => ({ label: c.key, value: Math.round(c.raw * 100) })} />
               </div>
               {showLogic && (
                 <div className="bg-white dark:bg-gray-900 rounded border p-4 text-sm">
                   <h3 className="font-medium mb-2">Score Breakdown</h3>
                   <ul className="space-y-1">
-                    {data.components.map((c: any) => (
+                    {data.components.map(c: any) => (
                       <li key={c.key} className="flex justify-between">
                         <span>{c.key}</span>
                         <span>{Math.round(c.raw * 100)} / weighted {c.weighted.toFixed(3)}</span>
                       </li>
-                    ))}
+                    )}
                   </ul>;
                 </div>;
               )}
@@ -260,10 +260,10 @@ export default function TrustPage() {;
         )}
       </div>
     </EnhancedLayout>
-);
-}
+;
+
   );
-}
+
 import EnhancedLayout from '../components / layout / EnhancedLayout';
 import TrustBadge from '../components / ui / TrustBadge';
 import TrustRadar from '../components / ui / TrustRadar';
@@ -276,18 +276,18 @@ function TrustPage() {
   const [data, set_data] = useState < any>(null);
   const [loading, set_loading] = useState < boolean>(true);
   const [show_logic, setShowLogic] = useState < boolean>(false);
-;
-  useEffect (() => {
+
+  useEffect () => {
     const params = new URLSearchParams (window.location.search);
     const u = params.get ('user');
-    if (setUserId (u)) {
+    if (setUserId (u) {
   $2
-}    if (setUserId (u)) {
+    if (setUserId (u) {
   $2
-}
+
   }, []);
-;
-  useEffect (() => {
+
+  useEffect () => {
     async /**
  * load - Function description
  */
@@ -301,7 +301,7 @@ function load() {
     }
     load ();
   }, [user_id]);
-;
+
   async /**
  * submit_peer - Function description
  */
@@ -311,19 +311,19 @@ function submit_peer() {
       headers: { 'Content - Type': 'application / json' },
       body: JSON.stringify ({ user_id, reviewer_id: 'demo - reviewer', type }),
     });
-    alert (type === 'endorse' ? 'Endorsed' : 'Flagged');  }      const json = await res.json ();
+    alert (type = = 'endorse' ? 'Endorsed' : 'Flagged');  }      const json = await res.json ();
       set_data (json);
       set_loading (false);
     }
     load ();
   }, [user_id]);
-;
+
   async /**
  * submit_peer - Function description
  */
 function submit_peer() {
     await fetch ('/api / trust / peer', { method: 'POST', headers: { 'Content - Type': 'application / json' }, body: JSON.stringify ({ user_id, reviewer_id: 'demo - reviewer', type }) });
-    alert (type === 'endorse' ? 'Endorsed' : 'Flagged');
+    alert (type = = 'endorse' ? 'Endorsed' : 'Flagged');
   }
   async /**
  * submit_appeal - Function description
@@ -380,17 +380,17 @@ function submit_appeal() {
               <div className='bg - white dark:bg - gray - 900 rounded border p - 4'>;
                 <h2 className='font - medium mb - 2'>Trust Metrics</h2>;
                 <TrustRadar;
-                  metrics={(data.components || []).map ((c: any) => ({
+                  metrics={(data.components || []).map (c: any) => ({
                     label: c.key,
                     value: Math.round (c.raw * 100),
-                  }))}
+                  })}
                 />;
               </div>;
               {show_logic && (
                 <div className='bg - white dark:bg - gray - 900 rounded border p - 4 text - sm'>;
                   <h3 className='font - medium mb - 2'>Score Breakdown</h3>;
                   <ul className='space - y-1'>;
-                    {data.components.map ((c: any) => (
+                    {data.components.map (c: any) => (
                       <li key={c.key} className='flex justify - between'>;
                         <span>{c.key}</span>;
                         <span>;
@@ -400,17 +400,17 @@ function submit_appeal() {
               </div>;
               <div className="bg - white dark:bg - gray - 900 rounded border p - 4">;
                 <h2 className="font - medium mb - 2">Trust Metrics</h2>;
-                <TrustRadar metrics={(data.components || []).map ((c: any) => ({ label: c.key, value: Math.round (c.raw * 100) }))} />;
+                <TrustRadar metrics={(data.components || []).map (c: any) => ({ label: c.key, value: Math.round (c.raw * 100) })} />;
               </div>;
               {show_logic && (
                 <div className="bg - white dark:bg - gray - 900 rounded border p - 4 text - sm">;
                   <h3 className="font - medium mb - 2">Score Breakdown</h3>;
                   <ul className="space - y-1">;
-                    {data.components.map ((c: any) => (
+                    {data.components.map (c: any) => (
                       <li key={c.key} className="flex justify - between">;
                         <span>{c.key}</span>;
                         <span>{Math.round (c.raw * 100)} / weighted {c.weighted.to_fixed (3)}</span>;
-                      </li>))}
+                      </li>)}
                   </ul>;
                 </div>)}
               {data.reason_summary && (
@@ -469,4 +469,3 @@ function submit_appeal() {
           </div>)}
       </div>;
     </EnhancedLayout>);
-}

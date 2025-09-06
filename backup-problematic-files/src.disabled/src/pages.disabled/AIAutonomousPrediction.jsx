@@ -7,6 +7,5 @@ const AIAutonomousPrediction = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default AIAutonomousPrediction;

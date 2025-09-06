@@ -4,7 +4,6 @@ import React from 'react';
 
 interface EquipmentProps {
   className?: string;
-}
 
 const Equipment: React.FC<EquipmentProps> = ({ className }) => {
   return (
@@ -13,6 +12,3 @@ const Equipment: React.FC<EquipmentProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-}
-}
-}

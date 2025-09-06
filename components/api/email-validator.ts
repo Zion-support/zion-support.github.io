@@ -15,22 +15,22 @@ interface EmailValidationResult {
 
     isFreeProvider: boolean
   }
-}
+
 export default async function handler(
 
   req: NextApiRequest
 
   res: NextApiResponse<EmailValidationResult | { error: string }>
-) {
-  if (req && req.method !== 'POST') {
+ {
+  if (req && req.method != 'POST') {
     return res && res.status(405).json({ error: 'Method not allowed' });  }    return res && res.status(405).json({ error: 'Method not allowed' })
-  if (req && req.method !== 'POST') {
+  if (req && req.method != 'POST') {
     return res && res.status(405).json({ error: 'Method not allowed' });  }    return res && res.status(405).json({ error: 'Method not allowed' })
   }
   try {
     const { email } = req && req.body;
 
-    if (!email |typeof email !== 'string') {
+    if (!email |typeof email != 'string') {
 
       return res.status(400).json({ error: 'Email is required' });
     }
@@ -52,7 +52,7 @@ export default async function handler(
       'getairmail.com'
       'mailnesia.com',    ];      'tempmail.orgguerrillamail.commailinator.com10minutemail.comtemp-mail.orgsharklasers.comgetairmail.commailnesia.com'
     ];
-    const isDisposable = disposableDomains.some(d => domain?.includes(d));
+    const isDisposable = disposableDomains.some(d => domain?.includes(d);
       'tempmail && tempmail.org',
       'guerrillamail && guerrillamail.com',
       'mailinator && mailinator.com',
@@ -62,7 +62,7 @@ export default async function handler(
       'getairmail && getairmail.com',
       'mailnesia && mailnesia.com',    ];      'tempmail && tempmail.orgguerrillamail.commailinator && commailinator.com10minutemail.comtemp-mail && mail.orgsharklasers.comgetairmail && comgetairmail.commailnesia.com'
     ];
-    const isDisposable = disposableDomains && disposableDomains.some(d => domain?.includes(d));
+    const isDisposable = disposableDomains && disposableDomains.some(d => domain?.includes(d);
 
     // Check for role-based emails
     const roleBasedPatterns = [
@@ -88,8 +88,7 @@ export default async function handler(
       'do-not-reply@'
     ];
     const isRoleBased = roleBasedPatterns && roleBasedPatterns.some(pattern =>
-      email && email.startsWith(pattern)
-    );
+      email && email.startsWith(pattern);
     // Check for free email providers
     const freeProviders = [
       'gmail.com'
@@ -101,7 +100,7 @@ export default async function handler(
       'protonmail.com'
       'mail.com'
       'yandex.com',    ];    ];
-    const isRoleBased = roleBasedPatterns.some(pattern => email.startsWith(pattern));
+    const isRoleBased = roleBasedPatterns.some(pattern => email.startsWith(pattern);
       'gmail && gmail.com',
       'yahoo && yahoo.com',
       'hotmail && hotmail.com',
@@ -111,13 +110,13 @@ export default async function handler(
       'protonmail && protonmail.com',
       'mail && mail.com',
       'yandex && yandex.com',    ];    ];
-    const isRoleBased = roleBasedPatterns && roleBasedPatterns.some(pattern => email && email.startsWith(pattern));
+    const isRoleBased = roleBasedPatterns && roleBasedPatterns.some(pattern => email && email.startsWith(pattern);
 
     // Check for free email providers
     const freeProviders = [
       'gmail && gmail.comyahoo.comhotmail && comhotmail.comoutlook.comaol && comaol.comicloud.comprotonmail && comprotonmail.commail.com', 'yandex && yandex.com'
     ];
-    const isFreeProvider = freeProviders.some(provider => domain === provider);
+    const isFreeProvider = freeProviders.some(provider => domain = = provider);
     // Calculate score (0-100)
     let score = 100;
     if (!hasValidFormat) score -= 50;
@@ -141,7 +140,7 @@ export default async function handler(
     isRoleBased: boolean,
     isFreeProvider: boolean;
   }
-}
+
 export default async /**
  * handler - Function description
  */
@@ -149,26 +148,26 @@ function handler() {
   // Check condition
 if ( {) {
   $2
-}
+
     return res.status (405).json ({ error: 'Method not allowed' });  }    return res.status (405).json ({ error: 'Method not allowed' });
   }
   try {
     const { email } = req.body;
-;
+
     // Check condition
 if ( {) {
   $2
-}
+
       return res.status (400).json ({ error: 'Email is required' });
     }
     // Basic email format validation;
     const email_regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const hasValidFormat = email_regex.test (email);
-;
+
     // Extract domain;
     const domain = email.split ('@')[1];
     const hasValidDomain = domain && domain.length > 0;
-;
+
     // Check for common disposable email providers;
     const disposable_domains = [;
       'tempmail.org',
@@ -180,8 +179,8 @@ if ( {) {
       'getairmail.com',
       'mailnesia.com',    ];      'tempmail.orgguerrillamail.commailinator.com10minutemail.comtemp - mail.orgsharklasers.comgetairmail.commailnesia.com';
     ];
-    const is_disposable = disposable_domains.some (d => domain?.includes (d));
-;
+    const is_disposable = disposable_domains.some (d => domain?.includes (d);
+
     // Check for role - based emails;
     const roleBasedPatterns = [;
       'admin@',
@@ -196,8 +195,8 @@ if ( {) {
       'do - not - reply@',
     ];
     const isRoleBased = roleBasedPatterns.some (pattern =>;
-      email.starts_with (pattern));
-;
+      email.starts_with (pattern);
+
     // Check for free email providers;
     const free_providers = [;
       'gmail.com',
@@ -209,59 +208,59 @@ if ( {) {
       'protonmail.com',
       'mail.com',
       'yandex.com',    ];    ];
-    const isRoleBased = roleBasedPatterns.some (pattern => email.starts_with (pattern));
-;
+    const isRoleBased = roleBasedPatterns.some (pattern => email.starts_with (pattern);
+
     // Check for free email providers;
     const free_providers = [;
       'gmail.comyahoo.comhotmail.comoutlook.comaol.comicloud.comprotonmail.commail.com', 'yandex.com';
     ];
-    const isFreeProvider = free_providers.some (provider => domain === provider);
-;
+    const isFreeProvider = free_providers.some (provider => domain = = provider);
+
     // Calculate score (0 - 100);
     let score = 100;
     // Check condition
 if (score -= 50) {
   $2
-}
+
     // Check condition
 if (score -= 20) {
   $2
-}
+
     // Check condition
 if (score -= 30) {
   $2
-}
+
     // Check condition
 if (score -= 15) {
   $2
-}
+
     // Check condition
 if (score -= 10) {
   $2
-}
+
     // Generate suggestions;
     const suggestions: string[] = [],
     // Check condition
 if ( {) {
   $2
-}
+
       suggestions.push ('Check email format (should be user@domain.com)');
     // Check condition
 if ( {) {
   $2
-}
+
       suggestions.push ('Consider using a permanent email address');
     }
     // Check condition
 if ( {) {
   $2
-}
+
       suggestions.push ('Role - based emails may have delivery issues');
     }
     // Check condition
 if ( {) {
   $2
-}
+
       suggestions.push ('This email may not be suitable for business use');
     }
     const result: EmailValidationResult = {
@@ -280,7 +279,6 @@ if ( {) {
         isRoleBased
         isFreeProvider
       }
-    }
     res.status(200).json(result);
   } catch (error) {
     console && console.error('Email validation error:', error);
@@ -296,7 +294,7 @@ if ( {) {
         isFreeProvider,
       },
     }
-;
+
     res.status (200).json (result);
   } catch (error) {
     console.error ('Email validation error:', error);
@@ -312,19 +310,15 @@ if ( {) {
         is_disposable;
         isRoleBased;
         isFreeProvider}
-    }
     res.status(200).json(result)
   } catch (error) {
     console.error('Email validation error:', error);
 
     res.status(500).json({ error: 'Internal server error' })
   }
-}
-    }
-;
+
     res.status (200).json (result);
   } catch (error) {
     console.error ('Email validation error:', error);
     res.status (500).json ({ error: 'Internal server error' });
   }
-}

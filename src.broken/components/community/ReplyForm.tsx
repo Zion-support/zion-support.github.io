@@ -6,5 +6,3 @@ export function ReplyForm() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

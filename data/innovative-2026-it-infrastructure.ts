@@ -1,8 +1,7 @@
 import { ServiceVariant } from '../types/service-variants';
 
-
 import { ServiceVariant } from '../types / service - variants';
-;
+
   id: string;
   name: string;
   tagline: string;
@@ -759,11 +758,11 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
     marketSize: '$43.4B market', growthRate: '240% annual growth',
     variant: 'edge-futuristic',
     contactInfo: {
-      
+
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    
+
     },
     realImplementation: true,
     implementationDetails: 'Enterprise-grade edge computing platform with AI-powered orchestration, global edge network, comprehensive IoT management, and real-time analytics. Includes custom development and 24/7 support.',
@@ -795,11 +794,11 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
     marketSize: '$45.2B market', growthRate: '260% annual growth',
     variant: 'security-futuristic',
     contactInfo: {
-      
+
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    
+
     },
     realImplementation: true,
     implementationDetails: 'Enterprise-grade zero-trust platform with comprehensive security features, AI-powered monitoring, and seamless integration capabilities. Includes professional services and 24/7 support.',
@@ -831,11 +830,11 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
     competitors: ['GitLabGitHub ActionsJenkinsCircleCITravis CI'], marketSize: '$8.2B market',
     growthRate: '190% annual growth', variant: 'devops-futuristic',
     contactInfo: {
-      
+
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    
+
     },
     realImplementation: true,
     implementationDetails: 'Comprehensive DevOps platform with AI-powered automation, intelligent testing, performance optimization, and seamless integrations. Includes custom workflows and enterprise support.',
@@ -881,5 +880,4 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
     rating: 4.8,
     reviews: 550;
   }
-];
 ;

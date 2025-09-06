@@ -23,24 +23,17 @@ import Layout from '../components/Layout';
       </div>;
     </Layout>;
   );
-}
-};
   );
   );
-}
-};
   )
-}
-export default Training;
-};export default Training;
-  )
+
+export default Training;export default Training;
   );
-};
 
 export default Training;
 
 import Layout from '../components / Layout';
-;
+
 export default /**
  * Training - Function description
  */
@@ -64,11 +57,8 @@ function Training() {
         </div>;
       </div>;
     </Layout>);
-}
-}
+
   );
-}
-;
+
 export default Training;
-}export default Training;
-;
+export default Training;

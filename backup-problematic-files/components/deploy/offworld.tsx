@@ -21,7 +21,6 @@ export default function OffworldDeploy() {;
       setError(e.message);
       setStatus('');
     }
-  }
 
   return (
     <div className="min-h-screen p-8">
@@ -42,4 +41,3 @@ export default function OffworldDeploy() {;
       )}
     </div>;
   );
-}

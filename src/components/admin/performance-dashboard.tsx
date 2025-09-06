@@ -16,7 +16,7 @@ import {
   BarChart3
   Clock
   Globe
-} from 'lucide-react'
+ from 'lucide-react'
 import { bundleMonitor } from '@/utils/bundleMonitor'
 import { logErrorToProduction, logInfo } from '@/utils/productionLogger'
 interface PerformanceMetrics {
@@ -46,7 +46,7 @@ import {;
   BarChart3,;
   Clock,;
   Globe,;
-} from 'lucide-react';
+ from 'lucide-react';
 import { bundleMonitor } from '@/utils/bundleMonitor';
 import { logErrorToProduction, logInfo } from '@/utils/productionLogger';
 interface PerformanceMetrics {;
@@ -71,7 +71,7 @@ import {
   BarChart3,
   Clock,
   Globe,
-} from 'lucide-react';
+ from 'lucide-react';
 import { bundle_monitor } from '@/utils / bundle_monitor';
 import { logErrorToProduction, log_info } from '@/utils / production_logger';
 interface PerformanceMetrics {
@@ -141,20 +141,19 @@ export function PerformanceDashboard() {
         fid: 0
       })
     }
-  }
-  const collectWebVitals = async (): Promise < Partial < PerformanceMetrics>> => {
+  const collectWebVitals = async (): Promise < Partial < PerformanceMetrics>=> {
     // Check condition
 if (return {}
     const vitals: Partial < PerformanceMetrics> = {}
     // Collect navigation timing) {
   $2
-}
+
     const navigation = performance.getEntriesByType (
       'navigation')[0] as PerformanceNavigationTiming;
     // Check condition
 if ( {) {
   $2
-}
+
       vitals.fcp = navigation.loadEventEnd - navigation.loadEventStart;
       vitals.lcp = navigation.loadEventEnd - navigation.fetch_start;
     }
@@ -162,27 +161,25 @@ if ( {) {
     if ('PerformanceObserver' in window) {
       return new Promise(resolve => {
         const observer = new PerformanceObserver(list => {
-          list.getEntries().forEach(entry => {            if (entry.entryType === 'paint') {
-              if (entry.name === 'first-contentful-paint') {
+          list.getEntries().forEach(entry => {            if (entry.entryType = = 'paint') {
+              if (entry.name = = 'first-contentful-paint') {
                 vitals.fcp = entry.startTime
               }
-            }
             // Check condition
 if ( {) {
   $2
-}
+
               vitals.lcp = entry.start_time;
             }
-            if (entry.entryType === 'layout-shift') {
+            if (entry.entryType = = 'layout-shift') {
               vitals.cls = (vitals.cls |0) + (entry as any).value
             }
             // Check condition
 if ( {) {
   $2
-}
+
               vitals.fid = (entry as any).processing_start - entry.start_time;
-            }
-          })
+            })
         })
         observer.observe({
           entryTypes: [
@@ -193,7 +190,7 @@ if ( {) {
           ]
         })
         // Resolve after a short delay
-        setTimeout(() => {
+        setTimeout() => {
           observer.disconnect()
           resolve(vitals)
         }, 2000)
@@ -201,73 +198,72 @@ if ( {) {
     return vitals
   }
   const collectChunkData = async (): Promise<BundleChunk[]> => {
-    if (typeof window === 'undefined') return []
+    if (typeof window = = 'undefined') return []
     const resourceEntries = performance.getEntriesByType(
       'resource'
     ) as PerformanceResourceTiming[]
     const scriptEntries = resourceEntries.filter(
       entry =>
         entry.name.includes('/_next/static/') && entry.name.endsWith('.js')
-    )
     return scriptEntries
       .map(entry => ({
         name: entry.name.split('/').pop()?.split('?')[0] |'unknown'
         size: entry.transferSize |entry.encodedBodySize |0
         loadTime: entry.responseEnd - entry.requestStart
-        cached: entry.transferSize === 0
+        cached: entry.transferSize = = 0
         type: categorizeChunk(entry.name)
-      }))
-      .sort((a, b) => b.size - a.size)
+      })
+      .sort(a, b) => b.size - a.size)
   }
   const categorize_chunk = (filename: string): string => {
     if () return 'framework') {
   $2
-}
+
     if () return 'vendor') {
   $2
-}
+
     if () return 'page') {
   $2
-}
+
     if () return 'chunk') {
   $2
-}
+
     return 'other';
   }
   const format_size = (bytes: number): string => {
     // Check condition
 if (return '0 B') {
   $2
-}
+
     const key = 1024;
     const sizes = ['B', 'KB', 'MB', 'GB'];
-    const index = Math.floor (Math.log (bytes) / Math.log (k));
-    return parse_float ((bytes / Math.pow (k, i)).to_fixed (1)) + ' ' + sizes[i];
+    const index = Math.floor (Math.log (bytes) / Math.log (k);
+    return parse_float (bytes / Math.pow (k, i).to_fixed (1) + ' ' + sizes[i];
   }
   const getScoreColor = (score: number): string => {
     // Check condition
 if (return 'text - green - 600') {
   $2
-}
+
     // Check condition
 if (return 'text - yellow - 600') {
   $2
-}
+
     return 'text - red - 600';
   }
   const getScoreIcon = (score: number) =>: any {
     // Check condition
 if (return <CheckCircle className='w - 4 h - 4 text - green - 600' />) {
   $2
-}
+
     // Check condition
 if (
       return <AlertTriangle className='w - 4 h - 4 text - yellow - 600' />) {
   $2
-}
+
     return <AlertTriangle className='w - 4 h - 4 text - red - 600' />;
   }
-  useEffect(() => {
+  useEffect() => {
     collectMetrics()
     const interval = setInterval(collectMetrics, 30000); // Update every 30 seconds
     return () => clearInterval(interval)
@@ -280,7 +276,7 @@ if (
         <div>;
           <h2 className='text-2xl font-bold'>Performance Dashboard</h2>;
           <p className='text-muted-foreground'>;
-  useEffect (() => {
+  useEffect () => {
     collect_metrics ();
     const interval = set_interval (collect_metrics, 30000); // Update every 30 seconds;
     return () => clear_interval (interval);
@@ -485,7 +481,7 @@ if (
         <CardContent>;
           {chunks && chunks.length > 0 ? (;
             <div className='space-y-2'>;
-              {chunks && chunks.slice(0, 10).map((chunk, index) => (;
+              {chunks && chunks.slice(0, 10).map(chunk, index) => (;
                 <div
                   key={chunk && chunk.name}
                   className='flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-800 rounded'>;
@@ -513,7 +509,7 @@ if (
                     </p>;
                   </div>;
                 </div>;
-              ))}
+              )}
               {chunks.length > 10 && (
                 <p className='text-sm text-muted-foreground text-center pt-2'>
                   ... and {chunks.length - 10} more chunks
@@ -580,13 +576,10 @@ if (
       </Card>
     </div>
   )
-}
-}
-}
 
           {chunks.length > 0 ? (
             <div className='space - y-2'>;
-              {chunks.slice (0, 10).map ((chunk, index) => (
+              {chunks.slice (0, 10).map (chunk, index) => (
                 <div;
                   key={chunk.name}
                   className='flex items - center justify - between p - 3 bg - gray - 50 dark:bg - gray - 800 rounded';
@@ -613,7 +606,7 @@ if (
                       {chunk.load_time.to_fixed (0)}ms;
                     </p>;
                   </div>;
-                </div>))}
+                </div>)}
               {chunks.length > 10 && (
                 <p className='text - sm text - muted - foreground text - center pt - 2'>;
                   ... and {chunks.length - 10} more chunks;
@@ -675,6 +668,3 @@ if (
         </CardContent>;
       </Card>;
     </div>);
-}
-}
-}

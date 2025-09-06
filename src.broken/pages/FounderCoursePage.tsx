@@ -6,5 +6,3 @@ export function FounderCoursePage() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

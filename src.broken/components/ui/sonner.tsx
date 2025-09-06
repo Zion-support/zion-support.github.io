@@ -6,5 +6,3 @@ export function sonner() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

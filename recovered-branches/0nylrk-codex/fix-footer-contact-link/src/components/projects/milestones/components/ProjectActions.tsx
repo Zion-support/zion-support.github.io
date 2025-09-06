@@ -11,14 +11,14 @@ interface ProjectActionsProps {
   isTalent: boolean
 
   onAddMilestone: () => void
-}
+
 export function ProjectActions({
   projectId;
   isUnderDispute;
   disputeId;
   isTalent;
   onAddMilestone;
-}: ProjectActionsProps) {;
+: ProjectActionsProps) {;
   return (
     <div className="flex gap-2">
       {isUnderDispute && disputeId ? (
@@ -41,7 +41,7 @@ export function ProjectActions({
       )}
     </div>
   )
-}
+
 import {Button} from '@/components / ui / button';
 import {Link} from 'react-router-dom';
 import { ShieldAlert } from './lucide-react';
@@ -52,7 +52,7 @@ interface ProjectActionsProps {
   dispute_id?: string;
   is_talent: boolean,
   onAddMilestone: () => void;
-}
+
 export /**
  * ProjectActions - Function description
  */
@@ -75,4 +75,3 @@ function ProjectActions() {
           Add Milestone;
         </Button>)}
     </div>);
-}

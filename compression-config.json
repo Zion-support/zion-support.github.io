@@ -1,4 +1,4 @@
-{
+
   "gzip": {
     "enabled": true,
     "level": 6,
@@ -9,4 +9,3 @@
     "level": 4,
     "threshold": 1024
   }
-}

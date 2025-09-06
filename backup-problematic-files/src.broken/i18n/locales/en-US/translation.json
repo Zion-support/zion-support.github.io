@@ -1,4 +1,4 @@
-{
+
   "general": {
     "app_name": "Zion AI Marketplace",
     "loading": "Loading...",
@@ -16,7 +16,7 @@
     "saving": "Saving...",
     "open_main_menu": "Open main menu",
     "toggle_mobile_menu": "Toggle mobile menu",
-    "greeting_user": "Hello, {{name}}!",
+    "greeting_user": "Hello, {name}!",
     "status_page": "Status Page",
     "check_status_page": "You can try refreshing the page or visit our"
   },
@@ -66,7 +66,7 @@
     "session_check_timed_out_message": "We couldn't verify your session status quickly. Please try logging in or refresh the page.",
     "email_verification_required": "Email Verification Required",
     "email_needs_verification": "Your email address needs to be verified before you can log in.",
-    "verification_email_sent": " Verification email sent to {{email}}",
+    "verification_email_sent": " Verification email sent to {email}",
     "resend_email": "Resend Email",
     "check_status": "Check Status",
     "redirecting": "Redirecting to verification status in 3 seconds...",
@@ -160,8 +160,8 @@
     "fr": "Franais",
     "pt": "Portugus",
     "ar": "",
-    "language_changed": "Language changed to {{language}}",
-    "switch_to_detected": "Switch to {{language}}?"
+    "language_changed": "Language changed to {language}",
+    "switch_to_detected": "Switch to {language}?"
   },
   "translation": {
     "auto_translate": "Auto-Translate",
@@ -179,7 +179,7 @@
     "actions": "Actions",
     "no_results": "No translation keys found matching your search",
     "missing": "Not translated",
-    "missing_languages": "Missing in {{count}} languages",
+    "missing_languages": "Missing in {count} languages",
     "edit": "Edit",
     "saved": "Saved",
     "changes_saved": "Translation changes have been saved"
@@ -387,7 +387,6 @@
         "title": "Contact Us",
         "content": "If you have questions about these Terms of Service, contact us at <a href=\"mailto:support@ziontechgroup.com\">support@ziontechgroup.com</a>."
       }
-    }
   },
   "partner": {
     "title": "Zion AI Partner Program",
@@ -402,8 +401,7 @@
         "insights_desc": "Get early access to AI marketplace trends",
         "resources": "Marketing resources",
         "resources_desc": "Access our partner toolkit with ready-to-use materials"
-      }
-    },
+      },
     "organizations": {
       "title": "For AI Organizations",
       "desc": "Strategic partnerships",
@@ -414,8 +412,7 @@
         "co_brand_desc": "Create joint content and events",
         "tracking": "Custom tracking",
         "tracking_desc": "Detailed analytics on your referral performance"
-      }
-    },
+      },
     "how_it_works": "How It Works",
     "steps": {
       "join_title": "1. Join the Program",
@@ -468,4 +465,3 @@
   },
   "login": "Login",
   "signup": "Sign up"
-}

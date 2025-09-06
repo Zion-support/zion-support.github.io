@@ -3,7 +3,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-// Mock whitepaper data - in a real app, this would come from an API or database
+/ Mock whitepaper data - in a real app, this would come from an API or database
 const whitepapers = {
   'autonomous-systems-guide': {
     id: 'autonomous-systems-guide',
@@ -30,7 +30,6 @@ const whitepapers = {
       ]
       targetAudience: 'Technology leaders, engineers, and business professionals interested in implementing autonomous systems.'
     }
-  }
   'ai-ethics-framework': {
     id: 'ai-ethics-framework'
     title: 'AI Ethics Framework for Business'
@@ -54,7 +53,6 @@ const whitepapers = {
       ]
       targetAudience: 'Business leaders, compliance officers, and AI practitioners focused on responsible AI development.'
     }
-  }
   'automation-roi-calculator': {
     id: 'automation-roi-calculator'
     title: 'Automation ROI Calculator Guide'
@@ -78,18 +76,17 @@ const whitepapers = {
       ]
       targetAudience: 'Business analysts, project managers, and executives evaluating automation investments.'
     }
-  }
-}
+
 export default function WhitepaperPage() {
   const router = useRouter()
   const { id } = router.query
   const whitepaper = whitepapers[id as keyof typeof whitepapers]
-};
+;
 
 export default function WhitepaperPage() {
   const router = useRouter();
   const { id } = router.query;
-  
+
   const whitepaper = whitepapers[id as keyof typeof whitepapers];
 
   if (!whitepaper) {
@@ -170,14 +167,14 @@ export default function WhitepaperPage() {
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-fuchsia-400">Key Topics Covered</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {whitepaper.content.keyTopics.map((topic, index) => (
+                {whitepaper.content.keyTopics.map(topic, index) => (
                   <div key={index} className="bg-white/10 backdrop-blur-xl rounded-lg p-4 border border-white/20">
                     <div className="flex items-center gap-3">
                       <div className="w-2 h-2 bg-fuchsia-400 rounded-full"></div>
                       <span className="text-white/90">{topic}</span>
                     </div>
                   </div>
-                ))}
+                )}
               </div>
             </section>
 
@@ -203,13 +200,13 @@ export default function WhitepaperPage() {
             <section className="mb - 12">;
               <h2 className="text - 3xl font - bold mb - 6 text - fuchsia - 400">Key Topics Covered</h2>;
               <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
-                {whitepaper.content.key_topics.map ((topic, index) => (
+                {whitepaper.content.key_topics.map (topic, index) => (
                   <div key={index} className="bg - white / 10 backdrop - blur - xl rounded - lg p - 4 border border - white / 20">;
                     <div className="flex items - center gap - 3">;
                       <div className="w - 2 h - 2 bg - fuchsia - 400 rounded - full"></div>;
                       <span className="text - white / 90">{topic}</span>;
                     </div>;
-                  </div>))}
+                  </div>)}
               </div>;
             </section>;
             <section className="mb - 12">;
@@ -236,9 +233,9 @@ export default function WhitepaperPage() {
               <h2 className="text-2xl font-bold mb-6 text-white">Explore More Whitepapers</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {Object.values(whitepapers)
-                  .filter(w => w.id !== whitepaper.id)
+                  .filter(w => w.id != whitepaper.id)
                   .slice(0, 2)
-                  .map((relatedPaper) => (
+                  .map(relatedPaper) => (
                     <Link
                       key={relatedPaper.id}
                       href={`/resources/whitepapers/${relatedPaper.id}`}
@@ -252,7 +249,7 @@ export default function WhitepaperPage() {
                         {relatedPaper.category}
                       </span>
                     </Link>
-                  ))}
+                  )}
               </div>
             </section>
             {/* CTA */}
@@ -277,7 +274,7 @@ export default function WhitepaperPage() {
       </div>
     </>
   )
-}
+
                 </button>;
                 <p className="text - white / 60 text - sm mt - 4">;
                   PDF format  {whitepaper.pages} pages  Free download;
@@ -289,9 +286,9 @@ export default function WhitepaperPage() {
               <h2 className="text - 2xl font - bold mb - 6 text - white">Explore More Whitepapers</h2>;
               <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">;
                 {Object.values (whitepapers);
-                  .filter (w => w.id !== whitepaper.id);
+                  .filter (w => w.id != whitepaper.id);
                   .slice (0, 2);
-                  .map ((related_paper) => (
+                  .map (related_paper) => (
                     <Link;
                       key={related_paper.id}
                       href={`/resources / whitepapers/${related_paper.id}`}
@@ -304,7 +301,7 @@ export default function WhitepaperPage() {
                       <span className="inline - block px - 3 py - 1 bg - fuchsia - 400 / 20 text - fuchsia - 400 text - xs rounded - full border border - fuchsia - 400 / 30">;
                         {related_paper.category}
                       </span>;
-                    </Link>))}
+                    </Link>)}
               </div>;
             </section>;
             {/* CTA */}
@@ -328,4 +325,3 @@ export default function WhitepaperPage() {
         </main>;
       </div>;
     </>);
-}

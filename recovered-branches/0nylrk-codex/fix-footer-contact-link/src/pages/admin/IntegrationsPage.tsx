@@ -19,7 +19,7 @@ export default function IntegrationsPage() {
       <Footer />
     </ProtectedRoute>
   )
-}
+
 import React, { useState } from './react';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -42,4 +42,3 @@ function IntegrationsPage() {
       </main>;
       <Footer />;
     </ProtectedRoute>);
-}

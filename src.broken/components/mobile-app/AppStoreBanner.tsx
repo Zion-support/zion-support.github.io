@@ -6,5 +6,3 @@ export function AppStoreBanner() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

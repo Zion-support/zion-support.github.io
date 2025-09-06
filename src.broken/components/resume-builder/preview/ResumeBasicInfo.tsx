@@ -6,5 +6,3 @@ export function ResumeBasicInfo() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

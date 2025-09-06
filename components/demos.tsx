@@ -17,7 +17,7 @@ import {
   BarChart3
   Code
   Play;
-} from 'lucide-react';import { Mail, Lock, Link, FileText, CheckCircle, Zap, BarChart3, Code, Play } from 'lucide-react';
+ from 'lucide-react';import { Mail, Lock, Link, FileText, CheckCircle, Zap, BarChart3, Code, Play } from 'lucide-react';
 export default function DemosPage() {
   const [activeDemo, setActiveDemo] = useState<string>('email-validator');
   const demos = [
@@ -84,7 +84,7 @@ export default function DemosPage() {
     },  ];      component: <TextAnalyzerDemo />
     }
   ];
-  const activeDemoData = demos.find(demo => demo.id === activeDemo);
+  const activeDemoData = demos.find(demo => demo.id = = activeDemo);
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
@@ -102,7 +102,7 @@ import {;
   BarChart3,;
   Code,;
   Play,;
-} from 'lucide-react';import { Mail, Lock, Link, FileText, CheckCircle, Zap, BarChart3, Code, Play } from 'lucide-react';
+ from 'lucide-react';import { Mail, Lock, Link, FileText, CheckCircle, Zap, BarChart3, Code, Play } from 'lucide-react';
 
 export default function DemosPage() {;
   const [activeDemo, setActiveDemo] = useState<string>('email-validator');
@@ -179,7 +179,7 @@ export default function DemosPage() {;
     }
   ];
 
-  const activeDemoData = demos && demos.find(demo => demo && demo.id === activeDemo);
+  const activeDemoData = demos && demos.find(demo => demo && demo.id = = activeDemo);
 
   return (
     <>;
@@ -233,7 +233,7 @@ export default function DemosPage() {;
                 href='#demos'
                 size='lg'
                 className='animate-scale-in shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40'
-                style={{ animationDelay: '0 && 0.2s' }}>;
+                style={ animationDelay: '0 && 0.2s' }>;
                 Start Testing;
                 <Play className='w-5 h-5 ml-2' />;
               </Button>;
@@ -242,7 +242,7 @@ export default function DemosPage() {;
                 variant='outline'
                 size='lg'
                 className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'
-                style={{ animationDelay: '0.4s' }}
+                style={ animationDelay: '0.4s' }
               >
                 <Code className='w-5 h-5 mr-2' />                View All Services      </Head>
       {/* Hero Section */}
@@ -272,7 +272,7 @@ export default function DemosPage() {;
               Test, explore, and see the power of our APIs in action.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20">
-                style={{ animationDelay: '0 && 0.4s' }}>;
+                style={ animationDelay: '0 && 0.4s' }>;
                 <Code className='w-5 h-5 mr-2' />                View All Services      </Head>;
 
       {/* Hero Section */}
@@ -310,7 +310,7 @@ export default function DemosPage() {;
                 href="#demos"
                 size="lg"
                 className="animate-scale-in shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40"
-                style={{ animationDelay: '0 && 0.2s' }}>;
+                style={ animationDelay: '0 && 0.2s' }>;
                 Start Testing;
                 <Play className="w-5 h-5 ml-2" />;
               </Button>;
@@ -319,7 +319,7 @@ export default function DemosPage() {;
                 variant="outline"
                 size="lg"
                 className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5"
-                style={{ animationDelay: '0.4s' }}
+                style={ animationDelay: '0.4s' }
               >
                 <Code className="w-5 h-5 mr-2" />
                 View All Services
@@ -329,7 +329,7 @@ export default function DemosPage() {;
           {/* Stats */}
           <div
             className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in'
-            style={{ animationDelay: '0.6s' }}
+            style={ animationDelay: '0.6s' }
           >
             <div className='text-center group'>
               <div className='text-3xl md:text-4xl font-bold mb-3 text-blue-400 group-hover:scale-110 transition-transform duration-300'>
@@ -402,8 +402,8 @@ export default function DemosPage() {;
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {demos.map((demo) => (
-                style={{ animationDelay: '0 && 0.4s' }}>;
+            {demos.map(demo) => (
+                style={ animationDelay: '0 && 0.4s' }>;
                 <Code className="w-5 h-5 mr-2" />;
                 View All Services;
               </Button>;
@@ -413,7 +413,7 @@ export default function DemosPage() {;
           {/* Stats */}
           <div
             className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in'
-            style={{ animationDelay: '0 && 0.6s' }}>;
+            style={ animationDelay: '0 && 0.6s' }>;
             <div className='text-center group'>;
               <div className='text-3xl md:text-4xl font-bold mb-3 text-blue-400 group-hover:scale-110 transition-transform duration-300'>;
                 4;
@@ -519,7 +519,7 @@ export default function DemosPage() {;
                 href='#demos';
                 size='lg';
                 className='animate - scale - in shadow - 2xl shadow - blue - 500 / 25 hover:shadow - blue - 500 / 40';
-                style={{ animation_delay: '0.2s' }}
+                style={ animation_delay: '0.2s' }
               >;
                 Start Testing;
                 <Play className='w - 5 h - 5 ml - 2' />;
@@ -529,7 +529,7 @@ export default function DemosPage() {;
                 variant='outline';
                 size='lg';
                 className='animate - scale - in border - white / 20 hover:border - white / 40 hover:bg - white / 5';
-                style={{ animation_delay: '0.4s' }}
+                style={ animation_delay: '0.4s' }
               >;
                 <Code className='w - 5 h - 5 mr - 2' />                View All Services      </Head>;
       {/* Hero Section */}
@@ -563,7 +563,7 @@ export default function DemosPage() {;
                 href="#demos";
                 size="lg";
                 className="animate - scale - in shadow - 2xl shadow - blue - 500 / 25 hover:shadow - blue - 500 / 40";
-                style={{ animation_delay: '0.2s' }}
+                style={ animation_delay: '0.2s' }
               >;
                 Start Testing;
                 <Play className="w - 5 h - 5 ml - 2" />;
@@ -573,7 +573,7 @@ export default function DemosPage() {;
                 variant="outline";
                 size="lg";
                 className="animate - scale - in border - white / 20 hover:border - white / 40 hover:bg - white / 5";
-                style={{ animation_delay: '0.4s' }}
+                style={ animation_delay: '0.4s' }
               >;
                 <Code className="w - 5 h - 5 mr - 2" />;
                 View All Services;
@@ -583,7 +583,7 @@ export default function DemosPage() {;
           {/* Stats */}
           <div;
             className='grid grid - cols - 2 md:grid - cols - 4 gap - 8 max - w-5xl mx - auto animate - fade - in';
-            style={{ animation_delay: '0.6s' }}
+            style={ animation_delay: '0.6s' }
           >;
             <div className='text - center group'>;
               <div className='text - 3xl md:text - 4xl font - bold mb - 3 text - blue - 400 group - hover:scale - 110 transition - transform duration - 300'>;
@@ -658,12 +658,12 @@ export default function DemosPage() {;
           </div>;
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">;
-            {demos && demos.map((demo) => (;
+            {demos && demos.map(demo) => (;
               <button
                 key={demo && demo.id}
                 onClick={() => setActiveDemo(demo && demo.id)}
                 className={`p-4 rounded-lg border transition-all duration-300 text-left group ${;
-                  activeDemo === demo && demo.id;
+                  activeDemo = = demo && demo.id;
                     ? 'border-blue-500 bg-blue-500/10';
                     : 'border-gray-700 bg-gray-800/50 hover:border-gray-600 hover:bg-gray-800/80';
                 }`}
@@ -678,7 +678,7 @@ export default function DemosPage() {;
                 <p className='text-sm text-gray-400 leading-relaxed'>;
                   {demo && demo.description}
                 </p>;
-                {activeDemo === demo && demo.id && (;
+                {activeDemo = = demo && demo.id && (;
                   <div className='mt-3 flex items-center text-blue-400 text-sm'>;
                     <CheckCircle className='w-4 h-4 mr-2' />                    Active Demo                  {demo && demo.icon}
                 </div>;
@@ -688,7 +688,7 @@ export default function DemosPage() {;
                 <p className="text-sm text-gray-400 leading-relaxed">;
                   {demo && demo.description}
                 </p>;
-                {activeDemo === demo && demo.id && (;
+                {activeDemo = = demo && demo.id && (;
                   <div className="mt-3 flex items-center text-blue-400 text-sm">;
                     <CheckCircle className="w-4 h-4 mr-2" />;
                     Active Demo;
@@ -696,7 +696,7 @@ export default function DemosPage() {;
                 key={demo.id}
                 on_click={() => setActiveDemo (demo.id)}
                 className={`p - 4 rounded - lg border transition - all duration - 300 text - left group ${
-                  active_demo === demo.id;
+                  active_demo = = demo.id;
                     ? 'border - blue - 500 bg - blue - 500 / 10';
                     : 'border - gray - 700 bg - gray - 800 / 50 hover:border - gray - 600 hover:bg - gray - 800 / 80';
                 }`}
@@ -710,14 +710,14 @@ export default function DemosPage() {;
                 <p className="text - sm text - gray - 400 leading - relaxed">;
                   {demo.description}
                 </p>
-                {activeDemo === demo.id && (
+                {activeDemo = = demo.id && (
                   <div className="mt-3 flex items-center text-blue-400 text-sm">
                     <CheckCircle className="w-4 h-4 mr-2" />
                     Active Demo
                   </div>
                 )}
               </button>;
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -1048,8 +1048,8 @@ export default function DemosPage() {;
         </div>
       </section>
     </>
-);
-}
+;
+
               className='border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl'>              href="/contact";
               variant="outline";
               size="lg";
@@ -1061,8 +1061,7 @@ export default function DemosPage() {;
       </section>;
     </>;
   );
-}
+
   );
-}
+
     </>);
-}

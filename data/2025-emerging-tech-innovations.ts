@@ -1,7 +1,7 @@
 import { ServiceVariant } from '../types/service-variants';
 
 import { ServiceVariant } from '../types / service - variants';
-;
+
 export interface EmergingTechInnovationService {
 
   id: string;
@@ -56,7 +56,7 @@ const contact = {
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
-}
+
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -65,7 +65,7 @@ const contact = {
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com'
   website: 'https://ziontechgroup.com'
-};
+;
 
 export const emergingTechInnovations: EmergingTechInnovation[] = [
   // Quantum Internet & Communication Services
@@ -901,7 +901,7 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
     marketAdvantage:
       'Only quantum-powered cybersecurity platform with proven AI integration'
   }
-];      'Quantum threat detectionAI behavioral analysisAutonomous responseQuantum encryptionThreat hunting'
+;      'Quantum threat detectionAI behavioral analysisAutonomous responseQuantum encryptionThreat hunting'
     benefits: [;
       '90% faster threat detection',
       '70% reduction in false positives',
@@ -919,10 +919,8 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
     market_advantage:;
       'Only quantum - powered cybersecurity platform with proven AI integration',
   },
-];      'Quantum threat detectionAI behavioral analysis_autonomous response_quantum encryption_threat hunting';
+;      'Quantum threat detectionAI behavioral analysis_autonomous response_quantum encryption_threat hunting';
     ];
     market_advantage: 'Only quantum - powered cybersecurity platform with proven AI integration';
   }
-];
-
 ;

@@ -1,20 +1,20 @@
 import React from "react",;
 import fs from "fs",;
 import path from "path",;
-;
+
 type Experiment = {;
   title:string,;
   hypothesis?:string,;
   metric?:string,;
   effort?:number,;
   impact?:number;
-},;
-;
+,;
+
 type Props = {;
   updatedAt:string | null,;
   items:Experiment[];
-},;
-;
+,;
+
 export default function CurationPage({ updatedAt, items } Props) {;
   return (;
     <main className="mx-auto max-w-4xl px-4 py-12">;
@@ -24,9 +24,9 @@ export default function CurationPage({ updatedAt, items } Props) {;
       ) :(;
         <p className="mt-2 text-sm text-gray-600">No curated output yet. It will appear here automatically after the next run.</p>;
       )}
-;
+
       <div className="mt-6 space-y-4">;
-        {items.map((exp, idx) => (;
+        {items.map(exp, idx) => (;
           <div key={idx} className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm">;
             <div className="text-base font-semibold text-gray-900">{exp.title}</div>;
             {(exp.hypothesis || exp.metric) && (;
@@ -43,7 +43,7 @@ export default function CurationPage({ updatedAt, items } Props) {;
               </div>;
             )}
           </div>;
-        ))}
+        )}
         {!items.length && (;
           <div className="rounded-xl border border-gray-200 bg-white p-6 text-center text-gray-600">;
             Nothing to show yet.;
@@ -52,8 +52,7 @@ export default function CurationPage({ updatedAt, items } Props) {;
       </div>;
     </main>;
   ),;
-}
-;
+
 export async function getStaticProps() {;
   try {;
     const filePath = path.join(process.cwd(), "data", "ai-curation", "growth-experiments.json"),;
@@ -71,4 +70,3 @@ export async function getStaticProps() {;
         items:[]},;
       revalidate:300},;
   }
-}

@@ -1,4 +1,4 @@
-{
+
   "name": "icon-scripts",
   "version": "1.0.0",
   "description": "Helper scripts for the project",
@@ -6,4 +6,3 @@
   "dependencies": {
     "glob": "^7.2.0"
   }
-}

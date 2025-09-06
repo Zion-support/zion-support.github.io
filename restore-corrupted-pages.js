@@ -1,18 +1,16 @@
 
-')
+)
 
       if (parts.length > 1) {
         // Take the content after the conflict resolution
       }
-    }
     // Clean up the content
 
     backupContent = backupContent.trim()
 
     // Ensure it has proper structure
-    if (!backupContent.includes('export default')) {
+    if (!backupContent.includes('export default') {
       return { restored: false, reason: 'Backup content is also corrupted' }
-    }
     // Create a backup of the current corrupted file
 
     const timestamp = Date.now()
@@ -25,22 +23,20 @@
       backupUsed: backupPath
 
       corruptedBackup: corruptedBackupPath
-'),
+),
       // Check condition
 if ( {) {
   $2
-}
+
         // Take the content after the conflict resolution;
       }
-    }
     // Clean up the content;
     backup_content = backup_content.trim (),
     // Ensure it has proper structure;
     if () {) {
   $2
-}
+
       return { restored: false, reason: 'Backup content is also corrupted' }
-    }
     // Create a backup of the current corrupted file;
     const timestamp = Date.now (),
     const corruptedBackupPath = `${page_path}.corrupted.${timestamp}`,
@@ -51,12 +47,10 @@ if ( {) {
       restored: true,
       backup_used: backup_path,
       corrupted_backup: corruptedBackupPath;
-    }
-  } catch (error) {
+    } catch (error) {
     return { restored: false, reason: `Error: ${error.message}` }
-  }
-}
-// Function to scan and restore all corrupted pages
+
+/ Function to scan and restore all corrupted pages
 function restoreAllCorruptedPages() {
   const pagesDir = path.join(process.cwd(), 'pages')
   const results = {
@@ -71,12 +65,10 @@ function restoreAllCorruptedPages() {
     for (const entry of entries) {
       const fullPath = path.join(dir, entry.name)
 
-      if (entry.isDirectory()) {
+      if (entry.isDirectory() {
         if ({
           scanDirectory(fullPath)
-        }
-
-      } else if (entry.name.endsWith('.tsx') |entry.name.endsWith('.jsx')) {
+        } else if (entry.name.endsWith('.tsx') |entry.name.endsWith('.jsx') {
         results.total++
         console.log(`\n Checking: ${fullPath}`)
         const result = restorePage(fullPath)
@@ -96,7 +88,6 @@ function restoreAllCorruptedPages() {
           ...result
         })
       }
-    }
   }
 
   console.log(' Starting page restoration process...')
@@ -106,22 +97,20 @@ function restoreAllCorruptedPages() {
   console.log(`   Total pages: ${results.total}`)
   console.log(`   Restored: ${results.restored}`)
   console.log(`   Failed: ${results.failed}`)
-  console.log(`   Success rate: ${((results.restored / results.total) * 100).toFixed(1)}%`)
+  console.log(`   Success rate: ${(results.restored / results.total) * 100).toFixed(1)}%`)
   // Save detailed report
   const reportPath = path.join(process.cwd(), 'page-restoration-report.json')
-  fs.writeFileSync(reportPath, JSON.stringify(results, null, 2))
+  fs.writeFileSync(reportPath, JSON.stringify(results, null, 2)
   console.log(`\n Detailed report saved to: ${reportPath}`)
 
   return results
-}
-// Run the restoration if this script is executed directly
+
+/ Run the restoration if this script is executed directly
 if ({
   restoreAllCorruptedPages()
-}
+
 module.exports = {
 
   restorePage
   restoreAllCorruptedPages
   findBestBackup
-}
-

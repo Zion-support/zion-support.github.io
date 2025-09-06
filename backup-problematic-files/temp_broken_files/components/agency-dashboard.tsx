@@ -17,7 +17,7 @@ export default function AgencyDashboardPage({ vendor }: Props) {
       name: String(formData.get('name') || activeVendor.name),
       about: String(formData.get('about') || activeVendor.about || ''),
       servicesOffered: String(formData.get('servicesOffered') || activeVendor.servicesOffered?.join() || '')
-        .split()        .map(s => s.trim())
+        .split()        .map(s => s.trim()
         .filter(Boolean)} as Vendor,
     // For MVP, update via direct API not implemented, keep local preview only
     setActiveVendor(updated)
@@ -72,13 +72,13 @@ export default function AgencyDashboardPage({ vendor }: Props) {
               <div className=&quot;text-sm text-gray-500&quot;>{p.description}</div>
               <div className=&quot;mt-2 text-sm&quot;>${p.priceUsd}</div>
             </div>
-          ))}
+          )}
         </div>
         <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-2 items-end&quot;>
           <input placeholder=&quot;Title&quot; value={pkgTitle} onChange={e => setPkgTitle(e.target.value)} className=&quot;border rounded px-3 py-2 bg-transparent&quot; />
           <input placeholder=&quot;Description&quot; value={pkgDesc} onChange={e => setPkgDesc(e.target.value)} className=&quot;border rounded px-3 py-2 bg-transparent&quot; />
           <div className=&quot;flex gap-2&quot;>
-            <input placeholder=&quot;Price (USD)&quot; type=&quot;number&quot; value={pkgPrice} onChange={e => setPkgPrice(Number(e.target.value))} className=&quot;border rounded px-3 py-2 bg-transparent w-full&quot; />
+            <input placeholder=&quot;Price (USD)&quot; type=&quot;number&quot; value={pkgPrice} onChange={e => setPkgPrice(Number(e.target.value)} className=&quot;border rounded px-3 py-2 bg-transparent w-full&quot; />
             <button onClick={addPackage} className=&quot;px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black&quot;>Add</button>          </div>
         </div>
       </section>
@@ -90,7 +90,6 @@ export default function AgencyDashboardPage({ vendor }: Props) {
       <div className=&quot;text-center text-xs text-gray-500&quot;>Powered by Zion</div>
     </div>
   )
-}
 
 function Pipeline({ vendorId }: { vendorId: string }) {
   const [items, setItems] = useState<any[]>([]),
@@ -109,11 +108,11 @@ function Pipeline({ vendorId }: { vendorId: string }) {
     fetchItems()
   }
 
-  useEffect(() => { fetchItems() }, []),
+  useEffect() => { fetchItems() }, []),
 
   return (
     <div className=&quot;space-y-2&quot;>
-      {items.length === 0 && <div className=&quot;text-sm text-gray-500&quot;>No leads yet.</div>}
+      {items.length = = 0 && <div className=&quot;text-sm text-gray-500&quot;>No leads yet.</div>}
       {items.map(item => (
         <div key={item.id} className=&quot;border border-gray-200 dark:border-gray-800 rounded p-3 flex items-center justify-between&quot;>
           <div>
@@ -128,13 +127,12 @@ function Pipeline({ vendorId }: { vendorId: string }) {
             <option value=&quot;complete&quot;>Complete</option>
             <option value=&quot;lost&quot;>Lost</option>          </select>
         </div>
-      ))}
+      )}
     </div>
   )
-}
 
 export const getServerSideProps: GetServerSideProps<Props> = async () => {
   const { listVendors } = await import('../utils/vendor-store'),
   const vendor = listVendors()[0] || null, // tie to auth later
-  return { props: { vendor } }
-},
+  return { props: { vendor }
+,

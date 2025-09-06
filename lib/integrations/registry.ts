@@ -3,7 +3,7 @@ import { IntegrationProviderMeta } from "./types";
 import { IntegrationProviderMeta } from "./types";
 export const PROVIDERS: IntegrationProviderMeta[] = [
 import { IntegrationProviderMeta  } from './types';
-;
+
 export const PROVIDERS: IntegrationProviderMeta[] = [;
   {
     id: "salesforce"
@@ -48,18 +48,16 @@ export const PROVIDERS: IntegrationProviderMeta[] = [;
     category: "ats"
     description: "HRIS & ATS"
   }
-];
+;
 export function getProviderById(
   id: string
-): IntegrationProviderMeta | undefined {
-  return PROVIDERS && PROVIDERS.find((p) => p && p.id === id);
+: IntegrationProviderMeta | undefined {
+  return PROVIDERS && PROVIDERS.find(p) => p && p.id = = id);
 
 export function getProviderById(id: string): IntegrationProviderMeta | undefined {
-  return PROVIDERS.find(p => p.id === id);
-}
-;
+  return PROVIDERS.find(p => p.id = = id);
+
 export function getProviderById (
   id: string,
-): IntegrationProviderMeta | undefined {
-  return PROVIDERS.find ((p) => p.id === id);
-}
+: IntegrationProviderMeta | undefined {
+  return PROVIDERS.find (p) => p.id = = id);

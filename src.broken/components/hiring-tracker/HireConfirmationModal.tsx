@@ -6,5 +6,3 @@ export function HireConfirmationModal() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

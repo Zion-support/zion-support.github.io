@@ -5,8 +5,7 @@ export interface ContentGenerationRequest {;
   length:'short' | 'medium' | 'long',;
   keywords?:string[],;
   targetAudience?:string;
-}
-;
+
 export interface ContentGenerationResponse {;
   content:string,;
   wordCount:number,;
@@ -18,7 +17,7 @@ export interface ContentGenerationResponse {;
     description:string,;
     tags:string[];
   },;}
-;
+
 export interface ContentTemplate {;
   id:string,;
   name:string,;
@@ -26,17 +25,16 @@ export interface ContentTemplate {;
   type:string,;
   preview:string,;
   price:number;
-}
-;
+
 export class AIContentGeneratorService {;
   private apiKey:string,;
   private baseUrl:string,;
-;
+
   constructor(apiKey:string, baseUrl:string = 'https://api.ziontech.ai') {;
     this.apiKey = apiKey,;
     this.baseUrl = baseUrl;
   }
-;
+
   async generateContent(request:ContentGenerationRequest):Promise<ContentGenerationResponse> {;
     try {;
       // In a real implementation, this would call OpenAI, Claude, or similar API;
@@ -46,18 +44,17 @@ export class AIContentGeneratorService {;
           'Authorization':`Bearer ${this.apiKey}`,;
           'Content-Type':'application/json'},;
         body:JSON.stringify(request)}),;
-;
+
       if (!response.ok) {;
         throw new Error(`Content generation failed:${response.statusText}`),;
       }
-;
+
       return await response.json(),;
     } catch (error) {;
       // Fallback to mock data for demo purposes;
       return this.generateMockContent(request),;
     }
-  }
-;
+
   async getTemplates():Promise<ContentTemplate[]> {;
     return [;
       {;
@@ -94,22 +91,22 @@ export class AIContentGeneratorService {;
       }
     ],;
   }
-;
+
   private generateMockContent(request:ContentGenerationRequest):ContentGenerationResponse {;
     const mockContent = `# ${request.topic}
-;
+
 This is a ${request.length} ${request.type} about ${request.topic}. The content is written in a ${request.tone} tone to engage the target audience.;
-;
-## Key Points;
-;
-- Point 1:${request.topic} is essential for modern businesses;
-- Point 2:Implementing ${request.topic} can improve efficiency;
-- Point 3:Best practices for ${request.topic} implementation;
-;
-## Conclusion;
-;
-${request.topic} represents a significant opportunity for organizations looking to stay competitive in today's digital landscape.`,;
-;
+
+# Key Points;
+
+ Point 1:${request.topic} is essential for modern businesses;
+ Point 2:Implementing ${request.topic} can improve efficiency;
+ Point 3:Best practices for ${request.topic} implementation;
+
+# Conclusion;
+
+{request.topic} represents a significant opportunity for organizations looking to stay competitive in today's digital landscape.`,;
+
     return {;
       content:mockContent,;
       wordCount:mockContent.split(' ').length,;
@@ -123,10 +120,9 @@ ${request.topic} represents a significant opportunity for organizations looking 
         title:`${request.topic} - Complete Guide`,;
         description:`Learn everything about ${request.topic} and how to implement it effectively.`,;
         tags:[request.topic, request.type, 'guidetutorial'];
-      }
-    },;
+      },;
   }
-;
+
   async analyzeContent(content:string):Promise<{;
     seoScore:number,;
     readabilityScore:number,;
@@ -145,12 +141,10 @@ ${request.topic} represents a significant opportunity for organizations looking 
         'content':2.1,;
         'seo':1.8,;
         'marketing':1.5;
-      }
-    },;
+      },;
   }
-}
-;
-// Pricing tiers for the AI Content Generator;
+
+/ Pricing tiers for the AI Content Generator;
 export const AI_CONTENT_PRICING = {;
   starter:{;
     name:'Starter',;
@@ -184,42 +178,38 @@ export const AI_CONTENT_PRICING = {;
       'Custom integrationsSLA guarantee';
     ];
   }
-},; async generateContent (request: ContentGenerationRequest) : Promise<ContentGenerationResponse> {
+,; async generateContent (request: ContentGenerationRequest) : Promise<ContentGenerationResponse> {
   try {
   // In a real implementation, this would call OpenAI, Claude, or similar API const response = await fetch (`$ {
   this.baseUrl 
-}/content/generate`, {
+/content/generate`, {
   method: 'POST', headers: {
   'Authorization': `Bearer $ {
   this.apiKey 
-}`;
-'Content-Type': 'application/json' 
-};
-body: JSON.stringify (request) 
-});
-}async getTemplates () : Promise<ContentTemplate[]> {
+`;
+Content-Type': 'application/json' 
+;
+body: JSON.stringify (request);
+async getTemplates () : Promise<ContentTemplate[]> {
   return [ {
-  
-}private generateMockContent (request: ContentGenerationRequest) : ContentGenerationResponse {
+
+private generateMockContent (request: ContentGenerationRequest) : ContentGenerationResponse {
   const mockContent = `# $ {
   request.topic 
-}This is a $ {
+This is a $ {
   request.length 
-}$ {
+$ {
   request.type 
-}about $ {
+about $ {
   request.topic 
-}. The content is written in a $ {
+. The content is written in a $ {
   request.tone 
-}tone to engage the target audience. ## Key Points - Point 1: $ {
+tone to engage the target audience. ## Key Points - Point 1: $ {
   request.topic 
-}is essential for modern businesses - Point 2: Implementing $ {
+is essential for modern businesses - Point 2: Implementing $ {
   request.topic 
-}can improve efficiency - Point 3: Best practices for $ {
+can improve efficiency - Point 3: Best practices for $ {
   request.topic 
-}implementation ## Conclusion 
-}
-}
-}
-}
-}// Pricing tiers for the AI Content Generator 
+implementation ## Conclusion 
+
+// Pricing tiers for the AI Content Generator 

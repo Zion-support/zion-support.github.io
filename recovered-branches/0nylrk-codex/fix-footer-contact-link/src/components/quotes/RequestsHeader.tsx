@@ -7,7 +7,7 @@ import {
   SelectItem;
   SelectTrigger;
   SelectValue 
-} from "@/components/ui/select",
+ from "@/components/ui/select",
 import type { QuoteStatus } from "@/types/quotes";
 
 type RequestsHeaderProps = {
@@ -16,21 +16,20 @@ type RequestsHeaderProps = {
   setStatusFilter: (value: QuoteStatus | 'all') => void
   archiveFilter: 'active' | 'archived' | 'all'
   setArchiveFilter: (value: 'active' | 'archived' | 'all') => void
-}
+
 export const RequestsHeader: React.FC<RequestsHeaderProps> = ({
   unreadCount;
   statusFilter;
   setStatusFilter;
   archiveFilter
   setArchiveFilter
-}) => {
+) => {
 type RequestsHeaderProps = {;
   unreadCount: number,;
   statusFilter: QuoteStatus | 'all',;
   setStatusFilter: (value: QuoteStatus | 'all') => void,;
   archiveFilter: 'active' | 'archived' | 'all',;
   setArchiveFilter: (value: 'active' | 'archived' | 'all') => void;
-};
 
 export const RequestsHeader: React.FC<RequestsHeaderProps> = ({;
   unreadCount;
@@ -38,7 +37,7 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({;
   setStatusFilter;
   archiveFilter,;
   setArchiveFilter;
-}) => {;
+) => {;
   return (
     <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">;
       <div>;
@@ -87,7 +86,6 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({;
       </div>
     </div>
   )
-}
 
             <SelectValue placeholder="All Statuses" />;
           </SelectTrigger>;
@@ -117,7 +115,4 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({;
       </div>;
     </div>;
   );
-};
     </div>);
-}
-;

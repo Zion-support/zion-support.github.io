@@ -12,16 +12,15 @@ export interface TokenTransaction {id: string;
   reason: string;
   metadata?: Record<string, any>;
   createdAt: string, // ISO timestamp;
-}
+
 export interface Wallet {userId: string;
   balance: number, // current token balance;
-}
+
 export interface TokenConfig {symbol: TokenSymbol;
   usdPerToken: number, // e.g., 0.05 means 100 ZION$ = $5;
   earn_rules: Record < string number>, // action -> tokens;
   burn_rules: Record < string number>, // feature -> tokens;
-}
+
 export interface WalletSummary {wallet: Wallet;
   transactions: TokenTransaction[];
   config: TokenConfig;
-}

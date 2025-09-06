@@ -1,4 +1,4 @@
-"use client";
+use client";
 import { useState } from "react";
 interface ITService {id: string;
   name: string;
@@ -12,7 +12,7 @@ interface ITService {id: string;
   features: string[];
   technologies: string[];
   industries: string[];
-}
+
 const itServices: ITService[] = [;
   {id: "cloud-migration-complete";
     name: "Complete Cloud Migration & DevOps";
@@ -278,10 +278,10 @@ const itServices: ITService[] = [;
       "Financial Services";
     ];
   }
-];
+;
 export default function ITSolutionsPage() {return (;
     <div className="space-y-8">;
-"use client",
+use client",
 import { useState  } from './react';,
 interface ITService {
   id: string,
@@ -296,7 +296,7 @@ interface ITService {
   features: string[],
   technologies: string[],
   industries: string[];
-}
+
 const it_services: ITService[] = [;
   {
     id: "cloud - migration - complete",
@@ -568,7 +568,7 @@ const it_services: ITService[] = [;
       "Financial Services";
     ];
   }
-],
+,
 export default /**
  * ITSolutionsPage - Function description
  */
@@ -602,44 +602,44 @@ function ITSolutionsPage() {
             <div>;
               <h3 className="font - semibold mb - 3 text - blue - 400">Deliverables</h3>;
               <div className="grid grid - cols - 1 gap - 2">;
-                {service.deliverables.map ((deliverable, index) => (
+                {service.deliverables.map (deliverable, index) => (
                   <div key={index} className="flex items - center gap - 2 text - sm">;
                     <span className="text - green - 400"></span>;
                     <span>{deliverable}</span>;
-                  </div>))}
+                  </div>)}
               </div>;
             </div>;
             {/* Features */}
             <div>;
               <h3 className="font - semibold mb - 3 text - purple - 400">Key Features</h3>;
               <div className="grid grid - cols - 1 sm:grid - cols - 2 gap - 2">;
-                {service.features.map ((feature, index) => (
+                {service.features.map (feature, index) => (
                   <div key={index} className="flex items - center gap - 2 text - sm">;
                     <span className="text - blue - 400"></span>;
                     <span>{feature}</span>;
-                  </div>))}
+                  </div>)}
               </div>;
             </div>;
             {/* Technologies */}
             <div>;
               <h3 className="font - semibold mb - 3 text - green - 400">Technologies</h3>;
               <div className="grid grid - cols - 1 sm:grid - cols - 2 gap - 2">;
-                {service.technologies.map ((tech, index) => (
+                {service.technologies.map (tech, index) => (
                   <div key={index} className="flex items - center gap - 2 text - sm">;
                     <span className="text - yellow - 400"></span>;
                     <span>{tech}</span>;
-                  </div>))}
+                  </div>)}
               </div>;
             </div>;
             {/* Industries */}
             <div>;
               <h3 className="font - semibold mb - 3 text - orange - 400">Industries Served</h3>;
               <div className="grid grid - cols - 1 sm:grid - cols - 2 gap - 2">;
-                {service.industries.map ((industry, index) => (
+                {service.industries.map (industry, index) => (
                   <div key={index} className="flex items - center gap - 2 text - sm">;
                     <span className="text - purple - 400"></span>;
                     <span>{industry}</span>;
-                  </div>))}
+                  </div>)}
               </div>;
             </div>;
             {/* CTA */}
@@ -657,7 +657,7 @@ function ITSolutionsPage() {
                 Learn More;
               </a>;
             </div>;
-          </div>))}
+          </div>)}
       </div>;
       {/* IT Capabilities Overview */}
       <div className="space - y-6">;
@@ -717,4 +717,3 @@ function ITSolutionsPage() {
         </a>;
       </div>;
     </div>);
-}

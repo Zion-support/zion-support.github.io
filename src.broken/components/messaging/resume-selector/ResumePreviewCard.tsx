@@ -6,5 +6,3 @@ export function ResumePreviewCard() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

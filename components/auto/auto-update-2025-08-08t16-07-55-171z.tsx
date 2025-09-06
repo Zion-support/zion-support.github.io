@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React from 'react';
 export default function AutoUpdatePage1() {
 export default function AutoUpdatePage1() {
@@ -38,7 +38,7 @@ export default function AutoUpdatePage1() {
       <p className="mt-2 text-gray-600 dark: text-gray-300">Generated content.</p>;
     </div>;
   );
-}
+
 import React from 'react';
 export default /**
  * AutoUpdatePage1 - Function description
@@ -59,4 +59,3 @@ function AutoUpdatePage1() {
       <h1 className="text - 2xl font - semibold">Auto Update</h1>;
       <p className="mt - 2 text - gray - 600 dark: text - gray - 300">Generated content.</p>;
     </div>);
-}

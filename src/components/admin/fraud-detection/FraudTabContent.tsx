@@ -11,7 +11,7 @@ interface FraudTabContentProps {
   tab_value: string;
 export const FraudTabContent: React.FC < FraudTabContentProps> = ({
   tab_value,
-}) => {
+) => {
   switch (tab_value) {    case 'pending':;
       return (
 
@@ -46,7 +46,7 @@ export const FraudTabContent: React.FC < FraudTabContentProps> = ({
     default:
       return null
   }
-};
+;
         <div className='bg - green - 50 dark:bg - green - 950 / 20 p - 8 rounded - lg text - center'>;
           <CheckCircle className='mx - auto h - 12 w - 12 text - green - 500 mb - 4' />;
           <h3 className='text - xl font - medium mb - 4'>Actioned Flags</h3>;
@@ -57,4 +57,3 @@ export const FraudTabContent: React.FC < FraudTabContentProps> = ({
     default:;
       return null;
   }
-}

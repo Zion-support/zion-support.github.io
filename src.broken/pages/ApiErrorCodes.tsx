@@ -6,5 +6,3 @@ export function ApiErrorCodes() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

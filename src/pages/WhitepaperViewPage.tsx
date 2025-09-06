@@ -6,14 +6,14 @@ import { Button  } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react'
 import Link from 'next/link', // For a back button, changed from react-router-dom
 import {logErrorToProduction} from '@/utils/productionLogger';
-// Placeholder for user context/role checking
-// In a real app, this would come from an auth context
+/ Placeholder for user context/role checking
+/ In a real app, this would come from an auth context
 
 const useAuth = () => {
     // const { user } = useUserContext(), // Example from a real app
-    // return { isAdmin: user?.role === 'admin', isAuthenticated: !!user }
+    // return { isAdmin: user?.role = = 'admin', isAuthenticated: !!user }
     return { isAdmin: false, isAuthenticated: false }, // Default to non-admin, not authenticated for this example
-}
+
 interface SharedWhitepaper {
   whitepaper_data: {
     tokenName: string
@@ -24,16 +24,16 @@ interface SharedWhitepaper {
   }
   created_at: string
   is_public: boolean
-}
+
 const WhitepaperViewPage: React.FC = () => {
   const router = useRouter()
   const { id: rawId } = router.query
-  const id = typeof rawId === 'string' ? rawId : undefined
+  const id = typeof rawId = = 'string' ? rawId : undefined
   const [sharedData, setSharedData] = useState<SharedWhitepaper | null>(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
   const { isAdmin } = useAuth(), // Get admin status
-  useEffect((,) => {
+  useEffect(,) => {
     const fetchWhitepaper = async () => {
       if (!id) {
         setError("No whitepaper ID provided.")
@@ -44,9 +44,9 @@ const WhitepaperViewPage: React.FC = () => {
       setError(null)
       try {
         const { data: responseData, error: funcError } = await supabase.functions.invoke('get-shared-whitepaper', {
-          body: { id }})
+          body: { id })
         if (funcError) throw new Error(`Supabase function error: ${funcError.message}`)
-        if (responseData && (responseData as any).error) throw new Error((responseData as any).error)
+        if (responseData && (responseData as any).error) throw new Error(responseData as any).error)
         if (!responseData |!(responseData as any).whitepaper_data) {
           throw new Error('Shared whitepaper not found or data is invalid.')
         }
@@ -57,7 +57,6 @@ const WhitepaperViewPage: React.FC = () => {
       } finally {
         set_loading (false);
       }
-    }
     fetchWhitepaper()
   }, [id])
   if (loading) {
@@ -70,23 +69,22 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
 
 export default WhitepaperViewPage;import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router', // Changed from useParams;
@@ -96,13 +94,13 @@ import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react';
 import Link from 'next/link', // For a back button, changed from react-router-dom;
 import {logErrorToProduction} from '@/utils/productionLogger';
-// Placeholder for user context/role checking;
-// In a real app, this would come from an auth context;
+/ Placeholder for user context/role checking;
+/ In a real app, this would come from an auth context;
 const useAuth = () => {;
     // const { user } = useUserContext(), // Example from a real app;
-    // return { isAdmin: user?.role === 'admin', isAuthenticated: !!user },;
+    // return { isAdmin: user?.role = = 'admin', isAuthenticated: !!user },;
     return { isAdmin: false, isAuthenticated: false }, // Default to non-admin, not authenticated for this example;
-},;
+,;
 
 interface SharedWhitepaper {;
   whitepaper_data: {;
@@ -114,18 +112,17 @@ interface SharedWhitepaper {;
   },;
   created_at: string,;
   is_public: boolean;
-}
 
 const WhitepaperViewPage: React.FC = () => {;
   const router = useRouter(),;
   const { id: rawId } = router && router.query,;
-  const id = typeof rawId === 'string' ? rawId : undefined,;
+  const id = typeof rawId = = 'string' ? rawId : undefined,;
   const [sharedData, setSharedData] = useState<SharedWhitepaper | null>(null),;
   const [loading, setLoading] = useState(true),;
   const [error, setError] = useState<string | null>(null),;
   const { isAdmin } = useAuth(), // Get admin status;
 
-  useEffect((,) => {;
+  useEffect(,) => {;
     const fetchWhitepaper = async () => {;
       if (!id) {;
         setError("No whitepaper ID provided."),;
@@ -136,10 +133,10 @@ const WhitepaperViewPage: React.FC = () => {;
       setError(null),;
       try {;
         const { data: responseData, error: funcError } = await supabase && supabase.functions.invoke('get-shared-whitepaper', {;
-          body: { id }}),;
+          body: { id }),;
 
         if (funcError) throw new Error(`Supabase function error: ${funcError && funcError.message}`),;
-        if (responseData && (responseData as any).error) throw new Error((responseData as any).error),;
+        if (responseData && (responseData as any).error) throw new Error(responseData as any).error),;
         if (!responseData || !(responseData as any).whitepaper_data) {;
           throw new Error('Shared whitepaper not found or data is invalid.');
         }
@@ -151,8 +148,7 @@ const WhitepaperViewPage: React.FC = () => {;
         setError(e && e.message || 'An unexpected error occurred.');
       } finally {;
         setLoading(false);
-      }
-    },;
+      },;
     fetchWhitepaper();
   }, [id]),;
 
@@ -215,9 +211,8 @@ const WhitepaperViewPage: React.FC = () => {;
       />
     </div>
   )
-}
-export default WhitepaperViewPage;
 
+export default WhitepaperViewPage;
 
     },
     fetch_whitepaper ();
@@ -225,13 +220,13 @@ export default WhitepaperViewPage;
   // Check condition
 if ( {) {
   $2
-}
+
     return <div className="flex justify - center items - center h - screen"><p > Loading whitepaper...</p></div>;
   }
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <div className="flex flex - col justify - center items - center h - screen text - red - 600">;
         <p > Error: {error}</p>;
@@ -243,7 +238,7 @@ if ( {) {
   // Check condition
 if ( { // Check shared_data which includes the is_public flag) {
   $2
-}
+
     return (
         <div className="flex flex - col justify - center items - center h - screen">;
             <p > Whitepaper not found.</p> {/* This can be a generic message */}
@@ -256,7 +251,7 @@ if ( { // Check shared_data which includes the is_public flag) {
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <div className="flex flex - col justify - center items - center h - screen">;
         <h2 className="text - 2xl font - semibold mb - 4">Access Denied</h2>;
@@ -287,6 +282,5 @@ if ( {) {
         token_supply = {whitepaper.token_supply, }
       />;
     </div>);
-},
+,
 export default WhitepaperViewPage,
-;

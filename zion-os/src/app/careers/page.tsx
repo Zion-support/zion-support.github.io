@@ -67,7 +67,7 @@ export default function CareersPage() {const openPositions = [;
       <section className="py - 16">;
         <h2 className="text - 3xl font - bold text - center mb - 12">Open Positions</h2>;
         <div className="space - y-6">;
-          {open_positions.map ((position, index) => (
+          {open_positions.map (position, index) => (
             <div key={index} className="p - 6 rounded - lg border border - white / 10 hover:border - white / 20 transition - all duration - 200">;
               <div className="flex flex - col lg:flex - row lg:items - center lg:justify - between gap - 4 mb - 4">;
                 <div>;
@@ -88,23 +88,23 @@ export default function CareersPage() {const openPositions = [;
               <div>;
                 <h4 className="font - semibold mb - 2">Requirements:</h4>;
                 <ul className="list - disc list - inside space - y-1 text - sm opacity - 70">;
-                  {position.requirements.map ((req, req_index) => (
-                    <li key={req_index}>{req}</li>))}
+                  {position.requirements.map (req, req_index) => (
+                    <li key={req_index}>{req}</li>)}
                 </ul>;
               </div>;
-            </div>))}
+            </div>)}
         </div>;
       </section>;
       {/* Benefits */}
       <section className="py - 16">;
         <h2 className="text - 3xl font - bold text - center mb - 12">Why Work With Us</h2>;
         <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
-          {benefits.map ((benefit, index) => (
+          {benefits.map (benefit, index) => (
             <div key={index} className="text - center p - 6">;
               <div className="text - 4xl mb - 4">{benefit.icon}</div>;
               <h3 className="text - xl font - semibold mb - 3">{benefit.title}</h3>;
               <p className="opacity - 80 text - sm">{benefit.description}</p>;
-            </div>))}
+            </div>)}
         </div>;
       </section>;
       {/* Company Culture */}
@@ -157,4 +157,3 @@ export default function CareersPage() {const openPositions = [;
         </div>;
       </section>;
     </div>);
-}

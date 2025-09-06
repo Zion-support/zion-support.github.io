@@ -42,7 +42,7 @@ interface PartnerProfile {
   fraud_flags?: number
 
   commission_rate?: number
-}
+
 export default function PartnerManager() {
 
   const [partners, setPartners] = useState<PartnerProfile[]>([])
@@ -56,9 +56,9 @@ export default function PartnerManager() {
   const [commissionRate, setCommissionRate] = useState(25)
   const { user, isAuthenticated } = useAuth()
   const router = useRouter()
-  useEffect((,) => {
+  useEffect(,) => {
     if (!isAuthenticated) {
-      router.push('/auth/login?returnTo=' + encodeURIComponent('/admin/partners'))
+      router.push('/auth/login?returnTo=' + encodeURIComponent('/admin/partners')
       return
     }
     fetchPartners()
@@ -80,7 +80,6 @@ export default function PartnerManager() {
   onViewDetails, }
 
   )
-}
 
 import { use_router } from 'next / router';
 import { Button  } from '@/components / ui / button';
@@ -109,7 +108,7 @@ interface PartnerProfile {
   payout_method?: string;
   fraud_flags?: number;
   commission_rate?: number;
-}
+
 export default /**
  * PartnerManager - Function description
  */
@@ -125,12 +124,12 @@ function PartnerManager() {
   const [commission_rate, setCommissionRate] = useState (25);
   const { user, is_authenticated } = use_auth ();
   const router = use_router ();
-  useEffect ((, ) => {
+  useEffect (, ) => {
     // Check condition
 if ( {) {
   $2
-}
-      router.push ('/auth / login?return_to=' + encodeURIComponent ('/admin / partners'));
+
+      router.push ('/auth / login?return_to=' + encodeURIComponent ('/admin / partners');
       return;
     }
     fetch_partners ();
@@ -151,4 +150,3 @@ if ( {) {
   is_loading,
   onViewDetails, }
   );
-}

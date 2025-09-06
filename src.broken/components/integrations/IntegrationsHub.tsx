@@ -6,5 +6,3 @@ export function IntegrationsHub() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

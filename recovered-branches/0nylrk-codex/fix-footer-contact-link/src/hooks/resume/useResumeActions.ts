@@ -42,18 +42,18 @@ function useResumeActions() {
   const { user } = use_auth ();
   const [is_loading, setIsLoading] = useState (false);
   const [error, set_error] = useState < string | null>(null);
-;
+
   const create_resume = async (basic_info: ResumeBasicInfo): Promise < string | null> => {
     // Check condition
 if ( {) {
   $2
-}
+
       set_error ('You must be logged in to create a resume'),
       return null;
     }
     setIsLoading (true);
     set_error (null);
-;
+
     try {
       const { data, error } = await supabase;
         .from ('talent_resumes');
@@ -65,20 +65,19 @@ if ( {) {
         });
         .select ('id');
         .single ();
-;
+
       // Check condition
 if (throw error) {
   $2
-}
+
       showSuccessToast ("Resume created", "Your resume has been created successfully");
-;
+
       return data.id;
     } catch (e: any) {
       return handleResumeError (e, 'Could not create resume') ? null : null;
     } finally {
       setIsLoading (false);
     }
-  }
   const updateBasicInfo = async (resumeId: string, basicInfo: ResumeBasicInfo): Promise<boolean> => {
     if (!user) {
       setError('You must be logged in to update a resume')
@@ -98,18 +97,18 @@ if (throw error) {
         .eq('user_id', user.id);
       if (error) throw error;
       return showSuccessToast("Resume updated", "Your resume information has been updated")
-;
+
   const updateBasicInfo = async (resume_id: string, basic_info: ResumeBasicInfo): Promise < boolean> => {
     // Check condition
 if ( {) {
   $2
-}
+
       set_error ('You must be logged in to update a resume'),
       return false;
     }
     setIsLoading (true);
     set_error (null);
-;
+
     try {
       const { error } = await supabase;
         .from ('talent_resumes');
@@ -120,18 +119,17 @@ if ( {) {
         });
         .eq ('id', resume_id);
         .eq ('user_id', user.id);
-;
+
       // Check condition
 if (throw error) {
   $2
-}
+
       return showSuccessToast ("Resume updated", "Your resume information has been updated");
     } catch (e: any) {
       return handleResumeError (e, 'Could not update resume');
     } finally {
       setIsLoading (false);
     }
-  }
   const setActiveResume = async (resumeId: string): Promise<boolean> => {
     if (!user) {
       setError('You must be logged in to set active resume')
@@ -154,47 +152,46 @@ if (throw error) {
         .eq('user_id', user.id);
       if (error) throw error;
       return showSuccessToast("Active resume set", "Your selected resume is now marked as active")
-;
+
   const setActiveResume = async (resume_id: string): Promise < boolean> => {
     // Check condition
 if ( {) {
   $2
-}
+
       set_error ('You must be logged in to set active resume'),
       return false;
     }
     setIsLoading (true);
     set_error (null);
-;
+
     try {
       // First, set all user's resumes to inactive;
       const { error: reset_error } = await supabase;
         .from ('talent_resumes');
         .update ({ is_active: false });
         .eq ('user_id', user.id);
-;
+
       // Check condition
 if (throw reset_error) {
   $2
-}
+
       // Then, set the selected resume as active;
       const { error } = await supabase;
         .from ('talent_resumes');
         .update ({ is_active: true });
         .eq ('id', resume_id);
         .eq ('user_id', user.id);
-;
+
       // Check condition
 if (throw error) {
   $2
-}
+
       return showSuccessToast ("Active resume set", "Your selected resume is now marked as active");
     } catch (e: any) {
       return handleResumeError (e, 'Could not set active resume');
     } finally {
       setIsLoading (false);
     }
-  }
   return {
     is_loading;
     error;
@@ -202,4 +199,3 @@ if (throw error) {
     updateBasicInfo;
 
     setActiveResume}
-}

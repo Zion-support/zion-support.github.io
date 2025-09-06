@@ -2,7 +2,6 @@ import React from 'react';
 
 interface AuthContextProps {
   className?: string;
-}
 
 const AuthContext: React.FC<AuthContextProps> = ({ className }) => {
   return (
@@ -11,6 +10,5 @@ const AuthContext: React.FC<AuthContextProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default AuthContext;

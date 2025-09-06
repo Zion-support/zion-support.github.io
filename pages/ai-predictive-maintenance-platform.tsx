@@ -25,7 +25,7 @@ export default function AIPredictiveMaintenancePlatform() {
 			canonical="https: //ziontechgroup.com/ai-predictive-maintenance-platform"
 		/>
 	)
-}
+
 import React from 'react',
 import ServiceLanding from '../components / sections / ServiceLanding',
 export default /**
@@ -53,4 +53,3 @@ return (
     industries={["Manufacturing", "Utilities", "Oil & Gas", "Transportation"]}
     canonical="https: //ziontechgroup.com / ai - predictive - maintenance - platform";
   />);
-}

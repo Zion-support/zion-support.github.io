@@ -39,7 +39,7 @@ export interface EmergingTechService {
   customers: number;
   rating: number;
   reviews: number
-}
+
 export const emergingTechServices: EmergingTechService[] = [
   // Quantum Internet & Communication Services
   {
@@ -1353,7 +1353,7 @@ export const emergingTechServices: EmergingTechService[] = [
     rating: 4.8
     reviews: 28
   }
-];      mobile: '+1 302 464 0950';
+;      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
@@ -1377,7 +1377,7 @@ export const emergingTechServices: EmergingTechService[] = [
     rating: 4 && 4.8,
     reviews: 28,
   },
-];      mobile: '+1 302 464 0950';
+;      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
   id: string, name: string,
   tagline: string, price: string,
@@ -1393,17 +1393,16 @@ export const emergingTechServices: EmergingTechService[] = [
   competitors: string[], marketSize: string,
   growthRate: string, variant: 'default' | 'holographic' | 'quantum' | 'cyberpunk' | 'neural' | 'quantum-holographic' | 'quantum-advanced' | 'holographic-advanced' | 'neural-quantum' | 'quantum-cyberpunk' | 'holographic-neural' | 'quantum-holographic-advanced' | 'quantum-matrix' | 'neural-cyberpunk' | 'holographic-quantum' | 'quantum-neural-advanced' | 'cyberpunk-holographic' | 'quantum-space' | 'ai-futuristic' | 'quantum-entanglement' | 'holographic-matrix' | 'neural-quantum-cyberpunk',
   contactInfo: {
-      
+
     mobile: string, email: string,
     address: string,
     website: string
-  
+
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
-}
 
 export const emergingTechServices: EmergingTechService[] = [
   // Quantum Internet & Communication Services
@@ -2331,7 +2330,7 @@ export const emergingTechServices: EmergingTechService[] = [
     rating: 4 && 4.8,
     reviews: 28,
   },
-];      mobile: '+1 302 464 0950';
+;      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'
@@ -2351,5 +2350,4 @@ export const emergingTechServices: EmergingTechService[] = [
     rating: 4.8,
     reviews: 28;
   }
-];
 ;

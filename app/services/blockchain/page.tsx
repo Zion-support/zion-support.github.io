@@ -1,7 +1,7 @@
 export const metadata = { 
   title: 'Blockchain Services | Zion Tech Group',
   description: 'Comprehensive blockchain solutions including smart contracts, DeFi protocols, NFT platforms, and Web3 applications. Build the future of decentralized technology.'
-}; 
+; 
 
 export default function BlockchainPage() { 
   return ( 
@@ -276,30 +276,28 @@ export default function BlockchainPage() {
       </div>
     </div>
   );
-}
 
 function BlockchainServiceCategory({ title, icon, description, services }: {
   title: string;
   icon: string;
   description: string;
   services: string[];
-}) {
+) {
   return (
     <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-200">
       <div className="text-3xl mb-4">{icon}</div>
       <h3 className="text-xl font-bold text-gray-900 mb-2">{title}</h3>
       <p className="text-gray-600 mb-4">{description}</p>
       <ul className="space-y-2">
-        {services.map((service, index) => (
+        {services.map(service, index) => (
           <li key={index} className="flex items-center text-gray-600">
             <span className="text-orange-500 mr-2"></span>
             {service}
           </li>
-        ))}
+        )}
       </ul>
     </div>
   );
-}
 
 function BlockchainSolution({ title, description, features, price, timeline, useCase }: {
   title: string;
@@ -308,7 +306,7 @@ function BlockchainSolution({ title, description, features, price, timeline, use
   price: string;
   timeline: string;
   useCase: string;
-}) {
+) {
   return (
     <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
       <h3 className="text-xl font-bold text-gray-900 mb-2">{title}</h3>
@@ -319,12 +317,12 @@ function BlockchainSolution({ title, description, features, price, timeline, use
         </span>
       </div>
       <ul className="space-y-1 mb-4">
-        {features.map((feature, index) => (
+        {features.map(feature, index) => (
           <li key={index} className="text-sm text-gray-600 flex items-center">
             <span className="text-green-500 mr-2"></span>
             {feature}
           </li>
-        ))}
+        )}
       </ul>
       <div className="flex justify-between items-center pt-4 border-t border-gray-200">
         <div>
@@ -340,22 +338,20 @@ function BlockchainSolution({ title, description, features, price, timeline, use
       </div>
     </div>
   );
-}
 
 function BlockchainTechnology({ category, technologies }: { category: string; technologies: string[] }) {
   return (
     <div className="bg-white rounded-lg p-6 shadow-md border border-gray-200">
       <h3 className="font-bold text-gray-900 mb-4">{category}</h3>
       <div className="flex flex-wrap gap-2">
-        {technologies.map((tech, index) => (
+        {technologies.map(tech, index) => (
           <span key={index} className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">
             {tech}
           </span>
-        ))}
+        )}
       </div>
     </div>
   );
-}
 
 function BlockchainPricingPlan({ name, price, duration, features, popular }: {
   name: string;
@@ -363,7 +359,7 @@ function BlockchainPricingPlan({ name, price, duration, features, popular }: {
   duration: string;
   features: string[];
   popular: boolean;
-}) {
+) {
   return (
     <div className={`bg-white rounded-xl p-8 shadow-lg border-2 ${popular ? 'border-orange-500' : 'border-gray-200'} relative`}>
       {popular && (
@@ -375,12 +371,12 @@ function BlockchainPricingPlan({ name, price, duration, features, popular }: {
       <div className="text-3xl font-bold text-orange-600 mb-1">{price}</div>
       <div className="text-gray-500 mb-6">{duration}</div>
       <ul className="space-y-3">
-        {features.map((feature, index) => (
+        {features.map(feature, index) => (
           <li key={index} className="flex items-center text-gray-600">
             <span className="text-green-500 mr-3"></span>
             {feature}
           </li>
-        ))}
+        )}
       </ul>
       <a
         href="tel:+13024640950"
@@ -394,7 +390,6 @@ function BlockchainPricingPlan({ name, price, duration, features, popular }: {
       </a>
     </div>
   );
-}
 
 function SecurityService({ title, description, price, timeline, features }: {
   title: string;
@@ -402,18 +397,18 @@ function SecurityService({ title, description, price, timeline, features }: {
   price: string;
   timeline: string;
   features: string[];
-}) {
+) {
   return (
     <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-200">
       <h3 className="text-xl font-bold text-gray-900 mb-2">{title}</h3>
       <p className="text-gray-600 mb-4">{description}</p>
       <ul className="space-y-1 mb-4">
-        {features.map((feature, index) => (
+        {features.map(feature, index) => (
           <li key={index} className="text-sm text-gray-600 flex items-center">
             <span className="text-green-500 mr-2"></span>
             {feature}
           </li>
-        ))}
+        )}
       </ul>
       <div className="flex justify-between items-center pt-4 border-t border-gray-200">
         <div>
@@ -429,4 +424,3 @@ function SecurityService({ title, description, price, timeline, features }: {
       </div>
     </div>
   );
-}

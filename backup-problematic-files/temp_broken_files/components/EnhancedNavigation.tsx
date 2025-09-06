@@ -3,14 +3,14 @@ import React, { useState, useEffect } from 'react';import Link from 'next/link';
 const EnhancedNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  useEffect(() => {
+  useEffect() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20)
     },
 const EnhancedNavigation: React.FC = () => {const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  useEffect_(() => {
+  useEffect_() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20)};
 
@@ -36,7 +36,7 @@ const EnhancedNavigation: React.FC = () => {const [isOpen, setIsOpen] = useState
   ],
 
   const toggleDropdown = (dropdown: string) => {
-    setActiveDropdown(activeDropdown === dropdown ? null : dropdown)
+    setActiveDropdown(activeDropdown = = dropdown ? null : dropdown)
   },
 
   const closeAllDropdowns = () => {
@@ -58,7 +58,7 @@ const EnhancedNavigation: React.FC = () => {const [isOpen, setIsOpen] = useState
             </div>
             <span className="text-xl font-bold text-white">Zion Tech Group</span>
           </Link>
-          
+
           <div className="hidden md:flex items-center space-x-8">
             <Link href="/services" className="text-white hover:text-cyan-400 transition-colors">
               Services
@@ -93,17 +93,17 @@ onClick={() => toggleDropdown('services')}
               >
                 <span>Solutions</span>
                 <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                  activeDropdown === 'services' ? 'rotate-180' : ''
+                  activeDropdown = = 'services' ? 'rotate-180' : ''
                 }`} />
               </button>
-              
+
               <AnimatePresence>
-                {activeDropdown === 'services' && (
+                {activeDropdown = = 'services' && (
                   <motion.div,
-initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                    animate={{ opacity: 1, y: 0, scale: 1 }}
-                    exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                    transition={{ duration: 0.2 }}
+initial={ opacity: 0, y: 10, scale: 0.95 }
+                    animate={ opacity: 1, y: 0, scale: 1 }
+                    exit={ opacity: 0, y: 10, scale: 0.95 }
+                    transition={ duration: 0.2 }
                     className=&quot;absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-xl rounded-2xl border border-white/10 shadow-2xl overflow-hidden&quot;
                   >
                     <div className=&quot;p-4&quot;>
@@ -111,7 +111,7 @@ initial={{ opacity: 0, y: 10, scale: 0.95 }}
                         Our Solutions
                       </h3>
                       <div className=&quot;grid grid-cols-1 gap-2&quot;>
-                        {services.map((service) => (
+                        {services.map(service) => (
                           <Link,
 key={service.name}
                             href={service.href}
@@ -124,13 +124,13 @@ key={service.name}
                             <div className=&quot;text-sm text-white/60&quot;>{service.description}</div>
                           </div>
                         </a>
-                      ))}
+                      )}
                     </div>;
                   </div>;
                 </div>;
               )}
             </div>;
-;
+
             {/* Company Dropdown */}
             <div className=&quot;relative&quot;>
               <button,
@@ -139,18 +139,18 @@ onClick={() => toggleDropdown('company')}
               >
                 <span>About</span>
                 <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                  activeDropdown === 'company' ? 'rotate-180' : ''
+                  activeDropdown = = 'company' ? 'rotate-180' : ''
                 }`} />
               </button>
-              
-              {activeDropdown === 'company' && (
+
+              {activeDropdown = = 'company' && (
                 <div className=&quot;absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-xl rounded-2xl border border-white/10 shadow-2xl overflow-hidden&quot;>
                   <div className=&quot;p-4&quot;>
                     <h3 className=&quot;text-sm font-semibold text-white/60 mb-3 uppercase tracking-wider&quot;>
                       About Zion
                     </h3>
                     <div className=&quot;grid grid-cols-1 gap-2&quot;>
-                      {company.map((item) => (
+                      {company.map(item) => (
                         <Link,
 key={item.name}
                           href={item.href}
@@ -167,13 +167,13 @@ key={item.name}
                             <div className=&quot;text-sm text-white/60&quot;>{item.description}</div>
                           </div>
                         </a>
-                      ))}
+                      )}
                     </div>;
                   </div>;
                 </div>;
               )}
             </div>;
-;
+
             {/* Contact Button */}
             <Link,
 href=&quot;mailto:kleber@ziontechgroup.com&quot;
@@ -195,9 +195,9 @@ onClick={() => setIsOpen(!isOpen)}
         {/* Mobile Menu */}
         {isOpen && (
           <motion.div,
-initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
+initial={ opacity: 0, y: -20 }
+            animate={ opacity: 1, y: 0 }
+            exit={ opacity: 0, y: -20 }
             className=&quot;lg:hidden py-6 border-t border-white/10&quot;
           >
             <div className=&quot;space-y-4&quot;>
@@ -206,7 +206,7 @@ initial={{ opacity: 0, y: -20 }}
                   Services
                 </h3>
                 <div className=&quot;space-y-2&quot;>
-                  {services.map((service) => (
+                  {services.map(service) => (
                     <Link,
 key={service.name}
                       href={service.href}
@@ -216,16 +216,16 @@ key={service.name}
                       <service.icon className=&quot;w-5 h-5 text-white&quot; />
                       <span className=&quot;text-white&quot;>{service.name}</span>
                     </a>
-                  ))}
+                  )}
                 </div>
               </div>
-              
+
               <div>
                 <h3 className=&quot;text-sm font-semibold text-white/60 mb-3 uppercase tracking-wider&quot;>
                   Company
                 </h3>
                 <div className=&quot;space-y-2&quot;>
-                  {company.map((item) => (
+                  {company.map(item) => (
                     <Link,
 key={item.name}
                       href={item.href}
@@ -235,7 +235,7 @@ key={item.name}
                       <item.icon className=&quot;w-5 h-5 text-white&quot; />
                       <span className=&quot;text-white&quot;>{item.name}</span>
                     </a>
-                  ))}
+                  )}
                 </div>;
               </div>;
             </div>;
@@ -244,6 +244,6 @@ key={item.name}
       </div>
     </nav>
   )
-},
+,
 
 export default EnhancedNavigation;

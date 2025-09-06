@@ -6,7 +6,7 @@ import {
   DialogDescription
   DialogHeader
   DialogTitle
-} from "@/components/ui/dialog";
+ from "@/components/ui/dialog";
 import { ApplyForm } from "./ApplyForm";
 import { ApplyToJobModalProps } from "./types";
 export function ApplyToJobModal({
@@ -14,7 +14,7 @@ export function ApplyToJobModal({
   isOpen
   onClose
   onApplySuccess
-}: ApplyToJobModalProps) {
+: ApplyToJobModalProps) {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
@@ -39,4 +39,3 @@ export function ApplyToJobModal({
       </DialogContent>;
     </Dialog>;
   );
-}

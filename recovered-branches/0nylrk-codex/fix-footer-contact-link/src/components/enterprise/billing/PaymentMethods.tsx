@@ -7,7 +7,7 @@ import {
   CardFooter
   CardHeader
   CardTitle
-} from "@/components/ui/card";
+ from "@/components/ui/card";
 
 import { Button } from "@/components/ui/button";
 import { CreditCard, Plus, Trash } from "lucide-react";
@@ -41,7 +41,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from '@/components / ui / card';
+ from '@/components / ui / card';
 import { Button  } from '@/components / ui / button';
 import { CreditCard, Plus, Trash  } from './lucide-react';
 export /**
@@ -69,7 +69,7 @@ function PaymentMethods() {
       is_default: false,
     },
   ];
-;
+
   return (
     <Card>;
       <CardHeader>;
@@ -79,7 +79,7 @@ function PaymentMethods() {
         </CardDescription>;
       </CardHeader>;
       <CardContent className="space-y-4">;
-        {paymentMethods && paymentMethods.map((method) => (;
+        {paymentMethods && paymentMethods.map(method) => (;
           <div
             key={method && method.id}
             className={`flex items-center justify-between p-4 rounded-lg border ${
@@ -114,7 +114,7 @@ function PaymentMethods() {
               </Button>;
             </div>;
           </div>;
-        ))}
+        )}
       </CardContent>;
       <CardFooter>;
         <Button className="gap-1">;
@@ -124,4 +124,3 @@ function PaymentMethods() {
       </CardFooter>;
     </Card>;
   );
-}

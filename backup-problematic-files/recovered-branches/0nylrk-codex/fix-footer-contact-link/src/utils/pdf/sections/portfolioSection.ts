@@ -2,18 +2,16 @@
 import { jsPDF } from 'jspdf',;
 import { PortfolioProject } from '@/types/resume',;
 import { PdfThemeColors } from '../themeConfig',;
-;
+
 export function addPortfolioSection(;
   doc:jsPDF,;
   projects:PortfolioProject[],;
   colors:PdfThemeColors,;
   startY:number,;
   maxProjects:number = 2;
-):number {;
-  if (projects.length === 0) return startY,;
-  ;
+:number {;
+  if (projects.length = = 0) return startY,;
   let yPos = startY,;
-  ;
   // Check if we need to add a new page;
   if (yPos > 250) {;
     doc.addPage(),;
@@ -24,14 +22,11 @@ export function addPortfolioSection(;
   doc.setTextColor(colors.heading),;
   doc.text('Portfolio Projects', 20, yPos),;
   yPos += 8,;
-  ;
   doc.setDrawColor(colors.accent),;
   doc.line(20, yPos, 100, yPos),;
   yPos += 8,;
-  ;
   // Limit the number of projects shown based on maxProjects parameter;
   const displayProjects = projects.slice(0, maxProjects),;
-  ;
   for (const project of displayProjects) {;
     // Check if we need to add a new page;
     if (yPos > 260) {;
@@ -43,7 +38,6 @@ export function addPortfolioSection(;
     doc.setTextColor(colors.subheading),;
     doc.text(project.title, 20, yPos),;
     yPos += 6,;
-    ;
     if (project.technologies && project.technologies.length > 0) {;
       doc.setFontSize(10),;
       doc.setTextColor(colors.text),;
@@ -63,7 +57,6 @@ export function addPortfolioSection(;
       yPos += 5,;
       doc.setFontSize(9),;
       doc.setTextColor(colors.accent),;
-      ;
       if (project.github_url) {;
         doc.text(`GitHub:${project.github_url}`, 20, yPos),;
         yPos += 4,;
@@ -72,7 +65,7 @@ export function addPortfolioSection(;
       if (project.demo_url) {;
         doc.text(`Demo:${project.demo_url}`, 20, yPos),;
         yPos += 4,;
-      }    }
+      }
     ;
     yPos += 10, // Add space between projects;
   }
@@ -92,7 +85,7 @@ yPos += 8;
 doc.setDrawColor (colors.accent);
 doc.line (20, yPos, 100, yPos);
 yPos += 8;
-// Limit the number of projects shown based on maxProjects parameter for (const project of displayProjects) {
+/ Limit the number of projects shown based on maxProjects parameter for (const project of displayProjects) {
   // Check if we need to add a new page if (yPos > 260) {
   doc.setFontSize (14);
 doc.setTextColor (colors.subheading);
@@ -101,11 +94,9 @@ yPos += 6;
 if (project.github url) {
   doc.text (`GitHub: $ {
   project.github url 
-}`, 20, yPos);
+`, 20, yPos);
 yPos += 4 
-}
-}
-}yPos += 10, // Add space between projects 
-}// If there are more projects than we're displaying 
-}return yPos + 5 
-}
+
+yPos += 10, // Add space between projects 
+// If there are more projects than we're displaying 
+return yPos + 5 

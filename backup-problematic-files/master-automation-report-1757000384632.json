@@ -1,4 +1,4 @@
-{
+
   "timestamp": "2025-09-04T15:39:44.632Z",
   "sessionId": "1757000384632",
   "phases": [
@@ -252,4 +252,3 @@
     "successRate": 31,
     "totalDuration": 9310
   }
-}

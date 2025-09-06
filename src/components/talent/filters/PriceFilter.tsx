@@ -11,7 +11,7 @@ export function PriceFilter({
   expanded
   toggleSection
   isMobileFilterOpen
-}: PriceFilterProps) {
+: PriceFilterProps) {
   const handleChange = (values: number[]) => {
     setPriceRange([values[0] |0, values[1] |500])
   }
@@ -21,7 +21,7 @@ export function PriceFilter(): any ({;
   expanded,;
   toggleSection,;
   isMobileFilterOpen,;
-}: PriceFilterProps) {;
+: PriceFilterProps) {;
   const handleChange = (values: number[]) => {;
     setPriceRange([values[0] || 0, values[1] || 500]);
   };
@@ -120,14 +120,14 @@ export function PriceFilter(): any ({ priceRange, setPriceRange, expanded, toggl
       )}
     </div>
   )
-}
+
             className="mt-6"
           />
         </div>
       )}
     </div>
   );
-}
+
         <div className="mt - 6">;
           <div className="flex justify - between text - sm text - zion - slate - light mb - 2">;
             <span>${price_range[0]}/hr</span>;
@@ -145,4 +145,3 @@ export function PriceFilter(): any ({ priceRange, setPriceRange, expanded, toggl
           />;
         </div>)}
     </div>);
-}

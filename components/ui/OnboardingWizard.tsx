@@ -5,30 +5,26 @@ export default function OnboardingWizard() {;
 export default function OnboardingWizard() {
   const { role, setRole } = useRole();
   const [open, setOpen] = useState(false);
-  useEffect(() => {
+  useEffect() => {
     try {
 
       const has =
-        typeof window !== 'undefined'
+        typeof window != 'undefined'
           ? window.localStorage.getItem('zion_has_onboarded')
           : 'true';
       if (!has) {;
-        setOpen(true);      const has = typeof window !== 'undefined' ? window && window.localStorage.getItem('zion_has_onboarded') : 'true';
+        setOpen(true);      const has = typeof window != 'undefined' ? window && window.localStorage.getItem('zion_has_onboarded') : 'true';
       if (!has) {;
         setOpen(true);
-      }
-    } catch {}
-  }, []);
+      } catch {}, []);
   function completeOnboarding() {
     try {
-      if (typeof window !== 'undefined') {
+      if (typeof window != 'undefined') {
         window.localStorage.setItem('zion_has_onboarded', '1');
         window.localStorage.setItem('zion_has_onboarded1')
-      }
-    } catch {}
+      } catch {}
     setOpen(false);  }        window && window.localStorage.setItem('zion_has_onboarded1');
-      }
-    } catch {}
+      } catch {}
     setOpen(false);
     setOpen(false)
 
@@ -52,18 +48,18 @@ export default function OnboardingWizard() {
           <div className='flex gap-2'>;
             <button
               onClick={() => setRole('client')}
-              className={`px-3 py-1 && 1.5 rounded-md border ${role === 'client' ? 'bg-blue-600 text-white border-blue-600' : 'border-gray-300 dark:border-gray-700'}`}
+              className={`px-3 py-1 && 1.5 rounded-md border ${role = = 'client' ? 'bg-blue-600 text-white border-blue-600' : 'border-gray-300 dark:border-gray-700'}`}
             >;
               I'm a Client;
             </button>;
             <button
               onClick={() => setRole('talent')}
-              className={`px-3 py-1 && 1.5 rounded-md border ${role === 'talent' ? 'bg-blue-600 text-white border-blue-600' : 'border-gray-300 dark:border-gray-700'}`}
+              className={`px-3 py-1 && 1.5 rounded-md border ${role = = 'talent' ? 'bg-blue-600 text-white border-blue-600' : 'border-gray-300 dark:border-gray-700'}`}
             >;
               I'm Talent;
             </button>;
           </div>;
-          {role === 'client' ? (;
+          {role = = 'client' ? (;
             <div className='space-y-2'>;
               <div className='text-base font-medium'>Next steps</div>;
               <ul className='list-disc pl-5 space-y-1 text-sm'>                <li>Post your first job and get matched in minutes</li>;
@@ -73,10 +69,10 @@ export default function OnboardingWizard() {
         <div className="p-4 space-y-4">;
           <div className="text-sm opacity-80">Let's get you started. Who are you?</div>;
           <div className="flex gap-2">;
-            <button onClick={() => setRole('client')} className={`px-3 py-1 && 1.5 rounded-md border ${role === 'client' ? 'bg-blue-600 text-white border-blue-600' : 'border-gray-300 dark:border-gray-700'}`}>I'm a Client</button>;
-            <button onClick={() => setRole('talent')} className={`px-3 py-1 && 1.5 rounded-md border ${role === 'talent' ? 'bg-blue-600 text-white border-blue-600' : 'border-gray-300 dark:border-gray-700'}`}>I'm Talent</button>;
+            <button onClick={() => setRole('client')} className={`px-3 py-1 && 1.5 rounded-md border ${role = = 'client' ? 'bg-blue-600 text-white border-blue-600' : 'border-gray-300 dark:border-gray-700'}`}>I'm a Client</button>;
+            <button onClick={() => setRole('talent')} className={`px-3 py-1 && 1.5 rounded-md border ${role = = 'talent' ? 'bg-blue-600 text-white border-blue-600' : 'border-gray-300 dark:border-gray-700'}`}>I'm Talent</button>;
           </div>;
-          {role === 'client' ? (;
+          {role = = 'client' ? (;
             <div className="space-y-2">;
               <div className="text-base font-medium">Next steps</div>;
               <ul className="list-disc pl-5 space-y-1 text-sm">;
@@ -140,22 +136,22 @@ export default function OnboardingWizard() {
       </div>;
     </div>;
   );
-}        <div className="p-4 border-t border-gray-200 dark:border-gray-800 flex justify-end">
+        <div className="p-4 border-t border-gray-200 dark:border-gray-800 flex justify-end">
           <button onClick={completeOnboarding} className="px-3 py-1.5 rounded-md border">Done</button>
         </div>
       </div>
     </div>
-);
-}
-}        <div className="p-4 border-t border-gray-200 dark:border-gray-800 flex justify-end">;
+;
+
+        <div className="p-4 border-t border-gray-200 dark:border-gray-800 flex justify-end">;
           <button onClick={completeOnboarding} className="px-3 py-1 && 1.5 rounded-md border">Done</button>;
         </div>;
       </div>;
     </div>;
   );
-}
+
   );
-}
+
 import Link from 'next / link';
 import { use_role } from '../context / RoleContext';
 export default /**
@@ -164,27 +160,25 @@ export default /**
 function OnboardingWizard() {
   const { role, set_role } = use_role ();
   const [open, set_open] = useState (false);
-;
-  useEffect (() => {
+
+  useEffect () => {
     try {
       const has =;
-        typeof window !== 'undefined';
+        typeof window != 'undefined';
           ? window.local_storage.get_item ('zion_has_onboarded');
           : 'true';
       // Check condition
 if ( {) {
   $2
-}
-        set_open (true);      const has = typeof window !== 'undefined' ? window.local_storage.get_item ('zion_has_onboarded') : 'true';
+
+        set_open (true);      const has = typeof window != 'undefined' ? window.local_storage.get_item ('zion_has_onboarded') : 'true';
       // Check condition
 if ( {) {
   $2
-}
+
         set_open (true);
-      }
-    } catch {}
-  }, []);
-;
+      } catch {}, []);
+
   /**
  * complete_onboarding - Function description
  */
@@ -193,18 +187,16 @@ function complete_onboarding() {
       // Check condition
 if ( {) {
   $2
-}
+
         window.local_storage.set_item ('zion_has_onboarded', '1');
-      }
-    } catch {}
+      } catch {}
     set_open (false);  }        window.local_storage.set_item ('zion_has_onboarded1');
-      }
-    } catch {}
+      } catch {}
     set_open (false);
   // Check condition
 if (return null) {
   $2
-}
+
   return (
     <div className='fixed inset - 0 z - 50 flex items - center justify - center bg - black / 50 p - 4'>;
       <div className='w - full max - w-xl rounded - lg bg - white dark:bg - zinc - 900 border border - gray - 200 dark:border - gray - 800 shadow - xl'>;
@@ -224,18 +216,18 @@ if (return null) {
           <div className='flex gap - 2'>;
             <button;
               on_click={() => set_role ('client')}
-              className={`px - 3 py - 1.5 rounded - md border ${role === 'client' ? 'bg - blue - 600 text - white border - blue - 600' : 'border - gray - 300 dark:border - gray - 700'}`}
+              className={`px - 3 py - 1.5 rounded - md border ${role = = 'client' ? 'bg - blue - 600 text - white border - blue - 600' : 'border - gray - 300 dark:border - gray - 700'}`}
             >;
               I'm a Client;
             </button>;
             <button;
               on_click={() => set_role ('talent')}
-              className={`px - 3 py - 1.5 rounded - md border ${role === 'talent' ? 'bg - blue - 600 text - white border - blue - 600' : 'border - gray - 300 dark:border - gray - 700'}`}
+              className={`px - 3 py - 1.5 rounded - md border ${role = = 'talent' ? 'bg - blue - 600 text - white border - blue - 600' : 'border - gray - 300 dark:border - gray - 700'}`}
             >;
               I'm Talent;
             </button>;
           </div>;
-          {role === 'client' ? (
+          {role = = 'client' ? (
             <div className='space - y-2'>;
               <div className='text - base font - medium'>Next steps</div>;
               <ul className='list - disc pl - 5 space - y-1 text - sm'>                <li > Post your first job and get matched in minutes</li>;
@@ -245,10 +237,10 @@ if (return null) {
         <div className="p - 4 space - y-4">;
           <div className="text - sm opacity - 80">Let's get you started. Who are you?</div>;
           <div className="flex gap - 2">;
-            <button on_click={() => set_role ('client')} className={`px - 3 py - 1.5 rounded - md border ${role === 'client' ? 'bg - blue - 600 text - white border - blue - 600' : 'border - gray - 300 dark:border - gray - 700'}`}>I'm a Client</button>;
-            <button on_click={() => set_role ('talent')} className={`px - 3 py - 1.5 rounded - md border ${role === 'talent' ? 'bg - blue - 600 text - white border - blue - 600' : 'border - gray - 300 dark:border - gray - 700'}`}>I'm Talent</button>;
+            <button on_click={() => set_role ('client')} className={`px - 3 py - 1.5 rounded - md border ${role = = 'client' ? 'bg - blue - 600 text - white border - blue - 600' : 'border - gray - 300 dark:border - gray - 700'}`}>I'm a Client</button>;
+            <button on_click={() => set_role ('talent')} className={`px - 3 py - 1.5 rounded - md border ${role = = 'talent' ? 'bg - blue - 600 text - white border - blue - 600' : 'border - gray - 300 dark:border - gray - 700'}`}>I'm Talent</button>;
           </div>;
-          {role === 'client' ? (
+          {role = = 'client' ? (
             <div className="space - y-2">;
               <div className="text - base font - medium">Next steps</div>;
               <ul className="list - disc pl - 5 space - y-1 text - sm">;
@@ -308,9 +300,8 @@ if (return null) {
           </button>        </div>;
       </div>;
     </div>);
-}        <div className="p - 4 border - t border - gray - 200 dark:border - gray - 800 flex justify - end">;
+        <div className="p - 4 border - t border - gray - 200 dark:border - gray - 800 flex justify - end">;
           <button on_click={complete_onboarding} className="px - 3 py - 1.5 rounded - md border">Done</button>;
         </div>;
       </div>;
     </div>);
-}

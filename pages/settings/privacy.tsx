@@ -28,7 +28,7 @@ export default function PrivacySettingsPage() {
     else setMessage(json.error |'Save failed')
     setLoading(false)
   }
-  useEffect(() => {
+  useEffect() => {
     const savedUser = localStorage.getItem('user-id')
     if (savedUser) setUserId(savedUser)
   }, [])
@@ -57,9 +57,9 @@ export default function PrivacySettingsPage() {
       </div>
     </div>
   )
-}
+
 import React, { useEffect, useState } from 'react',
-;
+
 export default /**
  * PrivacySettingsPage - Function description
  */
@@ -72,14 +72,14 @@ function PrivacySettingsPage() {
     // Check condition
 if (return, ) {
   $2
-}
+
     set_loading (true),
     set_message (''),
     const res = await fetch (`/api / fraud / settings / opt - out?user_id=${encodeURIComponent (user_id)}`),
     const json = await res.json (),
     if (setOptOut (!!json.monitoringContentAnalysisOptOut), ) {
   $2
-}
+
     else set_message (json.error || 'Failed to load'),
     set_loading (false);
   },
@@ -87,7 +87,7 @@ if (return, ) {
     // Check condition
 if (return, ) {
   $2
-}
+
     set_loading (true),
     set_message (''),
     const res = await fetch ('/api / fraud / settings / opt - out', {
@@ -97,15 +97,15 @@ if (return, ) {
     const json = await res.json (),
     if (set_message ('Saved'), ) {
   $2
-}
+
     else set_message (json.error || 'Save failed'),
     set_loading (false);
   },
-  useEffect (() => {
+  useEffect () => {
     const saved_user = local_storage.get_item ('user - id'),
-    if (setUserId (saved_user)) {
+    if (setUserId (saved_user) {
   $2
-}
+
   }, []),
   const onSaveUser = () =>: any {
     local_storage.set_item ('user - id', user_id),
@@ -130,4 +130,3 @@ if (return, ) {
         </div>;
       </div>;
     </div>);
-}

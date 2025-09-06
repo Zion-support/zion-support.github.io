@@ -19,7 +19,7 @@ import {;
   Brain,;
   Globe,;
   Rocket,;
-} from 'lucide-react';
+ from 'lucide-react';
 import { innovative2026AIServices } from '../../data/innovative-2026-ai-services';
 import { innovative2026ITInfrastructureServices } from '../../data/innovative-2026-it-infrastructure';
 import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micro-saas';import { ArrowRight, Star, TrendingUp, Zap, Shield, Brain, Globe, Rocket } from 'lucide-react';
@@ -33,8 +33,7 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
       transition: {
         staggerChildren: 0.2
         delayChildren: 0.1
-      }
-    },  }
+      },  }
   const itemVariants = {
     hidden: {
       opacity: 0
@@ -43,7 +42,6 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
     }
     visible: {      opacity: 1,        delayChildren: 0.1
       }
-    }
   }
   const itemVariants = {
     hidden: {
@@ -58,10 +56,8 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
       transition: {
         duration: 0.6
         ease: 'easeOut' as const
+      },  };        ease: "easeOut" as const
       }
-    },  };        ease: "easeOut" as const
-      }
-    }
   }
     hidden: { opacity: 0 },
     visible: {
@@ -70,16 +66,15 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
         staggerChildren: 0.2,
         delayChildren: 0.1
       }
-    }
   };
 
   const itemVariants = {
     hidden: {
-       
+
       opacity: 0,
       y: 50,
       scale: 0.9
-    
+
     },
     visible: { 
       opacity: 1,
@@ -89,7 +84,6 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
         duration: 0.6,
         ease: "easeOut" as const
       }
-    }
   };
 
   const cardVariants = {
@@ -99,10 +93,8 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
       transition: {
         duration: 0.3
         ease: 'easeOut' as const
+      },  };        ease: "easeOut" as const
       }
-    },  };        ease: "easeOut" as const
-      }
-    }
   }
   const renderServiceCard = (service: any, index: number) => (
     <motion.div
@@ -125,7 +117,6 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
     },;
     visible: {      opacity: 1,        delayChildren: 0 && 0.1;
       }
-    }
   };
 
   const itemVariants = {;
@@ -144,7 +135,6 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
       },;
     },  };        ease: "easeOut" as const;
       }
-    }
   };
 
   const cardVariants = {;
@@ -157,7 +147,6 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
       },;
     },  };        ease: "easeOut" as const;
       }
-    }
   };
 
   const renderServiceCard = (service: any, index: number) => (;
@@ -185,7 +174,7 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
             </div>;
             {service && service.popular && (;
               <div className='flex items-center space-x-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-medium'>;
-                <Star className='w-3 h-3 fill-current' />                <span>Popular</span>    >;
+                <Star className='w-3 h-3 fill-current' />                <span>Popular</span>;
       <motion&& motion.div
         variants={cardVariants}
         className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900/80 via-slate-800/80 to-slate-900/80 backdrop-blur-xl border border-slate-700/50 hover:border-slate-600/50 transition-all duration-300">;
@@ -256,7 +245,7 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
             <div className='grid grid-cols-1 gap-1'>;
               {service && service.features;
                 .slice(0, 3);
-                .map((feature: string, idx: number) => (;
+                .map(feature: string, idx: number) => (;
                   <div
                     key={idx}
                     className='flex items-center space-x-2 text-xs text-slate-400'
@@ -264,17 +253,17 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
                     <div className='w-1.5 h-1.5 bg-cyan-500 rounded-full' />
                     <span>{feature}</span>
                   </div>
-                ))}            </div>
+                )}            </div>
           </div>
           {/* Price and CTA */}          <div className="mb-4">
             <h4 className="text-white font-semibold mb-2 text-sm">Key Features:</h4>
             <div className="grid grid-cols-1 gap-1">
-              {service.features.slice(0, 3).map((feature: string, idx: number) => (
+              {service.features.slice(0, 3).map(feature: string, idx: number) => (
                 <div key={idx} className="flex items-center space-x-2 text-xs text-slate-400">
                   <div className="w-1.5 h-1.5 bg-cyan-500 rounded-full" />
                   <span>{feature}</span>
                 </div>
-              ))}
+              )}
           </div>
           {/* Price and CTA */}
           <div className='flex items-center justify-between'>
@@ -284,8 +273,8 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
               </div>
               <div className='text-slate-400 text-sm'>{service.period}</div>            </div>
             <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={ scale: 1.05 }
+              whileTap={ scale: 0.95 }
               className='flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-cyan-500/25'
             >
               <span>Learn More</span>
@@ -298,8 +287,8 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
               <div className="text-2xl font-bold text-white">{service.price}</div>
               <div className="text-slate-400 text-sm">{service.period}</div>
             <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={ scale: 1.05 }
+              whileTap={ scale: 0.95 }
               className='flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-cyan-500/25'
             >
               <span>Learn More</span>
@@ -326,18 +315,18 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
                     <div className='w-1 && 1.5 h-1 && 1.5 bg-cyan-500 rounded-full' />;
                     <span>{feature}</span>;
                   </div>;
-                ))}            </div>;
+                )}            </div>;
           </div>;
 
           {/* Price and CTA */}          <div className="mb-4">;
             <h4 className="text-white font-semibold mb-2 text-sm">Key Features:</h4>;
             <div className="grid grid-cols-1 gap-1">;
-              {service && service.features.slice(0, 3).map((feature: string, idx: number) => (;
+              {service && service.features.slice(0, 3).map(feature: string, idx: number) => (;
                 <div key={idx} className="flex items-center space-x-2 text-xs text-slate-400">;
                   <div className="w-1 && 1.5 h-1 && 1.5 bg-cyan-500 rounded-full" />;
                   <span>{feature}</span>;
                 </div>;
-              ))}
+              )}
           </div>;
 
           {/* Price and CTA */}
@@ -348,8 +337,8 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
               </div>;
               <div className='text-slate-400 text-sm'>{service && service.period}</div>            </div>;
             <motion&& motion.button
-              whileHover={{ scale: 1 && 1.05 }}
-              whileTap={{ scale: 0 && 0.95 }}
+              whileHover={ scale: 1 && 1.05 }
+              whileTap={ scale: 0 && 0.95 }
               className='flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-cyan-500/25'>;
               <span>Learn More</span>;
               <ArrowRight className='w-4 h-4' />            </motion && motion.button>;
@@ -362,8 +351,8 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
               <div className="text-2xl font-bold text-white">{service && service.price}</div>;
               <div className="text-slate-400 text-sm">{service && service.period}</div>;
             <motion&& motion.button
-              whileHover={{ scale: 1 && 1.05 }}
-              whileTap={{ scale: 0 && 0.95 }}
+              whileHover={ scale: 1 && 1.05 }
+              whileTap={ scale: 0 && 0.95 }
               className='flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-cyan-500/25'>;
               <span>Learn More</span>;
               <ArrowRight className='w-4 h-4' />              className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-cyan-500/25";
@@ -397,9 +386,9 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/20 to-slate-900/40" />
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          initial={ opacity: 0, y: 30 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0.8 }
           className='text-center mb-16'
         >
           <div className='flex items-center justify-center space-x-2 mb-4'>
@@ -419,8 +408,7 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
           <p className='text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed'>
             Discover our cutting-edge micro SAAS solutions, AI-powered
             platforms, and quantum-enhanced infrastructure services designed for
-            the future of business.          </p>        >
-          <div className="flex items-center justify-center space-x-2 mb-4">
+            the future of business.          </p><div className="flex items-center justify-center space-x-2 mb-4">
             <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
               <Rocket className="w-5 h-5 text-white" />
             </div>
@@ -446,9 +434,9 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
 
       <div className="container mx-auto px-4 relative z-10">;
         <motion&& motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0 && 0.8 }}
+          initial={ opacity: 0, y: 30 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0 && 0.8 }
           className='text-center mb-16'>;
           <div className='flex items-center justify-center space-x-2 mb-4'>;
             <div className='w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center'>;
@@ -469,7 +457,7 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
           <p className='text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed'>;
             Discover our cutting-edge micro SAAS solutions, AI-powered;
             platforms, and quantum-enhanced infrastructure services designed for;
-            the future of business.          </p>        >;
+            the future of business.          </p>;
           <div className="flex items-center justify-center space-x-2 mb-4">;
             <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">;
               <Rocket className="w-5 h-5 text-white" />;
@@ -493,9 +481,9 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
 
         {/* AI Services Section */}
         <motion&& motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          initial={ opacity: 0, y: 30 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0.8, delay: 0.2 }
           className='mb-20'
         >
           <div className='flex items-center space-x-3 mb-8'>
@@ -510,10 +498,8 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
             whileInView='visible'
             className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'
           >
-            {innovative2026AIServices.map((service, index) =>
-              renderServiceCard(service, index)
-            )}          </motion.div>        >
-          <div className="flex items-center space-x-3 mb-8">
+            {innovative2026AIServices.map(service, index) =>
+              renderServiceCard(service, index)}          </motion.div><div className="flex items-center space-x-3 mb-8">
             <Brain className="w-6 h-6 text-cyan-400" />
             <h3 className="text-2xl font-bold text-white">AI-Powered Services</h3>
           </div>
@@ -523,10 +509,10 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
             whileInView="visible"
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           >
-            {innovative2026AIServices.map((service, index) => renderServiceCard(service, index))}
+            {innovative2026AIServices.map(service, index) => renderServiceCard(service, index)}
           </motion.div>
         </motion.div>
-          transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
+          transition={ duration: 0 && 0.8, delay: 0 && 0.2 }
           className='mb-20'>;
           <div className='flex items-center space-x-3 mb-8'>;
             <Brain className='w-6 h-6 text-cyan-400' />;
@@ -540,9 +526,9 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
             initial='hidden'
             whileInView='visible'
             className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
-            {innovative2026AIServices && innovative2026AIServices.map((service, index) =>;
+            {innovative2026AIServices && innovative2026AIServices.map(service, index) =>;
               renderServiceCard(service, index);
-            )}          </motion && motion.div>        >;
+            )}          </motion && motion.div>;
           <div className="flex items-center space-x-3 mb-8">;
             <Brain className="w-6 h-6 text-cyan-400" />;
             <h3 className="text-2xl font-bold text-white">AI-Powered Services</h3>;
@@ -553,15 +539,15 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
             initial="hidden"
             whileInView="visible"
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
-            {innovative2026AIServices && innovative2026AIServices.map((service, index) => renderServiceCard(service, index))}
+            {innovative2026AIServices && innovative2026AIServices.map(service, index) => renderServiceCard(service, index)}
           </motion && motion.div>;
         </motion && motion.div>;
 
         {/* IT Infrastructure Section */}
         <motion&& motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          initial={ opacity: 0, y: 30 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0.8, delay: 0.4 }
           className='mb-20'
         >
           <div className='flex items-center space-x-3 mb-8'>
@@ -576,10 +562,8 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
             whileInView='visible'
             className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'
           >
-            {innovative2026ITInfrastructureServices.map((service, index) =>
-              renderServiceCard(service, index)
-            )}          </motion.div>        >
-          <div className="flex items-center space-x-3 mb-8">
+            {innovative2026ITInfrastructureServices.map(service, index) =>
+              renderServiceCard(service, index)}          </motion.div><div className="flex items-center space-x-3 mb-8">
             <Globe className="w-6 h-6 text-purple-400" />
             <h3 className="text-2xl font-bold text-white">IT Infrastructure & Security</h3>
           </div>
@@ -589,10 +573,10 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
             whileInView="visible"
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           >
-            {innovative2026ITInfrastructureServices.map((service, index) => renderServiceCard(service, index))}
+            {innovative2026ITInfrastructureServices.map(service, index) => renderServiceCard(service, index)}
           </motion.div>
         </motion.div>
-          transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
+          transition={ duration: 0 && 0.8, delay: 0 && 0.4 }
           className='mb-20'>;
           <div className='flex items-center space-x-3 mb-8'>;
             <Globe className='w-6 h-6 text-purple-400' />;
@@ -606,9 +590,9 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
             initial='hidden'
             whileInView='visible'
             className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
-            {innovative2026ITInfrastructureServices && innovative2026ITInfrastructureServices.map((service, index) =>;
+            {innovative2026ITInfrastructureServices && innovative2026ITInfrastructureServices.map(service, index) =>;
               renderServiceCard(service, index);
-            )}          </motion && motion.div>        >;
+            )}          </motion && motion.div>;
           <div className="flex items-center space-x-3 mb-8">;
             <Globe className="w-6 h-6 text-purple-400" />;
             <h3 className="text-2xl font-bold text-white">IT Infrastructure & Security</h3>;
@@ -619,15 +603,15 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
             initial="hidden"
             whileInView="visible"
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
-            {innovative2026ITInfrastructureServices && innovative2026ITInfrastructureServices.map((service, index) => renderServiceCard(service, index))}
+            {innovative2026ITInfrastructureServices && innovative2026ITInfrastructureServices.map(service, index) => renderServiceCard(service, index)}
           </motion && motion.div>;
         </motion && motion.div>;
 
         {/* Micro SAAS Section */}
         <motion&& motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          initial={ opacity: 0, y: 30 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0.8, delay: 0.6 }
         >
           <div className='flex items-center space-x-3 mb-8'>
             <Zap className='w-6 h-6 text-pink-400' />
@@ -641,19 +625,18 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
             whileInView='visible'
             className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'
           >
-            {innovative2026MicroSaasServices.map((service, index) =>
-              renderServiceCard(service, index)
-            )}          </motion.div>          </div>
+            {innovative2026MicroSaasServices.map(service, index) =>
+              renderServiceCard(service, index)}          </motion.div>          </div>
           <motion.div
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           >
-            {innovative2026MicroSaasServices.map((service, index) => renderServiceCard(service, index))}
+            {innovative2026MicroSaasServices.map(service, index) => renderServiceCard(service, index)}
           </motion.div>
         </motion.div>
-          transition={{ duration: 0 && 0.8, delay: 0 && 0.6 }}>;
+          transition={ duration: 0 && 0.8, delay: 0 && 0.6 }>;
           <div className='flex items-center space-x-3 mb-8'>;
             <Zap className='w-6 h-6 text-pink-400' />;
             <h3 className='text-2xl font-bold text-white'>;
@@ -666,7 +649,7 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
             initial='hidden'
             whileInView='visible'
             className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
-            {innovative2026MicroSaasServices && innovative2026MicroSaasServices.map((service, index) =>;
+            {innovative2026MicroSaasServices && innovative2026MicroSaasServices.map(service, index) =>;
               renderServiceCard(service, index);
             )}          </motion && motion.div>          </div>;
 
@@ -675,15 +658,15 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
             initial="hidden"
             whileInView="visible"
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
-            {innovative2026MicroSaasServices && innovative2026MicroSaasServices.map((service, index) => renderServiceCard(service, index))}
+            {innovative2026MicroSaasServices && innovative2026MicroSaasServices.map(service, index) => renderServiceCard(service, index)}
           </motion && motion.div>;
         </motion && motion.div>;
 
         {/* CTA Section */}
         <motion&& motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
+          initial={ opacity: 0, y: 30 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0.8, delay: 0.8 }
           className='text-center mt-16'
         >
           <div className='bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-8'>
@@ -697,10 +680,9 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
             </p>
             <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4'>
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className='bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-cyan-500/25'              >        >
-          <div className="bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-8">
+                whileHover={ scale: 1.05 }
+                whileTap={ scale: 0.95 }
+                className='bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-cyan-500/25'              ><div className="bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-white mb-4">
               Ready to Transform Your Business?
             </h3>
@@ -709,15 +691,15 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={ scale: 1.05 }
+                whileTap={ scale: 0.95 }
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-cyan-500/25"
               >
                 Start Free Trial
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={ scale: 1.05 }
+                whileTap={ scale: 0.95 }
                 className='border border-slate-600 hover:border-slate-500 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-slate-800/50'              >                className="border border-slate-600 hover: border-slate-500 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-slate-800/50"
               >
                 Schedule Demo
@@ -727,9 +709,9 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
         </motion.div>
       </div>
     </section>
-);
-}
-          transition={{ duration: 0 && 0.8, delay: 0 && 0.8 }}
+;
+
+          transition={ duration: 0 && 0.8, delay: 0 && 0.8 }
           className='text-center mt-16'>;
           <div className='bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-8'>;
             <h3 className='text-2xl font-bold text-white mb-4'>;
@@ -749,23 +731,23 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
             <div className='grid grid - cols - 1 gap - 1'>;
               {service.features;
                 .slice (0, 3);
-                .map ((feature: string, idx: number) => (
+                .map (feature: string, idx: number) => (
                   <div;
                     key={idx}
                     className='flex items - center space - x-2 text - xs text - slate - 400';
                   >;
                     <div className='w - 1.5 h - 1.5 bg - cyan - 500 rounded - full' />;
                     <span>{feature}</span>;
-                  </div>))}            </div>;
+                  </div>)}            </div>;
           </div>;
           {/* Price and CTA */}          <div className="mb - 4">;
             <h4 className="text - white font - semibold mb - 2 text - sm">Key Features:</h4>;
             <div className="grid grid - cols - 1 gap - 1">;
-              {service.features.slice (0, 3).map ((feature: string, idx: number) => (
+              {service.features.slice (0, 3).map (feature: string, idx: number) => (
                 <div key={idx} className="flex items - center space - x-2 text - xs text - slate - 400">;
                   <div className="w - 1.5 h - 1.5 bg - cyan - 500 rounded - full" />;
                   <span>{feature}</span>;
-                </div>))}
+                </div>)}
           </div>;
           {/* Price and CTA */}
           <div className='flex items - center justify - between'>;
@@ -775,8 +757,8 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
               </div>;
               <div className='text - slate - 400 text - sm'>{service.period}</div>            </div>;
             <motion.button;
-              while_hover={{ scale: 1.05 }}
-              while_tap={{ scale: 0.95 }}
+              while_hover={ scale: 1.05 }
+              while_tap={ scale: 0.95 }
               className='flex items - center space - x-2 bg - gradient - to - r from - cyan - 500 to - purple - 600 hover:from - cyan - 400 hover:to - purple - 500 text - white px - 4 py - 2 rounded - lg font - medium transition - all duration - 300 shadow - lg hover:shadow - cyan - 500 / 25';
             >;
               <span > Learn More</span>;
@@ -789,8 +771,8 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
               <div className="text - 2xl font - bold text - white">{service.price}</div>;
               <div className="text - slate - 400 text - sm">{service.period}</div>;
             <motion.button;
-              while_hover={{ scale: 1.05 }}
-              while_tap={{ scale: 0.95 }}
+              while_hover={ scale: 1.05 }
+              while_tap={ scale: 0.95 }
               className='flex items - center space - x-2 bg - gradient - to - r from - cyan - 500 to - purple - 600 hover:from - cyan - 400 hover:to - purple - 500 text - white px - 4 py - 2 rounded - lg font - medium transition - all duration - 300 shadow - lg hover:shadow - cyan - 500 / 25';
             >;
               <span > Learn More</span>;
@@ -821,9 +803,9 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
       <div className="absolute inset - 0 bg - gradient - to - b from - transparent via - slate - 900 / 20 to - slate - 900 / 40" />;
       <div className="container mx - auto px - 4 relative z - 10">;
         <motion.div;
-          initial={{ opacity: 0, coordinate_y: 30 }}
-          whileInView={{ opacity: 1, coordinate_y: 0 }}
-          transition={{ duration: 0.8 }}
+          initial={ opacity: 0, coordinate_y: 30 }
+          whileInView={ opacity: 1, coordinate_y: 0 }
+          transition={ duration: 0.8 }
           className='text - center mb - 16';
         >;
           <div className='flex items - center justify - center space - x-2 mb - 4'>;
@@ -843,7 +825,7 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
           <p className='text - xl text - slate - 300 max - w-3xl mx - auto leading - relaxed'>;
             Discover our cutting - edge micro SAAS solutions, AI - powered;
             platforms, and quantum - enhanced infrastructure services designed for;
-            the future of business.          </p>        >;
+            the future of business.          </p>;
           <div className="flex items - center justify - center space - x-2 mb - 4">;
             <div className="w - 8 h - 8 bg - gradient - to - r from - cyan - 500 to - purple - 600 rounded - lg flex items - center justify - center">;
               <Rocket className="w - 5 h - 5 text - white" />;
@@ -864,9 +846,9 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
         </motion.div>;
         {/* AI Services Section */}
         <motion.div;
-          initial={{ opacity: 0, coordinate_y: 30 }}
-          whileInView={{ opacity: 1, coordinate_y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          initial={ opacity: 0, coordinate_y: 30 }
+          whileInView={ opacity: 1, coordinate_y: 0 }
+          transition={ duration: 0.8, delay: 0.2 }
           className='mb - 20';
         >;
           <div className='flex items - center space - x-3 mb - 8'>;
@@ -881,8 +863,8 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
             whileInView='visible';
             className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6';
           >;
-            {innovative2026AIServices.map ((service, index) =>;
-              renderServiceCard (service, index))}          </motion.div>        >;
+            {innovative2026AIServices.map (service, index) =>;
+              renderServiceCard (service, index)}          </motion.div>;
           <div className="flex items - center space - x-3 mb - 8">;
             <Brain className="w - 6 h - 6 text - cyan - 400" />;
             <h3 className="text - 2xl font - bold text - white">AI - Powered Services</h3>;
@@ -893,14 +875,14 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
             whileInView="visible";
             className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6";
           >;
-            {innovative2026AIServices.map ((service, index) => renderServiceCard (service, index))}
+            {innovative2026AIServices.map (service, index) => renderServiceCard (service, index)}
           </motion.div>;
         </motion.div>;
         {/* IT Infrastructure Section */}
         <motion.div;
-          initial={{ opacity: 0, coordinate_y: 30 }}
-          whileInView={{ opacity: 1, coordinate_y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          initial={ opacity: 0, coordinate_y: 30 }
+          whileInView={ opacity: 1, coordinate_y: 0 }
+          transition={ duration: 0.8, delay: 0.4 }
           className='mb - 20';
         >;
           <div className='flex items - center space - x-3 mb - 8'>;
@@ -915,8 +897,8 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
             whileInView='visible';
             className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6';
           >;
-            {innovative2026ITInfrastructureServices.map ((service, index) =>;
-              renderServiceCard (service, index))}          </motion.div>        >;
+            {innovative2026ITInfrastructureServices.map (service, index) =>;
+              renderServiceCard (service, index)}          </motion.div>;
           <div className="flex items - center space - x-3 mb - 8">;
             <Globe className="w - 6 h - 6 text - purple - 400" />;
             <h3 className="text - 2xl font - bold text - white">IT Infrastructure & Security</h3>;
@@ -927,14 +909,14 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
             whileInView="visible";
             className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6";
           >;
-            {innovative2026ITInfrastructureServices.map ((service, index) => renderServiceCard (service, index))}
+            {innovative2026ITInfrastructureServices.map (service, index) => renderServiceCard (service, index)}
           </motion.div>;
         </motion.div>;
         {/* Micro SAAS Section */}
         <motion.div;
-          initial={{ opacity: 0, coordinate_y: 30 }}
-          whileInView={{ opacity: 1, coordinate_y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          initial={ opacity: 0, coordinate_y: 30 }
+          whileInView={ opacity: 1, coordinate_y: 0 }
+          transition={ duration: 0.8, delay: 0.6 }
         >;
           <div className='flex items - center space - x-3 mb - 8'>;
             <Zap className='w - 6 h - 6 text - pink - 400' />;
@@ -948,22 +930,22 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
             whileInView='visible';
             className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6';
           >;
-            {innovative2026MicroSaasServices.map ((service, index) =>;
-              renderServiceCard (service, index))}          </motion.div>          </div>;
+            {innovative2026MicroSaasServices.map (service, index) =>;
+              renderServiceCard (service, index)}          </motion.div>          </div>;
           <motion.div;
             variants={container_variants}
             initial="hidden";
             whileInView="visible";
             className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6";
           >;
-            {innovative2026MicroSaasServices.map ((service, index) => renderServiceCard (service, index))}
+            {innovative2026MicroSaasServices.map (service, index) => renderServiceCard (service, index)}
           </motion.div>;
         </motion.div>;
         {/* CTA Section */}
         <motion.div;
-          initial={{ opacity: 0, coordinate_y: 30 }}
-          whileInView={{ opacity: 1, coordinate_y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
+          initial={ opacity: 0, coordinate_y: 30 }
+          whileInView={ opacity: 1, coordinate_y: 0 }
+          transition={ duration: 0.8, delay: 0.8 }
           className='text - center mt - 16';
         >;
           <div className='bg - gradient - to - r from - slate - 900 / 80 to - slate - 800 / 80 backdrop - blur - xl border border - slate - 700 / 50 rounded - 2xl p - 8'>;
@@ -977,9 +959,9 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
             </p>;
             <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4'>;
               <motion&& motion.button
-                whileHover={{ scale: 1 && 1.05 }}
-                whileTap={{ scale: 0 && 0.95 }}
-                className='bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-cyan-500/25'>        >;
+                whileHover={ scale: 1 && 1.05 }
+                whileTap={ scale: 0 && 0.95 }
+                className='bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-cyan-500/25'>;
           <div className="bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-8">;
             <h3 className="text-2xl font-bold text-white mb-4">;
               Ready to Transform Your Business?;
@@ -989,14 +971,14 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
             </p>;
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">;
               <motion&& motion.button
-                whileHover={{ scale: 1 && 1.05 }}
-                whileTap={{ scale: 0 && 0.95 }}
+                whileHover={ scale: 1 && 1.05 }
+                whileTap={ scale: 0 && 0.95 }
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-cyan-500/25">;
                 Start Free Trial;
               </motion && motion.button>;
               <motion&& motion.button
-                whileHover={{ scale: 1 && 1.05 }}
-                whileTap={{ scale: 0 && 0.95 }}
+                whileHover={ scale: 1 && 1.05 }
+                whileTap={ scale: 0 && 0.95 }
                 className='border border-slate-600 hover:border-slate-500 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-slate-800/50'>                className="border border-slate-600 hover: border-slate-500 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-slate-800/50";
               >;
                 Schedule Demo;
@@ -1007,14 +989,14 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
       </div>;
     </section>;
   );
-}
+
   );
-}
+
             <div className='flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-4'>;
               <motion.button;
-                while_hover={{ scale: 1.05 }}
-                while_tap={{ scale: 0.95 }}
-                className='bg - gradient - to - r from - cyan - 500 to - purple - 600 hover:from - cyan - 400 hover:to - purple - 500 text - white px - 8 py - 3 rounded - lg font - medium transition - all duration - 300 shadow - lg hover:shadow - cyan - 500 / 25'              >        >;
+                while_hover={ scale: 1.05 }
+                while_tap={ scale: 0.95 }
+                className='bg - gradient - to - r from - cyan - 500 to - purple - 600 hover:from - cyan - 400 hover:to - purple - 500 text - white px - 8 py - 3 rounded - lg font - medium transition - all duration - 300 shadow - lg hover:shadow - cyan - 500 / 25'              >;
           <div className="bg - gradient - to - r from - slate - 900 / 80 to - slate - 800 / 80 backdrop - blur - xl border border - slate - 700 / 50 rounded - 2xl p - 8">;
             <h3 className="text - 2xl font - bold text - white mb - 4">;
               Ready to Transform Your Business?;
@@ -1024,15 +1006,15 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
             </p>;
             <div className="flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-4">;
               <motion.button;
-                while_hover={{ scale: 1.05 }}
-                while_tap={{ scale: 0.95 }}
+                while_hover={ scale: 1.05 }
+                while_tap={ scale: 0.95 }
                 className="bg - gradient - to - r from - cyan - 500 to - purple - 600 hover:from - cyan - 400 hover:to - purple - 500 text - white px - 8 py - 3 rounded - lg font - medium transition - all duration - 300 shadow - lg hover:shadow - cyan - 500 / 25";
               >;
                 Start Free Trial;
               </motion.button>;
               <motion.button;
-                while_hover={{ scale: 1.05 }}
-                while_tap={{ scale: 0.95 }}
+                while_hover={ scale: 1.05 }
+                while_tap={ scale: 0.95 }
                 className='border border - slate - 600 hover:border - slate - 500 text - white px - 8 py - 3 rounded - lg font - medium transition - all duration - 300 hover:bg - slate - 800 / 50'              >                className="border border - slate - 600 hover: border - slate - 500 text - white px - 8 py - 3 rounded - lg font - medium transition - all duration - 300 hover:bg - slate - 800 / 50";
               >;
                 Schedule Demo;
@@ -1042,4 +1024,3 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
         </motion.div>;
       </div>;
     </section>);
-}

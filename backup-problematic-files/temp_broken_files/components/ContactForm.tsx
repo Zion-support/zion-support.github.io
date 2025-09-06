@@ -8,7 +8,6 @@ interface FormData {
   phone: string;
   service: string;
   message: string;
-}
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({    name: '',
@@ -27,7 +26,7 @@ const ContactForm: React.FC = () => {
     setFormData(prev => ({
       ...prev,
       [name]: value,
-    }));
+    });
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -37,7 +36,7 @@ const ContactForm: React.FC = () => {
 
     try {
       // Simulate form submission
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      await new Promise(resolve => setTimeout(resolve, 2000);
       setSubmitStatus('success');
       setFormData({        name: '',
         email: '',
@@ -50,8 +49,7 @@ const ContactForm: React.FC = () => {
       setSubmitStatus('error');
     } finally {
     }
-  }
-},
+,
 export default ContactForm,        <div>
           <label htmlFor=&quot;name&quot; className=&quot;block text-sm font-medium text-gray-700 mb-2&quot;>
             Name *
@@ -64,8 +62,7 @@ export default ContactForm,        <div>
             onChange={handleChange}            required
             className=&quot;w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500&quot;
       setIsSubmitting(false);
-    }
-  };
+    };
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
@@ -174,15 +171,14 @@ export default ContactForm,        <div>
           {isSubmitting ? 'Sending...' : 'Send Message'}
         </button>
 
-        {submitStatus === 'success' && (
+        {submitStatus = = 'success' && (
           <p className="text-green-600 text-sm">Message sent successfully!</p>
         )}
-        {submitStatus === 'error' && (
+        {submitStatus = = 'error' && (
           <p className="text-red-600 text-sm">Failed to send message. Please try again.</p>
         )}
       </div>
     </form>
   );
-};
 
 export default ContactForm;

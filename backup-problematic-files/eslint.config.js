@@ -73,8 +73,7 @@ export default [
         __filename: 'readonly',
         global: 'readonly',
         Buffer: 'readonly'
-      }
-    },
+      },
     plugins: {
       '@typescript-eslint': typescript,
       'react': react,
@@ -125,4 +124,4 @@ export default [
       },
     },
   },
-];
+;

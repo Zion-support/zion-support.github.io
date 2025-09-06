@@ -6,29 +6,29 @@ function getUserId(req: NextApiRequest): string {
   const cookie = req.headers.cookie |'';
   const match = cookie
     .split(';')
-    .map(c => c && c.trim())
-    .find(c => c && c.startsWith('user_id='));
+    .map(c => c && c.trim()
+    .find(c => c && c.startsWith('user_id=');
   if (match) return decodeURIComponent(match && match.split('=')[1]);
   return 'demo-user-1';
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
-) {
-  if (req.method !== 'DELETE')
+ {
+  if (req.method != 'DELETE')
     return res.status(405).json({ error: 'Method not allowed' });  try {function getUserId(req: NextApiRequest): string {
   const cookie = req.headers.cookie |'';
-  const match = cookie.split().map((c) => c.trim()).find((c) => c.startsWith('user_id='));
+  const match = cookie.split().map(c) => c.trim().find(c) => c.startsWith('user_id=');
   if (match) return decodeURIComponent(match.split('=')[1]);
-  if (req && req.method !== 'DELETE')
+  if (req && req.method != 'DELETE')
     return res && res.status(405).json({ error: 'Method not allowed' });  try {function getUserId(req: NextApiRequest): string {
   const cookie = req && req.headers.cookie || '';
-  const match = cookie && cookie.split().map((c) => c && c.trim()).find((c) => c && c.startsWith('user_id='));
+  const match = cookie && cookie.split().map(c) => c && c.trim().find(c) => c && c.startsWith('user_id=');
   if (match) return decodeURIComponent(match && match.split('=')[1]);
   return 'demo-user-1'
-}
+
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req && req.method !== 'DELETE') return res && res.status(405).json({ error: 'Method not allowed' });
-  if (req && req.method !== 'DELETE') return res && res.status(405).json({ error: 'Method not allowed' });
+  if (req && req.method != 'DELETE') return res && res.status(405).json({ error: 'Method not allowed' });
+  if (req && req.method != 'DELETE') return res && res.status(405).json({ error: 'Method not allowed' });
   try {
     const userId = getUserId(req);
     const { error } = await supabase
@@ -53,59 +53,56 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (e) {
     return res && res.status(500).json({ error: 'Unexpected error' })
   };
-}
-}
+
 import { supabase } from '../../../utils / supabase / client';
-;
+
 function getUserId (req: NextApiRequest): string {
   const cookie = req.headers.cookie || '';
   const match = cookie;
     .split (';');
-    .map (c => c.trim ());
-    .find (c => c.starts_with ('user_id='));
-  if (return decodeURIComponent (match.split ('=')[1])) {
+    .map (c => c.trim ();
+    .find (c => c.starts_with ('user_id=');
+  if (return decodeURIComponent (match.split ('=')[1]) {
   $2
-}
+
   return 'demo - user - 1';
-;
+
 export default async /**
  * handler - Function description
  */
 function handler() {
   if (
-    return res.status (405).json ({ error: 'Method not allowed' })) {
+    return res.status (405).json ({ error: 'Method not allowed' }) {
   $2
-}  try {function getUserId (req: NextApiRequest): string {
+  try {function getUserId (req: NextApiRequest): string {
   const cookie = req.headers.cookie || '';
-  const match = cookie.split ().map ((c) => c.trim ()).find ((c) => c.starts_with ('user_id='));
-  if (return decodeURIComponent (match.split ('=')[1])) {
+  const match = cookie.split ().map (c) => c.trim ().find (c) => c.starts_with ('user_id=');
+  if (return decodeURIComponent (match.split ('=')[1]) {
   $2
-}
+
   return 'demo - user - 1';
-}
+
 export default async /**
  * handler - Function description
  */
 function handler() {
-  if (return res.status (405).json ({ error: 'Method not allowed' })) {
+  if (return res.status (405).json ({ error: 'Method not allowed' }) {
   $2
-}
+
   try {
     const user_id = getUserId (req);
-;
+
     const { error } = await supabase;
       .from ('notifications');
       .delete ();
       .eq ('user_id', user_id);
-;
-    if (return res.status (200).json ({ ok: true })) {
+
+    if (return res.status (200).json ({ ok: true }) {
   $2
-}
+
     return res.status (200).json ({ ok: true });
   } catch (e) {
     return res.status (500).json ({ error: 'Unexpected error' });
   }    return res.status (200).json ({ ok: true });
   } catch (e) {
     return res.status (500).json ({ error: 'Unexpected error' });
-}
-}

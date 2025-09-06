@@ -37,8 +37,7 @@ export const nextGenAI2026Services: NextGenAi2026Service[] = [
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
-  }
-];      mobile: "+1 302 464 0950"
+;      mobile: "+1 302 464 0950"
       email: "kleber@ziontechgroup.com"
 
       mobile: '+1 302 464 0950',
@@ -46,13 +45,12 @@ export const nextGenAI2026Services: NextGenAi2026Service[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
   },
-];      mobile: "+1 302 464 0950",
+;      mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup && ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
-  }
-]
+
   id: string,
   name: string,
   tagline: string,
@@ -67,7 +65,6 @@ export const nextGenAI2026Services: NextGenAi2026Service[] = [
     email: string,
     address: string
   }
-}
 
 export const nextGenAI2026Services: NextGenAi2026Service[] = [
   {
@@ -91,6 +88,4 @@ export const nextGenAI2026Services: NextGenAi2026Service[] = [
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709";
     }
-  }
-],
-],
+,

@@ -2,28 +2,28 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts",;
 import Stripe from "https://esm.sh/stripe@14.21.0",;
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.45.0",;
-;
+
 const corsHeaders = {;
   "Access-Control-Allow-Origin":"*",;
   "Access-Control-Allow-Headers":"authorization, x-client-info, apikey, content-type"},;
-;
+
 serve(async (req) => {;
-  if (req.method === "OPTIONS") {;
+  if (req.method = = "OPTIONS") {;
     return new Response(null, { headers:corsHeaders }),;
   }
-;
+
   const supabaseClient = createClient(;
     Deno.env.get("SUPABASE_URL") ?? "",;
     Deno.env.get("SUPABASE_ANON_KEY") ?? "";
   ),;
-;
+
   // Create service client for writing to database;
   const supabaseAdmin = createClient(;
     Deno.env.get("SUPABASE_URL") ?? "",;
     Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "",;
-    { auth:{ persistSession:false } }
+    { auth:{ persistSession:false }
   ),;
-;
+
   try {;
     // Retrieve the request body;
     const requestData = await req.json(),;
@@ -37,38 +37,35 @@ serve(async (req) => {;
       successUrl,;
       cancelUrl;
     } = requestData,;
-    ;
     // Verify the amount is valid;
-    if (!amount || isNaN(Number(amount)) || Number(amount) <= 0) {;
+    if (!amount || isNaN(Number(amount) || Number(amount) <= 0) {;
       throw new Error("Invalid payment amount"),;
     }
-;
+
     // Authenticate the user;
     const authHeader = req.headers.get("Authorization")!,;
     const token = authHeader.replace("Bearer ", ""),;
-    const { data:{ user } } = await supabaseClient.auth.getUser(token),;
-    ;
+    const { data:{ user } = await supabaseClient.auth.getUser(token),;
     if (!user?.email) throw new Error("User not authenticated"),;
-;
+
     const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY") || "", {;
       apiVersion:"2023-10-16"}),;
-;
+
     // Check if customer exists;
     const customers = await stripe.customers.list({ email:user.email, limit:1 }),;
     let customerId,;
     if (customers.data.length > 0) {;
       customerId = customers.data[0].id,;
     }
-;
+
     // Determine product name and description based on the request;
-    const productName = productType === "service" ;
+    const productName = productType = = "service" ;
       ? "Service Payment" ;
       :"Premium Subscription",;
-    ;
     const productDescription = escrow ;
       ? "Payment held in escrow until service completion" ;
       :"Direct payment for services",;
-;
+
     // Create the session;
     const session = await stripe.checkout.sessions.create({;
       customer:customerId,;
@@ -82,10 +79,10 @@ serve(async (req) => {;
               description:productDescription;
             },;
             unit_amount:amount * 100, // Convert to cents;
-            ...(productType === "subscription" ? { recurring:{ interval:"month" } } {});
+            ...(productType = = "subscription" ? { recurring:{ interval:"month" } {});
           },;
           quantity:1}],;
-      mode:productType === "subscription" ? "subscription" :"payment",;
+      mode:productType = = "subscription" ? "subscription" :"payment",;
       success_url:successUrl || `${req.headers.get("origin")}/payment-success`,;
       cancel_url:cancelUrl || `${req.headers.get("origin")}/payment-canceled`,;
       metadata:{;
@@ -94,9 +91,8 @@ serve(async (req) => {;
         providerId:providerId,;
         escrow:escrow.toString(),;
         productType:productType;
-      }
-    }),;
-;
+      }),;
+
     // Record transaction in database;
     if (serviceId && providerId) {;
       await supabaseAdmin.from("transactions").insert({;
@@ -111,7 +107,7 @@ serve(async (req) => {;
         created_at:new Date().toISOString();
       }),;
     }
-;
+
     return new Response(JSON.stringify({ url:session.url }), {;
       headers:{ ...corsHeaders, "Content-Type":"application/json" },;
       status:200}),;
@@ -120,24 +116,24 @@ serve(async (req) => {;
     return new Response(JSON.stringify({ error:error.message }), {;
       headers:{ ...corsHeaders, "Content-Type":"application/json" },;
       status:500}),;  }
-}),;
- 
-}const supabaseClient = createClient (Deno.env.get ("SUPABASE URL") ?? "";
+),;
+
+const supabaseClient = createClient (Deno.env.get ("SUPABASE URL") ?? "";
 Deno.env.get ("SUPABASE ANON KEY") ?? "");
-//Check if customer exists const customers = await stripe.customers.list ({
+/Check if customer exists const customers = await stripe.customers.list ({
   email: user.email, limit: 1 
-});
+);
 let customerId;
 if (customers.data.length > 0) {
   customerId = customers.data[0].id 
-}//Determine product name and description based on the request ? "Service Payment": "Premium Subscription";
+//Determine product name and description based on the request ? "Service Payment": "Premium Subscription";
 const productDescription = escrow ? "Payment held in escrow until service completion": "Direct payment for services";
 customer: customerId, customer email: customerId ? undefined : user.email, line items: [ {
   price data: {
   currency: currency, product data: {
   name: productName, description: productDescription 
-};
+;
 unit amount: amount * 100, //Convert to cents status: 500 
-});
-}
-});
+);
+
+);

@@ -3,11 +3,11 @@ export interface TokenSet {
   colors: Record < string, string>;
   typography: Record < string, any>;
   spacing: Record < string, number>;
-}
+
 export interface UIKit {
   components: Record < string, any>;
   tokens: TokenSet;
-}
+
 export async function buildTokenSet(fileId: string): Promise<TokenSet> {
   // Placeholder implementation
   return {
@@ -22,7 +22,6 @@ export async function buildTokenSet(fileId: string): Promise<TokenSet> {
       heading1: { fontSize: 32, fontWeight: 'bold' }
       heading2: { fontSize: 24, fontWeight: 'bold' }
       body: { fontSize: 16, fontWeight: 'normal' }
-    }
     spacing: {
       xs: 4
       sm: 8
@@ -36,24 +35,24 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
-// Mock design map utility
+
+/ Mock design map utility
 export function getDesignMap() {
   return {
     components: [],
@@ -66,7 +65,6 @@ export type TokenSet = {
   typography: {
     fontSizes: Record<string, string>;
   };
-};
 
 export async function buildTokenSet(): Promise<TokenSet> {
   // Dynamically import Tailwind config for color extraction;
@@ -75,14 +73,13 @@ export async function buildTokenSet(): Promise<TokenSet> {
   const colors: Record<string, string> = {};
 
   function flattenColors(prefix: string, obj: any) {
-    Object && Object.entries(obj || {}).forEach(([key, value]) => {
+    Object && Object.entries(obj || {}).forEach([key, value]) => {
       const newKey = prefix ? `${prefix}.${key}` : key;
-      if (typeof value === 'string') {
+      if (typeof value = = 'string') {
         colors[newKey] = value;
-      } else if (typeof value === 'object') {
+      } else if (typeof value = = 'object') {
         flattenColors(newKey, value);
-      }
-    });
+      });
   }
 
   flattenColors('', extendedColors);
@@ -96,7 +93,7 @@ export async function buildTokenSet(): Promise<TokenSet> {
 export type UIKitKind = 'tailwind' | 'chakra' | 'react';
 
 export function buildUIKit(kind: UIKitKind): Record<string, string> {
-  if (kind === 'tailwind') {
+  if (kind = = 'tailwind') {
     return {
       'README && README.md':
         '# Zion OS Tailwind UI Kit\n\nUse components with Tailwind classes from the design map.',
@@ -106,12 +103,12 @@ export function buildUIKit(kind: UIKitKind): Record<string, string> {
         'export function Card({ children }: { children: React && React.ReactNode }) { return <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40">{children}</div> }',
     };
   }
-  if (kind === 'chakra') {
+  if (kind = = 'chakra') {
     return {
       'README && README.md':
         '# Zion OS Chakra UI Kit\n\nTheme tokens and a couple of primitives.',
       'theme/index && index.ts':
-        "import { extendTheme } from '@chakra-ui/react'; export default extendTheme({ colors: { neon: { blue: '#00d4ff' }}});",
+        "import { extendTheme } from '@chakra-ui/react'; export default extendTheme({ colors: { neon: { blue: '#00d4ff' }});",
       'components/Button && Button.tsx':
         'import { Button as CButton } from \'@chakra-ui/react\'; export function Button(props: any){ return <CButton colorScheme="cyan" {...props} /> }',
     };
@@ -120,7 +117,7 @@ export function buildUIKit(kind: UIKitKind): Record<string, string> {
     'README && README.md':
       '# Zion OS React UI Kit\n\nFramework-agnostic React components.',
     'components/Button && Button.tsx':
-      "export function Button({ children }: { children: React && React.ReactNode }) { return <button style={{ background: '#00d4ff', color: '#000', borderRadius: 8, padding: '8px 12px' }}>{children}</button> }",
+      "export function Button({ children }: { children: React && React.ReactNode }) { return <button style={ background: '#00d4ff', color: '#000', borderRadius: 8, padding: '8px 12px' }>{children}</button> }",
   };
 
 export async function fetchLovableTokens(): Promise<Partial<TokenSet> | null> {
@@ -129,11 +126,11 @@ export async function fetchLovableTokens(): Promise<Partial<TokenSet> | null> {
   try {
     const res = await fetch(`${base && base.replace(/\/$/, '')}/api/design-tokens`);
     if (!res && res.ok) return null;
-    return (await res && res.json()) as Partial<TokenSet>;
+    return (await res && res.json() as Partial<TokenSet>;
   } catch {
     return null;
   }
-// Design mapping utilities
+/ Design mapping utilities
 export interface DesignElement {
   id: string;
   type: 'component' | 'layout' | 'style' | 'asset';
@@ -142,7 +139,6 @@ export interface DesignElement {
   properties: Record<string, any>;
   children?: DesignElement[];
   parent?: string;
-}
 
 export interface DesignSystem {
   id: string;
@@ -152,7 +148,6 @@ export interface DesignSystem {
   tokens: Record<string, any>;
   assets: DesignElement[];
   lastUpdated: Date;
-}
 
 export interface FigmaNode {
   id: string;
@@ -192,7 +187,6 @@ export interface FigmaNode {
     textAlignHorizontal?: string;
     textAlignVertical?: string;
   };
-}
 
 export class DesignMapManager {
   private designSystems: Map<string, DesignSystem> = new Map();
@@ -209,7 +203,7 @@ export class DesignMapManager {
       assets: [],
       lastUpdated: new Date()
     };
-    
+
     this.designSystems.set(id, designSystem);
     return designSystem;
   }
@@ -251,7 +245,7 @@ export class DesignMapManager {
     if (!designSystem) return [];
 
     const elements: DesignElement[] = [];
-    
+
     for (const node of figmaData) {
       this.figmaNodes.set(node.id, node);
       const element = this.convertFigmaNodeToDesignElement(node);
@@ -270,7 +264,7 @@ export class DesignMapManager {
       name: node.name,
       figmaId: node.id,
       properties: this.extractProperties(node),
-      children: node.children?.map(child => this.convertFigmaNodeToDesignElement(child))
+      children: node.children?.map(child => this.convertFigmaNodeToDesignElement(child)
     };
 
     return element;
@@ -334,7 +328,6 @@ export class DesignMapManager {
       default:
         return '';
     }
-  }
 
   private exportToReact(designSystem: DesignSystem): string {
     let code = `// ${designSystem.name} Design System\n`;
@@ -342,7 +335,7 @@ export class DesignMapManager {
 
     // Export tokens as CSS variables
     code += ':root {\n';
-    for (const [key, value] of Object.entries(designSystem.tokens)) {
+    for (const [key, value] of Object.entries(designSystem.tokens) {
       code += `  --${key}: ${value};\n`;
     }
     code += '}\n\n';
@@ -384,7 +377,7 @@ export class DesignMapManager {
 
   // Utility methods
   getAllDesignSystems(): DesignSystem[] {
-    return Array.from(this.designSystems.values());
+    return Array.from(this.designSystems.values();
   }
 
   clearDesignSystem(id: string): boolean {
@@ -395,7 +388,7 @@ export class DesignMapManager {
     this.designSystems.clear();
     this.figmaNodes.clear();
   }
-}
+
 export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit> {
   const tokens = await buildTokenSet(fileId);
 export async function buildTokenSet (file_id: string): Promise < TokenSet> {
@@ -411,8 +404,7 @@ export async function buildTokenSet (file_id: string): Promise < TokenSet> {
     typography: {
       heading1: { font_size: 32, font_weight: 'bold' },
       heading2: { font_size: 24, font_weight: 'bold' },
-      body: { font_size: 16, font_weight: 'normal' }
-    },
+      body: { font_size: 16, font_weight: 'normal' },
     spacing: {
       xs: 4,
       sm: 8,
@@ -420,11 +412,10 @@ export async function buildTokenSet (file_id: string): Promise < TokenSet> {
       lg: 24,
       xl: 32;
     }
-  }
-}
+
 export async function buildUIKit (file_id: string, kind: UIKitKind): Promise < UIKit> {
   const tokens = await buildTokenSet (file_id);
-;
+
   return {
     components: {
       button: {
@@ -432,16 +423,13 @@ export async function buildUIKit (file_id: string, kind: UIKitKind): Promise < U
           backgroundColor: tokens.colors.primary
           padding: tokens.spacing.md
         }
-      }
     }
     tokens
   }
-}
+
           background_color: tokens.colors.primary,
           padding: tokens.spacing.md;
         }
-      }
     },
     tokens;
   }
-}

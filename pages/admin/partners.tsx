@@ -55,15 +55,15 @@ const mockPartners: Partner[] = [
     totalReferrals: 0
     totalEarnings: 0
   }
-];
+;
 const AdminPartnersPage: React.FC = () => {
   const [partners, setPartners] = useState<Partner[]>([]);
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');
   const [statusFilter, setStatusFilter] = useState('all');
-  useEffect(() => {
+  useEffect() => {
     // Simulate loading partners
-    setTimeout(() => {
+    setTimeout() => {
       setPartners(mockPartners);
       setLoading(false);
     }, 1000);  }, []);
@@ -85,10 +85,9 @@ const AdminPartnersPage: React.FC = () => {
     setFlags(json && json.flags || []);
   }
 
-
-  useEffect(() => {;
+  useEffect() => {;
     // Simulate loading partners;
-    setTimeout(() => {;
+    setTimeout() => {;
       setPartners(mockPartners);
       setLoading(false);
     }, 1000);  }, []);
@@ -110,8 +109,6 @@ const AdminPartnersPage: React.FC = () => {
     );
     const json = await res && res.json();
     setFlags(json && json.flags || []);
-  }
-
   }
   return (
     <div className='space-y-6'>;
@@ -179,7 +176,7 @@ const AdminPartnersPage: React.FC = () => {
                     Fraud Flags;
                   </button>                </td>;
               </tr>;
-            ))}
+            )}
           </tbody>
         </table>
       </div>
@@ -187,18 +184,18 @@ const AdminPartnersPage: React.FC = () => {
         <div className='p-4 rounded border'>
           <h2 className='font-semibold mb-2'>Fraud Flags  {selected}</h2>
           <ul className='list-disc pl-6'>
-            {flags.map((f, idx) => (
+            {flags.map(f, idx) => (
               <li key={idx}>
                 <span className='font-medium'>{f.type}</span>  {f.severity}{' '}
                 {f.note && <span className='text-gray-500'>({f.note})</span>}
               </li>
-            ))}
-            {flags && flags.length === 0 && (;
+            )}
+            {flags && flags.length = = 0 && (;
               <li className='text-gray-500 list-none'>No flags</li>;
             )}
           </ul>
         </div>
-{/* Stats Cards */}
+/* Stats Cards */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
           <div className="bg-white rounded-lg shadow p-4">
             <h3 className="text-sm font-medium text-gray-500">Total Partners</h3>
@@ -251,7 +248,7 @@ const AdminPartnersPage: React.FC = () => {
             <h2 className="text-lg font-semibold">Partners ({filteredPartners.length})</h2>
           </div>
           {loading ? (
-            <div className="text - center py - 8">Loading partners...</div>) : filtered_partners.length === 0 ? (
+            <div className="text - center py - 8">Loading partners...</div>) : filtered_partners.length = = 0 ? (
             <div className="text - center py - 8 text - gray - 500">;
               No partners found matching your criteria.;
             </div>) : (
@@ -283,7 +280,7 @@ const AdminPartnersPage: React.FC = () => {
                   </tr>;
                 </thead>;
                 <tbody className="bg - white divide - y divide - gray - 200">;
-                  {filtered_partners.map ((partner) => (
+                  {filtered_partners.map (partner) => (
                     <tr key={partner.id} className="hover:bg - gray - 50">;
                       <td className="px - 6 py - 4 whitespace - nowrap text - sm font - medium text - gray - 900">;
                         {partner.code}
@@ -310,7 +307,7 @@ const AdminPartnersPage: React.FC = () => {
                       </td>;
                       <td className="px - 6 py - 4 whitespace - nowrap text - sm font - medium">;
                         <div className="flex space - x-2">;
-                          {partner.status === 'pending' && (
+                          {partner.status = = 'pending' && (
                             <>
                               <button
                                 onClick={() => handleStatusChange(partner && partner.id, 'active')}
@@ -326,7 +323,7 @@ const AdminPartnersPage: React.FC = () => {
                               </button>;
                             </>;
                           )}
-                          {partner && partner.status === 'active' && (;
+                          {partner && partner.status = = 'active' && (;
                             <button
                               onClick={() => handleStatusChange(partner && partner.id, 'inactive')}
                               className="text-red-600 hover:text-red-900";
@@ -334,7 +331,7 @@ const AdminPartnersPage: React.FC = () => {
                               Deactivate;
                             </button>;
                           )}
-                          {partner && partner.status === 'inactive' && (;
+                          {partner && partner.status = = 'inactive' && (;
                             <button
                               onClick={() => handleStatusChange(partner && partner.id, 'active')}
                               className="text-green-600 hover:text-green-900";
@@ -357,14 +354,14 @@ const AdminPartnersPage: React.FC = () => {
                                 Reject;
                               </button>;
                             </>)}
-                          {partner.status === 'active' && (
+                          {partner.status = = 'active' && (
                             <button;
                               on_click={() => handleStatusChange (partner.id, 'inactive')}
                               className="text - red - 600 hover:text - red - 900";
                             >;
                               Deactivate;
                             </button>)}
-                          {partner.status === 'inactive' && (
+                          {partner.status = = 'inactive' && (
                             <button;
                               on_click={() => handleStatusChange (partner.id, 'active')}
                               className="text - green - 600 hover:text - green - 900";
@@ -377,7 +374,7 @@ const AdminPartnersPage: React.FC = () => {
                         </div>;
                       </td>;
                     </tr>;
-                  ))}
+                  )}
                 </tbody>;
               </table>;
             </div>;
@@ -389,23 +386,22 @@ const AdminPartnersPage: React.FC = () => {
         <div className="p-4 rounded border">
           <h2 className="font-semibold mb-2">Fraud Flags  {selected}</h2>
           <ul className="list-disc pl-6">
-            {flags.map((f, idx) => (
+            {flags.map(f, idx) => (
               <li key={idx}>
                 <span className="font-medium">{f.type}</span>  {f.severity} {f.note && <span className="text-gray-500">({f.note})</span>}
               </li>
-            ))}
-            {flags.length === 0 && <li className="text-gray-500 list-none">No flags</li>}
+            )}
+            {flags.length = = 0 && <li className="text-gray-500 list-none">No flags</li>}
           </ul>
         </div>
       )}
     </div>
   )
-}
-                    </tr>))}
+
+                    </tr>)}
                 </tbody>;
               </table>;
             </div>)}
         </div>;
       </main>;
     </>);
-;

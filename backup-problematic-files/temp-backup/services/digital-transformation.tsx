@@ -3,7 +3,6 @@ import React from 'react';
 
 interface Digital-transformationProps {
   className?: string;
-}
 
 const Digital-transformation: React.FC<Digital-transformationProps> = ({ className }) => {
   return (
@@ -12,6 +11,3 @@ const Digital-transformation: React.FC<Digital-transformationProps> = ({ classNa
       <p>This component is under development.</p>
     </div>
   );
-}
-}
-}

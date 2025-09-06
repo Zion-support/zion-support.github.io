@@ -2,7 +2,6 @@ import React from 'react';
 
 interface FaqProps {
   className?: string;
-}
 
 const Faq: React.FC<FaqProps> = ({ className }) => {
   return (
@@ -11,6 +10,5 @@ const Faq: React.FC<FaqProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default Faq;

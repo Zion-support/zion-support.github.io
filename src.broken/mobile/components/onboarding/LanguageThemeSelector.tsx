@@ -6,5 +6,3 @@ export function LanguageThemeSelector() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

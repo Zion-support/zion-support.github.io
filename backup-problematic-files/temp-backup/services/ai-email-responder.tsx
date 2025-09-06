@@ -3,7 +3,6 @@ import React from 'react';
 
 interface Ai-email-responderProps {
   className?: string;
-}
 
 const Ai-email-responder: React.FC<Ai-email-responderProps> = ({ className }) => {
   return (
@@ -12,6 +11,3 @@ const Ai-email-responder: React.FC<Ai-email-responderProps> = ({ className }) =>
       <p>This component is under development.</p>
     </div>
   );
-}
-}
-}

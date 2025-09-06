@@ -1,27 +1,26 @@
 import { useRouter } from 'next/router',;
 import useSWR from 'swr',;
 import { useEffect, useState } from 'react',;
-;
-const fetcher = (url:string) => fetch(url).then((r) => r.json()),;
-;
+
+const fetcher = (url:string) => fetch(url).then(r) => r.json(),;
+
 export default function EditJobPage() {;
   const router = useRouter(),;
   const { id } = router.query,;
   const { data } = useSWR(id ? `/api/jobs/${id}` :null, fetcher),;
   const job = data?.job,;
-;
+
   const [title, setTitle] = useState(''),;
   const [description, setDescription] = useState(''),;
   const [category, setCategory] = useState(''),;
-;
-  useEffect(() => {;
+
+  useEffect() => {;
     if (job) {;
       setTitle(job.title || ''),;
       setDescription(job.description || ''),;
       setCategory(job.category || ''),;
-    }
-  }, [job]),;
-;
+    }, [job]),;
+
   async function save() {;
     await fetch(`/api/jobs/${id}`, {;
       method:'PATCH',;
@@ -29,9 +28,9 @@ export default function EditJobPage() {;
       body:JSON.stringify({ title, description, category })}),;
     router.push('/client/dashboard'),;
   }
-;
+
   if (!job) return <div>Loading</div>,;
-;
+
   return (;
     <div className="max-w-2xl mx-auto space-y-4">;
       <h1 className="text-2xl font-semibold">Edit Job</h1>;
@@ -54,6 +53,5 @@ export default function EditJobPage() {;
   ),; const [title, setTitle] = useState ('');
 const [description, setDescription] = useState ('');
 const [category, setCategory] = useState ('');
-}if (!job) return <div>Loading</div>;
+if (!job) return <div>Loading</div>;
 </div> </div>) 
-}

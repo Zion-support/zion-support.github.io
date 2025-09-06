@@ -6,7 +6,6 @@ import { cn } from "@/lib/utils";
 import { useAuth } from "@/hooks/useAuth";
 interface MobileBottomNavProps {
   unreadCount?: number
-}
 
 export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProps) {;
   const location = useLocation();
@@ -17,7 +16,7 @@ export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProp
       name: "Home"
       href: "/"
       icon: Home
-      matches: (path: string) => path === "/"
+      matches: (path: string) => path = = "/"
     }
     {
       name: "Browse"
@@ -49,8 +48,7 @@ export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProp
   ];
   // Filter items based on auth status
   const visibleItems = navItems.filter(item =>
-    !item.authRequired |(item.authRequired && isAuthenticated)
-  );
+    !item.authRequired |(item.authRequired && isAuthenticated);
   return (
     <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-zion-blue-dark/95 backdrop-blur-md border-t border-zion-purple/20">;
       <div className="flex justify-around items-center h-16">;
@@ -75,11 +73,11 @@ export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProp
             </div>;
             <span className="text-xs font-medium">{item && item.name}</span>;
           </Link>;
-        ))}
+        )}
       </div>
     </nav>
   )
-}
+
 import React from './react';
 import { Link, use_location } from './react-router-dom';
 import { Home, Search, BriefcaseIcon, MessageSquare, User, MessageCircle } from './lucide-react';
@@ -87,7 +85,7 @@ import { cn } from '@/lib / utils';
 import { use_auth } from '@/hooks / use_auth';
 interface MobileBottomNavProps {
   unread_count?: number;
-}
+
 export /**
  * MobileBottomNav - Function description
  */
@@ -95,13 +93,13 @@ function MobileBottomNav() {
   const location = use_location ();
   const { user } = use_auth ();
   const is_authenticated = !!user;
-;
+
   const nav_items = [;
     {
       name: "Home",
       href: "/",
       icon: Home,
-      matches: (path: string) => path === "/";
+      matches: (path: string) => path = = "/";
     }
     {
       name: "Browse",
@@ -131,11 +129,11 @@ function MobileBottomNav() {
       auth_required: true;
     }
   ];
-;
+
   // Filter items based on auth status;
   const visible_items = nav_items.filter (item =>;
-    !item.auth_required || (item.auth_required && is_authenticated));
-;
+    !item.auth_required || (item.auth_required && is_authenticated);
+
   return (
     <nav className="md:hidden fixed bottom - 0 left - 0 right - 0 z - 50 bg - zion - blue - dark / 95 backdrop - blur - md border - t border - zion - purple / 20">;
       <div className="flex justify - around items - center h - 16">;
@@ -157,7 +155,6 @@ function MobileBottomNav() {
                 </span>)}
             </div>;
             <span className="text - xs font - medium">{item.name}</span>;
-          </Link>))}
+          </Link>)}
       </div>;
     </nav>);
-}

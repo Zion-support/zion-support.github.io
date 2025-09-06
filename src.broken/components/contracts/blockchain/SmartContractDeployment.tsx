@@ -6,5 +6,3 @@ export function SmartContractDeployment() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

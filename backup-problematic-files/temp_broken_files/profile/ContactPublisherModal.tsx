@@ -23,20 +23,19 @@ import api from '@/services/apiClient',;
 import { toast } from '@/hooks/use-toast',;
 import { useAuth } from '@/hooks/useAuth',;
 import { LoginModal } from '@/components/auth/LoginModal',;
-;
+
 interface ContactPublisherModalProps {;
   isOpen:boolean,;
   onClose:() => void,;
   publisherName:string,;
   publisherEmail?:string,;
   productId?:string;
-}
-;
+
 type FormValues = {;
   subject:string,;
   message:string;
-},;
-;
+,;
+
 const schema:yup.ObjectSchema<FormValues> = yup;
   .object({;
     subject:yup;
@@ -48,7 +47,7 @@ const schema:yup.ObjectSchema<FormValues> = yup;
       .min(20, 'Message must be at least 20 characters');
       .required('Message is required')});
   .required(),;
-;
+
 export function ContactPublisherModal({;
   isOpen,;
   onClose,;
@@ -59,12 +58,12 @@ export function ContactPublisherModal({;
   const [isSubmitting, setIsSubmitting] = React.useState(false),;
   const [error, setError] = React.useState<string | null>(null),;
   const [loginOpen, setLoginOpen] = React.useState(false),;
-;
+
   const form = useForm<FormValues>({;
     resolver:yupResolver(schema) as Resolver<FormValues>,;
     mode:'onChange',;
-    defaultValues:{ subject:'', message:'' }}),;
-;
+    defaultValues:{ subject:'', message:'' }),;
+
   const handleSend = async () => {;
     if (!user) {;
       setLoginOpen(true),;
@@ -83,16 +82,14 @@ export function ContactPublisherModal({;
       form.reset(),;
       onClose(),;
     } finally {;
-      setIsSubmitting(false),;    }
-  },;
-;
+      setIsSubmitting(false),;    },;
+
   const handleKeyDown = (e:React.KeyboardEvent) => {;
-    if (e.key === 'Escape') {;
+    if (e.key = = 'Escape') {;
       e.stopPropagation(),;
       onClose();
-    }
-  },;
-;
+    },;
+
   return (;
     <>;
     <Dialog open={isOpen} onOpenChange={onClose}>;
@@ -170,16 +167,16 @@ export function ContactPublisherModal({;
   ),;}
  const schema: yup.ObjectSchema<FormValues> = yup .object ({;
   subject: yup .string () .min (5, 'Subject must be at least 5 characters') .required ('Subject is required'),  message: yup .string () .min (20, 'Message must be at least 20 characters') .required ('Message is required') ;
-}) .required ();
+) .required ();
 return (<> <Dialog open= {;
   isOpen ;
-}onOpenChange= {;
+onOpenChange= {;
   onClose ;
-}> <FocusLock disabled= {;
+> <FocusLock disabled= {;
   !isOpen ;
-}returnFocus> <DialogContent > <DialogHeader> <DialogTitle id="contact-publisher-title" className="text-xl font-bold text-white flex items-center gap-2" > <Mail className="h-5 w-5 text-zion-cyan" /> Contact Publisher </DialogTitle> </DialogHeader> <FormItem> <FormLabel>Subject</FormLabel> <FormControl> <Input /> </FormControl> <FormMessage className="text-red-500" /> </FormItem>) ";"}/> <FormField <FormItem> <FormLabel>Message</FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage className="text-red-500" /> </FormItem>) ;
-}/> <Button </Button> </form> </Form> </DialogContent> </FocusLock> </Dialog> <LoginModal isOpen= {;
+returnFocus> <DialogContent > <DialogHeader> <DialogTitle id="contact-publisher-title" className="text-xl font-bold text-white flex items-center gap-2" > <Mail className="h-5 w-5 text-zion-cyan" /> Contact Publisher </DialogTitle> </DialogHeader> <FormItem> <FormLabel>Subject</FormLabel> <FormControl> <Input /> </FormControl> <FormMessage className="text-red-500" /> </FormItem>) ";"}/> <FormField <FormItem> <FormLabel>Message</FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage className="text-red-500" /> </FormItem>) ;
+/> <Button </Button> </form> </Form> </DialogContent> </FocusLock> </Dialog> <LoginModal isOpen= {;
   loginOpen ;
-}onOpenChange= {;
+onOpenChange= {;
   setLoginOpen ;
-}/> </>) ;"}'"
+/> </>) ;"}'"

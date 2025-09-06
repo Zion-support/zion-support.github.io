@@ -47,4 +47,3 @@ export default function AutomationsPage() {_return (
       </div>
     </main>
   )
-}

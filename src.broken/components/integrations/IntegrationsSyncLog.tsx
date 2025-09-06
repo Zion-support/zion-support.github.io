@@ -6,5 +6,3 @@ export function IntegrationsSyncLog() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

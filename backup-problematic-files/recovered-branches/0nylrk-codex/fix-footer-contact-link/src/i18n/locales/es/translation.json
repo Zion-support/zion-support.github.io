@@ -1,4 +1,4 @@
-{
+
   "general": {
     "app_name": "Mercado de IA de Zion",
     "loading": "Cargando...",
@@ -56,7 +56,6 @@
     "es": "Espaol",
     "pt": "Portugus",
     "ar": "",
-    "language_changed": "Idioma cambiado a {{language}}",
-    "switch_to_detected": "Cambiar a {{language}}?"
+    "language_changed": "Idioma cambiado a {language}",
+    "switch_to_detected": "Cambiar a {language}?"
   }
-}

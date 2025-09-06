@@ -6,5 +6,3 @@ export function BenefitsSection() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

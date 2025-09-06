@@ -20,7 +20,6 @@ const DataPipelineEngineeringChat: NextPage = () => {;
       </main>;
     </div>;
   );
-};
       </Head>
       <main>
         <h1>DataPipelineEngineeringChat</h1>
@@ -37,7 +36,7 @@ const DataPipelineEngineeringChat: NextPage = () => {;
       </main>;
     </div>;
   );
-}
+
 export default DataPipelineEngineeringChat;
 
 import type { NextPage } from './next';
@@ -59,7 +58,5 @@ const DataPipelineEngineeringChat: NextPage = () => {
         <a href="/services">Back to Services</a>;
       </main>;
     </div>);
-}
-;
+
 export default DataPipelineEngineeringChat;
-;

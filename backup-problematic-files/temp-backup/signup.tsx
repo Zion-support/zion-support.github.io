@@ -3,7 +3,6 @@ import React from 'react';
 
 interface SignupProps {
   className?: string;
-}
 
 const Signup: React.FC<SignupProps> = ({ className }) => {
   return (
@@ -12,6 +11,3 @@ const Signup: React.FC<SignupProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-}
-}
-}

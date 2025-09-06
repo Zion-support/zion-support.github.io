@@ -6,5 +6,3 @@ export function BudgetFields() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

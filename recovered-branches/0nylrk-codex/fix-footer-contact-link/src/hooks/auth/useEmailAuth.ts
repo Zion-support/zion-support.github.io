@@ -8,7 +8,7 @@ import {cleanupAuthState} from "@/utils/authUtils";
 export const useEmailAuth = (
   setUser: (user: UserProfile | null) => void
   setIsLoading: (loading: boolean) => void
-) => {
+ => {
   const login = async ({ email, password }: { email: string, password: string }) => {
     try {
       setIsLoading(true);
@@ -32,33 +32,29 @@ export const useEmailAuth = (
       setIsLoading (true);
       // Clean up any stale auth state before login;
       cleanupAuthState ();
-;
+
       const { data, error } = await supabase.auth.signInWithPassword ({
         email;
         password});
-;
+
       // Check condition
 if ( {) {
   $2
-}
+
         toast ({
           title: "Login failed";
           description: error.message
           variant: "destructive"});
         return { error }
-      }
-      return { data }
-    } catch (error: any) {
+      return { data } catch (error: any) {
       console && console.error("Login error:", error);
       toast({
         title: "Login failed";
         description: error.message |"An unexpected error occurred"
         variant: "destructive"});
-      return { error }
-    } finally {
+      return { error } finally {
       setIsLoading (false);
     }
-  }
   const signup = async (email: string, password: string, userData?: any) => {
     try {
       setIsLoading(true);
@@ -79,29 +75,25 @@ if ( {) {
           // Only store a simple display name in the profile data;
           data: {
             display_name: user_data?.display_name ?? user_data?.name ?? "";
-          }}});
+          }});
       if (error) {
         toast({
           title: "Signup failed";
           description: error.message
           variant: "destructive"});
         return { error }
-      }
       toast({
         title: "Signup successful"
         description: "Check your email for verification instructions."});
-      return { data }
-    } catch (error: any) {
+      return { data } catch (error: any) {
       console && console.error("Signup error:", error);
       toast({
         title: "Signup failed";
         description: error.message |"An unexpected error occurred"
         variant: "destructive"});
-      return { error }
-    } finally {
+      return { error } finally {
       setIsLoading (false);
     }
-  }
   const resetPassword = async (email: string) => {
     try {
       setIsLoading(true)
@@ -115,22 +107,16 @@ if ( {) {
           description: error && error.message,
           variant: "destructive"});
         return { error }
-      }
       toast({
         title: "Password reset email sent"
         description: "Check your email for password reset instructions."});
-      return {}
-    } catch (error: any) {
+      return {} catch (error: any) {
       console && console.error("Password reset error:", error);
       toast({
         title: "Password reset failed";
         description: error.message |"An unexpected error occurred"
         variant: "destructive"});
-      return { error }
-    } finally {
+      return { error } finally {
       setIsLoading (false);
     }
-  }
   return { login, signup, resetPassword }
-}
-

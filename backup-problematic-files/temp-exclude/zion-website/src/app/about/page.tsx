@@ -5,8 +5,8 @@ import { ;
   ShieldCheckIcon,;
   AcademicCapIcon,;
   RocketLaunchIcon;
-} from '@heroicons/react/24/outline';
-;
+ from '@heroicons/react/24/outline';
+
 const values = [;
   {;
     name:'Innovation First',;
@@ -24,7 +24,7 @@ const values = [;
     name:'Research Excellence',;
     description:'Our team of world-class researchers drives breakthrough discoveries and innovations.',;
     icon:AcademicCapIcon}];
-;
+
 const team = [;
   {;
     name:'Dr. Sarah Chen',;
@@ -46,7 +46,7 @@ const team = [;
     role:'Chief Operations Officer',;
     bio:'Former Fortune 500 executive, specializing in scaling AI operations and enterprise deployment.',;
     image:'/images/team/james-kim.jpg'}];
-;
+
 export default function AboutPage() {;
   return (;
     <div className="bg-black">;      {/* Hero section */}
@@ -66,7 +66,7 @@ export default function AboutPage() {;
           </div>;
         </div>;
       </div>;
-;
+
       {/* Mission & Vision */}
       <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8">;
         <div className="mx-auto max-w-2xl lg:text-center">;
@@ -100,7 +100,7 @@ export default function AboutPage() {;
           </div>;
         </div>;
       </div>;
-;
+
       {/* Company Story */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">;
         <div className="mx-auto max-w-2xl lg:text-center">;
@@ -130,7 +130,7 @@ export default function AboutPage() {;
           </div>;
         </div>;
       </div>;
-;
+
       {/* Values */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">;
         <div className="mx-auto max-w-2xl lg:text-center">;
@@ -141,7 +141,7 @@ export default function AboutPage() {;
         </div>;
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">;
           <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">;
-            {values.map((value) => (;
+            {values.map(value) => (;
               <div key={value.name} className="flex flex-col group">;
                 <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">;
                   <value.icon className="h-5 w-5 flex-none text-blue-400" aria-hidden="true" />;
@@ -151,11 +151,11 @@ export default function AboutPage() {;
                   <p className="flex-auto">{value.description}</p>;
                 </dd>;
               </div>;
-            ))}
+            )}
           </dl>;
         </div>;
       </div>;
-;
+
       {/* Leadership Team */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">;
         <div className="mx-auto max-w-2xl lg:text-center">;
@@ -168,7 +168,7 @@ export default function AboutPage() {;
           </p>;
         </div>;
         <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">;
-          {team.map((person) => (;
+          {team.map(person) => (;
             <article key={person.name} className="flex flex-col items-start group">;
               <div className="relative w-full">;
                 <div className="aspect-[16/9] w-full rounded-2xl bg-gray-900 object-cover sm:aspect-[2/1] lg:aspect-[3/2]">;
@@ -192,10 +192,10 @@ export default function AboutPage() {;
                 </div>;
               </div>;
             </article>;
-          ))}
+          )}
         </div>;
       </div>;
-;
+
       {/* CTA section */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">;
         <div className="mx-auto max-w-2xl text-center">;

@@ -4,14 +4,14 @@ type Props = {
   room: Room | null,
   onLeave: () => void,
   accent?: 'blue' | 'cyan'
-},
+,
 
 export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
   const [micEnabled, setMicEnabled] = React.useState(true),
   const [camEnabled, setCamEnabled] = React.useState(true),
   const [sharing, setSharing] = React.useState(false),
 
-  const accentClass = accent === 'blue' ? 'bg-blue-600' : 'bg-cyan-600',
+  const accentClass = accent = = 'blue' ? 'bg-blue-600' : 'bg-cyan-600',
 
   const toggleMic = async () => {
     if (!room) return,
@@ -32,8 +32,7 @@ export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
       setSharing(enabled)
     } catch (e) {
       console.warn('Screen share failed', e)
-    }
-  },
+    },
 
   return (
     <div className=&quot;flex items-center gap-3&quot;>

@@ -1,4 +1,4 @@
-{
+
   "timestamp": "2025-09-06T04:27:21.568Z",
   "status": "active",
   "metrics": {
@@ -27,8 +27,7 @@
       "score": "N/A",
       "issues": 0,
       "lastAnalysis": "2025-09-06T04:27:21.568Z"
-    }
-  },
+    },
   "alerts": [],
   "recommendations": [
     "Set up continuous monitoring",
@@ -37,4 +36,3 @@
     "Configure automated testing",
     "Set up security scanning"
   ]
-}

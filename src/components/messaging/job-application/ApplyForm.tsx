@@ -17,7 +17,6 @@ interface ApplyFormProps {
   onClose: () => void
   onApplySuccess?: (jobId: string,) => Promise<void>
 
-}
 export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
   const { createConversation } = useMessaging();
   const { applyToJob } = useJobApplications();
@@ -34,7 +33,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
     setSelectedResume(resume);    setSelectedResumeId(resume.id)
   }
   const handleApply = async () => {
-    if (!message.trim()) {
+    if (!message.trim() {
       toast({
         title: "Message required"
         description: "Please enter a message before applying."
@@ -48,10 +47,10 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
       const applicationSuccess = await applyToJob(
         job.id
         message
-        selectedResume && selectedResume.type === 'ai_resume'
+        selectedResume && selectedResume.type = = 'ai_resume'
           ? selectedResumeId |undefined
           : undefined
-        selectedResume && selectedResume.type === 'custom_upload'
+        selectedResume && selectedResume.type = = 'custom_upload'
           ? selectedResume.file
           : undefined
       )
@@ -88,7 +87,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
       // Check condition
 if ( {) {
   $2
-}
+
         await onApplySuccess (job.id);
       }
       toast({
@@ -121,7 +120,6 @@ interface ApplyFormProps {;
   job: Job,;
   onClose: () => void,;
   onApplySuccess?: (jobId: string,) => Promise<void>;
-}
 
 export function ApplyForm(): any ({ job, onClose, onApplySuccess }: ApplyFormProps) {;
   const { createConversation } = useMessaging();
@@ -140,7 +138,7 @@ export function ApplyForm(): any ({ job, onClose, onApplySuccess }: ApplyFormPro
   };
 
   const handleApply = async () => {;
-    if (!message && message.trim()) {;
+    if (!message && message.trim() {;
       toast({;
         title: "Message required",;
         description: "Please enter a message before applying.",;
@@ -156,10 +154,10 @@ export function ApplyForm(): any ({ job, onClose, onApplySuccess }: ApplyFormPro
       const applicationSuccess = await applyToJob(;
         job && job.id;
         message;
-        selectedResume && selectedResume.type === 'ai_resume';
+        selectedResume && selectedResume.type = = 'ai_resume';
           ? selectedResumeId || undefined;
           : undefined;
-        selectedResume && selectedResume.type === 'custom_upload';
+        selectedResume && selectedResume.type = = 'custom_upload';
           ? selectedResume && selectedResume.file;
           : undefined;
       );
@@ -232,7 +230,6 @@ export function ApplyForm(): any ({ job, onClose, onApplySuccess }: ApplyFormPro
     } finally {
       setIsSubmitting (false),
     }
-  }
 
   return (
     <>
@@ -285,62 +282,62 @@ export function ApplyForm(): any ({ job, onClose, onApplySuccess }: ApplyFormPro
       </div>
     </>
   )
-  if (!message.trim () ) {
+  if (!message.trim () {
   toast ({
   return
-}//First submit the application to the job applications table const applicationSuccess = await applyToJob (job.id, message, selectedResume && selectedResume.type === 'ai resume'? selectedResumeId |undefined : undefined, selectedResume && selectedResume.type === 'custom upload'? selectedResume.file : undefined)
+//First submit the application to the job applications table const applicationSuccess = await applyToJob (job.id, message, selectedResume && selectedResume.type = = 'ai resume'? selectedResumeId |undefined : undefined, selectedResume && selectedResume.type = = 'custom upload'? selectedResume.file : undefined)
 if (!applicationSuccess) {
-}//Format message with proposal link if provided let fullMessage = message
+//Format message with proposal link if provided let fullMessage = message
 if (proposalLink) {'
   fullMessage += `\n\nHere's a link to my proposal: $ {
   proposalLink
-}`
-}//Add info about attached resume if available if (selectedResume) {'
+`
+//Add info about attached resume if available if (selectedResume) {'
   fullMessage += `\n\nI've attached my resume: $ {
   selectedResume.title
-}`
-}//Create context data for the conversation const contextData = {
+`
+//Create context data for the conversation const contextData = {
   title: job.title
 description: job.description
 attachedResume: selectedResume ? {
   id: selectedResume.id
 title: selectedResume.title
 type: selectedResume.type
-}: null
-}
+: null
+
 fullMessage;'
-'job'
+job'
 job.id
 contextData)
-//Call onApplySuccess to update job status in the UI onClose ()
-}catch (error) {'
+/Call onApplySuccess to update job status in the UI onClose ()
+catch (error) {'
   logErrorToProduction ('Failed to send application:', {
   data: error
-})
+)
 toast ({
-}finally {
+finally {
   setIsSubmitting (false)
-}
+
 return (<> <Tabs value= {
   activeTab
-}onValueChange= {
+onValueChange= {
   setActiveTab "
-}className="w-full" > <TabsList className="w-full mb-4 bg-zion-blue-dark/30" > <TabsTrigger value="message" className="flex-1" > resume"className=" flex-1"> Resume </TabsTrigger> </TabsList> <TabsContent value=" message"> <MessageTab message= {
+className="w-full" > <TabsList className="w-full mb-4 bg-zion-blue-dark/30" > <TabsTrigger value="message" className="flex-1" > resume"className=" flex-1"> Resume </TabsTrigger> </TabsList> <TabsContent value=" message"> <MessageTab message= {
   message
-}setMessage= {
+setMessage= {
   setMessage
-}proposalLink= {
+proposalLink= {
   proposalLink
-}setProposalLink= {
+setProposalLink= {
   setProposalLink "
-}/> </TabsContent> <TabsContent value=" resume"> <ResumeTab onResumeSelected= {
+/> </TabsContent> <TabsContent value=" resume"> <ResumeTab onResumeSelected= {
   handleResumeSelected
-}selectedResumeId= {
+selectedResumeId= {
   selectedResumeId "
-}/> </TabsContent> </Tabs> <div className=" flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2 gap-2 sm:gap-0 mt-4"> <Button > Cancel </Button> <Button > {'"
+/> </TabsContent> </Tabs> <div className=" flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2 gap-2 sm:gap-0 mt-4"> <Button > Cancel </Button> <Button > {'"
   isSubmitting ? (<> <Loader2 className=" h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ('Submit Application')
-}</Button> </div> </>)
-}'"}
+</Button> </div> </>)
+'"}
 
     <>;
       <Tabs value={active_tab} onValueChange={setActiveTab} className="w - full">;
@@ -393,68 +390,68 @@ return (<> <Tabs value= {
     </>);
   if () {) {
   $2
-}
+
   toast ({
   return;
-}//First submit the application to the job applications table const application_success = await applyToJob (job.id, message, selected_resume && selected_resume.type === 'ai resume'? selectedResumeId || undefined : undefined, selected_resume && selected_resume.type === 'custom upload'? selected_resume.file : undefined);
-// Check condition
+//First submit the application to the job applications table const application_success = await applyToJob (job.id, message, selected_resume && selected_resume.type = = 'ai resume'? selectedResumeId || undefined : undefined, selected_resume && selected_resume.type = = 'custom upload'? selected_resume.file : undefined);
+/ Check condition
 if ( {) {
   $2
-}
-}//Format message with proposal link if provided let full_message = message;
-// Check condition
+
+//Format message with proposal link if provided let full_message = message;
+/ Check condition
 if ( {') {
   $2
-}
+
   full_message += `\n\n_here's a link to my proposal: $ {
   proposal_link;
-}`;
-}//Add info about attached resume if available // Check condition
+`;
+//Add info about attached resume if available // Check condition
 if ( {') {
   $2
-}
+
   full_message += `\n\n_i've attached my resume: $ {
   selected_resume.title;
-}`;
-}//Create context data for the conversation const context_data = {
+`;
+//Create context data for the conversation const context_data = {
   title: job.title;
 description: job.description;
 attached_resume: selected_resume ? {
   id: selected_resume.id;
 title: selected_resume.title;
 type: selected_resume.type;
-}: null;
-}
+: null;
+
 full_message;';
-'job';
+job';
 job.id;
 context_data);
-//Call onApplySuccess to update job status in the UI on_close ();
-}catch (error) {';
+/Call onApplySuccess to update job status in the UI on_close ();
+catch (error) {';
   logErrorToProduction ('Failed to send application:', {
   data: error;
-});
+);
 toast ({
-}finally {
+finally {
   setIsSubmitting (false);
-}
+
 return (<> <Tabs value= {
   active_tab;
-}onValueChange= {
+onValueChange= {
   setActiveTab ";
-}className="w - full" > <TabsList className="w - full mb - 4 bg - zion - blue - dark / 30" > <TabsTrigger value="message" className="flex - 1" > resume"className=" flex - 1"> Resume </TabsTrigger> </TabsList> <TabsContent value=" message"> <MessageTab message= {
+className="w - full" > <TabsList className="w - full mb - 4 bg - zion - blue - dark / 30" > <TabsTrigger value="message" className="flex - 1" > resume"className=" flex - 1"> Resume </TabsTrigger> </TabsList> <TabsContent value=" message"> <MessageTab message= {
   message;
-}set_message= {
+set_message= {
   set_message;
-}proposal_link= {
+proposal_link= {
   proposal_link;
-}setProposalLink= {
+setProposalLink= {
   setProposalLink ";
-}/> </TabsContent> <TabsContent value=" resume"> <ResumeTab onResumeSelected= {
+/> </TabsContent> <TabsContent value=" resume"> <ResumeTab onResumeSelected= {
   handleResumeSelected;
-}selectedResumeId= {
+selectedResumeId= {
   selectedResumeId ";
-}/> </TabsContent> </Tabs> <div className=" flex flex - col - reverse sm:flex - row sm:justify - end sm:space - x-2 gap - 2 sm:gap - 0 mt - 4"> <Button > Cancel </Button> <Button > {'";
+/> </TabsContent> </Tabs> <div className=" flex flex - col - reverse sm:flex - row sm:justify - end sm:space - x-2 gap - 2 sm:gap - 0 mt - 4"> <Button > Cancel </Button> <Button > {'";
   is_submitting ? (<> <Loader2 className=" h - 4 w - 4 mr - 2 animate - spin" /> Submitting... </>) : ('Submit Application');
-}</Button> </div> </>);
-}'"}
+</Button> </div> </>);
+'"}

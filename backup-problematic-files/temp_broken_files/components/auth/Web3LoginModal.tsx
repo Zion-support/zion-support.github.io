@@ -1,41 +1,40 @@
 import React, { useCallback, useEffect, useState } from 'react',
 import dynamic from 'next/dynamic',
-const isClient = typeof window !== 'undefined',
+const isClient = typeof window != 'undefined',
 
 type Web3LoginModalProps = {
   isOpen: boolean,
   onClose: () => void,
   onLoggedIn?: (user: { address: string, chain: 'evm' | 'sol', displayName?: string }) => void
-},
+,
 
 function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
   const [loading, setLoading] = useState(false),
   const [error, setError] = useState<string | null>(null),
-  useEffect_(() => {
+  useEffect_() => {
     if (!isOpen) {
       setError(null),
       setLoading(false)
-    }
-  }, [isOpen]),
+    }, [isOpen]),
 
   const handleEvmConnect = useCallback(async () => {
     setError(null),
     setLoading(true),
     try {
-      const Web3ModalCtor = (await import('web3modal')).default,
-      const WalletConnectProvider = (await import('@walletconnect/web3-provider')).default,
+      const Web3ModalCtor = (await import('web3modal').default,
+      const WalletConnectProvider = (await import('@walletconnect/web3-provider').default,
       const web3Modal = new Web3ModalCtor({
         cacheProvider: false, providerOptions: {
           walletconnect: {
             package: WalletConnectProvider,
             options: {
-              rpc: { 1: 'https://cloudflare-eth.com' }}}}}),
+              rpc: { 1: 'https://cloudflare-eth.com' }}}),
 
       const provider = await web3Modal.connect(),
       const ethers = await import('ethers'),
       const web3Provider = new ethers.providers.Web3Provider(provider as any),
       const signer = web3Provider.getSigner(),
-      const address = (await signer.getAddress()).toLowerCase(),
+      const address = (await signer.getAddress().toLowerCase(),
       const network = await web3Provider.getNetwork(),
 
       const nonceRes = await fetch('/api/auth/nonce'),
@@ -62,8 +61,7 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
       setError(e?.message || 'Wallet connection failed')
     } finally {
       setLoading(false)
-    }
-  }, [onClose, onLoggedIn]),
+    }, [onClose, onLoggedIn]),
 
   const handlePhantomConnect = useCallback(async () => {
     setError(null),
@@ -83,7 +81,7 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
       const message = `Sign-in with Solana\n\n${statement}\nNonce: ${nonce}\nAddress: ${publicKey}\nIssued At: ${new Date().toISOString()}`,
       const encodedMessage = new TextEncoder().encode(message),
       const { signature } = await provider.signMessage(encodedMessage, 'utf8'),
-      const bs58 = (await import('bs58')).default,
+      const bs58 = (await import('bs58').default,
 
       const verifyRes = await fetch('/api/auth/verify-sol', {
         method: 'POST',
@@ -98,8 +96,7 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
       setError(e?.message || 'Phantom connection failed')
     } finally {
       setLoading(false)
-    }
-  }, [onClose, onLoggedIn]),
+    }, [onClose, onLoggedIn]),
   if (!isOpen) return null,
 
   return (
@@ -125,7 +122,6 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
       </div>
     </div>
   )
-}
 
 export default function Web3LoginModal(props: Web3LoginModalProps) {
   if (!isClient) return null,

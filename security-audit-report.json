@@ -1,4 +1,4 @@
-{
+
   "timestamp": "2025-09-06T00:07:28.790Z",
   "vulnerabilities": [
     {
@@ -10,7 +10,7 @@
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
+
   ],
   "securityIssues": [
     {
@@ -135,7 +135,7 @@
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
+
   ],
   "recommendations": [
     {
@@ -155,10 +155,9 @@
     "securityScore": 90,
     "status": "good"
   }
-}
+
     "Review and remove any hardcoded secrets",
     "Update outdated dependencies",
     "Implement proper environment variable management",
     "Add security headers to Next.js configuration"
   ]
-}

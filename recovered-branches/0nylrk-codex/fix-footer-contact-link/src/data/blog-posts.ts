@@ -1,5 +1,5 @@
 import { BlogPost } from '@/types/blog';
-// Sample blog data - in a real app this would come from an API or CMS
+/ Sample blog data - in a real app this would come from an API or CMS
 export const BLOG_POSTS: BlogPost[] = [
   {
     id: 'ai-trends-2025',
@@ -10,7 +10,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "10 Emerging AI Trends to Watch in 2025";
 
 import { BlogPost } from "@/types/blog";
-// Sample blog data - in a real app this would come from an API or CMS
+/ Sample blog data - in a real app this would come from an API or CMS
 export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "ai-trends-2025",
@@ -309,8 +309,8 @@ export const BLOG_POSTS: BlogPost[] = [
     tags: ["AI Infrastructure", "Cost Optimization", "Machine Learning", "Computing"];
     featured_image: "https://images.unsplash.com / photo - 1558494949 - ef010cbdcc31?auto = format & fit = crop & w=1200 & h=630";
   }
+;
 ];
-}];
     }
     publishedDate: 'Mar 15, 2025'
     readTime: '6 min read'
@@ -323,9 +323,6 @@ export const BLOG_POSTS: BlogPost[] = [
     ]
     featuredImage:
       'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&h=630'
-  }
   },
-];
-}];
-
 ;
+];

@@ -13,8 +13,7 @@ export interface PerformanceMetrics {;
   accessibilityScore:number,;
   bestPracticesScore:number,;
   seoScore:number;
-}
-;
+
 export interface PerformanceAlert {;
   id:string,;
   url:string,;
@@ -25,8 +24,7 @@ export interface PerformanceAlert {;
   currentValue:number,;
   timestamp:Date,;
   resolved:boolean;
-}
-;
+
 export interface MonitoringConfig {;
   urls:string[],;
   frequency:'1min' | '5min' | '15min' | '1hour' | '6hours' | 'daily',;
@@ -41,16 +39,16 @@ export interface MonitoringConfig {;
     slack:boolean,;
     webhook:boolean;
   },;}
-;
+
 export class PerformanceMonitorService {;
   private apiKey:string,;
   private baseUrl:string,;
-;
+
   constructor(apiKey:string, baseUrl:string = 'https://api.ziontech.ai') {;
     this.apiKey = apiKey,;
     this.baseUrl = baseUrl;
   }
-;
+
   async monitorWebsite(url:string):Promise<PerformanceMetrics> {;
     try {;
       // In a real implementation, this would use Lighthouse, WebPageTest, or similar;
@@ -60,35 +58,33 @@ export class PerformanceMonitorService {;
           'Authorization':`Bearer ${this.apiKey}`,;
           'Content-Type':'application/json'},;
         body:JSON.stringify({ url })}),;
-;
+
       if (!response.ok) {;
         throw new Error(`Performance monitoring failed:${response.statusText}`),;
       }
-;
+
       return await response.json(),;
     } catch (error) {;
       // Fallback to mock data for demo purposes;
       return this.generateMockMetrics(url),;
     }
-  }
-;
+
   async getHistoricalData(url:string, days:number = 30):Promise<PerformanceMetrics[]> {;
     try {;
       const response = await fetch(`${this.baseUrl}/performance/history?url=${encodeURIComponent(url)}&days=${days}`, {;
         headers:{;
-          'Authorization':`Bearer ${this.apiKey}`}}),;
-;
+          'Authorization':`Bearer ${this.apiKey}`}),;
+
       if (!response.ok) {;
         throw new Error(`Failed to fetch historical data:${response.statusText}`),;
       }
-;
+
       return await response.json(),;
     } catch (error) {;
       // Generate mock historical data;
       return this.generateMockHistoricalData(url, days),;
     }
-  }
-;
+
   async setMonitoringConfig(config:MonitoringConfig):Promise<void> {;
     try {;
       const response = await fetch(`${this.baseUrl}/performance/config`, {;
@@ -97,34 +93,31 @@ export class PerformanceMonitorService {;
           'Authorization':`Bearer ${this.apiKey}`,;
           'Content-Type':'application/json'},;
         body:JSON.stringify(config)}),;
-;
+
       if (!response.ok) {;
         throw new Error(`Failed to set monitoring config:${response.statusText}`),;
-      }
-    } catch (error) {;
+      } catch (error) {;
       console.error('Failed to set monitoring config:', error),;
       throw error,;
     }
-  }
-;
+
   async getAlerts(url?:string):Promise<PerformanceAlert[]> {;
     try {;
       const params = url ? `?url=${encodeURIComponent(url)}` :'',;
       const response = await fetch(`${this.baseUrl}/performance/alerts${params}`, {;
         headers:{;
-          'Authorization':`Bearer ${this.apiKey}`}}),;
-;
+          'Authorization':`Bearer ${this.apiKey}`}),;
+
       if (!response.ok) {;
         throw new Error(`Failed to fetch alerts:${response.statusText}`),;
       }
-;
+
       return await response.json(),;
     } catch (error) {;
       // Generate mock alerts;
       return this.generateMockAlerts(url),;
     }
-  }
-;
+
   async generateReport(url:string, timeframe:'day' | 'week' | 'month'):Promise<{;
     summary:{;
       averageLoadTime:number,;
@@ -139,16 +132,15 @@ export class PerformanceMonitorService {;
     },;
     recommendations:string[];
   }> {;
-    const historicalData = await this.getHistoricalData(url, timeframe === 'day' ? 1 :timeframe === 'week' ? 7 :30),;
-    ;
+    const historicalData = await this.getHistoricalData(url, timeframe = = 'day' ? 1 :timeframe = = 'week' ? 7 :30),;
     const loadTimes = historicalData.map(d => d.loadTime),;
     const performanceScores = historicalData.map(d => d.performanceScore),;
     const dates = historicalData.map(d => d.timestamp.toISOString().split('T')[0]),;
-;
+
     return {;
       summary:{;
-        averageLoadTime:loadTimes.reduce((a, b) => a + b, 0) / loadTimes.length,;
-        averagePerformanceScore:performanceScores.reduce((a, b) => a + b, 0) / performanceScores.length,;
+        averageLoadTime:loadTimes.reduce(a, b) => a + b, 0) / loadTimes.length,;
+        averagePerformanceScore:performanceScores.reduce(a, b) => a + b, 0) / performanceScores.length,;
         uptime:99.8,;
         alertsCount:Math.floor(Math.random() * 5);
       },;
@@ -164,7 +156,7 @@ export class PerformanceMonitorService {;
       ];
     },;
   }
-;
+
   private generateMockMetrics(url:string):PerformanceMetrics {;
     return {;
       url,;
@@ -183,15 +175,14 @@ export class PerformanceMonitorService {;
       seoScore:Math.floor(Math.random() * 20) + 80;
     },;
   }
-;
+
   private generateMockHistoricalData(url:string, days:number):PerformanceMetrics[] {;
     const data:PerformanceMetrics[] = [],;
     const now = new Date(),;
-;
+
     for (let i = days - 1, i >= 0, i--) {;
       const date = new Date(now),;
       date.setDate(date.getDate() - i),;
-      ;
       data.push({;
         url,;
         timestamp:date,;
@@ -209,10 +200,10 @@ export class PerformanceMonitorService {;
         seoScore:Math.floor(Math.random() * 20) + 80;
       }),;
     }
-;
+
     return data,;
   }
-;
+
   private generateMockAlerts(url?:string):PerformanceAlert[] {;
     const alerts:PerformanceAlert[] = [;
       {;
@@ -238,12 +229,11 @@ export class PerformanceMonitorService {;
         resolved:true;
       }
     ],;
-;
-    return url ? alerts.filter(a => a.url === url) :alerts,;
+
+    return url ? alerts.filter(a => a.url = = url) :alerts,;
   }
-}
-;
-// Pricing tiers for the Performance Monitor;
+
+/ Pricing tiers for the Performance Monitor;
 export const PERFORMANCE_MONITOR_PRICING = {;
   starter:{;
     name:'Starter',;
@@ -278,43 +268,41 @@ export const PERFORMANCE_MONITOR_PRICING = {;
       'SLA guarantee';
     ];
   }
-},; async monitorWebsite (url: string) : Promise<PerformanceMetrics> {
+,; async monitorWebsite (url: string) : Promise<PerformanceMetrics> {
   try {
   // In a real implementation, this would use Lighthouse, WebPageTest, or similar const response = await fetch (`$ {
   this.baseUrl 
-}/performance/monitor`, {
+/performance/monitor`, {
   method: 'POST', headers: {
   'Authorization': `Bearer $ {
   this.apiKey 
-}`;
-'Content-Type': 'application/json' 
-};
-}async setMonitoringConfig (config: MonitoringConfig) : Promise<void> {
+`;
+Content-Type': 'application/json' 
+;
+async setMonitoringConfig (config: MonitoringConfig) : Promise<void> {
   try {
   const response = await fetch (`$ {
   this.baseUrl 
-}/performance/config`, {
+/performance/config`, {
   method: 'POST', headers: {
   'Authorization': `Bearer $ {
   this.apiKey 
-}`;
-'Content-Type': 'application/json' 
-};
-body: JSON.stringify (config) 
-});
+`;
+Content-Type': 'application/json' 
+;
+body: JSON.stringify (config);
 return {
   summary: {
-  averageLoadTime: loadTimes.reduce ( (a, b) => a + b, 0) / loadTimes.length, averagePerformanceScore: performanceScores.reduce ( (a, b) => a + b, 0) / performanceScores.length, uptime: 99.8, alertsCount: Math.floor (Math.random () * 5) 
-};
+  averageLoadTime: loadTimes.reduce (a, b) => a + b, 0) / loadTimes.length, averagePerformanceScore: performanceScores.reduce (a, b) => a + b, 0) / performanceScores.length, uptime: 99.8, alertsCount: Math.floor (Math.random () * 5) 
+;
 trends: {
   loadTime: loadTimes, performanceScore: performanceScores, dates 
-};
+;
 recommendations: [ 'Optimize image sizes and use WebP formatImplement lazy loading for below-the-fold contentMinimize render-blocking resourcesUse a CDN for static assetsEnable compression for text-based resources' ] 
-}
-}
-}return data 
-}private generateMockAlerts (url?: string) : PerformanceAlert[] {
+
+return data 
+private generateMockAlerts (url?: string) : PerformanceAlert[] {
   const alerts: PerformanceAlert[] = [ {
-  return url ? alerts.filter (a => a.url === url) : alerts 
-}
-}// Pricing tiers for the Performance Monitor 
+  return url ? alerts.filter (a => a.url = = url) : alerts 
+
+// Pricing tiers for the Performance Monitor 

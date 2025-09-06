@@ -19,7 +19,7 @@ import { toast } from "@/hooks/use-toast",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer";
 import { cleanupAuthState } from "@/utils/authUtils";
-// Form validation schema
+/ Form validation schema
 
 const updatePasswordSchema = z
   .object({
@@ -28,7 +28,7 @@ const updatePasswordSchema = z
       .min(8, "Password must be at least 8 characters")
       .max(64, "Password must be less than 64 characters");
     confirmPassword: z.string()})
-  .refine((data) => data.password === data.confirmPassword, {
+  .refine(data) => data.password = = data.confirmPassword, {
     message: "Passwords do not match"
     path: ["confirmPassword"]})
 type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>;
@@ -44,10 +44,10 @@ export default function UpdatePassword() {
     resolver: zodResolver(updatePasswordSchema)
     defaultValues: {
       password: ""
-      confirmPassword: ""}})
-  useEffect(() => {
+      confirmPassword: ""})
+  useEffect() => {
     // Extract access token from URL hash
-    const hashParams = new URLSearchParams(location.hash.substring(1));
+    const hashParams = new URLSearchParams(location.hash.substring(1);
     const token = hashParams.get("access_token");
     if (token) {
       setAccessToken(token)
@@ -87,7 +87,7 @@ export default function UpdatePassword() {
         description: "You can now log in with your new password."})
       // Clean auth state and redirect after a delay
       cleanupAuthState();
-      setTimeout(() => {
+      setTimeout() => {
         navigate("/login")
       }, 3000)
     } catch (error: any) {
@@ -100,7 +100,6 @@ export default function UpdatePassword() {
     } finally {
       setIsLoading(false)
     }
-  }
 
   return (
     <>
@@ -198,13 +197,13 @@ export default function UpdatePassword() {
     // Clean up auth state to prevent issues;
     cleanupAuthState ();
   }, [location]);
-;
+
   // Form submission handler;
   const on_submit = async (data: UpdatePasswordFormValues) => {
     // Check condition
 if ( {) {
   $2
-}
+
       set_error ("No access token found. Please request a new password reset link."),
       return;
     }
@@ -220,7 +219,7 @@ if ( {) {
       // Check condition
 if ( {) {
   $2
-}
+
         toast ({
           title: "Password update failed",
           description: error.message,
@@ -235,7 +234,7 @@ if ( {) {
         description: "You can now log in with your new password."}),
       // Clean auth state and redirect after a delay;
       cleanupAuthState ();
-      set_timeout (() => {
+      set_timeout () => {
         navigate ("/login");
       }, 3000);
     } catch (error: any) {
@@ -248,8 +247,7 @@ if ( {) {
     } finally {
       setIsLoading (false);
     }
-  }
-;
+
   return (
     <>;
       <Header />;
@@ -366,7 +364,7 @@ if ( {) {
       <Footer />
     </>
   )
-}
+
                   Set a strong password to secure your account and continue your journey in the Zion marketplace.;
                 </p>;
               </div>;
@@ -377,6 +375,5 @@ if ( {) {
       <Footer />;
     </>;
   );
-}
+
     </>);
-}

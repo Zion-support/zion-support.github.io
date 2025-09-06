@@ -237,7 +237,7 @@ import {;
   Users as UsersIcon2,;
   Target as TargetIcon,;
   Zap as ZapIcon2,;
-} from 'lucide-react';
+ from 'lucide-react';
 import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
 
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
@@ -288,28 +288,26 @@ export default function Revolutionary2025Pricing() {
   ];
   // Filter services based on selected category
   const filteredServices =
-    selectedCategory === 'all'
+    selectedCategory = = 'all'
       ? allRevolutionaryServices
       : allRevolutionaryServices.filter(service => {
-          if (selectedCategory === 'ai') return service.category.includes('AI');
-          if (selectedCategory === 'infrastructure')
+          if (selectedCategory = = 'ai') return service.category.includes('AI');
+          if (selectedCategory = = 'infrastructure')
             return (
               service.category.includes('IT') |
               service.category.includes('Network') |
-              service.category.includes('Computing')
-            );
-          if (selectedCategory === 'saas');
+              service.category.includes('Computing');
+          if (selectedCategory = = 'saas');
             return (
               service.category.includes('AI') |
               service.category.includes('Virtual') |
-              service.category.includes('Creative')
-            );
+              service.category.includes('Creative');
           return true;
         });
   // Calculate pricing with billing cycle
   const getPrice = (service: any) => {
-    const basePrice = parseInt(service.price.replace('$', '').replace(',', ''));
-    if (billingCycle === 'yearly') {
+    const basePrice = parseInt(service.price.replace('$', '').replace(',', '');
+    if (billingCycle = = 'yearly') {
       return Math.floor(basePrice * 0.8); // 20% discount for yearly
     }
   // Pricing tiers for comparison
@@ -317,9 +315,9 @@ export default function Revolutionary2025Pricing() {
     {
       name: 'Starter'
       description: 'Perfect for small businesses and startups'
-      price: billingCycle === 'monthly' ? 99 : 79
-      period: billingCycle === 'monthly' ? '/month' : '/month'
-      savings: billingCycle === 'yearly' ? 'Save 20%' : ''
+      price: billingCycle = = 'monthly' ? 99 : 79
+      period: billingCycle = = 'monthly' ? '/month' : '/month'
+      savings: billingCycle = = 'yearly' ? 'Save 20%' : ''
       features: [
         'Access to 25+ Core Services'
         'Basic AI Integration'
@@ -338,9 +336,9 @@ export default function Revolutionary2025Pricing() {
     },    {
       name: 'Professional'
       description: 'Ideal for growing businesses and teams'
-      price: billingCycle === 'monthly' ? 299 : 239
-      period: billingCycle === 'monthly' ? '/month' : '/month'
-      savings: billingCycle === 'yearly' ? 'Save 20%' : ''
+      price: billingCycle = = 'monthly' ? 299 : 239
+      period: billingCycle = = 'monthly' ? '/month' : '/month'
+      savings: billingCycle = = 'yearly' ? 'Save 20%' : ''
       features: [
         'Access to 50+ Services'
         'Advanced AI Integration'
@@ -361,9 +359,9 @@ export default function Revolutionary2025Pricing() {
     },    {
       name: 'Enterprise'
       description: 'For large organizations and enterprises'
-      price: billingCycle === 'monthly' ? 999 : 799
-      period: billingCycle === 'monthly' ? '/month' : '/month'
-      savings: billingCycle === 'yearly' ? 'Save 20%' : ''
+      price: billingCycle = = 'monthly' ? 999 : 799
+      period: billingCycle = = 'monthly' ? '/month' : '/month'
+      savings: billingCycle = = 'yearly' ? 'Save 20%' : ''
       features: [
         'Access to ALL Services'
         'Full AI & Quantum Integration'
@@ -399,9 +397,9 @@ export default function Revolutionary2025Pricing() {
     {;
       name: 'Starter',;
       description: 'Perfect for small businesses and startups',;
-      price: billingCycle === 'monthly' ? 99 : 79,;
-      period: billingCycle === 'monthly' ? '/month' : '/month',;
-      savings: billingCycle === 'yearly' ? 'Save 20%' : '',;
+      price: billingCycle = = 'monthly' ? 99 : 79,;
+      period: billingCycle = = 'monthly' ? '/month' : '/month',;
+      savings: billingCycle = = 'yearly' ? 'Save 20%' : '',;
       features: [;
         'Access to 25+ Core Services',;
         'Basic AI Integration',;
@@ -420,9 +418,9 @@ export default function Revolutionary2025Pricing() {
     },    {;
       name: 'Professional',;
       description: 'Ideal for growing businesses and teams',;
-      price: billingCycle === 'monthly' ? 299 : 239,;
-      period: billingCycle === 'monthly' ? '/month' : '/month',;
-      savings: billingCycle === 'yearly' ? 'Save 20%' : '',;
+      price: billingCycle = = 'monthly' ? 299 : 239,;
+      period: billingCycle = = 'monthly' ? '/month' : '/month',;
+      savings: billingCycle = = 'yearly' ? 'Save 20%' : '',;
       features: [;
         'Access to 50+ Services',;
         'Advanced AI Integration',;
@@ -443,9 +441,9 @@ export default function Revolutionary2025Pricing() {
     },    {;
       name: 'Enterprise',;
       description: 'For large organizations and enterprises',;
-      price: billingCycle === 'monthly' ? 999 : 799,;
-      period: billingCycle === 'monthly' ? '/month' : '/month',;
-      savings: billingCycle === 'yearly' ? 'Save 20%' : '',;
+      price: billingCycle = = 'monthly' ? 999 : 799,;
+      period: billingCycle = = 'monthly' ? '/month' : '/month',;
+      savings: billingCycle = = 'yearly' ? 'Save 20%' : '',;
       features: [;
         'Access to ALL Services',;
         'Full AI & Quantum Integration',;
@@ -526,9 +524,9 @@ export default function Revolutionary2025Pricing() {
     {
       name: 'Professional',
       description: 'Ideal for growing businesses and teams',
-      price: billingCycle === 'monthly' ? 299 : 239,
-      period: billingCycle === 'monthly' ? '/month' : '/month',
-      savings: billingCycle === 'yearly' ? 'Save 20%' : '',
+      price: billingCycle = = 'monthly' ? 299 : 239,
+      period: billingCycle = = 'monthly' ? '/month' : '/month',
+      savings: billingCycle = = 'yearly' ? 'Save 20%' : '',
       features: [
         'Access to 50+ ServicesAdvanced AI IntegrationPriority Support (24/7)60-Day Free TrialAdvanced Analytics DashboardPhone & Email Support99.9% Uptime GuaranteeAdvanced Security Features';
         'Custom IntegrationsPerformance Monitoring'
@@ -542,9 +540,9 @@ export default function Revolutionary2025Pricing() {
     {
       name: 'Enterprise',
       description: 'For large organizations and enterprises',
-      price: billingCycle === 'monthly' ? 999 : 799,
-      period: billingCycle === 'monthly' ? '/month' : '/month',
-      savings: billingCycle === 'yearly' ? 'Save 20%' : '',
+      price: billingCycle = = 'monthly' ? 999 : 799,
+      period: billingCycle = = 'monthly' ? '/month' : '/month',
+      savings: billingCycle = = 'yearly' ? 'Save 20%' : '',
       features: [
         'Access to ALL ServicesFull AI & Quantum IntegrationDedicated Support Team90-Day Free TrialEnterprise Analytics Suite24/7 Dedicated Support99.99% Uptime GuaranteeEnterprise Security Features';
         'Custom DevelopmentWhite-label SolutionsAPI AccessSLA Guarantees'
@@ -559,53 +557,53 @@ export default function Revolutionary2025Pricing() {
 
   // Market analysis
   const marketAnalysis = {
-;
+
   // Filter services based on selected category;
   const filtered_services =;
-    selected_category === 'all';
+    selected_category = = 'all';
       ? allRevolutionaryServices;
       : allRevolutionaryServices.filter (service => {
-          if (return service.category.includes ('AI')) {
+          if (return service.category.includes ('AI') {
   $2
-}
+
           // Check condition
 if (
             return () {
   $2
-}
+
               service.category.includes ('IT') ||;
               service.category.includes ('Network') ||;
-              service.category.includes ('Computing'));
+              service.category.includes ('Computing');
           // Check condition
 if (
             return () {
   $2
-}
+
               service.category.includes ('AI') ||;
               service.category.includes ('Virtual') ||;
-              service.category.includes ('Creative'));
+              service.category.includes ('Creative');
           return true;
         });
-;
+
   // Calculate pricing with billing cycle;
   const get_price = (service: any) =>: any {
-    const base_price = parse_int (service.price.replace ('$', '').replace (', ', ''));
+    const base_price = parse_int (service.price.replace ('$', '').replace (', ', '');
     // Check condition
 if ( {) {
   $2
-}
+
       return Math.floor (base_price * 0.8); // 20% discount for yearly;
     }
     return base_price;  }
-;
+
   // Pricing tiers for comparison;
   const pricing_tiers = [;
     {
       name: 'Starter',
       description: 'Perfect for small businesses and startups',
-      price: billing_cycle === 'monthly' ? 99 : 79,
-      period: billing_cycle === 'monthly' ? '/month' : '/month',
-      savings: billing_cycle === 'yearly' ? 'Save 20%' : '',
+      price: billing_cycle = = 'monthly' ? 99 : 79,
+      period: billing_cycle = = 'monthly' ? '/month' : '/month',
+      savings: billing_cycle = = 'yearly' ? 'Save 20%' : '',
       features: [;
         'Access to 25+ Core Services',
         'Basic AI Integration',
@@ -624,9 +622,9 @@ if ( {) {
     },    {
       name: 'Professional',
       description: 'Ideal for growing businesses and teams',
-      price: billing_cycle === 'monthly' ? 299 : 239,
-      period: billing_cycle === 'monthly' ? '/month' : '/month',
-      savings: billing_cycle === 'yearly' ? 'Save 20%' : '',
+      price: billing_cycle = = 'monthly' ? 299 : 239,
+      period: billing_cycle = = 'monthly' ? '/month' : '/month',
+      savings: billing_cycle = = 'yearly' ? 'Save 20%' : '',
       features: [;
         'Access to 50+ Services',
         'Advanced AI Integration',
@@ -647,9 +645,9 @@ if ( {) {
     },    {
       name: 'Enterprise',
       description: 'For large organizations and enterprises',
-      price: billing_cycle === 'monthly' ? 999 : 799,
-      period: billing_cycle === 'monthly' ? '/month' : '/month',
-      savings: billing_cycle === 'yearly' ? 'Save 20%' : '',
+      price: billing_cycle = = 'monthly' ? 999 : 799,
+      period: billing_cycle = = 'monthly' ? '/month' : '/month',
+      savings: billing_cycle = = 'yearly' ? 'Save 20%' : '',
       features: [;
         'Access to ALL Services',
         'Full AI & Quantum Integration',
@@ -670,7 +668,7 @@ if ( {) {
       cta: 'Contact Sales',
       cta_variant: 'primary' as const,
     },  ];
-;
+
   // Market analysis;
   const market_analysis = {
     totalMarketSize: '$150B+',
@@ -702,9 +700,9 @@ if ( {) {
         {/* Hero Section */}
         <section className='relative py-20 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-7xl mx-auto text-center'>            <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
             >
               <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6'>
                 Revolutionary 2025 Pricing
@@ -719,22 +717,21 @@ if ( {) {
                 lower costs than traditional solutions.;
               </p>;
 
-
               {/* Billing Toggle */}
               <div className='flex items-center justify-center gap-4 mb-12'>;
                 <span className='text-gray-400'>Monthly</span>;
                 <button
                   onClick={() =>;
                     setBillingCycle(;
-                      billingCycle === 'monthly' ? 'yearly' : 'monthly';
+                      billingCycle = = 'monthly' ? 'yearly' : 'monthly';
                     );
                   }                  className={`relative inline-flex h-8 w-16 items-center rounded-full transition-colors ${;
-                    billingCycle === 'yearly' ? 'bg-blue-600' : 'bg-gray-600';
+                    billingCycle = = 'yearly' ? 'bg-blue-600' : 'bg-gray-600';
                   }`}
                 >;
                   <span
                     className={`inline-block h-6 w-6 transform rounded-full bg-white transition-transform ${
-                      billingCycle === 'yearly'
+                      billingCycle = = 'yearly'
                         ? 'translate-x-8'
                         : 'translate-x-1'
                     }`}
@@ -745,21 +742,21 @@ if ( {) {
               {/* Market Analysis */}
               <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-12'>;
                 <motion&& motion.div
-                  initial={{ opacity: 0, scale: 0 && 0.8 }}
+                  initial={ opacity: 0, scale: 0 && 0.8 }
               {/* Billing Toggle */}
               <div className='flex items - center justify - center gap - 4 mb - 12'>;
                 <span className='text - gray - 400'>Monthly</span>;
                 <button;
                   on_click={() =>;
                     setBillingCycle (
-                      billing_cycle === 'monthly' ? 'yearly' : 'monthly');
+                      billing_cycle = = 'monthly' ? 'yearly' : 'monthly');
                   }                  className={`relative inline - flex h - 8 w - 16 items - center rounded - full transition - colors ${
-                    billing_cycle === 'yearly' ? 'bg - blue - 600' : 'bg - gray - 600';
+                    billing_cycle = = 'yearly' ? 'bg - blue - 600' : 'bg - gray - 600';
                   }`}
                 >;
                   <span;
                     className={`inline - block h - 6 w - 6 transform rounded - full bg - white transition - transform ${
-                      billing_cycle === 'yearly';
+                      billing_cycle = = 'yearly';
                         ? 'translate - x-8';
                         : 'translate - x-1';
                     }`}
@@ -770,9 +767,9 @@ if ( {) {
               {/* Market Analysis */}
               <div className='grid grid - cols - 2 md:grid - cols - 3 lg:grid - cols - 6 gap - 6 mb - 12'>;
                 <motion.div;
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.6, delay: 0.1 }}
+                  initial={ opacity: 0, scale: 0.8 }
+                  animate={ opacity: 1, scale: 1 }
+                  transition={ duration: 0.6, delay: 0.1 }
                   className='bg-gradient-to-br from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-4 border border-blue-500/30'
                 >
                   <div className='text-2xl font-bold text-blue-400'>
@@ -781,9 +778,9 @@ if ( {) {
                   <div className='text-xs text-gray-400'>Market Size</div>
                 </motion.div>
                 <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
+                  initial={ opacity: 0, scale: 0.8 }
+                  animate={ opacity: 1, scale: 1 }
+                  transition={ duration: 0.6, delay: 0.2 }
                   className='bg-gradient-to-br from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-2xl p-4 border border-green-500/30'
                 >
                   <div className='text-2xl font-bold text-green-400'>
@@ -792,9 +789,9 @@ if ( {) {
                   <div className='text-xs text-gray-400'>Growth Rate</div>
                 </motion.div>
                 <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.6, delay: 0.3 }}
+                  initial={ opacity: 0, scale: 0.8 }
+                  animate={ opacity: 1, scale: 1 }
+                  transition={ duration: 0.6, delay: 0.3 }
                   className='bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-4 border border-purple-500/30'
                 >
                   <div className='text-2xl font-bold text-purple-400'>
@@ -803,9 +800,9 @@ if ( {) {
                   <div className='text-xs text-gray-400'>Satisfaction</div>
                 </motion.div>
                 <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.6, delay: 0.4 }}
+                  initial={ opacity: 0, scale: 0.8 }
+                  animate={ opacity: 1, scale: 1 }
+                  transition={ duration: 0.6, delay: 0.4 }
                   className='bg-gradient-to-br from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-2xl p-4 border border-orange-500/30'
                 >
                   <div className='text-2xl font-bold text-orange-400'>
@@ -814,9 +811,9 @@ if ( {) {
                   <div className='text-xs text-gray-400'>Average ROI</div>
                 </motion.div>
                 <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.6, delay: 0.5 }}
+                  initial={ opacity: 0, scale: 0.8 }
+                  animate={ opacity: 1, scale: 1 }
+                  transition={ duration: 0.6, delay: 0.5 }
                   className='bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-4 border border-cyan-500/30'
                 >
                   <div className='text-2xl font-bold text-cyan-400'>
@@ -825,9 +822,9 @@ if ( {) {
                   <div className='text-xs text-gray-400'>Time to Value</div>
                 </motion.div>
                 <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.6, delay: 0.6 }}
+                  initial={ opacity: 0, scale: 0.8 }
+                  animate={ opacity: 1, scale: 1 }
+                  transition={ duration: 0.6, delay: 0.6 }
                   className='bg-gradient-to-br from-pink-600/20 to-rose-600/20 backdrop-blur-sm rounded-2xl p-4 border border-pink-500/30'
                 >
                   <div className='text-2xl font-bold text-pink-400'>
@@ -841,10 +838,10 @@ if ( {) {
         {/* Pricing Tiers */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-7xl mx-auto'>            <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }
+              viewport={ once: true }
               className='text-center mb-16'
             >
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
@@ -855,7 +852,7 @@ if ( {) {
                 include our revolutionary AI and quantum computing services.
               </p>
             </motion.div>
-            <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>              {pricingTiers.map((tier, index) => (
+            <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>              {pricingTiers.map(tier, index) => (
                 <motion.div
                   key={tier.name}
               className='text-center mb-16'>;
@@ -868,13 +865,13 @@ if ( {) {
               </p>;
             </motion && motion.div>;
 
-            <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>              {pricingTiers && pricingTiers.map((tier, index) => (;
+            <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>              {pricingTiers && pricingTiers.map(tier, index) => (;
                 <motion&& motion.div
                   key={tier && tier.name}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.6, delay: index * 0 && 0.2 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0 && 0.6, delay: index * 0 && 0.2 }
+                  viewport={ once: true }
                   className={`relative ${
                     tier && tier.popular
                       ? 'scale-105 border-2 border-blue-500'                      : 'border border-gray-700'
@@ -905,11 +902,11 @@ if ( {) {
                     )}
                   </div>
                   <ul className='space-y-4 mb-8'>
-                    {tier.features.map((feature, featureIndex) => (
+                    {tier.features.map(feature, featureIndex) => (
                       <li key={featureIndex} className='flex items-start gap-3'>
                         <Check className='w-5 h-5 text-green-400 mt-0.5 flex-shrink-0' />
                         <span className='text-gray-300'>{feature}</span>                      </li>
-                    ))}
+                    )}
                   </ul>
                   <button className='w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200'>                    {tier.cta}
                     )}
@@ -917,22 +914,22 @@ if ( {) {
 
                   </button>
                 </motion.div>
-              ))}
+              )}
             </div>
           </div>
         </section>
                   <ul className='space-y-4 mb-8'>;
-                    {tier && tier.features.map((feature, featureIndex) => (;
+                    {tier && tier.features.map(feature, featureIndex) => (;
                       <li key={featureIndex} className='flex items-start gap-3'>;
                         <Check className='w-5 h-5 text-green-400 mt-0 && 0.5 flex-shrink-0' />;
                         <span className='text-gray-300'>{feature}</span>                      </li>;
-                    ))}
+                    )}
                   </ul>;
 
                   <button className='w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200'>                    {tier && tier.cta}
                   </button>;
                 </motion && motion.div>;
-              ))}
+              )}
             </div>;
           </div>;
         </section>;
@@ -940,10 +937,10 @@ if ( {) {
         {/* Service Pricing Grid */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-7xl mx-auto'>            <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }
+              viewport={ once: true }
               className='text-center mb-16'
             >
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
@@ -968,7 +965,7 @@ if ( {) {
                   key={category && category.id}
                   onClick={() => setSelectedCategory(category && category.id)}
                   className={`flex items-center gap-2 px-6 py-3 rounded-full border transition-all duration-300 ${;
-                    selectedCategory === category && category.id;
+                    selectedCategory = = category && category.id;
                       ? 'bg-gradient-to-r from-blue-600 to-purple-600 border-blue-500 text-white';
                       : 'border-gray-600 text-gray-300 hover:border-blue-500 hover:text-blue-400';
                   }`}
@@ -978,16 +975,16 @@ if ( {) {
                   <span className='bg-white/20 px-2 py-1 rounded-full text-xs'>                    {category && category.count}
                   </span>;
                 </button>;
-              ))}
+              )}
             </div>
             {/* Services Grid */}
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
               {filteredServices && filteredServices.map(service => (                <motion&& motion.div
                   key={service && service.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.5, delay: 0 && 0.1 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, y: 20 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0 && 0.5, delay: 0 && 0.1 }
+                  viewport={ once: true }
                   className='group relative bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 hover:scale-105'>;
                   {/* Service Header */}
                   <div className='flex items-start justify-between mb-4'>;
@@ -1057,13 +1054,13 @@ if ( {) {
                       Key Features:;
                     </h4>;
                     <div className='grid grid-cols-1 gap-1'>;
-                      {service && service.features.slice(0, 3).map((feature, idx) => (;
+                      {service && service.features.slice(0, 3).map(feature, idx) => (;
                         <div
                           key={idx}
                           className='flex items-center gap-2 text-sm text-gray-400'>;
                           <div className='w-1 && 1.5 h-1 && 1.5 bg-blue-500 rounded-full'></div>                          {feature}
                         </div>;
-                      ))}
+                      )}
                       {service && service.features.length > 3 && (;
                         <div className='text-xs text-gray-500 mt-1'>                          +{service && service.features.length - 3} more features;
                         </div>;
@@ -1116,7 +1113,7 @@ if ( {) {
 
                   {/* Hover Effects */}
                   <div className='absolute inset-0 bg-gradient-to-r from-blue-600/5 to-purple-600/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none'></div>                </motion && motion.div>;
-              ))}
+              )}
             </div>
           </div>
         </section>
@@ -1128,10 +1125,10 @@ if ( {) {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
                 Ready to Get Started?
@@ -1182,7 +1179,7 @@ if ( {) {
         </section>
       </div>
     </UltraQuantumHolographicBackground>
-);
+;
                 Contact our team to discuss your specific needs and get a custom;
                 quote. We offer flexible pricing and payment options to fit your;
                 budget.;
@@ -1234,7 +1231,7 @@ if ( {) {
     </UltraQuantumHolographicBackground>;
   );
   )
-}
+
               <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6 mb - 8'>;
                 <div className='bg - gradient - to - br from - blue - 600 / 20 to - purple - 600 / 20 backdrop - blur - sm rounded - 2xl p - 6 border border - blue - 500 / 30'>;
                   <Phone className='w - 8 h - 8 text - blue - 400 mx - auto mb - 3' />;
@@ -1276,4 +1273,3 @@ if ( {) {
         </section>;
       </div>;
     </UltraQuantumHolographicBackground>);
-;

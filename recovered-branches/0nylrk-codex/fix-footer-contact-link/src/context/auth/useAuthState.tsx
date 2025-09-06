@@ -1,7 +1,7 @@
 
 import React, { useState } from "react",
 import type { UserProfile } from "@/types/auth";
-/**;
+**;
  * Custom hook to manage auth state;
  */;
 export function useAuthState() {;
@@ -18,4 +18,3 @@ export function useAuthState() {;
     onboardingStep;
     setOnboardingStep;
   }
-}

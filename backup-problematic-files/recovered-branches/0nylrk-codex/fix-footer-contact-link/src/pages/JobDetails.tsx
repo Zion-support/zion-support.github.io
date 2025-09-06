@@ -14,7 +14,7 @@ import useJobDetails from '@/hooks/useJobDetails',;
 import { ApplyToJobModal } from '@/components/messaging/job-application',;
 import { SEO } from '@/components/SEO',;
 import { useWhitelabel } from '@/context/WhitelabelContext',;
-;
+
 export default function JobDetails() {;
   // Cast to specify the expected route param type since useParams may be untyped;
   const { jobId } = useParams() as { jobId?:string },;
@@ -22,9 +22,8 @@ export default function JobDetails() {;
   const { user, isAuthenticated } = useAuth(),;
   const navigate = useNavigate(),;
   const { isWhitelabel, brandName } = useWhitelabel(),;
-  ;
   const [isApplyModalOpen, setIsApplyModalOpen] = useState(false),;
-;
+
   if (isLoading) {;
     return (;
       <div className="flex items-center justify-center min-h-screen">;
@@ -32,7 +31,7 @@ export default function JobDetails() {;
       </div>;
     ),;
   }
-;
+
   if (error || !job) {;
     return (;
       <>;
@@ -46,34 +45,34 @@ export default function JobDetails() {;
       </>;
     ),;
   }
-;
+
   const handleApply = () => {;
     if (!isAuthenticated) {;
       toast.error("Please log in to apply for this job"),;
-      navigate('/login?redirect=' + encodeURIComponent(`/jobs/${jobId}`)),;
+      navigate('/login?redirect=' + encodeURIComponent(`/jobs/${jobId}`),;
       return,;
     }
     ;
-    if (user?.userType !== "jobSeeker" && user?.userType !== "talent") {;
+    if (user?.userType != "jobSeeker" && user?.userType != "talent") {;
       toast.error("Only job seekers can apply for jobs"),;
       return,;
     }
     ;
     setIsApplyModalOpen(true),;
   },;
-;
+
   const handleApplySuccess = async (appliedJobId:string) => {;
     toast.success("Application submitted successfully!"),;
     setIsApplyModalOpen(false);
   },;
-;
+
   const formatBudget = (budget:any) => {;
     if (!budget) return "Not specified",;
     return `$${budget.min} - $${budget.max}`,;
   },;
-;
-  const isOwnJob = user?.id === job.client_id,;
-;
+
+  const isOwnJob = user?.id = = job.client_id,;
+
   return (;
     <>;
       <SEO ;
@@ -91,7 +90,6 @@ export default function JobDetails() {;
              Back to Jobs;
           </Button>;
         </div>;
-        ;
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">;
           <div className="lg:col-span-2">;
             <Card>;
@@ -114,21 +112,19 @@ export default function JobDetails() {;
                     {job.description}
                   </div>;
                 </div>;
-                ;
                 <div>;
                   <h3 className="font-semibold text-lg mb-3">Required Skills</h3>;
                   <div className="flex flex-wrap gap-2">;
-                    {job.skills?.map((skill:string, i:number) => (;
+                    {job.skills?.map(skill:string, i:number) => (;
                       <Badge key={i} variant="secondary">;
                         {skill}
                       </Badge>;
-                    ))}
+                    )}
                   </div>;
                 </div>;
               </CardContent>;
             </Card>;
           </div>;
-          ;
           <div>;
             <Card>;
               <CardContent className="pt-6 space-y-4">;
@@ -139,7 +135,6 @@ export default function JobDetails() {;
                     <p className="font-medium">{formatBudget(job.budget)}</p>;
                   </div>;
                 </div>;
-                ;
                 <div className="flex items-start">;
                   <Clock className="mt-1 h-5 w-5 text-muted-foreground" />;
                   <div className="ml-3">;
@@ -149,7 +144,6 @@ export default function JobDetails() {;
                     </p>;
                   </div>;
                 </div>;
-                ;
                 <div className="flex items-start">;
                   <Briefcase className="mt-1 h-5 w-5 text-muted-foreground" />;
                   <div className="ml-3">;
@@ -157,7 +151,6 @@ export default function JobDetails() {;
                     <p className="font-medium">Freelance / Remote</p>;
                   </div>;
                 </div>;
-                ;
                 {!isOwnJob && (;
                   <Button ;
                     className="w-full mt-4" ;
@@ -179,18 +172,17 @@ export default function JobDetails() {;
         </div>;
       </main>;
       <Footer />;
-      ;
       {/* Job application modal */}
       {job && (;
         <ApplyToJobModal;
-          job={{;
+          job={;
             id:job.id,;
             title:job.title,;
             description:job.description,;
             company_name:job.company_name || "Company",;
             budget:job.budget,;
             client_id:job.client_id;
-          }}
+          }
           isOpen={isApplyModalOpen}
           onClose={() => setIsApplyModalOpen(false)}
         />;
@@ -201,36 +193,34 @@ export default function JobDetails() {;
 if (error || !job) {
   return (<> <Header /> <div className="container mx-auto px-4 py-16 text-center" > <h1 className="text-2xl font-bold mb-4" >Job Not Found</h1> <p className="mb-8" >The job you're looking for doesn't exist or has been removed.</p> <Button onClick= {
   () => navigate ('/jobs') 
-}>View All Jobs</Button> </div> <Footer /> </>) 
-}navigate ('/login?redirect=' + encodeURIComponent (`/jobs/$ {
+>View All Jobs</Button> </div> <Footer /> </>) 
+navigate ('/login?redirect=' + encodeURIComponent (`/jobs/$ {
   jobId 
-}`) );
+`);
 return;
-}setIsApplyModalOpen (true) 
-};
-const isOwnJob = user?.id === job.client id;
-`$ {
+setIsApplyModalOpen (true) 
+;
+const isOwnJob = user?.id = = job.client id;
+$ {
   job.title 
-}- $ {
+- $ {
   isWhitelabel ? brandName : 'Zion AI Marketplace' 
-}` 
-}description= {
+` 
+description= {
   job.description.substring (0, 160) 
-}/> <Header /> <main className="container mx-auto px-4 py-8" > <div className="mb-6" > <Button >  Back to Jobs </Button> </div> <div className="grid grid-cols-1 lg:grid-cols-3 gap-6" > <div className="lg:col-span-2" > <Card> <CardHeader> <div className="flex justify-between items-start" > <div> </div> </div> <Badge> {
+/> <Header /> <main className="container mx-auto px-4 py-8" > <div className="mb-6" > <Button >  Back to Jobs </Button> </div> <div className="grid grid-cols-1 lg:grid-cols-3 gap-6" > <div className="lg:col-span-2" > <Card> <CardHeader> <div className="flex justify-between items-start" > <div></div> </div> <Badge> {
   job.category 
-}</Badge> </div> </CardHeader> <CardContent className="space-y-6" > <div> </div> </div> <div> </Badge>) ) 
-}</div> </div> </CardContent> </Card> </div> <div> <Card> </p> </div> </div> <div className="flex items-start" > <Briefcase className="mt-1 h-5 w-5 text-muted-foreground" /> <div className="ml-3" > <p className="text-sm text-muted-foreground" >Job Type</p> <p className="font-medium" >Freelance / Remote</p> </div> </div> {
+</Badge> </div> </CardHeader> <CardContent className="space-y-6" > <div></div> </div> <div></Badge>) 
+</div> </div> </CardContent> </Card> </div> <div> <Card></p> </div> </div> <div className="flex items-start" > <Briefcase className="mt-1 h-5 w-5 text-muted-foreground" /> <div className="ml-3" > <p className="text-sm text-muted-foreground" >Job Type</p> <p className="font-medium" >Freelance / Remote</p> </div> </div> {
   !isOwnJob && (<Button className="w-full mt-4" onClick= {
   handleApply 
-}disabled= {
+disabled= {
   isOwnJob 
-}> Apply Now </Button>) 
-}</div>) 
-}</CardContent> </Card> </div> </div> </main> <Footer /> {
+> Apply Now </Button>) 
+</div>) 
+</CardContent> </Card> </div> </div> </main> <Footer /> {
   /* Job application modal */ 
-}{
+{
   job && (<ApplyToJobModal job= {
-  {
   />) 
-}</>) 
-}
+</>) 

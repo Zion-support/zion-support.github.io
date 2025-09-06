@@ -5,7 +5,7 @@ import Head from 'next/head';
 interface ProviderMeta {;
 import React, { useState } from 'react';
 import Head from 'next / head';
-;
+
 interface ProviderMeta {
   id: string;
   name: string;
@@ -15,11 +15,11 @@ interface ConnectionMap {
   [providerId: string]: any
 function StatusIcon({
   status
-}: {
+: {
   status: 'connected' | 'warning' | 'disconnected'
-}) {
+) {
   const label =
-    status === 'connected' ? '' : status === 'warning' ? '' : '';
+    status = = 'connected' ? '' : status = = 'warning' ? '' : '';
   return (
     <span className='text-xl' title={status}>;
       {label}
@@ -43,13 +43,13 @@ const AdminIntegrationsPage: React.FC = () => {  const [providers, setProviders]
   });
   async function refresh() {
     const [p, s] = await Promise.all([
-      fetch('/api/integrations/providers').then(r => r.json())
-      fetch('/api/integrations/status').then(r => r.json())
+      fetch('/api/integrations/providers').then(r => r.json()
+      fetch('/api/integrations/status').then(r => r.json()
     ]);
     setProviders(p.providers |[]);
     setConnections(s.connections |{});
   }
-  useEffect(() => {
+  useEffect() => {
     refresh();
   }, []);
   async function connect(providerId: string) {
@@ -61,7 +61,7 @@ const AdminIntegrationsPage: React.FC = () => {  const [providers, setProviders]
         'oauth'
         'width=500,height=700'
       );
-      await new Promise(r => setTimeout(r, 500));
+      await new Promise(r => setTimeout(r, 500);
       await fetch('/api/integrations/connect', {
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
@@ -70,7 +70,7 @@ const AdminIntegrationsPage: React.FC = () => {  const [providers, setProviders]
       await refresh();
     } finally {;
       setLoading(false);
-    }  }
+    }
   async function disconnect(providerId: string) {
     setLoading(true)
     try {
@@ -82,7 +82,7 @@ const AdminIntegrationsPage: React.FC = () => {  const [providers, setProviders]
       await refresh();
     } finally {;
       setLoading(false);
-    }  }
+    }
   async function resync(providerId: string) {
     setLoading(true)
     try {
@@ -95,29 +95,27 @@ const AdminIntegrationsPage: React.FC = () => {  const [providers, setProviders]
     } finally {;
       setLoading(false);
     }
-  }
-  const grouped = useMemo(
-    () => ({
-      crm: providers.filter(p => p.category === 'crm')
-      ats: providers.filter(p => p.category === 'ats')
+  const grouped = useMemo() => ({
+      crm: providers.filter(p => p.category = = 'crm')
+      ats: providers.filter(p => p.category = = 'ats')
     })
     [providers]
   );
   function Card({ p }: { p: ProviderMeta }) {
     const conn = connections[p.id] |{ status: 'disconnected' }
-    const isConnected = conn.status === 'connected';
+    const isConnected = conn.status = = 'connected';
 
   const grouped = useMemo(;
     () => ({;
-      crm: providers && providers.filter(p => p && p.category === 'crm'),;
-      ats: providers && providers.filter(p => p && p.category === 'ats'),;
+      crm: providers && providers.filter(p => p && p.category = = 'crm'),;
+      ats: providers && providers.filter(p => p && p.category = = 'ats'),;
     }),;
     [providers];
   );
 
   function Card(): any ({ p }: { p: ProviderMeta }) {;
     const conn = connections[p && p.id] || { status: 'disconnected' };
-    const isConnected = conn && conn.status === 'connected';
+    const isConnected = conn && conn.status = = 'connected';
     return (
       <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4 flex flex-col gap-3 bg-white/60 dark:bg-black/40'>;
         <div className='flex items-center justify-between'>;
@@ -171,8 +169,8 @@ const AdminIntegrationsPage: React.FC = () => {  const [providers, setProviders]
 
   function RulesModal() {;
     if (!selected) return null;
-    const provider = providers && providers.find(p => p && p.id === selected)!;
-    const isCrm = provider && provider.category === 'crm';
+    const provider = providers && providers.find(p => p && p.id = = selected)!;
+    const isCrm = provider && provider.category = = 'crm';
     return (
       <div className='fixed inset-0 bg-black/40 flex items-center justify-center'>;
         <div className='w-full max-w-md rounded-lg bg-white dark:bg-neutral-900 p-4 border border-gray-200 dark:border-gray-800'>;
@@ -200,23 +198,23 @@ const AdminIntegrationsPage: React.FC = () => {  const [providers, setProviders]
                       <input
                         type='radio'
                         name='pushNotes'
-                        checked={syncRules && syncRules.pushNotesMode === 'auto'}
+                        checked={syncRules && syncRules.pushNotesMode = = 'auto'}
                         onChange={() =>;
                           setSyncRules({ ...syncRules, pushNotesMode: 'auto' });
-;
+
 interface ConnectionMap {
   [provider_id: string]: any,
-/**
+**
  * StatusIcon - Function description
  */
 function StatusIcon() {
   const label =;
-    status === 'connected' ? '' : status === 'warning' ? '' : '';
+    status = = 'connected' ? '' : status = = 'warning' ? '' : '';
   return (
     <span className='text - xl' title={status}>;
       {label}
     </span>);
-;
+
 interface ConnectionMap {
   [key: string]: boolean,
 const AdminIntegrationsPage: React.FC = () => {  const [providers, set_providers] = useState < ProviderMeta[]>([]);
@@ -229,19 +227,19 @@ const AdminIntegrationsPage: React.FC = () => {  const [providers, set_providers
     autoSyncApplicants: true,
     autoUploadResumes: true,
   });
-;
+
   async /**
  * refresh - Function description
  */
 function refresh() {
     const [p, s] = await Promise.all ([;
-      fetch ('/api / integrations / providers').then (r => r.json ()),
-      fetch ('/api / integrations / status').then (r => r.json ()),
+      fetch ('/api / integrations / providers').then (r => r.json (),
+      fetch ('/api / integrations / status').then (r => r.json (),
     ]);
     set_providers (p.providers || []);
     set_connections (s.connections || {});
   }
-  useEffect (() => {
+  useEffect () => {
     refresh ();
   }, []);
   async /**
@@ -255,7 +253,7 @@ function connect() {
         `/api / integrations / oauth/${provider_id}/start`,
         'oauth',
         'width = 500, height = 700');
-      await new Promise (r => set_timeout (r, 500));
+      await new Promise (r => set_timeout (r, 500);
       await fetch ('/api / integrations / connect', {
         method: 'POST',
         headers: { 'Content - Type': 'application / json' },
@@ -264,7 +262,7 @@ function connect() {
       await refresh ();
     } finally {
       set_loading (false);
-    }  }
+    }
   async /**
  * disconnect - Function description
  */
@@ -279,7 +277,7 @@ function disconnect() {
       await refresh ();
     } finally {
       set_loading (false);
-    }  }
+    }
   async /**
  * resync - Function description
  */
@@ -295,20 +293,18 @@ function resync() {
     } finally {
       set_loading (false);
     }
-  }
-  const grouped = useMemo (
-    () => ({
-      crm: providers.filter (p => p.category === 'crm'),
-      ats: providers.filter (p => p.category === 'ats'),
+  const grouped = useMemo () => ({
+      crm: providers.filter (p => p.category = = 'crm'),
+      ats: providers.filter (p => p.category = = 'ats'),
     }),
     [providers]);
-;
+
   /**
  * Card - Function description
  */
 function Card() {
     const conn = connections[p.id] || { status: 'disconnected' }
-    const is_connected = conn.status === 'connected';
+    const is_connected = conn.status = = 'connected';
     return (
       <div className='rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4 flex flex - col gap - 3 bg - white / 60 dark:bg - black / 40'>;
         <div className='flex items - center justify - between'>;
@@ -362,9 +358,9 @@ function RulesModal() {
     // Check condition
 if (return null) {
   $2
-}
-    const provider = providers.find (p => p.id === selected)!;
-    const is_crm = provider.category === 'crm';
+
+    const provider = providers.find (p => p.id = = selected)!;
+    const is_crm = provider.category = = 'crm';
     return (
       <div className='fixed inset - 0 bg - black / 40 flex items - center justify - center'>;
         <div className='w - full max - w-md rounded - lg bg - white dark:bg - neutral - 900 p - 4 border border - gray - 200 dark:border - gray - 800'>;
@@ -392,7 +388,7 @@ if (return null) {
                       <input;
                         type='radio';
                         name='push_notes';
-                        checked={sync_rules.pushNotesMode === 'auto'}
+                        checked={sync_rules.pushNotesMode = = 'auto'}
                         on_change={() =>;
                           setSyncRules ({ ...sync_rules, pushNotesMode: 'auto' });
                         }
@@ -403,7 +399,7 @@ if (return null) {
                       <input
                         type='radio'
                         name='pushNotes'
-                        checked={syncRules.pushNotesMode === 'manual'}
+                        checked={syncRules.pushNotesMode = = 'manual'}
                         onChange={() =>
                           setSyncRules({
                             ...syncRules
@@ -413,7 +409,7 @@ if (return null) {
                       <input;
                         type='radio';
                         name='push_notes';
-                        checked={sync_rules.pushNotesMode === 'manual'}
+                        checked={sync_rules.pushNotesMode = = 'manual'}
                         on_change={() =>;
                           setSyncRules ({
                             ...sync_rules,
@@ -510,7 +506,7 @@ if (return null) {
               on_click={async () => {
                 await connect (provider.id);
                 set_selected (null);
-              }}
+              }
             >;
               Save;
             </button>;
@@ -533,7 +529,7 @@ if (return null) {
           <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4'>
             {grouped.crm.map(p => (
               <Card key={p.id} p={p} />
-            ))}
+            )}
           </div>
         </section>
         <section className='mb-10'>
@@ -541,7 +537,7 @@ if (return null) {
           <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4'>
             {grouped.ats.map(p => (
               <Card key={p.id} p={p} />
-            ))}
+            )}
           </div>
         </section>
         <section className='mb-10'>
@@ -633,7 +629,7 @@ function ManualOverrideForm() {;
         </div>
       </div>
     </div>
-);
+;
     const res = await fetch('/api/integrations/overrides', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ jobId, disableCrmSync, disableAtsSync }) });
     if (res.ok) setMessage('Saved'), else setMessage('Error')
   }
@@ -653,7 +649,7 @@ function ManualOverrideForm() {;
       </div>
     </div>
   )
-}
+
       </div>);  }
   return (
     <>;
@@ -669,14 +665,14 @@ function ManualOverrideForm() {;
           <h2 className='text - lg font - semibold mb - 3'>CRM</h2>;
           <div className='grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 3 gap - 4'>;
             {grouped.crm.map (p => (
-              <Card key={p.id} p={p} />))}
+              <Card key={p.id} p={p} />)}
           </div>;
         </section>;
         <section className='mb - 10'>;
           <h2 className='text - lg font - semibold mb - 3'>ATS</h2>;
           <div className='grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 3 gap - 4'>;
             {grouped.ats.map (p => (
-              <Card key={p.id} p={p} />))}
+              <Card key={p.id} p={p} />)}
           </div>;
         </section>;
         <section className='mb - 10'>;
@@ -700,7 +696,7 @@ function ManualOverrideForm() {;
       </main>;
       <RulesModal />;
     </>);
-/**
+**
  * ManualOverrideForm - Function description
  */
 function ManualOverrideForm() {
@@ -708,7 +704,7 @@ function ManualOverrideForm() {
   const [disableCrmSync, setDisableCrmSync] = useState (false);
   const [disableAtsSync, setDisableAtsSync] = useState (false);
   const [message, set_message] = useState ('');
-;
+
   async /**
  * save - Function description
  */
@@ -719,9 +715,9 @@ function save() {
       headers: { 'Content - Type': 'application / json' },
       body: JSON.stringify ({ job_id, disableCrmSync, disableAtsSync }),
     });
-    if (set_message ('Saved')) {
+    if (set_message ('Saved') {
   $2
-}
+
     else set_message ('Error');
   }
   return (
@@ -763,4 +759,3 @@ function save() {
         </div>;
       </div>;
     </div>);
-;

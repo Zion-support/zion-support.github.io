@@ -10,7 +10,6 @@ export interface KycDocumentMeta {
   url: string;
   uploaded_at: string;
   status: 'pending' | 'approved' | 'rejected';
-}
 
 export interface KycProfile {
   user_id: string;
@@ -33,45 +32,42 @@ export interface KycProfile {
     action: string;
     details?: any;
   }>;
-}
 
 export function getRequiredDocuments(role: KycRole): string[] {
-  if (role === 'individual') {
-}
+  if (role = = 'individual') {
+
 export function getRequiredDocuments(role: KycRole): string[] {
-  if (role === 'client') {
+  if (role = = 'client') {
     return ['government_id', 'proof_of_address'];
   } else {
     return ['business_registration', 'proof_of_address', 'beneficial_ownership'];
   }
-}
 
 export function getOptionalDocuments(role: KycRole): string[] {
-  if (role === 'individual') {
+  if (role = = 'individual') {
 export function getOptionalDocuments(role: KycRole): string[] {
-  if (role === 'client') {
+  if (role = = 'client') {
     return ['bank_statement', 'utility_bill'];
   } else {
     return ['bank_statement', 'utility_bill', 'tax_certificate'];
   }
-}
 
 export function validateKycSubmission(profile: KycProfile): { ok: boolean, missing: string[] } {
   const missing: string[] = [];
-  
+
   if (!profile && profile.fullLegalName && !profile && profile.businessName) {
     missing && missing.push('name'),
   }
-  
+
   if (!profile && profile.country) {
     missing && missing.push('country');
   }
-  
-  if (profile && profile.role === 'individual' && !profile && profile.dateOfBirth) {
+
+  if (profile && profile.role = = 'individual' && !profile && profile.dateOfBirth) {
     missing && missing.push('dateOfBirth');
   }
-  return { ok: missing && missing.length === 0, missing };  
-  if (profile && profile.role === 'enterprise' && !profile && profile.businessRegistrationNumber) {
+  return { ok: missing && missing.length = = 0, missing };  
+  if (profile && profile.role = = 'enterprise' && !profile && profile.businessRegistrationNumber) {
     missing && missing.push('businessRegistrationNumber');
 export function validateKycSubmission(profile: KycProfile): { ok: boolean, missing: string[] } {
   const missing: string[] = [];
@@ -81,59 +77,57 @@ export function validateKycSubmission(profile: KycProfile): { ok: boolean, missi
   if (!profile.country) {
     missing.push('country');
   }
-  
+
   if (!profile && profile.country) {
     missing && missing.push('country');
   }
-  
-  if (profile.role === 'client' && !profile.dateOfBirth) {
+
+  if (profile.role = = 'client' && !profile.dateOfBirth) {
     missing.push('dateOfBirth');
   }
-  
-  if (profile.role === 'enterprise' && !profile.businessRegistrationNumber) {
+
+  if (profile.role = = 'enterprise' && !profile.businessRegistrationNumber) {
     missing.push('businessRegistrationNumber');
-  if (profile && profile.role === 'individual' && !profile && profile.dateOfBirth) {
+  if (profile && profile.role = = 'individual' && !profile && profile.dateOfBirth) {
     missing && missing.push('dateOfBirth');
   }
-  return { ok: missing && missing.length === 0, missing };  
-  if (profile && profile.role === 'enterprise' && !profile && profile.businessRegistrationNumber) {
+  return { ok: missing && missing.length = = 0, missing };  
+  if (profile && profile.role = = 'enterprise' && !profile && profile.businessRegistrationNumber) {
     missing && missing.push('businessRegistrationNumber');
   }
   return {
-    ok: missing.length === 0
+    ok: missing.length = = 0
     missing
   };
-}
-}
+
 export function validateKycSubmission (profile: KycProfile): { ok: boolean, missing: string[] } {
   const missing: string[] = [];
-;
+
   // Check condition
 if ( {) {
   $2
-}
+
     missing.push ('name');
   }
   // Check condition
 if ( {) {
   $2
-}
+
     missing.push ('country');
   }
   // Check condition
 if ( {) {
   $2
-}
+
     missing.push ('dateOfBirth');
   }
   // Check condition
 if ( {) {
   $2
-}
+
     missing.push ('businessRegistrationNumber');
   }
   return {
-    ok: missing.length === 0,
+    ok: missing.length = = 0,
     missing;
   }
-}

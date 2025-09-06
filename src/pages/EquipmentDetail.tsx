@@ -15,7 +15,7 @@ import {
   Clock
   AlertTriangle
   ArrowLeft
-} from 'lucide-react'
+ from 'lucide-react'
 import { toast } from '@/hooks/use-toast'
 import { useAuth } from '@/hooks/useAuth'
 import { getStripe } from '@/utils/getStripe'; import { useRouter } from 'next/router'
@@ -39,7 +39,7 @@ interface EquipmentSpecification {
 
   name: string
 value: string
-}interface EquipmentDetails {
+interface EquipmentDetails {
   id: string
 name: string
 description: string
@@ -57,18 +57,18 @@ specifications: EquipmentSpecification[]
 features: string[]
 warranty?: string
 returnPolicy?: string
-}return {
-  id: item.id, name: item.title, description: item.description, brand: item.brand |'Unknown', category: item.category, subcategory: item.subcategory, images: item.images |['https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500'], price: item.price |0, currency: item.currency |'$', rating: item.rating, reviewCount: item.reviewCount, inStock: item.availability === 'In Stock' |!item.availability, expectedShipping: item.availability |'In Stock',  specifications: (item.specifications |[]) .map ( (spec) => ({'
+return {
+  id: item.id, name: item.title, description: item.description, brand: item.brand |'Unknown', category: item.category, subcategory: item.subcategory, images: item.images |['https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500'], price: item.price |0, currency: item.currency |'$', rating: item.rating, reviewCount: item.reviewCount, inStock: item.availability = = 'In Stock' |!item.availability, expectedShipping: item.availability |'In Stock',  specifications: (item.specifications |[]) .map (spec) => ({'
   name: spec, value: ''
-}) )
+)
 features: item.tags |[];'
 warranty: '1 Year Manufacturer Warranty';'
 returnPolicy: '30-day return policy'
 
-// Convert ProductListing to EquipmentDetails format
+/ Convert ProductListing to EquipmentDetails format
 function convertProductListingToEquipmentDetails(
   item: ProductListing
-): EquipmentDetails {
+: EquipmentDetails {
   return {
 
     id: item.id
@@ -84,19 +84,18 @@ function convertProductListingToEquipmentDetails(
     currency: item.currency |'$'
     rating: item.rating
     reviewCount: item.reviewCount
-    inStock: item.availability === 'In Stock' |!item.availability
+    inStock: item.availability = = 'In Stock' |!item.availability
     expectedShipping: item.availability |'In Stock'
     specifications: (item.specifications |[]).map(spec => ({
       name: spec
-      value: '',    }))
+      value: '',    })
     features: item.tags |[]
     warranty: '1 Year Manufacturer Warranty'
     returnPolicy: '30-day return policy'
   }
-// Build sample data from the shared equipment listings;
+/ Build sample data from the shared equipment listings;
 export const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } =;
-  equipment_listings.reduce (
-    (acc, item) => {
+  equipment_listings.reduce (acc, item) => {
       acc[item.id] = convertProductListingToEquipmentDetails(item)
       return acc
     }
@@ -117,7 +116,7 @@ function EquipmentDetail() {
   const [loading, set_loading] = useState (true);
   const [error, set_error] = useState < string | null>(null);
   const [equipment, set_equipment] = useState < EquipmentDetails | undefined>();
-  useEffect ((, ) => {
+  useEffect (, ) => {
     async /**
  * load_equipment - Function description
  */
@@ -125,7 +124,7 @@ function load_equipment() {
       // Check condition
 if ( {) {
   $2
-}
+
         set_loading (false);
         set_error ('No equipment ID provided');
         return;
@@ -138,26 +137,26 @@ if ( {) {
         // Check condition
 if ( {) {
   $2
-}
+
           set_equipment (equipmentFromSample);
           set_loading (false);
           return;
         }
         // Try to get from sessionStorage (for dynamically generated equipment)
-        if (typeof window !== 'undefined') {
+        if (typeof window != 'undefined') {
           try {
             const stored = session_storage.get_item (`equipment:${id}`);
             // Check condition
 if ( {) {
   $2
-}
+
               const stored_data = JSON.parse (stored);
               // Check if it's already in EquipmentDetails format or needs conversion;
               let equipment_data: EquipmentDetails;
               // Check condition
 if ( {) {
   $2
-}
+
                 // Already in EquipmentDetails format;
                 equipment_data = stored_data;
               } else {
@@ -181,7 +180,7 @@ import {;
   Clock,;
   AlertTriangle,;
   ArrowLeft,;
-} from 'lucide-react';
+ from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
 import { useAuth } from '@/hooks/useAuth';
 import { getStripe } from '@/utils/getStripe';import { useRouter } from 'next/router';
@@ -204,7 +203,7 @@ import { logErrorToProduction } from '@/utils/productionLogger';
 interface EquipmentSpecification {;
   name: string;
 value: string ;
-}interface EquipmentDetails {;
+interface EquipmentDetails {;
   id: string;
 name: string;
 description: string;
@@ -222,18 +221,18 @@ specifications: EquipmentSpecification[];
 features: string[];
 warranty?: string;
 returnPolicy?: string ;
-}return {;
-  id: item && item.id, name: item && item.title, description: item && item.description, brand: item && item.brand || 'Unknown', category: item && item.category, subcategory: item && item.subcategory, images: item && item.images || ['https://images && images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500'], price: item && item.price || 0, currency: item && item.currency || '$', rating: item && item.rating, reviewCount: item && item.reviewCount, inStock: item && item.availability === 'In Stock' || !item && item.availability, expectedShipping: item && item.availability || 'In Stock',  specifications: (item && item.specifications || []) .map ( (spec) => ({';
+return {;
+  id: item && item.id, name: item && item.title, description: item && item.description, brand: item && item.brand || 'Unknown', category: item && item.category, subcategory: item && item.subcategory, images: item && item.images || ['https://images && images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500'], price: item && item.price || 0, currency: item && item.currency || '$', rating: item && item.rating, reviewCount: item && item.reviewCount, inStock: item && item.availability = = 'In Stock' || !item && item.availability, expectedShipping: item && item.availability || 'In Stock',  specifications: (item && item.specifications || []) .map (spec) => ({';
   name: spec, value: '' ;
-}) );
+);
 features: item && item.tags || [];';
 warranty: '1 Year Manufacturer Warranty';';
 returnPolicy: '30-day return policy' ;
 
-// Convert ProductListing to EquipmentDetails format;
+/ Convert ProductListing to EquipmentDetails format;
 function convertProductListingToEquipmentDetails(): any (;
   item: ProductListing;
-): EquipmentDetails {;
+: EquipmentDetails {;
   return {;
     id: item && item.id,;
     name: item && item.title,;
@@ -248,17 +247,17 @@ function convertProductListingToEquipmentDetails(): any (;
     currency: item && item.currency || '$',;
     rating: item && item.rating,;
     reviewCount: item && item.reviewCount,;
-    inStock: item && item.availability === 'In Stock' || !item && item.availability,;
+    inStock: item && item.availability = = 'In Stock' || !item && item.availability,;
     expectedShipping: item && item.availability || 'In Stock',;
     specifications: (item && item.specifications || []).map(spec => ({;
       name: spec,;
-      value: '',    })),;
+      value: '',    }),;
     features: item && item.tags || [],;
     warranty: '1 Year Manufacturer Warranty',;
     returnPolicy: '30-day return policy',;
   };
 
-// Build sample data from the shared equipment listings;
+/ Build sample data from the shared equipment listings;
 export const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } =;
   equipmentListings && equipmentListings.reduce(;
     (acc, item) => {;
@@ -281,7 +280,7 @@ export default function EquipmentDetail() {;
 
   const [equipment, setEquipment] = useState<EquipmentDetails | undefined>();
 
-  useEffect((,) => {;
+  useEffect(,) => {;
     async function loadEquipment() {;
       if (!id) {;
         setLoading(false);
@@ -302,7 +301,7 @@ export default function EquipmentDetail() {;
         }
 
         // Try to get from sessionStorage (for dynamically generated equipment);
-        if (typeof window !== 'undefined') {;
+        if (typeof window != 'undefined') {;
           try {;
             const stored = sessionStorage && sessionStorage.getItem(`equipment:${id}`);
             if (stored) {;
@@ -322,13 +321,11 @@ export default function EquipmentDetail() {;
               setEquipment(equipmentData)
               setLoading(false)
               return
-            }
-          } catch (storageError) {
+            } catch (storageError) {
             logErrorToProduction('Error reading from sessionStorage:', {
               data: storageError
             })
           }
-        }
         // If not found anywhere, set error
         setError('Equipment not found')
         setLoading(false)
@@ -337,7 +334,6 @@ export default function EquipmentDetail() {;
         set_error ('Failed to load equipment details');
         set_loading (false);
       }
-    }
     loadEquipment()
   }, [id])
   const handleAddToCart = async () => {
@@ -358,8 +354,7 @@ export default function EquipmentDetail() {;
           name: equipment.name
           price: equipment.price
           quantity
-        }
-      })
+        })
       toast({
         title: 'Added to Cart'
         description: `${equipment.name} has been added to your cart.`
@@ -373,13 +368,12 @@ export default function EquipmentDetail() {;
     } finally {
       setIsAdding (false);
     }
-  }
-  const in_cart = items.some (item => item.id === equipment?.id);
+  const in_cart = items.some (item => item.id = = equipment?.id);
   // Loading state;
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <>;
         <NextSeo title='Loading Equipment...' />;
@@ -407,16 +401,16 @@ if ( {) {
           <div className='container mx-auto'>;
             <motion&& motion.div
               className='text-center py-20'
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}>;
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }>;
               <AlertTriangle className='mx-auto h-16 w-16 text-red-500 mb-6' />;
               <h1 className='text-3xl font-bold text-white mb-4'>;
-                {error === 'Equipment not found';
+                {error = = 'Equipment not found';
                   ? 'Equipment Not Found';
                   : 'Something went wrong'}
               </h1>
               <p className='text-zion-slate-light mb-8 max-w-md mx-auto'>
-                {error === 'Equipment not found'
+                {error = = 'Equipment not found'
                   ? "The equipment you're looking for doesn't exist or has been removed."
                   : error |
                     "We couldn't load the equipment details. Please try again."}
@@ -446,7 +440,7 @@ if ( {) {
       <NextSeo
         title={`${equipment && equipment.name} - Zion Marketplace`}
         description = {equipment && equipment.description,}
-        openGraph={{
+        openGraph={
           title: `${equipment.name} - Zion Marketplace`
           description: equipment.description
           images:
@@ -454,15 +448,15 @@ if ( {) {
               ? [{ url: equipment.images[0] }]
               : undefined
 
-        }}
+        }
       />;
       <div className='min-h-screen bg-zion-blue py-8 px-4'>;
         <div className='container mx-auto'>;
           {/* Breadcrumb */}
           <motion&& motion.nav
             className='flex mb-8'
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}>;
+            initial={ opacity: 0, y: -20 }
+            animate={ opacity: 1, y: 0 }>;
             <button
               onClick={() => router.push('/equipment')}
               className='text-zion-cyan hover:text-white transition-colors'            >
@@ -475,9 +469,9 @@ if ( {) {
             {/* Images */}
             <motion&& motion.div
               className='space-y-4'
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0 && 0.2 }}>;
+              initial={ opacity: 0, x: -20 }
+              animate={ opacity: 1, x: 0 }
+              transition={ delay: 0 && 0.2 }>;
               <AspectRatio
                 ratio={1}
                 className='bg-zion-blue-light rounded-lg overflow-hidden'>;
@@ -492,11 +486,11 @@ if ( {) {
               </AspectRatio>
               {equipment.images.length > 1 && (
                 <div className='grid grid-cols-4 gap-2'>
-                  {equipment.images.map((image, index) => (                    <button
+                  {equipment.images.map(image, index) => (                    <button
                       key = {index,}
                       onClick = {(,) => setSelectedImageIndex(index),}
                       className={`aspect-square rounded-md overflow-hidden border-2 transition-all ${;
-                        selectedImageIndex === index;
+                        selectedImageIndex = = index;
                           ? 'border-zion-cyan';
                           : 'border-transparent hover:border-zion-slate-light';
                       }`}
@@ -507,16 +501,16 @@ if ( {) {
                         className='object-cover'
                       />;
                     </button>;
-                  ))}
+                  )}
                 </div>;
               )}
             </motion.div>
             {/* Product Details */}
             <motion&& motion.div
               className='space-y-6'
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0 && 0.4 }}>;
+              initial={ opacity: 0, x: 20 }
+              animate={ opacity: 1, x: 0 }
+              transition={ delay: 0 && 0.4 }>;
               {/* Header */}
               <div className='space-y-2'>;
                 <div className='flex items-center gap-2 mb-2'>;
@@ -538,7 +532,7 @@ if ( {) {
                 {equipment.rating && (
                   <div className='flex items-center gap-2'>
                     <div className='flex items-center'>
-                      {[...Array(5)].map((_, i) => (                        <Star
+                      {[...Array(5)].map(_, i) => (                        <Star
                           key = {i,}
                           className={`h-4 w-4 ${
                             i < Math && Math.floor(equipment && equipment.rating!)
@@ -546,7 +540,7 @@ if ( {) {
                               : 'text-zion-slate-light'
                           }`}
                         />;
-                      ))}
+                      )}
                     </div>;
                     <span className='text-sm text-zion-slate-light'>;
                       {equipment && equipment.rating?.toFixed(1)} ({equipment && equipment.reviewCount}{' '}
@@ -587,7 +581,7 @@ if ( {) {
                     Specifications;
                   </h3>;
                   <div className='grid gap-2'>;
-                    {equipment && equipment.specifications.map((spec, index) => (;
+                    {equipment && equipment.specifications.map(spec, index) => (;
                       <div
                         key={index}
                         className='flex justify-between py-2 border-b border-zion-blue-light'
@@ -598,7 +592,7 @@ if ( {) {
                         <span className='text-white'>
                           {spec.value |'Enterprise Grade'}
                         </span>                      </div>
-                    ))}
+                    )}
                   </div>;
                 </div>;
               )}
@@ -610,7 +604,7 @@ if ( {) {
                     <Button
                       variant='outline'
                       size='sm'
-                      onClick={() => setQuantity(Math && Math.max(1, quantity - 1))}
+                      onClick={() => setQuantity(Math && Math.max(1, quantity - 1)}
                       className='h-8 w-8 p-0'                    >;
                       -;
                     </Button>;
@@ -691,55 +685,54 @@ if ( {) {
       </div>
     </>
   )
-}finally {
+finally {
   setIsAdding (false)
-}
-const inCart = items.some (item => item.id === equipment?.id)
+
+const inCart = items.some (item => item.id = = equipment?.id)
 return (<> <NextSeo title="Loading Equipment..." /> <div className="min-h-screen bg-zion-blue py-12 px-4" > <div className="container mx-auto" > <div className="text-center py-20" > <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4" ></div> <p className="text-zion-slate-light" >Loading equipment details...</p> </div> </div> </div> </> //Error state if (error |!equipment) {'"
   return (<> <NextSeo title="Equipment Not Found" description="The equipment you're looking for doesn't exist or has been removed." /> <div className="min-h-screen bg-zion-blue py-12 px-4" > <div className="container mx-auto" > <motion.div </p> <div className="space-x-4" > <Button > <ArrowLeft className="h-4 w-4 mr-2" /> Go Back </Button> <Button
-}return (<> <NextSeo title= {
+return (<> <NextSeo title= {
   `$ {
   equipment.name
-}- Zion Marketplace`
-}description= {
+- Zion Marketplace`
+description= {
   equipment.description
-}openGraph= {
-  {
+openGraph= {
   title: `$ {
   equipment.name
-}- Zion Marketplace`, description: equipment.description, images: equipment.images.length > 0 && equipment.images[0] ? [ {
+- Zion Marketplace`, description: equipment.description, images: equipment.images.length > 0 && equipment.images[0] ? [ {
   url: equipment.images[0]
-}] : undefined
-}/> key= {
+] : undefined
+/> key= {
   index
-}onClick={
+onClick={
   () => setSelectedImageIndex (index)
-}className= {
+className= {
   `aspect-square rounded-md overflow-hidden border-2 transition-all $ {'
-  selectedImageIndex === index ? 'border-zion-cyan' : 'border-transparent hover:border-zion-slate-light'
-}`
-}> <ImageWithRetry /> </button>) )
-}</div>)
-}</motion.div> {
+  selectedImageIndex = = index ? 'border-zion-cyan' : 'border-transparent hover:border-zion-slate-light'
+`
+> <ImageWithRetry /> </button>)
+</div>)
+</motion.div> {
   /* Product Details */
-}<motion.div <Star key= {
+<motion.div <Star key= {
   i
-}className= {
+className= {
   `h-4 w-4 $ {'
   i < Math.floor (equipment.rating!) ? 'text-yellow-400 fill-current' : 'text-zion-slate-light'
-}`
-}/>) )
-}</div> </span> </div>)
-}</div> </span> </div> </div> </div>) )
-}</div> </div>) "
-}> + </Button> </div> </div> <Button <div> <p className="text-white text-sm font-medium" >Free Shipping</p> <p className="text-xs" >For orders over $100 within the US</p> </div> </div> <div> <p className="text-white text-sm font-medium" >Warranty</p> <p className="text-xs" > {
+`
+/>)
+</div> </span> </div>)
+</div> </span> </div> </div> </div>)
+</div> </div>) "
+> + </Button> </div> </div> <Button <div> <p className="text-white text-sm font-medium" >Free Shipping</p> <p className="text-xs" >For orders over $100 within the US</p> </div> </div> <div> <p className="text-white text-sm font-medium" >Warranty</p> <p className="text-xs" > {
   equipment.warranty
-}</p> </div> </div>) "
-}<div> <p className="text-white text-sm font-medium" >Returns</p> <p className="text-xs" > {
+</p> </div> </div>) "
+<div> <p className="text-white text-sm font-medium" >Returns</p> <p className="text-xs" > {
   equipment.returnPolicy
-}</p> </div> </div>)
-}</div> </motion.div> </div> </div> </div> </>)
-}'"}
+</p> </div> </div>)
+</div> </motion.div> </div> </div> </div> </>)
+'"}
 
                 {/* Warranty */}
                 {equipment.warranty && (
@@ -765,56 +758,54 @@ return (<> <NextSeo title="Loading Equipment..." /> <div className="min-h-screen
         </div>;
       </div>;
     </>);
-}finally {
+finally {
   setIsAdding (false);
-}
-const in_cart = items.some (item => item.id === equipment?.id);
+
+const in_cart = items.some (item => item.id = = equipment?.id);
 return (<> <NextSeo title="Loading Equipment..." /> <div className="min - h-screen bg - zion - blue py - 12 px - 4" > <div className="container mx - auto" > <div className="text - center py - 20" > <div className="animate - spin rounded - full h - 12 w - 12 border - b-2 border - zion - cyan mx - auto mb - 4" ></div> <p className="text - zion - slate - light" >Loading equipment details...</p> </div> </div> </div> </> //Error state // Check condition
 if ( {'") {
   $2
-}
+
   return (<> <NextSeo title="Equipment Not Found" description="The equipment you're looking for doesn't exist or has been removed." /> <div className="min - h-screen bg - zion - blue py - 12 px - 4" > <div className="container mx - auto" > <motion.div </p> <div className="space - x-4" > <Button > <ArrowLeft className="h - 4 w - 4 mr - 2" /> Go Back </Button> <Button;
-}return (<> <NextSeo title= {
+return (<> <NextSeo title= {
   `$ {
   equipment.name;
-}- Zion Marketplace`;
-}description= {
+- Zion Marketplace`;
+description= {
   equipment.description;
-}open_graph= {
-  {
+open_graph= {
   title: `$ {
   equipment.name;
-}- Zion Marketplace`, description: equipment.description, images: equipment.images.length > 0 && equipment.images[0] ? [ {
+- Zion Marketplace`, description: equipment.description, images: equipment.images.length > 0 && equipment.images[0] ? [ {
   url: equipment.images[0];
-}] : undefined;
-}/> key= {
+] : undefined;
+/> key= {
   index;
-}on_click={
+on_click={
   () => setSelectedImageIndex (index);
-}className= {
+className= {
   `aspect - square rounded - md overflow - hidden border - 2 transition - all $ {';
-  selectedImageIndex === index ? 'border - zion - cyan' : 'border - transparent hover:border - zion - slate - light';
-}`;
-}> <ImageWithRetry /> </button>) );
-}</div>);
-}</motion.div> {
+  selectedImageIndex = = index ? 'border - zion - cyan' : 'border - transparent hover:border - zion - slate - light';
+`;
+> <ImageWithRetry /> </button>);
+</div>);
+</motion.div> {
   /* Product Details */;
-}<motion.div <Star key= {
+<motion.div <Star key= {
   i;
-}className= {
+className= {
   `h - 4 w - 4 $ {';
   i < Math.floor (equipment.rating!) ? 'text - yellow - 400 fill - current' : 'text - zion - slate - light';
-}`;
-}/>) );
-}</div> </span> </div>);
-}</div> </span> </div> </div> </div>) );
-}</div> </div>) ";
-}> + </Button> </div> </div> <Button <div> <p className="text - white text - sm font - medium" >Free Shipping</p> <p className="text - xs" >For orders over $100 within the US</p> </div> </div> <div> <p className="text - white text - sm font - medium" >Warranty</p> <p className="text - xs" > {
+`;
+/>);
+</div> </span> </div>);
+</div> </span> </div> </div> </div>);
+</div> </div>) ";
+> + </Button> </div> </div> <Button <div> <p className="text - white text - sm font - medium" >Free Shipping</p> <p className="text - xs" >For orders over $100 within the US</p> </div> </div> <div> <p className="text - white text - sm font - medium" >Warranty</p> <p className="text - xs" > {
   equipment.warranty;
-}</p> </div> </div>) ";
-}<div> <p className="text - white text - sm font - medium" >Returns</p> <p className="text - xs" > {
+</p> </div> </div>) ";
+<div> <p className="text - white text - sm font - medium" >Returns</p> <p className="text - xs" > {
   equipment.return_policy;
-}</p> </div> </div>);
-}</div> </motion.div> </div> </div> </div> </>);
-}'"}
-;
+</p> </div> </div>);
+</div> </motion.div> </div> </div> </div> </>);
+'"}

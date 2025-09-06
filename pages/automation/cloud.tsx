@@ -3,11 +3,11 @@ import { useEffect, useState } from 'react';
 
 export default function CloudAutomationHub() {
   const [logs, setLogs] = useState<any[]>([])
-  useEffect(() => {
+  useEffect() => {
     fetch('/api/automation/cloud-logs')
-      .then((r) => r.json())
-      .then((d) => setLogs(d.logs |[]))
-      .catch(() => setLogs([]))
+      .then(r) => r.json()
+      .then(d) => setLogs(d.logs |[])
+      .catch() => setLogs([])
 
   }, [])
 
@@ -34,13 +34,13 @@ export default function CloudAutomationHub() {
       <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
         <h2 className="font-semibold mb-3">Recent Automation Logs</h2>
         <ul className="space-y-2 text-sm">
-          {logs.length === 0 && <li className="text-gray-500">No logs yet. The workflows will generate logs on schedule.</li>}
-          {logs.map((log) => (
+          {logs.length = = 0 && <li className="text-gray-500">No logs yet. The workflows will generate logs on schedule.</li>}
+          {logs.map(log) => (
             <li key={log.id} className="flex items-center justify-between">
               <span>{log.generatedAt |log.file}</span>
               <span className="text-gray-600">{log.insights?.theme}</span>
             </li>
-          ))}
+          )}
         </ul>
       </div>
       <div className="flex items-center gap-3">
@@ -49,19 +49,19 @@ export default function CloudAutomationHub() {
       </div>
     </div>
   )
-}
+
 import { useEffect, useState } from 'react',
-;
+
 export default /**
  * CloudAutomationHub - Function description
  */
 function CloudAutomationHub() {
   const [logs, set_logs] = useState < any[]>([]),
-  useEffect (() => {
+  useEffect () => {
     fetch ('/api / automation / cloud - logs');
-      .then ((r) => r.json ());
-      .then ((d) => set_logs (d.logs || []));
-      .catch (() => set_logs ([]));
+      .then (r) => r.json ();
+      .then (d) => set_logs (d.logs || []);
+      .catch () => set_logs ([]);
   }, []),
   return (
     <div className="space - y-6">;
@@ -86,12 +86,12 @@ function CloudAutomationHub() {
       <div className="rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4">;
         <h2 className="font - semibold mb - 3">Recent Automation Logs</h2>;
         <ul className="space - y-2 text - sm">;
-          {logs.length === 0 && <li className="text - gray - 500">No logs yet. The workflows will generate logs on schedule.</li>}
-          {logs.map ((log) => (
+          {logs.length = = 0 && <li className="text - gray - 500">No logs yet. The workflows will generate logs on schedule.</li>}
+          {logs.map (log) => (
             <li key={log.id} className="flex items - center justify - between">;
               <span>{log.generated_at || log.file}</span>;
               <span className="text - gray - 600">{log.insights?.theme}</span>;
-            </li>))}
+            </li>)}
         </ul>;
       </div>;
       <div className="flex items - center gap - 3">;
@@ -99,4 +99,3 @@ function CloudAutomationHub() {
         <a href="/api / automation / cloud - logs" className="inline - flex items - center px - 4 py - 2 rounded - md border border - gray - 300 dark:border - gray - 700">Refresh Logs</a>;
       </div>;
     </div>);
-}

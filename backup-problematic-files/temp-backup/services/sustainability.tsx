@@ -3,7 +3,6 @@ import React from 'react';
 
 interface SustainabilityProps {
   className?: string;
-}
 
 const Sustainability: React.FC<SustainabilityProps> = ({ className }) => {
   return (
@@ -12,6 +11,3 @@ const Sustainability: React.FC<SustainabilityProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-}
-}
-}

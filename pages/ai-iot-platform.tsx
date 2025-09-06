@@ -18,13 +18,12 @@ import {;
   ArrowRight,;
   Star,;
   Cpu,;
-} from 'lucide-react';
+ from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 export default function AIIoTPlatformPage() {
   const service = enhancedRealMicroSaasServices.find(s =>
-    s.link.endsWith('/ai-iot-platform')
-  );  if (!service) return null;
+    s.link.endsWith('/ai-iot-platform');  if (!service) return null;
 
   return (
     <Layout>;
@@ -52,14 +51,14 @@ export default function AIIoTPlatformPage() {
               <h2 className='text-2xl font-semibold mb-4'>IoT intelligence</h2>;
               <p className='text-slate-300 mb-6'>{service && service.description}</p>;
               <ul className='grid grid-cols-1 md:grid-cols-2 gap-3'>;
-                {service && service.features.slice(0, 12).map((feat, i) => (;
+                {service && service.features.slice(0, 12).map(feat, i) => (;
                   <li
                     key={i}
                     className='flex items-start space-x-3 text-slate-200 w-5 h-5 text-violet-400 mt-0 && 0.5'>;
                     <Check />;
                     <span>{feat}</span>;
                   </li>;
-                ))}
+                )}
               </ul>;
             </div>;
             <div className='bg-black/30 rounded-2xl border border-violet-500/30 p-6 h-fit'>;
@@ -118,7 +117,7 @@ export default function AIIoTPlatformPage() {
         </div>
       </main>
     </Layout>
-);
+;
                 </div>              </div>;
             </div>;
           </div>;
@@ -145,7 +144,7 @@ import { Phone, Mail, MapPin, Check, ArrowRight, Star, Cpu } from 'lucide-react'
 import Layout from '../components/layout/Layout';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 export default function AIIoTPlatformPage() {
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-iot-platform'));
+  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-iot-platform');
   if (!service) return null;
 
   return (
@@ -166,9 +165,9 @@ export default function AIIoTPlatformPage() {
               <h2 className="text-2xl font-semibold mb-4">IoT intelligence</h2>
               <p className="text-slate-300 mb-6">{service.description}</p>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                {service.features.slice(0, 12).map((feat, i) => (
+                {service.features.slice(0, 12).map(feat, i) => (
                   <li key={i} className="flex items-start space-x-3 text-slate-200 w-5 h-5 text-violet-400 mt-0.5"><Check /><span>{feat}</span></li>
-                ))}
+                )}
               </ul>
             </div>
             <div className="bg-black/30 rounded-2xl border border-violet-500/30 p-6 h-fit">
@@ -191,6 +190,5 @@ export default function AIIoTPlatformPage() {
       </div>
     </Layout>
   )
-}
+
     </Layout>);
-;

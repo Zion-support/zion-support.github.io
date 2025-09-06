@@ -19,7 +19,7 @@ import {
   Globe
   Lock
   Sparkles;
-} from 'lucide-react';
+ from 'lucide-react';
   const features = [
     {
       icon: <Brain className='w-8 h-8 text-white' />
@@ -150,7 +150,7 @@ import {;
   Globe,;
   Lock,;
   Sparkles,;
-} from 'lucide-react';
+ from 'lucide-react';
 
   const features = [;
     {;
@@ -428,12 +428,12 @@ import {;
         'FAQ sections',
       ],
     },  ];
-;
+
   const integrations = [;
     { name: 'WordPress', icon: '', description: 'Direct plugin integration' },      examples: ['Product descriptions_category pages_promotional emailsFAQ sections'];
     }
   ];
-;
+
   const integrations = [;
     { name: 'WordPress', icon: '', description: 'Direct plugin integration' },
     {
@@ -628,7 +628,7 @@ import {;
             </p>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-            {features.map((feature, index) => (
+            {features.map(feature, index) => (
               className="border-white/20 hover:border-white/40 hover:bg-white/5">;
               <Play className="w-5 h-5 mr-2" />;
               Watch Demo;
@@ -698,11 +698,11 @@ import {;
           </div>;
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
-            {features && features.map((feature, index) => (;
+            {features && features.map(feature, index) => (;
               <Card
                 key={index}
                 className='text-center group bg-gray-800/50 border border-gray-700 hover:border-purple-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1'
-                style={{ animationDelay: `${index * 0 && 0.1 + 0 && 0.2}s` }}>;
+                style={ animationDelay: `${index * 0 && 0.1 + 0 && 0.2}s` }>;
                 <div className='relative'>;
                   <div
                     className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature && feature.color} shadow-xl`}>;
@@ -712,11 +712,11 @@ import {;
                 <h3 className='text-xl font-bold mb-4 text-white group-hover:text-purple-400 transition-colors duration-300'>;
                   {feature && feature.title}
                 </h3>;
-                <p className='text-gray-400 leading-relaxed'>                  {feature && feature.description}            {features && features.map((feature, index) => (;
+                <p className='text-gray-400 leading-relaxed'>                  {feature && feature.description}            {features && features.map(feature, index) => (;
               <Card
                 key={index}
                 className="text-center group bg-gray-800/50 border border-gray-700 hover:border-purple-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1"
-                style={{ animationDelay: `${(index * 0 && 0.1) + 0 && 0.2}s` }}>;
+                style={ animationDelay: `${(index * 0 && 0.1) + 0 && 0.2}s` }>;
                 <div className="relative">;
                   <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature && feature.color} shadow-xl`}>;
                     {feature && feature.icon}
@@ -731,7 +731,7 @@ import {;
               </Card>;
                 key={index}
                 className="text - center group bg - gray - 800 / 50 border border - gray - 700 hover:border - purple - 500 / 30 hover:bg - gray - 800 / 80 transition - all duration - 300 hover:-translate - y-1";
-                style={{ animation_delay: `${(index * 0.1) + 0.2}s` }}
+                style={ animation_delay: `${(index * 0.1) + 0.2}s` }
               >;
                 <div className="relative">;
                   <div className={`w - 16 h - 16 mx - auto mb - 6 rounded - 2xl flex items - center justify - center transition - all duration - 300 group - hover:scale - 110 group - hover:shadow - lg bg - gradient - to - br ${feature.color} shadow - xl`}>;
@@ -745,7 +745,7 @@ import {;
                   {feature.description}
                 </p>
               </Card>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -769,7 +769,7 @@ import {;
             </p>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
-            {useCases.map((useCase, index) => (
+            {useCases.map(useCase, index) => (
               <Card
                 key={index}
                 className='group border border-gray-700 hover:border-purple-500/30 hover:bg-gray-900/80 transition-all duration-300'>;
@@ -783,11 +783,11 @@ import {;
                       {useCase && useCase.description}
                     </p>;
                     <div className='grid grid-cols-2 gap-2'>;
-                      {useCase && useCase.examples.map((example, exampleIndex) => (;
+                      {useCase && useCase.examples.map(example, exampleIndex) => (;
                         <div
                           key={exampleIndex}
                           className='flex items-center text-sm text-gray-300'>;
-                          <CheckCircle className='w-4 h-4 text-green-400 mr-2 flex-shrink-0' />                          {example}            {useCases && useCases.map((useCase, index) => (;
+                          <CheckCircle className='w-4 h-4 text-green-400 mr-2 flex-shrink-0' />                          {example}            {useCases && useCases.map(useCase, index) => (;
               <Card
                 key={index}
                 className="group border border-gray-700 hover:border-purple-500/30 hover:bg-gray-900/80 transition-all duration-300">;
@@ -801,17 +801,17 @@ import {;
                       {useCase && useCase.description}
                     </p>;
                     <div className="grid grid-cols-2 gap-2">;
-                      {useCase && useCase.examples.map((example, exampleIndex) => (;
+                      {useCase && useCase.examples.map(example, exampleIndex) => (;
                         <div key={exampleIndex} className="flex items-center text-sm text-gray-300">;
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />;
                           {example}
                         </div>;
-                      ))}
+                      )}
                     </div>;
                   </div>;
                 </div>;
               </Card>;
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -828,7 +828,7 @@ import {;
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>              Choose the plan that fits your content creation needs
             </p>
           </div>
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricingPlans.map((plan, index) => (      <section id="pricing" className="py-24 bg-gray-900 relative overflow-hidden">
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricingPlans.map(plan, index) => (      <section id="pricing" className="py-24 bg-gray-900 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
@@ -838,7 +838,7 @@ import {;
             </p>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+            {pricingPlans.map(plan, index) => (
           </div>;
         </div>;
       </section>;
@@ -856,7 +856,7 @@ import {;
             </p>;
           </div>;
 
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricingPlans && pricingPlans.map((plan, index) => (      <section id="pricing" className="py-24 bg-gray-900 relative overflow-hidden">;
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricingPlans && pricingPlans.map(plan, index) => (      <section id="pricing" className="py-24 bg-gray-900 relative overflow-hidden">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">;
           <div className="text-center mb-20">;
             <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">;
@@ -867,7 +867,7 @@ import {;
           </div>;
 
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
-            {pricingPlans && pricingPlans.map((plan, index) => (;
+            {pricingPlans && pricingPlans.map(plan, index) => (;
               <Card
                 key={index}
                 className={`relative group ${plan && plan.popular ? 'ring-2 ring-purple-500 scale-105' : ''} border ${plan && plan.color} hover:border-purple-500/50 transition-all duration-300`}>;
@@ -893,7 +893,7 @@ import {;
                   <p className='text-gray-400'>{plan.description}</p>
                 </div>
                 <ul className='space-y-4 mb-8'>
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map(feature, featureIndex) => (
                     <li
                       key={featureIndex}
                       className='flex items-center text-gray-300'
@@ -902,12 +902,12 @@ import {;
                   <p className="text-gray-400">{plan.description}</p>
                 </div>
                 <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map(feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       {feature}
                     </li>;
-                  ))}
+                  )}
                 </ul>
                 <Button
                   href='/contact'
@@ -921,7 +921,7 @@ import {;
                   <ArrowRight className="w-5 h-5 ml-2" />;
                 </Button>;
               </Card>;
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -945,7 +945,7 @@ import {;
             </p>
           </div>
           <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6'>
-            {integrations.map((integration, index) => (
+            {integrations.map(integration, index) => (
               <Card
                 key={index}
                 className='text-center group border border-gray-700 hover:border-purple-500/30 hover:bg-gray-900/80 transition-all duration-300'>;
@@ -957,7 +957,7 @@ import {;
                 </h3>;
                 <p className='text-sm text-gray-400'>;
                   {integration && integration.description}
-                </p>              </Card>            {integrations && integrations.map((integration, index) => (;
+                </p>              </Card>            {integrations && integrations.map(integration, index) => (;
               <Card
                 key={index}
                 className="text-center group border border-gray-700 hover:border-purple-500/30 hover:bg-gray-900/80 transition-all duration-300">;
@@ -967,7 +967,7 @@ import {;
                 <h3 className="font-semibold text-white mb-2">{integration && integration.name}</h3>;
                 <p className="text-sm text-gray-400">{integration && integration.description}</p>;
               </Card>;
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -1021,7 +1021,7 @@ import {;
                   <p className='text - gray - 400'>{plan.description}</p>;
                 </div>;
                 <ul className='space - y-4 mb - 8'>;
-                  {plan.features.map ((feature, feature_index) => (
+                  {plan.features.map (feature, feature_index) => (
                     <li;
                       key={feature_index}
                       className='flex items - center text - gray - 300';
@@ -1030,11 +1030,11 @@ import {;
                   <p className="text - gray - 400">{plan.description}</p>;
                 </div>;
                 <ul className="space - y-4 mb - 8">;
-                  {plan.features.map ((feature, feature_index) => (
+                  {plan.features.map (feature, feature_index) => (
                     <li key={feature_index} className="flex items - center text - gray - 300">;
                       <CheckCircle className="w - 5 h - 5 text - green - 400 mr - 3 flex - shrink - 0" />;
                       {feature}
-                    </li>))}
+                    </li>)}
                 </ul>;
                 <Button;
                   href='/contact';
@@ -1048,7 +1048,7 @@ import {;
                   Get Started;
                   <ArrowRight className="w - 5 h - 5 ml - 2" />;
                 </Button>;
-              </Card>))}
+              </Card>)}
           </div>;
         </div>;
       </section>;
@@ -1072,7 +1072,7 @@ import {;
             </p>;
           </div>;
           <div className='grid grid - cols - 2 md:grid - cols - 3 lg:grid - cols - 6 gap - 6'>;
-            {integrations.map ((integration, index) => (
+            {integrations.map (integration, index) => (
               <Card;
                 key={index}
                 className='text - center group border border - gray - 700 hover:border - purple - 500 / 30 hover:bg - gray - 900 / 80 transition - all duration - 300';
@@ -1085,7 +1085,7 @@ import {;
                 </h3>;
                 <p className='text - sm text - gray - 400'>;
                   {integration.description}
-                </p>              </Card>            {integrations.map ((integration, index) => (
+                </p>              </Card>            {integrations.map (integration, index) => (
               <Card;
                 key={index}
                 className="text - center group border border - gray - 700 hover:border - purple - 500 / 30 hover:bg - gray - 900 / 80 transition - all duration - 300";
@@ -1095,7 +1095,7 @@ import {;
                 </div>;
                 <h3 className="font - semibold text - white mb - 2">{integration.name}</h3>;
                 <p className="text - sm text - gray - 400">{integration.description}</p>;
-              </Card>))}
+              </Card>)}
           </div>;
         </div>;
       </section>;
@@ -1155,6 +1155,5 @@ import {;
       </section>;
     </>;
   );
-}
+
     </>);
-}

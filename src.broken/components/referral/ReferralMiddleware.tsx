@@ -6,5 +6,3 @@ export function ReferralMiddleware() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

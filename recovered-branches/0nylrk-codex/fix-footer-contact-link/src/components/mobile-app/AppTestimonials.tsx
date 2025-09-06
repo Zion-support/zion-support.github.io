@@ -1,5 +1,4 @@
 
-
 import React from "react";
 import {Star} from "lucide-react";
 import {Card, CardContent, CardFooter} from "@/components/ui/card";
@@ -25,7 +24,7 @@ const testimonials = [
     rating: 4
     avatar: "/placeholder.svg"
   }
-];
+;
 export const AppTestimonials: React.FC = () => {
   return (
     <section className="py-16 bg-zion-blue">
@@ -37,16 +36,16 @@ export const AppTestimonials: React.FC = () => {
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {testimonials.map((testimonial, index) => (
+          {testimonials.map(testimonial, index) => (
             <Card key={index} className="bg-zion-blue-dark border-zion-purple/30">
               <CardContent className="pt-6">
                 <div className="flex mb-4">
-                  {Array.from({ length: 5 }).map((_, i) => (
+                  {Array.from({ length: 5 }).map(_, i) => (
                     <Star
                       key={i}
                       className={`h-5 w-5 ${i < testimonial && testimonial.rating ? "text-yellow-400 fill-yellow-400" : "text-gray-400"}`}
                     />;
-                  ))}
+                  )}
                 </div>;
                 <p className="text-gray-200 mb-6">"{testimonial && testimonial.text}"</p>;
               </CardContent>;
@@ -62,12 +61,11 @@ export const AppTestimonials: React.FC = () => {
                 </div>;
               </CardFooter>;
             </Card>;
-          ))}
+          )}
         </div>
       </div>
     </section>
   )
-}
 
     rating: 5,
     avatar: "/placeholder.svg";
@@ -79,8 +77,8 @@ export const AppTestimonials: React.FC = () => {
     rating: 4,
     avatar: "/placeholder.svg";
   }
-];
 ;
+
 export const AppTestimonials: React.FC = () => {
   return (
     <section className="py - 16 bg - zion - blue">;
@@ -92,15 +90,15 @@ export const AppTestimonials: React.FC = () => {
           </p>;
         </div>;
         <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
-          {testimonials.map ((testimonial, index) => (
+          {testimonials.map (testimonial, index) => (
             <Card key={index} className="bg - zion - blue - dark border - zion - purple / 30">;
               <CardContent className="pt - 6">;
                 <div className="flex mb - 4">;
-                  {Array.from ({ length: 5 }).map ((_, i) => (
+                  {Array.from ({ length: 5 }).map (_, i) => (
                     <Star;
                       key={i}
                       className={`h - 5 w - 5 ${i < testimonial.rating ? "text - yellow - 400 fill - yellow - 400" : "text - gray - 400"}`}
-                    />))}
+                    />)}
                 </div>;
                 <p className="text - gray - 200 mb - 6">"{testimonial.text}"</p>;
               </CardContent>;
@@ -115,9 +113,7 @@ export const AppTestimonials: React.FC = () => {
                   </div>;
                 </div>;
               </CardFooter>;
-            </Card>))}
+            </Card>)}
         </div>;
       </div>;
     </section>);
-}
-;

@@ -16,10 +16,10 @@ export default function AIMatcherPage() {
     // Get the item type from the category
     let itemType = "service";
     const category = match.item.category.toLowerCase()
-    if (category.includes("talent") |category === "engineering" |
-        category === "data science" |category === "development") {
+    if (category.includes("talent") |category = = "engineering" |
+        category = = "data science" |category = = "development") {
       itemType = "talent"
-    } else if (category.includes("equipment") |category === "hardware") {
+    } else if (category.includes("equipment") |category = = "hardware") {
       itemType = "equipment"
     }
     toast({
@@ -30,8 +30,7 @@ export default function AIMatcherPage() {
       state: {
         serviceType: itemType
         specificItem: match.item
-      }
-    })
+      })
   }
 
   return (
@@ -63,7 +62,7 @@ export default function AIMatcherPage() {
               </Select>
             </div>
             <AIMatchmaker
-              serviceType={selectedCategory === "all" ? "" : selectedCategory}
+              serviceType={selectedCategory = = "all" ? "" : selectedCategory}
               onMatchSelect={handleMatchSelect}
             />
           </div>
@@ -72,7 +71,7 @@ export default function AIMatcherPage() {
       <Footer />
     </>
   )
-}
+
             />;
           </div>;
         </div>;
@@ -80,6 +79,5 @@ export default function AIMatcherPage() {
       <Footer />;
     </>;
   );
-}
+
     </>);
-}

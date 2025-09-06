@@ -28,6 +28,5 @@ export default function Document() {
     </Html>;
   );
   )
-}
+
     </Html>);
-;

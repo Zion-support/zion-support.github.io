@@ -9,7 +9,7 @@ import {
   Database
   ArrowRight
   Check;
-} from 'lucide-react';
+ from 'lucide-react';
 export default /**
  * CloudPlatformPage - Function description
  */
@@ -106,7 +106,7 @@ function CloudPlatformPage() {
               </p>
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
-              {features.map((feature, index) => (
+              {features.map(feature, index) => (
                 <div
                   key={index}
                   className='p-8 bg-gray-900/50 rounded-2xl border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300'>;
@@ -119,7 +119,7 @@ function CloudPlatformPage() {
                   <p className='text-gray-400 leading-relaxed'>                    {feature && feature.description}
                   </p>;
                 </div>;
-              ))}
+              )}
             </div>
           </div>
         </section>
@@ -132,7 +132,7 @@ function CloudPlatformPage() {
                   Why Choose Our Cloud Platform?;
                 </h2>;
                 <div className='space-y-6'>;
-                  {benefits && benefits.map((benefit, index) => (;
+                  {benefits && benefits.map(benefit, index) => (;
                     <div key={index} className='flex items-start'>;
                       <div className='w-6 h-6 rounded-full bg-blue-500/20 flex items-center justify-center mr-4 mt-1'>;
                         <Check className='w-4 h-4 text-blue-500' />;
@@ -148,14 +148,14 @@ function CloudPlatformPage() {
                   Why Choose Our Cloud Platform?
                 </h2>
                 <div className="space-y-6">
-                  {benefits.map((benefit, index) => (
+                  {benefits.map(benefit, index) => (
                     <div key={index} className="flex items-start">
                       <div className="w-6 h-6 rounded-full bg-blue-500/20 flex items-center justify-center mr-4 mt-1">
                         <Check className="w-4 h-4 text-blue-500" />
                       </div>
                       <span className="text-gray-300 text-lg">{benefit}</span>
                     </div>
-                  ))}
+                  )}
                 </div>
               </div>
               <div className='relative'>
@@ -213,7 +213,7 @@ function CloudPlatformPage() {
         </section>
       </div>
     </>
-);
+;
               </a>;
             </div>;
           </div>;
@@ -224,6 +224,5 @@ function CloudPlatformPage() {
     </>;
   );
   )
-}
+
     </>);
-;

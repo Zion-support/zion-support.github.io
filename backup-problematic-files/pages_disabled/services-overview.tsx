@@ -2,7 +2,6 @@ import React from 'react';
 
 interface Services-overviewProps {
   className?: string;
-}
 
 const Services-overview: React.FC<Services-overviewProps> = ({ className }) => {
   return (
@@ -11,6 +10,5 @@ const Services-overview: React.FC<Services-overviewProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default Services-overview;

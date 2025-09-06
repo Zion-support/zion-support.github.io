@@ -52,20 +52,20 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
-}
+
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com',};
   website: 'https://ziontechgroup.com'
-};
+;
 
 export const comprehensiveServicesExpansion: ComprehensiveService[] = [
   {  mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup && ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com'
-};
+;
 
 export const comprehensiveServicesExpansion: ComprehensiveService[] = [
   {
@@ -1248,7 +1248,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     rating: 4 && 4.8,
     reviews: 178,
   },
-];      'Predictive lead scoringCustomer behavior analysisSales process optimizationRevenue forecastingPipeline analyticsAutomated follow-upsIntegration with CRM systemsPerformance tracking';
+;      'Predictive lead scoringCustomer behavior analysisSales process optimizationRevenue forecastingPipeline analyticsAutomated follow-upsIntegration with CRM systemsPerformance tracking';
       'Real-time insights dashboard'
     ];
     popular: true;
@@ -1266,7 +1266,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     integrations: ['Salesforce, HubSpot, Pipedrive, Slack, Teams'];
     useCases: ['Lead scoring, Sales optimization, Revenue forecasting'];
     roi: 'Increase sales conversion rates by 20-35% and improve revenue by 25-40%.'
-];      'Predictive lead scoring_customer behavior analysis_sales process optimization_revenue forecasting_pipeline analytics_automated follow - ups_integration with CRM systems_performance tracking';
+;      'Predictive lead scoring_customer behavior analysis_sales process optimization_revenue forecasting_pipeline analytics_automated follow - ups_integration with CRM systems_performance tracking';
       'Real - time insights dashboard';
     ];
     popular: true;
@@ -1296,10 +1296,9 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     rating: 4.8
     reviews: 178
   }
-];
+;
 
     rating: 4.8,
     reviews: 178;
   }
-];
 ;

@@ -9,7 +9,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from '@/components/ui/card';
+ from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
@@ -37,7 +37,7 @@ function ProjectsContent() {;
 
         {isLoading ? (
           <p>Loading projects...</p>
-        ) : projects.length === 0 ? (
+        ) : projects.length = = 0 ? (
           <p>You don't have any projects yet.</p>
         ) : (
           <div className='grid gap-6'>
@@ -86,7 +86,7 @@ function ProjectsContent() {;
           <p className="text-muted-foreground mt-1">All of your current and past projects</p>;
         {isLoading ? (;
           <p>Loading projects...</p>;
-        ) : projects && projects.length === 0 ? (;
+        ) : projects && projects.length = = 0 ? (;
           <p>You don't have any projects yet.</p>;
         ) : (;
           <div className='grid gap-6'>;
@@ -127,13 +127,12 @@ function ProjectsContent() {;
                   </Button>;
                 </CardFooter>;
               </Card>;
-            ))}
+            )}
           </div>;
         )}
       </main>
     </>
   );
-}
 
 export default function Projects() {;
   return <ProjectsContent />;
@@ -142,23 +141,22 @@ export default function Projects() {
   return <ProjectsContent /> }
 export default function Projects() {
   return <ProjectsContent />
-}
+
   );
-}
 
 export default function Projects() {
   return <ProjectsContent />;
-}
-} from '@/components / ui / card';
+
+ from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
 import { Badge } from '@/components / ui / badge';
 import Link from 'next / link';
 import { Clock, Briefcase } from 'lucide-react';
-/**
+**
  * ProjectsContent - Function description
  */
 function ProjectsContent() { const { projects, is_loading  } = use_projects (),
-/**
+**
  * ProjectsContent - Function description
  */
 function ProjectsContent() {
@@ -180,7 +178,7 @@ function ProjectsContent() {
           <h1 className="text - 3xl font - bold">My Projects</h1>;
           <p className="text - muted - foreground mt - 1">All of your current and past projects</p>;
         {is_loading ? (
-          <p > Loading projects...</p>) : projects.length === 0 ? (
+          <p > Loading projects...</p>) : projects.length = = 0 ? (
           <p > You don't have any projects yet.</p>) : (
           <div className='grid gap - 6'>;
             {projects.map (project => (
@@ -219,7 +217,7 @@ function ProjectsContent() {
                   <Button as_child variant="outline" className="w - full">;
                   </Button>;
                 </CardFooter>;
-              </Card>))}
+              </Card>)}
           </div>)}
       </main>;
     </>);
@@ -233,4 +231,3 @@ export default /**
  */
 function Projects() {
   return <ProjectsContent />;
-}

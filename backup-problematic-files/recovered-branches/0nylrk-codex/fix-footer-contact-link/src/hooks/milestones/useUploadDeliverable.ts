@@ -4,28 +4,23 @@ import { supabase } from '@/integrations/supabase/client',;
 import { useAuth } from '@/hooks/useAuth',;
 import { toast } from 'sonner',;
 import { useRecordActivity } from './useRecordActivity',;
-;
+
 export const useUploadDeliverable = () => {;
   const { user } = useAuth(),;
   const [isSubmitting, setIsSubmitting] = useState(false),;
   const { recordMilestoneActivity } = useRecordActivity(),;
-  ;
   const uploadDeliverable = async (milestoneId:string, projectId:string, file:File) => {;
     if (!user || !projectId) return null,;
-    ;
     try {;
       setIsSubmitting(true),;
-      ;
       // Get the current milestone;
       const { data:milestone, error:fetchError } = await supabase;
         .from('project_milestones');
         .select('*');
         .eq('id', milestoneId);
         .single(),;
-      ;
       if (fetchError) throw fetchError,;
       if (!milestone) throw new Error("Milestone not found"),;
-      ;
       // For this example, instead of actually uploading files (which would require storage setup),;
       // we'll just store the file metadata in the deliverables JSONB field;
       const newDeliverable = {;
@@ -36,16 +31,12 @@ export const useUploadDeliverable = () => {;
         added_at:new Date().toISOString(),;
         added_by:user.id;
       },;
-      ;
       const deliverables = [...(milestone.deliverables || []), newDeliverable],;
-      ;
       const { error } = await supabase;
         .from('project_milestones');
         .update({ deliverables });
         .eq('id', milestoneId),;
-        ;
       if (error) throw error,;
-      ;
       // Create activity record;
       await recordMilestoneActivity(;
         milestoneId, ;
@@ -54,9 +45,7 @@ export const useUploadDeliverable = () => {;
         milestone.status, ;
         `Deliverable added:${file.name}`;
       ),;
-      ;
       toast.success("Deliverable added successfully"),;
-      ;
       return newDeliverable,;
     } catch (err:any) {;
       console.error("Error uploading deliverable:", err),;
@@ -64,32 +53,30 @@ export const useUploadDeliverable = () => {;
       return null;
     } finally {;
       setIsSubmitting(false),;
-    }
-  },;
-  ;
+    },;
   return {;
     uploadDeliverable,;
     isSubmitting;
   },;
-},; try {
+,; try {
   setIsSubmitting (true);
-//Get the current milestone const {
+/Get the current milestone const {
   data: milestone, error: fetchError 
-}= await supabase .from ('project milestones') .select ('*') .eq ('id', milestoneId) .single ();
-//For this example, instead of actually uploading files (which would require storage setup);
-//we'll just store the file metadata in the deliverables JSONB field const {
+= await supabase .from ('project milestones') .select ('*') .eq ('id', milestoneId) .single ();
+/For this example, instead of actually uploading files (which would require storage setup);
+/we'll just store the file metadata in the deliverables JSONB field const {
   error 
-}= await supabase .from ('project milestones') if (error) throw error;
-// Create activity record await recordMilestoneActivity (milestoneId;
-'deliverable added';
+= await supabase .from ('project milestones') if (error) throw error;
+/ Create activity record await recordMilestoneActivity (milestoneId;
+deliverable added';
 milestone.status;
 milestone.status;
-}finally {
+finally {
   setIsSubmitting (false) 
-}
-};
+
+;
 return {
   uploadDeliverable;
 isSubmitting 
-}
-};
+
+;

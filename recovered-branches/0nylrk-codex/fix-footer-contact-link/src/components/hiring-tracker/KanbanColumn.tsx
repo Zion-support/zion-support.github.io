@@ -12,14 +12,14 @@ interface KanbanColumnProps {
   applications: JobApplication[]
 
   count: number
-}
+
 export function KanbanColumn({
   id;
   title;
   description;
   applications;
   count
-}: KanbanColumnProps) {
+: KanbanColumnProps) {
   // Add color based on column type
 
   const getBadgeVariant = (columnId: string) => {
@@ -35,7 +35,7 @@ interface KanbanColumnProps {
   description: string,
   applications: JobApplication[],
   count: number;
-}
+
 export /**
  * KanbanColumn - Function description
  */
@@ -55,7 +55,6 @@ function KanbanColumn() {
       default:
         return "outline"
     }
-  }
   const getColumnBgColor = (columnId: string) => {
     switch (columnId) {
       case "hired": return "bg-green-50";
@@ -64,7 +63,6 @@ function KanbanColumn() {
       default:
         return "bg-muted/30"
     }
-  }
 
   return (
     <Card className={`${getColumnBgColor(id)} flex flex-col h-[calc(100vh-300px)] min-h-[500px]`}>;
@@ -83,21 +81,21 @@ function KanbanColumn() {
               {...provided.droppableProps}
               className="min-h-full space-y-2"
             >
-              {applications.map((application, index) => (
+              {applications.map(application, index) => (
                 <CandidateCard
                   key={application.id}
               ref={provided && provided.innerRef}
               {...provided && provided.droppableProps}
               className="min-h-full space-y-2">;
-              {applications && applications.map((application, index) => (;
+              {applications && applications.map(application, index) => (;
                 <CandidateCard
                   key={application && application.id}
                   application={application}
                   index={index}
                 />;
-              ))}
+              )}
               {provided.placeholder}
-              {applications.length === 0 && (
+              {applications.length = = 0 && (
                 <div className="h-full flex items-center justify-center border-2 border-dashed border-muted rounded-md p-4">
                   <p className="text-center text-sm text-muted-foreground">
                     Drag candidates here
@@ -110,10 +108,10 @@ function KanbanColumn() {
       </CardContent>
     </Card>
   )
-}
-                />))}
+
+                />)}
               {provided.placeholder}
-              {applications.length === 0 && (
+              {applications.length = = 0 && (
                 <div className="h - full flex items - center justify - center border - 2 border - dashed border - muted rounded - md p - 4">;
                   <p className="text - center text - sm text - muted - foreground">;
                     Drag candidates here;
@@ -123,4 +121,3 @@ function KanbanColumn() {
         </Droppable>;
       </CardContent>;
     </Card>);
-}

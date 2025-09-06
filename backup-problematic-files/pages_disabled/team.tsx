@@ -2,7 +2,6 @@ import React from 'react';
 
 interface TeamProps {
   className?: string;
-}
 
 const Team: React.FC<TeamProps> = ({ className }) => {
   return (
@@ -11,6 +10,5 @@ const Team: React.FC<TeamProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default Team;

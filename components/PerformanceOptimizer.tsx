@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React, { useEffect, useState, useCallback } from 'react';
 
 import { motion } from 'framer-motion';
@@ -42,7 +42,7 @@ import {;
   Cpu,;
   Database,;
   Network,;
-} from 'lucide-react';
+ from 'lucide-react';
 
 interface PerformanceMetrics {;
   loadTime: number;
@@ -54,7 +54,7 @@ interface PerformanceMetrics {;
   Cpu,
   Database,
   Network,
-} from 'lucide-react';
+ from 'lucide-react';
 interface PerformanceMetrics {
   load_time: number;
   firstContentfulPaint: number;
@@ -63,18 +63,18 @@ interface PerformanceMetrics {
   firstInputDelay: number;
 
   timeToInteractive: number;
-}, []);
-//Optimize images for (const img of Array.from (images) ) {
+, []);
+/Optimize images for (const img of Array.from (images) {
   // Check condition
 if ( {) {
   $2
-}
+
   //Add lazy loading img.loading = 'lazy';
-//Add responsive sizes if not present if (!img.sizes) {
+/Add responsive sizes if not present if (!img.sizes) {
   optimizedCount++
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   className = ''
-}) => {  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+) => {  const [metrics, setMetrics] = useState<PerformanceMetrics>({
 interface PerformanceMetrics {
   loadTime: number
   firstContentfulPaint: number
@@ -83,14 +83,14 @@ interface PerformanceMetrics {
   firstInputDelay: number
 
   timeToInteractive: number
-//Add responsive sizes if not present // Check condition
+/Add responsive sizes if not present // Check condition
 if ( {) {
   $2
-}
+
   optimized_count++;
 const PerformanceOptimizer: React.FC < PerformanceOptimizerProps> = ({
   class_name = '',
-}) => {  const [metrics, set_metrics] = useState < PerformanceMetrics>({
+) => {  const [metrics, set_metrics] = useState < PerformanceMetrics>({
 interface PerformanceMetrics {
   load_time: number,
   firstContentfulPaint: number,
@@ -98,10 +98,9 @@ interface PerformanceMetrics {
   cumulativeLayoutShift: number,
   firstInputDelay: number,
   timeToInteractive: number;
-}
+
 interface PerformanceOptimizerProps {
   class_name?: string;
-}
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className = '' }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
@@ -125,16 +124,16 @@ const PerformanceOptimizer: React.FC < PerformanceOptimizerProps> = ({ class_nam
   const [optimizationStatus, setOptimizationStatus] = useState<string>('idle');
   const [showMetrics, setShowMetrics] = useState(false);
   // Measure performance metrics
-  const measurePerformance = useCallback(() => {
-    if (typeof window !== 'undefined' && 'performance' in window) {
+  const measurePerformance = useCallback() => {
+    if (typeof window != 'undefined' && 'performance' in window) {
       const navigation = performance.getEntriesByType(
         'navigation'
       )[0] as PerformanceNavigationTiming;
       const paintEntries = performance.getEntriesByType('paint');      const paintEntries = performance.getEntriesByType('paint');
-      const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
+      const fcp = paintEntries.find(entry => entry.name = = 'first-contentful-paint');
       const lcp = performance.getEntriesByType('largest-contentful-paint')[0];
       const fcp = paintEntries.find(
-        entry => entry.name === 'first-contentful-paint'
+        entry => entry.name = = 'first-contentful-paint'
       );
       const lcp = performance.getEntriesByType('largest-contentful-paint')[0];
       const newMetrics: PerformanceMetrics = {
@@ -157,7 +156,7 @@ const PerformanceOptimizer: React.FC < PerformanceOptimizerProps> = ({ class_nam
     try {
       const images = document.querySelectorAll('img');
       let optimizedCount = 0;
-      for (const img of Array.from(images)) {
+      for (const img of Array.from(images) {
         if (img.complete && img.naturalWidth > 0) {
           // Add lazy loading
           img.loading = 'lazy';
@@ -165,59 +164,56 @@ const PerformanceOptimizer: React.FC < PerformanceOptimizerProps> = ({ class_nam
           if (!img.sizes) {
             img.sizes =
   }, []);
-;
+
   // Optimize images;
   const optimize_images = useCallback (async () => {
     setIsOptimizing (true);
     setOptimizationStatus ('Optimizing images...');
-;
+
     try {
       const images = document.querySelectorAll ('img');
       let optimized_count = 0;
-;
-      for (const img of Array.from (images)) {
+
+      for (const img of Array.from (images) {
         // Check condition
 if ( {) {
   $2
-}
+
           // Add lazy loading;
           img.loading = 'lazy';
-;
+
           // Add responsive sizes if not present;
           // Check condition
 if ( {) {
   $2
-}
+
             img.sizes =;
               '(max - width: 768px) 100vw, (max - width: 1200px) 50vw, 33vw';
           }
           optimized_count++;        }
-      }
       setOptimizationStatus (`Optimized ${optimized_count} images`);
           // Add responsive sizes if not present;
           // Check condition
 if ( {) {
   $2
-}
+
             img.sizes = '(max - width: 768px) 100vw, (max - width: 1200px) 50vw, 33vw';
           }
           optimized_count++;
         }
-      }
 
       setOptimizationStatus(`Optimized ${optimizedCount} images`);
-      
+
       // Simulate optimization delay
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
+      await new Promise(resolve => setTimeout(resolve, 1000);
+
       setOptimizationStatus('Image optimization complete')
     } catch (error) {
       setOptimizationStatus ('Image optimization failed');
       console.error ('Image optimization error:', error);
     } finally {
       setIsOptimizing (false);
-    }
-  }, []);
+    }, []);
 
   // Optimize images;
   const optimizeImages = useCallback(async () => {;
@@ -228,7 +224,7 @@ if ( {) {
       const images = document && document.querySelectorAll('img');
       let optimizedCount = 0;
 
-      for (const img of Array && Array.from(images)) {;
+      for (const img of Array && Array.from(images) {;
         if (img && img.complete && img && img.naturalWidth > 0) {;
           // Add lazy loading;
           img && img.loading = 'lazy';
@@ -239,7 +235,6 @@ if ( {) {
               '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw';
           }
           optimizedCount++;        }
-      }
       setOptimizationStatus(`Optimized ${optimizedCount} images`);
           // Add responsive sizes if not present;
           if (!img && img.sizes) {;
@@ -247,27 +242,25 @@ if ( {) {
           }
           optimizedCount++
         }
-      }
       setOptimizationStatus(`Optimized ${optimizedCount} images`);
       // Simulate optimization delay
 
       // Simulate optimization delay;
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await new Promise(resolve => setTimeout(resolve, 1000);
       setOptimizationStatus('Image optimization complete');
     } catch (error) {;
       setOptimizationStatus('Image optimization failed');
       console && console.error('Image optimization error:', error);
     } finally {;
       setIsOptimizing(false);    }      // Simulate optimization delay;
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await new Promise(resolve => setTimeout(resolve, 1000);
       setOptimizationStatus('Image optimization complete')
     } catch (error) {
       setOptimizationStatus('Image optimization failed');
       console && console.error('Image optimization error:', error);
     } finally {;
       setIsOptimizing(false);
-    }
-  }, []);
+    }, []);
   // Optimize fonts
   const optimizeFonts = useCallback(async () => {
     setIsOptimizing(true);
@@ -311,13 +304,13 @@ if ( {) {
       setOptimizationStatus('Font optimization complete');
 
       // Simulate optimization delay;
-      await new Promise(resolve => setTimeout(resolve, 800));
+      await new Promise(resolve => setTimeout(resolve, 800);
     } catch (error) {;
       setOptimizationStatus('Font optimization failed');
       console && console.error('Font optimization error:', error);
     } finally {;
       setIsOptimizing(false);    }      // Simulate optimization delay;
-      await new Promise(resolve => setTimeout(resolve, 800));
+      await new Promise(resolve => setTimeout(resolve, 800);
     } catch (error) {;
       setOptimizationStatus('Font optimization failed');
       console && console.error('Font optimization error:', error);
@@ -328,8 +321,7 @@ if ( {) {
       console.error ('Font optimization error:', error);
     } finally {
       setIsOptimizing(false)
-    }
-  }, []);
+    }, []);
   // Optimize CSS and JavaScript
   const optimizeCode = useCallback(async () => {
     setIsOptimizing(true);
@@ -358,14 +350,13 @@ if ( {) {
 
       preloadLinks && preloadLinks.forEach(linkAttrs => {;
       setIsOptimizing (false);
-    }
-  }, []);
-;
+    }, []);
+
   // Optimize CSS and JavaScript;
   const optimize_code = useCallback (async () => {
     setIsOptimizing (true);
     setOptimizationStatus ('Optimizing code...');
-;
+
     try {
       // Add resource hints for critical resources;
       const preload_links = [;
@@ -385,49 +376,48 @@ if ( {) {
         },      ];        { rel: 'preload', href: '/fonts / inter - var.woff2', as: 'font', type: 'font / woff2', crossorigin: 'anonymous' },
         { rel: 'preload', href: '/fonts / jetbrains - mono - var.woff2', as: 'font', type: 'font / woff2', crossorigin: 'anonymous' }
       ];
-;
+
       preload_links.for_each (link_attrs => {
 import React, { useEffect } from 'react;
 import Head from 'next / head;
 interface PerformanceOptimizerProps {preload_images?: string[];
   preload_fonts?: string[];
   criticalCSS?: string;
-}
+
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 preloadImages = [], preloadFonts = [;
     'https: //fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap;
-  ], criticalCSS'}) => {useEffect(() => {
+  ], criticalCSS'}) => {useEffect() => {
     // Performance monitoring;
-    if (typeof window !== 'undefined' && 'performance' in window) {'      // Monitor Core Web Vitals'      const observer = new PerformanceObserver((list) => {;
-        for (const entry of list && list.getEntries()) {;
-if (entry && entry.entryType === 'largest-contentful-paint') {'            console && console.log('LCP: ', entry && entry.startTime);
-'          }'          if (entry && entry.entryType === 'first-input') {'            console && console.log('FID: ', entry && entry.processingStart - entry && entry.startTime);'          }'          if (entry && entry.entryType === 'layout-shift') {'            if (!(entry as any).hadRecentInput) {'              console && console.log('CLS: ', (entry as any).value);'            }'          }}
+    if (typeof window != 'undefined' && 'performance' in window) {'      // Monitor Core Web Vitals'      const observer = new PerformanceObserver(list) => {;
+        for (const entry of list && list.getEntries() {;
+if (entry && entry.entryType = = 'largest-contentful-paint') {'            console && console.log('LCP: ', entry && entry.startTime);
+          }'          if (entry && entry.entryType = = 'first-input') {'            console && console.log('FID: ', entry && entry.processingStart - entry && entry.startTime);'          }'          if (entry && entry.entryType = = 'layout-shift') {'            if (!(entry as any).hadRecentInput) {'              console && console.log('CLS: ', (entry as any).value);'            }'          }
       });
       try {observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
-'      } catch (e) {'        // Fallback for browsers that don&apos;t support all entry types;
+      } catch (e) {'        // Fallback for browsers that don&apos;t support all entry types;
         console && console.log('Performance monitoring not fully supported');
-'      }';
+      }';
       // Resource hints for better performance;
       const addResourceHint = (href: string, as: string, type?: string) => {const link = document.createElement('link');
-        Object.entries(linkAttrs).forEach(([key, value]) => {
-          if (key === 'crossorigin') {
+        Object.entries(linkAttrs).forEach([key, value]) => {
+          if (key = = 'crossorigin') {
             link.setAttribute(key, value as string);
           } else {
       const addResourceHint = (href: string, as: string, type?: string) => {;
         const link = document && document.createElement('link');
-        Object && Object.entries(linkAttrs).forEach(([key, value]) => {;
-          if (key === 'crossorigin') {;
+        Object && Object.entries(linkAttrs).forEach([key, value]) => {;
+          if (key = = 'crossorigin') {;
             link && link.setAttribute(key, value as string);
           } else {;
             (link as any)[key] = value;
-          }
-        });
+          });
         document && document.head.appendChild(link);
       });
       setOptimizationStatus('Code optimization complete');
 
       // Simulate optimization delay;
-      await new Promise(resolve => setTimeout(resolve, 1200));
+      await new Promise(resolve => setTimeout(resolve, 1200);
     } catch (error) {;
       setOptimizationStatus('Code optimization failed');
       console && console.error('Code optimization error:', error);
@@ -436,14 +426,13 @@ if (entry && entry.entryType === 'largest-contentful-paint') {'            conso
       // Simulate optimization delay
 
       // Simulate optimization delay;
-      await new Promise(resolve => setTimeout(resolve, 1200));
+      await new Promise(resolve => setTimeout(resolve, 1200);
     } catch (error) {;
       setOptimizationStatus('Code optimization failed');
       console && console.error('Code optimization error:', error);
     } finally {;
       setIsOptimizing(false);    }      setIsOptimizing(false);
-    }
-  }, []);
+    }, []);
   // Run all optimizations
   const runAllOptimizations = useCallback(async () => {
     setIsOptimizing(true);
@@ -455,7 +444,7 @@ if (entry && entry.entryType === 'largest-contentful-paint') {'            conso
 
       setOptimizationStatus('All optimizations complete!');
       // Re-measure performance after optimization
-      setTimeout(() => {
+      setTimeout() => {
         measurePerformance();
       }, 500);
     } catch (error) {;
@@ -464,13 +453,13 @@ if (entry && entry.entryType === 'largest-contentful-paint') {'            conso
     } finally {;
       setIsOptimizing(false);    }      setOptimizationStatus('All optimizations complete!');
       // Re-measure performance after optimization
-      setTimeout(() => {
+      setTimeout() => {
         measurePerformance()
       }, 500)
     } catch (error) {
 
       // Re-measure performance after optimization;
-      setTimeout(() => {;
+      setTimeout() => {;
         measurePerformance();
       }, 500);
 
@@ -479,59 +468,55 @@ if (entry && entry.entryType === 'largest-contentful-paint') {'            conso
       console && console.error('Optimization error:', error);
     } finally {;
       setIsOptimizing(false);
-    }
-  }, [optimizeImages, optimizeFonts, optimizeCode, measurePerformance]);
+    }, [optimizeImages, optimizeFonts, optimizeCode, measurePerformance]);
   // Initialize performance monitoring
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
+  useEffect() => {
+    if (typeof window != 'undefined') {
       // Measure initial performance
       window.addEventListener('load', measurePerformance);
       // Monitor for performance issues
       const observer = new PerformanceObserver(list => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'largest-contentful-paint') {
+        for (const entry of list.getEntries() {
+          if (entry.entryType = = 'largest-contentful-paint') {
             const lcp = entry.startTime;
             if (lcp > 2500) {
               // LCP should be under 2.5s
               console.warn('LCP is too slow:', lcp);            }
-          }
-        }
-      });      // Monitor for performance issues;
-      const observer = new PerformanceObserver((list) => {;
-        for (const entry of list && list.getEntries()) {;
-          if (entry && entry.entryType === 'largest-contentful-paint') {;
+        });      // Monitor for performance issues;
+      const observer = new PerformanceObserver(list) => {;
+        for (const entry of list && list.getEntries() {;
+          if (entry && entry.entryType = = 'largest-contentful-paint') {;
             const lcp = entry && entry.startTime;
             if (lcp > 2500) { // LCP should be under 2 && 2.5s;
               console && console.warn('LCP is too slow:', lcp);
         document.head.append_child (link);
       });
-;
+
       setOptimizationStatus ('Code optimization complete');
-;
+
       // Simulate optimization delay;
-      await new Promise (resolve => set_timeout (resolve, 1200));
+      await new Promise (resolve => set_timeout (resolve, 1200);
     } catch (error) {
       setOptimizationStatus ('Code optimization failed');
       console.error ('Code optimization error:', error);
     } finally {
       setIsOptimizing (false);    }      setIsOptimizing (false);
-    }
-  }, []);
-;
+    }, []);
+
   // Run all optimizations;
   const runAllOptimizations = useCallback (async () => {
     setIsOptimizing (true);
     setOptimizationStatus ('Starting comprehensive optimization...');
-;
+
     try {
       await optimize_images ();
       await optimize_fonts ();
       await optimize_code ();
-;
+
       setOptimizationStatus ('All optimizations complete!');
-;
+
       // Re - measure performance after optimization;
-      set_timeout (() => {
+      set_timeout () => {
         measure_performance ();
       }, 500);
     } catch (error) {
@@ -539,9 +524,9 @@ if (entry && entry.entryType === 'largest-contentful-paint') {'            conso
       console.error ('Optimization error:', error);
     } finally {
       setIsOptimizing (false);    }      setOptimizationStatus ('All optimizations complete!');
-;
+
       // Re - measure performance after optimization;
-      set_timeout (() => {
+      set_timeout () => {
         measure_performance ();
       }, 500);
     } catch (error) {
@@ -549,70 +534,64 @@ if (entry && entry.entryType === 'largest-contentful-paint') {'            conso
       console.error ('Optimization error:', error);
     } finally {
       setIsOptimizing (false);
-    }
-  }, [optimize_images, optimize_fonts, optimize_code, measure_performance]);
-;
+    }, [optimize_images, optimize_fonts, optimize_code, measure_performance]);
+
   // Initialize performance monitoring;
-  useEffect (() => {
+  useEffect () => {
     // Check condition
 if ( {) {
   $2
-}
+
       // Measure initial performance;
       window.addEventListener ('load', measure_performance);
-;
+
       // Monitor for performance issues;
       const observer = new PerformanceObserver (list => {
-        for (const entry of list.get_entries ()) {
+        for (const entry of list.get_entries () {
           // Check condition
 if ( {) {
   $2
-}
+
             const lcp = entry.start_time;
             // Check condition
 if ( {) {
   $2
-}
+
               // LCP should be under 2.5s;
               console.warn ('LCP is too slow:', lcp);            }
-          }
-        }
-      });      // Monitor for performance issues;
-      const observer = new PerformanceObserver ((list) => {
-        for (const entry of list.get_entries ()) {
+        });      // Monitor for performance issues;
+      const observer = new PerformanceObserver (list) => {
+        for (const entry of list.get_entries () {
           // Check condition
 if ( {) {
   $2
-}
+
             const lcp = entry.start_time;
             // Check condition
 if ( { // LCP should be under 2.5s) {
   $2
-}
+
               console.warn ('LCP is too slow:', lcp);
             }
-          }
-        }
-      });
+        });
       observer.observe({ entryTypes: ['largest-contentful-paint'] });
       return () => {
         window.removeEventListener('load', measurePerformance);
         observer.disconnect();
       };    }
       observer.observe({ entryTypes: ['largest-contentful-paint'] })
-;
+
       observer.observe ({ entry_types: ['largest - contentful - paint'] });
-;
-      return () => {
-        window.removeEventListener ('load', measure_performance);
-        observer.disconnect ();
-      }    }
-      observer.observe ({ entry_types: ['largest - contentful - paint'] }),
+
       return () => {
         window.removeEventListener ('load', measure_performance);
         observer.disconnect ();
       }
-  }, [measurePerformance]);
+      observer.observe ({ entry_types: ['largest - contentful - paint'] }),
+      return () => {
+        window.removeEventListener ('load', measure_performance);
+        observer.disconnect ();
+      }, [measurePerformance]);
   const getPerformanceScore = (): number => {
     let score = 100;
     if (metrics.firstContentfulPaint > 1800) score -= 20;
@@ -634,8 +613,7 @@ if ( { // LCP should be under 2.5s) {
       return () => {;
         window && window.removeEventListener('load', measurePerformance);
         observer && observer.disconnect();
-      }
-  }, [measurePerformance]);
+      }, [measurePerformance]);
 
   const getPerformanceScore = (): number => {;
     let score = 100;
@@ -645,7 +623,7 @@ if ( { // LCP should be under 2.5s) {
     if (metrics && metrics.loadTime > 3000) score -= 15;
     if (metrics && metrics.timeToInteractive > 3500) score -= 20;
 
-    return Math && Math.max(0, score);  };    ;
+    return Math && Math.max(0, score);  };
     return Math && Math.max(0, score);
   };
 
@@ -668,7 +646,6 @@ if ( { // LCP should be under 2.5s) {
 
   const performanceScore = getPerformanceScore();
   const performanceGrade = getPerformanceGrade(performanceScore);
-
 
     >;
       <div className='flex items-center justify-between mb-6'>;
@@ -707,9 +684,9 @@ if ( { // LCP should be under 2.5s) {
         <div className='w-full bg-white/10 rounded-full h-3'>;
           <motion&& motion.div
             className='h-3 bg-gradient-to-r from-red-500 via-yellow-500 to-green-500 rounded-full'
-            initial={{ width: 0 }}
-            animate={{ width: `${performanceScore}%` }}
-            transition={{ duration: 1, ease: 'easeOut' }}
+            initial={ width: 0 }
+            animate={ width: `${performanceScore}%` }
+            transition={ duration: 1, ease: 'easeOut' }
           />;
         </div>;
         <div className='text-right mt-1'>;
@@ -717,9 +694,9 @@ if ( { // LCP should be under 2.5s) {
         <div className="w-full bg-white/10 rounded-full h-3">;
           <motion&& motion.div
             className="h-3 bg-gradient-to-r from-red-500 via-yellow-500 to-green-500 rounded-full"
-            initial={{ width: 0 }}
-            animate={{ width: `${performanceScore}%` }}
-            transition={{ duration: 1, ease: "easeOut" }}
+            initial={ width: 0 }
+            animate={ width: `${performanceScore}%` }
+            transition={ duration: 1, ease: "easeOut" }
           />
         </div>
         <div className="text-right mt-1">
@@ -736,9 +713,9 @@ if ( { // LCP should be under 2.5s) {
       {/* Metrics Display */}
       {showMetrics && (;
         <motion&& motion.div
-          initial={{ opacity: 0, height: 0 }}
-          animate={{ opacity: 1, height: 'auto' }}
-          exit={{ opacity: 0, height: 0 }}
+          initial={ opacity: 0, height: 0 }
+          animate={ opacity: 1, height: 'auto' }
+          exit={ opacity: 0, height: 0 }
           className='grid grid-cols-2 md:grid-cols-3 gap-4 mb-6'
           <div className='text-center p-3 rounded-lg bg-white/5 border border-white/10'>
             <Clock className='w-6 h-6 text-blue-400 mx-auto mb-2' />
@@ -812,13 +789,13 @@ if ( { // LCP should be under 2.5s) {
               <span>Run All Optimizations</span>;
             </>;
         </button>
-        {optimizationStatus !== 'idle' && (
+        {optimizationStatus != 'idle' && (
           <div className='text-center p-3 rounded-lg bg-white/5 border border-white/10'>
             <div className='text-sm text-white/80'>{optimizationStatus}</div>          </div>          <div className="text-center p-3 rounded-lg bg-white/5 border border-white/10">
           )}
         </button>
 
-        {optimizationStatus !== 'idle' && (
+        {optimizationStatus != 'idle' && (
           <div className="text-center p-3 rounded-lg bg-white/5 border border-white/10">
             <div className="text-sm text-white/80">{optimizationStatus}</div>
           </div>
@@ -840,96 +817,95 @@ if ( { // LCP should be under 2.5s) {
         </ul>;
       </div>;
     </div>;
-  );
-};export default PerformanceOptimizer;}
+  );export default PerformanceOptimizer;}
       // Preload critical resources;
       preloadImages.forEach(image => {addResourceHint(image, 'image');
-'      });';
+      });';
       preloadFonts.forEach(font => {addResourceHint(font, 'style');
-'      });'    }}, [preloadImages, preloadFonts]);
+      });'    }, [preloadImages, preloadFonts]);
   return (
     <Head>;
       {/* Critical CSS inlined for above-the-fold content */}
       {criticalCSS && (;
-        <style dangerouslySetInnerHTML={{ __html: criticalCSS }} />;
+        <style dangerouslySetInnerHTML={ __html: criticalCSS } />;
       )}
-{/* Preload critical resources */}
-      {preloadImages.map((image, index) => (;
+/* Preload critical resources */}
+      {preloadImages.map(image, index) => (;
         <link;
-key={`preload-image-${index}}          rel="preload""          as="image""          href={image}"        />))}
-      {preloadFonts.map((font, index) => (;
+key={`preload-image-${index}          rel="preload""          as="image""          href={image}"        />)}
+      {preloadFonts.map(font, index) => (;
         <link;
 key={`preload-font-${index}`}          rel="preload""          as="style""          href={font}"          onLoad={() => {const link = document.querySelector(link[href="${font}"]`);
-"            if (link) {"              (link as HTMLLinkElement).rel = 'stylesheet;
-}'          }}`        />;
-      ))}
+            if (link) {"              (link as HTMLLinkElement).rel = 'stylesheet;
+'          }`        />;
+      )}
       {/* Performance hints */}
       <meta httpEquiv="x-dns-prefetch-control" content="on" />"      "      {/* Service Worker registration */}
       <script;
-        dangerouslySetInnerHTML={{__html:             if ('serviceWorker' in navigator) {'              window.addEventListener('load', function() {'                navigator.serviceWorker.register('/sw.js')'                  .then(function(registration) {'                    console.log('SW registered: ', registration);
-'                  })'                  .catch(function(registrationError) {console.log('SW registration failed: ', registrationError);'                  });'              });
-}
-          ``        }}/>;
+        dangerouslySetInnerHTML={__html:             if ('serviceWorker' in navigator) {'              window.addEventListener('load', function() {'                navigator.serviceWorker.register('/sw.js')'                  .then(function(registration) {'                    console.log('SW registered: ', registration);
+                  })'                  .catch(function(registrationError) {console.log('SW registration failed: ', registrationError);'                  });'              });
+
+          ``        }/>;
     </Head>;
   );
-}
+
   )
-}
+
 export default PerformanceOptimizer;
 interface PerformanceMetrics {
-};
+;
 
 export default PerformanceOptimizer;
 
 interface PerformanceMetrics {;
   }, [measure_performance]);
-;
+
   const getPerformanceScore = (): number => {
     let score = 100;
-;
+
     // Check condition
 if (score -= 20) {
   $2
-}
+
     // Check condition
 if (score -= 25) {
   $2
-}
+
     // Check condition
 if (score -= 15) {
   $2
-}
+
     // Check condition
 if (score -= 20) {
   $2
-}
+
     return Math.max (0, score);  } ;
     return Math.max (0, score);
   }
-;
+
   const getPerformanceGrade = (score: number): string => {
     // Check condition
 if (return 'A') {
   $2
-}
+
     // Check condition
 if (return 'B') {
   $2
-}
+
     // Check condition
 if (return 'C') {
   $2
-}
+
     // Check condition
 if (return 'D') {
   $2
-}
+
     return 'F';  }    return 'F';
   }
-;
+
   const performance_score = getPerformanceScore ();
   const performance_grade = getPerformanceGrade (performance_score);
-;
+
     >;
       <div className='flex items - center justify - between mb - 6'>;
         <h3 className='text - xl font - bold text - white flex items - center gap - 2'>;
@@ -961,9 +937,9 @@ if (return 'D') {
         <div className='w - full bg - white / 10 rounded - full h - 3'>;
           <motion.div;
             className='h - 3 bg - gradient - to - r from - red - 500 via - yellow - 500 to - green - 500 rounded - full';
-            initial={{ width: 0 }}
-            animate={{ width: `${performance_score}%` }}
-            transition={{ duration: 1, ease: 'ease_out' }}
+            initial={ width: 0 }
+            animate={ width: `${performance_score}%` }
+            transition={ duration: 1, ease: 'ease_out' }
           />;
         </div>;
         <div className='text - right mt - 1'>;
@@ -971,9 +947,9 @@ if (return 'D') {
         <div className="w - full bg - white / 10 rounded - full h - 3">;
           <motion.div;
             className="h - 3 bg - gradient - to - r from - red - 500 via - yellow - 500 to - green - 500 rounded - full";
-            initial={{ width: 0 }}
-            animate={{ width: `${performance_score}%` }}
-            transition={{ duration: 1, ease: "ease_out" }}
+            initial={ width: 0 }
+            animate={ width: `${performance_score}%` }
+            transition={ duration: 1, ease: "ease_out" }
           />;
         </div>;
         <div className="text - right mt - 1">;
@@ -983,9 +959,9 @@ if (return 'D') {
       {/* Metrics Display */}
       {show_metrics && (
         <motion.div;
-          initial={{ opacity: 0, height: 0 }}
-          animate={{ opacity: 1, height: 'auto' }}
-          exit={{ opacity: 0, height: 0 }}
+          initial={ opacity: 0, height: 0 }
+          animate={ opacity: 1, height: 'auto' }
+          exit={ opacity: 0, height: 0 }
           className='grid grid - cols - 2 md:grid - cols - 3 gap - 4 mb - 6';
           <div className='text - center p - 3 rounded - lg bg - white / 5 border border - white / 10'>;
             <Clock className='w - 6 h - 6 text - blue - 400 mx - auto mb - 2' />;
@@ -1057,7 +1033,7 @@ if (return 'D') {
               <span > Run All Optimizations</span>;
             </>)}
         </button>;
-        {optimization_status !== 'idle' && (
+        {optimization_status != 'idle' && (
           <div className='text - center p - 3 rounded - lg bg - white / 5 border border - white / 10'>;
             <div className='text - sm text - white / 80'>{optimization_status}</div>          </div>          <div className="text - center p - 3 rounded - lg bg - white / 5 border border - white / 10">;
             <div className="text - sm text - white / 80">{optimization_status}</div>;
@@ -1079,50 +1055,49 @@ if (return 'D') {
         </ul>;
       </div>;
     </div>);
-}export default PerformanceOptimizer;}
+export default PerformanceOptimizer;}
       // Preload critical resources;
       preload_images.for_each (image => {
 addResourceHint (image, 'image');
-'      });';
+      });';
       preload_fonts.for_each (font => {
         addResourceHint (font, 'style');
-'      });'    }}, [preload_images, preload_fonts]);
+      });'    }, [preload_images, preload_fonts]);
   return (
     <Head>;
       {/* Critical CSS inlined for above - the - fold content */}
       {criticalCSS && (
-        <style dangerouslySetInnerHTML={{ __html: criticalCSS }} />)}
-{/* Preload critical resources */}
-      {preload_images.map ((image, index) => (
+        <style dangerouslySetInnerHTML={ __html: criticalCSS } />)}
+/* Preload critical resources */}
+      {preload_images.map (image, index) => (
         <link;
-key={`preload - image-${index}}          rel="preload""          as="image""          href={image}"        />))}
-      {preload_fonts.map ((font, index) => (
+key={`preload - image-${index}          rel="preload""          as="image""          href={image}"        />)}
+      {preload_fonts.map (font, index) => (
         <link;
 key={`preload - font-${index}`}          rel="preload""          as="style""          href={font}"          on_load={() => {
             const link = document.query_selector (link[href="${font}"]`);
-"            if ( {"              (link as HTMLLinkElement).rel = 'stylesheet) {
+            if ( {"              (link as HTMLLinkElement).rel = 'stylesheet) {
   $2
-}
-}'          }}`        />))}
+
+'          }`        />)}
       {/* Performance hints */}
       <meta http_equiv="x - dns - prefetch - control" content="on" />"      "      {/* Service Worker registration */}
       <script;
-        dangerouslySetInnerHTML={{
+        dangerouslySetInnerHTML={
           __html:             // Check condition
-if ( {'              window.addEventListener ('load', function () {'                navigator.service_worker.register ('/sw.js')'                  .then (function (registration) {'                    console.log ('SW registered: ', registration)) {
+if ( {'              window.addEventListener ('load', function () {'                navigator.service_worker.register ('/sw.js')'                  .then (function (registration) {'                    console.log ('SW registered: ', registration) {
   $2
-}
-'                  })'                  .catch (function (registration_error) {
+
+                  })'                  .catch (function (registration_error) {
                     console.log ('SW registration failed: ', registration_error);'                  });'              });
-}
-          ``        }}/>;
+
+          ``        }/>;
     </Head>);
-}
+
   );
-}
-;
+
 export default PerformanceOptimizer;
-;
+
 interface PerformanceMetrics {
   fcp: number;
   lcp: number;
@@ -1134,22 +1109,22 @@ interface PerformanceMetrics {
     total: number;
     limit: number;
   }
-}
+
 interface PerformanceOptimizerProps {
   onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
   enable_reporting?: boolean;
-}
+
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   onMetricsUpdate
   enableReporting = false
-}) => {
+) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const measureWebVitals = useCallback(() => {
-    if (typeof window === 'undefined' |!('performance' in window)) return;
+  const measureWebVitals = useCallback() => {
+    if (typeof window = = 'undefined' |!('performance' in window) return;
     const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     const paint = performance.getEntriesByType('paint');
     // Core Web Vitals
-    const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime |0;
+    const fcp = paint.find(entry => entry.name = = 'first-contentful-paint')?.startTime |0;
     const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime |0;
     const ttfb = navigation.responseStart - navigation.requestStart;
     // Memory usage (if available)
@@ -1170,22 +1145,20 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     if (onMetricsUpdate) {
       onMetricsUpdate(newMetrics);
     }
-    if (enableReporting && process.env.NODE_ENV === 'development') {
+    if (enableReporting && process.env.NODE_ENV = = 'development') {
       console.log('Performance Metrics:', newMetrics);
-    }
-  }, [onMetricsUpdate, enableReporting]);
-  useEffect(() => {
-    if (document.readyState === 'complete') {
+    }, [onMetricsUpdate, enableReporting]);
+  useEffect() => {
+    if (document.readyState = = 'complete') {
       measureWebVitals();
     } else {;
       window && window.addEventListener('load', measureWebVitals);
     }
     return () => {
       window.removeEventListener('load', measureWebVitals);
-    }
-  }, [measureWebVitals]);
+    }, [measureWebVitals]);
   // Monitor for performance issues
-  useEffect(() => {
+  useEffect() => {
     if (!metrics) return;
     const warnings: string[] = [];
     if (metrics.fcp > 1800) warnings.push('First Contentful Paint is slow (>1.8s)');
@@ -1197,38 +1170,36 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     }
     if (warnings.length > 0 && enableReporting) {
       console.warn('Performance Issues Detected:', warnings);
-    }
-  }, [metrics, enableReporting]);
+    }, [metrics, enableReporting]);
   return null;
-};
 
 export default PerformanceOptimizer;
 
 const PerformanceOptimizer: React.FC < PerformanceOptimizerProps> = ({
   onMetricsUpdate,
   enable_reporting = false;
-}) => {
+) => {
   const [metrics, set_metrics] = useState < PerformanceMetrics | null>(null);
-;
-  const measureWebVitals = useCallback (() => {
+
+  const measureWebVitals = useCallback () => {
     if () return) {
   $2
-}
+
     const navigation = performance.getEntriesByType ('navigation')[0] as PerformanceNavigationTiming;
     const paint = performance.getEntriesByType ('paint');
-;
+
     // Core Web Vitals;
-    const fcp = paint.find (entry => entry.name === 'first - contentful - paint')?.start_time || 0;
+    const fcp = paint.find (entry => entry.name = = 'first - contentful - paint')?.start_time || 0;
     const lcp = performance.getEntriesByType ('largest - contentful - paint')[0]?.start_time || 0;
     const ttfb = navigation.response_start - navigation.request_start;
-;
+
     // Memory usage (if available);
     const memory = (performance as any).memory ? {
       used: (performance as any).memory.usedJSHeapSize,
       total: (performance as any).memory.totalJSHeapSize,
       limit: (performance as any).memory.jsHeapSizeLimit;
     } : undefined;
-;
+
     const new_metrics: PerformanceMetrics = {
       fcp,
       lcp,
@@ -1237,73 +1208,68 @@ const PerformanceOptimizer: React.FC < PerformanceOptimizerProps> = ({
       ttfb,
       memory;
     }
-;
+
     set_metrics (new_metrics);
-;
+
     // Check condition
 if ( {) {
   $2
-}
+
       onMetricsUpdate (new_metrics);
     }
     // Check condition
 if ( {) {
   $2
-}
+
       console.log ('Performance Metrics:', new_metrics);
-    }
-  }, [onMetricsUpdate, enable_reporting]);
-;
-  useEffect (() => {
+    }, [onMetricsUpdate, enable_reporting]);
+
+  useEffect () => {
     // Check condition
 if ( {) {
   $2
-}
+
       measureWebVitals ();
     } else {
       window.addEventListener ('load', measureWebVitals);
     }
     return () => {
       window.removeEventListener ('load', measureWebVitals);
-    }
-  }, [measureWebVitals]);
-;
+    }, [measureWebVitals]);
+
   // Monitor for performance issues;
-  useEffect (() => {
+  useEffect () => {
     // Check condition
 if (return) {
   $2
-}
+
     const warnings: string[] = [];
-;
-    if (warnings.push ('First Contentful Paint is slow (>1.8s)')) {
+
+    if (warnings.push ('First Contentful Paint is slow (>1.8s)') {
   $2
-}
-    if (warnings.push ('Largest Contentful Paint is slow (>2.5s)')) {
+
+    if (warnings.push ('Largest Contentful Paint is slow (>2.5s)') {
   $2
-}
-    if (warnings.push ('Time to First Byte is slow (>600ms)')) {
+
+    if (warnings.push ('Time to First Byte is slow (>600ms)') {
   $2
-}
+
     // Check condition
 if ( {) {
   $2
-}
+
       const memory_usage = (metrics.memory.used / metrics.memory.limit) * 100;
-      if (warnings.push ('High memory usage detected')) {
+      if (warnings.push ('High memory usage detected') {
   $2
-}
+
     }
     // Check condition
 if ( {) {
   $2
-}
+
       console.warn ('Performance Issues Detected:', warnings);
-    }
-  }, [metrics, enable_reporting]);
-;
+    }, [metrics, enable_reporting]);
+
   return null;
-}
-;
+
 export default PerformanceOptimizer;
-;

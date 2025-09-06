@@ -83,14 +83,14 @@ const Enhanced2026ServicesShowcase = () => {
     <section className=&quot;py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden&quot;>
       {/* Background Effects */}
       <div className=&quot;absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/10 to-cyan-900/10&quot;></div>
-      
+
       <div className=&quot;max-w-7xl mx-auto relative z-10&quot;>
         {/* Section Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+          initial={ opacity: 0, y: 20 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0.6 }
+          viewport={ once: true }
           className=&quot;text-center mb-16&quot;        >
           <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-6&quot;>
             <span className=&quot;bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent&quot;>
@@ -103,19 +103,19 @@ const Enhanced2026ServicesShowcase = () => {
 
         {_/* Category Overview */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          viewport={{ once: true }}
+          initial={ opacity: 0, y: 20 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0.6, delay: 0.1 }
+          viewport={ once: true }
           className=&quot;grid grid-cols-2 md:grid-cols-4 gap-6 mb-16&quot;        >
-          {_categories.map((category, _index) => (
+          {_categories.map(category, _index) => (
             <motion.div
               key={category.name}
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
-              viewport={{ once: true }}
-              whileHover={{ scale: 1.05, y: -5 }}
+              initial={ opacity: 0, scale: 0.8 }
+              whileInView={ opacity: 1, scale: 1 }
+              transition={ duration: 0.6, delay: 0.2 + index * 0.1 }
+              viewport={ once: true }
+              whileHover={ scale: 1.05, y: -5 }
               className=&quot;group text-center&quot;
             >
               <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`}>
@@ -123,19 +123,19 @@ const Enhanced2026ServicesShowcase = () => {
               </div>
               <h3 className=&quot;text-lg font-bold text-white mb-2&quot;>{category.name}</h3>
               <p className=&quot;text-2xl font-bold text-cyan-400&quot;>{category.count}</p>            </motion.div>
-          ))}
+          )}
         </motion.div>;
-;
+
         {/* Featured Services Grid */}
         <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16&quot;>
-          {featuredServices.map((service, index) => (
+          {featuredServices.map(service, index) => (
             <motion.div
               key={service.id}
-              initial={{ opacity: 0, scale: 0.8, y: 20 }}
-              whileInView={{ opacity: 1, scale: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              whileHover={{ scale: 1.02, y: -5 }}
+              initial={ opacity: 0, scale: 0.8, y: 20 }
+              whileInView={ opacity: 1, scale: 1, y: 0 }
+              transition={ duration: 0.6, delay: index * 0.1 }
+              viewport={ once: true }
+              whileHover={ scale: 1.02, y: -5 }
               className=&quot;group relative&quot;
             >
               <div className={`absolute inset-0 bg-gradient-to-r ${service.color} opacity-10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500`}></div>
@@ -155,18 +155,18 @@ const Enhanced2026ServicesShowcase = () => {
                 <p className=&quot;text-gray-300 text-sm mb-4 leading-relaxed&quot;>
                   {service.description}
                 </p>;
-;
+
                 {/* Features */}
                 <div className=&quot;mb-4&quot;>
                   <ul className=&quot;space-y-1&quot;>
-                    {service.features.slice(0, 2).map((feature, i) => (
+                    {service.features.slice(0, 2).map(feature, i) => (
                       <li key={i} className=&quot;flex items-center text-gray-400 text-xs&quot;>
                         <Star className=&quot;w-3 h-3 text-cyan-400 mr-2 flex-shrink-0&quot; />
                         {feature}                      </li>
-                    ))}
+                    )}
                   </ul>;
                 </div>;
-;
+
                 {/* Price and CTA */}
                 <div className=&quot;flex items-center justify-between&quot;>
                   <div>
@@ -181,15 +181,15 @@ const Enhanced2026ServicesShowcase = () => {
                 </div>
               </div>
             </motion.div>
-          ))}
+          )}
         </div>
 
         {_/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          viewport={{ once: true }}
+          initial={ opacity: 0, y: 20 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0.6, delay: 0.3 }
+          viewport={ once: true }
           className=&quot;text-center&quot;        >
           <div className=&quot;bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20 border border-cyan-500/20 rounded-2xl p-8&quot;>
             <h3 className=&quot;text-2xl font-bold text-white mb-4&quot;>
@@ -200,9 +200,9 @@ const Enhanced2026ServicesShowcase = () => {
             </p>
             <div className=&quot;flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6&quot;>
               <motion.div
-                whileHover={_{ scale: 1.05}}
-                whileTap={_{ scale: 0.95}}
-                transition={_{ duration: 0.2}}
+                whileHover={_{ scale: 1.05}
+                whileTap={_{ scale: 0.95}
+                transition={_{ duration: 0.2}
               >
                 <Link
                   href=&quot;/services&quot;
@@ -213,9 +213,9 @@ const Enhanced2026ServicesShowcase = () => {
                 </a>
               </motion.div>
               <motion.div
-                whileHover={_{ scale: 1.05}}
-                whileTap={_{ scale: 0.95}}
-                transition={_{ duration: 0.2, _delay: 0.1}}
+                whileHover={_{ scale: 1.05}
+                whileTap={_{ scale: 0.95}
+                transition={_{ duration: 0.2, _delay: 0.1}
               >
                 <Link
                   href="/contact"
@@ -230,6 +230,6 @@ const Enhanced2026ServicesShowcase = () => {
       </div>
     </section>
   )
-},
+,
 
 export default Enhanced2026ServicesShowcase,

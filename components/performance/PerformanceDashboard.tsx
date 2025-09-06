@@ -4,28 +4,28 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React, { useState, useEffect } from "react";
 interface PerformanceMetrics {
   loadTime: number;
 import React, { useState, useEffect } from './react';
-;
+
 interface PerformanceMetrics {
   load_time: number;
   firstContentfulPaint: number;
@@ -33,33 +33,29 @@ interface PerformanceMetrics {
   cumulativeLayoutShift: number;
   firstInputDelay: number;
   timeToInteractive: number;
-}
+
 const PerformanceDashboard: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isVisible, setIsVisible] = useState(false);
-  useEffect(() => {
-    if (typeof window !== "undefined" && "performance" in window) {
-      const observer = new PerformanceObserver((list) => {
+  useEffect() => {
+    if (typeof window != "undefined" && "performance" in window) {
+      const observer = new PerformanceObserver(list) => {
         const entries = list.getEntries();
         const newMetrics: Partial<PerformanceMetrics> = {}
-        entries.forEach((entry) => {
-          if (entry.entryType === "paint") {
-            if (entry.name === "first-contentful-paint") {
+        entries.forEach(entry) => {
+          if (entry.entryType = = "paint") {
+            if (entry.name = = "first-contentful-paint") {
               newMetrics.firstContentfulPaint = entry.startTime;
-            }
-          } else if (entry.entryType === "largest-contentful-paint") {
+            } else if (entry.entryType = = "largest-contentful-paint") {
             newMetrics.largestContentfulPaint = entry.startTime;
-          } else if (entry.entryType === "layout-shift") {
+          } else if (entry.entryType = = "layout-shift") {
             newMetrics.cumulativeLayoutShift =
               (newMetrics.cumulativeLayoutShift |0) + (entry as any).value;
-          }
-        });
+          });
         if (Object.keys(newMetrics).length > 0) {
-          setMetrics(
-            (prev) => ({ ...prev, ...newMetrics }) as PerformanceMetrics
+          setMetrics(prev) => ({ ...prev, ...newMetrics }) as PerformanceMetrics
           );
-        }
-      });
+        });
       observer.observe({
         entryTypes: ["paint", "largest-contentful-paint", "layout-shift"]
       });
@@ -67,11 +63,10 @@ const PerformanceDashboard: React.FC = () => {
       window.addEventListener("load", () => {
         const loadTime =
           performance.timing.loadEventEnd - performance.timing.navigationStart;
-        setMetrics((prev) => ({ ...prev, loadTime }) as PerformanceMetrics);
+        setMetrics(prev) => ({ ...prev, loadTime }) as PerformanceMetrics);
       });
       return () => observer.disconnect();
-    }
-  }, []);
+    }, []);
   const getScoreColor = (
     value: number
     thresholds: { good: number; needsImprovement: number }
@@ -139,71 +134,66 @@ const PerformanceDashboard: React.FC = () => {
       )}
     </div>;
   );
-}
+
 export default PerformanceDashboard;
 const PerformanceDashboard: React.FC = () => {
   const [metrics, set_metrics] = useState < PerformanceMetrics | null>(null);
   const [is_visible, setIsVisible] = useState (false);
-;
-  useEffect (() => {
+
+  useEffect () => {
     // Check condition
 if ( {) {
   $2
-}
-      const observer = new PerformanceObserver ((list) => {
+
+      const observer = new PerformanceObserver (list) => {
         const entries = list.get_entries ();
         const new_metrics: Partial < PerformanceMetrics> = {}
-;
-        entries.for_each ((entry) => {
+
+        entries.for_each (entry) => {
           // Check condition
 if ( {) {
   $2
-}
+
             // Check condition
 if ( {) {
   $2
-}
+
               new_metrics.firstContentfulPaint = entry.start_time;
-            }
-          } else // Check condition
+            } else // Check condition
 if ( {) {
   $2
-}
+
             new_metrics.largestContentfulPaint = entry.start_time;
           } else // Check condition
 if ( {) {
   $2
-}
+
             new_metrics.cumulativeLayoutShift =;
               (new_metrics.cumulativeLayoutShift || 0) + (entry as any).value;
-          }
-        });
-;
+          });
+
         // Check condition
 if (.length > 0) {) {
   $2
-}
-          set_metrics (
-            (prev) => ({ ...prev, ...new_metrics }) as PerformanceMetrics,
+
+          set_metrics (prev) => ({ ...prev, ...new_metrics }) as PerformanceMetrics,
           );
-        }
-      });
-;
+        });
+
       observer.observe ({
         entry_types: ["paint", "largest - contentful - paint", "layout - shift"],
       });
-;
+
       // Get load time;
       window.addEventListener ("load", () => {
         const load_time =;
           performance.timing.loadEventEnd - performance.timing.navigation_start;
-        set_metrics ((prev) => ({ ...prev, load_time }) as PerformanceMetrics);
+        set_metrics (prev) => ({ ...prev, load_time }) as PerformanceMetrics);
       });
-;
+
       return () => observer.disconnect ();
-    }
-  }, []);
-;
+    }, []);
+
   const getScoreColor = (
     value: number,
     thresholds: { good: number; needs_improvement: number },
@@ -211,18 +201,18 @@ if (.length > 0) {) {
     // Check condition
 if (return "text - green - 600") {
   $2
-}
+
     // Check condition
 if (return "text - yellow - 600") {
   $2
-}
+
     return "text - red - 600";
   }
-;
+
   // Check condition
 if (return null) {
   $2
-}
+
   return (
     <div className="fixed bottom - 4 right - 4 z - 50">;
       <button;
@@ -279,7 +269,5 @@ if (return null) {
           </div>;
         </div>)}
     </div>);
-}
-;
+
 export default PerformanceDashboard;
-;

@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Twitter, Linkedin, Facebook, Instagram, Github, ChevronUp } from 'lucide-react';
@@ -33,7 +33,7 @@ import {
   Instagram,
   Github,
   ChevronUp
-} from 'lucide-react';
+ from 'lucide-react';
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -123,8 +123,6 @@ export const Footer: React.FC = () => {
       </div>
     </footer>
   );
-};
   );
-};
 
 export default Footer;

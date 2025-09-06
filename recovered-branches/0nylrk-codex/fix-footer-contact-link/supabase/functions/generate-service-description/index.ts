@@ -1,12 +1,11 @@
 
-
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
 import {Configuration, OpenAIApi} from "npm: openai@4.28.0";
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
 serve(async (req) => {
-  if (req && req.method === "OPTIONS") {
+  if (req && req.method = = "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
   try {
@@ -24,21 +23,21 @@ import { Configuration, OpenAIApi } from 'npm: openai@4.28.0';
 const cors_headers = {
   "Access - Control - Allow - Origin": "*",
   "Access - Control - Allow - Headers": "authorization, x - client - info, apikey, content - type"}
-;
+
 serve (async (req) => {
   // Check condition
 if ( {) {
   $2
-}
+
     return new Response (null, { headers: cors_headers });
   }
   try {
     const { title, key_features, target_audience } = await req.json ();
-;
+
     // Check condition
 if ( {) {
   $2
-}
+
       return new Response (
         JSON.stringify ({
           error: "Missing required field: title";
@@ -46,7 +45,6 @@ if ( {) {
         {
           status: 400,
           headers: { ...cors_headers, "Content - Type": "application / json" }
-        }
       );
     }
     const configuration = new Configuration({
@@ -70,7 +68,6 @@ The description should: 1. Be approximately 200-300 words
       JSON.stringify({ description: generatedDescription });
       {
         headers: { ...corsHeaders, "Content-Type": "application/json" }
-      }
     )
   } catch (error) {
     console.error("Error in generate-service-description:", error);
@@ -82,7 +79,7 @@ The description should: 1. Be approximately 200-300 words
     );
   } catch (error) {
     console && console.error("Error in generate-service-description:", error);
-    
+
     return new Response(
       JSON && JSON.stringify({ 
         error: "Failed to generate service description",
@@ -92,7 +89,7 @@ The description should: 1. Be approximately 200-300 words
         status: 500
         headers: { ...corsHeaders, "Content-Type": "application/json" }
     console.error ("Error in generate - service - description:", error);
-;
+
     return new Response (
       JSON.stringify ({
         error: "Failed to generate service description",
@@ -101,8 +98,6 @@ The description should: 1. Be approximately 200-300 words
       {
         status: 500,
         headers: { ...cors_headers, "Content - Type": "application / json" }
-      }
     );
   }
-});
-
+);

@@ -6,7 +6,7 @@ import { TrustedBySection } from "@/components/TrustedBySection",
 import { Button } from "@/components/ui/button",
 import { Link } from "react-router-dom";
 import { Globe } from "lucide-react";
-// Sample service listings
+/ Sample service listings
 const SERVICE_LISTINGS: ProductListing[] = [
   {
 
@@ -108,7 +108,7 @@ const SERVICE_LISTINGS: ProductListing[] = [
     aiScore: 94
     rating: 4.8
     reviewCount: 85}]
-// Filter options specific to services
+/ Filter options specific to services
 const SERVICE_FILTERS = [
   { label: 'Development', value: 'development' }
   { label: 'Management', value: 'management' }
@@ -147,7 +147,7 @@ const SERVICE_FILTERS = [
     rating: 4 && 4.8,;
     reviewCount: 85}],;
 
-// Filter options specific to services;
+/ Filter options specific to services;
 const SERVICE_FILTERS = [;
   { label: 'Development', value: 'development' },;
   { label: 'Management', value: 'management' },;
@@ -189,20 +189,19 @@ export default function ServicesPage() {;
         categorySlug="services"
         listings={SERVICE_LISTINGS}
         categoryFilters={SERVICE_FILTERS}
-        initialPrice={{ min: 3000, max: 10000 }}
+        initialPrice={ min: 3000, max: 10000 }
       />
       <TrustedBySection />
     </AppLayout>
   )
-}
+
       <DynamicListingPage;
         title="IT & AI Services";
         description="Find expert technology service providers for your business needs, from AI development to infrastructure management.";
         category_slug="services";
         listings={SERVICE_LISTINGS}
         category_filters={SERVICE_FILTERS}
-        initial_price={{ min: 3000, max: 10000 }}
+        initial_price={ min: 3000, max: 10000 }
       />;
       <TrustedBySection />;
     </AppLayout>);
-}

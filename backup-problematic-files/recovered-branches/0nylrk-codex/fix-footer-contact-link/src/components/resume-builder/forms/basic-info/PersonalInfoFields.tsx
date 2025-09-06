@@ -3,11 +3,10 @@ import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/comp
 import { Input } from "@/components/ui/input",;
 import { Control } from "react-hook-form",;
 import { BasicInfoFormData } from "./schema",;
-;
+
 interface PersonalInfoFieldsProps {;
   control:Control<BasicInfoFormData>;
-}
-;
+
 export function PersonalInfoFields({ control } PersonalInfoFieldsProps) {;
   return (;
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
@@ -24,7 +23,7 @@ export function PersonalInfoFields({ control } PersonalInfoFieldsProps) {;
           </FormItem>;
         )}
       />;
-;
+
       <FormField;
         control={control}
         name="title";
@@ -38,7 +37,7 @@ export function PersonalInfoFields({ control } PersonalInfoFieldsProps) {;
           </FormItem>;
         )}
       />;
-;
+
       <FormField;
         control={control}
         name="email";
@@ -52,7 +51,7 @@ export function PersonalInfoFields({ control } PersonalInfoFieldsProps) {;
           </FormItem>;
         )}
       />;
-;
+
       <FormField;
         control={control}
         name="phone";
@@ -70,19 +69,18 @@ export function PersonalInfoFields({ control } PersonalInfoFieldsProps) {;
   ),;}
  interface PersonalInfoFieldsProps {
   control: Control<BasicInfoFormData> 
-}export function PersonalInfoFields ({
+export function PersonalInfoFields ({
   control 
-}: PersonalInfoFieldsProps) {
+: PersonalInfoFieldsProps) {
   return (<div className="grid grid-cols-1 md:grid-cols-2 gap-6" > <FormField control= {
   control 
-}name="fullName" render= {
+name="fullName" render= {
   ({
   field 
-}) => (<FormItem> <FormLabel>Full Name</FormLabel> <FormControl> <Input placeholder="John Doe" {
+) => (<FormItem> <FormLabel>Full Name</FormLabel> <FormControl> <Input placeholder="John Doe" {
   ...field 
-}/> 
-}/> <FormField </FormControl> <FormMessage /> </FormItem>) 
-}/> <FormField </FormControl> <FormMessage /> </FormItem>) 
-}/> <FormField </FormControl> <FormMessage /> </FormItem>) 
-}/> </div>) 
-}
+/> 
+/> <FormField </FormControl> <FormMessage /> </FormItem>) 
+/> <FormField </FormControl> <FormMessage /> </FormItem>) 
+/> <FormField </FormControl> <FormMessage /> </FormItem>) 
+/> </div>) 

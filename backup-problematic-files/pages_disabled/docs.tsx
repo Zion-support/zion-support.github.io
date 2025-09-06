@@ -2,7 +2,6 @@ import React from 'react';
 
 interface DocsProps {
   className?: string;
-}
 
 const Docs: React.FC<DocsProps> = ({ className }) => {
   return (
@@ -11,6 +10,5 @@ const Docs: React.FC<DocsProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default Docs;

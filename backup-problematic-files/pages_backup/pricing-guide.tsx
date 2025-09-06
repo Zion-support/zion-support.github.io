@@ -2,7 +2,6 @@ import React from 'react';
 
 interface Pricing-guideProps {
   className?: string;
-}
 
 const Pricing-guide: React.FC<Pricing-guideProps> = ({ className }) => {
   return (
@@ -11,6 +10,5 @@ const Pricing-guide: React.FC<Pricing-guideProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default Pricing-guide;

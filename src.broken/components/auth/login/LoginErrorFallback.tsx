@@ -6,5 +6,3 @@ export function LoginErrorFallback() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

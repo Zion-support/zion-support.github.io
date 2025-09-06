@@ -12,14 +12,14 @@ import {
   Leaf, Sun, Moon, Wind, Droplets, Mountain,
   Code, Wrench, Smartphone, BarChart3, Eye,
   Infinity, Hexagon, Network
-} from 'lucide-react',
+ from 'lucide-react',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-},
+,
 const _serviceCategories = [
   {_title: ' 2030 Ultra-Futuristic AI Services', _icon: Brain, _color: 'from-violet-600 via-purple-600 to-indigo-600', _description: 'Next-generation AI consciousness and creativity', _services: [
       { name: 'AI Consciousness Evolution Platform', _href: '/ai-consciousness-evolution-platform', _description: 'Develop genuine AI consciousness', _price: '$19, _999/month'},
@@ -63,7 +63,7 @@ const _serviceCategories = [
       {_name: 'AI HR Management Suite 2030', _href: '/ai-hr-management-suite-2030', _description: 'Intelligent human resources management powered by AI', _price: '$149/month'}
     ]
   }
-],
+,
 
 const mainNavigation = [
   { name: 'Home', href: '/', icon: Home },
@@ -74,7 +74,7 @@ const mainNavigation = [
   { name: 'Case Studies', href: '/case-studies', icon: BarChart3 },
   { name: 'Blog', href: '/blog', icon: MessageCircle },
   { name: 'Contact', href: '/contact', icon: MessageCircle }
-],
+,
 
 const quickLinks = [
   { name: 'AI Services', href: '/services/ai', icon: Brain, color: 'from-purple-500 to-pink-500' },
@@ -83,14 +83,14 @@ const quickLinks = [
   { name: 'Space Technology', href: '/services/space', icon: Rocket, color: 'from-indigo-500 to-purple-500' },
   { name: 'Enterprise IT', href: '/services/enterprise', icon: Cpu, color: 'from-gray-500 to-slate-500' },
   { name: 'Micro SAAS', href: '/services/micro-saas', icon: Target, color: 'from-orange-500 to-red-500' }
-],
+,
 
 export default function UltraFuturisticNavigation2030() {
   const [isOpen, setIsOpen] = useState(false),
   const [activeCategory, setActiveCategory] = useState<number | null>(null),
   const [isScrolled, setIsScrolled] = useState(false),
 
-  useEffect(() => {
+  useEffect() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20)
     },
@@ -157,7 +157,7 @@ export default function UltraFuturisticNavigation2030() {
 
             {/* Desktop Navigation */}
             <div className=&quot;hidden lg:flex items-center space-x-8&quot;>
-              {mainNavigation.map((item) => (
+              {mainNavigation.map(item) => (
                 <Link
                   key={item.name}
                   href={item.href}
@@ -166,7 +166,7 @@ export default function UltraFuturisticNavigation2030() {
                   <item.icon className=&quot;w-4 h-4 group-hover:text-purple-400 transition-colors&quot; />
                   <span>{item.name}</span>
                 </a>
-              ))}
+              )}
               ;
               {/* Services Dropdown */}
               <div className=&quot;relative group&quot;>
@@ -174,12 +174,12 @@ export default function UltraFuturisticNavigation2030() {
                   <Briefcase className=&quot;w-4 h-4&quot; />                  <span>Services</span>
                   <ChevronDown className=&quot;w-4 h-4 group-hover:rotate-180 transition-transform duration-200&quot; />
                 </button>
-                
+
                 {/* Mega Menu */}
                 <div className=&quot;absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-purple-500/20 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-4&quot;>
                   <div className=&quot;p-8&quot;>
                     <div className=&quot;grid grid-cols-2 gap-8&quot;>
-                      {serviceCategories.map((category, index) => (
+                      {serviceCategories.map(category, index) => (
                         <div key={index} className=&quot;space-y-4&quot;>
                           <div className=&quot;flex items-center space-x-3&quot;>
                             <div className={`p-2 rounded-lg bg-gradient-to-r ${category.color}`}>
@@ -191,7 +191,7 @@ export default function UltraFuturisticNavigation2030() {
                             </div>
                           </div>
                           <div className=&quot;space-y-2&quot;>
-                            {category.services.map((service, serviceIndex) => (
+                            {category.services.map(service, serviceIndex) => (
                               <Link
                                 key={serviceIndex}
                                 href={service.href}
@@ -205,16 +205,16 @@ export default function UltraFuturisticNavigation2030() {
                                   </div>
                                   <span className=&quot;text-xs font-mono text-purple-400&quot;>{service.price}</span>                                </div>
                               </a>
-                            ))}
+                            )}
                           </div>;
                         </div>;
-                      ))}
+                      )}
                     </div>;
                   </div>;
                 </div>;
               </div>;
             </div>;
-;
+
             {/* CTA Buttons */}
             <div className=&quot;hidden lg:flex items-center space-x-4&quot;>              <Link
                 href=&quot;/contact&quot;
@@ -245,15 +245,15 @@ export default function UltraFuturisticNavigation2030() {
         <AnimatePresence>
           {isOpen && (
             <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
+              initial={ opacity: 0, height: 0 }
+              animate={ opacity: 1, height: 'auto' }
+              exit={ opacity: 0, height: 0 }
               className=&quot;lg:hidden bg-black/95 backdrop-blur-xl border-t border-purple-500/20&quot;
             >
               <div className=&quot;px-4 py-6 space-y-6&quot;>
                 {/* Mobile Navigation Links */}
                 <div className=&quot;space-y-4&quot;>
-                  {mainNavigation.map((item) => (
+                  {mainNavigation.map(item) => (
                     <Link
                       key={item.name}
                       href={item.href}
@@ -263,14 +263,14 @@ export default function UltraFuturisticNavigation2030() {
                       <item.icon className=&quot;w-5 h-5&quot; />
                       <span>{item.name}</span>
                     </a>
-                  ))}
+                  )}
                 </div>;
-;
+
                 {/* Mobile Services */}
                 <div className=&quot;space-y-4&quot;>
                   <h3 className=&quot;text-lg font-semibold text-white px-3&quot;>Our Services</h3>
                   <div className=&quot;grid grid-cols-2 gap-3&quot;>
-                    {quickLinks.map((link) => (                      <Link
+                    {quickLinks.map(link) => (                      <Link
                         key={link.name}
                         href={_link.href}
                         onClick={_closeMenu}
@@ -282,7 +282,7 @@ export default function UltraFuturisticNavigation2030() {
                       >
                         <link.icon className=&quot;w-6 h-6 mx-auto mb-2&quot; />
                         <span className=&quot;text-sm font-medium&quot;>{link.name}</span>
-                      </a>                    ))}
+                      </a>                    )}
                   </div>
                 </div>
 
@@ -306,8 +306,7 @@ export default function UltraFuturisticNavigation2030() {
           )}
         </AnimatePresence>;
       </nav>;
-;
+
       {/* Spacer for fixed navigation */}
       <div className=&quot;h-20&quot;></div>    </>
   )
-}

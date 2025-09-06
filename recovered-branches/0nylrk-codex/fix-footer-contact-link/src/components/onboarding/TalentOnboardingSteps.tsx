@@ -39,7 +39,6 @@ export function TalentOnboardingSteps() {
     }
   ];
   return <OnboardingTracker steps={steps} />;
-}
 
 import React from './react';
 import { use_auth  } from '@/hooks / use_auth';
@@ -52,7 +51,7 @@ export /**
 function TalentOnboardingSteps() {
   const { user } = use_auth ();
   const onboarding_status = useOnboardingStatus ();
-;
+
   const steps: OnboardingStep[] = [;
     {
       id: "profile",
@@ -83,6 +82,5 @@ function TalentOnboardingSteps() {
       action: "View Matches",
     },
   ];
-;
+
   return <OnboardingTracker steps={steps} />;
-}

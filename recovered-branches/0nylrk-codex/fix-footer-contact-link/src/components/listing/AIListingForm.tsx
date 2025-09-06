@@ -21,9 +21,8 @@ interface AIListingFormProps {
     keyFeatures?: string;
     targetAudience?: string;
   }
-}
 
-export function AIListingForm(): any ({ onSubmit, isLoading, initialValues = {} }: AIListingFormProps) {;
+export function AIListingForm(): any ({ onSubmit, isLoading, initialValues = {}: AIListingFormProps) {;
   const { toast } = useToast();
   const [title, setTitle] = useState(initialValues.title |"");
   const [category, setCategory] = useState(initialValues.category |"");
@@ -108,7 +107,7 @@ export function AIListingForm(): any ({ onSubmit, isLoading, initialValues = {} 
       </Button>
     </div>
   )
-}
+
 import React, { useState } from './react';
 import { use_toast } from '@/hooks / use - toast';
 import { Button } from '@/components / ui / button';
@@ -129,7 +128,7 @@ interface AIListingFormProps {
     key_features?: string;
     target_audience?: string;
   }
-}
+
 export /**
  * AIListingForm - Function description
  */
@@ -139,12 +138,12 @@ function AIListingForm() {
   const [category, set_category] = useState (initial_values.category || "");
   const [key_features, setKeyFeatures] = useState (initial_values.key_features || "");
   const [target_audience, setTargetAudience] = useState (initial_values.target_audience || "");
-;
+
   const handle_submit = () =>: any {
     // Check condition
 if ( {) {
   $2
-}
+
       toast ({
         title: "Missing required fields",
         description: "Please provide at least a title and category.",
@@ -159,7 +158,7 @@ if ( {) {
       target_audience;
     });
   }
-;
+
   return (
     <div className="space - y-4">;
       <div className="space - y-2">;
@@ -219,4 +218,3 @@ if ( {) {
           </>)}
       </Button>;
     </div>);
-}

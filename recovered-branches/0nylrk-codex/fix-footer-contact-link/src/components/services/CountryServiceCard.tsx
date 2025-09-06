@@ -10,7 +10,7 @@ interface CountryServiceCardProps {
   onSelect: (country: CountryPricing) => void
 
   isPopular?: boolean
-}
+
 export function CountryServiceCard({ country, onSelect, isPopular }: CountryServiceCardProps) {
   // Get region flag based on country name (for demo purposes)
 
@@ -25,7 +25,7 @@ interface CountryServiceCardProps {
   country: CountryPricing,
   on_select: (country: CountryPricing) => void,
   is_popular?: boolean;
-}
+
 export /**
  * CountryServiceCard - Function description
  */
@@ -57,14 +57,13 @@ function CountryServiceCard() {
   const getResponseTime = (countryName: string): string => {
     const tier1 = ["United States", "United Kingdom", "Germany", "Japan", "Singapore", "Australia", "Canada", "France"];
     const tier2 = ["China", "Brazil", "India", "South Korea", "South Africa", "Russia"];
-    if (tier1.includes(countryName)) {
+    if (tier1.includes(countryName) {
       return "4 hours"
-    } else if (tier2.includes(countryName)) {
+    } else if (tier2.includes(countryName) {
       return "6 hours"
     } else {
       return "8-24 hours"
     }
-  }
 
   return (
     <Card className={`h-full transition-all duration-300 hover:shadow-lg ${
@@ -120,7 +119,7 @@ function CountryServiceCard() {
       </CardFooter>
     </Card>
   )
-}
+
           </div>;
         </div>;
       </CardContent>;
@@ -138,6 +137,5 @@ function CountryServiceCard() {
       </CardFooter>;
     </Card>;
   );
-}
+
     </Card>);
-}

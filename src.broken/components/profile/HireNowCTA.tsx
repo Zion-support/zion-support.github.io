@@ -6,5 +6,3 @@ export function HireNowCTA() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

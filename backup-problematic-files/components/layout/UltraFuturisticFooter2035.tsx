@@ -8,14 +8,14 @@ import {
   Twitter, Linkedin, Facebook, Instagram, Youtube, Github, MessageCircle, MessageSquare,
   ArrowUp, ExternalLink, Building, Code, Database, Network, Server, Monitor, Smartphone, Camera, Gamepad2,
   Palette, Music, Film, BookOpenCheck, HelpCircle, FileText, Video, Headphones
-} from 'lucide-react',
+ from 'lucide-react',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-},
+,
 
 const footerSections = [
   {
@@ -140,7 +140,7 @@ const footerSections = [
       { name: 'Services Advertising', href: '/services-advertising' }
     ];
   }
-],
+,
 
 const socialLinks = [
   { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: <Twitter className="w-5 h-5" /> },
@@ -149,7 +149,7 @@ const socialLinks = [
   { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: <Instagram className="w-5 h-5" /> },
   { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: <Youtube className="w-5 h-5" /> },
   { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: <Github className="w-5 h-5" /> }
-],
+,
 
 const UltraFuturisticFooter2035: React.FC = () => {
   const scrollToTop = () => {
@@ -162,17 +162,17 @@ const UltraFuturisticFooter2035: React.FC = () => {
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-black to-black" />
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5" />
-        
+
         {/* Animated grid */}
         <motion.div
           className="absolute inset-0 opacity-5"
-          style={{
+          style={
             backgroundImage: `
               linear-gradient(rgba(0, 255, 255, 0.3) 1px, transparent 1px),
               linear-gradient(90deg, rgba(0, 255, 255, 0.3) 1px, transparent 1px)
             `,
             backgroundSize: '200px 200px'
-],;
+,;
 const socialLinks = [;
   { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: <Twitter className="w-5 h-5" /> },;
   { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: <Linkedin className="w-5 h-5" /> },;
@@ -180,7 +180,7 @@ const socialLinks = [;
   { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: <Instagram className="w-5 h-5" /> },;
   { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: <Youtube className="w-5 h-5" /> },;
   { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: <Github className="w-5 h-5" /> }
-],;
+,;
 const UltraFuturisticFooter2035: React.FC = () => {;
   const scrollToTop = () => {;
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -194,20 +194,20 @@ const UltraFuturisticFooter2035: React.FC = () => {;
         {/* Animated grid */}
         <motion.div;
           className="absolute inset-0 opacity-5";
-          style={{;
+          style={;
             backgroundImage: `;
               linear-gradient(rgba(0, 255, 255, 0.3) 1px, transparent 1px),;
               linear-gradient(90deg, rgba(0, 255, 255, 0.3) 1px, transparent 1px);
             `,;
             backgroundSize: '200px 200px';
-          }}
-          animate={{;
-            backgroundPosition: ['0px 0px200px 200px']}}
-          transition={{;
+          }
+          animate={;
+            backgroundPosition: ['0px 0px200px 200px']}
+          transition={;
             duration: 20,;
             repeat: Infinity,;
             ease: 'linear';
-          }}
+          }
         />
       </div>
 
@@ -218,9 +218,9 @@ const UltraFuturisticFooter2035: React.FC = () => {;
             {/* Company Info */}
             <div className="lg:col-span-2">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.6 }
                 className="space-y-6"
               >
                 <div className="flex items-center gap-3">
@@ -234,7 +234,7 @@ const UltraFuturisticFooter2035: React.FC = () => {;
                     <p className="text-sm text-gray-400">Revolutionary Technology Solutions</p>
                   </div>
                 </div>
-                
+
                 <p className="text-gray-300 leading-relaxed max-w-md">
                   Leading the future with cutting-edge AI consciousness, quantum computing, and innovative micro SAAS solutions. 
                   Transform your business with our revolutionary technology.
@@ -258,7 +258,7 @@ const UltraFuturisticFooter2035: React.FC = () => {;
 
                 {/* Social Links */}
                 <div className="flex items-center gap-4">
-                  {socialLinks.map((social) => (
+                  {socialLinks.map(social) => (
                     <a
                       key={social.name}
                       href={social.href}
@@ -268,17 +268,17 @@ const UltraFuturisticFooter2035: React.FC = () => {;
                     >
                       {social.icon}
                     </a>;
-                  ))}
+                  )}
                 </div>;
               </motion.div>;
             </div>;
             {/* Footer Sections */}
-            {footerSections.map((section, index) => (;
+            {footerSections.map(section, index) => (;
               <motion.div;
                 key={section.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.6, delay: index * 0.1 }
                 className="space-y-4"
               >
                 <div className="flex items-center gap-2">
@@ -287,7 +287,7 @@ const UltraFuturisticFooter2035: React.FC = () => {;
                 </div>
                 <p className="text-sm text-gray-400">{section.description}</p>
                 <ul className="space-y-2">
-                  {section.links.map((link) => (
+                  {section.links.map(link) => (
                     <li key={link.name}>
                       <Link
                         href={link.href}
@@ -300,23 +300,23 @@ const UltraFuturisticFooter2035: React.FC = () => {;
                         {link.name}
                       </a>
                     </li>
-                  ))}
+                  )}
                 </ul>;
               </motion.div>;
-            ))}
+            )}
           </div>;
           {/* Bottom Section */}
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            initial={ opacity: 0, y: 20 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.6, delay: 0.3 }
             className="mt-16 pt-8 border-t border-gray-800/50"
           >
             <div className="flex flex-col md:flex-row items-center justify-between gap-4">
               <div className="text-sm text-gray-400">
                  2025 Zion Tech Group. All rights reserved.
               </div>
-              
+
               <div className="flex items-center gap-6 text-sm text-gray-400">
                 <Link href="/privacy" className="hover:text-white transition-colors duration-200">
                   Privacy Policy
@@ -342,7 +342,7 @@ const UltraFuturisticFooter2035: React.FC = () => {;
       </div>
     </footer>
   )
-},
+,
 
 export default UltraFuturisticFooter2035,
             className="mt-16 pt-8 border-t border-gray-800/50";
@@ -375,5 +375,5 @@ export default UltraFuturisticFooter2035,
       </div>;
     </footer>;
   );
-},;
+,;
 export default UltraFuturisticFooter2035;

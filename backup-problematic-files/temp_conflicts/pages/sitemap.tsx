@@ -1,6 +1,6 @@
 import React from 'react',;
 import Head from 'next/head',;
-;
+
 export default function SitemapPage() {;
 	const links = [;
 		{ name:'Home', href:'/' },;
@@ -25,9 +25,8 @@ export default function SitemapPage() {;
 				<ul className="grid sm:grid-cols-2 gap-3">;
 					{links.map(l => (;
 						<li key={l.href} className="p-4 rounded-xl bg-black/40 border border-cyan-500/20"><a className="text-cyan-300" href={l.href}>{l.name}</a></li>;
-					))}
+					)}
 				</ul>;
 			</div>;
 		</div>;
 	),;
-}

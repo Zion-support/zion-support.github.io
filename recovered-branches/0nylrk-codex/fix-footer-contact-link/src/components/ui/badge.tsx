@@ -12,9 +12,9 @@ export interface BadgeProps
     | &quot;success&quot;
     | &quot;warning&quot;
     | &quot;info&quot;
-}
+
 function Badge({ className, variant, ...props }: BadgeProps) {return (;
     <span className={cn(badgeVariants({ variant }), className)} {...props} />;
   );
-}
+
 export { Badge, badgeVariants }

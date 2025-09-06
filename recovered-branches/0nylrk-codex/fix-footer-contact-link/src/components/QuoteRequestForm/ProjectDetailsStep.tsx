@@ -6,11 +6,11 @@ import { Textarea } from "@/components/ui/textarea";
 interface ProjectDetailsStepProps {
   formData: QuoteFormData;
   updateFormData: (data: Partial<QuoteFormData>) => void
-}
+
 export function ProjectDetailsStep({
   formData
   updateFormData
-}: ProjectDetailsStepProps) {
+: ProjectDetailsStepProps) {
   return (
     <div className="space-y-6">
       <div>
@@ -67,8 +67,7 @@ export function ProjectDetailsStep({
                   contactInfo: {
                     ...formData.contactInfo
                     name: e.target.value
-                  }
-                })
+                  })
               }
               className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
             />
@@ -86,8 +85,7 @@ export function ProjectDetailsStep({
                   contactInfo: {
                     ...formData.contactInfo
                     company: e.target.value
-                  }
-                })
+                  })
               }
               className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
             />
@@ -106,8 +104,7 @@ export function ProjectDetailsStep({
                   contactInfo: {
                     ...formData.contactInfo
                     email: e.target.value
-                  }
-                })
+                  })
               }
               className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
             />
@@ -125,8 +122,7 @@ export function ProjectDetailsStep({
                   contactInfo: {
                     ...formData.contactInfo
                     phone: e.target.value
-                  }
-                })
+                  })
               }
               className="bg-zion-blue border border-zion-blue-light focus: border-zion-purple text-white"
             />
@@ -135,13 +131,12 @@ export function ProjectDetailsStep({
       </div>
     </div>
   );
-}
+
             />;
           </div>;
         </div>;
       </div>;
     </div>;
   );
-}
+
     </div>);
-}

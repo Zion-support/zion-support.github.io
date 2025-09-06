@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import Layout from '../../components/Layout';
 import { Cloud, Server, Database, Shield, Zap } from 'lucide-react';
 import React from 'react';
@@ -40,10 +40,10 @@ import { motion } from 'framer-motion';
 import { Cloud, Server, Database, Shield, Zap, ArrowRight, CheckCircle } from 'lucide-react';
 
 import Layout from '../../components/Layout';
-import {Cloud,, Server,, Database,, Shield,, Zap} from 'lucide-react';
+import {Cloud, Server, Database, Shield, Zap} from 'lucide-react';
 import React from 'react';
 import Layout from '../../components/Layout';';
-import {Cloud,, Server,, Database,, Shield,, Zap,, ArrowRight,, CheckCircle} from 'lucide-react';
+import {Cloud, Server, Database, Shield, Zap, ArrowRight, CheckCircle} from 'lucide-react';
 const features = [;
   {}
     icon: Cloud,;
@@ -55,7 +55,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import {motion} from 'framer-motion';
-import {Cloud,, Server,, Database,, Shield,, Zap,, ArrowRight,, CheckCircle} from 'lucide-react';
+import {Cloud, Server, Database, Shield, Zap, ArrowRight, CheckCircle} from 'lucide-react';
 
 const features = [;
   {;
@@ -83,7 +83,7 @@ const features = [;
     title: 'CI/CD Pipelines,',;
     description: 'Build automated deployment pipelines for faster, more reliable software delivery.',;
   }
-;];
+];
 const services = [;
 
   'Cloud Architecture Design',',;
@@ -138,7 +138,7 @@ export default function CloudDevOpsPage() {;
               </p>;
             </div>;
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">",;
-              {features && features.map((feature, index) => (,;
+              {features && features.map(feature, index) => (,;
                 <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover: border-blue-500 transition-colors">";
                   <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-6">";
                     <feature && feature.icon className="w-6 h-6 text-white" />";
@@ -146,7 +146,7 @@ export default function CloudDevOpsPage() {;
                   <h3 className="text-xl font-semibold text-white mb-4">{feature && feature.title}</h3>";
                   <p className="text-gray-300">{feature && feature.description}</p>";
                 </div>;
-              ))}
+              )}
             </div>,;
           </div>;
         </section>;
@@ -158,12 +158,12 @@ export default function CloudDevOpsPage() {;
                 Our Cloud & DevOps Expertise;
               </h2>;
               <div className="grid grid-cols-1 md: grid-cols-2 gap-6">",;
-                {services && services.map((service, index) => (,;
+                {services && services.map(service, index) => (,;
                   <div key={index} className="flex items-center space-x-3">";
                     <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />";
                     <span className="text-gray-300 text-lg">{service}</span>";
                   </div>;
-                ))}
+                )}
               </div>,;
             </div>;
           </div>;
@@ -219,7 +219,7 @@ export default function CloudDevOpsPage() {;
     title: 'Monitoring & Alerting',;
     description: '24/7 monitoring and proactive alerting systems';
   }
-];
+;
 const benefits = [;
   'Reduced infrastructure costs by up to 50%',;
   'Improved deployment speed and reliability',;
@@ -227,7 +227,6 @@ const benefits = [;
   'Automated scaling and resource management',;
   'Better disaster recovery capabilities',;
   'Faster time-to-market for applications';
-];
 export default function CloudDevOpsServices() {;
 
 const tools = [
@@ -239,7 +238,7 @@ const tools = [
   { name: 'Terraform', description: 'Infrastructure as code' },
   { name: 'Jenkins', description: 'CI/CD automation' },
   { name: 'Prometheus', description: 'Monitoring and alerting' }
-];
+;
 
 export default function CloudDevOpsPage() {;
 const benefits = [;
@@ -249,7 +248,6 @@ const benefits = [;
   'Automated scaling and resource management',;
   'Better disaster recovery capabilities',;
   'Faster time-to-market for applications';
-];
 export default function CloudDevOpsServices() {;
   return (
     <Layout
@@ -299,7 +297,7 @@ export default function CloudDevOpsServices() {;
             </motion && motion.div>;
             </div>;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-              {features && features.map((feature, index) => (;
+              {features && features.map(feature, index) => (;
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">;
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">;
                     <feature && feature.icon className="w-6 h-6 text-blue-600" />;
@@ -311,7 +309,7 @@ export default function CloudDevOpsServices() {;
                     {feature && feature.description}
                   </p>;
                 </div>;
-              ))}
+              )}
             </div>;
           </div>;
         </section>;
@@ -328,12 +326,12 @@ export default function CloudDevOpsServices() {;
                   improve deployment processes, and optimize costs while maintaining security.;
                 </p>;
                 <ul className="space-y-4">;
-                  {benefits && benefits.map((benefit, index) => (;
+                  {benefits && benefits.map(benefit, index) => (;
                     <li key={index} className="flex items-start">;
                       <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" />;
                       <span className="text-gray-700">{benefit}</span>;
                     </li>;
-                  ))}
+                  )}
                 </ul>;
               </div>;
               <div className="bg-gradient-to-r from-blue-600 to-cyan-700 p-8 rounded-xl text-white">;
@@ -352,9 +350,9 @@ export default function CloudDevOpsServices() {;
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="text-center mb-12"
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Technologies We Use</h2>
@@ -363,18 +361,18 @@ export default function CloudDevOpsServices() {;
               </p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {tools.map((tool, index) => (
+              {tools.map(tool, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial={ opacity: 0, y: 20 }
+                  animate={ opacity: 1, y: 0 }
+                  transition={ duration: 0.5, delay: index * 0.1 }
                   className="bg-gray-50 rounded-xl p-6 hover:bg-gray-100 transition-colors text-center"
                 >
                   <h3 className="text-lg font-semibold mb-2">{tool.name}</h3>
                   <p className="text-gray-600 text-sm">{tool.description}</p>
                 </motion.div>
-              ))}
+              )}
             </div>
           </div>
         </section>
@@ -383,9 +381,9 @@ export default function CloudDevOpsServices() {;
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="text-center mb-12"
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Process</h2>
@@ -399,12 +397,12 @@ export default function CloudDevOpsServices() {;
                 { step: '2', title: 'Planning', description: 'Design the optimal cloud and DevOps strategy' },
                 { step: '3', title: 'Implementation', description: 'Execute the migration and setup processes' },
                 { step: '4', title: 'Optimization', description: 'Monitor, optimize, and maintain your systems' }
-              ].map((phase, index) => (
+              ].map(phase, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial={ opacity: 0, y: 20 }
+                  animate={ opacity: 1, y: 0 }
+                  transition={ duration: 0.5, delay: index * 0.1 }
                   className="text-center"
                 >
                   <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
@@ -413,7 +411,7 @@ export default function CloudDevOpsServices() {;
                   <h3 className="text-xl font-semibold mb-2">{phase.title}</h3>
                   <p className="text-gray-600">{phase.description}</p>
                 </motion.div>
-              ))}
+              )}
         {/* Benefits Section */}
         <section className="py-20">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
@@ -427,12 +425,12 @@ export default function CloudDevOpsServices() {;
                   improve deployment processes, and optimize costs while maintaining security.;
                 </p>;
                 <ul className="space-y-4">;
-                  {benefits && benefits.map((benefit, index) => (;
+                  {benefits && benefits.map(benefit, index) => (;
                     <li key={index} className="flex items-start">;
                       <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" />;
                       <span className="text-gray-700">{benefit}</span>;
                     </li>;
-                  ))}
+                  )}
                 </ul>;
               </div>;
               <div className="bg-gradient-to-r from-blue-600 to-cyan-700 p-8 rounded-xl text-white">;
@@ -477,4 +475,3 @@ export default function CloudDevOpsServices() {;
     </>;
     </Layout>;
   );
-}

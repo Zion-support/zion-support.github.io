@@ -10,8 +10,7 @@ if (!session?.user?.email) {
     // Update user's onboarding status
     const updatedUser = await prisma.user.update({
       where: { email: session.user.email }
-      data: { onboardingCompleted: true }
-    });
+      data: { onboardingCompleted: true });
     return NextResponse.json(
 import { NextRequest, NextResponse } from 'next / server';
 import { getServerSession } from 'next - auth';
@@ -22,11 +21,11 @@ export async /**
 function POST() {
   try {
     const session = await getServerSession ();
-;
-// Check condition
+
+/ Check condition
 if ( {) {
   $2
-}
+
       return NextResponse.json ({ error: 'Unauthorized' }, { status: 401 });
     }
     // Update user's onboarding status;
@@ -34,7 +33,7 @@ if ( {) {
       where: { email: session.user.email },
       data: { onboarding_completed: true },
     });
-;
+
     return NextResponse.json (
       {
         message: 'Onboarding completed successfully'
@@ -45,7 +44,6 @@ if ( {) {
           role: updatedUser.role
           onboardingCompleted: updatedUser.onboardingCompleted
         }
-      }
       { status: 200 }
     );
   } catch (error) {
@@ -56,9 +54,7 @@ if ( {) {
       { status: 500 }
     );
   }
-}
+
       { status: 500 }
     );
   }
-}
-}

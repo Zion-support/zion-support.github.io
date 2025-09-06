@@ -1,5 +1,5 @@
 import React from 'react',;
-// Use the centralized icon wrapper to avoid missing icons;
+/ Use the centralized icon wrapper to avoid missing icons;
 import { Check, Trash2, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button',;
 import { Badge } from '@/components/ui/badge',;
@@ -12,7 +12,7 @@ import {;
   TooltipTrigger} from '@/components/ui/tooltip',;
 import { useRouter } from 'next/router',;
 import { Notification, NotificationType } from '@/context/notifications',;
-;
+
 export const getTypeIcon = (type:NotificationType) => {;
   switch (type) {;
     case 'message':;
@@ -36,29 +36,27 @@ export const getTypeIcon = (type:NotificationType) => {;
     default:;
       return <span className="text-gray-500"></span>;
   }
-},;
-;
+,;
+
 interface NotificationItemProps {;
   notification:Notification,;
   onMarkAsRead:(id:string) => Promise<void>,;
   onDismiss:(id:string) => Promise<void>;
-}
-;
+
 export const NotificationItem:React.FC<NotificationItemProps> = ({;
   notification,;
   onMarkAsRead,;
   onDismiss}) => {;
   const router = useRouter(), // Changed from useNavigate to useRouter;
-;
+
   const handleClick = () => {;
     if (!notification.read) {;
       onMarkAsRead(notification.id),;    }
     // If there's an action URL, navigate to it;
     if (notification.action_url) {;
       router.push(notification.action_url), // Changed to router.push;
-    }
-  },;
-;
+    },;
+
   return (;
     <div;
       className={cn(;
@@ -86,7 +84,7 @@ export const NotificationItem:React.FC<NotificationItemProps> = ({;
                     addSuffix:true});
                 :'Just now'}
             </p>;
-;
+
             {notification.action_url && notification.action_text && (;
               <Button;
                 variant="link";
@@ -99,7 +97,7 @@ export const NotificationItem:React.FC<NotificationItemProps> = ({;
           </div>;
         </div>;
       </div>;
-;
+
       {/* Action buttons that appear on hover */}
       <div className="absolute right-2 top-2 opacity-0 group-hover:opacity-100 transition-opacity flex gap-1">;
         <TooltipProvider>;
@@ -112,7 +110,7 @@ export const NotificationItem:React.FC<NotificationItemProps> = ({;
                 onClick={(e) => {;
                   e.stopPropagation(),;
                   onMarkAsRead(notification.id);
-                }}
+                }
                 aria-label="Mark as read";
               >;
                 <Check className="h-3.5 w-3.5 text-green-400" />;
@@ -123,7 +121,7 @@ export const NotificationItem:React.FC<NotificationItemProps> = ({;
             </TooltipContent>;
           </Tooltip>;
         </TooltipProvider>;
-;
+
         <TooltipProvider>;
           <Tooltip>;
             <TooltipTrigger asChild>;
@@ -134,7 +132,7 @@ export const NotificationItem:React.FC<NotificationItemProps> = ({;
                 onClick={(e) => {;
                   e.stopPropagation(),;
                   onDismiss(notification.id),;
-                }}
+                }
                 aria-label="Dismiss notification";
               >;
                 <Trash2 className="h-3.5 w-3.5 text-red-400" />;
@@ -148,25 +146,22 @@ export const NotificationItem:React.FC<NotificationItemProps> = ({;
       </div>;
     </div>;
   ),;
-},;import React from 'react';
-//Use the centralized icon wrapper to avoid missing icons export const getTypeIcon = (type: NotificationType) => {;
+,;import React from 'react';
+/Use the centralized icon wrapper to avoid missing icons export const getTypeIcon = (type: NotificationType) => {;
   switch (type) {';
   case 'message': ;
-}
-};
 interface NotificationItemProps {;
   notification: Notification;
 onMarkAsRead: (id: string) => Promise<void>;
 onDismiss: (id: string) => Promise<void> ;
-}export const NotificationItem: React.FC<NotificationItemProps> = ({;
+export const NotificationItem: React.FC<NotificationItemProps> = ({;
   notification;
 onMarkAsRead;
 onDismiss ;
-}) => {;
+) => {;
   const router = useRouter (), //Changed from useNavigate to useRouter if (!notification.read) {;
   addSuffix: true ';
-}) : 'Just now' ;
-}</p> {;
+) : 'Just now' ;
+</p> {;
   notification.action url && notification.action text && (<Button variant="link" size="sm" className="text-zion-cyan p-0 h-auto" onClick={;
-  handleClick ;"}> </Button>) ";"}</div> </div> </div> h-3.5 w-3.5 text-green-400"/> </Button> </TooltipTrigger> <TooltipContent> <p>Mark as read</p> </TooltipContent> </Tooltip> </TooltipProvider> <TooltipProvider> <Tooltip> <TooltipTrigger asChild> <Button > <Trash2 className=" h-3.5 w-3.5 text-red-400" /> </Button> </TooltipTrigger> <TooltipContent> <p>Dismiss</p> </TooltipContent> </Tooltip> </TooltipProvider> </div> </div>) ;
-};"'"
+  handleClick ;"}> </Button>) ";"}</div> </div> </div> h-3.5 w-3.5 text-green-400"/> </Button> </TooltipTrigger> <TooltipContent> <p>Mark as read</p> </TooltipContent> </Tooltip> </TooltipProvider> <TooltipProvider> <Tooltip> <TooltipTrigger asChild> <Button > <Trash2 className=" h-3.5 w-3.5 text-red-400" /> </Button> </TooltipTrigger> <TooltipContent> <p>Dismiss</p> </TooltipContent> </Tooltip> </TooltipProvider> </div> </div>) ;"'"

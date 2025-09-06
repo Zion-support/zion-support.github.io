@@ -8,8 +8,7 @@ interface OptimizedImageProps {;
   className?: string,;
   priority?: boolean,;
   quality?: number;
-}
-;
+
 const: OptimizedImage: React.FC<OptimizedImageProps> = ({;
   src,;
   alt,;
@@ -18,7 +17,7 @@ const: OptimizedImage: React.FC<OptimizedImageProps> = ({;
   className,;
   priority = false,;
   quality = 75;
-}) => {;
+) => {;
   return (;
     <Image;
       src={src}
@@ -30,5 +29,5 @@ const: OptimizedImage: React.FC<OptimizedImageProps> = ({;
       quality={quality}
     />;
   );
-},;
+,;
 export default OptimizedImage;

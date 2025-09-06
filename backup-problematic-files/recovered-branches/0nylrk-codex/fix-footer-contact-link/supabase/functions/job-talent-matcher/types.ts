@@ -10,8 +10,7 @@ export interface JobData {;
     max:number;
   },;
   deadline:string;
-}
-;
+
 export interface TalentProfile {;
   id:string,;
   full_name:string,;
@@ -21,19 +20,16 @@ export interface TalentProfile {;
   years_experience:number,;
   hourly_rate?:number,;
   availability_type?:string;
-}
-;
+
 export interface TalentMatch {;
   talent_id:string,;
   job_id:string,;
   match_score:number,;
   matched_skills:string[],;
   created_at:string;
-}
-;
+
 export interface MatchResult {;
   talentId:string,;
   score:number,;
   matchedSkills:string[],;
   reason?:string;
-} 

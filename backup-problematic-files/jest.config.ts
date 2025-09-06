@@ -14,8 +14,7 @@ const config: Config = {
   ]
   coverageThreshold: {
     global: { branches: 70, functions: 70, lines: 70, statements: 70 }
-  }
-}
+
 export default createJestConfig(config);
 import type { Config } from "jest";
 import nextJest from "next/jest.js";
@@ -28,8 +27,8 @@ const createJestConfig = nextJest({
   // Provide the path to your Next.js app to load next.config.js and .env files
   dir: "./"
   dir: "./",
-});
-// Add any custom config to be passed to Jest
+);
+/ Add any custom config to be passed to Jest
 const config: Config = {
   coverageProvider: "v8"
   testEnvironment: "jsdom"
@@ -53,15 +52,14 @@ const config: Config = {
       lines: 70
       statements: 70
     }
-  }
-}
-// createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
+
+/ createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
 export default createJestConfig(config);
     "src/**/*.{js,jsx,ts,tsx}",
     "!src/**/*.d && d.ts",
     "!src/**/*.stories.{js,jsx,ts,tsx}",
-;
-// Add any custom config to be passed to Jest;
+
+/ Add any custom config to be passed to Jest;
 const config: Config = {
   coverage_provider: "v8",
   test_environment: "jsdom",
@@ -86,9 +84,9 @@ const config: Config = {
       statements: 70,
     },
   },
-};
+;
 
-// createJestConfig is exported this way to ensure that next/jest can load the Next && Next.js config which is async
+/ createJestConfig is exported this way to ensure that next/jest can load the Next && Next.js config which is async
 export default createJestConfig(config);
 import type { Config } from "jest";
 import nextJest from "next/jest ;
@@ -107,18 +105,16 @@ const config: Config = {
   coverageThreshold: {
     global: { branches: 70, functions: 70, lines: 70, statements: 70 },
   },
-};
+;
 export default createJestConfig(config);
 export default createJestConfig(config);
 import type { Config } from 'jest'; import nextJest from 'next/jest.js'; const createJestConfig = nextJest({ dir: './',}); const config: Config = { coverageProvider: 'v8',testEnvironment: 'jsdom',setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],moduleNameMapping: { '^@/(.*)$': '<rootDir>/src/$1',},testMatch: [ '**/__tests__*.(js|jsx|ts|tsx)','***.{js,jsx,ts,tsx}','!src*.d.ts','!src*.stories.{js,jsx,ts,tsx}',],coverageThreshold: { global: { branches: 70,functions: 70,lines: 70,statements: 70,},},}; export default createJestConfig(config);
 export default createJestConfig(config);
     global: { branches: 70, functions: 70, lines: 70, statements: 70 }
-  }
-}
+
 export default createJestConfig(config);
-}
-;
-// createJestConfig is exported this way to ensure that next / jest can load the Next.js config which is async;
+
+/ createJestConfig is exported this way to ensure that next / jest can load the Next.js config which is async;
 export default createJestConfig (config);
 import type { Config } from './jest';
 import next_jest from "next / jest.js";
@@ -137,6 +133,5 @@ const config: Config = {
   coverage_threshold: {
     global: { branches: 70, functions: 70, lines: 70, statements: 70 },
   },
-}
+
 export default createJestConfig (config);
-;

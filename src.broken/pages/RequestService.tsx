@@ -6,5 +6,3 @@ export function RequestService() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

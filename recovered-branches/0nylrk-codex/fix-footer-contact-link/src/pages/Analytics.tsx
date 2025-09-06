@@ -16,14 +16,14 @@ export default function Analytics() {
     queryFn: async () => {
       // Get daily page views for trend chart
 
-      const days = parseInt(timeRange.replace('d', ''));
+      const days = parseInt(timeRange.replace('d', '');
       const startDate = new Date();
       startDate.setDate(startDate.getDate() - days);
       const { data, error } = await supabase
         .from('analytics_events')
         .select('created_at, path')
         .eq('event_typepage_view')
-        .gte('created_at', startDate.toISOString());
+        .gte('created_at', startDate.toISOString();
       if (error) throw error;
       // Group by date
       const viewsByDate = {}
@@ -43,21 +43,19 @@ export default function Analytics() {
         } else {
           result.push({ date: dateStr, views: 0 })
         }
-      }
-      return result.sort((a, b) => a.date.localeCompare(b.date))
-    }
-  });
+      return result.sort(a, b) => a.date.localeCompare(b.date)
+    });
   const { data: conversionData } = useQuery({
     queryKey: ['conversion-data', timeRange];
     queryFn: async () => {;
-      const days = parseInt(timeRange && timeRange.replace('d', ''));
+      const days = parseInt(timeRange && timeRange.replace('d', '');
       const startDate = new Date();
       startDate.setDate(startDate.getDate() - days);
       const { data, error } = await supabase
         .from('analytics_events')
         .select('created_at, metadata')
         .eq('event_typeconversion')
-        .gte('created_at', startDate.toISOString());
+        .gte('created_at', startDate.toISOString();
       if (error) throw error;
       // Group by conversion type and date
       const conversionsByType = {}
@@ -66,7 +64,6 @@ export default function Analytics() {
         const conversionType = item.metadata?.conversionType |'unknown';
         if (!conversionsByType[conversionType]) {
           conversionsByType[conversionType] = {}
-        }
         if (!conversionsByType[conversionType][date]) {
           conversionsByType[conversionType][date] = 0
         }
@@ -88,8 +85,7 @@ export default function Analytics() {
         });
         return result
       })
-    }
-  });
+    });
 
   return (
     <AnalyticsContainer>
@@ -115,13 +111,12 @@ export default function Analytics() {
       </div>
     </AnalyticsContainer>
   )
-}
+
           onTimeRangeChange={setTimeRange}
         />;
         <ExportPanel />;
       </div>;
     </AnalyticsContainer>;
   );
-}
+
     </AnalyticsContainer>);
-}

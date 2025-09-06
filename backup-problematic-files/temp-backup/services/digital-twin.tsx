@@ -3,7 +3,6 @@ import React from 'react';
 
 interface Digital-twinProps {
   className?: string;
-}
 
 const Digital-twin: React.FC<Digital-twinProps> = ({ className }) => {
   return (
@@ -12,6 +11,3 @@ const Digital-twin: React.FC<Digital-twinProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-}
-}
-}

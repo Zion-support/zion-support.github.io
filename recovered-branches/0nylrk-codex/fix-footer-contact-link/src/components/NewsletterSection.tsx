@@ -18,13 +18,12 @@ export function NewsletterSection() {
       </div>
     </section>
   );
-}
+
             <EnhancedNewsletterForm />;
           </div>;
         </div>;
       </div>;
     </section>;
   );
-}
+
     </section>);
-}

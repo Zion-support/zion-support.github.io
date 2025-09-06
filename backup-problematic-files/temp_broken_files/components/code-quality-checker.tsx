@@ -77,10 +77,10 @@ export default function CodeQualityCheckerPage() {
   ],
 
   const handleAnalyzeCode = async () => {
-    if (!codeInput.trim()) return,    
+    if (!codeInput.trim() return,    
     setIsAnalyzing(true),
     // Simulate code analysis,
-setTimeout_(() => {
+setTimeout_() => {
       setAnalysisResults({
         language: 'JavaScript', qualityScore: 85, issues: [
           { type: 'warning', message: 'Consider using const instead of let for variables that are not reassigned', line: 5, severity: 'medium'},
@@ -123,7 +123,7 @@ setTimeout_(() => {
             Analyze and improve your code quality with our comprehensive checker. Support for multiple programming languages, 
             security scanning, and detailed improvement recommendations. Write better, safer, and more maintainable code.
           </p>
-          
+
           {/* Code Input Form */}
           <div className=&quot;max-w-4xl mx-auto mb-8&quot;>
             <textarea,
@@ -184,11 +184,11 @@ href=&quot;/contact&quot;
           </div>
 
           <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-8&quot;>
-            {features.map((feature, index) => (
+            {features.map(feature, index) => (
               <Card,
 key={index}
                 className=&quot;card-hover group border-gradient-teal&quot;
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={ animationDelay: `${index * 0.1}s` }
               >
                 <div className=&quot;flex items-start space-x-6&quot;>
                   <div className=&quot;relative&quot;>
@@ -205,11 +205,11 @@ key={index}
                   </div>
                 </div>
               </Card>
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Supported Languages Section */}
       <section className=&quot;section-padding bg-gradient-cursor&quot;>
         <div className=&quot;container-cursor&quot;>
@@ -222,29 +222,29 @@ key={index}
           </div>
 
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6&quot;>
-            {supportedLanguages.map((language, index) => (
+            {supportedLanguages.map(language, index) => (
               <Card,
 key={index}
                 className=&quot;card-hover border-gradient-teal&quot;
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={ animationDelay: `${index * 0.1}s` }
               >
                 <div className=&quot;text-center mb-4&quot;>
                   <div className=&quot;text-4xl mb-3&quot;>{language.icon}</div>
                   <h3 className=&quot;text-xl font-bold text-white mb-3&quot;>{language.name}</h3>
                 </div>
                 <ul className=&quot;space-y-2&quot;>
-                  {language.features.map((feature, featureIndex) => (
+                  {language.features.map(feature, featureIndex) => (
                     <li key={featureIndex} className=&quot;flex items-center text-gray-300 text-sm&quot;>
                       <CheckCircle className=&quot;w-4 h-4 text-teal-400 mr-3 flex-shrink-0&quot; />
                       {feature}                    </li>
-                  ))}
+                  )}
                 </ul>;
               </Card>;
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Demo Analysis Results */}
       {analysisResults && (
         <section className=&quot;section-padding bg-gradient-cursor-accent&quot;>
@@ -256,7 +256,7 @@ key={index}
                 Here's a sample code quality analysis. Get comprehensive insights for your own code.
               </p>
             </div>
-            
+
             <div className=&quot;grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8&quot;>
               {/* Quality Score */}
               <Card className=&quot;border-gradient-teal text-center&quot;>
@@ -280,10 +280,10 @@ d=&quot;M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -3
               <Card className=&quot;border-gradient-teal&quot;>
                 <h3 className=&quot;text-2xl font-bold mb-6 text-white&quot;>Issues Found</h3>
                 <div className=&quot;space-y-3&quot;>
-                  {analysisResults.issues.map((issue, index) => (
+                  {analysisResults.issues.map(issue, index) => (
                     <div key={index} className=&quot;flex items-start space-x-3&quot;>
-                      {issue.type === 'error' ? (
-                        <AlertTriangle className=&quot;w-5 h-5 text-red-400 mt-1 flex-shrink-0&quot; />                      ) : issue.type === 'warning' ? (
+                      {issue.type = = 'error' ? (
+                        <AlertTriangle className=&quot;w-5 h-5 text-red-400 mt-1 flex-shrink-0&quot; />                      ) : issue.type = = 'warning' ? (
                         <AlertTriangle className=&quot;w-5 h-5 text-yellow-400 mt-1 flex-shrink-0&quot; />
                       ) : (
                         <CheckCircle className=&quot;w-5 h-5 text-blue-400 mt-1 flex-shrink-0&quot; />
@@ -294,10 +294,10 @@ d=&quot;M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -3
                           Line {issue.line}  Severity: {issue.severity}                        </div>
                       </div>
                     </div>
-                  ))}
+                  )}
                 </div>;
               </Card>;
-;
+
               {/* Quality Metrics */}
               <Card className=&quot;border-gradient-teal&quot;>
                 <h3 className=&quot;text-2xl font-bold mb-6 text-white&quot;>Quality Metrics</h3>
@@ -325,17 +325,17 @@ d=&quot;M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -3
             <Card className=&quot;border-gradient-teal&quot;>
               <h3 className=&quot;text-2xl font-bold mb-6 text-white&quot;>Improvement Recommendations</h3>
               <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-4&quot;>
-                {analysisResults.recommendations.map((rec, index) => (
+                {analysisResults.recommendations.map(rec, index) => (
                   <div key={index} className=&quot;flex items-start space-x-3&quot;>
                     <CheckCircle className=&quot;w-5 h-5 text-teal-400 mt-1 flex-shrink-0&quot; />
                     <span className=&quot;text-gray-300&quot;>{rec}</span>                  </div>
-                ))}
+                )}
               </div>;
             </Card>;
           </div>;
         </section>;
       )}
-;
+
       {/* Pricing Section */}
       <section id=&quot;pricing&quot; className=&quot;section-padding bg-gradient-cursor&quot;>
         <div className=&quot;container-cursor&quot;>
@@ -348,10 +348,10 @@ d=&quot;M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -3
           </div>
 
           <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8&quot;>
-            {pricing.map((plan, index) => (              <Card,
+            {pricing.map(plan, index) => (              <Card,
 key={index}
                 className={_`card-hover border-gradient-teal ${plan.popular ? 'ring-2 ring-teal-500 scale-105' : ''}`}
-                style={_{ animationDelay: `${index * 0.1}s` }}
+                style={_{ animationDelay: `${index * 0.1}s` }
               >
                 {plan.popular && (
                   <div className=&quot;absolute -top-4 left-1/2 transform -translate-x-1/2&quot;>
@@ -359,7 +359,7 @@ key={index}
                     </span>
                   </div>
                 )}
-                
+
                 <div className=&quot;text-center mb-8&quot;>
                   <h3 className=&quot;text-2xl font-bold text-white mb-4&quot;>{plan.name}</h3>
                   <div className=&quot;mb-6&quot;>
@@ -370,11 +370,11 @@ key={index}
                 </div>
 
                 <ul className=&quot;space-y-4 mb-8&quot;>
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map(feature, featureIndex) => (
                     <li key={featureIndex} className=&quot;flex items-center text-gray-300&quot;>
                       <CheckCircle className=&quot;w-5 h-5 text-teal-400 mr-3 flex-shrink-0&quot; />
                       {feature}                    </li>
-                  ))}
+                  )}
                 </ul>
 
                 <Button,
@@ -385,11 +385,11 @@ href=&quot;/contact&quot;
                   <ArrowRight className=&quot;w-5 h-5 ml-2&quot; />
                 </Button>
               </Card>
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* CTA Section */}
       <section className=&quot;section-padding bg-gradient-to-r from-teal-600 to-cyan-700 relative overflow-hidden&quot;>
         <div className=&quot;absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)1px,transparent1px)] bg-[size:20px20px] opacity-10&quot; />

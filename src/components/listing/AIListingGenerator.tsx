@@ -17,7 +17,7 @@ interface GeneratedContent {
     max: number
   }
   key_points: string[];
-}
+
 interface AIListingGeneratorProps {
 
   onApplyGenerated?: (content: GeneratedContent,) => void
@@ -28,9 +28,8 @@ interface AIListingGeneratorProps {
     keyFeatures?: string;
     targetAudience?: string;
   }
-}
 
-export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {
+export function AIListingGenerator({ onApplyGenerated, initialValues = {}: AIListingGeneratorProps) {
   const { toast } = useToast()
   const [isLoading, setIsLoading] = useState(false)
   const [generatedContent, setGeneratedContent] = useState<GeneratedContent | null>(null)
@@ -48,18 +47,17 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
     setIsLoading (true);
     try {
       const { data, error } = await supabase.functions.invoke ('ai - listing - generator', {
-        body: { title, category, key_features, target_audience }
-      });
+        body: { title, category, key_features, target_audience });
       // Check condition
 if ( {) {
   $2
-}
+
         throw new Error (error.message);
       }
       if (data && (data as any).error) {
-        throw new Error((data as any).error)
+        throw new Error(data as any).error)
       }
-      setGeneratedContent((data as any)?.generated |null)
+      setGeneratedContent(data as any)?.generated |null)
       toast({
         title: "Content Generated"
         description: "AI has created optimized listing content for you."
@@ -74,7 +72,6 @@ if ( {) {
     } finally {
       setIsLoading (false);
     }
-  }
   const handleApply = () => {
     if (generatedContent && onApplyGenerated) {
       onApplyGenerated(generatedContent)
@@ -86,14 +83,13 @@ if ( {) {
     // Check condition
 if ( {) {
   $2
-}
+
       onApplyGenerated (generated_content);
       toast ({
         title: "Content Applied",
         description: "The generated content has been applied to your listing.";
       });
     }
-  }
 
   return (
     <div className="space-y-6">
@@ -121,10 +117,10 @@ if ( {) {
       )}
     </div>
   )
-}: AIListingGeneratorProps) {
+: AIListingGeneratorProps) {
   const {
   toast
-}= useToast ()
+= useToast ()
 const [isLoading, setIsLoading] = useState (false)
 const [generatedContent, setGeneratedContent] = useState<GeneratedContent | null> (null)
 const handleGenerate = async ({
@@ -132,70 +128,69 @@ const handleGenerate = async ({
 category
 keyFeatures
 targetAudience
-}: {
+: {
   title: string
 category: string
 keyFeatures: string
 targetAudience: string
-}) => {
+) => {
   setIsLoading (true);
 try {
   const {
   data, error
-}= await supabase.functions.invoke ('ai-listing-generator', {
+= await supabase.functions.invoke ('ai-listing-generator', {
   body: {
   title, category,  keyFeatures, targetAudience
-})
+)
 if (error) {
   throw new Error (error.message)
-}if (data && (data as any) .error) {
-  throw new Error ( (data as any) .error)
-}setGeneratedContent ( (data as any) ?.generated |null)
+if (data && (data as any) .error) {
+  throw new Error (data as any) .error)
+setGeneratedContent (data as any) ?.generated |null)
 toast ({
-}catch (error) {';
+catch (error) {';
   logErrorToProduction ('Error generating content:', {
   data: error
-})
+)
 toast ({
-}finally {
+finally {
   setIsLoading (false)
   data: error;
-});
+);
 toast ({
-}finally {
+finally {
   setIsLoading (false);
-}
+
 return (<div className="space-y-6" > <Card className="border border-zion-blue-light bg-zion-blue-dark" > <CardHeader> <CardTitle className="flex items-center text-white" > <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" /> AI Listing Optimizer </CardTitle> <p className="text-sm text-zion-slate-light" > Provide basic information and let AI generate optimized, SEO-friendly content for your listing </p> </CardHeader> <CardContent> <AIListingForm onSubmit= {
   handleGenerate
-}isLoading= {
+isLoading= {
   isLoading
-}initialValues= {
+initialValues= {
   initialValues
-}/> </CardContent> </Card> {
+/> </CardContent> </Card> {
   isLoading && <LoadingContentSkeleton />
-}{
+{
   generatedContent && !isLoading && (<GeneratedContentDisplay content= {
   generatedContent
-}onApply= {
+onApply= {
   handleApply
-}/>)
-}</div>)
-}'"
-}
+/>)
+</div>)
+'"
+
 return (<div className="space - y-6" > <Card className="border border - zion - blue - light bg - zion - blue - dark" > <CardHeader> <CardTitle className="flex items - center text - white" > <Sparkles className="h - 5 w - 5 mr - 2 text - zion - cyan" /> AI Listing Optimizer </CardTitle> <p className="text - sm text - zion - slate - light" > Provide basic information and let AI generate optimized, SEO - friendly content for your listing </p> </CardHeader> <CardContent> <AIListingForm on_submit= {
   handle_generate;
-}is_loading= {
+is_loading= {
   is_loading;
-}initial_values= {
+initial_values= {
   initial_values;
-}/> </CardContent> </Card> {
+/> </CardContent> </Card> {
   is_loading && <LoadingContentSkeleton />;
-}{
+{
   generated_content && !is_loading && (<GeneratedContentDisplay content= {
   generated_content;
-}on_apply= {
+on_apply= {
   handle_apply;
-}/>);
-}</div>);
-}'";
-}
+/>);
+</div>);
+'";

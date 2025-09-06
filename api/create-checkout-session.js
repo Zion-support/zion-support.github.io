@@ -3,10 +3,10 @@ import { withErrorLogging } from '../../utils/withErrorLogging.cjs';
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
   apiVersion: '2023-10-16',
-});
+);
 
 async function handler(req, res) {
-  if (req.method !== 'POST') {
+  if (req.method != 'POST') {
     res.statusCode = 405;
     res.setHeader('Allow', 'POST');
     res.end('Method Not Allowed');
@@ -15,7 +15,7 @@ async function handler(req, res) {
 
   try {
     const { priceId, quantity = 1 } = req.body || {};
-    
+
     if (!priceId) {
       res.statusCode = 400;
       res.json({ error: 'Price ID is required' });
@@ -52,10 +52,10 @@ export default function handler(req, res) {
   res.status(200).json({ message: "Checkout session created" })}
 export default function handler(req,res) { res.status(200).json({ message: "Checkout session created" })}
   res.status(200).json({ message: 'Checkout session created' });
-}
+
 export default function handler(req, res) {
   res.status(200).json({ "message": 'Checkout session created' });
-}
+
 export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}
       url: session.url
     })
@@ -64,6 +64,4 @@ export default function handler(req,res) { res.status(200).json({ message: 'Chec
     res.statusCode = 500,
     res.json({ error: err.message || 'Checkout session creation failed' })
   };
-};
 export default withErrorLogging(handler),
-,

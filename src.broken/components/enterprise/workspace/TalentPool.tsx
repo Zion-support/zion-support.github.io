@@ -6,5 +6,3 @@ export function TalentPool() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

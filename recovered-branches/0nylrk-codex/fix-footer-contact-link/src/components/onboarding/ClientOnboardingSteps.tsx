@@ -30,7 +30,6 @@ export function ClientOnboardingSteps() {
     }
   ];
   return <OnboardingTracker steps={steps} title="Get Started With Hiring" />;
-}
 
 import React from './react';
 import { useOnboardingStatus  } from '@/hooks / useOnboardingStatus';
@@ -41,7 +40,7 @@ export /**
  */
 function ClientOnboardingSteps() {
   const onboarding_status = useOnboardingStatus ();
-;
+
   const steps: OnboardingStep[] = [;
     {
       id: "post - job",
@@ -65,6 +64,5 @@ function ClientOnboardingSteps() {
       action: "Check Dashboard",
     },
   ];
-;
+
   return <OnboardingTracker steps={steps} title="Get Started With Hiring" />;
-}

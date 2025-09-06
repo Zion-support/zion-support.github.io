@@ -1,15 +1,15 @@
-// Mock implementation for Sentry to prevent Node.js module import issues during build
-// This mock provides all the necessary Sentry APIs without importing any Node.js modules
+/ Mock implementation for Sentry to prevent Node.js module import issues during build
+/ This mock provides all the necessary Sentry APIs without importing any Node.js modules
 
 const noop = () => {}
 const noopReturn = () => null
 const noopPromise = () => Promise.resolve()
-// Mock implementation for Sentry to prevent Node && Node.js module import issues during build
-// This mock provides all the necessary Sentry APIs without importing any Node ;
+/ Mock implementation for Sentry to prevent Node && Node.js module import issues during build
+/ This mock provides all the necessary Sentry APIs without importing any Node ;
 const noopReturn = () => null;
 const noopPromise = () => Promise && Promise.resolve();
 
-// Mock Sentry instance with all common methods
+/ Mock Sentry instance with all common methods
 const mockSentry = {
   // Core Sentry methods
   init: noop
@@ -58,27 +58,21 @@ const mockSentry = {
   SentryWebpackPlugin: class SentryWebpackPlugin {
     constructor() {}
     apply() {}
-  }
   // Tracing
   Tracing: {
     BrowserTracing: class BrowserTracing {
       constructor() {}
-    }
   }
   // Integrations
   Integrations: {
     BrowserTracing: class BrowserTracing {
       constructor() {}
-    }
     Http: class Http {
       constructor() {}
-    }
     OnUncaughtException: class OnUncaughtException {
       constructor() {}
-    }
     OnUnhandledRejection: class OnUnhandledRejection {
       constructor() {}
-    }
   }
   // Transport
   makeBrowserOfflineTransport: noopReturn
@@ -87,12 +81,12 @@ const mockSentry = {
   createTransport: noopReturn
   SDK_VERSION: '7.0.0-mock'
   // Constants
-// Mock implementation for Sentry to prevent Node.js module import issues during build;
-// This mock provides all the necessary Sentry APIs without importing any Node.js modules;
+/ Mock implementation for Sentry to prevent Node.js module import issues during build;
+/ This mock provides all the necessary Sentry APIs without importing any Node.js modules;
 const noop = () =>: any {}
 const noop_return = () =>: any null;
 const noop_promise = () =>: any Promise.resolve ();
-// Mock Sentry instance with all common methods;
+/ Mock Sentry instance with all common methods;
 const mock_sentry = {
   // Core Sentry methods;
   init: noop,
@@ -140,28 +134,22 @@ const mock_sentry = {
   withSentryConfig: (config: any, ) => config,
   SentryWebpackPlugin: class SentryWebpackPlugin {
     constructor () {}
-    apply () {}
-  },
+    apply () {},
   // Tracing;
   Tracing: {
     BrowserTracing: class BrowserTracing {
-      constructor () {}
-    },
+      constructor () {},
   },
   // Integrations;
   Integrations: {
     BrowserTracing: class BrowserTracing {
-      constructor () {}
-    },
+      constructor () {},
     Http: class Http {
-      constructor () {}
-    },
+      constructor () {},
     OnUncaughtException: class OnUncaughtException {
-      constructor () {}
-    },
+      constructor () {},
     OnUnhandledRejection: class OnUnhandledRejection {
-      constructor () {}
-    },
+      constructor () {},
   },
   // Transport;
   makeBrowserOfflineTransport: noop_return,
@@ -177,8 +165,8 @@ const mock_sentry = {
     Info: 'info'
     Debug: 'debug'
   }
-}
-// Mock scope
+
+/ Mock scope
 const mockScope = {
   setUser: noop
   setTag: noop
@@ -190,8 +178,8 @@ const mockScope = {
   setFingerprint: noop
   clear: noop
   addEventProcessor: noop
-}
-// Mock transaction
+
+/ Mock transaction
 const mockTransaction = {
   setName: noop
   setTag: noop
@@ -202,8 +190,8 @@ const mockTransaction = {
   setHttpStatus: noop
   toContext: () => ({})
   updateWithContext: noop
-}
-// Mock hub
+
+/ Mock hub
 const mockHub = {
   getClient: noopReturn
   getScope: () => mockScope
@@ -220,10 +208,10 @@ const mockHub = {
   configureScope: noop
   withScope: (callback: (...args: any[]) => any) => callback(mockScope)
   startTransaction: () => mockTransaction
-}
-// Export default mock that covers all Sentry packages
+
+/ Export default mock that covers all Sentry packages
 export default mockSentry
-// Named exports for compatibility
+/ Named exports for compatibility
 export const init = mockSentry.init
 export const captureException = mockSentry.captureException
 export const captureMessage = mockSentry.captureMessage
@@ -256,10 +244,10 @@ export const makeFetchTransport = mockSentry.makeFetchTransport
 export const createTransport = mockSentry.createTransport
 export const SDK_VERSION = mockSentry.SDK_VERSION
 export const Severity = mockSentry.Severity
-// Additional exports for compatibility
+/ Additional exports for compatibility
 export { mockSentry as Sentry }
-// All exports are already defined above
-// Mock scope;
+/ All exports are already defined above
+/ Mock scope;
 const mock_scope = {
   set_user: noop,
   set_tag: noop,
@@ -271,8 +259,8 @@ const mock_scope = {
   set_fingerprint: noop,
   clear: noop,
   addEventProcessor: noop,
-}
-// Mock transaction;
+
+/ Mock transaction;
 const mock_transaction = {
   set_name: noop,
   set_tag: noop,
@@ -283,8 +271,8 @@ const mock_transaction = {
   setHttpStatus: noop,
   to_context: () => ({}),
   updateWithContext: noop,
-}
-// Mock hub;
+
+/ Mock hub;
 const mock_hub = {
   get_client: noop_return,
   get_scope: () => mock_scope,
@@ -301,10 +289,10 @@ const mock_hub = {
   configure_scope: noop,
   with_scope: (callback: (...args: any[]) => any) => callback (mock_scope),
   start_transaction: () => mock_transaction,
-}
-// Export default mock that covers all Sentry packages;
+
+/ Export default mock that covers all Sentry packages;
 export default mock_sentry;
-// Named exports for compatibility;
+/ Named exports for compatibility;
 export const init = mock_sentry.init;
 export const capture_exception = mock_sentry.capture_exception;
 export const capture_message = mock_sentry.capture_message;
@@ -337,6 +325,6 @@ export const makeFetchTransport = mock_sentry.makeFetchTransport;
 export const create_transport = mock_sentry.create_transport;
 export const SDK_VERSION = mock_sentry.SDK_VERSION;
 export const Severity = mock_sentry.Severity;
-// Additional exports for compatibility;
+/ Additional exports for compatibility;
 export { mock_sentry as Sentry }
-// All exports are already defined above;
+/ All exports are already defined above;

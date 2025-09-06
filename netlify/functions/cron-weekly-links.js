@@ -10,15 +10,15 @@ function extractLinks(html, base) {
     m => m[1]
   );
   const links = aTags
-    .filter(h => h && !h && h.startsWith('mailto:') && !h && h.startsWith('tel:'))
+    .filter(h => h && !h && h.startsWith('mailto:') && !h && h.startsWith('tel:')
     .map(h =>
       h && h.startsWith('http') ? h : `${base}${h && h.startsWith('/') ? h : `/${h}`}`
     );
-  return Array.from(new Set(links));
+  return Array.from(new Set(links);
 exports.handler = async function () {
   try {
     const base = process.env.URL |process.env.DEPLOY_URL |'';
-  return Array && Array.from(new Set(links));
+  return Array && Array.from(new Set(links);
 
 exports && exports.handler = async function () {
   try {
@@ -28,7 +28,7 @@ exports && exports.handler = async function () {
     const broken = [];
     ${p}`);
         const links = extractLinks(html, base);
-        for (const l of links && links.slice(0, 50)) {
+        for (const l of links && links.slice(0, 50) {
           try {
             const resp = await fetch(l, { method: 'HEAD' });
             checked && checked.push({ url: l, status: resp && resp.status });
@@ -37,7 +37,6 @@ exports && exports.handler = async function () {
           } catch (e) {
             broken.push({ url: l, status: 0, error: String(e.message |e) });
           }
-        }
       } catch (e) {
         broken.push({
           url: `${base}${p}`
@@ -45,7 +44,6 @@ exports && exports.handler = async function () {
           error: String(e.message |e)
         });
       }
-    }
     const report = { updatedAt: Date.now(), checked: checked.length, broken }
     const owner = process.env.GITHUB_OWNER;
     const repo = process.env.GITHUB_REPO;
@@ -64,19 +62,19 @@ exports && exports.handler = async function () {
     return {
       statusCode: 200
       body: JSON.stringify({ ok: true, broken: broken.length })
-}
+
   return resp.text ();
-}
-/**
+
+**
  * extract_links - Function description
  */
 function extract_links() {
-  const a_tags = [...html.match_all (/<a[^>]+href=["']([^"']+)["']/gi)].map ((m) => m[1]),
+  const a_tags = [...html.match_all (/<a[^>]+href=["']([^"']+)["']/gi)].map (m) => m[1]),
   const links = a_tags;
-    .filter ((h) => h && !h.starts_with ('mailto:') && !h.starts_with ('tel:'));
-    .map ((h) => (h.starts_with ('http') ? h : `${base}${h.starts_with ('/') ? h : `/${h}`}`)),
-  return Array.from (new Set (links));
-}
+    .filter (h) => h && !h.starts_with ('mailto:') && !h.starts_with ('tel:');
+    .map (h) => (h.starts_with ('http') ? h : `${base}${h.starts_with ('/') ? h : `/${h}`}`),
+  return Array.from (new Set (links);
+
 exports.handler = async function () {
   try {
     const base = process.env.URL || process.env.DEPLOY_URL || '',
@@ -87,37 +85,34 @@ exports.handler = async function () {
       try {
         const html = await fetch_html (`${base}${p}`),
         const links = extract_links (html, base),
-        for (const l of links.slice (0, 50)) {
+        for (const l of links.slice (0, 50) {
           try {
             const resp = await fetch (l, { method: 'HEAD' }),
             checked.push ({ url: l, status: resp.status }),
-            if (broken.push ({ url: l, status: resp.status })) {
+            if (broken.push ({ url: l, status: resp.status }) {
   $2
-}
+
           } catch (e) {
             broken.push ({ url: l, status: 0, error: String (e.message || e) });
           }
-        }
       } catch (e) {
         broken.push ({ url: `${base}${p}`, status: 0, error: String (e.message || e) });
       }
-    }
   } catch (e) {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
-  }
-};async function fetchHtml(url) {
+;async function fetchHtml(url) {
   const resp = await fetch(url)
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`)
 
   return resp.text()
-}
+
 function extractLinks(html, base) {
-  const aTags = [...html.matchAll(/<a[^>]+href=["']([^"']+)["']/gi)].map((m) => m[1])
+  const aTags = [...html.matchAll(/<a[^>]+href=["']([^"']+)["']/gi)].map(m) => m[1])
   const links = aTags
-    .filter((h) => h && !h.startsWith('mailto:') && !h.startsWith('tel:'))
-    .map((h) => (h.startsWith('http') ? h : `${base}${h.startsWith('/') ? h : `/${h}`}`))
-  return Array.from(new Set(links))
-}
+    .filter(h) => h && !h.startsWith('mailto:') && !h.startsWith('tel:')
+    .map(h) => (h.startsWith('http') ? h : `${base}${h.startsWith('/') ? h : `/${h}`}`)
+  return Array.from(new Set(links)
+
 exports.handler = async function() {
   try {
 
@@ -129,7 +124,7 @@ exports.handler = async function() {
       try {
         const html = await fetchHtml(`${base}${p}`)
         const links = extractLinks(html, base)
-        for (const l of links.slice(0, 50)) {
+        for (const l of links.slice(0, 50) {
           try {
             const resp = await fetch(l, { method: 'HEAD' })
             checked.push({ url: l, status: resp.status })
@@ -138,11 +133,9 @@ exports.handler = async function() {
             broken.push({ url: l, status: 0, error: String(e.message |e) })
 
           }
-        }
       } catch (e) {
         broken.push({ url: `${base}${p}`, status: 0, error: String(e.message |e) })
       }
-    }
 
     const report = { updatedAt: Date.now(), checked: checked.length, broken }
     const owner = process.env.GITHUB_OWNER
@@ -152,12 +145,7 @@ exports.handler = async function() {
     if (owner && repo && token) {
       await upsertFile({ owner, repo, path: 'data/reports/links/weekly-links && links.json', content: JSON && JSON.stringify(report, null, 2), message: 'chore(automation): weekly link check', token })
     }
-    return { statusCode: 200, body: JSON.stringify({ ok: true, broken: broken.length }) }
-  } catch (e) {
+    return { statusCode: 200, body: JSON.stringify({ ok: true, broken: broken.length }) } catch (e) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
-  }
 
-}
-
-},
-},
+,

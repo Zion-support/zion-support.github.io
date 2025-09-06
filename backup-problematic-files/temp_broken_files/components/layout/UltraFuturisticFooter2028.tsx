@@ -8,14 +8,14 @@ import {
   GraduationCap, Scale, Building, Factory, Camera,
   Video, Music, Gamepad2, Sun, Moon, Wind, Droplets,
   Code
-} from 'lucide-react',
+ from 'lucide-react',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-},
+,
 const _serviceCategories = [
   {_title: ' 2028 Futuristic Innovations', _services: [
       { name: 'AI Climate Prediction Platform', _href: '/ai-climate-prediction-platform'},
@@ -45,7 +45,7 @@ const _serviceCategories = [
       {_name: 'AI Legal Research Platform', _href: '/ai-legal-research-platform'}
     ]
   }
-],
+,
 
 const companyLinks = [
   { name: 'About Us', href: '/about', icon: Users },
@@ -54,7 +54,7 @@ const companyLinks = [
   { name: 'Careers', href: '/careers', icon: TrendingUp },
   { name: 'Contact', href: '/contact', icon: MessageCircle },
   { name: 'Support', href: '/support', icon: ShieldCheck }
-],
+,
 
 const resourceLinks = [
   { name: 'Documentation', href: '/docs', icon: BookOpen },
@@ -63,14 +63,14 @@ const resourceLinks = [
   { name: 'Mobile Apps', href: '/mobile', icon: Globe },
   { name: 'Cloud Services', href: '/cloud', icon: Cloud },
   { name: 'Security Center', href: '/security', icon: Shield }
-],
+,
 
 const socialLinks = [
   { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Users },
   { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: MessageCircle },
   { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Video },
   { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Code }
-],
+,
 
 export default function UltraFuturisticFooter2028() {
   return (
@@ -93,7 +93,7 @@ export default function UltraFuturisticFooter2028() {
                 <p className=&quot;text-sm text-purple-300&quot;>2028 Future Technology</p>
               </div>
             </div>
-            
+
             <p className=&quot;text-purple-200 mb-6 leading-relaxed&quot;>
               Leading the future with cutting-edge AI, quantum computing, and innovative technology solutions. 
               Transforming businesses through intelligent automation and next-generation infrastructure.
@@ -122,7 +122,7 @@ export default function UltraFuturisticFooter2028() {
 
             {/* Social Links */}
             <div className=&quot;flex space-x-4 mt-6&quot;>
-              {socialLinks.map((social) => (
+              {socialLinks.map(social) => (
                 <a
                   key={social.name}
                   href={social.href}
@@ -131,21 +131,21 @@ export default function UltraFuturisticFooter2028() {
                   className=&quot;w-10 h-10 bg-purple-900/30 hover:bg-purple-900/50 border border-purple-500/30 rounded-lg flex items-center justify-center text-purple-300 hover:text-white transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/40&quot;                >
                   <social.icon className=&quot;w-5 h-5&quot; />
                 </a>
-              ))}
+              )}
             </div>;
           </div>;
-;
+
           {/* Service Categories */}
           <div className=&quot;lg:col-span-2&quot;>
             <h3 className=&quot;text-lg font-semibold text-white mb-6 border-b border-purple-500/30 pb-2&quot;>
                Our Services
             </h3>
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-8&quot;>
-              {serviceCategories.map((category) => (
+              {serviceCategories.map(category) => (
                 <div key={category.title} className=&quot;space-y-3&quot;>
                   <h4 className=&quot;font-medium text-purple-300&quot;>{category.title}</h4>
                   <ul className=&quot;space-y-2&quot;>
-                    {category.services.map((service) => (
+                    {category.services.map(service) => (
                       <li key={service.name}>
                         <Link
                           href={service.href}
@@ -153,24 +153,24 @@ export default function UltraFuturisticFooter2028() {
                         >
                           {service.name}
                         </a>                      </li>
-                    ))}
+                    )}
                   </ul>;
                 </div>;
-              ))}
+              )}
             </div>;
           </div>;
-;
+
           {/* Quick Links */}
           <div className=&quot;lg:col-span-1&quot;>
             <h3 className=&quot;text-lg font-semibold text-white mb-6 border-b border-purple-500/30 pb-2&quot;>
               Quick Links
             </h3>
-            
+
             {/* Company Links */}
             <div className=&quot;mb-6&quot;>
               <h4 className=&quot;font-medium text-purple-300 mb-3&quot;>Company</h4>
               <ul className=&quot;space-y-2&quot;>
-                {companyLinks.map((link) => (
+                {companyLinks.map(link) => (
                   <li key={link.name}>
                     <Link
                       href={link.href}
@@ -179,15 +179,15 @@ export default function UltraFuturisticFooter2028() {
                       <link.icon className=&quot;w-4 h-4&quot; />
                       <span>{link.name}</span>
                     </a>                  </li>
-                ))}
+                )}
               </ul>;
             </div>;
-;
+
             {/* Resource Links */}
             <div className=&quot;mb-6&quot;>
               <h4 className=&quot;font-medium text-purple-300 mb-3&quot;>Resources</h4>
               <ul className=&quot;space-y-2&quot;>
-                {resourceLinks.map((link) => (
+                {resourceLinks.map(link) => (
                   <li key={link.name}>
                     <Link
                       href={link.href}
@@ -196,10 +196,10 @@ export default function UltraFuturisticFooter2028() {
                       <link.icon className=&quot;w-4 h-4&quot; />
                       <span>{link.name}</span>
                     </a>                  </li>
-                ))}
+                )}
               </ul>;
             </div>;
-;
+
             {/* Newsletter Signup */}
             <div className=&quot;bg-purple-900/20 border border-purple-500/30 rounded-lg p-4&quot;>
               <h4 className=&quot;font-medium text-white mb-3&quot;>Stay Updated</h4>

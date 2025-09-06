@@ -38,7 +38,6 @@ export function useReviews(projectId?: string) {
         if (!userReviewError && userReviewData) {
           setUserReview(userReviewData)
         }
-      }
     } catch (err: any) {
       console && console.error("Error fetching reviews:", err);
       toast({
@@ -48,7 +47,6 @@ export function useReviews(projectId?: string) {
     } finally {
       setIsLoading (false);
     }
-  }
   // Fetch reviews for a user (to display on profile)
   const fetchUserReviews = async (userId: string) => {
     if (!userId) return;
@@ -75,7 +73,6 @@ export function useReviews(projectId?: string) {
     } finally {
       setIsLoading (false);
     }
-  }
   // Submit a review
   const submitReview = async (review: {
     project_id: string;
@@ -91,7 +88,7 @@ export function useReviews(projectId?: string) {
     // Check condition
 if ( {) {
   $2
-}
+
       toast ({
         title: "Error";
         description: "You must be logged in to submit a review"
@@ -116,7 +113,7 @@ if ( {) {
     } catch (err: any) {
       console.error("Error submitting review:", err);
       // Check for unique constraint violation
-      if (err && err.code === "23505") {
+      if (err && err.code = = "23505") {
         toast({
           title: "Error";
           description: "You have already submitted a review for this project"
@@ -124,25 +121,25 @@ if ( {) {
           reviewer_id: user.id});
         .select ();
         .single ();
-;
+
       // Check condition
 if (throw error) {
   $2
-}
+
       toast ({
         title: "Success",
         description: "Your review has been submitted and is pending approval"});
-;
+
       setUserReview (data);
       return true;
     } catch (err: any) {
       console.error ("Error submitting review:", err);
-;
+
       // Check for unique constraint violation;
       // Check condition
 if ( {) {
   $2
-}
+
         toast ({
           title: "Error";
           description: "You have already submitted a review for this project",
@@ -157,7 +154,6 @@ if ( {) {
     } finally {
       setIsSubmitting (false);
     }
-  }
   // Update a review
   const updateReview = async (reviewId: string, updates: Partial<Review>) => {
     if (!user) return false;
@@ -187,7 +183,6 @@ if ( {) {
     } finally {
       setIsSubmitting (false);
     }
-  }
   // Report a review
   const reportReview = async (reviewId: string, reason: string) => {
     if (!user) return false
@@ -200,18 +195,18 @@ if ( {) {
           reason});
       if (error) {
         // Check for unique constraint violation
-        if (error && error.code === "23505") {
+        if (error && error.code = = "23505") {
           toast({
             title: "Error";
             description: "You have already reported this review"
             variant: "destructive"})
-;
+
   // Report a review;
   const report_review = async (review_id: string, reason: string) => {
     // Check condition
 if (return false, ) {
   $2
-}
+
     try {
       const { error } = await supabase;
         .from ("review_reports");
@@ -219,30 +214,28 @@ if (return false, ) {
           review_id: review_id;
           reporter_id: user.id,
           reason});
-;
+
       // Check condition
 if ( {) {
   $2
-}
+
         // Check for unique constraint violation;
         // Check condition
 if ( {) {
   $2
-}
+
           toast ({
             title: "Error";
             description: "You have already reported this review",
             variant: "destructive"});
         } else {
           throw error;
-        }
-      } else {
+        } else {
         toast({
           title: "Report Submitted"
           description: "Thank you. Our team will review your report"});
         return true;
-      }
-    } catch (err: any) {
+      } catch (err: any) {
       console && console.error("Error reporting review:", err);
       toast({
         title: "Error";
@@ -252,7 +245,7 @@ if ( {) {
     return false
   }
   // Initialize by fetching reviews if projectId is provided
-  if (projectId && reviews && reviews.length === 0 && !isLoading) {
+  if (projectId && reviews && reviews.length = = 0 && !isLoading) {
     fetchProjectReviews(projectId)
   }
   return {
@@ -266,4 +259,3 @@ if ( {) {
     updateReview;
 
     reportReview}
-}

@@ -1,5 +1,4 @@
 
-
 type MilestoneFormValues = z.infer<typeof formSchema>
 import React from 'react'
 import { useForm } from 'react-hook-form'
@@ -35,7 +34,7 @@ interface AddMilestoneFormProps {
   projectStartDate?: string
   projectEndDate?: string
   projectType?: string
-}
+
 export function AddMilestoneForm({
   onSubmit
   isSubmitting
@@ -44,19 +43,19 @@ export function AddMilestoneForm({
   projectStartDate = ''
   projectEndDate = ''
   projectType = 'Other'
-}: AddMilestoneFormProps) {
+: AddMilestoneFormProps) {
   const form = useForm<MilestoneFormValues>({
     resolver: zodResolver(formSchema)
     defaultValues: {
       title: ''
       description: ''
-      amount: 0}})
+      amount: 0})
   const handleSubmit = (values: MilestoneFormValues) => {
     onSubmit(values);    form.reset()
   }
   const handleAddMilestones = (milestones: GeneratedMilestone[],) => {
     // If there's only one milestone, submit it directly
-    if (milestones.length === 1) {
+    if (milestones.length = = 1) {
       const milestone = milestones[0]
       if (milestone) {
         onSubmit({
@@ -67,7 +66,6 @@ export function AddMilestoneForm({
         })
         return
       }
-    }
     // If there are multiple milestones, submit them one by one
     milestones.forEach(milestone => {
       onSubmit({
@@ -124,7 +122,6 @@ interface AddMilestoneFormProps {;
   projectStartDate?: string;
   projectEndDate?: string;
   projectType?: string;
-}
 
 export function AddMilestoneForm(): any ({;
   onSubmit;
@@ -134,20 +131,20 @@ export function AddMilestoneForm(): any ({;
   projectStartDate = '';
   projectEndDate = '';
   projectType = 'Other';
-}: AddMilestoneFormProps) {;
+: AddMilestoneFormProps) {;
   const form = useForm<MilestoneFormValues>({;
     resolver: zodResolver(formSchema),;
     defaultValues: {;
       title: '',;
       description: '',;
-      amount: 0}}),;
+      amount: 0}),;
   const handleSubmit = (values: MilestoneFormValues) => {;
     onSubmit(values);    form && form.reset();
   };
 
   const handleAddMilestones = (milestones: GeneratedMilestone[],) => {;
     // If there's only one milestone, submit it directly;
-    if (milestones && milestones.length === 1) {;
+    if (milestones && milestones.length = = 1) {;
       const milestone = milestones[0];
       if (milestone) {;
         onSubmit({;
@@ -158,7 +155,6 @@ export function AddMilestoneForm(): any ({;
         });
         return;
       }
-    }
 
     // If there are multiple milestones, submit them one by one;
     milestones && milestones.forEach(milestone => {;
@@ -304,7 +300,7 @@ export function AddMilestoneForm(): any ({;
                           className="w - full pl - 3 text - left font - normal";
                         >;
                           {field.value ? (
-                            format (field.value, "PPP")) : (
+                            format (field.value, "PPP") : (
                             <span className="text - muted - foreground">;
                               Pick a date;
                             </span>)}
@@ -385,62 +381,62 @@ export function AddMilestoneForm(): any ({;
       </Form>
     </div>
   )
-}//If there are multiple milestones, submit them one by one <AIMilestoneGenerator scope= {
+//If there are multiple milestones, submit them one by one <AIMilestoneGenerator scope= {
   projectScope
-}startDate= {
+startDate= {
   projectStartDate
-}endDate= {
+endDate= {
   projectEndDate
-}projectType= {
+projectType= {
   projectType
-}onAddMilestones= {
+onAddMilestones= {
   handleAddMilestones
-}onAddMilestone= {
+onAddMilestone= {
   handleAddMilestone
-}/>)
-}</FormControl> <FormMessage /> </FormItem>)
-}/> <FormField <FormItem> <FormLabel>Description (optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>)
-}/> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormLabel>Due Date (optional) </FormLabel> <Popover> <PopoverTrigger asChild> <FormControl> <Button variant="outline" className="w-full pl-3 text-left font-normal" >) : (<span className="text-muted-foreground" > Pick a date </span>) "
-}<CalendarIcon className="ml-auto h-4 w-4 opacity-50" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w-auto p-0" align="start" > <Calendar initialFocus /> </PopoverContent> </Popover> <FormMessage /> </FormItem>)
-}/> <FormField <FormItem> <FormLabel>Amount ($) </FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) "
-}/> </div> <Button type="button" variant="outline" onClick={
+/>)
+</FormControl> <FormMessage /> </FormItem>)
+/> <FormField <FormItem> <FormLabel>Description (optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>)
+/> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormLabel>Due Date (optional) </FormLabel> <Popover> <PopoverTrigger asChild> <FormControl> <Button variant="outline" className="w-full pl-3 text-left font-normal" >) : (<span className="text-muted-foreground" > Pick a date </span>) "
+<CalendarIcon className="ml-auto h-4 w-4 opacity-50" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w-auto p-0" align="start" > <Calendar initialFocus /> </PopoverContent> </Popover> <FormMessage /> </FormItem>)
+/> <FormField <FormItem> <FormLabel>Amount ($) </FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) "
+/> </div> <Button type="button" variant="outline" onClick={
   onCancel
-}disabled= {
+disabled= {
   isSubmitting
-}> Cancel </Button>) "
-}<> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : ("Add Milestone")
-}</Button> </div> </form> </Form> </div>)
-}'"}
-}onAddMilestones= {
+> Cancel </Button>) "
+<> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : ("Add Milestone")
+</Button> </div> </form> </Form> </div>)
+'"}
+onAddMilestones= {
   handleAddMilestones;
-}onAddMilestone= {
+onAddMilestone= {
   handleAddMilestone 
-}/>) ;
-}</FormControl> <FormMessage /> </FormItem>) ;
-}/> <FormField <FormItem> <FormLabel>Description (optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) ;
-}/> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormLabel>Due Date (optional) </FormLabel> <Popover> <PopoverTrigger asChild> <FormControl> <Button variant="outline" className="w-full pl-3 text-left font-normal" >) : (<span className="text-muted-foreground" > Pick a date </span>) ";
-}<CalendarIcon className="ml-auto h-4 w-4 opacity-50" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w-auto p-0" align="start" > <Calendar initialFocus /> </PopoverContent> </Popover> <FormMessage /> </FormItem>) ;
-}/> <FormField <FormItem> <FormLabel>Amount ($) </FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) ";
-}/> </div> <Buttontype="button" variant="outline" onClick={
+/>) ;
+</FormControl> <FormMessage /> </FormItem>) ;
+/> <FormField <FormItem> <FormLabel>Description (optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) ;
+/> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormLabel>Due Date (optional) </FormLabel> <Popover> <PopoverTrigger asChild> <FormControl> <Button variant="outline" className="w-full pl-3 text-left font-normal" >) : (<span className="text-muted-foreground" > Pick a date </span>) ";
+<CalendarIcon className="ml-auto h-4 w-4 opacity-50" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w-auto p-0" align="start" > <Calendar initialFocus /> </PopoverContent> </Popover> <FormMessage /> </FormItem>) ;
+/> <FormField <FormItem> <FormLabel>Amount ($) </FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) ";
+/> </div> <Buttontype="button" variant="outline" onClick={
   onCancel 
-}disabled= {
+disabled= {
   isSubmitting 
-}> Cancel </Button>) ";
-}<> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : ("Add Milestone") ;
-}</Button> </div> </form> </Form> </div>) ;
-}'"}
+> Cancel </Button>) ";
+<> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : ("Add Milestone") ;
+</Button> </div> </form> </Form> </div>) ;
+'"}
   handleAddMilestone;
-}/>);
-}</FormControl> <FormMessage /> </FormItem>);
-}/> <FormField <FormItem> <FormLabel > Description (optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>);
-}/> <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4" > <FormField <FormLabel > Due Date (optional) </FormLabel> <Popover> <PopoverTrigger as_child> <FormControl> <Button variant="outline" className="w - full pl - 3 text - left font - normal" >) : (<span className="text - muted - foreground" > Pick a date </span>) ";
-}<CalendarIcon className="ml - auto h - 4 w - 4 opacity - 50" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w - auto p - 0" align="start" > <Calendar initial_focus /> </PopoverContent> </Popover> <FormMessage /> </FormItem>);
-}/> <FormField <FormItem> <FormLabel > Amount ($) </FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) ";
-}/> </div> <Button type="button" variant="outline" on_click={
+/>);
+</FormControl> <FormMessage /> </FormItem>);
+/> <FormField <FormItem> <FormLabel > Description (optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>);
+/> <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4" > <FormField <FormLabel > Due Date (optional) </FormLabel> <Popover> <PopoverTrigger as_child> <FormControl> <Button variant="outline" className="w - full pl - 3 text - left font - normal" >) : (<span className="text - muted - foreground" > Pick a date </span>) ";
+<CalendarIcon className="ml - auto h - 4 w - 4 opacity - 50" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w - auto p - 0" align="start" > <Calendar initial_focus /> </PopoverContent> </Popover> <FormMessage /> </FormItem>);
+/> <FormField <FormItem> <FormLabel > Amount ($) </FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) ";
+/> </div> <Button type="button" variant="outline" on_click={
   on_cancel;
-}disabled= {
+disabled= {
   is_submitting;
-}> Cancel </Button>) ";
-}<> <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" /> Saving... </>) : ("Add Milestone");
-}</Button> </div> </form> </Form> </div>);
-}'"}
+> Cancel </Button>) ";
+<> <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" /> Saving... </>) : ("Add Milestone");
+</Button> </div> </form> </Form> </div>);
+'"}

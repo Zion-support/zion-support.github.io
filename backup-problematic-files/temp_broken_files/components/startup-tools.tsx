@@ -20,7 +20,7 @@ import {
   Target,
   Lightbulb,
   BookOpen
-} from 'lucide-react',
+ from 'lucide-react',
 export default function StartupToolsPage() {const startupTools = [
     {
       name: 'HubSpot',
@@ -206,9 +206,9 @@ export default function StartupToolsPage() {const startupTools = [
 
   const categories = ['AllMarketing & SalesEmail MarketingProductivityDesignSocial MediaPaymentsCustomer Support', 'AnalyticsDevelopment'],
   const [selectedCategory, setSelectedCategory] = React.useState('All'),
-  const filteredTools = selectedCategory === 'All' 
+  const filteredTools = selectedCategory = = 'All' 
     ? startupTools 
-    : startupTools.filter(tool => tool.category === selectedCategory),
+    : startupTools.filter(tool => tool.category = = selectedCategory),
 
   return (
     <>
@@ -237,7 +237,7 @@ export default function StartupToolsPage() {const startupTools = [
                 Startup Growth Tools
               </div>
             </div>
-            
+
             <h1 className=&quot;text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-8 text-white leading-tight tracking-tight&quot;>
               Startup Tools & Resources
             </h1>
@@ -251,7 +251,7 @@ export default function StartupToolsPage() {const startupTools = [
 href=&quot;#tools&quot;
                 size=&quot;lg&quot;
                 className=&quot;animate-scale-in shadow-2xl shadow-orange-500/25 hover:shadow-orange-500/40&quot;
-                style={{ animationDelay: '0.2s' }}              >
+                style={ animationDelay: '0.2s' }              >
                 Explore Tools
                 <ArrowRight className=&quot;w-5 h-5 ml-2&quot; />
               </Button>
@@ -260,14 +260,14 @@ href=&quot;/contact&quot;
                 variant=&quot;outline&quot;
                 size=&quot;lg&quot;
                 className=&quot;animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5&quot;
-                style={{ animationDelay: '0.4s' }}              >
+                style={ animationDelay: '0.4s' }              >
                 Get Startup Advice
               </Button>
             </div>
           </div>
 
           {/* Stats */}
-          <div className=&quot;grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in&quot; style={{ animationDelay: '0.6s' }}>
+          <div className=&quot;grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in&quot; style={ animationDelay: '0.6s' }>
             <div className=&quot;text-center group&quot;>
               <div className=&quot;text-3xl md:text-4xl font-bold mb-3 text-orange-400 group-hover:scale-110 transition-transform duration-300&quot;>
                 {startupTools.length}+              </div>
@@ -299,41 +299,41 @@ href=&quot;/contact&quot;
       <section className=&quot;py-16 bg-gray-900&quot;>
         <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
           <div className=&quot;flex flex-wrap justify-center gap-4&quot;>
-            {categories.map((category) => (
+            {categories.map(category) => (
               <button                key={category}
                 onClick={_() => setSelectedCategory(category)}
                 className={_`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
-                  selectedCategory === category
+                  selectedCategory = = category
                     ? 'bg-orange-600 text-white shadow-lg'
                     : 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white'}`}
               >
                 {category}
               </button>;
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Tools Grid */}
       <section id=&quot;tools&quot; className=&quot;py-24 bg-black&quot;>
         <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
           <div className=&quot;text-center mb-20&quot;>
             <h2 className=&quot;text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight&quot;>
-              {selectedCategory === 'All' ? 'All Startup Tools' : `${selectedCategory} Tools`}
+              {selectedCategory = = 'All' ? 'All Startup Tools' : `${selectedCategory} Tools`}
             </h2>
             <p className=&quot;text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed&quot;>
-              {selectedCategory === 'All'                 ? 'Discover the essential tools that successful startups use to grow and scale their businesses.'
+              {selectedCategory = = 'All'                 ? 'Discover the essential tools that successful startups use to grow and scale their businesses.'
                 : `Explore the best ${selectedCategory.toLowerCase()} tools to accelerate your startup's growth.`
               }
             </p>
           </div>
 
           <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-8&quot;>
-            {filteredTools.map((tool, index) => (
+            {filteredTools.map(tool, index) => (
               <Card,
 key={index}
                 className=&quot;group border border-gray-800 hover:border-orange-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1&quot;
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={ animationDelay: `${index * 0.1}s` }
               >
                 <div className=&quot;flex items-start space-x-6&quot;>
                   <div className=&quot;relative&quot;>
@@ -351,7 +351,7 @@ key={index}
                         <span className=&quot;text-sm text-gray-300&quot;>{tool.rating}</span>
                       </div>
                     </div>
-                    
+
                     <div className=&quot;flex items-center space-x-4 mb-3 text-sm text-gray-400&quot;>
                       <span className=&quot;px-2 py-1 bg-gray-800 rounded-full&quot;>{tool.category}</span>
                       <span>{tool.users} users</span>
@@ -365,11 +365,11 @@ key={index}
                     <div className=&quot;mb-4&quot;>
                       <h4 className=&quot;text-sm font-semibold text-gray-300 mb-2&quot;>Key Features:</h4>
                       <div className=&quot;grid grid-cols-2 gap-2&quot;>
-                        {tool.features.slice(0, 4).map((feature, featureIndex) => (
+                        {tool.features.slice(0, 4).map(feature, featureIndex) => (
                           <div key={featureIndex} className=&quot;flex items-center text-sm text-gray-400&quot;>
                             <Check className=&quot;w-3 h-3 text-green-400 mr-2 flex-shrink-0&quot; />
                             {feature}                          </div>
-                        ))}
+                        )}
                       </div>
                     </div>
 
@@ -386,7 +386,7 @@ href={tool.website}
                         Visit Website
                         <ExternalLink className=&quot;w-4 h-4 ml-2&quot; />
                       </Button>
-                      
+
                       <div className=&quot;text-right&quot;>
                         <div className=&quot;text-xs text-gray-500 mb-1&quot;>Use Case:</div>
                         <div className=&quot;text-sm text-gray-300 max-w-xs&quot;>{tool.useCase}</div>                      </div>
@@ -394,11 +394,11 @@ href={tool.website}
                   </div>
                 </div>
               </Card>
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Startup Resources Section */}
       <section className=&quot;py-24 bg-gray-900&quot;>
         <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>

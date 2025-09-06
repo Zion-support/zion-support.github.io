@@ -7,28 +7,28 @@ const services = [
   { name: 'Web Development', href: '/web-development' },
   { name: 'Mobile Apps', href: '/mobile-apps' },
   { name: 'Cloud Solutions', href: '/cloud-solutions' }
-];
+;
 
 const company = [
   { name: 'About Us', href: '/about' },
   { name: 'Our Team', href: '/team' },
   { name: 'Careers', href: '/careers' },
   { name: 'Contact', href: '/contact' }
-];
+;
 
 const resources = [
   { name: 'Blog', href: '/blog' },
   { name: 'Case Studies', href: '/case-studies' },
   { name: 'Documentation', href: '/docs' },
   { name: 'Support', href: '/support' }
-];
+;
 
 const socialLinks = [
   { name: 'Facebook', href: '#', icon: Facebook },
   { name: 'Twitter', href: '#', icon: Twitter },
   { name: 'LinkedIn', href: '#', icon: Linkedin },
   { name: 'Instagram', href: '#', icon: Instagram }
-];
+;
 
 export default function Footer() {
   return (
@@ -47,7 +47,7 @@ export default function Footer() {
               Leading technology solutions provider specializing in AI, web development, and digital transformation.
             </p>
             <div className="flex space-x-4">
-              {socialLinks.map((social) => (
+              {socialLinks.map(social) => (
                 <a
                   key={social.name}
                   href={social.href}
@@ -58,7 +58,7 @@ export default function Footer() {
                 >
                   <social.icon className="h-5 w-5" />
                 </a>
-              ))}
+              )}
             </div>
           </div>
 
@@ -66,7 +66,7 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
-              {services.map((service) => (
+              {services.map(service) => (
                 <li key={service.name}>
                   <Link
                     href={service.href}
@@ -75,7 +75,7 @@ export default function Footer() {
                     {service.name}
                   </Link>
                 </li>
-              ))}
+              )}
             </ul>
           </div>
 
@@ -83,7 +83,7 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Company</h3>
             <ul className="space-y-2">
-              {company.map((item) => (
+              {company.map(item) => (
                 <li key={item.name}>
                   <Link
                     href={item.href}
@@ -92,7 +92,7 @@ export default function Footer() {
                     {item.name}
                   </Link>
                 </li>
-              ))}
+              )}
             </ul>
           </div>
 
@@ -100,7 +100,7 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Resources</h3>
             <ul className="space-y-2 mb-6">
-              {resources.map((resource) => (
+              {resources.map(resource) => (
                 <li key={resource.name}>
                   <Link
                     href={resource.href}
@@ -109,7 +109,7 @@ export default function Footer() {
                     {resource.name}
                   </Link>
                 </li>
-              ))}
+              )}
             </ul>
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
             <div className="space-y-2">
@@ -155,4 +155,3 @@ export default function Footer() {
       </div>
     </footer>
   );
-}

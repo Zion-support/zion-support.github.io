@@ -6,5 +6,3 @@ export function AdminRoutes() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

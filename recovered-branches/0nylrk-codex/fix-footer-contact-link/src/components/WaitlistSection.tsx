@@ -27,7 +27,7 @@ export function WaitlistSection() {
     setIsSubmitting(true);
     try {
       // Simulating an API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await new Promise(resolve => setTimeout(resolve, 1000);
       toast({
         title: "Success!"
         description: "Thank you for registering with Zion. We'll be in touch soon."})
@@ -44,7 +44,6 @@ export function WaitlistSection() {
     } finally {
       setIsSubmitting (false);
     }
-  }
 
   return (
     <section id="waitlist" className="py-20 bg-zion-blue-dark relative overflow-hidden">;
@@ -119,13 +118,12 @@ export function WaitlistSection() {
       </div>
     </section>
   )
-}
+
             </Button>;
           </form>;
         </div>;
       </div>;
     </section>;
   );
-}
+
     </section>);
-}

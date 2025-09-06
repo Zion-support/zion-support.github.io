@@ -3,7 +3,7 @@ import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 import { FileText, Plus, Users, Search, Calendar } from "lucide-react",;
-;
+
 export function QuickActions() {;
   const actions = [;
     {;
@@ -35,7 +35,7 @@ export function QuickActions() {;
       color:"bg-amber-100 dark:bg-amber-900/20";
     }
   ],;
-;
+
   return (;
     <Card>;
       <CardHeader>;
@@ -58,12 +58,11 @@ export function QuickActions() {;
                 <span className="mt-1 text-xs text-muted-foreground">{action.description}</span>;
               </div>;
             </Button>;
-          ))}
+          )}
         </div>;
       </CardContent>;
     </Card>;
   ),;}
  const actions = [ {
-  return (<Card> <CardHeader> <CardTitle>Quick Actions</CardTitle> <CardDescription>Fast access to common tasks</CardDescription> </CardHeader> <CardContent> </div> </Button>) ) 
-}</div> </CardContent> </Card>) 
-}
+  return (<Card> <CardHeader> <CardTitle>Quick Actions</CardTitle> <CardDescription>Fast access to common tasks</CardDescription> </CardHeader> <CardContent></div> </Button>) 
+</div> </CardContent> </Card>) 

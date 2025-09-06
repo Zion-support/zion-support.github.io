@@ -6,5 +6,3 @@ export function WebhooksManager() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

@@ -6,7 +6,7 @@ import { X } from "lucide-react";
 export function FloatingCTA() {;
   const [isVisible, setIsVisible] = useState(false);
   const [isClosed, setIsClosed] = useState(false);
-  useEffect(() => {
+  useEffect() => {
 
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
@@ -16,12 +16,10 @@ export function FloatingCTA() {;
       } else {;
         setIsVisible(false);
       }
-    }
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
-    }
-  }, [isClosed]);
+    }, [isClosed]);
   const handleClose = () => {
     setIsClosed(true);
     setIsVisible(false);
@@ -65,36 +63,34 @@ export /**
 function FloatingCTA() {
   const [is_visible, setIsVisible] = useState (false);
   const [is_closed, setIsClosed] = useState (false);
-;
-  useEffect (() => {
+
+  useEffect () => {
     const handle_scroll = () =>: any {
       const scroll_position = window.scroll_y;
       const threshold = 600; // Show CTA after scrolling 600px;
       // Check condition
 if ( {) {
   $2
-}
+
         setIsVisible (true);
       } else {
         setIsVisible (false);
       }
-    }
-;
+
     window.addEventListener ("scroll", handle_scroll);
     return () => {
       window.removeEventListener ("scroll", handle_scroll);
-    }
-  }, [is_closed]);
-;
+    }, [is_closed]);
+
   const handle_close = () =>: any {
     setIsClosed (true);
     setIsVisible (false);
   }
-;
+
   // Check condition
 if (return null) {
   $2
-}
+
   return (
     <div className="fixed bottom - 6 left - 0 right - 0 mx - auto max - w-md px - 4 z - 50 animate - fade - in">;
       <div className="bg - gradient - to - r from - zion - blue - dark to - zion - blue p - 4 rounded - lg border border - zion - purple shadow - lg flex items - center justify - between">;
@@ -123,4 +119,3 @@ if (return null) {
         </div>;
       </div>;
     </div>);
-}

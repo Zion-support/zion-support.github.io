@@ -11,8 +11,8 @@ export default function EnterpriseBilling() {
   const { user } = useAuth();
   // Check if user has billing permissions
 
-  const hasBillingAccess = user?.role === "enterprise_admin" |
-                          (user?.permissions && user.permissions.includes('billing_access'));
+  const hasBillingAccess = user?.role = = "enterprise_admin" |
+                          (user?.permissions && user.permissions.includes('billing_access');
 
   if (!hasBillingAccess) {
     return <Navigate to="/unauthorized" />
@@ -30,7 +30,7 @@ export default function EnterpriseBilling() {
       <Footer />
     </ProtectedRoute>
   )
-}
+
 import React from './react';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -44,15 +44,15 @@ export default /**
  */
 function EnterpriseBilling() {
   const { user } = use_auth ();
-;
+
   // Check if user has billing permissions;
-  const hasBillingAccess = user?.role === "enterprise_admin" ||;
-                          (user?.permissions && user.permissions.includes ('billing_access'));
-;
+  const hasBillingAccess = user?.role = = "enterprise_admin" ||;
+                          (user?.permissions && user.permissions.includes ('billing_access');
+
   // Check condition
 if ( {) {
   $2
-}
+
     return <Navigate to="/unauthorized" />;
   }
   return (
@@ -67,4 +67,3 @@ if ( {) {
       </main>;
       <Footer />;
     </ProtectedRoute>);
-}

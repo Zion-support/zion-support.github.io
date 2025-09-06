@@ -8,9 +8,9 @@ import {;
   Code,;
   FileText,;
   Megaphone;
-} from "@/components/icons",;
+ from "@/components/icons",;
 import { ForumCategory, ForumCategoryInfo } from "@/types/community",;
-;
+
 const categories:ForumCategoryInfo[] = [;
   {;
     id:"getting-hired",;
@@ -47,27 +47,27 @@ const categories:ForumCategoryInfo[] = [;
     adminOnly:true,;
     icon:"Megaphone";
   }
-],;
-;
+,;
+
 const iconMap = {;
   Briefcase,;
   MessageSquare,;
   Code,;
   FileText,;
   Megaphone;
-},;
-;
+,;
+
 export const ForumCategories = () => {;
   const { user } = useAuth(),;
-  const isAdmin = user?.userType === 'admin' || user?.role === 'admin',;
-;
+  const isAdmin = user?.userType = = 'admin' || user?.role = = 'admin',;
+
   const visibleCategories = categories.filter(;
     category => !category.adminOnly || isAdmin;
   ),;
-;
+
   return (;
     <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">;
-      {visibleCategories.map((category) => {;
+      {visibleCategories.map(category) => {;
         const Icon = iconMap[category.icon as keyof typeof iconMap],;
         return (;
           <Link key={category.id} to={`/community/category/${category.id}`}>;
@@ -87,18 +87,18 @@ export const ForumCategories = () => {;
       })}
     </div>;
   ),;
-},;
-;
+,;
+
 export default ForumCategories,;const iconMap = {
   Briefcase;
 MessageSquare;
 Code;
 FileText;
 Megaphone 
-};
+;
 export const ForumCategories = () => {
   const { user } = useAuth(),
-  const isAdmin = user?.userType === 'admin' || user?.role === 'admin',
+  const isAdmin = user?.userType = = 'admin' || user?.role = = 'admin',
 import {_MessageSquare, _Briefcase, _Code, _FileText, _Megaphone} from "@/components/icons";
 
 const categories: ForumCategoryInfo[] = [
@@ -107,19 +107,19 @@ const categories: ForumCategoryInfo[] = [
   {_id: "ai-tools", _name: "AI Tools Discussion", _description: "Discuss AI tools, _frameworks, _and best practices.", _adminOnly: false, _icon: "Code"},
   {_id: "feedback", _name: "Feedback & Feature Requests", _description: "Share your feedback and suggest new features.", _adminOnly: false, _icon: "FileText"},
   {_id: "announcements", _name: "Announcements", _description: "Official announcements from the Zion team.", _adminOnly: true, _icon: "Megaphone"}
-];
+;
 
 const _iconMap = {_Briefcase, _MessageSquare, _Code, _FileText, _Megaphone};
 
 export const _ForumCategories = () => {_const { user} = useAuth();
-  const _isAdmin = user?.userType === 'admin' || user?.role === 'admin';
+  const _isAdmin = user?.userType = = 'admin' || user?.role = = 'admin';
 
   const _visibleCategories = categories.filter(
     category => !category.adminOnly || isAdmin
   ),
 
   return (
-    <div className="grid gap-4 md: grid-cols-2 lg:grid-cols-3">      {visibleCategories.map((category) => {
+    <div className="grid gap-4 md: grid-cols-2 lg:grid-cols-3">      {visibleCategories.map(category) => {
         const Icon = iconMap[category.icon as keyof typeof iconMap],
         return (
           <Link key={category.id} to={`/community/category/${category.id}`}>
@@ -133,7 +133,7 @@ export const _ForumCategories = () => {_const { user} = useAuth();
               <CardContent>
                 <CardDescription className=&quot;text-base&quot;>{category.description}</CardDescription>
   return (_<div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-      {_visibleCategories.map((category) => {
+      {_visibleCategories.map(category) => {
         const _Icon = iconMap[category.icon as keyof typeof iconMap];
         return (
           <Link key={category.id} to={_`/community/category/${category.id}`}>
@@ -153,6 +153,6 @@ export const _ForumCategories = () => {_const { user} = useAuth();
       })}
     </div>
   )
-},
+,
 
 export default ForumCategories,

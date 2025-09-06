@@ -4,11 +4,11 @@ import { Message, Conversation, ConversationContextData } from '@/types/messagin
 import { useConversationState } from './useConversationState',;
 import { useConversations } from './useConversations',;
 import { useMessages } from './useMessages',;
-;
-// Allow either UserProfile or UserDetails;
+
+/ Allow either UserProfile or UserDetails;
 type UserWithProfile = UserProfile | UserDetails | null,;
-;
-/**;
+
+**;
  * Hook that combines all messaging operations;
  */;
 export function useMessagingOperations(user:UserWithProfile) {;
@@ -27,7 +27,7 @@ export function useMessagingOperations(user:UserWithProfile) {;
     isLoading,;
     setIsLoading;
   } = useConversationState(),;
-;
+
   // Conversations management;
   const {;
     fetchConversations,;
@@ -38,7 +38,7 @@ export function useMessagingOperations(user:UserWithProfile) {;
     setUnreadCount,;
     setIsLoading;
   ),;
-;
+
   // Messages management;
   const {;
     loadMessages,;
@@ -55,7 +55,7 @@ export function useMessagingOperations(user:UserWithProfile) {;
     setIsLoading,;
     fetchConversations;
   ),;
-;
+
   return {;
     // State;
     messages,;
@@ -68,7 +68,6 @@ export function useMessagingOperations(user:UserWithProfile) {;
     activeConversation,;
     setActiveConversation,;
     isLoading,;
-    ;
     // Operations;
     sendMessage,;
     createConversation,;
@@ -76,18 +75,18 @@ export function useMessagingOperations(user:UserWithProfile) {;
     fetchConversations,;
     loadMessages;
   },;
-} // Allow either UserProfile or UserDetails type UserWithProfile = UserProfile | UserDetails | null;
-/** * Hook that combines all messaging operations */ export function useMessagingOperations (user: UserWithProfile) {
+ // Allow either UserProfile or UserDetails type UserWithProfile = UserProfile | UserDetails | null;
+** * Hook that combines all messaging operations */ export function useMessagingOperations (user: UserWithProfile) {
   // State management const {
   // Conversations management const {
   fetchConversations, createConversation 
-}= useConversations (user;
+= useConversations (user;
 setConversations;
 setUnreadCount;
 setIsLoading);
-// Messages management const {
+/ Messages management const {
   loadMessages, sendMessage, markAsRead 
-}= useMessages (user;
+= useMessages (user;
 activeConversation;
 activeMessages;
 setActiveMessages;
@@ -96,4 +95,3 @@ setConversations;
 setUnreadCount;
 setIsLoading;
 fetchConversations);
-}

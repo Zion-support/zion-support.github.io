@@ -3,16 +3,15 @@ interface TryItProps {;
   method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',;
   path: string, // full URL or relative;
   requiresAuth: boolean;
-}
-;
+
 export default function TryItConsole({ method, path, requiresAuth }: TryItProps) {;
   const [baseUrl, setBaseUrl] = useState('https: //api.zion.os'),;
   const [token, setToken] = useState(''),;
   const [body, setBody] = useState(''),;
   const [response, setResponse] = useState<string>(''),;
   const [loading, setLoading] = useState(false),;
-  const url = useMemo(() => {;
-    if (path.startsWith('http')) return path,;
+  const url = useMemo() => {;
+    if (path.startsWith('http') return path,;
     return baseUrl.replace(/\/$/, '') + path;
   }, [baseUrl, path]),;
   async function onSend() {;
@@ -24,15 +23,14 @@ export default function TryItConsole({ method, path, requiresAuth }: TryItProps)
       const res = await fetch(url, {;
         method,;
         headers,;
-        body: method === 'GET' || method === 'DELETE' ? undefined : body || undefined});
+        body: method = = 'GET' || method = = 'DELETE' ? undefined : body || undefined});
       const text = await res.text();
       setResponse(text);
     } catch (e: any) {;
-      setResponse(String(e?.message || e));
+      setResponse(String(e?.message || e);
     } finally {;
       setLoading(false);
     }
-  }
 
   return (
     <div className="space-y-2">
@@ -50,7 +48,7 @@ export default function TryItConsole({ method, path, requiresAuth }: TryItProps)
           <input className="w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary" value={method} readOnly />
         </div>
       </div>
-      {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (
+      {(method = = 'POST' || method = = 'PUT' || method = = 'PATCH') && (
         <div>
           <label className="block text-sm mb-1">Request Body (JSON)</label>
           <textarea className="w-full h-32 px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary font-mono text-sm" value={body} onChange={(e) => setBody(e.target.value)} placeholder="{ }" />
@@ -65,4 +63,3 @@ export default function TryItConsole({ method, path, requiresAuth }: TryItProps)
       </div>
     </div>
   )
-}

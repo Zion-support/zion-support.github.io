@@ -14,4 +14,3 @@ export function ApplicationsTracker() {
       </div>
     </div>
   );
-}

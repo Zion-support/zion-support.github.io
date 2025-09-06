@@ -6,5 +6,3 @@ export function ExperienceFilter() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

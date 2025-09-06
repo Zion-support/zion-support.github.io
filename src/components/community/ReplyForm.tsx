@@ -10,7 +10,7 @@ import {
   FormField
   FormItem
   FormMessage
-} from '@/components/ui/form'
+ from '@/components/ui/form'
 import { Card, CardContent } from '@/components/ui/card'
 import { useState } from 'react';
 import { useForm, ControllerRenderProps } from 'react-hook-form';
@@ -22,7 +22,7 @@ import {;
   FormField,;
   FormItem,;
   FormMessage,;
-} from '@/components/ui/form';
+ from '@/components/ui/form';
 import { Card, CardContent } from '@/components/ui/card';
 
 interface ReplyFormProps {;
@@ -36,8 +36,7 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {
   const form = useForm<ReplyFormValues>({
     defaultValues: {
       content: ''
-    }
-  })
+    })
   const handleSubmit = async (values: ReplyFormValues) => {
     setIsSubmitting(true);    try {
       await onSubmit(values.content)
@@ -54,7 +53,7 @@ import {
   FormField,
   FormItem,
   FormMessage,
-} from '@/components / ui / form';
+ from '@/components / ui / form';
 import { Card, CardContent } from '@/components / ui / card';
 interface ReplyFormProps {
   on_submit: (content: string) => Promise < void>;
@@ -75,7 +74,6 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
     } finally {
       setIsSubmitting (false);
     }
-  }
   return (
     <Card>;
       <CardContent className='pt-6'>;
@@ -106,7 +104,7 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
       </CardContent>
     </Card>
   )
-}
+
 export default ReplyForm
 
 export default ReplyForm;
@@ -128,5 +126,5 @@ export default ReplyForm;
         </Form>;
       </CardContent>;
     </Card>);
-}
+
 export default ReplyForm;

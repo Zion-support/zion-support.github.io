@@ -6,5 +6,3 @@ export function AnalyticsContainer() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

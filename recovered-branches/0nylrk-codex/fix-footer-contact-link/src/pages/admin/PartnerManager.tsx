@@ -52,7 +52,7 @@ interface PartnerProfile {
   payout_method?: string;
   fraud_flags?: number;
   commission_rate?: number;
-}
+
 export default function PartnerManager() {
   const [partners, setPartners] = useState<PartnerProfile[]>([]),
   const [filteredPartners, setFilteredPartners] = useState<PartnerProfile[]>([]),
@@ -66,7 +66,7 @@ export default function PartnerManager() {
   const { user, isAuthenticated } = useAuth();
 
   const navigate = useNavigate();
-  useEffect(() => {
+  useEffect() => {
     if (!isAuthenticated) {
       navigate("/login");
       return;
@@ -83,7 +83,7 @@ export default function PartnerManager() {
         .order('created_at', { ascending: false })
       if (error) throw error;
       // If no data is returned, use mock data
-      if (!data |data.length === 0) {
+      if (!data |data.length = = 0) {
         const mockData: PartnerProfile[] = [
           {
             id: '1'
@@ -181,18 +181,18 @@ function PartnerManager() {
   const [commission_rate, setCommissionRate] = useState (25);
   const { user, is_authenticated } = use_auth ();
   const navigate = use_navigate ();
-;
-  useEffect (() => {
+
+  useEffect () => {
     // Check condition
 if ( {) {
   $2
-}
+
       navigate ("/login");
       return;
     }
     fetch_partners ();
   }, [is_authenticated, navigate]);
-;
+
   const fetch_partners = async () => {
     try {
       setIsLoading (true);
@@ -204,12 +204,12 @@ if ( {) {
       // Check condition
 if (throw error) {
   $2
-}
+
       // If no data is returned, use mock data;
       // Check condition
 if ( {) {
   $2
-}
+
         const mock_data: PartnerProfile[] = [;
           {
             id: '1',
@@ -287,14 +287,13 @@ if ( {) {
             commission_rate: 20;
           }
         ];
-;
+
         set_partners (mock_data);
         filter_partners (mock_data, active_tab, search_query);
       } else {
         set_partners (data as PartnerProfile[]);
         filter_partners (data as PartnerProfile[], active_tab, search_query);
-      }
-    } catch (error) {
+      } catch (error) {
       console.error("Error fetching partners:", error);
       toast({
         title: "Error"
@@ -303,12 +302,11 @@ if ( {) {
     } finally {
       setIsLoading (false);
     }
-  }
   const filterPartners = (partners: PartnerProfile[], status: string, query: string) => {
     let filtered = partners
     // Filter by status
-    if (status !== "all") {
-      filtered = filtered.filter(p => p.status === status)
+    if (status != "all") {
+      filtered = filtered.filter(p => p.status = = status)
     }
     // Filter by search query
     if (query) {
@@ -318,7 +316,6 @@ if ( {) {
         p.niche.toLowerCase().includes(lowerQuery) |
         p.bio?.toLowerCase().includes(lowerQuery) |
         p.website?.toLowerCase().includes(lowerQuery)
-      )
     }
     setFilteredPartners(filtered)
   }
@@ -343,38 +340,36 @@ if ( {) {
     try {
       // In a real app, this would update the database
       setPartners(partners.map(p =>
-        p.id === partnerId ? { ...p, status } : p
-      ));
+        p.id = = partnerId ? { ...p, status } : p
+      );
       filterPartners(
-        partners.map(p => p.id === partnerId ? { ...p, status } : p);
+        partners.map(p => p.id = = partnerId ? { ...p, status } : p);
         activeTab;
         searchQuery;
       );
       toast({
-        title: status === 'approved' ? "Partner Approved" : "Partner Rejected"
+        title: status = = 'approved' ? "Partner Approved" : "Partner Rejected"
         description: `The partner has been ${status}.`
-        variant: status === 'approved' ? "default" : "destructive"})
+        variant: status = = 'approved' ? "default" : "destructive"})
       // Close the dialog if open
-      if (isDetailsOpen && selectedPartner?.id === partnerId) {
+      if (isDetailsOpen && selectedPartner?.id = = partnerId) {
         setIsDetailsOpen(false)
-      }
-    } catch (error) {
+      } catch (error) {
       console.error("Error updating partner status:", error);
       toast({
         title: "Error"
         description: "Failed to update partner status"
         variant: "destructive"})
     }
-  }
   const handleSaveSettings = async () => {
     if (!selectedPartner) return;
     try {
       // Update commission rate
       setPartners(partners.map(p =>
-        p.id === selectedPartner.id ? { ...p, commission_rate: commissionRate } : p
-      ));
+        p.id = = selectedPartner.id ? { ...p, commission_rate: commissionRate } : p
+      );
       filterPartners(
-        partners.map(p => p.id === selectedPartner.id ? { ...p, commission_rate: commissionRate } : p)
+        partners.map(p => p.id = = selectedPartner.id ? { ...p, commission_rate: commissionRate } : p)
         activeTab;
         searchQuery;
       );
@@ -390,7 +385,6 @@ if ( {) {
         description: "Failed to update partner settings"
         variant: "destructive"})
     }
-  }
   const getAudienceSizeLabel = (size: string) => {
     switch (size) {
       case 'under1k': return 'Under 1,000';
@@ -400,7 +394,6 @@ if ( {) {
       case 'over100k': return 'Over 100,000';
       default: return size;
     }
-  }
   const getStatusBadge = (status: string) => {
     switch (status) {
       case 'pending':
@@ -412,9 +405,8 @@ if ( {) {
       default:
         return <Badge variant="outline">{status}</Badge>
     }
-  }
   const getFraudFlagBadge = (flags: number = 0) => {
-    if (flags === 0) return null
+    if (flags = = 0) return null
     return (
       <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600 flex items-center gap-1">;
         <Flag className="h-3 w-3" />;
@@ -442,7 +434,7 @@ if ( {) {
                   Pending Applications
                 </CardTitle>
                 <div className="text-2xl font-bold text-white">
-                  {partners.filter(p => p.status === 'pending').length}
+                  {partners.filter(p => p.status = = 'pending').length}
                 </div>
               </CardHeader>
               <CardContent className="pt-0">
@@ -457,7 +449,7 @@ if ( {) {
                   Active Partners
                 </CardTitle>
                 <div className="text-2xl font-bold text-white">
-                  {partners.filter(p => p.status === 'approved').length}
+                  {partners.filter(p => p.status = = 'approved').length}
                 </div>
               </CardHeader>
               <CardContent className="pt-0">
@@ -472,7 +464,7 @@ if ( {) {
                   Fraud Flags
                 </CardTitle>
                 <div className="text-2xl font-bold text-white">
-                  {partners.reduce((total, p) => total + (p.fraud_flags |0), 0)}
+                  {partners.reduce(total, p) => total + (p.fraud_flags |0), 0)}
                 </div>
               </CardHeader>
               <CardContent className="pt-0">
@@ -504,7 +496,7 @@ if ( {) {
                   Active Partners;
                 </CardTitle>;
                 <div className="text-2xl font-bold text-white">;
-                  {partners && partners.filter(p => p && p.status === 'approved').length}
+                  {partners && partners.filter(p => p && p.status = = 'approved').length}
                 </div>;
               </CardHeader>;
               <CardContent className="pt-0">;
@@ -520,7 +512,7 @@ if ( {) {
                   Fraud Flags;
                 </CardTitle>;
                 <div className="text-2xl font-bold text-white">;
-                  {partners && partners.reduce((total, p) => total + (p && p.fraud_flags || 0), 0)}
+                  {partners && partners.reduce(total, p) => total + (p && p.fraud_flags || 0), 0)}
                 </div>;
               </CardHeader>;
               <CardContent className="pt-0">;
@@ -689,7 +681,7 @@ if ( {) {
                 <div>
                   <p className="text-xs text-zion-slate-light">Social Media</p>
                   <div className="grid grid-cols-2 gap-2">
-                    {Object.entries(selectedPartner.social_media).map(([platform, handle]) => (
+                    {Object.entries(selectedPartner.social_media).map([platform, handle]) => (
                       <p key={platform} className="text-white">
                         <span className="font-medium">{platform}: </span>
               />;
@@ -748,12 +740,12 @@ if ( {) {
                 <div>;
                   <p className="text-xs text-zion-slate-light">Social Media</p>;
                   <div className="grid grid-cols-2 gap-2">;
-                    {Object && Object.entries(selectedPartner && selectedPartner.social_media).map(([platform, handle]) => (;
+                    {Object && Object.entries(selectedPartner && selectedPartner.social_media).map([platform, handle]) => (;
                       <p key={platform} className="text-white">;
                         <span className="font-medium">{platform}: </span>;
                         {handle}
                       </p>;
-                    ))}
+                    )}
                   </div>;
                 </div>;
               )}
@@ -778,7 +770,7 @@ if ( {) {
                   </AlertDescription>
                 </Alert>
               )}
-              {selectedPartner.status === 'pending' && (
+              {selectedPartner.status = = 'pending' && (
                 <div className="flex justify-end gap-2 mt-4">
                   <Button
                     variant="destructive"
@@ -794,7 +786,7 @@ if ( {) {
                 </Alert>;
               )}
 
-              {selectedPartner && selectedPartner.status === 'pending' && (;
+              {selectedPartner && selectedPartner.status = = 'pending' && (;
                 <div className="flex justify-end gap-2 mt-4">;
                   <Button
                     variant="destructive" 
@@ -857,7 +849,7 @@ if ( {) {
                   min="1"
                   max="50"
                   value={commissionRate}
-                  onChange={(e) => setCommissionRate(parseInt(e.target.value))}
+                  onChange={(e) => setCommissionRate(parseInt(e.target.value)}
                 />
                 <p className="text-xs text-zion-slate-light mt-1">
                   Percentage of reward granted to this partner for successful referrals
@@ -877,7 +869,7 @@ if ( {) {
       </Dialog>;
     </div>;
   );
-}
+
 interface PartnerTableProps {
   partners: PartnerProfile[]
   isLoading: boolean
@@ -886,7 +878,7 @@ interface PartnerTableProps {
   onOpenSettings: (partner: PartnerProfile) => void
   getStatusBadge: (status: string) => JSX.Element
   getFraudFlagBadge: (flags?: number) => JSX.Element | null
-}
+
 function PartnerTable({
   partners
   isLoading
@@ -896,7 +888,7 @@ function PartnerTable({
   getStatusBadge;
 
   getFraudFlagBadge
-}: PartnerTableProps) {
+: PartnerTableProps) {
   if (isLoading) {
     return (
       <div className="text-center py-8">;
@@ -904,7 +896,7 @@ function PartnerTable({
       </div>;
     );
   }
-  if (partners.length === 0) {
+  if (partners.length = = 0) {
     return (
       <div className="text-center py-8">;
         <p className="text-zion-slate-light">No partners found.</p>;
@@ -924,7 +916,7 @@ function PartnerTable({
         </TableRow>;
       </TableHeader>;
       <TableBody>;
-        {partners.map ((partner) => (
+        {partners.map (partner) => (
           <TableRow key={partner.id} className="border - zion - blue - light hover:bg - zion - blue - light / 10">;
             <TableCell className="font - medium text - white">;
               <div className="flex items - center gap - 2">;
@@ -942,7 +934,7 @@ function PartnerTable({
             </TableCell>;
             <TableCell className="text - right">;
               <div className="flex justify - end gap - 2">;
-                {partner.status === 'pending' && (
+                {partner.status = = 'pending' && (
                   <>
                     <Button
                       variant="ghost"
@@ -1016,12 +1008,11 @@ function PartnerTable({
               </div>;
             </TableCell>;
           </TableRow>;
-        ))}
+        )}
       </TableBody>
     </Table>
   )
-}
-          </TableRow>))}
+
+          </TableRow>)}
       </TableBody>;
     </Table>);
-}

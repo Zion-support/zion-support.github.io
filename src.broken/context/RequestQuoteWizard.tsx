@@ -6,5 +6,3 @@ export function RequestQuoteWizard() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

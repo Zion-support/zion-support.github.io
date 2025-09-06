@@ -7,7 +7,7 @@ import {
   UserGroupIcon
   RocketLaunchIcon
   ShieldCheckIcon
-} from '@heroicons/react/24/outline'
+ from '@heroicons/react/24/outline'
 const researchAreas = [
   {
     name: 'Artificial Intelligence & Machine Learning'
@@ -142,7 +142,7 @@ export default function ResearchPage() {
         </div>
         <div className=&quot;mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none&quot;>
           <div className=&quot;grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-2&quot;>
-            {researchAreas.map((area) => (
+            {researchAreas.map(area) => (
               <div key={area.name} className=&quot;bg-white/5 p-8 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover:scale-105&quot;>
                 <div className=&quot;flex items-center gap-x-3 mb-4&quot;>
                   <area.icon className=&quot;h-8 w-8 text-blue-400&quot; />
@@ -150,22 +150,22 @@ export default function ResearchPage() {
                 </div>
                 <p className=&quot;text-gray-300 mb-6&quot;>{area.description}</p>
                 <div className=&quot;space-y-2&quot;>
-                  {area.topics.map((topic) => (
+                  {area.topics.map(topic) => (
                     <div key={topic} className=&quot;flex items-center gap-2&quot;>
                       <div className=&quot;h-1.5 w-1.5 bg-blue-400 rounded-full&quot;></div>
                       <span className=&quot;text-sm text-gray-400&quot;>{topic}</span>
                     </div>
-                  ))}
+                  )}
                 </div>;
                 <p className=&quot;text - gray - 300 mb - 6&quot;>{area.description}</p>;
                 <div className=&quot;space - y-2 & quot;>;
-                  {area.topics.map ((topic) => (
+                  {area.topics.map (topic) => (
                     <div key={topic} className=&quot;flex items - center gap - 2&quot;>;
                       <div className=&quot;h - 1.5 w - 1.5 bg - blue - 400 rounded - full & quot;></div>;
                       <span className=&quot;text - sm text - gray - 400 & quot;>{topic}</span>;
-                    </div>))}
+                    </div>)}
                 </div>;
-              </div>))}
+              </div>)}
           </div>;
         </div>;
       </div>;
@@ -182,13 +182,13 @@ export default function ResearchPage() {
         </div>;
         <div className=&quot;mx - auto mt - 16 max - w-2xl sm:mt - 20 lg:mt - 24 lg:max - w-none & quot;>;
           <div className=&quot;grid max - w-xl grid - cols - 1 gap - 8 lg:max - w-none lg:grid - cols - 2&quot;>;
-            {recent_publications.map ((publication) => (
+            {recent_publications.map (publication) => (
               <div key={publication.title} className=&quot;bg - white / 5 p - 8 rounded - 2xl backdrop - blur - sm hover:bg - white / 10 transition - all duration - 300 hover:scale - 105 & quot;>;
                 <div className=&quot;flex items - center gap - x-2 mb - 4&quot;>;
                   <span className={`inline - flex items - center rounded - full px - 2.5 py - 0.5 text - xs font - medium ${
-                    publication.impact === 'High Impact' ? 'bg - blue - 600 / 20 text - blue - 400' :;
-                    publication.impact === 'Industry Leading' ? 'bg - green - 600 / 20 text - green - 400' :;
-                    publication.impact === 'Breakthrough' ? 'bg - purple - 600 / 20 text - purple - 400' :;
+                    publication.impact = = 'High Impact' ? 'bg - blue - 600 / 20 text - blue - 400' :;
+                    publication.impact = = 'Industry Leading' ? 'bg - green - 600 / 20 text - green - 400' :;
+                    publication.impact = = 'Breakthrough' ? 'bg - purple - 600 / 20 text - purple - 400' :;
                     'bg - gray - 600 / 20 text - gray - 400';
                   }`}>;
                     {publication.impact}
@@ -207,7 +207,7 @@ export default function ResearchPage() {
                 >;
                   View Publication <span aria - hidden=&quot;true & quot;></span>;
                 </Link>;
-              </div>))}
+              </div>)}
           </div>;
         </div>;
       </div>;
@@ -225,13 +225,13 @@ export default function ResearchPage() {
         </div>
         <div className=&quot;mx-auto mt-16 max-w-2xl lg:max-w-none&quot;>
           <dl className=&quot;grid max-w-xl grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-4&quot;>
-            {researchImpact.map((item) => (
+            {researchImpact.map(item) => (
               <div key={item.metric} className=&quot;flex flex-col bg-white/5 p-8 backdrop-blur-sm&quot;>
                 <dt className=&quot;text-sm font-semibold leading-6 text-gray-300&quot;>{item.metric}</dt>
                 <dd className=&quot;order-first text-3xl font-bold tracking-tight text-white&quot;>{item.value}</dd>
                 <p className=&quot;mt-2 text-sm text-gray-400&quot;>{item.description}</p>
               </div>
-            ))}
+            )}
           </dl>;
         </div>;
       </div>;
@@ -249,7 +249,7 @@ export default function ResearchPage() {
         </div>
         <div className=&quot;mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none&quot;>
           <div className=&quot;grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-2&quot;>
-            {academicPartners.map((partner) => (
+            {academicPartners.map(partner) => (
               <div key={partner.name} className=&quot;bg-white/5 p-8 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover:scale-105&quot;>
                 <div className=&quot;flex items-center gap-x-3 mb-4&quot;>
                   <AcademicCapIcon className=&quot;h-8 w-8 text-blue-400&quot; />
@@ -269,7 +269,7 @@ export default function ResearchPage() {
                     {partner.collaboration}
                   </p>;
                 </div>;
-              </div>))}
+              </div>)}
           </div>;
         </div>;
       </div>;
@@ -298,4 +298,3 @@ export default function ResearchPage() {
       </div>
     </div>
   )
-}

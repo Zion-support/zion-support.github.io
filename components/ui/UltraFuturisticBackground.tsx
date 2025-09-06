@@ -12,7 +12,6 @@ interface UltraFuturisticBackgroundProps {
   enableSpaceTime?: boolean;
   variant?: 'quantum' | 'neon' | 'cyber';
   className?: string;
-}
 
 const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
   children,
@@ -26,10 +25,10 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
   enableSpaceTime = true,
   variant = 'quantum',
   className = ''
-}) => {
+) => {
   const getBackgroundClasses = () => {
     const baseClasses = 'relative overflow-hidden';
-    
+
     switch (variant) {
       case 'quantum':
         return `${baseClasses} bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900`;
@@ -39,8 +38,7 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
         return `${baseClasses} bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900`;
       default:
         return `${baseClasses} bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900`;
-    }
-  };
+    };
 
   return (
     <div className={`${getBackgroundClasses()} ${className}`}>
@@ -50,6 +48,5 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
       </div>
     </div>
   );
-};
 
 export default UltraFuturisticBackground;

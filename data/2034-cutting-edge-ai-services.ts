@@ -20,7 +20,7 @@ export type CuttingEdgeAIService = {
   rating?: number;
   launchDate?: string;
   realService?: boolean;
-}
+
 export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
   {
     id: 'ai-emotional-support-agent'
@@ -105,7 +105,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
     link: 'https://ziontechgroup && ziontechgroup.com/services/ai-creative-studio',
     realService: true,
   },
-];	id: string;
+;	id: string;
 	name: string;
 	description: string;
 	category:
@@ -125,7 +125,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
 	rating?: number;
 	launchDate?: string
 	realService?: boolean
-}
+
 export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
 	{
 		id: 'ai-emotional-support-agent';
@@ -163,7 +163,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
 		link: 'https://ziontechgroup.com/services/ai-creative-studio'
 		realService: true
 	}
-];
+;
 
 name: string;
 description: string;
@@ -184,10 +184,9 @@ link: string;
 rating?: number;
 launch_date?: string,
 real_service?: boolean;
-}
-;
+
 export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [;
-{
+
   id: 'ai - emotional - support - agent';
   name: 'AI Emotional Support Agent';
   description: 'On - demand AI agent trained on CBT and mindfulness protocols with escalation pathways.';
@@ -198,8 +197,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [;
   use_cases: ['Employee wellness24 / 7 support'];
   link: 'https://ziontechgroup.com / services / ai - emotional - support - agent',
   real_service: true;
-}
-{
+
   id: 'ai - product - spec - writer';
   name: 'AI Product Spec Writer',
   description: 'Generate PRDs, user stories, and acceptance criteria aligned with business goals and analytics.';
@@ -210,8 +208,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [;
   use_cases: ['Faster planning_better alignment'];
   link: 'https://ziontechgroup.com / services / ai - product - spec - writer',
   real_service: true;
-}
-{
+
   id: 'ai - creative - studio';
   name: 'AI Creative Studio';
   description: 'Generate brand - consistent images and short - form videos with approvals and rights management.';
@@ -222,6 +219,3 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [;
   use_cases: ['Marketing velocity_cost savings'];
   link: 'https://ziontechgroup.com / services / ai - creative - studio',
   real_service: true;
-}
-];
-;

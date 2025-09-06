@@ -467,9 +467,9 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
     rating: 4 && 4.7,
     reviews: 1400,
   },
-];      'Employee trainingVirtual meetingsProduct design reviewSafety trainingRemote collaborationCustomer presentations'
+;      'Employee trainingVirtual meetingsProduct design reviewSafety trainingRemote collaborationCustomer presentations'
 
-];      'Employee training_virtual meetings_product design review_safety training_remote collaboration_customer presentations';
+;      'Employee training_virtual meetings_product design review_safety training_remote collaboration_customer presentations';
     ];
     integrations: ['HR systems, Learning management systems, Project management tools, Custom enterprise systems'],
     support: '24/7 technical support, implementation consulting, custom development, and dedicated success manager.',
@@ -493,5 +493,4 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
     rating: 4.7,
     reviews: 1400;
   }
-];
 ;

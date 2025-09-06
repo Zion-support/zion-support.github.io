@@ -4,9 +4,9 @@ export default function AutomationInsightsPage() {
   const [intel, setIntel] = useState<any>(null),
   const [talentMd, setTalentMd] = useState<string>(''),
 
-  useEffect(() => {
-    fetch('/data/automation/market-intel.json').then((r) => r.json()).then(setIntel).catch(() => {}),
-    fetch('/data/automation/talent-highlights.md').then((r) => r.text()).then(setTalentMd).catch(() => {})
+  useEffect() => {
+    fetch('/data/automation/market-intel.json').then(r) => r.json().then(setIntel).catch() => {}),
+    fetch('/data/automation/talent-highlights.md').then(r) => r.text().then(setTalentMd).catch() => {})
   }, []),
   return (
     <div>
@@ -22,16 +22,16 @@ export default function AutomationInsightsPage() {
             <div className=&quot;mt-3&quot;>
               <h3 className=&quot;font-medium&quot;>Top Keywords</h3>
               <ul className=&quot;list-disc list-inside&quot;>
-                {Object.entries(intel.insights.keywordCounts).map(([k, v]: any) => (
+                {Object.entries(intel.insights.keywordCounts).map([k, v]: any) => (
                   <li key={k}>{k}: {v as any}</li>
-                ))}
+                )}
               </ul>
             </div>
             <div className=&quot;mt-4&quot;>
               <h3 className=&quot;font-medium&quot;>Top Languages</h3>
               <ul className=&quot;list-disc list-inside&quot;>
-                {intel.insights.topLanguages.map((l: any) => (
-                  <li key={l.lang}>{l.lang}: {l.count}</li>                ))}
+                {intel.insights.topLanguages.map(l: any) => (
+                  <li key={l.lang}>{l.lang}: {l.count}</li>                )}
               </ul>
             </div>
           </div>

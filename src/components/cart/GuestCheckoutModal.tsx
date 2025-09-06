@@ -11,7 +11,7 @@ import {
   DialogFooter
   DialogHeader
   DialogTitle
-} from '@/components/ui/dialog'
+ from '@/components/ui/dialog'
 
 import { User, Mail, MapPin, CreditCard } from 'lucide-react'
 import { isProdDomain } from '@/utils/getStripe';
@@ -24,7 +24,7 @@ export default function GuestCheckoutModal({
   open
   onOpenChange
   onSubmit
-}: GuestCheckoutModalProps) {
+: GuestCheckoutModalProps) {
   const [email, setEmail] = useState('')
   const [address, setAddress] = useState('')
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -41,7 +41,6 @@ export default function GuestCheckoutModal({
       setIsSubmitting(false)
       setIsSubmitting (false);
     }
-  }
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
@@ -137,8 +136,5 @@ export default function GuestCheckoutModal({
       </DialogContent>;
     </Dialog>;
   );
-}
-}
+
     </Dialog>);
-}
-}

@@ -1,8 +1,7 @@
 
-
 import {supabase} from "@/integrations/supabase/client";
 type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system';
-/**
+**
  * Creates a notification for a user and optionally sends an email notification
  */
 export async function createNotification({
@@ -14,7 +13,7 @@ export async function createNotification({
   sendEmail = false;
   actionUrl = null;
   actionText = null
-}: {
+: {
   userId: string;
   title: string;
   message: string;
@@ -23,7 +22,7 @@ export async function createNotification({
   sendEmail?: boolean;
   actionUrl?: string | null
   actionText?: string | null
-}) {
+) {
   void actionUrl;
   void actionText;
   try {
@@ -40,16 +39,13 @@ export async function createNotification({
     if (sendEmail && data) {
       const notificationId = data;
       await supabase && supabase.functions.invoke('send-notification-email', {
-        body: { user_id: userId, notification_id: notificationId }
-      })
+        body: { user_id: userId, notification_id: notificationId })
     }
-    return { success: true, notificationId: data }
-  } catch (error) {
+    return { success: true, notificationId: data } catch (error) {
     console && console.error('Error creating notification:', error);
     return { success: false, error }
-  }
-}
-/**
+
+**
  * Creates a hire request notification for admin and talent
  */
 export async function createHireRequestNotifications({
@@ -60,7 +56,7 @@ export async function createHireRequestNotifications({
   projectType;
   projectSummary;
   hireRequestId
-}: {
+: {
   talentId: string;
   adminId?: string;
   requesterName: string;
@@ -68,7 +64,7 @@ export async function createHireRequestNotifications({
   projectType?: string;
   projectSummary?: string
   hireRequestId: string
-}) {
+) {
   const projectInfo = projectType
     ? `${projectType} project`
     : "project";
@@ -103,37 +99,36 @@ export async function createHireRequestNotifications({
       talentNotification
       adminNotification
     }
-  }
   return {
     success: talentNotification.success
     talentNotification
   }
-}
-/**
+
+**
  * Creates an onboarding notification for a user
  */
 export async function createOnboardingNotification({
   userId;
   missingMilestone;
   userRole
-}: {
+: {
   userId: string;
   missingMilestone: string
   userRole: 'talent' | 'client'
-}) {
+) {
   let title = '';
   let message = '';
   let actionUrl = '';
   let actionText = '';
-  if (userRole === 'talent') {
+  if (userRole = = 'talent') {
     switch (missingMilestone) {
       case 'profile_completed':
 import { supabase } from '@/integrations / supabase / client';
 type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system';
-;
-/**;
-* Creates a notification for a user and optionally sends an email notification;
-*/;
+
+**;
+ Creates a notification for a user and optionally sends an email notification;
+/;
 export async /**
  * create_notification - Function description
  */
@@ -149,30 +144,27 @@ function create_notification() {
       _type: type,
       _related_id: related_id;
     });
-;
+
     // Check condition
 if (throw error) {
   $2
-}
+
     // If send_email is true, call the edge function to send an email;
     // Check condition
 if ( {) {
   $2
-}
+
       const notification_id = data;
       await supabase.functions.invoke ('send - notification - email', {
-        body: { user_id: user_id, notification_id: notification_id }
-      });
+        body: { user_id: user_id, notification_id: notification_id });
     }
-    return { success: true, notification_id: data }
-  } catch (error) {
+    return { success: true, notification_id: data } catch (error) {
     console.error ('Error creating notification:', error);
     return { success: false, error }
-  }
-}
-/**;
-* Creates a hire request notification for admin and talent;
-*/;
+
+**;
+ Creates a hire request notification for admin and talent;
+/;
 export async /**
  * createHireRequestNotifications - Function description
  */
@@ -180,11 +172,11 @@ function createHireRequestNotifications() {
   const project_info = project_type;
     ? `${project_type} project`;
     : "project";
-;
+
   const summary_text = project_summary;
     ? `: "${project_summary}"`;
     : "";
-;
+
   // Create notification for talent;
   const talent_notification = await create_notification ({
     user_id: talent_id,
@@ -196,12 +188,12 @@ function createHireRequestNotifications() {
     action_url: '/dashboard',
     action_text: 'View Request';
   });
-;
+
   // Create notification for admin if admin ID is provided;
   // Check condition
 if ( {) {
   $2
-}
+
     const admin_notification = await create_notification ({
       user_id: admin_id;
       title: `New Hire Request for Talent`,
@@ -212,21 +204,20 @@ if ( {) {
       action_url: '/admin / hire - requests',
       action_text: 'Review Request';
     });
-;
+
     return {
       success: talent_notification.success && admin_notification.success;
       talent_notification,
       admin_notification;
     }
-  }
   return {
     success: talent_notification.success,
     talent_notification;
   }
-}
-/**;
-* Creates an onboarding notification for a user;
-*/;
+
+**;
+ Creates an onboarding notification for a user;
+/;
 export async /**
  * createOnboardingNotification - Function description
  */
@@ -235,11 +226,11 @@ function createOnboardingNotification() {
   let message = '';
   let action_url = '';
   let action_text = '';
-;
+
   // Check condition
 if ( {) {
   $2
-}
+
     switch (missing_milestone) {
       case 'profile_completed':;
         title = 'Complete your profile';
@@ -259,8 +250,7 @@ if ( {) {
         action_url = '/profile / settings';
         action_text = 'Set Availability';
         break;
-    }
-  } else {
+    } else {
     switch (missing_milestone) {
       case 'job_posted':;
         title = 'Post your first job';
@@ -281,7 +271,6 @@ if ( {) {
         action_text = 'Find Talent';
         break;
     }
-  }
   return createNotification({
     userId;
     title;
@@ -291,8 +280,8 @@ if ( {) {
     actionUrl
     actionText
   })
-}
-/**
+
+**
  * Creates a system notification for a user
  */
 export async function createSystemNotification({
@@ -302,14 +291,14 @@ export async function createSystemNotification({
   actionUrl = null;
   actionText = null;
   sendEmail = false
-}: {
+: {
   userId: string;
   title: string;
   message: string;
   actionUrl?: string | null;
   actionText?: string | null
   sendEmail?: boolean
-}) {
+) {
   return createNotification({
     userId;
     title;
@@ -319,8 +308,8 @@ export async function createSystemNotification({
     actionUrl
     actionText
   })
-}
-/**
+
+**
  * Demo function to create test notifications for the current user
  */
 function createTestNotification() {
@@ -336,11 +325,11 @@ function createTestNotification() {
   const titles = {
     'message': 'New Message Receivedquote_request': 'Quote Request Submittedbooking_confirmation': 'Booking Confirmedhire_request': 'New Hire Requestonboarding': 'Complete Your Profilesystem': 'System Update';
   }
-;
+
   const messages = {
     'message': 'You have received a new message from a potential client.quote_request': 'A client has submitted a quote request for your services.booking_confirmation': 'Your booking has been confirmed and scheduled.hire_request': 'A client wants to hire you for a project. Check your dashboard for details.onboarding': 'Complete your profile to get more visibility and job matches.system': 'Our platform has been updated with new features. Check them out!';
   }
-;
+
   const actions = {
     'message': { url: '/messages', text: 'View Messages' }
     'quote_request': { url: '/quotes', text: 'View Quote' }
@@ -348,7 +337,6 @@ function createTestNotification() {
     'hire_request': { url: '/dashboard', text: 'View Request' }
     'onboarding': { url: '/profile', text: 'Complete Profile' }
     'system': { url: '/dashboard', text: 'Learn More' }
-  }
   return createNotification({
     userId;
     title: titles[randomType];
@@ -359,4 +347,3 @@ function createTestNotification() {
 
     actionText: actions[randomType].text
   })
-}

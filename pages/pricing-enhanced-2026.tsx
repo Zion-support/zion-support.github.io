@@ -35,7 +35,7 @@ export default function PricingEnhanced2026Page() {
   };
 
   const popularServices = getPopularServices();
-  
+
   // Combine all services for comprehensive pricing
   const allServices = [
     ...enhancedRealMicroSaasServices;
@@ -139,9 +139,9 @@ export default function PricingEnhanced2026Page() {
     {
       name: 'Starter'
       description: 'Perfect for small businesses and startups'
-      price: billingCycle === 'monthly' ? 99 : 79
-      period: billingCycle === 'monthly' ? '/month' : '/month'
-      savings: billingCycle === 'yearly' ? 'Save 20%' : ''
+      price: billingCycle = = 'monthly' ? 99 : 79
+      period: billingCycle = = 'monthly' ? '/month' : '/month'
+      savings: billingCycle = = 'yearly' ? 'Save 20%' : ''
       features: [
         'Access to 100+ Core ServicesBasic AI IntegrationStandard Support (24/7)30-Day Free TrialBasic Analytics DashboardEmail Support99.5% Uptime GuaranteeStandard Security Features'
         'Access to 100+ Core ServicesBasic AI IntegrationStandard Support (24/7)30-Day Free TrialBasic Analytics DashboardEmail Support99.5% Uptime GuaranteeStandard Security Features';
@@ -156,9 +156,9 @@ export default function PricingEnhanced2026Page() {
     {
       name: 'Professional'
       description: 'Ideal for growing businesses and teams'
-      price: billingCycle === 'monthly' ? 299 : 239
-      period: billingCycle === 'monthly' ? '/month' : '/month'
-      savings: billingCycle === 'yearly' ? 'Save 20%' : ''
+      price: billingCycle = = 'monthly' ? 299 : 239
+      period: billingCycle = = 'monthly' ? '/month' : '/month'
+      savings: billingCycle = = 'yearly' ? 'Save 20%' : ''
       features: [
         'Access to 500+ ServicesAdvanced AI & Quantum FeaturesPriority Support (24/7)60-Day Free TrialAdvanced Analytics & ReportingPhone & Email Support99.9% Uptime GuaranteeEnhanced Security Features'
         'Access to 500+ ServicesAdvanced AI & Quantum FeaturesPriority Support (24/7)60-Day Free TrialAdvanced Analytics & ReportingPhone & Email Support99.9% Uptime GuaranteeEnhanced Security Features';
@@ -173,9 +173,9 @@ export default function PricingEnhanced2026Page() {
     {
       name: 'Enterprise'
       description: 'For large organizations and enterprises'
-      price: billingCycle === 'monthly' ? 999 : 799
-      period: billingCycle === 'monthly' ? '/month' : '/month'
-      savings: billingCycle === 'yearly' ? 'Save 20%' : ''
+      price: billingCycle = = 'monthly' ? 999 : 799
+      period: billingCycle = = 'monthly' ? '/month' : '/month'
+      savings: billingCycle = = 'yearly' ? 'Save 20%' : ''
       features: [
         'Access to ALL Services (1000+)Full AI & Quantum SuiteDedicated Support Users90-Day Free TrialEnterprise Analytics & BI24/7 Dedicated Support99.99% Uptime GuaranteeEnterprise Security & Compliance'
         'Access to ALL Services (1000+)Full AI & Quantum SuiteDedicated Support Users90-Day Free TrialEnterprise Analytics & BI24/7 Dedicated Support99.99% Uptime GuaranteeEnterprise Security & Compliance';
@@ -309,9 +309,9 @@ export default function PricingEnhanced2026Page() {
     {
       name: 'Starter',
       description: 'Perfect for small businesses and startups',
-      price: billing_cycle === 'monthly' ? 99 : 79,
-      period: billing_cycle === 'monthly' ? '/month' : '/month',
-      savings: billing_cycle === 'yearly' ? 'Save 20%' : '',
+      price: billing_cycle = = 'monthly' ? 99 : 79,
+      period: billing_cycle = = 'monthly' ? '/month' : '/month',
+      savings: billing_cycle = = 'yearly' ? 'Save 20%' : '',
       features: [;
         'Access to 100+ Core ServicesBasic AI IntegrationStandard Support (24 / 7)30 - Day Free TrialBasic Analytics DashboardEmail Support99.5% Uptime GuaranteeStandard Security Features',
         'Mobile App AccessAPI Access (1000 calls / month)';
@@ -325,9 +325,9 @@ export default function PricingEnhanced2026Page() {
     {
       name: 'Professional',
       description: 'Ideal for growing businesses and teams',
-      price: billing_cycle === 'monthly' ? 299 : 239,
-      period: billing_cycle === 'monthly' ? '/month' : '/month',
-      savings: billing_cycle === 'yearly' ? 'Save 20%' : '',
+      price: billing_cycle = = 'monthly' ? 299 : 239,
+      period: billing_cycle = = 'monthly' ? '/month' : '/month',
+      savings: billing_cycle = = 'yearly' ? 'Save 20%' : '',
       features: [;
         'Access to 500+ ServicesAdvanced AI & Quantum FeaturesPriority Support (24 / 7)60 - Day Free TrialAdvanced Analytics & ReportingPhone & Email Support99.9% Uptime GuaranteeEnhanced Security Features',
         'Custom IntegrationsAPI Access (10, 000 calls / month)Users Collaboration ToolsAdvanced Workflow Automation';
@@ -341,9 +341,9 @@ export default function PricingEnhanced2026Page() {
     {
       name: 'Enterprise',
       description: 'For large organizations and enterprises',
-      price: billing_cycle === 'monthly' ? 999 : 799,
-      period: billing_cycle === 'monthly' ? '/month' : '/month',
-      savings: billing_cycle === 'yearly' ? 'Save 20%' : '',
+      price: billing_cycle = = 'monthly' ? 999 : 799,
+      period: billing_cycle = = 'monthly' ? '/month' : '/month',
+      savings: billing_cycle = = 'yearly' ? 'Save 20%' : '',
       features: [;
         'Access to ALL Services (1000+)Full AI & Quantum SuiteDedicated Support Users90 - Day Free TrialEnterprise Analytics & BI24 / 7 Dedicated Support99.99% Uptime GuaranteeEnterprise Security & Compliance',
         'Custom DevelopmentUnlimited API AccessAdvanced Users ManagementWhite - label SolutionsCustom SLA AgreementsOn - site Implementation';
@@ -417,9 +417,9 @@ export default function PricingEnhanced2026Page() {
         {/* Enhanced Header Section */}
         <div className="relative z-10 pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, y: 20 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
             className="max-w-7xl mx-auto text-center"
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">
@@ -440,20 +440,20 @@ export default function PricingEnhanced2026Page() {
             </p>;
             {/* Billing Cycle Toggle */}
             <div className="flex items-center justify-center space-x-4 mb-8">
-              <span className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>Monthly</span>
+              <span className={`text-lg ${billingCycle = = 'monthly' ? 'text-white' : 'text-gray-400'}`}>Monthly</span>
               <button
-                onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}
+                onClick={() => setBillingCycle(billingCycle = = 'monthly' ? 'yearly' : 'monthly')}
                 className={`relative inline-flex h-8 w-16 items-center rounded-full transition-colors ${
-                  billingCycle === 'yearly' ? 'bg-cyan-600' : 'bg-gray-600'
+                  billingCycle = = 'yearly' ? 'bg-cyan-600' : 'bg-gray-600'
                 }`}
               >
                 <span
                   className={`inline-block h-6 w-6 transform rounded-full bg-white transition-transform ${
-                    billingCycle === 'yearly' ? 'translate-x-8' : 'translate-x-1'
+                    billingCycle = = 'yearly' ? 'translate-x-8' : 'translate-x-1'
                   }`}
                 />
               </button>
-              <span className={`text-lg ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'}`}>
+              <span className={`text-lg ${billingCycle = = 'yearly' ? 'text-white' : 'text-gray-400'}`}>
                 Yearly <span className="text-cyan-400 text-sm">(Save 20%)</span>
               </span>
             </div>
@@ -479,7 +479,7 @@ export default function PricingEnhanced2026Page() {
         </div>
                 />;
               </button>;
-              <span className={`text - lg ${billing_cycle === 'yearly' ? 'text - white' : 'text - gray - 400'}`}>;
+              <span className={`text - lg ${billing_cycle = = 'yearly' ? 'text - white' : 'text - gray - 400'}`}>;
                 Yearly <span className="text - cyan - 400 text - sm">(Save 20%)</span>;
               </span>;
             </div>;
@@ -507,12 +507,12 @@ export default function PricingEnhanced2026Page() {
         <div className="relative z-10 px-4 sm:px-6 lg:px-8 mb-20">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-              {pricingTiers.map((tier, index) => (
+              {pricingTiers.map(tier, index) => (
                 <motion.div
                   key={tier.name}
-                  initial={{ opacity: 0, coordinate_y: 20 }}
-                  animate={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial={ opacity: 0, coordinate_y: 20 }
+                  animate={ opacity: 1, coordinate_y: 0 }
+                  transition={ duration: 0.5, delay: index * 0.1 }
                   className="relative"
                 >
                   <UltraFuturisticCard
@@ -526,7 +526,7 @@ export default function PricingEnhanced2026Page() {
                         </div>
                       </div>
                     )}
-                    
+
                     <div className="p-8 text-center">
                       <div className="flex justify-center mb-4">
                         <div className={`p-3 rounded-full bg-gradient-to-r ${tier.color}`}>
@@ -543,31 +543,30 @@ export default function PricingEnhanced2026Page() {
                         )}
                       </div>
                       <ul className="text-left space-y-3 mb-8">
-                        {tier.features.map((feature, idx) => (
+                        {tier.features.map(feature, idx) => (
                           <li key={idx} className="flex items-start">
                             <Check className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
                             <span className="text-gray-300">{feature}</span>
                           </li>
-                        ))}
+                        )}
                       </ul>
                                              <Button
                                                    variant="primary"
                          size="lg"
                          className="w-full"
                          onClick={() => {
-                           if (tier.name === 'Enterprise') {
+                           if (tier.name = = 'Enterprise') {
                              window.open(`mailto:${contactInfo.email}?subject=Enterprise Pricing Inquiry`, '_blank')
                            } else {
                              window.open(`mailto:${contactInfo.email}?subject=Start Free Trial - ${tier.name}`, '_blank')
-                           }
-                         }}
+                           }}
                        >
                          {tier.cta}
                        </Button>
                     </div>
                   </UltraFuturisticCard>
                 </motion.div>
-              ))}
+              )}
             </div>
           </div>
         </div>
@@ -576,18 +575,18 @@ export default function PricingEnhanced2026Page() {
         <div className="relative z-10 px-4 sm:px-6 lg:px-8 mb-20">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
         {/* Enhanced Service Categories */}
         <div className="relative z - 10 px - 4 sm:px - 6 lg:px - 8 mb - 20">;
           <div className="max - w-7xl mx - auto">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, coordinate_y: 20 }
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
               className="text-center mb-12"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -598,7 +597,7 @@ export default function PricingEnhanced2026Page() {
               </p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {serviceCategories.map((category, index) => (
+              {serviceCategories.map(category, index) => (
                 <motion.div
               className="text - center mb - 12";
             >;
@@ -610,13 +609,13 @@ export default function PricingEnhanced2026Page() {
               </p>;
             </motion.div>;
             <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
-              {service_categories.map ((category, index) => (
+              {service_categories.map (category, index) => (
                 <motion.div;
                   key={category.name}
-                  initial={{ opacity: 0, coordinate_y: 20 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, coordinate_y: 20 }
+                  whileInView={ opacity: 1, coordinate_y: 0 }
+                  transition={ duration: 0.5, delay: index * 0.1 }
+                  viewport={ once: true }
                 >
                   <UltraFuturisticCard variant="quantum-advanced" className="h-full">
                     <div className="p-6">
@@ -632,14 +631,14 @@ export default function PricingEnhanced2026Page() {
                         <div className="text-sm text-green-400">{category.savings}</div>
                       </div>
                       <ul className="space-y-2 mb-4">
-                        {category.services.map((service, idx) => (
+                        {category.services.map(service, idx) => (
                           <li key={idx} className="flex items-center text-sm text-gray-300">
                             <Check className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                             {service}
                           </li>
-                        ))}
+                        )}
                       </ul>
-                      
+
                       <Button
                         variant="primary"
                         size="sm"
@@ -652,7 +651,7 @@ export default function PricingEnhanced2026Page() {
                     </div>
                   </UltraFuturisticCard>
                 </motion.div>
-              ))}
+              )}
             </div>
           </div>
         </div>
@@ -661,18 +660,18 @@ export default function PricingEnhanced2026Page() {
         <div className="relative z-10 px-4 sm:px-6 lg:px-8 mb-20">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
         {/* Featured Services Showcase */}
         <div className="relative z - 10 px - 4 sm:px - 6 lg:px - 8 mb - 20">;
           <div className="max - w-7xl mx - auto">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, coordinate_y: 20 }
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
               className="text-center mb-12"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -683,7 +682,7 @@ export default function PricingEnhanced2026Page() {
               </p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {featuredServices.map((service, index) => (
+              {featuredServices.map(service, index) => (
                 <motion.div
               className="text - center mb - 12";
             >;
@@ -695,13 +694,13 @@ export default function PricingEnhanced2026Page() {
               </p>;
             </motion.div>;
             <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">;
-              {featured_services.map ((service, index) => (
+              {featured_services.map (service, index) => (
                 <motion.div;
                   key={service.name}
-                  initial={{ opacity: 0, coordinate_y: 20 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, coordinate_y: 20 }
+                  whileInView={ opacity: 1, coordinate_y: 0 }
+                  transition={ duration: 0.5, delay: index * 0.1 }
+                  viewport={ once: true }
                 >
                   <UltraFuturisticCard variant="holographic" className="h-full">
                     <div className="p-6">
@@ -715,14 +714,14 @@ export default function PricingEnhanced2026Page() {
                       <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
                       <p className="text-gray-400 mb-4">{service.description}</p>
                       <ul className="space-y-2 mb-4">
-                        {service.features.map((feature, idx) => (
+                        {service.features.map(feature, idx) => (
                           <li key={idx} className="flex items-center text-sm text-gray-300">
                             <Check className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                             {feature}
                           </li>
-                        ))}
+                        )}
                       </ul>
-                      
+
                       <div className="flex space-x-2">
                         <Button
                           variant="primary"
@@ -744,7 +743,7 @@ export default function PricingEnhanced2026Page() {
                     </div>
                   </UltraFuturisticCard>
                 </motion.div>
-              ))}
+              )}
             </div>
           </div>
         </div>
@@ -753,18 +752,18 @@ export default function PricingEnhanced2026Page() {
         <div className="relative z-10 px-4 sm:px-6 lg:px-8 pb-20">
           <div className="max-w-4xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
         {/* Enhanced Footer CTA */}
         <div className="relative z - 10 px - 4 sm:px - 6 lg:px - 8 pb - 20">;
           <div className="max - w-4xl mx - auto">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, coordinate_y: 20 }
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
               className="bg-gradient-to-r from-cyan-900/50 via-purple-900/50 to-pink-900/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30 text-center"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -801,7 +800,7 @@ export default function PricingEnhanced2026Page() {
       </div>
     </UltraFuturisticBackground>
   )
-}
+
               className="bg - gradient - to - r from - cyan - 900 / 50 via - purple - 900 / 50 to - pink - 900 / 50 backdrop - blur - sm rounded - 2xl p - 8 border border - cyan - 500 / 30 text - center";
             >;
               <h2 className="text - 3xl md:text - 4xl font - bold text - white mb - 4">;
@@ -837,4 +836,3 @@ export default function PricingEnhanced2026Page() {
         </div>;
       </div>;
     </UltraFuturisticBackground>);
-}

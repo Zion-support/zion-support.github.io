@@ -6,5 +6,3 @@ export function Grants() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

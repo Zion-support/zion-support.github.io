@@ -1,14 +1,13 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Trophy } from 'lucide-react';
-;
+
 export interface LeaderboardEntry {;
   name:string,;
   points:number;}
-;
+
 interface UserLeaderboardProps {;
   entries:LeaderboardEntry[];
-}
-;
+
 export function UserLeaderboard({ entries } UserLeaderboardProps) {;
   return (;
     <Card>;
@@ -20,7 +19,7 @@ export function UserLeaderboard({ entries } UserLeaderboardProps) {;
       </CardHeader>;
       <CardContent>;
         <div className="space-y-2">;
-          {entries.map((e, idx) => (;
+          {entries.map(e, idx) => (;
             <div;
               key={e.name}
               className="flex justify-between items-center p-2 rounded-md hover:bg-muted/50";
@@ -30,7 +29,7 @@ export function UserLeaderboard({ entries } UserLeaderboardProps) {;
               </span>;
               <span className="text-sm">{e.points} pts</span>;
             </div>;
-          ))}
+          )}
         </div>;
       </CardContent>;
     </Card>;
@@ -39,15 +38,15 @@ export function UserLeaderboard({ entries } UserLeaderboardProps) {;
   {;
   {;
   Trophy ;
-}from 'lucide-react' export interface LeaderboardEntry {;
+from 'lucide-react' export interface LeaderboardEntry {;
   name: string;
 points: number ;
-}interface UserLeaderboardProps {;
+interface UserLeaderboardProps {;
   entries: LeaderboardEntry[] ;
-}entries ;
-}: UserLeaderboardProps) {;
+entries ;
+: UserLeaderboardProps) {;
   return (<Card> <CardHeader> <CardTitle className="flex items-center gap-2" > <Trophy className="h-5 w-5" /> Leaderboard </CardTitle> <CardDescription>Top users by points</CardDescription> </CardHeader> <CardContent> <div key= {;
   e.name ";
-}className="flex justify-between items-center p-2 rounded-md hover:bg-muted/50" > </div>) ) ;
-}</div> </CardContent> </Card>) ;
-}'"
+className="flex justify-between items-center p-2 rounded-md hover:bg-muted/50" > </div>) ;
+</div> </CardContent> </Card>) ;
+'"

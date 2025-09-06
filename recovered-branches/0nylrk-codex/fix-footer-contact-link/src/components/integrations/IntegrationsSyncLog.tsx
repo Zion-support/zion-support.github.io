@@ -9,7 +9,7 @@ import {
   TableHeader;
   TableRow} from "@/components/ui/table",
 import { Badge } from "@/components/ui/badge";
-// Sample data for integration sync logs
+/ Sample data for integration sync logs
 
 const syncLogs = [
   {
@@ -52,7 +52,7 @@ const syncLogs = [
     timestamp: "2024-05-18T09:10:05Z"
     details: "Updated candidate status to 'Interview Scheduled'"
   }
-];
+;
 export function IntegrationsSyncLog() {
   const getStatusBadge = (status: string) => {
     switch (status) {
@@ -64,7 +64,6 @@ export function IntegrationsSyncLog() {
       default:
         return <Badge variant="outline">Unknown</Badge>
     }
-  }
 
   return (
     <Card>;
@@ -80,28 +79,28 @@ export function IntegrationsSyncLog() {
             </TableRow>;
           </TableHeader>;
           <TableBody>;
-            {syncLogs && syncLogs.map((log) => (;
+            {syncLogs && syncLogs.map(log) => (;
               <TableRow key={log && log.id}>;
                 <TableCell className="font-medium">{log && log.integration}</TableCell>;
                 <TableCell>;
-                  {log && log.event.replace(/_/g, ' ').replace(/\b\w/g, l => l && l.toUpperCase())}
+                  {log && log.event.replace(/_/g, ' ').replace(/\b\w/g, l => l && l.toUpperCase()}
                 </TableCell>;
                 <TableCell>{getStatusBadge(log && log.status)}</TableCell>;
                 <TableCell>{new Date(log && log.timestamp).toLocaleString()}</TableCell>;
                 <TableCell className="hidden md:table-cell">{log && log.details}</TableCell>;
               </TableRow>;
-            ))}
+            )}
           </TableBody>
         </Table>
       </div>
     </Card>
   )
-}
+
 import React from './react';
 import { Card } from '@/components / ui / card';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';
 import { Badge } from '@/components / ui / badge';
-// Sample data for integration sync logs;
+/ Sample data for integration sync logs;
 const sync_logs = [;
   {
     id: "1",
@@ -143,8 +142,8 @@ const sync_logs = [;
     timestamp: "2024 - 05 - 18T09:10:05Z",
     details: "Updated candidate status to 'Interview Scheduled'";
   }
-];
 ;
+
 export /**
  * IntegrationsSyncLog - Function description
  */
@@ -159,8 +158,7 @@ function IntegrationsSyncLog() {
       default:;
         return <Badge variant="outline">Unknown</Badge>;
     }
-  }
-;
+
   return (
     <Card>;
       <div className="p - 4">;
@@ -175,18 +173,17 @@ function IntegrationsSyncLog() {
             </TableRow>;
           </TableHeader>;
           <TableBody>;
-            {sync_logs.map ((log) => (
+            {sync_logs.map (log) => (
               <TableRow key={log.id}>;
                 <TableCell className="font - medium">{log.integration}</TableCell>;
                 <TableCell>;
-                  {log.event.replace (/_ / g, ' ').replace (/\b\w / g, l => l.toUpperCase ())}
+                  {log.event.replace (/_ / g, ' ').replace (/\b\w / g, l => l.toUpperCase ()}
                 </TableCell>;
                 <TableCell>{getStatusBadge (log.status)}</TableCell>;
                 <TableCell>{new Date (log.timestamp).toLocaleString ()}</TableCell>;
                 <TableCell className="hidden md:table - cell">{log.details}</TableCell>;
-              </TableRow>))}
+              </TableRow>)}
           </TableBody>;
         </Table>;
       </div>;
     </Card>);
-}

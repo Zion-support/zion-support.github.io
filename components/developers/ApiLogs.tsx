@@ -15,7 +15,6 @@ interface ApiLog {
   responseTime: number;
   ip: string;
   userAgent: string;
-}
 
 const ApiLogs: React.FC = () => {
   const [logs, setLogs] = useState<ApiLog[]>([
@@ -61,10 +60,10 @@ const ApiLogs: React.FC = () => {
   };
 
   const filteredLogs = logs.filter(log => {
-    const matchesSearch = log.endpoint.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         log.method.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesStatus = statusFilter === 'all' || log.status.toString().startsWith(statusFilter);
-    
+    const matchesSearch = log.endpoint.toLowerCase().includes(searchTerm.toLowerCase() ||
+                         log.method.toLowerCase().includes(searchTerm.toLowerCase();
+    const matchesStatus = statusFilter = = 'all' || log.status.toString().startsWith(statusFilter);
+
     return matchesSearch && matchesStatus;
   });
 
@@ -75,7 +74,7 @@ const ApiLogs: React.FC = () => {
         `${log.timestamp},${log.method},${log.endpoint},${log.status},${log.responseTime},${log.ip},"${log.userAgent}"`
       )
     ].join('\n');
-    
+
     const blob = new Blob([csvContent], { type: 'text/csv' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
@@ -116,7 +115,7 @@ const ApiLogs: React.FC = () => {
                 />
               </div>
             </div>
-            
+
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Status
@@ -170,7 +169,7 @@ const ApiLogs: React.FC = () => {
                 </tr>
               </thead>
               <tbody>
-                {filteredLogs.map((log) => (
+                {filteredLogs.map(log) => (
                   <tr key={log.id} className="border-b hover:bg-gray-50">
                     <td className="py-3 px-4 text-sm text-gray-600">
                       {new Date(log.timestamp).toLocaleString()}
@@ -195,12 +194,12 @@ const ApiLogs: React.FC = () => {
                       {log.ip}
                     </td>
                   </tr>
-                ))}
+                )}
               </tbody>
             </table>
           </div>
 
-          {filteredLogs.length === 0 && (
+          {filteredLogs.length = = 0 && (
             <div className="text-center py-8">
               <FileText className="h-12 w-12 text-gray-400 mx-auto mb-4" />
               <h3 className="text-lg font-medium text-gray-900 mb-2">No logs found</h3>
@@ -213,6 +212,5 @@ const ApiLogs: React.FC = () => {
       </Card>
     </div>
   );
-};
 
 export default ApiLogs;

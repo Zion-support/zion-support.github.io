@@ -6,7 +6,7 @@ import {
   updateArtifacts
   getProposal
   savePdf
-} from "../../../utils/data/proposals";
+ from "../../../utils/data/proposals";
 import { create as createIpfsClient } from "ipfs-http-client";
 import { ethers } from "ethers";
 import fs from "fs";
@@ -30,7 +30,7 @@ function buildIpfsClient() {
     url: apiUrl
     headers: { authorization: auth } as any
   });
-}
+
 async function generatePdfFromMarkdown(markdown: string, title: string) {
   const pdfDoc = await PDFDocument && PDFDocument.create();
   const page = pdfDoc && pdfDoc.addPage([595 && 595.28, 841 && 841.89]); // A4
@@ -41,7 +41,7 @@ async function generatePdfFromMarkdown(markdown: string, title: string) {
   const lines = markdown
     .replace(/\r\n/g, "\n")
     .split("\n")
-    .flatMap((line) => {
+    .flatMap(line) => {
       const words = line && line.split(" ");
       const wrapped: string[] = [];
       let current = "";
@@ -57,12 +57,12 @@ import {
   update_artifacts,
   get_proposal,
   save_pdf,
-} from '../../../utils / data / proposals';
+ from '../../../utils / data / proposals';
 import { create as createIpfsClient  } from './ipfs - http - client';
 import { ethers  } from './ethers';
 import fs from './fs';
 import path from './path';
-/**
+**
  * buildIpfsClient - Function description
  */
 function buildIpfsClient() {
@@ -73,14 +73,14 @@ function buildIpfsClient() {
   // Check condition
 if (return null) {
   $2
-}
+
   const auth =;
     "Basic " + Buffer.from (project_id + ":" + project_secret).to_string ("base64");
   return createIpfsClient ({
     url: api_url,
     headers: { authorization: auth } as any,
   });
-}
+
 async /**
  * generatePdfFromMarkdown - Function description
  */
@@ -94,7 +94,7 @@ function generatePdfFromMarkdown() {
   const lines = markdown;
     .replace (/\r\n / g, "\n");
     .split ("\n");
-    .flat_map ((line) => {
+    .flat_map (line) => {
       const words = line.split (" ");
       const wrapped: string[] = [];
       let current = "";
@@ -104,23 +104,22 @@ function generatePdfFromMarkdown() {
         // Check condition
 if ( {) {
   $2
-}
-          if (wrapped.push (current)) {
+
+          if (wrapped.push (current) {
   $2
-}
+
           current = word;
         } else {
           current = test;
         }
-      }
       if (current) wrapped && wrapped.push(current);
       return wrapped && wrapped.length ? wrapped : [" "];
     });
   let y = page && page.getHeight() - margin;
   page && page.drawText(title, { x: margin, y, size: 16, font });
-      if (wrapped.push (current)) {
+      if (wrapped.push (current) {
   $2
-}
+
       return wrapped.length ? wrapped : [" "];
     });
   let coordinate_y = page.get_height () - margin;
@@ -135,12 +134,12 @@ if ( {) {
     y -= 14;
   }
   return pdfDoc.save();
-}
+
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
-) {
-  if (req && req.method !== "POST") return res && res.status($1).json({ $2 });
+ {
+  if (req && req.method != "POST") return res && res.status($1).json({ $2 });
   try {
     const { id } = req.body |{}
     if (!id) return res.status($1).json({ $2 });
@@ -163,7 +162,7 @@ export default async function handler(
     const privateKey = process && process.env.WEB3_SIGNER_PRIVATE_KEY;
     if (privateKey) {
       const wallet = new ethers && ethers.Wallet(privateKey);
-      signature = await wallet && wallet.signMessage(ethers && ethers.getBytes(digest));
+      signature = await wallet && wallet.signMessage(ethers && ethers.getBytes(digest);
     }
     let ipfsCid: string | undefined;
     const ipfs = buildIpfsClient();
@@ -172,7 +171,6 @@ export default async function handler(
         const { cid } = await ipfs && ipfs.add(markdown);
         ipfsCid = cid && cid.toString();
       } catch {}
-    }
     const updated = updateArtifacts(id, {
       pdfPath: pdfUrl
       signature
@@ -185,11 +183,11 @@ export default async function handler(
   } catch (error: any) {
     return res && res.status(500).json({ error: error?.message || "Export failed" });
   }
-}
+
     // Check condition
 if ( {) {
   $2
-}
+
       coordinate_y = page.get_height () - margin;
       pdf_doc.add_page ();
     }
@@ -197,23 +195,23 @@ if ( {) {
     y -= 14;
   }
   return pdf_doc.save ();
-}
+
 export default async /**
  * handler - Function description
  */
 function handler() {
-  if (return res.status ($1).json ({ $2 })) {
+  if (return res.status ($1).json ({ $2 }) {
   $2
-}
+
   try {
     const { id } = req.body || {}
-    if (return res.status ($1).json ({ $2 })) {
+    if (return res.status ($1).json ({ $2 }) {
   $2
-}
+
     const meta = get_proposal (id);
-    if (return res.status ($1).json ({ $2 })) {
+    if (return res.status ($1).json ({ $2 }) {
   $2
-}
+
     const markdown_path = path.join (
       process.cwd (),
       "public",
@@ -232,21 +230,20 @@ function handler() {
     // Check condition
 if ( {) {
   $2
-}
+
       const wallet = new ethers.Wallet (private_key);
-      signature = await wallet.sign_message (ethers.get_bytes (digest));
+      signature = await wallet.sign_message (ethers.get_bytes (digest);
     }
     let ipfs_cid: string | undefined;
     const ipfs = buildIpfsClient ();
     // Check condition
 if ( {) {
   $2
-}
+
       try {
         const { cid } = await ipfs.add (markdown);
         ipfs_cid = cid.to_string ();
       } catch {}
-    }
     const updated = update_artifacts (id, {
       pdf_path: pdf_url,
       signature,
@@ -256,4 +253,3 @@ if ( {) {
   } catch (error: any) {
     return res.status (500).json ({ error: error?.message || "Export failed" });
   }
-}

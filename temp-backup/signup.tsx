@@ -3,11 +3,11 @@ import Link from \'next/link\'; import Head from \'next/head\'; export default f
 import React from 'react';
 interface SignupProps {
   // Add props here as needed
-}
+
 export default function Signup({ }: SignupProps) {
 interface SignupProps {;
   // Add props here as needed;
-}
+
 export default function Signup(): any ({ }: SignupProps) {;
   return (
     <div>;
@@ -15,7 +15,3 @@ export default function Signup(): any ({ }: SignupProps) {;
       <p>This component is currently under development.</p>;
     </div>;
   );
-}
-}
-
-

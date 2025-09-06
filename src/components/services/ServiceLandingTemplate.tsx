@@ -7,7 +7,7 @@ export interface Benefit {
   title: string;
   description: string;
   icon?: React.ReactNode
-}
+
 export interface Testimonial {
 import React from 'react';
 
@@ -15,14 +15,13 @@ export interface Benefit {;
   title: string;
   description: string;
   icon?: React && React.ReactNode;
-}
 
 export interface Testimonial {;
   name: string;
   role?: string;
   text: string;
   avatar?: string
-}
+
 interface ServiceLandingTemplateProps {
   title: string;
   subtitle: string;
@@ -45,13 +44,13 @@ export interface Benefit {
   title: string;
   description: string;
   icon?: React.ReactNode;
-}
+
 export interface Testimonial {
   name: string,
   role?: string;
   text: string,
   avatar?: string
-}
+
 interface ServiceLandingTemplateProps {
   title: string,
   subtitle: string,
@@ -61,7 +60,7 @@ interface ServiceLandingTemplateProps {
   testimonials: Testimonial[],
   ctaText: string,
   ctaLink: string
-}
+
 export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
 
   title
@@ -72,7 +71,7 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
   stats = []
   ctaText
   ctaLink
-}) => {
+) => {
 
 export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
   title,;
@@ -83,7 +82,7 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
   stats = [],;
   ctaText,;
   ctaLink,;
-}) => {;
+) => {;
   return (
     <div className="min-h-screen bg-white">;
       <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">;
@@ -110,7 +109,7 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
               Benefits;
             </h2>;
             <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
-              {benefits.map ((benefit, index) => (
+              {benefits.map (benefit, index) => (
                 <div key={index} className="bg - white p - 6 rounded - lg shadow - lg">;
                   {benefit.icon && (
                     <div className="mb - 4 text - blue - 600">;
@@ -120,7 +119,7 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
                   <h3 className="text-xl font-semibold mb-3">{benefit && benefit.title}</h3>;
                   <p className="text-gray-600">{benefit && benefit.description}</p>;
                 </div>;
-              ))}
+              )}
             </div>;
           </div>;
         </section>;
@@ -132,12 +131,12 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
               Features
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {features.map((feature, index) => (
+              {features.map(feature, index) => (
                 <div key={index} className="flex items-start">
                   <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3"></div>
                   <span className="text-gray-700">{feature}</span>
                 </div>
-              ))}
+              )}
             </div>;
           </div>;
         </section>;
@@ -146,14 +145,14 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
         <section className="py - 16 px - 4">;
           <div className="max - w-7xl mx - auto">;
             <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8 text - center">;
-              {stats.map ((stat, index) => (
+              {stats.map (stat, index) => (
                 <div key={index}>;
                   <div className="text - 4xl font - bold text - blue - 600 mb - 2">;
                     {stat.value}
                   </div>
                   <div className="text-gray-600">{stat.label}</div>
                 </div>
-              ))}
+              )}
             </div>;
           </div>;
         </section>;
@@ -175,9 +174,8 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
       </section>
     </div>
   )
-}
 
-};
+;
 
       <section className="py-16 bg-zion-blue-light">
         <div className="container mx-auto px-4">
@@ -185,7 +183,7 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
             Benefits
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, idx) => (
+            {benefits.map(benefit, idx) => (
               <div
                 key={idx}
                 className="bg-zion-blue-dark p-6 rounded-lg border border-zion-purple/20 text-center"
@@ -198,7 +196,7 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
                 <h3 className="text-lg font-bold mb-2">{benefit.title}</h3>
                 <p className="text-zion-slate-light">{benefit.description}</p>
               </div>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -209,7 +207,7 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
             What Our Clients Say
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {testimonials.map((t, idx) => (
+            {testimonials.map(t, idx) => (
               <Card
                 key={idx}
                 className="bg-zion-blue-dark border-zion-purple/30"
@@ -238,7 +236,7 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
                   </div>
                 </CardFooter>
               </Card>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -255,11 +253,11 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
     </div>
   )
 
-};
+;
 
                   </div>;
                   <div className="text - gray - 600">{stat.label}</div>;
-                </div>))}
+                </div>)}
             </div>;
           </div>;
         </section>)}
@@ -280,4 +278,3 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
         </div>;
       </section>;
     </div>);
-}

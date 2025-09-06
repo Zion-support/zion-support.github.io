@@ -6,5 +6,3 @@ export function DownloadSection() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

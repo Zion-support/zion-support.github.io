@@ -2,12 +2,11 @@ import React, { useEffect, useRef } from 'react',
 import { motion } from 'framer-motion',
 interface UltraFuturisticBackground2035Props {
   children: React.ReactNode
-}
 
 export default function UltraFuturisticBackground2035({ children }: UltraFuturisticBackground2035Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null),
 
-  useEffect(() => {
+  useEffect() => {
     const canvas = canvasRef.current,
     if (!canvas) return,
 
@@ -40,11 +39,11 @@ const initParticles = () => {
       particles = [],
       const isSmallScreen = window.innerWidth < 768,
       const particleCount = prefersReducedMotion ? 15 : (isSmallScreen ? 60 : 150),
-      
+
       for (let i = 0, i < particleCount, i++) {
         const type = ['quantumhologramneonenergy'][Math.floor(Math.random() * 4)] as any,
         const maxLife = Math.random() * 200 + 100,
-        
+
         particles.push({
           x: Math.random() * canvas.width / (window.devicePixelRatio || 1),
           y: Math.random() * canvas.height / (window.devicePixelRatio || 1),
@@ -56,8 +55,7 @@ const initParticles = () => {
           type,
           life: maxLife,
           maxLife
-        })      }
-    },
+        })      },
 
     // Get color based on particle type,
 const getColorForType = (type: string) => {switch (type) {
@@ -70,8 +68,7 @@ const getColorForType = (type: string) => {switch (type) {
         case 'energy':
           return ['#dc2626#7c3aed#059669'][Math.floor(Math.random() * 3)],
         default: return '#8b5cf6'
-      }
-    },
+      },
 
     // Update and draw particles with enhanced effects,
 const updateParticles = () => {
@@ -90,9 +87,9 @@ particle.x += particle.vx,
 
         // Wrap around edges,
 if (particle.x < 0) particle.x = canvas.width / (window.devicePixelRatio || 1),
-        if (particle.x > canvas.width / (window.devicePixelRatio || 1)) particle.x = 0,
+        if (particle.x > canvas.width / (window.devicePixelRatio || 1) particle.x = 0,
         if (particle.y < 0) particle.y = canvas.height / (window.devicePixelRatio || 1),
-        if (particle.y > canvas.height / (window.devicePixelRatio || 1)) particle.y = 0,
+        if (particle.y > canvas.height / (window.devicePixelRatio || 1) particle.y = 0,
 
         // Calculate opacity based on life,
 const lifeRatio = particle.life / particle.maxLife,
@@ -104,13 +101,11 @@ drawParticle(ctx, particle, currentOpacity),
 const maxDistance = prefersReducedMotion ? 0 : (window.innerWidth < 768 ? 120 : 180),
         if (maxDistance > 0) {
           drawConnections(ctx, particles, index, maxDistance, currentOpacity)
-        }
-      }),
+        }),
 
       if (!prefersReducedMotion) {
         animationFrameId = requestAnimationFrame(updateParticles)
-      }
-    },
+      },
 
     // Enhanced particle drawing with different types,
 const drawParticle = (ctx: CanvasRenderingContext2D, particle: any, opacity: number) => {
@@ -138,7 +133,7 @@ const drawParticle = (ctx: CanvasRenderingContext2D, particle: any, opacity: num
 const drawQuantumParticle = (ctx: CanvasRenderingContext2D, particle: any) => {
       const time = Date.now() * 0.001,
       const wave = Math.sin(time + particle.x * 0.01) * 0.5,
-      
+
       ctx.beginPath(),
       ctx.arc(particle.x, particle.y + wave, particle.size, 0, Math.PI * 2),
       ctx.fillStyle = particle.color,
@@ -157,7 +152,7 @@ ctx.shadowColor = particle.color,
 const drawHologramParticle = (ctx: CanvasRenderingContext2D, particle: any) => {
       const time = Date.now() * 0.002,
       const distortion = Math.sin(time + particle.y * 0.02) * 2,
-      
+
       ctx.globalAlpha *= 0.7,
       ctx.beginPath(),
       ctx.arc(particle.x + distortion, particle.y, particle.size, 0, Math.PI * 2),
@@ -196,7 +191,7 @@ const drawEnergyParticle = (ctx: CanvasRenderingContext2D, particle: any) => {
       const time = Date.now() * 0.003,
       const pulse = Math.sin(time) * 0.3 + 0.7,
       const size = particle.size * pulse,
-      
+
       ctx.beginPath(),
       ctx.arc(particle.x, particle.y, size, 0, Math.PI * 2),
       ctx.fillStyle = particle.color,
@@ -211,7 +206,7 @@ ctx.globalAlpha *= 0.3,
     },
     // Enhanced connection drawing with different effects,
 const drawConnections = (ctx: CanvasRenderingContext2D, particles: unknown[], currentIndex: number, maxDistance: number, opacity: number) => {particles.forEach(_(otherParticle, otherIndex) => {
-        if (currentIndex !== otherIndex) {
+        if (currentIndex != otherIndex) {
           const dx = particles[currentIndex].x - otherParticle.x,
           const dy = particles[currentIndex].y - otherParticle.y,
           const distance = Math.sqrt(dx * dx + dy * dy),
@@ -219,7 +214,7 @@ const drawConnections = (ctx: CanvasRenderingContext2D, particles: unknown[], cu
           if (distance < maxDistance) {
             const connectionOpacity = (maxDistance - distance) / maxDistance * 0.15 * opacity,            
             // Different connection styles based on particle types,
-if (particles[currentIndex].type === otherParticle.type) {
+if (particles[currentIndex].type = = otherParticle.type) {
               // Same type - stronger connection,
 ctx.globalAlpha = connectionOpacity * 1.5,
               ctx.strokeStyle = particles[currentIndex].color,
@@ -235,7 +230,6 @@ ctx.globalAlpha = connectionOpacity * 0.7,
             ctx.lineTo(otherParticle.x, otherParticle.y),
             ctx.stroke()
           }
-        }
       })
     },
 
@@ -257,7 +251,6 @@ const handleResize = () => {
       if (animationFrameId) {
         cancelAnimationFrame(animationFrameId)
       }
-    }
   }, []),
 
   return (
@@ -268,88 +261,87 @@ const handleResize = () => {
         {_/* Animated gradient overlay */}
         <motion.div,
 className=&quot;absolute inset-0 opacity-30&quot;
-          animate={{
+          animate={
             background: [
               'radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.3) 0%, transparent 50%)radial-gradient(circle at 80% 20%, rgba(6, 182, 212, 0.3) 0%, transparent 50%)radial-gradient(circle at 40% 40%, rgba(236, 72, 153, 0.3) 0%, transparent 50%)radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.3) 0%, transparent 50%)'
             ]
-          }}
-          transition={{;
+          }
+          transition={;
             duration:8,;
             repeat:Infinity,;
             ease:'easeInOut';
-          }}
+          }
         />;
-        ;
         {/* Holographic grid effect */}
         <div className=&quot;absolute inset-0 opacity-20&quot;>
-          <div className=&quot;h-full w-full&quot; style={{            backgroundImage: `
+          <div className=&quot;h-full w-full&quot; style={            backgroundImage: `
               linear-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(139, 92, 246, 0.1) 1px, transparent 1px)
-            `, backgroundSize: '50px 50px'}} />
+            `, backgroundSize: '50px 50px'} />
         </div>
 
         {_/* Canvas for animated particles */}
         <canvas,
 ref={canvasRef}
           className=&quot;absolute inset-0 w-full h-full&quot;
-          style={{ filter: 'blur(0.5px)' }}        />
+          style={ filter: 'blur(0.5px)' }        />
 
         {_/* Floating neon orbs */}
         <motion.div,
 className=&quot;absolute top-1/4 left-1/4 w-32 h-32 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 opacity-20&quot;
-          animate={{
+          animate={
             scale: [1, 1.2, 1],
             opacity: [0.2, 0.4, 0.2],
             rotate: [0, 180, 360]
-          }}
-          transition={{;
+          }
+          transition={;
             duration:6,;
             repeat:Infinity,;
             ease:'easeInOut';
-          }}
+          }
         />
-        
+
         <motion.div,
 className=&quot;absolute top-3/4 right-1/4 w-24 h-24 rounded-full bg-gradient-to-r from-purple-400 to-pink-500 opacity-20&quot;
-          animate={{
+          animate={
             scale: [1, 1.3, 1],
             opacity: [0.2, 0.5, 0.2],
             rotate: [360, 180, 0]
-          }}
-          transition={{;
+          }
+          transition={;
             duration:8,;
             repeat:Infinity,;
             ease:'easeInOut';
-          }}
+          }
         />;
-;
+
         {/* Quantum energy waves */}
         <div className=&quot;absolute inset-0 overflow-hidden&quot;>
           <motion.div,
 className=&quot;absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent&quot;
-            animate={{
+            animate={
               y: [-100, 100, -100],
               opacity: [0, 0.3, 0]
-            }}
-            transition={{;
+            }
+            transition={;
               duration:4,;
               repeat:Infinity,;
               ease:'easeInOut';
-            }}
+            }
           />
           <motion.div,
 className=&quot;absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent&quot;
-            animate={{
+            animate={
               y: [100, -100, 100],
               opacity: [0, 0.3, 0]
-            }}
-            transition={{
+            }
+            transition={
               duration: 6,
               repeat: Infinity,
               ease: 'easeInOut'
-            }}          />
+            }          />
         </div>
       </div>
-      
+
       {_/* Render children */}
       {children}
     </>

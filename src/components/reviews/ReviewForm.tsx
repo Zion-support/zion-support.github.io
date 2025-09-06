@@ -41,7 +41,7 @@ interface ReviewFormValues {
   timeliness_rating?: number;
   would_work_again?: boolean;
   is_anonymous?: boolean;
-}
+
 interface ReviewFormProps {
 
   projectId: string
@@ -51,7 +51,7 @@ interface ReviewFormProps {
   }
 
   )
-}
+
 interface ReviewFormProps {
   project_id: string,
   reviewee_id: string,
@@ -59,4 +59,3 @@ interface ReviewFormProps {
   on_submit: (data: any) => Promise < boolean>,
   }
   );
-}

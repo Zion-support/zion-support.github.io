@@ -9,7 +9,7 @@ interface ButtonProps {
   className?: string
   disabled?: boolean
   style?: React.CSSProperties
-}
+
 const Button: React.FC<ButtonProps> = ({
   children,
   href,
@@ -20,7 +20,7 @@ const Button: React.FC<ButtonProps> = ({
   class_name = "",
   disabled = false,
   style
-}) => {
+) => {
   const baseClasses = "px-4 py-2 rounded-md font-medium transition-colors duration-200"
   const sizeClasses = {
     sm: "px-3 py-1.5 text-sm",
@@ -56,7 +56,7 @@ const Button: React.FC<ButtonProps> = ({
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <Link href={href} className={classes} style={style}>;
         {content}
@@ -72,13 +72,13 @@ if ( {) {
       {content}
     </button>
   )
-}
+
 export { Button }
 export default Button
       style={style}
     >;
       {content}
     </button>);
-}
+
 export { Button }
 export default Button;

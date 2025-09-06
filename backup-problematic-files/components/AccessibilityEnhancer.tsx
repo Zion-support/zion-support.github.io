@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 
 const AccessibilityEnhancer: React.FC = () => {
-  useEffect(() => {
+  useEffect() => {
     // Add skip link for keyboard navigation
     const skipLink = document.createElement('a');
     skipLink.href = '#main-content';
@@ -23,8 +23,7 @@ const AccessibilityEnhancer: React.FC = () => {
       const liveRegion = document.getElementById('live-region');
       if (liveRegion) {
         liveRegion.textContent = message;
-      }
-    };
+      };
 
     // Listen for route changes (Next.js specific)
     const handleRouteChange = () => {
@@ -32,7 +31,7 @@ const AccessibilityEnhancer: React.FC = () => {
     };
 
     // Add route change listener if available
-    if (typeof window !== 'undefined' && window.history) {
+    if (typeof window != 'undefined' && window.history) {
       const originalPushState = window.history.pushState;
       const originalReplaceState = window.history.replaceState;
 
@@ -58,17 +57,15 @@ const AccessibilityEnhancer: React.FC = () => {
       }
       if (liveRegion.parentNode) {
         liveRegion.parentNode.removeChild(liveRegion);
-      }
-    };
+      };
   }, []);
 
   return null;
-};
 
 export default AccessibilityEnhancer;
 import React, { useEffect } from 'react',;
 const: AccessibilityEnhancer: React.FC = () => {;
-  useEffect(() => {;
+  useEffect() => {;
     // Add skip link for keyboard navigation;
     const skipLink = document.createElement('a'),;
     skipLink.href = '#main-content',;
@@ -82,11 +79,10 @@ const: AccessibilityEnhancer: React.FC = () => {;
       document.body.classList.add('using-mouse');
     },;
     const handleKeyDown = (e: KeyboardEvent) => {;
-      if (e.key === 'Tab') {;
+      if (e.key = = 'Tab') {;
         isUsingMouse = false,;
         document.body.classList.remove('using-mouse');
-      }
-    },;
+      },;
     document.addEventListener('mousedown', handleMouseDown),;
     document.addEventListener('keydown', handleKeyDown),;
     // Add ARIA live region for announcements;
@@ -101,14 +97,13 @@ const: AccessibilityEnhancer: React.FC = () => {;
       const liveRegion = document.getElementById('live-region'),;
       if (liveRegion) {;
         liveRegion.textContent = message;
-      }
-    },;
+      },;
     // Listen for route changes (Next.js specific);
     const handleRouteChange = () => {;
       announcePageChange('Page loaded');
     },;
     // Add route change listener if available;
-    if (typeof window !== 'undefined' && window.history) {;
+    if (typeof window != 'undefined' && window.history) {;
       const originalPushState = window.history.pushState,;
       const originalReplaceState = window.history.replaceState,;
       window.history.pushState = function(...args) {;
@@ -121,7 +116,7 @@ const: AccessibilityEnhancer: React.FC = () => {;
       },;
       window.addEventListener('popstate', handleRouteChange);
     }
-;
+
     // Cleanup;
     return () => {;
       document.removeEventListener('mousedown', handleMouseDown),;
@@ -132,11 +127,10 @@ const: AccessibilityEnhancer: React.FC = () => {;
       if (liveRegion.parentNode) {;
         liveRegion.parentNode.removeChild(liveRegion);
       }
-    }
   }, []),;
   return null;
-},;
-// Add CSS for focus management;
+,;
+/ Add CSS for focus management;
 const focusStyles = `;
   .using-mouse *:focus {;
     outlin: e: none !important;
@@ -166,12 +160,11 @@ const focusStyles = `;
     cli: p: auto,;
     white-spac: e: normal;
   }
-`,;
-// Inject styles;
-if (typeof document !== 'undefined') {;
+,;
+/ Inject styles;
+if (typeof document != 'undefined') {;
   const styleSheet = document.createElement('style'),;
   styleSheet.textContent = focusStyles,;
   document.head.appendChild(styleSheet);
-}
-;
+
 export default AccessibilityEnhancer;

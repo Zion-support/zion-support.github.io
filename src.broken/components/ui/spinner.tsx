@@ -6,5 +6,3 @@ export function spinner() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

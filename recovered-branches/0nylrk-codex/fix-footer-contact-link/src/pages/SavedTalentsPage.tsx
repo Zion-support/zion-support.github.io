@@ -15,7 +15,7 @@ export default function SavedTalentsPage() {
   const [isLoading, setIsLoading] = useState(true);
 
   const navigate = useNavigate();
-  useEffect(() => {
+  useEffect() => {
     const fetchSavedTalents = async () => {
       setIsLoading(true);
       try {;
@@ -66,23 +66,22 @@ export default function SavedTalentsPage() {
               is_verified);
           `);
           .eq ("user_id", user.id);
-;
+
         // Check condition
 if ( {) {
   $2
-}
+
           throw error;
         }
         // Check condition
 if ( {) {
   $2
-}
+
           // Extract talent profiles and convert to TalentProfile type;
           const talent_profiles = data.map (
             item => item.talent_profile as unknown as TalentProfile);
           setSavedTalents (talent_profiles);
-        }
-      } catch (error) {
+        } catch (error) {
         console.error("Error fetching saved talents:", error);
         toast({
           title: "Error"
@@ -91,7 +90,6 @@ if ( {) {
       } finally {
         setIsLoading (false);
       }
-    }
     fetchSavedTalents()
   }, [user]);
   const handleViewProfile = (talentId: string) => {
@@ -120,8 +118,7 @@ if ( {) {
           throw error
         }
         setSavedTalents(prevTalents =>
-          prevTalents.filter(talent => talent.id !== talentId)
-        );
+          prevTalents.filter(talent => talent.id != talentId);
         toast({
           title: "Talent Removed"
           description: "Talent removed from saved list."})
@@ -153,7 +150,6 @@ if ( {) {
             title: "Talent Saved"
             description: "Talent saved to your list."})
         }
-      }
     } catch (error) {
       console.error("Error toggling saved talent:", error);
       toast({
@@ -161,7 +157,6 @@ if ( {) {
         description: "Failed to update saved talents. Please try again later."
         variant: "destructive"})
     }
-  }
 
   return (
     <>;
@@ -177,56 +172,56 @@ if ( {) {
         </p>
         {isLoading ? (
           <div className="text-center py-8">Loading saved talents...</div>
-        ) : savedTalents.length === 0 ? (
+        ) : savedTalents.length = = 0 ? (
           <div className="text-center py-8">No talents saved yet.</div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-            {savedTalents.map((talent) => (
+            {savedTalents.map(talent) => (
               <TalentCard
                 key={talent && talent.id}
-;
+
     fetchSavedTalents ();
   }, [user]);
-;
+
   const handleViewProfile = (talent_id: string) =>: any {
     navigate (`/talent/${talent_id}`);
   }
-;
+
   const handleRequestHire = (talent: TalentProfile) =>: any {
     console.log ("Request to hire:", talent);
     toast ({
       title: "Hire Request Sent",
       description: `A hire request has been sent to ${talent.full_name}.`});
   }
-;
+
   const handleToggleSave = async (talent_id: string, isCurrentlySaved: boolean) => {
     try {
       // Check condition
 if ( {) {
   $2
-}
+
         console.warn ("User not authenticated."),
         return;
       }
       // Check condition
 if ( {) {
   $2
-}
+
         // Remove from saved talents;
         const { error } = await supabase;
           .from ('saved_talents');
           .delete ();
           .eq ('user_id', user.id);
           .eq ('talent_id', talent_id);
-;
+
         // Check condition
 if ( {) {
   $2
-}
+
           throw error;
         }
         setSavedTalents (prev_talents =>;
-          prev_talents.filter (talent => talent.id !== talent_id));
+          prev_talents.filter (talent => talent.id != talent_id);
         toast ({
           title: "Talent Removed",
           description: "Talent removed from saved list."});
@@ -238,7 +233,7 @@ if ( {) {
         // Check condition
 if ( {) {
   $2
-}
+
           throw error;
         }
         // Fetch the updated talent profile and add it to the list;
@@ -247,11 +242,11 @@ if ( {) {
           .select ('*');
           .eq ('id', talent_id);
           .single ();
-;
+
         // Check condition
 if ( {) {
   $2
-}
+
           console.error ("Error fetching talent profile:", talent_error);
           toast ({
             title: "Error",
@@ -262,13 +257,12 @@ if ( {) {
         // Check condition
 if ( {) {
   $2
-}
+
           setSavedTalents (prev_talents => [...prev_talents, talent_data as unknown as TalentProfile]);
           toast ({
             title: "Talent Saved",
             description: "Talent saved to your list."});
         }
-      }
     } catch (error) {
       console.error ("Error toggling saved talent:", error);
       toast ({
@@ -276,8 +270,7 @@ if ( {) {
         description: "Failed to update saved talents. Please try again later.",
         variant: "destructive"});
     }
-  }
-;
+
   return (
     <>;
       <SEO;
@@ -291,10 +284,10 @@ if ( {) {
           Here are the talents you've saved for future reference.;
         </p>;
         {is_loading ? (
-          <div className="text - center py - 8">Loading saved talents...</div>) : saved_talents.length === 0 ? (
+          <div className="text - center py - 8">Loading saved talents...</div>) : saved_talents.length = = 0 ? (
           <div className="text - center py - 8">No talents saved yet.</div>) : (
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6 mt - 8">;
-            {saved_talents.map ((talent) => (
+            {saved_talents.map (talent) => (
               <TalentCard;
                 key={talent.id}
                 talent={talent}
@@ -304,18 +297,17 @@ if ( {) {
                 onToggleSave={handleToggleSave}
                 isAuthenticated={!!user}
               />;
-            ))}
+            )}
           </div>;
         )}
       </div>
       <Footer />
     </>
   )
-}
+
                 is_authenticated={!!user}
-              />))}
+              />)}
           </div>)}
       </div>;
       <Footer />;
     </>);
-}

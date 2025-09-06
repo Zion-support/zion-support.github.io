@@ -1,6 +1,6 @@
 
 import React from 'react',;
-// Use the centralized icon wrapper to avoid missing icons;
+/ Use the centralized icon wrapper to avoid missing icons;
 import { Check, Trash2, ChevronRight } from '@/components/icons',;
 import { Button } from '@/components/ui/button',;
 import { Badge } from '@/components/ui/badge',;
@@ -9,7 +9,7 @@ import { cn } from '@/lib/utils',;
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip',;
 import { useNavigate } from 'react-router-dom',;
 import { Notification, NotificationType } from '@/context/notifications',;
-;
+
 export const getTypeIcon = (type:NotificationType) => {;
   switch (type) {;
     case 'message':;
@@ -27,21 +27,20 @@ export const getTypeIcon = (type:NotificationType) => {;
     default:;
       return <span className="text-gray-500"></span>;
   }
-},;
-;
+,;
+
 interface NotificationItemProps {;
   notification:Notification,;
   onMarkAsRead:(id:string) => Promise<void>,;
   onDismiss:(id:string) => Promise<void>;
-}
-;
+
 export const NotificationItem:React.FC<NotificationItemProps> = ({ ;
   notification, ;
   onMarkAsRead, ;
   onDismiss ;
-}) => {;
+) => {;
   const navigate = useNavigate(),;
-;
+
   const handleClick = () => {;
     if (!notification.read) {;
       onMarkAsRead(notification.id),;
@@ -49,9 +48,8 @@ export const NotificationItem:React.FC<NotificationItemProps> = ({ ;
     // If there's an action URL, navigate to it;
     if (notification.action_url) {;
       navigate(notification.action_url),;
-    }
-  },;
-;
+    },;
+
   return (;
     <div ;
       className={cn(;
@@ -73,7 +71,6 @@ export const NotificationItem:React.FC<NotificationItemProps> = ({ ;
             <p className="text-xs text-zion-slate">;
               {notification.created_at ? formatDistanceToNow(new Date(notification.created_at), { addSuffix:true }) :"Just now"}
             </p>;
-            ;
             {notification.action_url && notification.action_text && (;
               <Button;
                 variant="link";
@@ -87,7 +84,6 @@ export const NotificationItem:React.FC<NotificationItemProps> = ({ ;
           </div>;
         </div>;
       </div>;
-      ;
       {/* Action buttons that appear on hover */}
       <div className="absolute right-2 top-2 opacity-0 group-hover:opacity-100 transition-opacity flex gap-1">;
         <TooltipProvider>;
@@ -100,7 +96,7 @@ export const NotificationItem:React.FC<NotificationItemProps> = ({ ;
                 onClick={(e) => {;
                   e.stopPropagation(),;
                   onMarkAsRead(notification.id);
-                }}
+                }
               >;
                 <Check className="h-3.5 w-3.5 text-green-400" />;
               </Button>;
@@ -110,7 +106,6 @@ export const NotificationItem:React.FC<NotificationItemProps> = ({ ;
             </TooltipContent>;
           </Tooltip>;
         </TooltipProvider>;
-        ;
         <TooltipProvider>;
           <Tooltip>;
             <TooltipTrigger asChild>;
@@ -121,7 +116,7 @@ export const NotificationItem:React.FC<NotificationItemProps> = ({ ;
                 onClick={(e) => {;
                   e.stopPropagation(),;
                   onDismiss(notification.id),;
-                }}
+                }
               >;
                 <Trash2 className="h-3.5 w-3.5 text-red-400" />;
               </Button>;
@@ -134,31 +129,31 @@ export const NotificationItem:React.FC<NotificationItemProps> = ({ ;
       </div>;
     </div>;
   ),;
-},; import React from 'react';
-//Use the centralized icon wrapper to avoid missing icons export const getTypeIcon = (type: NotificationType) => {
+,; import React from 'react';
+/Use the centralized icon wrapper to avoid missing icons export const getTypeIcon = (type: NotificationType) => {
   switch (type) {
   case 'message': 
-}
-};
+
+;
 interface NotificationItemProps {
   notification: Notification;
 onMarkAsRead: (id: string) => Promise<void>;
 onDismiss: (id: string) => Promise<void> 
-}export const NotificationItem: React.FC<NotificationItemProps> = ({
+export const NotificationItem: React.FC<NotificationItemProps> = ({
   notification;
 onMarkAsRead;
 onDismiss 
-}) => {
+) => {
   const navigate = useNavigate ();
 if (!notification.read) {
   ) 
-}> <div className="flex items-start gap-2"> <div className="text-xl"> {
+> <div className="flex items-start gap-2"> <div className="text-xl"> {
   getTypeIcon (notification.type) 
-}</div> <div className="flex-1"> <div className="flex justify-between items-center mb-1"> </p> {
+</div> <div className="flex-1"> <div className="flex justify-between items-center mb-1"> </p> {
   notification.action url && notification.action text && (<Button variant="link" size="sm" className="text-zion-cyan p-0 h-auto" onClick= {
   handleClick 
-}> {
+> {
   notification.action text 
-}<ChevronRight className="h-3 w-3 ml-1" /> </Button>) 
-}</div> </div> </div> ghost"size=" icon"className="h-6 w-6"> <Check className="h-3.5 w-3.5 text-green-400"/> </Button> </TooltipTrigger> <TooltipContent> <p>Mark as read</p> </TooltipContent> </Tooltip> </TooltipProvider> <TooltipProvider> <Tooltip> <TooltipTrigger asChild> <Button variant=" ghost"size=" icon"className="h-6 w-6"> <Trash2 className="h-3.5 w-3.5 text-red-400" /> </Button> </TooltipTrigger> <TooltipContent> <p>Dismiss</p> </TooltipContent> </Tooltip> </TooltipProvider> </div> </div>) 
-};
+<ChevronRight className="h-3 w-3 ml-1" /> </Button>) 
+</div> </div> </div> ghost"size=" icon"className="h-6 w-6"> <Check className="h-3.5 w-3.5 text-green-400"/> </Button> </TooltipTrigger> <TooltipContent> <p>Mark as read</p> </TooltipContent> </Tooltip> </TooltipProvider> <TooltipProvider> <Tooltip> <TooltipTrigger asChild> <Button variant=" ghost"size=" icon"className="h-6 w-6"> <Trash2 className="h-3.5 w-3.5 text-red-400" /> </Button> </TooltipTrigger> <TooltipContent> <p>Dismiss</p> </TooltipContent> </Tooltip> </TooltipProvider> </div> </div>) 
+;

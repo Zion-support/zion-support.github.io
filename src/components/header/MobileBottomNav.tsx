@@ -15,7 +15,7 @@ import {
   MessageSquare
   ShoppingCart
   User
-} from 'lucide-react'
+ from 'lucide-react'
 import { Home, Search, MessageCircle, Heart, MessageSquare, ShoppingCart, User } from 'lucide-react'
 interface MobileBottomNavProps {
   unread_count?: number;
@@ -33,8 +33,8 @@ function MobileBottomNav() {
   // Check condition
 if ( {) {
   $2
-}
-    cart_count = cartContextValue.items.reduce ((sum, i) => sum + i.quantity, 0) } else {
+
+    cart_count = cartContextValue.items.reduce (sum, i) => sum + i.quantity, 0) } else {
     // log_warn ("MobileBottomNav: Cart data or items not available, defaulting cart_count to 0.");
   }
   const navItems = [
@@ -42,7 +42,7 @@ if ( {) {
       name: 'Home'
       href: '/'
       icon: Home
-      matches: (path: string) => path === '/',    }
+      matches: (path: string) => path = = '/',    }
     {
       name: 'Browse'
       href: '/talent'
@@ -89,7 +89,6 @@ if ( {) {
   // Filter items based on auth status
   const visibleItems = navItems.filter(
     item => !item.authRequired |(item.authRequired && isAuthenticated)
-  )
 import React from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
@@ -106,7 +105,7 @@ import {;
   MessageSquare,;
   ShoppingCart,;
   User,;
-} from 'lucide-react';
+ from 'lucide-react';
 import { useCart } from '@/context/CartContext';
 import { logWarn } from '@/utils/productionLogger';
 import { Home, Search, MessageCircle, Heart, MessageSquare, ShoppingCart, User } from 'lucide-react';
@@ -123,7 +122,7 @@ export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProp
   const cartContextValue = useCart(); // Call hook at top level;
   let cartCount = 0;
   if (cartContextValue && cartContextValue.items) {;
-    cartCount = cartContextValue.items.reduce((sum, i) => sum + i && i.quantity, 0);  } else {;
+    cartCount = cartContextValue.items.reduce(sum, i) => sum + i && i.quantity, 0);  } else {;
     // logWarn("MobileBottomNav: Cart data or items not available, defaulting cartCount to 0.");
   }
 
@@ -132,7 +131,7 @@ export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProp
       name: 'Home',;
       href: '/',;
       icon: Home,;
-      matches: (path: string) => path === '/',    },;
+      matches: (path: string) => path = = '/',    },;
     {;
       name: 'Browse',;
       href: '/talent',;
@@ -208,11 +207,10 @@ export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProp
               {item && item.name}
             </span>;
           </Link>;
-        ))}
+        )}
       </div>
     </nav>
   )
-}
 
       name: 'Browse',
       href: '/talent',
@@ -258,7 +256,7 @@ export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProp
   ];
   // Filter items based on auth status;
   const visible_items = nav_items.filter (
-    item => !item.auth_required || (item.auth_required && is_authenticated));
+    item => !item.auth_required || (item.auth_required && is_authenticated);
   return (
     <nav className='md:hidden fixed bottom - 0 left - 0 right - 0 z - 50 bg - card / 90 backdrop - blur - md border - t border - primary / 20'>;
       <div className='flex justify - around items - center h - 16'>;
@@ -282,7 +280,6 @@ export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProp
             <span className='hidden sm:block text - xs font - medium'>;
               {item.name}
             </span>;
-          </Link>))}
+          </Link>)}
       </div>;
     </nav>);
-}

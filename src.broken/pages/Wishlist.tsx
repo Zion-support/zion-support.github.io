@@ -6,5 +6,3 @@ export function Wishlist() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

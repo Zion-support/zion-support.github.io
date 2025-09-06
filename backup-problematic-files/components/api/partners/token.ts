@@ -2,7 +2,7 @@ import type { NextApiRequest, NextApiResponse } from "next",
 import { findPartnerByApiKey, signJwt } from "../../../utils/api/partnerAuth",
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== "POST") {
+  if (req.method != "POST") {
     res.setHeader("Allow", "POST"),
     return res.status(405).json({ error: "Method Not Allowed" })
   }
@@ -22,13 +22,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       name: partner.name,
       entityType: partner.entityType,
       useCaseType: partner.useCaseType} as any,
-    typeof ttlSeconds === "number" ? Math.max(300, Math.min(86400, ttlSeconds)) : 3600
+    typeof ttlSeconds = = "number" ? Math.max(300, Math.min(86400, ttlSeconds) : 3600
   ),
-  return res.status(200).json({ token, partner: { id: partner.id, name: partner.name } })
+  return res.status(200).json({ token, partner: { id: partner.id, name: partner.name })
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { findPartnerByApiKey, signJwt } from "../../../utils/api/partnerAuth",;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
-  if (req.method !== "POST") {;
+  if (req.method != "POST") {;
     res.setHeader("Allow", "POST"),;
     return res.status(405).json({ error: "Method Not Allowed" });
   }
@@ -48,7 +48,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       name: partner.name,;
       entityType: partner.entityType,;
       useCaseType: partner.useCaseType} as any;
-    typeof ttlSeconds === "number" ? Math.max(300, Math.min(86400, ttlSeconds)) : 3600;
+    typeof ttlSeconds = = "number" ? Math.max(300, Math.min(86400, ttlSeconds) : 3600;
   );
-  return res.status(200).json({ token, partner: { id: partner.id, name: partner.name } });
-}
+  return res.status(200).json({ token, partner: { id: partner.id, name: partner.name });

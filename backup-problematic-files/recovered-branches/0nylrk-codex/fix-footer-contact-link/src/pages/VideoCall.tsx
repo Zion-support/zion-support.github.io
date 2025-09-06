@@ -7,7 +7,7 @@ import { SEO } from '@/components/SEO',;
 import { VideoCallRoom } from '@/components/video/VideoCallRoom',;
 import { Button } from '@/components/ui/button',;
 import { toast } from 'sonner',;
-;
+
 export default function VideoCall() {;
   // useParams is typed as `any` in this environment due to missing type;
   // definitions, so avoid passing a type argument to prevent TS2347.;
@@ -23,7 +23,7 @@ export default function VideoCall() {;
     isVideoEnabled?:boolean,;
     isScreenSharing?:boolean,;
     isHost?:boolean;
-  }>>([;
+  }>([;
     {;
       id:'user-1',;
       name:'You',;
@@ -31,11 +31,11 @@ export default function VideoCall() {;
       isMuted:false;
     }
   ]),;
-;
+
   const handleJoinCall = () => {;
     setIsJoining(true),;
     // Simulate connection delay;
-    setTimeout(() => {;
+    setTimeout() => {;
       setHasJoined(true),;
       setIsJoining(false),;
       toast.success("Call joined", {;
@@ -43,19 +43,17 @@ export default function VideoCall() {;
       }),;
     }, 1500),;
   },;
-;
+
   const handleLeaveCall = () => {;
     setHasJoined(false),;
     toast.info("Call ended", {;
       description:"You have left the meeting";
     }),;
-    ;
     // Navigate back after a short delay;
-    setTimeout(() => {;
+    setTimeout() => {;
       navigate(-1),;
     }, 1500),;
   },;
-  ;
   const simulateUserJoining = () => {;
     // This is just for demo purposes - in a real app, this would be handled by the video call service;
     const mockUsers = [;
@@ -63,15 +61,12 @@ export default function VideoCall() {;
       { id:'user-3', name:'Taylor Kim', isVideoEnabled:false, isMuted:true },;
       { id:'user-4', name:'Jordan Smith', isVideoEnabled:true, isMuted:false, isScreenSharing:true }
     ],;
-    ;
     const randomUser = mockUsers[Math.floor(Math.random() * mockUsers.length)],;
-    ;
-    if (!participants.find(p => p.id === randomUser.id)) {;
+    if (!participants.find(p => p.id = = randomUser.id) {;
       setParticipants(prev => [...prev, randomUser]),;
       toast(`${randomUser.name} joined the call`),;
-    }
-  },;
-;
+    },;
+
   return (;
     <>;
       <SEO title={`Video Call - Room ${roomId}`} description="Zion video call" />;
@@ -96,7 +91,6 @@ export default function VideoCall() {;
               roomId={roomId || ''} ;              participants={participants}
               onLeave={handleLeaveCall} ;
             />;
-            ;
             {/* This button is just for demo/testing purposes */}
             <div className="flex justify-center mt-4">;
               <Button variant="outline" onClick={simulateUserJoining} className="text-sm">;
@@ -109,38 +103,37 @@ export default function VideoCall() {;
       <Footer />;
     </>;
   ),; roomId 
-}` 
-}) 
-}, 1500) 
-};
-//Navigate back after a short delay setTimeout ( () => {
+` 
+) 
+, 1500) 
+;
+/Navigate back after a short delay setTimeout () => {
   navigate (-1) 
-}, 1500) 
-};
+, 1500) 
+;
 const simulateUserJoining = () => {
   //This is just for demo purposes - in a real app, this would be handled by the video call service const mockUsers = [ {
   id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false 
-};
-{
+;
+
   id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true 
-};
-{
+;
+
   id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true 
-}];
+];
 const randomUser = mockUsers[Math.floor (Math.random () * mockUsers.length) ];
-if (!participants.find (p => p.id === randomUser.id) ) {
+if (!participants.find (p => p.id = = randomUser.id) {
   setParticipants (prev => [...prev, randomUser]);
 toast (`$ {
   randomUser.name 
-}joined the call`) 
-}
-};
+joined the call`) 
+
+;
 return (<> </Button> </div>) : (<div className="space-y-4" > <VideoCallRoom roomId= {
   roomId || '' 
-}participants= {
+participants= {
   participants 
-}onLeave= {
+onLeave= {
   handleLeaveCall 
-}/> Simulate user joining (demo only) </Button> </div> </div>) 
-}</main> <Footer /> </>) 
-}
+/> Simulate user joining (demo only) </Button> </div> </div>) 
+</main> <Footer /> </>) 

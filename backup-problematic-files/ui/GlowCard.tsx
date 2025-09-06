@@ -9,4 +9,3 @@ export default function GlowCard({ title, children }: { title: string, children:
       </div>
     </div>
   )
-}

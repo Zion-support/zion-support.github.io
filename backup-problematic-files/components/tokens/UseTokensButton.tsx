@@ -16,4 +16,3 @@ export default function UseTokensButton(_{_serviceId, _defaultType}: {_serviceId
       <UseTokensModal isOpen={_open} onClose={_() => setOpen(false)} serviceId={_serviceId} defaultType={_defaultType} />
     </>
   )
-}

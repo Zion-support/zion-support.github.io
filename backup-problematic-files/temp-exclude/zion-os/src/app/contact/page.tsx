@@ -12,7 +12,7 @@ export default function ContactPage() {;
           </p>;
         </div>;
       </section>;
-;
+
       {/* Contact Form & Info */}
       <section className="py-20">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
@@ -49,7 +49,7 @@ export default function ContactPage() {;
                     />;
                   </div>;
                 </div>;
-;
+
                 <div>;
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">;
                     Email Address *;
@@ -63,7 +63,7 @@ export default function ContactPage() {;
                     placeholder="Enter your email address";
                   />;
                 </div>;
-;
+
                 <div>;
                   <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">;
                     Company;
@@ -76,7 +76,7 @@ export default function ContactPage() {;
                     placeholder="Enter your company name";
                   />;
                 </div>;
-;
+
                 <div>;
                   <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">;
                     Phone Number;
@@ -89,7 +89,7 @@ export default function ContactPage() {;
                     placeholder="Enter your phone number";
                   />;
                 </div>;
-;
+
                 <div>;
                   <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">;
                     Service of Interest;
@@ -108,7 +108,7 @@ export default function ContactPage() {;
                     <option value="other">Other</option>;
                   </select>;
                 </div>;
-;
+
                 <div>;
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">;
                     Message *;
@@ -122,7 +122,7 @@ export default function ContactPage() {;
                     placeholder="Tell us about your project or inquiry...";
                   ></textarea>;
                 </div>;
-;
+
                 <button;
                   type="submit";
                   className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors";
@@ -131,7 +131,7 @@ export default function ContactPage() {;
                 </button>;
               </form>;
             </div>;
-;
+
             {/* Contact Information */}
             <div className="space-y-8">;
               <div>;
@@ -140,7 +140,7 @@ export default function ContactPage() {;
                   We're here to help you succeed. Reach out to us through any of the channels below.;
                 </p>;
               </div>;
-;
+
               <div className="space-y-6">;
                 <div className="flex items-start space-x-4">;
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">;
@@ -158,7 +158,7 @@ export default function ContactPage() {;
                     </p>;
                   </div>;
                 </div>;
-;
+
                 <div className="flex items-start space-x-4">;
                   <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">;
                     <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
@@ -174,7 +174,7 @@ export default function ContactPage() {;
                     </p>;
                   </div>;
                 </div>;
-;
+
                 <div className="flex items-start space-x-4">;
                   <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">;
                     <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
@@ -192,7 +192,7 @@ export default function ContactPage() {;
                   </div>;
                 </div>;
               </div>;
-;
+
               {/* Social Media Links */}
               <div>;
                 <h3 className="font-semibold text-gray-900 mb-4">Follow Us</h3>;
@@ -218,7 +218,7 @@ export default function ContactPage() {;
           </div>;
         </div>;
       </section>;
-;
+
       {/* FAQ Section */}
       <section className="py-20 bg-gray-50">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
@@ -230,7 +230,7 @@ export default function ContactPage() {;
               Get quick answers to common questions about our services and processes;
             </p>;
           </div>;
-;
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
             <div className="bg-white p-6 rounded-lg shadow-sm">;
               <h3 className="text-lg font-semibold text-gray-900 mb-3">;
@@ -240,7 +240,7 @@ export default function ContactPage() {;
                 Most projects can begin within 1-2 weeks of initial consultation. We'll work with your timeline to ensure smooth project initiation.;
               </p>;
             </div>;
-;
+
             <div className="bg-white p-6 rounded-lg shadow-sm">;
               <h3 className="text-lg font-semibold text-gray-900 mb-3">;
                 Do you offer ongoing support?;
@@ -249,7 +249,7 @@ export default function ContactPage() {;
                 Yes, we provide comprehensive ongoing support, monitoring, and optimization services to ensure your solutions continue to deliver value.;
               </p>;
             </div>;
-;
+
             <div className="bg-white p-6 rounded-lg shadow-sm">;
               <h3 className="text-lg font-semibold text-gray-900 mb-3">;
                 What industries do you serve?;
@@ -258,7 +258,7 @@ export default function ContactPage() {;
                 We serve clients across all industries including healthcare, finance, manufacturing, retail, and technology. Our solutions are industry-agnostic.;
               </p>;
             </div>;
-;
+
             <div className="bg-white p-6 rounded-lg shadow-sm">;
               <h3 className="text-lg font-semibold text-gray-900 mb-3">;
                 Can you work with existing systems?;
@@ -270,7 +270,7 @@ export default function ContactPage() {;
           </div>;
         </div>;
       </section>;
-;
+
       {/* CTA Section */}
       <section className="py-20 bg-blue-600 text-white">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
@@ -329,7 +329,7 @@ export default function ContactPage() {;
                     />
                   </div>
                 </div>
-                
+
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                     Email Address *
@@ -343,7 +343,7 @@ export default function ContactPage() {;
                     placeholder="Enter your email address"
                   />
                 </div>
-                
+
                 <div>
                   <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
                     Company
@@ -356,7 +356,7 @@ export default function ContactPage() {;
                     placeholder="Enter your company name"
                   />
                 </div>
-                
+
                 <div>
                   <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
                     Service of Interest
@@ -375,7 +375,7 @@ export default function ContactPage() {;
                     <option value="other">Other</option>
                   </select>
                 </div>
-                
+
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                     Message *
@@ -387,7 +387,7 @@ export default function ContactPage() {;
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent&quot;
                     placeholder=&quot;Tell us about your project or inquiry...&quot;
                   ></textarea>                </div>
-                
+
                 <button
                   type="submit"
                   className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
@@ -405,7 +405,7 @@ export default function ContactPage() {;
                   We&apos;re here to help you succeed. Reach out to us through any of the channels below.
                 </p>
               </div>
-              
+
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -421,7 +421,7 @@ export default function ContactPage() {;
                     </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
                     <svg className="w-6 h-6 text-green-600&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;>

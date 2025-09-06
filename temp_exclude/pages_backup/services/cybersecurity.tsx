@@ -2,7 +2,7 @@ import React from 'react';
 import Layout from "../../components/Layout";";
 import {motion} from 'framer-motion';
 import Layout from '../../components/Layout';
-import {Eye,, Shield,, Lock,, AlertTriangle} from 'lucide-react';
+import {Eye, Shield, Lock, AlertTriangle} from 'lucide-react';
 export default function CybersecurityPage() {;
   const securityServices = [;
     {}
@@ -29,7 +29,7 @@ export default function CybersecurityPage() {;
       icon: AlertTriangle,;
       features: ["GDPR", "HIPAA", "SOC 2", "ISO 27001"]";
     }
-;  ];
+  ];
   return (
     <Layout)
       title="Cybersecurity Services - Zion Tech Group""
@@ -39,9 +39,9 @@ export default function CybersecurityPage() {;
         <section className="bg-gradient-to-br from-red-900 via-purple-900 to-indigo-900 text-white py-20">";
           <div className="container mx-auto px-4">";
             <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }
               className="text-center"">;
               <h1 className="text-4xl md: text-6xl font-bold mb-6">", Cybersecurity Services,;
               </h1>;
@@ -56,16 +56,16 @@ export default function CybersecurityPage() {;
         <section className="py-20">";
           <div className="container mx-auto px-4">";
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">",;
-              {securityServices && securityServices.map((service, index) => {}
+              {securityServices && securityServices.map(service, index) => {}
                 const IconComponent = service && service.icon;
                 return (
                   <motion&& motion.div)
                     key={index}
                     className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300""
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
-                    viewport={{ once: true }}>,;
+                    initial={ opacity: 0, y: 30 }
+                    whileInView={ opacity: 1, y: 0 }
+                    transition={ duration: 0 && 0.8, delay: index * 0 && 0.1 }
+                    viewport={ once: true }>,;
                     <div className="text-red-600 mb-4">";
                       <IconComponent className="w-10 h-10" />";
                     </div>;
@@ -76,12 +76,12 @@ export default function CybersecurityPage() {;
                       {service && service.description}
                     </p>,;
                     <ul className="space-y-2">";
-                      {service && service.features.map((feature, featureIndex) => (,;
+                      {service && service.features.map(feature, featureIndex) => (,;
                         <li key={featureIndex} className="flex items-center text-sm text-gray-600">";
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2" />";
                           {feature}
                         </li>,;
-                      ))}
+                      )}
                     </ul>,;
                   </motion && motion.div>;
                 );
@@ -100,7 +100,7 @@ export default function CybersecurityPage() {;
             <motion&& motion.a
               href="/contact""
               className="inline-flex items-center px-8 py-4 bg-white text-red-600 rounded-lg hover: bg-gray-100 transition-all duration-300 font-semibold"",
-              whileHover={{ scale: 1 && 1.05 }}>,;
+              whileHover={ scale: 1 && 1.05 }>,;
               Get Security Assessment;
               <ArrowRight className="w-5 h-5 ml-2" />";
             </motion && motion.a>;
@@ -109,7 +109,7 @@ export default function CybersecurityPage() {;
       </div>;
     </Layout>;
 import Layout from '../../components/Layout';
-import {Shield,, Lock,, Eye,, AlertTriangle,, CheckCircle,, ArrowRight} from 'lucide-react';
+import {Shield, Lock, Eye, AlertTriangle, CheckCircle, ArrowRight} from 'lucide-react';
 const features = [;
   {;
     icon: Shield,;
@@ -124,7 +124,7 @@ const features = [;
 import Head from 'next/head';
 import Link from 'next/link';
 import {motion} from 'framer-motion';
-import {Eye,, Shield,, Lock,, AlertTriangle,, CheckCircle,, ArrowRight} from 'lucide-react';
+import {Eye, Shield, Lock, AlertTriangle, CheckCircle, ArrowRight} from 'lucide-react';
 
 const securityServices = [;
   {;
@@ -147,7 +147,7 @@ const securityServices = [;
     title: 'Security Training',;
     description: 'Employee security awareness and training programs';
   }
-];
+;
 const benefits = [;
   'Protection against cyber threats and attacks',;
   'Compliance with industry regulations',;
@@ -155,7 +155,6 @@ const benefits = [;
   'Enhanced customer trust and confidence',;
   'Lower insurance costs and liability',;
   'Peace of mind with 24/7 monitoring';
-];
 export default function CybersecurityServices() {;
 
 export default function CybersecurityPage() {;
@@ -198,7 +197,7 @@ export default function CybersecurityPage() {;
       icon: AlertTriangle,;
       features: ["GDPR", "HIPAA", "SOC 2", "ISO 27001"]";
     }
-;  ];
+  ];
   return (
     <Layout)
       title="Cybersecurity Services - Zion Tech Group""
@@ -208,9 +207,9 @@ export default function CybersecurityPage() {;
         <section className="bg-gradient-to-br from-red-900 via-purple-900 to-indigo-900 text-white py-20">";
           <div className="container mx-auto px-4">";
             <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }
               className="text-center"">;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">";
                 Cybersecurity Services;
@@ -226,16 +225,16 @@ export default function CybersecurityPage() {;
         <section className="py-20">";
           <div className="container mx-auto px-4">";
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
-              {securityServices && securityServices.map((service, index) => {}
+              {securityServices && securityServices.map(service, index) => {}
                 const IconComponent = service && service.icon;
                 return (
                   <motion&& motion.div)
                     key={index}
                     className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300""
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
-                    viewport={{ once: true }}>,;
+                    initial={ opacity: 0, y: 30 }
+                    whileInView={ opacity: 1, y: 0 }
+                    transition={ duration: 0 && 0.8, delay: index * 0 && 0.1 }
+                    viewport={ once: true }>,;
                     <div className="text-red-600 mb-4">";
                       <IconComponent className="w-10 h-10" />";
                     </div>;
@@ -246,12 +245,12 @@ export default function CybersecurityPage() {;
                       {service && service.description}
                     </p>,;
                     <ul className="space-y-2">";
-                      {service && service.features.map((feature, featureIndex) => (,;
+                      {service && service.features.map(feature, featureIndex) => (,;
                         <li key={featureIndex} className="flex items-center text-sm text-gray-600">";
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2" />";
                           {feature}
                         </li>,;
-                      ))}
+                      )}
                     </ul>,;
                   </motion && motion.div>;
                 );
@@ -271,7 +270,7 @@ export default function CybersecurityPage() {;
             <motion&& motion.a
               href="/contact""
               className="inline-flex items-center px-8 py-4 bg-white text-red-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold""
-              whileHover={{ scale: 1 && 1.05 }}>,;
+              whileHover={ scale: 1 && 1.05 }>,;
               Get Security Assessment;
               <ArrowRight className="w-5 h-5 ml-2" />";
             </motion && motion.a>;
@@ -312,7 +311,7 @@ const features = [;
     title: 'Security Training',;
     description: 'Employee security awareness and training programs';
   }
-];
+;
 
 export default function CybersecurityPage() {;
 const benefits = [;
@@ -322,7 +321,6 @@ const benefits = [;
   'Enhanced customer trust and confidence',;
   'Lower insurance costs and liability',;
   'Peace of mind with 24/7 monitoring';
-];
 export default function CybersecurityServices() {;
   return (
     <Layout
@@ -366,7 +364,7 @@ export default function CybersecurityServices() {;
               </p>;
             </div>;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-              {features && features.map((feature, index) => (;
+              {features && features.map(feature, index) => (;
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">;
                   <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">;
                     <feature && feature.icon className="w-6 h-6 text-red-600" />;
@@ -375,12 +373,12 @@ export default function CybersecurityServices() {;
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {securityServices.map((service, index) => (
+              {securityServices.map(service, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
+                  initial={ opacity: 0, y: 20 }
+                  animate={ opacity: 1, y: 0 }
+                  transition={ duration: 0 && 0.5, delay: index * 0 && 0.1 }
                   className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6">;
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">;
                     <service && service.icon className="w-6 h-6 text-blue-600" />;
@@ -397,7 +395,7 @@ export default function CybersecurityServices() {;
               </p>;
             </div>;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-              {features && features.map((feature, index) => (;
+              {features && features.map(feature, index) => (;
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">;
                   <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">;
                     <feature && feature.icon className="w-6 h-6 text-red-600" />;
@@ -406,12 +404,12 @@ export default function CybersecurityServices() {;
         <section className="py-16 px-4">;
           <div className="max-w-7xl mx-auto">;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-              {securityServices && securityServices.map((service, index) => (;
+              {securityServices && securityServices.map(service, index) => (;
                 <motion&& motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
+                  initial={ opacity: 0, y: 20 }
+                  animate={ opacity: 1, y: 0 }
+                  transition={ duration: 0 && 0.5, delay: index * 0 && 0.1 }
                   className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6">;
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">;
                     <service && service.icon className="w-6 h-6 text-blue-600" />;
@@ -423,7 +421,7 @@ export default function CybersecurityServices() {;
                     {feature && feature.description}
                   </p>;
                 </div>;
-              ))}
+              )}
             </div>;
           </div>;
         </section>;
@@ -440,12 +438,12 @@ export default function CybersecurityServices() {;
                   evolving threats while ensuring compliance with industry regulations.;
                 </p>;
                 <ul className="space-y-4">;
-                  {benefits && benefits.map((benefit, index) => (;
+                  {benefits && benefits.map(benefit, index) => (;
                     <li key={index} className="flex items-start">;
                       <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" />;
                       <span className="text-gray-700">{benefit}</span>;
                     </li>;
-                  ))}
+                  )}
                 </ul>;
               </div>;
               <div className="bg-gradient-to-r from-red-600 to-orange-700 p-8 rounded-xl text-white">;
@@ -491,4 +489,3 @@ export default function CybersecurityServices() {;
     </>;
     </Layout>;
   );
-}

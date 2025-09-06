@@ -9,4 +9,3 @@ export default function AuthIndexPage() {
       <p className=&quot;mt-2 text-gray-600 dark:text-gray-300&quot;>Authentication UI coming soon.</p>
     </div>
   )
-}

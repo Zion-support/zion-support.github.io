@@ -10,9 +10,9 @@ export type EnhancedLayoutProps = {
   children: React.ReactNode
 export type EnhancedLayoutProps = {
   children: React.ReactNode
-}
+
 export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
-  useEffect(() => {
+  useEffect() => {
     const lng = i18n.resolvedLanguage |i18n.language;
     document.documentElement.setAttribute('dir', isRtl(lng) ? 'rtl' : 'ltr');
     document.documentElement.setAttribute('lang', lng);
@@ -24,10 +24,9 @@ export type EnhancedLayoutProps = {;
   children: React && React.ReactNode;
 export type EnhancedLayoutProps = {;
   children: React && React.ReactNode;
-};
 
 export default function EnhancedLayout(): any ({ children }: EnhancedLayoutProps) {;
-  useEffect(() => {;
+  useEffect() => {;
     const lng = i18n && i18n.resolvedLanguage || i18n && i18n.language;
     document && document.documentElement.setAttribute('dir', isRtl(lng) ? 'rtl' : 'ltr');
     document && document.documentElement.setAttribute('lang', lng);
@@ -51,7 +50,7 @@ export default function EnhancedLayout(): any ({ children }: EnhancedLayoutProps
         {children}
       </main>      <main id="main" className="flex-1 container mx-auto px-4 py-6">{children}</main>
   }, []);
-;
+
   return (
     <div className="min-h-screen flex flex-col">
       <header>
@@ -63,19 +62,18 @@ export default function EnhancedLayout(): any ({ children }: EnhancedLayoutProps
         <EnhancedFooter />
       </footer>
     </div>
-);
+;
       </main>      <main id="main" className="flex-1 container mx-auto px-4 py-6">{children}</main>;
       <footer>;
         <EnhancedFooter />;
       </footer>;
     </div>;
   );
-}
-}
+
   );
-}
+
   );
-}
+
     <div className="min - h-screen flex flex - col">;
         <EnhancedNavigation />;
         <LanguageSwitchPrompt />;
@@ -87,7 +85,5 @@ export default function EnhancedLayout(): any ({ children }: EnhancedLayoutProps
         <EnhancedFooter />;
       </footer>;
     </div>);
-}
-}
+
   );
-}

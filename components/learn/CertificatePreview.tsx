@@ -3,39 +3,39 @@ import React from "react";
 export default function CertificatePreview({
   courseId
   userId = "demo-user"
-}: {
+: {
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React from "react";
 
 export default function CertificatePreview(): any ({;
   courseId,;
   userId = "demo-user",;
-}: {;
+: {;
   courseId: string;
   userId?: string;
-}) {;
+) {;
   const url = `/api/learn/certificates/${courseId}?userId=${encodeURIComponent(userId)}`;
 
   return (
@@ -71,9 +71,9 @@ export default function CertificatePreview(): any ({;
       </a>;
     </div>;
   );
-}
+
 import React from './react';
-;
+
 export default /**
  * CertificatePreview - Function description
  */
@@ -112,4 +112,3 @@ function CertificatePreview() {
         Download PDF;
       </a>;
     </div>);
-}

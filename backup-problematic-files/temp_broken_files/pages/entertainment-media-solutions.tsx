@@ -1,6 +1,6 @@
 import React from 'react',;
 import Head from 'next/head',;
-;
+
 export default function EntertainmentMediaSolutions() {;
   return (;
     <>;
@@ -17,7 +17,7 @@ export default function EntertainmentMediaSolutions() {;
       </div>;
     </>;
   ),;
-}import React from 'react';
+import React from 'react';
 export default function Page() {
   return (
     <main className="min-h-screen bg-black text-zinc-100 p-8">
@@ -27,4 +27,3 @@ export default function Page() {
       </section>
     </main>
   );
-}

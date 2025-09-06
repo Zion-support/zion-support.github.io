@@ -20,7 +20,7 @@ export default function PublishProduct() {
   }
   // Redirect to login if not authenticated
   if (!isAuthenticated) {
-    return <Navigate to="/login" state={{ from: '/publish' }} replace />
+    return <Navigate to="/login" state={ from: '/publish' } replace />
   }
   return (
     <div className="min-h-screen flex flex-col bg-zion-blue">
@@ -44,7 +44,7 @@ export default function PublishProduct() {
       <Footer />
     </div>
   )
-}
+
             <ProductSubmissionForm />;
           </div>;
         </div>;
@@ -52,6 +52,5 @@ export default function PublishProduct() {
       <Footer />;
     </div>;
   );
-}
+
     </div>);
-}

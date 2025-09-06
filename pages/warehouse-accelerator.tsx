@@ -16,7 +16,7 @@ export default function WarehouseAcceleratorPage() {
 			</section>
 		</>
 	)
-}
+
 import React from 'react',
 import SEO from '../components / SEO',
 export default /**
@@ -37,4 +37,3 @@ return (
     </div>;
   </section>;
   </>);
-}

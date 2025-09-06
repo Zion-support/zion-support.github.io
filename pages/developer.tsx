@@ -23,7 +23,7 @@ export default function DeveloperPage() {
       </div>
     </>
   )
-}
+
 import React from 'react',
 import Head from 'next / head',
 import UltraFuturisticBackground from '../components / ui / UltraFuturisticBackground',
@@ -49,4 +49,3 @@ function DeveloperPage() {
       </div>;
       </div>;
     </>);
-}

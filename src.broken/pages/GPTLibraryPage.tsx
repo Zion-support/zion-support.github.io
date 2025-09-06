@@ -6,5 +6,3 @@ export function GPTLibraryPage() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

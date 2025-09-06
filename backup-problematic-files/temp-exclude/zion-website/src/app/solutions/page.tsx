@@ -7,8 +7,8 @@ import { ;
   GlobeAltIcon,;
   UserGroupIcon,;
   CogIcon;
-} from '@heroicons/react/24/outline';
-;
+ from '@heroicons/react/24/outline';
+
 const flagshipSolutions = [;
   {;
     name:'AI Research Assistant',;
@@ -46,7 +46,7 @@ const flagshipSolutions = [;
       'Security ComplianceCost Optimization';
     ],;
     href:'/solutions/it-asset-management'}];
-;
+
 const industryApplications = [;
   {;
     name:'Healthcare',;
@@ -68,7 +68,7 @@ const industryApplications = [;
     description:'Customer behavior analysis, inventory management, and personalized marketing.',;
     icon:GlobeAltIcon,;
     useCases:['Customer AnalyticsInventory Management', 'Personalized MarketingDemand Forecasting']}];
-;
+
 const implementationSteps = [;
   {;
     step:'01',;
@@ -95,7 +95,7 @@ const implementationSteps = [;
     title:'Ongoing Support',;
     description:'Continuous monitoring, optimization, and support to ensure your AI solution delivers lasting value.',;
     icon:ShieldCheckIcon}];
-;
+
 export default function SolutionsPage() {;
   return (;
     <div className="bg-black">;
@@ -116,7 +116,7 @@ export default function SolutionsPage() {;
           </div>;
         </div>;
       </div>;
-;
+
       {/* Flagship Solutions */}
       <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8">;
         <div className="mx-auto max-w-2xl lg:text-center">;
@@ -130,7 +130,7 @@ export default function SolutionsPage() {;
         </div>;
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">;
           <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-2">;
-            {flagshipSolutions.map((solution) => (;
+            {flagshipSolutions.map(solution) => (;
               <div key={solution.name} className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover:scale-105">;
                 <div className="flex items-center gap-x-3 mb-4">;
                   <solution.icon className="h-8 w-8 text-blue-400" />;
@@ -138,12 +138,12 @@ export default function SolutionsPage() {;
                 </div>;
                 <p className="text-gray-300 mb-6">{solution.description}</p>;
                 <div className="space-y-3 mb-6">;
-                  {solution.features.map((feature) => (;
+                  {solution.features.map(feature) => (;
                     <div key={feature} className="flex items-center gap-2">;
                       <div className="h-2 w-2 bg-blue-400 rounded-full"></div>;
                       <span className="text-sm text-gray-300">{feature}</span>;
                     </div>;
-                  ))}
+                  )}
                 </div>;
                 <a;
                   href={solution.href}
@@ -152,11 +152,11 @@ export default function SolutionsPage() {;
                   Learn more <span aria-hidden="true"></span>;
                 </a>;
               </div>;
-            ))}
+            )}
           </div>;
         </div>;
       </div>;
-;
+
       {/* Industry Applications */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">;
         <div className="mx-auto max-w-2xl lg:text-center">;
@@ -171,7 +171,7 @@ export default function SolutionsPage() {;
         </div>;
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">;
           <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">;
-            {industryApplications.map((industry) => (;
+            {industryApplications.map(industry) => (;
               <div key={industry.name} className="flex flex-col group">;
                 <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">;
                   <industry.icon className="h-5 w-5 flex-none text-blue-400" aria-hidden="true" />;
@@ -180,20 +180,20 @@ export default function SolutionsPage() {;
                 <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">;
                   <p className="flex-auto mb-4">{industry.description}</p>;
                   <div className="space-y-2">;
-                    {industry.useCases.map((useCase) => (;
+                    {industry.useCases.map(useCase) => (;
                       <div key={useCase} className="flex items-center gap-2">;
                         <div className="h-1.5 w-1.5 bg-blue-400 rounded-full"></div>;
                         <span className="text-sm text-gray-400">{useCase}</span>;
                       </div>;
-                    ))}
+                    )}
                   </div>;
                 </dd>;
               </div>;
-            ))}
+            )}
           </dl>;
         </div>;
       </div>;
-;
+
       {/* Implementation Process */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">;
         <div className="mx-auto max-w-2xl lg:text-center">;
@@ -208,7 +208,7 @@ export default function SolutionsPage() {;
         </div>;
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">;
           <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-5">;
-            {implementationSteps.map((step, index) => (;
+            {implementationSteps.map(step, index) => (;
               <div key={step.step} className="relative">;
                 {index < implementationSteps.length - 1 && (;
                   <div className="hidden lg:block absolute top-8 left-8 w-full h-0.5 bg-gray-700"></div>;
@@ -222,11 +222,11 @@ export default function SolutionsPage() {;
                   <p className="text-sm text-gray-300">{step.description}</p>;
                 </div>;
               </div>;
-            ))}
+            )}
           </div>;
         </div>;
       </div>;
-;
+
       {/* CTA section */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">;
         <div className="mx-auto max-w-2xl text-center">;

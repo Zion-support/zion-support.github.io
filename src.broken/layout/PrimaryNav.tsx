@@ -6,5 +6,3 @@ export function PrimaryNav() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

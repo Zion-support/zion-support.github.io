@@ -6,7 +6,7 @@ import {
   CardTitle
   CardDescription
   CardContent
-} from "@/components/ui/card";
+ from "@/components/ui/card";
 import { EmptyMatchesCard } from "@/components/jobs/EmptyMatchesCard";
 import { JobMatchCard } from "@/components/jobs/JobMatchCard";
 
@@ -14,7 +14,7 @@ import { useJobMatches } from "@/hooks/useJobMatches";
 import { Skeleton } from "@/components/ui/skeleton";
 interface JobMatchesProps {;
   jobId: string;
-}
+
 export function JobMatches({ jobId }: JobMatchesProps) {
 
   const { matches, isLoading, isProcessing, triggerAIMatching } =
@@ -32,7 +32,7 @@ export function JobMatches({ jobId }: JobMatchesProps) {
           </CardDescription>;
         </CardHeader>;
         <CardContent className="space-y-4">;
-          {[1, 2, 3].map((i) => (;
+          {[1, 2, 3].map(i) => (;
             <div key={i} className="flex items-center gap-4">;
               <Skeleton className="h-12 w-12 rounded-full" />;
               <div className="space-y-2">;
@@ -40,12 +40,12 @@ export function JobMatches({ jobId }: JobMatchesProps) {
                 <Skeleton className="h-4 w-32" />;
               </div>;
             </div>;
-          ))}
+          )}
         </CardContent>;
       </Card>;
     );
   }
-  if (matches.length === 0) {
+  if (matches.length = = 0) {
     return (
       <EmptyMatchesCard
         onRefresh={triggerAIMatching}
@@ -55,7 +55,7 @@ export function JobMatches({ jobId }: JobMatchesProps) {
   }
   return (
     <div className="space-y-4">;
-      {matches && matches.map((match) => (;
+      {matches && matches.map(match) => (;
         <JobMatchCard
           key={match.id}
           matchId={match.id}
@@ -69,7 +69,7 @@ export function JobMatches({ jobId }: JobMatchesProps) {
           matchPercent={match.match_score |0}
           skills={match.talent_profile?.skills |[]}
         />
-      ))}
+      )}
     </div>;
   );
 import React from './react';
@@ -79,25 +79,25 @@ import {
   CardTitle,
   CardDescription,
   CardContent,
-} from '@/components / ui / card';
+ from '@/components / ui / card';
 import { EmptyMatchesCard  } from '@/components / jobs / EmptyMatchesCard';
 import { JobMatchCard  } from '@/components / jobs / JobMatchCard';
 import { useJobMatches  } from '@/hooks / useJobMatches';
 import { Skeleton  } from '@/components / ui / skeleton';
 interface JobMatchesProps {
   job_id: string;
-}
+
 export /**
  * JobMatches - Function description
  */
 function JobMatches() {
   const { matches, is_loading, is_processing, triggerAIMatching } =;
     useJobMatches (job_id);
-;
+
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <Card>;
         <CardHeader>;
@@ -109,21 +109,21 @@ if ( {) {
           </CardDescription>;
         </CardHeader>;
         <CardContent className="space - y-4">;
-          {[1, 2, 3].map ((i) => (
+          {[1, 2, 3].map (i) => (
             <div key={i} className="flex items - center gap - 4">;
               <Skeleton className="h - 12 w - 12 rounded - full" />;
               <div className="space - y-2">;
                 <Skeleton className="h - 4 w - 48" />;
                 <Skeleton className="h - 4 w - 32" />;
               </div>;
-            </div>))}
+            </div>)}
         </CardContent>;
       </Card>);
   }
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <EmptyMatchesCard;
         on_refresh={triggerAIMatching}
@@ -132,7 +132,7 @@ if ( {) {
   }
   return (
     <div className="space - y-4">;
-      {matches.map ((match) => (
+      {matches.map (match) => (
         <JobMatchCard;
           key={match.id}
           match_id={match.id}
@@ -145,6 +145,5 @@ if ( {) {
           category={match.talent_profile?.category || "Development"}
           match_percent={match.match_score || 0}
           skills={match.talent_profile?.skills || []}
-        />))}
+        />)}
     </div>);
-}

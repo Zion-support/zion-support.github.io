@@ -12,7 +12,7 @@ interface OrderItem {
   quantity: number;
   price: number;
   image?: string;
-}
+
 interface Order {
   id: string;
   order_id: string;
@@ -33,7 +33,7 @@ interface Order {
     last4: string;
   }
   trackingNumber?: string;
-}
+
 const getStatusColor = (status: string) => {
   switch (status) {
     case 'pending':;
@@ -49,7 +49,7 @@ const getStatusColor = (status: string) => {
     default:;
       return 'bg - gray - 100 text - gray - 800';
   }
-}
+
 const getStatusIcon = (status: string) => {
   switch (status) {
     case 'delivered':;
@@ -61,13 +61,13 @@ const getStatusIcon = (status: string) => {
     default:;
       return <Clock className="h - 4 w - 4" />;
   }
-}
+
 export default function OrderDetail() {
   const router = useRouter();
   const { user } = useAuth();
   const [order, setOrder] = useState<Order | null>(null);
   const [loading, setLoading] = useState(true);
-  useEffect(() => {
+  useEffect() => {
     // Mock data - replace with actual API call
     const mockOrder: Order = {
       id: router.query.id as string |'1'
@@ -76,7 +76,7 @@ export default function OrderDetail() {
       status: 'shipped'
       total: 299.99
       items: [
-;
+
 export default /**
  * OrderDetail - Function description
  */
@@ -85,8 +85,8 @@ function OrderDetail() {
   const { user } = use_auth ();
   const [order, set_order] = useState < Order | null>(null);
   const [loading, set_loading] = useState (true);
-;
-  useEffect (() => {
+
+  useEffect () => {
     // Mock data - replace with actual API call;
     const mock_order: Order = {
       id: router.query.id as string || '1',
@@ -160,22 +160,22 @@ function OrderDetail() {
       },
       tracking_number: 'TRK123456789';
     }
-;
+
     set_order (mock_order);
     set_loading (false);
   }, [router.query.id]);
-;
+
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <div className="container mx - auto px - 4 py - 8">;
         <div className="animate - pulse">;
           <div className="h - 8 bg - gray - 200 rounded w - 1/4 mb - 4"></div>;
           <div className="space - y-4">;
             {[1, 2, 3].map (index => (
-              <div key={i} className="h - 32 bg - gray - 200 rounded"></div>))}
+              <div key={i} className="h - 32 bg - gray - 200 rounded"></div>)}
           </div>;
         </div>;
       </div>);
@@ -202,14 +202,14 @@ if ( {) {
       <div>
         <h2 className='font-semibold mb-2'>Items</h2>
         <ul className='space-y-1'>
-          {order.items.map((item, idx) => (
+          {order.items.map(item, idx) => (
             <li key={idx} className='flex justify-between'>
               <span>
                 {item.name} x {item.quantity}
               </span>
               <span>${item.price.toFixed(2)}</span>
             </li>
-          ))}
+          )}
         </ul>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -231,7 +231,7 @@ if ( {) {
             <CardContent>
               <div className="space-y-4">
                 <h3 className="font-semibold">Items:</h3>
-                {order.items.map((item) => (
+                {order.items.map(item) => (
                   <div key={item.id} className="flex items-center justify-between py-2 border-b">
                     <div>
                       <p className="font-medium">{item.name}</p>
@@ -239,7 +239,7 @@ if ( {) {
                     </div>
                     <p className="font-semibold">${item.price.toFixed(2)}</p>
                   </div>
-                ))}
+                )}
                 <div className="flex justify-between text-lg font-bold pt-4">
                   <span>Total:</span>
                   <span>${order.total.toFixed(2)}</span>
@@ -277,7 +277,7 @@ if ( {) {
             <CardContent>
               <div className="space-y-1">
                 <p className="font-medium">
-                  {order.paymentMethod.type === 'credit_card' ? 'Credit Card' : order.paymentMethod.type}
+                  {order.paymentMethod.type = = 'credit_card' ? 'Credit Card' : order.paymentMethod.type}
                 </p>
                 <p className="text-gray-600">**** **** **** {order.paymentMethod.last4}</p>
               </div>
@@ -287,7 +287,7 @@ if ( {) {
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <div className="container mx - auto px - 4 py - 8">;
         <div className="text - center">;
@@ -331,14 +331,14 @@ if ( {) {
             <CardContent>;
               <div className="space - y-4">;
                 <h3 className="font - semibold">Items:</h3>;
-                {order.items.map ((item) => (
+                {order.items.map (item) => (
                   <div key={item.id} className="flex items - center justify - between py - 2 border - b">;
                     <div>;
                       <p className="font - medium">{item.name}</p>;
                       <p className="text - sm text - gray - 600">Quantity: {item.quantity}</p>;
                     </div>;
                     <p className="font - semibold">${item.price.to_fixed (2)}</p>;
-                  </div>))}
+                  </div>)}
                 <div className="flex justify - between text - lg font - bold pt - 4">;
                   <span > Total:</span>;
                   <span>${order.total.to_fixed (2)}</span>;
@@ -376,7 +376,7 @@ if ( {) {
             <CardContent>;
               <div className="space - y-1">;
                 <p className="font - medium">;
-                  {order.payment_method.type === 'credit_card' ? 'Credit Card' : order.payment_method.type}
+                  {order.payment_method.type = = 'credit_card' ? 'Credit Card' : order.payment_method.type}
                 </p>;
                 <p className="text - gray - 600">**** **** **** {order.payment_method.last4}</p>;
               </div>;
@@ -403,12 +403,12 @@ if ( {) {
                   <div className="w - 3 h - 3 bg - green - 500 rounded - full"></div>;
                   <span className="text - sm">Processing</span>;
                 </div>;
-                {order.status === 'shipped' && (
+                {order.status = = 'shipped' && (
                   <div className="flex items - center space - x-3">;
                     <div className="w - 3 h - 3 bg - green - 500 rounded - full"></div>;
                     <span className="text - sm">Shipped</span>;
                   </div>)}
-                {order.status === 'delivered' && (
+                {order.status = = 'delivered' && (
                   <div className="flex items-center space-x-3">
                     <div className="w-3 h-3 bg-green-500 rounded-full"></div>
                     <span className="text-sm">Delivered</span>
@@ -437,40 +437,34 @@ if ( {) {
       </div>
     </div>
   );
-}
-
-};
-`Order #$ {;
+Order #$ {;
   order && order.orderId ;
-}`;
-`Date: $ {;
+`;
+Date: $ {;
   new Date (order && order.date) .toLocaleDateString () ;
-}`;';
-'';';
-'Items:';
-...order && order.items.map ( (i) => `$ {;
+`;';
+';';
+Items:';
+..order && order.items.map (i) => `$ {;
   i && i.name ;
-}x$ {;
+x$ {;
   i && i.quantity ;
-}- $$ {;
+- $$ {;
   i && i.price.toFixed (2) ;
-}`);';
-'';
-`Total: $$ {;
+`);';
+';
+Total: $$ {;
   order && order.total.toFixed (2) ;
-}`;';
-'';';
-'Shipping Address: ';
+`;';
+';';
+Shipping Address: ';
 order && order.shippingAddress.name;
 order && order.shippingAddress.street;
 await navigator && navigator.clipboard.writeText (summary);';
 toast && toast.success ('Order summary copied to clipboard') ;
-};
-</li>) ) ;
-}</ul> </div> <div> </div> <Link href="/orders" className="text-zion-purple underline" > Back to orders </Link> </div>) ;
-}'";
-}
-}
+</li>) ;
+</ul> </div> <div></div> <Link href="/orders" className="text-zion-purple underline" > Back to orders </Link> </div>) ;
+'";
 
                   <div className="flex items - center space - x-3">;
                     <div className="w - 3 h - 3 bg - green - 500 rounded - full"></div>;
@@ -497,35 +491,33 @@ toast && toast.success ('Order summary copied to clipboard') ;
         </div>;
       </div>;
     </div>);
-}
-`Order #$ {
+
+Order #$ {
   order.order_id ;
-}`;
-`Date: $ {
+`;
+Date: $ {
   new Date (order.date) .toLocaleDateString () ;
-}`;';
-'';';
-'Items:';
-...order.items.map ( (i) => `$ {
+`;';
+';';
+Items:';
+..order.items.map (i) => `$ {
   i.name ;
-}x$ {
+x$ {
   i.quantity ;
-}- $$ {
+- $$ {
   i.price.to_fixed (2) ;
-}`);';
-'';
-`Total: $$ {
+`);';
+';
+Total: $$ {
   order.total.to_fixed (2) ;
-}`;';
-'';';
-'Shipping Address: ';
+`;';
+';';
+Shipping Address: ';
 order.shipping_address.name;
 order.shipping_address.street;
 await navigator.clipboard.write_text (summary);';
 toast.success ('Order summary copied to clipboard') ;
-}
-</li>) ) ;
-}</ul> </div> <div> </div> <Link href="/orders" className="text - zion - purple underline" > Back to orders </Link> </div>) ;
-}'";
-}
-}
+
+</li>) ;
+</ul> </div> <div></div> <Link href="/orders" className="text - zion - purple underline" > Back to orders </Link> </div>) ;
+'";

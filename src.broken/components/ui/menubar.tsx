@@ -6,5 +6,3 @@ export function menubar() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

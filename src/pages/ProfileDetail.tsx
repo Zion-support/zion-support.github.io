@@ -10,7 +10,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from '@/components/ui/card';
+ from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Badge } from '@/components/ui/badge';
 import {
@@ -24,7 +24,7 @@ import {
   Twitter,
   Linkedin,
   LinkIcon,
-} from 'lucide-react';
+ from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
 
 export default function ProfileDetail() {
@@ -37,9 +37,9 @@ export default function ProfileDetail() {;
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  useEffect(() => {
+  useEffect() => {
     const fetchProfile = async () => {
-  useEffect((,) => {;
+  useEffect(,) => {;
     const fetchProfile = async () => {;
       setIsLoading(true);
       setError(null);
@@ -78,8 +78,7 @@ export default function ProfileDetail() {;
           variant: "destructive"});
       } finally {;
         setIsLoading(false);
-      }
-    };
+      };
 
     fetchProfile();
   }, [profileId]);
@@ -174,8 +173,8 @@ function ProfileDetail() {
   const [profile_data, setProfileData] = useState < any>(null);
   const [is_loading, setIsLoading] = useState (true);
   const [error, set_error] = useState < string | null>(null);
-;
-  useEffect (() => {
+
+  useEffect () => {
     const fetch_profile = async () => {
       setIsLoading (true);
       set_error (null);
@@ -183,7 +182,7 @@ function ProfileDetail() {
         // Check condition
 if ( {) {
   $2
-}
+
           set_error ("Profile ID is missing.");
           return;
         }
@@ -192,17 +191,17 @@ if ( {) {
           .select ("*");
           .eq ("id", profile_id);
           .single ();
-;
+
         // Check condition
 if ( {) {
   $2
-}
+
           throw new Error (error.message);
         }
         // Check condition
 if ( {) {
   $2
-}
+
           set_error ("Profile not found.");
           return;
         }
@@ -216,15 +215,14 @@ if ( {) {
       } finally {
         setIsLoading (false);
       }
-    }
-;
+
     fetch_profile ();
   }, [profile_id]);
-;
+
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <div className="min - h-screen flex items - center justify - center">;
         <p > Loading profile...</p>;
@@ -233,7 +231,7 @@ if ( {) {
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <div className="min - h-screen flex items - center justify - center">;
         <p > Error: {error}</p>;
@@ -242,7 +240,7 @@ if ( {) {
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <div className="min - h-screen flex items - center justify - center">;
         <p > Profile not found.</p>;
@@ -317,9 +315,9 @@ if ( {) {
               </CardHeader>
               <CardContent>
                 <div className="flex flex-wrap gap-2">
-                  {profileData.skills?.map((skill: string, index: number) => (
+                  {profileData.skills?.map(skill: string, index: number) => (
                     <Badge key={index} className="bg-zion-blue-light text-zion-slate-light border-none">{skill}</Badge>
-                  )) |<p className="text-zion-slate-light">No skills provided.</p>}
+                  ) |<p className="text-zion-slate-light">No skills provided.</p>}
                 </div>
               </CardContent>
             </Card>
@@ -330,14 +328,14 @@ if ( {) {
               </CardHeader>
               <CardContent>
                 {profileData.experience ? (
-                  profileData.experience.map((exp: any, index: number) => (
+                  profileData.experience.map(exp: any, index: number) => (
                     <div key={index} className="mb-4">
                       <h4 className="font-bold text-white">{exp.title}</h4>
                       <p className="text-zion-cyan">{exp.company}</p>
                       <p className="text-sm text-zion-slate-light">{exp.start_date} - {exp.end_date |"Present"}</p>
                       <p className="text-zion-slate-light">{exp.description}</p>
                     </div>
-                  ))
+                  )
                 ) : (
                   <p className="text-zion-slate-light">No experience provided.</p>
                 )}
@@ -351,7 +349,7 @@ if ( {) {
               <CardContent>
                 {profileData.portfolio_links ? (
                   <div className="flex flex-col gap-3">
-                    {profileData.portfolio_links.map((link: any, index: number) => (
+                    {profileData.portfolio_links.map(link: any, index: number) => (
                       <a
                         key={index}
                         href={link.url}
@@ -362,7 +360,7 @@ if ( {) {
                         <LinkIcon className="h-4 w-4" />
                         {link.title |link.url}
                       </a>
-                    ))}
+                    )}
                   </div>;
                 ) : (;
                   <p className="text-zion-slate-light">No portfolio links provided.</p>;
@@ -373,13 +371,13 @@ if ( {) {
           {/* Sidebar with HireNowCTA */}
           <div className="col-span-4 lg:col-span-1">;
             <HireNowCTA
-              talentProfile={{
+              talentProfile={
                 id: profileData?.id |''
                 full_name: profileData?.full_name |''
                 professional_title: profileData?.professional_title |''
                 hourly_rate: profileData?.hourly_rate |0
 
-              }}
+              }
             />;
             {/* Contact Information */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mt-6">;
@@ -460,64 +458,60 @@ if ( {) {
       </div>;
     </>;
   );
-}
-);
-}
-}, [profileId]);
+
+, [profileId]);
 <p>Error: {error ;
-}</p> </div>) ;
-}return (<> <SEO) : (<AvatarFallback> {profileData.full name?.charAt (0) ;
-}</AvatarFallback>) ;
-}</Avatar> <div> </div> </div> </CardHeader> <CardContent> $ {profileData.hourly rate ";
-}<span className="text-zion-slate-light font-normal" >/hr</span> </div>) ";
-}</div> </CardContent> </Card> <CardHeader> <CardTitle className="text-xl font-bold text-white" >About Me</CardTitle> </CardHeader> <CardContent> <CardHeader> <CardTitle className="text-xl font-bold text-white" >Skills</CardTitle> </CardHeader> <CardContent> </div> </CardContent> </Card> <CardHeader> <CardTitle className="text-xl font-bold text-white" >Experience</CardTitle> </CardHeader> <CardContent> </div>) ) ) : (<p className="text-zion-slate-light" >No experience provided.</p>) ";
-}</CardContent> </Card> <CardHeader> <CardTitle className="text-xl font-bold text-white" >Portfolio</CardTitle> </CardHeader> <CardContent>) ) ";
-}</div>) : (<p className="text-zion-slate-light" >No portfolio links provided.</p>) ;
-}</CardContent> </Card> </div> <HireNowCTA talentProfile= {{;
+</p> </div>) ;
+return (<> <SEO) : (<AvatarFallback> {profileData.full name?.charAt (0) ;
+</AvatarFallback>) ;
+</Avatar> <div></div> </div> </CardHeader> <CardContent> $ {profileData.hourly rate ";
+<span className="text-zion-slate-light font-normal" >/hr</span> </div>) ";
+</div> </CardContent> </Card> <CardHeader> <CardTitle className="text-xl font-bold text-white" >About Me</CardTitle> </CardHeader> <CardContent> <CardHeader> <CardTitle className="text-xl font-bold text-white" >Skills</CardTitle> </CardHeader> <CardContent></div> </CardContent> </Card> <CardHeader> <CardTitle className="text-xl font-bold text-white" >Experience</CardTitle> </CardHeader> <CardContent></div>) ) : (<p className="text-zion-slate-light" >No experience provided.</p>) ";
+</CardContent> </Card> <CardHeader> <CardTitle className="text-xl font-bold text-white" >Portfolio</CardTitle> </CardHeader> <CardContent>) ";
+</div>) : (<p className="text-zion-slate-light" >No portfolio links provided.</p>) ;
+</CardContent> </Card> </div> <HireNowCTA talentProfile= {;
   id: profileData?.id |'', full name: profileData?.full name |'',  professional title: profileData?.professional title |'', hourly rate: profileData?.hourly rate |0 ;
-}/> Website </Link> </div>) ;
-}</div> </div> <a href= {profileData.github url ";
-}target="blank" rel="noopener noreferrer" className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan" aria-label="GitHub" title="GitHub" > <Github className="h-4 w-4" /> GitHub </Link>) ;
-}{profileData.twitter url && (<a href= {;
+/> Website </Link> </div>) ;
+</div> </div> <a href= {profileData.github url ";
+target="blank" rel="noopener noreferrer" className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan" aria-label="GitHub" title="GitHub" > <Github className="h-4 w-4" /> GitHub </Link>) ;
+{profileData.twitter url && (<a href= {;
   profileData.twitter url ";
-}target="blank" rel="noopener noreferrer" className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan" aria-label="Twitter" title="Twitter" > <Twitter className="h-4 w-4" /> Twitter </Link>) ;
-}{profileData.linkedin url && (<a href= {;
+target="blank" rel="noopener noreferrer" className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan" aria-label="Twitter" title="Twitter" > <Twitter className="h-4 w-4" /> Twitter </Link>) ;
+{profileData.linkedin url && (<a href= {;
   profileData.linkedin url ";
-}target="blank" rel="noopener noreferrer" className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan" aria-label="LinkedIn" title="LinkedIn" > <Linkedin className="h-4 w-4" /> LinkedIn </Link>) ;
-}</div> </div> </div> </div> </div> </>) ;
-}'"}
+target="blank" rel="noopener noreferrer" className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan" aria-label="LinkedIn" title="LinkedIn" > <Linkedin className="h-4 w-4" /> LinkedIn </Link>) ;
+</div> </div> </div> </div> </div> </>) ;
+'"}
 
     </>);
-;
-}
-}, [profile_id]);
+
+, [profile_id]);
 <p > Error: {
   error ;
-}</p> </div>) ;
-}return (<> <SEO) : (<AvatarFallback> {
+</p> </div>) ;
+return (<> <SEO) : (<AvatarFallback> {
   profile_data.full name?.char_at (0) ;
-}</AvatarFallback>) ;
-}</Avatar> <div> </div> </div> </CardHeader> <CardContent> $ {
+</AvatarFallback>) ;
+</Avatar> <div></div> </div> </CardHeader> <CardContent> $ {
   profile_data.hourly rate ";
-}<span className="text - zion - slate - light font - normal" >/hr</span> </div>) ";
-}</div> </CardContent> </Card> <CardHeader> <CardTitle className="text - xl font - bold text - white" >About Me</CardTitle> </CardHeader> <CardContent> <CardHeader> <CardTitle className="text - xl font - bold text - white" >Skills</CardTitle> </CardHeader> <CardContent> </div> </CardContent> </Card> <CardHeader> <CardTitle className="text - xl font - bold text - white" >Experience</CardTitle> </CardHeader> <CardContent> </div>) ) ) : (<p className="text - zion - slate - light" >No experience provided.</p>) ";
-}</CardContent> </Card> <CardHeader> <CardTitle className="text - xl font - bold text - white" >Portfolio</CardTitle> </CardHeader> <CardContent>) ) ";
-}</div>) : (<p className="text - zion - slate - light" >No portfolio links provided.</p>) ;
-}</CardContent> </Card> </div> <HireNowCTA talent_profile= {
-  {
+<span className="text - zion - slate - light font - normal" >/hr</span> </div>) ";
+</div> </CardContent> </Card> <CardHeader> <CardTitle className="text - xl font - bold text - white" >About Me</CardTitle> </CardHeader> <CardContent> <CardHeader> <CardTitle className="text - xl font - bold text - white" >Skills</CardTitle> </CardHeader> <CardContent></div> </CardContent> </Card> <CardHeader> <CardTitle className="text - xl font - bold text - white" >Experience</CardTitle> </CardHeader> <CardContent></div>) ) : (<p className="text - zion - slate - light" >No experience provided.</p>) ";
+</CardContent> </Card> <CardHeader> <CardTitle className="text - xl font - bold text - white" >Portfolio</CardTitle> </CardHeader> <CardContent>) ";
+</div>) : (<p className="text - zion - slate - light" >No portfolio links provided.</p>) ;
+</CardContent> </Card> </div> <HireNowCTA talent_profile= {
   id: profile_data?.id || '', full name: profile_data?.full name || '',  professional title: profile_data?.professional title || '', hourly rate: profile_data?.hourly rate || 0 ;
-;
-}/> Website </Link> </div>) ;
-}</div> </div> <a href= {
+
+/> Website </Link> </div>) ;
+</div> </div> <a href= {
   profile_data.github url ";
-}target="blank" rel="noopener noreferrer" className="flex items - center gap - 2 text - zion - slate - light hover:text - zion - cyan" aria - label="GitHub" title="GitHub" > <Github className="h - 4 w - 4" /> GitHub </Link>) ;
-}{
+target="blank" rel="noopener noreferrer" className="flex items - center gap - 2 text - zion - slate - light hover:text - zion - cyan" aria - label="GitHub" title="GitHub" > <Github className="h - 4 w - 4" /> GitHub </Link>) ;
+{
   profile_data.twitter url && (<a href= {
   profile_data.twitter url ";
-}target="blank" rel="noopener noreferrer" className="flex items - center gap - 2 text - zion - slate - light hover:text - zion - cyan" aria - label="Twitter" title="Twitter" > <Twitter className="h - 4 w - 4" /> Twitter </Link>) ;
-}{
+target="blank" rel="noopener noreferrer" className="flex items - center gap - 2 text - zion - slate - light hover:text - zion - cyan" aria - label="Twitter" title="Twitter" > <Twitter className="h - 4 w - 4" /> Twitter </Link>) ;
+{
   profile_data.linkedin url && (<a href= {
   profile_data.linkedin url ";
-}target="blank" rel="noopener noreferrer" className="flex items - center gap - 2 text - zion - slate - light hover:text - zion - cyan" aria - label="LinkedIn" title="LinkedIn" > <Linkedin className="h - 4 w - 4" /> LinkedIn </Link>) ;
-}</div> </div> </div> </div> </div> </>) ;
-}'"}
+target="blank" rel="noopener noreferrer" className="flex items - center gap - 2 text - zion - slate - light hover:text - zion - cyan" aria - label="LinkedIn" title="LinkedIn" > <Linkedin className="h - 4 w - 4" /> LinkedIn </Link>) ;
+</div> </div> </div> </div> </div> </>) ;
+'"}

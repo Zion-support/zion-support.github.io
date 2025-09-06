@@ -4,8 +4,7 @@ export interface ServiceCategory {;
   description: string,;
   icon: string,;
   color: string;
-}
-;
+
 export interface ServiceProvider {;
   id: string,;
   name: string,;
@@ -15,8 +14,7 @@ export interface ServiceProvider {;
   location: string,;
   verified: boolean,;
   specialties: string[];
-}
-;
+
 export interface ServicePricing {;
   basic: {;
     price: number,;
@@ -39,8 +37,7 @@ export interface ServicePricing {;
     features: string[],;
     popular?: boolean;
   }
-}
-;
+
 export interface ServiceSolution {;
   id: string,;
   title: string,;
@@ -66,16 +63,14 @@ export interface ServiceSolution {;
   aiScore?: number,;
   marketTrend: 'rising' | 'stable' | 'declining',;
   industryFocus: string[];
-}
-;
+
 export interface ITService extends ServiceSolution {;
   serviceType: 'onsite' | 'remote' | 'hybrid',;
   responseTime: string,;
   coverage: string[],;
   emergencySupport: boolean,;
   sla: string;
-}
-;
+
 export interface AIService extends ServiceSolution {;
   aiModel: string,;
   accuracy: number,;
@@ -83,8 +78,7 @@ export interface AIService extends ServiceSolution {;
   customization: boolean,;
   apiAccess: boolean,;
   realTimeProcessing: boolean;
-}
-;
+
 export interface MicroSAAS extends ServiceSolution {;
   userLimit: number,;
   whiteLabel: boolean,;
@@ -92,4 +86,3 @@ export interface MicroSAAS extends ServiceSolution {;
   dataRetention: string,;
   backupFrequency: string;
   uptime: number;
-}

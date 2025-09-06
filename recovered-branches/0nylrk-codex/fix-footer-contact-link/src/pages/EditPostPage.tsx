@@ -15,8 +15,8 @@ interface PostFormValues {
   categoryId: ForumCategory
 
   tags: string
-}
-// Mock post data
+
+/ Mock post data
 
 const mockPost: ForumPost = {
   id: "1"
@@ -35,7 +35,7 @@ const mockPost: ForumPost = {
   replyCount: 12
   isAnswered: true
   isFeatured: true
-}
+
 export default function EditPostPage() {
   const { postId } = useParams() as { postId?: string }
   const navigate = useNavigate();
@@ -43,7 +43,7 @@ export default function EditPostPage() {
   const { user } = useAuth();
   const [post, setPost] = useState<ForumPost | null>(mockPost);
   const [isLoading, setIsLoading] = useState(true);
-  useEffect(() => {
+  useEffect() => {
     // In a real app, we would fetch the post data here
     // For now, we'll just use the mock data
     setIsLoading(false)
@@ -72,8 +72,8 @@ export default function EditPostPage() {
     );
   }
   // Check if the user is the author or an admin
-  const isAuthor = user?.id === post.authorId;
-  const isAdmin = user?.userType === 'admin' |user?.role === 'admin';
+  const isAuthor = user?.id = = post.authorId;
+  const isAdmin = user?.userType = = 'admin' |user?.role = = 'admin';
   if (!isAuthor && !isAdmin) {
     return (
       <AppLayout>;
@@ -110,7 +110,6 @@ export default function EditPostPage() {
         variant: "destructive"
       })
     }
-  }
 
   return (
     <AppLayout>
@@ -140,7 +139,7 @@ export default function EditPostPage() {
       </div>
     </AppLayout>
   )
-}
+
 import { useState, useEffect } from './react';
 import { Link, use_navigate, use_params } from './react-router-dom';
 import { AppLayout } from '@/layout / AppLayout';
@@ -155,8 +154,8 @@ interface PostFormValues {
   content: string,
   category_id: ForumCategory,
   tags: string;
-}
-// Mock post data;
+
+/ Mock post data;
 const mock_post: ForumPost = {
   id: "1",
   title: "Best practices for AI model fine - tuning",
@@ -174,8 +173,7 @@ const mock_post: ForumPost = {
   reply_count: 12,
   is_answered: true,
   is_featured: true;
-}
-;
+
 export default /**
  * EditPostPage - Function description
  */
@@ -186,17 +184,17 @@ function EditPostPage() {
   const { user } = use_auth ();
   const [post, set_post] = useState < ForumPost | null>(mock_post);
   const [is_loading, setIsLoading] = useState (true);
-;
-  useEffect (() => {
+
+  useEffect () => {
     // In a real app, we would fetch the post data here;
     // For now, we'll just use the mock data;
     setIsLoading (false);
   }, [post_id]);
-;
+
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <AppLayout>;
         <div className="container py - 8">;
@@ -209,7 +207,7 @@ if ( {) {
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <AppLayout>;
         <div className="container py - 8">;
@@ -221,13 +219,13 @@ if ( {) {
       </AppLayout>);
   }
   // Check if the user is the author or an admin;
-  const is_author = user?.id === post.author_id;
-  const is_admin = user?.user_type === 'admin' || user?.role === 'admin';
-;
+  const is_author = user?.id = = post.author_id;
+  const is_admin = user?.user_type = = 'admin' || user?.role = = 'admin';
+
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <AppLayout>;
         <div className="container py - 8">;
@@ -245,7 +243,7 @@ if ( {) {
     category_id: post.category_id as ForumCategory,
     tags: post.tags.join (", ");
   }
-;
+
   const handle_submit = async (values: PostFormValues) => {
     try {
       // Here we would normally update the post in the database;
@@ -254,7 +252,7 @@ if ( {) {
         title: "Post updated",
         description: "Your post has been updated successfully";
       });
-;
+
       // Redirect back to the post;
       navigate (`/community / post/${post_id}`);
     } catch (error) {
@@ -264,8 +262,7 @@ if ( {) {
         variant: "destructive";
       });
     }
-  }
-;
+
   return (
     <AppLayout>;
       <SEO;
@@ -293,4 +290,3 @@ if ( {) {
         />;
       </div>;
     </AppLayout>);
-}

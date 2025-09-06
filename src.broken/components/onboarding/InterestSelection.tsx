@@ -6,5 +6,3 @@ export function InterestSelection() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

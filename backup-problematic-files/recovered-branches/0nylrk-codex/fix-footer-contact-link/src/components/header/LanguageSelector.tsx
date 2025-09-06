@@ -9,11 +9,11 @@ import {;
   DropdownMenuItem,;
   DropdownMenuTrigger} from '@/components/ui/dropdown-menu',;
 import { useLanguage, SupportedLanguage } from '@/context/LanguageContext',;
-;
+
 export function LanguageSelector() {;
   const { t } = useTranslation(),;
   const { currentLanguage, changeLanguage, supportedLanguages } = useLanguage(),;
-;
+
   return (;
     <DropdownMenu>;
       <DropdownMenuTrigger asChild>;
@@ -23,11 +23,11 @@ export function LanguageSelector() {;
         </Button>;
       </DropdownMenuTrigger>;
       <DropdownMenuContent align="end" className="bg-zion-blue-dark border border-zion-purple/20">;
-        {supportedLanguages.map((lang) => (;
+        {supportedLanguages.map(lang) => (;
           <DropdownMenuItem;
             key={lang.code}
             className={`cursor-pointer ${;
-              currentLanguage === lang.code ? 'bg-zion-purple/20 text-zion-cyan' :'text-white hover:bg-zion-purple/10';
+              currentLanguage = = lang.code ? 'bg-zion-purple/20 text-zion-cyan' :'text-white hover:bg-zion-purple/10';
             }`}
             onClick={() => changeLanguage(lang.code)}
           >;
@@ -36,18 +36,17 @@ export function LanguageSelector() {;
               <span>{t(`language.${lang.code}`)}</span>;
             </div>;
           </DropdownMenuItem>;
-        ))}
+        )}
       </DropdownMenuContent>;
     </DropdownMenu>;
   ),;}
  return (<DropdownMenu> <DropdownMenuTrigger asChild> key= {
   lang.code 
-}className= {
+className= {
   `cursor-pointer $ {
-  currentLanguage === lang.code ? 'bg-zion-purple/20 text-zion-cyan' : 'text-white hover:bg-zion-purple/10' 
-}` 
-}onClick= {
+  currentLanguage = = lang.code ? 'bg-zion-purple/20 text-zion-cyan' : 'text-white hover:bg-zion-purple/10' 
+` 
+onClick= {
   () => changeLanguage (lang.code) 
-}> </div> </DropdownMenuItem>) ) 
-}</DropdownMenuContent> </DropdownMenu>) 
-}
+> </div> </DropdownMenuItem>) 
+</DropdownMenuContent> </DropdownMenu>) 

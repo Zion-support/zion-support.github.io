@@ -6,5 +6,3 @@ export function label() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

@@ -65,7 +65,7 @@ export function BillingHeader() {
       </p>
     </div>
   )
-}
+
 export function BillingHeader() {;
   return (
     <div className='space-y-2'>;
@@ -177,7 +177,7 @@ function BillingHeader() {
       </p>;
     </div>;
   );
-}
+
       <p className='text - muted - foreground'>;
         Manage your subscription, view invoice history, and update payment;
         methods.;
@@ -186,4 +186,3 @@ function BillingHeader() {
         Manage your subscription, view invoice history, and update payment methods.;
       </p>;
     </div>);
-}

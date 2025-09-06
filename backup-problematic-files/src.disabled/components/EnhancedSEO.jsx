@@ -7,6 +7,5 @@ const EnhancedSEO = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default EnhancedSEO;

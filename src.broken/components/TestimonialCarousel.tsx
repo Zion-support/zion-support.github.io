@@ -6,5 +6,3 @@ export function TestimonialCarousel() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

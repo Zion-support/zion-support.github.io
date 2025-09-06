@@ -4,13 +4,12 @@ import React from 'react';
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';  text?: string;
   className?: string;
-}
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md',
   text = 'Loading...',
   className = '',
-}) => {
+) => {
   const sizeClasses = {
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
@@ -23,6 +22,5 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
         <p className="mt-2 text-slate-400 text-sm">{text}</p>
       )}    </div>
   );
-};
 
 export default LoadingSpinner;

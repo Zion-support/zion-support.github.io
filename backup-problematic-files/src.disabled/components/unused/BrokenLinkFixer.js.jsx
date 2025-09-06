@@ -7,6 +7,5 @@ const BrokenLinkFixer.js = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default BrokenLinkFixer.js;

@@ -6,5 +6,3 @@ export function ApplyForm() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

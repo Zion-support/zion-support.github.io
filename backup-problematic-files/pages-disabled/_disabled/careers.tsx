@@ -2,7 +2,6 @@ import React from 'react';
 
 interface CareersProps {
   className?: string;
-}
 
 const Careers: React.FC<CareersProps> = ({ className }) => {
   return (
@@ -11,6 +10,5 @@ const Careers: React.FC<CareersProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default Careers;

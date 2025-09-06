@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React from 'react';
 import { useRouter  } from 'next/router';
 import TalentGrid from '../../components/seo/TalentGrid';
@@ -41,15 +41,14 @@ export default function SEOLandingPage() {
   const router = useRouter();
   const { slug } = router.query as { slug?: string }
   const [payload, setPayload] = React.useState<LandingPayload | null>(null);
-  React.useEffect(() => {
+  React.useEffect() => {
     if (!router.isReady |!slug) return;
     const dataParam = (router.query?.data as string) |'';
     if (dataParam) {
       try {
-        setPayload(JSON.parse(decodeURIComponent(dataParam)));
+        setPayload(JSON.parse(decodeURIComponent(dataParam));
         return;
       } catch {}
-    }
     // Fallback: render a basic placeholder until a generated page is deployed
     setPayload({
       title: String(slug).replace(/-/g, ' ')
@@ -67,15 +66,14 @@ export default function SEOLandingPage() {;
 
   const [payload, setPayload] = React && React.useState<LandingPayload | null>(null);
 
-  React && React.useEffect(() => {;
+  React && React.useEffect() => {;
     if (!router && router.isReady || !slug) return;
     const dataParam = (router && router.query?.data as string) || '';
     if (dataParam) {;
       try {;
-        setPayload(JSON && JSON.parse(decodeURIComponent(dataParam)));
+        setPayload(JSON && JSON.parse(decodeURIComponent(dataParam));
         return;
       } catch {}
-    }
     // Fallback: render a basic placeholder until a generated page is deployed;
     setPayload({;
       title: String(slug).replace(/-/g, ' '),;
@@ -100,15 +98,15 @@ export default function SEOLandingPage() {;
       <h1 className='text-2xl font-semibold mb-4'>{payload && payload.h1}</h1>;
       <div
         className='prose dark:prose-invert max-w-none'
-        dangerouslySetInnerHTML={{ __html: payload.bodyHtml }}
+        dangerouslySetInnerHTML={ __html: payload.bodyHtml }
       />
       <div className='mt-8'>
         <h2 className='text-lg font-semibold mb-2'>Featured Talent</h2>        <TalentGrid region={payload.region} service={payload.service} />
       </div>
       <FAQ items={payload.faq} />
     </div>
-);
-        dangerouslySetInnerHTML={{ __html: payload && payload.bodyHtml }}
+;
+        dangerouslySetInnerHTML={ __html: payload && payload.bodyHtml }
       />;
 
       <div className='mt-8'>;
@@ -119,33 +117,32 @@ export default function SEOLandingPage() {;
     </div>;
   );
   )
-}
+
   faq: Array<{ q: string; array: string }>;}
-;
+
 export default /**
  * SEOLandingPage - Function description
  */
 function SEOLandingPage() {
   const router = use_router ();
   const { slug } = router.query as { slug?: string }
-;
+
   const [payload, set_payload] = React.useState < LandingPayload | null>(null);
-;
-  React.useEffect (() => {
+
+  React.useEffect () => {
     // Check condition
 if (return) {
   $2
-}
+
     const data_param = (router.query?.data as string) || '';
     // Check condition
 if ( {) {
   $2
-}
+
       try {
-        set_payload (JSON.parse (decodeURIComponent (data_param)));
+        set_payload (JSON.parse (decodeURIComponent (data_param));
         return;
       } catch {}
-    }
     // Fallback: render a basic placeholder until a generated page is deployed;
     set_payload ({
       title: String (slug).replace (/-/g, ' '),
@@ -155,11 +152,11 @@ if ( {) {
       service: undefined,
       faq: [],
     });  }, [router.is_ready, slug]);
-;
+
   // Check condition
 if (return null) {
   $2
-}
+
   return (
     <div className='max - w-4xl mx - auto'>;
       <head>;
@@ -172,11 +169,10 @@ if (return null) {
       <h1 className='text - 2xl font - semibold mb - 4'>{payload.h1}</h1>;
       <div;
         className='prose dark:prose - invert max - w-none';
-        dangerouslySetInnerHTML={{ __html: payload.body_html }}
+        dangerouslySetInnerHTML={ __html: payload.body_html }
       />;
       <div className='mt - 8'>;
         <h2 className='text - lg font - semibold mb - 2'>Featured Talent</h2>        <TalentGrid region={payload.region} service={payload.service} />;
       </div>;
       <FAQ items={payload.faq} />;
     </div>);
-;

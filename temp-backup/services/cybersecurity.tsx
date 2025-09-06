@@ -3,11 +3,11 @@ import Link from \'next/link\'; import Head from \'next/head\'; export default f
 import React from 'react';
 interface CybersecurityProps {
   // Add props here as needed
-}
+
 export default function Cybersecurity({ }: CybersecurityProps) {
 interface CybersecurityProps {;
   // Add props here as needed;
-}
+
 export default function Cybersecurity(): any ({ }: CybersecurityProps) {;
   return (
     <div>;
@@ -15,7 +15,3 @@ export default function Cybersecurity(): any ({ }: CybersecurityProps) {;
       <p>This component is currently under development.</p>;
     </div>;
   );
-}
-}
-
-

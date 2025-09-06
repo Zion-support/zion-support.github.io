@@ -8,11 +8,11 @@ import {;
   FormControl,;
   FormDescription,;
   FormMessage;
-} from "@/components/ui/form",;
+ from "@/components/ui/form",;
 import { Input } from "@/components/ui/input",;
 import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommender",;
 import { Card, CardContent } from "@/components/ui/card",;
-;
+
 interface RateOptimizationSectionProps {;
   control:Control<any>,;
   setValue:UseFormSetValue<any>,;
@@ -20,8 +20,7 @@ interface RateOptimizationSectionProps {;
   yearsExperience:number,;
   location?:string,;
   rateType:"hourly" | "fixed";
-}
-;
+
 export const RateOptimizationSection:React.FC<RateOptimizationSectionProps> = ({;
   control,;
   setValue,;
@@ -29,11 +28,11 @@ export const RateOptimizationSection:React.FC<RateOptimizationSectionProps> = ({
   yearsExperience,;
   location,;
   rateType;
-}) => {;
+) => {;
   const handleSuggestionApplied = (rate:number) => {;
     setValue("hourlyRate", rate),;
   },;
-;
+
   return (;
     <div className="space-y-4">;
       <FormField;
@@ -41,7 +40,7 @@ export const RateOptimizationSection:React.FC<RateOptimizationSectionProps> = ({
         name="hourlyRate";
         render={({ field } { field:any }) => (;
           <FormItem>;
-            <FormLabel>Your {rateType === "hourly" ? "Hourly Rate" :"Fixed Rate"} ($USD)</FormLabel>;
+            <FormLabel>Your {rateType = = "hourly" ? "Hourly Rate" :"Fixed Rate"} ($USD)</FormLabel>;
             <FormControl>;
               <Input;
                 type="number";
@@ -57,7 +56,7 @@ export const RateOptimizationSection:React.FC<RateOptimizationSectionProps> = ({
           </FormItem>;
         )}
       />;
-;
+
       <Card>;
         <CardContent className="pt-4">;
           <TalentRateRecommender;
@@ -70,7 +69,7 @@ export const RateOptimizationSection:React.FC<RateOptimizationSectionProps> = ({
       </Card>;
     </div>;
   ),;
-},; import {;
+,; import {;
   FormField;
 FormItem;
 FormLabel;
@@ -85,17 +84,16 @@ location?: string;
 return (<div className="space-y-4" > <FormField control= {;"  control ";"}name="hourlyRate" render= {;
   ({;
   field ;
-}: {;
-  field: any ;"}) => (<FormItem> <FormLabel>Your {";"  rateType === "hourly" ? "Hourly Rate" : "Fixed Rate" ";"}($USD) </FormLabel> <FormControl> <Input type="number" min="1" step="0.01" {;
+: {;
+  field: any ;"}) => (<FormItem> <FormLabel>Your {";"  rateType = = "hourly" ? "Hourly Rate" : "Fixed Rate" ";"}($USD) </FormLabel> <FormControl> <Input type="number" min="1" step="0.01" {;
   ...field ;"}";"}/> <Card> <CardContent className="pt-4" > <TalentRateRecommender skills= {;
   skills ;
-}yearsExperience= {;
+yearsExperience= {;
   yearsExperience ;
-}location= {;
+location= {;
   location ;
-}onSuggestionApplied= {;
+onSuggestionApplied= {;
   handleSuggestionApplied ;
-}rateType= {;
+rateType= {;
   rateType ;
-}/> </CardContent> </Card> </div>) ;
-};""
+/> </CardContent> </Card> </div>) ;""

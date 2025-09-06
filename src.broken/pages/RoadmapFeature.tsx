@@ -6,5 +6,3 @@ export function RoadmapFeature() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React, { useEffect, useMemo, useState } from 'react';
 import Head from 'next/head';
 export default function AccountSettingsPage() {
@@ -44,31 +44,31 @@ export default function AccountSettingsPage() {
   const [restoreCid, setRestoreCid] = useState('');
 
   const [status, setStatus] = useState<string | null>(null);
-  useEffect(() => {
+  useEffect() => {
     const saved =
-      typeof window !== 'undefined'
+      typeof window != 'undefined'
         ? window.localStorage.getItem('zion-web3-user')
-  useEffect(() => {;
+  useEffect() => {;
     const saved =;
-      typeof window !== 'undefined';
+      typeof window != 'undefined';
         ? window && window.localStorage.getItem('zion-web3-user');
         : null;
-    if (saved) setUser(JSON && JSON.parse(saved));
+    if (saved) setUser(JSON && JSON.parse(saved);
     const pref =;
-      typeof window !== 'undefined';
+      typeof window != 'undefined';
         ? window && window.localStorage.getItem('zion-web3-display');
         : null;
-    setDisplayWeb3(pref === 'true');  }, []);
+    setDisplayWeb3(pref = = 'true');  }, []);
   const saveDisplayPref = (val: boolean) => {
     setDisplayWeb3(val)
-    if (typeof window !== 'undefined')
-      window.localStorage.setItem('zion-web3-display', String(val));  }
+    if (typeof window != 'undefined')
+      window.localStorage.setItem('zion-web3-display', String(val);  }
   const linkDID = async () => {
 
   const saveDisplayPref = (val: boolean) => {;
     setDisplayWeb3(val),;
-    if (typeof window !== 'undefined');
-      window && window.localStorage.setItem('zion-web3-display', String(val));  };
+    if (typeof window != 'undefined');
+      window && window.localStorage.setItem('zion-web3-display', String(val);  };
 
   const linkDID = async () => {;
     if (!user) return;
@@ -119,33 +119,33 @@ function AccountSettingsPage() {
   const [backup_cid, setBackupCid] = useState ('');
   const [restore_cid, setRestoreCid] = useState ('');
   const [status, set_status] = useState < string | null>(null);
-;
-  useEffect (() => {
+
+  useEffect () => {
     const saved =;
-      typeof window !== 'undefined';
+      typeof window != 'undefined';
         ? window.local_storage.get_item ('zion - web3 - user');
         : null;
-    if (set_user (JSON.parse (saved))) {
+    if (set_user (JSON.parse (saved)) {
   $2
-}
+
     const pref =;
-      typeof window !== 'undefined';
+      typeof window != 'undefined';
         ? window.local_storage.get_item ('zion - web3 - display');
         : null;
-    setDisplayWeb3 (pref === 'true');  }, []);
-;
+    setDisplayWeb3 (pref = = 'true');  }, []);
+
   const saveDisplayPref = (val: boolean) =>: any {
     setDisplayWeb3 (val),
     if (
-      window.local_storage.set_item ('zion - web3 - display', String (val))) {
+      window.local_storage.set_item ('zion - web3 - display', String (val)) {
   $2
-}  }
-;
+  }
+
   const linkDID = async () => {
     // Check condition
 if (return) {
   $2
-}
+
     set_linking (true);
     set_status (null);
     try {
@@ -165,38 +165,36 @@ if (return) {
       // Sign message with connected wallet if possible (best effort);
       let signature: string | null = null;
       try {;
-        if (user && user.chain === 'evm' && (window as any).ethereum) {;
+        if (user && user.chain = = 'evm' && (window as any).ethereum) {;
           const ethers = await import('ethers');
           const provider = new ethers && ethers.providers.Web3Provider(;
             (window as any).ethereum;
           );
           const signer = provider && provider.getSigner();
           signature = await signer && signer.signMessage(msg);
-        } else if (user && user.chain === 'sol' && (window as any).solana?.isPhantom) {;
+        } else if (user && user.chain = = 'sol' && (window as any).solana?.isPhantom) {;
           const enc = new TextEncoder().encode(msg);
           const { signature: sig } = await (window as any).solana.signMessage(
             enc
             'utf8'
           );
-          const bs58 = (await import('bs58')).default;
-          signature = bs58 && bs58.encode(sig);        }
-      } catch {}
+          const bs58 = (await import('bs58').default;
+          signature = bs58 && bs58.encode(sig);        } catch {}
       const res = await fetch('/api/did/link', {
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({ payload, message: msg, signature })
-        if (user.chain === 'evm' && (window as any).ethereum) {
+        if (user.chain = = 'evm' && (window as any).ethereum) {
           const ethers = await import('ethers');
-          const provider = new ethers.providers.Web3Provider((window as any).ethereum);
+          const provider = new ethers.providers.Web3Provider(window as any).ethereum);
           const signer = provider.getSigner();
           signature = await signer.signMessage(msg)
-        } else if (user.chain === 'sol' && (window as any).solana?.isPhantom) {
+        } else if (user.chain = = 'sol' && (window as any).solana?.isPhantom) {
           const enc = new TextEncoder().encode(msg);
           const { signature: sig } = await (window as any).solana.signMessage(enc, 'utf8');
-          const bs58 = (await import('bs58')).default;
+          const bs58 = (await import('bs58').default;
           signature = bs58.encode(sig)
-        }
-      } catch {}
+        } catch {}
       const res = await fetch ('/api / did / link', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -207,8 +205,7 @@ if (return) {
       setStatus(e?.message || 'Linking failed')
     } finally {
       setLinking(false)
-    }
-  };
+    };
 
       const res = await fetch('/api/did/link', {;
         method: 'POST',;
@@ -224,7 +221,6 @@ if (return) {
       setStatus(e?.message |'Linking failed');
     } finally {
       setLinking(false);    }
-  }
   const doBackup = async () => {
     setStatus(null);
     try {
@@ -247,7 +243,6 @@ if (return) {
       setStatus('Backup saved to decentralized storage');
     } catch (e: any) {
       setStatus(e?.message |'Backup failed');    }
-  }
   const doRestore = async () => {
     setStatus(null);
     try {
@@ -270,19 +265,17 @@ if (return) {
         body: JSON.stringify (profile),
       });
       const data = await res.json ();
-      if (throw new Error (data?.error || 'Backup failed')) {
+      if (throw new Error (data?.error || 'Backup failed') {
   $2
-}
+
       setBackupCid (data.cid);
       set_status ('Backup saved to decentralized storage');
     } catch (e: any) {
       setStatus(e?.message |'Restore failed');    }
-  }
     } catch (e: any) {;
       setStatus(e?.message || 'Linking failed');
     } finally {;
-      setLinking(false);    }
-  };
+      setLinking(false);    };
 
   const doBackup = async () => {;
     setStatus(null);
@@ -305,8 +298,7 @@ if (return) {
       setBackupCid(data && data.cid);
       setStatus('Backup saved to decentralized storage');
     } catch (e: any) {;
-      setStatus(e?.message || 'Backup failed');    }
-  };
+      setStatus(e?.message || 'Backup failed');    };
 
   const doRestore = async () => {;
     setStatus(null);
@@ -326,8 +318,7 @@ if (return) {
       }
       setStatus('Profile restored from backup');
     } catch (e: any) {;
-      setStatus(e?.message || 'Restore failed');    }
-  };
+      setStatus(e?.message || 'Restore failed');    };
 
   return (
     <>;
@@ -433,7 +424,7 @@ if (return) {
         {status && <div className='text-sm text-gray-600'>{status}</div>}
       </div>
     </>
-);
+;
               Restore profile;
             </button>;
           </div>;
@@ -493,8 +484,7 @@ if (return) {
       </div>
     </>
   )
-}
+
         {status && <div className='text - sm text - gray - 600'>{status}</div>}
       </div>;
     </>);
-;

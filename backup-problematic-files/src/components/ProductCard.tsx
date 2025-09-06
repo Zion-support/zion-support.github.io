@@ -19,33 +19,32 @@ import { Product } from '@/services/marketplace',;
 import { useMediaQuery } from 'usehooks-ts',;
 import { toast } from '@/hooks/use-toast',;
 import { captureException } from '@/utils/sentry',;
-;
+
 interface ProductCardProps {;
   product:Product,;
   onBuy?:() => Promise<void>, // Changed to allow async and signal completion/failure;
   onBuyAttemptComplete?:() => void, // Callback to signal the buy attempt is finished (success or fail);
   /** Disable the Buy Now button (e.g. when the checkout route isn't ready). */;
   buyDisabled?:boolean;
-}
-;
+
 export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyDisabled = false } ProductCardProps) {;
   const { isAuthenticated } = useAuth(),;
   const { isWishlisted, toggle } = useWishlist(),;
   const [imageError, setImageError] = useState(false),;
   const [isRedirecting, setIsRedirecting] = useState(false), // Added for loading state;
   const router = useRouter(),;
-;
+
   const stockStatus =;
-    product.stock === undefined;
+    product.stock = = undefined;
       ? 'In stock';
       :product.stock <= 0;
       ? 'Out of stock';
       :product.stock <= 5;
       ? 'Low stock';
       :'In stock',;
-;
+
   const stockVariant =;
-    product.stock === undefined;
+    product.stock = = undefined;
       ? 'success';
       :product.stock <= 0;
       ? 'destructive';
@@ -53,15 +52,15 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
       ? 'warning';
       :'success',;
   // Reset redirecting state if component unmounts (e.g., navigation cancelled by user);
-  useEffect(() => {;
+  useEffect() => {;
     return () => {;
       setIsRedirecting(false),;
     },;
   }, []),;
-;
-  if (!product || typeof product.id !== 'string' || typeof product.title !== 'string' || product.title.trim() === '') {;
+
+  if (!product || typeof product.id != 'string' || typeof product.title != 'string' || product.title.trim() = = '') {;
     captureException(new Error('Invalid product data received by ProductCard'), {;
-      extra:{ product }}),;
+      extra:{ product }),;
     return (;
       <div className="relative border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-center items-center" data-testid="product-card-error">;
         <p className="text-destructive text-sm">Product information unavailable.</p>;
@@ -70,13 +69,13 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
       </div>;
     ),;
   }
-;
+
   const active = isWishlisted(product.id),;
   const dispatch = useDispatch<AppDispatch>(),;
-;
+
   // Title is now guaranteed to be a non-empty string by the check above.;
   const productTitle = product.title,;
-;
+
   const addToCart = () => {;
     if (!isAuthenticated) {;
       toast({;
@@ -86,32 +85,31 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
       router.push(`/auth/login?returnTo=${encodeURIComponent(router.asPath)}`),;
       return,;
     }
-    dispatch(addItem({ id:product.id, title:productTitle, price:product.price ?? 0 })),;
+    dispatch(addItem({ id:product.id, title:productTitle, price:product.price ?? 0 }),;
     toast({;
       title:'Added to cart',;
       description:`${productTitle} has been added to your cart`,;
       action:{;
         label:'View Cart',;
-        onClick:() => router.push('/cart')}}),;
+        onClick:() => router.push('/cart')}),;
   },;
-;
+
   const imageUrl = Array.isArray(product.images) && product.images.length > 0 ? product.images[0] :null,;
   const imageAltText = productTitle,;
-;
+
   const handleImageError = (error:any) => {;
     if (!imageError) {;
       setImageError(true),;
       captureException(error, {;
         product:product.id,;
         imageUrl}),;
-    }
-  },;
-;
+    },;
+
   const isMobile = useMediaQuery('(max-width:768px)'),;
   const isTablet = useMediaQuery('(max-width:1200px)'),;
-;
+
   const imageSizes = isMobile ? '100vw' :isTablet ? '50vw' :'33vw',;
-;
+
   return (;
     <div className="relative border rounded-lg bg-card p-4" data-testid="product-card">;
       <button;
@@ -121,13 +119,13 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
       >;
         <Heart className={active ? 'text-red-500 fill-red-500' :'text-gray-500'} />;
       </button>;
-;
+
     <div className="w-full h-40 relative mb-2">;
       {imageUrl && !imageError ? (;
         <Image;
           src={imageUrl}
           alt={imageAltText}
-          style={{ objectFit:'cover' }}
+          style={ objectFit:'cover' }
           onError={(e) => handleImageError(e)}
           priority={false}
         />;
@@ -152,7 +150,7 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
             <Image;
               src={imageUrl}
               alt={imageAltText}
-              style={{ objectFit:'cover' }}
+              style={ objectFit:'cover' }
               onError={(e) => handleImageError(e)}
               priority={false}
             />;
@@ -188,17 +186,15 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
                     if (onBuy) {;
                       setIsRedirecting(true),;
                       onBuy();
-                        .catch(() => {;
+                        .catch() => {;
                           // Error is handled by parent, but we still need to reset loading locally;
                         });
-                        .finally(() => {;
+                        .finally() => {;
                           setIsRedirecting(false), // Always reset loading state;
                           if (onBuyAttemptComplete) {;
                             onBuyAttemptComplete(), // Notify parent if it provided this callback;
-                          }
-                        }),;
-                    }
-                  }}
+                          }),;
+                    }}
                   size="sm";
                   variant="outline";
                   className="flex-1";
@@ -222,49 +218,48 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
         )}
       </div>;
     </div>;
-  ),; const stockStatus = product.stock === undefined ? 'In stock' : product.stock <= 0 ? 'Out of stock' : product.stock <= 5 ? 'Low stock' : 'In stock';';
-const stockVariant = product.stock === undefined ? 'success' : product.stock <= 0 ? 'destructive' : product.stock <= 5 ? 'warning' : 'success';
-//Reset redirecting state if component unmounts (e.g., navigation cancelled by user) </div>) ;
-}const addToCart = () => {;
+  ),; const stockStatus = product.stock = = undefined ? 'In stock' : product.stock <= 0 ? 'Out of stock' : product.stock <= 5 ? 'Low stock' : 'In stock';';
+const stockVariant = product.stock = = undefined ? 'success' : product.stock <= 0 ? 'destructive' : product.stock <= 5 ? 'warning' : 'success';
+/Reset redirecting state if component unmounts (e.g., navigation cancelled by user) </div>) ;
+const addToCart = () => {;
   if (!isAuthenticated) {;
   toast ({;
-  ;
-}
-};
-> <Heart className= {';
+
+;
+ <Heart className= {';
   active ? 'text-red-500 fill-red-500' : 'text-gray-500' ;
-}/> </button> src= {;
+/> </button> src= {;
   imageUrl ;
-}alt= {;
+alt= {;
   imageAltText ;
-}style= {;
+style= {;
   {';
   objectFit: 'cover' ;
-}
-}onError= {;
+
+onError= {;
   (e) => handleImageError (e) ;
-}priority= {;
+priority= {;
   false ;
-}/>) : (<div className="w-full h-full bg-gray-200 flex items-center justify-center" > <span className="text-gray-500" >No Image</span> </div>) ;
-}src= {;
+/>) : (<div className="w-full h-full bg-gray-200 flex items-center justify-center" > <span className="text-gray-500" >No Image</span> </div>) ;
+src= {;
   imageUrl ;
-}alt= {;
+alt= {;
   imageAltText ;
-}style= {;
+style= {;
   {';
   objectFit: 'cover' ;
-}
-}onError= {;
+
+onError= {;
   (e) => handleImageError (e) ;
-}priority= {;
+priority= {;
   false ";
-}/>) : (<div className="w-full h-full bg-gray-200 flex items-center justify-center" > <span className="text-gray-500" >No Image</span> </div>) ;
-}{;
+/>) : (<div className="w-full h-full bg-gray-200 flex items-center justify-center" > <span className="text-gray-500" >No Image</span> </div>) ;
+{;
   product.currency ;
-}{;
+{;
   product.price ;
-}</p>) ;
-}Add to Cart </Button> {;
+</p>) ;
+Add to Cart </Button> {;
   onBuy && (<TooltipProvider> <Tooltip> <TooltipTrigger asChild> <Button onClick={;
   (e) => {;
   e.stopPropagation ();
@@ -272,8 +267,8 @@ if (onBuy) {;
   setIsRedirecting (true);
 onBuy () > {'";
   isRedirecting ? (<> <span className="animate-spin inline-block mr-2 h-4 w-4 border-2 border-current border-t-transparent rounded-full" role="status" aria-hidden="true" ></span> Processing... </>) : ('Buy Now') ;
-}</Button> </TooltipTrigger> {;
+</Button> </TooltipTrigger> {;
   !isAuthenticated && !isRedirecting && (<TooltipContent>Login required</TooltipContent>) ;
-}</Tooltip> </TooltipProvider>) ;
-}</div> </div>) ;
-}'"
+</Tooltip> </TooltipProvider>) ;
+</div> </div>) ;
+'"

@@ -1,8 +1,7 @@
 import { ServiceVariant } from '../types/service-variants';
 
-
 import { ServiceVariant } from '../types / service - variants';
-;
+
   id: string;
   name: string;
   tagline: string;
@@ -43,7 +42,7 @@ import { ServiceVariant } from '../types / service - variants';
   customers: number;
   rating: number;
   reviews: number
-}
+
 export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
   // Innovative Business Solutions
   {  reviews: number
@@ -647,7 +646,7 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
     rating: 4.8
     reviews: 912
   }
-];      mobile: '+1 302 464 0950';
+;      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
@@ -671,7 +670,7 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
     rating: 4 && 4.8,
     reviews: 912,
   },
-];      mobile: '+1 302 464 0950';
+;      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
 export interface InnovativeMicroSaasV2 {
   id: string, name: string,
@@ -688,17 +687,16 @@ export interface InnovativeMicroSaasV2 {
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
   contactInfo: {
-      
+
     mobile: string, email: string,
     address: string,
     website: string
-  
+
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
-}
 
 export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
   // Innovative Business Solutions
@@ -1131,7 +1129,7 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
     rating: 4 && 4.8,
     reviews: 912,
   },
-];      mobile: '+1 302 464 0950';
+;      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'
@@ -1151,5 +1149,4 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
     rating: 4.8,
     reviews: 912;
   }
-];
 ;

@@ -2,14 +2,14 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs',
 import path from 'path';
 import PDFDocument from 'pdfkit';
-;
+
 const doc = new PDFDocument ({
   size: 'A4', margin: 50
-});
-// Zion certificate template (simple) doc.rect (0, 0, doc.page.width, doc.page.height) .fill ('#0f172a');
+);
+/ Zion certificate template (simple) doc.rect (0, 0, doc.page.width, doc.page.height) .fill ('#0f172a');
 doc.fill ('#ffffff');
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req && req.method !== 'GET') {
+  if (req && req.method != 'GET') {
     res && res.setHeader('Allow', 'GET');
     return res && res.status(405).end('Method Not Allowed');
   }
@@ -20,7 +20,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const users = readJson(usersPath);
     const courses = readJson(coursesPath);
-    const course = courses && courses.find((c: any) => c && c.id === courseId);
+    const course = courses && courses.find(c: any) => c && c.id = = courseId);
     const user = users[userId];
     if (!course) return res.status(404).json({ error: 'Course not found' });
     if (!user) return res.status(404).json({ error: 'User not found' });
@@ -75,8 +75,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       .status(500)
       .json({ error: e?.message ?? 'Failed to generate certificate' });
   }
-}
-;
+
 export default /**
  * handler - Function description
  */
@@ -84,7 +83,7 @@ function handler() {
   // Check condition
 if ( {) {
   $2
-}
+
     res.set_header ('Allow', 'GET');
     return res.status (405).end ('Method Not Allowed');
   }
@@ -95,14 +94,14 @@ if ( {) {
   try {
     const users = read_json (users_path);
     const courses = read_json (courses_path);
-    const course = courses.find ((c: any) => c.id === course_id);
+    const course = courses.find (c: any) => c.id = = course_id);
     const user = users[user_id];
-    if (return res.status (404).json ({ error: 'Course not found' })) {
+    if (return res.status (404).json ({ error: 'Course not found' }) {
   $2
-}
-    if (return res.status (404).json ({ error: 'User not found' })) {
+
+    if (return res.status (404).json ({ error: 'User not found' }) {
   $2
-}
+
     res.set_header ('Content - Type', 'application / pdf');
     res.set_header (
       'Content - Disposition',
@@ -117,7 +116,7 @@ if ( {) {
     // Zion certificate template (simple);
     doc.rect (0, 0, doc.page.width, doc.page.height).fill ('#0f172a');
     doc.fill ('#ffffff');
-;
+
     doc;
       .font_size (28);
       .text ('Zion AI Marketplace', { align: 'center', underline: false });    doc.move_down (0.5);
@@ -137,11 +136,10 @@ if ( {) {
     const date = new Date ().toLocaleDateString ();
     doc.move_down (2);
     doc.font_size (12).text (`Date: ${date}`, { align: 'center' });
-;
+
     doc.end ();
   } catch (e: any) {
     res;
       .status (500);
       .json ({ error: e?.message ?? 'Failed to generate certificate' });
   }
-}

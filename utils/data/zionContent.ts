@@ -2,24 +2,24 @@ export type Infobox = {founder: string;
   launchYear: string;
   token: string;
   protocolType: string;
-}
+
 export type WikiSection = {id: string;
   title: string;
   paragraphs: string[];
-}
+
 export type WikiContent = {title: string;
   intro: string;
   infobox: Infobox;
   sections: WikiSection[];
   references: string[];
-}
+
 export type DocsContent = {productOverview: WikiSection;
   developerApi: WikiSection;
   governanceGuide: WikiSection;
   tokenomics: WikiSection;
   team: WikiSection;
   publicRoadmap: WikiSection;
-}
+
 export const operatorPrompt = `Write a Wikipedia-style article about Zion OS  the worlds first decentralized AI protocol for trust, work, and talent. Include use cases, launch history, modules, and governance model.`;
 export function generateZionWiki(): WikiContent {const title = 'Zion OS';
   const intro = 'Zion OS is a decentralized AI marketplace protocol that coordinates trust, work, and talent across open networks. It combines an AI agent layer (ZionGPT), token incentives (ZION$), and a modular protocol to enable verifiable marketplaces for tasks, models, and contributions.';
@@ -60,7 +60,7 @@ export function generateZionWiki(): WikiContent {const title = 'Zion OS';
   const references = [;
     '[1] Zion OS whitepaper (forthcoming).[2] Governance guidelines and working group charters (draft).[3] ZionGPT evaluation benchmarks (in progress).'];
   return { title, intro, infobox, sections, references }
-}
+
 export function generateZionDocs(): DocsContent {const wiki = generateZionWiki();
   return {;
     productOverview: {;
@@ -86,14 +86,14 @@ export function generateZionDocs(): DocsContent {const wiki = generateZionWiki()
     publicRoadmap: {id: 'public-roadmap';
       title: 'Public Roadmap';
       paragraphs: [;
-        'Milestones: v1 agent registry, incentive - compatible task routing, governance launch, and safety benchmarks publication.']}}
-}
+        'Milestones: v1 agent registry, incentive - compatible task routing, governance launch, and safety benchmarks publication.']}
+
 export function buildMarkdownFromWiki(wiki: WikiContent): string {const infobox = `||;
-|---|---|;
-| Founder | ${wiki.infobox.founder} |;
-| Launch Year | ${wiki.infobox.launch_year} |;
-| Token | ${wiki.infobox.token} |;
-| Protocol Type | ${wiki.infobox.protocolType} |`;
+---|---|;
+ Founder | ${wiki.infobox.founder} |;
+ Launch Year | ${wiki.infobox.launch_year} |;
+ Token | ${wiki.infobox.token} |;
+ Protocol Type | ${wiki.infobox.protocolType} |`;
   const lines: string[] = [];
   lines.push(`# ${wiki.title}`);
   lines.push('');
@@ -106,30 +106,30 @@ export function buildMarkdownFromWiki(wiki: WikiContent): string {const infobox 
     lines.push('');
   }
   if (wiki.references.length) {lines.push('## References');
-    wiki.references.forEach((r, i) => lines.push(`${i + 1}. ${r}`));
+    wiki.references.forEach(r, i) => lines.push(`${i + 1}. ${r}`);
   }
   return lines.join('\n');
-}
+
 export function buildWikitextFromWiki(wiki: WikiContent): string {const lines: string[] = [];
-  lines.push(`{{Infobox software`);
+  lines.push(`{Infobox software`);
   lines.push(`| name = ${wiki.title}`);
   lines.push(`| developer = ${wiki.infobox.founder}`);
   lines.push(`| released = ${wiki.infobox.launchYear}`);
   lines.push(`| genre = ${wiki.infobox.protocolType}`);
   lines.push(`| license = Open`);
-  lines.push(`}}`);
+  lines.push(`}`);
   lines.push('');
   lines.push(wiki.intro);
   lines.push('');
-  for (const s of wiki.sections) {lines.push(`== ${s.title} ==`);
+  for (const s of wiki.sections) {lines.push(`= ${s.title} = `);
     for (const p of s.paragraphs) lines.push(p);
     lines.push('');
   }
-  if (wiki.references.length) {lines.push('== References ==');
-    wiki.references.forEach((r) => lines.push(`* ${r}`));
+  if (wiki.references.length) {lines.push('= References = ');
+    wiki.references.forEach(r) => lines.push(`* ${r}`);
   }
   return lines.join('\n');
-}
+
 export function buildNotionMarkdownFromDocs(docs: DocsContent): string {const sections = [;
     docs.productOverview;
     docs.developerApi;
@@ -146,11 +146,10 @@ export function buildNotionMarkdownFromDocs(docs: DocsContent): string {const se
     lines.push('');
   }
   return lines.join ('\n');
-}
+
 export function slugify(input: string): string {return input;
     .toLowerCase();
     .replace(/[^a-z0-9\s-]/g, '');
     .trim();
     .replace(/\s+/g, '-');
     .replace(/-+/g, '-');
-}

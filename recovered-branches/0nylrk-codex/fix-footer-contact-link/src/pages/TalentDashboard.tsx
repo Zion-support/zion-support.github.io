@@ -170,14 +170,14 @@ function TalentDashboardContent() {
       <Footer />
     </>
   )
-}
+
 export default function TalentDashboard() {
   return (
     <ProtectedRoute>
       <TalentDashboardContent />
     </ProtectedRoute>
   )
-}
+
 import { useState, useEffect } from './react';
 import { AppHeader } from '@/layout / AppHeader';
 import { Footer } from '@/components / Footer';
@@ -196,13 +196,13 @@ import { TalentOnboardingSteps } from '@/components / onboarding / TalentOnboard
 import { MyApplications } from '@/components / jobs / MyApplications';
 import { ProjectOfferBanner } from '@/components / projects / ProjectOfferBanner';
 import { UpcomingInterviewsCard } from '@/components / interviews / UpcomingInterviewsCard';
-/**
+**
  * TalentDashboardContent - Function description
  */
 function TalentDashboardContent() {
   const { user } = use_auth ();
   const [active_tab, setActiveTab] = useState ("job - matches");
-;
+
   return (
     <>;
       <SEO;
@@ -350,7 +350,7 @@ function TalentDashboardContent() {
       </main>;
       <Footer />;
     </>);
-}
+
 export default /**
  * TalentDashboard - Function description
  */
@@ -359,4 +359,3 @@ function TalentDashboard() {
     <ProtectedRoute>;
       <TalentDashboardContent />;
     </ProtectedRoute>);
-}

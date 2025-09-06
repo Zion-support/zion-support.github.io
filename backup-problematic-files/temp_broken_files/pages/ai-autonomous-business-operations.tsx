@@ -1,6 +1,6 @@
 import React from 'react',;
 import ServiceLanding from '../components/sections/ServiceLanding',;
-;
+
 export default function AIAutonomousBusinessOperations() {;
 	return (;
 		<ServiceLanding;
@@ -100,6 +100,5 @@ const AIAutonomousBusinessOperations: React.FC = () => {
       </main>
     </Layout>
   );
-};
 
 export default AIAutonomousBusinessOperations;

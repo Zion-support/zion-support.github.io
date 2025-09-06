@@ -6,5 +6,3 @@ export function ErrorOverlay() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

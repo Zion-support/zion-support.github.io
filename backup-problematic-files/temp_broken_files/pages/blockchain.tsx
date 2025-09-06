@@ -21,7 +21,7 @@ export default function Blockchain() {;
       </ErrorBoundary>;
     </>;
   );
-}
+
 const BlockchainPage: React.FC = () => {
   return (
     <>
@@ -43,6 +43,5 @@ const BlockchainPage: React.FC = () => {
       </div>
     </>
   );
-};
 
 export default BlockchainPage;

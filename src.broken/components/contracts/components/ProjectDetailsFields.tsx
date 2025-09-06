@@ -6,5 +6,3 @@ export function ProjectDetailsFields() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

@@ -21,7 +21,7 @@ const SidebarNavigation: React.FC = () => {
           </button>
         </div>
         <nav className="mt-4">
-          {navigationItems.map((item) => (
+          {navigationItems.map(item) => (
             <Link
               key={item.name}
               href={item.href}
@@ -30,7 +30,7 @@ const SidebarNavigation: React.FC = () => {
               <item.icon className="w-6 h-6" />
               {isOpen && <span className="ml-3">{item.name}</span>}
             </Link>
-          ))}
+          )}
         </nav>
         <div className="absolute bottom-4 left-4 right-4">
           <button className="flex items-center w-full p-4 text-gray-700 hover:bg-gray-100 transition-colors rounded-lg">
@@ -46,7 +46,7 @@ const SidebarNavigation: React.FC = () => {
       </div>
     </div>
   );
-}
+
 export default SidebarNavigation;
       <div className={`${is_open ? 'w - 64' : 'w - 16'} transition - all duration - 300 bg - white shadow - lg`}>;
         <div className="p - 4">;
@@ -58,7 +58,7 @@ export default SidebarNavigation;
           </button>;
         </div>;
         <nav className="mt - 4">;
-          {navigation_items.map ((item) => (
+          {navigation_items.map (item) => (
             <Link;
               key={item.name}
               href={item.href}
@@ -66,7 +66,7 @@ export default SidebarNavigation;
             >;
               <item.icon className="w - 6 h - 6" />;
               {is_open && <span className="ml - 3">{item.name}</span>}
-            </Link>))}
+            </Link>)}
         </nav>;
         <div className="absolute bottom - 4 left - 4 right - 4">;
           <button className="flex items - center w - full p - 4 text - gray - 700 hover:bg - gray - 100 transition - colors rounded - lg">;
@@ -81,6 +81,5 @@ export default SidebarNavigation;
         <p className="text - gray - 600 mt - 2">Welcome to your dashboard</p>;
       </div>;
     </div>);
-}
-;
+
 export default SidebarNavigation;

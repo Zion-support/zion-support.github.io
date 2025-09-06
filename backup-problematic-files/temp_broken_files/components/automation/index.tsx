@@ -9,4 +9,3 @@ export default function AutomationPage() {
       <p className=&quot;mt-2 text-gray-600 dark:text-gray-300&quot;>Automation tools overview coming soon.</p>
     </div>
   )
-}

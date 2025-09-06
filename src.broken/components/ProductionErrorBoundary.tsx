@@ -6,5 +6,3 @@ export function ProductionErrorBoundary() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

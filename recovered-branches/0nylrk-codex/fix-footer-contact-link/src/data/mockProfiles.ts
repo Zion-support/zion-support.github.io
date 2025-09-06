@@ -99,7 +99,6 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
         { day: 'Friday', hours: '9:00 AM - 3:00 PM' }
       ]
     }
-  }
   'talent-1': {
     id: 'talent-1'
     name: 'Alexandra Chen'
@@ -205,8 +204,7 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
         { day: 'Thursday', hours: '10:00 AM - 6:00 PM' }
         { day: 'Friday', hours: '10:00 AM - 2:00 PM' }
       ]
-    }
-  },};        { day: "Monday", hours: "10:00 AM - 6:00 PM" }
+    },};        { day: "Monday", hours: "10:00 AM - 6:00 PM" }
     experience: [;
       {
         id: 'e1',
@@ -258,6 +256,5 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
         { day: "Friday", hours: "10:00 AM - 2:00 PM" }
       ];
     }
-  }
 
   }

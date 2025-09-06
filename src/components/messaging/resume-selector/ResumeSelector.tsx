@@ -27,7 +27,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
   const [isLoading, setIsLoading] = useState(false)
   const { resume, fetchResume } = useResume()
   // Fetch resume data when component mounts
-  useEffect((,) => {
+  useEffect(,) => {
     const loadResumes = async () => {
       setIsLoading(true)
       try {
@@ -37,10 +37,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
       } finally {
         setIsLoading (false);
       }
-    }
             return;
       }
-}
-}
+
   );
-}

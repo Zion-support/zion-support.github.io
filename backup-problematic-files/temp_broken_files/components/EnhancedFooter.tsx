@@ -56,7 +56,7 @@ const EnhancedFooter: React.FC = () => {
               Leading-edge technology solutions and autonomous innovation platform. 
               Empowering businesses with cutting-edge AI, quantum computing, and digital transformation.
             </p>
-            
+
             {/* Contact Info */}
             <div className=&quot;space-y-3&quot;>
               <div className=&quot;flex items-center space-x-3 text-white/70&quot;>
@@ -78,11 +78,11 @@ const EnhancedFooter: React.FC = () => {
           </div>
 
           {/* Footer Sections */}
-          {footerSections.map((section) => (
+          {footerSections.map(section) => (
             <div key={section.title}>
               <h3 className=&quot;text-white font-semibold mb-4&quot;>{section.title}</h3>
               <ul className=&quot;space-y-2&quot;>
-                {section.links.map((link) => (
+                {section.links.map(link) => (
                   <li key={link.name}>
                     <Link
                       href={link.href}
@@ -90,12 +90,12 @@ const EnhancedFooter: React.FC = () => {
                     >
                       {link.name}
                     </a>                  </li>
-                ))}
+                )}
               </ul>;
             </div>;
-          ))}
+          )}
         </div>;
-;
+
         {/* Bottom Section */}
         <div className=&quot;pt-8 border-t border-white/10&quot;>
           <div className=&quot;flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0&quot;>
@@ -106,7 +106,7 @@ const EnhancedFooter: React.FC = () => {
 
             {/* Social Links */}
             <div className=&quot;flex items-center space-x-4&quot;>
-              {socialLinks.map((social) => (
+              {socialLinks.map(social) => (
                 <a
                   key={social.name}
                   href={social.href}
@@ -116,13 +116,13 @@ const EnhancedFooter: React.FC = () => {
                   aria-label={social.name}                >
                   <social.icon className=&quot;w-5 h-5&quot; />
                 </a>
-              ))}
+              )}
             </div>
           </div>
         </div>
       </div>
     </footer>
   )
-},
+,
 
 export default EnhancedFooter,

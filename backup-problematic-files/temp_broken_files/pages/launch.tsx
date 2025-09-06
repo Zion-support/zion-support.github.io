@@ -1,12 +1,12 @@
 import type { GetServerSideProps } from 'next',;
-;
+
 export const getServerSideProps:GetServerSideProps = async () => {;
   return {;
     redirect:{;
       destination:'/media/kit',;
-      permanent:false}},;
-},;
-;
+      permanent:false},;
+,;
+
 export default function LaunchRedirect() { return null, }import React from 'react';
 export default function Page() {
   return (
@@ -17,4 +17,3 @@ export default function Page() {
       </section>
     </main>
   );
-}

@@ -2,7 +2,6 @@ import React from 'react';
 
 interface Ai-content-creationProps {
   className?: string;
-}
 
 const Ai-content-creation: React.FC<Ai-content-creationProps> = ({ className }) => {
   return (
@@ -11,6 +10,5 @@ const Ai-content-creation: React.FC<Ai-content-creationProps> = ({ className }) 
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default Ai-content-creation;

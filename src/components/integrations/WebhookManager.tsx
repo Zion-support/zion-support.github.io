@@ -6,7 +6,7 @@ import {
   CardFooter
   CardHeader
   CardTitle
-} from '@/components/ui/card'
+ from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
@@ -19,7 +19,7 @@ import { useWebhooks, WebhookEventType } from '@/hooks/useWebhooks'
   SelectItem
   SelectTrigger
   SelectValue
-} from '@/components/ui/select'
+ from '@/components/ui/select'
 import { toast } from 'sonner'
 export function WebhookManager() {
   const {
@@ -46,12 +46,12 @@ export function WebhookManager() {
     { value: 'milestone_approved', label: 'Milestone Approved' }
     { value: 'talent_hired', label: 'Talent Hired' }
   ]
-  useEffect(() => {
+  useEffect() => {
     fetchWebhooks()
   }, [])
   const handleAddEvent = () => {
     if (!newWebhook.selectedEvent) return
-    if (newWebhook.eventTypes.includes(newWebhook.selectedEvent)) {
+    if (newWebhook.eventTypes.includes(newWebhook.selectedEvent) {
       toast.error('This event is already added')
       return
     }
@@ -63,14 +63,14 @@ export function WebhookManager() {
   }
   const handleRemoveEvent = (event: WebhookEventType) => {    setNewWebhook({
       ...newWebhook
-      eventTypes: newWebhook.eventTypes.filter(e => e !== event)
+      eventTypes: newWebhook.eventTypes.filter(e => e != event)
     })
   }
   const handleCreateWebhook = async () => {
     if (
       !newWebhook.name |
       !newWebhook.url |
-      newWebhook.eventTypes.length === 0
+      newWebhook.eventTypes.length = = 0
     ) {
       toast.error('Please fill in all required fields')
       return
@@ -105,7 +105,7 @@ import {;
   CardFooter,;
   CardHeader,;
   CardTitle,;
-} from '@/components/ui/card';
+ from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -118,7 +118,7 @@ import {;
   SelectItem,;
   SelectTrigger,;
   SelectValue,;
-} from '@/components/ui/select';
+ from '@/components/ui/select';
 import { toast } from 'sonner';
 export function WebhookManager() {;
   const {;
@@ -148,13 +148,13 @@ export function WebhookManager() {;
     { value: 'talent_hired', label: 'Talent Hired' },;
   ];
 
-  useEffect(() => {;
+  useEffect() => {;
     fetchWebhooks();
   }, []);
   const handleAddEvent = () => {;
     if (!newWebhook && newWebhook.selectedEvent) return;
 
-    if (newWebhook && newWebhook.eventTypes.includes(newWebhook && newWebhook.selectedEvent)) {;
+    if (newWebhook && newWebhook.eventTypes.includes(newWebhook && newWebhook.selectedEvent) {;
       toast && toast.error('This event is already added');
       return;
     }
@@ -168,7 +168,7 @@ export function WebhookManager() {;
 
   const handleRemoveEvent = (event: WebhookEventType) => {    setNewWebhook({;
       ...newWebhook,;
-      eventTypes: newWebhook && newWebhook.eventTypes.filter(e => e !== event),;
+      eventTypes: newWebhook && newWebhook.eventTypes.filter(e => e != event),;
     });
   };
 
@@ -176,7 +176,7 @@ export function WebhookManager() {;
     if (;
       !newWebhook && newWebhook.name ||;
       !newWebhook && newWebhook.url ||;
-      newWebhook && newWebhook.eventTypes.length === 0;
+      newWebhook && newWebhook.eventTypes.length = = 0;
     ) {;
       toast && toast.error('Please fill in all required fields');
       return;
@@ -249,9 +249,9 @@ export function WebhookManager() {;
                   key = {event,}
                   onRemove = {(,) => handleRemoveEvent(event),}
                 >
-                  {eventOptions.find(e => e.value === event)?.label |event}
+                  {eventOptions.find(e => e.value = = event)?.label |event}
                 </ClickableBadge>
-              ))}
+              )}
             </div>;
             <div className='flex space-x-2'>;
               <Select
@@ -270,7 +270,7 @@ export function WebhookManager() {;
                     <SelectItem key={option.value} value={option.value}>
                       {option.label}
                     </SelectItem>
-                  ))}
+                  )}
                 </SelectContent>
               </Select>
               <Button type='button' onClick={handleAddEvent} variant='outline'>
@@ -304,7 +304,7 @@ export function WebhookManager() {;
           <p>Loading webhooks...</p>
         ) : error ? (
           <p className='text-red-500'>{error}</p>
-        ) : webhooks.length === 0 ? (
+        ) : webhooks.length = = 0 ? (
           <p>No webhooks configured yet. Create your first webhook above.</p>
         ) : (
           <div className='space-y-4'>
@@ -344,7 +344,7 @@ export function WebhookManager() {;
         <h3 className="text-lg font-medium mb-4">Your Webhooks</h3>
         {loading ? (
           <p > Loading webhooks...</p>) : error ? (
-          <p className="text - red - 500">{error}</p>) : webhooks.length === 0 ? (
+          <p className="text - red - 500">{error}</p>) : webhooks.length = = 0 ? (
           <p > No webhooks configured yet.Create your first webhook above.</p>) : (
           <div className="space - y-4">;
             {webhooks.map (webhook => (
@@ -383,9 +383,9 @@ export function WebhookManager() {;
                     <div>
                       <Label className='text-sm'>Events</Label>
                       <div className='flex flex-wrap gap-2 mt-1'>
-                        {webhook.event_types.map((event: WebhookEventType) => (
+                        {webhook.event_types.map(event: WebhookEventType) => (
                           <ClickableBadge key={event} variant='secondary'>
-                            {eventOptions.find(e => e.value === event)?.label |
+                            {eventOptions.find(e => e.value = = event)?.label |
                               event}                          </ClickableBadge>
                         </Button>;
                       </div>;
@@ -397,11 +397,11 @@ export function WebhookManager() {;
                     <div>;
                       <Label className='text-sm'>Events</Label>;
                       <div className='flex flex-wrap gap-2 mt-1'>;
-                        {webhook && webhook.event_types.map((event: WebhookEventType) => (;
+                        {webhook && webhook.event_types.map(event: WebhookEventType) => (;
                           <ClickableBadge key={event} variant='secondary'>;
-                            {eventOptions && eventOptions.find(e => e && e.value === event)?.label ||;
+                            {eventOptions && eventOptions.find(e => e && e.value = = event)?.label ||;
                               event}                          </ClickableBadge>;
-                        ))}
+                        )}
                       </div>;
                     </div>;
                     <div className='text-xs text-muted-foreground'>;
@@ -412,10 +412,10 @@ export function WebhookManager() {;
                     <div>;
                       <Label className='text - sm'>Events</Label>;
                       <div className='flex flex - wrap gap - 2 mt - 1'>;
-                        {webhook.event_types.map ((event: WebhookEventType) => (
+                        {webhook.event_types.map (event: WebhookEventType) => (
                           <ClickableBadge key={event} variant='secondary'>;
-                            {event_options.find (e => e.value === event)?.label ||;
-                              event}                          </ClickableBadge>))}
+                            {event_options.find (e => e.value = = event)?.label ||;
+                              event}                          </ClickableBadge>)}
                       </div>;
                     </div>;
                     <div className='text - xs text - muted - foreground'>;
@@ -453,13 +453,11 @@ export function WebhookManager() {;
                     </SelectTrigger>;
                     <SelectContent>;
                       <SelectItem value='test_event'>Test (generic)</SelectItem>;
-                      {webhook && webhook.event_types.map((event: WebhookEventType) => (                        <SelectItem key={event} value={event}>;
+                      {webhook && webhook.event_types.map(event: WebhookEventType) => (                        <SelectItem key={event} value={event}>;
                           Test{' '}
-                          {eventOptions.find(e => e.value === event)?.label |
+                          {eventOptions.find(e => e.value = = event)?.label |
                             event}
-                        </SelectItem>
-                  >
-                    <Trash className="h-4 w-4 mr-2" /> Delete
+                        </SelectItem><Trash className="h-4 w-4 mr-2" /> Delete
                   </Button>
                   <Select
                     onValueChange={(value) => handleTestWebhook(webhook.id, value as WebhookEventType)}
@@ -471,9 +469,8 @@ export function WebhookManager() {;
                       <SelectItem value="test_event">Test(generic)</SelectItem>
                       {webhook.event_types.map(event => (
                         <SelectItem key={event} value={event}>
-                          Test {eventOptions.find(e => e.value === event)?.label |event}
-                        </SelectItem>
-                  >;
+                          Test {eventOptions.find(e => e.value = = event)?.label |event}
+                        </SelectItem>;
                     <SelectTrigger className="w-[180px]">;
                       <SelectValue placeholder="Test webhook" />;
                     </SelectTrigger>;
@@ -481,14 +478,14 @@ export function WebhookManager() {;
                       <SelectItem value="test_event">Test(generic)</SelectItem>;
                       {webhook && webhook.event_types.map(event => (;
                         <SelectItem key={event} value={event}>;
-                          Test {eventOptions && eventOptions.find(e => e && e.value === event)?.label || event}
+                          Test {eventOptions && eventOptions.find(e => e && e.value = = event)?.label || event}
                         </SelectItem>;
-                      ))}
+                      )}
                     </SelectContent>;
                   </Select>;
                 </CardFooter>;
               </Card>;
-            ))}
+            )}
           </div>;
         )}
         {testResult && (
@@ -522,19 +519,19 @@ export function WebhookManager() {;
       </div>
     </div>
   )
-}setNewWebhook ({
+setNewWebhook ({
   ...newWebhook
 eventTypes: [...newWebhook.eventTypes, newWebhook.selectedEvent]
-}
+
                       <SelectItem value="test_event">Test (generic)</SelectItem>;
                       {webhook.event_types.map (event => (
                         <SelectItem key={event} value={event}>;
-                          Test {event_options.find (e => e.value === event)?.label || event}
-                        </SelectItem>))}
+                          Test {event_options.find (e => e.value = = event)?.label || event}
+                        </SelectItem>)}
                     </SelectContent>;
                   </Select>;
                 </CardFooter>;
-              </Card>))}
+              </Card>)}
           </div>)}
         {test_result && (
           <Card className='mt - 4 border - blue - 200'>;
@@ -565,75 +562,74 @@ eventTypes: [...newWebhook.eventTypes, newWebhook.selectedEvent]
           </Card>)}
       </div>;
     </div>);
-}setNewWebhook ({
+setNewWebhook ({
   ...new_webhook;
 event_types: [...new_webhook.event_types, new_webhook.selected_event];
-}
-}new_webhook.url;
+
+new_webhook.url;
 new_webhook.event_types;
 new_webhook.secret || undefined);";
-//Reset form return (<div className="space - y-8"> <Card> <CardHeader> <CardTitle > Create Webhook</CardTitle> <CardDescription> Define webhooks to notify external systems when events occur in Zion. </CardDescription> </CardHeader> <CardContent className="space - y-4"> <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4"> <div className="space - y-2"> <Label html_for=" webhook - name">Webhook Name</Label> <Input /> </div> </div> <div className="space - y-2"> <Label > Events</Label> <div className="flex flex - wrap gap - 2 mb - 2"> {
+/Reset form return (<div className="space - y-8"> <Card> <CardHeader> <CardTitle > Create Webhook</CardTitle> <CardDescription> Define webhooks to notify external systems when events occur in Zion. </CardDescription> </CardHeader> <CardContent className="space - y-4"> <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4"> <div className="space - y-2"> <Label html_for=" webhook - name">Webhook Name</Label> <Input /> </div> </div> <div className="space - y-2"> <Label > Events</Label> <div className="flex flex - wrap gap - 2 mb - 2"> {
   new_webhook.event_types.map (event => (<ClickableBadge key= {
   event;
-}on_remove= {
+on_remove= {
   () => handleRemoveEvent (event);
-}> {
-  event_options.find (e => e.value === event) ?.label || event;
-}</ClickableBadge>) ) ";
-}</div> <div className="flex space - x-2"> <Select value= {
+> {
+  event_options.find (e => e.value = = event) ?.label || event;
+</ClickableBadge>) ";
+</div> <div className="flex space - x-2"> <Select value= {
   new_webhook.selected_event;
-}onValueChange= {
+onValueChange= {
   (value) => setNewWebhook ({
   ...new_webhook, selected_event: value as WebhookEventType;
-}) ";
-}> <SelectTrigger className="w - full"> <SelectValue placeholder=" Select event"/> </SelectTrigger> <SelectContent> {
+) ";
+> <SelectTrigger className="w - full"> <SelectValue placeholder=" Select event"/> </SelectTrigger> <SelectContent> {
   event_options.map (option => (<SelectItem key= {
   option.value;
-}value= {
+value= {
   option.value;
-}> {
+> {
   option.label;
-}</SelectItem>) ) ";
-}</SelectContent> </Select> <PlusCircle className="h - 4 w - 4 mr - 2"/> Add </Button> </div> </div> <div className="space - y-2"> <Label html_for=" webhook - secret">Secret (optional) </Label> <Input /> <p className="text - xs text - muted - foreground"> If provided, this secret will be used to sign the webhook payload. </p> </div> </CardContent> <CardFooter> <Button on_click={
+</SelectItem>) ";
+</SelectContent> </Select> <PlusCircle className="h - 4 w - 4 mr - 2"/> Add </Button> </div> </div> <div className="space - y-2"> <Label html_for=" webhook - secret">Secret (optional) </Label> <Input /> <p className="text - xs text - muted - foreground"> If provided, this secret will be used to sign the webhook payload. </p> </div> </CardContent> <CardFooter> <Button on_click={
   handleCreateWebhook ";
-}> <Save className="h - 4 w - 4 mr - 2"/> Create Webhook </Button> </CardFooter> </Card> <div> <h3 className="text - lg font - medium mb - 4">Your Webhooks</h3> {";
+> <Save className="h - 4 w - 4 mr - 2"/> Create Webhook </Button> </CardFooter> </Card> <div> <h3 className="text - lg font - medium mb - 4">Your Webhooks</h3> {";
   loading ? (<p > Loading webhooks...</p>) : error ? (<p className="text - red - 500"> {
   error ";
-}</p>) : webhooks.length === 0 ? (<p > No webhooks configured yet. Create your first webhook above.</p>) : (<div className="space - y-4"> {
+</p>) : webhooks.length = = 0 ? (<p > No webhooks configured yet. Create your first webhook above.</p>) : (<div className="space - y-4"> {
   webhooks.map (webhook => (<Card key= {
   webhook.id ";
-}> <CardHeader className="pb - 2"> <div className="flex justify - between items - start"> <div> <CardTitle className="text - lg"> {
+> <CardHeader className="pb - 2"> <div className="flex justify - between items - start"> <div> <CardTitle className="text - lg"> {
   webhook.name ";
-}</CardTitle> <CardDescription className="truncate max - w-md"> {
+</CardTitle> <CardDescription className="truncate max - w-md"> {
   webhook.url ";
-}</CardDescription> </div> <div className="flex items - center"> <div className="mr - 2 flex items - center"> <div className= {
+</CardDescription> </div> <div className="flex items - center"> <div className="mr - 2 flex items - center"> <div className= {
   `h - 2 w - 2 rounded - full mr - 2 $ {
   webhook.is active ? 'bg - green - 500' : 'bg - gray - 400';
-}` ";
-}></div> <span className="text - sm"> {';
+` ";
+></div> <span className="text - sm"> {';
   webhook.is active ? 'Active' : 'Inactive' ";
-}</span> </div> <div className="flex - shrink - 0"> <Button > {';
+</span> </div> <div className="flex - shrink - 0"> <Button > {';
   webhook.is active ? 'Disable' : 'Enable' ";
-}</Button> </div> </div> </div> </CardHeader> <CardContent className="py - 2"> <div className="flex flex - col space - y-2"> <div> <Label className="text - sm">Events</Label> </ClickableBadge>) ) ";
-}</div> </div> <div className="text - xs text - muted - foreground"> {
+</Button> </div> </div> </div> </CardHeader> <CardContent className="py - 2"> <div className="flex flex - col space - y-2"> <div> <Label className="text - sm">Events</Label> </ClickableBadge>) ";
+</div> </div> <div className="text - xs text - muted - foreground"> {
   webhook.last triggered at ? `Last triggered: $ {
   new Date (webhook.last triggered at) .toLocaleString () ';
-}` : 'Never triggered' ";
-}</div> </div> </CardContent> <CardFooter className="flex justify - between pt - 2"> <Button > <Trash className="h - 4 w - 4 mr - 2"/> Delete </Button> <Select onValueChange= {
+` : 'Never triggered' ";
+</div> </div> </CardContent> <CardFooter className="flex justify - between pt - 2"> <Button > <Trash className="h - 4 w - 4 mr - 2"/> Delete </Button> <Select onValueChange= {
   (value) => handleTestWebhook (webhook.id, value as WebhookEventType) ";
-}> <SelectTrigger className="w-[180px]"> <SelectValue placeholder=" Test webhook"/> </SelectTrigger> <SelectContent> </SelectItem>) );
-}</SelectContent> </Select> </CardFooter> </Card>) );
-}</div>);
-}{";
+> <SelectTrigger className="w-[180px]"> <SelectValue placeholder=" Test webhook"/> </SelectTrigger> <SelectContent></SelectItem>);
+</SelectContent> </Select> </CardFooter> </Card>);
+</div>);
+{";
   test_result && (<Card className="mt - 4 border - blue - 200"> <CardHeader> <CardTitle className="text - lg">Webhook Test Result</CardTitle> </CardHeader> <CardContent> <div className="space - y-2"> <div className="flex justify - between"> <span className="font - medium">Status:</span> <span className= {';
   test_result.status >= 200 && test_result.status < 300 ? 'text - green - 600' : 'text - red - 600';
-}> {
+> {
   test_result.status;
-}{
+{
   test_result.status_text ";
-}</span> </div> <div> <span className="font - medium">Response:</span> <pre className="mt - 1 p - 2 bg - gray - 100 rounded text - sm overflow - x-auto"> {';
+</span> </div> <div> <span className="font - medium">Response:</span> <pre className="mt - 1 p - 2 bg - gray - 100 rounded text - sm overflow - x-auto"> {';
   test_result.response_body || '<empty>';
-}</pre> </div> </div> </CardContent> </Card>);
-}</div> </div>);
-}'"}
-}
+</pre> </div> </div> </CardContent> </Card>);
+</div> </div>);
+'"}

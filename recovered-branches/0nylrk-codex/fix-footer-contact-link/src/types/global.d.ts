@@ -1,6 +1,6 @@
 
 import { ReactNode } from 'react';
-// Extend FeatureCardProps to include key for mapping
+/ Extend FeatureCardProps to include key for mapping
 declare module '@/components/FeatureCard' {
   export interface FeatureCardProps {
     title: string;
@@ -11,8 +11,8 @@ declare module '@/components/FeatureCard' {
 
     key?: number | string
   }
-}
-// Extend ListingScoreCardProps to include key for mapping
+
+/ Extend ListingScoreCardProps to include key for mapping
 declare module '@/components/ListingScoreCard' {
   export interface ListingScoreCardProps {
     title: string;
@@ -30,8 +30,8 @@ declare module '@/components/ListingScoreCard' {
 
     variant?: string
   }
-}
-// Extend ChatMessageProps to include key for mapping
+
+/ Extend ChatMessageProps to include key for mapping
 declare module '@/components/ChatAssistant/ChatMessage' {
   export interface ChatMessageProps {
     role: 'user' | 'assistant';
@@ -41,8 +41,8 @@ declare module '@/components/ChatAssistant/ChatMessage' {
 
     key?: string | number
   }
-}
-// Extend ProductListingCardProps to include key for mapping
+
+/ Extend ProductListingCardProps to include key for mapping
 declare module '@/components/ProductListingCard' {
   export interface ProductListingCardProps {
     listing: any;
@@ -52,4 +52,3 @@ declare module '@/components/ProductListingCard' {
 
     key?: string | number
   }
-}

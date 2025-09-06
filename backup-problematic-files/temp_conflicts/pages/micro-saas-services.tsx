@@ -19,8 +19,8 @@ import { ;
   BarChart3,;
   Calendar,;
   Target;
-} from 'lucide-react',;
-;
+ from 'lucide-react',;
+
 export default function MicroSaasServicesPage() {;
   const microSaasServices = [;
     {;
@@ -43,8 +43,7 @@ export default function MicroSaasServicesPage() {;
       pricing:{;
         starter:{ price:29, features:['100 generations/monthBasic templates', 'SEO analysisEmail support'] },;
         professional:{ price:99, features:['500 generations/monthPremium templates', 'Advanced SEOPriority support', 'API access'] },;
-        enterprise:{ price:299, features:['Unlimited generationsCustom templates', 'White-label optionsSLA guarantee'] }
-      },;
+        enterprise:{ price:299, features:['Unlimited generationsCustom templates', 'White-label optionsSLA guarantee'] },;
       marketPrice:'$29-299/month',;
       competitors:['Jasper AICopy.ai', 'Writesonic'],;
       website:'https://ai-content.ziontech.ai',;
@@ -70,8 +69,7 @@ export default function MicroSaasServicesPage() {;
       pricing:{;
         starter:{ price:19, features:['5 URLs5-min monitoring', 'Basic metricsEmail alerts', '7-day retention'] },;
         professional:{ price:49, features:['25 URLs1-min monitoring', 'Advanced metricsMultiple alerts', '30-day retentionAPI access'] },;
-        enterprise:{ price:149, features:['Unlimited URLsReal-time monitoring', 'All metricsCustom dashboards', '1-year retentionSLA guarantee'] }
-      },;
+        enterprise:{ price:149, features:['Unlimited URLsReal-time monitoring', 'All metricsCustom dashboards', '1-year retentionSLA guarantee'] },;
       marketPrice:'$19-149/month',;
       competitors:['PingdomGTmetrix', 'WebPageTest'],;
       website:'https://window.window.window.performance.ziontech.ai',;
@@ -97,8 +95,7 @@ export default function MicroSaasServicesPage() {;
       pricing:{;
         starter:{ price:39, features:['100 keywordsBasic analysis', 'Monthly reportsEmail support', '7-day retention'] },;
         professional:{ price:89, features:['500 keywordsAdvanced analysis', 'Weekly reportsPriority support', '30-day retentionAPI access'] },;
-        enterprise:{ price:199, features:['Unlimited keywordsFull SEO suite', 'Daily reportsDedicated support', '1-year retentionWhite-label options'] }
-      },;
+        enterprise:{ price:199, features:['Unlimited keywordsFull SEO suite', 'Daily reportsDedicated support', '1-year retentionWhite-label options'] },;
       marketPrice:'$39-199/month',;
       competitors:['AhrefsSEMrush', 'Moz'],;
       website:'https://seo.ziontech.ai',;
@@ -124,8 +121,7 @@ export default function MicroSaasServicesPage() {;
       pricing:{;
         starter:{ price:25, features:['10 rate limit rulesBasic limiting', 'API key managementEmail notifications', '7-day retention'] },;
         professional:{ price:79, features:['50 rate limit rulesAdvanced limiting', 'Unlimited API keysReal-time monitoring', '30-day retentionAPI access'] },;
-        enterprise:{ price:199, features:['Unlimited rulesEnterprise security', 'Advanced featuresCustom integrations', '1-year retentionSLA guarantee'] }
-      },;
+        enterprise:{ price:199, features:['Unlimited rulesEnterprise security', 'Advanced featuresCustom integrations', '1-year retentionSLA guarantee'] },;
       marketPrice:'$25-199/month',;
       competitors:['KongTyk', 'AWS API Gateway'],;
       website:'https://rate-limiter.ziontech.ai',;
@@ -151,8 +147,7 @@ export default function MicroSaasServicesPage() {;
       pricing:{;
         starter:{ price:29, features:['1,000 subscribersBasic templates', 'Simple automationBasic analytics', 'Email support'] },;
         professional:{ price:79, features:['10,000 subscribersAdvanced templates', 'Advanced automationAdvanced analytics', 'Priority supportAPI access'] },;
-        enterprise:{ price:199, features:['Unlimited subscribersCustom templates', 'Complex workflowsEnterprise analytics', 'Dedicated supportWhite-label options'] }
-      },;
+        enterprise:{ price:199, features:['Unlimited subscribersCustom templates', 'Complex workflowsEnterprise analytics', 'Dedicated supportWhite-label options'] },;
       marketPrice:'$29-199/month',;
       competitors:['MailchimpConvertKit', 'ActiveCampaign'],;
       website:'https://email.ziontech.ai',;
@@ -178,15 +173,14 @@ export default function MicroSaasServicesPage() {;
       pricing:{;
         starter:{ price:19, features:['3 social accountsBasic scheduling', 'Simple calendarBasic analytics', 'Email support'] },;
         professional:{ price:49, features:['10 social accountsAdvanced scheduling', 'Content calendarAdvanced analytics', 'Priority supportAPI access'] },;
-        enterprise:{ price:129, features:['Unlimited accountsEnterprise scheduling', 'Advanced calendarEnterprise analytics', 'Dedicated supportWhite-label options'] }
-      },;
+        enterprise:{ price:129, features:['Unlimited accountsEnterprise scheduling', 'Advanced calendarEnterprise analytics', 'Dedicated supportWhite-label options'] },;
       marketPrice:'$19-129/month',;
       competitors:['BufferHootsuite', 'Later'],;
       website:'https://social.ziontech.ai',;
       demo:'https://demo.social.ziontech.ai';
     }
   ],;
-;
+
   const marketInsights = [;
     {;
       title:'AI Content Generation',;
@@ -225,7 +219,7 @@ export default function MicroSaasServicesPage() {;
       description:'Increasing need for multi-platform social media coordination';
     }
   ],;
-;
+
   return (;
     <>;
       <Head>;
@@ -235,13 +229,12 @@ export default function MicroSaasServicesPage() {;
         <meta property="og:description" content="Professional micro SaaS services for modern businesses. AI-powered solutions with competitive pricing and enterprise-grade features." />;
         <meta name="twitter:card" content="summary_large_image" />;
       </Head>;
-;
+
       {/* Hero Section */}
       <section className="relative section-padding bg-gradient-cursor overflow-hidden">;
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,122,204,0.08),transparent_50%)]" />;
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,122,204,0.06),transparent_50%)]" />;
         <div className="absolute inset-0 bg-grid opacity-10" />;
-        ;
         <div className="relative z-10 container-cursor text-center">;
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-cursor-blue/10 border border-cursor-blue/20 text-cursor-blue text-sm font-medium mb-6">;
             <span className="w-2 h-2 bg-cursor-blue rounded-full mr-2 animate-pulse" />;
@@ -257,7 +250,7 @@ export default function MicroSaasServicesPage() {;
           </p>;
         </div>;
       </section>;
-;
+
       {/* Market Overview */}
       <section className="section-padding bg-gradient-cursor-accent">;
         <div className="container-cursor">;
@@ -269,13 +262,13 @@ export default function MicroSaasServicesPage() {;
               Our services are positioned competitively in growing markets with strong demand and proven business models.;
             </p>;
           </div>;
-;
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {marketInsights.map((insight, index) => (;
+            {marketInsights.map(insight, index) => (;
               <Card;
                 key={index}
                 className="card-hover border-gradient-blue text-center";
-                style={{ animationDelay:`${index * 0.1}s` }}
+                style={ animationDelay:`${index * 0.1}s` }
               >;
                 <div className="p-6">;
                   <h3 className="text-xl font-bold text-white mb-4">{insight.title}</h3>;
@@ -286,11 +279,11 @@ export default function MicroSaasServicesPage() {;
                   <p className="text-gray-400 text-sm">{insight.description}</p>;
                 </div>;
               </Card>;
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Services Grid */}
       <section className="section-padding bg-gradient-cursor">;
         <div className="container-cursor">;
@@ -302,9 +295,9 @@ export default function MicroSaasServicesPage() {;
               Each service is designed to solve specific business challenges with professional-grade features and competitive pricing.;
             </p>;
           </div>;
-;
+
           <div className="space-y-16">;
-            {microSaasServices.map((service, index) => (;
+            {microSaasServices.map(service, index) => (;
               <div key={service.id} className="bg-gray-900/50 rounded-2xl p-8 border border-gray-800">;
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
                   {/* Service Info */}
@@ -318,7 +311,7 @@ export default function MicroSaasServicesPage() {;
                         <p className="text-gray-400">{service.description}</p>;
                       </div>;
                     </div>;
-;
+
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">;
                       <div>;
                         <h4 className="text-lg font-semibold text-white mb-3 flex items-center">;
@@ -326,31 +319,31 @@ export default function MicroSaasServicesPage() {;
                           Key Features;
                         </h4>;
                         <ul className="space-y-2">;
-                          {service.features.map((feature, featureIndex) => (;
+                          {service.features.map(feature, featureIndex) => (;
                             <li key={featureIndex} className="flex items-center text-gray-300 text-sm">;
                               <Check className="w-4 h-4 mr-2 text-green-400 flex-shrink-0" />;
                               {feature}
                             </li>;
-                          ))}
+                          )}
                         </ul>;
                       </div>;
-;
+
                       <div>;
                         <h4 className="text-lg font-semibold text-white mb-3 flex items-center">;
                           <Target className="w-5 h-5 mr-2 text-cursor-blue" />;
                           Use Cases;
                         </h4>;
                         <ul className="space-y-2">;
-                          {service.useCases.map((useCase, useCaseIndex) => (;
+                          {service.useCases.map(useCase, useCaseIndex) => (;
                             <li key={useCaseIndex} className="flex items-center text-gray-300 text-sm">;
                               <Check className="w-4 h-4 mr-2 text-green-400 flex-shrink-0" />;
                               {useCase}
                             </li>;
-                          ))}
+                          )}
                         </ul>;
                       </div>;
                     </div>;
-;
+
                     <div className="flex flex-wrap gap-4">;
                       <Button;
                         href={service.website}
@@ -369,7 +362,7 @@ export default function MicroSaasServicesPage() {;
                       </Button>;
                     </div>;
                   </div>;
-;
+
                   {/* Pricing & Market Info */}
                   <div className="lg:col-span-1">;
                     <div className="bg-gray-800/50 rounded-xl p-6 border border-gray-700">;
@@ -377,33 +370,32 @@ export default function MicroSaasServicesPage() {;
                         <BarChart3 className="w-5 h-5 mr-2 text-cursor-blue" />;
                         Pricing & Market;
                       </h4>;
-                      ;
                       <div className="space-y-4">;
                         <div>;
                           <p className="text-sm text-gray-400 mb-1">Market Price Range</p>;
                           <p className="text-lg font-bold text-white">{service.marketPrice}</p>;
                         </div>;
-;
+
                         <div>;
                           <p className="text-sm text-gray-400 mb-1">Our Pricing</p>;
                           <div className="space-y-2">;
-                            {Object.entries(service.pricing).map(([tier, details]) => (;
+                            {Object.entries(service.pricing).map([tier, details]) => (;
                               <div key={tier} className="flex justify-between items-center">;
                                 <span className="text-sm text-gray-300 capitalize">{tier}</span>;
                                 <span className="text-sm font-semibold text-white">${details.price}/mo</span>;
                               </div>;
-                            ))}
+                            )}
                           </div>;
                         </div>;
-;
+
                         <div>;
                           <p className="text-sm text-gray-400 mb-1">Key Competitors</p>;
                           <div className="flex flex-wrap gap-2">;
-                            {service.competitors.map((competitor, compIndex) => (;
+                            {service.competitors.map(competitor, compIndex) => (;
                               <span key={compIndex} className="px-2 py-1 bg-gray-700 rounded text-xs text-gray-300">;
                                 {competitor}
                               </span>;
-                            ))}
+                            )}
                           </div>;
                         </div>;
                       </div>;
@@ -411,11 +403,11 @@ export default function MicroSaasServicesPage() {;
                   </div>;
                 </div>;
               </div>;
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Why Choose Our Services */}
       <section className="section-padding bg-gradient-cursor-accent">;
         <div className="container-cursor">;
@@ -427,7 +419,7 @@ export default function MicroSaasServicesPage() {;
               We combine professional-grade features with competitive pricing to deliver exceptional value for your business.;
             </p>;
           </div>;
-;
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
             <Card className="card-hover border-gradient-blue text-center">;
               <div className="p-6">;
@@ -438,7 +430,7 @@ export default function MicroSaasServicesPage() {;
                 <p className="text-gray-400 text-sm">Enterprise-grade features and reliability at micro SaaS prices</p>;
               </div>;
             </Card>;
-;
+
             <Card className="card-hover border-gradient-blue text-center">;
               <div className="p-6">;
                 <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-cursor-blue/10 flex items-center justify-center">;
@@ -448,7 +440,7 @@ export default function MicroSaasServicesPage() {;
                 <p className="text-gray-400 text-sm">Market-competitive pricing with better value than alternatives</p>;
               </div>;
             </Card>;
-;
+
             <Card className="card-hover border-gradient-blue text-center">;
               <div className="p-6">;
                 <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-cursor-blue/10 flex items-center justify-center">;
@@ -458,7 +450,7 @@ export default function MicroSaasServicesPage() {;
                 <p className="text-gray-400 text-sm">Professional support and guidance for your business needs</p>;
               </div>;
             </Card>;
-;
+
             <Card className="card-hover border-gradient-blue text-center">;
               <div className="p-6">;
                 <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-cursor-blue/10 flex items-center justify-center">;
@@ -471,7 +463,7 @@ export default function MicroSaasServicesPage() {;
           </div>;
         </div>;
       </section>;
-;
+
       {/* CTA Section */}
       <section className="section-padding bg-gradient-to-r from-cursor-blue to-blue-600 relative overflow-hidden">;
         <div className="absolute inset-0 bg-dots opacity-10" />;
@@ -503,4 +495,3 @@ export default function MicroSaasServicesPage() {;
       </section>;
     </>;
   );
-}

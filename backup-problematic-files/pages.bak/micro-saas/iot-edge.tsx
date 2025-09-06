@@ -4,7 +4,6 @@ import React from 'react';
 
 interface Iot-edgeProps {
   className?: string;
-}
 
 const Iot-edge: React.FC<Iot-edgeProps> = ({ className }) => {
   return (
@@ -13,6 +12,3 @@ const Iot-edge: React.FC<Iot-edgeProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-}
-}
-}

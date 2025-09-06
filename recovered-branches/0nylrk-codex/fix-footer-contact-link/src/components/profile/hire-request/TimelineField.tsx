@@ -5,20 +5,20 @@ import {
   FormLabel
   FormControl
   FormMessage
-} from "@/components/ui/form";
+ from "@/components/ui/form";
 import {
   Select
   SelectContent
   SelectItem
   SelectTrigger
   SelectValue
-} from "@/components/ui/select";
+ from "@/components/ui/select";
 
 import { UseFormReturn } from "react-hook-form";
 import { FormValues } from "./useHireRequestForm";
 interface TimelineFieldProps {
   form: UseFormReturn < FormValues>;
-}
+
 export function TimelineField({ form }: TimelineFieldProps) {
 
   const timelineOptions = [
@@ -42,7 +42,7 @@ function TimelineField() {
     { value: "6+ months", label: "6+ months" },
     { value: "Ongoing", label: "Ongoing" },
   ];
-;
+
   return (
     <FormField
       control={form && form.control}
@@ -60,12 +60,12 @@ function TimelineField() {
                 <SelectValue placeholder="Select estimated timeline" />;
               </SelectTrigger>;
               <SelectContent>;
-                {timeline_options.map ((option) => (
+                {timeline_options.map (option) => (
                   <SelectItem key={option.value} value={option.value}>;
                     {option.label}
                   </SelectItem>
-                ))}
-                  </SelectItem>))}
+                )}
+                  </SelectItem>)}
               </SelectContent>;
             </Select>;
           </FormControl>;
@@ -74,7 +74,6 @@ function TimelineField() {
       )}
     />
   );
-}
+
         </FormItem>)}
     />);
-}

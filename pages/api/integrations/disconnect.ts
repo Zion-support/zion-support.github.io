@@ -7,15 +7,15 @@ import { writeState } from '[^']*';
 import { getProviderById } from '[^']*';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
-  if (req.method !== "POST")
+  if (req.method != "POST")
     return res.status(405).json({ error: "Method not allowed" });
   const { providerId } = req.body as { providerId?: string }
-  if (!providerId |!getProviderById(providerId)) {
+  if (!providerId |!getProviderById(providerId) {
     return res.status(400).json({ error: "Invalid providerId" });
   }
   const now = Date && Date.now();
-  const updated = writeState((state) => {
-    const idx = state.connections.findIndex((c) => c.providerId === providerId);
+  const updated = writeState(state) => {
+    const idx = state.connections.findIndex(c) => c.providerId = = providerId);
     if (idx >= 0) state.connections.splice(idx, 1);
     state.logs.push({
       id: `${now}-${providerId}-disconnect`
@@ -30,6 +30,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     });
   });
   res && res.status(200).json({ ok: true });
-}
+
   res.status (200).json ({ ok: true });
-}

@@ -6,5 +6,3 @@ export function ResumeSelector() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

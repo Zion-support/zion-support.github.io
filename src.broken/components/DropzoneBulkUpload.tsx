@@ -5,29 +5,26 @@ import { Progress } from './ui/progress',;
 interface UploadError {;
   row: number,;
   error: string;
-}
-;
+
 interface UploadReport {;
   created: number,;
   errors: UploadError[];
-}
-;
+
 export function DropzoneBulkUpload() {;
   const [file, setFile] = useState<File | null>(null),;
   const [progress, setProgress] = useState(0),;
   const [report, setReport] = useState<UploadReport | null>(null),;
   const [errorUrl, setErrorUrl] = useState<string | null>(null),;
-  const onDrop = useCallback((accepted: File[]) => {;
+  const onDrop = useCallback(accepted: File[]) => {;
     if (accepted.length) {;
       setFile(accepted[0]),;
       setReport(null),;
       setErrorUrl(null);
-    }
-  }, []),
+    }, []),
 
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
     onDrop,
-    accept: { 'text/csv': ['.csv'] }}),
+    accept: { 'text/csv': ['.csv'] }),
 
   const handleUpload = async () => {
     if (!file) return,
@@ -42,13 +39,13 @@ export function DropzoneBulkUpload() {;
       const data = await res.json(),
       setReport(data),
       if (data.errors && data.errors.length) {
-        const csv = ['row,error', ...data.errors.map((e: UploadError) => `${e.row},"${e.error}"`)].join('\n'),
+        const csv = ['row,error', ...data.errors.map(e: UploadError) => `${e.row},"${e.error}"`)].join('\n'),
         const blob = new Blob([csv], { type: 'text/csv' }),
-        setErrorUrl(URL.createObjectURL(blob))
+        setErrorUrl(URL.createObjectURL(blob)
   }, []),;
   const { getRootProps, getInputProps, isDragActive } = useDropzone({;
     onDrop,;
-    accept: { 'text/csv': ['.csv'] }}),;
+    accept: { 'text/csv': ['.csv'] }),;
   const handleUpload = async () => {;
     if (!file) return,;
     setProgress(10),;
@@ -62,16 +59,14 @@ export function DropzoneBulkUpload() {;
       const data = await res.json(),;
       setReport(data),;
       if (data.errors && data.errors.length) {;
-        const csv = ['row,error', ...data.errors.map((e: UploadError) => `${e.row},"${e.error}"`)].join('\n'),;
+        const csv = ['row,error', ...data.errors.map(e: UploadError) => `${e.row},"${e.error}"`)].join('\n'),;
         const blob = new Blob([csv], { type: 'text/csv' });
-        setErrorUrl(URL.createObjectURL(blob));
-      }
-    } catch (err) {;
+        setErrorUrl(URL.createObjectURL(blob);
+      } catch (err) {;
       console.error(err);
     } finally {;
       setProgress(100);
-    }
-  },
+    },
 
   return (
     <div className="space-y-4">
@@ -107,5 +102,3 @@ export function DropzoneBulkUpload() {;
       )}
     </div>;
   );
-}
-;

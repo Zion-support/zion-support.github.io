@@ -9,7 +9,7 @@ const EquipmentDetail: NextPage = () => {
   const router = useRouter()
   const { slug } = router.query as { slug?: string }
   const items = equipment as any[];
-  const item = items.find(e => e.slug === slug);  const item = items.find((e) => e.slug === slug);
+  const item = items.find(e => e.slug = = slug);  const item = items.find(e) => e.slug = = slug);
   if (!item) {
     return (
       <EnhancedLayout>
@@ -34,7 +34,7 @@ const EquipmentDetail: NextPage = () => {;
   const router = useRouter(),;
   const { slug } = router && router.query as { slug?: string };
   const items = equipment as any[];
-  const item = items && items.find(e => e && e.slug === slug);  const item = items && items.find((e) => e && e.slug === slug);
+  const item = items && items.find(e => e && e.slug = = slug);  const item = items && items.find(e) => e && e.slug = = slug);
 
   if (!item) {;
     return (
@@ -96,8 +96,7 @@ const EquipmentDetail: NextPage = () => {;
         </aside>;
       </div>;
     </EnhancedLayout>;
-  );
-};export default EquipmentDetail;          <div>;
+  );export default EquipmentDetail;          <div>;
             <h1 className="text-2xl font-semibold">{item && item.name}</h1>;
             <p className="opacity-80">Category: {item && item.category}</p>;
           </div>;
@@ -116,8 +115,7 @@ const EquipmentDetail: NextPage = () => {;
         </aside>;
       </div>;
     </EnhancedLayout>;
-  );
-};export default EquipmentDetail;          <div>
+  );export default EquipmentDetail;          <div>
             <h1 className="text-2xl font-semibold">{item.name}</h1>
             <p className="opacity-80">Category: {item.category}</p>
           </div>
@@ -137,8 +135,8 @@ const EquipmentDetail: NextPage = () => {;
       </div>
     </EnhancedLayout>
   )
-}
-};
+
+;
 
 export default EquipmentDetail;
 
@@ -151,12 +149,12 @@ const EquipmentDetail: NextPage = () => {
   const router = use_router (),
   const { slug } = router.query as { slug?: string }
   const items = equipment as any[];
-  const item = items.find (e => e.slug === slug);  const item = items.find ((e) => e.slug === slug);
-;
+  const item = items.find (e => e.slug = = slug);  const item = items.find (e) => e.slug = = slug);
+
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <EnhancedLayout>;
         <Head>;
@@ -214,7 +212,7 @@ if ( {) {
         </aside>;
       </div>;
     </EnhancedLayout>);
-}export default EquipmentDetail;          <div>;
+export default EquipmentDetail;          <div>;
             <h1 className="text - 2xl font - semibold">{item.name}</h1>;
             <p className="opacity - 80">Category: {item.category}</p>;
           </div>;
@@ -233,7 +231,5 @@ if ( {) {
         </aside>;
       </div>;
     </EnhancedLayout>);
-}
-;
+
 export default EquipmentDetail;
-;

@@ -9,7 +9,7 @@ export interface MarketTrend {
   marketOpportunity: 'high' | 'medium' | 'low'
 
   timestamp: Date
-}
+
 export interface CompetitorAnalysis {
   id: string;
   competitor_name: string;
@@ -25,7 +25,7 @@ export interface CompetitorAnalysis {
   socialMediaPresence: Record<string, number>;
 
   lastUpdated: Date
-}
+
 export interface MarketSegment {
   id: string;
   name: string;
@@ -38,7 +38,7 @@ export interface MarketSegment {
   painPoints: string[]
 
   solutions: string[]
-}
+
 export interface MarketReport {
   id: string;
   title: string;
@@ -53,7 +53,7 @@ export interface MarketReport {
   generatedAt: Date
 
   expiresAt: Date
-}
+
 export interface MarketResearchRequest {
   industry: string;
   target_market: string;
@@ -63,7 +63,7 @@ export interface MarketResearchRequest {
   includeHistoricalData: boolean
 
   customMetrics?: string[]
-}
+
 export interface MarketResearchResponse {
   success: boolean;
   data: {
@@ -78,7 +78,7 @@ export interface MarketResearchResponse {
   nextSteps: string[]
 
   estimatedROI: number
-}
+
 export class AIMarketResearchService {
   private apiKey: string;
 
@@ -104,7 +104,6 @@ export class AIMarketResearchService {
       console && console.error('Error analyzing market trends:', error);
       throw error
     }
-  }
   async analyzeCompetitors(request: MarketResearchRequest): Promise<CompetitorAnalysis[]> {
     try {
       const response = await fetch(`${this.baseUrl}/api/market-research/competitors`, {
@@ -122,7 +121,6 @@ export class AIMarketResearchService {
       console && console.error('Error analyzing competitors:', error);
       throw error
     }
-  }
   async segmentMarket(request: MarketResearchRequest): Promise<MarketSegment[]> {
     try {
       const response = await fetch(`${this.baseUrl}/api/market-research/segments`, {
@@ -140,7 +138,6 @@ export class AIMarketResearchService {
       console && console.error('Error segmenting market:', error);
       throw error
     }
-  }
   async generateComprehensiveReport(request: MarketResearchRequest): Promise<MarketReport> {
     try {
       const response = await fetch(`${this.baseUrl}/api/market-research/comprehensive`, {
@@ -158,12 +155,11 @@ export class AIMarketResearchService {
       console && console.error('Error generating comprehensive report:', error);
       throw error
     }
-  }
   async getRealTimeInsights(keyword: string): Promise<MarketTrend[]> {
     try {
       const response = await fetch(`${this && this.baseUrl}/api/market-research/realtime?keyword=${encodeURIComponent(keyword)}`, {
         headers: {
-          'Authorization': `Bearer ${this.apiKey}`}});
+          'Authorization': `Bearer ${this.apiKey}`});
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`)
       }
@@ -173,7 +169,6 @@ export class AIMarketResearchService {
       console && console.error('Error getting real-time insights:', error);
       throw error
     }
-  }
   async exportReport(reportId: string, format: 'pdf' | 'csv' | 'excel'): Promise<string> {
     try {
       const response = await fetch(`${this.baseUrl}/api/market-research/export/${reportId}`, {
@@ -191,7 +186,6 @@ export class AIMarketResearchService {
       console && console.error('Error exporting report:', error);
       throw error
     }
-  }
   async scheduleReport(request: MarketResearchRequest, schedule: 'daily' | 'weekly' | 'monthly'): Promise<string> {
     try {
       const response = await fetch(`${this.baseUrl}/api/market-research/schedule`, {
@@ -209,8 +203,7 @@ export class AIMarketResearchService {
       console && console.error('Error scheduling report:', error);
       throw error
     }
-  }
-}
+
 export const aiMarketResearchService = new AIMarketResearchService(process.env.MARKET_RESEARCH_API_KEY |'demo-key');
 
     segments?: MarketSegment[],
@@ -220,7 +213,7 @@ export const aiMarketResearchService = new AIMarketResearchService(process.env.M
   recommendations: string[];
   next_steps: string[],
   estimatedROI: number;
-}
+
 export class AIMarketResearchService {
   private api_key: string;
   private base_url: string,
@@ -236,11 +229,11 @@ export class AIMarketResearchService {
           'Authorization': `Bearer ${this.api_key}`;
           'Content - Type': 'application / json'}
         body: JSON.stringify (request)});
-;
+
       // Check condition
 if ( {) {
   $2
-}
+
         throw new Error (`HTTP error! status: ${response.status}`);
       }
       const data = await response.json ();
@@ -249,7 +242,6 @@ if ( {) {
       console.error ('Error analyzing market trends:', error);
       throw error;
     }
-  }
   async analyze_competitors (request: MarketResearchRequest): Promise < CompetitorAnalysis[]> {
     try {
       const response = await fetch (`${this.base_url}/api / market - research / competitors`, {
@@ -258,11 +250,11 @@ if ( {) {
           'Authorization': `Bearer ${this.api_key}`;
           'Content - Type': 'application / json'}
         body: JSON.stringify (request)});
-;
+
       // Check condition
 if ( {) {
   $2
-}
+
         throw new Error (`HTTP error! status: ${response.status}`);
       }
       const data = await response.json ();
@@ -271,7 +263,6 @@ if ( {) {
       console.error ('Error analyzing competitors:', error);
       throw error;
     }
-  }
   async segment_market (request: MarketResearchRequest): Promise < MarketSegment[]> {
     try {
       const response = await fetch (`${this.base_url}/api / market - research / segments`, {
@@ -280,11 +271,11 @@ if ( {) {
           'Authorization': `Bearer ${this.api_key}`;
           'Content - Type': 'application / json'}
         body: JSON.stringify (request)});
-;
+
       // Check condition
 if ( {) {
   $2
-}
+
         throw new Error (`HTTP error! status: ${response.status}`);
       }
       const data = await response.json ();
@@ -293,7 +284,6 @@ if ( {) {
       console.error ('Error segmenting market:', error);
       throw error;
     }
-  }
   async generateComprehensiveReport (request: MarketResearchRequest): Promise < MarketReport> {
     try {
       const response = await fetch (`${this.base_url}/api / market - research / comprehensive`, {
@@ -302,11 +292,11 @@ if ( {) {
           'Authorization': `Bearer ${this.api_key}`;
           'Content - Type': 'application / json'}
         body: JSON.stringify (request)});
-;
+
       // Check condition
 if ( {) {
   $2
-}
+
         throw new Error (`HTTP error! status: ${response.status}`);
       }
       const data = await response.json ();
@@ -315,17 +305,16 @@ if ( {) {
       console.error ('Error generating comprehensive report:', error);
       throw error;
     }
-  }
   async getRealTimeInsights (keyword: string): Promise < MarketTrend[]> {
     try {
       const response = await fetch (`${this.base_url}/api / market - research / realtime?keyword=${encodeURIComponent (keyword)}`, {
         headers: {
-          'Authorization': `Bearer ${this.api_key}`}});
-;
+          'Authorization': `Bearer ${this.api_key}`});
+
       // Check condition
 if ( {) {
   $2
-}
+
         throw new Error (`HTTP error! status: ${response.status}`);
       }
       const data = await response.json ();
@@ -334,7 +323,6 @@ if ( {) {
       console.error ('Error getting real - time insights:', error);
       throw error;
     }
-  }
   async export_report (report_id: string, format: 'pdf' | 'csv' | 'excel'): Promise < string> {
     try {
       const response = await fetch (`${this.base_url}/api / market - research / export/${report_id}`, {
@@ -343,11 +331,11 @@ if ( {) {
           'Authorization': `Bearer ${this.api_key}`;
           'Content - Type': 'application / json'}
         body: JSON.stringify ({ format })});
-;
+
       // Check condition
 if ( {) {
   $2
-}
+
         throw new Error (`HTTP error! status: ${response.status}`);
       }
       const data = await response.json ();
@@ -356,7 +344,6 @@ if ( {) {
       console.error ('Error exporting report:', error);
       throw error;
     }
-  }
   async schedule_report (request: MarketResearchRequest, schedule: 'daily' | 'weekly' | 'monthly'): Promise < string> {
     try {
       const response = await fetch (`${this.base_url}/api / market - research / schedule`, {
@@ -365,11 +352,11 @@ if ( {) {
           'Authorization': `Bearer ${this.api_key}`;
           'Content - Type': 'application / json'}
         body: JSON.stringify ({ ...request, schedule })});
-;
+
       // Check condition
 if ( {) {
   $2
-}
+
         throw new Error (`HTTP error! status: ${response.status}`);
       }
       const data = await response.json ();
@@ -378,7 +365,5 @@ if ( {) {
       console.error ('Error scheduling report:', error);
       throw error;
     }
-  }
-}
+
 export const aiMarketResearchService = new AIMarketResearchService (process.env.MARKET_RESEARCH_API_KEY || 'demo - key');
-;

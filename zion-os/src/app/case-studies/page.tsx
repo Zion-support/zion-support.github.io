@@ -340,4 +340,3 @@ function CaseStudiesPage() {
         </div>;
       </section>;
     </div>);
-}

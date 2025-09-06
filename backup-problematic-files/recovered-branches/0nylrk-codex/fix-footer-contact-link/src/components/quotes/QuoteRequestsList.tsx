@@ -3,7 +3,7 @@ import React from "react",;
 import { QuoteRequestCard } from "./QuoteRequestCard",;
 import { EmptyStateCard } from "./EmptyStateCard",;
 import type { QuoteRequest } from "@/types/quotes",;
-;
+
 type QuoteRequestsListProps = {;
   quotes:QuoteRequest[],;
   isLoading:boolean,;
@@ -11,8 +11,8 @@ type QuoteRequestsListProps = {;
   onViewDetails:(quote:QuoteRequest) => void,;
   onMarkAsResponded:(id:string) => void,;
   onToggleArchive:(id:string, isArchived:boolean) => void;
-},;
-;
+,;
+
 export const QuoteRequestsList:React.FC<QuoteRequestsListProps> = ({;
   quotes,;
   isLoading,;
@@ -20,7 +20,7 @@ export const QuoteRequestsList:React.FC<QuoteRequestsListProps> = ({;
   onViewDetails,;
   onMarkAsResponded,;
   onToggleArchive;
-}) => {;
+) => {;
   if (isLoading) {;
     return (;
       <div className="text-center py-20">;
@@ -29,7 +29,7 @@ export const QuoteRequestsList:React.FC<QuoteRequestsListProps> = ({;
     ),;
   }
   ;
-  if (quotes.length === 0) {;
+  if (quotes.length = = 0) {;
     return <EmptyStateCard type={isArchived ? 'archived' :'active'} />,;
   }
   ;
@@ -43,33 +43,33 @@ export const QuoteRequestsList:React.FC<QuoteRequestsListProps> = ({;
           onMarkAsResponded={!isArchived ? onMarkAsResponded :undefined}
           onToggleArchive={onToggleArchive}
         />;
-      ))}
+      )}
     </div>;
   ),;
-},; type QuoteRequestsListProps = {
+,; type QuoteRequestsListProps = {
   quotes: QuoteRequest[];
 isLoading: boolean;
 isArchived: boolean;
 onViewDetails: (quote: QuoteRequest) => void;
 onMarkAsResponded: (id: string) => void;
 onToggleArchive: (id: string, isArchived: boolean) => void 
-};
+;
 quotes, isLoading, isArchived, onViewDetails, onMarkAsResponded, onToggleArchive 
-}) => {
+) => {
   if (isLoading) {
   return (<div className="text-center py-20" > <p className="text-zion-slate-light" >Loading {
   isArchived ? 'archived' : 'your' 
-}hire requests...</p> </div>) 
-}<QuoteRequestCard key= {
+hire requests...</p> </div>) 
+<QuoteRequestCard key= {
   quote.id 
-}quote= {
+quote= {
   quote 
-}onViewDetails= {
+onViewDetails= {
   onViewDetails 
-}onMarkAsResponded= {
+onMarkAsResponded= {
   !isArchived ? onMarkAsResponded : undefined 
-}onToggleArchive= {
+onToggleArchive= {
   onToggleArchive 
-}/>) ) 
-}</div>) 
-};
+/>) 
+</div>) 
+;

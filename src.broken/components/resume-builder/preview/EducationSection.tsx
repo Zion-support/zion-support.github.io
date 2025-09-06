@@ -6,5 +6,3 @@ export function EducationSection() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

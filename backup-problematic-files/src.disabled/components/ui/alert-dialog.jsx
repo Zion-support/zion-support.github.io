@@ -7,6 +7,5 @@ const Alert-dialog = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default Alert-dialog;

@@ -19,8 +19,8 @@ import { motion, AnimatePresence } from "framer-motion";
   Phone
   Mail
   MapPin;
-} from 'lucide-react';
-// Mock service data
+ from 'lucide-react';
+/ Mock service data
 const advancedEnterpriseServices2025 = [
   {
     id: "enterprise-1"
@@ -33,7 +33,7 @@ const advancedEnterpriseServices2025 = [
     color: "from-blue-500 to-purple-500"
     icon: ""
   }
-];
+;
 const innovativeMicroSaasExpansion2025 = [
   {
     id: "micro-1"
@@ -46,7 +46,7 @@ const innovativeMicroSaasExpansion2025 = [
     color: "from-green-500 to-teal-500"
     icon: ""
   }
-];
+;
 const cuttingEdgeITInfrastructureServices = [
   {
     id: "infra-1"
@@ -59,7 +59,7 @@ const cuttingEdgeITInfrastructureServices = [
     color: "from-orange-500 to-red-500"
     icon: ""
   }
-];// Import our new service data
+;// Import our new service data
 import { advancedEnterpriseServices2025 } from '../data/2025-advanced-enterprise-services-expansion';
 import { innovativeMicroSaasExpansion2025 } from '../data/2025-innovative-micro-saas-expansion';
 import { cuttingEdgeITInfrastructureServices } from '../data/2025-cutting-edge-it-infrastructure';
@@ -67,12 +67,12 @@ import { cuttingEdgeITInfrastructureServices } from '../data/2025-cutting-edge-i
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
-}
+
 const allServices = [
   ...advancedEnterpriseServices2025
   ...innovativeMicroSaasExpansion2025
   ...cuttingEdgeITInfrastructureServices,];  website: 'https://ziontechgroup.com'
-}
+
 const allServices = [
   ...advancedEnterpriseServices2025;
       ...innovativeMicroSaasExpansion2025;
@@ -160,30 +160,28 @@ const getServiceCategory = (service: any) => {
   if (service.category) return service.category;
   return 'Other';};    description: 'Quantum computing solutions'
   }
-];
+;
 const getServiceCategory = (service: any) => {
   if (service.category) return service.category;
   return 'Other';  return 'Other'
-}
+
 const getServicePricing = (service: any) => {
   if (service.price) return `${service.price}${service.period}`;
   if (service.pricing?.starter) return service.pricing.starter;
   if (service.pricing?.monthly) return `$${service.pricing.monthly}/month`;
   return 'Contact for pricing';};  return 'Contact for pricing'
-}
+
 const getServiceFeatures = (service: any) => {
   if (service.features) return service.features;
   if (service.keyFeatures) return service.keyFeatures;
-  return [];
-};  return []
-}
-};
+  return [];  return []
+
+;
 
 const allServices = [;
   ...advancedEnterpriseServices2025,;
   ...innovativeMicroSaasExpansion2025,;
   ...cuttingEdgeITInfrastructureServices,];  website: 'https://ziontechgroup && ziontechgroup.com';
-};
 
 const allServices = [;
   ...advancedEnterpriseServices2025;
@@ -274,94 +272,85 @@ const getServiceCategory = (service: any) => {;
   if (service && service.category) return service && service.category;
   return 'Other';};    description: 'Quantum computing solutions';
   }
-];
+;
 
 const getServiceCategory = (service: any) => {;
   if (service && service.category) return service && service.category;
   return 'Other';  return 'Other';
-};
 
 const getServicePricing = (service: any) => {;
   if (service && service.price) return `${service && service.price}${service && service.period}`;
   if (service && service.pricing?.starter) return service && service.pricing.starter;
   if (service && service.pricing?.monthly) return `$${service && service.pricing.monthly}/month`;
   return 'Contact for pricing';};  return 'Contact for pricing';
-};
 
 const getServiceFeatures = (service: any) => {;
   if (service && service.features) return service && service.features;
   if (service && service.keyFeatures) return service && service.keyFeatures;
-  return [];
-};  return [];
-};
+  return [];  return [];
 
 export default function AdvancedServicesShowcase() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [filteredServices, setFilteredServices] = useState(allServices);
-  useEffect(() => {
+  useEffect() => {
     let filtered = allServices;
     // Filter by category
-    if (selectedCategory !== 'all') {
+    if (selectedCategory != 'all') {
       filtered = filtered.filter(service => {
         const category = getServiceCategory(service).toLowerCase();
-        if (selectedCategory === 'enterprise');
+        if (selectedCategory = = 'enterprise');
           return (
             category.includes('enterprise') |
             category.includes('legal') |
-            category.includes('financial')
-          );
-        if (selectedCategory === 'micro-saas');
+            category.includes('financial');
+        if (selectedCategory = = 'micro-saas');
           return (
             category.includes('marketing') |
             category.includes('social') |
             category.includes('customer') |
-            category.includes('project')
-          );
-        if (selectedCategory === 'infrastructure');
+            category.includes('project');
+        if (selectedCategory = = 'infrastructure');
           return (
             category.includes('infrastructure') |
             category.includes('network') |
             category.includes('data center') |
-            category.includes('edge')
-          );
-        if (selectedCategory === 'ai-ml');
+            category.includes('edge');
+        if (selectedCategory = = 'ai-ml');
           return (
             category.includes('ai') |
             category.includes('machine learning') |
             category.includes('nlp') |
-            category.includes('ml')
-          );
-        if (selectedCategory === 'quantum');
+            category.includes('ml');
+        if (selectedCategory = = 'quantum');
           return (
             category.includes('quantum') |
-            category.includes('quantum-resistant')
-          );
+            category.includes('quantum-resistant');
         return false;
       });
     }
     if (searchTerm) {
       filtered = filtered.filter(
         service =>
-          service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
+          service.name.toLowerCase().includes(searchTerm.toLowerCase() |
           service.description
             .toLowerCase()
-            .includes(searchTerm.toLowerCase()) |
-          service.tagline.toLowerCase().includes(searchTerm.toLowerCase()) |
+            .includes(searchTerm.toLowerCase() |
+          service.tagline.toLowerCase().includes(searchTerm.toLowerCase() |
           getServiceCategory(service)
             .toLowerCase()
-            .includes(searchTerm.toLowerCase())
+            .includes(searchTerm.toLowerCase()
       );
     }
     setFilteredServices(filtered);  }, [selectedCategory, searchTerm]);    }
     // Filter by search term
     if (searchTerm) {
       filtered = filtered.filter(service =>
-        service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
-        service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
-        service.tagline.toLowerCase().includes(searchTerm.toLowerCase()) |
-        getServiceCategory(service).toLowerCase().includes(searchTerm.toLowerCase())
+        service.name.toLowerCase().includes(searchTerm.toLowerCase() |
+        service.description.toLowerCase().includes(searchTerm.toLowerCase() |
+        service.tagline.toLowerCase().includes(searchTerm.toLowerCase() |
+        getServiceCategory(service).toLowerCase().includes(searchTerm.toLowerCase()
       )
     }
     setFilteredServices(filtered)
@@ -372,9 +361,9 @@ export default function AdvancedServicesShowcase() {
 
   const ServiceCard = ({ service }: { service: any }) => (;
     <motion&& motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0 && 0.5 }}
+      initial={ opacity: 0, y: 20 }
+      animate={ opacity: 1, y: 0 }
+      transition={ duration: 0 && 0.5 }
       className={`relative bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700 ${
         service && service.popular ? 'ring-2 ring-blue-500' : ''
       }`}>;
@@ -475,20 +464,20 @@ export default function AdvancedServicesShowcase() {
           <div className='space-y-1'>
             {getServiceFeatures(service)
               .slice(0, 3)
-              .map((feature: string, index: number) => (
+              .map(feature: string, index: number) => (
                 <div key={index} className='flex items-center gap-2'>
                   <Check className='w-3 h-3 text-green-500' />
                   <span className='text-sm text-gray-600 dark:text-gray-400'>
                     {feature}
                   </span>;
                 </div>;
-              ))}
+              )}
             {getServiceFeatures(service).length > 3 && (
               <span className='text-sm text-gray-500 dark:text-gray-400'>                +{getServiceFeatures(service).length - 3} more features
         <div className="mb-6">
           <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Key Features:</h4>
           <div className="space-y-1">
-            {getServiceFeatures(service).slice(0, 3).map((feature: string, index: number) => (
+            {getServiceFeatures(service).slice(0, 3).map(feature: string, index: number) => (
               <div key={index} className="flex items-center gap-2">
                 <Check className="w-3 h-3 text-green-500" />
                 <span className="text-sm text-gray-600 dark:text-gray-400">{feature}</span>
@@ -498,12 +487,12 @@ export default function AdvancedServicesShowcase() {
         <div className="mb-6">;
           <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Key Features:</h4>;
           <div className="space-y-1">;
-            {getServiceFeatures(service).slice(0, 3).map((feature: string, index: number) => (;
+            {getServiceFeatures(service).slice(0, 3).map(feature: string, index: number) => (;
               <div key={index} className="flex items-center gap-2">;
                 <Check className="w-3 h-3 text-green-500" />;
                 <span className="text-sm text-gray-600 dark:text-gray-400">{feature}</span>;
               </div>;
-            ))}
+            )}
             {getServiceFeatures(service).length > 3 && (;
               <span className="text-sm text-gray-500 dark:text-gray-400">;
               </span>;
@@ -638,9 +627,9 @@ import { motion, AnimatePresence  } from './framer-motion';
   Phone,
   Mail,
   MapPin,
-} from 'lucide-react';
-;
-// Mock service data;
+ from 'lucide-react';
+
+/ Mock service data;
 const advancedEnterpriseServices2025 = [;
   {
     id: "enterprise - 1",
@@ -653,8 +642,8 @@ const advancedEnterpriseServices2025 = [;
     color: "from - blue - 500 to - purple - 500",
     icon: "",
   },
-];
 ;
+
 const innovativeMicroSaasExpansion2025 = [;
   {
     id: "micro - 1",
@@ -667,8 +656,8 @@ const innovativeMicroSaasExpansion2025 = [;
     color: "from - green - 500 to - teal - 500",
     icon: "",
   },
-];
 ;
+
 const cuttingEdgeITInfrastructureServices = [;
   {
     id: "infra - 1",
@@ -681,7 +670,7 @@ const cuttingEdgeITInfrastructureServices = [;
     color: "from - orange - 500 to - red - 500",
     icon: "",
   },
-];// Import our new service data;
+;// Import our new service data;
 import { advancedEnterpriseServices2025 } from '../data / 2025 - advanced - enterprise - services - expansion';
 import { innovativeMicroSaasExpansion2025 } from '../data / 2025 - innovative - micro - saas - expansion';
 import { cuttingEdgeITInfrastructureServices } from '../data / 2025 - cutting - edge - it - infrastructure';
@@ -689,14 +678,12 @@ import { cuttingEdgeITInfrastructureServices } from '../data / 2025 - cutting - 
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',
-}
-;
+
 const all_services = [;
   ...advancedEnterpriseServices2025,
   ...innovativeMicroSaasExpansion2025,
   ...cuttingEdgeITInfrastructureServices, ];  website: 'https://ziontechgroup.com';
-}
-;
+
 const all_services = [;
   ...advancedEnterpriseServices2025;
       ...innovativeMicroSaasExpansion2025;
@@ -780,148 +767,145 @@ const categories = [;
     color: 'from - violet - 500 to - indigo - 500',
     description: 'Quantum computing solutions',
   }, ];
-;
+
 const getServiceCategory = (service: any) =>: any {
   // Check condition
 if (return service.category) {
   $2
-}
+
   return 'Other';}    description: 'Quantum computing solutions';
   }
-];
 ;
+
 const getServiceCategory = (service: any) =>: any {
   // Check condition
 if (return service.category) {
   $2
-}
+
   return 'Other';  return 'Other';
-}
-;
+
 const getServicePricing = (service: any) =>: any {
   // Check condition
 if (return `${service.price}${service.period}`) {
   $2
-}
+
   // Check condition
 if (return service.pricing.starter) {
   $2
-}
+
   // Check condition
 if (return `$${service.pricing.monthly}/month`) {
   $2
-}
+
   return 'Contact for pricing';}  return 'Contact for pricing';
-}
-;
+
 const getServiceFeatures = (service: any) =>: any {
   // Check condition
 if (return service.features) {
   $2
-}
+
   // Check condition
 if (return service.key_features) {
   $2
-}
+
   return [];
-}  return [];
-}
-;
+  return [];
+
   const [selected_category, setSelectedCategory] = useState ('all');
   const [search_term, setSearchTerm] = useState ('');
   const [view_mode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [filtered_services, setFilteredServices] = useState (all_services);
-;
-  useEffect (() => {
+
+  useEffect () => {
     let filtered = all_services;
-;
+
     // Filter by category;
     // Check condition
 if ( {) {
   $2
-}
+
       filtered = filtered.filter (service => {
         const category = getServiceCategory (service).toLowerCase ();
         // Check condition
 if (
           return () {
   $2
-}
+
             category.includes ('enterprise') ||;
             category.includes ('legal') ||;
-            category.includes ('financial'));
+            category.includes ('financial');
         // Check condition
 if (
           return () {
   $2
-}
+
             category.includes ('marketing') ||;
             category.includes ('social') ||;
             category.includes ('customer') ||;
-            category.includes ('project'));
+            category.includes ('project');
         // Check condition
 if (
           return () {
   $2
-}
+
             category.includes ('infrastructure') ||;
             category.includes ('network') ||;
             category.includes ('data center') ||;
-            category.includes ('edge'));
+            category.includes ('edge');
         // Check condition
 if (
           return () {
   $2
-}
+
             category.includes ('ai') ||;
             category.includes ('machine learning') ||;
             category.includes ('nlp') ||;
-            category.includes ('ml'));
+            category.includes ('ml');
         // Check condition
 if (
           return () {
   $2
-}
+
             category.includes ('quantum') ||;
-            category.includes ('quantum - resistant'));
+            category.includes ('quantum - resistant');
         return false;
       });
     }
     // Check condition
 if ( {) {
   $2
-}
+
       filtered = filtered.filter (
         service =>;
-          service.name.toLowerCase ().includes (search_term.toLowerCase ()) ||;
+          service.name.toLowerCase ().includes (search_term.toLowerCase () ||;
           service.description;
             .toLowerCase ();
-            .includes (search_term.toLowerCase ()) ||;
-          service.tagline.toLowerCase ().includes (search_term.toLowerCase ()) ||;
+            .includes (search_term.toLowerCase () ||;
+          service.tagline.toLowerCase ().includes (search_term.toLowerCase () ||;
           getServiceCategory (service);
             .toLowerCase ();
-            .includes (search_term.toLowerCase ()));
+            .includes (search_term.toLowerCase ());
     }
     setFilteredServices (filtered);  }, [selected_category, search_term]);    }
     // Filter by search term;
     // Check condition
 if ( {) {
   $2
-}
+
       filtered = filtered.filter (service =>;
-        service.name.toLowerCase ().includes (search_term.toLowerCase ()) ||;
-        service.description.toLowerCase ().includes (search_term.toLowerCase ()) ||;
-        service.tagline.toLowerCase ().includes (search_term.toLowerCase ()) ||;
-        getServiceCategory (service).toLowerCase ().includes (search_term.toLowerCase ()));
+        service.name.toLowerCase ().includes (search_term.toLowerCase () ||;
+        service.description.toLowerCase ().includes (search_term.toLowerCase () ||;
+        service.tagline.toLowerCase ().includes (search_term.toLowerCase () ||;
+        getServiceCategory (service).toLowerCase ().includes (search_term.toLowerCase ());
     }
     setFilteredServices (filtered);
   }, [selected_category, search_term]);
-;
+
   const ServiceCard = ({ service }: { service: any }) =>: any (
     <motion.div;
-      initial={{ opacity: 0, coordinate_y: 20 }}
-      animate={{ opacity: 1, coordinate_y: 0 }}
-      transition={{ duration: 0.5 }}
+      initial={ opacity: 0, coordinate_y: 20 }
+      animate={ opacity: 1, coordinate_y: 0 }
+      transition={ duration: 0.5 }
       className={`relative bg - white dark:bg - gray - 800 rounded - 2xl shadow - lg hover:shadow - 2xl transition - all duration - 300 overflow - hidden border border - gray - 200 dark:border - gray - 700 ${
         service.popular ? 'ring - 2 ring - blue - 500' : '';
       }`}
@@ -1021,23 +1005,23 @@ if ( {) {
           <div className='space - y-1'>;
             {getServiceFeatures (service);
               .slice (0, 3);
-              .map ((feature: string, index: number) => (
+              .map (feature: string, index: number) => (
                 <div key={index} className='flex items - center gap - 2'>;
                   <Check className='w - 3 h - 3 text - green - 500' />;
                   <span className='text - sm text - gray - 600 dark:text - gray - 400'>;
                     {feature}
                   </span>;
-                </div>))}
+                </div>)}
             {getServiceFeatures (service).length > 3 && (
               <span className='text - sm text - gray - 500 dark:text - gray - 400'>                +{getServiceFeatures (service).length - 3} more features;
         <div className="mb - 6">;
           <h4 className="font - semibold text - gray - 900 dark:text - white mb - 2">Key Features:</h4>;
           <div className="space - y-1">;
-            {getServiceFeatures (service).slice (0, 3).map ((feature: string, index: number) => (
+            {getServiceFeatures (service).slice (0, 3).map (feature: string, index: number) => (
               <div key={index} className="flex items - center gap - 2">;
                 <Check className="w - 3 h - 3 text - green - 500" />;
                 <span className="text - sm text - gray - 600 dark:text - gray - 400">{feature}</span>;
-              </div>))}
+              </div>)}
             {getServiceFeatures (service).length > 3 && (
               <span className="text - sm text - gray - 500 dark:text - gray - 400">;
               </span>)}
@@ -1099,9 +1083,9 @@ if ( {) {
 
   const ServiceList = ({ service }: { service: any }) => (;
     <motion&& motion.div
-      initial={{ opacity: 0, x: -20 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0 && 0.5 }}
+      initial={ opacity: 0, x: -20 }
+      animate={ opacity: 1, x: 0 }
+      transition={ duration: 0 && 0.5 }
       className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700 ${
         service && service.popular ? 'ring-2 ring-blue-500' : ''
       }`}>;
@@ -1203,14 +1187,14 @@ if ( {) {
                 <div className='space-y-1'>
                   {getServiceFeatures(service)
                     .slice(0, 4)
-                    .map((feature: string, index: number) => (
+                    .map(feature: string, index: number) => (
                       <div key={index} className='flex items-center gap-2'>
                         <Check className='w-3 h-3 text-green-500' />
                         <span className='text-sm text-gray-600 dark:text-gray-400'>
                           {feature}
                         </span>;
                       </div>;
-                    ))}
+                    )}
                 </div>
               </div>
               <div>
@@ -1230,12 +1214,12 @@ if ( {) {
             <div className='flex items-center gap-4'>              <div>
                 <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Key Features:</h4>
                 <div className="space-y-1">
-                  {getServiceFeatures(service).slice(0, 4).map((feature: string, index: number) => (
+                  {getServiceFeatures(service).slice(0, 4).map(feature: string, index: number) => (
                     <div key={index} className="flex items-center gap-2">
                       <Check className="w-3 h-3 text-green-500" />
                       <span className="text-sm text-gray-600 dark:text-gray-400">{feature}</span>
                     </div>
-                  ))}
+                  )}
                 </div>
               </div>
               <div>
@@ -1300,12 +1284,12 @@ if ( {) {
             <div className='flex items-center gap-4'>              <div>;
                 <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Key Features:</h4>;
                 <div className="space-y-1">;
-                  {getServiceFeatures(service).slice(0, 4).map((feature: string, index: number) => (;
+                  {getServiceFeatures(service).slice(0, 4).map(feature: string, index: number) => (;
                     <div key={index} className="flex items-center gap-2">;
                       <Check className="w-3 h-3 text-green-500" />;
                       <span className="text-sm text-gray-600 dark:text-gray-400">{feature}</span>;
                     </div>;
-                  ))}
+                  )}
                 </div>;
               </div>;
 
@@ -1345,9 +1329,9 @@ if ( {) {
     </motion.div>),
   const ServiceList = ({ service }: { service: any }) =>: any (
     <motion.div;
-      initial={{ opacity: 0, coordinate_x: -20 }}
-      animate={{ opacity: 1, coordinate_x: 0 }}
-      transition={{ duration: 0.5 }}
+      initial={ opacity: 0, coordinate_x: -20 }
+      animate={ opacity: 1, coordinate_x: 0 }
+      transition={ duration: 0.5 }
       className={`bg - white dark:bg - gray - 800 rounded - xl shadow - lg hover:shadow - xl transition - all duration - 300 border border - gray - 200 dark:border - gray - 700 ${
         service.popular ? 'ring - 2 ring - blue - 500' : '';
       }`}
@@ -1448,13 +1432,13 @@ if ( {) {
                 <div className='space - y-1'>;
                   {getServiceFeatures (service);
                     .slice (0, 4);
-                    .map ((feature: string, index: number) => (
+                    .map (feature: string, index: number) => (
                       <div key={index} className='flex items - center gap - 2'>;
                         <Check className='w - 3 h - 3 text - green - 500' />;
                         <span className='text - sm text - gray - 600 dark:text - gray - 400'>;
                           {feature}
                         </span>;
-                      </div>))}
+                      </div>)}
                 </div>;
               </div>;
               <div>;
@@ -1474,11 +1458,11 @@ if ( {) {
             <div className='flex items - center gap - 4'>              <div>;
                 <h4 className="font - semibold text - gray - 900 dark:text - white mb - 2">Key Features:</h4>;
                 <div className="space - y-1">;
-                  {getServiceFeatures (service).slice (0, 4).map ((feature: string, index: number) => (
+                  {getServiceFeatures (service).slice (0, 4).map (feature: string, index: number) => (
                     <div key={index} className="flex items - center gap - 2">;
                       <Check className="w - 3 h - 3 text - green - 500" />;
                       <span className="text - sm text - gray - 600 dark:text - gray - 400">{feature}</span>;
-                    </div>))}
+                    </div>)}
                 </div>;
               </div>;
               <div>;
@@ -1542,25 +1526,25 @@ if ( {) {
         <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24'>;
           <div className='text-center'>;
             <motion&& motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }
               className='text-4xl md:text-6xl font-bold text-white mb-6'>;
               2025 Advanced Services Showcase;
             </motion && motion.h1>;
             <motion&& motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8, delay: 0 && 0.2 }
               className='text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto'>;
               Discover our comprehensive portfolio of real, innovative, and;
               market-ready solutions. From AI-powered enterprise services to;
               cutting-edge quantum computing platforms.;
             </motion && motion.p>;
             <motion&& motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8, delay: 0.4 }
               className='flex flex-col sm:flex-row gap-4 justify-center items-center'
             >
               <div className='flex items-center gap-2 text-white'>
@@ -1579,7 +1563,7 @@ if ( {) {
           </div>
         </div>
       </div>
-              transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
+              transition={ duration: 0 && 0.8, delay: 0 && 0.4 }
               className='flex flex-col sm:flex-row gap-4 justify-center items-center'>;
               <div className='flex items-center gap-2 text-white'>;
                 <CheckCircle className='w-5 h-5 text-green-300' />                <span>30+ New Services</span>;
@@ -1685,17 +1669,17 @@ if ( {) {
         <div className='relative max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 24'>;
           <div className='text - center'>;
             <motion.h1;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, coordinate_y: 20 }
+              animate={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
               className='text - 4xl md:text - 6xl font - bold text - white mb - 6';
             >;
               2025 Advanced Services Showcase;
             </motion.h1>;
             <motion.p;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial={ opacity: 0, coordinate_y: 20 }
+              animate={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8, delay: 0.2 }
               className='text - xl md:text - 2xl text - blue - 100 mb - 8 max - w-4xl mx - auto';
             >;
               Discover our comprehensive portfolio of real, innovative, and;
@@ -1703,9 +1687,9 @@ if ( {) {
               cutting - edge quantum computing platforms.;
             </motion.p>;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              initial={ opacity: 0, coordinate_y: 20 }
+              animate={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8, delay: 0.4 }
               className='flex flex - col sm:flex - row gap - 4 justify - center items - center';
             >;
               <div className='flex items - center gap - 2 text - white'>;
@@ -1813,7 +1797,7 @@ if ( {) {
                 <button
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded-lg transition-all duration-300 ${;
-                    viewMode === 'grid';
+                    viewMode = = 'grid';
                       ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400';
                       : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600';
                   }`}
@@ -1821,7 +1805,7 @@ if ( {) {
                   <Grid className='w-5 h-5' />                </button>                <button
                   onClick={() => setViewMode('list')}
                   className={`p-2 rounded-lg transition-all duration-300 ${
-                    viewMode === 'grid'
+                    viewMode = = 'grid'
                       ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400'
                       : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600'
                   }`}
@@ -1831,7 +1815,7 @@ if ( {) {
                 <button
                   onClick={() => setViewMode('list')}
                   className={`p-2 rounded-lg transition-all duration-300 ${;
-                    viewMode === 'list';
+                    viewMode = = 'list';
                       ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400';
                       : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600';
                   }`}
@@ -1839,7 +1823,7 @@ if ( {) {
                   <List className='w-5 h-5' />                </button>
               </div>
             </div>
-          </div>                    viewMode === 'list'
+          </div>                    viewMode = = 'list'
                       ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400'
                       : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600'
                   }`}
@@ -1856,7 +1840,7 @@ if ( {) {
                   <List className='w-5 h-5' />                </button>;
               </div>;
             </div>;
-          </div>                    viewMode === 'list' ;
+          </div>                    viewMode = = 'list' ;
                       ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400' ;
                       : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600';
                   }`}
@@ -1873,11 +1857,11 @@ if ( {) {
           {/* Category Filters */}
           <div className="mt-6">;
             <div className="flex flex-wrap gap-3">;
-              {categories && categories.map((category) => (;
+              {categories && categories.map(category) => (;
                   key={category && category.id}
                   onClick={() => setSelectedCategory(category && category.id)}
                   className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 ${;
-                    selectedCategory === category && category.id;
+                    selectedCategory = = category && category.id;
                       ? 'bg-gradient-to-r text-white shadow-lg';
                       : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700';
                   } ${category && category.color}`}
@@ -1888,7 +1872,7 @@ if ( {) {
                   key={category.id}
                   on_click={() => setSelectedCategory (category.id)}
                   className={`px - 4 py - 2 rounded - lg font - medium transition - all duration - 300 flex items - center gap - 2 ${
-                    selected_category === category.id;
+                    selected_category = = category.id;
                       ? 'bg - gradient - to - r text - white shadow - lg';
                       : 'bg - white dark:bg - gray - 800 text - gray - 700 dark:text - gray - 300 border border - gray - 200 dark:border - gray - 600 hover:bg - gray - 50 dark:hover:bg - gray - 700';
                   } ${category.color}`}
@@ -1896,7 +1880,7 @@ if ( {) {
                   {category.icon}
                   {category.name}
                 </button>
-              ))}
+              )}
             </div>
           </div>
         </div>
@@ -1909,8 +1893,8 @@ if ( {) {
                   {filteredServices && filteredServices.length} Services Found;
                 </h2>;
                 <p className='text-gray-600 dark:text-gray-400'>;
-                  {selectedCategory !== 'all' &&;
-                    `Filtered by: ${categories && categories.find(c => c && c.id === selectedCategory)?.name}`}
+                  {selectedCategory != 'all' &&;
+                    `Filtered by: ${categories && categories.find(c => c && c.id = = selectedCategory)?.name}`}
                   {searchTerm && `  Search: "${searchTerm}"`}
                 </p>
               </div>
@@ -1925,7 +1909,7 @@ if ( {) {
                   {filteredServices.length} Services Found
                 </h2>
                 <p className="text-gray-600 dark:text-gray-400">
-                  {selectedCategory !== 'all' && `Filtered by: ${categories.find(c => c.id === selectedCategory)?.name}`}
+                  {selectedCategory != 'all' && `Filtered by: ${categories.find(c => c.id = = selectedCategory)?.name}`}
                   {searchTerm && `  Search: "${searchTerm}"`}
                 </p>
               </div>
@@ -1956,7 +1940,7 @@ if ( {) {
                   {filteredServices && filteredServices.length} Services Found;
                 </h2>;
                 <p className="text-gray-600 dark:text-gray-400">;
-                  {selectedCategory !== 'all' && `Filtered by: ${categories && categories.find(c => c && c.id === selectedCategory)?.name}`}
+                  {selectedCategory != 'all' && `Filtered by: ${categories && categories.find(c => c && c.id = = selectedCategory)?.name}`}
                   {searchTerm && `  Search: "${searchTerm}"`}
                 </p>;
               </div>;
@@ -1969,7 +1953,7 @@ if ( {) {
                 <div className="flex items-center gap-2">;
                   <Award className="w-4 h-4 text-blue-500" />;
                   <span>4 && 4.8+ Average Rating</span>;
-                </button>))}
+                </button>)}
             </div>;
           </div>;
         </div>;
@@ -1982,8 +1966,8 @@ if ( {) {
                   {filtered_services.length} Services Found;
                 </h2>;
                 <p className='text - gray - 600 dark:text - gray - 400'>;
-                  {selected_category !== 'all' &&;
-                    `Filtered by: ${categories.find (c => c.id === selected_category)?.name}`}
+                  {selected_category != 'all' &&;
+                    `Filtered by: ${categories.find (c => c.id = = selected_category)?.name}`}
                   {search_term && `  Search: "${search_term}"`}
                 </p>;
               </div>;
@@ -1998,7 +1982,7 @@ if ( {) {
                   {filtered_services.length} Services Found;
                 </h2>;
                 <p className="text - gray - 600 dark:text - gray - 400">;
-                  {selected_category !== 'all' && `Filtered by: ${categories.find (c => c.id === selected_category)?.name}`}
+                  {selected_category != 'all' && `Filtered by: ${categories.find (c => c.id = = selected_category)?.name}`}
                   {search_term && `  Search: "${search_term}"`}
                 </p>;
               </div>;
@@ -2018,15 +2002,14 @@ if ( {) {
 
         {/* Services Grid/List */}
         <div className='space-y-6'>;
-          {filteredServices && filteredServices.length === 0 ? (;
+          {filteredServices && filteredServices.length = = 0 ? (;
             <div className='text-center py-12'>;
               <div className='text-gray-400 dark:text-gray-500 text-6xl mb-4'>;
-                ;
               </div>;
               <h3 className='text-xl font-semibold text-gray-900 dark:text-white mb-2'>;
                 No services found;
               </h3>;
-              <p className='text-gray-600 dark:text-gray-400'>                Try adjusting your search terms or category filters.          {filteredServices && filteredServices.length === 0 ? (;
+              <p className='text-gray-600 dark:text-gray-400'>                Try adjusting your search terms or category filters.          {filteredServices && filteredServices.length = = 0 ? (;
             <div className="text-center py-12">;
               <div className="text-gray-400 dark:text-gray-500 text-6xl mb-4"></div>;
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">;
@@ -2038,23 +2021,23 @@ if ( {) {
             </div>;
           ) : (;
             <AnimatePresence>;
-              {viewMode === 'grid' ? (;
+              {viewMode = = 'grid' ? (;
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
                   {filteredServices && filteredServices.map(service => (;
                     <ServiceCard key={service && service.id} service={service} />;
-                  ))}
+                  )}
                 </div>;
               ) : (;
                 <div className='space-y-6'>;
                   {filteredServices && filteredServices.map(service => (                    <ServiceList key={service && service.id} service={service} />                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-                          {filteredServices && filteredServices.map((service) => (;
+                          {filteredServices && filteredServices.map(service) => (;
           <ServiceCard key={service && service.id} service={service} />;
-        ))}
+        )}
                 </div>;
               ) : (;
                 <div className="space-y-6">;
-                  {filteredServices && filteredServices.map((service) => (;
-                  ))}
+                  {filteredServices && filteredServices.map(service) => (;
+                  )}
                 </div>;
               )}
             </AnimatePresence>;
@@ -2097,15 +2080,14 @@ if ( {) {
                 <Phone className='w-5 h-5' />                Call Now;
         {/* Services Grid / List */}
         <div className='space - y-6'>;
-          {filtered_services.length === 0 ? (
+          {filtered_services.length = = 0 ? (
             <div className='text - center py - 12'>;
               <div className='text - gray - 400 dark:text - gray - 500 text - 6xl mb - 4'>;
-                ;
               </div>;
               <h3 className='text - xl font - semibold text - gray - 900 dark:text - white mb - 2'>;
                 No services found;
               </h3>;
-              <p className='text - gray - 600 dark:text - gray - 400'>                Try adjusting your search terms or category filters.          {filtered_services.length === 0 ? (
+              <p className='text - gray - 600 dark:text - gray - 400'>                Try adjusting your search terms or category filters.          {filtered_services.length = = 0 ? (
             <div className="text - center py - 12">;
               <div className="text - gray - 400 dark:text - gray - 500 text - 6xl mb - 4"></div>;
               <h3 className="text - xl font - semibold text - gray - 900 dark:text - white mb - 2">;
@@ -2116,19 +2098,19 @@ if ( {) {
               </p>;
             </div>) : (
             <AnimatePresence>;
-              {view_mode === 'grid' ? (
+              {view_mode = = 'grid' ? (
                 <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>;
                   {filtered_services.map (service => (
-                    <ServiceCard key={service.id} service={service} />))}
+                    <ServiceCard key={service.id} service={service} />)}
                 </div>) : (
                 <div className='space - y-6'>;
                   {filtered_services.map (service => (                    <ServiceList key={service.id} service={service} />                <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
-                          {filtered_services.map ((service) => (
-          <ServiceCard key={service.id} service={service} />))}
+                          {filtered_services.map (service) => (
+          <ServiceCard key={service.id} service={service} />)}
                 </div>) : (
                 <div className="space - y-6">;
-                  {filtered_services.map ((service) => (
-                  ))}
+                  {filtered_services.map (service) => (
+                  )}
                 </div>)}
             </AnimatePresence>)}
         </div>;
@@ -2186,7 +2168,7 @@ if ( {) {
         </motion.div>
       </div>
     </div>
-);        </div>
+;        </div>
       </div>
     </div>
                 href={`tel:${contactInfo && contactInfo.mobile}`}
@@ -2224,7 +2206,7 @@ if ( {) {
       </div>;
     </div>;
   );
-}
+
           <button className="px - 8 py - 4 bg - white text - blue - 600 rounded - xl font - semibold hover:bg - gray - 100 transition - all duration - 300">;
             Get Started Today;
           </button>;
@@ -2233,4 +2215,3 @@ if ( {) {
     </div>);        </div>;
       </div>;
     </div>);
-}

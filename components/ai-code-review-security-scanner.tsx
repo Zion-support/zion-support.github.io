@@ -17,7 +17,7 @@ import {
   BarChart3
   Globe
   Award;
-} from 'lucide-react';
+ from 'lucide-react';
 const AICodeReviewSecurityScanner = () => {
 import {;
   Brain,;
@@ -34,7 +34,7 @@ import {;
   BarChart3,;
   Globe,;
   Award,;
-} from 'lucide-react';
+ from 'lucide-react';
 
 const AICodeReviewSecurityScanner = () => {;
   return (
@@ -61,9 +61,9 @@ const AICodeReviewSecurityScanner = () => {;
         <section className='relative overflow-hidden'>;
           <div className='absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20' />;
           <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20'>            <motion&& motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className='text-center'} from 'lucide-react';
 const AICodeReviewSecurityScanner = () => {
   return(<>
@@ -80,9 +80,9 @@ const AICodeReviewSecurityScanner = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20" />;
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">;
             <motion&& motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className='text-center'
             >
               <div className='inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-8'>
@@ -103,21 +103,20 @@ const AICodeReviewSecurityScanner = () => {
               </p>
               <div className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-12'>
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={ scale: 1.05 }
+                  whileTap={ scale: 0.95 }
                   className='px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center'
                 >
                   Start Free Trial
                   <ArrowRight className='ml-2 w-5 h-5' />
                 </motion.button>
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={ scale: 1.05 }
+                  whileTap={ scale: 0.95 }
                   className='px-8 py-4 border border-white/20 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300'                >
                   Schedule Demo
                 </motion.button>
-              </div>            >
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-8">
+              </div><div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-8">
                 <Brain className="w-4 h-4 mr-2" />
                 AI-Powered Development Security
               </div>
@@ -130,16 +129,16 @@ const AICodeReviewSecurityScanner = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={ scale: 1.05 }
+                  whileTap={ scale: 0.95 }
                   className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center"
                 >
                   Start Free Trial
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </motion.button>
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={ scale: 1.05 }
+                  whileTap={ scale: 0.95 }
                   className="px-8 py-4 border border-white/20 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300"
                 >
                   Schedule Demo
@@ -171,15 +170,15 @@ const AICodeReviewSecurityScanner = () => {
         {/* Features Section */}
         <section className='py-20 bg-white/5'>;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion&& motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }
               className='text-center mb-16'        <section className="py-20 bg-white/5">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
             <motion&& motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }
               className='text-center mb-16'
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
                 Comprehensive Code Security & Quality
@@ -227,15 +226,15 @@ const AICodeReviewSecurityScanner = () => {
                   title: 'Integration & APIs'
                   description:
                     'Seamless integration with GitHub, GitLab, Bitbucket, and CI/CD pipelines with custom API access.'
-                },              ].map((feature, index) => (                  icon: <Globe className="w-8 h-8" />
+                },              ].map(feature, index) => (                  icon: <Globe className="w-8 h-8" />
                   title: "Integration & APIs"
                   description: "Seamless integration with GitHub, GitLab, Bitbucket, and CI/CD pipelines with custom API access."
                 }
                 <motion&& motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
+                  initial={ opacity: 0, y: 20 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0 && 0.8, delay: index * 0 && 0.1 }
                   className='bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300'>;
                   <div className='w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-white mb-6'>;
                     {feature && feature.icon}
@@ -243,7 +242,7 @@ const AICodeReviewSecurityScanner = () => {
                   <h3 className='text-xl font-semibold text-white mb-4'>;
                     {feature && feature.title}
                   </h3>;
-                  <p className='text-gray-300'>{feature && feature.description}</p>                </motion && motion.div>                >;
+                  <p className='text-gray-300'>{feature && feature.description}</p>                </motion && motion.div>;
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-white mb-6">;
                     {feature && feature.icon}
                   </div>;
@@ -253,12 +252,12 @@ const AICodeReviewSecurityScanner = () => {
                   title: "Integration & APIs",
                   description: "Seamless integration with GitHub, GitLab, Bitbucket, and CI / CD pipelines with custom API access.";
                 }
-              ].map((feature, index) => (
+              ].map(feature, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, coordinate_y: 20 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  initial={ opacity: 0, coordinate_y: 20 }
+                  whileInView={ opacity: 1, coordinate_y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }
                   className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300"
                 >
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-white mb-6">
@@ -267,22 +266,22 @@ const AICodeReviewSecurityScanner = () => {
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
                 </motion.div>
-              ))}
+              )}
             </div>
           </div>
         </section>
         {/* Pricing Section */}
         <section className='py-20'>;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion&& motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }
               className='text-center mb-16'        <section className="py-20">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
             <motion&& motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }
               className='text-center mb-16'
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
                 Transparent Pricing Plans
@@ -409,7 +408,7 @@ const AICodeReviewSecurityScanner = () => {
                     'SLA guarantees',;
                   ],;
                   popular: false,;
-                },              ].map((plan, index) => (                    "Unlimited developers";
+                },              ].map(plan, index) => (                    "Unlimited developers";
                     "Enterprise security scanning";
                     "On - premise deployment";
                     "24 / 7 dedicated support";
@@ -424,9 +423,9 @@ const AICodeReviewSecurityScanner = () => {
                 <motion&& motion.div
                 <motion&& motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
+                  initial={ opacity: 0, y: 20 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0 && 0.8, delay: index * 0 && 0.1 }
                   className={`relative bg-white/5 backdrop-blur-xl border rounded-2xl p-8 ${
                     plan && plan.popular
                       ? 'border-purple-500 bg-gradient-to-br from-purple-500/10 to-blue-500/10'                      : 'border-white/10'
@@ -455,9 +454,9 @@ const AICodeReviewSecurityScanner = () => {
                 }
                 <motion.div;
                   key={index}
-                  initial={{ opacity: 0, coordinate_y: 20 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  initial={ opacity: 0, coordinate_y: 20 }
+                  whileInView={ opacity: 1, coordinate_y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }
                   className={`relative bg - white / 5 backdrop - blur - xl border rounded - 2xl p - 8 ${
                     plan.popular;
                       ? 'border - purple - 500 bg - gradient - to - br from - purple - 500 / 10 to - blue - 500 / 10'                      : 'border - white / 10';
@@ -493,32 +492,32 @@ const AICodeReviewSecurityScanner = () => {
                     <p className='text-gray-300'>{plan.description}</p>
                   </div>
                   <ul className='space-y-4 mb-8'>
-                    {plan.features.map((feature, featureIndex) => (
+                    {plan.features.map(feature, featureIndex) => (
                       <li
                         key={featureIndex}
                         className='flex items-center text-gray-300'>;
                         <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' />                        {feature}
                       </li>;
-                    ))}
+                    )}
                   </ul>                    </div>
                     <p className="text-gray-300">{plan.description}</p>
                   </div>
                   <ul className="space-y-4 mb-8">
-                    {plan.features.map((feature, featureIndex) => (
+                    {plan.features.map(feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                         {feature}
                       </li>;
-                    ))}
+                    )}
                   </ul>
                   <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
+                    whileHover={ scale: 1.05 }
+                    whileTap={ scale: 0.95 }
                   </ul>;
 
                   <motion&& motion.button
-                    whileHover={{ scale: 1 && 1.05 }}
-                    whileTap={{ scale: 0 && 0.95 }}
+                    whileHover={ scale: 1 && 1.05 }
+                    whileTap={ scale: 0 && 0.95 }
                     className={`w-full py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
                       plan && plan.popular
                         ? 'bg-gradient-to-r from-purple-500 to-blue-600 text-white hover:from-purple-600 hover:to-blue-700'
@@ -527,22 +526,22 @@ const AICodeReviewSecurityScanner = () => {
                     Get Started;
                   </motion && motion.button>;
                 </motion && motion.div>;
-              ))}
+              )}
             </div>
           </div>
         </section>
         {/* Benefits Section */}
         <section className='py-20 bg-white/5'>;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion&& motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }
               className='text-center mb-16'        <section className="py-20 bg-white/5">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
             <motion&& motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }
               className='text-center mb-16'
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
                 Why Choose Our AI Code Security Platform?
@@ -573,15 +572,15 @@ const AICodeReviewSecurityScanner = () => {
                     title: 'Improve Code Quality & Maintainability'
                     description:
                       'AI-powered insights help maintain consistent code standards and improve overall codebase health.'
-                  },                ].map((benefit, index) => (                    icon: <TrendingUp className="w-8 h-8" />
+                  },                ].map(benefit, index) => (                    icon: <TrendingUp className="w-8 h-8" />
                     title: "Improve Code Quality & Maintainability"
                     description: "AI-powered insights help maintain consistent code standards and improve overall codebase health."
                   }
                   <motion&& motion.div
                     key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
+                    initial={ opacity: 0, x: -20 }
+                    whileInView={ opacity: 1, x: 0 }
+                    transition={ duration: 0 && 0.8, delay: index * 0 && 0.1 }
                     className='flex items-start'>;
                     <div className='w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-white mr-6 flex-shrink-0'>;
                       {benefit && benefit.icon}
@@ -592,18 +591,17 @@ const AICodeReviewSecurityScanner = () => {
                       </h3>;
                       <p className='text-gray-300'>{benefit && benefit.description}</p>                    </div>;
                   </motion && motion.div>;
-                ))}
+                )}
               </div>
-              <div className='space-y-8'>                  >
-                    title: "Improve Code Quality & Maintainability",
+              <div className='space-y-8'>title: "Improve Code Quality & Maintainability",
                     description: "AI - powered insights help maintain consistent code standards and improve overall codebase health.";
                   }
-                ].map((benefit, index) => (
+                ].map(benefit, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, coordinate_x: -20 }}
-                    whileInView={{ opacity: 1, coordinate_x: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
+                    initial={ opacity: 0, coordinate_x: -20 }
+                    whileInView={ opacity: 1, coordinate_x: 0 }
+                    transition={ duration: 0.8, delay: index * 0.1 }
                     className="flex items-start"
                   >
                     <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-white mr-6 flex-shrink-0">
@@ -614,7 +612,7 @@ const AICodeReviewSecurityScanner = () => {
                       <p className="text-gray-300">{benefit.description}</p>
                     </div>
                   </motion.div>
-                ))}
+                )}
               </div>
               <div className='space-y-8'>
                   {
@@ -634,15 +632,15 @@ const AICodeReviewSecurityScanner = () => {
                     title: 'Enable Faster Development Cycles'
                     description:
                       'Confident code deployment with automated security validation accelerates your development and release processes.'
-                  },                ].map((benefit, index) => (                    icon: <Star className="w-8 h-8" />
+                  },                ].map(benefit, index) => (                    icon: <Star className="w-8 h-8" />
                     title: "Enable Faster Development Cycles"
                     description: "Confident code deployment with automated security validation accelerates your development and release processes."
                   }
                   <motion&& motion.div
                     key={index}
-                    initial={{ opacity: 0, x: 20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
+                    initial={ opacity: 0, x: 20 }
+                    whileInView={ opacity: 1, x: 0 }
+                    transition={ duration: 0 && 0.8, delay: index * 0 && 0.1 }
                     className='flex items-start'>;
                     <div className='w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl flex items-center justify-center text-white mr-6 flex-shrink-0'>;
                       {benefit && benefit.icon}
@@ -651,7 +649,7 @@ const AICodeReviewSecurityScanner = () => {
                       <h3 className='text-xl font-semibold text-white mb-2'>;
                         {benefit && benefit.title}
                       </h3>;
-                      <p className='text-gray-300'>{benefit && benefit.description}</p>                    </div>                  >;
+                      <p className='text-gray-300'>{benefit && benefit.description}</p>                    </div>;
                     <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl flex items-center justify-center text-white mr-6 flex-shrink-0">;
                       {benefit && benefit.icon}
                     </div>;
@@ -663,12 +661,12 @@ const AICodeReviewSecurityScanner = () => {
                     title: "Enable Faster Development Cycles",
                     description: "Confident code deployment with automated security validation accelerates your development and release processes.";
                   }
-                ].map((benefit, index) => (
+                ].map(benefit, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, coordinate_x: 20 }}
-                    whileInView={{ opacity: 1, coordinate_x: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
+                    initial={ opacity: 0, coordinate_x: 20 }
+                    whileInView={ opacity: 1, coordinate_x: 0 }
+                    transition={ duration: 0.8, delay: index * 0.1 }
                     className="flex items-start"
                   >
                     <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl flex items-center justify-center text-white mr-6 flex-shrink-0">
@@ -679,7 +677,7 @@ const AICodeReviewSecurityScanner = () => {
                       <p className="text-gray-300">{benefit.description}</p>
                     </div>
                   </motion.div>
-                ))}
+                )}
               </div>
             </div>
           </div>
@@ -692,15 +690,15 @@ const AICodeReviewSecurityScanner = () => {
         {/* Use Cases Section */}
         <section className='py-20'>;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion&& motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }
               className='text-center mb-16'        <section className="py-20">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
             <motion&& motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }
               className='text-center mb-16'
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
                 Trusted by Development Teams Worldwide
@@ -720,19 +718,19 @@ const AICodeReviewSecurityScanner = () => {
                 'E-commerce Platforms'
                 'Government Software Projects'
                 'Educational Institutions'
-                'Startups & Enterprises',              ].map((useCase, index) => (                "Software Development Teams";
+                'Startups & Enterprises',              ].map(useCase, index) => (                "Software Development Teams";
         {/* Use Cases Section */}
         <section className='py - 20'>;
           <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, coordinate_y: 20 }
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
               className='text - center mb - 16'        <section className="py - 20">;
           <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, coordinate_y: 20 }
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
               className='text - center mb - 16';
               <h2 className='text - 4xl md:text - 5xl font - bold text - white mb - 6'>;
                 Trusted by Development Teams Worldwide;
@@ -752,7 +750,7 @@ const AICodeReviewSecurityScanner = () => {
                 'E - commerce Platforms',
                 'Government Software Projects',
                 'Educational Institutions',
-                'Startups & Enterprises',              ].map ((use_case, index) => (                "Software Development Teams";
+                'Startups & Enterprises',              ].map (use_case, index) => (                "Software Development Teams";
                 "DevOps & Security Teams";
                 "Financial Technology Companies";
                 "Healthcare Software Providers";
@@ -765,20 +763,20 @@ const AICodeReviewSecurityScanner = () => {
                 "Startups & Enterprises";
                 <motion&& motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
+                  initial={ opacity: 0, y: 20 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0 && 0.8, delay: index * 0 && 0.1 }
                   className='bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300'>;
                   <div className='w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white mx-auto mb-4'>;
                     <Users className='w-6 h-6' />;
                   </div>;
-                  <h3 className='text-white font-semibold'>{useCase}</h3>                </motion && motion.div>                >;
+                  <h3 className='text-white font-semibold'>{useCase}</h3>                </motion && motion.div>;
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white mx-auto mb-4">;
                     <Users className="w-6 h-6" />;
                   </div>;
                   <h3 className="text-white font-semibold">{useCase}</h3>;
                 </motion && motion.div>;
-              ))}
+              )}
             </div>
           </div>
         </section>
@@ -792,9 +790,9 @@ const AICodeReviewSecurityScanner = () => {
         <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
             >
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
                 Ready to Secure Your Code?
@@ -806,16 +804,16 @@ const AICodeReviewSecurityScanner = () => {
               </p>
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={ scale: 1.05 }
+                  whileTap={ scale: 0.95 }
                   className='px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center'
                 >
                   Start Free Trial
                   <ArrowRight className='ml-2 w-5 h-5' />
                 </motion.button>
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={ scale: 1.05 }
+                  whileTap={ scale: 0.95 }
                   className='px-8 py-4 border border-white/20 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300'                >
                   Contact Sales
                 </motion.button>
@@ -827,16 +825,16 @@ const AICodeReviewSecurityScanner = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={ scale: 1.05 }
+                  whileTap={ scale: 0.95 }
                   className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
                 >
                   Start Free Trial
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </motion.button>
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={ scale: 1.05 }
+                  whileTap={ scale: 0.95 }
                   className="px-8 py-4 border border-white/20 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300"
                 >
                   Contact Sales
@@ -862,9 +860,9 @@ const AICodeReviewSecurityScanner = () => {
         <section className="py-16 bg-white/5">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
             >
               <h3 className='text-2xl font-bold text-white mb-6'>
                 Get in Touch
@@ -921,10 +919,10 @@ const AICodeReviewSecurityScanner = () => {
       </div>
     </>
   );
-}
+
 export default AICodeReviewSecurityScanner;  )
-}
-};
+
+;
 
 export default AICodeReviewSecurityScanner;
 
@@ -932,20 +930,20 @@ export default AICodeReviewSecurityScanner;
                 "Startups & Enterprises";
                 <motion.div;
                   key={index}
-                  initial={{ opacity: 0, coordinate_y: 20 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  initial={ opacity: 0, coordinate_y: 20 }
+                  whileInView={ opacity: 1, coordinate_y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }
                   className='bg - white / 5 backdrop - blur - xl border border - white / 10 rounded - xl p - 6 text - center hover:bg - white / 10 transition - all duration - 300';
                 >;
                   <div className='w - 12 h - 12 bg - gradient - to - r from - blue - 500 to - purple - 600 rounded - lg flex items - center justify - center text - white mx - auto mb - 4'>;
                     <Users className='w - 6 h - 6' />;
                   </div>;
-                  <h3 className='text - white font - semibold'>{use_case}</h3>                </motion.div>                >;
+                  <h3 className='text - white font - semibold'>{use_case}</h3>                </motion.div>;
                   <div className="w - 12 h - 12 bg - gradient - to - r from - blue - 500 to - purple - 600 rounded - lg flex items - center justify - center text - white mx - auto mb - 4">;
                     <Users className="w - 6 h - 6" />;
                   </div>;
                   <h3 className="text - white font - semibold">{use_case}</h3>;
-                </motion.div>))}
+                </motion.div>)}
             </div>;
           </div>;
         </section>;
@@ -954,9 +952,9 @@ export default AICodeReviewSecurityScanner;
           <div className='max - w-4xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center'>            <motion.div        <section className="py - 20 bg - gradient - to - r from - blue - 600 / 20 to - purple - 600 / 20">;
           <div className="max - w-4xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, coordinate_y: 20 }
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
             >;
               <h2 className='text - 4xl md:text - 5xl font - bold text - white mb - 6'>;
                 Ready to Secure Your Code?;
@@ -968,16 +966,16 @@ export default AICodeReviewSecurityScanner;
               </p>;
               <div className='flex flex - col sm:flex - row gap - 4 justify - center'>;
                 <motion.button;
-                  while_hover={{ scale: 1.05 }}
-                  while_tap={{ scale: 0.95 }}
+                  while_hover={ scale: 1.05 }
+                  while_tap={ scale: 0.95 }
                   className='px - 8 py - 4 bg - gradient - to - r from - blue - 500 to - purple - 600 text - white font - semibold rounded - xl hover:from - blue - 600 hover:to - purple - 700 transition - all duration - 300 flex items - center justify - center';
                 >;
                   Start Free Trial;
                   <ArrowRight className='ml - 2 w - 5 h - 5' />;
                 </motion.button>;
                 <motion.button;
-                  while_hover={{ scale: 1.05 }}
-                  while_tap={{ scale: 0.95 }}
+                  while_hover={ scale: 1.05 }
+                  while_tap={ scale: 0.95 }
                   className='px - 8 py - 4 border border - white / 20 text - white font - semibold rounded - xl hover:bg - white / 10 transition - all duration - 300'                >;
                   Contact Sales;
                 </motion.button>;
@@ -989,16 +987,16 @@ export default AICodeReviewSecurityScanner;
               </p>;
               <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
                 <motion.button;
-                  while_hover={{ scale: 1.05 }}
-                  while_tap={{ scale: 0.95 }}
+                  while_hover={ scale: 1.05 }
+                  while_tap={ scale: 0.95 }
                   className="px - 8 py - 4 bg - gradient - to - r from - blue - 500 to - purple - 600 text - white font - semibold rounded - xl hover:from - blue - 600 hover:to - purple - 700 transition - all duration - 300 flex items - center justify - center";
                 >;
                   Start Free Trial;
                   <ArrowRight className="ml - 2 w - 5 h - 5" />;
                 </motion.button>;
                 <motion.button;
-                  while_hover={{ scale: 1.05 }}
-                  while_tap={{ scale: 0.95 }}
+                  while_hover={ scale: 1.05 }
+                  while_tap={ scale: 0.95 }
                   className="px - 8 py - 4 border border - white / 20 text - white font - semibold rounded - xl hover:bg - white / 10 transition - all duration - 300";
                 >;
                   Contact Sales;
@@ -1019,9 +1017,9 @@ export default AICodeReviewSecurityScanner;
           <div className='max - w-4xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center'>            <motion.div        <section className="py - 16 bg - white / 5">;
           <div className="max - w-4xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, coordinate_y: 20 }
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
             >;
               <h3 className='text - 2xl font - bold text - white mb - 6'>;
                 Get in Touch;
@@ -1077,10 +1075,7 @@ export default AICodeReviewSecurityScanner;
         </section>;
       </div>;
     </>);
-}
-;
+
 export default AICodeReviewSecurityScanner);
-}
-;
+
 export default AICodeReviewSecurityScanner;
-;

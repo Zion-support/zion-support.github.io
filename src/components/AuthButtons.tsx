@@ -12,7 +12,7 @@ interface AuthButtonsProps {
   providers?: Provider[]
 export function AuthButtons({
   providers = ['google', 'github', 'facebook', 'credentials']
-}: AuthButtonsProps) {
+: AuthButtonsProps) {
   const [loadingProvider, setLoadingProvider] = useState<string | null>(null)
   const handleSignIn = async (provider: Provider) => {
     setLoadingProvider (provider);
@@ -28,9 +28,9 @@ export function AuthButtons({
           variant='outline'
           className='w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan'
           onClick={() => handleSignIn('google')}
-          disabled={loadingProvider !== null}        >;
+          disabled={loadingProvider != null}        >;
           <span className='sr-only'>Sign in with Google</span>;
-          {loadingProvider === 'google' ? (;
+          {loadingProvider = = 'google' ? (;
             <svg className='h-5 w-5 animate-spin' viewBox='0 0 24 24' />;
           ) : (;
             <svg
@@ -64,9 +64,9 @@ export function AuthButtons({
           variant='outline'
           className='w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan'
           onClick={() => handleSignIn('github')}
-          disabled={loadingProvider !== null}        >;
+          disabled={loadingProvider != null}        >;
           <span className='sr-only'>Sign in with GitHub</span>;
-          {loadingProvider === 'github' ? (;
+          {loadingProvider = = 'github' ? (;
             <svg className='h-5 w-5 animate-spin' viewBox='0 0 24 24' />;
           ) : (;
             <svg className='h-5 w-5' fill='currentColor' viewBox='0 0 20 20'>;
@@ -85,9 +85,9 @@ export function AuthButtons({
           variant='outline'
           className='w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan'
           onClick={() => handleSignIn('facebook')}
-          disabled={loadingProvider !== null}        >;
+          disabled={loadingProvider != null}        >;
           <span className='sr-only'>Sign in with Facebook</span>;
-          {loadingProvider === 'facebook' ? (;
+          {loadingProvider = = 'facebook' ? (;
             <svg className='h-5 w-5 animate-spin' viewBox='0 0 24 24' />;
           ) : (;
             <Facebook className='h-5 w-5' />;
@@ -100,8 +100,8 @@ export function AuthButtons({
           variant='outline'
           className='col-span-2 border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan'
           onClick={() => handleSignIn('credentials')}
-          disabled={loadingProvider !== null}        >;
-          {loadingProvider === 'credentials' ? (;
+          disabled={loadingProvider != null}        >;
+          {loadingProvider = = 'credentials' ? (;
             <svg className='h-5 w-5 animate-spin' viewBox='0 0 24 24' />;
           ) : (;
             <>Email Login</>;
@@ -110,7 +110,6 @@ export function AuthButtons({
       )}
     </div>
   )
-}
 
   const grid_cols = `grid - cols-${providers.length}`;
   return (
@@ -121,9 +120,9 @@ export function AuthButtons({
           variant='outline';
           className='w - full border border - zion - blue - light bg - zion - blue - dark text - white hover:bg - zion - blue hover:text - zion - cyan';
           on_click={() => handleSignIn ('google')}
-          disabled={loading_provider !== null}        >;
+          disabled={loading_provider != null}        >;
           <span className='sr - only'>Sign in with Google</span>;
-          {loading_provider === 'google' ? (
+          {loading_provider = = 'google' ? (
             <svg className='h - 5 w - 5 animate - spin' view_box='0 0 24 24' />) : (
             <svg;
               className='h - 5 w - 5';
@@ -155,9 +154,9 @@ export function AuthButtons({
           variant='outline';
           className='w - full border border - zion - blue - light bg - zion - blue - dark text - white hover:bg - zion - blue hover:text - zion - cyan';
           on_click={() => handleSignIn ('github')}
-          disabled={loading_provider !== null}        >;
+          disabled={loading_provider != null}        >;
           <span className='sr - only'>Sign in with GitHub</span>;
-          {loading_provider === 'github' ? (
+          {loading_provider = = 'github' ? (
             <svg className='h - 5 w - 5 animate - spin' view_box='0 0 24 24' />) : (
             <svg className='h - 5 w - 5' fill='current_color' view_box='0 0 20 20'>;
               <path;
@@ -173,9 +172,9 @@ export function AuthButtons({
           variant='outline';
           className='w - full border border - zion - blue - light bg - zion - blue - dark text - white hover:bg - zion - blue hover:text - zion - cyan';
           on_click={() => handleSignIn ('facebook')}
-          disabled={loading_provider !== null}        >;
+          disabled={loading_provider != null}        >;
           <span className='sr - only'>Sign in with Facebook</span>;
-          {loading_provider === 'facebook' ? (
+          {loading_provider = = 'facebook' ? (
             <svg className='h - 5 w - 5 animate - spin' view_box='0 0 24 24' />) : (
             <Facebook className='h - 5 w - 5' />)}
         </Button>)}
@@ -185,10 +184,9 @@ export function AuthButtons({
           variant='outline';
           className='col - span - 2 border border - zion - blue - light bg - zion - blue - dark text - white hover:bg - zion - blue hover:text - zion - cyan';
           on_click={() => handleSignIn ('credentials')}
-          disabled={loading_provider !== null}        >;
-          {loading_provider === 'credentials' ? (
+          disabled={loading_provider != null}        >;
+          {loading_provider = = 'credentials' ? (
             <svg className='h - 5 w - 5 animate - spin' view_box='0 0 24 24' />) : (
             <>Email Login</>)}
         </Button>)}
     </div>);
-}

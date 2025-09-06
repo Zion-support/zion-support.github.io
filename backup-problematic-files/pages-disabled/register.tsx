@@ -2,7 +2,6 @@ import React from 'react';
 
 interface RegisterProps {
   className?: string;
-}
 
 const Register: React.FC<RegisterProps> = ({ className }) => {
   return (
@@ -11,6 +10,5 @@ const Register: React.FC<RegisterProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default Register;

@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React, { useState } from 'react';
 import Link from 'next/link';
 
@@ -28,10 +28,10 @@ const EnhancedNavigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
 import Link from 'next / link';
-;
+
 const EnhancedNavigation = () =>: any {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState (false);
-;
+
   return (
     <nav className='bg - white shadow - lg sticky top - 0 z - 50'>;
       <div className='container mx - auto px - 4'>;
@@ -267,15 +267,13 @@ const EnhancedNavigation = () =>: any {
       </div>
     </nav>
   );
-};
 
 export default EnhancedNavigation;},
 
-);
-}
+;
+
 export default EnhancedNavigation;}
 export default EnhancedNavigation;
-
 
 export default EnhancedNavigation;
           <Link href="/" className="flex items - center space - x-2">;
@@ -398,8 +396,6 @@ export default EnhancedNavigation;
           </div>)}
       </div>;
     </nav>);
-}
-;
+
 export default EnhancedNavigation;},
 export default EnhancedNavigation;
-;

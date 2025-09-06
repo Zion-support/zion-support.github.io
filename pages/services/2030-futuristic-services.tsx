@@ -186,7 +186,7 @@ export default function FuturisticServices2030Page() {
         {/* Structured Data */}
         <script;
           type="application / ld + json";
-          dangerouslySetInnerHTML={{
+          dangerouslySetInnerHTML={
             __html: JSON.stringify({
               "@context": "https://schema.org"
               "@type": "Service"
@@ -196,11 +196,9 @@ export default function FuturisticServices2030Page() {
                 "@type": "Organization"
                 "name": "Zion Tech Group"
                 "url": "https://ziontechgroup.com"
-              }
-            })
-              }
-            });
-          }}
+              })
+              });
+          }
         />
       </Head>
       <UltraFuturisticBackground2031>
@@ -211,9 +209,9 @@ export default function FuturisticServices2030Page() {
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/20 to-cyan-900/20"></div>
           <div className="max-w-7xl mx-auto relative z-10">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }} className="text-center mb-16">
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 } className="text-center mb-16">
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-8">
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                   2030 Futuristic
@@ -230,13 +228,13 @@ export default function FuturisticServices2030Page() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }} className="px-8 py-4 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:via-purple-600 hover:to-pink-600 transition-all duration-200">
+                  whileHover={ scale: 1.05 }
+                  whileTap={ scale: 0.95 } className="px-8 py-4 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:via-purple-600 hover:to-pink-600 transition-all duration-200">
                   Get Started Today
                 </motion.button>
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }} className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-200">
+                  whileHover={ scale: 1.05 }
+                  whileTap={ scale: 0.95 } className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-200">
                   View Pricing
                 </motion.button>
               </div>
@@ -249,33 +247,33 @@ export default function FuturisticServices2030Page() {
                 { icon: Zap, label: 'Innovation Level', value: 'Revolutionary', color: 'text-purple-400' }
 
                 { icon: Shield, label: 'Security Rating', value: 'Quantum-Safe', color: 'text-pink-400' }
-              ].map((stat, index) => (
+              ].map(stat, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, coordinate_y: 20 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }} className="text-center">
+                  initial={ opacity: 0, coordinate_y: 20 }
+                  whileInView={ opacity: 1, coordinate_y: 0 }
+                  transition={ duration: 0.6, delay: index * 0.1 }
+                  viewport={ once: true } className="text-center">
                   <div className={`text-4xl mb-2 ${stat.color}`}>
                     <stat.icon className="w-12 h-12 mx-auto mb-4" />
                   </div>
                   <div className={`text-3xl font-bold ${stat.color} mb-2`}>{stat.value}</div>
                   <div className="text-gray-400">{stat.label}</div>
                 </motion.div>
-              ))}
+              )}
             </div>
           </div>
         </section>
         {/* Services by Category */}
-        {serviceCategories.map((category, categoryIndex) => (
+        {serviceCategories.map(category, categoryIndex) => (
           <section key={category.title} className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-900/10 to-gray-800/10"></div>
             <div className="max-w-7xl mx-auto relative z-10">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }} className="text-center mb-16">
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.6 }
+                viewport={ once: true } className="text-center mb-16">
                 <div className={`w-20 h-20 bg-gradient-to-r ${category.color} rounded-2xl flex items-center justify-center mx-auto mb-6`}>
                   <category.icon className="w-10 h-10 text-white" />
                 </div>
@@ -285,8 +283,8 @@ export default function FuturisticServices2030Page() {
                   </span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }} className="text - center mb - 16">;
+                transition={ duration: 0.6 }
+                viewport={ once: true } className="text - center mb - 16">;
                 <div className={`w - 20 h - 20 bg - gradient - to - r ${category.color} rounded - 2xl flex items - center justify - center mx - auto mb - 6`}>;
                   <category.icon className="w - 10 h - 10 text - white" />;
                 </div>;
@@ -301,19 +299,19 @@ export default function FuturisticServices2030Page() {
               </motion.div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {category.services.map((service, serviceIndex) => (
+                {category.services.map(service, serviceIndex) => (
                   <motion.div
                 </p>;
               </motion.div>;
               <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
-                {category.services.map ((service, service_index) => (
+                {category.services.map (service, service_index) => (
                   <motion.div;
                     key={service.id}
-                    initial={{ opacity: 0, coordinate_y: 30 }}
-                    whileInView={{ opacity: 1, coordinate_y: 0 }}
-                    transition={{ duration: 0.6, delay: service_index * 0.1 }}
-                    viewport={{ once: true }}
-                    whileHover={{ y: -5 }} className="group cursor-pointer">
+                    initial={ opacity: 0, coordinate_y: 30 }
+                    whileInView={ opacity: 1, coordinate_y: 0 }
+                    transition={ duration: 0.6, delay: service_index * 0.1 }
+                    viewport={ once: true }
+                    whileHover={ y: -5 } className="group cursor-pointer">
                     <div className="p-6 rounded-2xl bg-gradient-to-br from-gray-900/60 to-gray-800/60 border border-cyan-500/30 hover:border-cyan-400/50 transition-all duration-300 backdrop-blur-sm">
                       <div className="text-4xl mb-4">{service.icon}</div>
                       <h3 className="text-xl font-semibold text-white mb-3">{service.name}</h3>
@@ -347,28 +345,28 @@ export default function FuturisticServices2030Page() {
                       </div>
                     </div>
                   </motion.div>
-                ))}
+                )}
               </div>
             </div>
           </section>
-        ))}
+        )}
 
         {/* Contact CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              viewport={ once: true }
+              transition={ duration: 0.8 }
         {/* Contact CTA Section */}
         <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
           <div className="max - w-4xl mx - auto text - center">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, coordinate_y: 30 }
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              viewport={ once: true }
+              transition={ duration: 0.8 }
             >
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
                 Ready to Experience the
@@ -382,13 +380,13 @@ export default function FuturisticServices2030Page() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }} className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200">
+                  whileHover={ scale: 1.05 }
+                  whileTap={ scale: 0.95 } className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200">
                   Schedule Consultation
                 </motion.button>
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }} className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-200">
+                  whileHover={ scale: 1.05 }
+                  whileTap={ scale: 0.95 } className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-200">
                   View Pricing
                 </motion.button>
               </div>
@@ -415,7 +413,7 @@ export default function FuturisticServices2030Page() {
       </UltraFuturisticBackground2031>
     </>
   )
-}
+
             >;
               <h2 className="text - 3xl sm:text - 4xl lg:text - 5xl font - bold text - white mb - 6">;
                 Ready to Experience the;
@@ -429,13 +427,13 @@ export default function FuturisticServices2030Page() {
               </p>;
               <div className="flex flex - col sm:flex - row gap - 4 justify - center items - center mb - 8">;
                 <motion.button;
-                  while_hover={{ scale: 1.05 }}
-                  while_tap={{ scale: 0.95 }} className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white rounded - xl font - semibold text - lg hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200">;
+                  while_hover={ scale: 1.05 }
+                  while_tap={ scale: 0.95 } className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white rounded - xl font - semibold text - lg hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200">;
                   Schedule Consultation;
                 </motion.button>;
                 <motion.button;
-                  while_hover={{ scale: 1.05 }}
-                  while_tap={{ scale: 0.95 }} className="px - 8 py - 4 border - 2 border - cyan - 400 text - cyan - 400 rounded - xl font - semibold text - lg hover:bg - cyan - 400 hover:text - black transition - all duration - 200">;
+                  while_hover={ scale: 1.05 }
+                  while_tap={ scale: 0.95 } className="px - 8 py - 4 border - 2 border - cyan - 400 text - cyan - 400 rounded - xl font - semibold text - lg hover:bg - cyan - 400 hover:text - black transition - all duration - 200">;
                   View Pricing;
                 </motion.button>;
               </div>;
@@ -460,4 +458,3 @@ export default function FuturisticServices2030Page() {
         <UltraFuturisticFooter2030 />;
       </UltraFuturisticBackground2031>;
     </>);
-}

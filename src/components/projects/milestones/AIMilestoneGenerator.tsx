@@ -7,13 +7,13 @@ import {
   AccordionContent
   AccordionItem
   AccordionTrigger
-} from '@/components/ui/accordion'
+ from '@/components/ui/accordion'
 import { Loader2, Sparkles, Plus, Calendar } from 'lucide-react'
 import { format, parseISO } from 'date-fns'
   MilestoneInput
   GeneratedMilestone
   useMilestoneGenerator
-} from '@/hooks/useMilestoneGenerator'
+ from '@/hooks/useMilestoneGenerator'
 import { Badge } from '@/components/ui/badge'
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
@@ -23,14 +23,14 @@ import {;
   AccordionContent,;
   AccordionItem,;
   AccordionTrigger,;
-} from '@/components/ui/accordion';
+ from '@/components/ui/accordion';
 import { Loader2, Sparkles, Plus, Calendar } from 'lucide-react';
 import { format, parseISO } from 'date-fns';
 import {;
   MilestoneInput,;
   GeneratedMilestone,;
   useMilestoneGenerator,;
-} from '@/hooks/useMilestoneGenerator';
+ from '@/hooks/useMilestoneGenerator';
 import { Badge } from '@/components/ui/badge';
 
 interface AIMilestoneGeneratorProps {;
@@ -48,7 +48,7 @@ export function AIMilestoneGenerator({
   projectType
   onAddMilestones
   onAddMilestone
-}: AIMilestoneGeneratorProps) {
+: AIMilestoneGeneratorProps) {
   const {
     generateMilestones
     generatedMilestones
@@ -56,8 +56,7 @@ export function AIMilestoneGenerator({
     clearGeneratedMilestones
   } = useMilestoneGenerator()
   const [selectedMilestones, setSelectedMilestones] = useState<
-    Record<string, boolean>
-  >({})
+    Record<string, boolean>({})
   const handleGenerateMilestones = async () => {
     if (!scope |!startDate |!projectType) {
       return
@@ -71,14 +70,13 @@ export function AIMilestoneGenerator({
     await generate_milestones (input);
     // Initially select all milestones;
     const initial_selection: Record < number, boolean> = {}
-    generated_milestones.for_each ((_, index: number) => {
+    generated_milestones.for_each (_, index: number) => {
       initial_selection[index] = true;
     });
     setSelectedMilestones (initial_selection);
   }
   const handleAddToProject = () =>: any {
-    const selectedMilestonesList = generated_milestones.filter (
-      (_, index) => selected_milestones[index]);
+    const selectedMilestonesList = generated_milestones.filter (_, index) => selected_milestones[index]);
     onAddMilestones (selectedMilestonesList);
     clearGeneratedMilestones ();
     setSelectedMilestones ({});
@@ -87,7 +85,7 @@ export function AIMilestoneGenerator({
     setSelectedMilestones(prev => ({
       ...prev
       [index]: !prev[index]
-    }))
+    })
   }
   const handleAddSingleMilestone = (milestone: GeneratedMilestone) =>: any {
     onAddMilestone (milestone);
@@ -98,7 +96,6 @@ export function AIMilestoneGenerator({
     } catch (error) {
       return dateString
     }
-  }
   return (
     <div className='space-y-4'>;
       <div className='flex items-center justify-between'>;
@@ -138,7 +135,7 @@ export function AIMilestoneGenerator({
               </Button>
             </div>
             <Accordion type='multiple' className='w-full'>
-              {generatedMilestones.map((milestone, index) => (
+              {generatedMilestones.map(milestone, index) => (
                 <AccordionItem
                   value={`item-${index}`}
                   key={index}
@@ -159,7 +156,6 @@ export function AIMilestoneGenerator({
                             <Sparkles className='w-3 h-3 mr-1' />;
       return date_string;
     }
-  }
   return (
     <div className='space - y-4'>;
       <div className='flex items - center justify - between'>;
@@ -197,7 +193,7 @@ export function AIMilestoneGenerator({
               </Button>;
             </div>;
             <Accordion type='multiple' className='w - full'>;
-              {generated_milestones.map ((milestone, index) => (
+              {generated_milestones.map (milestone, index) => (
                 <AccordionItem;
                   value={`item-${index}`}
                   key={index}
@@ -228,7 +224,7 @@ export function AIMilestoneGenerator({
                       size='sm'
                       onClick={e => {
                         e.stopPropagation()
-                        handleAddSingleMilestone(milestone) }}
+                        handleAddSingleMilestone(milestone) }
                       className='mr-2'
 
                     >
@@ -248,21 +244,20 @@ export function AIMilestoneGenerator({
                     </div>
                   </AccordionContent>
                 </AccordionItem>
-              ))}
+              )}
             </Accordion>;
           </CardContent>;
         </Card>;
       )}
     </div>
   )
-}
 
                     <Button;
                       variant='ghost';
                       size='sm';
                       on_click={e => {
                         e.stop_propagation ();
-                        handleAddSingleMilestone (milestone) }}
+                        handleAddSingleMilestone (milestone) }
                       className='mr - 2';
                     >;
                       <Plus className='h - 4 w - 4' />;
@@ -280,9 +275,8 @@ export function AIMilestoneGenerator({
                       </div>;
                     </div>;
                   </AccordionContent>;
-                </AccordionItem>))}
+                </AccordionItem>)}
             </Accordion>;
           </CardContent>;
         </Card>)}
     </div>);
-}

@@ -6,5 +6,3 @@ export function ApiPlayground() {;
       <p>Component placeholder - needs implementation</p>;
     </div>;
   );
-}
-;

@@ -1,4 +1,4 @@
-:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/job-posting/JobPostingForm.tsx
+recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/job-posting/JobPostingForm.tsx
 import React, { useState, useEffect, useCallback } from 'react';
 import { useNavigate  } from 'react-router-dom';
 import { toast } from "sonner",
@@ -29,7 +29,7 @@ import {JobSchemaType} from './validation';
 interface JobPostingFormProps {;
   jobId?: string;
   onSuccess?: () => void;
-}
+
 export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
 
   const navigate = useNavigate();
@@ -51,23 +51,23 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
   } = useJobForm({ jobId, onSuccess });
   const { handleSubmit, setValue, formState } = form;
   const { isSubmitting } = formState;
-  useEffect(() => {
+  useEffect() => {
     if (jobId) {
       setIsFormLoading(true);
       getJobById(jobId);
-        .then((job) => {;
+        .then(job) => {;
           if (job) {;
             // Set form values;
-            Object && Object.entries(job).forEach(([key, value]) => {;
-              if (key === 'published_date' && value) {;
-                setStartDate(new Date(value as string));
+            Object && Object.entries(job).forEach([key, value]) => {;
+              if (key = = 'published_date' && value) {;
+                setStartDate(new Date(value as string);
                 setValue('published_date', value as string);
-              } else if (key === 'expiry_date' && value) {;
-                setEndDate(new Date(value as string));
+              } else if (key = = 'expiry_date' && value) {;
+                setEndDate(new Date(value as string);
                 setValue('expiry_date', value as string);
-              } else if (key === 'is_remote') {;
+              } else if (key = = 'is_remote') {;
                 setIsRemote(value as boolean);
-              } else if (key === 'description') {;
+              } else if (key = = 'description') {;
                 setEditorContent(value as string);
                 setValue('description', value as string);
               } else {;
@@ -77,45 +77,45 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
                 } catch (e) {;
     submit_job;
   } = useJobForm ({ job_id, on_success });
-;
+
   const { handle_submit, set_value, form_state } = form;
   const { is_submitting } = form_state;
-;
-  useEffect (() => {
+
+  useEffect () => {
     // Check condition
 if ( {) {
   $2
-}
+
       setIsFormLoading (true);
       getJobById (job_id);
-        .then ((job) => {
+        .then (job) => {
           // Check condition
 if ( {) {
   $2
-}
+
             // Set form values;
-            Object.entries (job).for_each (([key, value]) => {
+            Object.entries (job).for_each ([key, value]) => {
               // Check condition
 if ( {) {
   $2
-}
-                setStartDate (new Date (value as string));
+
+                setStartDate (new Date (value as string);
                 set_value ('published_date', value as string);
               } else // Check condition
 if ( {) {
   $2
-}
-                setEndDate (new Date (value as string));
+
+                setEndDate (new Date (value as string);
                 set_value ('expiry_date', value as string);
               } else // Check condition
 if ( {) {
   $2
-}
+
                 setIsRemote (value as boolean);
               } else // Check condition
 if ( {) {
   $2
-}
+
                 setEditorContent (value as string);
                 set_value ('description', value as string);
               } else {
@@ -125,20 +125,17 @@ if ( {) {
                 } catch (e) {
                   // Skip fields that don't exist in our form;
                 }
-              }
             });
-          }
-        });
-        .catch((error) => {;
+          });
+        .catch(error) => {;
           console && console.error("Failed to load job:", error);
           toast && toast.error("Failed to load job");
         });
-        .finally(() => {;
+        .finally() => {;
           setIsFormLoading(false);
         });
-    }
-  }, [jobId, getJobById, setValue, setStartDate, setEndDate, setIsRemote]);
-  const handleEditorChange = useCallback((value: string) => {
+    }, [jobId, getJobById, setValue, setStartDate, setEndDate, setIsRemote]);
+  const handleEditorChange = useCallback(value: string) => {
     setEditorContent(value)
     setValue('description', value)
   }, [setValue]);
@@ -157,14 +154,12 @@ if ( {) {
       }
       if (onSuccess) {
         onSuccess()
-      }
-    } catch (error: any) {
+      } catch (error: any) {
       console.error("Error creating/updating job:", error);
       toast.error(error.message |"Failed to post job")
     } finally {
       setIsFormLoading(false)
     }
-  }
   if (isLoading |isFormLoading) {
 
     return <div className="flex items-center justify-center p-8">Loading...</div>
@@ -235,4 +230,3 @@ if ( {) {
         </Button>;
       </form>;
     </Form>);
-}

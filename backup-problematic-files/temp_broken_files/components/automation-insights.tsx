@@ -28,7 +28,7 @@ export default function AutomationInsightsPage() {
       featured: false
     }
   ],;
-;
+
   const automationTools = [;
     {;
       id:'automation-framework',;
@@ -52,7 +52,7 @@ export default function AutomationInsightsPage() {
       complexity:'Beginner';
     }
   ],;
-;
+
   const successMetrics = [;
     {;
       metric:'227',;
@@ -82,7 +82,7 @@ export default function AutomationInsightsPage() {
         <meta property=&quot;og:title&quot; content=&quot;Automation Insights | Zion Tech Group&quot; />
         <meta property=&quot;og:description&quot; content=&quot;Expert insights on AI automation, autonomous systems, and industry trends.&quot; />
         <meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; />      </Head>
-      
+
       <div className=&quot;min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white&quot;>
         <main className=&quot;container mx-auto px-6 py-12&quot;>
           <section className=&quot;text-center mb-16&quot;>
@@ -99,20 +99,20 @@ export default function AutomationInsightsPage() {
             <div className=&quot;bg-white/10 backdrop-blur-xl rounded-2xl p-8 mb-16&quot;>
               <h2 className=&quot;text-3xl font-bold mb-8 text-center text-cyan-400&quot;>Our Automation Success</h2>
               <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6&quot;>
-                {successMetrics.map((item, index) => (
+                {successMetrics.map(item, index) => (
                   <div key={index} className=&quot;text-center&quot;>
                     <div className=&quot;text-4xl font-bold text-fuchsia-400 mb-2&quot;>{item.metric}</div>
                     <div className=&quot;text-lg font-semibold text-white mb-1&quot;>{item.label}</div>
                     <div className=&quot;text-sm text-white/70&quot;>{item.description}</div>                  </div>
-                ))}
+                )}
               </div>;
             </div>;
-;
+
             {/* Automation Trends */}
             <div className=&quot;mb-16&quot;>
               <h2 className=&quot;text-3xl font-bold mb-8 text-center text-fuchsia-400&quot;>Latest Automation Trends</h2>
               <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6&quot;>
-                {automationTrends.map((trend, index) => (
+                {automationTrends.map(trend, index) => (
                   <div key={index} className=&quot;bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300&quot;>
                     <div className=&quot;flex items-center justify-between mb-4&quot;>
                       <span className=&quot;px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full&quot;>{trend.category}</span>
@@ -126,15 +126,15 @@ export default function AutomationInsightsPage() {
                       Read More <span className=&quot;ml-1&quot;></span>
                     </a>
                   </div>
-                ))}
+                )}
               </div>;
             </div>;
-;
+
             {/* Automation Tools & Frameworks */}
             <div className=&quot;mb-16&quot;>
               <h2 className=&quot;text-3xl font-bold mb-8 text-center text-green-400&quot;>Our Automation Tools</h2>
               <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6&quot;>
-                {automationTools.map((tool, index) => (
+                {automationTools.map(tool, index) => (
                   <div key={index} className=&quot;bg-white/10 backdrop-blur-xl rounded-2xl p-6 text-center&quot;>
                     <div className=&quot;text-4xl mb-4&quot;></div>
                     <h3 className=&quot;text-xl font-bold mb-3 text-white&quot;>{tool.title}</h3>
@@ -143,10 +143,10 @@ export default function AutomationInsightsPage() {
                       <span className=&quot;px-3 py-1 bg-blue-400/20 text-blue-400 text-sm rounded-full&quot;>{tool.type}</span>
                       <span className=&quot;px-3 py-1 bg-purple-400/20 text-purple-400 text-sm rounded-full&quot;>{tool.complexity}</span>                    </div>
                   </div>
-                ))}
+                )}
               </div>;
             </div>;
-;
+
             {/* Call to Action */}
             <div className=&quot;bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 backdrop-blur-xl rounded-2xl p-8 text-center&quot;>
               <h2 className=&quot;text-3xl font-bold mb-4 text-white&quot;>Ready to Automate Your Business?</h2>

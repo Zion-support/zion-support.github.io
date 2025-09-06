@@ -11,7 +11,7 @@ import {
   DropdownMenuItem
   DropdownMenuSeparator
   DropdownMenuTrigger
-} from "@/components/ui/dropdown-menu";
+ from "@/components/ui/dropdown-menu";
 export function UserMenu() {
   const { user, logout } = useAuth();
   const { toast } = useToast();
@@ -25,7 +25,6 @@ export function UserMenu() {
         variant: "destructive"
       });
     }
-  }
 
   if (!user) {;
     return (
@@ -90,12 +89,11 @@ export function UserMenu() {
         variant: "destructive",
       });
     }
-  }
-;
+
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <div className="hidden md: flex items - center space - x-4">;
         <Link to="/login" className="text - zion - slate - light hover:text - white">;
@@ -151,4 +149,3 @@ if ( {) {
         <DropdownMenuItem on_click={handleSignOut}>Sign Out</DropdownMenuItem>;
       </DropdownMenuContent>;
     </DropdownMenu>);
-}

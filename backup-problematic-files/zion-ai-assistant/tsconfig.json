@@ -1,4 +1,4 @@
-{
+
   "compilerOptions": {
     "target": "ES2022",
     "module": "NodeNext",
@@ -19,4 +19,3 @@
     "src/server",
     "src/shared"
   ]
-}

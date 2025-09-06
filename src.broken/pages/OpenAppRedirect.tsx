@@ -6,5 +6,3 @@ export function OpenAppRedirect() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

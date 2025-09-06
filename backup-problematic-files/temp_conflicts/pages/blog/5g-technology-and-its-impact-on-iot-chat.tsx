@@ -1,7 +1,7 @@
 
 import Head from 'next/head',;
 import Link from 'next/link',;
-;
+
 const FiveGTechnologyAndItsImpactOnIotChat = () => {;
   return (;
     <div>;
@@ -9,7 +9,6 @@ const FiveGTechnologyAndItsImpactOnIotChat = () => {;
         <title>5G Technology And Its Impact On IoT - Zion Tech Solutions</title>;
         <meta name="description" content="5G Technology and its impact on IoT blog post" />;
       </Head>;
-      ;
       <main>;
         <h1>5G Technology And Its Impact On IoT</h1>;
         <p>Blog content coming soon...</p>;
@@ -17,6 +16,6 @@ const FiveGTechnologyAndItsImpactOnIotChat = () => {;
       </main>;
     </div>;
   ),;
-},;
-;
+,;
+
 export default Chat5gTechnologyAndItsImpactOnIotChat,

@@ -15,7 +15,7 @@ export type Real2036SpecializedService = {
   integration?: string[];
   useCases?: string[];
   technology?: string[];};  technology?: string[]
-};
+;
 
 export const real2036SpecializedServices: Real2036SpecializedService[] = [
   // Neuromorphic Computing Platform
@@ -24,7 +24,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     name: 'Neuromorphic Computing Platform',
     tagline: 'Brain-inspired computing for next-generation AI applications',
   technology?: string[];};  technology?: string[]
-}
+
 export const real2036SpecializedServices: Real2036SpecializedService[] = [
   // Neuromorphic Computing Platform
   {
@@ -602,7 +602,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
       'Customer management'
     ]
   }
-];    id: 'neuromorphic-computing-platform';
+;    id: 'neuromorphic-computing-platform';
     name: 'Neuromorphic Computing Platform';
     tagline: 'Brain-inspired computing for next-generation AI applications'
     description: 'Revolutionary platform that leverages neuromorphic computing architecture to process information like the human brain, enabling ultra-efficient AI applications and edge computing.';
@@ -634,7 +634,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
       'Customer management',
     ],
   },
-];    id: 'neuromorphic - computing - platform';
+;    id: 'neuromorphic - computing - platform';
     name: 'Neuromorphic Computing Platform';
     tagline: 'Brain - inspired computing for next - generation AI applications',
     description: 'Revolutionary platform that leverages neuromorphic computing architecture to process information like the human brain, enabling ultra - efficient AI applications and edge computing.';
@@ -665,7 +665,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     use_cases: ['Edge AI processing_autonomous systems_cognitive computing_energy - efficient AI'],
     technology: ['Neuromorphic chips_spiking neural networks_analog computing_bio - inspired algorithms'];
   }
-;
+
   // Synthetic Biology Platform;
   {
     id: 'synthetic - biology - platform';
@@ -699,7 +699,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     use_cases: ['Drug discovery_biofuel production_environmental remediation_agricultural optimization'],
     technology: ['CRISPRGene editingDNA synthesis_bioinformatics'];
   }
-;
+
   // Quantum Internet Protocol Suite;
   {
     id: 'quantum - internet - protocol - suite';
@@ -740,7 +740,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     use_cases: ['Quantum networks_secure communications_internet infrastructure_government networks'],
     technology: ['Quantum protocols_network standards_security frameworks_interoperability'];
   }
-;
+
   // Brain - Computer Interface Platform;
   {
     id: 'brain - computer - interface - platform';
@@ -774,7 +774,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     use_cases: ['Assistive technology_medical research_gaming and entertainment_human augmentation'],
     technology: ['EEGNeural implants_signal processing_machine learning'];
   }
-;
+
   // Metaverse Development Studio Pro;
   {
     id: 'metaverse - development - studio - pro';
@@ -808,7 +808,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     use_cases: ['Virtual worlds_digital real estate_educational experiences_social platforms'],
     technology: ['3D graphics_virtual reality_augmented reality_blockchain'];
   }
-;
+
   // Autonomous Vehicle AI Platform;
   {
     id: 'autonomous - vehicle - ai - platform';
@@ -842,7 +842,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     use_cases: ['Self - driving cars_autonomous trucks_delivery robots_public transportation'],
     technology: ['Computer vision_machine learning_sensor fusion_control systems'];
   }
-;
+
   // Quantum Materials Discovery Platform;
   {
     id: 'quantum - materials - discovery - platform';
@@ -876,7 +876,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     use_cases: ['New materials_energy storageElectronicsManufacturing'],
     technology: ['Quantum computing_machine learning_materials science_simulation'];
   }
-;
+
   // AI - Powered Climate Modeling Platform;
   {
     id: 'ai - climate - modeling - platform';
@@ -910,7 +910,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     use_cases: ['Climate prediction_policy planning_environmental research_risk assessment'],
     technology: ['Machine learning_climate models_data analysis_simulation'];
   }
-;
+
   // Quantum Neural Network Platform;
   {
     id: 'quantum - neural - network - platform';
@@ -961,7 +961,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     useCases: ['Space tourismTraining programsSafety managementCustomer experience']
     technology: ['Space systemsSafety protocolsTraining technologyCustomer management']
   }
-];
+;
 
     price: '$6, 999';
     period: '/month';
@@ -978,5 +978,4 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     use_cases: ['Space tourism_training programs_safety management_customer experience'],
     technology: ['Space systems_safety protocols_training technology_customer management'];
   }
-];
 ;

@@ -22,8 +22,8 @@ import { ;
   Lock,;
   Users,;
   BarChart3;
-} from 'lucide-react',;
-;
+ from 'lucide-react',;
+
 export default function ITServicesPage() {;
   const itServices = [;
     {;
@@ -207,7 +207,7 @@ export default function ITServicesPage() {;
       website:"https://ziontechgroup.com/infrastructure-management";
     }
   ],;
-;
+
   const additionalServices = [;
     {;
       name:"API Development & Integration",;
@@ -234,14 +234,14 @@ export default function ITServicesPage() {;
       icon:<Users className="w-8 h-8 text-orange-400" />;
     }
   ],;
-;
+
   const stats = [;
     { label:"Infrastructure Deployed", value:"200+" },;
     { label:"Security Audits", value:"150+" },;
     { label:"Uptime Guarantee", value:"99.9%" },;
     { label:"Client Satisfaction", value:"97%" }
   ],;
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">;
       {/* Hero Section */}
@@ -277,18 +277,18 @@ export default function ITServicesPage() {;
           </div>;
         </div>;
       </div>;
-;
+
       {/* Stats Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">;
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">;
-          {stats.map((stat, index) => (;
+          {stats.map(stat, index) => (;
             <div key={index} className="text-center">;
               <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">{stat.value}</div>;
               <div className="text-gray-300 text-sm">{stat.label}</div>;
-            </div>;          ))}
+            </div>;          )}
         </div>;
       </div>;
-;
+
       {/* IT Services Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">;
         <div className="text-center mb-16">;
@@ -299,66 +299,64 @@ export default function ITServicesPage() {;
             Comprehensive IT solutions designed to modernize infrastructure, enhance security, and drive operational efficiency.;
           </p>;
         </div>;
-;
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">;
-          {itServices.map((service, index) => (;
+          {itServices.map(service, index) => (;
             <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-blue-400/50 transition-all duration-300 hover:transform hover:scale-105">;
               <div className="space-y-6">;
                 <div className="flex items-center gap-4">;
                   {service.icon}
                   <h3 className="text-2xl font-bold text-white">{service.name}</h3>;
                 </div>;
-                ;
                 <p className="text-gray-300 leading-relaxed">{service.description}</p>;
-                ;
                 <div className="space-y-4">;
                   <div>;
                     <h4 className="text-lg font-semibold text-blue-400 mb-3">Key Features:</h4>;
                     <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">;
-                      {service.features.map((feature, featureIndex) => (;
+                      {service.features.map(feature, featureIndex) => (;
                         <li key={featureIndex} className="flex items-center gap-2 text-sm text-gray-300">;
                           <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />;
                           {feature}
                         </li>;
-                      ))}
+                      )}
                     </ul>;
                   </div>;
-;
+
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
                     <div>;
                       <h4 className="text-sm font-semibold text-blue-400 mb-2">Pricing:</h4>;
                       <div className="space-y-1">;
-                        {Object.entries(service.pricing).map(([plan, price]) => (;
+                        {Object.entries(service.pricing).map([plan, price]) => (;
                           <div key={plan} className="flex justify-between text-sm">;
                             <span className="text-gray-400 capitalize">{plan} </span>;
                             <span className="text-green-400 font-semibold">{price}</span>;
                           </div>;
-                        ))}
+                        )}
                       </div>;
                       <div className="mt-2 text-xs text-gray-400">;
                         Market price:<span className="line-through">{service.marketPrice}</span>;
                       </div>;
                     </div>;
-;
+
                     <div>;
                       <h4 className="text-sm font-semibold text-blue-400 mb-2">Best For:</h4>;
                       <ul className="space-y-1">;
-                        {service.useCases.map((useCase, useCaseIndex) => (;
+                        {service.useCases.map(useCase, useCaseIndex) => (;
                           <li key={useCaseIndex} className="text-xs text-gray-300"> {useCase}</li>;
-                        ))}
+                        )}
                       </ul>;
                     </div>;
                   </div>;
-;
+
                   <div>;
                     <h4 className="text-sm font-semibold text-blue-400 mb-2">Key Benefits:</h4>;
                     <ul className="grid grid-cols-1 md:grid-cols-2 gap-1">;
-                      {service.benefits.map((benefit, benefitIndex) => (;
+                      {service.benefits.map(benefit, benefitIndex) => (;
                         <li key={benefitIndex} className="text-xs text-gray-300"> {benefit}</li>;
-                      ))}
+                      )}
                     </ul>;
                   </div>;
-;
+
                   <div className="pt-4 border-t border-white/20">;
                     <div className="flex gap-3">;
                       <a ;
@@ -378,10 +376,10 @@ export default function ITServicesPage() {;
                   </div>;
                 </div>;
               </div>;
-            </div>;          ))}
+            </div>;          )}
         </div>;
       </div>;
-;
+
       {/* Additional Services */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">;
         <div className="text-center mb-12">;
@@ -392,9 +390,9 @@ export default function ITServicesPage() {;
             Specialized IT services to complement your technology infrastructure and support your business growth.;
           </p>;
         </div>;
-;
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">;
-          {additionalServices.map((service, index) => (;
+          {additionalServices.map(service, index) => (;
             <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-blue-400/50 transition-all duration-300">;
               <div className="text-center space-y-4">;
                 <div className="flex justify-center">;
@@ -410,10 +408,10 @@ export default function ITServicesPage() {;
                   Get Quote;
                 </a>;
               </div>;
-            </div>;          ))}
+            </div>;          )}
         </div>;
       </div>;
-;
+
       {/* Why Choose Zion Tech Group */}
       <div className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 border-t border-white/20">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">;
@@ -421,7 +419,6 @@ export default function ITServicesPage() {;
             <h2 className="text-3xl md:text-4xl font-bold text-white">;
               Why Choose Zion Tech Group for IT Solutions?;
             </h2>;
-            ;
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
               <div className="text-center space-y-4">;
                 <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto">;
@@ -432,7 +429,6 @@ export default function ITServicesPage() {;
                   Years of experience in enterprise IT infrastructure, cloud technologies, and cybersecurity.;
                 </p>;
               </div>;
-              ;
               <div className="text-center space-y-4">;
                 <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto">;
                   <Shield className="w-8 h-8 text-white" />;
@@ -442,7 +438,6 @@ export default function ITServicesPage() {;
                   Security-first approach with industry best practices and compliance frameworks.;
                 </p>;
               </div>;
-              ;
               <div className="text-center space-y-4">;
                 <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto">;
                   <Star className="w-8 h-8 text-white" />;
@@ -456,7 +451,7 @@ export default function ITServicesPage() {;
           </div>;
         </div>;
       </div>;
-;
+
       {/* Contact & CTA Section */}
       <div className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 border-t border-white/20">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">;
@@ -467,7 +462,6 @@ export default function ITServicesPage() {;
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
               Let's discuss how our IT solutions can enhance your operational efficiency, security posture, and business scalability.;
             </p>;
-            ;
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">;
               <div className="text-center space-y-3">;
                 <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto">;
@@ -477,7 +471,6 @@ export default function ITServicesPage() {;
                 <p className="text-gray-300">+1 302 464 0950</p>;
                 <p className="text-sm text-gray-400">Available Mon-Fri 9AM-6PM EST</p>;
               </div>;
-              ;
               <div className="text-center space-y-3">;
                 <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto">;
                   <Mail className="w-8 h-8 text-white" />;
@@ -486,7 +479,6 @@ export default function ITServicesPage() {;
                 <p className="text-gray-300">kleber@ziontechgroup.com</p>;
                 <p className="text-sm text-gray-400">Response within 2 hours</p>;
               </div>;
-              ;
               <div className="text-center space-y-3">;
                 <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto">;
                   <MapPin className="w-8 h-8 text-white" />;
@@ -496,7 +488,7 @@ export default function ITServicesPage() {;
                 <p className="text-sm text-gray-400">Middletown, DE 19709</p>;
               </div>;
             </div>;
-;
+
             <div className="pt-8">;
               <a ;
                 href="mailto:kleber@ziontechgroup.com?subject=IT%20Services%20Consultation%20-%20Zion%20Tech%20Group";
@@ -509,7 +501,7 @@ export default function ITServicesPage() {;
           </div>;
         </div>;
       </div>;
-;
+
       {/* Footer */}
       <footer className="bg-gray-900 border-t border-white/20">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">;
@@ -520,7 +512,6 @@ export default function ITServicesPage() {;
                 Enterprise-grade IT solutions that drive operational excellence and business growth.;
               </p>;
             </div>;
-            ;
             <div className="space-y-4">;
               <h4 className="text-md font-semibold text-white">IT Services</h4>;
               <ul className="space-y-2 text-sm text-gray-400">;
@@ -530,7 +521,6 @@ export default function ITServicesPage() {;
                 <li><a href="/network-infrastructure" className="hover:text-blue-400 transition-colors">Network Design</a></li>;
               </ul>;
             </div>;
-            ;
             <div className="space-y-4">;
               <h4 className="text-md font-semibold text-white">Company</h4>;
               <ul className="space-y-2 text-sm text-gray-400">;
@@ -540,7 +530,6 @@ export default function ITServicesPage() {;
                 <li><a href="/blog" className="hover:text-blue-400 transition-colors">Blog</a></li>;
               </ul>;
             </div>;
-            ;
             <div className="space-y-4">;
               <h4 className="text-md font-semibold text-white">Connect</h4>;
               <div className="flex space-x-4">;
@@ -556,7 +545,6 @@ export default function ITServicesPage() {;
               </div>;
             </div>;
           </div>;
-          ;
           <div className="border-t border-white/20 mt-8 pt-8 text-center">;
             <p className="text-gray-400 text-sm">;
                2024 Zion Tech Group. All rights reserved. | ;
@@ -570,52 +558,50 @@ export default function ITServicesPage() {;
   ); export default function ITServicesPage () {
   const itServices = [ {
   benefits: [ "Reduced infrastructure costs";
-"Improved scalability";
-"Enhanced security posture";
-"Better performance";
-"Operational efficiency" ];
+Improved scalability";
+Enhanced security posture";
+Better performance";
+Operational efficiency" ];
 website: "https://ziontechgroup.com/cloud-migration" 
-};
+;
 benefits: [ "Faster deployment cycles";
-"Reduced manual errors";
-"Improved collaboration";
-"Better resource utilization";
-"Enhanced security" ];
+Reduced manual errors";
+Improved collaboration";
+Better resource utilization";
+Enhanced security" ];
 website: "https://ziontechgroup.com/devops-automation" 
-};
+;
 benefits: [ "Reduced security risks";
-"Compliance assurance";
-"Improved incident response";
-"Enhanced customer trust";
-"Cost-effective security" ];
+Compliance assurance";
+Improved incident response";
+Enhanced customer trust";
+Cost-effective security" ];
 website: "https://ziontechgroup.com/cybersecurity" 
-};
+;
 benefits: [ "Improved network performance";
-"Enhanced security";
-"Better scalability";
-"Reduced downtime";
-"Operational efficiency" ];
+Enhanced security";
+Better scalability";
+Reduced downtime";
+Operational efficiency" ];
 website: "https://ziontechgroup.com/network-infrastructure" 
-};
+;
 benefits: [ "Improved data performance";
-"Enhanced data security";
-"Better scalability";
-"Reduced maintenance costs";
-"Improved reliability" ];
+Enhanced data security";
+Better scalability";
+Reduced maintenance costs";
+Improved reliability" ];
 website: "https://ziontechgroup.com/database-services" 
-};
+;
 benefits: [ "Reduced downtime";
-"Lower operational costs";
-"Improved performance";
-"Enhanced security";
-"Peace of mind" ];
+Lower operational costs";
+Improved performance";
+Enhanced security";
+Peace of mind" ];
 website: "https://ziontechgroup.com/infrastructure-management" 
-}];
 ];
-}</div> </div> Our IT Service Portfolio </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Comprehensive IT solutions designed to modernize infrastructure, enhance security, and drive operational efficiency. </p> </div> <div className="space-y-4" > <div> </li>) ) 
-}</ul> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <div> </div> </div> <div>) ) 
-}</ul> </div> </div> <div>) ) 
-}</ul> </div> <div className="pt-4 border-t border-white/20" > <div className="flex gap-3" > <a > <span>Learn More</span> <ExternalLink className="w-4 h-4" /> </Link> <a > <span>Get Quote</span> </Link> </div> </div> </div> </div> </div>) ) 
-}</div> </div> Additional IT Services </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Specialized IT services to complement your technology infrastructure and support your business growth. </p> </div> > Get Quote </Link> </div> </div>) ) 
-}</div> </div> Why Choose Zion Tech Group for IT Solutions? </h2> <div className="grid grid-cols-1 md:grid-cols-3 gap-8" > <div className="text-center space-y-4" > <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto" > <Zap className="w-8 h-8 text-white" /> </div> <h3 className="text-xl font-semibold text-white" >Proven Expertise</h3> <p className="text-gray-300" > Years of experience in enterprise IT infrastructure, cloud technologies, and cybersecurity. </p> </div> <div className="text-center space-y-4" > <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto" > <Shield className="w-8 h-8 text-white" /> </div> <h3 className="text-xl font-semibold text-white" >Security First</h3> <p className="text-gray-300" > Security-first approach with industry best practices and compliance frameworks. </p> </div> <div className="text-center space-y-4" > <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto" > <Star className="w-8 h-8 text-white" /> </div> <h3 className="text-xl font-semibold text-white" >24/7 Support</h3> <p className="text-gray-300" > Round-the-clock monitoring, support, and maintenance for your critical infrastructure. </p> </div> </div> </div> </div> </div> Ready to Modernize Your IT Infrastructure? </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Let's discuss how our IT solutions can enhance your operational efficiency, security posture, and business scalability. </p> <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto" > <div className="text-center space-y-3" > <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto" > <Phone className="w-8 h-8 text-white" /> </div> <h3 className="text-lg font-semibold text-white" >Call Us</h3> <p className="text-gray-300" >+1 302 464 0950</p> <p className="text-sm text-gray-400" >Available Mon-Fri 9AM-6PM EST</p> </div> <div className="text-center space-y-3" > <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto" > <Mail className="w-8 h-8 text-white" /> </div> <h3 className="text-lg font-semibold text-white" >Email Us</h3> <p className="text-gray-300" >kleber@ziontechgroup.com</p> <p className="text-sm text-gray-400" >Response within 2 hours</p> </div> <div className="text-center space-y-3" > <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto" > <MapPin className="w-8 h-8 text-white" /> </div> <h3 className="text-lg font-semibold text-white" >Visit Us</h3> <p className="text-gray-300" >364 E Main St STE 1008</p> <p className="text-sm text-gray-400" >Middletown, DE 19709</p> </div> </div> <div className="pt-8" > <a href="mailto:kleber@ziontechgroup.com?subject=IT%20Services%20Consultation%20-%20Zion%20Tech%20Group" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 rounded-lg text-lg font-semibold transition-all duration-300 hover:transform hover:scale-105" > <span>Start Your IT Transformation</span> <ArrowRight className="w-5 h-5 ml-2" /> </Link> </div> </div> </div> </div> <footer className="bg-gray-900 border-t border-white/20"> <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12"> <div className="grid grid-cols-1 md:grid-cols-4 gap-8"> <div className="space-y-4"> <h3 className="text-lg font-semibold text-white">Zion Tech Group</h3> <p className="text-gray-400 text-sm"> space-y-4"> <h4 className=" text-md font-semibold text-white">IT Services</h4> <ul className=" space-y-2 text-sm text-gray-400"> <li><a href=" /cloud-migration"className=" hover:text-blue-400 transition-colors">Cloud Migration</Link></li> <li><a href=" /devops-automation"className=" hover:text-blue-400 transition-colors">DevOps Automation</Link></li> <li><a href=" /cybersecurity"className=" hover:text-blue-400 transition-colors">Cybersecurity</Link></li> <li><a href=" /network-infrastructure"className=" hover:text-blue-400 transition-colors">Network Design</Link></li> </ul> </div> <div className=" space-y-4"> <h4 className=" text-md font-semibold text-white">Company</h4> <ul className=" space-y-2 text-sm text-gray-400"> <li><a href=" /about"className=" hover:text-blue-400 transition-colors">About Us</Link></li> <li><a href=" /contact"className=" hover:text-blue-400 transition-colors">Contact</Link></li> <li><a href=" /careers"className=" hover:text-blue-400 transition-colors">Careers</Link></li> <li><a href=" /blog"className=" hover:text-blue-400 transition-colors">Blog</Link></li> </ul> </div> <div className=" space-y-4"> <h4 className=" text-md font-semibold text-white">Connect</h4> <div className=" flex space-x-4"> <a href=" https://linkedin.com/company/ziontechgroup"className=" text-gray-400 hover:text-blue-400 transition-colors"> <Linkedin className=" w-5 h-5"/> </Link> <a href=" https://twitter.com/ziontechgroup"className=" text-gray-400 hover:text-blue-400 transition-colors"> <Twitter className=" w-5 h-5"/> </Link> <a href=" https://github.com/ziontechgroup"className=" text-gray-400 hover:text-blue-400 transition-colors"> <Github className=" w-5 h-5"/> </Link> </div> </div> </div> <div className=" border-t border-white/20 mt-8 pt-8 text-center"> <p className=" text-gray-400 text-sm">  2024 Zion Tech Group. All rights reserved. | <a href=" /privacy"className=" hover:text-blue-400 transition-colors ml-2">Privacy Policy</Link> | <a href=" /terms"className=" hover:text-blue-400 transition-colors ml-2" >Terms of Service</Link> </p> </div> </div> </footer> </div>) 
-}
+</div> </div> Our IT Service Portfolio </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Comprehensive IT solutions designed to modernize infrastructure, enhance security, and drive operational efficiency. </p> </div> <div className="space-y-4" > <div></li>) 
+</ul> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <div></div> </div> <div>) 
+</ul> </div> </div> <div>) 
+</ul> </div> <div className="pt-4 border-t border-white/20" > <div className="flex gap-3" > <a > <span>Learn More</span> <ExternalLink className="w-4 h-4" /> </Link> <a > <span>Get Quote</span> </Link> </div> </div> </div> </div> </div>) 
+</div> </div> Additional IT Services </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Specialized IT services to complement your technology infrastructure and support your business growth. </p> </div>Get Quote </Link> </div> </div>) 
+</div> </div> Why Choose Zion Tech Group for IT Solutions? </h2> <div className="grid grid-cols-1 md:grid-cols-3 gap-8" > <div className="text-center space-y-4" > <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto" > <Zap className="w-8 h-8 text-white" /> </div> <h3 className="text-xl font-semibold text-white" >Proven Expertise</h3> <p className="text-gray-300" > Years of experience in enterprise IT infrastructure, cloud technologies, and cybersecurity. </p> </div> <div className="text-center space-y-4" > <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto" > <Shield className="w-8 h-8 text-white" /> </div> <h3 className="text-xl font-semibold text-white" >Security First</h3> <p className="text-gray-300" > Security-first approach with industry best practices and compliance frameworks. </p> </div> <div className="text-center space-y-4" > <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto" > <Star className="w-8 h-8 text-white" /> </div> <h3 className="text-xl font-semibold text-white" >24/7 Support</h3> <p className="text-gray-300" > Round-the-clock monitoring, support, and maintenance for your critical infrastructure. </p> </div> </div> </div> </div> </div> Ready to Modernize Your IT Infrastructure? </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Let's discuss how our IT solutions can enhance your operational efficiency, security posture, and business scalability. </p> <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto" > <div className="text-center space-y-3" > <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto" > <Phone className="w-8 h-8 text-white" /> </div> <h3 className="text-lg font-semibold text-white" >Call Us</h3> <p className="text-gray-300" >+1 302 464 0950</p> <p className="text-sm text-gray-400" >Available Mon-Fri 9AM-6PM EST</p> </div> <div className="text-center space-y-3" > <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto" > <Mail className="w-8 h-8 text-white" /> </div> <h3 className="text-lg font-semibold text-white" >Email Us</h3> <p className="text-gray-300" >kleber@ziontechgroup.com</p> <p className="text-sm text-gray-400" >Response within 2 hours</p> </div> <div className="text-center space-y-3" > <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto" > <MapPin className="w-8 h-8 text-white" /> </div> <h3 className="text-lg font-semibold text-white" >Visit Us</h3> <p className="text-gray-300" >364 E Main St STE 1008</p> <p className="text-sm text-gray-400" >Middletown, DE 19709</p> </div> </div> <div className="pt-8" > <a href="mailto:kleber@ziontechgroup.com?subject=IT%20Services%20Consultation%20-%20Zion%20Tech%20Group" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 rounded-lg text-lg font-semibold transition-all duration-300 hover:transform hover:scale-105" > <span>Start Your IT Transformation</span> <ArrowRight className="w-5 h-5 ml-2" /> </Link> </div> </div> </div> </div> <footer className="bg-gray-900 border-t border-white/20"> <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12"> <div className="grid grid-cols-1 md:grid-cols-4 gap-8"> <div className="space-y-4"> <h3 className="text-lg font-semibold text-white">Zion Tech Group</h3> <p className="text-gray-400 text-sm"> space-y-4"> <h4 className=" text-md font-semibold text-white">IT Services</h4> <ul className=" space-y-2 text-sm text-gray-400"> <li><a href=" /cloud-migration"className=" hover:text-blue-400 transition-colors">Cloud Migration</Link></li> <li><a href=" /devops-automation"className=" hover:text-blue-400 transition-colors">DevOps Automation</Link></li> <li><a href=" /cybersecurity"className=" hover:text-blue-400 transition-colors">Cybersecurity</Link></li> <li><a href=" /network-infrastructure"className=" hover:text-blue-400 transition-colors">Network Design</Link></li> </ul> </div> <div className=" space-y-4"> <h4 className=" text-md font-semibold text-white">Company</h4> <ul className=" space-y-2 text-sm text-gray-400"> <li><a href=" /about"className=" hover:text-blue-400 transition-colors">About Us</Link></li> <li><a href=" /contact"className=" hover:text-blue-400 transition-colors">Contact</Link></li> <li><a href=" /careers"className=" hover:text-blue-400 transition-colors">Careers</Link></li> <li><a href=" /blog"className=" hover:text-blue-400 transition-colors">Blog</Link></li> </ul> </div> <div className=" space-y-4"> <h4 className=" text-md font-semibold text-white">Connect</h4> <div className=" flex space-x-4"> <a href=" https://linkedin.com/company/ziontechgroup"className=" text-gray-400 hover:text-blue-400 transition-colors"> <Linkedin className=" w-5 h-5"/> </Link> <a href=" https://twitter.com/ziontechgroup"className=" text-gray-400 hover:text-blue-400 transition-colors"> <Twitter className=" w-5 h-5"/> </Link> <a href=" https://github.com/ziontechgroup"className=" text-gray-400 hover:text-blue-400 transition-colors"> <Github className=" w-5 h-5"/> </Link> </div> </div> </div> <div className=" border-t border-white/20 mt-8 pt-8 text-center"> <p className=" text-gray-400 text-sm">  2024 Zion Tech Group. All rights reserved. | <a href=" /privacy"className=" hover:text-blue-400 transition-colors ml-2">Privacy Policy</Link> | <a href=" /terms"className=" hover:text-blue-400 transition-colors ml-2" >Terms of Service</Link> </p> </div> </div> </footer> </div>) 

@@ -6,5 +6,3 @@ export function EmailVerificationBanner() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

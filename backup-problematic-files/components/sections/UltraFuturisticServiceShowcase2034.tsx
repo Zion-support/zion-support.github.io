@@ -5,7 +5,7 @@ import {;
   Award, Clock, Zap, Shield, Brain, Atom, Rocket,;
   ShoppingCart, Cpu, Globe, Lock, Video, Palette,;
   BarChart, UserCheck, FileText, Heart, Eye, Search, Phone;
-} from 'lucide-react',;
+ from 'lucide-react',;
 import { realMarketServices } from '../../data/2024-real-market-services',;
 import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-services',;
 const contactInfo = {;
@@ -13,7 +13,7 @@ const contactInfo = {;
   email: 'kleber@ziontechgroup.com',;
   address: '364 E Main St STE 1008 Middletown DE 19709',;
   website: 'https://ziontechgroup.com';
-},;
+,;
 const serviceCategories = [;
   {;
     id: 'ai-services',;
@@ -21,7 +21,7 @@ const serviceCategories = [;
     description: 'Next-generation AI consciousness and creativity',;
     icon: Brain,;
     color: 'from-violet-500 to-purple-500',;
-    services: aiEmergingTechServices.filter(s => s.category.includes('AI')),;
+    services: aiEmergingTechServices.filter(s => s.category.includes('AI'),;
     gradient: 'from-violet-500/20 to-indigo-500/20';
   },;
   {;
@@ -30,7 +30,7 @@ const serviceCategories = [;
     description: 'Quantum computing and beyond',;
     icon: Atom,;
     color: 'from-indigo-500 to-blue-500',;
-    services: aiEmergingTechServices.filter(s => s.category.includes('Quantum') || s.category.includes('Blockchain')),;
+    services: aiEmergingTechServices.filter(s => s.category.includes('Quantum') || s.category.includes('Blockchain'),;
     gradient: 'from-indigo-500/20 to-cyan-500/20';
   },;
   {;
@@ -39,7 +39,7 @@ const serviceCategories = [;
     description: 'Autonomous operations and zero-trust security',;
     icon: Cpu,;
     color: 'from-blue-500 to-cyan-500',;
-    services: realMarketServices.filter(s => s.category.includes('Security') || s.category.includes('HR') || s.category.includes('Project')),;
+    services: realMarketServices.filter(s => s.category.includes('Security') || s.category.includes('HR') || s.category.includes('Project'),;
     gradient: 'from-blue-500/20 to-teal-500/20';
   },;
   {;
@@ -48,7 +48,7 @@ const serviceCategories = [;
     description: 'Streamline business operations',;
     icon: ShoppingCart,;
     color: 'from-teal-500 to-emerald-500',;
-    services: realMarketServices.filter(s => s.category.includes('E-commerce') || s.category.includes('Marketing') || s.category.includes('Finance')),;
+    services: realMarketServices.filter(s => s.category.includes('E-commerce') || s.category.includes('Marketing') || s.category.includes('Finance'),;
     gradient: 'from-teal-500/20 to-green-500/20';
   },;
   {;
@@ -57,7 +57,7 @@ const serviceCategories = [;
     description: 'Intelligent automation solutions',;
     icon: Rocket,;
     color: 'from-green-500 to-yellow-500',;
-    services: aiEmergingTechServices.filter(s => s.category.includes('Robotics') || s.category.includes('Edge')),;
+    services: aiEmergingTechServices.filter(s => s.category.includes('Robotics') || s.category.includes('Edge'),;
     gradient: 'from-green-500/20 to-orange-500/20';
   },;
   {;
@@ -66,20 +66,20 @@ const serviceCategories = [;
     description: 'Breakthrough technologies and innovations',;
     icon: Globe,;
     color: 'from-orange-500 to-red-500',;
-    services: aiEmergingTechServices.filter(s => s.category.includes('Drug') || s.category.includes('Climate')),;
+    services: aiEmergingTechServices.filter(s => s.category.includes('Drug') || s.category.includes('Climate'),;
     gradient: 'from-orange-500/20 to-pink-500/20';
   }
-],;
+,;
 export default function UltraFuturisticServiceShowcase2034() {;
   const [selectedCategory, setSelectedCategory] = useState('all'),;
   const [searchTerm, setSearchTerm] = useState(''),;
   const allServices = [...realMarketServices, ...aiEmergingTechServices],;
   const filteredServices = allServices.filter(service => {;
-    const matchesCategory = selectedCategory === 'all' ||;
-      serviceCategories.some(cat => cat.services.includes(service)),;
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         service.category.toLowerCase().includes(searchTerm.toLowerCase()),;
+    const matchesCategory = selectedCategory = = 'all' ||;
+      serviceCategories.some(cat => cat.services.includes(service),;
+    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase() ||;
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase() ||;
+                         service.category.toLowerCase().includes(searchTerm.toLowerCase(),;
     return matchesCategory && matchesSearch;
   }),;
   const containerVariants = {;
@@ -89,12 +89,10 @@ export default function UltraFuturisticServiceShowcase2034() {;
       transition: {;
         staggerChildren: 0.1;
       }
-    }
   },;
   const itemVariants = {;
     hidden: { opacity: 0, y: 20 },;
-    visible: { opacity: 1, y: 0 }
-  },
+    visible: { opacity: 1, y: 0 },
 
   return (
     <section className="py-20 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">
@@ -108,10 +106,10 @@ export default function UltraFuturisticServiceShowcase2034() {;
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div;
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+          initial={ opacity: 0, y: 20 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0.6 }
+          viewport={ once: true }
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6">
@@ -121,7 +119,7 @@ export default function UltraFuturisticServiceShowcase2034() {;
             Discover our comprehensive suite of cutting-edge AI, quantum computing, and emerging technology solutions. 
             Each service is designed to transform your business and propel you into the future.
           </p>
-          
+
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
             {[
@@ -129,28 +127,28 @@ export default function UltraFuturisticServiceShowcase2034() {;
               { label: 'Happy Customers', value: '50K+', icon: Users },
               { label: 'Success Rate', value: '99.9%', icon: CheckCircle },
               { label: 'Global Reach', value: '45+ Countries', icon: Globe }
-            ].map((stat, index) => (;
+            ].map(stat, index) => (;
               <motion.div;
                 key={stat.label}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, scale: 0.8 }
+                whileInView={ opacity: 1, scale: 1 }
+                transition={ duration: 0.5, delay: index * 0.1 }
+                viewport={ once: true }
                 className="text-center p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300"
               >
                 <stat.icon className="w-8 h-8 text-cyan-400 mx-auto mb-2" />
                 <div className="text-2xl font-bold text-white">{stat.value}</div>
                 <div className="text-sm text-gray-400">{stat.label}</div>
               </motion.div>
-            ))}
+            )}
           </div>;
         </motion.div>;
         {/* Search and Filter */}
         <motion.div;
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
+          initial={ opacity: 0, y: 20 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0.6, delay: 0.2 }
+          viewport={ once: true }
           className="mb-12"
         >
           <div className="flex flex-col md:flex-row gap-4 items-center justify-center">
@@ -177,32 +175,32 @@ export default function UltraFuturisticServiceShowcase2034() {;
                 <option key={category.id} value={category.id}>
                   {category.title.split(' ')[0]}
                 </option>;
-              ))}
+              )}
             </select>;
           </div>;
         </motion.div>;
         {/* Service Categories */}
         <motion.div;
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          viewport={{ once: true }}
+          initial={ opacity: 0, y: 20 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0.6, delay: 0.4 }
+          viewport={ once: true }
           className="mb-16"
         >
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {serviceCategories.map((category, index) => (
+            {serviceCategories.map(category, index) => (
               <motion.div
                 key={category.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.5, delay: index * 0.1 }
+                viewport={ once: true }
                 className={`p-6 rounded-xl border transition-all duration-300 hover:scale-105 cursor-pointer ${;
-                  selectedCategory === category.id;
+                  selectedCategory = = category.id;
                     ? 'border-cyan-500 bg-cyan-500/10';
                     : 'border-white/20 bg-white/5 hover:border-cyan-500/50 hover:bg-cyan-500/5';
                 }`}
-                onClick={() => setSelectedCategory(category.id === selectedCategory ? 'all' : category.id)}
+                onClick={() => setSelectedCategory(category.id = = selectedCategory ? 'all' : category.id)}
               >
                 <div className="flex items-center space-x-3 mb-4">
                   <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${category.color} flex items-center justify-center`}>
@@ -217,7 +215,7 @@ export default function UltraFuturisticServiceShowcase2034() {;
                   {category.services.length} services available
                 </div>
               </motion.div>
-            ))}
+            )}
           </div>;
         </motion.div>;
         {/* Services Grid */}
@@ -225,10 +223,10 @@ export default function UltraFuturisticServiceShowcase2034() {;
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={ once: true }
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
-          {filteredServices.map((service, index) => (
+          {filteredServices.map(service, index) => (
             <motion.div
               key={service.id}
               variants={itemVariants}
@@ -240,7 +238,7 @@ export default function UltraFuturisticServiceShowcase2034() {;
                   Popular
                 </div>
               )}
-;
+
               {/* Service Icon */}
               <div className="flex items-center justify-between mb-4">
                 <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${service.color} flex items-center justify-center text-2xl`}>
@@ -261,12 +259,12 @@ export default function UltraFuturisticServiceShowcase2034() {;
               </p>;
               {/* Features */}
               <div className="space-y-2 mb-4">
-                {service.features.slice(0, 3).map((feature, idx) => (
+                {service.features.slice(0, 3).map(feature, idx) => (
                   <div key={idx} className="flex items-center space-x-2 text-sm text-gray-400">
                     <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                     <span>{feature}</span>
                   </div>
-                ))}
+                )}
                 {service.features.length > 3 && (
                   <div className="text-sm text-cyan-400">
                     +{service.features.length - 3} more features
@@ -328,14 +326,14 @@ export default function UltraFuturisticServiceShowcase2034() {;
                 </div>
               </div>
             </motion.div>
-          ))}
+          )}
         </motion.div>;
         {/* Call to Action */}
         <motion.div;
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          viewport={{ once: true }}
+          initial={ opacity: 0, y: 20 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0.6, delay: 0.6 }
+          viewport={ once: true }
           className="text-center mt-20"
         >
           <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-12 backdrop-blur-sm">
@@ -369,4 +367,3 @@ export default function UltraFuturisticServiceShowcase2034() {;
       </div>;
     </section>;
   );
-}

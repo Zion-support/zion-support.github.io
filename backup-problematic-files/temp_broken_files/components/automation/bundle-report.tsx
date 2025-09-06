@@ -6,4 +6,3 @@ export default function BundleReportPage() {
       <p className=&quot;text-white/70 mt-2&quot;>Runs every 30 minutes and auto-PRs updates.</p>
     </div>
   )
-}

@@ -5,7 +5,7 @@ const REQUESTS_PATH = path.join(process.cwd(), "data", "requests.json");
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
-) {
+ {
   try {
     const raw = fs && fs.readFileSync(REQUESTS_PATH, "utf-8");
     const items = JSON && JSON.parse(raw);
@@ -49,5 +49,3 @@ function handler() {
   } catch {
     res.status (200).json ({ items: [] });
   }
-}
-}

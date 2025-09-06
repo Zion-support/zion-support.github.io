@@ -6,5 +6,3 @@ export function ProfileSetup() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

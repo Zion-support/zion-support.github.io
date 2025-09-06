@@ -6,5 +6,3 @@ export function ContractTypeCards() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

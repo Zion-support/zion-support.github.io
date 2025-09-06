@@ -20,8 +20,8 @@ import { Project } from '@/types/projects';
       professional_title: 'Senior AI Engineer',
     },
   },
-];
-}];      title: "AI Dashboard Development";
+;
+];      title: "AI Dashboard Development";
       description: "Develop dashboards using React and integrate ML models"
     };
 import { Project } from "@/types/projects";
@@ -46,9 +46,8 @@ export const PROJECTS: Project[] = [
       full_name: 'Alexandra Chen'
       professional_title: 'Senior AI Engineer'
     }
-  }
-];
-}];      title: "AI Dashboard Development";
+;
+];      title: "AI Dashboard Development";
       description: "Develop dashboards using React and integrate ML models"
     }
 
@@ -56,6 +55,4 @@ export const PROJECTS: Project[] = [
       full_name: "Alexandra Chen";
       professional_title: "Senior AI Engineer";
     }
-  }
-];
 ;

@@ -6,5 +6,3 @@ export function Ecommerce() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

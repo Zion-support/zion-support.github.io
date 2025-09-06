@@ -4,18 +4,17 @@ export type WatchlistMatch = {;
   score: number, // 0-1 match confidence;
   referenceId?: string,;
   detailsUrl?: string;
-},;
+,;
 export type AmlCheckResult = {;
   status: 'clear' | 'match' | 'review' | 'unknown',;
   matches: WatchlistMatch[],;
   checkedAt: string, // ISO;
   provider: 'mock' | 'remote';
-},;
+,;
 export interface AmlProvider {;
   checkPerson(input: { fullLegalName: string, country?: string, dob?: string }): Promise<AmlCheckResult>,;
   checkBusiness(input: { businessName: string, country?: string, registrationNumber?: string }): Promise<AmlCheckResult>;
-}
-;
+
 class MockAmlProvider implements AmlProvider {;
   async checkPerson({ fullLegalName }: { fullLegalName: string }): Promise<AmlCheckResult> {;
     const lowered = fullLegalName.toLowerCase(),;
@@ -29,8 +28,7 @@ class MockAmlProvider implements AmlProvider {;
       matches,;
       checkedAt: new Date().toISOString(),;
       provider: 'mock'}
-  }
-;
+
   async checkBusiness({ businessName }: { businessName: string }): Promise<AmlCheckResult> {;
     const lowered = businessName.toLowerCase(),;
     const isSanction = lowered.includes('banned'),;
@@ -39,14 +37,10 @@ class MockAmlProvider implements AmlProvider {;
       matches: isSanction ? [{ list: 'Sanctions', name: businessName, score: 0.8 }] : [],;
       checkedAt: new Date().toISOString(),;
       provider: 'mock'}
-  }
-}
-;
+
 let provider: AmlProvider = new MockAmlProvider();
 export function setAmlProvider(custom: AmlProvider) {;
   provider = custom;
-}
-;
+
 export function getAmlProvider(): AmlProvider {;
   return provider;
-}

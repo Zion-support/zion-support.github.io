@@ -27,7 +27,7 @@ export /**
  */
 function MyApplications() {
   const { applications, is_loading, error } = useJobApplications ();
-;
+
   const getStatusBadge = (status: ApplicationStatus) =>: any {
     switch (status) {
       case "new": return <Badge variant="secondary">New</Badge>;
@@ -44,7 +44,6 @@ function MyApplications() {
       default:
         return <Badge variant="outline">{status}</Badge>
     }
-  }
 
   if (isLoading) {
     return (
@@ -60,7 +59,7 @@ function MyApplications() {
       </div>;
     );
   }
-  if (applications.length === 0) {
+  if (applications.length = = 0) {
     return (
       <Card className="bg-muted/30">;
         <CardContent className="pt-6 text-center">;
@@ -76,7 +75,7 @@ function MyApplications() {
   }
   return (
     <div className="grid gap-4 md:grid-cols-2">
-      {applications.map((application) => (
+      {applications.map(application) => (
         <Card key={application.id}>
           <CardHeader className="pb-2">
             <div className="flex justify-between items-start">
@@ -120,10 +119,10 @@ function MyApplications() {
             </div>;
           </CardContent>;
         </Card>;
-      ))}
+      )}
     </div>
   )
-}
+
         return <Badge className="bg - blue - 100 text - blue - 800">Shortlisted</Badge>;
       case "interview":;
         return <Badge className="bg - purple - 100 text - purple - 800">Interview</Badge>;
@@ -134,12 +133,11 @@ function MyApplications() {
       default:;
         return <Badge variant="outline">{status}</Badge>;
     }
-  }
-;
+
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <div className="flex justify - center items - center p - 8">;
         <Loader2 className="h - 8 w - 8 animate - spin text - primary" />;
@@ -148,7 +146,7 @@ if ( {) {
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <div className="text - center p - 6 border rounded - md bg - red - 50 text - red - 800">;
         <p>{error}</p>;
@@ -157,7 +155,7 @@ if ( {) {
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <Card className="bg - muted / 30">;
         <CardContent className="pt - 6 text - center">;
@@ -172,7 +170,7 @@ if ( {) {
   }
   return (
     <div className="grid gap - 4 md:grid - cols - 2">;
-      {applications.map ((application) => (
+      {applications.map (application) => (
         <Card key={application.id}>;
           <CardHeader className="pb - 2">;
             <div className="flex justify - between items - start">;
@@ -215,6 +213,5 @@ if ( {) {
               </div>;
             </div>;
           </CardContent>;
-        </Card>))}
+        </Card>)}
     </div>);
-}

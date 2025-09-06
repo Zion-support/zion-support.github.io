@@ -2,25 +2,24 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts",;
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.7.1",;
 import { Resend } from "npm:resend@1.0.0",;
-;
-const resend = new Resend(Deno.env.get("RESEND_API_KEY")),;
+
+const resend = new Resend(Deno.env.get("RESEND_API_KEY"),;
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!,;
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,;
-;
+
 const corsHeaders = {;
   "Access-Control-Allow-Origin":"*",;
   "Access-Control-Allow-Headers":;
     "authorization, x-client-info, apikey, content-type"},;
-;
+
 interface ReminderPayload {;
   user_id:string,;
   missing_milestone:string,;
   role:string;
-}
-;
+
 serve(async (req:Request) => {;
   // Handle CORS;
-  if (req.method === "OPTIONS") {;
+  if (req.method = = "OPTIONS") {;
     return new Response(null, {;
       status:204,;
       headers:corsHeaders}),;
@@ -31,16 +30,14 @@ serve(async (req:Request) => {;
       supabaseUrl,;
       supabaseServiceKey;
     ),;
-    ;
     const payload = await req.json() as ReminderPayload,;
     const { user_id, missing_milestone, role } = payload,;
-    ;
     if (!user_id || !missing_milestone || !role) {;
       return new Response(;
         JSON.stringify({ error:"Missing required fields" }),;
         {;
           status:400,;
-          headers:{ "Content-Type":"application/json", ...corsHeaders }}
+          headers:{ "Content-Type":"application/json", ...corsHeaders }
       ),;
     }
     ;
@@ -50,13 +47,12 @@ serve(async (req:Request) => {;
       .select("email, display_name");
       .eq("id", user_id);
       .single(),;
-    ;
     if (userError || !userData) {;
       return new Response(;
         JSON.stringify({ error:"User not found", details:userError }),;
         {;
           status:404,;
-          headers:{ "Content-Type":"application/json", ...corsHeaders }}
+          headers:{ "Content-Type":"application/json", ...corsHeaders }
       ),;
     }
     ;
@@ -69,13 +65,11 @@ serve(async (req:Request) => {;
       client:{;
         job_posted:"post your first job to start finding talent",;
         match_viewed:"check out your AI-matched talent suggestions",;
-        talent_invited:"invite talent to speed up your hiring process"}},;
-    ;
+        talent_invited:"invite talent to speed up your hiring process"},;
     const name = userData.display_name || "there",;
     const action = milestoneMessages[role as keyof typeof milestoneMessages]?.[;
       missing_milestone as keyof (typeof milestoneMessages)["talent" | "client"];
     ] || "complete your next step",;
-    ;
     // Send email;
     const { data:emailData, error:emailError } = await resend.emails.send({;
       from:"Zion AI Marketplace <notifications@zion.ai>",;
@@ -95,13 +89,12 @@ serve(async (req:Request) => {;
           <p>The Zion AI Marketplace Team</p>;
         </div>;
       `}),;
-    ;
     if (emailError) {;
       return new Response(;
         JSON.stringify({ error:"Failed to send email", details:emailError }),;
         {;
           status:500,;
-          headers:{ "Content-Type":"application/json", ...corsHeaders }}
+          headers:{ "Content-Type":"application/json", ...corsHeaders }
       ),;
     }
     ;
@@ -114,7 +107,6 @@ serve(async (req:Request) => {;
         _message:`Don't forget to ${action} to get the most out of Zion AI Marketplace.`,;
         _type:"onboarding"}
     ),;
-    ;
     if (notificationError) {;
       console.error("Failed to create notification:", notificationError),;
     }
@@ -125,7 +117,7 @@ serve(async (req:Request) => {;
         notification_id:notification}),;
       {;
         status:200,;
-        headers:{ "Content-Type":"application/json", ...corsHeaders }}
+        headers:{ "Content-Type":"application/json", ...corsHeaders }
     ),;
   } catch (error) {;
     console.error(error),;
@@ -133,51 +125,47 @@ serve(async (req:Request) => {;
       JSON.stringify({ error:"Internal server error", details:error.message }),;
       {;
         status:500,;
-        headers:{ "Content-Type":"application/json", ...corsHeaders }}
+        headers:{ "Content-Type":"application/json", ...corsHeaders }
     ),;  }
-}),;
+),;
  interface ReminderPayload {
   user id: string;
 missing milestone: string;
 role: string 
-}serve (async (req: Request) => {
-  //Handle CORS if (req.method === "OPTIONS") {
+serve (async (req: Request) => {
+  //Handle CORS if (req.method = = "OPTIONS") {
   return new Response (null, {
   status: 204;
 headers: corsHeaders 
-}) 
-}try {
+) 
+try {
   const supabase = createClient (supabaseUrl;
 supabaseServiceKey);
 const payload = await req.json () as ReminderPayload;
 const {
   user id, missing milestone, role 
-}= payload;
+= payload;
 if (!user id || !missing milestone || !role) {
   return new Response (JSON.stringify ({
   error: "Missing required fields" 
-});
-{
-  status: 400;
 );
-}//Get user data .from ("profiles") .select ("email, display name") .eq ("id", user id) .single ();
-}//Create message based on role and missing milestone missing milestone as keyof (typeof milestoneMessages) ["talent" | "client"] ] || "complete your next step";
+
+  status: 400;
+//Get user data .from ("profiles") .select ("email, display name") .eq ("id", user id) .single ();
+//Create message based on role and missing milestone missing milestone as keyof (typeof milestoneMessages) ["talent" | "client"] ] || "complete your next step";
 data: emailData, error: emailError 
-}= await resend.emails.send ({
+= await resend.emails.send ({
   from: "Zion AI Marketplace <notifications@zion.ai>", to: userData.email, subject: "Complete your next step on Zion AI Marketplace", html: `<div style="font-family: sans-serif;
 max-width: 600px;
 margin: 0 auto;
-">   name 
-}, </h2> <p>You're making great progress in setting up your $ {
+>   name 
+, </h2> <p>You're making great progress in setting up your $ {
   role 
-}profile on Zion AI Marketplace!</p> <p>Your next step is to <strong>$ {
+profile on Zion AI Marketplace!</p> <p>Your next step is to <strong>$ {
   action 
-}</strong>.</p> <p>This will help you get the most out of the platform and connect with the right opportunities.</p> Continue my setup </Link> </div> <p>The Zion AI Marketplace Team</p> </div> ` 
-});
+</strong>.</p> <p>This will help you get the most out of the platform and connect with the right opportunities.</p> Continue my setup </Link> </div> <p>The Zion AI Marketplace Team</p> </div> ` 
 );
-}// Create notification in database type: "onboarding" 
-});
+// Create notification in database type: "onboarding" 
+);
 if (notificationError) {
-  console.error ("Failed to create notification:", notificationError) 
-}
-});
+  console.error ("Failed to create notification:", notificationError);

@@ -11,14 +11,14 @@ import {
   Palette, Camera, Video, Music, Gamepad2, Heart,
   Leaf, Sun, Moon, Wind, Droplets, Mountain,
   Code, Wrench, Smartphone, BarChart3, Eye, Timer
-} from 'lucide-react',
+ from 'lucide-react',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-},
+,
 const _serviceCategories = [
   {_title: ' 2029 AI Consciousness & Innovation', _icon: Brain, _color: 'from-purple-600 to-pink-600', _description: 'Beyond human consciousness simulation', _services: [
       { name: 'AI Consciousness Simulation Platform', _href: '/ai-consciousness-simulation-platform', _description: 'Simulate human consciousness in AI systems', _price: '$12, _999/month'},
@@ -81,7 +81,7 @@ const _serviceCategories = [
       {_name: 'Corporate Intelligence Platform', _href: '/corporate-intelligence-platform', _description: 'AI-powered business intelligence', _price: '$7, _999/month'}
     ]
   }
-],
+,
 
 const mainNavItems = [
   { name: 'Home', href: '/', icon: Home },
@@ -92,14 +92,14 @@ const mainNavItems = [
   { name: 'News', href: '/news', icon: TrendingUp },
   { name: 'Support', href: '/support', icon: MessageCircle },
   { name: 'Contact', href: '/contact', icon: Phone }
-],
+,
 
 export default function UltraFuturisticNavigation2029() {
   const [isOpen, setIsOpen] = useState(false),
   const [activeCategory, setActiveCategory] = useState<string | null>(null),
   const [scrolled, setScrolled] = useState(false),
 
-  useEffect(() => {
+  useEffect() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50)
     },
@@ -146,8 +146,8 @@ export default function UltraFuturisticNavigation2029() {
           <div className=&quot;flex items-center justify-between h-20&quot;>
             {/* Logo */}
             <motion.div 
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
+              initial={ opacity: 0, x: -20 }
+              animate={ opacity: 1, x: 0 }
               className=&quot;flex items-center space-x-3&quot;            >
               <div className=&quot;relative&quot;>
                 <div className=&quot;w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center&quot;>
@@ -165,7 +165,7 @@ export default function UltraFuturisticNavigation2029() {
 
             {/* Desktop Navigation */}
             <div className=&quot;hidden lg:flex items-center space-x-8&quot;>
-              {mainNavItems.map((item) => (
+              {mainNavItems.map(item) => (
                 <Link
                   key={item.name}
                   href={item.href}
@@ -176,8 +176,8 @@ export default function UltraFuturisticNavigation2029() {
                     <span>{item.name}</span>                  </div>
                   <div className=&quot;absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 transition-all duration-300 group-hover:w-full&quot;></div>
                 </a>
-              ))}
-;
+              )}
+
               {/* Services Dropdown */}
               <div className=&quot;relative group&quot;>
                 <button className=&quot;flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200&quot;>
@@ -185,16 +185,16 @@ export default function UltraFuturisticNavigation2029() {
                   <span>All Services</span>
                   <ChevronDown size={14} className=&quot;group-hover:rotate-180 transition-transform duration-200&quot; />
                 </button>
-                
+
                 {/* Mega Menu */}
                 <div className=&quot;absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-cyan-500/30 rounded-lg shadow-2xl shadow-cyan-500/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0&quot;>
                   <div className=&quot;p-6 grid grid-cols-2 lg:grid-cols-3 gap-6&quot;>
-                    {serviceCategories.map((category, index) => (
+                    {serviceCategories.map(category, index) => (
                       <motion.div
                         key={category.title}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: index * 0.1 }}
+                        initial={ opacity: 0, y: 20 }
+                        animate={ opacity: 1, y: 0 }
+                        transition={ delay: index * 0.1 }
                         className=&quot;group&quot;
                       >
                         <div className={`p-4 rounded-lg bg-gradient-to-br ${category.color} bg-opacity-10 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300`}>
@@ -206,7 +206,7 @@ export default function UltraFuturisticNavigation2029() {
                           </div>
                           <p className=&quot;text-sm text-gray-400 mb-4&quot;>{category.description}</p>
                           <div className=&quot;space-y-2&quot;>
-                            {category.services.slice(0, 3).map((service) => (
+                            {category.services.slice(0, 3).map(service) => (
                               <Link
                                 key={service.name}
                                 href={service.href}
@@ -221,19 +221,19 @@ export default function UltraFuturisticNavigation2029() {
                                   </span>
                                 </div>
                                 <p className=&quot;text-xs text-gray-500 mt-1&quot;>{service.description}</p>
-                              </a>                            ))}
+                              </a>                            )}
                           </div>
                         </div>
                       </motion.div>
-                    ))}
+                    )}
                   </div>
                 </div>
               </div>
 
               {_/* CTA Button */}
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={ scale: 1.05 }
+                whileTap={ scale: 0.95 }
                 className=&quot;px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40&quot;              >
                 Get Started
               </motion.button>
@@ -255,9 +255,9 @@ export default function UltraFuturisticNavigation2029() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, x: '100%' }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: '100%' }}
+            initial={ opacity: 0, x: '100%' }
+            animate={ opacity: 1, x: 0 }
+            exit={ opacity: 0, x: '100%' }
             className=&quot;fixed inset-0 z-50 lg:hidden&quot;
           >
             <div className=&quot;absolute inset-0 bg-black/80 backdrop-blur-sm&quot; onClick={closeMenu} />
@@ -276,7 +276,7 @@ export default function UltraFuturisticNavigation2029() {
 
                 {/* Mobile Navigation Items */}
                 <div className=&quot;space-y-4&quot;>
-                  {mainNavItems.map((item) => (
+                  {mainNavItems.map(item) => (
                     <Link
                       key={item.name}
                       href={item.href}
@@ -286,19 +286,19 @@ export default function UltraFuturisticNavigation2029() {
                       <item.icon size={20} className=&quot;text-cyan-400&quot; />
                       <span>{item.name}</span>
                     </a>
-                  ))}
+                  )}
                 </div>;
-;
+
                 {/* Mobile Services */}
                 <div className=&quot;mt-8&quot;>
                   <h3 className=&quot;text-lg font-semibold text-white mb-4&quot;>Our Services</h3>
                   <div className=&quot;space-y-3&quot;>
-                    {serviceCategories.slice(0, 6).map((category) => (
+                    {serviceCategories.slice(0, 6).map(category) => (
                       <div key={category.title} className=&quot;p-3 rounded-lg bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20&quot;>
                         <h4 className=&quot;font-medium text-white mb-2&quot;>{category.title}</h4>
                         <p className=&quot;text-sm text-gray-400 mb-3&quot;>{category.description}</p>
                         <div className=&quot;space-y-2&quot;>
-                          {category.services.slice(0, 2).map((service) => (
+                          {category.services.slice(0, 2).map(service) => (
                             <Link
                               key={service.name}
                               href={service.href}
@@ -309,18 +309,18 @@ export default function UltraFuturisticNavigation2029() {
                                 <span className=&quot;text-sm text-gray-300&quot;>{service.name}</span>
                                 <span className=&quot;text-xs text-cyan-400 font-mono&quot;>{service.price}</span>                              </div>
                             </a>
-                          ))}
+                          )}
                         </div>;
                       </div>;
-                    ))}
+                    )}
                   </div>;
                 </div>;
-;
+
                 {/* Mobile CTA */}
                 <div className=&quot;mt-8&quot;>
                   <motion.button
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
+                    whileHover={ scale: 1.02 }
+                    whileTap={ scale: 0.98 }
                     className=&quot;w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300&quot;                  >
                     Get Started
                   </motion.button>
@@ -330,7 +330,7 @@ export default function UltraFuturisticNavigation2029() {
           </motion.div>
         )}
       </AnimatePresence>;
-;
+
       {/* Spacer for fixed navigation */}
       <div className=&quot;h-20&quot; />    </>
   )}

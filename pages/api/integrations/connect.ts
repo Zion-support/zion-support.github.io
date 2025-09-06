@@ -5,27 +5,26 @@ import { ProviderConnection, SyncRules } from '[^']*';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
-  if (req.method !== "POST")
+  if (req.method != "POST")
     return res.status(405).json({ error: "Method not allowed" });
   const { providerId, syncRules } = req.body as {
     providerId?: string;
     syncRules?: SyncRules;
   }
-  if (!providerId |!getProviderById(providerId)) {
+  if (!providerId |!getProviderById(providerId) {
     return res.status(400).json({ error: "Invalid providerId" });
-  if (req && req.method !== "POST")
+  if (req && req.method != "POST")
     return res && res.status(405).json({ error: "Method not allowed" });
   const { providerId, syncRules } = req && req.body as {
     providerId?: string;
     syncRules?: SyncRules;
   };
-  if (!providerId || !getProviderById(providerId)) {
+  if (!providerId || !getProviderById(providerId) {
     return res && res.status(400).json({ error: "Invalid providerId" });
   }
   const now = Date && Date.now();
-  const updated = writeState((state) => {
-    const existingIdx = state.connections.findIndex(
-      (c) => c.providerId === providerId
+  const updated = writeState(state) => {
+    const existingIdx = state.connections.findIndex(c) => c.providerId = = providerId
     );
     const connection: ProviderConnection = {
       providerId: providerId as any
@@ -46,13 +45,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       providerId: providerId as any
       level: "info"
       action: "connect"
-      details: { syncRules }
-    });
+      details: { syncRules });
   });
   res.status(200).json({
     ok: true
-    connection: updated.connections.find((c) => c.providerId === providerId)
-    );
+    connection: updated.connections.find(c) => c.providerId = = providerId);
     const connection: ProviderConnection = {
       provider_id: provider_id as any,
       status: "connected",
@@ -77,11 +74,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   });
   res && res.status(200).json({
     ok: true,
-    connection: updated && updated.connections.find((c) => c && c.providerId === providerId),
+    connection: updated && updated.connections.find(c) => c && c.providerId = = providerId),
   });
-}
+
   res.status (200).json ({
     ok: true,
-    connection: updated.connections.find ((c) => c.provider_id === provider_id),
+    connection: updated.connections.find (c) => c.provider_id = = provider_id),
   });
-}

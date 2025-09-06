@@ -4,7 +4,7 @@ import { motion } from 'framer-motion',;
 import { Mail, Phone, MapPin, Clock } from 'lucide-react',;
 import EnhancedNavigation from '../components/EnhancedNavigation',;
 import EnhancedFooter from '../components/EnhancedFooter',;
-;
+
 export default function ContactPage() {;
   const [formData, setFormData] = React.useState({;
     name:'',;
@@ -12,20 +12,20 @@ export default function ContactPage() {;
     company:'',;
     message:'';
   }),;
-;
+
   const handleSubmit = (e:React.FormEvent) => {;
     e.preventDefault(),;
     // Handle form submission;
     // // // console.log('Form submitted:', formData),;
   },;
-;
+
   const handleChange = (e:React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {;
     setFormData({;
       ...formData,;
       [e.target.name]:e.target.value;
     }),;
   },;
-;
+
   return (;
     <>;
       <Head>;
@@ -33,16 +33,16 @@ export default function ContactPage() {;
         <meta name="description" content="Get in touch with Zion Tech Group. We're here to help you transform your business with cutting-edge technology solutions." />;
         <meta name="viewport" content="width=device-width, initial-scale=1" />;
       </Head>;
-;
+
       <EnhancedNavigation />;
-;
+
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-6 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">;
         <div className="max-w-7xl mx-auto text-center">;
           <motion.div;
-            initial={{ opacity:0, y:30 }}
-            animate={{ opacity:1, y:0 }}
-            transition={{ duration:0.8 }}
+            initial={ opacity:0, y:30 }
+            animate={ opacity:1, y:0 }
+            transition={ duration:0.8 }
           >;
             <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">;
               Get In Touch;
@@ -53,16 +53,16 @@ export default function ContactPage() {;
           </motion.div>;
         </div>;
       </section>;
-;
+
       {/* Contact Form Section */}
       <section className="py-20 px-6 bg-slate-800">;
         <div className="max-w-6xl mx-auto">;
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">;
             {/* Contact Form */}
             <motion.div;
-              initial={{ opacity:0, x:-30 }}
-              animate={{ opacity:1, x:0 }}
-              transition={{ duration:0.8 }}
+              initial={ opacity:0, x:-30 }
+              animate={ opacity:1, x:0 }
+              transition={ duration:0.8 }
               className="bg-gradient-to-br from-white/5 to-white/10 rounded-2xl border border-white/10 p-8 backdrop-blur-xl";
             >;
               <h2 className="text-3xl font-bold text-white mb-6">Send us a message</h2>;
@@ -82,7 +82,7 @@ export default function ContactPage() {;
                     placeholder="Enter your full name";
                   />;
                 </div>;
-;
+
                 <div>;
                   <label htmlFor="email" className="block text-sm font-medium text-white/70 mb-2">;
                     Email Address *;
@@ -98,7 +98,7 @@ export default function ContactPage() {;
                     placeholder="Enter your email address";
                   />;
                 </div>;
-;
+
                 <div>;
                   <label htmlFor="company" className="block text-sm font-medium text-white/70 mb-2">;
                     Company;
@@ -113,7 +113,7 @@ export default function ContactPage() {;
                     placeholder="Enter your company name";
                   />;
                 </div>;
-;
+
                 <div>;
                   <label htmlFor="message" className="block text-sm font-medium text-white/70 mb-2">;
                     Message *;
@@ -129,7 +129,7 @@ export default function ContactPage() {;
                     placeholder="Tell us about your project or how we can help";
                   />;
                 </div>;
-;
+
                 <button;
                   type="submit";
                   className="w-full px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-lg text-white font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-2xl";
@@ -138,12 +138,12 @@ export default function ContactPage() {;
                 </button>;
               </form>;
             </motion.div>;
-;
+
             {/* Contact Information */}
             <motion.div;
-              initial={{ opacity:0, x:30 }}
-              animate={{ opacity:1, x:0 }}
-              transition={{ duration:0.8, delay:0.2 }}
+              initial={ opacity:0, x:30 }
+              animate={ opacity:1, x:0 }
+              transition={ duration:0.8, delay:0.2 }
               className="space-y-8";
             >;
               <div>;
@@ -152,7 +152,7 @@ export default function ContactPage() {;
                   We're here to help you succeed. Reach out to us through any of the channels below, and we'll get back to you within 24 hours.;
                 </p>;
               </div>;
-;
+
               <div className="space-y-6">;
                 <div className="flex items-start space-x-4">;
                   <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center flex-shrink-0">;
@@ -164,7 +164,7 @@ export default function ContactPage() {;
                     <p className="text-white/50 text-sm">We'll respond within 24 hours</p>;
                   </div>;
                 </div>;
-;
+
                 <div className="flex items-start space-x-4">;
                   <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center flex-shrink-0">;
                     <Phone className="w-6 h-6 text-white" />;
@@ -175,7 +175,7 @@ export default function ContactPage() {;
                     <p className="text-white/50 text-sm">Available Monday-Friday, 9AM-6PM PST</p>;
                   </div>;
                 </div>;
-;
+
                 <div className="flex items-start space-x-4">;
                   <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center flex-shrink-0">;
                     <MapPin className="w-6 h-6 text-white" />;
@@ -186,7 +186,7 @@ export default function ContactPage() {;
                     <p className="text-white/50 text-sm">Visit by appointment only</p>;
                   </div>;
                 </div>;
-;
+
                 <div className="flex items-start space-x-4">;
                   <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center flex-shrink-0">;
                     <Clock className="w-6 h-6 text-white" />;
@@ -198,7 +198,7 @@ export default function ContactPage() {;
                   </div>;
                 </div>;
               </div>;
-;
+
               {/* Additional Info */}
               <div className="bg-gradient-to-br from-white/5 to-white/10 rounded-2xl border border-white/10 p-6">;
                 <h3 className="text-xl font-semibold text-white mb-3">Why Choose Zion Tech Group?</h3>;
@@ -225,8 +225,7 @@ export default function ContactPage() {;
           </div>;
         </div>;
       </section>;
-;
+
       <EnhancedFooter />;
     </>;
   ),;
-}

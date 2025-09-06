@@ -37,13 +37,12 @@ export default function OffworldConsole() {;
       method: 'POST'
       headers: { 'content-type': 'application/json' }
       body: JSON.stringify({
-        profile: { name, skills: skills.split(',').map(s => s.trim()) }
-      })
+        profile: { name, skills: skills.split(',').map(s => s.trim() })
     });
     const data = await res.json();
     setStatus(res.ok ? `Profile CID: ${data.cid}` : 'Profile pin failed');  }
   async function broadcast() {
-    setStatus('Broadcasting manifesto...');    const res = await fetch('/api/offworld/ipfs?action=json', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ profile: { name, skills: skills.split().map(s => s.trim()) } }) })
+    setStatus('Broadcasting manifesto...');    const res = await fetch('/api/offworld/ipfs?action=json', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ profile: { name, skills: skills.split().map(s => s.trim() }) })
     const data = await res.json();
     setStatus(res.ok ? `Profile CID: ${data.cid}` : 'Profile pin failed')
   }
@@ -101,7 +100,7 @@ function OffworldConsole() {
   const [name, set_name] = useState ('');
   const [skills, set_skills] = useState ('');
   const [status, set_status] = useState ('');
-;
+
   async /**
  * send_chat - Function description
  */
@@ -142,7 +141,7 @@ function sync_profile() {
       method: 'POST',
       headers: { 'content - type': 'application / json' },
       body: JSON.stringify ({
-        profile: { name, skills: skills.split (', ').map (string => s.trim ()) },
+        profile: { name, skills: skills.split (', ').map (string => s.trim () },
       }),
     });
     const data = await res.json ();
@@ -151,7 +150,7 @@ function sync_profile() {
  * broadcast - Function description
  */
 function broadcast() {
-    set_status ('Broadcasting manifesto...');    const res = await fetch ('/api / offworld / ipfs?action = json', { method: 'POST', headers: { 'content - type': 'application / json' }, body: JSON.stringify ({ profile: { name, skills: skills.split ().map (string => s.trim ()) } }) }),
+    set_status ('Broadcasting manifesto...');    const res = await fetch ('/api / offworld / ipfs?action = json', { method: 'POST', headers: { 'content - type': 'application / json' }, body: JSON.stringify ({ profile: { name, skills: skills.split ().map (string => s.trim () }) }),
     const data = await res.json ();
     set_status (res.ok ? `Profile CID: ${data.cid}` : 'Profile pin failed');
   }
@@ -166,7 +165,7 @@ function broadcast() {
       body: JSON.stringify ({ message: 'We build beyond platforms.' }),
     });
     set_status (res.ok ? 'Broadcast sent' : 'Broadcast failed');
-;
+
   return (
     <div className='min - h-screen p - 8 space - y-8'>;
       <Head>;
@@ -244,8 +243,7 @@ function broadcast() {
       </section>
       {status && <p className='text-sm text-gray-700'>{status}</p>}
     </div>
-);
-}
+;
 
       <section className='space-y-2'>;
         <h2 className='font-semibold'>Broadcast Manifesto</h2>;
@@ -259,7 +257,7 @@ function broadcast() {
       {status && <p className='text-sm text-gray-700'>{status}</p>}
     </div>;
   );
-}
+
         <button;
           className='px - 3 py - 2 bg - black text - white rounded';
           on_click={cast_vote}
@@ -299,4 +297,3 @@ function broadcast() {
       </section>;
       {status && <p className='text - sm text - gray - 700'>{status}</p>}
     </div>);
-}

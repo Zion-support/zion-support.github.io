@@ -8,7 +8,7 @@ import {
   Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale,
   Building, Factory, Camera, Video, Music, Gamepad2,
   Crown, Award, Target, Users, Clock, Globe2
-} from 'lucide-react',
+ from 'lucide-react',
 import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028',
 import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028',
 import { futuristic2028Services } from '../data/2028-futuristic-innovations',
@@ -18,17 +18,15 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-},
+,
 
 const pricingTiers = [  {
   opacity: 0, y: 30 
-}
-}whileInView= {
-  {
+
+whileInView= {
   opacity: 1, y: 0 
-}
-}transition= {
-  {
+
+transition= {
     name: 'Enterprise',
     price: 'Custom',
     period: '',
@@ -42,8 +40,8 @@ const pricingTiers = [  {
     cta: 'Contact Sales',
     href: '/contact'
   }
-],;
-;
+,;
+
 const servicePricing = [;
   {;
     category:' 2028 Futuristic Innovations',;
@@ -51,17 +49,17 @@ const servicePricing = [;
   },;
   {;
     category:' Smart City & Infrastructure',;
-    services:emergingTech2028Services.filter(s => s.category.includes('Smart City') || s.category.includes('Infrastructure')).slice(0, 4);
+    services:emergingTech2028Services.filter(s => s.category.includes('Smart City') || s.category.includes('Infrastructure').slice(0, 4);
   },;
   {;
     category:' Quantum & Advanced Tech',;
-    services:futuristic2028Services.filter(s => s.category.includes('Quantum')).slice(0, 4);
+    services:futuristic2028Services.filter(s => s.category.includes('Quantum').slice(0, 4);
   },;
   {;
     category:' AI & Machine Learning',;
-    services:emergingTech2028Services.filter(s => s.category.includes('AI')).slice(0, 4);
+    services:emergingTech2028Services.filter(s => s.category.includes('AI').slice(0, 4);
   }
-],
+,
 export default function Revolutionary2028Pricing() {_return (_<>
       <Head>
         <title>2028 Revolutionary Pricing - Zion Tech Group</title>
@@ -85,9 +83,9 @@ export default function Revolutionary2028Pricing() {_return (_<>
 
         <div className=&quot;relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center&quot;>
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
             className=&quot;space-y-8&quot;          >
             <div className=&quot;inline-flex items-center space-x-2 bg-purple-900/30 border border-purple-500/30 rounded-full px-6 py-3 text-purple-300 text-sm&quot;>
               <DollarSign className=&quot;w-4 h-4&quot; />
@@ -158,12 +156,12 @@ export default function Revolutionary2028Pricing() {_return (_<>
           </div>
 
           <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8&quot;>
-            {pricingTiers.map((tier, index) => (              <motion.div
+            {pricingTiers.map(tier, index) => (              <motion.div
                 key={tier.name}
-                initial={_{ opacity: 0, _y: 30}}
-                whileInView={_{ opacity: 1, _y: 0}}
-                transition={_{ duration: 0.6, _delay: index * 0.1}}
-                viewport={_{ once: true}}
+                initial={_{ opacity: 0, _y: 30}
+                whileInView={_{ opacity: 1, _y: 0}
+                transition={_{ duration: 0.6, _delay: index * 0.1}
+                viewport={_{ once: true}
                 className={_`relative ${tier.popular ? 'scale-105' : ''}`}
               >
                 {tier.popular && (
@@ -176,7 +174,7 @@ export default function Revolutionary2028Pricing() {_return (_<>
 
                 <div className={`relative p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border-2 ${tier.popular ? 'border-purple-500/60' : 'border-purple-500/30'} rounded-2xl hover:border-purple-500/60 transition-all duration-300 hover:transform hover:scale-105`}>
                   <div className=&quot;absolute inset-0 bg-gradient-to-br from-purple-500/5 to-blue-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300&quot;></div>
-                  
+
                   <div className=&quot;relative z-10&quot;>
                     <h3 className=&quot;text-2xl font-bold text-white mb-2&quot;>{tier.name}</h3>
                     <p className=&quot;text-purple-300 mb-6&quot;>{tier.description}</p>
@@ -186,17 +184,17 @@ export default function Revolutionary2028Pricing() {_return (_<>
                         <span className=&quot;text-4xl font-bold text-white&quot;>{tier.price}</span>
                         <span className=&quot;text-purple-300&quot;>{tier.period}</span>
                       </div>
-                      {tier.name === 'Enterprise' && (
+                      {tier.name = = 'Enterprise' && (
                         <p className=&quot;text-sm text-purple-300 mt-2&quot;>Contact us for custom pricing</p>
                       )}
                     </div>
 
                     <ul className=&quot;space-y-3 mb-8&quot;>
-                      {tier.features.map((feature, featureIndex) => (
+                      {tier.features.map(feature, featureIndex) => (
                         <li key={featureIndex} className=&quot;flex items-center space-x-3&quot;>
                           <CheckCircle className=&quot;w-5 h-5 text-green-400 flex-shrink-0&quot; />
                           <span className=&quot;text-purple-200&quot;>{feature}</span>                        </li>
-                      ))}
+                      )}
                     </ul>
 
                     <Link
@@ -207,11 +205,11 @@ export default function Revolutionary2028Pricing() {_return (_<>
                     </a>                  </div>
                 </div>
               </motion.div>
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Service Pricing */}
       <section className=&quot;py-20 bg-gradient-to-br from-purple-900/10 to-blue-900/10&quot;>
         <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
@@ -223,21 +221,21 @@ export default function Revolutionary2028Pricing() {_return (_<>
             </p>
           </div>
 
-          {servicePricing.map((category, categoryIndex) => (
+          {servicePricing.map(category, categoryIndex) => (
             <div key={category.category} className=&quot;mb-16&quot;>
               <h3 className=&quot;text-3xl font-bold text-white mb-8 text-center&quot;>{category.category}</h3>
               <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-8&quot;>
-                {category.services.map((service, serviceIndex) => (
+                {category.services.map(service, serviceIndex) => (
                   <motion.div
                     key={service.id}
-                    initial={{ opacity: 0, x: serviceIndex % 2 === 0 ? -30 : 30 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6, delay: serviceIndex * 0.1 }}
-                    viewport={{ once: true }}
+                    initial={ opacity: 0, x: serviceIndex % 2 = = 0 ? -30 : 30 }
+                    whileInView={ opacity: 1, x: 0 }
+                    transition={ duration: 0.6, delay: serviceIndex * 0.1 }
+                    viewport={ once: true }
                     className=&quot;group relative&quot;                  >
                     <div className=&quot;relative p-6 bg-black/40 backdrop-blur-sm border border-purple-500/30 rounded-xl hover:border-purple-500/60 transition-all duration-300 hover:transform hover:scale-105&quot;>
                       <div className=&quot;absolute inset-0 bg-gradient-to-br from-purple-500/5 to-blue-500/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300&quot;></div>
-                      
+
                       <div className=&quot;relative z-10&quot;>
                         <div className=&quot;flex items-start justify-between mb-4&quot;>
                           <div className=&quot;text-3xl&quot;>{service.icon}</div>
@@ -274,13 +272,13 @@ export default function Revolutionary2028Pricing() {_return (_<>
                       </div>
                     </div>
                   </motion.div>
-                ))}
+                )}
               </div>;
             </div>;
-          ))}
+          )}
         </div>;
       </section>;
-;
+
       {/* Value Proposition */}
       <section className=&quot;py-20 bg-black/50&quot;>
         <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
@@ -294,10 +292,10 @@ export default function Revolutionary2028Pricing() {_return (_<>
 
           <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8&quot;>
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.6 }
+              viewport={ once: true }
               className=&quot;text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl&quot;            >
               <Target className=&quot;w-16 h-16 text-green-400 mx-auto mb-6&quot; />
               <h3 className=&quot;text-2xl font-bold text-white mb-4&quot;>Competitive Pricing</h3>
@@ -310,10 +308,10 @@ export default function Revolutionary2028Pricing() {_return (_<>
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.6, delay: 0.2 }
+              viewport={ once: true }
               className=&quot;text-center p-8 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border border-blue-500/30 rounded-2xl&quot;            >
               <Shield className=&quot;w-16 h-16 text-blue-400 mx-auto mb-6&quot; />
               <h3 className=&quot;text-2xl font-bold text-white mb-4&quot;>No Hidden Costs</h3>
@@ -326,10 +324,10 @@ export default function Revolutionary2028Pricing() {_return (_<>
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.6, delay: 0.4 }
+              viewport={ once: true }
               className=&quot;text-center p-8 bg-gradient-to-br from-pink-900/20 to-rose-900/20 border border-pink-500/30 rounded-2xl&quot;            >
               <Award className=&quot;w-16 h-16 text-pink-400 mx-auto mb-6&quot; />
               <h3 className=&quot;text-2xl font-bold text-white mb-4&quot;>Premium Quality</h3>
@@ -348,10 +346,10 @@ export default function Revolutionary2028Pricing() {_return (_<>
       <section className=&quot;py-20 bg-gradient-to-r from-purple-900/30 to-blue-900/30&quot;>
         <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center&quot;>
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
             className=&quot;space-y-8&quot;          >
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
               Ready to <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Get Started</span>?            </h2>

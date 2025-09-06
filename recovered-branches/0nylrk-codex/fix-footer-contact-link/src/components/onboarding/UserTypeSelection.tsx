@@ -10,13 +10,13 @@ interface UserTypeOption {
   description: string
 
   icon: React.ElementType
-}
+
 interface UserTypeSelectionProps {
 
   onSelect: (userType: "serviceProvider" | "talent" | "client") => void
 
   selectedType: string | null
-}
+
 export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionProps) {
   const userTypes: UserTypeOption[] = [
     {
@@ -54,9 +54,9 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
         </p>
       </div>
       <div className="grid gap-4 md: grid-cols-3">
-        {userTypes.map((type) => {
+        {userTypes.map(type) => {
           const Icon = type.icon;
-          const isSelected = selectedType === type.id
+          const isSelected = selectedType = = type.id
 
           return (
             <Button;
@@ -84,7 +84,7 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
       </div>
     </div>
   )
-}
+
               on_click={() => on_select (type.id)}
               variant="outline";
               className={`h - auto flex flex - col items - center justify - center p - 6 space - y-3 border ${
@@ -106,4 +106,3 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
         })}
       </div>;
     </div>);
-}

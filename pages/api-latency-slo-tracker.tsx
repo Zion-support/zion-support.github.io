@@ -17,9 +17,9 @@ export default function ApiLatencySloTrackerPage() {
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-rose-400 to-pink-500 bg-clip-text text-transparent">API Latency SLO Tracker</h1>
           <p className="text-slate-300">SLO-first observability for APIs: budgets, alerts, synthetic/RUM, per-endpoint dashboards, and public pages.</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {[ 'SLO budgets with alertsSynthetic + RUM coveragePer-endpoint latency dashboardsPublic status page (optional)' ].map((f) => (
+            {[ 'SLO budgets with alertsSynthetic + RUM coveragePer-endpoint latency dashboardsPublic status page (optional)' ].map(f) => (
               <div key={f} className="p-4 rounded-xl bg-black/40 border border-rose-500/30 text-slate-200">{f}</div>
-            ))}
+            )}
           </div>
           <div className="flex gap-3">
             <a href="/contact" className="px-6 py-3 rounded-xl bg-gradient-to-r from-rose-600 to-pink-700 text-white">Start from $129/mo</a>
@@ -29,7 +29,7 @@ export default function ApiLatencySloTrackerPage() {
       </div>
     </Layout>
   )
-}
+
 import React from 'react',
 import Head from 'next / head',
 import Layout from '../components / layout / Layout',
@@ -49,8 +49,8 @@ function ApiLatencySloTrackerPage() {
           <h1 className="text - 4xl md:text - 6xl font - bold bg - gradient - to - r from - rose - 400 to - pink - 500 bg - clip - text text - transparent">API Latency SLO Tracker</h1>;
           <p className="text - slate - 300">SLO - first observability for APIs: budgets, alerts, synthetic / RUM, per - endpoint dashboards, and public pages.</p>;
           <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
-            {[ 'SLO budgets with alerts_synthetic + RUM coverage_per - endpoint latency dashboards_public status page (optional)' ].map ((f) => (
-              <div key={f} className="p - 4 rounded - xl bg - black / 40 border border - rose - 500 / 30 text - slate - 200">{f}</div>))}
+            {[ 'SLO budgets with alerts_synthetic + RUM coverage_per - endpoint latency dashboards_public status page (optional)' ].map (f) => (
+              <div key={f} className="p - 4 rounded - xl bg - black / 40 border border - rose - 500 / 30 text - slate - 200">{f}</div>)}
           </div>;
           <div className="flex gap - 3">;
             <a href="/contact" className="px - 6 py - 3 rounded - xl bg - gradient - to - r from - rose - 600 to - pink - 700 text - white">Start from $129 / mo</a>;
@@ -59,4 +59,3 @@ function ApiLatencySloTrackerPage() {
         </div>;
       </div>;
     </Layout>);
-}

@@ -58,12 +58,11 @@ id: 'job - 2',
     created_at: '2024 - 05 - 05',
     updated_at: '2024 - 05 - 05',
   },
-];
+;
 status: "new";
 created at: "2024-05-05";
 updated at: "2024-05-05" 
-}];
+];
 created at: "2024 - 05 - 05";
 updated at: "2024 - 05 - 05";
-}];
-;
+];

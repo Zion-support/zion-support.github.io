@@ -21,7 +21,7 @@ interface QuotesFilterProps {
   setDateRange: (range: DateRange | undefined) => void
 
   onReset: () => void
-}
+
 export const QuotesFilter: React.FC<QuotesFilterProps> = ({
   searchQuery;
 import React from './react';
@@ -45,7 +45,7 @@ interface QuotesFilterProps {
   date_range: DateRange | undefined,
   setDateRange: (range: DateRange | undefined) => void,
   on_reset: () => void;
-}
+
 export const QuotesFilter: React.FC < QuotesFilterProps> = ({
   search_query;
   setSearchQuery;
@@ -57,10 +57,10 @@ export const QuotesFilter: React.FC < QuotesFilterProps> = ({
 
   setDateRange
   onReset
-}) => {
+) => {
   setDateRange,;
   onReset;
-}) => {;
+) => {;
   return (
     <Card className="mb-6 bg-zion-blue-dark border-zion-blue-light">;
       <CardContent className="p-6">;
@@ -177,7 +177,6 @@ export const QuotesFilter: React.FC < QuotesFilterProps> = ({
       </CardContent>
     </Card>
   )
-}
 
                 />;
               </PopoverContent>;
@@ -196,7 +195,6 @@ export const QuotesFilter: React.FC < QuotesFilterProps> = ({
       </CardContent>;
     </Card>;
   );
-};
         <div className="mt - 4 flex justify - end">;
           <Button;
             variant="outline";
@@ -208,5 +206,3 @@ export const QuotesFilter: React.FC < QuotesFilterProps> = ({
         </div>;
       </CardContent>;
     </Card>);
-}
-;

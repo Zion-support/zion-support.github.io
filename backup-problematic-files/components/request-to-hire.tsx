@@ -4,7 +4,7 @@ import { TALENT_PROFILES } from '../data/talent',;
 export default function RequestToHirePage() {;
   const router = useRouter(),;
   const { talent } = router.query as { talent?: string },;
-  const selected = useMemo(() => TALENT_PROFILES.find(t => t.slug === talent), [talent]),;
+  const selected = useMemo() => TALENT_PROFILES.find(t => t.slug = = talent), [talent]),;
   const [form, setForm] = useState({;
     name: '',;
     email: '',;
@@ -21,7 +21,7 @@ export default function RequestToHirePage() {;
       setError('Please fill in name, email, and description.'),;
       return;
     }
-;
+
     const normalizedBudget = form.budget.replace(/[^0-9.\-]/g, ''),;
     setSubmitting(true),;
     try {;
@@ -39,8 +39,7 @@ export default function RequestToHirePage() {;
       setError(err.message || 'Something went wrong');
     } finally {;
       setSubmitting(false);
-    }
-  },
+    },
 
   if (result) {
     return (
@@ -83,4 +82,3 @@ export default function RequestToHirePage() {;
       </form>;
     </div>;
   );
-}

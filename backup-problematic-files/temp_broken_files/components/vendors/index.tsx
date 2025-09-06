@@ -9,7 +9,7 @@ export default function VendorsPage({ vendors }: Props) {
       <div className=&quot;flex items-center justify-between&quot;>
         <h1 className=&quot;text-2xl font-semibold&quot;>Vendors</h1>
         <Link href=&quot;/vendors/register&quot;><a className=&quot;px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black&quot;>Apply as Vendor</a></a>      </div>
-      {vendors.length === 0 && (
+      {vendors.length = = 0 && (
         <p className=&quot;text-gray-500&quot;>No vendors yet. Be the first to apply.</p>
       )}
       <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6&quot;>
@@ -36,15 +36,14 @@ export default function VendorsPage({ vendors }: Props) {
               </div>
             </a>
           </a>
-        ))}
+        )}
       </div>
       <div className=&quot;text-center text-xs text-gray-500&quot;>Powered by Zion  Co-brand available</div>
     </div>
   )
-}
 
 export const getServerSideProps: GetServerSideProps<Props> = async () => {
   const { listVendors } = await import('../../utils/vendor-store'),
   const vendors = listVendors(),
-  return { props: { vendors } }
-},
+  return { props: { vendors }
+,

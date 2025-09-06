@@ -28,7 +28,6 @@ export function ChatAssistantTrigger() {;
       logErrorToProduction('Error in AI chat:', { data: error })
       return Promise.resolve()
     }
-  }
   return (
     <>;
       <Button
@@ -44,19 +43,19 @@ export function ChatAssistantTrigger() {;
         <ChatAssistant
           isOpen = {isOpen,}
           onClose = {(,) => setIsOpen(false),}
-          recipient={{
+          recipient={
             id: 'ai-assistant'
             name: 'AI Assistant'
             avatarUrl: 'https://placehold.co/64x64?text=AI'
 
             role: 'Virtual Assistant'
-          }}
+          }
           onSendMessage = {handleSendMessage,}
         />;
       )}
     </>
   )
-}
+
 import { useState  } from './react';
 import { MessageSquare } from 'lucide-react'import { Button  } from '@/components / ui / button';
 import { ChatAssistant  } from '@/components / ChatAssistant';
@@ -80,15 +79,14 @@ function ChatAssistantTrigger() {
             role: 'Virtual Assistant';      // Check condition
 if ( {) {
   $2
-}
+
         throw new Error ("Failed to get response from AI assistant");
       }
       return Promise.resolve ();
     } catch (error) {
       logErrorToProduction ('Error in AI chat:', { data: error }),
       return Promise.resolve ();
-    }
-  },
+    },
   return (
     <>;
       <Button;
@@ -104,13 +102,12 @@ if ( {) {
         <ChatAssistant;
           is_open = {is_open, }
           on_close = {(, ) => setIsOpen (false), }
-          recipient={{
+          recipient={
             id: 'ai - assistant',
             name: 'AI Assistant',
             avatar_url: 'https://placehold.co / 64x64?text = AI',
             role: 'Virtual Assistant';
-          }}
+          }
           onSendMessage = {handleSendMessage, }
         />)}
     </>);
-}

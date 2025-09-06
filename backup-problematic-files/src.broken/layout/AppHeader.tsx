@@ -10,12 +10,11 @@ import { Menu, X } from 'lucide-react',;
 import { MobileMenu } from '@/components/header/MobileMenu',;
 import { useIsMobile } from '@/hooks/use-mobile',;
 import { MobileBottomNav } from '@/components/header/MobileBottomNav',;
-;
+
 export function AppHeader() {;
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false),;
   const isMobile = useIsMobile(),;
   const { t } = useTranslation(),;
-  ;
   // Try to access the messaging context, but provide a fallback value if it's not available;
   let unreadCount = 0,;
   try {;
@@ -33,7 +32,6 @@ export function AppHeader() {;
           <div className="ml-6 flex-1 hidden md:block">;
             <MainNavigation unreadCount={unreadCount} />;
           </div>;
-          ;
           {/* Mobile menu button */}
           <div className="md:hidden ml-auto mr-4">;
             <button;
@@ -49,12 +47,11 @@ export function AppHeader() {;
                 <Menu className="block h-6 w-6" aria-hidden="true" />;              )}
             </button>;
           </div>;
-;
+
           <CurrencySelector />;
           <LanguageSelector />;
         </div>;
       </header>;
-      ;
       {/* Mobile menu - positioned outside of header to prevent overlap issues */}
       {mobileMenuOpen && (;
         <div className="md:hidden fixed inset-0 z-40 pt-16">;
@@ -71,24 +68,23 @@ export function AppHeader() {;
           </div>;
         </div>;
       )}
-;
+
       {/* Mobile Bottom Navigation */}
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
     </>;
   ),;}
-) : (<Menu className="block h-6 w-6" aria-hidden="true" />) 
-}</button> </div> <CurrencySelector /> <LanguageSelector /> </div> </header> <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick= {
+ : (<Menu className="block h-6 w-6" aria-hidden="true" />) 
+</button> </div> <CurrencySelector /> <LanguageSelector /> </div> </header> <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick= {
   () => setMobileMenuOpen (false) 
-}aria-hidden="true" /> <div className="relative bg-zion-blue-dark border-t border-zion-purple/20 h-auto max-h-[calc (100vh-4rem) ] overflow-y-auto" > <MobileMenu unreadCount= {
+aria-hidden="true" /> <div className="relative bg-zion-blue-dark border-t border-zion-purple/20 h-auto max-h-[calc (100vh-4rem) ] overflow-y-auto" > <MobileMenu unreadCount= {
   unreadCount 
-}onClose= {
+onClose= {
   () => setMobileMenuOpen (false) 
-}/> </div> </div>) 
-}{
+/> </div> </div>) 
+{
   /* Mobile Bottom Navigation */ 
-}{
+{
   isMobile && <MobileBottomNav unreadCount= {
   unreadCount 
-}/> 
-}</>) 
-}
+/> 
+</>) 

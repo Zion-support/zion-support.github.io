@@ -58,6 +58,6 @@ const EnhancedFooter = () => {
       </div>
     </footer>
   )
-},
+,
 
 export default EnhancedFooter,

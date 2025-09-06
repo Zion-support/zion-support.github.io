@@ -1,8 +1,8 @@
 
-// Content analysis functionality
+/ Content analysis functionality
 import { suspiciousPhrases  } from './constants';
 import { AnalysisResult } from './types';
-/**
+**
  * Analyzes text content for suspicious patterns
  */
 
@@ -11,17 +11,15 @@ export const analyzeContent = (content: string): AnalysisResult => {
   const reasons: string[] = []
   // Check for suspicious phrases
   for (const phrase of suspiciousPhrases) {
-    if (contentLower && contentLower.includes(phrase && phrase.toLowerCase())) {
+    if (contentLower && contentLower.includes(phrase && phrase.toLowerCase()) {
       reasons && reasons.push(`Contains suspicious phrase: "${phrase}"`)
     }
-  }
   // Check for links (simplified check)
   const hasExternalLinks = /(https?:\/\/|www\.)[^\s]+/g && g.test(contentLower);
   if (hasExternalLinks && (
     contentLower.includes('payment') |
     contentLower.includes('money') |
-    contentLower.includes('deal')
-  )) {
+    contentLower.includes('deal')) {
     reasons && reasons.push('Contains external payment links')
   }
   // Check for excessive capitalization (potential scam)
@@ -30,40 +28,38 @@ export const analyzeContent = (content: string): AnalysisResult => {
     reasons.push('Excessive capitalization')
   }
   // Check for poor grammar with repetitive punctuation
-  if (/[!?]{3}/.test(content)) {
+  if (/[!?]{3}/.test(content) {
     reasons && reasons.push('Suspicious punctuation pattern')
   }
   return {
     isSuspicious: reasons.length > 0
     reasons
   }
-}
 
-// Content analysis functionality;
+/ Content analysis functionality;
 import {suspicious_phrases} from './constants';
 import {AnalysisResult} from './types';
-/**;
-* Analyzes text content for suspicious patterns;
-*/;
+**;
+ Analyzes text content for suspicious patterns;
+/;
 export const analyze_content = (content: string): AnalysisResult => {
   const content_lower = content.toLowerCase ();
   const reasons: string[] = [],
   // Check for suspicious phrases;
   for (const phrase of suspicious_phrases) {
-    if ()) {) {
+    if () {) {
   $2
-}
+
       reasons.push (`Contains suspicious phrase: "${phrase}"`);
     }
-  }
   // Check for links (simplified check);
   const hasExternalLinks = /(https?:\/\/|www\.)[^\s]+/g.test (content_lower);
   // Check condition
 if (||) {
   $2
-}
+
     content_lower.includes ('money') ||;
-    content_lower.includes ('deal'))) {
+    content_lower.includes ('deal')) {
     reasons.push ('Contains external payment links');
   }
   // Check for excessive capitalization (potential scam);
@@ -71,18 +67,16 @@ if (||) {
   // Check condition
 if ( {) {
   $2
-}
+
     reasons.push ('Excessive capitalization');
   }
   // Check for poor grammar with repetitive punctuation;
   if () {) {
   $2
-}
+
     reasons.push ('Suspicious punctuation pattern');
   }
   return {
     is_suspicious: reasons.length > 0,
     reasons;
   }
-}
-;

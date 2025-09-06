@@ -6,5 +6,3 @@ export function JsonLd() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

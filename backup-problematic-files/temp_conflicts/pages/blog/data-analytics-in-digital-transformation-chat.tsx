@@ -1,7 +1,7 @@
 
 import Head from 'next/head',;
 import Link from 'next/link',;
-;
+
 const DataAnalyticsInDigitalTransformationChat = () => {;
   return (;
     <div>;
@@ -9,7 +9,6 @@ const DataAnalyticsInDigitalTransformationChat = () => {;
         <title>DataAnalyticsInDigitalTransformationChat - Zion Tech Solutions</title>;
         <meta name="description" content="DataAnalyticsInDigitalTransformationChat blog post" />;
       </Head>;
-      ;
       <main>;
         <h1>DataAnalyticsInDigitalTransformationChat</h1>;
         <p>Blog content coming soon...</p>;
@@ -17,6 +16,6 @@ const DataAnalyticsInDigitalTransformationChat = () => {;
       </main>;
     </div>;
   ),;
-},;
-;
+,;
+
 export default DataAnalyticsInDigitalTransformationChat,

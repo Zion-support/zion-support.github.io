@@ -31,7 +31,7 @@ export default function PostJobPage() {
           category
           requiredSkills: skills
             .split()
-            .map((s) => s.trim())
+            .map(s) => s.trim()
             .filter(Boolean)
           budgetMinUsd: budgetMinUsd ? Number(budgetMinUsd) : undefined
           budgetMaxUsd: budgetMaxUsd ? Number(budgetMaxUsd) : undefined
@@ -45,7 +45,7 @@ export default function PostJobPage() {
           category;
           requiredSkills: skills
             .split()
-            .map((s) => s.trim())
+            .map(s) => s.trim()
             .filter(Boolean);
           budgetMinUsd: budgetMinUsd ? Number(budgetMinUsd) : undefined,
           budgetMaxUsd: budgetMaxUsd ? Number(budgetMaxUsd) : undefined,
@@ -61,7 +61,6 @@ export default function PostJobPage() {
     } finally {
       setIsSubmitting(false)
     }
-  }
   return (
     <div className="max-w-2xl mx-auto">
       <h1 className="text-2xl font-semibold mb-4">Post a Job</h1>
@@ -109,7 +108,7 @@ export default function PostJobPage() {
       </form>
     </div>
   )
-}
+
 import { useState } from 'react',
 import { use_router } from 'next / router',
 export default /**
@@ -136,7 +135,7 @@ function handle_submit() {
     // Check condition
 if ( {) {
   $2
-}
+
       set_error ('Please fill in all required fields.'),
       return;
     }
@@ -151,7 +150,7 @@ if ( {) {
           category,
           required_skills: skills;
             .split ();
-            .map ((s) => s.trim ());
+            .map (s) => s.trim ();
             .filter (Boolean),
           budgetMinUsd: budgetMinUsd ? Number (budgetMinUsd) : undefined,
           budgetMaxUsd: budgetMaxUsd ? Number (budgetMaxUsd) : undefined,
@@ -160,14 +159,13 @@ if ( {) {
       const data = await res.json (),
       if (throw new Error (data.error || 'Failed to post job'), ) {
   $2
-}
+
       router.push (`/client / dashboard`);
     } catch (err: any) {
       set_error (err.message || 'Something went wrong');
     } finally {
       setIsSubmitting (false);
     }
-  }
   return (
     <div className="max - w-2xl mx - auto">;
       <h1 className="text - 2xl font - semibold mb - 4">Post a Job</h1>;
@@ -214,4 +212,3 @@ if ( {) {
         </div>;
       </form>;
     </div>);
-}

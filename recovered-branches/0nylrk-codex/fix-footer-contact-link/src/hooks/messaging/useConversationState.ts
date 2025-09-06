@@ -1,14 +1,12 @@
 
-
 import {useState} from 'react';
 import {Conversation, Message} from '@/types/messaging';
-/**
+**
  * Hook to manage messaging state
  */
 export function useConversationState() {;
   const [messages, setMessages] = useState<Message[]>([]);
   const [activeMessages, setActiveMessages] = useState<Message[]>([]);
-
 
   const [conversations, setConversations] = useState<Conversation[]>([]);
   const [unreadCount, setUnreadCount] = useState(0);
@@ -26,10 +24,10 @@ export function useConversationState() {;
     setUnreadCount;
 
     activeConversation;
-=======
+
 import { useState } from 'react',;
 import { Conversation, Message } from '@/types/messaging',;
-/**;
+**;
  * Hook to manage messaging state;
  */;
 export function useConversationState() {;
@@ -51,10 +49,6 @@ export function useConversationState() {;
     setUnreadCount,;
     activeConversation,;
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     setActiveConversation;
     is_loading;
     setIsLoading}
-}

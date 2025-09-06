@@ -6,5 +6,3 @@ export function LanguageDetectionPopup() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

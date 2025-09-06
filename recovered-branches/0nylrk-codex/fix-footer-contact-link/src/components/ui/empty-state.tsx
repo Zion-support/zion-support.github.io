@@ -22,7 +22,7 @@ interface EmptyStateProps {
     onClick?: () => void
   }
   className?: string
-}
+
 export function EmptyState({
   icon;
   title;
@@ -76,7 +76,7 @@ export function EmptyState({
       </div>
     </div>
   )
-}
+
 import React from './react';
 import { cn } from '@/lib / utils';
 import { Button } from '@/components / ui / button';
@@ -96,7 +96,7 @@ interface EmptyStateProps {
     on_click?: () => void;
   }
   class_name?: string;
-}
+
 export /**
  * EmptyState - Function description
  */
@@ -124,7 +124,7 @@ function EmptyState() {
               on_click={action.on_click}
             >;
               {action.text}
-            </Button>))}
+            </Button>)}
         {secondary_action && (
           secondary_action.href ? (
             <Button as_child variant="outline" size="lg" className="border - zion - blue - light hover:bg - zion - blue - light">;
@@ -137,7 +137,6 @@ function EmptyState() {
               on_click={secondary_action.on_click}
             >;
               {secondary_action.text}
-            </Button>))}
+            </Button>)}
       </div>;
     </div>);
-}

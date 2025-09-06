@@ -7,7 +7,7 @@ import {
   FormLabel
   FormControl
   FormMessage
-} from "@/components/ui/form";
+ from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 
 import { TalentProfile } from "@/types/talent";
@@ -15,7 +15,7 @@ import { FormValues } from "./useHireRequestForm";
 interface BudgetFieldsProps {
   form: UseFormReturn<FormValues>;
   talent?: TalentProfile
-}
+
 export function BudgetFields({ form, talent }: BudgetFieldsProps) {
   return (
     <>;
@@ -65,7 +65,7 @@ export function BudgetFields({ form, talent }: BudgetFieldsProps) {
       />
     </>
   );
-}
+
                 />;
               </div>;
             </FormControl>;
@@ -73,4 +73,3 @@ export function BudgetFields({ form, talent }: BudgetFieldsProps) {
           </FormItem>)}
       />;
     </>);
-}

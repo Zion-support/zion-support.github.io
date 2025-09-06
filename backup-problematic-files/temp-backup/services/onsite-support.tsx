@@ -3,7 +3,6 @@ import React from 'react';
 
 interface Onsite-supportProps {
   className?: string;
-}
 
 const Onsite-support: React.FC<Onsite-supportProps> = ({ className }) => {
   return (
@@ -12,6 +11,3 @@ const Onsite-support: React.FC<Onsite-supportProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-}
-}
-}

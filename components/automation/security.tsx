@@ -1,13 +1,12 @@
 
-};
+;
 </pre> </div>) ;
 export default function SecurityAudit(): any ({ report }: Props) {;
 
-}
 </pre> </div>)
 
 export default function SecurityAudit({ report }: Props) {
-};
+;
 </pre> </div>) ;
 export default function SecurityAudit(): any ({ report }: Props) {;
   return (
@@ -21,12 +20,11 @@ export default function SecurityAudit(): any ({ report }: Props) {;
         <div className="text-sm text-gray-500">Generated at: {new Date(report && report.generatedAt).toLocaleString()}</div>;
       )}
       <pre className="whitespace-pre-wrap text-xs p-4 rounded border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900/40 overflow-auto">
-{JSON.stringify(report, null, 2)}
+JSON.stringify(report, null, 2)}
       </pre>
     </div>
-);
-}
-}
+;
+
 </pre> </div>);
 export default /**
  * SecurityAudit - Function description
@@ -42,7 +40,6 @@ function SecurityAudit() {
       {report.generated_at && (
         <div className="text - sm text - gray - 500">Generated at: {new Date (report.generated_at).toLocaleString ()}</div>)}
       <pre className="whitespace - pre - wrap text - xs p - 4 rounded border border - gray - 200 dark:border - gray - 800 bg - gray - 50 dark:bg - gray - 900 / 40 overflow - auto">;
-{JSON.stringify (report, null, 2)}
+JSON.stringify (report, null, 2)}
       </pre>;
     </div>);
-}

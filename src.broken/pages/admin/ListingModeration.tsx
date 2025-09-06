@@ -6,5 +6,3 @@ export function ListingModeration() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

@@ -7,6 +7,5 @@ const Enhanced404Page.js = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default Enhanced404Page.js;

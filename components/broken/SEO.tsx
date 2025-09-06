@@ -1,62 +1,61 @@
 
-{
   /* Robots Meta */
-}{
+{
   noindex && <meta name="robots" content="noindex" />
-}{
+{
   nofollow && <meta name="robots" content="nofollow" />
-}{
+{
   !noindex && !nofollow && <meta name="robots" content="index, follow" />
-}{
+{
   /* Open Graph Meta Tags */
-}<meta property="og:title" content= {
+<meta property="og:title" content= {
   fullTitle
-}/> <meta property="og:description" content= {
+/> <meta property="og:description" content= {
   description
-}/> <meta property="og:type" content= {
+/> <meta property="og:type" content= {
   type
-}/> <meta property="og:url" content= {
+/> <meta property="og:url" content= {
   fullUrl
-}/> <meta property="og:image" content= {
+/> <meta property="og:image" content= {
   fullImage
-}/> <meta property="og:site name" content="Zion Tech Group" /> <meta property="og:locale" content="en US" /> {
+/> <meta property="og:site name" content="Zion Tech Group" /> <meta property="og:locale" content="en US" /> {
   /* Twitter Card Meta Tags */
-}<meta name="twitter:card" content="summary large image" /> <meta name="twitter:site" content="@ziontechgroup" /> <meta name="twitter:creator" content="@ziontechgroup" /> <meta name="twitter:title" content= {
+<meta name="twitter:card" content="summary large image" /> <meta name="twitter:site" content="@ziontechgroup" /> <meta name="twitter:creator" content="@ziontechgroup" /> <meta name="twitter:title" content= {
   fullTitle
-}/> <meta name="twitter:description" content= {
+/> <meta name="twitter:description" content= {
   description
-}/> <meta name="twitter:image" content= {
+/> <meta name="twitter:image" content= {
   fullImage
-}/> {
+/> {
   /* Article Specific Meta Tags */
-}{
-  type === 'article' && (<> {
+{
+  type = = 'article' && (<> {
   publishedTime && <meta property="article:published time" content= {
   publishedTime
-}/>
-}{
+/>
+{
   modifiedTime && <meta property="article:modified time" content= {
   modifiedTime
-}/>
-}{
+/>
+{
   author && <meta property="article:author" content= {
   author
-}/>
-}{
+/>
+{
   section && <meta property="article:section" content= {
   section
-}/>
-}{
-  tags.map ( (tag, index) => (<meta key= {
+/>
+{
+  tags.map (tag, index) => (<meta key= {
   index
-}property="article:tag" content= {
+property="article:tag" content= {
   tag
-}/>
-}</>)
-}{
+/>
+</>)
+{
   /* Structured Data */
-}<script
-}]
+<script
+]
 const SEO: React.FC<SEOProps> = ({
   title = 'Zion Tech Group - Revolutionary AI, Quantum Computing & Space Technology Solutions'
   description = 'Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide. Leading-edge services in AI, cybersecurity, space tech, and quantum solutions.'
@@ -72,69 +71,69 @@ const SEO: React.FC<SEOProps> = ({
   structuredData
   noindex = false
   nofollow = false
-}) => {
+) => {
   const fullTitle = title.includes('Zion Tech Group')
     ? title
-}
+
 import React from 'react';
  {;
   /* Robots Meta */ ;
-}{;
+{;
   noindex && <meta name="robots" content="noindex" /> ;
-}{;
+{;
   nofollow && <meta name="robots" content="nofollow" /> ;
-}{;
+{;
   !noindex && !nofollow && <meta name="robots" content="index, follow" /> ;
-}{;
+{;
   /* Open Graph Meta Tags */ ;
-}<metaproperty="og:title" content= {
+<metaproperty="og:title" content= {
   fullTitle 
-}/> <metaproperty="og:description" content= {
+/> <metaproperty="og:description" content= {
   description 
-}/> <metaproperty="og:type" content= {
+/> <metaproperty="og:type" content= {
   type 
-}/> <metaproperty="og:url" content= {
+/> <metaproperty="og:url" content= {
   fullUrl 
-}/> <metaproperty="og:image" content= {
+/> <metaproperty="og:image" content= {
   fullImage 
-}/> <meta property="og:site name" content="Zion Tech Group" /> <meta property="og:locale" content="en US" /> {;
+/> <meta property="og:site name" content="Zion Tech Group" /> <meta property="og:locale" content="en US" /> {;
   /* Twitter Card Meta Tags */ ;
-}<meta name="twitter:card" content="summary large image" /> <meta name="twitter:site" content="@ziontechgroup" /> <meta name="twitter:creator" content="@ziontechgroup" /> <metaname="twitter:title" content= {
+<meta name="twitter:card" content="summary large image" /> <meta name="twitter:site" content="@ziontechgroup" /> <meta name="twitter:creator" content="@ziontechgroup" /> <metaname="twitter:title" content= {
   fullTitle 
-}/> <metaname="twitter:description" content= {
+/> <metaname="twitter:description" content= {
   description 
-}/> <metaname="twitter:image" content= {
+/> <metaname="twitter:image" content= {
   fullImage 
-}/> {;
+/> {;
   /* Article Specific Meta Tags */ ;
-}{;
-  type === 'article' && (<> {;
+{;
+  type = = 'article' && (<> {;
   publishedTime && <metaproperty="article:published time" content= {
   publishedTime 
-}/> ;
-}{;
+/> ;
+{;
   modifiedTime && <metaproperty="article:modified time" content= {
   modifiedTime 
-}/> ;
-}{;
+/> ;
+{;
   author && <metaproperty="article:author" content= {
   author 
-}/> ;
-}{;
+/> ;
+{;
   section && <metaproperty="article:section" content= {
   section 
-}/> ;
-}{;
-  tags && tags.map ( (tag, index) => (<metakey= {
+/> ;
+{;
+  tags && tags.map (tag, index) => (<metakey= {
   index 
-}property="article:tag" content= {
+property="article:tag" content= {
   tag 
-}/> ;
-}</>) ;
-}{;
+/> ;
+</>) ;
+{;
   /* Structured Data */ ;
-}<script
-}] 
+<script
+] 
 
 const SEO: React.FC<SEOProps> = ({;
   title = 'Zion Tech Group - Revolutionary AI, Quantum Computing & Space Technology Solutions',;
@@ -151,7 +150,7 @@ const SEO: React.FC<SEOProps> = ({;
   structuredData,;
   noindex = false,;
   nofollow = false,;
-}) => {;
+) => {;
   const fullTitle = title && title.includes('Zion Tech Group');
     ? title;
     : `${title} | Zion Tech Group`;
@@ -193,62 +192,62 @@ const SEO: React.FC<SEOProps> = ({;
         name='keywords'
         content={Array && Array.isArray(keywords) ? keywords && keywords.join(', ') : keywords}
   /* Robots Meta */;
-}{
+{
   noindex && <meta name="robots" content="noindex" />;
-}{
+{
   nofollow && <meta name="robots" content="nofollow" />;
-}{
+{
   !noindex && !nofollow && <meta name="robots" content="index, follow" />;
-}{
+{
   /* Open Graph Meta Tags */;
-}<meta property="og:title" content= {
+<meta property="og:title" content= {
   full_title;
-}/> <meta property="og:description" content= {
+/> <meta property="og:description" content= {
   description;
-}/> <meta property="og:type" content= {
+/> <meta property="og:type" content= {
   type;
-}/> <meta property="og:url" content= {
+/> <meta property="og:url" content= {
   full_url;
-}/> <meta property="og:image" content= {
+/> <meta property="og:image" content= {
   full_image;
-}/> <meta property="og:site name" content="Zion Tech Group" /> <meta property="og:locale" content="en US" /> {
+/> <meta property="og:site name" content="Zion Tech Group" /> <meta property="og:locale" content="en US" /> {
   /* Twitter Card Meta Tags */;
-}<meta name="twitter:card" content="summary large image" /> <meta name="twitter:site" content="@ziontechgroup" /> <meta name="twitter:creator" content="@ziontechgroup" /> <meta name="twitter:title" content= {
+<meta name="twitter:card" content="summary large image" /> <meta name="twitter:site" content="@ziontechgroup" /> <meta name="twitter:creator" content="@ziontechgroup" /> <meta name="twitter:title" content= {
   full_title;
-}/> <meta name="twitter:description" content= {
+/> <meta name="twitter:description" content= {
   description;
-}/> <meta name="twitter:image" content= {
+/> <meta name="twitter:image" content= {
   full_image;
-}/> {
+/> {
   /* Article Specific Meta Tags */;
-}{
-  type === 'article' && (<> {
+{
+  type = = 'article' && (<> {
   published_time && <meta property="article:published time" content= {
   published_time;
-}/>;
-}{
+/>;
+{
   modified_time && <meta property="article:modified time" content= {
   modified_time;
-}/>;
-}{
+/>;
+{
   author && <meta property="article:author" content= {
   author;
-}/>;
-}{
+/>;
+{
   section && <meta property="article:section" content= {
   section;
-}/>;
-}{
-  tags.map ( (tag, index) => (<meta key= {
+/>;
+{
+  tags.map (tag, index) => (<meta key= {
   index;
-}property="article:tag" content= {
+property="article:tag" content= {
   tag;
-}/>;
-}</>);
-}{
+/>;
+</>);
+{
   /* Structured Data */;
-}<script;
-}];
+<script;
+];
 const SEO: React.FC < SEOProps> = ({
   title = 'Zion Tech Group - Revolutionary AI, Quantum Computing & Space Technology Solutions',
   description = 'Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide. Leading - edge services in AI, cybersecurity, space tech, and quantum solutions.',
@@ -264,7 +263,7 @@ const SEO: React.FC < SEOProps> = ({
   structured_data,
   noindex = false,
   nofollow = false,
-}) => {
+) => {
   const full_title = title.includes ('Zion Tech Group');
     ? title;
     : `${title} | Zion Tech Group`;
@@ -319,7 +318,7 @@ const SEO: React.FC < SEOProps> = ({
       <meta name='twitter:description' content={description} />
       <meta name='twitter:image' content={fullImage} />
       {/* Article Specific Meta Tags */}
-      {type === 'article' && (;
+      {type = = 'article' && (;
         <>;
           {publishedTime && (;
             <meta property='article:published_time' content={publishedTime} />;
@@ -329,9 +328,9 @@ const SEO: React.FC < SEOProps> = ({
           )}
           {author && <meta property='article:author' content={author} />}
           {section && <meta property='article:section' content={section} />}
-          {tags && tags.map((tag, index) => (;
+          {tags && tags.map(tag, index) => (;
             <meta key={index} property='article:tag' content={tag} />;
-          ))}
+          )}
         </>;
       )}
       {/* Additional Meta Tags */}
@@ -362,7 +361,7 @@ const SEO: React.FC < SEOProps> = ({
       <meta name='twitter:description' content={description} />;
       <meta name='twitter:image' content={full_image} />;
       {/* Article Specific Meta Tags */}
-      {type === 'article' && (
+      {type = = 'article' && (
         <>;
           {published_time && (
             <meta property='article:published_time' content={published_time} />)}
@@ -370,8 +369,8 @@ const SEO: React.FC < SEOProps> = ({
             <meta property='article:modified_time' content={modified_time} />)}
           {author && <meta property='article:author' content={author} />}
           {section && <meta property='article:section' content={section} />}
-          {tags.map ((tag, index) => (
-            <meta key={index} property='article:tag' content={tag} />))}
+          {tags.map (tag, index) => (
+            <meta key={index} property='article:tag' content={tag} />)}
         </>)}
       {/* Additional Meta Tags */}
       <meta;
@@ -389,7 +388,7 @@ const SEO: React.FC < SEOProps> = ({
       {/* Structured Data */}
       <script;
         type='application / ld + json';
-        dangerouslySetInnerHTML={{
+        dangerouslySetInnerHTML={
           __html: JSON.stringify({
             '@context': 'https://schema.org'
             '@type': 'Organization'
@@ -441,27 +440,23 @@ const SEO: React.FC < SEOProps> = ({
               ],
             },
           }),
-        }}
+        }
                   }
-                }
                 {
                   '@type': 'Offer'
                   itemOffered: {
                     '@type': 'Service'
                     name: 'Quantum Computing Services'
                   }
-                }
                 {
                   '@type': 'Offer'
                   itemOffered: {
                     '@type': 'Service'
                     name: 'Space Technology Solutions'
                   }
-                }
               ]
-            }
-          })
-        }}
+            })
+        }
       />
       {/* Canonical URL */}
       <link rel='canonical' href={fullUrl} />
@@ -518,36 +513,34 @@ const SEO: React.FC < SEOProps> = ({
       {structuredData && (;
         <script
           type='application/ld+json'
-          dangerouslySetInnerHTML={{
-            __html: JSON && JSON.stringify(structuredData),          }}
+          dangerouslySetInnerHTML={
+            __html: JSON && JSON.stringify(structuredData),          }
         />;
       )}
     </Head>;
   );
-};
 
 export default SEO;            __html: JSON && JSON.stringify(structuredData);
-          }}
+          }
         />;
       )}
     </Head>;
   );
-};
 
 export default SEO;  );
-}
+
 export default SEO;            __html: JSON.stringify(structuredData)
-};
+;
 
 export default SEO;            __html: JSON && JSON.stringify(structuredData);
-          }}
+          }
         />;
       )}
     </Head>;
   );
-}
+
 export default SEO;  )
-}
+
 export default SEO;
 
           __html: JSON.stringify ({
@@ -601,7 +594,7 @@ export default SEO;
               ],
             },
           }),
-        }}
+        }
       />;
       {/* Canonical URL */}
       <link rel='canonical' href={full_url} />;
@@ -644,20 +637,16 @@ export default SEO;
       {structured_data && (
         <script;
           type='application / ld + json';
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify (structured_data),          }}
+          dangerouslySetInnerHTML={
+            __html: JSON.stringify (structured_data),          }
         />)}
     </Head>);
-}
-;
+
 export default SEO;            __html: JSON.stringify (structured_data);
-          }}
+          }
         />)}
     </Head>);
-}
-;
+
 export default SEO);
-}
-;
+
 export default SEO;
-;

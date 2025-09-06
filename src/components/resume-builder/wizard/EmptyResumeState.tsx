@@ -31,17 +31,11 @@ export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) => {  retu
       </CardContent>
     </Card>
   )
-}
-"}
-  )
-}
 
+}
+  );
 
   );
-};
-
-  );
-};
 
 import { Card, CardContent } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
@@ -70,7 +64,6 @@ export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) =>: any { 
         </div>;
       </CardContent>;
     </Card>);
-}
-"},
+
+},
   );
-}

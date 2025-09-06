@@ -7,7 +7,7 @@ import {
   DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles,
   Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale,
   Building, Factory, Camera, Video, Music, Gamepad2
-} from 'lucide-react',
+ from 'lucide-react',
 import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028',
 import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028',
 import { futuristic2028Services } from '../data/2028-futuristic-innovations',
@@ -17,43 +17,38 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-},
+,
 
 const serviceCategories = [  {
   opacity: 0, y: 30 
-}
-}animate= {
-  {
+
+animate= {
   opacity: 1, y: 0 
-}
-}transition= {
-  {
+
+transition= {
   duration: 0.8 
-}
-}className="space-y-8" > <div className="inline-flex items-center space-x-2 bg-purple-900/30 border border-purple-500/30 rounded-full px-6 py-3 text-purple-300 text-sm"> <Sparkles className="w-4 h-4" /> <span>2028 Future Technology</span> </div> <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight"> <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent"> Futuristic </span> <br /> <span className="text-white">Services</span> </h1> <p className="text-xl md:text-2xl text-purple-200 max-w-4xl mx-auto leading-relaxed"> Experience the future of technology with our cutting-edge 2028 services. From AI consciousness to quantum internet, we're building tomorrow's solutions today. </p> <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6"> <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-purple-500/25 flex items-center space-x-2" > <span>Get Started</span> <ArrowRight className="w-5 h-5" /> </a> <Link href="/revolutionary-2028-pricing" className="px-8 py-4 border border-purple-500/30 text-purple-300 rounded-xl hover:bg-purple-900/30 transition-all duration-300 flex items-center space-x-2" > <span>View Pricing</span> <DollarSign className="w-5 h-5" /> </a> </div> {
+
+className="space-y-8" > <div className="inline-flex items-center space-x-2 bg-purple-900/30 border border-purple-500/30 rounded-full px-6 py-3 text-purple-300 text-sm"> <Sparkles className="w-4 h-4" /> <span>2028 Future Technology</span> </div> <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight"> <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent"> Futuristic </span> <br /> <span className="text-white">Services</span> </h1> <p className="text-xl md:text-2xl text-purple-200 max-w-4xl mx-auto leading-relaxed"> Experience the future of technology with our cutting-edge 2028 services. From AI consciousness to quantum internet, we're building tomorrow's solutions today. </p> <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6"> <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-purple-500/25 flex items-center space-x-2" > <span>Get Started</span> <ArrowRight className="w-5 h-5" /> </a> <Link href="/revolutionary-2028-pricing" className="px-8 py-4 border border-purple-500/30 text-purple-300 rounded-xl hover:bg-purple-900/30 transition-all duration-300 flex items-center space-x-2" > <span>View Pricing</span> <DollarSign className="w-5 h-5" /> </a> </div> {
   /* Stats */ 
-}<div className="grid grid-cols-1 md:grid-cols-4 gap-8 pt-16"> <div className="text-center"> <div className="text-3xl font-bold text-purple-400">50+</div> <div className="text-purple-300">Innovative Services</div> </div> <div className="text-center"> <div className="text-3xl font-bold text-blue-400">99.9%</div> <div className="text-blue-300">Accuracy Rate</div> </div> <div className="text-center"> <div className="text-3xl font-bold text-pink-400">500+</div> <div className="text-pink-300">Happy Clients</div> </div> <div className="text-center"> <div className="text-3xl font-bold text-cyan-400">24/7</div> <div className="text-cyan-300">Support Available</div> </div> </div> </motion.div> </div> </section> {
+<div className="grid grid-cols-1 md:grid-cols-4 gap-8 pt-16"> <div className="text-center"> <div className="text-3xl font-bold text-purple-400">50+</div> <div className="text-purple-300">Innovative Services</div> </div> <div className="text-center"> <div className="text-3xl font-bold text-blue-400">99.9%</div> <div className="text-blue-300">Accuracy Rate</div> </div> <div className="text-center"> <div className="text-3xl font-bold text-pink-400">500+</div> <div className="text-pink-300">Happy Clients</div> </div> <div className="text-center"> <div className="text-3xl font-bold text-cyan-400">24/7</div> <div className="text-cyan-300">Support Available</div> </div> </div> </motion.div> </div> </section> {
   /* Services Categories */ 
-}<section className="py-20 bg-black/50"> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> <div className="text-center mb-16"> <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"> Explore Our <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Service Categories</span> </h2> <p className="text-xl text-purple-200 max-w-3xl mx-auto"> Discover our comprehensive range of futuristic services designed to transform your business and propel you into the future of technology. </p> </div> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> {
-  serviceCategories.map ( (category, index) => (<motion.div key= {
+<section className="py-20 bg-black/50"> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> <div className="text-center mb-16"> <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"> Explore Our <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Service Categories</span> </h2> <p className="text-xl text-purple-200 max-w-3xl mx-auto"> Discover our comprehensive range of futuristic services designed to transform your business and propel you into the future of technology. </p> </div> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> {
+  serviceCategories.map (category, index) => (<motion.div key= {
   category.title 
-}initial= {
-  {
+initial= {
   opacity: 0, y: 30 
-}
-}whileInView= {
-  {
+
+whileInView= {
   opacity: 1, y: 0 
-}
-}transition= {
-  {
+
+transition= {
     title: ' Autonomous & Mobility',
     description: 'Self-driving and mobility solutions',
     icon: Car,
     color: 'from-red-600 to-pink-600',
-    services: futuristic2028Services.filter(s => s.category.includes('Autonomous')).slice(0, 4)
+    services: futuristic2028Services.filter(s => s.category.includes('Autonomous').slice(0, 4)
   }
-],
+,
 export default function ServicesShowcase2028() {return (_<>
       <Head>
         <title>2028 Futuristic Services Showcase - Zion Tech Group</title>
@@ -79,9 +74,9 @@ export default function ServicesShowcase2028() {return (_<>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div,
-initial={_{ opacity: 0, y: 30}}
-            animate={_{ opacity: 1, y: 0}}
-            transition={_{ duration: 0.8}}
+initial={_{ opacity: 0, y: 30}
+            animate={_{ opacity: 1, y: 0}
+            transition={_{ duration: 0.8}
             className="space-y-8"
           >
             <div className="inline-flex items-center space-x-2 bg-purple-900/30 border border-purple-500/30 rounded-full px-6 py-3 text-purple-300 text-sm">
@@ -156,18 +151,18 @@ and propel you into the future of technology.
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {serviceCategories.map((category, index) => (
+            {serviceCategories.map(category, index) => (
               <motion.div,
 key={category.title}
-                initial={_{ opacity: 0, y: 30}}
-                whileInView={_{ opacity: 1, y: 0}}
-                transition={_{ duration: 0.6, delay: index * 0.1}}
-                viewport={_{ once: true}}
+                initial={_{ opacity: 0, y: 30}
+                whileInView={_{ opacity: 1, y: 0}
+                transition={_{ duration: 0.6, delay: index * 0.1}
+                viewport={_{ once: true}
                 className="group relative"
               >
                 <div className="relative p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl hover:border-purple-500/60 transition-all duration-300 hover:transform hover:scale-105">
                   <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-blue-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  
+
                   <div className="relative z-10">
                     <div className={_`w-16 h-16 bg-gradient-to-r ${category.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                       <category.icon className="w-8 h-8 text-white" />
@@ -182,7 +177,7 @@ key={category.title}
                           <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                           <span className="text-purple-200 text-sm">{service.name}</span>
                         </div>
-                      ))}
+                      )}
                     </div>
 
                     <Link,
@@ -195,7 +190,7 @@ href={_`/services#${category.title.toLowerCase().replace(/[^a-z0-9]/g, _'-')}`}
                   </div>
                 </div>
               </motion.div>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -216,15 +211,15 @@ href={_`/services#${category.title.toLowerCase().replace(/[^a-z0-9]/g, _'-')}`}
             {futuristic2028Services.slice(0, 6).map(_(service, index) => (
               <motion.div,
 key={service.id}
-                initial={_{ opacity: 0, x: index % 2 === 0 ? -30 : 30}}
-                whileInView={_{ opacity: 1, x: 0}}
-                transition={_{ duration: 0.6, delay: index * 0.1}}
-                viewport={_{ once: true}}
+                initial={_{ opacity: 0, x: index % 2 = = 0 ? -30 : 30}
+                whileInView={_{ opacity: 1, x: 0}
+                transition={_{ duration: 0.6, delay: index * 0.1}
+                viewport={_{ once: true}
                 className="group relative"
               >
                 <div className="relative p-8 bg-black/40 backdrop-blur-sm border border-purple-500/30 rounded-2xl hover:border-purple-500/60 transition-all duration-300 hover:transform hover:scale-105">
                   <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-blue-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  
+
                   <div className="relative z-10">
                     <div className="flex items-start justify-between mb-4">
                       <div className="text-4xl">{service.icon}</div>
@@ -266,7 +261,7 @@ href={service.link}
                   </div>
                 </div>
               </motion.div>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -285,10 +280,10 @@ href={service.link}
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div,
-initial={_{ opacity: 0, y: 30}}
-              whileInView={_{ opacity: 1, y: 0}}
-              transition={_{ duration: 0.6}}
-              viewport={_{ once: true}}
+initial={_{ opacity: 0, y: 30}
+              whileInView={_{ opacity: 1, y: 0}
+              transition={_{ duration: 0.6}
+              viewport={_{ once: true}
               className="text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl"
             >
               <TrendingUp className="w-16 h-16 text-green-400 mx-auto mb-6" />
@@ -302,10 +297,10 @@ initial={_{ opacity: 0, y: 30}}
             </motion.div>
 
             <motion.div,
-initial={_{ opacity: 0, y: 30}}
-              whileInView={_{ opacity: 1, y: 0}}
-              transition={_{ duration: 0.6, delay: 0.2}}
-              viewport={_{ once: true}}
+initial={_{ opacity: 0, y: 30}
+              whileInView={_{ opacity: 1, y: 0}
+              transition={_{ duration: 0.6, delay: 0.2}
+              viewport={_{ once: true}
               className="text-center p-8 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border border-blue-500/30 rounded-2xl"
             >
               <DollarSign className="w-16 h-16 text-blue-400 mx-auto mb-6" />
@@ -319,10 +314,10 @@ initial={_{ opacity: 0, y: 30}}
             </motion.div>
 
             <motion.div,
-initial={_{ opacity: 0, y: 30}}
-              whileInView={_{ opacity: 1, y: 0}}
-              transition={_{ duration: 0.6, delay: 0.4}}
-              viewport={_{ once: true}}
+initial={_{ opacity: 0, y: 30}
+              whileInView={_{ opacity: 1, y: 0}
+              transition={_{ duration: 0.6, delay: 0.4}
+              viewport={_{ once: true}
               className="text-center p-8 bg-gradient-to-br from-pink-900/20 to-rose-900/20 border border-pink-500/30 rounded-2xl"
             >
               <Shield className="w-16 h-16 text-pink-400 mx-auto mb-6" />
@@ -342,10 +337,10 @@ and AI algorithms that competitors cannot replicate.
       <section className="py-20 bg-gradient-to-r from-purple-900/30 to-blue-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div,
-initial={_{ opacity: 0, y: 30}}
-            whileInView={_{ opacity: 1, y: 0}}
-            transition={_{ duration: 0.8}}
-            viewport={_{ once: true}}
+initial={_{ opacity: 0, y: 30}
+            whileInView={_{ opacity: 1, y: 0}
+            transition={_{ duration: 0.8}
+            viewport={_{ once: true}
             className="space-y-8"
           >
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">

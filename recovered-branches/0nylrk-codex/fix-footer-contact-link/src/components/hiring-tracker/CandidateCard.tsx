@@ -16,7 +16,7 @@ import {
   Calendar;
   AlertTriangle;
   BriefcaseIcon
-} from "lucide-react",
+ from "lucide-react",
 import {
 
   MessageSquare
@@ -26,13 +26,13 @@ import {
   Calendar
   AlertTriangle
   BriefcaseIcon
-} from "lucide-react";
+ from "lucide-react";
 import {
   DropdownMenu
   DropdownMenuContent
   DropdownMenuItem
   DropdownMenuTrigger
-} from "@/components/ui/dropdown-menu";
+ from "@/components/ui/dropdown-menu";
 import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge";
 
 import { toast } from "@/hooks/use-toast";
@@ -55,20 +55,20 @@ import {
   Calendar,
   AlertTriangle,
   BriefcaseIcon,
-} from './lucide-react';
+ from './lucide-react';
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from '@/components / ui / dropdown - menu';
+ from '@/components / ui / dropdown - menu';
 import { ScoreBadge  } from '@/components / jobs / applications / ScoreBadge';
 import { toast  } from '@/hooks / use - toast';
 import { HireConfirmationModal  } from './HireConfirmationModal';
 interface CandidateCardProps {
   application: JobApplication;
   index: number
-}
+
 export function CandidateCard({ application, index }: CandidateCardProps) {
   const [showNotes, setShowNotes] = useState(false);
   const [notes, setNotes] = useState(application.notes |"");
@@ -178,8 +178,8 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
                 )}
               </div>
               {/* Match Score */}
-              {application && application.match_score !== null &&;
-                application && application.match_score !== undefined && (;
+              {application && application.match_score != null &&;
+                application && application.match_score != undefined && (;
                   <div className="mb-2">;
                     <ScoreBadge application={application} />;
                   </div>;
@@ -241,13 +241,13 @@ function CandidateCard() {
   const [show_notes, setShowNotes] = useState (false);
   const [notes, set_notes] = useState (application.notes || "");
   const [showHireModal, setShowHireModal] = useState (false);
-;
+
   // Check if application is stalled (no activity for 7 days);
   const is_stalled =;
     application.updated_at &&;
     new Date (application.updated_at).get_time () <;
       Date.now () - 7 * 24 * 60 * 60 * 1000;
-;
+
   const handleSaveNotes = () =>: any {
     // Here you would save the notes to the database;
     // For now, we'll just show a toast;
@@ -257,7 +257,7 @@ function CandidateCard() {
     });
     setShowNotes (false);
   }
-;
+
   const handleHireConfirmed = () =>: any {
     // Hiring process completed via the modal;
     toast ({
@@ -265,7 +265,7 @@ function CandidateCard() {
       description: "Offer has been sent to the talent.",
     });
   }
-;
+
   return (
     <>;
       <Draggable draggable_id={application.id} index={index}>;
@@ -346,8 +346,8 @@ function CandidateCard() {
                   </div>)}
               </div>;
               {/* Match Score */}
-              {application.match_score !== null &&;
-                application.match_score !== undefined && (
+              {application.match_score != null &&;
+                application.match_score != undefined && (
                   <div className="mb - 2">;
                     <ScoreBadge application={application} />;
                   </div>)}
@@ -407,4 +407,3 @@ function CandidateCard() {
       />;
     </>;
   );
-}

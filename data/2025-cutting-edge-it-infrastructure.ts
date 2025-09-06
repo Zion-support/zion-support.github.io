@@ -1,8 +1,7 @@
 import { ServiceVariant } from '../types/service-variants';
 
-
 import { ServiceVariant } from '../types / service - variants';
-;
+
   id: string;
   name: string;
   tagline: string;
@@ -560,11 +559,11 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     marketSize: '$67.8B edge computing market', growthRate: '37% annual growth',
     variant: 'edge-computing-enterprise',
     contactInfo: {
-      
+
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    
+
     },
     realImplementation: true,
     implementationDetails: 'Global edge computing platform with AI optimization, real-time monitoring, and intelligent resource management across distributed locations.',
@@ -599,11 +598,11 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     marketSize: '$8.2B DevOps market', growthRate: '24% annual growth',
     variant: 'autonomous-devops-enterprise',
     contactInfo: {
-      
+
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    
+
     },
     realImplementation: true,
     implementationDetails: 'AI-powered DevOps platform with autonomous automation, intelligent monitoring, and comprehensive development workflow management.',
@@ -638,11 +637,11 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     marketSize: '$19.9B blockchain market', growthRate: '87% annual growth',
     variant: 'blockchain-enterprise',
     contactInfo: {
-      
+
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    
+
     },
     realImplementation: true,
     implementationDetails: 'Enterprise blockchain platform with AI-powered consensus, scalable infrastructure, and comprehensive business integration capabilities.',
@@ -693,5 +692,4 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     rating: 4.9,
     reviews: 4;
   }
-];
 ;

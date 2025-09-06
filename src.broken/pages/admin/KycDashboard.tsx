@@ -6,5 +6,3 @@ export function KycDashboard() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

@@ -6,7 +6,7 @@ import {
   Tooltip
   TooltipContent
   TooltipTrigger
-} from '@/components/ui/tooltip'
+ from '@/components/ui/tooltip'
 
 interface DisputeStatusBadgeProps {
   status: 'open' | 'under_review' | 'resolved' | 'closed'
@@ -21,7 +21,7 @@ import {;
   Tooltip,;
   TooltipContent,;
   TooltipTrigger,;
-} from '@/components/ui/tooltip';
+ from '@/components/ui/tooltip';
 
 interface DisputeStatusBadgeProps {;
   status: 'open' | 'under_review' | 'resolved' | 'closed';
@@ -38,7 +38,7 @@ import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from '@/components / ui / tooltip';
+ from '@/components / ui / tooltip';
 interface DisputeStatusBadgeProps {
   status: 'open' | 'under_review' | 'resolved' | 'closed';
 export /**
@@ -77,7 +77,7 @@ function DisputeStatusBadge() {
       </TooltipContent>
     </Tooltip>
   )
-}
+
         </Badge>;
       </TooltipTrigger>;
       <TooltipContent>;
@@ -85,8 +85,5 @@ function DisputeStatusBadge() {
       </TooltipContent>;
     </Tooltip>;
   );
-}
-
 
     </Tooltip>);
-}

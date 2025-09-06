@@ -14,7 +14,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { toast } from "sonner",;
 import { supabase } from "@/integrations/supabase/client",;
 import { Switch } from "@/components/ui/switch",;
-;
+
 export default function TenantOnboarding() {;
   const { user } = useAuth(),;
   const [activeTab, setActiveTab] = useState("company"),;
@@ -30,42 +30,34 @@ export default function TenantOnboarding() {;
     custom_domain:"",;
     is_co_branded:true;
   }),;
-  ;
   // Check if user has admin role;
-  const isAdmin = user?.role === "admin",;
-  ;
+  const isAdmin = user?.role = = "admin",;
   if (!isAdmin) {;
     return <Navigate to="/unauthorized" />,;
   }
-;
+
   const handleInputChange = (e:React.ChangeEvent<HTMLInputElement>) => {;
     const { name, value } = e.target,;
-    setFormData(prev => ({ ...prev, [name]:value })),;
+    setFormData(prev => ({ ...prev, [name]:value }),;
   },;
-  ;
   const handleSelectChange = (name:string, value:string) => {;
-    setFormData(prev => ({ ...prev, [name]:value })),;
+    setFormData(prev => ({ ...prev, [name]:value }),;
   },;
-  ;
   const handleSwitchChange = (name:string, checked:boolean) => {;
-    setFormData(prev => ({ ...prev, [name]:checked })),;
+    setFormData(prev => ({ ...prev, [name]:checked }),;
   },;
-  ;
   const handleSubmit = async (e:React.FormEvent) => {;
     e.preventDefault(),;
     setIsSubmitting(true),;
-    ;
     try {;
       // Generate subdomain if not provided;
       const subdomain = formData.subdomain || formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g, ''),;
-      ;
       // Create landing page copy;
       const landingPageCopy = {;
         headline:"AI Hiring Assistant",;
         subtitle:`Find the best talent for your ${formData.industry || "company"}`,;
         cta:"Get Started";
       },;
-      ;
       // Submit to Supabase;
       const { data, error } = await supabase;
         .from('whitelabel_tenants');
@@ -84,13 +76,10 @@ export default function TenantOnboarding() {;
         });
         .select('id, brand_name, subdomain');
         .single(),;
-      ;
       if (error) throw error,;
-      ;
       toast.success("Tenant created successfully!", {;
         description:`${data.brand_name} is now available at ${data.subdomain}.ziontechmarketplace.com`;
       }),;
-      ;
       // Reset form;
       setFormData({;
         brand_name:"",;
@@ -103,7 +92,6 @@ export default function TenantOnboarding() {;
         custom_domain:"",;
         is_co_branded:true;
       }),;
-      ;
     } catch (error:any) {;
       console.error("Error creating tenant:", error),;
       toast.error("Failed to create tenant", { ;
@@ -111,9 +99,8 @@ export default function TenantOnboarding() {;
       }),;
     } finally {;
       setIsSubmitting(false),;
-    }
-  },;
-;
+    },;
+
   return (;
     <>;
       <SEO ;
@@ -129,7 +116,7 @@ export default function TenantOnboarding() {;
               Create a new white-label instance of Zion Hire AI for a company.;
             </p>;
           </div>;
-;
+
           <Card>;
             <CardHeader>;
               <CardTitle>New Tenant Setup</CardTitle>;
@@ -145,7 +132,6 @@ export default function TenantOnboarding() {;
                     <TabsTrigger value="branding">Branding</TabsTrigger>;
                     <TabsTrigger value="domain">Domain Setup</TabsTrigger>;
                   </TabsList>;
-                  ;
                   <TabsContent value="company" className="space-y-4">;
                     <div className="space-y-2">;
                       <Label htmlFor="brand_name">Company Name</Label>;
@@ -158,7 +144,6 @@ export default function TenantOnboarding() {;
                         required;
                       />;
                     </div>;
-                    ;
                     <div className="space-y-2">;
                       <Label htmlFor="industry">Industry</Label>;
                       <Select ;
@@ -181,7 +166,6 @@ export default function TenantOnboarding() {;
                         </SelectContent>;
                       </Select>;
                     </div>;
-                    ;
                     <div className="space-y-2">;
                       <Label htmlFor="company_size">Company Size</Label>;
                       <Select ;
@@ -203,7 +187,6 @@ export default function TenantOnboarding() {;
                       </Select>;
                     </div>;
                   </TabsContent>;
-                  ;
                   <TabsContent value="branding" className="space-y-4">;
                     <div className="space-y-2">;
                       <Label htmlFor="logo_url">Logo URL</Label>;
@@ -218,7 +201,6 @@ export default function TenantOnboarding() {;
                         Enter a direct URL to your logo image (SVG or PNG with transparent background recommended);
                       </p>;
                     </div>;
-                    ;
                     <div className="space-y-2">;
                       <Label htmlFor="primary_color">Primary Brand Color</Label>;
                       <div className="flex items-center gap-2">;
@@ -238,7 +220,6 @@ export default function TenantOnboarding() {;
                         />;
                       </div>;
                     </div>;
-                    ;
                     <div className="space-y-2">;
                       <Label htmlFor="theme_preset">Theme Preset</Label>;
                       <Select ;
@@ -258,7 +239,6 @@ export default function TenantOnboarding() {;
                         </SelectContent>;
                       </Select>;
                     </div>;
-                    ;
                     <div className="flex items-center justify-between">;
                       <div className="space-y-0.5">;
                         <Label htmlFor="is_co_branded">Co-branding</Label>;
@@ -273,7 +253,6 @@ export default function TenantOnboarding() {;
                       />;
                     </div>;
                   </TabsContent>;
-                  ;
                   <TabsContent value="domain" className="space-y-4">;
                     <div className="space-y-2">;
                       <Label htmlFor="subdomain">Subdomain</Label>;
@@ -294,7 +273,6 @@ export default function TenantOnboarding() {;
                         Leave blank to auto-generate from company name;
                       </p>;
                     </div>;
-                    ;
                     <div className="space-y-2">;
                       <Label htmlFor="custom_domain">Custom Domain (Optional)</Label>;
                       <Input;
@@ -310,7 +288,6 @@ export default function TenantOnboarding() {;
                     </div>;
                   </TabsContent>;
                 </Tabs>;
-                ;
                 <div className="flex justify-end space-x-2">;
                   <Button type="button" variant="outline" onClick={() => window.history.back()}>;
                     Cancel;
@@ -336,44 +313,43 @@ company size: "";
 industry: "";
 custom domain: "";
 is co branded: true 
-});
-//Check if user has admin role 
-}const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+);
+/Check if user has admin role 
+const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
   const {
   name, value 
-}= e.target;
+= e.target;
 setFormData (prev => ({
   ...prev, [name]: value 
-}) ) 
-};
+) 
+;
 const handleSelectChange = (name: string, value: string) => {
   setFormData (prev => ({
   ...prev, [name]: value 
-}) ) 
-};
+) 
+;
 const handleSwitchChange = (name: string, checked: boolean) => {
   setFormData (prev => ({
   ...prev, [name]: checked 
-}) ) 
-};
+) 
+;
 const handleSubmit = async (e: React.FormEvent) => {
   e.preventDefault ();
 setIsSubmitting (true);
 try {
   //Generate subdomain if not provided const subdomain = formData.subdomain || formData.brand name.toLowerCase () .replace (/[^a-z0-9]/g, '');
-//Create landing page copy const landingPageCopy = {
+/Create landing page copy const landingPageCopy = {
   cta: "Get Started" 
-};
+;
 data, error 
-}= await supabase .from ('whitelabel tenants') .insert ({
+= await supabase .from ('whitelabel tenants') .insert ({
   brand name: formData.brand name, subdomain: subdomain, custom domain: formData.custom domain || null, primary color: formData.primary color, logo url: formData.logo url || null, theme preset: formData.theme preset, landing page copy: landingPageCopy, is active: true, account manager id: user.id, dns verified: false, email template override: null 
-}) .select ('id, brand name, subdomain') .single ();
+) .select ('id, brand name, subdomain') .single ();
 if (error) throw error;
 description: error.message 
-}) 
-}finally {
+) 
+finally {
   setIsSubmitting (false) 
-}
-};
-Tenant Onboarding - Zion AI Marketplace" description="Onboard a new white-label tenant to the Zion AI Marketplace platform." /> <Header /> <main className="flex-1 container max-w-4xl mx-auto py-10 px-4 sm:px-6 lg:px-8" > <div className="flex flex-col space-y-6" > <div> <h1 className="text-3xl font-bold tracking-tight" >Tenant Onboarding</h1> <p className="text-muted-foreground mt-2" > Create a new white-label instance of Zion Hire AI for a company. </p> </div> <Card> <CardHeader> <CardTitle>New Tenant Setup</CardTitle> <CardDescription> Configure the branding and details for the new white-label tenant. </CardDescription> </CardHeader> <CardContent> </TabsList> <TabsContent value="company" className="space-y-4" > <div className="space-y-2" > <Label htmlFor="brand name" >Company Name</Label> <Input required /> </div> <div className="space-y-2" > <Label htmlFor="industry" >Industry</Label> <Select > <SelectTrigger> <SelectValue placeholder="Select industry" /> </SelectTrigger> <SelectContent> <SelectItem value="technology" >Technology</SelectItem> <SelectItem value="healthcare" >Healthcare</SelectItem> <SelectItem value="finance" >Finance</SelectItem> <SelectItem value="education" >Education</SelectItem> <SelectItem value="retail" >Retail</SelectItem> <SelectItem value="manufacturing" >Manufacturing</SelectItem> <SelectItem value="services" >Professional Services</SelectItem> <SelectItem value="other" >Other</SelectItem> </SelectContent> </Select> </div> <div className="space-y-2" > <Label htmlFor="company size" >Company Size</Label> <Select > <SelectTrigger> <SelectValue placeholder="Select company size" /> </SelectTrigger> <SelectContent> <SelectItem value="1-10" >1-10 employees</SelectItem> <SelectItem value="11-50" >11-50 employees</SelectItem> <SelectItem value="51-200" >51-200 employees</SelectItem> <SelectItem value="201-500" >201-500 employees</SelectItem> <SelectItem value="501-1000" >501-1000 employees</SelectItem> <SelectItem value="1000+" >1000+ employees</SelectItem> </SelectContent> </Select> </div> </TabsContent> </p> </div> <div className="space-y-2" > <Label htmlFor="primary color" >Primary Brand Color</Label> <div className="flex items-center gap-2" > <Input /> </div> </div> <div className="space-y-2" > <Label htmlFor="theme preset" >Theme Preset</Label> <Select > <SelectTrigger> <SelectValue placeholder="Select theme" /> </SelectTrigger> <SelectContent> <SelectItem value="light" >Light</SelectItem> <SelectItem value="dark" >Dark</SelectItem> <SelectItem value="corporate" >Corporate</SelectItem> <SelectItem value="startup" >Startup</SelectItem> <SelectItem value="neon" >Neon</SelectItem> </SelectContent> </Select> </div> <div className="flex items-center justify-between" > <div className="space-y-0.5" > <Label htmlFor="is co branded" >Co-branding</Label> <p className="text-xs text-muted-foreground" > Show "Powered by Zion AI" in the footer and elsewhere </p> </div> <Switch /> </div> </TabsContent> <TabsContent value="domain" className="space-y-4" > <div className="space-y-2" > <Label htmlFor="subdomain" >Subdomain</Label> <div className="flex items-center" > <Input /> <div className="bg-muted px-3 py-2 border border-l-0 border-input rounded-r-md text-muted-foreground" > .ziontechmarketplace.com </div> </div> <p className="text-xs text-muted-foreground" > Leave blank to auto-generate from company name </p> </div> <div className="space-y-2" > <Label htmlFor="custom domain" >Custom Domain (Optional) </Label> <Input /> <p className="text-xs text-muted-foreground" > If you want to use your own domain, enter it here. You'll need to configure DNS records. </p> </div> </TabsContent> </Tabs> </Button> </div> </form> </CardContent> </Card> </div> </main> <Footer /> </>) 
-}
+
+;
+Tenant Onboarding - Zion AI Marketplace" description="Onboard a new white-label tenant to the Zion AI Marketplace platform." /> <Header /> <main className="flex-1 container max-w-4xl mx-auto py-10 px-4 sm:px-6 lg:px-8" > <div className="flex flex-col space-y-6" > <div> <h1 className="text-3xl font-bold tracking-tight" >Tenant Onboarding</h1> <p className="text-muted-foreground mt-2" > Create a new white-label instance of Zion Hire AI for a company. </p> </div> <Card> <CardHeader> <CardTitle>New Tenant Setup</CardTitle> <CardDescription> Configure the branding and details for the new white-label tenant. </CardDescription> </CardHeader> <CardContent></TabsList> <TabsContent value="company" className="space-y-4" > <div className="space-y-2" > <Label htmlFor="brand name" >Company Name</Label> <Input required /> </div> <div className="space-y-2" > <Label htmlFor="industry" >Industry</Label> <Select > <SelectTrigger> <SelectValue placeholder="Select industry" /> </SelectTrigger> <SelectContent> <SelectItem value="technology" >Technology</SelectItem> <SelectItem value="healthcare" >Healthcare</SelectItem> <SelectItem value="finance" >Finance</SelectItem> <SelectItem value="education" >Education</SelectItem> <SelectItem value="retail" >Retail</SelectItem> <SelectItem value="manufacturing" >Manufacturing</SelectItem> <SelectItem value="services" >Professional Services</SelectItem> <SelectItem value="other" >Other</SelectItem> </SelectContent> </Select> </div> <div className="space-y-2" > <Label htmlFor="company size" >Company Size</Label> <Select > <SelectTrigger> <SelectValue placeholder="Select company size" /> </SelectTrigger> <SelectContent> <SelectItem value="1-10" >1-10 employees</SelectItem> <SelectItem value="11-50" >11-50 employees</SelectItem> <SelectItem value="51-200" >51-200 employees</SelectItem> <SelectItem value="201-500" >201-500 employees</SelectItem> <SelectItem value="501-1000" >501-1000 employees</SelectItem> <SelectItem value="1000+" >1000+ employees</SelectItem> </SelectContent> </Select> </div> </TabsContent> </p> </div> <div className="space-y-2" > <Label htmlFor="primary color" >Primary Brand Color</Label> <div className="flex items-center gap-2" > <Input /> </div> </div> <div className="space-y-2" > <Label htmlFor="theme preset" >Theme Preset</Label> <Select > <SelectTrigger> <SelectValue placeholder="Select theme" /> </SelectTrigger> <SelectContent> <SelectItem value="light" >Light</SelectItem> <SelectItem value="dark" >Dark</SelectItem> <SelectItem value="corporate" >Corporate</SelectItem> <SelectItem value="startup" >Startup</SelectItem> <SelectItem value="neon" >Neon</SelectItem> </SelectContent> </Select> </div> <div className="flex items-center justify-between" > <div className="space-y-0.5" > <Label htmlFor="is co branded" >Co-branding</Label> <p className="text-xs text-muted-foreground" > Show "Powered by Zion AI" in the footer and elsewhere </p> </div> <Switch /> </div> </TabsContent> <TabsContent value="domain" className="space-y-4" > <div className="space-y-2" > <Label htmlFor="subdomain" >Subdomain</Label> <div className="flex items-center" > <Input /> <div className="bg-muted px-3 py-2 border border-l-0 border-input rounded-r-md text-muted-foreground" > .ziontechmarketplace.com </div> </div> <p className="text-xs text-muted-foreground" > Leave blank to auto-generate from company name </p> </div> <div className="space-y-2" > <Label htmlFor="custom domain" >Custom Domain (Optional) </Label> <Input /> <p className="text-xs text-muted-foreground" > If you want to use your own domain, enter it here. You'll need to configure DNS records. </p> </div> </TabsContent> </Tabs> </Button> </div> </form> </CardContent> </Card> </div> </main> <Footer /> </>) 

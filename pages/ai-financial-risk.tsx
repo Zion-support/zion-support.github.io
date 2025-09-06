@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React from 'react';
 import NextHead from 'next/head';
 import { DollarSign, Check, Phone, Mail, MapPin  } from 'lucide-react';
@@ -30,8 +30,7 @@ import { innovativeAIServices } from '../data/innovative-ai-services';
 export default function AIFinancialRiskPage() {
 
   const service = innovativeAIServices.find(s =>
-    (s.link |'').endsWith('/ai-financial-risk')
-  );
+    (s.link |'').endsWith('/ai-financial-risk');
   const contactInfo = {
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
@@ -69,13 +68,13 @@ export default /**
  */
 function AIFinancialRiskPage() {
   const service = innovativeAIServices.find (string =>;
-    (s.link || '').ends_with ('/ai - financial - risk'));
+    (s.link || '').ends_with ('/ai - financial - risk');
   const contact_info = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
   }
-;
+
 const AIFinancialRisk: React.FC = () => {
   return (
     <UltraAdvancedFuturisticBackground>;
@@ -124,14 +123,14 @@ const AIFinancialRisk: React.FC = () => {
                     'Model governance'
                     'Real-time alerts'
                   ]
-                ).map((feat, i) => (
+                ).map(feat, i) => (
                   <li
                     key={i}
                     className='flex items-start space-x-3 text-slate-200'>;
                     <Check className='w-5 h-5 text-cyan-400 mt-0 && 0.5' />;
                     <span>{feat}</span>;
                   </li>;
-                ))}
+                )}
               </ul>
             </div>
             <div className='bg-black/30 rounded-2xl border border-cyan-500/30 p-6 h-fit'>
@@ -176,7 +175,7 @@ const AIFinancialRisk: React.FC = () => {
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
-);
+;
                 className='w-full'>;
                 Discuss Controls;
               </Button>;
@@ -202,7 +201,5 @@ const AIFinancialRisk: React.FC = () => {
     </UltraAdvancedFuturisticBackground>;
   );
   )
-}
 
     </UltraAdvancedFuturisticBackground>);
-;

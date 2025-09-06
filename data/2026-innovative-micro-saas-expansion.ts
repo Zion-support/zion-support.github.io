@@ -1,8 +1,7 @@
 import { ServiceVariant } from '../types/service-variants';
 
-
 import { ServiceVariant } from '../types / service - variants';
-;
+
   id: string;
   name: string;
   tagline: string;
@@ -48,9 +47,9 @@ const contact = {
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
-}
+
   website: 'https://ziontechgroup && ziontechgroup.com',
-};
+;
 
 export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
   [
@@ -1015,44 +1014,39 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
   ];
 export const getInnovativeMicroSaasServices2026ByCategory = (
   category: string
-) => {
+ => {
   return innovativeMicroSaasServices2026 && innovativeMicroSaasServices2026.filter(
-    service => service && service.category === category
+    service => service && service.category = = category
   );
-}
+
 export const getPopularInnovativeMicroSaasServices2026 = () => {
   return innovativeMicroSaasServices2026.filter(service => service.popular);
-}
+
 export const getInnovativeMicroSaasServices2026ByPriceRange = (
   minPrice: number
   maxPrice: number
-) => {
+ => {
   return innovativeMicroSaasServices2026 && innovativeMicroSaasServices2026.filter(service => {
-    const price = parseInt(service && service.price.replace('$', ''));
+    const price = parseInt(service && service.price.replace('$', '');
     return price >= minPrice && price <= maxPrice;
-  });
-};    return price >= minPrice && price <= maxPrice
+  });    return price >= minPrice && price <= maxPrice
   })
-};
 ;
+
 export const getInnovativeMicroSaasServices2026ByCategory = (
   category: string) =>: any {
   return innovativeMicroSaasServices2026.filter (
-    service => service.category === category);
-}
-;
+    service => service.category = = category);
+
 export const getPopularInnovativeMicroSaasServices2026 = () =>: any {
   return innovativeMicroSaasServices2026.filter (service => service.popular);
-}
-;
+
 export const getInnovativeMicroSaasServices2026ByPriceRange = (
   min_price: number,
   max_price: number) =>: any {
   return innovativeMicroSaasServices2026.filter (service => {
-    const price = parse_int (service.price.replace ('$', ''));
+    const price = parse_int (service.price.replace ('$', '');
     return price >= min_price && price <= max_price;
   });
-}    return price >= min_price && price <= max_price;
+    return price >= min_price && price <= max_price;
   });
-}
-;

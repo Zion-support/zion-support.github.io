@@ -3,19 +3,19 @@ import Head from 'next/head',;
 import { motion } from 'framer-motion',;
 import { ;
   ExternalLink;
-} from 'lucide-react',;
+ from 'lucide-react',;
 import EnhancedNavigation from '../components/EnhancedNavigation',;
 import EnhancedFooter from '../components/EnhancedFooter',;
 import EnhancedServicesShowcase from '../components/EnhancedServicesShowcase',;
 import EnhancedTestimonialsSection from '../components/EnhancedTestimonialsSection',;
-;
+
 export default function HomePage() {;
   const [isVisible, setIsVisible] = useState(false),;
-;
-  useEffect(() => {;
+
+  useEffect() => {;
     setIsVisible(true),;
   }, []),;
-;
+
   const services = [;
     {;
       title:"AI Business Intelligence",;
@@ -43,24 +43,20 @@ export default function HomePage() {;
         <meta name="keywords" content="AI consciousness, quantum computing, space mining, biotechnology, 2029 technology, revolutionary services, Zion Tech Group" />;
         <meta name="viewport" content="width=device-width, initial-scale=1" />;
         <link rel="icon" href="/favicon.ico" />;
-        ;
         {/* Open Graph */}
         <meta property="og:title" content="Zion Tech Group - 2029 Revolutionary Technology Services" />;
         <meta property="og:description" content="Leading provider of revolutionary 2029 technology services including AI consciousness, quantum computing, space mining, and advanced biotechnology." />;
         <meta property="og:type" content="website" />;
         <meta property="og:url" content="https://ziontechgroup.com" />;
         <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />;
-        ;
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />;
         <meta name="twitter:title" content="Zion Tech Group - 2029 Revolutionary Technology Services" />;
         <meta name="twitter:description" content="Leading provider of revolutionary 2029 technology services including AI consciousness, quantum computing, space mining, and advanced biotechnology." />;
         <meta name="twitter:image" content="https://ziontechgroup.com/twitter-image.jpg" />;
-        ;
         {/* Additional Meta Tags */}
         <meta name="theme-color" content="#8b5cf6" />;
         <link rel="canonical" href="https://ziontechgroup.com" />;
-        ;
         {/* Structured Data */}
         <script type="application/ld+json">;
           {JSON.stringify({;
@@ -83,8 +79,7 @@ export default function HomePage() {;
               "addressRegion":"DE",;
               "postalCode":"19709",;
               "addressCountry":"US";
-            }
-          })}
+            })}
         </script>;
       title:"AI Customer Experience",;
       description:"Deliver personalized customer experiences with intelligent automation",;
@@ -95,14 +90,14 @@ export default function HomePage() {;
       features:["Chatbot automation", "Personalized recommendations", "Customer journey optimization"];
     }
   ],;
-;
+
   const stats = [;
     { number:"500+", label:"Projects Delivered", icon:"" },;
     { number:"50+", label:"Enterprise Clients", icon:"" },;
     { number:"99.9%", label:"Uptime Guarantee", icon:"" },;
     { number:"24/7", label:"Support Available", icon:"" }
   ],;
-;
+
   const features = [;
     {;
       title:"Cutting-Edge Technology",;
@@ -125,7 +120,7 @@ export default function HomePage() {;
       icon:"";
     }
   ],;
-;
+
   return (;
     <>;
       <Head>;
@@ -135,23 +130,22 @@ export default function HomePage() {;
         <meta name="viewport" content="width=device-width, initial-scale=1" />;
         <link rel="icon" href="/favicon.ico" />;
       </Head>;
-;
+
       <UltraFuturisticBackground2029>;
         {/* Navigation */}
         <UltraFuturisticNavigation2029 />;
-;
+
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">;
         {/* Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900" />;
-        <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />;
-        ;
+        <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0)]" />;
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">;
           <motion.div;
-            initial={{ opacity:0, y:30 }}
-            animate={{ opacity:isVisible ? 1 :0, y:isVisible ? 0 :30 }}
-            transition={{ duration:0.8 }}
+            initial={ opacity:0, y:30 }
+            animate={ opacity:isVisible ? 1 :0, y:isVisible ? 0 :30 }
+            transition={ duration:0.8 }
             className="mb-8";
           >;
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent">;
@@ -179,12 +173,12 @@ export default function HomePage() {;
               </a>;
             </div>;
           </motion.div>;
-;
+
           {/* Trust Indicators */}
           <motion.div;
-            initial={{ opacity:0, y:20 }}
-            animate={{ opacity:isVisible ? 1 :0, y:isVisible ? 0 :20 }}
-            transition={{ duration:0.8, delay:0.2 }}
+            initial={ opacity:0, y:20 }
+            animate={ opacity:isVisible ? 1 :0, y:isVisible ? 0 :20 }
+            transition={ duration:0.8, delay:0.2 }
             className="flex flex-wrap justify-center items-center gap-8 text-white/60 text-sm";
           >;
             <span>Trusted by Fortune 500 companies</span>;
@@ -194,7 +188,7 @@ export default function HomePage() {;
             <span>24/7 Enterprise Support</span>;
           </motion.div>;
         </div>;
-;
+
         {/* Floating Elements */}
         <div className="absolute inset-0 pointer-events-none">;
           <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-400 rounded-full animate-pulse" />;
@@ -202,15 +196,15 @@ export default function HomePage() {;
           <div className="absolute bottom-1/4 left-1/3 w-2 h-2 bg-purple-400 rounded-full animate-pulse delay-2000" />;
         </div>;
       </section>;
-;
+
       {/* Features Section */}
       <section className="py-20 px-6 bg-gradient-to-b from-slate-900 to-slate-800">;
         <div className="max-w-7xl mx-auto">;
           <motion.div;
-            initial={{ opacity:0, y:30 }}
-            whileInView={{ opacity:1, y:0 }}
-            transition={{ duration:0.8 }}
-            viewport={{ once:true }}
+            initial={ opacity:0, y:30 }
+            whileInView={ opacity:1, y:0 }
+            transition={ duration:0.8 }
+            viewport={ once:true }
             className="text-center mb-16";
           >;
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">;
@@ -220,34 +214,34 @@ export default function HomePage() {;
               We combine cutting-edge technology with proven business expertise to deliver solutions that drive real results.;
             </p>;
           </motion.div>;
-;
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-            {features.map((feature, index) => (;
+            {features.map(feature, index) => (;
               <motion.div;
                 key={feature.title}
-                initial={{ opacity:0, y:30 }}
-                whileInView={{ opacity:1, y:0 }}
-                transition={{ duration:0.6, delay:index * 0.1 }}
-                viewport={{ once:true }}
+                initial={ opacity:0, y:30 }
+                whileInView={ opacity:1, y:0 }
+                transition={ duration:0.6, delay:index * 0.1 }
+                viewport={ once:true }
                 className="text-center p-6 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 border border-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300";
               >;
                 <div className="text-4xl mb-4">{feature.icon}</div>;
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>;
                 <p className="text-white/70">{feature.description}</p>;
               </motion.div>;
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Services Section */}
       <section className="py-20 px-6 bg-slate-800">;
         <div className="max-w-7xl mx-auto">;
           <motion.div;
-            initial={{ opacity:0, y:30 }}
-            whileInView={{ opacity:1, y:0 }}
-            transition={{ duration:0.8 }}
-            viewport={{ once:true }}
+            initial={ opacity:0, y:30 }
+            whileInView={ opacity:1, y:0 }
+            transition={ duration:0.8 }
+            viewport={ once:true }
             className="text-center mb-16";
           >;
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">;
@@ -257,44 +251,40 @@ export default function HomePage() {;
               Comprehensive technology solutions designed to accelerate your digital transformation journey.;
             </p>;
           </motion.div>;
-;
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {services.map((service, index) => (;
+            {services.map(service, index) => (;
               <motion.div;
                 key={service.title}
-                initial={{ opacity:0, y:30 }}
-                whileInView={{ opacity:1, y:0 }}
-                transition={{ duration:0.6, delay:index * 0.1 }}
-                viewport={{ once:true }}
+                initial={ opacity:0, y:30 }
+                whileInView={ opacity:1, y:0 }
+                transition={ duration:0.6, delay:index * 0.1 }
+                viewport={ once:true }
                 className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-8 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105";
               >;
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />;
-                ;
                 <div className="relative z-10">;
                   <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} p-4 mb-6 flex items-center justify-center`}>;
                     <span className="text-3xl">{service.icon}</span>;
                   </div>;
-                  ;
                   <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>;
                   <p className="text-white/70 mb-6 leading-relaxed">{service.description}</p>;
-                  ;
                   <div className="mb-6">;
                     <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>;
                     <div className="text-sm text-white/50">Starting price</div>;
                   </div>;
-                  ;
                   <div className="space-y-1">;
-                    {service.features.map((feature, idx) => (;
+                    {service.features.map(feature, idx) => (;
                       <div key={idx} className="flex items-center gap-2 text-xs text-white/70">;
                         <span className="text-cyan-400"></span>;
                         <span>{feature}</span>;
                       </div>;
-                    ))}
+                    )}
                   </div>;
                 </motion.div>;
-              ))}
+              )}
             </div>;
-;
+
             {/* Enhanced Service Showcase Components */}
             <Enhanced2026ServicesShowcase />;
             <Revolutionary2026ServiceShowcase />;
@@ -302,15 +292,15 @@ export default function HomePage() {;
             <Enhanced2029ServicesShowcase />;
           </div>;
         </section>;
-;
+
         {/* Service Categories Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">;
             <motion.div;
-              initial={{ opacity:0, y:20 }}
-              whileInView={{ opacity:1, y:0 }}
-              transition={{ duration:0.8 }}
-              viewport={{ once:true }}
+              initial={ opacity:0, y:20 }
+              whileInView={ opacity:1, y:0 }
+              transition={ duration:0.8 }
+              viewport={ once:true }
               className="text-center mb-16";
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
@@ -322,16 +312,16 @@ export default function HomePage() {;
                 Explore our extensive range of revolutionary technology services across all major categories;
               </p>;
             </motion.div>;
-;
+
             {/* Service Categories Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-              {Object.entries(servicesByCategory).slice(0, 9).map(([category, services], index) => (;
+              {Object.entries(servicesByCategory).slice(0, 9).map([category, services], index) => (;
                 <motion.div;
                   key={category}
-                  initial={{ opacity:0, y:20 }}
-                  whileInView={{ opacity:1, y:0 }}
-                  transition={{ duration:0.6, delay:index * 0.1 }}
-                  viewport={{ once:true }}
+                  initial={ opacity:0, y:20 }
+                  whileInView={ opacity:1, y:0 }
+                  transition={ duration:0.6, delay:index * 0.1 }
+                  viewport={ once:true }
                   className="group cursor-pointer";
                 >;
                   <div className="p-6 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 backdrop-blur-sm hover:transform hover:scale-105">;
@@ -346,20 +336,20 @@ export default function HomePage() {;
                     </div>;
                   </div>;
                 </motion.div>;
-              ))}
+              )}
             </div>;
           </div>;
         </section>;
-;
+
         {/* Why Choose Zion Tech Group Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">;
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-900/10 to-purple-900/10"></div>;
           <div className="max-w-7xl mx-auto relative z-10">;
             <motion.div;
-              initial={{ opacity:0, y:20 }}
-              whileInView={{ opacity:1, y:0 }}
-              transition={{ duration:0.8 }}
-              viewport={{ once:true }}
+              initial={ opacity:0, y:20 }
+              whileInView={ opacity:1, y:0 }
+              transition={ duration:0.8 }
+              viewport={ once:true }
               className="grid grid-cols-1 md:grid-cols-3 gap-8";
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
@@ -371,7 +361,7 @@ export default function HomePage() {;
                 We're not just another technology company. We're the architects of tomorrow, building solutions that will define the next decade of innovation.;
               </p>;
             </motion.div>;
-;
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
               {[;
                 {;
@@ -410,13 +400,13 @@ export default function HomePage() {;
                   description:"Our services deliver measurable ROI and transformative business outcomes for clients worldwide.",;
                   color:"from-pink-500 to-rose-500";
                 }
-              ].map((feature, index) => (;
+              ].map(feature, index) => (;
                 <motion.div;
                   key={feature.title}
-                  initial={{ opacity:0, y:30 }}
-                  whileInView={{ opacity:1, y:0 }}
-                  transition={{ duration:0.6, delay:index * 0.1 }}
-                  viewport={{ once:true }}
+                  initial={ opacity:0, y:30 }
+                  whileInView={ opacity:1, y:0 }
+                  transition={ duration:0.6, delay:index * 0.1 }
+                  viewport={ once:true }
                   className="group cursor-pointer";
                 >;
                   <div className="p-6 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 backdrop-blur-sm hover:transform hover:scale-105">;
@@ -427,19 +417,19 @@ export default function HomePage() {;
                     <p className="text-gray-300 leading-relaxed">{feature.description}</p>;
                   </div>;
                 </motion.div>;
-              ))}
+              )}
             </div>;
           </div>;
         </section>;
-;
+
         {/* Call to Action Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-4xl mx-auto text-center">;
             <motion.div;
-              initial={{ opacity:0, y:20 }}
-              whileInView={{ opacity:1, y:0 }}
-              transition={{ duration:0.8 }}
-              viewport={{ once:true }}
+              initial={ opacity:0, y:20 }
+              whileInView={ opacity:1, y:0 }
+              transition={ duration:0.8 }
+              viewport={ once:true }
             >;
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">;
                 Ready to Experience the;
@@ -448,7 +438,6 @@ export default function HomePage() {;
               <p className="text-xl text-gray-300 mb-8">;
                 Contact our team of technology experts to discuss how our revolutionary 2029 services can transform your business and propel you into the future.;
               </p>;
-              ;
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">;
                 <Link href="/contact">;
                   <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 transform hover:scale-105">;
@@ -464,7 +453,7 @@ export default function HomePage() {;
                 </Link>;
               </div>;
             </motion.div>;
-;
+
               {/* Contact Information */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-gray-300">;
                 <div className="flex items-center justify-center space-x-2">;
@@ -472,22 +461,22 @@ export default function HomePage() {;
                   <span>{contactInfo.mobile}</span>;
                 </div>;
               </motion.div>;
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Stats Section */}
       <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">;
         <div className="max-w-7xl mx-auto">;
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">;
-            {stats.map((stat, index) => (;
+            {stats.map(stat, index) => (;
               <motion.div;
                 key={stat.label}
-                initial={{ opacity:0, scale:0.8 }}
-                whileInView={{ opacity:1, scale:1 }}
-                transition={{ duration:0.6, delay:index * 0.1 }}
-                viewport={{ once:true }}
+                initial={ opacity:0, scale:0.8 }
+                whileInView={ opacity:1, scale:1 }
+                transition={ duration:0.6, delay:index * 0.1 }
+                viewport={ once:true }
                 className="text-center";
               >;
                 <div className="w-16 h-16 rounded-full bg-gradient-to-br from-cyan-500 to-blue-500 p-4 mx-auto mb-4 flex items-center justify-center">;
@@ -502,23 +491,23 @@ export default function HomePage() {;
           </div>;
         </section>;
       </main>;
-;
+
       {/* Enhanced Services Showcase */}
       <div id="services">;
         <EnhancedServicesShowcase />;
       </div>;
-;
+
       {/* Enhanced Testimonials Section */}
       <EnhancedTestimonialsSection />;
-;
+
       {/* Latest Updates Section */}
       <section className="py-20 px-6">;
         <div className="max-w-7xl mx-auto">;
           <motion.div;
-            initial={{ opacity:0, y:30 }}
-            whileInView={{ opacity:1, y:0 }}
-            transition={{ duration:0.8 }}
-            viewport={{ once:true }}
+            initial={ opacity:0, y:30 }
+            whileInView={ opacity:1, y:0 }
+            transition={ duration:0.8 }
+            viewport={ once:true }
             className="text-center mb-16";
           >;
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">;
@@ -528,7 +517,7 @@ export default function HomePage() {;
               Stay updated with our latest innovations and industry insights;
             </p>;
           </motion.div>;
-;
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
             <a href="/reports/updates/update-2025-08-15-0508" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105">;
               <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />;
@@ -557,15 +546,15 @@ export default function HomePage() {;
           </div>;
         </div>;
       </section>;
-;
+
       {/* CTA Section */}
       <section className="py-20 px-6 bg-gradient-to-r from-cyan-500/10 to-blue-500/10">;
         <div className="max-w-4xl mx-auto text-center">;
           <motion.div;
-            initial={{ opacity:0, y:30 }}
-            whileInView={{ opacity:1, y:0 }}
-            transition={{ duration:0.8 }}
-            viewport={{ once:true }}
+            initial={ opacity:0, y:30 }
+            whileInView={ opacity:1, y:0 }
+            transition={ duration:0.8 }
+            viewport={ once:true }
           >;
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">;
               Ready to Transform Your Business?;
@@ -590,8 +579,7 @@ export default function HomePage() {;
           </motion.div>;
         </div>;
       </section>;
-;
+
       <EnhancedFooter />;
     </>;
   );
-}

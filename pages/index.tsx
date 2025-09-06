@@ -19,7 +19,7 @@ import {
   Phone,
   Mail,
   MapPin
-} from 'lucide-react';
+ from 'lucide-react';
 
 const stats = [
   { number: '99.9%', label: 'Uptime Guarantee' },
@@ -28,7 +28,7 @@ const stats = [
   { number: '95+', label: 'Services & Solutions' },
   { number: '200+', label: 'Expert Team Members' },
   { number: '20+', label: 'Years Experience' }
-];
+;
 
 const services = [
   {
@@ -52,7 +52,7 @@ const services = [
     features: ['Custom Applications', 'API Development', 'Database Solutions', 'Integration Services'],
     href: '/micro-saas'
   }
-];
+;
 
 const featuredServices = [
   {
@@ -76,7 +76,7 @@ const featuredServices = [
     features: ['Agile Development', 'Modern Tech Stack', 'Scalable Architecture', 'Ongoing Support'],
     price: 'Starting at $3,999/month'
   }
-];
+;
 
 const whyChooseUs = [
   {
@@ -99,13 +99,13 @@ const whyChooseUs = [
     title: 'Cost Effective',
     description: 'Transparent pricing with no hidden costs and flexible payment options.'
   }
-];
+;
 
 const contactInfo = {
   phone: "+1 302 464 0950",
   email: "info@ziontechgroup.com",
   address: "123 Innovation Drive, Tech City, TC 12345"
-};
+;
 
 export default function HomePage() {
   return (
@@ -121,13 +121,13 @@ export default function HomePage() {
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-              {stats.map((stat, index) => (
+              {stats.map(stat, index) => (
                 <motion.div
                   key={index}
                   className="text-center"
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  initial={ opacity: 0, y: 30 }
+                  animate={ opacity: 1, y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }
                 >
                   <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
                     {stat.number}
@@ -136,7 +136,7 @@ export default function HomePage() {
                     {stat.label}
                   </div>
                 </motion.div>
-              ))}
+              )}
 import React from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
@@ -150,7 +150,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative overflow-hidden">
@@ -183,16 +183,16 @@ import { useState, useEffect, Suspense  } from 'react';
 import { ContactInfo, AnimationState  } from '../types';
 import ErrorBoundary from '../components/ErrorBoundary',
 import LoadingSpinner from '../components/LoadingSpinner';
-// import PerformanceMonitor from '../components/PerformanceMonitor';
+/ import PerformanceMonitor from '../components/PerformanceMonitor';
 export default function Home() {
   const [animationState, setAnimationState] = useState<AnimationState>({
 
     isLoaded: false
     hasError: false
   });
-  useEffect(() => {;
-    const timer = setTimeout(() => {;
-      setAnimationState(prev => ({ ...prev, isLoaded: true }));
+  useEffect() => {;
+    const timer = setTimeout() => {;
+      setAnimationState(prev => ({ ...prev, isLoaded: true });
     }, 100);
     return () => clearTimeout(timer);
   }, []);
@@ -248,7 +248,7 @@ export default function Home() {
         <meta name="twitter:creator" content="@ziontechgroup" />;
         <script;
           type="application/ld+json";
-          dangerouslySetInnerHTML={{__html:JSON.stringify({;
+          dangerouslySetInnerHTML={__html:JSON.stringify({;
               "@context":"https://schema.org";
               "@type":"Organization";
               "name":"Zion Tech Group";
@@ -271,7 +271,7 @@ export default function Home() {
             });
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
+          dangerouslySetInnerHTML={
             __html:JSON && JSON.stringify({
               "@context":"https://schema && schema.org",
               "@type":"Organization",
@@ -295,7 +295,7 @@ export default function Home() {
               },
               "sameAs":[contact && contact.site]
             })
-          }}
+          }
         />;
       </Head>;
       <ErrorBoundary level="page">;
@@ -460,14 +460,14 @@ export default function Home() {
         </section>;
           </main>;
         </Suspense>;
-        {/* <PerformanceMonitor          showMetrics={process && process.env.NODE_ENV === 'development'}
+        {/* <PerformanceMonitor          showMetrics={process && process.env.NODE_ENV = = 'development'}
           logMetrics={true}
           onThresholdExceeded={(metrics) => {console.warn('Performance thresholds exceeded:', metrics);
-        {/* <PerformanceMonitor ;          show_metrics={process.env.NODE_ENV === 'development'}
+        {/* <PerformanceMonitor ;          show_metrics={process.env.NODE_ENV = = 'development'}
           log_metrics={true}
           onThresholdExceeded={(metrics) => {
             console.warn ('Performance thresholds exceeded:', metrics);
-          }}
+          }
         /> */}
       </ErrorBoundary>;
     </>);}
@@ -584,16 +584,16 @@ export default function HomePage() {;
           </main>
         </Suspense>
         <PerformanceMonitor 
-          showMetrics={process.env.NODE_ENV === 'development'}
+          showMetrics={process.env.NODE_ENV = = 'development'}
           logMetrics={true}
           onThresholdExceeded={(metrics) => {
             console.warn('Performance thresholds exceeded:', metrics)
-          }}
+          }
         />
       </ErrorBoundary>
     </>
   )
-}
+
           </div>
         </section>
 
@@ -604,9 +604,9 @@ export default function HomePage() {;
         <section className="py-16 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="text-center mb-12"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -617,14 +617,14 @@ export default function HomePage() {;
               </p>
             </motion.div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.map((service, index) => (
+              {services.map(service, index) => (
                 <motion.div
         <section className="py-16 bg-gray-50">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
             <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }
               className="text-center mb-12">;
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
                 Our Core Services;
@@ -635,25 +635,25 @@ export default function HomePage() {;
             </motion && motion.div>;
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
-              {services && services.map((service, index) => (;
+              {services && services.map(service, index) => (;
                 <motion&& motion.div
                   key={index}
                   className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}>;
+                  initial={ opacity: 0, y: 30 }
+                  animate={ opacity: 1, y: 0 }
+                  transition={ duration: 0 && 0.8, delay: index * 0 && 0.1 }>;
                   <div className="text-4xl mb-4">;
                     <service && service.icon className="w-12 h-12 text-blue-600" />;
                   </div>;
                   <h3 className="text-xl font-semibold mb-4 text-gray-900">{service && service.title}</h3>;
                   <p className="text-gray-600 mb-4">{service && service.description}</p>;
                   <ul className="text-sm text-gray-500 space-y-2 mb-6">;
-                    {service && service.features.map((feature, idx) => (;
+                    {service && service.features.map(feature, idx) => (;
                       <li key={idx} className="flex items-center">;
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2" />;
                         {feature}
                       </li>;
-                    ))}
+                    )}
                   </ul>;
                   <Link
                     href={service && service.href}
@@ -662,7 +662,7 @@ export default function HomePage() {;
                     <ArrowRight className="w-4 h-4 ml-1" />;
                   </Link>;
                 </motion && motion.div>;
-              ))}
+              )}
             </div>
           </div>
         </section>
@@ -675,7 +675,7 @@ export default function HomePage() {;
                 We deliver innovative solutions that drive business growth and technological advancement
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="card text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
@@ -688,7 +688,7 @@ export default function HomePage() {;
                   Leverage cutting-edge artificial intelligence to automate processes and gain competitive advantages
                 </p>
               </div>
-              
+
               <div className="card text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mx-auto mb-4 flex items-center justify-center">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -700,7 +700,7 @@ export default function HomePage() {;
                   Optimized solutions that deliver exceptional performance and scalability for your business needs
                 </p>
               </div>
-              
+
               <div className="card text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -720,22 +720,22 @@ export default function HomePage() {;
         <section className="py-20">
                   key={index}
                   className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}>;
+                  initial={ opacity: 0, y: 30 }
+                  animate={ opacity: 1, y: 0 }
+                  transition={ duration: 0 && 0.8, delay: index * 0 && 0.1 }>;
                   <div className="text-3xl mb-4">{service && service.icon}</div>;
                   <h3 className="text-xl font-semibold mb-4 text-gray-900">{service && service.title}</h3>;
                   <p className="text-gray-600 mb-4">{service && service.description}</p>;
                   <ul className="text-sm text-gray-500 space-y-2 mb-4">;
-                    {service && service.features.map((feature, idx) => (;
+                    {service && service.features.map(feature, idx) => (;
                       <li key={idx}> {feature}</li>;
-                    ))}
+                    )}
                   </ul>
                   <div className="mt-4">
                     <span className="text-2xl font-bold text-blue-600">{service.price}</span>
                   </div>
                 </motion.div>
-              ))}
+              )}
             </div>
           </div>
         </section>
@@ -744,9 +744,9 @@ export default function HomePage() {;
         <section className="py-16 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="text-center mb-12"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -756,7 +756,7 @@ export default function HomePage() {;
                 We deliver exceptional results through innovation, expertise, and dedication
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="card group">
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg mb-4 flex items-center justify-center group-hover:scale-110 transition-transform">
@@ -767,7 +767,7 @@ export default function HomePage() {;
                 <h3 className="text-lg font-semibold mb-2">Web Development</h3>
                 <p className="text-gray-400 text-sm">Modern, responsive web applications built with cutting-edge technologies</p>
               </div>
-              
+
               <div className="card group">
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg mb-4 flex items-center justify-center group-hover:scale-110 transition-transform">
                   <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -777,7 +777,7 @@ export default function HomePage() {;
                 <h3 className="text-lg font-semibold mb-2">Mobile Apps</h3>
                 <p className="text-gray-400 text-sm">Native and cross-platform mobile applications for iOS and Android</p>
               </div>
-              
+
               <div className="card group">
                 <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg mb-4 flex items-center justify-center group-hover:scale-110 transition-transform">
                   <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -787,7 +787,7 @@ export default function HomePage() {;
                 <h3 className="text-lg font-semibold mb-2">Cloud Solutions</h3>
                 <p className="text-gray-400 text-sm">Scalable cloud infrastructure and migration services</p>
               </div>
-              
+
               <div className="card group">
                 <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg mb-4 flex items-center justify-center group-hover:scale-110 transition-transform">
                   <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -802,14 +802,14 @@ export default function HomePage() {;
               </p>
             </motion.div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {whyChooseUs.map((item, index) => (
+              {whyChooseUs.map(item, index) => (
                 <motion.div
         <section className="py-16 bg-gray-50">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
             <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }
               className="text-center mb-12">;
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
                 Why Choose Zion Tech Group?;
@@ -820,13 +820,13 @@ export default function HomePage() {;
             </motion && motion.div>;
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
-              {whyChooseUs && whyChooseUs.map((item, index) => (;
+              {whyChooseUs && whyChooseUs.map(item, index) => (;
                 <motion&& motion.div
                   key={index}
                   className="text-center"
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  initial={ opacity: 0, y: 30 }
+                  animate={ opacity: 1, y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }
                 >
                   <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                     <item.icon className="w-8 h-8 text-blue-600" />
@@ -839,10 +839,10 @@ export default function HomePage() {;
           <div className="max-w-7xl mx-auto">
             <motion.div
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                 What Our <span className="text-cyan-400">Clients Say</span>
@@ -853,19 +853,19 @@ export default function HomePage() {;
             </motion.div>
 
             <div className="grid md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
+              {testimonials.map(testimonial, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }
+                  viewport={ once: true }
                 >
                   <Card className="p-6">
                     <div className="flex mb-4">
-                      {[...Array(testimonial.rating)].map((_, i) => (
+                      {[...Array(testimonial.rating)].map(_, i) => (
                         <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                      ))}
+                      )}
                     </div>
                     <p className="text-gray-300 mb-6 italic">
                       "{testimonial.content}"
@@ -877,7 +877,7 @@ export default function HomePage() {;
                   </Card>
 <p className="text-gray-600">{item.description}</p>
                 </motion.div>
-              ))}
+              )}
             </div>
           </div>
         </section>
@@ -887,9 +887,9 @@ export default function HomePage() {;
         <section className="py-16 bg-blue-600 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
                 Ready to Transform Your Business?
@@ -901,9 +901,9 @@ export default function HomePage() {;
         <section className="py-16 bg-blue-600 text-white">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
             <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}>;
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }>;
               <h2 className="text-3xl md:text-4xl font-bold mb-4">;
                 Ready to Transform Your Business?;
               </h2>;
@@ -946,7 +946,7 @@ export default function HomePage() {;
       </div>
     </>
   );
-}
+
       </main>
     </>
       </main>
@@ -964,20 +964,20 @@ export default function HomePage() {;
       </div>;
     </MainLayout>;
   );
-}
+
       </main>;
     </>;
     </div>);
-}
+
           </div>;
         </section>;
         {/* Services Section */}
         <section className="py - 16 bg - gray - 50">;
           <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, coordinate_y: 30 }
+              animate={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
               className="text - center mb - 12";
             >;
               <h2 className="text - 3xl md:text - 4xl font - bold text - gray - 900 mb - 4">;
@@ -988,13 +988,13 @@ export default function HomePage() {;
               </p>;
             </motion.div>;
             <div className="grid md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
-              {services.map ((service, index) => (
+              {services.map (service, index) => (
                 <motion.div;
                   key={index}
                   className="bg - white rounded - lg shadow - lg p - 8 hover:shadow - xl transition - shadow";
-                  initial={{ opacity: 0, coordinate_y: 30 }}
-                  animate={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  initial={ opacity: 0, coordinate_y: 30 }
+                  animate={ opacity: 1, coordinate_y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }
                 >;
                   <div className="text - 4xl mb - 4">;
                     <service.icon className="w - 12 h - 12 text - blue - 600" />;
@@ -1002,11 +1002,11 @@ export default function HomePage() {;
                   <h3 className="text - xl font - semibold mb - 4 text - gray - 900">{service.title}</h3>;
                   <p className="text - gray - 600 mb - 4">{service.description}</p>;
                   <ul className="text - sm text - gray - 500 space - y-2 mb - 6">;
-                    {service.features.map ((feature, idx) => (
+                    {service.features.map (feature, idx) => (
                       <li key={idx} className="flex items - center">;
                         <CheckCircle className="w - 4 h - 4 text - green - 500 mr - 2" />;
                         {feature}
-                      </li>))}
+                      </li>)}
                   </ul>;
                   <Link;
                     href={service.href}
@@ -1015,7 +1015,7 @@ export default function HomePage() {;
                     Learn More;
                     <ArrowRight className="w - 4 h - 4 ml - 1" />;
                   </Link>;
-                </motion.div>))}
+                </motion.div>)}
             </div>;
           </div>;
         </section>;
@@ -1023,9 +1023,9 @@ export default function HomePage() {;
         <section className="py - 16 bg - white">;
           <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, coordinate_y: 30 }
+              animate={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
               className="text - center mb - 12";
             >;
               <h2 className="text - 3xl md:text - 4xl font - bold text - gray - 900 mb - 4">;
@@ -1036,25 +1036,25 @@ export default function HomePage() {;
               </p>;
             </motion.div>;
             <div className="grid md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
-              {featured_services.map ((service, index) => (
+              {featured_services.map (service, index) => (
                 <motion.div;
                   key={index}
                   className="bg - white rounded - lg shadow - lg p - 8 hover:shadow - xl transition - shadow";
-                  initial={{ opacity: 0, coordinate_y: 30 }}
-                  animate={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  initial={ opacity: 0, coordinate_y: 30 }
+                  animate={ opacity: 1, coordinate_y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }
                 >;
                   <div className="text - 3xl mb - 4">{service.icon}</div>;
                   <h3 className="text - xl font - semibold mb - 4 text - gray - 900">{service.title}</h3>;
                   <p className="text - gray - 600 mb - 4">{service.description}</p>;
                   <ul className="text - sm text - gray - 500 space - y-2 mb - 4">;
-                    {service.features.map ((feature, idx) => (
-                      <li key={idx}> {feature}</li>))}
+                    {service.features.map (feature, idx) => (
+                      <li key={idx}> {feature}</li>)}
                   </ul>;
                   <div className="mt - 4">;
                     <span className="text - 2xl font - bold text - blue - 600">{service.price}</span>;
                   </div>;
-                </motion.div>))}
+                </motion.div>)}
             </div>;
           </div>;
         </section>;
@@ -1062,9 +1062,9 @@ export default function HomePage() {;
         <section className="py - 16 bg - gray - 50">;
           <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, coordinate_y: 30 }
+              animate={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
               className="text - center mb - 12";
             >;
               <h2 className="text - 3xl md:text - 4xl font - bold text - gray - 900 mb - 4">;
@@ -1075,20 +1075,20 @@ We deliver exceptional results through innovation, expertise, and dedication;
               </p>;
             </motion.div>;
             <div className="grid md:grid - cols - 2 lg:grid - cols - 4 gap - 8">;
-              {whyChooseUs.map ((item, index) => (
+              {whyChooseUs.map (item, index) => (
                 <motion.div;
                   key={index}
                   className="text - center";
-                  initial={{ opacity: 0, coordinate_y: 30 }}
-                  animate={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  initial={ opacity: 0, coordinate_y: 30 }
+                  animate={ opacity: 1, coordinate_y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }
                 >;
                   <div className="bg - blue - 100 w - 16 h - 16 rounded - full flex items - center justify - center mx - auto mb - 4">;
                     <item.icon className="w - 8 h - 8 text - blue - 600" />;
                   </div>;
                   <h3 className="text - xl font - semibold mb - 2 text - gray - 900">{item.title}</h3>;
 <p className="text - gray - 600">{item.description}</p>;
-                </motion.div>))}
+                </motion.div>)}
             </div>;
           </div>;
         </section>;
@@ -1096,9 +1096,9 @@ We deliver exceptional results through innovation, expertise, and dedication;
         <section className="py - 16 bg - blue - 600 text - white">;
           <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, coordinate_y: 30 }
+              animate={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
             >;
               <h2 className="text - 3xl md:text - 4xl font - bold mb - 4">;
                 Ready to Transform Your Business?;
@@ -1127,6 +1127,6 @@ We deliver exceptional results through innovation, expertise, and dedication;
         </section>;
       </div>;
     </MainLayout>);
-}
+
 </main>;
     </>;

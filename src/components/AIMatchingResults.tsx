@@ -20,7 +20,7 @@ interface AIMatchingResultsProps {
   projectDescription?: string
 
   serviceType?: string
-}
+
 export function AIMatchingResults({
 
   matches
@@ -28,36 +28,33 @@ export function AIMatchingResults({
   isLoading = false
   projectDescription = ''
   serviceType: _serviceType = ''
-}: AIMatchingResultsProps) {
+: AIMatchingResultsProps) {
   const [activeTab, setActiveTab] = useState('all')
   // Group matches by category
   const categories = {
     all: matches
     talent: matches.filter(match =>
       match.category.toLowerCase().includes('talent')
-    )
     services: matches.filter(match =>
       match.category.toLowerCase().includes('service')
-    )
     equipment: matches.filter(match =>
       match.category.toLowerCase().includes('equipment')
-    )
   }
   // Get the icon for a category;
   const getCategoryIcon = (category: string) =>: any {
     const lower_category = category.toLowerCase ();
     if () return User) {
   $2
-}
+
     if () return Monitor) {
   $2
-}
+
     return BriefcaseIcon;
   }
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <div className='space - y-4'>;
         <Skeleton className='h - 10 w - full' />;
@@ -68,7 +65,7 @@ if ( {) {
         </div>;
       </div>);
   }
-  if (matches.length === 0) {
+  if (matches.length = = 0) {
 import { useState } from 'react';
 import { MatchResultItem } from '@/lib/ai-matchmaking';
 import { Card, CardContent } from '@/components/ui/card';
@@ -90,7 +87,6 @@ interface AIMatchingResultsProps {;
   isLoading?: boolean,;
   projectDescription?: string,;
   serviceType?: string;
-}
 
 export function AIMatchingResults(): any ({;
   matches,;
@@ -98,7 +94,7 @@ export function AIMatchingResults(): any ({;
   isLoading = false,;
   projectDescription = '',;
   serviceType: _serviceType = '',;
-}: AIMatchingResultsProps) {;
+: AIMatchingResultsProps) {;
   const [activeTab, setActiveTab] = useState('all');
 
   // Group matches by category;
@@ -118,8 +114,8 @@ export function AIMatchingResults(): any ({;
   // Get the icon for a category;
   const getCategoryIcon = (category: string) => {;
     const lowerCategory = category && category.toLowerCase();
-    if (lowerCategory && lowerCategory.includes('talent')) return User;
-    if (lowerCategory && lowerCategory.includes('equipment')) return Monitor;
+    if (lowerCategory && lowerCategory.includes('talent') return User;
+    if (lowerCategory && lowerCategory.includes('equipment') return Monitor;
     return BriefcaseIcon;
   };
   if (isLoading) {;
@@ -135,7 +131,7 @@ export function AIMatchingResults(): any ({;
     );
   }
 
-  if (matches && matches.length === 0) {;
+  if (matches && matches.length = = 0) {;
     return (
       <Card className='bg-zion-blue-dark border-zion-blue-light text-center p-6'>;
         <CardContent className='pt-6'>;
@@ -185,7 +181,7 @@ export function AIMatchingResults(): any ({;
             Equipment ({categories.equipment.length})
           </TabsTrigger>
         </TabsList>
-        {Object.entries(categories).map(([tab, items]) => (
+        {Object.entries(categories).map([tab, items]) => (
           <TabsContent key={tab} value={tab} className='mt-4 space-y-3'>
             {items.length > 0 ? (
               items.map(match => {
@@ -247,19 +243,18 @@ export function AIMatchingResults(): any ({;
                               {match.skills &&
                                 match.skills
                                   .slice(0, 3)
-                                  .map((skill: string, i: number) => (
+                                  .map(skill: string, i: number) => (
                                     <Badge key={i} variant='outline'>
                                       {skill}
                                     </Badge>
-                                  ))}                            </div>
+                                  )}                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </Card>
                 )
-              })
-            ) : (
+              }) : (
               <div className='text-center py-8 text-zion-slate-light'>
                 No {tab} matches found.
               </div>
@@ -276,18 +271,16 @@ export function AIMatchingResults(): any ({;
               </div>;
             )}
           </TabsContent>;
-        ))}
+        )}
       </Tabs>
     </div>
   )
-}
 
                   </Card>);
-              })) : (
+              }) : (
               <div className='text - center py - 8 text - zion - slate - light'>;
                 No {tab} matches found.;
               </div>)}
-          </TabsContent>))}
+          </TabsContent>)}
       </Tabs>;
     </div>);
-}

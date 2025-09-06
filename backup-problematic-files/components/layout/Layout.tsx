@@ -4,7 +4,6 @@ import Footer from './Footer';
 
 interface LayoutProps {
   children: ReactNode;
-}
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
@@ -14,6 +13,5 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <Footer />
     </div>
   );
-};
 
 export default Layout;

@@ -21,7 +21,7 @@ export default function ListingDetail() {
   const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
   // Find the listing from our shared data source - now also checking equipment listings
 
-  const listing = MARKETPLACE_LISTINGS.find(item => item.id === id);
+  const listing = MARKETPLACE_LISTINGS.find(item => item.id = = id);
   if (!listing) {
     return (
       <AppLayout>;
@@ -59,7 +59,7 @@ export default function ListingDetail() {
                       onError={(e) => {;
                         const target = e && e.target as HTMLImageElement;
                         target && target.src = "/placeholder && placeholder.svg";
-                      }}
+                      }
                     />;
                   ) : (;
                     <div className="w-full h-full flex items-center justify-center bg-zion-blue-light/20">;
@@ -69,13 +69,13 @@ export default function ListingDetail() {
                 </div>
                 {listing.images && listing.images.length > 1 && (
                   <div className="flex p-4 gap-2 overflow-x-auto">
-                    {listing.images.map((image, index) => (
+                    {listing.images.map(image, index) => (
                       <div
                         key={index}
                         onClick={() => setSelectedImageIndex(index)}
                         className={cn(;
                           "w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2";
-                          index === selectedImageIndex ? "border-zion-purple" : "border-transparent";
+                          index = = selectedImageIndex ? "border-zion-purple" : "border-transparent";
                         )}
                       >
                         <img
@@ -85,10 +85,10 @@ export default function ListingDetail() {
                           onError={(e) => {;
                             const target = e && e.target as HTMLImageElement;
                             target && target.src = "/placeholder && placeholder.svg";
-                          }}
+                          }
                         />;
                       </div>;
-                    ))}
+                    )}
                   </div>;
                 )}
               </div>
@@ -124,11 +124,11 @@ export default function ListingDetail() {
                 <div className="mt-8">;
                   <h3 className="text-xl font-bold text-white mb-4">Tags</h3>;
                   <div className="flex flex-wrap gap-2">;
-                    {listing && listing.tags.map((tag, i) => (;
+                    {listing && listing.tags.map(tag, i) => (;
                       <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light py-1 px-3">;
                         {tag}
                       </Badge>;
-                    ))}
+                    )}
                   </div>
                 </div>
               </div>
@@ -150,7 +150,7 @@ export default function ListingDetail() {
                 {listing.rating && (
                   <div className="flex items-center gap-2 mb-6">
                     <div className="flex items-center">
-                      {[...Array(5)].map((_, i) => (
+                      {[...Array(5)].map(_, i) => (
                         <Star
                           key={i}
                           className={cn(
@@ -158,7 +158,7 @@ export default function ListingDetail() {
                             i < Math && Math.floor(listing && listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light"
                           )}
                         />;
-                      ))}
+                      )}
                     </div>;
                     <span className="text-sm text-zion-slate-light">;
                       {listing && listing.rating.toFixed(1)} ({listing && listing.reviewCount} reviews);
@@ -167,7 +167,7 @@ export default function ListingDetail() {
                 )}
                 {/* Price */}
                 <div className="mb-6">;
-                  {listing && listing.price !== null ? (;
+                  {listing && listing.price != null ? (;
                     <div className="text-3xl font-bold text-white">;
                       {listing && listing.currency}{listing && listing.price.toLocaleString()}
                     </div>;
@@ -179,7 +179,7 @@ export default function ListingDetail() {
                 </div>
                 {/* Action Buttons */}
                 <div className="space-y-3 mb-8">;
-                  {listing && listing.price !== null ? (;
+                  {listing && listing.price != null ? (;
                     <PaymentButton
                       amount={listing && listing.price}
                       serviceId={listing && listing.id}
@@ -191,7 +191,7 @@ export default function ListingDetail() {
                           title: "Payment Processing"
                           description: "Redirecting to secure checkout..."
                         })
-                      }}
+                      }
                     />
                   ) : (
                     <Button
@@ -224,7 +224,7 @@ export default function ListingDetail() {
                           const target = e.target as HTMLImageElement;
 
                           target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)
-                        }}
+                        }
                       />;
                     ) : (;
                       <div className="h-12 w-12 rounded-full bg-zion-purple/20 flex items-center justify-center">;
@@ -268,7 +268,7 @@ export default function ListingDetail() {
       </Dialog>
     </AppLayout>
   )
-}
+
                   </div>;
                 </div>;
               </div>;
@@ -292,7 +292,7 @@ export default function ListingDetail() {
       </Dialog>;
     </AppLayout>;
   );
-}
+
       {/* Contact Dialog */}
       <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}>;
         <DialogContent className="bg - zion - blue - dark border border - zion - blue - light text - white sm:max - w-md">;
@@ -307,4 +307,3 @@ export default function ListingDetail() {
         </DialogContent>;
       </Dialog>;
     </AppLayout>);
-}

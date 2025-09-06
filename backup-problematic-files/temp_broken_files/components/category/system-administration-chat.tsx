@@ -7,7 +7,7 @@ const SystemAdministrationChat: NextPage = () => {
         <title>SystemAdministrationChat - Zion Tech Solutions</title>
         <meta name=&quot;description&quot; content=&quot;SystemAdministrationChat blog post&quot; />
       </Head>
-      
+
       <main>
         <h1>SystemAdministrationChat</h1>
         <p>Blog content coming soon...</p>
@@ -15,5 +15,5 @@ const SystemAdministrationChat: NextPage = () => {
       </main>
     </div>
   )
-},
+,
 export default SystemAdministrationChat,

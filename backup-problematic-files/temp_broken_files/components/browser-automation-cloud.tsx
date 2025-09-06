@@ -15,11 +15,11 @@ export default function BrowserAutomationCloudPage() {
 					<h1 className=&quot;text-4xl font-extrabold tracking-tight&quot;>Browser Automation Cloud</h1>
 					<p className=&quot;mt-4 text-lg text-gray-300&quot;>Scale Playwright/Puppeteer tasks for testing, scraping, and robotic process automation with enterprise-grade reliability.</p>
 					<div className=&quot;mt-8 grid sm:grid-cols-2 gap-6&quot;>
-						{features.map((f) => (
+						{features.map(f) => (
 							<div key={f} className=&quot;flex items-start space-x-3 p-4 rounded-xl bg-white/5 border border-white/10&quot;>
 								<Check className=&quot;w-5 h-5 text-cyan-400 mt-1&quot; />
 								<p className=&quot;text-gray-200&quot;>{f}</p>							</div>
-						))}
+						)}
 					</div>
 					<div className="mt-8 flex flex-wrap items-center gap-4">
 						<a href="/contact" className="px-5 py-3 rounded-lg bg-white text-black font-semibold hover: bg-gray-200">Start from $99/mo</a>
@@ -34,4 +34,3 @@ export default function BrowserAutomationCloudPage() {
 			</main>
 		</>
 	)
-}

@@ -1,18 +1,16 @@
-}}};
-;
+};
+
 main();};
-;
-,;
 main(),;
-;main();
-#!/usr/bin/env node,
+main();
+!/usr/bin/env node,
 import fs from 'fs;
 import path from 'path';
 import { execSync } from child_process';
-;
+
 console.log(' Resolving merge conflicts comprehensively...);
-;
-// Get list of conflicted files,
+
+/ Get list of conflicted files,
 const getConflictedFiles = () => {,
   try {,
     const result = execSync('git diff --name-only --diff-filter=U', { encoding: utf8' }),
@@ -20,9 +18,8 @@ const getConflictedFiles = () => {,
   } catch (error) {,
     return []
   };
-};
-,
-// Resolve conflicts by accepting HEAD version for most files,
+
+/ Resolve conflicts by accepting HEAD version for most files,
 const resolveConflicts = (filePath) => {,
   try {,
     // For backup and temp files, accept HEAD version,
@@ -34,7 +31,7 @@ const resolveConflicts = (filePath) => {,
         filePath.includes('zion-os.disabled) ||,
         filePath.includes('.disabled') ||,
         filePath.includes(yarn.lock') ||,
-        filePath.includes('package-lock.json)) {,
+        filePath.includes('package-lock.json) {,
       console.log(`Accepting HEAD version for: ${filePath}`),
       execSync(`git checkout --ours "${filePath}`, { stdio: 'inherit' }),
       return true
@@ -43,11 +40,11 @@ const resolveConflicts = (filePath) => {,
     if (filePath.includes(pages/') ||,
         filePath.includes('components/) ||,
         filePath.includes('utils/') ||,
-        filePath.includes(types/')) {,
+        filePath.includes(types/') {,
       console.log(`Resolving conflicts for: ${filePath}`),
-,
+
       let content = fs.readFileSync(filePath, 'utf8),
-,
+
       // Remove conflict markers and keep HEAD version,
       fs.writeFileSync(filePath, content),
       return true
@@ -61,23 +58,22 @@ const resolveConflicts = (filePath) => {,
     console.error(`Error resolving conflicts in ${filePath}:`, error.message),
     return false
   };
-};
-,
-// Main execution,
+
+/ Main execution,
 const main = () => {,
   const conflictedFiles = getConflictedFiles(),
-,
-  if (conflictedFiles.length === 0) {,
+
+  if (conflictedFiles.length = = 0) {,
     console.log(No conflicted files found.'),
     return
   };
   console.log(`Found ${conflictedFiles.length} conflicted files.`),
-,
+
   let resolvedCount = 0,
   let failedCount = 0,
-,
+
   for (const file of conflictedFiles) {,
-    if (resolveConflicts(file)) {,
+    if (resolveConflicts(file) {,
       resolvedCount++
     } else {,
       failedCount++
@@ -85,7 +81,7 @@ const main = () => {,
   };
   console.log(`\n Resolved: ${resolvedCount} files`),
   console.log(` Failed: ${failedCount} files`),
-,
+
   if (resolvedCount > 0) {,
     console.log('\n Adding resolved files...),
     try {,
@@ -95,6 +91,5 @@ const main = () => {,
       console.error(' Error adding files:', error.message)
     };
   };
-};
-,
+
 main(),

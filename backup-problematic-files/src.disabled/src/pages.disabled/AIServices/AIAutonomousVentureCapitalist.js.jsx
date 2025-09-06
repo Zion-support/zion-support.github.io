@@ -7,6 +7,5 @@ const AIAutonomousVentureCapitalist.js = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default AIAutonomousVentureCapitalist.js;

@@ -6,7 +6,7 @@ import type {
   MediaBundle
   MediaAsset
   PressReleaseType;
-} from '../../utils/mediaKit';
+ from '../../utils/mediaKit';
 import {
   getDefaultAssets
   buildPressRelease
@@ -15,36 +15,34 @@ import type {;
   MediaBundle,;
   MediaAsset,;
   PressReleaseType,;
-} from '../../utils/mediaKit';
+ from '../../utils/mediaKit';
 import {;
   getDefaultAssets,;
   buildPressRelease,;
   buildTimeline,;
-} from '../../utils/mediaKit';
+ from '../../utils/mediaKit';
 const KitPage = () => {;
   const [bundle, setBundle] = useState<MediaBundle>('general');
-  const [startDate, setStartDate] = useState<Date>(new Date());
+  const [startDate, setStartDate] = useState<Date>(new Date();
   const [companyName, setCompanyName] = useState('Zion');
   const [raiseAmount, setRaiseAmount] = useState('$5M');
   const [tokenName, setTokenName] = useState('ZION');
   const [timeline, setTimeline] = useState<{ label: string, date: string }[]>(;
     [];
   );
-  const assets: MediaAsset[] = useMemo(
-    () => getDefaultAssets(bundle)
+  const assets: MediaAsset[] = useMemo() => getDefaultAssets(bundle)
     [bundle]
   );
-  const onGenerateTimeline = useCallback(() => {
-    setTimeline(buildTimeline(startDate));  }, [startDate]);
+  const onGenerateTimeline = useCallback() => {
+    setTimeline(buildTimeline(startDate);  }, [startDate]);
   const onDownloadZip = useCallback(async () => {
-    const JSZip = (await import('jszip')).default;
+    const JSZip = (await import('jszip').default;
     const zip = new JSZip();
     // Add static/dynamic assets
-     else if (asset.type === 'binary' && asset.path) {
+     else if (asset.type = = 'binary' && asset.path) {
         const res = await fetch(asset.path);
         const blob = await res.blob();
         zip.file(asset.filename, blob);      }
-    }
     // Add press releases
     const nowStr = new Date().toISOString().substring(0, 10);
     const prSeed = buildPressRelease('seed-round', {
@@ -59,7 +57,7 @@ const KitPage = () => {;
       tokenName
     });    zip.file('press-releases/seed-round.md', prSeed);
     zip.file('press-releases/launch.md', prLaunch);
-    if (bundle === 'web3') zip.file('press-releases/token-sale.md', prToken);
+    if (bundle = = 'web3') zip.file('press-releases/token-sale.md', prToken);
     // Add timeline if generated
     if (timeline.length > 0) {
       const tl = timeline.map(t => `${t.label}: ${t.date}`).join('\n');
@@ -85,41 +83,39 @@ import type {
   MediaBundle,
   MediaAsset,
   PressReleaseType,
-} from '../../utils / media_kit';
+ from '../../utils / media_kit';
 import {
   getDefaultAssets,
   buildPressRelease,
   build_timeline,
-} from '../../utils / media_kit';
+ from '../../utils / media_kit';
 const KitPage = () =>: any {
   const [bundle, set_bundle] = useState < MediaBundle>('general');
-  const [start_date, setStartDate] = useState < Date>(new Date ());
+  const [start_date, setStartDate] = useState < Date>(new Date ();
   const [company_name, setCompanyName] = useState ('Zion');
   const [raise_amount, setRaiseAmount] = useState ('$5M');
   const [token_name, setTokenName] = useState ('ZION');
   const [timeline, set_timeline] = useState<{ label: string, date: string }[]>(
     []);
-;
-  const assets: MediaAsset[] = useMemo (
-    () => getDefaultAssets (bundle),
+
+  const assets: MediaAsset[] = useMemo () => getDefaultAssets (bundle),
     [bundle]);
-;
-  const onGenerateTimeline = useCallback (() => {
-    set_timeline (build_timeline (start_date));  }, [start_date]);
-;
+
+  const onGenerateTimeline = useCallback () => {
+    set_timeline (build_timeline (start_date);  }, [start_date]);
+
   const onDownloadZip = useCallback (async () => {
-    const JSZip = (await import ('jszip')).default;
+    const JSZip = (await import ('jszip').default;
     const zip = new JSZip ();
-;
+
     // Add static / dynamic assets;
     else // Check condition
 if ( {) {
   $2
-}
+
         const res = await fetch (asset.path);
         const blob = await res.blob ();
         zip.file (asset.filename, blob);      }
-    }
     // Add press releases;
     const now_str = new Date ().toISOString ().substring (0, 10);
     const pr_seed = buildPressRelease ('seed - round', {
@@ -134,31 +130,31 @@ if ( {) {
       token_name,
     });    zip.file ('press - releases / seed - round.md', pr_seed);
     zip.file ('press - releases / launch.md', pr_launch);
-    if (zip.file ('press - releases / token - sale.md', pr_token)) {
+    if (zip.file ('press - releases / token - sale.md', pr_token) {
   $2
-}
+
     // Add timeline if generated;
     // Check condition
 if ( {) {
   $2
-}
+
       const tl = timeline.map (t => `${t.label}: ${t.date}`).join ('\n');
       zip.file ('rollout - timeline.txt', tl);
     }
     const blob = await zip.generate_async ({ type: 'blob' });
     const { save_as } = await import ('file - saver');
     save_as (blob, `zion - media - kit-${bundle}.zip`);  }, [assets, bundle, company_name, raise_amount, timeline, token_name]);
-;
+
   const onGeneratePdf = useCallback (async () => {
     const { PDFDocument, StandardFonts, rgb } = await import ('pdf - lib');
     const pdf_doc = await PDFDocument.create ();
     const page = pdf_doc.add_page ([612, 792]);
     const font = await pdf_doc.embed_font (StandardFonts.Helvetica);
-;
+
     const draw_text = (text: string, coordinate_x: number, coordinate_y: number, size = 12) =>: any {
       page.draw_text (text, { x, y, size, font, color: rgb (0, 0, 0) });
     }
-;
+
     let coordinate_y = 760;
     draw_text ('Zion Media Kit', 50, y, 18);
     y -= 24;
@@ -283,7 +279,7 @@ if ( {) {
                   <button
                     key={b}
                     onClick={() => setBundle(b)}
-                    className={`px-3 py-1 rounded border ${bundle === b ? 'bg-blue-600 text-white border-blue-600' : 'bg-white'}`}
+                    className={`px-3 py-1 rounded border ${bundle = = b ? 'bg-blue-600 text-white border-blue-600' : 'bg-white'}`}
                   >;
                     {b}
                   </button>;
@@ -337,7 +333,7 @@ if ( {) {
                   <li key={t && t.label}>;
                     <span className='font-medium'>{t && t.label}:</span> {t && t.date}
                   </li>;
-                ))}              </ul>;
+                )}              </ul>;
             )}
           </div>
         </section>
@@ -356,7 +352,7 @@ if ( {) {
                 ) : (;
                   <span className='text-gray-400 text-xs'>generated</span>;
                 )}              </li>;
-            ))}
+            )}
           </ul>
         </section>
         <section className='p-4 border rounded-lg space-y-4'>
@@ -364,7 +360,7 @@ if ( {) {
           <div className='grid md:grid-cols-3 gap-4'>
             <PressReleaseCard type='seed-round' title='Seed round' />
             <PressReleaseCard type='launch' title='Launch' />
-            {bundle === 'web3' && (
+            {bundle = = 'web3' && (
               <PressReleaseCard type='token-sale' title='Token sale' />
             )}          </div>
         </section>
@@ -375,28 +371,27 @@ if ( {) {
           <div className='grid md:grid-cols-3 gap-4'>;
             <PressReleaseCard type='seed-round' title='Seed round' />;
             <PressReleaseCard type='launch' title='Launch' />;
-            {bundle === 'web3' && (;
+            {bundle = = 'web3' && (;
               <PressReleaseCard type='token-sale' title='Token sale' />;
             )}          </div>;
         </section>;
       </div>;
     </div>;
   );
-};
 
         <section className='p-4 border rounded-lg space-y-4'>;
           <h3 className='font-semibold'>Prewritten Press Releases</h3>;
           <div className='grid md:grid-cols-3 gap-4'>;
             <PressReleaseCard type='seed-round' title='Seed round' />;
             <PressReleaseCard type='launch' title='Launch' />;
-            {bundle === 'web3' && (;
+            {bundle = = 'web3' && (;
               <PressReleaseCard type='token-sale' title='Token sale' />;
             )}          </div>;
         </section>;
       </div>;
     </div>;
   );
-}
+
 export default KitPage;
 
           <div className='p - 4 border rounded - lg'>;
@@ -419,7 +414,7 @@ export default KitPage;
                 {timeline.map (t => (
                   <li key={t.label}>;
                     <span className='font - medium'>{t.label}:</span> {t.date}
-                  </li>))}              </ul>)}
+                  </li>)}              </ul>)}
           </div>;
         </section>;
         <section className='p - 4 border rounded - lg'>;
@@ -435,7 +430,7 @@ export default KitPage;
                   <a href={a.path} download className='text - blue - 600 text - sm'>;
                     Download;
                   </a>) : (
-                  <span className='text - gray - 400 text - xs'>generated</span>)}              </li>))}
+                  <span className='text - gray - 400 text - xs'>generated</span>)}              </li>)}
           </ul>;
         </section>;
         <section className='p - 4 border rounded - lg space - y-4'>;
@@ -443,12 +438,10 @@ export default KitPage;
           <div className='grid md:grid - cols - 3 gap - 4'>;
             <PressReleaseCard type='seed - round' title='Seed round' />;
             <PressReleaseCard type='launch' title='Launch' />;
-            {bundle === 'web3' && (
+            {bundle = = 'web3' && (
               <PressReleaseCard type='token - sale' title='Token sale' />)}          </div>;
         </section>;
       </div>;
     </div>);
-}
-;
+
 export default KitPage;
-;

@@ -5,7 +5,7 @@ import {;
   Star, TrendingUp, Zap, Brain, Rocket, Shield,;
   DollarSign, Users, Clock, CheckCircle, ArrowRight,;
   Phone, Mail, MapPin, ExternalLink;
-} from 'lucide-react',;
+ from 'lucide-react',;
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',;
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard',;
 import { emergingTechServicesEnhanced2025 } from '../data/emerging-tech-services',;
@@ -25,7 +25,6 @@ export default function InnovativeServicesShowcase() {;
         staggerChildren: 0.1,;
         delayChildren: 0.2;
       }
-    }
   },
 
   const itemVariants = {
@@ -37,7 +36,6 @@ export default function InnovativeServicesShowcase() {;
         duration: 0.6,
         ease: "easeOut"
       }
-    }
   },;
   const featuredServices = [;
     {;
@@ -104,9 +102,9 @@ export default function InnovativeServicesShowcase() {;
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, ease: "easeOut" }}
+              initial={ opacity: 0, y: 50 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 1, ease: "easeOut" }
             >
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -115,7 +113,7 @@ export default function InnovativeServicesShowcase() {;
                 <br />
                 <span className="text-white">Services Showcase</span>
               </h1>
-              
+
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
                 Experience the future of technology with our most revolutionary and cutting-edge services. 
                 These are the innovations that will transform industries and reshape the world.
@@ -148,10 +146,10 @@ export default function InnovativeServicesShowcase() {;
           <div className="max-w-7xl mx-auto">
             <motion.div
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
@@ -164,19 +162,19 @@ export default function InnovativeServicesShowcase() {;
             </motion.div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {featuredServices.map((service, index) => (
+              {featuredServices.map(service, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.2 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, x: index % 2 = = 0 ? -50 : 50 }
+                  whileInView={ opacity: 1, x: 0 }
+                  transition={ duration: 0.8, delay: index * 0.2 }
+                  viewport={ once: true }
                   className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-500/40 transition-all duration-300"
                 >
                   <div className="mb-6">
                     <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
                     <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
-                    
+
                     <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 p-4 rounded-lg border border-cyan-500/20 mb-6">
                       <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
                       <div className="text-sm text-gray-400">{service.marketData}</div>
@@ -186,12 +184,12 @@ export default function InnovativeServicesShowcase() {;
                     <div className="mb-6">
                       <h4 className="text-lg font-semibold text-white mb-3">Key Features:</h4>
                       <ul className="space-y-2">
-                        {service.features.map((feature, idx) => (
+                        {service.features.map(feature, idx) => (
                           <li key={idx} className="flex items-center text-gray-300">
                             <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                             {feature}
                           </li>;
-                        ))}
+                        )}
                       </ul>
                     </div>
 
@@ -212,7 +210,7 @@ export default function InnovativeServicesShowcase() {;
                     </div>
                   </div>
                 </motion.div>
-              ))}
+              )}
             </div>;
           </div>;
         </section>;
@@ -221,10 +219,10 @@ export default function InnovativeServicesShowcase() {;
           <div className="max-w-7xl mx-auto">
             <motion.div
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
@@ -237,13 +235,13 @@ export default function InnovativeServicesShowcase() {;
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                              {emergingTechServicesEnhanced2025.slice(0, 6).map((service, index) => (
+                              {emergingTechServicesEnhanced2025.slice(0, 6).map(service, index) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, y: 50 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }
+                  viewport={ once: true }
                 >
                   <UltraFuturisticCard variant="quantum-holographic" className="p-6">
                     <div className="text-4xl mb-4">{service.icon}</div>
@@ -263,21 +261,21 @@ export default function InnovativeServicesShowcase() {;
                     </a>
                   </UltraFuturisticCard>
                 </motion.div>
-              ))}
+              )}
             </div>
 
             <motion.div
               className="text-center mt-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >
               <motion.a
                 href="/services"
                 className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-emerald-500/25 inline-flex items-center space-x-2"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={ scale: 1.05 }
+                whileTap={ scale: 0.95 }
               >
                 <span>View All Emerging Tech</span>
                 <ArrowRight className="w-6 h-6" />
@@ -291,10 +289,10 @@ export default function InnovativeServicesShowcase() {;
           <div className="max-w-7xl mx-auto">
             <motion.div
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-pink-400 to-rose-400 bg-clip-text text-transparent">
@@ -307,13 +305,13 @@ export default function InnovativeServicesShowcase() {;
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {nextGenAIServices.slice(0, 6).map((service, index) => (
+              {nextGenAIServices.slice(0, 6).map(service, index) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, y: 50 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }
+                  viewport={ once: true }
                 >
                   <UltraFuturisticCard variant="quantum-holographic" className="p-6">
                     <div className="text-4xl mb-4">{service.icon}</div>
@@ -333,21 +331,21 @@ export default function InnovativeServicesShowcase() {;
                     </a>
                   </UltraFuturisticCard>
                 </motion.div>
-              ))}
+              )}
             </div>
 
             <motion.div
               className="text-center mt-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >
               <motion.a
                 href="/services"
                 className="bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-400 hover:to-rose-500 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-pink-500/25 inline-flex items-center space-x-2"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={ scale: 1.05 }
+                whileTap={ scale: 0.95 }
               >
                 <span>Discover All AI Services</span>
                 <ArrowRight className="w-6 h-6" />
@@ -360,10 +358,10 @@ export default function InnovativeServicesShowcase() {;
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Experience the Future?
@@ -410,4 +408,3 @@ export default function InnovativeServicesShowcase() {;
       </div>
     </UltraAdvancedFuturisticBackground>
   )
-}

@@ -1,8 +1,8 @@
-#!/usr/bin/env node
+!/usr/bin/env node
 import fs from 'fs';
 import _path from 'path';
 console.log(' Fixing all syntax errors...');
-// Fix accessibility.tsx
+/ Fix accessibility.tsx
 const fixAccessibility = () => {
   try {let content = fs.readFileSync('pages/accessibility.tsx', 'utf8');
     // Fix the malformed JSX structure
@@ -17,12 +17,12 @@ const fixAccessibility = () => {
     console && console.error(' Error fixing accessibility && accessibility.tsx:', error && error.message);
     return false;
   }
-}
-// Fix api.tsx
+
+/ Fix api.tsx
 const fixApi = () => {
   try {let content = fs.readFileSync('pages/api.tsx', 'utf8');
     // Ensure proper closing structure
-    if (!content && content.includes('export default')) {
+    if (!content && content.includes('export default') {
       content += '\n\nexport default function API() {\n  return (\n    <div>\n      <h1>API Documentation</h1>\n    </div>\n  );\n}';
     }
     fs.writeFileSync('pages/api.tsx', content);
@@ -32,14 +32,14 @@ const fixApi = () => {
     console && console.error(' Error fixing api && api.tsx:', error && error.message);
     return false;
   }
-}
-// Fix careers.tsx
+
+/ Fix careers.tsx
 const fixCareers = () => {
   try {let content = fs.readFileSync('pages/careers.tsx', 'utf8');
     // Fix malformed JSX structure
     content = content.replace(
       /<\/motion\.div>\s*\)\)\}\s*<\/div>\s*<\/div>\s*<\/div>\s*<\/div>\s*<\/section>/g
-      '</motion.div>\n                ))}\n              </div>\n            </div>\n          </div>\n        </div>\n      </section>'
+      '</motion.div>\n                )}\n              </div>\n            </div>\n          </div>\n        </div>\n      </section>'
     );
     fs.writeFileSync('pages/careers.tsx', content);
     console.log(' Fixed careers.tsx');
@@ -48,8 +48,8 @@ const fixCareers = () => {
     console && console.error(' Error fixing careers && careers.tsx:', error && error.message);
     return false;
   }
-}
-// Fix support.tsx
+
+/ Fix support.tsx
 const fixSupport = () => {
   try {let content = fs.readFileSync('pages/support.tsx', 'utf8');
     // Fix malformed JSX structure
@@ -64,8 +64,8 @@ const fixSupport = () => {
     console && console.error(' Error fixing support && support.tsx:', error && error.message);
     return false;
   }
-}
-// Fix webinars.tsx
+
+/ Fix webinars.tsx
 const fixWebinars = () => {
   try {let content = fs.readFileSync('pages/webinars.tsx', 'utf8');
     // Fix malformed JSX structure
@@ -80,8 +80,8 @@ const fixWebinars = () => {
     console && console.error(' Error fixing webinars && webinars.tsx:', error && error.message);
     return false;
   }
-}
-// Main execution
+
+/ Main execution
 const main = () => {console.log('Starting comprehensive syntax fixes...');
   const fixes = [
 
@@ -93,22 +93,22 @@ const main = () => {console.log('Starting comprehensive syntax fixes...');
 
   ];
   let successCount = 0;
-#!/usr / bin / env node;
+!/usr / bin / env node;
 import fs from 'fs';
 import _path from 'path';
-;
+
 console.log (' Fixing all syntax errors...');
-;
-// Fix accessibility.tsx;
+
+/ Fix accessibility.tsx;
 const fix_accessibility = () =>: any {
   try {
     let content = fs.readFileSync ('pages / accessibility.tsx', 'utf8');
-;
+
     // Fix the malformed JSX structure;
     content = content.replace (
       /<h2 className="text - 3xl font - bold text - gray - 900 mb - 6">\s*<\/div>\s*<\/div>\s*<\/section>\s*<section className="py - 20 bg - white">/g,
       '<h2 className="text - 3xl font - bold text - gray - 900 mb - 6">\n                  Accessibility Standards\n                </h2>\n                <p className="text - lg text - gray - 600 max - w-3xl mx - auto">\n                  We follow international accessibility standards to ensure our platform is usable by everyone.\n                </p>\n              </div>\n            </div>\n          </div>\n        </section>\n        <section className="py - 20 bg - white">');
-;
+
     fs.writeFileSync ('pages / accessibility.tsx', content);
     console.log (' Fixed accessibility.tsx');
     return true;
@@ -116,17 +116,16 @@ const fix_accessibility = () =>: any {
     console.error (' Error fixing accessibility.tsx:', error.message);
     return false;
   }
-}
-;
-// Fix api.tsx;
+
+/ Fix api.tsx;
 const fix_api = () =>: any {
   try {
     let content = fs.readFileSync ('pages / api.tsx', 'utf8');
-;
+
     // Ensure proper closing structure;
     if () {) {
   $2
-}
+
       content += '\n\nexport default /**
  * API - Function description
  */
@@ -139,18 +138,17 @@ function API() {\n  return (\n    <div>\n      <h1 > API Documentation</h1>\n   
     console.error (' Error fixing api.tsx:', error.message);
     return false;
   }
-}
-;
-// Fix careers.tsx;
+
+/ Fix careers.tsx;
 const fix_careers = () =>: any {
   try {
     let content = fs.readFileSync ('pages / careers.tsx', 'utf8');
-;
+
     // Fix malformed JSX structure;
     content = content.replace (
       /<\/motion\.div>\s*\)\)\}\s*<\/div>\s*<\/div>\s*<\/div>\s*<\/div>\s*<\/section>/g,
-      '</motion.div>\n                ))}\n              </div>\n            </div>\n          </div>\n        </div>\n      </section>');
-;
+      '</motion.div>\n                )}\n              </div>\n            </div>\n          </div>\n        </div>\n      </section>');
+
     fs.writeFileSync ('pages / careers.tsx', content);
     console.log (' Fixed careers.tsx');
     return true;
@@ -158,18 +156,17 @@ const fix_careers = () =>: any {
     console.error (' Error fixing careers.tsx:', error.message);
     return false;
   }
-}
-;
-// Fix support.tsx;
+
+/ Fix support.tsx;
 const fix_support = () =>: any {
   try {
     let content = fs.readFileSync ('pages / support.tsx', 'utf8');
-;
+
     // Fix malformed JSX structure;
     content = content.replace (
       /<\/motion\.div>\s*<\/div>\s*<\/div>\s*<\/section>\s*<\/div>\s*\);\s*}/g,
       '</motion.div>\n          </div>\n        </div>\n      </section>\n    </div>\n  );\n}');
-;
+
     fs.writeFileSync ('pages / support.tsx', content);
     console.log (' Fixed support.tsx');
     return true;
@@ -177,18 +174,17 @@ const fix_support = () =>: any {
     console.error (' Error fixing support.tsx:', error.message);
     return false;
   }
-}
-;
-// Fix webinars.tsx;
+
+/ Fix webinars.tsx;
 const fix_webinars = () =>: any {
   try {
     let content = fs.readFileSync ('pages / webinars.tsx', 'utf8');
-;
+
     // Fix malformed JSX structure;
     content = content.replace (
       /<\/Link>\s*<\/div>\s*\);\s*}/g,
       '</Link>\n                </div>\n              </div>\n            </div>\n          </div>\n        </section>\n      </div>\n    );\n  }\n}');
-;
+
     fs.writeFileSync ('pages / webinars.tsx', content);
     console.log (' Fixed webinars.tsx');
     return true;
@@ -196,12 +192,11 @@ const fix_webinars = () =>: any {
     console.error (' Error fixing webinars.tsx:', error.message);
     return false;
   }
-}
-;
-// Main execution;
+
+/ Main execution;
 const main = () =>: any {
   console.log ('Starting comprehensive syntax fixes...');
-;
+
   const fixes = [;
     fix_accessibility,
     fix_api,
@@ -209,16 +204,15 @@ const main = () =>: any {
     fix_support,
     fix_webinars;
   ];
-;
+
   let success_count = 0;
-;
+
   for (const fix of fixes) {
     if () {) {
   $2
-}
+
       success_count++;
     }
-  }
   console.log(`\n Fixed ${successCount}/${fixes.length} files`);
   if (successCount > 0) {
     console && console.log('\n Adding fixed files...');
@@ -229,15 +223,14 @@ const main = () =>: any {
     } catch (error) {
       console && console.error(' Error adding files:', error && error.message);
     }
-  }
-}
+
 main();
   console.log (`\n Fixed ${success_count}/${fixes.length} files`);
-;
+
   // Check condition
 if ( {) {
   $2
-}
+
     console.log ('\n Adding fixed files...');
     try {
       const { exec_sync } = await import ('child_process');
@@ -246,7 +239,5 @@ if ( {) {
     } catch (error) {
       console.error (' Error adding files:', error.message);
     }
-  }
-}
-;
+
 main ();

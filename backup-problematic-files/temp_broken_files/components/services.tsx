@@ -5,7 +5,7 @@ import {
   Brain, Rocket, Dna, Globe, Shield, Wifi,
   Package, Bot, Car, Building2, Monitor, Cpu,
   Zap, Atom, Database, Cloud, Lock, Code
-} from 'lucide-react',
+ from 'lucide-react',
 import UltraAdvancedQuantumBackground from '../components/ui/UltraAdvancedQuantumBackground',
 import UltraFuturisticServiceCard from '../components/ui/UltraFuturisticServiceCard',
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',
@@ -33,24 +33,24 @@ import {
   Brain, Atom, Shield, Target, Rocket,
   ArrowRight, Check, Palette, Heart, Truck, GraduationCap,
   Users, DollarSign, Settings, TrendingUp, BarChart3, ChevronDown
-} from 'lucide-react',
+ from 'lucide-react',
 import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029',
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029',
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029',
-// Import all the new 2025 service data,
+/ Import all the new 2025 service data,
 import { realMicroSaasServices2025 } from '../data/2025-real-micro-saas-services',
 import { innovativeAIServices2025 } from '../data/2025-innovative-ai-services',
 import { innovativeITServices2025 } from '../data/2025-innovative-it-services',
 import { emergingTechServices2025 } from '../data/2025-emerging-tech-services',
 import { additionalRealServices2025 } from '../data/2025-additional-real-services',
 import { innovativeAIServices2025 as newInnovativeAIServices } from '../data/2025-innovative-ai-it-services',
-// Import new innovative services,
+/ Import new innovative services,
 import { innovativeFinancialServices2025 } from '../data/2025-innovative-financial-services',
 import { innovativeHealthcareServices2025 } from '../data/2025-innovative-healthcare-services',
 import { innovativeEducationServices2025 } from '../data/2025-innovative-education-services',
 import { innovativeSustainabilityServices2025 } from '../data/2025-innovative-sustainability-services',
 import { innovativeLogisticsServices2025 } from '../data/2025-innovative-logistics-services',
-// Import existing services for comprehensive coverage,
+/ Import existing services for comprehensive coverage,
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',
 import { innovativeMicroSaasServices } from '../data/innovative-micro-saas-services',
 import { quantumSpaceServices } from '../data/quantum-space-services',
@@ -61,14 +61,14 @@ const allServices = [  ...realMicroSaasServices2025,
   ...emergingTechServices2025,
   ...additionalRealServices2025,
   ...newInnovativeAIServices
-],
+,
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-},
+,
 
 const serviceCategories: Array<{
   id: string,
@@ -78,7 +78,7 @@ const serviceCategories: Array<{
   color: string,
   services: ServiceUnion[],
   gradient: string
-}> = [
+> = [
   {
     id: 'ai-consciousness',
     title: ' AI & Consciousness',
@@ -233,7 +233,7 @@ const serviceCategories: Array<{
     color: 'from-indigo-500 to-purple-600',
     description: 'Quantum-powered data analytics and insights'
   }
-],
+,
 import { realVerifiedServices } from '../data/real-verified-services',
 export default function ServicesPage() {
   const [searchTerm, setSearchTerm] = useState(''),
@@ -266,37 +266,35 @@ const allServices = [
   ],
   // Get unique services by ID,
 const uniqueServices = allServices.filter(_(service, index, self) => 
-    index === self.findIndex(s => s.id === service.id)
-  ),
+    index = = self.findIndex(s => s.id = = service.id),
 
   // Get all categories,
 const categories = ['All', _...Array.from(new Set(uniqueServices.map(s => 
     Array.isArray(s.category) ? s.category[0] : s.category
-  )))],
+  ))],
 
   // Filter and sort services,
 const filteredServices = uniqueServices
     .filter(service => {
-      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.tagline.toLowerCase().includes(searchTerm.toLowerCase()),
-      const matchesCategory = selectedCategory === 'All' || 
+      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase() ||
+                           service.description.toLowerCase().includes(searchTerm.toLowerCase() ||
+                           service.tagline.toLowerCase().includes(searchTerm.toLowerCase(),
+      const matchesCategory = selectedCategory = = 'All' || 
                              (Array.isArray(service.category) ? 
                                service.category.includes(selectedCategory) : 
-                               service.category === selectedCategory),
+                               service.category = = selectedCategory),
       return matchesSearch && matchesCategory
     })
-    .sort((a, b) => {
+    .sort(a, b) => {
       switch (sortBy) {        case 'name':
           return a.name.localeCompare(b.name),
         case 'price':
-          return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, '')),        case 'popularity':
+          return parseFloat(a.price.replace(/[^0-9.]/g, '') - parseFloat(b.price.replace(/[^0-9.]/g, ''),        case 'popularity':
           return (b.popular ? 1 : 0) - (a.popular ? 1 : 0),
         case 'rating':
           return (b.rating || 0) - (a.rating || 0),
         default: return 0
-      }
-    }),
+      }),
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
@@ -321,7 +319,7 @@ const filteredServices = uniqueServices
           <div className=&quot;absolute inset-0 bg-[radial-gradient(circleat_30%20%,rgba(56,189,248,0.15),transparent50%)]&quot;></div>
           <div className=&quot;absolute inset-0 bg-[radial-gradient(circleat_70%80%,rgba(168,85,247,0.15),transparent50%)]&quot;></div>
           <div className=&quot;absolute inset-0 bg-[radial-gradient(circleat_50%50%,rgba(16,185,129,0.1),transparent50%)]&quot;></div>
-          
+
           {/* Animated Quantum Particles */}
           <div className=&quot;absolute inset-0 overflow-hidden&quot;>
             <div className=&quot;absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-400 rounded-full animate-pulse opacity-60&quot;></div>
@@ -334,37 +332,37 @@ const filteredServices = uniqueServices
           <div className=&quot;relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20&quot;>
             {/* Enhanced Header */}
             <motion.div,
-initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className=&quot;text-center mb-20&quot;
             >
               <motion.div,
-initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 1, delay: 0.2 }}
+initial={ opacity: 0, scale: 0.9 }
+                animate={ opacity: 1, scale: 1 }
+                transition={ duration: 1, delay: 0.2 }
                 className=&quot;mb-6&quot;
               >
                 <div className=&quot;inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-4&quot;>
                   <span className=&quot;w-2 h-2 bg-cyan-400 rounded-full mr-2 animate-pulse&quot;></span>
                   {allServices.length}+ Revolutionary Services Available                </div>
               </motion.div>
-              
+
               <h1 className=&quot;text-5xl md:text-7xl font-bold mb-6&quot;>
                 <span className=&quot;bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent&quot;>
                   Our Services
                 </span>
               </h1>
-              
+
               <p className=&quot;text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8&quot;>
                 Discover our comprehensive suite of cutting-edge AI, quantum computing, emerging technology, 
                 and micro SAAS services designed to transform your business and drive innovation.
               </p>
-              
+
               <motion.div,
-initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
+initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.8, delay: 0.4 }
                 className=&quot;flex flex-wrap justify-center gap-6 text-sm text-gray-400&quot;              >
                 <div className=&quot;flex items-center&quot;>
                   <div className=&quot;w-2 h-2 bg-green-400 rounded-full mr-2&quot;></div>
@@ -387,9 +385,9 @@ initial={{ opacity: 0, y: 20 }}
 
             {_/* Enhanced Search and Filters */}
             <motion.div,
-initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8, delay: 0.2 }
               className=&quot;mb-12&quot;
             >
               <div className=&quot;bg-gray-900/60 backdrop-blur-xl border border-gray-700/50 rounded-3xl p-8 shadow-2xl shadow-cyan-500/10&quot;>
@@ -417,10 +415,10 @@ value={selectedCategory}
                         className=&quot;px-6 py-4 bg-gray-800/50 border border-gray-700/50 rounded-2xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-300 hover:border-cyan-500/30 appearance-none pr-10&quot;
                       >
                         <option value=&quot;all&quot;>All Categories</option>
-                        {categories.map((category) => (
+                        {categories.map(category) => (
                           <option key={category.id} value={category.id}>
                             {category.name}                          </option>
-                        ))}
+                        )}
                       </select>
                       <div className=&quot;absolute right-3 top-1/2 transform -translate-y-1/2 text-cyan-400 pointer-events-none&quot;>
                         <ChevronDown className=&quot;w-5 h-5&quot; />
@@ -437,7 +435,7 @@ value={sortBy}
                           <option key={option.value} value={option.value}>
                             {option.label}
                           </option>;
-                        ))}
+                        )}
                       </select>
                       <div className=&quot;absolute right-3 top-1/2 transform -translate-y-1/2 text-cyan-400 pointer-events-none&quot;>
                         <ChevronDown className=&quot;w-5 h-5&quot; />
@@ -448,7 +446,7 @@ value={sortBy}
                     <div className=&quot;flex items-center space-x-2 bg-gray-800/50 rounded-2xl p-1.5 border border-gray-700/50&quot;>                      <button,
 onClick={_() => setViewMode('grid')}
                         className={_`p-3 rounded-xl transition-all duration-300 ${
-                          viewMode === 'grid' 
+                          viewMode = = 'grid' 
                             ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white shadow-lg shadow-cyan-500/25' 
                             : 'text-gray-400 hover:text-white hover:bg-gray-700/50'}`}
                       >
@@ -457,7 +455,7 @@ onClick={_() => setViewMode('grid')}
                       <button,
 onClick={_() => setViewMode('list')}
                         className={_`p-3 rounded-xl transition-all duration-300 ${
-                          viewMode === 'list' 
+                          viewMode = = 'list' 
                             ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white shadow-lg shadow-cyan-500/25' 
                             : 'text-gray-400 hover:text-white hover:bg-gray-700/50'}`}
                       >
@@ -475,16 +473,16 @@ onClick={_() => setViewMode('list')}
                   </div>
                 </div>
               </div>
-              
+
               <select,
 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
                 className=&quot;px-4 py-3 bg-gray-900/50 border border-cyan-500/20 rounded-xl text-white focus:outline-none focus:border-cyan-400/40 focus:ring-2 focus:ring-cyan-500/20&quot;              >
                 {categories.map(category => (
                   <option key={category} value={category}>{category}</option>
-                ))}
+                )}
               </select>
-              
+
               <select,
 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
@@ -498,9 +496,9 @@ value={sortBy}
 
             {_/* Enhanced Category Overview */}
             <motion.div,
-initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8, delay: 0.4 }
               className=&quot;mb-20&quot;            >
               <div className=&quot;text-center mb-16&quot;>
                 <h2 className=&quot;text-4xl md:text-5xl font-bold mb-6&quot;>
@@ -514,23 +512,23 @@ initial={{ opacity: 0, y: 20 }}
               </div>
 
               <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6&quot;>
-                {categories.map((category, index) => {
+                {categories.map(category, index) => {
                   const stats = getCategoryStats(category.id),
                   return (
                     <motion.div,
 key={category.id}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.8, delay: 0.6 + index * 0.1 }}
+                      initial={ opacity: 0, y: 20 }
+                      animate={ opacity: 1, y: 0 }
+                      transition={ duration: 0.8, delay: 0.6 + index * 0.1 }
                       className=&quot;bg-gray-900/60 backdrop-blur-xl border border-gray-700/50 rounded-3xl p-8 hover:border-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-500 cursor-pointer group&quot;
                       onClick={() => setSelectedCategory(category.id)}                    >
                       <div className={_`w-20 h-20 bg-gradient-to-r ${category.color} rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
                         {category.icon}
                       </div>
-                      
+
                       <h3 className=&quot;text-2xl font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors duration-300&quot;>{category.name}</h3>
                       <p className=&quot;text-gray-300 text-base mb-6 leading-relaxed&quot;>{category.description}</p>
-                      
+
                       <div className=&quot;grid grid-cols-3 gap-6 text-center&quot;>
                         <div className=&quot;group-hover:scale-105 transition-transform duration-300&quot;>
                           <div className=&quot;text-3xl font-bold text-cyan-400&quot;>{stats.count}</div>
@@ -544,7 +542,7 @@ key={category.id}
                           <div className=&quot;text-3xl font-bold text-green-400&quot;>{stats.avgRating}</div>
                           <div className=&quot;text-sm text-gray-400&quot;>Rating</div>                        </div>
                       </div>
-                      
+
                       <div className=&quot;mt-6 pt-6 border-t border-gray-700/50&quot;>
                         <div className=&quot;text-cyan-400 text-sm font-medium group-hover:text-cyan-300 transition-colors duration-300&quot;>
                           Click to explore 
@@ -553,24 +551,24 @@ key={category.id}
 
             {_/* Services Grid/List */}
             <motion.div,
-initial={_{ opacity: 0, y: 20}}
-              animate={_{ opacity: 1, y: 0}}
-              transition={_{ duration: 0.8, delay: 0.8}}
+initial={_{ opacity: 0, y: 20}
+              animate={_{ opacity: 1, y: 0}
+              transition={_{ duration: 0.8, delay: 0.8}
             >
               <h2 className=&quot;text-3xl font-bold text-center mb-12&quot;>
                 <span className=&quot;bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent&quot;>
-                  {selectedCategory === 'all' ? 'All Services' : categories.find(c => c.id === selectedCategory)?.name}
+                  {selectedCategory = = 'all' ? 'All Services' : categories.find(c => c.id = = selectedCategory)?.name}
                 </span>
               </h2>
 
-              {viewMode === 'grid' ? (
+              {viewMode = = 'grid' ? (
                 <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
-                  {sortedServices.map((service, index) => (
+                  {sortedServices.map(service, index) => (
                     <motion.div,
 key={service.id}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.8, delay: 1 + index * 0.05 }}
+                      initial={ opacity: 0, y: 20 }
+                      animate={ opacity: 1, y: 0 }
+                      transition={ duration: 0.8, delay: 1 + index * 0.05 }
                       className=&quot;bg-gray-900/60 backdrop-blur-xl border border-gray-700/50 rounded-3xl p-8 hover:border-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-500 hover:transform hover:scale-105 group relative overflow-hidden&quot;
                     >
                       {/* Animated Background */}
@@ -590,17 +588,16 @@ key={service.id}
                             </span>
                           )}
                         </div>;
-                        ;
                         {/* Service Icon */}
                         <div className=&quot;text-4xl mb-4&quot;>{service.icon}</div>                      </div>
                     </div>
                   </motion.div>
-                ))}
+                )}
               </div>
             ) : (
               <motion.div,
-initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+initial={ opacity: 0 }
+                animate={ opacity: 1 }
                 className=&quot;text-center py-20&quot;              >
                 <Search className=&quot;w-16 h-16 text-gray-400 mx-auto mb-4&quot; />
                 <h3 className=&quot;text-xl font-semibold text-white mb-2&quot;>No services found</h3>
@@ -609,7 +606,7 @@ initial={{ opacity: 0 }}
 onClick={() => {
                     setSearchTerm(''),
                     setSelectedCategory('All')
-                  }}
+                  }
                   className=&quot;mt-4 px-6 py-2 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-colors&quot;                >
                   Clear Filters
                 </button>
@@ -617,7 +614,7 @@ onClick={() => {
             )}
           </div>;
         </section>;
-;
+
                       {/* Enhanced Price */}
                       <div className=&quot;mb-6 relative z-10&quot;>
                         <div className=&quot;bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 rounded-2xl p-4&quot;>
@@ -631,14 +628,14 @@ onClick={() => {
                       <div className=&quot;mb-6 relative z-10&quot;>
                         <div className=&quot;text-sm text-cyan-400 font-medium mb-3&quot;> Key Features</div>
                         <ul className=&quot;space-y-2&quot;>
-                          {service.features.slice(0, 3).map((feature, idx) => (
+                          {service.features.slice(0, 3).map(feature, idx) => (
                             <li key={idx} className=&quot;text-sm text-gray-300 flex items-center group-hover:text-white transition-colors duration-300&quot;>
                               <Check className=&quot;w-4 h-4 text-green-400 mr-3 flex-shrink-0&quot; />
                               {feature}                            </li>
-                          ))}
+                          )}
                         </ul>;
                       </div>;
-;
+
                       {/* Enhanced Stats */}
                       <div className=&quot;grid grid-cols-3 gap-3 mb-6 text-center relative z-10&quot;>
                         <div className=&quot;bg-gray-800/50 rounded-xl p-3 border border-gray-700/50 group-hover:border-cyan-500/30 transition-colors duration-300&quot;>
@@ -665,16 +662,16 @@ href={service.link}
                         </a>
                       </div>
                     </motion.div>
-                  ))}
+                  )}
                 </div>
               ) : (
                 <div className=&quot;space-y-4&quot;>
-                  {sortedServices.map((service, index) => (
+                  {sortedServices.map(service, index) => (
                     <motion.div,
 key={service.id}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.8, delay: 1 + index * 0.05 }}
+                      initial={ opacity: 0, x: -20 }
+                      animate={ opacity: 1, x: 0 }
+                      transition={ duration: 0.8, delay: 1 + index * 0.05 }
                       className=&quot;bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 hover:border-gray-600/50 transition-all duration-300&quot;
                     >
                       <div className=&quot;flex flex-col lg:flex-row gap-6&quot;>
@@ -687,17 +684,17 @@ key={service.id}
                               </span>
                             )}
                           </div>
-                          
+
                           <p className=&quot;text-gray-300 mb-3&quot;>{service.description}</p>
-                          
+
                           <div className=&quot;flex flex-wrap gap-2 mb-4&quot;>
-                            {service.features.slice(0, 4).map((feature, idx) => (
+                            {service.features.slice(0, 4).map(feature, idx) => (
                               <span key={idx} className=&quot;px-2 py-1 bg-gray-800/50 text-xs text-gray-300 rounded-lg&quot;>
                                 {feature}                              </span>
-                            ))}
+                            )}
                           </div>;
                         </div>;
-;
+
                         {/* Pricing & Stats */}
                         <div className=&quot;lg:w-48 space-y-4&quot;>
                           <div className=&quot;text-center&quot;>
@@ -705,7 +702,7 @@ key={service.id}
                             <div className=&quot;text-sm text-gray-400&quot;>/month</div>
                             <div className=&quot;text-xs text-green-400&quot;>{service.price.trialDays}-day trial</div>
                           </div>
-                          
+
                           <div className=&quot;grid grid-cols-2 gap-2 text-center text-xs&quot;>
                             <div className=&quot;bg-gray-800/30 rounded-lg p-2&quot;>
                               <div className=&quot;text-cyan-400 font-semibold&quot;>{service.rating}/5</div>
@@ -715,7 +712,7 @@ key={service.id}
                               <div className=&quot;text-purple-400 font-semibold&quot;>{service.customers}+</div>
                               <div className=&quot;text-gray-400&quot;>Customers</div>                            </div>
                           </div>
-                          
+
                           <a,
 href={service.link}
                             className=&quot;block w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-2 px-4 rounded-lg text-center text-sm font-medium hover:from-cyan-600 hover:to-purple-700 transition-all duration-200&quot;                          >
@@ -725,16 +722,16 @@ href={service.link}
                         </div>
                       </div>
                     </motion.div>
-                  ))}
+                  )}
                 </div>;
               )}
             </motion.div>
 
             {_/* Enhanced CTA Section */}
             <motion.div,
-initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.2 }}
+initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8, delay: 1.2 }
               className=&quot;text-center mt-24&quot;
             >
               <div className=&quot;relative overflow-hidden bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 border border-cyan-500/20 rounded-3xl p-16 shadow-2xl shadow-cyan-500/10&quot;>
@@ -743,47 +740,47 @@ initial={{ opacity: 0, y: 30 }}
                 <div className=&quot;absolute bottom-0 right-0 w-64 h-64 bg-gradient-to-br from-purple-500/20 to-transparent rounded-full blur-3xl&quot;></div>                
                 <div className=&quot;relative z-10&quot;>
                   <motion.div,
-initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 1, delay: 1.4 }}
+initial={ opacity: 0, scale: 0.9 }
+                    animate={ opacity: 1, scale: 1 }
+                    transition={ duration: 1, delay: 1.4 }
                     className=&quot;mb-8&quot;                  >
                     <div className=&quot;inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-6&quot;>
                       <span className=&quot;w-2 h-2 bg-cyan-400 rounded-full mr-2 animate-pulse&quot;></span>
                       Transform Your Business Today
                     </div>
                   </motion.div>
-                  
+
                   <h2 className=&quot;text-5xl md:text-6xl font-bold text-white mb-8&quot;>
                     <span className=&quot;bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent&quot;>
                       Ready to Get Started?
                     </span>
                   </h2>
-                  
+
                   <p className=&quot;text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed&quot;>
                     Choose from our comprehensive suite of revolutionary services and start transforming your business today with cutting-edge AI, quantum computing, and emerging technologies.
                   </p>
-                  
+
                   <div className=&quot;flex flex-col sm:flex-row gap-6 justify-center&quot;>
                     <motion.a,
 href=&quot;/contact&quot;
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
+                      whileHover={ scale: 1.05 }
+                      whileTap={ scale: 0.95 }
                       className=&quot;bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-5 rounded-2xl font-bold text-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-2xl shadow-cyan-500/25 hover:shadow-cyan-500/40&quot;                    >
                        Get Started Today
                     </motion.a>
                     <motion.a,
 href=&quot;/pricing&quot;
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
+                      whileHover={ scale: 1.05 }
+                      whileTap={ scale: 0.95 }
                       className="border-2 border-cyan-500/50 text-white px-10 py-5 rounded-2xl font-bold text-xl hover: border-cyan-400 hover:bg-cyan-500/10 transition-all duration-300 backdrop-blur-sm"                      href="/pricing"
-                      whileHover={_{ scale: 1.05}}
-                      whileTap={_{ scale: 0.95}}
+                      whileHover={_{ scale: 1.05}
+                      whileTap={_{ scale: 0.95}
                       className="border-2 border-cyan-500/50 text-white px-10 py-5 rounded-2xl font-bold text-xl hover:border-cyan-400 hover:bg-cyan-500/10 transition-all duration-300 backdrop-blur-sm"
                     >
                        View Pricing
                     </motion.a>
                   </div>
-                  
+
                   <div className=&quot;mt-10 text-sm text-gray-400&quot;>
                     <p>Need help choosing? <a href=&quot;/contact&quot; className=&quot;text-cyan-400 hover:text-cyan-300 underline&quot;>Contact our experts</a> for personalized guidance.</p>
                   </div>
@@ -797,24 +794,21 @@ href=&quot;/pricing&quot;
       <UltraFuturisticFooter2029 />
     </UltraFuturisticBackground2029>
   )}
-}animate= {
-  {
+animate= {
   opacity: 1, y: 0 
-}
-}transition= {
-  {
+
+transition= {
   duration: 0.8, delay: 0.8 
-}
-}>  Popular </span>) 
-}</div> </div> </div> </motion.div>) ) 
-}</div> > <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" /> <h3 className="text-xl font-semibold text-white mb-2" >No services found</h3> <p className="text-gray-400" >Try adjusting your search criteria or browse all services</p> <button > Clear Filters </button> </motion.div>) 
-}</div> </section> </li>) ) 
-}</ul> </div> > Explore Service <ArrowRight className="w-5 h-5 inline ml-2 group-hover:translate-x-1 transition-transform duration-300" /> </a> </div> </motion.div>) ) 
-}</div> Popular </span>) 
-}</div> </span>) ) 
-}</div> </div> </div> </div> <a > Learn More <ArrowRight className="w-4 h-4 inline ml-2" /> </a> </div> </div> </motion.div>) ) 
-}</div>) 
-}</motion.div> {
+
+>  Popular </span>) 
+</div> </div> </div> </motion.div>) 
+</div><Search className="w-16 h-16 text-gray-400 mx-auto mb-4" /> <h3 className="text-xl font-semibold text-white mb-2" >No services found</h3> <p className="text-gray-400" >Try adjusting your search criteria or browse all services</p> <button > Clear Filters </button> </motion.div>) 
+</div> </section> </li>) 
+</ul> </div>Explore Service <ArrowRight className="w-5 h-5 inline ml-2 group-hover:translate-x-1 transition-transform duration-300" /> </a> </div> </motion.div>) 
+</div> Popular </span>) 
+</div> </span>) 
+</div> </div> </div> </div> <a > Learn More <ArrowRight className="w-4 h-4 inline ml-2" /> </a> </div> </div> </motion.div>) 
+</div>) 
+</motion.div> {
   /* Enhanced CTA Section */ 
-}<motion.div <div className="relative z-10" > <motion.div > <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-6" > <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2 animate-pulse" ></span> Transform Your Business Today </div> </motion.div> <h2 className="text-5xl md:text-6xl font-bold text-white mb-8" > <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > Ready to Get Started? </span> </h2> <p className="text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed" > Choose from our comprehensive suite of revolutionary services and start transforming your business today with cutting-edge AI, quantum computing, and emerging technologies. </p> <div className="flex flex-col sm:flex-row gap-6 justify-center" > <motion.a >  Get Started Today </motion.a> <motion.a mt-10 text-sm text-gray-400"> <p>Need help choosing? <a href=" /contact"className=" text-cyan-400 hover:text-cyan-300 underline" >Contact our experts</a> for personalized guidance.</p> </div> </div> </div> </motion.div> </div> </section> </main> <UltraFuturisticFooter2029 /> </UltraFuturisticBackground2029>) 
-}
+<motion.div <div className="relative z-10" > <motion.div > <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-6" > <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2 animate-pulse" ></span> Transform Your Business Today </div> </motion.div> <h2 className="text-5xl md:text-6xl font-bold text-white mb-8" > <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > Ready to Get Started? </span> </h2> <p className="text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed" > Choose from our comprehensive suite of revolutionary services and start transforming your business today with cutting-edge AI, quantum computing, and emerging technologies. </p> <div className="flex flex-col sm:flex-row gap-6 justify-center" > <motion.a >  Get Started Today </motion.a> <motion.a mt-10 text-sm text-gray-400"> <p>Need help choosing? <a href=" /contact"className=" text-cyan-400 hover:text-cyan-300 underline" >Contact our experts</a> for personalized guidance.</p> </div> </div> </div> </motion.div> </div> </section> </main> <UltraFuturisticFooter2029 /> </UltraFuturisticBackground2029>) 

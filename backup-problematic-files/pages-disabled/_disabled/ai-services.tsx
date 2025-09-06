@@ -2,7 +2,6 @@ import React from 'react';
 
 interface Ai-servicesProps {
   className?: string;
-}
 
 const Ai-services: React.FC<Ai-servicesProps> = ({ className }) => {
   return (
@@ -11,6 +10,5 @@ const Ai-services: React.FC<Ai-servicesProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default Ai-services;

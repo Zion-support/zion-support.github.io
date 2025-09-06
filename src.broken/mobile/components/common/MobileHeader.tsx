@@ -6,5 +6,3 @@ export function MobileHeader() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

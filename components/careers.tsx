@@ -1,31 +1,31 @@
 
-const filteredJobs = selectedDepartment === 'all' ? jobOpenings : jobOpenings.filter (job => job.department === selectedDepartment);
-> <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6" > Join Our Team </h1> </p> </motion.div> {
+const filteredJobs = selectedDepartment = = 'all' ? jobOpenings : jobOpenings.filter (job => job.department = = selectedDepartment);
+ <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6" > Join Our Team </h1> </p> </motion.div> {
   /* Company Culture */
-}<motion.div </div>) )
-}</div> </motion.div> {
+<motion.div </div>)
+</div> </motion.div> {
   /* Benefits */
-}<motion.div </div>) )
-}</div> </div> </motion.div> {
+<motion.div </div>)
+</div> </div> </motion.div> {
   /* Job Openings */
-}<motion.div > <h2 className="text-3xl font-bold text-white text-center mb-8" >Open Positions</h2> key= {
+<motion.div > <h2 className="text-3xl font-bold text-white text-center mb-8" >Open Positions</h2> key= {
   dept.id
-}onClick= {
+onClick= {
   () => setSelectedDepartment (dept.id)
-}className= {
+className= {
   `px-4 py-2 rounded-lg font-medium transition-all duration-300 $ {
-  selectedDepartment === dept.id ? 'bg-blue-500 text-white' : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50'
-}`
-}> {
+  selectedDepartment = = dept.id ? 'bg-blue-500 text-white' : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50'
+`
+> {
   dept.name
-}</button>) )
-}</div> > <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4" > <div> </span> </div> </div> <a > Apply Now <ArrowRight className="w-5 h-5 ml-2" /> </a> </div> </li>) )
-}</ul> </div> </motion.div>) )
-}</div> We don't have any open positions in this department at the moment. Check back later or send us your resume for future opportunities. </p> </div>)
-}</motion.div> {
+</button>)
+</div><div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4" > <div></span> </div> </div> <a > Apply Now <ArrowRight className="w-5 h-5 ml-2" /> </a> </div> </li>)
+</ul> </div> </motion.div>)
+</div> We don't have any open positions in this department at the moment. Check back later or send us your resume for future opportunities. </p> </div>)
+</motion.div> {
   /* General Application */
-}<motion.div > <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 p-8 rounded-2xl border border-blue-500/20 max-w-4xl mx-auto" > <h2 className="text-2xl font-bold text-white mb-4" >Don't See the Right Fit?</h2> <p className="text-gray-300 mb-6" > We're always looking for talented individuals to join our team. Send us your resume and let's discuss how you can contribute to our mission. </p> <a href="/contact" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105" > Send Your Resume <ArrowRight className="w-5 h-5 ml-2" /> </a> <a href="/about" className="inline-flex items-center px-6 py-3 border-2 border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-300" > Learn More About Us </a> </div> </div> </motion.div> </div> </Layout>)
-};export default CareersPage;import React, { useState } from 'react';
+<motion.div > <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 p-8 rounded-2xl border border-blue-500/20 max-w-4xl mx-auto" > <h2 className="text-2xl font-bold text-white mb-4" >Don't See the Right Fit?</h2> <p className="text-gray-300 mb-6" > We're always looking for talented individuals to join our team. Send us your resume and let's discuss how you can contribute to our mission. </p> <a href="/contact" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105" > Send Your Resume <ArrowRight className="w-5 h-5 ml-2" /> </a> <a href="/about" className="inline-flex items-center px-6 py-3 border-2 border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-300" > Learn More About Us </a> </div> </div> </motion.div> </div> </Layout>)
+;export default CareersPage;import React, { useState } from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 import {motion} from 'framer-motion';
@@ -129,9 +129,9 @@ export default function Careers() {
   const benefits = [
     'Competitive salary and equity packagesComprehensive health, dental, and vision insuranceFlexible work arrangements and remote work optionsProfessional development and training programsGenerous paid time off and holidays401(k) with company matchingModern technology and equipmentCollaborative and inclusive work environment'
   ];
-  const filteredJobs = selectedDepartment === 'all'
+  const filteredJobs = selectedDepartment = = 'all'
     ? jobOpenings
-    : jobOpenings.filter(job => job.department === selectedDepartment);
+    : jobOpenings.filter(job => job.department = = selectedDepartment);
   return (
     <UltraFuturisticBackground>
       <div className="min-h-screen">
@@ -142,9 +142,9 @@ export default function Careers() {
       <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          initial={ opacity: 0, y: 20 }
+          animate={ opacity: 1, y: 0 }
+          transition={ duration: 0.6 }
           className="text-center mb-16"
         >
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">
@@ -156,13 +156,13 @@ export default function Careers() {
         </motion.div>
         {/* Company Culture */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
+          initial={ opacity: 0, y: 20 }
+          animate={ opacity: 1, y: 0 }
+          transition={ duration: 0 && 0.6, delay: 0 && 0.2 }
           className="mb-16">;
           <h2 className="text-3xl font-bold text-white text-center mb-12">Our Culture & Values</h2>;
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">;
-            {companyValues && companyValues.map((value, index) => (;
+            {companyValues && companyValues.map(value, index) => (;
               <div key={index} className="bg-gradient-to-br from-gray-900/40 to-blue-900/20 p-6 rounded-2xl border border-gray-600/20 text-center">;
                 <div className="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4 text-blue-400">;
                   {value && value.icon}
@@ -170,65 +170,65 @@ export default function Careers() {
                 <h3 className="text-lg font-bold text-white mb-3">{value && value.title}</h3>;
                 <p className="text-gray-300 text-sm">{value && value.description}</p>;
               </div>;
-            ))}
+            )}
           </div>
         </motion.div>
         {/* Benefits */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0 && 0.6, delay: 0 && 0.4 }}
+          initial={ opacity: 0, y: 20 }
+          animate={ opacity: 1, y: 0 }
+          transition={ duration: 0 && 0.6, delay: 0 && 0.4 }
           className="mb-16">;
           <h2 className="text-3xl font-bold text-white text-center mb-12">Why Work With Us?</h2>;
           <div className="bg-gradient-to-br from-gray-900/40 to-purple-900/20 p-8 rounded-2xl border border-gray-600/20 max-w-4xl mx-auto">;
             <div className="grid md:grid-cols-2 gap-6">;
-              {benefits && benefits.map((benefit, index) => (;
+              {benefits && benefits.map(benefit, index) => (;
                 <div key={index} className="flex items-center">;
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />;
                   <span className="text-gray-300">{benefit}</span>;
                 </div>;
-              ))}
+              )}
             </div>
           </div>
         </motion.div>
         {/* Job Openings */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
+          initial={ opacity: 0, y: 20 }
+          animate={ opacity: 1, y: 0 }
+          transition={ duration: 0.6, delay: 0.6 }
           className="mb-16"
         >
           <h2 className="text-3xl font-bold text-white text-center mb-8">Open Positions</h2>
           {/* Department Filter */}
           <div className="flex flex-wrap justify-center gap-3 mb-8">;
-            {departments && departments.map((dept) => (;
+            {departments && departments.map(dept) => (;
               <button
                 key={dept && dept.id}
                 onClick={() => setSelectedDepartment(dept && dept.id)}
                 className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${;
-                  selectedDepartment === dept && dept.id;
+                  selectedDepartment = = dept && dept.id;
                     ? 'bg-blue-500 text-white';
                     : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50';
                 }`}
               >;
                 {dept && dept.name}
               </button>;
-            ))}
+            )}
           </div>
           {/* Job Listings */}
           <div className="space-y-6">;
-            {filteredJobs && filteredJobs.map((job) => (;
+            {filteredJobs && filteredJobs.map(job) => (;
               <motion&& motion.div
                 key={job && job.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
                 className="bg-gradient-to-br from-gray-900/40 to-blue-900/20 p-6 rounded-2xl border border-gray-600/20 hover:border-blue-500/30 transition-all duration-300">;
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">;
                   <div>;
                     <h3 className="text-xl font-bold text-white mb-2">{job && job.title}</h3>;
                     <div className="flex flex-wrap gap-3 text-sm">;
                       <span className="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full">;
-                        {departments && departments.find(d => d && d.id === job && job.department)?.name}
+                        {departments && departments.find(d => d && d.id = = job && job.department)?.name}
                       </span>;
                       <span className="bg-green-500/20 text-green-400 px-3 py-1 rounded-full">;
                         {job && job.location}
@@ -253,18 +253,18 @@ export default function Careers() {
                 <div>
                   <h4 className="text-white font-semibold mb-2">Requirements:</h4>
                   <ul className="space-y-1">
-                    {job.requirements.map((req, index) => (
+                    {job.requirements.map(req, index) => (
                       <li key={index} className="flex items-start text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
                         {req}
                       </li>
-                    ))}
+                    )}
                   </ul>
                 </div>
               </motion.div>
-            ))}
+            )}
           </div>
-          {filteredJobs.length === 0 && (
+          {filteredJobs.length = = 0 && (
             <div className="text-center py-12">
               <Briefcase className="w-16 h-16 text-gray-500 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-gray-400 mb-2">No Open Positions</h3>
@@ -277,9 +277,9 @@ export default function Careers() {
         </motion.div>
         {/* General Application */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
+          initial={ opacity: 0, y: 20 }
+          animate={ opacity: 1, y: 0 }
+          transition={ duration: 0.6, delay: 0.8 }
           className="text-center"
         >
           <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 p-8 rounded-2xl border border-blue-500/20 max-w-4xl mx-auto">
@@ -308,7 +308,7 @@ export default function Careers() {
       </div>
     </Layout>
   )
-}
+
                 Learn More About Us;
               </a>;
             </div>;
@@ -317,14 +317,11 @@ export default function Careers() {
       </div>;
     </Layout>;
   );
-};
 
 export default CareersPage;
 
         </motion.div>;
       </div>;
     </Layout>);
-}
-;
+
 export default CareersPage;
-;

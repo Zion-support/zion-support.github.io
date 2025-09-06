@@ -20,7 +20,7 @@ const contactSchema = z.object({
   email: z.string().email('Please enter a valid email address'),
   subject: z.string().min(5, 'Subject must be at least 5 characters'),
   message: z.string().min(10, 'Message must be at least 10 characters'),
-});
+);
 
 export default function Contact() {
   const { toast } = useToast();
@@ -38,36 +38,35 @@ export default function Contact() {
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }));
+    });
     // Clear error when user starts typing
     if (errors[name]) {
       setErrors(prev => ({
         ...prev,
         [name]: ''
-      }));
-    }
-  };
+      });
+    };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     try {
       // Validate form data
       const validatedData = contactSchema.parse(formData);
-      
+
       // Log form submission
       logInfo('Contact form submission started', { email: validatedData.email });
-      
+
       // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
+      await new Promise(resolve => setTimeout(resolve, 1000);
+
       // Show success message
       toast({
         title: "Message sent successfully!",
         description: "We'll get back to you within 24 hours.",
       });
-      
+
       // Reset form
       setFormData({
         name: '',
@@ -75,13 +74,13 @@ export default function Contact() {
         subject: '',
         message: ''
       });
-      
+
       logInfo('Contact form submission completed successfully');
-      
+
     } catch (error) {
       if (error instanceof z.ZodError) {
         const fieldErrors = {};
-        error.errors.forEach((err) => {
+        error.errors.forEach(err) => {
           fieldErrors[err.path[0]] = err.message;
         });
         setErrors(fieldErrors);
@@ -93,11 +92,9 @@ export default function Contact() {
           description: "Something went wrong. Please try again.",
           variant: "destructive",
         });
-      }
-    } finally {
+      } finally {
       setIsSubmitting(false);
-    }
-  };
+    };
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -107,7 +104,7 @@ export default function Contact() {
         keywords="contact, AI services, micro SaaS, IT services, Zion Tech Group"
       />
       <Header />
-      
+
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-6xl mx-auto">
           <GradientHeading 
@@ -115,7 +112,7 @@ export default function Contact() {
             subtitle="We'd love to hear from you. Send us a message and we'll respond as soon as possible."
             className="text-center mb-12"
           />
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Information */}
             <div className="space-y-8">
@@ -155,7 +152,7 @@ export default function Contact() {
                   </div>
                 </div>
               </Card>
-              
+
               <Card className="p-6 bg-blue-50 border-blue-200">
                 <h4 className="font-semibold text-blue-900 mb-2">Quick Response</h4>
                 <p className="text-blue-800 text-sm">
@@ -163,7 +160,7 @@ export default function Contact() {
                 </p>
               </Card>
             </div>
-            
+
             {/* Contact Form */}
             <Card className="p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Send us a Message</h3>
@@ -221,7 +218,7 @@ export default function Contact() {
                     <p className="text-red-500 text-sm mt-1">{errors.subject}</p>
                   )}
                 </div>
-                
+
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                     Message
@@ -240,7 +237,7 @@ export default function Contact() {
                     <p className="text-red-500 text-sm mt-1">{errors.message}</p>
                   )}
                 </div>
-                
+
                 <Button
                   type="submit"
                   disabled={isSubmitting}
@@ -253,7 +250,7 @@ export default function Contact() {
           </div>
         </div>
       </div>
-      
+
       <ChatAssistant />
     </div>
 
@@ -262,23 +259,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React from 'react';
 
 const Contact: React.FC = () => {;
@@ -292,6 +289,5 @@ const Contact: React.FC = () => {;
       </div>;
     </div>;
   );
-}
 
 export default Contact;

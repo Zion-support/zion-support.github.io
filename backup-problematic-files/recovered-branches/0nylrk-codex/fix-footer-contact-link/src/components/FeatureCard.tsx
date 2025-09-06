@@ -1,15 +1,14 @@
 
 import { cn } from "@/lib/utils",;
 import React from "react",;
-;
+
 interface FeatureCardProps {;
   title:string,;
   description:string,;
   icon:React.ReactNode,;
   className?:string,;
   key?:string | number, // Added key prop;
-}
-;
+
 export function FeatureCard({ title, description, icon, className } FeatureCardProps) {;
   return (;
     <div className={cn(;
@@ -31,8 +30,7 @@ description: string;
 icon: React.ReactNode;
 className?: string;
 key?: string | number, //Added key prop 
-}title, description, icon, className 
-}: FeatureCardProps) {
+title, description, icon, className 
+: FeatureCardProps) {
   return (<div className= {
   cn (</div> </div>) 
-}

@@ -1,5 +1,4 @@
 
-
 export type ProjectStatus =
   | 'offer_sent'
   | 'offer_accepted'
@@ -32,7 +31,7 @@ export interface Project {
     display_name: string
     avatar_url?: string
   }
-}
+
 export interface ProjectNote {
   id: string;
   project_id: string;
@@ -44,4 +43,3 @@ export interface ProjectNote {
 
     avatar_url?: string
   }
-}

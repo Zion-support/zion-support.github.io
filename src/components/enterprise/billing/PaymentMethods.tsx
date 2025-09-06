@@ -7,7 +7,7 @@ import {
   CardFooter
   CardHeader
   CardTitle
-} from '@/components/ui/card'
+ from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 
 import { CreditCard, Plus, Trash } from 'lucide-react'
@@ -50,7 +50,7 @@ export function PaymentMethods() {
         {paymentMethods.map(method => (
           <div            key={method.id}
       <CardContent className="space-y-4">
-        {paymentMethods.map((method,) => (
+        {paymentMethods.map(method,) => (
           <div
             key = {method.id,}
 import React from 'react';
@@ -61,7 +61,7 @@ import {;
   CardFooter,;
   CardHeader,;
   CardTitle,;
-} from '@/components/ui/card';
+ from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { CreditCard, Plus, Trash } from 'lucide-react';
 import React from "react";
@@ -103,7 +103,7 @@ export function PaymentMethods() {;
         {paymentMethods && paymentMethods.map(method => (;
           <div            key={method && method.id}
       <CardContent className="space-y-4">;
-        {paymentMethods && paymentMethods.map((method,) => (;
+        {paymentMethods && paymentMethods.map(method,) => (;
           <div
             key = {method && method.id,}
             className={`flex items-center justify-between p-4 rounded-lg border ${
@@ -150,8 +150,8 @@ export function PaymentMethods() {;
               </Button>;
             </div>;
           </div>;
-        ))}
-        ))}
+        )}
+        )}
       </CardContent>
       <CardFooter>
         <Button className='gap-1'>
@@ -162,7 +162,7 @@ export function PaymentMethods() {;
       </CardFooter>
     </Card>
   )
-}
+
       </CardContent>;
       <CardFooter>;
         <Button className='gap-1'>;
@@ -173,9 +173,9 @@ export function PaymentMethods() {;
       </CardFooter>;
     </Card>;
   );
-}
+
   );
-}
+
 import React from 'react';
 import {
   Card,
@@ -184,7 +184,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from '@/components / ui / card';
+ from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
 import { CreditCard, Plus, Trash } from 'lucide-react';
 import React from './react';
@@ -227,7 +227,7 @@ function PaymentMethods() {
         {payment_methods.map (method => (
           <div            key={method.id}
       <CardContent className="space - y-4">;
-        {payment_methods.map ((method, ) => (
+        {payment_methods.map (method, ) => (
           <div;
             key = {method.id, }
             className={`flex items - center justify - between p - 4 rounded - lg border ${
@@ -270,7 +270,7 @@ function PaymentMethods() {
                 <Trash className="h - 4 w - 4" />;
               </Button>;
             </div>;
-          </div>))}
+          </div>)}
       </CardContent>;
       <CardFooter>;
         <Button className='gap - 1'>;
@@ -280,4 +280,3 @@ function PaymentMethods() {
         </Button>;
       </CardFooter>;
     </Card>);
-}

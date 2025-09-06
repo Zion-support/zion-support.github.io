@@ -6,5 +6,3 @@ export function PodcastHost() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

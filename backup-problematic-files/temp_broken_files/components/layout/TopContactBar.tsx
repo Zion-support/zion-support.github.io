@@ -4,7 +4,7 @@ import {
   Phone, Mail, MapPin, Globe,
   Clock, ChevronDown, ChevronUp,
   MessageCircle, Calendar, Star
-} from 'lucide-react',
+ from 'lucide-react',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
@@ -13,13 +13,13 @@ const contactInfo = {
   website: 'https://ziontechgroup.com',
   hours: 'Mon-Fri: 9AM-6PM EST',
   rating: '4.9/5 (200+ Reviews)'
-},
+,
 
 const quickActions = [
   { name: 'Get Quote', href: '/quote', icon: <MessageCircle className="w-4 h-4" /> },
   { name: 'Book Demo', href: '/demo', icon: <Calendar className="w-4 h-4" /> },
   { name: 'Live Chat', href: '/chat', icon: <MessageCircle className="w-4 h-4" /> }
-],];
+,];
 
 export default function TopContactBar() {
   const [isExpanded, setIsExpanded] = useState(false),
@@ -38,7 +38,7 @@ export default function TopContactBar() {
                   {contactInfo.mobile}
                 </a>;
               </div>;
-;
+
               {/* Email */}
               <div className=&quot;flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 group&quot;>
                 <Mail className=&quot;w-4 h-4 text-cyan-400 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-200&quot; />
@@ -46,7 +46,7 @@ export default function TopContactBar() {
                   {contactInfo.email}
                 </a>;
               </div>;
-;
+
               {/* Address */}
               <div className=&quot;flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 group&quot;>
                 <MapPin className=&quot;w-4 h-4 text-cyan-400 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-200&quot; />
@@ -54,7 +54,7 @@ export default function TopContactBar() {
                   {contactInfo.address}
                 </span>;
               </div>;
-;
+
               {/* Website */}
               <div className=&quot;flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 group&quot;>
                 <Globe className=&quot;w-4 h-4 text-cyan-400 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-200&quot; />
@@ -82,7 +82,7 @@ export default function TopContactBar() {
             <div className=&quot;flex items-center space-x-4&quot;>
               {/* Quick Actions */}
               <div className=&quot;hidden sm:flex items-center space-x-2&quot;>
-                {quickActions.map((action) => (
+                {quickActions.map(action) => (
                   <a
                     key={action.name}
                     href={action.href}
@@ -90,7 +90,7 @@ export default function TopContactBar() {
                     {_action.icon}
                     <span>{_action.name}</span>
                   </a>
-                ))}
+                )}
               </div>
 
               {_/* Expand/Collapse Button */}
@@ -113,10 +113,10 @@ export default function TopContactBar() {
       <AnimatePresence>
         {isExpanded && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
+            initial={ opacity: 0, height: 0 }
+            animate={ opacity: 1, height: 'auto' }
+            exit={ opacity: 0, height: 0 }
+            transition={ duration: 0.3 }
             className=&quot;bg-gray-900/95 backdrop-blur-md border-b border-cyan-500/30 overflow-hidden&quot;
           >
             <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6&quot;>
@@ -176,7 +176,7 @@ export default function TopContactBar() {
                     <span>Quick Actions</span>
                   </h3>
                   <div className=&quot;space-y-3&quot;>
-                    {quickActions.map((action) => (
+                    {quickActions.map(action) => (
                       <a
                         key={action.name}
                         href={action.href}
@@ -186,10 +186,10 @@ export default function TopContactBar() {
                           {action.icon}
                         </div>
                         <span className=&quot;font-medium&quot;>{action.name}</span>                      </a>
-                    ))}
+                    )}
                   </div>;
                 </div>;
-;
+
                 {/* Company Highlights */}
                 <div className=&quot;space-y-4&quot;>
                   <h3 className=&quot;text-lg font-semibold text-white flex items-center space-x-2&quot;>
@@ -242,19 +242,18 @@ export default function TopContactBar() {
       </AnimatePresence>
     </div>
   )
-}
-;  /* Main Contact Bar */ 
-}</a> </div> </div> > {
+
+  /* Main Contact Bar */ 
+</a> </div> </div>{
   action.icon 
-}<span> {
+<span> {
   action.name 
-}</span> </a>) ) 
-}</div> {
+</span> </a>) 
+</div> {
   /* Expand/Collapse Button */ 
-}<button) : (<ChevronDown className="w-4 h-4" />) 
-}</button> </div> </div> </div> </div> {
+<button) : (<ChevronDown className="w-4 h-4" />) 
+</button> </div> </div> </div> </div> {
   /* Expanded Information Panel */ 
-}<AnimatePresence> </div> </div> </div> Visit Website </a> </div> </div> </div> </a>) ) 
-}</div> </div> <span>Why Choose Us</span> </h3> <div className="space-y-3" > <div className="p-3 bg-gradient-to-r from-cyan-500/10 to-blue-600/10 border border-cyan-500/30 rounded-lg" > <div className="text-sm font-medium text-white mb-1" >15+ Years Experience</div> <div className="text-xs text-gray-400" >Industry expertise and proven track record</div> </div> <div className="p-3 bg-gradient-to-r from-purple-500/10 to-pink-600/10 border border-purple-500/30 rounded-lg" > <div className="text-sm font-medium text-white mb-1" >500+ Services Delivered</div> <div className="text-xs text-gray-400" >Successful implementations worldwide</div> </div> <div className="p-3 bg-gradient-to-r from-green-500/10 to-emerald-600/10 border border-green-500/30 rounded-lg" > <div className="text-sm font-medium text-white mb-1" >24/7 Support</div> <div className="text-xs text-gray-400" >Round-the-clock technical assistance</div> </div> </div> </div> </div> Ready to Transform Your Business? </h3> <p className="text-gray-400 mb-4 max-w-2xl mx-auto" > Get in touch with our team of experts to discuss how our cutting-edge technology solutions can drive your business forward. </p> <div className="flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-4" > <a href="/contact" className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:shadow-xl hover:shadow-cyan-500/30 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25" > Get Started Today </a> <a href="/comprehensive-services-showcase-2025" className="px-6 py-3 text-cyan-400 hover:text-white border border-cyan-500/50 hover:border-cyan-400 rounded-lg transition-all duration-300 hover:bg-cyan-500/10" > View All Services </a> </div> </div> </div> </div> </motion.div>) 
-}</AnimatePresence> </div>) 
-}
+<AnimatePresence></div> </div> </div> Visit Website </a> </div> </div> </div> </a>) 
+</div> </div> <span>Why Choose Us</span> </h3> <div className="space-y-3" > <div className="p-3 bg-gradient-to-r from-cyan-500/10 to-blue-600/10 border border-cyan-500/30 rounded-lg" > <div className="text-sm font-medium text-white mb-1" >15+ Years Experience</div> <div className="text-xs text-gray-400" >Industry expertise and proven track record</div> </div> <div className="p-3 bg-gradient-to-r from-purple-500/10 to-pink-600/10 border border-purple-500/30 rounded-lg" > <div className="text-sm font-medium text-white mb-1" >500+ Services Delivered</div> <div className="text-xs text-gray-400" >Successful implementations worldwide</div> </div> <div className="p-3 bg-gradient-to-r from-green-500/10 to-emerald-600/10 border border-green-500/30 rounded-lg" > <div className="text-sm font-medium text-white mb-1" >24/7 Support</div> <div className="text-xs text-gray-400" >Round-the-clock technical assistance</div> </div> </div> </div> </div> Ready to Transform Your Business? </h3> <p className="text-gray-400 mb-4 max-w-2xl mx-auto" > Get in touch with our team of experts to discuss how our cutting-edge technology solutions can drive your business forward. </p> <div className="flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-4" > <a href="/contact" className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:shadow-xl hover:shadow-cyan-500/30 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25" > Get Started Today </a> <a href="/comprehensive-services-showcase-2025" className="px-6 py-3 text-cyan-400 hover:text-white border border-cyan-500/50 hover:border-cyan-400 rounded-lg transition-all duration-300 hover:bg-cyan-500/10" > View All Services </a> </div> </div> </div> </div> </motion.div>) 
+</AnimatePresence> </div>) 

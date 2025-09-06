@@ -9,7 +9,7 @@ import { ProtectedRoute } from "@/components/ProtectedRoute",;
 import Onboarding from "@/pages/Onboarding",;
 import TalentOnboarding from "@/pages/TalentOnboarding",;
 import ServiceOnboarding from "@/pages/ServiceOnboarding",;
-;
+
 const AuthRoutes = () => {;
   return (;
     <Routes>;
@@ -18,7 +18,6 @@ const AuthRoutes = () => {;
       <Route path="/signup" element={<Signup />} />;
       <Route path="/forgot-password" element={<ForgotPassword />} />;
       <Route path="/update-password" element={<UpdatePassword />} />;
-      ;
       {/* Onboarding Routes */}
       <Route ;
         path="/onboarding" ;
@@ -46,23 +45,23 @@ const AuthRoutes = () => {;
       />;
     </Routes>;
   ),;
-},;
-;
+,;
+
 export default AuthRoutes,; const AuthRoutes = () => {
   return (<Routes> {
   /* Auth Routes */ 
-}<Route path="/login" element= {
+<Route path="/login" element= {
   <Login /> 
-}/> <Route path="/signup" element= {
+/> <Route path="/signup" element= {
   <Signup /> 
-}/> <Route path="/forgot-password" element= {
+/> <Route path="/forgot-password" element= {
   <ForgotPassword /> 
-}/> <Route path="/update-password" element= {
+/> <Route path="/update-password" element= {
   <UpdatePassword /> 
-}/> /* Onboarding Routes */ 
-}<Route <Onboarding /> </ProtectedRoute> 
-}/> <Route <TalentOnboarding /> </ProtectedRoute> 
-}/> <Route <ServiceOnboarding /> </ProtectedRoute> 
-}/> </Routes>) 
-};
+/> /* Onboarding Routes */ 
+<Route <Onboarding /> </ProtectedRoute> 
+/> <Route <TalentOnboarding /> </ProtectedRoute> 
+/> <Route <ServiceOnboarding /> </ProtectedRoute> 
+/> </Routes>) 
+;
 export default AuthRoutes;

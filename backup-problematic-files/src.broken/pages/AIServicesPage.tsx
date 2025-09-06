@@ -18,8 +18,8 @@ import { ;
   Linkedin,;
   Twitter,;
   Github;
-} from 'lucide-react',;
-;
+ from 'lucide-react',;
+
 export default function AIServicesPage() {;
   const aiServices = [;
     {;
@@ -203,14 +203,14 @@ export default function AIServicesPage() {;
       website:"https://ziontechgroup.com/ai-evaluation-lab";
     }
   ],;
-;
+
   const stats = [;
     { label:"AI Models Deployed", value:"500+" },;
     { label:"Client Satisfaction", value:"98%" },;
     { label:"Cost Savings", value:"40-60%" },;
     { label:"Implementation Time", value:"2-4 weeks" }
   ],;
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">;
       {/* Hero Section */}
@@ -246,18 +246,18 @@ export default function AIServicesPage() {;
           </div>;
         </div>;
       </div>;
-;
+
       {/* Stats Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">;
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">;
-          {stats.map((stat, index) => (;
+          {stats.map(stat, index) => (;
             <div key={index} className="text-center">;
               <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">{stat.value}</div>;
               <div className="text-gray-300 text-sm">{stat.label}</div>;
-            </div>;          ))}
+            </div>;          )}
         </div>;
       </div>;
-;
+
       {/* AI Services Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">;
         <div className="text-center mb-16">;
@@ -268,31 +268,29 @@ export default function AIServicesPage() {;
             Comprehensive AI solutions designed to drive innovation, efficiency, and competitive advantage across all business functions.;
           </p>;
         </div>;
-;
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">;
-          {aiServices.map((service, index) => (;
+          {aiServices.map(service, index) => (;
             <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-purple-400/50 transition-all duration-300 hover:transform hover:scale-105">;
               <div className="space-y-6">;
                 <div className="flex items-center gap-4">;
                   {service.icon}
                   <h3 className="text-2xl font-bold text-white">{service.name}</h3>;
                 </div>;
-                ;
                 <p className="text-gray-300 leading-relaxed">{service.description}</p>;
-                ;
                 <div className="space-y-4">;
                   <div>;
                     <h4 className="text-lg font-semibold text-blue-400 mb-3">Key Features:</h4>;
                     <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">;
-                      {service.features.map((feature, featureIndex) => (;
+                      {service.features.map(feature, featureIndex) => (;
                         <li key={featureIndex} className="flex items-center gap-2 text-sm text-gray-300">;
                           <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />;
                           {feature}
                         </li>;
-                      ))}
+                      )}
                     </ul>;
                   </div>;
-;
+
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
                     <div>;
                       <h4 className="text-sm font-semibold text-blue-400 mb-2">Pricing Plans:</h4>;
@@ -314,26 +312,26 @@ export default function AIServicesPage() {;
                         Market price:<span className="line-through">{service.marketPrice}</span>;
                       </div>;
                     </div>;
-;
+
                     <div>;
                       <h4 className="text-sm font-semibold text-blue-400 mb-2">Best For:</h4>;
                       <ul className="space-y-1">;
-                        {service.useCases.map((useCase, useCaseIndex) => (;
+                        {service.useCases.map(useCase, useCaseIndex) => (;
                           <li key={useCaseIndex} className="text-xs text-gray-300"> {useCase}</li>;
-                        ))}
+                        )}
                       </ul>;
                     </div>;
                   </div>;
-;
+
                   <div>;
                     <h4 className="text-sm font-semibold text-blue-400 mb-2">Key Benefits:</h4>;
                     <ul className="grid grid-cols-1 md:grid-cols-2 gap-1">;
-                      {service.benefits.map((benefit, benefitIndex) => (;
+                      {service.benefits.map(benefit, benefitIndex) => (;
                         <li key={benefitIndex} className="text-xs text-gray-300"> {benefit}</li>;
-                      ))}
+                      )}
                     </ul>;
                   </div>;
-;
+
                   <div className="pt-4 border-t border-white/20">;
                     <div className="flex gap-3">;
                       <a ;
@@ -353,10 +351,10 @@ export default function AIServicesPage() {;
                   </div>;
                 </div>;
               </div>;
-            </div>;          ))}
+            </div>;          )}
         </div>;
       </div>;
-;
+
       {/* Why Choose Zion Tech Group */}
       <div className="bg-gradient-to-r from-purple-900/50 to-blue-900/50 border-t border-white/20">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">;
@@ -364,7 +362,6 @@ export default function AIServicesPage() {;
             <h2 className="text-3xl md:text-4xl font-bold text-white">;
               Why Choose Zion Tech Group for AI Solutions?;
             </h2>;
-            ;
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
               <div className="text-center space-y-4">;
                 <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto">;
@@ -375,7 +372,6 @@ export default function AIServicesPage() {;
                   We leverage the latest AI/ML technologies and frameworks to deliver state-of-the-art solutions.;
                 </p>;
               </div>;
-              ;
               <div className="text-center space-y-4">;
                 <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto">;
                   <Users className="w-8 h-8 text-white" />;
@@ -385,7 +381,6 @@ export default function AIServicesPage() {;
                   Our team of AI specialists, data scientists, and ML engineers bring years of experience.;
                 </p>;
               </div>;
-              ;
               <div className="text-center space-y-4">;
                 <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto">;
                   <Star className="w-8 h-8 text-white" />;
@@ -399,7 +394,7 @@ export default function AIServicesPage() {;
           </div>;
         </div>;
       </div>;
-;
+
       {/* Contact & CTA Section */}
       <div className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 border-t border-white/20">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">;
@@ -410,7 +405,6 @@ export default function AIServicesPage() {;
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
               Let's discuss how our AI solutions can transform your business operations, drive innovation, and create competitive advantages.;
             </p>;
-            ;
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">;
               <div className="text-center space-y-3">;
                 <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto">;
@@ -420,7 +414,6 @@ export default function AIServicesPage() {;
                 <p className="text-gray-300">+1 302 464 0950</p>;
                 <p className="text-sm text-gray-400">Available Mon-Fri 9AM-6PM EST</p>;
               </div>;
-              ;
               <div className="text-center space-y-3">;
                 <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto">;
                   <Mail className="w-8 h-8 text-white" />;
@@ -429,7 +422,6 @@ export default function AIServicesPage() {;
                 <p className="text-gray-300">kleber@ziontechgroup.com</p>;
                 <p className="text-sm text-gray-400">Response within 2 hours</p>;
               </div>;
-              ;
               <div className="text-center space-y-3">;
                 <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto">;
                   <MapPin className="w-8 h-8 text-white" />;
@@ -439,7 +431,7 @@ export default function AIServicesPage() {;
                 <p className="text-sm text-gray-400">Middletown, DE 19709</p>;
               </div>;
             </div>;
-;
+
             <div className="pt-8">;
               <a ;
                 href="mailto:kleber@ziontechgroup.com?subject=AI%20Services%20Consultation%20-%20Zion%20Tech%20Group";
@@ -452,7 +444,7 @@ export default function AIServicesPage() {;
           </div>;
         </div>;
       </div>;
-;
+
       {/* Footer */}
       <footer className="bg-gray-900 border-t border-white/20">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">;
@@ -463,7 +455,6 @@ export default function AIServicesPage() {;
                 Revolutionary AI and technology solutions that transform businesses worldwide.;
               </p>;
             </div>;
-            ;
             <div className="space-y-4">;
               <h4 className="text-md font-semibold text-white">AI Services</h4>;
               <ul className="space-y-2 text-sm text-gray-400">;
@@ -473,7 +464,6 @@ export default function AIServicesPage() {;
                 <li><a href="/ai-search-rag" className="hover:text-blue-400 transition-colors">Search & RAG</a></li>;
               </ul>;
             </div>;
-            ;
             <div className="space-y-4">;
               <h4 className="text-md font-semibold text-white">Company</h4>;
               <ul className="space-y-2 text-sm text-gray-400">;
@@ -483,7 +473,6 @@ export default function AIServicesPage() {;
                 <li><a href="/blog" className="hover:text-blue-400 transition-colors">Blog</a></li>;
               </ul>;
             </div>;
-            ;
             <div className="space-y-4">;
               <h4 className="text-md font-semibold text-white">Connect</h4>;
               <div className="flex space-x-4">;
@@ -499,7 +488,6 @@ export default function AIServicesPage() {;
               </div>;
             </div>;
           </div>;
-          ;
           <div className="border-t border-white/20 mt-8 pt-8 text-center">;
             <p className="text-gray-400 text-sm">;
                2024 Zion Tech Group. All rights reserved. | ;
@@ -513,51 +501,49 @@ export default function AIServicesPage() {;
   ); export default function AIServicesPage () {
   const aiServices = [ {
   benefits: [ "10x faster content creation";
-"Improved SEO rankings";
-"Consistent brand voice";
-"Reduced content costs";
-"24/7 content generation" ];
+Improved SEO rankings";
+Consistent brand voice";
+Reduced content costs";
+24/7 content generation" ];
 website: "https://ziontechgroup.com/ai-content-generation" 
-};
+;
 benefits: [ "24/7 customer support";
-"Reduced response times";
-"Lower support costs";
-"Improved customer satisfaction";
-"Scalable support operations" ];
+Reduced response times";
+Lower support costs";
+Improved customer satisfaction";
+Scalable support operations" ];
 website: "https://ziontechgroup.com/ai-customer-service" 
-};
+;
 benefits: [ "Increased conversion rates";
-"Better lead prioritization";
-"Improved sales forecasting";
-"Higher revenue per salesperson";
-"Data-driven sales decisions" ];
+Better lead prioritization";
+Improved sales forecasting";
+Higher revenue per salesperson";
+Data-driven sales decisions" ];
 website: "https://ziontechgroup.com/ai-sales-intelligence" 
-};
+;
 benefits: [ "Instant information retrieval";
-"Improved research efficiency";
-"Better decision making";
-"Reduced information silos";
-"Enhanced knowledge sharing" ];
+Improved research efficiency";
+Better decision making";
+Reduced information silos";
+Enhanced knowledge sharing" ];
 website: "https://ziontechgroup.com/ai-search-rag" 
-};
+;
 benefits: [ "Reduced AI risks";
-"Compliance assurance";
-"Ethical AI deployment";
-"Improved trust and transparency";
-"Risk mitigation" ];
+Compliance assurance";
+Ethical AI deployment";
+Improved trust and transparency";
+Risk mitigation" ];
 website: "https://ziontechgroup.com/ai-security-guardrails" 
-};
+;
 benefits: [ "Improved AI model quality";
-"Faster model deployment";
-"Reduced AI risks";
-"Better performance tracking";
-"Comprehensive evaluation" ];
+Faster model deployment";
+Reduced AI risks";
+Better performance tracking";
+Comprehensive evaluation" ];
 website: "https://ziontechgroup.com/ai-evaluation-lab" 
-}];
 ];
-}</div> </div> Our AI Service Portfolio </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Comprehensive AI solutions designed to drive innovation, efficiency, and competitive advantage across all business functions. </p> </div> <div className="space-y-4" > <div> </li>) ) 
-}</ul> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <div> </div> </div> <div>) ) 
-}</ul> </div> </div> <div>) ) 
-}</ul> </div> <div className="pt-4 border-t border-white/20" > <div className="flex gap-3" > <a > <span>Learn More</span> <ExternalLink className="w-4 h-4" /> </Link> <a > <span>Get Quote</span> </Link> </div> </div> </div> </div> </div>) ) 
-}</div> </div> Why Choose Zion Tech Group for AI Solutions? </h2> <div className="grid grid-cols-1 md:grid-cols-3 gap-8" > <div className="text-center space-y-4" > <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto" > <Zap className="w-8 h-8 text-white" /> </div> <h3 className="text-xl font-semibold text-white" >Cutting-Edge Technology</h3> <p className="text-gray-300" > We leverage the latest AI/ML technologies and frameworks to deliver state-of-the-art solutions. </p> </div> <div className="text-center space-y-4" > <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto" > <Users className="w-8 h-8 text-white" /> </div> <h3 className="text-xl font-semibold text-white" >Expert AI Team</h3> <p className="text-gray-300" > Our team of AI specialists, data scientists, and ML engineers bring years of experience. </p> </div> <div className="text-center space-y-4" > <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto" > <Star className="w-8 h-8 text-white" /> </div> <h3 className="text-xl font-semibold text-white" >Proven Results</h3> <p className="text-gray-300" > Track record of successful AI implementations with measurable business impact. </p> </div> </div> </div> </div> </div> Ready to Harness the Power of AI? </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Let's discuss how our AI solutions can transform your business operations, drive innovation, and create competitive advantages. </p> <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto" > <div className="text-center space-y-3" > <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto" > <Phone className="w-8 h-8 text-white" /> </div> <h3 className="text-lg font-semibold text-white" >Call Us</h3> <p className="text-gray-300" >+1 302 464 0950</p> <p className="text-sm text-gray-400" >Available Mon-Fri 9AM-6PM EST</p> </div> <div className="text-center space-y-3" > <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto" > <Mail className="w-8 h-8 text-white" /> </div> <h3 className="text-lg font-semibold text-white" >Email Us</h3> <p className="text-gray-300" >kleber@ziontechgroup.com</p> <p className="text-sm text-gray-400" >Response within 2 hours</p> </div> <div className="text-center space-y-3" > <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto" > <MapPin className="w-8 h-8 text-white" /> </div> <h3 className="text-lg font-semibold text-white" >Visit Us</h3> <p className="text-gray-300" >364 E Main St STE 1008</p> <p className="text-sm text-gray-400" >Middletown, DE 19709</p> </div> </div> <div className="pt-8" > <a href="mailto:kleber@ziontechgroup.com?subject=AI%20Services%20Consultation%20-%20Zion%20Tech%20Group" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 rounded-lg text-lg font-semibold transition-all duration-300 hover:transform hover:scale-105" > <span>Start Your AI Transformation</span> <ArrowRight className="w-5 h-5 ml-2" /> </Link> </div> </div> </div> </div> <footer className="bg-gray-900 border-t border-white/20"> <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12"> <div className="grid grid-cols-1 md:grid-cols-4 gap-8"> <div className="space-y-4"> <h3 className="text-lg font-semibold text-white">Zion Tech Group</h3> <p className="text-gray-400 text-sm"> space-y-4"> <h4 className=" text-md font-semibold text-white">AI Services</h4> <ul className=" space-y-2 text-sm text-gray-400"> <li><a href=" /ai-content-generation"className=" hover:text-blue-400 transition-colors">Content Generation</Link></li> <li><a href=" /ai-customer-service"className=" hover:text-blue-400 transition-colors">Customer Service</Link></li> <li><a href=" /ai-sales-intelligence"className=" hover:text-blue-400 transition-colors">Sales Intelligence</Link></li> <li><a href=" /ai-search-rag"className=" hover:text-blue-400 transition-colors">Search & RAG</Link></li> </ul> </div> <div className=" space-y-4"> <h4 className=" text-md font-semibold text-white">Company</h4> <ul className=" space-y-2 text-sm text-gray-400"> <li><a href=" /about"className=" hover:text-blue-400 transition-colors">About Us</Link></li> <li><a href=" /contact"className=" hover:text-blue-400 transition-colors">Contact</Link></li> <li><a href=" /careers"className=" hover:text-blue-400 transition-colors">Careers</Link></li> <li><a href=" /blog"className=" hover:text-blue-400 transition-colors">Blog</Link></li> </ul> </div> <div className=" space-y-4"> <h4 className=" text-md font-semibold text-white">Connect</h4> <div className=" flex space-x-4"> <a href=" https://linkedin.com/company/ziontechgroup"className=" text-gray-400 hover:text-blue-400 transition-colors"> <Linkedin className=" w-5 h-5"/> </Link> <a href=" https://twitter.com/ziontechgroup"className=" text-gray-400 hover:text-blue-400 transition-colors"> <Twitter className=" w-5 h-5"/> </Link> <a href=" https://github.com/ziontechgroup"className=" text-gray-400 hover:text-blue-400 transition-colors"> <Github className=" w-5 h-5"/> </Link> </div> </div> </div> <div className=" border-t border-white/20 mt-8 pt-8 text-center"> <p className=" text-gray-400 text-sm">  2024 Zion Tech Group. All rights reserved. | <a href=" /privacy"className=" hover:text-blue-400 transition-colors ml-2">Privacy Policy</Link> | <a href=" /terms"className=" hover:text-blue-400 transition-colors ml-2" >Terms of Service</Link> </p> </div> </div> </footer> </div>) 
-}
+</div> </div> Our AI Service Portfolio </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Comprehensive AI solutions designed to drive innovation, efficiency, and competitive advantage across all business functions. </p> </div> <div className="space-y-4" > <div></li>) 
+</ul> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <div></div> </div> <div>) 
+</ul> </div> </div> <div>) 
+</ul> </div> <div className="pt-4 border-t border-white/20" > <div className="flex gap-3" > <a > <span>Learn More</span> <ExternalLink className="w-4 h-4" /> </Link> <a > <span>Get Quote</span> </Link> </div> </div> </div> </div> </div>) 
+</div> </div> Why Choose Zion Tech Group for AI Solutions? </h2> <div className="grid grid-cols-1 md:grid-cols-3 gap-8" > <div className="text-center space-y-4" > <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto" > <Zap className="w-8 h-8 text-white" /> </div> <h3 className="text-xl font-semibold text-white" >Cutting-Edge Technology</h3> <p className="text-gray-300" > We leverage the latest AI/ML technologies and frameworks to deliver state-of-the-art solutions. </p> </div> <div className="text-center space-y-4" > <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto" > <Users className="w-8 h-8 text-white" /> </div> <h3 className="text-xl font-semibold text-white" >Expert AI Team</h3> <p className="text-gray-300" > Our team of AI specialists, data scientists, and ML engineers bring years of experience. </p> </div> <div className="text-center space-y-4" > <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto" > <Star className="w-8 h-8 text-white" /> </div> <h3 className="text-xl font-semibold text-white" >Proven Results</h3> <p className="text-gray-300" > Track record of successful AI implementations with measurable business impact. </p> </div> </div> </div> </div> </div> Ready to Harness the Power of AI? </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Let's discuss how our AI solutions can transform your business operations, drive innovation, and create competitive advantages. </p> <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto" > <div className="text-center space-y-3" > <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto" > <Phone className="w-8 h-8 text-white" /> </div> <h3 className="text-lg font-semibold text-white" >Call Us</h3> <p className="text-gray-300" >+1 302 464 0950</p> <p className="text-sm text-gray-400" >Available Mon-Fri 9AM-6PM EST</p> </div> <div className="text-center space-y-3" > <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto" > <Mail className="w-8 h-8 text-white" /> </div> <h3 className="text-lg font-semibold text-white" >Email Us</h3> <p className="text-gray-300" >kleber@ziontechgroup.com</p> <p className="text-sm text-gray-400" >Response within 2 hours</p> </div> <div className="text-center space-y-3" > <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto" > <MapPin className="w-8 h-8 text-white" /> </div> <h3 className="text-lg font-semibold text-white" >Visit Us</h3> <p className="text-gray-300" >364 E Main St STE 1008</p> <p className="text-sm text-gray-400" >Middletown, DE 19709</p> </div> </div> <div className="pt-8" > <a href="mailto:kleber@ziontechgroup.com?subject=AI%20Services%20Consultation%20-%20Zion%20Tech%20Group" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 rounded-lg text-lg font-semibold transition-all duration-300 hover:transform hover:scale-105" > <span>Start Your AI Transformation</span> <ArrowRight className="w-5 h-5 ml-2" /> </Link> </div> </div> </div> </div> <footer className="bg-gray-900 border-t border-white/20"> <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12"> <div className="grid grid-cols-1 md:grid-cols-4 gap-8"> <div className="space-y-4"> <h3 className="text-lg font-semibold text-white">Zion Tech Group</h3> <p className="text-gray-400 text-sm"> space-y-4"> <h4 className=" text-md font-semibold text-white">AI Services</h4> <ul className=" space-y-2 text-sm text-gray-400"> <li><a href=" /ai-content-generation"className=" hover:text-blue-400 transition-colors">Content Generation</Link></li> <li><a href=" /ai-customer-service"className=" hover:text-blue-400 transition-colors">Customer Service</Link></li> <li><a href=" /ai-sales-intelligence"className=" hover:text-blue-400 transition-colors">Sales Intelligence</Link></li> <li><a href=" /ai-search-rag"className=" hover:text-blue-400 transition-colors">Search & RAG</Link></li> </ul> </div> <div className=" space-y-4"> <h4 className=" text-md font-semibold text-white">Company</h4> <ul className=" space-y-2 text-sm text-gray-400"> <li><a href=" /about"className=" hover:text-blue-400 transition-colors">About Us</Link></li> <li><a href=" /contact"className=" hover:text-blue-400 transition-colors">Contact</Link></li> <li><a href=" /careers"className=" hover:text-blue-400 transition-colors">Careers</Link></li> <li><a href=" /blog"className=" hover:text-blue-400 transition-colors">Blog</Link></li> </ul> </div> <div className=" space-y-4"> <h4 className=" text-md font-semibold text-white">Connect</h4> <div className=" flex space-x-4"> <a href=" https://linkedin.com/company/ziontechgroup"className=" text-gray-400 hover:text-blue-400 transition-colors"> <Linkedin className=" w-5 h-5"/> </Link> <a href=" https://twitter.com/ziontechgroup"className=" text-gray-400 hover:text-blue-400 transition-colors"> <Twitter className=" w-5 h-5"/> </Link> <a href=" https://github.com/ziontechgroup"className=" text-gray-400 hover:text-blue-400 transition-colors"> <Github className=" w-5 h-5"/> </Link> </div> </div> </div> <div className=" border-t border-white/20 mt-8 pt-8 text-center"> <p className=" text-gray-400 text-sm">  2024 Zion Tech Group. All rights reserved. | <a href=" /privacy"className=" hover:text-blue-400 transition-colors ml-2">Privacy Policy</Link> | <a href=" /terms"className=" hover:text-blue-400 transition-colors ml-2" >Terms of Service</Link> </p> </div> </div> </footer> </div>) 

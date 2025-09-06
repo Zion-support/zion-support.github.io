@@ -6,5 +6,3 @@ export function EmptyStateCard() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

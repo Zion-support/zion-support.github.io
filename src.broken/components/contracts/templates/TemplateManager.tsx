@@ -6,5 +6,3 @@ export function TemplateManager() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

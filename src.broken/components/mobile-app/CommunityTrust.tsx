@@ -6,5 +6,3 @@ export function CommunityTrust() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

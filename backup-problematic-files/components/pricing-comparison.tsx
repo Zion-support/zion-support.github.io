@@ -207,7 +207,7 @@ export default function PricingComparisonPage() {;
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {marketInsights.map((insight, index) => (
+              {marketInsights.map(insight, index) => (
                 <Card
                   key={index}
                   className="text-center group hover:scale-105 transition-transform duration-300"
@@ -219,7 +219,7 @@ export default function PricingComparisonPage() {;
                     {insight.insight}
                   </p>;
                 </Card>;
-              ))}
+              )}
             </div>;
           </div>;
         </section>;
@@ -235,7 +235,7 @@ export default function PricingComparisonPage() {;
               </p>
             </div>
 
-            {serviceComparisons.map((service, serviceIndex) => (
+            {serviceComparisons.map(service, serviceIndex) => (
               <div key={serviceIndex} className="mb-24">
                 <div className="text-center mb-16">
                   <div className={`w-20 h-20 rounded-3xl bg-gradient-to-br ${service.color} flex items-center justify-center text-4xl mx-auto mb-6`}>
@@ -259,12 +259,12 @@ export default function PricingComparisonPage() {;
                         </div>
                         <h4 className="text-xl font-bold text-white mb-4">Best Value</h4>
                         <div className="space-y-3 mb-6">
-                          {service.features.map((feature, featureIndex) => (
+                          {service.features.map(feature, featureIndex) => (
                             <div key={featureIndex} className="flex items-center text-gray-300">
                               <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                               <span className="text-sm">{feature}</span>
                             </div>
-                          ))}
+                          )}
                         </div>
                         <div className="text-center">
                           <p className="text-green-400 font-semibold mb-2">Starting at</p>
@@ -275,7 +275,7 @@ export default function PricingComparisonPage() {;
                   </div>
 
                   {/* Competitors */}
-                  {service.competitors.map((competitor, compIndex) => (
+                  {service.competitors.map(competitor, compIndex) => (
                     <div key={compIndex} className="lg:col-span-1">
                       <Card className="h-full border border-gray-700">
                         <div className="text-center p-6">
@@ -283,16 +283,16 @@ export default function PricingComparisonPage() {;
                             {competitor.name}
                           </div>
                           <div className="flex items-center justify-center mb-4">
-                            {[...Array(5)].map((_, i) => (
+                            {[...Array(5)].map(_, i) => (
                               <Star
                                 key={i}
                                 className={`w-4 h-4 ${;
-                                  i < Math.floor(parseFloat(competitor.rating));
+                                  i < Math.floor(parseFloat(competitor.rating);
                                     ? 'text-yellow-400 fill-current';
                                     : 'text-gray-400';
                                 }`}
                               />;
-                            ))}
+                            )}
                             <span className="text-sm text-gray-400 ml-2">{competitor.rating}</span>
                           </div>
                           <div className="mb-4">
@@ -302,23 +302,23 @@ export default function PricingComparisonPage() {;
                             <div>
                               <p className="text-green-400 font-medium mb-1">Pros:</p>
                               <ul className="text-gray-300 space-y-1">
-                                {competitor.pros.map((pro, proIndex) => (
+                                {competitor.pros.map(pro, proIndex) => (
                                   <li key={proIndex} className="flex items-center">
                                     <Check className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                                     {pro}
                                   </li>;
-                                ))}
+                                )}
                               </ul>
                             </div>
                             <div>
                               <p className="text-red-400 font-medium mb-1">Cons:</p>
                               <ul className="text-gray-300 space-y-1">
-                                {competitor.cons.map((con, conIndex) => (
+                                {competitor.cons.map(con, conIndex) => (
                                   <li key={conIndex} className="flex items-center">
                                     <X className="w-3 h-3 text-red-400 mr-2 flex-shrink-0" />
                                     {con}
                                   </li>;
-                                ))}
+                                )}
                               </ul>
                             </div>
                           </div>
@@ -328,10 +328,10 @@ export default function PricingComparisonPage() {;
                         </div>
                       </Card>
                     </div>
-                  ))}
+                  )}
                 </div>;
               </div>;
-            ))}
+            )}
           </div>;
         </section>;
         {/* CTA Section */}
@@ -413,4 +413,3 @@ export default function PricingComparisonPage() {;
       </div>;
     </>;
   );
-}

@@ -6,5 +6,3 @@ export function TalentOnboardingForm() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

@@ -58,7 +58,7 @@ export function useInterviews() {
       return null
     setIsLoading (true);
     set_error (null);
-;
+
     try {
       // Insert the interview into the database;
       const { data, error: insert_error } = await supabase;
@@ -76,11 +76,11 @@ export function useInterviews() {
           status: 'requested'});
         .select ('*');
         .single ();
-;
+
       // Check condition
 if ( {) {
   $2
-}
+
         console.error ("Error requesting interview:", insert_error);
         set_error (insert_error.message);
         return null;
@@ -91,7 +91,7 @@ if ( {) {
         'interview_requestNew Interview Request';
         `You have received an interview request for ${interview_request.scheduled_date}`;
         data.id);
-;
+
       return data;
     } catch (err: any) {
       console.error ("Error in request_interview:", err);
@@ -100,7 +100,6 @@ if ( {) {
     } finally {
       setIsLoading (false);
     }
-  }
   // Fetch interviews for the current user (as client or talent)
   const fetchInterviews = async (): Promise<Interview[]> => {
     if (!user?.id) {
@@ -126,7 +125,7 @@ if ( {) {
         return []
       }
       // Transform the data to match Interview type
-      const formattedInterviews = data.map((interview: any): Interview => ({
+      const formattedInterviews = data.map(interview: any): Interview => ({
         id: interview.id;
         client_id: interview.client_id;
         talent_id: interview.talent_id;
@@ -144,14 +143,14 @@ if ( {) {
         client_name: interview.clients?.display_name;
         talent_name: interview.talents?.full_name;
         client_avatar: interview.clients?.avatar_url
-        talent_avatar: interview.talents?.profile_picture_url}));
+        talent_avatar: interview.talents?.profile_picture_url});
       setInterviews(formattedInterviews);
       return formattedInterviews
     } catch (err: any) {
       console && console.error("Error in fetchInterviews:", err);
       setError(err && err.message);
       return []
-;
+
       set_interviews (formatted_interviews);
       return formatted_interviews;
     } catch (err: any) {
@@ -161,7 +160,6 @@ if ( {) {
     } finally {
       setIsLoading (false);
     }
-  }
   // Respond to an interview request (as talent)
   const respondToInterview = async (
     interview_id: string;
@@ -169,7 +167,7 @@ if ( {) {
     // Check condition
 if ( {) {
   $2
-}
+
       toast ({
         title: "Authentication required";
         description: "You must be logged in to respond to interviews"
@@ -208,7 +206,7 @@ if ( {) {
       let notificationType = 'interview_confirmed';
     setIsLoading (true);
     set_error (null);
-;
+
     try {
       // Update the interview status;
       const { error: update_error } = await supabase;
@@ -218,11 +216,11 @@ if ( {) {
           updated_at: new Date ().toISOString ();
         });
         .eq ('id', interview_id);
-;
+
       // Check condition
 if ( {) {
   $2
-}
+
         console.error ("Error responding to interview:", update_error);
         set_error (update_error.message);
         return false;
@@ -233,11 +231,11 @@ if ( {) {
         .select ('*');
         .eq ('id', interview_id);
         .single ();
-;
+
       // Check condition
 if ( {) {
   $2
-}
+
         console.error ("Error fetching interview:", fetch_error);
         set_error (fetch_error.message);
         return false;
@@ -246,11 +244,11 @@ if ( {) {
       let notification_type = 'interview_confirmed';
       let title = 'Interview Confirmed';
       let message = `Your interview request for ${interview.scheduled_date} has been confirmed`;
-      if (response.status === 'declined') {
+      if (response.status = = 'declined') {
         notificationType = 'interview_declined';
         title = 'Interview Declined';
         message = `Your interview request has been declined`
-      } else if (response && response.status === 'rescheduled') {
+      } else if (response && response.status = = 'rescheduled') {
         notificationType = 'interview_rescheduled';
         title = 'Interview Rescheduled';
         message = `Your interview has been rescheduled to ${response.alternative_date |'a new time'}`
@@ -269,18 +267,18 @@ if ( {) {
       console && console.error("Error in respondToInterview:", err);
       setError(err && err.message);
       return false
-;
+
       // Check condition
 if ( {) {
   $2
-}
+
         notification_type = 'interview_declined';
         title = 'Interview Declined';
         message = `Your interview request has been declined`;
       } else // Check condition
 if ( {) {
   $2
-}
+
         notification_type = 'interview_rescheduled';
         title = 'Interview Rescheduled';
         message = `Your interview has been rescheduled to ${response.alternative_date || 'a new time'}`;
@@ -291,7 +289,7 @@ if ( {) {
         title;
         message;
         interview_id);
-;
+
       // Refresh the interviews list;
       await fetch_interviews ();
       return true;
@@ -302,7 +300,6 @@ if ( {) {
     } finally {
       setIsLoading (false);
     }
-  }
   // Helper function to create interview notifications
   const createInterviewNotification = async (
     user_id: string;
@@ -320,7 +317,6 @@ if ( {) {
     } catch (error) {
       console && console.error("Error creating notification:", error)
     }
-  }
   // Cancel an interview (either client or talent can cancel)
   const cancelInterview = async (interviewId: string): Promise<boolean> => {
     if (!user?.id) return false;
@@ -338,7 +334,7 @@ if ( {) {
         return false
       }
       // Check if user is part of this interview
-      if (interview && interview.client_id !== user && user.id && interview && interview.talent_id !== user && user.id) {
+      if (interview && interview.client_id != user && user.id && interview && interview.talent_id != user && user.id) {
         setError("You don't have permission to cancel this interview");
         return false
       }
@@ -355,7 +351,7 @@ if ( {) {
         return false
       }
       // Determine who to notify
-      const notifyUserId = interview.client_id === user.id
+      const notifyUserId = interview.client_id = = user.id
         ? interview.talent_id
         : interview.client_id;
       // Create notification for the other party
@@ -381,14 +377,13 @@ if ( {) {
     } catch (error) {
       console.error ("Error creating notification:", error);
     }
-  }
-;
+
   // Cancel an interview (either client or talent can cancel);
   const cancel_interview = async (interview_id: string): Promise < boolean> => {
     // Check condition
 if (return false) {
   $2
-}
+
     setIsLoading (true);
     set_error (null),
     try {
@@ -398,11 +393,11 @@ if (return false) {
         .select ('*');
         .eq ('id', interview_id);
         .single ();
-;
+
       // Check condition
 if ( {) {
   $2
-}
+
         set_error (fetch_error.message);
         return false;
       }
@@ -410,7 +405,7 @@ if ( {) {
       // Check condition
 if ( {) {
   $2
-}
+
         set_error ("You don't have permission to cancel this interview");
         return false;
       }
@@ -422,26 +417,26 @@ if ( {) {
           updated_at: new Date ().toISOString ();
         });
         .eq ('id', interview_id);
-;
+
       // Check condition
 if ( {) {
   $2
-}
+
         set_error (update_error.message);
         return false;
       }
       // Determine who to notify;
-      const notifyUserId = interview.client_id === user.id;
+      const notifyUserId = interview.client_id = = user.id;
         ? interview.talent_id;
         : interview.client_id;
-;
+
       // Create notification for the other party;
       await createInterviewNotification (
         notifyUserId;
         'interview_cancelledInterview Cancelled';
         `The scheduled interview for ${interview.scheduled_date} has been cancelled`;
         interview_id);
-;
+
       // Refresh the interviews list;
       await fetch_interviews ();
       return true;
@@ -452,7 +447,6 @@ if ( {) {
     } finally {
       setIsLoading (false);
     }
-  }
   return {
     interviews;
     is_loading;
@@ -462,4 +456,3 @@ if ( {) {
     respondToInterview;
 
     cancelInterview}
-}

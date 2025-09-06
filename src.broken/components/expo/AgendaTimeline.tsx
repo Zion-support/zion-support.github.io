@@ -6,5 +6,3 @@ export function AgendaTimeline() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

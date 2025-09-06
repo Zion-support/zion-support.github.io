@@ -3,7 +3,7 @@ import Head from 'next/head',;
 import Card from '../components/ui/Card',;
 import Button from '../components/ui/Button',;
 import { TrendingUp, BarChart3, DollarSign, Users, Globe, Target, Clock, Award, ArrowRight, ExternalLink, PieChart, LineChart, Activity, Zap } from 'lucide-react',;
-;
+
 export default function MarketResearchPage() {;
   const marketSegments = [;
     {;
@@ -103,7 +103,7 @@ export default function MarketResearchPage() {;
       icon:<Users className="w-8 h-8 text-white" />;
     }
   ],;
-;
+
   const competitiveAnalysis = [;
     {;
       company:'Enterprise Giants',;
@@ -148,7 +148,7 @@ export default function MarketResearchPage() {;
       pricing:'Low ($10-100/month)';
     }
   ],;
-;
+
   const marketTrends = [;
     {;
       trend:'AI-First Approach',;
@@ -195,7 +195,7 @@ export default function MarketResearchPage() {;
       opportunities:'Real-time platforms, streaming services, live collaboration tools';
     }
   ],;
-;
+
   const pricingStrategies = [;
     {;
       strategy:'Value-Based Pricing',;
@@ -237,7 +237,7 @@ export default function MarketResearchPage() {;
       bestFor:'Consumer tools, productivity apps, collaboration platforms';
     }
   ],;
-;
+
   const investmentInsights = [;
     {;
       metric:'Total VC Investment',;
@@ -264,7 +264,7 @@ export default function MarketResearchPage() {;
       description:'Average time for SaaS companies to reach profitability';
     }
   ],;
-;
+
   return (;
     <>;
       <Head>;
@@ -274,13 +274,12 @@ export default function MarketResearchPage() {;
         <meta property="og:description" content="Comprehensive market research and competitive analysis for micro SaaS services." />;
         <meta name="twitter:card" content="summary_large_image" />;
       </Head>;
-;
+
       {/* Hero Section */}
       <section className="relative section-padding bg-gradient-cursor overflow-hidden">;
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,122,204,0.08),transparent_50%)]" />;
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,122,204,0.06),transparent_50%)]" />;
         <div className="absolute inset-0 bg-grid opacity-10" />;
-        ;
         <div className="relative z-10 container-cursor text-center">;
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-cursor-blue/10 border border-cursor-blue/20 text-cursor-blue text-sm font-medium mb-6">;
             <span className="w-2 h-2 bg-cursor-blue rounded-full mr-2 animate-pulse" />;
@@ -294,7 +293,7 @@ export default function MarketResearchPage() {;
           </p>;
         </div>;
       </section>;
-;
+
       {/* Investment Insights */}
       <section className="section-padding bg-gradient-cursor-accent">;
         <div className="container-cursor">;
@@ -306,13 +305,13 @@ export default function MarketResearchPage() {;
               Key investment metrics and market indicators for the SaaS industry to help you understand the current market landscape.;
             </p>;
           </div>;
-;
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">;
-            {investmentInsights.map((insight, index) => (;
+            {investmentInsights.map(insight, index) => (;
               <Card;
                 key={index}
                 className="card-hover text-center border-gradient-blue";
-                style={{ animationDelay:`${index * 0.1}s` }}
+                style={ animationDelay:`${index * 0.1}s` }
               >;
                 <div className="p-6">;
                   <div className="text-3xl font-bold text-white mb-2">{insight.value}</div>;
@@ -324,11 +323,11 @@ export default function MarketResearchPage() {;
                   </div>;
                 </div>;
               </Card>;
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Market Segments */}
       <section className="section-padding bg-gradient-cursor">;
         <div className="container-cursor">;
@@ -340,13 +339,13 @@ export default function MarketResearchPage() {;
               Detailed analysis of key micro SaaS market segments with market size, growth rates, trends, and opportunities.;
             </p>;
           </div>;
-;
+
           <div className="space-y-8">;
-            {marketSegments.map((segment, index) => (;
+            {marketSegments.map(segment, index) => (;
               <Card;
                 key={index}
                 className="card-hover border-gradient-blue overflow-hidden";
-                style={{ animationDelay:`${index * 0.1}s` }}
+                style={ animationDelay:`${index * 0.1}s` }
               >;
                 <div className="p-8">;
                   <div className="flex flex-col lg:flex-row gap-8">;
@@ -359,7 +358,6 @@ export default function MarketResearchPage() {;
                         <h3 className="text-2xl font-bold mb-3 text-white">;
                           {segment.name}
                         </h3>;
-                        ;
                         {/* Market Data */}
                         <div className="space-y-3 text-sm mb-6">;
                           <div className="flex items-center justify-between">;
@@ -373,7 +371,7 @@ export default function MarketResearchPage() {;
                         </div>;
                       </div>;
                     </div>;
-;
+
                     {/* Market Analysis */}
                     <div className="lg:w-2/3">;
                       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
@@ -384,15 +382,15 @@ export default function MarketResearchPage() {;
                             Key Trends;
                           </h4>;
                           <ul className="space-y-2">;
-                            {segment.keyTrends.map((trend, trendIndex) => (;
+                            {segment.keyTrends.map(trend, trendIndex) => (;
                               <li key={trendIndex} className="flex items-start text-gray-300 text-sm">;
                                 <span className="w-2 h-2 bg-cursor-blue rounded-full mr-3 mt-2 flex-shrink-0" />;
                                 {trend}
                               </li>;
-                            ))}
+                            )}
                           </ul>;
                         </div>;
-;
+
                         {/* Top Players */}
                         <div>;
                           <h4 className="text-lg font-semibold text-white mb-4 flex items-center">;
@@ -400,16 +398,16 @@ export default function MarketResearchPage() {;
                             Top Players;
                           </h4>;
                           <ul className="space-y-2">;
-                            {segment.topPlayers.map((player, playerIndex) => (;
+                            {segment.topPlayers.map(player, playerIndex) => (;
                               <li key={playerIndex} className="flex items-start text-gray-300 text-sm">;
                                 <span className="w-2 h-2 bg-cursor-blue rounded-full mr-3 mt-2 flex-shrink-0" />;
                                 {player}
                               </li>;
-                            ))}
+                            )}
                           </ul>;
                         </div>;
                       </div>;
-;
+
                       {/* Opportunities */}
                       <div className="mt-8 pt-6 border-t border-gray-700">;
                         <h4 className="text-lg font-semibold text-white mb-4 flex items-center">;
@@ -417,23 +415,23 @@ export default function MarketResearchPage() {;
                           Market Opportunities;
                         </h4>;
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-                          {segment.opportunities.map((opportunity, oppIndex) => (;
+                          {segment.opportunities.map(opportunity, oppIndex) => (;
                             <div key={oppIndex} className="flex items-start text-gray-300 text-sm">;
                               <span className="w-2 h-2 bg-cursor-blue rounded-full mr-3 mt-2 flex-shrink-0" />;
                               {opportunity}
                             </div>;
-                          ))}
+                          )}
                         </div>;
                       </div>;
                     </div>;
                   </div>;
                 </div>;
               </Card>;
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Competitive Analysis */}
       <section className="section-padding bg-gradient-cursor-accent">;
         <div className="container-cursor">;
@@ -445,23 +443,22 @@ export default function MarketResearchPage() {;
               Understanding the competitive landscape and positioning strategies for different types of SaaS companies.;
             </p>;
           </div>;
-;
+
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
-            {competitiveAnalysis.map((analysis, index) => (;
+            {competitiveAnalysis.map(analysis, index) => (;
               <Card;
                 key={index}
                 className="card-hover border-gradient-blue";
-                style={{ animationDelay:`${index * 0.1}s` }}
+                style={ animationDelay:`${index * 0.1}s` }
               >;
                 <div className="p-6">;
                   <h3 className="text-xl font-bold text-white mb-4">{analysis.company}</h3>;
-                  ;
                   {/* Examples */}
                   <div className="mb-6">;
                     <h4 className="text-sm font-semibold text-gray-400 mb-2">Examples:</h4>;
                     <div className="text-sm text-gray-300">{analysis.examples.join()}</div>;
                   </div>;
-;
+
                   {/* Market Share & Pricing */}
                   <div className="grid grid-cols-2 gap-4 mb-6 text-sm">;
                     <div>;
@@ -473,39 +470,39 @@ export default function MarketResearchPage() {;
                       <div className="text-white font-semibold">{analysis.pricing}</div>;
                     </div>;
                   </div>;
-;
+
                   {/* Strengths */}
                   <div className="mb-4">;
                     <h4 className="text-sm font-semibold text-green-400 mb-2">Strengths:</h4>;
                     <ul className="space-y-1 text-xs text-gray-300">;
-                      {analysis.strengths.map((strength, strengthIndex) => (;
+                      {analysis.strengths.map(strength, strengthIndex) => (;
                         <li key={strengthIndex} className="flex items-start">;
                           <span className="w-1.5 h-1.5 bg-green-400 rounded-full mr-2 mt-1.5 flex-shrink-0" />;
                           {strength}
                         </li>;
-                      ))}
+                      )}
                     </ul>;
                   </div>;
-;
+
                   {/* Weaknesses */}
                   <div>;
                     <h4 className="text-sm font-semibold text-red-400 mb-2">Weaknesses:</h4>;
                     <ul className="space-y-1 text-xs text-gray-300">;
-                      {analysis.weaknesses.map((weakness, weaknessIndex) => (;
+                      {analysis.weaknesses.map(weakness, weaknessIndex) => (;
                         <li key={weaknessIndex} className="flex items-start">;
                           <span className="w-1.5 h-1.5 bg-red-400 rounded-full mr-2 mt-1.5 flex-shrink-0" />;
                           {weakness}
                         </li>;
-                      ))}
+                      )}
                     </ul>;
                   </div>;
                 </div>;
               </Card>;
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Market Trends */}
       <section className="section-padding bg-gradient-cursor">;
         <div className="container-cursor">;
@@ -517,21 +514,21 @@ export default function MarketResearchPage() {;
               Key trends shaping the micro SaaS landscape and creating new opportunities for innovation and growth.;
             </p>;
           </div>;
-;
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
-            {marketTrends.map((trend, index) => (;
+            {marketTrends.map(trend, index) => (;
               <Card;
                 key={index}
                 className="card-hover border-gradient-blue";
-                style={{ animationDelay:`${index * 0.1}s` }}
+                style={ animationDelay:`${index * 0.1}s` }
               >;
                 <div className="p-6">;
                   <div className="flex items-start justify-between mb-4">;
                     <h3 className="text-xl font-bold text-white">{trend.trend}</h3>;
                     <div className="flex items-center space-x-2">;
                       <span className={`px-2 py-1 rounded text-xs font-medium ${;
-                        trend.impact === 'High' ? 'bg-red-500/20 text-red-400' :;
-                        trend.impact === 'Medium' ? 'bg-yellow-500/20 text-yellow-400' :;
+                        trend.impact = = 'High' ? 'bg-red-500/20 text-red-400' :;
+                        trend.impact = = 'Medium' ? 'bg-yellow-500/20 text-yellow-400' :;
                         'bg-green-500/20 text-green-400';
                       }`}>;
                         {trend.impact} Impact;
@@ -541,32 +538,30 @@ export default function MarketResearchPage() {;
                       </span>;
                     </div>;
                   </div>;
-                  ;
                   <p className="text-gray-300 mb-4">{trend.description}</p>;
-                  ;
                   <div className="mb-4">;
                     <h4 className="text-sm font-semibold text-gray-400 mb-2">Examples:</h4>;
                     <ul className="space-y-1 text-xs text-gray-300">;
-                      {trend.examples.map((example, exampleIndex) => (;
+                      {trend.examples.map(example, exampleIndex) => (;
                         <li key={exampleIndex} className="flex items-start">;
                           <span className="w-1.5 h-1.5 bg-cursor-blue rounded-full mr-2 mt-1.5 flex-shrink-0" />;
                           {example}
                         </li>;
-                      ))}
+                      )}
                     </ul>;
                   </div>;
-;
+
                   <div>;
                     <h4 className="text-sm font-semibold text-green-400 mb-2">Opportunities:</h4>;
                     <p className="text-xs text-gray-300">{trend.opportunities}</p>;
                   </div>;
                 </div>;
               </Card>;
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Pricing Strategies */}
       <section className="section-padding bg-gradient-cursor-accent">;
         <div className="container-cursor">;
@@ -578,44 +573,43 @@ export default function MarketResearchPage() {;
               Analysis of different pricing strategies used in the micro SaaS market and their implications for business success.;
             </p>;
           </div>;
-;
+
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
-            {pricingStrategies.map((strategy, index) => (;
+            {pricingStrategies.map(strategy, index) => (;
               <Card;
                 key={index}
                 className="card-hover border-gradient-blue";
-                style={{ animationDelay:`${index * 0.1}s` }}
+                style={ animationDelay:`${index * 0.1}s` }
               >;
                 <div className="p-6">;
                   <h3 className="text-xl font-bold text-white mb-3">{strategy.strategy}</h3>;
                   <p className="text-gray-300 mb-6">{strategy.description}</p>;
-                  ;
                   {/* Pros */}
                   <div className="mb-4">;
                     <h4 className="text-sm font-semibold text-green-400 mb-2">Pros:</h4>;
                     <ul className="space-y-1 text-xs text-gray-300">;
-                      {strategy.pros.map((pro, proIndex) => (;
+                      {strategy.pros.map(pro, proIndex) => (;
                         <li key={proIndex} className="flex items-start">;
                           <span className="w-1.5 h-1.5 bg-green-400 rounded-full mr-2 mt-1.5 flex-shrink-0" />;
                           {pro}
                         </li>;
-                      ))}
+                      )}
                     </ul>;
                   </div>;
-;
+
                   {/* Cons */}
                   <div className="mb-4">;
                     <h4 className="text-sm font-semibold text-red-400 mb-2">Cons:</h4>;
                     <ul className="space-y-1 text-xs text-gray-300">;
-                      {strategy.cons.map((con, conIndex) => (;
+                      {strategy.cons.map(con, conIndex) => (;
                         <li key={conIndex} className="flex items-start">;
                           <span className="w-1.5 h-1.5 bg-red-400 rounded-full mr-2 mt-1.5 flex-shrink-0" />;
                           {con}
                         </li>;
-                      ))}
+                      )}
                     </ul>;
                   </div>;
-;
+
                   {/* Best For */}
                   <div>;
                     <h4 className="text-sm font-semibold text-blue-400 mb-2">Best For:</h4>;
@@ -623,11 +617,11 @@ export default function MarketResearchPage() {;
                   </div>;
                 </div>;
               </Card>;
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* CTA Section */}
       <section className="section-padding bg-gradient-to-r from-cursor-blue to-blue-600 relative overflow-hidden">;
         <div className="absolute inset-0 bg-dots opacity-10" />;
@@ -659,4 +653,3 @@ export default function MarketResearchPage() {;
       </section>;
     </>;
   );
-}

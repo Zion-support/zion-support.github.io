@@ -1,6 +1,6 @@
   const isGuest = !auth?.isAuthenticated
   const handleSendMessage = async (messageContent: string) => {
-    if (!messageContent.trim()) return
+    if (!messageContent.trim() return
 import React, {
 
   useState
@@ -23,7 +23,7 @@ export interface Message {
   timestamp: Date
 
   read?: boolean
-}
+
 export interface ChatAssistantProps {
 
   isOpen: boolean
@@ -41,7 +41,7 @@ export interface ChatAssistantProps {
 
   /** Optional canned questions shown when the chat is empty */
   starterQuestions?: string[]
-}
+
 export function ChatAssistant({
 
   isOpen
@@ -71,7 +71,7 @@ export function ChatAssistant({
   const [showGuestModal, setShowGuestModal] = useState(false)
   const [guestMessage, setGuestMessage] = useState<string | null>(null)
   // Effect for guest user messages
-  useEffect((,) => {
+  useEffect(,) => {
     if (isGuest) {
       // Priority: initialMessages prop > localStorage > empty array
       if (initialMessages && initialMessages.length > 0) {
@@ -80,7 +80,6 @@ export function ChatAssistant({
       } else {
         setDisplayGuestMessages (storedGuestMessages);
       }
-    }
   }, [
     isGuest
     initialMessages
@@ -88,17 +87,15 @@ export function ChatAssistant({
     setStoredGuestMessages
     recipient.id])
   // Effect for logged-in user messages
-  useEffect((,) => {
+  useEffect(,) => {
     if (!isGuest) {
       // Update state if initialMessages prop changes (e.g. new conversation loaded)
       setLoggedInMessages(initialMessages)
-    }
-  }, [isGuest, initialMessages, recipient.id])
+    }, [isGuest, initialMessages, recipient.id])
   // Determine currentMessages and setCurrentMessages based on isGuest
   const currentMessages = isGuest ? displayGuestMessages : loggedInMessages
   const setCurrentMessages = (
-    valueOrFn: Message[] | ((val: Message[],) => Message[])
-  ) => {
+    valueOrFn: Message[] | (val: Message[],) => Message[]) => {
     if (isGuest) {
       const newMessages =
         valueOrFn instanceof Function
@@ -111,22 +108,20 @@ export function ChatAssistant({
         valueOrFn instanceof Function ? valueOrFn(loggedInMessages) : valueOrFn
       setLoggedInMessages(newMessages)
     }
-  }
   const debouncedApiCallParams = useDebounce(pendingApiCallParams, 3000)
-  useEffect((,) => {
+  useEffect(,) => {
     if (debouncedApiCallParams) {
       onSendMessage(debouncedApiCallParams.message
         debouncedApiCallParams.conversationId)
-    }
-  }, [debouncedApiCallParams, onSendMessage])
-  useEffect((,) => {
+    }, [debouncedApiCallParams, onSendMessage])
+  useEffect(,) => {
     scrollToBottom()
   }, [currentMessages]), // currentMessages will correctly refer to either guest or logged-in state
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
   }
   const handleSendMessage = async (messageContent: string,) => {
-    if (!messageContent.trim()) return
+    if (!messageContent.trim() return
     if (!isGuest) {
       // Logged-in user
       const newMessage: Message = {
@@ -134,14 +129,13 @@ export function ChatAssistant({
         role: 'user'
         message: messageContent
         timestamp: new Date()}
-      setCurrentMessages((prev: Message[],) => [...prev, newMessage])
+      setCurrentMessages(prev: Message[],) => [...prev, newMessage])
       setPendingApiCallParams({ message: messageContent, conversationId })
     } else {
       // Guest user
       setGuestMessage(messageContent)
       setShowGuestModal(true)
     }
-  }
   const handleModalSendConfirm = () => {
     if (!guestMessage) return
     const newMessage: Message = {
@@ -149,7 +143,7 @@ export function ChatAssistant({
       role: 'user'
       message: guestMessage
       timestamp: new Date()}
-    setCurrentMessages((prev: Message[],) => [...prev, newMessage]), // This will now use the guest-aware setCurrentMessages
+    setCurrentMessages(prev: Message[],) => [...prev, newMessage]), // This will now use the guest-aware setCurrentMessages
     setPendingApiCallParams({ message: guestMessage, conversationId })
     setShowGuestModal(false)
     setGuestMessage(null)
@@ -158,14 +152,13 @@ export function ChatAssistant({
     setShowGuestModal(false)
     setGuestMessage(null)
   }
-  useEffect((,) => {
+  useEffect(,) => {
     if (!isOpen) return
     const handleKeyDown = (e: KeyboardEvent,) => {
-      if (e.key === 'Escape') {
+      if (e.key = = 'Escape') {
         e.preventDefault()
         onClose()
       }
-    }
     document.addEventListener('keydown', handleKeyDown)
     return () => document.removeEventListener('keydown', handleKeyDown)
   }, [isOpen, onClose])
@@ -173,7 +166,7 @@ export function ChatAssistant({
   const isGuest = !auth?.isAuthenticated;
 
   const handleSendMessage = async (messageContent: string) => {;
-    if (!messageContent && messageContent.trim()) return;
+    if (!messageContent && messageContent.trim() return;
 import React, {;
   useState,;
   useEffect,;
@@ -194,7 +187,6 @@ export interface Message {;
   message: string,;
   timestamp: Date,;
   read?: boolean;
-}
 
 export interface ChatAssistantProps {;
   isOpen: boolean,;
@@ -211,7 +203,6 @@ export interface ChatAssistantProps {;
   contextHeader?: ReactNode,;
   /** Optional canned questions shown when the chat is empty */;
   starterQuestions?: string[];
-}
 
 export function ChatAssistant(): any ({;
   isOpen,;
@@ -244,7 +235,7 @@ export function ChatAssistant(): any ({;
   const [guestMessage, setGuestMessage] = useState<string | null>(null),;
 
   // Effect for guest user messages;
-  useEffect((,) => {;
+  useEffect(,) => {;
     if (isGuest) {;
       // Priority: initialMessages prop > localStorage > empty array;
       if (initialMessages && initialMessages.length > 0) {;
@@ -253,7 +244,6 @@ export function ChatAssistant(): any ({;
       } else {;
         setDisplayGuestMessages(storedGuestMessages);
       }
-    }
   }, [;
     isGuest,;
     initialMessages,;
@@ -262,17 +252,16 @@ export function ChatAssistant(): any ({;
     recipient && recipient.id]),;
 
   // Effect for logged-in user messages;
-  useEffect((,) => {;
+  useEffect(,) => {;
     if (!isGuest) {;
       // Update state if initialMessages prop changes (e && e.g. new conversation loaded);
       setLoggedInMessages(initialMessages);
-    }
-  }, [isGuest, initialMessages, recipient && recipient.id]),;
+    }, [isGuest, initialMessages, recipient && recipient.id]),;
 
   // Determine currentMessages and setCurrentMessages based on isGuest;
   const currentMessages = isGuest ? displayGuestMessages : loggedInMessages,;
   const setCurrentMessages = (;
-    valueOrFn: Message[] | ((val: Message[],) => Message[]),;
+    valueOrFn: Message[] | (val: Message[],) => Message[]),;
   ) => {;
     if (isGuest) {;
       const newMessages =;
@@ -285,19 +274,17 @@ export function ChatAssistant(): any ({;
       const newMessages =;
         valueOrFn instanceof Function ? valueOrFn(loggedInMessages) : valueOrFn,;
       setLoggedInMessages(newMessages);
-    }
-  },;
+    },;
 
   const debouncedApiCallParams = useDebounce(pendingApiCallParams, 3000),;
 
-  useEffect((,) => {;
+  useEffect(,) => {;
     if (debouncedApiCallParams) {;
       onSendMessage(debouncedApiCallParams && debouncedApiCallParams.message,;
         debouncedApiCallParams && debouncedApiCallParams.conversationId);
-    }
-  }, [debouncedApiCallParams, onSendMessage]),;
+    }, [debouncedApiCallParams, onSendMessage]),;
 
-  useEffect((,) => {;
+  useEffect(,) => {;
     scrollToBottom();
   }, [currentMessages]), // currentMessages will correctly refer to either guest or logged-in state;
 
@@ -306,7 +293,7 @@ export function ChatAssistant(): any ({;
   },;
 
   const handleSendMessage = async (messageContent: string,) => {;
-    if (!messageContent && messageContent.trim()) return,;
+    if (!messageContent && messageContent.trim() return,;
 
     if (!isGuest) {;
       // Logged-in user;
@@ -315,14 +302,13 @@ export function ChatAssistant(): any ({;
         role: 'user',;
         message: messageContent,;
         timestamp: new Date()},;
-      setCurrentMessages((prev: Message[],) => [...prev, newMessage]),;
+      setCurrentMessages(prev: Message[],) => [...prev, newMessage]),;
       setPendingApiCallParams({ message: messageContent, conversationId });
     } else {;
       // Guest user;
       setGuestMessage(messageContent),;
       setShowGuestModal(true);
-    }
-  },;
+    },;
 
   const handleModalSendConfirm = () => {;
     if (!guestMessage) return,;
@@ -332,7 +318,7 @@ export function ChatAssistant(): any ({;
       role: 'user',;
       message: guestMessage,;
       timestamp: new Date()},;
-    setCurrentMessages((prev: Message[],) => [...prev, newMessage]), // This will now use the guest-aware setCurrentMessages;
+    setCurrentMessages(prev: Message[],) => [...prev, newMessage]), // This will now use the guest-aware setCurrentMessages;
     setPendingApiCallParams({ message: guestMessage, conversationId }),;
 
     setShowGuestModal(false),;
@@ -344,14 +330,13 @@ export function ChatAssistant(): any ({;
     setGuestMessage(null);
   },;
 
-  useEffect((,) => {;
+  useEffect(,) => {;
     if (!isOpen) return,;
     const handleKeyDown = (e: KeyboardEvent,) => {;
-      if (e && e.key === 'Escape') {;
+      if (e && e.key = = 'Escape') {;
         e && e.preventDefault(),;
         onClose();
-      }
-    },;
+      },;
     document && document.addEventListener('keydown', handleKeyDown),;
     return () => document && document.removeEventListener('keydown', handleKeyDown);
   }, [isOpen, onClose]),;
@@ -403,12 +388,12 @@ export function ChatAssistant(): any ({;
         <div
           className="flex-1 overflow-y-auto p-4 space-y-4"
           aria-live="polite">;
-          {currentMessages && currentMessages.length === 0 ? (;
+          {currentMessages && currentMessages.length = = 0 ? (;
             <div className="text-center text-zion-slate py-8 space-y-4">;
               <p>Start a conversation with {recipient && recipient.name}</p>;
               {starterQuestions && starterQuestions.length > 0 && (;
                 <div className="flex flex-wrap justify-center gap-2">;
-                  {starterQuestions && starterQuestions.map((q, idx,) => (;
+                  {starterQuestions && starterQuestions.map(q, idx,) => (;
                     <Button
                       key = {idx,}
                       variant="outline"
@@ -417,14 +402,14 @@ export function ChatAssistant(): any ({;
                     >;
                       {q}
                     </Button>;
-                  ))}
+                  )}
                 </div>;
               )}
             </div>;
           ) : (;
-            currentMessages && currentMessages.map((msg,) => (;
+            currentMessages && currentMessages.map(msg,) => (;
               <ChatMessage key={msg && msg.id} role={msg && msg.role} message={msg && msg.message} />;
-            ));
+            );
           )}
           <div ref={messagesEndRef} />
         </div>
@@ -465,24 +450,23 @@ export function ChatAssistant(): any ({;
     setStoredGuestMessages,
     recipient.id]),
   // Effect for logged - in user messages;
-  useEffect ((, ) => {
+  useEffect (, ) => {
     // Check condition
 if ( {) {
   $2
-}
+
       // Update state if initial_messages prop changes (e.g. new conversation loaded);
       setLoggedInMessages (initial_messages);
-    }
-  }, [is_guest, initial_messages, recipient.id]),
+    }, [is_guest, initial_messages, recipient.id]),
   // Determine current_messages and setCurrentMessages based on is_guest;
   const current_messages = is_guest ? displayGuestMessages : loggedInMessages,
   const setCurrentMessages = (
-    valueOrFn: Message[] | ((val: Message[], ) =>: any Message[]),
+    valueOrFn: Message[] | (val: Message[], ) =>: any Message[]),
   ) => {
     // Check condition
 if ( {) {
   $2
-}
+
       const new_messages =;
         valueOrFn instanceof Function;
           ? valueOrFn (displayGuestMessages);
@@ -493,19 +477,17 @@ if ( {) {
       const new_messages =;
         valueOrFn instanceof Function ? valueOrFn (loggedInMessages) : valueOrFn,
       setLoggedInMessages (new_messages);
-    }
-  },
+    },
   const debouncedApiCallParams = use_debounce (pendingApiCallParams, 3000),
-  useEffect ((, ) => {
+  useEffect (, ) => {
     // Check condition
 if ( {) {
   $2
-}
+
       onSendMessage (debouncedApiCallParams.message,
         debouncedApiCallParams.conversation_id);
-    }
-  }, [debouncedApiCallParams, onSendMessage]),
-  useEffect ((, ) => {
+    }, [debouncedApiCallParams, onSendMessage]),
+  useEffect (, ) => {
     scrollToBottom ();
   }, [current_messages]), // current_messages will correctly refer to either guest or logged - in state;
   const scrollToBottom = () =>: any {
@@ -514,36 +496,35 @@ if ( {) {
   const handleSendMessage = async (message_content: string, ) => {
     if () return, ) {
   $2
-}
+
     // Check condition
 if ( {) {
   $2
-}
+
       // Logged - in user;
       const new_message: Message = {
         id: Date.now ().to_string (),
         role: 'user',
         message: message_content,
         timestamp: new Date ()},
-      setCurrentMessages ((prev: Message[], ) => [...prev, new_message]),
+      setCurrentMessages (prev: Message[], ) => [...prev, new_message]),
       setPendingApiCallParams ({ message: message_content, conversation_id });
     } else {
       // Guest user;
       setGuestMessage (message_content),
       setShowGuestModal (true);
-    }
-  },
+    },
   const handleModalSendConfirm = () =>: any {
     // Check condition
 if (return, ) {
   $2
-}
+
     const new_message: Message = {
       id: Date.now ().to_string (),
       role: 'user',
       message: guest_message,
       timestamp: new Date ()},
-    setCurrentMessages ((prev: Message[], ) => [...prev, new_message]), // This will now use the guest - aware setCurrentMessages;
+    setCurrentMessages (prev: Message[], ) => [...prev, new_message]), // This will now use the guest - aware setCurrentMessages;
     setPendingApiCallParams ({ message: guest_message, conversation_id }),
     setShowGuestModal (false),
     setGuestMessage (null);
@@ -552,27 +533,26 @@ if (return, ) {
     setShowGuestModal (false),
     setGuestMessage (null);
   },
-  useEffect ((, ) => {
+  useEffect (, ) => {
     // Check condition
 if (return, ) {
   $2
-}
+
     const handleKeyDown = (e: KeyboardEvent, ) =>: any {
       // Check condition
 if ( {) {
   $2
-}
+
         e.prevent_default (),
         on_close ();
-      }
-    },
+      },
     document.addEventListener ('keydown', handleKeyDown),
     return () => document.removeEventListener ('keydown', handleKeyDown);
   }, [is_open, on_close]),
   // Check condition
 if (return null, ) {
   $2
-}
+
   return (
     <div;
       className="fixed inset - 0 bg - black / 50 z - 50 flex items - center justify - center p - 4";
@@ -618,12 +598,12 @@ if (return null, ) {
           className="flex - 1 overflow - y-auto p - 4 space - y-4";
           aria - live="polite";
         >;
-          {current_messages.length === 0 ? (
+          {current_messages.length = = 0 ? (
             <div className="text - center text - zion - slate py - 8 space - y-4">;
               <p > Start a conversation with {recipient.name}</p>;
               {starter_questions.length > 0 && (
                 <div className="flex flex - wrap justify - center gap - 2">;
-                  {starter_questions.map ((q, idx, ) => (
+                  {starter_questions.map (q, idx, ) => (
                     <Button;
                       key = {idx, }
                       variant="outline";
@@ -631,11 +611,11 @@ if (return null, ) {
                       on_click = {(, ) => handleSendMessage (q), }
                     >;
                       {q}
-                    </Button>))}
+                    </Button>)}
                 </div>)}
             </div>) : (
-            current_messages.map ((msg, ) => (
-              <ChatMessage key={msg.id} role={msg.role} message={msg.message} />)))}
+            current_messages.map (msg, ) => (
+              <ChatMessage key={msg.id} role={msg.role} message={msg.message} />))}
           <div ref={messagesEndRef} />;
         </div>;
         {/* Input */}
@@ -680,9 +660,6 @@ if (return null, ) {
       )}
     </div>;
   );
-}
-}
+
         </div>)}
     </div>);
-}
-}

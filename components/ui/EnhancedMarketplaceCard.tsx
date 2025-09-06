@@ -20,7 +20,7 @@ interface EnhancedMarketplaceCardProps {;
   reviews?: number;
   featured?: boolean;
   class_name?: string;
-}
+
 const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({
   title
   description
@@ -32,7 +32,7 @@ const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({
   reviews
   featured = false
   className = ''
-}) => {
+) => {
 
 const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({;
   title,;
@@ -45,7 +45,7 @@ const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({;
   reviews,;
   featured = false,;
   className = '';
-}) => {;
+) => {;
   return (
     <Link href={href} className={`block group ${className}`}>;
       <divclassName={`bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 p-6 h-full flex flex-col ${
@@ -81,7 +81,7 @@ const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({;
         {rating && reviews && (;
           <div className="flex items-center space-x-1 mb-4">;
             <div className="flex items-center">;
-              {[...Array(5)].map((_, i) => (;
+              {[...Array(5)].map(_, i) => (;
                 <svg
                   key={i}
                   className={`w-4 h-4 ${
@@ -91,7 +91,7 @@ const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({;
                   viewBox="0 0 20 20">;
                   <path d="M9 && M9.049 2 && 2.927c.3-.921 1 && 1.603-.921 1 && 1.902 0l1 && 0l1.07 3 && 3.292a1 1 0 00 && 00.95.69h3 && 69h3.462c.969 0 1 && 1.371 1 && 1.24.588 1 && 1.81l-2 && 2.8 2 && 2.034a1 1 0 00-.364 1 && 1.118l1.07 3 && 3.292c.3 && 3.921-.755 1 && 1.688-1 && 1.54 1 && 1.118l-2 && 2.8-2 && 2.034a1 1 0 00-1 && 1.175 0l-2 && 2.8 2 && 2.034c-.784 && 784.57-1 && 1.838-.197-1 && 1.539-1 && 1.118l1.07-3 && 3.292a1 1 0 00-.364-1 && 1.118L2.98 8 && 8.72c-.783-.57-.38-1 && 1.81.588-1 && 1.81h3.461a1 1 0 00 && 00.951-.69l1 && 69l1.07-3 && 3.292z" />;
                 </svg>;
-              ))}
+              )}
             </div>;
             <span className="text-sm text-gray-500">;
               {rating} ({reviews} reviews);
@@ -119,7 +119,7 @@ interface MarketplaceCardProps {
   image: string
   onAddToCart?: () => void;
   onFavorite?: () => void;
-}
+
 const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
           <div className="text-sm text-gray-500 group-hover:text-blue-600 transition-colors">;
             Learn more ;
@@ -135,7 +135,6 @@ interface MarketplaceCardProps {;
   image: string,;
   onAddToCart?: () => void;
   on_favorite?: () => void;
-}
 
 const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({;
 const EnhancedMarketplaceCard: React.FC < MarketplaceCardProps> = ({
@@ -146,7 +145,7 @@ const EnhancedMarketplaceCard: React.FC < MarketplaceCardProps> = ({
   image;
   onAddToCart;
   onFavorite;
-}) => {;
+) => {;
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">;
       <div className="relative">;
@@ -179,10 +178,9 @@ const EnhancedMarketplaceCard: React.FC < MarketplaceCardProps> = ({
 </div>
   );
 
-}
 export default EnhancedMarketplaceCard;
   on_favorite;
-}) => {
+) => {
   return (
     <div className="bg - white rounded - lg shadow - md overflow - hidden hover:shadow - lg transition - shadow">;
       <div className="relative">;
@@ -213,7 +211,5 @@ export default EnhancedMarketplaceCard;
         </button>;
       </div>;
 </div>);
-}
-;
+
 export default EnhancedMarketplaceCard;
-;

@@ -5,14 +5,14 @@ import {
   FormLabel
   FormControl
   FormMessage
-} from "@/components/ui/form";
+ from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 
 import { Control } from "react-hook-form";
 import { BasicInfoFormData } from "./schema";
 interface ContactFieldsProps {
   control: Control < BasicInfoFormData>;
-}
+
 export function ContactFields({ control }: ContactFieldsProps) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
@@ -85,7 +85,7 @@ function ContactFields() {
       />
     </div>
   );
-}
+
               />;
             </FormControl>;
             <FormMessage />;
@@ -104,4 +104,3 @@ function ContactFields() {
           </FormItem>)}
       />;
     </div>);
-}

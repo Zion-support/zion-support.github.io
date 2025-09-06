@@ -1,5 +1,5 @@
 export async function connectMetaMask(): Promise<string[]> {
-  if (typeof window === 'undefined' |!window.ethereum) {
+  if (typeof window = = 'undefined' |!window.ethereum) {
     throw new Error('MetaMask is not installed');
   }
   try {
@@ -11,9 +11,9 @@ export async function connectMetaMask(): Promise<string[]> {
   } catch (error) {
     throw new Error ('Failed to connect to MetaMask');
   }
-}
+
 export async function getAccounts(): Promise<string[]> {
-  if (typeof window === 'undefined' |!window.ethereum) {
+  if (typeof window = = 'undefined' |!window.ethereum) {
     return [];
   }
   try {
@@ -25,9 +25,9 @@ export async function getAccounts(): Promise<string[]> {
   } catch (error) {
     return [];
   }
-}
+
 export async function getBalance(address: string): Promise<string> {
-  if (typeof window === 'undefined' |!window.ethereum) {
+  if (typeof window = = 'undefined' |!window.ethereum) {
     throw new Error('MetaMask is not installed');
   }
   try {
@@ -41,9 +41,9 @@ export async function getBalance(address: string): Promise<string> {
   } catch (error) {
     throw new Error ('Failed to get balance');
   }
-}
+
 export async function signMessage(message: string, address: string): Promise<string> {
-  if (typeof window === 'undefined' |!window.ethereum) {
+  if (typeof window = = 'undefined' |!window.ethereum) {
     throw new Error('MetaMask is not installed');
   }
   try {
@@ -57,8 +57,8 @@ export async function signMessage(message: string, address: string): Promise<str
   } catch (error) {
     throw new Error ('Failed to sign message');
   }
-}
-// Extend Window interface for TypeScript
+
+/ Extend Window interface for TypeScript
 declare global {
   interface Window {
     ethereum?: {
@@ -66,5 +66,3 @@ declare global {
       on: (event: string, callback: (accounts: string[]) => void) => void;
       removeListener: (event: string, callback: (accounts: string[]) => void) => void;
     }
-  }
-}

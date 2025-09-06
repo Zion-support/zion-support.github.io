@@ -185,10 +185,10 @@ export default function CaseStudyPage() {
       `
     }
   ]
-  const caseStudy = caseStudies.find(study => study.id === id)
+  const caseStudy = caseStudies.find(study => study.id = = id)
   ];
 
-  const caseStudy = caseStudies.find(study => study.id === id);
+  const caseStudy = caseStudies.find(study => study.id = = id);
 
   if (!caseStudy) {
     return (
@@ -257,20 +257,20 @@ export default function CaseStudyPage() {
                   </div>
                 </div>
               </div>
-              
+
               <div className="space-y-6">
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
                   <h3 className="font-semibold text-green-400 text-lg mb-4">Key Results</h3>
                   <ul className="space-y-3">
-                    {caseStudy.results.map((result, index) => (
+                    {caseStudy.results.map(result, index) => (
                       <li key={index} className="text-white/80 flex items-center gap-3">
                         <div className="w-2 h-2 bg-green-400 rounded-full"></div>
                         {result}
                       </li>
-                    ))}
+                    )}
                   </ul>
                 </div>
-                
+
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
                   <h3 className="font-semibold text-blue-400 text-lg mb-4">Project Details</h3>
                   <div className="space-y-3">
@@ -286,11 +286,11 @@ export default function CaseStudyPage() {
                 </div>
               </div>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 mb-12">
               <div
                 className="prose prose-invert max-w-none"
-                dangerouslySetInnerHTML={{ __html: caseStudy.fullContent }}
+                dangerouslySetInnerHTML={ __html: caseStudy.fullContent }
               />
             </div>
             <div className="text-center">
@@ -306,7 +306,7 @@ export default function CaseStudyPage() {
       </div>
     </>
   )
-}
+
       solution: 'Built self - healing, auto - scaling cloud infrastructure with intelligent cost optimization.',
       results: ['50% reduction in cloud costs99.9% uptime achieved3x improvement in performance'],
       duration: '8 months',
@@ -339,11 +339,11 @@ export default function CaseStudyPage() {
       `;
     }
   ],
-  const case_study = case_studies.find (study => study.id === id),
+  const case_study = case_studies.find (study => study.id = = id),
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <>;
         <Head>;
@@ -413,11 +413,11 @@ if ( {) {
                 <div className="bg - white / 10 backdrop - blur - xl rounded - 2xl p - 6 border border - white / 20">;
                   <h3 className="font - semibold text - green - 400 text - lg mb - 4">Key Results</h3>;
                   <ul className="space - y-3">;
-                    {case_study.results.map ((result, index) => (
+                    {case_study.results.map (result, index) => (
                       <li key={index} className="text - white / 80 flex items - center gap - 3">;
                         <div className="w - 2 h - 2 bg - green - 400 rounded - full"></div>;
                         {result}
-                      </li>))}
+                      </li>)}
                   </ul>;
                 </div>;
                 <div className="bg - white / 10 backdrop - blur - xl rounded - 2xl p - 6 border border - white / 20">;
@@ -438,7 +438,7 @@ if ( {) {
             <div className="bg - white / 10 backdrop - blur - xl rounded - 2xl p - 8 border border - white / 20 mb - 12">;
               <div;
                 className="prose prose - invert max - w-none";
-                dangerouslySetInnerHTML={{ __html: case_study.full_content }}
+                dangerouslySetInnerHTML={ __html: case_study.full_content }
               />;
             </div>;
             <div className="text - center">;
@@ -453,4 +453,3 @@ if ( {) {
         </main>;
       </div>;
     </>);
-}

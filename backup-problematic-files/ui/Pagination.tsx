@@ -5,10 +5,10 @@ export type PaginationProps = {
   pageSize: number,
   total: number,
   onChange: (nextPage: number) => void
-},
+,
 
 export default function Pagination({ page, pageSize, total, onChange }: PaginationProps) {
-  const totalPages = Math.max(1, Math.ceil(total / pageSize)),
+  const totalPages = Math.max(1, Math.ceil(total / pageSize),
   const canPrev = page > 1,
   const canNext = page < totalPages,
 
@@ -29,4 +29,3 @@ export default function Pagination({ page, pageSize, total, onChange }: Paginati
       </EnhancedButton>
     </div>
   )
-}

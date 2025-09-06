@@ -17,7 +17,7 @@ export function TalentPlaceholder() {
       </Button>
     </div>
   );
-}
+
 import { Card  } from '@/components / ui / card';
 import { Skeleton  } from '@/components / ui / skeleton';
 import { Button  } from '@/components / ui / button';
@@ -38,4 +38,3 @@ function TalentPlaceholder() {
         Join as Talent;
       </Button>;
     </div>);
-}

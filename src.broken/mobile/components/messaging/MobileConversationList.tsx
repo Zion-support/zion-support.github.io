@@ -6,5 +6,3 @@ export function MobileConversationList() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

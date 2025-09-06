@@ -48,7 +48,6 @@ export const QrCodeDownload: React.FC = () => {
       </div>
     </section>
   );
-}
 
                   Scan to download;
                 </p>;
@@ -59,7 +58,4 @@ export const QrCodeDownload: React.FC = () => {
       </div>;
     </section>;
   );
-};
     </section>);
-}
-;

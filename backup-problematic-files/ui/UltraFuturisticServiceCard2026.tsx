@@ -25,13 +25,11 @@ interface Service {;
   useCases?: string[],;
   integration?: string[],;
   benefits?: string[];
-}
-;
+
 interface ServiceCardProps {;
   service: Service,;
   variant?: 'ai' | 'quantum' | 'space' | 'cybersecurity' | 'enterprise' | 'automation' | 'it' | 'emerging' | 'premium' | 'default';
-}
-;
+
 const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, variant = 'default' }) => {;
   const getVariantStyles = () => {;
     switch (variant) {;
@@ -115,23 +113,22 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
           iconBg: 'bg-gray-500/20',;
           iconBorder: 'border-gray-400/30';
         }
-    }
   },;
   const styles = getVariantStyles(),;
   const getCategoryIcon = (category: string) => {;
-    if (category.includes('AI')) return Brain,;
-    if (category.includes('Quantum')) return Atom,;
-    if (category.includes('Space')) return Rocket,;
-    if (category.includes('Cybersecurity')) return Shield,;
+    if (category.includes('AI') return Brain,;
+    if (category.includes('Quantum') return Atom,;
+    if (category.includes('Space') return Rocket,;
+    if (category.includes('Cybersecurity') return Shield,;
     return TrendingUp;
   },;
   const CategoryIcon = getCategoryIcon(service.category),;
   return (;
     <motion.div;
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      viewport={{ once: true }}
+      initial={ opacity: 0, y: 20 }
+      whileInView={ opacity: 1, y: 0 }
+      transition={ duration: 0.6 }
+      viewport={ once: true }
       className="group relative"
     >
       <div className="relative p-8 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-white/10 hover:border-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl backdrop-blur-sm overflow-hidden">
@@ -140,60 +137,60 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
         {/* Popular Badge */}
         {service.popular && (;
           <motion.div;
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
+            initial={ scale: 0 }
+            animate={ scale: 1 }
+            transition={ delay: 0.2, type: "spring", stiffness: 200 }
             className="absolute -top-3 left-6 px-4 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-sm font-bold rounded-full shadow-lg"
           >
             <Star className="w-4 h-4 inline mr-1" />
             Popular
           </motion.div>
         )}
-;
+
         {/* Service Header */}
         <div className="text-center mb-8 relative z-10">
           <div className={`w-24 h-24 mx-auto mb-6 rounded-full ${styles.iconBg} flex items-center justify-center border ${styles.iconBorder} text-4xl backdrop-blur-sm`}>
             {service.icon}
           </div>
-          
+
           <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-gray-100 transition-colors">
             {service.name}
           </h3>
-          
+
           <p className="text-gray-300 text-sm mb-4 leading-relaxed">
             {service.tagline}
           </p>
-          
+
           <div className="text-4xl font-bold text-cyan-400 mb-2 group-hover:text-cyan-300 transition-colors">
             {service.price}
             <span className="text-lg text-gray-400 font-normal">/{service.period}</span>
           </div>
-          
+
           {/* Category Badge */}
           <div className="inline-flex items-center space-x-2 px-3 py-1 bg-gray-800/50 border border-gray-600/30 rounded-full text-xs text-gray-300">
             <CategoryIcon className="w-3 h-3" />
             <span>{service.category}</span>
           </div>
         </div>
-        
+
         {/* Features List */}
         <div className="space-y-3 mb-8 relative z-10">
           <h4 className="text-sm font-semibold text-gray-300 mb-4 flex items-center">
             <Zap className="w-4 h-4 mr-2 text-cyan-400" />
             Key Features
           </h4>
-          {service.features.slice(0, 6).map((feature, idx) => (
+          {service.features.slice(0, 6).map(feature, idx) => (
             <motion.div
               key={idx}
-              initial={{ opacity: 0, x: -10 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: idx * 0.1 }}
+              initial={ opacity: 0, x: -10 }
+              animate={ opacity: 1, x: 0 }
+              transition={ delay: idx * 0.1 }
               className="flex items-center space-x-3 text-sm text-gray-300 group-hover:text-gray-200 transition-colors"
             >
               <div className="w-2 h-2 bg-cyan-400 rounded-full group-hover:bg-cyan-300 transition-colors"></div>
               <span>{feature}</span>
             </motion.div>
-          ))}
+          )}
         </div>;
         {/* Enhanced Market Information */}
         {service.marketPrice && (
@@ -202,7 +199,7 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
               <span className="text-gray-400">Market Price:</span>
               <span className="text-green-400 font-semibold">{service.marketPrice}</span>
             </div>
-            
+
             {service.competitors && (
               <div className="text-xs text-gray-500">
                 Competes with: {service.competitors.slice(0, 2).join()}
@@ -220,7 +217,7 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
             )}
           </div>;
         )}
-;
+
         {/* Target Market & Use Cases */}
         {service.targetMarket && (
           <div className="border-t border-white/10 pt-4 mb-6 space-y-3 relative z-10">
@@ -228,7 +225,7 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
               <div className="text-gray-400 mb-2">Target Market:</div>
               <div className="text-gray-300">{service.targetMarket}</div>
             </div>
-            
+
             {service.useCases && (
               <div className="text-xs mt-3">
                 <div className="text-gray-400 mb-2">Use Cases:</div>
@@ -248,7 +245,7 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
             )}
           </div>;
         )}
-;
+
         {/* Benefits Section */}
         {service.benefits && (
           <div className="border-t border-white/10 pt-4 mb-6 relative z-10">
@@ -257,21 +254,21 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
               Key Benefits
             </h4>
             <div className="space-y-2">
-              {service.benefits.slice(0, 3).map((benefit, idx) => (
+              {service.benefits.slice(0, 3).map(benefit, idx) => (
                 <div key={idx} className="text-xs text-gray-400 flex items-start space-x-2">
                   <Check className="w-3 h-3 text-green-400 mt-0.5 flex-shrink-0" />
                   <span>{benefit}</span>
                 </div>
-              ))}
+              )}
             </div>;
           </div>;
         )}
-;
+
         {/* CTA Button */}
         <div className="relative z-10">
           <motion.button
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
+            whileHover={ scale: 1.02 }
+            whileTap={ scale: 0.98 }
             className={`w-full py-3 px-6 rounded-lg bg-gradient-to-r ${styles.gradient} text-white font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-${styles.textColor}/25 border border-white/20 hover:border-white/40`}
           >;
             Get Started;
@@ -282,7 +279,6 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
       </div>
     </motion.div>
   );
-};
 
 UltraFuturisticServiceCard2026.displayName = 'UltraFuturisticServiceCard2026',
 
@@ -291,6 +287,6 @@ export default UltraFuturisticServiceCard2026,
       </div>;
     </motion.div>;
   );
-}),;
+),;
 UltraFuturisticServiceCard2026.displayName = 'UltraFuturisticServiceCard2026',;
 export default UltraFuturisticServiceCard2026;

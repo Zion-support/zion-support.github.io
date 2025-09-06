@@ -35,7 +35,7 @@ const generateSitemap = () => {
   writeStream.end(),
 
   console.log('Sitemap generated successfully at:', sitemapPath)
-},
+,
 
 generateSitemap(),
 import { createWriteStream } from 'fs',;
@@ -73,14 +73,13 @@ const generateSitemap = () => {;
   writeStream.write(sitemap),;
   writeStream.end(),;
   console.log('Sitemap generated successfully at:', sitemapPath);
-},;
+,;
 generateSitemap();
-#!/usr/bin/env node
+!/usr/bin/env node
 console.log('  Generating sitemap...');
 console.log(' Sitemap generation completed');
-import fs from 'fs'; import path from 'path'; import { fileURLToPath } from 'url'; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); const baseUrl = 'https: const pages = [ '','/about','/services','/services/ai-services','/services/micro-saas','/services/it-services','/contact',]; const generateSitemap = () => { const sitemap = `<?xml version="1.0" encoding="UTF-8"?> <urlset xmlns="http: ${pages.map(page => ` <url> <loc>${baseUrl}${page}</loc> <lastmod>${new Date().toISOString().split('T')[0]}</lastmod> <changefreq>weekly</changefreq> <priority>${page === '' ? '1.0' : '0.8'}</priority> </url>`).join('\n')} </urlset>`; const outDir = path.join(__dirname,'..','out'); if (!fs.existsSync(outDir)) { fs.mkdirSync(outDir,{ recursive: true })} fs.writeFileSync(path.join(outDir,'sitemap.xml'),sitemap); console.log(' Sitemap generated successfully')}; generateSitemap();
-};
-,
+import fs from 'fs'; import path from 'path'; import { fileURLToPath } from 'url'; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); const baseUrl = 'https: const pages = [ '','/about','/services','/services/ai-services','/services/micro-saas','/services/it-services','/contact',]; const generateSitemap = () => { const sitemap = `<?xml version="1.0" encoding="UTF-8"?> <urlset xmlns="http: ${pages.map(page => ` <url> <loc>${baseUrl}${page}</loc> <lastmod>${new Date().toISOString().split('T')[0]}</lastmod> <changefreq>weekly</changefreq> <priority>${page = = '' ? '1.0' : '0.8'}</priority> </url>`).join('\n')} </urlset>`; const outDir = path.join(__dirname,'..','out'); if (!fs.existsSync(outDir) { fs.mkdirSync(outDir,{ recursive: true })} fs.writeFileSync(path.join(outDir,'sitemap.xml'),sitemap); console.log(' Sitemap generated successfully')}; generateSitemap();
+
 generateSitemap(),
 console && console.log('  Generating sitemap...');
 console && console.log(' Sitemap generation completed');

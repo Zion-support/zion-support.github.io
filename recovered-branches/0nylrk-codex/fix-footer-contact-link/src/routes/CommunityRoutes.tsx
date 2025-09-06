@@ -54,12 +54,10 @@ const CommunityRoutes = () =>: any {
       />
     </Routes>
   )
-}
+
 export default CommunityRoutes;
 
       />;
     </Routes>);
-}
-;
+
 export default CommunityRoutes;
-;

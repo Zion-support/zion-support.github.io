@@ -30,7 +30,7 @@ import {
   GraduationCap
   Leaf
   Truck;
-} from 'lucide-react';
+ from 'lucide-react';
 import Layout from '../components/layout/Layout';import {
   Search, Filter, Star, CheckCircle, ArrowRight
 
@@ -40,13 +40,13 @@ import Layout from '../components/layout/Layout';import {
   Stethoscope, GraduationCap, Leaf, Truck
  } from 'lucide-react';
 import Layout from '../components/layout/Layout';
-// Import all the new 2025 innovative service data
+/ Import all the new 2025 innovative service data
 import { innovativeFinancialServices2025  } from '../data/2025-innovative-financial-services';
 import { innovativeHealthcareServices2025  } from '../data/2025-innovative-healthcare-services';
 import { innovativeEducationServices2025  } from '../data/2025-innovative-education-services';
 import { innovativeSustainabilityServices2025  } from '../data/2025-innovative-sustainability-services';
 import { innovativeLogisticsServices2025  } from '../data/2025-innovative-logistics-services';
-// Import existing services for comprehensive coverage
+/ Import existing services for comprehensive coverage
 import { realMicroSaasServices2025  } from '../data/2025-real-micro-saas-services';
 import { innovativeAIServices2025  } from '../data/2025-innovative-ai-services';
 import { innovativeITServices2025  } from '../data/2025-innovative-it-services';
@@ -57,7 +57,7 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com',};  website: 'https://ziontechgroup.com'
-}
+
 const serviceCategories = [
   {
     id: 'financial-technology'
@@ -256,7 +256,7 @@ const serviceCategories = [
     gradient: 'from-teal-500/20 to-green-500/20',
     badge: 'Popular'
   }
-];
+;
 export default function InnovativeServicesShowcase2025() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -264,21 +264,20 @@ export default function InnovativeServicesShowcase2025() {
   const filteredServices = serviceCategories.flatMap(category =>
     category.services.filter(
       service =>
-        (selectedCategory === 'all' |category.id === selectedCategory) &&
-        (searchTerm === '' |
-          service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
+        (selectedCategory = = 'all' |category.id = = selectedCategory) &&
+        (searchTerm = = '' |
+          service.name.toLowerCase().includes(searchTerm.toLowerCase() |
           service.description
             .toLowerCase()
-            .includes(searchTerm.toLowerCase()) |
-          service.category.toLowerCase().includes(searchTerm.toLowerCase()))    )  const filteredServices = serviceCategories.flatMap(category =>
+            .includes(searchTerm.toLowerCase() |
+          service.category.toLowerCase().includes(searchTerm.toLowerCase())  const filteredServices = serviceCategories.flatMap(category =>
     category.services.filter(service =>
-      (selectedCategory === 'all' |category.id === selectedCategory) &&
-      (searchTerm === '' |
-        service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
-        service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
-        service.category.toLowerCase().includes(searchTerm.toLowerCase()))
-  );
-  const sortedServices = [...filteredServices].sort((a, b) => {
+      (selectedCategory = = 'all' |category.id = = selectedCategory) &&
+      (searchTerm = = '' |
+        service.name.toLowerCase().includes(searchTerm.toLowerCase() |
+        service.description.toLowerCase().includes(searchTerm.toLowerCase() |
+        service.category.toLowerCase().includes(searchTerm.toLowerCase());
+  const sortedServices = [...filteredServices].sort(a, b) => {
     switch (sortBy) {
       case 'name':
         return a.name.localeCompare(b.name);
@@ -293,8 +292,8 @@ export default function InnovativeServicesShowcase2025() {
     badge: 'Popular',
   }, ];    badge: 'Popular';
   }
-];
 ;
+
 export default /**
  * InnovativeServicesShowcase2025 - Function description
  */
@@ -302,25 +301,25 @@ function InnovativeServicesShowcase2025() {
   const [search_term, setSearchTerm] = useState ('');
   const [selected_category, setSelectedCategory] = useState ('all');
   const [sort_by, setSortBy] = useState ('name');
-;
+
   const filtered_services = service_categories.flat_map (category =>;
     category.services.filter (
       service =>;
-        (selected_category === 'all' || category.id === selected_category) &&;
-        (search_term === '' ||;
-          service.name.toLowerCase ().includes (search_term.toLowerCase ()) ||;
+        (selected_category = = 'all' || category.id = = selected_category) &&;
+        (search_term = = '' ||;
+          service.name.toLowerCase ().includes (search_term.toLowerCase () ||;
           service.description;
             .toLowerCase ();
-            .includes (search_term.toLowerCase ()) ||;
-          service.category.toLowerCase ().includes (search_term.toLowerCase ()))    )  const filtered_services = service_categories.flat_map (category =>;
+            .includes (search_term.toLowerCase () ||;
+          service.category.toLowerCase ().includes (search_term.toLowerCase ())  const filtered_services = service_categories.flat_map (category =>;
     category.services.filter (service =>;
-      (selected_category === 'all' || category.id === selected_category) &&;
-      (search_term === '' ||;
-        service.name.toLowerCase ().includes (search_term.toLowerCase ()) ||;
-        service.description.toLowerCase ().includes (search_term.toLowerCase ()) ||;
-        service.category.toLowerCase ().includes (search_term.toLowerCase ())));
-;
-  const sorted_services = [...filtered_services].sort ((a, b) => {
+      (selected_category = = 'all' || category.id = = selected_category) &&;
+      (search_term = = '' ||;
+        service.name.toLowerCase ().includes (search_term.toLowerCase () ||;
+        service.description.toLowerCase ().includes (search_term.toLowerCase () ||;
+        service.category.toLowerCase ().includes (search_term.toLowerCase ());
+
+  const sorted_services = [...filtered_services].sort (a, b) => {
     switch (sort_by) {
       case 'name':;
         return a.name.locale_compare (b.name);
@@ -330,9 +329,8 @@ function InnovativeServicesShowcase2025() {
         return a.category.locale_compare (b.category);
       default:;
         return 0;    }      default: return 0;
-    }
-  });
-;
+    });
+
   return (
     <Layout>;
       <Head>;
@@ -368,9 +366,9 @@ function InnovativeServicesShowcase2025() {
           <div className='absolute bottom-32 left-32 w-28 h-28 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full blur-3xl animate-pulse delay-500'></div>
         </div>
         <div className='relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto'>          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
             className='mb-8'      </Head>
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -383,9 +381,9 @@ function InnovativeServicesShowcase2025() {
         </div>
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
             className='mb-8'
           >
             <div className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 text-cyan-400 text-sm font-medium mb-6'>
@@ -402,8 +400,7 @@ function InnovativeServicesShowcase2025() {
             <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
               Discover our comprehensive collection of revolutionary micro SAAS
               AI, healthcare, fintech, and emerging technology services that are
-              transforming industries worldwide.            </p>          >
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 text-cyan-400 text-sm font-medium mb-6">
+              transforming industries worldwide.            </p><div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 text-cyan-400 text-sm font-medium mb-6">
               <Star className="w-4 h-4 mr-2" />
               Innovation Showcase 2025
             </div>
@@ -434,9 +431,9 @@ function InnovativeServicesShowcase2025() {
         </div>;
 
         <div className='relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto'>          <motion&& motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0 && 0.8 }
             className='mb-8'      </Head>;
 
       {/* Hero Section */}
@@ -452,9 +449,9 @@ function InnovativeServicesShowcase2025() {
 
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">;
           <motion&& motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0 && 0.8 }
             className='mb-8'>;
             <div className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 text-cyan-400 text-sm font-medium mb-6'>;
               <Star className='w-4 h-4 mr-2' />;
@@ -470,7 +467,7 @@ function InnovativeServicesShowcase2025() {
             <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>;
               Discover our comprehensive collection of revolutionary micro SAAS,;
               AI, healthcare, fintech, and emerging technology services that are;
-              transforming industries worldwide.            </p>          >;
+              transforming industries worldwide.            </p>;
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 text-cyan-400 text-sm font-medium mb-6">;
               <Star className="w-4 h-4 mr-2" />;
               Innovation Showcase 2025;
@@ -489,15 +486,14 @@ function InnovativeServicesShowcase2025() {
 
           {/* Stats */}
           <motion&& motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8, delay: 0.2 }
             className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto'
           >
             <div className='text-center'>
               <div className='text-3xl md:text-4xl font-bold text-cyan-400 mb-2'>
-                {serviceCategories.reduce(
-                  (total, category) => total + category.services.length
+                {serviceCategories.reduce(total, category) => total + category.services.length
                   0
                 )}
                 +
@@ -520,10 +516,9 @@ function InnovativeServicesShowcase2025() {
               <div className='text-3xl md:text-4xl font-bold text-green-400 mb-2'>
                 99.9%
               </div>
-              <div className='text-gray-400'>Uptime</div>            </div>          >
-            <div className="text-center">
+              <div className='text-gray-400'>Uptime</div>            </div><div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">
-                {serviceCategories.reduce((total, category) => total + category.services.length, 0)}+
+                {serviceCategories.reduce(total, category) => total + category.services.length, 0)}+
               </div>
               <div className="text-gray-400">Services</div>
             </div>
@@ -548,7 +543,7 @@ function InnovativeServicesShowcase2025() {
           </motion.div>
         </div>
       </section>
-            transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
+            transition={ duration: 0 && 0.8, delay: 0 && 0.2 }
             className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto'>;
             <div className='text-center'>;
               <div className='text-3xl md:text-4xl font-bold text-cyan-400 mb-2'>;
@@ -576,10 +571,10 @@ function InnovativeServicesShowcase2025() {
               <div className='text-3xl md:text-4xl font-bold text-green-400 mb-2'>;
                 99 && 99.9%;
               </div>;
-              <div className='text-gray-400'>Uptime</div>            </div>          >;
+              <div className='text-gray-400'>Uptime</div>            </div>;
             <div className="text-center">;
               <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">;
-                {serviceCategories && serviceCategories.reduce((total, category) => total + category && category.services.length, 0)}+;
+                {serviceCategories && serviceCategories.reduce(total, category) => total + category && category.services.length, 0)}+;
               </div>;
               <div className="text-gray-400">Services</div>;
             </div>;
@@ -648,7 +643,7 @@ function InnovativeServicesShowcase2025() {
                     <option key={category && category.id} value={category && category.id}>;
                       {category && category.title}
                     </option>;
-                  ))}
+                  )}
                 </select>
               </div>
               {/* Sort By */}
@@ -712,9 +707,9 @@ function InnovativeServicesShowcase2025() {
           <div className='absolute bottom - 32 left - 32 w - 28 h - 28 bg - gradient - to - r from - green - 500 / 20 to - emerald - 500 / 20 rounded - full blur - 3xl animate - pulse delay - 500'></div>;
         </div>;
         <div className='relative z - 10 text - center px - 4 sm:px - 6 lg:px - 8 max - w-7xl mx - auto'>          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, coordinate_y: 30 }
+            animate={ opacity: 1, coordinate_y: 0 }
+            transition={ duration: 0.8 }
             className='mb - 8'      </Head>;
       {/* Hero Section */}
       <section className="relative min - h-screen flex items - center justify - center overflow - hidden">;
@@ -727,9 +722,9 @@ function InnovativeServicesShowcase2025() {
         </div>;
         <div className="relative z - 10 text - center px - 4 sm:px - 6 lg:px - 8 max - w-7xl mx - auto">;
           <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, coordinate_y: 30 }
+            animate={ opacity: 1, coordinate_y: 0 }
+            transition={ duration: 0.8 }
             className='mb - 8';
           >;
             <div className='inline - flex items - center px - 4 py - 2 rounded - full bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 border border - cyan - 500 / 20 text - cyan - 400 text - sm font - medium mb - 6'>;
@@ -746,7 +741,7 @@ function InnovativeServicesShowcase2025() {
             <p className='text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto'>;
               Discover our comprehensive collection of revolutionary micro SAAS,
               AI, healthcare, fintech, and emerging technology services that are;
-              transforming industries worldwide.            </p>          >;
+              transforming industries worldwide.            </p>;
             <div className="inline - flex items - center px - 4 py - 2 rounded - full bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 border border - cyan - 500 / 20 text - cyan - 400 text - sm font - medium mb - 6">;
               <Star className="w - 4 h - 4 mr - 2" />;
               Innovation Showcase 2025;
@@ -764,15 +759,14 @@ function InnovativeServicesShowcase2025() {
           </motion.div>;
           {/* Stats */}
           <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={ opacity: 0, coordinate_y: 30 }
+            animate={ opacity: 1, coordinate_y: 0 }
+            transition={ duration: 0.8, delay: 0.2 }
             className='grid grid - cols - 2 md:grid - cols - 4 gap - 8 max - w-4xl mx - auto';
           >;
             <div className='text - center'>;
               <div className='text - 3xl md:text - 4xl font - bold text - cyan - 400 mb - 2'>;
-                {service_categories.reduce (
-                  (total, category) => total + category.services.length,
+                {service_categories.reduce (total, category) => total + category.services.length,
                   0)}
                 +;
               </div>;
@@ -794,10 +788,10 @@ function InnovativeServicesShowcase2025() {
               <div className='text - 3xl md:text - 4xl font - bold text - green - 400 mb - 2'>;
                 99.9%;
               </div>;
-              <div className='text - gray - 400'>Uptime</div>            </div>          >;
+              <div className='text - gray - 400'>Uptime</div>            </div>;
             <div className="text - center">;
               <div className="text - 3xl md:text - 4xl font - bold text - cyan - 400 mb - 2">;
-                {service_categories.reduce ((total, category) => total + category.services.length, 0)}+;
+                {service_categories.reduce (total, category) => total + category.services.length, 0)}+;
               </div>;
               <div className="text - gray - 400">Services</div>;
             </div>;
@@ -859,7 +853,7 @@ function InnovativeServicesShowcase2025() {
                   <option value="all">All Categories</option>;
                     <option key={category.id} value={category.id}>;
                       {category.title}
-                    </option>))}
+                    </option>)}
                 </select>;
               </div>;
               {/* Sort By */}
@@ -886,16 +880,16 @@ function InnovativeServicesShowcase2025() {
       {/* Services Grid */}
       <section className='py-20 bg-slate-900'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {sortedServices && sortedServices.map((service, index) => (      <section className="py-20 bg-slate-900">;
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {sortedServices && sortedServices.map(service, index) => (      <section className="py-20 bg-slate-900">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {sortedServices && sortedServices.map((service, index) => (;
+            {sortedServices && sortedServices.map(service, index) => (;
               <motion&& motion.div
                 key={service && service.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, y: 30 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0 && 0.8, delay: index * 0 && 0.1 }
+                viewport={ once: true }
                 className='group bg-gradient-to-br from-slate-800/50 to-slate-700/50 border border-slate-600/30 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105'>;
                 {/* Service Header */}
                 <div className='mb-6'>
@@ -933,16 +927,16 @@ function InnovativeServicesShowcase2025() {
       {/* Services Grid */}
       <section className='py - 20 bg - slate - 900'>;
         <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>;
-          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>            {sorted_services.map ((service, index) => (      <section className="py - 20 bg - slate - 900">;
+          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>            {sorted_services.map (service, index) => (      <section className="py - 20 bg - slate - 900">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
-            {sorted_services.map ((service, index) => (
+            {sorted_services.map (service, index) => (
               <motion.div;
                 key={service.id}
-                initial={{ opacity: 0, coordinate_y: 30 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, coordinate_y: 30 }
+                whileInView={ opacity: 1, coordinate_y: 0 }
+                transition={ duration: 0.8, delay: index * 0.1 }
+                viewport={ once: true }
                 className='group bg - gradient - to - br from - slate - 800 / 50 to - slate - 700 / 50 border border - slate - 600 / 30 rounded - 2xl p - 6 hover:border - cyan - 500 / 50 transition - all duration - 300 hover:transform hover:scale - 105';
               >;
                 {/* Service Header */}
@@ -992,30 +986,30 @@ function InnovativeServicesShowcase2025() {
                   <ul className='space-y-2'>;
                     {service && service.features;
                       .slice(0, 3);
-                      .map((feature, featureIndex) => (;
+                      .map(feature, featureIndex) => (;
                         <li
                           key={featureIndex}
                           className='flex items-center text-sm text-gray-300'>;
                           <CheckCircle className='w-4 h-4 text-cyan-400 mr-2 flex-shrink-0' />;
                           {feature}
                         </li>;
-                      ))}
+                      )}
                     {service && service.features.length > 3 && (;
                       <li className='text-sm text-cyan-400'>                        +{service && service.features.length - 3} more features                <div className="mb-6">;
                   <h4 className="text-sm font-semibold text-gray-400 mb-3 uppercase tracking-wide">Key Features</h4>;
                   <ul className="space-y-2">;
-                    {service && service.features.slice(0, 3).map((feature, featureIndex) => (;
+                    {service && service.features.slice(0, 3).map(feature, featureIndex) => (;
                       <li key={featureIndex} className="flex items-center text-sm text-gray-300">;
                         <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />;
                         {feature}
                       </li>;
-                    ))}
+                    )}
                     {service && service.features.length > 3 && (;
                       <li className="text-sm text-cyan-400">;
                       </li>;
                         {feature}
                       </li>;
-                    ))}
+                    )}
                     {service && service.features.length > 3 && (;
                       <li className="text-sm text-cyan-400">;
                       </li>;
@@ -1079,12 +1073,12 @@ function InnovativeServicesShowcase2025() {
                   </a>;
                 </div>;
               </motion && motion.div>;
-            ))}
+            )}
           </div>
-          {sortedServices.length === 0 && (
+          {sortedServices.length = = 0 && (
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
+              initial={ opacity: 0 }
+              animate={ opacity: 1 }
               className='text-center py-20'>;
               <div className='text-gray-400 text-xl mb-4'>;
                 No services found;
@@ -1103,10 +1097,10 @@ function InnovativeServicesShowcase2025() {
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gradient-to-b from-slate-900 to-black">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion&& motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0 && 0.8 }
+            viewport={ once: true }
             className='text-center mb-16'
           >
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
@@ -1148,18 +1142,17 @@ function InnovativeServicesShowcase2025() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
             <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8, delay: 0 && 0.1 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8, delay: 0 && 0.1 }
+              viewport={ once: true }
               className='text-center'
             >
               <div className='w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>
                 <Phone className='w-8 h-8 text-white' />
               </div>
               <h3 className='text-xl font-semibold text-white mb-2'>Phone</h3>
-              <p className='text-gray-300'>{contactInfo.mobile}</p>            </motion.div>            >
-              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <p className='text-gray-300'>{contactInfo.mobile}</p>            </motion.div><div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <Phone className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>
@@ -1171,7 +1164,7 @@ function InnovativeServicesShowcase2025() {
                 <Phone className='w-8 h-8 text-white' />;
               </div>;
               <h3 className='text-xl font-semibold text-white mb-2'>Phone</h3>;
-              <p className='text-gray-300'>{contactInfo && contactInfo.mobile}</p>            </motion && motion.div>            >;
+              <p className='text-gray-300'>{contactInfo && contactInfo.mobile}</p>            </motion && motion.div>;
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4">;
                 <Phone className="w-8 h-8 text-white" />;
               </div>;
@@ -1180,18 +1173,17 @@ function InnovativeServicesShowcase2025() {
             </motion && motion.div>;
 
             <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8, delay: 0 && 0.2 }
+              viewport={ once: true }
               className='text-center'
             >
               <div className='w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>
                 <Mail className='w-8 h-8 text-white' />
               </div>
               <h3 className='text-xl font-semibold text-white mb-2'>Email</h3>
-              <p className='text-gray-300'>{contactInfo.email}</p>            </motion.div>            >
-              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <p className='text-gray-300'>{contactInfo.email}</p>            </motion.div><div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <Mail className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
@@ -1203,7 +1195,7 @@ function InnovativeServicesShowcase2025() {
                 <Mail className='w-8 h-8 text-white' />;
               </div>;
               <h3 className='text-xl font-semibold text-white mb-2'>Email</h3>;
-              <p className='text-gray-300'>{contactInfo && contactInfo.email}</p>            </motion && motion.div>            >;
+              <p className='text-gray-300'>{contactInfo && contactInfo.email}</p>            </motion && motion.div>;
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4">;
                 <Mail className="w-8 h-8 text-white" />;
               </div>;
@@ -1212,16 +1204,16 @@ function InnovativeServicesShowcase2025() {
             </motion && motion.div>;
 
             <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8, delay: 0 && 0.3 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8, delay: 0 && 0.3 }
+              viewport={ once: true }
               className='text-center'>;
               <div className='w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>;
                 <MapPin className='w-8 h-8 text-white' />;
               </div>;
               <h3 className='text-xl font-semibold text-white mb-2'>Address</h3>;
-              <p className='text-gray-300'>{contactInfo && contactInfo.address}</p>            </motion && motion.div>            >;
+              <p className='text-gray-300'>{contactInfo && contactInfo.address}</p>            </motion && motion.div>;
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4">;
                 <MapPin className="w-8 h-8 text-white" />;
               </div>;
@@ -1233,7 +1225,7 @@ function InnovativeServicesShowcase2025() {
       </section>;
     </Layout>;
   );
-}
+
                   </p>;
                 </div>;
                 {/* Features */}
@@ -1244,23 +1236,23 @@ function InnovativeServicesShowcase2025() {
                   <ul className='space - y-2'>;
                     {service.features;
                       .slice (0, 3);
-                      .map ((feature, feature_index) => (
+                      .map (feature, feature_index) => (
                         <li;
                           key={feature_index}
                           className='flex items - center text - sm text - gray - 300';
                         >;
                           <CheckCircle className='w - 4 h - 4 text - cyan - 400 mr - 2 flex - shrink - 0' />;
                           {feature}
-                        </li>))}
+                        </li>)}
                     {service.features.length > 3 && (
                       <li className='text - sm text - cyan - 400'>                        +{service.features.length - 3} more features                <div className="mb - 6">;
                   <h4 className="text - sm font - semibold text - gray - 400 mb - 3 uppercase tracking - wide">Key Features</h4>;
                   <ul className="space - y-2">;
-                    {service.features.slice (0, 3).map ((feature, feature_index) => (
+                    {service.features.slice (0, 3).map (feature, feature_index) => (
                       <li key={feature_index} className="flex items - center text - sm text - gray - 300">;
                         <CheckCircle className="w - 4 h - 4 text - cyan - 400 mr - 2 flex - shrink - 0" />;
                         {feature}
-                      </li>))}
+                      </li>)}
                     {service.features.length > 3 && (
                       <li className="text - sm text - cyan - 400">;
                       </li>)}
@@ -1312,12 +1304,12 @@ function InnovativeServicesShowcase2025() {
                     <Mail className="w - 5 h - 5" />;
                   </a>;
                 </div>;
-              </motion.div>))}
+              </motion.div>)}
           </div>;
-          {sorted_services.length === 0 && (
+          {sorted_services.length = = 0 && (
             <motion.div;
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
+              initial={ opacity: 0 }
+              animate={ opacity: 1 }
               className='text - center py - 20';
             >;
               <div className='text - gray - 400 text - xl mb - 4'>;
@@ -1336,10 +1328,10 @@ function InnovativeServicesShowcase2025() {
         <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>          <motion.div      <section className="py - 20 bg - gradient - to - b from - slate - 900 to - black">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
           <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, coordinate_y: 30 }
+            whileInView={ opacity: 1, coordinate_y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
             className='text - center mb - 16';
           >;
             <h2 className='text - 3xl md:text - 5xl font - bold text - white mb - 6'>;
@@ -1360,17 +1352,17 @@ function InnovativeServicesShowcase2025() {
           </motion.div>;
           <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, coordinate_y: 30 }
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8, delay: 0.1 }
+              viewport={ once: true }
               className='text - center';
             >;
               <div className='w - 16 h - 16 bg - gradient - to - r from - cyan - 500 to - blue - 500 rounded - 2xl flex items - center justify - center mx - auto mb - 4'>;
                 <Phone className='w - 8 h - 8 text - white' />;
               </div>;
               <h3 className='text - xl font - semibold text - white mb - 2'>Phone</h3>;
-              <p className='text - gray - 300'>{contact_info.mobile}</p>            </motion.div>            >;
+              <p className='text - gray - 300'>{contact_info.mobile}</p>            </motion.div>;
               <div className="w - 16 h - 16 bg - gradient - to - r from - cyan - 500 to - blue - 500 rounded - 2xl flex items - center justify - center mx - auto mb - 4">;
                 <Phone className="w - 8 h - 8 text - white" />;
               </div>;
@@ -1378,17 +1370,17 @@ function InnovativeServicesShowcase2025() {
               <p className="text - gray - 300">{contact_info.mobile}</p>;
             </motion.div>;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, coordinate_y: 30 }
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8, delay: 0.2 }
+              viewport={ once: true }
               className='text - center';
             >;
               <div className='w - 16 h - 16 bg - gradient - to - r from - cyan - 500 to - blue - 500 rounded - 2xl flex items - center justify - center mx - auto mb - 4'>;
                 <Mail className='w - 8 h - 8 text - white' />;
               </div>;
               <h3 className='text - xl font - semibold text - white mb - 2'>Email</h3>;
-              <p className='text - gray - 300'>{contact_info.email}</p>            </motion.div>            >;
+              <p className='text - gray - 300'>{contact_info.email}</p>            </motion.div>;
               <div className="w - 16 h - 16 bg - gradient - to - r from - cyan - 500 to - blue - 500 rounded - 2xl flex items - center justify - center mx - auto mb - 4">;
                 <Mail className="w - 8 h - 8 text - white" />;
               </div>;
@@ -1396,17 +1388,17 @@ function InnovativeServicesShowcase2025() {
               <p className="text - gray - 300">{contact_info.email}</p>;
             </motion.div>;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, coordinate_y: 30 }
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8, delay: 0.3 }
+              viewport={ once: true }
               className='text - center';
             >;
               <div className='w - 16 h - 16 bg - gradient - to - r from - cyan - 500 to - blue - 500 rounded - 2xl flex items - center justify - center mx - auto mb - 4'>;
                 <MapPin className='w - 8 h - 8 text - white' />;
               </div>;
               <h3 className='text - xl font - semibold text - white mb - 2'>Address</h3>;
-              <p className='text - gray - 300'>{contact_info.address}</p>            </motion.div>            >;
+              <p className='text - gray - 300'>{contact_info.address}</p>            </motion.div>;
               <div className="w - 16 h - 16 bg - gradient - to - r from - cyan - 500 to - blue - 500 rounded - 2xl flex items - center justify - center mx - auto mb - 4">;
                 <MapPin className="w - 8 h - 8 text - white" />;
               </div>;
@@ -1417,4 +1409,3 @@ function InnovativeServicesShowcase2025() {
         </div>;
       </section>;
     </Layout>);
-}

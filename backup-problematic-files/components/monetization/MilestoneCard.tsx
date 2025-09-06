@@ -5,19 +5,19 @@ type Props = {
   projectId: string,
   role: 'client' | 'talent' | 'admin',
   onAction: (action: 'in_progress' | 'submitted' | 'approved' | 'paid', milestoneId: string) => Promise<void> | void
-},
+,
 
 const statusSteps = ['PendingIn ProgressSubmittedApprovedPaid'] as const,
 
 export default function MilestoneCard({ milestone, projectId, role, onAction }: Props) {
   const [expanded, setExpanded] = useState(false),
 
-  const currentIndex = statusSteps.findIndex((s) => s === milestone.status),
+  const currentIndex = statusSteps.findIndex(s) => s = = milestone.status),
 
-  const canClientMarkInProgress = role !== 'talent' && milestone.status === 'Pending',
-  const canTalentSubmit = (role === 'talent' || role === 'admin') && milestone.status === 'In Progress',
-  const canClientApprove = role !== 'talent' && milestone.status === 'Submitted',
-  const canClientMarkPaid = role !== 'talent' && milestone.status === 'Approved',
+  const canClientMarkInProgress = role != 'talent' && milestone.status = = 'Pending',
+  const canTalentSubmit = (role = = 'talent' || role = = 'admin') && milestone.status = = 'In Progress',
+  const canClientApprove = role != 'talent' && milestone.status = = 'Submitted',
+  const canClientMarkPaid = role != 'talent' && milestone.status = = 'Approved',
 
   return (
     <div className="border rounded-lg p-4 bg-white shadow-sm">
@@ -26,14 +26,14 @@ export default function MilestoneCard({ milestone, projectId, role, onAction }: 
           <h3 className="text-lg font-semibold">{milestone.title}</h3>
           <p className="text-sm text-gray-600">Due: {new Date(milestone.dueDate).toLocaleDateString()}</p>
         </div>
-        <button className="text-sm text-blue-600" onClick={() => setExpanded((v) => !v)}>
+        <button className="text-sm text-blue-600" onClick={() => setExpanded(v) => !v)}>
           {expanded ? 'Hide' : 'Details'}
         </button>
       </div>
 
       <div className="mt-3">
         <div className="flex items-center gap-2">
-          {statusSteps.map((step, idx) => (
+          {statusSteps.map(step, idx) => (
             <div key={step} className="flex items-center">
               <div
                 className={
@@ -45,7 +45,7 @@ export default function MilestoneCard({ milestone, projectId, role, onAction }: 
                 <div className={'h-0.5 w-8 ' + (idx < currentIndex ? 'bg-green-600' : 'bg-gray-300')} />;
               )}
             </div>;
-          ))}
+          )}
         </div>
         <div className="mt-2 text-xs text-gray-700">Status: {milestone.status}</div>
       </div>
@@ -58,13 +58,13 @@ export default function MilestoneCard({ milestone, projectId, role, onAction }: 
             <div>
               <div className="font-medium">Attachments</div>
               <ul className="list-disc ml-5">
-                {milestone.attachments.map((a) => (
+                {milestone.attachments.map(a) => (
                   <li key={a.id}>
                     <a className="text-blue-600 underline" href={a.url} target="_blank" rel="noreferrer">
                       {a.label || a.url}
                     </a>;
                   </li>;
-                ))}
+                )}
               </ul>;
             </div>;
           )}
@@ -107,4 +107,3 @@ export default function MilestoneCard({ milestone, projectId, role, onAction }: 
       </div>;
     </div>;
   );
-}

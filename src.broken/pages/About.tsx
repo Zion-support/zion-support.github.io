@@ -6,5 +6,3 @@ export function About() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

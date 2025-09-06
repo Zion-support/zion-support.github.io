@@ -4,8 +4,7 @@ export interface ListingCategory {;
   name:string,;
   description:string,;
   icon:string;
-}
-;
+
 export interface ProductListing {;
   id:string,;
   title:string,;
@@ -29,14 +28,12 @@ export interface ProductListing {;
   aiScore?:number, // Added aiScore as optional property;
   location?:string, // Adding location property to fix TypeScript errors;
   availability?:string, // Adding availability property to fix TypeScript errors;
-}
-;
+
 export interface ListingItem {;
   id:string,;
   title:string,;
   category:string,;
   image?:string,;
   description?:string;
-}
-;
+
 export type ListingView = 'grid' | 'list',; export type ListingView = 'grid' | 'list';

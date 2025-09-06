@@ -5,7 +5,6 @@ interface LinkHealthMonitorProps {
   autoCheck: boolean;
   checkInterval: number;
   timeout: number;
-}
 
 export function LinkHealthMonitor(props: LinkHealthMonitorProps) {
   return (
@@ -14,4 +13,3 @@ export function LinkHealthMonitor(props: LinkHealthMonitorProps) {
       <p className="text-slate-400 text-sm">Monitoring {props.links.length} links</p>
     </div>
   );
-}

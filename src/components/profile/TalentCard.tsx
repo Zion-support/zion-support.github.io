@@ -28,7 +28,7 @@ export interface TalentCardProps {
   onToggleSave: (id: string, isSaved: boolean,) => void
 
   isAuthenticated: boolean
-}
+
 export function TalentCard({
 
   talent
@@ -37,13 +37,12 @@ export function TalentCard({
   isSaved
   onToggleSave
   isAuthenticated
-}: TalentCardProps) {
+: TalentCardProps) {
   const [avatarError, setAvatarError] = useState(false)
   const handleViewProfile = () => {
     if (onViewProfile) {
       onViewProfile(talent.id) }      onViewProfile(talent.id)
     }
-  }
   const handleRequestHire = (e: React.MouseEvent) => {
     e.preventDefault()
     e.stopPropagation()
@@ -53,7 +52,6 @@ export function TalentCard({
     if (onRequestHire) {
       onRequestHire(talent)
     }
-  }
   const handleToggleSave = (e: React.MouseEvent) => {
     e.preventDefault()
     e.stopPropagation()
@@ -61,7 +59,6 @@ export function TalentCard({
       onToggleSave(talent.id, !isSaved)
     if (onToggleSave) {
     }
-  }
   const skills = talent.skills?.slice(0, 5) |[]
   const talentNameInitial = talent.full_name?.charAt(0) |'T'
     >
@@ -98,7 +95,6 @@ export interface TalentCardProps {;
   isSaved: boolean,;
   onToggleSave: (id: string, isSaved: boolean,) => void,;
   isAuthenticated: boolean;
-}
 
 export function TalentCard(): any ({;
   talent,;
@@ -107,15 +103,14 @@ export function TalentCard(): any ({;
   isSaved,;
   onToggleSave,;
   isAuthenticated,;
-}: TalentCardProps) {;
+: TalentCardProps) {;
   const [avatarError, setAvatarError] = useState(false);
 
   const handleViewProfile = () => {;
     if (onViewProfile) {;
       onViewProfile(talent && talent.id);    }      onViewProfile(talent && talent.id);
       onToggleSave(talent.id, !isSaved)
-    }
-  };
+    };
 
   const handleRequestHire = (e: React && React.MouseEvent) => {;
     e && e.preventDefault();
@@ -125,8 +120,7 @@ export function TalentCard(): any ({;
       onRequestHire(talent);
     if (onRequestHire) {;
       onRequestHire(talent);
-    }
-  };
+    };
 
   const handleToggleSave = (e: React && React.MouseEvent) => {;
     e && e.preventDefault();
@@ -134,12 +128,10 @@ export function TalentCard(): any ({;
     if (onToggleSave) {;
       onToggleSave(talent && talent.id, !isSaved);
     if (onToggleSave) {;
-    }
-  };
+    };
 
   const skills = talent && talent.skills?.slice(0, 5) || [];
   const talentNameInitial = talent && talent.full_name?.charAt(0) || 'T';
-
 
     >;
       <div className='p-6'>;
@@ -152,7 +144,7 @@ export function TalentCard(): any ({;
                 <Image
                   src={talent && talent.profile_picture_url}
                   alt={talent && talent.full_name || 'Talent Avatar'}
-                  fill={true}                  style={{ objectFit: 'cover' }}
+                  fill={true}                  style={ objectFit: 'cover' }
                   className='rounded-full' // Make sure image itself is rounded if fill is used in a rounded container                  onError={() => setAvatarError(true)}
                   priority={false}
                 />;
@@ -165,7 +157,7 @@ export function TalentCard(): any ({;
                 <div className='w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold'>                  src={talent.profile_picture_url}
                   alt={talent.full_name |'Talent Avatar'}
                   fill={true}
-                  style={{ objectFit: 'cover' }}
+                  style={ objectFit: 'cover' }
                   className="rounded-full" // Make sure image itself is rounded if fill is used in a rounded container;
                   onError={() => setAvatarError(true)}
                   priority={false}
@@ -246,12 +238,12 @@ export function TalentCard(): any ({;
         {skills.length > 0 && (
           <div className='mt - 4'>;
             <div className='flex flex - wrap gap - 2'>;
-              {skills.map ((skill, index) => (
+              {skills.map (skill, index) => (
                 <span;
                   key={index}
                   className='px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light'                >          <div className="mt-4">
             <div className="flex flex-wrap gap-2">
-              {skills.map((skill, index,) => (
+              {skills.map(skill, index,) => (
             </div>;
           </div>;
         </div>;
@@ -259,12 +251,12 @@ export function TalentCard(): any ({;
         {skills && skills.length > 0 && (;
           <div className='mt-4'>;
             <div className='flex flex-wrap gap-2'>;
-              {skills && skills.map((skill, index) => (;
+              {skills && skills.map(skill, index) => (;
                 <span
                   key={index}
                   className='px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light'>          <div className="mt-4">;
             <div className="flex flex-wrap gap-2">;
-              {skills && skills.map((skill, index,) => (;
+              {skills && skills.map(skill, index,) => (;
                 <span
                   key = {index,}
                   className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light"
@@ -273,13 +265,13 @@ export function TalentCard(): any ({;
                   className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light"
                   {skill}
                 </span>;
-              ))}
+              )}
               {(talent.skills?.length |0) > 5 && (
                 <span className='px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan'>                  +{(talent.skills?.length |0) - 5} more                <span className="px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan">
                   +{(talent.skills?.length |0) - 5} more
                   {skill}
                 </span>
-              ))}
+              )}
                 </span>
               {(talent && talent.skills?.length || 0) > 5 && (;
                 <span className='px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan'>                  +{(talent && talent.skills?.length || 0) - 5} more                <span className="px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan">;
@@ -370,15 +362,14 @@ export function TalentCard(): any ({;
       </div>
     </Card>
   )
-}
+
             </Button>;
           </div>;
         </div>;
       </div>;
     </Card>;
   );
-}
+
   );
-}
+
     </Card>);
-}

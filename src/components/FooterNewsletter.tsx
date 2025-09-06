@@ -15,7 +15,7 @@ export function FooterNewsletter(): any (): React && React.ReactElement {;
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Honeypot check
     if (honeypot) {
       return;
@@ -27,7 +27,7 @@ export function FooterNewsletter(): any (): React && React.ReactElement {;
       return;
     }
 
-    if (!EMAIL_REGEX.test(email)) {
+    if (!EMAIL_REGEX.test(email) {
       setEmailError('Please enter a valid email address');
       return;
     }
@@ -37,13 +37,13 @@ export function FooterNewsletter(): any (): React && React.ReactElement {;
 
     try {
       // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
+      await new Promise(resolve => setTimeout(resolve, 1000);
+
       toast({
         title: "Success!",
         description: "You've been subscribed to our newsletter.",
       });
-      
+
       setEmail('');
     } catch (error) {
       logErrorToProduction('Newsletter subscription failed', error);
@@ -54,8 +54,7 @@ export function FooterNewsletter(): any (): React && React.ReactElement {;
       });
     } finally {;
       setIsSubmitting(false);
-    }
-  };
+    };
 
   return (
     <form
@@ -77,18 +76,18 @@ export function FooterNewsletter(): any (): React && React.ReactElement {;
           <p className="text-red-500 text-sm mt-1">{emailError}</p>
         )}
       </div>
-      
+
       {/* Honeypot field - hidden from users */}
       <input
         type="text"
         name="honeypot"
         value={honeypot}
         onChange={(e) => setHoneypot(e.target.value)}
-        style={{ display: 'none' }}
+        style={ display: 'none' }
         tabIndex={-1}
         autoComplete="off"
       />
-      
+
       <Button
         type="submit"
         disabled={isSubmitting}
@@ -105,7 +104,6 @@ export function FooterNewsletter(): any (): React && React.ReactElement {;
       </Button>;
     </form>;
   );
-}
 
 import React, { useState, useRef } from 'react';
 import { Input } from '@/components / ui / input';
@@ -120,7 +118,7 @@ export function FooterNewsletter (): React.ReactElement {
   const [email_error, setEmailError] = useState ('');
   const { toast } = use_toast ();
       // // // // // // // console.error ('Newsletter subscription failed:', error);
-} finally {
+ finally {
       setIsSubmitting (false);
       // console.error ('Newsletter subscription failed:', error)} finally {
   const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -130,17 +128,17 @@ export function FooterNewsletter (): React.ReactElement {
     // Check condition
 if (return) {
   $2
-} // ignore bots;
+ // ignore bots;
     const now = Date.now ();
     // Check condition
 if (return) {
   $2
-}
+
     last_submit.current = now;
     const trimmed_email = email.trim ();
     if () {) {
   $2
-}
+
       setEmailError ('Please enter a valid email address.');
       return;
     } else {
@@ -154,15 +152,15 @@ if (return) {
         headers: { 'Content - Type': 'application / json' },
         body: JSON.stringify ({ email: trimmed_email }),
       });
-      const data = await res.json ().catch (() => ({})); // Ensure data is an object even on parse error;
+      const data = await res.json ().catch () => ({}); // Ensure data is an object even on parse error;
       // Check condition
 if ( {) {
   $2
-}
+
         // Check condition
 if ( {) {
   $2
-}
+
           toast.success (data.message || "You're already subscribed!", {
             id: `${uniqueToastIdBase}-already - subscribed`,
           });
@@ -180,8 +178,7 @@ if ( {) {
         const error_message =;
           data.error || 'Subscription failed. Please try again.';
         toast.error (error_message, { id: `${uniqueToastIdBase}-api - error` });
-      }
-    } catch (err: any) {
+      } catch (err: any) {
       logErrorToProduction ('Newsletter subscription error:', { data: err });
       toast.error ('Unable to subscribe right now. Please try again later.', {
         id: `${uniqueToastIdBase}-catch - error`,
@@ -189,7 +186,6 @@ if ( {) {
     } finally {
       setIsSubmitting (false);
     }
-  }
       >;
       <label html_for='newsletter - email' className='sr - only'>;
         Email address for newsletter subscription;
@@ -212,7 +208,7 @@ if ( {) {
         on_change={e => set_honeypot (e.target.value)}
         tab_index={-1}
         auto_complete='off';
-        style={{ display: 'none' }}
+        style={ display: 'none' }
       />;
       <Button;
         type='submit';
@@ -227,6 +223,3 @@ if ( {) {
           'Subscribe')}
       </Button>;
     </form>);
-}
-}
-}

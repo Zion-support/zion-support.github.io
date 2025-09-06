@@ -7,7 +7,7 @@ import {
   DialogHeader
   DialogTitle
   DialogDescription
-} from "@/components/ui/dialog";
+ from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Calendar, User, Mail, Clock, DollarSign } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
@@ -20,7 +20,6 @@ interface QuoteDetailsProps {
   quote: QuoteRequest | null;
   isOpen: boolean;
   onClose: () => void
-}
 
 export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {;
   if (!quote) return null;
@@ -31,7 +30,6 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
     } catch (e) {
       return dateString;
     }
-  }
   return (
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
       <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
@@ -107,12 +105,10 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
       </DialogContent>
     </Dialog>
   );
-}
 
       return date_string;
     }
-  }
-;
+
   return (
     <Dialog open={is_open} onOpenChange={(open) => !open && on_close ()}>;
       <DialogContent className="max - w-3xl max - h-[90vh] overflow - y-auto">;
@@ -186,5 +182,3 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
         </div>;
       </DialogContent>;
     </Dialog>);
-}
-;

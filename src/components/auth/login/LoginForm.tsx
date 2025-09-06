@@ -27,7 +27,7 @@ import {
   FormItem
   FormLabel
   FormMessage
-} from '@/components/ui/form'
+ from '@/components/ui/form'
 import { Alert, AlertDescription } from '@/components/ui/alert'
 import Link from 'next/link'
 import { Checkbox } from '@/components/ui/checkbox';// Form validation schema
@@ -38,7 +38,6 @@ const loginSchema = z.object({
     .min(1, 'Email is required')
   password: z.string().min(6, 'Password must be at least 6 characters')
   rememberMe: z.boolean()
-})
 type LoginFormValues = z.infer<typeof loginSchema>
 export function LoginForm() {
   const { isLoading, login } = useAuth()
@@ -53,8 +52,7 @@ export function LoginForm() {
       email: ''
       password: ''
       rememberMe: false
-    }
-  })
+    })
   const onSubmit = async (data: LoginFormValues) => {
     if (isSubmitting) return
     try {
@@ -65,28 +63,24 @@ export function LoginForm() {
         let errorMessage = 'Login failed. Please try again.'; // Default generic error
         if (result?.error && result?.error?.message) {
           if (
-            result.error.message.toLowerCase().includes('email not confirmed')
-          ) {
+            result.error.message.toLowerCase().includes('email not confirmed') {
             error_message =;
               'Your email is not confirmed. Please check your inbox for a confirmation link.';
           } else {
             error_message = result.error.message;
           }
-        }
         form.set_error ('root', { message: error_message });
       } else {
         fire_event ('login', { method: 'email' });
-      }
-    } finally {
+      } finally {
       setIsSubmitting (false);
     }
-  }
   const handleResendEmail = async () => {
     const email = form.get_values ('email');
     // Check condition
 if ( {) {
   $2
-}
+
       form.set_error ('root', { message: 'Please enter your email address.' });
       return;
     }
@@ -107,19 +101,17 @@ if ( {) {
         setVerificationMessage(
           data.message |'Failed to resend verification email.'
         )
-      }
-    } catch (err) {
+      } catch (err) {
       setVerificationMessage ('Failed to resend verification email.');
     } finally {
       setIsResending (false);
     }
-  }
   const handleCheckStatus = () =>: any {
     const email = form.get_values ('email');
     // Check condition
 if ( {) {
   $2
-}
+
       form.set_error ('root', { message: 'Please enter your email address.' });
       return;
     }
@@ -132,7 +124,7 @@ import {;
   FormItem,;
   FormLabel,;
   FormMessage,;
-} from '@/components/ui/form';
+ from '@/components/ui/form';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import Link from 'next/link';
 
@@ -144,7 +136,7 @@ const loginSchema = z && z.object({;
     .min(1, 'Email is required'),;
   password: z && z.string().min(6, 'Password must be at least 6 characters'),;
   rememberMe: z && z.boolean(),;
-});
+);
 
 type LoginFormValues = z && z.infer<typeof loginSchema>;
 
@@ -182,15 +174,12 @@ export function LoginForm() {;
           } else {;
             errorMessage = result && result.error.message;
           }
-        }
         form && form.setError('root', { message: errorMessage });
       } else {;
         fireEvent('login', { method: 'email' });
-      }
-    } finally {;
+      } finally {;
       setIsSubmitting(false);
-    }
-  };
+    };
 
   const handleResendEmail = async () => {;
     const email = form && form.getValues('email');
@@ -215,13 +204,11 @@ export function LoginForm() {;
         setVerificationMessage(;
           data && data.message || 'Failed to resend verification email.';
         );
-      }
-    } catch (err) {;
+      } catch (err) {;
       setVerificationMessage('Failed to resend verification email.');
     } finally {;
       setIsResending(false);
-    }
-  };
+    };
 
   const handleCheckStatus = () => {;
     const email = form && form.getValues('email');
@@ -247,7 +234,7 @@ export function LoginForm() {;
 
           if (firstError) {
             form.setFocus(firstError)
-          }        })}
+          })}
         className='space-y-6';
       >;
         <FormField
@@ -265,9 +252,9 @@ export function LoginForm() {;
           // Check condition
 if ( {) {
   $2
-}
+
             form.set_focus (first_error);
-          }        })}
+          })}
         className='space - y-6';
       >;
         <FormField;
@@ -482,69 +469,68 @@ if ( {) {
       </form>
     </Form>
   )
-}else {
+else {
   fireEvent ('login', {'
   method: 'email'
-})
-}finally {
+)
+finally {
   setIsSubmitting (false)
-}
+
 const handleResendEmail = async () => {'
   const email = form.getValues ('email')
 if (!email) {'
   form.setError ('root', {'
   message: 'Please enter your email address.'
-})
+)
 return
-}setIsResending (true);'
+setIsResending (true);'
 setVerificationMessage ('')
 try {'
   const response = await fetch ('/api/auth/resend-verification-email', {'
   method: 'POST'
 headers: {'
   'Content-Type': 'application/json'
-}
+
 body: JSON.stringify ({
   email
-})
-})
+)
 const data = await response.json ()
 if (response.ok) {'
   setVerificationMessage ('Verification email sent. Please check your inbox.')
-}else {'
+else {'
   setVerificationMessage (data.message |'Failed to resend verification email.')
-}catch (err) {'
+catch (err) {'
   setVerificationMessage ('Failed to resend verification email.')
-}finally {
+finally {
   setIsResending (false)
-}
+
 const handleCheckStatus = () => {'
   const email = form.getValues ('email')
 if (!email) {'
   form.setError ('root', {'
   message: 'Please enter your email address.'
-})
+)
 return
-}router.push (`/verify-status?email=$ {
+router.push (`/verify-status?email=$ {
   encodeURIComponent (email)
-}`)
-}
-}> {
+`)
+
+> {
   form.formState.errors.root && (<Alert variant="destructive" className="mb-4" > form.formState.errors.root.message
-}</AlertDescription> </Alert>)
-}<form
-}) "
-}className="space-y-6" > <FormField text-zion-slate-light">Email address</FormLabel> <FormControl> <div className=" relative"> <Input /> <User className=" absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"/> </div> </FormControl> <FormMessage className=" text-red-400"/> </FormItem>) "
-}/> <FormField <FormItem> <FormLabel className=" text-zion-slate-light">Password</FormLabel> relative" > <Input /> <LogIn className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" /> <Button) : (<Eye className="h-4 w-4" />) "
-}</span> </Button> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) "
-}/> <FormField <FormItem className="flex flex-row items-start space-x-3 space-y-0"> space-y-1 leading-none"> <FormLabel className=" text-zion-slate-light">Remember me</FormLabel> </div> </FormItem>) "
-}/> </div> <div className=" text-sm"> <Link href=" /forgot-password"className=" font-medium text-zion-cyan hover:text-zion-cyan-light"> Forgot password? </Link> </div> </div> <Button {
+</AlertDescription> </Alert>)
+<form
+) "
+className="space-y-6" > <FormField text-zion-slate-light">Email address</FormLabel> <FormControl> <div className=" relative"> <Input /> <User className=" absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"/> </div> </FormControl> <FormMessage className=" text-red-400"/> </FormItem>) "
+/> <FormField <FormItem> <FormLabel className=" text-zion-slate-light">Password</FormLabel> relative" > <Input /> <LogIn className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" /> <Button) : (<Eye className="h-4 w-4" />) "
+</span> </Button> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) "
+/> <FormField <FormItem className="flex flex-row items-start space-x-3 space-y-0"> space-y-1 leading-none"> <FormLabel className=" text-zion-slate-light">Remember me</FormLabel> </div> </FormItem>) "
+/> </div> <div className=" text-sm"> <Link href=" /forgot-password"className=" font-medium text-zion-cyan hover:text-zion-cyan-light"> Forgot password? </Link> </div> </div> <Button {
   verificationMessage
-}</p>) "
-}<div className=" flex justify-between mt-4" > <Button > {'
+</p>) "
+<div className=" flex justify-between mt-4" > <Button > {'
   isResending ? 'Sending...': 'Resend / Verify e-mail'
-}</Button> <Button > Check status </Button> </div> Create account </Link> </p> </form> </Form>)
-}'"}
+</Button> <Button > Check status </Button> </div> Create account </Link> </p> </form> </Form>)
+'"}
         <Button;
           type='submit';
           className='w - full inline - flex items - center justify - center px - 4 py - 2 border border - transparent rounded - md shadow - sm text - base font - medium text - white bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple focus:outline - none focus:ring - 2 focus:ring - offset - 2 focus:ring - zion - purple - light visible';
@@ -582,75 +568,75 @@ return
         </p>;
       </form>;
     </Form>);
-}else {
+else {
   fire_event ('login', {';
   method: 'email';
-});
-}finally {
+);
+finally {
   setIsSubmitting (false);
-}
+
 const handleResendEmail = async () => {';
   const email = form.get_values ('email');
-// Check condition
+/ Check condition
 if ( {') {
   $2
-}
+
   form.set_error ('root', {';
   message: 'Please enter your email address.';
-});
+);
 return;
-}setIsResending (true);';
+setIsResending (true);';
 setVerificationMessage ('');
 try {';
   const response = await fetch ('/api / auth / resend - verification - email', {';
   method: 'POST';
 headers: {';
   'Content - Type': 'application / json';
-}
+
 body: JSON.stringify ({
   email;
-});
-});
+);
+);
 const data = await response.json ();
-// Check condition
+/ Check condition
 if ( {') {
   $2
-}
+
   setVerificationMessage ('Verification email sent. Please check your inbox.');
-}else {';
+else {';
   setVerificationMessage (data.message || 'Failed to resend verification email.');
-}catch (err) {';
+catch (err) {';
   setVerificationMessage ('Failed to resend verification email.');
-}finally {
+finally {
   setIsResending (false);
-}
+
 const handleCheckStatus = () =>: any {';
   const email = form.get_values ('email');
-// Check condition
+/ Check condition
 if ( {') {
   $2
-}
+
   form.set_error ('root', {';
   message: 'Please enter your email address.';
-});
+);
 return;
-}router.push (`/verify - status?email=$ {
+router.push (`/verify - status?email=$ {
   encodeURIComponent (email);
-}`);
-}
-}> {
+`);
+
+> {
   form.form_state.errors.root && (<Alert variant="destructive" className="mb - 4" > form.form_state.errors.root.message;
-}</AlertDescription> </Alert>);
-}<form;
-}) ";
-}className="space - y-6" > <FormField text - zion - slate - light">Email address</FormLabel> <FormControl> <div className=" relative"> <Input /> <User className=" absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4"/> </div> </FormControl> <FormMessage className=" text - red - 400"/> </FormItem>) ";
-}/> <FormField <FormItem> <FormLabel className=" text - zion - slate - light">Password</FormLabel> relative" > <Input /> <LogIn className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4" /> <Button) : (<Eye className="h - 4 w - 4" />) ";
-}</span> </Button> </div> </FormControl> <FormMessage className="text - red - 400" /> </FormItem>) ";
-}/> <FormField <FormItem className="flex flex - row items - start space - x-3 space - y-0"> space - y-1 leading - none"> <FormLabel className=" text - zion - slate - light">Remember me</FormLabel> </div> </FormItem>) ";
-}/> </div> <div className=" text - sm"> <Link href=" /forgot - password"className=" font - medium text - zion - cyan hover:text - zion - cyan - light"> Forgot password? </Link> </div> </div> <Button {
+</AlertDescription> </Alert>);
+<form;
+) ";
+className="space - y-6" > <FormField text - zion - slate - light">Email address</FormLabel> <FormControl> <div className=" relative"> <Input /> <User className=" absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4"/> </div> </FormControl> <FormMessage className=" text - red - 400"/> </FormItem>) ";
+/> <FormField <FormItem> <FormLabel className=" text - zion - slate - light">Password</FormLabel> relative" > <Input /> <LogIn className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4" /> <Button) : (<Eye className="h - 4 w - 4" />) ";
+</span> </Button> </div> </FormControl> <FormMessage className="text - red - 400" /> </FormItem>) ";
+/> <FormField <FormItem className="flex flex - row items - start space - x-3 space - y-0"> space - y-1 leading - none"> <FormLabel className=" text - zion - slate - light">Remember me</FormLabel> </div> </FormItem>) ";
+/> </div> <div className=" text - sm"> <Link href=" /forgot - password"className=" font - medium text - zion - cyan hover:text - zion - cyan - light"> Forgot password? </Link> </div> </div> <Button {
   verification_message;
-}</p>) ";
-}<div className=" flex justify - between mt - 4" > <Button > {';
+</p>) ";
+<div className=" flex justify - between mt - 4" > <Button > {';
   is_resending ? 'Sending...': 'Resend / Verify e - mail';
-}</Button> <Button > Check status </Button> </div> Create account </Link> </p> </form> </Form>);
-}'"}
+</Button> <Button > Check status </Button> </div> Create account </Link> </p> </form> </Form>);
+'"}

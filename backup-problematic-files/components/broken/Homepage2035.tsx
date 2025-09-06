@@ -5,19 +5,19 @@ import {
   ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket, 
   Loader2, ChevronDown, Zap, Globe, Target, Lightbulb, Code, Database,
   Cloud, Lock, ChartBar, Cpu, Atom, Satellite, Gamepad2, Palette
-} from 'lucide-react',
+ from 'lucide-react',
 import UltraFuturisticBackground2035 from './ui/UltraFuturisticBackground2035',
 import UltraFuturisticServiceCard2035 from './ui/UltraFuturisticServiceCard2035',
 import { innovative2025MicroSaasBatch } from '../data/innovative-2025-micro-saas-batch',
 import { innovative2025ITEnterpriseBatch } from '../data/innovative-2025-it-enterprise-batch',
 import { innovative2025AIServicesBatch } from '../data/innovative-2025-ai-services-batch',
-// Loading fallback component
+/ Loading fallback component
 const LoadingFallback = () => (
   <div className="min-h-screen flex items-center justify-center bg-gray-900">
     <motion.div
-      initial={{ opacity: 0, scale: 0.5 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.5 }}
+      initial={ opacity: 0, scale: 0.5 }
+      animate={ opacity: 1, scale: 1 }
+      transition={ duration: 0.5 }
       className="text-center"
     >
       <div className="relative">
@@ -28,15 +28,15 @@ const LoadingFallback = () => (
       <p className="text-sm text-gray-500">Preparing your digital transformation journey</p>
     </motion.div>
   </div>
-),
+,
 
 const Homepage2035: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true),
   const [isVisible, setIsVisible] = useState(false),
   const [activeCategory, setActiveCategory] = useState('all'),
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
+  useEffect() => {
+    const timer = setTimeout() => {
       setIsLoading(false),
       setIsVisible(true)
     }, 800),
@@ -47,8 +47,7 @@ const Homepage2035: React.FC = () => {
   const fadeInUp = {
     initial: { opacity: 0, y: 60 },
     animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.6, ease: "easeOut" }
-  },
+    transition: { duration: 0.6, ease: "easeOut" },
 
   const staggerContainer = {
     animate: {
@@ -56,7 +55,6 @@ const Homepage2035: React.FC = () => {
         staggerChildren: 0.1,
         delayChildren: 0.2
       }
-    }
   },
 
   const backgroundVariants = {
@@ -65,7 +63,6 @@ const Homepage2035: React.FC = () => {
       opacity: 1, 
       scale: 1,
       transition: { duration: 1.5, ease: "easeOut" as const }
-    }
   },
 
   const categories = [
@@ -85,16 +82,16 @@ const Homepage2035: React.FC = () => {
     ...innovative2025AIServicesBatch
   ],
 
-  const filteredServices = activeCategory === 'all' 
+  const filteredServices = activeCategory = = 'all' 
     ? allServices 
     : allServices.filter(service => {
-        if (activeCategory === 'ai') return service.category.includes('AI') || service.category.includes('Machine Learning'),
-        if (activeCategory === 'it') return service.category.includes('IT') || service.category.includes('Enterprise'),
-        if (activeCategory === 'quantum') return service.name.includes('Quantum'),
-        if (activeCategory === 'space') return service.category.includes('Space'),
-        if (activeCategory === 'cyber') return service.category.includes('Security') || service.category.includes('Cybersecurity'),
-        if (activeCategory === 'cloud') return service.category.includes('Cloud') || service.category.includes('DevOps'),
-        if (activeCategory === 'fintech') return service.category.includes('Financial') || service.category.includes('Trading'),
+        if (activeCategory = = 'ai') return service.category.includes('AI') || service.category.includes('Machine Learning'),
+        if (activeCategory = = 'it') return service.category.includes('IT') || service.category.includes('Enterprise'),
+        if (activeCategory = = 'quantum') return service.name.includes('Quantum'),
+        if (activeCategory = = 'space') return service.category.includes('Space'),
+        if (activeCategory = = 'cyber') return service.category.includes('Security') || service.category.includes('Cybersecurity'),
+        if (activeCategory = = 'cloud') return service.category.includes('Cloud') || service.category.includes('DevOps'),
+        if (activeCategory = = 'fintech') return service.category.includes('Financial') || service.category.includes('Trading'),
         return true
       }),
 
@@ -107,19 +104,19 @@ import {;
   ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket,;
   Loader2, ChevronDown, Zap, Globe, Target, Lightbulb, Code, Database,;
   Cloud, Lock, ChartBar, Cpu, Atom, Satellite, Gamepad2, Palette;
-} from 'lucide-react',;
+ from 'lucide-react',;
 import UltraFuturisticBackground2035 from './ui/UltraFuturisticBackground2035',;
 import UltraFuturisticServiceCard2035 from './ui/UltraFuturisticServiceCard2035',;
 import { innovative2025MicroSaasBatch } from '../data/innovative-2025-micro-saas-batch',;
 import { innovative2025ITEnterpriseBatch } from '../data/innovative-2025-it-enterprise-batch',;
 import { innovative2025AIServicesBatch } from '../data/innovative-2025-ai-services-batch',;
-// Loading fallback component;
+/ Loading fallback component;
 const LoadingFallback = () => (;
   <div className="min-h-screen flex items-center justify-center bg-gray-900">;
     <motion.div;
-      initial={{ opacity: 0, scale: 0.5 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.5 }}
+      initial={ opacity: 0, scale: 0.5 }
+      animate={ opacity: 1, scale: 1 }
+      transition={ duration: 0.5 }
       className="text-center";
     >;
       <div className="relative">;
@@ -130,13 +127,13 @@ const LoadingFallback = () => (;
       <p className="text-sm text-gray-500">Preparing your digital transformation journey</p>;
     </motion.div>;
   </div>;
-),;
+,;
 const Homepage2035: React.FC = () => {;
   const [isLoading, setIsLoading] = useState(true),;
   const [isVisible, setIsVisible] = useState(false),;
   const [activeCategory, setActiveCategory] = useState('all'),;
-  useEffect(() => {;
-    const timer = setTimeout(() => {;
+  useEffect() => {;
+    const timer = setTimeout() => {;
       setIsLoading(false),;
       setIsVisible(true);
     }, 800),;
@@ -145,15 +142,13 @@ const Homepage2035: React.FC = () => {;
   const fadeInUp = {;
     initial: { opacity: 0, y: 60 },;
     animate: { opacity: 1, y: 0 },;
-    transition: { duration: 0.6, ease: "easeOut" }
-  },;
+    transition: { duration: 0.6, ease: "easeOut" },;
   const staggerContainer = {;
     animate: {;
       transition: {;
         staggerChildren: 0.1,;
         delayChildren: 0.2;
       }
-    }
   },;
   const backgroundVariants = {;
     initial: { opacity: 0, scale: 0.8 },;
@@ -161,7 +156,6 @@ const Homepage2035: React.FC = () => {;
       opacity: 1,;
       scale: 1,;
       transition: { duration: 1.5, ease: "easeOut" as const }
-    }
   },;
   const categories = [;
     { id: 'all', name: 'All Services', icon: <Globe className="w-5 h-5" /> },;
@@ -178,22 +172,22 @@ const Homepage2035: React.FC = () => {;
     ...innovative2025ITEnterpriseBatch,;
     ...innovative2025AIServicesBatch;
   ],;
-  const filteredServices = activeCategory === 'all';
+  const filteredServices = activeCategory = = 'all';
     ? allServices;
     : allServices.filter(service => {;
-        if (activeCategory === 'ai') return service.category.includes('AI') || service.category.includes('Machine Learning'),;
-        if (activeCategory === 'it') return service.category.includes('IT') || service.category.includes('Enterprise'),;
-        if (activeCategory === 'quantum') return service.name.includes('Quantum'),;
-        if (activeCategory === 'space') return service.category.includes('Space'),;
-        if (activeCategory === 'cyber') return service.category.includes('Security') || service.category.includes('Cybersecurity'),;
-        if (activeCategory === 'cloud') return service.category.includes('Cloud') || service.category.includes('DevOps'),;
-        if (activeCategory === 'fintech') return service.category.includes('Financial') || service.category.includes('Trading'),;
+        if (activeCategory = = 'ai') return service.category.includes('AI') || service.category.includes('Machine Learning'),;
+        if (activeCategory = = 'it') return service.category.includes('IT') || service.category.includes('Enterprise'),;
+        if (activeCategory = = 'quantum') return service.name.includes('Quantum'),;
+        if (activeCategory = = 'space') return service.category.includes('Space'),;
+        if (activeCategory = = 'cyber') return service.category.includes('Security') || service.category.includes('Cybersecurity'),;
+        if (activeCategory = = 'cloud') return service.category.includes('Cloud') || service.category.includes('DevOps'),;
+        if (activeCategory = = 'fintech') return service.category.includes('Financial') || service.category.includes('Trading'),;
         return true;
       }),;
   if (isLoading) {;
     return <LoadingFallback />;
   }
-;
+
   return (;
     <Layout>;
       <UltraFuturisticBackground2035>;
@@ -201,9 +195,9 @@ const Homepage2035: React.FC = () => {;
         <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="mb-8"
             >
               <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight">
@@ -216,16 +210,16 @@ const Homepage2035: React.FC = () => {;
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={ scale: 1.05 }
+                  whileTap={ scale: 0.95 }
                   className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 flex items-center space-x-2"
                 >
                   <span>Explore Services</span>
                   <ArrowRight className="w-5 h-5" />
                 </motion.button>
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={ scale: 1.05 }
+                  whileTap={ scale: 0.95 }
                   className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 flex items-center space-x-2"
                 >
                   <Play className="w-5 h-5" />
@@ -236,9 +230,9 @@ const Homepage2035: React.FC = () => {;
 
             {/* Stats */}
             <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8, delay: 0.2 }
               className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
             >
               {[
@@ -246,19 +240,19 @@ const Homepage2035: React.FC = () => {;
                 { icon: <Star className="w-8 h-8" />, value: '4.9', label: 'Average Rating' },
                 { icon: <Award className="w-8 h-8" />, value: '200+', label: 'Services' },
                 { icon: <TrendingUp className="w-8 h-8" />, value: '99.9%', label: 'Uptime' }
-              ].map((stat, index) => (
+              ].map(stat, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, scale: 0.5 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
+                  initial={ opacity: 0, scale: 0.5 }
+                  animate={ opacity: 1, scale: 1 }
+                  transition={ duration: 0.5, delay: 0.3 + index * 0.1 }
                   className="text-center"
                 >
                   <div className="text-cyan-400 mb-2 flex justify-center">{stat.icon}</div>
                   <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
                   <div className="text-gray-400 text-sm">{stat.label}</div>
                 </motion.div>
-              ))}
+              )}
             </motion.div>;
           </div>;
         </section>;
@@ -266,10 +260,10 @@ const Homepage2035: React.FC = () => {;
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
               className="text-center mb-16"
             >
               <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
@@ -282,20 +276,20 @@ const Homepage2035: React.FC = () => {;
 
             {/* Category Filter */}
             <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8, delay: 0.2 }
+              viewport={ once: true }
               className="flex flex-wrap justify-center gap-4 mb-12"
             >
-              {categories.map((category) => (
+              {categories.map(category) => (
                 <motion.button
                   key={category.id}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={ scale: 1.05 }
+                  whileTap={ scale: 0.95 }
                   onClick={() => setActiveCategory(category.id)}
                   className={`flex items-center space-x-2 px-6 py-3 rounded-full border transition-all duration-300 ${;
-                    activeCategory === category.id;
+                    activeCategory = = category.id;
                       ? 'border-cyan-400 bg-cyan-400/10 text-cyan-400';
                       : 'border-gray-600 text-gray-300 hover:border-cyan-400 hover:text-cyan-400';
                   }`}
@@ -303,17 +297,17 @@ const Homepage2035: React.FC = () => {;
                   {category.icon}
                   <span>{category.name}</span>;
                 </motion.button>;
-              ))}
+              )}
             </motion.div>;
             {/* Services Grid */}
             <motion.div;
               variants={staggerContainer}
               initial="initial"
               whileInView="animate"
-              viewport={{ once: true }}
+              viewport={ once: true }
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             >
-              {filteredServices.map((service, index) => (
+              {filteredServices.map(service, index) => (
                 <motion.div
                   key={service.id}
                   variants={fadeInUp}
@@ -321,19 +315,19 @@ const Homepage2035: React.FC = () => {;
                 >
                   <UltraFuturisticServiceCard2035 service={service} />
                 </motion.div>
-              ))}
+              )}
             </motion.div>;
             {/* View All Services Button */}
             <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8, delay: 0.4 }
+              viewport={ once: true }
               className="text-center mt-16"
             >
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={ scale: 1.05 }
+                whileTap={ scale: 0.95 }
                 className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-400 hover:to-pink-400 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 flex items-center space-x-2 mx-auto"
               >
                 <span>View All Services</span>
@@ -347,10 +341,10 @@ const Homepage2035: React.FC = () => {;
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
               className="text-center mb-16"
             >
               <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
@@ -393,13 +387,13 @@ const Homepage2035: React.FC = () => {;
                   title: 'Results-Driven',
                   description: 'Focused on delivering measurable business outcomes and ROI'
                 }
-              ].map((feature, index) => (;
+              ].map(feature, index) => (;
                 <motion.div;
                   key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }
+                  viewport={ once: true }
                   className="text-center p-6 rounded-2xl bg-gray-800/50 border border-gray-700/30 hover:border-cyan-400/50 transition-all duration-300 group"
                 >
                   <div className="text-cyan-400 mb-4 flex justify-center group-hover:scale-110 transition-transform duration-300">
@@ -408,7 +402,7 @@ const Homepage2035: React.FC = () => {;
                   <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
                 </motion.div>
-              ))}
+              )}
             </div>;
           </div>;
         </section>;
@@ -416,10 +410,10 @@ const Homepage2035: React.FC = () => {;
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >
               <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
                 Ready to Transform Your Business?
@@ -429,16 +423,16 @@ const Homepage2035: React.FC = () => {;
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={ scale: 1.05 }
+                  whileTap={ scale: 0.95 }
                   className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 flex items-center space-x-2"
                 >
                   <span>Get Started Today</span>
                   <ArrowRight className="w-5 h-5" />
                 </motion.button>
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={ scale: 1.05 }
+                  whileTap={ scale: 0.95 }
                   className="border border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-black font-bold py-4 px-8 rounded-full text-lg transition-all duration-300"
                 >
                   Schedule a Demo
@@ -450,7 +444,7 @@ const Homepage2035: React.FC = () => {;
       </UltraFuturisticBackground2035>
     </Layout>
   )
-},
+,
 
 export default Homepage2035,
             >;
@@ -462,16 +456,16 @@ export default Homepage2035,
               </p>;
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">;
                 <motion.button;
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={ scale: 1.05 }
+                  whileTap={ scale: 0.95 }
                   className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 flex items-center space-x-2";
                 >;
                   <span>Get Started Today</span>;
                   <ArrowRight className="w-5 h-5" />;
                 </motion.button>;
                 <motion.button;
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={ scale: 1.05 }
+                  whileTap={ scale: 0.95 }
                   className="border border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-black font-bold py-4 px-8 rounded-full text-lg transition-all duration-300";
                 >;
                   Schedule a Demo;
@@ -483,5 +477,5 @@ export default Homepage2035,
       </UltraFuturisticBackground2035>;
     </Layout>;
   );
-},;
+,;
 export default Homepage2035;

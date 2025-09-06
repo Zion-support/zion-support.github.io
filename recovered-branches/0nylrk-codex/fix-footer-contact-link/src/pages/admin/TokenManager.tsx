@@ -29,8 +29,8 @@ export default function TokenManager() {;
   const [userId, setUserId] = useState('');
   const [amount, setAmount] = useState(0);
 
-  const isAdmin = user?.userType === 'admin';
-  useEffect(() => {
+  const isAdmin = user?.userType = = 'admin';
+  useEffect() => {
     if (isAdmin) fetchTransactions()
   }, [isAdmin]);
   const fetchTransactions = async () => {
@@ -43,7 +43,7 @@ export default function TokenManager() {;
   }
   const handleIssue = async (type: 'earn' | 'burn') => {
     if (!userId |amount <= 0) return
-    const res = await fetch(`/functions/v1/token-manager/${type === 'earn' ? 'earn' : 'burn'}`, {
+    const res = await fetch(`/functions/v1/token-manager/${type = = 'earn' ? 'earn' : 'burn'}`, {
       method: 'POST'
       headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({ userId, amount })});
@@ -61,7 +61,6 @@ export default function TokenManager() {;
         variant: 'destructive'
       })
     }
-  }
 
   return (
     <ProtectedRoute adminOnly>
@@ -76,7 +75,7 @@ export default function TokenManager() {;
               </CardHeader>
               <CardContent className="space-y-4">
                 <Input placeholder="User ID" value={userId} onChange={e => setUserId(e.target.value)} />
-                <Input type="number" placeholder="Amount" value={amount} onChange={e => setAmount(parseInt(e.target.value))} />
+                <Input type="number" placeholder="Amount" value={amount} onChange={e => setAmount(parseInt(e.target.value)} />
                 <div className="flex gap-2">
                   <Button onClick={() => handleIssue('earn')}>Issue</Button>
                   <Button variant="destructive" onClick={() => handleIssue('burn')}>Revoke</Button>
@@ -92,7 +91,7 @@ export default function TokenManager() {;
                   {transactions.map(tx => (
                     <li key={tx.id} className="flex justify-between border-b py-2 text-white">
                       <span>{tx.user_id}</span>
-                      <span>{tx.transaction_type === 'earn' ? '+' : '-'}{tx.amount}</span>
+                      <span>{tx.transaction_type = = 'earn' ? '+' : '-'}{tx.amount}</span>
                     </li>
               <TabsList>;
                 <TabsTrigger value="history">Transaction History</TabsTrigger>;
@@ -102,15 +101,15 @@ export default function TokenManager() {;
                   {transactions && transactions.map(tx => (;
                     <li key={tx && tx.id} className="flex justify-between border-b py-2 text-white">;
                       <span>{tx && tx.user_id}</span>;
-                      <span>{tx && tx.transaction_type === 'earn' ? '+' : '-'}{tx && tx.amount}</span>;
+                      <span>{tx && tx.transaction_type = = 'earn' ? '+' : '-'}{tx && tx.amount}</span>;
                     </li>;
-                  ))}
+                  )}
                 <ul className="space - y-2">;
                   {transactions.map (tx => (
                     <li key={tx.id} className="flex justify - between border - b py - 2 text - white">;
                       <span>{tx.user_id}</span>;
-                      <span>{tx.transaction_type === 'earn' ? '+' : '-'}{tx.amount}</span>;
-                    </li>))}
+                      <span>{tx.transaction_type = = 'earn' ? '+' : '-'}{tx.amount}</span>;
+                    </li>)}
                 </ul>;
               </TabsContent>;
             </Tabs>;
@@ -120,4 +119,3 @@ export default function TokenManager() {;
       </div>;
     </ProtectedRoute>;
   );
-}

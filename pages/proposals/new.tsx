@@ -9,7 +9,7 @@ const NewProposal: NextPage = () => {
   const [relevantExperience, setRelevantExperience] = useState('')
   const [coverLetter, setCoverLetter] = useState('')
   const operatorToken = process.env.NEXT_PUBLIC_OPERATOR_TOKEN
-  const pitchPrompt = useMemo(() => (
+  const pitchPrompt = useMemo() => (
     `Write a persuasive proposal for a freelance cloud architect applying to this job. Focus on reliability, previous projects, and delivery.\n\nJob Brief:\n${jobBrief |'(Not provided)'}\n\nTalent Resume Summary:\n${resumeSummary |'(Not provided)'}\n\nRelevant Experience:\n${relevantExperience |'(Not provided)'}\n\nReturn markdown only.`
   ), [jobBrief, relevantExperience, resumeSummary])
 const NewProposal: NextPage = () => {
@@ -20,7 +20,7 @@ const NewProposal: NextPage = () => {
 
   const operatorToken = process.env.NEXT_PUBLIC_OPERATOR_TOKEN;
 
-  const pitchPrompt = useMemo(() => (
+  const pitchPrompt = useMemo() => (
     `Write a persuasive proposal for a freelance cloud architect applying to this job. Focus on reliability, previous projects, and delivery.\n\nJob Brief:\n${jobBrief || '(Not provided)'}\n\nTalent Resume Summary:\n${resumeSummary || '(Not provided)'}\n\nRelevant Experience:\n${relevantExperience || '(Not provided)'}\n\nReturn markdown only.`
   ), [jobBrief, relevantExperience, resumeSummary]);
 
@@ -54,7 +54,7 @@ const NewProposal: NextPage = () => {
       <textarea value={coverLetter} onChange={e => setCoverLetter(e.target.value)} rows={14} className="mt-2 w-full rounded-md border p-3" />
     </div>
   )
-}
+
 export default NewProposal;
 
 import type { NextPage } from 'next',
@@ -67,7 +67,7 @@ const NewProposal: NextPage = () => {
   const [relevant_experience, setRelevantExperience] = useState (''),
   const [cover_letter, setCoverLetter] = useState (''),
   const operator_token = process.env.NEXT_PUBLIC_OPERATOR_TOKEN,
-  const pitch_prompt = useMemo (() => (
+  const pitch_prompt = useMemo () => (
     `Write a persuasive proposal for a freelance cloud architect applying to this job. Focus on reliability, previous projects, and delivery.\n\n_job Brief:\n${job_brief || '(Not provided)'}\n\n_talent Resume Summary:\n${resume_summary || '(Not provided)'}\n\n_relevant Experience:\n${relevant_experience || '(Not provided)'}\n\n_return markdown only.`), [job_brief, relevant_experience, resume_summary]),
   return (
     <div>;
@@ -98,5 +98,5 @@ const NewProposal: NextPage = () => {
       </div>;
       <textarea value={cover_letter} on_change={e => setCoverLetter (e.target.value)} rows={14} className="mt - 2 w - full rounded - md border p - 3" />;
     </div>);
-},
+,
 export default NewProposal,

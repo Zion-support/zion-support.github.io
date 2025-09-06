@@ -7,8 +7,8 @@ import {;
   Trophy,     // featured creator;
   BadgePlus,  // first action;
   BadgeDollarSign // monetization;
-} from "lucide-react",;
-;
+ from "lucide-react",;
+
 export type BadgeKey =;
   | "first_listing";
   | "top_contributor";
@@ -16,7 +16,7 @@ export type BadgeKey =;
   | "featured_creator";
   | "first_action";
   | "monetized",;
-;
+
 export interface BadgeMeta {;
   key:BadgeKey,;
   name:string,;
@@ -24,8 +24,7 @@ export interface BadgeMeta {;
   icon:LucideIcon,;
   color:string,;
   bg:string;
-}
-;
+
 export const badgeList:BadgeMeta[] = [;
   {;
     key:"first_listing",;
@@ -75,8 +74,8 @@ export const badgeList:BadgeMeta[] = [;
     color:"#22C55E", // Soft Green;
     bg:"#F2FCE2",    // Soft Green;
   }],;
-;
+
 export const getBadgeMeta = (key:BadgeKey) =>;
-  badgeList.find((b) => b.key === key),;
-; import {
+  badgeList.find(b) => b.key = = key),;
+ import {
   BadgeCheck, //publishing a listing Award, //top contributor Star, //profile complete Trophy, //featured creator BadgePlus, //first action BadgeDollarSign // monetization export type BadgeKey = | "first listing" | "top contributor" | "profile complete" | "featured creator" | "first action" | "monetized";

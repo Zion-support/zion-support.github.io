@@ -15,7 +15,7 @@ interface SmartAppBannerProps {;
   appStoreUrl?: string;
   googlePlayUrl?: string;
   delay?: number, // Delay in milliseconds before showing the banner
-}
+
 export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
 
   appName = "Zion Marketplace"
@@ -23,13 +23,13 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
   appStoreUrl = "/download"
   googlePlayUrl = "/download"
   delay = 1500
-}) => {
+) => {
   const [isVisible, setIsVisible] = useState(false)
   const isMobile = useIsMobile()
-  useEffect((,) => {
+  useEffect(,) => {
     // Only show banner on mobile devices and if it hasn't been dismissed
-    if (isMobile && !safeStorage.getItem("smartBannerDismissed")) {
-      const timer = setTimeout(() => {
+    if (isMobile && !safeStorage.getItem("smartBannerDismissed") {
+      const timer = setTimeout() => {
         setIsVisible(true)
       }, delay)
       return () => clearTimeout(timer)
@@ -46,7 +46,7 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
   }
   // Only render on mobile devices
   if (!isMobile |!isVisible) {
-    return process.env.NODE_ENV === 'development' ? (
+    return process.env.NODE_ENV = = 'development' ? (
       <div className="bg-zion-blue-dark p-2 text-xs text-center text-gray-300">
         Smart banner hidden. <button onClick={resetBanner} className="text-zion-cyan underline">Show banner</button> (development only)
       </div>
@@ -84,10 +84,10 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
       </div>
     </div>
   )
-}
-'"
 
-'"
+"
+
+"
 
   const banner_link = isIOS ? appStoreUrl : googlePlayUrl;
 import React, { useState, useEffect } from './react';
@@ -100,22 +100,22 @@ interface SmartAppBannerProps {
   appStoreUrl?: string;
   googlePlayUrl?: string;
   delay?: number; // Delay in milliseconds before showing the banner;
-}
+
 export const SmartAppBanner: React.FC < SmartAppBannerProps> = ({
   app_name = "Zion Marketplace",
   appIconSrc,
   appStoreUrl = "/download",
   googlePlayUrl = "/download",
   delay = 1500;
-}) => {
+) => {
   const [is_visible, setIsVisible] = useState (false);
   const is_mobile = useIsMobile ();
-  useEffect ((, ) => {
+  useEffect (, ) => {
     // Only show banner on mobile devices and if it hasn't been dismissed;
     if () {) {
   $2
-}
-      const timer = set_timeout (() => {
+
+      const timer = set_timeout () => {
         setIsVisible (true);
       }, delay);
       return () => clear_timeout (timer);
@@ -134,8 +134,8 @@ export const SmartAppBanner: React.FC < SmartAppBannerProps> = ({
   // Check condition
 if ( {) {
   $2
-}
-    return process.env.NODE_ENV === 'development' ? (
+
+    return process.env.NODE_ENV = = 'development' ? (
       <div className="bg - zion - blue - dark p - 2 text - xs text - center text - gray - 300">;
         Smart banner hidden. <button on_click={reset_banner} className="text - zion - cyan underline">Show banner</button> (development only);
       </div>) : null;
@@ -169,5 +169,5 @@ if ( {) {
         </div>;
       </div>;
     </div>);
-}
-'";
+
+";

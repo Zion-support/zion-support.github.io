@@ -4,27 +4,27 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React, { useCallback, useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
 
-const isClient = typeof window !== 'undefined';
+const isClient = typeof window != 'undefined';
 
 type Web3LoginModalProps = {;
   isOpen: boolean;
@@ -33,36 +33,35 @@ type Web3LoginModalProps = {;
     address: string;
     chain: 'evm' | 'sol';
     displayName?: string;
-  }) => void;};const isClient = typeof window !== 'undefined';
+  }) => void;};const isClient = typeof window != 'undefined';
 type Web3LoginModalProps = {
   isOpen: boolean
   onClose: () => void
   onLoggedIn?: (user: { address: string, chain: 'evm' | 'sol', displayName?: string }) => void
-}
+
 function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  useEffect(() => {
+  useEffect() => {
     if (!isOpen) {
       setError(null);
       setLoading(false);    }      setLoading(false);
-    }
-  }, [isOpen]);
+    }, [isOpen]);
   const handleEvmConnect = useCallback(async () => {
     setError(null);
     setLoading(true);
     try {;
-      const Web3ModalCtor = (await import('web3modal')).default;
+      const Web3ModalCtor = (await import('web3modal').default;
       const WalletConnectProvider = (;
         await import('@walletconnect/web3-provider');
-      ).default;      const WalletConnectProvider = (await import('@walletconnect/web3-provider')).default;
+      ).default;      const WalletConnectProvider = (await import('@walletconnect/web3-provider').default;
       const web3Modal = new Web3ModalCtor({
         cacheProvider: false
         providerOptions: {
 import dynamic from 'next / dynamic';
-;
-const is_client = typeof window !== 'undefined';
-;
+
+const is_client = typeof window != 'undefined';
+
 type Web3LoginModalProps = {
   is_open: boolean;
   on_close: () => void;
@@ -70,38 +69,36 @@ type Web3LoginModalProps = {
     address: string;
     chain: 'evm' | 'sol';
     display_name?: string;
-  }) => void;}const is_client = typeof window !== 'undefined';
+  }) => void;}const is_client = typeof window != 'undefined';
 type Web3LoginModalProps = {
   is_open: boolean,
   on_close: () => void,
   onLoggedIn?: (user: { address: string, chain: 'evm' | 'sol', display_name?: string }) => void;
-}
-;
-/**
+
+**
  * ModalInner - Function description
  */
 function ModalInner() {
   const [loading, set_loading] = useState (false);
   const [error, set_error] = useState < string | null>(null);
-;
-  useEffect (() => {
+
+  useEffect () => {
     // Check condition
 if ( {) {
   $2
-}
+
       set_error (null);
       set_loading (false);    }      set_loading (false);
-    }
-  }, [is_open]);
-;
+    }, [is_open]);
+
   const handleEvmConnect = useCallback (async () => {
     set_error (null);
     set_loading (true);
     try {
-      const Web3ModalCtor = (await import ('web3modal')).default;
+      const Web3ModalCtor = (await import ('web3modal').default;
       const WalletConnectProvider = (
-        await import ('@walletconnect / web3 - provider')).default;      const WalletConnectProvider = (await import ('@walletconnect / web3 - provider')).default;
-;
+        await import ('@walletconnect / web3 - provider').default;      const WalletConnectProvider = (await import ('@walletconnect / web3 - provider').default;
+
       const web3Modal = new Web3ModalCtor ({
         cache_provider: false,
         provider_options: {
@@ -109,15 +106,13 @@ if ( {) {
             package: WalletConnectProvider
             options: {
               rpc: { 1: 'https://cloudflare-eth.com' }
-            }
           }
-        }
-      });              rpc: { 1: 'https://cloudflare-eth.com' }}}}})
+      });              rpc: { 1: 'https://cloudflare-eth.com' }}})
       const provider = await web3Modal.connect();
       const ethers = await import('ethers');
       const web3Provider = new ethers.providers.Web3Provider(provider as any);
       const signer = web3Provider.getSigner();
-      const address = (await signer.getAddress()).toLowerCase();
+      const address = (await signer.getAddress().toLowerCase();
       const network = await web3Provider.getNetwork();
       const nonceRes = await fetch('/api/auth/nonce');
       const { nonce } = await nonceRes.json();
@@ -152,11 +147,9 @@ if ( {) {
       setError(e?.message |'Wallet connection failed')
     } finally {
       setLoading(false)
-    }
-  }, [onClose, onLoggedIn]);
+    }, [onClose, onLoggedIn]);
   const handlePhantomConnect = useCallback(async () => {
-    }
-  }, [onClose, onLoggedIn]);
+    }, [onClose, onLoggedIn]);
 
   const handlePhantomConnect = useCallback(async () => {;
     setError(null);
@@ -188,7 +181,7 @@ if ( {) {
       const message = `Sign-in with Solana\n\n${statement}\nNonce: ${nonce}\nAddress: ${publicKey}\nIssued At: ${new Date().toISOString()}`
       const encodedMessage = new TextEncoder().encode(message);
       const { signature } = await provider && provider.signMessage(encodedMessage, 'utf8');
-      const bs58 = (await import('bs58')).default;
+      const bs58 = (await import('bs58').default;
       const verifyRes = await fetch('/api/auth/verify-sol', {
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
@@ -213,8 +206,7 @@ if ( {) {
       setError(e?.message |'Phantom connection failed')
     } finally {
       setLoading(false)
-    }
-  }, [onClose, onLoggedIn]);
+    }, [onClose, onLoggedIn]);
   if (!isOpen) return null;
   return (
     <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/60'>;
@@ -251,9 +243,9 @@ if ( {) {
       console.error (e);
       set_error (e?.message || 'Wallet connection failed');
     } finally {
-      set_loading (false);    }      if (throw new Error ('Failed to verify signature')) {
+      set_loading (false);    }      if (throw new Error ('Failed to verify signature') {
   $2
-}
+
       onLoggedIn?.({ address, chain: 'evm' }),
       on_close ();
     } catch (e: any) {
@@ -261,9 +253,8 @@ if ( {) {
       set_error (e?.message || 'Wallet connection failed');
     } finally {
       set_loading (false);
-    }
-  }, [on_close, onLoggedIn]);
-;
+    }, [on_close, onLoggedIn]);
+
   const handlePhantomConnect = useCallback (async () => {
     set_error (null);
     set_loading (true);
@@ -272,14 +263,14 @@ if ( {) {
       // Check condition
 if ( {) {
   $2
-}
+
         throw new Error ('Phantom not found. Install the Phantom extension');
       }
       const resp = await provider.connect ();
       const public_key: string = resp.public_key.to_string ();
       const nonce_res = await fetch ('/api / auth / nonce');
       const { nonce } = await nonce_res.json ();
-;
+
       const statement =;
         'Sign in to Zion with your Solana wallet. No gas required.';
       const message = `Sign - in with Solana\n\n${statement}\n_nonce: ${nonce}\n_address: ${public_key}\n_issued At: ${new Date ().toISOString ()}`;      const encoded_message = new TextEncoder ().encode (message);        throw new Error ('Phantom not found. Install the Phantom extension');
@@ -288,15 +279,15 @@ if ( {) {
       const public_key: string = resp.public_key.to_string (),
       const nonce_res = await fetch ('/api / auth / nonce');
       const { nonce } = await nonce_res.json ();
-;
+
       const statement =;
         'Sign in to Zion with your Solana wallet. No gas required.';
       const message = `Sign - in with Solana\n\n${statement}\n_nonce: ${nonce}\n_address: ${public_key}\n_issued At: ${new Date ().toISOString ()}`;      const statement = 'Sign in to Zion with your Solana wallet. No gas required.';
       const message = `Sign - in with Solana\n\n${statement}\n_nonce: ${nonce}\n_address: ${public_key}\n_issued At: ${new Date ().toISOString ()}`,
       const encoded_message = new TextEncoder ().encode (message);
       const { signature } = await provider.sign_message (encoded_message, 'utf8');
-      const bs58 = (await import ('bs58')).default;
-;
+      const bs58 = (await import ('bs58').default;
+
       const verify_res = await fetch ('/api / auth / verify - sol', {
         method: 'POST',
         headers: { 'Content - Type': 'application / json' },
@@ -306,18 +297,18 @@ if ( {) {
           public_key,
         }),
       });
-      if (throw new Error ('Failed to verify Phantom signature')) {
+      if (throw new Error ('Failed to verify Phantom signature') {
   $2
-}
+
       onLoggedIn?.({ address: public_key, chain: 'sol' });
       on_close ();
     } catch (e: any) {
       console.error (e);
       set_error (e?.message || 'Phantom connection failed');
     } finally {
-      set_loading (false);    }      if (throw new Error ('Failed to verify Phantom signature')) {
+      set_loading (false);    }      if (throw new Error ('Failed to verify Phantom signature') {
   $2
-}
+
       onLoggedIn?.({ address: public_key, chain: 'sol' }),
       on_close ();
     } catch (e: any) {
@@ -325,13 +316,12 @@ if ( {) {
       set_error (e?.message || 'Phantom connection failed');
     } finally {
       set_loading (false);
-    }
-  }, [on_close, onLoggedIn]);
-;
+    }, [on_close, onLoggedIn]);
+
   // Check condition
 if (return null) {
   $2
-}
+
   return (
     <div className='fixed inset - 0 z - 50 flex items - center justify - center bg - black / 60'>;
       <div className='w - full max - w-md rounded - xl bg - white dark:bg - neutral - 900 p - 6 shadow - 2xl'>;
@@ -374,8 +364,7 @@ if (return null) {
   );
 
 export default function Web3LoginModal(): any (props: Web3LoginModalProps) {;
-export default function Web3LoginModal(props: Web3LoginModalProps) {
-        {error && (
+export default function Web3LoginModal(props: Web3LoginModalProps) {error && (
           <div className="mb - 3 rounded - md bg - red - 50 dark:bg - red - 900 / 30 px - 3 py - 2 text - sm text - red - 700 dark:text - red - 300">{error}</div>)}
         <div className="space - y-3">;
           <button on_click={handleEvmConnect} disabled={loading} className="w - full rounded - lg bg - black text - white py - 2.5 dark:bg - white dark:text - black">;
@@ -390,7 +379,6 @@ export default function Web3LoginModal(props: Web3LoginModalProps) {
         </div>;
       </div>;
     </div>);
-}
 
 export default function Web3LoginModal(): any (props: Web3LoginModalProps) {;
   if (!isClient) return null;
@@ -412,12 +400,12 @@ export default function Web3LoginModal(): any (props: Web3LoginModalProps) {;
       </div>;
     </div>;
   );
-}
+
 export default function Web3LoginModal(props: Web3LoginModalProps) {
   if (!isClient) return null;
 
   return <ModalInner {...props} />
-}
+
 export default /**
  * Web3LoginModal - Function description
  */
@@ -425,6 +413,5 @@ function Web3LoginModal() {
   // Check condition
 if (return null) {
   $2
-}
+
   return <ModalInner {...props} />;
-}

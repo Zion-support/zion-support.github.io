@@ -6,5 +6,3 @@ export function LegalTemplates() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

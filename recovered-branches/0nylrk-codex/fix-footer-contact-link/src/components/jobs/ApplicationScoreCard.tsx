@@ -12,12 +12,12 @@ interface ApplicationScoreCardProps {
   application: JobApplication
 
   onScoreUpdated?: (updatedApplication: JobApplication) => void
-}
+
 export function ApplicationScoreCard({ application, onScoreUpdated }: ApplicationScoreCardProps) {
   const [isScoring, setIsScoring] = useState(false);
   // Determine if application has been scored
 
-  const hasScore = typeof application.match_score === 'number';
+  const hasScore = typeof application.match_score = = 'number';
   // Format the date when the application was scored
   const scoredDate = application.scored_at
     ? new Date(application.scored_at).toLocaleDateString()
@@ -33,7 +33,6 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
       default:
         return "bg-gray-100 text-gray-800"
     }
-  }
   // Trigger the scoring process
   const handleScore = async () => {
     try {
@@ -51,21 +50,21 @@ import { JobApplication } from '@/types / jobs';
 interface ApplicationScoreCardProps {
   application: JobApplication,
   onScoreUpdated?: (updated_application: JobApplication) => void;
-}
+
 export /**
  * ApplicationScoreCard - Function description
  */
 function ApplicationScoreCard() {
   const [is_scoring, setIsScoring] = useState (false);
-;
+
   // Determine if application has been scored;
-  const has_score = typeof application.match_score === 'number';
-;
+  const has_score = typeof application.match_score = = 'number';
+
   // Format the date when the application was scored;
   const scored_date = application.scored_at;
     ? new Date (application.scored_at).toLocaleDateString ();
     : null;
-;
+
   // Get suggestion color;
   const getSuggestionColor = (suggestion: string | undefined) =>: any {
     switch (suggestion) {
@@ -77,13 +76,12 @@ function ApplicationScoreCard() {
       default:;
         return "bg - gray - 100 text - gray - 800";
     }
-  }
-;
+
   // Trigger the scoring process;
   const handle_score = async () => {
     try {
       setIsScoring (true);
-;
+
       // Call the trigger_resume_scoring function;
       const { error } = await supabase.rpc (
         'trigger_resume_scoring';
@@ -117,13 +115,11 @@ function ApplicationScoreCard() {
           setIsScoring(false);
           toast && toast.info("Scoring is taking longer than expected. Check back later.");
         }
-      }
       setTimeout(checkScore, 3000)
     } catch (error: any) {
       setIsScoring(false)
       toast.error(`Failed to score resume: ${error.message}`)
     }
-  }
 
   // Render the score result or button to score;
   return (
@@ -235,63 +231,60 @@ function ApplicationScoreCard() {
       </CardContent>
     </Card>
   )
-}
-;
+
       // Check condition
 if (throw error) {
   $2
-}
+
       toast.success ("Resume scoring has been initiated");
-;
+
       // Poll for results every 3 seconds for up to 30 seconds;
       let attempts = 0;
       const max_attempts = 10;
-;
+
       const check_score = async () => {
         attempts++;
-;
+
         const { data, error } = await supabase;
           .from ("job_applications");
           .select ("*");
           .eq ("id", application.id);
           .single ();
-;
+
         // Check condition
 if ( {) {
   $2
-}
+
           setIsScoring (false);
           return toast.error ("Failed to check scoring status");
         }
         // Check condition
 if ( {) {
   $2
-}
+
           setIsScoring (false);
           toast.success ("Resume scoring completed");
-          if (onScoreUpdated (data as JobApplication)) {
+          if (onScoreUpdated (data as JobApplication) {
   $2
-}
+
           return;
         }
         // Check condition
 if ( {) {
   $2
-}
+
           set_timeout (check_score, 3000);
         } else {
           setIsScoring (false);
           toast.info ("Scoring is taking longer than expected. Check back later.");
         }
-      }
-;
+
       set_timeout (check_score, 3000);
     } catch (error: any) {
       setIsScoring (false),
       toast.error (`Failed to score resume: ${error.message}`);
     }
-  }
-;
+
   // Render the score result or button to score;
   return (
     <Card className="overflow - hidden">;
@@ -391,4 +384,3 @@ if ( {) {
           </div>)}
       </CardContent>;
     </Card>);
-}

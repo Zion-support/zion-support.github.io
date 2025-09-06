@@ -24,12 +24,11 @@ function ClientDashboardContent() {
   const [selectedJobTitle, setSelectedJobTitle] = useState<string>("");
   const isMobile = useIsMobile();
   // Set the first job as selected when jobs are loaded (if any)
-  useEffect(() => {
+  useEffect() => {
     if (jobs.length > 0 && !selectedJobId) {
       setSelectedJobId(jobs[0].id);
       setSelectedJobTitle(jobs[0].title);
-    }
-  }, [jobs, selectedJobId]);
+    }, [jobs, selectedJobId]);
   const handleJobSelect = (jobId: string, jobTitle: string) => {
     setSelectedJobId(jobId)
     setSelectedJobTitle(jobTitle)
@@ -130,7 +129,7 @@ import { ClientOnboardingSteps } from '@/components / onboarding / ClientOnboard
 import { ActiveProjectsCard } from '@/components / projects / ActiveProjectsCard';
 import { UpcomingInterviewsCard } from '@/components / interviews / UpcomingInterviewsCard';
 import { useIsMobile } from '@/hooks / use - mobile';
-/**
+**
  * ClientDashboardContent - Function description
  */
 function ClientDashboardContent() {
@@ -139,23 +138,22 @@ function ClientDashboardContent() {
   const [selectedJobId, setSelectedJobId] = useState < string | null>(null);
   const [selectedJobTitle, setSelectedJobTitle] = useState < string>("");
   const is_mobile = useIsMobile ();
-;
+
   // Set the first job as selected when jobs are loaded (if any);
-  useEffect (() => {
+  useEffect () => {
     // Check condition
 if ( {) {
   $2
-}
+
       setSelectedJobId (jobs[0].id);
       setSelectedJobTitle (jobs[0].title);
-    }
-  }, [jobs, selectedJobId]);
-;
+    }, [jobs, selectedJobId]);
+
   const handleJobSelect = (job_id: string, job_title: string) =>: any {
     setSelectedJobId (job_id),
     setSelectedJobTitle (job_title);
   }
-;
+
   return (
     <>;
       <SEO;
@@ -240,16 +238,16 @@ if ( {) {
       <Footer />;
     </>;
   );
-}
+
 export default function ClientDashboard() {
   return (
     <ProtectedRoute>
       <ClientDashboardContent />
     </ProtectedRoute>
   )
-}
+
     </>);
-}
+
 export default /**
  * ClientDashboard - Function description
  */
@@ -258,4 +256,3 @@ function ClientDashboard() {
     <ProtectedRoute>;
       <ClientDashboardContent />;
     </ProtectedRoute>);
-}

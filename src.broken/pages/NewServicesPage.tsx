@@ -6,5 +6,3 @@ export function NewServicesPage() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

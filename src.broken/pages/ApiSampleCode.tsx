@@ -6,5 +6,3 @@ export function ApiSampleCode() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

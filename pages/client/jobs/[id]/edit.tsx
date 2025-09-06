@@ -1,12 +1,12 @@
 import { useRouter  } from 'next/router';
 import useSWR from 'swr';
 
-const fetcher = (url: string) => fetch(url).then(r => r && r.json());
+const fetcher = (url: string) => fetch(url).then(r => r && r.json();
 export default function EditJobPage() {;
 import {useEffect, useState} from 'react';
-const fetcher = (url: string) => fetch(url).then(r => r.json());
+const fetcher = (url: string) => fetch(url).then(r => r.json();
 export default function EditJobPage() {
-const fetcher = (url: string) => fetch(url).then(r => r && r.json());
+const fetcher = (url: string) => fetch(url).then(r => r && r.json();
 export default function EditJobPage() {;
   const router = useRouter();
   const { id } = router && router.query;
@@ -15,12 +15,11 @@ export default function EditJobPage() {;
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [category, setCategory] = useState('');
-  useEffect(() => {
+  useEffect() => {
     if (job) {
       setTitle(job.title |'');
       setDescription(job.description |'');
-      setCategory(job.category |'');    }
-  }, [job]);
+      setCategory(job.category |'');    }, [job]);
   async function save() {
     await fetch(`/api/jobs/${id}`, {
       method: 'PATCH'
@@ -29,12 +28,11 @@ export default function EditJobPage() {;
     });
     router.push('/client/dashboard');  }
 
-  useEffect(() => {;
+  useEffect() => {;
     if (job) {;
       setTitle(job && job.title || '');
       setDescription(job && job.description || '');
-      setCategory(job && job.category || '');    }
-  }, [job]);
+      setCategory(job && job.category || '');    }, [job]);
 
   async function save() {;
     await fetch(`/api/jobs/${id}`, {;
@@ -83,7 +81,7 @@ export default function EditJobPage() {;
         </button>
       </div>
     </div>
-);
+;
     <div className="max-w-2xl mx-auto space-y-4">
       <h1 className="text-2xl font-semibold">Edit Job</h1>
       <div>
@@ -103,12 +101,12 @@ export default function EditJobPage() {;
       </div>
     </div>
   )
-}
+
 import {use_router} from 'next / router';
 import useSWR from 'swr';
 import {useEffect, useState} from 'react';
-;
-const fetcher = (url: string) =>: any fetch (url).then (r => r.json ());
+
+const fetcher = (url: string) =>: any fetch (url).then (r => r.json ();
 export default /**
  * EditJobPage - Function description
  */
@@ -117,21 +115,20 @@ function EditJobPage() {
   const { id } = router.query;
   const { data } = useSWR (id ? `/api / jobs/${id}` : null, fetcher);
   const job = data?.job;
-;
+
   const [title, set_title] = useState ('');
   const [description, set_description] = useState ('');
   const [category, set_category] = useState ('');
-;
-  useEffect (() => {
+
+  useEffect () => {
     // Check condition
 if ( {) {
   $2
-}
+
       set_title (job.title || '');
       set_description (job.description || '');
-      set_category (job.category || '');    }
-  }, [job]);
-;
+      set_category (job.category || '');    }, [job]);
+
   async /**
  * save - Function description
  */
@@ -145,7 +142,7 @@ function save() {
   // Check condition
 if (return <div > Loading</div>) {
   $2
-}
+
   return (
     <div className='max - w-2xl mx - auto space - y-4'>;
       <h1 className='text - 2xl font - semibold'>Edit Job</h1>;
@@ -183,4 +180,3 @@ if (return <div > Loading</div>) {
         </button>;
       </div>;
     </div>);
-;

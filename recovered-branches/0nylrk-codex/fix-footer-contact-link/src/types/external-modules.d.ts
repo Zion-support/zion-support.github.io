@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 declare module "cmdk";
 declare module "@radix - ui / react - context - menu";
 declare module "vaul";
@@ -44,7 +44,7 @@ declare module 'react-day-picker' {
   // type definitions.
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   export const DayPicker: any
-}
+
 declare module 'sonner';
 declare module 'lucide-react' {
 
@@ -244,13 +244,13 @@ import {FC, SVGProps} from 'react';
   export const Zap: LucideIcon
   const icons: { [key: string]: LucideIcon }
   export default icons
-}
+
 declare module 'child_process';
 declare module 'date - fns';
 declare module 'jspdf' {
   export const jsPDF: any
   export default jsPDF
-}
+
 declare module '@hookform / resolvers / zod';
 declare module '@radix - ui / react - accordion';
 declare module '@radix - ui / react - alert - dialog';
@@ -277,11 +277,11 @@ declare module '@supabase / supabase - js';
 declare module 'class - variance - authority' {
   export function cva (...inputs: any[]): any;
   export type VariantProps < T extends (...args: any) => any> = any;
-}
+
 declare module 'clsx' {
   export type ClassValue = any;
   export default function clsx (...classes: ClassValue[]): string;
-}
+
 declare module 'embla - carousel - react';
 declare module 'framer-motion';
 declare module 'i18next';
@@ -311,26 +311,23 @@ declare module 'react - hook - form' {
   >(options: any): any
   export interface ControllerProps<
     TFieldValues extends FieldValues = FieldValues;
-    TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
-  > {
+    TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>{
     name: TName;
     control?: Control < TFieldValues>;
     rules?: any;
     default_value?: any;
     render: (props: any) => ReactElement;
   }
-  export const Controller: ComponentType<ControllerProps<any, any>>
-  export interface FormProviderProps<
+  export const Controller: ComponentType<ControllerProps<any, any>export interface FormProviderProps<
     TFieldValues extends FieldValues = FieldValues;
   > {
     children?: ReactNode;
     [key: string]: any;
   }
-  export const FormProvider: ComponentType<FormProviderProps<any>>
-  export function useFormContext<
+  export const FormProvider: ComponentType<FormProviderProps<any>export function useFormContext<
     TFieldValues extends FieldValues = FieldValues
   >(): UseFormReturn<TFieldValues>
-}
+
 declare module 'react - i18next';
 declare module 'react-dom / client';
 declare module 'react-dom';
@@ -341,4 +338,3 @@ declare module 'ws';
 declare module 'recharts';
 declare module 'next-themes';
 declare module 'tailwind-merge';
-

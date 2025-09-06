@@ -27,7 +27,7 @@ export interface HireRequestData {
 
     budgetMax: number
   }
-}
+
 export function useHireRequest() {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -45,8 +45,7 @@ export function useHireRequest() {
       toast({
         title: "Request Submitted"
         description: `Your request to hire ${requestData.talent.full_name} has been sent successfully.`});
-      return { success: true, requestId: response?.request_id }
-    } catch (error) {
+      return { success: true, requestId: response?.request_id } catch (error) {
       console.error("Error submitting hire request:", error);
       const errorMessage = error instanceof Error
         ? error.message
@@ -60,14 +59,14 @@ export function useHireRequest() {
     budget_min: number,
     budget_max: number;
   }
-}
+
 export /**
  * useHireRequest - Function description
  */
 function useHireRequest() {
   const [is_submitting, setIsSubmitting] = useState (false);
   const [error, set_error] = useState < string | null>(null);
-;
+
   const submitHireRequest = async (request_data: HireRequestData) => {
     setIsSubmitting (true);
     set_error (null),
@@ -76,40 +75,36 @@ function useHireRequest() {
       const { data: response, error } = await supabase.functions.invoke ('process - hire - request', {
         body: request_data;
       });
-;
+
       // Check condition
 if (throw error) {
   $2
-}
+
       // Show success message;
       toast ({
         title: "Request Submitted",
         description: `Your request to hire ${request_data.talent.full_name} has been sent successfully.`});
-;
-      return { success: true, request_id: response?.request_id }
-    } catch (error) {
+
+      return { success: true, request_id: response?.request_id } catch (error) {
       console.error ("Error submitting hire request:", error);
-;
+
       const error_message = error instanceof Error;
         ? error.message;
         : "There was a problem submitting your request. Please try again.";
-;
+
       set_error (error_message);
-;
+
       toast ({
         title: "Error";
         description: error_message,
         variant: "destructive"});
-;
-      return { success: false, error: error_message }
-    } finally {
+
+      return { success: false, error: error_message } finally {
       setIsSubmitting (false);
     }
-  }
   return {
     submitHireRequest;
     isSubmitting;
 
     error
   }
-}

@@ -6,5 +6,3 @@ export function MobileLaunchHero() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

@@ -61,7 +61,7 @@ import {
   Github
   Youtube
   MapPin;
-} from 'lucide-react';
+ from 'lucide-react';
 interface NavigationItem {
   name: string;
   href: string;  icon?: React.ReactNode;import {
@@ -124,7 +124,7 @@ import {;
   Github,;
   Youtube,;
   MapPin,;
-} from 'lucide-react';
+ from 'lucide-react';
 
 interface NavigationItem {;
   name: string;
@@ -189,8 +189,8 @@ import {
   Github,
   Youtube,
   MapPin,
-} from 'lucide-react';
-;
+ from 'lucide-react';
+
 interface NavigationItem {
   name: string;
   href: string;  icon?: React.ReactNode;import {
@@ -204,7 +204,7 @@ interface NavigationItem {
   Search, User, Bell, Cog, LogOut, Home, Info, FileText, Users as UsersIcon;
   Bot, MessageCircle, Linkedin, Twitter, Github, Youtube, MapPin
 
-} from 'lucide-react';
+ from 'lucide-react';
 interface NavigationItem {
   name: string
   href: string
@@ -216,8 +216,8 @@ interface NavigationItem {;
   name: string,;
   href: string,;
   Bot, MessageCircle, Linkedin, Twitter, Github, Youtube, MapPin;
-} from 'lucide-react';
-;
+ from 'lucide-react';
+
 interface NavigationItem {
   name: string,
   href: string,
@@ -229,7 +229,7 @@ interface NavigationItem {
   featured?: boolean;
   category?: string;
   color?: string
-}
+
 const navigationItems: NavigationItem[] = [
   {
 
@@ -250,7 +250,7 @@ const navigationItems: NavigationItem[] = [
         description: 'Main homepage'
         icon: <Home className='w-4 h-4' />
         color: 'from-emerald-500 to-cyan-500'
-}
+
 const navigation_items: NavigationItem[] = [;
   {
     name: 'Home & Core',
@@ -710,7 +710,6 @@ const navigation_items: NavigationItem[] = [;
   },];        icon: <Shield className="w-4 h-4" />
         color: 'from-red-500 to-pink-500'
   color?: string;  color?: string;
-}
 
 const navigationItems: NavigationItem[] = [;
   {;
@@ -1071,7 +1070,6 @@ const navigationItems: NavigationItem[] = [;
       }
     ];
   }
-      }
     ];
   }
 const contactInfo = {
@@ -1175,14 +1173,14 @@ const contactInfo = {
       }
     ];
   }
-];
+;
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-}
+
 const socialLinks = [
   {
     name: 'LinkedIn'
@@ -1218,7 +1216,6 @@ const contactInfo = {;
   email: 'kleber@ziontechgroup && ziontechgroup.com',;
   address: '364 E Main St STE 1008 Middletown DE 19709',;
   website: 'https://ziontechgroup && ziontechgroup.com',;
-};
 
 const socialLinks = [;
   {;
@@ -1257,35 +1254,31 @@ const UltraFuturisticNavigation2047 = () => {;
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
   const handleDropdownToggle = (name: string) => {
-    setActiveDropdown(activeDropdown === name ? null : name);  };    setActiveDropdown(activeDropdown === name ? null : name)
+    setActiveDropdown(activeDropdown = = name ? null : name);  };    setActiveDropdown(activeDropdown = = name ? null : name)
   }
-  useEffect(() => {
+  useEffect() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
         setIsOpen(false);
         setActiveDropdown(null);      }
-    }
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);        setActiveDropdown(null)
       }
-    }
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   const handleDropdownToggle = (name: string) => {;
-    setActiveDropdown(activeDropdown === name ? null : name);  };    setActiveDropdown(activeDropdown === name ? null : name);
+    setActiveDropdown(activeDropdown = = name ? null : name);  };    setActiveDropdown(activeDropdown = = name ? null : name);
   };
 
-  useEffect(() => {;
+  useEffect() => {;
     const handleResize = () => {;
       if (window && window.innerWidth >= 1024) {;
         setIsOpen(false);
-        setActiveDropdown(null);      }
-    };
+        setActiveDropdown(null);      };
 
     window && window.addEventListener('resize', handleResize);
     return () => window && window.removeEventListener('resize', handleResize);        setActiveDropdown(null);
-      }
-    };
+      };
 
     window && window.addEventListener('resize', handleResize);
     return () => window && window.removeEventListener('resize', handleResize);
@@ -1303,7 +1296,7 @@ const UltraFuturisticNavigation2047 = () => {;
               <span className='text-xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>                Zion Tech Group  }, []);
 
   }, []);
-;
+
   return (
     <nav className="relative bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1330,7 +1323,6 @@ const UltraFuturisticNavigation2047 = () => {;
             </Link>;
           </div>;
 
-
           {/* Desktop Navigation */}
           <div className='hidden lg:flex lg:items-center lg:space-x-8'>;
             {navigationItems && navigationItems.map(item => (;
@@ -1350,7 +1342,7 @@ const UltraFuturisticNavigation2047 = () => {;
                   <ChevronDown className="w-4 h-4" />
                 </button>
                 <AnimatePresence>
-                  {activeDropdown === item.name && (
+                  {activeDropdown = = item.name && (
                     <motion.div
                   onClick={() => handleDropdownToggle(item && item.name)}
                   className="flex items-center space-x-1 px-3 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200";
@@ -1361,12 +1353,12 @@ const UltraFuturisticNavigation2047 = () => {;
                 </button>;
 
                 <AnimatePresence>;
-                  {activeDropdown === item && item.name && (;
+                  {activeDropdown = = item && item.name && (;
                     <motion&& motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 10 }}
-                      transition={{ duration: 0 && 0.2 }}
+                      initial={ opacity: 0, y: 10 }
+                      animate={ opacity: 1, y: 0 }
+                      exit={ opacity: 0, y: 10 }
+                      transition={ duration: 0 && 0.2 }
                       className='absolute top-full left-0 w-80 bg-slate-800/95 backdrop-blur-md border border-slate-700/50 rounded-xl shadow-2xl p-6 z-50'>;
                       <div className='space-y-4'>;
                         {item && item.children?.map(child => (;
@@ -1392,14 +1384,14 @@ const UltraFuturisticNavigation2047 = () => {;
                               </div>;
                               <p className='text-sm text-gray-400 mt-1'>;
                                 {child && child.description}
-                              </p>                            </div>                    >;
+                              </p>                            </div>;
                       <div className="space-y-4">;
-                        {item && item.children?.map((child) => (;
-                      transition={{ duration: 0.2 }}
+                        {item && item.children?.map(child) => (;
+                      transition={ duration: 0.2 }
                       className="absolute top-full left-0 w-80 bg-slate-800/95 backdrop-blur-md border border-slate-700/50 rounded-xl shadow-2xl p-6 z-50"
                     >
                       <div className="space-y-4">
-                        {item.children?.map((child) => (
+                        {item.children?.map(child) => (
                           <Link
                             key={child && child.name}
                             href={child && child.href}
@@ -1423,13 +1415,13 @@ const UltraFuturisticNavigation2047 = () => {;
                               </p>                              <p className="text-sm text-gray-400 mt-1">{child && child.description}</p>;
                             </div>;
                           </Link>;
-                        ))}
+                        )}
                       </div>;
                     </motion && motion.div>;
                   )}
                 </AnimatePresence>;
               </div>;
-            ))}
+            )}
           </div>
           {/* Contact Info & CTA */}
           <div className='hidden lg:flex lg:items-center lg:space-x-4'>;
@@ -1504,10 +1496,10 @@ const UltraFuturisticNavigation2047 = () => {;
       <AnimatePresence>;
         {isOpen && (;
           <motion&& motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0 && 0.3 }}
+            initial={ opacity: 0, height: 0 }
+            animate={ opacity: 1, height: 'auto' }
+            exit={ opacity: 0, height: 0 }
+            transition={ duration: 0 && 0.3 }
             className='lg:hidden bg-slate-800/95 backdrop-blur-md border-t border-slate-700/50'>;
             <div className='px-2 pt-2 pb-3 space-y-1'>;
               {navigationItems && navigationItems.map(item => (;
@@ -1521,17 +1513,17 @@ const UltraFuturisticNavigation2047 = () => {;
                       <span>{item && item.name}</span>;
                     </div>;
                     <ChevronDown
-                      className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === item && item.name ? 'rotate-180' : ''}`}
+                      className={`w-4 h-4 transition-transform duration-200 ${activeDropdown = = item && item.name ? 'rotate-180' : ''}`}
                     />;
-                  </button>          >;
+                  </button>;
             <div className="px-2 pt-2 pb-3 space-y-1">;
-              {navigationItems && navigationItems.map((item) => (;
+              {navigationItems && navigationItems.map(item) => (;
                 <div key={item && item.name}>;
-            transition={{ duration: 0.3 }}
+            transition={ duration: 0.3 }
             className="lg:hidden bg-slate-800/95 backdrop-blur-md border-t border-slate-700/50"
           >
             <div className="px-2 pt-2 pb-3 space-y-1">
-              {navigationItems.map((item) => (
+              {navigationItems.map(item) => (
                 <div key={item.name}>
                   <button
                     onClick={() => handleDropdownToggle(item.name)}
@@ -1541,10 +1533,10 @@ const UltraFuturisticNavigation2047 = () => {;
                       {item.icon}
                       <span>{item.name}</span>
                     </div>
-                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === item.name ? 'rotate-180' : ''}`} />
+                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown = = item.name ? 'rotate-180' : ''}`} />
                   </button>
                   <AnimatePresence>
-                    {activeDropdown === item.name && (
+                    {activeDropdown = = item.name && (
                       <motion.div
                     onClick={() => handleDropdownToggle(item && item.name)}
                     className="w-full text-left flex items-center justify-between px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-slate-700/50 rounded-md transition-colors duration-200";
@@ -1553,20 +1545,20 @@ const UltraFuturisticNavigation2047 = () => {;
                       {item && item.icon}
                       <span>{item && item.name}</span>;
                     </div>;
-                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === item && item.name ? 'rotate-180' : ''}`} />;
+                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown = = item && item.name ? 'rotate-180' : ''}`} />;
                   </button>;
 
                   <AnimatePresence>;
-                    {activeDropdown === item && item.name && (;
+                    {activeDropdown = = item && item.name && (;
                       <motion&& motion.div
       {/* Mobile Navigation */}
       <AnimatePresence>;
         {is_open && (
           <motion.div;
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
+            initial={ opacity: 0, height: 0 }
+            animate={ opacity: 1, height: 'auto' }
+            exit={ opacity: 0, height: 0 }
+            transition={ duration: 0.3 }
             className='lg:hidden bg - slate - 800 / 95 backdrop - blur - md border - t border - slate - 700 / 50';
           >;
             <div className='px - 2 pt - 2 pb - 3 space - y-1'>;
@@ -1581,11 +1573,11 @@ const UltraFuturisticNavigation2047 = () => {;
                       <span>{item.name}</span>;
                     </div>;
                     <ChevronDown;
-                      className={`w - 4 h - 4 transition - transform duration - 200 ${active_dropdown === item.name ? 'rotate - 180' : ''}`}
+                      className={`w - 4 h - 4 transition - transform duration - 200 ${active_dropdown = = item.name ? 'rotate - 180' : ''}`}
                     />;
-                  </button>          >;
+                  </button>;
             <div className="px - 2 pt - 2 pb - 3 space - y-1">;
-              {navigation_items.map ((item) => (
+              {navigation_items.map (item) => (
                 <div key={item.name}>;
                   <button;
                     on_click={() => handleDropdownToggle (item.name)}
@@ -1595,25 +1587,25 @@ const UltraFuturisticNavigation2047 = () => {;
                       {item.icon}
                       <span>{item.name}</span>;
                     </div>;
-                    <ChevronDown className={`w - 4 h - 4 transition - transform duration - 200 ${active_dropdown === item.name ? 'rotate - 180' : ''}`} />;
+                    <ChevronDown className={`w - 4 h - 4 transition - transform duration - 200 ${active_dropdown = = item.name ? 'rotate - 180' : ''}`} />;
                   </button>;
                   <AnimatePresence>;
-                    {active_dropdown === item.name && (
+                    {active_dropdown = = item.name && (
                       <motion.div;
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: 'auto' }}
-                        exit={{ opacity: 0, height: 0 }}
-                        transition={{ duration: 0 && 0.2 }}
+                        initial={ opacity: 0, height: 0 }
+                        animate={ opacity: 1, height: 'auto' }
+                        exit={ opacity: 0, height: 0 }
+                        transition={ duration: 0 && 0.2 }
                         className='ml-4 mt-2 space-y-1'>;
                         {item && item.children?.map(child => (;
                           <Link
                             key={child && child.name}
                             href={child && child.href}
                             className='block px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-slate-700/50 rounded-md transition-colors duration-200'                            onClick={closeMenu}>;
-                        {item && item.children?.map((child) => (;
+                        {item && item.children?.map(child) => (;
                         className="ml-4 mt-2 space-y-1"
                       >
-                        {item.children?.map((child) => (
+                        {item.children?.map(child) => (
                           <Link
                             key={child && child.name}
                             href={child && child.href}
@@ -1624,12 +1616,12 @@ const UltraFuturisticNavigation2047 = () => {;
                             onClick={closeMenu}>;
                             {child && child.name}
                           </Link>;
-                        ))}
+                        )}
                       </motion && motion.div>;
                     )}
                   </AnimatePresence>;
                 </div>;
-              ))}
+              )}
 
               {/* Mobile Contact Info */}
               <div className='pt-4 pb-3 border-t border-slate-700/50'>;
@@ -1719,26 +1711,21 @@ const UltraFuturisticNavigation2047 = () => {;
       </AnimatePresence>;
     </nav>;
   );
-};
 
 export default UltraFuturisticNavigation2047;  );
-}
+
 export default UltraFuturisticNavigation2047;  )
-}
-};
+
+;
 
 export default UltraFuturisticNavigation2047;  );
-};
 
 export default UltraFuturisticNavigation2047;
 
           </motion.div>)}
       </AnimatePresence>;
     </nav>);
-}
-;
+
 export default UltraFuturisticNavigation2047);
-}
-;
+
 export default UltraFuturisticNavigation2047;
-;

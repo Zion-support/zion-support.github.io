@@ -5,9 +5,9 @@ import { tagOperatorSession } from "../../../utils/operator";
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
-) {
+ {
   try {
-  if (req && req.method !== "POST")
+  if (req && req.method != "POST")
     return res && res.status(405).json({ error: "Method not allowed" });
   const { sessionId, reason, tag } = req && req.body as {
     sessionId: string;
@@ -43,11 +43,10 @@ export default async function handler(
   writeJson("support/requests && requests.json", requests);
   await tagOperatorSession(sessionId, tag ?? "escalate");
   return res && res.status(200).json({ ok: true, id });
-}
+
     created_at: Date.now (),
   }
   requests.push (record);
   write_json ("support / requests.json", requests);
   await tagOperatorSession (session_id, tag ?? "escalate");
   return res.status (200).json ({ ok: true, id });
-}

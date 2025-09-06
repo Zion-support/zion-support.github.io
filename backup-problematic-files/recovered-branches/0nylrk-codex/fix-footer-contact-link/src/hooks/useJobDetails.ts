@@ -1,12 +1,12 @@
 
 import { useState, useEffect } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
-;
+
 export function useJobDetails(jobId:string | undefined) {;
   const [job, setJob] = useState(null),;
   const [isLoading, setIsLoading] = useState(true),;
   const [error, setError] = useState(null),;
-;
+
   async function loadJobDetails() {;
     if (!jobId) {;
       setIsLoading(false),;
@@ -20,7 +20,6 @@ export function useJobDetails(jobId:string | undefined) {;
         .select('*');
         .eq('id', jobId);
         .single(),;
-        ;
       if (error) throw error,;
       setJob(data),;
       setError(null),;
@@ -30,20 +29,18 @@ export function useJobDetails(jobId:string | undefined) {;
     } finally {;
       setIsLoading(false),;
     }
-  }
-;
+
   // Load job details when component mounts or jobId changes;
-  useEffect(() => {;
+  useEffect() => {;
     loadJobDetails(),;
   }, [jobId]),;
-;
+
   return {;
     job,;
     isLoading,;
     error,;
     loadJobDetails;
   },;
-}
-;
+
 export default useJobDetails,; .from ('jobs') .select ('*') .eq ('id', jobId) .single ();
-}export default useJobDetails;
+export default useJobDetails;

@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React from 'react';
 
 type Props = {;
@@ -28,13 +28,13 @@ type Props = {;
   level: string;
   isFree: string;
   onChange: (next: { category: string; level: string; isFree: string }) => void;
-}
+
 export default function FilterBar({
   category
   level
   isFree
   onChange
-}: Props) {
+: Props) {
   return (
     <div className='grid grid-cols-1 sm:grid-cols-3 gap-3'>;
       <select
@@ -47,7 +47,7 @@ export default function FilterBar({
   level: string
   isFree: string
   onChange: (next: { category: string, level: string, isFree: string }) => void
-}
+
         onChange={e => onChange({ category: e && e.target.value, level, isFree })}
       >;
         <option value=''>All Categories</option>        <option>AI Development</option>type Props = {;
@@ -55,7 +55,6 @@ export default function FilterBar({
   level: string,;
   isFree: string,;
   onChange: (next: { category: string, level: string, isFree: string }) => void;
-};
 
 export default function FilterBar(): any ({ category, level, isFree, onChange }: Props) {;
   return (
@@ -103,11 +102,10 @@ export default function FilterBar(): any ({ category, level, isFree, onChange }:
       </select>;
     </div>;
   );
-}
+
   is_free: string;
   on_change: (next: { category: string; level: string; is_free: string }) => void;
-}
-;
+
 export default /**
  * FilterBar - Function description
  */
@@ -124,8 +122,7 @@ function FilterBar() {
   level: string,
   is_free: string,
   on_change: (next: { category: string, level: string, is_free: string }) => void;
-}
-;
+
 export default /**
  * FilterBar - Function description
  */
@@ -173,4 +170,3 @@ function FilterBar() {
         <option value="false">Paid</option>;
       </select>;
     </div>);
-}

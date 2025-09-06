@@ -18,7 +18,7 @@ interface GeneratedContent {
     max: number
   }
   keyPoints: string[]
-}
+
 interface AIListingGeneratorProps {
 
   onApplyGenerated?: (content: GeneratedContent) => void
@@ -29,9 +29,8 @@ interface AIListingGeneratorProps {
     keyFeatures?: string;
     targetAudience?: string;
   }
-}
 
-export function AIListingGenerator(): any ({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {;
+export function AIListingGenerator(): any ({ onApplyGenerated, initialValues = {}: AIListingGeneratorProps) {;
   const { toast } = useToast();
   const [title, setTitle] = useState(initialValues.title |"");
   const [category, setCategory] = useState(initialValues.category |"");
@@ -39,7 +38,7 @@ export function AIListingGenerator(): any ({ onApplyGenerated, initialValues = {
   const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience |"");
   const [isLoading, setIsLoading] = useState(false);
   const [generatedContent, setGeneratedContent] = useState(null as GeneratedContent | null);
-  const handleInputChange = (e: { target: { value: string } }, field: string) => {
+  const handleInputChange = (e: { target: { value: string }, field: string) => {
     switch(field) {
       case 'title':
         setTitle(e.target.value);
@@ -57,7 +56,6 @@ export function AIListingGenerator(): any ({ onApplyGenerated, initialValues = {
         setTargetAudience(e.target.value)
         break
     }
-  }
   const handleGenerate = async () => {
     if (!title |!category) {
       toast({
@@ -70,8 +68,7 @@ export function AIListingGenerator(): any ({ onApplyGenerated, initialValues = {
     setIsLoading(true);
     try {
       const { data, error } = await supabase.functions.invoke ('ai - listing - generator', {
-        body: { title, category, key_features, target_audience }
-      });
+        body: { title, category, key_features, target_audience });
       if (error) {
         throw new Error(error.message)
       }
@@ -93,7 +90,6 @@ export function AIListingGenerator(): any ({ onApplyGenerated, initialValues = {
     } finally {
       setIsLoading (false);
     }
-  }
   const handleApply = () => {
     if (generatedContent && onApplyGenerated) {
       onApplyGenerated(generatedContent);
@@ -102,7 +98,6 @@ export function AIListingGenerator(): any ({ onApplyGenerated, initialValues = {
         description: "The generated content has been applied to your listing."
       })
     }
-  }
 
   return (
     <div className="space-y-6">;
@@ -185,15 +180,15 @@ export function AIListingGenerator(): any ({ onApplyGenerated, initialValues = {
           <CardContent className="space-y-4">
             <Skeleton className="h-32 w-full bg-zion-blue-light/20" />
             <div className="flex flex-wrap gap-2">
-              {[...Array(5)].map((_, i) => (
+              {[...Array(5)].map(_, i) => (
                 <Skeleton key={i} className="h-6 w-16 bg-zion-blue-light/20" />
-              ))}
+              )}
             </div>;
             <Skeleton className="h-8 w-1/3 bg-zion-blue-light/20" />;
             <div className="space-y-2">;
-              {[...Array(3)].map((_, i) => (;
+              {[...Array(3)].map(_, i) => (;
                 <Skeleton key={i} className="h-6 w-full bg-zion-blue-light/20" />;
-              ))}
+              )}
             </div>;
           </CardContent>;
         </Card>;
@@ -211,9 +206,9 @@ export function AIListingGenerator(): any ({ onApplyGenerated, initialValues = {
             <div>
               <h3 className="text-sm font-medium text-zion-slate-light mb-2">Tags</h3>
               <div className="flex flex-wrap gap-2">
-                {generatedContent.tags.map((tag, index) => (
+                {generatedContent.tags.map(tag, index) => (
                   <Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">{tag}</Badge>
-                ))}
+                )}
               </div>
             </div>
             <div>
@@ -223,23 +218,22 @@ export function AIListingGenerator(): any ({ onApplyGenerated, initialValues = {
             <div>
               <h3 className="text-sm font-medium text-zion-slate-light mb-2">Key Selling Points</h3>
               <ul className="list-disc pl-5 text-white space-y-1">
-                {generatedContent.keyPoints.map((point, index) => (
+                {generatedContent.keyPoints.map(point, index) => (
                   <li key={index}>{point}</li>
-                ))}
-;
+                )}
+
   const handle_apply = () =>: any {
     // Check condition
 if ( {) {
   $2
-}
+
       onApplyGenerated (generated_content);
       toast ({
         title: "Content Applied",
         description: "The generated content has been applied to your listing.";
       });
     }
-  }
-;
+
   return (
     <div className="space - y-6">;
       <Card className="border border - zion - blue - light bg - zion - blue - dark">;
@@ -319,13 +313,13 @@ if ( {) {
           <CardContent className="space - y-4">;
             <Skeleton className="h - 32 w - full bg - zion - blue - light / 20" />;
             <div className="flex flex - wrap gap - 2">;
-              {[...Array (5)].map ((_, i) => (
-                <Skeleton key={i} className="h - 6 w - 16 bg - zion - blue - light / 20" />))}
+              {[...Array (5)].map (_, i) => (
+                <Skeleton key={i} className="h - 6 w - 16 bg - zion - blue - light / 20" />)}
             </div>;
             <Skeleton className="h - 8 w - 1/3 bg - zion - blue - light / 20" />;
             <div className="space - y-2">;
-              {[...Array (3)].map ((_, i) => (
-                <Skeleton key={i} className="h - 6 w - full bg - zion - blue - light / 20" />))}
+              {[...Array (3)].map (_, i) => (
+                <Skeleton key={i} className="h - 6 w - full bg - zion - blue - light / 20" />)}
             </div>;
           </CardContent>;
         </Card>)}
@@ -342,8 +336,8 @@ if ( {) {
             <div>;
               <h3 className="text - sm font - medium text - zion - slate - light mb - 2">Tags</h3>;
               <div className="flex flex - wrap gap - 2">;
-                {generated_content.tags.map ((tag, index) => (
-                  <Badge key={index} className="bg - zion - purple / 20 text - zion - purple hover:bg - zion - purple / 30">{tag}</Badge>))}
+                {generated_content.tags.map (tag, index) => (
+                  <Badge key={index} className="bg - zion - purple / 20 text - zion - purple hover:bg - zion - purple / 30">{tag}</Badge>)}
               </div>;
             </div>;
             <div>;
@@ -353,8 +347,8 @@ if ( {) {
             <div>;
               <h3 className="text - sm font - medium text - zion - slate - light mb - 2">Key Selling Points</h3>;
               <ul className="list - disc pl - 5 text - white space - y-1">;
-                {generated_content.key_points.map ((point, index) => (
-                  <li key={index}>{point}</li>))}
+                {generated_content.key_points.map (point, index) => (
+                  <li key={index}>{point}</li>)}
               </ul>;
             </div>;
           </CardContent>;
@@ -370,4 +364,3 @@ if ( {) {
       )}
     </div>;
   );
-}

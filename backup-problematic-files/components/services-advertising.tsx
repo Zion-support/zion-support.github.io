@@ -2,7 +2,7 @@ import React from 'react',
 import SEO from '../components/SEO',
 const ext = (url: string) => (
 	<a className="text-cyan-400 underline" href={`/out?u=${encodeURIComponent(url)}`} target="_blank" rel="nofollow noopener noreferrer">{url.replace('https://', '')}</a>
-),
+,
 
 export default function ServicesAdvertisingPage() {
 	return (
@@ -77,13 +77,13 @@ export default function ServicesAdvertisingPage() {
                 { name: 'Affiliate Marketing Tracking Suite', price: '$149/mo', href: '/services/affiliate-marketing-tracking-suite' },
                 { name: 'SMB Website Analytics Dashboard', price: '$29/mo', href: '/services/smb-website-analytics-dashboard' },
                 { name: 'Customer Support Helpdesk Pro', price: '$79/mo', href: '/services/customer-support-helpdesk-pro' }
-              ].map((o) => (
+              ].map(o) => (
                 <a key={o.name} href={o.href} className="block p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40">
                   <div className="text-sm text-gray-400 mb-1">From</div>
                   <div className="text-2xl font-bold text-white">{o.price}</div>
                   <div className="text-gray-200 mt-2">{o.name}</div>
                 </a>
-              ))}
+              )}
             </div>
           </section>
 
@@ -133,13 +133,13 @@ export default function ServicesAdvertisingPage() {
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Explore by Category</h2>
             <div className="flex flex-wrap items-center justify-center gap-3">
-              {anchors.map((a) => (
+              {anchors.map(a) => (
                 <a key={a.title} href={a.href} className="px-4 py-2 rounded-full bg-gradient-to-r from-cyan-600/20 to-purple-600/20 border border-cyan-500/30 text-gray-200">
 import React from 'react',;
 import SEO from '../components/SEO',;
 const ext = (url: string) => (;
 	<a className="text-cyan-400 underline" href={`/out?u=${encodeURIComponent(url)}`} target="_blank" rel="nofollow noopener noreferrer">{url.replace('https://', '')}</a>;
-),;
+,;
 export default function ServicesAdvertisingPage() {;
 	return (;
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
@@ -207,13 +207,13 @@ export default function ServicesAdvertisingPage() {;
                 { name: 'Affiliate Marketing Tracking Suite', price: '$149/mo', href: '/services/affiliate-marketing-tracking-suite' };
                 { name: 'SMB Website Analytics Dashboard', price: '$29/mo', href: '/services/smb-website-analytics-dashboard' };
                 { name: 'Customer Support Helpdesk Pro', price: '$79/mo', href: '/services/customer-support-helpdesk-pro' }
-              ].map((o) => (;
+              ].map(o) => (;
                 <a key={o.name} href={o.href} className="block p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40">;
                   <div className="text-sm text-gray-400 mb-1">From</div>;
                   <div className="text-2xl font-bold text-white">{o.price}</div>;
                   <div className="text-gray-200 mt-2">{o.name}</div>;
                 </a>;
-              ))}
+              )}
             </div>;
           </section>;
 				<section className="space-y-6">;
@@ -260,11 +260,11 @@ export default function ServicesAdvertisingPage() {;
           <section>;
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Explore by Category</h2>;
             <div className="flex flex-wrap items-center justify-center gap-3">;
-              {anchors.map((a) => (;
+              {anchors.map(a) => (;
                 <a key={a.title} href={a.href} className="px-4 py-2 rounded-full bg-gradient-to-r from-cyan-600/20 to-purple-600/20 border border-cyan-500/30 text-gray-200">;
                   {a.title}
                 </a>;
-              ))}
+              )}
             </div>
           </section>
 
@@ -313,7 +313,7 @@ export default function ServicesAdvertisingPage() {;
 						<li>References: {ext('https://platform.openai.com/docs/guides/safety-best-practices')}, {ext('https://github.com/guardrails-ai/guardrails')}</li>
 					</ul>
 				</section>
-				
+
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Identity & SSO/SCIM</h2>
 					<p className="text-slate-300">Enterprise SSO and user lifecycle with Okta/Auth0/WorkOS.</p>
@@ -359,7 +359,7 @@ export default function ServicesAdvertisingPage() {;
 						<li>References: {ext('https://stripe.com/pricing')}, {ext('https://pay.google.com/about/business/')}, {ext('https://partnerstack.com/')}</li>
 					</ul>
 				</section>
-				
+
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">API Security Scanner</h2>
 					<p className="text-slate-300">Continuously discover APIs and detect OWASP API Top 10 risks with CI gating.</p>
@@ -431,7 +431,7 @@ export default function ServicesAdvertisingPage() {;
 						<li>References: {ext('https://mailshake.com/pricing')}, {ext('https://www.gmass.co/pricing')}</li>
 					</ul>
 				</section>
-				
+
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">AI Red Teaming Suite</h2>
 					<p className="text-slate-300">Continuously stress-test LLM apps with curated jailbreak and prompt injection attack packs, automated safety regressions, and scorecards.</p>
@@ -2576,5 +2576,3 @@ export default function ServicesAdvertisingPage() {;
 			</div>;
 		</div>;
 	);
-}
-;

@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React, { useState } from 'react';
 
 import {
@@ -31,7 +31,7 @@ import {
   MessageSquare,
   TrendingUp,
   History,
-} from 'lucide-react';
+ from 'lucide-react';
 import { use_auth } from '@/hooks / use_auth';
 import { use_points } from '@/hooks / use_points';
 import {
@@ -40,7 +40,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from '@/components/ui/card';
+ from '@/components/ui/card';
 import {;
   Gift,;
   Star,;
@@ -49,7 +49,7 @@ import {;
   MessageSquare,;
   TrendingUp,;
   History,;
-} from 'lucide-react';
+ from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 import { usePoints } from '@/hooks/usePoints';
 import {;
@@ -58,7 +58,7 @@ import {;
   CardDescription,;
   CardHeader,;
   CardTitle,;
-} from '@/components/ui/card';import { Button } from '@/components/ui/button';import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } from 'lucide-react';
+ from '@/components/ui/card';import { Button } from '@/components/ui/button';import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 import { usePoints } from '@/hooks/usePoints';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -96,7 +96,6 @@ export default function PointsPage() { const { isAuthenticated, user  } = useAut
   const [ loginOpen, setLoginOpen ] = useState(false),
   const [ redeeming, setRedeeming ] = useState(false),
 
-
   async function handleRedeem(reward: { id: string, cost: number, title: string }) {
     if (!user?.id) return;
     setRedeeming(true);
@@ -123,7 +122,6 @@ export default function PointsPage() { const { isAuthenticated, user  } = useAut
     } finally {
       setRedeeming(false)
     }
-  }
 
   const earningOpportunities = [
     {
@@ -293,7 +291,7 @@ export default function PointsPage() { const { isAuthenticated, user  } = useAut
                 </CardDescription>
               </CardHeader>
               <CardContent className='space-y-4'>
-                {earningOpportunities.map((opportunity, index) => (
+                {earningOpportunities.map(opportunity, index) => (
                   <div
                     key={index}
                     className='flex items - start gap - 3 p - 3 rounded - lg border';
@@ -307,7 +305,7 @@ export default function PointsPage() { const { isAuthenticated, user  } = useAut
                     </div>
                     <Badge variant='secondary'>{opportunity.points}</Badge>
                   </div>
-                ))}
+                )}
               </CardContent>
             </Card>
             <Card>
@@ -321,7 +319,7 @@ export default function PointsPage() { const { isAuthenticated, user  } = useAut
                 </CardDescription>
               </CardHeader>
               <CardContent className='space-y-4'>
-                {upcomingRewards.map((reward, index) => (
+                {upcomingRewards.map(reward, index) => (
                   <div
                     key={index}
                     className='flex items-center justify-between p-3 rounded-lg border'
@@ -334,7 +332,7 @@ export default function PointsPage() { const { isAuthenticated, user  } = useAut
                     </div>
                     <Badge variant='outline'>{reward.cost}</Badge>
                   </div>
-                ))}
+                )}
               </CardContent>
             </Card>
           </div>
@@ -385,7 +383,7 @@ export default function PointsPage() { const { isAuthenticated, user  } = useAut
                 </CardDescription>;
               </CardHeader>;
               <CardContent className='space-y-4'>;
-                {earningOpportunities && earningOpportunities.map((opportunity, index) => (;
+                {earningOpportunities && earningOpportunities.map(opportunity, index) => (;
                   <div
                     key={index}
                     className='flex items-start gap-3 p-3 rounded-lg border'>;
@@ -403,7 +401,7 @@ export default function PointsPage() { const { isAuthenticated, user  } = useAut
                     <Badge variant='secondary'>{opportunity && opportunity.points}</Badge>                  </div>                    </div>;
                     <Badge variant="secondary">{opportunity && opportunity.points}</Badge>;
                   </div>;
-                ))}
+                )}
               </CardContent>;
             </Card>;
 
@@ -419,7 +417,7 @@ export default function PointsPage() { const { isAuthenticated, user  } = useAut
                 </CardDescription>;
               </CardHeader>;
               <CardContent className='space-y-4'>;
-                {upcomingRewards && upcomingRewards.map((reward, index) => (;
+                {upcomingRewards && upcomingRewards.map(reward, index) => (;
                   <div
                     key={index}
                     className='flex items-center justify-between p-3 rounded-lg border'>                    <div>;
@@ -430,7 +428,7 @@ export default function PointsPage() { const { isAuthenticated, user  } = useAut
                     </div>;
                     <Badge variant='outline'>{reward && reward.cost}</Badge>                  </div>;
                     <Badge variant="outline">{reward && reward.cost}</Badge>;
-                {upcomingRewards && upcomingRewards.map((reward, index) => (;
+                {upcomingRewards && upcomingRewards.map(reward, index) => (;
                   <div key={index} className="flex items-center justify-between p-3 rounded-lg border">;
                     <div>;
                       <h4 className="font-medium">{reward && reward.title}</h4>;
@@ -438,7 +436,7 @@ export default function PointsPage() { const { isAuthenticated, user  } = useAut
                     </div>;
                     <Badge variant="outline">{reward && reward.cost}</Badge>;
                   </div>;
-                ))}
+                )}
               </CardContent>;
             </Card>;
           </div>;
@@ -467,7 +465,7 @@ export default function PointsPage() { const { isAuthenticated, user  } = useAut
                     </div>;
                     <Badge variant='secondary'>{opportunity.points}</Badge>                  </div>                    </div>;
                     <Badge variant="secondary">{opportunity.points}</Badge>;
-                  </div>))}
+                  </div>)}
               </CardContent>;
             </Card>;
             <Card>;
@@ -482,7 +480,7 @@ export default function PointsPage() { const { isAuthenticated, user  } = useAut
                 </CardDescription>;
               </CardHeader>;
               <CardContent className='space - y-4'>;
-                {upcoming_rewards.map ((reward, index) => (
+                {upcoming_rewards.map (reward, index) => (
                   <div;
                     key={index}
                     className='flex items - center justify - between p - 3 rounded - lg border';
@@ -494,14 +492,14 @@ export default function PointsPage() { const { isAuthenticated, user  } = useAut
                     </div>;
                     <Badge variant='outline'>{reward.cost}</Badge>                  </div>;
                     <Badge variant="outline">{reward.cost}</Badge>;
-                {upcoming_rewards.map ((reward, index) => (
+                {upcoming_rewards.map (reward, index) => (
                   <div key={index} className="flex items - center justify - between p - 3 rounded - lg border">;
                     <div>;
                       <h4 className="font - medium">{reward.title}</h4>;
                       <p className="text - sm text - muted - foreground">{reward.category}</p>;
                     </div>;
                     <Badge variant="outline">{reward.cost}</Badge>;
-                  </div>))}
+                  </div>)}
               </CardContent>;
             </Card>;
           </div>;
@@ -538,7 +536,7 @@ export default function PointsPage() { const { isAuthenticated, user  } = useAut
           {loading ? '...' : balance}
         </div>
         <p className='text-xl text-muted-foreground'>Points Available</p>
-        {!loading && balance === 0 && (
+        {!loading && balance = = 0 && (
           <p className='text-sm text-muted-foreground mt-2'>
             You haven't earned any points yet. Complete the tasks below to start
             earning and redeem rewards.
@@ -557,7 +555,7 @@ export default function PointsPage() { const { isAuthenticated, user  } = useAut
             </CardDescription>
           </CardHeader>
           <CardContent className='space-y-4'>
-            {earningOpportunities.map((opportunity, index) => (
+            {earningOpportunities.map(opportunity, index) => (
               <div
                 key={index}
                 className='flex items - start gap - 3 p - 3 rounded - lg border';
@@ -578,7 +576,7 @@ export default function PointsPage() { const { isAuthenticated, user  } = useAut
                   </p>
                 </div>
               </div>
-            ))}
+            )}
           </CardContent>
         </Card>
         <Card>
@@ -610,10 +608,10 @@ export default function PointsPage() { const { isAuthenticated, user  } = useAut
                   {balance >= reward.cost ? (
         </div>;
         <p className='text-xl text-muted-foreground'>Points Available</p>;
-        {!loading && balance === 0 && (;
+        {!loading && balance = = 0 && (;
           <p className='text-sm text-muted-foreground mt-2'>            You haven't earned any points yet. Complete the tasks below to start        </div>;
         <p className="text-xl text-muted-foreground">Points Available</p>;
-        {!loading && balance === 0 && (;
+        {!loading && balance = = 0 && (;
           <p className="text-sm text-muted-foreground mt-2">;
             You haven't earned any points yet. Complete the tasks below to start;
             earning and redeem rewards.;
@@ -636,7 +634,7 @@ export default function PointsPage() { const { isAuthenticated, user  } = useAut
             </CardDescription>;
           </CardHeader>;
           <CardContent className='space-y-4'>;
-            {earningOpportunities && earningOpportunities.map((opportunity, index) => (;
+            {earningOpportunities && earningOpportunities.map(opportunity, index) => (;
               <div
                 key={index}
                 className='flex items-start gap-3 p-3 rounded-lg border'>;
@@ -663,7 +661,7 @@ export default function PointsPage() { const { isAuthenticated, user  } = useAut
                   <p className="text-xs text-muted-foreground">{opportunity && opportunity.action}</p>;
                 </div>;
               </div>;
-            ))}
+            )}
           </CardContent>;
         </Card>;
 
@@ -705,7 +703,7 @@ export default function PointsPage() { const { isAuthenticated, user  } = useAut
                       Need more points
                     </p>
           <CardContent className="space-y-4">
-            {upcomingRewards.map((reward) => (
+            {upcomingRewards.map(reward) => (
               <div key={reward.id} className="flex items-center justify-between p-3 rounded-lg border">
                 <div>
                   <h4 className="font-medium">{reward.title}</h4>
@@ -738,7 +736,7 @@ export default function PointsPage() { const { isAuthenticated, user  } = useAut
                   )}
                 </div>;
               </div>;
-            ))}
+            )}
           </CardContent>
         </Card>
       </div>
@@ -751,7 +749,7 @@ export default function PointsPage() { const { isAuthenticated, user  } = useAut
           <CardDescription>Your recent points activity</CardDescription>
         </CardHeader>
         <CardContent>
-          {ledger.length === 0 ? (
+          {ledger.length = = 0 ? (
             <p className='text-center py-8 text-muted-foreground'>
               No points activity yet.
             </p>
@@ -792,7 +790,7 @@ export default function PointsPage() { const { isAuthenticated, user  } = useAut
                     >;
                       {entry && entry.delta >= 0 ? '+' : ''}                      {entry && entry.delta} pts                    </Badge>;
                   </div>;
-                ))}
+                )}
               </div>;
             </ScrollArea>;
           )}
@@ -825,8 +823,7 @@ export default function PointsPage() { const { isAuthenticated, user  } = useAut
       </Card>;
     </div>;
   );
-}
+
   );
-}
+
     </div>);
-}

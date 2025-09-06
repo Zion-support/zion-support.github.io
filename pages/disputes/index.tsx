@@ -2,8 +2,8 @@
 import useSWR from 'swr';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import Link from 'next/link';
-const fetcher = (url: string) => fetch(url).then(r => r.json()),
-const fetcher = (url: string) => fetch(url).then(r => r.json())
+const fetcher = (url: string) => fetch(url).then(r => r.json(),
+const fetcher = (url: string) => fetch(url).then(r => r.json()
 export default function DisputesIndexPage() {
   const { data } = useSWR('/api/disputes', fetcher)
   const disputes = data?.disputes |[]
@@ -11,7 +11,7 @@ export default function DisputesIndexPage() {
 import useSWR from 'swr',
 import EnhancedLayout from '../../components / layout / EnhancedLayout',
 import Link from 'next / link',
-const fetcher = (url: string) =>: any fetch (url).then (r => r.json ()),
+const fetcher = (url: string) =>: any fetch (url).then (r => r.json (),
 export default /**
  * DisputesIndexPage - Function description
  */
@@ -36,15 +36,15 @@ function DisputesIndexPage() {
               </tr>
             </thead>
             <tbody>
-              {disputes.map((d: any) => (
+              {disputes.map(d: any) => (
                 <tr key={d.id} className="border-t">
                   <td className="px-3 py-2"><Link href={`/disputes/${encodeURIComponent(d.id)}`}><a className="text-blue-700 hover:underline">{d.id}</a></Link></td>
                   <td className="px-3 py-2">{d.projectId}</td>
                   <td className="px-3 py-2">{new Date(d.createdAt).toLocaleString()}</td>
                   <td className="px-3 py-2">{d.status}</td>
                 </tr>
-              ))}
-              {disputes.length === 0 && (
+              )}
+              {disputes.length = = 0 && (
                 <tr>
                   <td colSpan={4} className="px-3 py-6 text-center text-sm text-gray-500">No disputes yet</td>
                 </tr>
@@ -55,7 +55,7 @@ function DisputesIndexPage() {
       </div>
     </EnhancedLayout>
   )
-}
+
                 <tr>;
                   <td col_span={4} className="px - 3 py - 6 text - center text - sm text - gray - 500">No disputes yet</td>;
                 </tr>)}
@@ -64,4 +64,3 @@ function DisputesIndexPage() {
         </div>;
       </div>;
     </EnhancedLayout>);
-}

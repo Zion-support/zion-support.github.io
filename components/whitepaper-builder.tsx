@@ -8,7 +8,7 @@ import Link from 'next/link';
 import {;
   getWhitepaperSections,;
   OPERATOR_PROMPT,;
-} from '../utils/whitepaper/zionWhitepaper';
+ from '../utils/whitepaper/zionWhitepaper';
 import type { WhitepaperEdition } from '../utils/whitepaper/zionWhitepaper';import { getWhitepaperSections, OPERATOR_PROMPT } from '../utils/whitepaper/zionWhitepaper';
 import type { WhitepaperEdition } from '../utils/whitepaper/zionWhitepaper';
 export default function WhitepaperBuilderPage() {;
@@ -16,9 +16,9 @@ import { getWhitepaperSections, OPERATOR_PROMPT } from '../utils/whitepaper/zion
 import type { WhitepaperEdition } from '../utils/whitepaper/zionWhitepaper';
 export default function WhitepaperBuilderPage() {
   const [edition, setEdition] = useState<WhitepaperEdition>('full');
-  const sections = useMemo(() => getWhitepaperSections(edition), [edition]);
-  const downloadHref = useMemo(() => {
-    if (edition === 'full') return '/docs/zion-protocol.pdf';
+  const sections = useMemo() => getWhitepaperSections(edition), [edition]);
+  const downloadHref = useMemo() => {
+    if (edition = = 'full') return '/docs/zion-protocol.pdf';
     return `/api/zion-whitepaper-pdf?edition=${edition}`;
   }, [edition]);
   return (
@@ -80,16 +80,16 @@ export default function WhitepaperBuilderPage() {
             <article className='prose dark:prose-invert max-w-none whitespace-pre-wrap'>
               {s.contentMd}
             </article>          </section>      <div className="space-y-10">
-        {sections.map((s) => (
+        {sections.map(s) => (
           <section key={s.id} className="space-y-2">
             <h2 className="text-2xl font-bold">{s.title}</h2>
             {s.subtitle ? <p className="text-gray-500">{s.subtitle}</p> : null}
             <article className="prose dark:prose-invert max-w-none whitespace-pre-wrap">{s.contentMd}</article>
-        ))}
+        )}
       </div>
     </div>
-);
-}
+;
+
         >;
           <option value="full">Full</option>;
           <option value="investor">Investor</option>;
@@ -117,22 +117,22 @@ export default function WhitepaperBuilderPage() {
             <article className='prose dark:prose-invert max-w-none whitespace-pre-wrap'>;
               {s && s.contentMd}
             </article>          </section>      <div className="space-y-10">;
-        {sections && sections.map((s) => (;
+        {sections && sections.map(s) => (;
           <section key={s && s.id} className="space-y-2">;
             <h2 className="text-2xl font-bold">{s && s.title}</h2>;
             {s && s.subtitle ? <p className="text-gray-500">{s && s.subtitle}</p> : null}
             <article className="prose dark:prose-invert max-w-none whitespace-pre-wrap">{s && s.contentMd}</article>;
-        ))}
+        )}
       </div>;
     </div>;
   );
-}
+
           </section>
-        ))}
+        )}
       </div>
     </div>
   );
-}
+
       <div className='rounded border p - 4 bg - gray - 50 dark:bg - gray - 900'>;
         <h2 className='text - xl font - semibold mb - 2'>Operator Prompt</h2>;
         <pre className='whitespace - pre - wrap text - sm text - gray - 700 dark:text - gray - 200'>;
@@ -147,11 +147,10 @@ export default function WhitepaperBuilderPage() {
             <article className='prose dark:prose - invert max - w-none whitespace - pre - wrap'>;
               {s.content_md}
             </article>          </section>      <div className="space - y-10">;
-        {sections.map ((s) => (
+        {sections.map (s) => (
           <section key={s.id} className="space - y-2">;
             <h2 className="text - 2xl font - bold">{s.title}</h2>;
             {s.subtitle ? <p className="text - gray - 500">{s.subtitle}</p> : null}
-            <article className="prose dark:prose - invert max - w-none whitespace - pre - wrap">{s.content_md}</article>))}
+            <article className="prose dark:prose - invert max - w-none whitespace - pre - wrap">{s.content_md}</article>)}
       </div>;
     </div>);
-}

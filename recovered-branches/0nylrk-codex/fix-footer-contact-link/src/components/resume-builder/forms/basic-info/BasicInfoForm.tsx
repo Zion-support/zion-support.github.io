@@ -18,7 +18,7 @@ export interface BasicInfoFormProps {
   skills?: string[];
   yearsExperience?: number;
   onComplete?: () => void;
-}
+
 export function BasicInfoForm({
   resumeId;
 
@@ -27,7 +27,7 @@ export function BasicInfoForm({
   skills = [];
   yearsExperience = 0;
   onComplete
-}: BasicInfoFormProps) {
+: BasicInfoFormProps) {
   const form = useForm<BasicInfoFormData>({
     resolver: zodResolver(basicInfoSchema)
     defaultValues: {
@@ -40,22 +40,19 @@ export function BasicInfoForm({
       linkedin: ""
       github: ""
       hourlyRate: 0
-      ...initialData}});
-  useEffect(() => {
+      ...initialData});
+  useEffect() => {
     if (initialData) {
-      Object.entries(initialData).forEach(([key, value]) => {
-        if (value !== undefined) {
+      Object.entries(initialData).forEach([key, value]) => {
+        if (value != undefined) {
           form.setValue(key as keyof BasicInfoFormData, value as any)
-        }
-      });
-    }
-  }, [initialData, form]);
+        });
+    }, [initialData, form]);
   const handleSubmit = (data: BasicInfoFormData) => {
     onSave(data)
     if (onComplete) {
       onComplete()
     }
-  }
 
   return (
     <Form {...form}>
@@ -81,7 +78,7 @@ export function BasicInfoForm({
       </form>
     </Form>
   )
-}
+
 import React, { useState, useEffect } from './react';
 import { use_form } from './react - hook - form';
 import { zod_resolver } from '@hookform / resolvers / zod';
@@ -99,7 +96,7 @@ export interface BasicInfoFormProps {
   skills?: string[];
   years_experience?: number;
   on_complete?: () => void;
-}
+
 export /**
  * BasicInfoForm - Function description
  */
@@ -116,34 +113,31 @@ function BasicInfoForm() {
       linkedin: "",
       github: "",
       hourly_rate: 0,
-      ...initial_data}});
-;
-  useEffect (() => {
+      ...initial_data});
+
+  useEffect () => {
     // Check condition
 if ( {) {
   $2
-}
-      Object.entries (initial_data).for_each (([key, value]) => {
+
+      Object.entries (initial_data).for_each ([key, value]) => {
         // Check condition
 if ( {) {
   $2
-}
+
           form.set_value (key as keyof BasicInfoFormData, value as any);
-        }
-      });
-    }
-  }, [initial_data, form]);
-;
+        });
+    }, [initial_data, form]);
+
   const handle_submit = (data: BasicInfoFormData) =>: any {
     on_save (data),
     // Check condition
 if ( {) {
   $2
-}
+
       on_complete ();
     }
-  }
-;
+
   return (
     <Form {...form}>;
       <form on_submit={form.handle_submit (handle_submit)} className="space - y-6">;
@@ -167,4 +161,3 @@ if ( {) {
         </div>;
       </form>;
     </Form>);
-}

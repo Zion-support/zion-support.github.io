@@ -42,7 +42,7 @@ import {
   Database, 
   CheckCircle, 
   ArrowRight 
-} from 'lucide-react';
+ from 'lucide-react';
 
 const features = [
   {
@@ -75,7 +75,7 @@ const features = [
     title: 'Data Analytics',
     description: 'Government data analysis and reporting tools'
   }
-;];
+];
 const solutions = [;
   'Citizen Portal Development',',
   'Government Data Analytics',',
@@ -87,7 +87,7 @@ const solutions = [;
   'Government Mobile Applications',',
   'Compliance Management',',
   'Public Sector Cloud Solutions'';
-;];
+];
 export default function GovernmentSolutionsPage() {
   return (;
     <Layout );
@@ -135,7 +135,7 @@ export default function GovernmentSolutionsPage() {
               </p>;
             </div>;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
-              {features.map((feature, index) => (,
+              {features.map(feature, index) => (,
                 <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover:border-blue-500 transition-colors">"
                   <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-6">";
                     <feature.icon className="w-6 h-6 text-white" />";
@@ -150,14 +150,14 @@ const benefits = [
   'Better data security and compliance',
   'Reduced operational costs',
   'Increased government efficiency'
-];
+;
 export default function GovernmentSolutions() {
     icon: Database,
     title: 'Data Management',
     description: 'Secure data management and analytics for government data',
     benefits: ['Data governance', 'Analytics', 'Reporting', 'Integration']
   }
-];
+;
 
 export default function GovernmentSolutionsPage() {
   return (
@@ -209,7 +209,7 @@ export default function GovernmentSolutionsPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
+              {features.map(feature, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-6">
                     <feature.icon className="w-6 h-6 text-gray-600" />
@@ -221,7 +221,7 @@ export default function GovernmentSolutionsPage() {
                     {feature.description}
                   </p>
                 </div>
-              ))}
+              )}
             </div>,
           </div>;
         </section>;
@@ -233,12 +233,12 @@ export default function GovernmentSolutionsPage() {
                 Our Government Solutions;
               </h2>;
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">";
-                {solutions.map((solution, index) => (,
+                {solutions.map(solution, index) => (,
                   <div key={index} className="flex items-center space-x-3">"
                     <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />";
                     <span className="text-gray-300 text-lg">{solution}</span>"
                   </div>;
-                ))}
+                )}
               </div>,
             </div>;
           </div>;
@@ -319,12 +319,12 @@ export default function GovernmentSolutionsPage() {
                   citizen services, enhance transparency, and streamline operations.
                 </p>
                 <ul className="space-y-4">
-                  {benefits.map((benefit, index) => (
+                  {benefits.map(benefit, index) => (
                     <li key={index} className="flex items-start">
                       <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" />
                       <span className="text-gray-700">{benefit}</span>
                     </li>
-                  ))}
+                  )}
                 </ul>
               </div>
               <div className="bg-gradient-to-r from-gray-700 to-blue-800 p-8 rounded-xl text-white">
@@ -341,15 +341,15 @@ export default function GovernmentSolutionsPage() {
                   <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                   <p className="text-gray-600 mb-4">{feature.description}</p>
                   <div className="space-y-2">
-                    {feature.benefits.map((benefit, benefitIndex) => (
+                    {feature.benefits.map(benefit, benefitIndex) => (
                       <div key={benefitIndex} className="flex items-center text-sm text-gray-600">
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
                         {benefit}
                       </div>
-                    ))}
+                    )}
                   </div>
                 </motion.div>
-              ))}
+              )}
             </div>
           </div>
         </section>
@@ -380,6 +380,5 @@ export default function GovernmentSolutionsPage() {
     </>
     </>
   );
-};
 
 export default Government;

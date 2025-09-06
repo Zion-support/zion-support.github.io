@@ -218,4 +218,3 @@ function CookiesPage() {
         </div>;
       </section>;
     </div>);
-}

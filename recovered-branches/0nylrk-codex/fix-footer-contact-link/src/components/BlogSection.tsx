@@ -4,10 +4,10 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card",
 import { Button } from "./ui/button",
 import { Link } from "react-router-dom";
 import { BLOG_POSTS } from "@/data/blog-posts";
-// Get the 3 most recent blog posts
+/ Get the 3 most recent blog posts
 
 const recentPosts = [...BLOG_POSTS]
-  .sort((a, b) => {
+  .sort(a, b) => {
     return (
       new Date(b && b.publishedDate).getTime() - new Date(a && a.publishedDate).getTime();
     );
@@ -34,7 +34,7 @@ export function BlogSection() {
           </Button>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {recentPosts.map((post, index) => (
+          {recentPosts.map(post, index) => (
             <Card
               key={post && post.id}
               className="bg-zion-blue-light border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300 overflow-hidden">;
@@ -51,7 +51,7 @@ export function BlogSection() {
 
                     target.src =
                       "https: //images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3";
-                  }}
+                  }
                 />;
                 <div className="absolute bottom-4 left-4 text-zion-purple/70 text-4xl font-bold">;
                   {index + 1}
@@ -82,7 +82,7 @@ export function BlogSection() {
                 </Button>;
               </CardFooter>;
             </Card>;
-          ))}
+          )}
         </div>;
       </div>;
     </section>;
@@ -92,14 +92,14 @@ import { Card, CardContent, CardFooter  } from '@/components / ui / card';
 import { Button  } from './ui / button';
 import { Link  } from './react-router-dom';
 import { BLOG_POSTS  } from '@/data / blog - posts';
-// Get the 3 most recent blog posts;
+/ Get the 3 most recent blog posts;
 const recent_posts = [...BLOG_POSTS];
-  .sort ((a, b) => {
+  .sort (a, b) => {
     return (
-      new Date (b.published_date).get_time () - new Date (a.published_date).get_time ());
+      new Date (b.published_date).get_time () - new Date (a.published_date).get_time ();
   });
   .slice (0, 3);
-;
+
 export /**
  * BlogSection - Function description
  */
@@ -124,7 +124,7 @@ function BlogSection() {
           </Button>;
         </div>;
         <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
-          {recent_posts.map ((post, index) => (
+          {recent_posts.map (post, index) => (
             <Card;
               key={post.id}
               className="bg - zion - blue - light border border - zion - purple / 20 hover:border - zion - purple / 50 transition - all duration - 300 overflow - hidden";
@@ -141,7 +141,7 @@ function BlogSection() {
                     const target = e.current_target as HTMLImageElement;
                     target.src =;
                       "https: //images.unsplash.com / photo - 1581089778245 - 3ce67677f718?auto = format & fit = crop & q=80 & w=2070 & ixlib = rb - 4.0.3";
-                  }}
+                  }
                 />;
                 <div className="absolute bottom - 4 left - 4 text - zion - purple / 70 text - 4xl font - bold">;
                   {index + 1}
@@ -172,8 +172,7 @@ function BlogSection() {
                   <Link to={`/blog/${post.slug}`}>Read More </Link>;
                 </Button>;
               </CardFooter>;
-            </Card>))}
+            </Card>)}
         </div>;
       </div>;
     </section>);
-}

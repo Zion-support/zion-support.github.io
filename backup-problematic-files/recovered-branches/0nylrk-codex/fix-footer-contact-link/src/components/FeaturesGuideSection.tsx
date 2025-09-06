@@ -12,8 +12,8 @@ import { ;
   BarChart3,;
   Plus,;
   HelpCircle;
-} from "lucide-react",;
-;
+ from "lucide-react",;
+
 export function FeaturesGuideSection() {;
   const features = [;
     {;
@@ -130,7 +130,7 @@ export function FeaturesGuideSection() {;
       buttonText:"View Resources";
     }
   ],;
-;
+
   return (;
     <section className="py-20 bg-zion-blue-dark">;
       <div className="container mx-auto px-4">;
@@ -141,7 +141,7 @@ export function FeaturesGuideSection() {;
             the world of AI and tech services;
           </p>;
         </div>;
-;
+
         <Tabs defaultValue="ai-matcher" className="w-full max-w-5xl mx-auto">;
           <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1 mb-8">;
             {features.slice(0, 4).map(feature => (;
@@ -152,7 +152,7 @@ export function FeaturesGuideSection() {;
               >;
                 {feature.title}
               </TabsTrigger>;
-            ))}
+            )}
           </TabsList>;
           <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1">;
             {features.slice(4).map(feature => (;
@@ -163,9 +163,9 @@ export function FeaturesGuideSection() {;
               >;
                 {feature.title}
               </TabsTrigger>;
-            ))}
+            )}
           </TabsList>;
-;
+
           {features.map(feature => (;
             <TabsContent key={feature.id} value={feature.id} className="mt-8">;
               <div className="bg-zion-blue rounded-lg border border-zion-blue-light p-6 md:p-8 flex flex-col md:flex-row gap-8">;
@@ -185,22 +185,20 @@ export function FeaturesGuideSection() {;
                     </Link>;
                   </Button>;
                 </div>;
-                ;
                 <div className="md:w-2/3 bg-zion-blue-dark p-6 rounded-lg">;
                   <h4 className="text-xl font-semibold text-white mb-4">How to Use</h4>;
                   <ol className="list-decimal list-inside space-y-3 pl-4">;
-                    {feature.instructions.map((instruction, idx) => (;
+                    {feature.instructions.map(instruction, idx) => (;
                       <li key={idx} className="text-zion-slate-light">;
                         <span className="text-zion-cyan mr-2">{idx + 1}.</span>;
                         {instruction}
-                      </li>;                    ))}
+                      </li>;                    )}
                   </ol>;
                 </div>;
               </div>;
             </TabsContent>;
-          ))}
+          )}
         </Tabs>;
-        ;
         <div className="mt-12 text-center">;
           <Button ;
             variant="outline" ;
@@ -225,13 +223,12 @@ ArrowRight;
 BarChart3;
 Plus;
 HelpCircle const features = [ {
-  return (<section className="py-20 bg-zion-blue-dark" > <div className="container mx-auto px-4" > <div className="text-center mb-12" > <GradientHeading>Your Complete Guide to Zion</GradientHeading> <p className="text-zion-slate-light text-xl mt-4 max-w-3xl mx-auto" > Discover all the powerful tools and features available to help you navigate the world of AI and tech services </p> </div> > {
+  return (<section className="py-20 bg-zion-blue-dark" > <div className="container mx-auto px-4" > <div className="text-center mb-12" > <GradientHeading>Your Complete Guide to Zion</GradientHeading> <p className="text-zion-slate-light text-xl mt-4 max-w-3xl mx-auto" > Discover all the powerful tools and features available to help you navigate the world of AI and tech services </p> </div>{
   feature.title 
-}</TabsTrigger>) ) 
-}</TabsList> > {
+</TabsTrigger>) 
+</TabsList>{
   feature.title 
-}</TabsTrigger>) ) 
-}</TabsList> <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple" asChild > </Link> </Button> </div> </li>) ) 
-}</ol> </div> </div> </TabsContent>) ) 
-}</Tabs> <div className="mt-12 text-center" > <Button asChild > <Link to="/marketplace" > Explore Full Marketplace <ArrowRight className="ml-2 h-4 w-4" /> </Link> </Button> </div> </div> </section>) 
-}
+</TabsTrigger>) 
+</TabsList> <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple" asChild > </Link> </Button> </div> </li>) 
+</ol> </div> </div> </TabsContent>) 
+</Tabs> <div className="mt-12 text-center" > <Button asChild > <Link to="/marketplace" > Explore Full Marketplace <ArrowRight className="ml-2 h-4 w-4" /> </Link> </Button> </div> </div> </section>) 

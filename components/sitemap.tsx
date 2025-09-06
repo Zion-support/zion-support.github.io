@@ -21,23 +21,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React from "react";
 import Head from "next/head";
 
@@ -71,7 +71,7 @@ export default function SitemapPage() {;
           Sitemap;
         </h1>;
         <ul className="grid sm:grid-cols-2 gap-3">;
-          {links && links.map((l) => (;
+          {links && links.map(l) => (;
             <li
               key={l && l.href}
               className="p-4 rounded-xl bg-black/40 border border-cyan-500/20">;
@@ -79,7 +79,7 @@ export default function SitemapPage() {;
                 {l && l.name}
               </a>;
             </li>;
-          ))}
+          )}
         </ul>;
       </div>;
     </div>;
@@ -113,7 +113,7 @@ export default function SitemapPage() {;
           Sitemap;
         </h1>;
         <ul className="grid sm:grid-cols-2 gap-3">;
-          {links && links.map((l) => (;
+          {links && links.map(l) => (;
             <li
               key={l && l.href}
               className="p-4 rounded-xl bg-black/40 border border-cyan-500/20">;
@@ -121,12 +121,12 @@ export default function SitemapPage() {;
                 {l && l.name}
               </a>;
             </li>;
-          ))}
+          )}
         </ul>;
       </div>;
     </div>;
   );
-}
+
 import React from './react';
 import Head from './next / head';
 export default /**
@@ -162,7 +162,7 @@ function SitemapPage() {
           Sitemap;
         </h1>;
         <ul className="grid sm:grid - cols - 2 gap - 3">;
-          {links.map ((l) => (
+          {links.map (l) => (
             <li;
               key={l.href}
               className="p - 4 rounded - xl bg - black / 40 border border - cyan - 500 / 20";
@@ -170,7 +170,7 @@ function SitemapPage() {
               <a className="text - cyan - 300" href={l.href}>;
                 {l.name}
               </a>;
-            </li>))}
+            </li>)}
         </ul>;
       </div>;
     </div>);
@@ -203,7 +203,7 @@ function SitemapPage() {
           Sitemap;
         </h1>;
         <ul className="grid sm:grid - cols - 2 gap - 3">;
-          {links.map ((l) => (
+          {links.map (l) => (
             <li;
               key={l.href}
               className="p - 4 rounded - xl bg - black / 40 border border - cyan - 500 / 20";
@@ -211,8 +211,7 @@ function SitemapPage() {
               <a className="text - cyan - 300" href={l.href}>;
                 {l.name}
               </a>;
-            </li>))}
+            </li>)}
         </ul>;
       </div>;
     </div>);
-}

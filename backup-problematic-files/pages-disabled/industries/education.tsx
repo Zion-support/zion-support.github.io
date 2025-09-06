@@ -2,7 +2,6 @@ import React from 'react';
 
 interface EducationProps {
   className?: string;
-}
 
 const Education: React.FC<EducationProps> = ({ className }) => {
   return (
@@ -11,6 +10,5 @@ const Education: React.FC<EducationProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default Education;

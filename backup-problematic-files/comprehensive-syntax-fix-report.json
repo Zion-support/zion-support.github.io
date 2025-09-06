@@ -1,4 +1,4 @@
-{
+
   "timestamp": "2025-09-04T15:40:33.391Z",
   "totalFiles": 1515,
   "fixedFiles": 930,
@@ -936,4 +936,3 @@
     "/workspace/src/utils/tokenRewards.ts"
   ],
   "errorList": []
-}

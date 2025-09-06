@@ -4,7 +4,7 @@ import {
   Star, Users, TrendingUp, DollarSign, Clock,
   CheckCircle, ArrowRight, Zap, Shield, Rocket,
   Brain, Globe, Lock, Code, Database, Cloud
-} from 'lucide-react',
+ from 'lucide-react',
 import Button from '../ui/Button',
 interface Service {
   id: string,
@@ -45,15 +45,13 @@ interface Service {
   customers: number,
   rating: number,
   reviews: number
-}
-;
+
 interface EnhancedServiceShowcaseProps {;
   title:string,;
   subtitle:string,;
   showFilters?:boolean,;
   services?:Service[],;
   maxServices?:number;
-}
 
 const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
   title,
@@ -61,7 +59,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
   showFilters = false,
   services = [],
   maxServices = 12
-}) => {
+) => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all'),
   const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all'),
   const [sortBy, setSortBy] = useState<string>('popular'),
@@ -91,19 +89,19 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
     { id: 'price-high', name: 'Price High to Low' }
   ],
 
-  const filteredServices = useMemo(() => {
+  const filteredServices = useMemo() => {
     const filtered = services.filter(service => {
-      const matchesCategory = selectedCategory === 'all' ||                              (selectedCategory === 'ai' && (service.category.includes('AI') || service.category.includes('Machine Learning'))) ||
-                             (selectedCategory === 'quantum' && (service.category.includes('Quantum') || service.category.includes('Space'))) ||
-                             (selectedCategory === 'blockchain' && (service.category.includes('Blockchain') || service.category.includes('DeFi') || service.category.includes('NFT'))) ||
-                             (selectedCategory === 'enterprise' && (service.category.includes('Enterprise') || service.category.includes('IT'))) ||
-                             (selectedCategory === 'emerging' && (service.category.includes('Neural') || service.category.includes('Autonomous') || service.category.includes('Space') || service.category.includes('Biotech'))),
+      const matchesCategory = selectedCategory = = 'all' ||                              (selectedCategory = = 'ai' && (service.category.includes('AI') || service.category.includes('Machine Learning')) ||
+                             (selectedCategory = = 'quantum' && (service.category.includes('Quantum') || service.category.includes('Space')) ||
+                             (selectedCategory = = 'blockchain' && (service.category.includes('Blockchain') || service.category.includes('DeFi') || service.category.includes('NFT')) ||
+                             (selectedCategory = = 'enterprise' && (service.category.includes('Enterprise') || service.category.includes('IT')) ||
+                             (selectedCategory = = 'emerging' && (service.category.includes('Neural') || service.category.includes('Autonomous') || service.category.includes('Space') || service.category.includes('Biotech')),
 
-      const matchesPrice = selectedPriceRange === 'all' ||
-                          (selectedPriceRange === 'low' && parseFloat(service.price.replace(/[$]/g, '')) < 1000) ||
-                          (selectedPriceRange === 'medium' && parseFloat(service.price.replace(/[$]/g, '')) >= 1000 && parseFloat(service.price.replace(/[$]/g, '')) < 5000) ||
-                          (selectedPriceRange === 'high' && parseFloat(service.price.replace(/[$]/g, '')) >= 5000 && parseFloat(service.price.replace(/[$]/g, '')) < 20000) ||
-                          (selectedPriceRange === 'premium' && parseFloat(service.price.replace(/[$]/g, '')) >= 20000),
+      const matchesPrice = selectedPriceRange = = 'all' ||
+                          (selectedPriceRange = = 'low' && parseFloat(service.price.replace(/[$]/g, '') < 1000) ||
+                          (selectedPriceRange = = 'medium' && parseFloat(service.price.replace(/[$]/g, '') >= 1000 && parseFloat(service.price.replace(/[$]/g, '') < 5000) ||
+                          (selectedPriceRange = = 'high' && parseFloat(service.price.replace(/[$]/g, '') >= 5000 && parseFloat(service.price.replace(/[$]/g, '') < 20000) ||
+                          (selectedPriceRange = = 'premium' && parseFloat(service.price.replace(/[$]/g, '') >= 20000),
 
       return matchesCategory && matchesPrice
     }),
@@ -111,23 +109,23 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
     // Sort services,
 switch (sortBy) {
       case 'popular':
-        filtered.sort((a, b) => (b.popular ? 1 : 0) - (a.popular ? 1 : 0)),
+        filtered.sort(a, b) => (b.popular ? 1 : 0) - (a.popular ? 1 : 0),
         break,
       case 'rating':
-        filtered.sort((a, b) => (b.rating || 0) - (a.rating || 0)),
+        filtered.sort(a, b) => (b.rating || 0) - (a.rating || 0),
         break,
       case 'roi':
-        filtered.sort((a, b) => {
+        filtered.sort(a, b) => {
           const aROI = parseInt(a.roi.match(/\d+/)?.[0] || '0'),
           const bROI = parseInt(b.roi.match(/\d+/)?.[0] || '0'),
           return bROI - aROI
         }),
         break,
       case 'price-low':
-        filtered.sort((a, b) => parseFloat(a.price.replace(/[$]/g, '')) - parseFloat(b.price.replace(/[$]/g, ''))),
+        filtered.sort(a, b) => parseFloat(a.price.replace(/[$]/g, '') - parseFloat(b.price.replace(/[$]/g, '')),
         break,
       case 'price-high':
-        filtered.sort((a, b) => parseFloat(b.price.replace(/[$]/g, '')) - parseFloat(a.price.replace(/[$]/g, ''))),
+        filtered.sort(a, b) => parseFloat(b.price.replace(/[$]/g, '') - parseFloat(a.price.replace(/[$]/g, '')),
         break,
       default: break    }
 
@@ -136,8 +134,8 @@ switch (sortBy) {
 
   const stats = [
     { label: 'Total Services', value: services.length, icon: Rocket, color: 'text-blue-400' },
-    { label: 'Active Customers', value: services.reduce((sum, s) => sum + (s.customers || 0), 0), icon: Users, color: 'text-green-400' },
-    { label: 'Average Rating', value: (services.reduce((sum, s) => sum + (s.rating || 0), 0) / services.length).toFixed(1), icon: Star, color: 'text-yellow-400' },
+    { label: 'Active Customers', value: services.reduce(sum, s) => sum + (s.customers || 0), 0), icon: Users, color: 'text-green-400' },
+    { label: 'Average Rating', value: (services.reduce(sum, s) => sum + (s.rating || 0), 0) / services.length).toFixed(1), icon: Star, color: 'text-yellow-400' },
     { label: 'Market Growth', value: '300%+', icon: TrendingUp, color: 'text-purple-400' }
   ],
 
@@ -147,44 +145,44 @@ switch (sortBy) {
         {/* Header */}
         <div className=&quot;text-center mb-16&quot;>
           <motion.h2,
-initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
             className=&quot;text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6&quot;          >
             {title}
           </motion.h2>
           <motion.p,
-initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8, delay: 0.2 }
             className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto&quot;          >
             {subtitle}
           </motion.p>
 
           {_/* Stats */}
           <motion.div,
-initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8, delay: 0.4 }
             className=&quot;grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto&quot;
           >
-            {stats.map((stat, index) => (
+            {stats.map(stat, index) => (
               <div key={index} className=&quot;text-center&quot;>
                 <div className={`${stat.color} mb-2 flex justify-center`}>
                   <stat.icon className=&quot;w-8 h-8&quot; />
                 </div>
                 <div className=&quot;text-2xl font-bold text-white&quot;>{stat.value}</div>
                 <div className=&quot;text-sm text-gray-400&quot;>{stat.label}</div>              </div>
-            ))}
+            )}
           </motion.div>;
         </div>;
-;
+
         {/* Filters */}
         {showFilters && (
           <motion.div,
-initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8, delay: 0.6 }
             className=&quot;mb-12&quot;
           >
             <div className=&quot;bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50&quot;>
@@ -199,7 +197,7 @@ value={selectedCategory}
                       <option key={category.id} value={category.id}>
                         {category.icon} {category.name}
                       </option>;
-                    ))}
+                    )}
                   </select>
                 </div>
 
@@ -214,7 +212,7 @@ value={selectedPriceRange}
                       <option key={range.id} value={range.id}>
                         {range.name}
                       </option>;
-                    ))}
+                    )}
                   </select>
                 </div>
 
@@ -229,7 +227,7 @@ value={sortBy}
                       <option key={option.id} value={option.id}>
                         {option.name}
                       </option>;
-                    ))}
+                    )}
                   </select>;
                 </div>;
               </div>;
@@ -239,18 +237,18 @@ value={sortBy}
 
         {_/* Services Grid */}
         <motion.div,
-initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
+initial={ opacity: 0, y: 30 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0.8, delay: 0.8 }
           className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;        >
           <AnimatePresence>
             {filteredServices.map(_(service, index) => (
               <motion.div,
 key={service.id}
-                initial={{ opacity: 0, y: 30, scale: 0.9 }}
-                whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{ y: -5, scale: 1.02 }}
+                initial={ opacity: 0, y: 30, scale: 0.9 }
+                whileInView={ opacity: 1, y: 0, scale: 1 }
+                transition={ duration: 0.6, delay: index * 0.1 }
+                whileHover={ y: -5, scale: 1.02 }
                 className=&quot;group&quot;
               >
                 <div className=&quot;relative bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 h-full&quot;>
@@ -259,7 +257,7 @@ key={service.id}
                     <div className=&quot;absolute -top-3 left-6 bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full&quot;>                       Most Popular
                     </div>
                   )}
-;
+
                   {/* Header */}
                   <div className=&quot;mb-6&quot;>
                     <div className=&quot;flex items-center justify-between mb-4&quot;>
@@ -276,7 +274,7 @@ key={service.id}
                       {service.tagline}
                     </p>;
                   </div>;
-;
+
                   {/* Features */}
                   <div className=&quot;mb-6&quot;>
                     <h4 className=&quot;text-sm font-semibold text-gray-300 mb-3 flex items-center&quot;>
@@ -284,14 +282,14 @@ key={service.id}
                       Key Features
                     </h4>
                     <ul className=&quot;space-y-2&quot;>
-                      {service.features.slice(0, 4).map((feature, idx) => (
+                      {service.features.slice(0, 4).map(feature, idx) => (
                         <li key={idx} className=&quot;text-sm text-gray-400 flex items-start&quot;>
                           <span className=&quot;text-cyan-400 mr-2&quot;></span>
                           {feature}                        </li>
-                      ))}
+                      )}
                     </ul>;
                   </div>;
-;
+
                   {/* Stats */}
                   <div className=&quot;grid grid-cols-3 gap-4 mb-6 text-center&quot;>
                     <div>
@@ -315,7 +313,7 @@ key={service.id}
                       {service.roi}
                     </div>;
                   </div>;
-;
+
                   {/* Market Position */}
                   <div className=&quot;mb-6 p-4 bg-gray-800/30 rounded-lg&quot;>
                     <div className=&quot;text-sm text-cyan-400 font-semibold mb-2&quot;> Market Position</div>
@@ -323,7 +321,7 @@ key={service.id}
                       {service.marketPosition}
                     </div>;
                   </div>;
-;
+
                   {/* CTA */}
                   <div className=&quot;mt-auto&quot;>
                     <Button,
@@ -345,15 +343,15 @@ href={service.link}
                   </div>
                 </div>
               </motion.div>
-            ))}
+            )}
           </AnimatePresence>
         </motion.div>
 
         {_/* Call to Action */}
         <motion.div,
-initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.0 }}
+initial={ opacity: 0, y: 30 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0.8, delay: 1.0 }
           className=&quot;text-center mt-16&quot;        >
           <div className=&quot;bg-gradient-to-r from-cyan-900/20 to-purple-900/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/20&quot;>
             <h3 className=&quot;text-2xl font-bold text-white mb-4&quot;>
@@ -382,6 +380,6 @@ initial={{ opacity: 0, y: 30 }}
       </div>
     </section>
   )
-},
+,
 
 export default EnhancedServiceShowcase,

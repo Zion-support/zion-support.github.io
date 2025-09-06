@@ -5,21 +5,19 @@ interface SearchBarProps {
   onSearch?: (query: string) => void;
   placeholder?: string;
   className?: string;
-}
 
 const SearchBar: React.FC<SearchBarProps> = ({
   onSearch,
   placeholder = 'Search...',
   className = '',
-}) => {
+) => {
   const [query, setQuery] = useState('');
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (onSearch && query.trim()) {
-      onSearch(query.trim());
-    }
-  };
+    if (onSearch && query.trim() {
+      onSearch(query.trim();
+    };
 
   const handleClear = () => {
     setQuery('');
@@ -34,7 +32,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
             type="text"
             value={query}
             onChange={e => setQuery(e.target.value)}
-            onFocus={() => {}}
+            onFocus={() => {}
             placeholder={placeholder}
             className="w-full pl-10 pr-10 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           />
@@ -51,18 +49,15 @@ const SearchBar: React.FC<SearchBarProps> = ({
       </form>
     </div>
   );
-};
 
 export default SearchBar;
 import React { useState, useRef, useEffect } from 'react',;
 import Link from 'next/link',;
-,;
 interface SearchResult {,;
   titl: e: string,;
   descriptio: n: string,;
   ur: l: string,;
   typ: e: 'service' | 'page' | 'category';
-},;
 ,;
 const: SearchBar: React.FC = () => {,;
   const [query, setQuery] = useState(''),;
@@ -71,7 +66,6 @@ const: SearchBar: React.FC = () => {,;
   const [isLoading, setIsLoading] = useState(false),;
   const searchRef = useRef<HTMLDivElement>(null),;
   const inputRef = useRef<HTMLInputElement>(null),;
-,;
   // Mock search data - in a real app, this would come from an API,;
   const: searchData: SearchResult[] = [,;
     {,;
@@ -111,53 +105,41 @@ const: SearchBar: React.FC = () => {,;
       typ: e: 'page';
     }
   ],;
-,;
   const handleSearch = async (searchQuer: y: string) => {,;
-    if (!searchQuery.trim()) {,;
+    if (!searchQuery.trim() {,;
       setResults([]),;
       setIsOpen(false),;
       return;
     },;
-,;
     setIsLoading(true),;
-,;
     // Simulate API delay,;
-    await new Promise(resolve => setTimeout(resolve, 300)),;
-,;
+    await new Promise(resolve => setTimeout(resolve, 300),;
     const filteredResults = searchData.filter(item =>,;
-      item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||,;
-      item.description.toLowerCase().includes(searchQuery.toLowerCase()),;
+      item.title.toLowerCase().includes(searchQuery.toLowerCase() ||,;
+      item.description.toLowerCase().includes(searchQuery.toLowerCase(),;
     ),;
-,;
     setResults(filteredResults),;
     setIsOpen(true),;
     setIsLoading(false);
   },;
-,;
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {,;
     const value = e.target.value,;
     setQuery(value),;
     handleSearch(value);
   },;
-,;
   const handleResultClick = () => {,;
     setIsOpen(false),;
     setQuery('');
   },;
-,;
   const handleKeyDown = (e: React.KeyboardEvent) => {,;
-    if (e.key === 'Escape') {,;
+    if (e.key = = 'Escape') {,;
       setIsOpen(false),;
       inputRef.current?.blur();
-    }
-  },;
-,;
-  useEffect(() => {,;
+    },;
+  useEffect() => {,;
     const handleClickOutside = (even: t: MouseEvent) => {,;
-      if (searchRef.current && !searchRef.current.contains(event.target as Node)) {,;
+      if (searchRef.current && !searchRef.current.contains(event.target as Node) {,;
         setIsOpen(false);
       }
-    }
-},;
 ,;
 export default SearchBar;

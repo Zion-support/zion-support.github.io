@@ -31,19 +31,19 @@ export default function TenantOnboarding() {
     is_co_branded: true
   });
   // Check if user has admin role
-  const isAdmin = user?.role === "admin";
+  const isAdmin = user?.role = = "admin";
   if (!isAdmin) {
     return <Navigate to="/unauthorized" />
   }
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }))
+    setFormData(prev => ({ ...prev, [name]: value })
   }
   const handleSelectChange = (name: string, value: string) => {
-    setFormData(prev => ({ ...prev, [name]: value }))
+    setFormData(prev => ({ ...prev, [name]: value })
   }
   const handleSwitchChange = (name: string, checked: boolean) => {
-    setFormData(prev => ({ ...prev, [name]: checked }))
+    setFormData(prev => ({ ...prev, [name]: checked })
   }
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -99,7 +99,6 @@ export default function TenantOnboarding() {
     } finally {
       setIsSubmitting(false)
     }
-  }
 
   return (
     <>
@@ -196,8 +195,7 @@ export default function TenantOnboarding() {
                   </TabsContent>
                   <TabsContent value="branding" className="space-y-4">
                     <div className="space-y-2">
-                      <Label htmlFor="logo_url">Logo URL</Label>
-                      >;
+                      <Label htmlFor="logo_url">Logo URL</Label>;
                         <SelectTrigger>;
                           <SelectValue placeholder="Select industry" />;
                         </SelectTrigger>;
@@ -294,8 +292,7 @@ export default function TenantOnboarding() {
                         <p className="text-xs text-muted-foreground">
                           Show "Powered by Zion AI" in the footer and elsewhere
                         </p>
-                      </div>
-                      >;
+                      </div>;
                         <SelectTrigger>;
                           <SelectValue placeholder="Select theme" />;
                         </SelectTrigger>;
@@ -374,7 +371,7 @@ export default function TenantOnboarding() {
       <Footer />
     </>
   )
-}
+
                         If you want to use your own domain, enter it here. You'll need to configure DNS records.;
                       </p>;
                     </div>;
@@ -397,6 +394,5 @@ export default function TenantOnboarding() {
       <Footer />;
     </>;
   );
-}
+
     </>);
-}

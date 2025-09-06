@@ -51,7 +51,6 @@ export const cuttingEdgeAIServices2025 = [
           '24/7 monitoring'
         ]
       }
-    }
     category: 'AI Consciousness'
     tags: [
       'AI'
@@ -154,7 +153,6 @@ export const cuttingEdgeAIServices2025 = [
           '24/7 monitoring'
         ]
       }
-    }
     category: 'Quantum AI'
     tags: [
       'Quantum Computing'
@@ -251,7 +249,6 @@ export const cuttingEdgeAIServices2025 = [
           '24/7 monitoring'
         ]
       }
-    }
     category: 'AI Autonomy'
     tags: [
       'AI'
@@ -348,7 +345,6 @@ export const cuttingEdgeAIServices2025 = [
           '24/7 monitoring'
         ]
       }
-    }
     category: 'AI Ethics'
     tags: [
       'AI Ethics'
@@ -445,7 +441,6 @@ export const cuttingEdgeAIServices2025 = [
           '24/7 monitoring'
         ]
       }
-    }
     category: 'AI Creativity'
     tags: ['AI', 'Creativity', 'Content Generation', 'Design', 'Innovation']
     website: 'https://ziontechgroup.com/ai-creativity-studio-pro'
@@ -496,7 +491,7 @@ export const cuttingEdgeAIServices2025 = [
       'Intellectual property protection'
     ]
   }
-];      'Creative content generation and designMarketing and advertising creativeProduct design and innovationArtistic expression and creationCreative problem-solving and ideation'
+;      'Creative content generation and designMarketing and advertising creativeProduct design and innovationArtistic expression and creationCreative problem-solving and ideation'
     id: 'ai-consciousness-evolution-pro', name: 'AI Consciousness Evolution Pro',
     description: 'Advanced AI consciousness development platform with emotional intelligence, self-awareness, and ethical decision-making capabilities for human-AI collaboration.',
     features: [
@@ -529,11 +524,9 @@ export const cuttingEdgeAIServices2025 = [
       'Intellectual property protection',
     ],
   },
-];      'Creative content generation and designMarketing and advertising creativeProduct design and innovationArtistic expression and creationCreative problem-solving and ideation'
+;      'Creative content generation and designMarketing and advertising creativeProduct design and innovationArtistic expression and creationCreative problem-solving and ideation'
     ];
     integrations: ['Creative software_design tools_marketing platforms_content management systems_collaboration tools'];
     compliance: ['SOC2ISO 27001GDPRCCPAIntellectual property protection'];
   }
-];
-
 ;

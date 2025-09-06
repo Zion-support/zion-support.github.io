@@ -19,7 +19,7 @@ interface HireNowCTAProps {
     professional_title?: string;
     hourly_rate?: number;
   }
-}
+
 export function HireNowCTA({ talentProfile }: HireNowCTAProps) {
   const [modalOpen, setModalOpen] = useState(false);
 
@@ -44,7 +44,7 @@ export function HireNowCTA({ talentProfile }: HireNowCTAProps) {
         <div className="h-2 bg-zion-blue-light rounded-full overflow-hidden">
           <div
             className="h-full bg-gradient-to-r from-zion-purple to-zion-cyan"
-            style={{ width: `${profileCompleteness}%` }}
+            style={ width: `${profileCompleteness}%` }
           />
         </div>
       </div>
@@ -84,8 +84,8 @@ export function HireNowCTA({ talentProfile }: HireNowCTAProps) {
       />;
     </div>;
   );
-}
-// Helper function to calculate profile completeness
+
+/ Helper function to calculate profile completeness
 function calculateProfileCompleteness(profile: any) {
   if (!profile) return 0;
   const fields = [
@@ -101,38 +101,37 @@ function calculateProfileCompleteness(profile: any) {
     totalFields++;
   });
 
-  return Math.min(Math.round((completedFields / totalFields) * 100), 100)
-}
+  return Math.min(Math.round(completedFields / totalFields) * 100), 100)
+
           hourly_rate: talent_profile.hourly_rate;
         } : null}
       />;
     </div>);
-}
-// Helper function to calculate profile completeness;
-/**
+
+/ Helper function to calculate profile completeness;
+**
  * calculateProfileCompleteness - Function description
  */
 function calculateProfileCompleteness() {
   // Check condition
 if (return 0) {
   $2
-}
+
   const fields = [;
     'full_nameprofessional_titlebioskillshourly_ratelocationportfolio_linksexperience';
     'availability_type';
   ];
-;
+
   let completed_fields = 0;
   let total_fields = 0,
   fields.for_each (field => {
     // Check condition
 if ( {) {
   $2
-}
+
       completed_fields++;
     }
     total_fields++;
   });
-;
-  return Math.min (Math.round ((completed_fields / total_fields) * 100), 100);
-}
+
+  return Math.min (Math.round (completed_fields / total_fields) * 100), 100);

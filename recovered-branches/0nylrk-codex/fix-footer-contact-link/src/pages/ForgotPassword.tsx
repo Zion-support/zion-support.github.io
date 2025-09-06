@@ -17,7 +17,7 @@ import {
   FormMessage} from "@/components/ui/form",
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-// Form validation schema
+/ Form validation schema
 
 const forgotPasswordSchema = z.object({
   email: z.string().email("Please enter a valid email")})
@@ -29,7 +29,7 @@ export default function ForgotPassword() {
   const form = useForm({
     resolver: zodResolver(forgotPasswordSchema)
     defaultValues: {
-      email: ""}}) as UseFormReturn<ForgotPasswordFormValues>
+      email: ""}) as UseFormReturn<ForgotPasswordFormValues>
   // Form submission handler
   const onSubmit = async (data: ForgotPasswordFormValues) => {
     await resetPassword(data.email)
@@ -113,29 +113,29 @@ import { Input } from '@/components / ui / input';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components / ui / form';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
-// Form validation schema;
+/ Form validation schema;
 const forgotPasswordSchema = z.object ({
   email: z.string ().email ("Please enter a valid email")}),
 type ForgotPasswordFormValues = z.infer < typeof forgotPasswordSchema>;
-;
+
 export default /**
  * ForgotPassword - Function description
  */
 function ForgotPassword() {
   const { reset_password, is_loading } = use_auth ();
   const [submitted, set_submitted] = useState (false);
-;
+
   // Initialize react - hook - form;
   const form = use_form ({
     resolver: zod_resolver (forgotPasswordSchema),
     default_values: {
-      email: ""}}) as UseFormReturn < ForgotPasswordFormValues>,
+      email: ""}) as UseFormReturn < ForgotPasswordFormValues>,
   // Form submission handler;
   const on_submit = async (data: ForgotPasswordFormValues) => {
     await reset_password (data.email),
     set_submitted (true);
   }
-;
+
   return (
     <>;
       <Header />;
@@ -227,7 +227,7 @@ function ForgotPassword() {
       <Footer />
     </>
   )
-}
+
                   We'll help you get back into your account so you can continue your journey in the Zion marketplace.;
                 </p>;
               </div>;
@@ -238,6 +238,5 @@ function ForgotPassword() {
       <Footer />;
     </>;
   );
-}
+
     </>);
-}

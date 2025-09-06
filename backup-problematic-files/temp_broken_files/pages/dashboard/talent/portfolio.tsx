@@ -3,11 +3,11 @@ import React, { useRef, useState } from 'react',;
 import PdfExportButton from '../../../components/ui/PdfExportButton',;
 import ResumePreview, { ResumeData } from '../../../components/ui/ResumePreview',;
 import { createServerClient } from '../../../utils/supabase/server',;
-;
+
 export default function TalentPortfolio() {;
   const [theme, setTheme] = useState<'light' | 'dark'>('light'),;
   const ref = useRef<HTMLDivElement>(null),;
-;
+
   const data:ResumeData = {;
     name:'Your Name',;
     contact:{ email:'you@example.com', phone:'+1 555-123-4567', location:'City, Country' },;
@@ -18,7 +18,7 @@ export default function TalentPortfolio() {;
     education:[{ institution:'University of Example', degree:'B.Sc.', start:'2016', end:'2020' }],;
     certifications:['AWS SAA-C03'],;
     portfolio:[{ title:'Top Project', description:'Showcase' }]},;
-;
+
   return (;
     <div className="relative">;
       <div className="flex items-center gap-3 mb-4">;
@@ -32,36 +32,34 @@ export default function TalentPortfolio() {;
           <option value="dark">Dark</option>;
         </select>;
       </div>;
-;
+
       <PdfExportButton targetRef={ref} fileName={`resume-${data.name.replace(/\s+/g, '-').toLowerCase()}.pdf`} />;
       <ResumePreview ref={ref} data={data} theme={theme} />;
     </div>;
   ),;
-}
-;
+
 export const getServerSideProps:GetServerSideProps = async () => {;
   const supabase = createServerClient(),;
   const user = await (supabase as any).auth.getUser?.(),;
   if (!user) {;
-    return { redirect:{ destination:'/auth', permanent:false } } as any,;
+    return { redirect:{ destination:'/auth', permanent:false } as any,;
   }
-  return { props:{} },;},
+  return { props:{},;},
  const data: ResumeData = {
   name: 'Your Name', contact: {
   email: 'you@example.com', phone: '+1 555-123-4567', location: 'City, Country' 
-};
+;
 summary: 'AI talent focused on LLM apps and marketplaces.';
-> <option value="light" >Light</option> <option value="dark" >Dark</option> </select> </div> <PdfExportButton targetRef= {
+ <option value="light" >Light</option> <option value="dark" >Dark</option> </select> </div> <PdfExportButton targetRef= {
   ref 
-}fileName= {
+fileName= {
   `resume-$ {
   data.name.replace (/\s+/g, '-') .toLowerCase () 
-}.pdf` 
-}/> <ResumePreview ref= {
+.pdf` 
+/> <ResumePreview ref= {
   ref 
-}data= {
+data= {
   data 
-}theme= {
+theme= {
   theme 
-}/> </div>) 
-}
+/> </div>) 

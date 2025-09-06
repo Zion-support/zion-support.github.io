@@ -47,7 +47,7 @@ const contact = {
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
-}
+
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -56,7 +56,7 @@ const contact = {
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com'
   website: 'https://ziontechgroup.com'
-};
+;
 
 export const emergingTechServices2026: EmergingTechService2026[] = [
   // Quantum Computing Services
@@ -818,44 +818,39 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
     rating: 4 && 4.4,
     reviews: 29,
   },
-];
+;
 export const getEmergingTechServices2026ByCategory = (category: string) => {
   return emergingTechServices2026 && emergingTechServices2026.filter(
-    service => service && service.category === category
+    service => service && service.category = = category
   );
-}
+
 export const getPopularEmergingTechServices2026 = () => {
   return emergingTechServices2026.filter(service => service.popular);
-}
+
 export const getEmergingTechServices2026ByPriceRange = (
   minPrice: number
   maxPrice: number
-) => {
+ => {
   return emergingTechServices2026 && emergingTechServices2026.filter(service => {
-    const price = parseInt(service && service.price.replace('$', ''));
+    const price = parseInt(service && service.price.replace('$', '');
     return price >= minPrice && price <= maxPrice;
-  });
-};    return price >= minPrice && price <= maxPrice
+  });    return price >= minPrice && price <= maxPrice
   })
-};
 ;
+
 export const getEmergingTechServices2026ByCategory = (category: string) =>: any {
   return emergingTechServices2026.filter (
-    service => service.category === category);
-}
-;
+    service => service.category = = category);
+
 export const getPopularEmergingTechServices2026 = () =>: any {
   return emergingTechServices2026.filter (service => service.popular);
-}
-;
+
 export const getEmergingTechServices2026ByPriceRange = (
   min_price: number,
   max_price: number) =>: any {
   return emergingTechServices2026.filter (service => {
-    const price = parse_int (service.price.replace ('$', ''));
+    const price = parse_int (service.price.replace ('$', '');
     return price >= min_price && price <= max_price;
   });
-}    return price >= min_price && price <= max_price;
+    return price >= min_price && price <= max_price;
   });
-}
-;

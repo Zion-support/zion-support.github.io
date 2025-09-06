@@ -122,7 +122,6 @@ const BlueprintsIndexPage: React.FC = () => {
       case 'research': return 'text - purple - 400';
       default: return 'text - gray - 400';
     }
-  }
   const getComplexityColor = (complexity: string) => {
     switch (complexity) {
       case 'critical': return 'bg - red - 500 / 20 text - red - 400';
@@ -131,7 +130,6 @@ const BlueprintsIndexPage: React.FC = () => {
       case 'low': return 'bg - green - 500 / 20 text - green - 400';
       default: return 'bg - gray - 500 / 20 text - gray - 400';
     }
-  }
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-gray-900 text-white">
       <Head>
@@ -179,11 +177,11 @@ const BlueprintsIndexPage: React.FC = () => {
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Blueprint Categories</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            {blueprintCategories.map((category, categoryIndex) => (
+            {blueprintCategories.map(category, categoryIndex) => (
               <div key={categoryIndex} className="bg-white/10 rounded-xl p-6 border border-white/20">
                 <h3 className="text-xl font-semibold mb-4 text-indigo-400">{category.category}</h3>
                 <div className="space-y-4">
-                  {category.blueprints.map((blueprint, blueprintIndex) => (
+                  {category.blueprints.map(blueprint, blueprintIndex) => (
                     <div key={blueprintIndex} className="border-l-2 border-indigo-400/30 pl-4">
                       <div className="flex justify-between items-start mb-2">
                         <Link
@@ -204,17 +202,17 @@ const BlueprintsIndexPage: React.FC = () => {
                         <span className="text-gray-400">{blueprint.lastUpdated}</span>
                       </div>
                     </div>
-                  ))}
+                  )}
                 </div>
               </div>
-            ))}
+            )}
           </div>
         </div>
         {/* Recent Blueprints */}
         <div className="mb - 8">;
           <h2 className="text - 2xl font - bold mb - 6 text - white">Recent Blueprints</h2>;
           <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6">;
-            {recent_blueprints.map ((blueprint) => (
+            {recent_blueprints.map (blueprint) => (
               <div key={blueprint.id} className="bg - white / 10 rounded - xl p - 6 border border - white / 20 hover:border - indigo - 400 / 30 transition - all duration - 300">;
                 <div className="flex justify - between items - start mb - 4">;
                   <h3 className="text - lg font - semibold text - white">{blueprint.name}</h3>;
@@ -233,7 +231,7 @@ const BlueprintsIndexPage: React.FC = () => {
                   </Link>
                 </div>
               </div>
-            ))}
+            )}
           </div>
         </div>
         {/* Blueprint Benefits */}
@@ -292,5 +290,5 @@ const BlueprintsIndexPage: React.FC = () => {
       </div>
     </div>
   );
-}
+
 export default BlueprintsIndexPage;

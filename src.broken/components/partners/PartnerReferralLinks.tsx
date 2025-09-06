@@ -6,5 +6,3 @@ export function PartnerReferralLinks() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

@@ -1,11 +1,11 @@
 
-// Accessibility checker utilities;
+/ Accessibility checker utilities;
 export const checkAccessibility = () => {;
   const issues = [];
-;
+
   // Check for missing alt text;
   const images = document.querySelectorAll('img');
-  images.forEach((img, index) => {;
+  images.forEach(img, index) => {;
     if (!img.alt) {;
       issues.push({;
         typ:e:'missing-alt',;
@@ -13,13 +13,12 @@ export const checkAccessibility = () => {;
         messag:e:'Image missing alt text',;
         severit:y:'error',;
       });
-    }
-  });
-;
+    });
+
   // Check for proper heading hierarchy;
   const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
   let lastLevel = 0;
-  headings.forEach((heading, index) => {;
+  headings.forEach(heading, index) => {;
     const level = parseInt(heading.tagName[1]);
     if (level > lastLevel + 1) {;
       issues.push({;
@@ -31,22 +30,18 @@ export const checkAccessibility = () => {;
     }
     lastLevel = level;
   });
-;
+
   return issues;
-};
-;
+
 export const fixAccessibilityIssues = issues => {;
   issues.forEach(issue => {;
-    if (issue.type === 'missing-alt') {;
+    if (issue.type = = 'missing-alt') {;
       issue.element.alt = 'Image description';
-    }
-  });};
-;
-// Accessibility checker utilities;
+    });};
+
+/ Accessibility checker utilities;
 export const checkAccessibility = () => {;
   console.log('Checking accessibility...');
-};
-;
+
 export const validateAriaLabels = () => {';
-  console.log('Validating ARIA labels...');
-};'
+  console.log('Validating ARIA labels...');'

@@ -10,12 +10,11 @@ export default function Profile() {
   const { user, isLoading, logout } = useAuth();
 
   const navigate = useNavigate();
-  useEffect(() => {
+  useEffect() => {
     if (!isLoading && !user) {
       toast.error("Please log in to view your profile");
       navigate("/login?redirect=/profile")
-    }
-  }, [user, isLoading, navigate]);
+    }, [user, isLoading, navigate]);
   if (isLoading) {
     return (
       <>;
@@ -68,7 +67,7 @@ export default function Profile() {
                     logout();
 
                     navigate("/")
-                  }}
+                  }
                   variant="outline"
                   className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"
                 >
@@ -82,7 +81,7 @@ export default function Profile() {
       <Footer />
     </>
   )
-}
+
                 >;
                   Logout;
                 </Button>;
@@ -94,6 +93,5 @@ export default function Profile() {
       <Footer />;
     </>;
   );
-}
+
     </>);
-}

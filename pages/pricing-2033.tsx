@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import {
 import { 
   Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Crown, Gem, Infinity, Brain, Atom, Microscope, Phone, Mail, MapPin
-} from 'lucide-react'
+ from 'lucide-react'
 import { cuttingEdge2033Services } from '../data/2033-cutting-edge-innovations';
 import { innovativeITServices2033 } from '../data/2033-innovative-it-services';
 const contactInfo = {
@@ -13,7 +13,7 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
-}
+
 export default function Pricing2033Page() {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly')
   const [selectedPlan, setSelectedPlan] = useState<string | null>(null)
@@ -88,9 +88,9 @@ export default function Pricing2033Page() {
     {
       name: 'Starter'
       description: 'Perfect for small businesses and startups'
-      price: billingCycle === 'monthly' ? 99 : 79
-      period: billingCycle === 'monthly' ? '/month' : '/month'
-      savings: billingCycle === 'yearly' ? 'Save 20%' : ''
+      price: billingCycle = = 'monthly' ? 99 : 79
+      period: billingCycle = = 'monthly' ? '/month' : '/month'
+      savings: billingCycle = = 'yearly' ? 'Save 20%' : ''
       features: [
         'Access to 100+ Core ServicesBasic AI IntegrationStandard Support (24/7)30-Day Free TrialBasic Analytics DashboardEmail Support99.5% Uptime GuaranteeBasic Security Features'
         'Access to 100+ Core ServicesBasic AI IntegrationStandard Support (24/7)30-Day Free TrialBasic Analytics DashboardEmail Support99.5% Uptime GuaranteeBasic Security Features';
@@ -102,9 +102,9 @@ export default function Pricing2033Page() {
     {
       name: 'Professional'
       description: 'Ideal for growing businesses and teams'
-      price: billingCycle === 'monthly' ? 299 : 239
-      period: billingCycle === 'monthly' ? '/month' : '/month'
-      savings: billingCycle === 'yearly' ? 'Save 20%' : ''
+      price: billingCycle = = 'monthly' ? 299 : 239
+      period: billingCycle = = 'monthly' ? '/month' : '/month'
+      savings: billingCycle = = 'yearly' ? 'Save 20%' : ''
       features: [
         'Access to 200+ Advanced ServicesAdvanced AI IntegrationPriority Support (24/7)60-Day Free TrialAdvanced Analytics DashboardPhone & Email Support99.9% Uptime GuaranteeAdvanced Security Features'
         'Access to 200+ Advanced ServicesAdvanced AI IntegrationPriority Support (24/7)60-Day Free TrialAdvanced Analytics DashboardPhone & Email Support99.9% Uptime GuaranteeAdvanced Security Features';
@@ -116,9 +116,9 @@ export default function Pricing2033Page() {
     {
       name: 'Enterprise'
       description: 'For large organizations and enterprises'
-      price: billingCycle === 'monthly' ? 999 : 799
-      period: billingCycle === 'monthly' ? '/month' : '/month'
-      savings: billingCycle === 'yearly' ? 'Save 20%' : ''
+      price: billingCycle = = 'monthly' ? 999 : 799
+      period: billingCycle = = 'monthly' ? '/month' : '/month'
+      savings: billingCycle = = 'yearly' ? 'Save 20%' : ''
       features: [
         'Access to All 500+ ServicesFull AI & Quantum IntegrationPremium Support (24/7)90-Day Free TrialEnterprise Analytics SuiteDedicated Support Users99.99% Uptime GuaranteeEnterprise Security Features'
         'Access to All 500+ ServicesFull AI & Quantum IntegrationPremium Support (24/7)90-Day Free TrialEnterprise Analytics SuiteDedicated Support Users99.99% Uptime GuaranteeEnterprise Security Features';
@@ -200,18 +200,18 @@ export default function Pricing2033Page() {
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
             <div className="text-center">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }} className="mb-6">
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.6 } className="mb-6">
                 <div className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-purple-600/20 to-cyan-600/20 border border-purple-500/30 rounded-full text-purple-300 text-sm font-medium">
                   <Crown className="w-4 h-4" />
                   <span>2033 Revolutionary Pricing</span>
                 </div>
               </motion.div>
               <motion.h1
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }} className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.6, delay: 0.1 } className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-purple-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent">
                   Revolutionary Technology
                 </span>
@@ -219,42 +219,42 @@ export default function Pricing2033Page() {
                 <span className="text-white">Pricing</span>
               </motion.h1>
               <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }} className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed mb-8">
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.6, delay: 0.2 } className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed mb-8">
                 Experience the future of technology with our revolutionary AI consciousness, quantum DNA computing, and space mining automation solutions at competitive prices.
               </motion.p>
 
               {/* Billing Toggle */}
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }} className="flex items-center justify-center space-x-4 mb-8">
-                <span className={`text-sm ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.6, delay: 0.3 } className="flex items-center justify-center space-x-4 mb-8">
+                <span className={`text-sm ${billingCycle = = 'monthly' ? 'text-white' : 'text-gray-400'}`}>
                   Monthly
                 </span>
                 <button
-                  onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')} className="relative w-16 h-8 bg-gray-700 rounded-full p-1 transition-colors duration-200">
+                  onClick={() => setBillingCycle(billingCycle = = 'monthly' ? 'yearly' : 'monthly')} className="relative w-16 h-8 bg-gray-700 rounded-full p-1 transition-colors duration-200">
                   <div
                     className={`w-6 h-6 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full transition-transform duration-200 ${
-                      billingCycle === 'yearly' ? 'translate-x-8' : 'translate-x-0'
+                      billingCycle = = 'yearly' ? 'translate-x-8' : 'translate-x-0'
               {/* Billing Toggle */}
               <motion.div;
-                initial={{ opacity: 0, coordinate_y: 20 }}
-                animate={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }} className="flex items - center justify - center space - x-4 mb - 8">;
-                <span className={`text - sm ${billing_cycle === 'monthly' ? 'text - white' : 'text - gray - 400'}`}>;
+                initial={ opacity: 0, coordinate_y: 20 }
+                animate={ opacity: 1, coordinate_y: 0 }
+                transition={ duration: 0.6, delay: 0.3 } className="flex items - center justify - center space - x-4 mb - 8">;
+                <span className={`text - sm ${billing_cycle = = 'monthly' ? 'text - white' : 'text - gray - 400'}`}>;
                   Monthly;
                 </span>;
                 <button;
-                  on_click={() => setBillingCycle (billing_cycle === 'monthly' ? 'yearly' : 'monthly')} className="relative w - 16 h - 8 bg - gray - 700 rounded - full p - 1 transition - colors duration - 200">;
+                  on_click={() => setBillingCycle (billing_cycle = = 'monthly' ? 'yearly' : 'monthly')} className="relative w - 16 h - 8 bg - gray - 700 rounded - full p - 1 transition - colors duration - 200">;
                   <div;
                     className={`w - 6 h - 6 bg - gradient - to - r from - purple - 500 to - cyan - 500 rounded - full transition - transform duration - 200 ${
-                      billing_cycle === 'yearly' ? 'translate - x-8' : 'translate - x-0';
+                      billing_cycle = = 'yearly' ? 'translate - x-8' : 'translate - x-0';
                     }`}
                   />
                 </button>
-                <span className={`text-sm ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'}`}>
+                <span className={`text-sm ${billingCycle = = 'yearly' ? 'text-white' : 'text-gray-400'}`}>
                   Yearly
                   <span className="ml-2 px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full">
                     Save 20%
@@ -269,12 +269,12 @@ export default function Pricing2033Page() {
           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricingTiers.map((tier, index) => (
+              {pricingTiers.map(tier, index) => (
                 <motion.div
                   key={tier.name}
-                  initial={{ opacity: 0, coordinate_y: 20 }}
-                  animate={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={ opacity: 0, coordinate_y: 20 }
+                  animate={ opacity: 1, coordinate_y: 0 }
+                  transition={ duration: 0.6, delay: index * 0.1 }
                   className={`relative ${
                     tier.popular ? 'scale - 105' : '';
                   }`}
@@ -302,12 +302,12 @@ export default function Pricing2033Page() {
                       )}
                     </div>
                     <ul className="space-y-4 mb-8">
-                      {tier.features.map((feature, idx) => (
+                      {tier.features.map(feature, idx) => (
                         <li key={idx} className="flex items-start space-x-3">
                           <Check className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
                           <span className="text-gray-300">{feature}</span>
                         </li>
-                      ))}
+                      )}
                     </ul>
                     <button
                       onClick={() => setSelectedPlan(tier.name)}
@@ -321,7 +321,7 @@ export default function Pricing2033Page() {
                     </button>
                   </div>
                 </motion.div>
-              ))}
+              )}
             </div>
           </div>
         </div>
@@ -338,12 +338,12 @@ export default function Pricing2033Page() {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {serviceCategories.map((category, index) => (
+              {serviceCategories.map(category, index) => (
                 <motion.div
                   key={category.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }} className="bg-gray-900/50 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300">
+                  initial={ opacity: 0, y: 20 }
+                  animate={ opacity: 1, y: 0 }
+                  transition={ duration: 0.6, delay: index * 0.1 } className="bg-gray-900/50 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300">
                   <div className="flex items-center space-x-3 mb-4">
                     <div className={`w-12 h-12 bg-gradient-to-r ${category.color} rounded-xl flex items-center justify-center`}>
                       <category.icon className="w-6 h-6 text-white" />
@@ -358,12 +358,12 @@ export default function Pricing2033Page() {
                     <div className="text-green-400 text-sm font-medium">{category.savings}</div>
                   </div>
                   <ul className="space-y-2 mb-6">
-                    {category.services.map((service, idx) => (
+                    {category.services.map(service, idx) => (
                       <li key={idx} className="flex items-center space-x-2">
                         <Check className="w-4 h-4 text-green-400 flex-shrink-0" />
                         <span className="text-sm text-gray-300">{service}</span>
                       </li>
-                    ))}
+                    )}
                   </ul>
                   <a
                     href="/services" className="inline-flex items-center space-x-2 text-purple-400 hover:text-cyan-400 transition-colors duration-200 text-sm font-medium">
@@ -371,7 +371,7 @@ export default function Pricing2033Page() {
                     <ArrowRight className="w-4 h-4" />
                   </a>
                 </motion.div>
-              ))}
+              )}
             </div>
           </div>
         </div>
@@ -388,21 +388,21 @@ export default function Pricing2033Page() {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {popularServices.map((service, index) => (
+              {popularServices.map(service, index) => (
                 <motion.div
                   key={service.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }} className="bg-gray-900/50 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300">
+                  initial={ opacity: 0, y: 20 }
+                  animate={ opacity: 1, y: 0 }
+                  transition={ duration: 0.6, delay: index * 0.1 } className="bg-gray-900/50 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300">
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex-1">
                       <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
                       <p className="text-gray-400 text-sm mb-3">{service.description}</p>
                       <div className="inline-flex items-center px-3 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-full">
                   key={service.name}
-                  initial={{ opacity: 0, coordinate_y: 20 }}
-                  animate={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }} className="bg - gray - 900 / 50 border border - purple - 500 / 30 rounded - 2xl p - 6 backdrop - blur - sm hover:border - purple - 500 / 50 transition - all duration - 300">;
+                  initial={ opacity: 0, coordinate_y: 20 }
+                  animate={ opacity: 1, coordinate_y: 0 }
+                  transition={ duration: 0.6, delay: index * 0.1 } className="bg - gray - 900 / 50 border border - purple - 500 / 30 rounded - 2xl p - 6 backdrop - blur - sm hover:border - purple - 500 / 50 transition - all duration - 300">;
                   <div className="flex items - start justify - between mb - 4">;
                     <div className="flex - 1">;
                       <h3 className="text - xl font - bold text - white mb - 2">{service.name}</h3>;
@@ -417,12 +417,12 @@ export default function Pricing2033Page() {
                     </div>
                   </div>
                   <ul className="space-y-2 mb-6">
-                    {service.features.map((feature, idx) => (
+                    {service.features.map(feature, idx) => (
                       <li key={idx} className="flex items-center space-x-2">
                         <Check className="w-4 h-4 text-green-400 flex-shrink-0" />
                         <span className="text-sm text-gray-300">{feature}</span>
                       </li>
-                    ))}
+                    )}
                   </ul>
 
                   <div className="flex space-x-3">
@@ -436,7 +436,7 @@ export default function Pricing2033Page() {
                     </a>
                   </div>
                 </motion.div>
-              ))}
+              )}
             </div>
           </div>
         </div>
@@ -487,7 +487,7 @@ export default function Pricing2033Page() {
       </div>
     </>
   )
-}
+
                       </div>;
                     </div>;
                     <div className="text - right ml - 4">;
@@ -496,11 +496,11 @@ export default function Pricing2033Page() {
                     </div>;
                   </div>;
                   <ul className="space - y-2 mb - 6">;
-                    {service.features.map ((feature, idx) => (
+                    {service.features.map (feature, idx) => (
                       <li key={idx} className="flex items - center space - x-2">;
                         <Check className="w - 4 h - 4 text - green - 400 flex - shrink - 0" />;
                         <span className="text - sm text - gray - 300">{feature}</span>;
-                      </li>))}
+                      </li>)}
                   </ul>;
                   <div className="flex space - x-3">;
                     <a;
@@ -512,7 +512,7 @@ export default function Pricing2033Page() {
                       Call Now;
                     </a>;
                   </div>;
-                </motion.div>))}
+                </motion.div>)}
             </div>;
           </div>;
         </div>;
@@ -562,4 +562,3 @@ export default function Pricing2033Page() {
         </div>;
       </div>;
     </>);
-}

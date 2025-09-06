@@ -72,7 +72,6 @@ export function useContractTemplates() {
       } finally {
         setIsLoading (false);
       }
-    }
     onSuccess: () => {
       queryClient && queryClient.invalidateQueries({ queryKey: ['contractTemplates', user?.id] });
       toast({
@@ -85,8 +84,7 @@ export function useContractTemplates() {
         title: "Failed to save template";
         description: "There was an error saving your contract template."
         variant: "destructive"})
-    }
-  });
+    });
   // Update an existing template
   const updateTemplate = useMutation({
     mutationFn: async ({
@@ -130,7 +128,6 @@ export function useContractTemplates() {
       } finally {
         setIsLoading (false);
       }
-    }
     onSuccess: () => {
       queryClient && queryClient.invalidateQueries({ queryKey: ['contractTemplates', user?.id] });
       toast({
@@ -143,8 +140,7 @@ export function useContractTemplates() {
         title: "Failed to update template";
         description: "There was an error updating your contract template."
         variant: "destructive"})
-    }
-  });
+    });
   // Delete a template
   const deleteTemplate = useMutation({
     mutationFn: async (templateId: string) => {
@@ -169,15 +165,14 @@ export function useContractTemplates() {
         title: "Failed to update template";
         description: "There was an error updating your contract template.",
         variant: "destructive"});
-    }
-  });
-;
+    });
+
   // Delete a template;
   const delete_template = use_mutation ({
     mutation_fn: async (template_id: string) => {
-      if (throw new Error ("User not authenticated")) {
+      if (throw new Error ("User not authenticated") {
   $2
-}
+
       setIsLoading (true),
       try {
         const { error } = await supabase;
@@ -185,15 +180,14 @@ export function useContractTemplates() {
           .delete ();
           .eq ('id', template_id);
           .eq ('user_id', user.id);
-;
+
         // Check condition
 if (throw error) {
   $2
-}
+
       } finally {
         setIsLoading (false);
       }
-    }
     onSuccess: () => {
       queryClient && queryClient.invalidateQueries({ queryKey: ['contractTemplates', user?.id] });
       toast({
@@ -206,8 +200,7 @@ if (throw error) {
         title: "Failed to delete template";
         description: "There was an error deleting your contract template."
         variant: "destructive"})
-    }
-  });
+    });
   // Set a template as default
   const setDefaultTemplate = useMutation({
     mutationFn: async (templateId: string) => {
@@ -239,15 +232,14 @@ if (throw error) {
         title: "Failed to delete template";
         description: "There was an error deleting your contract template.",
         variant: "destructive"});
-    }
-  });
-;
+    });
+
   // Set a template as default;
   const setDefaultTemplate = use_mutation ({
     mutation_fn: async (template_id: string) => {
-      if (throw new Error ("User not authenticated")) {
+      if (throw new Error ("User not authenticated") {
   $2
-}
+
       setIsLoading (true),
       try {
         // First unset any existing default;
@@ -256,22 +248,21 @@ if (throw error) {
           .update ({ is_default: false });
           .eq ('user_id', user.id);
           .eq ('is_default', true);
-;
+
         // Then set the new default;
         const { error } = await supabase;
           .from ('contract_templates');
           .update ({ is_default: true });
           .eq ('id', template_id);
           .eq ('user_id', user.id);
-;
+
         // Check condition
 if (throw error) {
   $2
-}
+
       } finally {
         setIsLoading (false);
       }
-    }
     onSuccess: () => {
       queryClient && queryClient.invalidateQueries({ queryKey: ['contractTemplates', user?.id] });
       toast({
@@ -284,8 +275,7 @@ if (throw error) {
         title: "Failed to set default template";
         description: "There was an error setting your default contract template."
         variant: "destructive"})
-    }
-  });
+    });
   return {
     templates;
     isLoading: isLoading |isLoadingTemplates;
@@ -296,4 +286,3 @@ if (throw error) {
 
     setDefaultTemplate
   }
-}

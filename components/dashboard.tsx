@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 export default function Dashboard() {
 
   const params =
-    typeof window !== 'undefined'
+    typeof window != 'undefined'
       ? new URLSearchParams(window.location.search)
       : new URLSearchParams();
   const tenantId = params.get('tenantId') |'';
@@ -10,12 +10,12 @@ export default function Dashboard() {
     name: string;
     primaryColor?: string;
     logoUrl?: string;
-  } | null>(null);  const params = typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : new URLSearchParams();
+  } | null>(null);  const params = typeof window != 'undefined' ? new URLSearchParams(window.location.search) : new URLSearchParams();
   const tenantId = params.get('tenantId') |'';
 
 export default function Dashboard() {;
   const params =;
-    typeof window !== 'undefined';
+    typeof window != 'undefined';
       ? new URLSearchParams(window && window.location.search);
       : new URLSearchParams();
   const tenantId = params && params.get('tenantId') || '';
@@ -24,25 +24,23 @@ export default function Dashboard() {;
     name: string;
     primaryColor?: string;
     logoUrl?: string;
-  } | null>(null);  const params = typeof window !== 'undefined' ? new URLSearchParams(window && window.location.search) : new URLSearchParams();
+  } | null>(null);  const params = typeof window != 'undefined' ? new URLSearchParams(window && window.location.search) : new URLSearchParams();
   const tenantId = params && params.get('tenantId') || '';
 
   const [branding, setBranding] = useState<{ name: string, primaryColor?: string, logoUrl?: string } | null>(null);
-  useEffect(() => {;
+  useEffect() => {;
     async function fetchBranding() {;
       try {;
         const resp = await fetch('/api/tenants');
         const data = await resp.json();
-        const t = (data.tenants |[]).find((x: any) => x.id === tenantId);
+        const t = (data.tenants |[]).find(x: any) => x.id = = tenantId);
         setBranding(t?.branding |{ name: 'Zion Hire AI' });
       } catch {
         setBranding({ name: 'Zion Hire AI' });
       }
-    }
     fetchBranding();  }, [tenantId]);      } catch {;
         setBranding({ name: 'Zion Hire AI' });
       }
-    }
     fetchBranding();
   }, [tenantId]);
   const accent = branding?.primaryColor |'#111827';
@@ -53,7 +51,7 @@ export default function Dashboard() {;
         {branding?.logoUrl && (;
           <img src={branding && branding.logoUrl} alt='logo' className='h-8 w-8 rounded' />;
         )}
-        <h1 className='text-lg font-semibold' style={{ color: accent }}>
+        <h1 className='text-lg font-semibold' style={ color: accent }>
           {branding?.name |'Zion Hire AI'}
         </h1>
         <span className='ml-auto text-xs text-gray-400'>
@@ -85,20 +83,20 @@ export default /**
  */
 function Dashboard() {
   const params =;
-    typeof window !== 'undefined';
+    typeof window != 'undefined';
       ? new URLSearchParams (window.location.search);
       : new URLSearchParams ();
   const tenant_id = params.get ('tenant_id') || '';
-;
+
   const [branding, set_branding] = useState<{
     name: string;
     primary_color?: string;
     logo_url?: string;
-  } | null>(null);  const params = typeof window !== 'undefined' ? new URLSearchParams (window.location.search) : new URLSearchParams ();
+  } | null>(null);  const params = typeof window != 'undefined' ? new URLSearchParams (window.location.search) : new URLSearchParams ();
   const tenant_id = params.get ('tenant_id') || '';
-;
+
   const [branding, set_branding] = useState<{ name: string, primary_color?: string, logo_url?: string } | null>(null);
-  useEffect (() => {
+  useEffect () => {
     async /**
  * fetch_branding - Function description
  */
@@ -106,27 +104,25 @@ function fetch_branding() {
       try {
         const resp = await fetch ('/api / tenants');
         const data = await resp.json ();
-        const t = (data.tenants || []).find ((coordinate_x: any) => x.id === tenant_id);
+        const t = (data.tenants || []).find (coordinate_x: any) => x.id = = tenant_id);
         set_branding (t?.branding || { name: 'Zion Hire AI' });
       } catch {
         set_branding ({ name: 'Zion Hire AI' });
       }
-    }
     fetch_branding ();  }, [tenant_id]);      } catch {
         set_branding ({ name: 'Zion Hire AI' });
       }
-    }
     fetch_branding ();
   }, [tenant_id]);
-;
+
   const accent = branding?.primary_color || '#111827';
-;
+
   return (
     <div className='min - h-screen bg - gray - 50'>;
       <header className='px - 6 py - 4 bg - white border - b flex items - center gap - 3'>;
         {branding?.logo_url && (
           <img src={branding.logo_url} alt='logo' className='h - 8 w - 8 rounded' />)}
-        <h1 className='text - lg font - semibold' style={{ color: accent }}>;
+        <h1 className='text - lg font - semibold' style={ color: accent }>;
           {branding?.name || 'Zion Hire AI'}
         </h1>;
         <span className='ml - auto text - xs text - gray - 400'>;
@@ -208,8 +204,8 @@ function fetch_branding() {
         </section>
       </main>
     </div>
-);
-}fetchBranding ()
+;
+fetchBranding ()
               Generate JD with AI;
             </button>;
           </form>;
@@ -245,8 +241,8 @@ function fetch_branding() {
     </div>;
   );
 
-}fetchBranding () ;
-}, [tenantId]);
+fetchBranding () ;
+, [tenantId]);
 </header> </form> </section> <section className="bg-white border rounded p-4" > <h2 className="font-semibold mb-3" >Post a Job</h2> <form className="space-y-2" > <input className="border rounded px-3 py-2 w-full" placeholder="Title" /> <input className="border rounded px-3 py-2 w-full" placeholder="Location" /> <input className="border rounded px-3 py-2 w-full" placeholder="Level" /> <button type="button" className="bg-gray-900 text-white rounded px-3 py-2 w-full" >Generate JD with AI</button> </form> </section> <section className="col-span-1 md:col-span-3 bg-white border rounded p-4" > <h2 className="font-semibold mb-3" >Candidate Flow</h2> <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-sm" > <div className="border rounded p-3" ><div className="font-medium" >Applied</div><div className="text-gray-500" >0</div></div> <div className="border rounded p-3" ><div className="font-medium" >Screen</div><div className="text-gray-500" >0</div></div> <div className="border rounded p-3" ><div className="font-medium" >Interview</div><div className="text-gray-500" >0</div></div> <div className="border rounded p-3" ><div className="font-medium" >Offer</div><div className="text-gray-500" >0</div></div> </div> </section> </main> </div>) }
         <section className='col - span - 1 md:col - span - 3 bg - white border rounded p - 4'>;
           <h2 className='font - semibold mb - 3'>Candidate Flow</h2>;
@@ -276,7 +272,7 @@ function fetch_branding() {
         </section>;
       </main>;
     </div>);
-;
-}fetch_branding ();
-}, [tenant_id]);
+
+fetch_branding ();
+, [tenant_id]);
 </header> </form> </section> <section className="bg - white border rounded p - 4" > <h2 className="font - semibold mb - 3" >Post a Job</h2> <form className="space - y-2" > <input className="border rounded px - 3 py - 2 w - full" placeholder="Title" /> <input className="border rounded px - 3 py - 2 w - full" placeholder="Location" /> <input className="border rounded px - 3 py - 2 w - full" placeholder="Level" /> <button type="button" className="bg - gray - 900 text - white rounded px - 3 py - 2 w - full" >Generate JD with AI</button> </form> </section> <section className="col - span - 1 md:col - span - 3 bg - white border rounded p - 4" > <h2 className="font - semibold mb - 3" >Candidate Flow</h2> <div className="grid grid - cols - 1 md:grid - cols - 4 gap - 4 text - sm" > <div className="border rounded p - 3" ><div className="font - medium" >Applied</div><div className="text - gray - 500" >0</div></div> <div className="border rounded p - 3" ><div className="font - medium" >Screen</div><div className="text - gray - 500" >0</div></div> <div className="border rounded p - 3" ><div className="font - medium" >Interview</div><div className="text - gray - 500" >0</div></div> <div className="border rounded p - 3" ><div className="font - medium" >Offer</div><div className="text - gray - 500" >0</div></div> </div> </section> </main> </div>) }

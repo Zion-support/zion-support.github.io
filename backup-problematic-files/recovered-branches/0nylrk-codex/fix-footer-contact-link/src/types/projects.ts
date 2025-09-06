@@ -6,7 +6,7 @@ export type ProjectStatus = ;
   | 'in_progress';
   | 'completed';
   | 'canceled',;
-;
+
 export interface Project {;
   id:string,;
   client_id:string,;
@@ -32,8 +32,7 @@ export interface Project {;
     display_name:string,;
     avatar_url?:string;
   },;
-}
-;
+
 export interface ProjectNote {;
   id:string,;
   project_id:string,;
@@ -44,5 +43,4 @@ export interface ProjectNote {;
     display_name:string,;
     avatar_url?:string;
   },;
-} export type ProjectStatus = | 'offer sent' | 'offer accepted' | 'changes requested' | 'in progress' | 'completed' | 'canceled';
-}
+ export type ProjectStatus = | 'offer sent' | 'offer accepted' | 'changes requested' | 'in progress' | 'completed' | 'canceled';

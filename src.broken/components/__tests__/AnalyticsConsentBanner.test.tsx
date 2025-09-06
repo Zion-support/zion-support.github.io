@@ -1,5 +1,4 @@
 import React from 'react';
-,;
 export export export default function AnalyticsConsentBanner.test()   {;
   return (;
     <div>;
@@ -7,4 +6,3 @@ export export export default function AnalyticsConsentBanner.test()   {;
       <p>Component placeholder</p>;
     </div>;
   );
-}

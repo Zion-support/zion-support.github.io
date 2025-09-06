@@ -5,8 +5,7 @@ interface FeatureCardProps {;
   features:string[],;
   gradient:string,;
   className?:string;
-}
-;
+
 export default function FeatureCard({ ;
   icon, ;
   title, ;
@@ -14,7 +13,7 @@ export default function FeatureCard({ ;
   features, ;
   gradient, ;
   className = '' ;
-} FeatureCardProps) {;
+ FeatureCardProps) {;
   return (;
     <div className={`feature-card group ${className}`}>;
       <div className={`w-12 h-12 ${gradient} rounded-lg flex items-center justify-center mb-4`}>;
@@ -23,11 +22,10 @@ export default function FeatureCard({ ;
       <h3 className="text-xl font-semibold mb-3">{title}</h3>;
       <p className="text-white/70 mb-4">{description}</p>;
       <ul className="text-sm text-white/60 space-y-1">;
-        {features.map((feature, index) => (;
+        {features.map(feature, index) => (;
           <li key={index}> {feature}</li>;
-        ))}
+        )}
       </ul>;
     </div>;
-  ),;) ) 
-}</ul> </div>) 
-}
+  ),;) 
+</ul> </div>) 

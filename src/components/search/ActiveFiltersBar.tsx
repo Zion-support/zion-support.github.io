@@ -1,5 +1,4 @@
 
-
 export default ActiveFiltersBar; import React from 'react'
 
 import { X } from 'lucide-react'
@@ -14,7 +13,7 @@ interface SearchFilters {
   minRating: number
 
   sort: string
-}
+
 interface ActiveFiltersBarProps {
 
   filters: SearchFilters
@@ -22,14 +21,14 @@ interface ActiveFiltersBarProps {
   onClearAll: () => void
 
   className?: string
-}
+
 export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
 
   filters
   onFiltersChange
   onClearAll
   className = ''
-},) => {
+,) => {
   const activeFilters: Array<{ key: string, label: string, value: string }> = []
   // Add type filters
   filters.types.forEach(type => {
@@ -71,7 +70,7 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
     })
   }
   // Add sort filter (only if not default)
-  if (filters.sort !== 'relevance') {
+  if (filters.sort != 'relevance') {
     const sortLabels: Record<string, string> = {
       price_asc: 'Price: Low to High'
       price_desc: 'Price: High to Low'
@@ -84,21 +83,20 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
     })
   }
   const removeFilter = (filterKey: string,) => {
-    if (filterKey.startsWith('type-')) {
+    if (filterKey.startsWith('type-') {
       const typeToRemove = filterKey.replace('type-', '')
-      const newTypes = filters.types.filter(t => t !== typeToRemove)
+      const newTypes = filters.types.filter(t => t != typeToRemove)
       onFiltersChange({ ...filters, types: newTypes })
-    } else if (filterKey === 'category') {
+    } else if (filterKey = = 'category') {
       onFiltersChange({ ...filters, category: '' })
-    } else if (filterKey === 'price') {
+    } else if (filterKey = = 'price') {
       onFiltersChange({ ...filters, minPrice: 0, maxPrice: 10000 })
-    } else if (filterKey === 'rating') {
+    } else if (filterKey = = 'rating') {
       onFiltersChange({ ...filters, minRating: 0 })
-    } else if (filterKey === 'sort') {
+    } else if (filterKey = = 'sort') {
       onFiltersChange({ ...filters, sort: 'relevance' })
     }
-  }
-  if (activeFilters.length === 0) {
+  if (activeFilters.length = = 0) {
     return null
   }
   return (
@@ -123,7 +121,7 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
             <X className="h-3 w-3" />;
           </Button>;
         </Badge>;
-      ))}
+      )}
       <Button
         variant="ghost"
         size="sm"
@@ -134,31 +132,31 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
       </Button>
     </div>
   )
-}
+
 export default ActiveFiltersBar
 interface Filter {
   key: string;
   value: string;
   label: string;
-}
+
 interface ActiveFiltersBarProps extends React.PropsWithChildren<{}> {
   filters: Filter[]
   onRemoveFilter: key: string void
-  onClearAll: : unknown void}
+  onClearAll: unknown void}
         className="text-sm text-zion-slate-light hover: text-zion-cyan transition-colors underline"
       >
         Clear all
       </button>
     </div>
   )}
-'"
+"
 
   filters: Filter[];
   onRemoveFilter: key: string void;
-  onClearAll: : unknown void}
+  onClearAll: unknown void}
         className="text - sm text - zion - slate - light hover: text - zion - cyan transition - colors underline";
       >;
         Clear all;
       </button>;
     </div>)}
-'";
+";

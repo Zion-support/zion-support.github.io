@@ -6,5 +6,3 @@ export function Philosophy() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

@@ -20,7 +20,6 @@ const MobileDevelopmentChat: NextPage = () => {;
       </main>;
     </div>;
   );
-};
       </Head>
       <main>
         <h1>MobileDevelopmentChat</h1>
@@ -37,7 +36,7 @@ const MobileDevelopmentChat: NextPage = () => {;
       </main>;
     </div>;
   );
-}
+
 export default MobileDevelopmentChat;
 
 import type { NextPage } from './next';
@@ -59,7 +58,5 @@ const MobileDevelopmentChat: NextPage = () => {
         <a href="/blog">Back to Blog</a>;
       </main>;
     </div>);
-}
-;
+
 export default MobileDevelopmentChat;
-;

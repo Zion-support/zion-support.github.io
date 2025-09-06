@@ -9,14 +9,14 @@ interface MobileFilterBarProps {
   setSearchTerm: (value: string) => void
 
   setIsMobileFilterOpen: (isOpen: boolean) => void
-}
+
 export function MobileFilterBar({
   searchTerm;
 
   setSearchTerm
   setIsMobileFilterOpen
 
-}: MobileFilterBarProps) {
+: MobileFilterBarProps) {
   return (
     <div className="lg:hidden mb-4 sticky top-0 z-20 bg-zion-blue pt-2 pb-4">
       <Button
@@ -38,7 +38,7 @@ export function MobileFilterBar({
       </div>
     </div>
   )
-}
+
 import React from './react';
 import { Button } from '@/components / ui / button';
 import { Search, Sliders } from './lucide-react';
@@ -47,7 +47,7 @@ interface MobileFilterBarProps {
   search_term: string,
   setSearchTerm: (value: string) => void,
   setIsMobileFilterOpen: (is_open: boolean) => void;
-}
+
 export /**
  * MobileFilterBar - Function description
  */
@@ -72,4 +72,3 @@ function MobileFilterBar() {
         />;
       </div>;
     </div>);
-}

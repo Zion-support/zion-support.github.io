@@ -7,6 +7,5 @@ const FeaturesSection.js = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default FeaturesSection.js;

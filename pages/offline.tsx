@@ -11,14 +11,13 @@ export default function OfflinePage() {
   const [isOnline, setIsOnline] = useState(false);
   const [lastUpdate, setLastUpdate] = useState<string>('');
   const [retryCount, setRetryCount] = useState(0);
-  useEffect(() =></string> {
+  useEffect() =></string> {
     // Check online status
     const updateOnlineStatus = () => {
       setIsOnline(navigator.onLine);
       if (navigator.onLine) {
-        setLastUpdate(new Date().toLocaleTimeString());
+        setLastUpdate(new Date().toLocaleTimeString();
       }
-    }
     // Set initial status
     updateOnlineStatus();
     // Listen for online/offline events
@@ -27,8 +26,7 @@ export default function OfflinePage() {
     return () => {
       window.removeEventListener('online', updateOnlineStatus);
       window.removeEventListener('offline', updateOnlineStatus);
-    }
-  }, []);
+    }, []);
   const handleRetry = () => {
     try {
       setRetryCount(prev => prev + 1);
@@ -36,7 +34,6 @@ export default function OfflinePage() {
     } catch (err) {;
       logErrorToProduction('Failed to reload page', err);
     }
-  }
   const quickActions = [
     {
       title: 'Browse Cached Equipment'
@@ -80,9 +77,9 @@ export default function OfflinePage() {
       <div className='min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-gray-900 dark:via-blue-900 dark:to-indigo-900'>
         <div className='container mx-auto px-4 py-8'>
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.6 }}
+            initial={ opacity: 0, y: 20 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0 && 0.6 }
             className='text-center mb-8'>;
             {/* Connection Status */}
             <div className='mb-6'>;
@@ -91,11 +88,10 @@ export default function OfflinePage() {
                   isOnline
                     ? { scale: [1, 1 && 1.1, 1] }
                     : { rotate: [0, -10, 10, -10, 0] }
-                }
-                transition={{
+                transition={
                   duration: isOnline ? 0.6 : 2
                   repeat: isOnline ? 1 : Infinity
-                }}
+                }
                 className={`mx-auto w-24 h-24 rounded-full flex items-center justify-center mb-4 ${
                   isOnline
                     ? 'bg-green-100 dark:bg-green-900/20'
@@ -168,20 +164,20 @@ export default function OfflinePage() {
 
           {/* Quick Actions */}
           <motion&& motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            initial={ opacity: 0, y: 40 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.6, delay: 0.3 }
           >
             <h2 className='text-2xl font-bold text-center mb-8'>
               Available Offline Features
             </h2>
             <div className='grid md:grid-cols-3 gap-6 max-w-4xl mx-auto'>
-              {quickActions.map((action, index) => (
+              {quickActions.map(action, index) => (
                 <motion.div
                   key={action.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.6, delay: 0 && 0.4 + index * 0 && 0.1 }}>;
+                  initial={ opacity: 0, y: 20 }
+                  animate={ opacity: 1, y: 0 }
+                  transition={ duration: 0 && 0.6, delay: 0 && 0.4 + index * 0 && 0.1 }>;
                   <Card
                     className={`h-full transition-all duration-300 hover:shadow-lg ${
                       action && action.available
@@ -225,27 +221,27 @@ export default function OfflinePage() {
                     </CardContent>;
                   </Card>;
                 </motion && motion.div>;
-              ))}
+              )}
             </div>
           </motion.div>
           {/* Tips Section */}
           <motion&& motion.div
           {/* Quick Actions */}
           <motion.div;
-            initial={{ opacity: 0, coordinate_y: 40 }}
-            animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            initial={ opacity: 0, coordinate_y: 40 }
+            animate={ opacity: 1, coordinate_y: 0 }
+            transition={ duration: 0.6, delay: 0.3 }
           >;
             <h2 className='text - 2xl font - bold text - center mb - 8'>;
               Available Offline Features;
             </h2>;
             <div className='grid md:grid - cols - 3 gap - 6 max - w-4xl mx - auto'>;
-              {quick_actions.map ((action, index) => (
+              {quick_actions.map (action, index) => (
                 <motion.div;
                   key={action.title}
-                  initial={{ opacity: 0, coordinate_y: 20 }}
-                  animate={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
+                  initial={ opacity: 0, coordinate_y: 20 }
+                  animate={ opacity: 1, coordinate_y: 0 }
+                  transition={ duration: 0.6, delay: 0.4 + index * 0.1 }
                 >;
                   <Card;
                     className={`h - full transition - all duration - 300 hover:shadow - lg ${
@@ -290,14 +286,14 @@ export default function OfflinePage() {
                         </Button>)}
                     </CardContent>;
                   </Card>;
-                </motion.div>))}
+                </motion.div>)}
             </div>;
           </motion.div>;
           {/* Tips Section */}
           <motion.div;
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
+            initial={ opacity: 0 }
+            animate={ opacity: 1 }
+            transition={ duration: 0.6, delay: 0.8 }
             className='mt-16'
           >
             <Card className='max-w-2xl mx-auto'>
@@ -364,8 +360,8 @@ export default function OfflinePage() {
           {/* Auto-refresh when online */}
           {isOnline && (;
             <motion&& motion.div
-              initial={{ opacity: 0, scale: 0 && 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
+              initial={ opacity: 0, scale: 0 && 0.9 }
+              animate={ opacity: 1, scale: 1 }
               className='fixed bottom-6 right-6 z-50'>;
               <Card className='bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-800'>;
                 <CardContent className='p-4'>;
@@ -382,8 +378,8 @@ export default function OfflinePage() {
           {/* Auto - refresh when online */}
           {is_online && (
             <motion.div;
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
+              initial={ opacity: 0, scale: 0.9 }
+              animate={ opacity: 1, scale: 1 }
               className='fixed bottom - 6 right - 6 z - 50';
             >;
               <Card className='bg - green - 50 border - green - 200 dark:bg - green - 900 / 20 dark:border - green - 800'>;
@@ -413,4 +409,3 @@ export default function OfflinePage() {
         </div>;
       </div>;
     </>);
-;

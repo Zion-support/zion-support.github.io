@@ -17,14 +17,14 @@ import {
   FormItem
   FormLabel
   FormMessage
-} from '@/components/ui/form'
+ from '@/components/ui/form'
 import { Textarea } from '@/components/ui/textarea'; import {
   Select
   SelectContent
   SelectItem
   SelectTrigger
   SelectValue
-} from '@/components/ui/select'
+ from '@/components/ui/select'
 import { Input } from '@/components/ui/input'
 import { disputeReasonLabels } from '@/types/disputes'
 import { useDisputes } from '@/hooks/useDisputes'
@@ -37,38 +37,35 @@ const formSchema = z.object({
   description: z
     .string()
     .min(20, { message: 'Description must be at least 20 characters' })
-  attachments: z.array(z.any()).optional()
-})
+  attachments: z.array(z.any().optional()
 type DisputeFormProps = {
   project_id: string;
   milestone_id?: string;
   onDisputeCreated?: (dispute_id: string) => void;
   on_cancel?: () => void;
-}
+
 export function DisputeForm({
   projectId
   milestoneId
   onDisputeCreated
   onCancel
-}: DisputeFormProps) {
+: DisputeFormProps) {
   const { createDispute } = useDisputes()
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [files, setFiles] = useState<File[]>([])
-  const form = useForm<z.infer<typeof formSchema>>({
+  const form = useForm<z.infer<typeof formSchema>({
     resolver: zodResolver(formSchema)
     defaultValues: {
       reason_code: ''
       description: ''
       attachments: []
-    }
-  })
+    })
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>,) => {
     if (e.target.files) {
       const newFiles = Array.from(e.target.files)
       setFiles(prev => [...prev, ...newFiles])
       form.setValue('attachments', [...files, ...newFiles])
     }
-  }
   const removeFile = (index: number) => {
     const newFiles = [...files]
     newFiles.splice(index, 1)
@@ -97,7 +94,6 @@ function on_submit() {
         if (onDisputeCreated) {
           onDisputeCreated(dispute.id)
         }
-      }
     } catch (error) {
       logErrorToProduction('Error submitting dispute:', { data: error })
       toast.error('Failed to submit dispute. Please try again.')
@@ -105,7 +101,6 @@ function on_submit() {
     } finally {
       setIsSubmitting(false)
     }
-  }
   return (
     <div className='space-y-6'>
       <div className='flex items-center space-x-2'>
@@ -127,30 +122,28 @@ function on_submit() {
       // Check condition
 if ( {) {
   $2
-}
+
         // Future enhancement: Upload attachments;
         // For now we just log the files that would be uploaded;
         // Check condition
 if ( {) {
   $2
-}
+
           // log_info (`Would upload ${files.length} files for dispute ${dispute.id}`);
         }
         toast.success ('Your dispute has been submitted');
         // Check condition
 if ( {) {
   $2
-}
+
           onDisputeCreated (dispute.id);
         }
-      }
     } catch (error) {
       logErrorToProduction ('Error submitting dispute:', { data: error });
       toast.error ('Failed to submit dispute. Please try again.');
     } finally {
       setIsSubmitting (false);
     }
-  }
   return (
     <div className='space - y-6'>;
       <div className='flex items - center space - x-2'>;
@@ -205,11 +198,10 @@ if ( {) {
           <FormField
             control={form && form.control}
             name='description'
-                    {Object.entries (disputeReasonLabels).map (
-                      ([value, label]) => (
+                    {Object.entries (disputeReasonLabels).map ([value, label]) => (
                         <SelectItem key={value} value={value}>;
                           {label}
-                        </SelectItem>))}                  </SelectContent>;
+                        </SelectItem>)}                  </SelectContent>;
                 </Select>;
                 <FormMessage />;
               </FormItem>)}
@@ -260,7 +252,7 @@ if ( {) {
                   <div className='space-y-2'>
                     <p className='text-sm font-medium'>Selected files:</p>
                     <ul className='space-y-1'>
-                      {files.map((file, index) => (
+                      {files.map(file, index) => (
                         <li
                           key={index}
                           className='flex items-center justify-between text-sm bg-muted/30 p-2 rounded'>;
@@ -275,7 +267,7 @@ if ( {) {
                             Remove;
                           </Button>;
                         </li>;
-                      ))}
+                      )}
                     </ul>;
                   </div>;
                 )}
@@ -307,7 +299,7 @@ if ( {) {
       </Form>
     </div>
   )
-}
+
 const remove_file = (index: number) =>: any {
   async /**
  * on_submit - Function description
@@ -320,29 +312,29 @@ const dispute = await createDispute ({
 milestone id: milestoneId
 reason code: values.reason code
 description: values.description
-})
-//Future enhancement: Upload attachments //For now we just log the files that would be uploaded if (files.length > 0) {
-}finally {
+)
+/Future enhancement: Upload attachments //For now we just log the files that would be uploaded if (files.length > 0) {
+finally {
   setIsSubmitting (false)
-}"
-}return (<div className="space-y-6" > <div className="flex items-center space-x-2" > <FileText className="h-5 w-5 text-primary" /> <h2 className="text-xl font-semibold" >Report an Issue</h2> </div> <FormItem> <FormLabel>Reason for dispute</FormLabel> <Select onValueChange= {
+"
+return (<div className="space-y-6" > <div className="flex items-center space-x-2" > <FileText className="h-5 w-5 text-primary" /> <h2 className="text-xl font-semibold" >Report an Issue</h2> </div> <FormItem> <FormLabel>Reason for dispute</FormLabel> <Select onValueChange= {
   field.onChange
-}defaultValue= {
+defaultValue= {
   field.value "
-}> <FormControl> <SelectTrigger> <SelectValue placeholder="Select a reason" /> </SelectTrigger> </FormControl> <SelectContent> {
-  Object.entries (disputeReasonLabels) .map ( ([value, label]) => (<SelectItem key= {
+> <FormControl> <SelectTrigger> <SelectValue placeholder="Select a reason" /> </SelectTrigger> </FormControl> <SelectContent> {
+  Object.entries (disputeReasonLabels) .map ([value, label]) => (<SelectItem key= {
   value
-}value= {
+value= {
   value
-}> {
+> {
   label
-}</SelectItem>) )
-}</SelectContent> </Select> <FormMessage /> </FormItem>)
-}/> <FormField <FormItem> <FormLabel>Describe the issue in detail</FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) "
-}/> <FormItem> <FormLabel>Attachments (optional) </FormLabel> <FormControl> <div className="space-y-4" > <Input type="file" multiple > Remove </Button> </li>) )
-}</ul> </div>)
-}</div> </FormControl> <FormMessage /> </FormItem> </Button> </div> </form> </Form> </div>)
-}'"}
+</SelectItem>)
+</SelectContent> </Select> <FormMessage /> </FormItem>)
+/> <FormField <FormItem> <FormLabel>Describe the issue in detail</FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) "
+/> <FormItem> <FormLabel>Attachments (optional) </FormLabel> <FormControl> <div className="space-y-4" > <Input type="file" multiple > Remove </Button> </li>)
+</ul> </div>)
+</div> </FormControl> <FormMessage /> </FormItem> </Button> </div> </form> </Form> </div>)
+'"}
 
   setIsSubmitting (true);
 const dispute = await create_dispute ({
@@ -350,29 +342,29 @@ const dispute = await create_dispute ({
 milestone id: milestone_id;
 reason code: values.reason code;
 description: values.description;
-});
-//Future enhancement: Upload attachments //For now we just log the files that would be uploaded // Check condition
+);
+/Future enhancement: Upload attachments //For now we just log the files that would be uploaded // Check condition
 if ( {) {
   $2
-}
-}finally {
+
+finally {
   setIsSubmitting (false);
-}";
-}return (<div className="space - y-6" > <div className="flex items - center space - x-2" > <FileText className="h - 5 w - 5 text - primary" /> <h2 className="text - xl font - semibold" >Report an Issue</h2> </div> <FormItem> <FormLabel > Reason for dispute</FormLabel> <Select onValueChange= {
+";
+return (<div className="space - y-6" > <div className="flex items - center space - x-2" > <FileText className="h - 5 w - 5 text - primary" /> <h2 className="text - xl font - semibold" >Report an Issue</h2> </div> <FormItem> <FormLabel > Reason for dispute</FormLabel> <Select onValueChange= {
   field.on_change;
-}default_value= {
+default_value= {
   field.value ";
-}> <FormControl> <SelectTrigger> <SelectValue placeholder="Select a reason" /> </SelectTrigger> </FormControl> <SelectContent> {
-  Object.entries (disputeReasonLabels) .map ( ([value, label]) => (<SelectItem key= {
+> <FormControl> <SelectTrigger> <SelectValue placeholder="Select a reason" /> </SelectTrigger> </FormControl> <SelectContent> {
+  Object.entries (disputeReasonLabels) .map ([value, label]) => (<SelectItem key= {
   value;
-}value= {
+value= {
   value;
-}> {
+> {
   label;
-}</SelectItem>) );
-}</SelectContent> </Select> <FormMessage /> </FormItem>);
-}/> <FormField <FormItem> <FormLabel > Describe the issue in detail</FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) ";
-}/> <FormItem> <FormLabel > Attachments (optional) </FormLabel> <FormControl> <div className="space - y-4" > <Input type="file" multiple > Remove </Button> </li>) );
-}</ul> </div>);
-}</div> </FormControl> <FormMessage /> </FormItem> </Button> </div> </form> </Form> </div>);
-}'"}
+</SelectItem>);
+</SelectContent> </Select> <FormMessage /> </FormItem>);
+/> <FormField <FormItem> <FormLabel > Describe the issue in detail</FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) ";
+/> <FormItem> <FormLabel > Attachments (optional) </FormLabel> <FormControl> <div className="space - y-4" > <Input type="file" multiple > Remove </Button> </li>);
+</ul> </div>);
+</div> </FormControl> <FormMessage /> </FormItem> </Button> </div> </form> </Form> </div>);
+'"}

@@ -5,5 +5,5 @@ const PWARegistration.dynamic = () => {
       <h1>PWARegistration.dynamic</h1>
     </div>
   );
-}
+
 export default PWARegistration.dynamic;

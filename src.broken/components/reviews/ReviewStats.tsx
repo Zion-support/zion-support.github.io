@@ -6,5 +6,3 @@ export function ReviewStats() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

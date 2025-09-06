@@ -6,5 +6,3 @@ export function AIEnhancementButton() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

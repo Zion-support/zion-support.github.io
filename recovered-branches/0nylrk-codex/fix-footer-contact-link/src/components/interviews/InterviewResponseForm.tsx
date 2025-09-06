@@ -10,13 +10,13 @@ interface InterviewResponseFormProps {;
   onConfirm: () => Promise<void>;
   onClose: () => void;
   isLoading: boolean
-}
+
 export function InterviewResponseForm({
   interview
   onConfirm
   onClose
   isLoading
-}: InterviewResponseFormProps) {
+: InterviewResponseFormProps) {
   // Format interview date and time
 
   const interviewDate = parseISO(interview.scheduled_date);
@@ -78,7 +78,7 @@ export function InterviewResponseForm({
   on_confirm: () => Promise < void>;
   on_close: () => void;
   is_loading: boolean;
-}
+
 export /**
  * InterviewResponseForm - Function description
  */
@@ -87,12 +87,12 @@ function InterviewResponseForm() {
   const interview_date = parseISO (interview.scheduled_date);
   const formatted_date = format (interview_date, "EEEE, MMMM d");
   const formatted_time = format (interview_date, "h: mm a");
-;
+
   // Calculate when interview ends;
   const end_time = new Date (interview_date);
   end_time.set_minutes (end_time.get_minutes () + interview.duration_minutes);
   const formattedEndTime = format (end_time, "h: mm a");
-;
+
   return (
     <div className="space - y-4">;
       <div className="p - 4 bg - zion - blue - light / 20 rounded - md">;
@@ -138,4 +138,3 @@ function InterviewResponseForm() {
         </Button>;
       </div>;
     </div>);
-}

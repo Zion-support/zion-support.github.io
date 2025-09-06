@@ -26,5 +26,3 @@ export default function QuantumSecureCloudInfrastructure() {
 			url="https: //ziontechgroup.com/quantum-secure-cloud-infrastructure";
 		/>;
 	);
-}
-;

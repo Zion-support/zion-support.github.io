@@ -13,11 +13,11 @@ export type ReviewFormValues = {
     wouldWorkWithAgain?: boolean
   },
   anonymous?: boolean
-},
+,
 
 type Props = {
   initial: Pick<ReviewFormValues 'projectId' | 'fromRole' | 'fromId'>
-},
+,
 
 const ReviewForm: React.FC<Props> = ({ initial }) => {
   const [rating, setRating] = useState(0),
@@ -49,7 +49,7 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {
             communication,
             qualityOfWork,
             timeliness,
-            wouldWorkWithAgain}})}),
+            wouldWorkWithAgain})}),
       const data = await res.json(),
       if (!res.ok) throw new Error(data.error || 'Failed to submit'),
       setMessage('Review submitted! Pending admin approval.')
@@ -58,7 +58,6 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {
     } finally {
       setSubmitting(false)
     }
-  }
 
   return (
     <form onSubmit={handleSubmit} className=&quot;space-y-6&quot;>
@@ -117,6 +116,6 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {
 
       {message && <p className=&quot;text-sm&quot;>{message}</p>}    </form>
   )
-},
+,
 
 export default ReviewForm,

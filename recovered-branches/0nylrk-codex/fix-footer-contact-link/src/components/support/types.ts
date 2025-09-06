@@ -6,14 +6,14 @@ export interface HelpArticle {
   content: string;
   lastUpdated: string;
   tags: string[]
-}
+
 export interface HelpCategory {
   id: string;
   name: string;
   description: string;
   icon: ReactNode;
   articles: HelpArticle[]
-}
+
 export interface SupportTicket {
   id: string;
   user_id: string;
@@ -24,5 +24,3 @@ export interface SupportTicket {
   createdAt: string;
 
   updatedAt: string;
-}
-

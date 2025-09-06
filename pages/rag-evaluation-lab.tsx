@@ -56,7 +56,7 @@ export default function RAGEvaluationLabPage() {;
                 <h3 className='text-lg font-semibold text-white'>{f && f.title}</h3>;
                 <p className='mt-2 text-sm text-gray-300'>{f && f.desc}</p>;
               </div>;
-            ))}
+            )}
           </div>;
           const useCases = [ 'Enterprise Knowledge Management', 'Customer;
           Support Systems', 'Research & Development', 'Content Generation;
@@ -105,7 +105,7 @@ export default function RAGEvaluationLabPage() {;
               >;
                 <h3 className='text - lg font - semibold text - white'>{f.title}</h3>;
                 <p className='mt - 2 text - sm text - gray - 300'>{f.desc}</p>;
-              </div>))}
+              </div>)}
           </div>;
           const use_cases = [ 'Enterprise Knowledge Management', 'Customer;
           Support Systems', 'Research & Development', 'Content Generation;
@@ -129,4 +129,3 @@ export default function RAGEvaluationLabPage() {;
         </div>;
       </section>;
     </>);
-;

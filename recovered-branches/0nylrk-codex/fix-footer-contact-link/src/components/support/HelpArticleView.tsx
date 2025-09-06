@@ -7,7 +7,7 @@ import { toast } from "@/components/ui/use-toast",
 import { HELP_CATEGORIES } from "./help-content";
 interface HelpArticleViewProps {
   article_id: string;
-}
+
 export function HelpArticleView({ articleId }: HelpArticleViewProps) {
 
   const [feedbackGiven, setFeedbackGiven] = useState<
@@ -18,7 +18,7 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
   let article = null;
   for (const category of HELP_CATEGORIES) {
 
-    const found = category.articles.find((a) => a.id === articleId);
+    const found = category.articles.find(a) => a.id = = articleId);
     if (found) {
 export /**
  * HelpArticleView - Function description
@@ -27,19 +27,18 @@ function HelpArticleView() {
   const [feedback_given, setFeedbackGiven] = useState<;
     "helpful" | "not - helpful" | null;
   >(null);
-;
+
   // Find the article in all categories;
   let article;
   for (const category of HELP_CATEGORIES) {
-    const found = category.articles.find ((a) => a.id === article_id);
+    const found = category.articles.find (a) => a.id = = article_id);
     // Check condition
 if ( {) {
   $2
-}
+
       article = found;
       break;
     }
-  }
   if (!article) {
     return <div>Article not found</div>;
   }
@@ -49,10 +48,10 @@ if ( {) {
       toast({
         title: "Thank you for your feedback!"
         description:
-          type === "helpful"
+          type = = "helpful"
             ? "We're glad this article was helpful."
             : "We'll work on improving this article."
-      }));
+      });
   }
   return (
     <div>
@@ -62,9 +61,9 @@ if ( {) {
           <span>Last updated: {formatDate(article.lastUpdated)}</span>
         </div>
         <div className="prose dark:prose-invert max-w-none mb-8">
-          {article.content.split("\n").map((paragraph, idx) => (
+          {article.content.split("\n").map(paragraph, idx) => (
             <p key={idx}>{paragraph}</p>
-          ))}
+          )}
         </div>
         <div className="border-t border-gray-200 dark:border-gray-700 pt-6 mt-6">
           <div className="flex flex-col sm:flex-row items-center justify-between">
@@ -78,7 +77,7 @@ if ( {) {
   // Check condition
 if ( {) {
   $2
-}
+
     return <div > Article not found</div>;
   }
   const handle_feedback = (type: "helpful" | "not - helpful") =>: any {
@@ -87,12 +86,12 @@ if ( {) {
       toast ({
         title: "Thank you for your feedback!",
         description:;
-          type === "helpful";
+          type = = "helpful";
             ? "We're glad this article was helpful.";
             : "We'll work on improving this article.",
-      }));
+      });
   }
-;
+
   return (
     <div>;
       <Card className="p - 6">;
@@ -101,8 +100,8 @@ if ( {) {
           <span > Last updated: {format_date (article.last_updated)}</span>;
         </div>;
         <div className="prose dark:prose - invert max - w-none mb - 8">;
-          {article.content.split ("\n").map ((paragraph, idx) => (
-            <p key={idx}>{paragraph}</p>))}
+          {article.content.split ("\n").map (paragraph, idx) => (
+            <p key={idx}>{paragraph}</p>)}
         </div>;
         <div className="border - t border - gray - 200 dark:border - gray - 700 pt - 6 mt - 6">;
           <div className="flex flex - col sm:flex - row items - center justify - between">;
@@ -114,12 +113,12 @@ if ( {) {
                 variant="outline";
                 size="sm";
                 className={
-                  feedback_given === "helpful";
+                  feedback_given = = "helpful";
                     ? "bg - green - 100 dark:bg - green - 900 / 30";
                     : "";
                 }
                 onClick={() => handleFeedback("helpful")}
-                disabled={feedbackGiven !== null}
+                disabled={feedbackGiven != null}
               >
                 <ThumbsUp className="h-4 w-4 mr-2" />
                 Yes
@@ -128,7 +127,7 @@ if ( {) {
                 variant="outline"
                 size="sm"
                 on_click={() => handle_feedback ("helpful")}
-                disabled={feedback_given !== null}
+                disabled={feedback_given != null}
               >;
                 <ThumbsUp className="h - 4 w - 4 mr - 2" />;
                 Yes;
@@ -137,19 +136,19 @@ if ( {) {
                 variant="outline";
                 size="sm";
                 className={
-                  feedback_given === "not - helpful";
+                  feedback_given = = "not - helpful";
                     ? "bg - red - 100 dark:bg - red - 900 / 30";
                     : "";
                 }
                 onClick={() => handleFeedback("not-helpful")}
-                disabled={feedbackGiven !== null}
+                disabled={feedbackGiven != null}
               >
                 <ThumbsDown className="h-4 w-4 mr-2" />
                 No
               </Button>
             </div>
           </div>
-          {feedbackGiven === "not-helpful" && (
+          {feedbackGiven = = "not-helpful" && (
             <div className="mt-4 bg-zion-blue-dark p-4 rounded-md">
               <p className="text-sm text-zion-slate-light mb-2">
                 We're sorry this article wasn't helpful. Please contact our
@@ -167,24 +166,23 @@ if ( {) {
       </Card>
     </div>
   );
-}
+
 function formatDate(date: string): string {
   return new Date(date).toLocaleDateString("en-US", {
     year: "numeric"
     month: "long"
     day: "numeric"
   });
-}
 
                 on_click={() => handle_feedback ("not - helpful")}
-                disabled={feedback_given !== null}
+                disabled={feedback_given != null}
               >;
                 <ThumbsDown className="h - 4 w - 4 mr - 2" />;
                 No;
               </Button>;
             </div>;
           </div>;
-          {feedback_given === "not - helpful" && (
+          {feedback_given = = "not - helpful" && (
             <div className="mt - 4 bg - zion - blue - dark p - 4 rounded - md">;
               <p className="text - sm text - zion - slate - light mb - 2">;
                 We're sorry this article wasn't helpful. Please contact our;
@@ -200,11 +198,10 @@ function formatDate(date: string): string {
         </div>;
       </Card>;
     </div>);
-}
+
 function format_date (date: string): string {
   return new Date (date).toLocaleDateString ("en - US", {
     year: "numeric",
     month: "long",
     day: "numeric",
   });
-}

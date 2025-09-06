@@ -49,36 +49,36 @@ export default function MDMPage() {
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Key Capabilities</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {features.map((f) => (
+              {features.map(f) => (
                 <div key={f} className="flex items-start gap-3 p-4 rounded-xl bg-black/40 border border-gray-700/60">
                   <CheckCircle className="w-5 h-5 text-emerald-400 mt-0.5" />
                   <span className="text-gray-200">{f}</span>
                 </div>
-              ))}
+              )}
             </div>
           </section>
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Typical Pricing Ranges</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {pricing.map((p) => (
+              {pricing.map(p) => (
                 <div key={p.tier} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
                   <div className="text-gray-400 text-sm mb-1">{p.tier}</div>
                   <div className="text-2xl font-bold text-white">{p.range}</div>
                   <div className="text-sm text-gray-400 mt-2">{p.note}</div>
                 </div>
-              ))}
+              )}
             </div>
             <div className="text-sm text-gray-400 mt-3 text-center">We align with leading platforms like Intune, Jamf, and Workspace ONE.</div>
           </section>
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Vendor References</h2>
             <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
-              {references.map((r) => (
+              {references.map(r) => (
                 <a key={r.name} href={r.url} target="_blank" rel="noopener noreferrer" className="px-4 py-3 rounded-xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40 inline-flex items-center gap-2 text-cyan-300">
                   <ExternalLink className="w-4 h-4" />
                   <span>{r.name}</span>
                 </a>
-              ))}
+              )}
             </div>
           </section>
 
@@ -92,12 +92,12 @@ export default function MDMPage() {
       </div>
     </Layout>
   )
-}
+
 import React from 'react',
 import Head from 'next / head',
 import Layout from '../components / layout / Layout',
 import { Smartphone, CheckCircle, ExternalLink, Shield } from 'lucide-react',
-;
+
 export default /**
  * MDMPage - Function description
  */
@@ -135,33 +135,33 @@ function MDMPage() {
           <section>;
             <h2 className="text - 3xl md:text - 4xl font - bold text - white mb - 6 text - center">Key Capabilities</h2>;
             <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
-              {features.map ((f) => (
+              {features.map (f) => (
                 <div key={f} className="flex items - start gap - 3 p - 4 rounded - xl bg - black / 40 border border - gray - 700 / 60">;
                   <CheckCircle className="w - 5 h - 5 text - emerald - 400 mt - 0.5" />;
                   <span className="text - gray - 200">{f}</span>;
-                </div>))}
+                </div>)}
             </div>;
           </section>;
           <section>;
             <h2 className="text - 3xl md:text - 4xl font - bold text - white mb - 6 text - center">Typical Pricing Ranges</h2>;
             <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6">;
-              {pricing.map ((p) => (
+              {pricing.map (p) => (
                 <div key={p.tier} className="p - 6 rounded - 2xl bg - black / 40 border border - gray - 700 / 60">;
                   <div className="text - gray - 400 text - sm mb - 1">{p.tier}</div>;
                   <div className="text - 2xl font - bold text - white">{p.range}</div>;
                   <div className="text - sm text - gray - 400 mt - 2">{p.note}</div>;
-                </div>))}
+                </div>)}
             </div>;
             <div className="text - sm text - gray - 400 mt - 3 text - center">We align with leading platforms like Intune, Jamf, and Workspace ONE.</div>;
           </section>;
           <section>;
             <h2 className="text - 3xl md:text - 4xl font - bold text - white mb - 6 text - center">Vendor References</h2>;
             <div className="flex flex - col sm:flex - row gap - 4 items - center justify - center">;
-              {references.map ((r) => (
+              {references.map (r) => (
                 <a key={r.name} href={r.url} target="_blank" rel="noopener noreferrer" className="px - 4 py - 3 rounded - xl bg - black / 40 border border - gray - 700 / 60 hover:border - cyan - 500 / 40 inline - flex items - center gap - 2 text - cyan - 300">;
                   <ExternalLink className="w - 4 h - 4" />;
                   <span>{r.name}</span>;
-                </a>))}
+                </a>)}
             </div>;
           </section>;
           <section className="text - center">;
@@ -173,4 +173,3 @@ function MDMPage() {
         </div>;
       </div>;
     </Layout>);
-}

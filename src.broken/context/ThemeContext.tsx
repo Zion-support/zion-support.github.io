@@ -6,5 +6,3 @@ export function ThemeContext() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

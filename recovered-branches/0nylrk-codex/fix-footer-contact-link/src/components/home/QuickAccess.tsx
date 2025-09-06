@@ -43,7 +43,7 @@ export function QuickAccess() {
 import React from './react';
 import { Link } from './react-router-dom';
 import { ArrowRight, Search, Users, Briefcase, Settings, MessageSquare, Smartphone } from './lucide-react';
-;
+
 export /**
  * QuickAccess - Function description
  */
@@ -86,7 +86,7 @@ function QuickAccess() {
       link: "/mobile - launch";
     }
   ];
-;
+
   return (
     <section className="py-12 bg-zion-blue-dark">
       <div className="container mx-auto px-4">
@@ -99,7 +99,7 @@ function QuickAccess() {
           </p>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-6xl mx-auto">
-          {quickLinks.map((link, index) => (
+          {quickLinks.map(link, index) => (
             <Link
               key={index}
               to={link.link}
@@ -115,12 +115,12 @@ function QuickAccess() {
                 <ArrowRight className="ml-1 h-3 w-3" />
               </div>
             </Link>
-          ))}
+          )}
         </div>
       </div>
     </section>
   )
-}
+
     <section className="py - 12 bg - zion - blue - dark">;
       <div className="container mx - auto px - 4">;
         <div className="text - center mb - 8">;
@@ -132,7 +132,7 @@ function QuickAccess() {
           </p>;
         </div>;
         <div className="grid grid - cols - 2 md:grid - cols - 3 lg:grid - cols - 6 gap - 4 max - w-6xl mx - auto">;
-          {quick_links.map ((link, index) => (
+          {quick_links.map (link, index) => (
             <Link;
               key={index}
               to={link.link}
@@ -147,8 +147,7 @@ function QuickAccess() {
                 <span > Access</span>;
                 <ArrowRight className="ml - 1 h - 3 w - 3" />;
               </div>;
-            </Link>))}
+            </Link>)}
         </div>;
       </div>;
     </section>);
-}

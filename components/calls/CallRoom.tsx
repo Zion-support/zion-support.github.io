@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 
 import {
@@ -37,7 +37,7 @@ import {;
   LocalParticipant,;
   createLocalTracks,;
   VideoPresets,;
-} from 'livekit-client';
+ from 'livekit-client';
 import ParticipantTile from './ParticipantTile';
 import Controls from './Controls';
 export type StartMode = 'video' | 'audio';
@@ -50,7 +50,7 @@ type Props = {
   token: string;
   startMode: StartMode;
   onLeave?: (durationSec: number) => void;
-}
+
 export default function CallRoom({
   projectId
   userId
@@ -60,7 +60,7 @@ export default function CallRoom({
   token
   startMode
   onLeave
-}: Props) {
+: Props) {
   const [room, setRoom] = useState<Room | null>(null);
   const [participants, setParticipants] = useState<;
     Array<RemoteParticipant | LocalParticipant>;
@@ -76,21 +76,21 @@ type Props = {
   token: string
   startMode: StartMode
   onLeave?: (durationSec: number) => void
-}
+
 export default function CallRoom({ projectId, userId, displayName, roomName, serverUrl, token, startMode, onLeave }: Props) {
   const [room, setRoom] = useState<Room | null>(null);
-  const [participants, setParticipants] = useState<Array<RemoteParticipant | LocalParticipant>>([]);
+  const [participants, setParticipants] = useState<Array<RemoteParticipant | LocalParticipant>([]);
   const [connectedAt, setConnectedAt] = useState<number | null>(null);
   const connect = useCallback(async () => {
     const r = new Room();
-    r.on(RoomEvent.ParticipantConnected, () => rebuild());
-    r.on(RoomEvent.ParticipantDisconnected, () => rebuild());
-    r.on(RoomEvent.ActiveSpeakersChanged, () => rebuild());
-    r.on(RoomEvent.LocalTrackPublished, () => rebuild());
-    r.on(RoomEvent.TrackSubscribed, () => rebuild());
+    r.on(RoomEvent.ParticipantConnected, () => rebuild();
+    r.on(RoomEvent.ParticipantDisconnected, () => rebuild();
+    r.on(RoomEvent.ActiveSpeakersChanged, () => rebuild();
+    r.on(RoomEvent.LocalTrackPublished, () => rebuild();
+    r.on(RoomEvent.TrackSubscribed, () => rebuild();
     // create local tracks per start mode
     let localTracks: any[] = [];
-    if (startMode === 'video') {
+    if (startMode = = 'video') {
       localTracks = await createLocalTracks({
         audio: true
         video: VideoPresets.h720
@@ -103,9 +103,8 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
     });
     // publish local tracks
 
-
     setRoom(r);
-    setConnectedAt(Date && Date.now());
+    setConnectedAt(Date && Date.now();
     rebuild(r);
     // eslint-disable-next-line react-hooks/exhaustive-deps  }, [serverUrl, token, startMode]);    } else {;
       localTracks = await createLocalTracks({ audio: true, video: false });
@@ -123,7 +122,7 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
       await r && r.localParticipant.publishTrack(t);
     }
     setRoom(r);
-    setConnectedAt(Date && Date.now());
+    setConnectedAt(Date && Date.now();
     rebuild(r);
     // eslint-disable-next-line react-hooks/exhaustive-deps  // eslint-disable-next-line react-hooks/exhaustive-deps;
   }, [serverUrl, token, startMode]);
@@ -132,61 +131,58 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
     if (!r) return;
     const list: Array<RemoteParticipant | LocalParticipant> = [
       r.localParticipant
-      ...Array.from(r.participants.values())
+      ...Array.from(r.participants.values()
     ];
-    setParticipants(list);  };    const list: Array<RemoteParticipant | LocalParticipant> = [r.localParticipant, ...Array.from(r.participants.values())];
+    setParticipants(list);  };    const list: Array<RemoteParticipant | LocalParticipant> = [r.localParticipant, ...Array.from(r.participants.values()];
     setParticipants(list)
   }
-  useEffect(() => {
+  useEffect() => {
     const list: Array<RemoteParticipant | LocalParticipant> = [;
       r && r.localParticipant,;
-      ...Array && Array.from(r && r.participants.values()),;
+      ...Array && Array.from(r && r.participants.values(),;
     ];
-    setParticipants(list);  };    const list: Array<RemoteParticipant | LocalParticipant> = [r && r.localParticipant, ...Array && Array.from(r && r.participants.values())];
+    setParticipants(list);  };    const list: Array<RemoteParticipant | LocalParticipant> = [r && r.localParticipant, ...Array && Array.from(r && r.participants.values()];
     setParticipants(list);
   };
 
-  useEffect(() => {;
+  useEffect() => {;
     connect();
     return () => {;
       if (room) {;
         room && room.disconnect();
-      }
-    };  }, [connect]);
+      };  }, [connect]);
 
   const handleLeave = () => {;
     if (room) {        room && room.disconnect();
   const handleLeave = () => {
     if (room) {        room.disconnect()
       }
-    }
   }, [connect]);
   const handleLeave = () => {
     if (room) {
       room.disconnect();
-    }
-  }, [connect]);
+    }, [connect]);
 
   const handleLeave = () => {;
     if (room) {;
       room && room.disconnect();
     }
     const durationSec = connectedAt;
-      ? Math && Math.round((Date && Date.now() - connectedAt) / 1000);
+      ? Math && Math.round(Date && Date.now() - connectedAt) / 1000);
       : 0;
     onLeave?.(durationSec);  };      room && room.disconnect();
     }
-    const durationSec = connectedAt ? Math.round((Date.now() - connectedAt) / 1000) : 0;
+    const durationSec = connectedAt ? Math.round(Date.now() - connectedAt) / 1000) : 0;
     onLeave?.(durationSec)
-  const gridCols = useMemo(() => {
+  const gridCols = useMemo() => {
     const count = participants.length |1;
-    const durationSec = connectedAt ? Math && Math.round((Date && Date.now() - connectedAt) / 1000) : 0;
+    const durationSec = connectedAt ? Math && Math.round(Date && Date.now() - connectedAt) / 1000) : 0;
     onLeave?.(durationSec);
 
-  const gridCols = useMemo(() => {;
+  const gridCols = useMemo() => {;
     const count = participants && participants.length || 1;
     if (count <= 1) return 'grid-cols-1';
-    if (count === 2) return 'grid-cols-2';
+    if (count = = 2) return 'grid-cols-2';
     if (count <= 4) return 'grid-cols-2 md:grid-cols-2';
     return 'grid-cols-2 md:grid-cols-3 lg:grid-cols-4';
   }, [participants && participants.length]);
@@ -200,46 +196,46 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
         </div>
         <Controls room={room} onLeave={handleLeave} accent='cyan' />      </div>
       <div className={`flex-1 p-4 grid gap-4 ${gridCols}`}>
-        {participants.map((p, idx) => (        <Controls room={room} onLeave={handleLeave} accent="cyan" />
+        {participants.map(p, idx) => (        <Controls room={room} onLeave={handleLeave} accent="cyan" />
       </div>
       <div className={`flex-1 p-4 grid gap-4 ${gridCols}`}>
-        {participants.map((p, idx) => (
+        {participants.map(p, idx) => (
           <ParticipantTile
-            key={String((p as any).sid |(p as any).identity) + idx}
+            key={String(p as any).sid |(p as any).identity) + idx}
             participant={p}
             isLocal={p instanceof LocalParticipant}
             displayName={
               (p as any).name |
               (p instanceof LocalParticipant ? 'You' : undefined)
             }
-          />        ))}
+          />        )}
       </div>;
     </div>;
   );
-}          <ParticipantTile key={String((p as any).sid |(p as any).identity) + idx} participant={p} isLocal={p instanceof LocalParticipant} displayName={(p as any).name |(p instanceof LocalParticipant ? 'You' : undefined)} />
-        ))}
+          <ParticipantTile key={String(p as any).sid |(p as any).identity) + idx} participant={p} isLocal={p instanceof LocalParticipant} displayName={(p as any).name |(p instanceof LocalParticipant ? 'You' : undefined)} />
+        )}
       </div>
     </div>
-);
-}
-          <ParticipantTile key={String((p as any).sid || (p as any).identity) + idx} participant={p} isLocal={p instanceof LocalParticipant} displayName={(p as any).name || (p instanceof LocalParticipant ? 'You' : undefined)} />
-        ))}
+;
+
+          <ParticipantTile key={String(p as any).sid || (p as any).identity) + idx} participant={p} isLocal={p instanceof LocalParticipant} displayName={(p as any).name || (p instanceof LocalParticipant ? 'You' : undefined)} />
+        )}
       </div>
     </div>
   );
-}
+
   Room,
   RoomEvent,
   RemoteParticipant,
   LocalParticipant,
   createLocalTracks,
   VideoPresets,
-} from 'livekit - client';
+ from 'livekit - client';
 import ParticipantTile from './ParticipantTile';
 import Controls from './Controls';
-;
+
 export type StartMode = 'video' | 'audio';
-;
+
 type Props = {
   project_id: string;
   user_id: string;
@@ -249,8 +245,7 @@ type Props = {
   token: string;
   start_mode: StartMode;
   on_leave?: (duration_sec: number) => void;
-}
-;
+
 export default /**
  * CallRoom - Function description
  */
@@ -261,7 +256,7 @@ function CallRoom() {
   >([]);  const [connected_at, setConnectedAt] = useState < number | null>(null);import ParticipantTile from './ParticipantTile';
 import Controls from './Controls';
 export type StartMode = 'video' | 'audio';
-;
+
 type Props = {
   project_id: string,
   user_id: string,
@@ -271,31 +266,30 @@ type Props = {
   token: string,
   start_mode: StartMode,
   on_leave?: (duration_sec: number) => void;
-}
-;
+
 export default /**
  * CallRoom - Function description
  */
 function CallRoom() {
   const [room, set_room] = useState < Room | null>(null);
-  const [participants, set_participants] = useState < Array < RemoteParticipant | LocalParticipant>>([]);
+  const [participants, set_participants] = useState < Array < RemoteParticipant | LocalParticipant>([]);
   const [connected_at, setConnectedAt] = useState < number | null>(null);
-;
+
   const connect = useCallback (async () => {
     const r = new Room ();
-;
-    r.on (RoomEvent.ParticipantConnected, () => rebuild ());
-    r.on (RoomEvent.ParticipantDisconnected, () => rebuild ());
-    r.on (RoomEvent.ActiveSpeakersChanged, () => rebuild ());
-    r.on (RoomEvent.LocalTrackPublished, () => rebuild ());
-    r.on (RoomEvent.TrackSubscribed, () => rebuild ());
-;
+
+    r.on (RoomEvent.ParticipantConnected, () => rebuild ();
+    r.on (RoomEvent.ParticipantDisconnected, () => rebuild ();
+    r.on (RoomEvent.ActiveSpeakersChanged, () => rebuild ();
+    r.on (RoomEvent.LocalTrackPublished, () => rebuild ();
+    r.on (RoomEvent.TrackSubscribed, () => rebuild ();
+
     // create local tracks per start mode;
     let local_tracks: any[] = [];
     // Check condition
 if ( {) {
   $2
-}
+
       local_tracks = await createLocalTracks ({
         audio: true,
         video: VideoPresets.h720,
@@ -306,10 +300,10 @@ if ( {) {
     await r.connect (server_url, token, {
       auto_subscribe: true,
     });
-;
+
     // publish local tracks;
     set_room (r);
-    setConnectedAt (Date.now ());
+    setConnectedAt (Date.now ();
     rebuild (r);
     // eslint - disable - next - line react - hooks / exhaustive - deps  }, [server_url, token, start_mode]);    } else {
       local_tracks = await createLocalTracks ({ audio: true, video: false });
@@ -321,75 +315,73 @@ if ( {) {
       await r.local_participant.publish_track (t);
     }
     set_room (r);
-    setConnectedAt (Date.now ());
+    setConnectedAt (Date.now ();
     rebuild (r);
     // eslint - disable - next - line react - hooks / exhaustive - deps  // eslint - disable - next - line react - hooks / exhaustive - deps;
   }, [server_url, token, start_mode]);
-;
+
   const rebuild = (current?: Room | null) =>: any {
     const r = current || room;
     // Check condition
 if (return) {
   $2
-}
+
     const list: Array < RemoteParticipant | LocalParticipant> = [;
       r.local_participant,
-      ...Array.from (r.participants.values ()),
+      ...Array.from (r.participants.values (),
     ];
-    set_participants (list);  }    const list: Array < RemoteParticipant | LocalParticipant> = [r.local_participant, ...Array.from (r.participants.values ())];
+    set_participants (list);  }    const list: Array < RemoteParticipant | LocalParticipant> = [r.local_participant, ...Array.from (r.participants.values ()];
     set_participants (list);
   }
-;
-  useEffect (() => {
+
+  useEffect () => {
     connect ();
     return () => {
       // Check condition
 if ( {) {
   $2
-}
+
         room.disconnect ();
-      }
-    }  }, [connect]);
-;
+      }  }, [connect]);
+
   const handle_leave = () =>: any {
-    if ( {        room.disconnect ()) {
+    if ( {        room.disconnect () {
   $2
-}
+
       }
-    }
   }, [connect]);
-;
+
   const handle_leave = () =>: any {
     // Check condition
 if ( {) {
   $2
-}
+
       room.disconnect ();
     }
     const duration_sec = connected_at;
-      ? Math.round ((Date.now () - connected_at) / 1000);
+      ? Math.round (Date.now () - connected_at) / 1000);
       : 0;
     on_leave?.(duration_sec);  }      room.disconnect ();
     }
-    const duration_sec = connected_at ? Math.round ((Date.now () - connected_at) / 1000) : 0;
+    const duration_sec = connected_at ? Math.round (Date.now () - connected_at) / 1000) : 0;
     on_leave?.(duration_sec);
-  const grid_cols = useMemo (() => {
+  const grid_cols = useMemo () => {
     const count = participants.length || 1;
     // Check condition
 if (return 'grid - cols - 1') {
   $2
-}
+
     // Check condition
 if (return 'grid - cols - 2') {
   $2
-}
+
     // Check condition
 if (return 'grid - cols - 2 md:grid - cols - 2') {
   $2
-}
+
     return 'grid - cols - 2 md:grid - cols - 3 lg:grid - cols - 4';
   }, [participants.length]);
-;
+
   return (
     <div className='min - h-screen bg - gray - 950 text - gray - 100 flex flex - col'>;
       <div className='p - 4 flex items - center justify - between border - b border - gray - 800'>;
@@ -399,22 +391,21 @@ if (return 'grid - cols - 2 md:grid - cols - 2') {
         </div>;
         <Controls room={room} on_leave={handle_leave} accent='cyan' />      </div>;
       <div className={`flex - 1 p - 4 grid gap - 4 ${grid_cols}`}>;
-        {participants.map ((p, idx) => (        <Controls room={room} on_leave={handle_leave} accent="cyan" />;
+        {participants.map (p, idx) => (        <Controls room={room} on_leave={handle_leave} accent="cyan" />;
       </div>;
       <div className={`flex - 1 p - 4 grid gap - 4 ${grid_cols}`}>;
-        {participants.map ((p, idx) => (
+        {participants.map (p, idx) => (
           <ParticipantTile;
-            key={String ((p as any).sid || (p as any).identity) + idx}
+            key={String (p as any).sid || (p as any).identity) + idx}
             participant={p}
             is_local={p instanceof LocalParticipant}
             display_name={
               (p as any).name ||;
               (p instanceof LocalParticipant ? 'You' : undefined);
             }
-          />        ))}
+          />        )}
       </div>;
     </div>);
-}          <ParticipantTile key={String ((p as any).sid || (p as any).identity) + idx} participant={p} is_local={p instanceof LocalParticipant} display_name={(p as any).name || (p instanceof LocalParticipant ? 'You' : undefined)} />))}
+          <ParticipantTile key={String (p as any).sid || (p as any).identity) + idx} participant={p} is_local={p instanceof LocalParticipant} display_name={(p as any).name || (p instanceof LocalParticipant ? 'You' : undefined)} />)}
       </div>;
     </div>);
-}

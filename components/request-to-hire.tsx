@@ -4,23 +4,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React from 'react';
 import { useEffect, useMemo, useState } from 'react';
 import { useRouter } from 'next/router';
@@ -29,13 +29,12 @@ export default function RequestToHirePage() {
 
   const router = useRouter();
   const { talent } = router.query as { talent?: string }
-  const selected = useMemo(
-    () => TALENT_PROFILES.find(t => t.slug === talent)
+  const selected = useMemo() => TALENT_PROFILES.find(t => t.slug = = talent)
     [talent]
   );export default function RequestToHirePage() {
   const router = useRouter();
   const { talent } = router.query as { talent?: string }
-  const selected = useMemo(() => TALENT_PROFILES.find(t => t.slug === talent), [talent]);
+  const selected = useMemo() => TALENT_PROFILES.find(t => t.slug = = talent), [talent]);
   const [form, setForm] = useState({
     name: ''
     email: ''
@@ -66,12 +65,12 @@ export default function RequestToHirePage() {;
   const router = useRouter();
   const { talent } = router && router.query as { talent?: string };
   const selected = useMemo(;
-    () => TALENT_PROFILES && TALENT_PROFILES.find(t => t && t.slug === talent),;
+    () => TALENT_PROFILES && TALENT_PROFILES.find(t => t && t.slug = = talent),;
     [talent];
   );export default function RequestToHirePage() {;
   const router = useRouter();
   const { talent } = router && router.query as { talent?: string };
-  const selected = useMemo(() => TALENT_PROFILES && TALENT_PROFILES.find(t => t && t.slug === talent), [talent]);
+  const selected = useMemo() => TALENT_PROFILES && TALENT_PROFILES.find(t => t && t.slug = = talent), [talent]);
   const [form, setForm] = useState({;
     name: '',;
     email: '',;
@@ -123,7 +122,6 @@ export default function RequestToHirePage() {;
     } finally {
       setSubmitting(false)
     }
-  }
 
   if (result) {;
     return (
@@ -227,10 +225,10 @@ export default function RequestToHirePage() {;
         </button>
       </form>
     </div>
-);
-}
+;
+
   );
-}
+
     description: '',
   });
   const [submitting, set_submitting] = useState (false);
@@ -239,19 +237,19 @@ export default function RequestToHirePage() {;
   const [submitting, set_submitting] = useState (false);
   const [result, set_result] = useState < null | { id: string, message: string }>(null),
   const [error, set_error] = useState < string | null>(null);
-;
+
   const on_submit = async (e: React.FormEvent) => {
     e.prevent_default ();
     set_error (null),
     // Check condition
 if ( {) {
   $2
-}
+
       set_error ('Please fill in name, email, and description.');
       return;    }      return;
     }
     const normalized_budget = form.budget.replace (/[^0 - 9.\-]/g, '');
-;
+
     set_submitting (true);
     try {
       const res = await fetch ('/api / requests / create', {
@@ -264,9 +262,9 @@ if ( {) {
         }),
       });
       const data = await res.json ();
-      if (throw new Error (data.error || 'Failed to submit')) {
+      if (throw new Error (data.error || 'Failed to submit') {
   $2
-}
+
       set_result ({ id: data.id, message: 'Request submitted successfully.' });
     } catch (err: any) {
       set_error (err.message || 'Something went wrong');
@@ -274,21 +272,20 @@ if ( {) {
       set_submitting (false);    }          budget: normalized_budget,
           talent_slug: selected?.slug || null})}),
       const data = await res.json ();
-      if (throw new Error (data.error || 'Failed to submit')) {
+      if (throw new Error (data.error || 'Failed to submit') {
   $2
-}
+
       set_result ({ id: data.id, message: 'Request submitted successfully.' });
     } catch (err: any) {
       set_error (err.message || 'Something went wrong');
     } finally {
       set_submitting (false);
     }
-  }
-;
+
   // Check condition
 if ( {) {
   $2
-}
+
     return (
       <div className='max - w-xl mx - auto py - 12'>;
         <h1 className='text - 2xl font - semibold mb - 2'>Thanks!</h1>;
@@ -388,4 +385,3 @@ if ( {) {
         </button>;
       </form>;
     </div>);
-}

@@ -6,5 +6,3 @@ export function WhitepaperPreviewPanel() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

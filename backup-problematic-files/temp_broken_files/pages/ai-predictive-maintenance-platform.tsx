@@ -1,6 +1,6 @@
 import React from 'react',;
 import ServiceLanding from '../components/sections/ServiceLanding',;
-;
+
 export default function AIPredictiveMaintenancePlatform() {;
 	return (;
 		<ServiceLanding;
@@ -34,4 +34,3 @@ export default function Page() {
       </section>
     </main>
   );
-}

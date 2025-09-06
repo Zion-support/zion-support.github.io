@@ -10,7 +10,7 @@ const ApiDocumentation: React.FC = () => {
   const copyToClipboard = (code: string, id: string) => {
     navigator.clipboard.writeText(code);
     setCopiedCode(id);
-    setTimeout(() => setCopiedCode(null), 2000);
+    setTimeout() => setCopiedCode(null), 2000);
   };
 
   const codeExamples = {
@@ -20,7 +20,7 @@ const ApiDocumentation: React.FC = () => {
     "email": "your-email@example.com",
     "password": "your-password"
   }'`,
-    
+
     createOrder: `curl -X POST https://api.ziontechgroup.com/orders \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json" \\
@@ -29,7 +29,7 @@ const ApiDocumentation: React.FC = () => {
     "quantity": 1,
     "notes": "Additional requirements"
   }'`,
-    
+
     getOrders: `curl -X GET https://api.ziontechgroup.com/orders \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json"`
@@ -99,7 +99,7 @@ const ApiDocumentation: React.FC = () => {
                     size="sm"
                     onClick={() => copyToClipboard('Authorization: Bearer YOUR_API_KEY', 'auth-header')}
                   >
-                    {copiedCode === 'auth-header' ? (
+                    {copiedCode = = 'auth-header' ? (
                       <Check className="h-4 w-4 text-green-500" />
                     ) : (
                       <Copy className="h-4 w-4" />
@@ -188,7 +188,7 @@ const ApiDocumentation: React.FC = () => {
                       size="sm"
                       onClick={() => copyToClipboard(codeExamples.authentication, 'auth')}
                     >
-                      {copiedCode === 'auth' ? (
+                      {copiedCode = = 'auth' ? (
                         <Check className="h-4 w-4 text-green-500" />
                       ) : (
                         <Copy className="h-4 w-4" />
@@ -208,7 +208,7 @@ const ApiDocumentation: React.FC = () => {
                       size="sm"
                       onClick={() => copyToClipboard(codeExamples.createOrder, 'create-order')}
                     >
-                      {copiedCode === 'create-order' ? (
+                      {copiedCode = = 'create-order' ? (
                         <Check className="h-4 w-4 text-green-500" />
                       ) : (
                         <Copy className="h-4 w-4" />
@@ -228,7 +228,7 @@ const ApiDocumentation: React.FC = () => {
                       size="sm"
                       onClick={() => copyToClipboard(codeExamples.getOrders, 'get-orders')}
                     >
-                      {copiedCode === 'get-orders' ? (
+                      {copiedCode = = 'get-orders' ? (
                         <Check className="h-4 w-4 text-green-500" />
                       ) : (
                         <Copy className="h-4 w-4" />
@@ -243,6 +243,5 @@ const ApiDocumentation: React.FC = () => {
       </Tabs>
     </div>
   );
-};
 
 export default ApiDocumentation;

@@ -10,7 +10,7 @@ import { Badge } from "@/components/ui/badge",
 import { Search, Filter } from "lucide-react",
 import { AppLayout } from "@/layout/AppLayout";
 import { SEO } from "@/components/SEO";
-// Mock data for support requests
+/ Mock data for support requests
 
 const MOCK_SUPPORT_REQUESTS = [
   {
@@ -90,7 +90,7 @@ const MOCK_SUPPORT_REQUESTS = [
     lastUpdated: "2023-12-13T11:25:00Z"
     category: "profile"
   }
-];
+;
 export default function SupportRequests() {
   const [searchQuery, setSearchQuery] = useState("");
   const [statusFilter, setStatusFilter] = useState<string | null>(null);
@@ -100,29 +100,29 @@ export default function SupportRequests() {
   const filteredRequests = MOCK_SUPPORT_REQUESTS.filter(request => {
     // Apply search query filter
     if (searchQuery &&
-        !request.issue.toLowerCase().includes(searchQuery.toLowerCase()) &&
-        !request.user.toLowerCase().includes(searchQuery.toLowerCase()) &&
-        !request.id.toLowerCase().includes(searchQuery.toLowerCase())) {
+        !request.issue.toLowerCase().includes(searchQuery.toLowerCase() &&
+        !request.user.toLowerCase().includes(searchQuery.toLowerCase() &&
+        !request.id.toLowerCase().includes(searchQuery.toLowerCase()) {
       return false
     }
     // Apply status filter
-    if (statusFilter && request.status !== statusFilter) {
+    if (statusFilter && request.status != statusFilter) {
       return false
     }
     // Apply priority filter
-    if (priorityFilter && request.priority !== priorityFilter) {
+    if (priorityFilter && request.priority != priorityFilter) {
       return false
     }
     // Apply category filter
-    if (categoryFilter && request.category !== categoryFilter) {
+    if (categoryFilter && request.category != categoryFilter) {
       return false
     }
     return true
   });
   // Count by status for the summary dashboard
-  const openCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'open').length;
-  const inProgressCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'in-progress').length;
-  const resolvedCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'resolved').length;
+  const openCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status = = 'open').length;
+  const inProgressCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status = = 'in-progress').length;
+  const resolvedCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status = = 'resolved').length;
   const totalCount = MOCK_SUPPORT_REQUESTS.length;
   const resetFilters = () => {
     setSearchQuery("");
@@ -257,16 +257,16 @@ export default function SupportRequests() {
                     </TableRow>
                   </TableHeader>
                   <TableBody>
-                    {filteredRequests.map((request) => (
+                    {filteredRequests.map(request) => (
                       <TableRow key={request.id}>
                         <TableCell className="font-medium">{request.id}</TableCell>
                         <TableCell>{request.user}</TableCell>
                         <TableCell className="max-w-xs truncate">{request.issue}</TableCell>
                         <TableCell>
                           <Badge variant={
-                            request.status === 'open'
+                            request.status = = 'open'
                               ? 'default'
-                              : request.status === 'in-progress'
+                              : request.status = = 'in-progress'
                               ? 'secondary'
                               : 'outline'
                           }>
@@ -275,9 +275,9 @@ export default function SupportRequests() {
                         </TableCell>
                         <TableCell>
                           <Badge variant={
-                            request.priority === 'high'
+                            request.priority = = 'high'
                               ? 'destructive'
-                              : request.priority === 'medium'
+                              : request.priority = = 'medium'
                               ? 'default'
                               : 'outline'
                           }>;
@@ -292,7 +292,7 @@ export default function SupportRequests() {
                           <Button variant="ghost" size="sm">Assign</Button>;
                         </TableCell>;
                       </TableRow>;
-                    ))}
+                    )}
                   </TableBody>
                 </Table>
               </CardContent>
@@ -326,7 +326,7 @@ export default function SupportRequests() {
       </div>
     </AppLayout>
   )
-}
+
                   </TableBody>;
                 </Table>;
               </CardContent>;
@@ -363,6 +363,5 @@ export default function SupportRequests() {
       </div>;
     </AppLayout>;
   );
-}
+
     </AppLayout>);
-}

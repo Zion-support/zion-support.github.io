@@ -23,15 +23,13 @@ export function FooterNewsletter() {;
         toast.success('Subscribed!'),;
         setEmail('');
       } else {;
-        const data = await res.json().catch(() => ({}));
+        const data = await res.json().catch() => ({});
         toast.error(data.error || 'Subscription failed');
-      }
-    } catch (err) {;
+      } catch (err) {;
       toast.error(err.message || 'Subscription failed');
     } finally {;
       setIsSubmitting(false);
-    }
-  };
+    };
   return (;
     <form;
       onSubmit={handleSubmit}
@@ -52,7 +50,7 @@ export function FooterNewsletter() {;
         onChange={(e) => setHoneypot(e.target.value)}
         tabIndex="-1"
         autoComplete="off"
-        style={{ display: 'none' }}
+        style={ display: 'none' }
       />
       <Button
         type="submit"
@@ -70,5 +68,3 @@ export function FooterNewsletter() {;
       </Button>;
     </form>;
   );
-}
-;

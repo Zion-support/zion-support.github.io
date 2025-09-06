@@ -9,22 +9,22 @@ import {
   Car, Search, TestTube, Globe as PlanetIcon, Lock, Palette,
   FileText, BarChart3, Heart, Truck, ShieldCheck,
   Sparkles, Infinity as InfinityIcon, Zap as Lightning
-} from 'lucide-react',
+ from 'lucide-react',
 
-// Import new service data,
+/ Import new service data,
 import { innovativeMicroSaasServices2025V2 } from '../data/2025-innovative-micro-saas-expansion-v2',
 import { emergingTechServices2025V2 } from '../data/2025-emerging-tech-services-v2',
-// Lazy load heavy components for better performance,
-const LazyServiceCard = lazy(() => import('./ui/UltraFuturisticServiceCard2026')),
+/ Lazy load heavy components for better performance,
+const LazyServiceCard = lazy() => import('./ui/UltraFuturisticServiceCard2026'),
 
 const Homepage2040: React.FC = () => {
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0),
   const [isVisible, setIsVisible] = useState(false),
 
-  useEffect(() => {
+  useEffect() => {
     setIsVisible(true),
-    const interval = setInterval(() => {
-      setCurrentServiceIndex((prev) => (prev + 1) % innovativeMicroSaasServices2025V2.length)
+    const interval = setInterval() => {
+      setCurrentServiceIndex(prev) => (prev + 1) % innovativeMicroSaasServices2025V2.length)
     }, 5000),
     return () => clearInterval(interval)
   }, []),
@@ -32,7 +32,6 @@ const Homepage2040: React.FC = () => {
 const containerVariants = {hidden: { opacity: 0},
     visible: {opacity: 1, transition: {
         staggerChildren: 0.1, delayChildren: 0.2}
-    }
   },
 
   const itemVariants = {
@@ -43,7 +42,7 @@ const containerVariants = {hidden: { opacity: 0},
       transition: {
         duration: 0.6,
         ease: &quot;easeOut&quot; as const
-      }    }
+      }
   },
 
   const floatingVariants = {
@@ -53,7 +52,7 @@ const containerVariants = {hidden: { opacity: 0},
         duration: 3,
         repeat: -1,
         ease: &quot;easeInOut&quot; as const
-      }    }
+      }
   },
 
   const statsData = [
@@ -99,29 +98,29 @@ const allServices = [...innovativeMicroSaasServices2025V2, ...emergingTechServic
     {
       name: &quot;AI & Machine Learning&quot;,
       icon: Brain,
-      count: allServices.filter(s => s.category.includes('AI')).length,
+      count: allServices.filter(s => s.category.includes('AI').length,
       color: &quot;from-pink-500 to-rose-600&quot
     },
     {
       name: &quot;Quantum Technology&quot;,
       icon: Atom,
-      count: allServices.filter(s => s.category.includes('Quantum')).length,
+      count: allServices.filter(s => s.category.includes('Quantum').length,
       color: &quot;from-blue-500 to-cyan-600&quot
     },
     {
       name: &quot;Emerging Tech&quot;,
       icon: Rocket,
-      count: allServices.filter(s => s.category.includes('Emerging') || s.category.includes('Space')).length,
+      count: allServices.filter(s => s.category.includes('Emerging') || s.category.includes('Space').length,
       color: &quot;from-purple-500 to-indigo-600&quot
     },
     {
       name: &quot;Cybersecurity&quot;,
       icon: Shield,
-      count: allServices.filter(s => s.category.includes('Security') || s.category.includes('Cyber')).length,
+      count: allServices.filter(s => s.category.includes('Security') || s.category.includes('Cyber').length,
       color: &quot;from-green-500 to-emerald-600&quot
     }
   ],;
-;
+
   return (;
     <Layout>;
       {/* Main Content */}
@@ -141,35 +140,35 @@ variants={floatingVariants}
             <motion.div,
 variants={floatingVariants}
               animate=&quot;float&quot;
-              style={{ animationDelay: '1s' }}
+              style={ animationDelay: '1s' }
               className=&quot;absolute top-40 right-32 w-24 h-24 border border-purple-400/20 rounded-full&quot;
             ></motion.div>
             <motion.div,
 variants={floatingVariants}
               animate=&quot;float&quot;
-              style={{ animationDelay: '2s' }}
+              style={ animationDelay: '2s' }
               className=&quot;absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45&quot;
             ></motion.div>
-            
+
             {/* Quantum particle effects */}
             <div className=&quot;absolute inset-0&quot;>
-              {[...Array(20)].map((_, i) => (
+              {[...Array(20)].map(_, i) => (
                 <motion.div,
 key={i}
                   className=&quot;absolute w-1 h-1 bg-cyan-400/30 rounded-full&quot;
-                  style={{                    left: `${Math.random() * 100}%`,
+                  style={                    left: `${Math.random() * 100}%`,
                     top: `${Math.random() * 100}%`,
                     animationDelay: `${Math.random() * 3}s`
-                  }}
+                  }
                   animate={_{
-                    scale: [0, 1, 0], opacity: [0, 1, 0]}}
+                    scale: [0, 1, 0], opacity: [0, 1, 0]}
                   transition={_{
-                    duration: 3, repeat: Infinity, delay: Math.random() * 3}}
+                    duration: 3, repeat: Infinity, delay: Math.random() * 3}
                 />
-              ))}
+              )}
             </div>
           </div>
-          
+
           <div className=&quot;text-center max-w-6xl mx-auto relative z-10&quot;>
             <motion.div,
 variants={containerVariants}
@@ -186,20 +185,20 @@ variants={itemVariants}
                 <span>Innovation Leader 2040</span>
                 <Sparkles className=&quot;w-5 h-5 animate-pulse&quot; aria-hidden=&quot;true&quot; />
               </motion.div>
-              
+
               <motion.h1,
 variants={itemVariants}
                 id=&quot;hero-heading&quot;
                 className=&quot;text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 via-purple-600 to-pink-500 bg-clip-text text-transparent leading-tight&quot;              >
                 Zion Tech Group
               </motion.h1>
-              
+
               <motion.p,
 variants={itemVariants}
                 className=&quot;text-2xl md:text-3xl text-gray-300 mb-10 max-w-4xl mx-auto leading-relaxed&quot;              >
                 Pioneering the future of technology with revolutionary AI, quantum computing, and autonomous solutions that transform businesses worldwide
               </motion.p>
-              
+
               {_/* Enhanced CTA Section */}
               <motion.div,
 variants={itemVariants}
@@ -223,7 +222,7 @@ variants={itemVariants}
                   </button>
                 </a>
               </motion.div>
-              
+
               {_/* Enhanced Trust Indicators */}
               <motion.div,
 variants={itemVariants}
@@ -258,7 +257,7 @@ variants={itemVariants}
 variants={containerVariants}
               initial=&quot;hidden&quot;
               whileInView=&quot;visible&quot;
-              viewport={{ once: true }}
+              viewport={ once: true }
               className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8&quot;            >
               {statsData.map(_(stat, index) => (
                 <motion.div,
@@ -273,11 +272,11 @@ key={stat.label}
                   </div>
                   <div className=&quot;text-xl font-semibold text-white mb-2&quot;>{stat.label}</div>
                   <div className=&quot;text-gray-400&quot;>{stat.description}</div>                </motion.div>
-              ))}
+              )}
             </motion.div>;
           </div>;
         </section>;
-;
+
         {/* Enhanced Service Categories */}
         <section className=&quot;py-20 px-4 relative&quot;>
           <div className=&quot;max-w-7xl mx-auto&quot;>
@@ -285,7 +284,7 @@ key={stat.label}
 variants={containerVariants}
               initial=&quot;hidden&quot;
               whileInView=&quot;visible&quot;
-              viewport={{ once: true }}
+              viewport={ once: true }
               className=&quot;text-center mb-16&quot;
             >
               <motion.h2,
@@ -304,7 +303,7 @@ variants={itemVariants}
 variants={containerVariants}
               initial=&quot;hidden&quot;
               whileInView=&quot;visible&quot;
-              viewport={{ once: true }}
+              viewport={ once: true }
               className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8&quot;            >
               {serviceCategories.map(_(category, index) => (
                 <motion.div,
@@ -321,11 +320,11 @@ key={category.name}
                     <div className=&quot;text-4xl font-bold text-cyan-400 mb-2&quot;>{category.count}</div>
                     <div className=&quot;text-gray-400&quot;>Innovative Services</div>                  </div>
                 </motion.div>
-              ))}
+              )}
             </motion.div>;
           </div>;
         </section>;
-;
+
         {/* Enhanced Featured Services Section */}
         <section className=&quot;py-20 px-4 relative&quot;>
           <div className=&quot;max-w-7xl mx-auto&quot;>
@@ -333,7 +332,7 @@ key={category.name}
 variants={containerVariants}
               initial=&quot;hidden&quot;
               whileInView=&quot;visible&quot;
-              viewport={{ once: true }}
+              viewport={ once: true }
               className=&quot;text-center mb-16&quot;
             >
               <motion.h2,
@@ -352,7 +351,7 @@ variants={itemVariants}
 variants={containerVariants}
               initial=&quot;hidden&quot;
               whileInView=&quot;visible&quot;
-              viewport={{ once: true }}
+              viewport={ once: true }
               className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;            >
               {featuredServices.map(_(service, index) => (
                 <motion.div,
@@ -367,10 +366,10 @@ key={service.id}
                       </div>
                     )}
                   </div>
-                  
+
                   <h3 className=&quot;text-2xl font-bold text-white mb-3&quot;>{service.name}</h3>
                   <p className=&quot;text-gray-400 mb-4&quot;>{service.tagline}</p>
-                  
+
                   <div className=&quot;flex items-center justify-between mb-6&quot;>
                     <div className=&quot;text-3xl font-bold text-cyan-400&quot;>
                       ${service.price.monthly}
@@ -380,9 +379,9 @@ key={service.id}
                       {service.rating}  ({service.reviews})
                     </div>
                   </div>
-                  
+
                   <div className=&quot;space-y-3 mb-6&quot;>
-                    {service.features.slice(0, 3).map((feature, idx) => (
+                    {service.features.slice(0, 3).map(feature, idx) => (
                       <div key={idx} className=&quot;flex items-center gap-3 text-gray-300&quot;>
                         <div className=&quot;w-2 h-2 bg-cyan-400 rounded-full&quot;></div>
                         <span className=&quot;text-sm&quot;>{feature}</span>
@@ -402,15 +401,15 @@ href={service.link}
                         <ArrowRight className=&quot;w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300&quot; />
                       </a>
                     </motion.div>
-                  ))}
+                  )}
                 </motion.div>
 
                 {_/* View All Services Button */}
                 <motion.div,
-initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.8, delay: 0.4 }}
+initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  viewport={ once: true }
+                  transition={ duration: 0.8, delay: 0.4 }
                   className=&quot;text-center mt-12&quot;                >
                   <Link,
 href=&quot;/innovative-2040-futuristic-services-showcase&quot;
@@ -420,11 +419,11 @@ href=&quot;/innovative-2040-futuristic-services-showcase&quot;
                     <ArrowRight className=&quot;w-6 h-6 ml-3&quot; />
                   </a>
                 </motion.div>
-              ))}
+              )}
             </motion.div>;
           </div>;
         </section>;
-;
+
         {/* Enhanced CTA Section */}
         <section className=&quot;py-20 px-4 relative&quot;>
           <div className=&quot;max-w-4xl mx-auto text-center&quot;>
@@ -432,7 +431,7 @@ href=&quot;/innovative-2040-futuristic-services-showcase&quot;
 variants={containerVariants}
               initial=&quot;hidden&quot;
               whileInView=&quot;visible&quot;
-              viewport={{ once: true }}
+              viewport={ once: true }
               className=&quot;space-y-8&quot;
             >
               <motion.h2,
@@ -445,7 +444,7 @@ variants={itemVariants}
                 className=&quot;text-xl text-gray-300 max-w-2xl mx-auto&quot;              >
                 Join thousands of companies already leveraging our revolutionary technology solutions
               </motion.p>
-              
+
               <motion.div,
 variants={itemVariants}
                 className=&quot;flex flex-col sm:flex-row gap-6 justify-center&quot;              >
@@ -460,7 +459,7 @@ variants={itemVariants}
                   </button>
                 </a>
               </motion.div>
-              
+
               <motion.div,
 variants={itemVariants}
                 className=&quot;flex items-center justify-center gap-8 text-sm text-gray-400&quot;              >
@@ -483,6 +482,6 @@ variants={itemVariants}
       </main>
     </Layout>
   )
-},
+,
 
 export default Homepage2040,

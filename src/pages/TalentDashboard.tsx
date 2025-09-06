@@ -13,7 +13,7 @@ import {
   FileText
   Inbox
   Video
-} from 'lucide-react'
+ from 'lucide-react'
 import { ProtectedRoute } from '@/components/ProtectedRoute'
 import { SuggestedJobs } from '@/components/jobs/SuggestedJobs'
 import { useAuth } from '@/hooks/useAuth'
@@ -22,7 +22,7 @@ import { useAuth } from '@/hooks/useAuth'
   CardDescription
   CardHeader
   CardTitle
-} from '@/components/ui/card'
+ from '@/components/ui/card'
 import { Avatar } from '@/components/ui/avatar'
 import { Badge } from '@/components/ui/badge'
 import { TalentOnboardingSteps } from '@/components/onboarding/TalentOnboardingSteps'
@@ -50,7 +50,7 @@ import {;
   FileText,;
   Inbox,;
   Video,;
-} from 'lucide-react';
+ from 'lucide-react';
 import { ProtectedRoute } from '@/components/ProtectedRoute';
 import { SuggestedJobs } from '@/components/jobs/SuggestedJobs';
 import { useAuth } from '@/hooks/useAuth';
@@ -60,7 +60,7 @@ import {;
   CardDescription,;
   CardHeader,;
   CardTitle,;
-} from '@/components/ui/card';
+ from '@/components/ui/card';
 import { Avatar } from '@/components/ui/avatar';
 import { Badge } from '@/components/ui/badge';
 import { TalentOnboardingSteps } from '@/components/onboarding/TalentOnboardingSteps';
@@ -291,7 +291,6 @@ export default function TalentDashboard() {
       <TalentDashboardContent />
     </ProtectedRoute>
   )
-}
 
             {/* New Onboarding Progress Tracker */}
             <TalentOnboardingSteps />;
@@ -380,4 +379,3 @@ function TalentDashboard() {
     <ProtectedRoute>;
       <TalentDashboardContent />;
     </ProtectedRoute>);
-}

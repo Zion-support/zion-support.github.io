@@ -7,6 +7,5 @@ const MobileBottomNav.js = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default MobileBottomNav.js;

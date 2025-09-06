@@ -9,12 +9,10 @@ async function loadRequests(): Promise<any[]> {;
   } catch {;
     return [];
   }
-}
-;
+
 async function saveRequests(requests: any[]) {;
   fs.mkdirSync(path.dirname(REQUESTS_PATH), { recursive: true }),;
-  fs.writeFileSync(REQUESTS_PATH, JSON.stringify(requests, null, 2));
-}
+  fs.writeFileSync(REQUESTS_PATH, JSON.stringify(requests, null, 2);
 
 async function summarizeWithOpenAI(description: string) {
   try {
@@ -30,7 +28,7 @@ async function summarizeWithOpenAI(description: string) {
       temperature: 0.3}),
     const content = response.choices[0]?.message?.content || '',
     const typeMatch = content.match(/type\s*:\s*(.+)$/im),
-;
+
 async function summarizeWithOpenAI(description: string) {;
   try {;
     if (!process.env.OPENAI_API_KEY) return { summary: description.slice(0, 280), type: 'unknown' },;
@@ -45,18 +43,15 @@ async function summarizeWithOpenAI(description: string) {;
       temperature: 0.3}),;
     const content = response.choices[0]?.message?.content || '',;
     const typeMatch = content.match(/type\s*:\s*(.+)$/im),;
-    return { summary: content.trim(), type: typeMatch ? typeMatch[1].trim() : 'unknown' }
-  } catch (err) {;
+    return { summary: content.trim(), type: typeMatch ? typeMatch[1].trim() : 'unknown' } catch (err) {;
     return { summary: description.slice(0, 280), type: 'unknown' }
-  }
-}
-;
+
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' }),;
+  if (req.method != 'POST') return res.status(405).json({ error: 'Method not allowed' }),;
   const { name, email, budget, timeline, description, talentSlug } = req.body || {},;
   if (!name || !email || !description) return res.status(400).json({ error: 'Missing required fields' }),;
   const normalizedBudget = String(budget ?? '').replace(/[^0-9.\-]/g, ''),;
-  const ai = await summarizeWithOpenAI(String(description)),;
+  const ai = await summarizeWithOpenAI(String(description),;
   const requests = await loadRequests(),;
   const now = new Date().toISOString(),;
   const id = `req_${Date.now()}`,;
@@ -77,4 +72,3 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   await saveRequests(requests);
   // TODO: Integrate notifications (email/webhook) for admin and talent;
   return res.status(200).json({ id, status: 'ok' });
-}

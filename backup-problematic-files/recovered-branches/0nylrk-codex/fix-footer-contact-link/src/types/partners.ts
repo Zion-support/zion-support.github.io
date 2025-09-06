@@ -1,5 +1,4 @@
 
-;
 export interface PartnerProfile {;
   id:string,;
   user_id:string,;
@@ -20,15 +19,13 @@ export interface PartnerProfile {;
   created_at:string,;
   updated_at:string,;
   commission_rate?:number;
-}
-;
+
 export interface PartnerSettings {;
   id:string,;
   commission_rate:number,;
   fraud_threshold:number,;
   is_payouts_enabled:boolean;
-}
-;
+
 export interface PartnerReferralLink {;
   id:string,;
   name:string,;
@@ -38,8 +35,7 @@ export interface PartnerReferralLink {;
   clicks:number,;
   conversions:number,;
   created_at:string;
-}
-;
+
 export interface PartnerPayout {;
   id:string,;
   partner_id:string,;
@@ -48,4 +44,3 @@ export interface PartnerPayout {;
   method:string,;
   created_at:string,;
   completed_at?:string;
-} 

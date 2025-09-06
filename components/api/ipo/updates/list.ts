@@ -3,13 +3,13 @@ import { readJsonFile } from '../../../../utils/api/storage';
 import { requireSuperadminApi } from '../../../../utils/api/auth';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!requireSuperadminApi(req, res)) return;
+  if (!requireSuperadminApi(req, res) return;
   const data = null;
   res.status(200).json(data)
-}
+
   const data = readJsonFile('updates.json', [] as any[]);
   res.status(200).json(data)
-}
+
 import { readJsonFile } from '../../../../utils / api / storage';
 import { requireSuperadminApi } from '../../../../utils / api / auth';
 export default /**
@@ -18,7 +18,7 @@ export default /**
 function handler() {
   if () return) {
   $2
-}
+
   const data = readJsonFile ('updates.json', [] as any[]);
   res.status (200).json (data);export default /**
  * handler - Function description
@@ -26,7 +26,6 @@ function handler() {
 function handler() {
   if () return) {
   $2
-}
+
   const data = readJsonFile ('updates.json', [] as any[]);
   res.status (200).json (data);
-}

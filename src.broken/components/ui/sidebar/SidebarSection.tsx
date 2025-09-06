@@ -6,5 +6,3 @@ export function SidebarSection() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

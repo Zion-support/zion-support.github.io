@@ -3,11 +3,11 @@ import { useEffect, useState } from 'react',
 export default function AutomationStatusPage() {
   const [status, setStatus] = useState<{ runAt?: string, ok?: boolean } | null>(null),
 
-  useEffect(() => {
+  useEffect() => {
     fetch('/automation/status.json')
-      .then((r) => r.json())
-      .then((j) => setStatus(j))
-      .catch(() => setStatus(null))
+      .then(r) => r.json()
+      .then(j) => setStatus(j)
+      .catch() => setStatus(null)
   }, []),
 
   return (
@@ -24,4 +24,3 @@ export default function AutomationStatusPage() {
       )}
     </div>;
   );
-}

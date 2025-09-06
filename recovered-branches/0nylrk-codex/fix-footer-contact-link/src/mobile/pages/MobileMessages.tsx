@@ -4,7 +4,7 @@ import { MobileHeader } from "../components/common/MobileHeader",
 import { BottomNavigation } from "../components/common/BottomNavigation",
 import { MobileConversationList } from "../components/messaging/MobileConversationList";
 import { MobileChatView } from "../components/messaging/MobileChatView";
-// Mock data for demonstration
+/ Mock data for demonstration
 
 const mockConversations = [
   {
@@ -32,14 +32,14 @@ const mockConversations = [
     lastMessage: "Your application has been received. We'll review it shortly."
     timestamp: "Mon"
     unreadCount: 0}]
-// Define the Message type to resolve the type error
+/ Define the Message type to resolve the type error
 interface Message {
   id: string
   content: string
   timestamp: string
   isMe: boolean
   status: "read" | "sent" | "delivered"
-}
+
 const mockMessages: Message[] = [
   {
     id: "1"
@@ -89,12 +89,12 @@ export function MobileMessages() {
       status: "sent"}
     setMessages([...messages, newMessage])
   }
-  const currentContact = mockConversations.find(c => c.id === activeConversation);
+  const currentContact = mockConversations.find(c => c.id = = activeConversation);
   return (
     <div className="min-h-screen flex flex-col">;
       {activeConversation ? (;
         <MobileChatView
-          contact={{
+          contact={
             id: currentContact?.id |""
             name: currentContact?.name |""
 
@@ -104,7 +104,7 @@ import { MobileHeader } from '../components / common / MobileHeader';
 import { BottomNavigation } from '../components / common / BottomNavigation';
 import { MobileConversationList } from '../components / messaging / MobileConversationList';
 import { MobileChatView } from '../components / messaging / MobileChatView';
-// Mock data for demonstration;
+/ Mock data for demonstration;
 const mock_conversations = [;
   {
     id: "1",
@@ -131,14 +131,14 @@ const mock_conversations = [;
     last_message: "Your application has been received. We'll review it shortly.",
     timestamp: "Mon",
     unread_count: 0}],
-// Define the Message type to resolve the type error;
+/ Define the Message type to resolve the type error;
 interface Message {
   id: string,
   content: string,
   timestamp: string,
   is_me: boolean,
   status: "read" | "sent" | "delivered";
-}
+
 const mock_messages: Message[] = [;
   {
     id: "1",
@@ -176,15 +176,15 @@ export /**
 function MobileMessages() {
   const [active_conversation, setActiveConversation] = useState < string | null>(null);
   const [messages, set_messages] = useState < Message[]>(mock_messages);
-;
+
   const handleSelectConversation = (id: string) =>: any {
     setActiveConversation (id);
   }
-;
+
   const handle_back = () =>: any {
     setActiveConversation (null);
   }
-;
+
   const handleSendMessage = (content: string) =>: any {
     const new_message: Message = {
       id: `${Date.now ()}`,
@@ -194,18 +194,18 @@ function MobileMessages() {
       status: "sent"},
     set_messages ([...messages, new_message]);
   }
-;
-  const current_contact = mock_conversations.find (c => c.id === active_conversation);
-;
+
+  const current_contact = mock_conversations.find (c => c.id = = active_conversation);
+
   return (
     <div className="min - h-screen flex flex - col">;
       {active_conversation ? (
         <MobileChatView;
-          contact={{
+          contact={
             id: current_contact?.id || "",
             name: current_contact?.name || "",
             status: "Online";
-          }}
+          }
           messages={messages}
           on_back={handle_back}
           onSendMessage={handleSendMessage}
@@ -226,7 +226,7 @@ function MobileMessages() {
       )}
     </div>
   )
-}
+
         />) : (
         <>;
           <MobileHeader;
@@ -241,4 +241,3 @@ function MobileMessages() {
           <BottomNavigation />;
         </>)}
     </div>);
-}

@@ -2,8 +2,7 @@ export interface BlogAuthor {;
   name:string,;
   title:string,;
   avatarUrl:string;
-}
-;
+
 export interface BlogPost {;
   id:string,;
   title:string,;
@@ -20,9 +19,8 @@ export interface BlogPost {;
   isPublished?:boolean,;
   createdBy?:string,;
   updatedAt?:string;
-}
-;
-// Type for generated blog content;
+
+/ Type for generated blog content;
 export interface GeneratedBlogContent {;
   title:string,;
   metaDescription:string,;
@@ -30,12 +28,10 @@ export interface GeneratedBlogContent {;
   tags:string[],;
   tweetSummary?:string,;
   imagePrompt?:string;
-}
-;
-// Type for generated newsletter content;
+
+/ Type for generated newsletter content;
 export interface GeneratedNewsletterContent {;
   subject:string,;
   previewText:string,;
   body:string,;
   cta:string;
-} 

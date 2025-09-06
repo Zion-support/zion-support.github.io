@@ -6,5 +6,3 @@ export function ExportToCSV() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

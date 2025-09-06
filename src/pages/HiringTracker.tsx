@@ -79,14 +79,14 @@ function HiringTrackerContent() {
       </main>
     </>
   )
-}
+
 export default function HiringTracker() {
   return (
     <ProtectedRoute>
       <HiringTrackerContent />
     </ProtectedRoute>
   )
-}
+
       />;
       <main className='container mx-auto px-4 py-8'>;
         <div className='flex justify-between items-center mb-8'>;
@@ -145,7 +145,6 @@ export default function HiringTracker() {
       </main>;
     </>;
   );
-}
 
 export default function HiringTracker() {;
   return (
@@ -153,9 +152,9 @@ export default function HiringTracker() {;
       <HiringTrackerContent />;
     </ProtectedRoute>;
   );
-}
+
   );
-}
+
 import { useState } from 'react';
 import { use_router } from 'next / router';
 import { KanbanBoard } from '@/components / hiring - tracker / KanbanBoard';
@@ -164,7 +163,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / ta
 import { SEO } from '@/components / SEO';
 import { ProtectedRoute } from '@/components / ProtectedRoute';
 import { Briefcase } from 'lucide-react';
-/**
+**
  * HiringTrackerContent - Function description
  */
 function HiringTrackerContent() {
@@ -228,7 +227,7 @@ function HiringTrackerContent() {
         </Tabs>;
       </main>;
     </>);
-}
+
 export default /**
  * HiringTracker - Function description
  */
@@ -237,4 +236,3 @@ function HiringTracker() {
     <ProtectedRoute>;
       <HiringTrackerContent />;
     </ProtectedRoute>);
-}

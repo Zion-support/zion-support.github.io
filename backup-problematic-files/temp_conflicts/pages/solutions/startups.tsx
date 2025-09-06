@@ -4,10 +4,10 @@ import { motion } from 'framer-motion',;
 import { ;
   Rocket, ArrowRight, CheckCircle, Zap, Target, Users, ;
   TrendingUp, Globe, Cpu, Database, Star, Lightbulb, Clock, DollarSign;
-} from 'lucide-react',;
+ from 'lucide-react',;
 import EnhancedNavigation from '../../components/EnhancedNavigation',;
 import EnhancedFooter from '../../components/EnhancedFooter',;
-;
+
 export default function StartupToolsPage() {;
   const tools = [;
     {;
@@ -47,7 +47,7 @@ export default function StartupToolsPage() {;
       icon:Database;
     }
   ],;
-;
+
   const benefits = [;
     {;
       icon:Zap,;
@@ -70,7 +70,7 @@ export default function StartupToolsPage() {;
       description:"Tools that have helped hundreds of startups succeed";
     }
   ],;
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">;
       <Head>;
@@ -83,16 +83,16 @@ export default function StartupToolsPage() {;
         <meta property="og:url" content="https://ziontechgroup.com/solutions/startups" />;
         <link rel="canonical" href="https://ziontechgroup.com/solutions/startups" />;
       </Head>;
-;
+
       <EnhancedNavigation />;
-;
+
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-6">;
         <div className="max-w-7xl mx-auto text-center">;
           <motion.div;
-            initial={{ opacity:0, y:30 }}
-            animate={{ opacity:1, y:0 }}
-            transition={{ duration:0.8 }}
+            initial={ opacity:0, y:30 }
+            animate={ opacity:1, y:0 }
+            transition={ duration:0.8 }
           >;
             <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-500 p-5 mx-auto mb-8">;
               <Rocket className="w-10 h-10 text-white" />;
@@ -106,8 +106,8 @@ export default function StartupToolsPage() {;
             </p>;
             <motion.a;
               href="mailto:kleber@ziontechgroup.com";
-              whileHover={{ scale:1.05 }}
-              whileTap={{ scale:0.95 }}
+              whileHover={ scale:1.05 }
+              whileTap={ scale:0.95 }
               className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-medium rounded-full transition-all duration-300 shadow-lg hover:shadow-xl";
             >;
               <span>Start Building</span>;
@@ -116,15 +116,15 @@ export default function StartupToolsPage() {;
           </motion.div>;
         </div>;
       </section>;
-;
+
       {/* Tools Section */}
       <section className="py-20 px-6">;
         <div className="max-w-7xl mx-auto">;
           <motion.div;
-            initial={{ opacity:0, y:30 }}
-            whileInView={{ opacity:1, y:0 }}
-            transition={{ duration:0.8 }}
-            viewport={{ once:true }}
+            initial={ opacity:0, y:30 }
+            whileInView={ opacity:1, y:0 }
+            transition={ duration:0.8 }
+            viewport={ once:true }
             className="text-center mb-16";
           >;
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-purple-100 bg-clip-text text-transparent">;
@@ -134,59 +134,54 @@ export default function StartupToolsPage() {;
               Essential tools designed to accelerate your startup's growth;
             </p>;
           </motion.div>;
-;
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {tools.map((tool, index) => (;
+            {tools.map(tool, index) => (;
               <motion.div;
                 key={tool.title}
-                initial={{ opacity:0, y:30 }}
-                whileInView={{ opacity:1, y:0 }}
-                transition={{ duration:0.6, delay:index * 0.1 }}
-                viewport={{ once:true }}
+                initial={ opacity:0, y:30 }
+                whileInView={ opacity:1, y:0 }
+                transition={ duration:0.6, delay:index * 0.1 }
+                viewport={ once:true }
                 className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-8 backdrop-blur-xl hover:border-purple-400/30 transition-all duration-300 transform hover:scale-105";
               >;
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-purple-500/0 via-pink-400/10 to-purple-500/0 opacity-0 blur-2xl transition-opacity hover:opacity-100" />;
-                ;
                 <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 p-4 mb-6">;
                   <tool.icon className="w-8 h-8 text-white" />;
                 </div>;
-                ;
                 <h3 className="text-2xl font-bold text-white mb-4">{tool.title}</h3>;
                 <p className="text-white/70 mb-6">{tool.description}</p>;
-                ;
                 <ul className="space-y-3 mb-6">;
-                  {tool.features.map((feature, featureIndex) => (;
+                  {tool.features.map(feature, featureIndex) => (;
                     <li key={featureIndex} className="flex items-center space-x-3">;
                       <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0" />;
                       <span className="text-white/80">{feature}</span>;
                     </li>;
-                  ))}
+                  )}
                 </ul>;
-                ;
                 <div className="text-2xl font-bold text-purple-400 mb-4">{tool.price}</div>;
-                ;
                 <motion.a;
                   href="mailto:kleber@ziontechgroup.com";
-                  whileHover={{ scale:1.02 }}
-                  whileTap={{ scale:0.98 }}
+                  whileHover={ scale:1.02 }
+                  whileTap={ scale:0.98 }
                   className="block w-full text-center px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-medium rounded-lg transition-all duration-300";
                 >;
                   Get Started;
                 </motion.a>;
               </motion.div>;
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* Benefits Section */}
       <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">;
         <div className="max-w-7xl mx-auto">;
           <motion.div;
-            initial={{ opacity:0, y:30 }}
-            whileInView={{ opacity:1, y:0 }}
-            transition={{ duration:0.8 }}
-            viewport={{ once:true }}
+            initial={ opacity:0, y:30 }
+            whileInView={ opacity:1, y:0 }
+            transition={ duration:0.8 }
+            viewport={ once:true }
             className="text-center mb-16";
           >;
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-purple-100 bg-clip-text text-transparent">;
@@ -196,15 +191,15 @@ export default function StartupToolsPage() {;
               Discover the advantages of our startup-focused technology solutions;
             </p>;
           </motion.div>;
-;
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
-            {benefits.map((benefit, index) => (;
+            {benefits.map(benefit, index) => (;
               <motion.div;
                 key={benefit.title}
-                initial={{ opacity:0, x:index % 2 === 0 ? -30 :30 }}
-                whileInView={{ opacity:1, x:0 }}
-                transition={{ duration:0.6, delay:index * 0.1 }}
-                viewport={{ once:true }}
+                initial={ opacity:0, x:index % 2 = = 0 ? -30 :30 }
+                whileInView={ opacity:1, x:0 }
+                transition={ duration:0.6, delay:index * 0.1 }
+                viewport={ once:true }
                 className="flex items-start space-x-6 p-6 rounded-2xl bg-gradient-to-br from-white/10 to-white/5 border border-white/10";
               >;
                 <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 p-4 flex-shrink-0">;
@@ -215,19 +210,19 @@ export default function StartupToolsPage() {;
                   <p className="text-white/70">{benefit.description}</p>;
                 </div>;
               </motion.div>;
-            ))}
+            )}
           </div>;
         </div>;
       </section>;
-;
+
       {/* CTA Section */}
       <section className="py-20 px-6">;
         <div className="max-w-4xl mx-auto text-center">;
           <motion.div;
-            initial={{ opacity:0, y:30 }}
-            whileInView={{ opacity:1, y:0 }}
-            transition={{ duration:0.8 }}
-            viewport={{ once:true }}
+            initial={ opacity:0, y:30 }
+            whileInView={ opacity:1, y:0 }
+            transition={ duration:0.8 }
+            viewport={ once:true }
           >;
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-purple-100 bg-clip-text text-transparent">;
               Ready to Accelerate Your Startup?;
@@ -237,8 +232,8 @@ export default function StartupToolsPage() {;
             </p>;
             <motion.a;
               href="mailto:kleber@ziontechgroup.com";
-              whileHover={{ scale:1.05 }}
-              whileTap={{ scale:0.95 }}
+              whileHover={ scale:1.05 }
+              whileTap={ scale:0.95 }
               className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-medium rounded-full transition-all duration-300 shadow-lg hover:shadow-xl";
             >;
               <span>Start Your Journey</span>;
@@ -247,8 +242,7 @@ export default function StartupToolsPage() {;
           </motion.div>;
         </div>;
       </section>;
-;
+
       <EnhancedFooter />;
     </div>;
   );
-}

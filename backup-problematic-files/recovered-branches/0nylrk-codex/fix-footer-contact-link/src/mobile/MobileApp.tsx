@@ -10,10 +10,9 @@ import { MobileMessages } from "./pages/MobileMessages",;
 import { MobileResumeBuilder } from "./pages/MobileResumeBuilder",;
 import { MobileJobPost } from "./pages/MobileJobPost",;
 import { useAuth } from "@/hooks/useAuth",;
-;
+
 export function MobileApp() {;
   const { isAuthenticated } = useAuth(),;
-  ;
   return (;
     <MobileThemeProvider>;
       <Routes>;
@@ -37,5 +36,4 @@ export function MobileApp() {;
  export function MobileApp () {
   const {
   isAuthenticated 
-}= useAuth ();
-}
+= useAuth ();

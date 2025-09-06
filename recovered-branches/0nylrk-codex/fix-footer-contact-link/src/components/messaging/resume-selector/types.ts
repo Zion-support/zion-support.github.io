@@ -6,7 +6,6 @@ export interface ResumeOption {
   type: 'ai_resume' | 'custom_upload';
   resume?: Resume;
   file?: File
-}
+
 export interface ResumeSelectorProps {
   onResumeSelected: (resumeOption: ResumeOption) => void;
-}

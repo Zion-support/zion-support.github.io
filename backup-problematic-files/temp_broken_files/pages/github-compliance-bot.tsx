@@ -1,7 +1,7 @@
 import React from 'react',;
 import Head from 'next/head',;
 import Layout from '../components/layout/Layout',;
-;
+
 export default function GitHubComplianceBotPage() {;
   return (;
     <Layout>;
@@ -15,9 +15,9 @@ export default function GitHubComplianceBotPage() {;
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent">GitHub Compliance Bot</h1>;
           <p className="text-slate-300">Automated repo checks for SOC 2/ISO controls, branch protections, CODEOWNERS, secrets scanning, licenses, and drift alerts.</p>;
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-            {[ 'Policy-as-code checksBranch protection enforcement', 'Secrets scanning alertsWeekly report & scorecard' ].map((f) => (;
+            {[ 'Policy-as-code checksBranch protection enforcement', 'Secrets scanning alertsWeekly report & scorecard' ].map(f) => (;
               <div key={f} className="p-4 rounded-xl bg-black/40 border border-emerald-500/30 text-slate-200">{f}</div>;
-            ))}
+            )}
           </div>;
           <div className="flex gap-3">;
             <a href="/contact" className="px-6 py-3 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-700 text-white">Start from $149/mo</a>;
@@ -27,7 +27,6 @@ export default function GitHubComplianceBotPage() {;
       </div>;
     </Layout>;
   ),;}
-;
+
  </Head> 
-}</div> <div className="flex gap-3" > <a href="/contact" className="px-6 py-3 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-700 text-white" >Start from $149/mo</Link> <a href="/market-pricing" className="px-6 py-3 rounded-xl border border-gray-700 text-gray-200" >See market pricing</Link> </div> </div> </div> </Layout>) 
-}
+</div> <div className="flex gap-3" > <a href="/contact" className="px-6 py-3 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-700 text-white" >Start from $149/mo</Link> <a href="/market-pricing" className="px-6 py-3 rounded-xl border border-gray-700 text-gray-200" >See market pricing</Link> </div> </div> </div> </Layout>) 

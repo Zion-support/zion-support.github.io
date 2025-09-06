@@ -6,5 +6,3 @@ export function OfflineToast() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

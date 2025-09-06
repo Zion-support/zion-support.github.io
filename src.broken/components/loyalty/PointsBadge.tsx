@@ -6,5 +6,3 @@ export function PointsBadge() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

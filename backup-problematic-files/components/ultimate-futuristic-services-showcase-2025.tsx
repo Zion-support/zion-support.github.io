@@ -15,7 +15,7 @@ import {;
   Dna, Target as TargetIcon, Shield as ShieldIcon,;
   BookOpen, Sparkles as SparklesIcon, Zap as ZapIcon,;
   Brain as BrainIcon, Play as PlayIcon;
-} from 'lucide-react',;
+ from 'lucide-react',;
 import Layout from '../components/layout/Layout',;
 import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic-services',;
 const contactInfo = {;
@@ -23,7 +23,7 @@ const contactInfo = {;
   email: 'kleber@ziontechgroup.com',;
   address: '364 E Main St STE 1008 Middletown DE 19709',;
   website: 'https://ziontechgroup.com';
-},;
+,;
 const serviceCategories = [;
   {;
     title: 'AI & Consciousness',;
@@ -95,38 +95,37 @@ const serviceCategories = [;
     color: 'from-cyan-500 to-blue-600',;
     count: 1;
   }
-],;
+,;
 const stats = [;
   { number: '15+', label: 'Revolutionary Services', icon: Star, color: 'text-cyan-400' },;
   { number: '1000%+', label: 'Average ROI', icon: TrendingUp, color: 'text-purple-400' },;
   { number: '99.9%', label: 'Success Rate', icon: Award, color: 'text-green-400' },;
   { number: '24/7', label: 'Expert Support', icon: Clock, color: 'text-pink-400' }
-],;
+,;
 export default function UltimateFuturisticServicesShowcase2025() {;
   const [searchTerm, setSearchTerm] = useState(''),;
   const [selectedCategory, setSelectedCategory] = useState('all'),;
   const [sortBy, setSortBy] = useState('popular'),;
   const [viewMode, setViewMode] = useState('grid'),;
   const filteredServices = ultimateFuturisticServices2025.filter(service => {;
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         service.category.toLowerCase().includes(searchTerm.toLowerCase()),;
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,;
+    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase() ||;
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase() ||;
+                         service.category.toLowerCase().includes(searchTerm.toLowerCase(),;
+    const matchesCategory = selectedCategory = = 'all' || service.category = = selectedCategory,;
     return matchesSearch && matchesCategory;
   }),;
-  const sortedServices = [...filteredServices].sort((a, b) => {;
+  const sortedServices = [...filteredServices].sort(a, b) => {;
     switch (sortBy) {;
       case 'price-low':;
-        return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, '')),;
+        return parseFloat(a.price.replace(/[^0-9.]/g, '') - parseFloat(b.price.replace(/[^0-9.]/g, ''),;
       case 'price-high':;
-        return parseFloat(b.price.replace(/[^0-9.]/g, '')) - parseFloat(a.price.replace(/[^0-9.]/g, '')),;
+        return parseFloat(b.price.replace(/[^0-9.]/g, '') - parseFloat(a.price.replace(/[^0-9.]/g, ''),;
       case 'rating':;
         return b.rating - a.rating,;
       case 'customers':;
         return b.customers - a.customers,;
       default: return b.popular ? 1 : -1;
-    }
-  }),;
+    }),;
   const containerVariants = {;
     hidden: { opacity: 0 },;
     visible: {;
@@ -134,7 +133,6 @@ export default function UltimateFuturisticServicesShowcase2025() {;
       transition: {;
         staggerChildren: 0.1;
       }
-    }
   },;
   const itemVariants = {;
     hidden: { y: 20, opacity: 0 },;
@@ -144,7 +142,6 @@ export default function UltimateFuturisticServicesShowcase2025() {;
       transition: {;
         duration: 0.5;
       }
-    }
   },
 
   return (
@@ -165,9 +162,9 @@ export default function UltimateFuturisticServicesShowcase2025() {;
         <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
           >
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -183,12 +180,12 @@ export default function UltimateFuturisticServicesShowcase2025() {;
               quantum computing, space technology, and breakthrough innovations to transform your business.
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-12">
-              {stats.map((stat, index) => (
+              {stats.map(stat, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial={ opacity: 0, scale: 0.8 }
+                  animate={ opacity: 1, scale: 1 }
+                  transition={ duration: 0.5, delay: index * 0.1 }
                   className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20"
                 >
                   <stat.icon className={`w-6 h-6 ${stat.color}`} />
@@ -197,7 +194,7 @@ export default function UltimateFuturisticServicesShowcase2025() {;
                     <div className="text-sm text-gray-300">{stat.label}</div>
                   </div>
                 </motion.div>
-              ))}
+              )}
             </div>;
           </motion.div>;
         </div>;
@@ -226,11 +223,11 @@ export default function UltimateFuturisticServicesShowcase2025() {;
                 className="px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
               >
                 <option value="all">All Categories</option>
-                {serviceCategories.map((category) => (
+                {serviceCategories.map(category) => (
                   <option key={category.title} value={category.title}>
                     {category.title} ({category.count})
                   </option>
-                ))}
+                )}
               </select>;
               {/* Sort Options */}
               <select;
@@ -249,7 +246,7 @@ export default function UltimateFuturisticServicesShowcase2025() {;
               <div className="flex bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-1">
                 <button
                   onClick={() => setViewMode('grid')}
-                  className={`p-2 rounded ${viewMode === 'grid' ? 'bg-purple-500 text-white' : 'text-gray-400'}`}
+                  className={`p-2 rounded ${viewMode = = 'grid' ? 'bg-purple-500 text-white' : 'text-gray-400'}`}
                 >
                   <div className="grid grid-cols-2 gap-1 w-4 h-4">
                     <div className="bg-current rounded-sm"></div>
@@ -260,7 +257,7 @@ export default function UltimateFuturisticServicesShowcase2025() {;
                 </button>
                 <button
                   onClick={() => setViewMode('list')}
-                  className={`p-2 rounded ${viewMode === 'list' ? 'bg-purple-500 text-white' : 'text-gray-400'}`}
+                  className={`p-2 rounded ${viewMode = = 'list' ? 'bg-purple-500 text-white' : 'text-gray-400'}`}
                 >
                   <div className="space-y-1 w-4 h-4">
                     <div className="bg-current rounded-sm h-0.5"></div>
@@ -281,14 +278,14 @@ export default function UltimateFuturisticServicesShowcase2025() {;
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}
+            className={viewMode = = 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}
           >;
-            {sortedServices.map((service, index) => (;
+            {sortedServices.map(service, index) => (;
               <motion.div;
                 key={service.id}
                 variants={itemVariants}
                 className={`group relative ${;
-                  viewMode === 'grid';
+                  viewMode = = 'grid';
                     ? 'bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 hover:border-purple-500/50 transition-all duration-300 hover:scale-105';
                     : 'bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:border-purple-500/50 transition-all duration-300';
                 }`}
@@ -299,21 +296,21 @@ export default function UltimateFuturisticServicesShowcase2025() {;
                     Popular
                   </div>
                 )}
-;
+
                 {/* Service Header */}
-                <div className={`${viewMode === 'list' ? 'flex items-start space-x-6' : 'text-center'}`}>;
-                  <div className={`${viewMode === 'list' ? 'flex-shrink-0' : 'mx-auto mb-4'}`}>;
+                <div className={`${viewMode = = 'list' ? 'flex items-start space-x-6' : 'text-center'}`}>;
+                  <div className={`${viewMode = = 'list' ? 'flex-shrink-0' : 'mx-auto mb-4'}`}>;
                     <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} flex items-center justify-center text-3xl`}>;
                       {service.icon}
                     </div>
                   </div>
-                  
-                  <div className={`${viewMode === 'list' ? 'flex-1' : ''}`}>
+
+                  <div className={`${viewMode = = 'list' ? 'flex-1' : ''}`}>
                     <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">
                       {service.name}
                     </h3>
                     <p className="text-gray-300 text-sm mb-3">{service.tagline}</p>
-                    
+
                     {/* Price */}
                     <div className="flex items-center justify-center space-x-2 mb-4">
                       <span className="text-3xl font-bold text-white">{service.price}</span>
@@ -332,12 +329,12 @@ export default function UltimateFuturisticServicesShowcase2025() {;
                     Key Features
                   </h4>
                   <div className="grid grid-cols-1 gap-2">
-                    {service.features.slice(0, 4).map((feature, idx) => (
+                    {service.features.slice(0, 4).map(feature, idx) => (
                       <div key={idx} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {feature}
                       </div>;
-                    ))}
+                    )}
                     {service.features.length > 4 && (
                       <div className="text-sm text-purple-400 mt-2">
                         +{service.features.length - 4} more features
@@ -410,10 +407,10 @@ export default function UltimateFuturisticServicesShowcase2025() {;
                   </div>;
                 </div>;
               </motion.div>;
-            ))}
+            )}
           </motion.div>;
           {/* No Results */}
-          {sortedServices.length === 0 && (
+          {sortedServices.length = = 0 && (
             <div className="text-center py-16">
               <div className="text-6xl mb-4"></div>
               <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
@@ -422,7 +419,7 @@ export default function UltimateFuturisticServicesShowcase2025() {;
                 onClick={() => {
                   setSearchTerm(''),
                   setSelectedCategory('all')
-                }}
+                }
                 className="bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-3 px-6 rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300"
               >
                 Clear Filters
@@ -435,10 +432,10 @@ export default function UltimateFuturisticServicesShowcase2025() {;
       <section className="py-20 bg-gradient-to-r from-purple-900/20 via-black to-pink-900/20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
           >
             <h2 className="text-3xl md: text-5xl font-bold text-white mb-6">
               Ready to Experience the Future?
@@ -493,4 +490,3 @@ export default function UltimateFuturisticServicesShowcase2025() {;
       </section>;
     </Layout>;
   );
-}

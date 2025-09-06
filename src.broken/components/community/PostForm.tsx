@@ -6,5 +6,3 @@ export function PostForm() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

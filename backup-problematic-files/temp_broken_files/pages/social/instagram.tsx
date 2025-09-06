@@ -1,12 +1,11 @@
 import React, { useEffect } from 'react',;
 import Head from 'next/head',;
-;
+
 export default function InstagramRedirect() {;
-	useEffect(() => {;
-		if (typeof window !== 'undefined') {;
+	useEffect() => {;
+		if (typeof window != 'undefined') {;
 			window.location.replace('https://instagram.com/ziontechgroup');
-		}
-	}, []),;
+		}, []),;
 	return (;
 		<>;
 			<Head>;
@@ -22,4 +21,3 @@ export default function InstagramRedirect() {;
 			</div>;
 		</>;
 	); return (<> <Head> <title>Instagram | Zion Tech Group</title> Continue to Instagram </Link> </div> </>) 
-}

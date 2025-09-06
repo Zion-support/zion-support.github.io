@@ -7,6 +7,5 @@ const AIAutonomousBusinessManager = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default AIAutonomousBusinessManager;

@@ -11,7 +11,7 @@ export default function EnterpriseAdmin() {
   const { user } = useAuth();
   // Check if user has enterprise admin role
 
-  const isEnterpriseAdmin = user?.role === "enterprise_admin";
+  const isEnterpriseAdmin = user?.role = = "enterprise_admin";
 
   if (!isEnterpriseAdmin) {
     return <Navigate to="/unauthorized" />
@@ -29,7 +29,7 @@ export default function EnterpriseAdmin() {
       <Footer />
     </ProtectedRoute>
   )
-}
+
 import React from './react';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -43,14 +43,14 @@ export default /**
  */
 function EnterpriseAdmin() {
   const { user } = use_auth ();
-;
+
   // Check if user has enterprise admin role;
-  const isEnterpriseAdmin = user?.role === "enterprise_admin";
-;
+  const isEnterpriseAdmin = user?.role = = "enterprise_admin";
+
   // Check condition
 if ( {) {
   $2
-}
+
     return <Navigate to="/unauthorized" />;
   }
   return (
@@ -65,4 +65,3 @@ if ( {) {
       </main>;
       <Footer />;
     </ProtectedRoute>);
-}

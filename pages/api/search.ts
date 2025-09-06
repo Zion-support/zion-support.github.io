@@ -7,18 +7,17 @@ import { searchAll, suggestDidYouMean } from "../../utils/search/filter";
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
-) {
+ {
   try {
 
     const q = (req.query.q as string) |"";
-    const access = ((req.headers["x-access-level"] as string) |
+    const access = (req.headers["x-access-level"] as string) |
       "public") as AccessLevel;
     const parsed = await parseQueryToFilters(q);
     const results = searchAll(parsed, access);
     const keywords = Array.from(
-      new Set([...(parsed.skills |[]), ...(parsed.keywords |[])])
-    );
-    const didYouMean = results.all.length === 0 ? suggestDidYouMean(q) : null;
+      new Set([...(parsed.skills |[]), ...(parsed.keywords |[])]);
+    const didYouMean = results.all.length = = 0 ? suggestDidYouMean(q) : null;
     res.status(200).json({
       ok: true
       query: q
@@ -33,14 +32,14 @@ export default async function handler(
       }
       results
     const q = (req && req.query.q as string) || "";
-    const access = ((req && req.headers["x-access-level"] as string) ||
+    const access = (req && req.headers["x-access-level"] as string) ||
       "public") as AccessLevel;
     const parsed = await parseQueryToFilters(q);
     const results = searchAll(parsed, access);
     const keywords = Array && Array.from(
       new Set([...(parsed && parsed.skills || []), ...(parsed && parsed.keywords || [])]),
     );
-    const didYouMean = results && results.all.length === 0 ? suggestDidYouMean(q) : null;
+    const didYouMean = results && results.all.length = = 0 ? suggestDidYouMean(q) : null;
     res && res.status(200).json({
       ok: true,
       query: q,
@@ -64,10 +63,9 @@ export default async function handler(
     res && res.status(500).json({ ok: false, error: e?.message || "Search failed" });
     res.status(500).json({ ok: false, error: e?.message |"Search failed" });
   }
-}
+
     res.status(500).json({ ok: false, error: e?.message || 'Search failed' })
   }
-}
+
     res.status (500).json ({ ok: false, error: e?.message || "Search failed" });
   }
-}

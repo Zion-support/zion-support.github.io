@@ -7,12 +7,9 @@ import { trackReferral, checkUrlForReferralCode } from "@/utils/referralUtils";
 import { cleanupAuthState } from "@/utils/authUtils";
 export function useAuthOperations(
 
-  setUser: React.Dispatch<React.SetStateAction<UserProfile | null>>
-
-  setIsLoading: React.Dispatch<React.SetStateAction<boolean>>
-) {
+  setUser: React.Dispatch<React.SetStateAction<UserProfile | null>setIsLoading: React.Dispatch<React.SetStateAction<boolean>{
   // Check for referral code in URL when the hook is first used
-  useEffect(() => {
+  useEffect() => {
     checkUrlForReferralCode()
 import { useState, useEffect } from './react';
 import { supabase } from '@/integrations / supabase / client';
@@ -25,10 +22,10 @@ export /**
  */
 function useAuthOperations() {
   // Check for referral code in URL when the hook is first used;
-  useEffect (() => {
+  useEffect () => {
     checkUrlForReferralCode ();
   }, []);
-;
+
   const login = async ({ email, password }: { email: string, password: string }) => {
     setIsLoading (true);
     try {
@@ -41,35 +38,31 @@ function useAuthOperations() {
         toast({
       // Clean up any stale auth state before login;
       cleanupAuthState ();
-;
+
       const { data, error } = await supabase.auth.signInWithPassword ({
         email;
         password});
-;
+
       // Check condition
 if ( {) {
   $2
-}
+
         toast ({
           variant: "destructive";
           title: "Oh no! Something went wrong."
           description: error.message});
         return { data: null, error: error.message }
-      }
       toast({
         title: "Login successful!"
         description: `Welcome back, ${email}!`});
-      return { data, error: null }
-    } catch (error) {
+      return { data, error: null } catch (error) {
       toast ({
         variant: "destructive";
         title: "Oh no! Something went wrong."
         description: "Failed to sign in. Please check your credentials."});
-      return { data: null, error: "Failed to sign in." }
-    } finally {
+      return { data: null, error: "Failed to sign in." } finally {
       setIsLoading (false);
     }
-  }
   const signup = async ({ email, password, display_name }) => {
     setIsLoading (true);
     try {
@@ -78,14 +71,13 @@ if ( {) {
         password;
         options: {
           data: {
-            display_name: display_name}}});
+            display_name: display_name}});
       if (error) {
         toast({
           variant: "destructive";
           title: "Error during signup"
           description: error.message});
         return { data: null, error: error.message }
-      }
       // Add this after successful signup
       if (data?.user) {
         // Track referral if there was a referral code
@@ -94,17 +86,14 @@ if ( {) {
       toast({
         title: "Signup successful!"
         description: `Welcome, ${display_name}! Please check your email to verify your account.`});
-      return { data, error: null }
-    } catch (error) {
+      return { data, error: null } catch (error) {
       toast ({
         variant: "destructive";
         title: "Oh no! Something went wrong."
         description: "Failed to sign up. Please try again."});
-      return { data: null, error: "Failed to sign up." }
-    } finally {
+      return { data: null, error: "Failed to sign up." } finally {
       setIsLoading (false);
     }
-  }
   const logout = async () => {
     setIsLoading (true);
     try {
@@ -119,19 +108,18 @@ if ( {) {
         toast({
           title: "Logout successful!"
           description: "You have been successfully logged out."})
-      }
-    } catch (error) {
+      } catch (error) {
       console && console.error("Logout failed:", error);
       toast({
         variant: "destructive";
         title: "Logout failed"
         description: "There was an issue logging you out. Please try again."})
       const { error } = await supabase.auth.sign_out ();
-;
+
       // Check condition
 if ( {) {
   $2
-}
+
         toast ({
           variant: "destructive";
           title: "Oh no! Something went wrong.",
@@ -141,8 +129,7 @@ if ( {) {
         toast ({
           title: "Logout successful!",
           description: "You have been successfully logged out."});
-      }
-    } catch (error) {
+      } catch (error) {
       console.error ("Logout failed:", error);
       toast ({
         variant: "destructive";
@@ -151,7 +138,6 @@ if ( {) {
     } finally {
       setIsLoading (false);
     }
-  }
   const resetPassword = async (email: string) => {
     setIsLoading(true)
     try {
@@ -167,21 +153,17 @@ if ( {) {
           title: "Oh no! Something went wrong.",
           description: error && error.message});
         return { data: null, error: error && error.message }
-      }
       toast({
         title: "Password reset email sent!"
         description: `Please check your email (${email}) for instructions on how to reset your password.`});
-      return { data, error: null }
-    } catch (error) {
+      return { data, error: null } catch (error) {
       toast ({
         variant: "destructive";
         title: "Oh no! Something went wrong."
         description: "Failed to send reset password email. Please try again."});
-      return { data: null, error: "Failed to send reset password email." }
-    } finally {
+      return { data: null, error: "Failed to send reset password email." } finally {
       setIsLoading (false);
     }
-  }
   const updateProfile = async (profileData: Partial<UserProfile>) => {
     setIsLoading(true)
     try {
@@ -208,29 +190,24 @@ if ( {) {
           title: "Failed to update profile",
           description: error && error.message});
         return { error: error && error.message }
-      }
       // Optimistically update the local user state
-      setUser((prevUser) => {
+      setUser(prevUser) => {
         if (prevUser) {
           return { ...prevUser, ...profileData }
-        }
         return prev_user;
       });
       toast({
         title: "Profile updated!"
         description: "Your profile has been successfully updated."});
-      return { error: null }
-    } catch (error) {
+      return { error: null } catch (error) {
       console && console.error("Profile update failed:", error);
       toast({
         variant: "destructive";
         title: "Profile update failed"
         description: "There was an issue updating your profile. Please try again."});
-      return { error: "Failed to update profile." }
-    } finally {
+      return { error: "Failed to update profile." } finally {
       setIsLoading (false);
     }
-  }
   const loginWithGoogle = async () => {
     setIsLoading (true);
     try {
@@ -243,20 +220,18 @@ if ( {) {
           description: error.message})
       const { data, error } = await supabase.auth.signInWithOAuth ({
         provider: "google"});
-;
+
       // Check condition
 if ( {) {
   $2
-}
+
         toast ({
           variant: "destructive";
           title: "Oh no! Something went wrong.",
           description: error.message});
-      }
-    } finally {
+      } finally {
       setIsLoading (false);
     }
-  }
   const loginWithFacebook = async () => {
     setIsLoading (true);
     try {
@@ -269,20 +244,18 @@ if ( {) {
           description: error.message})
       const { data, error } = await supabase.auth.signInWithOAuth ({
         provider: "facebook"});
-;
+
       // Check condition
 if ( {) {
   $2
-}
+
         toast ({
           variant: "destructive";
           title: "Oh no! Something went wrong.",
           description: error.message});
-      }
-    } finally {
+      } finally {
       setIsLoading (false);
     }
-  }
   const loginWithTwitter = async () => {
     setIsLoading (true);
     try {
@@ -295,20 +268,18 @@ if ( {) {
           description: error.message})
       const { data, error } = await supabase.auth.signInWithOAuth ({
         provider: "twitter"});
-;
+
       // Check condition
 if ( {) {
   $2
-}
+
         toast ({
           variant: "destructive";
           title: "Oh no! Something went wrong.",
           description: error.message});
-      }
-    } finally {
+      } finally {
       setIsLoading (false);
     }
-  }
   const loginWithWeb3 = async () => {
     setIsLoading (true);
     try {
@@ -316,7 +287,7 @@ if ( {) {
       // Check condition
 if ( {) {
   $2
-}
+
         throw new Error ("Web3 wallet not found");
       }
       const accounts = await ethereum && ethereum.request({ method: 'eth_requestAccounts' });
@@ -342,7 +313,7 @@ if ( {) {
         method: 'personal_sign',
         params: [address, address];
       });
-;
+
       // Fix: Create a proper UserProfile object;
       set_user ({
         id: address;
@@ -353,7 +324,7 @@ if ( {) {
         created_at: new Date ().toISOString (),
         updated_at: new Date ().toISOString ();
       } as UserProfile);
-;
+
       toast ({ title: 'Wallet connected', description: address });
     } catch (error: any) {
       toast ({
@@ -364,7 +335,6 @@ if ( {) {
     } finally {
       setIsLoading (false);
     }
-  }
   return {
     login;
     signup;
@@ -376,4 +346,3 @@ if ( {) {
     loginWithTwitter;
 
     loginWithWeb3}
-}

@@ -59,7 +59,7 @@ export default function Custom500() {
       </div>
     </>
   )
-}
+
 import React from 'react',
 import Head from 'next / head',
 import Link from 'next / link',
@@ -120,4 +120,3 @@ function Custom500() {
         </div>;
       </div>;
     </>);
-}

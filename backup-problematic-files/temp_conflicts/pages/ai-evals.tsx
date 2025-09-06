@@ -4,7 +4,7 @@ import { Check, ShieldCheck, TrendingUp, Clock, Phone, Mail, MapPin, ExternalLin
 import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground',;
 import Card from '../components/ui/Card',;
 import Button from '../components/ui/Button',;
-;
+
 export default function AIEvalsPage() {;
 	const contactInfo = {;
 		mobile:'+1 302 464 0950',;
@@ -12,13 +12,13 @@ export default function AIEvalsPage() {;
 		address:'364 E Main St STE 1008 Middletown DE 19709',;
 		website:'https://ziontechgroup.com';
 	},;
-;
+
 	const features = [;
 		'Golden datasets and synthetic evalsHallucination and grounding score',;
 		'Toxicity, bias and safety metricsLLM version comparison reports',;
 		'CI quality gates and webhooksLatency and cost KPIs with budgets';
 	],;
-;
+
 	return (;
 		<QuantumHolographicMatrixBackground>;
 			<Head>;
@@ -26,22 +26,22 @@ export default function AIEvalsPage() {;
 				<meta name="description" content="Ship reliable AI with continuous evaluation, redteaming, regression tests and live observability. Guardrails, datasets, dashboards and CI gates included." />;
 				<link rel="canonical" href="https://ziontechgroup.com/ai-evals" />;
 			</Head>;
-;
+
 			<section className="min-h-screen pt-28 pb-20 px-4">;
 				<div className="max-w-6xl mx-auto">;
 					<div className="text-center mb-12">;
 						<h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">AI Evals & Observability</h1>;
 						<p className="mt-4 text-xl text-gray-300">Continuous evaluation, drift detection, and quality gates to ship safe, trustworthy AI.</p>;
 					</div>;
-;
+
 					<div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-10">;
 						<Card className="lg:col-span-2 bg-black/30 border border-cyan-500/30">;
 							<div className="p-6">;
 								<h2 className="text-2xl font-semibold text-white mb-4">What you get</h2>;
 								<ul className="grid grid-cols-1 md:grid-cols-2 gap-3">;
-									{features.map((f) => (;
+									{features.map(f) => (;
 										<li key={f} className="flex items-start gap-2 text-gray-200"><Check className="w-5 h-5 text-emerald-400 mt-0.5" /> <span>{f}</span></li>;
-									))}
+									)}
 								</ul>;
 							</div>;
 						</Card>;
@@ -56,7 +56,7 @@ export default function AIEvalsPage() {;
 							</div>;
 						</Card>;
 					</div>;
-;
+
 					<div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">;
 						<Card className="p-6 bg-black/30 border border-purple-500/30">;
 							<h3 className="text-lg font-semibold mb-2">Guardrails & Policies</h3>;
@@ -71,7 +71,7 @@ export default function AIEvalsPage() {;
 							<p className="text-gray-300 text-sm">GitHub Actions, CircleCI, Datadog, Slack and PagerDuty. SDKs for Node and Python.</p>;
 						</Card>;
 					</div>;
-;
+
 					<div className="bg-black/20 border border-cyan-500/30 rounded-2xl p-6">;
 						<h3 className="text-xl font-semibold text-white mb-4 text-center">Contact</h3>;
 						<div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">;
@@ -87,4 +87,3 @@ export default function AIEvalsPage() {;
 			</section>;
 		</QuantumHolographicMatrixBackground>;
 	),;
-}

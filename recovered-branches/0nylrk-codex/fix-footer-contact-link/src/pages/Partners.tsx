@@ -193,7 +193,7 @@ export default function Partners() {
       </Tabs>
     </div>
   )
-}
+
             Export CSV;
           </Button>;
         </div>;
@@ -239,7 +239,7 @@ export default function Partners() {
       </Tabs>;
     </div>;
   );
-}
+
         <TabsContent value="overview" className="space - y-4">;
           <PartnerDashboard />;
         </TabsContent>;
@@ -266,4 +266,3 @@ export default function Partners() {
         </TabsContent>;
       </Tabs>;
     </div>);
-}

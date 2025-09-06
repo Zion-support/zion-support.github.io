@@ -6,13 +6,13 @@ import {;
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield,;
   Microscope, DollarSign, Home, Users, Briefcase,;
   BookOpen, MessageCircle;
-} from 'lucide-react',;
+ from 'lucide-react',;
 const contactInfo = {;
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup.com',;
   address: '364 E Main St STE 1008 Middletown DE 19709',;
   website: 'https://ziontechgroup.com';
-},;
+,;
 const serviceCategories = [;
   {;
     title: 'AI & Machine Learning 2026',;
@@ -86,7 +86,7 @@ const serviceCategories = [;
       { name: 'AI Business Intelligence', href: '/autonomous-business-intelligence-network', description: 'Self-evolving BI', price: '$1,299/month' }
     ];
   }
-],;
+,;
 const companyLinks = [;
   { name: 'Home', href: '/', icon: Home },;
   { name: 'About Us', href: '/about', icon: Users },;
@@ -98,12 +98,12 @@ const companyLinks = [;
   { name: 'Blog & Resources', href: '/blog', icon: BookOpen },;
   { name: 'Careers', href: '/careers', icon: Users },;
   { name: 'Contact', href: '/contact', icon: MessageCircle }
-],;
+,;
 const UltraAdvancedNavigation2026 = () => {;
   const [isOpen, setIsOpen] = useState(false),;
   const [isScrolled, setIsScrolled] = useState(false),;
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null),;
-  useEffect(() => {;
+  useEffect() => {;
     const handleScroll = () => {;
       setIsScrolled(window.scrollY > 20);
     },;
@@ -199,27 +199,27 @@ const UltraAdvancedNavigation2026 = () => {;
 
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-8">
-              {navigationItems.map((item) => (
+              {navigationItems.map(item) => (
                 <div key={item.name} className="relative group">
                   <button
-                    onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)}
+                    onClick={() => setActiveDropdown(activeDropdown = = item.name ? null : item.name)}
                     className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2"
                   >
                     <item.icon className="w-5 h-5" />
                     <span className="font-medium">{item.name}</span>
                     <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                      activeDropdown === item.name ? 'rotate-180' : ''
+                      activeDropdown = = item.name ? 'rotate-180' : ''
                     }`} />
                   </button>
 
                   {/* Dropdown Menu */}
                   <AnimatePresence>;
-                    {activeDropdown === item.name && (;
+                    {activeDropdown = = item.name && (;
                       <motion.div;
-                        initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                        animate={{ opacity: 1, y: 0, scale: 1 }}
-                        exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                        transition={{ duration: 0.2 }}
+                        initial={ opacity: 0, y: 10, scale: 0.95 }
+                        animate={ opacity: 1, y: 0, scale: 1 }
+                        exit={ opacity: 0, y: 10, scale: 0.95 }
+                        transition={ duration: 0.2 }
                         className="absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-xl border border-purple-500/20 rounded-2xl shadow-2xl overflow-hidden"
                       >
                         <div className="p-4">
@@ -232,9 +232,9 @@ const UltraAdvancedNavigation2026 = () => {;
                               <p className="text-gray-400 text-sm">{item.description}</p>
                             </div>
                           </div>
-                          
+
                           <div className="space-y-2">
-                            {item.subItems.map((subItem) => (
+                            {item.subItems.map(subItem) => (
                               <Link
                                 key={subItem.name}
                                 href={subItem.href}
@@ -248,7 +248,7 @@ const UltraAdvancedNavigation2026 = () => {;
                                   {subItem.description}
                                 </div>
                               </a>
-                            ))}
+                            )}
                           </div>;
                           <Link;
                             href={item.href}
@@ -262,8 +262,8 @@ const UltraAdvancedNavigation2026 = () => {;
                     )}
                   </AnimatePresence>;
                 </div>;
-              ))}
-;
+              )}
+
               {/* Quick Links */}
               <div className="flex items-center space-x-6">
                 <Link href="/services" className="text-gray-300 hover:text-white transition-colors duration-200 font-medium">
@@ -307,18 +307,18 @@ const UltraAdvancedNavigation2026 = () => {;
       <AnimatePresence>;
         {isOpen && (;
           <motion.div;
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
+            initial={ opacity: 0 }
+            animate={ opacity: 1 }
+            exit={ opacity: 0 }
+            transition={ duration: 0.2 }
             className="fixed inset-0 bg-black/80 backdrop-blur-sm z-40 lg:hidden"
             onClick={() => setIsOpen(false)}
           >;
             <motion.div;
-              initial={{ x: '100%' }}
-              animate={{ x: 0 }}
-              exit={{ x: '100%' }}
-              transition={{ duration: 0.3, ease: 'easeOut' }}
+              initial={ x: '100%' }
+              animate={ x: 0 }
+              exit={ x: '100%' }
+              transition={ duration: 0.3, ease: 'easeOut' }
               className="absolute right-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-purple-500/20 p-6 overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >;
@@ -340,7 +340,7 @@ const UltraAdvancedNavigation2026 = () => {;
 
               {/* Mobile Navigation Items */}
               <div className="space-y-4">
-                {navigationItems.map((item) => (
+                {navigationItems.map(item) => (
                   <div key={item.name} className="border-b border-gray-700/50 pb-4">
                     <Link
                       href={item.href}
@@ -352,10 +352,10 @@ const UltraAdvancedNavigation2026 = () => {;
                       </div>
                       <span className="font-medium">{item.name}</span>
                     </a>
-                    
+
                     {/* Mobile Sub-items */}
                     <div className="mt-3 ml-11 space-y-2">
-                      {item.subItems.slice(0, 3).map((subItem) => (
+                      {item.subItems.slice(0, 3).map(subItem) => (
                         <Link
                           key={subItem.name}
                           href={subItem.href}
@@ -364,11 +364,11 @@ const UltraAdvancedNavigation2026 = () => {;
                         >;
                           {subItem.name}
                         </a>
-                      ))}
+                      )}
                     </div>;
                   </div>;
-                ))}
-;
+                )}
+
                 {/* Quick Links */}
                 <div className="space-y-3 pt-4">
                   <Link
@@ -429,6 +429,5 @@ const UltraAdvancedNavigation2026 = () => {;
       <div className="h-20"></div>
     </>
   )
-}
-;
+
 export default UltraAdvancedNavigation2026;

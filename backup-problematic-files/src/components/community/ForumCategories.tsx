@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { useAuth } from "@/hooks/useAuth",;
 import { MessageSquare, Briefcase, Code, FileText, Megaphone } from 'lucide-react';
 import { ForumCategoryInfo } from "@/types/community",;
-;
+
 const categories:ForumCategoryInfo[] = [;
   {;
     id:"getting-hired",;
@@ -40,27 +40,27 @@ const categories:ForumCategoryInfo[] = [;
     adminOnly:true,;
     icon:"Megaphone";
   }
-],;
-;
+,;
+
 const iconMap = {;
   Briefcase,;
   MessageSquare,;
   Code,;
   FileText,;
   Megaphone;
-},;
-;
+,;
+
 export const ForumCategories = () => {;
   const { user } = useAuth(),;
-  const isAdmin = user?.userType === 'admin' || user?.role === 'admin',;
-;
+  const isAdmin = user?.userType = = 'admin' || user?.role = = 'admin',;
+
   const visibleCategories = categories.filter(;
     category => !category.adminOnly || isAdmin;
   ),;
-;
+
   return (;
     <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">;
-      {visibleCategories.map((category) => {;
+      {visibleCategories.map(category) => {;
         const Icon = iconMap[category.icon as keyof typeof iconMap],;
         return (;
           <Link key={category.id} href={`/community/category/${category.id}`}>;
@@ -80,24 +80,22 @@ export const ForumCategories = () => {;
       })}
     </div>;
   ),;
-},;
-;
+,;
+
 export default ForumCategories,; {;
-  visibleCategories.map ( (category) => {;
+  visibleCategories.map (category) => {;
   const Icon = iconMap[category.icon as keyof typeof iconMap];
 return (<Link key= {;
   category.id ;
-}href= {;
+href= {;
   `/community/category/$ {;
   category.id ;
-}` ;
-}> <Card className="h-full transition-all hover:shadow-md hover:border-zion-purple/50 cursor-pointer" > <CardHeader className="flex flex-row items-center gap-4" > <div className="p-2 bg-zion-purple/10 rounded-full" > <Icon className="h-6 w-6 text-zion-purple" /> </div> <CardTitle className="text-xl" > {;
+` ;
+> <Card className="h-full transition-all hover:shadow-md hover:border-zion-purple/50 cursor-pointer" > <CardHeader className="flex flex-row items-center gap-4" > <div className="p-2 bg-zion-purple/10 rounded-full" > <Icon className="h-6 w-6 text-zion-purple" /> </div> <CardTitle className="text-xl" > {;
   category.name ";
-}</CardTitle> </CardHeader> <CardContent> <CardDescription className="text-base" > {;
+</CardTitle> </CardHeader> <CardContent> <CardDescription className="text-base" > {;
   category.description ;
-}</CardDescription> ;
-}) ;
-}</div>) ;
-};
+</CardDescription> ;
+) ;
+</div>) ;
 export default ForumCategories;
-"

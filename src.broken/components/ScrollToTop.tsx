@@ -6,5 +6,3 @@ export function ScrollToTop() {;
       <p>Component placeholder</p>;
     </div>;
   );
-}
-;

@@ -37,7 +37,7 @@ export function HireRequestForm({
   initialJobTitle
   userDetails
   onSubmitSuccess
-}: HireRequestFormProps) {
+: HireRequestFormProps) {
   const { form, isSubmitting, onSubmit } = useHireRequestForm({
     talent
     onClose: onSubmitSuccess |onClose
@@ -69,7 +69,7 @@ export function HireRequestForm({
             {isSubmitting ? (;
               <>;
                 <Loader2 className='mr-2 h-4 w-4 animate-spin' />                Submitting...  onSubmitSuccess?: () => void;
-}
+
 export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails, onSubmitSuccess }: HireRequestFormProps) {
 
   const { form, isSubmitting, onSubmit } = useHireRequestForm({
@@ -130,10 +130,8 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
         </DialogFooter>
       </form>
     </Form>
-  )
-}
   );
-}
+
 import React from 'react';
 import { useHireRequestForm, FormValues } from './useHireRequestForm';
 import { Button } from '@/components / ui / button';
@@ -192,7 +190,7 @@ function HireRequestForm() {
             {is_submitting ? (
               <>;
                 <Loader2 className='mr - 2 h - 4 w - 4 animate - spin' />                Submitting...  onSubmitSuccess?: () => void;
-}
+
 export /**
  * HireRequestForm - Function description
  */
@@ -249,4 +247,3 @@ function HireRequestForm() {
         </DialogFooter>;
       </form>;
     </Form>);
-}

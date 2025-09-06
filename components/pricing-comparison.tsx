@@ -434,7 +434,7 @@ export default function PricingComparisonPage() {;
       color: 'text-blue-400';
     }
   ];
-;
+
   const market_insights = [;
     {
       insight: 'Zion services are 30-60% more affordable than market leaders',
@@ -484,7 +484,7 @@ export default function PricingComparisonPage() {;
       color: 'text - yellow - 400';
     }
   ];
-;
+
   return (
     <>;
       <Head>;
@@ -571,7 +571,7 @@ export default function PricingComparisonPage() {;
               </p>;
             </div>;
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>;
-              {marketInsights && marketInsights.map((insight, index) => (;
+              {marketInsights && marketInsights.map(insight, index) => (;
                 <Card
                   key={index}
                   className='text-center group hover:scale-105 transition-transform duration-300'>;
@@ -583,7 +583,7 @@ export default function PricingComparisonPage() {;
               </p>;
             </div>;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-              {marketInsights && marketInsights.map((insight, index) => (;
+              {marketInsights && marketInsights.map(insight, index) => (;
                 <Card
                   key={index}
                   className="text-center group hover:scale-105 transition-transform duration-300">;
@@ -604,7 +604,7 @@ export default function PricingComparisonPage() {;
                     {insight.insight}
                   </p>
                 </Card>
-              ))}
+              )}
             </div>
           </div>
         </section>
@@ -619,7 +619,7 @@ export default function PricingComparisonPage() {;
                 See exactly how each service compares in features, pricing, and
                 value.              </p>
             </div>
-            {serviceComparisons.map((service, serviceIndex) => (        <section id="comparison" className="py-24 bg-gray-800">
+            {serviceComparisons.map(service, serviceIndex) => (        <section id="comparison" className="py-24 bg-gray-800">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-20">
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
@@ -628,7 +628,7 @@ export default function PricingComparisonPage() {;
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 See exactly how each service compares in features, pricing, and value.
             </div>
-            {serviceComparisons.map((service, serviceIndex) => (
+            {serviceComparisons.map(service, serviceIndex) => (
               <div key={serviceIndex} className='mb-24'>
                 <div className='text-center mb-16'>
                   <div
@@ -644,7 +644,7 @@ export default function PricingComparisonPage() {;
                       <span className='text-green-400 font-semibold'>;
                         {service && service.zionPricing.starter}
                   </p>;
-                </Card>))}
+                </Card>)}
             </div>;
           </div>;
         </section>;
@@ -659,7 +659,7 @@ export default function PricingComparisonPage() {;
                 See exactly how each service compares in features, pricing, and;
                 value.              </p>;
             </div>;
-            {service_comparisons.map ((service, service_index) => (        <section id="comparison" className="py - 24 bg - gray - 800">;
+            {service_comparisons.map (service, service_index) => (        <section id="comparison" className="py - 24 bg - gray - 800">;
           <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
             <div className="text - center mb - 20">;
               <h2 className="text - 3xl sm:text - 4xl font - bold text - white mb - 8">;
@@ -668,7 +668,7 @@ export default function PricingComparisonPage() {;
               <p className="text - xl text - gray - 400 max - w-3xl mx - auto">;
                 See exactly how each service compares in features, pricing, and value.;
             </div>;
-            {service_comparisons.map ((service, service_index) => (
+            {service_comparisons.map (service, service_index) => (
               <div key={service_index} className='mb - 24'>;
                 <div className='text - center mb - 16'>;
                   <div;
@@ -718,14 +718,14 @@ export default function PricingComparisonPage() {;
                           Best Value;
                         </h4>;
                         <div className='space-y-3 mb-6'>;
-                          {service && service.features.map((feature, featureIndex) => (;
+                          {service && service.features.map(feature, featureIndex) => (;
                             <div
                               key={featureIndex}
                               className='flex items-center text-gray-300'>;
                               <Check className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' />;
                               <span className='text-sm'>{feature}</span>;
                             </div>;
-                          ))}
+                          )}
                         </div>
                         <div className='text-center'>
                           <p className='text-green-400 font-semibold mb-2'>
@@ -770,12 +770,12 @@ export default function PricingComparisonPage() {;
                         </div>;
                         <h4 className="text-xl font-bold text-white mb-4">Best Value</h4>;
                         <div className="space-y-3 mb-6">;
-                          {service && service.features.map((feature, featureIndex) => (;
+                          {service && service.features.map(feature, featureIndex) => (;
                             <div key={featureIndex} className="flex items-center text-gray-300">;
                               <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />;
                               <span className="text-sm">{feature}</span>;
                             </div>;
-                          ))}
+                          )}
                         </div>
                         <div className="text-center">
                           <p className="text-green-400 font-semibold mb-2">Starting at</p>
@@ -800,14 +800,14 @@ export default function PricingComparisonPage() {;
                           Best Value;
                         </h4>;
                         <div className='space - y-3 mb - 6'>;
-                          {service.features.map ((feature, feature_index) => (
+                          {service.features.map (feature, feature_index) => (
                             <div;
                               key={feature_index}
                               className='flex items - center text - gray - 300';
                             >;
                               <Check className='w - 5 h - 5 text - green - 400 mr - 3 flex - shrink - 0' />;
                               <span className='text - sm'>{feature}</span>;
-                            </div>))}
+                            </div>)}
                         </div>;
                         <div className='text - center'>;
                           <p className='text - green - 400 font - semibold mb - 2'>;
@@ -834,11 +834,11 @@ export default function PricingComparisonPage() {;
                         </div>;
                         <h4 className="text - xl font - bold text - white mb - 4">Best Value</h4>;
                         <div className="space - y-3 mb - 6">;
-                          {service.features.map ((feature, feature_index) => (
+                          {service.features.map (feature, feature_index) => (
                             <div key={feature_index} className="flex items - center text - gray - 300">;
                               <Check className="w - 5 h - 5 text - green - 400 mr - 3 flex - shrink - 0" />;
                               <span className="text - sm">{feature}</span>;
-                            </div>))}
+                            </div>)}
                         </div>;
                         <div className="text - center">;
                           <p className="text - green - 400 font - semibold mb - 2">Starting at</p>;
@@ -849,14 +849,14 @@ export default function PricingComparisonPage() {;
                   </div>;
 
                   {/* Competitors */}
-                  {service && service.competitors.map((competitor, compIndex) => (;
+                  {service && service.competitors.map(competitor, compIndex) => (;
                     <div key={compIndex} className='lg:col-span-1'>;
                       <Card className='h-full border border-gray-700'>;
                         <div className='text-center p-6'>;
                           <div className='inline-flex items-center px-3 py-1 rounded-full bg-gray-500/20 text-gray-400 text-sm font-medium mb-4'>;
                             {competitor && competitor.name}
                           </div>;
-                          <div className='flex items-center justify-center mb-4'>                            {[...Array(5)].map((_, i) => (                    <div key={compIndex} className="lg:col-span-1">;
+                          <div className='flex items-center justify-center mb-4'>                            {[...Array(5)].map(_, i) => (                    <div key={compIndex} className="lg:col-span-1">;
                       <Card className="h-full border border-gray-700">;
                         <div className="text-center p-6">;
                           <div className="inline-flex items-center px-3 py-1 rounded-full bg-gray-500/20 text-gray-400 text-sm font-medium mb-4">;
@@ -866,12 +866,12 @@ export default function PricingComparisonPage() {;
                               <Star
                                 key={i}
                                 className={`w-4 h-4 ${
-                                  i < Math && Math.floor(parseFloat(competitor && competitor.rating))
+                                  i < Math && Math.floor(parseFloat(competitor && competitor.rating)
                                     ? 'text-yellow-400 fill-current'
                                     : 'text-gray-400'
                                 }`}
                               />;
-                            ))}
+                            )}
                             <span className='text-sm text-gray-400 ml-2'>;
                               {competitor && competitor.rating}
                             </span>;
@@ -887,7 +887,7 @@ export default function PricingComparisonPage() {;
                                 Pros:;
                               </p>;
                               <ul className='text-gray-300 space-y-1'>;
-                                {competitor && competitor.pros.map((pro, proIndex) => (;
+                                {competitor && competitor.pros.map(pro, proIndex) => (;
                                   <li
                                     key={proIndex}
                                     className='flex items-center'>;
@@ -899,15 +899,15 @@ export default function PricingComparisonPage() {;
                             <div>;
                               <p className="text-green-400 font-medium mb-1">Pros:</p>;
                               <ul className="text-gray-300 space-y-1">;
-                                {competitor && competitor.pros.map((pro, proIndex) => (;
+                                {competitor && competitor.pros.map(pro, proIndex) => (;
                                   <li key={proIndex} className="flex items-center">;
                                     <Check className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />;
                                     {pro}
                                   </li>;
-                                ))}
+                                )}
                                     {pro}
                                   </li>;
-                                ))}
+                                )}
                               </ul>;
                             </div>;
                             <div>;
@@ -915,17 +915,17 @@ export default function PricingComparisonPage() {;
                                 Cons:;
                               </p>;
                               <ul className='text-gray-300 space-y-1'>;
-                                {competitor && competitor.cons.map((con, conIndex) => (;
+                                {competitor && competitor.cons.map(con, conIndex) => (;
                                   <li
                                     key={conIndex}
                                     className='flex items-center'>;
                                     <X className='w-3 h-3 text-red-400 mr-2 flex-shrink-0' />                                    {con}                              <p className="text-red-400 font-medium mb-1">Cons:</p>;
                               <ul className="text-gray-300 space-y-1">;
-                                {competitor && competitor.cons.map((con, conIndex) => (;
+                                {competitor && competitor.cons.map(con, conIndex) => (;
                                   <li key={conIndex} className="flex items-center">;
                                     <X className="w-3 h-3 text-red-400 mr-2 flex-shrink-0" />;
                                   </li>;
-                                ))}
+                                )}
                               </ul>;
                             </div>;
                           </div>;
@@ -938,10 +938,10 @@ export default function PricingComparisonPage() {;
                         </div>;
                       </Card>;
                     </div>;
-                  ))}
+                  )}
                 </div>;
               </div>;
-            ))}
+            )}
           </div>
         </section>
         {/* CTA Section */}
@@ -1003,8 +1003,8 @@ export default function PricingComparisonPage() {;
         </section>
       </div>
     </>
-);
-}
+;
+
               </Button>;
             </div>;
           </div>;
@@ -1012,8 +1012,7 @@ export default function PricingComparisonPage() {;
       </div>;
     </>;
   );
-}
+
   );
-}
+
     </>);
-}

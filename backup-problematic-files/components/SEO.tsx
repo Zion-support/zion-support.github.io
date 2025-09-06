@@ -5,13 +5,12 @@ interface SEOProps {
   title?: string;
   description?: string;
   canonical?: string;
-}
 
 const SEO: React.FC<SEOProps> = ({ 
   title = 'Zion Tech Group - Technology Solutions',
   description = 'Leading provider of AI services, IT solutions, and micro SaaS development.',
   canonical 
-}) => {
+) => {
   return (
     <Head>
       <title>{title}</title>
@@ -19,6 +18,5 @@ const SEO: React.FC<SEOProps> = ({
       {canonical && <link rel="canonical" href={canonical} />}
     </Head>
   );
-};
 
 export default SEO;

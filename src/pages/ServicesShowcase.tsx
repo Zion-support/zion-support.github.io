@@ -9,4 +9,3 @@ export default function ServicesShowcase() {
       </div>
     </div>
   );
-}

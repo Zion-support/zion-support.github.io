@@ -94,6 +94,5 @@ function ReportsIndex() {
       </main>;
     </div>;
   );
-}
+
     </div>);
-}

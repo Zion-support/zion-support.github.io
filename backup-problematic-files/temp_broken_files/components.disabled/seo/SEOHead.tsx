@@ -2,7 +2,6 @@ import React from 'react';
 
 interface SEOHeadProps {
   className?: string;
-}
 
 const SEOHead: React.FC<SEOHeadProps> = ({ className }) => {
   return (
@@ -11,6 +10,5 @@ const SEOHead: React.FC<SEOHeadProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default SEOHead;

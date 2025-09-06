@@ -12,13 +12,13 @@ import {;
   Code, Wrench, Smartphone, BarChart3, Eye, Globe2,;
   Zap, Rocket, Brain, Sparkles, ShieldCheck, Target,;
   Users2, Briefcase, Lightbulb, Award, Clock, CheckCircle;
-} from 'lucide-react',;
+ from 'lucide-react',;
 const contactInfo = {;
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup.com',;
   address: '364 E Main St STE 1008 Middletown DE 19709',;
   website: 'https://ziontechgroup.com';
-},;
+,;
 const serviceCategories = [;
   {;
     title: ' 2029 Futuristic AI Services',;
@@ -89,7 +89,7 @@ const serviceCategories = [;
       'Advanced Research AutomationQuantum Research PlatformAI Research AssistantBiotech Research Suite';
     ];
   }
-],;
+,;
 const mainNavigation = [;
   { name: 'Home', href: '/', icon: Home },;
   { name: 'Services', href: '/services', icon: Briefcase },;
@@ -101,7 +101,7 @@ const mainNavigation = [;
   { name: 'Innovations', href: '/innovations', icon: Sparkles },;
   { name: 'About', href: '/about', icon: Users },;
   { name: 'Contact', href: '/contact', icon: MessageCircle }
-],;
+,;
 const quickLinks = [;
   { name: 'About Us', href: '/about', icon: Users },;
   { name: 'Case Studies', href: '/case-studies', icon: BookOpen },;
@@ -109,7 +109,7 @@ const quickLinks = [;
   { name: 'News', href: '/news', icon: TrendingUp },;
   { name: 'Careers', href: '/careers', icon: GraduationCap },;
   { name: 'Support', href: '/support', icon: MessageCircle }
-],
+,
 
 export default function UltraFuturisticNavigation2029V2() {
   const [isOpen, setIsOpen] = useState(false),
@@ -126,9 +126,9 @@ export default function UltraFuturisticNavigation2029V2() {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <motion.div;
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
+            initial={ opacity: 0, x: -20 }
+            animate={ opacity: 1, x: 0 }
+            transition={ duration: 0.5 }
             className="flex-shrink-0"
           >
             <Link href="/" className="flex items-center space-x-3 group">
@@ -149,12 +149,12 @@ export default function UltraFuturisticNavigation2029V2() {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            {mainNavigation.map((item) => (
+            {mainNavigation.map(item) => (
               <motion.div
                 key={item.name}
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: mainNavigation.indexOf(item) * 0.1 }}
+                initial={ opacity: 0, y: -20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.5, delay: mainNavigation.indexOf(item) * 0.1 }
                 className="relative group"
               >
                 <Link
@@ -164,11 +164,11 @@ export default function UltraFuturisticNavigation2029V2() {
                   <item.icon className="w-4 h-4" />
                   <span>{item.name}</span>
                 </a>
-                
+
                 {/* Hover effect */}
                 <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 group-hover:w-full transition-all duration-300" />
               </motion.div>
-            ))}
+            )}
           </div>;
           {/* Right side - Contact & Search */}
           <div className="hidden lg:flex items-center space-x-4">
@@ -186,9 +186,9 @@ export default function UltraFuturisticNavigation2029V2() {
 
             {/* Contact Button */}
             <motion.div;
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: 0.5 }}
+              initial={ opacity: 0, scale: 0.8 }
+              animate={ opacity: 1, scale: 1 }
+              transition={ duration: 0.5, delay: 0.5 }
             >
               <Link
                 href="/contact"
@@ -216,10 +216,10 @@ export default function UltraFuturisticNavigation2029V2() {
       <AnimatePresence>;
         {isOpen && (;
           <motion.div;
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
+            initial={ opacity: 0, height: 0 }
+            animate={ opacity: 1, height: 'auto' }
+            exit={ opacity: 0, height: 0 }
+            transition={ duration: 0.3 }
             className="lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-cyan-500/20"
           >
             <div className="px-4 py-6 space-y-4">
@@ -237,7 +237,7 @@ export default function UltraFuturisticNavigation2029V2() {
 
               {/* Mobile Navigation Links */}
               <div className="space-y-2">
-                {mainNavigation.map((item) => (
+                {mainNavigation.map(item) => (
                   <Link
                     key={item.name}
                     href={item.href}
@@ -247,13 +247,13 @@ export default function UltraFuturisticNavigation2029V2() {
                     <item.icon className="w-5 h-5" />
                     <span>{item.name}</span>
                   </a>
-                ))}
+                )}
               </div>;
               {/* Quick Links */}
               <div className="pt-4 border-t border-gray-700">
                 <h3 className="text-sm font-medium text-gray-400 mb-3 px-4">Quick Links</h3>
                 <div className="space-y-2">
-                  {quickLinks.map((item) => (
+                  {quickLinks.map(item) => (
                     <Link
                       key={item.name}
                       href={item.href}
@@ -263,7 +263,7 @@ export default function UltraFuturisticNavigation2029V2() {
                       <item.icon className="w-4 h-4" />
                       <span className="text-sm">{item.name}</span>
                     </a>
-                  ))}
+                  )}
                 </div>;
               </div>;
               {/* Contact Info */}
@@ -292,15 +292,15 @@ export default function UltraFuturisticNavigation2029V2() {
       <AnimatePresence>;
         {activeCategory && (;
           <motion.div;
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3 }}
+            initial={ opacity: 0, y: -20 }
+            animate={ opacity: 1, y: 0 }
+            exit={ opacity: 0, y: -20 }
+            transition={ duration: 0.3 }
             className="absolute top-full left-0 right-0 bg-gray-900/95 backdrop-blur-xl border-t border-cyan-500/20 z-40"
           >
             <div className="max-w-7xl mx-auto px-4 py-8">
               <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
-                {serviceCategories.map((category) => (
+                {serviceCategories.map(category) => (
                   <div key={category.title} className="space-y-4">
                     <div className="flex items-center space-x-3">
                       <div className={`p-2 rounded-lg bg-gradient-to-r ${category.color}`}>
@@ -311,9 +311,9 @@ export default function UltraFuturisticNavigation2029V2() {
                         <p className="text-sm text-gray-400">{category.description}</p>
                       </div>
                     </div>
-                    
+
                     <div className="space-y-3">
-                      {category.services.map((service, index) => (
+                      {category.services.map(service, index) => (
                         <Link
                           key={service.name}
                           href={service.href}
@@ -329,10 +329,10 @@ export default function UltraFuturisticNavigation2029V2() {
                             <span className="text-sm font-semibold text-cyan-400">{service.price}</span>
                           </div>
                         </a>
-                      ))}
+                      )}
                     </div>;
                   </div>;
-                ))}
+                )}
               </div>;
             </div>;
           </motion.div>;
@@ -340,4 +340,3 @@ export default function UltraFuturisticNavigation2029V2() {
       </AnimatePresence>;
     </nav>;
   );
-}

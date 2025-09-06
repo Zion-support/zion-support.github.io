@@ -11,7 +11,7 @@ import {;
   Code, Database, Network, Server, Monitor, Smartphone,;
   Camera, Gamepad2, Palette, Music, Film, BookOpenCheck,;
   Building, MessageCircle;
-} from 'lucide-react',;
+ from 'lucide-react',;
 interface NavigationItem {;
   name: string,;
   href: string,;
@@ -21,14 +21,13 @@ interface NavigationItem {;
   badge?: string,;
   title?: string,;
   featured?: boolean;
-}
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-},
+,
 
 const navigationItems: NavigationItem[] = [
   {
@@ -228,7 +227,7 @@ const navigationItems: NavigationItem[] = [
       { name: 'Community', href: '/community', description: 'User community' }
     ];
   }
-],
+,
 
 const quickActions = [
   { name: 'Get Started', href: '/contact', icon: <ArrowRight className="w-4 h-4" />, primary: true },
@@ -240,14 +239,14 @@ const quickActions = [
   { name: 'Services Advertising', href: '/services-advertising', icon: <Sparkles className="w-4 h-4" /> },
   { name: 'Documentation', href: '/docs', icon: <BookOpen className="w-4 h-4" /> },
   { name: 'Support', href: '/support', icon: <HelpCircle className="w-4 h-4" /> }
-],
+,
 
 const UltraFuturisticNavigation2035: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false),
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
   const [isScrolled, setIsScrolled] = useState(false),
 
-  useEffect(() => {
+  useEffect() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10)
     },
@@ -257,7 +256,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
   }, []),
 
   const toggleDropdown = (name: string) => {
-    setActiveDropdown(activeDropdown === name ? null : name)
+    setActiveDropdown(activeDropdown = = name ? null : name)
   },
 
   const closeDropdowns = () => {
@@ -303,13 +302,13 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center gap-8">
-              {navigationItems.map((item) => (
+              {navigationItems.map(item) => (
                 <div key={item.name} className="relative group">
                   <button
                     onClick={() => toggleDropdown(item.name)}
                     className="flex items-center gap-2 px-4 py-2 text-gray-300 hover:text-white transition-colors duration-200 group-hover:text-cyan-400"
                   >
-],;
+,;
 const quickActions = [;
   { name: 'Get Started', href: '/contact', icon: <ArrowRight className="w-4 h-4" />, primary: true },;
   { name: 'Get a Quote', href: '/quote', icon: <DollarSign className="w-4 h-4" /> },;
@@ -320,12 +319,12 @@ const quickActions = [;
   { name: 'Services Advertising', href: '/services-advertising', icon: <Sparkles className="w-4 h-4" /> },;
   { name: 'Documentation', href: '/docs', icon: <BookOpen className="w-4 h-4" /> },;
   { name: 'Support', href: '/support', icon: <HelpCircle className="w-4 h-4" /> }
-],;
+,;
 const UltraFuturisticNavigation2035: React.FC = () => {;
   const [isOpen, setIsOpen] = useState(false),;
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null),;
   const [isScrolled, setIsScrolled] = useState(false),;
-  useEffect(() => {;
+  useEffect() => {;
     const handleScroll = () => {;
       setIsScrolled(window.scrollY > 10);
     },;
@@ -333,7 +332,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {;
     return () => window.removeEventListener('scroll', handleScroll);
   }, []),;
   const toggleDropdown = (name: string) => {;
-    setActiveDropdown(activeDropdown === name ? null : name);
+    setActiveDropdown(activeDropdown = = name ? null : name);
   },;
   const closeDropdowns = () => {;
     setActiveDropdown(null);
@@ -374,7 +373,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {;
             </Link>;
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center gap-8">;
-              {navigationItems.map((item) => (;
+              {navigationItems.map(item) => (;
                 <div key={item.name} className="relative group">;
                   <button;
                     onClick={() => toggleDropdown(item.name)}
@@ -384,29 +383,29 @@ const UltraFuturisticNavigation2035: React.FC = () => {;
                     <span>{item.name}</span>;
                     {item.badge && (;
                       <span className={`px-2 py-1 text-xs rounded-full ${;
-                        item.badge === 'New' ? 'bg-green-500/20 text-green-400 border border-green-500/30' :;
-                        item.badge === 'Hot' ? 'bg-red-500/20 text-red-400 border border-red-500/30' :;
-                        item.badge === 'Showcase' ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30' :;
-                        item.badge === 'Future' ? 'bg-purple-500/20 text-purple-400 border border-purple-500/30' :;
-                        item.badge === 'Enterprise' ? 'bg-blue-500/20 text-blue-400 border border-blue-500/30' :;
-                        item.badge === 'Industry' ? 'bg-orange-500/20 text-orange-400 border border-orange-500/30' :;
+                        item.badge = = 'New' ? 'bg-green-500/20 text-green-400 border border-green-500/30' :;
+                        item.badge = = 'Hot' ? 'bg-red-500/20 text-red-400 border border-red-500/30' :;
+                        item.badge = = 'Showcase' ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30' :;
+                        item.badge = = 'Future' ? 'bg-purple-500/20 text-purple-400 border border-purple-500/30' :;
+                        item.badge = = 'Enterprise' ? 'bg-blue-500/20 text-blue-400 border border-blue-500/30' :;
+                        item.badge = = 'Industry' ? 'bg-orange-500/20 text-orange-400 border border-orange-500/30' :;
                         'bg-gray-500/20 text-gray-400 border border-gray-500/30';
                       }`}>;
                         {item.badge}
                       </span>;
                     )}
                     <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${;
-                      activeDropdown === item.name ? 'rotate-180' : '';
+                      activeDropdown = = item.name ? 'rotate-180' : '';
                     }`} />;
                   </button>;
                   {/* Dropdown Menu */}
                   <AnimatePresence>;
-                    {activeDropdown === item.name && (;
+                    {activeDropdown = = item.name && (;
                       <motion.div;
-                        initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                        animate={{ opacity: 1, y: 0, scale: 1 }}
-                        exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                        transition={{ duration: 0.2 }}
+                        initial={ opacity: 0, y: 10, scale: 0.95 }
+                        animate={ opacity: 1, y: 0, scale: 1 }
+                        exit={ opacity: 0, y: 10, scale: 0.95 }
+                        transition={ duration: 0.2 }
                         className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-800/50 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden"
                         onMouseLeave={closeDropdowns}
                       >
@@ -420,9 +419,9 @@ const UltraFuturisticNavigation2035: React.FC = () => {;
                               )}
                             </div>
                           </div>
-                          
+
                           <div className="space-y-2">
-                            {item.children?.map((child) => (
+                            {item.children?.map(child) => (
                               <Link
                                 key={child.name}
                                 href={child.href}
@@ -442,20 +441,20 @@ const UltraFuturisticNavigation2035: React.FC = () => {;
                                 </div>
                                 <ArrowRight className="w-4 h-4 opacity-50" />
                               </a>
-                            ))}
+                            )}
                           </div>;
                         </div>;
                       </motion.div>;
                     )}
                   </AnimatePresence>;
                 </div>;
-              ))}
+              )}
             </div>;
             {/* Right Side Actions */}
             <div className="hidden lg:flex items-center gap-4">
               {/* Quick Actions */}
               <div className="flex items-center gap-2">
-                {quickActions.map((action) => (
+                {quickActions.map(action) => (
                   <Link
                     key={action.name}
                     href={action.href}
@@ -468,7 +467,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {;
                     {action.icon}
                     <span>{action.name}</span>
                   </a>
-                ))}
+                )}
               </div>;
               {/* Contact Info */}
               <div className="flex items-center gap-4 text-sm text-gray-400">
@@ -498,16 +497,16 @@ const UltraFuturisticNavigation2035: React.FC = () => {;
         <AnimatePresence>;
           {isOpen && (;
             <motion.div;
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3 }}
+              initial={ opacity: 0, height: 0 }
+              animate={ opacity: 1, height: 'auto' }
+              exit={ opacity: 0, height: 0 }
+              transition={ duration: 0.3 }
               className="lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-800/50"
             >
               <div className="container mx-auto px-4 py-6">
                 <div className="space-y-6">
                   {/* Mobile Navigation Items */}
-                  {navigationItems.map((item) => (;
+                  {navigationItems.map(item) => (;
                     <div key={item.name}>;
                       <button;
                         onClick={() => toggleDropdown(item.name)}
@@ -518,9 +517,9 @@ const UltraFuturisticNavigation2035: React.FC = () => {;
                           <span>{item.name}</span>;
                           {item.badge && (;
                             <span className={`px-2 py-1 text-xs rounded-full ${;
-                              item.badge === 'New' ? 'bg-green-500/20 text-green-400' :;
-                              item.badge === 'Hot' ? 'bg-red-500/20 text-red-400' :;
-                              item.badge === 'Showcase' ? 'bg-cyan-500/20 text-cyan-400' :;
+                              item.badge = = 'New' ? 'bg-green-500/20 text-green-400' :;
+                              item.badge = = 'Hot' ? 'bg-red-500/20 text-red-400' :;
+                              item.badge = = 'Showcase' ? 'bg-cyan-500/20 text-cyan-400' :;
                               'bg-gray-500/20 text-gray-400';
                             }`}>;
                               {item.badge}
@@ -528,20 +527,20 @@ const UltraFuturisticNavigation2035: React.FC = () => {;
                           )}
                         </div>;
                         <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${;
-                          activeDropdown === item.name ? 'rotate-180' : '';
+                          activeDropdown = = item.name ? 'rotate-180' : '';
                         }`} />;
                       </button>;
                       {/* Mobile Dropdown */}
                       <AnimatePresence>;
-                        {activeDropdown === item.name && (;
+                        {activeDropdown = = item.name && (;
                           <motion.div;
-                            initial={{ opacity: 0, height: 0 }}
-                            animate={{ opacity: 1, height: 'auto' }}
-                            exit={{ opacity: 0, height: 0 }}
-                            transition={{ duration: 0.2 }}
+                            initial={ opacity: 0, height: 0 }
+                            animate={ opacity: 1, height: 'auto' }
+                            exit={ opacity: 0, height: 0 }
+                            transition={ duration: 0.2 }
                             className="ml-6 mt-2 space-y-2"
                           >
-                            {item.children?.map((child) => (
+                            {item.children?.map(child) => (
                               <Link
                                 key={child.name}
                                 href={child.href}
@@ -557,17 +556,17 @@ const UltraFuturisticNavigation2035: React.FC = () => {;
                                   <div className="text-sm opacity-75 mt-1">{child.description}</div>
                                 )}
                               </a>
-                            ))}
+                            )}
                           </motion.div>;
                         )}
                       </AnimatePresence>;
                     </div>;
-                  ))}
-;
+                  )}
+
                   {/* Mobile Quick Actions */}
                   <div className="pt-4 border-t border-gray-800/50">
                     <div className="space-y-3">
-                      {quickActions.map((action) => (
+                      {quickActions.map(action) => (
                         <Link
                           key={action.name}
                           href={action.href}
@@ -581,7 +580,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {;
                           {action.icon}
                           <span>{action.name}</span>
                         </a>
-                      ))}
+                      )}
                     </div>;
                   </div>;
                   {/* Mobile Contact Info */}
@@ -609,5 +608,5 @@ const UltraFuturisticNavigation2035: React.FC = () => {;
       </div>;
     </nav>;
   );
-},;
+,;
 export default UltraFuturisticNavigation2035;

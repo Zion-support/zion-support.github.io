@@ -122,7 +122,7 @@ const Footer = () => {
               cloud services, and digital transformation to businesses worldwide.
             </p>
             <div className="flex space-x-4">
-              {socialLinks.map((social) => (
+              {socialLinks.map(social) => (
                 <a
                   key={social.name}
                   href={social.href}
@@ -133,7 +133,7 @@ const Footer = () => {
                 >
                   <social.icon className="h-5 w-5" />
                 </a>
-              ))}
+              )}
             </div>
           </div>
 
@@ -141,7 +141,7 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
-              {services.map((service) => (
+              {services.map(service) => (
                 <li key={service.name}>
                   <Link
                     href={service.href}
@@ -150,7 +150,7 @@ const Footer = () => {
                     {service.name}
                   </Link>
                 </li>
-              ))}
+              )}
             </ul>
           </div>
 
@@ -158,7 +158,7 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Company</h3>
             <ul className="space-y-2">
-              {company.map((item) => (
+              {company.map(item) => (
                 <li key={item.name}>
                   <Link
                     href={item.href}
@@ -167,7 +167,7 @@ const Footer = () => {
                     {item.name}
                   </Link>
                 </li>
-              ))}
+              )}
             </ul>
           </div>
 
@@ -175,7 +175,7 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Resources</h3>
             <ul className="space-y-2 mb-6">
-              {resources.map((resource) => (
+              {resources.map(resource) => (
                 <li key={resource.name}>
                   <Link
                     href={resource.href}
@@ -184,7 +184,7 @@ const Footer = () => {
                     {resource.name}
                   </Link>
                 </li>
-              ))}
+              )}
             </ul>
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
             <div className="space-y-2">
@@ -231,6 +231,5 @@ const Footer = () => {
         </div>      </div>
     </footer>
   );
-};
 
 export default Footer;

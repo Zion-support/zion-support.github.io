@@ -8,7 +8,7 @@ export interface EmptyMatchesCardProps {
 export function EmptyMatchesCard({
   onRefresh
   isProcessing
-}: EmptyMatchesCardProps) {
+: EmptyMatchesCardProps) {
   return (
     <Card className='p-6 text-center border-dashed border-2 bg-muted/30'>
       <div className='mb-4 flex justify-center'>
@@ -28,7 +28,7 @@ export interface EmptyMatchesCardProps {;
 export function EmptyMatchesCard(): any ({;
   onRefresh,;
   isProcessing,;
-}: EmptyMatchesCardProps) {;
+: EmptyMatchesCardProps) {;
   return (
     <Card className='p-6 text-center border-dashed border-2 bg-muted/30'>;
       <div className='mb-4 flex justify-center'>;
@@ -59,10 +59,8 @@ export function EmptyMatchesCard(): any ({;
         )}
       </Button>
     </Card>
-  )
-}
   );
-}
+
 import { Card } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
 import { Sparkles, RefreshCcw } from 'lucide-react';
@@ -101,4 +99,3 @@ function EmptyMatchesCard() {
           </>)}
       </Button>;
     </Card>);
-}

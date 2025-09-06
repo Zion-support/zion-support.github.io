@@ -22,9 +22,8 @@ export default function SitemapPage() {
 				<h1 className=&quot;text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent&quot;>Sitemap</h1>
 				<ul className=&quot;grid sm:grid-cols-2 gap-3&quot;>
 					{links.map(l => (
-						<li key={l.href} className=&quot;p-4 rounded-xl bg-black/40 border border-cyan-500/20&quot;><a className=&quot;text-cyan-300&quot; href={l.href}>{l.name}</a></li>					))}
+						<li key={l.href} className=&quot;p-4 rounded-xl bg-black/40 border border-cyan-500/20&quot;><a className=&quot;text-cyan-300&quot; href={l.href}>{l.name}</a></li>					)}
 				</ul>
 			</div>
 		</div>
 	)
-}

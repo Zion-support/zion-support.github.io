@@ -4,30 +4,30 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
-}
+
 import React, { useState } from 'react';
 export default function CoachWidget() {
   const [input, setInput] = useState('');
   const [reply, setReply] = useState<string | null>(null),
   const [loading, setLoading] = useState(false);
   async function ask() {
-    if (!input.trim()) return;
+    if (!input.trim() return;
     setLoading(true);
     try {
 
@@ -41,7 +41,7 @@ export default function CoachWidget() {
     } finally {
 
   async function ask() {;
-    if (!input && input.trim()) return;
+    if (!input && input.trim() return;
     setLoading(true);
     try {;
       const resp = await fetch('/api/learn/coach', {;
@@ -53,7 +53,6 @@ export default function CoachWidget() {
       setReply(data && data.text || '');
     } finally {;
       setLoading(false);    }
-  }
   return (      });
       const data = await resp.json();
       setReply(data.text |'')
@@ -61,7 +60,6 @@ export default function CoachWidget() {
     } finally {
       setLoading(false)
     }
-  }
   return (
     <div className='border rounded p-3'>;
       <div className='font-medium mb-2'>ZionGPT Coach</div>;
@@ -84,8 +82,8 @@ export default function CoachWidget() {
         </div>;
       )}
     </div>
-);
-}
+;
+
     <div className="border rounded p-3">
       <div className="font-medium mb-2">ZionGPT Coach</div>
       <div className="flex gap-2">
@@ -95,7 +93,7 @@ export default function CoachWidget() {
       {reply && <div className="mt-2 text-sm text-gray-800 dark:text-gray-200">{reply}</div>}
     </div>
   );
-}
+
 import React, { useState } from 'react';
 export default /**
  * CoachWidget - Function description
@@ -104,14 +102,14 @@ function CoachWidget() {
   const [input, set_input] = useState ('');
   const [reply, set_reply] = useState < string | null>(null);
   const [loading, set_loading] = useState (false);
-;
+
   async /**
  * ask - Function description
  */
 function ask() {
     if () return) {
   $2
-}
+
     set_loading (true);
     try {
       const resp = await fetch ('/api / learn / coach', {
@@ -123,14 +121,12 @@ function ask() {
       set_reply (data.text || '');
     } finally {
       set_loading (false);    }
-  }
   return (      });
       const data = await resp.json ();
       set_reply (data.text || '');
     } finally {
       set_loading (false);
     }
-  }
   return (
     <div className='border rounded p - 3'>;
       <div className='font - medium mb - 2'>ZionGPT Coach</div>;
@@ -153,4 +149,3 @@ function ask() {
           {reply}
         </div>)}
     </div>);
-}

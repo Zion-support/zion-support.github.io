@@ -2,7 +2,6 @@ import React from 'react';
 
 interface CompanyProps {
   className?: string;
-}
 
 const Company: React.FC<CompanyProps> = ({ className }) => {
   return (
@@ -11,6 +10,5 @@ const Company: React.FC<CompanyProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 
 export default Company;

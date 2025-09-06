@@ -54,7 +54,7 @@ export default function ManifestoPage(): JSX.Element {
       </main>
     </>
   )
-}
+
 import Head from 'next / head',
 import React from 'react',
 export default function ManifestoPage (): JSX.Element {
@@ -108,4 +108,3 @@ export default function ManifestoPage (): JSX.Element {
         </div>;
       </main>;
     </>);
-}

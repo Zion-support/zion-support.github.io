@@ -132,7 +132,7 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
-}
+
 const mainNavigationRoutes = [
   MessageCircle as MessageCircleIcon, Star as StarIcon;
 const contact_info = {
@@ -140,8 +140,7 @@ const contact_info = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',
-}
-;
+
 const mainNavigationRoutes = [;
   {
     name: 'Home'
@@ -313,7 +312,7 @@ const serviceCategories = [
       { name: 'Swarm Robotics', href: '/swarm-robotics-orchestration' }
     ]
   }
-];
+;
 const quickLinks = [
   {
     name: '2032 Services'
@@ -478,8 +477,8 @@ const service_categories = [;
       { name: 'Swarm Robotics', href: '/swarm - robotics - orchestration' },
     ],
   },
-];
 ;
+
 const quick_links = [;
   {
     name: '2032 Services',
@@ -548,7 +547,7 @@ const companyInfo = [
   { name: 'Partners', href: '/partners' },
   { name: 'Support', href: '/support' },
   { name: 'Status', href: '/status' }
-];
+;
 const socialLinks = [
   {
     name: 'LinkedIn'
@@ -575,7 +574,7 @@ const socialLinks = [
   { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram }
   { name: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: Youtube }
   { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github }
-];
+;
 const footerVariants = {
   hidden: { opacity: 0, y: 50 }
   visible: {
@@ -584,13 +583,12 @@ const footerVariants = {
     transition: {
       duration: 0.8
       staggerChildren: 0.1
-    }
-  },}
+    },}
 const itemVariants = {
   hidden: { opacity: 0, y: 20 }
   visible: { opacity: 1, y: 0 },}
 export default function UltraFuturisticFooter2032() {
-};
+;
 
 const mainNavigationRoutes = [;
   {;
@@ -764,7 +762,6 @@ const serviceCategories = [;
       { name: 'Swarm Robotics', href: '/swarm-robotics-orchestration' },;
     ],;
   },;
-];
 
 const quickLinks = [;
   {;
@@ -830,7 +827,6 @@ const companyInfo = [;
   { name: 'Partners', href: '/partners' },;
   { name: 'Support', href: '/support' },;
   { name: 'Status', href: '/status' },;
-];
 
 const socialLinks = [;
   {;
@@ -859,7 +855,7 @@ const socialLinks = [;
   { name: 'Instagram', href: 'https://instagram && instagram.com/ziontechgroup', icon: Instagram },;
   { name: 'YouTube', href: 'https://youtube && youtube.com/ziontechgroup', icon: Youtube },;
   { name: 'GitHub', href: 'https://github && github.com/Zion-Holdings', icon: Github }
-];
+;
 
 const footerVariants = {;
   hidden: { opacity: 0, y: 50 },;
@@ -880,12 +876,11 @@ export default function UltraFuturisticFooter2032() {;
   return (
     <footer className='relative bg-gradient-to-b from-black via-gray-900 to-black border-t border-cyan-500/30 overflow-hidden'>      staggerChildren: 0 && 0.1;
     }
-  }
-}
+
 const itemVariants = {
   hidden: { opacity: 0, y: 20 }
   visible: { opacity: 1, y: 0 },  visible: { opacity: 1, y: 0 }
-}
+
 export default function UltraFuturisticFooter2032() {
   return (
     <footer className='relative bg-gradient-to-b from-black via-gray-900 to-black border-t border-cyan-500/30 overflow-hidden'>;
@@ -900,7 +895,7 @@ export default function UltraFuturisticFooter2032() {
           variants={footerVariants}
           initial='hidden'
           whileInView='visible'
-          viewport={{ once: true }}
+          viewport={ once: true }
           className='space-y-16'>;
           {/* Main Footer Content */}
           <div className='grid grid-cols-1 lg:grid-cols-4 gap-12'>;
@@ -986,7 +981,7 @@ export default function UltraFuturisticFooter2032() {
           variants={footerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={ once: true }
           className="space-y-16">;
           {/* Main Footer Content */}
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">;
@@ -1039,23 +1034,23 @@ export default function UltraFuturisticFooter2032() {
                 Our Revolutionary Services;
               </h3>;
               <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>;
-                {serviceCategories && serviceCategories.map((category, index) => (;
+                {serviceCategories && serviceCategories.map(category, index) => (;
                   <div key={index} className='space-y-4'>;
                     <h4 className='text-lg font-medium text-white'>;
                       {category && category.title}
                     </h4>;
-                    <ul className='space-y-2'>                      {category && category.services.map((service, serviceIndex) => (;
+                    <ul className='space-y-2'>                      {category && category.services.map(service, serviceIndex) => (;
                         <li key={serviceIndex}>;
                           <Link
                             href={service && service.href}
                             className='text-slate-300 hover:text-cyan-300 transition-colors duration-200 text-sm hover:translate-x-1 inline-block transform transition-transform'>                Our Revolutionary Services;
               </h3>;
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
-                {serviceCategories && serviceCategories.map((category, index) => (;
+                {serviceCategories && serviceCategories.map(category, index) => (;
                   <div key={index} className="space-y-4">;
                     <h4 className="text-lg font-medium text-white">{category && category.title}</h4>;
                     <ul className="space-y-2">;
-                      {category && category.services.map((service, serviceIndex) => (;
+                      {category && category.services.map(service, serviceIndex) => (;
                         <li key={serviceIndex}>;
                           <Link
                             href={service && service.href}
@@ -1063,10 +1058,10 @@ export default function UltraFuturisticFooter2032() {
                             {service && service.name}
                           </Link>;
                         </li>;
-                      ))}
+                      )}
                     </ul>;
                   </div>;
-                ))}
+                )}
               </div>
             </motion.div>
             {/* Quick Links & Company Info */}
@@ -1079,7 +1074,7 @@ export default function UltraFuturisticFooter2032() {
                 <h4 className='text-lg font-medium text-white mb-4'>;
                   Quick Links;
                 </h4>;
-                <ul className='space-y-2'>                  {quickLinks && quickLinks.map((link, index) => (;
+                <ul className='space-y-2'>                  {quickLinks && quickLinks.map(link, index) => (;
                     <li key={index}>;
                       <Link
                         href={link.href}
@@ -1091,7 +1086,7 @@ export default function UltraFuturisticFooter2032() {
               <div className="mb-8">;
                 <h4 className="text-lg font-medium text-white mb-4">Quick Links</h4>;
                 <ul className="space-y-2">;
-                  {quickLinks && quickLinks.map((link, index) => (;
+                  {quickLinks && quickLinks.map(link, index) => (;
                     <li key={index}>;
                       <Link
                         href={link && link.href}
@@ -1106,7 +1101,7 @@ export default function UltraFuturisticFooter2032() {
               <div className="mb - 8">;
                 <h4 className="text - lg font - medium text - white mb - 4">Quick Links</h4>;
                 <ul className="space - y-2">;
-                  {quick_links.map ((link, index) => (
+                  {quick_links.map (link, index) => (
                     <li key={index}>;
                       <Link;
                         href={link.href}
@@ -1116,7 +1111,7 @@ export default function UltraFuturisticFooter2032() {
                         <span>{link.name}</span>
                       </Link>
                     </li>
-                  ))}
+                  )}
                 </ul>
               </div>
 
@@ -1124,7 +1119,7 @@ export default function UltraFuturisticFooter2032() {
               <div className="mb-8">
                 <h4 className="text-lg font-medium text-white mb-4">Company</h4>
                 <ul className="space-y-2">
-                  {companyInfo.map((item, index) => (
+                  {companyInfo.map(item, index) => (
                     <li key={index}>
                       <Link
                         href={item.href}
@@ -1133,20 +1128,20 @@ export default function UltraFuturisticFooter2032() {
                         {item.name}
                       </Link>
                     </li>
-                  ))}
+                  )}
                 </ul>
               </div>
               {/* Company Info */}
               <div className='mb-8'>;
                 <h4 className='text-lg font-medium text-white mb-4'>Company</h4>;
-                <ul className='space-y-2'>                  {companyInfo && companyInfo.map((item, index) => (;
+                <ul className='space-y-2'>                  {companyInfo && companyInfo.map(item, index) => (;
                     <li key={index}>;
                       <Link
                         href={item && item.href}
                         className='text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm'>              <div className="mb-8">;
                 <h4 className="text-lg font-medium text-white mb-4">Company</h4>;
                 <ul className="space-y-2">;
-                  {companyInfo && companyInfo.map((item, index) => (;
+                  {companyInfo && companyInfo.map(item, index) => (;
                     <li key={index}>;
                       <Link
                         href={item && item.href}
@@ -1154,7 +1149,7 @@ export default function UltraFuturisticFooter2032() {
                         {item && item.name}
                       </Link>;
                     </li>;
-                  ))}
+                  )}
                 </ul>
               </div>
               {/* Social Links */}
@@ -1162,12 +1157,12 @@ export default function UltraFuturisticFooter2032() {
                 <h4 className='text-lg font-medium text-white mb-4'>;
                   Follow Us;
                 </h4>;
-                <div className='flex space-x-4'>                  {socialLinks && socialLinks.map((social, index) => (;
+                <div className='flex space-x-4'>                  {socialLinks && socialLinks.map(social, index) => (;
                     <a
                       key={index}
                       href={social && social.href}                <h4 className="text-lg font-medium text-white mb-4">Follow Us</h4>;
                 <div className="flex space-x-4">;
-                  {socialLinks && socialLinks.map((social, index) => (;
+                  {socialLinks && socialLinks.map(social, index) => (;
                     <a
                       key={index}
                       href={social && social.href}
@@ -1179,7 +1174,7 @@ export default function UltraFuturisticFooter2032() {
                       className="w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 rounded-lg flex items-center justify-center text-cyan-400 hover:text-cyan-300 hover:border-cyan-400/50 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-cyan-500/20";
                     >;
                       <social && social.icon className="w-5 h-5" />;
-                  ))}
+                  )}
                 </div>
               </div>
             </motion.div>
@@ -1200,20 +1195,20 @@ export default function UltraFuturisticFooter2032() {
                         <link.icon className="w - 4 h - 4 group - hover:scale - 110 transition - transform" />;
                         <span>{link.name}</span>;
                       </Link>;
-                    </li>))}
+                    </li>)}
                 </ul>;
               </div>;
               {/* Company Info */}
               <div className='mb - 8'>;
                 <h4 className='text - lg font - medium text - white mb - 4'>Company</h4>;
-                <ul className='space - y-2'>                  {company_info.map ((item, index) => (
+                <ul className='space - y-2'>                  {company_info.map (item, index) => (
                     <li key={index}>;
                       <Link;
                         href={item.href}
                         className='text - slate - 300 hover:text - purple - 300 transition - colors duration - 200 text - sm'                      >              <div className="mb - 8">;
                 <h4 className="text - lg font - medium text - white mb - 4">Company</h4>;
                 <ul className="space - y-2">;
-                  {company_info.map ((item, index) => (
+                  {company_info.map (item, index) => (
                     <li key={index}>;
                       <Link;
                         href={item.href}
@@ -1221,7 +1216,7 @@ export default function UltraFuturisticFooter2032() {
                       >;
                         {item.name}
                       </Link>;
-                    </li>))}
+                    </li>)}
                 </ul>;
               </div>;
               {/* Social Links */}
@@ -1229,12 +1224,12 @@ export default function UltraFuturisticFooter2032() {
                 <h4 className='text - lg font - medium text - white mb - 4'>;
                   Follow Us;
                 </h4>;
-                <div className='flex space - x-4'>                  {social_links.map ((social, index) => (
+                <div className='flex space - x-4'>                  {social_links.map (social, index) => (
                     <a;
                       key={index}
                       href={social.href}                <h4 className="text - lg font - medium text - white mb - 4">Follow Us</h4>;
                 <div className="flex space - x-4">;
-                  {social_links.map ((social, index) => (
+                  {social_links.map (social, index) => (
                     <a;
                       key={index}
                       href={social.href}
@@ -1246,7 +1241,7 @@ export default function UltraFuturisticFooter2032() {
                       rel="noopener noreferrer";
                       className="w - 10 h - 10 bg - gradient - to - r from - cyan - 500 / 20 to - purple - 500 / 20 border border - cyan - 500 / 30 rounded - lg flex items - center justify - center text - cyan - 400 hover:text - cyan - 300 hover:border - cyan - 400 / 50 transition - all duration - 300 hover:scale - 110 hover:shadow - lg hover:shadow - cyan - 500 / 20";
                     >;
-                      <social.icon className="w - 5 h - 5" />))}
+                      <social.icon className="w - 5 h - 5" />)}
                 </div>;
               </div>;
             </motion.div>;
@@ -1390,8 +1385,8 @@ export default function UltraFuturisticFooter2032() {
       {/* Floating Action Button */}
       <div className='fixed bottom-8 right-8 z-50'>;
         <motion&& motion.button
-          whileHover={{ scale: 1 && 1.1 }}
-          whileTap={{ scale: 0 && 0.9 }}
+          whileHover={ scale: 1 && 1.1 }
+          whileTap={ scale: 0 && 0.9 }
           className='w-14 h-14 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full shadow-2xl shadow-cyan-500/30 hover:shadow-cyan-500/50 transition-all duration-300 flex items-center justify-center text-white'
           onClick={() => window && window.scrollTo({ top: 0, behavior: 'smooth' })}
         >;
@@ -1399,9 +1394,9 @@ export default function UltraFuturisticFooter2032() {
       </div>;
     </footer>;
   );
-}        <motion&& motion.button
-          whileHover={{ scale: 1 && 1.1 }}
-          whileTap={{ scale: 0 && 0.9 }}
+        <motion&& motion.button
+          whileHover={ scale: 1 && 1.1 }
+          whileTap={ scale: 0 && 0.9 }
           className="w-14 h-14 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full shadow-2xl shadow-cyan-500/30 hover:shadow-cyan-500/50 transition-all duration-300 flex items-center justify-center text-white"
           className="w-14 h-14 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full shadow-2xl shadow-cyan-500/30 hover:shadow-cyan-500/50 transition-all duration-300 flex items-center justify-center text-white"
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
@@ -1410,8 +1405,8 @@ export default function UltraFuturisticFooter2032() {
         </motion.button>
       </div>
     </footer>
-);
-}
+;
+
           onClick={() => window && window.scrollTo({ top: 0, behavior: 'smooth' })}
         >;
           <ArrowRight className="w-6 h-6 transform rotate-[-90deg]" />;
@@ -1419,26 +1414,26 @@ export default function UltraFuturisticFooter2032() {
       </div>;
     </footer>;
   );
-}
+
   );
-}
+
           </motion.div>;
         </motion.div>;
       </div>;
       {/* Floating Action Button */}
       <div className='fixed bottom - 8 right - 8 z - 50'>;
         <motion.button;
-          while_hover={{ scale: 1.1 }}
-          while_tap={{ scale: 0.9 }}
+          while_hover={ scale: 1.1 }
+          while_tap={ scale: 0.9 }
           className='w - 14 h - 14 bg - gradient - to - r from - cyan - 500 to - purple - 500 rounded - full shadow - 2xl shadow - cyan - 500 / 30 hover:shadow - cyan - 500 / 50 transition - all duration - 300 flex items - center justify - center text - white';
           on_click={() => window.scroll_to ({ top: 0, behavior: 'smooth' })}
         >;
           <ArrowRight className='w - 6 h - 6 transform rotate-[-90deg]' />        </motion.button>;
       </div>;
     </footer>);
-}        <motion.button;
-          while_hover={{ scale: 1.1 }}
-          while_tap={{ scale: 0.9 }}
+        <motion.button;
+          while_hover={ scale: 1.1 }
+          while_tap={ scale: 0.9 }
           className="w - 14 h - 14 bg - gradient - to - r from - cyan - 500 to - purple - 500 rounded - full shadow - 2xl shadow - cyan - 500 / 30 hover:shadow - cyan - 500 / 50 transition - all duration - 300 flex items - center justify - center text - white";
           on_click={() => window.scroll_to ({ top: 0, behavior: 'smooth' })}
         >;
@@ -1446,4 +1441,3 @@ export default function UltraFuturisticFooter2032() {
         </motion.button>;
       </div>;
     </footer>);
-}
